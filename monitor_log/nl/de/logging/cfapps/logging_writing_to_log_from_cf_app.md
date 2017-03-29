@@ -16,7 +16,7 @@ lastupdated: "2017-02-06"
 # Laufzeitanwendungsprotokollierung durch CF-Apps
 {: #logging_writing_to_log_from_cf_app}
 
-Wenn Sie in {{site.data.keyword.Bluemix}} Protokolldaten für eine Cloud Foundry-App und ihre Laufzeit speichern möchten, müssen Sie Ihre Protokolle in die Standardausgabe (STDOUT) und Standard-Fehlerausgabe (STDERR) schreiben.
+Wenn Sie in {{site.data.keyword.Bluemix}} Protokolldaten für eine Cloud Foundry-App und ihre Laufzeit speichern möchten, müssen Sie Ihre Protokolle in die Standardausgabe (STDOUT) und Standard-Fehlerausgabe (STDERR) schreiben. 
 {:shortdesc}
 
 In {{site.data.keyword.Bluemix}} werden STDOUT- und STDERR-Protokolleinträge automatisch erfasst:

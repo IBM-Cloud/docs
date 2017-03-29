@@ -16,7 +16,7 @@ lastupdated: "2017-02-14"
 # Überwachung und Protokollierung
 {: #monitoringandlogging}
 
-{{site.data.keyword.Bluemix}} bietet Protokollierungs- und Überwachungsfunktionen für verschiedene Services an, wie zum Beispiel für den Cloud Foundry-Service und {{site.data.keyword.containershort}}. Sie können Anwendungen in einer beliebigen Laufzeit entwickeln, ausführen und verwalten, ohne dazu über die komplexe Infrastruktur mit dem entsprechenden Verwaltungsaufwand verfügen zu müssen, die in der Regel zum Entwickeln und Starten einer App gehört.
+{{site.data.keyword.Bluemix}} bietet Protokollierungs- und Überwachungsfunktionen für verschiedene Services an, wie zum Beispiel für den Cloud Foundry-Service und {{site.data.keyword.containershort}}. Sie können Anwendungen in einer beliebigen Laufzeit entwickeln, ausführen und verwalten, ohne dazu über die komplexe Infrastruktur mit dem entsprechenden Verwaltungsaufwand verfügen zu müssen, die in der Regel zum Entwickeln und Starten einer App gehört. 
 {:shortdesc}
 
 {{site.data.keyword.Bluemix_notm}} erfasst standardmäßig Leistungsmetriken für CPU-Nutzung, Speicherauslastung und Ein-/Ausgabeoperationen über das Netz. Diese Metriken stellen Informationen über die Leistung einzelner Cloudressourcen bereit. Sie können die Leistung dieser Ressourcen in Ihrer Cloudumgebung über die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle (UI) überwachen. Sie können echtzeitnahe Daten und gespeicherte Langzeitdaten anzeigen. Weitere Informationen finden Sie unter [Überwachung](monitoring/monitoring_bmx_ov.html#monitoring_bmx_ov).

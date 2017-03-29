@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-24"
+lastupdated: "2017-02-22"
 
 ---
 
@@ -59,7 +59,7 @@ tabla siguiente para obtener información sobre los distintos tipos de notificac
 |-----------------|-------------------|
 | Actualizaciones de mantenimiento | Para ver un listado completo y el historial de notificaciones pendientes y completas, pulse **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA** &gt; *Número* **pendientes**. Los sucesos planificados de actualización disruptiva de mantenimiento también se informan mediante alertas en la página Estado. Pulse **Soporte** &gt; **Estado**. Puede ampliar la capacidad de notificación configurando una suscripción que envíe un mensaje de correo electrónico a los destinatarios que usted elija. También puede configurar una suscripción que utilice a webhooks para integrar las notificaciones de la página de administración con el servicio de su elección.|
 | Incidencias críticas | Se alerta sobre incidencias críticas en la página Estado. Pulse **Soporte** &gt; **Estado**. Puede ampliar la capacidad de notificación configurando una suscripción a una notificación que envíe un mensaje de correo electrónico a los destinatarios que usted elija. También puede configurar una suscripción que utilice a webhooks para integrar las notificaciones de la página de administración con el servicio de su elección.  |  
-| Eventos de umbral | Puede configurar una suscripción de notificación que envía un mensaje de correo electrónico a un destinatario de su elección cuando se alcancen en el entorno los umbrales de recurso para el disco físico, la memoria física, el disco reservado o la memoria reservada. O bien, puede configurar una suscripción que utilice a webhooks para integrar las notificaciones con el servicio de su elección.  |  
+| Sucesos de umbral | Puede configurar una suscripción de notificación que envía un mensaje de correo electrónico a un destinatario de su elección cuando se alcancen en el entorno los umbrales para la cuota de organización, el disco físico, la memoria física, el disco reservado o la memoria reservada. O bien, puede configurar una suscripción que utilice a webhooks para integrar las notificaciones con el servicio de su elección.  |  
 | Estado de {{site.data.keyword.Bluemix_notm}} | Siempre puede ver el estado más reciente de la plataforma, servicios y de su instancia {{site.data.keyword.Bluemix_notm}} en la página Estado. Pulse **Soporte** &gt; **Estado**.  |
 {: caption="Table 2. Event types and notifications methods" caption-side="top"}
 
@@ -112,7 +112,7 @@ Para crear una suscripción de correo electrónico o webhook desde la página **
 | Habilitado | Seleccione la opción para habilitar las notificaciones por correo electrónico. Anule la selección para inhabilitar la notificación por correo electrónico. Las suscripciones están habilitadas de forma predeterminada. |
 | Tipo | Seleccione **Correo electrónico**. |
 | Suceso | Seleccione **Umbral**. |
-| Umbral | Seleccione el tipo de umbral sobre el que desea que se le notifique: Disco físico, Memoria física, Disco reservado o Memoria reservada. |
+| Umbral | Seleccione el tipo de umbral sobre el que desea que se le notifique: Cuota de organización, Disco físico, Memoria física, Disco reservado o Memoria reservada. |
 | Dirección de umbral | Seleccione la dirección en la que desea que se muevan los datos, ya sea Ascendente o Descendente, cuando pasa el valor Notificar al aumentar/bajar que haya establecido. Por ejemplo, si el valor Notificar al aumentar/bajar es 50%, y la dirección es descendente, sólo se le notificará si el porcentaje de uso va desde 50% o más a menos de 50%. Si establece la dirección en ascendente, se le notificaría cuando el porcentaje de uso vaya de menos de 50% a más de 50%.   |
 | Notificar al aumentar por encima de (%) | Especifique el porcentaje de umbral en el que desea que se le notifique. Si ha elegido la propiedad Ascendente en el campo Dirección de umbral, la notificación de correo electrónico se enviará cuando el umbral supere este porcentaje. |
 | Notificar al bajar por debajo de (%) | Especifique el porcentaje de umbral en el que desea que se le notifique. Si ha elegido la propiedad Descendente en el campo Dirección de umbral, la notificación de correo electrónico se enviará cuando el umbral caiga por debajo de este porcentaje. |
@@ -122,10 +122,11 @@ Para crear una suscripción de correo electrónico o webhook desde la página **
 | Para | Especifique la dirección o direcciones de correo electrónico utilizando una lista separada por comas de los destinatarios de notificación por correo electrónico. Expanda las opciones "C/o" o "C/co" para enviar una copia del mensaje a otros destinatarios. Este campo es necesario. |
 {: caption="Table 4. Fields for email notification subscriptions about maintenance updates or incidents" caption-side="top"}
 
-Los datos del umbral se recopilan una vez cada 6 horas. Solamente se enviará una notificación una vez cuando el valor sobrepase el valor de umbral que haya establecido. No se enviará una notificación nueva a menos que el valor caiga por debajo del umbral, si ha elegido ascendente y, a continuación, aumenta por encima del umbral de nuevo. Del mismo modo, si ha elegido descendente, sólo se le volverá a notificar si el valor sube por encima del umbral establecido y, a continuación, cae por debajo del umbral de nuevo. 
+Los datos del umbral se recopilan una vez cada 6 horas. Solamente se enviará una notificación una vez cuando el valor sobrepase el valor de umbral que haya establecido. Si elige ascendente, no se envía una nueva notificación a menos que el valor caiga por debajo del umbral y, a continuación, aumente de nuevo por encima del umbral. Del mismo modo, si ha elegido descendente, sólo se le notificará si el valor sube por encima del umbral establecido y, a continuación, cae por debajo del umbral de nuevo. 
 
-Si no desea esperar 6 horas para que se envíe la notificación cuando se alcanza el umbral, una vez que complete los campos del formulario, puede pulsar **Guardar y probar** para guardar y probar la notificación con datos de ejemplo.
+Si no desea esperar 6 horas para que se envíe la notificación cuando se alcanza el umbral, una vez que complete los campos del formulario, puede pulsar **Guardar y probar** para recibir una notificación de prueba con datos de ejemplo.  
 
+Una notificación de umbral de Cuota de organización incluye sólo las organizaciones que han sobrepasado el porcentaje de umbral especificado en el período de tiempo de 6 horas que se corresponde con dicha notificación. Las organizaciones que han sobrepasado un umbral durante los períodos de tiempo de las 6 horas anteriores no estarán incluidas, aunque sigan por encima o por debajo del umbral.  Los tres recursos que componen la cuota de una organización (memoria, servicios y rutas reservados) se consideran independientemente al determinar si se debería enviar o no una notificación de cuota de organización. Por ejemplo, si la cantidad de memoria reservada que utiliza una organización supera el 50% de la cuota de la organización, el umbral de una Cuota de organización configurado con un valor de 50% daría lugar a que se envíe una notificación.  Si el número de servicios utilizados por la misma organización supera el 50% de la cuota de la organización en un momento posterior, aunque la cantidad de memoria utilizada permanezca sin cambios, la misma suscripción de umbral de la Cuota de organización también daría como resultado que se envíe una notificación.
 
 {: #webhooknotsub}
 
@@ -159,7 +160,7 @@ Si no desea esperar 6 horas para que se envíe la notificación cuando se alcanz
 | Habilitado | Seleccione la opción para habilitar la notificación. Anule la selección para inhabilitar la notificación. Las suscripciones están habilitadas de forma predeterminada. |
 | Tipo | Seleccione **Webhook**. |
 | Suceso | Seleccione **Umbral**. |
-| Umbral | Seleccione el tipo de umbral sobre el que desea que se le notifique: Disco físico, Memoria física, Disco reservado o Memoria reservada. |
+| Umbral | Seleccione el tipo de umbral sobre el que desea que se le notifique: Cuota de organización, Disco físico, Memoria física, Disco reservado o Memoria reservada.|
 | Dirección de umbral | Seleccione si desea ver los datos del umbral en orden Ascendente o Descendente.  |
 | Notificar al bajar por debajo de (%) | Si ha seleccionado la **Dirección de umbral** **Descendente**, especifique el porcentaje de umbral en el que desea que se le notifique. Cuando el umbral cae por debajo de este porcentaje, se enviará la notificación de webhook. |
 | Notificar al aumentar por encima de (%) | Si ha seleccionado la **Dirección de umbral** **Ascendente**, especifique el porcentaje de umbral en el que desea que se le notifique. Cuando el umbral está por encima de este porcentaje, se enviará la notificación de webhook. |
@@ -171,6 +172,11 @@ Si no desea esperar 6 horas para que se envíe la notificación cuando se alcanz
 | URL | Especificar el URL al que conectar su servicio web. |
 {: caption="Table 6. Form fields for a webhook notification subscription about thresholds" caption-side="top"}
 
+Los datos del umbral se recopilan una vez cada 6 horas. Solamente se enviará una notificación una vez cuando el valor sobrepase el valor de umbral que haya establecido. No se enviará una notificación nueva a menos que el valor caiga por debajo del umbral, si ha elegido ascendente y, a continuación, aumenta por encima del umbral de nuevo. Del mismo modo, si ha elegido descendente, sólo se le volverá a notificar si el valor sube por encima del umbral establecido y, a continuación, cae por debajo del umbral de nuevo. 
+
+Si no desea esperar 6 horas para que se envíe la notificación cuando se alcanza el umbral, una vez que complete los campos del formulario, puede pulsar **Guardar y probar** para guardar y probar la notificación con datos de ejemplo.
+
+Una notificación de umbral de Cuota de organización incluye sólo las organizaciones que han sobrepasado el porcentaje de umbral especificado en el período de tiempo de 6 horas que se corresponde con dicha notificación. Las organizaciones que han superado un umbral durante los períodos de tiempo de las 6 horas anteriores no se incluirán, aunque sigan por encima/por debajo del umbral.  Los tres recursos que forman la cuota, la memoria reservada, los servicios y las rutas de una organización se consideran de forma independiente al determinar si se debería enviar la notificación de cuota de una organización. Por ejemplo, si la cantidad de memoria reservada que utiliza una organización supera el 50% de la cuota de la organización, el umbral de una Cuota de organización configurado con un valor de 50% daría lugar a que se envíe una notificación.  Si el número de servicios utilizados por la misma organización supera el 50% de la cuota de la organización en un momento posterior, aunque la cantidad de memoria utilizada permanezca sin cambios, la misma suscripción de umbral de la Cuota de organización también daría como resultado que se envíe una notificación.
 
 {: #payload}
 
@@ -194,6 +200,7 @@ Si no desea esperar 6 horas para que se envíe la notificación cuando se alcanz
 
 | **Valor de IBM** | **Descripción** | **Tipo de suceso** |
 |----------------|----------------|------------------------|
+| {{content.org_quota}} | Umbral de cuota de organización | Umbral |
 | {{content.physical_disk}} | Umbral de disco físico | Umbral |
 | {{content.physical_memory}} | Umbral de memoria física | Umbral |  
 | {{content.reserved_disk}} | Umbral de disco reservado | Umbral |
@@ -451,7 +458,7 @@ de inicio de sesión**.
 - Cuando visualice un informe o un registro, puede pulsar el icono ![Descargar](images/icon_download.png)
 para descargar el informe.
 
-La tabla siguiente muestra la lista de los informes de seguridad generados para {{site.data.keyword.Bluemix_notm}} local y {{site.data.keyword.Bluemix_notm}} dedicado. La mayoría de los informes se generan a diario. Sin embargo, los informes de cifrado y sucesos de gestión de eventos se generan mensualmente. Todos los informes se conservan 90 días en la consola administrativa para su recuperación. Transcurridos 90 días, los informes están disponibles fuera de línea desde {{site.data.keyword.Bluemix_notm}} durante 9 meses. En total, los informes están disponibles para su recuperación un máximo de un año.
+La tabla siguiente muestra la lista de los informes de seguridad generados para {{site.data.keyword.Bluemix_notm}} local y {{site.data.keyword.Bluemix_notm}} dedicado. La mayoría de los informes se generan a diario. Sin embargo, los informes de cifrado y sucesos de gestión de claves se generan mensualmente. Todos los informes se conservan 90 días en la consola administrativa para su recuperación. Transcurridos 90 días, los informes están disponibles fuera de línea desde {{site.data.keyword.Bluemix_notm}} durante 9 meses. En total, los informes están disponibles para su recuperación un máximo de un año.
 
 
 {: #ld_table9}
@@ -857,7 +864,7 @@ Una cuota representa los límites de recursos para las organizaciones del entorn
 <dd>El número máximo de direcciones IP públicas que puede asignar entre todos los espacios de una organización.</dd>
 </dl>
 <strong>Nota</strong>: si aún no tiene contenedores en su entorno o si aún no tiene los contenedores del entorno configurados, recibirá un mensaje de error.
-<p>Para obtener más información sobre contenedores, consulte [Acerca de los contenedores de IBM](https://console.ng.bluemix.net/docs/containers/container_ov.html). Para obtener más información sobre cuotas de contenedor, consulte [Cuota y cuentas de Bluemix]( https://console.ng.bluemix.net/docs/containers/container_planning_org_ov.html#container_planning_quota).</p>
+<p>Para obtener más información sobre contenedores, consulte [Acerca de los contenedores de IBM](/docs/containers/container_ov.html). Para obtener más información sobre cuotas de contenedor, consulte [Cuota y cuentas de Bluemix](/docs/containers/container_planning_org_ov.html#container_planning_quota).</p>
 <strong>Nota:</strong> Los contenedores no están disponibles en la región Sídney de {{site.data.keyword.Bluemix_notm}}.</li>
 </ul>
 <li>Para guardar los cambios que haya efectuado en la página Gestionar
@@ -989,42 +996,40 @@ Es posible asignar a los usuarios los permisos siguientes con niveles de acceso 
 | Users | A los usuarios con el permiso **Users** se les puede asignar el acceso de **Lectura** (ver) sobre la lista de usuarios o de **Escritura** (añadir o eliminar) sobre los usuarios. Este permiso no le permite definir permisos para otros usuarios. El acceso de escritura permite que el usuario pueda añadir nuevos usuarios al entorno, suprimir usuarios del entorno y añadir usuarios existentes a las organizaciones que ya existen en el entorno. Además, el acceso de **Escritura** permite que el usuario pueda añadir nuevas organizaciones, suprimir organizaciones y editar los usuarios dentro de las organizaciones. |
 {: caption="Table 14. Permissions" caption-side="top"}
 
-## Gestión de usuarios con la API REST de administración
-{: #usingadminapi}
+## Utilización de API REST 
+{: #auth_adminapi}
 
-Puede utilizar la API REST `Admin` para añadir y eliminar usuarios de la instancia de
-{{site.data.keyword.Bluemix_notm}}.
-Se proporcionan puntos finales de la API REST `Admin` y respuestas JSON a modo experimental para habilitar operaciones básicas desde una línea de mandatos. Los puntos finales y URL de los ejemplos de esta información pueden cambiar o pueden ser retirados previo aviso.
+Para utilizar los mandatos de API REST, primero debe autenticarse. Para generar y dar soporte a las sesiones, puede utilizar mandatos cURL para llevar a cabo las tareas siguientes:
 
-Aunque puede optar por utilizar otras herramientas, las herramientas siguientes constituyen requisitos previos para utilizar los ejemplos siguientes; utilice también otras herramientas.
-* cURL, para especificar solicitudes de la API REST como mandatos. cURL es un programa de utilidad gratuito que puede utilizar para enviar solicitudes HTTP a un servidor y recibir las respuestas del servidor a través de una interfaz de línea de mandatos. Puede descargar cURL desde el [sitio de descargas de cURL ![icono de enlace externo](../icons/launch-glyph.svg)](http://curl.haxx.se/download.html){: new_window}.
-* Python, para utilizar la herramienta JSON pretty-print de Python. Esta herramienta opcional toma texto JSON como entrada y genera información de salida de fácil lectura. Puede descargar Python desde el [sitio de descargas de Python ![icono de enlace externo](../icons/launch-glyph.svg)](https://www.python.org/downloads){: new_window}.
+* [Inicio de sesión en la consola de administración](#auth_loginapi) 
+* [Almacenamiento del ID de usuario y de la contraseña](#auth_setuidpw)
+* [Almacenamiento de cookies](#auth_apistorecook)
+* [Reutilización de cookies](#auth_apireusecook)
 
 ### Inicio de sesión en la consola de administración
+{: #auth_loginapi}
 
-Para poder ejecutar cualquier solicitud de la API `Admin`, debe iniciar una sesión en la consola de administración. Si tiene el permiso **Superuser** o el permiso **Users** con el acceso **Escritura**, puede añadir o eliminar usuarios. Debe tener el permiso **Superuser** para poder editar los permisos de otros usuarios.
+Para poder ejecutar cualquier solicitud de la API `Admin`, debe iniciar una sesión en la consola de administración. 
 
-Para iniciar la sesión en la Consola de administración, puede utilizar la autenticación de acceso básica en el punto final `https://<su_host>.ibm.com/login`. El servidor devuelve una cookie con la sesión. Utilice dicha cookie para todas las operaciones con la consola de administración.
+Para iniciar la sesión en la Consola de administración, puede utilizar la autenticación de acceso básica en el
+punto final `https://console.<region>.bluemix.net/login`. El servidor devuelve una cookie con la sesión. Utilice dicha cookie para todas las operaciones con la consola de administración.
 
 **Nota:** La sesión deja de ser válida si no se utiliza durante unas cuantas horas.
 
 Para iniciar una sesión en la consola de administración, ejecute el mandato siguiente:
 
-
-`curl --user <id_usuario>:<contraseña> -c ./cookies.txt --header "Accept: application/json" https://<su_host>.ibm.com/login | python -m json.tool`
+`curl --user <id_usuario>:<contraseña> -c ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/login | python -m json.tool`
 {: codeblock}
 
 <dl class="parml">
-
 <dt class="pt dlterm">--user <em>id_usuario</em>:<em>contraseña</em></dt>
 <dd class="pd">Acepta el ID de usuario y la contraseña y envía una cabecera de autorización básica.</dd>
-
 <dt class="pt dlterm">-c <em>nombre_archivo</em></dt>
 <dd class="pd">Almacena el ID de usuario y la contraseña especificados como una cookie en el archivo especificado.</dd>
-
+<dt class="pt dlterm">-b <em>nombre_archivo</em></dt>
+<dd class="pd">Recupera el ID de usuario y la contraseña especificados como una cookie en el archivo especificado.</dd>
 <dt class="pt dlterm">--header</dt>
 <dd class="pd">Envía una cabecera de aceptación.</dd>
-
 </dl>
 
 El siguiente ejemplo muestra la salida de este mandato:
@@ -1038,6 +1043,66 @@ El siguiente ejemplo muestra la salida de este mandato:
 }
 ```
 {: screen}
+
+### Almacenamiento del ID de usuario y de la contraseña
+{: #auth_setuidpw}
+
+También puede almacenar el ID de usuario y la contraseña de forma que no tenga que especificarlos manualmente cada vez que inicie sesión.  Para almacenar el ID de usuario y la contraseña para su reutilización, utilice el siguiente ejemplo de cURL:
+
+`curl -X GET -H "Authorization: Basic <redacted>" -H "Accept: application/json" "http://localhost:3000/login"`
+{: codeblock}
+
+Para configurar su información de inicio de sesión en un archivo independiente y, a continuación, invocar el archivo para que no tenga que volver a especificarla para cada solicitud de autenticación, utilice la opción `--netrc` que se proporciona mediante el mandato cURL.
+
+Para utilizar la opción `--netrc` con cURL, cree en primer lugar un archivo en el directorio de inicio del usuario de una de las siguientes maneras:
+* En un sistema Unix, cree un archivo denominado .netrc 
+* En un sistema Windows, cree un archivo denominado _netrc. 
+
+En el archivo, especifique la siguiente información:
+
+`machine console.<region>.bluemix.net
+login <id>
+password <password>`
+{: codeblock}
+
+Al invocar un mandato cURL, añada el siguiente argumento: `--netrc`.
+<p>Para utilizar un archivo netrc situado en un directorio diferente, utilice la opción `--netrc-file [file]`, donde `[file]` es la ubicación del archivo netrc.</p>
+</li>
+</ol>
+
+
+### Almacenamiento de cookies
+{: #auth_apistorecook}
+
+Al iniciar sesión en la consola de administración, el servidor devolverá una cookie con la sesión. Dicha cookie se necesita como parte del proceso de inicio de sesión para las próximas invocaciones de API para todas las operaciones con la consola de administración. Puede almacenar cookies para utilizarlas más adelante.
+
+Para almacenar cookies una vez que haya iniciado sesión, utilice la opción `-c`, tal como se muestra en el siguiente ejemplo de CURL:
+
+`curl --user <id_usuario>:<contraseña> -c ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/login | python -m json.tool`
+{: codeblock}
+
+### Reutilización de cookies
+{: #auth_apireusecook}
+
+Para reutilizar cookies, utilice la opción `-b` con el nombre de archivo de la cookie que haya asignado con la opción `-c`, tal como se muestra en el siguiente ejemplo de CURL:
+
+`curl --user <id_usuario>:<contraseña> -b ./cookies.txt`
+{: codeblock}
+
+## Gestión de usuarios con la API REST de administración
+
+{: #usingadminapi}
+
+Puede utilizar la API REST `Admin` para añadir y eliminar usuarios de la instancia de
+{{site.data.keyword.Bluemix_notm}}.
+Se proporcionan puntos finales de la API REST `Admin` y respuestas JSON a modo experimental para habilitar operaciones básicas desde una línea de mandatos. Los puntos finales y URL de los ejemplos de esta información pueden cambiar o pueden ser retirados previo aviso.
+
+Si tiene el permiso **Superuser** o el permiso **Users** con el acceso **Escritura**, puede añadir o eliminar usuarios. Debe tener el permiso **Superuser** para poder editar los permisos de otros usuarios.
+
+Aunque puede optar por utilizar otras herramientas, las herramientas siguientes constituyen requisitos previos para utilizar los ejemplos siguientes; utilice también otras herramientas.
+* cURL, para especificar solicitudes de la API REST como mandatos. cURL es un programa de utilidad gratuito que puede utilizar para enviar solicitudes HTTP a un servidor y recibir las respuestas del servidor a través de una interfaz de línea de mandatos. Puede descargar cURL desde el [sitio de descargas de cURL ![icono de enlace externo](../icons/launch-glyph.svg)](http://curl.haxx.se/download.html){: new_window}.
+* Python, para utilizar la herramienta JSON pretty-print de Python. Esta herramienta opcional toma texto JSON como entrada y genera información de salida de fácil lectura. Puede descargar Python desde el [sitio de descargas de Python ![icono de enlace externo](../icons/launch-glyph.svg)](https://www.python.org/downloads){: new_window}.
+
 
 ### Listado de organizaciones
 {: #listingorg}
@@ -1158,8 +1223,6 @@ El siguiente ejemplo muestra la salida de este mandato:
 ```
 {: screen}
 
-
-
 ### Adición de un usuario
 
 Puede utilizar la API REST `Admin` para añadir usuarios a la instancia de
@@ -1213,8 +1276,7 @@ Debe proporcionar la información en un archivo JSON.
 }
 </pre>
 </li>
-<li>Publique el contenido del archivo JSON en el punto final del usuario mediante la ejecución del mandato
-siguiente:<br/><br/>
+<li>Publique el contenido del archivo JSON en el punto final del usuario ejecutando el mandato siguiente:<br/><br/>
 <code>
 curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.json https://<su_host>.ibm.com/codi/v1/users
 </code>
@@ -1297,33 +1359,37 @@ El siguiente ejemplo muestra la salida de este mandato:
 ## API para métricas (experimental)
 {: #envappmetricsapi}
 
-Puede utilizar dos API experimentales para obtener métricas sobre el entorno o las aplicaciones. Estas API devuelven una matriz de puntos de datos correspondientes a las métricas que ha solicitado durante el periodo de tiempo especificado.
+Puede utilizar tres API experimentales para recopilar métricas sobre el entorno o las aplicaciones. Estas API devuelven una matriz de puntos de datos correspondientes a las métricas que ha solicitado durante el periodo de tiempo especificado.
 
 Se puede acceder a las API para métricas que se describen en las secciones desde el punto final específico de la región, por ejemplo: 
 
- `https://console.<region>.bluemix.net/admin/metrics`
+`https://console.<region>.bluemix.net/admin/metrics`
 {: codeblock}
 
 **Notas**:
 
 1. Un usuario puede realizar un máximo de 200 solicitudes de API para métricas por hora.
 2. Cada solicitud de API devuelve un máximo de 200 puntos de datos por solicitud. Si hay más datos disponibles, se proporciona un URL en la respuesta para cargar el siguiente conjunto de datos.
+3. Cada solicitud de API necesita que un usuario tenga al menos Acceso básico a la consola de administración.  Es posible que se necesiten permisos adicionales, como se especifica más abajo.
 
 ## Obtención de métricas sobre el entorno 
 
 Puede utilizar la API de entorno experimental para obtener información sobre el entorno durante el periodo de tiempo que especifique. Se devuelven los puntos de datos disponibles dentro del periodo de tiempo que especifique. Se registran datos cada hora aproximadamente. Si, por ejemplo, ha solicitado seis horas de datos de CPU para el entorno, la respuesta incluirá datos de CPU correspondientes a cada una de las seis horas solicitadas.
 
- ### Puntos finales del entorno 
- 
+
+### Puntos finales del entorno 
+
 Puede utilizar el punto final siguiente para invocar este mandato de API: `/api/v1/env`
+
+**Nota**: Es necesario uno de los siguientes permisos para acceder a estos puntos finales: **acceso básico**, **lectura de usuario**, **escritura de usuario**, o **Superusuario**
 
 ### Parámetros de consulta de métricas del entorno
 
-Con los siguientes parámetros de consulta puede obtener métricas correspondientes a CPU, disco, memoria, red y apps:
+Con los siguientes parámetros de consulta puede obtener métricas correspondientes a CPU, disco, memoria, red, cuota y apps:
 
 <dl class="parml">
 <dt class="pt dlterm">métrica</dt>
-<dd class="pd">Uno o varios de los siguientes valores, separados por comas: `memory`, `disk`, `cpu`, `network` y `apps`.</dd>
+<dd class="pd">Uno o varios de los siguientes valores, separados por comas: `memory`, `disk`, `cpu`, `network`, `quota` y `apps`.</dd>
 <dt class="pt dlterm">startTime</dt>
 <dd class="pd">El primer punto en el tiempo a partir del que se devuelven datos. Si no se especifica startTime, se incluye el punto de datos más antiguo disponible. Por ejemplo, para obtener datos entre las 2 PM y las 5 PM, especifique para startTime el valor 2 PM.</dd>
 <dt class="pt dlterm">endTime</dt>
@@ -1332,12 +1398,13 @@ Con los siguientes parámetros de consulta puede obtener métricas correspondien
 <dd class="pd">El orden en el que se devuelven los datos. Los valores válidos son `asc` (ascendente) y `desc` (descendente). El valor predeterminado es descendente, que devuelve en primer lugar los datos más recientes. </dd>
 </dl>
 
- El ejemplo siguiente utiliza los parámetros de consulta para obtener métricas sobre el entorno:
- 
- ```
- curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/env?metric=cpu,network,disk,apps,memory
- ```
+El ejemplo siguiente utiliza los parámetros de consulta para obtener métricas sobre el entorno:
+
+```
+curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/env?metric=cpu,network,disk,apps,memory
+```
 {: codeblock}
+
 
 ### Formato de los datos de las métricas del entorno
 
@@ -1349,7 +1416,23 @@ En las secciones siguientes se proporciona al formato de los datos.
 {
   "sample_time": 1477494000000,
   "memory": {
-    "cell": {
+    "total": {
+      "physical": {
+        "total_gb": 1728,
+        "used": {
+          "value_gb": 673.68,
+          "percent": 38.99
+        }
+      },
+    "allocated": {
+        "reserved_gb": 3456,
+        "total_allocated": {
+          "value_gb": 2575.18,
+          "percent": 74.51
+        }
+      },
+    },
+  	"cell": {
       "physical": {
         "total_gb": 864,
       "used": {
@@ -1418,6 +1501,22 @@ En las secciones siguientes se proporciona al formato de los datos.
 {
   "sample_time": 1477494000000,
   "disk": {
+    "total": {
+      "physical": {
+        "total_gb": 16200,
+        "used": {
+          "value_gb": 1614,
+          "percent": 9.96
+        }
+      },
+    "allocated": {
+        "reserved_gb": 32400,
+        "total_allocated": {
+          "value_gb": 3979,
+          "percent": 12.28
+        }
+      },
+    },
     "cell": {
       "physical": {
         "total_gb": 8100,
@@ -1487,11 +1586,14 @@ En las secciones siguientes se proporciona al formato de los datos.
 {
   "sample_time": 1477494000000,
   "cpu": {
+    "total": {
+      "average_percent_cpu_used": 14.725
+    },
     "cell": {
-      "average_percent_cpu_used": 27.288461538461544
+      "average_percent_cpu_used": 19
     },
     "dea": {
-      "average_percent_cpu_used": 27.288461538461544
+      "average_percent_cpu_used": 10.45
     },
     "cpu_by_container": [
       {
@@ -1511,16 +1613,16 @@ En las secciones siguientes se proporciona al formato de los datos.
         "wait_percent": "0.0"
       },
       {
-        "name": "dea_next/2",
-        "type": "dea",
+        "name": "cell/1",
+        "type": "cell",
         "ip": "169.53.230.49",
         "sys_percent": "5.3",
         "user_percent": "1.9",
         "wait_percent": "0.0"
       },
       {
-        "name": "dea_next/3",
-        "type": "dea",
+        "name": "cell/2",
+        "type": "cell",
         "ip": "169.44.109.231",
         "sys_percent": "8.2",
         "user_percent": "22.6",
@@ -1576,16 +1678,36 @@ En las secciones siguientes se proporciona al formato de los datos.
       }
       ],
         "bandwidth": {
-        "in_mbps": 10855,
-        "out_mbps": 38090
+        "in_kbps": 10855,
+        "out_kbps": 38090
       }
   }
 }
 ```
 {: screen}
 
-* Para obtener registros de datos sobre las aplicaciones, utilice el siguiente formato de datos:
+* Para recopilar registros de datos sobre el uso de cuota, utilice el siguiente formato de datos:
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "quota": {
+    "reserved_memory": {
+      "total_bytes": 33176474877952
+    },
+    "services": {
+      "total": 111650
+    },
+    "routes": {
+      "total": 1675000
+    }
+  }
+}
+```
+{: screen}
 
+* Para obtener registros de datos sobre las aplicaciones, utilice el siguiente formato de datos:
+ 
 ```
 {
   "sample_time": 1477494000000,
@@ -1610,6 +1732,58 @@ En las secciones siguientes se proporciona al formato de los datos.
 ```
 {: screen}
 
+## Recopilación de métricas sobre sus organizaciones
+
+Se registran datos para todas las organizaciones aproximadamente cada hora. Una solicitud de una métrica particular devuelve información correspondiente a todas las organizaciones de cada muestra de datos del período de tiempo que especifique, que se guarda en orden descendente mediante la métrica solicitada. Por ejemplo, solicitando todas las organizaciones por memoria durante un periodo de tiempo de 6 horas en un entorno que tiene 200 apps, se devuelven 1200 registros, en grupo de 200.
+
+Para reducir la cantidad de información que se devuelve para cada muestra de datos en el periodo de tiempo solicitado, puede especificar una opción de recuento. Siguiendo con el ejemplo anterior, si añadimos una opción de recuento de 5 se devuelven 30 registros que representan las 5 primeras organizaciones por memoria para cada muestra de datos.
+
+### Puntos finales de las organizaciones 
+
+Puede utilizar los siguientes puntos finales para invocar este mandato de API:
+* `/api/v1/org/memory/physical`
+* `/api/v1/org/memory/reserved`
+* `/api/v1/org/disk/physical`
+* `/api/v1/org/disk/reserved`
+
+**Nota**: Es necesario uno de los siguientes permisos para acceder a estos puntos finales: **lectura de usuario**, **escritura de usuario**, o **Superusuario**
+
+### Parámetros de consulta de las organizaciones
+ 
+Utilice los siguientes parámetros de consulta para recopilar métricas para las organizaciones:
+
+<dl class="parml">
+<dt class="pt dlterm">startTime</dt>
+<dd class="pd">El primer punto en el tiempo a partir del que se devuelven datos. Si no se especifica startTime, se incluye el punto de datos más antiguo disponible. Por ejemplo, para obtener datos entre las 2 PM y las 5 PM, especifique para startTime el valor 2 PM.</dd>
+<dt class="pt dlterm">endTime</dt>
+<dd class="pd">El último punto en el tiempo a partir del que se devuelven datos. Si no se especifica endTime, se utiliza el punto de datos más reciente. Por ejemplo, para obtener datos entre las 2 PM y las 5 PM, especifique para endTime el valor 5 PM.</dd>
+<dt class="pt dlterm">count</dt>
+<dd class="pd">El número de registros que se devolverán para cada muestra de datos.
+</dd>
+<dt class="pt dlterm">minValue</dt>
+<dd class="pd">El valor más pequeño a devolver para la métrica especificada.  Si no se especifica ningún minValue, se devolverán todos los valores.  Por ejemplo, para recopilar organizaciones utilizando al menos 20000 bytes de memoria física, especifique un minValue de 20000.
+</dd>
+</dl>
+
+El siguiente ejemplo recopila métricas sobre las organizaciones:
+
+```
+curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/org/memory/physical?count=5&startTime=2016-12-02T16:54:09.467Z
+```
+{: codeblock}
+
+### Formato de respuesta de las organizaciones
+
+```
+{
+   docs: [],
+   next_url:
+}
+```
+{: screen}
+
+Cada documento que se devuelve representa las métricas solicitadas para una organización en cada muestra de datos, en el momento de realizar la solicitud.
+
 ## Obtención de métricas sobre las aplicaciones
 
 Se registran datos para todas las aplicaciones aproximadamente cada hora. Una solicitud de una métrica en particular devuelve información correspondiente a todas las apps en cada muestra de datos del periodo de tiempo que especifique, que se guarda en orden descendente por orden de métrica solicitada. Por ejemplo, si se solicitan todas las apps por CPU durante un periodo de tiempo de 6 horas y hay 200 apps, se devuelven 1200 registros, en grupos de 200.
@@ -1625,6 +1799,7 @@ Puede utilizar los siguientes puntos finales para invocar este mandato de API:
 * `/api/v1/app/disk/physical`
 * `/api/v1/app/disk/reserved`
 
+**Nota**: Es necesario uno de los siguientes permisos para acceder a estos puntos finales: **lectura de usuario**, **escritura de usuario**, o **Superusuario**
 
 ### Parámetros de consulta de aplicaciones
  
@@ -1649,6 +1824,7 @@ El siguiente ejemplo recopila métricas sobre las aplicaciones:
 curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/app/cpu/physical?count=5&startTime=2016-12-02T16:54:09.467Z
 ```
 {: codeblock}
+
 
 ### Formato de respuesta de aplicaciones
 
@@ -1896,15 +2072,17 @@ Siga estos pasos para añadir el repositorio e instalar
 el plug-in:
 
 <ol>
-<li>Para añadir el repositorio de plugin de administración de {{site.data.keyword.Bluemix_notm}}, ejecute el mandato siguiente:<br/><br/> <code>
-cf add-plugin-repo BluemixAdmin https://console.&lt;subdominio&gt;.bluemix.net/cli
+<li>Para añadir el repositorio de plugins de la administración de {{site.data.keyword.Bluemix_notm}}, ejecute el siguiente mandato:<br/><br/>
+<code>
+cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli
 </code><br/><br/>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdominio&gt;</dt>
 <dd class="pd">Subdominio del URL correspondiente a la instancia de {{site.data.keyword.Bluemix_notm}}.</dd>
 </dl>
 </li>
-<li>Para instalar el plug-in de CLI de administración de {{site.data.keyword.Bluemix_notm}}, ejecute el siguiente mandato:<br/><br/> <code>
+<li>Para instalar el plugin de la CLI de administración de {{site.data.keyword.Bluemix_notm}}, ejecute el mandato siguiente:<br/><br/>
+<code>
 cf install-plugin bluemix-admin-cli -r BluemixAdmin
 </code>
 </li>

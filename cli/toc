@@ -27,5 +27,4 @@
     start_coding.md
         [Developing with Eclipse Tools](../starters/deploy_eclipsetools.html)
         [Deploying your app with CLI](../starters/install_cli.html)
-        [Managing your code with Git](../starters/deploy_devops.html)
         [Uploading your app](../starters/upload_app.html)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-27"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2016-02-27"
 {:screen: .screen}
 {:pre: .pre}
 
-# {{site.data.keyword.openwhisk_short}}CLI
+# {{site.data.keyword.openwhisk_short}} CLI
 
 {{site.data.keyword.openwhisk_short}} offre una potente interfaccia riga di comando che consente la gestione completa di tutti gli aspetti del sistema.
 
@@ -40,7 +40,9 @@ Immetti il seguente comando per impostare la chiave di autorizzazione:
 ```
 wsk property set --auth <authorization_key>
 ```
-{: pre} 
+{: pre}
+
+**Suggerimento:** per impostazione predefinita, la CLI OpenWhisk memorizza le proprietà impostate in `~/.wskprops`. È possibile modificare la posizione di questo file impostando la variabile di ambiente `WSK_CONFIG_FILE`.  
 
 Per verificare la configurazione della tua CLI, prova a [creare ed eseguire un'azione](./index.html#openwhisk_start_hello_world).
 

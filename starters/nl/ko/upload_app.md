@@ -23,7 +23,7 @@ lastupdated: "2017-01-12"
 시작하기 전에 다음을 수행해야 합니다.
   1. {{site.data.keyword.Bluemix}} 및 Cloud Foundry 명령행 인터페이스를 설치하십시오.
 
-  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(새 탭 또는 창에서 열림)"><img class="image" src="images/btn_bx_commandline.svg" alt=" {{site.data.keyword.Bluemix}} 명령행 인터페이스 다운로드" /> </a>  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(새 탭 또는 창에서 열림)"><img class="image" src="images/btn_cf_commandline.svg" alt="Cloud Foundry 명령행 인터페이스 다운로드" /> </a> 
+  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(새 탭 또는 창에서 열림)"><img class="image" src="images/btn_bx_commandline.svg" alt="{{site.data.keyword.Bluemix}} 명령행 인터페이스 다운로드" /> </a>  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(새 탭 또는 창에서 열림)"><img class="image" src="images/btn_cf_commandline.svg" alt="Cloud Foundry 명령행 인터페이스 다운로드" /> </a>
 
   2. {{site.data.keyword.Bluemix}}에 연결하십시오.
 

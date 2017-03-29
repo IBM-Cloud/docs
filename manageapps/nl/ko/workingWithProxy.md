@@ -48,7 +48,7 @@ lastupdated: "2016-07-20"
 그런 다음 애플리케이션을 다시 스테이징하십시오. 그러면 애플리케이션에서 런타임 시 지정된 프록시 설정을 사용합니다. Java 프록시 옵션에 대한 자세한 정보는 [Java Networking and Proxies](https://docs.oracle.com/javase/8/docs/technotes/guides/net/proxies.html)의 내용을 참조하십시오. 
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
 {: #general}
 * [Liberty for Java](/docs/runtimes/liberty/index.html)

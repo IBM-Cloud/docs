@@ -63,7 +63,7 @@ Sie können nun mit der Verwendung der {{site.data.keyword.Bluemix_notm}}-CLI be
 ## Plug-ins installieren
 {: #install_plug-in}
 
-Wie die Cloud Foundry-CLI unterstützt auch die {{site.data.keyword.Bluemix_notm}}-CLI ein Plug-in-Erweiterungsframework, mit dem über die bereits Befehle hinaus weitere Befehle integriert werden können. 
+Wie die Cloud Foundry-CLI unterstützt auch die {{site.data.keyword.Bluemix_notm}}-CLI ein Plug-in-Erweiterungsframework, mit dem über die bereits Befehle hinaus weitere Befehle integriert werden können.
 
 Führen Sie die folgenden Schritte aus, um in Ihrer lokalen Umgebung ein Plug-in zu installieren:
 

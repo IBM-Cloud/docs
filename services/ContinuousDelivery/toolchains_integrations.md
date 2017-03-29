@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-16"
+lastupdated: "2017-3-24"
 
 ---
 
@@ -214,6 +214,8 @@ Configure {{site.data.keyword.deliverypipeline}} to automate the continuous buil
 1. Click **{{site.data.keyword.deliverypipeline}}** to view the pipeline and configure it. To learn the basics of configuring a pipeline, see [Building and deploying pipelines](/docs/services/ContinuousDelivery/pipeline_build_deploy.html){: new_window}.
 
   **Tip**: If you want to trigger the pipeline when you push changes to your GitHub, {{site.data.keyword.ghe_short}}, or Git repository (repo), you must configure GitHub, {{site.data.keyword.ghe_short}}, or Git Repos and Issue Tracking for your toolchain before you define the stages for your pipeline. The pipeline stages need the Git URLs for your repos. Each pipeline stage can refer to only one of the GitHub, {{site.data.keyword.ghe_short}}, or Git repos that are associated with your toolchain. For instructions to configure GitHub, see the [GitHub](#github) section. For instructions to configure Dedicated {{site.data.keyword.ghe_short}}, see [Getting started with {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}. For instructions to configure Git Repos and Issue Tracking, see the [Git Repos and Issue Tracking](##gitbluemix) section.
+  
+  **Note:** If you don't have admin privileges for the GitHub or GitHub Enterprise repo or Master or Owner privileges for the Git Repos  and Issue Tracking repo that you are linking to, your integration will be limited because you can't use a webhook. Webhooks are required to automatically trigger a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
 
 1. Optional: If you are using a toolchain on {{site.data.keyword.Bluemix_notm}} Public and you want Sauce Labs to run tests on your app, configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test job. For instructions to configure the test job, see the [Configuring a Sauce Labs test job in your pipeline](#config_saucelabs) section.
 
@@ -320,6 +322,8 @@ If you have a toolchain and are adding Git Repos and Issue Tracking to it, follo
 1. Click **Create Integration**.
 1. Click the card for the Git repo that you want to work with. Your project overview page opens.
 
+**Note:** If you don't have Master or Owner privileges for the repo that you are linking to, your integration will be limited because you can't use a webhook. Webhooks are required to automatically trigger a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
+
 
 ## Configuring GitHub
 {: #github}
@@ -357,6 +361,8 @@ Configure GitHub to manage your source code on the cloud:
   **Tip**: You can use the integrated source code management tools in Eclipse Orion {{site.data.keyword.webide}} to edit the GitHub repo and deploy an app from your workspace.
 
 1. If you enabled GitHub Issues, click **GitHub Issues** to open it. You can use this instance of GitHub Issues for your entire toolchain, even if the toolchain contains multiple GitHub repos.
+
+**Note:** If you don't have admin privileges for the repo that you are linking to, your integration will be limited because you can't use a webhook. Webhooks are required to automatically trigger a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually. 
 
 For more information, see [GitHub![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} and [GitHub Issues![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}.
 
@@ -398,6 +404,8 @@ You can configure {{site.data.keyword.ghe_short}} as a tool integration in your 
   **Tip**: You can use the integrated source code management tools in Eclipse Orion {{site.data.keyword.webide}} to edit the {{site.data.keyword.ghe_short}} repo and deploy an app from your workspace.
 
 1. If you enabled GitHub Issues, click **GitHub Issues**. You can use this instance of GitHub Issues for your entire toolchain, even if the toolchain contains multiple GitHub repos.
+
+**Note:** If you don't have admin privileges for the repo that you are linking to, your integration will be limited because you can't use a webhook. Webhooks are required to automatically trigger a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
 
 
 ## Configuring Jenkins

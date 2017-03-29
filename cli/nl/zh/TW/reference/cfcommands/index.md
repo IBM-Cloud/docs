@@ -32,7 +32,7 @@ Cloud Foundry (cf) 指令行介面 (CLI) 提供一組管理應用程式的指令
 使用下表中的索引來參照常用的 Cloud Foundry 指令：
 
 <table summary="按字母順序排序的一般 Cloud Foundry 指令，其鏈結提供指令的相關資訊">
- <caption>表格 1. 一般 Cloud Foundry 指令</caption>
+ <caption>表 1. 一般 Cloud Foundry 指令</caption>
  <thead>
  <th colspan="6">一般 Cloud Foundry 指令</th>
  </thead>
@@ -50,7 +50,7 @@ Cloud Foundry (cf) 指令行介面 (CLI) 提供一組管理應用程式的指令
 
 
 <table summary="按字母順序排序的指令，用於管理應用程式、空間及服務。每一個指令都有鏈結可提供指令的相關資訊。">
- <caption>表格 2. 用來管理應用程式、空間及服務的指令</caption>
+ <caption>表 2. 用來管理應用程式、空間及服務的指令</caption>
  <thead>
  <th colspan="5">用來管理應用程式、空間及服務的指令</th>
  </thead>

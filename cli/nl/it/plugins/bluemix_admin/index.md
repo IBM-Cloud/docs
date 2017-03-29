@@ -41,14 +41,12 @@ CLI.
 Completa la seguente procedura per aggiungere il repository e installare il plug-in:
 
 <ol>
-<li>Per aggiungere il repository del plug-in {{site.data.keyword.Bluemix_notm}} Admin,
-immetti il seguente comando:<br/><br/>
+<li>Per aggiungere il repository del plug-in Gestione {{site.data.keyword.Bluemix_notm}}, immetti il seguente comando:<br/><br/>
 <code>
 cf add-plugin-repo BluemixAdmin http://plugins.ng.bluemix.net
 </code><br/><br/>
 </li>
-<li>Per installare il plug-in {{site.data.keyword.Bluemix_notm}} Admin
-CLI, immetti il seguente comando:<br/><br/>
+<li>Per installare il plug-in {{site.data.keyword.Bluemix_notm}} Admin CLI, immetti il seguente comando:<br/><br/>
 <code>
 cf install-plugin BluemixAdminCLI -r BluemixAdmin
 </code>
@@ -83,8 +81,7 @@ Prima di poter utilizzare il plug-in Admin CLI,
 devi connetterti ed effettuare l'accesso.
 
 <ol>
-<li>Per connetterti all'endpoint dell'API {{site.data.keyword.Bluemix_notm}},
-immetti il seguente comando:<br/><br/>
+<li>Per connetterti all'endpoint dell'API {{site.data.keyword.Bluemix_notm}}, immetti il seguente comando:<br/><br/>
 <code>
 cf ba api https://console.&lt;subdomain&gt;.bluemix.net
 </code>
@@ -96,8 +93,7 @@ cf ba api https://console.&lt;subdomain&gt;.bluemix.net
 <p>Puoi controllare l'URL corretto nella pagina Risorse e informazioni della Console di gestione. L'URL viene mostrato
 nella sezione Informazioni API all'interno del campo **URL API**.</p>
 </li>
-<li>Accedi a {{site.data.keyword.Bluemix_notm}} con il
-seguente comando:<br/><br/>
+<li>Accedi a {{site.data.keyword.Bluemix_notm}} con il seguente comando:<br/><br/>
 <code>
 cf login
 </code>
@@ -201,7 +197,7 @@ cf ba remove-user <nome_utente>
 
 <dl class="parml">
 
-<dt class="pt dlterm">&lt;nome_utente&gt;</dt>
+<dt class="pt dlterm">&lt;user_name&gt;</dt>
 <dd class="pd">Il nome dell'utente in {{site.data.keyword.Bluemix_notm}}.</dd>
 
 </dl>
@@ -249,7 +245,7 @@ cf ba create-org <organization> <manager>
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;organizzazione&gt;</dt>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Il nome o il GUID dell'organizzazione {{site.data.keyword.Bluemix_notm}} da aggiungere.</dd>
 <dt class="pt dlterm">&lt;gestore&gt;</dt>
 <dd class="pd">Il nome utente del gestore per l'organizzazione.</dd>
@@ -269,7 +265,7 @@ cf ba delete-org <organization>
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;organizzazione&gt;</dt>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Il nome o il GUID dell'organizzazione {{site.data.keyword.Bluemix_notm}} da eliminare.</dd>
 </dl>
 
@@ -288,9 +284,9 @@ cf ba set-org <nome_utente> <organizzazione> [<ruolo>]
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;nome_utente&gt;</dt>
+<dt class="pt dlterm">&lt;user_name&gt;</dt>
 <dd class="pd">Il nome dell'utente in {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt class="pt dlterm">&lt;organizzazione&gt;</dt>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Il nome o GUID dell'organizzazione {{site.data.keyword.Bluemix_notm}} a cui assegnare l'utente.</dd>
 <dt class="pt dlterm">&lt;ruolo&gt;</dt>
 <dd class="pd">Vedi [Ruoli](/docs/admin/users_roles.html) per i ruoli utente di {{site.data.keyword.Bluemix_notm}} e le relative
@@ -312,9 +308,9 @@ cf ba unset-org <nome_utente> <organizzazione> [<ruolo>]
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;nome_utente&gt;</dt>
+<dt class="pt dlterm">&lt;user_name&gt;</dt>
 <dd class="pd">Il nome dell'utente in {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt class="pt dlterm">&lt;organizzazione&gt;</dt>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Il nome o GUID dell'organizzazione {{site.data.keyword.Bluemix_notm}} a cui assegnare l'utente.</dd>
 <dt class="pt dlterm">&lt;ruolo&gt;</dt>
 <dd class="pd">Vedi [Assegnazione di ruoli](/docs/admin/users_roles.html) per
@@ -355,7 +351,7 @@ cf ba set-quota <organizzazione> <piano>
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;organizzazione&gt;</dt>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Il nome o il GUID dell'organizzazione {{site.data.keyword.Bluemix_notm}} per cui impostare la quota.</dd>
 <dt class="pt dlterm">&lt;piano&gt;</dt>
 <dd class="pd">Il piano di quota per un'organizzazione.</dd>
@@ -376,7 +372,7 @@ cf bluemix-admin containers-quota <organization>
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;organizzazione&gt;</dt>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Il nome o l'ID dell'organizzazione in Bluemix. Questo parametro è obbligatorio.</dd>
 </dl>
 
@@ -396,7 +392,7 @@ cf bluemix-admin set-containers-quota <organization> <options>
 **Nota**: puoi includere più opzioni, ma ne devi includere almeno una.
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;organizzazione&gt;</dt>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Il nome o l'ID dell'organizzazione in Bluemix. Questo parametro è obbligatorio.</dd>
 <dt class="pt dlterm">&lt;opzioni&gt;</dt>
 <dd class="pd">Includi una o più delle seguenti opzioni in cui il valore deve essere un numero intero:
@@ -462,7 +458,7 @@ cf bluemix-admin create-space <organization> <space_name>
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;organizzazione&gt;</dt>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Il nome o GUID dell'organizzazione a cui aggiungere lo spazio.</dd>
 <dt class="pt dlterm">&lt;space_name&gt;</dt>
 <dd class="pd">Il nome dello spazio da creare nell'organizzazione.</dd>
@@ -482,7 +478,7 @@ cf bluemix-admin delete-space <organization> <space_name>
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;organizzazione&gt;</dt>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Il nome o GUID dell'organizzazione da cui rimuovere lo spazio.</dd>
 <dt class="pt dlterm">&lt;space_name&gt;</dt>
 <dd class="pd">Il nome dello spazio da rimuovere dall'organizzazione.</dd>
@@ -529,7 +525,7 @@ cf bluemix-admin unset-space <organization> <space_name> <user_name> <role>
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;organizzazione&gt;</dt>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Il nome o GUID dell'organizzazione a cui aggiungere l'utente.</dd>
 <dt class="pt dlterm">&lt;space_name&gt;</dt>
 <dd class="pd">Il nome dello spazio a cui aggiungere l'utente.</dd>
@@ -600,7 +596,7 @@ cf ba add-service-plan-visibility <identificativo_piano> <organizzazione>
 <dl class="parml">
 <dt class="pt dlterm">&lt;identificativo_piano&gt;</dt>
 <dd class="pd">Il nome o il GUID del piano di servizio che desideri abilitare. Se immetti un nome del piano di servizio non univoco, ad esempio "Standard" o "Di base," ti verrà richiesto di scegliere tra dei piani di servizio. Per identificare il nome di un piano di servizio, seleziona la categoria di servizio dalla homepage, quindi fai clic su **Aggiungi** per visualizzarne i servizi. Fai clic sul nome del servizio per aprire la vista Dettagli, da cui puoi visualizzare i nomi dei piani di servizi disponibili per il servizio.</dd>
-<dt class="pt dlterm">&lt;organizzazione&gt;</dt>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Il nome o il GUID dell'organizzazione {{site.data.keyword.Bluemix_notm}} da aggiungere all'elenco di visibilità del servizio.</dd>
 </dl>
 
@@ -623,7 +619,7 @@ cf ba remove-service-plan-visibility <identificativo_piano> <organizzazione>
 <dl class="parml">
 <dt class="pt dlterm">&lt;identificativo_piano&gt;</dt>
 <dd class="pd">Il nome o il GUID del piano di servizio che desideri abilitare. Se immetti un nome del piano di servizio non univoco, ad esempio "Standard" o "Di base," ti verrà richiesto di scegliere tra dei piani di servizio. Per identificare il nome di un piano di servizio, seleziona la categoria di servizio dalla homepage, quindi fai clic su **Aggiungi** per visualizzarne i servizi. Fai clic sul nome del servizio per aprire la vista Dettagli, da cui puoi visualizzare i nomi dei piani di servizi disponibili per il servizio.</dd>
-<dt class="pt dlterm">&lt;organizzazione&gt;</dt>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Il nome o il GUID dell'organizzazione {{site.data.keyword.Bluemix_notm}} da rimuovere dall'elenco di visibilità del servizio.</dd>
 </dl>
 
@@ -646,7 +642,7 @@ cf ba edit-service-plan-visibilities <identificativo_piano> <organizzazione_1> <
 <dl class="parml">
 <dt class="pt dlterm">&lt;identificativo_piano&gt;</dt>
 <dd class="pd">Il nome o il GUID del piano di servizio che desideri abilitare. Se immetti un nome del piano di servizio non univoco, ad esempio "Standard" o "Di base," ti verrà richiesto di scegliere tra dei piani di servizio. Per identificare il nome di un piano di servizio, seleziona la categoria di servizio dalla homepage, quindi fai clic su **Aggiungi** per visualizzarne i servizi. Fai clic sul nome del servizio per aprire la vista Dettagli, da cui puoi visualizzare i nomi dei piani di servizi disponibili per il servizio.</dd>
-<dt class="pt dlterm">&lt;organizzazione&gt;</dt>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Il nome o il GUID dell'organizzazione {{site.data.keyword.Bluemix_notm}} per cui aggiungere la visibilità. Puoi abilitare la visibilità del servizio per più di una singola organizzazione immettendo i GUID o i nomi organizzazione aggiuntivi nel comando.</dd>
 </dl>
 
@@ -783,7 +779,7 @@ cf ba add-service-broker <nome_broker> <nome_utente> <password> <url_broker>
 <dl class="parml">
 <dt class="pt dlterm">&lt;nome_broker&gt;</dt>
 <dd class="pd">Nome del broker dei servizi personalizzato.</dd>
-<dt class="pt dlterm">&lt;nome_utente&gt;</dt>
+<dt class="pt dlterm">&lt;user_name&gt;</dt>
 <dd class="pd">Nome utente per l'account con accesso al broker dei servizi.</dd>
 <dt class="pt dlterm">&lt;password&gt;</dt>
 <dd class="pd">Password per l'account con accesso al broker dei servizi.</dd>
@@ -826,7 +822,7 @@ cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
 <dl class="parml">
 <dt class="pt dlterm">&lt;nome_broker&gt;</dt>
 <dd class="pd">Nome del broker dei servizi personalizzato.</dd>
-<dt class="pt dlterm">&lt;nome_utente&gt;</dt>
+<dt class="pt dlterm">&lt;user_name&gt;</dt>
 <dd class="pd">Nome utente per l'account con accesso al broker dei servizi.</dd>
 <dt class="pt dlterm">&lt;password&gt;</dt>
 <dd class="pd">Password per l'account con accesso al broker dei servizi.</dd>

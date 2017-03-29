@@ -69,7 +69,7 @@ Per {{site.data.keyword.Bluemix_notm}} dedicato e locale, l'autenticazione trami
 <dd>I log di controllo vengono creati per tutti i tentativi di autenticazione riusciti e non riusciti degli sviluppatori di applicazioni. I log di controllo vengono creati anche per l'accesso privilegiato ai sistemi Linux che ospitano i contenitori dove vengono eseguite le applicazioni {{site.data.keyword.Bluemix_notm}}.</dd>
 
 <dt>Protezione dei dati</dt>
-<dd> Tutto il traffico {{site.data.keyword.Bluemix_notm}} transita per i prodotti IBM WebSphere® DataPower® SOA Appliances, che forniscono funzioni di proxy inverso, terminazione SSL e bilanciamento del carico Sono consentiti i seguenti metodi HTTP:
+<dd> Tutto il traffico {{site.data.keyword.Bluemix_notm}} transita per i prodotti IBM WebSphere® DataPower® SOA Appliances, che forniscono funzioni di proxy inverso, terminazione SSL e bilanciamento del carico Sono consentiti i seguenti   metodi HTTP:
 <ul>
 <li>DELETE</li>
 <li>GET</li>
@@ -156,7 +156,8 @@ Ogni data center {{site.data.keyword.BluSoftlayer}} è pienamente protetto, con 
 
 Con {{site.data.keyword.Bluemix_notm}}, la protezione dei dati da accessi non autorizzati è uno sforzo congiunto tra te e {{site.data.keyword.Bluemix_notm}}.
 
-I dati associati a un'applicazione in esecuzione possono trovarsi in uno di tre stati: data-in-transit, data-at-rest e data-in-use.
+I dati associati a un'applicazione in esecuzione possono trovarsi in uno di tre stati:
+data-in-transit, data-at-rest e data-in-use.
 
 <dl>
 <dt>Data-in-transit</dt>
@@ -232,8 +233,7 @@ Puoi utilizzare gli strumenti SIEM (Security Information and Event Management) p
 ## Distribuzione della sicurezza {{site.data.keyword.Bluemix_notm}}
 {: #security-deployment}
 
-L'architettura della distribuzione della sicurezza {{site.data.keyword.Bluemix_notm}}
-include flussi di informazioni differenti per gli utenti dell'applicazione e gli sviluppatori al fine di garantire un accesso sicuro.
+L'architettura della distribuzione della sicurezza {{site.data.keyword.Bluemix_notm}} include flussi di informazioni differenti per gli utenti dell'applicazione e gli sviluppatori al fine di garantire un accesso sicuro.
 
 ![Architettura della distribuzione della sicurezza Bluemix](images/sec_deployment.svg)
 
@@ -281,7 +281,7 @@ Oltre agli utenti descritti in questi percorsi, un team per le operazioni di sic
 
 Per i clienti che vogliono trasferire i dati provenienti dallo Spazio economico europeo a un paese fuori dal SEE, {{site.data.keyword.Bluemix}} offre clausole del modello europeo nel formato approvato dalle autorità di protezione dei dati della Commissione Europea e dell'Unione Europea. Le clausole del modello europeo garantiscono ai clienti europei che {{site.data.keyword.Bluemix_notm}} supporti le protezioni della privacy dei dati necessarie in ogni punto nel mondo.
 
-![Financial Industry Information Systems](images/FISC.gif)  Per le istituzioni bancarie e finanziarie correlate in Giappone, i sistemi informatici devono disporre di procedure di sicurezza in vigore basate sulle linee guida di sicurezza FICS (Center for Financial Industry Information Systems). Le linee guida di sicurezza FISC vengono fatte rispettate dal Japan Financial Services Agency (FSA), Bank of Japan (BOJ) e FISC.
+![Financial Industry Information Systems](images/FISC.gif)  Per le istituzioni bancarie e finanziarie correlate in Giappone, i sistemi informatici devono disporre di procedure di sicurezza in vigore basate sulle linee guida di sicurezza FICS (Center for Financial Industry Information Systems). Le linee guida di sicurezza FISC vengono fatte rispettare dal Japan Financial Services Agency (FSA), Bank of Japan (BOJ) e FISC.
  
 
 ![ISO 27001/2](images/icon_iso27k1.png)  {{site.data.keyword.Bluemix_notm}} è certificato secondo gli **standard ISO (International Organization for Standardization) 27001 e 27002**, che definiscono le procedure ottimali per i processi di gestione della sicurezza informatica. ISO 27001 è uno standard di sicurezza globale ampiamente adottato che delinea i requisiti per i sistemi di gestione della sicurezza informatica. Fornisce un approccio sistematico nella gestione delle informazioni aziendali e dei clienti basato su periodiche valutazioni dei rischi. Lo standard più recente, ISO/IEC 27001:2013, è stato pubblicato il 25 settembre 2013 dall'**International Organization of Standardization (ISO) e International Electrotechnical Commission (IEC)** sotto la sottocommissione congiunta ISO e IEC. Lo standard ISO 27001 specifica i requisiti per stabilire, implementare e documentare i sistemi di gestione della sicurezza delle informazioni (ISMS) e i requisiti per applicare dei controlli di sicurezza in base alle esigenze delle singole organizzazioni. Lo standard ISO 27002 illustra in dettaglio ciascun controllo di sicurezza dell'ISO 27001. L'insieme di standard ISO 27000 incorpora un processo di ridimensionamento del rischio e valutazione delle risorse, con l'obiettivo di salvaguardare la riservatezza, l'integrità e la disponibilità delle informazioni scritte, orali ed elettroniche.

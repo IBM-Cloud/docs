@@ -6,8 +6,6 @@ lastupdated: "2017-02-02"
 
 ---
 
-
-<!-- Common attributes used in the template are defined as follows: -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -15,16 +13,11 @@ lastupdated: "2017-02-02"
 
 
 # Protokolle für Cloud Foundry-Apps mit Abfragen in Kibana filtern
-<!-- for example, Uploading your data -->
 {: #logging_kibana_query}
-<!-- Provide an appropriate ID above -->
 
-<!-- The short description section should include a sentence describing why this task is needed. For search engine optimization, include the service long name and "Bluemix". For example: -->
-
-Mit Kibana können Sie Abfragen erstellen, um Ihre Protokolle auf Schlüsselbegriffe zu durchsuchen und nach diesen Begriffen zu filtern. Sie können die Abfragen visuell im Kibana-Dashboard vergleichen. Sie können über die Registerkarte **Protokolle** für Ihre Cloud Foundry-App auf das Kibana-Dashboard zugreifen.
+Mit Kibana können Sie Abfragen erstellen, um Ihre Protokolle auf Schlüsselbegriffe zu durchsuchen und nach diesen Begriffen zu filtern. Sie können die Abfragen visuell im Kibana-Dashboard vergleichen. Sie können über die Registerkarte **Protokolle** für Ihre Cloud Foundry-App auf das Kibana-Dashboard zugreifen. 
 {:shortdesc}
 
-<!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->
 Führen Sie die folgenden Tasks aus, um eine Abfrage für Ihre Cloud Foundry-App-Protokolle im Kibana-Dashboard zu erstellen:
 
 1. Greifen Sie auf die Registerkarte **Protokolle** Ihrer Cloud Foundry-App zu. 

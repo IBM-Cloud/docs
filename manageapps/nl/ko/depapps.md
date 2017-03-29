@@ -51,7 +51,7 @@ Diego는 앱 상태의 유효성을 검증하기 위해 DEA에 사용된 동일�
 ### 기존 앱을 Diego로 마이그레이션
 {: #migrateapp}
 
-Diego는 {{site.data.keyword.Bluemix_notm}}를 위한 기본 Cloud Foundry 아키텍처이며 DEA에 대한 지원이 제거되므로, 각 앱을 업데이트하여 기존의 모든 애플리케이션을 마이그레이션해야 합니다. Diego 플래그로 애플리케이션을 업데이트하여 Diego로 앱을 마이그레이션하는 작업을 시작하십시오. 애플리케이션은 즉시 Diego에서 실행을 시작하려고 시도하며 DEA에서 실행을 중지합니다.  
+Diego는 {{site.data.keyword.Bluemix_notm}}를 위한 기본 Cloud Foundry 아키텍처이며 DEA에 대한 지원이 제거되므로, 각 앱을 업데이트하여 기존의 모든 애플리케이션을 마이그레이션해야 합니다. Diego 플래그로 애플리케이션을 업데이트하여 Diego로 앱을 마이그레이션하는 작업을 시작하십시오. 애플리케이션은 즉시 Diego에서 실행을 시작하려고 시도하며 DEA에서 실행을 중지합니다. 
 
 애플리케이션이 DEA 아키텍처에서 Diego로 업데이트됨에 따라, 애플리케이션이 Diego와 호환되지 않는 경우 짧은 또는 장기적인 중단 시간을 경험할 수 있습니다. 중단 시간을 최소화하려면, 애플리케이션의 사본을 Diego에 배치한 후 라우트를 스와핑하고 DEA 애플리케이션의 규모를 축소하여 [Blue-Green 배치](/docs/manageapps/updapps.html#blue_green)를 수행하십시오. 
 
@@ -67,7 +67,7 @@ Diego는 {{site.data.keyword.Bluemix_notm}}를 위한 기본 Cloud Foundry 아�
 앱을 업데이트한 후 앱이 시작되었는지 확인하십시오. 마이그레이션된 앱이 시작하는 데 실패하는 경우 해당 문제를 식별하고 해결한 후 앱을 다시 시작할 때까지 앱은 오프라인 상태를 유지합니다. 
 
 IBM은 DEA 아키텍처 지원이 제거되는 예정된 필수 마이그레이션 기간을 공지할 것이며, 앱을 마이그레이션하지 않은 경우 운영 팀에서 사용자를 위해 모든 앱을 대신 마이그레이션하게 됩니다. 
-  
+
 어떤 백엔드 애플리케이션이 실행 중인지 확인하려면 다음 명령을 사용하십시오. 
 
   ```
@@ -239,7 +239,7 @@ cf push -f appManifest.yml
 |**env**	|애플리케이션에 대한 사용자 정의 환경 변수입니다.|`env: DEV_ENV: production`|
 {: caption="표 1. Manifest YAML 파일에서 지원되는 옵션" caption-side="top"}
 
-### 샘플 `manifest.yml` 파일
+### 샘플 manifest.yml 파일
 
 다음 예는 {{site.data.keyword.Bluemix_notm}}에서 기본 제공 커뮤니티 Node.js 빌드팩을 사용하는 Node.js 애플리케이션에 대한 Manifest 파일을 보여줍니다.
 
@@ -419,7 +419,7 @@ DEA를 통해 정의된 변수는 다음과 같습니다.
 	  <dt><strong>WLP_OUTPUT_DIR</strong></dt>
 	  <dd>실행 중인 Liberty 프로파일 서버 인스턴스의 로그 파일 및 작업 디렉토리와 같은 생성된 출력의 위치입니다.</dd>
 	  </dl>
-</li>   
+</li>
 <li>Node.js 빌드팩으로 정의되는 변수는 다음과 같습니다.
 	<dl>
 	<dt><strong>BUILD_DIR</strong></dt>
@@ -520,7 +520,7 @@ tmp/
 ```
 
 # 관련 링크
-{: #rellinks}
+{: #rellinks notoc}
 
 ## 관련 링크
 {: #general}

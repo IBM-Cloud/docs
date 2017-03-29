@@ -209,7 +209,7 @@ javacloudantbp          Java Cloudant Web Starter
 
 
 <table summary="一般 bluemix 指令。">
- <caption>表格 1. 一般 bluemix 指令</caption>
+ <caption>表 1. 一般 bluemix 指令</caption>
  <thead>
  <th colspan="5">一般 bluemix 指令</th>
  </thead>
@@ -231,7 +231,7 @@ javacloudantbp          Java Cloudant Web Starter
 
 
 <table summary="您可以用來管理組織、空間和使用者的 bluemix 指令。">
- <caption>表格 2. 用來管理組織、空間和使用者的指令</caption>
+ <caption>表 2. 用來管理組織、空間和使用者的指令</caption>
  <thead>
  <th colspan="5">用來管理組織、空間和使用者的指令</th>
  </thead>
@@ -275,7 +275,7 @@ javacloudantbp          Java Cloudant Web Starter
 
 
 <table summary="您可以用來管理 Cloud Foundry 應用程式的 bluemix 指令。">
- <caption>表格 3. 用來管理 cf 應用程式的指令</caption>
+ <caption>表 3. 用來管理 cf 應用程式的指令</caption>
  <thead>
  <th colspan="5">用來管理 cf 應用程式的指令</th>
  </thead>
@@ -313,7 +313,7 @@ javacloudantbp          Java Cloudant Web Starter
 
 
 <table summary="您可以用來管理 Bluemix 服務的 bluemix 指令。">
- <caption>表格 4. 用來管理 Bluemix 服務的指令</caption>
+ <caption>表 4. 用來管理 Bluemix 服務的指令</caption>
  <thead>
  <th colspan="5">用來管理 Bluemix 服務的指令</th>
  </thead>
@@ -344,7 +344,7 @@ javacloudantbp          Java Cloudant Web Starter
 
 
 <table summary="您可以用來管理 Bluemix 型錄、外掛程式、帳單和安全設定的 bluemix 指令。">
- <caption>表格 5. 用來管理 Bluemix 型錄、外掛程式、帳單和安全設定的指令</caption>
+ <caption>表 5. 用來管理 Bluemix 型錄、外掛程式、帳單和安全設定的指令</caption>
  <thead>
  <th colspan="5">用來管理 Bluemix 型錄、外掛程式、帳單和安全設定的指令</th>
  </thead>
@@ -380,7 +380,7 @@ javacloudantbp          Java Cloudant Web Starter
 
 
 <table summary="您可以用來管理網路設定的 bluemix 指令。">
- <caption>表格 6. 用來管理網路設定的指令</caption>
+ <caption>表 6. 用來管理網路設定的指令</caption>
  <thead>
  <th colspan="5">用來管理網路設定的指令</th>
  </thead>
@@ -410,7 +410,7 @@ javacloudantbp          Java Cloudant Web Starter
  </table>
 
 <table summary="您可以用來在 Bluemix 上管理容器的 bluemix 指令。">
- <caption>表格 7. 用來在 Bluemix 上管理容器的指令</caption>
+ <caption>表 7. 用來在 Bluemix 上管理容器的指令</caption>
  <thead>
  <th colspan="5">用來在 Bluemix 上管理容器的指令</th>
  </thead>

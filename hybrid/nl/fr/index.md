@@ -27,7 +27,7 @@ plus d'informations sur l'environnement {{site.data.keyword.Bluemix_notm}} publi
 ## Dédié
 
 L'environnement {{site.data.keyword.Bluemix_notm}} dédié est un cloud privé dont le matériel est isolé physiquement dans un centre de données
-{{site.data.keyword.BluSoftlayer}}. Un service exclusif et mis à disposition sur une combinaison de serveurs non virtualisés et virtuels, votre
+{{site.data.keyword.BluSoftlayer}}. Mis à disposition sur une combinaison de serveurs non virtualisés et virtuels et à service exclusif, votre
 environnement {{site.data.keyword.Bluemix_notm}} est créé en fonction de vos besoins. De plus, avec le catalogue mixte, vous pouvez améliorer vos
 applications avec une combinaison de ressources de traitement et de services dédiés, ainsi que des capacités mises à disposition via la syndication du
 catalogue. En savoir plus sur l'environnement [{{site.data.keyword.Bluemix_notm}} dédié](/docs/dedicated/index.html).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-21"
+lastupdated: "2017-02-21"
 
 ---
 
@@ -35,7 +35,7 @@ L'azione `/whisk.system/weather/forecast` restituisce una previsione meteo per u
 - `password`: password per The Weather Company Data for IBM Bluemix che ha diritto a richiamare l'API delle previsioni.
 - `latitude`: la coordinata della latitudine della località.
 - `longitude`: la coordinata della longitudine della località.
-- `timeperiod`: periodo di tempo per la previsione. Le opzioni valide sono '10day' - (impostazione predefinita) restituisce una previsione giornaliera per un periodo di 10 giorni, '48hour' - restituisce una previsione oraria per 2 giorni, 'current' - restituisce le condizioni meteorologiche correnti, 'timeseries' - restituisce le rilevazioni in tempo reale e quelle delle ultime 24 ore dalla data/ora corrente.
+- `timePeriod`: il periodo di tempo per la previsione. Le opzioni valide sono '10day' - (impostazione predefinita) restituisce una previsione giornaliera per un periodo di 10 giorni, '48hour' - restituisce una previsione oraria per 2 giorni, 'current' - restituisce le condizioni meteorologiche correnti, 'timeseries' - restituisce le rilevazioni in tempo reale e quelle delle ultime 24 ore dalla data/ora corrente.
 
 
 Di seguito viene riportato un esempio di creazione di un bind di pacchetto e successiva acquisizione di una previsione meteo di 10 giorni.

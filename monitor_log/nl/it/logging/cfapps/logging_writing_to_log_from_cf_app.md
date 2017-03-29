@@ -16,7 +16,7 @@ lastupdated: "2017-02-06"
 # Registrazione delle applicazioni di runtime attraverso le applicazioni CF
 {: #logging_writing_to_log_from_cf_app}
 
-In {{site.data.keyword.Bluemix}}, per conservare i dati di log per un'applicazione Cloud Foundry e il relativo runtime, devi scrivere i tuoi log in STDOUT e STDERR.
+In {{site.data.keyword.Bluemix}}, per conservare i dati di log per un'applicazione Cloud Foundry e il relativo runtime, devi scrivere i tuoi log in STDOUT e STDERR. 
 {:shortdesc}
 
 In {{site.data.keyword.Bluemix}}, i record dei log STDOUT e STDERR vengono raccolti automaticamente:

@@ -16,7 +16,7 @@ lastupdated: "2017-02-16"
 # Protokollierung in Bluemix
 {: #logging_bmx_ov}
 
-Die {{site.data.keyword.Bluemix_notm}}-Protokollierungsfunktionen sind in die Plattform integriert und die Erfassung von Daten wird für Cloudressourcen automatisch aktiviert. {{site.data.keyword.Bluemix_notm}} erfasst standardmäßig Protokolle für Ihre Apps, App-Laufzeiten und Verarbeitungslaufzeiten, in denen diese Apps ausgeführt werden.
+Die {{site.data.keyword.Bluemix_notm}}-Protokollierungsfunktionen sind in die Plattform integriert und die Erfassung von Daten wird für Cloudressourcen automatisch aktiviert. {{site.data.keyword.Bluemix_notm}} erfasst standardmäßig Protokolle für Ihre Apps, App-Laufzeiten und Verarbeitungslaufzeiten, in denen diese Apps ausgeführt werden. 
 {:shortdesc}
 
 Mithilfe der Protokollierungsfunktionen in {{site.data.keyword.Bluemix_notm}} können Sie das Verhalten der Cloudplattform und der Ressourcen, die in ihr ausgeführt werden, untersuchen. Zur Erfassung des Standardausgabeprotokolls und des Standardfehlerprotokolls ist keine besondere Ausstattung erforderlich. Anhand von Protokollen können Sie zum Beispiel ein Prüfprotokoll für eine Anwendung bereitstellen, Probleme in Ihrem Service ermitteln, Sicherheitslücken aufdecken, eine Fehlerermittlung für App-Bereitstellungen und das Laufzeitverhalten durchführen, Probleme in der Infrastruktur, in der Ihre App ausgeführt wird, erkennen, Ihre App komponentenübergreifend auf der Cloudplattform verfolgen sowie Muster erkennen, die es Ihnen ermöglichen, präemptive Aktionen durchzuführen, die sich auf Ihr Service-SLA auswirken könnten.

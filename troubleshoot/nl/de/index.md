@@ -39,7 +39,7 @@ Die IBMid und das Kennwort für die Anmeldung an {{site.data.keyword.Bluemix_not
 {: tsCauses} 
  
 
-Wenn Sie eine gültige IBMid und ein gültiges Kennwort erhalten möchten, rufen Sie die Seite 'My IBM Profile' auf und führen anschließend einen der folgenden Schritte aus:
+Wenn Sie eine gültige IBMid und ein gültiges Kennwort erhalten möchten, rufen Sie die Seite 'Mein IBM Profil' auf und führen anschließend einen der folgenden Schritte aus:
 {: tsResolve}
   * Wenn Sie bereits eine IBMid registriert haben und überprüfen möchten, ob die ID und das Kennwort gültig sind, klicken Sie auf **Anmelden** und geben die IBMid und das Kennwort auf der Anmeldeseite an. Wenn Sie das Kennwort vergessen haben, klicken Sie auf der Anmeldeseite auf **Kennwort vergessen**, um das Kennwort zurückzusetzen. Wenn Sie Ihre IBMid vergessen haben oder weiterhin Probleme mit dem Kennwort haben, suchen Sie auf der Site 'Worldwide IBM Registration Helpdesk' nach Hilfe. 
   * Wenn Sie über keine IBMid verfügen, klicken Sie auf **Registrieren**, um eine IBMid und ein Kennwort zu erhalten. 
@@ -98,10 +98,7 @@ unterstützt, und Ihre DNS-Einstellungen zur Aktivierung der automatischen Funkt
 zwischen {{site.data.keyword.Bluemix_notm}}-Regionen manuell konfigurieren. DNS-Anbieter mit dieser Funktion sind z. B. NSONE, Akamai, Dyn.
 {: tsResolve}
 
-Wenn Sie Ihre DNS-Einstellungen konfigurieren, müssen Sie die öffentlichen IP-Adressen der {{site.data.keyword.Bluemix_notm}}-Regionen angeben, in denen Ihre Apps ausgeführt werden. Verwenden Sie zum Abrufen der öffentlichen IP-Adresse
-einer {{site.data.keyword.Bluemix_notm}}-Region
-den Befehl `nslookup`. Sie können in einem Befehlszeilenfenster beispielsweise
-den folgenden Befehl eingeben:
+Wenn Sie Ihre DNS-Einstellungen konfigurieren, müssen Sie die öffentlichen IP-Adressen der {{site.data.keyword.Bluemix_notm}}-Regionen angeben, in denen Ihre Apps ausgeführt werden. Verwenden Sie zum Abrufen der öffentlichen IP-Adresse einer {{site.data.keyword.Bluemix_notm}}-Region den Befehl `nslookup`. Sie können in einem Befehlszeilenfenster beispielsweise den folgenden Befehl eingeben:
 ```
 nslookup mybluemix.net
 ```
@@ -470,19 +467,14 @@ Sie müssen die Facette aus dem Eclipse-Projekt entfernen,
 damit Sie Ihre App mit IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} bereitstellen können.
 {: tsResolve} 
 
-Um die
-Facette zu entfernen, klicken Sie für das Projekt in IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}
-auf **Projekt>Eigenschaften>Projektfacetten**. Nehmen Sie anschließend die Markierung des Kontrollkästchens für die nicht unterstützte Facette zurück. 
+Um die Facette zu entfernen, klicken Sie für das Projekt in IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} auf **Projekt>Eigenschaften>Projektfacetten**. Nehmen Sie anschließend die Markierung des Kontrollkästchens für die nicht unterstützte Facette zurück. 
 
 
 
 ## Fehler des Typs '502 Bad Gateway' empfangen
 {: #ts_502_error}
 
-Wenn Sie bei der Interaktion mit Apps
-unter {{site.data.keyword.Bluemix_notm}} Fehler vom Typ '502 Bad Gateway' erhalten,
-überprüfen Sie die {{site.data.keyword.Bluemix_notm}}-Seite 'Status'
-und führen Sie anschließend die entsprechenden Aktionen durch.
+Wenn Sie bei der Interaktion mit Apps unter {{site.data.keyword.Bluemix_notm}} Fehler vom Typ '502 Bad Gateway' erhalten, überprüfen Sie die {{site.data.keyword.Bluemix_notm}}-Seite 'Status' und führen Sie anschließend die entsprechenden Aktionen durch.
 
  
 
@@ -513,14 +505,10 @@ führen Sie die folgenden Schritte aus, um das Problem zu lösen:
 {: tsResolve}
 
   * Wiederholen Sie die Aktion.
-    * Laden Sie die Seite erneut durch Drücken der Taste F5 auf Ihrer Tastatur oder durch
-Klicken auf die Schaltfläche für die Aktualisierung. Wenn dieser Schritt nicht funktioniert, leeren Sie den Cache und die Cookies des Browsers
-und laden Sie die Seite anschließend erneut.
+    * Laden Sie die Seite erneut durch Drücken der Taste F5 auf Ihrer Tastatur oder durch Klicken auf die Schaltfläche für die Aktualisierung. Wenn dieser Schritt nicht funktioniert, leeren Sie den Cache und die Cookies des Browsers und laden Sie die Seite anschließend erneut.
 	* Verwenden Sie einen anderen Browser.
-	* Führen Sie für Ihren Router, Ihr Modem und Ihren Computer einen Warmstart durch. Durch eines Warmstart dieser Geräte
-können verschiedene Fehler bereinigt werden, die zu dem Fehler 502 führen. 
-  * Warten Sie und wiederholen Sie den Vorgang zu einem späteren Zeitpunkt. Bei einigen Instanzen kann es in Verbindung mit
-Ihrem Internet-Service-Provider oder den {{site.data.keyword.Bluemix_notm}}-Services zu vorübergehenden Problemen kommen. Warten Sie, bis die vorübergehenden Probleme gelöst wurden.
+	* Führen Sie für Ihren Router, Ihr Modem und Ihren Computer einen Warmstart durch. Durch eines Warmstart dieser Geräte können verschiedene Fehler bereinigt werden, die zu dem Fehler 502 führen. 
+  * Warten Sie und wiederholen Sie den Vorgang zu einem späteren Zeitpunkt. Bei einigen Instanzen kann es in Verbindung mit Ihrem Internet-Service-Provider oder den {{site.data.keyword.Bluemix_notm}}-Services zu vorübergehenden Problemen kommen. Warten Sie, bis die vorübergehenden Probleme gelöst wurden.
   * Wenn das Problem dennoch bestehen bleibt, wenden Sie sich an den {{site.data.keyword.Bluemix_notm}}-Support. Weitere Informationen finden Sie unter [Kontaktaufnahme mit dem {{site.data.keyword.Bluemix_notm}}-Support ![Symbol für externen Link](../icons/launch-glyph.svg)](/docs/support/index.html#contacting-bluemix-support){: new_window}. 
 
 
@@ -589,37 +577,28 @@ dass kein Cookie definiert werden kann. Dieses Cookie muss über die IBM® Bluem
 Zur Lösung dieses Problems stehen Ihnen die folgenden Möglichkeiten zur Verfügung:
 {: tsResolve}
 
-  * Befolgen Sie die Anweisungen in dem Fenster, das in der
-{{site.data.keyword.Bluemix_notm}}-Konsole geöffnet wird. Klicken Sie auf die Schaltfläche. Vorübergehend wird ein weiteres Browserfenster geöffnet. In diesem Fenster legt DevOps Services das Authentifizierungscookie fest.
-  * Rufen Sie auf einer weiteren Browserregisterkarte https://hub.jazz.net auf und melden Sie sich an. Kehren Sie zur {{site.data.keyword.Bluemix_notm}}-Konsole
-zurück und aktualisieren Sie die Seite. Klicken Sie erneut auf **Git hinzufügen**.
-  * Ändern Sie Ihre Browsereinstellungen so, dass Cookies von Drittanbietern möglich sind, und klicken Sie erneut auf 'Git hinzufügen'. Details zur Konfiguration dieser Einstellungen
-finden Sie in der Dokumentation Ihres Browsers:
+  * Befolgen Sie die Anweisungen in dem Fenster, das in der {{site.data.keyword.Bluemix_notm}}-Konsole geöffnet wird. Klicken Sie auf die Schaltfläche. Vorübergehend wird ein weiteres Browserfenster geöffnet. In diesem Fenster legt DevOps Services das Authentifizierungscookie fest.
+  * Rufen Sie auf einer weiteren Browserregisterkarte https://hub.jazz.net auf und melden Sie sich an. Kehren Sie zur {{site.data.keyword.Bluemix_notm}}-Konsole zurück und aktualisieren Sie die Seite. Klicken Sie erneut auf **Git hinzufügen**.
+  * Ändern Sie Ihre Browsereinstellungen so, dass Cookies von Drittanbietern möglich sind, und klicken Sie erneut auf 'Git hinzufügen'. Details zur Konfiguration dieser Einstellungen finden Sie in der Dokumentation Ihres Browsers:
     * [Mozilla Firefox ![Symbol für externen Link](../icons/launch-glyph.svg)](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences#w_how-do-i-change-cookie-settings){: new_window}
 	* [Google Chrome ![Symbol für externen Link](../icons/launch-glyph.svg)](https://support.google.com/chrome/answer/95647){: new_window}
 	* [Apple Safari ![Symbol für externen Link](../icons/launch-glyph.svg)](https://support.apple.com/kb/PH17191){: new_window}
-	* [Microsoft Internet Explorer ![Symbol für externen Link](../icons/launch-glyph.svg)](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window}
-Falls das Problem durch diese Ausweichlösungen nicht behoben wird, senden Sie eine E-Mail an idslogin@jazz.net.
+	* [Microsoft Internet Explorer ![Symbol für externen Link](../icons/launch-glyph.svg)](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window} Falls das Problem durch diese Ausweichlösungen nicht behoben wird, senden Sie eine E-Mail an idslogin@jazz.net.
 
 
 
 ## Android-Apps empfangen keine Push-Benachrichtigungen
 {: #ts_push}
 
-In bestimmten Regionen, in denen nicht auf Google zugegriffen werden kann,
-empfangen Android-Apps keine Benachrichtigungen, die Sie über den IBM Push-Service senden. In diesem Fall können Sie als Ausweichlösung Services von Drittanbietern verwenden.
+In bestimmten Regionen, in denen nicht auf Google zugegriffen werden kann, empfangen Android-Apps keine Benachrichtigungen, die Sie über den IBM Push-Service senden. In diesem Fall können Sie als Ausweichlösung Services von Drittanbietern verwenden.
 
  
 
-Sie binden einen Push-Service für Ihre Bluemix-App und senden eine Nachricht an die registrierten Geräte. Jedoch können Apps, die auf der Android-Plattform entwickelt wurden,
-Ihre Benachrichtigungen in bestimmten Regionen nicht empfangen. 
+Sie binden einen Push-Service für Ihre Bluemix-App und senden eine Nachricht an die registrierten Geräte. Jedoch können Apps, die auf der Android-Plattform entwickelt wurden, Ihre Benachrichtigungen in bestimmten Regionen nicht empfangen.
 {: tsSymptoms}
 
  
-Der IBM Push-Service nutzt den GCM-Service (Google Cloud Messaging),
-um Benachrichtigungen an mobile Apps zu versenden, die auf der Android-Plattform entwickelt wurden. Zur Aktivierung der Android-Apps für den Empfang von Benachrichtigungen
-muss der GCM-Service (Google Cloud Messaging) für die mobilen Apps zugänglich sein. In Regionen, in denen der GCM-Service nicht von den Android-Apps erreicht werden kann,
-können die Android-Apps keine Push-Benachrichtigungen empfangen.
+Der IBM Push-Service nutzt den GCM-Service (Google Cloud Messaging), um Benachrichtigungen an mobile Apps zu versenden, die auf der Android-Plattform entwickelt wurden. Zur Aktivierung der Android-Apps für den Empfang von Benachrichtigungen muss der GCM-Service (Google Cloud Messaging) für die mobilen Apps zugänglich sein. In Regionen, in denen der GCM-Service nicht von den Android-Apps erreicht werden kann, können die Android-Apps keine Push-Benachrichtigungen empfangen.
 {: tsCauses}
 
  
@@ -856,8 +835,7 @@ Wenn Sie eine Anwendung mithilfe der cf-Befehlszeilenschnittstelle per Push-Oper
 ```
 cf api https://api.eu-gb.bluemix.net
 ```
-Wenn Sie eine Anwendung mithilfe von Eclipse Tools mit einer Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen, müssen Sie zuerst einen {{site.data.keyword.Bluemix_notm}}-Server erstellen und den API-Endpunkt der {{site.data.keyword.Bluemix_notm}}-Region angeben, in der die Organisation erstellt wurde. Weitere Informationen zur Verwendung
-der Eclipse-Tools finden Sie im Thema zur [Bereitstellung von Apps mit IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html).  
+Wenn Sie eine Anwendung mithilfe von Eclipse Tools mit einer Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen, müssen Sie zuerst einen {{site.data.keyword.Bluemix_notm}}-Server erstellen und den API-Endpunkt der {{site.data.keyword.Bluemix_notm}}-Region angeben, in der die Organisation erstellt wurde. Weitere Informationen zur Verwendung der Eclipse-Tools finden Sie im Thema zur [Bereitstellung von Apps mit IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html).  
   
   
 

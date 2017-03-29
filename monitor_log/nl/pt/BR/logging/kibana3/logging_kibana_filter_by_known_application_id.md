@@ -20,7 +20,7 @@ lastupdated: "2017-02-06"
 
 <!-- The short description section should include a sentence describing why this task is needed. For search engine optimization, include the service long name and "Bluemix". For example: -->
 
-Se você souber o ID do aplicativo de seu app Cloud Foundry, será possível visualizar e filtrar rapidamente os logs pelo ID do aplicativo (application_id) de seu app no painel do Kibana. É possível acessar o painel do Kibana na guia **Logs** para seu app Cloud Foundry.
+Se você souber o ID do aplicativo de seu app Cloud Foundry, será possível visualizar e filtrar rapidamente os logs pelo ID do aplicativo (application_id) de seu app no painel do Kibana. É possível acessar o painel do Kibana na guia **Logs** para seu app Cloud Foundry. 
 {:shortdesc}
 
 <!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->
@@ -35,7 +35,7 @@ Conclua as tarefas a seguir para visualizar e filtrar seus logs do app Cloud Fou
 
 2. Acesse o painel do Kibana para seu app. Clique em **Visualização avançada** ![Link de visualização avançada](images/logging_advanced_view.jpg). O painel do Kibana é exibido.
 
-3. No painel do Kibana, clique no ícone **Pasta** ![Ícone Pasta](images/logging_folder.jpg) para exibir um menu que lista todos os painéis recentes.  
+3. No painel do Kibana, clique no ícone **Pasta** ![Ícone Pasta](images/logging_folder.jpg) para exibir um menu que lista todos os painéis recentes. 
 
     **Nota:** além dos painéis que você salvou por nome, o menu lista os painéis não nomeados de acordo com o formato a seguir: *ALCH_TENANT_ID_application_id*. 
 
@@ -47,7 +47,7 @@ Conclua as tarefas a seguir para visualizar e filtrar seus logs do app Cloud Fou
 
 5. Opcionalmente, é possível incluir mais campos em sua seção de filtro, por exemplo, **instance_id** para ativar ou desativar a filtragem de registros por ID da instância. 
   
-    1. Na janela **TODOS OS EVENTOS**, clique em uma linha de evento de log para exibir os detalhes para esse evento.  
+    1. Na janela **TODOS OS EVENTOS**, clique em uma linha de evento de log para exibir os detalhes para esse evento. 
 	
         ![Janela Todos os eventos exibindo detalhes para um evento de log selecionado](images/logging_selected_log_event.jpg)
 	

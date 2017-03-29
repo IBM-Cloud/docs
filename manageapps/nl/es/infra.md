@@ -13,7 +13,7 @@ lastupdated: "2016-03-15"
 
 {:shortdesc: .shortdesc}
 
-#  Capas de la infraestructura de Bluemix
+# Capas de la infraestructura de Bluemix
 
 
 

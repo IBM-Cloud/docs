@@ -19,7 +19,7 @@ lastupdated: "2016-05-09"
 
 <!--The whole topic is staging only -->
 
-Con {{site.data.keyword.Bluemix}},puoi creare applicazioni e fornire un host per le applicazioni esistenti. Purché pronte per il cloud, le tue applicazioni possono essere migrate in {{site.data.keyword.Bluemix_notm}}. {{site.data.keyword.Bluemix_notm}} fornisce diversi modi per eseguire le tue applicazioni, ad esempio Cloud Foundry, IBM Containers e Virtual Machines.
+Con {{site.data.keyword.Bluemix}}, puoi creare applicazioni e fornire un host per le applicazioni esistenti. Purché pronte per il cloud, le tue applicazioni possono essere migrate in {{site.data.keyword.Bluemix_notm}}. {{site.data.keyword.Bluemix_notm}} fornisce diversi modi per eseguire le tue applicazioni, ad esempio Cloud Foundry, IBM Containers e Virtual Machines.
 
 ##Come far sì che le tue applicazioni siano pronte per il cloud
 {: #cloud-readyapps}

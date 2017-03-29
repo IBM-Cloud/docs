@@ -55,9 +55,9 @@ Puoi visualizzare le notifiche riguardanti il tuo ambiente locale o dedicato, al
 
 | **Tipo di evento** | **Metodo di notifica** |       
 |-----------------|-------------------|
-| Aggiornamenti di manutenzione | Per visualizzare uno storico e un elenco completo delle tue notifiche complete e in sospeso, fai clic su **AMMINISTRAZIONE &gt; INFORMAZIONI DI SISTEMA** &gt; *Numero* **in sospeso**. Ricevi anche un avviso degli eventi di aggiornamento della manutenzione pianificata con interruzioni del servizio nella pagina Stato. Fai clic su **Supporto** &gt; **Stato**. Puoi estendere la funzionalità di notifica impostando una sottoscrizione che invia un'email a destinatari di tua scelta. In alternativa, puoi impostare una sottoscrizione che utilizza dei webhook per integrare le notifiche provenienti dalla pagina Amministrazione con un servizio Web a scelta.|
-| Incidenti critici | Vieni avvisato degli incidenti critici sulla pagina Stato. Fai clic su **Supporto** &gt; **Stato**. Puoi estendere la funzionalità di notifica impostando una sottoscrizione di notifica che invia un'email a un destinatario di tua scelta. In alternativa, puoi impostare una sottoscrizione che utilizza dei webhook per integrare le notifiche provenienti dalla pagina Amministrazione con un servizio Web a scelta.  |  
-| Eventi di soglia | Puoi impostare una sottoscrizione di notifica che invia un'email a un destinatario di tua scelta quando nel tuo ambiente vengono raggiunte le soglie per la quota dell'organizzazione, il disco fisico, la memoria fisica o la memoria riservata. In alternativa, puoi impostare una sottoscrizione che utilizza dei webhook per integrare le notifiche con un servizio Web di tua scelta.  |  
+| Aggiornamenti di manutenzione | Per visualizzare uno storico e un elenco completo delle tue notifiche complete e in sospeso, fai clic su **AMMINISTRAZIONE &gt; INFORMAZIONI DI SISTEMA** &gt; *Numero* **in sospeso**. Ricevi anche un avviso degli eventi di aggiornamento della manutenzione pianificata con interruzioni del servizio nella pagina Stato. Fai clic su **Supporto** &gt; **Stato**. Puoi estendere la funzionalità di notifica impostando una sottoscrizione che invia un'e-mail a destinatari di tua scelta. In alternativa, puoi impostare una sottoscrizione che utilizza dei webhook per integrare le notifiche provenienti dalla pagina Amministrazione con un servizio Web a scelta.|
+| Incidenti critici | Vieni avvisato degli incidenti critici sulla pagina Stato. Fai clic su **Supporto** &gt; **Stato**. Puoi estendere la funzionalità di notifica impostando una sottoscrizione di notifica che invia un'e-mail a un destinatario di tua scelta. In alternativa, puoi impostare una sottoscrizione che utilizza dei webhook per integrare le notifiche provenienti dalla pagina Amministrazione con un servizio Web a scelta.  |  
+| Eventi di soglia | Puoi impostare una sottoscrizione di notifica che invia un'e-mail a un destinatario di tua scelta quando nel tuo ambiente vengono raggiunte le soglie per la quota dell'organizzazione, il disco fisico, la memoria fisica o la memoria riservata. In alternativa, puoi impostare una sottoscrizione che utilizza dei webhook per integrare le notifiche con un servizio Web di tua scelta.  |  
 | Stato di {{site.data.keyword.Bluemix_notm}} | In qualsiasi momento puoi visualizzare l'ultimo stato della piattaforma, dei servizi e della tua istanza {{site.data.keyword.Bluemix_notm}} nella pagina Stato. Fai clic su **Supporto** &gt; **Stato**.  |
 {: caption="Table 2. Event types and notifications methods" caption-side="top"}
 
@@ -123,7 +123,7 @@ I dati della soglia vengono raccolti una volta ogni 6 ore. Una notifica viene in
 
 Se non vuoi aspettare 6 ore per ricevere la notifica sul raggiungimento della soglia, dopo aver completato i campi nel modulo, puoi fare clic su **Salva e verifica** per ricevere una notifica di verifica con i dati di esempio.  
 
-Una notifica per la soglia della Quota organizzazione include solo le organizzazioni che hanno superato la percentuale di soglia specificata nel periodo di tempo di 6 ore corrispondente a tale notifica. Le organizzazioni che hanno superato una soglia durante intervalli di 6 ore precedenti non verranno incluse, anche se rimangono sopra o sotto la soglia. Le tre risorse che compongono la quota di un'organizzazione (memoria riservata, servizi e rotte) vengono considerate separatamente quando si deve valutare se inviare una notifica sulla quota. Ad esempio, se la quantità di memoria riservata utilizzata da un'organizzazione supera il 50% della quota, una soglia della Quota organizzazione configurata con un valore di 50% comporterà l'invio di una notifica.  Se il numero di servizi utilizzati dalla stessa organizzazione supera successivamente il 50% della quota, anche se la quantità di memoria utilizzata rimane invariata, la stessa sottoscrizione di soglia della Quota dell'organizzazione comporterà anch'essa l'invio di una notifica.
+Una notifica per la soglia della Quota organizzazione include solo le organizzazioni che hanno superato la percentuale di soglia specificata nel periodo di tempo di 6 ore corrispondente a tale notifica. Le organizzazioni che hanno superato una soglia durante intervalli di 6 ore precedenti non verranno incluse, anche se rimangono sopra o sotto la soglia.  Le tre risorse che compongono la quota di un'organizzazione (memoria riservata, servizi e rotte) vengono considerate separatamente quando si deve valutare se inviare una notifica sulla quota. Ad esempio, se la quantità di memoria riservata utilizzata da un'organizzazione supera il 50% della quota, una soglia della Quota organizzazione configurata con un valore di 50% comporterà l'invio di una notifica.  Se il numero di servizi utilizzati dalla stessa organizzazione supera successivamente il 50% della quota, anche se la quantità di memoria utilizzata rimane invariata, la stessa sottoscrizione di soglia della Quota dell'organizzazione comporterà anch'essa l'invio di una notifica.
 
 {: #webhooknotsub}
 
@@ -173,7 +173,7 @@ I dati della soglia vengono raccolti una volta ogni 6 ore. Una notifica viene in
 
 Se non vuoi aspettare 6 ore per ricevere la notifica sul raggiungimento della soglia, dopo aver completato i campi nel modulo, puoi fare clic su **Salva e verifica** per salvare e verificare la notifica con i dati di esempio.
 
-Una notifica per la soglia della Quota organizzazione include solo le organizzazioni che hanno superato la percentuale di soglia specificata nel periodo di tempo di 6 ore corrispondente a tale notifica. Le organizzazioni che hanno superato una soglia durante intervalli di 6 ore precedenti non verranno incluse, anche se rimangono sopra o sotto la soglia. Le tre risorse che compongono la quota di un'organizzazione, ossia memoria riservata, servizi e rotte, vengono considerate separatamente quando si deve valutare se inviare una notifica sulla quota. Ad esempio, se la quantità di memoria riservata utilizzata da un'organizzazione supera il 50% della quota, una soglia della Quota organizzazione configurata con un valore di 50% comporterà l'invio di una notifica.  Se il numero di servizi utilizzati dalla stessa organizzazione supera successivamente il 50% della quota, anche se la quantità di memoria utilizzata rimane invariata, la stessa sottoscrizione di soglia della Quota dell'organizzazione comporterà anch'essa l'invio di una notifica.
+Una notifica per la soglia della Quota organizzazione include solo le organizzazioni che hanno superato la percentuale di soglia specificata nel periodo di tempo di 6 ore corrispondente a tale notifica. Le organizzazioni che hanno superato una soglia durante intervalli di 6 ore precedenti non verranno incluse, anche se rimangono sopra o sotto la soglia.  Le tre risorse che compongono la quota di un'organizzazione, ossia memoria riservata, servizi e rotte, vengono considerate separatamente quando si deve valutare se inviare una notifica sulla quota. Ad esempio, se la quantità di memoria riservata utilizzata da un'organizzazione supera il 50% della quota, una soglia della Quota organizzazione configurata con un valore di 50% comporterà l'invio di una notifica.  Se il numero di servizi utilizzati dalla stessa organizzazione supera successivamente il 50% della quota, anche se la quantità di memoria utilizzata rimane invariata, la stessa sottoscrizione di soglia della Quota dell'organizzazione comporterà anch'essa l'invio di una notifica.
 
 {: #payload}
 
@@ -1282,7 +1282,8 @@ questo contenuto:</p>
 }
 </pre>
 </li>
-<li>Inserisci il contenuto del file JSON nell'endpoint dell'utente eseguendo questo comando:<br/><br/>
+<li>Pubblica il contenuto del file JSON nell'endpoint dell'utente immettendo il seguente
+comando:<br/><br/>
 <code>
 curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.json https://<your_host>.ibm.com/codi/v1/users
 </code>
@@ -1379,7 +1380,7 @@ Puoi accedere alle API delle metriche descritte nelle seguenti sezioni dall'endp
 
 1. Un utente può effettuare fino a 200 richieste API per le metriche in un'ora.
 2. Ogni richiesta API restituisce fino a 200 punti dati per richiesta. Se sono disponibili più dati, viene fornito un URL per il caricamento della successiva serie di dati.
-3. Ogni richiesta API richiede che un utente disponga almeno dell'accesso di base alla Console di gestione. Potrebbero essere richieste delle autorizzazioni aggiuntive, come specificato di seguito.
+3. Ogni richiesta API richiede che un utente disponga almeno dell'accesso di base alla Console di gestione.  Potrebbero essere richieste delle autorizzazioni aggiuntive, come specificato di seguito.
 
 ## Raccolta delle metriche sul tuo ambiente 
 
@@ -2082,8 +2083,7 @@ Completa la seguente procedura per aggiungere il repository e installare
 il plug-in:
 
 <ol>
-<li>Per aggiungere il repository del plug-in {{site.data.keyword.Bluemix_notm}} Admin,
-immetti il seguente comando:<br/><br/>
+<li>Per aggiungere il repository del plug-in Gestione {{site.data.keyword.Bluemix_notm}}, immetti il seguente comando:<br/><br/>
 <code>
 cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli
 </code><br/><br/>
@@ -2092,8 +2092,7 @@ cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cl
 <dd class="pd">Dominio secondario dell'URL per la tua istanza {{site.data.keyword.Bluemix_notm}}.</dd>
 </dl>
 </li>
-<li>Per installare il plug-in {{site.data.keyword.Bluemix_notm}} Admin
-CLI, immetti il seguente comando:<br/><br/>
+<li>Per installare il plug-in {{site.data.keyword.Bluemix_notm}} Admin CLI, immetti il seguente comando:<br/><br/>
 <code>
 cf install-plugin bluemix-admin-cli -r BluemixAdmin
 </code>

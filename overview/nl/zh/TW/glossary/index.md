@@ -3,8 +3,8 @@
  
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-31"
+  years: 2016, 2017
+lastupdated: "2017-03-15"
 
  
 
@@ -131,7 +131,7 @@ text between these comment tags.-->
 ### 應用程式 ID (app ID)
 {: #x7909906}
 
-指派給 Bluemix 行動應用程式的 GUID。另請參閱[廣域唯一 ID (globally unique identifier)](#x2390455)。
+指派給 Bluemix 行動應用程式的 GUID。另請參閱[廣域唯一 ID (globally unique identifier)](#x2390455)。另請參閱[{{site.data.keyword.appid_full}}](/docs/services/appid/index.html)
 
 ### 應用程式索引鍵 (application key)
 {: #x7290111}

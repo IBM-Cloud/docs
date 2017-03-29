@@ -18,7 +18,7 @@ lastupdated: "2017-02-16"
 {: #logging_kibana_message_type_filter}
 <!-- Provide an appropriate ID above -->
 
-Sie können Protokolle für {{site.data.keyword.Bluemix_notm}}-Anwendungen nach Nachrichtentyp im Kibana-Dashboard anzeigen und filtern. Sie können über die Registerkarte **Protokolle** für Ihre Cloud Foundry-App auf das Kibana-Dashboard zugreifen.
+Sie können Protokolle für {{site.data.keyword.Bluemix_notm}}-Anwendungen nach Nachrichtentyp im Kibana-Dashboard anzeigen und filtern. Sie können über die Registerkarte **Protokolle** für Ihre Cloud Foundry-App auf das Kibana-Dashboard zugreifen. 
 {:shortdesc}
 
 <!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->

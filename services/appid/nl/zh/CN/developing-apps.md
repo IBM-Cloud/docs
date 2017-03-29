@@ -1,0 +1,28 @@
+---
+
+copyright:
+  years: 2017
+lastupdated: "2017-03-16"
+
+---
+
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:pre: .pre}
+
+# 开发移动和 Web 应用程序
+
+创建 {{site.data.keyword.appid_short}} 服务后，可以使用仪表板来下载 Android、iOS 和 Node.js 的样本应用程序。
+
+1. 单击要开发的 {{site.data.keyword.appid_short_notm}} 实例。
+2. 按照仪表板上的指示信息开始使用逐步样本。
+
+
+
+## Web 开发
+{: #web-dev}
+
+{{site.data.keyword.appid_short_notm}} 服务可保护 Web 应用程序，并且不需要特殊 SDK。除了该服务提供的保护之外，您还可以使用其他身份提供者。{{site.data.keyword.appid_short_notm}} 集成可支持使用任何实现技术的任何 Web 应用程序来利用 OAuth2 协议。
+
+有关设置 Web 应用程序来访问 {{site.data.keyword.appid_short_notm}} 服务的信息，请参阅 <a href="https://github.com/ibm-cloud-security/appid-serversdk-nodejs" target="_blank">Node.js 服务器 SDK GitHub 存储库 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a>。

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-21"
+lastupdated: "2017-02-21"
 
 ---
 
@@ -35,7 +35,7 @@ lastupdated: "2016-02-21"
 - `password`：The Weather Company Data for IBM Bluemix 的密码，此密码有权调用预测 API。
 - `latitude`：位置的纬度坐标。
 - `longitude`：位置的经度坐标。
-- `timeperiod`：预报的时间段。有效选项为：'10day' -（缺省值）返回 10 天的每日预报，'48hour' - 返回 2 天的每小时预报，'current' - 返回当前天气状况，'timeseries' - 返回当前观察数据和过去长达 24 小时（从当前日期和时间开始）的观察数据。
+- `timePeriod`：预报的时间段。有效选项为：'10day' -（缺省值）返回 10 天的每日预报，'48hour' - 返回 2 天的每小时预报，'current' - 返回当前天气状况，'timeseries' - 返回当前观察数据和过去长达 24 小时（从当前日期和时间开始）的观察数据。
 
 
 以下是创建包绑定并获取 10 天天气预报的示例。

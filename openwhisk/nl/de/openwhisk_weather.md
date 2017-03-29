@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-21"
+lastupdated: "2017-02-21"
 
 ---
 
@@ -35,7 +35,7 @@ Die Aktion `/whisk.system/weather/forecast` gibt eine Wettervorhersage für eine
 - `password`: Das Kennwort für Weather Company Data for IBM Bluemix, das berechtigt ist, die API für die Vorhersage aufzurufen.
 - `latitude`: Die Breitengradkoordinate des Standorts.
 - `longitude`: Die Längengradkoordinate des Standorts.
-- `timeperiod`: Der Zeitraum für die Vorhersage. Gültige Optionen: '10day' (Standardwert) - Gibt eine tägliche 10-Tage-Vorhersage zurück. '48hour' - Gibt eine stündliche 2-Tage-Vorhersage zurück. 'current' - Gibt die aktuellen Wetterbedingungen zurück. 'timeseries' - Gibt die aktuellen Wetterbeobachtungen und bis zu 24 Stunden zurückliegende Beobachtungen ab dem aktuellen Zeitpunkt (Datum und Uhrzeit) zurück.
+- `timePeriod`: Der Zeitraum für die Vorhersage. Gültige Optionen: '10day' (Standardwert) - Gibt eine tägliche 10-Tage-Vorhersage zurück. '48hour' - Gibt eine stündliche 2-Tage-Vorhersage zurück. 'current' - Gibt die aktuellen Wetterbedingungen zurück. 'timeseries' - Gibt die aktuellen Wetterbeobachtungen und bis zu 24 Stunden zurückliegende Beobachtungen ab dem aktuellen Zeitpunkt (Datum und Uhrzeit) zurück.
 
 
 Das folgende Beispiel zeigt die Erstellung einer Paketbindung und den anschließenden Abruf einer 10-Tage-Vorhersage.

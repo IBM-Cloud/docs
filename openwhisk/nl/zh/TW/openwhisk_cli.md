@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-27"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -39,7 +39,9 @@ wsk property set --apihost openwhisk.ng.bluemix.net
 ```
 wsk property set --auth <authorization_key>
 ```
-{: pre} 
+{: pre}
+
+**提示：**依預設，OpenWhisk CLI 會將內容集儲存在 `~/.wskprops` 中。您可以透過設定 `WSK_CONFIG_FILE` 環境變數來變更此檔案的位置。 
 
 若要驗證 CLI 設定，請嘗試[建立及執行動作](./index.html#openwhisk_start_hello_world)。
 

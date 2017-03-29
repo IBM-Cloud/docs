@@ -52,6 +52,6 @@ Vous pouvez consulter les journaux des applications que vous exécutez sur {{sit
 Pour afficher les journaux de vos applications, procédez comme suit :
 1. Sélectionnez une application en cours d'exécution.
 2. Cliquez sur **Journaux**. La vue **Journaux** contient les journaux de votre application en cours d'exécution.
-4. Cliquez sur le bouton **Vue avancée**. La **Vue avancée** est une vue plus détaillée des journaux ; elle utilise Kibana, un outil de visualisation qui se sert des journaux et des données d'horodatage pour créer des visualisations personnalisées. Pour plus d'informations sur l'utilisation de la vue avancée, voir la documentation [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html). 
+4. Cliquez sur le bouton **Vue avancée**. La **Vue avancée** est une vue plus détaillée des journaux ; elle utilise Kibana, un outil de visualisation qui se sert des journaux et des données d'horodatage pour créer des visualisations personnalisées. Pour plus d'informations sur l'utilisation de la vue avancée, voir la documentation [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html).
 
-Vous pouvez ensuite personnaliser un tableau de bord Kibana. Pour plus d'informations, voir [Analyse des journaux dans Kibana](../logging_view_kibana3.html#analyzing_logs_Kibana3). 
+Vous pouvez ensuite personnaliser un tableau de bord Kibana. Pour plus d'informations, voir [Analyse des journaux dans Kibana](../logging_view_kibana3.html#analyzing_logs_Kibana3).

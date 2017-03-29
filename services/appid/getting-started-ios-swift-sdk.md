@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-03-21"
 
 ---
 
@@ -35,15 +35,15 @@ You need the following information:
     </tr>
     <tr>
       <td> US South </td>
-      <td> BMSClient.Region.usSouth </td>
+      <td> AppID.REGION_US_SOUTH </td>
     </tr>
     <tr>
       <td> Sydney </td>
-      <td> BMSClient.Region.sydney </td>
+      <td> AppID.REGION_SYDNEY </td>
     </tr>
     <tr>
       <td> United Kingdom </td>
-      <td> BMSClient.Region.unitedKingdom </td>
+      <td> AppID.REGION_UK </td>
     </tr>
   </table>
 
@@ -94,12 +94,12 @@ The {{site.data.keyword.appid_short_notm}} client SDK is distributed with CocoaP
 2. Initialize the client SDK by passing tenant ID and region parameters to the initialize method. A common, though not mandatory, place to put the initialization code is in the application:didFinishLaunchingWithOptions: method of the AppDelegate in your Swift application.
 
   ```swift
-  AppID.sharedInstance.initialize(tenantId: <tenantId>, bluemixRegion: BMSClient.Region.unitedKingdom)
+  AppID.sharedInstance.initialize(tenantId: <tenantId>, bluemixRegion: AppID.Region_UK)
   ```
   {:pre}
 
   * Replace ״tenantId״ with the tenant ID for your App ID service.
-  * Replace the BMSClient.Region.unitedKingdom with your {{site.data.keyword.appid_short_notm}} region.
+  * Replace AppID.REGION_UK with your {{site.data.keyword.appid_short_notm}} region.
 
 3. Add the following code to your AppDelegate file.
 
@@ -150,13 +150,16 @@ After the {{site.data.keyword.appid_short_notm}} client SDK is initialized, you 
 
 When obtaining an access token, it is possible to gain access to the user protected attributes endpoint. This is done by using the following API methods:
 
-  ```
+  ```swift
   func setAttribute(key: String, value: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
   func setAttribute(key: String, value: String, accessTokenString: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
+
   func getAttribute(key: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
   func getAttribute(key: String, accessTokenString: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
+
   func getAttributes(completionHandler: @escaping(Error?, [String:Any]?) -> Void)
   func getAttributes(accessTokenString: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
+
   func deleteAttribute(key: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
   func deleteAttribute(key: String, accessTokenString: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
   ```
@@ -166,7 +169,7 @@ When an access token is not explicitly passed, {{site.data.keyword.appid_short_n
 
 For example, you can invoke this code to set a new attribute, or override an existing one:
 
-  ```
+  ```swift
   AppID.sharedInstance.userAttributeManager?.setAttribute("key", "value", completionHandler: { (error, result) in
       if error = nil {
           //Attributes recieved as a Dictionary
@@ -183,7 +186,7 @@ For example, you can invoke this code to set a new attribute, or override an exi
 
 With {{site.data.keyword.appid_short_notm}} you can log in anonymously, see [anonymous identity](/docs/services/appid/user-profile.html#anonymous).
 
-  ```
+  ```swift
   class delegate : AuthorizationDelegate {
 
       public func onAuthorizationSuccess(accessToken: AccessToken, identityToken: IdentityToken, response:Response?) {
@@ -208,14 +211,14 @@ With {{site.data.keyword.appid_short_notm}} you can log in anonymously, see [ano
 
 When you hold an anonymous access token, the user can become an identified user by passing it to the loginWidget.launch method:
 
-  ```
+  ```swift
   func launch(accessTokenString: String? , delegate: AuthorizationDelegate)
   ```
   {:pre}
 
 After an anonymous login, progressive authentication occurs even if the login widget is called without passing an access token because the service used the last received token. If you want to clear your stored tokens, run the following command:
 
-  ```
+  ```swift
   var appIDAuthorizationManager = AppIDAuthorizationManager(appid: AppID.sharedInstance)
   appIDAuthorizationManager.clearAuthorizationData()
   ```

@@ -55,7 +55,7 @@ lastupdated: "2016-04-18"
 <dt>리소스 한계</dt>
 <dd>평가판 계정이 사용할 수 있는 리소스의 양에는 한계가 있음을 유념하십시오. 한계는 다음과 같습니다.
 <table style="width:100%">
-<caption>표 1. 평가판 계정에 대한 {{site.data.keyword.Bluemix_notm}} 자원 한계</caption>
+<caption>표 1. 평가판 계정에 대한 {{site.data.keyword.Bluemix_notm}} 리소스 한계</caption>
   <th>리소스 유형</th>	<th>수량 한계</th>
 <tr><td>모든 앱에 걸쳐 사용되는 서비스의 수</td> <td>10</td>
 <tr><td>모든 앱에 걸쳐 사용되는 메모리</td> <td>	2G</td>

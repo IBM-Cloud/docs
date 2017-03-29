@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-24"
+lastupdated: "2017-02-22"
 
 ---
 
@@ -57,7 +57,7 @@ lastupdated: "2017-01-24"
 |-----------------|-------------------|
 | 유지보수 업데이트 | 보류 중 및 완료 알림의 전체 목록 및 히스토리를 보려면 **관리 &gt; 시스템 정보** &gt; **보류 중인** *수*를 클릭하십시오. 상태 페이지에서 시스템을 중단하는 스케줄된 유지보수 업데이트 이벤트에 대한 경보도 받습니다. **지원** &gt; **상태**를 클릭하십시오. 선택한 수신인에게 이메일을 발송하는 구독을 설정함으로써 알림 기능을 확장할 수 있습니다. 또는 웹훅을 사용하여 관리 페이지의 알림을 선택된 웹 서비스와 통합하는 구독을 설정할 수 있습니다. |
 | 중요 인시던트 | 상태 페이지에 중요 인시던트에 대한 경보가 표시됩니다. **지원** &gt; **상태**를 클릭하십시오. 선택한 수신인에게 이메일을 발송하는 알림 구독을 설정함으로써 알림 기능을 확장할 수 있습니다. 또는 웹훅을 사용하여 관리 페이지의 알림을 선택된 웹 서비스와 통합하는 구독을 설정할 수 있습니다.   |  
-| 임계값 이벤트 | 사용자의 환경에서 실제 디스크, 실제 메모리, 예약 디스크 또는 예약 메모리에 대한 리소스 임계값에 도달할 때 선택한 수신인에게 이메일을 발송하는 알림 구독을 설정할 수 있습니다. 또는 웹훅을 사용하여 알림과 선택된 웹 서비스를 통합하는 구독을 설정할 수 있습니다.   |  
+| 임계값 이벤트 | 사용자의 환경에서 조직 할당량, 실제 디스크, 실제 메모리, 예약 디스크 또는 예약 메모리에 대한 임계값에 도달할 때 선택한 수신인에게 이메일을 발송하는 알림 구독을 설정할 수 있습니다. 또는 웹훅을 사용하여 알림과 선택된 웹 서비스를 통합하는 구독을 설정할 수 있습니다.   |  
 | {{site.data.keyword.Bluemix_notm}} 상태 | 언제든지 상태 페이지에서 플랫폼, 서비스 및 {{site.data.keyword.Bluemix_notm}} 인스턴스의 최신 상태를 볼 수 있습니다. **지원** &gt; **상태**를 클릭하십시오.   |
 {: caption="표 2. 이벤트 유형 및 알림 방법" caption-side="top"}
 
@@ -109,7 +109,7 @@ lastupdated: "2017-01-24"
 | 사용 | 이메일 알림을 사용하려면 이 옵션을 선택하십시오. 이메일 알림을 사용하지 않으려면 선택을 취소하십시오. 구독은 기본적으로 사용됩니다.  |
 | 유형 | **이메일**을 선택하십시오. |
 | 이벤트 | **임계값**을 선택하십시오. |
-| 임계값 | 실제 디스크, 실제 메모리, 예약 디스크 또는 예약 메모리에 대해 알림을 받을 임계값의 유형을 선택하십시오. |
+| 임계값 | 조직 할당량, 실제 디스크, 실제 메모리, 예약 디스크 또는 예약 메모리에 대해 알림을 받을 임계값의 유형을 선택하십시오. |
 | 임계값 방향 | 사용자가 설정한 초과할 때 또는 미만일 때 알림 값을 전달하는 경우 오름차순 또는 내림차순으로 데이터를 이동시키려는 방향을 선택하십시오. 예를 들어, 초과할 때 또는 미만일 때 알림 값이 50%이며 방향이 내림차순이면 사용률이 50% 이상에서 50% 이하로 변경되는 경우에만 알림을 받고 방향이 오름차순이면 사용률이 50% 이하에서 50% 이상으로 변경되는 경우 알림을 받습니다.    |
 | 초과할 때 알림(%) | 알림을 받을 임계값 백분율을 입력하십시오. 임계값 방향 필드에서 오름차순 특성을 선택한 경우 임계값이 이 백분율을 초과할 때 이메일 알림이 전송됩니다. |
 | 미만일 때 알림(%) | 알림을 받을 임계값 백분율을 입력하십시오. 임계값 방향 필드에서 내림차순 특성을 선택한 경우 임계값이 이 백분율 미만일 때 이메일 알림이 전송됩니다. |
@@ -119,10 +119,11 @@ lastupdated: "2017-01-24"
 | 수신 | 이메일 알림의 수신인에 대해 쉼표로 분리된 목록을 사용하여 이메일 주소를 입력하십시오. 이메일에서 다른 사용자를 복사하려면 "참조" 또는 "숨은 참조" 옵션을 펼치십시오.  이는 필수 필드입니다.  |
 {: caption="표 4. 유지보수 업데이트 또는 인시던트에 대한 이메일 알림 구독의 필드" caption-side="top"}
 
-임계값 데이터가 6시간마다 한 번씩 수집됩니다. 값이 설정한 임계값을 벗어나면 알림이 한 번만 전송됩니다. 오름차순을 선택하면 값이 임계값 이하로 감소한 후 임계값을 다시 초과하는 경우 새 알림이 전송됩니다. 마찬가지로, 내림차순을 선택하면 사용자가 설정한 값을 초과한 후 다시 임계값 이하로 감소하는 경우에만 알림이 다시 전송됩니다.  
+임계값 데이터가 6시간마다 한 번씩 수집됩니다. 값이 설정한 임계값을 벗어나면 알림이 한 번만 전송됩니다. 오름차순을 선택하면 값이 임계값 아래로 감소한 후 임계값을 다시 초과하는 경우 새 알림이 전송됩니다. 마찬가지로, 내림차순을 선택하면 사용자가 설정한 값을 초과한 후 다시 임계값 아래로 감소하는 경우에만 알림이 전송됩니다. 
 
-임계값이 충족될 때 알림이 전송될 6시간을 기다리지 않으려면 양식의 필드를 완료한 후 **저장 및 테스트**를 클릭하여 샘플 데이터로 알림을 저장하고 테스트할 수 있습니다.
+임계값이 충족될 때 알림이 전송될 6시간을 기다리지 않으려면 양식의 필드를 완료한 후 **저장 및 테스트**를 클릭하여 샘플 데이터로 테스트 알림을 받을 수 있습니다.  
 
+조직 할당량 임계값 알림에는 이 알림에 대해 6시간 동안 지정된 임계값 백분율을 벗어난 조직만 포함됩니다. 이전 6시간 동안 임계값을 초과한 조직은 임계값을 초과하거나 임계값 미만인 상태에 있더라도 포함되지 않습니다. 조직의 할당량(예약 메모리, 서비스 및 라우트)을 구성하는 세 개의 리소스는 조직 할당량 알림을 보낼지 판별할 때 별도로 고려됩니다. 예를 들어, 조직에서 사용하는 예약 메모리 양이 조직 할당량의 50퍼센트를 초과하는 경우 값 50퍼센트로 구성된 조직 할당량 임계값으로 인해 알림이 발송됩니다. 예를 들어, 동일한 조직에서 사용하는 서비스 수가 나중에 조직 할당량의 50퍼센트를 초과하는 경우 사용된 메모리 양이 변경되지 않았더라도 동일한 조직 할당량 임계값 구독으로 인해 알림이 발송됩니다.
 
 {: #webhooknotsub}
 
@@ -156,7 +157,7 @@ lastupdated: "2017-01-24"
 | 사용 | 알림을 사용하려면 이 옵션을 선택하십시오. 알림을 사용하지 않으려면 선택을 취소하십시오. 구독은 기본적으로 사용됩니다.  |
 | 유형 | **웹훅**를 선택하십시오. |
 | 이벤트 | **임계값**을 선택하십시오. |
-| 임계값 | 실제 디스크, 실제 메모리, 예약 디스크 또는 예약 메모리에 대해 알림을 받을 임계값의 유형을 선택하십시오. |
+| 임계값 | 조직 할당량, 실제 디스크, 실제 메모리, 예약 디스크 또는 예약 메모리에 대해 알림을 받을 임계값의 유형을 선택하십시오.|
 | 임계값 방향 | 오름차순 또는 내림차순으로 임계값 데이터를 볼 것인지 여부를 선택하십시오.   |
 | 미만일 때 알림(%) | **내림차순** **임계값 방향**을 선택한 경우 알림을 받을 임계값 백분율을 입력하십시오. 임계값이 이 백분율 미만이면 웹훅 알림이 전송됩니다.  |
 | 초과할 때 알림(%) | **오름차순** **임계값 방향**을 선택한 경우 알림을 받을 임계값 백분율을 입력하십시오. 임계값이 이 백분율을 초과하면 웹훅 알림이 전송됩니다.  |
@@ -168,6 +169,11 @@ lastupdated: "2017-01-24"
 | URL | 웹 서비스에 연결하기 위한 URL을 입력하십시오.  |
 {: caption="표 6. 임계값에 대한 웹훅 알림 구독의 양식 필드" caption-side="top"}
 
+임계값 데이터가 6시간마다 한 번씩 수집됩니다. 값이 설정한 임계값을 벗어나면 알림이 한 번만 전송됩니다. 오름차순을 선택하면 값이 임계값 이하로 감소한 후 임계값을 다시 초과하는 경우 새 알림이 전송됩니다. 마찬가지로, 내림차순을 선택하면 사용자가 설정한 값을 초과한 후 다시 임계값 이하로 감소하는 경우에만 알림이 다시 전송됩니다.  
+
+임계값이 충족될 때 알림이 전송될 6시간을 기다리지 않으려면 양식의 필드를 완료한 후 **저장 및 테스트**를 클릭하여 샘플 데이터로 알림을 저장하고 테스트할 수 있습니다.
+
+조직 할당량 임계값 알림에는 이 알림에 대해 6시간 동안 지정된 임계값 백분율을 벗어난 조직만 포함됩니다. 이전 6시간 동안 임계값을 초과한 조직은 임계값을 초과하거나 임계값 미만인 상태에 있더라도 포함되지 않습니다. 조직의 할당량, 즉 예약 메모리, 서비스 및 라우트를 구성하는 세 개의 리소스는 조직 할당량 알림을 보낼지 판별할 때 별도로 고려됩니다. 예를 들어, 조직에서 사용하는 예약 메모리 양이 조직 할당량의 50퍼센트를 초과하는 경우 값 50퍼센트로 구성된 조직 할당량 임계값으로 인해 알림이 발송됩니다. 예를 들어, 동일한 조직에서 사용하는 서비스 수가 나중에 조직 할당량의 50퍼센트를 초과하는 경우 사용된 메모리 양이 변경되지 않았더라도 동일한 조직 할당량 임계값 구독으로 인해 알림이 발송됩니다.
 
 {: #payload}
 
@@ -191,6 +197,7 @@ lastupdated: "2017-01-24"
 
 | **IBM 값** | **설명** | **이벤트 유형** |
 |----------------|----------------|------------------------|
+| {{content.org_quota}} | 조직 할당량 임계값 | 임계값 |
 | {{content.physical_disk}} | 실제 디스크 임계값 | 임계값 |
 | {{content.physical_memory}} | 실제 메모리 임계값 | 임계값 |  
 | {{content.reserved_disk}} | 예약 디스크 임계값 | 임계값 |
@@ -842,7 +849,7 @@ DEA의 메모리, 디스크 또는 CPU 사용량을 보려면 **사용 명세**�
 <dd>조직의 모든 영역에서 할당할 수 있는 최대 공인 IP 주소 수입니다. </dd>
 </dl>
 <strong>참고</strong>: 환경에 아직 컨테이너가 없거나 환경 설정에 아직 컨테이너가 없는 경우에는 오류 메시지가 발생합니다.
-<p>컨테이너에 대한 자세한 정보는 [IBM 컨테이너 정보](https://console.ng.bluemix.net/docs/containers/container_ov.html)를 참조하십시오. 컨테이너 할당량에 대한 자세한 정보는 [할당량 및 Bluemix 계정]( https://console.ng.bluemix.net/docs/containers/container_planning_org_ov.html#container_planning_quota)을 참조하십시오. </p>
+<p>컨테이너에 대한 자세한 정보는 [IBM 컨테이너 정보](/docs/containers/container_ov.html)를 참조하십시오. 컨테이너 할당량에 대한 자세한 정보는 [할당량 및 Bluemix 계정](/docs/containers/container_planning_org_ov.html#container_planning_quota)을 참조하십시오. </p>
 <strong>참고:</strong> {{site.data.keyword.Bluemix_notm}} 시드니 지역에서는 컨테이너를 사용할 수 없습니다. </li>
 </ul>
 <li>조직 관리 페이지에서 변경한 사항을 저장하려면 <strong>저장</strong>을 클릭하십시오. </li>
@@ -965,53 +972,42 @@ DEA의 메모리, 디스크 또는 CPU 사용량을 보려면 **사용 명세**�
 | 사용자 | **사용자** 권한이 있는 사용자는 사용자의 목록에 대해 **읽기**(보기) 또는 사용자에 대해 **쓰기**(추가 또는 제거)에 대한 액세스 권한이 지정될 수 있습니다. 이 권한은 다른 사용자에 대한 권한의 설정을 허용하지 않습니다. 쓰기 액세스 권한을 통해 사용자는 환경에 새 사용자를 추가하고 환경에서 사용자를 삭제하며 환경 내에 이미 있는 조직에 기존 사용자를 추가할 수 있습니다. 또한, **쓰기** 액세스 권한을 통해 사용자는 새 조직을 추가하고 조직을 삭제하며 조직 내의 사용자를 편집할 수 있습니다. |
 {: caption="표 14. 권한" caption-side="top"}
 
-## Admin REST API를 통해 사용자 관리
-{: #usingadminapi}
+## REST API 사용 
+{: #auth_adminapi}
 
-`Admin` REST API를 사용하여
-{{site.data.keyword.Bluemix_notm}} 인스턴스의 사용자를 추가 및 제거할 수 있습니다. 명령행에서 기본 작업을 사용할 수 있도록
-`Admin` REST API 엔드포인트와 JSON 응답이
-시범 수준으로 제공됩니다. 여기 나와 있는 예제의 엔드포인트와 URL은
-변경되거나 긴급 공지 후 더 이상 제공되지 않을 수 있습니다.
+REST API 명령을 사용하려면 먼저 인증해야 합니다. 세션을 생성하고 지원하기 위해 cURL 명령을 사용하여 다음 태스크를 수행할 수 있습니다.
 
-다른 도구를 사용하도록 선택할 수 있지만, 예제를 사용하기 위해서는 다음과 같은 도구가 필요합니다.
-다른 도구도 사용하십시오. 
-* REST API 요청을 명령으로 입력하기 위한 cURL. cURL은 HTTP 요청을
-서버로 보내고 명령행 인터페이스를 통해 서버 응답을 수신하는 데 사용할 수 있는 무료 유틸리티입니다. [cURL 다운로드 사이트 ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://curl.haxx.se/download.html){: new_window}에서
-cURL을 다운로드할 수 있습니다. 
-* Python 출력 JSON 도구를 사용하기 위한 Python. 이 선택적 도구는
-JSON 텍스트를 입력으로 받아들이고 읽기 쉬운 출력을 제공합니다. [Python 다운로드 사이트 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://www.python.org/downloads){: new_window}에서 Python을 다운로드할 수 있습니다. 
+* [관리 콘솔에 로그인](#auth_loginapi) 
+* [사용자 ID 및 비밀번호 저장](#auth_setuidpw)
+* [쿠키 저장](#auth_apistorecook)
+* [쿠키 재사용](#auth_apireusecook)
 
 ### 관리 콘솔에 로그인
+{: #auth_loginapi}
 
 `Admin` API 요청을 실행하기 전에
-관리 콘솔에 로그인해야 합니다. **수퍼유저** 권한 또는 **쓰기** 액세스
-권한이 포함된 **사용자** 권한이 있으면 사용자를 추가하거나 제거할 수 있습니다. 다른 사용자의
-권한을 편집하려면 **수퍼유저** 권한이 있어야 합니다. 
+관리 콘솔에 로그인해야 합니다.  
 
-관리 콘솔에 로그인하려면 `https://<your_host>.ibm.com/login` 엔드포인트에서
-기본 액세스 인증을 사용할 수 있습니다. 서버에서 사용자 세션의 쿠키가 리턴됩니다. 관리 콘솔의 모든 작업에
+관리 콘솔에 로그인하기 위해 `https://console.<region>.bluemix.net/login`
+엔드포인트에서 기본 액세스 인증을 사용할 수 있습니다. 서버에서 사용자 세션의 쿠키가 리턴됩니다. 관리 콘솔의 모든 작업에
 이 쿠키를 사용합니다. 
 
 **참고:** 몇 시간 동안 사용하지 않으면 세션이 비활성화됩니다.
 
 관리 콘솔에 로그인하려면 다음 명령을 실행하십시오.
 
-
-`curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://<your_host>.ibm.com/login | python -m json.tool`
+`curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/login | python -m json.tool`
 {: codeblock}
 
 <dl class="parml">
-
 <dt class="pt dlterm">--user <em>user_id</em>:<em>password</em></dt>
 <dd class="pd">사용자 ID와 비밀번호를 승인하고 기본 권한 헤더를 보냅니다. </dd>
-
 <dt class="pt dlterm">-c <em>filename</em></dt>
 <dd class="pd">지정된 사용자 ID와 비밀번호를 지정된 파일에 쿠키로 저장합니다. </dd>
-
+<dt class="pt dlterm">-b <em>filename</em></dt>
+<dd class="pd">지정된 파일에서 지정된 사용자 ID와 비밀번호를 쿠키로 검색합니다.</dd>
 <dt class="pt dlterm">--header</dt>
 <dd class="pd">승인 헤더를 보냅니다.</dd>
-
 </dl>
 
 다음은 이 명령의 출력을 표시하는
@@ -1026,6 +1022,74 @@ JSON 텍스트를 입력으로 받아들이고 읽기 쉬운 출력을 제공합
 }
 ```
 {: screen}
+
+### 사용자 ID 및 비밀번호 저장
+{: #auth_setuidpw}
+
+또한 사용자 ID와 비밀번호를 저장하면 로그인할 때마다 수동으로 입력하지 않아도 됩니다. 재사용할 사용자 ID와 비밀번호를 저장하려면 다음 cURL 예를 사용하십시오.
+
+`curl -X GET -H "Authorization: Basic <redacted>" -H "Accept: application/json" "http://localhost:3000/login"`
+{: codeblock}
+
+개별 파일에서 로그인 정보를 설정한 다음 인증을 요청할 때마다 다시 입력할 필요 없이 파일을 호출하려면 cURL 명령으로 제공된 `--netrc` 옵션을 사용하십시오.
+
+cURL로 `--netrc` 옵션을 사용하려면 다음 방법 중 하나로 사용자의 홈 디렉토리에 파일을 작성하십시오.
+* Unix 시스템에서 파일 .netrc를 작성하십시오. 
+* Windows 시스템에서 파일 _netrc를 작성하십시오. 
+
+파일에 다음 정보를 입력하십시오.
+
+`machine console.<region>.bluemix.net
+login <id>
+password <password>`
+{: codeblock}
+
+cURL 명령 호출 시 다음 인수를 추가하십시오. `--netrc`.
+<p>다른 디렉토리에 있는 netrc 파일을 사용하려면 `--netrc-file [file]` 옵션을 사용하십시오. 여기서 `[file]`은 netrc 파일의 위치입니다.</p>
+</li>
+</ol>
+
+
+### 쿠키 저장
+{: #auth_apistorecook}
+
+관리 콘솔에 로그인하면 서버가 세션의 쿠키를 리턴합니다. 해당 쿠키는 관리 콘솔의 모든 오퍼레이션에서 향후 API 호출을 위한 로그인 프로세스의 일부로서 필수입니다. 나중에 사용하기 위해 쿠키를 저장할 수 있습니다.
+
+로그인 후 쿠키를 저장하려면 다음 CURL 예에 표시된 대로 `-c` 옵션을 사용하십시오.
+
+`curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/login | python -m json.tool`
+{: codeblock}
+
+### 쿠키 재사용
+{: #auth_apireusecook}
+
+쿠키를 재사용하려면 다음 CURL 예에 표시된 대로 `-b` 옵션을 `-c` 옵션으로 지정한 쿠키 파일 이름에 사용하십시오.
+
+`curl --user <user_id>:<password> -b ./cookies.txt`
+{: codeblock}
+
+## Admin REST API를 통해 사용자 관리
+
+{: #usingadminapi}
+
+`Admin` REST API를 사용하여
+{{site.data.keyword.Bluemix_notm}} 인스턴스의 사용자를 추가 및 제거할 수 있습니다. 명령행에서 기본 작업을 사용할 수 있도록
+`Admin` REST API 엔드포인트와 JSON 응답이
+시범 수준으로 제공됩니다. 여기 나와 있는 예제의 엔드포인트와 URL은
+변경되거나 긴급 공지 후 더 이상 제공되지 않을 수 있습니다.
+
+**수퍼유저** 권한 또는 **쓰기** 액세스
+권한이 포함된 **사용자** 권한이 있으면 사용자를 추가하거나 제거할 수 있습니다. 다른 사용자의
+권한을 편집하려면 **수퍼유저** 권한이 있어야 합니다. 
+
+다른 도구를 사용하도록 선택할 수 있지만, 예제를 사용하기 위해서는 다음과 같은 도구가 필요합니다.
+다른 도구도 사용하십시오. 
+* REST API 요청을 명령으로 입력하기 위한 cURL. cURL은 HTTP 요청을
+서버로 보내고 명령행 인터페이스를 통해 서버 응답을 수신하는 데 사용할 수 있는 무료 유틸리티입니다. [cURL 다운로드 사이트 ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://curl.haxx.se/download.html){: new_window}에서
+cURL을 다운로드할 수 있습니다. 
+* Python 출력 JSON 도구를 사용하기 위한 Python. 이 선택적 도구는
+JSON 텍스트를 입력으로 받아들이고 읽기 쉬운 출력을 제공합니다. [Python 다운로드 사이트 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://www.python.org/downloads){: new_window}에서 Python을 다운로드할 수 있습니다. 
+
 
 ### 조직 나열
 {: #listingorg}
@@ -1149,8 +1213,6 @@ JSON 텍스트를 입력으로 받아들이고 읽기 쉬운 출력을 제공합
 ```
 {: screen}
 
-
-
 ### 사용자 추가
 
 `Admin` REST API를 사용하여
@@ -1207,8 +1269,8 @@ JSON 파일에 정보를 제공합니다.
 }
 </pre>
 </li>
-<li>JSON 파일의 컨텐츠를 다음 명령을 실행하여 사용자의 엔드포인트에 놓으십시오.
-<br/><br/>
+<li>다음 명령을 실행하여 사용자 엔드포인트에 JSON 파일의 컨텐츠를
+게시하십시오.<br/><br/>
 <code>
 curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.json https://<your_host>.ibm.com/codi/v1/users
 </code>
@@ -1295,33 +1357,37 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 ## 메트릭용 API(시범)
 {: #envappmetricsapi}
 
-두 가지 시범 API를 사용하여 환경 또는 애플리케이션에 대한 메트릭을 수집할 수 있습니다. 이러한 API는 사용자가 지정한 시간 동안 요청한 메트릭에 대한 데이터 점 배열을 리턴합니다. 
+세 가지 시범 API를 사용하여 사용자 환경 또는 애플리케이션에 대한 메트릭을 수집할 수 있습니다. 이러한 API는 사용자가 지정한 시간 동안 요청한 메트릭에 대한 데이터 점 배열을 리턴합니다. 
 
 다음 섹션에서 설명되는 Metrics API는 지역 특정 엔드포인트에서 액세스할 수 있습니다. 예를 들어,  
 
- `https://console.<region>.bluemix.net/admin/metrics`
+`https://console.<region>.bluemix.net/admin/metrics`
 {: codeblock}
 
 **참고**:
 
 1. 사용자는 한 시간에 최대 200개의 API 요청을 메트릭에 대해 구성할 수 있습니다.
 2. 각 API 요청은 요청당 최대 200개의 데이터 점을 리턴합니다. 추가 데이터를 사용할 수 있는 경우 다음 데이터 세트를 로드하기 위한 URL이 응답에 제공됩니다. 
+3. 각 API 요청에서는 사용자가 적어도 관리 콘솔에 대한 기본 액세스 권한을 가져야 합니다. 다음에 지정된 것처럼 추가 권한이 필요할 수도 있습니다.
 
 ## 환경에 대한 메트릭 수집 
 
 시범 환경 API를 사용하여 지정한 기간 동안 상위 레벨 환경 정보를 수집할 수 있습니다. 지정하는 시간 내에 사용 가능한 데이터 점이 리턴됩니다. 데이터는 약 1시간마다 기록됩니다. 예를 들어, 환경에 대해 6시간의 CPU 데이터를 요청한 경우 요청한 6시간마다 CPU 데이터가 응답에 포함됩니다. 
 
- ### 환경 엔드포인트 
- 
+
+### 환경 엔드포인트 
+
 다음 엔드포인트를 사용하여 이 API 명령을 호출할 수 있음:  `/api/v1/env`
+
+**참고**: 다음 권한 중 하나는 이러한 엔드포인트에 액세스하는 데 필요합니다. **기본 액세스**, **사용자 읽기**, **사용자 쓰기** 또는 **수퍼유저**
 
 ### 환경 메트릭 조회 매개변수
 
-다음 조회 매개변수를 사용하여 CPU, 디스크, 메모리, 네트워크 및 앱에 대한 메트릭을 수집할 수 있습니다. 
+다음 조회 매개변수를 사용하여 CPU, 디스크, 메모리, 네트워크, 할당량 및 앱에 대한 메트릭을 수집할 수 있습니다.
 
 <dl class="parml">
 <dt class="pt dlterm">metric</dt>
-<dd class="pd">다음 값 중 하나 이상, 쉼표로 구분: `memory`, `disk`, `cpu`, `network` 및 `apps`.</dd>
+<dd class="pd">다음 값 중 하나 이상을 쉼표로 구분: `memory`, `disk`, `cpu`, `network`, `quota` 및 `apps`.</dd>
 <dt class="pt dlterm">startTime</dt>
 <dd class="pd">데이터가 리턴되는 가장 빠른 시점입니다. startTime을 지정하지 않으면 사용 가능한 가장 빠른 데이터 점이 포함됩니다. 예를 들어, 오후 2시에서 5시 사이에 데이터를 수집하려면 startTime을 오후 2시로 지정하십시오. </dd>
 <dt class="pt dlterm">endTime</dt>
@@ -1330,12 +1396,13 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 <dd class="pd">데이터가 리턴되는 순서입니다. 올바른 값은 `asc`(오름차순) 및 `desc`(내림차순)입니다. 기본값은 가장 최근의 데이터를 먼저 리턴하는 내림차순입니다. </dd>
 </dl>
 
- 다음 예제는 조회 매개변수를 사용하여 환경에 대한 메트릭을 수집합니다. 
- 
- ```
+다음 예제는 조회 매개변수를 사용하여 환경에 대한 메트릭을 수집합니다. 
+
+```
  curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/env?metric=cpu,network,disk,apps,memory
  ```
 {: codeblock}
+
 
 ### 환경 메트릭 데이터 형식
 
@@ -1347,7 +1414,23 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 {
   "sample_time": 1477494000000,
   "memory": {
-    "cell": {
+    "total": {
+      "physical": {
+        "total_gb": 1728,
+        "used": {
+          "value_gb": 673.68,
+          "percent": 38.99
+        }
+      },
+      "allocated": {
+        "reserved_gb": 3456,
+        "total_allocated": {
+          "value_gb": 2575.18,
+          "percent": 74.51
+        }
+      },
+    },
+  	"cell": {
       "physical": {
         "total_gb": 864,
         "used": {
@@ -1416,6 +1499,22 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 {
   "sample_time": 1477494000000,
   "disk": {
+    "total": {
+      "physical": {
+        "total_gb": 16200,
+        "used": {
+          "value_gb": 1614,
+          "percent": 9.96
+        }
+      },
+      "allocated": {
+        "reserved_gb": 32400,
+        "total_allocated": {
+          "value_gb": 3979,
+          "percent": 12.28
+        }
+      },
+    },
     "cell": {
       "physical": {
         "total_gb": 8100,
@@ -1485,11 +1584,14 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 {
   "sample_time": 1477494000000,
   "cpu": {
+    "total": {
+      "average_percent_cpu_used": 14.725
+    },
     "cell": {
-      "average_percent_cpu_used": 27.288461538461544
+      "average_percent_cpu_used": 19
     },
     "dea": {
-      "average_percent_cpu_used": 27.288461538461544
+      "average_percent_cpu_used": 10.45
     },
     "cpu_by_container": [
       {
@@ -1509,16 +1611,16 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
         "wait_percent": "0.0"
       },
       {
-        "name": "dea_next/2",
-        "type": "dea",
+        "name": "cell/1",
+        "type": "cell",
         "ip": "169.53.230.49",
         "sys_percent": "5.3",
         "user_percent": "1.9",
         "wait_percent": "0.0"
       },
       {
-        "name": "dea_next/3",
-        "type": "dea",
+        "name": "cell/2",
+        "type": "cell",
         "ip": "169.44.109.231",
         "sys_percent": "8.2",
         "user_percent": "22.6",
@@ -1574,16 +1676,36 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
       }
       ],
         "bandwidth": {
-        "in_mbps": 10855,
-        "out_mbps": 38090
+        "in_kbps": 10855,
+        "out_kbps": 38090
       }
   }
 }
 ```
 {: screen}
 
-* 애플리케이션에 대한 데이터 레코드를 수집하려면 다음 데이터 형식을 사용하십시오.
+* 할당량 사용에 대한 데이터 레코드를 수집하려면 다음 데이터 형식을 사용하십시오.
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "quota": {
+    "reserved_memory": {
+      "total_bytes": 33176474877952
+    },
+    "services": {
+      "total": 111650
+    },
+    "routes": {
+      "total": 1675000
+    }
+  }
+}
+```
+{: screen}
 
+* 애플리케이션에 대한 데이터 레코드를 수집하려면 다음 데이터 형식을 사용하십시오.
+ 
 ```
 {
   "sample_time": 1477494000000,
@@ -1608,6 +1730,58 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 ```
 {: screen}
 
+## 조직에 대한 메트릭 수집
+
+약 1시간마다 모든 조직의 데이터가 기록됩니다. 특정 메트릭에 대한 요청은 지정한 기간에 각 데이터 샘플의 모든 조직에 대한 정보를 리턴하며, 요청된 메트릭에 따라 정보가 내림차순으로 정렬됩니다. 예를 들어, 200개의 앱이 있는 환경에서 6시간 동안 메모리를 통해 모든 앱을 요청하면 한 번에 200개씩 1200개의 레코드가 리턴됩니다.
+
+요청된 기간에 각 데이터 샘플에 대해 리턴되는 정보의 양을 줄이기 위해 계수 옵션을 지정할 수 있습니다. 앞의 예를 사용하여 계수 옵션을 5로 추가하면 각 데이터 샘플에 대해 메모리별로 상위 5개 조직을 나타내는 30개의 레코드가 리턴됩니다.
+
+### 조직 엔드포인트 
+
+다음 엔드포인트를 사용하여 이 API 명령을 호출할 수 있습니다. 
+* `/api/v1/org/memory/physical`
+* `/api/v1/org/memory/reserved`
+* `/api/v1/org/disk/physical`
+* `/api/v1/org/disk/reserved`
+
+**참고**: 다음 권한 중 하나는 이러한 엔드포인트에 액세스하는 데 필요합니다. **사용자 읽기**, **사용자 쓰기** 또는 **수퍼유저**
+
+### 조직 조회 매개변수
+ 
+다음 조회 매개변수를 사용하여 조직에 대한 메트릭을 수집하십시오.
+
+<dl class="parml">
+<dt class="pt dlterm">startTime</dt>
+<dd class="pd">데이터가 리턴되는 가장 빠른 시점입니다. startTime을 지정하지 않으면 사용 가능한 가장 빠른 데이터 점이 포함됩니다. 예를 들어, 오후 2시에서 5시 사이에 데이터를 수집하려면 startTime을 오후 2시로 지정하십시오. </dd>
+<dt class="pt dlterm">endTime</dt>
+<dd class="pd">데이터가 리턴되는 가장 늦은 시점입니다. endTime을 지정하지 않으면 가장 최근의 데이터 점이 사용됩니다. 예를 들어, 오후 2시에서 5시 사이에 데이터를 수집하려면 endTime을 오후 5시로 지정하십시오. </dd>
+<dt class="pt dlterm">count</dt>
+<dd class="pd">각 데이터 샘플 내에서 리턴할 레코드 수입니다.
+</dd>
+<dt class="pt dlterm">minValue</dt>
+<dd class="pd">지정된 메트릭에 대해 리턴하는 가장 작은 값입니다. minValue를 지정하지 않으면 모든 값이 리턴됩니다. 예를 들어, 20000바이트 이상의 실제 메모리를 사용하는 조직을 수집하려면 minValue를 20000으로 지정하십시오.
+</dd>
+</dl>
+
+다음 예에서는 조직에 대한 메트릭을 수집합니다.
+
+```
+curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/org/memory/physical?count=5&startTime=2016-12-02T16:54:09.467Z
+```
+{: codeblock}
+
+### 조직 응답 형식
+
+```
+{
+   docs: [],
+   next_url:
+}
+```
+{: screen}
+
+리턴되는 각 문서는 요청 시점에 각 데이터 샘플에 있는 조직에 대해 요청된 메트릭을 나타냅니다.
+
 ## 애플리케이션에 대한 메트릭 수집
 
 약 1시간마다 모든 애플리케이션의 데이터가 기록됩니다. 특정 메트릭에 대한 요청은 지정한 기간에 각 데이터 샘플의 모든 앱에 대한 정보를 리턴하며, 요청된 메트릭에 따라 정보가 내림차순으로 정렬됩니다. 예를 들어, 200개의 앱이 있는 환경에서 6시간 동안 CPU를 통해 모든 앱을 요청하면 한 번에 200개씩 1200개의 레코드가 리턴됩니다. 
@@ -1623,6 +1797,7 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 * `/api/v1/app/disk/physical`
 * `/api/v1/app/disk/reserved`
 
+**참고**: 다음 권한 중 하나는 이러한 엔드포인트에 액세스하는 데 필요합니다. **사용자 읽기**, **사용자 쓰기** 또는 **수퍼유저**
 
 ### 애플리케이션 조회 매개변수
  
@@ -1647,6 +1822,7 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/app/cpu/physical?count=5&startTime=2016-12-02T16:54:09.467Z
 ```
 {: codeblock}
+
 
 ### 애플리케이션 응답 형식
 
@@ -1896,7 +2072,7 @@ CLI 플러그인을 추가할 수 있습니다.
 저장소를 추가하고 플러그인을 설치하려면 다음 단계를 완료하십시오.
 
 <ol>
-<li>{{site.data.keyword.Bluemix_notm}} 관리 플러그인 저장소를 추가하려면 다음 명령을 실행하십시오. <br/><br/>
+<li>{{site.data.keyword.Bluemix_notm}} 관리 플러그인 저장소를 추가하려면 다음 명령을 실행하십시오.<br/><br/>
 <code>
 cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli
 </code><br/><br/>
@@ -1905,7 +2081,7 @@ cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cl
 <dd class="pd">{{site.data.keyword.Bluemix_notm}} 인스턴스 URL의 하위 도메인입니다.</dd>
 </dl>
 </li>
-<li>{{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인을 설치하려면 다음 명령을 실행하십시오. <br/><br/>
+<li>{{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인을 설치하려면 다음 명령을 실행하십시오.<br/><br/>
 <code>
 cf install-plugin bluemix-admin-cli -r BluemixAdmin
 </code>

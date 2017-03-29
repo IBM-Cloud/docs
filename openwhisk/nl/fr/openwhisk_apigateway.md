@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-21"
+lastupdated: "2017-03-16"
 
 ---
 
@@ -12,19 +12,25 @@ lastupdated: "2016-02-21"
 {:screen: .screen}
 {:pre: .pre}
 
-# Exposition de vos actions via la passerelle d'API (expérimental)
+# Passerelle d'API (fonction en phase expérimentale)
 {: #openwhisk_apigateway}
 
-Dans {{site.data.keyword.openwhisk}}, vous pouvez appeler vos actions à l'aide de l'[API REST](./openwhisk_reference.html#openwhisk_ref_restapi) en utilisant une demande HTTP uniquement avec une méthode **POST**. Le client HTTP doit alors effectuer la demande avec la clé d'API d'autorisation d'OpenWhisk. Il s'agit d'une clé principale qui, en plus d'autoriser l'appel d'une action, autorise également la suppression et la création d'autres actions.
-{: shortdesc}
+Les [Actions Web](openwhisk_webactions.html) sont à présent disponibles.
 
-Cette fonction expérimentale vous permet d'appeler une action avec des méthodes HTTP autres que POST et sans la clé d'API d'autorisation de l'action.
+Les Actions Web vous permettent d'appeler une action avec des méthodes HTTP autre que POST et sans la clé d'autorisation d'API.
 
-Utilisez l'interface de ligne de commande pour exposer vos actions OpenWhisk via la passerelle d'API OpenWhisk. 
+Suite aux commentaires en retour des utilisateurs, les Actions Web sont le modèle de programmation retenu pour construire des actions OpenWhisk capables de traiter les événements HTTP.
+
+La plupart des fonctionnalités de la passerelle d'API ont été fusionnées dans les Actions Web, lesquelles vous permettent de gérer n'importe quelle demande HTTP et de renvoyer des réponses HTTP avec contrôle total depuis votre action Web.
+
+Une intégration révisée de la passerelle d'API avec OpenWhisk sera bientôt disponible. Elle sera configurée afin d'utiliser un proxy pour vos actions Web en leur permettant d'utiliser des fonctions de la passerelle d'API telles que le plafonnement de débit, la validation de jeton oauth, des clés d'API, et d'autres.
+
+**Remarque :** les API que vous avez créées à l'aide de `wsk api-experimental` continueront à fonctionner. Toutefois, vous devriez commencer à les migrer vers les actions Web.
 
 ## Configuration de l'interface de ligne de commande d'OpenWhisk
 {: #openwhisk_apigateway_cli}
-Cette fonction expérimentale fonctionne uniquement avec le nouveau modèle d'authentification OpenWhisk, dans lequel chaque espace de nom est associé à une clé d'authentification unique. Suivez les instructions figurant dans la rubrique [Configuration de l'interface de ligne de commande](https://console.ng.bluemix.net/openwhisk/cli) pour configurer la clé d'authentification de votre espace de nom spécifique.
+Cette fonction expérimentale fonctionne uniquement avec le nouveau modèle d'authentification OpenWhisk, dans lequel chaque espace de nom est associé à une clé d'authentification unique.
+Suivez les instructions figurant dans la rubrique [Configuration de l'interface de ligne de commande](https://console.ng.bluemix.net/openwhisk/cli) pour configurer la clé d'authentification de votre espace de nom spécifique.
 
 ## Exposition d'une action OpenWhisk
 {: #openwhisk_apigateway_hello}
@@ -60,7 +66,8 @@ Vous pouvez transmettre des paramètres à l'action grâce à de simples paramè
 ### Exposition de plusieurs actions
 {: #openwhisk_apigateway_actions}
 
-Supposons que vous souhaitez exposer un ensemble d'actions dans le cadre d'un groupe de lecture qui regroupe vos amis. Vous disposez d'une série d'actions pour implémenter le back-end du groupe de lecture :
+Supposons que vous souhaitez exposer un ensemble d'actions dans le cadre d'un groupe de lecture qui regroupe vos amis.
+Vous disposez d'une série d'actions pour implémenter le back-end du groupe de lecture :
 
 | action | méthode http | description |
 | ----------- | ----------- | ------------ |

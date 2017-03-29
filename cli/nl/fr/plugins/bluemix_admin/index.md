@@ -107,7 +107,7 @@ cf ba add-user <nom_utilisateur> <organisation> <prénom> <nom>
 ```
 {: codeblock}
 
-**Remarque** : pour ajouter un utilisateur à une organisation spécifique, vous devez être un **administrateur** disposant du droit **users.write** (ou **Superutilisateur**). Si vous êtes un responsable de l'organisation, vous pouvez aussi disposer de la capacité d'ajouter des utilisateurs à votre organisation via un superutilisateur qui exécute la commande **enable-managers-add-users**. Voir [Permettre aux responsables d'ajouter des utilisateurs](index.html#clius_emau) pour plus d'informations.
+**Remarque** : pour ajouter un utilisateur à une organisation spécifique, vous devez être un **administrateur** disposant du droit **users.write** (ou **Superutilisateur**). Si vous êtes un responsable de l'organisation, vous pouvez aussi disposer de la capacité d'ajouter des utilisateurs à votre organisation via un superutilisateur qui exécute la commande **enable-managers-add-users**.  Voir [Permettre aux responsables d'ajouter des utilisateurs](index.html#clius_emau) pour plus d'informations.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;nom_utilisateur&gt;</dt>
@@ -116,9 +116,9 @@ cf ba add-user <nom_utilisateur> <organisation> <prénom> <nom>
 <dd class="pd">Nom ou identificateur global unique de l'organisation {{site.data.keyword.Bluemix_notm}}
 à laquelle ajouter l'utilisateur.</dd>
 <dt class="pt dlterm">&lt;prénom&gt;</dt>
-<dd class="pd">Prénom de l'utilisateur à ajouter à l'organisation. </dd>
+<dd class="pd">Prénom de l'utilisateur à ajouter à l'organisation.</dd>
 <dt class="pt dlterm">&lt;nom&gt;</dt>
-<dd class="pd">Nom de l'utilisateur à ajouter à l'organisation. </dd>
+<dd class="pd">Nom de l'utilisateur à ajouter à l'organisation.</dd>
 </dl>
 
 **Astuce :** vous pouvez aussi utiliser **ba au** comme alias pour le nom de commande plus long **ba add-user**.
@@ -210,7 +210,7 @@ cf ba enable-managers-add-users
 ### Empêcher les responsables d'ajouter des utilisateurs
 {: #clius_dmau}
 
-Si des responsables de l'organisation ont été autorisés à ajouter des utilisateurs aux organisations qu'ils gèrent dans votre environnement {{site.data.keyword.Bluemix_notm}} avec la commande **enable-managers-add-users** et que vous disposez du droit **Superutilisateur**, vous pouvez supprimer cette capacité. Pour empêcher les responsables d'ajouter des utilisateurs, utilisez la commande suivante :
+Si des responsables de l'organisation ont été autorisés à ajouter des utilisateurs aux organisations qu'ils gèrent dans votre environnement {{site.data.keyword.Bluemix_notm}} avec la commande **enable-managers-add-users** et que vous disposez du droit **Superutilisateur**, vous pouvez supprimer cette capacité.  Pour empêcher les responsables d'ajouter des utilisateurs, utilisez la commande suivante :
 
 ```
 cf ba disable-managers-add-users
@@ -240,7 +240,7 @@ cf ba create-org <organisation> <responsable>
 <dd class="pd">Nom d'utilisateur du responsable de l'organisation.</dd>
 </dl>
 
-**Astuce :** vous pouvez aussi utiliser **ba co** comme alias pour le nom de commande plus long **ba create-org**. 
+**Astuce :** vous pouvez aussi utiliser **ba co** comme alias pour le nom de commande plus long **ba create-org**.
 
 ### Suppression d'une organisation
 {: #admin_delete_org}
@@ -258,7 +258,7 @@ cf ba delete-org <organisation>
 à supprimer.</dd>
 </dl>
 
-**Astuce :** vous pouvez aussi utiliser **ba do** comme alias pour le nom de commande plus long **ba delete-org**. 
+**Astuce :** vous pouvez aussi utiliser **ba do** comme alias pour le nom de commande plus long **ba delete-org**.
 
 ### Affectation d'un utilisateur à une organisation
 {: #admin_ass_user_org}
@@ -437,12 +437,12 @@ cf bluemix-admin create-space <organisation> <nom_espace>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organisation&gt;</dt>
-<dd class="pd">Nom ou identificateur global unique (GUID) de l'organisation à laquelle l'espace doit être ajouté. </dd>
+<dd class="pd">Nom ou identificateur global unique (GUID) de l'organisation à laquelle l'espace doit être ajouté.</dd>
 <dt class="pt dlterm">&lt;nom_espace&gt;</dt>
-<dd class="pd">Nom de l'espace qui doit être créé dans l'organisation. </dd>
+<dd class="pd">Nom de l'espace qui doit être créé dans l'organisation.</dd>
 </dl>
 
-**Astuce :** vous pouvez aussi utiliser **ba cs** comme alias pour le nom de commande plus long **ba create-space**. 
+**Astuce :** vous pouvez aussi utiliser **ba cs** comme alias pour le nom de commande plus long **ba create-space**.
 
 ### Suppression d'un espace dans l'organisation
 
@@ -456,12 +456,12 @@ cf bluemix-admin delete-space <organisation> <nom_espace>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organisation&gt;</dt>
-<dd class="pd">Nom ou identificateur global unique (GUID) de l'organisation dont l'espace doit être retiré. </dd>
+<dd class="pd">Nom ou identificateur global unique (GUID) de l'organisation dont l'espace doit être retiré.</dd>
 <dt class="pt dlterm">&lt;nom_espace&gt;</dt>
-<dd class="pd">Nom de l'espace qui doit être retiré de l'organisation. </dd>
+<dd class="pd">Nom de l'espace qui doit être retiré de l'organisation.</dd>
 </dl>
 
-**Astuce :** vous pouvez aussi utiliser **ba cs** comme alias pour le nom de commande plus long **ba delete-space**. 
+**Astuce :** vous pouvez aussi utiliser **ba cs** comme alias pour le nom de commande plus long **ba delete-space**.
 
 ### Ajout d'un utilisateur à un espace avec un rôle
 
@@ -475,14 +475,13 @@ cf bluemix-admin set-space <organisation> <nom_espace> <nom_utilisateur> <rôle>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organisation&gt;</dt>
-<dd class="pd">Nom ou identificateur global unique (GUID) de l'organisation à laquelle l'utilisateur doit être ajouté. </dd>
+<dd class="pd">Nom ou identificateur global unique (GUID) de l'organisation à laquelle l'utilisateur doit être ajouté.</dd>
 <dt class="pt dlterm">&lt;nom_espace&gt;</dt>
-<dd class="pd">Nom de l'espace auquel l'utilisateur doit être ajouté. </dd>
+<dd class="pd">Nom de l'espace auquel l'utilisateur doit être ajouté.</dd>
 <dt class="pt dlterm">&lt;nom_utilisateur&gt;</dt>
-<dd class="pd">Nom de l'utilisateur qui doit être ajouté. </dd>
+<dd class="pd">Nom de l'utilisateur qui doit être ajouté.</dd>
 <dt class="pt dlterm">&lt;rôle&gt;</dt>
-<dd class="pd">Rôle de l'utilisateur qui doit être affecté. La valeur peut être Responsable, Développeur ou Auditeur. Pour connaître les rôles utilisateur et les descriptions {{site.data.keyword.Bluemix_notm}} dans un espace, voir [Affectation de rôles](/docs/admin/users_roles.html).
-</dd>
+<dd class="pd">Rôle de l'utilisateur qui doit être affecté. La valeur peut être Responsable, Développeur ou Auditeur. Pour connaître les rôles utilisateur et les descriptions {{site.data.keyword.Bluemix_notm}} dans un espace, voir [Affectation de rôles](/docs/admin/users_roles.html).</dd>
 </dl>
 
 **Astuce :** vous pouvez aussi utiliser **ba ss** comme alias pour le nom de commande plus long **ba set-space**.
@@ -500,17 +499,16 @@ cf bluemix-admin unset-space <organisation> <nom_espace> <nom_utilisateur> <rôl
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;organisation&gt;</dt>
-<dd class="pd">Nom ou identificateur global unique (GUID) de l'organisation à laquelle l'utilisateur doit être ajouté. </dd>
+<dd class="pd">Nom ou identificateur global unique (GUID) de l'organisation à laquelle l'utilisateur doit être ajouté.</dd>
 <dt class="pt dlterm">&lt;nom_espace&gt;</dt>
-<dd class="pd">Nom de l'espace auquel l'utilisateur doit être ajouté. </dd>
+<dd class="pd">Nom de l'espace auquel l'utilisateur doit être ajouté.</dd>
 <dt class="pt dlterm">&lt;nom_utilisateur&gt;</dt>
-<dd class="pd">Nom de l'utilisateur qui doit être ajouté. </dd>
+<dd class="pd">Nom de l'utilisateur qui doit être ajouté.</dd>
 <dt class="pt dlterm">&lt;rôle&gt;</dt>
-<dd class="pd">Rôle de l'utilisateur qui doit être affecté. La valeur peut être Responsable, Développeur ou Auditeur. Pour connaître les rôles utilisateur et les descriptions {{site.data.keyword.Bluemix_notm}} dans un espace, voir [Affectation de rôles](/docs/admin/users_roles.html).
-</dd>
+<dd class="pd">Rôle de l'utilisateur qui doit être affecté. La valeur peut être Responsable, Développeur ou Auditeur. Pour connaître les rôles utilisateur et les descriptions {{site.data.keyword.Bluemix_notm}} dans un espace, voir [Affectation de rôles](/docs/admin/users_roles.html).</dd>
 </dl>
 
-**Astuce :** vous pouvez aussi utiliser **ba us** comme alias pour le nom de commande plus long **ba unset-space**. 
+**Astuce :** vous pouvez aussi utiliser **ba us** comme alias pour le nom de commande plus long **ba unset-space**.
 
 ## Administration de catalogue
 {: #admin_catalog}

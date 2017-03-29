@@ -16,10 +16,10 @@ lastupdated: "2017-02-16"
 # Analyse des journaux d'application CF depuis l'interface de ligne de commande
 {: #analyzing_logs_cli}
 
-Dans {{site.data.keyword.Bluemix}}, vous pouvez visualiser, filtrer et analyser des journaux via l'interface de ligne de commande à l'aide de la commande **cf logs**. Utilisez la ligne de commande pour gérer des journaux à l'aide d'un programme.
+Dans {{site.data.keyword.Bluemix}}, vous pouvez visualiser, filtrer et analyser des journaux via l'interface de ligne de commande à l'aide de la commande **cf logs**. Utilisez la ligne de commande pour gérer des journaux à l'aide d'un programme. 
 {:shortdesc}
 
-Utilisez la commande **cf logs** pour afficher des journaux depuis une application Cloud Foundry et depuis les composants système qui interagissent avec lui lorsque vous déployez l'application dans {{site.data.keyword.Bluemix_notm}}. La commande **cf logs** affiche les flux de journalisation de sortie standard et d'erreur standard d'une application Cloud Foundry. 
+Utilisez la commande **cf logs** pour afficher des journaux depuis une application Cloud Foundry et depuis les composants système qui interagissent avec lui lorsque vous déployez l'application dans {{site.data.keyword.Bluemix_notm}}. La commande **cf logs** affiche les flux de journalisation de sortie standard et d'erreur standard d'une application Cloud Foundry.
 
 Pour afficher les journaux qui vous intéressent ou exclure le contenu que vous ne voulez pas afficher, vous pouvez utiliser la commande **cf logs** avec des options de filtrage telles que **cut** et **grep** dans l'interface de ligne de commande cf :
 

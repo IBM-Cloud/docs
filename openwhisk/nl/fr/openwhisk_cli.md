@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-27"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -23,8 +23,8 @@ Accédez à la page de [configuration de l'interface de ligne de commande](https
 
 La configuration de deux propriétés est requise pour pouvoir utiliser l'interface de ligne de commande :
 
-1. L'**hôte d'API** (nom ou adresse IP) pour le déploiement d'{{site.data.keyword.openwhisk_short}} que vous souhaitez utiliser. 
-2. La **clé d'autorisation** (nom d'utilisateur et mot de passe) qui vous permet d'accéder à l'API {{site.data.keyword.openwhisk_short}}. 
+1. L'**hôte d'API** (nom ou adresse IP) pour le déploiement d'{{site.data.keyword.openwhisk_short}} que vous souhaitez utiliser.
+2. La **clé d'autorisation** (nom d'utilisateur et mot de passe) qui vous permet d'accéder à l'API {{site.data.keyword.openwhisk_short}}.
 
 Exécutez la commande suivante pour définir l'hôte d'API :
 
@@ -33,14 +33,16 @@ wsk property set --apihost openwhisk.ng.bluemix.net
 ```
 {: pre} 
 
-Si vous connaissez votre clé d'autorisation, vous pouvez configurer l'interface de ligne de commande afin de l'utiliser.  
+Si vous connaissez votre clé d'autorisation, vous pouvez configurer l'interface de ligne de commande afin de l'utiliser. 
 
 Exécutez la commande suivante pour définir la clé d'autorisation :
 
 ```
 wsk property set --auth <clé_autorisation>
 ```
-{: pre} 
+{: pre}
+
+**Indication :**l'interface CLI d'OpenWhisk stocke par défaut dans `~/.wskprops` les propriétés définies. L'emplacement de ce fichier peut être modifié par le biais de la variable d'environnement `WSK_CONFIG_FILE`. 
 
 Pour vérifier votre configuration d'interface de ligne de commande, essayez de [créer et d'exécuter une action](./index.html#openwhisk_start_hello_world).
 

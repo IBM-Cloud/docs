@@ -119,11 +119,11 @@ Führen Sie folgende Schritte aus, um ein E-Mail- oder Web-Hook-Abonnement auf d
 | An | Geben Sie die E-Mail-Adresse(n) der Empfänger der E-Mail-Benachrichtigung in Form einer durch Kommas getrennte Liste ein. Erweitern Sie die Optionen "cc" bzw. "bcc", um andere Benutzer auf Kopie zu setzen. Dies ist ein erforderliches Feld. |
 {: caption="Table 4. Fields for email notification subscriptions about maintenance updates or incidents" caption-side="top"}
 
-Schwellenwertdaten werden alle 6 Stunden erfasst. Eine Benachrichtigung wird nur einmal gesendet, wenn der Wert den von Ihnen festgelegten Schwellenwert über- oder unterschreitet. Wenn Sie 'aufsteigend' gewählt haben, wird nur dann eine neue Benachrichtigung gesendet, wenn der Wert den Schwellenwert unterschreitet und dann wieder überschreitet. Wenn Sie 'absteigend' gewählt haben, werden Sie entsprechend nur dann benachrichtigt, wenn der Wert den von Ihnen festgelegten Schwellenwert überschreitet und dann wieder unterschreitet.  
+Schwellenwertdaten werden alle 6 Stunden erfasst. Eine Benachrichtigung wird nur einmal gesendet, wenn der Wert den von Ihnen festgelegten Schwellenwert über- oder unterschreitet. Wenn Sie 'aufsteigend' gewählt haben, wird nur dann eine neue Benachrichtigung gesendet, wenn der Wert den Schwellenwert unterschreitet und dann wieder überschreitet. Wenn Sie 'absteigend' gewählt haben, werden Sie entsprechend nur dann benachrichtigt, wenn der Wert den von Ihnen festgelegten Schwellenwert überschreitet und dann wieder unterschreitet. 
 
 Wenn Sie nicht 6 Stunden warten möchten, bis die Benachrichtigung über das Erreichen des Schwellenwerts gesendet wird, können Sie nach dem Ausfüllen der Felder im Formular auf **Speichern und testen** klicken, um eine Testbenachrichtigung mit Beispieldaten zu empfangen.  
 
-Eine Benachrichtigung über einen Organisationskontingentschwellenwert enthält nur die Organisationen, die den angegebenen Schwellenprozentwert in dem 6-Stunden-Zeitraum, der dieser Benachrichtigung entspricht, über- oder unterschritten haben. Organisationen, die einen Schwellenwert während vorheriger 6-Stunden-Zeiträume über- oder unterschritten haben, werden nicht eingeschlossen, auch wenn sie über bzw. unter dem Schwellenwert verbleiben. Die drei Ressourcen, die ein Kontingent der Organisation bilden (reservierter Speicher, Services und Routen) werden bei der Ermittlung, ob eine Benachrichtigung über ein Organisationskontingent gesendet werden soll, unabhängig bewertet. Wenn zum Beispiel die Menge an reserviertem Speicher, die von einer Organisation genutzt wird, den Wert von 50 % des Kontingents der Organisation über- oder unterschreitet, hat ein Schwellenwert für das Organisationskontingent, der mit 50 % konfiguriert ist, zur Folge, dass eine Benachrichtigung gesendet wird. Wenn die Anzahl der Services, die von derselben Organisation genutzt werden, den Wert von 50 % des Kontingents der Organisation zu einem späteren Zeitpunkt überschreitet, führt dies ebenfalls dazu, dass eine Benachrichtigung gesendet wird, selbst wenn die Menge an genutztem Speicher unverändert bleibt.
+Eine Benachrichtigung über einen Organisationskontingentschwellenwert enthält nur die Organisationen, die den angegebenen Schwellenprozentwert in dem 6-Stunden-Zeitraum, der dieser Benachrichtigung entspricht, über- oder unterschritten haben. Organisationen, die einen Schwellenwert während vorheriger 6-Stunden-Zeiträume über- oder unterschritten haben, werden nicht eingeschlossen, auch wenn sie über bzw. unter dem Schwellenwert verbleiben.  Die drei Ressourcen, die ein Kontingent der Organisation bilden (reservierter Speicher, Services und Routen) werden bei der Ermittlung, ob eine Benachrichtigung über ein Organisationskontingent gesendet werden soll, unabhängig bewertet. Wenn zum Beispiel die Menge an reserviertem Speicher, die von einer Organisation genutzt wird, den Wert von 50 % des Kontingents der Organisation über- oder unterschreitet, hat ein Schwellenwert für das Organisationskontingent, der mit 50 % konfiguriert ist, zur Folge, dass eine Benachrichtigung gesendet wird.  Wenn die Anzahl der Services, die von derselben Organisation genutzt werden, den Wert von 50 % des Kontingents der Organisation zu einem späteren Zeitpunkt überschreitet, führt dies ebenfalls dazu, dass eine Benachrichtigung gesendet wird, selbst wenn die Menge an genutztem Speicher unverändert bleibt.
 
 {: #webhooknotsub}
 
@@ -173,7 +173,7 @@ Schwellenwertdaten werden alle 6 Stunden erfasst. Eine Benachrichtigung wird nur
 
 Wenn Sie nicht 6 Stunden warten möchten, bis die Benachrichtigung über das Erreichen des Schwellenwerts gesendet wird, können Sie nach dem Ausfüllen der Felder im Formular auf **Speichern und testen** klicken, um die Benachrichtigung mit Beispieldaten zu speichern und zu testen.
 
-Eine Benachrichtigung über einen Organisationskontingentschwellenwert enthält nur die Organisationen, die den angegebenen Schwellenprozentwert in dem 6-Stunden-Zeitraum, der dieser Benachrichtigung entspricht, über- oder unterschritten haben. Organisationen, die einen Schwellenwert während vorheriger 6-Stunden-Zeiträume über- oder unterschritten haben, werden nicht eingeschlossen, auch wenn sie über bzw. unter dem Schwellenwert verbleiben. Die drei Ressourcen, die ein Kontingent der Organisation bilden, nämlich reservierter Speicher, Services und Routen, werden bei der Ermittlung, ob eine Benachrichtigung über ein Organisationskontingent gesendet werden soll, unabhängig bewertet. Wenn zum Beispiel die Menge an reserviertem Speicher, die von einer Organisation genutzt wird, den Wert von 50 % des Kontingents der Organisation über- oder unterschreitet, hat ein Schwellenwert für das Organisationskontingent, der mit 50 % konfiguriert ist, zur Folge, dass eine Benachrichtigung gesendet wird. Wenn die Anzahl der Services, die von derselben Organisation genutzt werden, den Wert von 50 % des Kontingents der Organisation zu einem späteren Zeitpunkt überschreitet, führt dies ebenfalls dazu, dass eine Benachrichtigung gesendet wird, selbst wenn die Menge an genutztem Speicher unverändert bleibt.
+Eine Benachrichtigung über einen Organisationskontingentschwellenwert enthält nur die Organisationen, die den angegebenen Schwellenprozentwert in dem 6-Stunden-Zeitraum, der dieser Benachrichtigung entspricht, über- oder unterschritten haben. Organisationen, die einen Schwellenwert während vorheriger 6-Stunden-Zeiträume über- oder unterschritten haben, werden nicht eingeschlossen, auch wenn sie über bzw. unter dem Schwellenwert verbleiben.  Die drei Ressourcen, die ein Kontingent der Organisation bilden, nämlich reservierter Speicher, Services und Routen, werden bei der Ermittlung, ob eine Benachrichtigung über ein Organisationskontingent gesendet werden soll, unabhängig bewertet. Wenn zum Beispiel die Menge an reserviertem Speicher, die von einer Organisation genutzt wird, den Wert von 50 % des Kontingents der Organisation über- oder unterschreitet, hat ein Schwellenwert für das Organisationskontingent, der mit 50 % konfiguriert ist, zur Folge, dass eine Benachrichtigung gesendet wird.  Wenn die Anzahl der Services, die von derselben Organisation genutzt werden, den Wert von 50 % des Kontingents der Organisation zu einem späteren Zeitpunkt überschreitet, führt dies ebenfalls dazu, dass eine Benachrichtigung gesendet wird, selbst wenn die Menge an genutztem Speicher unverändert bleibt.
 
 {: #payload}
 
@@ -966,7 +966,7 @@ Den Benutzern können die folgenden Berechtigungen mit bestimmten Zugriffsebenen
 ## REST-APIs verwenden 
 {: #auth_adminapi}
 
-Für die Verwendung der REST-API-Befehle müssen Sie sich zunächst authentifizieren. Zur Generierung und Unterstützung von Sitzungen können Sie cURL-Befehle für die folgenden Tasks verwenden: 
+Für die Verwendung der REST-API-Befehle müssen Sie sich zunächst authentifizieren. Zur Generierung und Unterstützung von Sitzungen können Sie cURL-Befehle für die folgenden Tasks verwenden:
 
 * [Bei der Administrationskonsole anmelden](#auth_loginapi) 
 * [Benutzer-ID und Kennwort speichern](#auth_setuidpw)
@@ -1013,18 +1013,18 @@ Das folgende Beispiel zeigt die Ausgabe dieses Befehls:
 ### Benutzer-ID und Kennwort speichern
 {: #auth_setuidpw}
 
-Sie können Ihre Benutzer-ID und das zugehörige Kennwort auch speichern, sodass Sie es nicht bei jeder Anmeldung manuell eingeben müssen. Verwenden Sie das folgende cURL-Beispiel, um Ihre Benutzer-ID und das Kennwort zur Wiederverwendung zu speichern: 
+Sie können Ihre Benutzer-ID und das zugehörige Kennwort auch speichern, sodass Sie es nicht bei jeder Anmeldung manuell eingeben müssen.  Verwenden Sie das folgende cURL-Beispiel, um Ihre Benutzer-ID und das Kennwort zur Wiederverwendung zu speichern:
 
 `curl -X GET -H "Authorization: Basic <redacted>" -H "Accept: application/json" "http://localhost:3000/login"`
 {: codeblock}
 
-Wenn Sie Ihre Anmeldeinformationen in einer separaten Datei speichern und dann die Datei aufrufen wollen, sodass Sie die Informationen nicht für jede Authentifizierungsanforderung erneut eingeben müssen, verwenden Sie die Option `--netrc`, die mit dem cURL-Befehl zur Verfügung steht. 
+Wenn Sie Ihre Anmeldeinformationen in einer separaten Datei speichern und dann die Datei aufrufen wollen, sodass Sie die Informationen nicht für jede Authentifizierungsanforderung erneut eingeben müssen, verwenden Sie die Option `--netrc`, die mit dem cURL-Befehl zur Verfügung steht.
 
-Wenn Sie die Option `--netrc` mit cURL verwenden wollen, erstellen Sie zunächst eine Datei im Ausgangsverzeichnis des Benutzers auf eine der folgenden Weisen: 
-* UNIX-System: Erstellen Sie eine Datei mit dem Namen '.netrc'.  
-* Windows-System: Erstellen Sie eine Datei mit dem Namen '_netrc'.  
+Wenn Sie die Option `--netrc` mit cURL verwenden wollen, erstellen Sie zunächst eine Datei im Ausgangsverzeichnis des Benutzers auf eine der folgenden Weisen:
+* UNIX-System: Erstellen Sie eine Datei mit dem Namen '.netrc'. 
+* Windows-System: Erstellen Sie eine Datei mit dem Namen '_netrc'. 
 
-Geben Sie in dieser Datei die folgenden Informationen an: 
+Geben Sie in dieser Datei die folgenden Informationen an:
 
 `machine console.<Region>.bluemix.net
 login <ID>
@@ -1324,7 +1324,7 @@ Auf die in den folgenden Abschnitten beschriebenen Metrik-APIs kann über den re
 
 1. Ein Benutzer kann pro Stunde bis zu 200 API-Anforderungen für Metriken absetzen.
 2. Jede API-Anforderung gibt bis zu 200 Datenpunkte pro Anforderung zurück. Falls mehr Daten verfügbar sind, wird in der Antwort eine URL bereitgestellt, mit deren Hilfe die nächste Gruppe von Daten geladen werden kann.
-3. Jede API-Anforderung erfordert mindestens Basiszugriff eines Benutzers auf die Administrationskonsole. Weitere Berechtigungen können wie nachfolgend beschrieben erforderlich sein.
+3. Jede API-Anforderung erfordert mindestens Basiszugriff eines Benutzers auf die Administrationskonsole.  Weitere Berechtigungen können wie nachfolgend beschrieben erforderlich sein.
 
 ## Metriken über Ihre Umgebung erfassen 
 
@@ -1715,7 +1715,7 @@ Mit den folgenden Abfrageparametern können Sie Metriken für Ihre Organisatione
 <dd class="pd">Die Anzahl der Datensätze in jeder Datenstichprobe, die zurückgegeben werden sollen.
 </dd>
 <dt class="pt dlterm">minValue</dt>
-<dd class="pd">Der kleinste Wert, der für die angegebene Metrik zurückgegeben werden soll. Wenn minValue nicht angegeben wird, werden alle Werte zurückgegeben. Beispiel: Zum Erfassen von Organisationen, die mindestens 20000 Byte physischen Speicher belegen, geben Sie für minValue den Wert 20000 an.
+<dd class="pd">Der kleinste Wert, der für die angegebene Metrik zurückgegeben werden soll.  Wenn minValue nicht angegeben wird, werden alle Werte zurückgegeben.  Beispiel: Zum Erfassen von Organisationen, die mindestens 20000 Byte physischen Speicher belegen, geben Sie für minValue den Wert 20000 an.
 </dd>
 </dl>
 

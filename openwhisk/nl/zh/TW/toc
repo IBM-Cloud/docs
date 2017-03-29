@@ -15,9 +15,9 @@
     openwhisk_watson_speechtotext.md
     openwhisk_messagehub.md
     openwhisk_pushnotifications.md
-    openwhisk_watson_slack.md
-    openwhisk_watson_github.md
-    openwhisk_watson_websocket.md
+    openwhisk_slack.md
+    openwhisk_github.md
+    openwhisk_websocket.md
     openwhisk_monitoring.md
     openwhisk_mobile_sdk.md
     openwhisk_apigateway.md

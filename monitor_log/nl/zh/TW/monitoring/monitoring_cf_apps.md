@@ -23,4 +23,4 @@ lastupdated: "2017-02-01"
 若要監視 {{site.data.keyword.Bluemix_notm}} 應用程式，請使用下列其中一種方法：
 
 * {{site.data.keyword.Bluemix_notm}} 服務。Monitoring and Analytics 提供一種服務，可用來監視應用程式效能。如需相關資訊，請參閱 [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate)。
-* 協力廠商選項。例如，[New Relic ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://newrelic.com/){:new_window}。
+* 協力廠商選項。例如，[New Relic ![外部鏈結圖示](../../icons/launch-glyph.svg)](http://newrelic.com/){:new_window}。

@@ -19,16 +19,19 @@ lastupdated: "2016-05-09"
 
 <!--The whole topic is staging only -->
 
-Con {{site.data.keyword.Bluemix}}, puede crear apps, así como alojar sus apps existentes. Puede migrar sus apps a {{site.data.keyword.Bluemix_notm}} siempre que estén preparadas para la nube. {{site.data.keyword.Bluemix_notm}} proporciona distintos modos para ejecutar las apps, como por ejemplo Cloud Foundry, IBM Containers y Virtual Machines.
+Con {{site.data.keyword.Bluemix}},
+puede crear apps, así como alojar sus apps existentes. Puede migrar sus apps a {{site.data.keyword.Bluemix_notm}} siempre que estén preparadas para la nube. {{site.data.keyword.Bluemix_notm}} proporciona distintos modos para ejecutar las apps, como por ejemplo Cloud Foundry, IBM Containers y Virtual Machines.
 
 ##Haciendo que sus apps estén listas para la nube
 {: #cloud-readyapps}
- Una app lista para la nube sigue los principios de la plataforma de nube en su diseño y construcción. Una app lista para la nube puede utilizar las prestaciones proporcionadas por la plataforma de nube.
+
+Una app lista para la nube sigue los principios de la plataforma de nube en su diseño y construcción. Una app lista para la nube puede utilizar las prestaciones proporcionadas por la plataforma de nube.
 
 Si su app cumple todos los principios siguientes, será una app lista para la nube y se puede migrar a {{site.data.keyword.Bluemix_notm}}. Si su app infringe algún principio, por lo general podrá modificarla para que lo cumpla.
 
 * No codifique su app directamente en una topología específica.
-   En un entorno que no sea de nube, la app podría utilizar una topología de despliegue concreta. No obstante, la topología de app podría cambiar en apps de nube, porque las apps y servicios listos para la nube permite cambios de escalabilidad inmediata. Los cambios de escalabilidad incluyen escalado dinámico y cambio manual del tamaño del número de instancias de una app.
+
+  En un entorno que no sea de nube, la app podría utilizar una topología de despliegue concreta. No obstante, la topología de app podría cambiar en apps de nube, porque las apps y servicios listos para la nube permite cambios de escalabilidad inmediata. Los cambios de escalabilidad incluyen escalado dinámico y cambio manual del tamaño del número de instancias de una app.
 
   Construya su app de forma que sea lo más genérica e independiente posible de estado, para evitar que se vea afectada por cambios de escalabilidad.
 
@@ -64,8 +67,8 @@ Si su app cumple todos los principios siguientes, será una app lista para la nu
 
 * No se base en características específicas del sistema operativo.
 
-  Si ya ha utilizado características específicas del sistema operativo, puede solucionarlo mediante el uso de bibliotecas de compatibilidad, como Cygwin y Mono. Cygwin es una biblioteca de compatibilidad que proporciona un conjunto de herramientas Linux en un entorno Windows. Mono es una biblioteca de compatibilidad que proporciona capacidades de Windows .NET en Linux.
-
+  Si ya ha utilizado características específicas del sistema operativo, puede solucionarlo mediante el uso de bibliotecas de compatibilidad, como Cygwin y Mono. Cygwin es una biblioteca de compatibilidad que proporciona un conjunto de herramientas Linux en un entorno Windows. Mono es una biblioteca de compatibilidad que proporciona capacidades de Windows .NET en Linux. 
+  
   Evite las dependencias de un sistema operativo específico; en su lugar, utilice servicios proporcionados por la infraestructura middleware o proveedores de servicios.
 
 * No instale su app manualmente.
@@ -106,8 +109,7 @@ Puede gestionar su código en el cliente local y utilizar la interfaz de línea 
 Realice los pasos siguientes para migrar su app:
 
 <ol>
-<li>Instalar la interfaz de línea de mandatos de Cloud Foundry. Asegúrese de utilizar la versión
-más reciente de la interfaz de línea de mandatos de cf.
+<li>Instalar la interfaz de línea de mandatos de Cloud Foundry. Asegúrese de utilizar la versión más reciente de la interfaz de línea de mandatos de cf.
 <ol>
 <li>Descargue el programa de instalación para su sistema operativo.</li>
 <li>Siga el asistente de la herramienta para instalar la línea de mandatos.</li>

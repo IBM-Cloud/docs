@@ -17,14 +17,14 @@ lastupdated: "2016-10-13"
 
 <!-- audience blue staging only begin -->
 
-# 監視及記載專用及本端版本中的 Cloud Foundry 應用程式
+# 監視及記載專用和本端版本中的 Cloud Foundry 應用程式
 {: #dedicated_apps_ml_ov}
 
 
-在 {{site.data.keyword.Bluemix_dedicated_notm}} 及 {{site.data.keyword.Bluemix_local_notm:}} 中，Cloud Foundry 應用程式隨附內建的記載。您可以在 {{site.data.keyword.Bluemix_notm}} 主控台上檢閱從您的應用程式收集到的資料。
+在 {{site.data.keyword.Bluemix_dedicated_notm}} 及 {{site.data.keyword.Bluemix_local_notm}} 中，Cloud Foundry 應用程式隨附內建的記載。您可以在 {{site.data.keyword.Bluemix_notm}} 主控台上檢閱從您的應用程式收集到的資料。
 {:shortdesc}
 
-Cloud Foundry 應用程式會使用 Cloud Foundry 日誌聚集器，來監視並轉遞來自應用程式外部的日誌。您不需要在應用程式內安裝代理程式。
+Cloud Foundry 應用程式會使用 Cloud Foundry 日誌聚集器，從應用程式之外監視並轉遞日誌。您不需要在應用程式內安裝代理程式。
 
 ## 硬體需求
 
@@ -53,7 +53,7 @@ vCPU | 19 | 57 |
 若要檢視您的應用程式日誌，請遵循下列步驟。
 1. 選取執行中應用程式。
 2. 按一下**日誌**。在**日誌**視圖中，您可以檢視來自執行中應用程式的日誌。
-4. 按一下**進階視圖**按鈕。**進階視圖**會使用 Kibana 顯示更詳細的視圖。Kibana 是一種視覺化工具，其會使用日誌及時間戳記資料來建立自訂視覺化。如需使用進階視圖的相關資訊，請參閱 [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html) 文件。
+4. 按一下**進階視圖**按鈕。**進階視圖**會使用 Kibana 顯示更詳細的日誌視圖。Kibana 是一種視覺化工具，其會使用日誌及時間戳記資料來建立自訂視覺化。如需使用進階視圖的相關資訊，請參閱 [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html) 文件。
 
 接下來，您可以自訂 Kibana 儀表板。如需相關資訊，請參閱[自訂 Kibana 儀表板中的日誌顯示方式](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_dash_logs_custom)。
 

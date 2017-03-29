@@ -12,7 +12,7 @@
 		"img": "homepage/images/admin.svg",
 		"href": "admin/adminpublic.html"
 	}, {
-		"title": "CLI 및 Dev 도구",
+		"title": "CLI 및 개발 도구",
 		"description": "액세스 도구(예: 통합 명령행 인터페이스 및 CLI 플러그인)입니다.",
 		"img": "homepage/images/cli.svg",
 		"href": "cli/index.html"

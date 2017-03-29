@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-21"
+lastupdated: "2017-02-21"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2016-02-21"
 
 {{site.data.keyword.openwhisk_short}} supporta un'API aperta, in cui ogni utente può esporre un servizio di produzione eventi in forma di **feed** in un **pacchetto**.   Questa sezione descrive le opzioni di architettura e implementazione per fornire i propri feed.
 
-Questo materiale è destinato agli utenti esperti di {{site.data.keyword.openwhisk_short}} che intendono pubblicare i propri feed.  La maggior parte degli utenti {{site.data.keyword.openwhisk_short}} può tranquillamente saltare questa sezione. 
+Questo materiale è destinato agli utenti esperti di {{site.data.keyword.openwhisk_short}} che intendono pubblicare i propri feed.  La maggior parte degli utenti {{site.data.keyword.openwhisk_short}} può tranquillamente saltare questa sezione.
 
 ## Architettura dei feed
 
@@ -94,7 +94,7 @@ Il modulo con la richiesta POST verrà interpretato come documento JSON che defi
 
 ## Implementazione di feed con il polling
 
-È possibile configurare un'*azione* {{site.data.keyword.openwhisk_short}} per eseguire il polling di un'origine di feed interamente all'interno di OpenWhisk, senza la necessità di impostare connessioni permanenti o servizi esterni. 
+È possibile configurare un'*azione* {{site.data.keyword.openwhisk_short}} per eseguire il polling di un'origine di feed interamente all'interno di OpenWhisk, senza la necessità di impostare connessioni permanenti o servizi esterni.
 
 Per i feed in cui non è disponibile un webhook, ma non sono necessari tempi di risposta a bassa latenza o di grandi volumi, il polling risulta essere un'opzione interessante.
 
@@ -110,7 +110,7 @@ Questa procedura implementa un trigger basato sul polling utilizzando esclusivam
 
 Le due precedenti scelte architetturali sono semplici e facili da implementare. Tuttavia, se vuoi ottenere un feed ad alte prestazioni, non esiste alternativa alle connessioni permanenti e polling lungo o tecniche simili.
 
-Poiché le azioni {{site.data.keyword.openwhisk_short}} devono essere di breve esecuzione, un'azione non può mantenere una connessione permanente a una terza parte.  Dobbiamo invece
+Poiché le azioni {{site.data.keyword.openwhisk_short}} devono essere di breve esecuzione, un'azione non può mantenere una connessione permanente a una terza parte. Dobbiamo invece
 impostare un servizio separato (esterno a OpenWhisk) che sia sempre in esecuzione.   Questi sono chiamati *servizi provider*.  Un servizio provider può mantenere connessioni a origini eventi di terze parti che supportano il polling lungo o altre notifiche basate sulla connessione.
 
 Il servizio provider deve fornire un'API REST che consenta all'*azione di feed* {{site.data.keyword.openwhisk_short}} di controllare il feed.   Il servizio provider funge da proxy tra il provider di eventi e {{site.data.keyword.openwhisk_short}}: quando riceve gli eventi dalla terza parte, li invia a {{site.data.keyword.openwhisk_short}} attivando un trigger.

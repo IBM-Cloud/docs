@@ -793,7 +793,7 @@ cf 명령행 인터페이스를 사용하여 애플리케이션을 {{site.data.k
 ```
 cf api https://api.eu-gb.bluemix.net
 ```
-Eclipse 도구를 사용하여 애플리케이션을 {{site.data.keyword.Bluemix_notm}}로 푸시한 경우 먼저 {{site.data.keyword.Bluemix_notm}} 서버를 작성한 다음 조직이 작성된 {{site.data.keyword.Bluemix_notm}} 지역의 API 엔드포인트를 지정하십시오. Eclipse 도구에 대한 자세한 정보는 [IBM Eclipse Tools for Bluemix를 사용하여 앱 배치](/docs/manageapps/eclipsetools/eclipsetools.html)를 참조하십시오.  
+Eclipse 도구를 사용하여 애플리케이션을 {{site.data.keyword.Bluemix_notm}}로 푸시한 경우 먼저 {{site.data.keyword.Bluemix_notm}} 서버를 작성한 다음 조직이 작성된 {{site.data.keyword.Bluemix_notm}} 지역의 API 엔드포인트를 지정하십시오. Eclipse 도구에 대한 자세한 정보는 [IBM Eclipse Tools for Bluemix로 앱 배치](/docs/manageapps/eclipsetools/eclipsetools.html)를 참조하십시오.  
   
   
 
@@ -1210,7 +1210,7 @@ Eclipse Orion {{site.data.keyword.webide}}에 실행 표시줄이 표시되지 �
    * 수정: 프로젝트의 앱 폴더에 `package.json` 파일을 작성하십시오. 
    
 
-## GitHub 후크가 작동하지 않음
+## GitHub 훅이 작동하지 않음
 {: #githubhookisntworking}
 
 커미트를 푸시할 때 작업-항목 링크를 작성하도록 GitHub 프로젝트를 구성한 경우 링크가 예상대로 작동하지 않으면 다음 단계를 수행하여 문제점을 찾으십시오. 
@@ -1219,10 +1219,10 @@ Eclipse Orion {{site.data.keyword.webide}}에 실행 표시줄이 표시되지 �
    ![GitHub 설정 링크](images/githubSettings1_small.png)
 
 2. **웹훅 & 서비스**를 클릭하십시오.
-   ![GitHub 웹후크 및 서비스 링크](images/githubHooks1_small.png)
+   ![GitHub 웹훅 및 서비스 링크](images/githubHooks1_small.png)
 
 3. 메시지를 보려면 {{site.data.keyword.jazzhub}} 상태 아이콘 위로 마우스를 이동하십시오.
-   ![서비스 후크에 대한 오류 메시지](images/troubleshoothook1_small.png)
+   ![서비스 훅에 대한 오류 메시지](images/troubleshoothook1_small.png)
 
 4. GitHub 메시지에 따라 오류를 해결하십시오. 
 

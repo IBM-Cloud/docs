@@ -17,7 +17,7 @@ lastupdated: "2017-02-06"
 {: #logging_kibana_instance_id}
 <!-- Provide an appropriate ID above -->
 
-Sie können {{site.data.keyword.Bluemix_notm}}-Instanzprotokolle nach Instanz-ID (instance_id) Ihrer App im Kibana-Dashboard anzeigen und filtern. Sie können über die Registerkarte **Protokolle** für Ihre Cloud Foundry-App auf das Kibana-Dashboard zugreifen.
+Sie können {{site.data.keyword.Bluemix_notm}}-Instanzprotokolle nach Instanz-ID (instance_id) Ihrer App im Kibana-Dashboard anzeigen und filtern. Sie können über die Registerkarte **Protokolle** für Ihre Cloud Foundry-App auf das Kibana-Dashboard zugreifen. 
 {:shortdesc}
 
 <!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->

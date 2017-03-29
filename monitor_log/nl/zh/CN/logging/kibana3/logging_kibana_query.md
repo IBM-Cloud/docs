@@ -6,8 +6,6 @@ lastupdated: "2017-02-02"
 
 ---
 
-
-<!-- Common attributes used in the template are defined as follows: -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -15,16 +13,11 @@ lastupdated: "2017-02-02"
 
 
 # 在 Kibana 中通过查询过滤 Cloud Foundry 应用程序日志
-<!-- for example, Uploading your data -->
 {: #logging_kibana_query}
-<!-- Provide an appropriate ID above -->
-
-<!-- The short description section should include a sentence describing why this task is needed. For search engine optimization, include the service long name and "Bluemix". For example: -->
 
 使用 Kibana 可创建查询以在日志中搜索关键项并按这些项进行过滤。通过 Kibana，可以在仪表板上直观地比较查询。可以从 Cloud Foundry 应用程序的**日志**选项卡访问 Kibana 仪表板。
 {:shortdesc}
 
-<!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->
 要在 Kibana 仪表板上创建针对 Cloud Foundry 应用程序日志的查询，请完成以下任务：
 
 1. 访问 Cloud Foundry 应用程序的**日志**选项卡。 

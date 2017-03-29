@@ -83,7 +83,7 @@ lastupdated: "2017-01-11"
 ##成本
 {: #what_it_costs}
 
-費用取決於特定服務、運行環境、容器、虛擬伺服器或支援選項所使用的資源。資源可以是 API 呼叫數目、實例數、記憶體、儲存空間等。{{site.data.keyword.Bluemix_notm}} 也提供詳細成本預估器，以及計算到分的成本計算機來協助您規劃費用。使用*用量儀表板* 視圖建置應用程式之後，即可檢查實際成本。如需費用的其他詳細資訊，請參閱[收費方式](index.html#charges)。
+費用取決於特定服務、運行環境、容器或支援選項所使用的資源。資源可以是 API 呼叫數目、實例數、記憶體、儲存空間等。{{site.data.keyword.Bluemix_notm}} 也提供詳細成本預估器，以及計算到分的成本計算機來協助您規劃費用。使用*用量儀表板* 視圖建置應用程式之後，即可檢查實際成本。如需費用的其他詳細資訊，請參閱[收費方式](index.html#charges)。
  
 
 ##促銷代碼
@@ -285,20 +285,6 @@ lastupdated: "2017-01-11"
 |5200 |	此項目數落在層級 5，因此總價為美金 $5000。 |	美金 $5000|
 {: caption="表 6. 使用區塊層級定價模型的費用計算" caption-side="top"}
 
-### 虛擬伺服器的免費額度
-{: #vms}
-
-您可以透過免費測試版特性的方式，使用 IBM 公用雲端中的 {{site.data.keyword.virtualmachineslong}}。對於您可以建立的虛擬伺服器映像檔數目、指派的 IP 位址數目以及可使用的記憶體數量，提供免費額度。
-
-下列項目是 {{site.data.keyword.virtualmachineslong}} 測試版的免費額度：
-
-* 2 個實例
-* 2 個虛擬 CPU
-* 8 GB 記憶體
-* 200 GB 區塊儲存空間
-* 5 個公用 IP 位址
-
-
 ##成本預估方式
 {: #cost}
 
@@ -347,7 +333,7 @@ lastupdated: "2017-01-11"
 |Data Cache - Starter |	1 GB 的快取空間及一個抄本 |	$55.00 USD/實例 |
 |Data Cache - Standard |	5 GB 的快取空間及一個抄本  |	$155.00 USD/實例 |
 |Data Cache - Premium |	25 GB 的快取空間及一個抄本 |	$505.00 USD/實例|
-|IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2 GB 的可用資料儲存體
+|IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2 GB 的可用資料儲存空間
 <br/>每個月有 50,000 次輕量型 API 呼叫免費<br/>每個月有 10,000 次重量型 API 呼叫免費 | $1.00 USD/GB<br/>$0.03 USD/1000 次輕量型 API 呼叫<br/>$0.15 USD/1000 次重量型 API 呼叫 |
 {: caption="表 7. 定價單" caption-side="top"}
 

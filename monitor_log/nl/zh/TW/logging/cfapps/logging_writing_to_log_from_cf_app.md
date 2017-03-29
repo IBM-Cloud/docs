@@ -24,7 +24,7 @@ lastupdated: "2017-02-06"
 * STDOUT（標準輸出）提供一般資訊。  
 * STDERR（標準錯誤）提供包括錯誤訊息和其他診斷警告的資訊。 
 
-日誌聚集器會自動取得標準輸出和標準錯誤資料。日誌聚集器是一種元件，可轉遞 Cloud Foundry 中的日誌。 
+日誌聚集器會自動挑選標準輸出和標準錯誤資料。日誌聚集器是一種元件，可轉遞 Cloud Foundry 中的日誌。 
 
 例如， 
 
@@ -52,5 +52,5 @@ lastupdated: "2017-02-06"
 | Liberty | system.out | system.err |
 | Node.js | console.log、console.info | console.error、console.warn |
 | Ruby | stdout| stderr |
-{: caption="表 1. 部分應用程式運行環境日誌及日誌聚集器自動取得的日誌之間的對映" caption-side="top"}
+{: caption="表 1. 部分應用程式運行環境日誌及日誌聚集器自動挑選的日誌之間的對映" caption-side="top"}
 

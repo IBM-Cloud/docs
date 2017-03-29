@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-21"
+lastupdated: "2017-03-16"
 
 ---
 
@@ -12,17 +12,20 @@ lastupdated: "2016-02-21"
 {:screen: .screen}
 {:pre: .pre}
 
-# Expondo suas ações por meio do API Gateway (Experimental)
+# API Gateway (Experimental)
 {: #openwhisk_apigateway}
 
-No {{site.data.keyword.openwhisk}} é possível chamar suas ações usando a [API de REST](./openwhisk_reference.html#openwhisk_ref_restapi) com uma solicitação de HTTP somente por meio de um método **POST**.
-Isso requer que o cliente HTTP faça a solicitação usando a chave API de autorização do OpenWhisk que é uma chave
-mestra que, além de permitir a chamada de uma ação, também permite a exclusão e a criação de mais ações.
-{: shortdesc}
+[Ações da web](openwhisk_webactions.html) são liberadas para disponibilidade geral.
 
-Esse recurso experimental permitirá que você chame uma ação com métodos de HTTP, além de POST, e sem a chave API de autorização da ação.
+As ações da web permitem que você chame uma ação com métodos de HTTP, além de POST, e sem a chave API de autorização da ação.
 
-Use a CLI para expor suas ações do OpenWhisk por meio do API Gateway do OpenWhisk. 
+Como resultado do feedback do usuário, as Ações da web são o modelo de programação escolhido para construir ações do OpenWhisk capazes de manipular eventos HTTP.
+
+A maioria da funcionalidade de API Gateway foi mesclada em Ações da web. As Ações da web permitem manipular qualquer solicitação de HTTP e retornar respostas de HTTP com controle total da sua Ação da web.
+
+Uma integração revisada do OpenWhisk API Gateway estará disponível em breve. Ela será configurada para transmitir por proxy as Ações da web, fornecendo a elas recursos de API Gateway, como limitação de taxa, validação de token oauth, chaves API e muito mais.
+
+**Nota:** as APIs criadas usando o `wsk api-experimental` continuarão funcionando, no entanto, será necessário iniciar a migração das APIs para as ações da web.
 
 ## Configuração da CLI do OpenWhisk
 {: #openwhisk_apigateway_cli}

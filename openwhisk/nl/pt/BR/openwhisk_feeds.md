@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-21"
+lastupdated: "2017-02-21"
 
 ---
 
@@ -15,10 +15,10 @@ lastupdated: "2016-02-21"
 # Implementando feeds
 {: #openwhisk_feeds}
 
-O {{site.data.keyword.openwhisk_short}} suporta uma API aberta, em que qualquer usuário pode expor um serviço de produtor de evento como um **feed** em um **pacote**. Essa seção descreve as
+O {{site.data.keyword.openwhisk_short}} suporta uma API aberta, em que qualquer usuário pode expor um serviço de produtor de evento como um **feed** em um **pacote**.   Essa seção descreve as
 opções de arquitetura e implementação para fornecer o seu próprio feed.
 
-Esse material é destinado a usuários avançados do {{site.data.keyword.openwhisk_short}} que pretendem publicar os seus próprios feeds. A maioria dos usuários do {{site.data.keyword.openwhisk_short}} pode seguramente ignorar essa seção.
+Esse material é destinado a usuários avançados do {{site.data.keyword.openwhisk_short}} que pretendem publicar os seus próprios feeds.  A maioria dos usuários do {{site.data.keyword.openwhisk_short}} pode seguramente ignorar essa seção.
 
 ## Arquitetura de feed
 
@@ -122,7 +122,7 @@ Como as ações do {{site.data.keyword.openwhisk_short}} devem ser de execução
 levantar um serviço separado (fora do OpenWhisk) que seja executado o tempo todo.   Nós os chamamos de *serviços do provedor*.  Um serviço do provedor pode manter conexões com origens de eventos de
 terceiro que suportam notificações de pesquisa longa ou outras baseadas em conexão.
 
-O serviço do provedor deve fornecer uma API de REST que permita que a *ação de feed* do {{site.data.keyword.openwhisk_short}} controle o feed. O serviço do provedor age como um proxy entre o provedor de evento e o {{site.data.keyword.openwhisk_short}} -- quando recebe eventos do terceiro, ele os envia para o {{site.data.keyword.openwhisk_short}} disparando um acionador.
+O serviço do provedor deve fornecer uma API de REST que permita que a *ação de feed* do {{site.data.keyword.openwhisk_short}} controle o feed.   O serviço do provedor age como um proxy entre o provedor de evento e o {{site.data.keyword.openwhisk_short}} -- quando recebe eventos do terceiro, ele os envia para o {{site.data.keyword.openwhisk_short}} disparando um acionador.
 
 O feed de *mudanças* do Cloudant é o exemplo canônico -- ele levanta um serviço `cloudanttrigger` que media entre as notificações do Cloudant em uma conexão persistente e os acionadores do {{site.data.keyword.openwhisk_short}}.
 <!-- TODO: add a reference to the open source implementation -->

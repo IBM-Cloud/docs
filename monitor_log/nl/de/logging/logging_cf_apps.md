@@ -16,7 +16,7 @@ lastupdated: "2017-02-06"
 # Protokollierung für Cloud Foundry-Apps in Bluemix
 {: #logging_bluemix_cf_apps}
 
-In {{site.data.keyword.Bluemix}} können Sie Protokolle über das {{site.data.keyword.Bluemix}}-Dashboard, das Kibana-Dashboard und die Befehlszeilenschnittstelle (CLI) anzeigen, filtern und analysieren. Darüber hinaus können Sie Protokolleinträge durch Streaming an ein externes Protokoll-Management-Tool übertragen.
+In {{site.data.keyword.Bluemix}} können Sie Protokolle über das {{site.data.keyword.Bluemix}}-Dashboard, das Kibana-Dashboard und die Befehlszeilenschnittstelle (CLI) anzeigen, filtern und analysieren. Darüber hinaus können Sie Protokolleinträge durch Streaming an ein externes Protokoll-Management-Tool übertragen. 
 {:shortdesc}
 
 Wenn Sie Ihre Apps in einer als Service bereitgestellten Cloudplattform (Platform-as-a-service, PaaS) wie Cloud Foundry in {{site.data.keyword.Bluemix_notm}} ausführen, können Sie nicht über SSH oder FTP auf die Protokolle in der Infrastruktur zugreifen, in der Ihre Apps ausgeführt werden. Die Plattform wird durch den Cloud-Provider gesteuert. Cloud Foundry-Apps, die in {{site.data.keyword.Bluemix_notm}} ausgeführt werden, verwenden die Komponente "Loggrerator", um Protokolleinträge aus der Cloud Foundry-Infrastruktur heraus weiterzuleiten. Loggregator erfasst automatisch STDOUT- und STDERR-Daten. Sie können diese Protokolle über das {{site.data.keyword.Bluemix}}-Dashboard, über Kibana und über die Befehlszeilenschnittstelle visualisieren und analysieren.

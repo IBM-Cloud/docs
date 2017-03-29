@@ -1,81 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   version="1.1"
-   id="Layer_1"
-   x="0px"
-   y="0px"
-   width="355.4px"
-   height="48px"
-   viewBox="0 0 355.4 48"
-   enable-background="new 0 0 355.4 48"
-   xml:space="preserve"
-   inkscape:version="0.48.0 r9654"
-   sodipodi:docname="btn_bx_commandline.svg"><metadata
-   id="metadata21"><rdf:RDF><cc:Work
-       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
-   id="defs19" /><sodipodi:namedview
-   pagecolor="#ffffff"
-   bordercolor="#666666"
-   borderopacity="1"
-   objecttolerance="10"
-   gridtolerance="10"
-   guidetolerance="10"
-   inkscape:pageopacity="0"
-   inkscape:pageshadow="2"
-   inkscape:window-width="1155"
-   inkscape:window-height="480"
-   id="namedview17"
-   showgrid="false"
-   inkscape:zoom="1.4350028"
-   inkscape:cx="177.7"
-   inkscape:cy="24"
-   inkscape:window-x="0"
-   inkscape:window-y="0"
-   inkscape:window-maximized="0"
-   inkscape:current-layer="Layer_1" />
-<rect
-   x="-0.12862745"
-   y="0.54352939"
-   width="355.39999"
-   height="48"
-   id="rect3"
-   style="fill:#5596e6" />
-<text
-   enable-background="new    "
-   id="text5"
-   x="28.158472"
-   y="23.638229"><tspan
-     x="28.158472"
-     y="23.638229"
-     font-size="14"
-     id="tspan7"
-     style="font-size:14px;fill:#ffffff;font-family:ArialMT">Scaricamento dell'interfaccia riga</tspan><tspan
-     x="28.158472"
-     y="40.438229"
-     font-size="14"
-     id="tspan9"
-     style="font-size:14px;fill:#ffffff;font-family:ArialMT">di comando (CLI) Bluemix</tspan></text>
-
-<g
-   id="g11"
-   transform="translate(-149.12863,12.543529)">
-	<polygon
-   points="483.2,6.2 478.2,11.2 478.2,-2.1 476.6,-2.1 476.6,11.2 471.6,6.2 470.4,7.3 477.4,14.3 484.4,7.3 "
-   id="polygon13"
-   style="fill:#ffffff" />
-	<polygon
-   points="487.8,17.9 467,17.9 467,11.5 465.4,11.5 465.4,17.9 465.4,21.1 467,21.1 487.8,21.1 489.4,21.1 489.4,17.9 489.4,11.5 487.8,11.5 "
-   id="polygon15"
-   style="fill:#ffffff" />
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="355.4px" height="48px" viewBox="0 0 355.4 48" enable-background="new 0 0 355.4 48" xml:space="preserve">
+<rect x="149" y="-12" fill="#5596E6" width="355.4" height="48"/>
+<text transform="matrix(1 0 0 1 177.2871 11.0947)" enable-background="new    "><tspan x="0" y="0" fill="#FFFFFF" font-family="'ArialMT'" font-size="14">Scaricamento dell&apos;interfaccia riga</tspan><tspan x="0" y="16.8" fill="#FFFFFF" font-family="'ArialMT'" font-size="14">di comando (CLI) Bluemix</tspan></text>
+<g>
+	<polygon fill="#FFFFFF" points="484.4,7.3 483.2,6.2 478.2,11.2 478.2,-2.1 476.6,-2.1 476.6,11.2 471.6,6.2 470.4,7.3 477.4,14.3 
+			"/>
+	<polygon fill="#FFFFFF" points="487.8,11.5 487.8,17.9 467,17.9 467,11.5 465.4,11.5 465.4,17.9 465.4,21.1 467,21.1 487.8,21.1 
+		489.4,21.1 489.4,17.9 489.4,11.5 	"/>
 </g>
 </svg>

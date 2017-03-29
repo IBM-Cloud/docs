@@ -51,7 +51,7 @@ Para ver más detalles sobre el mandato **cf push**, consulte [cf push](/docs/cl
 ### Migración de una app existente a Diego
 {: #migrateapp}
 
-Diego es la arquitectura predeterminada de Cloud Foundry para {{site.data.keyword.Bluemix_notm}} y se retirará el soporte para DEA, de modo que debe migrar todas sus aplicaciones existentes actualizando cada app. Comience la migración de sus apps a Diego actualizando la aplicación con el distintivo Diego. La aplicación intentará inmediatamente ejecutarse en Diego y dejará de ejecutarse en los DEA. 
+Diego es la arquitectura predeterminada de Cloud Foundry para {{site.data.keyword.Bluemix_notm}} y se retirará el soporte para DEA, de modo que debe migrar todas sus aplicaciones existentes actualizando cada app. Comience la migración de sus apps a Diego actualizando la aplicación con el distintivo Diego. La aplicación intentará inmediatamente ejecutarse en Diego y dejará de ejecutarse en los DEA.
 
 A medida que la aplicación se actualiza desde la arquitectura DEA a Diego, es posible que se produzca un breve intervalo de inactividad, o quizás un intervalo de inactividad prolongado, si la aplicación no es compatible con Diego. Para limitar este intervalo de inactividad, realice un [despliegue de tipo blue-green](/docs/manageapps/updapps.html#blue_green) desplegando una copia de la aplicación en Diego y luego intercambiando rutas y escalando hacia abajo la aplicación DEA.
 
@@ -67,7 +67,7 @@ Siga estos pasos para migrar su app a Diego:
 Después de actualizar la app, compruebe que la app se ha iniciado. Si la app migrada no se puede iniciar, permanecerá fuera de línea hasta que identifica y solucione el problema; luego reinicie la app.
 
 IBM le avisará del periodo de migración obligatoria cuando se retire el soporte de la arquitectura DEA; si para entonces aún no ha migrado sus apps, lo hará el equipo de operaciones.
-  
+
 Para validar el programa de fondo en el que ejecuta la aplicación, utilice el siguiente mandato:
 
   ```
@@ -243,7 +243,7 @@ cf push -f appManifest.yml
 |**env**	|Las variables de entorno personalizadas de la app.|`env: DEV_ENV: production`|
 {: caption="Table 1. Supported options in the manifest YAML file" caption-side="top"}
 
-### Un ejemplo de archivo `manifest.yml`
+### Un archivo de ejemplo manifest.yml
 
 En el ejemplo siguiente se muestra un archivo de manifiesto para una app Node.js que utiliza el paquete de compilación Node.js integrado de la comunidad en {{site.data.keyword.Bluemix_notm}}.
 
@@ -424,7 +424,7 @@ Las variables definidas por un paquete de compilación varían según cada paque
 	  <dt><strong>WLP_OUTPUT_DIR</strong></dt>
 	  <dd>La ubicación de las salidas que se generen como archivos de registro y directorios de trabajo de una instancia de servidor de un perfil de Liberty en ejecución.</dd>
 	  </dl>
-</li>   
+</li>
 <li>Las variables siguientes están definidas por el paquete de compilación de Node.js:
 	<dl>
 	<dt><strong>BUILD_DIR</strong></dt>
@@ -527,7 +527,7 @@ tmp/
 ```
 
 # Enlaces relacionados
-{: #rellinks}
+{: #rellinks notoc}
 
 ## Enlaces relacionados
 {: #general}

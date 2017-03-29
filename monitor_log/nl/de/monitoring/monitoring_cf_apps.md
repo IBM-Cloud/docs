@@ -23,4 +23,4 @@ Wenn Sie die Cloud Foundry-Infrastruktur verwenden, um Ihre Apps in {{site.data.
 Wenden Sie eine der folgenden Methoden an, um {{site.data.keyword.Bluemix_notm}}-Apps zu überwachen:
 
 * {{site.data.keyword.Bluemix_notm}}-Services. Monitoring and Analytics bietet einen Service, den Sie zur Überwachung Ihrer Anwendungsleistung verwenden können. Weitere Informationen finden Sie unter [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate).
-* Optionen von Drittanbietern. Beispiel: [New Relic ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://newrelic.com/){:new_window}.
+* Optionen von Drittanbietern. Beispiel: [New Relic ![Symbol für externen Link](../../icons/launch-glyph.svg)](http://newrelic.com/){:new_window}.

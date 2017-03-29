@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-27"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2016-02-27"
 {:screen: .screen}
 {:pre: .pre}
 
-# {{site.data.keyword.openwhisk_short}} CLI
+# CLI do {{site.data.keyword.openwhisk_short}}
 
 O {{site.data.keyword.openwhisk_short}} oferece uma interface da linha de comandos poderosa que permite o gerenciamento completo de todos os aspectos do sistema.
 
@@ -40,7 +40,9 @@ Execute o comando a seguir para configurar a Chave de autorização:
 ```
 wsk property set --auth <authorization_key>
 ```
-{: pre} 
+{: pre}
+
+**Dica:** a CLI do OpenWhisk armazena as propriedades configuradas em `~/.wskprops`, por padrão. O local desse arquivo pode ser alterado configurando a variável de ambiente `WSK_CONFIG_FILE`. 
 
 Para verificar a configuração da CLI, tente [criar e executar uma ação](./index.html#openwhisk_start_hello_world).
 
@@ -55,5 +57,5 @@ Após ter configurado seu ambiente, será possível iniciar o uso da CLI do {{si
 
 ## Configure a CLI para usar um proxy HTTPS
 
-A CLI pode ser configurada para usar um proxy HTTPS. Para configurar um proxy HTTPS, uma variável de ambiente chamada `HTTPS_PROXY` deve ser criada. A variável deve ser configurada para o endereço do proxy HTTPS e a sua porta usando o formato a seguir:
+A CLI pode ser configurada para usar um proxy HTTPS. Para configurar um proxy HTTPS, uma variável de ambiente chamada `HTTPS_PROXY` deve ser criada.  A variável deve ser configurada para o endereço do proxy HTTPS e a sua porta usando o formato a seguir:
 `{PROXY IP}:{PROXY PORT}`.

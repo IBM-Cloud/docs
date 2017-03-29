@@ -12,14 +12,14 @@ lastupdated: "2016-08-25"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#앱 업데이트
+# 앱 업데이트
 {: #updatingapps}
 
 
 cf push 명령 또는 {{site.data.keyword.Bluemix}} DevOps Services를 사용하여 {{site.data.keyword.Bluemix_notm}}에서 애플리케이션을 업데이트할 수 있습니다. 대부분의 경우 심지어 Node.js와 같은 기본 제공 빌드팩의 경우에도 -c 매개변수를 제공하여 애플리케이션 시작에 사용할 명령을 지정해야 합니다.
 {:shortdesc}
 
-##사용자 정의 도메인 작성 및 사용
+## 사용자 정의 도메인 작성 및 사용
 {: #domain}
 
 CF 앱 및 컨테이너 그룹의 경우, 애플리케이션의 URL에 기본 {{site.data.keyword.Bluemix_notm}} 시스템 도메인(mybluemix.net) 대신 사용자 정의 도메인을 사용할 수 있습니다. 
@@ -125,7 +125,7 @@ cf delete-route domain -n hostname -f
 
 {{site.data.keyword.Bluemix_notm}}에 이미 배치된 애플리케이션을 새 버전으로 업데이트하려는 경우 다음 두 가지 접근 방법으로 Blue-Green 배치를 보장할 수 있습니다.
 
-###예: cf rename 명령 사용
+### 예: cf rename 명령 사용
 
 이 예에서 애플리케이션의 이름은 Blue입니다. 이 예는 애플리케이션에 대한 트래픽을 중단하지 않고 **cf rename** 명령을 사용하여 *Blue*의 버전을 업데이트하는 방법을 보여줍니다. 업데이트된 버전이 적절히 갖춰져 있으면 선택적으로 *Blue*의 이전 버전을 삭제할 수 있습니다.
 
@@ -191,7 +191,7 @@ cf push Blue
 
   **결과:** *Blue* 앱이 URL `Blue.mybluemix.net`에 응답합니다.
 
-###예: cf map-route 명령 사용
+### 예: cf map-route 명령 사용
 
 이 예에서 *Blue*는 이전에 배치한 애플리케이션이고, *Green*은 업데이트된 버전입니다. 이 예는 애플리케이션에 대한 트래픽을 중단하지 않고 **cf map-route** 명령을 사용하여 *Blue*의 버전을 업데이트하는 방법을 보여줍니다. 업데이트된 버전이 적절히 갖춰져 있으면 선택적으로 *Blue*의 이전 버전을 삭제할 수 있습니다.
 
@@ -290,7 +290,7 @@ cf unmap-route Green mybluemix.net -n Green
 
 
 # 관련 링크
-{: #rellinks}
+{: #rellinks notoc}
 
 ## 관련 링크
 {: #general}

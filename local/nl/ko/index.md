@@ -34,7 +34,6 @@ IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 �
 |포함 | [{{site.data.keyword.Bluemix_notm}} 런타임](/docs/cfapps/runtimes.html) | 시스템 및 운영 체제를 설정하고 관리할 필요 없이 신속하게 앱을 시작하고 실행하려면 런타임을 사용하십시오. 모든 {{site.data.keyword.Bluemix_notm}} 런타임은 {{site.data.keyword.Bluemix_notm}} 로컬 인스턴스에서 사용자에게 사용 가능합니다.|
 |포함 | [{{site.data.keyword.autoscaling}}](/docs/services/Auto-Scaling/index.html)| 정책에 따라 애플리케이션의 컴퓨팅 용량을 동적으로 늘리거나 줄입니다. 이 서비스를 사용하면 {{site.data.keyword.Bluemix}} 로컬 환경에서 무제한 사용이 가능합니다.|
 |선택사항 | [{{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}}는 {{site.data.keyword.APIM}}와 IBM StrongLoop를 API 및 마이크로서비스를 작성, 실행, 관리 및 적용하기 위한 포괄적 솔루션을 제공하는 단일 오퍼링으로 통합합니다. |
-|선택사항 | [{{site.data.keyword.cloudant}}](/docs/services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}}에서는 항상 작동 상태인 완전히 관리되는 NoSQL JSON 데이터 계층에 대한 액세스를 제공합니다. 이 서비스는 CouchDB와 호환 가능하며, 모바일 및 웹 애플리케이션 모델을 위한 사용이 간편한 HTTP 인터페이스를 통해 액세스할 수 있습니다. 자세한 정보는 전체 [문서 ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://docs.cloudant.com/BluemixLocal.html){: new_window} 및 로컬 환경에 대한 [하드웨어 요구사항 ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://docs.cloudant.com/BluemixLocalHardware.html){: new_window}을 참조하십시오.  |
 |선택사항 | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | {{site.data.keyword.Bluemix_notm}} 로컬에서 Docker 컨테이너를 실행합니다. 컨테이너는 앱에서 실행해야 하는 모든 요소를 포함하는 가상 소프트웨어 오브젝트입니다. 컨테이너는 리소스 격리와 할당의 이점이 있으며 가상 머신 등보다 휴대가 간편하고 효율적입니다.하드웨어 요구사항에 대한 정보는 [{{site.data.keyword.Bluemix_notm}} 데디케이티드 및 Bluemix 로컬의 IBM {{site.data.keyword.containershort}}](/docs/containers/container_dl.html)를 참조하십시오. |
 |선택사항 | [{{site.data.keyword.datacshort}}](/docs/services/DataCache/index.html#data_cache) | 이 서비스는 앱에 대한 분산 캐싱 시나리오를 지원하는 인메모리 데이터 그리드를 제공합니다. 50GB의 인메모리 캐시가 포함됩니다. |
 | 선택사항(베타) | [Logging](/docs/monitoringandlogging/cfapps_ml_logs_dedicated_ov.html#container_ml_logs_dedicated_ov) | Kibana의 검색 가능한 로그 및 대시보드와 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스의 Cloud Foundry 앱에 대한 로그를 제공합니다. |
@@ -53,7 +52,6 @@ IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 �
 |{{site.data.keyword.Bluemix_notm}} 로컬 {{site.data.keyword.apiconnect_short}} Professional 10만 API 호출 증가| 매월 10만 API 호출의 추가 용량을 제공하는 {{site.data.keyword.apiconnect_short}} Professional 환경의 확장입니다.  |
 |{{site.data.keyword.Bluemix_notm}} 로컬 {{site.data.keyword.apiconnect_short}} Enterprise 2,500만 API 호출 | 엔터프라이즈 전체 API 프로젝트 방향으로 대상 지정된 월간 2,500만 API 호출의 용량을 지닌 {{site.data.keyword.apiconnect_short}}의 개인용 버전 실행을 허용하는 환경입니다.  |
 |{{site.data.keyword.Bluemix_notm}} 로컬 {{site.data.keyword.apiconnect_short}} Enterprise 10만 API 호출 증가 | 매월 10만 API 호출의 추가 용량을 제공하는 {{site.data.keyword.apiconnect_short}} Enterprise 환경의 확장입니다.  |
-|{{site.data.keyword.Bluemix_notm}} 로컬 {{site.data.keyword.cloudant}} 클러스터 | {{site.data.keyword.cloudant}} 서비스의 3노드 클러스터 배치를 허용하는 환경입니다. 노드의 데이터 용량은 로컬 환경에 대해 사용자가 제공한 인프라스트럭처로 판별됩니다. |
 |{{site.data.keyword.Bluemix_notm}} 데이터 & 세션 캐시 50GB 용량 증가 | 최대 50GB 누적 용량까지 데이터 캐시 및 세션 캐시 인스턴스의 배치 및 실행을 허용하는 환경입니다. |
 |{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} 로컬 증분 증가 | 0.5TB 데이터 교환과 100,000개의 동시 연결된 디바이스 또는 애플리케이션의 용량을 지닌 로컬 환경 내에서 {{site.data.keyword.iot_short}}의 개인용 버전 실행을 허용하는 {{site.data.keyword.iot_short}} 로컬 기본 서비스 오퍼링에 대한 추가 환경입니다. |
 |{{site.data.keyword.IBM_notm}} {{site.data.keyword.mobilepush}} 로컬 추가 기능 인스턴스 | 초당 300개의 추가 요청을 승인할 수 있는 능력이 있는 {{site.data.keyword.mobilepush}} 인스턴스를 배치하고 실행할 수 있는 환경입니다.  |
@@ -87,7 +85,6 @@ IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 �
 |{{site.data.keyword.apiconnect_short}} 	|예   	 	|예  	 	|예   |
 |Automated Accessibility Checker |예       |예    |예   |
 |{{site.data.keyword.rules_short}}		|예		|예		|예 |
-|{{site.data.keyword.cloudant}}			|예		|예		|예 |
 |{{site.data.keyword.iotmapinsights_short}}    |예  |예  |예  |
 |{{site.data.keyword.conversationshort}}  |예  |예  |예  |
 |{{site.data.keyword.dashdbshort}}		|예		|예		|예 |
@@ -251,11 +248,13 @@ Cloud Foundry 및 {{site.data.keyword.Bluemix_notm}} 애플리케이션은 로�
 ## {{site.data.keyword.Bluemix_local_notm}} 인스턴스 설정
 {: #setuplocal}
 
-{{site.data.keyword.Bluemix_local_notm}}은 선택한 하드웨어에 호스팅되는 {{site.data.keyword.Bluemix_notm}} 퍼블릭 오퍼링의 개인용 버전을 제공하도록 디자인되었습니다. 사용자에게 일반적으로 지원되는 두 가지 옵션은 VMware 양식으로 하드웨어를 제공하거나, {{site.data.keyword.IBM_notm}}을 통해 주문할 수 있는 사전 구성된 PureApplication 어플라이언스에 빌드되는 {{site.data.keyword.Bluemix_notm}} 로컬 시스템을 주문하도록 선택할 수 있습니다. PureApplication 어플라이언스 옵션에 대한 자세한 정보는 [IBM {{site.data.keyword.Bluemix_notm}} Local System W3500 and W3550 models run cloud native services, enabled middleware, and open pattern workloads concurrently ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://www-01.ibm.com/common/ssi/rep_ca/5/897/ENUS216-325/){: new_window}를 참조하십시오. 
+{{site.data.keyword.Bluemix_local_notm}}은 선택한 하드웨어에 호스팅되는 {{site.data.keyword.Bluemix_notm}} 퍼블릭 오퍼링의 프라이빗 버전을 제공합니다. 공통적으로 지원되는 두 가지 옵션은 다음과 같습니다.
+* VMware 하드웨어를 제공합니다.
+* {{site.data.keyword.Bluemix_notm}} 로컬 시스템을 주문합니다. 이는 {{site.data.keyword.IBM_notm}}을 통해 주문할 수 있는 사전 구성된 PureApplication 어플라이언스를 기반으로 빌드됩니다. PureApplication 어플라이언스 옵션에 대한 자세한 정보는 [IBM {{site.data.keyword.Bluemix_notm}} Local System W3500 and W3550 models run cloud native services, enabled middleware, and open pattern workloads concurrently ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://www-01.ibm.com/common/ssi/rep_ca/5/897/ENUS216-325/){: new_window}를 참조하십시오. 
 
 {{site.data.keyword.Bluemix_local_notm}}의 경우 {{site.data.keyword.Bluemix_notm}} 서비스 및 런타임을 사용하여 고객이 호스팅 및 관리하는 안전한 클라우드 환경의 컴퓨팅 요구사항을 지원할 수 있습니다. {{site.data.keyword.IBM_notm}}은 비밀번호 보안 로그인을 사용하여 {{site.data.keyword.Bluemix_local_notm}}에 대한 액세스를 제공합니다. 서비스, 런타임 및 연관된 리소스에 액세스하고 {{site.data.keyword.Bluemix_notm}} 앱을 배치 및 제거할 수 있습니다. {{site.data.keyword.IBM_notm}} 담당자와 협력하여 {{site.data.keyword.Bluemix_notm}}의 로컬 인스턴스를 설정하려면 다음 단계를 검토하십시오. 
 
-**참고**: {{site.data.keyword.Bluemix_notm}} 로컬 시스템 하드웨어 옵션에서 {{site.data.keyword.Bluemix_local_notm}}을 호스팅하도록 선택하는 경우 IBM 담당자에게 많은 정보를 제공할 필요가 없다는 점에서 설정 프로세스가 다를 수 있습니다. 또한 고객 소유 VMware 사용에 필요한 관리 모델과는 대조적으로 PureApplication 어플라이언스의 유지보수 모델로 인해 도입/인식(Inception) 및 진행 단계 동안 역할 및 책임의 범위가 감소될 수 있습니다. 
+**참고**: {{site.data.keyword.Bluemix_notm}} 로컬 시스템 하드웨어에서 {{site.data.keyword.Bluemix_local_notm}}을 호스팅하는 경우 IBM 담당자에게 많은 정보를 제공할 필요가 없다는 점에서 설정 프로세스가 다를 수 있습니다. 또한 고객 소유 VMware 사용에 필요한 관리 모델과 비교해 PureApplication 어플라이언스의 "콜홈" 유지보수 모델로 인해 도입/인식(Inception) 및 진행 단계 동안 역할 및 책임의 범위가 감소될 수 있습니다.
 
 {{site.data.keyword.Bluemix_notm}}의 개인용 버전 설정:
 
@@ -613,7 +612,7 @@ DEA 풀을 늘리기 위해 각 DEA가 다음으로 구성됩니다.
 
 중요 인시던트는 환경 또는 사용자에게 영향을 미치는 긴급하고 예상치 못한 서비스 가동 중단 및 안정성 문제입니다. {{site.data.keyword.IBM_notm}}이 사용자 환경 내에서 중요 인시던트를 발견하는 경우 **상태** 페이지의 알림을 통해 사용자에게 알립니다. 상태 페이지에서 플랫폼이나 사용하는 서비스에 대한 알려진 문제가 있는지 확인할 수도 있습니다. 상태 페이지에 대한 자세한 정보는 [상태 보기](../admin/index.html#oc_status)를 참조하십시오.
 
-웹 후크를 지원하는 웹 서비스와 알림을 통합하려면 [알림 및 이벤트 구독](/docs/admin/index.html#oc_eventsubscription)에서 알림 기능 확장 방법에 대한 정보를 참조하십시오.
+웹 훅을 지원하는 웹 서비스와 알림을 통합하려면 [알림 및 이벤트 구독](/docs/admin/index.html#oc_eventsubscription)에서 알림 기능 확장 방법에 대한 정보를 참조하십시오.
 
 ![인시던트 대응 프로세스](images/incidentresponseprocess.png "인시던트 대응 프로세스")
 
@@ -663,7 +662,7 @@ DEA 풀을 늘리기 위해 각 DEA가 다음으로 구성됩니다.
 * 애플리케이션 상태 점검을 토대로 사이트 장애 복구를 제공합니다.
 * 엔드포인트 사이에서 가중 라우팅을 사용합니다.
 
-Akamai 또는 Dyn과 같은 글로벌 로드 밸런서를 선택할 수 있습니다. Akamai를 글로벌 로드 밸런서로 사용하기 위한 자세한 정보는 [Global Traffic Management ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://www.akamai.com/us/en/solutions/products/web-performance/global-traffic-management.jsp){: new_window}를 참조하십시오. 글로벌 로드 밸런서로 Dyn을 사용하기 위한 자세한 정보는 [4 Reasons Businesses Are Taking Global Load Balancing to the Cloud ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://dyn.com/blog/4-reasons-businesses-are-taking-global-load-balancing-to-the-cloud/){: new_window}를 참조하십시오. 
+Akamai 또는 Dyn과 같은 글로벌 로드 밸런서를 선택할 수 있습니다. Akamai를 글로벌 로드 밸런서로 사용하기 위한 자세한 정보는 [Global Traffic Management ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://www.akamai.com/us/en/solutions/products/web-performance/global-traffic-management.jsp){: new_window}를 참조하십시오. Dyn을 글로벌 로드 밸런서로 사용하기 위한 자세한 정보는 [4 Reasons Businesses Are Taking Global Load Balancing to the Cloud ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://dyn.com/blog/4-reasons-businesses-are-taking-global-load-balancing-to-the-cloud/){: new_window}를 참조하십시오. 
 
 ### 고가용성
 {: #ha}

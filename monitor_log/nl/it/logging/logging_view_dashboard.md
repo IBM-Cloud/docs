@@ -37,7 +37,7 @@ Per ulteriori informazioni sul formato dei log, vedi [Formato dei log dell'appli
 
 Per visualizzare i log di distribuzione o di runtime di un'applicazione Cloud Foundry, completa la seguente procedura:
 
-1. Accedi a {{site.data.keyword.Bluemix_notm}} e fai clic sul nome applicazione nel dashboard delle **Applicazioni** {{site.data.keyword.Bluemix_notm}}.  
+1. Accedi a {{site.data.keyword.Bluemix_notm}} e fai clic sul nome applicazione nel dashboard delle **Applicazioni** {{site.data.keyword.Bluemix_notm}}. 
 
     Viene visualizzata la pagina dei dettagli dell'applicazione.
     
@@ -49,7 +49,7 @@ Per visualizzare i log di distribuzione o di runtime di un'applicazione Cloud Fo
 
 
 
-## Formato dei log dell'applicazione Cloud Foundry 
+## Formato dei log dell'applicazione Cloud Foundry
 {: #log_format_cf}
 
 Ogni voce di log contiene i seguenti campi:
@@ -85,15 +85,15 @@ Ogni voce di log contiene i seguenti campi:
 <dd>API Cloud Foundry: il componente API fornisce informazioni sulle azioni interne che derivano dalla richiesta di un utente di modificare lo stato di un'applicazione.</dd>
 
 <dt><strong>DEA</strong></dt>
-<dd>Droplet Execution Agent: il componente DEA fornisce informazioni sull'avvio, l'interruzione o l'arresto anomalo di un'applicazione.
+<dd>Droplet Execution Agent: il componente DEA fornisce informazioni sull'avvio, l'interruzione o l'arresto anomalo di un'applicazione. 
 <p>Questo componente è disponibile solo se la tua applicazione viene distribuita nell'architettura Cloud Foundry basata su DEA.</p></dd>
 
 <dt><strong>CELL</strong></dt>
-<dd>Cella Diego: il componente CELL fornisce informazioni sull'avvio, l'interruzione o l'arresto anomalo di un'applicazione.
+<dd>Cella Diego: il componente CELL fornisce informazioni sull'avvio, l'interruzione o l'arresto anomalo di un'applicazione. 
 <p>Questo componente è disponibile solo se la tua applicazione viene distribuita nell'architettura Cloud Foundry basata su Diego.</p></dd>
 
 <dt><strong>SSH</strong></dt>
-<dd>SSH: il componente SSH fornisce informazioni ogni volta che un utente accede a un'applicazione utilizzando il comando **cf ssh**.
+<dd>SSH: il componente SSH fornisce informazioni ogni volta che un utente accede a un'applicazione utilizzando il comando **cf ssh**. 
 <p>Questo componente è disponibile solo se la tua applicazione viene distribuita nell'architettura Cloud Foundry basata su Diego.</p></dd>
 
 </dl>
@@ -107,7 +107,7 @@ Ogni voce di log contiene i seguenti campi:
 </dl>
 
 La seguente figura mostra i diversi componenti (tipi di log) in un'architettura Cloud Foundry basata su DEA (Droplet Execution Agent):
-![Tipi di log in un'architettura DEA.](images/logging_F1.png "Componenti (tipi di log") in un'architettura Cloud Foundry basata su DEA (Droplet Execution Agent).")
+![Tipi di log in un'architettura DEA.](images/logging_F1.png "Componenti in un'architettura Cloud Foundry basata su DEA (Droplet Execution Agent).")
 
 
 

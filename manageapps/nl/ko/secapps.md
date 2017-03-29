@@ -12,14 +12,14 @@ lastupdated: "2017-01-11"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#앱 보안
+# 앱 보안
 {: #securingapps}
 
 
 SSL 인증서를 업로드하고 애플리케이션 액세스를 제한하여 애플리케이션 보안을 유지할 수 있습니다.
 {:shortdesc}
 
-##인증서 서명 요청 작성
+## 인증서 서명 요청 작성
 {: #ssl_csr}
 
 {{site.data.keyword.Bluemix}}에서 권한이 부여된 SSL 인증서를 업로드하려면 먼저 서버에서 인증서 서명 요청(CSR)을 작성해야 합니다.

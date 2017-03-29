@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-01-24"
+lastupdated: "2017-02-16"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-01-24"
 # Iniciación a la CLI de {{site.data.keyword.Bluemix_notm}}
 {: #getting-started}
 
-La CLI de {{site.data.keyword.Bluemix_notm}} ofrece un método unificado para interactuar con aplicaciones, servidores virtuales, contenedores y otros servicios de {{site.data.keyword.Bluemix_notm}} mediante una interfaz de línea de mandatos. La CLI de {{site.data.keyword.Bluemix_notm}} también integra herramientas de la comunidad, como CLI de Cloud Foundry, CLI de Docker, CLI de OpenStack e inicializa valores del entorno para que pueda interactuar con distintos tipos de equipos.
+{{site.data.keyword.Bluemix_notm}} CLI ofrece un método unificado para interactuar con aplicaciones, servidores virtuales, contenedores y otros servicios mediante una interfaz de línea de mandatos. La CLI de {{site.data.keyword.Bluemix_notm}} también integra herramientas de la comunidad, como CLI de Cloud Foundry, CLI de Docker, CLI de OpenStack e inicializa valores del entorno para que pueda interactuar con distintos tipos de equipos.
 
 **Restricción**: la CLI de {{site.data.keyword.Bluemix_notm}} no se admite en Cygwin, de modo que no utilice la CLI de {{site.data.keyword.Bluemix_notm}} en la ventana de línea de mandatos de Cygwin.
 
@@ -25,7 +25,7 @@ La CLI de {{site.data.keyword.Bluemix_notm}} ofrece un método unificado para in
 ## Instalación de la CLI de {{site.data.keyword.Bluemix_notm}}
 {: #install_bluemix_cli}
 
-Antes de instalar la CLI de {{site.data.keyword.Bluemix_notm}}, asegúrese de que la CLI de Cloud Foundry está instalada en el sistema.
+Antes de instalar {{site.data.keyword.Bluemix_notm}} CLI, instale la [CLI de cf ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}.
 
 Para Mac OS y Windows, descargue el [paquete de CLI de {{site.data.keyword.Bluemix_notm}}](/docs/cli/index.html#downloads) y ejecute el instalador.
 
@@ -58,12 +58,12 @@ Para Linux, siga estos pasos:
   ~/Bluemix_CLI#
   ```
 
-Ahora puede empezar a utilizar la CLI de {{site.data.keyword.Bluemix_notm}} o instalar plugins adicionales.
+Ahora puede empezar a utilizar {{site.data.keyword.Bluemix_notm}} CLI o instalar plug-ins adicionales.
 
 ## Instalación de un plugin.
 {: #install_plug-in}
 
-Al igual que la CLI de Cloud Foundry, la CLI de {{site.data.keyword.Bluemix_notm}} también admite una infraestructura de ampliación de plugin para integrar otros mandatos además de los que vienen integrados.
+Al igual que la CLI de Cloud Foundry, {{site.data.keyword.Bluemix_notm}} CLI admite una infraestructura de ampliación de plug-in para integrar otros mandatos además de los que vienen integrados.
 
 Para instalar un plugin desde el entorno local, siga estos pasos:
 
@@ -135,7 +135,7 @@ Para instalar desde el repositorio, siga estos pasos:
   ~$
   ```
 
-  2. A continuación, instale el plugin desde el repositorio de `Bluemix` con el mandato `bluemix plugin install`. Por ejemplo:
+  2. Instale el plug-in desde el repositorio de `Bluemix` con el mandato `bluemix plugin install`. Por ejemplo:
 
   ```
   ~$ bluemix plugin install auto-scaling -r Bluemix
@@ -150,7 +150,7 @@ Para instalar desde el repositorio, siga estos pasos:
 ## Inicio de sesión en la CLI de {{site.data.keyword.Bluemix_notm}}
 {: #log_bmcli}
 
-Después de instalar la CLI de {{site.data.keyword.Bluemix_notm}}, puede iniciar una sesión en {{site.data.keyword.Bluemix_notm}} con una cuenta de {{site.data.keyword.Bluemix_notm}} y una contraseña. Por ejemplo:
+Después de instalar {{site.data.keyword.Bluemix_notm}} CLI, puede iniciar sesión en {{site.data.keyword.Bluemix_notm}} con su ID y contraseña de IBM. Por ejemplo:
 
 ```
 ~$ bluemix login -a https://api.ng.bluemix.net
@@ -1004,8 +1004,8 @@ Reenviar la invitación a un usuario (es necesario ser gestor de organización o
 ```
  bluemix iam account-user-reinvite USER_EMAIL ORG_NAME
 ```
- 
- 
+
+
 ### bluemix iam org-users
 {: #bluemix_iam_org_users}
 

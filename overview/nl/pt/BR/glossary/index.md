@@ -3,8 +3,8 @@
  
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-31"
+  years: 2016, 2017
+lastupdated: "2017-03-15"
 
  
 
@@ -133,7 +133,7 @@ Um aplicativo de dispositivo móvel ou da web. Consulte também o [aplicativo m�
 ### ID do app
 {: #x7909906}
 
-Um GUID que é designado a um aplicativo móvel do Bluemix. Consulte também [identificador exclusivo global](#x2390455).
+Um GUID que é designado a um aplicativo móvel do Bluemix. Consulte também [identificador exclusivo global](#x2390455). Veja também [{{site.data.keyword.appid_full}}](/docs/services/appid/index.html)
 
 ### chave do aplicativo
 {: #x7290111}

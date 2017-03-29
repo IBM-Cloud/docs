@@ -16,10 +16,10 @@ lastupdated: "2017-02-06"
 # Registrazione per le applicazioni Cloud Foundry in Bluemix
 {: #logging_bluemix_cf_apps}
 
-In {{site.data.keyword.Bluemix}}, puoi visualizzare, filtrare e analizzare i log attraverso il dashboard {{site.data.keyword.Bluemix}}, Kibana e l'interfaccia riga di comando. Inoltre, puoi trasmettere i record dei log a uno strumento di gestione log esterno.
+In {{site.data.keyword.Bluemix}}, puoi visualizzare, filtrare e analizzare i log attraverso il dashboard {{site.data.keyword.Bluemix}}, Kibana e l'interfaccia riga di comando. Inoltre, puoi trasmettere i record dei log a uno strumento di gestione log esterno. 
 {:shortdesc}
 
-Quando esegui le tue applicazioni in un PaaS (platform-as-a-service) cloud come Cloud Foundry su {{site.data.keyword.Bluemix_notm}}, non puoi stabilire un tunnel SSH o FTP nell'infrastruttura in cui sono in esecuzione le tue applicazioni per accedere ai log. La piattaforma è controllata dal provider del cloud. Le applicazioni Cloud Foundry in esecuzione su {{site.data.keyword.Bluemix_notm}} utilizzano il componente Loggerator per inoltrare i record di log dall'interno dell'infrastruttura Cloud Foundry. Loggregator raccoglie automaticamente i dati STDOUT e STDERR. Puoi visualizzare e analizzare questi log attraverso il dashboard {{site.data.keyword.Bluemix}}, Kibana e l'interfaccia riga di comando. 
+Quando esegui le tue applicazioni in un PaaS (platform-as-a-service) cloud come Cloud Foundry su {{site.data.keyword.Bluemix_notm}}, non puoi stabilire un tunnel SSH o FTP nell'infrastruttura in cui sono in esecuzione le tue applicazioni per accedere ai log. La piattaforma è controllata dal provider del cloud. Le applicazioni Cloud Foundry in esecuzione su {{site.data.keyword.Bluemix_notm}} utilizzano il componente Loggerator per inoltrare i record di log dall'interno dell'infrastruttura Cloud Foundry. Loggregator raccoglie automaticamente i dati STDOUT e STDERR. Puoi visualizzare e analizzare questi log attraverso il dashboard {{site.data.keyword.Bluemix}}, Kibana e l'interfaccia riga di comando.
 
 La seguente figura mostra una visualizzazione di alto livello della registrazione di applicazioni Cloud Foundry in {{site.data.keyword.Bluemix_notm}}:
 

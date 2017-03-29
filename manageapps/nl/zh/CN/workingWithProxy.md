@@ -20,7 +20,6 @@ lastupdated: "2016-07-20"
 [Bluemix Local](/docs/local/index.html#local)，可以对代理进行设置，
 以影响应用程序在编译打包和运行时的行为。
 
-
 您可以使用以下环境变量，对应用程序进行配置，以使用代理：
   * [http_proxy](https://docs.cloudfoundry.org/buildpacks/proxy-usage.html)
   * [https_proxy](https://docs.cloudfoundry.org/buildpacks/proxy-usage.html)

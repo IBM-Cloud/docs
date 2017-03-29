@@ -64,11 +64,11 @@ Para obter mais informações, veja a documentação do [Kibana](https://www.ela
 ##  Acessando o painel do Kibana por meio do painel do Bluemix
 {: #launch_Kibana_from_bluemix}
 
-A consulta usada para filtrar os dados que são exibidos no painel recupera entradas de log para o aplicativo Cloud Foundry. As informações de log exibidas por padrão pelo painel do Kibana estão todas relacionadas a um único aplicativo Cloud Foundry e todas as suas instâncias. 
+A consulta usada para filtrar os dados que são exibidos no painel recupera entradas de log para o aplicativo Cloud Foundry. As informações de log exibidas por padrão pelo painel do Kibana estão todas relacionadas a um único aplicativo Cloud Foundry e todas as suas instâncias.
 
 Para ver os logs de um aplicativo Cloud Foundry no Kibana, conclua as etapas a seguir:
 
-1. Efetue login no {{site.data.keyword.Bluemix_notm}} e, em seguida, clique no nome do app no painel **Apps** do {{site.data.keyword.Bluemix_notm}}.A página de detalhes do app é aberta.
+1. Efetue login no {{site.data.keyword.Bluemix_notm}} e, em seguida, clique no nome do app no painel **Apps** do {{site.data.keyword.Bluemix_notm}}. A página de detalhes do app é aberta.
     
 2. Na barra de navegação, clique em **Logs**. A guia de logs é aberta. 
     
@@ -81,7 +81,7 @@ Para obter mais informações sobre como customizar um painel do Kibana, veja [e
 ##  Acessando o painel do Kibana por meio de um navegador da web
 {: #launch_Kibana_from_browser}
 
-A consulta usada para filtrar os dados que são exibidos no painel recupera entradas de log para um espaço na organização do {{site.data.keyword.Bluemix}}. As informações de log exibidas pelo painel do Kibana incluem registros para todos os recursos que são implementados no espaço da organização do {{site.data.keyword.Bluemix}} em que você efetuou login. 
+A consulta usada para filtrar os dados que são exibidos no painel recupera entradas de log para um espaço na organização do {{site.data.keyword.Bluemix}}. As informações de log exibidas pelo painel do Kibana incluem registros para todos os recursos que são implementados no espaço da organização do {{site.data.keyword.Bluemix}} em que você efetuou login.
 
 Conclua as etapas a seguir para abrir um painel do Kibana em um navegador:
 
@@ -100,7 +100,7 @@ Para obter mais informações sobre como customizar um painel do Kibana, veja [e
 
 No {{site.data.keyword.Bluemix}}, é possível analisar dados usando o painel do Kibana padrão que é fornecido por recurso ou por espaço do {{site.data.keyword.Bluemix}}. Por padrão, esses painéis exibem todos os dados que estão disponíveis para as últimas 24 horas. No entanto, é possível restringir as informações exibidas por meio de um painel. É possível incluir consultas e filtros em um painel padrão e, em seguida, salvá-lo para reutilização futura.
 
-Em um painel, é possível incluir múltiplas consultas e filtros. Uma consulta define um subconjunto de entradas de log. Um filtro define a seleção de dados incluindo ou excluindo informações. 
+Em um painel, é possível incluir múltiplas consultas e filtros. Uma consulta define um subconjunto de entradas de log.  Um filtro define a seleção de dados incluindo ou excluindo informações. 
 
 Para apps Cloud Foundry, a lista a seguir descreve exemplos de como filtrar dados:
 * Se estiver procurando informações nos logs que incluam termos chave, será possível criar consultas para filtrar por esses termos. Com o Kibana, é possível comparar as consultas visualmente no painel. Para obter mais informações, veja [Filtrando seus logs do app Cloud Foundry com consultas no Kibana](kibana3/logging_kibana_query.html#logging_kibana_query).
@@ -134,7 +134,7 @@ Conclua as etapas a seguir para salvar um painel do Kibana após sua customizaç
 
 2. Insira um nome para o painel.
 
-    **Nota:** se você tentar salvar um painel com um nome contendo espaços em branco, ele não será salvo. 
+    **Nota:** se você tentar salvar um painel com um nome contendo espaços em branco, ele não será salvo.
 
 3. Próximo ao campo de nome, clique no ícone **Salvar**.
 

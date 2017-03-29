@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-21"
+lastupdated: "2017-02-21"
 
 ---
 
@@ -35,7 +35,7 @@ lastupdated: "2016-02-21"
 - `password`：獲授權呼叫預報 API 的 The Weather Company Data for IBM Bluemix 的密碼。
 - `latitude`：位置的緯度座標。
 - `longitude`：位置的經度座標。
-- `timeperiod`：預報的時段。有效選項為 '10day' -（預設值）傳回 10 天的每日預報、'48hour' - 傳回 2 天的每小時預報、'current' - 傳回目前的天氣狀況、'timeseries' - 傳回目前的觀察，以及從目前日期和時間算起，過去最多 24 小時的觀察。
+- `timePeriod`：預報的時段。有效選項為 '10day' -（預設值）傳回 10 天的每日預報、'48hour' - 傳回 2 天的每小時預報、'current' - 傳回目前的天氣狀況、'timeseries' - 傳回目前的觀察，以及從目前日期和時間算起，過去最多 24 小時的觀察。
 
 
 下列範例說明如何建立套件連結，然後取得 10 天預報。

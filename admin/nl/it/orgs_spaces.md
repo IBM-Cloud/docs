@@ -51,7 +51,7 @@ nome dell'applicazione. Un dominio può essere un dominio di sistema o un domini
 <dd>Rappresenta i limiti di risorse per l'organizzazione, compreso il numero di servizi
 e la quantità di memoria che può essere assegnata per l'utilizzo da parte dell'organizzazione. Le quote vengono assegnate quando
 vengono create le organizzazioni. Applicazioni o servizi in uno spazio dell'organizzazione contribuiscono tutti
-all'utilizzo della quota. Con i piani Pagamento a consumo o Sottoscrizione, puoi regolare la tua quota per le applicazioni e i contenitori Cloud Foundry in base al variare delle esigenze della tua organizzazione. Vedi [Gestione della quota](orgs_spaces.html#managequota).</dd>
+all'utilizzo della quota. La quota non è una restrizione imposta. È invece un trigger per le notifiche di spesa. Con i piani Pagamento a consumo o Sottoscrizione, puoi regolare la tua quota per le applicazioni e i contenitori Cloud Foundry in base al variare delle esigenze della tua organizzazione. Vedi [Gestione della quota](orgs_spaces.html#managequota).</dd>
 </dl>
 
 In {{site.data.keyword.Bluemix_notm}}, puoi utilizzare le organizzazioni per abilitare la collaborazione tra i membri del team e per facilitare il raggruppamento
@@ -161,7 +161,7 @@ Per elencare i membri per uno specifico spazio, completa la seguente procedura:
 ## Gestione della quota
 {: #managequota}
 
-In qualità di proprietario dell'account o di gestore dell'organizzazione {{site.data.keyword.Bluemix_notm}}, puoi visualizzare la quota utilizzata e assegnata per un'organizzazione. La quota rappresenta i limiti di risorse per l'organizzazione, che viene assegnata quando l'organizzazione viene creata. A seconda che si disponga di un account di prova o di un account fatturabile, le risorse disponibili per un'organizzazione sono diverse. Applicazioni o servizi in uno spazio all'interno dell'organizzazione contribuiscono tutti all'utilizzo della quota assegnata.
+In qualità di proprietario dell'account o di gestore dell'organizzazione {{site.data.keyword.Bluemix_notm}}, puoi visualizzare la quota utilizzata e assegnata per un'organizzazione. La quota rappresenta i limiti di risorse per l'organizzazione, che viene assegnata quando l'organizzazione viene creata. Il limite non è una restrizione imposta nell'organizzazione. È invece un trigger per le notifiche di spesa. A seconda che si disponga di un account di prova o di un account fatturabile, le risorse disponibili per un'organizzazione sono diverse. Applicazioni o servizi in uno spazio all'interno dell'organizzazione contribuiscono tutti all'utilizzo della quota assegnata.
 
 Per visualizzare la quota utilizzata e assegnata per un'organizzazione, completa la seguente procedura:
 

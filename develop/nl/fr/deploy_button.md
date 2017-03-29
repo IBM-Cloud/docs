@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2015, 2017
@@ -113,7 +113,7 @@ Tenez compte de ces remarques lorsque vous personnalisez le fragment de votre bo
 	
 	* Si vous préférez stocker l'image localement, vous pouvez la télécharger et la stocker dans votre référentiel Git. Ajustez le chemin d'accès pour qu'il reflète l'emplacement relatif de l'image. 
 	
-	* Si vous voulez utiliser une version traduite du bouton, vous pouvez la référencer à distance ou la télécharger depuis [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button![](../icons/launch-glyph.svg "External link icon")](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button){:new_window}. 
+	* Si vous voulez utiliser une version traduite du bouton, vous pouvez la référencer à distance ou la télécharger depuis [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button![Icône de lien externe](../icons/launch-glyph.svg "External link icon")](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button){:new_window}. 
 	
 ##Remarques sur le référentiel du bouton {: #button-repo} 
 
@@ -125,7 +125,7 @@ Tenez compte de ces remarques pour le référentiel de projet que vous allez uti
 Le fichier manifeste vous permet d'indiquer : 
     <ul>
     <li>Un nom d'application unique.</li>  
-    <li>Des services déclarés : une extension de manifeste, qui crée ou recherche les services requis ou facultatifs devant être configurés avant le déploiement de l'application, comme un service de cache de données. Vous pouvez afficher la liste des services, des libellés et des plans {{site.data.keyword.Bluemix_notm}} éligibles à l'aide de l'<a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(s'ouvre dans un nouvel onglet ou une nouvelle fenêtre)">interface de ligne de commande CF<img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a> pour exécuter la commande <code>cf marketplace</code> ou en parcourant le <a class="xref" href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-_-dWdevcenter-_-devops-services-_-lp#/store" target="_blank" title="(s'ouvre dans un nouvel onglet ou une nouvelle fenêtre)"> catalogue {{site.data.keyword.Bluemix_notm}} <img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a>.
+    <li>Des services déclarés : une extension de manifeste, qui crée ou recherche les services requis ou facultatifs devant être configurés avant le déploiement de l'application, comme un service de cache de données. Vous pouvez afficher la liste des services, des libellés et des plans {{site.data.keyword.Bluemix_notm}} éligibles à l'aide de l'<a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(s'ouvre dans un nouvel onglet ou une nouvelle fenêtre)">interface de ligne de commande CF<img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a> pour exécuter la commande <code>cf marketplace</code> ou en parcourant le <a class="xref" href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-_-dWdevcenter-_-devops-services-_-lp#/store" target="_blank" title="(s'ouvre dans un nouvel onglet ou une nouvelle fenêtre)"> catalogue {{site.data.keyword.Bluemix_notm}}<img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a>.
     
         
     <strong>Remarque :</strong> les services déclarés constituent une extension IBM du format de manifeste Cloud Foundry standard. Cette extension est susceptible d'être révisée dans une édition ultérieure, parallèlement à l'évolution et à l'amélioration de la fonction.
@@ -162,14 +162,14 @@ Le fichier manifeste vous permet d'indiquer :
 </pre>
    </li>
    </ul>
-	<li> Si l'application doit être construite pour pouvoir être déployée, vous devez inclure un fichier de génération dans votre référentiel. Si un fichier script de génération est détecté dans le répertoire racine du référentiel, une génération automatisée du code est déclenchée avant le déploiement.
+	<li> Si l'application doit être construite pour pouvoir être déployée, vous devez inclure un fichier de génération dans votre référentiel. Si un fichier script de génération est détecté dans le répertoire racine du référentiel, une génération automatisée du code est déclenchée avant le déploiement. 
 	
 	Générateurs pris en charge : 
 	    <ul>
-		<li> <a class="xref" href="http://ant.apache.org/manual/using.html" target="_blank" title="(s'ouvre dans un nouvel onglet ou une nouvelle fenêtre)">Ant : <img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a> /<code>build.xml</code>, qui génère la sortie dans le dossier <code>./output/</code> </li>
-		<li> <a class="xref" href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank" title="(s'ouvre dans un nouvel onglet ou une nouvelle fenêtre)">Gradle : <img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a> <code>/build.gradle</code>, qui génère la sortie dans le dossier <code>. </code> </li>
-		<li> <a class="xref" href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank" title="(s'ouvre dans un nouvel onglet ou une nouvelle fenêtre)">Grunt : <img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a> <code>/Gruntfile.js</code>, qui génère la sortie dans le dossier <code>. </code> </li>
-		<li> <a class="xref" href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank" title="(s'ouvre dans un nouvel onglet ou une nouvelle fenêtre)">Maven : <img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a> <code>/pom.xml</code>, qui génère la sortie dans le dossier <code>./target/</code> </li>
+		<li> <a class="xref" href="http://ant.apache.org/manual/using.html" target="_blank" title="(s'ouvre dans un nouvel onglet ou une nouvelle fenêtre)">Ant : <img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a> /<code>build.xml</code>, qui génère la sortie dans le dossier <code>./output/</code>
+		<li> <a class="xref" href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank" title="(s'ouvre dans un nouvel onglet ou une nouvelle fenêtre)">Gradle : <img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a> <code>/build.gradle</code>, qui génère la sortie dans le dossier <code>. </code></li>
+		<li> <a class="xref" href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank" title="(s'ouvre dans un nouvel onglet ou une nouvelle fenêtre)">Grunt : <img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a> <code>/Gruntfile.js</code>, qui génère la sortie dans le dossier <code>. </code></li>
+		<li> <a class="xref" href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank" title="(s'ouvre dans un nouvel onglet ou une nouvelle fenêtre)">Maven : <img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a> <code>/pom.xml</code>, qui génère la sortie dans le dossier <code>./target/</code></li>
 	   </ul>
 	</li>	
 	<li>Afin de configurer un pipeline pour le projet, incluez un fichier <code>pipeline.yml</code> dans un répertoire <code>.bluemix</code>. Vous pouvez créer un fichier <code>pipeline.yml</code> manuellement ou en générer un à partir d'un projet DevOps Services existant. Pour créer un fichier pipeline.yml à partir d'un projet {{site.data.keyword.jazzhub_short}} et l'ajouter à votre référentiel, procédez comme suit. 

@@ -12,7 +12,7 @@ lastupdated: "2016-03-17"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#앱 개발
+# 앱 개발
 {: #developingapps}
 
 

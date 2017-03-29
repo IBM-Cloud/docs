@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-03-22"
 
 ---
 {:new_window: target="_blank"}  
@@ -61,8 +61,15 @@ A few prerequisites are required to fully explore and properly utilize the {{sit
 
 ### Before you begin
 {: #before-install}
+
+1. Connect to an API endpoint in your [{{site.data.keyword.Bluemix_notm}} region](/docs/overview/whatisbluemix.html#ov_intro_reg). For example, enter the following command to connect to the {{site.data.keyword.Bluemix_notm}} US South region:
+
+	```
+	bx api https://api.ng.bluemix.net
+	```
+	{: codeblock}
 	
-1. Log in to {{site.data.keyword.Bluemix_notm}}.
+2. Log in to {{site.data.keyword.Bluemix_notm}} by providing your IBMid and password:
 
 	```
 	bx login
@@ -196,7 +203,7 @@ bx dev delete <projectName>
 {: codeblock}
  
 
-**Note** {{site.data.keyword.Bluemix}} services are **not** removed.
+**Note:** {{site.data.keyword.Bluemix}} services are **not** removed.
 
 
 ### Help
@@ -361,7 +368,7 @@ The following parameters may be used along with the `build|debug|run|test` comma
 
 * Container name for the tools container.
 * Usage: `bx dev <build|debug|run|test> container-name-tools [<demo-tools>]`
- 
+
 ##### `host-path-tools`
 {: #host-path-tools}
 

@@ -83,7 +83,7 @@ Wenn Sie Ihr Konto während Ihres kostenlosen Testzeitraums konvertieren, werden
 ##Kosten
 {: #what_it_costs}
 
-Die Höhe der Gebühren hängt von den jeweiligen Ressourcen ab, die von einem bestimmten Service oder Container bzw. einer bestimmten Laufzeit, einem virtuellen Server oder einer Unterstützungsoption verwendet werden. Bei den Ressourcen kann es sich um die Anzahl der API-Aufrufe, die Anzahl der Instanzen, die Hauptspeichermenge, den Speicherplatz, usw. handeln. {{site.data.keyword.Bluemix_notm}} stellt auch eine detaillierte Kostenschätzungsfunktionen und eine Kostenberechnungsfunktion bis auf den letzten Cent bereit, die Ihnen beim Planen der Gebühren behilflich sein können. Sie können die tatsächlichen Kosten nach dem Erstellen der Apps in der Ansicht *Nutzungsdashboard* überprüfen. Genauere Informationen zu den Gebühren finden Sie unter [Berechnung der Gebühren](index.html#charges).
+Die Höhe der Gebühren hängt von den jeweiligen Ressourcen ab, die von einem bestimmten Service oder Container bzw. einer bestimmten Laufzeit oder einer Unterstützungsoption verwendet werden. Bei den Ressourcen kann es sich um die Anzahl der API-Aufrufe, die Anzahl der Instanzen, die Hauptspeichermenge, den Speicherplatz, usw. handeln. {{site.data.keyword.Bluemix_notm}} stellt auch eine detaillierte Kostenschätzungsfunktionen und eine Kostenberechnungsfunktion bis auf den letzten Cent bereit, die Ihnen beim Planen der Gebühren behilflich sein können. Sie können die tatsächlichen Kosten nach dem Erstellen der Apps in der Ansicht *Nutzungsdashboard* überprüfen. Genauere Informationen zu den Gebühren finden Sie unter [Berechnung der Gebühren](index.html#charges).
  
 
 ##Werbecode
@@ -281,20 +281,6 @@ In der folgenden Tabelle sind die Gebühren dargestellt, die im Rahmen eines Pla
 |... |	... |	...|
 |5200 |	Die Anzahl der Posten fällt in die Preisstufe 5, d. h., der Gesamtpreis beträgt $ 5000 USD. |	$ 5000 USD|
 {:caption="Table 6. Charge calculation by using the block tier pricing model" caption-side="top"}
-
-### Kostenfreie Leistungen für virtuelle Server
-{: #vms}
-
-Sie können {{site.data.keyword.virtualmachineslong}} in der öffentlichen IBM Cloud als kostenloses Beta-Feature nutzen. Kostenlose Leistungen werden für die Anzahl der von Ihnen erstellten Images virtueller Server, für die Anzahl der zugeordneten IP-Adressen und für die nutzbare Speichermenge zur Verfügung gestellt.
-
-Für die Betaversion von {{site.data.keyword.virtualmachineslong}} können die folgenden kostenlosen Leistungen in Anspruch genommen werden:
-
-* 2 Instanzen
-* 2 virtuelle CPUs
-* 8 GB Speicher
-* 200 GB Blockspeicher
-* 5 öffentliche IP-Adressen
-
 
 ##Vorgehensweise zum Schätzen der Kosten
 {: #cost}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-23"
+lastupdated: "2017-02-23"
 
 ---
 
@@ -35,4 +35,4 @@ Le catalogue est disponible sous forme de packages dans l'espace de nom `/whisk.
 | [/whisk.system/watson-speechToText](./openwhisk_watson_speechtotext.html) | Package permettant de convertir [la parole en texte](https://www.ibm.com/watson/developercloud/speech-to-text.html) |
 | [/whisk.system/watson-textToSpeech](./openwhisk_watson_texttospeech.html) | Package permettant de convertir [le texte en parole](https://www.ibm.com/watson/developercloud/text-to-speech.html) |
 | [/whisk.system/weather](./openwhisk_weather.html) | Package permettant d'utiliser le service [Weather Company Data](https://console.ng.bluemix.net/docs/services/Weather/index.html) |
-| [/whisk.system/websocket](./openwhisk_websocket.html) | Package permettant d'utiliser le serveur [Web Socket](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)  |
+| [/whisk.system/websocket](./openwhisk_websocket.html) | Package permettant d'utiliser le serveur [Web Socket](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) |

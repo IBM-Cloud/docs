@@ -46,7 +46,7 @@ consulte [Usuarios y roles](users_roles.html#userrolesinfo).</dd>
 <dd>Proporciona la ruta en Internet que se asigna a la organización. Una ruta tiene un subdominio y un dominio. Un subdominio suele ser el nombre de la app. Un dominio puede ser un dominio del sistema o un dominio personalizado que ha registrado para la aplicación. Consulte [Gestión de dominios personalizados](orgs_spaces.html#managedomains).<br/>
 <p>**Nota**: Si añade un dominio personalizado, debe configurar el servidor DNS para resolver el dominio personalizado para que apunte al dominio del sistema de {{site.data.keyword.Bluemix_notm}}. De este modo, cuando {{site.data.keyword.Bluemix_notm}} recibe una solicitud para el dominio personalizado, puede direccionarlo correctamente a la app.</p></dd>
 <dt>Cuota</dt>
-<dd>Representa los límites de recursos para la organización, incluido el número de servicios y la cantidad de memoria que se puede asignar para que la utilice la organización. Las cuotas se asignan cuando se crean organizaciones. Cualquier app o servicio en un espacio de la organización contribuye al uso de la cuota. Con los planes Pague según uso o Suscripción, puede ajustar su cuota para los contenedores y apps de Cloud Foundry a medida que cambien las necesidades de su organización. Consulte [Gestión de cuota](orgs_spaces.html#managequota).</dd>
+<dd>Representa los límites de recursos para la organización, incluido el número de servicios y la cantidad de memoria que se puede asignar para que la utilice la organización. Las cuotas se asignan cuando se crean organizaciones. Cualquier app o servicio en un espacio de la organización contribuye al uso de la cuota. La cuota no es un límite aplicado. Es un desencadenante para notificaciones de gasto. Con los planes Pague según uso o Suscripción, puede ajustar su cuota para los contenedores y apps de Cloud Foundry a medida que cambien las necesidades de su organización. Consulte [Gestión de cuota](orgs_spaces.html#managequota).</dd>
 </dl>
 
 En {{site.data.keyword.Bluemix_notm}}, puede utilizar organizaciones para habilitar la colaboración entre miembros del equipo y facilitar la agrupación lógica de recursos de proyecto de las siguientes maneras:
@@ -149,7 +149,7 @@ Complete los siguientes pasos para listar los miembros para un espacio específi
 ## Gestión de cuota
 {: #managequota}
 
-Como propietario de cuenta o gestor de organización de {{site.data.keyword.Bluemix_notm}}, puede ver la cuota utilizada y asignada para una organización. La cuota representa los límites de recursos para la organización que está asignada cuando se crea la organización. Según si tiene una cuenta de prueba o una cuenta facturable, los recursos que están disponibles para una organización varían. Cualquier aplicación o servicio de un espacio de la organización contribuye al uso de la cuota asignada.
+Como propietario de cuenta o gestor de organización de {{site.data.keyword.Bluemix_notm}}, puede ver la cuota utilizada y asignada para una organización. La cuota representa los límites de recursos para la organización que está asignada cuando se crea la organización. El límite no es una restricción que se aplica a una organización; es un desencadenante de notificaciones de gasto. Según si tiene una cuenta de prueba o una cuenta facturable, los recursos que están disponibles para una organización varían. Cualquier aplicación o servicio de un espacio de la organización contribuye al uso de la cuota asignada.
 
 Para ver la cuota utilizada y asignada para una organización, realice los pasos siguientes:
 

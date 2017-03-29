@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-21"
+lastupdated: "2017-02-21"
 
 ---
 
@@ -15,16 +15,16 @@ lastupdated: "2016-02-21"
 # Implémentation de flux
 {: #openwhisk_feeds}
 
-{{site.data.keyword.openwhisk_short}} rend en charge une API ouverte, dans laquelle tous les utilisateurs peuvent exposer un service de producteur d'événement sous forme de **flux** dans un **package**. Cette section décrit les options d'architecture et d'implémentation pour la mise à disposition de votre propre flux.
+{{site.data.keyword.openwhisk_short}} rend en charge une API ouverte, dans laquelle tous les utilisateurs peuvent exposer un service de producteur d'événement sous forme de **flux** dans un **package**.   Cette section décrit les options d'architecture et d'implémentation pour la mise à disposition de votre propre flux.
 
-Ce document s'adresse aux utilisateurs avancés d'{{site.data.keyword.openwhisk_short}} qui souhaitent publier leurs propres flux. La plupart des utilisateurs d'{{site.data.keyword.openwhisk_short}} peuvent ignorer cette section.
+Ce document s'adresse aux utilisateurs avancés d'{{site.data.keyword.openwhisk_short}} qui souhaitent publier leurs propres flux.  La plupart des utilisateurs d'{{site.data.keyword.openwhisk_short}} peuvent ignorer cette section.
 
 ## Architecture de flux
 
 Il existe aux moins trois modèles d'architecture pour la création d'un flux : **Points d'ancrage**, **Interrogation** et **Connexions**.
 
 ### Points d'ancrage
-Dans le modèle *Points d'ancrage*, nous configurons un flux à l'aide d'une fonction de [webhook](https://en.wikipedia.org/wiki/Webhook) exposée par un autre service. Dans cette stratégie, nous configurons un webhook sur un service externe afin d'envoyer des données directement à une adresse URL pour exécuter un déclencheur. Il s'agit de loin de l'option la plus simple et la plus attrayante pour l'implémentation de flux à faible fréquence.
+Dans le modèle *Points d'ancrage*, nous configurons un flux à l'aide d'une fonction de [webhook](https://en.wikipedia.org/wiki/Webhook) exposée par un autre service.   Dans cette stratégie, nous configurons un webhook sur un service externe afin d'envoyer des données directement à une adresse URL pour exécuter un déclencheur.  Il s'agit de loin de l'option la plus simple et la plus attrayante pour l'implémentation de flux à faible fréquence.
 
 <!-- The github feed is implemented using webhooks.  Put a link here when we have the open repo ready -->
 
@@ -32,7 +32,7 @@ Dans le modèle *Points d'ancrage*, nous configurons un flux à l'aide d'une fon
 Dans le modèle "Interrogation", nous définissons une *action* {{site.data.keyword.openwhisk_short}} de sorte qu'elle interroge un noeud final régulièrement afin d'extraire de nouvelles données. Ce modèle est relativement facile à générer, mais la fréquence des événements sera évidemment limitée par l'intervalle d'interrogation.
 
 ### Connexions
-Dans le modèle "Connexions", nous établissons un service distinct quelque part, qui maintient une connexion permanente à une source de flux. L'implémentation reposant sur la connexion peut interagir avec un noeud final de service via une interrogation longue, ou pour configurer une notification push.
+Dans le modèle "Connexions", nous établissons un service distinct quelque part, qui maintient une connexion permanente à une source de flux.    L'implémentation reposant sur la connexion peut interagir avec un noeud final de service via une interrogation longue, ou pour configurer une notification push.
 
 <!-- Our cloudant changes feed is connection based.  Put a link here to
 an open repo -->
@@ -43,9 +43,9 @@ an open repo -->
 
 Les flux et les déclencheurs sont étroitement liés, mais ce sont des concepts techniquement distincts.   
 
-- {{site.data.keyword.openwhisk_short}} traite des **événements** qui transitent dans le système. 
+- {{site.data.keyword.openwhisk_short}} traite des **événements** qui transitent dans le système.
 
-- Techniquement, un **déclencheur** désigne une classe d'événements. Chaque événement appartient à un déclencheur et un seul ; par analogie, un déclencheur ressemble à une *rubrique* dans les systèmes de publication/abonnement reposant sur des rubriques. Une **règle** *T -> A* a la signification suivante : "à chaque fois qu'un événement provenant du déclencheur *T* arrive, appeler l'action *A* avec le contenu du déclencheur.
+- Techniquement, un **déclencheur** désigne une classe d'événements.   Chaque événement appartient à un déclencheur et un seul ; par analogie, un déclencheur ressemble à une *rubrique* dans les systèmes de publication/abonnement reposant sur des rubriques. Une **règle** *T -> A* a la signification suivante : "à chaque fois qu'un événement provenant du déclencheur *T* arrive, appeler l'action *A* avec le contenu du déclencheur.
 
 - Un **flux** est un flot d'événements qui appartiennent tous à un déclencheur *T*. Il est contrôlé par une **action de flux** qui gère la création, la suppression, l'interruption et la reprise du flot d'événements comprenant un flux. En règle générale, l'action de flux interagit avec des services externes qui produisent les événements, via une API REST qui gère les notifications.
 
@@ -78,7 +78,7 @@ Un protocole d'action de flux similaire existe pour `wsk trigger delete`.
 
 Il est facile de configurer un flux via un point d'ancrage si le producteur d'événement prend en charge une fonction de webhook/rappel.
 
-Avec cette méthode, il n'est *pas nécessaire* d'établir un service permanent hors d'OpenWhisk. La gestion des flux s'exécute naturellement par le biais d'*actions de flux* {{site.data.keyword.openwhisk_short}} sans état, qui négocient directement avec une API de webhook tierce.
+Avec cette méthode, il n'est *pas nécessaire* d'établir un service permanent hors d'OpenWhisk.  La gestion des flux s'exécute naturellement par le biais d'*actions de flux* {{site.data.keyword.openwhisk_short}} sans état, qui négocient directement avec une API de webhook tierce.
 
 Lorsqu'elle est appelée avec `CREATE`, l'action de flux installe simplement un webhook pour un autre service et demande au service distant d'envoyer des notifications à l'adresse URL `fireTrigger` appropriée dans OpenWhisk.
 
@@ -106,11 +106,11 @@ Cette procédure implémente un déclencheur reposant sur l'interrogation qui n'
 
 Les deux choix d'architecture précédents sont simples et faciles à implémenter. Cependant, si vous voulez créer un flux dont les performances sont élevées, il n'existe pas d'alternative aux connexions permanentes et à l'interrogation longue, ou à des techniques similaires.
 
-Etant donné que les actions {{site.data.keyword.openwhisk_short}} doivent être de courte durée, une action ne peut pas maintenir une connexion permanente à un tiers. A la place, nous devons établir un service distinct (hors d'OpenWhisk) qui s'exécute en permanence. Il s'agit de *services fournisseurs*. Un service fournisseur peut maintenir des connexions à des sources d'événement tierces qui prennent en charge l'interrogation longue ou d'autres notifications reposant sur les connexions.
+Etant donné que les actions {{site.data.keyword.openwhisk_short}} doivent être de courte durée, une action ne peut pas maintenir une connexion permanente à un tiers. A la place, nous devons établir un service distinct (hors d'OpenWhisk) qui s'exécute en permanence.   Il s'agit de *services fournisseurs*.  Un service fournisseur peut maintenir des connexions à des sources d'événement tierces qui prennent en charge l'interrogation longue ou d'autres notifications reposant sur les connexions.
 
-Le service fournisseur doit fournir une API REST qui permet à l'*action de flux* {{site.data.keyword.openwhisk_short}} de contrôler le flux. Il agit comme un proxy entre le fournisseur d'événements et {{site.data.keyword.openwhisk_short}} ; lorsqu'il reçoit des événements d'un tiers, il les envoie à {{site.data.keyword.openwhisk_short}} en exécutant un déclencheur.
+Le service fournisseur doit fournir une API REST qui permet à l'*action de flux* {{site.data.keyword.openwhisk_short}} de contrôler le flux.   Il agit comme un proxy entre le fournisseur d'événements et {{site.data.keyword.openwhisk_short}} ; lorsqu'il reçoit des événements d'un tiers, il les envoie à {{site.data.keyword.openwhisk_short}} en exécutant un déclencheur.
 
-Le flux *changes* de Cloudant en est un exemple canonique : il établit un service `cloudanttrigger` qui fait office de médiateur entre les notifications Cloudant sur une connexion permanente et des déclencheurs {{site.data.keyword.openwhisk_short}}. 
+Le flux *changes* de Cloudant en est un exemple canonique : il établit un service `cloudanttrigger` qui fait office de médiateur entre les notifications Cloudant sur une connexion permanente et des déclencheurs {{site.data.keyword.openwhisk_short}}.
 <!-- TODO: add a reference to the open source implementation -->
 
 Le flux *alarm* est implémenté avec un modèle similaire.

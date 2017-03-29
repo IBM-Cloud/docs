@@ -44,7 +44,7 @@ Para [Liberty for Java](/docs/runtimes/liberty/index.html) y las aplicaciones [j
 y volver a transferir la aplicación.  La aplicación utilizará los valores de proxy especificados en tiempo de ejecución. Consulte [Redes y proxies Java](https://docs.oracle.com/javase/8/docs/technotes/guides/net/proxies.html) para obtener más información sobre las opciones de proxy de Java.
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
 {: #general}
 * [Liberty for Java](/docs/runtimes/liberty/index.html)

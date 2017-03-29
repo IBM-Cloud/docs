@@ -18,7 +18,7 @@ lastupdated: "2017-02-06"
 {: #logging_kibana_time_filter}
 
 
-Sie können Protokolle für {{site.data.keyword.Bluemix_notm}}-Anwendungen nach Zeit im Kibana-Dashboard anzeigen und filtern. Sie können über die Registerkarte **Protokolle** für Ihre Cloud Foundry-App auf das Kibana-Dashboard zugreifen.
+Sie können Protokolle für {{site.data.keyword.Bluemix_notm}}-Anwendungen nach Zeit im Kibana-Dashboard anzeigen und filtern. Sie können über die Registerkarte **Protokolle** für Ihre Cloud Foundry-App auf das Kibana-Dashboard zugreifen. 
 {:shortdesc}
 
 Führen Sie die folgenden Tasks aus, um Ihre Cloud Foundry-App-Protokolle nach Zeit im Kibana-Dashboard anzuzeigen und zu filtern:
@@ -39,7 +39,7 @@ Führen Sie die folgenden Tasks aus, um Ihre Cloud Foundry-App-Protokolle nach Z
 
 4. Klicken Sie auf Felder **From** und **To**, um die Anfangszeit und die Endzeit für Ihren Filter zu bearbeiten. 
     
-    Zum Einschließen von Protokollen bis zum gegenwärtigen Augenblick, klicken Sie auf den Link **now**.
+    Zum Einschließen von Protokollen bis zum gegenwärtigen Augenblick, klicken Sie auf den Link **now**. 
     Wenn der Zeitbereich Ihren Vorstellungen entspricht, klicken Sie auf **Apply**. 
 
 Das Kibana-Dashboard zeigt jetzt protokollierte Ereignisse für Ihren angepassten Zeitfilter an.

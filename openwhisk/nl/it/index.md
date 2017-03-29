@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-21"
+lastupdated: "2017-02-21"
 
 ---
 
@@ -49,7 +49,7 @@ Passa a [Configura CLI](https://new-console.{DomainName}/openwhisk/cli){: new_wi
 - [Configurazione e utilizzo della CLI OpenWhisk](./openwhisk_cli.html)
 - [Utilizzo di OpenWhisk da un'applicazione iOS](./openwhisk_mobile_sdk.html)
 
-## Modello di programmazione 
+## Modello di programmazione
 {: #openwhisk_start_programming}
 - [Dettagli del sistema](./openwhisk_reference.html)
 - [Catalogo dei servizi forniti da OpenWhisk](./openwhisk_catalog.html)

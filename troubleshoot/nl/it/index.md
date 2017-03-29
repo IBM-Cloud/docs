@@ -118,11 +118,11 @@ spam folder. If you still have not received your email confirmation, contact <a 
 
 
 Dopo aver eseguito la registrazione per un account di prova {{site.data.keyword.Bluemix_notm}},
-riceverai un'email di conferma. Dovrai fare clic sul link
+riceverai un'e-mail di conferma. Dovrai fare clic sul link
 che si trova nella email di conferma per completare il processo di registrazione.
 {: tsCauses} 
 
-L'email di conferma viene inviata all'indirizzo di posta
+L'e-mail di conferma viene inviata all'indirizzo di posta
 da te fornito. Controlla la cartella della posta in arrivo e quella della posta indesiderata. Se non hai ricevuto un'e-mail di conferma, contatta il [{{site.data.keyword.Bluemix_notm}} Supporto ![icona link esterno](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}.  
 {: tsResolve}
 

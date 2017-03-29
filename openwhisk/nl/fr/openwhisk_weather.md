@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-21"
+lastupdated: "2017-02-21"
 
 ---
 
@@ -35,7 +35,7 @@ L'action `/whisk.system/weather/forecast` renvoie une prévision météorologiqu
 - `password` : mot de passe pour The Weather Company Data for IBM Bluemix qui est autorisé à appeler l'API de prévision.
 - `latitude` : coordonnée de latitude du lieu.
 - `longitude` : coordonnée de longitude du lieu.
-- `timeperiod` : période sur laquelle porte la prévision. Les options valides sont '10day' - (valeur par défaut) Renvoie une prévision quotidienne sur 10 jours, '48hour' - Renvoie une prévision horaire sur 2 jours, 'current' - Renvoie les conditions météorologiques actuelles, 'timeseries' - Renvoie les observations actuelles et jusqu'à 24 heures d'observations antérieures à partir de la date et de l'heure en cours.
+- `timePeriod`: période sur laquelle porte la prévision. Les options valides sont '10day' - (valeur par défaut) Renvoie une prévision quotidienne sur 10 jours, '48hour' - Renvoie une prévision horaire sur 2 jours, 'current' - Renvoie les conditions météorologiques actuelles, 'timeseries' - Renvoie les observations actuelles et jusqu'à 24 heures d'observations antérieures à partir de la date et de l'heure en cours.
 
 
 Voici un exemple de création d'une liaison de package, puis d'obtention d'une prévision à 10 jours :

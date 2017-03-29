@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-21"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -26,6 +26,13 @@ lastupdated: "2016-02-21"
 * [Python](#openwhisk_actions_python)
 * [Java](#openwhisk_actions_java)
 * [Docker](#openwhisk_actions_docker)
+
+此外，请了解：
+
+* [监视操作输出](#openwhisk_actions_polling)
+* [列出操作](#openwhisk_listing_actions)
+* [删除操作](#openwhisk_delete_action)
+* [访问操作体中的操作元数据](#openwhisk_action_metadata)
 
 
 ## 创建并调用 JavaScript 操作
@@ -54,7 +61,7 @@ JavaScript 文件可能包含其他函数。但是，根据约定，名为 `main
   ```
   wsk action create hello hello.js
   ```
-  {: pre}
+    {: pre}
   ```
   ok: created action hello
   ```
@@ -69,18 +76,20 @@ JavaScript 文件可能包含其他函数。但是，根据约定，名为 `main
   actions
   hello       private
   ```
-您可以看到刚才创建的 `hello` 操作。
 
-4. 创建操作后，可以使用“invoke”命令在 OpenWhisk 的云中运行该操作。可以通过在命令中指定标记以使用*阻塞*调用（即，请求/响应样式）或*非阻塞*调用来调用操作。阻塞调用请求将*等待*激活结果可用。等待时间段为 60 秒或为操作的已配置[时间限制](./openwhisk_reference.html#openwhisk_syslimits)（两者取较短的时间）。如果激活结果在等待时间段内可用，那么会返回激活结果。否则，激活会继续在系统中处理，并返回激活标识，以便可以稍后检查结果，这与非阻塞请求一样（请参阅[此处](#watching-action-output)，以获取有关监视激活的提示）。
+  您可以看到刚才创建的 `hello` 操作。
+
+4. 创建操作后，可以使用“invoke”命令在 OpenWhisk 的云中运行该操作。可以通过在命令中指定标记以使用*阻塞*调用（即，请求/响应样式）或*非阻塞*调用来调用操作。阻塞调用请求将*等待*激活结果可用。等待时间段为 60 秒或为操作的已配置[时间限制](./openwhisk_reference.html#openwhisk_syslimits)（两者取较短的时间）。如果激活结果在等待时间段内可用，那么会返回激活结果。否则，激活会继续在系统中处理，并返回激活标识，以便可以稍后检查结果，这与非阻塞请求一样（请参阅[此处](#openwhisk_actions_polling)，以获取有关监视激活的提示）。
 
   此示例使用的是阻塞参数 `--blocking`：
+
   ```
   wsk action invoke --blocking hello
   ```
   {: pre}
   ```
   ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
-  ```
+    ```
   ```json
   {
       "result": {
@@ -90,9 +99,11 @@ JavaScript 文件可能包含其他函数。但是，根据约定，名为 `main
       "success": true
   }
   ```
-此命令输出两条重要的信息：
+
+  此命令输出两条重要的信息：
   * 激活标识 (`44794bd6aab74415b4e42a308d880e5b`)
-  * 如果激活结果在预期的等待时间段内可用，那么输出调用结果  
+  * 如果激活结果在预期的等待时间段内可用，那么输出调用结果
+
   在本例中，结果为 JavaScript 函数返回的字符串 `Hello world`。激活标识可以用于在未来检索调用的日志或结果。  
 
 5. 如果不是立即需要操作结果，可以省略 `--blocking` 标记以进行非阻塞调用。可以在以后使用激活标识来获取结果。请参阅以下示例：
@@ -158,8 +169,7 @@ JavaScript 文件可能包含其他函数。但是，根据约定，名为 `main
   ```
   {: pre}
 
-  为了使用包含参数内容的文件，请创建 JSON 格式的包含参数的文件。
-然后，必须将文件名传递到 `param-file` 标志：
+  为了使用包含参数内容的文件，请创建 JSON 格式的包含参数的文件。然后，必须将文件名传递到 `param-file` 标志：
 
   名为 parameters.json 的示例参数文件：
   ```json
@@ -198,8 +208,7 @@ JavaScript 文件可能包含其他函数。但是，根据约定，名为 `main
   ```
   {: pre}
 
-  从文件传递参数需要创建包含所需内容的 JSON 格式的文件。
-然后，必须将文件名传递到 `-param-file` 标志：
+  从文件传递参数需要创建包含所需内容的 JSON 格式的文件。然后，必须将文件名传递到 `-param-file` 标志：
 
   名为 parameters.json 的示例参数文件：
   ```json
@@ -329,6 +338,7 @@ JavaScript 文件可能包含其他函数。但是，根据约定，名为 `main
 
 1. 将以下内容保存在名为 `weather.js` 的文件中。
 
+
   ```javascript
   var request = require('request');
 
@@ -361,7 +371,7 @@ JavaScript 文件可能包含其他函数。但是，根据约定，名为 `main
 2. 运行以下命令来创建并调用操作：
 
   ```
-wsk action create weather weather.js
+  wsk action create weather weather.js
   ```
   {: pre}
   ```
@@ -423,6 +433,9 @@ exports.main = myAction;
   zip -r action.zip *
   ```
   {: pre}
+
+    > 请注意：使用 Windows 资源管理器操作来创建 zip 文件将导致结构不正确。OpenWhisk zip 操作必须在 zip 的根目录中具有 `package.json`，而 Windows 资源管理器会将其放入嵌套文件夹内。最安全的选项是如上所示，在命令行上使用 `zip` 命令。
+
 
 3. 创建操作：
 
@@ -604,6 +617,68 @@ wsk action invoke --blocking --result helloSwift --param name World
 
 **注意：**Swift 操作在 Linux 环境中运行。Swift on Linux 仍在开发中；{{site.data.keyword.openwhisk_short}} 通常会使用最新可用发行版，但此版本不一定稳定。此外，用于 {{site.data.keyword.openwhisk_short}} 的 Swift 版本可能与 Mac OS 上 Xcode 的稳定发行版中的 Swift 版本不一致。
 
+### 将操作包装为 Swift 可执行文件
+{: #openwhisk_actions_swift_zip}
+使用 Swift 源文件创建 OpenWhisk Swift 操作后，必须先将该文件编译为二进制文件，才能运行该操作。一旦这样做后，对该操作的后续调用会快得多，直到清除保留该操作的容器为止。
+
+要避免编译步骤延迟，可以将 Swift 文件编译为二进制文件，然后将其以 zip 文件格式上传到 OpenWhisk。在需要 OpenWhisk 脚手架时，创建二进制文件最简单的方法是在与其将运行的环境相同的环境中进行构建。下面是具体步骤：
+
+- 运行交互式 Swift 操作容器。
+  ```
+  docker run -it -v "$(pwd):/owexec" openwhisk/swift3action bash
+  ```
+  {: pre}
+这会将您置于 Docker 容器内的 Bash shell 中。在其中执行以下命令：
+  
+- 为了方便起见，请安装 zip，以用于包装二进制文件
+  ```
+  apt-get install -y zip
+  ```
+  {: pre}
+- 复制源代码并准备对其进行构建
+  ```
+  cp /owexec/hello.swift /swift3Action/spm-build/main.swift 
+  ```
+  {: pre}
+  ```
+  cat /swift3Action/epilogue.swift >> /swift3Action/spm-build/main.swift
+  ```
+  {: pre}
+  ```
+  echo '_run_main(mainFunction:main)' >> /swift3Action/spm-build/main.swift
+  ```
+  {: pre}
+- zBuild 和链接
+  ```
+  /swift3Action/spm-build/swiftbuildandlink.sh
+  ```
+  {: pre}
+- 创建 zip 归档
+  ```
+  cd /swift3Action/spm-build
+  ```
+  {: pre}
+  ```
+  zip /owexec/hello.zip .build/release/Action
+  ```
+- 退出 Docker 容器
+  ```
+  exit
+  ```
+  {: pre}
+这已在 hello.swift 所在的目录中创建 hello.zip。
+-使用名为 helloSwifty 的操作将其上传到 OpenWhisk：
+  ```
+  wsk action update helloSwiftly hello.zip --kind swift:3
+  ```
+  {: pre}
+- 要检查其运行速度提高了多少，请运行 
+  ```
+  wsk action invoke helloSwiftly --blocking
+  ``` 
+  {: pre}
+
+
 ## 创建 Java 操作
 {: #openwhisk_actions_java}
 
@@ -742,14 +817,14 @@ cd dockerSkeleton
   现在，Docker 容器可用作 {{site.data.keyword.openwhisk_short}} 操作。
 
   ```
-wsk action create --docker example janesmith/blackboxdemo
+  wsk action create --docker example janesmith/blackboxdemo
   ```
   {: pre}
 
   请注意，创建操作时使用 `--docker`。目前，假定所有 Docker 映像都在 Docker Hub 上进行托管。该操作可能会作为其他任何 {{site.data.keyword.openwhisk_short}} 操作进行调用。
 
   ```
-wsk action invoke --blocking --result example --param payload Rey
+  wsk action invoke --blocking --result example --param payload Rey
   ```
   {: pre}
   ```json
@@ -764,7 +839,7 @@ wsk action invoke --blocking --result example --param payload Rey
   要更新 Docker 操作，请运行 buildAndPush.sh 以将最新的映像上传到 Docker Hub。这将允许系统在下次运行操作的代码时，拉取新的 Docker 映像。如果没有运行中的容器，那么任何新调用都将使用新的 Docker 映像。但是，如果有使用前版 Docker 映像的运行中容器，那么除非运行 `wsk action update`，否则任何新调用都将继续使用该映像。这将指示系统对于任何新调用，都应该执行 docekr pull 来获取新的 Docker 映像。
 
   ```
-./buildAndPush.sh janesmith/blackboxdemo
+  ./buildAndPush.sh janesmith/blackboxdemo
   ```
   {: pre}
 
@@ -793,11 +868,11 @@ wsk activation poll
 2. 切换到其他窗口，并调用操作：
 
   ```
-wsk action invoke /whisk.system/samples/helloWorld --param payload Bob
+  wsk action invoke /whisk.system/samples/helloWorld --param payload Bob
   ```
   {: pre}
   ```
-ok: invoked /whisk.system/samples/helloWorld with id 7331f9b9e2044d85afd219b12c0f1491
+  ok: invoked /whisk.system/samples/helloWorld with id 7331f9b9e2044d85afd219b12c0f1491
   ```
 
 3. 观察轮询窗口中的激活日志：
@@ -807,7 +882,26 @@ ok: invoked /whisk.system/samples/helloWorld with id 7331f9b9e2044d85afd219b12c0
     2016-02-11T16:46:56.842065025Z stdout: hello bob!
   ```
 
-  与此类似，每当运行轮询实用程序时，都会实时看到 {{site.data.keyword.openwhisk_short}} 中代表您运行的任何操作的日志。
+  与此类似，每当运行轮询实用程序时，都会实时看到 OpenWhisk 中代表您运行的任何操作的日志。
+
+
+## 列出操作
+{: #openwhisk_listing_actions}
+
+您可以使用以下命令列出已创建的所有操作：
+
+```
+wsk action list
+```
+{: pre}
+
+随着您编写更多操作，此列表会变长，因此将相关操作分组成[包](./packages.md)会很有用。要过滤操作列表以只列出特定包中的操作，可以使用以下命令： 
+
+```
+wsk action list [PACKAGE NAME]
+```
+{: pre}
+
 
 ## 删除操作
 {: #openwhisk_delete_action}
@@ -816,29 +910,30 @@ ok: invoked /whisk.system/samples/helloWorld with id 7331f9b9e2044d85afd219b12c0
 
 1. 运行以下命令来删除操作：
   ```
-wsk action delete hello
+  wsk action delete hello
   ```
   {: pre}
   ```
-ok: deleted hello
+  ok: deleted hello
   ```
 
 2. 验证该操作是否不再出现在操作列表中。
   ```
-wsk action list
+  wsk action list
   ```
   {: pre}
   ```
-actions
+  actions
   ```
   {: pre}
 
 ## 访问操作体中的操作元数据
+{: #openwhisk_action_metadata}
 
 操作环境包含多个特定于运行中操作的属性。这些属性允许操作以编程方式通过 REST API 来使用 OpenWhisk 资产，或者允许设置在操作即将耗尽其分配的时间预算时发出内部警报。使用 OpenWhisk Docker 框架时，这些属性可通过所有受支持运行时的系统环境进行访问：Node.js、Python、Swift、Java 和 Docker 操作。
 
 * `__OW_API_HOST`：运行此操作的 OpenWhisk 部署的 API 主机
-* `__OW_API_KEY`：调用此操作的主题的 API 密钥，此密钥可能是受限制的 API 密钥
+* `__OW_API_KEY`：调用此操作的主体的 API 密钥，此密钥可能是受限制的 API 密钥
 * `__OW_NAMESPACE`：*激活*的名称空间（这可能与操作的名称空间不同）
 * `__OW_ACTION_NAME`：运行中操作的标准名称
 * `__OW_ACTIVATION_ID`：此运行中操作实例的激活标识

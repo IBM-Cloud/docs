@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-21"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -26,6 +26,13 @@ In den folgenden Abschnitten finden Sie Informationen dazu, wie Sie Aktionen in 
 * [Python](#openwhisk_actions_python)
 * [Java](#openwhisk_actions_java)
 * [Docker](#openwhisk_actions_docker)
+
+Außerdem enthalten die folgenden Abschnitte wissenswerte Informationen:
+
+* [Aktionsausgaben beobachten](#openwhisk_actions_polling)
+* [Aktionen auflisten](#openwhisk_listing_actions)
+* [Aktionen löschen](#openwhisk_delete_action)
+* [In der Aktionskomponente auf Aktionsmetadaten zugreifen](#openwhisk_action_metadata)
 
 
 ## JavaScript-Aktionen erstellen und aufrufen
@@ -54,7 +61,7 @@ Sehen Sie sich die folgenden Schritte und Beispiele an, um Ihre erste JavaScript
   ```
   wsk action create hello hello.js
   ```
-  {: pre}
+    {: pre}
   ```
   ok: created action hello
   ```
@@ -69,18 +76,20 @@ Sehen Sie sich die folgenden Schritte und Beispiele an, um Ihre erste JavaScript
   actions
   hello       private
   ```
+
   Die soeben erstellte Aktion `hello` wird angezeigt.
 
-4. Nach dem Erstellen der Aktion können Sie sie in der Cloud in OpenWhisk mit dem Befehl 'invoke' ausführen. Sie können Aktionen mit einem blockierenden (Flag *blocking*) oder mit einem nicht blockierenden (Flag *non-blocking*) Aufruf (d. h. Anforderung/Antwort) ausführen. Eine Anforderung für einen blockierenden Aufruf *wartet*, bis das Aktivierungsergebnis verfügbar ist. Der Wartezeitraum beträgt weniger als 60 Sekunden oder hat ein [Zeitlimit](./openwhisk_reference.html#openwhisk_syslimits), das für die Aktion konfiguriert wurde. Das Ergebnis der Aktivierung wird zurückgegeben, wenn es innerhalb des Wartezeitraums verfügbar ist. Anderenfalls fährt die Aktivierung mit der Verarbeitung weiter und eine Aktivierungs-ID wird zurückgegeben, sodass das Ergebnis wie bei nicht blockierenden Anforderungen später geprüft werden kann (weitere Tipps zur Überwachung von Aktivierungen finden Sie [hier](#watching-action-output)).
+4. Nach dem Erstellen der Aktion können Sie sie in der Cloud in OpenWhisk mit dem Befehl 'invoke' ausführen. Sie können Aktionen mit einem blockierenden (Flag *blocking*) oder mit einem nicht blockierenden (Flag *non-blocking*) Aufruf (d. h. Anforderung/Antwort) ausführen. Eine Anforderung für einen blockierenden Aufruf *wartet*, bis das Aktivierungsergebnis verfügbar ist. Der Wartezeitraum beträgt weniger als 60 Sekunden oder hat ein [Zeitlimit](./openwhisk_reference.html#openwhisk_syslimits), das für die Aktion konfiguriert wurde. Das Ergebnis der Aktivierung wird zurückgegeben, wenn es innerhalb des Wartezeitraums verfügbar ist. Anderenfalls fährt die Aktivierung mit der Verarbeitung weiter und eine Aktivierungs-ID wird zurückgegeben, sodass das Ergebnis wie bei nicht blockierenden Anforderungen später geprüft werden kann (weitere Tipps zur Überwachung von Aktivierungen finden Sie [hier](#openwhisk_actions_polling)).
 
   Im folgenden Beispiel wird der Blockierungsparameter `--blocking` verwendet:
+
   ```
   wsk action invoke --blocking hello
   ```
   {: pre}
   ```
   ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
-  ```
+    ```
   ```json
   {
       "result": {
@@ -90,9 +99,11 @@ Sehen Sie sich die folgenden Schritte und Beispiele an, um Ihre erste JavaScript
       "success": true
   }
   ```
+
   Der Befehl gibt zwei wichtige Informationen aus:
   * Die Aktivierungs-ID (`44794bd6aab74415b4e42a308d880e5b`)
-  * Das Aufrufergebnis, wenn es innerhalb des erwarteten Wartezeitraums verfügbar ist  
+  * Das Aufrufergebnis, wenn es innerhalb des erwarteten Wartezeitraums verfügbar ist
+
   Das Ergebnis ist in diesem Fall die Zeichenfolge `Hello world`, die von der JavaScript-Funktion zurückgegeben wird. Mithilfe der Aktivierungs-ID können später die Protokolle oder das Ergebnis des Aufrufs abgerufen werden.  
 
 5. Wenn Sie das Aktionsergebnis nicht sofort benötigen, können Sie das Flag `--blocking` nicht angeben und einen nicht blockierenden Aufruf ausführen. Später können Sie das Ergebnis über die Aktivierungs-ID abrufen. Beispiel:
@@ -435,6 +446,9 @@ Gehen Sie wie folgt vor, um aus diesem Paket eine OpenWhisk-Aktion zu erstellen:
   ```
   {: pre}
 
+    > Hinweis: Die Verwendung der Windows Explorer-Aktion zur Erstellung der ZIP-Datei führt zu einer falschen Struktur. OpenWhisk-ZIP-Aktionen müssen `package.json` am Stammelement der ZIP-Datei aufweisen, während Windows Explorer die Datei in einem verschachtelten Ordner ablegt. Am sichersten ist die Verwendung des oben gezeigten Befehlszeilenbefehls `zip`.
+
+
 3. Erstellen Sie die Aktion:
 
   ```
@@ -619,6 +633,68 @@ wsk action invoke --blocking --result helloSwift --param name World
 
 
 **Achtung:** Swift-Aktionen werden in einer Linux-Umgebung ausgeführt. Swift unter Linux befindet sich noch in Entwicklung und {{site.data.keyword.openwhisk_short}} arbeitet in der Regel mit dem neuesten verfügbaren Release, das jedoch nicht unbedingt stabil ist. Darüber hinaus ist es möglich, dass die mit {{site.data.keyword.openwhisk_short}} verwendete Version von Swift nicht mit den Versionen von Swift aus stabilen Releases von XCode on MacOS konsistent ist.
+
+### Aktion als ausführbare Swift-Datei paketieren
+{: #openwhisk_actions_swift_zip}
+Wenn Sie eine OpenWhisk-Swift-Aktion mit einer Swift-Quellendatei erstellen, muss diese in eine Binärdatei kompiliert werden, bevor die Aktion ausgeführt wird. Danach werden Aufrufe der Aktion viel schneller durchgeführt, bis der Container, in dem die Aktion enthalten ist, gelöscht wird. 
+
+Um die Verzögerung zu vermeiden, die durch den Kompilierungsschritt entsteht, können Sie Ihre Swift-Datei in eine Binärdatei kompilieren und anschließend in einer ZIP-Datei in OpenWhisk hochladen. Da Sie das OpenWhisk-Scaffolding benötigen, ist es am einfachsten, die Binärdatei innerhalb derselben Umgebung zu erstellen, in der sie ausgeführt wird. Die Schritte lauten wie folgt:
+
+- Führen Sie einen interaktiven Container für Swift-Aktionen aus. 
+  ```
+  docker run -it -v "$(pwd):/owexec" openwhisk/swift3action bash
+  ```
+  {: pre}
+Anschließend befinden Sie sich in einer Bash-Shell innerhalb des Docker-Containers. Führen Sie die folgenden Befehle in dieser Shell aus:
+  
+- Installieren Sie der Einfachheit halber 'zip', um die Binärdatei zu paketieren:
+  ```
+  apt-get install -y zip
+  ```
+  {: pre}
+- Kopieren Sie den Quellcode und bereiten Sie den Build vor: 
+  ```
+  cp /owexec/hello.swift /swift3Action/spm-build/main.swift 
+  ```
+  {: pre}
+  ```
+  cat /swift3Action/epilogue.swift >> /swift3Action/spm-build/main.swift
+  ```
+  {: pre}
+  ```
+  echo '_run_main(mainFunction:main)' >> /swift3Action/spm-build/main.swift
+  ```
+  {: pre}
+- Führen Sie den Build (zBuild) aus und erstellen Sie den Link: 
+  ```
+  /swift3Action/spm-build/swiftbuildandlink.sh
+  ```
+  {: pre}
+- Erstellen Sie das ZIP-Archiv: 
+  ```
+  cd /swift3Action/spm-build
+  ```
+  {: pre}
+  ```
+  zip /owexec/hello.zip .build/release/Action
+  ```
+- Beenden Sie den Docker-Container: 
+  ```
+  exit
+  ```
+  {: pre}
+Hierdurch wurde eine Datei 'hello.zip' in demselben Verzeichnis wie 'hello.swift' erstellt.
+- Laden Sie die Datei mit dem Aktionsnamen 'helloSwifty' in OpenWhisk hoch:
+  ```
+  wsk action update helloSwiftly hello.zip --kind swift:3
+  ```
+  {: pre}
+  Führen Sie den folgenden Befehl aus, um zu prüfen, wie viel schneller die Aktion ist:  
+  ```
+  wsk action invoke helloSwiftly --blocking
+  ``` 
+  {: pre}
+
 
 ## Java-Aktionen erstellen
 {: #openwhisk_actions_java}
@@ -847,7 +923,26 @@ Sie können die Ausgabe von Aktionen, wenn sie aufgerufen werden, über die {{si
     2016-02-11T16:46:56.842065025Z stdout: hello bob!
   ```
 
-  Immer wenn Sie das Dienstprogramm 'poll' ausführen, werden die Protokolle für Aktionen, die für Sie in {{site.data.keyword.openwhisk_short}} ausgeführt werden, in Echtzeit angezeigt.
+  Immer wenn Sie das Dienstprogramm 'poll' ausführen, werden die Protokolle für Aktionen, die für Sie in OpenWhisk ausgeführt werden, in Echtzeit angezeigt.
+
+
+## Aktionen auflisten
+{: #openwhisk_listing_actions}
+
+Mit dem folgenden Befehl können Sie alle Aktionen auflisten, die Sie erstellt haben: 
+
+```
+wsk action list
+```
+{: pre}
+
+Je mehr Aktionen Sie schreiben, desto umfangreicher wird die Liste. Es kann daher hilfreich sein, zusammengehörige Aktionen in [Paketen](./packages.md) zu gruppieren. Mit dem folgenden Befehl können Sie die Liste der Aktionen so filtern, dass nur Aktionen aus einem bestimmten Paket angezeigt werden:  
+
+```
+wsk action list [PAKETNAME]
+```
+{: pre}
+
 
 ## Aktionen löschen
 {: #openwhisk_delete_action}
@@ -874,6 +969,7 @@ Sie können eine Bereinigung durchführen, indem Sie Aktionen löschen, die nich
   {: pre}
 
 ## In der Aktionskomponente auf Aktionsmetadaten zugreifen
+{: #openwhisk_action_metadata}
 
 Die Aktionsumgebung enthält mehrere Eigenschaften, die für die aktive Aktion spezifisch sind.
 Mit diesen kann die Aktion programmgestützt über die REST-API mit OpenWhisk-Assets arbeiten oder einen internen

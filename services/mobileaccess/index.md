@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-03-22"
 
 ---
 {:new_window: target="_blank"}
@@ -69,7 +69,7 @@ To get up and running with the {{site.data.keyword.amashort}} service:
 **Optional:** Configure an identity provider for your application. You can configure one identity provider per application. Configuring an identity provider enables the users of your mobile app to log in with their existing Facebook or Google+ account. Or, you can define how users log in by creating a custom authentication.
    * [Authenticating users with Facebook credentials](facebook-auth-overview.html)
    * [Authenticating users with Google credentials](google-auth-overview.html)
-   * [Authenticating users with a custom identity provider](custom-auth.html) --->
+   * [Authenticating users with a custom identity provider](custom-auth.html)
 
 ## Tutorials and Samples
 {: #samples}
@@ -86,4 +86,4 @@ To get up and running with the {{site.data.keyword.amashort}} service:
 
 * [Custom authentication - simple sample ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}
 
-* [Custom authentication - advanced sample ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management){: new_window}
+* [Custom authentication - advanced sample ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management){: new_window} --->

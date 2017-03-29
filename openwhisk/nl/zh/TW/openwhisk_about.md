@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-21"
+lastupdated: "2017-02-21"
 
 ---
 
@@ -14,7 +14,8 @@ lastupdated: "2016-02-21"
 
 # 關於 {{site.data.keyword.openwhisk_short}}
 
-{{site.data.keyword.openwhisk}} 是事件驅動運算平台（也稱為「無伺服器運算」或「功能即服務 (FaaS)」），會執行程式碼來回應事件或直接呼叫。下圖顯示高階 {{site.data.keyword.openwhisk}} 架構。{: shortdesc}
+{{site.data.keyword.openwhisk}} 是事件驅動運算平台（也稱為「無伺服器運算」或「函數即服務 (FaaS)」），會執行程式碼來回應事件或直接呼叫。下圖顯示高階 {{site.data.keyword.openwhisk}} 架構。
+{: shortdesc}
 
 ![{{site.data.keyword.openwhisk_short}} 架構](./images/OpenWhisk.png)
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-21"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -26,6 +26,13 @@ Aprenda como criar, chamar e depurar ações em seu ambiente de desenvolvimento 
 * [Python](#openwhisk_actions_python)
 * [Java](#openwhisk_actions_java)
 * [Docker](#openwhisk_actions_docker)
+
+Além disso, saiba mais sobre:
+
+* [Observando a saída da ação](#openwhisk_actions_polling)
+* [Listando ações](#openwhisk_listing_actions)
+* [Excluindo Ações](#openwhisk_delete_action)
+* [Acessando metadados de ação dentro do corpo de ação](#openwhisk_action_metadata)
 
 
 ## Criando e chamando ações JavaScript
@@ -54,7 +61,7 @@ Revise as etapas e os exemplos a seguir para criar sua primeira ação JavaScrip
   ```
   wsk action create hello hello.js
   ```
-  {: pre}
+    {: pre}
   ```
   ok: ação hello criada
   ```
@@ -69,18 +76,20 @@ Revise as etapas e os exemplos a seguir para criar sua primeira ação JavaScrip
   ações
   hello       privada
   ```
+
   É possível ver a ação `hello` que acabou de criar.
 
-4. Após você criar a sua ação, será possível executá-la na nuvem no OpenWhisk com o comando 'invoke'. É possível chamar ações com uma chamada de *bloqueio* (ou seja, estilo de solicitação/resposta) ou uma chamada de *não bloqueio* especificando uma sinalização no comando. Uma solicitação de chamada de bloqueio irá *esperar* que o resultado de ativação fique disponível. O período de espera é o menor dentre 60 segundos ou o [limite de tempo](./openwhisk_reference.html#openwhisk_syslimits) configurado da ação. O resultado da ativação será retornado se ele estiver disponível dentro do período de espera. Caso contrário, a ativação continuará o processamento no sistema e um ID de ativação será retornado para seja possível verificar o resultado posteriormente, como com solicitações de não bloqueio (consulte [aqui](#watching-action-output) para obter dicas sobre ativações de monitoramento).
+4. Após você criar a sua ação, será possível executá-la na nuvem no OpenWhisk com o comando 'invoke'. É possível chamar ações com uma chamada de *bloqueio* (ou seja, estilo de solicitação/resposta) ou uma chamada de *não bloqueio* especificando uma sinalização no comando. Uma solicitação de chamada de bloqueio irá *esperar* que o resultado de ativação fique disponível. O período de espera é o menor dentre 60 segundos ou o [limite de tempo](./openwhisk_reference.html#openwhisk_syslimits) configurado da ação. O resultado da ativação será retornado se ele estiver disponível dentro do período de espera. Caso contrário, a ativação continuará o processamento no sistema e um ID de ativação será retornado para seja possível verificar o resultado posteriormente, como com solicitações de não bloqueio (consulte [aqui](#openwhisk_actions_polling) para obter dicas sobre ativações de monitoramento).
 
   Este exemplo usa o parâmetro de bloqueio, `--blocking`:
+
   ```
   wsk action invoke --blocking hello
   ```
   {: pre}
   ```
   ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
-  ```
+    ```
   ```json
      {
       "result": {
@@ -90,9 +99,11 @@ Revise as etapas e os exemplos a seguir para criar sua primeira ação JavaScrip
       "success": true
   }
   ```
+
   A saída de comando inclui duas informações importantes:
   * O ID de ativação (`44794bd6aab74415b4e42a308d880e5b`)
-  * O resultado da chamada se ele estiver disponível dentro do período de espera estimado  
+  * O resultado da chamada se ele estiver disponível dentro do período de espera estimado
+
   O resultado nesse caso é a sequência `Hello world` retornada pela função JavaScript. O ID de ativação pode ser usado para recuperar os logs ou o resultado da chamada em um momento futuro.  
 
 5. Se você não precisar do resultado da ação imediatamente, será possível omitir a sinalização `--blocking` para fazer uma chamada sem bloqueio. É possível obter o resultado posteriormente usando o ID da ativação. Consulte o exemplo a seguir:
@@ -425,6 +436,9 @@ Para criar uma ação do OpenWhisk a partir deste pacote:
   ```
   {: pre}
 
+    > Observe: usar a ação do Windows Explorer para criar o arquivo zip resultará em uma estrutura incorreta. As ações zip do OpenWhisk deverão ter o `package.json` na raiz do zip, enquanto o Windows Explorer o colocará dentro de uma pasta aninhada. A opção mais segura é usar o comando `zip` da linha de comandos, conforme mostrado acima.
+
+
 3. Crie a ação:
 
   ```
@@ -618,6 +632,67 @@ wsk action invoke --blocking --result helloSwift --param name World
 
 **Atenção:** as ações Swift são executadas em um ambiente Linux. Swift no Linux ainda está em desenvolvimento
 e o {{site.data.keyword.openwhisk_short}} geralmente usa a liberação mais recente disponível, que não está necessariamente estável. Além disso, a versão do Swift usada com o {{site.data.keyword.openwhisk_short}} pode estar inconsistente com versões do Swift de liberações estáveis do XCode no MacOS.
+
+### Empacotando uma ação como um executável do Swift
+{: #openwhisk_actions_swift_zip}
+Ao criar uma ação do Swift do OpenWhisk com um arquivo de origem do Swift, ele precisa ser compilado em um binário antes de a ação ser executada. Depois de isso ser feito, as chamadas subsequentes para a ação serão muito mais rápidas até que o contêiner que está mantendo sua ação seja limpo.
+
+Para evitar o atraso da etapa de compilação, será possível compilar seu arquivo Swift em um binário e, em seguida, fazer upload dele para o OpenWhisk em um arquivo zip. Uma vez que o andaime do OpenWhisk será necessária, a maneira mais fácil de criar o binário será construí-lo no mesmo ambiente em que será executado. Estas são as etapas:
+
+- Execute um contêiner interativo da ação do Swift.
+  ```
+  docker run -it -v "$(pwd):/owexec" openwhisk/swift3action bash
+  ```
+  {: pre}
+Isso o coloca em um shell bash dentro do contêiner do Docker. Execute os comandos a seguir dentro dele:
+  
+- Instale o zip por conveniência, para empacotar o binário
+  ```
+  apt-get install -y zip
+  ```
+  {: pre}
+- Copie o código-fonte e prepare para construí-lo
+  ```
+  cp /owexec/hello.swift /swift3Action/spm-build/main.swift 
+  ```
+  {: pre}
+  ```
+  cat /swift3Action/epilogue.swift >> /swift3Action/spm-build/main.swift
+  ```
+  {: pre}
+  ```
+  echo '_run_main(mainFunction:main)' >> /swift3Action/spm-build/main.swift
+  ```
+  {: pre}
+- zBuild e link
+  ```
+  /swift3Action/spm-build/swiftbuildandlink.sh
+  ```
+  {: pre}
+- Crie o archive zip:
+  ```
+  cd /swift3Action/spm-build
+  ```
+  {: pre}
+  ```
+  zip /owexec/hello.zip .build/release/Action
+  ```
+- Saia do contêiner do Docker
+  ```
+  exit
+  ```
+  {: pre}
+Isso criou hello.zip no mesmo diretório que hello.swift. -Faça upload dele para o OpenWhisk com o nome de ação helloSwifty:
+  ```
+  wsk action update helloSwiftly hello.zip --kind swift:3
+  ```
+  {: pre}
+- Para verificar o quanto ele é mais rápido, execute 
+  ```
+  wsk action invoke helloSwiftly --blocking
+  ``` 
+  {: pre}
+
 
 ## Criando ações Java
 {: #openwhisk_actions_java}
@@ -836,7 +911,26 @@ As ações do {{site.data.keyword.openwhisk_short}} podem ser chamadas por outro
     2016-02-11T16:46:56.842065025Z stdout: hello bob!
   ```
 
-  Da forma semelhante, sempre que você executar o utilitário de pesquisa, verá em tempo real os logs para quaisquer ações em execução em seu nome no {{site.data.keyword.openwhisk_short}}.
+  Da mesma forma, sempre que executar o utilitário de pesquisa, você verá em tempo real os logs de quaisquer ações em execução em seu nome no OpenWhisk.
+
+
+## Listando Ações
+{: #openwhisk_listing_actions}
+
+É possível listar todas as ações criadas, usando:
+
+```
+wsk action list
+```
+{: pre}
+
+Conforme você gravar mais ações, essa lista ficará mais longa e poderá ser útil para agrupar ações relacionadas nos [pacotes](./packages.md). Para filtrar sua lista de ações apenas àquelas de um pacote específico, será possível usar: 
+
+```
+wsk action list [PACKAGE NAME]
+```
+{: pre}
+
 
 ## Excluindo Ações
 {: #openwhisk_delete_action}
@@ -863,6 +957,7 @@ As ações do {{site.data.keyword.openwhisk_short}} podem ser chamadas por outro
   {: pre}
 
 ## Acessando metadados de ação dentro do corpo de ação
+{: #openwhisk_action_metadata}
 
 O ambiente de ação contém várias propriedades que são específicas da ação em execução.
 Elas permitem que a ação trabalhe programaticamente com ativos do OpenWhisk por meio da API de REST

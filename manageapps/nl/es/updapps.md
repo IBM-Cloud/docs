@@ -12,14 +12,14 @@ lastupdated: "2016-08-25"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Actualización de apps
+# Actualización de apps
 {: #updatingapps}
 
 
 Puede utilizar el mandato cf push o {{site.data.keyword.Bluemix}} DevOps Services para actualizar las apps en {{site.data.keyword.Bluemix_notm}}. En muchos casos, incluso para los paquetes de compilación integrados como Node.js, también debe escribir un parámetro -c para especificar el mandato que se sebe utilizar para iniciar la aplicación.
 {:shortdesc}
 
-##Creación y utilización de un dominio personalizado
+## Creación y utilización de un dominio personalizado
 {: #domain}
 
 Para apps de CF y grupos de contenedores, puede utilizar un dominio personalizado en el URL de la aplicación en lugar del dominio del sistema {{site.data.keyword.Bluemix_notm}} predeterminado, que es mybluemix.net.
@@ -127,7 +127,7 @@ El *despliegue Blue-Green* es una técnica de despliegue con tiempo de inactivid
 
 Si ya ha desplegado una aplicación en {{site.data.keyword.Bluemix_notm}} y desea actualizar la aplicación a una nueva versión, puede utilizar cualquiera de los dos enfoques siguientes para garantizar un despliegue blue-green.
 
-###Ejemplo: Utilización del mandato cf rename
+### Ejemplo: Utilización del mandato cf rename
 
 En este ejemplo, el nombre de la aplicación es Blue. El ejemplo muestra cómo actualizar la versión de *Blue* mediante el mandato **cf rename** sin interrumpir el tráfico destinado a la aplicación. Si lo desea, puede suprimir la versión antigua de *Blue* cuando la versión actualizada esté en vigor.
 
@@ -197,7 +197,7 @@ delete**.
 
   **Resultado:** La app *Blue* responde al URL `Blue.mybluemix.net`.
 
-###Ejemplo: Utilización del mandato cf map-route
+### Ejemplo: Utilización del mandato cf map-route
 
 En este ejemplo, *Blue* es la aplicación previamente desplegada y *Green* es la versión actualizada. Este ejemplo muestra cómo actualizar la versión de *Blue* mediante el mandato **cf map-route** sin interrumpir el tráfico destinado a la aplicación. Si lo desea, puede suprimir la versión antigua de *Blue* cuando la versión actualizada esté en vigor.
 
@@ -300,7 +300,7 @@ delete`.
 
 
 # Enlaces relacionados
-{: #rellinks}
+{: #rellinks notoc}
 
 ## Enlaces relacionados
 {: #general}

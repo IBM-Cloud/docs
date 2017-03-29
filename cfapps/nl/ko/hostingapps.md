@@ -190,6 +190,6 @@ services = JSON.parse(ENV['VCAP_SERVICES'], :symbolize_names => true)
 * [IBM Containers](/docs/containers/container_index.html)
 * [가상 머신](/docs/virtualmachines/vm_index.html)
 * [Delivery Pipeline 시작하기](/docs/services/DeliveryPipeline/index.html)
-* [IBM Eclipse Tools for Bluemix를 사용하여 앱 배치](/docs/manageapps/eclipsetools/eclipsetools.html)
+* [IBM Eclipse Tools for Bluemix로 앱 배치](/docs/manageapps/eclipsetools/eclipsetools.html)
 * [The twelve-factor app ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}
 * [Reaching enterprise backend with Bluemix Secure Gateway via console ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}

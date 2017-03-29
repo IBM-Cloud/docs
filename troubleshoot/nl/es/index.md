@@ -64,11 +64,11 @@ Cuando intente comprobar la app o los servicios en la página de detalles de la 
 `Hay cambios sin guardar en la página app_name. Guarde o cancele los cambios.`
 
 
-Cuando desplace el ratón sobre el campo **INSTANCES** o **MEMORY QUOTA** del panel de tiempo de ejecución, los valores cambiarán. Este comportamiento es mediante diseño; sin embargo, el mensaje de error le solicitará que guarde los valores de instancia o de memoria para poder navegar fuera de la página. 
+Cuando desplace el ratón sobre el campo **INSTANCIAS** o **CUOTA DE MEMORIA** del panel de tiempo de ejecución, los valores cambiarán. Este comportamiento es mediante diseño; sin embargo, el mensaje de error le solicitará que guarde los valores de instancia o de memoria para poder navegar fuera de la página. 
 {: tsCauses}
 
 
-Cierre la ventana de mensajes y, a continuación, pulse el botón **RESET** en el panel de tiempo de ejecución. 
+Cierre la ventana de mensajes y, a continuación, pulse el botón **RESTABLECER** en el panel de tiempo de ejecución. 
 {: tsResolve} 
 
 

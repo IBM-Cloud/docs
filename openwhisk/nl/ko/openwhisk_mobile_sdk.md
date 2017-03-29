@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-26"
+  years: 2016, 2017
+lastupdated: "2017-02-23"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:screen: .screen}
 {:pre: .pre}
 
 # {{site.data.keyword.openwhisk_short}} 모바일 SDK 사용
@@ -87,7 +87,7 @@ Xcode를 통해 `OpenWhisk.xcodeproj`를 사용하여 프로젝트를 여십시�
 {{site.data.keyword.openwhisk_short}} CLI를 사용하여 {{site.data.keyword.openwhisk_short}} SDK 프레임워크를 임베드하는 예제 코드를 다운로드할 수 있습니다.  
 
 스타터 앱 예제를 설치하려면 다음 명령을 입력하십시오. 
-```
+```bash
 wsk sdk install iOS
 ```
 {: pre}
@@ -95,7 +95,7 @@ wsk sdk install iOS
 이 명령은 스타터 앱이 포함된 압축 파일을 다운로드합니다. 프로젝트 디렉토리에 podfile이 있습니다.
 
 SDK를 설치하려면 다음 명령을 입력하십시오.
-```
+```bash
 pod install
 ```
 {: pre}
@@ -107,7 +107,7 @@ pod install
 
 예를 들어, 다음 예제 코드를 사용하여 신임 정보 오브젝트를 작성하십시오.
 
-```
+```swift
 let credentialsConfiguration = WhiskCredentials(accessKey: "myKey", accessToken: "myToken")
 
 let whisk = Whisk(credentials: credentialsConfiguration!)
@@ -116,7 +116,7 @@ let whisk = Whisk(credentials: credentialsConfiguration!)
 
 앞의 예제에서 {{site.data.keyword.openwhisk_short}}에서 가져온 `myKey`와 `myToken`을 전달합니다. 다음 CLI 명령을 사용하여 키 및 토큰을 검색할 수 있습니다.
 
-```
+```bash
 wsk property get --auth
 ```
 {: pre}
@@ -135,7 +135,7 @@ whisk auth        kkkkkkkk-kkkk-kkkk-kkkk-kkkkkkkkkkkk:ttttttttttttttttttttttttt
 
 예를 들어, 다음과 같습니다. 
 
-```
+```swift
 // In this example, we are invoking an action to print a message to the {{site.data.keyword.openwhisk_short}} Console
 var params = Dictionary<String, String>()
 params["payload"] = "Hi from mobile"
@@ -163,7 +163,7 @@ do {
 
 원격 트리거를 실행하기 위해 `fireTrigger` 메소드를 호출할 수 있습니다. 사전을 사용하여 필요한 매개변수를 전달하십시오.
 
-```
+```swift
 // In this example we are firing a trigger when our location has changed by a certain amount
 
 var locationParams = Dictionary<String, String>()
@@ -191,7 +191,7 @@ do {
 
 조치가 결과를 리턴하는 경우, invokeAction 호출에서 hasResult를 true로 설정하십시오. 조치의 결과는 응답 사전에서 리턴됩니다. 예를 들어, 다음과 같습니다.
 
-```
+```swift
 do {
     try whisk.invokeAction(name: "actionWithResult", package: "mypackage", namespace: "mynamespace", parameters: params, hasResult: true, callback: {(reply, error) -> Void in
 
@@ -214,7 +214,7 @@ do {
 
 기본적으로 SDK는 호출된 조치에서 생성되는 결과와 활성화 ID만 리턴합니다. HTTP 응답 상태 코드를 포함하여 전체 응답 오브젝트의 메타데이터를 가져오려면 다음 설정을 사용하십시오.
 
-```
+```swift
 whisk.verboseReplies = true
 ```
 {: codeblock}
@@ -224,7 +224,7 @@ whisk.verboseReplies = true
 
 baseURL 매개변수를 사용하면 {{site.data.keyword.openwhisk_short}}의 다른 설치와 함께 작업하도록 SDK를 구성할 수 있습니다. 예를 들어, 다음과 같습니다.
 
-```
+```swift
 whisk.baseURL = "http://localhost:8080"
 ```
 {: codeblock}
@@ -233,7 +233,7 @@ whisk.baseURL = "http://localhost:8080"
 
 특수 네트워크 처리가 필요한 경우 사용자 정의 NSURLSession을 패스할 수 있습니다. 예를 들어, 자체 서명된 인증서를 사용하는 {{site.data.keyword.openwhisk_short}} 설치가 있을 수 있습니다.
 
-```
+```swift
 // create a network delegate that trusts everything
 class NetworkUtilsDelegate: NSObject, NSURLSessionDelegate {
     func URLSession(session: NSURLSession, didReceiveChallenge challenge: NSURLAuthenticationChallenge, completionHandler: (NSURLSessionAuthChallengeDisposition, NSURLCredential?) -> Void) {
@@ -266,7 +266,7 @@ whisk.urlSession = session
 
 편의상 SDK에는 조치를 호출할 수 있도록 해주는 `UIButton`을 확장하는 `WhiskButton`이 포함됩니다. `WhiskButton`을 사용하려면 다음 예를 따르십시오.
 
-```
+```swift
 var whiskButton = WhiskButton(frame: CGRectMake(0,0,20,20))
 
 whiskButton.setupWhiskAction("helloConsole", package: "mypackage", namespace: "_", credentials: credentialsConfiguration!, hasResult: false, parameters: nil, urlSession: nil)

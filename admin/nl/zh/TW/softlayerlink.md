@@ -92,23 +92,37 @@ lastupdated: "2017-01-11"
 ## 切換至 IBM ID
 {: #ibmid_switch}
 
-SoftLayer 中的鑑別現在使用 IBM ID 來提供所有 {{site.data.keyword.Bluemix_notm}} 的單一登入。將會啟用現有 SoftLayer 帳戶來切換至 IBM ID 鑑別，而且移轉精靈會引導您完成這項切換。
+SoftLayer 中的鑑別現在使用 IBM ID 來提供所有 {{site.data.keyword.Bluemix_notm}} 的單一登入。現有的 SoftLayer 帳戶將可切換至 IBM ID 鑑別。移轉精靈會引導您完成這項切換。
 {:shortdesc}
 
-如果您是 {{site.data.keyword.slportal}} 中的主要使用者，而且沒有看到切換至 IBM ID 的提示，請[聯絡 IBM 支援中心](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)以取得啟用此特性的協助。
+如果您是主要使用者，而 {{site.data.keyword.slportal}} 中未顯示切換至 IBM ID 的提示，請[聯絡 IBM 支援中心](/docs/support/index.html#contacting-support)以取得啟用此特性的協助。
 
-開始切換至 IBM ID 時，在完成此過程之前隨時都可以取消這項切換。不過，在下次登入時，系統還是會提示您切換至 IBM ID。您計劃要鏈結至 {{site.data.keyword.Bluemix_notm}} 帳戶的每一個帳戶都必須為具有唯一電子郵件位址的唯一 IBM ID 所擁有。
+開始切換至 IBM ID 時，在完成這項程序之前，您隨時都可以取消此切換作業。不過，在您每次登入時，都會顯示切換至 IBM ID 的提示。您計劃要鏈結至 {{site.data.keyword.Bluemix_notm}} 帳戶的每一個 SoftLayer 帳戶，都必須為具有唯一電子郵件位址的唯一 IBM ID 所擁有。
 
-若要將現有 SoftLayer 使用者名稱切換至 IBM ID，請完成下列步驟：
+若要從現有 SoftLayer 使用者名稱切換至 IBM ID，請完成下列步驟：
 
- 1. 如果您在登入之後於起始提示時選取**稍後**，但之後決定您要在現行階段作業中開始切換至 IBM ID 鑑別，請移至「編輯使用者設定檔」頁面，然後按一下**切換至 IBM ID**。
- 2. 遵循精靈提示，以建立您的 IBM ID。您的 IBM ID 是唯一電子郵件位址，建立之後即無法進行變更。您稍後可以更新與設定檔相關聯的電子郵件，預設電子郵件設定為您針對 IBM ID 所定義的電子郵件。您將會收到一封含有登錄碼的電子郵件，指出您已完成移轉精靈。 
- 3. 當您收到電子郵件時，請遵循鏈結，或將 URL 複製到瀏覽器，並輸入登錄碼。此登錄碼的有效時間是 7 天，而且只能使用一次。
+ 1. 登入 SoftLayer 帳戶。顯示切換至 IBM ID 的提示時，請按一下**確定**。 
  
+    如果您已經登入（您在提示切換至 IBM ID 時按了**稍後**），但想要在現行階段作業中切換至 IBM ID 鑑別，請移至「編輯使用者設定檔」頁面，然後按一下**切換至 IBM ID**。
+	
+ 2. 遵循精靈提示，以建立您的 IBM ID。 
  
-在您切換至 IBM ID 鑑別之後，就只能使用 IBM ID 來登入帳戶。在登入提示處，按一下**使用 IBM ID 登入**，而非輸入 SoftLayer 使用者名稱和密碼。
+    若要建立新的 IBM ID，請輸入目前未被任何 IBM ID 使用的電子郵件位址。新的 IBM ID 將會使用該電子郵件位址作為使用者名稱和電子郵件位址。建立 IBM ID 之後，您可以更新與 IBM ID 相關聯的電子郵件位址，但是無法變更使用者名稱。邀請電子郵件將會寄到您提供的電子郵件位址。
+    
+    完成精靈之後，您會收到一封含有登錄碼的電子郵件。
  
-以新客戶身分查看訂單時，系統會要求您輸入現有 IBM ID 帳戶的電子郵件位址，或建立新的 IBM ID 帳戶。如果您建立新的 IBM ID，請輸入新 IBM ID 的電子郵件位址。電子郵件位址是收到邀請電子郵件的電子郵件位址，也是新 IBM ID 的使用者名稱。
+ 3. 當您收到此電子郵件時，請遵循鏈結，或將 URL 複製到瀏覽器，然後輸入登錄碼。此登錄碼的有效時間是 7 天，而且只能使用一次。
+ 
+    在您切換至 IBM ID 鑑別之後，就只能使用 IBM ID 來登入帳戶。在「帳戶登入」提示中，移至 **IBM ID 帳戶登入**區段，然後按一下**使用 IBM ID 登入**。請不要使用您之前用於 Softlayer ID 的**使用者名稱**和**密碼**欄位。
+ 
+如果您是新客戶，當您查看訂單時，系統會要求您現有的 IBM ID，或要求您建立新的 IBM ID。 
+
+ * 若要使用現有的 IBM ID，請輸入使用者名稱，或唯一的 IBM ID 電子郵件位址（亦即，不是多個 IBM ID 所共用的）。
+ 
+ * 若要建立新的 IBM ID，請輸入目前未被任何 IBM ID 使用的電子郵件位址。新的 IBM ID 將會使用該電子郵件位址作為使用者名稱和電子郵件位址。建立 IBM ID 之後，您可以更新與 IBM ID 相關聯的電子郵件位址，但是無法變更使用者名稱。邀請電子郵件將會寄到您提供的電子郵件位址。
+
+若要解決使用 IBM ID 登入的任何問題，請參閱[存取 Bluemix 的疑難排解](/docs/troubleshoot/ts_accessing.html#accessing)。
+
 
 ### 允許使用者切換至 IBM ID
 {: #link_accounts_resellers}
@@ -151,7 +165,8 @@ For a user with IBMid access to multiple accounts with two-factor authentication
 ## 將 {{site.data.keyword.Bluemix_notm}} 服務與 SoftLayer 資產搭配使用
 {: #bluemix_services}
 
-您可以輕鬆地將 API 型公用 {{site.data.keyword.Bluemix_notm}} 服務與 SoftLayer 資產搭配使用。所有 API 都很安全且經過加密，讓您的資料受到保護。{:shortdesc}
+您可以輕鬆地將 API 型公用 {{site.data.keyword.Bluemix_notm}} 服務與 SoftLayer 資產搭配使用。所有 API 都很安全且經過加密，讓您的資料受到保護。
+{:shortdesc}
 
 例如，您是否曾經想要將 Watson 的認知功能新增至在 SoftLayer 的裸機伺服器上執行的應用程式？使用四個簡單的步驟，就可以新增 {{site.data.keyword.personalityinsightsshort}} 之類的服務，以協助瞭解您應用程式的使用者：
 
@@ -188,7 +203,7 @@ For a user with IBMid access to multiple accounts with two-factor authentication
 * {{site.data.keyword.mqa}}
 * {{site.data.keyword.mobileappbuilder_short}}
 * {{site.data.keyword.mql}}
-* {{site.data.keyword.nlclassifierlshort}}
+* {{site.data.keyword.nlclassifiershort}}
 * {{site.data.keyword.objectstorageshort}}
 * {{site.data.keyword.personalityinsightsshort}}
 * {{site.data.keyword.presenceinsightsshort}}

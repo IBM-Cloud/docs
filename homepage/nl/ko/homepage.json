@@ -312,7 +312,7 @@
 			"img": "homepage/images/DevOpsServices-icon.svg",
 			"href": "https://hub.jazz.net/docs"
 		}, {
-			"title": "CLI 및 Dev 도구",
+			"title": "CLI 및 개발 도구",
 			"img": "homepage/images/CLI-icon.svg",
 			"href": "cli/index.html"
 		}, {

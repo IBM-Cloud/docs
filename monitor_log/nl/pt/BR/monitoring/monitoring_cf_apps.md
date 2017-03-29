@@ -24,4 +24,4 @@ Para monitorar apps {{site.data.keyword.Bluemix_notm}}, use um dos métodos a se
 
 * Serviços {{site.data.keyword.Bluemix_notm}}. O Monitoring and Analytics oferece um serviço que pode ser usado para monitorar o desempenho do aplicativo. Para obter mais informações, consulte [Monitoring and
 Analytics](/docs/services/monana/index.html#gettingstartedtemplate).
-* Opções de terceiros. Por exemplo, [New Relic ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://newrelic.com/){:new_window}.
+* Opções de terceiros. Por exemplo, [New Relic ![Ícone de link externo](../../icons/launch-glyph.svg)](http://newrelic.com/){:new_window}.

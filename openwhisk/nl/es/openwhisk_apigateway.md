@@ -1,31 +1,31 @@
 ---
 
- 
-
 copyright:
-
   years: 2016, 2017
-lastupdated: "2017-01-04"
- 
+lastupdated: "2017-03-16"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:screen: .screen}
 {:pre: .pre}
 
-# Exposición de acciones mediante API Gateway (Experimental)
+# API Gateway (Experimental)
 {: #openwhisk_apigateway}
 
-En {{site.data.keyword.openwhisk}}, puede invocar acciones mediante la [API REST](./openwhisk_reference.html#openwhisk_ref_restapi) mediante una solicitud HTTP únicamente con el método **POST**.
-Para ello es necesario que el cliente HTTP realice la solicitud utilizando la clave de API de autorización OpenWhisk, que es una clave maestra que, además de permitir la invocación de una acción, permite la supresión y creación de más acciones.
-{: shortdesc}
+La aplicación [Web Actions](openwhisk_webactions.html) está disponible a nivel general. 
 
-Esta característica experimental le permitirá invocar una acción con métodos HTTP que no sean POST y sin la clave API de autorización de la acción.
+Web Actions le permite invocar una acción con métodos HTTP que no sean POST sin la clave de API de autorización de la acción. 
 
-Utilice la CLI para exponer las acciones de OpenWhisk a través de OpenWhisk API Gateway. 
+Como resultado de los comentarios de los usuarios, Web Actions constituye el modelo de programación elegido para crear acciones de OpenWhisk capaces de manejar sucesos HTTP. 
+
+La mayoría de las funciones de API Gateway se han fusionado en Web Actions; Web Actions le permite manejar cualquier solicitud HTTP y devolver respuestas HTTP con control completo por parte de la acción de la web. 
+
+Pronto estará disponible una integración revisada de OpenWhisk API Gateway. Se configurará para que sirva como proxy de Web Actions, ofreciendo las funciones de API Gateway como limitación de velocidad, validación de señales oauth, claves API, etc. 
+
+**Nota:** las API que haya creado con `wsk api-experimental` seguirán funcionando, aunque debe empezar a migrar sus API a acciones de la web. 
 
 ## Configuración de CLI de OpenWhisk
 {: #openwhisk_apigateway_cli}

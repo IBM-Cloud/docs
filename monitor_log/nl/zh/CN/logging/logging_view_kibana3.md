@@ -16,7 +16,8 @@ lastupdated: "2017-02-16"
 # 在 Kibana 中分析日志
 {: #analyzing_logs_Kibana3}
 
-在 {{site.data.keyword.Bluemix}} 中，可以使用 Kibana（一种开放式源代码分析和可视化平台）通过各种图形（例如，图表和表）来监视、搜索、分析和可视化数据。使用 Kibana 可执行高级分析任务。{:shortdesc}
+在 {{site.data.keyword.Bluemix}} 中，可以使用 Kibana（一种开放式源代码分析和可视化平台）通过各种图形（例如，图表和表）来监视、搜索、分析和可视化数据。使用 Kibana 可执行高级分析任务。
+{:shortdesc}
 
 您可以使用以下任何一种方法来启动 Kibana：
 

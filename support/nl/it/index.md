@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-02-20"
+lastupdated: "2017-03-01"
 
 ---
 
@@ -124,7 +124,7 @@ Fonti di notizie, come i seguenti siti, forniscono anche dei metodi per la lettu
   * [G2reader ![icona link esterno](../icons/launch-glyph.svg "External link icon")](http://www.g2reader.com/en/){: new_window}
 
 Puoi inoltre
-utilizzare un servizio di terze parti per inviare automaticamente un'email
+utilizzare un servizio di terze parti per inviare automaticamente un'e-mail
 per ogni aggiornamento RSS. Il seguente elenco riporta alcuni esempi di servizi di terze parti:
 
   * www.feedmyinbox.com
@@ -202,7 +202,7 @@ il supporto lingua | Inglese | Inglese | Inglese, Giapponese | CSM (client succe
 assegnato Inglese, Giapponese | Non incluso | Non incluso | Non incluso | Incluso per<br> 8 ore a settimana
 {: caption="Table 1. Support levels" caption-side="top"}
 
-**Importante:** il supporto per la lingua giapponese è disponibile per i ticket con severità 2-4 dalle 9 a.m. alle 5 p.m. JST. I servizi della community e di terze parti sono esclusi.
+**Importante:** il supporto in lingua giapponese è disponibile per i ticket con severità 2-4 dal lunedì al venerdì dalle ore 9:00 a.m. alle ore 5:00 p.m. JST, escluse le festività nazionali o ufficiali. I servizi della community e di terze parti sono esclusi. I ticket con severità 1 sono trattati solo in inglese.
 
 ### Apertura di un ticket di supporto
 {: #open-ticket}
@@ -246,7 +246,7 @@ Se sei un cliente di {{site.data.keyword.Bluemix_notm}} dedicato, il supporto vi
 di assistenza <a href="ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support</a>. Per questo modulo puoi utilizzare un indirizzo e-mail o il tuo {{site.data.keyword.ibmid}}. Seleziona l'opzione **{{site.data.keyword.Bluemix_notm}} dedicato** per il campo regione.
 <p>Gli invii dei moduli vengono monitorati dalla domenica alle ore 21:30 UTC fino al venerdì alle ore 23:59 UTC. Per assistenza nella conversione di queste ore di supporto al tuo fuso orario locale, vedi [Timeanddate.com ![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://www.timeanddate.com).</p>
 </li>
-<li>Se disponi di un {{site.data.keyword.ibmid}} e dell'accesso all'ambiente {{site.data.keyword.Bluemix_notm}} pubblico, nella barra dei menu fai clic su **Supporto** > **Aggiungi ticket**. Seleziona l'area tematica per il tuo problema e segui le indicazioni per inviare il ticket. </li>
+<li>Se disponi di un {{site.data.keyword.ibmid}} e dell'accesso all'ambiente {{site.data.keyword.Bluemix_notm}} pubblico, nella barra dei menu fai clic su **Supporto** > **Aggiungi ticket**. Seleziona l'area tematica per il tuo problema e segui le indicazioni per inviare il ticket.</li>
 <li>Se non disponi di un {{site.data.keyword.ibmid}}, puoi contattare un membro della tua organizzazione che ne abbia uno o collaborare con il tuo rappresentante IBM.
 <p>**Nota**: su richiesta, è disponibile un elenco di utenti dell'organizzazione che possono fungere da contatti per i ticket di supporto e che può essere visualizzato nella pagina **Supporto** della console {{site.data.keyword.Bluemix_notm}} nel tuo ambiente Dedicato.</p></li>
 </ul>
@@ -263,7 +263,7 @@ Se sei un cliente di {{site.data.keyword.Bluemix_notm}} locale, l'assistenza vie
 di assistenza <a href="ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support <img src="../icons/launch-glyph.svg" alt="icona link eserno"></a>. Per questo modulo puoi utilizzare un indirizzo e-mail o il tuo {{site.data.keyword.ibmid}}. Seleziona l'opzione **{{site.data.keyword.Bluemix_notm}} locale** per il campo regione.
 <p>Gli invii dei moduli vengono monitorati dalla domenica alle ore 21:30 UTC fino al venerdì alle ore 23:59 UTC. Per assistenza nella conversione di queste ore di supporto al tuo fuso orario locale, vedi [Timeanddate.com ![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://www.timeanddate.com).</p>
 </li>
-<li>Se disponi di un {{site.data.keyword.ibmid}} e dell'accesso all'ambiente {{site.data.keyword.Bluemix_notm}} pubblico, nella barra dei menu fai clic su **Supporto** > **Aggiungi ticket**. Seleziona l'area tematica per il tuo problema e segui le indicazioni per inviare il ticket. </li>
+<li>Se disponi di un {{site.data.keyword.ibmid}} e dell'accesso all'ambiente {{site.data.keyword.Bluemix_notm}} pubblico, nella barra dei menu fai clic su **Supporto** > **Aggiungi ticket**. Seleziona l'area tematica per il tuo problema e segui le indicazioni per inviare il ticket.</li>
 <li>Se non disponi di un {{site.data.keyword.ibmid}}, puoi contattare un membro della tua organizzazione che ne abbia uno o collaborare con il tuo rappresentante IBM.
 <p>**Nota**: su richiesta, è disponibile un elenco di utenti dell'organizzazione che possono fungere da contatti per i ticket di supporto e che può essere visualizzato nella pagina **Supporto** della console {{site.data.keyword.Bluemix_notm}} nel tuo ambiente Locale.</p></li>
 </ul>
@@ -273,7 +273,7 @@ di assistenza <a href="ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.k
 
 Quando  contatti il supporto, puoi richiedere un determinato livello di severità, a seconda del tipo e dell'urgenza del problema. Il livello di severità può incidere sulla rapidità con cui viene affrontato il tuo problema.
 
-La seguente tabella elenca alcuni esempi comuni di problemi di supporto, di livelli di gravità suggeriti e di obiettivi del tempo di risposta. Gli obiettivi del tempo di risposta vengono utilizzati solo per descrivere gli obiettivi di IBM e non rappresentano una garanzia sulle prestazioni. 
+La seguente tabella elenca alcuni esempi comuni di problemi di supporto, di livelli di gravità suggeriti e di obiettivi del tempo di risposta. Gli obiettivi del tempo di risposta vengono utilizzati solo per descrivere gli obiettivi di IBM e non rappresentano una garanzia sulle prestazioni.
 
 **Orario di operatività:** dalla domenica alle 21:30 UTC al venerdì alle 23:59 UTC (escluse festività di Stati Uniti/Italia/Australia). Per assistenza nella conversione di queste ore di supporto al tuo fuso orario locale, vedi [Timeanddate.com ![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://www.timeanddate.com). Per ulteriori informazioni sulla pianificazione delle festività, vedi [Bluemix Support Holidays ![icona link esterno](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixholidays). 
 
@@ -292,7 +292,7 @@ Puoi definire la severità del problema in base alle tue esigenze di business e 
 * Servizio generalmente disponibile IBM o immagine contenitore<br>
 Se l'analisi della causa principale stabilisce che il problema è un difetto nel servizio generalmente disponibile IBM o nell'immagine del contenitore, il ticket viene indirizzato in base alla severità che hai assegnato.
 * Servizio Beta IBM o immagine contenitore<br>
-IBM rilascerà i servizi o le immagini del contenitore classificati come una release Beta. Una release Beta aiuta i team di sviluppo e di marketing IBM a valutare la qualità del servizio nel mercato. Di conseguenza, possono apportare modifiche prima di rilasciarla come servizio generalmente disponibile o immagine del contenitore. Se l'analisi della causa principale stabilisce che il problema è un difetto nel servizio Beta IBM o nell'immagine del contenitore, IBM non è tenuto a fornire una correzione. Inoltre, al ticket viene assegnata una severità 3 o 4 a seconda del caso.  
+IBM rilascerà i servizi o le immagini del contenitore classificati come una release Beta. Una release Beta aiuta i team di sviluppo e di marketing IBM a valutare la qualità del servizio nel mercato. Di conseguenza, possono apportare modifiche prima di rilasciarla come servizio generalmente disponibile o immagine del contenitore. Se l'analisi della causa principale stabilisce che il problema è un difetto nel servizio Beta IBM o nell'immagine del contenitore, IBM non è tenuto a fornire una correzione. Inoltre, al ticket viene assegnata una severità 3 o 4 a seconda del caso. 
 * Servizio sperimentale IBM o immagine contenitore<br>
 IBM rilascerà i servizi o le immagini del contenitore classificati come sperimentali. Questi servizi potrebbero essere instabili, cambiare frequentemente e potrebbero essere sospesi con breve preavviso. Per i servizi classificati come sperimentali, puoi ottenere l'assistenza della community solo attraverso [Stack Overflow ![icona link esterno](../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window} e [dW Answers ![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window}.
 * Servizio di terze parti<br>

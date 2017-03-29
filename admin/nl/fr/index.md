@@ -123,7 +123,7 @@ Les données de seuil sont collectées toutes les six heures. Une notification n
 
 Si vous ne voulez pas attendre six heures avant l'envoi de la notification lorsque le seuil est atteint, après avoir rempli les zones du formulaire, vous pouvez cliquer sur **Sauvegarder et tester** pour recevoir une notification de test avec des exemples de données.  
 
-Une notification de seuil de quota inclut uniquement les organisations qui ont dépassé le pourcentage de seuil spécifié au cours de la période de 6 heures correspondant à cette notification. Les organisations qui ont dépassé un seuil au cours des périodes de 6 heures précédentes ne seront pas incluses, même si elles sont toujours au-dessus ou au-dessous du seuil. Les  trois ressources qui constituent un quota d'organisation (mémoire réservée, services et routes) sont considérées de manière indépendante lorsqu'il s'agit de déterminer si une notification de quota d'organisation doit être envoyée. Par exemple, si la quantité de mémoire réservée utilisée par une organisation dépasse 50 % du quota de l'organisation, un seuil de quota d'organisation configuré avec une valeur de 50 % provoque l'envoi d'une notification. Ultérieurement, si le nombre de services utilisés par la même organisation dépasse 50 % du quota de l'organisation, même si la quantité de mémoire utilisée est inchangée, le même abonnement à un seuil de quota d'organisation provoque également l'envoi d'une notification. 
+Une notification de seuil de quota inclut uniquement les organisations qui ont dépassé le pourcentage de seuil spécifié au cours de la période de 6 heures correspondant à cette notification. Les organisations qui ont dépassé un seuil au cours des périodes de 6 heures précédentes ne seront pas incluses, même si elles sont toujours au-dessus ou au-dessous du seuil.  Les  trois ressources qui constituent un quota d'organisation (mémoire réservée, services et routes) sont considérées de manière indépendante lorsqu'il s'agit de déterminer si une notification de quota d'organisation doit être envoyée. Par exemple, si la quantité de mémoire réservée utilisée par une organisation dépasse 50 % du quota de l'organisation, un seuil de quota d'organisation configuré avec une valeur de 50 % provoque l'envoi d'une notification.  Ultérieurement, si le nombre de services utilisés par la même organisation dépasse 50 % du quota de l'organisation, même si la quantité de mémoire utilisée est inchangée, le même abonnement à un seuil de quota d'organisation provoque également l'envoi d'une notification.
 
 {: #webhooknotsub}
 
@@ -173,7 +173,7 @@ Les données de seuil sont collectées toutes les six heures. Une notification n
 
 Si vous ne voulez pas attendre six heures avant l'envoi de la notification lorsque le seuil est atteint, après avoir rempli les zones du formulaire, vous pouvez cliquer sur **Sauvegarder et tester** pour sauvegarder et tester la notification avec des exemples de données.
 
-Une notification de seuil de quota inclut uniquement les organisations qui ont dépassé le pourcentage de seuil spécifié au cours de la période de 6 heures correspondant à cette notification. Les organisations qui ont dépassé un seuil au cours des périodes de 6 heures précédentes ne seront pas incluses, même si elles sont toujours au-dessus/au-dessous du seuil. Les  trois ressources qui constituent un quota d'organisation (mémoire réservée, services et routes) sont considérées de manière indépendante lorsqu'il s'agit de déterminer si une notification de quota d'organisation doit être envoyée. Par exemple, si la quantité de mémoire réservée utilisée par une organisation dépasse 50 % du quota de l'organisation, un seuil de quota d'organisation configuré avec une valeur de 50 % provoque l'envoi d'une notification. Ultérieurement, si le nombre de services utilisés par la même organisation dépasse 50 % du quota de l'organisation, même si la quantité de mémoire utilisée est inchangée, le même abonnement à un seuil de quota d'organisation provoque également l'envoi d'une notification. 
+Une notification de seuil de quota inclut uniquement les organisations qui ont dépassé le pourcentage de seuil spécifié au cours de la période de 6 heures correspondant à cette notification. Les organisations qui ont dépassé un seuil au cours des périodes de 6 heures précédentes ne seront pas incluses, même si elles sont toujours au-dessus/au-dessous du seuil.  Les  trois ressources qui constituent un quota d'organisation (mémoire réservée, services et routes) sont considérées de manière indépendante lorsqu'il s'agit de déterminer si une notification de quota d'organisation doit être envoyée. Par exemple, si la quantité de mémoire réservée utilisée par une organisation dépasse 50 % du quota de l'organisation, un seuil de quota d'organisation configuré avec une valeur de 50 % provoque l'envoi d'une notification.  Ultérieurement, si le nombre de services utilisés par la même organisation dépasse 50 % du quota de l'organisation, même si la quantité de mémoire utilisée est inchangée, le même abonnement à un seuil de quota d'organisation provoque également l'envoi d'une notification.
 
 {: #payload}
 
@@ -339,7 +339,7 @@ des ressources**.
 
 Dans la section **Utilisation des ressources**, vous pouvez consulter les informations suivantes :
 
-- Des informations sur l'utilisation des ressources, comme la quantité de mémoire et l'espace disque pouvant être réservés et physiquement disponibles, ainsi que la quantité de mémoire et l'espace disque actuellement réservés et physiquement utilisés. Vous pouvez également consulter des informations sur l'utilisation moyenne de l'unité centrale dans tous les agents DEA. Pour des informations plus détaillées sur l'utilisation de la mémoire, du disque et de l'unité centrale, voir [Détails sur la mémoire, le disque et l'unité centrale](index.html#resourceusagedetails).
+- Des informations sur l'utilisation des ressources, comme la quantité de mémoire et l'espace disque pouvant être réservés et physiquement disponibles, ainsi que la quantité de mémoire et l'espace disque actuellement réservés et physiquement utilisés.  Vous pouvez également consulter des informations sur l'utilisation moyenne de l'unité centrale dans tous les agents DEA. Pour des informations plus détaillées sur l'utilisation de la mémoire, du disque et de l'unité centrale, voir [Détails sur la mémoire, le disque et l'unité centrale](index.html#resourceusagedetails).
 - Des informations sur l'utilisation du réseau relatives à la bande passante entrante et à la bande passante sortante, au cours des 6 dernières heures ou du dernier jour. Les données affichées dépendent de la somme du trafic entrant et sortant pour les réseaux publics et privés.
 - Le temps de réponse moyen pour {{site.data.keyword.Bluemix_notm}} au cours des 10 dernières minutes, de la dernière heure et du dernier jour.
 - Le nombre moyen de transactions par seconde pour {{site.data.keyword.Bluemix_notm}} au cours des dix minutes précédentes, de l'heure précédente ou du jour précédent.
@@ -955,7 +955,7 @@ Les droits suivants peuvent être accordés aux utilisateurs avec des niveaux d'
 ## Utilisation d'API REST 
 {: #auth_adminapi}
 
-Pour utiliser les commandes d'API REST, vous devez d'abord vous authentifier. Pour générer et prendre en charge des sessions, vous pouvez utiliser des commandes cURL pour exécuter les tâches suivantes : 
+Pour utiliser les commandes d'API REST, vous devez d'abord vous authentifier. Pour générer et prendre en charge des sessions, vous pouvez utiliser des commandes cURL pour exécuter les tâches suivantes :
 
 * [Connexion à la console d'administration](#auth_loginapi) 
 * [Stockage de votre ID utilisateur et de votre mot de passe](#auth_setuidpw)
@@ -1003,12 +1003,12 @@ cette commande :
 ### Stockage de votre ID utilisateur et de votre mot de passe
 {: #auth_setuidpw}
 
-Vous pouvez également stocker votre ID utilisateur et votre mot de passe de manière à ne pas avoir à les saisir manuellement chaque fois que vous vous connectez. Pour stocker votre ID utilisateur et votre mot de passe afin de les réutiliser ultérieurement, utilisez l'exemple cURL suivant :
+Vous pouvez également stocker votre ID utilisateur et votre mot de passe de manière à ne pas avoir à les saisir manuellement chaque fois que vous vous connectez.  Pour stocker votre ID utilisateur et votre mot de passe afin de les réutiliser ultérieurement, utilisez l'exemple cURL suivant :
 
 `curl -X GET -H "Authorization: Basic <redacted>" -H "Accept: application/json" "http://localhost:3000/login"`
 {: codeblock}
 
-Pour configurer vos informations de connexion dans un fichier distinct, puis appeler ce fichier de manière à ne pas avoir à le saisir à nouveau pour chaque demande d'authentification, utilisez l'option `--netrc` fournie par la commande cURL. 
+Pour configurer vos informations de connexion dans un fichier distinct, puis appeler ce fichier de manière à ne pas avoir à le saisir à nouveau pour chaque demande d'authentification, utilisez l'option `--netrc` fournie par la commande cURL.
 
 Pour utiliser l'option `--netrc` avec cURL, commencez par créer un fichier dans le répertoire de base de l'utilisateur en procédant de l'une des manières suivantes :
 * Sur un système Unix, créez un fichier nommé .netrc 
@@ -1030,7 +1030,7 @@ Lors de l'appel d'une commande cURL, ajoutez l'argument suivant : `--netrc`.
 ### Stockage de cookies
 {: #auth_apistorecook}
 
-Lorsque vous vous connectez à la console d'administration, le serveur renvoie un cookie avec votre session. Ce cookie est requis dans le cadre du processus de connexion pour les futurs appels API relatifs à toutes les opérations liées à la console d'administration. Vous pouvez stocker des cookies afin de les utiliser ultérieurement. 
+Lorsque vous vous connectez à la console d'administration, le serveur renvoie un cookie avec votre session. Ce cookie est requis dans le cadre du processus de connexion pour les futurs appels API relatifs à toutes les opérations liées à la console d'administration. Vous pouvez stocker des cookies afin de les utiliser ultérieurement.
 
 Pour stocker des cookies après vous être connecté, utilisez l'option `-c`, comme illustré dans l'exemple CURL suivant :
 
@@ -1040,7 +1040,7 @@ Pour stocker des cookies après vous être connecté, utilisez l'option `-c`, co
 ### Réutilisation de cookies
 {: #auth_apireusecook}
 
-Pour réutiliser des cookies, utilisez l'option `-b` avec le nom de fichier de cookie que vous avez affecté à l'aide de l'option `-c`, comme illustré dans l'exemple CURL suivant : 
+Pour réutiliser des cookies, utilisez l'option `-b` avec le nom de fichier de cookie que vous avez affecté à l'aide de l'option `-c`, comme illustré dans l'exemple CURL suivant :
 
 `curl --user <user_id>:<password> -b ./cookies.txt`
 {: codeblock}
@@ -1223,8 +1223,7 @@ fournissez les informations dans un fichier JSON.
 }
 </pre>
 </li>
-<li>Publiez le contenu du fichier JSON sur le noeud final de l'utilisateur en exécutant la commande suivante :
-<br/><br/>
+<li>Publiez le contenu du fichier JSON sur le noeud final de l'utilisateur en exécutant la commande suivante :<br/><br/>
 <code>
 curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.json https://<your_host>.ibm.com/codi/v1/users
 </code>
@@ -1319,7 +1318,7 @@ Les API de mesures décrites dans les sections suivantes sont accessibles à par
 
 1. Un utilisateur peut effectuer jusqu'à 200 demandes d'API de mesures par heure.
 2. Chaque demande d'API renvoie jusqu'à 200 points de données par demande. Si des données supplémentaires sont disponibles, une URL est fournie en réponse au chargement de l'ensemble de données suivant.
-3. Chaque demande d'API nécessite qu'un utilisateur dispose au moins des droits d'accès de base à la console d'administration. Des droits supplémentaires peuvent être nécessaires, comme indiqué ci-dessous.
+3. Chaque demande d'API nécessite qu'un utilisateur dispose au moins des droits d'accès de base à la console d'administration.  Des droits supplémentaires peuvent être nécessaires, comme indiqué ci-dessous.
 
 ## Regroupement des mesures relatives à votre environnement 
 

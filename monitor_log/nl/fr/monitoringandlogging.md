@@ -16,7 +16,7 @@ lastupdated: "2017-02-14"
 # Surveillance et journalisation
 {: #monitoringandlogging}
 
-{{site.data.keyword.Bluemix}} offre des fonctions de journalisation et de surveillance dans différents services, tels que Cloud Foundry et {{site.data.keyword.containershort}}. Vous pouvez développer, exécuter et gérer des applications dans n'importe quel contexte d'exécution sans être confronté à la complexité que représentent la création et la gestion de l'infrastructure qui est généralement liée au développement et au lancement d'une application.
+{{site.data.keyword.Bluemix}} offre des fonctions de journalisation et de surveillance dans différents services, tels que Cloud Foundry et {{site.data.keyword.containershort}}. Vous pouvez développer, exécuter et gérer des applications dans n'importe quel contexte d'exécution sans être confronté à la complexité que représentent la création et la gestion de l'infrastructure qui est généralement liée au développement et au lancement d'une application. 
 {:shortdesc}
 
 Par défaut, {{site.data.keyword.Bluemix_notm}} collecte et affiche des métriques de performance relatives à l'utilisation de l'unité centrale, à l'utilisation de la mémoire et aux entrées-sorties de réseau. Ces métriques fournissent des informations sur les performances de ressources de cloud individuelles. Vous pouvez surveiller les performances de ces ressources dans votre environnement de cloud via l'interface utilisateur {{site.data.keyword.Bluemix_notm}}. Vous pouvez afficher des données en quasi temps réel et des données d'historique. Pour plus d'informations, voir [Surveillance](monitoring/monitoring_bmx_ov.html#monitoring_bmx_ov).

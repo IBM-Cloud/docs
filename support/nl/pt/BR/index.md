@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-02-20"
+lastupdated: "2017-03-01"
 
 ---
 
@@ -211,7 +211,7 @@ Idioma de suporte | Inglês | Inglês | Inglês, japonês | Inglês, japonês
 Client success manager (CSM) designado | Não incluído | Não incluído | Não incluído | Incluído em<br> 8 horas por semana
 {: caption="Table 1. Support levels" caption-side="top"}
 
-**Importante:** o suporte para o idioma japonês está disponível para chamados com severidade 2-4, das 9h às 17h, JST. Serviços da Comunidade e de Terceiros são excluídos.
+**Importante:** o suporte no idioma japonês está disponível para chamados com severidade 2-4, de segunda a sexta-feira, das 9h às 17h JST, excluindo feriados nacionais ou estabelecidos por lei. Os serviços de comunidade e de terceiros são excluídos. Os chamados de severidade 1 são tratados apenas em inglês.
 
 ### Abrindo um chamado de suporte
 {: #open-ticket}
@@ -238,7 +238,7 @@ Para abrir um chamado de suporte do {{site.data.keyword.Bluemix_notm}} para uma 
 ### Verificando o status do chamado de suporte
 {: #check-ticket-status}
 
-Todos os problemas de suporte a clientes são documentados em um chamado de suporte. Cada chamado de suporte é designado a um número de chamado exclusivo para referência e um nível de severidade baseado nos detalhes na descrição do chamado.  possível usar o número de chamado para revisar o progresso do chamado de suporte e atualizar o chamado de suporte. No Menu de Suporte, selecione **Visualizar chamados**. As atualizações e respostas são enviadas a você por e-mail e registradas nas notas do chamado.  
+Todos os problemas de suporte a clientes são documentados em um chamado de suporte. Cada chamado de suporte é designado a um número de chamado exclusivo para referência e um nível de severidade baseado nos detalhes na descrição do chamado. possível usar o número de chamado para revisar o progresso do chamado de suporte e atualizar o chamado de suporte. No Menu de Suporte, selecione **Visualizar chamados**. As atualizações e respostas são enviadas a você por e-mail e registradas nas notas do chamado.  
 
 
 
@@ -251,9 +251,8 @@ Todos os problemas de suporte a clientes são documentados em um chamado de supo
 Se você for um cliente do {{site.data.keyword.Bluemix_notm}} Dedicated, o suporte será fornecido pela equipe de Suporte do IBM {{site.data.keyword.Bluemix_notm}}. É possível escolher entre algumas opções diferentes para obter suporte, dependendo se você tiver um {{site.data.keyword.ibmid}}.
 
 <ul>
-<li>Entre em contato com o suporte abrindo um novo chamado usando a
-página de ajuda <a href="ibm.biz/bluemixsupport" target="_blank">Suporte do IBM {{site.data.keyword.Bluemix_notm}}</a>. É possível usar um endereço de e-mail ou seu {{site.data.keyword.ibmid}} para esse formulário. Selecione a opção **{{site.data.keyword.Bluemix_notm}} Dedicated** para o campo Região.
-<p>Os envios de formulário são monitorados de domingo às 21h30 UTC a sexta-feira às 23h59 UTC. Para obter assistência na conversão dessas horas de suporte para o seu fuso horário local, veja [Timeanddate.com ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://www.timeanddate.com). </p>
+<li>Entre em contato com o suporte abrindo um novo chamado usando a página de ajuda <a href="ibm.biz/bluemixsupport" target="_blank">Suporte do IBM {{site.data.keyword.Bluemix_notm}}</a>. É possível usar um endereço de e-mail ou seu {{site.data.keyword.ibmid}} para esse formulário. Selecione a opção **{{site.data.keyword.Bluemix_notm}} Dedicated** para o campo Região.
+<p>Os envios de formulário são monitorados de domingo às 21h30 UTC a sexta-feira às 23h59 UTC. Para obter assistência na conversão dessas horas de suporte para o seu fuso horário local, veja [Timeanddate.com ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://www.timeanddate.com).</p>
 </li>
 <li>Se você tiver um {{site.data.keyword.ibmid}} e tiver acesso ao ambiente do {{site.data.keyword.Bluemix_notm}} Public, na barra de menus, clique em **Suporte** > **Incluir chamado**. Selecione a área de tópico para seu problema e siga os prompts para enviar seu chamado.</li>
 <li>Se você não tiver um {{site.data.keyword.ibmid}}, será possível entrar em contato com alguém de sua organização que tenha um ou trabalhar com seu representante IBM.
@@ -268,9 +267,8 @@ página de ajuda <a href="ibm.biz/bluemixsupport" target="_blank">Suporte do IBM
 Se você for um cliente do {{site.data.keyword.Bluemix_notm}} Local, o suporte será fornecido pela equipe de suporte do IBM {{site.data.keyword.Bluemix_notm}}. No entanto, como você pode não ter um {{site.data.keyword.ibmid}}, existem algumas opções diferentes para obter suporte.
 
 <ul>
-<li>Entre em contato com o suporte abrindo um novo chamado usando a
-página de ajuda do <a href="ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support <img src="../icons/launch-glyph.svg" alt="Ícone de link externo"></a>. É possível usar um endereço de e-mail ou seu {{site.data.keyword.ibmid}} para esse formulário. Selecione a opção **{{site.data.keyword.Bluemix_notm}} Local** para o campo Região.
-<p>Os envios de formulário são monitorados de domingo às 21h30 UTC a sexta-feira às 23h59 UTC. Para obter assistência na conversão dessas horas de suporte para o seu fuso horário local, veja [Timeanddate.com ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://www.timeanddate.com). </p>
+<li>Entre em contato com o suporte abrindo um novo chamado usando a página de ajuda do <a href="ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support <img src="../icons/launch-glyph.svg" alt="Ícone de link externo"></a>. É possível usar um endereço de e-mail ou seu {{site.data.keyword.ibmid}} para esse formulário. Selecione a opção **{{site.data.keyword.Bluemix_notm}} Local** para o campo Região.
+<p>Os envios de formulário são monitorados de domingo às 21h30 UTC a sexta-feira às 23h59 UTC. Para obter assistência na conversão dessas horas de suporte para o seu fuso horário local, veja [Timeanddate.com ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://www.timeanddate.com).</p>
 </li>
 <li>Se você tiver um {{site.data.keyword.ibmid}} e tiver acesso ao ambiente do {{site.data.keyword.Bluemix_notm}} Public, na barra de menus, clique em **Suporte** > **Incluir chamado**. Selecione a área de tópico para seu problema e siga os prompts para enviar seu chamado.</li>
 <li>Se você não tiver um {{site.data.keyword.ibmid}}, será possível entrar em contato com alguém de sua organização que tenha um ou trabalhar com seu representante IBM.

@@ -16,7 +16,7 @@ lastupdated: "2017-02-14"
 # Monitoraggio e registrazione
 {: #monitoringandlogging}
 
-{{site.data.keyword.Bluemix}} offre funzionalità di registrazione e di monitoraggio attraverso diversi servizi, come Cloud Foundry e {{site.data.keyword.containershort}}. Puoi sviluppare, eseguire e gestire le applicazioni in ogni runtime senza la complessità della creazione e manutenzione dell'infrastruttura che è tipicamente associata allo sviluppo e al lancio di un applicazione.
+{{site.data.keyword.Bluemix}} offre funzionalità di registrazione e di monitoraggio attraverso diversi servizi, come Cloud Foundry e {{site.data.keyword.containershort}}. Puoi sviluppare, eseguire e gestire le applicazioni in ogni runtime senza la complessità della creazione e manutenzione dell'infrastruttura che è tipicamente associata allo sviluppo e al lancio di un applicazione. 
 {:shortdesc}
 
 Per impostazione predefinita {{site.data.keyword.Bluemix_notm}} raccoglie e visualizza le metriche delle prestazioni per l'utilizzo della CPU, l'utilizzo della memoria e l'I/O di rete. Queste metriche forniscono informazioni relative alle prestazioni delle singole risorse cloud. Puoi monitorare le prestazioni di queste risorse nel tuo ambiente cloud tramite l'IU di {{site.data.keyword.Bluemix_notm}}. Puoi inoltre visualizzare i dati in tempo reale e i dati cronologici. Per ulteriori informazioni, vedi [Monitoraggio](monitoring/monitoring_bmx_ov.html#monitoring_bmx_ov).

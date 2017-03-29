@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2015, 2017
@@ -44,7 +44,7 @@ nom d'application précédent, de votre nom d'utilisateur et de l'heure.
 ##Exemple de flux de trame d'information {: #iframe-example}
 
 <p>
-L'<a class="xref" href="http://d2bm-iframe-sample.ng.bluemix.net/" target="_blank" title="(s'ouvre dans un nouvel onglet ou une nouvelle fenêtre)">exemple IBM Bluemix D2BM iFrame<img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a> fournit un exemple de flux de trame d'information pour un référentiel Git public. <div class="image"><img class="image" src="images/d2bm_iframe_sample2.png" alt="Exemple de flux de trame d'information Déployer dans Bluemix" /></div>
+L'<a class="xref" href="http://d2bm-iframe-sample.ng.bluemix.net/" target="_blank" title="(s'ouvre dans un nouvel onglet ou une nouvelle fenêtre)">exemple IBM Bluemix D2BM iFrame<img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a> fournit un exemple de flux de trame d'information pour un référentiel Git public.<div class="image"><img class="image" src="images/d2bm_iframe_sample2.png" alt="Exemple de flux de trame d'information Déployer dans Bluemix" /></div>
 </p>
 
 <p>

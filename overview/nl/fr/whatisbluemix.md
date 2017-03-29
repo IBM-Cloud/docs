@@ -9,7 +9,7 @@ lastupdated: "2017-01-11"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Présentation d'{{site.data.keyword.Bluemix_notm}}
+# Présentation de {{site.data.keyword.Bluemix_notm}}
 {: #bluemixoverview}
 
 {{site.data.keyword.Bluemix}} est une plateforme de cloud computing innovante d'{{site.data.keyword.IBM_notm}} qui combine une plateforme sous forme de services (PaaS) à une infrastructure sous forme de services (IaaS). De plus, {{site.data.keyword.Bluemix_notm}} propose un large catalogue de services de cloud que vous pouvez intégrer facilement à la plateforme sous forme de services et à l'infrastructure sous forme de services afin de construire des applications métier rapidement.

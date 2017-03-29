@@ -17,7 +17,7 @@ lastupdated: "2017-02-06"
 {: #logging_kibana_instance_id}
 <!-- Provide an appropriate ID above -->
 
-Visualize e filtre logs da instância do {{site.data.keyword.Bluemix_notm}} pelo ID da instância (instance_id) de seu app no painel do Kibana. É possível acessar o painel do Kibana na guia **Logs** para seu app Cloud Foundry.
+Visualize e filtre logs da instância do {{site.data.keyword.Bluemix_notm}} pelo ID da instância (instance_id) de seu app no painel do Kibana. É possível acessar o painel do Kibana na guia **Logs** para seu app Cloud Foundry. 
 {:shortdesc}
 
 <!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->

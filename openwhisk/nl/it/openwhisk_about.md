@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-21"
+lastupdated: "2017-02-21"
 
 ---
 
@@ -78,7 +78,7 @@ Host: $openwhiskEndpoint
 
 Nota la variabile *$userNamespace*. Un utente ha accesso ad almeno uno spazio dei nomi. Per semplicità, supponiamo che l'utente possieda lo spazio dei nomi in cui è inserito *myAction*.
 
-Il primo punto di ingresso nel sistema avviene attraverso **nginx**, “un server proxy inverso e HTTP”. È utilizzato principalmente per la terminazione SSL e per l'inoltro di chiamate HTTP appropriate al componente successivo. 
+Il primo punto di ingresso nel sistema avviene attraverso **nginx**, “un server proxy inverso e HTTP”. È utilizzato principalmente per la terminazione SSL e per l'inoltro di chiamate HTTP appropriate al componente successivo.
 
 ### Accesso al sistema: Controller
 
@@ -96,7 +96,7 @@ In questo caso, viene verificato che l'utente esista nel database OpenWhisk e ch
 
 A questo punto, tutto è pronto per la prossima fase di elaborazione.
 
-### Richiamo dell'azione: di nuovo CouchDB… 
+### Richiamo dell'azione: di nuovo CouchDB…
 
 Poiché adesso il Controller è sicuro che l'utente è autorizzato e che dispone dei privilegi per richiamare l'azione, carica questa azione (in questo caso *myAction*) dal database **whisks** in CouchDB.
 
@@ -131,7 +131,7 @@ L'**Invoker** è il cuore di OpenWhisk. Il compito dell'Invoker è quello di ric
 
 Docker è utilizzato per configurare un nuovo ambiente automaticamente incapsulato (chiamato *contenitore*) per ogni azione che richiamiamo in modo rapido, isolato e controllato. Il processo è semplice: per ogni chiamata di azione viene generato un contenitore Docker, viene inserito il codice dell'azione, si passa alla sua esecuzione utilizzando i parametri trasmessi, si ottiene il risultato e infine il contenitore viene distrutto. Qui è anche dove viene eseguita al massimo l'ottimizzazione delle prestazioni per ridurre il sovraccarico e limitare il più possibile i tempi di risposta. 
 
-Nel nostro caso specifico, poiché abbiamo un'azione basata su *Node.js*, l'Invoker avvierà un contenitore Node.js, inserirà il codice da *myAction*, lo eseguirà senza parametri, estrarrà il risultato, salverà i log e distruggerà il contenitore Node.js. 
+Nel nostro caso specifico, poiché abbiamo un'azione basata su *Node.js*, l'Invoker avvierà un contenitore Node.js, inserirà il codice da *myAction*, lo eseguirà senza parametri, estrarrà il risultato, salverà i log e distruggerà il contenitore Node.js.
 
 ### Memorizzazione dei risultati: di nuovo CouchDB
 

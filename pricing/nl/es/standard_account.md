@@ -18,7 +18,7 @@ lastupdated: "2017-02-02"
 # Cuenta Estándar Beta de {{site.data.keyword.Bluemix_notm}} de IBM 
 {: #betaintro}
 
-La cuenta Estándar Beta de {{site.data.keyword.Bluemix}} presenta una nueva cuenta gratuita, que ofrece una nueva forma de trabajo en la nube pública de {{site.data.keyword.Bluemix_notm}}. La cuenta Estándar no caduca nunca, lo que la diferencia de la cuenta de prueba de {{site.data.keyword.Bluemix_notm}} de 30 días. Puede seguir trabajando en sus aplicaciones de {{site.data.keyword.Bluemix_notm}} sin ninguna preocupación sobre las restricciones de tiempo.
+La cuenta Estándar Beta de {{site.data.keyword.Bluemix}} presenta una nueva cuenta gratuita, que ofrece una nueva forma de trabajo en la nube pública de {{site.data.keyword.Bluemix_notm}}. La cuenta Estándar no caduca nunca, lo que la diferencia de la cuenta de prueba de {{site.data.keyword.Bluemix_notm}} de 30 días. Puede seguir trabajando en sus aplicaciones de {{site.data.keyword.Bluemix_notm}} sin ninguna preocupación sobre las restricciones de tiempo. 
 {:shortdesc}
 
 La participación en la cuenta Estándar Beta es sólo por invitación. Una vez que acepte la invitación y que cree la cuenta Estándar, puede invitar a sus amigos y colegas para que participen en Beta.  
@@ -31,7 +31,7 @@ Puede que se pregunte sobre qué diferencia hay entre la cuenta Estándar y la c
 |¿Qué novedades hay en una cuenta Estándar? |    
 |-----------------|
 | La cuenta no caduca nunca. |
-| Las aplicaciones de Cloud Foundry pueden acceder hasta un máximo 256 MB de memoria de tiempo de ejecución gratuita e instantánea.  |
+| Las aplicaciones de Cloud Foundry pueden acceder hasta un máximo 256 MB de memoria de tiempo de ejecución gratuita e instantánea. |
 | Puede acceder a planes Lite gratuitos para Cloudant NoSQL DB y a la Plataforma Internet de las cosas con más servicios gratuitos disponibles muy pronto. |
 | Sus aplicaciones entrarán en suspensión si no hay actividad de desarrollo durante 10 días. |
 | Las instancias de servicio se suprimirán tras 30 días de inactividad. |
