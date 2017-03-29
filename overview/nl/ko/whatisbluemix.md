@@ -40,7 +40,7 @@ lastupdated: "2017-01-11"
 
 {{site.data.keyword.Bluemix_notm}}에서는 앱을 실행할 수 있도록 다양한 방법을 제공합니다(예: Cloud Foundry 및 {{site.data.keyword.containerlong}}). {{site.data.keyword.containerlong}}를 사용하여 {{site.data.keyword.Bluemix_notm}}의 호스팅된 클라우드 환경에 Docker 컨테이너를 실행하십시오.  
 
-분배, 이벤트 구동 컴퓨팅에 {{site.data.keyword.openwhisk}}를 사용할 수 있습니다. {{site.data.keyword.openwhisk_short}}는 HTTP를 통한 웹 또는 모바일 앱에서의 직접 호출이나 이벤트에 응답하여 애플리케이션 로직을 실행합니다. 
+분산형, 이벤트 구동 컴퓨팅에 {{site.data.keyword.openwhisk}}를 사용할 수 있습니다. {{site.data.keyword.openwhisk_short}}는 HTTP를 통한 웹 또는 모바일 앱에서의 직접 호출이나 이벤트에 응답하여 애플리케이션 로직을 실행합니다. 
  
 {{site.data.keyword.Bluemix_notm}} Mobile 서비스를 사용하여 미리 빌드되고 관리되며 확장 가능한 클라우드 서비스를 사용자의 모바일 앱에 통합할 수 있습니다.  
 
@@ -50,7 +50,7 @@ lastupdated: "2017-01-11"
 서비스 대시보드는 {{site.data.keyword.IBM}} 및 써드파티 제공업체에서 사용 가능한 {{site.data.keyword.Bluemix_notm}} 서비스에 대한 액세스 권한을 제공합니다. Watson, Internet of Things, Analytics, Mobile 및 DevOps 서비스가 여기에 해당됩니다. 
 
 * {{site.data.keyword.IBM_notm}} DevOps 서비스 및 {{site.data.keyword.Bluemix_notm}} Garage Method를 사용하여 필요한 기능이 포함된 혁신적인 새 애플리케이션을 더욱 빠르고 저렴하게 제공합니다. DevOps 사례를 채택하고 혁신과 민첩성이 요구되는 문화를 조성하는 경우 반복적으로 시행하여 시장 상황에 따라 방향을 바꿀 수 있습니다. 
-* 블록체인은 비즈니스 프로세스를 간소화하면서 신뢰, 책임 및 투명성을 확립하는 차세대 트랜잭션 애플리케이션을 위한 피어 투 피어 분배 원장 기술입니다.   
+* 블록체인은 비즈니스 프로세스를 간소화하면서 신뢰, 책임 및 투명성을 확립하는 차세대 트랜잭션 애플리케이션을 위한 피어 투 피어 분산 원장 기술입니다.   
 * Watson은 사용자의 앱에 음성, 영상 및 데이터 API의 전체 세트로 코그너티브 컴퓨팅의 강력함을 제공합니다. Watson 서비스를 통해 코그너티브 플랫폼을 배치하여 가장 복잡한 비즈니스 문제점을 해결하십시오. 
 * {{site.data.keyword.IBM_notm}}를 통해 풍부한 통합 클라우드 데이터베이스, Data & Analytics 서비스로 더 많은 작업을 수행할 수 있습니다. 
 * {{site.data.keyword.IBM_notm}} Internet of Things 서비스를 사용하여 앱은 연결된 디바이스, 센서 및 게이트웨이와 통신하고 여기서 수집한 데이터를 이용할 수 있습니다. IBM이 제안하는 방법을 사용하여 Internet of Things 클라우드에 연결된 디바이스를 쉽게 얻을 수 있습니다. 그러면 앱에서 실시간 및 REST API를 사용하여 디바이스와 통신하고 수집하도록 설정된 데이터를 이용할 수 있습니다.  
