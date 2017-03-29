@@ -19,7 +19,7 @@
     "href": "openwhisk/index.html",
     "category_id": "compute"
   }, {
-    "id": "Container",
+    "id": "container",
     "title": "IBM Bluemix Container Service",
     "img": "homepage/images/containerServiceIcon.svg",
     "href": "containers/container_index.html",

@@ -4,7 +4,7 @@
 	"items": [{
 		"id": "GetStarted"
 	}, {
-		"id": "Categories",
+		"id": "Categorie",
 		"items": [{
 			"title": "Calcolo",
 			"img": "homepage/images/compute.svg",
