@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated:  "2017-01-17"
+lastupdated:  "2017-02-17"
 
 ---
 
@@ -29,9 +29,9 @@ Tenga en cuenta lo siguiente antes de configurar la instancia del servicio {{sit
 ###  Primeros pasos
 {: #firststeps_p2}
 
-Tras crear la instancia del servicio {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application, siga el procedimiento siguiente para iniciarse en el uso del servicio.
+Tras crear la instancia del servicio {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application, siga el procedimiento para iniciarse.
 
-### Configuración de la conexión con la instancia de servicio {{site.data.keyword.dashdbshort_notm}}
+### Configuración de la conexión con la instancia de servicio dashDB
 {: #connect_dashdb_p2}
 
 Una vez que se haya creado la instancia de servicio {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application, podrá ver la página *Visión general*, donde deberá especificar la información de conexión de la instancia de servicio {{site.data.keyword.dashdbshort_notm}} for Transactions, a la que se debe conectar la instancia de servicio {{site.data.keyword.mobilefoundation_short}}.
@@ -68,7 +68,7 @@ En varios segundos, puede acceder a la página `Visión general`, que le ofrece 
 **Nota**: no puede cambiar la instancia de servicio {{site.data.keyword.dashdbshort_notm}} que está configurada para que la utilice la instancia del servicio {{site.data.keyword.mobilefoundation_short}}. No obstante, puede utilizar la misma instancia de servicio {{site.data.keyword.dashdbshort_notm}} en varias instancias de servicio {{site.data.keyword.mobilefoundation_short}}, ya que cada instancia de servicio {{site.data.keyword.mobilefoundation_short}} crea su propio esquema en la instancia de servicio {{site.data.keyword.dashdbshort_notm}} seleccionada.
 
 
-## Inicio del servidor de {{site.data.keyword.mobilefirst}}
+## Inicio del servidor de MobileFirst
 {: #start_mobilefoundation_p2}
 
 * Para iniciar {{site.data.keyword.mfserver_short_notm}} con los valores predeterminados, pulse **Iniciar servidor básico**.
@@ -100,7 +100,7 @@ Se inicia el proceso de suministro del servidor. Este proceso dura unos 10 minut
 
  Los usuarios también pueden adjuntar volúmenes a los contenedores para persistir datos. El volumen seleccionado no se puede cambiar. 20 GB es el espacio de compartición de archivos predeterminado disponible para el usuario. Si el usuario necesita espacio de almacenamiento adicional para persistir datos analíticos, necesitará adquirir compartición de archivos adicional y crear un volumen utilizando esta compartición de archivos. Puede seleccionar este nuevo volumen al desplegar el servidor de análisis.
 
- Para obtener más información sobre cómo añadir volúmenes a {{site.data.keyword.containerlong}}, consulte [Almacenamiento de datos permanentes en un volumen mediante el Panel de control de {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html "Icono de enlace externo"){: new_window}.
+ Para obtener más información sobre cómo añadir volúmenes a {{site.data.keyword.containerlong}}, consulte [Almacenamiento de datos permanentes en un volumen mediante el Panel de control de {{site.data.keyword.Bluemix_notm}} ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}.
 
 * Pulse **Añadir analíticas** para añadir el servidor de Mobile Analytics a la instancia de servicio de {{site.data.keyword.mobilefoundation_short}}.
 
@@ -110,7 +110,7 @@ Se inicia el proceso de suministro. Este proceso dura unos 10 minutos y un mensa
 
 * El inicio de sesión único está habilitado entre {{site.data.keyword.mfserver_short_notm}} y el servidor de Mobile Analytics. El servidor de Mobile Analytics está configurado con las mismas claves de LTPA y credenciales de usuario que el servidor de {{site.data.keyword.mfserver_short_notm}}. Puede utilizar el mismo `nombre_usuario` y `contraseña` para iniciar sesión en la consola de Mobile Analytics como se solía iniciar sesión en {{site.data.keyword.mfp_oc_short_notm}}.
 
-Para obtener más información sobre MobileFirst Analytics, puede consultar [MobileFirst Foundation Operational Analytics ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/ "Icono de enlace externo"){: new_window}.
+Para obtener más información sobre MobileFirst Analytics, puede consultar [MobileFirst Foundation Operational Analytics ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/){: new_window}.
 
 **Nota:** El servidor de Mobile Analytics se elimina al suprimir la instancia de servicio de {{site.data.keyword.mobilefoundation_short}} o al intentar volver a crear {{site.data.keyword.mfserver_short_notm}}.
 
@@ -124,7 +124,7 @@ Ahora puede suprimir el servidor de Mobile Analytics que se ha añadido a la ins
  Esto suprimirá el grupo de contenedores de análisis. El proceso de supresión de contenedores de análisis lleva unos 10 minutos. Puede renovar la pantalla para ver el estado actualizado. Una vez que se supriman los contenedores de análisis, se volverá a habilitar el botón **Añadir Analytics**, que puede utilizar para volver a añadir el servidor de Mobile Analytics si lo decide.
 
 
-## Recreación del servidor de {{site.data.keyword.mobilefirst}}
+## Recreación del servidor de MobileFirst
 {: #recreate_mobilefoundation_p2}
 
 *	Pulse **Recrear** para volver a crear el servidor.
@@ -145,4 +145,4 @@ Utilice la opción **Iniciar servidor con configuración avanzada** en la págin
 
       - Se puede crear una granja de servidores de {{site.data.keyword.mobilefirst}} configurando el número de nodos aquí.
 
-Consulte la [documentación de {{site.data.keyword.mobilefoundation_long}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html "Icono de enlace externo"){: new_window} para obtener más detalles.
+Consulte la [documentación de {{site.data.keyword.mobilefoundation_long}} ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}, para obtener más detalles.

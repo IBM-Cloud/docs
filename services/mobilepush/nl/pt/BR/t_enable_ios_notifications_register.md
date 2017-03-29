@@ -24,8 +24,8 @@ já tiver criado um app backend, certifique-se de ligar o app ao Push
 ###Objective-C
 
 ```
-	//For Objective-C
-	- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	//For Objective-C 	
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0){
 	    [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
 	    [[UIApplication sharedApplication] registerForRemoteNotifications];
@@ -52,9 +52,7 @@ já tiver criado um app backend, certifique-se de ligar o app ao Push
 
 ##Passe o token para as Notificações push
 
-Depois que o token for recebido de APNs, passe o token para as
-Notificações de push como
-parte do método ```registerDevice:withDeviceToken```.
+Após o token ser recebido dos APNs, passe o token para as notificações push como parte do método `registerDevice:withDeviceToken`.
 
 ###Objective-C
 
@@ -80,9 +78,7 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 
 ###Swift
 
-Depois que o token for recebido de APNS, passe o token para as
-Notificações de push como
-parte do método ```didRegisterForRemoteNotificationsWithDeviceToken```.
+Após o token ser recebido do APNS, transmita o token para Notificações push como parte do método `didRegisterForRemoteNotificationsWithDeviceToken`.
 
 ```
 func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){

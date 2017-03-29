@@ -10,8 +10,8 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-#Habilitación de notificaciones push avanzadas
-Última actualización: 11 de enero de 2017
+#Habilitación de {{site.data.keyword.mobilepushshort}} avanzado
+Última actualización: 23 de enero de 2017
 {: .last-updated}
 
 Configure un identificador de iOS, un sonido, una carga útil de JSON adicional, notificaciones accionables y notificaciones retenidas.
@@ -73,71 +73,5 @@ protected void onPause() {
 } 
 ```
 	{: codeblock}
-## Habilitación de notificaciones de iOS accionables  
-{: #enable-actionable-notifications-ios}
 
-A diferencia de las {{site.data.keyword.mobilepushshort}} convencionales, estas solicitan a los usuarios que realicen una selección al recibir la alerta de notificación sin abrir la app. 
-
-Siga estos pasos para habilitar las {{site.data.keyword.mobilepushshort}} accionables en la aplicación.
-
-1. Cree una acción de respuesta del usuario.
-```
-//For Swift
-	let acceptAction = UIMutableUserNotificationAction()
-	acceptAction.identifier = "ACCEPT_ACTION"
-	acceptAction.title = "Accept"
-	acceptAction.destructive = false
-	acceptAction.authenticationRequired = false
-	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground
-```
-	{: codeblock}
-```
-//For Swift
-	let declineAction = UIMutableUserNotificationAction()
-	declineAction.identifier = "DECLINE_ACTION"
-	declineAction.title = "Decline"
-	declineAction.destructive = true
-	declineAction.authenticationRequired = false
-	declineAction.activationMode = UIUserNotificationActivationMode.Background
-```
-	{: codeblock}
-
-2. Cree la categoría de notificaciones y configure una acción. **UIUserNotificationActionContextDefault** o **UIUserNotificationActionContextMinimal** son contextos válidos.
-```
-// For Swift
-	let pushCategory = UIMutableUserNotificationCategory()
-	pushCategory.identifier = "TODO_CATEGORY"
-	pushCategory.setActions([acceptAction, declineAction], forContext: UIUserNotificationActionContext.Default)
-```
-	{: codeblock}
-
-1. Cree el valor de notificación y asigne las categorías del paso anterior.
-```
-// For Swift
-	let categories = NSSet(array:[pushCategory]);
-```
-	{: codeblock}
-
-1. Cree una notificación remota o local y asígnele la identidad de la categoría.
-```
-//For Swift
-	let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: categories as? Set<UIUserNotificationCategory>)
-    UIApplication.sharedApplication().registerUserNotificationSettings(settings)
-    UIApplication.sharedApplication().registerForRemoteNotifications() 
-```
-	{: codeblock}
-	
-## Gestión de notificaciones de iOS accionables  
-{: #actionable-notifications}
-
-Al recibir una notificación que necesita reacciones, el control se pasa al siguiente método según el identificador seleccionado.
-
- 
-```
-func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
-      //must call completion handler when finished
-      completionHandler()
-  }
-```    
-	{: codeblock}
     

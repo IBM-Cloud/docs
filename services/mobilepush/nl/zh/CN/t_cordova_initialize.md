@@ -17,10 +17,10 @@ copyright:
 	```
 	BMSClient.initialize("https://myapp.mybluemix.net","abcd1234-abcd-1234-abcd-abcd1234abcd");
 	```
-1. 修改代码片段以使用 Bluemix 的 Route 和 appGUID 参数。 单击 Bluemix 的“应用程序仪表板”中的**移动选项**链接，以获取应用程序的“路径”和“应用程序 GUID”。 在 ```BMSClient.initialize``` 代码片段中将“路径”和“应用程序 GUID”值作为您的参数。
+1. 修改代码片段以使用 Bluemix 的 Route 和 appGUID 参数。 单击 Bluemix 的“应用程序仪表板”中的**移动选项**链接，以获取应用程序的“路径”和“应用程序 GUID”。 在 `BMSClient.initialize` 代码片段中将“路径”和“应用程序 GUID”值作为您的参数。
 
 
-	**注**：如果是使用 Cordova CLI（例如，Cordova create app-name 命令）创建的 Cordova 应用程序，请将此 JavaScript 代码放入 **index.js** 文件内 ```nDeviceReady: function()``` 函数中的 ```app.receivedEvent`` 函数之后，以初始化 BMS 客户机。
+	**注**：如果是使用 Cordova CLI（例如，Cordova create app-name 命令）创建的 Cordova 应用程序，请将此 JavaScript 代码放入 **index.js** 文件内 `nDeviceReady: function()` 函数中的 `app.receivedEvent` 函数之后，以初始化 BMS 客户机。
 
 	```
 	onDeviceReady: function() {
@@ -28,4 +28,4 @@ copyright:
 	    BMSClient.initialize("https://myapp.mybluemix.net","abcd1234-abcd-1234-abcd-abcd1234abcd");
 	    },
 	```
-1. 后续步骤： [注册设备](t_cordova_register.html)。
+1. 后续步骤：[注册设备](t_cordova_register.html)。

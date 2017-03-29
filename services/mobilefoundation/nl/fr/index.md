@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated:  "2017-01-17"
+lastupdated:  "2017-02-17"
 
 ---
 
@@ -11,7 +11,7 @@ lastupdated:  "2017-01-17"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Initiation à {{site.data.keyword.mobilefoundation_short}}
+# Initiation à Mobile Foundation
 {: #gettingstartedtemplate}
 
 {{site.data.keyword.mobilefoundation_long}} accélère la
@@ -26,7 +26,8 @@ Professional 1 Application.
 gérer une application unique créée sur l'une quelconque ou l'ensemble des plateformes d'exploitation prises
 en charge, comme Android, iOS, Windows ou Web mobile. Le plan Developer <!-- does not support {{site.data.keyword.mobilefoundation_short}} deployment on a container group with more than 1 node. This plan --> convient particulièrement au développement et au test.
 
-## Initiation au plan {{site.data.keyword.mobilefoundation_short}}: Developer
+## Initiation au plan Mobile Foundation: Developer
+{: #gettingstartedtemplate_dev}
 
 Après avoir créé une instance de
 {{site.data.keyword.mobilefoundation_short}}: Developer, vous pouvez
@@ -47,7 +48,8 @@ plus d'informations, voir
 [Paramétrage
 d'une configuration avancée](c_using_mfs_p1.html#using_mfs_advanced_p1).
 
-## Initiation au plan {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application
+## Initiation au plan Mobile Foundation: Professional 1 Application
+{: #gettingstartedtemplate_prof}
 
 Après avoir créé une instance du service
 {{site.data.keyword.mobilefoundation_short}}: Professional 1
@@ -69,8 +71,8 @@ pour la connexion à l'instance de service
     + Testez la connexion à l'instance de service {{site.data.keyword.dashdbshort_notm}} for Transactions sélectionnée en cliquant sur
 **Tester la connexion**.
 
-    + Cliquez sur **Ajouter**, puis sur **Continuer** dans la fenêtre en incrustation vous demandant de confirmer la sélection du service
-{{site.data.keyword.dashdbshort_notm}} for Transactions. Cela permet de créer les tables requises dans l'instance de service de base de
+    + Cliquez sur **Ajouter**, puis sur **Continuer** dans la fenêtre en incrustation vous demandant de confirmer la
+sélection du service {{site.data.keyword.dashdbshort_notm}} for Transactions. Cela permet de créer les tables requises dans l'instance de service de base de
 données {{site.data.keyword.dashdbshort_notm}} configurée.
 
     **Remarque :** Une fois que vous avez ajouté une connexion {{site.data.keyword.dashdbshort_notm}} à l'instance {{site.data.keyword.mobilefoundation_short}}, vous ne pouvez plus la modifier.
@@ -91,7 +93,8 @@ Configuration**. Pour plus d'informations, voir
 [Paramétrage d'une
 configuration avancée](c_using_mfs_p2.html#using_mfs_advanced_p2).
 
-## Initiation au plan {{site.data.keyword.mobilefoundation_short}}: Developer Pro
+## Initiation au plan Mobile Foundation: Developer Pro
+{: #gettingstartedtemplate_devpro}
 
 Après avoir créé une instance du service {{site.data.keyword.mobilefoundation_short}}: Developer Pro, vous pouvez commencer à construire votre
 canal d'accès mobile en procédant comme suit.
@@ -144,10 +147,11 @@ plus d'informations, voir
 [Paramétrage
 d'une configuration avancée](c_using_mfs_p3.html#using_mfs_advanced_p3).
 
-## Initiation au plan {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity
+## Initiation au plan Mobile Foundation: Professional Per Capacity
+{: #gettingstartedtemplate_profper}
 
 Après avoir créé une instance du service {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity, vous pouvez commencer à construire votre
-canal d'accès mobile en procédant comme suit. 
+canal d'accès mobile en procédant comme suit.
 
   1.  Connectez-vous à un service {{site.data.keyword.dashdbshort}} for Transactions existant sur {{site.data.keyword.Bluemix_notm}}.
 
@@ -196,18 +200,19 @@ plus d'informations, voir
 [Paramétrage
 d'une configuration avancée](c_using_mfs_p4.html#using_mfs_advanced_p4).
 
-Visitez le site [Using the Mobile Foundation service to set up MobileFirst Server<!-- on IBM Containers--> ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/bluemix/using-mobile-foundation/ "Icône de lien externe"){: new_window} pour vous familiariser avec {{site.data.keyword.mobilefoundation_short}}.
+Accédez à [Using the Mobile Foundation service to set up MobileFirst Server<!-- on IBM Containers--> ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/bluemix/using-mobile-foundation/){: new_window} pour vous familiariser avec {{site.data.keyword.mobilefoundation_short}}.
 
 ##  Limitations connues
+{: #knownlimitations_mfp}
 
 * L'interface utilisateur du service {{site.data.keyword.mobilefoundation_short}} n'utilise pas le modèle spécifique à l'environnement local sélectionné par l'utilisateur pour l'affichage des nombres.
 
 
 # Liens connexes
-{: #rellinks}
+{: #rellinks  notoc}
 
 ## Liens connexes
-{: #general}
+{: #general notoc}
 
-*	[Documentation du produit IBM MobileFirst Platform Foundation V8.0.0![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html "Icône de lien externe"){: new_window}
-*	[IBM MobileFirst Platform Developer Center ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobilefirstplatform.ibmcloud.com "Icône de lien externe"){: new_window}
+*	[Documentation du produit IBM MobileFirst Platform Foundation V8.0.0 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}
+*	[Centre de développement IBM MobileFirst Platform ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobilefirstplatform.ibmcloud.com){: new_window}

@@ -3,7 +3,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-03-21"
 ---
 
 {:shortdesc: .shortdesc}
@@ -75,10 +75,12 @@ The Infrastructure dashboard provides various services to fit your cloud infrast
 
 When you access the {{site.data.keyword.Bluemix_notm}} console, the menu bar displays links or buttons to sign up, log in, access documentation, and access the catalog. After you log in, the menu bar contains a hamburger menu ![Hamburger icon](../icons/icon_hamburger.svg) and additional links, depending on your account type:
 
-* If you are a new {{site.data.keyword.Bluemix_notm}} user, you can use the hamburger menu ![Hamburger icon](../icons/icon_hamburger.svg) to switch between the Apps, Services, or Infrastructure dashboards. Links to support and account options are displayed, and you can use the **Catalog** link to access {{site.data.keyword.Bluemix_notm}}, compute, and infrastructure services. 
-* If you are an existing user and you have linked your {{site.data.keyword.Bluemix_notm}} and your {{site.data.keyword.BluSoftlayer}} account, you can use the hamburger menu ![Hamburger icon](../icons/icon_hamburger.svg) to switch between the Apps, Services, or Infrastructure dashboards. Links to support and account options are displayed, and you can use the **Catalog** link to access {{site.data.keyword.Bluemix_notm}}, compute, and infrastructure services. 
-* If you are an existing user with a {{site.data.keyword.Bluemix_notm}} account, you can use the hamburger menu ![Hamburger icon](../icons/icon_hamburger.svg) to switch between the Apps and Services dashboards. Links to support and account options are displayed, and you can use the **Catalog** link to access {{site.data.keyword.Bluemix_notm}} and  compute services. 
-* If you are an existing user with a {{site.data.keyword.BluSoftlayer}} account and you have not linked your account to {{site.data.keyword.Bluemix_notm}}, the menu bar displays links that were previously available in {{site.data.keyword.BluSoftlayer}}, such as access to KnowledgeLayer help, contact options, notifications, open tickets and log in. Additionally, a link to the Infrastructure dashboard, and links to support and account options are displayed. 
+* If you are a new {{site.data.keyword.Bluemix_notm}} user, you can use the hamburger menu ![Hamburger icon](../icons/icon_hamburger.svg) to switch between the Apps, Services, and Infrastructure dashboards. You can use the **Catalog** link to access platform and infrastructure services. Links to support and account, billing and usage, and security management options are also displayed.
+* If you are an existing user with a {{site.data.keyword.Bluemix_notm}} account, you can use the hamburger menu ![Hamburger icon](../icons/icon_hamburger.svg) to switch between the Apps and Services dashboards. You can use the **Catalog** to access platform and infrastructure services, and links to platform-level support and account, billing and usage, and security management options are displayed.
+* If you are an existing user and you have linked your {{site.data.keyword.Bluemix_notm}} and your {{site.data.keyword.BluSoftlayer}} account, you can use the hamburger menu ![Hamburger icon](../icons/icon_hamburger.svg) to switch between the Apps, Services, and Infrastructure dashboards. You can also use the **Catalog** link to access platform and infrastructure services.
+  * When you're in the Apps and Services dashboards, the menu bar includes links to platform-level resources, such as {{site.data.keyword.Bluemix_notm}} documentation, support, and account and security management options. You can also access links to infrastructure-level billing options. 
+  * When you're in the Infrastrcuture dashboard, the menu bar displays links to infrastructure-level resources, such as KnowledgeLayer help, contact options, notifications, open tickets, and support and account management options.
+* If you are an existing user with a {{site.data.keyword.BluSoftlayer}} account that isn't linked to {{site.data.keyword.Bluemix_notm}}, you can use the hamburger menu ![Hamburger icon](../icons/icon_hamburger.svg) to access the Infrastructure dashboard and the **Catalog** link to access infrastructure services. The menu bar also includes links to KnowledgeLayer help, contact options, notifications, open tickets, and support and account options.
 
 ## {{site.data.keyword.Bluemix_notm}} Cloud Foundry architecture
 {: #architecture}
@@ -164,6 +166,7 @@ A unique prefix is assigned to each region. {{site.data.keyword.Bluemix_notm}} p
 | US South region | Dallas, US | ng | api.ng.bluemix.net | console.ng.bluemix.net |
 | United Kingdom region | London, England | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
 | Sydney region | Sydney, Australia | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
+| Germany region | Frankfurt, Germany | eu-de | api.eu-de.bluemix.net | console.eu-de.bluemix.net |
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} region list" caption-side="top"}
 
 

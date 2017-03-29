@@ -26,7 +26,7 @@ Google Chrome のアプリケーションおよび拡張機能を有効にして
 
 Chrome アプリケーションおよびエクステンションに Javascript SDK をインストールする場合、以下の手順を実行します。
 
-`BMSPushSDK.js` と `manifest_Chrome_Ext.json` (Chrome 拡張機能の場合) または `manifest_Chrome_App.json` (Chrome アプリケーションの場合) を[Bluemix Web push SDK ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master "外部リンク・アイコン"){: new_window}からダウンロードします。
+`BMSPushSDK.js` と `manifest_Chrome_Ext.json` (Chrome エクステンションの場合) または `manifest_Chrome_App.json` (Chrome アプリケーションの場合) を [Bluemix Web push SDK ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master){: new_window}からダウンロードします。
 
 
 
@@ -64,10 +64,10 @@ app GUID を入手するには、初期化されたプッシュ・サービス�
  - シドニー:   		 `.au-syd.bluemix.net`
 
 ```
-var bmsPush = new BMSPush();
-function callback(response) {
-     alert(response.response)
-  }
+ var bmsPush = new BMSPush();
+ function callback(response) {
+ alert(response.response)
+ }
   var initParams = {
   "appGUID":"push app GUID",
   "appRegion":"Region where service hosted",

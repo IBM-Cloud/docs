@@ -91,3 +91,238 @@ Rufen Sie **Xcode > Build Settings > Build Options** auf und setzen Sie **Enable
 
 **Achtung**: Ab iOS 9 können sich Änderungen an der Komponente 'App Transport Security' (ATS) auf
 die Verarbeitung des Authentifizierungsprozesses auswirken. Die folgenden Blogeinträge liefern weitere Informationen zu den Änderungen: [ATS and Bitcode in iOS 9](https://developer.ibm.com/mobilefirstplatform/2015/09/09/ats-and-bitcode-in-ios9/) und [Connect your iOS 9 app to Bluemix today](https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/).
+
+
+
+
+# Push-SDK für iOS-Apps initialisieren
+{: #enable-push-ios-notifications-initialize}
+
+Das Anwendungs-Delegat für die iOS-Anwendung ist eine übliche Position für den
+Initialisierungscode.
+Klicken Sie auf den Link **Mobile Systemerweiterungen** in Ihrem Bluemix-Anwendungsdashboard, um
+die Anwendungsroute und die GUID abzurufen.
+
+##Core-SDK initialisieren
+
+###Objective-C
+
+```
+// Initialize the SDK for Object-C with IBM Bluemix GUID and route
+IMFClient *imfClient = [IMFClient sharedInstance];
+[imfClient initializeWithBackendRoute:"add_your_applicationRoute_here" backendGUID:"add_your_appId_here"];
+```
+
+###Swift
+
+```
+// Initialize the Core SDK for Swift with IBM Bluemix GUID, route, and region
+let myBMSClient = BMSClient.sharedInstance
+
+myBMSClient.initializeWithBluemixAppRoute("BluemixAppRoute", bluemixAppGUID: "APPGUID", bluemixRegion:"Location where your app Hosted")
+myBMSClient.defaultRequestTimeout = 10.0 // Timeout in seconds
+```
+
+
+##Client-Push-SDK initialisieren
+
+###Objective-C
+
+```
+//Initialize client Push SDK for Objective-C
+IMFPushClient _pushService = [IMFPushClient sharedInstance];
+```
+
+###Swift
+
+```
+//Initialize client Push SDK for Swift
+let push = BMSPushClient.sharedInstance
+```
+
+## Route, GUID und Bluemix-Region
+
+**appRoute**
+
+Gibt die Route an, die der Serveranwendung zugewiesen ist, die Sie in Bluemix erstellt haben.
+
+**GUID**
+
+Gibt den eindeutigen Schlüssel an, der der Anwendung zugewiesen wird, die Sie in Bluemix erstellt haben. Bei diesem Wert muss die Groß-/Kleinschreibung beachtet werden.
+
+**bluemixRegionSuffix**
+
+Gibt den Standort an, an dem die App gehostet ist. Der Parameter `bluemixRegion` gibt an, welche Bluemix-Bereitstellung verwendet wird. Sie können diesen Wert mit der statischen Eigenschaft `BMSClient.REGION` angeben und einen von drei Werten verwenden:
+
+- BMSClient.REGION_US_SOUTH
+- BMSClient.REGION_UK
+- BMSClient.REGION_SYDNEY
+
+
+
+
+# iOS-Anwendungen und -Geräte registrieren
+{: #enable-push-ios-notifications-register}
+
+
+Eine Anwendung (App) muss bei APNs registriert werden, um ferne Benachrichtigungen zu
+empfangen. Dieser Schritt erfolgt meistens nach der Installation der App auf einem Gerät. Nachdem
+das von APNs generierte Gerätetoken von der App empfangen wurde, muss es zurück an
+Push Notifications Service geleitet werden.
+
+Führen Sie zum Registrieren von iOs-Anwendungen und -Geräten die folgenden Schritte aus:
+
+1. Back-End-Anwendung erstellen
+2. Token an Push Notifications übergeben
+
+
+##Back-End-Anwendung erstellen
+
+Erstellen Sie eine Back-End-Anwendung im Abschnitt 'Boilerplates' des Bluemix®-Katalogs, mit der der Push-Service automatisch an diese Anwendung gebunden wird. Wenn Sie bereits eine Back-End-App erstellt haben, stellen Sie sicher, dass Sie die App an Push Notifications Service binden.
+
+###Objective-C
+
+```
+	//For Objective-C
+	- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0){
+	    [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
+	    [[UIApplication sharedApplication] registerForRemoteNotifications];
+	    }
+	    else{
+	    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+	    (UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert)];
+	    }
+	    return YES;
+	}
+```
+
+###Swift
+
+```
+	//For Swift
+	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+		let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound
+		let notificationSettings: UIUserNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: categories)
+		application.registerUserNotificationSettings(notificationSettings)
+		application.registerForRemoteNotifications()
+	}
+```
+
+##Token an Push Notifications übergeben
+
+Nachdem das Token von APNs empfangen worden ist, leiten Sie es als Teil der Methode `registerDevice:withDeviceToken` an Push Notifications weiter.
+
+###Objective-C
+
+```
+//For Objective-C
+-( void) application:( UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:( NSData *)deviceToken{
+
+   IMFClient *client = [IMFClient sharedInstance];
+
+ [client initializeWithBackendRoute:@"your-backend-route-here" backendGUID:@"Your-backend-GUID-here"];
+
+
+ // get Push instance
+IMFPushClient* push = [IMFPushClient sharedInstance];
+[push registerDeviceToken:deviceToken completionHandler:^(IMFResponse *response,  NSError *error) {
+   if (error){
+     [ self  updateMessage:error .description];
+  }  else {
+    [ self updateMessage:response .responseJson .description];
+}
+}];
+```
+
+###Swift
+
+Nachdem das Token von APNS empfangen worden ist, leiten Sie es als Teil der Methode `didRegisterForRemoteNotificationsWithDeviceToken` an Push Notifications weiter.
+
+```
+func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
+   let push =  BMSPushClient.sharedInstance
+   push.registerDeviceToken(deviceToken) { (response, statusCode, error) -> Void in
+        if error.isEmpty {
+            print( "Response during device registration : \(response)")
+            print( "status code during device registration : \(statusCode)")
+        }
+        else{
+            print( "Error during device registration \(error) ")
+            Print( "Error during device registration \n  - status code: \(statusCode) \n Error :\(error) \n")
+        }
+    }
+
+}
+```
+
+
+
+# Push-Benachrichtigungen in iOS-Geräten empfangen
+{: #enable-push-ios-notifications-receiving}
+
+Empfangen Sie Push-Benachrichtigungen in iOS-Geräten.
+
+##Objective-C
+Um Push-Benachrichtigungen in iOS-Geräten zu empfangen, fügen Sie die folgende Objective-C-Methode zum Anwendungs-Delegat Ihrer Anwendung hinzu.
+
+```
+// Für Objective-C
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+//userInfo dictionary will contain data sent from server.
+}
+```
+
+##Swift
+Um Push-Benachrichtigungen in iOS-Geräten zu empfangen, fügen Sie die folgende Swift-Methode zum Anwendungs-Delegat Ihrer Anwendung hinzu.
+
+```
+ // Für Swift
+func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+       //UserInfo dictionary will contain data sent from the server
+   }
+
+```
+
+
+
+# Einfache Push-Benachrichtigungen senden
+{: #push-send-notifications}
+
+Nach dem Entwickeln Ihrer Anwendungen können Sie einfache Push-Benachrichtigungen (ohne Tags, Badges, zusätzliche Nutzdaten oder Audiodateien) senden.
+
+
+Einfache Push-Benachrichtigungen senden
+
+1. Wählen Sie unter **Zielgruppe auswählen** eine der folgenden Zielgruppen aus:
+**Alle Geräte** oder die Plattform **Nur iOS-Geräte** oder
+**Nur Android-Geräte**. 
+
+	**Hinweis**: Wenn Sie die Option **Alle Geräte** auswählen, erhalten alle Geräte, die Push-Benachrichtigungen subskribiert haben, Ihre Benachrichtigung.
+
+	![Anzeige 'Benachrichtigungen'](images/tag_notification.jpg)
+
+2. Geben Sie in das Feld **Eigene Benachrichtigung erstellen** Ihre Nachricht ein und klicken Sie dann auf **Senden**.
+3. Überprüfen Sie, ob die Geräte Ihre Benachrichtigung empfangen haben.
+
+	Der folgende Screenshot zeigt ein Alertfeld bei der Verarbeitung einer Push-Benachrichtigung
+im Vordergrund auf einem Android- und auf einem iOS-Gerät.
+
+	![Push-Benachrichtigung im Vordergrund auf einem Android-Gerät](images/Android_Screenshot.jpg)
+
+	![Push-Benachrichtigung im Vordergrund auf einem iOS-Gerät](images/iOS_Screenshot.jpg)
+
+	Der folgende Screenshot zeigt eine Push-Benachrichtigung im Hintergrund auf einem Android-Gerät.
+	![Push-Benachrichtigung im Hintergrund auf einem Android-Gerät](images/background.jpg)
+
+
+
+
+# Nächste Schritte
+{: #next_steps_tags}
+
+Nachdem Sie einfache Benachrichtigungen erfolgreich eingerichtet haben, können Sie tagbasierte Benachrichtigungen und erweiterte Optionen konfigurieren.
+
+Fügen Sie diese Funktionen des Push Notifications-Service Ihrer App hinzu.
+Informationen zur Verwendung tagbasierter Benachrichtigungen finden Sie in [Tagbasierte Benachrichtigungen](c_tag_basednotifications.html).
+Informationen zur Verwendung erweiterter Benachrichtigungen finden Sie in [Erweiterte Push-Benachrichtigungen](t_advance_notifications.html).

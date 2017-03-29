@@ -22,7 +22,7 @@ do aplicativo ou para um conjunto específico de usuários e dispositivos usando
 
 - Criando um aplicativo Bluemix usando o modelo do MobileFirst Services Starter do catálogo. Isso cria um serviço Push Notifications ligado a um aplicativo backend do Bluemix.
 - Criando um serviço Push Notifications desvinculado diretamente do catálogo Mobile. É possível ligar posteriormente a um aplicativo ou até mesmo escolher usá-lo desvinculado. 
-- Usando o [Painel móvel ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/docs/mobile/services.html "Ícone de link externo"){: new_window}.
+- Usando o [painel Mobile ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/docs/mobile/services.html){: new_window}.
 
 Observe que a guia de monitoramento {{site.data.keyword.mobilepushshort}} não mostra dados de analítica.
 
@@ -91,7 +91,7 @@ As APIs de {{site.data.keyword.mobilepushshort}} são protegidas por dois tipos 
 somente uma API relacionada para registro de um dispositivo com um ID do usuário associado que requer este 'clientSecret'. Nenhuma das outras APIs chamadas a partir
 de clientes móveis requer o clientSecret. 
 
-O 'appSecret' e o 'clientSecret' são alocados para todas as instâncias de serviço no momento da ligação de um aplicativo ao serviço {{site.data.keyword.mobilepushshort}}. Consulte a documentação de [APIs de REST ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://mobile.{DomainName}/imfpush/ "Ícone de link externo") para obter informações sobre como os segredos devem ser passados e para quais APIs.
+O 'appSecret' e o 'clientSecret' são alocados para todas as instâncias de serviço no momento da ligação de um aplicativo ao serviço {{site.data.keyword.mobilepushshort}}. Consulte a documentação das [APIs de REST ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://mobile.{DomainName}/imfpush/) para obter informações sobre como os segredos devem ser passados e para quais APIs.
 
 **Nota**: os aplicativos anteriores eram necessários para passar o clientSecret somente ao registrar ou atualizar dispositivos com o campo userId. Todas
 as outras APIs chamadas por clientes móveis e do navegador não requerem o clientSecret. Esses aplicativos antigos podem continuar a usar o clientSecret opcionalmente

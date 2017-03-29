@@ -14,7 +14,7 @@ lastupdated:  "2016-08-03"
 # Manutenzione e aggiornamenti
 {: #maintupdates_mf}
 
-{{site.data.keyword.mobilefoundation_short}} fornisce {{site.data.keyword.mfserver_short_notm}} <!--on {{site.data.keyword.containerlong}} as a container group-->. Gli aggiornamenti al server {{site.data.keyword.mobilefoundation_short}} vengono notificati agli utenti. Puoi scegliere di aggiornare il server {{site.data.keyword.mobilefoundation_short}} quando ti è più conveniente.
+{{site.data.keyword.mobilefoundation_short}} fornisce {{site.data.keyword.mfserver_short_notm}}<!-- on {{site.data.keyword.containerlong}} as a container group-->. Gli aggiornamenti al server {{site.data.keyword.mobilefoundation_short}} vengono notificati agli utenti. Puoi scegliere di aggiornare il server {{site.data.keyword.mobilefoundation_short}} quando ti è più conveniente.
 {:shortdesc}
 
 ## Strategia di manutenzione
@@ -36,6 +36,8 @@ L'aggiornamento per {{site.data.keyword.mobilefoundation_short}} può essere app
 
 Durante l'applicazione dell'aggiornamento, la versione del server, come visto in {{site.data.keyword.mfp_oc_short_notm}}, sarà modificata per indicare la versione aggiornata del server.
 
-**Nota:**
+### Nota:
+{: #note notoc}
+
 * Gli utenti non saranno in grado di applicare le loro modifiche e aggiornamenti alla loro istanza del servizio {{site.data.keyword.mobilefoundation_short}}.
 * Consulta [Ricreare il server nel piano Developer](c_using_mfs_p1.html#recreate_mobilefoundation_p1) e [Ricreare il server nel piano Professional 1 Application](c_using_mfs_p2.html#recreate_mobilefoundation_p2) per comprendere la differenza nel comportamento dei piani quando viene fatto clic su **Ricrea**.

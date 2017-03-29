@@ -20,11 +20,11 @@ erstellt haben. Das Cordova-Plug-in ist die Oberfläche für die Android- und iO
 	```
 	BMSClient.initialize("https://myapp.mybluemix.net","abcd1234-abcd-1234-abcd-abcd1234abcd");
 	```
-1. Ändern Sie das Code-Snippet so, dass die Parameter für die Routen und Anwendungs-GUID von Bluemix verwendet werden. Klicken Sie auf den Link **Mobile Optionen** in Ihrem Bluemix-Anwendungsdashboard, um
-die Anwendungsroute und die App-GUID abzurufen. Verwenden Sie die Werte für die Route und die App-GUID als Parameter in Ihrem Code-Snippet für `BMSClient.initialize`.
+1. Ändern Sie das Code-Snippet so, dass die Parameter für die Routen und Anwendungs-GUID von Bluemix verwendet werden. Klicken Sie auf den Link **Mobile Systemerweiterungen** in Ihrem Bluemix-Anwendungsdashboard, um
+die Anwendungsroute und die App-GUID abzurufen. Verwenden Sie die Werte für die Route und die App-GUID als Parameter in Ihrem Code-Snippet des Typs `BMSClient.initialize`.
 
 
-	**Hinweis**: Wenn Sie beispielsweise mit der Cordova-CLI eine Cordova-App erstellt haben, erstellt Cordova den Befehl 'app-name', speichert diesen Javascript-Code in der Datei **index.js** hinter der Funktion `app.receivedEvent` in der Funktion `onDeviceReady: function()` zum Initialisieren des BMS-Clients.
+	**Hinweis**: Wenn Sie beispielsweise mit der Cordova-CLI eine Cordova-App erstellt haben, erstellt Cordova den Befehl 'app-name', speichert diesen JavaScript-Code in der Datei **index.js** hinter der Funktion `app.receivedEvent` in der Funktion `onDeviceReady: function()` zum Initialisieren des BMS-Clients.
 
 	```
 	onDeviceReady: function() {

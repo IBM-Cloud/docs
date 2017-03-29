@@ -15,19 +15,16 @@
 
 ```
 // Get a list of available tags to which the device can subscribe
-push.getTags(new MFPPushResponseListener<List<String>>(){  
-@Override
-    public void onSuccess(List<String> tags) {
-    updateTextView("Retrieved available tags: " + tags);  
-  
-   System.out.println("Available tags are: "+tags);
-   availableTags = tags;   
-subscribeToTag();
-   
-  }    
-@Override
-    
-  public void onFailure(MFPPushException ex){
+	push.getTags(new MFPPushResponseListener<List<String>>(){
+    @Override
+    public void onSuccess(List<String> tags){
+    updateTextView("Retrieved available tags: " + tags);
+    System.out.println("Available tags are: "+tags);
+    availableTags = tags;
+    subscribeToTag();
+     }
+    @Override
+    public void onFailure(MFPPushException ex){
      updateTextView("Error getting available tags.. " + ex.getMessage());
   }
 })  
@@ -35,11 +32,9 @@ subscribeToTag();
 
 **getSubscriptions** API を使用して、デバイスがサブスクライブする対象タグのリストを取得します。
 
-
 ```
 // Get a list of tags that to which the device is subscribed.
 push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
-
     @Override
     public void onSuccess(List<String> tags) {
     updateTextView("Retrieved subscriptions : " + tags);
@@ -66,13 +61,11 @@ MFPPush.retrieveAvailableTags(function(tags) {
     alert(tags);
 }, null);
 
-
 ```
 
 ```
 //Get a list of available tags to which the device is subscribed.
 MFPPush.getSubscriptionStatus(function(tags) {
-
     alert(tags);
 }, null);
 ```
@@ -87,11 +80,10 @@ MFPPush.getSubscriptionStatus(function(tags) {
 //Get a list of available tags to which the device can subscribe
 [push retrieveAvailableTagsWithCompletionHandler:
 ^(IMFResponse *response, NSError *error){
- if(error){    
-[self updateMessage:error.description];
-  
-} else {
-[self updateMessage:@"Successfully retrieved available tags."];
+ if(error){
+   [self updateMessage:error.description];
+ } else {
+    [self updateMessage:@"Successfully retrieved available tags."];
  NSDictionary *availableTags = [[NSDictionary alloc]init];
  availableTags = [response tags];
 [self.appDelegateVC updateMessage:availableTags.description];
@@ -102,14 +94,13 @@ MFPPush.getSubscriptionStatus(function(tags) {
 **retrieveSubscriptions** API を使用して、デバイスがサブスクライブする対象タグのリストを取得します。
 
 
-
 ```
 // Get a list of tags that to which the device is subscribed.
 [push retrieveSubscriptionsWithCompletionHandler:
-^(IMFResponse *response, NSError *error) {
-  if(error){
+	^(IMFResponse *response, NSError *error) {
+    if(error){
      [self updateMessage:error.description];
-   } else {
+    } else {
      [self updateMessage:@"Successfully retrieved subscriptions."];
  NSDictionary *subscribedTags = [[NSDictionary alloc]init];
 subscribedTags = [response subscriptions];

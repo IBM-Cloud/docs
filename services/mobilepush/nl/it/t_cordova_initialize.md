@@ -18,10 +18,10 @@ la rotta e il GUID dell'applicazione. Dopo che hai inizializzato il plugin, puoi
 	```
 	BMSClient.initialize("https://myapp.mybluemix.net","abcd1234-abcd-1234-abcd-abcd1234abcd");
 	```
-1. Modifica il frammento di codice per utilizzare la tua rotta Bluemix e i parametri appGUID. Fai clic sul link **Opzioni mobili** nel tuo dashboard dell'applicazione Bluemix per ottenere rotta e GUID dell'applicazione. Utilizza i valori rotta e GUID dell'applicazione come tuoi parametri nel tuo frammento di codice ```BMSClient.initialize```.
+1. Modifica il frammento di codice per utilizzare la tua rotta Bluemix e i parametri appGUID. Fai clic sul link **Opzioni mobili** nel tuo dashboard dell'applicazione Bluemix per ottenere rotta e GUID dell'applicazione. Utilizza i valori rotta e GUID dell'applicazione come tuoi parametri nel tuo frammento di codice `BMSClient.initialize`.
 
 
-	**Nota**: se hai creato un'applicazione Cordova utilizzando la CLI di Cordova, ad esempio, con il comando Cordova create app-name, inserisci questo codice Javascript nel file **index.js**, dopo la funzione ```app.receivedEvent``` nella funzione ```nDeviceReady: function()`` per inizializzare il client BMS.
+	**Nota**: se hai creato un'applicazione Cordova utilizzando la CLI di Cordova, ad esempio, con il comando Cordova create app-name, inserisci questo codice Javascript nel file **index.js**, dopo la funzione `app.receivedEvent` nella funzione `onDeviceReady: function()` per inizializzare il client BMS.
 
 	```
 	onDeviceReady: function() {

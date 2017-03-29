@@ -12,7 +12,7 @@ copyright:
 
 # 使用用户标识注册设备
 {: #register_device_with_userId}
-上次更新时间：2017 年 1 月 11 日
+上次更新时间：2017 年 2 月 6 日
 {: .last-updated}
 
 要注册基于用户标识的通知，请完成以下步骤：
@@ -22,7 +22,7 @@ copyright:
 
 使用 {{site.data.keyword.mobilepushshort}} 服务的 `AppGUID` 和 `clientSecret` 键来初始化 MFPPush 类。
 ```
-// Initialize the MFPPush
+// Initialize the Push Notifications service
 push = MFPPush.getInstance();
 push.initialize(getApplicationContext(),"AppGUID", "clientSecret");
 ```
@@ -33,22 +33,21 @@ push.initialize(getApplicationContext(),"AppGUID", "clientSecret");
 - **clientSecret**：此为 {{site.data.keyword.mobilepushshort}} 服务的 clientSecret 键。
 
   使用 **registerDeviceWithUserId** API 为设备注册 {{site.data.keyword.mobilepushshort}}。
+
 ```
-// Register the device to {{site.data.keyword.mobilepushshort}}.
+// Register the device to Push Notifications
 push.registerDeviceWithUserId("userId",new MFPPushResponseListener<String>() {
-    @Override
-	    public void onSuccess(String deviceId) {
-	           Log.d("Device is registered with Push Service.");
-  }
-  @Override
+		@Override
+		public void onSuccess(String response) {
+		Log.d("Device is registered with Push Service.");}
+		@Override
     public void onFailure(MFPPushException ex) {
          Log.d("Error registering with Push Service...\n"
         + "Push notifications will not be received.");
-  }
-});
+		}
+		});
 ```
 	{: codeblock}
-
 
 - **userId**：传递用于注册 {{site.data.keyword.mobilepushshort}} 的唯一用户标识值。
 
@@ -60,7 +59,7 @@ push.registerDeviceWithUserId("userId",new MFPPushResponseListener<String>() {
 使用以下 API 来注册基于 UserId 的 {{site.data.keyword.mobilepushshort}}。
 
 ```
-// Register device for push notification with UserId
+// Register device for Push Notification with UserId
 var options = {"userId": "Your User Id value"};
 BMSPush.registerDevice(options,success, failure); 
 ```
@@ -87,11 +86,10 @@ push.initializeWithAppGUID("appGUID", clientSecret:"clientSecret")
 使用 **registerWithUserId** API 为设备注册 {{site.data.keyword.mobilepushshort}}。
 
 ```
-// Register the device to Push Notifications service.
+// Register the device to Push Notifications service
 push.registerWithDeviceToken("deviceToken", WithUserId: "userId")  { (response, statusCode, error) -> Void in
 if error.isEmpty {
-
-    print( "Response during device registration : \(response)")
+  print( "Response during device registration : \(response)")
         print( "status code during device registration : \(statusCode)")
     } else {
         print( "Error during device registration \(error) ")

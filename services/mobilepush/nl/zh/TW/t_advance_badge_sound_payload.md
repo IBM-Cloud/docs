@@ -10,8 +10,8 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-#啟用進階推送通知
-前次更新：2017 年 1 月 11 日
+#啟用進階 {{site.data.keyword.mobilepushshort}}
+前次更新：2017 年 1 月 23 日
 {: .last-updated}
 
 配置 iOS 徽章、音效、其他 JSON 有效負載、可採取動作的通知，以及保存通知。
@@ -75,71 +75,5 @@ protected void onPause() {
 } 
 ```
 	{: codeblock}
-## 啟用可採取動作的 iOS 通知  
-{: #enable-actionable-notifications-ios}
 
-與傳統 {{site.data.keyword.mobilepushshort}} 不同，可採取動作的通知會提示使用者在接收通知警示時做出選擇，而不必開啟應用程式。 
-
-請完成這些步驟，以在應用程式中啟用可採取動作的 {{site.data.keyword.mobilepushshort}}。
-
-1. 建立使用者回應動作。
-```
-//For Swift
-	let acceptAction = UIMutableUserNotificationAction()
-	acceptAction.identifier = "ACCEPT_ACTION"
-	acceptAction.title = "Accept"
-	acceptAction.destructive = false
-	acceptAction.authenticationRequired = false
-	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground
-```
-	{: codeblock}
-```
-//For Swift
-	let declineAction = UIMutableUserNotificationAction()
-	declineAction.identifier = "DECLINE_ACTION"
-	declineAction.title = "Decline"
-	declineAction.destructive = true
-	declineAction.authenticationRequired = false
-	declineAction.activationMode = UIUserNotificationActivationMode.Background
-```
-	{: codeblock}
-
-2. 建立通知種類並設定動作。**UIUserNotificationActionContextDefault** 或 **UIUserNotificationActionContextMinimal** 是有效的環境定義。
-```
-// For Swift
-	let pushCategory = UIMutableUserNotificationCategory()
-	pushCategory.identifier = "TODO_CATEGORY"
-	pushCategory.setActions([acceptAction, declineAction], forContext: UIUserNotificationActionContext.Default)
-```
-	{: codeblock}
-
-1. 建立通知設定，並指派先前步驟的種類。
-```
-// For Swift
-	let categories = NSSet(array:[pushCategory]);
-```
-	{: codeblock}
-
-1. 建立本端或遠端通知，並為其指派種類身分。
-```
-//For Swift
-	let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: categories as? Set<UIUserNotificationCategory>)
-    UIApplication.sharedApplication().registerUserNotificationSettings(settings)
-    UIApplication.sharedApplication().registerForRemoteNotifications()
-```
-	{: codeblock}
-	
-## 處理可採取動作的 iOS 通知  
-{: #actionable-notifications}
-
-接收到可採取動作的通知時，會根據所選擇的 ID，將控制權傳遞給下列方法。
-
- 
-```
-func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
-      //must call completion handler when finished
-      completionHandler()
-  }
-```    
-	{: codeblock}
     

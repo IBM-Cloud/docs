@@ -18,8 +18,8 @@ copyright:
 push.subscribe(allTags.get(0),
 new MFPPushResponseListener<String>() {
   @Override
-  public void onFailure(MFPPushException ex) {
-    updateTextView("Error subscribing to Tag1.."
+    public void onFailure(MFPPushException ex) {
+         updateTextView("Error subscribing to Tag1.."
            + ex.getMessage());
   }
   @Override
@@ -99,9 +99,8 @@ MFPPush.unsubscribe(tag, success, failure);
 
 ```
 push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!) -> Void in
-
-	if (error != nil) {
-//error while subscribing to tags
+	if (error != nil) { 
+		//error while subscribing to tags
 	} else {
 		//successfully subscribed to tags var subStatus = response.subscribeStatus();
 	}
@@ -113,14 +112,13 @@ push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!
 使用 **unsubscribeFromTags** API，可以取消预订标记。
 
 ```
-push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, error) -> Void in
-
-    if error.isEmpty {
+push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, error) -> Void inif error.isEmpty {
         print( "Response during unsubscribed tags : \(response.description)")
         print( "status code during unsubscribed tags : \(statusCode)")
     }
-    else {
-print( "Error during  unsubscribed tags \(error) ")
+    else 
+	{
+    print( "Error during  unsubscribed tags \(error) ")
         print( "Error during unsubscribed tags \n  - status code: \(statusCode) \n Error :\(error) \n")
     }
 }

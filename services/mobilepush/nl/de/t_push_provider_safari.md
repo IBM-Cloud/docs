@@ -27,7 +27,8 @@ In Chrome- und Safari-Browsern sind zusätzliche Konfigurationsschritte für Web
 {: #config-chrome-firefox}
 
 1. Wählen Sie in der Push-Dashboardanzeige **Konfigurieren** aus.
-2. Wählen Sie die Webregisterkarte aus.	![WebPush-Konfigurationen](images/webpush_configure.jpg)
+2. Wählen Sie die Webregisterkarte aus.
+	![WebPush-Konfigurationen](images/webpush_configure.jpg)
 3. Konfigurieren Sie den FCM/GCM-API-Schlüssel und die URL Ihrer Webseite, die für den Empfang von Push-Benachrichtigungen registriert wird.
 4. Klicken Sie auf **Speichern**.
 5. Nächste Schritte: [Benachrichtigungen für Google Chrome- und Mozilla Firefox-Browser aktivieren](c_enable_push.html).

@@ -22,4 +22,4 @@ definir tags e depois enviar e receber mensagens usando
 
 Deve-se
 primeiramente criar as identificações para o aplicativo, configurar as assinaturas da identificação
-e, em seguida, iniciar as notificações baseadas em identificação. Para enviar uma notificação baseada em tag usando a [API de REST ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://mobile.{DomainName}/imfpush/ "Ícone de link externo"){: new_window}, assegure-se de que os "tagNames" sejam fornecidos ao postar no recurso de mensagem. 
+e, em seguida, iniciar as notificações baseadas em identificação. Para enviar uma notificação baseada em tag usando a [API de REST ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://mobile.{DomainName}/imfpush/){: new_window}, assegure-se de que as "tagNames" sejam fornecidas ao postar no recurso de mensagem. 

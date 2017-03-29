@@ -10,8 +10,8 @@ copyright:
 
 Die Methode 'onCreate' der Hauptaktivität in Ihrer Android-Anwendung ist eine übliche Position für den Initialisierungscode.
 
-Klicken Sie auf den Link **Mobile Optionen** in Ihrem Bluemix-Anwendungsdashboard, um
-die Anwendungsroute und die Anwendungs-GUID abzurufen. Verwenden Sie diese Werte für Ihre Route und Anwendungs-GUID. Ändern Sie das Code-Snippet so, dass die Parameter 'appRoute' und 'appGUID' der Bluemix-App verwendet werden.
+Klicken Sie auf den Link **Mobile Systemerweiterungen** in Ihrem Bluemix-Anwendungsdashboard, um
+die Anwendungsroute und die Anwendungs-GUID abzurufen. Verwenden Sie diese Werte für Ihre Route und App-GUID. Ändern Sie das Code-Snippet so, dass die Parameter 'appRoute' und 'appGUID' der Bluemix-App verwendet werden.
 
 
 ##Core-SDK initialisieren

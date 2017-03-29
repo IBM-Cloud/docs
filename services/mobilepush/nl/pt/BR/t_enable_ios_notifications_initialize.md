@@ -65,10 +65,7 @@ distinção entre maiúsculas e minúsculas.
 
 **bluemixRegionSuffix**
 
-Especifica o local em que o app está hospedado. O parâmetro
-```bluemixRegion``` especifica qual implementação do Bluemix você
-está usando. É possível configurar esse valor com uma propriedade estática
-```BMSClient.REGION``` e usar um de três valores:
+Especifica o local em que o app está hospedado. O parâmetro `bluemixRegion` especifica qual implementação do Bluemix você está usando. É possível configurar esse valor com uma propriedade estática `BMSClient.REGION` e use um dos três valores:
 
 - BMSClient.REGION_US_SOUTH
 - BMSClient.REGION_UK

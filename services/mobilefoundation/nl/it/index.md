@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated:  "2017-01-17"
+lastupdated:  "2017-02-17"
 
 ---
 
@@ -11,7 +11,7 @@ lastupdated:  "2017-01-17"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Introduzione a {{site.data.keyword.mobilefoundation_short}}
+# Introduzione a Mobile Foundation
 {: #gettingstartedtemplate}
 
 {{site.data.keyword.mobilefoundation_long}} accelera l'impostazione di un ambiente {{site.data.keyword.mfp_full}} da cui puoi sviluppare, testare e operare applicazioni mobili aziendali. {{site.data.keyword.mobilefoundation_short}} è disponibile con due diversi piani di servizio: Developer e Professional 1 Application.
@@ -19,7 +19,8 @@ lastupdated:  "2017-01-17"
 
 <!-- The Professional 1 Application plan allows the {{site.data.keyword.mobilefoundation_short}} server to be deployed on a scalable container group.--> Mediante il piano Professional 1 Application è possibile gestire una singola applicazione creata on una o tutte le piattaforme operative supportate quali  Android, iOS, Windows o Web mobili. Il piano Developer <!-- does not support {{site.data.keyword.mobilefoundation_short}} deployment on a container group with more than 1 node. This plan --> è consigliato per lo sviluppo e le operazioni di test.
 
-## Introduzione al piano {{site.data.keyword.mobilefoundation_short}}: Developer
+## Introduzione al piano Mobile Foundation: Developer
+{: #gettingstartedtemplate_dev}
 
 Dopo aver creato un'istanza di {{site.data.keyword.mobilefoundation_short}}: Developer, puoi iniziare a creare il tuo canale mobile con pochi clic.
 
@@ -29,7 +30,8 @@ Dopo aver creato un'istanza di {{site.data.keyword.mobilefoundation_short}}: Dev
 
 * Per creare un'istanza del server {{site.data.keyword.mobilefirst_notm}} con la configurazione avanzata per topologia, sicurezza e altra configurazione del server, fai clic su **Avvia server con la configurazione avanzata**. Vedi [Impostazione della configurazione avanzata](c_using_mfs_p1.html#using_mfs_advanced_p1) per ulteriori informazioni.
 
-## Introduzione al piano {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application
+## Introduzione al piano Mobile Foundation: Professional 1 Application
+{: #gettingstartedtemplate_prof}
 
 Dopo che hai creato un'istanza del servizio {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application, puoi iniziare a creare il tuo canale mobile completando la seguente procedura.
 
@@ -55,7 +57,8 @@ Dopo che hai creato un'istanza del servizio {{site.data.keyword.mobilefoundation
 
     * Per creare un'istanza del server {{site.data.keyword.mobilefirst_notm}} con la configurazione avanzata per topologia, sicurezza e altra configurazione del server, fai clic su **Avvia server con la configurazione avanzata**. Vedi [Impostazione della configurazione avanzata](c_using_mfs_p2.html#using_mfs_advanced_p2) per ulteriori informazioni.
 
-## Introduzione al piano {{site.data.keyword.mobilefoundation_short}}: Developer Pro
+## Introduzione al piano Mobile Foundation: Developer Pro
+{: #gettingstartedtemplate_devpro}
 
 Dopo che hai creato un'istanza del servizio {{site.data.keyword.mobilefoundation_short}}: Developer Pro,
 puoi iniziare a creare il tuo canale mobile completando la seguente procedura.
@@ -86,7 +89,8 @@ puoi iniziare a creare il tuo canale mobile completando la seguente procedura.
 
       * Per creare un'istanza del server {{site.data.keyword.mobilefirst_notm}} con la configurazione avanzata per topologia, sicurezza e altra configurazione del server, fai clic su **Avvia server con la configurazione avanzata**. Vedi [Impostazione della configurazione avanzata](c_using_mfs_p3.html#using_mfs_advanced_p3) per ulteriori informazioni.
 
-## Introduzione al piano {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity
+## Introduzione al piano Mobile Foundation: Professional Per Capacity
+{: #gettingstartedtemplate_profper}
 
 Dopo che hai creato un'istanza del servizio {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity, puoi iniziare a creare il tuo canale mobile completando la seguente procedura.
 
@@ -115,18 +119,19 @@ Dopo che hai creato un'istanza del servizio {{site.data.keyword.mobilefoundation
 
       * Per creare un'istanza del server {{site.data.keyword.mobilefirst_notm}} con la configurazione avanzata per topologia, sicurezza e altra configurazione del server, fai clic su **Avvia server con la configurazione avanzata**. Vedi [Impostazione della configurazione avanzata](c_using_mfs_p4.html#using_mfs_advanced_p4) per ulteriori informazioni.
 
-Vai a [Using the Mobile Foundation service to set up MobileFirst Server<!-- on IBM Containers--> ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/bluemix/using-mobile-foundation/ "icona link esterno"){: new_window} per ulteriori informazioni introduttive a {{site.data.keyword.mobilefoundation_short}}.
+Vai a [Using the Mobile Foundation service to set up MobileFirst Server<!-- on IBM Containers--> ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/bluemix/using-mobile-foundation/){: new_window} per ulteriori informazioni introduttive a {{site.data.keyword.mobilefoundation_short}}.
 
 ##  Limitazioni note
+{: #knownlimitations_mfp}
 
 * La IU del servizio {{site.data.keyword.mobilefoundation_short}} non utilizza il modello specifico della locale selezionato dall'utente per visualizzare i numeri.
 
 
 # Link correlati
-{: #rellinks}
+{: #rellinks  notoc}
 
 ## Link correlati
-{: #general}
+{: #general notoc}
 
-*	[IBM MobileFirst Platform Foundation V8.0.0 product documentation ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html "icona link esterno"){: new_window}
-*	[IBM MobileFirst Platform Developer Center ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://mobilefirstplatform.ibmcloud.com "icona link esterno"){: new_window}
+*	[Documentazione del prodotto IBM MobileFirst Platform Foundation V8.0.0 ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}
+*	[IBM MobileFirst Platform Developer Center ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://mobilefirstplatform.ibmcloud.com){: new_window}

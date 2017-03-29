@@ -26,7 +26,7 @@ In diesem Thema wird die Vorgehensweise zum Installieren und Verwenden des Clien
 
 Führen Sie folgende Schritte für die Installation des Javascript-SDK in Chrome-Apps und Erweiterungen aus:
 
-Laden Sie `BMSPushSDK.js` und `manifest_Chrome_Ext.json` (für Chrome-Erweiterungen) oder `manifest_Chrome_App.json` (für Chrome-Apps) vom [Bluemix-Web-Push-SDK ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master "Symbol für externen Link"){: new_window} herunter.
+Laden Sie `BMSPushSDK.js` und `manifest_Chrome_Ext.json` (für Chrome-Erweiterungen) oder `manifest_Chrome_App.json` (für Chrome-Apps) vom [Bluemix-Web-Push-SDK ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master){: new_window} herunter.
 
 
 

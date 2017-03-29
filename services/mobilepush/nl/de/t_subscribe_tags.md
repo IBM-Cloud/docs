@@ -5,10 +5,10 @@ copyright:
 
 ---
 
-# Tags subskribieren und die Subskribierung aufheben
+# Tags subskribieren und die Subskription aufheben
 {: #Subscribe_tags}
 
-Verwenden Sie die folgenden Code-Snippets, um Ihren Geräten das Abrufen von Subskriptionen und das Subskribieren und das Aufheben der Subskribierung von Tags zu ermöglichen.
+Verwenden Sie die folgenden Code-Snippets, um Ihren Geräten das Abrufen von Subskriptionen und das Subskribieren und das Aufheben der Subskription von Tags zu ermöglichen.
 
 ## Android
 
@@ -18,7 +18,7 @@ Kopieren Sie das folgende Code-Snippet und fügen Sie es in Ihre mobile Android-
 push.subscribe(allTags.get(0),
 new MFPPushResponseListener<String>() {
   @Override
-  public void onFailure(MFPPushException ex) {
+    public void onFailure(MFPPushException ex) {
     updateTextView("Error subscribing to Tag1.."
            + ex.getMessage());
   }
@@ -74,7 +74,7 @@ Verwenden Sie die API **subscribeToTags** zum Subskribieren eines Tags.
 }];
 ```
 
-Verwenden Sie die API **unsubscribeFromTags** zum Aufheben der Subskribierung eines Tags.
+Verwenden Sie die API **unsubscribeFromTags** zum Aufheben der Subskription eines Tags.
 
 ```
 [push unsubscribeFromTags:tags completionHandler:
@@ -107,9 +107,9 @@ push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!
 } 
 ```
 
-**Subskribierung von Tags aufheben**
+**Subskription von Tags aufheben**
 
-Verwenden Sie die API **unsubscribeFromTags** zum Aufheben der Subskribierung eines Tags.
+Verwenden Sie die API **unsubscribeFromTags** zum Aufheben der Subskription eines Tags.
 
 ```
 push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, error) -> Void in

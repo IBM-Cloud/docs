@@ -9,8 +9,8 @@ copyright:
 {: #using_tags}
 
 
-Tagbasierte Benachrichtigungen sind Benachrichtigungen, die als Ziel alle Geräte haben, die einen
-bestimmten Tag subskribiert haben. Jedes Gerät kann beliebig viele Tags subskribieren. In diesem Abschnitt wird beschrieben, wie tagbasierte Benachrichtigungen gesendet werden. Subskriptionen werden von der Bluemix-Instanz von Push Notifications Service verwaltet. Wenn ein Tag gelöscht wird, werden alle Informationen, die dem Tag zugeordnet sind (einschließlich Subskribente und Geräte) gelöscht. Für diesen Tag ist keine automatische Aufhebung der Subskription erforderlich, da er nicht mehr vorhanden ist und daher clientseitig keine weiteren Aktionen nötig sind.
+Tagbasierte Benachrichtigungen sind Benachrichtigungen, die all diejenigen Geräte zum Ziel haben, die einen
+bestimmten Tag subskribiert haben. Jedes Gerät kann beliebig viele Tags subskribieren. In diesem Abschnitt wird beschrieben, wie tagbasierte Benachrichtigungen gesendet werden. Subskriptionen werden von der Bluemix-Instanz von Push Notifications Service verwaltet. Wenn ein Tag gelöscht wird, werden alle diesem Tag zugeordneten Informationen (einschließlich Subskribenten und Geräte) gelöscht. Für diesen Tag ist keine automatische Aufhebung der Subskription erforderlich, da er nicht mehr vorhanden ist und daher clientseitig keine weiteren Aktionen nötig sind.
 
 **Vorbemerkungen**
 
@@ -21,6 +21,5 @@ in [Tags erstellen](t_manage_tags.html).
 1. Wählen Sie die Option **Tags** aus, um tagbasierte Benachrichtigungen zu senden.
 1. Suchen Sie mithilfe des Felds **Tags suchen** nach den Tags, die Sie verwenden möchten,
 und klicken Sie anschließend auf die Schaltfläche **Hinzufügen**.![Anzeige 'Benachrichtigungen](images/tag_notification.jpg)
-1. Navigieren Sie zum Bereich **Eigene Benachrichtigungen erstellen**  und geben Sie
-in das Feld **Nachrichtentext** den Text ein, den Sie in Ihrer Benachrichtigung senden möchten.
+1. Navigieren Sie zum Bereich **Eigene Benachrichtigungen erstellen** und geben Sie in das Feld **Nachrichtentext** den Text ein, den Sie in Ihrer Benachrichtigung senden möchten.
 1. Klicken Sie auf die Schaltfläche **Senden**.

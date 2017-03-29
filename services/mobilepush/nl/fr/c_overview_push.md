@@ -23,8 +23,7 @@ Vous pouvez utiliser l'une des options suivantes pour créer un service lié ou 
 Notifications lié à une application dorsale Bluemix.
 - En créant directement depuis le catalogue Mobile un service Push Notifications non lié. Vous pouvez le lier par la suite à une
 application ou même opter de l'utiliser comme service non lié. 
-- En utilisant le [tableau de bord Mobile
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.ng.bluemix.net/docs/mobile/services.html "Icône de lien externe"){: new_window}.
+- En utilisant le [Tableau de bord Mobile ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.ng.bluemix.net/docs/mobile/services.html){: new_window}.
 
 Notez que l'onglet de surveillance {{site.data.keyword.mobilepushshort}} n'affiche pas de données d'analyse.
 
@@ -73,9 +72,7 @@ Les API {{site.data.keyword.mobilepushshort}} sont sécurisées par deux types d
 de {{site.data.keyword.mobilepushshort}} et l'API de configuration des paramètres).
 - **clientSecret** : 'clientSecret' protège les API généralement appelées par des applications de client mobile. Il n'y a qu'une seule API relative à l'enregistrement d'un appareil avec un ID utilisateur associé qui nécessite cette valeur confidentielle clientSecret. Aucune des autres API invoquées depuis les clients mobiles n'ont besoin de clientSecret. 
 
-Les valeurs appSecret et clientSecret sont allouées à chaque instance de service au moment de la liaison d'une application au service {{site.data.keyword.mobilepushshort}}. Reportez-vous
-à la documentation [API REST ![Icône de lien externe](../../icons/launch-glyph.svg "Icône delien externe")](https://mobile.{DomainName}/imfpush/ "Icône de lien externe") pour plus d'informations sur la transmission des valeurs confidentielles et les API .
-
+Les valeurs appSecret et clientSecret sont allouées à chaque instance de service au moment de la liaison d'une application au service {{site.data.keyword.mobilepushshort}}. Reportez-vous à la documentation des [API REST ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobile.{DomainName}/imfpush/) pour plus d'informations sur la transmission des valeurs confidentielles et pour quelles API.
 
 **Remarque** : Les applications plus anciennes ne devaient transmettre le clientSecret que lors de l'enregistrement ou de la mise à jour
 d'appareils avec la zone userId. Toutes les autres interfaces API invoquées par des clients mobiles et de navigateur n'avaient pas besoin de clientSecret. Toutes ces anciennes applications peuvent continuer à se servir facultativement de clientSecret pour les enregistrements d'appareil ou la mise à jour des appels. Il est toutefois vivement conseillé d'appliquer une vérification clientSecret pour tous les appels d'API client. Pour mettre en oeuvre ce processus dans les applications existantes, une nouvelle API, verifyClientSecret, a été publiée.  Pour les nouvelles applications, la vérification clientSecret sera mise en oeuvre sur tous les appels d'API client et ce comportement ne peut être modifié avec l'API verfiyClientSecret.

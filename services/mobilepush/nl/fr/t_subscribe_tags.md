@@ -1,14 +1,14 @@
 ---
 
-Copyright :
-  Années : 2015, 2016
+copyright:
+ years: 2015, 2016
 
 ---
 
 # Abonnement à des balises et désabonnement
 {: #Subscribe_tags}
 
-Utilisez les fragments de code ci-après pour permettre à vos périphériques de s'abonner à une balise et de s'en désabonner.
+Utilisez les fragments de code ci-après pour permettre à vos appareils de s'abonner à une balise et de s'en désabonner.
 
 ## Android
 
@@ -18,7 +18,7 @@ Copiez et collez le fragment de code suivant dans votre application mobile Andro
 push.subscribe(allTags.get(0),
 new MFPPushResponseListener<String>() {
   @Override
-  public void onFailure(MFPPushException ex) {
+    public void onFailure(MFPPushException ex) {
     updateTextView("Error subscribing to Tag1.."
            + ex.getMessage());
   }
@@ -63,7 +63,7 @@ Utilisez l'API **subscribeToTags** pour vous abonner à une balise.
 ```
 [push subscribeToTags:tags completionHandler:
 ^(IMFResponse *response, NSError *error) {
-  if(error) {
+  if(error){
      [self updateMessage:error.description];
   }else{
       NSDictionary* subStatus = [[NSDictionary alloc]init];
@@ -79,7 +79,7 @@ Utilisez l'API **unsubscribeFromTags** pour vous désabonner d'une balise.
 ```
 [push unsubscribeFromTags:tags completionHandler:
 ^(IMFResponse *response, NSError *error) {
-   if(error) {
+   if (error){
        [self updateMessage:error.description];
  } else {
        NSDictionary* subStatus = [[NSDictionary alloc]init];
@@ -100,9 +100,9 @@ Utilisez l'API **subscribeToTags** pour vous abonner à une balise.
 ```
 push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!) -> Void in
 	if (error != nil) { 
-		//erreur lors de l'abonnement à des balises
+		//error while subscribing to tags
 	} else {
-		//l'abonnement aux balises var a abouti (subStatus = response.subscribeStatus();)
+		//successfully subscribed to tags var subStatus = response.subscribeStatus(); 
 	}
 } 
 ```

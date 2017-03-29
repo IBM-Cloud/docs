@@ -2,11 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated:  "2017-01-17"
+lastupdated:  "2017-02-17"
 
 ---
 
-#	Informazioni su {{site.data.keyword.mobilefoundation_short}}
+#	Informazioni su Mobile Foundation
 {: #overview_mobilefoundation}
 
 Il servizio {{site.data.keyword.mobilefoundation_short}} fornisce un modo per impostare rapidamente un ambiente {{site.data.keyword.mobilefirst}} Server su{{site.data.keyword.Bluemix}}. Puoi quindi sviluppare, testare e gestire applicazioni mobili da questo ambiente cloud.
@@ -39,25 +39,17 @@ Puoi utilizzare la CLI ({{site.data.keyword.mfp_cli_long_notm}}) con {{site.data
 
 <!--{{site.data.keyword.mobilefoundation_short}} service provisions a container in your space in {{site.data.keyword.Bluemix_notm}}. You can see the details of the container that is created, view the container performance, and access the server logs from your {{site.data.keyword.Bluemix_notm}} dashboard.-->
 
-## Come ottenere aiuto e supporto per {{site.data.keyword.mobilefoundation_short}}
+## Come ottenere aiuto e supporto per Mobile Foundation
 {: #getting_help_mobilefoundation}
 
 Se hai dei problemi o delle domande quando utilizzi {{site.data.keyword.mobilefoundation_short}}, puoi ottenere aiuto ricercando le informazioni o facendo delle domande in un forum. Puoi inoltre aprire un ticket di supporto.
 
 Quando utilizzi i forum per fare una domanda, contrassegna con una tag la tua domanda in modo che sia visualizzabile dai team di sviluppo IBM {{site.data.keyword.Bluemix_notm}}.
 
-Se hai domande tecniche sullo sviluppo o la distribuzione di un'applicazione con {{site.data.keyword.mobilefoundation_short}}, inserisci la tua domanda in
-[Stack Overflow
-![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](http://stackoverflow.com/search?q=ibm-mobilefirst+bluemix "icona link esterno"){:new_window}
-e contrassegnala con le tag `bluemix` e `ibm-mobilefirst`.
+Se hai domande tecniche sullo sviluppo o sulla distribuzione di un'applicazione con {{site.data.keyword.mobilefoundation_short}}, inserisci la tua domanda in [Stack Overflow ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://stackoverflow.com/search?q=ibm-mobilefirst+bluemix){:new_window} e contrassegnala con le tag `bluemix` e `ibm-mobilefirst`.
 
-Per domande sul servizio e sulle istruzioni per l'utilizzo iniziale, utilizza il forum
-[IBM developerWorks dW Answers
-![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://developer.ibm.com/answers/topics/mobilefirst/?smartspace=bluemix "icona link esterno"){:new_window}. Includi le tag bluemix e  mobilefirst.
+Per domande sul servizio e sulle istruzioni per l'utilizzo iniziale, utilizza il forum [IBM developerWorks dW Answers ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/answers/topics/mobilefirst/?smartspace=bluemix){:new_window}. Includi le tag `bluemix` e  `mobilefirst`.
 
-Consulta [Come ottenere supporto
-![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://www.{DomainName}/docs/support/index.html#getting-help "icona link esterno"){: new_window} per ulteriori dettagli sull'utilizzo dei forum.
+Consulta [Come ottenere supporto ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.{DomainName}/docs/support/index.html#getting-help){: new_window} per ulteriori dettagli sull'utilizzo dei forum.
 
-Per informazioni su come aprire un ticket di supporto IBM o sui livelli di supporto e sulla gravità dei ticket, consulta
-[Come contattare il supporto
-![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://www.{DomainName}/docs/support/index.html#contacting-support "icona link esterno"){: new_window}.
+Per informazioni su come aprire un ticket di supporto IBM o sui livelli di supporto e sulla gravità dei ticket, consulta [Come contattare il supporto ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.{DomainName}/docs/support/index.html#contacting-support){: new_window}.

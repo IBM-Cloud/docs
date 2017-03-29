@@ -28,10 +28,7 @@ Cette rubrique décrit comment installer et utiliser le logiciel SDK Push JavaSc
 
 Pour installer le logiciel SDK Javascript dans les applications et extensions Chrome, procédez comme suit :
 
-Téléchargez les fichiers `BMSPushSDK.js` et `manifest_Chrome_Ext.json` (pour les extensions Chrome) ou
-`manifest_Chrome_App.json` (pour les applications Chrome) depuis le
-[SDK push Web
-Bluemix![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master "Icône de lien externe"){: new_window}.
+Téléchargez les fichiers `BMSPushSDK.js` et `manifest_Chrome_Ext.json` (pour extensions Chrome) ou `manifest_Chrome_App.json` (pour applications Chrome Apps) depuis le site [Bluemix Web push SDK ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master){: new_window}.
 
 
 

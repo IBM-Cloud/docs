@@ -1,14 +1,14 @@
 ---
 
-Copyright :
-  Années : 2015, 2016
+copyright:
+ years: 2015, 2016
 
 ---
 
-# Réception de notifications push sur les périphériques
+# Réception de notifications push sur les appareils
 {: #cordova_receive}
 
-Copiez et collez les fragments de code ci-après pour recevoir des notifications push sur les périphériques.
+Copiez et collez les fragments de code ci-après pour recevoir des notifications push sur les appareils.
 
 ##JavaScript
 
@@ -17,7 +17,7 @@ Ajoutez le fragment de code JavaScript suivant à la partie Web de votre applica
 
 ```
 var notification = function(notification){
-    // notification est un objet JSON.
+    // La notification est un objet JSON.
     alert(notification.message);
 };
 MFPPush.registerNotificationsCallback(notification);
@@ -46,7 +46,7 @@ action-loc-key - Chaîne utilisée comme clé pour obtenir une chaîne localisé
 Ajoutez les fragments de code Objective-C suivants à la classe de votre délégué d'application :
 
 ```
-// Traitez la réception d'une notification distante
+// Handle receiving a remote notification
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
 
  [[CDVMFPPush sharedInstance] didReceiveRemoteNotification:userInfo];
@@ -54,7 +54,7 @@ Ajoutez les fragments de code Objective-C suivants à la classe de votre délég
 ```
 
 ```
-// Traitez la réception d'une notification distante lors du lancement
+// Gestion de la réception d'une notification distante au lancement
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 
     [[CDVMFPPush sharedInstance] didReceiveRemoteNotificationOnLaunch:launchOptions];
@@ -66,7 +66,7 @@ Ajoutez les fragments de code Objective-C suivants à la classe de votre délég
 Ajoutez les fragments de code Swift suivants à la classe de votre délégué d'application :
 
 ```
-// Traitez la réception d'une notification distante
+// Handle receiving a remote notification
 funcapplication(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: ){
 
     CDVMFPPush.sharedInstance().didReceiveRemoteNotification(userInfo)
@@ -74,8 +74,9 @@ funcapplication(application: UIApplication, didReceiveRemoteNotification userInf
 ```
 
 ```
-// Traitez la réception d'une notification distante lors du lancement
-func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+// Handle receiving a remote notification on launch
+func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool 
+ {
 
     CDVMFPPush.sharedInstance().didReceiveRemoteNotificationOnLaunch(launchOptions)
 }

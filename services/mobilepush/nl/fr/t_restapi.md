@@ -15,10 +15,7 @@ copyright:
 Dernière mise à jour : 16 janvier 2017
 {: .last-updated}
 
-Vous pouvez utiliser une interface de programmation d'application REST (Representational State Transfer) pour {{site.data.keyword.mobilepushshort}}. Vous
-pouvez également utiliser le
-SDK et l'[API Push ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lienexterne")](https://mobile.{DomainName}/imfpush/ "Icône de lien externe"){: new_window} pour développer plus encore vos applications client. 
-
+Vous pouvez utiliser une interface de programmation d'application REST (Representational State Transfer) pour {{site.data.keyword.mobilepushshort}}. Vous pouvez également utiliser le SDK et l'[API Push ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobile.{DomainName}/imfpush/){: new_window} pour affiner plus encore le développement de vos applications client.
 
 Avec l'API REST Push, les applications serveur de back end et les clients peuvent accéder à des fonctions {{site.data.keyword.mobilepushshort}}.
 
@@ -47,16 +44,12 @@ Vous pouvez aussi utiliser la ligne de commande pour obtenir les données d'iden
 ## En-tête Accept-Language
 {: #push-api-rest-accept}
 
-L'en-tête "Accept-Language" spécifie la langue à utiliser pour les messages d'erreur générés par
-l'[API REST
-Push![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobile.{DomainName}/imfpush/ "Icône de lien externe"){: new_window}. Les langues suivantes sont prises en charge pour les messages d'erreur : chinois (simplifié), chinois (traditionnel), anglais (Etats-Unis), allemand, français, italien, japonais, coréen, portugais et espagnol.
+L'en-tête "Accept-Language" spécifie la langue à utiliser pour les messages d'erreur générés par  l'[API REST Push ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobile.{DomainName}/imfpush/){: new_window}. Les langues suivantes sont prises en charge pour les messages d'erreur : chinois (simplifié), chinois (traditionnel), anglais (Etats-Unis), allemand, français, italien, japonais, coréen, portugais et espagnol.
 
 ## Valeur confidentielle d'application 
 {: #push-api-rest-secret}
 
-Quand une application est liée à {{site.data.keyword.mobilepushshort}}, le service génère une valeur confidentielle appSecret (clé unique) et la transmet dans l'en-tête de réponse. Si vous utilisez l'API REST IBM {{site.data.keyword.mobilepushshort}} for Bluemix, servez-vous de la référence de l'API REST pour savoir quelles sont les API que vous devez sécuriser. Pour
-plus d'informations, reportez-vous à la rubrique [API REST Push
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobile.{DomainName}/imfpush/ "Icône de lien externe"){: new_window}.
+Quand une application est liée à {{site.data.keyword.mobilepushshort}}, le service génère une valeur confidentielle appSecret (clé unique) et la transmet dans l'en-tête de réponse. Si vous utilisez l'API REST IBM {{site.data.keyword.mobilepushshort}} for Bluemix, servez-vous de la référence de l'API REST pour savoir quelles sont les API que vous devez sécuriser. Pour plus d'informations, reportez-vous à la rubrique [Push REST API ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobile.{DomainName}/imfpush/){: new_window}.
 
 L'en-tête de demande doit contenir la valeur appSecret. Si tel n'est pas le cas, le serveur renvoie le code d'erreur 401 Unauthorized. Quand {{site.data.keyword.mobilepushshort}} est ajouté à une application, un ID d'application spécifique est créé. Dans le cadre de la réponse, vous obtenez un en-tête intitulé appSecret (valeur confidentielle d'application) qui est utilisé pour créer des balises ou envoyer des messages. L'opération est effectuée via des services dans le catalogue ou le conteneur boilerplate.
 

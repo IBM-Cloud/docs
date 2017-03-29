@@ -1,15 +1,14 @@
 ---
 
 copyright:
- años: 2015, 2016
+ years: 2015, 2016
 
 ---
 
 # Inicialización de SDK Push para aplicaciones iOS
 {: #enable-push-ios-notifications-initialize}
 
-Un lugar común para colocar el código de inicialización se encuentra en el delegado de aplicación para la aplicación
-     iOS.
+Un lugar común para colocar el código de inicialización se encuentra en el delegado de aplicación para la aplicación iOS.
 Pulse el enlace **Opciones móviles** en el Panel de control de aplicaciones de Bluemix para obtener la ruta de la aplicación y el GUID.
 
 ##Inicialización del SDK principal
@@ -56,12 +55,11 @@ Especifica la ruta que se asigna a la aplicación de servidor que ha creado en B
 
 **GUID**
 
-Especifica la clave exclusiva asignada a la aplicación que ha creado en Bluemix. Este valor distingue
-                entre mayúsculas y minúsculas.
+Especifica la clave exclusiva asignada a la aplicación que ha creado en Bluemix. Este valor distingue entre mayúsculas y minúsculas.
 
 **bluemixRegionSuffix**
 
-Especifica la ubicación en la que se aloja la aplicación. El parámetro ```bluemixRegion``` especifica qué despliegue de Bluemix está utilizando. Puede establecer este valor con una propiedad estática ```BMSClient.REGION`` y utilizar uno de estos tres valores:
+Especifica la ubicación en la que se aloja la aplicación. El parámetro `bluemixRegion` especifica qué despliegue de Bluemix está utilizando. Puede establecer este valor con una propiedad estática `BMSClient.REGION` y utilizar uno de estos tres valores:
 
 - BMSClient.REGION_US_SOUTH
 - BMSClient.REGION_UK

@@ -10,8 +10,8 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-#고급 푸시 알림 사용
-마지막 업데이트 날짜: 2017년 1월 11일
+#고급 {{site.data.keyword.mobilepushshort}} 사용
+마지막 업데이트 날짜: 2017년 1월 23일
 {: .last-updated}
 
 iOS 배지, 사운드, 추가 JSON 페이로드, 조치 가능 알림, 보류 알림을 구성합니다. 
@@ -73,71 +73,5 @@ super.onPause();
 } 
 ```
 	{: codeblock}
-## iOS 조치 가능 알림 사용  
-{: #enable-actionable-notifications-ios}
 
-일반적인 {{site.data.keyword.mobilepushshort}}와 달리 조치 가능 알림은 사용자가 알림 경보 수신 시 앱을 열지 않고 조치를 선택할 수 있는 프롬프트를 표시합니다.  
-
-애플리케이션에서 조치 가능 {{site.data.keyword.mobilepushshort}}를 사용하려면 다음 단계를 완료하십시오. 
-
-1. 사용자 응답 조치를 작성하십시오. 
-```
-//For Swift
-	let acceptAction = UIMutableUserNotificationAction()
-	acceptAction.identifier = "ACCEPT_ACTION"
-	acceptAction.title = "Accept"
-	acceptAction.destructive = false
-	acceptAction.authenticationRequired = false
-	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground
-```
-	{: codeblock}
-```
-//For Swift
-	let declineAction = UIMutableUserNotificationAction()
-	declineAction.identifier = "DECLINE_ACTION"
-	declineAction.title = "Decline"
-	declineAction.destructive = true
-	declineAction.authenticationRequired = false
-	declineAction.activationMode = UIUserNotificationActivationMode.Background
-```
-	{: codeblock}
-
-2. 알림 카테고리를 작성하고 조치를 설정하십시오. **UIUserNotificationActionContextDefault** 또는 **UIUserNotificationActionContextMinimal**이 올바른 컨텍스트입니다.
-```
-// For Swift
-	let pushCategory = UIMutableUserNotificationCategory()
-	pushCategory.identifier = "TODO_CATEGORY"
-	pushCategory.setActions([acceptAction, declineAction], forContext: UIUserNotificationActionContext.Default)
-```
-	{: codeblock}
-
-1. 알림 설정을 작성하고 이전 단계에서 작성한 카테고리를 지정하십시오. 
-```
-// For Swift
-	let categories = NSSet(array:[pushCategory]);
-```
-	{: codeblock}
-
-1. 로컬 또는 원격 알림을 작성하고 카테고리 ID를 지정하십시오. 
-```
-//For Swift
-	let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: categories as? Set<UIUserNotificationCategory>)
-    UIApplication.sharedApplication().registerUserNotificationSettings(settings)
-    UIApplication.sharedApplication().registerForRemoteNotifications()
-```
-	{: codeblock}
-	
-## 조치 가능 iOS 알림 처리  
-{: #actionable-notifications}
-
-조치 가능 알림이 수신되면 선택한 ID를 기반으로 다음 메소드에 제어가 전달됩니다.
-
- 
-```
-func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
-      //must call completion handler when finished
-      completionHandler()
-  }
-```    
-	{: codeblock}
     

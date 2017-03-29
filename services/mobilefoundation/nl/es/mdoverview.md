@@ -2,11 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated:  "2017-01-17"
+lastupdated:  "2017-02-17"
 
 ---
 
-#	Acerca de {{site.data.keyword.mobilefoundation_short}}
+#	Acerca de Mobile Foundation
 {: #overview_mobilefoundation}
 
 El servicio {{site.data.keyword.mobilefoundation_short}} ofrece un modo de configurar rápidamente un entorno de servidor de
@@ -40,17 +40,17 @@ Puede utilizar la {{site.data.keyword.mfp_cli_long_notm}} (CLI) con {{site.data.
 
 <!--{{site.data.keyword.mobilefoundation_short}} service provisions a container in your space in {{site.data.keyword.Bluemix_notm}}. You can see the details of the container that is created, view the container performance, and access the server logs from your {{site.data.keyword.Bluemix_notm}} dashboard.-->
 
-## Obtención de ayuda y soporte para {{site.data.keyword.mobilefoundation_short}}
+## Obtención de ayuda y soporte para Mobile Foundation
 {: #getting_help_mobilefoundation}
 
 Si tiene problemas o preguntas sobre el uso de {{site.data.keyword.mobilefoundation_short}}, puede obtener ayuda buscando información o formulando preguntas en un foro. También puede abrir una incidencia de soporte.
 
 Al utilizar los foros para formular una pregunta, etiquete la pregunta de forma que la puedan ver los equipos de desarrollo de IBM {{site.data.keyword.Bluemix_notm}}.
 
-Si tiene preguntas técnicas sobre el desarrollo o el despliegue de una app con {{site.data.keyword.mobilefoundation_short}}, publíquelas en [Desbordamiento de pila ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://stackoverflow.com/search?q=ibm-mobilefirst+bluemix "Icono de enlace externo"){:new_window} y etiquete las preguntas con `bluemix` e `ibm-mobilefirst`.
+Si tiene preguntas técnicas sobre el desarrollo o el despliegue de una app con {{site.data.keyword.mobilefoundation_short}}, publíquelas en [Desbordamiento de pila ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](http://stackoverflow.com/search?q=ibm-mobilefirst+bluemix){:new_window} y etiquete las preguntas con `bluemix` e `ibm-mobilefirst`.
 
-Para formular preguntas sobre el servicio y obtener instrucciones de iniciación, utilice el foro [dW Answers de IBM developerWorks ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/answers/topics/mobilefirst/?smartspace=bluemix "Icono de enlace externo"){:new_window}. Incluya las etiquetas `bluemix` y `mobilefirst`.
+Para formular preguntas sobre el servicio y obtener instrucciones de iniciación, utilice el foro [IBM developerWorks dW Answers ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://developer.ibm.com/answers/topics/mobilefirst/?smartspace=bluemix){:new_window}. Incluya las etiquetas `bluemix` y `mobilefirst`.
 
-Consulte [Obtención de ayuda ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.{DomainName}/docs/support/index.html#getting-help "Icono de enlace externo"){: new_window} para obtener más detalles sobre el uso de los foros.
+Consulte [Obtención de ayuda ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://www.{DomainName}/docs/support/index.html#getting-help){: new_window} para obtener más detalles sobre el uso de los foros.
 
-Para obtener información sobre cómo abrir una incidencia de soporte de IBM, o sobre los niveles de soporte y la gravedad de las incidencias, consulte [Cómo obtener soporte ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.{DomainName}/docs/support/index.html#contacting-support "Icono de enlace externo"){: new_window}.
+Para obtener información sobre cómo abrir una incidencia de soporte de IBM, o sobre los niveles de soporte y la gravedad de las incidencias, consulte [Cómo obtener soporte ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://www.{DomainName}/docs/support/index.html#contacting-support){: new_window}.

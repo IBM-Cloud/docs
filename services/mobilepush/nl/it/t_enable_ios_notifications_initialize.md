@@ -61,7 +61,7 @@ Specifica la chiave univoca assegnata all'applicazione creata in Bluemix. Questo
 
 **bluemixRegionSuffix**
 
-Specifica l'ubicazione in cui è ospitata l'applicazione. Il parametro ```bluemixRegion``` specifica quale distribuzione di Bluemix stati utilizzando. Puoi impostare questo valore con una proprietà statica ```BMSClient.REGION`` e utilizzare uno dei seguenti tre valori:
+Specifica l'ubicazione in cui è ospitata l'applicazione. Il parametro `bluemixRegion` specifica quale distribuzione di Bluemix stati utilizzando. Puoi impostare questo valore con una proprietà statica `BMSClient.REGION` e utilizzare uno dei seguenti tre valori:
 
 - BMSClient.REGION_US_SOUTH
 - BMSClient.REGION_UK

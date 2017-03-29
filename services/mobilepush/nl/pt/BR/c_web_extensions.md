@@ -26,7 +26,7 @@ Este tópico descreve como instalar e usar o SDK de Push do JavaScript do client
 
 Para instalar o SDK do Javascript nos Apps Chrome e Extensões, conclua as etapas:
 
-Faça download do `BMSPushSDK.js` e do `manifest_Chrome_Ext.json` (para Extensões do Chrome) ou do `manifest_Chrome_App.json` (para Apps Chrome) a partir do [SDK de push da web do Bluemix ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master "Ícone de link externo"){: new_window}.
+Faça download do `BMSPushSDK.js` e do `manifest_Chrome_Ext.json` (para extensões Chrome) ou do `manifest_Chrome_App.json` (para apps Chrome) no [SDK Push da web do Bluemix ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master){: new_window}.
 
 
 

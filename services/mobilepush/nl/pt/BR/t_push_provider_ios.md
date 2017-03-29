@@ -20,7 +20,7 @@ destino no dispositivo.
 
 Obtenha e configure suas credenciais APNs. Os certificados do APNs são gerenciados com segurança pelo serviço {{site.data.keyword.mobilepushshort}} e usados para se conectar ao servidor APNs como um provedor.
 
-<!-- 1. Obtain an [Apple Developers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.apple.com/ "External link icon"){: new_window} account.-->
+<!-- 1. Obtain an [Apple Developers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.apple.com/){: new_window} account.-->
 
 <!--2. [Register an App ID](#create-push-credentials-apns-register)
 3. [Create a development and distribution APNs SSL certificate](#create-push-credentials-apns-ssl)
@@ -39,9 +39,9 @@ O ID de app (o identificador de pacote configurável) é um
 identificador exclusivo que identifica um aplicativo específico. Cada
 aplicativo requer um ID de app. Serviços, como o serviço {{site.data.keyword.mobilepushshort}}, são configurados para o ID do app.
 
-1. Certifique-se de ter uma conta do [Apple Developers ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.apple.com/ "Ícone de link externo"){: new_window}.
-2. Acesse o portal do [Apple Developer ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.apple.com "Ícone de link externo"){: new_window}, clique em **Centro de membros** e selecione **Certificados, identificadores e perfis**.
-3. Acesse a seção **Registrando IDs de app** na [Biblioteca do Apple Developer ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW991 "Ícone de link externo"){: new_window} e siga as instruções para registrar o ID de app.
+1. Certifique-se de ter uma conta do [Apple Developers ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://developer.apple.com/){: new_window}.
+2. Acesse o portal [Apple Developer ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://developer.apple.com){: new_window}, clique em **Member Center** e selecione **Certificates, Identifiers & Profiles**.
+3. Acesse a seção **Registering App IDs** na [Apple Developer Library ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW991){: new_window} e siga as instruções para registrar o ID do app.
 
 Ao registrar um ID do App, selecione as opções a seguir:
 
@@ -77,7 +77,7 @@ conexão SSL com APNs.
 
 <!-- Create a development and distribution SSL certificate. -->
 
-1. Acesse o website [Apple Developer ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.apple.com "Ícone de link externo"){: new_window}, clique em **Centro de membros** e selecione **Certificados, identificadores e perfis**.
+1. Acesse o website [Apple Developer ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://developer.apple.com){: new_window}, clique em **Member Center** e selecione **Certificates, Identifiers & Profiles**.
 2. Na área **Identificadores**, clique em
 **IDs de app**.
 3. A partir da sua lista de IDs do app, selecione o seu <!--newly created--> ID do app e, em seguida, selecione
@@ -157,8 +157,8 @@ usar um certificado SSL APNs de desenvolvimento e produção.
 
 Crie um perfil de fornecimento de desenvolvimento, da seguinte forma:
 
-1. Acesse o portal do [Apple Developer ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.apple.com "Ícone de link externo"){: new_window}, clique em **Centro de membros** e selecione **Certificados, identificadores e perfis**.
-2. Acesse a [Biblioteca do Mac Developer ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW62site "Ícone de link externo"){: new_window}, role para a seção **Criando perfis de fornecimento de desenvolvimento** e siga as instruções para criar um perfil de desenvolvimento.
+1. Acesse o portal [Apple Developer ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://developer.apple.com){: new_window}, clique em **Member Center** e selecione **Certificates, Identifiers & Profiles**.
+2. Acesse a [Mac Developer Library ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW62site){: new_window}, role até a seção **Creating Development Provisioning Profiles** e siga as instruções para criar um perfil de desenvolvimento.
 **Nota**: Ao configurar um perfil de provisão de
 desenvolvimento, selecione as opções a seguir:
 	* **iOS App Development**
@@ -173,7 +173,7 @@ armazenamento
 Use o perfil de fornecimento de armazenamento para
 enviar seu app para distribuição para a App Store.
 
-1. Acesse o portal do [Apple Developer ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.apple.com "Ícone de link externo"){: new_window}, clique em **Centro de membros** e selecione **Certificados, identificadores e perfis**.
+1. Acesse o portal [Apple Developer ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://developer.apple.com){: new_window}, clique em **Member Center** e selecione **Certificates, Identifiers & Profiles**.
 2. Dê um clique duplo no perfil de fornecimento
 transferido por download para instalá-lo em Xcode.
 
@@ -196,7 +196,7 @@ simulação) e para o ambiente de produção (distribuição).
 em seu acesso de cadeia de chaves, exporte-o para seu computador para criar um
 certificado `.p12`.
 
-Para obter mais informações sobre como usar os APNs, veja [iOS Developer Library: Local and Push Notification Programming Guide ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4 "Ícone de link externo"){: new_window}.
+Para obter mais informações sobre o uso de APNs, veja [iOS Developer Library: Local and Push Notification Programming Guide ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4){: new_window}.
 
 Para configurar os APNs no painel de serviços de Notificação push, conclua as etapas:
 

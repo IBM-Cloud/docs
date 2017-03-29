@@ -49,13 +49,14 @@ alert: true,
 {: #cordova_register_js}
 
 ```
-MFPPush.registerDevice({}, success, failure);```
+MFPPush.registerDevice({}, success, failure);
+```
 
 JSON.parse를 사용하여 Javascript에서 성공 응답 매개변수의 컨텐츠에 액세스할 수 있습니다.
 **var token = JSON.parse(response).token**
 
 
-사용 가능한 키는 다음과 같습니다. ```token```, ```userId``, ```deviceId``.
+사용 가능한 키는 다음과 같습니다. `token`, `userId`, `deviceId`.
 
 다음 JavaScript 코드 스니펫은 Bluemix Mobile Services 클라이언트 SDK를 초기화하고, 푸시 알림 서비스를 사용하여 디바이스를 등록하고, 푸시 알림을 청취하는 방법을 보여줍니다. 이 코드를 Javascript 파일에 넣으십시오. 
 
@@ -78,25 +79,23 @@ CDVMFPPush.sharedInstance().didFailToRegisterForRemoteNotifications(error)
 **onDeviceReady: function()**에서 다음을 수행하십시오. 
 
 ```
-onDeviceReady: function() {
-     app.receivedEvent('deviceready');
+  onDeviceReady: function() {
+	 app.receivedEvent('deviceready');
      BMSClient.initialize("https://http://myroute_mybluemix.net","my_appGuid");
      var success = function(message) { console.log("Success: " + message); };
      var failure = function(message) { console.log("Error: " + message); };
      var settings = {
          ios: {
 alert: true,
-             badge: true,
-             sound: true
-         }   
-     };
+	       badge: true,
+	       sound: true
+	   }
+	     };
      MFPPush.registerDevice(settings, success, failure);
      var notification = function(notif){
          alert (notif.message);
      };
-     MFPPush.registerNotificationsCallback(notification);
-
- }
+     MFPPush.registerNotificationsCallback(notification);}
 ```
 
 ## Objective-C
@@ -105,12 +104,10 @@ alert: true,
 
 ```
 	// Register the device token with Bluemix Push Notification Service
-
 	- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 	  [[CDVMFPPush sharedInstance] didRegisterForRemoteNotifications:deviceToken];
 	}
 	// Handle error when failed to register device token with APNs
-
 	- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error {
 	   [[CDVMFPPush sharedInstance] didFailToRegisterForRemoteNotificationsWithError:error];
 	}

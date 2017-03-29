@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated:  "2017-01-17"
+lastupdated:  "2017-02-17"
 
 ---
 
@@ -11,7 +11,7 @@ lastupdated:  "2017-01-17"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# 为 {{site.data.keyword.mobilefoundation_short}} 服务器配置定制域
+# 为 Mobile Foundation 服务器配置定制域
 {: #configcustomdomain}
 
 {{site.data.keyword.mobilefoundation_short}} 供应 {{site.data.keyword.mfserver_short_notm}}，其可通过域名基于<!--on {{site.data.keyword.containerlong}} as a container group. The container group will be mapped to--> {{site.data.keyword.Bluemix_notm}}**区域**的 URL 进行访问。您还可以配置自己的定制域。
@@ -36,4 +36,4 @@ lastupdated:  "2017-01-17"
 
 + 转至您的域所对应的 DNS 提供者，添加 CNAME 条目，这会将流量从您的域路由到正在运行<!--container group-->服务器的缺省 {{site.data.keyword.Bluemix_notm}} 路径。
 
-+ 如果要为定制域配置 `https`，请将域的 SSL 证书上传到 {{site.data.keyword.Bluemix_notm}} 中。要执行此操作，请转至**管理组织 > 域**，选择要为其配置 SSL 证书的定制域，单击**上传证书**以上传域的 SSL 证书。请参阅 [SSL Certificates and Bluemix Custom Domains ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/bluemix/2014/09/28/ssl-certificates-bluemix-custom-domains/){: new_window}，以获取更多信息。
++ 如果要为定制域配置 `https`，请将域的 SSL 证书上传到 {{site.data.keyword.Bluemix_notm}} 中。要执行此操作，请转至**管理组织 > 域**，选择要为其配置 SSL 证书的定制域，单击**上传证书**以上传域的 SSL 证书。请参阅 [SSL 证书和 Bluemix 定制域 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/bluemix/2014/09/28/ssl-certificates-bluemix-custom-domains/){: new_window}，以了解更多信息。

@@ -19,16 +19,16 @@ Utilizza l'API **getTags** per ottenere un elenco delle tag disponibili a cui pu
 
 ```
 // Ottieni un elenco di tag disponibili a cui può sottoscriversi il dispositivo
-push.getTags(new MFPPushResponseListener<List<String>>(){  
+push.getTags(new MFPPushResponseListener<List<String>>(){
    @Override
-    public void onSuccess(List<String> tags) { 
-   updateTextView("Retrieved available tags: " + tags);  
+   public void onSuccess(List<String> tags){
+   updateTextView("Retrieved available tags: " + tags);
    System.out.println("Available tags are: "+tags);
-   availableTags = tags;   
-   subscribeToTag();   
-  }    
-  @Override    
-  public void onFailure(MFPPushException ex) {
+   availableTags = tags;
+   subscribeToTag();
+  }
+  @Override
+  public void onFailure(MFPPushException ex){
      updateTextView("Error getting available tags.. " + ex.getMessage());
   }
 })  
@@ -83,10 +83,8 @@ Utilizza la seguente API **retrieveAvailableTags** per ottenere un elenco delle 
 ```
 //Ottieni un elenco di tag disponibili a cui può sottoscriversi il dispositivo
 [push retrieveAvailableTagsWithCompletionHandler:
-^(IMFResponse *response, NSError *error){
- if(error){    
-   [self  updateMessage:error.description];  
- } else {
+^(IMFResponse *response, NSError *error){ 
+ if (error){[ self updateMessage:error.description];} else {
    [self updateMessage:@"Successfully retrieved available tags."];
  NSDictionary *availableTags = [[NSDictionary alloc]init];
  availableTags = [response tags];

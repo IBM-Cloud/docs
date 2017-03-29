@@ -40,9 +40,7 @@ MFPPush.registerNotificationsCallback(notification);
 * message - プッシュ通知メッセージ
 * payload - 通知ペイロードを含む JSON オブジェクト。
 action-loc-key - このストリングは、現行ローカリゼーションにおいて、「View」の代わりに右ボタンのタイトルに使用されるローカライズされたストリングを取得するためのキーとして使用されます。
-* badge - アプリ・アイコンのバッジとして表示する数。このプロパティーがないと、バッジは変更されません。
-バッジを削除するには、このプロパティーの値を 0 に設定します。
-
+* badge - アプリ・アイコンのバッジとして表示する数。このプロパティーがないと、バッジは変更されません。バッジを削除するには、このプロパティーの値を 0 に設定します。
 * sound - アプリ・バンドル内、またはアプリ・データ・コンテナーの Library/Sounds フォルダー内にある音声ファイルの名前。
 
 
@@ -81,7 +79,6 @@ funcapplication(application: UIApplication, didReceiveRemoteNotification userInf
 ```
 // Handle receiving a remote notification on launch
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
 
     CDVMFPPush.sharedInstance().didReceiveRemoteNotificationOnLaunch(launchOptions)
 }

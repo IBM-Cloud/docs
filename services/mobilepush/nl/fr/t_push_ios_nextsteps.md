@@ -1,8 +1,8 @@
 
 ---
 
-Copyright :
-  Années : 2015, 2016
+copyright:
+ years: 2015, 2016
 
 ---
 
@@ -11,10 +11,10 @@ Copyright :
 
 {: #push-ios-nextsteps}
 
-Une fois que vous avez configuré des notifications de base, vous pouvez configurer des notifications basées sur les balises et des options
+Une fois que vous avez configuré les notifications de base, vous pouvez configurer des notifications basées sur des balises et des options
 avancées.
 
-Ajoutez ces fonctions du service Notifications push à votre application.
+Ajoutez ces fonctions du service de notifications push à votre application.
 
 
 

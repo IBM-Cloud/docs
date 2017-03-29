@@ -20,10 +20,7 @@ Les notifications de type {{site.data.keyword.mobilepushshort}} basées sur les 
 ## Enregistrement de l'appareil avec l'ID utilisateur
 Pour activer les notifications push ciblées par ID utilisateur, prenez soin d'enregistrer l'appareil avec une zone ID utilisateur définie.     
 
-L'ID utilisateur peut être toute chaîne fournie par l'application à l'API d'enregistrement d'appareil. En général, une application mobile exécute d'abord un
-cycle d'authentification au cours duquel l'utilisateur d'application mobile est authentifié auprès d'un service d'authentification tel que
-[{{site.data.keyword.amafull}}
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html "Icône de lien externe"){: new_window}. Si l'authentification aboutit, l'ID de l'utilisateur authentifié est transféré vers l'API d'enregistrement d'appareil Push. 
+L'ID utilisateur peut être toute chaîne fournie par l'application à l'API d'enregistrement d'appareil. Généralement, une application mobile exécute d'abord un cycle d'authentification au cours duquel l'utilisateur de l'application mobile s'authentifie auprès d'un service d'authentification tel que [{{site.data.keyword.amafull}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html){: new_window}. Si l'authentification aboutit, l'ID de l'utilisateur authentifié est transféré vers l'API d'enregistrement d'appareil Push. 
 
 ## Synchronisation de la connexion et de la déconnexion utilisateur 
 

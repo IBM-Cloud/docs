@@ -14,7 +14,7 @@ lastupdated:  "2016-08-03"
 # Wartung und Aktualisierungen
 {: #maintupdates_mf}
 
-{{site.data.keyword.mobilefoundation_short}} stellt einen {{site.data.keyword.mfserver_short_notm}} <!--on {{site.data.keyword.containerlong}} as a container group--> bereit. Die Benutzer werden über Aktualisierungen des {{site.data.keyword.mobilefoundation_short}}-Servers benachrichtigt. Wenn es für Sie hilfreich ist, können Sie den {{site.data.keyword.mobilefoundation_short}}-Server aktualisieren.
+{{site.data.keyword.mobilefoundation_short}} stellt einen {{site.data.keyword.mfserver_short_notm}}<!-- on {{site.data.keyword.containerlong}} as a container group--> bereit. Die Benutzer werden über Aktualisierungen des {{site.data.keyword.mobilefoundation_short}}-Servers benachrichtigt. Wenn es für Sie hilfreich ist, können Sie den {{site.data.keyword.mobilefoundation_short}}-Server aktualisieren.
 {:shortdesc}
 
 ## Strategie für die Wartung
@@ -36,6 +36,8 @@ Die Aktualisierung für {{site.data.keyword.mobilefoundation_short}} kann durch 
 
 Bei der Anwendung der Aktualisierung wird die Version des Servers, die in der {{site.data.keyword.mfp_oc_short_notm}} zu sehen ist, so geändert, dass die Version der Serveraktualisierung angezeigt wird.
 
-**Anmerkung:**
+### Hinweis:
+{: #note notoc}
+
 * Benutzer können keine eigenen Fixes und Aktualisierungen auf ihre Instanz des {{site.data.keyword.mobilefoundation_short}}-Service anwenden.
 * Informationen zu den Unterschieden im Verhalten der Pläne, wenn Sie auf die Option für die Neuerstellung klicken, Sie in den Themen zur [Erneuten Erstellung des Servers im Entwicklerplan](c_using_mfs_p1.html#recreate_mobilefoundation_p1) sowie zur [Erneuten Erstellung des Servers im Professional 1 Application-Plan](c_using_mfs_p2.html#recreate_mobilefoundation_p2).

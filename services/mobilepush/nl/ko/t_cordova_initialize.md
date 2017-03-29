@@ -17,10 +17,10 @@ copyright:
 	```
 	BMSClient.initialize("https://myapp.mybluemix.net","abcd1234-abcd-1234-abcd-abcd1234abcd");
 	```
-1. Bluemix Route 및 appGUID 매개변수를 사용하려면 코드 스니펫을 수정하십시오. Bluemix 애플리케이션 대시보드의 **모바일 옵션** 링크를 클릭하여 애플리케이션 라우트와 애플리케이션 GUID를 확보하십시오. ```BMSClient.initialize``` 코드 스니펫에서 라우트 및 앱 GUID 값을 매개변수로 사용하십시오. 
+1. Bluemix Route 및 appGUID 매개변수를 사용하려면 코드 스니펫을 수정하십시오. Bluemix 애플리케이션 대시보드의 **모바일 옵션** 링크를 클릭하여 애플리케이션 라우트와 애플리케이션 GUID를 확보하십시오. `BMSClient.initialize` 코드 스니펫에서 라우트 및 앱 GUID 값을 매개변수로 사용하십시오. 
 
 
-	**참고**: Cordova CLI(예: Cordova create app-name 명령)를 사용하여 Cordova 앱을 작성한 경우 이 Javascript 코드를 **index.js** 파일에서 ```onDeviceReady: function()``` 함수의 ```app.receivedEvent`` 함수 뒤에 넣어서 BMS 클라이언트를 초기화하십시오. 
+	**참고**: Cordova CLI(예: Cordova create app-name 명령)를 사용하여 Cordova 앱을 작성한 경우 이 Javascript 코드를 **index.js** 파일에서 `onDeviceReady: function()` 함수의 `app.receivedEvent` 함수 뒤에 넣어서 BMS 클라이언트를 초기화하십시오. 
 
 	```
 	onDeviceReady: function() {

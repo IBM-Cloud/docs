@@ -12,7 +12,7 @@ years: 2015, 2017
 
 # Webanwendungen für den Empfang von Push-Benachrichtigungen aktivieren
 {: #web_notifications}
-Letzte Aktualisierung: 18. Januar 2017
+Letzte Aktualisierung: 16. Februar 2017
 {: .last-updated}
 
 Sie können Google Chrome-, Mozilla Firefox- und Safari-Webanwendungen für den Empfang von Push-Benachrichtigungen aktivieren. Stellen Sie sicher, dass die im Abschnitt [Berechtigungsnachweise für einen Benachrichtigungsprovider konfigurieren](t__main_push_config_provider.html) angegebenen Schritte durchgeführt wurden.
@@ -32,8 +32,8 @@ Laden Sie die Dateien `BMSPushSDK.js`, `BMSPushServiceWorker.js` und `manifest_W
 	- Beim Google Chrome-Browser ändern Sie `name` in den Namen Ihrer Site. Beispiel: `www.dailynewsupdates.com`. Ändern Sie `gcm_sender_id` in Ihre Absender-ID von Firebase Cloud Messaging (FCM) bzw. Google Cloud Messaging (GCM). Weitere Informationen finden Sie in [Absender-ID und API-Schlüssel abrufen](t_push_provider_android.html). Der Wert für gcm_sender_id enthält nur Ziffern.
 
 		```
- 			{
- 			 "name": "YOUR_WEBSITE_NAME",
+			{
+	"name": "YOUR_WEBSITE_NAME",
   			"gcm_sender_id": "GCM_Sender_Id"
 			 }
 		```
@@ -42,8 +42,8 @@ Laden Sie die Dateien `BMSPushSDK.js`, `BMSPushServiceWorker.js` und `manifest_W
 	- Fügen Sie für den Mozilla Firefox-Browser die folgenden Werte in der Datei `manifest_Website.json` hinzu. Geben Sie einen entsprechenden Namen (`name`) an. Dies kann der Name Ihrer Website sein.
 
 		```
-			{
- 			 "name": "YOUR_WEBSITE_NAME"
+			{ 
+	"name": "YOUR_WEBSITE_NAME"
 			 }
 		```
     		{: codeblock}
@@ -51,13 +51,17 @@ Laden Sie die Dateien `BMSPushSDK.js`, `BMSPushServiceWorker.js` und `manifest_W
 2. Ändern Sie den Namen der Datei `manifest_Website.json` in `manifest.json`.
 3. Fügen Sie die Dateien `BMSPushSDK.js`, `BMSPushServiceWorker.js` und `manifest.json` zum Stammverzeichnis Ihrer Website hinzu.
 3. Schließen Sie die Datei `manifest.json` in den Tag `<head>` Ihrer HTML-Datei ein.
-```<link rel="manifest" href="manifest.json">
-```
-    {: codeblock}
+	```
+		<link rel="manifest" href="manifest.json">
+	```
+    	{: codeblock}
 4. Nehmen Sie das Web-Push-SDK von Bluemix in Ihre Webanwendung auf.
-```<script src="BMSPushSDK.js" async></script>
-```
-    {: codeblock}
+	```
+		<script src="BMSPushSDK.js" async></script>
+	```
+    	{: codeblock}
+
+**Hinweis**: Stellen Sie sicher, dass der Code bereitgestellt wurde und dass auf den Beispiellink mit `https` und nicht mit `http` zugegriffen wird. 
 
 ## Das Web-Push-SDK initialisieren 
 {: #web_initialize}
@@ -72,17 +76,18 @@ Die `App Region` gibt den Standort an, an dem der {{site.data.keyword.mobilepush
  - Für Großbritannien:			 `.eu-gb.bluemix.net`
  - Für Sydney:		 `.au-syd.bluemix.net`
 
-``` var bmsPush = new BMSPush();
+```
+	var bmsPush = new BMSPush();
     function callback(response) {
- alert(response.response)
+ 	alert(response.response)
     }
-  var initParams = {
-  "appGUID":"push app GUID",
+  	var initParams = {
+  	"appGUID":"push app GUID",
   "appRegion":"Region where service hosted",
    "clientSecret":"clientSecret of your push service"
    "websitePushIDSafari": "Optional parameter for Safari Push Notifications only. The value should match the website Push ID provided during the server side configuration."
     }
-  bmsPush.initialize(initParams, callback)
+  	bmsPush.initialize(initParams, callback)
 ```
 	{: codeblock}
 
@@ -100,7 +105,9 @@ Verwenden Sie die API **register()**, um das Gerät beim {{site.data.keyword.mob
 - Für die Registrierung von Mozilla Firefox fügen Sie die URL der Website im Dashboard für die Webkonfiguration von Bluemix {{site.data.keyword.mobilepushshort}}-Service unter der Firefox-Konfiguration hinzu.
 
 Verwenden Sie folgendes Code-Snippet, um sich beim Bluemix {{site.data.keyword.mobilepushshort}}-Service zu registrieren.
-```var bmsPush = new BMSPush();
+
+```
+	var bmsPush = new BMSPush();
     function callback(response) {
      alert(response.response)
     }

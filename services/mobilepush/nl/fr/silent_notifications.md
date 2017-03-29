@@ -15,9 +15,7 @@ copyright:
 Dernière mise à jour : 16 janvier 2017
 {: .last-updated}
 
-Les notifications silencieuses n'apparaissent pas sur l'écran de l'appareil. Elles sont reçues par l'application en arrière-plan, qui sort alors de veille pendant une durée maximale de 30 secondes pour effectuer la tâche d'arrière-plan spécifiée. Un utilisateur peut ne pas être conscient de l'arrivée de la notification. Pour
-envoyer des notifications silencieuses pour iOS, utilisez l'[API REST
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobile.{DomainName}/imfpush/ "Icône de lien externe"){: new_window}. 
+Les notifications silencieuses n'apparaissent pas sur l'écran de l'appareil. Elles sont reçues par l'application en arrière-plan, qui sort alors de veille pendant une durée maximale de 30 secondes pour effectuer la tâche d'arrière-plan spécifiée. Un utilisateur peut ne pas être conscient de l'arrivée de la notification. Pour envoyer des notifications silencieuses pour iOS, utilisez l'[API REST![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobile.{DomainName}/imfpush/){: new_window}.   
 
 1. Pour envoyer des notifications push en mode silencieux, implémentez la méthode suivante dans le fichier `appDelegate.m` dans votre projet. Dans
 Swift, la valeur `contentAvailable` envoyée par le serveur pour les notifications silencieuses est égale à 1.

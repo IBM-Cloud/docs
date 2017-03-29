@@ -26,7 +26,10 @@ Google Chrome 앱과 확장 프로그램에서 {{site.data.keyword.mobilepushsho
 
 Chrome 앱과 확장 프로그램에 Javascript SDK를 설치하려면 다음 단계를 완료하십시오. 
 
- [Bluemix 웹 푸시 SDK ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master "외부 링크 아이콘"){: new_window}에서 `BMSPushSDK.js` 및 `manifest_Chrome_Ext.json`(chrome 확장기능의 경우) 또는 `manifest_Chrome_App.json`(Chrome 앱의 경우)을 다운로드하십시오.
+[Bluemix 웹 푸시 SDK
+![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master){: new_window}에서
+`BMSPushSDK.js` 및 `manifest_Chrome_Ext.json`(chrome 확장기능의 경우) 또는
+`manifest_Chrome_App.json`(Chrome 앱의 경우)을 다운로드하십시오. 
 
 
 

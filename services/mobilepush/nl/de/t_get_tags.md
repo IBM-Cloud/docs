@@ -19,14 +19,14 @@ Verwenden Sie die API **getTags**, um eine Liste der verfügbaren Tags abzurufen
 // Get a list of available tags to which the device can subscribe
 push.getTags(new MFPPushResponseListener<List<String>>(){  
    @Override
-    public void onSuccess(List<String> tags) { 
+   public void onSuccess(List<String> tags){
    updateTextView("Retrieved available tags: " + tags);  
    System.out.println("Available tags are: "+tags);
    availableTags = tags;   
    subscribeToTag();   
   }    
   @Override    
-  public void onFailure(MFPPushException ex) {
+  public void onFailure(MFPPushException ex){
      updateTextView("Error getting available tags.. " + ex.getMessage());
   }
 })  
@@ -83,9 +83,7 @@ Verwenden Sie die API **retrieveAvailableTags**, um eine Liste der verfügbaren 
 //Get a list of available tags to which the device can subscribe 
 [push retrieveAvailableTagsWithCompletionHandler:
 ^(IMFResponse *response, NSError *error){ 
- if(error){    
-   [self updateMessage:error.description];  
- } else {
+ if (error){[ self updateMessage:error.description];} else {
    [self updateMessage:@"Successfully retrieved available tags."];
  NSDictionary *availableTags = [[NSDictionary alloc]init];
  availableTags = [response tags];
@@ -118,7 +116,7 @@ Die API **retrieveAvailableTagsWithCompletionHandler** gibt die Liste mit den ve
 das Gerät einen bestimmten Tag subskribiert hat, kann es alle Push-Benachrichtigungen empfangen, die für
 diesen Tag gesendet werden.
 
-Push-Service zum Abrufen von Subskriptionen für einen Tag aufrufen
+Rufen Sie den Push-Service auf, um die Subskriptionen für einen Tag abzurufen.
 
 Kopieren Sie die folgenden Code-Snippets in Ihre mobile Swift-Anwendung, um eine Liste der Tags abzurufen, die das Gerät subskribiert hat, und eine Liste der verfügbaren Tags, die das Gerät subskribieren kann.
 
@@ -141,8 +139,9 @@ push.retrieveAvailableTagsWithCompletionHandler({ (response, statusCode, error) 
 
 ```
 //Get a list of available tags to which the device is subscribed
-push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) -> Void in
-    if error.isEmpty {
+	push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) -> Void in
+    if error.isEmpty
+		{
 
         print( "Response during retrieving subscribed tags : \(response.description)")
         print( "status code during retrieving subscribed tags : \(statusCode)")

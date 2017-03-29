@@ -12,7 +12,7 @@ copyright:
 
 # 사용자 ID를 사용하여 디바이스 등록
 {: #register_device_with_userId}
-마지막 업데이트 날짜: 2017년 1월 11일
+마지막 업데이트 날짜: 2017년 2월 06일
 {: .last-updated}
 
 사용자 ID 기반 알림에 등록하려면 다음 단계를 완료하십시오. 
@@ -22,7 +22,7 @@ copyright:
 
 {{site.data.keyword.mobilepushshort}} 서비스의 `AppGUID`와 `clientSecret` 키를 사용하여 MFPPush 클래스를 초기화하십시오. 
 ```
-// Initialize the MFPPush
+// Initialize the Push Notifications service
 push = MFPPush.getInstance();
 push.initialize(getApplicationContext(),"AppGUID", "clientSecret");
 ```
@@ -33,22 +33,21 @@ push.initialize(getApplicationContext(),"AppGUID", "clientSecret");
 - **clientSecret**: {{site.data.keyword.mobilepushshort}} 서비스의 clientSecret 키입니다. 
 
   **registerDeviceWithUserId** API를 사용하여 {{site.data.keyword.mobilepushshort}}를 받을 디바이스를 등록하십시오. 
+
 ```
-// Register the device to {{site.data.keyword.mobilepushshort}}.
+// Register the device to Push Notifications
 push.registerDeviceWithUserId("userId",new MFPPushResponseListener<String>() {
-    @Override
-	    public void onSuccess(String deviceId) {
-	           Log.d("Device is registered with Push Service.");
-  }
-  @Override
-    public void onFailure(MFPPushException ex) {
-         Log.d("Error registering with Push Service...\n"
-        + "Push notifications will not be received.");
-  }
-});
+		@Override
+		public void onSuccess(String response) {
+		Log.d("Device is registered with Push Service.");}
+		@Override
+		public void onFailure(MFPPushException ex) {
+		  Log.d("Error registering with Push Service...\n"
+   		  + "Push notifications will not be received.");
+		}
+		});
 ```
 	{: codeblock}
-
 
 - **사용자 ID**: {{site.data.keyword.mobilepushshort}}에 등록하기 위한 고유 사용자 ID 값을 전달하십시오.
 
@@ -60,9 +59,9 @@ push.registerDeviceWithUserId("userId",new MFPPushResponseListener<String>() {
 다음 API를 사용하여 UserId 기반 {{site.data.keyword.mobilepushshort}}를 받도록 등록하십시오. 
 
 ```
-// Register device for push notification with UserId
+// Register device for Push Notification with UserId
 var options = {"userId": "Your User Id value"};
-BMSPush.registerDevice(options,success, failure); 
+BMSPush.registerDevice(options,success, failure);
 ```
 	{: codeblock}
 
@@ -87,7 +86,7 @@ push.initializeWithAppGUID("appGUID", clientSecret:"clientSecret")
 **registerWithUserId** API를 사용하여 {{site.data.keyword.mobilepushshort}}를 받을 디바이스를 등록하십시오. 
 
 ```
-// Register the device to Push Notifications service.
+// Register the device to Push Notifications service
 push.registerWithDeviceToken("deviceToken", WithUserId: "userId")  { (response, statusCode, error) -> Void in
 if error.isEmpty {
   print( "Response during device registration : \(response)")

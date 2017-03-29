@@ -22,7 +22,7 @@ IBM {{site.data.keyword.mobilepushshort}} は、デバイスおよびプラッ�
 
 - カタログから MobileFirst Services Starter ボイラープレートを使用して Bluemix アプリケーションを作成する。これにより、Bluemix バックエンド・アプリケーションにバインドされた Push Notifications (プッシュ通知) サービスが作成されます。
 - モバイル・カタログから直接、アンバウンド Push Notifications (プッシュ通知) サービスを作成する。後でアプリケーションにバインドするか、アンバウンドの状態で使用するよう選択することもできます。 
-- [モバイル・ダッシュボード![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/docs/mobile/services.html "外部リンク・アイコン"){: new_window}を使用する。
+- [モバイル・ダッシュボード![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/docs/mobile/services.html){: new_window}を使用する。
 
 なお、{{site.data.keyword.mobilepushshort}}のモニター・タブには、分析データは表示されません。
 
@@ -70,7 +70,7 @@ IBM {{site.data.keyword.mobilepushshort}} は、デバイスおよびプラッ�
 - **appSecret**: 「appSecret」は、バックエンド・アプリケーションによって通常呼び出される API を保護します。例えば、{{site.data.keyword.mobilepushshort}}を送信する API や設定を構成する API などです。
 - **clientSecret**:  「clientSecret」は、モバイル・クライアント・アプリケーションによって通常呼び出される API を保護します。この「clientSecret」を必要とする関連付けられた UserId を持つデバイスの登録に関与する API は 1 つだけです。その他の API は、clientSecret を必要とするモバイル・クライアントからは呼び出されません。 
 
-「appSecret」と「clientSecret」は、アプリケーションと{{site.data.keyword.mobilepushshort}}サービスのバインド時にすべてのサービス・インスタンスに割り振られます。secret の受け渡しの方法や、対象の API について詳しくは、[REST API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobile.{DomainName}/imfpush/ "外部リンク・アイコン") の資料を参照してください。
+「appSecret」と「clientSecret」は、アプリケーションと{{site.data.keyword.mobilepushshort}}サービスのバインド時にすべてのサービス・インスタンスに割り振られます。secret の受け渡しの方法や、対象の API について詳しくは、[REST APIs ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobile.{DomainName}/imfpush/)の資料を参照してください。
 
 **注**: 以前のアプリケーションでは、userId フィールドが設定されたデバイスを登録または更新する場合にのみ、clientSecret の受け渡しが必要とされました。モバイル・クライアントおよびブラウザー・クライアントによって呼び出されるその他のすべての API では、clientSecret は不要でした。これらの古いアプリケーションでは引き続き、デバイスの登録や呼び出しの更新時にオプションで clientSecret を使用できます。ただし、すべてのクライアント API 呼び出しで clientSecret チェックを実施することを強くお勧めします。これを既存のアプリケーションでも実施するために、新規の「verifyClientSecret」API が公開されています。新規アプリケーションの場合、clientSecret チェックがすべてのクライアント API 呼び出しに対して実施され、この動作は「verfiyClientSecret」API を使用して変更することはできません。
 

@@ -12,7 +12,7 @@ years: 2015, 2017
 
 # Android アプリケーションによる{{site.data.keyword.mobilepushshort}}受け取りの可能化
 {: #tag_based_notifications}
-最終更新日: 2017 年 1 月 16 日
+最終更新日: 2017 年 2 月 14 日
 {: .last-updated}
 
 Android アプリケーションでデバイスへのプッシュ通知を受け取れるようにすることができます。Android Studio が前提条件であり、Android プロジェクトをビルドするための推奨方式です。Android Studio の基本知識が必要です。
@@ -22,7 +22,7 @@ Android アプリケーションでデバイスへのプッシュ通知を受け
 
 このセクションでは、Android アプリケーションをさらに開発するためにクライアント Push SDK をインストールして使用する方法について説明します。
 
-Bluemix® Mobile Services Push SDK は、Gradle を使用して追加できます。Gradle は自動的に成果物をリポジトリーからダウンロードして、Android アプリケーションで使用できるようにします。Android Studio および Android Studio SDK が正しくセットアップされていることを確認してください。システムのセットアップ方法について詳しくは、[Android Studio の概要![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.android.com/tools/studio/index.html "外部リンク・アイコン"){: new_window}を参照してください。Gradle について詳しくは、[Gradle でのビルドの構成![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://developer.android.com/tools/building/configuring-gradle.html "外部リンク・アイコン"){: new_window}に関する資料を参照してください。
+Bluemix® Mobile Services Push SDK は、Gradle を使用して追加できます。Gradle は自動的に成果物をリポジトリーからダウンロードして、Android アプリケーションで使用できるようにします。Android Studio および Android Studio SDK が正しくセットアップされていることを確認してください。システムのセットアップ方法について詳しくは、[Android Studio の概要![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.android.com/tools/studio/index.html){: new_window}を参照してください。Gradle について詳しくは、[Gradle でのビルドの構成に関する資料![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://developer.android.com/tools/building/configuring-gradle.html){: new_window}を参照してください。
 
 モバイル・アプリケーションを作成して開いてから、Android Studio を使用して以下の手順を実行します。
 
@@ -53,65 +53,69 @@ Bluemix® Mobile Services Push SDK は、Gradle を使用して追加できま�
 3. プロジェクト・レベルの **build.gradle** ファイルに、以下の依存関係を追加します。
 ```
 dependencies {
-classpath 'com.android.tools.build:gradle:3.0.0'
+    classpath 'com.android.tools.build:gradle:2.2.3'
     classpath 'com.google.gms:google-services:3.0.0'
 }
 ``` 
     {: codeblock}
-5. **AndroidManifest.xml** ファイルに、以下のアクセス権を追加します。サンプル・マニフェストを表示するには、[Android helloPush Sample Application ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml "外部リンク・アイコン"){: new_window}を参照してください。サンプル Gradle ファイルを表示するには、[build.gradle のサンプル・ファイル![ 外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle "外部リンク・アイコン"){: new_window}を参照してください。
+5. **AndroidManifest.xml** ファイルに、以下のアクセス権を追加します。サンプル・マニフェストを表示するには、[Android helloPush のサンプル・アプリケーション![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml){: new_window}を参照してください。サンプル Gradle ファイルを表示するには、[サンプルの Build Gradle ファイル![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle){: new_window}を参照してください。
 ```
-<uses-permission android:name="android.permission.INTERNET"/>
-<uses-permission android:name="android.permission.GET_ACCOUNTS" />
-<uses-permission android:name="android.permission.USE_CREDENTIALS" />
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 ```
 	{: codeblock}
-ここをクリックすると、[Android のパーミッション![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://developer.android.com/guide/topics/security/permissions.html "外部リンク・アイコン"){: new_window}の詳細情報が表示されます。
+ここをクリックすると、[Android のパーミッション![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://developer.android.com/guide/topics/security/permissions.html){: new_window}の詳細情報が表示されます。
+
 4. アクティビティーの通知インテント設定を追加します。この設定により、ユーザーが通知エリアで受信した通知をクリックすると、アプリケーションが開始します。
 ```
-<intent-filter>
-	<action android:name="Your_Android_Package_Name.IBMPushNotification"/>
-	<category  android:name="android.intent.category.DEFAULT"/>
-</intent-filter>
+	<intent-filter>
+		<action android:name="Your_Android_Package_Name.IBMPushNotification"/>
+		<category  android:name="android.intent.category.DEFAULT"/>
+	</intent-filter>
 ```
 	{: codeblock}
 **注**: 上記のアクション内の *Your_Android_Package_Name* を、アプリケーションで使用されているアプリケーション・パッケージ名に置き換えてください。
 
 5. RECEIVE および REGISTRATION のイベント通知用に、Firebase Cloud Messaging (FCM) または Google Cloud Messaging (GCM) のインテント・サービスとインテント・フィルターを追加します。
 ```
-<service android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushIntentService"
-    android:exported="true" >
-    <intent-filter>
-        <action android:name="com.google.firebase.MESSAGING_EVENT" />
+	<service android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushIntentService"
+    	android:exported="true" >
+    	<intent-filter>
+    	    <action android:name="com.google.firebase.MESSAGING_EVENT" />
     </intent-filter>
-</service>
-<service
+	</service>
+	<service
     android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPush"
     android:exported="true" >
     <intent-filter>
         <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
     </intent-filter>
-</service>
+	</service>
 ```
     {: codeblock}
 
 6. {{site.data.keyword.mobilepushshort}} サービスは、通知トレイからの個々の通知の取り出しをサポートします。通知トレイから通知にアクセスする場合、クリックしている通知のみへのハンドルが提供されます。アプリケーションを通常どおりに開いた場合は、すべての通知が表示されます。この機能を使用するには、以下のスニペットを使用して **AndroidManifest.xml** ファイルを更新します。
 
 ```
-<activity android:name="
-com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationHandler"
-android:theme="@android:style/Theme.NoDisplay"/>
+	<activity android:name="
+	com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationHandler"
+	android:theme="@android:style/Theme.NoDisplay"/>
 ```
     {: codeblock}
 
 FCM プロジェクトのセットアップおよび資格情報の取得については、[送信側 ID と API キーの取得](t_push_provider_android.html)を参照してください。Firebase Cloud Messaging (FCM) コンソールを使用して、以下の手順を実行します。
 
-1. Firebase コンソールで、**「Project Settings (プロジェクト設定)」** アイコンをクリックします。![Firebase のプロジェクト設定](images/FCM_4.jpg)
+1. Firebase コンソールで、**「Project Settings (プロジェクト設定)」** アイコンをクリックします。
+     ![Firebase のプロジェクト設定](images/FCM_4.jpg)
 
-3. アプリケーション・ペインの「General (一般)」タブから、**「ADD APP」**または**「Android アプリへの Firebase の追加 (Add Firebase to your Android app)」アイコン**を選択します。![Android への Firebase の追加](images/FCM_5.jpg)
+3. アプリケーション・ペインの「General (一般)」タブから、**「ADD APP」**または**「Android アプリへの Firebase の追加 (Add Firebase to your Android app)」アイコン**を選択します。
+     ![Android への Firebase の追加](images/FCM_5.jpg)
 
-4. 「Android アプリへの Firebase の追加 (Add Firebase to your Android app)」ウィンドウで、パッケージ名として **com.ibm.mobilefirstplatform.clientsdk.android.push** を追加します。「アプリのニックネーム (App nickname)」フィールドはオプションです。**「ADD APP」**をクリックします。![「Android への Firebase の追加」ウィンドウ](images/FCM_1.jpg)
+4. 「Android アプリへの Firebase の追加 (Add Firebase to your Android app)」ウィンドウで、パッケージ名として **com.ibm.mobilefirstplatform.clientsdk.android.push** を追加します。「アプリのニックネーム (App nickname)」フィールドはオプションです。**「ADD APP」**をクリックします。
+     ![「Android への Firebase の追加」ウィンドウ](images/FCM_1.jpg)
 
 5. 「Android アプリへの Firebase の追加 (Add Firebase to your Android app)」ウィンドウにパッケージ名を入力して、アプリケーションのパッケージ名を組み込みます。「アプリのニックネーム (App nickname)」フィールドはオプションです。**「ADD APP」**をクリックします。 
 
@@ -171,29 +175,29 @@ push.initialize(getApplicationContext(), "appGUID", "clientSecret");
 以下のコード・スニペットを Android モバイル・アプリケーションにコピーします。
 
 ```
-//Register Android devices
+	//Register Android devices
 	push.registerDevice(new MFPPushResponseListener<String>() {
-	    @Override
-    public void onSuccess(String deviceId) {
-        //handle success here
-	    }
-	    @Override
-    public void onFailure(MFPPushException ex) {
-         //handle failure here
-	    }
-	});
+    	@Override
+    	public void onSuccess(String response) {
+    		//handle success here
+    	}
+		@Override
+    	public void onFailure(MFPPushException ex) {
+    		//handle failure here
+		}
+		});
 ```
 	{: codeblock}
 
 
 ```
-//Handles the notification when it arrives
+	//Handles the notification when it arrives
 	MFPPushNotificationListener notificationListener = new MFPPushNotificationListener() {
-	    @Override
-	    public void onReceive (final MFPSimplePushNotification message){
-	      // Handle Push Notification
-	    }
-	};
+    @Override
+    public void onReceive (final MFPSimplePushNotification message){
+		// Handle Push Notification
+   		 }
+		};
 ```
 	{: codeblock}
 
@@ -206,12 +210,12 @@ notificationListener オブジェクトを Push に登録するには、**MFPPus
 
 
 ```
-@Override
+	@Override
 	protected void onResume(){
-	   super.onResume();
-	   if(push != null) {
-	       push.listen(notificationListener);
-	   }
+   	super.onResume();
+   	if(push != null) {
+       push.listen(notificationListener);
+   }
 	}
 ```
 	{: codeblock}
@@ -219,13 +223,13 @@ notificationListener オブジェクトを Push に登録するには、**MFPPus
 
 
 ```
-@Override
-protected void onPause() {
+	@Override
+	protected void onPause() {
     super.onPause();
     if (push != null) {
         push.hold();
     }
-}
+	}
 ```
 	{: codeblock}
 
@@ -247,12 +251,12 @@ protected void onPause() {
 **com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationStatusListener** クラスを MFPPush に登録する必要があります。
 
 ```
-push.setNotificationStatusListener(new MFPPushNotificationStatusListener() {
-@Override
-public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
-// Handle status change
-}
-});
+	push.setNotificationStatusListener(new MFPPushNotificationStatusListener() {
+	@Override
+	public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
+		// Handle status change
+	}
+	});
 ```
     {: codeblock}
 
@@ -266,11 +270,11 @@ public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
   次のスニペットを `AndroidManifest.xml` ファイルに追加します。
 
 ```
-<receiver android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationDismissHandler">
-<intent-filter>
-<action android:name="Your_Android_Package_Name.Cancel_IBMPushNotification"/>
-</intent-filter>
-</receiver>
+	<receiver android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationDismissHandler">
+	<intent-filter>
+	<action android:name="Your_Android_Package_Name.Cancel_IBMPushNotification"/>
+	</intent-filter>
+	</receiver>
 ```
 	{: codeblock}
 
@@ -279,18 +283,18 @@ public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
 **com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationDismissHandler** ブロードキャスト・レシーバーを拡張して、メソッド **onReceive()** をオーバーライドする必要があります。ここで、**MFPPushNotificationStatusListener** は、基本クラスのメソッド **onReceive()** を呼び出す前に登録しておく必要があります。
 
 ```
-public class MyDismissHandler extends MFPPushNotificationDismissHandler {
-@Override
-public void onReceive(Context context, Intent intent) {
-MFPPush.getInstance().setNotificationStatusListener(new MFPPushNotificationStatusListener() {
-@Override
-public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
-// Handle status change
-}
-});
-super.onReceive(context, intent);
-}
-}
+	public class MyDismissHandler extends MFPPushNotificationDismissHandler {
+	@Override
+	public void onReceive(Context context, Intent intent) {
+	MFPPush.getInstance().setNotificationStatusListener(new MFPPushNotificationStatusListener() {
+	@Override
+	public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
+	// Handle status change
+	}
+	});
+	super.onReceive(context, intent);
+	}
+	}
 ```
     {: codeblock}
 
@@ -298,11 +302,11 @@ super.onReceive(context, intent);
 以下のスニペットを `AndroidManifest.xml` ファイルに追加します。
 
 ```
-<receiver android:name="Your_Android_Package_Name.Your_Handler">
-<intent-filter>
-<action android:name="Your_Android_Package_Name.Cancel_IBMPushNotification"/>
-</intent-filter>
-</receiver>
+	<receiver android:name="Your_Android_Package_Name.Your_Handler">
+	<intent-filter>
+	<action android:name="Your_Android_Package_Name.Cancel_IBMPushNotification"/>
+	</intent-filter>
+	</receiver>
 ```
     {: codeblock}
 
@@ -314,7 +318,8 @@ super.onReceive(context, intent);
 基本プッシュ通知を送信するには、以下の手順を実行します。
 
 1. **「通知の送信 (Send Notifications)」**を選択し、**「送信先 (Send To)」**オプションを選択することでメッセージを構成します。サポートされるオプションは、**「タグ指定によるデバイス (Device by Tag)」**、**「デバイス ID (Device Id)」**、**「ユーザー ID」**、**「Android デバイス (Android devices)」**、**「iOS デバイス (iOS devices)」**、**「Web 通知 (Web Notifications)」**、および**「すべてのデバイス」**です。
-**注**: **「すべてのデバイス」**オプションを選択すると、{{site.data.keyword.mobilepushshort}}をサブスクライブしているすべてのデバイスが通知を受け取ることになります。![「通知」画面](images/tag_notification.jpg)
+**注**: **「すべてのデバイス」**オプションを選択すると、{{site.data.keyword.mobilepushshort}}をサブスクライブしているすべてのデバイスが通知を受け取ることになります。
+![「通知」画面](images/tag_notification.jpg)
 
 2. **「メッセージ」**フィールドで、メッセージを構成します。必要に応じてオプションの設定を構成してください。
 3. **「送信」**をクリックします。
@@ -322,12 +327,9 @@ super.onReceive(context, intent);
 
 次のスクリーン・ショットは、Android デバイスのフォアグラウンドでプッシュ通知を処理しているアラート・ボックスを示しています。
 
-
-
 ![Android 上のフォアグラウンドのプッシュ通知](images/Android_Screenshot.jpg)
 
 次のスクリーン・ショットは、Android のバックグラウンドでのプッシュ通知を示しています。
-	
 
 ![Android 上のバックグラウンドのプッシュ通知](images/background.jpg)
 
@@ -355,7 +357,6 @@ Android デバイスに通知を送信するための{{site.data.keyword.mobilep
 {: #next_steps_tags}
 
 基本通知を正常にセットアップしたら、タグ・ベースの通知および詳細オプションの構成を行うことができます。
-
 
 以下の Push Notifications Service の機能を、ご使用のアプリに追加します。
 タグ・ベースの通知を使用する場合は、[タグ・ベースの通知](c_tag_basednotifications.html)を参照してください。

@@ -12,7 +12,7 @@ years: 2015, 2017
 
 # Ativando aplicativos da web para receber o {{site.data.keyword.mobilepushshort}}
 {: #web_notifications}
-Última atualização: 18 de janeiro de 2017
+Última atualização: 16 de fevereiro de 2017
 {: .last-updated}
 
 É possível ativar os aplicativos da web Google Chrome, Mozilla Firefox e Safari para receber o
@@ -41,8 +41,8 @@ informações, veja [Obtendo o seu ID de
 emissor e chave API](t_push_provider_android.html). O valor gcm_sender_id contém somente números.
 
 		```
- 			{
- 			 "name": "YOUR_WEBSITE_NAME",
+			{
+	"name": "YOUR_WEBSITE_NAME",
   			"gcm_sender_id": "GCM_Sender_Id"
 			 }
 		```
@@ -52,8 +52,8 @@ emissor e chave API](t_push_provider_android.html). O valor gcm_sender_id conté
 um `name` apropriado. Isso seria o nome de seu website.
 
 		```
-			{
- 			 "name": "YOUR_WEBSITE_NAME"
+			{ 
+	"name": "YOUR_WEBSITE_NAME"
 			 }
 		```
     		{: codeblock}
@@ -63,13 +63,17 @@ um `name` apropriado. Isso seria o nome de seu website.
 `BMSPushServiceWorker.js` e
 `manifest.json` no diretório-raiz do seu website.
 3. Inclua o `manifest.json` na tag `<head>` de seu arquivo html.
-```<link rel="manifest" href="manifest.json">
-```
-    {: codeblock}
+	```
+		<link rel="manifest" href="manifest.json">
+	```
+    	{: codeblock}
 4. Inclua o SDK de push da web do Bluemix em seu aplicativo da web.
-```<script src="BMSPushSDK.js" async></script>
-```
-    {: codeblock}
+	```
+		<script src="BMSPushSDK.js" async></script>
+	```
+    	{: codeblock}
+
+**Nota**: assegure-se de que o código seja implementado e que o link de amostra seja acessado usando `https` e não `http`. 
 
 ## Inicializando o Web Push SDK 
 {: #web_initialize}
@@ -84,18 +88,18 @@ O `App Region` especifica o local no qual o serviço {{site.data.keyword.mobilep
  - Para Reino Unido:			 `.eu-gb.bluemix.net`
  - Para Sydney:		 `.au-syd.bluemix.net`
 
-``` var bmsPush = new BMSPush();
+```
+	var bmsPush = new BMSPush();
     function callback(response) {
- alert(response.response)
+ 	alert(response.response)
     }
-  var initParams = {
-  "appGUID":"push app GUID",
+  	var initParams = {
+  	"appGUID":"push app GUID",
   "appRegion":"Region where service hosted",
-   "clientSecret":"clientSecret of your push service"
-   "websitePushIDSafari": "Optional parameter for Safari Push Notifications only. The value should match the
-website Push ID provided during the server side configuration."
-    }
-  bmsPush.initialize(initParams, callback)
+  "clientSecret":"clientSecret of your push service"
+  "websitePushIDSafari": "Optional parameter for Safari Push Notifications only. The value should match the website Push ID provided during the server side configuration."
+  }
+  	bmsPush.initialize(initParams, callback)
 ```
 	{: codeblock}
 
@@ -103,7 +107,7 @@ website Push ID provided during the server side configuration."
 entrega da mensagem poderá falhar para o navegador Chrome. Assegure-se de chamar
 `bmsPush.unRegisterDevice` para evitar falha.
 
-Você poderá ver erros relacionados à configuração se fornecer um parâmetro errado. Para obter mais informações, veja [Resolvendo erros de configuração Push da web](troubleshooting_config_errors.html)
+Você poderá ver erros relacionados à configuração se fornecer um parâmetro errado. Para obter mais informações, veja [Resolvendo erros de configuração Push da web](troubleshooting_config_errors.html).
 
 ## Registrando o aplicativo da web
 {: #web_register}
@@ -119,7 +123,9 @@ Messaging (GCM) e a URL do website no painel de configuração da web de serviç
 
 Use o fragmento de código a seguir para registrar o serviço Bluemix
 {{site.data.keyword.mobilepushshort}}.
-```var bmsPush = new BMSPush();
+
+```
+	var bmsPush = new BMSPush();
     function callback(response) {
      alert(response.response)
     }

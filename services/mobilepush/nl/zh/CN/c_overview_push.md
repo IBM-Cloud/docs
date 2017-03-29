@@ -21,7 +21,7 @@ IBM {{site.data.keyword.mobilepushshort}} 是一项服务，您可以使用该�
 
 - 通过从目录使用 MobileFirst Services Starter 样板创建 Bluemix 应用程序。这会创建绑定到 Bluemix 后端应用程序的 Push Notifications 服务。
 - 通过从 Mobile 目录直接创建未绑定的 Push Notifications 服务。您可以稍后绑定到应用程序或者选择在未绑定的情况下使用它。 
-- 通过使用 [Mobile 仪表板 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.ng.bluemix.net/docs/mobile/services.html "外部链接图标"){: new_window}。
+- 通过使用 [Mobile 仪表板 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.ng.bluemix.net/docs/mobile/services.html){: new_window}。
 
 请注意，{{site.data.keyword.mobilepushshort}} 监视选项卡并不显示分析数据。
 
@@ -70,7 +70,7 @@ IBM {{site.data.keyword.mobilepushshort}} 是一项服务，您可以使用该�
 - **clientSecret**：“clientSecret”会保护通常由移动客户端应用程序调用的 API。只有一个 API 与设备注册相关，且其相关联用户标识需要此“clientSecret”。从移动客户端调用的其他 API 没有一个需要 clientSecret。 
 
 在将应用程序与 {{site.data.keyword.mobilepushshort}} 服务绑定在一起时，“appSecret”和“clientSecret”会分配给每一个服务实例。
-请参阅 [REST API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://mobile.{DomainName}/imfpush/ "外部链接图标")文档，以获取如何传递私钥以及相关联的 API 的更多信息。
+请参阅 [REST API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://mobile.{DomainName}/imfpush/) 文档，以获取如何传递私钥以及相关联的 API 的更多信息。
 
 **注**：仅在使用用户标识字段注册或更新设备时需要较早版本的应用程序来传递 clientSecret。移动和浏览器客户端调用的所有其他 API 不
 需要 clientSecret。这些旧应用程序可以选择针对设备注册或更新调用继续使用 clientSecret。但是，强烈建议对所有客户端 API 调用强制执行 clientSecret 检查。要在现有应用程序中强制执行此检查，已发布了一个新的“verifyClientSecret”API。对于所有新的应用程序，将对所有客户端 API 调用强制执行 clientSecret 检查，而此行为无法使用“verfiyClientSecret”API 进行更改。

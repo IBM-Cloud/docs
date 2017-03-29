@@ -26,8 +26,7 @@ La clé d'API est stockée de façon sécurisée et utilisée par le service {{s
 
 Pour configurer FCM, générez la clé d'API et l'ID d'émetteur en procédant comme suit :
 
-1. Visitez la [Console Firebase
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.firebase.google.com/?pli=1 "Icône de lien externe"){: new_window}.
+1. Accédez à la [Console Firebase![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.firebase.google.com/?pli=1){: new_window}.
 2. Sélectionnez **Créer un projet**. 
 3. Dans la fenêtre Créer un projet, fournissez un nom de projet, choisissez un pays/région puis cliquez sur **Créer un projet**.
 3. Dans le panneau de navigation, cliquez sur l'icône des paramètres et sélectionnez **Paramètres du projet**.
