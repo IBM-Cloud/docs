@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-22"
+lastupdated: "2017-03-29"
 
 ---
 {:new_window: target="_blank"}
@@ -16,14 +16,32 @@ lastupdated: "2017-03-22"
 {: #gettingstarted}
 
 
-**The {{site.data.keyword.amafull}} service is replaced with the [{{site.data.keyword.appid_full}} service](/docs/services/appid/index.html).** If you need information about {{site.data.keyword.amashort}} before moving to {{site.data.keyword.appid_short_notm}}, refer to the following pages.
+**The {{site.data.keyword.amafull}} service is replaced with the [{{site.data.keyword.appid_full}} service](/docs/services/appid/index.html).** For more details, see the <a href="https://www.ibm.com/blogs/bluemix/2017/03/introducing-ibm-bluemix-app-id-authentication-profiles-service-app-developers/" target="_blank">{{site.data.keyword.appid_short_notm}} announcement <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>.
 {:shortdesc}
+
 
 {{site.data.keyword.amashort}} provided security to your mobile app: client authorization for accessing protected back-end resources from identity providers (Google and Facebook) or custom identities to authenticate users and grant access to protected back-end resources and Web apps.
 
 **Note:** The {{site.data.keyword.amashort}} service was previously known as Advanced Mobile Access.
 
-<!-- Commenting out all getting started content because new users should start with App ID, not this old service.
+
+## Migrating to {{site.data.keyword.appid_short_notm}}
+
+With {{site.data.keyword.appid_short_notm}}, you can secure your mobile applications by using identity providers (Google and Facebook). You can also protect back-end resources with client authorization.
+
+1. Provision your service instance from the Bluemix catalog. Configure your instance and click **Create**.
+2. In your service instance dashboard, use the step-by-step samples to get started with {{site.data.keyword.appid_short_notm}}.
+3. Download the {{site.data.keyword.appid_short_notm}} SDKs and set up your application by using either [The Android SDK](/docs/services/appid/getting-started-android.html#android-sdk), or [The iOS Swift SDK](/docs/services/appid/getting-started-ios-swift-sdk.html#getting-started-ios).
+4. Configure your [identity providers](/docs/services/appid/identity-providers.html).
+5. Customize your [login widget](/docs/services/appid/login-widget.html).
+6. Verify that your app is working correctly.
+    * Check your service dashboard to ensure your app is running.
+    * In your service dashboard, view **recent activity** to monitor any ongoing authentication.
+7. Deprovision and remove your instances of Mobile Client Access.
+
+
+
+<!-- Commenting out all getting started content because new users should start with App ID.
 
 Add security to your mobile app with the {{site.data.keyword.amafull}} service. You can configure client authorization for accessing protected back-end resources running on {{site.data.keyword.Bluemix}}. Use identity providers (Google and Facebook), or custom identities to authenticate users and grant access to protected back-end resources and Web apps.
 {:shortdesc}
@@ -69,21 +87,23 @@ To get up and running with the {{site.data.keyword.amashort}} service:
 **Optional:** Configure an identity provider for your application. You can configure one identity provider per application. Configuring an identity provider enables the users of your mobile app to log in with their existing Facebook or Google+ account. Or, you can define how users log in by creating a custom authentication.
    * [Authenticating users with Facebook credentials](facebook-auth-overview.html)
    * [Authenticating users with Google credentials](google-auth-overview.html)
-   * [Authenticating users with a custom identity provider](custom-auth.html)
+   * [Authenticating users with a custom identity provider](custom-auth.html) --->
+
+
+
+# Related Links
+{: #rellinks notoc}
 
 ## Tutorials and Samples
-{: #samples}
+{: #samples notoc}
 
 * [android-helloauthentication sample ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication){: new_window}
 * [ios-helloauthentication sample (Swift SDK) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication){: new_window}
 
 ## SDK
-{: #sdk}
+{: #sdk notoc}
 
 * [Core SDK (Android) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
-
 * [ios-helloauthentication sample (Swift SDK) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication){: new_window}
-
 * [Custom authentication - simple sample ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}
-
-* [Custom authentication - advanced sample ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management){: new_window} --->
+* [Custom authentication - advanced sample ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management){: new_window}
