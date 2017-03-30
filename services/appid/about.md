@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-03-17"
 
 
 # About {{site.data.keyword.appid_short_notm}}
-{: #gettingstarted}
+{: #about}
 
 With {{site.data.keyword.appid_full}} developers can secure and add authentication to their {{site.data.keyword.Bluemix}} apps, with a few lines of code. Developers can also manage user-specific data to build personalized app experiences.
 {:shortdesc}
@@ -43,7 +43,7 @@ You can use the service in the following ways:
 
 ## Architecture overview
 
-![{{site.data.keyword.appid_short_notm}} architecture diagram](/images/appid_flow.png)
+![{{site.data.keyword.appid_short_notm}} architecture diagram](/images/appid_architecture.png)
 
 Figure 1. {{site.data.keyword.appid_short_notm}} architecture diagram
 
@@ -57,10 +57,24 @@ You can protect your cloud resources with the {{site.data.keyword.appid_short_no
 * The server SDK extracts the access token from the request and validates it with {{site.data.keyword.appid_short_notm}}.
 Access is granted and the response is returned to the application.
 
-<!--## Sequence diagrams
-{: #sequence-diagrams}
 
-[Anton?]-->
+## Request flow
+{: #request}
+
+The following diagram describes how a request flows from the client SDK to your back-end application and identity providers.
+
+![{{site.data.keyword.appid_short_notm}} request flow](/images/appidflow.png)
+
+
+* Use the {{site.data.keyword.appid_short_notm}} client SDK to make a request to your back-end resources that are protected with the {{site.data.keyword.appid_short_notm}} server SDK.
+* The {{site.data.keyword.appid_short_notm}} server SDK detects an unauthorized request and returns an HTTP 401 and authorization scope.
+* The client SDK automatically detects the HTTP 401 and starts the authentication process.
+* When the client SDK contacts the service, the server SDK returns the login widget if more than one identity provider is configured. {{site.data.keyword.appid_short_notm}} calls the identity provider and presents the login form for that provider, or returns a grant code that allows them to authenticate if no identity providers are configured.
+* {{site.data.keyword.appid_short_notm}} asks the client app to authenticate by supplying an authentication challenge.
+* If Facebook or Google are configured, and the user logs in, the authentication is handled by the respective identity provider OAuth Flow.
+* If the authentication ends with the same grant code, the code is sent to the token endpoint. The endpoint returns two tokens: an access token and an identity token. From this point on, all requests made with the client SDK have a newly obtained authorization header.
+* The client SDK automatically resends the original request that triggered the authorization flow.
+* The server SDK extracts the authorization header from the request, validates the header with the service, and grants access to a back-end resource.
 
 ## Access and identity tokens
 {: #access-and-identity}

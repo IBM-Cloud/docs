@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -10,7 +10,7 @@ lastupdated: "2017-03-17"
 {:shortdesc: .shortdesc}
 
 
-# User profiles
+# Understanding user profiles
 {: #user-profile}
 
 A user profile is an entity that is stored and maintained by {{site.data.keyword.appid_short}}. The profile holds a user's attributes and identity and can be anonymous or linked to an identity managed by an identity provider.
