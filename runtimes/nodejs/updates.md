@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-07"
+lastupdated: "2017-03-23"
 
 ---
 
@@ -13,13 +13,19 @@ lastupdated: "2017-02-07"
 {: #latest_updates}
 
 A list of the latest updates in the sdk-for-nodejs buildpack.
+
+## March 10, 2017: Updated Node.js buildpack v3.11
+This release of the buildpack supports IBM SDK for Node.js runtime versions: 0.10.47, 0.10.48, 0.12.17, 0.12.18, 4.7.3, 4.8.0, 6.9.5, and 6.10.0. The default version now is 4.8.0.
+
+In addition to the new runtimes, this release contains a fix for a bug encountered when enabling the shell app management handler using the devconsole UI. This buildpack also changes the way auto-configuration works for the Monitoring and Analytics service. Applications using the Free plan will no longer have the log capability added to their applications, it is being replaced by logmet.
+
 ## January 20, 2017: Updated Node.js buildpack v3.10
 This release of the buildpack supports IBM SDK for Node.js runtime versions: 0.10.47, 0.10.48, 0.12.17, 0.12.18, 4.7.0, 4.7.2, 6.9.2, and 6.9.4. The default is now 4.7.2.
 
 It contains a fix for a bug where "npm start" was not always called to start applications.
 
 ## November 17, 2016: Updated Node.js buildpack v3.9
-This release of the buildpack supports IBM SDK for Node.js runtime versions: 0.10.47, 0.10.48, 0.12.16, 0.12.17, 4.6.1, 4.6.2, 6.7.0, and 6.9.1. The default is now 4.6.2. 
+This release of the buildpack supports IBM SDK for Node.js runtime versions: 0.10.47, 0.10.48, 0.12.16, 0.12.17, 4.6.1, 4.6.2, 6.7.0, and 6.9.1. The default is now 4.6.2.
 
 Note that Node.js v6 was promoted to LTS status on October 18, 2016 and will soon become the buildpack's default runtime. Node.js v0.10 reached end of life on October 31, 2016 and will soon no longer be included in the buildpack. See [Node.js version long-term support and the SDK for Node.js buildpack](https://www.ibm.com/blogs/bluemix/2016/11/node-version-support-and-sdk-buildpack/) for more details.
 
@@ -28,7 +34,7 @@ Bugs affecting the trace and inspector App Management handlers, when used in con
 ## October 7, 2016: Updated Node.js buildpack v3.8-20161006-1211
 This release of the buildpack supports IBM SDK for Node.js runtime versions: 0.10.46, 0.10.47, 0.12.15, 0.12.16, 4.5.0, 4.6.0, 6.6.0, and 6.7.0. The default is now 4.6.0.
 
-In addition to the new runtimes, this release contains buildpack bug fixes. A fix for the known issue when using Node.js 6.x and Development Mode that was mentioned in the v3.7-20160826-1101 release updates is one of them. It is also synchronized with the [Cloud Foundry Node.js buildpack v1.5.20](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.20). 
+In addition to the new runtimes, this release contains buildpack bug fixes. A fix for the known issue when using Node.js 6.x and Development Mode that was mentioned in the v3.7-20160826-1101 release updates is one of them. It is also synchronized with the [Cloud Foundry Node.js buildpack v1.5.20](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.20).
 
 ## August 26, 2016: Updated Node.js buildpack v3.7-20160826-1101
 This release of the buildpack supports IBM SDK for Node.js runtime versions: 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.7, 4.5.0, 6.2.2, and 6.4.0. The default is now 4.5.0.
@@ -61,7 +67,7 @@ This release of the buildpack adds IBM SDK for Node.js runtime versions 0.10.45,
 
 Included are fixes for the following security vulnerabilities:
 * [CVE-2015-8855](http://www-01.ibm.com/support/docview.wss?uid=swg21982852)
-* [CVE-2016-2108 CVE-2016-2107 CVE-2016-2105 CVE-2016-2106 CVE-2016-2109 CVE-2016-2176](https://www.openssl.org/news/secadv/20160503.txt)
+* [CVE-2016-2108 CVE-2016-2107 CVE-2016-2105 CVE-2016-2106 CVE-2016-2109 CVE-2016-2176 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.openssl.org/news/secadv/20160503.txt)
 
 Note that there is a known issue with npm v3 and the App Management inspector utility. npm 3.8.6 is the default with the 6.0.0 and 6.1.0 runtimes. If you want to use either of the 6.x runtimes and the inspector utility, you should specify a 2.x npm version in your package.json as a temporary workaround.
 
@@ -141,7 +147,9 @@ To push your application with v3.0beta:
 ```
 {: codeblock}
 
-This change to the default runtime will not affect your application if you configured a specific version of Node.js in your application's package.json. **Note:** You can always specify the version of Node.js to run your application by using the engines.node entry in your package.json as explained in [Available versions](index.html#available_versions).
+This change to the default runtime will not affect your application if you configured a specific version of Node.js in your application's package.json.
+
+**Note:** You can always specify the version of Node.js to run your application by using the engines.node entry in your package.json as explained in [Available versions](index.html#available_versions).
 
 ## November 23, 2015: Updated Node.js buildpack v2.7-20151118-1003
 
@@ -153,7 +161,7 @@ Node.js v2.6.1 introduces a bug fix to the [StrongPM app management handler](htt
 
 ## October 15, 2015: Updated Node.js buildpack v2.6-20151006-1309
 
-This release of the Node.js buildpack features the integration of [StrongLoop Process Manager](https://strong-pm.io) to the App Management feature. For more information, see the blog post [StrongLoop DevOps for Node.js Applications on Bluemix](https://developer.ibm.com/bluemix/2015/10/15/strongloop-devops-on-bluemix/).
+This release of the Node.js buildpack features the integration of [StrongLoop Process Manager ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://strong-pm.io) to the App Management feature. For more information, see the blog post [StrongLoop DevOps for Node.js Applications on Bluemix](https://developer.ibm.com/bluemix/2015/10/15/strongloop-devops-on-bluemix/).
 
 ## June 15, 2015: Updated Node.js buildpack v2.0-20150608-1503
 
@@ -207,12 +215,12 @@ In addition, we revamped the App Management feature in the Node.js buildpack, wh
 
 ## August 28, 2014: Updated Node.js buildpack v1.3-20140821-1143
 
-* The newest Node.js buildpack now comes with IBM SDK for Node.js v1.1.0.6. This update means you will get a fully supported IBM Node.js runtime when you specify the latest stable Node.js runtime, v0.10.30, for your application. This runtime fixes the [V8 Memory Corruption vulnerability](http://blog.nodejs.org/2014/07/31/v8-memory-corruption-stack-overflow).
+* The newest Node.js buildpack now comes with IBM SDK for Node.js v1.1.0.6. This update means you will get a fully supported IBM Node.js runtime when you specify the latest stable Node.js runtime, v0.10.30, for your application. This runtime fixes the [V8 Memory Corruption vulnerability ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://blog.nodejs.org/2014/07/31/v8-memory-corruption-stack-overflow).
 * The buildpack also includes improvements and bug fixes to the Monitoring and Analytics service extension, allowing you to diagnose performance and error conditions through the service.
 
 ## July 29, 2014: Updated Node.js buildpack v1.1-20140717-1447
 
-The Node.js buildpack now comes with IBM SDK for Node.js v1.1.0.5. This update means you'll get a fully supported IBM Node.js runtime when you specify the latest stable Node.js runtime for your application, v0.10.29. See more about the IBM Node.js SDKs [here](https://developer.ibm.com/node/sdk/).
+The Node.js buildpack now comes with IBM SDK for Node.js v1.1.0.5. This update means you'll get a fully supported IBM Node.js runtime when you specify the latest stable Node.js runtime for your application, v0.10.29. See more about the [IBM Node.js SDKs](https://developer.ibm.com/node/sdk/).
 
 # rellinks
 {: #rellinks notoc}

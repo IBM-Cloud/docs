@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-06"
+lastupdated: "2017-03-23"
 
 ---
 
@@ -42,4 +42,4 @@ If a start script entry is present in the **package.json**, a **Procfile** is ge
 ```
 {: codeblock}
 
-For more information on the **Procfile** and **package.json** file see [Tips for Node.js Applications](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html).
+For more information on the **Procfile** and **package.json** file see [Tips for Node.js Applications ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html).

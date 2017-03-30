@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-07"
+lastupdated: "2017-03-23"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-02-07"
 # FIPS Mode
 {: #fips_mode}
 
-Nodejs buildpack versions v3.2-20160315-1257 and later support [FIPS](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards).  
+Nodejs buildpack versions v3.2-20160315-1257 and later support [FIPS ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards).  
 {: shortdesc}
 
 To use a FIPS-enabled node engine set the environment variable FIPS_MODE to true.
@@ -24,13 +24,13 @@ For example:
 ```
 {: codeblock}
 
-It is important to understand that when FIPS_MODE is true some node modules may not work.  For example, **node modules which use [MD5](https://en.wikipedia.org/wiki/MD5) will fail**, such as [Express](http://expressjs.com/).  For Express, setting [etag](http://expressjs.com/en/api.html) to false in your
+It is important to understand that when FIPS_MODE is true some node modules may not work.  For example, **node modules which use [MD5 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://en.wikipedia.org/wiki/MD5) will fail**, such as [Express ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://expressjs.com/).  For Express, setting [etag ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://expressjs.com/en/api.html) to false in your
 Expess app may help work around that. For example you can do the following in your code:
 ```
     app.set('etag', false);
 ```
 {: codeblock}
-See this [stackoverflow post](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)
+See this [stackoverflow post ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)
 for more information.
 
 **NOTE** [App Management](/docs/manageapps/app_mng.html) and FIPS_MODE are *NOT* simultaneously supported.  If the BLUEMIX_APP_MGMT_ENABLE environment variable is set and the FIPS_MODE environment variables is set to true, the app will fail to stage.
