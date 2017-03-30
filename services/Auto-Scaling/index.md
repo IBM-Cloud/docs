@@ -73,7 +73,7 @@ To enable the {{site.data.keyword.autoscaling}} service with your Node.js apps, 
 1. Update the package.json file with the following steps: <ol><li>Create a dependency entry for `blumix-autoscaling-agent`, for example `"bluemix-autoscaling-agent": "*"`.<br/><li>(Optional) Set heap limit within the `scripts` section based on the memory that you allocate for your app, for example `"start": "node --max-old-space-size=600 app.js"`. .<br/>*Note:* Set a value for `max-old-space-size` if you want to trigger scaling based on heap usage. If the value is not set when you start your application, the default Node.js heap limit 1.4GB is used regardless how much memory your app is allocated, which might lead to improper auto-scaling decisions.<br/>
 ```
 {
-	"name": "NodejsStarterApp",
+	"name": "Your-App",
 	"version": "0.0.1",
 	"description": "A sample nodejs app for Bluemix",
 	"scripts": {
@@ -107,19 +107,18 @@ To enable the {{site.data.keyword.autoscaling}} service with your Swift apps, be
 
 1. Update Package.swift file to add dependency declaration of package SwiftMetrics: 
    ```
-   Package(url: "https://github.com/RuntimeTools/SwiftMetrics.git" , majorVersion: 0)
+   Package(url: "https://github.com/RuntimeTools/SwiftMetrics.git" , majorVersion: 1)
    ```
    A sample Package.swift file is as below: 
 ```
 import PackageDescription
 let package = Package(
-    name: "swiftdemo",
+    name: "Your-App",
     targets: [
-      Target(name: "swiftdemo", dependencies: [])
+      Target(name: "Your-App", dependencies: [])
     ],
     dependencies: [
-      .Package(url: "https://github.com/RuntimeTools/SwiftMetrics.git" , majorVersion: 0),
-      .Package(url: "https://github.com/IBM-Swift/HeliumLogger.git"  , majorVersion: 1)
+      .Package(url: "https://github.com/RuntimeTools/SwiftMetrics.git" , majorVersion: 1)
     ]) 
 ```
 2. Add the SwiftMetrics modules to your Swift app. 
@@ -130,10 +129,13 @@ import SwiftMetricsKitura
 import SwiftMetricsBluemix
 ```
  + Initialize and start the agent: 
-    +  Create instances of the SwiftMetrics and SwiftMonitor classes in your app.
+    +  Declare variables of the SwiftMetrics and SwiftMonitor in your app.
       ```   
       let sm: SwiftMetrics
       let monitor: SwiftMonitor
+      ```
+    +  Create instances of the SwiftMetrics and SwiftMonitor classes in your app.
+      ```   
       sm = try SwiftMetrics()
       _ = SwiftMetricsKitura(swiftMetricsInstance: sm)
       _ = SwiftMetricsBluemix(swiftMetricsInstance: sm)
@@ -157,8 +159,11 @@ import SwiftMetricsBluemix
           let configMgr: ConfigurationManager
           var jsonEndpointEnabled: Bool = true
           var jsonEndpointDelay: UInt32 = 0
+
+          // Declare variables of the SwiftMetrics and SwiftMonitor in your app
           let sm: SwiftMetrics
           let monitor: SwiftMonitor
+
           var port: Int {
               get { return configMgr.port }
           }
@@ -167,10 +172,13 @@ import SwiftMetricsBluemix
           }
           init() throws {
               configMgr = ConfigurationManager().load(.environmentVariables)
+
+              //Create instances of the SwiftMetrics and SwiftMonitor classes in your app
               sm = try SwiftMetrics()
               _ = SwiftMetricsKitura(swiftMetricsInstance: sm)
               _ = SwiftMetricsBluemix(swiftMetricsInstance: sm)
               monitor = sm.monitor()
+
               // All web apps need a Router instance to define routes
               router = Router()
               // Serve static content from "public"
