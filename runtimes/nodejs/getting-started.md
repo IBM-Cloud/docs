@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-03-22"
 
 ---
 
@@ -160,7 +160,7 @@ We're now going to update your local code to point to this database. We'll creat
     }
   }
   ```
-  {: pre}
+  {: codeblock}
 
 2. In your browser, go to {{site.data.keyword.Bluemix_notm}} and select **Apps > _your app_ > Connections > Cloudant > View Credentials**.
 

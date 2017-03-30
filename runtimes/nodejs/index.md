@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-06"
+lastupdated: "2017-03-23"
 
 ---
 
@@ -30,8 +30,8 @@ The sdk-for-nodejs buildpack is used when the application contains a **package.j
 {{site.data.keyword.Bluemix}} provides a number of utilities for managing and debugging your Node.js app.  See [App Management](/docs/manageapps/app_mng.html) for complete details.
 
 # rellinks
-{: #rellinks notoc} 
+{: #rellinks notoc}
 ## general
 {: #general notoc}
-* [Node.js](https://nodejs.org)
+* [Node.js ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://nodejs.org)
 * [IBM API Connect](https://strongloop.com/)
