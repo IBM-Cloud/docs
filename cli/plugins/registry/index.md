@@ -77,7 +77,7 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE]
 **Parameters**
 <dl>
 <dt>--format FORMAT</dt>
-<dd>(Optional) Format the output elements by using a Go template. For examples, see [Viewing information](https://console.bluemix.net/docs/services/Registry/registry_cli_listing.html).</dd>
+<dd>(Optional) Format the output elements by using a Go template.</dd>
 <dt>IMAGE</dt>
 <dd>The full {{site.data.keyword.Bluemix_short}} registry path to the image that you want to inspect. If a tag is not specified in the image path, the image tagged `latest` is inspected. You can inspect multiple images by listing each private {{site.data.keyword.Bluemix_short}} registry path in the command with a space between each path.</dd>
 </dl>
@@ -100,7 +100,7 @@ View all images in your {{site.data.keyword.Bluemix_short}} org.
 <dt>--include-ibm</dt>
 <dd>(Optional) Includes IBM-provided public images in the output. Without this option, private images only are listed.</dd>
 <dt>--format FORMAT</dt>
-<dd>(Optional) Format the output elements by using a Go template. For examples, see [Viewing information](https://console.bluemix.net/docs/services/Registry/registry_cli_listing.html).</dd>
+<dd>(Optional) Format the output elements by using a Go template.</dd>
 </dl>
 
 
