@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE map PUBLIC "-//IBM//DTD DITA IBM Map//EN"
+ "ibm-map.dtd">
+
+
+<map xml:lang="zh-tw">
+<title>IoT for Insurance</title>
+<topicref href="index.html" format="html" navtitle="IoT for Insurance" scope="peer" locktitle="yes">
+<topicref href="index.html" format="html" navtitle="開始使用" locktitle="yes" scope="peer">
+<topicref format="html" href="index.html#deploying_services" outputclass="subsection" scope="peer"
+navtitle="部署服務及應用程式"/>
+<topicref format="html" href="index.html#config_push" outputclass="subsection" scope="peer"
+navtitle="配置推送通知"/>
+</topicref>
+<topicref href="iotinsurance_overview.html" format="html" navtitle="關於" toc="yes">
+<topicref format="html" href="iotinsurance_overview.html#architecture" outputclass="subsection"
+scope="peer" navtitle="架構"/>
+<topicref format="html" href="iotinsurance_overview.html#insurance_dashboard"
+outputclass="subsection" scope="peer" navtitle="保險儀表板"/>
+<topicref format="html" href="iotinsurance_overview.html#mobileapp" outputclass="subsection"
+scope="peer" navtitle="範例行動應用程式"/>
+<topicref format="html" href="iotinsurance_overview.html#rest_api" outputclass="subsection"
+scope="peer" navtitle="REST 及即時 API"/>
+<topicref format="html" href="iotinsurance_overview.html#transformer" outputclass="subsection"
+scope="peer" navtitle="Transformer"/>
+<topicref format="html" href="iotinsurance_overview.html#wcdtransformer" outputclass="subsection"
+scope="peer" navtitle="Weather Company Data Transformer"/>
+<topicref format="html" href="iotinsurance_overview.html#shield_engine" outputclass="subsection"
+scope="peer" navtitle="防護引擎"/>
+<topicref format="html" href="iotinsurance_overview.html#action_engine" outputclass="subsection"
+scope="peer" navtitle="動作引擎"/>
+</topicref>
+<topicref href="iotinsurance_extending_service.html" format="html"
+navtitle="使用 API 擴充服務" toc="yes">
+<topicref href="iotinsurance_how_service_works.html" format="html" navtitle="服務運作方式"
+toc="yes"/>
+<topicref href="iotinsurance_device_toolkit.html" format="html" navtitle="裝置工具箱" toc="yes">
+<topicref href="iotinsurance_device_toolkit.html#reg_users" format="html"
+navtitle="登錄授權使用者" toc="yes"/>
+<topicref href="iotinsurance_device_toolkit.html#generating_device_events" format="html"
+navtitle="產生裝置事件" toc="yes"/>
+<topicref href="iotinsurance_device_toolkit.html#deploy_new_transformer" format="html"
+navtitle="部署新的轉換器實例" toc="yes"/>
+</topicref>
+<topicref href="iotinsurance_supporteddevices.html" format="html"
+navtitle="支援的裝置及供應商" toc="yes">
+<topicref href="iotinsurance_supporteddevices.html#supportedvendors" format="html"
+navtitle="依供應商排列的支援裝置" toc="yes"/>
+<topicref href="iotinsurance_supporteddevices.html#integratingdevices" format="html"
+navtitle="整合裝置及供應商雲端" toc="yes"/>
+</topicref>
+<topicref href="iotinsurance_shield_toolkit.html" format="html" navtitle="防護工具箱" toc="yes">
+<topicref href="iotinsurance_shield_toolkit.html#environment" format="html"
+navtitle="設定環境" toc="yes"/>
+<topicref href="iotinsurance_shield_toolkit.html#create_shield_def" format="html"
+navtitle="建立防護定義" toc="yes"/>
+<topicref href="iotinsurance_shield_toolkit.html#create_shield_code" format="html"
+navtitle="建立防護程式碼" toc="yes"/>
+<topicref href="iotinsurance_shield_toolkit.html#create_user" format="html"
+navtitle="建立使用者" toc="yes"/>
+<topicref href="iotinsurance_shield_toolkit.html#create_shield_assoc" format="html"
+navtitle="建立防護關聯" toc="yes"/>
+<topicref href="iotinsurance_shield_toolkit.html#create_sim_hazard" format="html"
+navtitle="建立模擬的危害" toc="yes"/>
+<topicref href="iotinsurance_shield_toolkit.html#create_promotion" format="html"
+navtitle="建立促銷活動" toc="yes"/>
+</topicref>
+</topicref>
+<topicref href="iotinsurance_mobile_app.html" format="html"
+navtitle="安裝及連接行動應用程式" toc="yes">
+<topicref format="html" href="iotinsurance_mobile_app.html#building_mobile" outputclass="subsection"
+scope="peer" navtitle="建置行動應用程式"/>
+<topicref format="html" href="iotinsurance_mobile_app.html#iot4i_pushNotification"
+outputclass="subsection" scope="peer" navtitle="啟用推送通知"/>
+</topicref>
+<topicref href="iotinsurance_optimizing_performance.html" format="html"
+navtitle="效能最佳化" toc="yes">
+<topicref format="html" href="iotinsurance_advancedservices.html#scaling_apps"
+outputclass="subsection" scope="peer" navtitle="調整應用程式"/>
+<topicref format="html" href="iotinsurance_advancedservices.html#monitoring"
+outputclass="subsection" scope="peer" navtitle="監視效能"/>
+</topicref>
+<topicref format="html" href="iotinsurance_upgrading.html" outputclass="subsection" scope="peer"
+navtitle="升級至新版本"/>
+<topicref format="html" href="iotinsurance_data_backup.html" outputclass="subsection" scope="peer"
+navtitle="備份資料">
+<topicref format="html" href="iotinsurance_data_backup.html#createinstance" outputclass="subsection"
+scope="peer" navtitle="建立 Cloudant 抄本"/>
+<topicref format="html" href="iotinsurance_data_backup.html#locate_credentials"
+outputclass="subsection" scope="peer" navtitle="尋找認證"/>
+<topicref format="html" href="iotinsurance_data_backup.html#create_replication"
+outputclass="subsection" scope="peer" navtitle="建立抄寫作業"/>
+<topicref format="html" href="iotinsurance_data_backup.html#run_backup" outputclass="subsection"
+scope="peer" navtitle="執行備份"/>
+<topicref format="html" href="iotinsurance_data_backup.html#restore_data" outputclass="subsection"
+scope="peer" navtitle="還原資料"/>
+</topicref>
+<topicref href="iotinsurance_troubleshooting.html" format="html" navtitle="疑難排解"
+toc="yes">
+<topicref format="html" href="iotinsurance_troubleshooting.html#deployingapps"
+outputclass="subsection" scope="peer" navtitle="部署應用程式時的問題"/>
+<topicref format="html" href="iotinsurance_troubleshooting.html#performance_issues"
+outputclass="subsection" scope="peer" navtitle="效能問題"/>
+<topicref format="html" href="iotinsurance_troubleshooting.html#gettinghelp"
+outputclass="subsection" scope="peer" navtitle="取得協助和支援"/>
+</topicref>
+</topicref>
+</map>
+

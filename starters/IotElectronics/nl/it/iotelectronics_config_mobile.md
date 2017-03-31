@@ -1,17 +1,16 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-29"
-
+  years: 2016, 2017
+lastupdated: "2017-03-10"
 ---
 
-
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Utilizzo dell'applicazione mobile
 {: #iot4e_using_mobile}
@@ -39,7 +38,7 @@ Puoi ottenere l'applicazione mobile per i dispositivi mobili iOS o Android.
 
 Per collegare l'applicazione mobile al tuo ambiente e registrare i tuoi elettrodomestici, completa le seguenti attività:
 
-1. Apri la tua applicazione starter {{site.data.keyword.itoelectronics}}. Per le istruzioni, consulta [Apertura dell'applicazione starter](iot4ecreatingappliances.html#iot4e_openAppMain).
+1. Apri la tua applicazione starter {{site.data.keyword.iotelectronics}}. Per le istruzioni, consulta [Apertura dell'applicazione starter](iot4ecreatingappliances.html#iot4e_openAppMain).
 
 2. Seleziona **Controlla in remoto le tue applicazioni collegate**.
 

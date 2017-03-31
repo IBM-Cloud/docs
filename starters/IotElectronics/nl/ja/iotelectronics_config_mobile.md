@@ -1,17 +1,16 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-29"
-
+  years: 2016, 2017
+lastupdated: "2017-03-10"
 ---
 
-
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # モバイル・アプリの使用
 {: #iot4e_using_mobile}
@@ -39,7 +38,7 @@ iOS または Android のモバイル・デバイス用のモバイル・アプ�
 
 モバイル・アプリをご使用の環境に接続して電気製品を登録するには、次のタスクを実行します。
 
-1. {{site.data.keyword.itoelectronics}} スターター・アプリを開きます。手順については、[スターター・アプリを開く](iot4ecreatingappliances.html#iot4e_openAppMain)を参照してください。
+1. {{site.data.keyword.iotelectronics}} スターター・アプリを開きます。手順については、[スターター・アプリを開く](iot4ecreatingappliances.html#iot4e_openAppMain)を参照してください。
 
 2. **「接続された電気製品をリモート制御する (Remotely control your connected appliances)」**を選択します。
 

@@ -1,17 +1,16 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-29"
-
+  years: 2016, 2017
+lastupdated: "2017-03-10"
 ---
 
-
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Configurazione della sicurezza e della connettività mobili
 {: #iot4e_configureMCA}
@@ -22,7 +21,9 @@ Abilitare la sicurezza e le comunicazioni mobili configurando {{site.data.keywor
 Prima di cominciare, devi distribuire un'istanza dello starter di {{site.data.keyword.iotelectronics}} nella tua organizzazione
 {{site.data.keyword.Bluemix_notm}}. La distribuzione di un'istanza dello starter in automatico distribuisce le applicazioni e i servizi del componente, incluso {{site.data.keyword.amafull}}.
 
-1. Se hai appena distribuito lo starter {{site.data.keyword.iotelectronics}}, viene visualizzata la scheda introduttiva dell'applicazione starter e puoi procedere al passo successivo di queste istruzioni. Se l'applicazione starter non viene visualizzata, apri il tuo dashboard {{site.data.keyword.Bluemix_notm}} e avvia la tua applicazione starter {{site.data.keyword.iotelectronics}} facendo clic sul nome dell'applicazione starter.
+1. Nel dashboard {{site.data.keyword.Bluemix_notm}}, apri l'applicazione {{site.data.keyword.iotelectronics}}.
+
+   **Suggerimento:** l'applicazione è ubicata nella sezione Applicazioni del tuo dashboard {{site.data.keyword.Bluemix_notm}}. Assicurati di far clic sul nome e non sulla rotta.
 
     ![{{site.data.keyword.iotelectronics}} nel dashboard](images/IoT4E_bm_dashboard.svg "{{site.data.keyword.iotelectronics}} nel dashboard")
 
@@ -36,12 +37,12 @@ Prima di cominciare, devi distribuire un'istanza dello starter di {{site.data.ke
 
     - **Nome realm**: `myRealm`
 
-    - **URL provider di identità personalizzato**: incolla l'URL dell'applicazione API che hai copiato nel primo passo nel seguente formato:   **https://<*myIoT4eStarterApp*>.mybluemix.net**.  
+    - **URL provider di identità personalizzato**: incolla l'URL dell'applicazione API che hai copiato nel primo passo nel seguente formato:   **https://<*myIoT4eStarterApp*>.mybluemix.net**.
 
     **Importante:** assicurati che l'URL utilizzi il protocollo di sicurezza `https` anche se il valore che hai copiato utilizza `http`.
 
     - **Gli URI di reindirizzamento dell'applicazione web**: lascia questo campo vuoto.
 
-   ![Configura {{site.data.keyword.amashort}}.](images/MCA_config_pg.svg "{{site.data.keyword.amashort}} Pagina di autenticazione")  
+   ![Configura {{site.data.keyword.amashort}}.](images/MCA_config_pg.svg "{{site.data.keyword.amashort}} Pagina di autenticazione")
 
 5. Salva le tue impostazioni. Puoi ora ritornare alla console del servizio {{site.data.keyword.iotelectronics}} o alla tua console {{site.data.keyword.Bluemix_notm}}.

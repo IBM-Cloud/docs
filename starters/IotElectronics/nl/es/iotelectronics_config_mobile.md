@@ -1,17 +1,16 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-29"
-
+  years: 2016, 2017
+lastupdated: "2017-03-10"
 ---
 
-
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Utilización de la app para móvil
 {: #iot4e_using_mobile}
@@ -39,7 +38,7 @@ Puede obtener la app para móvil de dispositivos móviles iOS o Android.
 
 Para conectar la app para móvil a su entorno y registrar sus dispositivos, realice las siguientes tareas:
 
-1. Abra la app de inicio de {{site.data.keyword.itoelectronics}}. Para obtener instrucciones, consulte [Apertura de la app de inicio](iot4ecreatingappliances.html#iot4e_openAppMain).
+1. Abra la app de inicio de {{site.data.keyword.iotelectronics}}. Para obtener instrucciones, consulte [Apertura de la app de inicio](iot4ecreatingappliances.html#iot4e_openAppMain).
 
 2. Seleccione **Controlar de forma remota los dispositivos conectados**.
 

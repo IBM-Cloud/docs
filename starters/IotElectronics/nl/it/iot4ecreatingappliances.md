@@ -1,15 +1,16 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-29"
-
+  years: 2016, 2017
+lastupdated: "2017-03-10"
 ---
 
-{:new_window: target="\_blank"}
-
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Utilizzo dell'applicazione starter
 Crea delle applicazioni simulate nell'applicazione starter {{site.data.keyword.iotelectronics_full}}. Vedi in che modo un produttore aziendale può monitorare le applicazioni collegate a {{site.data.keyword.iot_short_notm}}. Interagisci manualmente con l'elettrodomestico simulato per attivare avvisi, notifiche e azioni.
@@ -23,7 +24,7 @@ Crea delle applicazioni simulate nell'applicazione starter {{site.data.keyword.i
 
     ![{{site.data.keyword.iotelectronics}} nel dashboard.](images/IoT4E_bm_dashboard.svg "{{site.data.keyword.iotelectronics}} nel dashboard")
 
-2. Attendi il messaggio di stato *La tua applicazione è in esecuzione* nell'intestazione e quindi fai clic su **Visualizza applicazione** per visualizzare l'applicazione starter.  
+2. Attendi il messaggio di stato *La tua applicazione è in esecuzione* nell'intestazione e quindi fai clic su **Visualizza applicazione** per visualizzare l'applicazione starter.
 
     ![{{site.data.keyword.iotelectronics}} visualizza applicazione.](images/IoT4E_view_app.svg "{{site.data.keyword.iotelectronics}} visualizza applicazione")
 
@@ -42,7 +43,7 @@ Nell'applicazione starter, puoi creare e controllare gli elettrodomestici simula
 
     ![Aggiunta di una lavatrice.](images/IoT4E_add_washer.svg "Aggiunta di una lavatrice")
 
-3. Per visualizzare i dettagli della tua lavatrice, i comandi immessi e i malfunzionamenti verificatisi, fai clic su una lavatrice.
+3. Per visualizzare i dettagli della tua lavatrice fai clic su una lavatrice. Nel pannello di controllo e comando, avvia la lavatrice o fai clic su tipi diversi di errori per visualizzare le modifiche dello stato. Puoi anche visualizzare le modifiche dello stato e controllare la lavatrice dalla tua applicazione mobile.
 
   ![Dettagli stato lavatrice.](images/IoT4E_washer_control.svg "Dettagli stato lavatrice")
 

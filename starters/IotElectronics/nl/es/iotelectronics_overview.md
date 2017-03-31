@@ -1,12 +1,17 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-29"
+  years: 2016, 2017
+lastupdated: "2017-03-10"
 ---
 
-{:new_window: target="\_blank"}
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # Acerca de {{site.data.keyword.iotelectronics}}
 {: #iotelectronics_about}
@@ -14,18 +19,18 @@ lastupdated: "2016-11-29"
 {{site.data.keyword.iotelectronics_full}} es una instancia de producción IoT completamente integrada que permite a sus apps comunicarse y consumir datos recopilados por los dispositivos, sensores y pasarelas conectados.
 {:shortdesc}
 
-{{site.data.keyword.iotelectronics}} utiliza el servicio {{site.data.keyword.iot_full}} para conectar los dispositivos electrónicos inteligentes con las aplicaciones que desarrolla. También utiliza {{site.data.keyword.iot_short_notm}} para ayudarle a analizar y a entender los datos desde los dispositivos. Puede establecer reglas para identificar condiciones que necesiten atención y definir respuestas automatizadas, tales como enviar correo electrónico, ejecutar un flujo de trabajo Node-RED o conectarse a servicios web.  
+{{site.data.keyword.iotelectronics}} utiliza el servicio {{site.data.keyword.iot_full}} para conectar los dispositivos electrónicos inteligentes con las aplicaciones que desarrolla. También utiliza {{site.data.keyword.iot_short_notm}} para ayudarle a analizar y a entender los datos desde los dispositivos. Puede establecer reglas para identificar condiciones que necesiten atención y definir respuestas automatizadas, tales como enviar correo electrónico, ejecutar un flujo de trabajo Node-RED o conectarse a servicios web.
 
 ## Búsqueda del iniciador
 {: #iot4eFindingStarter}
-Puede encontrar el iniciador {{site.data.keyword.iotelectronics}} en la [sección Contenedores modelo](https://console.{DomainName}/catalog/starters/iot-for-electronics-starter/) del catálogo {{site.data.keyword.Bluemix_notm}}.  
+Puede encontrar el iniciador {{site.data.keyword.iotelectronics}} en la [sección Contenedores modelo](https://console.{DomainName}/catalog/starters/iot-for-electronics-starter/) del catálogo {{site.data.keyword.Bluemix_notm}}.
 
 ## Lo que puede hacer con {{site.data.keyword.iotelectronics}}
 {: #Features_iote}
 Explorar rápidamente las características de la solución {{site.data.keyword.iotelectronics}} utilizando dispositivos y datos simulados.
 
 ### Conectar dispositivos simulados
-Cree dispositivos simulados y conéctelos a la plataforma para ver datos activos en modalidad continua. Utilice una app basada en web para simular cómo el dispositivo recibe los mandatos y realiza las operaciones. Imite anomalías para generar avisos y alertas. Para fines de demostración, las lavadoras se utilizan como el dispositivo simulado dentro del iniciador de {{site.data.keyword.iotelectronics}}. El dispositivo que elija para conectarse puede ser cualquier tipo de dispositivo electrónico inteligente.  
+Cree dispositivos simulados y conéctelos a la plataforma para ver datos activos en modalidad continua. Utilice una app basada en web para simular cómo el dispositivo recibe los mandatos y realiza las operaciones. Imite anomalías para generar avisos y alertas. Para fines de demostración, las lavadoras se utilizan como el dispositivo simulado dentro del iniciador de {{site.data.keyword.iotelectronics}}. El dispositivo que elija para conectarse puede ser cualquier tipo de dispositivo electrónico inteligente.
 
 ### Probar una app para móvil de consumidor de ejemplo
 Utilice su dispositivo móvil iOS o Android para ver cómo puede interactuar un propietario de dispositivo con el dispositivo. Envía mandatos al dispositivo y recibe actualizaciones del dispositivo utilizando la plataforma y {{site.data.keyword.Bluemix_notm}}. Imite sucesos de error y vea los resultados en la app para móvil.
@@ -52,17 +57,3 @@ El iniciador de {{site.data.keyword.iotelectronics}} utiliza el servicio de {{si
 **{{site.data.keyword.sdk4nodefull}}** le permite desarrollar, desplegar y escalar apps de JavaScript&reg; del lado del servidor y proporciona una mejora en el rendimiento, la seguridad y la capacidad de servicio.
 
 **App para móvil de ejemplo** le permite ver el estado de un dispositivo simulado utilizando un dispositivo móvil, como por ejemplo, un smartphone o una tablet. Descubra cómo obtener la app para móvil en [Utilización de la app para móvil](iotelectronics_config_mobile.html).
-
-# Enlaces relacionados
-{: #rellinks}
-## Componentes
-{: #general}
-* [Documentación de {{site.data.keyword.iot_short}}](https://console.ng.bluemix.net/docs/services/IoT/index.html#gettingstartedtemplate)
-* [Documentación de {{site.data.keyword.amafull}}](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html)
-* [Documentación de {{site.data.keyword.sdk4nodefull}}](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
-
-
-## Documentación de la API
-{: #api}
-*  [API de {{site.data.keyword.iotelectronics}}](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)  
-*  [API de {{site.data.keyword.iot_short}}](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)

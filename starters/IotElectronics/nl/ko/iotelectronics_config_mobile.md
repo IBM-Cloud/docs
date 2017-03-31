@@ -1,17 +1,16 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-29"
-
+  years: 2016, 2017
+lastupdated: "2017-03-10"
 ---
 
-
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # 모바일 앱 사용
 {: #iot4e_using_mobile}
@@ -39,7 +38,7 @@ iOS 또는 Android 모바일 디바이스용 모바일 앱을 가져올 수 있�
 
 모바일 앱을 사용자 환경에 연결하고 어플라이언스를 등록하려면 다음 태스크를 수행하십시오. 
 
-1. {{site.data.keyword.itoelectronics}} 스타터 앱을 여십시오. 지시사항은 [스타터 앱 열기](iot4ecreatingappliances.html#iot4e_openAppMain)를 참조하십시오.
+1. {{site.data.keyword.iotelectronics}} 스타터 앱을 여십시오. 지시사항은 [스타터 앱 열기](iot4ecreatingappliances.html#iot4e_openAppMain)를 참조하십시오.
 
 2. **연결된 어플라이언스를 원격으로 제어**를 선택하십시오. 
 

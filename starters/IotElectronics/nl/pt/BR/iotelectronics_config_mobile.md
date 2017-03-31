@@ -1,17 +1,16 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-29"
-
+  years: 2016, 2017
+lastupdated: "2017-03-10"
 ---
 
-
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Usando o aplicativo móvel
 {: #iot4e_using_mobile}
@@ -42,12 +41,13 @@ instale.
 
 Para conectar o aplicativo móvel ao seu ambiente e registrar os seus dispositivos, execute as tarefas a seguir:
 
-1. Abra seu app iniciador do {{site.data.keyword.itoelectronics}}. Para obter instruções, consulte
+1. Abra seu app iniciador do {{site.data.keyword.iotelectronics}}. Para obter instruções, consulte
 [Abrindo o app iniciador](iot4ecreatingappliances.html#iot4e_openAppMain).
 
 2. Selecione **Controlar remotamente seus dispositivos conectados**.
 
-    ![Experiência do iniciador do {{site.data.keyword.iotelectronics}}](images/IoT4E_remotely_option.svg "Experiência do iniciador do {{site.data.keyword.iotelectronics}}")
+    ![Experiência do
+iniciador do {{site.data.keyword.iotelectronics}}](images/IoT4E_remotely_option.svg "Experiência do iniciador do {{site.data.keyword.iotelectronics}}")
 
 3. Crie uma ou mais arruelas rolando para a seção que está rotulada **Em seguida, escolha ou inclua a nova arruela simulada** e, em seguida, clicando no ícone +. Uma nova lavadora é criada.
 

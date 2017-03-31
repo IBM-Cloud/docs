@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="9"
+   height="14.032894"
+   viewBox="0 0 8.9999998 14.032894"
+   version="1.1"
+   id="svg2"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="IOT_Icons_apps2.svg">
+  <metadata
+     id="metadata16">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Apps Icon</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1376"
+     inkscape:window-height="859"
+     id="namedview14"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="11.8"
+     inkscape:cx="4.9546666"
+     inkscape:cy="6.7500742"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer2" />
+  <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+  <title
+     id="title4">Apps Icon</title>
+  <desc
+     id="desc6">Created with Sketch.</desc>
+  <defs
+     id="defs8" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="background"
+     transform="translate(-1.5453334,-2.7595529)">
+    <rect
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#66d1f5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="rect4146"
+       width="9"
+       height="14.032894"
+       x="1.5453334"
+       y="2.759553" />
+  </g>
+  <g
+     id="Page-1"
+     sketch:type="MSPage"
+     style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1"
+     transform="scale(0.74437581,0.71772167)">
+    <g
+       id="Desktop-Copy"
+       sketch:type="MSArtboardGroup"
+       transform="translate(-26,-351)"
+       style="fill:#ffffff">
+      <g
+         id="Apps-Icon"
+         sketch:type="MSLayerGroup"
+         transform="translate(26,351)">
+        <path
+           d="M 12.090667,10.128 11.148,9.1853333 C 10.522667,9.8106667 9.7953333,10.303333 8.9866667,10.666 L 7.44,6.2186667 C 8.1566667,5.74 8.6293333,4.926 8.6293333,4 c 0,-1.2406667 -0.852,-2.2746667 -2,-2.572 l 0,-1.428 L 5.296,0 l 0,1.428 c -1.148,0.2973333 -2,1.3313333 -2,2.572 0,0.926 0.4726667,1.74 1.1893333,2.2186667 L 0,19.114 l 1.2593333,0.438 2.498,-7.182 c 0.7213334,0.188667 1.4633334,0.285333 2.206,0.285333 0.7426667,0 1.4846667,-0.09667 2.206,-0.285333 l 2.4979997,7.182 1.259334,-0.438 -2.5000003,-7.188667 C 10.424,11.492667 11.322667,10.896667 12.090667,10.128 Z m -7.8940003,0.978667 1.552,-4.4613337 c 0.072,0.006 0.1406666,0.021333 0.214,0.021333 0.073333,0 0.142,-0.015333 0.214,-0.021333 l 1.552,4.4613337 c -1.1573334,0.286 -2.3746667,0.286 -3.532,0 z m 1.766,-7.7733337 c 0.368,0 0.6666666,0.2986667 0.6666666,0.6666667 0,0.368 -0.2986666,0.6666667 -0.6666666,0.6666667 C 5.5946667,4.6666667 5.296,4.368 5.296,4 5.296,3.632 5.5946667,3.3333333 5.9626667,3.3333333 Z"
+           id="Path"
+           sketch:type="MSShapeGroup"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="icon"
+     style="display:none"
+     transform="translate(-1.5453334,-2.7595529)" />
+</svg>

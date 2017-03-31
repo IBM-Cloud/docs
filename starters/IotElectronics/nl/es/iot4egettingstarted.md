@@ -1,15 +1,18 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-29"
-
+  years: 2016, 2017
+lastupdated: "2017-03-10"
 ---
 
-{:new_window: target="\_blank"}
-
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
+<!-- Note to writers - index.md and iot4egettingstarted.md are (almost) duplicates and a change to one should be made to both. index.md appears within the product app as the getting started page. iot4egettingstarted.md appears as the top level topic in the docs toc. -->
 
 # Creación de apps con el iniciador de {{site.data.keyword.iotelectronics}}
 
@@ -20,7 +23,7 @@ lastupdated: "2016-11-29"
 
 Antes de empezar, debe desplegar una instancia de {{site.data.keyword.Bluemix_notm}} en su organización de {{site.data.keyword.iotelectronics}}. Al desplegar una instancia, se despliegan automáticamente las aplicaciones de componente y los servicios del iniciador.
 
- Puede [encontrar el {{site.data.keyword.iotelectronics}} iniciador](https://console.{DomainName}/catalog/starters/iot-for-electronics-starter/) en la sección Contenedores modelo del catálogo {{site.data.keyword.Bluemix_notm}}.  
+ Puede [encontrar el {{site.data.keyword.iotelectronics}} iniciador](https://console.{DomainName}/catalog/starters/iot-for-electronics-starter/) en la sección Contenedores modelo del catálogo {{site.data.keyword.Bluemix_notm}}.
 
 ## Iniciación a {{site.data.keyword.iotelectronics}}
 Para empezar, realice las tareas siguientes:
@@ -35,15 +38,16 @@ Vea lo que puede hacer con {{site.data.keyword.iotelectronics}}.
 
 - [Explorar la app de inicio](iot4ecreatingappliances.html) para experimentar cómo una empresa de producción puede supervisar dispositivos conectados a {{site.data.keyword.iot_short_notm}}.
 - [Explorar la app para móvil](iotelectronics_config_mobile.html) para experimentar cómo pueden registrar e interactuar con sus dispositivos los propietarios de aplicaciones.
-- [Explorar las API](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html) para descubrir cómo puede personalizar y ampliar sus apps de {{site.data.keyword.iotelectronics}}.
+- [Explorar y gestionar datos](iotelectronics_dashboard.html) de los dispositivos registrados en {{site.data.keyword.iot_short_notm}}.
+- [Explorar las API![icono de enlace externo](../../icons/launch-glyph.svg)](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html){:new_window} para descubrir cómo puede personalizar y ampliar sus apps de {{site.data.keyword.iotelectronics}}.
 
 # Enlaces relacionados
 {: #rellinks}
 <!-- Related Links last updated 23 October 2016 - new API source -->
 ## Documentación de la API
 {: #api}
-* [API de {{site.data.keyword.iotelectronics}}](https://broker-uss-iot4e.electronics.internetofthings.ibmcloud.com/public/iot4eregistrationapi.html){:new_window}
-* [API de {{site.data.keyword.iot_short}}](https://developer.ibm.com/iotfoundation/recipes/api-documentation/){:new_window}
+* [API de {{site.data.keyword.iotelectronics}} ![icono de enlace externo](../../icons/launch-glyph.svg)](https://broker-uss-iot4e.electronics.internetofthings.ibmcloud.com/public/iot4eregistrationapi.html){:new_window}
+* [API de {{site.data.keyword.iot_short}} ![icono de enlace externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/iotfoundation/recipes/api-documentation/){:new_window}
 
 
 ## Componentes

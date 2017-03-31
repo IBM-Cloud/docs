@@ -16,7 +16,7 @@
    width="501"
    height="397"
    viewBox="0 0 501 397"
-   sodipodi:docname="iot4e_remotely_option.svg">
+   sodipodi:docname="IoT4E_remotely_option1.svg">
   <metadata
      id="metadata8">
     <rdf:RDF>
@@ -25,7 +25,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -45,7 +45,7 @@
      id="namedview4"
      showgrid="false"
      inkscape:zoom="1.6813824"
-     inkscape:cx="-2.2637658"
+     inkscape:cx="134.82581"
      inkscape:cy="196.121"
      inkscape:window-x="0"
      inkscape:window-y="0"
@@ -215,12 +215,12 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:0.94117647;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="123.92778"
+       x="117.92778"
        y="22.385773"
        id="text4614-7-3-3-0"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="123.92778"
+         x="117.92778"
          y="22.385773"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:13.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:0.94117647"
          id="tspan5393-8">Experiencia del iniciador IoT for Electronics</tspan></text>
