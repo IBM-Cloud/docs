@@ -1,12 +1,17 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-29"
+  years: 2016, 2017
+lastupdated: "2017-03-10"
 ---
 
-{:new_window: target="\_blank"}
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # 關於 {{site.data.keyword.iotelectronics}}
 {: #iotelectronics_about}
@@ -14,18 +19,18 @@ lastupdated: "2016-11-29"
 {{site.data.keyword.iotelectronics_full}} 是完全整合的 IoT 正式作業實例，可讓您的應用程式與已連接的應用裝置、感應器及閘道通訊，並且取用它們所收集的資料。
 {:shortdesc}
 
-{{site.data.keyword.iotelectronics}} 使用 {{site.data.keyword.iot_full}} 服務將您的智慧型電子應用裝置連接到您開發的應用程式。它也使用 {{site.data.keyword.iot_short_notm}} 來協助您分析和瞭解來自應用裝置的資料。您可以建立規則以識別需要注意的狀況，以及定義自動回應，例如傳送電子郵件、執行 Node-RED 流程，或是連接至 Web 服務。  
+{{site.data.keyword.iotelectronics}} 使用 {{site.data.keyword.iot_full}} 服務將您的智慧型電子應用裝置連接到您開發的應用程式。它也使用 {{site.data.keyword.iot_short_notm}} 來協助您分析和瞭解來自應用裝置的資料。您可以建立規則以識別需要注意的狀況，以及定義自動回應，例如傳送電子郵件、執行 Node-RED 流程，或是連接至 Web 服務。
 
 ## 尋找入門範本
 {: #iot4eFindingStarter}
-您可以在 {{site.data.keyword.Bluemix_notm}} 型錄的[樣板區段](https://console.{DomainName}/catalog/starters/iot-for-electronics-starter/)，找到 {{site.data.keyword.iotelectronics}} Starter。  
+您可以在 {{site.data.keyword.Bluemix_notm}} 型錄的[樣板區段](https://console.{DomainName}/catalog/starters/iot-for-electronics-starter/)，找到 {{site.data.keyword.iotelectronics}} Starter。
 
 ## 您可以使用 {{site.data.keyword.iotelectronics}} 做什麼
 {: #Features_iote}
 使用模擬應用裝置和資料，快速探索 {{site.data.keyword.iotelectronics}} 解決方案的特性。
 
 ### 連接模擬應用裝置
-建立模擬應用裝置並將它們連接至平台，以查看串流即時資料。使用 Web 應用程式，以模擬應用裝置如何接收指令和執行作業。模擬故障以產生注意事項及警示。會使用洗衣機作為 {{site.data.keyword.iotelectronics}} 入門範本內的模擬應用裝置，來進行示範。您選擇連接的應用裝置可以是任何類型的智慧型電子裝置。  
+建立模擬應用裝置並將它們連接至平台，以查看串流即時資料。使用 Web 應用程式，以模擬應用裝置如何接收指令和執行作業。模擬故障以產生注意事項及警示。會使用洗衣機作為 {{site.data.keyword.iotelectronics}} 入門範本內的模擬應用裝置，來進行示範。您選擇連接的應用裝置可以是任何類型的智慧型電子裝置。
 
 ### 試用範例消費者行動應用程式
 請使用 iOS 或 Android 行動裝置來查看應用裝置擁有者可以如何與應用裝置互動。使用平台及 {{site.data.keyword.Bluemix_notm}} 傳送指令給應用裝置，以及從應用裝置接收更新。模擬故障事件並在行動應用程式中檢視結果。
@@ -52,17 +57,3 @@ lastupdated: "2016-11-29"
 **{{site.data.keyword.sdk4nodefull}}** 讓您能開發、部署及調整伺服器端的 JavaScript&reg; 應用程式，並提供加強的效能、安全及服務功能。
 
 **範例行動應用程式**可讓您使用行動裝置（例如智慧型手機或平板電腦）來檢視模擬應用裝置的狀態並與其通訊。請參閱[使用行動應用程式](iotelectronics_config_mobile.html)，以瞭解如何取得行動應用程式。
-
-# 相關鏈結
-{: #rellinks}
-## 元件
-{: #general}
-* [{{site.data.keyword.iot_short}} 文件](https://console.ng.bluemix.net/docs/services/IoT/index.html#gettingstartedtemplate)
-* [{{site.data.keyword.amafull}} 文件](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html)
-* [{{site.data.keyword.sdk4nodefull}} 文件](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
-
-
-## API 文件
-{: #api}
-*  [{{site.data.keyword.iotelectronics}} API](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)  
-*  [{{site.data.keyword.iot_short}} API](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)

@@ -1,15 +1,16 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-29"
-
+  years: 2016, 2017
+lastupdated: "2017-03-10"
 ---
 
-{:new_window: target="\_blank"}
-
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Starter-App verwenden
 Erstellen Sie simulierte Appliances in der {{site.data.keyword.iotelectronics_full}}-Starter-App und bekommen Sie einen Eindruck davon, wie ein EM (Enterprise Manufacturer) Appliances überwachen kann, die mit der {{site.data.keyword.iot_short_notm}} verbunden sind. Sie können manuell mit der simulierten Appliance interagieren, um Alerts, Benachrichtigungen und Aktionen auszulösen.
@@ -23,7 +24,7 @@ Erstellen Sie simulierte Appliances in der {{site.data.keyword.iotelectronics_fu
 
     ![{{site.data.keyword.iotelectronics}} im Dashboard.](images/IoT4E_bm_dashboard.svg "{{site.data.keyword.iotelectronics}} im Dashboard")
 
-2. Warten Sie, bis die Statusnachricht *Ihre App ist aktiv* im Header angezeigt wird, und klicken Sie anschließend auf **App anzeigen**, um die Starter-App anzuzeigen.  
+2. Warten Sie, bis die Statusnachricht *Ihre App ist aktiv* im Header angezeigt wird, und klicken Sie anschließend auf **App anzeigen**, um die Starter-App anzuzeigen.
 
     ![{{site.data.keyword.iotelectronics}} - App anzeigen.](images/IoT4E_view_app.svg "{{site.data.keyword.iotelectronics}} - App anzeigen")
 
@@ -42,7 +43,7 @@ In der Starter-App können Sie simulierte Appliances wie der Appliancehersteller
 
     ![Waschmaschine hinzufügen.](images/IoT4E_add_washer.svg "Waschmaschine hinzufügen")
 
-3. Um Details zu Ihrer Waschmaschine anzuzeigen, Befehle abzusetzen und Fehler zu verursachen, klicken Sie auf eine Waschmaschine.
+3. Um Details zu Ihrer Waschmaschine anzuzeigen, klicken Sie auf eine Waschmaschine. Starten Sie die Waschmaschine über das Befehls- und Bedienfeld oder klicken Sie auf die unterschiedlichen Fehlertypen, um die Statusänderungen anzuzeigen. Sie können außerdem sowohl die Statusänderungen anzeigen als auch die Waschmaschine über Ihre mobile App steuern.
 
   ![Details zum Status der Waschmaschine.](images/IoT4E_washer_control.svg "Details zum Status der Waschmaschine")
 

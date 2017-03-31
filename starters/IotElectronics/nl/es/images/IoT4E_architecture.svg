@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="IoT4E_architecture.svg"
-   inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.png"
+   inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.svg"
    inkscape:export-xdpi="299.98132"
    inkscape:export-ydpi="299.98132">
   <defs
@@ -2391,7 +2391,7 @@
          id="tspan44239-7"
          y="216.68509"
          x="509.94742"
-         sodipodi:role="line">API REST y</tspan><tspan
+         sodipodi:role="line">API Rest y</tspan><tspan
          y="230.43509"
          x="509.94742"
          sodipodi:role="line"

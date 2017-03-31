@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="IoT4E_architecture.svg"
-   inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.png"
+   inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.svg"
    inkscape:export-xdpi="299.98132"
    inkscape:export-ydpi="299.98132">
   <defs
@@ -2055,7 +2055,7 @@
        id="text44241"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="291.50089"
+         x="300"
          y="431.56644"
          id="tspan6702">範例行動應用程式</tspan></text>
     <g
@@ -2196,7 +2196,7 @@
          xml:space="preserve"><tspan
            id="tspan6702-1"
            y="509.96609"
-           x="61.470284"
+           x="65"
            sodipodi:role="line">消費者</tspan></text>
       <rect
          style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none"
@@ -2271,7 +2271,7 @@
            id="tspan7345-7-3-0"
            style="font-size:11.25000095px"
            sodipodi:role="line"
-           x="461.03171"
+           x="480"
            y="3.7135651">IoT 裝置製造商</tspan><tspan
            id="tspan7318-8-6-0"
            sodipodi:role="line"
@@ -2583,13 +2583,9 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
          id="tspan4579-7-5"
-         y="171.24385"
-         x="702.77588"
-         sodipodi:role="line">模擬範例</tspan><tspan
-         y="184.99385"
-         x="702.77588"
-         sodipodi:role="line"
-         id="tspan4890">裝置</tspan></text>
+         y="180"
+         x="710"
+         sodipodi:role="line">模擬範例裝置</tspan></text>
     <g
        transform="matrix(0.88229753,0,0,0.8706004,649.54495,164.80866)"
        id="g3-96">
@@ -2766,14 +2762,9 @@
          xml:space="preserve"><tspan
            style="font-size:11.25000095px"
            id="tspan4945-3"
-           y="125.51817"
+           y="135"
            x="261.233"
-           sodipodi:role="line">消費性電子</tspan><tspan
-           style="font-size:11.25000095px"
-           id="tspan5228"
-           y="139.58067"
-           x="261.233"
-           sodipodi:role="line">登錄服務</tspan></text>
+           sodipodi:role="line">消費性電子登錄服務</tspan></text>
     </g>
     <g
        id="g5499"

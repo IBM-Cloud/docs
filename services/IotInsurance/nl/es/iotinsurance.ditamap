@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE map PUBLIC "-//IBM//DTD DITA IBM Map//EN"
+ "ibm-map.dtd">
+
+
+<map xml:lang="es-es">
+<title>IoT for Insurance</title>
+<topicref href="index.html" format="html" navtitle="IoT for Insurance" scope="peer" locktitle="yes">
+<topicref href="index.html" format="html" navtitle="Guía de inicio" locktitle="yes" scope="peer">
+<topicref format="html" href="index.html#deploying_services" outputclass="subsection" scope="peer"
+navtitle="Despliegue de servicios y apps"/>
+<topicref format="html" href="index.html#config_push" outputclass="subsection" scope="peer"
+navtitle="Configuración de notificaciones push"/>
+</topicref>
+<topicref href="iotinsurance_overview.html" format="html" navtitle="Acerca de" toc="yes">
+<topicref format="html" href="iotinsurance_overview.html#architecture" outputclass="subsection"
+scope="peer" navtitle="Arquitectura"/>
+<topicref format="html" href="iotinsurance_overview.html#insurance_dashboard"
+outputclass="subsection" scope="peer" navtitle="Panel de control del seguro"/>
+<topicref format="html" href="iotinsurance_overview.html#mobileapp" outputclass="subsection"
+scope="peer" navtitle="Aplicación móvil de muestra"/>
+<topicref format="html" href="iotinsurance_overview.html#rest_api" outputclass="subsection"
+scope="peer" navtitle="API REST y en tiempo real"/>
+<topicref format="html" href="iotinsurance_overview.html#transformer" outputclass="subsection"
+scope="peer" navtitle="Transformer"/>
+<topicref format="html" href="iotinsurance_overview.html#wcdtransformer" outputclass="subsection"
+scope="peer" navtitle="Weather Company Data Transformer"/>
+<topicref format="html" href="iotinsurance_overview.html#shield_engine" outputclass="subsection"
+scope="peer" navtitle="Motor de coberturas"/>
+<topicref format="html" href="iotinsurance_overview.html#action_engine" outputclass="subsection"
+scope="peer" navtitle="Motor de acción"/>
+</topicref>
+<topicref href="iotinsurance_extending_service.html" format="html"
+navtitle="Ampliación del servicio con API" toc="yes">
+<topicref href="iotinsurance_how_service_works.html" format="html" navtitle="Cómo funciona el servicio"
+toc="yes"/>
+<topicref href="iotinsurance_device_toolkit.html" format="html" navtitle="Kit de herramientas del dispositivo" toc="yes">
+<topicref href="iotinsurance_device_toolkit.html#reg_users" format="html"
+navtitle="Registro de usuarios autorizados" toc="yes"/>
+<topicref href="iotinsurance_device_toolkit.html#generating_device_events" format="html"
+navtitle="Generación de sucesos de dispositivo" toc="yes"/>
+<topicref href="iotinsurance_device_toolkit.html#deploy_new_transformer" format="html"
+navtitle="Despliegue de una nueva instancia de transformador" toc="yes"/>
+</topicref>
+<topicref href="iotinsurance_supporteddevices.html" format="html"
+navtitle="Proveedores y dispositivos soportados" toc="yes">
+<topicref href="iotinsurance_supporteddevices.html#supportedvendors" format="html"
+navtitle="Dispositivos soportados por proveedor" toc="yes"/>
+<topicref href="iotinsurance_supporteddevices.html#integratingdevices" format="html"
+navtitle="Integración de nubes de proveedores y dispositivos" toc="yes"/>
+</topicref>
+<topicref href="iotinsurance_shield_toolkit.html" format="html" navtitle="Kit de herramientas de cobertura" toc="yes">
+<topicref href="iotinsurance_shield_toolkit.html#environment" format="html"
+navtitle="Configuración del entorno" toc="yes"/>
+<topicref href="iotinsurance_shield_toolkit.html#create_shield_def" format="html"
+navtitle="Creación de una definición de cobertura" toc="yes"/>
+<topicref href="iotinsurance_shield_toolkit.html#create_shield_code" format="html"
+navtitle="Creación de un código de cobertura" toc="yes"/>
+<topicref href="iotinsurance_shield_toolkit.html#create_user" format="html"
+navtitle="Creación de un usuario" toc="yes"/>
+<topicref href="iotinsurance_shield_toolkit.html#create_shield_assoc" format="html"
+navtitle="Creación de una asociación de coberturas" toc="yes"/>
+<topicref href="iotinsurance_shield_toolkit.html#create_sim_hazard" format="html"
+navtitle="Creación de un riesgo simulado" toc="yes"/>
+<topicref href="iotinsurance_shield_toolkit.html#create_promotion" format="html"
+navtitle="Creación de una promoción" toc="yes"/>
+</topicref>
+</topicref>
+<topicref href="iotinsurance_mobile_app.html" format="html"
+navtitle="Instalación y conexión de la aplicación móvil" toc="yes">
+<topicref format="html" href="iotinsurance_mobile_app.html#building_mobile" outputclass="subsection"
+scope="peer" navtitle="Creación de la aplicación móvil"/>
+<topicref format="html" href="iotinsurance_mobile_app.html#iot4i_pushNotification"
+outputclass="subsection" scope="peer" navtitle="Habilitación de notificaciones push"/>
+</topicref>
+<topicref href="iotinsurance_optimizing_performance.html" format="html"
+navtitle="Optimización del rendimiento" toc="yes">
+<topicref format="html" href="iotinsurance_advancedservices.html#scaling_apps"
+outputclass="subsection" scope="peer" navtitle="Escalado de aplicaciones"/>
+<topicref format="html" href="iotinsurance_advancedservices.html#monitoring"
+outputclass="subsection" scope="peer" navtitle="Supervisión del rendimiento"/>
+</topicref>
+<topicref format="html" href="iotinsurance_upgrading.html" outputclass="subsection" scope="peer"
+navtitle="Actualización a una nueva versión"/>
+<topicref format="html" href="iotinsurance_data_backup.html" outputclass="subsection" scope="peer"
+navtitle="Copia de seguridad de datos">
+<topicref format="html" href="iotinsurance_data_backup.html#createinstance" outputclass="subsection"
+scope="peer" navtitle="Creación de una réplica de Cloudant"/>
+<topicref format="html" href="iotinsurance_data_backup.html#locate_credentials"
+outputclass="subsection" scope="peer" navtitle="Localización de credenciales"/>
+<topicref format="html" href="iotinsurance_data_backup.html#create_replication"
+outputclass="subsection" scope="peer" navtitle="Creación de tareas de réplica"/>
+<topicref format="html" href="iotinsurance_data_backup.html#run_backup" outputclass="subsection"
+scope="peer" navtitle="Ejecución de una copia de seguridad"/>
+<topicref format="html" href="iotinsurance_data_backup.html#restore_data" outputclass="subsection"
+scope="peer" navtitle="Restauración de los datos"/>
+</topicref>
+<topicref href="iotinsurance_troubleshooting.html" format="html" navtitle="Resolución de problemas"
+toc="yes">
+<topicref format="html" href="iotinsurance_troubleshooting.html#deployingapps"
+outputclass="subsection" scope="peer" navtitle="Problema al desplegar las apps"/>
+<topicref format="html" href="iotinsurance_troubleshooting.html#performance_issues"
+outputclass="subsection" scope="peer" navtitle="Problemas de rendimiento"/>
+<topicref format="html" href="iotinsurance_troubleshooting.html#gettinghelp"
+outputclass="subsection" scope="peer" navtitle="Obtención de ayuda y soporte"/>
+</topicref>
+</topicref>
+</map>
+

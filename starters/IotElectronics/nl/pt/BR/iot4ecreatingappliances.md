@@ -1,15 +1,16 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-29"
-
+  years: 2016, 2017
+lastupdated: "2017-03-10"
 ---
 
-{:new_window: target="\_blank"}
-
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Usando o aplicativo iniciador
 Crie dispositivos simulados no app iniciador do {{site.data.keyword.iotelectronics_full}}. Experimente como um fabricante corporativo pode monitorar dispositivos conectados ao {{site.data.keyword.iot_short_notm}}. Interaja manualmente com o dispositivo simulado para acionar alertas, notificações e ações.
@@ -23,7 +24,7 @@ Crie dispositivos simulados no app iniciador do {{site.data.keyword.iotelectroni
 
     ![{{site.data.keyword.iotelectronics}} no painel.](images/IoT4E_bm_dashboard.svg "{{site.data.keyword.iotelectronics}} no painel")
 
-2. Espere a mensagem de status *Seu aplicativo está em execução* no cabeçalho e, em seguida, clique em **Visualizar aplicativo** para exibir o aplicativo iniciador.  
+2. Espere a mensagem de status *Seu aplicativo está em execução* no cabeçalho e, em seguida, clique em **Visualizar aplicativo** para exibir o aplicativo iniciador.
 
     ![App de visualização do {{site.data.keyword.iotelectronics}}.](images/IoT4E_view_app.svg "App de visualização do {{site.data.keyword.iotelectronics}}")
 
@@ -45,7 +46,8 @@ iniciador do {{site.data.keyword.iotelectronics}}](images/IoT4E_remotely_option.
 
     ![Incluindo uma arruela.](images/IoT4E_add_washer.svg "Adding a washer")
 
-3. Para visualizar os detalhes de sua arruela, comandos de emissão e falhas de causa, clique em uma arruela.
+3. Para visualizar os detalhes da arruela, clique em uma. No painel de comando e controle, inicie a arruela ou clique nos diferentes tipos
+de falhas para visualizar mudanças de status. Também é possível visualizar as mudanças de status e controlar a arruela por meio do seu app móvel.
 
   ![Detalhes de status da arruela.](images/IoT4E_washer_control.svg "Washer status details")
 

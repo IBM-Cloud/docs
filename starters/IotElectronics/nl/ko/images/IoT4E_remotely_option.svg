@@ -16,7 +16,7 @@
    width="501"
    height="397"
    viewBox="0 0 501 397"
-   sodipodi:docname="IoT4E_remotely_option1.svg">
+   sodipodi:docname="iot4e_remotely_option.svg">
   <metadata
      id="metadata8">
     <rdf:RDF>
@@ -25,7 +25,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -44,13 +44,14 @@
      inkscape:window-height="912"
      id="namedview4"
      showgrid="false"
-     inkscape:zoom="1.6813824"
-     inkscape:cx="134.82581"
-     inkscape:cy="196.121"
+     inkscape:zoom="1.9168766"
+     inkscape:cx="250.5"
+     inkscape:cy="198.5"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="svg2"
+     showguides="false" />
   <image
      width="501"
      height="397"
@@ -119,7 +120,7 @@
      style="display:inline">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
        x="274.89716"
        y="88.746208"
        id="text4614-7"
@@ -127,94 +128,98 @@
          sodipodi:role="line"
          x="274.89716"
          y="88.746208"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:18.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed'"
-         id="tspan4742">제조업체 및 이용자의 관점에서</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.75px;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke:#000000;stroke-opacity:1"
+         id="tspan4742">제조업체 및 소비자의 관점에서</tspan><tspan
          sodipodi:role="line"
          x="274.89716"
          y="112.18371"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:18.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed'"
-         id="tspan5334">IoT for Electronics를 경험해 보십시오.</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:18.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
+         id="tspan5334">IoT for Electronics<tspan
+   style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:18.75px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%;stroke:#000000;stroke-opacity:1;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
+   id="tspan4164">를 경험해 보십시오.</tspan></tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="164.86865"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       x="156.86865"
        y="269.22336"
        id="text4614-7-3"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="164.86865"
+         x="156.86865"
          y="269.22336"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:15px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed'"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke:#000000;stroke-opacity:1;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
          id="tspan5348">시뮬레이션된 어플라이언스</tspan><tspan
          sodipodi:role="line"
-         x="164.86865"
+         x="156.86865"
          y="287.97336"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:15px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed'"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke:#000000;stroke-opacity:1;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
          id="tspan5352">연결 및 관리</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="394.43561"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="390.43561"
        y="269.08749"
        id="text4614-7-3-6"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="394.43561"
+         x="390.43561"
          y="269.08749"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:15px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed'"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="tspan5352-6">연결된 어플라이언스</tspan><tspan
          sodipodi:role="line"
-         x="394.43561"
+         x="390.43561"
          y="287.83749"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:15px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed'"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="tspan5377">원격 제어</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="159.20523"
-       y="305.36716"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.64139366px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.47295085;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="166.35765"
+       y="288.50897"
        id="text4614-7-3-3"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       transform="scale(0.94480444,1.0584201)"><tspan
          sodipodi:role="line"
-         x="159.20523"
-         y="305.36716"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:11.25px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:center;text-anchor:middle"
+         x="166.35765"
+         y="288.50897"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.64139366px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke:#000000;stroke-width:0.47295085;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="tspan5352-4">명령을 전송하고 이벤트를 생성하며</tspan><tspan
          sodipodi:role="line"
-         x="159.20523"
-         y="319.42966"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:11.25px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:center;text-anchor:middle"
+         x="166.35765"
+         y="301.8107"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.64139366px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke:#000000;stroke-width:0.47295085;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="tspan5391">결과를 실시간으로 확인합니다.</tspan><tspan
          sodipodi:role="line"
-         x="159.20523"
-         y="333.49216"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:11.25px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:center;text-anchor:middle"
-         id="tspan5393"></tspan></text>
+         x="166.35765"
+         y="315.11246"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.64139366px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke:#000000;stroke-width:0.47295085;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="tspan5393" /></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="379.61722"
-       y="306.0809"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6099453px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.47155312;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="409.19131"
+       y="288.43988"
        id="text4614-7-3-3-6"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       transform="scale(0.94238835,1.0611337)"><tspan
          sodipodi:role="line"
-         x="379.61722"
-         y="306.0809"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:11.25px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:center;text-anchor:middle"
+         x="409.19131"
+         y="288.43988"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6099453px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke:#000000;stroke-width:0.47155312;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="tspan5393-6">모바일 앱을 사용하여</tspan><tspan
          sodipodi:role="line"
-         x="379.61722"
-         y="320.1434"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:11.25px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:center;text-anchor:middle"
-         id="tspan5424">이용자가 솔루션을 사용하는</tspan><tspan
+         x="409.19131"
+         y="301.7023"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6099453px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke:#000000;stroke-width:0.47155312;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="tspan5424">소비자가 솔루션을 사용하는</tspan><tspan
          sodipodi:role="line"
-         x="379.61722"
-         y="334.2059"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:11.25px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:center;text-anchor:middle"
+         x="409.19131"
+         y="314.96475"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6099453px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke:#000000;stroke-width:0.47155312;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="tspan5426">방법을 알아보십시오.</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:0.94117647;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:0.94117647;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
        x="117.92778"
        y="22.385773"
        id="text4614-7-3-3-0"
@@ -222,7 +227,9 @@
          sodipodi:role="line"
          x="117.92778"
          y="22.385773"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:13.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:0.94117647"
-         id="tspan5393-8">IoT for Electronics Starter 경험</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:13.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:0.94117647;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
+         id="tspan5393-8">IoT for Electronics Starter <tspan
+   style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:13.75px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%;stroke:#ffffff;stroke-opacity:0.94117647;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
+   id="tspan4162">경험</tspan></tspan></text>
   </g>
 </svg>
