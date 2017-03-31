@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-08"
+lastupdated: "2017-03-31"
 ---
 
 {:new_window: target="_blank"}
@@ -87,7 +87,7 @@ Finally, get the detailed driver behavior information for a specific analyzed tr
 When you complete the steps, a set of driver behavior data is generated in your organization.  Use your applications or your preferred analytics software to process the information further into more meaningful business data.
 
 # Related Links
-{: #rellinks}
+{: #rellinks notoc}
 
 ## Tutorials and samples
 {: #samples}

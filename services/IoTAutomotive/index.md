@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-08"
+lastupdated: "2017-03-31"
 
 ---
 
@@ -77,7 +77,7 @@ Experience the capabilities of {{site.data.keyword.iot4auto_short}}. Visit the [
 
 
 # Related Links
-{: #rellinks}
+{: #rellinks notoc}
 
 ## Related Links
 {: #general}
