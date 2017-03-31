@@ -6,7 +6,7 @@ lastupdated: "2017-03-14"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -204,10 +204,10 @@ Topic: iotdm-1/response
 
 A device uses an Update Location request to manage the location data for a device. The location metadata for a device can be updated in {{site.data.keyword.iot_short_notm}} in the following ways:
 
-#### Automatic device location updates
+### Automatic device location updates
 - The device notifies {{site.data.keyword.iot_short_notm}} about the location update. The device retrieves its location from a GPS receiver and sends a device management message to the {{site.data.keyword.iot_short_notm}} instance to update its location. The time stamp captures the time at which the location was retrieved from the GPS receiver. The time stamp is valid even if there is a delay in sending the location update message. If time stamp is omitted from the device management message, the date and time of the message receipt is used to update the location metadata.
 
-#### Manual device location updates by using the REST API
+### Manual device location updates by using the REST API
 - You can manually set the location metadata for a static device by using the {{site.data.keyword.iot_short_notm}} REST API when the device is registered. You can also modify the location later. The time stamp setting is optional, but when omitted, the current date and time is set in the location metadata for the device.
 
 ### Location updates that are triggered by devices
