@@ -2,21 +2,17 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-08"
+lastupdated: "2017-03-31"
 
 ---
 
 {:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
 
 # IoT for Automotive APIs
 {: #iotautomotive_apis}
 
-
-# REST APIs
-{: #api}
-
 Several APIs are available for connecting your vehicle and device data to {{site.data.keyword.iot4auto_full}} and for developing features and capabilities to build a powerful automotive solution that meets your requirements.
+{:shortdesc: .shortdesc}
 
 By using the available REST API commands, you can customize your {{site.data.keyword.iot4auto_short}} service instance in the following ways:
 

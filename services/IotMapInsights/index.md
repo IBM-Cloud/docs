@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-08"
+lastupdated: "2017-03-31"
 ---
 
 {:shortdesc: .shortdesc}
@@ -102,7 +102,7 @@ Experience the capabilities of {{site.data.keyword.iotmapinsights_short}} and ot
 To find out about the status and any upcoming planned service maintenance updates for the {{site.data.keyword.iotmapinsights_short}} API services on {{site.data.keyword.Bluemix_notm}}, go to the [IBM Watson IoT Service Health Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://status.internetofthings.ibmcloud.com).
 
 # Related Links
-{: #rellinks}
+{: #rellinks notoc}
 
 ## Related Links
 {: #general}

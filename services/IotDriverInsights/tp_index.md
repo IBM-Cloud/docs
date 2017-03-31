@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-03"
+lastupdated: "2017-03-31"
 ---
 
 {:new_window: target="_blank"}
@@ -75,7 +75,7 @@ Finally, get the list of GPS points of a specific route pattern.
 When you complete the steps, a set of analyzed trajectory pattern data is generated in your organization.  Use your applications or your preferred analytics software to process the information further into more meaningful business data.
 
 # Related Links
-{: #rellinks}
+{: #rellinks notoc}
 
 ## API reference
 {: #api}
