@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-16"
+lastupdated: "2017-3-31"
 
 ---
 
@@ -20,7 +20,7 @@ With {{site.data.keyword.contdelivery_full}}, you can build, test, and deliver a
 
 The {{site.data.keyword.contdelivery_short}} service supports your DevOps workflows:
 
- * You can create integrated DevOps toolchains to enable tool integrations that support your development, deployment, and operations tasks.
+ * You can create integrated DevOps open toolchains to enable tool integrations that support your development, deployment, and operations tasks.
 
   A toolchain is an integrated set of tools that you can use to collaboratively develop, build, deploy, test, and manage applications. You can create toolchains that include {{site.data.keyword.Bluemix_notm}} services, open source tools, and third-party tools, such as GitHub, PagerDuty, and Slack, that make development and operations repeatable and easier to manage.
 
