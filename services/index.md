@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-24"
+lastupdated: "2017-04-03"
 
 ---
 
@@ -62,12 +62,15 @@ Not all services are available for purchase in every {{site.data.keyword.Bluemix
 |{{site.data.keyword.iotmapinsights_short}} | Hosted in Dallas,US | Hosted in London,UK | Hosted in Sydney,AU | Not available in region |
 |Cloud Foundry Runtimes | Hosted in Dallas,US | Hosted in London,UK | Hosted in Sydney,AU | Hosted in Frankfurt,DE |
 |{{site.data.keyword.cloudant}} | Hosted in Dallas,US | Hosted in London,UK | Hosted in Sydney,AU | Hosted in Frankfurt,DE |
-|{{site.data.keyword.composeForEtcd}}	| Hosted in Dallas,US	| Hosted in London,UK	| Hosted in Sydney,AU | Not available in region |
-|{{site.data.keyword.composeForMongoDB}} | Hosted in Dallas,US | Hosted in London,UK | Hosted in Sydney,AU | Not available in region |
-|{{site.data.keyword.composeForPostgreSQL}} | Hosted in Dallas,US | Hosted in London,UK | Hosted in Sydney,AU | Not available in region |
-|{{site.data.keyword.composeForRethinkDB}} | Hosted in Dallas,US | Hosted in London,UK | Hosted in Sydney,AU | Not available in region |
-|{{site.data.keyword.composeForRabbitMQ}}	| Hosted in Dallas,US	| Hosted in London,UK | Hosted in Sydney,AU | Not available in region |
-|{{site.data.keyword.composeForRedis}} | Hosted in Dallas,US	| Hosted in London,UK | Hosted in Sydney,AU | Not available in region |
+|{{site.data.keyword.composeForElasticsearch}} | Hosted in Dallas,US and Northern Virginia,US | Hosted in London,UK and Ireland	| Hosted in Sydney,AU | Hosted in Frankfurt,DE |
+|{{site.data.keyword.composeForEtcd}}	| Hosted in Dallas,US	| Hosted in London,UK	| Hosted in Sydney,AU | Hosted in Frankfurt,DE |
+|{{site.data.keyword.composeForMongoDB}} | Hosted in Dallas,US | Hosted in London,UK | Hosted in Sydney,AU | Hosted in Frankfurt,DE |
+|{{site.data.keyword.composeForMySQL}} | Hosted in Dallas,US | Hosted in London,UK | Hosted in Sydney,AU | Hosted in Frankfurt,DE |
+|{{site.data.keyword.composeForPostgreSQL}} | Hosted in Dallas,US | Hosted in London,UK | Hosted in Sydney,AU | Hosted in Frankfurt,DE |
+|{{site.data.keyword.composeForRabbitMQ}}	| Hosted in Dallas,US	| Hosted in London,UK | Hosted in Sydney,AU | Hosted in Frankfurt,DE |
+|{{site.data.keyword.composeForRedis}} | Hosted in Dallas,US	| Hosted in London,UK | Hosted in Sydney,AU | Hosted in Frankfurt,DE |
+|{{site.data.keyword.composeForRethinkDB}} | Hosted in Dallas,US | Hosted in London,UK | Hosted in Sydney,AU | Hosted in Frankfurt,DE |
+|{{site.data.keyword.composeForScyllaDB}} | Hosted in Dallas,US | Hosted in London,UK | Hosted in Sydney,AU | Hosted in Frankfurt,DE |
 |{{site.data.keyword.conceptinsightsshort}}	| Hosted in Dallas,US	| Hosted in Dallas,US	| Hosted in Dallas,US | Not available in region |
 |{{site.data.keyword.dashdbshort}} | Hosted in Dallas,US | Hosted in London,UK | Hosted in Sydney | Hosted in Frankfurt,DE |
 |{{site.data.keyword.datacshort}}	| Hosted in Dallas,US	| Hosted in London,UK	| Hosted in Sydney,AU | Not available in region |
@@ -77,7 +80,6 @@ Not all services are available for purchase in every {{site.data.keyword.Bluemix
 |Digital Content Checker | Hosted in Dallas,US | Hosted in London,UK | Hosted in Sydney,AU | Not available in region |
 |{{site.data.keyword.documentconversionshort}} | Hosted in Houston,US	| Hosted in Houston,US	| Hosted in Houston,US | Not available in region |
 |{{site.data.keyword.docgen_short}}	| Hosted in Dallas,US	| Hosted in London,UK	| Not available in region | Not available in region |
-|Elasticsearch by Compose	| Hosted in Dallas,US and Northern Virginia,US | Hosted in London,UK and Ireland	| Hosted in Sydney,AU | Not available in region |
 |{{site.data.keyword.geospatialshort_Geospatial}}	| Hosted in Dallas,US	| Hosted in London,UK	| Hosted in London, UK | Not available in region |
 |{{site.data.keyword.GlobalizationPipeline_short}}	| Hosted in Dallas,US	| Hosted in London,UK	| Hosted in Sydney,AU | Not available in region |
 |{{site.data.keyword.dataworks_short}} | Hosted in Dallas,US | Hosted in London,UK | Not available in region | Not available in region |
