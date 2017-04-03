@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-29"
+lastupdated: "2017-3-31"
 ---
 
 {:new_window: target="_blank"}
@@ -70,7 +70,7 @@ To see a list of the keyboard shortcuts in the editor, press Alt+Shift+?. If you
 
 The {{site.data.keyword.webide}} is integrated with source code management tools. To work with your Git repository, click the **Git Repository** icon <img class="inline" src="images/webide_git_icon_light_small.png"  alt="The Git Repository icon">. 
 
- **Tip**: If you are using the {{site.data.keyword.webide}} with toolchains, your workspace is pre-populated with your GitHub,  {{site.data.keyword.ghe_short}}, or Git Repos and  Issue Tracking repos. The repos that are associated with your current toolchain are highlighted.
+ **Tip**: If you are using the {{site.data.keyword.webide}} with open toolchains, your workspace is pre-populated with your GitHub,  {{site.data.keyword.ghe_short}}, or Git Repos and  Issue Tracking repos. The repos that are associated with your current toolchain are highlighted.
 
 
 ## Deploying an app from your workspace
