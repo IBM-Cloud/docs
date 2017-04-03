@@ -2,8 +2,8 @@
  
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-08"
+  years: 2016, 2017
+lastupdated: "2017-03-31"
  
 
 ---
@@ -124,6 +124,7 @@ A unique prefix is assigned to each region. {{site.data.keyword.Bluemix_notm}} p
 | US South region | Dallas, US | ng | api.ng.bluemix.net | console.ng.bluemix.net |
 | United Kingdom region | London, England | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
 | Sydney region | Sydney, Australia | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
+| Germany region | Frankfurt, Germany | eu-de | api.eu-de.bluemix.net | console.eu-de.bluemix.net |
 
 *Table 1. {{site.data.keyword.Bluemix_notm}} region list*
 
