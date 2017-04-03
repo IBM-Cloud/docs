@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-31"
 
 ---
 
@@ -247,7 +247,7 @@ After your pipeline is configured, start to use {{site.data.keyword.DRA_short}}.
 ## Configuring a Jenkins project
 {: #integrate_jenkins}
 
-After you add {{site.data.keyword.DRA_full}} to a toolchain and define the policies that it monitors, you can integrate it with your Jenkins project. 
+After you add {{site.data.keyword.DRA_full}} to an open toolchain and define the policies that it monitors, you can integrate it with your Jenkins project. 
 
 The IBM Cloud DevOps plugin for Jenkins integrates Jenkins projects with toolchains. A _toolchain_ is a set of tool integrations that support development, deployment, and operations tasks. The collective power of a toolchain is greater than the sum of its individual tool integrations. Toolchains are part of the {{site.data.keyword.contdelivery_full}} service. To learn more about the {{site.data.keyword.contdelivery_short}} service, see [its documentation](https://console.ng.bluemix.net/docs/services/ContinuousDelivery/cd_about.html).
 
