@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-3-16"
+lastupdated: "2017-3-31"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -39,7 +39,7 @@ With [Delivery Pipeline![External link icon](../../icons/launch-glyph.svg "Exter
 ## Continuous delivery tutorials
 {: #gm_cd_tutorials}
 
-[Create and use your first toolchain![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window}. Learn how to create a toolchain from a template and use the toolchain to continuously deliver a "Hello World" app.
+[Create and use your first toolchain![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window}. Learn how to create an open toolchain from a template and use the toolchain to continuously deliver a "Hello World" app.
 
 [Create and use a microservices toolchain![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window}. Learn how to create a toolchain from a template with three microservices and use the toolchain to continuously deliver a "Hello World" app.
 
