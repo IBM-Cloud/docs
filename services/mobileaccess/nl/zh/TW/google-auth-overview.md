@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。
 
 
 # 使用 Google 認證鑑別使用者

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+Der {{site.data.keyword.amafull}}-Service wird durch den {{site.data.keyword.appid_full}}-Service ersetzt.
 
 # Google-Authentifizierung für Android-Apps aktivieren
 {: #google-auth-android}
@@ -35,7 +37,8 @@ Das Einrichten der Google-Authentifizierung für Ihre {{site.data.keyword.amasho
 ## Projekt in Google Developer Console erstellen
 {: #create-google-project}
 
-Erstellen Sie zur Verwendung von Google als Identitätsprovider ein Projekt in [Google Developer Console ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.developers.google.com "Symbol für externen Link"){: new_window}. Zur Erstellung eines Projekts gehört das Anfordern einer Google-Client-ID.  Die Google-Client-ID ist eine eindeutige Kennung für Ihre Anwendung, die von der Google-Authentifizierung verwendet wird und zum Einrichten des {{site.data.keyword.amashort}}-Service erforderlich ist.
+Erstellen Sie zur Verwendung von Google als Identitätsprovider ein Projekt in der [Google Developer Console ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.developers.google.com){: new_window}.
+Zur Erstellung eines Projekts gehört das Anfordern einer Google-Client-ID.  Die Google-Client-ID ist eine eindeutige Kennung für Ihre Anwendung, die von der Google-Authentifizierung verwendet wird und zum Einrichten des {{site.data.keyword.amashort}}-Service erforderlich ist.
 
 Führen Sie die folgenden Schritte von der Konsole aus:
 
@@ -52,7 +55,7 @@ Zum Abschließen der Erstellung der Berechtigungsnachweise müssen Sie den **Fin
 
 Damit Google Ihre Anwendungsauthentizität überprüfen kann, müssen Sie einen Fingerabdruck für das Signaturzertifikat angeben.
 
-Das Android-Betriebssystem erfordert, dass alle Anwendungen, die auf einem Android-Gerät installiert sind, mit einem Entwicklerzertifikat signiert sind. Eine Android-Anwendung kann in zwei Modi erstellt werden: Debugmodus und Freigabemodus (Release). Es wird gewöhnlich empfohlen, zwei unterschiedliche Zertifikate für den Debugmodus und den Freigabemodus zu haben.  Zertifikate, die zum Signieren von Android-Anwendungen im Debugmodus verwendet werden, werden in das Android-SDK gepackt.  Das Android-SDK wird in der Regel von Android Studio automatisch installiert. Wenn Sie Ihre Anwendung für Google Play freigeben möchten, müssen Sie die App mit einem anderen Zertifikat signieren, das Sie normalerweise selbst generieren. Weitere Informationen finden Sie in [Android-Anwendungen signieren ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://developer.android.com/tools/publishing/app-signing.html "Symbol für externen Link"){: new_window}.
+Das Android-Betriebssystem erfordert, dass alle Anwendungen, die auf einem Android-Gerät installiert sind, mit einem Entwicklerzertifikat signiert sind. Eine Android-Anwendung kann in zwei Modi erstellt werden: Debugmodus und Freigabemodus (Release). Es wird gewöhnlich empfohlen, zwei unterschiedliche Zertifikate für den Debugmodus und den Freigabemodus zu haben.  Zertifikate, die zum Signieren von Android-Anwendungen im Debugmodus verwendet werden, werden in das Android-SDK gepackt.  Das Android-SDK wird in der Regel von Android Studio automatisch installiert. Wenn Sie Ihre Anwendung für Google Play freigeben möchten, müssen Sie die App mit einem anderen Zertifikat signieren, das Sie normalerweise selbst generieren. Weitere Informationen finden Sie im Abschnitt zum [Signieren Ihrer Android-Anwendungen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://developer.android.com/tools/publishing/app-signing.html){: new_window}.
 
 Ein Keystore (Schlüsselspeicher), der ein Zertifikat für Entwicklungsumgebungen enthält, ist in der Datei `~/.android/debug.keystore` gespeichert. Das Standardkennwort für den Keystore ist `android`. Dieses Zertifikat dient zum Erstellen (Build) von Anwendungen im Debugmodus.
 
@@ -155,7 +158,7 @@ Jetzt, da Sie eine Google-Client-ID für Android haben, können Sie die Google-A
 
 	Informationen zum Abrufen dieser Werte finden Sie unter [Vorbereitungen](##before-you-begin).
 
-	**Hinweis:** Wenn Ihre Android-Anwendung als Ziel Android Version 6.0 (API-Stufe 23) oder höher ausgewählt hat, müssen Sie sicherstellen, dass die Anwendung über einen `android.permission.GET_ACCOUNTS`-Aufruf verfügt, bevor `register` aufgerufen wird. Weitere Informationen finden Sie in [Berechtigungen für Android anfordern ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.android.com/training/permissions/requesting.html "Symbol für externen Link"){: new_window}.
+	**Hinweis:** Wenn Ihre Android-Anwendung als Ziel Android Version 6.0 (API-Stufe 23) oder höher ausgewählt hat, müssen Sie sicherstellen, dass die Anwendung über einen `android.permission.GET_ACCOUNTS`-Aufruf verfügt, bevor `register` aufgerufen wird. Weitere Informationen finden Sie im Abschnitt zum [Anfordern von Berechtigungen für Android ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.android.com/training/permissions/requesting.html){: new_window}.
 
 1. Fügen Sie Ihrer Aktivität den folgenden Code hinzu:
 

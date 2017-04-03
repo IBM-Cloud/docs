@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+{{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービスに置き換えられます。
 
 # Web アプリケーション用の Facebook 認証の使用可能化
 {: #facebook-auth-web}
@@ -184,7 +185,7 @@ Facebook App ID および App Secret を取得し、Web クライアントに対
 
 	`redirect_uri` パラメーターは、前に許可要求に使用された `redirect_uri` と一致している必要があることに注意してください。`code` パラメーター値は、許可要求から応答で受け取った認可コードである必要があります。認可コードが有効なのは 10 分間のみであり、それを過ぎると新しいコードの取得が必要です。
 
-	応答本体には、アクセス・コードとトークン ID が JWT フォーマットで含まれます ([JWT Web サイト![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://jwt.io/ "外部リンク・アイコン"){: new_window}を参照してください)。
+	応答本体には、アクセス・コードとトークン ID が JWT フォーマットで含まれます ([JWT Web サイト![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://jwt.io/){: new_window}を参照してください)。
 
 	アクセス・トークンを取得し、識別トークンを受け取ったら、Web セッションに認証済みのフラグを立てることができ、オプションでこれらのトークンを永続的に保持できます。  
 

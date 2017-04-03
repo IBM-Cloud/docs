@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -11,6 +11,7 @@ lastupdated: "2017-01-08"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。
 
 # 将 {{site.data.keyword.amashort}} 用于本地开发环境
 {: #protecting-local}
@@ -27,7 +28,7 @@ lastupdated: "2017-01-08"
 * **TenantID**。在 {{site.data.keyword.amafull}}“仪表板”中打开服务。单击**移动选项**按钮。`tenantId`（也称为 `appGUID`）值会显示在**应用程序 GUID/TenantId** 字段中。您将需要此值来初始化授权管理器。
 * **应用程序路径**。这是后端应用程序的 URL。您将需要此值来向其受保护端点发送请求。
 * {{site.data.keyword.Bluemix_notm}} **区域**。您可以在**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的头中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。显示的区域值应该为以下某个值：`US South`、`Sydney` 或 `United Kingdom`。有关 SDK 所需的确切语法，请参阅代码样本中的注释。您将需要此值来初始化 {{site.data.keyword.amashort}} 客户端。
-* Android Studio 项目，设置为使用 Gradle。有关如何设置 Android 开发环境的更多信息，请参阅 [Google 开发者工具![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://developer.android.com/sdk/index.html "外部链接图标"){: new_window}。
+* Android Studio 项目，设置为使用 Gradle。有关如何设置 Android 开发环境的更多信息，请参阅 [Google 开发者工具 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://developer.android.com/sdk/index.html){: new_window}。
 
 ## 设置服务器 SDK
 {: #serversetup}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -11,6 +11,7 @@ lastupdated: "2017-01-08"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+Il servizio {{site.data.keyword.amafull}} è stato sostituito con il servizio {{site.data.keyword.appid_full}}.
 
 # Utilizzo {{site.data.keyword.amashort}} con un ambiente di sviluppo locale
 {: #protecting-local}
@@ -26,7 +27,7 @@ Puoi configurare il tuo sviluppo locale per utilizzare il servizio {{site.data.k
 * Il tuo **TenantID**. Apri il tuo servizio nel dashboard {{site.data.keyword.amafull}}. Fai clic sul pulsante **Opzioni per dispositivi mobili**. I valori `tenantId` (noti anche come `appGUID`)  vengono visualizzati nel campo **GUID applicazione / TenantId**. Avrai bisogno di questo valore per inizializzare il gestore autorizzazione.
 * La tua **Rotta applicazione**. Questa è l'URL della tua applicazione di back-end. Hai bisogno di questo valore per inviare le richieste agli endpoint protetti correlati.
 * La tua **Regione** {{site.data.keyword.Bluemix_notm}}.  Puoi trovare la tua regione {{site.data.keyword.Bluemix_notm}} corrente nell'intestazione, accanto all'icona **Avatar** ![Icona Avatar](images/face.jpg "Icona Avatar"). Il valore della regione visualizzato deve essere uno dei seguenti: `Stati Uniti Sud`,  `Sydney` o  `Regno Unito`. Per la sintassi esatta richiesta dall'SDK, vedi i commenti negli esempi di codice. Avrai bisogno di questo valore per inizializzare il client {{site.data.keyword.amashort}}.
-* Un progetto Android Studio, configurato per lavorare con Gradle. Per ulteriori informazioni su come configurare il tuo ambiente di sviluppo Android, vedi gli [strumenti per sviluppatori Google![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://developer.android.com/sdk/index.html "Icona link esterno"){: new_window}.
+* Un progetto Android Studio, configurato per lavorare con Gradle. Per ulteriori informazioni su come configurare il tuo ambiente di sviluppo Android, vedi gli [strumenti per sviluppatori Google  ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://developer.android.com/sdk/index.html){: new_window}.
 
 ## Configurazione dell'SDK server
 {: #serversetup}

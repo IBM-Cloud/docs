@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 
+{{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービスに置き換えられます。
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -140,7 +141,7 @@ void submitAuthenticationFailure (JSONObject info);
 ## カスタム AuthenticationListener の実装例
 {: #custom-android-samplecustom}
 
-この AuthenticationListener サンプルは、カスタム ID プロバイダーと連携するよう設計されています。このサンプルは、[GitHub リポジトリー![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "外部リンク・アイコン"){: new_window}からダウンロードできます。
+この AuthenticationListener サンプルは、カスタム ID プロバイダーと連携するよう設計されています。このサンプルは、[GitHub リポジトリー![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}からダウンロードできます。
 
 ```Java
 package com.ibm.helloworld;

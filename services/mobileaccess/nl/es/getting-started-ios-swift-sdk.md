@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.
 
 # Configuración del SDK de Swift de iOS
 {: #getting-started-ios}
@@ -30,7 +31,7 @@ Debe tener lo siguiente:
 * Su **TenantID**. Abra el servicio en el panel de control de {{site.data.keyword.amashort}}. Pulse **Opciones móviles**. Los valores `tenantId` (también conocidos como `appGUID`) se muestran en el campo **GUID de app / TenantId**. Necesitará este valor para inicializar el gestor de autorización de {{site.data.keyword.amashort}}.
 * Su **Ruta de aplicación**. Es el URL de la aplicación de programa de fondo. Necesita este valor para enviar solicitudes a sus puntos finales protegidos.
 * Su {{site.data.keyword.Bluemix_notm}} **Región**.  Encontrará su región de {{site.data.keyword.Bluemix_notm}} actual en la cabecera, junto al icono **Avatar** ![icono Avatar](images/face.jpg "icono Avatar"). El valor de región que aparece debe ser uno de los siguientes: `EE.UU. Sur`,  `Sidney` o  `Reino Unido` y debe corresponder con los valores de SDK requeridos en el código: `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` o `BMSClient.Region.sydney`.  Necesitará este valor para inicializar el SDK de {{site.data.keyword.amashort}}.
-* Un proyecto Xcode. Para obtener más información sobre la configuración del entorno de desarrollo de iOS, consulte el [sitio web de Apple Developer ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.apple.com/support/xcode/ "Icono de enlace externo"){: new_window}.
+* Un proyecto Xcode. Para obtener más información sobre la configuración del entorno de desarrollo de iOS, consulte el [sitio web de Apple Developer ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://developer.apple.com/support/xcode/){: new_window}.
 
 
 ## Instalación del SDK del cliente de {{site.data.keyword.amashort}}
@@ -50,7 +51,7 @@ sudo gem install cocoapods
 ```
 {: codeblock}
 
-Para obtener más información, consulte el [sitio web de CocoaPods ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cocoapods.org/ "Icono de enlace externo"){: new_window}.
+Para obtener más información, consulte el [sitio web de CocoaPods ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://cocoapods.org/){: new_window}.
 
 ### Instalación del SDK del cliente de {{site.data.keyword.amashort}} con CocoaPods
 {: #install-sdk-cocoapods}
@@ -110,7 +111,7 @@ Habilite `Keychain Sharing`. Vaya al separador `Capacidades` y `active` `Keychai
 	BMSClient.sharedInstance.authorizationManager = mcaAuthManager	
 	return true
 	}
- ```
+  ```
   {: codeblock}
 
 * Sustituya el `tenantId` por el valor que ha obtenido desde **Opciones móviles**.

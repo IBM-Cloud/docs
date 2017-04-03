@@ -2,9 +2,11 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-03-15"
 
 ---
+
+{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。
 
 # 启用 Web 应用程序的 Facebook 认证
 {: #facebook_web}
@@ -26,7 +28,7 @@ lastupdated: "2017-01-08"
 1. 记录应用程序的应用程序标识和应用程序私钥。配置 Web 项目以进行 Facebook 认证时需要此值。
 1. 从**设置**页面中，单击**添加平台**并选择 **Web 站点**。
 1. 保存更改。
-1. 在左侧边栏中单击 **Facebook 登录**。
+1. 在侧边栏中单击 **Facebook 登录**。
 1. 在**有效的 OAuth 重定向 URI** 框中输入授权服务器回调端点：https://imf-newauthserver.bluemix.net/oauth/{bluemix_app_guid}/callback。保存更改。
 
 

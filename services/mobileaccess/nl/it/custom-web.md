@@ -2,9 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-03-15"
 
 ---
+
+Il servizio {{site.data.keyword.amafull}} è stato sostituito con il servizio {{site.data.keyword.appid_full}}.
 
 # Autenticazione personalizzata dell'applicazione web
 {: #custom-web}

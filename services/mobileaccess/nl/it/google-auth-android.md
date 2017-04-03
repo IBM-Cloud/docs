@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+Il servizio {{site.data.keyword.amafull}} è stato sostituito con il servizio {{site.data.keyword.appid_full}}.
 
 # Abilitazione dell'autenticazione Google per le applicazioni Android
 {: #google-auth-android}
@@ -35,7 +37,7 @@ La configurazione dell'autenticazione Google per la tua applicazione Android {{s
 ## Creazione di un progetto con Google Developer Console
 {: #create-google-project}
 
-Per iniziare a usare Google come un provider di identità, crea un progetto nella [Google Developer Console ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.developers.google.com "Icona link esterno"){: new_window}.
+Per iniziare a usare Google come un provider di identità, crea un progetto nella [Google Developer Console ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.developers.google.com){: new_window}.
 Parte della creazione di un progetto consiste nell'ottenere un ID client Google.  L'ID client Google è un identificativo univoco per la tua applicazione utilizzato dall'autenticazione Google ed è necessario per la configurazione del servizio {{site.data.keyword.amashort}}.
 
 Dalla console:
@@ -53,7 +55,7 @@ Per completare la creazione delle credenziali, devi aggiungere l'**impronta digi
 
 Per fare in modo che Google verifichi l'autenticità della tua applicazione, devi specificare un'impronta digitale di certificato di firma.
 
-Il sistema operativo Android richiede che tutte le applicazioni installate su un dispositivo Android siano firmate con un certificato sviluppatore. Un'applicazione Android può essere messa a punto in due modalità: debug e rilascio. È di norma consigliato disporre di certificati differenti per le modalità di debug e rilascio.  I certificati utilizzati per firmare le applicazioni Android in modalità di debug sono forniti con l'SDK Android.  L'SDK Android è in genere installato automaticamente da Android Studio. Quando vuoi rilasciare la tua applicazione a Google Play, devi firmare la tua applicazione con un altro certificato che di norma generi tu stesso. Per ulteriori informazioni, vedi il documento relativo alla [firma delle tue applicazioni Android![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://developer.android.com/tools/publishing/app-signing.html "Icona link esterno"){: new_window}.
+Il sistema operativo Android richiede che tutte le applicazioni installate su un dispositivo Android siano firmate con un certificato sviluppatore. Un'applicazione Android può essere messa a punto in due modalità: debug e rilascio. È di norma consigliato disporre di certificati differenti per le modalità di debug e rilascio.  I certificati utilizzati per firmare le applicazioni Android in modalità di debug sono forniti con l'SDK Android.  L'SDK Android è in genere installato automaticamente da Android Studio. Quando vuoi rilasciare la tua applicazione a Google Play, devi firmare la tua applicazione con un altro certificato che di norma generi tu stesso. Per ulteriori informazioni, vedi il documento relativo alla [firma delle tue applicazioni Android ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://developer.android.com/tools/publishing/app-signing.html){: new_window}.
 
 Un keystore che contiene un certificato per gli ambienti di sviluppo è memorizzato in un file `~/.android/debug.keystore`. La password keystore predefinita è: `android`. Questo certificato viene utilizzato per mettere a punto applicazioni in modalità di debug.
 
@@ -157,7 +159,7 @@ Dal tuo progetto Android Studio.
 
 	Per ulteriori informazioni su come ottenere questi valori, consulta [Prima di cominciare](##before-you-begin).
 
-	**Nota:** se la tua applicazione Android è alla versione 6.0 (Livello API 23) o successiva, ti devi assicurare che l'applicazione disponga di una chiamata `android.permission.GET_ACCOUNTS` prima di richiamare il `register`. Per ulteriori informazioni, vedi il documento relativo alla [Richiesta di autorizzazioni su Android ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.android.com/training/permissions/requesting.html "Icona link esterno"){: new_window}.
+	**Nota:** se la tua applicazione Android è alla versione 6.0 (Livello API 23) o successiva, ti devi assicurare che l'applicazione disponga di una chiamata `android.permission.GET_ACCOUNTS` prima di richiamare il `register`. Per ulteriori informazioni, vedi il documento relativo alla [Richiesta di autorizzazioni su Android ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.android.com/training/permissions/requesting.html){: new_window}.
 
 1. Aggiungi il seguente codice alla tua attività:
 

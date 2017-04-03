@@ -2,12 +2,13 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-16"
+lastupdated: "2017-03-15"
 
 ---
 
 {:codeblock:.codeblock}
 
+{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。
 
 # 针对 {{site.data.keyword.amashort}} iOS (Swift SDK) 应用程序配置定制认证
 {: #custom-ios}

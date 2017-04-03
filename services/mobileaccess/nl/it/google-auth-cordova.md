@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+Il servizio {{site.data.keyword.amafull}} è stato sostituito con il servizio {{site.data.keyword.appid_full}}.
 
 # Abilitazione dell'autenticazione Google per le applicazioni Cordova
 {: #google-auth-cordova}
@@ -126,7 +128,9 @@ Inizializza il gestore autorizzazione {{site.data.keyword.amashort}} in Objectiv
 ```
 {: codeblock}
 
-**Nota:**
+
+####Nota:
+{: #note notoc}
 
 * Sostituisci `<your_module_name>` con il nome modulo del tuo progetto. Ad esempio, se il tuo nome modulo è `Cordova`,
 la riga importata deve essere `#import "Cordova-Swift.h"` Trova il nome modulo e vai alla scheda

@@ -2,9 +2,11 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-03-15"
 
 ---
+
+Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.
 
 # Activation de l'authentification Facebook pour les applications Web
 {: #facebook_web}
@@ -26,7 +28,7 @@ Pour utiliser Facebook comme fournisseur d'identité dans votre site Web, vous d
 1. Prenez note de l'ID d'application et de la valeur confidentielle. Vous en aurez besoin pour configurer votre projet Web pour l'authentification Facebook.
 1. Depuis la page **Paramètres**, cliquez sur la commande d'ajout de plateforme et choisissez l'option relative au site Web.
 1. Enregistrez les changements.
-1. Cliquez sur la commande de connexion à Facebook dans la barre latérale de gauche.
+1. Cliquez sur la commande de connexion à Facebook dans la barre latérale.
 1. Entrez le noeud final de rappel du serveur d'autorisation dans la zone relative aux URI de redirection OAuth valides : https://imf-newauthserver.bluemix.net/oauth/{bluemix_app_guid}/callback. Enregistrez les changements.
 
 

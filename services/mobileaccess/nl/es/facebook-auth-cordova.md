@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.
 
 # Habilitación de la autenticación de Facebook para apps de Cordova
 {: #facebook-auth-cordova}
@@ -32,7 +33,7 @@ Debe tener lo siguiente:
 * La ruta de la aplicación. Es el URL de la aplicación de programa de fondo.
 * El valor de `tenantId`. Abra el panel de control del servicio de {{site.data.keyword.amashort}}. Pulse **Opciones móviles**. El valor `tenantId` (también conocido como `appGUID`) se muestra en el campo **GUID de app / TenantId**. Necesitará estos valores para inicializar el SDK y para enviar solicitudes al servicio del programa de fondo.
 *  Busque la región en la que se aloja su servicio {{site.data.keyword.Bluemix_notm}}. Encontrará su región de {{site.data.keyword.Bluemix_notm}} actual en la cabecera, junto al icono **Avatar** ![icono Avatar](images/face.jpg "icono Avatar") en la barra de menús. El valor de región debe ser uno de los siguientes: **EE.UU. sur**, **Sídney** o **Reino Unido**. Los valores constantes de SDK exactos que se corresponden con estos nombres se indican en los ejemplos de código.
-* Un ID de aplicación y una aplicación de Facebook. Para obtener más información, consulte [Cómo obtener un ID de aplicación de Facebook desde el portal de desarrolladores de Facebook](facebook-auth-overview.html#facebook-appID).
+* Un ID de aplicación y una aplicación de Facebook. Para obtener más información, consulte [Creación de una aplicación en el sitio web de Facebook for Developers](facebook-auth-overview.html#facebook-appID).
 
 
 
@@ -172,11 +173,11 @@ El gestor de autorización debe estar inicializado en el código Objective-C en 
 
 	    return [super application:application didFinishLaunchingWithOptions:launchOptions];
 	}
-	
+
 
 	- (BOOL)application: (UIApplication *)application openURL: (NSURL *)url
 					sourceApplication: (NSString *)sourceApplication annotation: (id)annotation {
-	  
+
 	   return [[FacebookAuthenticationManager sharedInstance] onOpenURLWithApplication:application
 	   		url:url sourceApplication:sourceApplication annotation:annotation];
 	}

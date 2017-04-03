@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+{{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービスに置き換えられます。
 
 # iOS アプリ用の Facebook 認証の使用可能化 (Swift SDK)
 {: #facebook-auth-ios}
@@ -33,7 +35,7 @@ lastupdated: "2017-01-15"
 * CocoaPods と連動して機能するようにセットアップされた iOS プロジェクト。詳しくは、[iOS Swift SDK のセットアップ](getting-started-ios-swift-sdk.html)の **CocoaPods のインストール**を参照してください。
      
    **注:** 先に進む前にコア {{site.data.keyword.amashort}} Client SDK をインストールする必要はありません。
-* [Facebook for Developers ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.facebook.com "外部リンク・アイコン"){: new_window} Web サイト上の Facebook アプリケーション。
+* [Facebook for Developers![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.facebook.com){: new_window} Web サイト上の Facebook アプリケーション。
 
 **重要:** Facebook SDK (`com.facebook.FacebookSdk`) を別個にインストールする必要はありません。Facebook SDK は {{site.data.keyword.amashort}} `BMSFacebookAuthentication` ポッドで自動的にインストールされます。Facebook for Developers の Web サイトでアプリを追加または構成する場合は、**Xcode プロジェクトへの Facebook SDK の追加**のステップをスキップできます。
 
@@ -42,7 +44,7 @@ lastupdated: "2017-01-15"
 
 Facebook for Developers サイトで以下を行います。
 
-1. [Facebook for Developers ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.facebook.com "外部リンク・アイコン"){: new_window}で自分のアカウントにログインします。
+1. [Facebook for Developers ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.facebook.com){: new_window}で自分のアカウントにログインします。
 
 1. iOS プラットフォームがアプリに追加済みであることを確認します。iOS プラットフォームを追加または構成する場合、iOS アプリケーションの **bundleId** を提供する必要があります。ご使用の iOS アプリケーションの **bundleId** を調べるには、`info.plist` ファイル内または Xcode プロジェクトの**「一般 (General)」**タブ内で**「バンドル ID (Bundle Identifier)」**を探します。
 
@@ -75,7 +77,7 @@ sudo gem install cocoapods
 ```
    {: codeblock}
 
-詳しくは、[CocoaPods Web サイト![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cocoapods.org/ "外部リンク・アイコン"){: new_window}を参照してください。
+詳しくは、[CocoaPods Web サイト![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cocoapods.org/){: new_window}を参照してください。
 
 ### CocoaPods を使用した {{site.data.keyword.amashort}} Client Swift SDK のインストール
 {: #facebook-auth-install-swift-cocoapods}
@@ -169,7 +171,7 @@ pod 'BMSFacebookAuthentication'
 
    Facebook Application ID を使用して `CFBundleURLSchemes` および `FacebookappID` プロパティーを更新します。Facebook アプリケーションの名前で `FacebookDisplayName` を更新します。
 
-   **重要**: `info.plist` ファイル内の既存のプロパティーをオーバーライドすることのないようにしてください。重複するプロパティーがある場合は、手動でマージする必要があります。詳しくは、[Xcode プロジェクトを構成する![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.facebook.com/docs/ios/getting-started/ "外部リンク・アイコン"){: new_window}および[アプリを iOS9 用に準備する![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.facebook.com/docs/ios/ios9 "外部リンク・アイコン"){: new_window}を参照してください。
+   **重要**: `info.plist` ファイル内の既存のプロパティーをオーバーライドすることのないようにしてください。重複するプロパティーがある場合は、手動でマージする必要があります。詳しくは、[Xcode プロジェクトを構成する![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.facebook.com/docs/ios/getting-started/){: new_window}および[アプリを iOS9 用に準備する![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.facebook.com/docs/ios/ios9){: new_window}を参照してください。
 
 ## {{site.data.keyword.amashort}} Client Swift SDK の初期化
 {: #facebook-auth-ios-initalize-swift}

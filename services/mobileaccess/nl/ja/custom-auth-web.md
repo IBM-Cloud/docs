@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-08"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+{{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービスに置き換えられます。
 
 #{{site.data.keyword.amashort}} Web アプリケーション用のカスタム認証の構成
 {: #custom-web}
@@ -245,7 +247,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 
 
 
-	応答本体には、`access_token` および `id_token` が JWT フォーマットで含まれます ([JWT Web サイト![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://jwt.io "外部リンク・アイコン"){: new_window}を参照してください)。
+	応答本体には、`access_token` および `id_token` が JWT フォーマットで含まれます ([JWT Web サイト![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://jwt.io){: new_window}を参照してください)。
 
 	アクセス・トークンおよび識別トークンを受け取ったら、Web セッションに認証済みのフラグを立てることができ、オプションでこれらのトークンを永続的に保持できます。
 

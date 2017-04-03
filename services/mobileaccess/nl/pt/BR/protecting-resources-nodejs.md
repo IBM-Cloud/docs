@@ -2,12 +2,14 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2016-10-27"
+lastupdated: "2017-03-15"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 {:codeblock:.codeblock}
+
+O serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.
 
 # Protegendo recursos Node.js com o {{site.data.keyword.amashort}}
 {: #protecting-resources-nodejs}
@@ -23,7 +25,8 @@ informações adicionais, consulte [Criando apps com SDK para
 Node.js](https://console.{DomainName}/docs/runtimes/nodejs/index.html#nodejs_runtime).
 * O {{site.data.keyword.amashort}} server SDK requer que seu servidor Node.js seja implementado com a estrutura `Express`. Observe
 que há outras estruturas que usam estruturas `Express`, como LoopBack. É possível usar o SDK do servidor
-{{site.data.keyword.amashort}} com qualquer uma dessas estruturas. Para obter mais informações sobre a estrutura Express, veja [Expressjs.com ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://expressjs.com/ "Ícone de link externo"){: new_window}.
+{{site.data.keyword.amashort}} com qualquer uma dessas estruturas. Para obter mais informações
+sobre a estrutura Express, veja [Expressjs.com ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](http://expressjs.com/){: new_window}.
 
 ## Sobre o SDK do servidor
 {: #about}
@@ -31,7 +34,7 @@ que há outras estruturas que usam estruturas `Express`, como LoopBack. É poss�
 O SDK do servidor {{site.data.keyword.amashort}} fornece uma estratégia de passaporte `MCABackendStrategy`
 para ser usada em aplicativos backend implementados no IBM {{site.data.keyword.Bluemix_notm}}. Para proteger seu app contra acesso não autorizado e obter informações de monitoramento, deve-se instrumentar seu servidor Node.js com o `MCABackendStrategy`. O módulo npm `bms-mca-token-validation-strategy` fornece a estratégia de passaporte `MCABackendStrategy` e o método de verificação para validar o token de acesso e o token de ID emitidos pelo {{site.data.keyword.amashort}}. Esse módulo também fornece automaticamente informações de monitoramento sobre eventos de segurança.
 
-O {{site.data.keyword.amashort}} server SDK usa a estrutura `Passport` para impor a autorização.  Para obter mais informações, veja [Passportjs.org ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://passportjs.org/ "Ícone de link externo"){: new_window}.
+O {{site.data.keyword.amashort}} server SDK usa a estrutura `Passport` para impor a autorização.  Para obter mais informações, veja [Passportjs.org ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](http://passportjs.org/){: new_window}.
 
 ## Instalando o SDK do servidor
 {: #protecting-resources-serversdk}

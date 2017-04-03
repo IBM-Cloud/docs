@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+Der {{site.data.keyword.amafull}}-Service wird durch den {{site.data.keyword.appid_full}}-Service ersetzt.
 
 # Google-Authentifizierung für Cordova-Apps aktivieren
 {: #google-auth-cordova}
@@ -127,7 +129,9 @@ Initialisieren Sie {{site.data.keyword.amashort}} Authorization Manager in Objec
 ```
 {: codeblock}
 
-**Hinweis:**
+
+####Hinweis:
+{: #note notoc}
 
 * Ersetzen Sie `<ihr_modulname>` mit dem Modulnamen des Projekts. Wenn beispielsweise der Modulname `Cordova` ist, sollte die Importzeile `#import "Cordova-Swift.h"` lauten. Suchen Sie den Modulnamen und wechseln Sie zu
 `Build Settings`, `Packaging` > `Product Module Name`.

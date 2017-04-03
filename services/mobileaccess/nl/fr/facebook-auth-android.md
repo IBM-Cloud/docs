@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.
 
 # Activation de l'authentification Facebook pour les applications Android
 {: #facebook-auth-android}
@@ -27,7 +29,7 @@ Vous devez disposer des éléments suivants :
 * Valeur de votre **TenantID**. Ouvrez votre service dans le tableau de bord de {{site.data.keyword.amashort}}. Cliquez sur le bouton **Options pour application mobile**. La valeur `tenantId` (qui porte également le nom d'`appGUID`) est affichée dans la zone **App GUID / TenantId**. Vous aurez besoin de cette valeur pour initialiser le Gestionnaire des autorisations.
 * Votre **région** {{site.data.keyword.Bluemix_notm}}. Vous pouvez trouver votre région {{site.data.keyword.Bluemix_notm}} actuelle dans l'en-tête, en regard de l'icône **Avatar**![icône Avatar](images/face.jpg "icône Avatar"). La valeur de la région qui apparaît doit être l'une des suivantes : `US South`, `United Kingdom` ou `Sydney`, et correspondre à la valeur SDK requise dans le code Javascript de WebView : `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` ou `BMSClient.REGION_UK`. Vous aurez besoin de cette valeur pour initialiser le client {{site.data.keyword.amashort}}.
 * Un projet Android qui est configuré pour fonctionner avec Gradle. Le projet n'a pas besoin d'être instrumenté avec un SDK client de {{site.data.keyword.amashort}}.  
-* Une application Facebook avec une plateforme Android sur le site [Facebook for Developers ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developers.facebook.com/ "Icône de lien externe"){: new_window} .
+* Une application Facebook avec une plateforme Android sur le site [Facebook for Developers ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developers.facebook.com/){: new_window} .
 
 **Important :** il n'est pas nécessaire d'installer séparément le SDK Facebook (`com.facebook.FacebookSdk`). Celui-ci est installé automatiquement par Gradle quand vous ajoutez le SDK client Facebook de {{site.data.keyword.amashort}}. Vous
 pouvez ignorer cette étape si vous ajoutez la plateforme Android sur le site Facebook for Developers.
@@ -37,7 +39,7 @@ pouvez ignorer cette étape si vous ajoutez la plateforme Android sur le site Fa
 
 A partir du site Web Facebook for Developers :
 
-1. Connectez-vous à votre compte sur le site Web [Facebook for Developers ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developers.facebook.com "Icône de lien externe"){: new_window}.
+1. Connectez-vous à votre compte sur le site Web [Facebook for Developers ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developers.facebook.com){: new_window}.
 
 1. Dans **Products List**, sélectionnez **Facebook Login**.
 
@@ -69,7 +71,7 @@ la propriété `android:name` dans la section activity. Si plusieurs activités 
 
 	Utilisez des certificats différents pour ces deux modes.  Les certificats utilisés pour signer les applications Android en mode Debug sont fournies avec le SDK Android, qui est généralement installé automatiquement par Android Studio. Au moment de publier votre appli dans le magasin Google Play, vous devez la signer avec un autre certificat, généralement généré par vous.
 
-	Vous pouvez entrer deux ensembles de hachages de clé avec Facebook : un pour les applications générées en mode Debug avec un certificat de débogage et un autre pour les applications générées en mode Release avec un certificat à cet effet. Pour plus d'informations, voir [Signing your Android applications ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://developer.android.com/tools/publishing/app-signing.html "Icône de lien externe"){: new_window}.
+	Vous pouvez entrer deux ensembles de hachages de clé avec Facebook : un pour les applications générées en mode Debug avec un certificat de débogage et un autre pour les applications générées en mode Release avec un certificat à cet effet. Pour plus d'informations, voir [Sign Your App ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://developer.android.com/tools/publishing/app-signing.html){: new_window}.
 
 1. Le magasin de clés qui contient le certificat que vous utilisez pour l'environnement de développement est stocké dans le fichier `~/.android/debug.keystore`. Le mot de passe du magasin de clés par défaut est : `android`. Utilisez ce certificat pour générer des applications en mode Debug.
 
@@ -198,7 +200,7 @@ principale dans votre application Android, bien que cet emplacement ne soit pas 
 
 	Pour plus d'informations sur l'obtention de ces valeurs, voir [Avant de commencer](#before-you-begin)).
 
-	**Remarque :** si votre application Android a pour cible Android version 6.0 (API niveau 23) ou supérieure, vous devez vous assurer que l'application dispose d'un appel `android.permission.GET_ACCOUNTS` avant d'appeler `register`. Pour plus d'informations, reportez-vous à cette rubrique [![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.android.com/training/permissions/requesting.html "Icône de lien externe"){: new_window} sur le site Android Developers.
+	**Remarque :** si votre application Android a pour cible Android version 6.0 (API niveau 23) ou supérieure, vous devez vous assurer que l'application dispose d'un appel `android.permission.GET_ACCOUNTS` avant d'appeler `register`. Pour plus d'informations, voir [cette rubrique ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.android.com/training/permissions/requesting.html){: new_window} sur le site Android Developers.
 
 1. Ajoutez le code suivant à votre activité :
 

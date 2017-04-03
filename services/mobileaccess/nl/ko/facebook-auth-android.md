@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+{{site.data.keyword.amafull}} 서비스가 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다.
 
 # Android 앱에서 Facebook 인증 사용
 {: #facebook-auth-android}
@@ -27,7 +29,7 @@ lastupdated: "2017-01-15"
 * **테넌트 ID** 값. {{site.data.keyword.amashort}} 대시보드에서 서비스를 여십시오. **모바일 옵션** 단추를 클릭하십시오. **앱 GUID / TenantId** 필드에 `tenantId`(`appGUID`라고도 함) 값이 표시됩니다. 이 값은 권한 관리자를 초기화하는 데 필요합니다. 
 * {{site.data.keyword.Bluemix_notm}} **지역**. 헤더에서 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘") 옆에 현재 {{site.data.keyword.Bluemix_notm}} 지역이 표시됩니다. 표시되는 지역 값은 `US South`, `United Kingdom` 및 `Sydney` 중 하나여야 하며 WebView Javascript 코드 `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` 또는 `BMSClient.REGION_UK`에 필요한 SDK 값에 해당해야 합니다. 이 값은 {{site.data.keyword.amashort}} 클라이언트를 초기화하는 데 필요합니다. 
 * Gradle과 작동하도록 구성된 Android 프로젝트. 이 프로젝트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트되지 않아도 됩니다.  
-* [개발자용 Facebook 사이트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developers.facebook.com/ "외부 링크 아이콘"){: new_window}에서 Android 플랫폼의 Facebook 앱. 
+* [개발자용 Facebook 사이트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developers.facebook.com/){: new_window}에서 Android 플랫폼을 사용하는 Facebook 앱. 
 
 **중요:** Facebook SDK(`com.facebook.FacebookSdk`)를 별도로 설치하지 않아도 됩니다. {{site.data.keyword.amashort}} Facebook 클라이언트 SDK를 추가하면 Gradle에서 자동으로 Facebook SDK를 설치합니다. 개발자용 Facebook 사이트에서 Android 플랫폼을 추가하는 경우 이 단계를 건너뛸 수 있습니다. 
 
@@ -36,7 +38,7 @@ lastupdated: "2017-01-15"
 
 개발자용 Facebook 웹 사이트에서 다음을 수행하십시오. 
 
-1. [개발자용 Facebook 웹 사이트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developers.facebook.com "외부 링크 아이콘"){: new_window}에서 사용자 계정에 로그인하십시오. 
+1. [개발자용 Facebook 웹 사이트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developers.facebook.com){: new_window}에서 사용자 계정에 로그인하십시오. 
 
 1. **제품 목록**에서 **Facebook 로그인**을 선택하십시오. 
 
@@ -64,7 +66,7 @@ lastupdated: "2017-01-15"
 
 	디버그 및 릴리스 모드에 대해 서로 다른 인증서를 사용하십시오. 디버그 모드에서 Android 애플리케이션 서명에 사용되는 인증서는 Android SDK와 함께 제공되며, 보통 Android Studio에서 자동으로 설치합니다. 앱을 Google Play Store로 릴리스하려는 경우에는 일반적으로 직접 생성하는 다른 인증서로 앱에 서명해야 합니다. 
 
-	Facebook에서 두 세트의 키 해시를 입력할 수 있습니다. 하나는 디버그 인증서를 사용하여 디버그 모드로 빌드되는 애플리케이션용 키 해시이고, 다른 하나는 릴리스 인증서를 사용하여 릴리스 모드로 빌드되는 애플리케이션용 키 해시입니다. 자세한 정보는 [Android 애플리케이션 서명 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://developer.android.com/tools/publishing/app-signing.html "외부 링크 아이콘"){: new_window}을 참조하십시오. 
+	Facebook에서 두 세트의 키 해시를 입력할 수 있습니다. 하나는 디버그 인증서를 사용하여 디버그 모드로 빌드되는 애플리케이션용 키 해시이고, 다른 하나는 릴리스 인증서를 사용하여 릴리스 모드로 빌드되는 애플리케이션용 키 해시입니다. 자세한 정보는 [Android 애플리케이션 서명 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://developer.android.com/tools/publishing/app-signing.html){: new_window}을 참조하십시오. 
 
 1. 개발 환경용 인증서가 포함된 키 저장소는 `~/.android/debug.keystore` 파일에 저장됩니다. 기본 키 저장소 비밀번호는 `android`입니다. 애플리케이션을 디버그 모드로 빌드하려면 이 인증서를 사용하십시오. 
 
@@ -120,7 +122,7 @@ Android 프로젝트에는 프로젝트 및 애플리케이션 모듈에 대한 
 
 	업데이트를 저장하고 나면 `facebookauthentication` 모듈에서 필요한 모든 SDK를 다운로드하여 Android 프로젝트에 설치합니다.
 
-1. **도구 > Android > Gradle 파일과 프로젝트 동기화**를 클릭하여 프로젝트를 Gradle과 동기화하십시오.
+1. **도구 > Android > Gradle 파일로 프로젝트 동기화**를 클릭하여 프로젝트를 Gradle과 동기화하십시오.
 
 1. `res/values/strings.xml` 파일을 열고 Facebook 애플리케이션 ID를 포함하는 `facebook_app_id` 문자열을 추가하십시오. 
 
@@ -173,7 +175,7 @@ Android 프로젝트에는 프로젝트 및 애플리케이션 모듈에 대한 
 
 1. 클라이언트 SDK를 초기화하고 인증 관리자를 등록하십시오. **컨텍스트** 및 **지역**을 전달하여 {{site.data.keyword.amashort}} 클라이언트 SDK를 초기화하십시오.
 
-	필수는 아니지만 일반적으로 초기화 코드를 넣는 위치는 Android 애플리케이션 기본 활동의 `onCreate` 메소드입니다.<br/>
+	필수는 아니지만 일반적으로 초기화 코드를 넣는 위치는 Android 애플리케이션 기본 활동의 `onCreate` 메소드입니다. <br/>
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
@@ -190,7 +192,7 @@ Android 프로젝트에는 프로젝트 및 애플리케이션 모듈에 대한 
 
 	이러한 값을 얻는 방법에 대한 자세한 정보는 [시작하기 전에](#before-you-begin)를 참조하십시오.
 
-	**참고:** Android 애플리케이션이 Android 버전 6.0(API 레벨 23) 이상을 대상으로 하는 경우, `register`를 호출하기 전에 애플리케이션에 `android.permission.GET_ACCOUNTS` 호출이 있는지 확인해야 합니다. 자세한 정보는 Android 개발자 사이트의 [이 주제 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.android.com/training/permissions/requesting.html "외부 링크 아이콘"){: new_window}를 참조하십시오. 
+	**참고:** Android 애플리케이션이 Android 버전 6.0(API 레벨 23) 이상을 대상으로 하는 경우, `register`를 호출하기 전에 애플리케이션에 `android.permission.GET_ACCOUNTS` 호출이 있는지 확인해야 합니다. 자세한 정보는 Android 개발자 사이트의 [이 주제 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.android.com/training/permissions/requesting.html){: new_window}를 참조하십시오. 
 
 1. 활동에 다음 코드를 추가하십시오. 
 

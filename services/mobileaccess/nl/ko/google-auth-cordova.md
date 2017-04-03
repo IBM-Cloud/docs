@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+{{site.data.keyword.amafull}} 서비스가 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다.
 
 # Cordova 앱에서 Google 인증 사용
 {: #google-auth-cordova}
@@ -128,7 +130,9 @@ Google 인증을 통합하도록 Cordova 애플리케이션의 iOS 플랫폼을 
 ```
 {: codeblock}
 
-**참고:**
+
+####참고:
+{: #note notoc}
 
 * `<your_module_name>`을 프로젝트의 모듈 이름으로 대체하십시오. 예를 들어, 모듈 이름이 `Cordova`인 경우 import 행은 `#import "Cordova-Swift.h"`여야 합니다.
 모듈 이름을 찾으려면 `빌드 설정` 탭, `패키징` > `제품 모듈 이름`으로 이동하십시오. 

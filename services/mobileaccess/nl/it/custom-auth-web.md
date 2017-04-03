@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-08"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+Il servizio {{site.data.keyword.amafull}} è stato sostituito con il servizio {{site.data.keyword.appid_full}}.
 
 #Configurazione dell'autenticazione personalizzata per le applicazioni Web {{site.data.keyword.amashort}}
 {: #custom-web}
@@ -250,7 +252,7 @@ app.get("/oauth/callback", function(req, res, next){
 
 	Tieni presente che il parametro `redirect_uri` deve corrispondere al `redirect_uri` utilizzato nella richiesta di autorizzazione precedente. Il parametro code deve essere il codice concesso ricevuto nella risposta al termine della richiesta di autorizzazione. Il codice concesso è valido solo per 10 minuti, dopo i quali avrai bisogno di ottenere un nuovo codice.
 
-	Il corpo della risposta conterrà `access_token` e `id_token` in formato JWT; vedi il [sito Web JWT![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://jwt.io "Icona link esterno"){: new_window}.
+	Il corpo della risposta conterrà `access_token` e `id_token` in formato JWT; visita il [sito Web JWT ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://jwt.io){: new_window}.
 
 	Come hai ricevuto l'accesso e i token di identità, puoi indicare la sessione Web come autenticata e facoltativamente conservare questi token.
 

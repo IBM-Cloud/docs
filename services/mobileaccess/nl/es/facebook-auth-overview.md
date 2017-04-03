@@ -2,13 +2,15 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
+
+El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.
 
 # Autenticación de usuarios con las credenciales de Facebook
 {: #facebook-auth-overview}
@@ -57,7 +59,7 @@ Para empezar a utilizar Facebook como proveedor de identidad, cree una aplicaci�
 
 Necesita este valor para configurar la autenticación de Facebook para la aplicación móvil o web.
 
-1. Acceda al sitio [Facebook for Developers ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developers.facebook.com "Icono de enlace externo"){: new_window}.
+1. Acceda al sitio [Facebook for Developers ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://developers.facebook.com){: new_window}.
 
 1. Abra la lista desplegable **Mis apps** y seleccione **Añadir una nueva app**.
 

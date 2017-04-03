@@ -2,9 +2,11 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
+
+{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。
 
 # 設定 {{site.data.keyword.amashort}} 用戶端 SDK
 {: #getting-started}

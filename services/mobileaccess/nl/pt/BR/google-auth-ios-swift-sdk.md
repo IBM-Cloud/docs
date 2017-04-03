@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+O serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.
 
 # Ativando a autenticação do Google para apps iOS (Swift SDK)
 {: #google-auth-ios}
@@ -47,7 +49,7 @@ South**, **United Kingdom** ou **Sydney** e corresponder aos valores requeridos 
 ## Preparando seu app para o Google Sign-In
 {: #google-sign-in-ios}
 
-Prepare o seu app para Google Sign-in seguindo as instruções fornecidas pelo Google em [Google Sign-In para iOS ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developers.google.com/identity/sign-in/ios/start-integrating "Ícone de link externo"){: new_window}.
+Prepare se app para Google sign-in seguindo as instruções fornecidas pelo Google em [Google Sign-In para iOS ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://developers.google.com/identity/sign-in/ios/start-integrating){: new_window}.
 
 Este processo:
 
@@ -61,7 +63,7 @@ As etapas a seguir fornecem um esboço resumido das tarefas necessárias para pr
 
 1. Observe o **Identificador de pacote configurável** em seu projeto do Xcode a partir da seção **Identidade** da guia **Geral** do destino principal. Ele é necessário para criar seu projeto do Google Sign-In.
 
-1. Crie um projeto do Google Sign-In para iOS no[site Google Developer ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developers.google.com/mobile/add?platform=ios "Ícone de link externo"){: new_window}.
+1. Crie um projeto do Google Sign-In para iOS no [site Google Developer ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://developers.google.com/mobile/add?platform=ios){: new_window}.
 
 1. Inclua o API Google Sign-In em seu projeto.
 
@@ -71,10 +73,12 @@ As etapas a seguir fornecem um esboço resumido das tarefas necessárias para pr
 `GoogleService-Info.plist`, abra-o e anote o valor de
 `CLIENT_ID`. Esse valor será necessário mais tarde para configurar o aplicativo backend do {{site.data.keyword.amashort}}.
 
-1. Inclua o arquivo `GoogleService-Info.plist` em seu projeto do Xcode. Para obter mais informações, veja [Incluir o arquivo de configuração em seu projeto ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config "Ícone de link externo"){: new_window}.
+1. Inclua o arquivo `GoogleService-Info.plist` em seu projeto do Xcode. Para
+obter mais informações, veja [Incluir
+o arquivo de configuração em seu projeto ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config){: new_window}.
 
 1. Atualize os Esquemas de URL em seu projeto do Xcode com o
-`REVERSE_CLIENT_ID` e o identificador de pacote configurável. Para obter mais informações, veja [Incluir esquemas URL em seu projeto ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project "Ícone de link externo"){: new_window}.
+`REVERSE_CLIENT_ID` e o identificador de pacote configurável. Para obter mais informações, veja [Incluir esquemas URL em seu projeto ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project){: new_window}.
 
 1. Atualize seu arquivo
 `project-Bridging-Header.h` do aplicativo com o
@@ -85,7 +89,8 @@ código a seguir:
 	```
 	{: codeblock}
 
-	Para obter mais informações sobre a atualização do arquivo de cabeçalho de ponte, veja [Ativar conexão ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in "Ícone de link externo"){: new_window}.
+	Para obter mais informações sobre a atualização do arquivo de cabeçalho de ponte, veja
+[Ativar conexão ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in){: new_window}.
 
 ## Configurando o {{site.data.keyword.amashort}} para autenticação do Google
 {: #google-auth-ios-config}
@@ -118,7 +123,7 @@ do arquivo `GoogleService-Info.plist`.
 	```
 	{: codeblock}
 
-Para obter mais informações, veja o [website CocoaPods ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cocoapods.org/ "Ícone de link externo"){: new_window}.
+Para obter mais informações, veja o [website CocoaPods ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://cocoapods.org/){: new_window}.
 
 ### Instalando o {{site.data.keyword.amashort}} client Swift SDK com o CocoaPods
 {: #facebook-auth-install-swift-cocoapods}

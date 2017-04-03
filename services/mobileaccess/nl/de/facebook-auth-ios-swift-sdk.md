@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+Der {{site.data.keyword.amafull}}-Service wird durch den {{site.data.keyword.appid_full}}-Service ersetzt.
 
 # Facebook-Authentifizierung für iOS-Apps aktivieren (Swift-SDK)
 {: #facebook-auth-ios}
@@ -28,7 +30,7 @@ Voraussetzungen:
 * Die {{site.data.keyword.Bluemix_notm}}-**Region**. Ihre aktuelle {{site.data.keyword.Bluemix_notm}}-Region finden Sie im Header neben dem Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol"). Der Regionswert, der angezeigt wird, sollte einer der folgenden sein: `USA (Süden)`, `Vereinigtes Königreich` oder `Sydney`. Zudem sollte er den für das Swift-SDK erforderlichen SDK-Werten entsprechen: `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` oder `BMSClient.Region.sydney`. Sie benötigen diesen Wert für die Initialisierung des {{site.data.keyword.amashort}}-Clients.
 * iOS-Projekt, das für das Arbeiten mit CocoaPods eingerichtet ist.  Weitere Informationen finden Sie unter **Install CocoaPods** in [Setting up the iOS Swift SDK](getting-started-ios-swift-sdk.html).  
    **Hinweis:** Sie müssen nicht den Kern des {{site.data.keyword.amashort}}-Client-SDK installieren, bevor Sie fortfahren.
-* Eine Facebook-Anwendung auf der [Facebook for Developers-Website ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developers.facebook.com "Symbol für externen Link"){: new_window}.
+* Eine Facebook-Anwendung auf der [Facebook for Developers-Website ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developers.facebook.com){: new_window}.
 
 **Wichtig:** Sie müssen das Facebook-SDK (`com.facebook.FacebookSdk`) nicht separat installieren. Das Facebook-SDK wird automatisch mit dem Pod `BMSFacebookAuthentication` von {{site.data.keyword.amashort}} installiert. Sie können den Schritt zum Hinzufügen des Facebook-SDK zum Xcode-Projekt überspringen, wenn Sie Ihre App auf der Facebook for Developers-Website hinzufügen oder konfigurieren.
 
@@ -37,7 +39,7 @@ Voraussetzungen:
 
 Führen Sie die folgenden Schritte auf der Site 'Facebook for Developers' aus:
 
-1. Melden Sie sich bei Ihrem Konto in [Facebook for Developers ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developers.facebook.com "Symbol für externen Link"){: new_window} an.
+1. Melden Sie sich bei Ihrem Konto in [Facebook for Developers ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developers.facebook.com){: new_window} an.
 
 1. Stellen Sie sicher, dass die iOS-Plattform zu Ihrer App hinzugefügt wurde. Wenn Sie die iOS-Plattform hinzufügen oder konfigurieren, müssen Sie die **Bundle-ID** der iOS-Anwendung angeben. Zum Ermitteln der Bundle-ID (**bundleId**) Ihrer iOS-Anwendung suchen Sie nach **Bundle Identifier** in der Datei `info.plist` oder auf der Registerkarte **General** des Projekts in Xcode.
 
@@ -70,7 +72,7 @@ Nachdem Sie die Facebook-App-ID und Ihre Facebook-Anwendung zur Bedienung von iO
    ```
    {: codeblock}
 
-Weitere Informationen finden Sie auf der [CocoaPods-Website ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cocoapods.org/ "Symbol für externen Link"){: new_window}.
+Weitere Informationen finden Sie auf der [CocoaPods-Website ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cocoapods.org/){: new_window}.
 
 ### {{site.data.keyword.amashort}}-Client-Swift-SDK mit CocoaPods installieren
 {: #facebook-auth-install-swift-cocoapods}
@@ -164,7 +166,7 @@ Aktivieren Sie `Keychain Sharing`. Rufen Sie dazu die Registerkarte `Capabilitie
 
    Aktualisieren Sie die Eigenschaften `CFBundleURLSchemes` und `FacebookappID` mit Ihrer Facebook-Anwendungs-ID. Aktualisieren Sie die Eigenschaft `FacebookDisplayName` mit dem Namen Ihrer Facebook-Anwendung.
 
-   **Wichtig**: Stellen Sie sicher, dass Sie keine vorhandenen Eigenschaften in der Datei `info.plist` überschreiben. Wenn Sie sich überschneidende Eigenschaften haben, müssen Sie diese manuell zusammenfügen. Weitere Informationen finden Sie in [Xcode-Projekt konfigurieren ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developers.facebook.com/docs/ios/getting-started/ "Symbol für externen Link"){: new_window} und [Apps für iOS9 vorbereiten ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developers.facebook.com/docs/ios/ios9 "Symbol für externen Link"){: new_window}.
+   **Wichtig**: Stellen Sie sicher, dass Sie keine vorhandenen Eigenschaften in der Datei `info.plist` überschreiben. Wenn Sie sich überschneidende Eigenschaften haben, müssen Sie diese manuell zusammenfügen. Weitere Informationen finden Sie im Abschnitt zum [Konfigurieren des Xcode-Projekts ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developers.facebook.com/docs/ios/getting-started/){: new_window} und [Apps für iOS9 vorbereiten ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developers.facebook.com/docs/ios/ios9){: new_window}.
 
 ## {{site.data.keyword.amashort}}-Client-Swift-SDK initialisieren
 {: #facebook-auth-ios-initalize-swift}

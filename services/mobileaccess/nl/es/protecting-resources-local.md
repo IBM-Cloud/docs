@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -11,6 +11,7 @@ lastupdated: "2017-01-08"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.
 
 # Uso de {{site.data.keyword.amashort}} con un entorno de desarrollo local
 {: #protecting-local}
@@ -26,7 +27,7 @@ Debe tener lo siguiente:
 * Su **TenantID**. Abra el servicio en el panel de control de {{site.data.keyword.amafull}}. Pulse el botón **Opciones móviles**. Los valores `tenantId` (también conocidos como `appGUID`) se muestran en el campo **GUID de app / TenantId**. Necesitará este valor para inicializar el gestor de autorización.
 * Su **Ruta de aplicación**. Es el URL de la aplicación de programa de fondo. Necesita este valor para enviar solicitudes a sus puntos finales protegidos.
 * Su {{site.data.keyword.Bluemix_notm}} **Región**.  Encontrará su región de {{site.data.keyword.Bluemix_notm}} actual en la cabecera, junto al icono **Avatar** ![icono Avatar](images/face.jpg "icono Avatar"). El valor de la región que aparece debe ser uno de los siguientes: `EE.UU. Sur`, `Sídney` o `Reino Unido`. Para ver la sintaxis exacta requerida por el SDK, consulte los comentarios de los ejemplos de código. Necesitará este valor para inicializar el cliente {{site.data.keyword.amashort}}.
-* Un proyecto de Android Studio, configurado para funcionar con Gradle. Para obtener más información sobre la configuración del entorno de desarrollo de Android, consulte las [Herramientas del desarrollador de Google ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://developer.android.com/sdk/index.html "Icono de enlace externo"){: new_window}.
+* Un proyecto de Android Studio, configurado para funcionar con Gradle. Para obtener más información sobre la configuración del entorno de desarrollo de Android, consulte las [Herramientas del desarrollador de Google ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](http://developer.android.com/sdk/index.html){: new_window}.
 
 ## Configuración del SDK del servidor
 {: #serversetup}
@@ -153,11 +154,11 @@ request.send(this, new ResponseListener() {
  let mcaAuthManager = MCAAuthorizationManager.sharedInstance
  mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
  BMSClient.sharedInstance.authorizationManager = mcaAuthManager
-        
-        
+
+
  let requestPath = baseRequestUrl + "/protectedResource"
  let request = Request(url: requestPath, method: HttpMethod.GET)
-        
+
     request.send { (response, error) in
 	if let error = error {
             print("Connection failure")

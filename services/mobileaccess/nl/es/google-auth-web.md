@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -11,6 +11,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.
 
 # Habilitación de la autenticación de Google para aplicaciones web
 {: #google-auth-web}
@@ -31,8 +33,7 @@ Debe tener lo siguiente:
 ## Configuración de la aplicación de Google para su sitio web
 {: #google-auth-config}
 
-Para empezar a utilizar Google como proveedor de identidad, cree un proyecto en la [Google Developer Console ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.developers.google.com "Icono de enlace externo"){: new_window}.
-Parte de la creación de un proyecto consiste en obtener un **ID de cliente de Google** y **Secreto**. El ID de cliente de Google y Secreto son los únicos identificadores para la aplicación utilizados por la autenticación de Google y se necesitan para configurar el panel de control de {{site.data.keyword.amashort}}.
+Para empezar a utilizar Google como proveedor de identidad, cree un proyecto en la [Google Developer Console ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://console.developers.google.com){: new_window}. Parte de la creación de un proyecto consiste en obtener un **ID de cliente de Google** y **Secreto**. El ID de cliente de Google y Secreto son los únicos identificadores para la aplicación utilizados por la autenticación de Google y se necesitan para configurar el panel de control de {{site.data.keyword.amashort}}.
 
 1. Abra la aplicación de Google en la consola del desarrollador de Google.
 3. Añada la API de **Google+**.
@@ -94,31 +95,26 @@ Para iniciar el proceso de autorización:
 
 	```Java
 var cfEnv = require("cfenv"); 
-app.get("/protected", checkAuthentication, function(req, res, next){ 
+app.get("/protected", checkAuthentication, function(req, res, next){
 		res.send("Hello from protected endpoint"); 
- }); 
+ });
 
-	app.get("/protected", checkAuthentication, function(req, res, next){ 
-		res.send("Hello from protected endpoint"); 
- 	function checkAuthentication(req, res, next){ 
-
-			// Compruebe si el usuario está autenticado
-  if (req.session.userIdentity){ 
-				next()
-			} else {
-				// If not - redirect to authorization server
-				var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
-				var authorizationEndpoint = mcaCredentials.authorizationEndpoint;
-				var clientId = mcaCredentials.clientId;
-				var redirectUri = "http://some-server/oauth/callback"; // Your Web application redirect URI
-				var redirectUrl = authorizationEndpoint + "?response_type=code";
-				redirectUrl += "&client_id=" + clientId;
-				redirectUrl += "&redirect_uri=" + redirectUri;
-				res.redirect(redirectUrl);
-			} 
-		 	}
-	   	}
-       }
+	function checkAuthentication(req, res, next){
+		// Compruebe si el usuario está autenticado
+  if (req.session.userIdentity){
+			next()
+		} else {
+			// Si no - redireccione al servidor de autorizaciones
+			var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
+			var authorizationEndpoint = mcaCredentials.authorizationEndpoint;
+			var clientId = mcaCredentials.clientId;
+			var redirectUri = "http://some-server/oauth/callback"; // Your Web application redirect URI
+			var redirectUrl = authorizationEndpoint + "?response_type=code";
+			redirectUrl += "&client_id=" + clientId;
+			redirectUrl += "&redirect_uri=" + redirectUri;
+			res.redirect(redirectUrl);
+		}
+	}
 	```
 	{: codeblock}
 
@@ -154,18 +150,19 @@ El siguiente paso consiste en obtener la señal de acceso y las señales de iden
 
 	El código siguiente recupera los valores necesarios, y los envía con una solicitud POST.
 
-	```Java    
-  var cfEnv = require("cfenv");
-  var base64url = require("base64url ");
-  var request = require('request');
+	```Java
+	var cfEnv = require("cfenv");
+	var base64url = require("base64url ");
+	var request = require('request');
 
-	app.get("/oauth/callback", function(req, res, next){ 
-		var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
-	var tokenEndpoint = mcaCredentials.tokenEndpoint; 
-	var formData = { 
+	app.get("/oauth/callback", function(req, res, next) {
+		var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
+		var tokenEndpoint = mcaCredentials.tokenEndpoint;
+		var formData = {
 			grant_type: "authorization_code",
 			client_id: mcaCredentials.clientId,
-			redirect_uri: "http://some-server/oauth/callback",// Your Web application redirect uri
+			redirect_uri: "http://some-server/oauth/callback",
+			// El URI de redirección de la aplicación web
 			code: req.query.code
 		}
 
@@ -173,16 +170,16 @@ El siguiente paso consiste en obtener la señal de acceso y las señales de iden
 			url: tokenEndpoint,
 			formData: formData
 		}, function (err, response, body) {
-			var parsedBody = JSON.parse(body); 
-			req.session.accessToken = parsedBody.access_token; 
-			req.session.idToken = parsedBody.id_token; 
-			var idTokenComponents = parsedBody.id_token.split("."); // [header, payload, signature] 
+			var parsedBody = JSON.parse(body);
+			req.session.accessToken = parsedBody.access_token;
+			req.session.idToken = parsedBody.id_token;
+			var idTokenComponents = parsedBody.id_token.split("."); // [header, payload, signature]
 			var decodedIdentity= base64url.decode(idTokenComponents[1]);
-			req.session.userIdentity = JSON.parse(decodedIdentity)["imf.user"]; 
-			res.redirect("/"); 
+			req.session.userIdentity = JSON.parse(decodedIdentity)["imf.user"];
+			res.redirect("/");
 			}
-			).auth(mcaCredentials.clientId, mcaCredentials.secret); 
-  }
+			).auth(mcaCredentials.clientId, mcaCredentials.secret);
+		}
 	);
 	```
 	{: codeblock}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+Der {{site.data.keyword.amafull}}-Service wird durch den {{site.data.keyword.appid_full}}-Service ersetzt.
 
 # Cordova-Plug-in einrichten
 {: #getting-started-cordova}
@@ -29,7 +30,7 @@ Voraussetzungen:
 * Die URL der Back-End-Anwendung (**App-Route**). Sie benötigen diese Werte zum Senden von Anforderungen an die geschützten Endpunkte der Back-End-Anwendung.
 * Der Wert für die Tenant-ID. Öffnen Sie den Service im {{site.data.keyword.amashort}}-Dashboard. Klicken Sie auf die Schaltfläche **Mobile Systemerweiterungen**. Im Feld **App-GUID/TenantId** wird der Wert `tenantId` (auch als `appGUID` bezeichnet) angezeigt. Sie benötigen diesen Wert für die Initialisierung von Authorization Manager.
 * Die {{site.data.keyword.Bluemix_notm}}-**Region**. Ihre aktuelle {{site.data.keyword.Bluemix_notm}}-Region finden Sie im Header neben dem Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol"). Der Regionswert, der angezeigt wird, sollte einer der folgenden sein: `USA (Süden)`, `Vereinigtes Königreich` oder `Sydney`. Außerdem sollte er den im WebView-JavaScript-Code erforderlichen SDK-Werten entsprechen: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` oder `BMSClient.REGION_UK`. Sie benötigen diesen Wert für die Initialisierung des {{site.data.keyword.amashort}}-Clients.
-* Cordova-Anwendung oder ein vorhandenes Projekt. Weitere Informationen zur Einrichtung Ihrer Cordova-Anwendung finden Sie auf der [Cordova-Website ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cordova.apache.org/ "Symbol für externen Link"){: new_window}.
+* Cordova-Anwendung oder ein vorhandenes Projekt. Weitere Informationen zur Einrichtung Ihrer Cordova-Anwendung finden Sie auf der [Cordova-Website ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cordova.apache.org/){: new_window}.
 
 ## Cordova-Plug-in für {{site.data.keyword.amashort}} installieren
 {: #getting-started-cordova-plugin}
@@ -65,7 +66,7 @@ Das {{site.data.keyword.amashort}}-Client-SDK für Cordova ist ein Cordova-Plug-
 	```
 	{: codeblock}
 
-	Der Wert für *minSdkVersion* muss `15` oder höher sein. Im [Leitfaden für die Android-Plattform ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cordova.apache.org/docs/en/latest/guide/platforms/android/ "Symbol für externen Link"){: new_window} finden Sie Informationen zu Aktualisierungen der unterstützten *targetSdkVersion* des Android-SDK.
+	Der Wert für *minSdkVersion* muss `15` oder höher sein. In der Veröffentlichung [Android Platform Guide ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cordova.apache.org/docs/en/latest/guide/platforms/android/){: new_window} finden Sie Informationen zu Aktualisierungen der unterstützten Ziel-SDK-Version (*targetSdkVersion*) für das Android-SDK.
 
 3. Wenn Sie das iOS-Betriebssystem hinzugefügt haben, aktualisieren Sie das Element `<platform name="ios">` mit einer Zieldeklaration ('target'):
 
@@ -107,7 +108,7 @@ Das {{site.data.keyword.amashort}}-Client-SDK für Cordova ist ein Cordova-Plug-
 
 	2. Erstellen Sie den Build mit Xcode und führen Sie Ihre Anwendung mit Xcode aus.
 
-	**Hinweis**: Beim Ausführen von `cordova build ios` kann der folgende Fehler auftreten. Dieses Problem ist auf einen Fehler in einem Abhängigkeits-Plug-in zurückzuführen, der unter [Issue 12 ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/blakgeek/cordova-plugin-cocoapods-support/issues/12 "Symbol für externen Link"){: new_window} verfolgt wird. Sie können das iOS-Projekt aber weiterhin in Xcode über einen Simulator oder ein Gerät ausführen.
+	**Hinweis**: Beim Ausführen von `cordova build ios` kann der folgende Fehler auftreten. Dieses Problem ist auf einen Fehler in einem Abhängigkeits-Plug-in zurückzuführen, der unter [Issue 12 ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/blakgeek/cordova-plugin-cocoapods-support/issues/12){: new_window} verfolgt wird. Sie können das iOS-Projekt aber weiterhin in Xcode über einen Simulator oder ein Gerät ausführen.
 
 	```
 	xcodebuild: error: Unable to find a destination matching the provided destination specifier:

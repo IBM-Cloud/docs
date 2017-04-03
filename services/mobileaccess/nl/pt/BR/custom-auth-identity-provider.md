@@ -2,11 +2,15 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-03-15"
 
 ---
 
 {:codeblock:.codeblock}
+
+
+O serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.
+
 
 # Criando um provedor de identidade customizado
 {: #custom-create}

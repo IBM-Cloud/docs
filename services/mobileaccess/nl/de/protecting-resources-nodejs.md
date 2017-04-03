@@ -2,12 +2,14 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2016-10-27"
+lastupdated: "2017-03-15"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 {:codeblock:.codeblock}
+
+Der {{site.data.keyword.amafull}}-Service wird durch den {{site.data.keyword.appid_full}}-Service ersetzt.
 
 # Node.js-Ressourcen mit {{site.data.keyword.amashort}} schützen
 {: #protecting-resources-nodejs}
@@ -19,14 +21,14 @@ Sie können das {{site.data.keyword.amashort}}-Server-SDK verwenden, um Ressourc
 {: #before-you-begin}
 
 * Sie müssen mit der Entwicklung von Node.js-Anwendungen in {{site.data.keyword.Bluemix_notm}} vertraut sein. Weitere Informationen finden Sie im Abschnitt zum [Erstellen von Apps mit dem SDK für Node.js](https://console.{DomainName}/docs/runtimes/nodejs/index.html#nodejs_runtime).
-* Das {{site.data.keyword.amashort}}-Server-SDK erfordert, dass Ihr Node.js-Server mit dem `Express`-Framework implementiert ist. Beachten Sie, dass es andere Frameworks gibt, die `Express`-Frameworks verwenden, wie zum Beispiel LoopBack. Sie können das {{site.data.keyword.amashort}}-Server-SDK mit einem beliebigen dieser Frameworks verwenden. Weitere Informationen zum Express-Framework finden Sie unter [Expressjs.com ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://expressjs.com/ "Symbol für externen Link"){: new_window}.
+* Das {{site.data.keyword.amashort}}-Server-SDK erfordert, dass Ihr Node.js-Server mit dem `Express`-Framework implementiert ist. Beachten Sie, dass es andere Frameworks gibt, die `Express`-Frameworks verwenden, wie zum Beispiel LoopBack. Sie können das {{site.data.keyword.amashort}}-Server-SDK mit einem beliebigen dieser Frameworks verwenden. Weitere Informationen zum Express-Framework finden Sie unter [Expressjs.com ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://expressjs.com/){: new_window}.
 
 ## Informationen zum Server-SDK
 {: #about}
 
 Das {{site.data.keyword.amashort}}-Server-SDK stellt die Passport-Strategie `MCABackendStrategy` für die Verwendung in Back-End-Anwendungen zur Verfügung, die in IBM {{site.data.keyword.Bluemix_notm}} bereitgestellt werden. Zum Schutz Ihrer App gegen unbefugten Zugriff und zum Erfassen von Überwachungsdaten müssen Sie Ihren Node.js-Server mit `MCABackendStrategy` instrumentieren. Das NPM-Modul `bms-mca-token-validation-strategy` stellt die Passport-Strategie `MCABackendStrategy` und eine Verifizierungsmethode bereit, um das von {{site.data.keyword.amashort}} ausgegebene Zugriffstoken und ID-Token zu validieren. Dieses Modul stellt außerdem automatisch Überwachungsdaten zu Sicherheitsereignissen bereit.
 
-Das {{site.data.keyword.amashort}}-Server-SDK verwendet das `Passport`-Framework, um die Berechtigung umzusetzen. Weitere Informationen finden Sie unter [Passportjs.org ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://passportjs.org/ "Symbol für externen Link"){: new_window}.
+Das {{site.data.keyword.amashort}}-Server-SDK verwendet das `Passport`-Framework, um die Berechtigung umzusetzen.  Weitere Informationen finden Sie unter [Passportjs.org ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://passportjs.org/){: new_window}.
 
 ## Server-SDK installieren
 {: #protecting-resources-serversdk}

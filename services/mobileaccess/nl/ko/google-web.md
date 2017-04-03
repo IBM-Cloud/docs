@@ -2,9 +2,11 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-03-15"
 
 ---
+
+{{site.data.keyword.amafull}} 서비스가 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다.
 
 # 웹 앱에서 Google 인증 사용
 {: #google-auth-web}
@@ -46,7 +48,7 @@ Google 애플리케이션 ID와 본인확인정보가 있으면 {{site.data.keyw
 1. 웹 앱에서 권한 서버의 다음 엔드포인트로 경로를 재지정하십시오.  
   https://imf-newauthserver.bluemix.net/oauth/v2/authorization
 
-    다음 조회 매개변수를 사용합니다. 
+  다음 조회 매개변수를 사용합니다. 
 	```
    response_type='authorization_code'
    client_id= <bluemix_app_guid>

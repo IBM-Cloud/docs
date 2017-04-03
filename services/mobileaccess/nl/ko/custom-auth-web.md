@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-08"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+{{site.data.keyword.amafull}} 서비스가 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다.
 
 #{{site.data.keyword.amashort}} 웹 애플리케이션용 사용자 정의 인증 구성
 {: #custom-web}
@@ -243,7 +245,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 
 	`redirect_uri` 매개변수는 이전 권한 부여 요청에 사용된 `redirect_uri`와 일치해야 합니다. 코드 매개변수 값은 권한 부여 요청 종료 시 응답에 수신된 권한 부여 코드여야 합니다. 권한 부여 코드는 10분 동안만 유효합니다. 이후에는 새 코드를 확보해야 합니다.
 
-	응답 본문에는 JWT 형식의 `access_token` 및 `id_token`이 포함됩니다. [JWT 웹 사이트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://jwt.io "외부 링크 아이콘"){: new_window}를 참조하십시오. 
+	응답 본문에는 JWT 형식의 `access_token` 및 `id_token`이 포함됩니다. [JWT 웹 사이트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://jwt.io){: new_window}를 참조하십시오. 
 
 	액세스 및 ID 토큰을 받은 후에는 웹 세션을 인증됨으로 플래그 지정할 수 있으며 선택적으로 이러한 토큰을 유지할 수 있습니다. 
 

@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -11,6 +11,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+{{site.data.keyword.amafull}} 서비스가 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다.
 
 # 웹 애플리케이션에서 Google 인증 사용
 {: #google-auth-web}
@@ -31,7 +33,7 @@ Google 로그인을 사용하여 웹 애플리케이션의 사용자를 인증�
 ## 웹 사이트에 맞게 Google 애플리케이션 구성
 {: #google-auth-config}
 
-ID 제공자로서 Google 사용을 시작하려면 [Google 개발자 콘솔 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.developers.google.com "외부 링크 아이콘"){: new_window}에서 프로젝트를 작성하십시오. 프로젝트 작성의 일부로 **Google 클라이언트 ID** 및 **본인확인정보**를 확보하십시오. Google 클라이언트 ID 및 본인확인정보는 Google 인증에서 사용하는 애플리케이션에 대한 고유 ID이며, {{site.data.keyword.amashort}} 대시보드 설정에 필요합니다. 
+ID 제공자로 Google 사용을 시작하려면 [Google 개발자 콘솔 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.developers.google.com){: new_window}에서 프로젝트를 작성하십시오. 프로젝트 작성의 일부로 **Google 클라이언트 ID** 및 **본인확인정보**를 확보하십시오. Google 클라이언트 ID 및 본인확인정보는 Google 인증에서 사용하는 애플리케이션에 대한 고유 ID이며, {{site.data.keyword.amashort}} 대시보드 설정에 필요합니다. 
 
 1. Google 개발자 콘솔에서 Google 애플리케이션을 여십시오. 
 3. **Google+** API를 추가하십시오. 
@@ -94,27 +96,22 @@ Google 애플리케이션 ID와 본인확인정보가 있으면 {{site.data.keyw
 		res.send("Hello from protected endpoint");
 	});
 
-	app.get("/protected", checkAuthentication, function(req, res, next) {
-		res.send("Hello from protected endpoint");
-		function checkAuthentication(req, res, next) {
-
-			// Check if user is authenticated
-			if (req.session.userIdentity) {
-				next()
-			} else {
-				// If not - redirect to authorization server
-				var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
-				var authorizationEndpoint = mcaCredentials.authorizationEndpoint;
-				var clientId = mcaCredentials.clientId;
-				var redirectUri = "http://some-server/oauth/callback"; // Your Web application redirect URI
-				var redirectUrl = authorizationEndpoint + "?response_type=code";
-				redirectUrl += "&client_id=" + clientId;
-				redirectUrl += "&redirect_uri=" + redirectUri;
-				res.redirect(redirectUrl);
-				}
-		 	}
-	   	}
-       }
+	function checkAuthentication(req, res, next) {
+		// Check if user is authenticated
+		if (req.session.userIdentity) {
+			next()
+		} else {
+			// If not - redirect to authorization server
+			var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
+			var authorizationEndpoint = mcaCredentials.authorizationEndpoint;
+			var clientId = mcaCredentials.clientId;
+			var redirectUri = "http://some-server/oauth/callback"; // Your Web application redirect URI
+			var redirectUrl = authorizationEndpoint + "?response_type=code";
+			redirectUrl += "&client_id=" + clientId;
+			redirectUrl += "&redirect_uri=" + redirectUri;
+			res.redirect(redirectUrl);
+		}
+	}
 	```
 	{: codeblock}
 

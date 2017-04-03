@@ -2,9 +2,11 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-03-15"
 
 ---
+
+Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.
 
 # Activation de l'authentification Google pour les applications Web
 {: #google-auth-web}

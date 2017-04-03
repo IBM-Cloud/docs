@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -11,6 +11,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+{{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービスに置き換えられます。
 
 # Web アプリケーション用の Google 認証の使用可能化
 {: #google-auth-web}
@@ -35,7 +37,7 @@ Google Sign-In を使用して、Web アプリケーションのユーザーを�
 ## Web サイト用の Google アプリケーションの構成
 {: #google-auth-config}
 
-Google を ID プロバイダーとして使用し始めるには、[Google Developer Console ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.developers.google.com "外部リンク・アイコン"){: new_window}にプロジェクトを作成します。プロジェクト作成の一環として、**Google Client ID** および **Secret** を取得します。Google Client ID および Secret は、Google 認証によって使用される、アプリケーションの固有の識別子であり、{{site.data.keyword.amashort}} ダッシュボードのセットアップに必要です。
+Google を ID プロバイダーとして使用し始めるには、[Google Developer Console ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.developers.google.com){: new_window}にプロジェクトを作成します。プロジェクト作成の一環として、**Google Client ID** および **Secret** を取得します。Google Client ID および Secret は、Google 認証によって使用される、アプリケーションの固有の識別子であり、{{site.data.keyword.amashort}} ダッシュボードのセットアップに必要です。
 
 1. Google Developer Console で Google アプリケーションを開きます。
 3. **Google+** API を追加します。
@@ -98,15 +100,12 @@ app.get("/protected", checkAuthentication, function(req, res, next){
   res.send("Hello from protected endpoint"); 
  }); 
 
- app.get("/protected", checkAuthentication, function(req, res, next){  
-      res.send("Hello from protected endpoint"); 
- 	function checkAuthentication(req, res, next){ 
-
-	// Check if user is authenticated 
+ function checkAuthentication(req, res, next) {
+		// Check if user is authenticated 
   if (req.session.userIdentity){ 
     next()
-			} else {
-				// If not - redirect to authorization server 
+		} else {
+			// If not - redirect to authorization server 
 				var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
 				var authorizationEndpoint = mcaCredentials.authorizationEndpoint; 
 				var clientId = mcaCredentials.clientId; 
@@ -117,8 +116,6 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 				res.redirect(redirectUrl); 
 			} 
 		}
-	   	}
-       }
 	```
 	{: codeblock}
 

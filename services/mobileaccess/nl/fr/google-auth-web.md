@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -11,6 +11,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.
 
 # Activation de l'authentification Google pour les applications Web
 {: #google-auth-web}
@@ -31,8 +33,7 @@ Vous devez disposer des éléments suivants :
 ## Configuration d'une application Google pour votre site Web
 {: #google-auth-config}
 
-Pour commencer à utiliser Google en tant que fournisseur d'identité, créez un projet dans la [Console Google Developer ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.developers.google.com "Icône de lien externe"){: new_window}.
-Une
+Pour commencer à utiliser Google en tant que fournisseur d'identité, créez un projet dans la [console Google Developer ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.developers.google.com){: new_window}. Une
 partie de la création d'un  projet consiste à obtenir un **ID client Google** et une **Valeur confidentielle**. L'ID client
 Google et la Valeur confidentielle sont les identificateurs uniques de votre application utilisés par l'authentification Google
 et sont requis pour la configuration du tableau de bord {{site.data.keyword.amashort}}.
@@ -105,15 +106,12 @@ Pour démarrer le processus d'autorisation :
 		res.send("Bonjour, ceci est un noeud final protégé");
  });
 
-	app.get("/protected", checkAuthentication, function(req, res, next){
-		res.send("Bonjour, ceci est un noeud final protégé");
- 	function checkAuthentication(req, res, next){
-
-			// Vérifie si l'utilisateur est authentifié
+	function checkAuthentication(req, res, next){
+		// Vérifie si l'utilisateur est authentifié
   if (req.session.userIdentity){
-				next()
-			} else {
-				// Si ce n'est pas le cas, redirection vers un serveur d'autorisations
+			next()
+		} else {
+			// Si ce n'est pas le cas, redirection vers un serveur d'autorisations
 				var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
 				var authorizationEndpoint = mcaCredentials.authorizationEndpoint;
 				var clientId = mcaCredentials.clientId;
@@ -123,9 +121,7 @@ Pour démarrer le processus d'autorisation :
 				redirectUrl += "&redirect_uri=" + redirectUri;
 				res.redirect(redirectUrl);
 			}
-		 	}
-	   	}
-       }
+	}
 	```
 	{: codeblock}
 

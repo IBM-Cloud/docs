@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -11,6 +11,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+Il servizio {{site.data.keyword.amafull}} è stato sostituito con il servizio {{site.data.keyword.appid_full}}.
 
 # Abilitazione dell'autenticazione Google per le applicazioni Web
 {: #google-auth-web}
@@ -31,7 +33,7 @@ Utilizza Google Sign-In per autenticare gli utenti alla tua applicazione Web. Ag
 ## Configurazione di un'applicazione Google per il tuo sito web
 {: #google-auth-config}
 
-Per iniziare a usare Google come un provider di identità, crea un progetto nella [Google Developer Console ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.developers.google.com "Icona link esterno"){: new_window}. Parte della creazione di un progetto consiste nell'ottenere un **ID client Google**  e un **Segreto**. Il segreto e l'ID client Google sono identificativi univoci per la tua applicazione utilizzati dall'autenticazione Google e sono necessari per la configurazione del dashboard {{site.data.keyword.amashort}}.
+Per iniziare a usare Google come un provider di identità, crea un progetto nella [Google Developer Console ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.developers.google.com){: new_window}. Parte della creazione di un progetto consiste nell'ottenere un **ID client Google**  e un **Segreto**. Il segreto e l'ID client Google sono identificativi univoci per la tua applicazione utilizzati dall'autenticazione Google e sono necessari per la configurazione del dashboard {{site.data.keyword.amashort}}.
 
 1. Apri la tua applicazione Google nella Google Developer Console.
 3. Aggiungi l'API **Google+**.
@@ -98,15 +100,12 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 		res.send("Hello from protected endpoint"); 
  });
 
-	app.get("/protected", checkAuthentication, function(req, res, next){
-		res.send("Hello from protected endpoint"); 
- 	function checkAuthentication(req, res, next){
-
-			// Controlla se l'utente è autenticato
+	function checkAuthentication(req, res, next){
+		// Controlla se l'utente è autenticato
   if (req.session.userIdentity){
-				next()
+			next()
 			} else {
-				// Se non lo è - reindirizza il server dell'autorizzazione
+			// Se non lo è - reindirizza il server dell'autorizzazione
 				var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
 				var authorizationEndpoint = mcaCredentials.authorizationEndpoint;
 				var clientId = mcaCredentials.clientId;
@@ -116,9 +115,7 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 				redirectUrl += "&redirect_uri=" + redirectUri;
 				res.redirect(redirectUrl);
 			}
-		 	}
-	   	}
-       }
+	}
 	```
 	{: codeblock}
 

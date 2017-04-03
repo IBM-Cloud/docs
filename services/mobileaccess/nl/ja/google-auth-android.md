@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+{{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービスに置き換えられます。
 
 # Android アプリ用の Google 認証の使用可能化
 {: #google-auth-android}
@@ -35,8 +37,7 @@ Google を使用して、{{site.data.keyword.amafull}} Android アプリケー�
 ## Google Developer Console でのプロジェクトの作成
 {: #create-google-project}
 
-Google を ID プロバイダーとして使用し始めるには、[Google Developer Console ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.developers.google.com "外部リンク・アイコン"){: new_window}にプロジェクトを作成します。
-プロジェクト作成の一環として、Google Client ID を取得します。Google Client ID は、Google 認証によって使用される、アプリケーション用の固有 ID であり、{{site.data.keyword.amashort}} サービスのセットアップに必要です。
+Google を ID プロバイダーとして使用し始めるには、[Google Developer Console ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.developers.google.com){: new_window}にプロジェクトを作成します。プロジェクト作成の一環として、Google Client ID を取得します。Google Client ID は、Google 認証によって使用される、アプリケーション用の固有 ID であり、{{site.data.keyword.amashort}} サービスのセットアップに必要です。
 
 コンソールから以下を実行します。
 
@@ -53,7 +54,7 @@ Google を ID プロバイダーとして使用し始めるには、[Google Deve
 
 Google がユーザーのアプリケーションの認証性を検証するためには、署名証明書の指紋を指定する必要があります。
 
-Android OS では、Android デバイスにインストールされたすべてのアプリケーションがデベロッパー証明書によって署名されている必要があります。Android アプリケーションは、デバッグおよびリリースという 2 つのモードで構築できます。通常は、デバッグ・モード用とリリース・モード用に別々の証明書を用意することが推奨されます。デバッグ・モードでの Android アプリケーションの署名に使用される証明書は、Android SDK にバンドルされています。Android SDK は、通常、Android Studio によって自動的にインストールされます。アプリケーションを Google Play にリリースする場合は、通常ユーザー自身で生成する、別の証明書を使用してアプリに署名する必要があります。詳しくは、[アプリに署名する![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://developer.android.com/tools/publishing/app-signing.html "外部リンク・アイコン"){: new_window}を参照してください。
+Android OS では、Android デバイスにインストールされたすべてのアプリケーションがデベロッパー証明書によって署名されている必要があります。Android アプリケーションは、デバッグおよびリリースという 2 つのモードで構築できます。通常は、デバッグ・モード用とリリース・モード用に別々の証明書を用意することが推奨されます。デバッグ・モードでの Android アプリケーションの署名に使用される証明書は、Android SDK にバンドルされています。Android SDK は、通常、Android Studio によって自動的にインストールされます。アプリケーションを Google Play にリリースする場合は、通常ユーザー自身で生成する、別の証明書を使用してアプリに署名する必要があります。詳しくは、[アプリに署名する![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://developer.android.com/tools/publishing/app-signing.html){: new_window}を参照してください。
 
 開発環境用の証明書が含まれた鍵ストアは、`~/.android/debug.keystore` ファイル内に保管されています。鍵ストアのデフォルト・パスワードは、`android` です。この証明書は、デバッグ・モードでのアプリケーションの構築に使用されます。
 
@@ -156,7 +157,7 @@ Android Studio プロジェクトから、以下を行います。
 
 	これらの値の取得について詳しくは、[開始する前に](##before-you-begin)を参照してください。
 
-	**注:** Android アプリケーションの対象が Android バージョン 6.0 (API レベル 23) 以降の場合、そのアプリケーションに、`register` の呼び出しの前に `android.permission.GET_ACCOUNTS` 呼び出しがあるようにする必要があります。詳しくは、[Android でのパーミッション リクエスト![ 外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.android.com/training/permissions/requesting.html "外部リンク・アイコン"){: new_window}を参照してください。
+	**注:** Android アプリケーションの対象が Android バージョン 6.0 (API レベル 23) 以降の場合、そのアプリケーションに、`register` の呼び出しの前に `android.permission.GET_ACCOUNTS` 呼び出しがあるようにする必要があります。詳しくは、[Android でのパーミッション・リクエストに関する資料![ 外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.android.com/training/permissions/requesting.html){: new_window}を参照してください。
 
 1. 以下のコードをアクティビティーに追加します。
 

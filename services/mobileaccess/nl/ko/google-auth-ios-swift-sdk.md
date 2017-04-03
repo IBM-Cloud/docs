@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+{{site.data.keyword.amafull}} 서비스가 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다.
 
 # iOS 앱에서 Google 인증 사용(Swift SDK)
 {: #google-auth-ios}
@@ -32,7 +34,7 @@ Google 로그인을 사용하여 {{site.data.keyword.amafull}} iOS Swift 앱에�
 ## Google 로그인을 위해 앱 준비
 {: #google-sign-in-ios}
 
-[iOS용 Google 로그인 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developers.google.com/identity/sign-in/ios/start-integrating "외부 링크 아이콘"){: new_window}에서 Google이 제공하는 지시사항에 따라 Google 로그인을 위한 앱을 준비하십시오. 
+[iOS용 Google 로그인 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developers.google.com/identity/sign-in/ios/start-integrating){: new_window}에서 Google이 제공하는 지시사항에 따라 Google 로그인을 위한 앱을 준비하십시오. 
 
 이 프로세스에서는 다음을 수행합니다.
 
@@ -46,7 +48,7 @@ Google 로그인을 사용하여 {{site.data.keyword.amafull}} iOS Swift 앱에�
 
 1. 기본 대상의 **일반** 탭에 있는 **ID** 섹션에서 Xcode 프로젝트의 **번들 ID**를 기록하십시오. Google 로그인 프로젝트를 작성하는 데 필요합니다. 
 
-1. [Google 개발자 사이트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developers.google.com/mobile/add?platform=ios "외부 링크 아이콘"){: new_window}에서 iOS용 Google 로그인에 대한 프로젝트를 작성하십시오. 
+1. [Google 개발자 사이트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developers.google.com/mobile/add?platform=ios){: new_window}에서 iOS용 Google 로그인을 위한 프로젝트를 작성하십시오. 
 
 1. 프로젝트에 Google 로그인 API를 추가하십시오.
 
@@ -54,9 +56,9 @@ Google 로그인을 사용하여 {{site.data.keyword.amafull}} iOS Swift 앱에�
 
    **중요:** `GoogleService-Info.plist` 파일을 가져올 때 파일을 열고 `CLIENT_ID` 값을 기록해 두십시오. 나중에 {{site.data.keyword.amashort}} 백엔드 애플리케이션을 구성하는 데 해당 값이 필요합니다.
 
-1. `GoogleService-Info.plist` 파일을 Xcode 프로젝트에 추가하십시오. 자세한 정보는 [프로젝트에 구성 파일 추가 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config "외부 링크 아이콘"){: new_window}를 참조하십시오. 
+1. `GoogleService-Info.plist` 파일을 Xcode 프로젝트에 추가하십시오. 자세한 정보는 [프로젝트에 구성 파일 추가 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config){: new_window}를 참조하십시오. 
 
-1. `REVERSE_CLIENT_ID` 및 번들 ID를 사용하여 Xcode 프로젝트의 URL 스킴을 업데이트하십시오. 자세한 정보는 [프로젝트에 URL 스킴 추가 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project "외부 링크 아이콘"){: new_window}를 참조하십시오. 
+1. `REVERSE_CLIENT_ID` 및 번들 ID를 사용하여 Xcode 프로젝트의 URL 스킴을 업데이트하십시오. 자세한 정보는 [프로젝트에 URL 스킴 추가 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project){: new_window}를 참조하십시오. 
 
 1. 사용하는 앱의 `project-Bridging-Header.h` 파일을 다음 코드로 업데이트하십시오. 
 
@@ -65,7 +67,7 @@ Google 로그인을 사용하여 {{site.data.keyword.amafull}} iOS Swift 앱에�
 	```
 	{: codeblock}
 
-	브릿지 헤더 파일의 업데이트에 대한 자세한 정보는 [로그인 사용 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in "외부 링크 아이콘"){: new_window}을 참조하십시오. 
+	브릿지 헤더 파일 업데이트에 대한 자세한 정보는 [로그인 사용 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in){: new_window}을 참조하십시오. 
 
 ## Google 인증용 {{site.data.keyword.amashort}} 구성
 {: #google-auth-ios-config}
@@ -93,7 +95,7 @@ Google 로그인을 사용하여 {{site.data.keyword.amafull}} iOS Swift 앱에�
 	```
 	{: codeblock}
 
-자세한 정보는 [CocoaPods 웹 사이트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cocoapods.org/ "외부 링크 아이콘"){: new_window}를 참조하십시오. 
+자세한 정보는 [CocoaPods 웹 사이트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cocoapods.org/){: new_window}를 참조하십시오. 
 
 ### CocoaPods를 사용하여 {{site.data.keyword.amashort}} 클라이언트 Swift SDK 설치
 {: #facebook-auth-install-swift-cocoapods}

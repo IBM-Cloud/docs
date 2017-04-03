@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -11,6 +11,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。
 
 # {{site.data.keyword.amashort}} SDK、範例及 API 參考資料
 
@@ -28,7 +29,7 @@ lastupdated: "2017-01-15"
 ### Android
 {: #coresdk-android}
 
-[GitHub 儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core "外部鏈結圖示"){: new_window}
+[GitHub 儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
 
 #### 使用 Gradle 安裝核心 SDK
 {: #coresdk-android-gradle}
@@ -47,7 +48,7 @@ lastupdated: "2017-01-15"
 ### iOS (Swift SDK)
 {: #coresdk-ios-swift}
 
-[GitHub 儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security "外部鏈結圖示"){: new_window}
+[GitHub 儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security){: new_window}
 
 #### 使用 CocoaPods 安裝核心 SDK
 {: #coresdk-ios-siwft-cocoapods}
@@ -63,7 +64,7 @@ pod 'BMSSecurity'
 ### Cordova
 {: #coresdk-cordova}
 
-[GitHub 儲存庫及 API 參考資料 ![外部鏈結圖示](../../icons/launch-glyph.svg " 外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core "外部鏈結圖示"){: new_window}
+[GitHub 儲存庫及 API 參考資料 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}
 
 #### 使用 Cordova CLI 安裝核心 SDK
 {: #coresdk-cordova-cli}
@@ -80,7 +81,7 @@ cordova plugin add bms-core
 ### Android
 {: #facebooksdk-android}
 
-[GitHub 儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-facebookauthentication "外部鏈結圖示"){: new_window}，
+[GitHub 儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-facebookauthentication){: new_window}。
 
 #### 使用 Gradle 安裝 Facebook SDK
 {: #facebooksdk-android-gradle}
@@ -98,7 +99,7 @@ cordova plugin add bms-core
 ### iOS (Swift SDK)
 {: #facebooksdk-ios-swift}
 
-[GitHub 儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-facebookauthentication "外部鏈結圖示"){: new_window}
+[GitHub 儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-facebookauthentication){: new_window}
 
 #### 使用 CocoaPods 安裝 Facebook SDK
 {: #facebooksdk-ios-swift-cocoapods}
@@ -114,7 +115,7 @@ pod 'BMSFacebookAuthentication'
 ### Cordova
 {: #facebooksdk-cordova}
 
-[GitHub 儲存庫及 API 參考資料 ![外部鏈結圖示](../../icons/launch-glyph.svg " 外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core "外部鏈結圖示"){: new_window}
+[GitHub 儲存庫及 API 參考資料 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}
 
 #### 使用 Cordova CLI 安裝 Facebook SDK
 {: #facebooksdk-cordova-cli}
@@ -132,7 +133,7 @@ cordova plugin add ibm-mfp-core
 ### Android
 {: #googlesdk-android}
 
-[GitHub 儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-googleauthentication "外部鏈結圖示"){: new_window}
+[GitHub 儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-googleauthentication){: new_window}。
 
 
 #### 使用 Gradle 安裝 Google+ SDK
@@ -152,7 +153,7 @@ cordova plugin add ibm-mfp-core
 ### iOS (Swift SDK)
 {: #googlesdk-ios-swift}
 
-[GitHub 儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-googleauthentication "外部鏈結圖示"){: new_window}
+[GitHub 儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-googleauthentication){: new_window}
 
 #### 使用 CocoaPods 安裝 Google+ SDK
 {: #googlesdk-ios-swift-cocoapods}
@@ -169,7 +170,7 @@ pod 'BMSGoogleAuthentication'
 ### Cordova
 {: #googlesdk-cordova}
 
-[GitHub 儲存庫及 API 參考資料 ![外部鏈結圖示](../../icons/launch-glyph.svg " 外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core "外部鏈結圖示"){: new_window}
+[GitHub 儲存庫及 API 參考資料 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}
 
 #### 使用 Cordova CLI 安裝 Google+ SDK
 {: #googlesdk-cordova-cli}
@@ -184,7 +185,7 @@ cordova plugin add ibm-mfp-core
 ## 用於 Node.js 伺服器的伺服器 SDK
 {: #serversdk}
 
-[GitHub 儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-mca-token-validation-strategy "外部鏈結圖示"){: new_window}
+[GitHub 儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-mca-token-validation-strategy){: new_window}
 
 #### 使用 npm 安裝伺服器 SDK
 {: #serversdk-npm}
@@ -214,7 +215,7 @@ npm install -save bms-mca-token-validation-strategy
 ## Node.js OAuth SDK
 {: #serverlibertysdk-github}
 
-[GitHub 儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-mca-oauth-sdk "外部鏈結圖示"){: new_window}
+[GitHub 儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-mca-oauth-sdk){: new_window}
 
 #### 使用 npm 安裝 OAuth SDK
 {: #oauthsdk}
@@ -228,8 +229,6 @@ npm install -save bms-mca-oauth-sdk
 ## 自訂身分提供者範例
 {: #customidprovider}
 
-[簡式範例 GitHub 儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "外部鏈結圖示"){: new_window}
+[簡單範例 GitHub 儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}
 
-[進階範例 GitHub 儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management "外部鏈結圖示"){: new_window}
-
-
+[進階範例 GitHub 儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management){: new_window}

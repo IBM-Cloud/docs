@@ -2,10 +2,12 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2016-12-04"
+lastupdated: "2017-03-15"
 
 ---
 {:codeblock:.codeblock}
+
+{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。
 
 # 使用 {{site.data.keyword.amashort}} 保護 Liberty for Java 資源
 {: #protecting-liberty}

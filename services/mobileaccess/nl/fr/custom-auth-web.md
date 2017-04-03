@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-08"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.
 
 #Configuration d'une authentification personnalisée pour les applications Web {{site.data.keyword.amashort}}
 {: #custom-web}
@@ -258,7 +260,7 @@ d'authentification HTTP de base.
 d'autorisation. La valeur du paramètre code doit être le code d'accord reçu dans la réponse à l'issue de la demande d'autorisation. Ce code n'est valide que
 pendant 10 minutes, après quoi vous devrez en obtenir un nouveau.
 
-	Le corps de la réponse contiendra les éléments `access_token` et `id_token` au format JWT. Pour plus d'informations sur ces jetons, reportez-vous au [site Web JWT ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://jwt.io "Icône de lien externe"){: new_window}.
+	Le corps de la réponse contiendra les éléments `access_token` et `id_token` au format JWT. Pour plus d'informations sur ces jetons, reportez-vous au [site Web JWT ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://jwt.io){: new_window}.
 
 	Une fois que vous avez reçu les jetons d'accès et d'identité, vous pouvez marquer la session Web comme authentifiée
 et, si vous le désirez, rendre persistants ces jetons.

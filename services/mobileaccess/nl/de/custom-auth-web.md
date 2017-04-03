@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-08"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+Der {{site.data.keyword.amafull}}-Service wird durch den {{site.data.keyword.appid_full}}-Service ersetzt.
 
 #Angepasste Authentifizierung für {{site.data.keyword.amashort}}-Webanwendungen konfigurieren
 {: #custom-web}
@@ -247,7 +249,7 @@ app.get("/oauth/callback", function(req, res, next){
 
 	Beachten Sie, dass der Parameter `redirect_uri` mit dem Parameter `redirect_uri` aus der vorhergehenden Berechtigungsanforderung übereinstimmen muss. Als Wert für den Parameter 'code' muss der Autorisierungscode angegeben werden, der in der Antwort am Ende der Autorisierungsanforderung empfangen wurde. Der Autorisierungscode ist nur 10 Minuten gültig, danach muss ein neuer Code abgerufen werden.
 
-	Der Antworthauptteil enthält die Parameter `access_token` und `id_token` im JWT-Format (siehe die [JWT-Website ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://jwt.io "Symbol für externen Link"){: new_window}.
+	Der Antworthauptteil enthält die Parameter `access_token` und `id_token` im JWT-Format (siehe die [JWT-Website ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://jwt.io){: new_window}).
 
 	Nachdem Sie das Zugriffstoken und das Identitätstoken empfangen haben, können Sie die Websitzung als authentifiziert markieren und optional diese Tokens speichern.
 

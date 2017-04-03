@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -11,6 +11,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+O serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.
 
 # Ativando a autenticação do Google para aplicativos da web
 {: #google-auth-web}
@@ -32,7 +34,9 @@ Você deve ter:
 ## Configurando um aplicativo Google para seu website
 {: #google-auth-config}
 
-Para iniciar o uso do Google como um provedor de identidade, crie um projeto no [Google Developer Console ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.developers.google.com "Ícone de link externo"){: new_window}.Parte
+Para começar a usar o Google como um provedor de identidade, crie um projeto no
+[Console do Google Developer ![Ícone de link
+externo](../../icons/launch-glyph.svg "External link icon")](https://console.developers.google.com){: new_window}. Parte
 da criação de um projeto é obter um **Identificador de cliente do Google** e um **Segredo**. O Identificador
 de cliente do Google e o Segredo são os identificadores exclusivos para seu aplicativo usados pela autenticação do Google e são necessários para
 configurar o painel {{site.data.keyword.amashort}}.
@@ -118,15 +122,12 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 		res.send("Hello from protected endpoint"); 
  });
 
-	app.get("/protected", checkAuthentication, function(req, res, next){
-		res.send("Hello from protected endpoint"); 
- 	function checkAuthentication(req, res, next){
-
-			// Check if user is authenticated 
- 	if (req.session.userIdentity){
-				next()
-			} else {
-				// If not - redirect to authorization server 
+	function checkAuthentication(req, res, next){
+		// Check if user is authenticated 
+  if (req.session.userIdentity){
+			next()
+		} else {
+			// If not - redirect to authorization server 
 				var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
 				var authorizationEndpoint = mcaCredentials.authorizationEndpoint; 
 				var clientId = mcaCredentials.clientId; 
@@ -136,9 +137,7 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 				redirectUrl += "&redirect_uri=" + redirectUri; 
 				res.redirect(redirectUrl); 
 			}
-		 	}
-	   	}
-       }
+	}
 	```
 	{: codeblock}
 

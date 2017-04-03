@@ -2,9 +2,11 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-03-15"
 
 ---
+
+{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。
 
 # 配置 {{site.data.keyword.amashort}} 进行定制认证
 {: #custom-dash}

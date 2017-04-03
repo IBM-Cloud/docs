@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-08"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+O serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.
 
 #Configurando a autenticação customizada para aplicativos
 da web
@@ -314,7 +316,7 @@ autorização anteriormente. O valor do parâmetro de código deve ser o código
 código de concessão é válido por 10 minutos somente, após os quais será necessário obter um novo código.
 
 	O corpo de resposta conterá `access_token` e `id_token`
-no formato JWT; veja o [website do JWT ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://jwt.io "Ícone de link externo"){: new_window}.
+no formato JWT; veja o [website JWT ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://jwt.io){: new_window}.
 
 	Assim que tiver recebido o acesso e os tokens de
 identidade, será possível sinalizar a sessão da web como

@@ -2,13 +2,15 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
+
+{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。
 
 # 使用 Facebook 認證鑑別使用者
 {: #facebook-auth-overview}
@@ -58,7 +60,7 @@ lastupdated: "2017-01-15"
 
 您需要這個值來配置行動或 Web 應用程式的 Facebook 鑑別。
 
-1. 存取 [Facebook for Developers ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developers.facebook.com "外部鏈結圖示"){: new_window} 網站。
+1. 存取 [Facebook for Developers ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developers.facebook.com){: new_window} 網站。
 
 1. 開啟**我的應用程式**下拉清單，然後選取**新增應用程式**。
 
