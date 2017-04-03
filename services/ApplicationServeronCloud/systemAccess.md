@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-31"
 
 ---
 
@@ -260,3 +260,33 @@ The following high-level steps assume that the prerequisite tasks are complete:
 **NOTE:** The steps that are provided represent one path of many when you're attempting to configure a web server. If further assistance is needed, see the [IBM Knowledge Center](https://www.ibm.com/support/knowledgecenter/search/configure%20web%20server?scope=SSAW57_9.0.0){: new_window}.
 
 **NOTE:** If you cannot access your application, you are likely facing a port access issue on your firewall. Therefore, you might need to restart any of the following servers: the application server, the node agent, the web server, and the deployment manager. Additionally, it is possible that you might need to access the WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} Service Dashboard and restart each virtual machine.
+
+## SSL Configuration
+{: #ssl_configuration}
+
+Traditional WebSphere Application Server and Liberty profile are configured with the [SSL_TLSv2](https://www.ibm.com/support/knowledgecenter/en/SSYKE2_8.0.0/com.ibm.java.security.component.80.doc/security-component/jsse2Docs/protocols.html){: new_window} protocol.  To change the protocol, modify the following files:
+
+For Traditional WebSphere Application Server:
+
+Edit **security.xml** in /opt/IBM/WebSphere/Profiles/*profile_name*/config/cell/*cell_name* and modify the following line:
+
+```
+sslProtocol="SSL_TLSv2"
+```
+{: codeblock}
+
+Edit **ssl.client.props** in /opt/IBM/WebSphere/Profiles/*profile_name*/properties and modify the following line:
+
+```
+com.ibm.ssl.protocol=SSL_TLSv2
+```
+{: codeblock}
+
+For Liberty profile:
+
+Edit **server.xml** in /opt/IBM/WebSphere/Profiles/Liberty/servers/server1 and modify the following line located in the defaultSSLConfig ssl configuration element:
+
+```
+sslProtocol="SSL_TLSv2"
+```
+{: codeblock}
