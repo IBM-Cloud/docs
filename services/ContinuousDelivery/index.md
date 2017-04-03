@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-16"
+lastupdated: "2017-3-31"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-3-16"
 # Getting started with {{site.data.keyword.contdelivery_short}}
 {: #cd_getting_started}
 
-Adopt a DevOps approach by using {{site.data.keyword.contdelivery_full}}, which includes toolchains that automate the building and deployment of applications. You can get started by creating a simple deployment toolchain that supports development, deployment, and operations tasks.
+Adopt a DevOps approach by using {{site.data.keyword.contdelivery_full}}, which includes open toolchains that automate the building and deployment of applications. You can get started by creating a simple deployment toolchain that supports development, deployment, and operations tasks.
 {: shortdesc}
 
 After you create an instance of {{site.data.keyword.contdelivery_short}} by selecting it from the {{site.data.keyword.Bluemix_notm}} catalog, you can choose how you want to get started with the service.
