@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-16"
+lastupdated: "2017-3-31"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2017-3-16"
 A *toolchain* is a set of tool integrations that support development, deployment, and operations tasks. The collective power of a toolchain is greater than the sum of its individual tool integrations.
 {: shortdesc}
 
-Toolchains are available in the Public and Dedicated environments on {{site.data.keyword.Bluemix}}. You can create a toolchain in two ways: use a template to create a toolchain or create a toolchain from an app. On {{site.data.keyword.Bluemix_notm}} Public, toolchains are available in the US South region only.
+Open toolchains are available in the Public and Dedicated environments on {{site.data.keyword.Bluemix}}. You can create a toolchain in two ways: use a template to create a toolchain or create a toolchain from an app. On {{site.data.keyword.Bluemix_notm}} Public, toolchains are available in the US South region only.
 
 Each toolchain is associated with a specific organization (org), and any user that is a member of that org can be added to the access control list for any of its associated toolchains. For more information about access control for toolchains, see [Managing access](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}. Before you create a toolchain, make sure that you are working in the org where you want to create the toolchain. The org that you are working in is displayed on the menu bar. To switch to another org, click the org in the menu bar and select the org that you want to switch to.
 
