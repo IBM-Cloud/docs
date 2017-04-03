@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-23"
+lastupdated: "2017-3-31"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-3-23"
 # Using toolchains
 {: #toolchains-using}
 
-Toolchains are available in the Public and Dedicated environments on {{site.data.keyword.Bluemix}}. You can use a toolchain to be productive in your daily development, deployment, and operations work. After you set up a toolchain, you can add, delete, or configure tool integrations and manage access to the toolchain. On {{site.data.keyword.Bluemix_notm}} Public, toolchains are available in the US South region only.
+Open toolchains are available in the Public and Dedicated environments on {{site.data.keyword.Bluemix}}. You can use a toolchain to be productive in your daily development, deployment, and operations work. After you set up a toolchain, you can add, delete, or configure tool integrations and manage access to the toolchain. On {{site.data.keyword.Bluemix_notm}} Public, toolchains are available in the US South region only.
 {: shortdesc}
 
 ## Configuring a tool integration
