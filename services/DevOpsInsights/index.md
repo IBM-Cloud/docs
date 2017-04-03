@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-31"
 
 ---
 
@@ -28,7 +28,7 @@ lastupdated: "2017-03-16"
 
    * Delivery Insights shows deployment statistics, metrics, and other information about your IBM UrbanCode Deploy installation. For example, it can show charts of deployment duration, successes, and failures, all sorted by logically grouped environments. See [Integrating DevOps Insights with IBM UrbanCode Deploy](uc_insights_overview.html).
 
-{{site.data.keyword.DRA_short}} is an integration in the Bluemix toolchain catalog. For more information about toolchains, see [Working with toolchains](/docs/services/ContinuousDelivery/toolchains_working.html).
+{{site.data.keyword.DRA_short}} is an integration in the Bluemix open toolchain catalog. For more information about toolchains, see [Working with toolchains](/docs/services/ContinuousDelivery/toolchains_working.html).
 
 To use {{site.data.keyword.DRA_short}}, you must add it to a toolchain. Many toolchain templates already include {{site.data.keyword.DRA_short}}. Be sure to also [add it to your {{site.data.keyword.Bluemix_notm}} org as a service](/docs/services/reqnsi.html) so that you can see information about {{site.data.keyword.DRA_short}} and access some of the toolchain templates that include it from your {{site.data.keyword.Bluemix_notm}} dashboard.  
 
