@@ -1924,15 +1924,15 @@ Install a plugin from the remote URL:
 bluemix plugin install http://plugins.ng.bluemix.net/downloads/new_plugin
 ```
 
-Install the `IBM-Containers` plugin of the latest version from the `bluemix-repo` repository:
+Install the `container-service` plugin of the latest version from the `bluemix-repo` repository:
 
 ```
-bluemix plugin install IBM-Containers -r bluemix-repo
+bluemix plugin install container-service -r bluemix-repo
 ```
-Install the `IBM-Containers` plugin with the  version `0.5.800` from the `bluemix-repo` repository:
+Install the `container-service` plugin with the  version `0.5.800` from the `bluemix-repo` repository:
 
 ```
-bluemix plugin install IBM-Containers -r bluemix-repo -v 0.5.800
+bluemix plugin install container-service -r bluemix-repo -v 0.1.217
 ```
 
 
