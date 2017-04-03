@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-03-31"
 
 ---
 
@@ -19,7 +19,7 @@ Delivery Insights, a part of {{site.data.keyword.DRA_short}}, shows deployment s
 
 If you do not have a toolchain or {{site.data.keyword.DRA_short}}, you must set up {{site.data.keyword.DRA_short}} first:
 1. From the {{site.data.keyword.Bluemix}} catalog, click **{{site.data.keyword.DRA_short}}**, select a pricing plan, and click **Create**.
-1. Click the **Manage** tab and then under **Start with Delivery Insights for UrbanCode**, click **Start Here**. In the background, Delivery Insights creates a toolchain for your organization. Toolchains are collections of tool integrations, and in this case, IBM UrbanCode Deploy and {{site.data.keyword.DRA_short}} are part of your toolchain. For more information about toolchains, see [Working with toolchains](../ContinuousDelivery/toolchains_working.html).
+1. Click the **Manage** tab and then under **Start with Delivery Insights for UrbanCode**, click **Start Here**. In the background, Delivery Insights creates a toolchain for your organization. Open toolchains are collections of tool integrations, and in this case, IBM UrbanCode Deploy and {{site.data.keyword.DRA_short}} are part of your toolchain. For more information about toolchains, see [Working with toolchains](../ContinuousDelivery/toolchains_working.html).
 1. On the **Delivery Insights Setup** page, follow the steps to set up DevOps Connect and connect your IBM UrbanCode Deploy servers.
 <!--  1. Set up a system to run DevOps Connect. See [prerequisites](uc_insights_prereqs.html).
   1. Download DevOps Connect, which is provided in a runnable JAR file.
