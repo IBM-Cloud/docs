@@ -45,6 +45,19 @@ Jobs run in discrete working directories within Docker containers that are creat
 
 Except for Simple-type build jobs, when you configure a job, you can include UNIX shell scripts that include build, test, or deployment commands. Because jobs are run in ad hoc containers, the actions of one job cannot affect the run environments of other jobs, even if those jobs are part of the same stage.
 
+Additionally, pipeline jobs can run only the following commands as `sudo`:
+  * `/usr/sbin/service`
+  * `/usr/bin/apt-get`
+  * `/usr/bin/apt-key`
+  * `/usr/bin/dpkg`
+  * `/usr/bin/add-apt-repository`
+  * `/opt/IBM/node-v0.10.40-linux-x64/npm`
+  * `/opt/IBM/node-v0.12.7-linux-x64/npm`
+  * `/opt/IBM/node-v4.2.2-linux-x64/npm`
+  * `/usr/bin/Xvfb`
+  * `/usr/bin/pip`
+
+
 After a job runs, the container that was created for it is discarded. The results of a job run can persist, but the environment in which it ran does not.
 
 **Note**: Jobs can run for up to 60 minutes. When jobs exceed that limit, they fail. If a job is exceeding the limit, break it into multiple jobs. For example, if a job performs three tasks, you might break it into three jobs: one for each task.
@@ -64,7 +77,7 @@ You can include environment properties within a build job's build shell commands
 
 ### Deploy jobs
 
-Deploy jobs upload your project to Bluemix as an app and are accessible from a URL. After a project is deployed, you can find the deployed app on your Bluemix dashboard. 
+Deploy jobs upload your project to Bluemix as an app and are accessible from a URL. After a project is deployed, you can find the deployed app on your Bluemix dashboard.
 
 Deploy jobs can deploy new apps or update existing apps. Even if you first deployed an app by using another method, such as the Cloud Foundry command line interface or the run bar in the Web IDE, you can update the app by using a deploy job. To update an app, in the deploy job, use that app's name.
 
