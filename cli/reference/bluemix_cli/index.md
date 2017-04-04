@@ -443,23 +443,6 @@ Display help for the `info` command:
 bluemix help info
 ```
 
-Display help for the `ic` plug-in:
-
-```
-bluemix help ic
-```
-
-or
-
-```
-bluemix ic help
-```
-
-Display help for the `group-create` command under the `ic` plug-in:
-
-```
-bluemix ic help group-create
-```
 
 
 ### bluemix api
