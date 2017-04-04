@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+  lastupdated: "2017-04-04"
 
 ---
 
@@ -53,7 +53,8 @@ Review the following steps and examples to create your first JavaScript action.
       return {payload: 'Hello world'};
   }
   ```
-  {: codeblock}
+    {: codeblock}
+
   The JavaScript file might contain additional functions. However, by convention, a function called `main` must exist to provide the entry point for the action.
 
 2. Create an action from the following JavaScript function. For this example, the action is called 'hello'.
@@ -61,7 +62,7 @@ Review the following steps and examples to create your first JavaScript action.
   ```
   wsk action create hello hello.js
   ```
-    {: pre}
+      {: pre}
   ```
   ok: created action hello
   ```
@@ -89,7 +90,7 @@ Review the following steps and examples to create your first JavaScript action.
   {: pre}
   ```
   ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
-    ```
+  ```
   ```json
   {
       "result": {
@@ -107,7 +108,7 @@ Review the following steps and examples to create your first JavaScript action.
   The result in this case is the string `Hello world` returned by the JavaScript function. The activation ID can be used to retrieve the logs or result of the invocation at a future time.  
 
 5. If you don't need the action result right away, you can omit the `--blocking` flag to make a non-blocking invocation. You can get the result later by using the activation ID. See the following example:
-  
+
   ```
   wsk action invoke hello
   ```
@@ -115,6 +116,7 @@ Review the following steps and examples to create your first JavaScript action.
   ```
   ok: invoked hello with id 6bf1f670ee614a7eb5af3c9fde813043
   ```
+
   ```
   wsk activation result 6bf1f670ee614a7eb5af3c9fde813043
   ```
@@ -136,10 +138,8 @@ Review the following steps and examples to create your first JavaScript action.
   44794bd6aab74415b4e42a308d880e5b         hello
   6bf1f670ee614a7eb5af3c9fde813043         hello
   ```
-  
 
 ### Passing parameters to an action
-{: #openwhisk_adding_parameters_js}
 
 Parameters can be passed to the action when it is invoked.
 
@@ -191,6 +191,7 @@ Parameters can be passed to the action when it is invoked.
       "payload": "Hello, Bernie from Vermont"
   }
   ```
+
   Notice the use of the `--result` option to display only the invocation result.
 
 ### Setting default parameters
@@ -236,16 +237,20 @@ Rather than pass all the parameters to an action every time, you can bind certai
       "payload": "Hello, Bernie from Vermont"
   }
   ```
+
   Notice that you did not need to specify the place parameter when you invoked the action. Bound parameters can still be overwritten by specifying the parameter value at invocation time.
 
 3. Invoke the action, passing both `name` and `place` values. The latter overwrites the value that is bound to the action.
 
   Using the `--param` flag:
+
   ```
   wsk action invoke --blocking --result hello --param name Bernie --param place "Washington, DC"
   ```
   {: pre}
+
   Using the `--param-file` flag:
+
   File parameters.json:
   ```json
   {
@@ -253,11 +258,12 @@ Rather than pass all the parameters to an action every time, you can bind certai
     "place": "Vermont"
   }
   ```
-  {: codeblock}  
+  {: codeblock}
   ```
   wsk action invoke --blocking --result hello --param-file parameters.json
   ```
   {: pre}
+  
   ```json
   {  
       "payload": "Hello, Bernie from Washington, DC"
@@ -305,6 +311,7 @@ JavaScript functions that run asynchronously may need to return the activation r
       "done": true
   }
   ```
+
   Notice that you performed a blocking invocation of an asynchronous action.
 
 3. Fetch the activation log to see how long the activation took to complete:
@@ -318,18 +325,19 @@ JavaScript functions that run asynchronously may need to return the activation r
   b066ca51e68c4d3382df2d8033265db0             asyncAction
   ```
 
+
   ```
   wsk activation get b066ca51e68c4d3382df2d8033265db0
   ```
   {: pre}
-  ```json
+ ```json
   {
       "start": 1455881628103,
       "end":   1455881648126
   }
   ```
-  Comparing the `start` and `end` time stamps in the activation record, you can see that this activation took slightly over two seconds to complete.
 
+  Comparing the `start` and `end` time stamps in the activation record, you can see that this activation took slightly over two seconds to complete.
 
 ### Using actions to call an external API
 {: #openwhisk_apicall_action}
@@ -384,7 +392,6 @@ This example invokes a Yahoo Weather service to get the current conditions at a 
       "msg": "It is 28 degrees in Brooklyn, NY and Cloudy"
   }
   ```
-
 
 ### Packaging an action as a Node.js module
 {: #openwhisk_js_packaged_action}
@@ -536,31 +543,26 @@ The process of creating Python actions is similar to that of JavaScript actions.
 ### Creating and invoking an action
 {: #openwhisk_actions_python_invoke}
 
-An action is simply a top-level Python function, which means it is necessary to have a method that is named `main`. For example, create a file called
-`hello.py` with the following content:
+An action is simply a top-level Python function. For example, create a file called `hello.py` with the following source code:
 
 ```python
-def main(dict):
-    name = dict.get("name", "stranger")
+def main(args):
+    name = args.get("name", "stranger")
     greeting = "Hello " + name + "!"
     print(greeting)
     return {"greeting": greeting}
 ```
 {: codeblock}
 
-Python actions always consume a dictionary and produce a dictionary.
+Python actions always consume a dictionary and produce a dictionary. The entry method for the action is `main` by default but may be specified explicitly when creating the action with the `wsk` CLI using `--main`, as with any other action type.
 
-You can create an OpenWhisk action called `helloPython` from this function as
-follows:
+You can create an OpenWhisk action called `helloPython` from this function as follows:
 
 ```
 wsk action create helloPython hello.py
 ```
 {: pre}
-
-When you use the command line and a `.py` source file, you do not need to
-specify that you are creating a Python action (as opposed to a JavaScript action);
-the tool determines that from the file extension.
+The CLI automatically infers the type of the action from the source file extension. For `.py` source files, the action runs using a Python 2.7 runtime. You can also create an action that runs with Python 3.6 by explicitly specifying the parameter `--kind python:3`. See the Python [reference](./openwhisk_reference.html#openwhisk_ref_python_environments) for more information about Python 2.7 vs. 3.6.
 
 Action invocation is the same for Python actions as it is for JavaScript actions:
 
@@ -576,16 +578,13 @@ wsk action invoke --blocking --result helloPython --param name World
 ```
 
 
-
 ## Creating Swift actions
-{: #openwhisk_actions_swift}
 
 The process of creating Swift actions is similar to that of JavaScript actions. The following sections guide you through creating and invoking a single swift action, and adding parameters to that action.
 
 You can also use the online [Swift Sandbox](https://swiftlang.ng.bluemix.net) to test your Swift code without having to install Xcode on your machine.
 
 ### Creating and invoking an action
-{: #openwhisk_actions_invoke_swift}
 
 An action is simply a top-level Swift function. For example, create a file called
 `hello.swift` with the following content:
@@ -628,23 +627,24 @@ wsk action invoke --blocking --result helloSwift --param name World
   }
 ```
 
-
 **Attention:** Swift actions run in a Linux environment. Swift on Linux is still in
 development, and {{site.data.keyword.openwhisk_short}} usually uses the latest available release, which is not necessarily stable. In addition, the version of Swift that is used with {{site.data.keyword.openwhisk_short}} might be inconsistent with versions of Swift from stable releases of XCode on MacOS.
 
 ### Packaging an action as a Swift executable
 {: #openwhisk_actions_swift_zip}
-When you create an OpenWhisk Swift action with a Swift source file, it has to be compiled into a binary before the action is run. Once done, subsequent calls to the action are much faster until the container holding your action is purged.
 
-To avoid the delay of the compilation step, you can compile your Swift file into a binary and then upload it to OpenWhisk in a zip file. As you need the OpenWhisk scaffolding, the easiest way to create the binary is to build it within the same environment as it will be run in. These are the steps:
+When you create an OpenWhisk Swift action with a Swift source file, it has to be compiled into a binary before the action is run. Once done, subsequent calls to the action are much faster until the container holding your action is purged. This delay is known as the cold-start delay.
+
+To avoid the cold-start delay, you can compile your Swift file into a binary and then upload to OpenWhisk in a zip file. As you need the OpenWhisk scaffolding, the easiest way to create the binary is to build it within the same environment as it will be run in. These are the steps:
 
 - Run an interactive Swift action container.
-  ```
-  docker run -it -v "$(pwd):/owexec" openwhisk/swift3action bash
-  ```
-  {: pre}
-This puts you in a bash shell within the Docker container. Execute the following commands within it:
-  
+```
+docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
+```
+{: pre}
+
+    This puts you in a bash shell within the Docker container. Execute the following commands within it:
+
 - Install zip for convenience, to package the binary
   ```
   apt-get install -y zip
@@ -693,6 +693,7 @@ This has created hello.zip in the same directory as hello.swift.
   ``` 
   {: pre}
 
+The time it took for the action to run is in the "duration" property and compare to the time it takes to run with a compilation step in the hello action.
 
 ## Creating Java actions
 {: #openwhisk_actions_java}
@@ -745,7 +746,6 @@ follows:
 ```
 wsk action create helloJava hello.jar --main Hello
 ```
-{: pre}
 
 When you use the command line and a `.jar` source file, you do not need to
 specify that you are creating a Java action;
@@ -770,7 +770,6 @@ wsk action invoke --blocking --result helloJava --param name World
 ```
 
 ## Creating Docker actions
-{: #openwhisk_actions_docker}
 
 With {{site.data.keyword.openwhisk_short}} Docker actions, you can write your actions in any language.
 
@@ -785,10 +784,12 @@ For the instructions that follow, assume that the Docker user ID is `janesmith` 
   ```
   wsk sdk install docker
   ```
+  ```
   {: pre}
   ```
   The Docker skeleton is now installed at the current directory.
   ```
+
   ```
   ls dockerSkeleton/
   ```
@@ -796,6 +797,7 @@ For the instructions that follow, assume that the Docker user ID is `janesmith` 
   ```
   Dockerfile      README.md       buildAndPush.sh example.c
   ```
+
   The skeleton is a Docker container template where you can inject your code in the form of custom binaries.
 
 2. Set up your custom binary in the blackbox skeleton. The skeleton already includes a C program that you can use.
@@ -924,7 +926,7 @@ wsk action list
 ```
 {: pre}
 
-As you write more actions, this list gets longer and it can be helpful to group related actions into [packages](./packages.md). To filter your list of actions to just the those within a specific pacakge, you can use: 
+As you write more actions, this list gets longer and it can be helpful to group related actions into [packages](./openwhisk_packages.html). To filter your list of actions to just the those within a specific pacakge, you can use: 
 
 ```
 wsk action list [PACKAGE NAME]

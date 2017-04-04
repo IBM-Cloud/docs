@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-04-04"
 
 ---
 
@@ -30,19 +30,22 @@ function main({name}) {
   return {body: `<html><body><h3>${msg}</h3></body></html>`}
 }
 ```
-{: codeblock}
+{: codeblock}  
 
-You may create a _web action_ `hello` in the package `demo` for the namespace `guest` using the annotation `web-export`:
+You may create a _web action_ `hello` in the package `demo` for the namespace `guest` using the CLI's `--web` flag with a value of `true` or `yes`:
 ```
 wsk package create demo
 ```
 {: pre}
 ```
-wsk action create /guest/demo/hello hello.js -a web-export true
+wsk action create /guest/demo/hello hello.js --web true
 ```
 {: pre}
 
-The `web-export` annotation allows the action to be accessible as a web action via a new REST interface. The URL that is structured as follows: `https://openwhisk.ng.bluemix.net/api/v1/web/{QUALIFIED ACTION NAME}.{EXT}`. The fully qualified name of an action consists of three parts: the namespace, the package name, and the action name.
+Using the `--web` flag with a value of `true` or `yes` allows an action to be accessible via REST interface without the
+need for credentials. A web action can be invoked using a URL that is structured as follows:
+`https://{APIHOST}/api/v1/web/{QUALIFIED ACTION NAME}.{EXT}`. The fully qualified name of an action consists of three
+parts: the namespace, the package name, and the action name.
 
 *The fully qualified name of the action must include its package name, which is `default` if the action is not in a named package.*
 
@@ -63,7 +66,7 @@ function main() {
   }
 }
 ```
-{: codeblock}  
+{: codeblock}    
 
 Or sets a cookie:
 ```javascript
@@ -77,7 +80,7 @@ function main() {
     body: '<html><body><h3>hello</h3></body></html>' }
 }
 ```
-{: codeblock}
+{: codeblock}  
 
 Or returns an `image/png`:
 ```javascript
@@ -88,7 +91,7 @@ function main() {
              body: png };
 }
 ```
-{: codeblock}
+{: codeblock}  
 
 Or returns `application/json`:
 ```javascript
@@ -100,7 +103,7 @@ function main(params) {
     };
 }
 ```
-{: codeblock}
+{: codeblock}  
 
 It is important to be aware of the [response size limit](./openwhisk_reference.html) for actions since a response that exceeds the predefined system limits will fail. Large objects should not be sent inline through OpenWhisk, but instead deferred to an object store, for example.
 
@@ -155,8 +158,8 @@ When this action is invoked as a web action, you can alter the response of the w
 For example, to return the entire object, and see what arguments the action receives:
 
 ```
-curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json
-```
+ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json
+ ```
 {: pre}
 ```json
 {
@@ -175,8 +178,8 @@ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json
 
 and with a query parameter:
 ```
-curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json?name=Jane
-```
+ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json?name=Jane
+ ```
 {: pre}
 ```json
 {
@@ -196,8 +199,8 @@ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json?name=Jane
 
 or form data:
 ```
-curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json -d "name":"Jane"
-```
+ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json -d "name":"Jane"
+ ```
 {: pre}
 ```json
 {
@@ -219,7 +222,7 @@ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json -d "name"
 
 or JSON object:
 ```
-curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json -H 'Content-Type: application/json' -d '{"name":"Jane"}'
+ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json -H 'Content-Type: application/json' -d '{"name":"Jane"}'
 ```
 {: pre}
 ```json
@@ -284,34 +287,35 @@ A content extension is generally required when invoking a web action; the absenc
 ## Protected parameters
 {: #openwhisk_webactions_protected}
 
-Action parameters may also be protected and treated as immutable. To finalize parameters, and to make an action web accessible, two [annotations](openwhisk_annotations.html) must be attached to the action: `final` and `web-export` either of which must be set to `true` to have affect. Revisiting the action deployment earlier, we add the annotations as follows:
+A content extension is generally required when invoking a web action; the absence of an extension assumes `.http` as the default. The `.json` and `.http` extensions do not require a projection path. The `.html`, `.svg` and `.text` extensions do, however for convenience, the default path is assumed to match the extension name. So to invoke a web action and receive an `.html` response, the action must respond with a JSON object that contains a top level property called `html` (or the response must be in the explicitly given path). In other words, `/guest/demo/hello.html` is equivalent to projecting the `html` property explicitly, as in `/guest/demo/hello.html/html`. The fully qualified name of the action must include its package name, which is `default` if the action is not in a named package.
+
+
+## Protected parameters
+
+Action parameters are protected and treated as immutable. Parameters are automatically finalized when enabling web actions.
 
 ```
-wsk action create /guest/demo/hello hello.js \
+ wsk action create /guest/demo/hello hello.js \
       --parameter name Jane \
-      --annotation final true \
-      --annotation web-export true
+      --web true
 ```
-{: pre}
 
 The result of these changes is that the `name` is bound to `Jane` and may not be overridden by query or body parameters because of the final annotation. This secures the action against query or body parameters that try to change this value whether by accident or intentionally. 
 
 ## Disabling web actions
-{: #openwhisk_webactions_disable}
 
-To disable a web action from being invoked via the new API (`https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/web/`), it’s enough to remove the annotation or set it to `false`.
+To disable a web action from being invoked via web API (`https://openwhisk.ng.bluemix.net/api/v1/web/`), pass a value of `false` or `no` to the `--web` flag while updating an action with the CLI.
 
 ```
-wsk action update /guest/demo/hello hello.js \
-      --annotation web-export false
+ wsk action update /guest/demo/hello hello.js --web false
 ```
+{: pre}
 
 ## Raw HTTP handling
-{: #raw-http-handling}
 
-A web action may elect to interpret and process an incoming HTTP body directly, without the promotion of a JSON object to first class properties available to the action input (e.g., `args.name` vs parsing `args.__ow_query`). This is done via a `raw-http` [annotations](openwhisk_annotations.html). Using the same example show earlier, but now as a "raw" HTTP web action receiving `name` both as a query parameters and as JSON value in the HTTP request body:
+A web action may elect to interpret and process an incoming HTTP body directly, without the promotion of a JSON object to first class properties available to the action input (e.g., `args.name` vs parsing `args.__ow_query`). This is done via a `raw-http` [annotation](annotations.md). Using the same example show earlier, but now as a "raw" HTTP web action receiving `name` both as a query parameters and as JSON value in the HTTP request body:
 ```
-curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json?name=Jane -X POST -H "Content-Type: application/json" -d '{"name":"Jane"}'
+ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json?name=Jane -X POST -H "Content-Type: application/json" -d '{"name":"Jane"}' 
 ```
 {: pre}
 ```json 
@@ -338,31 +342,90 @@ Notice in this case the JSON content is base64 encoded because it is treated as 
 
 ### Enabling raw HTTP handling
 
-Raw HTTP web actions are enabled via the annotation `raw-http` [annotations](openwhisk_annotations.html) with a value of `true`.
+Raw HTTP web actions are enabled via the `--web` flag using a value of `raw`.
 
 ```
-wsk action create /guest/demo/hello hello.js \
-      --annotation web-export true
-      --annotation raw-http true
+ wsk action create /guest/demo/hello hello.js --web raw
 ```
-{: pre}
-
-**Note:** Since `raw-http` implies `web-export`, we plan to improve the CLI to provide a more convenient way to add (and remove) these annotations in the future.
-
 
 ### Disabling raw HTTP handling
 
-Disabling raw HTTP is accomplished by setting the `raw-http` [annotations](openwhisk_annotations.html) value to `false`.
+Disabling raw HTTP can be accomplished by passing a value of `false` or `no` to the `--web` flag.
 
 ```
-wsk update create /guest/demo/hello hello.js \
-      --annotation web-export true
-      --annotation raw-http false
+ wsk update create /guest/demo/hello hello.js --web false
+```
+
+### Decoding binary body content from Base64
+
+When using raw HTTP handling, the `__ow_body` content will be encoded in Base64 when the request content-type is binary.
+Below are functions demonstrating how to decode the body content in Node, Python, and Swift. Simply save a method shown
+below to file, create a raw HTTP web action utilizing the saved artifact, and invoke the web action.
+
+#### Node
+
+```javascript
+function main(args) {
+    decoded = new Buffer(args.__ow_body, 'base64').toString('utf-8')
+    return {body: decoded}
+}
+```
+{: codeblock}
+
+#### Python
+
+```python
+def main(args):
+    try:
+        decoded = args['__ow_body'].decode('base64').strip()
+        return {"body": decoded}
+    except:
+        return {"body": "Could not decode body from Base64."}
+```
+{: codeblock}
+
+#### Swift
+
+```swift
+extension String {
+    func base64Decode() -> String? {
+        guard let data = Data(base64Encoded: self) else {
+            return nil
+        }
+
+        return String(data: data, encoding: .utf8)
+    }
+}
+
+func main(args: [String:Any]) -> [String:Any] {
+    if let body = args["__ow_body"] as? String {
+        if let decoded = body.base64Decode() {
+            return [ "body" : decoded ]
+        }
+    }
+
+    return ["body": "Could not decode body from Base64."]
+}
+```
+{: codeblock}
+
+As an example, save the Node function as `decode.js` and execute the following commands:
+```
+ wsk action create decode decode.js --web raw
 ```
 {: pre}
-
-**Note:**  All annotations for a single action must be set at the same time, either when creating or updating the action. This is due to a current limitation on the API and CLI. Failure to do so will result is removal of any previously attached annotations.
-
+```
+ok: created action decode
+```
+```
+curl -k -H "content-type: application" -X POST -d "Decoded body" https:// openwhisk.ng.bluemix.net/api/v1/web/guest/default/decodeNode.json
+```
+{: pre}
+```json
+{
+  "body": "Decoded body"
+}
+```
 
 ## Error Handling
 {: #openwhisk_webactions_errors}

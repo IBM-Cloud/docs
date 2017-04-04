@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-21"
+lastupdated: "2017-04-04"
 
 ---
 
@@ -79,9 +79,9 @@ A similar feed action protocol occurs for `wsk trigger delete`.
 
 It is easy to set up a feed via a hook if the event producer supports a webhook/callback facility.
 
-With this method there is _no need_ to stand up any persistent service outside of OpenWhisk.  All feed management happens naturally though stateless {{site.data.keyword.openwhisk_short}} *feed actions*, which negotiate directly with a third part webhook API.
+With this method there is _no need_ to stand up any persistent service outside of {{site.data.keyword.openwhisk_short}}.  All feed management happens naturally though stateless {{site.data.keyword.openwhisk_short}} *feed actions*, which negotiate directly with a third part webhook API.
 
-When invoked with `CREATE`, the feed action simply installs a webhook for some other service, asking the remote service to POST notifications to the appropriate `fireTrigger` URL in OpenWhisk.
+When invoked with `CREATE`, the feed action simply installs a webhook for some other service, asking the remote service to POST notifications to the appropriate `fireTrigger` URL in {{site.data.keyword.openwhisk_short}}.
 
 The webhook should be directed to send notifications to a URL such as:
 
@@ -91,7 +91,7 @@ The form with the POST request will be interpreted as a JSON document defining p
 
 ## Implementing Feeds with Polling
 
-It is possible to set up an {{site.data.keyword.openwhisk_short}} *action* to poll a feed source entirely within OpenWhisk, without the need to stand up any persistent connections or external service.
+It is possible to set up an {{site.data.keyword.openwhisk_short}} *action* to poll a feed source entirely within {{site.data.keyword.openwhisk_short}}, without the need to stand up any persistent connections or external service.
 
 For feeds where a webhook is not available, but do not need high-volume or low latency response times, polling is an attractive option.
 
@@ -108,7 +108,7 @@ This procedure implements a polling-based trigger entirely using {{site.data.key
 The previous 2 architectural choices are simple and easy to implement. However, if you want a high-performance feed, there is no substitute for persistent connections and long-polling or similar techniques.
 
 Since {{site.data.keyword.openwhisk_short}} actions must be short-running,  an action cannot maintain a persistent connection to a third party . Instead, we must
-stand up a separate service (outside of OpenWhisk) that runs all the time.   We call these *provider services*.  A provider service can maintain connections to third party event sources that support long polling or other connection-based notifications.
+stand up a separate service (outside of {{site.data.keyword.openwhisk_short}}) that runs all the time.   We call these *provider services*.  A provider service can maintain connections to third party event sources that support long polling or other connection-based notifications.
 
 The provider service should provide a REST API that allows the {{site.data.keyword.openwhisk_short}} *feed action* to control the feed.   The provider service acts as a proxy between the event provider and {{site.data.keyword.openwhisk_short}} -- when it receives events from the third party, it sends them on to {{site.data.keyword.openwhisk_short}} by firing a trigger.
 
