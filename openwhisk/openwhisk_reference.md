@@ -231,7 +231,7 @@ Notice that regardless of whether an activation is synchronous or asynchronous, 
 
 ### JavaScript global whisk object deprecated
 
-The global object `whisk` is urrently deprecated; migrate your nodejs actions to use altenative methods.
+The global object `whisk` is currently deprecated; migrate your nodejs actions to use altenative methods.
 For the functions `whisk.invoke()` and `whisk.trigger()` you can use the client library [openwhisk](https://www.npmjs.com/package/openwhisk).
 For the `whisk.getAuthKey()` you can get the API key value from the environment variable `__OW_API_KEY`.
 For the `whisk.error()` you can return a rejected Promise (i.e. Promise.reject).
