@@ -256,7 +256,7 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test jo
 
 1. Click **SAVE**. Whenever your pipeline runs, your Sauce Labs tests run.
 
-To learn more, see [Delivery Pipeline![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_build_and_deploy/){: new_window}.
+To learn more, see [Delivery Pipeline![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_delivery_pipeline/){: new_window}.
 
 
 ## Adding {{site.data.keyword.DRA_short}} (Beta)
@@ -292,7 +292,7 @@ To complete source control tasks, add the Eclipse Orion {{site.data.keyword.webi
 1. Click **Create Integration**.
 1. Click **Eclipse Orion {{site.data.keyword.webide}}**. Your workspace is pre-populated with your GitHub or {{site.data.keyword.ghe_short}} repos. The repos that are associated with your current toolchain are highlighted.
 
-To learn more, see [Editing code with the Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery/web_ide.html){: new_window}.
+To learn more, see [Editing code with the Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery/web_ide.html){: new_window} and [Eclipse Orion {{site.data.keyword.webide}}![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_eclipse_orion_web_ide/){: new_window}.
 
 
 ## Configuring Git Repos and Issue Tracking (Experimental)
