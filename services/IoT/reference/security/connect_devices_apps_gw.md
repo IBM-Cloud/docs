@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-19"
+lastupdated: "2017-04-05"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-01-19"
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# Connecting applications, devices, and gateways to {{site.data.keyword.iot_short_notm}}
+# Connecting applications, devices, and gateways using the API
 {: #connect_devices_apps_gw}
 
 You can connect applications, devices, and gateways to {{site.data.keyword.iot_full}} through the MQTT protocol. You can also use the HTTP REST API to connect devices to {{site.data.keyword.iot_short_notm}}.

@@ -12,7 +12,7 @@ lastupdated: "2017-03-13"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Application connection
+# Connecting applications
 
 To connect your application to {{site.data.keyword.iot_full}}, you must connect by using API keys and tokens or binding your application directly to {{site.data.keyword.iot_short_notm}} in {{site.data.keyword.Bluemix_notm}}. You use the access dashboard to grant access.
 {:shortdesc}
