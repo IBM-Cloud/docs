@@ -12,7 +12,7 @@ lastupdated: "2017-03-13"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Client libraries for {{site.data.keyword.iot_short}} development
+# Client libraries for {{site.data.keyword.iot_short_notm}} development
 {: #iot_platform_client_lib}
 
 Client libraries provide tools and files that you need to build and develop code for integrating and connecting your devices and applications on {{site.data.keyword.iot_full}}.
@@ -38,7 +38,7 @@ Client libraries are provided for each of the supported programming languages, a
 - [More documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-embeddedc/blob/master/README.md){:new_window}
 
 
-## Java™
+## Java
 - [Client library ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-java){:new_window}
 - [Samples ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-java#samples){:new_window}
 - [More documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-java/blob/master/README.md){:new_window}
@@ -65,7 +65,7 @@ Client libraries are provided for each of the supported programming languages, a
 - [Samples ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-python/tree/master/samples){:new_window}
 - [More documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-python/blob/master/README.rst){:new_window}
 
-## Getting started with {{site.data.keyword.iot_short}} development
+## Getting started with {{site.data.keyword.iot_short_notm}} development
 
 To start developing code for {{site.data.keyword.iot_short_notm}} by using the available client libraries, see the following sections of the {{site.data.keyword.Bluemix_notm}} documentation:
 

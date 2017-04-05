@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-04"
 
 ---
 
@@ -375,7 +375,7 @@ except IoTFCReSTException as e:
     print("ERROR [" + e.httpcode + "] " + e.message)
 ```
 
-For information about the request and response model and HTTP status codes, refer to the Organization Configuration section of the [{{site.data.keyword.iot_short_notm}} API ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+For information about the request and response model and HTTP status codes, refer to the Organization Configuration section of the [{{site.data.keyword.iot_short_notm}} API ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window}.
 
 
 ## Bulk device operations
@@ -383,7 +383,7 @@ For information about the request and response model and HTTP status codes, refe
 
 Your applications can use bulk operations to get, add, or remove multiple devices simultaneously.
 
-For information about the list of query parameters, the request and response model, and HTTP status codes, see the 'Bulk Operations' section of the [{{site.data.keyword.iot_short_notm}} API ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/){: new_window}.
+For information about the list of query parameters, the request and response model, and HTTP status codes, see the 'Bulk Operations' section of the [{{site.data.keyword.iot_short_notm}} API ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window}.
 
 
 ### Retrieving device information
@@ -601,7 +601,7 @@ except IoTFCReSTException as e:
 Device operations that are made available in the API include listing, adding, removing, viewing, updating, viewing location, and viewing device management information of devices in a
  {{site.data.keyword.iot_short_notm}} organization.
 
-For information about the query parameters, the request and response model, and HTTP status codes, see the 'Device section' of the [{{site.data.keyword.iot_short_notm}} API ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+For information about the query parameters, the request and response model, and HTTP status codes, see the 'Device section' of the [{{site.data.keyword.iot_short_notm}} API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 
 ### Retrieving devices of a particular device type
@@ -754,7 +754,7 @@ Use the device diagnostic operations for implementing the following troubleshoot
 - Retrieving device error codes
 - Adding error codes
 
-For more information about query and response models, response codes, and query parameters, see the [API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} {{site.data.keyword.iot_short_notm}} API documentation.
+For more information about query and response models, response codes, and query parameters, see the [{{site.data.keyword.iot_short_notm}} API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ### Get diagnostic logs
 
