@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-27"
+lastupdated: "2017-03-01"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -13,7 +13,7 @@ lastupdated: "2017-03-27"
 {:pre: .pre}
 
 
-# Using the shield toolkit
+# Shield toolkit
 {: #iot4i_shield_toolkit}
 Use shields to protect property and users by identifying hazards and creating appropriate automated responses. Use or modify the shields that are included in the {{site.data.keyword.iotinsurance_short}} shields library or create and implement your own shields by using the instructions and examples that follow.
 {:shortdesc}
@@ -269,3 +269,16 @@ var promotion = {
 ```
 
 You can optionally deploy your mobile app and use [the instructions in the ioti-mobile GitHub repository](https://github.com/ibm-watson-iot/ioti-mobile) to connect as the user that you created in the previous section.
+
+# Related Links
+{: #rellinks}
+
+## API Reference
+{: #api}
+* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
+* [{{site.data.keyword.iotinsurance_short}} API Examples](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
+
+## Related Links
+{: #general}
+* [Developer support forum](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
+* [Stack overflow support forum](http://stackoverflow.com/questions/tagged/ibm-bluemix)

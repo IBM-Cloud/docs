@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-22"
+lastupdated: "2017-03-01"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -39,7 +39,7 @@ aggregationschedule|-|-| NO|Can be rebuilt.
 
 To back up the {{site.data.keyword.iotinsurance_short}} data, perform the following steps:
 
-## Creating a replica {{site.data.keyword.cloudant_short_notm}} instance
+## Creating a replica {{site.data.keyword.cloudant}} instance
 {: #createinstance}
 Create a replica {{site.data.keyword.cloudant}} instance by using the [{{site.data.keyword.cloudant}} Replication instructions ![External link icon](../../icons/launch-glyph.svg)](https://docs.cloudant.com/replication.html). For disaster recovery purposes, create the replica in a different location from your original {{site.data.keyword.iotinsurance_short}} service. For example, if your original instance is in Dallas, the replica might be in London.
 
