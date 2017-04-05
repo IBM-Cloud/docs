@@ -14,7 +14,7 @@ lastupdated: "2017-03-08"
 
 
 
-# Device Toolkit
+# Using the device toolkit
 {: #iot4i_connecting_devices}
 By using the {{site.data.keyword.iotinsurance_full}} Device Toolkit, you can connect devices that are made by any device vendor to your {{site.data.keyword.iotinsurance_short}} service.
 {:shortdesc}
