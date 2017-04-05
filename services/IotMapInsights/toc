@@ -1,5 +1,22 @@
-[Getting started with Context Mapping](index.html)
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="context-mapping" audience="service"}
+Context Mapping
+
+    {: .navgroup id="learn"}
     index.md
     iotmapinsights_overview.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    related_links.md
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
     iotmapinsights_admin.md
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
     service_status.md
+    {: .navgroup-end}

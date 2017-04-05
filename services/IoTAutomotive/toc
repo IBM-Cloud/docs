@@ -1,6 +1,23 @@
-[Getting started with IoT for Automotive (Experimental)](index.html)
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="iot-automotive" audience="service"}
+IoT for Automotive (Experimental)
+
+    {: .navgroup id="learn"}
     index.md
     iotautomotive_overview.md
-    iotautomotive_admin.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
     iotautomotive_apis.md
+    related_links.md
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    iotautomotive_admin.md
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
     service_status.md
+    {: .navgroup-end}
