@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-
+lastupdated: "2017-03-16"
 ---
 
 {:new_window: target="_blank"}
@@ -13,8 +13,8 @@ copyright:
 
 # Monitor
 {: #v10_dashboard}
-Last updated: 16 March 2017
-{: .last-updated}
+
+
 
 The HSBN vNext Beta monitor provides an overview of your blockchain environment, including performance data, deployed chaincodes and network resources. Use the monitor to manage your network components.
 {:shortdesc}

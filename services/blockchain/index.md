@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2017-03-17"
 # Getting started
 {: #gettingstartedtemplate}
 
-**ATTENTION:** Before using any IBM Blockchain on Bluemix plan, you must read the technical and support information in [What you need to know](needtoknow.html).
+**ATTENTION:** Before using any IBM Blockchain on Bluemix plan, you must read the technical and support information in [Disclaimer](needtoknow.html).
 {:shortdesc}
 
 ## IBM Blockchain on Bluemix

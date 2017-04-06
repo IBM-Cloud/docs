@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-07"
+lastupdated: "2017-04-06"
 ---
 
 {:new_window: target="_blank"}
@@ -21,7 +21,7 @@ There are several mechanisms available to obtain support and troubleshoot proble
 
 ## Non-defect issues
 
-1. The most expedient method is to navigate to the **Support** tab (shown below in Figure 1) from your **Dashboard Monitor**.  
+1. The most expedient method is to navigate to the **Support** tab  from your **Dashboard Monitor** as shown in the Figure 1 for version 0.6, or [the **Support** panel](dashboard_support.html) as in version 1.0.  
 
 ![](images/IBC_BMX_Monitor_Support.png "Support tab")
 *Figure 1. Support tab*
@@ -29,7 +29,7 @@ There are several mechanisms available to obtain support and troubleshoot proble
 * Use the [service status](https://bluemix-service-status.blockchain.ibm.com) page to investigate known issues with the networks and service.  The development and quality assurance teams actively update these pages to reflect any current abnormalities within the service.  This page also contains release notes for new commits of the Hyperledger Fabric code.
 * Use [dW Answers](https://developer.ibm.com/answers/smartspace/blockchain/) to search responses from previously posed questions, or to submit a new inquiry.  Be sure to include the keyword **blockchain** in your question.
 * Use [GitHub issues](https://github.com/IBM-Blockchain/ibm-blockchain-issues/issues) to reach the blockchain development team.  Share details and code snippets from your specific Bluemix instance.  
-* Use the [Hyperledger slack](https://hyperledgerproject.slack.com/messages/general/) channel to raise questions concerning the Hyperledger Fabric code.  
+* Use the [Hyperledger Rocket.Chat](https://chat.hyperledger.org/channel/general) channel to raise questions concerning the Hyperledger Fabric code.  
 
 
 ## Software defect issues
