@@ -93,8 +93,8 @@ For more details on the commands, see [Bluemix Live Sync (bl) commands](bluemixl
 <p>Find the project name in the list that matches your application. The project name has the format of your <i>alias</i> | <i>your application name</i>. </p>
 </li>
 <li>Synchronize your local environment with your project on {{site.data.keyword.Bluemix_notm}} by entering the following command. If you are the owner of the project, you only need to specify your-application-name for projectName.
-<pre class="codeblock">bl sync projectName -d localDirectory --verbose</pre>
-<p>This command continues to run (and synchronization continues) until you enter a "q". The --verbose option displays the logging and status information. If any of your arguments contain a space, you need to enclose the name in quotes. </p></li>
+<pre class="codeblock">bl sync projectName -d localDirectory &ndash&ndashverbose</pre>
+<p>This command continues to run (and synchronization continues) until you enter a "q". The &ndash&ndashverbose option displays the logging and status information. If any of your arguments contain a space, you need to enclose the name in quotes. </p></li>
 <li>In another command line window, in your local directory, deploy the application to {{site.data.keyword.Bluemix_notm}} in Live Edit mode by entering the following command:
 <pre class="codeblock">bl start</pre>
 </li>
@@ -102,7 +102,7 @@ For more details on the commands, see [Bluemix Live Sync (bl) commands](bluemixl
 
 When you change the files in your local directory, the changes are automatically propagated to both the application that is running on {{site.data.keyword.Bluemix_notm}} and the project cloud workspace. If you need to restart the Node application, then you can use the following command:
 ```
-bl start --restart
+bl start &ndash&ndashrestart
 ```
 -->
 
@@ -224,7 +224,7 @@ For more information on downloading and using the bl command, see [Bluemix Live 
 The {{site.data.keyword.Bluemix_live}} command line, **bl**, has the following syntax:
 
 ```
-bl command [arguments] [options] [--help]
+bl command [arguments] [options] [&ndash&ndashhelp]
 ```
 {: pre}
 
@@ -258,9 +258,9 @@ Options for the command.
 
 **Global Options**
 
-*--help*: Display the help page for the specified command
+*&ndash&ndashhelp*: Display the help page for the specified command
 
-*--verbose*: Enable verbose logging.
+*&ndash&ndashverbose*: Enable verbose logging.
 
 **Note:** If any of your arguments or options contain a space, enclose the value in double quotation marks.
 
@@ -268,7 +268,7 @@ Options for the command.
 {: bl_help}
 
 ```
-bl [ command ] --help | --h
+bl [ command ] &ndash&ndashhelp | &ndash&ndashh
 ```
 {: pre}
 
@@ -281,14 +281,14 @@ Use this command to display help about a command or the command list.
 Display the list of commands:
 
 ```
-bl --help
+bl &ndash&ndashhelp
 ```
 {: pre}
 
 Display detailed information about the sync command:
 
 ```
-bl sync --help
+bl sync &ndash&ndashhelp
 ```
 {: pre}
 
@@ -369,7 +369,7 @@ Use this command to list all the projects that are available for synchronization
 {: bl_sync}
 
 ```
-bl sync | s projectName -d localDirectory [ --overwritelocal ] [ --overwriteremote ] [ --verbose ]
+bl sync | s projectName -d localDirectory [ &ndash&ndashoverwritelocal ] [ &ndash&ndashoverwriteremote ] [ &ndash&ndashverbose ]
 ```
 {: pre}
 
@@ -385,11 +385,11 @@ Use this command to start the synchronization of the contents of a project with 
 
 -d *localDirectory*: Local directory path. Defaults to the current folder ".".
 
-*--overwritelocal*: Overwrite the local directory with contents of the project workspace.
+*&ndash&ndashoverwritelocal*: Overwrite the local directory with contents of the project workspace.
 
-*--overwriteremote*: Overwrite the project workspace with the contents of the local directory.
+*&ndash&ndashoverwriteremote*: Overwrite the project workspace with the contents of the local directory.
 
-*--verbose*: Display verbose logging.
+*&ndash&ndashverbose*: Display verbose logging.
 
 **Examples**
 
@@ -425,7 +425,7 @@ bl sync myproject –d  myfolder
 {: bl_create}
 
 ```
-bl create | c [ -n PROJECT_NAME ] [ -r REGION ] [ -o ORG ] [ -s SPACE ] [ -g GIT_REPO ] [-e GIT_EXE ] [ --creds ] [ --fork ] [ --public ] [ --prompt ]
+bl create | c [ -n PROJECT_NAME ] [ -r REGION ] [ -o ORG ] [ -s SPACE ] [ -g GIT_REPO ] [-e GIT_EXE ] [ &ndash&ndashcreds ] [ &ndash&ndashfork ] [ &ndash&ndashpublic ] [ &ndash&ndashprompt ]
 ```
 {: pre}
 
@@ -447,13 +447,13 @@ Use this command from a directory that contains code to create a private project
 
 -e *GIT_EXE*: Full path to a Git executable. Default: detected.
 
-*--creds*: Prompt for your Git credentials.
+*&ndash&ndashcreds*: Prompt for your Git credentials.
 
-*--fork*: Fork this directory and create a project and repo.
+*&ndash&ndashfork*: Fork this directory and create a project and repo.
 
-*--public*: Make the new project public.
+*&ndash&ndashpublic*: Make the new project public.
 
-*--prompt*: Prompt for all required options with available choices.
+*&ndash&ndashprompt*: Prompt for all required options with available choices.
 
 **Examples**
 
@@ -467,7 +467,7 @@ bl create
 This command creates a public project that is named `myNewProject`.
 
 ```
-bl create -n myNewProject --public
+bl create -n myNewProject &ndash&ndashpublic
 ```
 {: pre}
 
@@ -514,7 +514,7 @@ bl status “my pro ject”
 {: bl_start}
 
 ```
-bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit ] [--noliveedit ] [ --restart ]
+bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ &ndash&ndashliveedit ] [&ndash&ndashnoliveedit ] [ &ndash&ndashrestart ]
 ```
 {: pre}
 
@@ -532,13 +532,13 @@ Use this command to start the application instance that is described by the laun
 
 -m *manifestPath*: The project-relative path to the manifest file (for example, `manifest.yml`).
 
-*--liveedit*: Start the associated application in live edit mode or exits with an error if the buildpack does not support live edit mode.
+*&ndash&ndashliveedit*: Start the associated application in live edit mode or exits with an error if the buildpack does not support live edit mode.
 
-*--noliveedit*: Start the associated application in normal mode.
+*&ndash&ndashnoliveedit*: Start the associated application in normal mode.
 
-*--view*: Open a browser of the running application.
+*&ndash&ndashview*: Open a browser of the running application.
 
-*--restart*: Restart an application already running in live edit mode without redeploying it.
+*&ndash&ndashrestart*: Restart an application already running in live edit mode without redeploying it.
 
 **Examples**
 
@@ -612,17 +612,18 @@ This command stops the application if the current directory is a sync target of 
 bl stop –l “launchConfigurations/mylaunchconfig.launch”
 ```
 {: pre}
-
+-->
 
 # Related Links
 {: #rellinks}
 
+<!--
 ## Tutorials and Samples
 {: #samples}
 
 * [Test and debug a Node.js app with Bluemix Live Sync![External link icon](../icons/launch-glyph.svg "External link icon")](https://hub.jazz.net/tutorials/livesync){:new_window}
-
 -->
+
 
 ## Related Links
 {: #general}
