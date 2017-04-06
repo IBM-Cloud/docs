@@ -516,7 +516,7 @@ The service-name in the `boundTo` crn must match the service name that appears i
   
 See the [CRN spec](https://github.ibm.com/ibmcloud/builders-guide/blob/master/specifications/crn/CRN.md) for help filling in these fields.
 
-From the response, save metadata->uuid and metadata->crn, which are your service id and service id crn.
+From the response, save metadata&ndash>uuid and metadata&ndash>crn, which are your service id and service id crn.
 
 
 #### Step 2: Contact the AccessControl Squad at [#iam-adopters](https://ibm-cloudplatform.slack.com/messages/iam-adopters). 
@@ -546,9 +546,9 @@ Curl command:
 ```
   curl -X POST -H 'Authorization: <bluemix token>' -H 'Content-Type: application/json' -d '{"boundTo": "<service id crn>", "name": "<api key name>", "description": "<api key description>"}' https://iam.ng.bluemix.net/apikeys
 ```
-`boundTo` needs to be the crn of your service id (field metadata->crn saved from step 1’s response). The name and description can be anything.
+`boundTo` needs to be the crn of your service id (field metadata&ndash>crn saved from step 1’s response). The name and description can be anything.
 
-From the response, save entity->apiKey.
+From the response, save entity&ndash>apiKey.
 
 See [createAPIKey](https://iam.stage1.ng.bluemix.net/ibm/api/explorer/#!/Cloud_IAM_Service_Id_and_Api_Key_MVP/createAPIKey) for more information on this api and related apis.
 
@@ -575,7 +575,7 @@ Use the **access_token** field in the result, this is your api key token(for you
   * A list of IAM System Defined Roles can be found by performing the following request:
 Curl command:
 ```
-curl -X GET --header 'Accept: application/json' --header 'Authorization: <api key token>' 'https://iampap.ng.bluemix.net/acms/v1/roles'
+curl -X GET &ndash&ndashheader 'Accept: application/json' &ndash&ndashheader 'Authorization: <api key token>' 'https://iampap.ng.bluemix.net/acms/v1/roles'
 ```
 
 **Note:** Use the _crn version_ of the IAM System Defined Roles in your service registration payload.
