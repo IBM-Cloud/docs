@@ -59,7 +59,9 @@ If you launch Kibana for a Cloud Foundry (CF) application from the {{site.data.k
         
 2. To search for the message ID *CWWKT0016I*, modify the search query and press **Enter**:
     
-    ```application_id:f52f6016-3aab-4b5c-aa2e-5493747cb978 AND message:"CWWKT0016I:" ```
+    ```
+	application_id:f52f6016-3aab-4b5c-aa2e-5493747cb978 AND message:"CWWKT0016I:" 
+	```
         
     ![Modify the query](images/k4_filter_by_text_modify_query.jpg "Modify the query")
       
