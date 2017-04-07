@@ -45,11 +45,13 @@ To add {{site.data.keyword.DRA_short}} to a toolchain:
 
 2. Click **{{site.data.keyword.DRA_short}}**.
 
-3. To add all of the {{site.data.keyword.DRA_short}} capabilities to your toolchain, select **Advanced** and make sure that the **Enable Developer Insights** check box is selected. To add Deployment Risk only, select **Default**. 
+3. To add all of the {{site.data.keyword.DRA_short}} capabilities to your toolchain, select **Advanced** and make sure that the **Enable Developer Insights** check box is selected. To add Deployment Risk only, select **Default**.
 
 4. Click **Create Integration**.
 
 {{site.data.keyword.DRA_short}} is now available on your toolchain's Overview page.
+
+If you create a toolchain from a template that includes {{site.data.keyword.DRA_short}}, when you create the toolchain, ensure that **Advanced** is selected in the integration options.
 
 ## Using {{site.data.keyword.DRA_short}}
 {: #using}
