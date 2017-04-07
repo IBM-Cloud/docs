@@ -26,7 +26,7 @@ lastupdated: "2017-03-31"
 
    * Deployment Risk is like a continuous delivery safety net. It analyzes the results from unit tests, functional tests, application scans, and code coverage tools at specified gates in your deployment process and prevents risky changes from being released.
 
-   * Delivery Insights shows deployment statistics, metrics, and other information about your IBM UrbanCode Deploy installation. For example, it can show charts of deployment duration, successes, and failures, all sorted by logically grouped environments. See [Integrating DevOps Insights with IBM UrbanCode Deploy](uc_insights_overview.html).
+   * Delivery Insights shows deployment statistics, metrics, and other information about your IBM UrbanCode Deploy installation. For example, it can show charts of deployment duration, successes, and failures, all sorted by logically grouped environments. See [Integrating DevOps Insights with IBM UrbanCode Deploy](/docs/services/DevOpsInsights/uc_insights_overview.html).
 
 {{site.data.keyword.DRA_short}} is an integration in the Bluemix open toolchain catalog. For more information about toolchains, see [Working with toolchains](/docs/services/ContinuousDelivery/toolchains_working.html).
 
@@ -37,7 +37,7 @@ To use {{site.data.keyword.DRA_short}}, you must add it to a toolchain. Many too
 
 {{site.data.keyword.DRA_short}} is part of {{site.data.keyword.contdelivery_short}}. You can add {{site.data.keyword.DRA_short}} to any toolchain by selecting it from the tool integration catalog.
 
-{{site.data.keyword.DRA_short}} is also part of many toolchain templates. If you create a toolchain from a template that includes {{site.data.keyword.DRA_short}}, make sure that {{site.data.keyword.DRA_short}} is set to **Advanced**. Then, create the toolchain and skip to [Using Insights](#using).
+{{site.data.keyword.DRA_short}} is also part of many toolchain templates. If you create a toolchain from a template that includes {{site.data.keyword.DRA_short}}, make sure that {{site.data.keyword.DRA_short}} is set to **Advanced**. Then, create the toolchain and skip to [Using Insights](/docs/services/DevOpsInsights/index.html#using).
 
 To add {{site.data.keyword.DRA_short}} to a toolchain:
 
@@ -47,22 +47,20 @@ To add {{site.data.keyword.DRA_short}} to a toolchain:
 
 3. To add all of the {{site.data.keyword.DRA_short}} capabilities to your toolchain, select **Advanced** and make sure that the **Enable Developer Insights** check box is selected. To add Deployment Risk only, select **Default**. 
 
-4. Click **Create Integration**. 
+4. Click **Create Integration**.
 
 {{site.data.keyword.DRA_short}} is now available on your toolchain's Overview page.
-
-If you create a toolchain from a template that includes {{site.data.keyword.DRA_short}}, when you create the toolchain, ensure that **Advanced** is selected in the integration options.
 
 ## Using {{site.data.keyword.DRA_short}}
 {: #using}
 
-If your toolchain includes GitHub, GitLab, or JIRA, {{site.data.keyword.DRA_short}} automatically provides you with information about your codebase and team after some initial data gathering and analysis. If your toolchain does not include any of those integrations, add one of them and then follow these steps: 
+If your toolchain includes GitHub, GitLab, or JIRA, {{site.data.keyword.DRA_short}} automatically provides you with information about your codebase and team after some initial data gathering and analysis. If your toolchain does not include any of those integrations, add one of them and then follow these steps:
 
 1. From your toolchain's Overview page, click **{{site.data.keyword.DRA_short}}**.
 
-2. From the left navigation, click **Team Dynamics** or **Developer Insights** and then choose a data category. 
+2. From the left navigation, click **Team Dynamics** or **Developer Insights** and then choose a data category.
 
-3. Explore your project's data by viewing the dashboards in the data category. If you want to know more about a graph or what you might do with its information, click **Information** or **Guidance**. 
+3. Explore your project's data by viewing the dashboards in the data category. If you want to know more about a graph or what you might do with its information, click **Information** or **Guidance**.
 
 After you explore Team Dynamics and Developer Insights, [configure Deployment Risk](/docs/services/DevOpsInsights/insights_risk.html) to help you enforce code quality. Deployment Risk is compatible with both the {{site.data.keyword.contdelivery_short}} pipeline and Jenkins.   
 
@@ -70,7 +68,7 @@ By default, {{site.data.keyword.DRA_short}} does not include Developer Insights 
 
 1. Go to the toolchain's Overview page.
 2. On the {{site.data.keyword.DRA_short}} card, click the **Actions** menu.
-3. Click **Configure**. 
+3. Click **Configure**.
 4. For the type, select **Advanced** and select the check box.
 5. Click **Save Integration**.
 
