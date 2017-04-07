@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-03-20"
+lastupdated: "2017-04-07"
 
 
 ---
@@ -79,7 +79,7 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE]
 <dt>--format FORMAT</dt>
 <dd>(Optional) Format the output elements by using a Go template.</dd>
 <dt>IMAGE</dt>
-<dd>The full {{site.data.keyword.Bluemix_short}} registry path to the image that you want to inspect. If a tag is not specified in the image path, the image tagged `latest` is inspected. You can inspect multiple images by listing each private {{site.data.keyword.Bluemix_short}} registry path in the command with a space between each path.</dd>
+<dd>The full {{site.data.keyword.Bluemix_short}} registry path to the image that you want to inspect, which is in the format namespace/image:tag. If a tag is not specified in the image path, the image tagged `latest` is inspected. You can inspect multiple images by listing each private {{site.data.keyword.Bluemix_short}} registry path in the command with a space between each path.</dd>
 </dl>
 
 
@@ -105,7 +105,7 @@ View all images in your {{site.data.keyword.Bluemix_short}} org.
 
 
 ## bx cr image-rm
-Delete a specified image from your registry.
+Deletes a specified image from your registry.
 
 ```
 bx cr image-rm IMAGE [IMAGE]
@@ -115,7 +115,7 @@ bx cr image-rm IMAGE [IMAGE]
 **Parameters**
 <dl>
 <dt>IMAGE</dt>
-<dd>The full {{site.data.keyword.Bluemix_short}} registry path to the image that you want to remove. If a tag is not specified in the image path, the image tagged `latest` is deleted by default. You can delete multiple images by listing each private {{site.data.keyword.Bluemix_short}} registry path in the command with a space between each path.</dd>
+<dd>The full {{site.data.keyword.Bluemix_short}} registry path to the image that you want to remove, which is in the format  namespace/image:tag. If a tag is not specified in the image path, the image tagged `latest` is deleted by default. You can delete multiple images by listing each private {{site.data.keyword.Bluemix_short}} registry path in the command with a space between each path.</dd>
 </dl>
 
 
@@ -153,7 +153,7 @@ bx cr namespace-list
 
 
 ## bx cr namespace-rm
-Removes a namespace from your {{site.data.keyword.Bluemix_short}}  org. Images in this namespace are deleted when the namespace is removed.
+Removes a namespace from your {{site.data.keyword.Bluemix_short}} org. Images in this namespace are deleted when the namespace is removed.
 
 ```
 bx cr namespace-rm NAMESPACE
