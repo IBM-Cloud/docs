@@ -12,7 +12,7 @@ lastupdated: "2017-03-17"
 {:pre: .pre}
 {:note:.deprecated}
 
-# What's new in the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}
+# What is new in the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}
 {: #what-is-new}
 
 

@@ -14,7 +14,7 @@ lastupdated: "2017-03-17"
 # Plug-ins for the {{site.data.keyword.Bluemix_notm}} CLI
 {: #cli}
 
-The followong plug-ins can be added to the {{site.data.keyword.Bluemix}} CLI. You can use these plug-ins to create your {{site.data.keyword.dev_console}} projects. 
+The following plug-ins can be added to the {{site.data.keyword.Bluemix}} CLI. You can use these plug-ins to create your {{site.data.keyword.dev_console}} projects. 
 
 * [{{site.data.keyword.dev_cli_long}}](dev_cli.html)
 * [{{site.data.keyword.IBM_notm}} SDK Generator plug-in](sdk_cli.html)

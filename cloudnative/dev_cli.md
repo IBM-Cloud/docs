@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-22"
+lastupdated: "2017-03-28"
 
 ---
 {:new_window: target="_blank"}  
@@ -41,24 +41,6 @@ A few prerequisites are required to fully explore and properly utilize the {{sit
 4. Optional: If you plan on running and debugging applications locally then you must also install [Docker ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.docker.com/get-docker). This is required only for non-mobile projects.
 
 
-### Installing
-{: #installation}
-
-1. Install the [{{site.data.keyword.dev_cli_short}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in){: new_window} by running the following command:
- 
-	```
-	bx plugin install dev -r Bluemix
-	```
-	{: codeblock}
-
-2. 	Validate successful installation by running the following command:  
- 
-	```
-	bx dev
-	```
-	{: codeblock}
-	
-
 ### Before you begin
 {: #before-install}
 
@@ -94,6 +76,24 @@ A few prerequisites are required to fully explore and properly utilize the {{sit
 		bx login --apikey <value>
 		```
 		{: codeblock}
+
+
+### Installing
+{: #installation}
+
+1. Install the [{{site.data.keyword.dev_cli_short}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in){: new_window} by running the following command:
+ 
+	```
+	bx plugin install dev -r Bluemix
+	```
+	{: codeblock}
+
+2. 	Validate successful installation by running the following command:  
+ 
+	```
+	bx dev
+	```
+	{: codeblock}
 
 
 ## Commands
@@ -171,7 +171,7 @@ assist with debugging an application.
 
 * Port mappings for the debug port. The first value is the port to use in the host OS, the second is the port in the container (host:container).
 * Usage: `bx dev debug container-port-map-debug [7777:7777]`
- 
+
 ##### `build-cmd-debug`
 {: #build-cmd-debug}
 
@@ -193,7 +193,7 @@ For more information about local application debugging, see [Local application d
 ### Delete
 {: #delete}
 
-This command allows you to remove projects from your {{site.data.keyword.Bluemix}} space.
+This command allows you to remove projects from your {{site.data.keyword.Bluemix}} space. You may run the command without parameters to list available projects to delete. Project code and directories are not removed from your local disk space.
 
 Run the following command to delete your project from {{site.data.keyword.Bluemix}}:
 
@@ -359,53 +359,53 @@ bx dev test
 ## Parameters for build, debug, run, and test
 {: #command-parameters}
 
-The following parameters may be used along with the `build|debug|run|test` commands and may be specified via command line and/or updating the project's `cli-config.yml` file directly. Additional parameters are available for the [`debug`](#debug-parameters) and [`run`](#run-parameters) commands and are documented in their respective sections.
+The following parameters can be used with the `build|debug|run|test` commands or by updating the project's `cli-config.yml` file directly. Additional parameters are available for the [`debug`](#debug-parameters) and [`run`](#run-parameters) commands.
 
 **Note**: Command parameters entered on the command line take precedence over the `cli-config.yml` configuration.
 
-##### `container-name-tools`  
+### `container-name-tools`  
 {: #container-name-tools}
 
 * Container name for the tools container.
 * Usage: `bx dev <build|debug|run|test> container-name-tools [<demo-tools>]`
 
-##### `host-path-tools`
+### `host-path-tools`
 {: #host-path-tools}
 
 * Location on the host to share for build, debug, test.
 * Usage: `bx dev <build|debug|run|test> host-path-tools [/path/to/build/tools]`
 
-##### `container-path-tools`
+### `container-path-tools`
 {: #container-path-tools}
 
 * Location in the container to share for build, debug, test.
 * Usage: `bx dev <build|debug|run|test> container-path-tools [/path/for/build]`
 
-##### `container-port-map`
+### `container-port-map`
 {: #container-port-map}
 
 * Port mappings for the container. The first value is the port to use in the host OS, the second is the port in the container (host:container).
 * Usage: `bx dev <build|debug|run|test> container-port-map [8090:8090,9090,9090]`
 
-##### `dockerfile-tools`
+### `dockerfile-tools`
 {: #dockerfile-tools}
 
 * Docker file for the tools container.
 * Usage: `bx dev <build|debug|run|test> dockerfile-tools [path/to/dockerfile]`
 
-##### `image-name-tools`
+### `image-name-tools`
 {: #image-name-tools}
 
 * Image to create from dockerfile-tools.
 * Usage: `bx dev <build|debug|run|test> image-name-tools [path/to/image-name]`
 
-##### `build-cmd-run`
+### `build-cmd-run`
 {: #build-cmd-run}
 
 * Command to build code for all use but DEBUG.
 * Usage: `bx dev <build|debug|run|test> build-cmd-run [some.build.command]`
 
-##### `test-cmd`
+### `test-cmd`
 {: #test-cmd}
 
 * Command to test code in tools container.

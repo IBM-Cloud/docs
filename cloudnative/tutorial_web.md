@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-04"
 
 ---
 {:new_window: target="_blank"}
@@ -16,6 +16,9 @@ lastupdated: "2017-03-17"
 
 The following end-to-end tutorial walks through the steps to create a project from the Web Basic Starter, including the tools that you must have installed, and subsequently, the steps to run the project code.
 
+You have the option to create a project using either the web-based [{{site.data.keyword.dev_console}}](#create-devex) or through the command-driven [{{site.data.keyword.dev_cli_notm}}](#create-cli).
+
+
 ## Installing developer tools
 {: #dev_tools}
 
@@ -25,9 +28,9 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 ## Creating a project using the {{site.data.keyword.dev_console}}
 {: #create-devex}
 
-1. Create a project in the {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}}.
+1. Create a project in the {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}}:
 
-	1. From the **Getting Started** page in the {{site.data.keyword.dev_console}}, click **Create Project**.
+	1. From the [**Getting Started** ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/developer/getting-started/) page in the {{site.data.keyword.dev_console}}, click **Create Project**.
 
 		You can alternatively click **Create Project** from the **Projects** page.
 
@@ -37,13 +40,13 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 
 	4. Enter your project name. For this tutorial, use `WebBasicProject`.   
 
-	5. Enter a hostname. For this tutorial, use `devhost` 
+	5. Enter a unique hostname. For this tutorial, use `devhost` 
 
 	6. Select your language platform. For this tutorial, use `Swift`.
    
 	7. Click **Create**.
 
-2. Optional: Add the Data capability.
+2. Optional: Add the Data capability:
 
 	1. Click **View** for **Data** on the **Project Overview** page.
 
@@ -51,8 +54,7 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 
    2. Enter your service name and click **Create**.
 
-
-3. Generate your project code.
+3. Generate your project code:
 
 	1. Click **Get the Code** on the **Project Overview** page to select your language.
    
@@ -62,7 +64,15 @@ Ensure that you have installed the [prerequisite developer tools ![External link
    
 	3. When the project code is finished generating, click **Download Code** to download your project archive.
 
-4. Optional: [Update your project](project_overview_page.html#update_language) to generate a new language.
+4. Begin working with your downloaded project:
+
+	1. Expand the archived file.
+	
+	2. Navigate to the new project directory.
+	
+	3. Use the {{site.data.keyword.dev_cli_notm}} to proceed.
+
+5. Optional: [Update your project](project_overview_page.html#update_language) to generate a new language.
 
 
 ## Creating a project using the {{site.data.keyword.dev_cli_notm}}
@@ -90,16 +100,9 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 
 5. When your `WebBasicProjectCLI` project has been successfully saved, navigate to the `WebBasicProjectCLI` folder.
 
-6. Add your own code, build the project, or run the project.
+6. Add your own code, and run the project.
  
-	1. Build the project with the following command:
-   
-		```
- 		bx dev build
- 		```     
-		{: codeblock}
-
-	2. Run the project with the following command:
+	1. Run the project with the following command:
  
 		```
 		bx dev run
