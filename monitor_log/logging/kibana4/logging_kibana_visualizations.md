@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-08"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -36,6 +36,7 @@ The following table lists different visualization types:
 | Metric | Use to show a count of hits, or the exact average a numeric field. |
 | Pie chart | Use to display different values of a field. | 
 | Vertical bar chart | Displays data that is time-based and data that is not time-based. Use to group data. |
+{: caption="Table 1. Visualization types" caption-side="top"}
 
 In the Visualize page, you can perform any of the following tasks:
 
@@ -48,6 +49,7 @@ In the Visualize page, you can perform any of the following tasks:
 | [Export a visualization](logging_kibana_visualizations.html#logging_kibana_visualizations_export) | You can export a visualization as a JSON file.  |
 | [Import a visualization](logging_kibana_visualizations.html#logging_kibana_visualizations_import) | You can import a visualization as a JSON file.  |
 | [Share a visualization](logging_kibana_visualizations.html#logging_kibana_visualizations_share) | You can share a visualization through your HTML source or through the Kibana dashboard.  |
+{: caption="Table 2. Tasks to work with visualizations" caption-side="top"}
 
 
 ## Creating visualizations from queries in Kibana
@@ -85,28 +87,6 @@ Complete the following steps to create a visualization from the Visualize page:
 8. Add sub-buckets to break down the data.
 
 For more information about Kibana, see the [Kibana User Guide ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://www.elastic.co/guide/en/kibana/4.1/index.html){: new_window}.
- 
-## Saving a visualization
-{:#logging_kibana_visualizations_save}
-
-Complete the following steps to save a visualization in the Visualize page:
-
-1. In the toolbar of the Visualize page, click the **Save Visualization** button ![Save visualization](images/k4_visualization_save_icon.jpg "Save visualization").
-
-2. Enter a name for the visualization.
-
-3. Click Save. 
-
-## Loading a visualization
-{:#logging_kibana_visualizations_reload}
-
-Complete the following steps to load a saved visualization:
-
-1. In the toolbar of the Visualize page, click the **Load Saved Visualization** button ![Load saved visualization](images/k4_visualization_open_icon.jpg "Load saved visualization").
-
-2. Select the visualization that you want to load. 
-
-
 
 ## Deleting a visualization
 {:#logging_kibana_visualizations_delete}
@@ -145,6 +125,30 @@ To import a visualization as a JSON file, complete the following steps in the Se
 3. Select a file and click **Open**.
 
 The visualization is added to the list of visualizations.
+
+
+ 
+## Loading a visualization
+{:#logging_kibana_visualizations_reload}
+
+Complete the following steps to load a saved visualization:
+
+1. In the toolbar of the Visualize page, click the **Load Saved Visualization** button ![Load saved visualization](images/k4_visualization_open_icon.jpg "Load saved visualization").
+
+2. Select the visualization that you want to load. 
+
+
+## Saving a visualization
+{:#logging_kibana_visualizations_save}
+
+Complete the following steps to save a visualization in the Visualize page:
+
+1. In the toolbar of the Visualize page, click the **Save Visualization** button ![Save visualization](images/k4_visualization_save_icon.jpg "Save visualization").
+
+2. Enter a name for the visualization.
+
+3. Click Save. 
+
 
 
 ## Sharing a visualization

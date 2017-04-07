@@ -14,7 +14,6 @@ lastupdated: "2017-02-06"
 
 
 # Filtering your Cloud Foundry App logs by time in Kibana
-<!-- for example, Uploading your data -->
 {: #logging_kibana_time_filter}
 
 
@@ -30,12 +29,12 @@ Complete the following tasks to view and filter your Cloud Foundry app logs by t
     
     The logs for your app are displayed.
 
-2. Access the Kibana dashboard for your app. Click **Advanced View** ![Advanced view link](images/logging_advanced_view.jpg). The Kibana dashboard is displayed.
+2. Access the Kibana dashboard for your app. Click **Advanced View** ![Advanced view link](images/logging_advanced_view.jpg "Advanced view link"). The Kibana dashboard is displayed.
 
 
-3. On the Kibana dashboard, click the **Time Filter**; ![Kibana time filter](images/logging_kibana_time_filter.jpg) then, select **Custom** from the drop-down menu. The following window is displayed:
+3. On the Kibana dashboard, click the **Time Filter**; ![Kibana time filter](images/logging_kibana_time_filter.jpg "Kibana time filter") then, select **Custom** from the drop-down menu. The following window is displayed:
 
-    ![Custom time filter on the Kibana dashboard](images/logging_custom_time_filter.jpg)
+    ![Custom time filter on the Kibana dashboard](images/logging_custom_time_filter.jpg "Custom time filter on the Kibana dashboard")
 
 4. Click the **From** and **To** fields to edit the beginning and end time for your filter. 
     

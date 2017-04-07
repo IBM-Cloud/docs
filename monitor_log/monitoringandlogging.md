@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-14"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-02-14"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Monitoring and logging
+# Overview
 {: #monitoringandlogging}
 
 {{site.data.keyword.Bluemix}} offers logging and monitoring capabilities across different services, such as Cloud Foundry and {{site.data.keyword.containershort}}. You can develop, run, and manage applications in any runtime without the complexity of building and maintaining the infrastructure that is typically associated with developing and launching an app. 
@@ -28,6 +28,7 @@ lastupdated: "2017-02-14"
 Monitoring and logging capabilities are available in the following regions:
 * US South
 * United Kingdom
+* Frankfurt
 
 
 

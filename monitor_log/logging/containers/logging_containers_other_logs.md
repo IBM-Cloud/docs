@@ -41,6 +41,7 @@ Complete the following steps to collect non-default data through the console:
     For example, when you add a container that is based on the latest Liberty image, to analyze the log file *dpkg.log*, set the environment value to the following value:
     
     <table>
+      <caption>Table 1. Log locations sample value</caption>
       <tbody>
         <tr>
           <th align="center">Variable name</th>
@@ -72,6 +73,7 @@ Complete the following steps to collect non-default log data through the CLI:
     You can include the **–a** option to log in to a specific region in {{site.data.keyword.Bluemix_notm}}. For example, the following table lists the commands per region:
 
     <table>
+      <caption>Table 2. Commands per region</caption>
       <tbody>
         <tr>
           <th align="center">Region</th>
@@ -85,11 +87,11 @@ Complete the following steps to collect non-default log data through the CLI:
           <td align="left">United Kingdom</td>
           <td align="left">cf login -a api.eu-gb.bluemix.net</td>
         </tr>
-        <tr>
-          <td align="left">Sydney</td>
-          <td align="left">cf login -a api.au-syd.bluemix.net</td>
+	 <tr>
+          <td align="left">Frankfurt</td>
+          <td align="left">cf login -a api.eu-de.bluemix.net</td>
         </tr>
-      </tbody>
+       </tbody>
     </table>
     
 
@@ -104,6 +106,7 @@ Complete the following steps to collect non-default log data through the CLI:
     where
     
      <table>
+      <caption>Table 3. Command options</caption>
       <tbody>
         <tr>
           <th align="center">Option</th>

@@ -14,7 +14,7 @@ lastupdated: "2017-03-06"
 {:screen: .screen}
 
 
-# Getting help and support
+# Getting help and support for monitoring
 {: #gettinghelp}
 
 If you have problems or questions when using the monitoring capabilities in {{site.data.keyword.Bluemix}}, you can check {{site.data.keyword.Bluemix_notm}}, or get help by searching for information or by asking questions through a forum. You can also open a support ticket.

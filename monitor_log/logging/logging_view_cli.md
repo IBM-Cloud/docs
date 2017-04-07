@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-01"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -39,17 +39,7 @@ To view logs that you are interested in or exclude the content that you don't wa
 * To view entries in the logs for a Cloud Foundry app that contain specific keywords, see [Viewing log entries that contain certain keywords](logging_view_cli.html#partial_by_keyword_log_cli).
 
 
-## Analyzing Docker container logs from the CLI
-{: #analyzing_container_logs_cli}
-
-Use the `cf ic logs` command to display logs from a container in {{site.data.keyword.Bluemix_notm}}. For example, you can use the logs to analyze why a container has stopped or for reviewing the container output. 
-
-To see application errors for the app that runs in a container through the `cf ic logs` command, the application must write its logs to the standard output (STDOUT) and standard error (STDERR) output streams. If you design your application to write to these standard output streams, you can view the logs via the command line even if the container shuts down or crashes.
-
-For more information about the `cf ic logs` command, see [cf ic logs command](/docs/containers/container_cli_reference_cfic.html#container_cli_reference_cfic__logs).
-
-
-## Viewing the log for a Cloud Foundry app
+### Viewing the log for a Cloud Foundry app
 {: #full_log_cli}
 
 To see all the logs available for a Cloud Foundry app, complete the following steps:
@@ -61,7 +51,7 @@ To see all the logs available for a Cloud Foundry app, complete the following st
    <pre class="pre screen"><code>cf logs <var class="keyword varname">appname</var></code></pre>
    
    
-## Viewing the latest log entries for a Cloud Foundry app
+### Viewing the latest log entries for a Cloud Foundry app
 {: #tailing_log_cli}
 
 To see the most recent logs that are available for a Cloud Foundry app, complete the following steps:
@@ -76,7 +66,7 @@ To see the most recent logs that are available for a Cloud Foundry app, complete
 logs appname --recent</samp> in another command line window to see the logs in real time. </div>
 
 
-## Viewing a section of a Cloud Foundry log
+### Viewing a section of a Cloud Foundry log
 {: #partial_log_cli}
 
 To view a portion of the logs that are available for a Cloud Foundry app within a time range, complete the following steps:
@@ -90,7 +80,7 @@ To view a portion of the logs that are available for a Cloud Foundry app within 
     For more information about the **cut** option, enter **cut --help**.
 
 
-## Viewing log entries that contain certain keywords
+### Viewing log entries that contain certain keywords
 {: #partial_by_keyword_log_cli}
 
 To display log entries that contain certain keywords for a Cloud Foundry app, complete the following steps:
@@ -109,7 +99,7 @@ For example, to display log entries that contain the keyword **APP**, you can us
 For more information about the **grep** option, type **grep --help**.
 
 
-## Cloud Foundry application logs
+### Cloud Foundry application logs
 {: #cf_app_logs_cli}
 
 The following logs are available for a Cloud Foundry application after you deploy it in {{site.data.keyword.Bluemix}}:
@@ -132,5 +122,13 @@ To view this log, enter the following command: `cf files appname logs/staging_ta
 
 **Note:** For information about how to enable application logging, see [Debugging runtime errors](/docs/debug/index.html#debugging-runtime-errors).
 
+## Analyzing Docker container logs from the CLI
+{: #analyzing_container_logs_cli}
+
+Use the `cf ic logs` command to display logs from a container in {{site.data.keyword.Bluemix_notm}}. For example, you can use the logs to analyze why a container has stopped or for reviewing the container output. 
+
+To see application errors for the app that runs in a container through the `cf ic logs` command, the application must write its logs to the standard output (STDOUT) and standard error (STDERR) output streams. If you design your application to write to these standard output streams, you can view the logs via the command line even if the container shuts down or crashes.
+
+For more information about the `cf ic logs` command, see [cf ic logs command](/docs/containers/container_cli_reference_cfic.html#container_cli_reference_cfic__logs).
 
 
