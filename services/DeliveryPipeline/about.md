@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-29"
+  years: 2016, 2017
+lastupdated: "2017-04-5"
 
 ---
 
@@ -93,7 +93,7 @@ In the pipeline, you can specify everything that a manifest file can by using `c
 
 To avoid conflicts, you can specify a route by using `cf push` followed by the host name argument, `-n`, and a route name. By modifying the deployment script for individual stages, you can avoid route conflicts when you deploy to multiple targets.
 
-To use the `cf push` command arguments, open the configuration settings for a deploy job and modify the **Deploy Script** field. For more information, see [the Cloud Foundry Push documentation](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push).
+To use the `cf push` command arguments, open the configuration settings for a deploy job and modify the **Deploy Script** field. For more information, see [the Cloud Foundry Push documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push){:new_window}.
 
 ## An example pipeline
 {: #deliverypipeline_example}
@@ -111,4 +111,3 @@ This pipeline is shown in the following conceptual diagram:
 *A conceptual model of a three-stage pipeline*
 
 Stages take their input from repositories and build jobs, and jobs within a stage run sequentially and independently of each other. In the example pipeline, the stages will run sequentially, even though the Test and Prod stages both take the Build stage's output as their input.
-

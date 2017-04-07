@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-2-17"
+lastupdated: "2017-4-5"
 
 ---
 
@@ -43,10 +43,10 @@ After you add this service, you can create a multi-stage deployment pipeline in 
 ## Tutorials and Samples
 {: #samples}
 
-* [developerWorks: {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.deliverypipeline}} service![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/developerworks/topics/delivery%20pipeline%20service){:new_window}
+* [developerWorks: {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.deliverypipeline}} service ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/developerworks/topics/delivery%20pipeline%20service){:new_window}
 
 ## Related Links
 {: #general}
 
-* [{{site.data.keyword.Bluemix_notm}} Prerequisites![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/bluemix/support/#prereqs){:new_window}
-* [IBM Bluemix Garage Method: Delivery pipeline![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/practice_delivery_pipeline/){:new_window}
+* [{{site.data.keyword.Bluemix_notm}} Prerequisites ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/bluemix/support/#prereqs){:new_window}
+* [IBM Bluemix Garage Method: Delivery pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/practice_delivery_pipeline/){:new_window}

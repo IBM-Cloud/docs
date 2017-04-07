@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-16"
+lastupdated: "2017-4-5"
 
 ---
 
@@ -45,7 +45,7 @@ A pipeline that uses the Static Analyzer service typically includes these stages
 
 ### Creating a static code scan
 
-Before you begin, review the [Terms of Use for the service![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01){:new_window}.
+Before you begin, review the [Terms of Use for the service ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01){:new_window}.
 
 <!-- Use ordered list markup for the step section. Include code examples as needed. -->
 
@@ -186,7 +186,7 @@ Before you begin, create or copy a Slack WebHook URL:
 3. Select a channel and click **Add Incoming WebHooks Integration**.
 4. Add a **WebHook URL** or copy an existing one.
 
-For more information, see [Incoming WebHooks in the Slack documentation![External link icon](../../icons/launch-glyph.svg "External link icon")](https://api.slack.com/incoming-webhooks){:new_window}.
+For more information, see [Incoming WebHooks in the Slack documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://api.slack.com/incoming-webhooks){:new_window}.
 
 To create Slack notifications:
 

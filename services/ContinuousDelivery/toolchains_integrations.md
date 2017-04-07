@@ -44,7 +44,7 @@ The tool integrations that are available to add and configure for your toolchain
 **Tip**: If you want to start developing with your source code on {{site.data.keyword.Bluemix_notm}} Public, configure the GitHub tool integration or the Git Repos and Issue Tracking tool integration before you configure the {{site.data.keyword.deliverypipeline}}. If you want to start developing with your code on {{site.data.keyword.Bluemix_notm}} Dedicated, configure the {{site.data.keyword.ghe_short}} tool integration or the GitHub tool integration before you configure the {{site.data.keyword.deliverypipeline}}.
 
 
-## Configuring {{site.data.keyword.alertnotificationshort}} (Experimental)
+## Configuring Alert Notification (Experimental)
 {: #alertnotification}
 
 {{site.data.keyword.alertnotificationfull}} is a hybrid cloud-based solution that you can use to centralize and simplify your notification strategy. It works with other cloud-based and on-premises applications. Alerts are forwarded to {{site.data.keyword.alertnotificationshort}} by using a secure RESTful API.
@@ -55,17 +55,17 @@ Configure {{site.data.keyword.alertnotificationshort}} to receive notifications 
 
 1. If you don't have an {{site.data.keyword.alertnotificationshort}} account, sign up for one:
 
- a. Open the [IBM {{site.data.keyword.alertnotificationshort}}![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/us-en/marketplace/alert-notification){: new_window} page in IBM Marketplace.
+ a. Open the [IBM {{site.data.keyword.alertnotificationshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/us-en/marketplace/alert-notification){: new_window} page in IBM Marketplace.
 
  b. Either purchase a subscription or sign up for the free 90-day trial.
 
-1. After your {{site.data.keyword.alertnotificationshort}} account is set up, open your [My IBM Dashboard![External link icon](../../icons/launch-glyph.svg "External link icon")](https://myibm.ibm.com/dashboard/){: new_window}.
+1. After your {{site.data.keyword.alertnotificationshort}} account is set up, open your [My IBM Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://myibm.ibm.com/dashboard/){: new_window}.
 1. Next to IBM {{site.data.keyword.alertnotificationshort}}, click **Launch**.
 1. Click **Manage API Keys** and click **Create API Key**.
 1. In the **Create API Key** field, type a description.
 1. Click **Generate**. The new API Key information, including the name and password, is displayed. You need that information for the tool integration configuration, so keep the New API Key window open. For security purposes, you cannot retrieve the API key password later.
 
-### Configuring {{site.data.keyword.alertnotificationshort}}
+### Configuring Alert Notification
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **{{site.data.keyword.alertnotificationshort}}**.
 1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain**. Then, click **Overview**.  
@@ -77,7 +77,7 @@ Configure {{site.data.keyword.alertnotificationshort}} to receive notifications 
 1. Click **Create Integration**.
 1. From your toolchain, click **{{site.data.keyword.alertnotificationshort}}**.
 
-For more information, see [IBM {{site.data.keyword.alertnotificationshort}}![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/manage/tool_alert_notification/){: new_window}.
+For more information, see [IBM {{site.data.keyword.alertnotificationshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/manage/tool_alert_notification/){: new_window}.
 
 
 ## Configuring Artifactory
@@ -176,10 +176,10 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Maven Build job:
 
 1. Click **SAVE**. Whenever your pipeline runs, this build job uses the configuration information from the Artifactory tool integration to connect to your Maven repo.
 
-To learn more, see [Artifactory![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_artifactory/){: new_window}.
+To learn more, see [Artifactory ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_artifactory/){: new_window}.
 
 
-## Adding {{site.data.keyword.prf_hubshort}}
+## Adding Availability Monitoring
 {: #availabilitymonitoring}
 
 {{site.data.keyword.prf_hublong}} isolates problems, identifies patterns, and improves performance before users are affected. You can test your app from locations around the world, integrate with delivery pipelines, and gain insights on how to continuously optimize your code.
@@ -194,10 +194,10 @@ To test, monitor, and improve your app's health as you build it, add the {{site.
 1. Click **Create Integration**.
 1. Click **{{site.data.keyword.prf_hubshort}}** to open the {{site.data.keyword.prf_hubshort}} dashboard, select an app, and configure monitoring for the app.
 
-To learn more, see [{{site.data.keyword.prf_hublong}}![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/manage/tool_bluemix_availability_monitoring/){: new_window}.
+To learn more, see [{{site.data.keyword.prf_hublong}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/manage/tool_bluemix_availability_monitoring/){: new_window}.
 
 
-## Configuring {{site.data.keyword.deliverypipeline}}
+## Configuring Delivery Pipeline
 {: #deliverypipeline}
 
 {{site.data.keyword.deliverypipeline}} automates the continuous deployment of your projects through sequences of stages that retrieve input and run jobs, such as builds, tests, and deployments.
@@ -213,9 +213,9 @@ Configure {{site.data.keyword.deliverypipeline}} to automate the continuous buil
 1. Click **Create Integration** to add the {{site.data.keyword.deliverypipeline}} to your toolchain.
 1. Click **{{site.data.keyword.deliverypipeline}}** to view the pipeline and configure it. To learn the basics of configuring a pipeline, see [Building and deploying pipelines](/docs/services/ContinuousDelivery/pipeline_build_deploy.html){: new_window}.
 
-  **Tip**: If you want to trigger the pipeline when you push changes to your GitHub, {{site.data.keyword.ghe_short}}, or Git repository (repo), you must configure GitHub, {{site.data.keyword.ghe_short}}, or Git Repos and Issue Tracking for your toolchain before you define the stages for your pipeline. The pipeline stages need the Git URLs for your repos. Each pipeline stage can refer to only one of the GitHub, {{site.data.keyword.ghe_short}}, or Git repos that are associated with your toolchain. For instructions to configure GitHub, see the [GitHub](#github) section. For instructions to configure Dedicated {{site.data.keyword.ghe_short}}, see [Getting started with {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}. For instructions to configure Git Repos and Issue Tracking, see the [Git Repos and Issue Tracking](##gitbluemix) section.
-  
-  **Note:** If you don't have admin privileges for the GitHub or GitHub Enterprise repo or Master or Owner privileges for the Git Repos  and Issue Tracking repo that you are linking to, your integration will be limited because you can't use a webhook. Webhooks are required to automatically trigger a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
+  **Tip**: If you want to trigger the pipeline when you push changes to your GitHub, {{site.data.keyword.ghe_short}}, or Git repository (repo), you must configure GitHub, {{site.data.keyword.ghe_short}}, or Git Repos and Issue Tracking for your toolchain before you define the stages for your pipeline. The pipeline stages need the Git URLs for your repos. Each pipeline stage can refer to only one of the GitHub, {{site.data.keyword.ghe_short}}, or Git repos that are associated with your toolchain. For instructions to configure GitHub, see the [GitHub](#github) section. For instructions to configure Dedicated {{site.data.keyword.ghe_short}}, see [Getting started with {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}. For instructions to configure Git Repos and Issue Tracking, see the [Git Repos and Issue Tracking](##gitbluemix) section.    
+
+  **Note:** If you don't have admin privileges for the GitHub or GitHub Enterprise repo or Master or Owner privileges for the Git Repos and Issue Tracking repo that you are linking to, your integration will be limited because you can't use a webhook. Webhooks are required to automatically trigger a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
 
 1. Optional: If you are using a toolchain on {{site.data.keyword.Bluemix_notm}} Public and you want Sauce Labs to run tests on your app, configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test job. For instructions to configure the test job, see the [Configuring a Sauce Labs test job in your pipeline](#config_saucelabs) section.
 
@@ -256,10 +256,10 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test jo
 
 1. Click **SAVE**. Whenever your pipeline runs, your Sauce Labs tests run.
 
-To learn more, see [Delivery Pipeline![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_delivery_pipeline/){: new_window}.
+To learn more, see [Delivery Pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_delivery_pipeline/){: new_window}.
 
 
-## Adding {{site.data.keyword.DRA_short}} (Beta)
+## Adding DevOps Insights (Beta)
 {: #dra}
 
 {{site.data.keyword.DRA_full}} collects and analyzes the results from unit tests, functional tests, and code coverage tools to determine whether your code meets predefined criteria at specified gates in your deployment process. If your code does not meet or exceed the criteria, the deployment is stopped to prevent risks from being released. You can use {{site.data.keyword.DRA_short}} as a safety net for your continuous delivery environment or as a way to implement and improve quality standards.
@@ -274,10 +274,10 @@ Add {{site.data.keyword.DRA_short}} to maintain and improve the quality of your 
 1. Click **Create Integration**.
 1. Click **{{site.data.keyword.DRA_short}}**, and then complete the getting started steps: create criteria, connect the criteria to the pipeline, and run the pipeline.
 
-To learn more, see [{{site.data.keyword.DRA_short}}![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/learn/tool_devops_insights/){: new_window}.
+To learn more, see [{{site.data.keyword.DRA_short}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/learn/tool_devops_insights/){: new_window}.
 
 
-## Adding the Eclipse Orion {{site.data.keyword.webide}}
+## Adding the Eclipse Orion Web IDE
 {: #webide}
 
 The Eclipse Orion {{site.data.keyword.webide}} is an integrated web-based environment where you can create, edit, run, debug, and complete source control tasks. You can seamlessly move from editing to running to submitting to deploying.
@@ -292,13 +292,13 @@ To complete source control tasks, add the Eclipse Orion {{site.data.keyword.webi
 1. Click **Create Integration**.
 1. Click **Eclipse Orion {{site.data.keyword.webide}}**. Your workspace is pre-populated with your GitHub or {{site.data.keyword.ghe_short}} repos. The repos that are associated with your current toolchain are highlighted.
 
-To learn more, see [Editing code with the Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery/web_ide.html){: new_window} and [Eclipse Orion {{site.data.keyword.webide}}![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_eclipse_orion_web_ide/){: new_window}.
+To learn more, see [Editing code with the Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery/web_ide.html){: new_window} and [Eclipse Orion {{site.data.keyword.webide}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_eclipse_orion_web_ide/){: new_window}.
 
 
 ## Configuring Git Repos and Issue Tracking (Experimental)
 {: #gitbluemix}
 
-The Git Repos and Issue Tracking tool integration is based on GitLab Community Edition, which is a web-based hosting service for Git repos. You can have both local and remote copies of your repos. To learn more, see [Git Repos and Issue Tracking (Experimental)![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/help){:new_window}.
+The Git Repos and Issue Tracking tool integration is based on GitLab Community Edition, which is a web-based hosting service for Git repos. You can have both local and remote copies of your repos. To learn more, see [Git Repos and Issue Tracking (Experimental) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/help){:new_window}.
 
 If you are configuring Git Repos and Issue Tracking as you are creating the toolchain, follow these steps:    
 
@@ -318,9 +318,9 @@ If you have a toolchain and are adding Git Repos and Issue Tracking to it, follo
   d. If you have a Git repo and want to use it, for the repository type, click **Existing**. Type the URL.    
 
 1. If you want to use Issues for issue tracking, select the **Enable Issues** check box.
-1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}. 
+1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
 1. Click **Create Integration**.
-1. Click the card for the Git repo that you want to work with. Your project overview page opens.
+1. Click the card for the Git repo that you want to work with. Your project overview page opens.    
 
 **Note:** If you don't have Master or Owner privileges for the repo that you are linking to, your integration will be limited because you can't use a webhook. Webhooks are required to automatically trigger a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
 
@@ -354,25 +354,25 @@ Configure GitHub to manage your source code on the cloud:
  c. To fork a GitHub repo so that you can contribute changes through pull requests, click **Fork**.
 
 1. If you want to use GitHub's Issues for issue tracking, select the **Enable GitHub Issues** check box.
-1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
+1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
 1. Click **Create Integration**.
 1. Click the card for the GitHub repo that you want to work with. The GitHub website opens, where you can view the contents of the repo.
 
   **Tip**: You can use the integrated source code management tools in Eclipse Orion {{site.data.keyword.webide}} to edit the GitHub repo and deploy an app from your workspace.
 
-1. If you enabled GitHub Issues, click **GitHub Issues** to open it. You can use this instance of GitHub Issues for your entire toolchain, even if the toolchain contains multiple GitHub repos.
+1. If you enabled GitHub Issues, click **GitHub Issues** to open it. You can use this instance of GitHub Issues for your entire toolchain, even if the toolchain contains multiple GitHub repos.    
 
-**Note:** If you don't have admin privileges for the repo that you are linking to, your integration will be limited because you can't use a webhook. Webhooks are required to automatically trigger a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually. 
+**Note:** If you don't have admin privileges for the repo that you are linking to, your integration will be limited because you can't use a webhook. Webhooks are required to automatically trigger a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
 
-For more information, see [GitHub![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} and [GitHub Issues![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}.
+For more information, see [GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} and [GitHub Issues ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}.
 
 
-## Configuring {{site.data.keyword.ghe_short}} on {{site.data.keyword.Bluemix_notm}} Dedicated
+## Configuring GitHub Enterprise on Bluemix Dedicated
 {: #configghe}
 
  **Note:** These instructions apply to {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}. If you are using your own managed version of {{site.data.keyword.ghe_short}}, some steps might differ depending on your internal procedures.
 
-{{site.data.keyword.ghe_long}} is an on-premises, web-based hosting service for Git repos. Dedicated {{site.data.keyword.ghe_short}} is for {{site.data.keyword.Bluemix_notm}} Dedicated customers only. GitHub Issues is a tracking tool that keeps your work and your plans in one place. It is integrated with your development repo so that you can focus on important tasks. For more information about Dedicated {{site.data.keyword.ghe_short}} and GitHub Issues, see [Getting started with {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} and [GitHub Issues![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}.
+{{site.data.keyword.ghe_long}} is an on-premises, web-based hosting service for Git repos. Dedicated {{site.data.keyword.ghe_short}} is for {{site.data.keyword.Bluemix_notm}} Dedicated customers only. GitHub Issues is a tracking tool that keeps your work and your plans in one place. It is integrated with your development repo so that you can focus on important tasks. For more information about Dedicated {{site.data.keyword.ghe_short}} and GitHub Issues, see [Getting started with {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} and [GitHub Issues ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}.
 
 You can configure {{site.data.keyword.ghe_short}} as a tool integration in your toolchain so that you can manage source code in your company's [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated/index.html#dedicated){: new_window} instance.
 
@@ -403,7 +403,7 @@ You can configure {{site.data.keyword.ghe_short}} as a tool integration in your 
 
   **Tip**: You can use the integrated source code management tools in Eclipse Orion {{site.data.keyword.webide}} to edit the {{site.data.keyword.ghe_short}} repo and deploy an app from your workspace.
 
-1. If you enabled GitHub Issues, click **GitHub Issues**. You can use this instance of GitHub Issues for your entire toolchain, even if the toolchain contains multiple GitHub repos.
+1. If you enabled GitHub Issues, click **GitHub Issues**. You can use this instance of GitHub Issues for your entire toolchain, even if the toolchain contains multiple GitHub repos.    
 
 **Note:** If you don't have admin privileges for the repo that you are linking to, your integration will be limited because you can't use a webhook. Webhooks are required to automatically trigger a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
 
@@ -428,7 +428,7 @@ Configure Jenkins to automate the continuous building, testing, and deployment o
 1. Copy the generated toolchain webhook.
 1. In your Jenkins server, complete these steps:
 
- a. Install the [Cloud Foundry CLI![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html){: new_window}.
+ a. Install the [Cloud Foundry CLI ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html){: new_window}.
 
  b. Install the IBM Cloud DevOps Cloud Foundry plugin by entering one of these commands:
 
@@ -472,13 +472,13 @@ Configure Jenkins to automate the continuous building, testing, and deployment o
 1. Click **Create Integration**.
 1. From your toolchain, click **Jenkins** to view the Jenkins server.  
 
-For more information, see [Jenkins![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_jenkins/){: new_window}.
+For more information, see [Jenkins ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_jenkins/){: new_window}.
 
 
 ## Configuring JIRA
 {: #jira}
 
-JIRA is a tool that tracks issues and bugs that are related to your software. The JIRA tool integration updates your project's issues whenever Jenkins or {{site.data.keyword.deliverypipeline}} runs a deployment. In order for the JIRA tool integration to track your issues, you must use JIRA Smart Commits in your commit messages. To learn more about JIRA Smart Commits, see [Using Smart Commits![External link icon](../../icons/launch-glyph.svg "External link icon")](https://confluence.atlassian.com/fisheye/using-smart-commits-298976812.html){: new_window}.
+JIRA is a tool that tracks issues and bugs that are related to your software. The JIRA tool integration updates your project's issues whenever Jenkins or {{site.data.keyword.deliverypipeline}} runs a deployment. In order for the JIRA tool integration to track your issues, you must use JIRA Smart Commits in your commit messages. To learn more about JIRA Smart Commits, see [Using Smart Commits ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://confluence.atlassian.com/fisheye/using-smart-commits-298976812.html){: new_window}.
 
 Configure JIRA to plan, track, and deliver quality code:
 
@@ -517,7 +517,7 @@ Configure JIRA to plan, track, and deliver quality code:
 1. Click **Create Integration**.
 1. From your toolchain, click **JIRA** to view the dashboard for the JIRA project that you connected to.
 
-To learn more, see [JIRA![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_jira/){: new_window}.
+To learn more, see [JIRA ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_jira/){: new_window}.
 
 
 ## Configuring Nexus
@@ -617,7 +617,7 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Maven Build job:
 
 1. Click **SAVE**. Whenever your pipeline runs, this build job uses the configuration information from the Nexus tool integration to connect to your Maven repo.
 
-For more information, see [Nexus![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_nexus/){: new_window}.
+For more information, see [Nexus ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_nexus/){: new_window}.
 
 
 ## Configuring a custom tool (Other Tool)
@@ -641,7 +641,7 @@ Configure a custom tool so that it works with other tools in your toolchain and 
 1. (Advanced) Add more properties as needed. For example, list any information or attributes that are required for your tool to integrate with other tools in the toolchain.  
 1. Click **Create Integration**.
 
-To learn more, see [Introducing custom tool integration for {{site.data.keyword.Bluemix_notm}} toolchains![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2016/10/custom-tool-integration-with-bluemix-toolchains/){: new_window}.
+To learn more, see [Introducing custom tool integration for {{site.data.keyword.Bluemix_notm}} toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2016/10/custom-tool-integration-with-bluemix-toolchains/){: new_window}.
 
 
 ## Configuring PagerDuty
@@ -655,14 +655,14 @@ Configure PagerDuty to send notifications when pipeline stage failures occur so 
 1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain** and click **Overview**.
 1. Click **Add a Tool**.
 1. In the Tool Integrations section, click **PagerDuty**
-1. Type the API access key for your PagerDuty account. If you don't have a PagerDuty account, [register for one![External link icon](../../icons/launch-glyph.svg "External link icon")](https://signup.pagerduty.com/accounts/new){: new_window}. For instructions to find the key, see [Generating an API Key![External link icon](../../icons/launch-glyph.svg "External link icon")](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window}.
+1. Type the API access key for your PagerDuty account. If you don't have a PagerDuty account, [register for one ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://signup.pagerduty.com/accounts/new){: new_window}. For instructions to find the key, see [Generating an API Key ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window}.
 1. Type the name of your PagerDuty service.
 1. Type the email address for the primary PagerDuty contact.
 1. Type the phone number for the primary PagerDuty contact.
 1. Click **Create Integration**.
 1. Click **PagerDuty** to go to pagerduty.com. You can view the events that are associated with the PagerDuty service that you specified when you configured this tool integration for your toolchain.
 
-To learn more, see [PagerDuty![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/manage/tool_pagerduty/){: new_window}.
+To learn more, see [PagerDuty ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/manage/tool_pagerduty/){: new_window}.
 
 
 ## Configuring Sauce Labs
@@ -678,14 +678,14 @@ Configure Sauce Labs to run automated functional tests on multiple operating sys
 1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain** and click **Overview**.
 1. Click **Add a Tool**.
 1. In the Tool Integrations section, click **Sauce Labs**.
-1. Type the user name that is associated with your Sauce Labs account. You can [find your user name in the welcome message at the top of your Sauce Labs account page![External link icon](../../icons/launch-glyph.svg "External link icon")](https://saucelabs.com/account){: new_window}.
-1. Type the access key for your Sauce Labs account. You can [find the key on your Sauce Labs account page![External link icon](../../icons/launch-glyph.svg "External link icon")](https://saucelabs.com/account){: new_window}.
+1. Type the user name that is associated with your Sauce Labs account. You can [find your user name in the welcome message at the top of your Sauce Labs account page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://saucelabs.com/account){: new_window}.
+1. Type the access key for your Sauce Labs account. You can [find the key on your Sauce Labs account page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://saucelabs.com/account){: new_window}.
 1. Click **Create Integration**.
 1. Click **Sauce Labs** to go to saucelabs.com and view the test activity for the toolchain.
 
  **Tip**: If you added a Sauce Labs test job to the {{site.data.keyword.deliverypipeline}}, you can select the service instance.
 
-To learn more, see [Sauce Labs![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_sauce_labs/){: new_window}.
+To learn more, see [Sauce Labs ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_sauce_labs/){: new_window}.
 
 
 ## Configuring Slack
@@ -701,7 +701,7 @@ Configure Slack to receive notifications about your toolchain from the tool inte
 1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain** and click **Overview**.
 1. Click **Add a Tool**.
 1. In the Tool Integrations section, click **Slack**.
-1. Type the Slack webhook URL, which is generated by Slack as an incoming webhook. You need a Slack webhook URL for a Slack channel to receive notifications about your toolchain from the tool integrations. For instructions to create or find your webhook, see [Incoming Webhooks![External link icon](../../icons/launch-glyph.svg "External link icon")](https://api.slack.com/incoming-webhooks){: new_window}.
+1. Type the Slack webhook URL, which is generated by Slack as an incoming webhook. You need a Slack webhook URL for a Slack channel to receive notifications about your toolchain from the tool integrations. For instructions to create or find your webhook, see [Incoming Webhooks ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://api.slack.com/incoming-webhooks){: new_window}.
 
  **Tip**: If you have been using an API key for your Slack channel to receive notifications about your toolchain from the tool integrations, you must update your configuration to use a webhook instead.
 
@@ -713,19 +713,19 @@ Configure Slack to receive notifications about your toolchain from the tool inte
 
 1. Click **Slack**. You can view all of the activity for your toolchain in the configured Slack channel.
 
-To learn more, see [Slack![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window}.
+To learn more, see [Slack ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window}.
 
 
-# Related Links
+<!-- # Related Links
 {: #rellinks}
 
 ## Tutorials and Samples
 {: #samples}
 
-* [Learning Lab![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/category/courses){:new_window}
+* [Learning Lab ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/category/courses){:new_window}
 
 ## Related Links
 {: #general}
 
-* [{{site.data.keyword.contdelivery_full}}![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_continuous_delivery/){:new_window}
-* [IBM Cloud Garage Method![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method){:new_window}
+* [{{site.data.keyword.contdelivery_full}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_continuous_delivery/){:new_window}
+* [IBM Cloud Garage Method ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method){:new_window} -->
