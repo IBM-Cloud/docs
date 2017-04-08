@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2017-03-31"
+lastupdated: "2017-04-07"
 
 ---
 
@@ -268,25 +268,25 @@ Traditional WebSphere Application Server and Liberty profile are configured with
 
 For Traditional WebSphere Application Server:
 
-Edit **security.xml** in /opt/IBM/WebSphere/Profiles/*profile_name*/config/cell/*cell_name* and modify the following line:
+1. Edit **security.xml** in /opt/IBM/WebSphere/Profiles/*profile_name*/config/cell/*cell_name* and modify the following line:
 
-```
-sslProtocol="SSL_TLSv2"
-```
+  ```
+  sslProtocol="SSL_TLSv2"
+  ```
 {: codeblock}
 
-Edit **ssl.client.props** in /opt/IBM/WebSphere/Profiles/*profile_name*/properties and modify the following line:
+2. Edit **ssl.client.props** in /opt/IBM/WebSphere/Profiles/*profile_name*/properties and modify the following line:
 
-```
-com.ibm.ssl.protocol=SSL_TLSv2
-```
+  ```
+  com.ibm.ssl.protocol=SSL_TLSv2
+  ```
 {: codeblock}
 
 For Liberty profile:
 
-Edit **server.xml** in /opt/IBM/WebSphere/Profiles/Liberty/servers/server1 and modify the following line located in the defaultSSLConfig ssl configuration element:
+1. Edit **server.xml** in /opt/IBM/WebSphere/Profiles/Liberty/servers/server1 and modify the following line located in the defaultSSLConfig ssl configuration element:
 
-```
-sslProtocol="SSL_TLSv2"
-```
+  ```
+  sslProtocol="SSL_TLSv2"
+  ```
 {: codeblock}
