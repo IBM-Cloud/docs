@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2017-02-24"
+lastupdated: "2017-04-07"
 
 ---
 
@@ -14,6 +14,22 @@ lastupdated: "2017-02-24"
 {: #latest_updates}
 
 A list of the latest updates to the service.
+
+## March 15, 2017: Updated WebSphere Application Server in {{site.data.keyword.Bluemix_notm}}
+
+* Integrated miscellaneous service maintenance.
+* Upgraded the WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} binaries such that fixpack 8.5.5.11 or 9.0.0.3 is installed with new instances of Traditional WebSphere Application Server.
+* Addressed [several security vulnerabilities](https://www-01.ibm.com/support/docview.wss?uid=swg22000587){: new_window} in WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} including:
+  * An unspecified vulnerability related to the Libraries component which has no confidentiality impact, high integrity impact, and no availability impact.
+  * An unspecified vulnerability related to the Libraries component which could allow a remote attacker to obtain sensitive information resulting in a high confidentiality impact using unknown attack vectors.
+  * An unspecified vulnerability related to the Libraries component which could allow a remote attacker to cause a denial of service resulting in a low availability impact using unknown attack vectors.
+  * A vulnerability in OpenSSL which could allow a remote attacker to obtain sensitive information, caused by an error in the DES/3DES cipher, used as a part of the SSL/TLS protocol.
+  * A vulnerability which allows users to embed arbitrary JavaScript code in the Web UI thus altering the intended functionality potentially leading to credentials disclosure within a trusted session.
+  * A vulnerability in Apache HTTPD to HTTP response splitting attacks, caused by improper validation of user-supplied input.
+  * A vulnerability in Samba which could allow a remote authenticated attacker to gain elevated privileges on the system, caused by the failure of handling the PAC checksum.
+  * A vulnerability in Samba which could allow a remote authenticated attacker to gain elevated privileges on the system, caused by forwarding a Ticket Granting Ticket (TGT) to other service when using Kerberos authentication.
+  * A vulnerability in Samba to a heap-based buffer overflow, caused by an integer wrap flaw in the ndr_pull_dnsp_name() function.
+
 
 ## February 10, 2017: Updated WebSphere Application Server in {{site.data.keyword.Bluemix_notm}}
 
