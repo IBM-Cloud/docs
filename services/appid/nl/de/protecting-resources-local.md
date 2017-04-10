@@ -2,7 +2,7 @@
 
 copyright:
   years:  2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 {:new_window: target="_blank"}
@@ -43,28 +43,24 @@ Beispiele und Informationen finden Sie im <a href="https://github.com/ibm-cloud-
 Um Ihre Apps so zu konfigurieren, dass sie mit einem lokalen Entwicklungsserver arbeiten, verwenden Sie den lokalen Host in jeder Anforderung.
 
 1. Ersetzen Sie die Tenant-ID durch Ihre {{site.data.keyword.appid_short_notm}}-Tenant-ID. Diese ID befindet sich in Ihrem Service-Dashboard.
-2. Ersetzen Sie die Region durch die richtige Region, wie in der folgenden Tabelle dargestellt. 
+2. Ersetzen Sie die Region durch die richtige Region, wie in der folgenden Tabelle dargestellt.
 
-<table> <caption> Tabelle 1: {{site.data.keyword.Bluemix_notm}}-Regionen und entsprechende Android- und iOS-SDK-Regionen </caption>
+<table> <caption> Tabelle 1. {{site.data.keyword.Bluemix_notm}}-Regionen und entsprechende {{site.data.keyword.appid_short_notm}}-Regionen für Android und iOS </caption>
 <tr>
   <th> Bluemix-Region </th>
   <th> Android </th>
-  <th> iOS </th>
 </tr>
 <tr>
   <td> Vereinigte Staaten (Süden) </td>
   <td> AppID.REGION_US_SOUTH </td>
-  <td> BMSClient.Region.usSouth </td>
 </tr>
 <tr>
   <td> Sydney </td>
   <td> AppID.REGION_SYDNEY </td>
-  <td> BMSClient.Region.sydney </td>
 </tr>
 <tr>
   <td> Vereinigtes Königreich </td>
   <td> AppID.REGION_UK </td>
-  <td> BMSClient.Region.unitedKingdom </td>
 </tr>
 </table>
 
@@ -109,9 +105,9 @@ request.send(this, new ResponseListener() {
 {: #swift}
 ```swift
 
- let baseRequestUrl = "http://localhost:<port>"; //auf Server festgelegt, der Port ausführt
+ let baseRequestUrl = "http://localhost:<port>"; //auf Server festgelegt, der den Port ausführt
  let tenantId = "your-AppID-service-tenantID"
- let region = AppID.Region.unitedKingdom; //Region der App-ID-Anwendung hier festlegen. Aktuell mögliche Werte sind AppID.Region.usSouth, AppID.Region.sydney oder AppID.Region.unitedKingdom.
+ let region = AppID.REGION_UK; //Region der App ID-Anwendung hier festlegen. Aktuell mögliche Werte sind AppID.REGION_US_SOUTH, AppID.REGION_SYDNEY oder AppID.REGION_UK.
 
 BMSClient.sharedInstance.initialize(bluemixRegion: region)
 BMSClient.sharedInstance.authorizationManager = AppIDAuthorizationManager(appid:AppID.sharedInstance)

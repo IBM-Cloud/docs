@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -22,9 +22,7 @@ Añada seguridad a sus aplicaciones con el servicio {{site.data.keyword.appid_fu
 2. Dé un nombre a la instancia de servicio, o utilice el nombre preestablecido.
 3. Para enlazar la instancia, seleccione una app del menú desplegable **Conectar a**. Si selecciona **Dejar sin enlazar**, podrá enlazar la instancia de servicio posteriormente.
 4. Seleccione el plan de precios y pulse **Crear**.
-5. Siga las instrucciones de la interfaz de usuario para descargar las aplicaciones de muestra. Los ejemplos le ayudan a empezar a utilizar {{site.data.keyword.appid_short_notm}}.
-
-
+5. Siga las instrucciones de la interfaz de usuario para descargar las apps de muestra. Los ejemplos le ayudan a empezar a utilizar {{site.data.keyword.appid_short_notm}}.
 
 
 
@@ -34,7 +32,7 @@ Añada seguridad a sus aplicaciones con el servicio {{site.data.keyword.appid_fu
 ## Referencia de API
 {: #api notoc}
 
-* [{{site.data.keyword.appid_short_notm}} oauth-flows](http://mobileclientaccess.stage1.mybluemix.net/swagger-ui/#!/Authorization_Server_V3/authorization)
+* [{{site.data.keyword.appid_short_notm}} oauth-flows](https://appid-oauth.ng.bluemix.net/swagger-ui/#!/Authorization_Server_V3/authorization)
 
 ## SDK
 {: #sdk notoc}
@@ -43,14 +41,3 @@ Añada seguridad a sus aplicaciones con el servicio {{site.data.keyword.appid_fu
 * [SDK de cliente de iOS-Swift de {{site.data.keyword.appid_short_notm}} ](https://github.com/ibm-cloud-security/appid-clientsdk-swift){: new_window}
 * [SDK de servidor Nodejs de {{site.data.keyword.appid_short_notm}} ](https://github.com/ibm-cloud-security/appid-serversdk-nodejs){: new_window}
 * [SDK de servidor Swift de {{site.data.keyword.appid_short_notm}} ](https://github.com/ibm-cloud-security/appid-serversdk-swift){: new_window}
-
-
-<!---## Tutorials and Samples
-{: #samples notoc}--->
-
-
-
-## Enlaces relacionados
-{: #general notoc}
-* [Hoja de precios de {{site.data.keyword.Bluemix}} ](https://www.ng.bluemix.net/#/pricing){: new_window}
-* [Requisitos previos de {{site.data.keyword.Bluemix}} ](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}

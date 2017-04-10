@@ -2,9 +2,10 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -23,7 +24,7 @@ lastupdated: "2017-03-16"
 以下の情報が必要です。
   * {{site.data.keyword.appid_short_notm}} サービスのインスタンス。
   * テナント ID。
-    * サービスのダッシュボードの**「サービス資格情報」**タブの**「資格情報の表示」**をクリックします。**「テナント ID (tenant ID)」**フィールドに、テナント ID が表示されます。その値をアプリの初期化に使用します。
+    * サービスのダッシュボードの**「サービス資格情報」**タブの**「資格情報の表示」**をクリックします。**「tenantID」**フィールドに、テナント ID が表示されます。その値をアプリの初期化に使用します。
   * {{site.data.keyword.Bluemix}} 地域。地域は UI に表示されています。その値をアプリの初期化に使用します。<table> <caption> 表 1. {{site.data.keyword.Bluemix_notm}} 地域と対応する SDK 値</caption>
     <tr>
       <th> Bluemix 地域</th>
@@ -134,7 +135,7 @@ context、tenant ID、region パラメーターを initialize メソッドに渡
 
 アクセス・トークンを取得すれば、ユーザーの保護された属性のエンドポイントにアクセスできます。以下の API メソッドを使用してアクセスできます。
 
-  ```   
+  ```java
   void setAttribute(@NonNull String name, @NonNull String value, UserAttributeResponseListener listener);
   void setAttribute(@NonNull String name, @NonNull String value, @NonNull AccessToken accessToken, UserAttributeResponseListener listener);
 
@@ -153,7 +154,7 @@ context、tenant ID、region パラメーターを initialize メソッドに渡
 
 例えば、以下のコードを呼び出して、新しい属性を設定したり既存の属性をオーバーライドしたりできます。
 
-  ```
+  ```java
   appId.getUserAttributeManager().setAttribute(name, value, useThisToken,new UserAttributeResponseListener() {
 		@Override
 		public void onSuccess(JSONObject attributes) {
@@ -171,9 +172,9 @@ context、tenant ID、region パラメーターを initialize メソッドに渡
 ### 匿名ログイン
 {: #anonymous notoc}
 
-{{site.data.keyword.appid_short_notm}} では匿名によるログインが可能です。[匿名 ID](/docs/services/appid/user-profile.html#anonymous) を参照してください。
+With {{site.data.keyword.appid_short_notm}} you can log in anonymously, see [anonymous user](/docs/services/appid/user-profile.html#anonymous).
 
-  ```
+  ```java
   appId.loginAnonymously(getApplicationContext(), new AuthorizationListener() {
 		@Override
 		public void onAuthorizationFailure(AuthorizationException exception) {
@@ -196,16 +197,16 @@ context、tenant ID、region パラメーターを initialize メソッドに渡
 ### 段階的な認証
 {: #progressive notoc}
 
-匿名のアクセス・トークンを保持しているユーザーを、トークンを `loginWidget.launch` メソッドに渡して識別することができます。
+匿名のアクセス・トークンを保持しているユーザーは、そのトークンを `loginWidget.launch` メソッドに渡すと、識別済みユーザーとなることができます。
 
-  ```
+  ```java
   void launch (@NonNull final Activity activity, @NonNull final AuthorizationListener authorizationListener, String accessTokenString);
   ```
   {:pre}
 
 匿名ログインの後には、アクセス・トークンを渡さずにログイン・ウィジェットを呼び出した場合であっても段階的な認証が行われます。最後に受け取ったトークンがサービスで使用されるからです。保管されているトークンをクリアする場合は、以下のコマンドを実行します。
 
-  ```
+  ```java
   	appIDAuthorizationManager = new AppIDAuthorizationManager(this.appId);
   appIDAuthorizationManager.clearAuthorizationData();
   ```

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -139,4 +139,4 @@ WebAppKituraCredentialsPlugin は、OAuth2 の authorization_code 認可フロ�
   ```
   {:pre}
 
-詳しくは、<a href="https://github.com/ibm-cloud-security/appid-serversdk-swift" target="_blank">GitHub リポジトリー <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> を参照してください。
+詳しくは、<a href="https://github.com/ibm-cloud-security/appid-serversdk-swift" target="_blank">{{site.data.keyword.appid_short_notm}}Swift GitHub リポジトリー <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a> を参照してください。

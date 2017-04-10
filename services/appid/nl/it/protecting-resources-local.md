@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-03-16"
+  years:  2017
+lastupdated: "2017-03-30"
 
 ---
 {:new_window: target="_blank"}
@@ -29,7 +29,7 @@ Per utilizzare {{site.data.keyword.appid_short_notm}} con un ambiente di svilupp
 
 Imposta il tuo attributo 'redirectUri' nella tua porta dell'applicazione localhost con il percorso di callback, ad es.: `http://localhost:<port>/callback`. L'endpoint di callback termina con il processo di autorizzazione.
 
-Per ottenere le tue credenziali del servizio, completa la seguente procedura: 
+Per ottenere le tue credenziali del servizio, completa la seguente procedura:
 
 1. Apri il tuo dashboard {{site.data.keyword.Bluemix_notm}} e fai clic sulla scheda **Service Credentials**.
 2. Fai clic su **Show Credentials**. Le tue credenziali di accesso vengono visualizzate come un oggetto JSON.
@@ -43,28 +43,24 @@ Per gli esempi e ulteriori informazioni, consulta <a href="https://github.com/ib
 Per configurare le tue applicazioni in modo che utilizzino un server di sviluppo locale, utilizza l'host locale in ognuna delle tue risposte.
 
 1. Sostituisci l'ID tenant con il tuo ID tenant {{site.data.keyword.appid_short_notm}}. Puoi trovare questo ID nel tuo dashboard del servizio
-2. Sostituisci la regione con la regione appropriata come descritto nella seguente tabella. 
+2. Sostituisci la regione con la regione appropriata come descritto nella seguente tabella.
 
-<table> <caption> Tabella 1. Regioni {{site.data.keyword.Bluemix_notm}} e regioni SDK Android e iOS corrispondenti </caption>
+<table> <caption> Tabella 1. Regioni {{site.data.keyword.Bluemix_notm}} e regioni SDK Android e iOS {{site.data.keyword.appid_short_notm}} corrispondenti </caption>
 <tr>
   <th> Regione Bluemix </th>
   <th> Android </th>
-  <th> iOS </th>
 </tr>
 <tr>
-  <td> Stati Uniti Sud</td>
+  <td> Stati Uniti Sud </td>
   <td> AppID.REGION_US_SOUTH </td>
-  <td> BMSClient.Region.usSouth </td>
 </tr>
 <tr>
   <td> Sydney </td>
   <td> AppID.REGION_SYDNEY </td>
-  <td> BMSClient.Region.sydney </td>
 </tr>
 <tr>
-  <td> Regno Unito</td>
+  <td> Regno Unito </td>
   <td> AppID.REGION_UK </td>
-  <td> BMSClient.Region.unitedKingdom </td>
 </tr>
 </table>
 
@@ -111,7 +107,7 @@ request.send(this, new ResponseListener() {
 
  let baseRequestUrl = "http://localhost:<port>"; //imposta la tua porta di esecuzione del server
  let tenantId = "your-AppID-service-tenantID"
- let region = AppID.Region.unitedKingdom; //imposta la tua regione dell'applicazione ID Applicazione qui. I valori al momento possibili sono AppID.Region.usSouth, AppID.Region.sydney o AppID.Region.unitedKingdom.
+ let region = AppID.REGION_UK; //imposta la tua regione dell'applicazione ID Applicazione qui. I valori al momento possibili sono AppID.REGION_US_SOUTH, AppID.REGION_SYDNEY o AppID.REGION_UK.
 
 BMSClient.sharedInstance.initialize(bluemixRegion: region)
 BMSClient.sharedInstance.authorizationManager = AppIDAuthorizationManager(appid:AppID.sharedInstance)

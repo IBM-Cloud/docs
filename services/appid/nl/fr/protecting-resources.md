@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -40,8 +40,7 @@ L'appel d'une ressource protégée lance, en cas de besoin, le widget de connexi
   BMSClient.sharedInstance.initialize(bluemixRegion: AppID.<region>)
   BMSClient.sharedInstance.authorizationManager = AppIDAuthorizationManager(appid:AppID.sharedInstance)
   var request:Request =  Request(url: "<URL_de_votre_ressource_protégée>")
-  request.send(completionHandler: {(response:Response?, error:Error?) 
-      //code gérant la réponse
+  request.send(completionHandler: {(response:Response?, error:Error?) //code gérant la réponse
   })
   ```
   {:pre}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -29,7 +29,7 @@ Configure el servicio de {{site.data.keyword.appid_short}} para utilizar Faceboo
 ### Obtención de un ID de app y secreto de Facebook
 {: #getting-facebook-appid}
 
-Para utilizar Facebook como proveedor de identidad en sus aplicaciones web o móviles, debe añadir y configurar la plataforma de sitio web en su aplicación de Facebook.
+Para utilizar Facebook como proveedor de identidad en sus apps web o móviles, debe añadir y configurar la plataforma de sitio web en su aplicación de Facebook.
 
 1. Inicie sesión en su cuenta en el sitio Facebook for Developers. Para obtener información sobre cómo crear una nueva app de Facebook, consulte <a href="https://developers.facebook.com/docs/apps/register" target="_blank">Creación de una aplicación <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a>.
 2. Anote el ID y el secreto de la app de Facebook. Necesitará estos valores para configurar el proyecto web para la autenticación en el panel de control de servicio.
@@ -41,13 +41,13 @@ Para utilizar Facebook como proveedor de identidad en sus aplicaciones web o mó
 ### Configuración de {{site.data.keyword.appid_short_notm}} para la autenticación de Facebook
 {: #configuring-facebook-appid}
 
-Una vez que tenga el ID y secreto de la aplicación de Facebook, y que la aplicación de Facebook for Developers esté configurada para prestar servicio a los clientes web, puede editar la autenticación de Facebook en el panel de control del servicio.
+Una vez que tenga el ID y secreto de la app de Facebook, y que la app de Facebook for Developers esté configurada para prestar servicio a los clientes web, puede editar la autenticación de Facebook en el panel de control del servicio.
 
 1. Desde el separador **Gestionar** del panel de control del servicio, seleccione **Facebook** y pulse **Editar**.
 2. Especifique el ID y el secreto de la app de Facebook que ha obtenido del sitio web de Facebook for Developers.
 3. Copie el URI que está en el campo **URI de redirección para Facebook for Developers**. Copie el URI en el campo **URI de redirección de OAuth válido** en la sección **Inicio de sesión de Facebook** del portal de desarrolladores de Facebook.
 4. Pulse **Guardar**.
-5. Opcional: para configurar la autenticación para apps web, especifique el URI de redirección en los URI de redirección de la aplicación web. Este valor está determinado por el desarrollador y se utiliza para acceder al URI de redirección una vez completado el proceso de autorización. 
+5. Opcional: para configurar la autenticación para apps web, especifique el URI de redirección en los URI de redirección de la aplicación web. Este valor está determinado por el desarrollador y se utiliza para acceder al URI de redirección una vez completado el proceso de autorización.
 
 
 ## Google
@@ -65,7 +65,7 @@ Para utilizar Google como proveedor de identidad, obtenga un ID de cliente y sec
 
 1. Abra la aplicación de Google en la consola del desarrollador de Google.
 2. Añada la API de Google+.
-3. Cree credenciales mediante OAuth. En el campo **Tipo de aplicación**, seleccione **Aplicación web**. En el campo **URI de redirección autorizados**, especifique el URI de redirección de ID de app. Puede obtener el URI de autorización de redirección de ID de app desde la pantalla de configuración de Google del panel de control del servicio. 
+3. Cree credenciales mediante OAuth. En el campo **Tipo de aplicación**, seleccione **Aplicación web**. En el campo **URI de redirección autorizados**, especifique el URI de redirección de ID de app. Puede obtener el URI de autorización de redirección de ID de app desde la pantalla de configuración de Google del panel de control del servicio.
 4. Guarde los cambios. Anote el ID de cliente y secreto de Google.
 
 

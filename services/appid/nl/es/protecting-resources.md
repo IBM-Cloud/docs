@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -88,13 +88,13 @@ La estrategia de API espera que las solicitudes contengan una cabecera de autori
 
 Si una señal no es válida o ha caducado, la estrategia de API devuelve un error HTTP 401 que contiene la siguiente información: Www-Authenticate=Bearer scope="{scope}" error="{error}". El componente `error` es opcional.
 
-Si la solicitud devuelve una señal válida, el control se pasa al siguiente middleware y la propiedad `appIdAuthorizationContext` se inyecta en el objeto de solicitud. Esta propiedad contiene señales de acceso e identidad originales, así como información de carga útil descodificada como objetos JSON simples. 
+Si la solicitud devuelve una señal válida, el control se pasa al siguiente middleware y la propiedad `appIdAuthorizationContext` se inyecta en el objeto de solicitud. Esta propiedad contiene señales de acceso e identidad originales, así como información de carga útil descodificada como objetos JSON simples.
 
 
 ### Estrategia de app web
 {: #web notoc}
 
-Cuando la estrategia de app web detecta intentos no autenticados de acceso a un recurso protegido, automáticamente redirige el navegador de un usuario a la página de autenticación. Tras la correcta autenticación, el usuario vuelve al URL de devolución de llamada de la aplicación web. El servicio utiliza la clase de estrategia de aplicación web para obtener señales de acceso e identidad. Después de obtener estas señales, la clase de estrategia de app web las almacena en una sesión HTTP bajo `WebAppStrategy.AUTH_CONTEXT`. Depende del usuario decidir si desea almacenar las señales de acceso e identidad en la base de datos de la aplicación. 
+Cuando la estrategia de app web detecta intentos no autenticados de acceso a un recurso protegido, automáticamente redirige el navegador de un usuario a la página de autenticación. Tras la correcta autenticación, el usuario vuelve al URL de devolución de llamada de la aplicación web. El servicio utiliza la clase de estrategia de app web para obtener señales de acceso e identidad. Después de obtener estas señales, la clase de estrategia de app web las almacena en una sesión HTTP bajo `WebAppStrategy.AUTH_CONTEXT`. Depende del usuario decidir si desea almacenar las señales de acceso e identidad en la base de datos de la aplicación.
 
 ## Cabecera de autorización
 {: #auth-header}

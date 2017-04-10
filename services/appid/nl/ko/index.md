@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -26,15 +26,13 @@ lastupdated: "2017-03-16"
 
 
 
-
-
 # 관련 링크
 {: #rellinks notoc}
 
 ## API 참조
 {: #api notoc}
 
-* [{{site.data.keyword.appid_short_notm}} oauth-flows](http://mobileclientaccess.stage1.mybluemix.net/swagger-ui/#!/Authorization_Server_V3/authorization)
+* [{{site.data.keyword.appid_short_notm}} oauth-flows](https://appid-oauth.ng.bluemix.net/swagger-ui/#!/Authorization_Server_V3/authorization)
 
 ## SDK
 {: #sdk notoc}
@@ -43,14 +41,3 @@ lastupdated: "2017-03-16"
 * [{{site.data.keyword.appid_short_notm}} iOS-Swift Client SDK](https://github.com/ibm-cloud-security/appid-clientsdk-swift){: new_window}
 * [{{site.data.keyword.appid_short_notm}} Nodejs Server SDK](https://github.com/ibm-cloud-security/appid-serversdk-nodejs){: new_window}
 * [{{site.data.keyword.appid_short_notm}} Swift Server SDK](https://github.com/ibm-cloud-security/appid-serversdk-swift){: new_window}
-
-
-<!---## Tutorials and Samples
-{: #samples notoc}--->
-
-
-
-## 관련 링크
-{: #general notoc}
-* [{{site.data.keyword.Bluemix}} 가격 책정 시트](https://www.ng.bluemix.net/#/pricing){: new_window}
-* [{{site.data.keyword.Bluemix}} 전제조건](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}

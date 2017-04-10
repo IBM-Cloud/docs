@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -11,7 +11,7 @@ lastupdated: "2017-03-16"
 {:screen: .screen}
 {:pre: .pre}
 
-# Configurazione dei provider di identità 
+# Configurazione dei provider di identità
 {: #setting-up-idp}
 
 Puoi configurare Facebook, Google o entrambi per l'autenticazione delle tue applicazioni e per autorizzare l'accesso alle risorse di back-end protette.
@@ -29,7 +29,7 @@ Configura il servizio {{site.data.keyword.appid_short}} per utilizzare Facebook 
 ### Ottenere un ID applicazione e un segreto da Facebook
 {: #getting-facebook-appid}
 
-Per utilizzare Facebook come provider di identità per le tue applicazioni web o mobili, devi aggiungere e impostare la piattaforma del sito web sull'applicazione Facebook. 
+Per utilizzare Facebook come provider di identità per le tue applicazioni web o mobili, devi aggiungere e impostare la piattaforma del sito web sull'applicazione Facebook.
 
 1. Accedi al tuo account sul sito Facebook for Developers. Per informazioni sulla creazione di una nuova applicazione Facebook, vedi <a href="https://developers.facebook.com/docs/apps/register" target="_blank">Creazione di un'applicazione <img src="../../icons/launch-glyph.svg" alt="icona link esterno"></a>.
 2. Prendi nota del segreto e dell'ID applicazione di Facebook. Avrai bisogno di questi valori per configurare il tuo progetto web per l'autenticazione nel tuo dashboard del servizio.
@@ -66,7 +66,7 @@ Per utilizzare Google come un provider di identità, ottieni un ID client e un s
 1. Apri la tua applicazione Google nella Google Developer Console.
 2. Aggiungi l'API Google+.
 3. Crea le credenziali utilizzando OAuth. Nel campo **Application Type**, seleziona **Web application**. Nel campo **Authorized redirect URIs**, immetti l'URI di reindirizzamento dell'ID dell'applicazione. Puoi ottenere l'URI di autorizzazione di reindirizzamento dell'ID dell'applicazione dalla schermata di configurazione di Google del dashboard del servizio.
-4. Salva le tue modifiche. Prendi nota del segreto e dell'ID client di Google. 
+4. Salva le tue modifiche. Prendi nota del segreto e dell'ID client di Google.
 
 
 
@@ -80,7 +80,7 @@ Quando disponi del segreto e del client di Google e la tua console Google Develo
 3. Immetti l'ID client e il segreto di Google che hai ottenuto dalla console Google Developers.
 4. Copia l'URI nel campo **Redirect URI for Google for Developers**. Incolla l'URI nel campo **Authorized redirect URIs** in **Restrictions** nella sezione **Client ID for Web application** del portale Google Developers.
 5. Fai clic su **Save**.
-6. Facoltativo: per configurare l'autenticazione per le tue applicazioni web, immetti l'URI di reindirizzamento nei campi degli URI di reindirizzamento dell'applicazione web. Questo valore viene determinato dallo sviluppatore e utilizzato per accedere all'URI di reindirizzamento dopo il completamento del processo di autorizzazione. 
+6. Facoltativo: per configurare l'autenticazione per le tue applicazioni web, immetti l'URI di reindirizzamento nei campi degli URI di reindirizzamento dell'applicazione web. Questo valore viene determinato dallo sviluppatore e utilizzato per accedere all'URI di reindirizzamento dopo il completamento del processo di autorizzazione.
 
 
 

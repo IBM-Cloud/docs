@@ -2,9 +2,10 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -23,7 +24,7 @@ lastupdated: "2017-03-16"
 您需要下列資訊：
   * {{site.data.keyword.appid_short_notm}} 服務的實例。
   * 您的承租戶 ID。
-    * 在服務儀表板的**服務認證**標籤中，按一下**檢視認證**。您的承租戶 ID 會顯示在**承租戶 ID** 欄位中。此值用於起始設定應用程式。
+    * 在服務儀表板的**服務認證**標籤中，按一下**檢視認證**。您的承租戶 ID 會顯示在 **tenantID** 欄位中。此值用於起始設定應用程式。
   * 您的 {{site.data.keyword.Bluemix}} 地區。您可以在使用者介面中尋找，以找到您的地區。此值用於起始設定應用程式。
     <table> <caption> 表 1. {{site.data.keyword.Bluemix_notm}} 地區及對應的 SDK 值</caption>
     <tr>
@@ -135,7 +136,7 @@ lastupdated: "2017-03-16"
 
 取得存取記號時，即可存取使用者保護的屬性端點。您可以使用下列 API 方法來取得存取權：
 
-  ```   
+  ```java
   void setAttribute(@NonNull String name, @NonNull String value, UserAttributeResponseListener listener);
   void setAttribute(@NonNull String name, @NonNull String value, @NonNull AccessToken accessToken, UserAttributeResponseListener listener);
 
@@ -154,7 +155,7 @@ lastupdated: "2017-03-16"
 
 例如，您可以呼叫此程式碼來設定新屬性，或置換現有屬性：
 
-  ```
+  ```java
   appId.getUserAttributeManager().setAttribute(name, value, useThisToken,new UserAttributeResponseListener() {
 		@Override
 		public void onSuccess(JSONObject attributes) {
@@ -172,9 +173,9 @@ lastupdated: "2017-03-16"
 ### 匿名登入
 {: #anonymous notoc}
 
-使用 {{site.data.keyword.appid_short_notm}}，您可以匿名登入，請參閱[匿名身分](/docs/services/appid/user-profile.html#anonymous)。
+使用 {{site.data.keyword.appid_short_notm}}，您可以匿名登入，請參閱[匿名使用者](/docs/services/appid/user-profile.html#anonymous)。
 
-  ```
+  ```java
   appId.loginAnonymously(getApplicationContext(), new AuthorizationListener() {
 		@Override
 		public void onAuthorizationFailure(AuthorizationException exception) {
@@ -199,14 +200,14 @@ lastupdated: "2017-03-16"
 
 若使用者保有匿名存取記號，將它傳遞給 `loginWidget.launch` 方法，即可識別。
 
-  ```
+  ```java
   void launch (@NonNull final Activity activity, @NonNull final AuthorizationListener authorizationListener, String accessTokenString);
   ```
   {:pre}
 
 匿名登入之後，即使因服務已使用最後一個收到的記號而在未傳遞存取記號的情況下呼叫登入小組件，還是會進行漸進鑑別。如果您要清除儲存的記號，請執行下列指令：
 
-  ```
+  ```java
   	appIDAuthorizationManager = new AppIDAuthorizationManager(this.appId);
   appIDAuthorizationManager.clearAuthorizationData();
   ```

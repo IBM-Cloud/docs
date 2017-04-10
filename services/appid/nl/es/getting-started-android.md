@@ -2,9 +2,10 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -23,23 +24,23 @@ Cree las apps de Android con el SDK del cliente de {{site.data.keyword.appid_sho
 Necesita la siguiente información:
   * Una instancia del servicio de {{site.data.keyword.appid_short_notm}}.
   * Su ID de arrendatario.
-    * En el separador **Credenciales de servicio** del panel de control de servicio, pulse **Ver credenciales**. Se mostrará el ID de arrendatario en el campo **ID de arrendatario**. Este valor se utiliza para inicializar la app.
+    * En el separador **Credenciales de servicio** del panel de control de servicio, pulse **Ver credenciales**. Su ID de arrendatario se muestra en el campo **tenantID**. Este valor se utiliza para inicializar la app.
   * Su región de {{site.data.keyword.Bluemix}}. Puede encontrar su región consultando en la IU. El valor se utiliza para inicializar la app.
-    <table> <caption> Tabla 1. Regiones de {{site.data.keyword.Bluemix_notm}} y sus correspondientes valores de SDK</caption>
+    <table> <caption> Tabla 1. Regiones de {{site.data.keyword.Bluemix_notm}} y sus correspondientes valores de SDK </caption>
     <tr>
-      <th> Región Bluemix</th>
-      <th> Valor de SDK</th>
+      <th> Región Bluemix </th>
+      <th> Valor de SDK </th>
     </tr>
     <tr>
-      <td> Sur de EE.UU.</td>
+      <td> Sur de EE.UU. </td>
       <td> AppID.REGION_US_SOUTH </td>
     </tr>
     <tr>
-      <td> Sídney</td>
+      <td> Sídney </td>
       <td> AppID.REGION_SYDNEY </td>
     </tr>
     <tr>
-      <td> Reino Unido</td>
+      <td> Reino Unido </td>
       <td> AppID.REGION_UK </td>
     </tr>
   </table>
@@ -135,7 +136,7 @@ Después de inicializar el SDK del cliente de {{site.data.keyword.appid_short_no
 
 Cuando obtenga una señal de acceso, es posible obtener acceso al punto final de los atributos protegidos del usuario. Puede obtener acceso utilizando los siguientes métodos de la API:
 
-  ```   
+  ```java
   void setAttribute(@NonNull String name, @NonNull String value, UserAttributeResponseListener listener);
   void setAttribute(@NonNull String name, @NonNull String value, @NonNull AccessToken accessToken, UserAttributeResponseListener listener);
 
@@ -154,7 +155,7 @@ Cuando no se haya aprobado explícitamente una señal de acceso, {{site.data.key
 
 Por ejemplo, puede invocar este código para establecer un atributo nuevo, o para alterar temporalmente uno existente:
 
-  ```
+  ```java
   appId.getUserAttributeManager().setAttribute(name, value, useThisToken,new UserAttributeResponseListener() {
 		@Override
 		public void onSuccess(JSONObject attributes) {
@@ -172,9 +173,9 @@ Por ejemplo, puede invocar este código para establecer un atributo nuevo, o par
 ### Inicio de sesión anónimo
 {: #anonymous notoc}
 
-Con {{site.data.keyword.appid_short_notm}} puede iniciar sesión de forma anónima, consulte [identidad anónima](/docs/services/appid/user-profile.html#anonymous).
+Con {{site.data.keyword.appid_short_notm}} puede iniciar sesión de forma anónima, consulte [usuario anónimo](/docs/services/appid/user-profile.html#anonymous).
 
-  ```
+  ```java
   appId.loginAnonymously(getApplicationContext(), new AuthorizationListener() {
 		@Override
 		public void onAuthorizationFailure(AuthorizationException exception) {
@@ -199,14 +200,14 @@ Con {{site.data.keyword.appid_short_notm}} puede iniciar sesión de forma anóni
 
 Cuando el usuario contiene una señal de acceso anónimo, puede ser identificado pasándola al método `loginWidget.launch`.
 
-  ```
+  ```java
   void launch (@NonNull final Activity activity, @NonNull final AuthorizationListener authorizationListener, String accessTokenString);
   ```
   {:pre}
 
 Tras un inicio de sesión anónimo, se producirá la autenticación progresiva, aunque se invoque el widget de inicio de sesión sin pasar una señal de acceso porque el servicio ha utilizado la última señal recibida. Si desea borrar las señales almacenadas, ejecute el siguiente mandato:
 
-  ```
+  ```java
   	appIDAuthorizationManager = new AppIDAuthorizationManager(this.appId);
   appIDAuthorizationManager.clearAuthorizationData();
   ```

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -12,7 +12,8 @@ lastupdated: "2017-03-16"
 # {{site.data.keyword.appid_short_notm}} 入门
 {: #gettingstarted}
 
-使用 {{site.data.keyword.appid_full}} 服务将安全性添加到应用程序。您可以配置客户端权限，以访问在 {{site.data.keyword.Bluemix}} 上运行的受保护后端资源。{:shortdesc}
+使用 {{site.data.keyword.appid_full}} 服务将安全性添加到应用程序。您可以配置客户端权限，以访问在 {{site.data.keyword.Bluemix}} 上运行的受保护后端资源。
+{:shortdesc}
 
 **注：**{{site.data.keyword.appid_short_notm}} 服务原先称为 {{site.data.keyword.amafull}}。
 
@@ -25,15 +26,13 @@ lastupdated: "2017-03-16"
 
 
 
-
-
 # 相关链接
 {: #rellinks notoc}
 
 ## API 参考
 {: #api notoc}
 
-* [{{site.data.keyword.appid_short_notm}} oauth-flows](http://mobileclientaccess.stage1.mybluemix.net/swagger-ui/#!/Authorization_Server_V3/authorization)
+* [{{site.data.keyword.appid_short_notm}} oauth-flows](https://appid-oauth.ng.bluemix.net/swagger-ui/#!/Authorization_Server_V3/authorization)
 
 ## SDK
 {: #sdk notoc}
@@ -42,14 +41,3 @@ lastupdated: "2017-03-16"
 * [{{site.data.keyword.appid_short_notm}} iOS-Swift 客户端 SDK](https://github.com/ibm-cloud-security/appid-clientsdk-swift){: new_window}
 * [{{site.data.keyword.appid_short_notm}} Nodejs 服务器 SDK](https://github.com/ibm-cloud-security/appid-serversdk-nodejs){: new_window}
 * [{{site.data.keyword.appid_short_notm}} Swift 服务器 SDK](https://github.com/ibm-cloud-security/appid-serversdk-swift){: new_window}
-
-
-<!---## Tutorials and Samples
-{: #samples notoc}--->
-
-
-
-## 相关链接
-{: #general notoc}
-* [{{site.data.keyword.Bluemix}} 价格表](https://www.ng.bluemix.net/#/pricing){: new_window}
-* [{{site.data.keyword.Bluemix}} 先决条件](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 {:new_window: target="_blank"}
@@ -13,14 +13,14 @@ lastupdated: "2017-03-16"
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 
-# Risoluzione dei problemi 
+# Risoluzione dei problemi
 {: #troubleshooting}
 
 Quando hai problemi nell'utilizzo di {{site.data.keyword.appid_short_notm}}, considera queste tecniche per la risoluzione dei problemi e su come ottenere supporto.
 {: shortdesc}
 
 
-## Come ottenere aiuto e supporto 
+## Come ottenere aiuto e supporto
 {: #gettinghelp}
 
 Se hai dei problemi o delle domande quando utilizzi {{site.data.keyword.appid_short_notm}}, puoi ottenere aiuto ricercando le informazioni o facendo delle domande in un forum. Inoltre puoi aprire un ticket di supporto.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -10,19 +10,21 @@ lastupdated: "2017-03-16"
 {:shortdesc: .shortdesc}
 
 
-# Benutzerprofile
+# Benutzerprofile interpretieren
 {: #user-profile}
 
 Ein Benutzerprofil ist eine Entität, die von {{site.data.keyword.appid_short}} gespeichert und verwaltet wird. Das Profil enthält die Attribute und Identität eines Benutzers. Es kann anonym oder mit einer Identität verknüpft sein, die von einem Identitätsprovider verwaltet wird.
 {:shortdesc}
 
-{{site.data.keyword.appid_short_notm}} bietet eine API an, um sich entweder anonym oder über eine Authentifizierung mit einem OpenId Connect (OIDC)-Identitätsproviders anzumelden, siehe [Identitätsprovider konfigurieren](https://console.stage1.ng.bluemix.net/docs/services/appid/identity-providers.html#setting-up-idp). Der API-Endpunkt des Benutzerprofilattributs ist eine Ressource, die durch den Zugriffstoken geschützt ist, der beim Anmelde- und Berechtigungsprozess von {{site.data.keyword.appid_short_notm}} generiert wird.
+{{site.data.keyword.appid_short_notm}} bietet eine API an, um sich entweder anonym oder über eine Authentifizierung mit einem OpenId Connect (OIDC)-Identitätsproviders anzumelden, siehe [Identitätsprovider konfigurieren](/docs/services/appid/identity-providers.html#setting-up-idp). Der API-Endpunkt des Benutzerprofilattributs ist eine Ressource, die durch den Zugriffstoken geschützt ist, der beim Anmelde- und Berechtigungsprozess von {{site.data.keyword.appid_short_notm}} generiert wird.
 
 
 ## Benutzerattribute speichern, lesen und löschen
 {: #storing-data}
 
-{{site.data.keyword.appid_short_notm}} bietet eine [REST-API](http://mobileclientaccess.stage1.mybluemix.net/swagger-ui/#!/Authorization_Server_V3/authorization) für die Durchführung von CRUD-Operationen für Benutzerattribute sowie ein SDK für mobile [Android](https://github.com/ibm-cloud-security/appid-clientsdk-android)- und [Swift](https://github.com/ibm-cloud-security/appid-clientsdk-swift)-Clients.
+
+
+{{site.data.keyword.appid_short_notm}} stellt eine <a href="https://appid-profiles.ng.bluemix.net/swagger-ui/index.html#/" target="_blank">REST-API <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a> für die Durchführung von CRUD-Operationen für Benutzerattribute sowie ein SDK für <a href="https://github.com/ibm-cloud-security/appid-clientsdk-android" target="_blank">Android <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a> sowie <a href="https://github.com/ibm-cloud-security/appid-clientsdk-swift" target="_blank">mobile Swift-Clients <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a> bereit.
 
 
 ## OAuth-Identität
@@ -40,12 +42,14 @@ Wenn Sie sich anonym anmelden, erstellt {{site.data.keyword.appid_short_notm}} e
 ## Identifizierte Benutzer
 {: #identified}
 
-Ein anonymer Benutzer mit einer Identität, die von einem Identitätsprovider bereitgestellt wird, kann zu einem identifizierter Benutzer werden. Der Ablauf für den Übergang von einem anonymen zu einem bekannten Benutzer enthält die folgenden Schritte:
+Ein anonymer Benutzer mit einer Identität, die von einem Identitätsprovider bereitgestellt wird, kann zu einem identifizierter Benutzer werden. Der Ablauf für den Übergang von einem anonymen zu einem identifizierten Benutzer enthält die folgenden Schritte:
 
 * Der Entwickler übergibt das anonyme Zugriffstoken an die Anmelde-API.
 * {{site.data.keyword.appid_short_notm}} authentifiziert den Aufrufenden mit dem Identitätsprovider.
 * {{site.data.keyword.appid_short_notm}} sucht den anonymem Benutzerdatensatz, der durch das Zugriffstoken definiert wird, und weist ihn der Identität zu.
+
     **Note**: Dem anonymen Benutzerdatensatz kann die Identität kann nur zugewiesen werden, wenn die Identität noch keinem anderen Benutzer zugewiesen wurde. Wenn die Identität bereits einem anderen {{site.data.keyword.appid_short_notm}}-Benutzer zugewiesen wurde, enthalten die Zugriffs- und Identitätstoken Informationen zu diesem Benutzer und stellen Zugriff auf dessen Attribute bereit. Mit dem neuen Zugriffstoken ist kein Zugriff auf den vorherigen anonymen Benutzer und dessen Attributen möglich. So lange der Token noch nicht abgelaufen ist, kann auf die Informationen über das anonyme Zugriffstoken zugegriffen werden. Der Entwickler kann auswählen, ob die anonymen Attribute des anonymen und bekannten Benutzers zusammengeführt werden sollen.
+
 * Die neuen Zugriffs- und Identitätstoken, die von {{site.data.keyword.appid_short_notm}} empfangen wurden, weisen auf den bekannten Benutzer. Die Identitätstoken enthalten die öffentlichen Informationen, die vom Identitätsprovider empfangen werden.
 * Die anonymen Token werden für den Benutzer ungültig.
 

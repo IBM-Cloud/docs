@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -42,28 +42,28 @@ El SDK del servidor de {{site.data.keyword.appid_short_notm}} utiliza la infraes
   ```
   npm install -save express
   npm install -save passport
-  npm install -save appid-serversdk-nodejs
+  npm install -save bluemix-appid
   ```
   {:pre}
 
 ## Protección de recursos en Node.js
 {: #protecting-resources-nodesdk}
 
-El siguiente fragmento de código muestra cómo utilizar `ApiStrategy` en una aplicación Express sencilla para proteger los métodos GET del punto final `/protected`.
+El siguiente fragmento de código muestra cómo utilizar `APIStrategy` en una aplicación Express sencilla para proteger los métodos GET del punto final `/protected`.
 
   ```JavaScript
 
   var express = require('express');
   var passport = require('passport');
-  var ApiStrategy = require('appid-serversdk-nodejs').ApiStrategy;
+  var APIStrategy = require('bluemix-appid').APIStrategy;
 
-  passport.use(new ApiStrategy());
+  passport.use(new APIStrategy());
   var app = express();
   app.use(passport.initialize());
 
-  app.get('/protected', passport.authenticate('appid-api-strategy', {session: false }),
+  app.get('/protected', passport.authenticate('APIStrategy.STRATEGY_NAME', {session: false }),
       function(request, response){
-          console.log("Securty context", request.securityContext)    
+          console.log("Securty context", request.securityContext)
           response.send(200, "Success!");
       }
   );
@@ -78,8 +78,8 @@ Puede utilizar `WebAppStrategy` para proteger los recursos de aplicaciones web:
 
   var express = require('express');
   var passport = require('passport');
-  var ApiStrategy = require('appid-serversdk-nodejs').WebStrategy;
+  var WebAppStrategy = require('bluemix-appid').WebAppStrategy;
   ```
   {:pre}
 
-Para obtener más información, consulte <a href="https://github.com/ibm-cloud-security/appid-serversdk-nodejs" target="_blank">Repositorio de GitHub <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a>.
+Para obtener más información, consulte el <a href="https://github.com/ibm-cloud-security/appid-serversdk-nodejs" target="_blank">Repositorio GitHub de Node.js de {{site.data.keyword.appid_short_notm}}<img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a>.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -14,7 +14,8 @@ lastupdated: "2017-03-16"
 # 保护 Node.js 资源
 {: #protecting-resources-nodejs}
 
-您可以使用 {{site.data.keyword.appid_short}} 服务器 SDK 来保护 Node.js 应用程序中的资源。{:shortdesc}
+您可以使用 {{site.data.keyword.appid_short}} 服务器 SDK 来保护 Node.js 应用程序中的资源。
+{:shortdesc}
 
 ## 开始之前
 {: #before-you-begin}
@@ -41,26 +42,26 @@ lastupdated: "2017-03-16"
   ```
   npm install -save express
   npm install -save passport
-  npm install -save appid-serversdk-nodejs
+  npm install -save bluemix-appid
   ```
   {:pre}
 
 ## 在 Node.js 中保护资源
 {: #protecting-resources-nodesdk}
 
-以下片段演示了如何在简单 Express 应用程序中使用 `ApiStrategy` 来保护 `/protected` 端点 GET 方法。
+以下片段演示了如何在简单 Express 应用程序中使用 `APIStrategy` 来保护 `/protected` 端点 GET 方法。
 
   ```JavaScript
 
   var express = require('express');
   var passport = require('passport');
-  var ApiStrategy = require('appid-serversdk-nodejs').ApiStrategy;
+  var APIStrategy = require('bluemix-appid').APIStrategy;
 
-  passport.use(new ApiStrategy());
+  passport.use(new APIStrategy());
   var app = express();
   app.use(passport.initialize());
 
-  app.get('/protected', passport.authenticate('appid-api-strategy', {session: false }),
+  app.get('/protected', passport.authenticate('APIStrategy.STRATEGY_NAME', {session: false }),
       function(request, response){
           console.log("Securty context", request.securityContext)    
           response.send(200, "Success!");
@@ -77,8 +78,8 @@ lastupdated: "2017-03-16"
 
   var express = require('express');
   var passport = require('passport');
-  var ApiStrategy = require('appid-serversdk-nodejs').WebStrategy;
+  var WebAppStrategy = require('bluemix-appid').WebAppStrategy;
   ```
   {:pre}
 
-有关更多信息，请参阅 <a href="https://github.com/ibm-cloud-security/appid-serversdk-nodejs" target="_blank">GitHub 存储库 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a>。
+有关更多信息，请参阅 <a href="https://github.com/ibm-cloud-security/appid-serversdk-nodejs" target="_blank">{{site.data.keyword.appid_short_notm}} Node.js GitHub 存储库 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a>。

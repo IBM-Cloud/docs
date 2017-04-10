@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -26,15 +26,13 @@ Ajoutez une fonctionnalité de sécurité à vos applications à l'aide du servi
 
 
 
-
-
 # Liens connexes
 {: #rellinks notoc}
 
 ## Référence d'API
 {: #api notoc}
 
-* [oauth-flows {{site.data.keyword.appid_short_notm}}](http://mobileclientaccess.stage1.mybluemix.net/swagger-ui/#!/Authorization_Server_V3/authorization)
+* [{{site.data.keyword.appid_short_notm}} oauth-flows](https://appid-oauth.ng.bluemix.net/swagger-ui/#!/Authorization_Server_V3/authorization)
 
 ## Logiciel SDK
 {: #sdk notoc}
@@ -43,14 +41,3 @@ Ajoutez une fonctionnalité de sécurité à vos applications à l'aide du servi
 * [SDK Client iO-Swift d'{{site.data.keyword.appid_short_notm}}](https://github.com/ibm-cloud-security/appid-clientsdk-swift){: new_window}
 * [SDK serveur Nodejs d'{{site.data.keyword.appid_short_notm}}](https://github.com/ibm-cloud-security/appid-serversdk-nodejs){: new_window}
 * [SDK serveur Swift d'{{site.data.keyword.appid_short_notm}}](https://github.com/ibm-cloud-security/appid-serversdk-swift){: new_window}
-
-
-<!---## Tutorials and Samples
-{: #samples notoc}--->
-
-
-
-## Liens connexes
-{: #general notoc}
-* [Fiche de prix {{site.data.keyword.Bluemix}}](https://www.ng.bluemix.net/#/pricing){: new_window}
-* [Prérequis {{site.data.keyword.Bluemix}}](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}

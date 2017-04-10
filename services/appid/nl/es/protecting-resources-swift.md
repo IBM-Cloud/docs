@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -50,7 +50,7 @@ El SDK de Swift proporciona plugins de credenciales de Kitura que se utilizan pa
 
 
 
-### Protección de aplicaciones web
+### Protección de apps web
 {: protect-webapps notoc}
 
 WebAppKituraCredentialsPlugin se basa en el flujo de concesión authorization_code de OAuth2 y debe utilizarse para aplicaciones web que usan navegadores. El plugin proporciona herramientas para implementar flujos de autorización y autenticación. El plugin también proporciona mecanismos para detectar intentos no autenticados de acceder a los recursos protegidos y redirige automáticamente el navegador de un usuario a una página de autenticación. Tras la correcta autenticación, se conduce al usuario al URL de devolución de llamada de la aplicación web, que utiliza el plugin para obtener señales de acceso e identidad de {{site.data.keyword.appid_short_notm}}. Después de obtener estas señales, el plugin las almacena en una sesión HTTP bajo WebAppKituraCredentialsPlugin.AuthContext.
@@ -138,4 +138,4 @@ El código siguiente muestra cómo utilizar WebAppKituraCredentialsPlugin en una
   ```
   {:pre}
 
-Para obtener más información, consulte el <a href="https://github.com/ibm-cloud-security/appid-serversdk-swift" target="_blank">repositorio de GitHub <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a>.
+Para obtener más información, consulte el <a href="https://github.com/ibm-cloud-security/appid-serversdk-swift" target="_blank">Repositorio de GitHub de Swift de {{site.data.keyword.appid_short_notm}}<img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a>.

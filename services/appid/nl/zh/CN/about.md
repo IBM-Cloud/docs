@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-03-16"
 
 
 # 关于 {{site.data.keyword.appid_short_notm}}
-{: #gettingstarted}
+{: #about}
 
 通过 {{site.data.keyword.appid_full}}，开发者只需几行代码即可保护 {{site.data.keyword.Bluemix}} 应用程序并向其添加认证。开发者还可以管理特定于用户的数据以构建个性化应用程序体验。
 {:shortdesc}
@@ -43,7 +43,7 @@ lastupdated: "2017-03-16"
 
 ## 体系结构概述
 
-![{{site.data.keyword.appid_short_notm}} 流程](/images/appid_flow.png)
+![{{site.data.keyword.appid_short_notm}} 体系结构图](/images/appid_architecture.png)
 
 图 1. {{site.data.keyword.appid_short_notm}} 体系结构图
 
@@ -56,10 +56,24 @@ lastupdated: "2017-03-16"
 * 客户端 SDK 将该授权令牌自动添加到原始请求，并将该请求重新发送到云资源。
 * 服务器 SDK 从请求中抽取访问令牌，并使用 {{site.data.keyword.appid_short_notm}} 进行验证。授予访问权后，响应会返回给应用程序。
 
-<!--## Sequence diagrams
-{: #sequence-diagrams}
 
-[Anton?]-->
+## 请求流程
+{: #request}
+
+下图描述了请求是如何从客户端 SDK 流向后端应用程序和身份提供者的。
+
+![{{site.data.keyword.appid_short_notm}} 请求流程](/images/appidflow.png)
+
+
+* 使用 {{site.data.keyword.appid_short_notm}} 客户端 SDK 对受 {{site.data.keyword.appid_short_notm}} 服务器 SDK 保护的后端资源发起请求。
+* {{site.data.keyword.appid_short_notm}} 服务器 SDK 检测到未授权的请求，然后返回 HTTP 401 和授权作用域。
+* 客户端 SDK 自动检测到 HTTP 401，然后启动认证过程。
+* 当客户端 SDK 联系服务时，如果配置了多个身份提供者，那么服务器 SDK 返回登录窗口小部件。{{site.data.keyword.appid_short_notm}} 会调用身份提供者并为该提供者呈现登录表单，如果没有配置身份提供者，那么将返回授权代码，以允许他们进行认证。
+* {{site.data.keyword.appid_short_notm}} 通过提供认证质询，要求客户端进行认证。
+* 如果已配置 Facebook 或 Google，那么在用户登录时，各自的身份提供者 OAuth 流程会处理认证。
+* 如果认证以相同的授权代码结束，那么该代码会发送到令牌端点。端点会返回两个令牌：访问令牌和身份令牌。从此刻开始，通过客户端 SDK 发起的请求全部具有新获取的 Authorization 头。
+* 客户端 SDK 自动重新发送触发了授权流程的原始请求。
+* 服务器 SDK 从请求中抽取 Authorization 头，通过服务对该头进行验证，然后授予对后端资源的访问权。
 
 ## 访问令牌和身份令牌
 {: #access-and-identity}
@@ -70,7 +84,7 @@ lastupdated: "2017-03-16"
 ### 访问令牌
 {: #access-tokens notoc}
 
-有了访问令牌，就可以与 {{site.data.keyword.appid_short_notm}} 授权过滤器保护的资源进行通信，请参阅[保护资源](/docs/services/appid/protecting-resources.html)。令牌符合 JavaScript 对象签名和加密 (JOSE) 规范，并且具有以下格式：
+有了访问令牌，就可以与 {{site.data.keyword.appid_short_notm}} 授权过滤器保护的资源进行通信，请参阅[保护后端资源](/docs/services/appid/protecting-resources.html)。令牌符合 JavaScript 对象签名和加密 (JOSE) 规范，并且具有以下格式：
 
 ```
 Header: {
@@ -181,7 +195,7 @@ Payload: {
 ## 身份提供者概述
 {: #identity-providers-overview}
 
-可以在移动和 Web 应用程序中使用以下身份提供者：
+可以在移动和 web 应用程序中使用以下身份提供者：
 
 * **Facebook** - 用户使用自己的 Facebook 凭证登录到移动或 Web 应用程序。
 * **Google** - 用户使用自己的 Google+ 凭证登录到移动或 Web 应用程序。

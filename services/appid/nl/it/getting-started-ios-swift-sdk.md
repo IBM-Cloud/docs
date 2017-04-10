@@ -2,9 +2,10 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -23,7 +24,7 @@ Crea le tue applicazioni Swift con l'SDK client {{site.data.keyword.appid_short}
 
 Hai bisogno delle seguenti informazioni:
   * Un'istanza di {{site.data.keyword.appid_short_notm}}.
-  * Il tuo ID tenant. 
+  * Il tuo ID tenant.
     * Nella scheda **Credenziali del servizio** del tuo dashboard del servizio, fai clic su **Visualizza credenziali**. Il tuo ID Tenant viene visualizzato nel campo **ID tenant**. Questo valore viene utilizzato per inizializzare la tua applicazione.
   * La tua regione {{site.data.keyword.Bluemix_notm}}.
   Puoi trovare la tua regione cercando nella IU. Il valore viene utilizzato per inizializzare la tua applicazione.
@@ -33,16 +34,16 @@ Hai bisogno delle seguenti informazioni:
       <th> Valore SDK </th>
     </tr>
     <tr>
-      <td> Stati Uniti Sud</td>
-      <td> BMSClient.Region.usSouth </td>
+      <td> Stati Uniti Sud </td>
+      <td> AppID.REGION_US_SOUTH </td>
     </tr>
     <tr>
       <td> Sydney </td>
-      <td> BMSClient.Region.sydney </td>
+      <td> AppID.REGION_SYDNEY </td>
     </tr>
     <tr>
-      <td> Regno Unito</td>
-      <td> BMSClient.Region.unitedKingdom </td>
+      <td> Regno Unito </td>
+      <td> AppID.REGION_UK </td>
     </tr>
   </table>
 
@@ -53,11 +54,12 @@ Hai bisogno delle seguenti informazioni:
 ## Installazione dell'SDK client {{site.data.keyword.appid_short_notm}}
 {: #install-appid-sdk}
 
-L'SDK client {{site.data.keyword.appid_short_notm}} è distribuito con CocoaPods, un gestore dipendenze per i progetti Swift e Objective-C Cocoa. CocoaPods scarica le risorse utente e le rende disponibili al tuo progetto. 
+L'SDK client {{site.data.keyword.appid_short_notm}} è distribuito con CocoaPods, un gestore dipendenze per i progetti Swift e Objective-C Cocoa. CocoaPods scarica le risorse utente e le rende disponibili al tuo progetto.
 
-1. Crea un progetto Xcode oppure apri un progetto esistente. 
+1. Crea un progetto Xcode oppure apri un progetto esistente.
 2. Apri o crea il Podfile nella directory del progetto.
 3. Nella tua destinazione del progetto, aggiungi una dipendenza per il pod 'BluemixAppID'. Assicurati che anche il comando `use_frameworks!` sia nella tua destinazione.
+
   Ad esempio:
 
   ```swift
@@ -82,7 +84,7 @@ L'SDK client {{site.data.keyword.appid_short_notm}} è distribuito con CocoaPods
 ## Inizializzazione dell'SDK client {{site.data.keyword.appid_short_notm}}
 {: #initialize-client-sdk}
 
-1. Aggiungi la seguente importazione al tuo file AppDelegate.swift:
+1. Aggiungi la seguente importazione al tuo file `AppDelegate.swift`:
 
   ```swift
   import BluemixAppID
@@ -92,12 +94,12 @@ L'SDK client {{site.data.keyword.appid_short_notm}} è distribuito con CocoaPods
 2. Inizializza l'SDK client passando i parametri ID tenant e regione al metodo di inizializzazione. Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializzazione è nel metodo application:didFinishLaunchingWithOptions: di AppDelegate nella tua applicazione Swift.
 
   ```swift
-  AppID.sharedInstance.initialize(tenantId: <tenantId>, bluemixRegion: AppID.<region>)
+  AppID.sharedInstance.initialize(tenantId: <tenantId>, bluemixRegion: AppID.Region_UK)
   ```
   {:pre}
 
   * Sostituisci ״tenantId״ con l'ID tenant per il tuo servizio ID applicazione.
-  * Sostituisci ״region״ con la tua regione {{site.data.keyword.appid_short_notm}}.
+  * Sostituisci AppID.REGION_UK con la tua regione {{site.data.keyword.appid_short_notm}}. 
 
 3. Aggiungi il seguente codice al tuo file AppDelegate.
 
@@ -106,12 +108,12 @@ L'SDK client {{site.data.keyword.appid_short_notm}} è distribuito con CocoaPods
           return AppID.sharedInstance.application(application, open: url, options: options)
       }
   ```
-  {;pre}
+  {:pre}
 
-## Autentica gli utenti utilizzando il widget di accesso 
+## Autentica gli utenti utilizzando il widget di accesso
 {: #authenticate-login}
 
-Dopo che l'SDK client {{site.data.keyword.appid_short_notm}} è stato inizializzato, puoi autenticare i tuoi utenti eseguendo il widget di accesso. La configurazione predefinita del widget di accesso utilizza Facebook, Google o entrambi come opzioni di autenticazione. Se configuri solo uno dei due, il widget di accesso non si avvia e l'utente viene reindirizzato alla schermata di autenticazione IDP configurata. 
+Dopo che l'SDK client {{site.data.keyword.appid_short_notm}} è stato inizializzato, puoi autenticare i tuoi utenti eseguendo il widget di accesso. La configurazione predefinita del widget di accesso utilizza Facebook, Google o entrambi come opzioni di autenticazione. Se configuri solo uno dei due, il widget di accesso non si avvia e l'utente viene reindirizzato alla schermata di autenticazione IDP configurata.
 
 
 
@@ -146,15 +148,18 @@ Dopo che l'SDK client {{site.data.keyword.appid_short_notm}} è stato inizializz
 ## Accesso agli attributi dell'utente
 {: #accessing}
 
-Quando ottieni un token di accesso, è possibile ottenere l'accesso all'endpoint degli attributi protetti dell'utente. Questo viene fatto utilizzando i seguenti metodi API: 
+Quando ottieni un token di accesso, è possibile ottenere l'accesso all'endpoint degli attributi protetti dell'utente. Questo viene fatto utilizzando i seguenti metodi API:
 
-  ```
+  ```swift
   func setAttribute(key: String, value: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
   func setAttribute(key: String, value: String, accessTokenString: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
+
   func getAttribute(key: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
   func getAttribute(key: String, accessTokenString: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
+
   func getAttributes(completionHandler: @escaping(Error?, [String:Any]?) -> Void)
   func getAttributes(accessTokenString: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
+
   func deleteAttribute(key: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
   func deleteAttribute(key: String, accessTokenString: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
   ```
@@ -164,7 +169,7 @@ Quando il token di accesso non viene esplicitamente trasmesso, {{site.data.keywo
 
 Ad esempio, puoi richiamare questo codice per impostare un nuovo attributo o sovrascriverne uno esistente:
 
-  ```
+  ```swift
   AppID.sharedInstance.userAttributeManager?.setAttribute("key", "value", completionHandler: { (error, result) in
       if error = nil {
           //Attributi ricevuti come un dizionario
@@ -181,7 +186,7 @@ Ad esempio, puoi richiamare questo codice per impostare un nuovo attributo o sov
 
 Con {{site.data.keyword.appid_short_notm}} puoi accedere in modo anonimo, consulta [identità anonima](/docs/services/appid/user-profile.html#anonymous).
 
-  ```
+  ```swift
   class delegate : AuthorizationDelegate {
 
       public func onAuthorizationSuccess(accessToken: AccessToken, identityToken: IdentityToken, response:Response?) {
@@ -197,7 +202,7 @@ Con {{site.data.keyword.appid_short_notm}} puoi accedere in modo anonimo, consul
       }
    }
 
-  AppID.sharedInstance.loginAnonymously( authorizationDelegate: delegate())`
+  AppID.sharedInstance.loginAnonymously( authorizationDelegate: delegate())
   ```
   {:pre}
 
@@ -206,14 +211,14 @@ Con {{site.data.keyword.appid_short_notm}} puoi accedere in modo anonimo, consul
 
 Quando ospiti un token di accesso anonimo, l'utente può essere identificato trasmettendolo al metodo loginWidget.launch:
 
-  ```
+  ```swift
   func launch(accessTokenString: String? , delegate: AuthorizationDelegate)
   ```
   {:pre}
 
 Dopo un accesso anonimo, si verifica l'autenticazione progressiva anche se il widget di accesso viene richiamato trasmettendo un token di accesso, perché il servizio ha utilizzato l'ultimo token ricevuto. Se desideri cancellare i tuoi token memorizzati, esegui il seguente comando:
 
-  ```
+  ```swift
   var appIDAuthorizationManager = AppIDAuthorizationManager(appid: AppID.sharedInstance)
   appIDAuthorizationManager.clearAuthorizationData()
   ```

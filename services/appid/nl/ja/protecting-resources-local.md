@@ -2,7 +2,7 @@
 
 copyright:
   years:  2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 {:new_window: target="_blank"}
@@ -45,26 +45,22 @@ lastupdated: "2017-03-16"
 1. テナント ID を {{site.data.keyword.appid_short_notm}} テナント ID に置き換えます。この ID は、サービスのダッシュボードで確認できます。
 2. 地域を、以下の表に示している該当地域に置き換えます。
 
-<table> <caption> 表 1。{{site.data.keyword.Bluemix_notm}} 地域および対応する Android と iOS SDK 地域</caption>
+<table> <caption> 表 1。{{site.data.keyword.Bluemix_notm}} 地域と対応する Android および iOS の {{site.data.keyword.appid_short_notm}} 地域</caption>
 <tr>
   <th> Bluemix 地域</th>
   <th> Android</th>
-  <th> iOS</th>
 </tr>
 <tr>
   <td> 米国南部</td>
   <td> AppID.REGION_US_SOUTH </td>
-  <td> BMSClient.Region.usSouth </td>
 </tr>
 <tr>
   <td> シドニー</td>
   <td> AppID.REGION_SYDNEY </td>
-  <td> BMSClient.Region.sydney </td>
 </tr>
 <tr>
   <td> 英国</td>
   <td> AppID.REGION_UK </td>
-  <td> BMSClient.Region.unitedKingdom </td>
 </tr>
 </table>
 
@@ -111,7 +107,7 @@ request.send(this, new ResponseListener() {
 
  let baseRequestUrl = "http://localhost:<port>"; //サーバーの実行ポートを設定
  let tenantId = "your-AppID-service-tenantID"
- let region = AppID.Region.unitedKingdom; //App ID アプリケーションの地域をここで設定。現在使用可能な値は AppID.Region.usSouth、AppID.Region.sydney、または AppID.Region.unitedKingdom。
+ let region = AppID.REGION_UK; //App ID アプリケーションの地域をここで設定。現在使用可能な値は AppID.REGION_US_SOUTH、AppID.REGION_SYDNEY、または AppID.REGION_UK。
 
 BMSClient.sharedInstance.initialize(bluemixRegion: region)
 BMSClient.sharedInstance.authorizationManager = AppIDAuthorizationManager(appid:AppID.sharedInstance)

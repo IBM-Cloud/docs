@@ -2,9 +2,10 @@
 
 copyright:
   years: 2017
-  lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -27,22 +28,22 @@ Necesita la siguiente información:
     * En el separador **Credenciales de servicio** del panel de control de servicio, pulse **Ver credenciales**. Su ID de arrendatario se muestra en el campo **TenantID**. Este valor se utiliza para inicializar la app.
   * Su región de {{site.data.keyword.Bluemix_notm}}.
   Puede encontrar su región consultando en la IU. El valor se utiliza para inicializar la app.
-    <table> <caption> Tabla 1. Regiones de {{site.data.keyword.Bluemix_notm}} y sus correspondientes valores de SDK</caption>
+    <table> <caption> Tabla 1. Regiones de {{site.data.keyword.Bluemix_notm}} y sus correspondientes valores de SDK </caption>
     <tr>
-      <th> Región Bluemix</th>
-      <th> Valor de SDK</th>
+      <th> Región Bluemix </th>
+      <th> Valor de SDK </th>
     </tr>
     <tr>
-      <td> Sur de EE.UU.</td>
-      <td> BMSClient.Region.usSouth </td>
+      <td> Sur de EE.UU. </td>
+      <td> AppID.REGION_US_SOUTH </td>
     </tr>
     <tr>
-      <td> Sídney</td>
-      <td> BMSClient.Region.sydney </td>
+      <td> Sídney </td>
+      <td> AppID.REGION_SYDNEY </td>
     </tr>
     <tr>
-      <td> Reino Unido</td>
-      <td> BMSClient.Region.unitedKingdom </td>
+      <td> Reino Unido </td>
+      <td> AppID.REGION_UK </td>
     </tr>
   </table>
 
@@ -58,6 +59,7 @@ El SDK del cliente de {{site.data.keyword.appid_short_notm}} se distribuye con C
 1. Cree un proyecto de Xcode, o abra uno ya existente.
 2. Abra, o cree, el Podfile en el directorio de proyecto.
 3. En el destino del proyecto, añada una dependencia para el pod de 'BluemixAppID'. Asegúrese de que el mandato `use_frameworks!` también esté bajo su destino.
+
   Por ejemplo:
 
   ```swift
@@ -82,7 +84,7 @@ El SDK del cliente de {{site.data.keyword.appid_short_notm}} se distribuye con C
 ## Inicialización del SDK del cliente de {{site.data.keyword.appid_short_notm}}
 {: #initialize-client-sdk}
 
-1. Añada la siguiente importación al archivo AppDelegate.swift:
+1. Añada la siguiente importación al archivo `AppDelegate.swift`:
 
   ```swift
   import BluemixAppID
@@ -92,12 +94,12 @@ El SDK del cliente de {{site.data.keyword.appid_short_notm}} se distribuye con C
 2. Inicialice el SDK del cliente pasando los parámetros de tenant ID y de region al método initialize. Un lugar habitual, pero no obligatorio, donde poner el código de inicialización es en el método application:didFinishLaunchingWithOptions: del AppDelegate de la aplicación Swift.
 
   ```swift
-  AppID.sharedInstance.initialize(tenantId: <tenantId>, bluemixRegion: AppID.<region>)
+  AppID.sharedInstance.initialize(tenantId: <tenantId>, bluemixRegion: AppID.Region_UK)
   ```
   {:pre}
 
-  * Sustituya ״tenantId״ por el id de arrendatario para el servicio de la ID de app.
-  * Sustituya ״region״ por la región de {{site.data.keyword.appid_short_notm}}.
+  * Sustituya "tenantId" por el id de arrendatario para el servicio de la ID de app.
+  * Sustituya AppID.REGION_UK por la región de {{site.data.keyword.appid_short_notm}}.
 
 3. Añada el código siguiente al archivo AppDelegate.
 
@@ -106,7 +108,7 @@ El SDK del cliente de {{site.data.keyword.appid_short_notm}} se distribuye con C
           return AppID.sharedInstance.application(application, open: url, options: options)
       }
   ```
-  {;pre}
+  {:pre}
 
 ## Autenticar los usuarios utilizando el widget de inicio de sesión
 {: #authenticate-login}
@@ -137,8 +139,7 @@ Después de inicializar el SDK del cliente de {{site.data.keyword.appid_short_no
       public func onAuthorizationFailure(error: AuthorizationError) {
           //Se ha producido una excepción
         }
-
-        }
+  }
 
   AppID.sharedInstance.loginWidget?.launch(delegate: delegate())
   ```
@@ -149,13 +150,16 @@ Después de inicializar el SDK del cliente de {{site.data.keyword.appid_short_no
 
 Cuando obtenga una señal de acceso, es posible obtener acceso al punto final de los atributos protegidos del usuario. Esta operación se realiza mediante los siguientes métodos de la API:
 
-  ```
+  ```swift
   func setAttribute(key: String, value: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
   func setAttribute(key: String, value: String, accessTokenString: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
+
   func getAttribute(key: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
   func getAttribute(key: String, accessTokenString: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
+
   func getAttributes(completionHandler: @escaping(Error?, [String:Any]?) -> Void)
   func getAttributes(accessTokenString: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
+
   func deleteAttribute(key: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
   func deleteAttribute(key: String, accessTokenString: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
   ```
@@ -165,7 +169,7 @@ Cuando no se haya aprobado explícitamente una señal de acceso, {{site.data.key
 
 Por ejemplo, puede invocar este código para establecer un atributo nuevo, o para alterar temporalmente uno existente:
 
-  ```
+  ```swift
   AppID.sharedInstance.userAttributeManager?.setAttribute("key", "value", completionHandler: { (error, result) in
       if error = nil {
           //Atributos recibidos como un diccionario
@@ -182,7 +186,7 @@ Por ejemplo, puede invocar este código para establecer un atributo nuevo, o par
 
 Con {{site.data.keyword.appid_short_notm}} puede iniciar sesión de forma anónima, consulte [identidad anónima](/docs/services/appid/user-profile.html#anonymous).
 
-  ```
+  ```swift
   class delegate : AuthorizationDelegate {
 
       public func onAuthorizationSuccess(accessToken: AccessToken, identityToken: IdentityToken, response:Response?) {
@@ -198,7 +202,7 @@ Con {{site.data.keyword.appid_short_notm}} puede iniciar sesión de forma anóni
       }
    }
 
-  AppID.sharedInstance.loginAnonymously( authorizationDelegate: delegate())`
+  AppID.sharedInstance.loginAnonymously( authorizationDelegate: delegate())
   ```
   {:pre}
 
@@ -207,14 +211,14 @@ Con {{site.data.keyword.appid_short_notm}} puede iniciar sesión de forma anóni
 
 Cuando alberga una señal de acceso anónimo, el usuario puede convertirse en un usuario identificado si lo pasa al método loginWidget.launch:
 
-  ```
+  ```swift
   func launch(accessTokenString: String? , delegate: AuthorizationDelegate)
   ```
   {:pre}
 
 Tras un inicio de sesión anónimo, se producirá la autenticación progresiva, aunque se invoque el widget de inicio de sesión sin pasar una señal de acceso porque el servicio ha utilizado la última señal recibida. Si desea borrar las señales almacenadas, ejecute el siguiente mandato:
 
-  ```
+  ```swift
   var appIDAuthorizationManager = AppIDAuthorizationManager(appid: AppID.sharedInstance)
   appIDAuthorizationManager.clearAuthorizationData()
   ```

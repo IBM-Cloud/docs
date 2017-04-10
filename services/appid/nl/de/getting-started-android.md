@@ -2,9 +2,10 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -24,7 +25,8 @@ Sie benötigen die folgenden Informationen:
   * Eine Instanz des {{site.data.keyword.appid_short_notm}}-Service.
   * Ihre Tenant-ID.
     * Klicken Sie in der Registerkarte **Serviceberechtigungsnachweise** Ihres Service-Dashboards auf **Berechtigungsnachweise anzeigen**. Ihre Tenant-ID wird im Feld **Tenant-ID** angezeigt. Dieser Wert wird für die Initialisierung Ihrer App verwendet.
-  * Ihre {{site.data.keyword.Bluemix}}-Region. Sie finden Ihre Region in Ihrer Benutzerschnittstelle. Der Wert wird für die Initialisierung Ihrer App verwendet.<table> <caption> Tabelle 1: {{site.data.keyword.Bluemix_notm}}-Regionen und entsprechende SDK-Werte </caption>
+  * Ihre {{site.data.keyword.Bluemix}}-Region. Sie finden Ihre Region in Ihrer Benutzerschnittstelle. Der Wert wird für die Initialisierung Ihrer App verwendet.
+    <table> <caption> Tabelle 1: {{site.data.keyword.Bluemix_notm}}-Regionen und entsprechende SDK-Werte </caption>
     <tr>
       <th> Bluemix-Region </th>
       <th> SDK-Wert </th>
@@ -134,7 +136,7 @@ Nach der Initialisierung des {{site.data.keyword.appid_short_notm}}-Client-SDK k
 
 Wenn Sie ein Zugriffstoken anfordern, können Sie Zugriff auf den Endpunkt der geschützten Benutzerattribute zugreifen. Sie können Zugriff durch die folgenden API-Methoden erhalten:
 
-  ```   
+  ```java
   void setAttribute(@NonNull String name, @NonNull String value, UserAttributeResponseListener listener);
   void setAttribute(@NonNull String name, @NonNull String value, @NonNull AccessToken accessToken, UserAttributeResponseListener listener);
 
@@ -153,7 +155,7 @@ Wenn ein Zugriffstoken nicht explizit übergeben wird, verwendet {{site.data.key
 
 Sie können beispielsweise diesen Code aufrufen, um ein neues Attribut festzulegen oder ein vorhandenes Attribut zu überschreiben:
 
-  ```
+  ```java
   appId.getUserAttributeManager().setAttribute(name, value, useThisToken,new UserAttributeResponseListener() {
 		@Override
 		public void onSuccess(JSONObject attributes) {
@@ -171,9 +173,9 @@ Sie können beispielsweise diesen Code aufrufen, um ein neues Attribut festzuleg
 ### Anonyme Anmeldung
 {: #anonymous notoc}
 
-Sie können sich mit {{site.data.keyword.appid_short_notm}} anonym anmelden; siehe [anonyme Identität](/docs/services/appid/user-profile.html#anonymous).
+Sie können sich mit {{site.data.keyword.appid_short_notm}} anonym anmelden; siehe [anonymer Benutzer](/docs/services/appid/user-profile.html#anonymous).
 
-  ```
+  ```java
   appId.loginAnonymously(getApplicationContext(), new AuthorizationListener() {
 		@Override
 		public void onAuthorizationFailure(AuthorizationException exception) {
@@ -198,14 +200,14 @@ Sie können sich mit {{site.data.keyword.appid_short_notm}} anonym anmelden; sie
 
 Benutzer mit einem anonymen Zugriffstoken können identifiziert werden, indem es der Methode `loginWidget.launch` übergeben wird.
 
-  ```
+  ```java
   void launch (@NonNull final Activity activity, @NonNull final AuthorizationListener authorizationListener, String accessTokenString);
   ```
   {:pre}
 
 Nach einer anonymen Anmeldung tritt eine progressive Authentifizierung auf, sogar wenn das Anmelde-Widget aufgerufen wird, ohne dass dabei ein Zugriffstoken übergeben wird. Grund hierfür ist, dass der Service das zuletzt empfangene Token verwendet. Führen Sie den folgenden Befehl aus, um gespeicherte Token zu löschen:
 
-  ```
+  ```java
   	appIDAuthorizationManager = new AppIDAuthorizationManager(this.appId);
   appIDAuthorizationManager.clearAuthorizationData();
   ```

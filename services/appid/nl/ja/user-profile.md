@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -10,19 +10,21 @@ lastupdated: "2017-03-16"
 {:shortdesc: .shortdesc}
 
 
-# ユーザー・プロファイル
+# ユーザー・プロファイルについて
 {: #user-profile}
 
 ユーザー・プロファイルは、{{site.data.keyword.appid_short}} によって保管され保守されるエンティティーです。プロファイルには、ユーザーの属性と ID が保持されます。プロファイルは匿名にすることも ID プロバイダー管理の ID にリンクすることもできます。
 {:shortdesc}
 
-{{site.data.keyword.appid_short_notm}} は、匿名ログインまたは OpenId Connect (OIDC) IdP による認証を介したログインのための API を備えています。[ID プロバイダーの構成](https://console.stage1.ng.bluemix.net/docs/services/appid/identity-providers.html#setting-up-idp)を参照してください。ユーザー・プロファイル属性 API エンドポイントは、ログインと許可のプロセス中に {{site.data.keyword.appid_short_notm}} が生成するアクセス・トークンによって保護されるリソースです。
+{{site.data.keyword.appid_short_notm}} は、匿名ログインまたは OpenId Connect (OIDC) IdP による認証を介したログインのための API を備えています。[ID プロバイダーの構成](/docs/services/appid/identity-providers.html#setting-up-idp)を参照してください。ユーザー・プロファイル属性 API エンドポイントは、ログインと許可のプロセス中に {{site.data.keyword.appid_short_notm}} が生成するアクセス・トークンによって保護されるリソースです。
 
 
 ## ユーザー属性の保管、読み取り、削除
 {: #storing-data}
 
-{{site.data.keyword.appid_short_notm}} は、ユーザー属性の CRUD 操作を行うための [REST API](http://mobileclientaccess.stage1.mybluemix.net/swagger-ui/#!/Authorization_Server_V3/authorization) を備えています。また、[Android](https://github.com/ibm-cloud-security/appid-clientsdk-android) と [Swift](https://github.com/ibm-cloud-security/appid-clientsdk-swift) モバイル・クライアント用の SDK も備えています。
+
+
+{{site.data.keyword.appid_short_notm}} には、ユーザーの属性に対する CRUD 操作を実行するための <a href="https://appid-profiles.ng.bluemix.net/swagger-ui/index.html#/" target="_blank">REST API <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコンxternal link icon"></a>、および <a href="https://github.com/ibm-cloud-security/appid-clientsdk-android" target="_blank">Android <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a> と <a href="https://github.com/ibm-cloud-security/appid-clientsdk-swift" target="_blank">Swift <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a> のモバイル・クライアント用の SDK が用意されています。
 
 
 ## OAuth ID
@@ -40,11 +42,15 @@ OAuth ログイン API を呼び出す際、{{site.data.keyword.appid_short_notm
 ## 識別されたユーザー
 {: #identified}
 
-ID プロバイダー提供の ID を持っている匿名ユーザーは、識別されたユーザーになることができます。匿名ユーザーから既知のユーザーに移行するフローについて、次のステップに分けて大まかに説明します。
+ID プロバイダー提供の ID を持っている匿名ユーザーは、識別されたユーザーになることができます。匿名ユーザーから識別済みユーザーになるまでのフローをまとめると、次のようなステップになります。
+
 
 * 開発者が匿名アクセス・トークンをログイン API に渡します。
 * {{site.data.keyword.appid_short_notm}} が、呼び出し元を ID プロバイダーを使用して認証します。
-* {{site.data.keyword.appid_short_notm}} が、アクセス・トークンで定義された匿名ユーザー・レコードを見つけ、ID を割り当てます。**注**: ID を匿名レコードに割り当てることができるのは、その同じ ID が他のユーザーにまだ割り当てられていない場合のみです。ID が既に別の {{site.data.keyword.appid_short_notm}} ユーザーと関連付けられている場合、アクセス・トークンと識別トークンにはそのユーザーのレコードの情報が含まれ、そのユーザーの属性へのアクセスを提供します。前の匿名ユーザーとその属性に、新しいアクセス・トークンを使用してアクセスすることはできません。トークンの有効期限が切れるまでは、匿名アクセス・トークンにより引き続き情報にアクセスできます。開発者は、匿名ユーザーの匿名属性を既知のユーザーとマージする方法を選択できます。
+* {{site.data.keyword.appid_short_notm}} が、アクセス・トークンで定義された匿名ユーザー・レコードを見つけ、ID を割り当てます。
+
+    **注**: ID を匿名レコードに割り当てることができるのは、その同じ ID が他のユーザーにまだ割り当てられていない場合のみです。ID が既に別の {{site.data.keyword.appid_short_notm}} ユーザーと関連付けられている場合、アクセス・トークンと識別トークンにはそのユーザーのレコードの情報が含まれ、そのユーザーの属性へのアクセスを提供します。前の匿名ユーザーとその属性に、新しいアクセス・トークンを使用してアクセスすることはできません。トークンの有効期限が切れるまでは、匿名アクセス・トークンにより引き続き情報にアクセスできます。開発者は、匿名ユーザーの匿名属性を既知のユーザーとマージする方法を選択できます。
+
 * {{site.data.keyword.appid_short_notm}} から受け取る新しいアクセス・トークンと識別トークンは既知のユーザーを指し、識別トークンには ID プロバイダーから受け取った公開情報が含まれています。
 * 匿名トークンは、そのユーザーでは無効になります。
 

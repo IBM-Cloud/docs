@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -138,4 +138,4 @@ Le code ci-dessous illustre comment utiliser le plug-in WebAppKituraCredentialsP
   ```
   {:pre}
 
-Pour plus d'informations, reportez-vous au <a href="https://github.com/ibm-cloud-security/appid-serversdk-swift" target="_blank">référentiel GitHub<img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a>.
+Pour plus d'informations, reportez-vous à la section <a href="https://github.com/ibm-cloud-security/appid-serversdk-swift" target="_blank">{{site.data.keyword.appid_short_notm}}Swift dans le référentiel GitHub<img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a>.

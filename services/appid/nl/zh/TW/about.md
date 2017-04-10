@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-03-16"
 
 
 # 關於 {{site.data.keyword.appid_short_notm}}
-{: #gettingstarted}
+{: #about}
 
 使用 {{site.data.keyword.appid_full}}，開發人員只要透過數行程式碼即可保護其 {{site.data.keyword.Bluemix}} 應用程式並新增對其的鑑別。開發人員也可以管理使用者特定的資料來建置個人化應用程式體驗。
 {:shortdesc}
@@ -43,7 +43,7 @@ lastupdated: "2017-03-16"
 
 ## 架構概觀
 
-![{{site.data.keyword.appid_short_notm}} 流程](/images/appid_flow.png)
+![{{site.data.keyword.appid_short_notm}} 架構圖](/images/appid_architecture.png)
 
 圖 1. {{site.data.keyword.appid_short_notm}} 架構圖
 
@@ -57,10 +57,24 @@ lastupdated: "2017-03-16"
 * 伺服器 SDK 從要求擷取存取記號，並向 {{site.data.keyword.appid_short_notm}} 驗證它。
 授與存取權，而且會將回應傳回給應用程式。
 
-<!--## Sequence diagrams
-{: #sequence-diagrams}
 
-[Anton?]-->
+## 要求流程
+{: #request}
+
+下圖說明要求如何從用戶端 SDK 流向後端應用程式及身分提供者。
+
+![{{site.data.keyword.appid_short_notm}} 要求流程](/images/appidflow.png)
+
+
+* 使用 {{site.data.keyword.appid_short_notm}} 用戶端 SDK，對使用 {{site.data.keyword.appid_short_notm}} 伺服器 SDK 保護的後端資源提出要求。
+* {{site.data.keyword.appid_short_notm}} 伺服器 SDK 偵測到未獲授權的要求，並傳回 HTTP 401 及授權範圍。
+* 用戶端 SDK 自動偵測到 HTTP 401，並啟動鑑別處理程序。
+* 當用戶端 SDK 與服務聯絡時，如果已配置多個身分提供者，伺服器 SDK 會傳回登入小組件。{{site.data.keyword.appid_short_notm}} 呼叫身分提供者，並提出該提供者的登入表單，或是在沒有配置任何身分提供者的情況傳回一個授權碼，允許他們鑑別。
+* {{site.data.keyword.appid_short_notm}} 提供鑑別盤查，以要求用戶端應用程式進行鑑別。
+* 如果已配置 Facebook 或 Google，而使用者進行登入，則鑑別會有個別的身分提供者 OAuth 流程處理。
+* 如果鑑別最後具有相同的授權碼，授權碼會傳送給記號端點。端點傳回兩個記號：存取記號，與身分記號。從此時起，使用用戶端 SDK 所提出的所有要求都會有新取得的授權標頭。
+* 用戶端 SDK 自動重新傳送已觸發授權流程的原始要求。
+* 伺服器 SDK 從要求擷取授權標頭、向服務驗證授權標頭，然後授與對後端資源的存取權。
 
 ## 存取及身分記號
 {: #access-and-identity}
@@ -71,8 +85,7 @@ lastupdated: "2017-03-16"
 ### 存取記號
 {: #access-tokens notoc}
 
-存取記號會啟用與 {{site.data.keyword.appid_short_notm}} 授權過濾器所保護資源的通訊，請參閱[保護資源](/docs/services/appid/protecting-resources.html)。
-記號符合「JavaScript 物件簽署及加密 (JOSE)」規格，並且具有下列格式：
+存取記號會啟用與 {{site.data.keyword.appid_short_notm}} 授權過濾器所保護資源的通訊，請參閱[保護後端資源](/docs/services/appid/protecting-resources.html)。記號符合「JavaScript 物件簽署及加密 (JOSE)」規格，並且具有下列格式：
 
 ```
 Header: {

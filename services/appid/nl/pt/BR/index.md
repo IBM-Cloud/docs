@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2017 lastupdated: "2017-03-16"
+  years: 2017
+lastupdated: "2017-03-30"
 
 ---
 
@@ -30,16 +31,13 @@ execução com o {{site.data.keyword.appid_short_notm}}.
 
 
 
-
-
 # Links relacionados
 {: #rellinks notoc}
 
 ## Referência de API
 {: #api notoc}
 
-* Fluxos do OAuth do
-[{{site.data.keyword.appid_short_notm}}](http://mobileclientaccess.stage1.mybluemix.net/swagger-ui/#!/Authorization_Server_V3/authorization)
+* [{{site.data.keyword.appid_short_notm}} oauth-flows](https://appid-oauth.ng.bluemix.net/swagger-ui/#!/Authorization_Server_V3/authorization)
 
 ## SDK
 {: #sdk notoc}
@@ -51,14 +49,3 @@ execução com o {{site.data.keyword.appid_short_notm}}.
 [{{site.data.keyword.appid_short_notm}}](https://github.com/ibm-cloud-security/appid-serversdk-nodejs){: new_window}
 * [{{site.data.keyword.appid_short_notm}}SDK
 do servidor Swift](https://github.com/ibm-cloud-security/appid-serversdk-swift){: new_window}
-
-
-<!---## Tutorials and Samples
-{: #samples notoc}--->
-
-
-
-## Links relacionados
-{: #general notoc}
-* [{{site.data.keyword.Bluemix}} Folha de precificação](https://www.ng.bluemix.net/#/pricing){: new_window}
-* Pré-requisitos do [{{site.data.keyword.Bluemix}}](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}

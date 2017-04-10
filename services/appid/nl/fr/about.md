@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -13,9 +13,10 @@ lastupdated: "2017-03-16"
 
 
 # A propos d'{{site.data.keyword.appid_short_notm}}
-{: #gettingstarted}
+{: #about}
 
-{{site.data.keyword.appid_full}} permet aux développeurs de sécuriser et d'ajouter une authentification à leurs applications {{site.data.keyword.Bluemix}} via seulement quelques lignes de code. Les développeurs peuvent également gérer les données spécifiques à l'utilisateur pour construire des applications personnalisées.{:shortdesc}
+{{site.data.keyword.appid_full}} permet aux développeurs de sécuriser et d'ajouter une authentification à leurs applications {{site.data.keyword.Bluemix}} via seulement quelques lignes de code. Les développeurs peuvent également gérer les données spécifiques à l'utilisateur pour construire des applications personnalisées.
+{:shortdesc}
 
 
 Vous pouvez utiliser le service d'une des manières suivantes :
@@ -42,7 +43,7 @@ Vous pouvez utiliser le service d'une des manières suivantes :
 
 ## Présentation de l'architecture
 
-![Flux {{site.data.keyword.appid_short_notm}}](/images/appid_flow.png)
+Diagramme de l'architecture ![{{site.data.keyword.appid_short_notm}}](/images/appid_architecture.png)
 
 Figure 1. Diagramme de l'architecture {{site.data.keyword.appid_short_notm}}
 
@@ -56,10 +57,24 @@ Vous pouvez protéger vos ressources de cloud à l'aide du SDK serveur d'{{site.
 * Le SDK serveur extrait de la demande le jeton d'accès et le valide auprès d'{{site.data.keyword.appid_short_notm}}.
 L'accès est accordé et la réponse est renvoyée à l'application.
 
-<!--## Sequence diagrams
-{: #sequence-diagrams}
 
-[Anton?]-->
+## Flux de demandes
+{: #request}
+
+Le diagramme ci-dessous illustre un flux de demandes depuis le SDK client vers votre application de back-end et les fournisseurs d'identité.
+
+![Flux de demandes {{site.data.keyword.appid_short_notm}}](/images/appidflow.png)
+
+
+* Utilisez le SDK client {{site.data.keyword.appid_short_notm}} pour soumettre une demande à vos ressources de back-end protégées par le SDK serveur {{site.data.keyword.appid_short_notm}}.
+* Le SDK serveur {{site.data.keyword.appid_short_notm}} détecte les demandes dépourvues d'autorisation et renvoie une réponse HTTP 401 une portée d'autorisation.
+* Le SDK client détecte automatiquement la réponse HTTP 401 et lance la procédure d'autorisation.
+* Lorsque le SDK client contacte le service, le SDK serveur renvoie le widget de connexion si plusieurs fournisseurs d'identité ont été configurés. {{site.data.keyword.appid_short_notm}} appelle le fournisseur d'identité et lui présente son formulaire d'identification ou renvoie un code d'acceptation qui lui permet de s'authentifier si aucun fournisseur d'identité n'a été configuré.
+* {{site.data.keyword.appid_short_notm}} demande à l'application client de s'authentifier en répondant à une demande d'authentification.
+* Si Facebook ou Google sont configurés et que l'utilisateur se connecte, l'authentification est traitée par le flux du protocole d'autorisation OAuth du fournisseur d'identité correspondant.
+* Si l'authentification se conclut par le même code d'accord, celui-ci est envoyé au noeud final du jeton. Le noeud final renvoie deux jetons : un code d'accès et un jeton d'identification. Dès lors, toutes les demandes effectuées avec le SDK client ont le nouvel en-tête d'autorisation obtenu.
+* Le SDK client renvoie automatiquement la demande d'origine ayant déclenché le flux d'autorisation.
+* Le SDK serveur extrait l'en-tête de l'autorisation depuis la demande, le valide auprès du service et octroie l'accès à une ressource de back-end.
 
 ## Jetons d'accès et d'identité
 {: #access-and-identity}
@@ -70,7 +85,7 @@ L'accès est accordé et la réponse est renvoyée à l'application.
 ### Jeton d'accès
 {: #access-tokens notoc}
 
-Le jeton d'accès active la communication avec les ressources protégées par des filtres d'autorisation{{site.data.keyword.appid_short_notm}}. Voir [Protection des ressources](/docs/services/appid/protecting-resources.html).
+Le jeton d'accès permet la communication avec des ressources protégées par des filtres d'autorisation d'{{site.data.keyword.appid_short_notm}}. Voir [Protection des ressources de back-end](/docs/services/appid/protecting-resources.html).
 Le jeton est conforme aux spécifications JOSE (JavaScript Object Signing and Encryption) et adopte le format suivant :
 
 ```

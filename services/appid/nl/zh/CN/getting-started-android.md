@@ -2,9 +2,10 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -135,7 +136,7 @@ lastupdated: "2017-03-16"
 
 获取访问令牌时，还可获取对用户保护的属性端点的访问权。您可以使用以下 API 方法来获取访问权：
 
-  ```   
+  ```java
   void setAttribute(@NonNull String name, @NonNull String value, UserAttributeResponseListener listener);
   void setAttribute(@NonNull String name, @NonNull String value, @NonNull AccessToken accessToken, UserAttributeResponseListener listener);
 
@@ -154,7 +155,7 @@ lastupdated: "2017-03-16"
 
 例如，可以调用以下代码来设置新属性，或者覆盖现有属性：
 
-  ```
+  ```java
   appId.getUserAttributeManager().setAttribute(name, value, useThisToken,new UserAttributeResponseListener() {
 		@Override
 		public void onSuccess(JSONObject attributes) {
@@ -172,9 +173,9 @@ lastupdated: "2017-03-16"
 ### 匿名登录
 {: #anonymous notoc}
 
-通过 {{site.data.keyword.appid_short_notm}}，您可以匿名登录；请参阅[匿名身份](/docs/services/appid/user-profile.html#anonymous)。
+通过 {{site.data.keyword.appid_short_notm}}，您可以匿名登录；请参阅[匿名用户](/docs/services/appid/user-profile.html#anonymous)。
 
-  ```
+  ```java
   appId.loginAnonymously(getApplicationContext(), new AuthorizationListener() {
 		@Override
 		public void onAuthorizationFailure(AuthorizationException exception) {
@@ -199,14 +200,14 @@ lastupdated: "2017-03-16"
 
 用户持有匿名访问令牌时，可以通过将令牌传递到 `loginWidget.launch` 方法来得到识别。
 
-  ```
+  ```java
   void launch (@NonNull final Activity activity, @NonNull final AuthorizationListener authorizationListener, String accessTokenString);
   ```
   {:pre}
 
 匿名登录后，会执行渐进式认证，即便在未传递访问令牌的情况下调用了登录窗口小部件时也是如此，因为服务使用的是最后一次收到的令牌。如果要清除存储的令牌，请运行以下命令：
 
-  ```
+  ```java
   	appIDAuthorizationManager = new AppIDAuthorizationManager(this.appId);
   appIDAuthorizationManager.clearAuthorizationData();
   ```

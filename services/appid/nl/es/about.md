@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-03-16"
 
 
 # Acerca de {{site.data.keyword.appid_short_notm}}
-{: #gettingstarted}
+{: #about}
 
 Con {{site.data.keyword.appid_full}}, los desarrolladores pueden proteger y añadir autenticación a sus apps de {{site.data.keyword.Bluemix}}, con algunas líneas de código. Los desarrolladores también pueden gestionar datos específicos del usuario para crear experiencias personalizadas de la app.
 {:shortdesc}
@@ -43,7 +43,7 @@ Puede utilizar el servicio de las siguientes maneras:
 
 ## Visión general de la arquitectura
 
-![Flujo de {{site.data.keyword.appid_short_notm}}](/images/appid_flow.png)
+![Diagrama de la arquitectura de {{site.data.keyword.appid_short_notm}}](/images/appid_architecture.png)
 
 Figura 1. Diagrama de arquitectura de {{site.data.keyword.appid_short_notm}}
 
@@ -57,10 +57,24 @@ Puede proteger los recursos de nube con el SDK del servidor de {{site.data.keywo
 * El SDK del servidor extrae la señal de acceso de la solicitud y la valida con {{site.data.keyword.appid_short_notm}}.
 Se otorga acceso y la respuesta se devuelve a la aplicación.
 
-<!--## Sequence diagrams
-{: #sequence-diagrams}
 
-[Anton?]-->
+## Flujo de solicitudes
+{: #request}
+
+En el diagrama siguiente se describe el flujo de una solicitud, desde el SDK del cliente a los proveedores de identidad y de la aplicación de programa de fondo. 
+
+Flujo de solicitudes de ![{{site.data.keyword.appid_short_notm}}](/images/appidflow.png) 
+
+
+* Utilice el SDK del cliente de {{site.data.keyword.appid_short_notm}} para realizar una solicitud a los recursos de fondo protegidos por el SDK del servidor de {{site.data.keyword.appid_short_notm}}.
+* El SDK del servidor de {{site.data.keyword.appid_short_notm}} detecta una solicitud no autorizada y devuelve HTTP 401 y el ámbito de autorización.
+* El SDK del cliente detecta automáticamente el código HTTP 401 e inicia el proceso de autenticación.
+* Cuando el SDK del cliente establece contacto con el servicio, el SDK del servidor devuelve el widget de inicio de sesión si hay más de un proveedor de identidad configurado. {{site.data.keyword.appid_short_notm}} llama al proveedor de identidad y presenta el formulario de inicio de sesión para dicho proveedor o devuelve un código de concesión que les permite autenticarse si no hay ningún proveedor de identidad configurado. 
+* {{site.data.keyword.appid_short_notm}} solicita al cliente que se autentique especificando un cambio de autenticación. 
+* Si Facebook o Google están configurados y el usuario inicia una sesión, la autenticación se gestiona mediante el flujo de OAuth del proveedor de identidad correspondiente. 
+* Si la autenticación finaliza con el mismo código de concesión, el código se envía al punto final de señal. El punto final devuelve dos señales: una señal de acceso y una de identidad. A partir de este momento, todas las solicitudes realizadas con el SDK del cliente tendrán una cabecera de autorización nueva.
+* El SDK del cliente vuelve a enviar automáticamente la solicitud original que activó el flujo de autorización.
+* El SDK del servidor extrae la cabecera de autorización de la solicitud, valida la cabecera con el servicio y otorga acceso a un recurso de fondo.
 
 ## Señales de identidad y de acceso
 {: #access-and-identity}
@@ -71,7 +85,7 @@ Se otorga acceso y la respuesta se devuelve a la aplicación.
 ### Señal de acceso
 {: #access-tokens notoc}
 
-La señal de acceso permite la comunicación con recursos protegidos por filtros de autorización de {{site.data.keyword.appid_short_notm}}, consulte [Protección de recursos](/docs/services/appid/protecting-resources.html).
+La señal de acceso permite la comunicación con recursos protegidos por filtros de autorización de {{site.data.keyword.appid_short_notm}}, consulte [Protección de recursos de fondo](/docs/services/appid/protecting-resources.html).
 La señal se ajusta a las especificaciones de JOSE (JavaScript Object Signing and Encryption) y tiene el formato siguiente:
 
 ```
@@ -192,4 +206,4 @@ Puede utilizar los siguientes proveedores de identidad en sus aplicaciones web y
 ## Utilización de la configuración predeterminada
 {: #default-configuration}
 
-{{site.data.keyword.appid_short_notm}} proporciona una configuración predeterminada cuando se configuran inicialmente los proveedores de identidad. Puede utilizar la configuración predeterminada sólo en modalidad de desarrollo. Para cada proveedor de identidad, estas credenciales se limitan a 100 usos por instancia de {{site.data.keyword.appid_short_notm}}, por día. Antes de publicar la aplicación, actualice la configuración predeterminada a sus propias credenciales. Para actualizar la configuración, consulte [configuración de los proveedores de identidad](/docs/services/appid/identity-providers.html).
+{{site.data.keyword.appid_short_notm}} proporciona una configuración predeterminada cuando se configuran inicialmente los proveedores de identidad. Puede utilizar la configuración predeterminada sólo en modalidad de desarrollo. Para cada proveedor de identidad, estas credenciales se limitan a 100 usos por instancia de {{site.data.keyword.appid_short_notm}}, por día. Antes de publicar la aplicación, actualice la configuración predeterminada a sus propias credenciales. Para actualizar la configuración, consulte [Configuración de los proveedores de identidad](/docs/services/appid/identity-providers.html).

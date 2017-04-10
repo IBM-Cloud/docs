@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -23,6 +23,6 @@ lastupdated: "2017-03-16"
 ## Web 开发
 {: #web-dev}
 
-{{site.data.keyword.appid_short_notm}} 服务可保护 Web 应用程序，并且不需要特殊 SDK。除了该服务提供的保护之外，您还可以使用其他身份提供者。{{site.data.keyword.appid_short_notm}} 集成可支持使用任何实现技术的任何 Web 应用程序来利用 OAuth2 协议。
+{{site.data.keyword.appid_short_notm}} 服务可保护 Web 应用程序，并且不需要特殊 SDK。<!--- You can use different identity providers in addition to the protection that is provided by the service.--->{{site.data.keyword.appid_short_notm}} 集成可支持使用任何实现技术的任何 Web 应用程序来利用 OAuth2 协议。
 
 有关设置 Web 应用程序来访问 {{site.data.keyword.appid_short_notm}} 服务的信息，请参阅 <a href="https://github.com/ibm-cloud-security/appid-serversdk-nodejs" target="_blank">Node.js 服务器 SDK GitHub 存储库 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a>。

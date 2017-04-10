@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -42,26 +42,27 @@ lastupdated: "2017-03-16"
   ```
   npm install -save express
   npm install -save passport
-  npm install -save appid-serversdk-nodejs
+  npm install -save bluemix-appid
   ```
   {:pre}
 
 ## Node.js의 리소스 보호
 {: #protecting-resources-nodesdk}
 
-다음 스니펫은 단순 Express 애플리케이션에서 `ApiStrategy`를 사용하는 방법 및 `/protected` 엔드포인트 GET 메소드를 보호하는 방법을 보여줍니다. 
+다음 스니펫은 `/protected` 엔드포인트 GET 메소드를 보호하기 위해
+단순 Express 애플리케이션에서 `APIStrategy`를 사용하는 방법을 보여줍니다. 
 
   ```JavaScript
 
   var express = require('express');
   var passport = require('passport');
-  var ApiStrategy = require('appid-serversdk-nodejs').ApiStrategy;
+  var APIStrategy = require('bluemix-appid').APIStrategy;
 
-  passport.use(new ApiStrategy());
+  passport.use(new APIStrategy());
   var app = express();
   app.use(passport.initialize());
 
-  app.get('/protected', passport.authenticate('appid-api-strategy', {session: false }),
+  app.get('/protected', passport.authenticate('APIStrategy.STRATEGY_NAME', {session: false }),
       function(request, response){
           console.log("Securty context", request.securityContext)    
           response.send(200, "Success!");
@@ -78,8 +79,8 @@ lastupdated: "2017-03-16"
 
   var express = require('express');
   var passport = require('passport');
-  var ApiStrategy = require('appid-serversdk-nodejs').WebStrategy;
+  var WebAppStrategy = require('bluemix-appid').WebAppStrategy;
   ```
   {:pre}
 
-자세한 정보는 <a href="https://github.com/ibm-cloud-security/appid-serversdk-nodejs" target="_blank">GitHub repository <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a>을 참조하십시오.
+자세한 정보는 <a href="https://github.com/ibm-cloud-security/appid-serversdk-nodejs" target="_blank">{{site.data.keyword.appid_short_notm}} Node.js GitHub repository <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a>을 참조하십시오. 

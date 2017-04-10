@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -11,20 +11,20 @@ lastupdated: "2017-03-16"
 {:screen: .screen}
 {:pre: .pre}
 
-# Protezione delle risorse di back-end 
+# Protezione delle risorse di back-end
 {: #protecting-resources}
 
 L'SDK server {{site.data.keyword.appid_short}} fornisce le strategie per la protezione di due tipi di risorse: applicazioni web e API.
 {:shortdesc}
 
 
-## Accesso alle risorse protette dalle SDK client 
+## Accesso alle risorse protette dalle SDK client
 {: #accessing}
 
 Il richiamo di una risorsa protetta avvia il widget di accesso, se necessario. Se è già stato ottenuto un token valido, il widget di accesso non viene avviato e si accede direttamente alla risorsa.
 
 
-### Utilizzo dell'SDK Swift 
+### Utilizzo dell'SDK Swift
 {: #requesting-swift notoc}
 
 1. Importa BMSCore.
@@ -34,7 +34,7 @@ Il richiamo di una risorsa protetta avvia il widget di accesso, se necessario. S
   ```
   {:pre}
 
-2. Richiama una richiesta della risorsa protetta. 
+2. Richiama una richiesta della risorsa protetta.
 
   ```swift
   BMSClient.sharedInstance.initialize(bluemixRegion: AppID.<region>)
@@ -47,10 +47,10 @@ Il richiamo di una risorsa protetta avvia il widget di accesso, se necessario. S
   {:pre}
 
 
-### Utilizzo dell'SDK Android 
+### Utilizzo dell'SDK Android
 {: #requesting-android notoc}
 
-1. Richiama una richiesta della risorsa protetta. 
+1. Richiama una richiesta della risorsa protetta.
 
   ```java
   BMSClient bmsClient = BMSClient.getInstance();

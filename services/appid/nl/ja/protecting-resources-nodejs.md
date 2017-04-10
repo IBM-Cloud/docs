@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -41,26 +41,26 @@ lastupdated: "2017-03-16"
   ```
   npm install -save express
   npm install -save passport
-  npm install -save appid-serversdk-nodejs
+  npm install -save bluemix-appid
   ```
   {:pre}
 
 ## Node.js のリソースの保護
 {: #protecting-resources-nodesdk}
 
-以下のスニペットは、`ApiStrategy` を単純な Express アプリケーションで使用して、`/protected` エンドポイント GET メソッドを保護する方法を示しています。
+以下のスニペットは、`APIStrategy` を単純な Express アプリケーションで使用して、`/protected` エンドポイント GET メソッドを保護する方法を示しています。
 
   ```JavaScript
 
   var express = require('express');
   var passport = require('passport');
-  var ApiStrategy = require('appid-serversdk-nodejs').ApiStrategy;
+  var APIStrategy = require('bluemix-appid').APIStrategy;
 
-  passport.use(new ApiStrategy());
+  passport.use(new APIStrategy());
   var app = express();
   app.use(passport.initialize());
 
-  app.get('/protected', passport.authenticate('appid-api-strategy', {session: false }),
+  app.get('/protected', passport.authenticate('APIStrategy.STRATEGY_NAME', {session: false }),
       function(request, response){
           console.log("Securty context", request.securityContext)    
           response.send(200, "Success!");
@@ -77,8 +77,8 @@ lastupdated: "2017-03-16"
 
   var express = require('express');
   var passport = require('passport');
-  var ApiStrategy = require('appid-serversdk-nodejs').WebStrategy;
+  var WebAppStrategy = require('bluemix-appid').WebAppStrategy;
   ```
   {:pre}
 
-詳細については、<a href="https://github.com/ibm-cloud-security/appid-serversdk-nodejs" target="_blank">GitHub リポジトリー<img src="../../icons/launch-glyph.svg" alt="External link icon"></a>を参照してください。
+詳細については、<a href="https://github.com/ibm-cloud-security/appid-serversdk-nodejs" target="_blank">{{site.data.keyword.appid_short_notm}}Node.js GitHub リポジトリー <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a> を参照してください。

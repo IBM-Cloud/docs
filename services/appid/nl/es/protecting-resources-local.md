@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-  lastupdated: "2017-03-16"
+  years:  2017
+lastupdated: "2017-03-30"
 
 ---
 {:new_window: target="_blank"}
@@ -40,31 +40,27 @@ Para obtener ejemplos y más información, consulte <a href="https://github.com/
 ## Configuración de aplicaciones de {{site.data.keyword.appid_short_notm}} para que funcionen con un servidor de desarrollo local
 {: #configuring-local}
 
-Para configurar sus aplicaciones para trabajar con un servidor de desarrollo local, utilice el host local en cada una de las solicitudes.
+Para configurar sus apps para trabajar con un servidor de desarrollo local, utilice el host local en cada una de las solicitudes.
 
 1. Sustituya el ID de arrendatario por su ID de arrendatario de {{site.data.keyword.appid_short_notm}}. Encontrará este ID en su panel de control del servicio.
-2. Sustituya la región por la región adecuada, como se muestra en la tabla siguiente. 
+2. Sustituya la región por la región adecuada, como se muestra en la tabla siguiente.
 
-<table> <caption> Tabla 1. Regiones de {{site.data.keyword.Bluemix_notm}} y sus correspondientes regiones de SDK de Android e iOS </caption>
+<table> <caption> Tabla 1. Regiones de {{site.data.keyword.Bluemix_notm}} y regiones de {{site.data.keyword.appid_short_notm}} correspondientes para Android e iOS </caption>
 <tr>
-  <th> Región Bluemix</th>
+  <th> Región Bluemix </th>
   <th> Android </th>
-  <th> iOS </th>
 </tr>
 <tr>
-  <td> Sur de EE.UU.</td>
+  <td> Sur de EE.UU. </td>
   <td> AppID.REGION_US_SOUTH </td>
-  <td> BMSClient.Region.usSouth </td>
 </tr>
 <tr>
-  <td> Sídney</td>
+  <td> Sídney </td>
   <td> AppID.REGION_SYDNEY </td>
-  <td> BMSClient.Region.sydney </td>
 </tr>
 <tr>
-  <td> Reino Unido</td>
+  <td> Reino Unido </td>
   <td> AppID.REGION_UK </td>
-  <td> BMSClient.Region.unitedKingdom </td>
 </tr>
 </table>
 
@@ -76,6 +72,7 @@ Para configurar sus aplicaciones para trabajar con un servidor de desarrollo loc
 String baseRequestUrl = "http://localhost:<port>"; //defina el puerto de ejecución del servidor
 String tenantId = "your-AppID-service-tenantID";
 String region = AppID.REGION_UK; //defina su región de aplicación de ID de app aquí. Los valores posibles son AppID.REGION_US_SOUTH, AppID.REGION_SYDNEY o AppID.REGION_UK.
+
 BMSClient bmsClient= BMSClient.getInstance();
 bmsClient.initialize(getApplicationContext(), region);
 AppID appId = AppID.getInstance();
@@ -110,7 +107,7 @@ request.send(this, new ResponseListener() {
 
  let baseRequestUrl = "http://localhost:<port>"; //defina el puerto de ejecución del servidor
  let tenantId = "your-AppID-service-tenantID"
- let region = AppID.Region.unitedKingdom; //defina su región de aplicación de ID de app aquí. Los valores posibles son AppID.Region.usSouth, AppID.Region.sydney o AppID.Region.unitedKingdom.
+ let region = AppID.REGION_UK; //defina aquí su región de aplicación de ID de app. Los valores posibles son AppID.REGION_US_SOUTH, AppID.REGION_SYDNEY o AppID.REGION_UK.
 
 BMSClient.sharedInstance.initialize(bluemixRegion: region)
 BMSClient.sharedInstance.authorizationManager = AppIDAuthorizationManager(appid:AppID.sharedInstance)

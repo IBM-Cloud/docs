@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -138,4 +138,4 @@ Der folgende Code demonstriert, wie WebAppKituraCredentialsPlugin in einer Kitur
   ```
   {:pre}
 
-Weitere Informationen finden Sie in <a href="https://github.com/ibm-cloud-security/appid-serversdk-swift" target="_blank">GitHub-Repository <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a>.
+Weitere Informationen finden Sie im Abschnitt zum <a href="https://github.com/ibm-cloud-security/appid-serversdk-swift" target="_blank">{{site.data.keyword.appid_short_notm}}-Swift GitHub-Repository <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a>.

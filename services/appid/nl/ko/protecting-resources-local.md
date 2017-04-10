@@ -2,7 +2,7 @@
 
 copyright:
   years:  2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 {:new_window: target="_blank"}
@@ -45,26 +45,22 @@ lastupdated: "2017-03-16"
 1. 테넌트 ID를 사용자의 {{site.data.keyword.appid_short_notm}} 테넌트 ID로 바꾸십시오. 서비스 대시보드에서 이 ID를 찾을 수 있습니다.
 2. 다음 표에 표시된 대로 지역을 적합한 지역으로 바꾸십시오. 
 
-<table> <caption> 표 1. {{site.data.keyword.Bluemix_notm}} 지역 및 해당 Android 및 iOS SDK 지역 </caption>
+<table> <caption> 표 1. {{site.data.keyword.Bluemix_notm}} 지역 및 해당하는 Android 및 iOS용 {{site.data.keyword.appid_short_notm}} 지역</caption>
 <tr>
   <th> Bluemix 지역 </th>
   <th> Android</th>
-  <th> iOS</th>
 </tr>
 <tr>
   <td> 미국 남부</td>
   <td> AppID.REGION_US_SOUTH </td>
-  <td> BMSClient.Region.usSouth </td>
 </tr>
 <tr>
   <td> 시드니</td>
   <td> AppID.REGION_SYDNEY </td>
-  <td> BMSClient.Region.sydney </td>
 </tr>
 <tr>
   <td> 영국</td>
   <td> AppID.REGION_UK </td>
-  <td> BMSClient.Region.unitedKingdom </td>
 </tr>
 </table>
 
@@ -111,7 +107,7 @@ request.send(this, new ResponseListener() {
 
  let baseRequestUrl = "http://localhost:<port>"; //set to your server running port
  let tenantId = "your-AppID-service-tenantID"
- let region = AppID.Region.unitedKingdom; //set your App ID application region here. Currently possible values are AppID.Region.usSouth, AppID.Region.sydney, or AppID.Region.unitedKingdom.
+ let region = AppID.REGION_UK; //set your App ID application region here. Currently possible values are AppID.REGION_US_SOUTH, AppID.REGION_SYDNEY, or AppID.REGION_UK.
 
 BMSClient.sharedInstance.initialize(bluemixRegion: region)
 BMSClient.sharedInstance.authorizationManager = AppIDAuthorizationManager(appid:AppID.sharedInstance)

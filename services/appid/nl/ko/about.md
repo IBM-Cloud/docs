@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-03-16"
 
 
 # {{site.data.keyword.appid_short_notm}} 정보
-{: #gettingstarted}
+{: #about}
 
 {{site.data.keyword.appid_full}}를 사용하여 개발자는 몇 행의 코드로 자신의 {{site.data.keyword.Bluemix}} 앱에 인증을 추가하고 보호할 수 있습니다. 개발자는 개인화된 앱 인터페이스를 구축하기 위해 사용자 특정 데이터를 관리할 수도 있습니다.
 {:shortdesc}
@@ -43,7 +43,7 @@ lastupdated: "2017-03-16"
 
 ## 아키텍처 개요
 
-![{{site.data.keyword.appid_short_notm}} 플로우](/images/appid_flow.png)
+![{{site.data.keyword.appid_short_notm}} 아키텍처 다이어그램](/images/appid_architecture.png)
 
 그림 1. {{site.data.keyword.appid_short_notm}} 아키텍처 다이어그램
 
@@ -56,10 +56,24 @@ lastupdated: "2017-03-16"
 * 클라이언트 SDK는 인증 토큰을 원래 요청에 자동 추가하고, 해당 요청을 클라우드 리소스에 재전송합니다.
 * 서버 SDK는 요청에서 액세스 토큰을 추출하고 {{site.data.keyword.appid_short_notm}}로 해당 토큰의 유효성을 검증합니다. 액세스 권한이 부여되고 응답이 애플리케이션에 리턴됩니다. 
 
-<!--## Sequence diagrams
-{: #sequence-diagrams}
 
-[Anton?]-->
+## 요청 플로우
+{: #request}
+
+다음 다이어그램은 클라이언트 SDK에서 백엔드 애플리케이션 및 ID 제공자로 요청이 어떻게 이동되는지 설명합니다. 
+
+![{{site.data.keyword.appid_short_notm}} 요청 플로우](/images/appidflow.png)
+
+
+* {{site.data.keyword.appid_short_notm}} 클라이언트 SDK를 사용하여 {{site.data.keyword.appid_short_notm}} 서버 SDK로 보호되는 백엔드 리소스에 대한 요청을 작성합니다. 
+* {{site.data.keyword.appid_short_notm}} 서버 SDK가 권한이 없는 요청을 발견하고 HTTP 401 및 권한 범위를 리턴합니다. 
+* 클라이언트 SDK가 자동으로 HTTP 401을 발견하고 인증 프로세스를 시작합니다. 
+* 클라이언트 SDK가 서비스에 접속하면 둘 이상의 ID 제공자가 구성되어 있는 경우 서버 SDK는 로그인 위젯을 리턴합니다. {{site.data.keyword.appid_short_notm}}는 ID 제공자를 호출하고 해당 제공자에 대한 로그인 양식을 표시하거나, ID 제공자가 구성되지 않은 경우 인증할 수 있는 승인 코드를 리턴합니다. 
+* {{site.data.keyword.appid_short_notm}}는 인증 확인 방식을 제공함으로써 인증하도록 클라이언트 앱에 요청합니다. 
+* Facebook 또는 Google이 구성되어 있고 사용자가 로그인하는 경우 각각의 ID 제공자 OAuth 플로우에서 인증을 처리합니다. 
+* 동일한 승인 코드로 인증이 종료되는 경우 토큰 엔드포인트에 코드가 전송됩니다. 엔드포인트는 두 가지 토큰(액세스 토큰과 ID 토큰)을 리턴합니다. 이 시점부터, 클라이언트 SDK로 작성된 모든 요청에는 새로 얻은 권한 헤더가 포함됩니다. 
+* 클라이언트 SDK가 권한 플로우를 트리거한 원래 요청을 자동으로 재전송합니다. 
+* 서버 SDK는 요청에서 권한 헤더를 추출하고 서비스를 사용하여 해당 헤더의 유효성을 검증하고 백엔드 리소스에 액세스를 부여합니다. 
 
 ## 액세스 및 ID 토큰
 {: #access-and-identity}
@@ -70,8 +84,8 @@ lastupdated: "2017-03-16"
 ### 액세스 토큰
 {: #access-tokens notoc}
 
-액세스 토큰은 {{site.data.keyword.appid_short_notm}} 권한 필터에 의해 보호되는 리소스와의 통신을 가능하게 합니다. [리소스 보호](/docs/services/appid/protecting-resources.html)를 참조하십시오.
-토큰은 JOSE(JavaScript Object Signing and Encryption) 스펙을 준수하며 다음과 같은 형식입니다. 
+액세스 토큰은 {{site.data.keyword.appid_short_notm}} 권한 필터에서 보호하는 리소스와의 통신을 가능하게 합니다.
+[백엔드 리소스 보호](/docs/services/appid/protecting-resources.html)를 참조하십시오. 토큰은 JOSE(JavaScript Object Signing and Encryption) 스펙을 준수하며 다음과 같은 형식입니다. 
 
 ```
 Header: {
@@ -191,4 +205,5 @@ Payload: {
 ## 기본 구성 사용
 {: #default-configuration}
 
-{{site.data.keyword.appid_short_notm}}는 ID 제공자를 처음 설정할 때 기본 구성을 제공합니다. 개발 모드에서만 기본 구성을 사용할 수 있습니다. 각 ID 제공자의 경우, 이러한 신임 정보는 하루에 {{site.data.keyword.appid_short_notm}} 인스턴스당 100회의 사용으로 제한됩니다. 애플리케이션을 공개하기 전에 기본 구성을 사용자 자신의 신임 정보에 업데이트하십시오. 구성을 업데이트하려면 [ID 제공자 구성](/docs/services/appid/identity-providers.html)을 참조하십시오.
+{{site.data.keyword.appid_short_notm}}는 ID 제공자를 처음 설정할 때 기본 구성을 제공합니다. 개발 모드에서만 기본 구성을 사용할 수 있습니다. 각 ID 제공자의 경우, 이러한 신임 정보는 하루에 {{site.data.keyword.appid_short_notm}} 인스턴스당 100회의 사용으로 제한됩니다. 애플리케이션을 공개하기 전에 기본 구성을 사용자 자신의 신임 정보에 업데이트하십시오. 구성을 업데이트하려면,
+[ID 제공자 구성](/docs/services/appid/identity-providers.html)을 참조하십시오. 

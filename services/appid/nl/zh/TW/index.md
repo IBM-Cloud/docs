@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -26,15 +26,13 @@ lastupdated: "2017-03-16"
 
 
 
-
-
 # 相關鏈結
 {: #rellinks notoc}
 
 ## API 參考資料
 {: #api notoc}
 
-* [{{site.data.keyword.appid_short_notm}} oauth-flows](http://mobileclientaccess.stage1.mybluemix.net/swagger-ui/#!/Authorization_Server_V3/authorization)
+* [{{site.data.keyword.appid_short_notm}} oauth-flows](https://appid-oauth.ng.bluemix.net/swagger-ui/#!/Authorization_Server_V3/authorization)
 
 ## SDK
 {: #sdk notoc}
@@ -43,14 +41,3 @@ lastupdated: "2017-03-16"
 * [{{site.data.keyword.appid_short_notm}} iOS-Swift 用戶端 SDK](https://github.com/ibm-cloud-security/appid-clientsdk-swift){: new_window}
 * [{{site.data.keyword.appid_short_notm}} Nodejs 伺服器 SDK](https://github.com/ibm-cloud-security/appid-serversdk-nodejs){: new_window}
 * [{{site.data.keyword.appid_short_notm}} Swift 伺服器 SDK](https://github.com/ibm-cloud-security/appid-serversdk-swift){: new_window}
-
-
-<!---## Tutorials and Samples
-{: #samples notoc}--->
-
-
-
-## 相關鏈結
-{: #general notoc}
-* [{{site.data.keyword.Bluemix}} 定價單](https://www.ng.bluemix.net/#/pricing){: new_window}
-* [{{site.data.keyword.Bluemix}} 必要條件](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}

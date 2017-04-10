@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-03-16"
 
 
 # Informationen zu {{site.data.keyword.appid_short_notm}}
-{: #gettingstarted}
+{: #about}
 
 Entwickler können mit {{site.data.keyword.appid_full}} ihre {{site.data.keyword.Bluemix}} Apps sichern und eine Authentifizierung hinzufügen. Dazu sind nur wenige Code-Zeilen notwendig. Außerdem können benutzerspezifische Daten verwaltet werden, um personalisierte Apperfahrungen zu erstellen.
 {:shortdesc}
@@ -43,7 +43,7 @@ Sie können den Service wie folgt nutzen:
 
 ## Architekturübersicht
 
-![{{site.data.keyword.appid_short_notm}}-Ablauf](/images/appid_flow.png)
+![{{site.data.keyword.appid_short_notm}}-Architekturdiagramm](/images/appid_architecture.png)
 
 Abbildung 1: {{site.data.keyword.appid_short_notm}} - Architekturdiagramm
 
@@ -57,10 +57,24 @@ Sie können Ihre Cloudressourcen mit dem {{site.data.keyword.appid_short_notm}}-
 * Das Server-SDK extrahiert das Zugriffstoken aus der Anforderung und validiert es mit {{site.data.keyword.appid_short_notm}}.
 Zugriff wird gewährt und die Antwort wird an die Anwendung zurückgegeben.
 
-<!--## Sequence diagrams
-{: #sequence-diagrams}
 
-[Anton?]-->
+## Anforderungsablauf
+{: #request}
+
+Das folgende Diagramm zeigt, wie eine Anforderung aus dem Client-SDK an Ihre Back-End-Anwendung und an Identitätsprovider geleitet wird.
+
+![{{site.data.keyword.appid_short_notm}}-Anforderungsablauf](/images/appidflow.png)
+
+
+* Verwenden Sie das {{site.data.keyword.appid_short_notm}}-Client-SDK zum Senden einer Anforderung an Ihre Back-End-Ressourcen, die mit dem {{site.data.keyword.appid_short_notm}}-Server-SDK geschützt werden.
+* Das {{site.data.keyword.appid_short_notm}}-Server-SDK erkennt eine nicht autorisierte Anforderung und gibt einen HTTP 401- und Berechtigungsbereich zurück.
+* Das Client-SDK erkennt HTTP 401 automatisch und startet den Authentifizierungsprozess.
+* Wenn das Client-SDK Kontakt mit dem Service aufnimmt, gibt das Server-SDK das Anmeldewidget zurück, falls mehr als ein Identitätsprovider konfiguriert ist. {{site.data.keyword.appid_short_notm}} ruft den Identitätsprovider auf und präsentiert das Anmeldeformular für diesen Provider oder gibt einen Bewilligungscode zurück, mit dem die Authentifizierung ohne konfigurierte Identitätsprovider möglich ist.
+* {{site.data.keyword.appid_short_notm}} fordert die Client-App auf, sich durch die Bereitstellung einer Authentifizierungsanforderung (Challenge) zu authentifizieren.
+* Ist Facebook oder Google konfiguriert und meldet sich der Benutzer an, wird die Authentifizierung durch den jeweiligen Identitätsprovider-OAuth-Ablauf verarbeitet.
+* Wenn die Authentifizierung mit demselben Bewilligungscode beendet wird, wird der Code an den Tokenendpunkt gesendet. Der Endpunkt gibt zwei Tokens zurück: ein Zugriffstoken und eine Identitätstoken. Von diesem Punkt an haben alle Anforderungen, die mit dem Client-SDK gesendet werden, einen neu abgerufenen Berechtigungsheader.
+* Das Client-SDK wiederholt automatisch das Senden der ursprünglichen Anforderung, die den Berechtigungsablauf ausgelöst hat.
+* Das Server-SDK extrahiert den Berechtigungsheader aus der Anforderung, validiert den Header mit dem Service und erteilt den Zugriff auf eine Back-End-Ressource.
 
 ## Zugriffs- und Identitätstoken
 {: #access-and-identity}
@@ -71,7 +85,7 @@ Zugriff wird gewährt und die Antwort wird an die Anwendung zurückgegeben.
 ### Zugriffstoken
 {: #access-tokens notoc}
 
-Das Zugriffstoken ermöglicht die Kommunikation mit Ressourcen, die von den {{site.data.keyword.appid_short_notm}} Berechtigungsfiltern geschützt werden; weitere Informationen hierzu finden Sie unter [Ressourcen schützen](/docs/services/appid/protecting-resources.html).
+Das Zugriffstoken ermöglicht die Kommunikation mit Ressourcen, die von den {{site.data.keyword.appid_short_notm}}-Berechtigungsfiltern geschützt werden; weitere Informationen hierzu finden Sie im Abschnitt [Back-End-Ressourcen schützen](/docs/services/appid/protecting-resources.html).
 Das Token entspricht den JavaScript Object Signing and Encryption (JOSE)-Spezifikationen und hat das folgende Format:
 
 ```
@@ -183,7 +197,7 @@ Payload: {
 ## Überblick über Identitätsprovider
 {: #identity-providers-overview}
 
-Sie können in Ihren mobilen und Webanwendungen folgende Identitätsprovider verwenden:
+Sie können in Ihren mobilen Anwendungen sowie in Ihren Webanwendungen folgende Identitätsprovider verwenden:
 
 * **Facebook** - Ihre Benutzer melden sich bei der mobilen oder Web-App mit ihren Facebook-Berechtigungsnachweisen an.
 * **Google** - Ihre Benutzer melden sich bei der mobilen oder Web-App mit ihren Google+-Berechtigungsnachweisen an.
@@ -192,4 +206,4 @@ Sie können in Ihren mobilen und Webanwendungen folgende Identitätsprovider ver
 ## Standardkonfiguration verwenden
 {: #default-configuration}
 
-{{site.data.keyword.appid_short_notm}} stellt eine Standardkonfiguration bereit, wenn Sie Ihre Identitätsprovider erstmalig einrichten. Die Standardkonfiguration können Sie nur im Entwicklungsmodus verwenden. Diese Berechtigungsnachweise sind pro Identitätsprovider auf 100 Benutzer pro {{site.data.keyword.appid_short_notm}}-Instanz und pro Tag beschränkt. Bevor Sie Ihre Anwendung veröffentlichen, aktualisieren Sie die Standardkonfiguration mit Ihren eigenen Berechtigungsnachweisen. Informationen zum Aktualisieren Ihrer Konfiguration finden Sie unter [Identitätsprovider konfigurieren](/docs/services/appid/identity-providers.html).
+{{site.data.keyword.appid_short_notm}} stellt eine Standardkonfiguration bereit, wenn Sie Ihre Identitätsprovider erstmalig einrichten. Die Standardkonfiguration können Sie nur im Entwicklungsmodus verwenden. Diese Berechtigungsnachweise sind pro Identitätsprovider auf 100 Benutzer pro {{site.data.keyword.appid_short_notm}}-Instanz und pro Tag beschränkt. Bevor Sie Ihre Anwendung veröffentlichen, aktualisieren Sie die Standardkonfiguration mit Ihren eigenen Berechtigungsnachweisen. Informationen zum Aktualisieren Ihrer Konfiguration finden Sie im Abschnitt [Identitätsprovider konfigurieren](/docs/services/appid/identity-providers.html).

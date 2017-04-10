@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -10,19 +10,21 @@ lastupdated: "2017-03-16"
 {:shortdesc: .shortdesc}
 
 
-# Profils utilisateur
+# Présentation des profils utilisateur
 {: #user-profile}
 
 Un profil utilisateur est une entité stockée et gérée par {{site.data.keyword.appid_short}}. Le profil contient les attributs et l'identité d'un utilisateur et peut être anonyme ou lié à une identité gérée par un fournisseur d'identité.
 {:shortdesc}
 
-{{site.data.keyword.appid_short_notm}} fournit une API pour la connexion, anonyme ou bien avec authentification, via un fournisseur d'identité OpenId Connect (OIDC), Voir [Configuration des fournisseurs d'identité](https://console.stage1.ng.bluemix.net/docs/services/appid/identity-providers.html#setting-up-idp). Le noeud final d'API d'attribut de profil utilisateur est une ressource protégée par le jeton d'accès généré par {{site.data.keyword.appid_short_notm}} au cours du processus de connexion et d'authentification.
+{{site.data.keyword.appid_short_notm}} fournit une API pour la connexion, anonyme ou bien avec authentification, via un fournisseur d'identité OpenId Connect (OIDC), Voir [Configuration des fournisseurs d'identité](/docs/services/appid/identity-providers.html#setting-up-idp). Le noeud final d'API d'attribut de profil utilisateur est une ressource protégée par le jeton d'accès généré par {{site.data.keyword.appid_short_notm}} au cours du processus de connexion et d'authentification.
 
 
 ## Stockage, lecture et suppression d'attributs utilisateur
 {: #storing-data}
 
-{{site.data.keyword.appid_short_notm}} fournit une [API REST](http://mobileclientaccess.stage1.mybluemix.net/swagger-ui/#!/Authorization_Server_V3/authorization) pour réaliser des opérations CRUD sur les attributs d'un utilisateur, ainsi qu'un SDK pour [Android](https://github.com/ibm-cloud-security/appid-clientsdk-android) et pour les clients mobiles [Swift](https://github.com/ibm-cloud-security/appid-clientsdk-swift).
+
+
+{{site.data.keyword.appid_short_notm}} fournit une <a href="https://appid-profiles.ng.bluemix.net/swagger-ui/index.html#/" target="_blank">API REST API <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a> pour réaliser des opérations CRUD sur les attributs d'un utilisateur, ainsi qu'un SDK pour les clients mobiles sous <a href="https://github.com/ibm-cloud-security/appid-clientsdk-android" target="_blank">Android <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a> et <a href="https://github.com/ibm-cloud-security/appid-clientsdk-swift" target="_blank">Swift <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a>.
 
 
 ## Identité OAuth
@@ -40,12 +42,14 @@ Lorsque vous vous connectez de manière anonyme, {{site.data.keyword.appid_short
 ## Utilisateur identifié
 {: #identified}
 
-Un utilisateur anonyme disposant d'une identité émise par un fournisseur d'identité peut devenir un utilisateur identifié. Le flux de passage d'un utilisateur anonyme à un utilisateur connu est décrit dans les étapes suivantes :
+Un utilisateur anonyme disposant d'une identité émise par un fournisseur d'identité peut devenir un utilisateur identifié. Le flux de transition de l'utilisateur anonyme en utilisateur identifié est décrit dans les étapes suivantes :
 
 * Le développeur transmet le jeton d'accès anonyme à l'API de connexion.
 * {{site.data.keyword.appid_short_notm}} authentifie l'utilisateur auprès du fournisseur d'identité.
 * {{site.data.keyword.appid_short_notm}} recherche l'enregistrement d'utilisateur anonyme défini par le jeton d'accès et lui affecte l'identité soumise.
+
     **Remarque** : l'identité ne peut être affectée à l'enregistrement d'utilisateur anonyme que si cette même identité n'a pas déjà été affectée à un autre utilisateur. Si l'identité est déjà associée à un autre utilisateur {{site.data.keyword.appid_short_notm}}, le jeton d'accès et le jeton d'identité contiennent les informations de l'enregistrement de cet autre utilisateur et permettent l'accès à ses attributs. L'utilisateur anonyme précédent et ses attributs ne seront pas accessibles via le nouveau jeton d'accès. Jusqu'à l'expiration du jeton, les informations sont toujours accessibles via le jeton d'accès anonyme. Le développeur peut décider comment fusionner les attributs de l'utilisateur anonyme et de l'utilisateur connu.
+
 * Les nouveaux jetons d'accès et d'identité reçus d'{{site.data.keyword.appid_short_notm}} pointent vers l'utilisateur connu et le jeton d'identité contient les informations publiques reçus du fournisseur d'identité.
 * Les jetons anonymes ne sont dès lors plus valides pour l'utilisateur.
 

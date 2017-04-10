@@ -2,9 +2,10 @@
 
 copyright:
   years: 2017
-  lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -33,15 +34,15 @@ copyright:
     </tr>
     <tr>
       <td> 美国南部</td>
-      <td> BMSClient.Region.usSouth</td>
+      <td> AppID.REGION_US_SOUTH</td>
     </tr>
     <tr>
       <td> 悉尼</td>
-      <td> BMSClient.Region.sydney</td>
+      <td> AppID.REGION_SYDNEY</td>
     </tr>
     <tr>
       <td> 英国</td>
-      <td> BMSClient.Region.unitedKingdom</td>
+      <td> AppID.REGION_UK</td>
     </tr>
   </table>
 
@@ -56,7 +57,9 @@ copyright:
 
 1. 创建 Xcode 项目或打开现有项目。
 2. 在项目的目录中打开或创建 Podfile。
-3. 在项目的目标下，添加“BluemixAppID”pod 的依赖项。确保 `use_frameworks!` 命令也位于目标下。例如：
+3. 在项目的目标下，添加“BluemixAppID”pod 的依赖项。确保 `use_frameworks!` 命令也位于目标下。
+
+  例如：
 
 
   ```swift
@@ -81,7 +84,7 @@ copyright:
 ## 初始化 {{site.data.keyword.appid_short_notm}} 客户端 SDK
 {: #initialize-client-sdk}
 
-1. 将以下 import 语句添加到 AppDelegate.swift 文件中：
+1. 将以下 import 语句添加到 `AppDelegate.swift` 文件中：
 
   ```swift
   import BluemixAppID
@@ -91,12 +94,12 @@ copyright:
 2. 通过将租户标识和区域参数传递到 initialize 方法来初始化客户端 SDK。在 Swift 应用程序中，通常会将初始化代码放置在 AppDelegate 的 application:didFinishLaunchingWithOptions: 方法中，但这不是强制性的。
 
   ```swift
-  AppID.sharedInstance.initialize(tenantId: <tenantId>, bluemixRegion: AppID.<region>)
+  AppID.sharedInstance.initialize(tenantId: <tenantId>, bluemixRegion: AppID.Region_UK)
   ```
   {:pre}
 
-  * 将 tenantId 替换为应用程序标识服务的租户标识。
-  * 将 region 替换为您所在的 {{site.data.keyword.appid_short_notm}} 区域。
+  * 将 tenantId 替换为 App ID 服务的租户标识。
+  * 将 AppID.REGION_UK 替换为您所在的 {{site.data.keyword.appid_short_notm}} 区域。
 
 3. 将以下代码添加到 AppDelegate 文件中。
 
@@ -105,7 +108,7 @@ copyright:
           return AppID.sharedInstance.application(application, open: url, options: options)
       }
   ```
-  {;pre}
+  {:pre}
 
 ## 使用登录窗口小部件认证用户
 {: #authenticate-login}
@@ -147,7 +150,7 @@ copyright:
 
 获取访问令牌时，还可获取对用户保护的属性端点的访问权。使用以下 API 方法可获取访问权：
 
-  ```
+  ```swift
   func setAttribute(key: String, value: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
   func setAttribute(key: String, value: String, accessTokenString: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
   func getAttribute(key: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
@@ -163,7 +166,7 @@ copyright:
 
 例如，可以调用以下代码来设置新属性，或者覆盖现有属性：
 
-  ```
+  ```swift
   AppID.sharedInstance.userAttributeManager?.setAttribute("key", "value", completionHandler: { (error, result) in
       if error = nil {
           //Attributes recieved as a Dictionary
@@ -180,9 +183,8 @@ copyright:
 
 通过 {{site.data.keyword.appid_short_notm}}，您可以匿名登录；请参阅[匿名身份](/docs/services/appid/user-profile.html#anonymous)。
 
-  ```
+  ```swift
   class delegate : AuthorizationDelegate {
-
       public func onAuthorizationSuccess(accessToken: AccessToken, identityToken: IdentityToken, response:Response?) {
           //User authenticated
       }
@@ -196,7 +198,7 @@ copyright:
       }
    }
 
-  AppID.sharedInstance.loginAnonymously( authorizationDelegate: delegate())`
+  AppID.sharedInstance.loginAnonymously( authorizationDelegate: delegate())
   ```
   {:pre}
 
@@ -205,14 +207,14 @@ copyright:
 
 持有匿名访问令牌时，用户可以通过将令牌传递到 loginWidget.launch 方法来成为已识别用户：
 
-  ```
+  ```swift
   func launch(accessTokenString: String? , delegate: AuthorizationDelegate)
   ```
   {:pre}
 
 匿名登录后，会执行渐进式认证，即便在未传递访问令牌的情况下调用了登录窗口小部件时也是如此，因为服务使用的是最后一次收到的令牌。如果要清除存储的令牌，请运行以下命令：
 
-  ```
+  ```swift
   var appIDAuthorizationManager = AppIDAuthorizationManager(appid: AppID.sharedInstance)
   appIDAuthorizationManager.clearAuthorizationData()
   ```

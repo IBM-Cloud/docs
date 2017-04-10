@@ -2,9 +2,10 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -23,7 +24,7 @@ lastupdated: "2017-03-16"
 다음 정보가 필요합니다.
   * {{site.data.keyword.appid_short_notm}} 서비스의 인스턴스.
   * 테넌트 ID.
-    * 서비스 대시보드의 **서비스 신임 정보** 탭에서 **신임 정보 보기**를 클릭하십시오. 테넌트 ID가 **테넌트 ID** 필드에 표시됩니다. 이 값은 앱을 초기화하는 데 사용됩니다.
+    * 서비스 대시보드의 **서비스 신임 정보** 탭에서 **신임 정보 보기**를 클릭하십시오. 테넌트 ID가 **tenantID** 필드에 표시됩니다. 이 값은 앱을 초기화하는 데 사용됩니다.
   * {{site.data.keyword.Bluemix}} 지역. UI에서 보고 지역을 찾을 수 있습니다. 이 값은 앱을 초기화하는 데 사용됩니다.
     <table> <caption> 표 1. {{site.data.keyword.Bluemix_notm}} 지역 및 해당 SDK 값</caption>
     <tr>
@@ -135,7 +136,7 @@ initialize 메소드에 컨텍스트, 테넌트 ID 및 지역 매개변수를 �
 
 액세스 토큰을 확보할 때 사용자 보호 속성 엔드포인트에 대한 액세스 권한을 얻을 수 있습니다. 다음과 같은 API 메소드를 사용하여 액세스 권한을 얻을 수 있습니다. 
 
-  ```   
+  ```java
   void setAttribute(@NonNull String name, @NonNull String value, UserAttributeResponseListener listener);
   void setAttribute(@NonNull String name, @NonNull String value, @NonNull AccessToken accessToken, UserAttributeResponseListener listener);
 
@@ -154,7 +155,7 @@ initialize 메소드에 컨텍스트, 테넌트 ID 및 지역 매개변수를 �
 
 예를 들어, 이 코드를 호출하여 새 속성을 설정하거나 기존 속성을 대체할 수 있습니다. 
 
-  ```
+  ```java
   appId.getUserAttributeManager().setAttribute(name, value, useThisToken,new UserAttributeResponseListener() {
 		@Override
 		public void onSuccess(JSONObject attributes) {
@@ -172,9 +173,9 @@ initialize 메소드에 컨텍스트, 테넌트 ID 및 지역 매개변수를 �
 ### 익명 로그인
 {: #anonymous notoc}
 
-{{site.data.keyword.appid_short_notm}}로 익명으로 로그인할 수 있습니다. [익명 ID](/docs/services/appid/user-profile.html#anonymous)를 참조하십시오. 
+{{site.data.keyword.appid_short_notm}}를 사용하여 익명으로 로그인할 수 있습니다. [익명 사용자](/docs/services/appid/user-profile.html#anonymous)를 참조하십시오. 
 
-  ```
+  ```java
   appId.loginAnonymously(getApplicationContext(), new AuthorizationListener() {
 		@Override
 		public void onAuthorizationFailure(AuthorizationException exception) {
@@ -197,16 +198,17 @@ initialize 메소드에 컨텍스트, 테넌트 ID 및 지역 매개변수를 �
 ### 점진적 인증
 {: #progressive notoc}
 
-사용자가 익명 액세스 토큰을 보유하고 있는 경우, 사용자는 해당 토큰을 `loginWidget.launch` 메소드에 전달하여 식별될 수 있습니다. 
+사용자가 익명 액세스 토큰을 보유하고 있는 경우 해당 토큰을 `loginWidget.launch`
+메소드에 전달하여 식별된 사용자가 될 수 있습니다. 
 
-  ```
+  ```java
   void launch (@NonNull final Activity activity, @NonNull final AuthorizationListener authorizationListener, String accessTokenString);
   ```
   {:pre}
 
 익명 로그인 후에는 서비스가 마지막으로 수신된 토큰을 사용했기 때문에 액세스 토큰을 전달하지 않고 로그인 위젯이 호출되는 경우에도 점진적 인증이 발생합니다. 저장된 토큰을 지우려면 다음 명령을 실행하십시오.
 
-  ```
+  ```java
   	appIDAuthorizationManager = new AppIDAuthorizationManager(this.appId);
   appIDAuthorizationManager.clearAuthorizationData();
   ```

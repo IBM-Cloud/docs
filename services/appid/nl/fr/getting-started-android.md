@@ -2,9 +2,10 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -23,15 +24,15 @@ Construisez vos applications Android avec le SDK client d'{{site.data.keyword.ap
 Vous devez disposer des éléments suivants :
   * Une instance du service {{site.data.keyword.appid_short_notm}}.
   * Votre ID titulaire.
-    * Dans l'onglet **Données d'identification pour le service** de votre tableau de bord du service, cliquez sur **Afficher les données d'identification**. Votre ID titulaire est affiché dans la zone **tenant**. Cette valeur est utilisée pour initialiser votre application.
+    * Dans l'onglet **Données d'identification pour le service** de votre tableau de bord du service, cliquez sur **Afficher les données d'identification**. Votre ID titulaire est affiché dans la zone **tenantID**. Cette valeur est utilisée pour initialiser votre application.
   * Votre région {{site.data.keyword.Bluemix}}. Vous pouvez identifier votre région en recherchant dans l'interface utilisateur. Cette valeur est utilisée pour initialiser votre application.
-    <table> <caption> Tableau 1. Régions {{site.data.keyword.Bluemix_notm}} et valeurs de SDK correspondantes</caption>
+    <table> <caption> Tableau 1. Régions {{site.data.keyword.Bluemix_notm}} et valeurs de SDK correspondantes </caption>
     <tr>
-      <th> Région Bluemix</th>
+      <th> Région Bluemix </th>
       <th> Valeur du SDK </th>
     </tr>
     <tr>
-      <td> Sud des Etats-Unis</td>
+      <td> Sud des Etats-Unis </td>
       <td> AppID.REGION_US_SOUTH </td>
     </tr>
     <tr>
@@ -106,7 +107,7 @@ Initialisez le SDK client en transmettant les paramètres de contexte, d'ID du t
 
 La configuration par défaut du widget de connexion exige d'utiliser à la fois Facebook et Google pour l'authentification. Si vous n'en configurez qu'un seul, le widget de connexion ne se lance pas et l'utilisateur est redirigé vers l'écran d'authentification du fournisseur d'identité (IDP) configuré.
 
-Une fois que le SDK client d'{{site.data.keyword.appid_short_notm}} est initialisé, vous pouvez authentifier vos utilisateurs en exécutant le widget de connexion. 
+Une fois que le SDK client d'{{site.data.keyword.appid_short_notm}} est initialisé, vous pouvez authentifier vos utilisateurs en exécutant le widget de connexion.
 
   ```java
   LoginWidget loginWidget = AppID.getInstance().getLoginWidget();
@@ -135,7 +136,7 @@ Une fois que le SDK client d'{{site.data.keyword.appid_short_notm}} est initiali
 
 En obtenant un jeton d'accès, vous pouvez accéder au noeud final des attributs utilisateur protégés. Ceci est réalisé en utilisant les méthodes d'API suivantes :
 
-  ```   
+  ```java
   void setAttribute(@NonNull String name, @NonNull String value, UserAttributeResponseListener listener);
   void setAttribute(@NonNull String name, @NonNull String value, @NonNull AccessToken accessToken, UserAttributeResponseListener listener);
 
@@ -154,7 +155,7 @@ Lorsqu'un jeton d'accès n'est pas transmis explicitement, {{site.data.keyword.a
 
 Vous pouvez, par exemple utiliser le code ci-dessous pour définir un nouvel attribut ou prévaloir sur un attribut existant :
 
-  ```
+  ```java
   appId.getUserAttributeManager().setAttribute(name, value, useThisToken,new UserAttributeResponseListener() {
 		@Override
 		public void onSuccess(JSONObject attributes) {
@@ -172,9 +173,9 @@ Vous pouvez, par exemple utiliser le code ci-dessous pour définir un nouvel att
 ### Connexion anonyme
 {: #anonymous notoc}
 
-{{site.data.keyword.appid_short_notm}} vous permet d'effectuer une connexion anonyme. Voir [Identité anonyme](/docs/services/appid/user-profile.html#anonymous).
+Avec {{site.data.keyword.appid_short_notm}}, vous pouvez effectuer une connexion anonyme. Voir [Utilisateur anonyme](/docs/services/appid/user-profile.html#anonymous).
 
-  ```
+  ```java
   appId.loginAnonymously(getApplicationContext(), new AuthorizationListener() {
 		@Override
 		public void onAuthorizationFailure(AuthorizationException exception) {
@@ -197,16 +198,16 @@ Vous pouvez, par exemple utiliser le code ci-dessous pour définir un nouvel att
 ### Authentification progressive
 {: #progressive notoc}
 
-Lorsque l'utilisateur détient un jeton d'accès anonyme, il peut devenir identifié en transmettant le jeton à la méthode `loginWidget.launch`.
+Lorsqu'il dispose d'un jeton d'accès anonyme, l'utilisateur peut devenir un utilisateur identifié en transmettant ce jeton à la méthode `loginWidget.launch`.
 
-  ```
+  ```java
   void launch (@NonNull final Activity activity, @NonNull final AuthorizationListener authorizationListener, String accessTokenString);
   ```
   {:pre}
 
 Après une connexion anonyme, une authentification progressive a lieu même si le widget de connexion est appelé sans transmission d'un jeton d'accès vu que le service a utilisé le dernier jeton d'accès reçu. Si vous désirez effacer vos jetons stockés, exécutez la commande suivante :
 
-  ```
+  ```java
   	appIDAuthorizationManager = new AppIDAuthorizationManager(this.appId);
   appIDAuthorizationManager.clearAuthorizationData();
   ```

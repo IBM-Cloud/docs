@@ -1,9 +1,11 @@
 ---
 
 copyright:
-  years: 2017 lastupdated: "2017-03-16"
+  years: 2017
+lastupdated: "2017-03-30"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -23,8 +25,7 @@ para recursos protegidos e desprotegidos.
 As seguintes informações são necessárias:
   * Uma instância de um serviço do {{site.data.keyword.appid_short_notm}}.
   * O seu ID do locatário.
-    * Na guia **Credenciais de serviço** de seu painel de serviço, clique em **Visualizar credenciais**. O seu ID do
-locatário é exibido no campo **ID do locatário**. Esse valor é usado para inicializar o seu app.
+    * Na guia **Credenciais de serviço** de seu painel de serviço, clique em **Visualizar credenciais**. Seu ID do locatário é exibido no campo **tenantID**. Esse valor é usado para inicializar o seu app.
   * A sua região do {{site.data.keyword.Bluemix}}. É possível localizar a sua região procurando na UI. O valor é usado para inicializar o seu app.
     <table> <caption> Tabela 1. Regiões e valores do SDK correspondentes do {{site.data.keyword.Bluemix_notm}} </caption>
     <tr>
@@ -140,7 +141,7 @@ Após o SDK do cliente do {{site.data.keyword.appid_short_notm}} ser inicializad
 
 Ao obter um token de acesso, é possível obter acesso ao terminal protegido de atributos do usuário. É possível obter acesso usando os métodos de API a seguir:
 
-  ```   
+  ```java
   void setAttribute(@NonNull String name, @NonNull String value, UserAttributeResponseListener listener);
   void setAttribute(@NonNull String name, @NonNull String value, @NonNull AccessToken accessToken, UserAttributeResponseListener listener);
 
@@ -159,7 +160,7 @@ Quando um token de acesso não for transmitido explicitamente, o {{site.data.key
 
 Por exemplo, é possível chamar esse código para configurar um novo atributo ou substituir um existente:
 
-  ```
+  ```java
   appId.getUserAttributeManager().setAttribute(name, value, useThisToken,new UserAttributeResponseListener() {
 		@Override
 		public void onSuccess(JSONObject attributes) {
@@ -177,10 +178,9 @@ Por exemplo, é possível chamar esse código para configurar um novo atributo o
 ### Login anônimo
 {: #anonymous notoc}
 
-Com o {{site.data.keyword.appid_short_notm}} é possível efetuar login anonimamente; veja
-[identidade anônima](/docs/services/appid/user-profile.html#anonymous).
+Com o {{site.data.keyword.appid_short_notm}}, é possível efetuar login anonimamente. Consulte [usuário anônimo](/docs/services/appid/user-profile.html#anonymous).
 
-  ```
+  ```java
   appId.loginAnonymously(getApplicationContext(), new AuthorizationListener() {
 		@Override
 		public void onAuthorizationFailure(AuthorizationException exception) {
@@ -205,7 +205,7 @@ Com o {{site.data.keyword.appid_short_notm}} é possível efetuar login anonimam
 
 Quando o usuário mantém um token de acesso anônimo, ele pode ser identificado passando-o para o método `loginWidget.launch`.
 
-  ```
+  ```java
   void launch (@NonNull final Activity activity, @NonNull final AuthorizationListener authorizationListener, String accessTokenString);
   ```
   {:pre}
@@ -213,7 +213,7 @@ Quando o usuário mantém um token de acesso anônimo, ele pode ser identificado
 Após um login anônimo, a autenticação progressiva ocorrerá mesmo se o widget de login for chamado sem passar um token de acesso porque o serviço usou o último
 token recebido. Se você deseja limpar os seus tokens armazenados, execute o comando a seguir:
 
-  ```
+  ```java
   	appIDAuthorizationManager = new AppIDAuthorizationManager(this.appId);
   appIDAuthorizationManager.clearAuthorizationData();
   ```

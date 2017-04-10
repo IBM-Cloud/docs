@@ -2,9 +2,10 @@
 
 copyright:
   years: 2017
-  lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -34,15 +35,15 @@ copyright:
     </tr>
     <tr>
       <td> 美國南部</td>
-      <td> BMSClient.Region.usSouth </td>
+      <td> AppID.REGION_US_SOUTH </td>
     </tr>
     <tr>
       <td> 雪梨</td>
-      <td> BMSClient.Region.sydney </td>
+      <td> AppID.REGION_SYDNEY </td>
     </tr>
     <tr>
       <td> 英國</td>
-      <td> BMSClient.Region.unitedKingdom </td>
+      <td> AppID.REGION_UK </td>
     </tr>
   </table>
 
@@ -58,6 +59,8 @@ copyright:
 1. 建立 Xcode 專案，或開啟現有專案。
 2. 在專案的目錄中，開啟或建立 Podfile。
 3. 在專案的目標下，新增 'BluemixAppID' 欄的相依關係。請確定，您的目標下也有 `use_frameworks!` 指令。
+  
+
   例如：
 
   ```swift
@@ -82,7 +85,7 @@ copyright:
 ## 起始設定 {{site.data.keyword.appid_short_notm}} 用戶端 SDK
 {: #initialize-client-sdk}
 
-1. 將下列 import 新增至 AppDelegate.swift 檔案：
+1. 將下列 import 新增至 `AppDelegate.swift` 檔案：
 
   ```swift
   import BluemixAppID
@@ -92,12 +95,12 @@ copyright:
 2. 將承租戶 ID 及地區參數傳遞給起始設定方法，以起始設定用戶端 SDK。放置起始設定碼的一般（但非強制）位置是在 Swift 應用程式中 AppDelegate 的 application:didFinishLaunchingWithOptions: 方法。
 
   ```swift
-  AppID.sharedInstance.initialize(tenantId: <tenantId>, bluemixRegion: AppID.<region>)
+  AppID.sharedInstance.initialize(tenantId: <tenantId>, bluemixRegion: AppID.Region_UK)
   ```
   {:pre}
 
   * 將 tenantId 取代為「應用程式 ID」服務的承租戶 ID。
-  * 將 region 取代為您的 {{site.data.keyword.appid_short_notm}} 地區。
+  * 將 AppID.REGION_UK 取代為 {{site.data.keyword.appid_short_notm}} 地區。
 
 3. 將下列程式碼新增至 AppDelegate 檔案。
 
@@ -148,7 +151,7 @@ copyright:
 
 取得存取記號時，即可存取使用者保護的屬性端點。使用下列 API 方法，即可完成這項作業：
 
-  ```
+  ```swift
   func setAttribute(key: String, value: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
   func setAttribute(key: String, value: String, accessTokenString: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
   func getAttribute(key: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
@@ -164,7 +167,7 @@ copyright:
 
 例如，您可以呼叫此程式碼來設定新屬性，或置換現有屬性：
 
-  ```
+  ```swift
   AppID.sharedInstance.userAttributeManager?.setAttribute("key", "value", completionHandler: { (error, result) in
       if error = nil {
           //Attributes recieved as a Dictionary
@@ -181,9 +184,8 @@ copyright:
 
 使用 {{site.data.keyword.appid_short_notm}}，您可以匿名登入，請參閱[匿名身分](/docs/services/appid/user-profile.html#anonymous)。
 
-  ```
+  ```swift
   class delegate : AuthorizationDelegate {
-
       public func onAuthorizationSuccess(accessToken: AccessToken, identityToken: IdentityToken, response:Response?) {
           //User authenticated
       }
@@ -197,7 +199,7 @@ copyright:
       }
    }
 
-  AppID.sharedInstance.loginAnonymously( authorizationDelegate: delegate())`
+  AppID.sharedInstance.loginAnonymously( authorizationDelegate: delegate())
   ```
   {:pre}
 
@@ -206,14 +208,14 @@ copyright:
 
 當您保留匿名存取記號時，使用者可以變成已識別的使用者，方法是將它傳遞給 loginWidget.launch 方法：
 
-  ```
+  ```swift
   func launch(accessTokenString: String? , delegate: AuthorizationDelegate)
   ```
   {:pre}
 
 匿名登入之後，即使因服務已使用最後一個收到的記號而在未傳遞存取記號的情況下呼叫登入小組件，還是會進行漸進鑑別。如果您要清除儲存的記號，請執行下列指令：
 
-  ```
+  ```swift
   var appIDAuthorizationManager = AppIDAuthorizationManager(appid: AppID.sharedInstance)
   appIDAuthorizationManager.clearAuthorizationData()
   ```

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-03-16"
 
 
 # {{site.data.keyword.appid_short_notm}} の概要
-{: #gettingstarted}
+{: #about}
 
 {{site.data.keyword.appid_full}} を使用すると、開発者は 2、3 行のコードで {{site.data.keyword.Bluemix}} アプリを保護し、アプリに認証を追加することができます。開発者はユーザー固有のデータを管理し、パーソナライズされたアプリ・エクスペリエンスを構築することもできます。
 {:shortdesc}
@@ -43,7 +43,7 @@ lastupdated: "2017-03-16"
 
 ## アーキテクチャーの概要
 
-![{{site.data.keyword.appid_short_notm}} フロー](/images/appid_flow.png)
+![{{site.data.keyword.appid_short_notm}} アーキテクチャーの図](/images/appid_architecture.png)
 
 図 1. {{site.data.keyword.appid_short_notm}} アーキテクチャーの図
 
@@ -56,10 +56,24 @@ lastupdated: "2017-03-16"
 * クライアント SDK がその許可トークンを元の要求に自動的に追加し、要求をクラウド・リソースに再送します。
 * サーバー SDK は、要求からアクセス・トークンを抽出し、{{site.data.keyword.appid_short_notm}} で検証します。アクセス権が付与され、アプリケーションに応答が返されます。
 
-<!--## Sequence diagrams
-{: #sequence-diagrams}
 
-[Anton?]-->
+## 要求フロー
+{: #request}
+
+以下の図は、要求が Client SDK からバックエンド・アプリケーションおよび ID プロバイダーへどのように流れていくのかを説明したものです。
+
+![{{site.data.keyword.appid_short_notm}} 要求フロー](/images/appidflow.png)
+
+
+* {{site.data.keyword.appid_short_notm}} Client SDK を使用して、{{site.data.keyword.appid_short_notm}} Server SDK によって保護されているバックエンド・リソースへの要求を実行します。
+* {{site.data.keyword.appid_short_notm}} Server SDK は、無許可の要求を検出し、HTTP 401 と許可スコープを返します。
+* Client SDK は自動的に HTTP 401 を検出し、認証プロセスを開始します。
+* 複数の ID プロバイダーが構成されている場合、Client SDK がサービスに連絡を取ると、Server SDK はログイン・ウィジェットを返します。{{site.data.keyword.appid_short_notm}} は、ID プロバイダーを呼び出してそのプロバイダーのログイン・フォームを提示するか、ID プロバイダーが構成されていない場合には認証のための権限付与コードを返します。
+* {{site.data.keyword.appid_short_notm}} は、認証チャレンジを提供することによって、認証を行うようにクライアント・アプリに要求します。
+* Facebook または Google が構成されている場合、ユーザーがログインすると、認証はそれぞれの ID プロバイダーの OAuth フローで処理されます。
+* 認証が同じ権限付与コードで終了する場合、そのコードがトークン・エンドポイントに送信されます。エンドポイントは、アクセス・トークンと識別トークンという 2 つのトークンを返します。この時点以降、Client SDK で行われたすべての要求には、新しく取得された許可ヘッダーを含まれるようになります。
+* Client SDK は、認証フローをトリガーしたオリジナルの要求を自動的に再送します。
+* Server SDK は、要求から許可ヘッダーを抽出し、サービスを使用してそのヘッダーを検証し、バックエンド・リソースへのアクセスを認可します。
 
 ## アクセス・トークンと識別トークン
 {: #access-and-identity}
@@ -70,7 +84,8 @@ lastupdated: "2017-03-16"
 ### アクセス・トークン
 {: #access-tokens notoc}
 
-アクセス・トークンは、{{site.data.keyword.appid_short_notm}} 許可フィルターによって保護されたリソースと通信できるようにします。[リソースの保護](/docs/services/appid/protecting-resources.html)を参照してください。このトークンは JavaScript Object Signing and Encryption (JOSE) 仕様に準拠しています。形式は次のとおりです。
+アクセス・トークンによって、{{site.data.keyword.appid_short_notm}} 許可フィルターによって保護されているリソースとの通信が可能になります。 [バックエンド・リソースの保護](/docs/services/appid/protecting-resources.html)を参照してください。
+このトークンは JavaScript Object Signing and Encryption (JOSE) 仕様に準拠しています。形式は次のとおりです。
 
 ```
 Header: {

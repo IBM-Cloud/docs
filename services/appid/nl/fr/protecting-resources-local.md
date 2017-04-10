@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2017
-lastupdated: "2017-03-16"
+  years: 2017
+lastupdated: "2017-03-30"
 
 ---
 {:new_window: target="_blank"}
@@ -45,26 +45,22 @@ Pour configurer vos applications afin d'utiliser un serveur de développement lo
 1. Remplacez l'ID du titulaire par votre ID titulaire {{site.data.keyword.appid_short_notm}}. Vous pouvez localiser cet ID dans le tableau de bord de votre service.
 2. Remplacez la région par la région appropriée comme indiqué dans le tableau ci-dessous.
 
-<table> <caption> Tableau 1. Régions {{site.data.keyword.Bluemix_notm}} et régions de SDK Android et iOS correspondantes </caption>
+<table> <caption> Tableau 1. Régions {{site.data.keyword.Bluemix_notm}} et régions {{site.data.keyword.appid_short_notm}} correspondantes pour Android et iOS </caption>
 <tr>
-  <th> Région Bluemix</th>
+  <th> Région Bluemix </th>
   <th> Android </th>
-  <th> iOS </th>
 </tr>
 <tr>
-  <td> Sud des Etats-Unis</td>
+  <td> Sud des Etats-Unis </td>
   <td> AppID.REGION_US_SOUTH </td>
-  <td> BMSClient.Region.usSouth </td>
 </tr>
 <tr>
   <td> Sydney </td>
   <td> AppID.REGION_SYDNEY </td>
-  <td> BMSClient.Region.sydney </td>
 </tr>
 <tr>
   <td> Royaume-Uni </td>
   <td> AppID.REGION_UK </td>
-  <td> BMSClient.Region.unitedKingdom </td>
 </tr>
 </table>
 
@@ -111,7 +107,7 @@ request.send(this, new ResponseListener() {
 
  let baseRequestUrl = "http://localhost:<port>"; //spécifiez ici le port d'exécution de votre serveur
  let tenantId = "your-AppID-service-tenantID"
- let region = AppID.Region.unitedKingdom; //spécifiez ici la région de votre application App ID. Les valeurs possibles actuellement sont : AppID.Region.usSouth, AppID.Region.sydney ou AppID.Region.unitedKingdom.
+ let region = AppID.REGION_UK; //spécifiez ici la région de l'application App ID. Les valeurs possibles actuellement sont : AppID.REGION_US_SOUTH, AppID.REGION_SYDNEY, ou AppID.REGION_UK.
 
 BMSClient.sharedInstance.initialize(bluemixRegion: region)
 BMSClient.sharedInstance.authorizationManager = AppIDAuthorizationManager(appid:AppID.sharedInstance)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -15,7 +15,8 @@ lastupdated: "2017-03-16"
 # 保护 Swift 资源
 {: #protecting-resources-swift}
 
-您可以使用 {{site.data.keyword.appid_short}} 服务器 SDK 来保护 Swift 应用程序中的资源。{:shortdesc}
+您可以使用 {{site.data.keyword.appid_short}} 服务器 SDK 来保护 Swift 应用程序中的资源。
+{:shortdesc}
 
 
 ## 开始之前
@@ -138,4 +139,4 @@ WebAppKituraCredentialsPlugin 基于 OAuth2 authorization_code 授权流程，�
   ```
   {:pre}
 
-有关更多信息，请参阅 <a href="https://github.com/ibm-cloud-security/appid-serversdk-swift" target="_blank">GitHub 存储库 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a>。
+有关更多信息，请参阅 <a href="https://github.com/ibm-cloud-security/appid-serversdk-swift" target="_blank">{{site.data.keyword.appid_short_notm}} Swift GitHub 存储库 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a>。

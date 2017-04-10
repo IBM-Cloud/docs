@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -38,33 +38,33 @@ Le SDK serveur d'{{site.data.keyword.appid_short_notm}} utilise l'infrastructure
 {: #protecting-resources-serversdk}
 
 1. Depuis la ligne de commande, ouvrez le répertoire où réside votre application Node.js.
-2. Exécutez les commandes suivantes : 
+2. Exécutez les commandes suivantes :
 
   ```
   npm install -save express
   npm install -save passport
-  npm install -save appid-serversdk-nodejs
+  npm install -save bluemix-appid
   ```
   {:pre}
 
 ## Protection des ressources dans Node.js
 {: #protecting-resources-nodesdk}
 
-Le fragment de code suivant illustre comment utiliser la stratégie `ApiStrategy` dans une application Express simple pour protéger les méthodes GET de noeud final `/protected`.
+Le fragment de code suivant illustre comment utiliser la stratégie `APIStrategy` dans une application Express simple pour protéger les méthodes GET de noeud final `/protected`.
 
   ```JavaScript
 
   var express = require('express');
   var passport = require('passport');
-  var ApiStrategy = require('appid-serversdk-nodejs').ApiStrategy;
+  var APIStrategy = require('bluemix-appid').APIStrategy;
 
-  passport.use(new ApiStrategy());
+  passport.use(new APIStrategy());
   var app = express();
   app.use(passport.initialize());
 
-  app.get('/protected', passport.authenticate('appid-api-strategy', {session: false }),
+  app.get('/protected', passport.authenticate('APIStrategy.STRATEGY_NAME', {session: false }),
       function(request, response){
-          console.log("Securty context", request.securityContext)    
+          console.log("Securty context", request.securityContext)
           response.send(200, "Success!");
       }
   );
@@ -79,8 +79,8 @@ Vous pouvez utiliser la stratégie `WebAppStrategy` pour protéger vos ressource
 
   var express = require('express');
   var passport = require('passport');
-  var ApiStrategy = require('appid-serversdk-nodejs').WebStrategy;
+  var WebAppStrategy = require('bluemix-appid').WebAppStrategy;
   ```
   {:pre}
 
-Pour plus d'informations, reportez-vous au <a href="https://github.com/ibm-cloud-security/appid-serversdk-nodejs" target="_blank">référentiel GitHub<img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a>.
+Pour plus d'informations, reportez-vous à la section <a href="https://github.com/ibm-cloud-security/appid-serversdk-nodejs" target="_blank">{{site.data.keyword.appid_short_notm}} Node.js dans le référentiel GitHub<img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a>.

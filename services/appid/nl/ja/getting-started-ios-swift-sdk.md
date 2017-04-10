@@ -2,9 +2,10 @@
 
 copyright:
   years: 2017
-  lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -32,15 +33,15 @@ copyright:
     </tr>
     <tr>
       <td> 米国南部</td>
-      <td> BMSClient.Region.usSouth </td>
+      <td> AppID.REGION_US_SOUTH </td>
     </tr>
     <tr>
       <td> シドニー</td>
-      <td> BMSClient.Region.sydney </td>
+      <td> AppID.REGION_SYDNEY </td>
     </tr>
     <tr>
       <td> 英国</td>
-      <td> BMSClient.Region.unitedKingdom </td>
+      <td> AppID.REGION_UK </td>
     </tr>
   </table>
 
@@ -56,6 +57,8 @@ copyright:
 1. Xcode プロジェクトを作成するか、既存のプロジェクトを開きます。
 2. プロジェクトのディレクトリー内の Podfile を開くか、このディレクトリー内に Podfile を作成します。
 3. プロジェクトのターゲットの下に、「BluemixAppID」Pod の従属関係を追加します。ターゲットの下に `use_frameworks!` コマンドもあることを確認します。
+  
+
   以下に例を示します。
 
   ```swift
@@ -80,7 +83,7 @@ copyright:
 ## {{site.data.keyword.appid_short_notm}} Client SDK の初期化
 {: #initialize-client-sdk}
 
-1. AppDelegate.swift ファイルに以下のインポートを追加します。
+1. `AppDelegate.swift` ファイルに以下のインポートを追加します。
 
   ```swift
   import BluemixAppID
@@ -90,12 +93,12 @@ copyright:
 2. tenant ID パラメーターと region パラメーターを initialize メソッドに渡して、Client SDK を初期化します。初期化コードの配置場所として一般的な (必須ではありません) 場所は、Swift アプリケーションの AppDelegate の application:didFinishLaunchingWithOptions: メソッド内です。
 
   ```swift
-  AppID.sharedInstance.initialize(tenantId: <tenantId>, bluemixRegion: AppID.<region>)
+  AppID.sharedInstance.initialize(tenantId: <tenantId>, bluemixRegion: AppID.Region_UK)
   ```
   {:pre}
 
   * 「tenantId」を App ID サービスのテナント ID に置き換えます。
-  * region を、該当する {{site.data.keyword.appid_short_notm}} 地域に置き換えます。
+  * AppID.REGION_UK を、該当する {{site.data.keyword.appid_short_notm}} 地域に置き換えます。
 
 3. 以下のコードを AppDelegate ファイルに追加します。
 
@@ -104,7 +107,7 @@ copyright:
           return AppID.sharedInstance.application(application, open: url, options: options)
       }
   ```
-  {;pre}
+  {:pre}
 
 ## ログイン・ウィジェットを使用したユーザーの認証
 {: #authenticate-login}
@@ -146,7 +149,7 @@ copyright:
 
 アクセス・トークンを取得すれば、ユーザーの保護された属性のエンドポイントにアクセスできます。以下の API メソッドを使用すると、アクセスできるようになります。
 
-  ```
+  ```swift
   func setAttribute(key: String, value: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
   func setAttribute(key: String, value: String, accessTokenString: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
   func getAttribute(key: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
@@ -162,7 +165,7 @@ copyright:
 
 例えば、以下のコードを呼び出して、新しい属性を設定したり既存の属性をオーバーライドしたりできます。
 
-  ```
+  ```swift
   AppID.sharedInstance.userAttributeManager?.setAttribute("key", "value", completionHandler: { (error, result) in
       if error = nil {
           //Attributes recieved as a Dictionary
@@ -179,9 +182,8 @@ copyright:
 
 {{site.data.keyword.appid_short_notm}} では匿名によるログインが可能です。[匿名 ID](/docs/services/appid/user-profile.html#anonymous) を参照してください。
 
-  ```
+  ```swift
   class delegate : AuthorizationDelegate {
-
       public func onAuthorizationSuccess(accessToken: AccessToken, identityToken: IdentityToken, response:Response?) {
           //ユーザーの認証
       }
@@ -195,7 +197,7 @@ copyright:
       }
    }
 
-  AppID.sharedInstance.loginAnonymously( authorizationDelegate: delegate())`
+  AppID.sharedInstance.loginAnonymously( authorizationDelegate: delegate())
   ```
   {:pre}
 
@@ -204,14 +206,14 @@ copyright:
 
 匿名のアクセス・トークンを保持している場合、このトークンを loginWidget.launch メソッドに渡すと、ユーザーを識別済みのユーザーにすることができます。
 
-  ```
+  ```swift
   func launch(accessTokenString: String? , delegate: AuthorizationDelegate)
   ```
   {:pre}
 
 匿名ログインの後には、アクセス・トークンを渡さずにログイン・ウィジェットを呼び出した場合であっても段階的な認証が行われます。最後に受け取ったトークンがサービスで使用されるからです。保管されているトークンをクリアする場合は、以下のコマンドを実行します。
 
-  ```
+  ```swift
   var appIDAuthorizationManager = AppIDAuthorizationManager(appid: AppID.sharedInstance)
   appIDAuthorizationManager.clearAuthorizationData()
   ```

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -66,7 +66,7 @@ Um Google als Identitätsprovider zu verwenden, fordern Sie eine Google-Client-I
 1. Öffnen Sie Ihre Google-Anwendung in der Google Developer Console.
 2. Fügen Sie die Google+-API hinzu.
 3. Erstellen Sie Berechtigungsnachweise unter Verwendung von 'OAuth'. Wählen Sie im Feld **Anwendungstyp** die Option **Webanwendung** aus. Geben Sie im Feld **Autorisierte Weiterleitungs-URIs** die Weiterleitungs-URI der App-ID ein. Sie können den autorisierten Weiterleitungs-URI der App-ID für die Google-Konfigurationsanzeige im Service-Dashboard anfordern.
-4. Speichern Sie Ihre Änderungen. Notieren Sie sich die Google-Client-ID und den geheimen Schlüssel. 
+4. Speichern Sie Ihre Änderungen. Notieren Sie sich die Google-Client-ID und den geheimen Schlüssel.
 
 
 

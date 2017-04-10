@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -23,6 +23,6 @@ Dopo aver creato il servizio {{site.data.keyword.appid_short}}, puoi scaricare l
 ## Sviluppo Web
 {: #web-dev}
 
-Il servizio {{site.data.keyword.appid_short_notm}} protegge la tua applicazione web e non richiede alcuna SDK speciale. Puoi utilizzare provider di identità differenti in aggiunta alla protezione fornita dal servizio. L'integrazione {{site.data.keyword.appid_short_notm}} abilita tutte le applicazioni web, a prescindere dalla tecnologia che le implementa, per usufruire dei vantaggi del protocollo OAuth2.
+Il servizio {{site.data.keyword.appid_short_notm}} protegge la tua applicazione web e non richiede alcuna SDK speciale.<!--- You can use different identity providers in addition to the protection that is provided by the service.---> L'integrazione {{site.data.keyword.appid_short_notm}} abilita tutte le applicazioni web, a prescindere dalla tecnologia che le implementa, per usufruire dei vantaggi del protocollo OAuth2.
 
 Per informazioni sulla configurazione della tua applicazione web per accedere al servizio {{site.data.keyword.appid_short_notm}}, consulta <a href="https://github.com/ibm-cloud-security/appid-serversdk-nodejs" target="_blank">Node.js server SDK GitHub repository <img src="../../icons/launch-glyph.svg" alt="icona link esterno"></a>.

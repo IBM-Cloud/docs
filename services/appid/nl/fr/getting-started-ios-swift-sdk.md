@@ -2,9 +2,10 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -27,22 +28,22 @@ Vous devez disposer des éléments suivants :
     * Dans l'onglet **Données d'identification pour le service** de votre tableau de bord du service, cliquez sur **Afficher les données d'identification**. Votre ID titulaire est affiché dans la zone **TenantID**. Cette valeur est utilisée pour initialiser votre application.
   * Votre région {{site.data.keyword.Bluemix_notm}}.
   Vous pouvez identifier votre région en recherchant dans l'interface utilisateur. Cette valeur est utilisée pour initialiser votre application.
-    <table> <caption> Tableau 1. Régions {{site.data.keyword.Bluemix_notm}} et valeurs de SDK correspondantes</caption>
+    <table> <caption> Tableau 1. Régions {{site.data.keyword.Bluemix_notm}} et valeurs de SDK correspondantes </caption>
     <tr>
-      <th> Région Bluemix</th>
+      <th> Région Bluemix </th>
       <th> Valeur du SDK </th>
     </tr>
     <tr>
-      <td> Sud des Etats-Unis</td>
-      <td> BMSClient.Region.usSouth </td>
+      <td> Sud des Etats-Unis </td>
+      <td> AppID.REGION_US_SOUTH </td>
     </tr>
     <tr>
       <td> Sydney </td>
-      <td> BMSClient.Region.sydney </td>
+      <td> AppID.REGION_SYDNEY </td>
     </tr>
     <tr>
       <td> Royaume-Uni </td>
-      <td> BMSClient.Region.unitedKingdom </td>
+      <td> AppID.REGION_UK </td>
     </tr>
   </table>
 
@@ -58,6 +59,7 @@ Le SDK client d'{{site.data.keyword.appid_short_notm}} est distribué avec Cocoa
 1. Créez un projet Xcode ou ouvrez un projet existant.
 2. Ouvrez ou créez le fichier Pod dans le répertoire du projet.
 3. Sous la cible de votre projet, ajoutez une dépendance pour le pod 'BluemixAppID'. Vérifiez que la commande `use_frameworks!` est également présente sous votre cible.
+
   Exemple :
 
   ```swift
@@ -82,7 +84,7 @@ Le SDK client d'{{site.data.keyword.appid_short_notm}} est distribué avec Cocoa
 ## Initialisation du SDK client d'{{site.data.keyword.appid_short_notm}}
 {: #initialize-client-sdk}
 
-1. Ajoutez l'importation suivante à votre fichier AppDelegate.swift:
+1. Ajoutez l'importation suivante à votre fichier `AppDelegate.swift` :
 
   ```swift
   import BluemixAppID
@@ -92,12 +94,12 @@ Le SDK client d'{{site.data.keyword.appid_short_notm}} est distribué avec Cocoa
 2. Initialisez le SDK client en transmettant les paramètres d'ID du titulaire et de région à la méthode initialize. Bien que ceci ne soit pas obligatoire, le code d'initialisation est souvent placé dans la méthode application:didFinishLaunchingWithOptions: du AppDelegate (délégué d'application) dans votre application Swift.
 
   ```swift
-  AppID.sharedInstance.initialize(tenantId: <tenantId>, bluemixRegion: AppID.<region>)
+  AppID.sharedInstance.initialize(tenantId: <tenantId>, bluemixRegion: AppID.Region_UK)
   ```
   {:pre}
 
   * Remplacez ״tenantId״ par l'ID du titulaire pour votre service App ID.
-  * Remplacez ״region״ par votre région {{site.data.keyword.appid_short_notm}}.
+  * Remplacez AppID.REGION_UK par votre région {{site.data.keyword.appid_short_notm}}.
 
 3. Ajoutez le code suivant à votre fichier AppDelegate.
 
@@ -106,7 +108,7 @@ Le SDK client d'{{site.data.keyword.appid_short_notm}} est distribué avec Cocoa
           return AppID.sharedInstance.application(application, open: url, options: options)
       }
   ```
-  {;pre}
+  {:pre}
 
 ## Authentification des utilisateurs à l'aide du widget de connexion
 {: #authenticate-login}
@@ -148,13 +150,16 @@ Une fois que le SDK client d'{{site.data.keyword.appid_short_notm}} est initiali
 
 En obtenant un jeton d'accès, vous pouvez accéder au noeud final des attributs utilisateur protégés. Ceci est réalisé en utilisant les méthodes d'API suivantes :
 
-  ```
+  ```swift
   func setAttribute(key: String, value: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
   func setAttribute(key: String, value: String, accessTokenString: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
+
   func getAttribute(key: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
   func getAttribute(key: String, accessTokenString: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
+
   func getAttributes(completionHandler: @escaping(Error?, [String:Any]?) -> Void)
   func getAttributes(accessTokenString: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
+
   func deleteAttribute(key: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
   func deleteAttribute(key: String, accessTokenString: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
   ```
@@ -164,7 +169,7 @@ Lorsqu'un jeton d'accès n'est pas transmis explicitement, {{site.data.keyword.a
 
 Vous pouvez, par exemple utiliser le code ci-dessous pour définir un nouvel attribut ou prévaloir sur un attribut existant :
 
-  ```
+  ```swift
   AppID.sharedInstance.userAttributeManager?.setAttribute("key", "value", completionHandler: { (error, result) in
       if error = nil {
           //Attributs reçus comme dictionnaire
@@ -181,7 +186,7 @@ Vous pouvez, par exemple utiliser le code ci-dessous pour définir un nouvel att
 
 {{site.data.keyword.appid_short_notm}} vous permet d'effectuer une connexion anonyme. Voir [Identité anonyme](/docs/services/appid/user-profile.html#anonymous).
 
-  ```
+  ```swift
   class delegate : AuthorizationDelegate {
 
       public func onAuthorizationSuccess(accessToken: AccessToken, identityToken: IdentityToken, response:Response?) {
@@ -197,7 +202,7 @@ Vous pouvez, par exemple utiliser le code ci-dessous pour définir un nouvel att
       }
    }
 
-  AppID.sharedInstance.loginAnonymously( authorizationDelegate: delegate())`
+  AppID.sharedInstance.loginAnonymously( authorizationDelegate: delegate())
   ```
   {:pre}
 
@@ -206,14 +211,14 @@ Vous pouvez, par exemple utiliser le code ci-dessous pour définir un nouvel att
 
 Lorsqu'il dispose d'un jeton d'accès anonyme, l'utilisateur peut devenir un utilisateur identifié en transmettant ce jeton à la méthode loginWidget.launch :
 
-  ```
+  ```swift
   func launch(accessTokenString: String? , delegate: AuthorizationDelegate)
   ```
   {:pre}
 
 Après une connexion anonyme, une authentification progressive a lieu même si le widget de connexion est appelé sans transmission d'un jeton d'accès vu que le service a utilisé le dernier jeton d'accès reçu. Si vous désirez effacer vos jetons stockés, exécutez la commande suivante :
 
-  ```
+  ```swift
   var appIDAuthorizationManager = AppIDAuthorizationManager(appid: AppID.sharedInstance)
   appIDAuthorizationManager.clearAuthorizationData()
   ```

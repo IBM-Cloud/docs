@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -65,7 +65,7 @@ lastupdated: "2017-03-16"
 
 1. 在 Google 开发者控制台中打开 Google 应用程序。
 2. 添加 Google+ API。
-3. 使用 OAuth 创建凭证。在 **应用程序类型**字段中，选择 **Web 应用程序**。在**授权重定向 URI** 字段中，输入应用程序标识重定向 URI。从服务仪表板的 Google 配置屏幕中获取应用程序标识重定向授权 URI。
+3. 使用 OAuth 创建凭证。在 **应用程序类型**字段中，选择 **Web 应用程序**。在**授权重定向 URI** 字段中，输入 App ID 重定向 URI。从服务仪表板的 Google 配置屏幕中获取 App ID 重定向授权 URI。
 4. 保存更改。记录 Google 客户端标识和私钥。
 
 
