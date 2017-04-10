@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-31"
+lastupdated: "2017-4-6"
 
 ---
 
@@ -35,7 +35,7 @@ Complete these steps to set up a {{site.data.keyword.deliverypipeline}} for an e
 1. From the hamburger menu on the {{site.data.keyword.Bluemix_notm}} menu bar, click **Services**, and then click **DevOps**.
 1. Click **Pipelines**, and then click **Create a Pipeline**.
 
-To [create a pipeline![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} that is configured to deploy a Cloud Foundry application, follow these steps:
+To [create a pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} that is configured to deploy a Cloud Foundry application, follow these steps:
 
 1. Click **Cloud Foundry**.
 1. If you want to use a different name for the pipeline, change its default name.
@@ -45,7 +45,7 @@ To [create a pipeline![External link icon](../../icons/launch-glyph.svg "Externa
  **Tip**: Pipelines and toolchains belong to organizations (orgs). If you belong to an org that has toolchains, you can be added to the access control list for any of its associated toolchains. After you are added to the access control list for a toolchain, you can use that toolchain and any associated pipelines, even if you didn't create them. For more information about access control for toolchains, see [Managing access](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}.
 
 1. Either select the toolchain that you want to use or type a name for the new toolchain that you want to create.
-1. Select your Git provider. 
+1. Select your Git provider.
 
  **Tip**: If you have not authorized {{site.data.keyword.Bluemix_notm}} to access GitHub, you are prompted to click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account. If you have an active GitHub session but you haven't entered your password recently, you might be prompted to enter your GitHub password to confirm.
 
@@ -60,8 +60,9 @@ To [create a pipeline![External link icon](../../icons/launch-glyph.svg "Externa
 1. Select a repo or enter a repo URL.
 1. Click **Create**. The pipeline is created, configured, and displayed on the toolchain's Overview page.
  ![Pipeline card](images/cd_pipeline.png)
+1. If you created a pipeline in toolchain that contains a composite pipeline, the new pipeline is added to the composite pipeline. Modify the deployment plan to include deployment tasks for the new pipeline. See [Creating Delivery Pipeline tasks](/docs/services/ContinuousDelivery/pipeline_deployment_plan.html#tasks_pipelineCD){: new_window}.
 
-To create an [empty pipeline![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} without any preconfigured stages:
+To create an [empty pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} without any preconfigured stages:
 
 1. Click **Custom**.
 1. If you want to use a different name for the pipeline, change its default name.
@@ -77,10 +78,10 @@ From your {{site.data.keyword.deliverypipeline}}, change your configuration; che
 ## Tutorials and Samples
 {: #samples}
 
-* [Learning Lab![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/category/courses){:new_window}
-* [developerWorks: {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.deliverypipeline}} service![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/developerworks/topics/delivery%20pipeline%20service){:new_window}
+* [Learning Lab ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/category/courses){:new_window}
+* [developerWorks: {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.deliverypipeline}} service ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/developerworks/topics/delivery%20pipeline%20service){:new_window}
 
 ## Related Links
 {: #general}
 
-* [IBM Cloud Garage Method: Delivery pipeline![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/practice_delivery_pipeline/){:new_window}
+* [IBM Cloud Garage Method: Delivery pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/practice_delivery_pipeline/){:new_window}

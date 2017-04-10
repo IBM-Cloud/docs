@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-2-16"
+lastupdated: "2017-4-5"
 
 ---
 
@@ -13,12 +13,12 @@ lastupdated: "2017-2-16"
 
 #Creating and displaying work items {: #tp-creatingwis}  
 
-You can create and display work items in several ways, depending on your context. 
+You can create and display work items in several ways, depending on your context.
 {: shortdesc}
 
 For example, if you create a work item in the My Work view, you own the work item automatically. But if you create a work item from the Incoming Work view, the owner will be unassigned unless you select one.
 
-To set the attributes, click the icons, as shown in the following image. You can also open and edit a work item's attributes by clicking its summary. 
+To set the attributes, click the icons, as shown in the following image. You can also open and edit a work item's attributes by clicking its summary.
 
 ![Assigning work item attributes](images/work_item_attributes.png)
 
@@ -33,7 +33,7 @@ Work items have three basic states:
 
 You can display your work items in several ways.    
 
-###List 
+###List
 When you view work items in a list, each work item spans the width of the list. You can see more information about a work item by expanding it. Attributes are shown as icons.
 
 ![List display](images/list_view.png)
@@ -48,4 +48,4 @@ When you view work items in lanes, the work items are grouped by states. Attribu
 
 ![Lane display](images/lane_view.png)
 
-For more information about creating work items and defining their attributes, [see the documentation for IBM Rational Team Concert![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/support/knowledgecenter/SSYMRC_6.0.1/com.ibm.team.workitem.doc/topics/t_creating_work_items_web.html){:new_window}. 
+For more information about creating work items and defining their attributes, [see the documentation for IBM Rational Team Concert ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/support/knowledgecenter/SSYMRC_6.0.1/com.ibm.team.workitem.doc/topics/t_creating_work_items_web.html){:new_window}.
