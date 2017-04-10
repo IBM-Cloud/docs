@@ -72,7 +72,7 @@ To create an [empty pipeline ![External link icon](../../icons/launch-glyph.svg 
 
 From your {{site.data.keyword.deliverypipeline}}, change your configuration; check the status of builds, the deployed app, and recent deployments; see the most recent logs and deployment details; or delete your pipeline.
 
-<!-- # Related Links
+# Related Links
 {: #rellinks}
 
 ## Tutorials and Samples
@@ -84,4 +84,4 @@ From your {{site.data.keyword.deliverypipeline}}, change your configuration; che
 ## Related Links
 {: #general}
 
-* [IBM Cloud Garage Method: Delivery pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/practice_delivery_pipeline/){:new_window} -->
+* [IBM Cloud Garage Method: Delivery pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/practice_delivery_pipeline/){:new_window}

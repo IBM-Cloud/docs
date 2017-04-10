@@ -716,7 +716,7 @@ Configure Slack to receive notifications about your toolchain from the tool inte
 To learn more, see [Slack ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window}.
 
 
-<!-- # Related Links
+# Related Links
 {: #rellinks}
 
 ## Tutorials and Samples
@@ -728,4 +728,4 @@ To learn more, see [Slack ![External link icon](../../icons/launch-glyph.svg "Ex
 {: #general}
 
 * [{{site.data.keyword.contdelivery_full}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_continuous_delivery/){:new_window}
-* [IBM Cloud Garage Method ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method){:new_window} -->
+* [IBM Cloud Garage Method ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method){:new_window}

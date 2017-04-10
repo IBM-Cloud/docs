@@ -89,7 +89,7 @@ To create and configure a continuous delivery toolchain from a [template ![Exter
  * If you configured a source code tool integration such as GitHub, the sample GitHub repo is cloned into your GitHub account.
 
 
-<!-- # Related Links
+# Related Links
 {: #rellinks}
 
 ## Tutorials and Samples
@@ -101,4 +101,4 @@ To create and configure a continuous delivery toolchain from a [template ![Exter
 {: #general}
 
 * [{{site.data.keyword.contdelivery_full}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_continuous_delivery/){:new_window}
-* [IBM Cloud Garage Method ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method){:new_window} -->
+* [IBM Cloud Garage Method ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method){:new_window}

@@ -41,8 +41,8 @@ To complete remote Git operations, such as `clone` or `push`, from your local Gi
 **Note:** To use a personal access token or SSH key for authentication, you must set up Git locally. For instructions, see [Start using Git on the command line ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window}.
 
 
-<!-- Related resources:
+Related resources:
 * [Git Repos and Issue Tracking help ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/help){:new_window}
 * [Toolchain integrations: Configuring Git Repos and Issue Tracking (Experimental)](/docs/services/ContinuousDelivery/toolchains_integrations.html#gitbluemix)
 * [Tutorial: Create a toolchain that uses Git Repos and Issue Tracking ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2){:new_window}
-* [Tutorial: Create and use a microservices toolchain with DevOps Insights (v2) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window} -->
+* [Tutorial: Create and use a microservices toolchain with DevOps Insights (v2) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window} 
