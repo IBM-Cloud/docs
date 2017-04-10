@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-03-03"
+lastupdated: "2017-04-10"
 
 ---
 
@@ -31,7 +31,7 @@ If the user is assign access to an **Identity and access enabled service**, you 
 
 If the user is assigned access to **Cloud Foundry**, you can see the organizations and spaces the user is assigned from the Manage user window. You can remove the user from an organization or you can change the role that is assigned for an organization or space. You can add a user to another organization by clicking **Assign Organization** if you are the manager of an organization that the user is not yet a member of. You can manage existing space and organization roles by clicking **Edit space role** or the **Edit organization role** in the row of the role you want to edit.
 
-### Managing policies
+## Managing policies
 {: #iamusermanpol}
 
 You can assign and manage policies for a user that has access to **Identity and access enabled services**. A policy assigns a user a role or roles to a set of resources by using a combination of attributes to define the applicable set of resources.
@@ -57,7 +57,7 @@ You can assign and manage policies if you have the proper role. The following ta
 | Create a policy on a service instance | Administrator on the account or administrator on the service in the account or administrator on the service instance |
 {: caption="Table 1. Administrative tasks for managing **Identity and access enabled services** policies" caption-side="top"}
 
-### Assigning and managing roles
+## Assigning and managing roles
 {: #iamusermanrol}
 
 Roles are a collection of actions; the actions that are mapped to these roles are service specific. 
