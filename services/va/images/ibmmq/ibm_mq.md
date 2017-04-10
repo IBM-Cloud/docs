@@ -169,10 +169,10 @@ Complete the following steps to verify the setup and configuration of {{site.dat
 
 1.	Set up the IBM Containers CLI. For more information, see [the Bluemix CLI page](https://plugins.ng.bluemix.net/ui/home.html) and follow the instructions to install the latest Cloud Foundry Container service plugin.
 
-2.	From a terminal, log in to your {{site.data.keyword.Bluemix_notm}} organization and space where the conatiner is running with your {{site.data.keyword.Bluemix_notm}} ID. Run the following commands:
+2.	From a terminal, log in to your {{site.data.keyword.Bluemix_notm}} organization and space where the container is running with your {{site.data.keyword.Bluemix_notm}} ID. Run the following commands:
 
     1. `bx login`
-    2. `bx ic login`
+    2. `bx ic init`
     
 3.	Check the status of the container. Run the following command: `bx ic ps`
 
@@ -233,7 +233,7 @@ Complete the following steps to set up a terminal to run bx ic commands to manag
 2.	From a terminal, log in to {{site.data.keyword.Bluemix_notm}}. Run the following commands:
 
     1. `bx login`
-    2. `bx ic login`
+    2. `bx ic init`
     
 3.	Attach a Bash session to your container:
 
@@ -255,7 +255,7 @@ Complete the following steps to set up a terminal to run Docker commands to mana
 2.	From a terminal, log in to {{site.data.keyword.Bluemix_notm}}. Run the following commands:
 
     1. `bx login`
-    2. `bx ic login`
+    2. `bx ic init`
     3. Copy the values that are provided for the following environment variables: DOCKER_HOST, DOCKER_CERT_PATH, and DOCKER_TLS_VERIFY.
     4. Override the local Docker environment by setting the following variables to connect to {{site.data.keyword.containershort}}:
         
