@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-04-11"
 ---
 
 
@@ -25,7 +25,7 @@ Deploying an application to {{site.data.keyword.Bluemix_notm}} includes two phas
 Cloud Foundry supports Diego, which is the new default runtime architecture that provides a set of capabilities that enhances the application development experience for hosting and constructing cloud platforms. This architecture update provides an improvement in the overall operation and performance of the Cloud Foundry platform. The new architecture provides support for several application container technologies, including Garden and Windows, an SSH package that allows direct login to the application container, and other innovative changes. For more information about the recent architecture upgrade, see [{{site.data.keyword.Bluemix_notm}} Cloud Foundry: Diego is live ![External link icon](../icons/launch-glyph.svg)](https://www.ibm.com/blogs/bluemix/2017/01/bluemix-cloud-foundry-diego-live/){: new_window}.
 
 
-All new applications that you create will run on Diego, and you must start migrating your existing applications that run on DEAs to the new Diego architecture.
+All new applications that you create will run on Diego, and you must migrate your existing applications that run on DEAs to the new Diego architecture.
 
 **Note**: The Cloud Foundry Diego architecture affects all {{site.data.keyword.Bluemix_notm}} Public region environments. {{site.data.keyword.Bluemix_notm}} Dedicated and {{site.data.keyword.Bluemix_notm}} Local environments will be updated at a later date.
 
@@ -264,7 +264,7 @@ The following example shows a manifest file for a Node.js application that uses 
 ## Environment variables
 {: #app_env}
 
-Environment variables contain the environment information of a deployed application on {{site.data.keyword.Bluemix_notm}}. Besides environment variables set by a *Droplet Execution Agent (DEA)* and buildpacks, you can also set application-specific environment variables for applications on {{site.data.keyword.Bluemix_notm}}.
+Environment variables contain the environment information of a deployed application on {{site.data.keyword.Bluemix_notm}}. Besides environment variables set by a *Diego* and buildpacks, you can also set application-specific environment variables for applications on {{site.data.keyword.Bluemix_notm}}.
 
 You can view the following environment variables of a running {{site.data.keyword.Bluemix_notm}} application by using the **cf env** command or from the {{site.data.keyword.Bluemix_notm}} user interface:
 
@@ -320,7 +320,7 @@ You can view the following environment variables of a running {{site.data.keywor
 
 You also have access to the environment variables that are set by the DEA and buildpacks.
 
-The following variables are defined by the DEA:
+The following variables are defined by Diego:
 
 <dl>
   <dt><strong>HOME</strong></dt>
@@ -328,15 +328,15 @@ The following variables are defined by the DEA:
   <dt><strong>MEMORY_LIMIT</strong></dt>
   <dd>The maximum amount of memory that each instance of your application can use. You can specify the value in an application <span class="ph filepath">manifest.yml</span> file, or on the command line when you push the application.</dd>
   <dt><strong>PORT</strong></dt>
-  <dd>The port on the DEA for communication with the application. The DEA allocates a port to the application at staging time.</dd>
+  <dd>The port on Diego for communication with the application. Diego allocates a port to the application at staging time.</dd>
   <dt><strong>PWD</strong></dt>
   <dd>The current working directory where the buildpack is running.</dd>
   <dt><strong>TMPDIR</strong></dt>
   <dd>The directory where temporary and staging files are stored.</dd>
   <dt><strong>USER</strong></dt>
-  <dd>The user ID under which the DEA runs.</dd>
+  <dd>The user ID under which Diego runs.</dd>
   <dt><strong>VCAP_APP_HOST</strong></dt>
-  <dd>The IP address of the DEA host.</dd>
+  <dd>The IP address of the Diego host.</dd>
   <dt><strong>VCAP_APPLICATION</strong></dt>
   <dd>A JSON string that contains information about the deployed application. The information includes the application name, URIs, memory limits, time stamp at which the application achieved its current state, and so on. For example:
   <pre class="pre codeblock"><code>
@@ -413,9 +413,9 @@ Variables that are defined by buildpacks are different for each buildpack. See [
 	  <dt><strong>IBM_JAVA_OPTIONS</strong></dt>
 	  <dd>The Java SDK options to use when running the application.</dd>
 	  <dt><strong>IBM_JAVA_COMMAND_LINE</strong></dt>
-	  <dd>The Java command to start up a Liberty profile server instance in the DEA.</dd>
+	  <dd>The Java command to start up a Liberty profile server instance in Diego.</dd>
 	  <dt><strong>WLP_USR_DIR</strong></dt>
-	  <dd>The location of shared resources and server definitions when starting up a Liberty profile server instance in the DEA.</dd>
+	  <dd>The location of shared resources and server definitions when starting up a Liberty profile server instance in Diego.</dd>
 	  <dt><strong>WLP_OUTPUT_DIR</strong></dt>
 	  <dd>The location of generated output such as log files and working directory of a running Liberty profile server instance.</dd>
 	  </dl>
