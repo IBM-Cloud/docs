@@ -29,6 +29,8 @@ Building cloud native projects
 
     {: .navgroup id="help"}
     troubleshoot.md
+    [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
+    [Contact support](/docs/support/index.html#contacting-support)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
