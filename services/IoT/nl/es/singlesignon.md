@@ -2,11 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-10-05"
+lastupdated: "2017-03-13"
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -14,8 +14,10 @@ lastupdated: "2016-10-05"
 
 # Configuración y uso de {{site.data.keyword.ssoshort}}
 
-El servicio de {{site.data.keyword.ssofull}} se puede configurar para dar soporte a los proveedores de autenticación de usuarios alternativos para su {{site.data.keyword.iot_full}}. {{site.data.keyword.ssoshort}} da soporte a SAML 2.0, IBM Cloud Directory, proveedores sociales (Facebook, LinkedIn, Google+) y Github.
+El servicio de {{site.data.keyword.ssofull}} se puede configurar para dar soporte a los proveedores de autenticación de usuarios alternativos para su {{site.data.keyword.iot_full}}.
 {: .shortdesc}
+
+{{site.data.keyword.ssoshort}} da soporte a SAML 2.0, IBM Cloud Directory, proveedores sociales (Facebook, LinkedIn, Google+) y Github. Para obtener más información sobre el servicio SSO de {{site.data.keyword.Bluemix_notm}}, consulte [Guía de iniciación a Single Sign On ![Icono de enlace externo](../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/services/SingleSignOn/index.html){:new_window}.
 
 ## Configuración de {{site.data.keyword.ssoshort}}
 
@@ -26,7 +28,7 @@ Para configurar {{site.data.keyword.ssoshort}}, siga estos pasos:
 
 ## Cree una aplicación ficticia y enlácela al servicio de {{site.data.keyword.ssoshort}}
 
-El servicio de {{site.data.keyword.ssoshort}} no se puede enlazar directamente a otros servicios, por lo que se debe crear una aplicación ficticia para recuperar los datos de configuración necesarios del servicio de {{site.data.keyword.ssoshort}}.
+El servicio de {{site.data.keyword.ssoshort}} no se puede enlazar directamente a otros servicios, por lo que se debe crear una app ficticia para recuperar los datos de configuración necesarios del servicio de {{site.data.keyword.ssoshort}}.
 
 1. Desde el panel de control de {{site.data.keyword.Bluemix_notm}}, añada la aplicación {{site.data.keyword.sdk4nodefull}}.
 2. Pulse la aplicación {{site.data.keyword.sdk4nodefull}} desde el panel de control de {{site.data.keyword.Bluemix_notm}} y pulse **Enlazar un servicio o API**.

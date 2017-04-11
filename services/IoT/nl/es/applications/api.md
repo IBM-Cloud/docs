@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-02-17"
+  years: 2015, 2017
+lastupdated: "2016-03-14"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -38,12 +38,14 @@ La API REST HTTP de {{site.data.keyword.iot_short_notm}} da soporte a las siguie
 ## Acceso a la documentación de la API REST HTTP
 {: #api_link}
 
-Para acceder a la documentación de la API REST HTTP de {{site.data.keyword.iot_short_notm}} y obtener más información sobre cómo crear y personalizar las aplicaciones, vaya al siguiente URL:  [https://docs.internetofthings.ibmcloud.com/swagger/v0002.html](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html)
+Para acceder a la documentación de la API REST HTTP de {{site.data.keyword.iot_short_notm}} y obtener más información sobre cómo crear y personalizar las aplicaciones, consulte [API](../reference/api.html).
 
 La única versión de la API REST HTTP de {{site.data.keyword.iot_short_notm}} soportada es la versión 2. Asegúrese de que las soluciones de {{site.data.keyword.iot_short_notm}} utilicen la versión 2.
 
-# API de mensajería de REST HTTP para aplicaciones
+# API de mensajería HTTP para aplicaciones
 {: #rest_messaging_api}
+
+Para acceder a la documentación de API de mensajería HTTP de {{site.data.keyword.iot_short_notm}} y obtener más información sobre cómo publicar sucesos y enviar mandatos utilizando HTTP, consulte [API de mensajería HTTP de {{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}.
 
 ## Publicación de sucesos y mandatos
 {: #event_command_publication}
@@ -51,21 +53,19 @@ La única versión de la API REST HTTP de {{site.data.keyword.iot_short_notm}} s
 Además de utilizar el protocolo de mensajería MQTT, también puede configurar las aplicaciones para publicar sucesos y mandatos en {{site.data.keyword.iot_short_notm}} a través de HTTP utilizando uno de los siguientes mandatos de API REST HTTP:
 
 ### Solicitud POST de sucesos no seguros
-<pre class="pre">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
-{: codeblock}
+<pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
 ### Solicitud POST de sucesos seguros
-<pre class="pre">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
-{: codeblock}
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
 **Nota:** el puerto 443, el puerto SSL predeterminado, también se puede especificar para llamadas de API HTTP seguras.
 
 ### Solicitud POST de mandatos no seguros
-<pre class="pre">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">eventId</var></pre>
-{: codeblock}
+<pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">eventId</var></code></pre>
+
 
 ### Solicitud POST de mandatos seguros
-<pre class="pre">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">eventId</var></pre>
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">eventId</var></code></pre>
 {: codeblock}
 
 Si está conectando un dispositivo o aplicación al servicio de Quickstart, sustituya **orgId** por la serie 'quickstart'.
@@ -79,7 +79,7 @@ Si está conectando un dispositivo o aplicación al servicio de Quickstart, sust
 Todas las solicitudes deben incluir una cabecera de autorización. La autenticación básica es el único método que se admite. Las aplicaciones se autentican utilizando claves API. Cuando una aplicación hace una solicitud a través de la API REST HTTP de {{site.data.keyword.iot_short_notm}}, serán necesarias las siguientes credenciales:
 
 ```
-nombre de usuario = clave API (por ejemplo, a-orgId-a84ps90Ajs)
+nombre de usuario = clave API (por ejemplo, a/orgId/a84ps90Ajs)
 contraseña = Señal de autenticación
 ```
 

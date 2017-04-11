@@ -1,12 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2017-01-10"
+
+years: 2015, 2017
+
+lastupdated: "2017-03-16"
+
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -39,7 +42,8 @@ También puede utilizar pasarelas para realizar analíticas de extremo en los da
 
 El registro de una pasarela implica la clasificación del dispositivo como un tipo de pasarela, lo que da a la pasarela un nombre, y proporciona información de pasarela. A continuación, proporcione una señal de conexión o acepte una señal generada por {{site.data.keyword.iot_short_notm}}.
 
-**Consejo:** Puede añadir pasarelas de una en una desde el panel de instrumentos de {{site.data.keyword.iot_short_notm}}, o puede utilizar la API de [{{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/post_bulk_devices_add) para añadir una o varias pasarelas a la vez.
+
+**Consejo:** Puede añadir pasarelas de una en una desde el panel de instrumentos de {{site.data.keyword.iot_short_notm}}, o puede utilizar la API de [API de Administración de organización ![Icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window} para añadir una o varias pasarelas a la vez.
 
 Para añadir una pasarela desde el panel de instrumentos de {{site.data.keyword.iot_short_notm}}:
 
@@ -86,7 +90,7 @@ El ID de dispositivo se utiliza para identificar el dispositivo de pasarela en e
 
 Enhorabuena, ha registrado el dispositivo de pasarela. Ahora puede configurar el dispositivo de pasarela para conectarse a {{site.data.keyword.iot_short_notm}}
 
-Consulte la receta [Cómo registrar pasarelas en IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/how-to-register-gateways-in-ibm-watson-iot-platform/) para ver instrucciones paso a paso sobre cómo registrar una pasarela.
+Consulte la receta [Cómo registrar pasarelas en IBM Watson IoT Platform ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/recipes/tutorials/how-to-register-gateways-in-ibm-watson-iot-platform/){:new_window} para ver instrucciones paso a paso sobre cómo registrar una pasarela.
 
 ## Paso 2: Conexión de la pasarela a {{site.data.keyword.iot_short_notm}}
 {: #connect_gateway}
@@ -95,8 +99,7 @@ Después de registrar una pasarela con {{site.data.keyword.iot_short_notm}}, uti
 
 Para obtener información sobre la conexión de la pasarela a {{site.data.keyword.iot_short_notm}}, consulte [Conectividad de MQTT para pasarelas](mqtt.html).
 
-**Consejo:** Hay un rango de recetas disponibles para conectar dispositivos a {{site.data.keyword.iot_short_notm}}. Para obtener una lista de recetas, consulte las
-[Recetas de conexión de dispositivos](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/) disponibles en IBM.com.
+**Consejo:** Hay un rango de recetas disponibles para conectar dispositivos a {{site.data.keyword.iot_short_notm}}. Para obtener una lista de recetas, consulte las [Recetas de conexión de dispositivos ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window} disponibles en IBM.com.
 
 
 ## Paso 3: Conexión de dispositivos a través de la pasarela
@@ -109,7 +112,7 @@ Para obtener información sobre el registro automático de dispositivos y la pub
 
 Cuando un dispositivo se ha conectado satisfactoriamente a la pasarela, se muestra en el panel de instrumentos de su organización de {{site.data.keyword.iot_short_notm}}.
 
-Consulte la receta [Conexión de Raspberry Pi como pasarela a Watson IoT](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-as-a-gateway-to-watson-iot-using-node-red/) para ver el flujo detallado y una descripción. 
+Consulte la receta [Conexión de Raspberry Pi como pasarela a Watson IoT ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-as-a-gateway-to-watson-iot-using-node-red/){:new_window} para ver el flujo detallado y una descripción.
 
 **Nota:** En el panel de instrumentos de {{site.data.keyword.iot_short_notm}}, los dispositivos y las pasarelas que se conectan directamente al {{site.data.keyword.iot_short_notm}} muestran un icono de estado para indicar que están conectados. El panel de instrumentos muestra dispositivos que se conectan indirectamente a través de una pasarela como desconectados, ya que no saben la conectividad de dispositivos a la pasarela.
 
@@ -117,17 +120,22 @@ Consulte la receta [Conexión de Raspberry Pi como pasarela a Watson IoT](https:
 ## Instalación de Edge Analytics Agent
 {: #edge}
 
-Edge Analytics Agent (EAA) es un componente de software creado en la parte superior de [Apache Quarks](http://quarks.incubator.apache.org/) para llevar a cabo operaciones de analíticas de extremo en una pasarela subiendo y gestionando las reglas de analíticas de extremo desde el panel de instrumentos de {{site.data.keyword.iot_short_notm}}. Para obtener más información sobre analíticas de extremo, consulte [Edge Analytics](../edge_analytics.html).
+Edge Analytics Agent (EAA) es un componente de software creado en la parte superior de un motor de streaming, que está optimizado para llevar a cabo operaciones de analíticas de extremo en una pasarela subiendo y gestionando las reglas de analíticas de extremo desde el panel de instrumentos de {{site.data.keyword.iot_short_notm}}. Para obtener más información sobre analíticas de extremo, consulte [Edge Analytics](../edge_analytics.html).
 
 ### Instalación de EAA
 {: #eaa_install}
 
 Para instalar EAA en la pasarela:
 1. En el panel de control de {{site.data.keyword.iot_short}}, vaya a **Reglas**.
-2. Pulse **Descargar Edge Agent** para ir a la [Comunidad de IBM Edge Analytics Agent](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true).
-3. Vaya a la sección **Archivos** y descargue el archivo *ibm-watson-iot-edge-analytics-dslink-java-0.0.1* comprimido.
-4. Para obtener información sobre cómo instalar y configurar el componente de software de EAA en la pasarela, consulte la siguiente receta:
- - [Iniciación a Edge Analytics en Watson IoT Platform](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=19472)
+2. Pulse **Descargar Edge Agent** para ir a la [Comunidad de IBM Edge Analytics ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true){:new_window}.
+3. Vaya a la sección **Archivos** y descargue los directorios comprimidos adecuados para el tipo de pasarela.   
+La solución Edge Analytics está disponible como SDK para dispositivos que dan soporte a Java o como DSLink para dispositivos de pasarela Cisco.
+4. Para obtener información sobre cómo instalar y configurar el componente de software EAA en la pasarela, consulte la siguiente información:
+ - SDK  
+Consulte el PDF, el archivo readme y los enlaces de vídeo disponibles en la comunidad.  
+ Receta [Edge Recipe for SDK - Iniciación (SDK) ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/recipes/tutorials/getting-started-with-the-ibm-edge-analytics-sdk-in-watson-iot-platform/){:new_window}.
+ - DSLink  
+ Receta [Iniciación a Edge Analytics en Watson IoT Platform ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=19472){:new_window}.
 
 ### Valores de configuración de EAA
 {: #eaa_configuration}

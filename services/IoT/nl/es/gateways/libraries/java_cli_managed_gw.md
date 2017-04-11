@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-12-06"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -387,7 +387,7 @@ public abstract void updateFirmware(DeviceFirmware deviceFirmware);
 
 **Nota**: solo debe añadirse un manejador a la biblioteca para la pasarela y para los dispositivos conectados a los que se redirigen las solicitudes de descarga o actualización de firmware. La implementación debe crear una hebra o una agrupación de hebras para manejar varias solicitudes de firmware simultáneamente.
 
-Encontrará una implementación de ejemplo de un manejador de agrupación de hebras en el [Repositorio GitHub de ejemplos de pasarela](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java).
+Encontrará una implementación de ejemplo de un manejador de agrupación de hebras en el [Repositorio GitHub de ejemplos de pasarela ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window}.
 
 ### Una implementación de ejemplo de `downloadFirmware`
 
@@ -401,7 +401,7 @@ Si se produce un error durante la descarga de firmware, estado se debe establece
 
 En el ejemplo de código siguiente se muestra una implementación de descarga de firmware de ejemplo:
 
-**Importante:** el código de ejemplo que se proporciona no incluye la sección de la agrupación de hebras. Encontrará un ejemplo de implementación completa de manejador de firmware en el [Repositorio GitHub de ejemplos de pasarela de IBM Java](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java).
+**Importante:** el código de ejemplo que se proporciona no incluye la sección de la agrupación de hebras. Encontrará un ejemplo de implementación completa de manejador de firmware en el [Repositorio GitHub de ejemplos de pasarela de IBM Java ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window}.
 
 ```java
 public void downloadFirmware(DeviceFirmware deviceFirmware) {
@@ -536,7 +536,7 @@ public void updateFirmware(DeviceFirmware deviceFirmware) {
 }
 ```
 
-Encontrará el código completo en el ejemplo `GatewayFirmwareHandlerSample` del [Repositorio GitHub de ejemplos de pasarela](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java).
+Encontrará el código completo en el ejemplo `GatewayFirmwareHandlerSample` del [Repositorio de  GitHub de ejemplos de pasarela ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window}.
 
 ### Paso 4: Adición del manejador a `ManagedGateway`
 
@@ -547,7 +547,7 @@ GatewayFirmwareHandlerSample fwHandler = new GatewayFirmwareHandlerSample();
 mgdGateway.addFirmwareHandler(fwHandler);
 ```
 
-Para obtener más información sobre las acciones de firmware, consulte [Solicitudes de gestión de dispositivos](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/requests.html#/firmware-actions#firmware-actions).
+Para obtener más información sobre las acciones de firmware, consulte [Solicitudes de gestión de dispositivos ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/requests.html#/firmware-actions#firmware-actions){: new_window}.
 
 ## Acciones de dispositivos
 {: #dev_actions}
@@ -592,7 +592,7 @@ public abstract void handleReboot(DeviceAction action);
 public abstract void handleFactoryReset(DeviceAction action);
 ```
 
-**Nota:** solo debe añadirse un manejador a la biblioteca para la pasarela y para los dispositivos conectados a los que se redirigen las solicitudes de acción del dispositivo. La implementación debe crear una hebra o una agrupación de hebras para manejar varias solicitudes de acción de dispositivo simultáneamente. Encontrará una implementación de manejador de ejemplo que utiliza una agrupación de hebras en el [Repositorio de GitHub iot-gateway-samples](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java).
+**Nota:** solo debe añadirse un manejador a la biblioteca para la pasarela y para los dispositivos conectados a los que se redirigen las solicitudes de acción del dispositivo. La implementación debe crear una hebra o una agrupación de hebras para manejar varias solicitudes de acción de dispositivo simultáneamente. Encontrará una implementación de manejador de ejemplo que utiliza una agrupación de hebras en el [Repositorio de GitHub iot-gateway-samples ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java){: new_window}.
 
 ### Una implementación de ejemplo de `handleReboot`
 
@@ -619,7 +619,7 @@ public void handleReboot(DeviceAction action) {
 }
 ```
 
-Encontrará la implementación completa de manejador de ejemplo que utiliza una agrupación de hebras en el [Repositorio de GitHub iot-gateway-samples](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java).
+Encontrará la implementación completa de manejador de ejemplo que utiliza una agrupación de hebras en el [Repositorio de GitHub iot-gateway-samples ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java){: new_window}.
 
 
 ### Una implementación de ejemplo de `handleFactoryReset`
@@ -648,7 +648,7 @@ GatewayActionHandlerSample actionHandler = new GatewayActionHandlerSample();
 mgdGateway.addDeviceActionHandler(actionHandler);
 ```
 
-Para obtener más información sobre las acciones de dispositivo, consulte [Solicitudes de gestión de dispositivos](../../devices/device_mgmt/requests.html#/device-actions-reboot#device-actions-reboot).
+Para obtener más información sobre las acciones de dispositivo, consulte [Solicitudes de gestión de dispositivos ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](../../devices/device_mgmt/requests.html#/device-actions-reboot#device-actions-reboot){: new_window}.
 
 ## Escucha de los cambios de atributos de dispositivos
 {: #listen_device_attributes}
@@ -698,16 +698,16 @@ public void propertyChange(PropertyChangeEvent evt) {
 }
 ```
 
-Para obtener más información sobre la actualización de los atributos de un dispositivo, consulte [Solicitudes de gestión de dispositivos](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/index.html#/update-device-attributes#update-device-attributes).
+Para obtener más información sobre la actualización de atributos de dispositivo, consulte [Solicitudes de gestión de dispositivos ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/index.html#/update-device-attributes#update-device-attributes){: new_window}.
 
 ## Ejemplos
 {: #samples}
 
-Dispone de varios ejemplos para ayudarle a conectar pasarelas y dispositivos situados detrás de pasarelas a su instancia de {{site.data.keyword.iot_short_notm}}. En los ejemplos se utiliza la biblioteca cliente Java de {{site.data.keyword.iot_short_notm}} y se encuentran en el [Repositorio GitHub de ejemplos de pasarela](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples).
+Dispone de varios ejemplos para ayudarle a conectar pasarelas y dispositivos situados detrás de pasarelas a su instancia de {{site.data.keyword.iot_short_notm}}. En los ejemplos se utiliza la biblioteca cliente Java de {{site.data.keyword.iot_short_notm}}y se encuentran en el [Repositorio GitHub de ejemplos de pasarela ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples){: new_window}.
 
 ## Recetas
 {: #recipes}
 
-Para ver una receta que muestra cómo conectar un dispositivo Raspberry Pi como pasarela gestionada a {{site.data.keyword.iot_short_notm}} y gestionar los dispositivos conectados, consulte el apartado sobre [Raspberry Pi como una pasarela gestionada en {{site.data.keyword.iot_short_notm}} ](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/).
+Para ver una receta que muestra cómo conectar un dispositivo Raspberry Pi como pasarela gestionada a {{site.data.keyword.iot_short_notm}} y gestionar los dispositivos conectados, consulte el apartado sobre [Raspberry Pi como una pasarela gestionada en {{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/){: new_window}.
 
 En la receta se explica cómo utilizar el protocolo de gestión de dispositivos de {{site.data.keyword.iot_short_notm}} para gestionar un dispositivo Arduino Uno desde un dispositivo Raspberry Pi que actúa como pasarela y realizar operaciones de gestión de dispositivos, como por ejemplo rearrancar el dispositivo o añadir un esbozo de programa.

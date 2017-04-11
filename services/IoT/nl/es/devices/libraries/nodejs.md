@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-09-14"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -24,13 +24,13 @@ Utilice la información y los ejemplos proporcionados para empezar a desarrollar
 ## Descarga del cliente y los recursos de Node.js
 {: #node.js_client_downloads}
 
-Para acceder a las bibliotecas de cliente Node.js para {{site.data.keyword.iot_short_notm}} y otros recursos disponibles, vaya al repositorio [iot-nodejs](https://github.com/ibm-watson-iot/iot-nodejs) en GitHub y complete las instrucciones de instalación.
+Para acceder a las bibliotecas de cliente de Node.js para {{site.data.keyword.iot_short_notm}} y otros recursos disponibles, vaya al repositorio [iot-nodejs ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window} en GitHub y complete las instrucciones de instalación.
 
 
 Para más información, consulte los siguientes recursos:
 
-- [Ejemplos para dispositivos](https://github.com/ibm-watson-iot/iot-nodejs/tree/master/samples) en Github
-- El repositorio [ibmiotf](https://www.npmjs.com/package/ibmiotf) en NPM
+- [Ejemplos para dispositivos ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/iot-nodejs/tree/master/samples){: new_window} en Github
+- El repositorio [ibmiotf ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.npmjs.com/package/ibmiotf){: new_window} en NPM
 
 ## Constructor
 {: #constructor}

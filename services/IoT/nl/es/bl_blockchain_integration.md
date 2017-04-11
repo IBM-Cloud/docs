@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-17"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -43,18 +43,17 @@ El diagrama siguiente ilustra el entorno de integración de blockchain de {{site
 ## Antes de empezar
 {: #byb}
 
-- Obtenga una visión general de {{site.data.keyword.iot_short_notm}}, de cómo se relaciona con el concepto de blockchain general y de lo que puede hacer por usted en [{{site.data.keyword.iot_short_notm}} ![icono de enlace externo](../../icons/launch-glyph.svg)](http://www.ibm.com/blockchain/){: new_window} en IBM.com.
+- Obtenga una visión general de {{site.data.keyword.iot_short_notm}}, de cómo se relaciona con el concepto de blockchain general y de lo que puede hacer por usted en [{{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://www.ibm.com/blockchain/){: new_window} en IBM.com.
 - [Habilite Integración de blockchain de {{site.data.keyword.iot_short_notm}}](reference/extensions/index.html#blockchain) para la organización.
 - Conectar dispositivos que generan datos que desea grabar en el libro mayor de blockchain.  
 Siga las instrucciones del tema [Conectando dispositivos](iotplatform_task.html) para conectar los dispositivos.
 - Instalar la IU de supervisión.
-El IU de supervisión se utiliza para verificar la conexión entre {{site.data.keyword.iot_short_notm}} y el entramado de blockchain. Siga las instrucciones del documento readme de IU de supervisión que está disponible en el directorio de GitHub de [IU de supervisión de blockchain ![icono de enlace externo](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window}.
- 
+El IU de supervisión se utiliza para verificar la conexión entre {{site.data.keyword.iot_short_notm}} y el entramado de blockchain. Siga las instrucciones del documento readme de IU de supervisión que está disponible en el directorio de GitHub de [IU de supervisión de blockchain ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window}.
 
 ### Utilización del caso de ejemplo básico de IBM para empezar rápidamente
 
 Para comenzar rápidamente con la prueba de la integración de blockchain de {{site.data.keyword.iot_short_notm}}, puede conectarse a un entramado proporcionado por IBM y correlacionar un dispositivo de prueba Node-RED en el contrato de ejemplo proporcionado por IBM.  Los pasos necesarios para este caso de ejemplo se etiquetan como **Caso de ejemplo básico de IBM** en este tema.  
-**Importante:** Tenga en cuenta que el libro mayor de blockchain de ejemplo proporcionado por IBM y todos sus datos están visibles para todos los usuarios del blockchain de ejemplo. No almacene información confidencial en el blockchain de ejemplo proporcionado por IBM. Además, los entramados de ejemplo que dan soporte a los contratos de ejemplo y de rutas comerciales están sujetos a cambios, entre los que se incluye la información de conexión para cada igual. Los detalles de la conexión se proporcionan en la página de wiki [Información de conexión de blockchain de IoT ![icono de enlace externo](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} de la comunidad de Watson IoT Blockchain.
+**Importante:** Tenga en cuenta que el libro mayor de blockchain de ejemplo proporcionado por IBM y todos sus datos están visibles para todos los usuarios del blockchain de ejemplo. No almacene información confidencial en el blockchain de ejemplo proporcionado por IBM. Además, los entramados de ejemplo que dan soporte a los contratos de ejemplo y de rutas comerciales están sujetos a cambios, entre los que se incluye la información de conexión para cada igual. Los detalles de la conexión se proporcionan en la página de wiki [Información de conexión de blockchain de IoT ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} de la comunidad de Watson IoT Blockchain.
 
 El entorno de integración de blockchain de {{site.data.keyword.iot_short_notm}} básico proporcionado por IBM consta de los siguientes componentes:
 - {{site.data.keyword.Bluemix_notm}}:
@@ -122,7 +121,7 @@ Para conectar a una estructura de blockchain:
 3. En la sección Configurar blockchain, pulse **Listo** para guardar la información de la infraestructura.
 
 
-**Caso de ejemplo básico de IBM:** Para conectarse al entramado proporcionado por IBM, utilice los detalles de conexión para el Contrato de ejemplo que se proporciona en la página de wiki [Información de conexión de blockchain de IoT ![icono de enlace externo](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} de la comunidad Watson IoT Blockchain. Si es necesario, póngase en contacto con el blockchain de IBM para obtener acceso a la comunidad.
+**Caso de ejemplo básico de IBM:** Para conectarse al entramado proporcionado por IBM, utilice los detalles de conexión para el Contrato de ejemplo que se proporciona en la página de wiki [Información de conexión de blockchain de IoT ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} de la comunidad Watson IoT Blockchain. Si es necesario, póngase en contacto con el blockchain de IBM para obtener acceso a la comunidad.
 
 
 ## Correlacionar datos de dispositivo con contratos inteligentes
@@ -159,13 +158,13 @@ Para correlacionar los datos de dispositivo a un contrato:
 </tr>
 </tbody>
 </table>
-**Caso de ejemplo básico de IBM:** El contrato inteligente predesplegado de ejemplo permite correlacionar puntos de datos de dispositivos a determinados atributos de contrato para almacenar los valores de punto de datos en el libro mayor de blockchain. Utilice el contrato de ejemplo para probar la correlación de datos de dispositivos antes de probar los contratos de rutas comerciales más avanzados o escribir sus propios contratos. El ID de contrato se proporciona en la página de wiki [Información de conexión de blockchain de IoT ![icono de enlace externo](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} de la comunidad de Watson IoT Blockchain.Si es necesario, póngase en contacto con el blockchain de IBM para obtener acceso a la comunidad.
+**Caso de ejemplo básico de IBM:** El contrato inteligente predesplegado de ejemplo permite correlacionar puntos de datos de dispositivos a determinados atributos de contrato para almacenar los valores de punto de datos en el libro mayor de blockchain. Utilice el contrato de ejemplo para probar la correlación de datos de dispositivos antes de probar los contratos de rutas comerciales más avanzados o escribir sus propios contratos. El ID de contrato se proporciona en la página de wiki [Información de conexión de blockchain de IoT ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} de la comunidad de Watson IoT Blockchain. Si es necesario, póngase en contacto con el blockchain de IBM para obtener acceso a la comunidad.
 
 
  8. Crear una ruta para correlacionar propiedades de dispositivos para parámetros de contrato.  
  Los parámetros disponibles en el contrato se importan. Para cada parámetro, especifique una propiedad de sucesos correspondiente.  
  **Importante:** No incluya el `d.` que se añade previamente al punto de datos en el mensaje de dispositivos.
- **Caso de ejemplo básico de IBM:** Si está utilizando los contratos proporcionados por IBM, correlacione los siguientes parámetros que se listan en la página de wiki [Correlación de datos ![icono de enlace externo](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Data%20Mapping){: new_window} en la comunidad Watson IoT Blockchain.Si es necesario, póngase en contacto con el blockchain de IBM para obtener acceso a la comunidad.
+ **Caso de ejemplo básico de IBM:** Si está utilizando los contratos proporcionados por IBM, correlacione los siguientes parámetros que se listan en la página de wiki [Correlación de datos ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Data%20Mapping){: new_window} de la comunidad Watson IoT Blockchain. Si es necesario, póngase en contacto con el blockchain de IBM para obtener acceso a la comunidad.
  9. En la página de resumen, verifique que toda la información se ha especificado correctamente.
  10. Los datos de dispositivo para la correlación de contrato se muestran en la página de Blockchain.
 
@@ -175,8 +174,7 @@ Enhorabuena, ya está en ejecución.
 {: #test_simple}
 
 Si está conectado al entramado proporcionado por IBM y ha correlacionado los datos de dispositivos al contrato de ejemplo, puede probar el flujo de datos de extremo a extremo desde el dispositivo al libro mayor de blockchain. Utilice la IU de supervisión de Blockchain de IoT para ver la actividad de blockchain y los datos para los activos.  
-**Consejo:** Si la IU de supervisión todavía no se ha instalado en el entorno local, puede instalarla ahora. Siga las instrucciones del documento readme de IU de supervisión que está disponible en el directorio de GitHub de [IU de supervisión de blockchain ![icono de enlace externo](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window}.
-   
+**Consejo:** Si la IU de supervisión todavía no se ha instalado en el entorno local, puede instalarla ahora. Siga las instrucciones del documento readme de IU de supervisión que está disponible en el directorio de GitHub de [IU de supervisión de blockchain ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window}.  
 1. Configurar la IU de supervisión para conectarse a {{site.data.keyword.iot_short_notm}}.  
  En la IU de supervisión, pulse **CONFIGURATION** para configurar la conexión de IU de supervisión:
  <table>
@@ -194,7 +192,7 @@ Si está conectado al entramado proporcionado por IBM y ha correlacionado los da
 <tr>
 <td>ID de Chaincode</td>
 <td>El ID de contrato es una serie alfanumérica de 128 caracteres que se corresponde con la entrada de ID de contrato.  
-**Importante:** Al cortar y pegar la ID de chaincode, asegúrese de que no se incluyan espacios en el ID. Si el ID no está correctamente especificado, se mostrarán las entradas de libro mayor de blockchain, pero la función de búsqueda de activos no funciona.
+**Importante:** Al cortar y pegar el ID de chaincode, asegúrese de que no se incluyan espacios en el ID. Si el ID no está correctamente especificado, se mostrarán las entradas de libro mayor de blockchain, pero la función de búsqueda de activos no funciona.
 </td>
 </tr>
 <tr>
@@ -205,7 +203,7 @@ Si está conectado al entramado proporcionado por IBM y ha correlacionado los da
 </tr>
 </tbody>
 </table>
-**Caso de ejemplo básico de IBM:** Para configurar la IU de supervisión para conectarse a los contratos básicos o de rutas comerciales, utilice los detalles de conexión que se proporcionan en la página de wiki [Información de conexión de blockchain de IoT ![icono de enlace externo](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} en la comunidad Watson IoT Blockchain. Si es necesario, póngase en contacto con el blockchain de IBM para obtener acceso a la comunidad.
+**Caso de ejemplo básico de IBM:** Para configurar la IU de supervisión para conectarse a los contratos básicos o de rutas comerciales, utilice los detalles de conexión que se proporcionan en la página de wiki [Información de conexión de blockchain de IoT ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} de la comunidad Watson IoT Blockchain. Si es necesario, póngase en contacto con el blockchain de IBM para obtener acceso a la comunidad.
 2. En el editor de flujo Node-RED, pulse el botón en el nodo CON123 para inyectar los datos del dispositivo, haga que el contrato simple los envíe como un mensaje a {{site.data.keyword.iot_short_notm}}, y que los escriba en el libro mayor de {{site.data.keyword.iot_short_notm}}.   
 **Consejo:** Para obtener un flujo de datos continuo, efectúe una doble pulsación en el nodo de inyección, establezca el parámetro Repeat en `interval`, y configure un intervalo adecuado, como por ejemplo cada minuto.
 3. En la IU de supervisión, verifique que se visualicen los datos de dispositivos tal como se espera en los bloques de blockchain.  

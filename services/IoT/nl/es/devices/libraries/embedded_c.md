@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-08-02"
+  years: 2015, 2017
+lastupdated: "2017-03-13"
 
 ---
 
@@ -22,7 +22,7 @@ Puede utilizar Embedded C para crear y personalizar dispositivos que interactúa
 ## Descarga del cliente y los recursos de Embedded C
 {: #embeddedc_client_download}
 
-Para acceder a las bibliotecas de clientes de Embedded C y a ejemplos para {{site.data.keyword.iot_short_notm}}, vaya al repositorio [iotf-embeddedc](https://github.com/ibm-messaging/iotf-embeddedc) en GitHub y complete las instrucciones de instalación.
+Para acceder a las bibliotecas y ejemplos de cliente de Embedded C para {{site.data.keyword.iot_short_notm}}, vaya al repositorio [iotf-embeddedc ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-messaging/iotf-embeddedc){: new_window} en GitHub y complete las instrucciones de instalación.
 
 
 ## Dependencias
@@ -30,7 +30,7 @@ Para acceder a las bibliotecas de clientes de Embedded C y a ejemplos para {{sit
 
 |Dependencia |Descripción|
 |:---|:---|
-|[Biblioteca de Eclipse Paho Embedded C](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git) |Proporciona una biblioteca de cliente de MQTT C. Para obtener más información, consulte [Paquete de cliente de MQTT: C para dispositivos incorporados](http://www.eclipse.org/paho/clients/c/embedded/).|
+|[Biblioteca de Eclipse Paho Embedded C ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git){: new_window} |Proporciona una biblioteca de cliente de MQTT C. Para obtener más información, consulte [Paquete de cliente de MQTT: C para dispositivos incorporados ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window}.|
 
 
 ## Instalación
@@ -224,4 +224,4 @@ Para desconectar el cliente y lanzar las conexiones, ejecute el siguiente fragme
 ## Ejemplos
 {: #samples}
 
-El dispositivo de ejemplo y el código de aplicaciones se proporcionan en [GitHub](https://github.com/ibm-messaging/iotf-embeddedc/tree/master/samples).
+El dispositivo de ejemplo y el código de aplicaciones se proporcionan en [GitHub ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-messaging/iotf-embeddedc/tree/master/samples){: new_window}.

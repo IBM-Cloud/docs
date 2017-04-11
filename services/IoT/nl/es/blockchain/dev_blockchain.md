@@ -2,11 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-2-6"
+lastupdated: "2017-03-14"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -45,21 +45,21 @@ El diagrama siguiente ilustra el entorno de desarrollo de integración de blockc
 {: #byb}
 
 Obtenga una visión general de {{site.data.keyword.blockchainfull_notm}}, de cómo se relaciona con el concepto de blockchain general, y de lo que puede hacer por usted:
-- [{{site.data.keyword.blockchainfull_notm}}](http://www.ibm.com/blockchain/) en IBM.com.
+- [{{site.data.keyword.blockchainfull_notm}} ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](http://www.ibm.com/blockchain/){: new_window} en IBM.com.
 - [DOCS de {{site.data.keyword.blockchainfull_notm}}](https://console.ng.bluemix.net/docs/services/blockchain/index.html): Iniciación al servicio de {{site.data.keyword.blockchainfull_notm}}.
-- [API de {{site.data.keyword.blockchainfull_notm}}](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/): Una visión general de la API de {{site.data.keyword.blockchainfull_notm}}.
-- [{{site.data.keyword.blockchainfull_notm}} para desarrolladores](http://www.ibm.com/blockchain/for_developers.html): Una visión general de cómo blockchain se adapta a su entorno de desarrollo que incluye recorridos con código y demostraciones en directo que se despliegan para ejecutarse en {{site.data.keyword.Bluemix_notm}}.
+- [Documentación de SDK para Node.js de HFC {{site.data.keyword.blockchainfull_notm}} con API ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/hyperledger/fabric/tree/v0.6/docs/API){: new_window}: Una visión general de la API de {{site.data.keyword.blockchainfull_notm}}.
+- [{{site.data.keyword.blockchainfull_notm}} para desarrolladores ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](http://www.ibm.com/blockchain/for_developers.html){: new_window}: Una visión general de cómo blockchain se adapta a su entorno de desarrollo que incluye recorridos con código y demostraciones en directo que se despliegan para ejecutarse en  {{site.data.keyword.Bluemix_notm}}.
 
 ## Contratos inteligentes de muestra
 
 {: #samples}
 
-Hay disponibles varios contratos de ejemplo para su descarga desde [https://github.com/ibm-watson-iot/blockchain-samples](https://github.com/ibm-watson-iot/blockchain-samples). Puede utilizar los contratos de ejemplo como base para desarrollar sus propios casos de uso en el chaincode desplegable:
+Hay disponibles varios contratos de ejemplo para su descarga desde [https://github.com/ibm-watson-iot/blockchain-samples ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/blockchain-samples){: new_window}. Puede utilizar los contratos de ejemplo como base para desarrollar sus propios casos de uso en el chaincode desplegable:
 
 |Contrato de ejemplo |Descripción |
 |:---|:---|
-|[Basic: Simple Contract](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/basic/simple_contract) | Una versión simplificada del contrato avanzado que le permite realizar un seguimiento y almacenar los datos de activos de dispositivos en el blockchain
-|[Advanced: IoT Generic Sample Contract](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/advanced/iot_sample_contract) | Un contrato de ejemplo avanzado con muchas características y un toque de **ruta comercial** en su modelo y comportamiento de datos|
+|[Basic: Simple Contract ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/basic/simple_contract){: new_window} | Una versión simplificada del contrato avanzado que le permite realizar un seguimiento y almacenar los datos de activos de dispositivos en el blockchain
+|[Advanced: IoT Generic Sample Contract ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/advanced/iot_sample_contract){: new_window} | Un contrato de ejemplo avanzado con muchas características y un toque de **ruta comercial** en su modelo y comportamiento de datos|
 
 
 ## Configure el entorno de {{site.data.keyword.blockchainfull_notm}}
@@ -77,7 +77,7 @@ La integración de blockchain de {{site.data.keyword.iot_short_notm}} requiere q
    **Consejo:** Pulse [aquí](https://console.ng.bluemix.net/catalog/services/blockchain/) para ir directamente a la página de servicio de {{site.data.keyword.blockchainfull_notm}}.
   3. En la página de servicio de {{site.data.keyword.blockchainfull_notm}}, verifique las selecciones de Añadir servicio:  
     - Espacio: Si tiene más espacio del `dev` predeterminado, verifique que está desplegando el servicio en el espacio previsto.
-    - Apl: Dejar sin enlazar.
+    - App: Dejar sin enlazar.
     - Nombre de servicio: Opcionalmente, cambie el nombre de servicio a algo que sea fácil de recordar. Este nombre se muestra en el mosaico {{site.data.keyword.blockchainfull_notm}} del panel de control de {{site.data.keyword.Bluemix_notm}}.
     - Plan seleccionado: Seleccione el plan gratuito. El plan gratuito proporciona dos iguales de validación y una entidad emisora de certificados.
   4. Pulse **Crear** para desplegar {{site.data.keyword.blockchainfull_notm}} en {{site.data.keyword.Bluemix_notm}}.  
@@ -186,12 +186,11 @@ Los contratos inteligentes que desea desplegar deben estar en un repositorio pú
 2.  Configurar un entorno de desarrollo de Hyperledger local y un entorno de pruebas.  
 Para desarrollar y probar su propio chaincode antes de desplegarlo en {{site.data.keyword.blockchainfull_notm}}, debe configurar un entorno de desarrollo local. Este entorno incluye GoLang, que se utiliza para grabar el chaincode para los contratos.
  1. Configurar el entorno de desarrollo.  
- El entorno de desarrollo incluye las herramientas que necesita para desarrollar los contratos inteligentes utilizando la compilación de chaincode en GoLang. Para obtener más información, consulte
- [Setting up the development environment](https://github.com/hyperledger/fabric/blob/master/docs/dev-setup/devenv.md) en la documentación de Hyperledger.
+ El entorno de desarrollo incluye las herramientas que necesita para desarrollar los contratos inteligentes utilizando la compilación de chaincode en GoLang. Para obtener más información, consulte [Setting up the development environment ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")]( https://github.com/hyperledger/fabric/blob/master/docs/source/dev-setup/devenv.rst){: new_window} en la documentación de Hyperledger.
  2. Instalar un entorno de depuración de chaincode.   
- El entorno de depuración le proporciona las herramientas necesarias para probar y depurar los contratos inteligentes antes de desplegarlos en {{site.data.keyword.blockchainfull_notm}}. Para obtener más información, consulte [Writing, Building, and Running Chaincode in a Development Environment](https://github.com/hyperledger/fabric/blob/master/docs/Setup/Chaincode-setup.md) en la documentación de Hyperledger.
+ El entorno de depuración le proporciona las herramientas necesarias para probar y depurar los contratos inteligentes antes de desplegarlos en {{site.data.keyword.blockchainfull_notm}}. Para obtener más información, consulte [Writing, Building, and Running Chaincode in a Development Environment ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/hyperledger/fabric/blob/master/docs/source/Setup/Chaincode-setup.rst){: new_window} en la documentación de Hyperledger.
  3. Configurar una red para el desarrollo.   
- La red para el desarrollo le proporciona un entorno más estricto, de producción, para la prueba final de los contratos inteligentes.  Utilice este entorno para la prueba final de los contratos probados y depurados antes de desplegarlos en {{site.data.keyword.blockchainfull_notm}}. Para obtener más información, consulte [Setting Up a Network](https://github.com/hyperledger/fabric/blob/master/docs/Setup/Network-setup.md) en la documentación de Hyperledger.
+ La red para el desarrollo le proporciona un entorno más estricto, de producción, para la prueba final de los contratos inteligentes.  Utilice este entorno para la prueba final de los contratos probados y depurados antes de desplegarlos en {{site.data.keyword.blockchainfull_notm}}. Para obtener más información, consulte [Setting Up a Network ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/hyperledger/fabric/blob/master/docs/source/Setup/Network-setup.rst){: new_window} en la documentación de Hyperledger.
 
 3. Opcional: Descargar los contratos inteligentes de ejemplo proporcionados por IBM.  
 IBM proporciona varios contratos inteligentes que puede descargar y utilizar directamente tal cual o modificarlos para que se ajusten a los objetivos de su organización.  
@@ -224,7 +223,7 @@ Para descargar los contratos de ejemplo:
   Por ejemplo, cargue el archivo sample.go en:  
   `http://github.com/{my organization}/{my project}/`
   2. Registre el contrato con el igual al que se ha conectado anteriormente.  
-  Utilice un cliente REST como CURL o Postman para enviar la llamada de registro. Para obtener más información sobre la llamada de registro, consulte la [Documentación de la API de registrador POST](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/#!/Registrar/registerUser). Utilice la siguiente información al registrarse:
+  Utilice un cliente REST como CURL o Postman para enviar la llamada de registro. Para obtener más información sobre la llamada de registro, consulte la [documentación de la API de registrador POST ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/hyperledger/fabric/blob/v0.6/docs/API/CoreAPI.md#registrar){: new_window}. Utilice la siguiente información al registrarse:
   <ul>
   <li>URL: `http://api_host:api_port_tls/registrar`
   <li>Type: POST
@@ -239,7 +238,7 @@ Para descargar los contratos de ejemplo:
 
   </ul>
   3. Despliegue el contrato en el igual.  
-  Para obtener más información sobre la llamada de despliegue, consulte la [Documentación de la API de despliegue/devops POST](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/#!/Devops/chaincodeDeploy).  
+Para obtener más información sobre la llamada de despliegue, consulte la [documentación de la API POST/chaincode ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/hyperledger/fabric/blob/v0.6/docs/API/CoreAPI.md#chaincode){: new_window}.  
   Utilice la siguiente información al desplegar:  
   <ul>
   <li>URL: `http://api_host:api_port_tls/chaincode`
@@ -277,12 +276,12 @@ Para descargar los contratos de ejemplo:
    4. Pulse **Launch** para abrir el panel de control de {{site.data.keyword.iot_short_notm}}.
    5. Seleccione **Blockchain** pulsando ![Blockchain](images/platform_blockchain.png "Blockchain") en la barra lateral del menú.
    6. Pulse **Correlacionar datos de dispositivo**.
-   7. Seleccione el tipo de dispositivo para el que desea almacenar datos de dispositivos en el blockchain y el nombre de suceso para los sucesos que desea almacenar.Pulse **Siguiente**.
+   7. Seleccione el tipo de dispositivo para el que desea almacenar datos de dispositivos en el blockchain y el nombre de suceso para los sucesos que desea almacenar. Pulse **Siguiente**.
    8. Seleccione el nombre de entramado para el entramado que ha creado anteriormente. Pulse **Siguiente**.
    9. Escriba la información siguiente y haga clic en **Siguiente**:
      - ID de contrato: Pegar en el ID de contrato de 128 caracteres que ha guardado al desplegar el contrato.
      - Nombre de contrato: Especifique un nombre para identificar el contrato en {{site.data.keyword.iot_short_notm}}.
-     
+
      **Consejo:** Para encontrar los tipos de sucesos para un dispositivo, vaya a la página **Dispositivos** y pulse el nombre de la imagen para abrir la página de detalles de dispositivos. Desplácese hacia abajo en la sección **Información de sensor** para ver una lista de los sucesos y de los puntos de datos disponibles para el dispositivo.
 
    11. Correlacionar las propiedades de dispositivos disponibles en los parámetros de contratos.   
@@ -299,7 +298,7 @@ Para descargar los contratos de ejemplo:
     <li>  Temperatura: float64  
     <li>  Transportista: serie   
     </ul>  
-    Para obtener más información sobre cómo correlacionar datos de dispositivos en contratos, consulte el [Ejemplo de correlación de datos](https://github.com/ibm-watson-iot/blockchain-samples/wiki/Data-mapping-example) en la wiki de ejemplos de IoT Blockchain en GitHub.
+Para obtener más información sobre cómo correlacionar datos de dispositivos en contratos, consulte el [Ejemplo de correlación de datos ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/blockchain-samples/wiki/Data-mapping-example){: new_window} en la wiki de ejemplos de IoT Blockchain en GitHub.
    12. En la página de resumen, verifique que la información es correcta.
    13. Los datos de dispositivos para la correlación de contrato se muestran en la página Blockchain.
 
@@ -307,7 +306,7 @@ Para descargar los contratos de ejemplo:
 Para probar el contrato inteligente, realice una prueba completa creando un dispositivo en {{site.data.keyword.iot_short_notm}}, conectando el dispositivo a {{site.data.keyword.iot_short_notm}}, configurando IoT Blockchain para conectarse al entramado de blockchain, y configurando {{site.data.keyword.iot_short_notm}} para correlacionar y almacenar los mensajes de dispositivos en el blockchain. Al utilizar la consola de {{site.data.keyword.blockchainfull_notm}}, puede ver el blockchain para ver los datos del dispositivo del libro mayor. Si el contrato da soporte a la función readAsset(), puede utilizar el IU de supervisión para ver el blockchain y ver los datos de dispositivo desde su propio caso de ejemplo almacenado de forma indeleble en un blockchain.
 
 5. Configurar la IU de supervisión para conectarse a {{site.data.keyword.blockchainfull_notm}}.  
- **Consejo:** Si no tiene instalado el IU de supervisión en el entorno local, puede hacerlo ahora. Siga las instrucciones del documento readme de IU de supervisión que está disponible en el directorio de GitHub de [IU de supervisión de blockchain](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui).  
+ **Consejo:** Si no tiene instalado el IU de supervisión en el entorno local, puede hacerlo ahora. Siga las instrucciones del documento readme de IU de supervisión que está disponible en el directorio de GitHub de [IU de supervisión de blockchain ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window}.  
  Acceda a los valores de configuración pulsando el botón **CONFIGURATION**.   
  Utilice la siguiente información para conectarse a un contrato:
 <table>
