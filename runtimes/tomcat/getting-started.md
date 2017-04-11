@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-04"
 
 ---
 
@@ -158,7 +158,7 @@ Create a Tomcat server definition:
 Run your application locally on the Apache server:
   - Right click on the `GetStartedTomcat` sample and select `Run As` -> `Run on Server` option.
   - Find and select the localhost Tomcat server and press Finish.
-  - In a few seconds, your application should be running at http://localhost:9080/TomcatHelloWorldApp/
+  - In a few seconds, your application should be running at http://localhost:8080/TomcatHelloWorldApp/
 
 Create a {{site.data.keyword.Bluemix_notm}} server definition:
   - In the `Servers` view, right-click -> `New` -> `Server`.
@@ -173,9 +173,6 @@ Run your application on {{site.data.keyword.Bluemix_notm}}:
   - In a few minutes, your application should be running at the URL you chose.
 
 Now you have run your code locally and on the cloud!
-
-The `IBM Eclipse Tools for Bluemix` provides many powerful features such as incremental updates, remote debugging, pushing packaged servers, etc. [Learn more](/docs/manageapps/eclipsetools/eclipsetools.html)
-{: tip}
 
 ## 7. Add a database
 {: #add_database}
@@ -209,7 +206,7 @@ We're now going to update your local code to point to this database. We'll store
 
 4. Restart Tomcat server in Eclipse from the `Servers` view.
 
-  Refresh your browser view at: http://localhost:9080/GetStartedTomcat/. Any names you enter into the app will now get added to the database.
+  Refresh your browser view at: http://localhost:8080/GetStartedTomcat/. Any names you enter into the app will now get added to the database.
 
   Your local app and the {{site.data.keyword.Bluemix_notm}} app are sharing the database.  View your {{site.data.keyword.Bluemix_notm}} app at the URL listed in the output of the push command from above.  Names you add from either app should appear in both when you refresh the browsers.
 

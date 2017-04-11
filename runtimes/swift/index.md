@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-19"
+lastupdated: "2017-03-23"
 ---
 
 {:shortdesc: .shortdesc}
@@ -51,14 +51,14 @@ $ cat .swift-version
 
 Because there are frequent Swift language updates, you should always include a `.swift-version` file so that your app is "pinned" to the Swift version your application is known to work with.
 
-Please note that you can specify any valid version of Swift in your `.swift-version` file. These alternate versions must match the naming of and are pulled directly from [Swift.org](https://swift.org/download/). While using a non-cache version will take a bit longer to provision, there is no runtime performance difference of your Swift app.
+Please note that you can specify any valid version of Swift in your `.swift-version` file. These alternate versions must match the naming of and are pulled directly from [Swift.org ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://swift.org/download/). While using a non-cache version will take a bit longer to provision, there is no runtime performance difference of your Swift app.
 
 The default swift_buildpack in {{site.data.keyword.Bluemix}} is used if your app's root directory contains a `Package.swift` file.  If you'd like to use use an alternate buildpack, you must specify this by adding a `buildpack: {buildpackUrl}` entry to your app's manifest.yml file. Alternatively, you can define this at deployment time, using the `cf push -b {buildpackUrl}` command argument.
 
 
 ## Developer Environments
 
-Developers have several options when creating server-side applications with Swift. Those using a Apple's MacOS device might prefer to use the Xcode IDE, although this is not a requirement.  Swift-based apps that will be deployed and run on {{site.data.keyword.Bluemix}} can use any programming editor or IDE.  Syntax highlighting and linting for Swift are available for many popular editors. The Swift REPL command line tool included in the binaries from [Swift.org](https://swift.org/), allow for local compilation and testing prior to deployment to {{site.data.keyword.Bluemix}}.
+Developers have several options when creating server-side applications with Swift. Those using a Apple's MacOS device might prefer to use the Xcode IDE, although this is not a requirement.  Swift-based apps that will be deployed and run on {{site.data.keyword.Bluemix}} can use any programming editor or IDE.  Syntax highlighting and linting for Swift are available for many popular editors. The Swift REPL command line tool included in the binaries from [Swift.org ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://swift.org/), allow for local compilation and testing prior to deployment to {{site.data.keyword.Bluemix}}.
 
 For MaxOS users, you can use the [IBM Cloud Tools for Swift](http://cloudtools.bluemix.net/) which simplifies the creation, deployment, management, and control of server-side Swift apps running on {{site.data.keyword.Bluemix}}.  
 
@@ -96,5 +96,5 @@ There are also other online tools available from IBM for the Swift developer.
 * [Kitura Starter app for Bluemix](https://github.com/IBM-Bluemix/Kitura-Starter)
 * [IBM Bluemix buildpack for Swift](https://github.com/IBM-Swift/swift-buildpack)
 * [IBM Bluemix buildpack for Swift release notes](https://github.com/IBM-Swift/swift-buildpack/releases)
-* [Swift.org](https://swift.org/)
-* [Swift language documentation](https://swift.org/documentation)
+* [Swift.org ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://swift.org/)
+* [Swift language documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://swift.org/documentation)

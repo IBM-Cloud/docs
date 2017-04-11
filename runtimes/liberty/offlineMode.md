@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-07"
+lastupdated: "2017-03-23"
 
 ---
 
@@ -19,12 +19,12 @@ to acquire artifacts required by the application.  The following are the externa
 [Bluemix Local](/docs/local/index.html#local) environments these sites may need to be *whitelisted*.
 
 * https://download.run.pivotal.io, and https://java-buildpack.cloudfoundry.org are used to access components for:
-  * [AppDynamics agent](https://www.appdynamics.com/)
-  * [MariaDB JDBC driver](https://mariadb.com/)
+  * [AppDynamics agent ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.appdynamics.com/)
+  * [MariaDB JDBC driver ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://mariadb.com/)
   * [New Relic agent](newRelic.html)
   * [OpenJDK](customizingJRE.html#OpenJDK)
-  * [PostgreSQL JDBC driver](https://www.postgresql.org)
-* https://dl.zeroturnaround.com/jrebel/ is used to access components for [JRebel](https://zeroturnaround.com/software/jrebel/).
+  * [PostgreSQL JDBC driver ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.postgresql.org)
+* https://dl.zeroturnaround.com/jrebel/ is used to access components for [JRebel ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://zeroturnaround.com/software/jrebel/).
 * https://download.ruxit.com/agent/paas/cloudfoundry/java is used to access components for [Dynatrace Ruxit agent](dynatrace.html).
 * http://downloads.dynatracesaas.com/cloudfoundry/buildpack/java/  is used to access the [Dynatrace agent](dynatrace.html).
 

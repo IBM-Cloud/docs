@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-04"
 
 ---
 
@@ -46,7 +46,7 @@ cd get-started-swift
 ## 2. Run the app locally
 {: #run_locally}
 
-Once you have installed the Swift compiler and cloned this Git repository, you can now compile and run the application. Go to the root folder of this repository on your system and issue the following command:
+Once you have installed the Swift compiler and cloned this Git repository, you can now compile and run the application. Go to the root directory of this repository on your system and issue the following command:
 ```
 swift build
 ```
@@ -180,9 +180,9 @@ Build and run your application locally.
 swift build  
  ```
  {: pre}
- 
+
   ```
-.build/debug/kitura-helloworld 
+.build/debug/kitura-helloworld
  ```
  {: pre}
 

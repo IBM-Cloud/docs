@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-07"
+lastupdated: "2017-03-22"
 
 ---
 
@@ -26,7 +26,7 @@ A container managed service is a service that is managed by the Liberty run time
 This process is referred to as automatic configuration.
 The Liberty buildpack provides automatic configuration for the following service types:
 
-* [ClearDB MySQL Database](http://www.cleardb.com/developers)
+* [ClearDB MySQL Database ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.cleardb.com/developers)
 * [MySQL](/docs/services/MySQL/index.html#MySQL)
 * [ElephantSQL](docs/services/ElephantSQL/index.html)
 * [PostgreSQL](/docs/services/PostgreSQL/index.html#PostgreSQL)

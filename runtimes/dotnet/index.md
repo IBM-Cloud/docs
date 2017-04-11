@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-25"
+lastupdated: "2017-04-06"
 ---
 
 {:shortdesc: .shortdesc}
@@ -40,16 +40,15 @@ This buildpack supports the following versions, those marked as deprecated will 
 
 | .NET SDK version        | Default |
 |-------------------------|---------|
-| 1.0.0-preview2-003131   |   No    |
-| 1.0.0-preview2-003156   |   Yes   |
+| 1.0.0-preview2-003156   |   No    |
 | 1.0.0-preview2-1-003177 |   No    |
 
 #### MSBuild SDK tooling
 
 | .NET SDK version        | Default |
 |-------------------------|---------|
-| 1.0.0-preview3-004056   |   No    |
 | 1.0.0-preview4-004233   |   No    |
+| 1.0.1                   |   Yes   |
 
 #### .NET Core runtime versions
 
@@ -57,23 +56,25 @@ This buildpack supports the following versions, those marked as deprecated will 
 |---------------------------|--------------|---------|
 | 1.0.0                     | LTS          |   No    |
 | 1.0.1                     | LTS          |   No    |
-| 1.0.3                     | LTS          |   Yes   |
+| 1.0.3                     | LTS          |   No    |
+| 1.0.4                     | LTS          |   Yes   |
 | 1.1.0                     | Current      |   No    |
+| 1.1.1                     | Current      |   No    |
 
-### Specifying the .NET CLI version
+### Specifying the .NET SDK version
 
-Control the .NET CLI version with an optional global.json in the application's root directory. For example:
+Control the .NET SDK version with an optional global.json in the application's root directory. For example:
 ```
    {
       "projects": [ "src" ],
       "sdk": {
-        "version": "1.0.0-preview2-003156"
+        "version": "1.0.1"
       }
    }
 ```
 {: codeblock}
 
-If not specified, the project.json tooling for the latest Long-term-support (LTS) runtime is used.  To use MSBuild tooling, specify one of the MSBuild versions listed above.
+If not specified, the MSBuild tooling for the latest Long-term-support (LTS) runtime is used.  To use project.json tooling, you can specify one of the project.json versions listed above but should also keep in mind that these versions will be removed in the future.
 
 ## Customizing NuGet package sources
 {: #customizing_nuget_package_sources}
@@ -315,7 +316,7 @@ The buildpack will automatically add this path to the `LD_LIBRARY_PATH` environm
 
 **A**: If you are receiving a similar message when pushing your application it is most likely caused by your application exceeding either the memory or disk quota limits.  This can be resolved by increasing the quotas for your application.
 
-**Q**: My application fails to deploy with the message: `Failed to compress droplet: signal: broken pipe`.  How can I fix this?
+**Q**: My application fails to deploy with the message: `Failed to compress droplet: signal: broken pipe` or `No space left on device`.  How can I fix this?
 
 **A**: Projects pushed from source code which contain a large number of NuGet package dependencies can sometimes cause this error when the NuGet package cache is enabled.  Set the `CACHE_NUGET_PACKAGES` environment variable to `false` to disable the cache.
 

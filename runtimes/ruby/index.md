@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-25"
+lastupdated: "2017-03-23"
 
 ---
 
@@ -65,4 +65,4 @@ deploy the app.
 ## general
 {: #general notoc}
 * [Cloud Foundry buildpack for Ruby](https://github.com/cloudfoundry/cf-buildpack-ruby)
-* [Ruby on Rails documentation](http://api.rubyonrails.org/)
+* [Ruby on Rails documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://api.rubyonrails.org/)

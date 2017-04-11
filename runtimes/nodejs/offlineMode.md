@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-06"
+lastupdated: "2017-04-11"
 
 ---
 
@@ -21,7 +21,7 @@ situations such as with [Bluemix Dedicated](/docs/dedicated/index.html#dedicated
 or have more explicit control over, accessing sites external to Bluemix.  
 {: shortdesc}
 
-The following are the external sites that the node.js buldpack can access.  In [Bluemix Dedicated](/docs/dedicated/index.html#dedicated) and
+The following are the external sites that the node.js buildpack can access.  In [Bluemix Dedicated](/docs/dedicated/index.html#dedicated) and
 [Bluemix Local](/docs/local/index.html#local) Bluemix environments these sites may need to be *whitelisted*.
 
 * http://nodejs.org/ may be used to ascertain available node engine versions.

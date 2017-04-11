@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-07"
+lastupdated: "2017-03-23"
 
 ---
 
@@ -74,7 +74,7 @@ For an application running in a DEA node, use the "cf files" functionality to vi
   {: codeblock}
 
 * To download a dump file, run the following commands:
-  
+
     1. Get application GUID
 
       ```
@@ -107,7 +107,7 @@ For an application running in a Diego cell, use the "cf ssh" functionality to vi
   ```
   {: codeblock}
 
-It is also possible to use `scp` and other similar tools to view and download the dump files. Refer to [Accessing Apps with SSH](https://docs.cloudfoundry.org/devguide/deploy-apps/ssh-apps.html) for more information.
+It is also possible to use `scp` and other similar tools to view and download the dump files. Refer to [Accessing Apps with SSH  ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/devguide/deploy-apps/ssh-apps.html) for more information.
 
 # rellinks
 {: #rellinks notoc}
@@ -115,4 +115,3 @@ It is also possible to use `scp` and other similar tools to view and download th
 {: #general notoc}
 * [Liberty runtime](index.html)
 * [Liberty Profile Overview](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
-

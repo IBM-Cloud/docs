@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-25"
+lastupdated: "2017-03-23"
 
 ---
 
@@ -59,7 +59,7 @@ The Tomcat runtime [server.xml](https://github.com/cloudfoundry/java-buildpack/b
 {: codeblock}
 
 More configuration options for the RemoteIpValve can be found in the
-[Tomcat documentation](https://tomcat.apache.org/tomcat-8.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html).
+[Tomcat documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://tomcat.apache.org/tomcat-8.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html).
 
 # rellinks
 {: #rellinks notoc}
