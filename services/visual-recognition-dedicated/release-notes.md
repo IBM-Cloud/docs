@@ -8,7 +8,7 @@ lastupdated: "2017-02-03"
 
 {:new_window: target="_blank"}
 
-# Release Notes for Visual Recognition
+# Release Notes for Visual Recognition Dedicated
 The following new features and changes to the service are available.
 
 ## 31 March 2017
