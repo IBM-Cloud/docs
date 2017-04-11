@@ -1,0 +1,16 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="compose-for-etcd" audience="service"}
+Compose For etcd
+
+	{: .navgroup id="learn"}
+	index.md
+
+	{: .topicgroup }
+	Related links
+		[Sample Node.js app](https://github.com/IBM-Bluemix/compose-etcd-helloworld-nodejs)
+		[Compose Help](https://help.compose.com)
+		[Compose Articles](https://www.compose.com/articles/)
+
+	{: .navgroup-end}
