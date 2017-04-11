@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-11-30"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -343,12 +343,12 @@ gwClient.api().getDevicesConnectedThroughGateway(gatewayType, gatewayId);
 ## 範例
 {: #samples}
 
-我們提供了數個範例，以協助您將閘道及閘道後方的裝置連接至 {{site.data.keyword.iot_short_notm}} 實例。這些範例使用 {{site.data.keyword.iot_short_notm}} Java 用戶端程式庫，並位於[閘道範例 GitHub 儲存庫](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples)。
+我們提供了數個範例，以協助您將閘道及閘道後方的裝置連接至 {{site.data.keyword.iot_short_notm}} 實例。這些範例使用 {{site.data.keyword.iot_short_notm}} Java 用戶端程式庫，並位於[閘道範例 GitHub 儲存庫 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples){: new_window} 中。
 
 ## 秘訣
 {: #recipes}
 
 | 秘訣     | 說明|
 |----------------|----------------
-|[將裝置當作閘道連接至 {{site.data.keyword.iot_short_notm}}](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-gateway-to-watson-iot-platform/)| GitHub 專案及詳細指示，說明如何將 Raspberry Pi 閘道及閘道後方的 Arduino Uno 裝置連接至 {{site.data.keyword.iot_short_notm}}。
-|[Raspberry Pi 在 {{site.data.keyword.iot_short_notm}} 中作為受管理閘道](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/)|前一個閘道秘訣的延伸，說明如何連接在 {{site.data.keyword.iot_short_notm}} 中當作受管理裝置的 Raspberry Pi 閘道以及如何執行裝置管理作業。
+|[將裝置當作閘道連接至 {{site.data.keyword.iot_short_notm}} ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-gateway-to-watson-iot-platform/){: new_window}| GitHub 專案及詳細指示，說明如何將 Raspberry Pi 閘道及閘道後方的 Arduino Uno 裝置連接至 {{site.data.keyword.iot_short_notm}}。
+|[Raspberry Pi 在 {{site.data.keyword.iot_short_notm}} 中作為受管理閘道 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/){: new_window}。|前一個閘道秘訣的延伸，說明如何連接在 {{site.data.keyword.iot_short_notm}} 中當作受管理裝置的 Raspberry Pi 閘道以及如何執行裝置管理作業。

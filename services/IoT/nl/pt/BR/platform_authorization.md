@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-17"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -21,8 +21,7 @@ Para conectar seu aplicativo ao {{site.data.keyword.iot_full}}, deve-se conectar
 {: #api-key}
 As chaves API (interface de programação de aplicativos) são usadas ao conectar aplicativos à sua organização do {{site.data.keyword.iot_short_notm}}. Os aplicativos requerem uma chave API (interface de programação de aplicativos) para se conectarem a uma organização e um token de autenticação exclusivo que deve ser usado com essa chave API.  
 
-Para obter mais informações sobre as conexões de aplicativo, consulte [Conectividade de MQTT para aplicativos ![Ícone de link
-externo](../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/applications/mqtt.html){: new_window} na documentação do desenvolvedor.
+Para obter mais informações sobre as conexões de aplicativo, veja [Conectividade de MQTT para aplicativos ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/applications/mqtt.html){: new_window} na documentação do desenvolvedor.
 
 Para criar um novo par de chave API (interface de programação de aplicativos) e token de autenticação:  
 1.	No painel do {{site.data.keyword.iot_short_notm}}, acesse **Aplicativos > Chaves API (interface de programação de aplicativos)**.  

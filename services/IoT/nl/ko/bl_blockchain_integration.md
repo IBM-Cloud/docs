@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-17"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -43,17 +43,17 @@ lastupdated: "2017-02-17"
 ## 시작하기 전에
 {: #byb}
 
-- {{site.data.keyword.iot_short_notm}}, 일반 블록체인 개념과의 연관성 및 해당 역할에 대한 개요를 IBM.com의 [{{site.data.keyword.iot_short_notm}}(![외부 링크 아이콘](../../icons/launch-glyph.svg))](http://www.ibm.com/blockchain/){: new_window}에서 개요를 파악하십시오.
-- 조직에 대해 [{{site.data.keyword.iot_short_notm}} 블록체인 통합을 사용하십시오](reference/extensions/index.html#blockchain). 
+- IBM.com의 [{{site.data.keyword.iot_short_notm}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.ibm.com/blockchain/){: new_window}에서 {{site.data.keyword.iot_short_notm}} 개요, 일반 블록체인 개념과의 연관성 및 수행할 수 있는 작업을 확인하십시오. 
+- [조직에 대해 {{site.data.keyword.iot_short_notm}} 블록체인 통합을 사용으로 설정](reference/extensions/index.html#blockchain)하십시오. 
 - 블록체인 원장에 기록할 데이터를 생성하는 디바이스를 연결하십시오.
   
 [디바이스 연결](iotplatform_task.html) 주제의 지시사항에 따라 디바이스를 연결하십시오. 
-- 모니터링 UI를 설치하십시오. 모니터링 UI는 {{site.data.keyword.iot_short_notm}} 및 블록체인 패브릭 간의 연결을 확인하는 데 사용됩니다. [Blockchain Monitoring UI ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window} GitHub 디렉토리에서 사용 가능한 모니터링 UI readme 문서의 지시사항을 따르십시오.
+- 모니터링 UI를 설치하십시오. 모니터링 UI는 {{site.data.keyword.iot_short_notm}} 및 블록체인 패브릭 간의 연결을 확인하는 데 사용됩니다. [블록체인 모니터링 UI ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window} GitHub 디렉토리에서 사용 가능한 모니터링 UI Readme 문서의 지시사항을 따르십시오. 
 
 ### IBM 기본 시나리오를 사용하여 빨리 시작하기
 
 {{site.data.keyword.iot_short_notm}} 블록체인 통합의 테스트를 빠르게 시작할 수 있도록 IBM 제공 패브릭에 연결하고 Node-RED 샘플 디바이스를 IBM 제공 샘플 계약에 맵핑할 수 있습니다. 이 시나리오에 필요한 단계는 이 주제에서 **IBM 기본 시나리오**라는 레이블이 지정되어 있습니다.   
-**중요:** 참고로, 샘플 블록체인의 모든 사용자는 IBM 제공 샘플 블록체인 원장 및 모든 해당 데이터를 볼 수 있습니다. 그러므로 IBM 제공 샘플 블록체인에는 민감한 정보를 저장하지 마십시오. 또한 각 피어에 대한 연결 정보를 포함하여 샘플 및 거래선 계약을 지원하는 샘플 패브릭은 변경될 수 있습니다. 연결 세부사항은 Watson IoT 블록체인 커뮤니티의 [IoT 블록체인 연결 정보 ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} 위키 페이지에서 제공됩니다.
+**중요:** 참고로, 샘플 블록체인의 모든 사용자는 IBM 제공 샘플 블록체인 원장 및 모든 해당 데이터를 볼 수 있습니다. 그러므로 IBM 제공 샘플 블록체인에는 민감한 정보를 저장하지 마십시오. 또한 각 피어에 대한 연결 정보를 포함하여 샘플 및 거래선 계약을 지원하는 샘플 패브릭은 변경될 수 있습니다. 연결 세부사항은 Watson IoT 블록체인 커뮤니티의 [IoT 블록체인 연결 정보 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} 위키 페이지를 참조하십시오. 
 
 IBM 제공 기본 {{site.data.keyword.iot_short_notm}} 블록체인 통합 환경은 다음 컴포넌트로 구성되어 있습니다. 
 - {{site.data.keyword.Bluemix_notm}}:
@@ -120,7 +120,7 @@ IBM 제공 기본 {{site.data.keyword.iot_short_notm}} 블록체인 통합 환�
 3. 블록체인 구성 섹션에서 **완료**를 클릭하여 패브릭 정보를 저장하십시오. 
 
 
-**IBM 기본 시나리오:** IBM 제공 패브릭에 연결하려면 Watson IoT 블록체인 커뮤니티의 [IoT 블록체인 연결 정보 ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} 위키 페이지에서 제공된 샘플 계약의 연결 세부사항을 사용하십시오. 필요하면 IBM 블록체인 담당자에게 문의하여 커뮤니티에 대한 액세스 권한을 얻으십시오. 
+**IBM 기본 시나리오:** IBM 제공 패브릭에 연결하려면 Watson IoT 블록체인 커뮤니티의 [IoT 블록체인 연결 정보 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} 위키 페이지에 제공되는 샘플 계약에 대한 연결 세부사항을 사용하십시오. 필요하면 IBM 블록체인 담당자에게 문의하여 커뮤니티에 대한 액세스 권한을 얻으십시오. 
 
 
 ## 스마트 계약에 디바이스 데이터 맵핑
@@ -157,13 +157,13 @@ IBM 제공 기본 {{site.data.keyword.iot_short_notm}} 블록체인 통합 환�
 </tr>
 </tbody>
 </table>
-**IBM 기본 시나리오:** 사전 배치된 샘플 스마트 계약을 사용하면 블록체인 원장에 데이터 점 값을 저장할 수 있도록 특정 계약 속성에 디바이스 데이터 점을 맵핑할 수 있습니다. 샘플 계약을 사용하면 보다 고급의 거래선 계약을 시도하거나 자체 계약을 쓰기 전에 디바이스 데이터 맵핑을 테스트할 수 있습니다. 계약 ID는 Watson IoT 블록체인 커뮤니티의 [IoT 블록체인 연결 정보 ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} 위키 페이지에서 제공됩니다. 필요하면 IBM 블록체인 담당자에게 문의하여 커뮤니티에 대한 액세스 권한을 얻으십시오.
+**IBM 기본 시나리오:** 사전 배치된 샘플 스마트 계약을 사용하면 블록체인 원장에 데이터 점 값을 저장할 수 있도록 특정 계약 속성에 디바이스 데이터 점을 맵핑할 수 있습니다. 샘플 계약을 사용하면 보다 고급의 거래선 계약을 시도하거나 자체 계약을 쓰기 전에 디바이스 데이터 맵핑을 테스트할 수 있습니다. 계약 ID는 Watson IoT 블록체인 커뮤니티의 [IoT 블록체인 연결 정보 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} 위키 페이지에 제공됩니다. 필요하면 IBM 블록체인 담당자에게 문의하여 커뮤니티에 대한 액세스 권한을 얻으십시오.
 
 
  8. 디바이스 특성을 계약 매개변수에 맵핑하기 위한 라우트를 작성하십시오.  
  계약에서 사용 가능한 매개변수를 가져옵니다. 각 매개변수마다 대응되는 이벤트 특성을 입력하십시오.  
  **중요:** 디바이스 메시지의 데이터 점에 접두부로 추가된 `d.`는 포함하지 마십시오.
- **IBM 기본 시나리오:** IBM 제공 계약을 사용 중인 경우에는 Watson IoT 블록체인 커뮤니티의 [데이터 맵핑 ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Data%20Mapping){: new_window} 위키 페이지에 나열된 다음 매개변수를 맵핑하십시오. 필요하면 IBM 블록체인 담당자에게 문의하여 커뮤니티에 대한 액세스 권한을 얻으십시오. 
+ **IBM 기본 시나리오:** IBM 제공 계약을 사용 중인 경우 Watson IoT 블록체인 커뮤니티의 [데이터 맵핑 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Data%20Mapping){: new_window} 위키 페이지에 나열되는 다음 매개변수를 맵핑하십시오. 필요하면 IBM 블록체인 담당자에게 문의하여 커뮤니티에 대한 액세스 권한을 얻으십시오. 
  9. 요약 페이지에서 모든 정보가 올바르게 입력되었는지 확인하십시오. 
  10. 디바이스 데이터 대 계약 맵핑이 블록체인 페이지에 표시됩니다. 
 
@@ -173,7 +173,7 @@ IBM 제공 기본 {{site.data.keyword.iot_short_notm}} 블록체인 통합 환�
 {: #test_simple}
 
 IBM 제공 패브릭에 연결되었으며 디바이스 데이터를 샘플 계약에 맵핑한 경우에는 디바이스에서 블록체인 원장으로의 종단간 데이터 플로우를 테스트할 수 있습니다. IoT 블록체인 모니터링 UI를 사용하면 자산에 대한 블록체인 활동 및 데이터를 볼 수 있습니다.   
-**팁:** 모니터링 UI가 아직 로컬 환경에 설치되지 않았으면 지금 이를 설치할 수 있습니다. [Blockchain Monitoring UI ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window} GitHub 디렉토리에서 사용 가능한 모니터링 UI readme 문서의 지시사항을 따르십시오.  
+**팁:** 모니터링 UI가 아직 로컬 환경에 설치되지 않았으면 지금 이를 설치할 수 있습니다. [블록체인 모니터링 UI ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window} GitHub 디렉토리에서 사용 가능한 모니터링 UI Readme 문서의 지시사항을 따르십시오.   
 1. {{site.data.keyword.iot_short_notm}}에 연결하도록 모니터링 UI를 구성하십시오.   
 모니터링 UI에서 **구성**을 클릭하여 모니터링 UI 연결을 구성하십시오. 
  <table>
@@ -202,7 +202,7 @@ IBM 제공 패브릭에 연결되었으며 디바이스 데이터를 샘플 계�
 </tr>
 </tbody>
 </table>
-**IBM 기본 시나리오:** 기본 또는 거래선 계약에 연결하도록 모니터링 UI를 구성하려면 Watson IoT 블록체인 커뮤니티의 [IoT 블록체인 연결 정보 ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} 위키 페이지에서 제공하는 연결 세부사항을 사용하십시오. 필요하면 IBM 블록체인 담당자에게 문의하여 커뮤니티에 대한 액세스 권한을 얻으십시오.
+**IBM 기본 시나리오:** 기본 또는 거래선 계약에 연결하도록 모니터링 UI를 구성하려면 Watson IoT 블록체인 커뮤니티의 [IoT 블록체인 연결 정보 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} 위키 페이지에 제공되는 연결 세부사항을 사용하십시오. 필요하면 IBM 블록체인 담당자에게 문의하여 커뮤니티에 대한 액세스 권한을 얻으십시오.
 2. Node-RED 플로우 편집기에서 CON123 노드의 단추를 클릭하여 디바이스 데이터를 삽입하고 이를 {{site.data.keyword.iot_short_notm}}에 메시지로서 전송하며 단순 계약에 의해 {{site.data.keyword.iot_short_notm}} 원장에 기록되도록 하십시오.   
 **팁:** 연속적인 데이터 플로우를 가져오려면, 삽입 노드를 두 번 클릭하고 반복 매개변수를 `interval`로 설정한 후에 적합한 간격(예: 매 1분마다)을 구성하십시오. 
 3. 모니터링 UI에서, 디바이스 데이터가 블록체인 블록에서 예상한 대로 표시되는지 확인하십시오.   

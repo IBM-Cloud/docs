@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-03"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -18,52 +18,52 @@ lastupdated: "2017-02-03"
 用戶端程式庫提供建置及開發程式碼所需的工具和檔案，用來整合及連接您的裝置與 {{site.data.keyword.iot_full}} 上的應用程式。
 {:shortdesc}
 
-我們對於支援的每一種程式設計語言都提供了用戶端程式庫，您可以自 [{{site.data.keyword.iot_short_notm}} GitHub 儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot){:new_window} 或從下列直接鏈結存取：
+我們對於每一種受支援的程式設計語言都提供了用戶端程式庫，您可以從 [{{site.data.keyword.iot_short_notm}} GitHub 儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot){:new_window} 或從下列直接鏈結存取這些用戶端程式庫：
 
 ## C++
 
-- [用戶端程式庫 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-cpp){:new_window}
-- [範例 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-cpp/tree/master/samples){:new_window}
-- [其他文件 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-cpp/blob/master/README.md){:new_window}
+- [用戶端程式庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-cpp){:new_window}
+- [範例 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-cpp/tree/master/samples){:new_window}
+- [其他文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-cpp/blob/master/README.md){:new_window}
 
 ## C Sharp
-- [用戶端程式庫 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-csharp){:new_window}
-- [範例 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-csharp/tree/master/sample){:new_window}
-- [其他文件 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-csharp/blob/master/README.md){:new_window}
+- [用戶端程式庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-csharp){:new_window}
+- [範例 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-csharp/tree/master/sample){:new_window}
+- [其他文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-csharp/blob/master/README.md){:new_window}
 
 ## 嵌入式 C
 
-- [用戶端程式庫 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-embeddedc){:new_window}
-- [範例 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-embeddedc/tree/master/samples){:new_window}
-- [其他文件 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-embeddedc/blob/master/README.md){:new_window}
+- [用戶端程式庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-embeddedc){:new_window}
+- [範例 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-embeddedc/tree/master/samples){:new_window}
+- [其他文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-embeddedc/blob/master/README.md){:new_window}
 
 
 ## Java™
-- [用戶端程式庫 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-java){:new_window}
-- [範例 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-java#samples){:new_window}
-- [其他文件 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-java/blob/master/README.md){:new_window}
+- [用戶端程式庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-java){:new_window}
+- [範例 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-java#samples){:new_window}
+- [其他文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-java/blob/master/README.md){:new_window}
 
 ## mBed C++
 
-- [用戶端程式庫 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){:new_window}
-- [範例 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/){:new_window}
-- [其他文件 ![外部鏈結圖示](../../icons/launch-glyph.svg)](http://iotf.readthedocs.io/en/latest/devices/libraries/mbedcpp.html){:new_window}
+- [用戶端程式庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){:new_window}
+- [範例 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/){:new_window}
+- [其他文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://iotf.readthedocs.io/en/latest/devices/libraries/mbedcpp.html){:new_window}
 
 ## Node.js
-- [用戶端程式庫 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-nodejs){:new_window}
-- [範例 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-nodejs/tree/master/samples){:new_window}
-- [其他文件 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-nodejs/blob/master/README.md){:new_window}
+- [用戶端程式庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-nodejs){:new_window}
+- [範例 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-nodejs/tree/master/samples){:new_window}
+- [其他文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-nodejs/blob/master/README.md){:new_window}
 
 ## Node-RED
-- [用戶端程式庫 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-nodered){:new_window}
-- [範例 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-nodered/tree/master/samples/rpi){:new_window}
-- [Node-RED 組織網站 ![外部鏈結圖示](../../icons/launch-glyph.svg)](http://nodered.org/){:new_window}
-- [其他文件 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-nodered/blob/master/README.md){:new_window}
+- [用戶端程式庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-nodered){:new_window}
+- [範例 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-nodered/tree/master/samples/rpi){:new_window}
+- [Node-RED 組織網站 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示 ")](http://nodered.org/){:new_window}
+- [其他文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-nodered/blob/master/README.md){:new_window}
 
 ## Python
-- [用戶端程式庫 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-python){:new_window}
-- [範例 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-python/tree/master/samples){:new_window}
-- [其他文件 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-python/blob/master/README.rst){:new_window}
+- [用戶端程式庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-python){:new_window}
+- [範例 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-python/tree/master/samples){:new_window}
+- [其他文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-python/blob/master/README.rst){:new_window}
 
 ## 開始使用 {{site.data.keyword.iot_short}} 開發
 

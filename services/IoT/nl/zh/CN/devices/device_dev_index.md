@@ -1,7 +1,9 @@
-----
+---
 
 copyright:
-  years: 2015, 2016, 2017
+  years: 2015, 2017
+
+lastupdated: "2017-03-14"
 
 ---
 
@@ -13,9 +15,6 @@ copyright:
 
 # 在 {{site.data.keyword.iot_short_notm}} 上开发设备
 {: #device_dev_index}
-
-上次更新时间：2016 年 11 月 26 日
-{: .last-updated}
 
 设备是连接到因特网并且要向云发送数据或从云接收数据的任何对象。可以使用设备将事件信息（例如，传感器读数）发送到云，也可以使用设备接受来自云中应用程序的命令。
 
@@ -56,7 +55,7 @@ copyright:
 
 如果找不到合适的 {{site.data.keyword.iot_short_notm}} 编程指南，您可以自行编写程序，并使用 MQTT 或 HTTP 协议将设备连接到 {{site.data.keyword.iot_short_notm}}。
 
-MQTT 是一种开放标准，由 OASIS 标准化组织进行管理，并通过了 ISO 国际认证。有关更多信息，请参阅 [OASIS Message Queuing Telemetry Transport](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=mqtt)。
+MQTT 是一种开放标准，由 OASIS 标准化组织进行管理，并通过了 ISO 国际认证。有关更多信息，请参阅 [OASIS Message Queuing Telemetry Transport ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=mqtt){: new_window}。
 
 提供有各种各样的 MQTT 客户机库，适用于众多不同的系统，包括以下环境：
 - http://www.eclipse.org/paho/

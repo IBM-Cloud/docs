@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-17"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -196,4 +196,4 @@ lastupdated: "2017-02-17"
 
 太好了！您現在可以看到裝置的即時資料！
 
-如需如何顯示即時裝置資料的逐步指示，請參閱[在新 Watson IoT 儀表板中配置板及卡片 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/configuring-the-cards-in-the-new-watson-iot-dashboard/){: new_window} 秘訣。
+如需如何顯示即時裝置資料的逐步指示，請參閱[在新 Watson IoT 儀表板中配置板及卡片 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/tutorials/configuring-the-cards-in-the-new-watson-iot-dashboard/){: new_window} 秘訣。

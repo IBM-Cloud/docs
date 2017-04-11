@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2017-02-03"
+  years: 2015, 2017
+lastupdated: "2017-03-15"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -39,7 +39,7 @@ Jasper は SIM デバイスの管理プラットフォームです。Jasper は 
 以下に示す構成手順を実行すると、それ以降、Jasper 接続デバイスのデバイス・ドリルダウンの中で、サポートされている操作にアクセスできるようになります。
 
 ### Jasper 用の REST API
-Jasper 用の REST API にアクセスする場合は、[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部リンク・アイコン](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window} の資料にある Jasper 拡張のセクションを参照してください。
+Jasper 用の REST API にアクセスする場合は、[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window} の資料にある Jasper 拡張のセクションを参照してください。
 
 ### Jasper 用の構成
 
@@ -93,7 +93,7 @@ AT&T 拡張により、以下の AT&T 操作が有効になります。
 - 料金プランの変更
 
 ### AT&T 用の REST API
-AT&T 用の REST API にアクセスする場合は、[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部リンク・アイコン](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window} の資料にある AT&T 拡張のセクションを参照してください。
+AT&T 用の REST API にアクセスする場合は、[{{site.data.keyword.iot_short_notm}} HTTP REST API![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window} の資料にある AT&T 拡張のセクションを参照してください。
 
 ### AT&T 用の構成
 
@@ -227,7 +227,7 @@ Orange SIM カードを持つ、{{site.data.keyword.iot_short_notm}} サービ�
 - ロケーション状況
 
 ### Orange 用の REST API
-Orange 用の REST API にアクセスする場合は、[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部リンク・アイコン](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window} の資料にある Orange 拡張のセクションを参照してください。
+Orange 用の REST API にアクセスする場合は、[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window} の資料にある Orange 拡張のセクションを参照してください。
 
 ### Orange 用の構成
 
@@ -278,7 +278,7 @@ Orange 拡張が有効になった後、Orange SIM カードを持つ各デバ�
 3. **「パッケージの追加」**ボタンをクリックします。
 4. パッケージ・ファイルを選択し、**「開く」**をクリックします。
 
-API を使用してカスタム・デバイス管理パッケージを追加する場合は、[{{site.data.keyword.iot_short_notm}} API 資料 ![外部リンク・アイコン](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} を参照してください。
+API を使用してカスタム・デバイス管理パッケージを追加する場合は、[{{site.data.keyword.iot_short_notm}} API 資料 ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} を参照してください。
 
 ## ブロック・チェーン
 {: #blockchain}
@@ -297,36 +297,100 @@ API を使用してカスタム・デバイス管理パッケージを追加す�
  2. **「拡張」**ページで、**「拡張の追加 (Add Extension)」**をクリックします。
  3. ブロック・チェーン拡張の横にある**「追加」**をクリックします。
  4. ブロック・チェーン・タイルで、**「セットアップ」**をクリックします。
- 3. **「ブロック・チェーンのアクティブ化 (Activate Blockchain)」**セクションで、**「詳細はこちら」**リンクをクリックして [IoT Blockchain Services Offering のページ ![外部リンク・アイコン](../../../../icons/launch-glyph.svg)](http://www.ibm.com/internet-of-things/iot-news/announcements/private-blockchain/){: new_window} に移動します。
+ 3. **「ブロック・チェーンのアクティブ化 (Activate Blockchain)」**セクションで、**「詳細はこちら」**リンクをクリックして [IoT Blockchain Services Offering のページ ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.ibm.com/internet-of-things/iot-news/announcements/private-blockchain/){: new_window} に移動します。
  4. **「Kick-start your blockchain project」**をクリックして*「Explore the potential of IoT and Blockchain」*のフォームに記入します。  
  5. 要求が承認されると、IBM から、自分の組織のブロック・チェーン統合を有効にするよう、連絡があります。
  6. 組織の {{site.data.keyword.iot_short_notm}} ダッシュボードに戻り、[{{site.data.keyword.iot_short_notm}} ブロック・チェーン統合](../../bl_blockchain_integration.html)の手順に従ってセットアップを完了します。
 
-
-
-## The Weather Company
+<!-- ## The Weather Company
 {: #weathercompany}
 
-The Weather Company 拡張は、気象データを既存の {{site.data.keyword.iot_short_notm}} デバイスに結合します。API を使用して「ロケーションの更新」要求が出されるか、デバイス管理メッセージを使用してデバイスでそのロケーションが既に設定されている場合、The Weather Company からの気象データがデバイスの詳細ビューに表示されます。
+The Weather Company extension combines weather data with your existing {{site.data.keyword.iot_short_notm}} devices. Weather data from The Weather Company appears in the device details view if an update location request has been made by using the API, or if the device has already set its location by using a device management message.
 
-**注:** 管理対象デバイスだけがデバイス側でロケーションを設定できます。非管理対象デバイスでは、すべて API を使用して手動でロケーションを設定する必要があります。デバイス・ロケーションの設定について詳しくは、[「ロケーションの更新」要求](../../devices/device_mgmt/index.html#update-location)を参照してください。
+**Note:** Only managed devices can set their own locations. All unmanaged devices must have their locations set manually by using the API. For more information on setting a device location, see [Update Location requests](../../devices/device_mgmt/index.html#update-location).
 
-### The Weather Company 用の REST API
-The Weather Company 用の REST API にアクセスする場合は、[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部リンク・アイコン](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather){: new_window} の資料の『Device Location Weather』のセクションを参照してください。
+### REST APIs for The Weather Company
+To access the REST API for The Weather Company, see the
+Device Location Weather section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather){: new_window} documentation.
 
-### 気象データ
+### Weather Data
 
-特定のデバイス・ロケーションに関して取得した気象データを表示するには、**「デバイス (Devices)」**ペインでデバイスを探してクリックします。詳細なデバイス・ビューで、**「拡張 (Extensions)」**セクションまでスクロールダウンします。以下の気象データがリストされます。
+To view the weather data retrieved for a device location, find the device in the **Devices** pane and click it. In the detailed device view scroll down to the **Extensions** section. The following weather data is listed:
 
-- 現在の天気。
-- 現在の温度。
-- 予想最高気温と最低気温。
-- 相対湿度。
-- 気圧。
-- 視程。
-- 風速。
-- 風向き。
-- 緯度。
-- 経度。
+- Current weather.
+- Current temperature.
+- Predicted maximum and minimum temperature.
+- Relative humidity.
+- Pressure.
+- Visibility.
+- Wind speed.
+- Wind direction.
+- Latitude.
+- Longitude.
+-->
 
-<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html){: new_window}. -->
+<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html){: new_window}. -->
+
+## E メール
+{: #email}
+
+招待メールを使用して、ユーザーを {{site.data.keyword.iot_short_notm}} に追加することができます。詳しくは、[ユーザーのアクセス権限の管理](../../add_users.html)を参照してください。
+
+招待メール機能を使用するには、SendGrid オンライン・サービスまたは Simple Mail Transfer Protocol (SMTP) サービスを使用するように E メール拡張機能を構成する必要があります。この拡張機能では、SendGrid {{site.data.keyword.Bluemix_notm}} アプリケーションを使用することもできます。
+
+### SendGrid オンライン・サービス
+
+SendGrid オンライン・サービスを使用するように E メール拡張機能を構成するには、以下の手順に従います。
+
+1. SendGrid オンライン・アカウントから、許可済み API キーを取得します。
+2. {{site.data.keyword.iot_short_notm}} ダッシュボードのナビゲーション・バーから**「拡張」**をクリックします。
+3. **「E メール」**セクションで、**「セットアップ」**をクリックします。
+4. **「SendGrid で API キーを使用」**を選択します。
+5. サイト管理者の名前および E メール・アドレスと、許可済み API キーを入力します。
+
+### SMTP サービス
+
+SMTP サービスを使用するように E メール拡張機能を構成するには、以下の手順に従います。
+
+1. {{site.data.keyword.iot_short_notm}} ダッシュボードのナビゲーション・バーから**「拡張」**をクリックします。
+2. **「E メール」**セクションで、**「セットアップ」**をクリックします。
+3. **「SMTP」**を選択します。
+4. SMTP サービスの構成の詳細を入力します。
+
+### SendGrid {{site.data.keyword.Bluemix_notm}} アプリケーション
+
+SendGrid {{site.data.keyword.Bluemix_notm}} アプリケーションを使用するように E メール拡張機能を構成するには、以下の手順に従います。
+
+1. ダミー・アプリケーションを作成し、SendGrid サービスをバインドします。  
+構成資格情報を取得するには、SendGrid サービスをダミー・アプリに追加してバインドします。
+
+ 1. {{site.data.keyword.Bluemix_notm}} ダッシュボードから、**「サービスの作成」**をクリックします。
+ 2. カタログから SendGrid サービスを選択し、**「作成」**をクリックします。
+ 3. {{site.data.keyword.Bluemix_notm}} ダッシュボードから、{{site.data.keyword.sdk4nodefull}} アプリケーションを追加します。
+ 4. {{site.data.keyword.Bluemix_notm}} ダッシュボードから {{site.data.keyword.sdk4nodefull}} アプリケーションをクリックし、**「サービスまたは API のバインド」**をクリックします。
+ 5. SendGrid サービスを選択し、**「追加」**をクリックします。
+ 6. ここで、{{site.data.keyword.sdk4nodefull}} アプリケーションを再ステージングする必要があります。
+2. {{site.data.keyword.iot_short_notm}} サービスを構成する準備をします。  
+{{site.data.keyword.iot_short_notm}} は、{{site.data.keyword.iot_short_notm}} ダッシュボードまたは {{site.data.keyword.iot_short_notm}} API を使用して構成することができます。  
+ 1. {{site.data.keyword.Bluemix_notm}} ダッシュボードから、{{site.data.keyword.sdk4nodefull}} アプリケーションをクリックします。
+ 2. ナビゲーション・バーから**「環境変数」**をクリックします。
+ 3. 表示された JSON を一時テキスト・ファイルにコピーします。  
+JSON は次の形式になるはずです。
+```
+{
+  "name": "SendGridServiceName",
+  "label": "user-provided",
+  "credentials": {
+    "password": "xxx",
+    "hostname": "smtp.sendgrid.net",
+    "username": "username"
+  }
+}
+```
+3. 構成データを {{site.data.keyword.iot_short_notm}} 組織に追加します。
+ 1. {{site.data.keyword.iot_short_notm}} ダッシュボードを開きます。
+ 2. ナビゲーション・バーから**「拡張」**をクリックします。
+ 3. **「E メール」**アイコンの下にある**「セットアップ」**をクリックします。
+ 4. **「SendGrid でユーザー名を使用」**を選択します。
+ 5. 一時テキスト・ファイル内の構成データを入力します。
+ 6. **「完了」**をクリックします。

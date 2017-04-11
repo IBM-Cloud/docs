@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-17"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -43,17 +43,17 @@ O diagrama a seguir ilustra o ambiente general de integração de blockchain ao 
 ## Antes de iniciar
 {: #byb}
 
-- Obtenha uma visão geral do {{site.data.keyword.iot_short_notm}}, como ele se relaciona ao conceito geral de blockchain e o que ele pode fazer por você em [{{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg)](http://www.ibm.com/blockchain/){: new_window} em IBM.com.
+- Obtenha uma visão geral do {{site.data.keyword.iot_short_notm}}, como ele se relaciona ao conceito geral de blockchain e o que ele pode fazer por você no [{{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://www.ibm.com/blockchain/){: new_window} em IBM.com.
 - [Ative a integração de blockchain do {{site.data.keyword.iot_short_notm}}](reference/extensions/index.html#blockchain) para sua organização.
 - Conecte dispositivos que produzem dados que você deseja gravar no livro razão de blockchain.  
 Siga as instruções do tópico [Conectando dispositivos](iotplatform_task.html) para conectar seus dispositivos.
 - Instale a UI (interface com o usuário) de monitoramento.
-A UI (interface com o usuário) de monitoramento é usada para verificar a conexão entre o {{site.data.keyword.iot_short_notm}} e a malha de blockchain. Siga as instruções no documento leia-me da UI de monitoramento que está disponível no diretório do GitHub da [UI de monitoramento de blockchain ![Ícone de link externo](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window}.
+A UI (interface com o usuário) de monitoramento é usada para verificar a conexão entre o {{site.data.keyword.iot_short_notm}} e a malha de blockchain. Siga as instruções no documento leia-me da UI de monitoramento que está disponível no diretório do GitHub da [UI de monitoramento de blockchain ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window}.
 
 ### Usando o cenário básico IBM para iniciar rapidamente
 
 Para iniciar rapidamente com o teste da integração de blockchain ao {{site.data.keyword.iot_short_notm}}, é possível se conectar a uma malha fornecida pela IBM e mapear um dispositivo de amostra Node-RED para o contrato de amostra fornecido pela IBM.  As etapas necessárias para esse cenário estão rotuladas como **Cenário básico IBM** neste tópico.  
-**Importante:** esteja ciente de que o livro razão de blockchain da amostra fornecida pela IBM e todos os seus dados estão visíveis para todos os usuários do blockchain de amostra. Não armazene nenhuma informação confidencial no blockchain de amostra fornecido pela IBM. Além disso, as malhas de amostra que suportam os contratos de amostra e de linha comercial estão sujeitas a mudanças, incluindo as informações de conexão de cada peer. Os detalhes da conexão são fornecidos na página da wiki [Informações de conexão do Blockchain do IoT ![Ícone de link externo](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} na comunidade do Blockchain do Watson IoT.
+**Importante:** esteja ciente de que o livro razão de blockchain da amostra fornecida pela IBM e todos os seus dados estão visíveis para todos os usuários do blockchain de amostra. Não armazene nenhuma informação confidencial no blockchain de amostra fornecido pela IBM. Além disso, as malhas de amostra que suportam os contratos de amostra e de linha comercial estão sujeitas a mudanças, incluindo as informações de conexão de cada peer. Os detalhes da conexão são fornecidos na página da wiki [Informações de conexão do Blockchain do IoT ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} na comunidade do Blockchain do Watson IoT.
 
 O ambiente básico de integração de blockchain ao {{site.data.keyword.iot_short_notm}} fornecido pela IBM consiste nos componentes a seguir:
 - {{site.data.keyword.Bluemix_notm}}:
@@ -120,8 +120,7 @@ Para se conectar a uma malha de blockchain:
 3. Na seção Configurar blockchain, clique em **Pronto** para salvar as informações de malha.
 
 
-**Cenário básico da IBM:** para se conectar à malha fornecida pela IBM, use os detalhes da conexão do Contrato de Amostra que são fornecidos na página da wiki
-[Informações de conexão do Blockchain do IoT ![Ícone de link externo](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} na Comunidade do Blockchain do Watson IoT. Se necessário, entre em contato com seu contato de blockchain da IBM para obter acesso à comunidade.
+**Cenário básico da IBM:** para se conectar à malha fornecida pela IBM, use os detalhes da conexão do Contrato de amostra que são fornecidos na página da wiki [Informações de conexão do Blockchain do IoT ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} na comunidade do Blockchain do Watson IoT. Se necessário, entre em contato com seu contato de blockchain da IBM para obter acesso à comunidade.
 
 
 ## Mapear dados do dispositivo para contratos inteligentes
@@ -158,14 +157,13 @@ Para mapear dados do dispositivo para um contrato:
 </tr>
 </tbody>
 </table>
-**Cenário básico IBM:** o contrato inteligente pré-implementado de amostra permite mapear pontos de dados do dispositivo para determinados atributos do contrato para armazenar os valores de pontos de dados no livro razão de blockchain. Use o contrato de amostra para testar o mapeamento de dados do dispositivo antes de tentar os contratos de linha comercial mais avançados ou escrever seus próprios contratos. O ID do contrato é fornecido na página da wiki [Informações de conexão do Blockchain do IoT ![Ícone de link externo](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} na comunidade do Blockchain do Watson IoT. Se necessário, entre em contato com seu contato de blockchain da IBM para obter acesso à comunidade.
+**Cenário básico IBM:** o contrato inteligente pré-implementado de amostra permite mapear pontos de dados do dispositivo para determinados atributos do contrato para armazenar os valores de pontos de dados no livro razão de blockchain. Use o contrato de amostra para testar o mapeamento de dados do dispositivo antes de tentar os contratos de linha comercial mais avançados ou escrever seus próprios contratos. O ID do contrato é fornecido na página da wiki [Informações de conexão do Blockchain do IoT ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} na comunidade do Blockchain do Watson IoT. Se necessário, entre em contato com seu contato de blockchain da IBM para obter acesso à comunidade.
 
 
  8. Crie uma rota para mapear propriedades do dispositivo para os parâmetros do contrato.  
  Os parâmetros que estão disponíveis no contrato são importados. Para cada parâmetro, insira uma propriedade de evento correspondente.  
  **Importante:** não inclua `d.` que está anexado à frente do ponto de dados na mensagem do dispositivo.
- **Cenário básico da IBM:** se você estiver usando contratos fornecidos pela IBM, mapeie os parâmetros a seguir que estão listados na página da wiki [Mapeamento
-de dados ![Ícone de link externo](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Data%20Mapping){: new_window} na comunidade do Blockchain do Watson IoT. Se necessário, entre em contato com seu contato de blockchain da IBM para obter acesso à comunidade.
+ **Cenário básico da IBM:** se você estiver usando contratos fornecidos pela IBM, mapeie os parâmetros a seguir que estão listados na página da wiki [Mapeamento de dados ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Data%20Mapping){: new_window} na comunidade do Blockchain do Watson IoT. Se necessário, entre em contato com seu contato de blockchain da IBM para obter acesso à comunidade.
  9. Na página de resumo, verifique se todas as informações foram inseridas corretamente.
  10. O mapeamento de dados do dispositivo para o contrato é exibido na página Blockchain.
 
@@ -175,8 +173,7 @@ Parabéns, agora você está com tudo funcionando!
 {: #test_simple}
 
 Se você estiver conectado à malha fornecida pela IBM e tiver mapeado os dados de seu dispositivo para o contrato de amostra, será possível testar o fluxo de dados de ponta a ponta do dispositivo para o livro razão de blockchain. Use a UI (interface com o usuário) de monitoramento de blockchain de IoT para visualizar a atividade de blockchain e os dados para seus ativos.  
-**Dica:** se a UI (interface com o usuário) de monitoramento ainda não estiver instalada em seu ambiente local, será possível instalá-la agora. Siga as instruções no documento leia-me da UI de monitoramento que está disponível no diretório do GitHub da [UI de monitoramento de blockchain ![Ícone de link
-externo](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window}.
+**Dica:** se a UI (interface com o usuário) de monitoramento ainda não estiver instalada em seu ambiente local, será possível instalá-la agora. Siga as instruções no documento leia-me da UI de monitoramento que está disponível no diretório do GitHub da [UI de monitoramento de blockchain ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window}.  
 1. Configure a UI (interface com o usuário) de monitoramento para conectar-se ao {{site.data.keyword.iot_short_notm}}.  
  Na UI (interface com o usuário) de monitoramento, clique em **CONFIGURAÇÃO** para configurar a conexão da UI de monitoramento:
  <table>
@@ -205,8 +202,7 @@ externo](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/blockc
 </tr>
 </tbody>
 </table>
-**Cenário básico da IBM:** para configurar a UI de monitoramento para se conectar aos contratos básicos ou de linha comercial, use os detalhes de conexão que são fornecidos na página da wiki
-[Informações de conexão do Blockchain do IoT ![Ícone de link externo](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} na comunidade do Blockchain do Watson IoT. Se necessário, entre em contato com seu contato de blockchain da IBM para obter acesso à comunidade.
+**Cenário básico da IBM:** para configurar a UI de monitoramento para se conectar aos contratos básicos ou de linha comercial, use os detalhes de conexão fornecidos na página da wiki [Informações de conexão do Blockchain do IoT ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} na comunidade do Blockchain do Watson IoT. Se necessário, entre em contato com seu contato de blockchain da IBM para obter acesso à comunidade.
 2. No editor de fluxo Node-RED, clique no botão no nó CON123 para injetar dados do dispositivo, enviá-los como uma mensagem para o {{site.data.keyword.iot_short_notm}} e gravá-los no livro razão do {{site.data.keyword.iot_short_notm}} pelo contrato simples.   
 **Dica:** para obter um fluxo de dados contínuo, dê um clique duplo no nó de injeção, configure o parâmetro Repeat para `interval` e configure um intervalo apropriado, como a cada um minuto.
 3. Na UI (interface com o usuário) de monitoramento, verifique se os dados do dispositivo são exibidos conforme esperado nos blocos de blockchain.  

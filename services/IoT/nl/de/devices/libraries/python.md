@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-10-27"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -24,7 +24,7 @@ Verwenden Sie die bereitgestellten Informationen und Beispiele, um mit der Entwi
 ## Python-Client und Ressourcen herunterladen
 {: #python_client_download}
 
-Wechseln Sie für den Zugriff auf den Python-Client für {{site.data.keyword.iot_short_notm}} und auf andere verfügbare Ressourcen in GitHub in das Repository [iot-python](https://github.com/ibm-watson-iot/iot-python) und folgenden Sie den Installationsanweisungen.
+Wechseln Sie für den Zugriff auf den Python-Client für {{site.data.keyword.iot_short_notm}} und auf andere verfügbare Ressourcen in das Repository [iot-python ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-watson-iot/iot-python){: new_window} in GitHub und folgenden Sie den Installationsanweisungen.
 
 ## Konstruktor
 {: #constructor}
@@ -151,7 +151,7 @@ client.commandCallback = myCommandCallback
 ## Unterstützung für das Format angepasster Nachrichten
 {: #custom_message_format}
 
-Als Nachrichtenformat wird standardmäßig `json` festgelegt; dies bedeutet, dass die Bibliothek das Verschlüsseln und Entschlüsseln der Python-Wörterverzeichnisobjekte im Format JSON unterstützt. Wenn als Nachrichtenformat `json-iotf` festgelegt ist, wird die Nachricht in Übereinstimmung mit der JSON-Nutzdatenspezifikation von {{site.data.keyword.iot_short_notm}} verschlüsselt. Informationen zum Hinzufügen von Unterstützung für Ihre eigenen angepassten Nachrichtenformate finden Sie in GitHub im [Beispiel für das Format angepasster Nachrichten](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat).
+Als Nachrichtenformat wird standardmäßig `json` festgelegt; dies bedeutet, dass die Bibliothek das Verschlüsseln und Entschlüsseln der Python-Wörterverzeichnisobjekte im Format JSON unterstützt. Wenn als Nachrichtenformat `json-iotf` festgelegt ist, wird die Nachricht in Übereinstimmung mit der JSON-Nutzdatenspezifikation von {{site.data.keyword.iot_short_notm}} verschlüsselt. Informationen zum Hinzufügen von Unterstützung für Ihre eigenen angepassten Nachrichtenformate finden Sie in GitHub im [Beispiel für das Format angepasster Nachrichten ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat){: new_window}.
 
 Wenn Sie ein angepasstes Encodermodul erstellen, müssen Sie es wie im folgenden Beispiel dargestellt im Geräteclient registrieren:
 

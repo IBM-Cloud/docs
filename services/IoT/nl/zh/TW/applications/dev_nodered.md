@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-09-01"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -31,8 +31,8 @@ Watson IoT Node 是一對節點，用於將您的裝置或閘道連接至 {{site
 
 如需 Watson IoT Node 的相關資訊，請參閱下列資源：
 
-- [GitHub 上的 Watson IoT Node](https://github.com/ibm-watson-iot/iot-nodered/tree/master/node-red-contrib-ibm-watson-iot)
-- [Watson IoT Node 文件](https://www.npmjs.com/package/node-red-contrib-ibm-watson-iot)
+- [GitHub 上的 Watson IoT Node ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-nodered/tree/master/node-red-contrib-ibm-watson-iot){: new_window}
+- [Watson IoT Node 文件 ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.npmjs.com/package/node-red-contrib-ibm-watson-iot){: new_window}
 
 
 ## IBM IoT App Node  
@@ -45,8 +45,8 @@ IBM IoT App Node 是一對節點，用於將您的應用程式連接至 {{site.d
 
 如需 IBM IoT App Node 的相關資訊，請參閱下列資源：
 
-- [GitHub 上的 IBM IoT App Node](https://github.com/ibm-watson-iot/iot-nodered/tree/master/node-red-contrib-scx-ibmiotapp)
-- [IBM IoT App Node 文件](http://flows.nodered.org/node/node-red-contrib-scx-ibmiotapp)
+- [GitHub 上的 IBM IoT App Node ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-nodered/tree/master/node-red-contrib-scx-ibmiotapp){: new_window}
+- [IBM IoT App Node 文件 ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](http://flows.nodered.org/node/node-red-contrib-scx-ibmiotapp){: new_window}
 
 
 ## 相關資訊及範例   
@@ -54,7 +54,7 @@ IBM IoT App Node 是一對節點，用於將您的應用程式連接至 {{site.d
 
 
 為協助您開始使用，請使用下列範例秘訣：
-- [使用 Node-RED 開始使用 {{site.data.keyword.iot_short_notm}}](https://developer.ibm.com/recipes/tutorials/getting-started-with-watson-iot-platform-using-node-red/)
-- [使用 Node-RED 將 Raspberry Pi 當作裝置連接至 {{site.data.keyword.iot_short_notm}}](https://developer.ibm.com/recipes/tutorials/deploy-watson-iot-node-on-raspberry-pi/)
+- [使用 Node-RED 開始使用 {{site.data.keyword.iot_short_notm}} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/tutorials/getting-started-with-watson-iot-platform-using-node-red/){: new_window}
+- [使用 Node-RED 將 Raspberry Pi 當作裝置連接至 {{site.data.keyword.iot_short_notm}} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/tutorials/deploy-watson-iot-node-on-raspberry-pi/){: new_window}
 
 如需相關資訊，另請參閱[使用 Node-RED 入門範本建立應用程式](https://console.ng.bluemix.net/docs/starters/Node-RED/nodered.html#nodered)。

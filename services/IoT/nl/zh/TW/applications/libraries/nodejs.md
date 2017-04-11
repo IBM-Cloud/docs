@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-07-29"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -28,12 +28,12 @@ lastupdated: "2016-07-29"
 ## 下載 Node.js 用戶端及資源
 {: #nodejs_client_download}
 
-若要存取適用於 {{site.data.keyword.iot_short_notm}} 的 Node.js 用戶端程式庫及其他可用的資源，請移至 GitHub 中的 [iot-nodejs](https://github.com/ibm-watson-iot/iot-nodejs) 儲存庫，並完成安裝指示。
+若要存取適用於 {{site.data.keyword.iot_short_notm}} 的 Node.js 用戶端程式庫及其他可用的資源，請移至 GitHub 中的 [iot-nodejs ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window} 儲存庫，並完成安裝指示。
 
 
 如需相關資訊，請參閱下列資源：
-- GitHub 中的[應用程式範例](https://github.com/ibm-watson-iot/iot-nodejs/tree/master/samples)。
-- NPM 上的 [ibmiotf](https://www.npmjs.com/package/ibmiotf)。
+- GitHub 中的[應用程式範例 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-nodejs/tree/master/samples){: new_window}。
+- NPM 上的 [ibmiotf ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.npmjs.com/package/ibmiotf){: new_window}。
 - 本文件的[參考資料](#reference_nodejs)小節。
 
 

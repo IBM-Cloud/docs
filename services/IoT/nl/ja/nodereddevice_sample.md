@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-17"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-02-17"
 Node-RED を使用して、デバイス・シミュレーターを作成し、シミュレートしたデバイス・データを {{site.data.keyword.iot_full}} 組織に送信します。  
 {:shortdesc}
 
-Node-RED は、ハードウェア・デバイス、API、オンライン・サービスを、新しい興味深い方法で接続するツールです。詳しくは、[Node-RED ![外部リンク・アイコン](../../icons/launch-glyph.svg)](http://nodered.org/){: new_window} の Web サイトを参照してください。  
+Node-RED は、ハードウェア・デバイス、API、オンライン・サービスを、新しい興味深い方法で接続するツールです。詳しくは、[Node-RED ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://nodered.org/){: new_window} Web サイトを参照してください。  
 
 Node-RED インスタンスは、独自の環境で実行することもできますし、{{site.data.keyword.Bluemix_notm}} アプリケーションとして使用することもできます。以下の処理には、{{site.data.keyword.Bluemix_notm}} のための手順が含まれています。
 
@@ -26,7 +26,7 @@ Node-RED デバイス・シミュレーターを作成して接続するには�
    デバイス・シミュレーターを使用して、MQTT デバイス・メッセージを {{site.data.keyword.iot_short_notm}} に送信します。デバイス・シミュレーターは、貨物輸送コンテナーのデータを {{site.data.keyword.iot_short_notm}} などの MQTT ブローカーに送信する処理をシミュレートしたものです。
     1. {{site.data.keyword.Bluemix_notm}} (https://console.ng.bluemix.net) にログインします。
     2. **「カタログ」**タブを選択します。
-    3. サービス・カタログの「ボイラープレート」セクションを見つけて、**「Node-RED Starter コミュニティー ベータ」**をクリックします。**ヒント:** [こちら ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/catalog/starters/node-red-starter/){: new_window} をクリックすると、「Node-RED Starter」ページに直接移動できます。
+    3. サービス・カタログの「ボイラープレート」セクションを見つけて、**「Node-RED Starter コミュニティー ベータ」**をクリックします。**ヒント:** [こちら ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/catalog/starters/node-red-starter/){: new_window} をクリックすると、「Node-RED Starter」ページに直接移動できます。
     4. 「Node-RED Starter」ページで、Node-RED のデプロイ場所となるスペースを選択し、「アプリの作成」選択項目を確認し、**「作成」**をクリックして Node-RED を Bluemix 組織に追加します。
       
 以下に例を示します。  

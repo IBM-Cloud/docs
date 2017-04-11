@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-08-02"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2016-08-02"
 ## Fazendo download de cliente e recursos de C#
 {: #csharp_client_download}
 
-Para acessar o cliente C# e recursos do {{site.data.keyword.iot_short_notm}}, acesse o repositório [iot-csharp](https://github.com/ibm-watson-iot/iot-csharp) no GitHub e conclua as instruções de instalação.
+Para acessar o cliente C# e os recursos do {{site.data.keyword.iot_short_notm}}, acesse o repositório [iot-csharp ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-watson-iot/iot-csharp){: new_window} no GitHub e conclua as instruções de instalação.
 
 
 ## Construtor

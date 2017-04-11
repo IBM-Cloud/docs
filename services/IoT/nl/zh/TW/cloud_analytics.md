@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-17"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2017-02-17"
 {: #byb}
 請確定您要在規則中用來作為條件的裝置內容，已對映至綱目。如需相關資訊，請參閱[連接裝置](iotplatform_task.html)及[建立綱目](im_schemas.html)。
 
-也請檢閱[使用 {{site.data.keyword.iot_short}} 雲端分析來使用規則及動作![外部鏈結圖示](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){: new_window} 秘訣，來瞭解「雲端分析」中所使用的規則及動作。
+另請檢閱[使用 {{site.data.keyword.iot_short}} 雲端分析來使用規則及動作 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){: new_window} 秘訣，以瞭解「雲端分析」中所使用的規則及動作。
 
 ## 管理規則及動作  
 {: #managing_rules}
@@ -162,7 +162,7 @@ Condition = `temp_cpu>60 AND cpu_load>90`
 ### IFTTT  
 {: #ifttt}
 
-使用 IFTTT 動作，以在觸發規則時觸發 IFTTT 秘訣。如需將動作觸發為 IFTTT 秘訣的相關資訊，請參閱 IFTTT 網站上的 [Maker 通道 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://ifttt.com/maker){: new_window}。
+使用 IFTTT 動作，以在觸發規則時觸發 IFTTT 秘訣。如需將動作觸發為 IFTTT 秘訣的相關資訊，請參閱 IFTTT 網站上的 [Maker 通道 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://ifttt.com/maker){: new_window}。
 
 範例：[使用 IFTTT 張貼 Trello 卡片](#iftttex)。
 
@@ -231,7 +231,7 @@ URL | 目標 Node-RED HTTP 輸入節點的 URL。
 在此範例中，將動作配置成搭配使用 Node-RED 與 Twilio 節點，以將文字訊息傳送給服務工程師。
 
 若要建立「傳送文字訊息」動作，請執行下列動作：
-1. 在 Twilio 中，找出或建立新的「傳訊服務」，以用來傳送 Twilio 帳戶的文字訊息。如需相關資訊，請參閱 [Twilio 文件 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://www.twilio.com/help){: new_window}。
+1. 在 Twilio 中，找出或建立新的「傳訊服務」，以用來傳送 Twilio 帳戶的文字訊息。如需相關資訊，請參閱 [Twilio 文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.twilio.com/help){: new_window}。
 2. 在 Bluemix 中，使用 Node-RED URL `http://mynodered.mybluemix.net/red/` 來設定並存取 Node-RED 帳戶。如需相關資訊，請參閱 Bluemix 文件中的[使用 Node-RED 入門範本建立應用程式](https://www.ng.bluemix.net/docs/starters/Node-RED/nodered.html)主題。
 3. 在 Node-RED 中，建立簡式兩節點流程（例如 [RTI-alert]->[SMS]）。
   
@@ -293,7 +293,7 @@ URL | 目標已啟用 Webhook 之伺服器的 URL。**提示：**您可以使用
 在此範例中，將動作配置成使用 Webhook，以將訊息張貼到 #service-requests Slack 通道。
 
 若要建立「張貼到 Slack」動作，請執行下列動作：
-1. 在 Slack 中，設定通道 #service-requests 的「送入 Webhook」整合。記下 Webhook URL。如需相關資訊，請參閱 [Slack 文件 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://api.slack.com/incoming-webhooks){: new_window}。
+1. 在 Slack 中，設定通道 #service-requests 的「送入 Webhook」整合。記下 Webhook URL。如需相關資訊，請參閱 [Slack 文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://api.slack.com/incoming-webhooks){: new_window}。
 2. 在 {{site.data.keyword.iot_short}} 儀表板中，移至**規則 > 動作**，然後建立具有下列參數的新動作：
  - 名稱 - `Post service request on Slack`
  - 類型 - **Webhook**
@@ -304,7 +304,7 @@ URL | 目標已啟用 Webhook 之伺服器的 URL。**提示：**您可以使用
  ```json
  {"text":"*A device needs your attention*\n Time: {{timestamp}}\n {{site.data.keyword.iot_short}} instance: {{tenantId}}\n Device: {{deviceId}}\n Rule: {{ruleName}}\n Description: {{ruleDescription}}\n Condition: {{ruleCondition}}\n Raw device message: \n{{message}}"}
  ```  
-  **重要事項：**Slack Webhook 最少必須包含 "text" 欄位。如需相關資訊，請參閱 Slack 文件中的[送入 Webhook ![外部鏈結圖示](../icons/launch-glyph.svg)](https://api.slack.com/incoming-webhooks){: new_window}。
+  **重要事項：**Slack Webhook 最少必須包含 "text" 欄位。如需相關資訊，請參閱 Slack 文件中的[送入 Webhook ![外部鏈結圖示](../icons/launch-glyph.svg)](https://api.slack.com/incoming-webhooks "Slack 文件"){: new_window}。
 11. 按一下**完成**，以儲存動作。
 
 
@@ -330,12 +330,12 @@ URL | 目標已啟用 Webhook 之伺服器的 URL。**提示：**您可以使用
 
 下列秘訣說明如何將「雲端分析」特性用於不同的使用案例：
 
-- [使用 IBM Watson™ IoT Platform 分析的即時資料分析 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/real-time-data-analysis-using-ibm-watson-iot-platform-analytics/){: new_window}
+- [使用 IBM Watson™ IoT Platform 分析的即時資料分析 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/tutorials/real-time-data-analysis-using-ibm-watson-iot-platform-analytics/){: new_window}
 
-- [IOT 取樣資料的預測分析 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/predictive-analytics-on-iot-sample-data/){: new_window}
+- [IOT 取樣資料的預測分析 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/tutorials/predictive-analytics-on-iot-sample-data/){: new_window}
 
-- [WIoTP 儀表板上的裝置清單卡 SIMPLIFIES 即時裝置監視 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/device-list-card-simplifies-real-time-device-monitoring-on-wiotp-dashboard/){: new_window}
+- [WIoTP 儀表板上的裝置清單卡 SIMPLIFIES 即時裝置監視 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/tutorials/device-list-card-simplifies-real-time-device-monitoring-on-wiotp-dashboard/){: new_window}
 
-- [在 IBM Watson IoT Platform 雲端分析中執行動作 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/perform-actions-in-ibm-watson-iot-platform-cloud-analytics/){: new_window}
+- [在 IBM Watson IoT Platform 雲端分析中執行動作 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/tutorials/perform-actions-in-ibm-watson-iot-platform-cloud-analytics/){: new_window}
 
-- [使用 IBM Data Science Experience 偵測時間序列異常 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/use-ibm-data-science-experience-to-detect-time-series-anomalies/){: new_window}
+- [使用 IBM Data Science Experience 偵測時間序列異常 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/tutorials/use-ibm-data-science-experience-to-detect-time-series-anomalies/){: new_window}

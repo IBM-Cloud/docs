@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-12-06"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -386,7 +386,7 @@ public abstract void updateFirmware(DeviceFirmware deviceFirmware);
 
 **注**：只能有一个处理程序添加到库以同时用于将固件下载或更新请求重定向到的网关和已连接设备。该实现必须创建一个线程或线程池，以同时处理多个固件请求。
 
-您可以在[网关样本 GitHub 存储库](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java)中找到线程池处理程序的样本实现。
+您可以在[网关样本 GitHub 存储库 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window} 中找到线程池处理程序的样本实现。
 
 ### `downloadFirmware` 的样本实现
 
@@ -400,7 +400,7 @@ public abstract void updateFirmware(DeviceFirmware deviceFirmware);
 
 样本固件下载实现如以下代码样本中所示：
 
-**重要信息：**提供的代码样本不包括线程池部分。有关固件处理程序的完整实现，[IBM Java 网关样本 GitHub 存储库](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java)中提供了相应样本。
+**重要信息：**提供的代码样本不包括线程池部分。有关固件处理程序的完整实现，[IBM Java 网关样本 GitHub 存储库 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window} 中提供了相应样本。
 
 ```java
 public void downloadFirmware(DeviceFirmware deviceFirmware) {
@@ -535,7 +535,7 @@ public void updateFirmware(DeviceFirmware deviceFirmware) {
 }
 ```
 
-完整的代码位于[网关样本 GitHub 存储库](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java)中的 `GatewayFirmwareHandlerSample` 样本中。
+完整的代码位于[网关样本 GitHub 存储库 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window} 中的 `GatewayFirmwareHandlerSample` 样本中。
 
 ### 步骤 4：向 `ManagedGateway` 添加处理程序
 
@@ -546,7 +546,7 @@ GatewayFirmwareHandlerSample fwHandler = new GatewayFirmwareHandlerSample();
 mgdGateway.addFirmwareHandler(fwHandler);
 ```
 
-有关固件操作的更多信息，请参阅[设备管理请求](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/requests.html#/firmware-actions#firmware-actions)。
+有关固件操作的更多信息，请参阅[设备管理请求 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/requests.html#/firmware-actions#firmware-actions){: new_window}。
 
 ## 设备操作
 {: #dev_actions}
@@ -591,7 +591,7 @@ public abstract void handleReboot(DeviceAction action);
 public abstract void handleFactoryReset(DeviceAction action);
 ```
 
-**注**：只能有一个处理程序添加到库以同时用于将设备操作请求重定向到的网关和已连接设备。该实现必须创建一个线程或线程池，以同时处理多个设备操作请求。使用线程池的样本处理程序实现在 [iot-gateway-samples GitHub 存储库](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java)中进行演示。
+**注**：只能有一个处理程序添加到库以同时用于将设备操作请求重定向到的网关和已连接设备。该实现必须创建一个线程或线程池，以同时处理多个设备操作请求。使用线程池的样本处理程序实现在 [iot-gateway-samplesGitHub 存储库 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java){: new_window} 中进行演示。
 
 ### `handleReboot` 的样本实现
 
@@ -618,7 +618,7 @@ public void handleReboot(DeviceAction action) {
 }
 ```
 
-使用线程池的完整样本处理程序实现在 [iot-gateway-samples GitHub 存储库](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java)中进行演示。
+使用线程池的完整样本处理程序实现在 [iot-gateway-samples GitHub 存储库 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java){: new_window} 中进行演示。
 
 
 ### `handleFactoryReset` 的样本实现
@@ -647,7 +647,7 @@ GatewayActionHandlerSample actionHandler = new GatewayActionHandlerSample();
 mgdGateway.addDeviceActionHandler(actionHandler);
 ```
 
-有关设备操作的更多信息，请参阅[设备管理请求](../../devices/device_mgmt/requests.html#/device-actions-reboot#device-actions-reboot)。
+有关设备操作的更多信息，请参阅[设备管理请求 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](../../devices/device_mgmt/requests.html#/device-actions-reboot#device-actions-reboot){: new_window}。
 
 ## 侦听设备属性更改
 {: #listen_device_attributes}
@@ -697,16 +697,16 @@ public void propertyChange(PropertyChangeEvent evt) {
 }
 ```
 
-有关更新设备属性的更多信息，请参阅[设备管理请求](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/index.html#/update-device-attributes#update-device-attributes)。
+有关更新设备属性的更多信息，请参阅[设备管理请求 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/index.html#/update-device-attributes#update-device-attributes){: new_window}。
 
 ## 样本
 {: #samples}
 
-有多个样本可帮助您将网关和位于网关后面的设备连接到您的 {{site.data.keyword.iot_short_notm}} 实例。这些样本使用 {{site.data.keyword.iot_short_notm}} Java 客户机库，并位于[网关样本 GitHub 存储库](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples)中。
+有多个样本可帮助您将网关和位于网关后面的设备连接到您的 {{site.data.keyword.iot_short_notm}} 实例。这些样本使用 {{site.data.keyword.iot_short_notm}} Java 客户机库，并位于[网关样本 GitHub 存储库 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples){: new_window} 中。
 
 ## 诀窍
 {: #recipes}
 
-有关显示如何将 Rasberry Pi 设备作为受管网关连接到 {{site.data.keyword.iot_short_notm}} 并管理已连接设备的诀窍，请参阅 [Raspberry Pi as a managed gateway in {{site.data.keyword.iot_short_notm}}](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/)。
+有关显示如何将 Rasberry Pi 设备作为受管网关连接到 {{site.data.keyword.iot_short_notm}} 并管理已连接设备的诀窍，请参阅 [Raspberry Pi as a managed gateway in {{site.data.keyword.iot_short_notm}} ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/){: new_window}。
 
 此诀窍说明了可以如何使用 {{site.data.keyword.iot_short_notm}} 的设备管理协议从充当网关的 Raspberry Pi 设备来管理 Arduino Uno 设备以及执行设备管理操作，例如重新引导设备或添加最简单的程序。

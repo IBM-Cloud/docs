@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-11-22"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -26,7 +26,7 @@ lastupdated: "2016-11-22"
 上次更新时间：2016 年 10 月 25 日
 {: .last-updated}
 
-要访问 {{site.data.keyword.iot_short_notm}} 的 Java 客户机库和样本，请转至 GitHub 中的 [iot-java](https://github.com/ibm-watson-iot/iot-java) 存储库，并完成安装指示信息。
+要访问 {{site.data.keyword.iot_short_notm}} 的 Java 客户机库和样本，请转至 GitHub 中的 [iot-java ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/iot-java){: new_window} 存储库，并完成安装指示信息。
 
 
 ## 构造方法
@@ -426,7 +426,7 @@ lastupdated: "2016-11-22"
     	boolean status = myClient.publishApplicationEventforDeviceOverHTTP(deviceId, deviceType, "blink", event, ContentType.json);
 ```
 
-有关完整的代码样本，请参阅 [HttpApplicationDeviceEventPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpApplicationDeviceEventPublish.java) 应用程序示例。
+有关完整的代码样本，请参阅 [HttpApplicationDeviceEventPublish ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpApplicationDeviceEventPublish.java){: new_window} 应用程序示例。
 
 根据属性文件中的设置，`publishEventOverHTTP()` 方法会在 Quickstart 或注册流中发布事件。如果 `quickstart` 在属性文件中指定为组织标识，那么 `publishEventOverHTTP()` 方法会将事件以纯 HTTP 格式发布到 {{site.data.keyword.iot_short_notm}} Quickstart 服务。如果在属性文件中指定的已注册组织有效，那么会始终使用 HTTPS 来发布事件以确保所有通信的安全。
 
@@ -472,7 +472,7 @@ HTTP 协议提供“至多一次”传递，这类似于 MQTT 协议的“至多
 	boolean response = myClient.publishCommandOverHTTP("execute", event);
 ```
 
-要查看完整的代码样本，请参阅 [HttpCommandPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpCommandPublish.java) 应用程序示例。
+要查看完整的代码样本，请参阅 [HttpCommandPublish ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpCommandPublish.java){: new_window} 应用程序示例。
 
 HTTP 协议提供“至多一次”传递，这类似于 MQTT 协议的“至多一次”(QoS 0) 服务质量级别。使用“至多一次”传递来发布命令时，应用程序必须实现出错情况下的重试逻辑。有关更多信息，请参阅[针对应用程序的 HTTP REST API](../api.html)。
 
@@ -480,8 +480,8 @@ HTTP 协议提供“至多一次”传递，这类似于 MQTT 协议的“至多
 ## 样本
 {: #samples}
 
--  [MQTTApplicationDeviceEventPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/MQTTApplicationDeviceEventPublish.java) - 显示如何发布设备事件的样本应用程序。
--   [RegisteredApplicationCommandPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationCommandPublish.java) - 显示如何向设备发布命令的样本应用程序。
--  [RegisteredApplicationSubscribeSample](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationSubscribeSample.java) - 显示如何预订不同事件（例如，设备事件、设备命令、设备状态和应用程序状态）的样本应用程序。
--   [SharedSubscriptionSample](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/SharedSubscriptionSample.java) - 显示如何构建可扩展应用程序以便在应用程序的多个实例之间进行消息负载均衡的样本应用程序。
--  [Backup-restore-sample](https://github.com/ibm-messaging/iot-backup-restore-sample) - 显示可以如何备份和恢复 {{site.data.keyword.cloudant}} 中的设备配置的样本。
+-  [MQTTApplicationDeviceEventPublish![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/MQTTApplicationDeviceEventPublish.java){: new_window} - 显示如何发布设备事件的样本应用程序。
+-   [RegisteredApplicationCommandPublish![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationCommandPublish.java){: new_window} - 显示如何向设备发布命令的样本应用程序。
+-  [RegisteredApplicationSubscribeSample ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationSubscribeSample.java){: new_window} - 显示如何预订不同事件（例如，设备事件、设备命令、设备状态和应用程序状态）的样本应用程序。
+-   [SharedSubscriptionSample ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/SharedSubscriptionSample.java){: new_window} - 显示如何构建可扩展应用程序以便在应用程序的多个实例之间进行消息负载均衡的样本应用程序。
+-  [Backup-restore-sample ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/iot-backup-restore-sample){: new_window} - 显示可以如何备份和恢复 {{site.data.keyword.cloudant}} 中的设备配置的样本。

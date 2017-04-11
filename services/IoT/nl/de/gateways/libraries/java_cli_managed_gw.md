@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-12-06"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -387,7 +387,7 @@ public abstract void updateFirmware(DeviceFirmware deviceFirmware);
 
 **Hinweis**: Für das Gateway und die angeschlossenen Geräte darf nur ein einziger Handler zur Bibliothek hinzugefügt werden, an den die Download- oder Aktualisierungsanforderungen für Firmware umgeleitet werden. Bei der Implementierung muss ein Thread erstellt werden oder ein Thread-Pool, der mehrere Firmwareanforderungen gleichzeitig verarbeitet.
 
-Eine Beispielimplementierung für einen Thread-Pool-Handler finden Sie in [Gateway-Beispiele - GitHub-Repository](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java).
+Eine Beispielimplementierung für einen Thread-Pool-Handler finden Sie im [GitHub-Repository mit den Gateway-Beispielen ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window}.
 
 ### Beispielimplementierung von `downloadFirmware`
 
@@ -401,7 +401,7 @@ Wenn während des Firmware-Downloads ein Fehler auftritt, muss der Status auf 'I
 
 Das folgende Codebeispiel zeigt eine Beispielimplementierung für den Firmware-Downlaod:
 
-**Wichtig:** In dem bereitgestellten Codebeispiel fehlt der Abschnitt für den Thread-Pool. Eine vollständige Beispielimplementierung für den Firmware-Handler finden Sie in [IBM Java-Gatewaybeispiel - GitHub-Repository ](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java).
+**Wichtig:** In dem bereitgestellten Codebeispiel fehlt der Abschnitt für den Thread-Pool. Eine vollständige Beispielimplementierung für den Firmware-Handler finden Sie im [GitHub-Repository mit den IBM Java-Gateway-Beispielen ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window}.
 
 ```java
 public void downloadFirmware(DeviceFirmware deviceFirmware) {
@@ -536,7 +536,7 @@ public void updateFirmware(DeviceFirmware deviceFirmware) {
 }
 ```
 
-Sie finden den vollständigen Code im Beispiel `GatewayFirmwareHandlerSample` in [Gateway-Beispiele - GitHub-Repository](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java).
+Sie finden den vollständigen Code im Beispiel `GatewayFirmwareHandlerSample` im [GitHub-Repository mit den Gateway-Beispielen ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window}.
 
 ### Schritt 4: Den Handler in `ManagedGateway` hinzufügen
 
@@ -547,7 +547,7 @@ GatewayFirmwareHandlerSample fwHandler = new GatewayFirmwareHandlerSample();
 mgdGateway.addFirmwareHandler(fwHandler);
 ```
 
-Weitere Informationen zu Firmwareaktionen finden Sie in [Gerätemanagementanforderungen](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/requests.html#/firmware-actions#firmware-actions).
+Weitere Informationen zu Firmwareaktionen finden Sie in [Gerätemanagementanforderungen ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/requests.html#/firmware-actions#firmware-actions){: new_window}.
 
 ## Geräteaktionen
 {: #dev_actions}
@@ -592,7 +592,7 @@ public abstract void handleReboot(DeviceAction action);
 public abstract void handleFactoryReset(DeviceAction action);
 ```
 
-**Hinweis:** Für das Gateway und die angeschlossenen Geräte darf nur ein einziger Handler zur Bibliothek hinzugefügt werden, an den die Geräteaktionsanforderungen umgeleitet werden. Bei der Implementierung muss ein Thread erstellt werden oder ein Thread-Pool, der mehrere Geräteaktionsanforderungen gleichzeitig verarbeitet. Eine Beispielimplementierung mit einem Thread-Pool finden Sie in [IoT-Gateway-Beispiele - GitHub-Repository](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java).
+**Hinweis:** Für das Gateway und die angeschlossenen Geräte darf nur ein einziger Handler zur Bibliothek hinzugefügt werden, an den die Geräteaktionsanforderungen umgeleitet werden. Bei der Implementierung muss ein Thread erstellt werden oder ein Thread-Pool, der mehrere Geräteaktionsanforderungen gleichzeitig verarbeitet. Eine Beispielimplementierung mit einem Thread-Pool finden Sie im [GitHub-Repository 'iot-gateway-samples' ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java){: new_window}.
 
 ### Beispielimplementierung von `handleReboot`
 
@@ -619,7 +619,7 @@ public void handleReboot(DeviceAction action) {
 }
 ```
 
-Die vollständige Beispielimplementierung eines Handlers, der einen Thread-Pool verwendet, finden Sie in [IoT-Gateway-Beispiele - GitHub-Repository](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java).
+Die vollständige Beispielimplementierung mit einem Thread-Pool finden Sie im [GitHub-Repository 'iot-gateway-samples' ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java){: new_window}.
 
 
 ### Beispielimplementierung von `handleFactoryReset`
@@ -648,7 +648,7 @@ GatewayActionHandlerSample actionHandler = new GatewayActionHandlerSample();
 mgdGateway.addDeviceActionHandler(actionHandler);
 ```
 
-Weitere Informationen zu Geräteaktionen finden Sie in [Gerätemanagementanforderungen](../../devices/device_mgmt/requests.html#/device-actions-reboot#device-actions-reboot).
+Weitere Informationen zu Geräteaktionen finden Sie in [Gerätemanagementanforderungen ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](../../devices/device_mgmt/requests.html#/device-actions-reboot#device-actions-reboot){: new_window}.
 
 ## Empfangsbereitschaft für Geräteattributänderungen
 {: #listen_device_attributes}
@@ -698,16 +698,16 @@ public void propertyChange(PropertyChangeEvent evt) {
 }
 ```
 
-Weitere Informationen zum Aktualisieren der Geräteattribute finden Sie in [Gerätemanagementanforderungen](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/index.html#/update-device-attributes#update-device-attributes).
+Weitere Informationen zum Aktualisieren der Geräteattribute finden Sie in [Gerätemanagementanforderungen ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/index.html#/update-device-attributes#update-device-attributes){: new_window}.
 
 ## Beispiele
 {: #samples}
 
-Die bereitgestellten Beispiele bieten Unterstützung beim Verbinden von Gateways und Geräten, die sich hinter Gateways befinden, mit Ihrer {{site.data.keyword.iot_short_notm}}-Instanz. Die Beispiele verwenden die {{site.data.keyword.iot_short_notm}}-Java-Clientbibliothek und sind in [Gateway-Beispiele - GitHub-Repository](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples) enthalten.
+Die bereitgestellten Beispiele bieten Unterstützung beim Verbinden von Gateways und Geräten, die sich hinter Gateways befinden, mit Ihrer {{site.data.keyword.iot_short_notm}}-Instanz. Die Beispiele verwenden die {{site.data.keyword.iot_short_notm}}-Java-Clientbibliothek und sind im [GitHub-Repository mit den Gateway-Beispielen ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples){: new_window} enthalten.
 
 ## Anleitungen
 {: #recipes}
 
-Eine Anleitung zum Verbinden eines Rasberry Pi-Geräts als verwaltetes Gateway mit {{site.data.keyword.iot_short_notm}} und zum Verwalten der angeschlossenen Geräte finden Sie in [Raspberry Pi als verwaltetes Gateway in {{site.data.keyword.iot_short_notm}} ](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/).
+Eine Anleitung zum Verbinden eines Rasberry Pi-Geräts als verwaltetes Gateway mit {{site.data.keyword.iot_short_notm}} und zum Verwalten der angeschlossenen Geräte finden Sie in [Raspberry Pi als verwaltetes Gateway in {{site.data.keyword.iot_short_notm}} ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/){: new_window}.
 
 In dieser Anleitung wird die Verwendung des Gerätemanagementprotokolls von {{site.data.keyword.iot_short_notm}} zum Verwalten eines Arduino Uno-Geräts über ein Raspberry Pi-Gerät erläutert, das als Gateway fungiert, und die Ausführung von Gerätemanagementoperationen wie das Neustarten des Geräts oder das Hinzufügen einer Programmskizze.

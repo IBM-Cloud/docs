@@ -2,11 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-2-6"
+lastupdated: "2017-03-14"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -45,21 +45,21 @@ lastupdated: "2017-2-6"
 {: #byb}
 
 获取 {{site.data.keyword.blockchainfull_notm}} 的概述、其与一般区块链概念的联系及其具体用途：
-- IBM.com 上的 [{{site.data.keyword.blockchainfull_notm}}](http://www.ibm.com/blockchain/)。
+- IBM.com 上的 [{{site.data.keyword.blockchainfull_notm}} ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://www.ibm.com/blockchain/){: new_window}。
 - [{{site.data.keyword.blockchainfull_notm}} 文档](https://console.ng.bluemix.net/docs/services/blockchain/index.html) - {{site.data.keyword.blockchainfull_notm}} 服务入门。
-- [{{site.data.keyword.blockchainfull_notm}} API](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/) - {{site.data.keyword.blockchainfull_notm}} API 概述。
-- [{{site.data.keyword.blockchainfull_notm}} for Developers](http://www.ibm.com/blockchain/for_developers.html) - 概述如何使区块链适合您的开发环境，包括带有实时演示的逐步指南，以及可部署以在 {{site.data.keyword.Bluemix_notm}} 上运行的代码。
+- [{{site.data.keyword.blockchainfull_notm}} HFC SDK for Node.js（含 API 文档）![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/hyperledger/fabric/tree/v0.6/docs/API){: new_window} -  {{site.data.keyword.blockchainfull_notm}} API 概述。
+- [{{site.data.keyword.blockchainfull_notm}} for Developers ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://www.ibm.com/blockchain/for_developers.html){: new_window} - 概述如何使区块链适合您的开发环境，包括带有实时演示的逐步指南，以及可部署以在 {{site.data.keyword.Bluemix_notm}} 上运行的代码。
 
 ## 样本智能合同
 
 {: #samples}
 
-[https://github.com/ibm-watson-iot/blockchain-samples](https://github.com/ibm-watson-iot/blockchain-samples) 上有若干样本合同可供下载。您可以将样本合同用作基础，以将自己的用例开发成可部署的链代码：
+[https://github.com/ibm-watson-iot/blockchain-samples ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/blockchain-samples){: new_window} 上有若干样本合同可供下载。您可以将样本合同用作基础，以将自己的用例开发成可部署的链代码：
 
 |样本合同 |描述 |
 |:---|:---|
-|[基本：简单合同](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/basic/simple_contract) | 简单版本的高级合同，允许您跟踪和存储区块链上的设备资产数据
-|[高级：IoT 通用样本合同](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/advanced/iot_sample_contract) | 高级样本合同，具有多种功能和可用于其数据模型和行为的**贸易航线**类型|
+|[基本：简单合同 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/basic/simple_contract){: new_window} | 简单版本的高级合同，允许您跟踪和存储区块链上的设备资产数据
+|[高级：IoT 通用样本合同 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/advanced/iot_sample_contract){: new_window} | 高级样本合同，具有多种功能和可用于其数据模型和行为的**贸易航线**类型|
 
 
 ## 配置 {{site.data.keyword.blockchainfull_notm}} 环境
@@ -186,11 +186,11 @@ lastupdated: "2017-2-6"
 2.  设置本地 Hyperledger 开发和测试环境。  
 要开发和测试自己的链代码，并将其随后部署到 {{site.data.keyword.blockchainfull_notm}}，必须设置本地开发环境。此环境包含 Golang，用于编写合同的链代码。
  1. 设置开发环境。  
-开发环境包含使用 Golang 中的链代码构建来开发智能合同所需的工具。有关更多信息，请参阅 Hyperledger 文档中的 [Setting up the development environment](https://github.com/hyperledger/fabric/blob/master/docs/dev-setup/devenv.md)。
+开发环境包含使用 Golang 中的链代码构建来开发智能合同所需的工具。有关更多信息，请参阅 Hyperledger 文档中的 [Setting up the development environment ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")]( https://github.com/hyperledger/fabric/blob/master/docs/source/dev-setup/devenv.rst){: new_window}。
  2. 安装链代码调试环境。   
-调试环境提供了在将智能合同部署到 {{site.data.keyword.blockchainfull_notm}} 之前对其进行测试和调试所需的工具。有关更多信息，请参阅 Hyperledger 文档中的 [Writing, Building, and Running Chaincode in a Development Environment](https://github.com/hyperledger/fabric/blob/master/docs/Setup/Chaincode-setup.md)。
+调试环境提供了在将智能合同部署到 {{site.data.keyword.blockchainfull_notm}} 之前对其进行测试和调试所需的工具。有关更多信息，请参阅 Hyperledger 文档中的 [Writing, Building, and Running Chaincode in a Development Environment ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/hyperledger/fabric/blob/master/docs/source/Setup/Chaincode-setup.rst){: new_window}。
  3. 设置用于开发的网络。   
-用于开发的网络提供了更严格的类似生产的环境，用于对智能合同进行最终测试。在将已测试并调试的合同部署到 {{site.data.keyword.blockchainfull_notm}} 之前，使用此环境对这些合同进行最终测试。有关更多信息，请参阅 Hyperledger 文档中的 [Setting Up a Network](https://github.com/hyperledger/fabric/blob/master/docs/Setup/Network-setup.md)。
+用于开发的网络提供了更严格的类似生产的环境，用于对智能合同进行最终测试。在将已测试并调试的合同部署到 {{site.data.keyword.blockchainfull_notm}} 之前，使用此环境对这些合同进行最终测试。有关更多信息，请参阅 Hyperledger 文档中的 [Setting Up a Network ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/hyperledger/fabric/blob/master/docs/source/Setup/Network-setup.rst){: new_window}。
 
 3. 可选：下载 IBM 提供的样本智能合同。  
 IBM 提供了若干智能合同，您可以下载并按原样直接使用，也可以根据您组织的目标进行修改。  
@@ -223,7 +223,7 @@ IBM 提供了若干智能合同，您可以下载并按原样直接使用，也�
   例如，将 sample.go 文件上传到：  
   `http://github.com/{my organization}/{my project}/`
   2. 向早先连接的同级注册合同。  
-  使用 REST 客户机（例如 CURL 或 Postman）来提交注册调用。有关注册调用的更多信息，请参阅 [POST registrar API 文档](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/#!/Registrar/registerUser)。注册时，请使用以下信息：
+  使用 REST 客户机（例如 CURL 或 Postman）来提交注册调用。有关注册调用的更多信息，请参阅 [POST registrar API 文档 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/hyperledger/fabric/blob/v0.6/docs/API/CoreAPI.md#registrar){: new_window}。注册时，请使用以下信息：
   <ul>
   <li>URL：`http://api_host:api_port_tls/registrar`
 <li>类型：POST
@@ -238,7 +238,7 @@ IBM 提供了若干智能合同，您可以下载并按原样直接使用，也�
 
   </ul>
   3. 将合同部署到同级。  
-  有关部署调用的更多信息，请参阅 [POST devops/deploy API 文档](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/#!/Devops/chaincodeDeploy)。  
+有关部署调用的更多信息，请参阅 [POST/chaincode API 文档 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/hyperledger/fabric/blob/v0.6/docs/API/CoreAPI.md#chaincode){: new_window}。  
   部署时，请使用以下信息：  
   <ul>
   <li>URL：`http://api_host:api_port_tls/chaincode`
@@ -281,7 +281,7 @@ IBM 提供了若干智能合同，您可以下载并按原样直接使用，也�
    9. 输入以下信息并单击**下一步**：
      - 合同标识 - 粘贴您在部署合同时保存的由 128 个字符组成的合同标识。
      - 合同名称 - 输入名称以在 {{site.data.keyword.iot_short_notm}} 中标识合同。
-     
+
      **提示：**要查找设备的事件类型，请转至**设备**页面，然后单击设备名称以打开设备详细信息页面。向下滚动到**传感器信息**部分，以查看设备的可用事件和数据点的列表。
 
    11. 将可用设备属性映射到合同参数。   
@@ -298,7 +298,7 @@ IBM 提供了若干智能合同，您可以下载并按原样直接使用，也�
     <li>  Temperature - float64  
     <li>  Carrier - 字符串   
     </ul>  
-    有关如何将设备数据映射到合同的更多信息，请参阅 GitHub 上 IoT 区块链样本 Wiki 中的 [Data mapping example](https://github.com/ibm-watson-iot/blockchain-samples/wiki/Data-mapping-example)。
+有关如何将设备数据映射到合同的更多信息，请参阅 GitHub 上 IoT 区块链样本 Wiki 中的 [Data mapping example ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/blockchain-samples/wiki/Data-mapping-example){: new_window}。
    12. 在摘要页面中，验证信息是否正确。
    13. 设备数据到合同的映射会显示在“区块链”页面中。
 
@@ -306,7 +306,7 @@ IBM 提供了若干智能合同，您可以下载并按原样直接使用，也�
 为了测试智能合同，请通过在 {{site.data.keyword.iot_short_notm}} 中创建设备，将设备连接到 {{site.data.keyword.iot_short_notm}}，配置 IoT 区块链以连接到区块链光纤网，以及配置 {{site.data.keyword.iot_short_notm}} 以在区块链中映射和存储设备消息，从而执行端到端测试。通过使用 {{site.data.keyword.blockchainfull_notm}} 控制台，可以查看区块链以查看分类帐中的设备数据。如果合同支持 readAsset() 函数，那么可以使用“监视 UI”来查看区块链，并查看您自己场景中的设备数据以不可擦除的方式存储在区块链中。
 
 5. 配置“监视 UI”以连接到 {{site.data.keyword.blockchainfull_notm}}。  
- **提示：**如果尚未在本地环境中安装“监视 UI”，那么现在可以进行安装。按照[区块链监视 UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui) GitHub 目录中提供的“监视 UI”自述文件文档中的指示信息进行操作。  
+ **提示：**如果尚未在本地环境中安装“监视 UI”，那么现在可以进行安装。按照[区块链监视 UI ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window} GitHub 目录中提供的“监视 UI”自述文件文档中的指示信息进行操作。  
  通过单击**配置**按钮来访问配置设置。   
  使用以下信息来连接到合同：
 <table>

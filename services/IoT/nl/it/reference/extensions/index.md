@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2017-02-03"
+  years: 2015, 2017
+lastupdated: "2017-03-15"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -39,7 +39,7 @@ L'integrazione Jasper integrata fornita dalla nostra piattaforma fornisce suppor
 Puoi accedere alle operazioni supportate nel drilldown del dispositivo di un dispositivo collegato a Jasper dopo che sono state completate le seguenti istruzioni di configurazione:
 
 ### API REST per Jasper
-Per accedere all'API REST per Jasper, consulta la sezione dell'estensione Jasper nella [Documentazione {{site.data.keyword.iot_short_notm}} HTTP REST API ![icona link esterno](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window}.
+Per accedere all'API REST per Jasper, consulta la sezione dell'estensione Jasper nella [Documentazione {{site.data.keyword.iot_short_notm}} HTTP REST API ![icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window}.
 
 ### Configurazione di Jasper
 
@@ -91,7 +91,7 @@ L'estensione AT&T abilita le seguenti operazioni AT&T:
 - Modificare il piano tariffario
 
 ### API REST per AT&T
-Per accedere all'API REST per AT&T, consulta la sezione dell'estensione AT&T nella [Documentazione {{site.data.keyword.iot_short_notm}} HTTP REST API ![icona link esterno](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window}.
+Per accedere all'API REST per AT&T, consulta la sezione dell'estensione AT&T nella [Documentazione {{site.data.keyword.iot_short_notm}} HTTP REST API ![icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window}.
 
 ### Configurazione di AT&T
 
@@ -223,7 +223,7 @@ Se hai un dispositivo collegato al tuo servizio {{site.data.keyword.iot_short_no
 - Stato ubicazione
 
 ### API REST per Orange
-Per accedere all'API REST per Orange, consulta la sezione dell'estensione Orange nella [Documentazione {{site.data.keyword.iot_short_notm}} HTTP REST API ![icona link esterno](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window}.
+Per accedere all'API REST per Orange, consulta la sezione dell'estensione Orange nella [Documentazione {{site.data.keyword.iot_short_notm}} HTTP REST API ![icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window}.
 
 ### Configurazione di Orange
 
@@ -274,7 +274,7 @@ Per aggiungere un pacchetto di gestione personalizzato utilizzando il dashboard 
 3. Fai clic sul pulsante **Aggiungi pacchetto**.
 4. Selezione il tuo file pacchetto e fai clic su **Apri**.
 
-Per aggiungere un pacchetto di gestione personalizzato utilizzando l'API, consulta la [Documentazione API {{site.data.keyword.iot_short_notm}}![icona link esterno](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Per aggiungere un pacchetto di gestione personalizzato utilizzando l'API, consulta la [Documentazione API {{site.data.keyword.iot_short_notm}}![icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ## Blockchain
 {: #blockchain}
@@ -293,37 +293,100 @@ L'integrazione blockchain {{site.data.keyword.iot_short_notm}} è un offerta di 
  2. Nella pagina **Extensions**, fai clic su **Add Extension**.
  3. Fai clic su **Add** vicino all'estensione Blockchain.
  4. Nel tile Blockchain, fai clic su **Setup**.
- 3. Nella sezione **Activate Blockchain**, fai clic sul link **Learn more** per passare alla pagina [IoT Blockchain Services Offering ![icona link esterno](../../../../icons/launch-glyph.svg)](http://www.ibm.com/internet-of-things/iot-news/announcements/private-blockchain/){: new_window}.
+ 3. Nella sezione **Activate Blockchain**, fai clic sul link **Learn more** per passare alla pagina [IoT Blockchain Services Offering ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](http://www.ibm.com/internet-of-things/iot-news/announcements/private-blockchain/){: new_window}.
  4. Fai clic su **Kick-start your blockchain project** per compilare e inviare il modulo *Explore the potential of IoT and Blockchain*.  
  5. Dopo che la tua richiesta è stata approvata, IBM ti contatterà per abilitare l'integrazione blockchain per la tua organizzazione.
  6. Ritorna al dashboard {{site.data.keyword.iot_short_notm}} della tua organizzazione per completare la configurazione seguendo le istruzioni nella [Integrazione blockchain{{site.data.keyword.iot_short_notm}}](../../bl_blockchain_integration.html).
 
-
-
-## Weather Company
+<!-- ## The Weather Company
 {: #weathercompany}
 
-L'estensione Weather Company combina i dati meteo con i tuoi dispositivi {{site.data.keyword.iot_short_notm}} esistenti. I dati da Weather Company sono visualizzati nella vista dei dettagli del dispositivo se è stata effettuata una richiesta di ubicazione aggiornata utilizzando l'API o se il dispositivo ha già impostato la sua ubicazione utilizzando un messaggio di gestione del dispositivo.
+The Weather Company extension combines weather data with your existing {{site.data.keyword.iot_short_notm}} devices. Weather data from The Weather Company appears in the device details view if an update location request has been made by using the API, or if the device has already set its location by using a device management message.
 
-**Nota:** solo i dispositivi gestiti possono impostare le proprie ubicazioni. Tutti i dispositivi non gestiti devono avere le loro ubicazioni impostate manualmente utilizzando l'API. Per ulteriori informazioni sull'impostazione di un'ubicazione del dispositivo, consulta [Richieste di aggiornamento dell'ubicazione](../../devices/device_mgmt/index.html#update-location).
+**Note:** Only managed devices can set their own locations. All unmanaged devices must have their locations set manually by using the API. For more information on setting a device location, see [Update Location requests](../../devices/device_mgmt/index.html#update-location).
 
-### API REST per Weather Company
-Per accedere all'API REST per Weather Company, consulta la sezione
-Device Location Weather nella [Documentazione {{site.data.keyword.iot_short_notm}} HTTP REST API ![icona link esterno](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather){: new_window}.
+### REST APIs for The Weather Company
+To access the REST API for The Weather Company, see the
+Device Location Weather section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather){: new_window} documentation.
 
-### Dati meteo
+### Weather Data
 
-Per visualizzare i dati meteo richiamati per un'ubicazione del dispositivo, trova il dispositivo nel pannello **Devices** e fai clic su di esso. Nella vista del dispositivo dettagliata scorri fino alla sezione **Extensions**. Sono elencati i seguenti dati meteo:
+To view the weather data retrieved for a device location, find the device in the **Devices** pane and click it. In the detailed device view scroll down to the **Extensions** section. The following weather data is listed:
 
-- Meteo corrente.
-- Temperatura corrente.
-- Temperatura massima e minima previste.
-- Umidità relativa.
-- Pressione.
-- Visibilità.
-- Velocità del vento.
-- Direzione del vento.
-- Latitudine.
-- Longitudine.
+- Current weather.
+- Current temperature.
+- Predicted maximum and minimum temperature.
+- Relative humidity.
+- Pressure.
+- Visibility.
+- Wind speed.
+- Wind direction.
+- Latitude.
+- Longitude.
+-->
 
-<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html){: new_window}. -->
+<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html){: new_window}. -->
+
+## Email
+{: #email}
+
+È possibile aggiungere utenti a {{site.data.keyword.iot_short_notm}} utilizzando gli inviti email. Per informazioni, consulta [Gestione dell'accesso utente](../../add_users.html).
+
+Per utilizzare la funzione di invito email, deve essere configurata un'estensione email in modo che utilizzi il servizio online SendGrid o SMTP (Simple Mail Transfer Protocol). L'estensione può inoltre utilizzare l'applicazione {{site.data.keyword.Bluemix_notm}} SendGrid.
+
+### Servizio online SendGrid
+
+Per configurare l'estensione email per l'utilizzo con il servizio online SendGrid, segui questi passi: 
+
+1. Richiama la chiave API autorizzata dal tuo account online SendGrid:
+2. Nel tuo dashboard {{site.data.keyword.iot_short_notm}}, fai clic su **Extensions** dalla barra di navigazione.
+3. Nella sezione **Email**, fai clic su **Setup**.
+4. Seleziona **SendGrid with API key**
+5. Immetti il nome e l'indirizzo email del tuo amministratore del sito e la chiave API autorizzata.
+
+### Servizio SMTP
+
+Per configurare l'estensione email per l'utilizzo con il servizio SMTP, segui questi passi: 
+
+1. Nel tuo dashboard {{site.data.keyword.iot_short_notm}}, fai clic su **Extensions** dalla barra di navigazione.
+2. Nella sezione **Email**, fai clic su **Setup**.
+3. Seleziona **SMTP**.
+4. Immetti i dettagli di configurazione del tuo servizio SMTP.
+
+### Applicazione {{site.data.keyword.Bluemix_notm}} SendGrid
+
+Per configurare l'estensione email per l'utilizzo con l'applicazione {{site.data.keyword.Bluemix_notm}} SendGrid, segui questi passi:
+
+1. Crea un'applicazione fittizia e associa il servizio SendGrid.  
+Per poter richiamare le credenziali di configurazione, aggiungi e associa il servizio SendGrid a un'applicazione fittizia. 
+
+ 1. Dal tuo dashboard {{site.data.keyword.Bluemix_notm}}, fai clic su **Create Service**.
+ 2. Seleziona il servizio SendGrid dal catalogo e fai clic su **Create**.
+ 3. Dal dashboard {{site.data.keyword.Bluemix_notm}} aggiungi l'applicazione {{site.data.keyword.sdk4nodefull}}.
+ 4. Fai clic sull'applicazione {{site.data.keyword.sdk4nodefull}} dal dashboard {{site.data.keyword.Bluemix_notm}} e fai clic su **Bind a service or API**.
+ 5. Seleziona il servizio SendGrid e fai clic su **Add**.
+ 6. L'applicazione {{site.data.keyword.sdk4nodefull}} deve ora essere ripreparata.
+2. Preparazione alla configurazione del servizio {{site.data.keyword.iot_short_notm}}.  
+{{site.data.keyword.iot_short_notm}} può essere configurato utilizzando il dashboard {{site.data.keyword.iot_short_notm}} o l'API {{site.data.keyword.iot_short_notm}}.  
+ 1. Fai clic sull'applicazione {{site.data.keyword.sdk4nodefull}} dal dashboard {{site.data.keyword.Bluemix_notm}}.
+ 2. Fai clic su **Environment Variables** dalla barra di navigazione.
+ 3. Copia il JSON visualizzato in un file di testo temporaneo.  
+Il JSON deve essere nel seguente formato: 
+```
+{
+  "name": "SendGridServiceName",
+  "label": "user-provided",
+  "credentials": {
+    "password": "xxx",
+    "hostname": "smtp.sendgrid.net",
+    "username": "username"
+  }
+}
+```
+3. Aggiungi i dati di configurazione all'organizzazione {{site.data.keyword.iot_short_notm}}.
+ 1. Apri il dashboard {{site.data.keyword.iot_short_notm}}.
+ 2. Fai clic su **Extensions** dalla barra di navigazione.
+ 3. Fai clic su **Setup** sotto l'icona **Email**.
+ 4. Seleziona **SendGrid with username**.
+ 5. Immetti i dati di configurazione dal file di testo temporaneo. 
+ 6. Fai clic su **Done**.

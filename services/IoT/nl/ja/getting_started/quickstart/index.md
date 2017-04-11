@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-09-19"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -14,12 +14,12 @@ lastupdated: "2016-09-19"
 
 # Quickstart
 
-[Quickstart](https://quickstart.internetofthings.ibmcloud.com/#/) は、デバイスを素早く {{site.data.keyword.iot_full}} に接続するために使用できるオープン・サンドボックスです。MQTT メッセージ・プロトコルをサポートしているデバイスなら、簡単に Quickstart に接続できます。
+[Quickstart ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://quickstart.internetofthings.ibmcloud.com/#/){: new_window} は、デバイスを素早く {{site.data.keyword.iot_full}} に接続するために使用できるオープン・サンドボックスです。MQTT メッセージ・プロトコルをサポートしているデバイスなら、簡単に Quickstart に接続できます。
 
-各種のデバイスを Quickstart サービスに接続する方法を説明した例、レシピ、チュートリアルについては、[DeveloperWorks Recipes](https://developer.ibm.com/recipes/) をご覧ください。例えば、以下のようなトピックがあります。
+各種のデバイスを Quickstart サービスに接続する方法を説明した例、レシピ、チュートリアルについては、[DeveloperWorks Recipes ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/){: new_window} をご覧ください。例えば、以下のようなトピックがあります。
 
-- [OpenBlocks IoT BX1G](https://developer.ibm.com/recipes/tutorials/openblocks-iot-bx1g-for-iot-foundation-quickstart/)
-- [Reactive Blocks](https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/)
+- [OpenBlocks IoT BX1G ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/openblocks-iot-bx1g-for-iot-foundation-quickstart/){: new_window}
+- [Reactive Blocks ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/){: new_window}
 
 
 **重要:** {{site.data.keyword.iot_short_notm}} インスタンスで Quickstart サービスを使用する場合は、スケーラブルなアプリケーションはサポートされません。
@@ -54,7 +54,7 @@ http://quickstart.internetofthings.ibmcloud.com/iotsensor
 
 ## Mosquitto のデモ
 
-[Mosquitto](http://mosquitto.org/) は、{{site.data.keyword.iot_short}} サービスをテストするために使用できるクロスプラットフォーム・オープン・ソース MQTT クライアントです。Mosquitto クライアントをインストールしたら、固有のアプリケーション ID とデバイス ID を選択してください。アプリケーション ID とデバイス ID が固有の値になっていないと、テスト接続時に、Quickstart の同じテスト手順を実行している別のユーザーと競合する可能性があります。
+[Mosquitto ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://mosquitto.org/){: new_window} は、{{site.data.keyword.iot_short}} サービスをテストするために使用できるクロスプラットフォーム・オープン・ソース MQTT クライアントです。Mosquitto クライアントをインストールしたら、固有のアプリケーション ID とデバイス ID を選択してください。アプリケーション ID とデバイス ID が固有の値になっていないと、テスト接続時に、Quickstart の同じテスト手順を実行している別のユーザーと競合する可能性があります。
 
 *appId*、*type_id*、*device_type*、*device_id* の値は、36 文字以下でなければなりません。以下の文字だけを含めるようにしてください。
 - 英数字 (a-z、A-Z、0-9)
@@ -90,9 +90,9 @@ http://quickstart.internetofthings.ibmcloud.com/iotsensor
 
 ## 関連リンク
 
-- [Quickstart](https://quickstart.internetofthings.ibmcloud.com)
-- [DeveloperWorks Recipes](https://developer.ibm.com/recipes)
-- [OpenBlocks IoT BX1G](https://developer.ibm.com/recipes/tutorials/openblocks-iot-bx1g-for-iot-foundation-quickstart/)
-- [Reactive Blocks](https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/)
-- [Quickstart アプリケーション](http://quickstart.internetofthings.ibmcloud.com)
-- [Mosquitto](http://mosquitto.org/)
+- [Quickstart ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://quickstart.internetofthings.ibmcloud.com){: new_window}
+- [DeveloperWorks Recipes ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes){: new_window}
+- [OpenBlocks IoT BX1G ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/openblocks-iot-bx1g-for-iot-foundation-quickstart/){: new_window}
+- [Reactive Blocks ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/){: new_window}
+- [Quickstart アプリケーション ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://quickstart.internetofthings.ibmcloud.com){: new_window}
+- [Mosquitto ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://mosquitto.org/){: new_window}

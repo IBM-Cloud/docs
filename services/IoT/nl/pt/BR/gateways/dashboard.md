@@ -1,12 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2017-01-10"
+
+years: 2015, 2017
+
+lastupdated: "2017-03-16"
+
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -39,7 +42,8 @@ Também é possível usar gateways para executar Edge Analytics nos dados que os
 
 O registro de um gateway envolve classificar o dispositivo como um tipo de gateway, dando ao gateway um nome e fornecendo informações do gateway. Em seguida, você fornece um token de conexão ou aceita um token que é gerado pelo {{site.data.keyword.iot_short_notm}}.
 
-**Dica:** é possível incluir gateways um por vez a partir do painel do {{site.data.keyword.iot_short_notm}} ou usar a [API do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/post_bulk_devices_add) para incluir um ou mais gateways por vez.
+
+**Dica:** é possível incluir gateways um de cada vez por meio do painel do {{site.data.keyword.iot_short_notm}} ou usar a [API de administração da organização ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window} para incluir um ou mais gateways de cada vez.
 
 Para incluir um gateway a partir do painel do {{site.data.keyword.iot_short_notm}}:
 
@@ -86,7 +90,7 @@ O ID do dispositivo é usado para identificar o dispositivo de gateway no painel
 
 Parabéns, você registrou seu dispositivo de gateway. Agora é possível configurar seu dispositivo de gateway para se conectar ao {{site.data.keyword.iot_short_notm}}
 
-Consulte a orientação [Como registrar gateways no IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/how-to-register-gateways-in-ibm-watson-iot-platform/) para obter instruções passo a passo que demonstram o fluxo necessário para registrar um gateway.
+Veja a orientação [Como registrar gateways no IBM Watson IoT Platform ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/how-to-register-gateways-in-ibm-watson-iot-platform/){:new_window} para obter instruções passo a passo que demonstram o fluxo necessário para registrar um gateway.
 
 ## Etapa 2: conectando seu gateway ao {{site.data.keyword.iot_short_notm}}
 {: #connect_gateway}
@@ -95,7 +99,8 @@ Após registrar um gateway com o {{site.data.keyword.iot_short_notm}}, use as in
 
 Para obter informações sobre como conectar seu gateway ao {{site.data.keyword.iot_short_notm}}, consulte [Conectividade MQTT para gateways](mqtt.html).
 
-**Dica:** há uma gama de receitas disponíveis para conectar dispositivos ao {{site.data.keyword.iot_short_notm}}. Para obter uma lista de receitas, consulte as [Receitas de conexão de dispositivo](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/) que estão disponíveis em IBM.com.
+**Dica:** há uma gama de receitas disponíveis para conectar dispositivos ao {{site.data.keyword.iot_short_notm}}. Para obter uma lista de orientações, veja as
+[Orientações de conexão de dispositivo ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window} disponíveis em IBM.com.
 
 
 ## Etapa 3: conectando dispositivos por meio do gateway
@@ -108,7 +113,7 @@ Para obter informações sobre registro automático de dispositivo e publicaçã
 
 Quando um dispositivo é conectado com sucesso a seu gateway, ele é exibido no painel de sua organização do {{site.data.keyword.iot_short_notm}}.
 
-Consulte a orientação [Conectando o Raspberry Pi como um gateway ao Watson IoT](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-as-a-gateway-to-watson-iot-using-node-red/) para obter o fluxo e a descrição detalhados. 
+Consulte a orientação [Conectando o Raspberry Pi como um Gateway ao Watson IoT ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-as-a-gateway-to-watson-iot-using-node-red/){:new_window} para obter fluxo e descrição detalhados.
 
 **Nota:** no painel do {{site.data.keyword.iot_short_notm}}, dispositivos e gateways conectados diretamente ao {{site.data.keyword.iot_short_notm}} exibem um ícone de status para indicar que estão conectados. O painel exibe dispositivos que estão conectados indiretamente por meio de um gateway como desconectados, pois não tem qualquer conhecimento de uma conectividade de dispositivos com o gateway.
 
@@ -116,17 +121,22 @@ Consulte a orientação [Conectando o Raspberry Pi como um gateway ao Watson IoT
 ## Instalando o Edge Analytics Agent
 {: #edge}
 
-O Edge Analytics Agent (EAA) é um componente de software construído com base no [Apache Quarks](http://quarks.incubator.apache.org/) para realizar opções de Edge Analytics em um gateway fazendo upload e gerenciando regras de Edge Analytics a partir do painel do {{site.data.keyword.iot_short_notm}}. Para obter mais informações sobre Edge Analytics, consulte [Edge Analytics](../edge_analytics.html).
+O Edge Analytics Agent (EAA) é um componente de software construído sobre um mecanismo de fluxo que é otimizado para que o processamento de borda execute operações do Edge Analytics em um gateway, fazendo upload e gerenciando regras de Edge Analytics por meio do painel do {{site.data.keyword.iot_short_notm}}. Para obter mais informações sobre Edge Analytics, consulte [Edge Analytics](../edge_analytics.html).
 
 ### Instalando o EAA
 {: #eaa_install}
 
 Para instalar o EAA em seu gateway:
 1. No painel do {{site.data.keyword.iot_short}}, acesse **Regras**.
-2. Clique em **Fazer download do Edge Agent** para acessar a [Comunidade do IBM Edge Analytics Agent](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true).
-3. Navegue até a seção **Arquivos** e faça download do arquivo compactado *ibm-watson-iot-edge-analytics-dslink-java-0.0.1*.
-4. Para obter informações sobre como instalar e configurar o componente de software EAA em seu gateway, consulte a receita a seguir:
- - [Introdução a Edge Analytics no Watson IoT Platform](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=19472)
+2. Clique em **Fazer download do Edge Agent** para acessar a [Comunidade do IBM Edge Analytics ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true){:new_window}.
+3. Navegue para a seção **Arquivos** e faça download dos diretórios compactados apropriados para seu tipo de gateway.  
+A solução Edge Analytics está disponível como um SDK para dispositivos que suportam Java ou como um DSLink para dispositivos de gateway Cisco.
+4. Para obter informações sobre como instalar e configurar o componente de software EAA em seu gateway, veja as informações a seguir:
+ - SDK  
+ Veja o PDF, o arquivo leia-me e os links de vídeo que estão disponíveis na comunidade.  
+ Orientação [Edge Recipe for SDK - Introdução (SDK) ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/getting-started-with-the-ibm-edge-analytics-sdk-in-watson-iot-platform/){:new_window}.
+ - DSLink  
+ Orientação [Introdução ao Edge Analytics no Watson IoT Platform ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=19472){:new_window}.
 
 ### Definições de configuração do EAA
 {: #eaa_configuration}

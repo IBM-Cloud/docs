@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-22"
+lastupdated: "2017-03-17"
 
 ---
 
@@ -15,18 +15,7 @@ lastupdated: "2017-02-22"
 # Gerenciamento de risco e segurança
 {: #RM_security}
 
-O complemento Gerenciamento de risco e segurança permite que as organizações aprimorem a segurança do {{site.data.keyword.iot_full}} criando, aplicando e relatando a segurança de conexão de dispositivo. Com esse complemento, os certificados e a autenticação transport layer security (TLS) são usados sobre os IDs de usuário e os tokens usados pelo {{site.data.keyword.iot_short_notm}} para determinar como e onde os dispositivos se conectam à plataforma. Durante a comunicação entre dispositivos e o servidor, quaisquer dispositivos que não tenham certificados válidos com acesso ao servidor, como configurado no complemento Gerenciamento de Risco e Segurança, têm o acesso negado, mesmo que usem IDs de usuário e senhas válidos.
-
-## Política de segurança de conexão
-{: #connect_policy}
-
-A política Segurança da conexão impõe como os dispositivos se conectam à plataforma e como eles são usados com os planos de segurança Grátis e Avançado. É possível configurar as políticas de conexão padrão para todos os tipos de dispositivo, bem como as configurações customizadas para tipos específicos de dispositivo. A política pode ser configurada para permitir conexões não criptografadas, para reforçar conexões Transport Layer Security (TLS) e para permitir que os dispositivos autentiquem com certificados do lado do cliente.
-
-Se você usar um plano de segurança padrão, as políticas de conexão não estarão disponíveis. Para obter informações sobre como configurar políticas de segurança de conexão, veja [Configurando políticas de segurança](set_up_policies.html).
-
-A segurança de conexão também pode ser configurada para clientes usarem seu próprio certificado do lado do servidor em vez do certificado padrão que é fornecido. Isso poderá ser útil, por exemplo, no caso de os dispositivos dos usuários serem autenticados no servidor durante o handshake TLS. Nesta liberação inicial do Gerenciamento de risco e segurança, o nome de domínio do servidor {{site.data.keyword.iot_short_notm}} não pode ser mudado e deve ser usado no estado em que se encontra no certificado do servidor.
-
-
+É possível aprimorar a segurança para permitir criar, reforçar e relatar sobre a segurança de conexão de dispositivo. Com essa segurança avançada, os certificados e a autenticação transport layer security (TLS) são usados além dos IDs de usuário e dos tokens usados pelo {{site.data.keyword.iot_short_notm}} para determinar como e onde os dispositivos se conectarão à plataforma. Quando os certificados são ativados durante a comunicação entre dispositivos e o servidor, quaisquer dispositivos que não tenham certificados válidos, conforme configurado nas definições de segurança, terão o acesso negado, mesmo se usarem IDs de usuário e senhas válidos.
 
 ## Certificados de cliente
 {: #certificates}
@@ -34,6 +23,33 @@ A segurança de conexão também pode ser configurada para clientes usarem seu p
 Para configurar os certificados de cliente e o acesso ao servidor para dispositivos, o operador do sistema importa os certificados de autoridade de certificação (CA) associados e os certificados do servidor do sistema de mensagens para o {{site.data.keyword.iot_short_notm}}. O analista de segurança, então, configura as políticas de segurança de conexão para que as conexões padrão entre os dispositivos e a plataforma usem os níveis de segurança Apenas Certificados ou Certificados com Tokens de Autenticação. O analista pode incluir diferentes políticas para diferentes tipos de dispositivos.
 
 Para obter informações sobre como configurar certificados, veja [Configurando certificados](set_up_certificates.html).
+
+## Planos da organização e políticas de segurança
+As políticas de segurança aprimoradas permitem que as organizações determinem como desejam que os dispositivos se conectem e sejam autenticados para a plataforma, usando políticas de conexão e políticas de lista de bloqueio e lista de desbloqueio. As opções de política de segurança que estão disponíveis para uma organização dependem do tipo de plano da organização, como a seguir:
+
+**Plano padrão:**
+- Os operadores do sistema podem configurar políticas de conexão com as opções a seguir:
+    - TLS opcional 
+    - TLS com Autenticação do Token
+    - TLS com Autenticação do Token e Autenticação por Certificado de Cliente
+
+**Advanced Security Plan (ASP) ou Plano Lite:** 
+- Os operadores do sistema podem configurar políticas de conexão com as opções a seguir:
+    - TLS opcional 
+    - TLS com Autenticação do Token
+    - TLS com Autenticação por Certificado de Cliente
+    - TLS com Autenticação do Token e Autenticação por Certificado de Cliente
+    - TLS com Certificado de cliente ou Token
+- Os operadores do sistema podem configurar listas de bloqueio ou listas de desbloqueio
+
+## Políticas de conexão
+{: #connect_policy}
+
+As políticas de conexão reforçam como os dispositivos se conectam à plataforma. É possível configurar políticas de conexão padrão para todos os tipos de dispositivo e criar configurações customizadas para tipos específicos de dispositivo. A política pode ser configurada para permitir conexões não criptografadas, para reforçar conexões Transport Layer Security (TLS) e para permitir que os dispositivos autentiquem com certificados do lado do cliente.
+
+Para obter informações sobre como configurar políticas de segurança de conexão, veja [Configurando políticas de segurança](set_up_policies.html).
+
+A segurança de conexão também pode ser configurada para que os operadores do sistema possam usar seus próprios certificados de servidor de sistema de mensagens, em vez do certificado padrão fornecido. O uso de um certificado de servidor de sistema de mensagens customizado poderá ser útil, no caso de os dispositivos dos usuários serem autenticados no servidor durante o handshake TLS. Apenas os certificados de servidor de sistema de mensagens customizados que usarem o mesmo domínio que o servidor de sistema de mensagens IoTP original usar (<orgId>.messaging.internetofthings.ibmcloud.com) serão suportados.
 
 ## Políticas de lista de bloqueio e lista de desbloqueio
 {: #wl_bl}

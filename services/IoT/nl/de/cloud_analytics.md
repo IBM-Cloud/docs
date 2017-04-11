@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-17"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -24,7 +24,7 @@ Beispielsweise können Sie eine Regel erstellen, um sicherzustellen, dass ein Al
 {: #byb}
 Stellen Sie sicher, dass die Geräteeigenschaften, die Sie als Bedingungen in Ihren Regeln verwenden möchten, Schemas zugeordnet wurden. Weitere Informationen finden Sie in [Geräte verbinden](iotplatform_task.html) und [Schemas erstellen](im_schemas.html).
 
-Lesen Sie außerdem die Anleitung [Regeln und Aktionen mit {{site.data.keyword.iot_short}} Cloud Analytics verwenden ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){: new_window}, um die in Cloud Analytics verwendeten Regeln und Aktionen kennenzulernen.
+Lesen Sie außerdem die Anleitung [Regeln und Aktionen mit {{site.data.keyword.iot_short}} Cloud Analytics verwenden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){: new_window}, um die in Cloud Analytics verwendeten Regeln und Aktionen kennenzulernen.
 
 ## Regeln und Aktionen verwalten  
 {: #managing_rules}
@@ -160,7 +160,7 @@ Gehen Sie wie folgt vor, um die E-Mail-Aktion zu erstellen:
 ### IFTTT  
 {: #ifttt}
 
-Verwenden Sie die Aktion 'IFTTT', um eine IFTTT-Anleitung auszulösen, wenn eine Regel ausgelöst wird. Weitere Informationen zum Auslösen von Aktionen als IFTTT-Anleitungen finden Sie auf der IFTTT-Site in [Maker Channel ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://ifttt.com/maker){: new_window}.
+Verwenden Sie die Aktion 'IFTTT', um eine IFTTT-Anleitung auszulösen, wenn eine Regel ausgelöst wird. Weitere Informationen zum Auslösen von Aktionen als IFTTT-Anleitungen finden Sie auf der IFTTT-Site in [Maker Channel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://ifttt.com/maker){: new_window}.
 
 Beispiel: [IFTTT zum Posten einer Trello-Karte verwenden](#iftttex).
 
@@ -229,7 +229,7 @@ Hauptteil | Das Feld für den Hauptteil wird standardmäßig vorab mit allen Var
 In diesem Beispiel ist die Aktion so konfiguriert, dass zum Senden einer Textnachricht an den Servicetechniker Node-RED mit einem Twilio-Knoten verwendet wird.
 
 Gehen Sie wie folgt vor, um die Aktion 'Textnachricht senden' zu erstellen:
-1. Suchen Sie in Twilio einen Nachrichtenübertragungsservice oder erstellen Sie einen neuen, um ihn zum Senden von Textnachrichten über Ihr Twilio-Konto zu verwenden. Informationen finden Sie in der [Twilio-Dokumentation ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://www.twilio.com/help){: new_window}.
+1. Suchen Sie in Twilio einen Nachrichtenübertragungsservice oder erstellen Sie einen neuen, um ihn zum Senden von Textnachrichten über Ihr Twilio-Konto zu verwenden. Informationen finden Sie in der [Twilio-Dokumentation ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.twilio.com/help){: new_window}.
 2. Richten Sie in Bluemix ein Node-RED-Konto mit der Node-RED-URL `http://mynodered.mybluemix.net/red/` ein und greifen Sie darauf zu. Weitere Informationen finden Sie im Abschnitt [Apps mit Node-RED Starter erstellen](https://www.ng.bluemix.net/docs/starters/Node-RED/nodered.html) in der Bluemix-Dokumentation.
 3. Erstellen Sie in Node-RED einen einfachen Ablauf aus zwei Knoten, wie beispielsweise [RTI-alert]->[SMS].  
 Dabei ist der erste Knoten ein HTTP-Knoten und der zweite ist ein Twilio-Knoten.
@@ -290,7 +290,7 @@ Hauptteil | Der Hauptteil des Webhook-Aufrufs.  Verfügbar für die Methoden OPT
 In diesem Beispiel ist die Aktion so konfiguriert, dass zum Posten einer Nachricht im Slack-Kanal '#service-requests' (Serviceanforderungen) ein Webhook verwendet wird.
 
 Gehen Sie wie folgt vor, um die Aktion 'In Slack posten' zu erstellen:
-1. Richten Sie in Slack für den Kanal '#service-requests' die Integration für eingehende Webhooks ein. Notieren Sie die URL des Webhooks. Weitere Informationen finden Sie in der [Slack-Dokumentation ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://api.slack.com/incoming-webhooks){: new_window}.
+1. Richten Sie in Slack für den Kanal '#service-requests' die Integration für eingehende Webhooks ein. Notieren Sie die URL des Webhooks. Weitere Informationen finden Sie in der [Slack-Dokumentation ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://api.slack.com/incoming-webhooks){: new_window}.
 2. Wechseln Sie im {{site.data.keyword.iot_short}}-Dashboard zu **Regeln > Aktionen** und erstellen Sie eine neue Aktion, die folgende Parameter aufweist:
  - Name - `Serviceanforderung in Slack posten`
  - Typ - **Webhook**
@@ -301,7 +301,7 @@ Gehen Sie wie folgt vor, um die Aktion 'In Slack posten' zu erstellen:
  ```json
  {"text":"*Ein Gerät benötigt Ihre Aufmerksamkeit*\n Time: {{timestamp}}\n {{site.data.keyword.iot_short}} instance: {{tenantId}}\n Device: {{deviceId}}\n Rule: {{ruleName}}\n Description: {{ruleDescription}}\n Condition: {{ruleCondition}}\n Raw device message: \n{{message}}"}
  ```  
-  **Wichtig:** Der Slack-Webhook muss mindestens das Feld 'text' enthalten. Informationen finden Sie in der Slack-Dokumentation im Abschnitt [Incoming Webhooks ![Symbol für externen Link](../icons/launch-glyph.svg)](https://api.slack.com/incoming-webhooks){: new_window}.
+  **Wichtig:** Der Slack-Webhook muss mindestens das Feld 'text' enthalten. Informationen finden Sie in der Slack-Dokumentation im Abschnitt [Incoming Webhooks ![Symbol für externen Link](../icons/launch-glyph.svg)](https://api.slack.com/incoming-webhooks "Slack-Dokumentation"){: new_window}.
 11. Klicken Sie auf **Fertigstellen**, um die Aktion zu speichern.
 
 
@@ -328,12 +328,12 @@ Variable | Beschreibung
 
 Die folgenden Anleitungen beschreiben die Vorgehensweise zur Verwendung von Cloud Analytics-Funktionen in verschiedenen Anwendungsfällen:
 
-- [Analyse von Echtzeitdaten mit IBM Watson™ IoT Platform Analytics ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/real-time-data-analysis-using-ibm-watson-iot-platform-analytics/){: new_window}
+- [Analyse von Echtzeitdaten mit IBM Watson™ IoT Platform Analytics ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/recipes/tutorials/real-time-data-analysis-using-ibm-watson-iot-platform-analytics/){: new_window}
 
-- [Vorhersageanalyse für IOT-Beispieldaten ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/predictive-analytics-on-iot-sample-data/){: new_window}
+- [Vorhersageanalyse für IOT-Beispieldaten ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/recipes/tutorials/predictive-analytics-on-iot-sample-data/){: new_window}
 
-- [Gerätelistenkarte VEREINFACHT die Echtzeitgeräteüberwachung im WIoTP-Dashboard ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/device-list-card-simplifies-real-time-device-monitoring-on-wiotp-dashboard/){: new_window}
+- [Gerätelistenkarte VEREINFACHT die Echtzeitgeräteüberwachung im WIoTP-Dashboard ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/recipes/tutorials/device-list-card-simplifies-real-time-device-monitoring-on-wiotp-dashboard/){: new_window}
 
-- [Aktionen in IBM Watson IoT Platform Cloud Analytics ausführen ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/perform-actions-in-ibm-watson-iot-platform-cloud-analytics/){: new_window}
+- [Aktionen in IBM Watson IoT Platform Cloud Analytics ausführen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/recipes/tutorials/perform-actions-in-ibm-watson-iot-platform-cloud-analytics/){: new_window}
 
-- [Mithilfe von IBM Data Science Experience Anomalien in Zeitreihen erkennen ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/use-ibm-data-science-experience-to-detect-time-series-anomalies/){: new_window}
+- [Mithilfe von IBM Data Science Experience Anomalien in Zeitreihen erkennen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/recipes/tutorials/use-ibm-data-science-experience-to-detect-time-series-anomalies/){: new_window}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-08-02"
+  years: 2015, 2017
+lastupdated: "2017-03-13"
 
 ---
 
@@ -22,7 +22,7 @@ Embedded C を使用して、{{site.data.keyword.iot_full}} 上で組織と対�
 ## Embedded C クライアントおよびリソースのダウンロード
 {: #embeddedc_client_download}
 
-{{site.data.keyword.iot_short_notm}} の Embedded C クライアント・ライブラリーおよびサンプルを利用するには、GitHub の [iotf-embeddedc](https://github.com/ibm-messaging/iotf-embeddedc) リポジトリーにアクセスして、インストール手順を実行します。
+{{site.data.keyword.iot_short_notm}} の Embedded C クライアント・ライブラリーとサンプルを利用するには、GitHub の [iotf-embeddedc ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/iotf-embeddedc){: new_window} リポジトリーにアクセスし、インストール手順を実行します。
 
 
 ## 従属関係
@@ -30,7 +30,7 @@ Embedded C を使用して、{{site.data.keyword.iot_full}} 上で組織と対�
 
 |従属関係 |説明|
 |:---|:---|
-|[Eclipse Paho Embedded C ライブラリー](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git) |MQTT C クライアント・ライブラリーを提供します。詳しくは、[MQTT クライアント・パッケージ - 組み込みデバイス用 C](http://www.eclipse.org/paho/clients/c/embedded/) を参照してください。|
+|[Eclipse Paho Embedded C ライブラリー ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git){: new_window} |MQTT C クライアント・ライブラリーを提供します。詳しくは、[MQTT クライアント・パッケージ - 組み込みデバイス用 C ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window} を参照してください。|
 
 
 ## インストール
@@ -224,4 +224,4 @@ Embedded C 用 {{site.data.keyword.iot_short_notm}} クライアント・ライ�
 ## サンプル
 {: #samples}
 
-デバイスとアプリケーションのサンプル・コードが [GitHub](https://github.com/ibm-messaging/iotf-embeddedc/tree/master/samples) で提供されています。
+デバイスとアプリケーションのサンプル・コードが [GitHub ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/iotf-embeddedc/tree/master/samples){: new_window} で提供されています。

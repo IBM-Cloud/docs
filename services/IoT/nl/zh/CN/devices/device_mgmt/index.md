@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2017-01-12"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2017-01-12"
 
 **受管设备**定义为包含设备管理代理程序的设备。设备管理代理程序是一组逻辑，允许设备通过使用设备管理协议与 {{site.data.keyword.iot_short_notm}} 设备管理服务交互。受管设备可执行设备管理操作，包括位置更新、固件下载和更新、重新引导和出厂重置。
 
-设备管理协议定义了一组受支持的操作。设备管理代理程序可以支持其中一部分操作，但必须支持**受管设备**和**非受管设备**操作。支持固件操作的设备还必须支持观察。
+设备管理协议定义了一组受支持的操作。设备管理代理程序可以支持其中一部分操作，但必须支持**管理**和**取消管理**操作。支持固件操作的设备还必须支持观察。
 
 设备管理协议基于 MQTT 消息传递协议进行构建。有关设备管理协议如何与 MQTT 进行交互的更多信息，请参阅[设备的 MQTT 连接](../mqtt.html)。
 
@@ -37,7 +37,7 @@ lastupdated: "2017-01-12"
 5. 为了处理大量设备群中失效的设备，**受管设备**操作请求会包含可选的 lifetime 参数。lifetime 参数是秒数，设备必须在此期间发起另一个**受管设备**请求，才能避免被分类为休眠而变成非受管设备。
 6. 设备退役后，可以使用仪表板或 REST API 将其从 {{site.data.keyword.iot_short_notm}} 中除去。
 
-请参阅 [Connect Raspberry Pi as Managed Device to IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/) 诀窍。
+请参阅 [ConnectRaspberry Pi as Managed Device to IBM Watson IoT Platform ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/){: new_window}。
 
 ### 返回码摘要
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-17"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -33,10 +33,8 @@ Antes de iniciar a criação de regras e ações de Edge Analytics:
 - Certifique-se de que as propriedades do dispositivo que você deseja usar como condições em suas regras sejam mapeadas para esquemas. Consulte [Conectando dispositivos](iotplatform_task.html) e [Criando esquemas](im_schemas.html) para obter mais informações.
 - Revise as orientações do Edge Analytics  
 Em nosso portal Orientações, algumas orientações descrevem as etapas que são necessárias para executar o IBM Edge Analytics. As orientações descrevem claramente como instalar e configurar o IBM Edge Analytics Agent em um dispositivo construído sobre o Apache Edgent para executar análise próxima a uma origem de dados da IoT.
- - A orientação [Introdução ao Edge Analytics no IBM Watson IoT Platform
-![Ícone de link externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/getting-started-with-edge-analytics-in-watson-iot-platform/){: new_window} é o início dessa série. Essa orientação descreve como configurar o Cisco DSA Platform em um Sistema Laptop e um Dispositivo Raspberry Pi 3, como instalar e configurar o IBM Edge Analytics Agent para se conectar ao {{site.data.keyword.iot_short}}, como instalar o Sistema DS Link e configurá-lo para se conectar ao Gateway do Edge Analytics no {{site.data.keyword.iot_short}} como um dispositivo conectado, como definir e ativar a Regra do Edge no Edge Gateway e o gerenciamento da Regra de Edge Analytics por meio do {{site.data.keyword.iot_short}}.
- - Para ilustrar um uso avançado do Edge Analytics, a orientação [Manipulando alertas e ações de dispositivo com o Edge Analytics no IBM Watson IoT Platform ![Ícone de link externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/handling-alerts-and-device-actions-with-edge-analytics-in-ibm-watson-iot-platform/){: new_window} mostra um showcase de como
-construir seu próprio Link DS para transferir dados de um dispositivo Arduino Uno conectado a um dispositivo Raspberry Pi 3. A orientação também exibe um showcase de filtragem de dados e manipulação de ações de dispositivo local como parte do alerta da Regra do Edge.
+ - A orientação [Introdução ao Edge Analytics no IBM Watson IoT Platform ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/getting-started-with-edge-analytics-in-watson-iot-platform/){: new_window} é o início dessa série. Essa orientação descreve como configurar o Cisco DSA Platform em um Sistema Laptop e um Dispositivo Raspberry Pi 3, como instalar e configurar o IBM Edge Analytics Agent para se conectar ao {{site.data.keyword.iot_short}}, como instalar o Sistema DS Link e configurá-lo para se conectar ao Gateway do Edge Analytics no {{site.data.keyword.iot_short}} como um dispositivo conectado, como definir e ativar a Regra do Edge no Edge Gateway e o gerenciamento da Regra de Edge Analytics por meio do {{site.data.keyword.iot_short}}.
+ - Para ilustrar um uso avançado do Edge Analytics, a orientação [Manipulando alertas e ações de dispositivo com o Edge Analytics no IBM Watson IoT Platform ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/handling-alerts-and-device-actions-with-edge-analytics-in-ibm-watson-iot-platform/){: new_window} exibe um showcase de como construir seu próprio Link DS para transferir dados de um dispositivo Arduino Uno conectado a um dispositivo Raspberry Pi 3. A orientação também exibe um showcase de filtragem de dados e manipulação de ações de dispositivo local como parte do alerta da Regra do Edge.
 
 ## Gerenciando regras e ações de borda  
 {: #managing_rules}

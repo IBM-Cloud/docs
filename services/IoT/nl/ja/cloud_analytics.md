@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-17"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2017-02-17"
 {: #byb}
 ルールで条件として使用するデバイス・プロパティーがスキーマにマップされていることを確認します。詳しくは、[デバイスの接続](iotplatform_task.html)と[スキーマの作成](im_schemas.html)を参照してください。
 
-また、[Using Rules and Actions with {{site.data.keyword.iot_short}} Cloud Analytics ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){: new_window} レシピを参照し、クラウド分析で使用するルールとアクションについて理解してください。
+また [Using Rules and Actions with {{site.data.keyword.iot_short}} Cloud Analytics ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){: new_window} レシピを参照し、クラウド分析で使用するルールとアクションについて理解してください。
 
 ## ルールとアクションの管理  
 {: #managing_rules}
@@ -169,7 +169,7 @@ E メール・アクションを作成するには次のようにします。
 ### IFTTT  
 {: #ifttt}
 
-IFTTT アクションを使用して、ルールがトリガーされたときに IFTTT レシピをトリガーします。IFTTT レシピとしてアクションをトリガーする方法について詳しくは、IFTTT サイトの [Maker Channel ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://ifttt.com/maker){: new_window} を参照してください。
+IFTTT アクションを使用して、ルールがトリガーされたときに IFTTT レシピをトリガーします。IFTTT レシピとしてのトリガー・アクションについて詳しくは、IFTTT サイトの [Maker Channel ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://ifttt.com/maker){: new_window} を参照してください。
 
 例: [IFTTT を使用して Trello カードを送付する](#iftttex)。
 
@@ -239,7 +239,7 @@ URL | ターゲット Node-RED HTTP 入力ノードの URL。
 この例では、Twilio ノードを含む Node-RED を使用して、サービス・エンジニアにテキスト・メッセージを送信するようにアクションが構成されています。
 
 テキスト・メッセージの送信アクションを作成するには次のようにします。
-1. Twilio でメッセージング・サービスを見つけるか、または新規に作成して、テキスト・メッセージを Twilio アカウントから送信します。詳しくは、[Twilio の資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.twilio.com/help){: new_window} を参照してください。
+1. Twilio でメッセージング・サービスを見つけるか、または新規に作成して、テキスト・メッセージを Twilio アカウントから送信します。詳しくは、[Twilio の資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.twilio.com/help){: new_window} を参照してください。
 2. Bluemix で、Node-RED URL `http://mynodered.mybluemix.net/red/` を使用して Node-RED アカウントをセットアップしアクセスします。詳しくは、Bluemix 資料の [Node-RED Starter によるアプリの作成](https://www.ng.bluemix.net/docs/starters/Node-RED/nodered.html)トピックを参照してください。
 3. Node-RED で、簡単な 2 ノード・フロー ([RTI-alert]->[SMS] など) を作成します。
   
@@ -302,7 +302,7 @@ URL | ターゲット Webhook 対応サーバーの URL。**ヒント:** [変数
 この例では、Webhook を使用して #service-requests Slack チャネルにメッセージを送付するようにアクションが構成されます。
 
 Slack への通知アクションを作成するには次のようにします。
-1. Slack で、チャネル #service-requests 用に Incoming Webhooks 統合をセットアップします。Webhooks URL をメモします。詳しくは、[Slack の資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://api.slack.com/incoming-webhooks){: new_window} を参照してください。
+1. Slack で、チャネル #service-requests 用に Incoming Webhooks 統合をセットアップします。Webhooks URL をメモします。詳しくは、[Slack の資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://api.slack.com/incoming-webhooks){: new_window} を参照してください。
 2. {{site.data.keyword.iot_short}} ダッシュボードで、**「ルール」>「アクション」**に進み、以下のパラメーターを持つ新規アクションを作成します。
  - 名前 - `Post service request on Slack`
  - タイプ - **Webhook**
@@ -313,7 +313,7 @@ Slack への通知アクションを作成するには次のようにします�
  ```json
  {"text":"*A device needs your attention*\n Time: {{timestamp}}\n {{site.data.keyword.iot_short}} instance: {{tenantId}}\n Device: {{deviceId}}\n Rule: {{ruleName}}\n Description: {{ruleDescription}}\n Condition: {{ruleCondition}}\n Raw device message: \n{{message}}"}
  ```  
-  **重要:** Slack Webhook には少なくとも "text" フィールドを含める必要があります。詳しくは、Slack の資料の [Incoming Webhooks ![外部リンク・アイコン](../icons/launch-glyph.svg)](https://api.slack.com/incoming-webhooks){: new_window} を参照してください。
+  **重要:** Slack Webhook には少なくとも "text" フィールドを含める必要があります。詳しくは、Slack 資料の [Incoming Webhooks ![外部リンク・アイコン](../icons/launch-glyph.svg)](https://api.slack.com/incoming-webhooks "Slack 資料"){: new_window} を参照してください。
 11. **「完了」**をクリックして、アクションを保存します。
 
 
@@ -339,12 +339,12 @@ Slack への通知アクションを作成するには次のようにします�
 
 以下のレシピは、さまざまなユース・ケースでのクラウド分析機能の使用法を示しています。
 
-- [Real Time Data Analysis Using IBM Watson™ IoT Platform Analytics ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/real-time-data-analysis-using-ibm-watson-iot-platform-analytics/){: new_window}
+- [Real Time Data Analysis Using IBM Watson™ IoT Platform Analytics ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/real-time-data-analysis-using-ibm-watson-iot-platform-analytics/){: new_window}
 
-- [Predictive Analytics on IOT Sample Data ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/predictive-analytics-on-iot-sample-data/){: new_window}
+- [Predictive Analytics on IOT Sample Data ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/predictive-analytics-on-iot-sample-data/){: new_window}
 
-- [Device List Card SIMPLIFIES Real Time Device Monitoring on WIoTP Dashboard ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/device-list-card-simplifies-real-time-device-monitoring-on-wiotp-dashboard/){: new_window}
+- [Device List Card SIMPLIFIES Real Time Device Monitoring on WIoTP Dashboard ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/device-list-card-simplifies-real-time-device-monitoring-on-wiotp-dashboard/){: new_window}
 
-- [Perform Actions in IBM Watson IoT Platform Cloud Analytics ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/perform-actions-in-ibm-watson-iot-platform-cloud-analytics/){: new_window}
+- [Perform Actions in IBM Watson IoT Platform Cloud Analytics ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/perform-actions-in-ibm-watson-iot-platform-cloud-analytics/){: new_window}
 
-- [Use IBM Data Science Experience to detect time series anomalies ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/use-ibm-data-science-experience-to-detect-time-series-anomalies/){: new_window}
+- [Use IBM Data Science Experience to detect time series anomalies ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/use-ibm-data-science-experience-to-detect-time-series-anomalies/){: new_window}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-07-28"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -23,7 +23,7 @@ Verwenden Sie C#, um Anwendungen zu erstellen und anzupassen, die in {{site.data
 ## C#-Client und Ressourcen herunterladen
 {: #csharp_client_download}
 
-Wechseln Sie für den Zugriff auf die C#-Clientbibliotheken und Beispiele für {{site.data.keyword.iot_short_notm}} in das Repository [iot-csharp](https://github.com/ibm-watson-iot/iot-csharp) in GitHub und folgen Sie den Installationsanweisungen.
+Wechseln Sie für den Zugriff auf die C#-Clientbibliotheken und Beispiele für {{site.data.keyword.iot_short_notm}} in das Repository [iot-csharp ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-watson-iot/iot-csharp){: new_window} in GitHub und folgen Sie den Installationsanweisungen.
 
 
 ## Konstruktor

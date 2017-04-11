@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-11-18"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -20,8 +20,8 @@ MQTT 是设备和应用程序用于与 {{site.data.keyword.iot_full}} 通信的�
 
 MQTT 通过 TCP/IP 运行，并且在可以直接对 TCP/IP 编码时，还可选择使用库来处理 MQTT 协议的详细信息。提供了范围非常广泛的各种 MQTT 客户机库。IBM 致力于开发和支持多种客户机库，包括以下站点上提供的客户机库：
 
-- [MQTT 社区 Wiki](https://github.com/mqtt/mqtt.github.io/wiki)
-- [Eclipse Paho 项目](http://eclipse.org/paho/)
+- [MQTT 社区 Wiki ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/mqtt/mqtt.github.io/wiki){: new_window}
+- [Eclipse Paho 项目 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](http://eclipse.org/paho/){: new_window}
 
 ## 版本支持
 {: #version-support}

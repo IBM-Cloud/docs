@@ -1,12 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2017-01-10"
+
+years: 2015, 2017
+
+lastupdated: "2017-03-16"
+
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -39,7 +42,8 @@ lastupdated: "2017-01-10"
 
 게이트웨이를 등록하려면 게이트웨이 유형으로 디바이스를 분류하고 게이트웨이에 이름을 제공하며 게이트웨이 정보를 제공해야 합니다. 그런 다음 연결 토큰을 제공하거나 {{site.data.keyword.iot_short_notm}}에서 생성된 토큰을 승인합니다.
 
-**팁:** {{site.data.keyword.iot_short_notm}} 대시보드에서 한 번에 하나씩 게이트웨이를 추가하거나 [{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/post_bulk_devices_add)를 사용하여 한 번에 하나 이상의 게이트웨이를 추가할 수 있습니다.
+
+**팁:** {{site.data.keyword.iot_short_notm}} 대시보드에서 한 번에 하나씩 게이트웨이를 추가하거나 [조직 관리 API ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window}를 사용하여 하나 이상의 게이트웨이를 한 번에 추가할 수 있습니다. 
 
 {{site.data.keyword.iot_short_notm}} 대시보드에서 게이트웨이를 추가하려면 다음을 수행하십시오.
 
@@ -87,7 +91,7 @@ lastupdated: "2017-01-10"
 
 축하합니다. 게이트웨이 디바이스가 등록되었습니다. 이제 {{site.data.keyword.iot_short_notm}}에 연결하도록 게이트웨이 디바이스를 구성할 수 있습니다.
 
-게이트웨이의 등록에 필요한 플로우를 예시하는 단계별 지시사항은 [IBM Watson IoT Platform에서 게이트웨이를 등록하는 방법](https://developer.ibm.com/recipes/tutorials/how-to-register-gateways-in-ibm-watson-iot-platform/) 레시피를 참조하십시오. 
+게이트웨이를 등록하는 데 필요한 플로우를 보여주는 단계별 지시사항은 [IBM Watson IoT Platform에 게이트웨이 등록 방법 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/how-to-register-gateways-in-ibm-watson-iot-platform/){:new_window} 레시피를 참조하십시오. 
 
 ## 2단계: {{site.data.keyword.iot_short_notm}}에 게이트웨이 연결
 {: #connect_gateway}
@@ -96,8 +100,8 @@ lastupdated: "2017-01-10"
 
 {{site.data.keyword.iot_short_notm}}에 게이트웨이를 연결하는 데 관한 정보는 [게이트웨이용 MQTT 연결](mqtt.html)을 참조하십시오.
 
-**팁:** {{site.data.keyword.iot_short_notm}}에 디바이스를 연결하는 데 사용할 수 있는 지침서는 다양합니다. 지침서 목록은
-IBM.com에서 사용 가능한 [디바이스 연결 지침서](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/)를 참조하십시오.
+**팁:** {{site.data.keyword.iot_short_notm}}에 디바이스를 연결하는 데 사용할 수 있는 지침서는 다양합니다. 레시피의 목록은 IBM.com에서 사용 가능한
+[디바이스 연결 레시피 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}를 참조하십시오. 
 
 
 ## 3단계: 게이트웨이를 통해 디바이스 연결
@@ -110,7 +114,7 @@ IBM.com에서 사용 가능한 [디바이스 연결 지침서](https://developer
 
 디바이스가 게이트웨이에 연결되면 {{site.data.keyword.iot_short_notm}} 조직의 대시보드에 표시됩니다.
 
-세부 플로우와 설명은 [Watson IoT에 게이트웨이로서 Raspberry Pi 연결](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-as-a-gateway-to-watson-iot-using-node-red/) 레시피를 참조하십시오  
+세부 플로우 및 관련 설명은 [게이트웨이로서 Watson IoT에 Raspberry Pi 연결 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-as-a-gateway-to-watson-iot-using-node-red/){:new_window} 레시피를 참조하십시오. 
 
 **참고:** {{site.data.keyword.iot_short_notm}} 대시보드에서 {{site.data.keyword.iot_short_notm}}에 직접 연결된 디바이스와 게이트웨이는 현재 연결되었음을 표시하는 상태 아이콘을 표시합니다. 대시보드에는 게이트웨이에 연결된 디바이스에 대한 정보가 없으므로 게이트웨이를 통해 간접적으로 연결된 디바이스는 연결이 끊김으로 표시됩니다.
 
@@ -118,17 +122,22 @@ IBM.com에서 사용 가능한 [디바이스 연결 지침서](https://developer
 ## EAA(Edge Analytics Agent) 설치
 {: #edge}
 
-EAA(Edge Analytics Agent)는 {{site.data.keyword.iot_short_notm}} 대시보드에서 에지 분석 규칙을 업로드하고 관리하여 게이트웨이에서 에지 분석 오퍼레이션을 수행하는 [Apache Quarks](http://quarks.incubator.apache.org/)를 기반으로 빌드된 소프트웨어 컴포넌트입니다. 에지 분석에 대한 자세한 정보는 [에지 분석](../edge_analytics.html)을 참조하십시오.
+EAA(Edge Analytics Agent)는 스트리밍 엔진 위에서 구축된 소프트웨어 컴포넌트이며, 이 엔진은 {{site.data.keyword.iot_short_notm}} 대시보드에서 에지 분석 규칙을 업로드하고 관리함으로써 게이트웨이에서 에지 분석 조작을 수행하는 에지 처리를 위해 최적화되어 있습니다. 에지 분석에 대한 자세한 정보는 [에지 분석](../edge_analytics.html)을 참조하십시오.
 
 ### EAA 설치
 {: #eaa_install}
 
 게이트웨이에 EAA를 설치하려면 다음을 수행하십시오.
 1. {{site.data.keyword.iot_short}} 대시보드에서 **규칙**으로 이동합니다. 
-2. **Edge Agent 다운로드**를 클릭하여 [IBM Edge Analytics Agent 커뮤니티](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true)로 이동합니다.
-3. **파일** 섹션으로 이동하여 압축된 *ibm-watson-iot-edge-analytics-dslink-java-0.0.1* 파일을 다운로드합니다.
-4. 게이트웨이에 EAA 소프트웨어 컴포넌트를 설치하고 구성하는 방법에 대한 정보는 다음 참조서를 확인하십시오.
- - [Watson IoT Platform에서 에지 분석 시작하기](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=19472)
+2. **Edge Agent 다운로드**를 클릭하여 [IBM Edge Analytics 커뮤니티 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true){:new_window}로 이동하십시오. 
+3. **파일** 섹션으로 이동하여 게이트웨이 유형에 적합한 압축 디렉토리를 다운로드하십시오.   
+Edge Analytics 솔루션은 Java를 지원하는 디바이스에 대한 SDK로 또는 Cisco 게이트웨이 디바이스에 대한 DSLink로 사용 가능합니다. 
+4. 게이트웨이에서 EAA 소프트웨어 컴포넌트를 설치하고 구성하는 방법에 대한 정보는 다음 정보를 참조하십시오. 
+ - SDK  
+ 커뮤니티에서 사용 가능한 PDF, Readme 파일 및 비디오 링크를 참조하십시오.   
+ [SDK용 Edge Recipe - 시작하기(SDK) ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/getting-started-with-the-ibm-edge-analytics-sdk-in-watson-iot-platform/){:new_window} 레시피. 
+ - DSLink  
+ [Watson IoT Platform에서 Edge Analytics 시작하기 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=19472){:new_window} 레시피. 
 
 ### EAA 구성 설정
 {: #eaa_configuration}

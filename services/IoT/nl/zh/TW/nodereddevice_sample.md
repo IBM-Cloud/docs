@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-17"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-02-17"
 使用 Node-RED 來建立裝置模擬器，並將模擬的裝置資料傳送至 {{site.data.keyword.iot_full}} 組織。  
 {:shortdesc}
 
-Node-RED 是一種工具，以全新且有趣的方式，將硬體裝置、API 和線上服務連接在一起。如需相關資訊，請參閱 [Node-RED ![外部鏈結圖示](../../icons/launch-glyph.svg)](http://nodered.org/){: new_window} 網站。  
+Node-RED 是一種工具，以全新且有趣的方式，將硬體裝置、API 和線上服務連接在一起。如需相關資訊，請參閱 [Node-RED ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://nodered.org/){: new_window} 網站。  
 
 您可以在自己的環境中執行 Node-RED 實例，或是將其用來作為 {{site.data.keyword.Bluemix_notm}} 應用程式。下列程序包含 {{site.data.keyword.Bluemix_notm}} 的指示。
 
@@ -26,7 +26,7 @@ Node-RED 是一種工具，以全新且有趣的方式，將硬體裝置、API �
    使用裝置模擬器，將 MQTT 裝置訊息傳送至 {{site.data.keyword.iot_short_notm}}。裝置模擬器模擬將貨櫃資料傳送至 MQTT 分配管理系統，例如 {{site.data.keyword.iot_short_notm}}。
     1. 在 https://console.ng.bluemix.net 登入 {{site.data.keyword.Bluemix_notm}}：
     2. 選取**型錄**標籤。
-    3. 找到服務型錄的「樣板」區段，然後按一下 **Node-RED 入門範本社群測試版**。**提示：**按一下[這裡 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/catalog/starters/node-red-starter/){: new_window}，直接移至「Node-RED 入門範本」頁面。
+    3. 找到服務型錄的「樣板」區段，然後按一下 **Node-RED 入門範本社群測試版**。**提示：**按一下[這裡 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/catalog/starters/node-red-starter/){: new_window}，直接移至「Node-RED 入門範本」頁面。
     4. 在「Node-RED 入門範本」頁面上，選取要部署 Node-RED 的空間，驗證「建立應用程式」選項，然後按一下**建立**，將 Node-RED 新增至您的 Bluemix 組織。  
 例如：  
      - 空間：dev

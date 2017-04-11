@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-17"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-02-17"
 Verwenden Sie Node-RED, um einen Gerätesimulator zu erstellen und Daten zum simulierten Gerät an Ihre {{site.data.keyword.iot_full}}-Organisation zu senden.  
 {:shortdesc}
 
-Node-RED ist ein Tool, mit dem Hardware-Geräte, APIs und Online-Services auf eine neue und interessante Weise miteinander verbunden werden können. Weitere Informationen finden Sie auf der Website von [Node-RED ![Symbol für externen Link](../../icons/launch-glyph.svg)](http://nodered.org/){: new_window}.  
+Node-RED ist ein Tool, mit dem Hardware-Geräte, APIs und Online-Services auf eine neue und interessante Weise miteinander verbunden werden können. Weitere Informationen finden Sie auf der Website von [Node-RED ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://nodered.org/){: new_window}.  
 
 Sie können Ihre Node-RED-Instanz in Ihrer eigenen Umgebung ausführen oder Sie können sie als {{site.data.keyword.Bluemix_notm}}-Anwendung verwenden. Der folgende Prozess enthält die Anweisungen für {{site.data.keyword.Bluemix_notm}}.
 
@@ -26,7 +26,7 @@ Gehen Sie wie folgt vor, um den Node-RED-Gerätesimulator zu erstellen und zu ve
    Senden Sie mithilfe des Gerätesimulators MQTT-Gerätenachrichten an {{site.data.keyword.iot_short_notm}}. Der Gerätesimulator hat das Senden von Daten für einen Frachtcontainer an einen MQTT-Broker wie beispielsweise {{site.data.keyword.iot_short_notm}} simuliert.
     1. Melden Sie sich unter 'https://console.ng.bluemix.net' bei {{site.data.keyword.Bluemix_notm}} an.
     2. Wählen Sie die Registerkarte **Katalog** aus.
-    3. Suchen Sie im Servicekatalog den Abschnitt mit den Boilerplates und klicken Sie auf die Option für **Node-RED Starter Community BETA**. **Tipp:** Klicken Sie [hier ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/catalog/starters/node-red-starter/){: new_window}, um direkt zur Seite mit Node-RED Starter zu wechseln.
+    3. Suchen Sie im Servicekatalog den Abschnitt mit den Boilerplates und klicken Sie auf die Option für **Node-RED Starter Community BETA**. **Tipp:** Klicken Sie [hier ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.ng.bluemix.net/catalog/starters/node-red-starter/){: new_window}, um direkt zur Seite mit Node-RED Starter zu wechseln.
     4. Wählen Sie auf der Seite mit Node-RED Starter den Bereich aus, in dem Sie Node-RED bereitstellen möchten, überprüfen Sie die Auswahl für 'App erstellen' und klicken Sie auf **Erstellen**, um Node-RED zu Ihrer Bluemix-Organisation hinzuzufügen.  
     Beispiel:  
      - Bereich: dev

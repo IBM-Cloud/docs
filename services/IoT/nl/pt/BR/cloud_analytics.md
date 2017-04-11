@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-17"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -24,8 +24,7 @@ Por exemplo, você pode criar uma regra para assegurar que quando o dispositivo 
 {: #byb}
 Certifique-se de que as propriedades do dispositivo que você deseja usar como condições em suas regras tenham sido mapeadas para esquemas. Consulte [Conectando dispositivos](iotplatform_task.html) e [Criando esquemas](im_schemas.html) para obter mais informações.
 
-Além disso, revise a orientação [Usando regras e ações com o {{site.data.keyword.iot_short}} Cloud
-Analytics ![Ícone de link externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){: new_window} para entender as regras e ações que são usadas no Cloud Analytics.
+Além disso, revise a orientação [Usando regras e ações com o {{site.data.keyword.iot_short}} Cloud Analytics ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){: new_window} para entender as regras e ações usadas no Cloud Analytics.
 
 ## Gerenciando regras e ações  
 {: #managing_rules}
@@ -161,8 +160,7 @@ Para criar uma ação de e-mail:
 ### IFTTT  
 {: #ifttt}
 
-Use a ação IFTTT para acionar uma receita do IFTTT quando uma regra for acionada. Para obter mais informações sobre o acionamento de ações como orientações de IFTTT, consulte [Canal do criador ![Ícone de link
-externo](../../icons/launch-glyph.svg)](https://ifttt.com/maker){: new_window} no site do IFTTT.
+Use a ação IFTTT para acionar uma receita do IFTTT quando uma regra for acionada. Para obter mais informações sobre o acionamento de ações como orientações de IFTTT, veja [Canal do criador ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://ifttt.com/maker){: new_window} no site do IFTTT.
 
 Exemplo: [usar o IFTTT para postar um cartão do Trello](#iftttex).
 
@@ -231,7 +229,7 @@ Corpo | Por padrão, o campo de corpo é preenchido previamente com todas as var
 Neste exemplo, a ação é configurada para usar o Node-RED com um nó Twilio para enviar uma mensagem de texto ao engenheiro de serviço.
 
 Para criar a ação enviar mensagem de texto:
-1. No Twilio, localize ou crie um novo Serviço de sistema de mensagens a ser usado para enviar mensagens de texto a partir de sua conta do Twilio. Para obter informações, consulte a [documentação do Twilio ![Ícone de link externo](../../icons/launch-glyph.svg)](https://www.twilio.com/help){: new_window}.
+1. No Twilio, localize ou crie um novo Serviço de sistema de mensagens a ser usado para enviar mensagens de texto a partir de sua conta do Twilio. Para obter mais informações, veja a documentação do [Twilio ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.twilio.com/help){: new_window}.
 2. No Bluemix, configure e acesse sua conta do Node-RED com a URL do Node-RED `http://mynodered.mybluemix.net/red/`. Para obter mais informações, veja o tópico [Criando apps com o Node-RED Starter](https://www.ng.bluemix.net/docs/starters/Node-RED/nodered.html) na documentação do Bluemix.
 3. No Node-RED, crie um fluxo simples com dois nós, como [RTI-alert]->[SMS].  
 Em que o primeiro nó é um nó http e o segundo é um nó twilio.
@@ -292,7 +290,7 @@ Corpo | O corpo da chamada do webhook.  Disponível para os métodos OPTIONS, PA
 Neste exemplo, a ação está configurada para usar um webhook para postar uma mensagem no canal #service-requests do Slack.
 
 Para criar a ação postar no Slack:
-1. No Slack, configure a integração do Incoming Webhooks para o canal #service-requests. Anote a URL dos webhooks. Para obter informações, consulte a [documentação do Slack![Ícone de link externo](../../icons/launch-glyph.svg)](https://api.slack.com/incoming-webhooks){: new_window}.
+1. No Slack, configure a integração do Incoming Webhooks para o canal #service-requests. Anote a URL dos webhooks. Para obter mais informações, veja a documentação do [Slack ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://api.slack.com/incoming-webhooks){: new_window}.
 2. No painel do {{site.data.keyword.iot_short}}, acesse **Regras > Ações** e crie uma nova ação que tenha os parâmetros a seguir:
  - Nome - `Postar solicitação de serviço no Slack`
  - Tipo - **Webhook**
@@ -303,7 +301,7 @@ Para criar a ação postar no Slack:
  ```json
  {"text":"*A device needs your attention*\n Time: {{timestamp}}\n {{site.data.keyword.iot_short}} instance: {{tenantId}}\n Device: {{deviceId}}\n Rule: {{ruleName}}\n Description: {{ruleDescription}}\n Condition: {{ruleCondition}}\n Raw device message: \n{{message}}"}
  ```  
-  **Importante:** O webhook do Slack deve conter, no mínimo, o campo "text". Para obter informações, consulte os [Webhooks de entrada ![Ícone de link externo](../icons/launch-glyph.svg)](https://api.slack.com/incoming-webhooks){: new_window} na documentação do Slack.
+  **Importante:** O webhook do Slack deve conter, no mínimo, o campo "text". Para obter informações, veja [Webhooks de entrada ![Ícone de link externo](../icons/launch-glyph.svg)](https://api.slack.com/incoming-webhooks "Documentação do Slack"){: new_window} na documentação do Slack.
 11. Clique em **Concluir** para salvar a ação.
 
 
@@ -330,14 +328,12 @@ Variável | Descrição
 
 As orientações a seguir descrevem como usar os recursos do Cloud Analytics para casos de uso diferentes:
 
-- [Análise de dados em tempo real usando o IBM Watson™ IoT Platform Analytics ![Ícone de link externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/real-time-data-analysis-using-ibm-watson-iot-platform-analytics/){: new_window}
+- [Análise de dados em tempo real usando o IBM Watson™ IoT Platform Analytics ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/real-time-data-analysis-using-ibm-watson-iot-platform-analytics/){: new_window}
 
-- [Análise preditiva nos dados de amostra da IoT ![Ícone de link externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/predictive-analytics-on-iot-sample-data/){: new_window}
+- [Análise preditiva nos dados de amostra da IoT ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/predictive-analytics-on-iot-sample-data/){: new_window}
 
-- [O cartão de lista de dispositivos SIMPLIFICA o monitoramento do dispositivo em tempo real no painel WIoTP
-![Ícone de link externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/device-list-card-simplifies-real-time-device-monitoring-on-wiotp-dashboard/){: new_window}
+- [O cartão de lista de dispositivos SIMPLIFICA o monitoramento do dispositivo em tempo real no painel WIoTP ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/device-list-card-simplifies-real-time-device-monitoring-on-wiotp-dashboard/){: new_window}
 
-- [Executar ações no IBM Watson IoT Platform Cloud Analytics ![Ícone de link externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/perform-actions-in-ibm-watson-iot-platform-cloud-analytics/){: new_window}
+- [Executar ações no IBM Watson IoT Platform Cloud Analytics ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/perform-actions-in-ibm-watson-iot-platform-cloud-analytics/){: new_window}
 
-- [Use o IBM Data Science Experience para detectar anomalias de séries temporais ![Ícone de
-link externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/use-ibm-data-science-experience-to-detect-time-series-anomalies/){: new_window}
+- [Usar o IBM Data Science Experience para detectar anomalias de séries temporais ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/use-ibm-data-science-experience-to-detect-time-series-anomalies/){: new_window}

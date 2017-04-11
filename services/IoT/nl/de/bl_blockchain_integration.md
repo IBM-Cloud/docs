@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-17"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -43,17 +43,17 @@ Das folgende Diagramm veranschaulicht die allgemeine Umgebung für die {{site.da
 ## Vorbereitende Schritte
 {: #byb}
 
-- Verschaffen Sie sich bei IBM.com eine Übersicht über {{site.data.keyword.iot_short_notm}}, über dessen Beziehung zum allgemeinen Blockchain-Konzept und was es für Sie in [{{site.data.keyword.iot_short_notm}} ![Symbol für externen Link](../../icons/launch-glyph.svg)](http://www.ibm.com/blockchain/){: new_window} ausführen kann.
+- Verschaffen Sie sich bei IBM.com eine Übersicht über {{site.data.keyword.iot_short_notm}}, über dessen Beziehung zum allgemeinen Blockchain-Konzept und was es für Sie in [{{site.data.keyword.iot_short_notm}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://www.ibm.com/blockchain/){: new_window} ausführen kann.
 - [Aktivieren Sie die {{site.data.keyword.iot_short_notm}}-Blockchain-Integration](reference/extensions/index.html#blockchain) für Ihre Organisation.
 - Stellen Sie eine Verbindung für Geräte her, die Daten erzeugen, die Sie in das Blockchain-Konto schreiben möchten.  
 Folgen Sie den Anweisungen im Abschnitt [Geräte verbinden](iotplatform_task.html), um für Ihre Geräte eine Verbindung herzustellen.
 - Installieren Sie die Benutzerschnittstelle für die Überwachung.
-Mit der Benutzerschnittstelle für die Überwachung wird die Verbindung zwischen {{site.data.keyword.iot_short_notm}} und dem Blockchain-Fabric überprüft. Folgen Sie den Anweisungen im Readme-Dokument der Benutzerschnittstelle für die Überwachung, das im GitHub-Verzeichnis der [Blockchain-Benutzerschnittstelle für die Überwachung ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window} verfügbar ist.
+Mit der Benutzerschnittstelle für die Überwachung wird die Verbindung zwischen {{site.data.keyword.iot_short_notm}} und dem Blockchain-Fabric überprüft. Folgen Sie den Anweisungen im Readme-Dokument der Benutzerschnittstelle für die Überwachung, das im GitHub-Verzeichnis der [Blockchain-Benutzerschnittstelle für die Überwachung ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window} verfügbar ist.
 
 ### IBM Basisszenario für einen schnellen Start
 
 Um schnell mit dem Testen der {{site.data.keyword.iot_short_notm}}-Integration mit Blockchain zu starten, können Sie eine Verbindung zu einem von IBM bereitgestellten Fabric herstellen und dem von IBM bereitgestellten Beispielvertrag ein Node-RED-Beispielgerät zuordnen.  Die für dieses Szenario erforderlichen Schritte werden in diesem Abschnitt als **IBM Basisszenario** bezeichnet.  
-**Wichtig:** Beachten Sie, dass das von IBM bereitgestellte Blockchain-Beispielkonto und alle zugehörigen Daten für alle Benutzer des Blockchain-Beispielkontos sichtbar sind. Speichern Sie in dem von IBM bereitgestellten Blockchain-Beispielkonto keine sensiblen Informationen. Darüber hinaus sind bei Beispielfabrics, die das Beispiel unterstützen, sowie bei Trade Lane-Verträgen einschließlich der Verbindungsinformationen für die einzelnen Peers Änderungen vorbehalten. Die Verbindungsdetails stehen in der Watson IoT-Blockchain-Community auf der Wikiseite [Informationen zu IoT-Blockchain-Verbindung ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} zur Verfügung.
+**Wichtig:** Beachten Sie, dass das von IBM bereitgestellte Blockchain-Beispielkonto und alle zugehörigen Daten für alle Benutzer des Blockchain-Beispielkontos sichtbar sind. Speichern Sie in dem von IBM bereitgestellten Blockchain-Beispielkonto keine sensiblen Informationen. Darüber hinaus sind bei Beispielfabrics, die das Beispiel unterstützen, sowie bei Trade Lane-Verträgen einschließlich der Verbindungsinformationen für die einzelnen Peers Änderungen vorbehalten. Die Verbindungsdetails stehen in der Watson IoT-Blockchain-Community auf der Wikiseite [IoT-Blockchain-Verbindungsinformationen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} zur Verfügung.
 
 Die von IBM bereitgestellte grundlegende Umgebung für die {{site.data.keyword.iot_short_notm}}-Integration mit Blockchain besteht aus den folgenden Komponenten:
 - {{site.data.keyword.Bluemix_notm}}:
@@ -121,7 +121,7 @@ So stellen Sie die Verbindung zu einem Blockchain-Fabric her:
 3. Klicken Sie im Abschnitt zum Konfigurieren von Blockchain auf **Fertig**, um die Fabric-Informationen zu speichern.
 
 
-**IBM Basisszenario:** Verwenden Sie zum Herstellen einer Verbindung zu dem von IBM bereitgestellten Fabric die Verbindungsdetails für den Beispielvertrag, die auf der Wikiseite [IoT-Blockchain-Verbindungsinformationen ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} der Watson IoT-Blockchain-Community zur Verfügung stehen. Wenden Sie sich gegebenenfalls an Ihren IBM Ansprechpartner für Blockchain, um Zugang zu der Community zu erhalten.
+**IBM Basisszenario:** Verwenden Sie zum Herstellen einer Verbindung zu dem von IBM bereitgestellten Fabric die Verbindungsdetails für den Beispielvertrag, die auf der Wikiseite [IoT-Blockchain-Verbindungsinformationen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} der Watson IoT-Blockchain-Community zur Verfügung stehen. Wenden Sie sich gegebenenfalls an Ihren IBM Ansprechpartner für Blockchain, um Zugang zu der Community zu erhalten.
 
 
 ## Gerätedaten intelligenten Verträgen zuordnen
@@ -158,13 +158,13 @@ Gehen Sie wie folgt vor, um Gerätedaten einem Vertrag zuzuordnen:
 </tr>
 </tbody>
 </table>
-**IBM Basisszenario:** Der vorimplementierte intelligente Beispielvertrag lässt zu, dass Sie Datenpunkte des Geräts zu bestimmten Vertragsattributen zuordnen, um die Datenpunktwerte im Blockchain-Konto zu speichern. Verwenden Sie den Beispielvertrag, um die Zuordnung von Gerätedaten zu testen, bevor Sie versuchen, die erweiterten Trade Lane-Verträge zu verwenden oder eigene Verträge zu schreiben. Die Vertrags-ID wird auf der Wikiseite [IoT-Blockchain-Verbindungsinformationen ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} der Watson IoT-Blockchain-Community zur Verfügung gestellt. Wenden Sie sich gegebenenfalls an Ihren IBM Ansprechpartner für Blockchain, um Zugang zu der Community zu erhalten.
+**IBM Basisszenario:** Der vorimplementierte intelligente Beispielvertrag lässt zu, dass Sie Datenpunkte des Geräts zu bestimmten Vertragsattributen zuordnen, um die Datenpunktwerte im Blockchain-Konto zu speichern. Verwenden Sie den Beispielvertrag, um die Zuordnung von Gerätedaten zu testen, bevor Sie versuchen, die erweiterten Trade Lane-Verträge zu verwenden oder eigene Verträge zu schreiben. Die Vertrags-ID wird auf der Wikiseite [IoT-Blockchain-Verbindungsinformationen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} der Watson IoT-Blockchain-Community zur Verfügung gestellt. Wenden Sie sich gegebenenfalls an Ihren IBM Ansprechpartner für Blockchain, um Zugang zu der Community zu erhalten.
 
 
  8. Erstellen Sie eine Route, um Geräteeigenschaften zu Vertragsparametern zuzuordnen.  
  Die im Vertrag verfügbaren Parameter werden importiert. Geben Sie für jeden Parameter eine entsprechende Ereigniseigenschaft ein.  
  **Wichtig:** Schließen Sie nicht das Zeichen `d.` ein, das dem Datenpunkt in der Gerätenachricht vorangestellt ist.
- **IBM Basisszenario:** Ordnen Sie bei Verwendung der von IBM bereitgestellten Verträge folgende Parameter zu, die auf der Wikiseite [Datenzuordnung ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Data%20Mapping){: new_window} der Watson IoT-Blockchain-Community zur Verfügung stehen. Wenden Sie sich gegebenenfalls an Ihren IBM Ansprechpartner für Blockchain, um Zugang zu der Community zu erhalten.
+ **IBM Basisszenario:** Ordnen Sie bei Verwendung der von IBM bereitgestellten Verträge folgende Parameter zu, die auf der Wikiseite [Datenzuordnung ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Data%20Mapping){: new_window} der Watson IoT-Blockchain-Community zur Verfügung stehen. Wenden Sie sich gegebenenfalls an Ihren IBM Ansprechpartner für Blockchain, um Zugang zu der Community zu erhalten.
  9. Überprüfen Sie auf der Übersichtsseite, dass alle Informationen ordnungsgemäß eingegeben wurden.
  10. Die Zuordnung der Gerätedaten zum Vertrag wird auf der Blockchain-Seite angezeigt.
 
@@ -174,7 +174,7 @@ Glückwunsch - alles ist betriebsbereit!
 {: #test_simple}
 
 Wenn eine Verbindung zu dem von IBM bereitgestellten Fabric besteht und Sie Ihre Gerätedaten dem Beispielvertrag zugeordnet haben, können Sie testen, ob der Datenfluss vom Gerät zum Blockchain-Konto durchgängig ist. Verwenden Sie die IoT-Blockchain-Benutzerschnittstelle für die Überwachung, um die Blockchain-Aktivität und die Daten für Ihre Assets anzuzeigen.  
-**Tipp:** Wenn die Benutzerschnittstelle für die Überwachung noch nicht in Ihrer lokalen Umgebung installiert ist, können Sie sie jetzt installieren. Folgen Sie den Anweisungen im Readme-Dokument der Benutzerschnittstelle für die Überwachung, das im GitHub-Verzeichnis der [Blockchain-Benutzerschnittstelle für die Überwachung ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window} verfügbar ist.  
+**Tipp:** Wenn die Benutzerschnittstelle für die Überwachung noch nicht in Ihrer lokalen Umgebung installiert ist, können Sie sie jetzt installieren. Folgen Sie den Anweisungen im Readme-Dokument der Benutzerschnittstelle für die Überwachung, das im GitHub-Verzeichnis der [Blockchain-Benutzerschnittstelle für die Überwachung ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window} verfügbar ist.  
 1. Konfigurieren Sie die Benutzerschnittstelle für die Überwachung, um eine Verbindung zu {{site.data.keyword.iot_short_notm}} herzustellen.  
  Klicken Sie in der Benutzerschnittstelle für die Überwachung auf die Option für **Konfiguration**, um die Verbindung für die Benutzerschnittstelle für die Überwachung zu konfigurieren:
  <table>
@@ -203,7 +203,7 @@ Wenn eine Verbindung zu dem von IBM bereitgestellten Fabric besteht und Sie Ihre
 </tr>
 </tbody>
 </table>
-**IBM Basisszenario:** Um die Benutzerschnittstelle für die Überwachung für das Herstellen einer Verbindung zu Basis- oder Trade Lane-Verträgen zu konfigurieren, verwenden Sie die Verbindungsdetails, die auf der Wikiseite [IoT-Blockchain-Verbindungsinformationen ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} der Watson IoT-Blockchain-Community zur Verfügung stehen. Wenden Sie sich gegebenenfalls an Ihren IBM Ansprechpartner für Blockchain, um Zugang zu der Community zu erhalten.
+**IBM Basisszenario:** Um die Benutzerschnittstelle für die Überwachung für das Herstellen einer Verbindung zu Basis- oder Trade Lane-Verträgen zu konfigurieren, verwenden Sie die Verbindungsdetails, die auf der Wikiseite [IoT-Blockchain-Verbindungsinformationen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} der Watson IoT-Blockchain-Community zur Verfügung stehen. Wenden Sie sich gegebenenfalls an Ihren IBM Ansprechpartner für Blockchain, um Zugang zu der Community zu erhalten.
 2. Klicken Sie im Node-RED-Ablaufeditor auf die Schaltfläche auf dem Knoten CON123, um Gerätedaten einzufügen, sie als Nachricht an {{site.data.keyword.iot_short_notm}} zu senden und sie über den einfachen Vertrag in das {{site.data.keyword.iot_short_notm}}-Konto zu schreiben.   
 **Tipp:** Um einen fortlaufenden Datenfluss zu erhalten, doppelklicken Sie auf den Einfügeknoten, legen Sie für den Parameter 'repeat' die Einstellung `interval` fest und konfigurieren Sie für das Intervall eine entsprechende Länge, beispielsweise '1 Minute'.
 3. Überprüfen Sie in der Benutzerschnittstelle für die Überwachung, dass Gerätedaten in den Blockchain-Blöcken wie erwartet angezeigt werden.  

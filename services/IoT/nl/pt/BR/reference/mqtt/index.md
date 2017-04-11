@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-11-18"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -20,8 +20,8 @@ MQTT é o protocolo primário que dispositivos e aplicativos usam para se comuni
 
 MQTT é executado por TCP/IP e, embora seja possível codificar diretamente para TCP/IP, também é possível optar por usar uma biblioteca que manipula os detalhes do protocolo MQTT para você. Uma ampla gama de bibliotecas do cliente MQTT está disponível. A IBM contribui para o desenvolvimento e suporte de diversas bibliotecas do cliente, incluindo aquelas que estão disponíveis nos sites a seguir:
 
-- [Wiki da comunidade MQTT](https://github.com/mqtt/mqtt.github.io/wiki)
-- [Projeto Eclipse Paho](http://eclipse.org/paho/)
+- [Wiki da comunidade MQTT ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/mqtt/mqtt.github.io/wiki){: new_window}
+- [Projeto Eclipse Paho ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](http://eclipse.org/paho/){: new_window}
 
 ## Suporte à versão
 {: #version-support}

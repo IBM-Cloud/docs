@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-11-18"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -20,8 +20,8 @@ MQTT 是裝置及應用程式用來與 {{site.data.keyword.iot_full}} 通訊的�
 
 MQTT 透過 TCP/IP 執行，雖然可以直接將程式碼編寫為 TCP/IP，您也可以選擇使用程式庫來為您處理 MQTT 通訊協定的詳細資料。有很多種 MQTT 用戶端程式庫可供您使用。IBM 協助開發及支援數種用戶端程式庫，包括可從下列網站取得的用戶端程式庫：
 
-- [MQTT 社群 Wiki](https://github.com/mqtt/mqtt.github.io/wiki)
-- [Eclipse Paho 專案](http://eclipse.org/paho/)
+- [MQTT 社群 Wiki ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/mqtt/mqtt.github.io/wiki){: new_window}
+- [Eclipse Paho 專案 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](http://eclipse.org/paho/){: new_window}
 
 ## 版本支援
 {: #version-support}

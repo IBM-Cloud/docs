@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-22"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -15,15 +15,15 @@ lastupdated: "2017-02-22"
 # Configurazione delle politiche di sicurezza
 {: #set_up_policies.md}
 
-Un analista della sicurezza può configurare le politiche di sicurezza della connessione e le blacklist o le whitelist.
+Quando viene utilizzato un piano di sicurezza avanzato (ASP) per un'organizzazione, un analista della sicurezza può configurare le politiche di sicurezza della connessione e le blacklist o le whitelist. Quando viene utilizzato un piano standard, l'analista può configurare le politiche di connessione, con meno opzioni e non può configurare le blacklist o whitelist.
 
-## Configurazione delle politiche di connessione
+## Configurazione delle politiche di connessione per la sicurezza avanzata
 {: #config_connect}
 
 Puoi configurare il livello di sicurezza predefinito che viene applicato a tutti i dispositivi. Puoi quindi aggiungere impostazioni di sicurezza personalizzate per dispositivi specifici.
 
-1. Nella pagina **Policies** del componente Gestione della sicurezza e del rischio, fai clic su **Configure** accanto a **Connection Security**.
-2. Nella pagina **Connection Security**, seleziona il livello di sicurezza della connessione predefinito dall'elenco a discesa. Il valore che selezioni viene utilizzato per tutti i dispositivi, con l'eccezione dei dispositivi con le impostazioni di connessione personalizzate. Queste politiche influenzano come i dispositivi si collegano al server -- non modificano alcuna impostazione sul dispositivo reale o inviano alcun messaggio al dispositivo. Puoi selezionare uno dei seguenti livelli di sicurezza come predefinito:
+1. Nella pagina Security **Policies**, fai clic su **Configure** accanto a **Connection Security**.
+2. In **Default Connection Security**, seleziona il livello di sicurezza della connessione predefinito dall'elenco a discesa. Il valore che selezioni viene utilizzato per tutti i dispositivi, con l'eccezione dei dispositivi con le impostazioni di connessione personalizzate. Queste politiche influenzano come i dispositivi si collegano al server -- non modificano alcuna impostazione sul dispositivo reale o inviano alcun messaggio al dispositivo. Puoi selezionare uno dei seguenti livelli di sicurezza come predefinito:
     - TLS facoltativo
     - TLS con autenticazione token
     - TLS con autenticazione certificato client
@@ -33,15 +33,30 @@ Puoi configurare il livello di sicurezza predefinito che viene applicato a tutti
 3. Fai clic su **Refresh Compliance**. In base al livello di sicurezza selezionato, la tabella aggiornata mostra il numero di dispositivi influenzati e il livello previsto di conformità al livello di sicurezza impostato.
 4. Fai clic su **Salva**.  
 
+**Nota:**
+Puoi anche accedere alle impostazioni della sicurezza di connessione dalla pagina **General** in **Settings**. Fai clic su **Open Connection Security Policy**.
+
+## Configurazione delle politiche di connessione per la sicurezza standard 
+{: #config_connect_standard}
+
+Per le organizzazioni che utilizzano la sicurezza standard, modifica le impostazioni di sicurezza nella pagina **General** in **Settings**. Puoi configurare il livello di sicurezza predefinito che viene applicato a tutti i dispositivi.
+
+1. In **Settings**, seleziona **General**.
+2. In **Connection Security**, seleziona il livello di sicurezza della connessione predefinito dall'elenco a discesa. Il valore che selezioni viene utilizzato per tutti i dispositivi. Queste politiche influenzano come i dispositivi si collegano al server -- non modificano alcuna impostazione sul dispositivo reale o inviano alcun messaggio al dispositivo. Puoi selezionare uno dei seguenti livelli di sicurezza come predefinito:
+    - TLS facoltativo
+    - TLS con autenticazione token
+    - TLS con autenticazione certificato client e token
+4. Fai clic su **Salva**.  
+
 ## Configurazione delle blacklist e delle whitelist
 {: #config_black_white}
 
-Limita l'accesso al server da alcuni dispositivi utilizzando una blacklist o utilizza una whitelist per concedere l'accesso al server a dispositivi specifici. Puoi utilizzare una blacklist o una whitelist -- non possono essere utilizzate insieme
+Le organizzazioni che utilizzano la sicurezza avanzata possono limitare l'accesso al server da alcuni dispositivi utilizzando una blacklist o possono utilizzare una whitelist per concedere l'accesso al server a dispositivi specifici. Puoi utilizzare una blacklist o una whitelist -- non possono essere utilizzate insieme
 
 ### Configura una blacklist
 {: #config_blacklist}
 
-1. Nella pagina **Policies** della Gestione della sicurezza e del rischio, nella sezione **Blacklist**, fai clic su **Configure**.
+1. Nella pagina Security **Policies**, nella sezione **Blacklist**, fai clic su **Configure**.
 2. Nella pagina **Blacklist**, fai clic su **Add to Blacklist**.
 3. Nella finestra **Add to Blacklist**, esegui una delle seguenti azioni:
     - Nella scheda **IP Address/Range**, immetti gli indirizzi IP dei dispositivi che intendi bloccare o gli intervalli di indirizzi IP nel caso di più dispositivi consecutivi.
@@ -55,7 +70,7 @@ Limita l'accesso al server da alcuni dispositivi utilizzando una blacklist o uti
 ### Configura una whitelist
 {: #config_whitelist}
 
-1. Nella pagina **Policies** della Gestione della sicurezza e del rischio, fai clic su **Configure** accanto a **Whitelist**.
+1. In Security **Policies**, fai clic su **Configure** accanto a **Whitelist**.
 2. Nella pagina **Whitelist**, fai clic su **Add to Whitelist**.
 3. Nella finestra **Add to Whitelist**, esegui una delle seguenti azioni:
     - Nella scheda **IP Address/Range**, immetti gli indirizzi IP dei dispositivi a cui intendi consentire l'accesso o l'intervallo di indirizzi IP nel caso di più dispositivi consecutivi.

@@ -1,12 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2017-01-10"
+
+years: 2015, 2017
+
+lastupdated: "2017-03-16"
+
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -40,7 +43,8 @@ lastupdated: "2017-01-10"
 
 ゲートウェイの登録には、ゲートウェイ・タイプとしてデバイスを分類すること、ゲートウェイに名前を付けること、ゲートウェイ情報を提供することが含まれています。その後、接続トークンを指定するか、{{site.data.keyword.iot_short_notm}} によって生成されるトークンを受け入れます。
 
-**ヒント:** {{site.data.keyword.iot_short_notm}} ダッシュボードから一度に 1 つゲートウェイを追加するか、[{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/post_bulk_devices_add) を使用して一度に 1 つ以上のゲートウェイを追加することができます。
+
+**ヒント:** {{site.data.keyword.iot_short_notm}} ダッシュボードから一度に 1 つずつゲートウェイを追加するか、[組織管理 API ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window} を使用して一度に 1 つ以上のゲートウェイを追加することができます。
 
 {{site.data.keyword.iot_short_notm}} ダッシュボードからゲートウェイを追加するには、以下のようにします。
 
@@ -92,7 +96,7 @@ lastupdated: "2017-01-10"
 
 これで、ゲートウェイ・デバイスを登録できました。次に、ゲートウェイ・デバイスから {{site.data.keyword.iot_short_notm}} に接続するための構成を行います。
 
-ゲートウェイの登録に必要なフローが示されている、詳細な手順については、[How to Register Gateways in IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/how-to-register-gateways-in-ibm-watson-iot-platform/) レシピを参照してください。
+ゲートウェイの登録に必要なフローが示されている、詳細な手順については、[How to Register Gateways in IBM Watson IoT Platform ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/how-to-register-gateways-in-ibm-watson-iot-platform/){:new_window} レシピを参照してください。
 
 ## 手順 2: ゲートウェイを {{site.data.keyword.iot_short_notm}} に接続する
 {: #connect_gateway}
@@ -101,8 +105,7 @@ lastupdated: "2017-01-10"
 
 {{site.data.keyword.iot_short_notm}} へのゲートウェイの接続について詳しくは、[ゲートウェイの MQTT 接続](mqtt.html)を参照してください。
 
-**ヒント:** {{site.data.keyword.iot_short_notm}} へのデバイスの接続では、一連のレシピを使用できます。レシピのリストについては、
-IBM.com の[デバイス接続のレシピ](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/)を参照してください。
+**ヒント:** {{site.data.keyword.iot_short_notm}} へのデバイスの接続では、一連のレシピを使用できます。レシピのリストについては、IBM.com の[デバイス接続のレシピ ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window} を参照してください。
 
 
 ## ステップ 3: ゲートウェイを介したデバイスの接続
@@ -115,7 +118,7 @@ IBM.com の[デバイス接続のレシピ](https://developer.ibm.com/recipes/tu
 
 デバイスがゲートウェイに正常に接続されると、{{site.data.keyword.iot_short_notm}} 組織のダッシュボードに表示されます。
 
-詳しいフローと説明については、レシピ [Connecting Raspberry Pi as a Gateway to Watson IoT](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-as-a-gateway-to-watson-iot-using-node-red/) を参照してください。 
+詳しいフローと説明については、レシピ [Connecting Raspberry Pi as a Gateway to Watson IoT ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-as-a-gateway-to-watson-iot-using-node-red/){:new_window} を参照してください。
 
 **注:** {{site.data.keyword.iot_short_notm}} ダッシュボード、デバイス、ゲートウェイが {{site.data.keyword.iot_short_notm}} に直接接続されている場合、接続されていることを示す状況アイコンが表示されます。ゲートウェイに対するデバイス接続は認識されないため、ゲートウェイを介して間接的に接続されているデバイスは、切断されているものとしてダッシュボードに表示されます。
 
@@ -123,17 +126,22 @@ IBM.com の[デバイス接続のレシピ](https://developer.ibm.com/recipes/tu
 ## エッジ分析エージェントのインストール
 {: #edge}
 
-エッジ分析エージェント (EAA) は、[Apache Quarks](http://quarks.incubator.apache.org/) 上に構築されるソフトウェア・コンポーネントです。これを使用して、{{site.data.keyword.iot_short_notm}} ダッシュボードからエッジ分析ルールをアップロード/管理することにより、ゲートウェイに対してエッジ分析操作を実行します。エッジ分析について詳しくは、[エッジ分析](../edge_analytics.html)を参照してください。
+エッジ分析エージェント (EAA) は、エッジ処理用に最適化されたストリーミング・エンジン上に構築されるソフトウェア・コンポーネントです。これを使用して、{{site.data.keyword.iot_short_notm}} ダッシュボードからエッジ分析ルールをアップロード/管理することにより、ゲートウェイに対してエッジ分析操作を実行します。エッジ分析について詳しくは、[エッジ分析](../edge_analytics.html)を参照してください。
 
 ### EAA のインストール
 {: #eaa_install}
 
 ゲートウェイに EAA をインストールするには、次のようにします。
 1. {{site.data.keyword.iot_short}} ダッシュボードで、**「ルール」**に移動します。
-2. **「エッジ・エージェントのダウンロード (Download Edge Agent)」**をクリックして、[IBM エッジ分析エージェントのコミュニティー](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true)に移動します。
-3. **「ファイル」**セクションに移動し、圧縮ファイル *ibm-watson-iot-edge-analytics-dslink-java-0.0.1* をダウンロードします。
-4. EAA ソフトウェア・コンポーネントをゲートウェイにインストールして構成する方法については、以下のレシピを参照してください。
- - [Watson IoT Platform でのエッジ分析の概説](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=19472)
+2. **「エッジ・エージェントのダウンロード」**をクリックして、[IBM エッジ分析のコミュニティー ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true){:new_window} に移動します。
+3. **「ファイル」**セクションに移動し、ゲートウェイのタイプに該当する圧縮ディレクトリーをダウンロードします。  
+エッジ分析ソリューションは、Java をサポートしているデバイスの場合は SDK、Cisco ゲートウェイ・デバイスの場合は DSLink として入手可能です。
+4. EAA ソフトウェア・コンポーネントをゲートウェイにインストールして構成する方法については、以下の情報を参照してください。
+ - SDK  
+コミュニティーで使用可能な PDF ファイル、README ファイル、ビデオのリンクを参照してください。  
+ [SDK でのエッジのレシピ - 概説 (SDK) ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/getting-started-with-the-ibm-edge-analytics-sdk-in-watson-iot-platform/){:new_window} レシピ。
+ - DSLink  
+ [Watson IoT Platform でのエッジ分析の概説 ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=19472){:new_window} レシピ。
 
 ### EAA 構成の設定
 {: #eaa_configuration}

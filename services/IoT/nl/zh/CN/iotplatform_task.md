@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-21"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -35,17 +35,21 @@ lastupdated: "2017-02-21"
 
 注册设备涉及将设备分类为某种设备类型、为设备指定名称以及提供设备信息。然后，提供连接令牌，或接受 {{site.data.keyword.iot_short_notm}} 生成的令牌。
 
-可以从 {{site.data.keyword.iot_short_notm}} 仪表板一次添加一个设备，也可使用 [{{site.data.keyword.iot_short_notm}} API ![外部链接图标](../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/post_bulk_devices_add){: new_window} 一次添加一个或多个设备。
+可以从 {{site.data.keyword.iot_short_notm}} 仪表板一次添加一个设备，也可使用 [{{site.data.keyword.iot_short_notm}} API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Bulk_Configuration){: new_window} 一次添加一个或多个设备。
 
 要从 {{site.data.keyword.iot_short_notm}} 仪表板添加设备，请执行以下操作：
 
-1. 单击 {{site.data.keyword.Bluemix}} 仪表板中的 {{site.data.keyword.iot_short_notm}} 服务磁贴以打开服务仪表板，或通过使用以下 URL 直接转至该仪表板：
+1. 单击 {{site.data.keyword.Bluemix}} 仪表板中的 {{site.data.keyword.iot_short_notm}} 服务磁贴。
 
- `https://org_id.internetofthings.ibmcloud.com/dashboard/#/overview `
+2. 在服务页面上，单击**启动**以开始管理 {{site.data.keyword.iot_short_notm}} 组织。
 
-    其中，*org_id* 是 {{site.data.keyword.Bluemix}} 组织的标识。
+  此时，{{site.data.keyword.iot_short_notm}} Web 控制台将在新浏览器选项卡中打开，URL 如下：
 
-2. 在服务页面上，单击**启动仪表板**以开始管理 {{site.data.keyword.iot_short_notm}} 组织。
+ ```
+ https://org_id.internetofthings.ibmcloud.com/dashboard/#/overview
+ ```
+
+    其中，*org_id* 是 [{{site.data.keyword.iot_short_notm}} 组织](iotplatform_overview.html#organizations){: new_window}的标识。
 
 3. 在“概述”仪表板中，从菜单窗格选择**设备**，然后单击**添加设备**。
 5. 为要添加的设备选择或创建设备类型。
@@ -116,7 +120,7 @@ lastupdated: "2017-02-21"
 - 设置您的设备以实现 MQTT 消息传递并使用“组织标识”、“认证令牌”、“设备类型”和“设备标识”以进行认证。  
 - 通过使用 MQTT 协议将设备消息发送到 {{site.data.keyword.iot_short_notm}} 组织。
 
-**提示：**很多连接诀窍适用于常用设备。有关诀窍的列表，请参阅 IBM.com 上提供的[设备连接诀窍 ![外部链接图标](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){: new_window}。
+**提示：**很多连接诀窍适用于常用设备。有关诀窍的列表，请参阅 IBM.com 上提供的[设备连接诀窍 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){: new_window}。
 
 连接设备时需要以下信息：
 - URL：*org_id*.messaging.internetofthings.ibmcloud.com  
@@ -138,18 +142,20 @@ lastupdated: "2017-02-21"
  {{site.data.keyword.iot_short_notm}} 支持多种格式（例如，JSON 和文本）。
 
 有关连接您的设备的更多信息，请参阅技术文档中的[设备的 MQTT 连接](devices/mqtt.html)。
-API 文档的[连接 ![外部链接图标](../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Connectivity/post_device_types_deviceType_devices_deviceId_events_eventName){: new_window} 部分也包含所需信息。
+
+
+[组织管理 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} API 文档还包含所需信息。
 
 ## 关于连接设备的诀窍
 
 以下诀窍描述了用于向 Watson IoT Platform 注册并连接设备的完整流程。
 
-- [How to Register Devices in IBM Watson IoT Platform ![外部链接图标](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/how-to-register-devices-in-ibm-iot-foundation/){: new_window}
+- [How to Register Devices in IBM Watson IoT Platform ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/how-to-register-devices-in-ibm-iot-foundation/){: new_window}
 
-- [Connecting Raspberry Pi as a Device to Watson IoT using Node-RED ![外部链接图标](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/deploy-watson-iot-node-on-raspberry-pi/){: new_window}
+- [Connecting Raspberry Pi as a Device to Watson IoT using Node-RED ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/deploy-watson-iot-node-on-raspberry-pi/){: new_window}
 
-- [Connect an Arduino Uno device to the IBM Watson IoT Platform ![外部链接图标](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/connect-an-arduino-uno-device-to-the-ibm-internet-of-things-foundation/){: new_window}
+- [Connect an Arduino Uno device to the IBM Watson IoT Platform ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/connect-an-arduino-uno-device-to-the-ibm-internet-of-things-foundation/){: new_window}
 
-- [Connecting a Sense HAT to Watson IoT using Node-RED ![外部链接图标](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/connecting-a-sense-hat-to-watson-iot-using-node-red/){: new_window}
+- [Connectinga Sense HAT to Watson IoT using Node-RED ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/connecting-a-sense-hat-to-watson-iot-using-node-red/){: new_window}
 
-- [Connecting Raspberry Pi with Windows IoT Core as a Device to Watson IoT Platform ![外部链接图标](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-with-windows-iot-core-as-a-device-to-watson-iot-using-node-red/){: new_window}
+- [Connecting Raspberry Pi with Windows IoT Core as a Device to Watson IoT Platform ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-with-windows-iot-core-as-a-device-to-watson-iot-using-node-red/){: new_window}

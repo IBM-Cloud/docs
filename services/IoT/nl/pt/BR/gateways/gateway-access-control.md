@@ -2,14 +2,14 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-12-16"
+lastupdated: "2017-03-16"
 
 ---
 
 {:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 
-# Controle de acesso ao gateway (BETA)
+# Controle de Acesso ao Gateway (Beta)
 
 **Importante**: esse recurso está disponível atualmente como parte de um beta limitado.
 
@@ -17,7 +17,10 @@ Os dispositivos de gateway são autorizados a agir em nome de outros dispositivo
 {: #shortdesc}
 
 
+Para obter informações sobre como publicar eventos de dispositivos de gateway usando APIs, veja [APIs do sistema de mensagens HTTP para dispositivos de gateway](../gateways/gw_intro_api.html).
+
 ## Designando uma função a um gateway
+{: #gw_roles}
 
 A designação de uma função a um gateway é obrigatória para que o gateway tenha um grupo de recursos. Os gateways sem um grupo de recursos podem agir em nome de todos os dispositivos na organização. A designação da função *Gateway padrão* cria automaticamente um novo grupo de recursos para o gateway. Quando um gateway é designado a um grupo de recursos, ele só pode agir em nome dos dispositivos desse grupo de recursos e de si mesmo, mesmo se a sua função for mudada.
 
@@ -27,9 +30,10 @@ Para designar uma função a um gateway, use a API a seguir:
 PUT /authorization/devices/{deviceId}/roles
 ```
 
-Para obter detalhes do esquema de solicitação, veja a [documentação da API do {{site.data.keyword.iot_full}}](https://docs.internetofthings.ibmcloud.com/swagger/limited-gateway.html#!/Limited_Gateway/put_authorization_devices_deviceId_roles).
+Para obter detalhes do esquema de solicitação, veja a [documentação da API do {{site.data.keyword.iot_full}} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_authorization_devices_deviceId_roles){: new_window}.
 
 ## Incluindo dispositivos e removendo dispositivos de um grupo de recursos
+{: #devices_groups}
 
 Antes que um gateway com a função *Gateway padrão* possa agir em nome de um dispositivo, o dispositivo deve ser um membro do grupo de recursos designado ao gateway. Para incluir vários dispositivos em um grupo de recursos ao mesmo tempo, use a API a seguir:
 
@@ -37,7 +41,7 @@ Antes que um gateway com a função *Gateway padrão* possa agir em nome de um d
  PUT /bulk/devices/{groupId}/add
 ```
 
-O grupo no qual incluir dispositivos deve ser especificado no caminho da solicitação e os dispositivos a serem incluídos devem ser especificados no corpo da solicitação. Para obter mais informações sobre o esquema de solicitação e as respostas, veja a [documentação da API do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/limited-gateway.html#!/Limited_Gateway/put_bulk_devices_groupId_add).
+O grupo no qual incluir dispositivos deve ser especificado no caminho da solicitação e os dispositivos a serem incluídos devem ser especificados no corpo da solicitação. Para obter mais informações sobre o esquema de solicitação e as respostas, veja a [documentação da API do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_add){: new_window}.
 
 Para remover múltiplos dispositivos de um grupo de recursos, use a API a seguir:
 
@@ -45,9 +49,10 @@ Para remover múltiplos dispositivos de um grupo de recursos, use a API a seguir
 PUT /bulk/devices/{groupId}/remove
 ```
 
-Os dispositivos especificados no corpo da solicitação serão removidos do grupo especificado no caminho da solicitação. Para obter mais informações sobre o esquema de solicitação e a resposta, veja a [documentação da API do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/limited-gateway.html#!/Limited_Gateway/put_bulk_devices_groupId_remove).
+Os dispositivos especificados no corpo da solicitação serão removidos do grupo especificado no caminho da solicitação. Para obter mais informações sobre o esquema de solicitação e a resposta, veja a [documentação da API do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_remove){: new_window}.
 
 ## Localizando um grupo de recursos
+{: #finding_groups}
 
 Os grupos de recursos podem ter tags de procura associadas. As tags de procura podem ser usadas para recuperar os detalhes de um grupo de recursos usando a API a seguir:
 
@@ -63,9 +68,11 @@ O ID de um grupo de recursos pode ser localizado usando a API a seguir:
 GET /authorization/devices/{deviceId}
 ```
 
-Essa API retorna o identificador exclusivo dos grupos de recursos dos quais esse dispositivo é um membro. Mais informações sobre essa API podem ser localizadas na [documentação da API do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/limited-gateway.html#!/Limited_Gateway/get_authorization_devices_deviceId).
+Essa API retorna o identificador exclusivo dos grupos de recursos dos quais esse dispositivo é um membro. Mais informações sobre essa API podem ser localizadas na [documentação da API do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_authorization_devices_deviceId){: new_window}.
+
 
 ## Consultando um grupo de recursos
+{: #querying_groups}
 
 Os grupos de recursos podem ser consultados dentro de vários parâmetros para retornar as propriedades completas de todos os dispositivos no grupo, os identificadores exclusivos de todos os dispositivos no grupo ou as propriedades do grupo de recursos.
 
@@ -75,7 +82,7 @@ Para retornar as propriedades completas de todos os dispositivos no grupo de rec
 GET /bulk/devices/{groupId}
 ```
 
-Essa API retorna a lista de propriedades completas para todos os membros do grupo de recursos especificado. Para obter mais informações sobre o esquema de solicitação, respostas e como paginar pelos resultados, veja a [documentação da API do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/limited-gateway.html#!/Limited_Gateway/get_bulk_devices_groupId).
+Essa API retorna a lista de propriedades completas para todos os membros do grupo de recursos especificado. Para obter mais informações sobre o esquema de solicitação, respostas e como paginar pelos resultados, veja a [documentação da API do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_bulk_devices_groupId){: new_window}.
 
 Para retornar somente os identificadores exclusivos dos membros do grupo de recursos, use a API a seguir:
 
@@ -94,6 +101,7 @@ GET /groups/{groupId}
 Essa API retorna as propriedades do grupo de recursos (nome, descrição, tags de procura e identificador exclusivo) especificado no caminho, mas não retorna a lista de membros do grupo de recursos. <!-- For more information on the request schema and responses, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
 ## Criando e excluindo um grupo de recursos.
+{: #crt_del_groups}
 
 Os grupos de recursos podem ser criados e excluídos independentemente da conexão de gateways. Para criar um grupo de recursos, use a API a seguir:
 
@@ -112,13 +120,13 @@ DELETE /groups/{groupId}
 Essa API exclui o grupo de recursos especificado. Dispositivos que eram membros do grupo são removidos do grupo, mas os próprios dispositivos não são afetados de qualquer outra forma. <!-- For more information, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
 ## Atualizando propriedades do grupo
-
-
+{: #update_groups}
 
   - /groups/{groupId}
     - PUT: atualiza as propriedades do grupo especificado.
 
 ## Recuperando e atualizando propriedades do dispositivo.
+{: #fdevice_group_props}
 
 Há várias maneiras de recuperar propriedades do dispositivo usando a API; cada API retorna informações diferentes. Para recuperar as propriedades de dispositivo de todos os dispositivos conectados à sua organização do {{site.data.keyword.iot_short_notm}}, use a API a seguir:
 

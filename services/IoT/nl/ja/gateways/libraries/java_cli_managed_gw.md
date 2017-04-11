@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-12-06"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -38,7 +38,7 @@ lastupdated: "2016-12-06"
 - デバイスのファームウェアをダウンロードする
 - ゲートウェイにデバイス・ファームウェアを保管する
 
-後に、デバイスでアップグレードの指示が出たら、ゲートウェイ上のデバイス管理エージェントがファームウェアをデバイスにプッシュして更新を実行できます。
+その後の時点で、デバイスにアップグレードの指示が出たら、ゲートウェイ上のデバイス管理エージェントがファームウェアをデバイスにプッシュして更新を実行できます。
 
 ## デバイス・モデルの作成
 {: #create_device_model}
@@ -89,7 +89,7 @@ DeviceData deviceData = new DeviceData.Builder().
              build();
 ```
 
-すべてのゲートウェイおよび接続されたすべてのデバイスにはそれぞれ、{{site.data.keyword.iot_short}} の中でそのものを表す独自の `DeviceData` クラス定義が必要です。ゲートウェイの場合、`DeviceData` クラスは、`ManagedGateway` インスタンスの構成処理の一部としてライブラリーに渡されます。接続されたデバイスの場合、`DeviceData` クラスは、`sendDeviceManageRequest()` オブジェクトの一部としてライブラリーに渡されます。
+すべてのゲートウェイおよび接続されたすべてのデバイスにはそれぞれ、それら自体を表す独自の `DeviceData` クラス定義が {{site.data.keyword.iot_short}} 内に必要です。ゲートウェイの場合、`DeviceData` クラスは、`ManagedGateway` インスタンスの構成処理の一部としてライブラリーに渡されます。接続されたデバイスの場合、`DeviceData` クラスは、`sendDeviceManageRequest()` オブジェクトの一部としてライブラリーに渡されます。
 
 ## ManagedGateway コンストラクター
 {: #construct_managed_gateway}
@@ -111,9 +111,9 @@ DeviceData deviceData = new DeviceData.Builder().
 |`Authentication-Token`|API 鍵トークン。|
 |`auth-key`   |オプションの API キー。auth-method の値を `apikey` に設定する場合は、これを指定する必要があります。|
 |`auth-token`   |API キー・トークン。auth-method の値を `apikey` に設定する場合は、これも指定する必要があります。 |
-|`clean-session`|true または false 値。永続サブスクリプション・モードでゲートウェイを接続する場合のみ必要です。デフォルトでは、`clean-session` は `true` に設定されます。|
+|`clean-session`|true または false の値。永続サブスクリプション・モードでゲートウェイを接続する場合のみ必要です。デフォルトでは、`clean-session` は `true` に設定されます。|
 |`Port`|接続先のポート番号。8883 か 443 のいずれかを指定してください。ポート番号を指定しない場合、クライアントは、デフォルトのポート番号 8883 で {{site.data.keyword.iot_short_notm}} に接続します。|
-|`WebSocket`|true または false 値。Web ソケットを使用してゲートウェイを接続する場合のみ必要です。|
+|`WebSocket`|true または false の値。Web ソケットを使用してゲートウェイを接続する場合のみ必要です。|
 |`MaxInflightMessages`  |接続の処理中メッセージの最大数を設定します。デフォルト値は 100 です。|
 |`Automatic-Reconnect`  |true か false の値。切断状態になったデバイスを自動的に {{site.data.keyword.iot_short_notm}} に再接続する場合は、これを指定する必要があります。デフォルト値は false です。|
 |`Disconnected-Buffer-Size`|クライアントの切断中にメモリー内に保管できるメッセージの最大数。デフォルト値は 5000 です。|
@@ -383,7 +383,7 @@ public abstract void updateFirmware(DeviceFirmware deviceFirmware);
 
 **注**: ファームウェアのダウンロードや更新の要求を転送するゲートウェイと接続されているデバイスの両方のために 1 つだけハンドラーをライブラリーに追加する必要があります。実装では、複数のファームウェア要求を同時に処理するために、スレッドまたはスレッド・プールを作成する必要があります。
 
-スレッド・プール・ハンドラーの実装のサンプルは、[Gateway samples GutHub repository](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java) 内にあります。
+スレッド・プール・ハンドラーの実装のサンプルは、[ゲトウェイ・サンプル GutHub リポジトリ ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window} にあります。
 
 ### `downloadFirmware` のサンプル実装
 
@@ -398,7 +398,7 @@ public abstract void updateFirmware(DeviceFirmware deviceFirmware);
 
 以下のコード・サンプルは、ファームウェア・ダウンロードの実装の例を示しています。
 
-**重要:** ここに示すコード・サンプルには、スレッド・プールのセクションは含まれていません。ファームウェア・ハンドラーの完全な実装のサンプルは、 [IBM Java ゲトウェイ・サンプル GitHub リポジトリリ](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java)にあります。
+**重要:** ここに示すコード・サンプルには、スレッド・プールのセクションは含まれていません。ファームウェア・ハンドラーの完全な実装のサンプルは、[IBM Java ゲトウェイ・サンプル GitHub リポジトリ ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window} にあります。
 
 ```java
 public void downloadFirmware(DeviceFirmware deviceFirmware) {
@@ -533,7 +533,7 @@ public void updateFirmware(DeviceFirmware deviceFirmware) {
 }
 ```
 
-完全なコードは、[ゲトウェイ・サンプル GitHub リポジトリリ](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java)の `GatewayFirmwareHandlerSample` サンプルにあります。
+コード全体は、[ゲトウェイ・サンプル GitHub リポジトリ ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window} にある `GatewayFirmwareHandlerSample` サンプルにあります。
 
 ### ステップ 4: `ManagedGateway` へのハンドラーの追加
 
@@ -544,7 +544,7 @@ GatewayFirmwareHandlerSample fwHandler = new GatewayFirmwareHandlerSample();
 mgdGateway.addFirmwareHandler(fwHandler);
 ```
 
-ファームウェア・アクションについて詳しくは、[デバイス管理要求](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/requests.html#/firmware-actions#firmware-actions)を参照してください。
+ファームウェア・アクションについて詳しくは、[デバイス管理要求 ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/requests.html#/firmware-actions#firmware-actions){: new_window} を参照してください。
 
 ## デバイス・アクション
 {: #dev_actions}
@@ -589,7 +589,7 @@ public abstract void handleReboot(DeviceAction action);
 public abstract void handleFactoryReset(DeviceAction action);
 ```
 
-**注:** デバイス・アクション要求を転送するゲートウェイと接続されているデバイスの両方のために 1 つだけハンドラーをライブラリーに追加する必要があります。実装では、複数のデバイス・アクション要求を同時に処理するために、スレッドまたはスレッド・プールを作成する必要があります。スレッド・プールを使用するハンドラー実装のサンプルは、[iot-gateway-samples GitHub リポジトリー](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java)にあります。
+**注:** デバイス・アクション要求を転送するゲートウェイと接続されているデバイスの両方のために 1 つだけハンドラーをライブラリーに追加する必要があります。実装では、複数のデバイス・アクション要求を同時に処理するために、スレッドまたはスレッド・プールを作成する必要があります。スレッド・プールを使用するハンドラー実装のサンプルは、[iot-gateway-samples GitHub リポジトリ ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java){: new_window} にあります。
 
 ### `handleReboot` のサンプル実装
 
@@ -616,7 +616,7 @@ public void handleReboot(DeviceAction action) {
 }
 ```
 
-スレッド・プールを使用するハンドラーの実装サンプルの完全版は、[iot-gateway-samples GitHub リポジトリー](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java)にあります。
+スレッド・プールを使用するハンドラーの実装サンプルの完全版は、[iot-gateway-samples GitHub リポジトリ ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java){: new_window} にあります。
 
 
 ### `handleFactoryReset` のサンプル実装
@@ -645,7 +645,7 @@ GatewayActionHandlerSample actionHandler = new GatewayActionHandlerSample();
 mgdGateway.addDeviceActionHandler(actionHandler);
 ```
 
-デバイス・アクションについて詳しくは、[デバイス管理要求](../../devices/device_mgmt/requests.html#/device-actions-reboot#device-actions-reboot)を参照してください。
+デバイス・アクションについて詳しくは、[デバイス管理要求 ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](../../devices/device_mgmt/requests.html#/device-actions-reboot#device-actions-reboot){: new_window} を参照してください。
 
 ## デバイス属性変更の listen
 {: #listen_device_attributes}
@@ -695,16 +695,16 @@ public void propertyChange(PropertyChangeEvent evt) {
 }
 ```
 
-デバイス属性の更新について詳しくは、[デバイス管理要求](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/index.html#/update-device-attributes#update-device-attributes)を参照してください。
+デバイス属性の更新について詳しくは、[デバイス管理要求 ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/index.html#/update-device-attributes#update-device-attributes){: new_window} を参照してください。
 
 ## サンプル
 {: #samples}
 
-ゲートウェイとゲートウェイの背後にあるデバイスを {{site.data.keyword.iot_short_notm}} インスタンスに接続するために利用できるサンプルがいくつか用意されています。これらのサンプルは {{site.data.keyword.iot_short_notm}} Java クライアント・ライブラリーを使用しており、[ゲトウェイ・サンプル GitHub リポジトリリ](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples)に置かれています。
+ゲートウェイとゲートウェイの背後にあるデバイスを {{site.data.keyword.iot_short_notm}} インスタンスに接続するために利用できるサンプルがいくつか用意されています。これらのサンプルは {{site.data.keyword.iot_short_notm}} Java クライアント・ライブラリーを使用しており、[ゲトウェイ・サンプル GitHub リポジトリ ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples){: new_window} に置かれています。
 
 ## レシピ
 {: #recipes}
 
-Rasberry Pi デバイスを管理対象ゲートウェイとして {{site.data.keyword.iot_short_notm}} に接続し、接続されたデバイスを管理する方法を示すレシピについては、[Raspberry Pi as a managed gateway in {{site.data.keyword.iot_short_notm}} ](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/)を参照してください。
+Rasberry Pi デバイスを管理対象ゲートウェイとして {{site.data.keyword.iot_short_notm}} に接続し、接続されたデバイスを管理する方法を示すレシピについては、[Raspberry Pi as a managed gateway in {{site.data.keyword.iot_short_notm}} ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/){: new_window} を参照してください。
 
 このレシピは、{{site.data.keyword.iot_short_notm}} のデバイス管理プロトコルを使用して、ゲートウェイとして機能し、デバイスのリブートやスケッチ・プログラムの追加などのデバイス管理操作を実行する Raspberry Pi デバイスから、Arduino Uno デバイスを管理する方法を説明しています。

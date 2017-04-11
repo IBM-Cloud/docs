@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-21"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -35,17 +35,21 @@ Completa la seguente procedura per collegare il tuo dispositivo a {{site.data.ke
 
 La registrazione di un dispositivo implica la classificazione del dispositivo come un tipo di dispositivo, dando al dispositivo un nome e fornendo le informazioni sul dispositivo. Quindi fornisci un token di connessione o accetta un token generato da {{site.data.keyword.iot_short_notm}}.
 
-Puoi aggiungere un dispositivo alla volta dal dashboard {{site.data.keyword.iot_short_notm}} o puoi utilizzare l'API [{{site.data.keyword.iot_short_notm}} ![icona link esterno](../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/post_bulk_devices_add){: new_window} per aggiungere uno o più dispositivi contemporaneamente.
+Puoi aggiungere un dispositivo alla volta dal dashboard {{site.data.keyword.iot_short_notm}} o puoi utilizzare l'API [{{site.data.keyword.iot_short_notm}} ![icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Bulk_Configuration){: new_window} per aggiungere uno o più dispositivi contemporaneamente.
 
 Per aggiungere un dispositivo dal dashboard {{site.data.keyword.iot_short_notm}}:
 
-1. Fai clic sul tile del servizio {{site.data.keyword.iot_short_notm}} nel tuo dashboard {{site.data.keyword.Bluemix}} per aprire il dashboard del servizio o vai direttamente al dashboard utilizzando il seguente URL:
+1. Fai clic sul tile del servizio {{site.data.keyword.iot_short_notm}} nel tuo dashboard {{site.data.keyword.Bluemix}}.
 
- `https://org_id.internetofthings.ibmcloud.com/dashboard/#/overview `
+2. Nella pagina del servizio, fai clic su **Launch** per avviare la gestione della tua organizzazione {{site.data.keyword.iot_short_notm}}. 
 
-    Dove *org_id* è l'ID della tua organizzazione {{site.data.keyword.Bluemix}}.
+  Si apre la console web {{site.data.keyword.iot_short_notm}} in una nuova scheda del browser al seguente URL:
 
-2. Nella pagina del servizio, fai clic su **Launch Dashboard** per avviare la gestione della tua organizzazione {{site.data.keyword.iot_short_notm}}.
+ ```
+ https://org_id.internetofthings.ibmcloud.com/dashboard/#/overview
+ ```
+
+    Dove *org_id* è l'ID della [tua {{site.data.keyword.iot_short_notm}} organizzazione](iotplatform_overview.html#organizations){: new_window}.
 
 3. Nel dashboard della panoramica, dal pannello del menu, seleziona **Devices** e fai clic su **Add Device**.
 5. Seleziona o crea un tipo di dispositivo per il dispositivo che stai aggiungendo.  
@@ -114,7 +118,7 @@ Dopo aver registrato il dispositivo con {{site.data.keyword.iot_short_notm}}, pu
 - Invio dei messaggi del dispositivo alla tua organizzazione {{site.data.keyword.iot_short_notm}} utilizzando il protocollo MQTT.
 
 **Suggerimento:** molte ricette di connessione sono disponibili per i dispositivi comunemente utilizzati. Per un elenco delle ricette, consulta le
-[Device connection recipes ![icona link esterno](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){: new_window} disponibili in IBM.com.
+[Device connection recipes ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){: new_window} disponibili in IBM.com.
 
 Le seguenti informazioni sono necessarie quando colleghi il tuo dispositivo:
 - URL: *org_id*.messaging.internetofthings.ibmcloud.com  
@@ -136,18 +140,19 @@ Questo valore è il token univoco che hai definito o che è stato assegnato al t
  {{site.data.keyword.iot_short_notm}} supporta diversi formati, come JSON e testo.
 
 Per ulteriori informazioni sulla connessione del tuo dispositivo, consulta [Connettività MQTT per i dispositivi](devices/mqtt.html) nella documentazione tecnica.
-La sezione [Connectivity ![icona link esterno](../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Connectivity/post_device_types_deviceType_devices_deviceId_events_eventName){: new_window} della documentazione API contiene inoltre le informazioni richieste.
+
+La documentazione API [Organization Administration ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} contiene inoltre le informazioni richieste.
 
 ## Ricette sulla connessione dei dispositivi
 
 Le seguenti ricette descrivono il flusso completo utilizzato per registrare e collegare i dispositivi a Watson IoT Platform.
 
-- [How to Register Devices in IBM Watson IoT Platform ![icona link esterno](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/how-to-register-devices-in-ibm-iot-foundation/){: new_window}
+- [How to Register Devices in IBM Watson IoT Platform ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/how-to-register-devices-in-ibm-iot-foundation/){: new_window}
 
-- [Connecting Raspberry Pi as a Device to Watson IoT using Node-RED ![icona link esterno](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/deploy-watson-iot-node-on-raspberry-pi/){: new_window}
+- [Connecting Raspberry Pi as a Device to Watson IoT using Node-RED ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/deploy-watson-iot-node-on-raspberry-pi/){: new_window}
 
-- [Connect an Arduino Uno device to the IBM Watson IoT Platform ![icona link esterno](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/connect-an-arduino-uno-device-to-the-ibm-internet-of-things-foundation/){: new_window}
+- [Connect an Arduino Uno device to the IBM Watson IoT Platform ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/connect-an-arduino-uno-device-to-the-ibm-internet-of-things-foundation/){: new_window}
 
-- [Connecting a Sense HAT to Watson IoT using Node-RED ![icona link esterno](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/connecting-a-sense-hat-to-watson-iot-using-node-red/){: new_window}
+- [Connecting a Sense HAT to Watson IoT using Node-RED ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/connecting-a-sense-hat-to-watson-iot-using-node-red/){: new_window}
 
-- [Connecting Raspberry Pi with Windows IoT Core as a Device to Watson IoT Platform ![icona link esterno](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-with-windows-iot-core-as-a-device-to-watson-iot-using-node-red/){: new_window}
+- [Connecting Raspberry Pi with Windows IoT Core as a Device to Watson IoT Platform ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-with-windows-iot-core-as-a-device-to-watson-iot-using-node-red/){: new_window}

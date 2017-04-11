@@ -2,21 +2,21 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-08-11"
+lastupdated: "2017-02-28"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
 
 
-# 分析
+# リアルタイムの IoT データ分析
 {: #analytics}  
 
-Watson {{site.data.keyword.iot_full}} 分析を使用して、デバイスで生成された未加工のデータから、必要な分析情報を取得できます。  
+Watson {{site.data.keyword.iot_full}} 分析を使用して、デバイスで生成された未加工のデータから、必要なリアルタイム分析情報を取得できます。  
 {: shortdesc}
 
 [ボードとカード](data_visualization.html)を使用すると、1 つ以上のデバイスから取得されたデータ・セットの値を示すグラフィックスを表示し、デバイス・データの概要を簡単に把握できます。

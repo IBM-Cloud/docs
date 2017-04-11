@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-10-18"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2016-10-18"
 ## 下載 Java 用戶端及資源
 {: #java_client_download}
 
-若要存取適用於 {{site.data.keyword.iot_short_notm}} 的 Java 用戶端程式庫及範例，請移至 GitHub 中的 [iot-java](https://github.com/ibm-watson-iot/iot-java) 儲存庫，並完成安裝指示。
+若要存取適用於 {{site.data.keyword.iot_short_notm}} 的 Java 用戶端程式庫及範例，請移至 GitHub 中的 [iot-java ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-java){: new_window} 儲存庫，並完成安裝指示。
 
 ## 建構子
 {: #constructor}
@@ -407,4 +407,4 @@ public class RegisteredDeviceCommandSubscribe {
 ## 範例
 {: #samples}
 
-如需使用 {{site.data.keyword.iot_short_notm}} Java 用戶端程式庫開發之裝置及裝置管理範例的清單，請參閱 [iot-device-samples GitHub 儲存庫](https://github.com/ibm-messaging/iot-device-samples/tree/master/java)。
+如需使用 {{site.data.keyword.iot_short_notm}} Java 用戶端程式庫開發之裝置及裝置管理範例的清單，請參閱 [iot-device-samples GitHub 儲存庫 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/iot-device-samples/tree/master/java){: new_window}。

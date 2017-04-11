@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-12-06"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -386,7 +386,7 @@ public abstract void updateFirmware(DeviceFirmware deviceFirmware);
 
 **附註**：只能將一個處理程式新增至閘道及連接的裝置的程式庫，而在閘道及連接的裝置中，會重新導向韌體下載或更新要求。實作必須建立一個執行緒或一個執行緒儲存區來同時處理多個韌體要求。
 
-您可以在[閘道範例 GutHub 儲存庫](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java)中找到 threadpool 處理程式的範例實作。
+您可以在[閘道範例 GutHub 儲存庫 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window} 中找到 threadpool 處理程式的範例實作。
 
 ### `downloadFirmware` 的範例實作
 
@@ -400,7 +400,7 @@ public abstract void updateFirmware(DeviceFirmware deviceFirmware);
 
 下列程式碼範例顯示範例韌體下載實作：
 
-**重要事項：**提供的程式碼範例不包括執行緒儲存區區段。如需韌體處理程式的完整實作，您可以在 [IBM Java 閘道範例 GitHub 儲存庫](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java)中找到範例。
+**重要事項：**提供的程式碼範例不包括執行緒儲存區區段。如需韌體處理程式的完整實作，您可以在 [IBM Java 閘道範例 GitHub 儲存庫 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window} 中找到範例。
 
 ```java
 public void downloadFirmware(DeviceFirmware deviceFirmware) {
@@ -535,7 +535,7 @@ public void updateFirmware(DeviceFirmware deviceFirmware) {
 }
 ```
 
-您可以在[閘道範例 GitHub 儲存庫](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java)的 `GatewayFirmwareHandlerSample` 範例中找到完整程式碼。
+您可以在[閘道範例 GitHub 儲存庫 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window} 的 `GatewayFirmwareHandlerSample` 範例中找到完整程式碼。
 
 ### 步驟 4：將處理程式新增至 `ManagedGateway`
 
@@ -546,7 +546,7 @@ GatewayFirmwareHandlerSample fwHandler = new GatewayFirmwareHandlerSample();
 mgdGateway.addFirmwareHandler(fwHandler);
 ```
 
-如需韌體動作的相關資訊，請參閱[裝置管理要求](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/requests.html#/firmware-actions#firmware-actions)。
+如需韌體動作的相關資訊，請參閱[裝置管理要求 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/requests.html#/firmware-actions#firmware-actions){: new_window}。
 
 ## 裝置動作
 {: #dev_actions}
@@ -591,7 +591,7 @@ public abstract void handleReboot(DeviceAction action);
 public abstract void handleFactoryReset(DeviceAction action);
 ```
 
-**附註：**只能將一個處理程式新增至閘道及連接的裝置的程式庫，而在閘道及連接的裝置中，會重新導向裝置動作要求。實作必須建立一個執行緒或一個執行緒儲存區來同時處理多個裝置動作要求。[iot-gateway-samples GitHub 儲存庫](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java)中示範使用 threadpool 的範例處理程式實作。
+**附註：**只能將一個處理程式新增至閘道及連接的裝置的程式庫，而在閘道及連接的裝置中，會重新導向裝置動作要求。實作必須建立一個執行緒或一個執行緒儲存區來同時處理多個裝置動作要求。[iot-gateway-samples GitHub 儲存庫 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java){: new_window} 中示範使用 threadpool 的處理程式實作範例。
 
 ### `handleReboot` 的範例實作
 
@@ -618,7 +618,7 @@ public void handleReboot(DeviceAction action) {
 }
 ```
 
-[iot-gateway-samples GitHub 儲存庫](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java)中示範使用 threadpool 的完整範例處理程式實作。
+[iot-gateway-samples GitHub 儲存庫 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java){: new_window} 中示範使用 threadpool 的處理程式實作完整範例。
 
 
 ### `handleFactoryReset` 的範例實作
@@ -647,7 +647,7 @@ GatewayActionHandlerSample actionHandler = new GatewayActionHandlerSample();
 mgdGateway.addDeviceActionHandler(actionHandler);
 ```
 
-如需裝置動作的相關資訊，請參閱[裝置管理要求](../../devices/device_mgmt/requests.html#/device-actions-reboot#device-actions-reboot)。
+如需裝置動作的相關資訊，請參閱[裝置管理要求 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](../../devices/device_mgmt/requests.html#/device-actions-reboot#device-actions-reboot){: new_window}。
 
 ## 接聽裝置屬性變更
 {: #listen_device_attributes}
@@ -697,16 +697,16 @@ public void propertyChange(PropertyChangeEvent evt) {
 }
 ```
 
-如需更新裝置屬性的相關資訊，請參閱[裝置管理要求](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/index.html#/update-device-attributes#update-device-attributes)。
+如需更新裝置屬性的相關資訊，請參閱[裝置管理要求 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/index.html#/update-device-attributes#update-device-attributes){: new_window}。
 
 ## 範例
 {: #samples}
 
-我們提供了數個範例，以協助您將閘道及閘道後方的裝置連接至 {{site.data.keyword.iot_short_notm}} 實例。這些範例使用 {{site.data.keyword.iot_short_notm}} Java 用戶端程式庫，並位於[閘道範例 GitHub 儲存庫](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples)。
+我們提供了數個範例，以協助您將閘道及閘道後方的裝置連接至 {{site.data.keyword.iot_short_notm}} 實例。這些範例使用 {{site.data.keyword.iot_short_notm}} Java 用戶端程式庫，並位於[閘道範例 GitHub 儲存庫 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples){: new_window} 中。
 
 ## 秘訣
 {: #recipes}
 
-如需顯示如何將 Raspberry Pi 裝置當作受管理閘道連接至 {{site.data.keyword.iot_short_notm}} 以及管理連接的裝置的秘訣，請參閱 [Raspberry Pi 在 {{site.data.keyword.iot_short_notm}} 中作為受管理閘道](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/)。
+如需顯示如何將 Raspberry Pi 裝置當作受管理閘道連接至 {{site.data.keyword.iot_short_notm}} 以及管理連接的裝置的秘訣，請參閱 [Raspberry Pi 在 {{site.data.keyword.iot_short_notm}} 中作為受管理閘道 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/){: new_window}。
 
 此秘訣說明如何使用 {{site.data.keyword.iot_short_notm}} 的「裝置管理」通訊協定，以從作為閘道的 Raspberry Pi 裝置管理 Arduino Uno 裝置，以及執行裝置管理作業（例如，將裝置重新開機，或新增概略圖程式）。
