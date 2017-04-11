@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-08-02"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -22,7 +22,7 @@ Puede utilizar C# para crear y personalizar dispositivos que interactúan con su
 ## Descarga del cliente y los recursos de C#
 {: #csharp_client_download}
 
-Para acceder al cliente y a los recursos de C# para {{site.data.keyword.iot_short_notm}}, vaya al repositorio [iot-csharp](https://github.com/ibm-watson-iot/iot-csharp) en GitHub y complete las instrucciones de instalación.
+Para acceder al cliente y a los recursos de C# para {{site.data.keyword.iot_short_notm}}, vaya al repositorio [iot-csharp ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/iot-csharp){: new_window} en GitHub y complete las instrucciones de instalación.
 
 
 ## Constructor

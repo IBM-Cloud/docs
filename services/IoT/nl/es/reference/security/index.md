@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-03"
+lastupdated: "2017-03-17"
 
 ---
 
@@ -29,9 +29,9 @@ El siguiente documento responde a algunas preguntas comunes sobre cómo se prote
 ## {{site.data.keyword.iot_short_notm}} y {{site.data.keyword.Bluemix_notm}}
 {: #iot-bluemix-sec}
 
-{{site.data.keyword.iot_short_notm}} se ejecuta dentro de la plataforma {{site.data.keyword.Bluemix_notm}} y, por lo tanto, se basa en {{site.data.keyword.Bluemix_notm}} e {{site.data.keyword.BluSoftlayer_full}} para su acceso y conectividad. La dependencia en {{site.data.keyword.Bluemix_notm}} e {{site.data.keyword.BluSoftlayer}} hace que la seguridad y la fiabilidad de {{site.data.keyword.Bluemix_notm}} e {{site.data.keyword.BluSoftlayer}} sean importantes para los usuarios de {{site.data.keyword.iot_short_notm}}
+{{site.data.keyword.iot_short_notm}} se ejecuta dentro de la plataforma {{site.data.keyword.Bluemix_notm}} y, por lo tanto, se basa en {{site.data.keyword.Bluemix_notm}} y {{site.data.keyword.BluSoftlayer_full}} para su acceso y conectividad. La dependencia en {{site.data.keyword.Bluemix_notm}} e {{site.data.keyword.BluSoftlayer}} hace que la seguridad y la fiabilidad de {{site.data.keyword.Bluemix_notm}} y {{site.data.keyword.BluSoftlayer}} sean importantes para los usuarios de {{site.data.keyword.iot_short_notm}}
 
-Para obtener más información sobre la seguridad de {{site.data.keyword.Bluemix_notm}}, consulte el tema sobre seguridad de la plataforma [{{site.data.keyword.Bluemix_notm}} ![icono de enlace externo](../../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/security/index.html#platform-security){: new_window}.
+Para obtener más detalles sobre la seguridad de {{site.data.keyword.Bluemix_notm}}, consulte [Seguridad de la plataforma {{site.data.keyword.Bluemix_notm}}](index.html#platform-security).
 
 ## {{site.data.keyword.iot_short_notm}} Conformidad de seguridad
 {: #compliance}  
@@ -67,11 +67,13 @@ Las credenciales de dispositivo y las claves de API se pueden revocar individual
 ## ¿Cómo nos aseguramos de que sus dispositivos se conecten de forma segura al {{site.data.keyword.iot_short_notm}}?
 {: #secure-device-connection}
 
-Los dispositivos conectados utilizan una combinación de clientId y de la señal de autenticación generada al añadir los dispositivos a la plataforma. MQTT v3.1.1 se utiliza para permitir la interoperatividad simple entre muchas plataformas e idiomas. El {{site.data.keyword.iot_short_notm}} da soporte a la conectividad sobre TLS v1.2.
+Los dispositivos se conectan mediante un ID de cliente o una señal de autenticación que se genera cuando se añaden dispositivos a la plataforma, o ambos. MQTT se utiliza para permitir la interoperatividad simple entre muchas plataformas e idiomas. El {{site.data.keyword.iot_short_notm}} da soporte a la conectividad sobre TLS v1.2.
 
 ![imagen](connectivity_platform.svg)
 
-Para obtener más información sobre los requisitos de TLS y de la suite de cifrado, consulte la sección [Requisitos de TLS ![icono de enlace externo](../../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/services/IoT/reference/security/connect_devices_apps_gw.html#tls_requirements){: new_window} en la documentación `Conexiones de aplicaciones, dispositivos y pasarelas a la Watson IoT Platform`.
+Para obtener más información sobre los requisitos de TLS y de la suite de cifrado, consulte la sección [Requisitos de TLS](connect_devices_apps_gw.html#tls_requirements) en la documentación `Conexiones de aplicaciones, dispositivos y pasarelas a la Watson IoT Platform`.
+
+Puede utilizar certificados y políticas de seguridad para mejorar la seguridad de conexión del dispositivo. Las políticas de seguridad se pueden definir de modo que permitan conexiones sin cifrar, que impongan solo conexiones de seguridad de la capa de transporte (sólo TLS) y que habiliten los dispositivos para que se autentiquen con certificados del lado del cliente. Las listas negras se pueden utilizar para especificar dispositivos que no tienen permiso para conectarse, y las listas blancas para permitir la conexión de dispositivos específicos. Para obtener más seguridad sobre la seguridad reforzada, consulte [Gestión de riesgos y de seguridad](RM_security.html).
 
 ## ¿Cómo evitamos el filtrado de datos entre dispositivos IoT?
 {: #prevent-leak-devices}
@@ -104,8 +106,8 @@ El espacio de temas en el que funcionan los dispositivos y las aplicaciones se a
 ## Enlaces relacionados
 {: #general}
 * [Iniciación a {{site.data.keyword.iot_short_notm}}](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [Seguridad de {{site.data.keyword.Bluemix_notm}} ![icono de enlace externo](../../../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/docs/security/index.html#security "External link icon"){:new_window}
-* [Seguridad de la plataforma {{site.data.keyword.Bluemix_notm}} ![icono de enlace externo](../../../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/docs/security/index.html#platform-security "External link icon"){:new_window}
+* [Seguridad de {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
+* [Seguridad de la plataforma de {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
 * [Conformidad de {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [Seguridad de {{site.data.keyword.BluSoftlayer}} ![icono de enlace externo](../../../../icons/launch-glyph.svg "External link icon")](http://www.softlayer.com/security "External link icon"){:new_window}
-* [Conformidad de {{site.data.keyword.BluSoftlayer}} ![icono de enlace externo](../../../../icons/launch-glyph.svg "External link icon")](http://www.softlayer.com/compliance "External link icon"){:new_window}
+* [Seguridad de {{site.data.keyword.BluSoftlayer}} ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](http://www.softlayer.com/security){:new_window}
+* [Conformidad de {{site.data.keyword.BluSoftlayer}} ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](http://www.softlayer.com/compliance){:new_window}

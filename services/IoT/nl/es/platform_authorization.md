@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-17"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -21,7 +21,7 @@ Para conectar la aplicación a {{site.data.keyword.iot_full}}, debe conectarse u
 {: #api-key}
 Las claves de API se utilizan al conectar aplicaciones a la organización de {{site.data.keyword.iot_short_notm}}. Las aplicaciones requieren una clave de API para conectarse a una organización y una señal de autenticación exclusiva que se debe utilizar con dicha clave de API.  
 
-Para obtener más información sobre las conexiones de la aplicación, consulte [Conectividad de MQTT para aplicaciones ![icono de enlace externo](../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/applications/mqtt.html){: new_window} en la documentación del desarrollador. 
+Para obtener más información sobre las conexiones de la aplicación, consulte [Conectividad de MQTT para aplicaciones ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/applications/mqtt.html){: new_window} en la documentación del desarrollador.
 
 Para crear un nuevo par de clave y señal de autenticación de API:  
 1.	En el panel de control de {{site.data.keyword.iot_short_notm}}, vaya a **Apps > Claves de API**.  

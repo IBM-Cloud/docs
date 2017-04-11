@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2017-01-12"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -23,7 +23,7 @@ El {{site.data.keyword.iot_full}} reconoce dos clases de dispositivos: **disposi
 
 **Dispositivos gestionados** se definen como dispositivos que contienen un agente de gestión de dispositivos. Un agente de gestión de dispositivos es un conjunto de lógicas que permiten al dispositivo interactuar con el servicio de Gestión de dispositivos de {{site.data.keyword.iot_short_notm}} mediante el Protocolo de gestión de dispositivos. Los dispositivos gestionados pueden realizar operaciones de gestión de dispositivos incluidas actualizaciones de ubicación, descargas y actualizaciones de firmware, rearranques y restablecimientos de fábrica.
 
-El protocolo de gestión de dispositivos define un conjunto de operaciones admitidas. Un agente de gestión de dispositivos puede dar soporte a un subconjunto de las operaciones, pero deben estar soportadas las operaciones **dispositivos gestionados** y **dispositivos no gestionados**. Un dispositivo que da soporte a las operaciones de acción de firmware también deben dar soporte a la observación.
+El protocolo de gestión de dispositivos define un conjunto de operaciones admitidas. Un agente de gestión de dispositivos puede dar soporte a un subconjunto de las operaciones, pero deben estar soportadas las operaciones **gestionar** y **no gestionar**. Un dispositivo que da soporte a las operaciones de acción de firmware también deben dar soporte a la observación.
 
 El Protocolo de gestión de dispositivos se crea en la parte superior del protocolo de mensajería MQTT. Para obtener más información sobre cómo interactúa el Protocolo de gestión de dispositivos con MQTT, consulte [Conectividad de MQTT para dispositivos](../mqtt.html).
 
@@ -37,7 +37,7 @@ El Protocolo de gestión de dispositivos se crea en la parte superior del protoc
 5. Para manejar dispositivos anómalos en grandes poblaciones de dispositivos, la solicitud de operaciones **dispositivos gestionados** incluye un parámetro lifetime opcional. El parámetro lifetime es el número de segundos en los que el dispositivo debe realizar otra solicitud **dispositivos gestionados** para evitar que se clasifique como inactivo y que se convierta en un dispositivo no gestionado.
 6. Cuando un dispositivo está desactivado, puede eliminarlo del {{site.data.keyword.iot_short_notm}} utilizando el panel de instrumentos o la API REST.
 
-Consulte la receta [Conexión de Raspberry Pi como dispositivo gestionado a IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/).
+Consulte la receta [Conexión de Raspberry Pi como dispositivo gestionado a IBM Watson IoT Platform ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/){: new_window}.
 
 ### Resumen de código de retorno
 
@@ -229,7 +229,7 @@ El servidor responde a una solicitud Update Location en el tema siguiente:
 iotdm-1/response
 ```
 
-### Actualización de ubicación desencadenada por usuarios o aplicaciones
+### Actualización de ubicación desencadenada por usuarios o apps
 
 
 Cuando un usuario o aplicación actualiza la ubicación de un dispositivo gestionado activo, el dispositivo recupera un mensaje de actualización.
@@ -237,7 +237,7 @@ Cuando un usuario o aplicación actualiza la ubicación de un dispositivo gestio
 
 
 
-### Tema para una solicitud Update Location desencadenada por usuarios o aplicaciones
+### Tema para una solicitud Update Location desencadenada por usuarios o apps
 
 
 El servidor publica una solicitud Update Location en el tema siguiente:
@@ -300,7 +300,7 @@ Tema: iotdm-1/response
 |409   |Se ha producido un conflicto durante la actualización de la base de datos del dispositivo. Para resolver este conflicto, simplifique la operación si es necesario.|
 
 
-### Actualizaciones de ubicación desencadenadas por usuarios o aplicaciones
+### Actualizaciones de ubicación desencadenadas por usuarios o apps
 
 
 El siguiente ejemplo describe el formato de la carga útil:

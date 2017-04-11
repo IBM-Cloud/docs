@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2017-01-10"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -22,7 +22,7 @@ El {{site.data.keyword.iot_full}} proporciona acciones que se pueden iniciar par
 ## Iniciación de las solicitudes de gestión de dispositivos mediante el panel de instrumentos
 {: #initiating-dm-dashboard}
 
-Se pueden iniciar solicitudes mediante el panel de control navegando al separador **Acciones** de la página Dispositivos. El botón **Iniciar acción** abre un recuadro de diálogo donde puede seleccionar una acción, seleccionar los dispositivos en los que realizar la acción, y especificar cualquier parámetro adicional al que da soporte la acción seleccionada.
+Se pueden iniciar solicitudes mediante el panel de control utilizando al separador **Acciones** de la página Dispositivos. Pulse **Iniciar acción** para seleccionar una acción, seleccione los dispositivos y especifique cualquier parámetro adicional al que da soporte la acción seleccionada.
 
 ## Iniciación de las solicitudes de gestión de dispositivos mediante la API REST
 {: #initiating-dm-api}
@@ -31,7 +31,7 @@ Las solicitudes se pueden iniciar utilizando el siguiente ejemplo API REST:
 
 `POST https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
-Para obtener más información sobre el cuerpo de una solicitud de gestión de dispositivos, consulte la [Documentación de la API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html).
+Para obtener más información sobre el cuerpo de una solicitud de gestión de dispositivos, consulte la [Documentación de la API ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ## Acciones de dispositivos
 {: #device-actions}
@@ -178,7 +178,7 @@ Tema: iotdevice-1/response
 ## Acciones de firmware
 {: #firmware-actions}
 
-El nivel de firmware actualmente conocido para estar en un dispositivo se almacena en el atributo `deviceInfo.fwVersion`. Los atributos `mgmt.firmware` se utilizan para realizar una actualización de firmware y observar su estado.
+El nivel de firmware conocido para estar en un dispositivo se almacena en el atributo `deviceInfo.fwVersion`. Los atributos `mgmt.firmware` se utilizan para realizar una actualización de firmware y observar su estado.
 
 **Importante:** El dispositivo gestionado debe dar soporte a la observación del atributo `mgmt.firmware` para dar soporte a las acciones de firmware.
 
@@ -190,8 +190,8 @@ El estado de cada acción de firmware se almacena en otro atributo en el disposi
 
  |Valor |Estado  | Significado |
  |:---|:---|:---|
- |0  | Desocupado        | El dispositivo no está actualmente en el proceso de descarga de firmware. |  
- |1  | Descargando | El dispositivo está actualmente descargando firmware. |
+ |0  | Desocupado        | El dispositivo no está descargando firmware. |  
+ |1  | Descargando | El dispositivo está descargando firmware. |
  |2  | Descargado  | El dispositivo ha descargado satisfactoriamente una actualización de firmware y está preparado para instalarla. |
 
 
@@ -219,8 +219,8 @@ Para iniciar una descarga de firmware mediante la API REST, emita una solicitud 
 Se proporcionará la siguiente información:
 
 - La acción `firmware/download`
-- El URI de la imagen de firmware
 - Una lista de dispositivos para recibir la imagen, con un máximo de 5000 dispositivos
+- El URI de la imagen de firmware (opcional)
 - Serie de verificación para validar la imagen (opcional)
 - Nombre de firmware (opcional)
 - Versión de firmware (opcional)
@@ -252,11 +252,13 @@ En el ejemplo siguiente se muestra la solicitud de descarga de firmware en la qu
 }
 ```
 
+Si no se especifica ningún parámetro opcional, se omitirá el primer paso del siguiente proceso.
+
 El servidor de gestión de dispositivos de {{site.data.keyword.iot_short_notm}} utiliza el Protocolo de gestión de dispositivos para enviar una solicitud a los dispositivos, lo que inicia la descarga de firmware. El proceso de descarga consta de los pasos siguientes:
 
 1. Se envía una solicitud de actualización de detalles de firmware en el tema `iotdm-1/device/update`.
 La solicitud de actualización permite validarse al dispositivo si el firmware solicitado difiere del firmware actualmente instalado. Si hay una diferencia, establezca el parámetro `rc` en `204`, que se convierte en el estado `Changed`.  
-En el ejemplo siguiente se muestra qué mensaje se espera para la solicitud de descarga de firmware de ejemplo enviada anteriormente y qué respuesta se debe enviar cuando se detecta una diferencia:
+En el ejemplo siguiente se muestra qué mensaje se espera para la solicitud de descarga de firmware de ejemplo enviada anteriormente y qué respuesta se envía cuando se detecta una diferencia:
 ```
    Solicitud entrante de la {{site.data.keyword.iot_short_notm}}:
 
@@ -440,6 +442,10 @@ Se proporcionará la siguiente información:
 
 - La acción `firmware/update`
 - La lista de dispositivos que recibirán la imagen, todos con el mismo tipo de dispositivo.
+- El URI de la imagen de firmware (opcional)
+- Serie de verificación para validar la imagen (opcional)
+- Nombre de firmware (opcional)
+- Versión de firmware (opcional)
 
 El código siguiente es una solicitud de ejemplo:
 
@@ -454,6 +460,8 @@ El código siguiente es una solicitud de ejemplo:
    }
 
 ```
+
+Si no se especifica ningún parámetro opcional, el primer mensaje que reciba el dispositivo será una solicitud de actualización de dispositivo. Esta solicitud de actualización de dispositivo es similar al primer mensaje de la solicitud de descarga de firmware.
 
 Para supervisar el estado de la actualización de firmware, el {{site.data.keyword.iot_short_notm}} primero desencadena una solicitud de observador en el tema `iotdm-1/observe`. Cuando el dispositivo esté listo para iniciar el proceso de actualización, se envía una respuesta que tenga el parámetro `rc` establecido en `200`, el atributo `mgmt.firmware.state` establecido en `0`, y el atributo `mgmt.firmware.updateStatus` establecido en `0`.
 
@@ -596,12 +604,12 @@ La lista siguiente proporciona alguna información útil para el manejo de error
 
 En las siguientes recetas se muestra el flujo completo necesario para realizar acciones de dispositivo y de firmware.
 
-- [Gestión de dispositivos en WIoT Platform – Retrotracción y restablecimiento de valores de fábrica](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/)
+- [Gestión de dispositivos en WIoT Platform – Retrotracción y restablecimiento de valores de fábrica ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/){: new_window}
 
-- [Actualización de firmware iniciada por el dispositivo](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-device-initiated-firmware-upgrade/)
+- [Actualización de firmware iniciada por el dispositivo ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-device-initiated-firmware-upgrade/){: new_window}
 
-- [Actualización de firmware iniciada por la plataforma](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/)
+- [Actualización de firmware iniciada por la plataforma ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/){: new_window}
 
-- [Actualización de firmware iniciada por la plataforma con ejecución de fondo](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/)
+- [Actualización de firmware iniciada por la plataforma con ejecución de fondo ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/){: new_window}
 
-- [Retrotracción y restablecimiento de valores de fábrica de firmware](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/)
+- [Retrotracción y restablecimiento de valores de fábrica de firmware ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/){: new_window}
