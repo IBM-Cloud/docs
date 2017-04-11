@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-2-21"
+lastupdated: "2017-4-7"
 
 ---
 
@@ -37,17 +37,17 @@ The iFrame flow is useful when you want to maintain your company branding. When 
 
 <p>
 The <a class="xref" href="http://d2bm-iframe-sample.ng.bluemix.net/" target="_blank" title="(Opens in a new tab or window)">IBM
-Bluemix D2BM iFrame Sample<img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a> provides an iFrame flow example for a public Git repository.<div class="image"><img class="image" src="images/d2bm_iframe_sample2.png" alt="Deploy to Bluemix iFrame flow sample" /></div>
+Bluemix D2BM iFrame Sample <img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a> provides an iFrame flow example for a public Git repository.<div class="image"><img class="image" src="images/d2bm_iframe_sample2.png" alt="Deploy to Bluemix iFrame flow sample" /></div>
 </p>
 
 <p>
-To view the source for this sample, click <a class="xref" href="https://hub.jazz.net/project/idsorg/d2bm-iframe-sample/overview" target="_blank" title="(Opens in a new tab or window)">source<img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a>.
+To view the source for this sample, click <a class="xref" href="https://hub.jazz.net/project/idsorg/d2bm-iframe-sample/overview" target="_blank" title="(Opens in a new tab or window)">source <img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a>.
 </p>
 
 ##Embedding the iFrame flow {: #embed-iframe}  
 
 <ol>
-<li>Load the JavaScript utility from <a class="xref" href="https://bluemix.net/deploy/embed.js" target="_blank" title="(Opens in a new tab or window)">https://bluemix.net/deploy/embed.js<img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a>. This utility depends on jQuery and is loaded by adding the following script tag to your document:
+<li>Load the JavaScript utility from <a class="xref" href="https://bluemix.net/deploy/embed.js" target="_blank" title="(Opens in a new tab or window)">https://bluemix.net/deploy/embed.js <img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a>. This utility depends on jQuery and is loaded by adding the following script tag to your document:
 <pre class="pre">
 <code>&lt;script type="text/javascript" src="https://bluemix.net/deploy/embed.js"&gt;&lt;/script&gt;</code>
 </pre>
