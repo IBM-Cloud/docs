@@ -4,7 +4,7 @@
 
 copyright:
   years: 2015，2017
-lastupdated: "2017-3-10"
+lastupdated: "2017-4-11"
 
 ---
 
@@ -135,7 +135,7 @@ With debug, you can dynamically edit code, insert breakpoints, step through code
 {{site.data.keyword.Bluemix_notm}} Live Debug includes the following features:
 
 * Application runtime control
-* Debug by using [node-inspector![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/node-inspector/node-inspector){:new_window}
+* Debug by using [node-inspector ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/node-inspector/node-inspector){:new_window}
 * Shell access
 
 ###Application runtime control {: #app-runtime}
@@ -628,4 +628,4 @@ bl stop –l “launchConfigurations/mylaunchconfig.launch”
 ## Related Links
 {: #general}
 
-* [Eclipse tools for Bluemix![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ng.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}
+* [Eclipse tools for Bluemix ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ng.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}
