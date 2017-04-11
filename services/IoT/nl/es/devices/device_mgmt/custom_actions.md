@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2017-02-03"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -75,7 +75,7 @@ Para añadir un paquete de gestión de dispositivos personalizados mediante el p
 3. Pulse el botón **Añadir paquete**.
 4. Seleccione el archivo de paquete y pulse **Abrir**.
 
-Para añadir un paquete de gestión de dispositivos personalizados mediante la API, consulte la documentación de la API de [{{site.data.keyword.iot_short_notm}} ![icono de enlace externo](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Para añadir un paquete de gestión de dispositivos personalizados mediante la API, consulte la documentación de la API de [{{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ### Propiedades del paquete de ampliación
 
@@ -128,7 +128,7 @@ Utilice los siguientes mandatos de la API REST de {{site.data.keyword.iot_short_
 - Para suprimir un paquete de ampliación de gestión de dispositivos:
   `DELETE https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
 
-Para obtener más información sobre las API REST para los paquetes de ampliación de gestión de dispositivos, consulte la documentación de [{{site.data.keyword.iot_short_notm}} API V2](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Para obtener más información sobre las API REST para los paquetes de ampliación de gestión de dispositivos, consulte la documentación de [{{site.data.keyword.iot_short_notm}} API V2 ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 
 ## Soporte de acciones de gestión de dispositivos personalizada
@@ -163,7 +163,7 @@ Para especificar acciones personalizadas desde un paquete de ampliación, el dis
 
 ```
 
-Para obtener más información sobre las solicitudes de gestión de dispositivos, consulte [Protocolo de gestión de dispositivos](index.html){: new_window}.
+Para obtener más información sobre las solicitudes de gestión de dispositivos, consulte [Protocolo de gestión de dispositivos](index.html).
 
 ## Inicio de acciones de gestión de dispositivos personalizada
 {: #initiating_custom_dm_actions}
@@ -424,7 +424,7 @@ Cuando se envía el mandato, los dispositivos `device0` y `device1` de tipo `exa
 
 ```
 
-Cada dispositivo toma una acción en el mensaje e instala los plug-in especificados. Cuando la instalación finaliza, los dispositivos envían un mensaje para indicar que la acción se ha completado satisfactoriamente.
+Cada dispositivo toma una acción en el mensaje e instala el plug-in especificado. Cuando la instalación finaliza, los dispositivos envían un mensaje para indicar que la acción se ha completado satisfactoriamente.
 
 ```
 	Mensaje saliente del dispositivo:
@@ -468,4 +468,4 @@ Utilice las siguientes solicitudes API para gestionar los dispositivos:
 
 En las siguientes recetas se muestra el flujo necesario para manejar las extensiones de gestión de dispositivos:
 
-- La receta [Paquetes de extensiones de gestión de dispositivos en WIoT Platform ![icono de enlace externo](../../../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/device-management-extension-packages-in-wiot-platform/){: new_window} contiene instrucciones para registrar un dispositivo gestionado con {{site.data.keyword.iot_short}} de modo que el dispositivo pueda recibir y manejar acciones de extensión de gestión de dispositivos. Los ejemplos de código de la receta están escritos utilizando la biblioteca de cliente Python.
+- La receta [Paquetes de extensiones de gestión de dispositivos en WIoT Platform ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/recipes/tutorials/device-management-extension-packages-in-wiot-platform/){: new_window} contiene instrucciones para registrar un dispositivo gestionado con {{site.data.keyword.iot_short}} de modo que el dispositivo pueda recibir y manejar acciones de extensión de gestión de dispositivos. Los ejemplos de código de la receta están escritos utilizando la biblioteca de cliente Python.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-11-30"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -231,7 +231,7 @@ Utilice el método `publishDeviceEvent()` sobrecargado para publicar el suceso e
 
 ### Código para publicar sucesos de dispositivo en formato personalizado
 
-AL igual que sucede con los sucesos de pasarela, los sucesos de dispositivo también se puede publicar en distintos formatos. De forma predeterminada, la biblioteca publica los sucesos de dispositivo en formato JSON, pero puede especificar los datos en distintos formatos si lo prefiere. Por ejemplo, para publicar datos en el formato de serie de caracteres, utilice el siguiente ejemplo de código:
+Al igual que sucede con los sucesos de pasarela, los sucesos de dispositivo también se puede publicar en distintos formatos. De forma predeterminada, la biblioteca publica los sucesos de dispositivo en formato JSON, pero puede especificar los datos en distintos formatos si lo prefiere. Por ejemplo, para publicar datos en el formato de serie de caracteres, utilice el siguiente ejemplo de código:
 
 ```java
 gwClient.connect();
@@ -342,12 +342,12 @@ gwClient.api().getDevicesConnectedThroughGateway(gatewayType, gatewayId);
 ## Ejemplos
 {: #samples}
 
-Dispone de varios ejemplos para ayudarle a conectar pasarelas y dispositivos situados detrás de pasarelas a su instancia de {{site.data.keyword.iot_short_notm}}. En los ejemplos se utiliza la biblioteca cliente Java de {{site.data.keyword.iot_short_notm}} y se encuentran en el [Repositorio GitHub de ejemplos de pasarela](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples).
+Dispone de varios ejemplos para ayudarle a conectar pasarelas y dispositivos situados detrás de pasarelas a su instancia de {{site.data.keyword.iot_short_notm}}. En los ejemplos se utiliza la biblioteca cliente Java de {{site.data.keyword.iot_short_notm}}y se encuentran en el [Repositorio GitHub de ejemplos de pasarela ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples){: new_window}.
 
 ## Recetas
 {: #recipes}
 
 | Receta     | Descripción|
 |----------------|----------------
-|[Conexión de un dispositivo como pasarela a {{site.data.keyword.iot_short_notm}}](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-gateway-to-watson-iot-platform/)| Un proyecto GitHub e instrucciones detalladas que indican cómo conectar una pasarela Raspberry Pi y dispositivos Arduino Uno tras la pasarela a {{site.data.keyword.iot_short_notm}}.
-|[Raspberry Pi como pasarela gestionada en {{site.data.keyword.iot_short_notm}} ](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/)|Una extensión de la receta de pasarela anterior que explica cómo conectar la pasarela Raspberry Pi como dispositivos gestionado en {{site.data.keyword.iot_short_notm}} y cómo realizar operaciones de gestión de dispositivos.
+|[Conexión de un dispositivo como pasarela a {{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-gateway-to-watson-iot-platform/){: new_window}| Un proyecto GitHub e instrucciones detalladas que indican cómo conectar una pasarela Raspberry Pi y dispositivos Arduino Uno tras la pasarela a {{site.data.keyword.iot_short_notm}}.
+|[Raspberry Pi como pasarela gestionada en {{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/){: new_window}|Una extensión de la receta de pasarela anterior que explica cómo conectar la pasarela Raspberry Pi como dispositivos gestionado en {{site.data.keyword.iot_short_notm}} y cómo realizar operaciones de gestión de dispositivos.

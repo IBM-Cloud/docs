@@ -2,21 +2,21 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-08-11"
+lastupdated: "2017-02-28"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
 
 
-# Análisis
+# Análisis de datos del Internet de las cosas en tiempo real
 {: #analytics}  
 
-Utilice las analíticas de Watson {{site.data.keyword.iot_full}} para obtener la información analítica que necesita a partir de los datos en bruto que producen los dispositivos.  
+Utilice el análisis del {{site.data.keyword.iot_full}} de Watson para obtener la información analítica en tiempo real que necesita a partir de los datos en bruto que producen los dispositivos.  
 {: shortdesc}
 
 Al utilizar [paneles y tarjetas](data_visualization.html), puede ver gráficos que representan valores de conjuntos de datos de uno o varios dispositivos para una visión general rápida y una comprensión de los datos del dispositivo.

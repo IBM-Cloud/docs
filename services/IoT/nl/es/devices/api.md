@@ -3,10 +3,10 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-23"
+lastupdated: "2017-03-14"
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -15,12 +15,12 @@ lastupdated: "2017-02-23"
 # API REST HTTP para dispositivos
 {: #api}
 
-**Importante:** La API REST HTTP de {{site.data.keyword.iot_full}} para la característica de dispositivos sólo está disponible como parte de un programa beta limitado. Las actualizaciones futuras pueden incluir cambios que no son compatibles con la versión actual de esta característica. Pruébela y [denos su opinión](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html).
+**Importante:** La API REST HTTP de {{site.data.keyword.iot_full}} para la característica de dispositivos sólo está disponible como parte de un programa beta limitado. Las actualizaciones futuras pueden incluir cambios que no son compatibles con la versión actual de esta característica. Pruébela y [denos su opinión ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
 ## Acceso a la documentación de la API REST HTTP
 {: #api_link}
 
-Para acceder a la documentación de la API REST HTTP de {{site.data.keyword.iot_short_notm}} y obtener más información sobre cómo integrar dispositivos en su organización, vaya al siguiente URL:  [https://docs.internetofthings.ibmcloud.com/swagger/v0002.html](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html)
+Para acceder a la documentación de la API REST HTTP de {{site.data.keyword.iot_short_notm}} y obtener más información sobre cómo integrar dispositivos en su organización, consulte [API](../reference/api.html).
 
 La única versión de la API REST HTTP de {{site.data.keyword.iot_short_notm}} soportada es la versión 2. Asegúrese de que las soluciones de {{site.data.keyword.iot_short_notm}} utilicen la versión 2.
 
@@ -31,6 +31,8 @@ Para obtener información sobre la seguridad del cliente y cómo conectar client
 
 # API de mensajería de REST HTTP para dispositivos
 {: #rest_messaging_api}
+
+Para acceder a la documentación de API de mensajería HTTP de {{site.data.keyword.iot_short_notm}} y obtener más información sobre cómo publicar sucesos utilizando HTTP, consulte [API de mensajería HTTP de {{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}.
 
 ## Publicación de sucesos
 {: #event_publication}
