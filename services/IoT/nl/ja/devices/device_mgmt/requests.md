@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2017-01-10"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2017-01-10"
 ## ダッシュボードを使用したデバイス管理要求の開始
 {: #initiating-dm-dashboard}
 
-「デバイス」ページの**「アクション」**タブにナビゲートすることによって、ダッシュボードで要求を開始できます。**「操作の開始」**ボタンをクリックすると、アクションを選択できるダイアログ・ボックスが開きます。ここからアクション実行対象デバイスを選択し、選択したアクションがサポートする追加のパラメーターを指定します。
+「デバイス」ページの**「アクション」**タブを使用することによって、ダッシュボードで要求を開始できます。**「操作の開始」**をクリックして、アクションを選択し、デバイスを選択し、選択したアクションがサポートする追加のパラメーターを指定します。
 
 ## REST API を使用したデバイス管理要求の開始
 {: #initiating-dm-api}
@@ -31,7 +31,7 @@ lastupdated: "2017-01-10"
 
 `POST https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
-デバイス管理要求の本体について詳しくは、[API 資料](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html)を参照してください。
+デバイス管理要求の本体について詳しくは、[API 資料 ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} を参照してください。
 
 ## デバイス・アクション
 {: #device-actions}
@@ -178,7 +178,7 @@ Topic: iotdevice-1/response
 ## ファームウェア・アクション
 {: #firmware-actions}
 
-デバイス上の現在既知のファームウェア・レベルは、`deviceInfo.fwVersion` 属性に保管されます。`mgmt.firmware` 属性は、ファームウェア更新の実行とその状況の監視に使用されます。
+デバイス上の既知のファームウェア・レベルは、`deviceInfo.fwVersion` 属性に保管されます。`mgmt.firmware` 属性は、ファームウェア更新の実行とその状況の監視に使用されます。
 
 **重要:** ファームウェア・アクションをサポートするためには、管理対象デバイスが `mgmt.firmware` 属性の監視をサポートしていなければなりません。
 
@@ -190,8 +190,8 @@ Topic: iotdevice-1/response
 
  |値 |状態  | 意味 |
  |:---|:---|:---|
- |0  | アイドル        | デバイスは現在、ファームウェア・ダウンロードの進行中ではありません。 |  
- |1  | ダウンロード中 | デバイスは現在、ファームウェアのダウンロード中です。 |
+ |0  | アイドル        | デバイスはファームウェアをダウンロードしていません。 |  
+ |1  | ダウンロード中 | デバイスはファームウェアのダウンロード中です。 |
  |2  | ダウンロード済み  | デバイスはファームウェア更新のダウンロードを正常に完了し、インストールする準備ができています。 |
 
 
@@ -219,8 +219,8 @@ REST API を使用してファームウェア・ダウンロードを開始す�
 以下の情報を指定します。
 
 - `firmware/download` アクション
-- ファームウェア・イメージの URI
 - イメージを受け取るデバイスのリスト (最大 5000 デバイス)
+- ファームウェア・イメージの URI (オプション)
 - イメージを検証するための検証ストリング (オプション)
 - ファームウェア名 (オプション)
 - ファームウェア・バージョン  (オプション)
@@ -251,6 +251,8 @@ REST API を使用してファームウェア・ダウンロードを開始す�
    ]
 }
 ```
+
+オプション・パラメーターを指定しないと、以下のプロセスの最初のステップはスキップされます。
 
 {{site.data.keyword.iot_short_notm}} のデバイス管理サーバーは、デバイス管理プロトコルを使用して、ファームウェア・ダウンロードを開始する要求をデバイスに送信します。ダウンロード・プロセスは、以下のステップで構成されています。
 
@@ -441,6 +443,10 @@ Message:
 
 - `firmware/update` アクション
 - イメージを受け取るデバイスのリスト (同じデバイス・タイプのすべて)
+- ファームウェア・イメージの URI (オプション)
+- イメージを検証するための検証ストリング (オプション)
+- ファームウェア名 (オプション)
+- ファームウェア・バージョン  (オプション)
 
 次のコードは要求の例です。
 
@@ -455,6 +461,8 @@ Message:
    }
 
 ```
+
+いずれかのオプション・パラメーターを指定すると、デバイスが受け取る最初のメッセージはデバイス更新要求になります。このデバイス更新要求は、ファームウェア・ダウンロード要求の最初のメッセージに似ています。
 
 ファームウェア更新の状況をモニターするために、{{site.data.keyword.iot_short_notm}} はまず、トピック `iotdm-1/observe` でオブザーバー要求をトリガーします。デバイスは、更新プロセスを開始できる状態になると、`rc` パラメーターが `200` に、`mgmt.firmware.state` 属性が `0` に、`mgmt.firmware.updateStatus` 属性が `0` にそれぞれ設定された応答を送信します。
 
@@ -597,12 +605,12 @@ Message:
 
 以下のレシピには、デバイス・アクションとファームウェア・アクションの実行に必要なフロー全体が示されています。
 
-- [Device Management in WIoT Platform – Roll Back & Factory Reset](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/)
+- [Device Management in WIoT Platform – Roll Back & Factory Reset ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/){: new_window}
 
-- [Device Initiated Firmware Update](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-device-initiated-firmware-upgrade/)
+- [Device Initiated Firmware Update ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-device-initiated-firmware-upgrade/){: new_window}
 
-- [Platform Initiated Firmware Update](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/)
+- [Platform Initiated Firmware Update ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/){: new_window}
 
-- [Platform Initiated Firmware Update with Background Execution](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/)
+- [Platform Initiated Firmware Update with Background Execution ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/){: new_window}
 
-- [Firmware Roll Back & Factory Reset](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/)
+- [Firmware Roll Back & Factory Reset ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/){: new_window}

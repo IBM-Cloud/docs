@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-11-22"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -20,13 +20,13 @@ Java™를 사용하여 {{site.data.keyword.iot_full}}에서 조직과 상호작
 
 {:shortdesc}
 
-## Java 클라이언트 및 자원 다운로드
+## Java 클라이언트 및 리소스 다운로드
 {: #java_client_download}
 
 마지막 업데이트 날짜: 2016년 10월 25일
 {: .last-updated}
 
-{{site.data.keyword.iot_short_notm}}의 Java 클라이언트 라이브러리 및 샘플에 액세스하려면 GitHub의 [iot-java](https://github.com/ibm-watson-iot/iot-java) 저장소로 이동하여 설치 지시사항을 완료하십시오. 
+{{site.data.keyword.iot_short_notm}}에 대한 Java 클라이언트 라이브러리 및 샘플에 액세스하려면, GitHub의 [iot-java ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/iot-java){: new_window} 저장소로 이동하여 설치 지시사항을 완료하십시오. 
 
 
 ## 생성자
@@ -428,7 +428,7 @@ MQTT 외에 HTTP를 사용하여 {{site.data.keyword.iot_short_notm}}에 디바�
     	boolean status = myClient.publishApplicationEventforDeviceOverHTTP(deviceId, deviceType, "blink", event, ContentType.json);
 ```
 
-전체 코드 샘플은 [HttpApplicationDeviceEventPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpApplicationDeviceEventPublish.java) 애플리케이션 예를 참조하십시오.
+전체 코드 샘플은 [HttpApplicationDeviceEventPublish ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpApplicationDeviceEventPublish.java){: new_window} 애플리케이션 예를 참조하십시오. 
 
 특성 파일의 설정에 따라, `publishEventOverHTTP()` 메소드는 Quickstart에서 또는 등록된 플로우에서 이벤트를 공개합니다. `quickstart`가 특성 파일에 조직 ID로 지정된 경우, `publishEventOverHTTP()` 메소드는 이벤트를 일반 HTTP 형식으로 {{site.data.keyword.iot_short_notm}} Quickstart 서비스에 공개합니다. 올바른 등록 조직이 특성 파일에 지정된 경우, 이벤트는 모든 통신의 보안이 유지되도록 항상 HTTPS를 사용하여 공개됩니다. 
 
@@ -474,7 +474,7 @@ MQTT 외에 HTTP를 사용하여 연결된 디바이스에 명령을 공개하�
 	boolean response = myClient.publishCommandOverHTTP("execute", event);
 ```
 
-전체 코드 샘플을 보려면 [HttpCommandPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpCommandPublish.java) 애플리케이션 예를 참조하십시오.
+전체 코드 샘플을 확인하려면 [HttpCommandPublish ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpCommandPublish.java){: new_window} 애플리케이션 예를 참조하십시오. 
 
 HTTP 프로토콜은 '최대 한 번' 전달을 제공하며, 이는 MQTT 프로토콜의 '최대 한 번'(QoS 0) 서비스 품질 레벨과 유사합니다. '최대 한 번' 제공을 사용하여 명령을 공개하는 경우 애플리케이션에서 오류 발생 시 재시도하는 로직을 구현해야 합니다. 자세한 정보는 [애플리케이션용 HTTP REST API](../api.html)를 참조하십시오.
 
@@ -482,8 +482,8 @@ HTTP 프로토콜은 '최대 한 번' 전달을 제공하며, 이는 MQTT 프로
 ## 샘플
 {: #samples}
 
--  [MQTTApplicationDeviceEventPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/MQTTApplicationDeviceEventPublish.java) - 디바이스 이벤트를 공개할 수 있는 방법을 표시하는 샘플 애플리케이션입니다. 
--   [RegisteredApplicationCommandPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationCommandPublish.java) - 디바이스에 대한 명령을 공개할 수 있는 방법을 표시하는 샘플 애플리케이션입니다. 
--  [RegisteredApplicationSubscribeSample](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationSubscribeSample.java) - 디바이스 이벤트, 디바이스 명령, 디바이스 상태 및 애플리케이션 상태 등의 다양한 이벤트를 구독할 수 있는 방법을 표시하는 샘플 애플리케이션입니다. 
--   [SharedSubscriptionSample](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/SharedSubscriptionSample.java) - 애플리케이션의 여러 인스턴스 간의 메시지를 로드 밸런싱하는 확장 가능한 애플리케이션을 빌드할 수 있는 방법을 표시하는 샘플 애플리케이션입니다. 
--  [Backup-restore-sample](https://github.com/ibm-messaging/iot-backup-restore-sample) - {{site.data.keyword.cloudant}}에서 디바이스 구성을 백업하고 복원하는 방법이 표시된 샘플입니다.
+-  [MQTTApplicationDeviceEventPublish ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/MQTTApplicationDeviceEventPublish.java){: new_window} - 디바이스 이벤트를 공개할 수 있는 방법을 보여주는 샘플 애플리케이션입니다. 
+-   [RegisteredApplicationCommandPublish ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationCommandPublish.java){: new_window} - 디바이스에 명령을 공개할 수 있는 방법을 보여주는 샘플 애플리케이션입니다. 
+-  [RegisteredApplicationSubscribeSample ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationSubscribeSample.java){: new_window} - 다양한 이벤트를 구독할 수 있는 방법을 보여주는 샘플 애플리케이션입니다(예: 디바이스 이벤트, 디바이스 명령, 디바이스 상태 및 애플리케이션 상태). 
+-   [SharedSubscriptionSample ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/SharedSubscriptionSample.java){: new_window} - 애플리케이션의 여러 인스턴스에서 메시지를 로드 밸런싱하는 확장 가능한 애플리케이션을 빌드할 수 있는 방법을 보여주는 샘플 애플리케이션입니다. 
+-  [Backup-restore-sample ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/iot-backup-restore-sample){: new_window} - {{site.data.keyword.cloudant}}에서 디바이스 구성을 백업하고 복원할 수 있는 방법을 보여주는 샘플입니다. 

@@ -2,11 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-22"
+lastupdated: "2017-03-17"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -21,8 +21,7 @@ O {{site.data.keyword.iot_full}} for {{site.data.keyword.Bluemix_notm}} fornece 
 ## Antes de iniciar
 {: #byb}
 
-Antes de conectar dispositivos e utilizar dados, registre uma conta {{site.data.keyword.Bluemix_notm}} e crie uma instância do serviço {{site.data.keyword.iot_short_notm}} em sua organização {{site.data.keyword.Bluemix_notm}}. É possível criar uma instância do {{site.data.keyword.iot_short_notm}} diretamente da página do [{{site.data.keyword.iot_short_notm}}
-no Catálogo de serviços Bluemix ![Ícone de link externo](../../icons/launch-glyph.svg)](https://console.{DomainName}/catalog/services/internet-of-things-platform/){:new_window}.
+Antes de conectar dispositivos e utilizar dados, registre uma conta {{site.data.keyword.Bluemix_notm}} e crie uma instância do serviço {{site.data.keyword.iot_short_notm}} em sua organização {{site.data.keyword.Bluemix_notm}}. É possível criar uma instância do {{site.data.keyword.iot_short_notm}} diretamente da [página do {{site.data.keyword.iot_short_notm}} no Catálogo de serviços Bluemix ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.{DomainName}/catalog/services/internet-of-things-platform/){:new_window}.  
 
 Para obter informações detalhadas sobre como inscrever-se em conta no {{site.data.keyword.Bluemix_notm}}, configurar regiões e outras definições de gerenciamento, consulte [Gerenciando
 sua conta Bluemix](https://console.ng.bluemix.net/docs/admin/account.html#signup).
@@ -37,9 +36,9 @@ Para colocar o serviço em funcionamento, explore as opções a seguir, dependen
 
    |   O serviço é implementado | O serviço não é implementado
   ------------- | -------------
-  **Tenho um dispositivo para conectar** | [Conecte seu dispositivo ao {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task).| Explore a conexão de dispositivo no [demo da organização Play![Ícone de link externo](../../icons/launch-glyph.svg)](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
+  **Tenho um dispositivo para conectar** | [Conecte seu dispositivo ao {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task).| Explore a conexão de dispositivo no [demo da organização Play ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
   **Não tenho um dispositivo para conectar** | [Crie e conecte um simulador de dispositivo Node-RED](nodereddevice_sample.html){:new_window}. | Introdução ao [Watson IoT Platform Starter](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html).
-Para obter mais informações sobre como conectar tipos de dispositivo específicos ao {{site.data.keyword.iot_short_notm}}, veja [Orientações do developerWorks ![Ícone de link externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}.  
+Para obter mais informações sobre como conectar tipos de dispositivo específicos ao {{site.data.keyword.iot_short_notm}}, veja [Orientações do developerWorks ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}.  
 
 Para obter a documentação para desenvolvedor de conexão de dispositivo, consulte:
 - [Conectividade MQTT para dispositivos](devices/mqtt.html).
@@ -54,7 +53,7 @@ O {{site.data.keyword.iot_short_notm}} inclui as ferramentas de análise de dado
 - [Placas e cartões](data_visualization.html) para visualizar os dados do dispositivo de tempo real.
 - [Regras e ações](analytics.html) que são acionadas por dados do dispositivo de tempo real.
 
-Para obter um exemplo rápido de introdução, veja a orientação do developerWorks [Usando regras e ações com o IBM Watson IoT Platform Cloud Analytics ![Ícone de link externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){:new_window}.
+Para obter um exemplo rápido de introdução, veja a orientação do developerWorks [Usando regras e ações com o IBM Watson IoT Platform Cloud Analytics ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){:new_window}.
 
 ## Etapa 3: criar aplicativos para consumir os dados do dispositivo
 {: #develop_applications}
@@ -63,7 +62,7 @@ Estenda os recursos de análise de dados do {{site.data.keyword.iot_short_notm}}
 
 Para obter informações adicionais, consulte os
 seguintes tópicos:   
-- Explore a [documentação do desenvolvedor de aplicativos](applications/api.html) e a [Documentação da API do {{site.data.keyword.iot_short_notm}}](reference/rest_api.html).
+- Explore a [documentação do desenvolvedor de aplicativos](applications/api.html) e a [Documentação da API do {{site.data.keyword.iot_short_notm}}](reference/api.html).
 - Explore as [Bibliotecas do cliente do {{site.data.keyword.iot_short_notm}}](iot_platform_client_lib.html) que fornecem ferramentas e arquivos para construir e desenvolver código para integração e conexão de seus dispositivos e aplicativos.
 - [Conecte um serviço do {{site.data.keyword.cloudantfull}}](cloudant_connector.html) a seu {{site.data.keyword.iot_short_notm}} para armazenar dados históricos do dispositivo.
 
@@ -72,15 +71,17 @@ seguintes tópicos:
 
 # Links Relacionados
 {: #rellinks}
+* [Painel de funcionamento de serviço do IBM Watson IoT](https://status.internetofthings.ibmcloud.com){:new_window}
+
 ## Tutoriais e amostras
 {: #samples}
-* [Orientações para conectar seus dispositivos ![Ícone de link externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}
-* [Organização Play do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg)](https://play.internetofthings.ibmcloud.com/){:new_window}
-* [Conectando um Intel Galileo ao {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/connect-an-intel-galileo-to-the-internet-of-things-foundation-connect/){:new_window}
-* [Conectando um ARM® mbed™ IoT Starter Kit ![Ícone de link externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/arm-mbed-iot-starter-kit-part-1/){:new_window}
-* [Conectando um Raspberry Pi ao {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/raspberry-pi-4/){:new_window}
+* [Orientações para conectar seus dispositivos ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}
+* [Organização Play do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://play.internetofthings.ibmcloud.com/){:new_window}
+* [Conectando um Intel Galileo ao {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/connect-an-intel-galileo-to-the-internet-of-things-foundation-connect/){:new_window}
+* [Conectando um ARM® mbed™ IoT Starter Kit ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/arm-mbed-iot-starter-kit-part-1/){:new_window}
+* [Conectando um Raspberry Pi ao {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/raspberry-pi-4/){:new_window}
 
 ## Referência de API
 {: #api}
-* [Documentação da API do {{site.data.keyword.iot_short_notm}}](../reference/rest_api.html)
+* [Documentação da API do {{site.data.keyword.iot_short_notm}}](../reference/api.html)
 * [Documentação do developer](developer_doc_overview.html)

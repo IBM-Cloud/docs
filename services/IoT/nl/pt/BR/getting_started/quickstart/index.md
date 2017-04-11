@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-09-19"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -12,14 +12,14 @@ lastupdated: "2016-09-19"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Iniciação rápida
+# Quickstart
 
-[Iniciação rápida](https://quickstart.internetofthings.ibmcloud.com/#/) é um ambiente de simulação aberto que pode ser usado para conectar seus dispositivos rapidamente ao {{site.data.keyword.iot_full}}. Se seus dispositivos suportarem o protocolo de sistema de mensagens MQTT, eles podem ser facilmente conectados à iniciação rápida.
+[Quickstart ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://quickstart.internetofthings.ibmcloud.com/#/){: new_window} é um ambiente de simulação aberto que pode ser usado para conectar seus dispositivos rapidamente ao {{site.data.keyword.iot_full}}. Se seus dispositivos suportarem o protocolo de sistema de mensagens MQTT, eles podem ser facilmente conectados à iniciação rápida.
 
-Para obter exemplos, receitas e tutoriais que explicam como é possível conectar diferentes dispositivos ao serviço de iniciação rápida, acesse [Receitas do DeveloperWorks](https://developer.ibm.com/recipes/), por exemplo:
+Para obter exemplos, orientações e tutoriais que explicam como é possível conectar diferentes dispositivos ao serviço Quickstart, acesse [Orientações do DeveloperWorks ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/){: new_window}, por exemplo:
 
-- [OpenBlocks IoT BX1G](https://developer.ibm.com/recipes/tutorials/openblocks-iot-bx1g-for-iot-foundation-quickstart/)
-- [Bloqueios reativos](https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/)
+- [OpenBlocks IoT BX1G ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/openblocks-iot-bx1g-for-iot-foundation-quickstart/){: new_window}
+- [Blocos reativos ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/){: new_window}
 
 
 **Importante:** se sua instância do {{site.data.keyword.iot_short_notm}} usar o serviço de iniciação rápida, aplicativos escaláveis não são suportados.
@@ -54,7 +54,7 @@ Ao ajustar os valores do sensor no dispositivo simulado, será possível ver os 
 
 ## Demonstração de Mosquitto
 
-[Mosquitto](http://mosquitto.org/) é um cliente MQTT de software livre para diversas plataformas que pode ser usado para experimentos com o serviço do {{site.data.keyword.iot_short}}. Após instalar o cliente Mosquitto, escolha um ID de aplicativo e um ID de dispositivo exclusivos. Se os IDs de aplicativo e de dispositivo não forem exclusivos, sua conexão de teste poderá resultar em um conflito com outro usuário que esteja concluindo o mesmo procedimento de teste de iniciação rápida.
+[Mosquitto ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](http://mosquitto.org/){: new_window} é um cliente MQTT de software livre para plataformas cruzadas que pode ser usado para experimentos com o serviço {{site.data.keyword.iot_short}}. Após instalar o cliente Mosquitto, escolha um ID de aplicativo e um ID de dispositivo exclusivos. Se os IDs de aplicativo e de dispositivo não forem exclusivos, sua conexão de teste poderá resultar em um conflito com outro usuário que esteja concluindo o mesmo procedimento de teste de iniciação rápida.
 
 Os valores de *appId*, *type_id*, *device_type* e *device_id* devem ter no máximo 36 caracteres e podem conter somente os caracteres a seguir:
 - Caracteres alfanuméricos (a-z, A-Z, 0-9)
@@ -90,9 +90,9 @@ Ao verificar seu terminal de aplicativo, os dois eventos que você acaba de publ
 
 ## links Relacionados
 
-- [Iniciação rápida](https://quickstart.internetofthings.ibmcloud.com)
-- [Receitas do DeveloperWorks](https://developer.ibm.com/recipes)
-- [OpenBlocks IoT BX1G](https://developer.ibm.com/recipes/tutorials/openblocks-iot-bx1g-for-iot-foundation-quickstart/)
-- [Bloqueios reativos](https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/)
-- [Aplicativo de iniciação rápida](http://quickstart.internetofthings.ibmcloud.com)
-- [Mosquitto](http://mosquitto.org/)
+- [Quickstart ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://quickstart.internetofthings.ibmcloud.com){: new_window}
+- [Orientações do DeveloperWorks ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes){: new_window}
+- [OpenBlocks IoT BX1G ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/openblocks-iot-bx1g-for-iot-foundation-quickstart/){: new_window}
+- [Blocos reativos ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/){: new_window}
+- [Aplicativo Quickstart ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](http://quickstart.internetofthings.ibmcloud.com){: new_window}
+- [Mosquitto ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](http://mosquitto.org/){: new_window}

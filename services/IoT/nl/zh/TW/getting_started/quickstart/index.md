@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-09-19"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -14,12 +14,12 @@ lastupdated: "2016-09-19"
 
 # Quickstart
 
-[Quickstart](https://quickstart.internetofthings.ibmcloud.com/#/) 是一個開放式沙盤推演，可用來快速將您的裝置連接至 {{site.data.keyword.iot_full}}。如果您的裝置支援 MQTT 傳訊通訊協定，就可以輕鬆地連接至 Quickstart。
+[Quickstart ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://quickstart.internetofthings.ibmcloud.com/#/){: new_window} 是一個開放式沙盤推演，可用來快速將您的裝置連接至 {{site.data.keyword.iot_full}}。如果您的裝置支援 MQTT 傳訊通訊協定，就可以輕鬆地連接至 Quickstart。
 
-如需說明如何將不同裝置連接至 Quickstart 服務的範例、秘訣及指導教學，請造訪 [developerWorks Recipes](https://developer.ibm.com/recipes/)，例如：
+如需說明如何將不同裝置連接至 Quickstart 服務的範例、秘訣及指導教學，請造訪 [DeveloperWorks 秘訣 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/){: new_window}，例如：
 
-- [OpenBlocks IoT BX1G](https://developer.ibm.com/recipes/tutorials/openblocks-iot-bx1g-for-iot-foundation-quickstart/)
-- [Reactive Blocks](https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/)
+- [OpenBlocks IoT BX1G ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/tutorials/openblocks-iot-bx1g-for-iot-foundation-quickstart/){: new_window}
+- [Reactive Blocks ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/){: new_window}
 
 
 **重要事項：**如果您的 {{site.data.keyword.iot_short_notm}} 實例使用 Quickstart 服務，則不支援可擴充的應用程式。
@@ -54,7 +54,7 @@ http://quickstart.internetofthings.ibmcloud.com/iotsensor
 
 ## Mosquitto 示範
 
-[Mosquitto](http://mosquitto.org/) 是一種跨平台開放程式碼 MQTT 用戶端，可用來實驗 {{site.data.keyword.iot_short}} 服務。安裝 Mosquitto 用戶端之後，請選擇唯一的應用程式 ID 和裝置 ID。如果應用程式和裝置 ID 並非唯一，測試連線可能會與正在完成相同 Quickstart 測試程序的另一位使用者產生衝突。
+[Mosquitto ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](http://mosquitto.org/){: new_window} 是一種跨平台開放程式碼 MQTT 用戶端，可用來實驗 {{site.data.keyword.iot_short}} 服務。安裝 Mosquitto 用戶端之後，請選擇唯一的應用程式 ID 和裝置 ID。如果應用程式和裝置 ID 並非唯一，測試連線可能會與正在完成相同 Quickstart 測試程序的另一位使用者產生衝突。
 
 *appId*、*type_id*、*device_type* 和 *device_id* 值不得超過 36 個字元，而且只能包含下列字元：
 - 英數字元（a-z 、A-Z、0-9）
@@ -90,9 +90,9 @@ http://quickstart.internetofthings.ibmcloud.com/iotsensor
 
 ## 相關鏈結
 
-- [Quickstart](https://quickstart.internetofthings.ibmcloud.com)
-- [DeveloperWorks 秘訣](https://developer.ibm.com/recipes)
-- [OpenBlocks IoT BX1G](https://developer.ibm.com/recipes/tutorials/openblocks-iot-bx1g-for-iot-foundation-quickstart/)
-- [Reactive Blocks](https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/)
-- [Quickstart 應用程式](http://quickstart.internetofthings.ibmcloud.com)
-- [Mosquitto](http://mosquitto.org/)
+- [Quickstart ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://quickstart.internetofthings.ibmcloud.com){: new_window}
+- [DeveloperWorks 秘訣 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes){: new_window}
+- [OpenBlocks IoT BX1G ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/tutorials/openblocks-iot-bx1g-for-iot-foundation-quickstart/){: new_window}
+- [Reactive Blocks ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/){: new_window}
+- [Quickstart 應用程式 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](http://quickstart.internetofthings.ibmcloud.com){: new_window}
+- [Mosquitto ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](http://mosquitto.org/){: new_window}

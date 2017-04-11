@@ -2,11 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-10-05"
+lastupdated: "2017-03-13"
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -14,8 +14,10 @@ lastupdated: "2016-10-05"
 
 # Configurazione e utilizzo di {{site.data.keyword.ssoshort}}
 
-Il servizio {{site.data.keyword.ssofull}} può essere configurato per supportare provider di autenticazione utente alternativi per {{site.data.keyword.iot_full}}. {{site.data.keyword.ssoshort}} supporta SAML 2.0, IBM Cloud Directory, i provider sociali (Facebook, LinkedIn, Google+) e Github.
+Il servizio {{site.data.keyword.ssofull}} può essere configurato per supportare provider di autenticazione utente alternativi per {{site.data.keyword.iot_full}}.
 {: .shortdesc}
+
+{{site.data.keyword.ssoshort}} supporta SAML 2.0, IBM Cloud Directory, i provider sociali (Facebook, LinkedIn, Google+) e Github. Per ulteriori informazioni sul servizio SSO {{site.data.keyword.Bluemix_notm}}, consulta [Introduzione a Single Sign On ![Icona link esterno](../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/services/SingleSignOn/index.html){:new_window}.
 
 ## Configurazione di {{site.data.keyword.ssoshort}}
 

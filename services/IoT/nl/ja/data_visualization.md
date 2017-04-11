@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-17"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -201,4 +201,4 @@ lastupdated: "2017-02-17"
 
 お疲れ様でした。これで、デバイスのリアルタイム・データを参照できるようになりました。
 
-リアルタイム・デバイス・データを表示するためのステップバイステップの手順については、[Configuring Boards & Cards in the new Watson IoT Dashboard ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/configuring-the-cards-in-the-new-watson-iot-dashboard/){: new_window} レシピを参照してください。
+リアルタイム・デバイス・データを表示するためのステップバイステップの手順については、[Configuring Boards & Cards in the new Watson IoT Dashboard ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク･アイコン")](https://developer.ibm.com/recipes/tutorials/configuring-the-cards-in-the-new-watson-iot-dashboard/){: new_window} レシピを参照してください。

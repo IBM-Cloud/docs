@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2016, 2017
-lastupdated: "2017-01-17"
+  years: 2016, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -18,14 +18,14 @@ lastupdated: "2017-01-17"
 {{site.data.keyword.iot_full}} のインターフェース・マッピング機能を使用して、着信/発信のデバイス・データを編成したり統合したりできます。
 {:shortdesc}
 
-**重要:** インターフェース・マッピング機能は、現時点ではベータ版だけの提供になります。最終リリースの前は、ベータ版の更新によって、現行バージョンと互換性のない変更が行われる可能性があります。最終リリースになるまでは、ベータ版の機能を実動アプリケーションで使用しないよう強くお勧めします。このベータ版についてさらに情報を得たりフィードバックを送ったりすることを望まれる場合は、[IM ベータ・プログラムの登録](https://www.ibm.com/software/support/trial/cst/forms/nomination.wss?id=7050)を行って、ご意見をお寄せください。
+**重要:** インターフェース・マッピング機能は、現時点ではベータ機能としてのみ提供されます。最終リリースの前は、ベータ版の更新によって、現行バージョンと互換性のない変更が行われる可能性があります。最終リリースになるまでは、ベータ機能を実動アプリケーションで使用しないよう強くお勧めします。このベータ版についてさらに情報を得たりフィードバックを送ったりすることを望まれる場合は、[IM ベタ・プログラムの登録 ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/software/support/trial/cst/forms/nomination.wss?id=7050){: new_window} を行って、ご意見をお寄せください。
 
 ## 概説
 {: #overview}
 
-インターフェース・マッピング機能を使用して、アプリケーション用のインターフェースを開発できます。{{site.data.keyword.iot_short_notm}} に接続するデバイスやセンサーにはさまざまなタイプやモデルがあり、それぞれのタイプごとに、データ・パブリッシュの形式が異なる場合もあります。インターフェース・マッピング機能を使用して、デバイスの接続方法の違いから生じる複雑な処理を切り離してしまえば、着信データを正規化してアプリケーションを簡略化できます。
+インターフェース・マッピング機能を使用して、アプリケーション用のインターフェースを開発できます。{{site.data.keyword.iot_short_notm}} に接続するデバイスやセンサーにはさまざまなタイプや型、モデルがあり、それぞれのタイプごとに、データ・パブリッシュの形式が異なる場合もあります。インターフェース・マッピング機能を使用して、デバイスの接続方法の違いから生じる複雑な処理を切り離すことにより、着信データを正規化してアプリケーションを簡略化できます。
 
-例えば、2 種類の温度センサーがあるとしましょう。温度を摂氏で測定するセンサーと、華氏で測定するセンサーです。
+例えば、2 種類の温度センサーがあるとします。温度を摂氏で測定するセンサーと、華氏で測定するセンサーです。
 
 ![温度センサー・デバイスと {{site.data.keyword.iot_short_notm}} 上のアプリケーションのマッピング。](images/Information "温度センサー・デバイスと {{site.data.keyword.iot_short_notm}} 上のアプリケーションのマッピング")
 
@@ -75,11 +75,11 @@ lastupdated: "2017-01-17"
 ## リソース
 {: #resources}
 
-REST API を使用すれば、前の図に含まれているリソースを管理できます。REST API の詳細については、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html) の資料を参照してください。
+REST API を使用すれば、前の図に含まれているリソースを管理できます。REST API については、[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html){: new_window} の資料を参照してください。
 
 リソース                        | 説明       
 ------------- | ------------- | -------------  
-スキーマ                         | JSON スキーマを使用して、デバイスから {{site.data.keyword.iot_short_notm}} にパブリッシュするインバウンド・イベントの構造と、望ましいデバイス状態を定義します。JSON スキーマの詳細については、[JSON スキーマ](http://json-schema.org/)を参照してください。インターフェース・マッピングでは、2 つの JSON スキーマを参照します。イベント・スキーマとアプリケーション・インターフェース・スキーマです。イベント・スキーマでは、デバイスから {{site.data.keyword.iot_short_notm}} にパブリッシュするイベントの構造を定義します。アプリケーション・インターフェースが参照するアプリケーション・インターフェース・スキーマでは、{{site.data.keyword.iot_short_notm}} に格納する [デバイス状態](#key_concepts)の構造を定義します。
+スキーマ                         | JSON スキーマを使用して、デバイスから {{site.data.keyword.iot_short_notm}} にパブリッシュするインバウンド・イベントの構造と、望ましいデバイス状態を定義します。JSON スキーマの詳細については、[JSON スキマ ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://json-schema.org/){: new_window} を参照してください。インターフェース・マッピングでは、2 つの JSON スキーマを参照します。イベント・スキーマとアプリケーション・インターフェース・スキーマです。イベント・スキーマでは、デバイスから {{site.data.keyword.iot_short_notm}} にパブリッシュするイベントの構造を定義します。アプリケーション・インターフェースが参照するアプリケーション・インターフェース・スキーマでは、{{site.data.keyword.iot_short_notm}} に格納する [デバイス状態](#key_concepts)の構造を定義します。
 イベント・タイプ                         | {{site.data.keyword.iot_short_notm}} で特定のイベントに含まれているデータを処理するために、組織内でイベント・タイプを作成しなければなりません。どのイベント・タイプもイベント・スキーマを参照する必要があります。ベータ版では、どのインバウンド・イベントも JSON 形式でなければなりません。   
 物理インターフェース                         | 1 つ以上のイベント・タイプに物理インターフェースを関連付けることが可能です。物理インターフェースでは、どのイベント・タイプにどのデバイス・タイプを関連付けるかを定義します。  
 デバイス・タイプ                         | Watson IoT Platform に接続するあらゆるデバイスには、デバイス・タイプが関連付けられています。デバイス・タイプとは、特性や動作を共有するデバイス・グループのことです。インターフェース・マッピングでは、デバイス・タイプを拡張して、デバイスの物理インターフェースと、デバイス状態を取得するために使用するアプリケーション・インターフェースを組み込みます。1 つのデバイス・タイプに複数のアプリケーション・インターフェースを設定することもできます。デバイス・タイプの詳細については、[デバイス・モデル](../reference/device_model.html#id_and_device_types)の「ID とデバイス・タイプ」の項を参照してください。
@@ -94,7 +94,7 @@ REST API を使用すれば、前の図に含まれているリソースを管�
 
 デバイス・データのインターフェース・マッピングを開始するのに必要なリソースを構成する手順を以下にまとめます。
 
-API の詳細については、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html) の資料を参照してください。
+API の詳細については、[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html){: new_window} の資料を参照してください。
 各手順の詳細については、[サンプル・シナリオ](#scenario)を参照するか、サンプル・シナリオ内の各手順への直接リンクを使用してください。
 
 ### デバイス・データのインターフェース・マッピングを開始するための環境を構成します。
@@ -195,7 +195,7 @@ API の詳細については、[{{site.data.keyword.iot_short_notm}} HTTP REST A
 
 ### 前提条件
 
-{{site.data.keyword.iot_short_notm}} 組織インスタンスとその組織の API キーまたはトークンが必要です。API キーやトークンの詳細については、[アプリケーションの HTTP REST API](../applications/api.html#authentication) を参照してください。
+{{site.data.keyword.iot_short_notm}} 組織インスタンスとその組織の API キーまたはトークンが必要です。API キーやトークンの詳細については、[アプリケションの HTTP REST API](../applications/api.html#authentication) を参照してください。
 
 ### このシナリオについて
 
@@ -236,7 +236,7 @@ API の詳細については、[{{site.data.keyword.iot_short_notm}} HTTP REST A
 
 このシナリオでは、2 つのデバイス・タイプと 2 つのデバイス・インスタンスを想定します。デバイス・インスタンス *TemperatureSensor1* は、デバイス・タイプ *EnvSensor1* に関連付けます。デバイス・インスタンス *TemperatureSensor2* は、デバイス・タイプ *EnvSensor2* に関連付けます。
 
-REST API を使用してデバイス・タイプを追加する方法については、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Types) の資料を参照してください。
+HTTP API を使用してデバイス・タイプを追加する方法については、[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Type_Configuration){: new_window} の資料を参照してください。
 
 ### イベント・スキーマ・ファイルを作成します。
 {: #step1}
@@ -294,7 +294,7 @@ REST API を使用してデバイス・タイプを追加する方法につい�
 ```
 POST /schemas
 ```
-詳細については、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Schemas) の資料を参照してください。
+詳しくは、[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Schemas){: new_window} の資料を参照してください。
 
 cURL を使用して *tEventSchema.json* というイベント・スキーマ・リソースを作成する例を以下に示します。
 
@@ -369,9 +369,7 @@ curl --request POST \
 POST /event/types
 ```
 
-詳細については、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Event_Types) の資料を参照してください。
-
-
+詳しくは、[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Event_Types){: new_window} の資料を参照してください。
 
 
 cURL を使用して、摂氏で測定する温度イベントのイベント・タイプを作成する例を以下に示します。
@@ -439,7 +437,7 @@ curl --request POST \
 ```
 POST /physicalinterfaces
 ```
-詳細については、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Physical_Interfaces) の資料を参照してください。
+詳しくは、[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Physical_Interfaces){: new_window} の資料を参照してください。
 
 このシナリオでは、イベント・タイプごとに 1 つずつ、合計で 2 つの物理インターフェースが必要です。
 
@@ -507,7 +505,7 @@ curl --request POST \
 ```
 POST /physicalinterfaces/{physicalInterfaceId}/events
 ```
-詳細については、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Physical_Interfaces) の資料を参照してください。
+詳しくは、[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Physical_Interfaces){: new_window} の資料を参照してください。
 
 このシナリオでは、以下のイベント・タイプを指定の物理インターフェースに追加します。
 - 摂氏の温度イベント *tevt* を ID *5847d1df6522050001db0e1a* の物理インターフェースに追加します。その際に、トピックから送られてくる *eventId* と、イベント・スキーマ・リソースの作成時に返される *eventTypeId* を使用します。
@@ -561,9 +559,7 @@ curl --request POST \
 PUT /device/types/{typeId}
 ```
 
-詳細については、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) の資料を参照してください。
-
-
+詳しくは、[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types){: new_window} の資料を参照してください。
 
 このシナリオでは、デバイス・タイプ *EnvSensor1* を更新して物理インターフェース *5847d1df6522050001db0e1a* に接続し、デバイス・タイプ *EnvSensor2* を更新して物理インターフェース *5847d1df6522050001db0e1b* に接続します。
 
@@ -658,9 +654,7 @@ curl --request PUT \
 ```
 POST /schemas
 ```
-詳細については、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Schemas) の資料を参照してください。
-
-cURL を使用してアプリケーション・インターフェース・スキーマを作成する例を以下に示します。
+詳しくは、[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Schemas){: new_window} の資料を参照してください。cURL を使用してアプリケーション・インターフェース・スキーマを作成する例を以下に示します。
 
 ```
 curl --request POST \
@@ -698,7 +692,7 @@ curl --request POST \
 ```
 POST /applicationinterfaces
 ```
-詳細については、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Application_Interfaces) の資料を参照してください。
+詳しくは、[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Application_Interfaces){: new_window} の資料を参照してください。
 
 このシナリオでは、アプリケーション・インターフェースにアプリケーション・インターフェース・スキーマを追加する時に、前の応答で返されたスキーマ ID *5846ec826522050001db0e11* を使用します。
 
@@ -738,9 +732,7 @@ curl --request POST \
 ```
 POST /device/types/{typeId}/applicationinterfaces
 ```
-詳細については、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) の資料を参照してください。
-
-このシナリオでは、アプリケーション・インターフェースにデバイス・タイプ *EnvSensor1* と *EnvSensor2* を関連付けます。
+詳しくは、[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types){: new_window} の資料を参照してください。このシナリオでは、アプリケーション・インターフェースにデバイス・タイプ *EnvSensor1* と *EnvSensor2* を関連付けます。
 
 cURL を使用して、アプリケーション・スキーマ ID *5846ec826522050001db0e11* を参照するアプリケーション・インターフェース *5846ed076522050001db0e12* をデバイス・タイプ *EnvSensor1* に追加する例を以下に示します。
 
@@ -817,9 +809,7 @@ curl --request POST \
 ```
 POST /device/types/{typeId}/mappings
 ```
-詳細については、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) の資料を参照してください。
-
-このシナリオでは、デバイス・タイプ *EnvSensor1* のマッピングを定義して、インバウンド・イベント *tevt* のプロパティー **t** をアプリケーション・インターフェースのプロパティー **temperature** に対応付けます。また、デバイス・タイプ *EnvSensor2* のマッピングを定義して、インバウンド・イベント *tempevt* のプロパティー **temp** をアプリケーション・インターフェースのプロパティー **temperature** に対応付けます。
+詳しくは、[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types){: new_window} の資料を参照してください。このシナリオでは、デバイス・タイプ *EnvSensor1* のマッピングを定義して、インバウンド・イベント *tevt* のプロパティー **t** をアプリケーション・インターフェースのプロパティー **temperature** に対応付けます。また、デバイス・タイプ *EnvSensor2* のマッピングを定義して、インバウンド・イベント *tempevt* のプロパティー **temp** をアプリケーション・インターフェースのプロパティー **temperature** に対応付けます。
 
 cURL を使用してデバイス・タイプ *EnvSensor1* にマッピングを追加する例を以下に示します。
 
@@ -891,9 +881,7 @@ curl --request POST \
 ```
 PATCH /device/types/{typeId}
 ```
-詳細については、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) の資料を参照してください。
-
-このシナリオでは、2 つのデバイス・タイプの構成をデプロイする必要があります。
+詳しくは、[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types){: new_window} の資料を参照してください。このシナリオでは、2 つのデバイス・タイプの構成をデプロイする必要があります。
 
 cURL を使用してデバイス・タイプ *EnvSensor1* の構成をデプロイする例を以下に示します。
 
@@ -960,9 +948,7 @@ curl --request PATCH \
 ```
 GET /device/types/{typeId}/devices/{deviceId}/state/{applicationInterfaceId}
 ```
-詳細については、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) の資料を参照してください。
-
-cURL を使用して *TemperatureSensor1* の現在の状態を取得する例を以下に示します。その際に、作成したアプリケーション・インターフェースの ID を参照します。
+詳しくは、[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types){: new_window} の資料を参照してください。cURL を使用して *TemperatureSensor1* の現在の状態を取得する例を以下に示します。その際に、作成したアプリケーション・インターフェースの ID を参照します。
 
 ```
 curl --request GET \

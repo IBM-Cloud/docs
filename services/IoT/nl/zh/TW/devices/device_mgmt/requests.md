@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2017-01-10"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2017-01-10"
 ## 使用儀表板起始裝置管理要求
 {: #initiating-dm-dashboard}
 
-導覽至「裝置」頁面的**動作**標籤，即可透過儀表板起始要求。**起始動作**按鈕會開啟一個對話框，您可以在其中選取動作、挑選要對其採取動作的裝置，以及指定已選取動作支援的任何其他參數。
+使用「裝置」頁面的**動作**標籤，即可透過儀表板來起始要求。按一下**起始動作**來選取動作、選取裝置，然後指定所選動作可支援的任何其他參數。
 
 ## 使用 REST API 起始裝置管理要求
 {: #initiating-dm-api}
@@ -31,7 +31,7 @@ lastupdated: "2017-01-10"
 
 `POST https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
-如需裝置管理要求內文的相關資訊，請參閱 [API 文件](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html)。
+如需裝置管理要求內文的相關資訊，請參閱 [API 文件 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}。
 
 ## 裝置動作
 {: #device-actions}
@@ -178,7 +178,7 @@ Topic: iotdevice-1/response
 ## 韌體動作
 {: #firmware-actions}
 
-目前已知位於裝置上的韌體層次會儲存在 `deviceInfo.fwVersion` 屬性中。`mgmt.firmware` 屬性是用來執行韌體更新以及觀察其狀態。
+已知位於裝置上的韌體層次會儲存在 `deviceInfo.fwVersion` 屬性中。`mgmt.firmware` 屬性是用來執行韌體更新以及觀察其狀態。
 
 **重要事項：**受管理裝置必須支援 `mgmt.firmware` 屬性的觀察，才能支援韌體動作。
 
@@ -190,8 +190,8 @@ Topic: iotdevice-1/response
 
  |值 |狀態  | 意義 |
  |:---|:---|:---|
- |0  | 閒置        | 裝置目前不在下載韌體過程中。 |  
- |1  | 下載中 | 裝置目前正在下載韌體。 |
+ |0  | 閒置        | 裝置未下載韌體。 |  
+ |1  | 下載中 | 裝置正在下載韌體。 |
  |2  | 已下載  | 裝置已順利下載韌體更新，並且準備好進行安裝。 |
 
 
@@ -219,8 +219,8 @@ Topic: iotdevice-1/response
 提供下列資訊：
 
 - 動作 `firmware/download`
-- 韌體映像檔的 URI
 - 接收映像檔的裝置清單，最多 5000 個裝置
+- 韌體映像檔的 URI（選用）
 - 要驗證映像檔的驗證字串（選用）
 - 韌體名稱（選用）
 - 韌體版本（選用）
@@ -252,12 +252,14 @@ Topic: iotdevice-1/response
 }
 ```
 
+如果未指定任何選用性參數，則會略過下列處理程序中的第一個步驟。
+
 {{site.data.keyword.iot_short_notm}} 中的裝置管理伺服器使用「裝置管理通訊協定」將要求傳送至裝置，如此便會起始韌體下載。下載處理程序包含下列步驟：
 
 1. 在主題 `iotdm-1/device/update` 上傳送韌體詳細資料更新要求。
 更新要求可讓裝置驗證所要求的韌體是否與目前安裝的韌體不同。如果不同，請將 `rc` 參數設為 `204`，即轉換為狀態 `Changed`。
   
-下列範例顯示預期哪一則訊息是針對先前傳送的範例韌體下載要求，以及偵測到差異時應該傳送哪一個回應：
+下列範例顯示針對先前傳送的韌體下載要求範例預期為哪一則訊息，而在偵測到差異時會傳送哪一個回應：
 ```
    Incoming request from the {{site.data.keyword.iot_short_notm}}:
 
@@ -440,6 +442,10 @@ Message:
 
 - 動作 `firmware/update`
 - 接收映像檔的裝置清單，裝置類型全部相同。
+- 韌體映像檔的 URI（選用）
+- 要驗證映像檔的驗證字串（選用）
+- 韌體名稱（選用）
+- 韌體版本（選用）
 
 下列程式碼是範例要求：
 
@@ -454,6 +460,8 @@ Message:
    }
 
 ```
+
+如果指定任何選用性參數，則裝置收到的第一則訊息為裝置更新要求。此裝置更新要求與韌體下載要求的第一則訊息類似。
 
 若要監視韌體更新的狀態，{{site.data.keyword.iot_short_notm}} 會先在主題 `iotdm-1/observe` 上觸發觀察程式要求。裝置準備好啟動更新處理程序時，會傳送 `rc` 參數設為 `200`、`mgmt.firmware.state` 屬性設為 `0` 且 `mgmt.firmware.updateStatus` 屬性設為 `0` 的回應。
 
@@ -522,7 +530,7 @@ Message:
 ```
 
 若要完成韌體更新要求，裝置會使用針對其 `iotdevice-1/notify` 主題發佈的狀態訊息，向 {{site.data.keyword.iot_short_notm}} 報告其更新狀態。
-完成韌體更新時，會將 `mgmt.firmware.updateStatus` 屬性設為 `0`（成功），並將 `mgmt.firmware.state` 屬性設為 `0`（閒置）。然後，即可從裝置中刪除所下載的韌體映像檔，並將 `deviceInfo.fwVersion` 屬性設為 `mgmt.firmware.version` 屬性的值。
+完成韌體更新時，會將 `mgmt.firmware.updateStatus` 屬性設為 `0`（成功），並將 `mgmt.firmware.state` 屬性設為 `0`（閒置）。然後，即可將所下載的韌體映像檔從裝置中刪除，並將 `deviceInfo.fwVersion` 屬性設為 `mgmt.firmware.version` 屬性的值。
 
 下列程式碼提供通知訊息的範例：
 
@@ -595,12 +603,12 @@ Message:
 
 下列秘訣示範執行裝置及韌體動作所需的完整流程。
 
-- [WIoT Platform 中的裝置管理 - 回復及重設為原廠設定](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/)
+- [WIoT Platform 中的裝置管理 - 回復及重設為原廠設定 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/){: new_window}
 
-- [裝置起始的韌體更新](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-device-initiated-firmware-upgrade/)
+- [裝置起始的韌體更新 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-device-initiated-firmware-upgrade/){: new_window}
 
-- [平台起始的韌體更新](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/)
+- [平台起始的韌體更新 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/){: new_window}
 
-- [使用背景執行的平台起始的韌體更新](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/)
+- [使用背景執行的平台起始的韌體更新 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/){: new_window}
 
-- [韌體回復及重設為原廠設定](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/)
+- [韌體回復及重設為原廠設定 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/){: new_window}

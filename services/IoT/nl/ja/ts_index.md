@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-20"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -76,10 +76,10 @@ lastupdated: "2017-02-20"
 
 フォーラムを使用して質問するときは、{{site.data.keyword.Bluemix_notm}} 開発チームの目に止まるように、質問にタグを付けてください。
 
-* {{site.data.keyword.iot_short_notm}} を使用したアプリの開発やデプロイに関して技術上の質問がある場合は、質問を[スタック・オーバーフロー ![外部リンク・アイコン](../../icons/launch-glyph.svg)](http://stackoverflow.com/search?q=watson-iot+ibm-bluemix){:new_window} に投稿し、質問には「ibm-bluemix」と「watson-iot」のタグを付けてください。
+* {{site.data.keyword.iot_short_notm}} を使用したアプリの開発やデプロイに関して技術上の質問がある場合は、質問を[スタック・オーバーフロー ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://stackoverflow.com/search?q=watson-iot+ibm-bluemix){:new_window} に投稿し、質問には「ibm-bluemix」と「watson-iot」のタグを付けてください。
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
-* サービスや概説に関する質問は、[IBM developerWorks dW Answers ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window} フォーラムを使用してください。「watson-iot」と「bluemix」のタグを含めてください。
+* サービスや開始の手順に関する質問については、[IBM developerWorks dW Answers ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window} フォーラムを使用してください。「watson-iot」と「bluemix」のタグを含めてください。
 
 フォーラムの使用について詳しくは、[ヘルプの取得](https://www.{DomainName}/docs/support/index.html#getting-help)を参照してください。
 
-IBM サポート・チケットを開く方法や、サポート・レベルとチケットの重大度については、[サポートへのお問い合わせ ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/support/index.html#contacting-support) を参照してください。
+IBM サポート・チケットを開く方法や、サポート・レベルとチケットの重大度については、[サポートへのお問い合わせ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.{DomainName}/docs/support/index.html#contacting-support) を参照してください。

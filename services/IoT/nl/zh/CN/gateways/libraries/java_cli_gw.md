@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-11-30"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -343,12 +343,12 @@ gwClient.api().getDevicesConnectedThroughGateway(gatewayType, gatewayId);
 ## 样本
 {: #samples}
 
-有多个样本可帮助您将网关和位于网关后面的设备连接到您的 {{site.data.keyword.iot_short_notm}} 实例。这些样本使用 {{site.data.keyword.iot_short_notm}} Java 客户机库，并位于[网关样本 GitHub 存储库](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples)中。
+有多个样本可帮助您将网关和位于网关后面的设备连接到您的 {{site.data.keyword.iot_short_notm}} 实例。这些样本使用 {{site.data.keyword.iot_short_notm}} Java 客户机库，并位于[网关样本 GitHub 存储库 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples){: new_window} 中。
 
 ## 诀窍
 {: #recipes}
 
 | 诀窍     | 描述|
 |----------------|----------------
-|[Connecting your device as a gateway to {{site.data.keyword.iot_short_notm}}](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-gateway-to-watson-iot-platform/)| 一个 GitHub 项目和详细指示信息，说明了如何将 Raspberry Pi 网关和位于该网关后面的 Arduino Uno 设备连接到 {{site.data.keyword.iot_short_notm}}。
-|[Raspberry Pi as a managed gateway in {{site.data.keyword.iot_short_notm}} ](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/)|上一个网关诀窍的扩展，说明了如何将 Raspberry Pi 网关作为 {{site.data.keyword.iot_short_notm}} 中的受管设备进行连接以及如何执行设备管理操作。
+|[Connecting your device as a gateway to {{site.data.keyword.iot_short_notm}} ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-gateway-to-watson-iot-platform/){: new_window}| 一个 GitHub 项目和详细指示信息，说明了如何将 Raspberry Pi 网关和位于该网关后面的 Arduino Uno 设备连接到 {{site.data.keyword.iot_short_notm}}。
+|[RaspberryPi as a managed gateway in {{site.data.keyword.iot_short_notm}} ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/){: new_window}|上一个网关诀窍的扩展，说明了如何将 Raspberry Pi 网关作为 {{site.data.keyword.iot_short_notm}} 中的受管设备进行连接以及如何执行设备管理操作。

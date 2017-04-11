@@ -3,10 +3,10 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-23"
+lastupdated: "2017-03-14"
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -15,12 +15,12 @@ lastupdated: "2017-02-23"
 # デバイス用の HTTP REST API
 {: #api}
 
-**重要:** デバイス用の {{site.data.keyword.iot_full}} HTTP REST API 機能は、限定されたベータ・プログラムの一部としてのみ使用できます。今後の更新によって、この機能の現行バージョンと互換性のない変更が行われる可能性があります。この機能を試して、[ご意見をお寄せください](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html)。
+**重要:** デバイス用の {{site.data.keyword.iot_full}} HTTP REST API 機能は、限定されたベータ・プログラムの一部としてのみ使用できます。今後の更新によって、この機能の現行バージョンと互換性のない変更が行われる可能性があります。この機能を試して、[ご意見をお寄せください ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}。
 
 ## HTTP REST API 資料へのアクセス
 {: #api_link}
 
-{{site.data.keyword.iot_short_notm}} HTTP REST API 資料にアクセスしてデバイスを組織に統合する方法についての詳細を確認するには、[https://docs.internetofthings.ibmcloud.com/swagger/v0002.html](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) を参照してください。
+{{site.data.keyword.iot_short_notm}} HTTP REST API 資料にアクセスしてデバイスを組織に統合する方法に関する情報をさらに入手するには、[API](../reference/api.html) を参照してください。
 
 サポートされている {{site.data.keyword.iot_short_notm}} HTTP REST API のバージョンはバージョン 2 のみです。{{site.data.keyword.iot_short_notm}} ソリューションには必ずバージョン 2 を使用してください。
 
@@ -31,6 +31,8 @@ lastupdated: "2017-02-23"
 
 # デバイス用の HTTP REST Messaging API
 {: #rest_messaging_api}
+
+{{site.data.keyword.iot_short_notm}} HTTP Messaging API 資料にアクセスして、HTTP を使用してイベントをパブリッシュする方法に関する詳細情報を見つけるには、[{{site.data.keyword.iot_short_notm}} HTTP Messaging API ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window} を参照してください。
 
 ## イベントのパブリッシュ
 {: #event_publication}

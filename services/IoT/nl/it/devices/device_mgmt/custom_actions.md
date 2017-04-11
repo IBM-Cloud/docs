@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2017-02-03"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -75,7 +75,7 @@ Per aggiungere un pacchetto di gestione personalizzato utilizzando il dashboard 
 3. Fai clic sul pulsante **Aggiungi pacchetto**.
 4. Selezione il tuo file pacchetto e fai clic su **Apri**.
 
-Per aggiungere un pacchetto di gestione personalizzato utilizzando l'API, consulta la [Documentazione API {{site.data.keyword.iot_short_notm}}![icona link esterno](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Per aggiungere un pacchetto di gestione personalizzato utilizzando l'API, consulta la [Documentazione API {{site.data.keyword.iot_short_notm}}![icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ### Estensione delle proprietà del pacchetto
 
@@ -128,7 +128,7 @@ Utilizza i seguenti comandi API REST {{site.data.keyword.iot_short_notm}} per ge
 - Per eliminare un pacchetto di estensione di gestione del dispositivo:
   `DELETE https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
 
-Per ulteriori informazioni sulle API REST per i pacchetti di estensione di gestione del dispositivo, consulta la documentazione [{{site.data.keyword.iot_short_notm}} API V2](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Per ulteriori informazioni sulle API REST per i pacchetti di estensione di gestione del dispositivo, consulta la documentazione [{{site.data.keyword.iot_short_notm}} API V2 ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 
 ## Supporto di azioni di gestione del dispositivo personalizzate
@@ -163,7 +163,7 @@ Per specificare le azioni personalizzate dal pacchetto di estensione, il disposi
 
 ```
 
-Per ulteriori informazioni sulle richieste di gestione del dispositivo, consulta [Protocollo di gestione del dispositivo](index.html){: new_window}.
+Per ulteriori informazioni sulle richieste di gestione del dispositivo, consulta [Protocollo di gestione del dispositivo](index.html).
 
 ## Inizializzazione delle azioni di gestione del dispositivo personalizzate
 {: #initiating_custom_dm_actions}
@@ -468,4 +468,4 @@ Utilizza le seguenti richieste API per gestire i tuoi dispositivi:
 
 Le seguenti ricette mostrano il flusso necessario per gestire le estensioni di gestione dispositivo:
 
-- [La ricetta Device Management Extension Packages in WIoT Platform ![icona link esterno](../../../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/device-management-extension-packages-in-wiot-platform/){: new_window} fornisce le istruzioni per registrare un dispositivo gestito con {{site.data.keyword.iot_short}} in modo che possa ricevere e gestire le azioni delle estensioni di gestione del dispositivo. Gli esempi di codice nella ricetta sono scritti utilizzando la libreria client Python.
+- [La ricetta Device Management Extension Packages in WIoT Platform ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/device-management-extension-packages-in-wiot-platform/){: new_window} fornisce le istruzioni per registrare un dispositivo gestito con {{site.data.keyword.iot_short}} in modo che possa ricevere e gestire le azioni delle estensioni di gestione del dispositivo. Gli esempi di codice nella ricetta sono scritti utilizzando la libreria client Python.

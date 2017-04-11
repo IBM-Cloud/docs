@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2017-02-03"
+  years: 2015, 2017
+lastupdated: "2017-03-15"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -39,7 +39,7 @@ Jasper 是一款用于 SIM 设备的管理平台。Jasper 集成到 {{site.data.
 完成以下配置步骤后，可在连接了 Jasper 的设备的设备向下钻取中访问受支持的操作。
 
 ### 用于 Jasper 的 REST API
-要访问用于 Jasper 的 REST API，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window} 文档中的“Jasper 扩展”部分。
+要访问用于 Jasper 的 REST API，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window} 文档的“Jasper 扩展”部分。
 
 ### Jasper 的配置
 
@@ -91,7 +91,7 @@ AT&T 扩展支持以下 AT&T 操作：
 - 更改套餐
 
 ### 用于 AT&T 的 REST API
-要访问用于 AT&T 的 REST API，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window} 文档中的“AT&T 扩展”部分。
+要访问用于 AT&T 的 REST API，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window} 文档中的“AT&T 扩展”部分。
 
 ### AT&T 的配置
 
@@ -223,7 +223,7 @@ https://developer.ibm.com/iotplatform/2016/03/30/watson-iot-platform-integration
 - 位置状态
 
 ### 用于 Orange 的 REST API
-要访问用于 Orange 的 REST API，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window} 文档中的“Orange 扩展”部分。
+要访问用于 Orange 的 REST API，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window} 文档的“Orange 扩展”部分。
 
 ### Orange 的配置
 
@@ -275,7 +275,7 @@ https://developer.ibm.com/iotplatform/2016/03/30/watson-iot-platform-integration
 3. 单击**添加软件包**按钮。
 4. 选择软件包文件，然后单击**打开**。
 
-要使用 API 来添加定制设备管理软件包，请参阅 [{{site.data.keyword.iot_short_notm}} API 文档 ![外部链接图标](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}。
+要使用 API 来添加定制设备管理软件包，请参阅 [{{site.data.keyword.iot_short_notm}} API 文档 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}。
 
 ## 区块链
 {: #blockchain}
@@ -294,37 +294,100 @@ https://developer.ibm.com/iotplatform/2016/03/30/watson-iot-platform-integration
  2. 在**扩展**页面上，单击**添加扩展**。
  3. 单击“区块链”扩展旁的**添加**。
  4. 在“区块链”磁贴中，单击**设置**。
- 3. 在**激活区块链**部分中，单击**了解更多**链接以转至 [IoT Blockchain 服务产品页面 ![外部链接图标](../../../../icons/launch-glyph.svg)](http://www.ibm.com/internet-of-things/iot-news/announcements/private-blockchain/){: new_window}。
+ 3. 在**激活区块链**部分中，单击**了解更多**链接以转至 [IoT Blockchain 服务产品页面 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](http://www.ibm.com/internet-of-things/iot-news/announcements/private-blockchain/){: new_window}。
  4. 单击**开始使用区块链项目**以填充并提交*探索 IoT 和区块链的潜力*表单。  
  5. 请求得到批准后，IBM 将联系您来为您的组织启用区块链集成。
  6. 通过执行 [{{site.data.keyword.iot_short_notm}} 区块链集成](../../bl_blockchain_integration.html)中的步骤，返回到组织的 {{site.data.keyword.iot_short_notm}} 仪表板以完成此设置。
 
-
-
-## The Weather Company
+<!-- ## The Weather Company
 {: #weathercompany}
 
-The Weather Company 扩展将天气数据与现有 {{site.data.keyword.iot_short_notm}} 设备相组合。如果使用 API 发起了更新位置请求，或者设备已使用设备管理消息设置其位置，那么来自 The Weather Company 的天气数据会显示在设备详细信息视图中。
+The Weather Company extension combines weather data with your existing {{site.data.keyword.iot_short_notm}} devices. Weather data from The Weather Company appears in the device details view if an update location request has been made by using the API, or if the device has already set its location by using a device management message.
 
-**注：**只有受管设备可以设置其自己的位置。所有非受管设备必须使用 API 手动设置其位置。有关设置设备位置的更多信息，请参阅[更新位置请求](../../devices/device_mgmt/index.html#update-location)。
+**Note:** Only managed devices can set their own locations. All unmanaged devices must have their locations set manually by using the API. For more information on setting a device location, see [Update Location requests](../../devices/device_mgmt/index.html#update-location).
 
-### 用于 The Weather Company 的 REST API 
-要访问用于 The Weather Company 的 REST API，请参阅
-[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather){: new_window} 文档中“设备位置天气”部分。
+### REST APIs for The Weather Company
+To access the REST API for The Weather Company, see the
+Device Location Weather section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather){: new_window} documentation.
 
-### 天气数据
+### Weather Data
 
-要查看针对设备位置检索到的天气数据，请在**设备**窗格中找到相应设备，并单击该设备。在详细设备视图中，向下滚动到**扩展**部分。列出了以下天气数据：
+To view the weather data retrieved for a device location, find the device in the **Devices** pane and click it. In the detailed device view scroll down to the **Extensions** section. The following weather data is listed:
 
-- 当前天气。
-- 当前温度。
-- 预测的最高和最低温度。
-- 相对湿度。
-- 气压。
-- 能见度。
-- 风速。
-- 风向。
-- 纬度。
-- 经度。
+- Current weather.
+- Current temperature.
+- Predicted maximum and minimum temperature.
+- Relative humidity.
+- Pressure.
+- Visibility.
+- Wind speed.
+- Wind direction.
+- Latitude.
+- Longitude.
+-->
 
-<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html){: new_window}. -->
+<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html){: new_window}. -->
+
+## 电子邮件
+{: #email}
+
+使用电子邮件邀请，可以将用户添加到 {{site.data.keyword.iot_short_notm}}。有关信息，请参阅[管理用户访问权](../../add_users.html)。
+
+要使用电子邮件邀请功能，必须配置电子邮件扩展，以使用 SendGrid 在线服务或简单电子邮件传输协议 (SMTP) 服务。扩展还可以使用 SendGrid {{site.data.keyword.Bluemix_notm}} 应用程序。
+
+### SendGrid 在线服务
+
+要配置电子邮件扩展以使用 SendGrid 在线服务，请遵循以下步骤：
+
+1. 从 SendGrid 在线帐户检索已获授权的 API 密钥。
+2. 在 {{site.data.keyword.iot_short_notm}} 仪表板的导航栏中，单击**扩展**。
+3. 在**电子邮件**部分中，单击**设置**。
+4. 选择**具有 API 密钥的 SendGrid**
+5. 输入站点管理员的名称和电子邮件地址，以及已获授权的 API 密钥。
+
+### SMTP 服务
+
+要配置电子邮件扩展以使用 SMTP 服务，请遵循以下步骤：
+
+1. 在 {{site.data.keyword.iot_short_notm}} 仪表板的导航栏中，单击**扩展**。
+2. 在**电子邮件**部分中，单击**设置**。
+3. 选择 **SMTP**。
+4. 输入 SMTP 服务的配置详细信息。
+
+### SendGrid {{site.data.keyword.Bluemix_notm}} 应用程序
+
+要配置电子邮件扩展以使用 SendGrid {{site.data.keyword.Bluemix_notm}} 应用程序，请遵循以下步骤：
+
+1. 创建哑元应用程序，并绑定 SendGrid 服务。  
+要检索配置凭证，请添加 SendGrid 服务并将其绑定到哑元应用程序。
+
+ 1. 在 {{site.data.keyword.Bluemix_notm}} 仪表板中，单击**创建服务**。
+ 2. 从目录选择 SendGrid 服务并单击**创建**。
+ 3. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”中，添加 {{site.data.keyword.sdk4nodefull}} 应用程序。
+ 4. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”中，单击 {{site.data.keyword.sdk4nodefull}} 应用程序，然后单击**绑定服务或 API**。
+ 5. 选择 SendGrid 服务并单击**添加**。
+ 6. 现在，{{site.data.keyword.sdk4nodefull}} 应用程序必须重新编译打包。
+2. 准备配置 {{site.data.keyword.iot_short_notm}} 服务。  
+可以使用 {{site.data.keyword.iot_short_notm}} 仪表板或使用 {{site.data.keyword.iot_short_notm}} API 对 {{site.data.keyword.iot_short_notm}} 进行配置。  
+ 1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”中，单击 {{site.data.keyword.sdk4nodefull}} 应用程序。
+ 2. 单击导航栏中的**环境变量**。
+ 3. 将显示的 JSON 复制到临时文本文件。  
+此 JSON 应该具有以下格式：
+```
+{
+  "name": "SendGridServiceName",
+  "label": "user-provided",
+  "credentials": {
+    "password": "xxx",
+    "hostname": "smtp.sendgrid.net",
+    "username": "username"
+  }
+}
+```
+3. 向 {{site.data.keyword.iot_short_notm}} 组织添加配置数据。
+ 1. 打开 {{site.data.keyword.iot_short_notm}} 仪表板。
+ 2. 单击导航栏中的**扩展**。
+ 3. 单击**电子邮件**图标下的**设置**。
+ 4. 选择**具有用户名的 SendGrid**。
+ 5. 输入临时文本文件中的配置数据。
+ 6. 单击**完成**。

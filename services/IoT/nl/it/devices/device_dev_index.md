@@ -1,7 +1,9 @@
-----
+---
 
 copyright:
-  years: 2015, 2016, 2017
+  years: 2015, 2017
+
+lastupdated: "2017-03-14"
 
 ---
 
@@ -13,9 +15,6 @@ copyright:
 
 # Sviluppo dei dispositivi su {{site.data.keyword.iot_short_notm}}
 {: #device_dev_index}
-
-Ultimo aggiornamento: 26 novembre 2016
-{: .last-updated}
 
 Un dispositivo è qualsiasi cosa che dispone di una connessione a internet e dispone di dati da inviare o ricevere dal cloud. Puoi utilizzare i dispositivi per inviare informazioni sull'evento come le letture del sensore al cloud e per accettare i comandi dalle applicazioni nel cloud.
 
@@ -55,7 +54,7 @@ Per ulteriori informazioni e link alle guide di programmazione disponibili, cons
 
 Se non riesci a trovare una guida di programmazione {{site.data.keyword.iot_short_notm}} idonea, puoi scrivere il tuo proprio programma e utilizzare il protocollo MQTT o HTTP per collegare il tuo dispositivo a {{site.data.keyword.iot_short_notm}}.
 
-MQTT è un open standard gestito dagli standard OASIS (organization and international recognized by ISO). Per ulteriori informazioni, consulta [OASIS Message Queuing Telemetry Transport](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=mqtt).
+MQTT è un open standard gestito dagli standard OASIS (organization and international recognized by ISO). Per ulteriori informazioni, consulta [OASIS Message Queuing Telemetry Transport ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=mqtt){: new_window}.
 
 È disponibile un'ampia varietà di librerie client MQTT per molti sistemi differenti, inclusi i seguenti ambienti:
 - http://www.eclipse.org/paho/

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2017-02-17"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -27,16 +27,14 @@ lastupdated: "2017-02-17"
 
 |用戶端程式庫 |程式庫和進一步說明文件的鏈結
 |:---|:---
-|C++|[https://github.com/ibm-watson-iot/iot-cpp](https://github.com/ibm-watson-iot/iot-cpp)
-|C#|[https://github.com/ibm-watson-iot/iot-csharp](https://github.com/ibm-watson-iot/iot-csharp)
-|嵌入式 C| [https://github.com/ibm-watson-iot/iot-embeddedc](https://github.com/ibm-watson-iot/iot-embeddedc)
-|Java™|[https://github.com/ibm-watson-iot/iot-java](https://github.com/ibm-watson-iot/iot-java)
-|mBed C++|[https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/)
-|Node.js|[https://github.com/ibm-watson-iot/iot-nodejs](https://github.com/ibm-watson-iot/iot-nodejs)
-|Node-RED|[https://github.com/ibm-watson-iot/iot-nodered](https://github.com/ibm-watson-iot/iot-nodered)
-|Python|[https://github.com/ibm-watson-iot/iot-python
-
-](https://github.com/ibm-watson-iot/iot-python)
+|C++|[https://github.com/ibm-watson-iot/iot-cpp ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-cpp){: new_window}
+|C#|[https://github.com/ibm-watson-iot/iot-csharp ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-csharp){: new_window}
+|嵌入式 C| [https://github.com/ibm-watson-iot/iot-embeddedc ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-embeddedc){: new_window}
+|Java™|[https://github.com/ibm-watson-iot/iot-java ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-java){: new_window}
+|mBed C++|[https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/ ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){: new_window}
+|Node.js|[https://github.com/ibm-watson-iot/iot-nodejs ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
+|Node-RED|[https://github.com/ibm-watson-iot/iot-nodered ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-nodered){: new_window}
+|Python|[https://github.com/ibm-watson-iot/iot-python ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-python){: new_window}
 
 如需可用之用戶端程式庫的相關資訊和鏈結，另請參閱[適用於 {{site.data.keyword.iot_short_notm}} 開發的用戶端程式庫](../iot_platform_client_lib.html)。
 
@@ -45,4 +43,4 @@ lastupdated: "2017-02-17"
 
 「{{site.data.keyword.iot_short_notm}} 邊緣分析」功能可讓您在閘道裝置上執行「{{site.data.keyword.iot_short_notm}} 分析」。使用「邊緣分析」讓分析來分析及回應在網路邊緣所收集的資料。您也可以將裝置資料傳送至 {{site.data.keyword.iot_short_notm}} 來進行額外分析處理、儀表板視覺化、作為其他分析的輸入，或儲存於雲端式歷程儲存庫。
 
-您可以從 [IBM 邊緣分析社群頁面](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true)下載「邊緣分析 SDK」。SDK 包括 SDK JAR 檔案、javadoc、範例程式碼、秘訣鏈結及 README 檔。在社群中，您也可以觀看視訊來開始進行「邊緣分析」，而且可以使用社群討論區來提出問題。
+您可以從 [IBM 邊緣分析社群頁面 ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true){: new_window} 下載「邊緣分析 SDK」。SDK 包括 SDK JAR 檔案、javadoc、範例程式碼、秘訣鏈結及 README 檔。在社群中，您也可以觀看視訊來開始進行「邊緣分析」，而且可以使用社群討論區來提出問題。

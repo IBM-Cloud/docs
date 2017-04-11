@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-17"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -93,11 +93,11 @@ I tuoi dati del dispositivo sono ora archiviati nel tuo {{site.data.keyword.clou
 
 Le seguenti 'ricette' descrivono come utilizzare {{site.data.keyword.cloudant_short_notm}} come archivio storico per {{site.data.keyword.iot_short}}:
 
-- [La ricetta Configure {{site.data.keyword.cloudant_short_notm}} as Historian Data Storage for {{site.data.keyword.iot_short}} ![icona link esterno](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-parti/){: new_window} descrive come i dati del dispositivo vengono memorizzati in {{site.data.keyword.cloudant_short_notm}} e illustra come configurare e archiviare i dati del dispositivo in {{site.data.keyword.cloudant_short_notm}} come un'archiviazione dati storica.
+- [La ricetta Configure {{site.data.keyword.cloudant_short_notm}} as Historian Data Storage for {{site.data.keyword.iot_short}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-parti/){: new_window} descrive come i dati del dispositivo vengono memorizzati in {{site.data.keyword.cloudant_short_notm}} e illustra come configurare e archiviare i dati del dispositivo in {{site.data.keyword.cloudant_short_notm}} come un'archiviazione dati storica.
 
-- [La ricetta Query and Process {{site.data.keyword.iot_short}} Device Data from {{site.data.keyword.cloudant_short_notm}} ![icona link esterno](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-partii){: new_window} mostra come eseguire query e operazioni di elaborazione nei dati del dispositivo archiviati in {{site.data.keyword.cloudant_short_notm}}.
+- [La ricetta Query and Process {{site.data.keyword.iot_short}} Device Data from {{site.data.keyword.cloudant_short_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-partii){: new_window} mostra come eseguire query e operazioni di elaborazione nei dati del dispositivo archiviati in {{site.data.keyword.cloudant_short_notm}}.
 
-- [La ricetta Visualize Watson IoT Device Data stored in Cloudant NoSQL DB ![icona link esterno](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=27327){: new_window} mostra come collegare le schede del grafico a linee e l'archiviazione dei dati storica per visualizzare i dati del dispositivo sul dashboard Watson IoT Platform.
+- [La ricetta Visualize Watson IoT Device Data stored in Cloudant NoSQL DB ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=27327){: new_window} mostra come collegare le schede del grafico a linee e l'archiviazione dei dati storica per visualizzare i dati del dispositivo sul dashboard Watson IoT Platform.
 
 
 ## Creazione di nuovi documenti di progettazione  
@@ -108,7 +108,7 @@ I nuovi documenti di progettazione sono contenuti nel database di configurazione
 
 I documenti di progettazione predefiniti contenuti nelle query di implementazione {{site.data.keyword.iot_short_notm}} disponibili nello storico corrente, a prescindere dalla funzione di riepilogo.
 
-Possono essere aggiunti ulteriori documenti di progettazione nel database di configurazione e saranno copiati nei nuovi database dell'intervallo bucket come vengono creati. Per aggiungere i documenti di progettazione al database di configurazione, consulta la [documentazione Cloudant API![icona link esterno](../icons/launch-glyph.svg)](https://docs.cloudant.com/document.html){: new_window}.
+Possono essere aggiunti ulteriori documenti di progettazione nel database di configurazione e saranno copiati nei nuovi database dell'intervallo bucket come vengono creati. Per aggiungere i documenti di progettazione al database di configurazione, consulta la [Cloudant API documentation ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://docs.cloudant.com/document.html){: new_window}.
 
 <!--  # Related links
 {: #rellinks}

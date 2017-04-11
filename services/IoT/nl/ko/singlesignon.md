@@ -2,11 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-10-05"
+lastupdated: "2017-03-13"
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -14,8 +14,11 @@ lastupdated: "2016-10-05"
 
 # {{site.data.keyword.ssoshort}} 구성 및 사용
 
-{{site.data.keyword.iot_full}}에 대한 대체 사용자 인증 제공자를 지원하도록 {{site.data.keyword.ssofull}} 서비스를 구성할 수 있습니다. {{site.data.keyword.ssoshort}}는 SAML 2.0, IBM Cloud Directory, 소셜 제공업체(Facebook, LinkedIn, Google+) 및 Github를 지원합니다.
+{{site.data.keyword.iot_full}}에 대한 대체 사용자 인증 제공자를 지원하도록 {{site.data.keyword.ssofull}} 서비스를 구성할 수 있습니다.
 {: .shortdesc}
+
+{{site.data.keyword.ssoshort}}는 SAML 2.0, IBM Cloud Directory, 소셜 제공업체(Facebook, LinkedIn, Google+) 및 Github를 지원합니다.
+{{site.data.keyword.Bluemix_notm}} SSO 서비스에 대한 자세한 정보는 [싱글 사인온 시작하기 ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/services/SingleSignOn/index.html){:new_window}를 참조하십시오. 
 
 ## {{site.data.keyword.ssoshort}} 설정
 

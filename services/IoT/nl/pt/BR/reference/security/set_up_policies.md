@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-22"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -15,15 +15,15 @@ lastupdated: "2017-02-22"
 # Configurando as Políticas de Segurança
 {: #set_up_policies.md}
 
-Um analista de segurança pode configurar políticas de segurança de conexão e listas de bloqueio ou listas de desbloqueio.
+Quando um advanced security plan (ASP) é usado para uma organização, um analista de segurança pode configurar políticas de segurança de conexão e listas de bloqueio ou listas de desbloqueio. Quando um plano padrão é usado, o analista pode configurar políticas de conexão com menos opções e não pode configurar listas de bloqueio ou desbloqueio.
 
-## Configurando políticas de conexão
+## Configurando políticas de conexão para segurança avançada
 {: #config_connect}
 
 É possível configurar o nível de segurança padrão que é aplicado a todos os dispositivos. É possível, então, incluir configurações de segurança customizadas para dispositivos específicos.
 
-1. Na página **Polícias** do complemento Gerenciamento de Risco e Segurança, clique em **Configurar** ao lado de **Segurança de Conexão**.
-2. Na página **Segurança de Conexão**, selecione o nível de segurança de conexão padrão na lista suspensa. O valor que você seleciona aqui é aplicado a todos os dispositivos, exceto aos dispositivos que tenham configurações de conexão customizadas. Essas políticas afetam como os dispositivos se conectam ao servidor -- eles não mudam nenhuma configuração no dispositivo real nem enviam nenhuma mensagem para o dispositivo. É possível selecionar um dos níveis de segurança a seguir como o padrão:
+1. Na página **Polícias** de segurança, clique em **Configurar** ao lado de **Segurança de conexão**.
+2. Em **Segurança de conexão padrão**, selecione o nível de segurança de conexão padrão na lista suspensa. O valor que você seleciona aqui é aplicado a todos os dispositivos, exceto aos dispositivos que tenham configurações de conexão customizadas. Essas políticas afetam como os dispositivos se conectam ao servidor -- eles não mudam nenhuma configuração no dispositivo real nem enviam nenhuma mensagem para o dispositivo. É possível selecionar um dos níveis de segurança a seguir como o padrão:
     - TLS opcional
     - TLS com Autenticação do Token
     - TLS com Autenticação por Certificado de Cliente
@@ -33,15 +33,30 @@ Um analista de segurança pode configurar políticas de segurança de conexão e
 3. Clique em **Atualizar conformidade**. Com base no nível de segurança selecionado, a tabela atualizada mostra o número de dispositivos que são impactados e o nível previsto de conformidade no nível de segurança configurado.
 4. Clique em **Salvar**.  
 
+**Nota:**
+também é possível acessar as configurações de segurança de conexão da página **Geral** em **Configurações**. Clique em **Abrir política de segurança de conexão**.
+
+## Configurando políticas de conexão para segurança padrão
+{: #config_connect_standard}
+
+Para organizações que usam a segurança padrão, você muda as configurações de segurança na página **Geral** em **Configurações**. É possível configurar o nível de segurança padrão que é aplicado a todos os dispositivos.
+
+1. Em **Configurações**, selecione **Geral**.
+2. Em **Segurança de conexão**, selecione o nível de segurança de conexão padrão na lista suspensa. O valor selecionado aqui é aplicado a todos os dispositivos. Essas políticas afetam como os dispositivos se conectam ao servidor -- eles não mudam nenhuma configuração no dispositivo real nem enviam nenhuma mensagem para o dispositivo. É possível selecionar um dos níveis de segurança a seguir como o padrão:
+    - TLS opcional
+    - TLS com Autenticação do Token
+    - TLS com Autenticação do Token e Autenticação por Certificado de Cliente
+4. Clique em **Salvar**.  
+
 ## Configurando listas de bloqueio e listas de desbloqueio
 {: #config_black_white}
 
-Restrinja o acesso ao servidor de determinados dispositivos usando uma lista de bloqueio ou use uma lista de desbloqueio para conceder acesso ao servidor a dispositivos específicos. Você pode usar uma lista de bloqueio ou uma lista de desbloqueio -- elas não podem ser usadas juntas.
+As organizações que usavam a segurança avançada podem restringir o acesso ao servidor de determinados dispositivos usando uma lista de bloqueio ou podem usar uma lista de desbloqueio para conceder acesso ao servidor a dispositivos específicos. Você pode usar uma lista de bloqueio ou uma lista de desbloqueio -- elas não podem ser usadas juntas.
 
 ### Configurar uma lista de bloqueio
 {: #config_blacklist}
 
-1. Na página **Políticas** de Gerenciamento de Risco e Segurança, na seção **Lista de Bloqueio**, clique em **Configurar**.
+1. Na página **Políticas** de segurança, na seção **Lista de bloqueio**, clique em **Configurar**.
 2. Na página **Lista de Bloqueio**, clique em **Incluir na Lista de Bloqueio**.
 3. Na janela **Incluir na Lista de Bloqueio**, execute uma das ações a seguir:
     - Na guia **Endereço IP/Intervalo**, insira os dispositivos de endereços IP que você deseja bloquear ou os intervalos de endereços IP para vários dispositivos consecutivos.
@@ -55,7 +70,7 @@ Restrinja o acesso ao servidor de determinados dispositivos usando uma lista de 
 ### Configure uma lista de desbloqueio
 {: #config_whitelist}
 
-1. Na página **Políticas** de Gerenciamento de Risco e Segurança, clique em **Configurar** ao lado de **Lista de Desbloqueio**.
+1. Na página **Políticas** de segurança, clique em **Configurar** ao lado de **Lista de desbloqueio**.
 2. Na página **Lista de Desbloqueio**, clique em **Incluir na Lista de Desbloqueio**.
 3. Na janela **Incluir na Lista de Desbloqueio**, execute uma das ações a seguir:
     - Na guia **Endereço IP/Intervalo**, insira os dispositivos de endereços IP aos quais você deseja permitir o acesso ou os intervalos de endereços IP para vários dispositivos consecutivos.

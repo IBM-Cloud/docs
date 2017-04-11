@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-12-06"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -388,7 +388,7 @@ public abstract void updateFirmware(DeviceFirmware deviceFirmware);
 
 **Nota**: deve haver a inclusão de apenas um manipulador na biblioteca para o gateway e os dispositivos conectados nos quais as solicitações de download ou de atualização de firmware são redirecionadas. A implementação deve criar um encadeamento ou um conjunto de encadeamentos para manipular múltiplas solicitações de firmware ao mesmo tempo.
 
-É possível localizar uma implementação de amostra de um manipulador de conjunto de encadeamentos no [Repositório de GitHub de amostras do gateway](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java).
+É possível localizar uma implementação de amostra de um manipulador de conjunto de encadeamentos no [Repositório do GitHub de amostras do gateway ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window}.
 
 ### Uma implementação de amostra de `downloadFirmware`
 
@@ -402,7 +402,7 @@ Se ocorrer um erro durante um download de firmware, o estado deverá ser configu
 
 Uma implementação de download de firmware de amostra é mostrada na amostra de código a seguir:
 
-**Importante:** a amostra de código fornecida não inclui a seção de conjunto de encadeamentos. Para a implementação completa do manipulador de firmware, uma amostra está disponível no [Repositório do GitHub de amostras de gateway de IBM Java](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java).
+**Importante:** a amostra de código fornecida não inclui a seção de conjunto de encadeamentos. Para obter a implementação completa do manipulador de firmware, há uma amostra disponível no [Repositório do GitHub de amostras de gateway do IBM Java ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window}.
 
 ```java
 public void downloadFirmware(DeviceFirmware deviceFirmware) {
@@ -537,7 +537,7 @@ public void updateFirmware(DeviceFirmware deviceFirmware) {
 }
 ```
 
-O código completo pode ser localizado na amostra `GatewayFirmwareHandlerSample` que está no [Repositório do GitHub de amostras de gateway](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java).
+O código completo pode ser localizado na amostra `GatewayFirmwareHandlerSample` que está no [Repositório do GitHub de amostras do gateway ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window}.
 
 ### Etapa 4: incluindo o manipulador em `ManagedGateway`
 
@@ -548,7 +548,7 @@ GatewayFirmwareHandlerSample fwHandler = new GatewayFirmwareHandlerSample();
 mgdGateway.addFirmwareHandler(fwHandler);
 ```
 
-Para obter mais informações sobre ações de firmware, veja [Solicitações de gerenciamento de dispositivo](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/requests.html#/firmware-actions#firmware-actions).
+Para obter mais informações sobre ações de firmware, veja [Solicitações de gerenciamento de dispositivo ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/requests.html#/firmware-actions#firmware-actions){: new_window}.
 
 ## Ações do Dispositivo
 {: #dev_actions}
@@ -593,7 +593,7 @@ public abstract void handleReboot(DeviceAction action);
 public abstract void handleFactoryReset(DeviceAction action);
 ```
 
-**Nota:** deve haver a inclusão de apenas um manipulador na biblioteca para o gateway e os dispositivos conectados nos quais as solicitações de ação de dispositivo são redirecionadas. A implementação deve criar um encadeamento ou um conjunto de encadeamentos para manipular múltiplas solicitações de ação de dispositivo ao mesmo tempo. Uma implementação de manipulador de amostra que usa um conjunto de encadeamentos é demonstrada no [Repositório do GitHub iot-gateway-samples](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java).
+**Nota:** deve haver a inclusão de apenas um manipulador na biblioteca para o gateway e os dispositivos conectados nos quais as solicitações de ação de dispositivo são redirecionadas. A implementação deve criar um encadeamento ou um conjunto de encadeamentos para manipular múltiplas solicitações de ação de dispositivo ao mesmo tempo. Uma implementação de manipulador de amostra que usa um conjunto de encadeamentos é demonstrada no [Repositório do GitHub iot-gateway-samples ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java){: new_window}.
 
 ### Uma implementação de amostra de `handleReboot`
 
@@ -620,7 +620,7 @@ public void handleReboot(DeviceAction action) {
 }
 ```
 
-A implementação de manipulador de amostra completa que usa um conjunto de encadeamentos é demonstrada no [Repositório do GitHub iot-gateway-samples](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java).
+A implementação de manipulador de amostra completa que usa um conjunto de encadeamentos é demonstrada no [Repositório do GitHub iot-gateway-samples ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java){: new_window}.
 
 
 ### Uma implementação de amostra de `handleFactoryReset`
@@ -649,7 +649,7 @@ GatewayActionHandlerSample actionHandler = new GatewayActionHandlerSample();
 mgdGateway.addDeviceActionHandler(actionHandler);
 ```
 
-Para obter mais informações sobre ações de dispositivo, veja [Solicitações de gerenciamento de dispositivo](../../devices/device_mgmt/requests.html#/device-actions-reboot#device-actions-reboot).
+Para obter mais informações sobre ações de dispositivo, veja [Solicitações de gerenciamento de dispositivo ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](../../devices/device_mgmt/requests.html#/device-actions-reboot#device-actions-reboot){: new_window}.
 
 ## Recebendo mudanças de atributos de dispositivo
 {: #listen_device_attributes}
@@ -699,16 +699,16 @@ public void propertyChange(PropertyChangeEvent evt) {
 }
 ```
 
-Para obter mais informações sobre como atualizar os atributos de dispositivo, veja [Solicitações de gerenciamento de dispositivo](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/index.html#/update-device-attributes#update-device-attributes).
+Para obter mais informações sobre como atualizar os atributos de dispositivo, veja [Solicitações de gerenciamento de dispositivo ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/index.html#/update-device-attributes#update-device-attributes){: new_window}.
 
 ## Amostras
 {: #samples}
 
-Há várias amostras disponíveis para ajudá-lo a conectar gateways e dispositivos que estão protegidos por gateways à instância do {{site.data.keyword.iot_short_notm}}. As amostras usam a biblioteca do cliente Java do {{site.data.keyword.iot_short_notm}} e estão localizadas no [Repositório GitHub de amostras do gateway](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples).
+Há várias amostras disponíveis para ajudá-lo a conectar gateways e dispositivos que estão protegidos por gateways à instância do {{site.data.keyword.iot_short_notm}}. As amostras usam a biblioteca do cliente Java do {{site.data.keyword.iot_short_notm}} e estão localizadas no [Repositório do GitHub de amostras do gateway ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples){: new_window}.
 
 ## Receitas
 {: #recipes}
 
-Para obter uma orientação que mostre como conectar um dispositivo Rasberry Pi como um gateway gerenciado ao {{site.data.keyword.iot_short_notm}} e gerenciar os dispositivos conectados, veja [Raspberry Pi como um gateway gerenciado no {{site.data.keyword.iot_short_notm}}](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/).
+Para obter uma orientação que mostre como conectar um dispositivo Raspberry Pi como um gateway gerenciado ao {{site.data.keyword.iot_short_notm}} e gerenciar os dispositivos conectados, veja [Raspberry Pi como um gateway gerenciado no {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/){: new_window}.
 
 A orientação explica como é possível usar o protocolo Device Management do {{site.data.keyword.iot_short_notm}} para gerenciar um dispositivo Arduino Uno por meio de um dispositivo Raspberry Pi que age como um gateway e executa operações de gerenciamento de dispositivo, como a reinicialização do dispositivo ou a inclusão de um programa de rascunho.

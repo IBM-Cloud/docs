@@ -52,8 +52,6 @@ navtitle="Bluemix 與 Watson IoT Platform" scope="peer">
 navtitle="Bluemix 中的 Watson IoT Platform" scope="peer"/>
 <topicref format="html" href="reference/bluemix_and_platform.html#iot-sla"
 navtitle="服務水準合約" scope="peer"/>
-<topicref format="html" href="reference/bluemix_and_platform.html#iot-pricing"
-navtitle="IoT 定價" scope="peer"/>
 </topicref>
 <topicref format="html" href="reference/bluemix_and_platform.html#iot-pricing"
 navtitle="IoT 定價" scope="peer"/>
@@ -76,8 +74,54 @@ href="information_management/im_index.html#workflow"></topicref>
 href="information_management/im_index.html#scenario"></topicref>
 
 </topicref>
+<topicref format="html" navtitle="使用介面來查看裝置及物件的狀態"
+outputclass="subsection" href="information_management/im_index_split.html" audience="blue">
+<topicref format="html" outputclass="subsection"
+href="information_management/im_index_split.html#overview" navtitle="概觀"
+></topicref>
+<topicref format="html" outputclass="subsection" navtitle="資料流程"
+href="information_management/im_index_split.html#mapping"></topicref>
+<topicref format="html" outputclass="subsection" navtitle="主要概念"
+href="information_management/im_index_split.html#key_concepts"></topicref>
+
+<topicref format="html" outputclass="subsection" navtitle="高階工作流程"
+href="information_management/im_index.html#workflow"></topicref>
+<topicref format="html" outputclass="subsection"
+navtitle="情境 1：使用裝置類型介面"
+href="information_management/im_index_scenario.html"></topicref>
+<topicref format="html" outputclass="subsection"
+navtitle="情境 2：使用物件類型介面"
+href="information_management/im_index_scenario_thing.html"></topicref>
+<topicref format="html" outputclass="subsection" navtitle="資源"
+href="information_management/im_index_split.html#resources"></topicref>
+</topicref>
 <topicref format="html" href="gateways/gateway-access-control.html"
-navtitle="閘道存取控制" scope="peer"/>
+navtitle="閘道存取控制" scope="peer">
+<topicref format="html" href="gateways/gateway-access-control.html#gw_roles"
+navtitle="指派角色" locktitle="yes"/>
+<topicref format="html" href="gateways/gateway-access-control.html#devices_groups"
+navtitle="裝置及資源群組" locktitle="yes"/>
+<topicref format="html" href="gateways/gateway-access-control.html#finding_groups"
+navtitle="尋找資源群組" locktitle="yes"/>
+<topicref format="html" href="gateways/gateway-access-control.html#querying_groups"
+navtitle="查詢資源群組" locktitle="yes"/>
+<topicref format="html" href="gateways/gateway-access-control.html#crt_del_groups"
+navtitle="建立及刪除資源群組" locktitle="yes"/>
+<topicref format="html" href="gateways/gateway-access-control.html#update_groups"
+navtitle="更新群組內容" locktitle="yes"/>
+<topicref format="html" href="gateways/gateway-access-control.html#device_group_props"
+navtitle="擷取及更新裝置內容" locktitle="yes"/>
+</topicref>
+<topicref format="html" outputclass="subsection" navtitle="閘道裝置的 HTTP 傳訊 API"
+href="gateways/gw_intro_api.html">
+
+<topicref format="html" href="gateways/gw_intro_api.html#rest_messaging_api"
+navtitle="存取 HTTP 傳訊 API" locktitle="yes"/>
+<topicref format="html" href="gateways/gw_intro_api.html#client_connections"
+navtitle="用戶端連線" locktitle="yes"/>
+<topicref href="gateways/gw_intro_api.html#event_publication" format="html"
+navtitle="發佈事件"/>
+</topicref>
 <topicref format="html" href="applications/mqtt.html#shared_sub_mixed"
 navtitle="混合延續性共用訂閱" locktitle="yes"/>
 </topicref>
@@ -214,8 +258,11 @@ href="information_management/im_index_split.html#workflow"></topicref>
 href="information_management/im_index_scenario.html#scenario"></topicref>
 </topicref>
 <topicref format="html" href="add_users.html" navtitle="管理使用者存取權" scope="peer">
-<topicref format="html" scope="peer" href="add_users.html#editing-users"
-navtitle="編輯、封鎖及移除使用者"/>
+<topicref format="html" scope="peer" href="add_users.html#adding-new-users" navtitle="新增使用者"/>
+<topicref format="html" scope="peer" href="add_users.html#editing-users" navtitle="編輯使用者"/>
+<topicref format="html" scope="peer" href="add_users.html#blocking-users" navtitle="封鎖使用者"/>
+<topicref format="html" scope="peer" href="add_users.html#removing-users" navtitle="移除使用者"
+/>
 </topicref>
 <topicref format="html" href="singlesignon.html" navtitle="使用 IBM Single Sign On" scope="peer"/>
 <topicref format="html" href="roles_index.html" navtitle="使用者、應用程式及閘道角色"
@@ -243,62 +290,55 @@ navtitle="歷程資料儲存" scope="peer"/>
 navtitle="裝置管理" scope="peer"/>
 <topicref format="html" href="reference/extensions/index.html#blockchain" navtitle="區塊鏈"
 scope="peer"/>
-<topicref format="html" href="reference/extensions/index.html#weathercompany"
-navtitle="The Weather Company" scope="peer"/>
+<topicref format="html" href="reference/extensions/index.html#email" navtitle="電子郵件" scope="peer"/>
 </topicref>
+<topicref format="html" href="information_management/twc_integration.html"
+navtitle="整合 The Weather Company 資料"></topicref>
 <topicref format="html" href="bl_blockchain_integration.html"
-navtitle="Blockchain 整合" scope="peer">
-<topicref format="html" href="bl_blockchain_integration.html#byb"
-navtitle="開始之前" scope="peer"></topicref>
-<topicref format="html"
-href="bl_blockchain_integration.html#getting_started"
-navtitle=" 連接至區塊鏈網狀架構" scope="peer"></topicref>
-<topicref format="html"
-href="bl_blockchain_integration.html#map_device_properties"
-navtitle=" 對映裝置內容" scope="peer"></topicref>
+navtitle="整合區塊鏈網狀架構" scope="peer">
+<topicref format="html" href="bl_blockchain_integration.html#byb" navtitle="開始之前"
+scope="peer"/>
+<topicref format="html" href="bl_blockchain_integration.html#getting_started"
+navtitle=" 連接至區塊鏈網狀架構" scope="peer"/>
+<topicref format="html" href="bl_blockchain_integration.html#map_device_properties"
+navtitle=" 對映裝置內容" scope="peer"/>
 <topicref format="html" href="bl_blockchain_integration.html#test_simple"
-navtitle="試用範例智慧型合約" scope="peer"></topicref>
-<topicref format="html" href="bl_blockchain_integration.html#next_steps"
-navtitle="後續步驟" scope="peer"></topicref>
+navtitle="試用範例智慧型合約" scope="peer"/>
+<topicref format="html" href="bl_blockchain_integration.html#next_steps" navtitle="後續步驟"
+scope="peer"/>
 </topicref>
+<topicref format="html" href="service_status.html" navtitle="服務狀態" locktitle="yes"/>
 </topicref>
-<topicref format="html" href="analytics.html"
-navtitle="分析 IoT 資料" outputclass="subsection" scope="peer">
-<topicref format="html" href="data_visualization.html"
-navtitle="視覺化即時資料" scope="peer">
-<topicref format="html" href="data_visualization.html#default_boards"
-navtitle="預設板" scope="peer"></topicref>
+<topicref format="html" href="analytics.html" navtitle="分析即時 IoT 資料"
+outputclass="subsection" scope="peer">
+<topicref format="html" href="data_visualization.html" navtitle="視覺化即時資料"
+scope="peer">
+<topicref format="html" href="data_visualization.html#default_boards" navtitle="預設板"
+scope="peer"/>
 <topicref format="html" href="data_visualization.html#visualizing_data"
-navtitle="建立板及卡片" scope="peer"></topicref>
+navtitle="建立板及卡片" scope="peer"/>
 <topicref format="html" href="/custom_cards/custom-cards.html" navtitle="使用自訂卡片"
 scope="peer"/>
 </topicref>
-<topicref format="html" href="cloud_analytics.html"
-navtitle="雲端分析" scope="peer">
-<topicref format="html" href="cloud_analytics.html#byb"
-navtitle="開始之前" scope="peer"></topicref>
+<topicref format="html" href="cloud_analytics.html" navtitle="雲端分析" scope="peer">
+<topicref format="html" href="cloud_analytics.html#byb" navtitle="開始之前" scope="peer"/>
 <topicref format="html" href="cloud_analytics.html#managing_rules"
-navtitle="管理規則及動作" scope="peer"></topicref>
-<topicref format="html" href="cloud_analytics.html#rules"
-navtitle="建立規則" scope="peer"></topicref>
+navtitle="管理規則及動作" scope="peer"/>
+<topicref format="html" href="cloud_analytics.html#rules" navtitle="建立規則" scope="peer"/>
 <topicref format="html" href="cloud_analytics.html#conditional"
-navtitle="條件式規則觸發" scope="peer"></topicref>
-<topicref format="html" href="cloud_analytics.html#shared"
-navtitle="建立及使用動作" scope="peer"></topicref>
+navtitle="條件式規則觸發" scope="peer"/>
+<topicref format="html" href="cloud_analytics.html#shared" navtitle="建立及使用動作"
+scope="peer"/>
 </topicref>
-<topicref format="html" href="edge_analytics.html"
-navtitle="邊際分析" scope="peer">
-<topicref format="html" href="edge_analytics.html#byb"
-navtitle="開始之前" scope="peer"></topicref>
+<topicref format="html" href="edge_analytics.html" navtitle="邊際分析" scope="peer">
+<topicref format="html" href="edge_analytics.html#byb" navtitle="開始之前" scope="peer"/>
 <topicref format="html" href="edge_analytics.html#managing_rules"
-navtitle="管理邊緣規則及動作" scope="peer"></topicref>
-<topicref format="html" href="edge_analytics.html#rules"
-navtitle="建立邊緣規則" scope="peer"></topicref>
-<topicref format="html" href="edge_analytics.html#edge_actions"
-navtitle="建立邊緣動作" scope="peer"></topicref>
-<topicref format="html"
-href="edge_analytics.html#integrate_with_cloud_analytics"
-navtitle="與雲端分析整合" scope="peer"></topicref>
+navtitle="管理邊緣規則及動作" scope="peer"/>
+<topicref format="html" href="edge_analytics.html#rules" navtitle="建立邊緣規則" scope="peer"/>
+<topicref format="html" href="edge_analytics.html#edge_actions" navtitle="建立邊緣動作"
+scope="peer"/>
+<topicref format="html" href="edge_analytics.html#integrate_with_cloud_analytics"
+navtitle="與雲端分析整合" scope="peer"/>
 <topicref format="html" href="edge_analytics.html#eaa_community" navtitle="邊緣分析社群"
 scope="peer" audience="blue"/>
 </topicref>
@@ -365,6 +405,10 @@ scope="peer"/>
 <topicref format="html" href="applications/api.html#rest_messaging_api"
 navtitle="HTTP REST 傳訊 API" locktitle="yes"/>
 </topicref>
+<topicref format="html" href="applications/api_app_REST.html"
+navtitle="應用程式的 HTTP REST API" scope="peer" audience="blue"/>
+<topicref format="html" href="applications/api_app_Messaging.html"
+navtitle="應用程式的 HTTP 傳訊" scope="peer" audience="blue"/>
 <topicref format="html" href="reference/mqtt/index.html" navtitle="MQTT 傳訊" scope="peer">
 <topicref format="html" href="reference/mqtt/index.html#version-support" navtitle="版本支援"
 scope="peer"/>
@@ -531,6 +575,10 @@ navtitle="HTTP REST 傳訊 API" scope="peer"/>
 scope="peer"/>
 <topicref href="devices/api.html#last-event-cache" format="html" navtitle="前次事件快取"/>
 </topicref>
+<topicref format="html" href="devices/api_dev_REST.html" navtitle="裝置的 HTTP REST API"
+scope="peer" audience="blue"/>
+<topicref format="html" href="devices/api_dev_Messaging.html" navtitle="裝置的 HTTP 傳訊"
+scope="peer" audience="blue"/>
 <topicref format="html" href="reference/mqtt/index.html" navtitle="MQTT 傳訊" scope="peer">
 <topicref format="html" href="reference/mqtt/index.html#version-support" navtitle="版本支援"
 scope="peer"/>
@@ -744,15 +792,13 @@ scope="peer"/>
 navtitle="開發閘道">
 <topicref format="html" href="gateways/gw_api.html" navtitle="閘道裝置的 HTTP REST API"
 scope="peer" audience="blue">
-<topicref format="html" href="gateways/gw_api.html" navtitle="存取 HTTP REST API"
+<topicref format="html" href="gateways/gw_api.html#client_connections" navtitle="用戶端連線"
 locktitle="yes" audience="blue"/>
-<topicref format="html" href="gateways/gw_api.html#rest_messaging_api"
-navtitle="HTTP REST 傳訊 API" scope="peer" audience="blue"/>
-<topicref format="html" href="gateways/gw_api.html#event_publication" navtitle="發佈事件"
-scope="peer" audience="blue"/>
 <topicref href="gateways/gw_api.html#last-event-cache" format="html" navtitle="前次事件快取"
 audience="blue"/>
 </topicref>
+<topicref format="html" href="gateways/gw_intro_api.html"
+navtitle="閘道裝置的 HTTP 傳訊（測試版）" scope="peer" audience="blue"/>
 <topicref format="html" href="reference/mqtt/index.html" navtitle="MQTT 傳訊" scope="peer">
 <topicref format="html" href="reference/mqtt/index.html#version-support" navtitle="版本支援"
 scope="peer"/>
@@ -843,7 +889,13 @@ navtitle="後續步驟" scope="peer"></topicref>
 </topicref>
 <topicref format="html" href="reference/mqtt/index.html"
 navtitle="參考資料" outputclass="subsection" scope="peer">
-<topicref format="html" href="reference/rest_api.html" navtitle="API" scope="peer"/>
+<topicref format="html" href="reference/api.html" navtitle="API" scope="peer">
+<topicref format="html" href="reference/api.html#api_about" navtitle="關於 HTTP API" scope="peer"/>
+<topicref format="html" href="reference/api.html#api_http" navtitle="HTTP API" scope="peer"/>
+<topicref format="html" href="reference/api.html#api_extension" navtitle="延伸規格 HTTP API"
+scope="peer"/>
+<topicref format="html" href="reference/api.html#api_beta" navtitle="測試版 HTTP API" scope="peer"/>
+</topicref>
 <topicref format="html" href="reference/mqtt/index.html" navtitle="MQTT 傳訊" scope="peer">
 <topicref format="html" href="reference/mqtt/index.html#version-support" navtitle="版本支援"
 scope="peer"/>
@@ -881,42 +933,23 @@ navtitle="存取組織時發生問題" scope="peer"/>
 navtitle="連接至平台時發生問題" scope="peer"/>
 <topicref format="html" href="ts_index.html#disconnection_problem"
 navtitle="間歇性中斷連接" scope="peer"></topicref>
+<topicref format="html" href="service_status.html" navtitle="服務狀態" locktitle="yes"/>
 <topicref format="html" href="ts_index.html#gettinghelp"
 navtitle="取得協助與支援" scope="peer"></topicref>
 </topicref>
 <topicref audience="blue" format="html" href="glossary.html" navtitle="名詞解釋"
 outputclass="subsection" scope="peer"/>
+<topicref audience="blue" navtitle="developerWorks 資源" href="experimental/experimental.html">
+<topicref audience="blue" navtitle="錦囊妙計" href="experimental/cookbook.html"/>
 </topicref>
-<topicref audience="blue" navtitle="測試下列區段"/>
-<topicref format="html" href="index.html" locktitle="yes" navtitle="開始使用" scope="peer"
-audience="blue">
-<topicref format="html" href="index.html#byb" navtitle="開始之前" scope="peer"/>
-<topicref format="html" href="index.html#up_and_running" navtitle="連接您的裝置"
-scope="peer"/>
-<topicref format="html" href="index.html#analyzing_data" navtitle="分析裝置資料" scope="peer"/>
-<topicref format="html" href="index.html#develop_applications" navtitle="開發應用程式"
-scope="peer"/>
+<topicref navtitle="相關鏈結" href="iot_platform_rel_links.html" audience="blue">
+<topicref navtitle="一般資源" href="iot_platform_rel_links.html#general"/>
+<topicref navtitle="指導教學及範例" href="iot_platform_rel_links.html#samples"/>
+<topicref navtitle="API 參考資料" href="iot_platform_rel_links.html#api"/>
+<topicref navtitle="用戶端檔案庫"
+href="iot_platform_rel_links.html#client_libraries"/>
+<topicref navtitle="Bluemix 資訊" href="iot_platform_rel_links.html#bluemixinfo"/>
+<topicref navtitle="安全" href="iot_platform_rel_links.html#security"/>
 </topicref>
-<topicref format="html" href="iotplatform_overview.html#about_iotplatform" navtitle="關於"
-outputclass="subsection" scope="peer" audience="blue">
-<topicref format="html" href="iotplatform_overview.html#watsoniotplatform_architecture"
-navtitle="架構" outputclass="subsection" scope="peer"/>
-<topicref format="html" href="iotplatform_overview.html#watsoniotplatform_importantconcepts"
-navtitle="概念" scope="peer"/>
-<topicref format="html" href="feature_overview.html" navtitle="功能概觀" scope="peer">
-<topicref format="html" href="feature_overview.html#connect" navtitle="連接" scope="peer"/>
-<topicref format="html" href="feature_overview.html#information_management"
-navtitle="資訊管理" scope="peer"/>
-<topicref format="html" href="feature_overview.html#analytics" navtitle="分析" scope="peer"/>
-<topicref format="html" href="feature_overview.html#risk_management" navtitle="風險管理"
-scope="peer"/>
-</topicref>
-<topicref audience="blue" format="html" href="reference/standards_and_requirements.html"
-navtitle="支援的標準及需求" scope="peer">
-<topicref format="html" href="reference/standards_and_requirements.html#mqtt" navtitle="MQTT"
-scope="peer"/>
-</topicref>
-<topicref format="html" href="reference/bluemix_and_platform.html"
-navtitle="Bluemix 與 Watson IoT Platform" scope="peer"/>
 </topicref>
 </map>

@@ -2,11 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-2-6"
+lastupdated: "2017-03-14"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -46,21 +46,21 @@ Go 言語のチェーン・コードの実行可能ファイル形式で、ス�
 {: #byb}
 
 {{site.data.keyword.blockchainfull_notm}} の概要と、それとブロック・チェーンの一般概念との関連性、それを使用する利点について確認します。
-- [{{site.data.keyword.blockchainfull_notm}}](http://www.ibm.com/blockchain/) (IBM.com)。
+- IBM.com の [{{site.data.keyword.blockchainfull_notm}} ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.ibm.com/blockchain/){: new_window}。
 - [{{site.data.keyword.blockchainfull_notm}} 資料](https://console.ng.bluemix.net/docs/services/blockchain/index.html) - {{site.data.keyword.blockchainfull_notm}} サービスの概説。
-- [{{site.data.keyword.blockchainfull_notm}} API](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/) -  {{site.data.keyword.blockchainfull_notm}} API の概要。
-- [{{site.data.keyword.blockchainfull_notm}} for Developers](http://www.ibm.com/blockchain/for_developers.html) - ブロック・チェーンを開発環境に組み込む方法の概要 (ライブ・デモによる段階的な説明と、{{site.data.keyword.Bluemix_notm}} にデプロイして実行できるコードが含まれています)。
+- [{{site.data.keyword.blockchainfull_notm}} HFC SDK for Node.js と API 資料 ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/hyperledger/fabric/tree/v0.6/docs/API){: new_window} - {{site.data.keyword.blockchainfull_notm}} API の概要。
+- [{{site.data.keyword.blockchainfull_notm}} for Developers ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.ibm.com/blockchain/for_developers.html){: new_window} - ブロックチェーンを開発環境に組み込む方法の概要 (ライブ・デモによる段階的な説明と、{{site.data.keyword.Bluemix_notm}} にデプロイして実行できるコードが含まれています)。
 
 ## サンプルのスマート・コントラクト
 
 {: #samples}
 
-[https://github.com/ibm-watson-iot/blockchain-samples](https://github.com/ibm-watson-iot/blockchain-samples) から多数のサンプル・コントラクトをダウンロードできます。これらのサンプル・コントラクトを土台として使用し、デプロイ可能なチェーン・コードに独自のユースケースを組み込んで開発することができます。
+[https://github.com/ibm-watson-iot/blockchain-samples ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/blockchain-samples){: new_window} からいくつかのサンプル・コントラクトをダウンロードできます。これらのサンプル・コントラクトを土台として使用し、デプロイ可能なチェーン・コードに独自のユースケースを組み込んで開発することができます。
 
 |サンプル・コントラクト |説明 |
 |:---|:---|
-|[基本: シンプル・コントラクト](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/basic/simple_contract) | ブロック・チェーンのデバイス・アセット・データを追跡して格納するための簡略版の拡張コントラクト
-|[拡張: IoT 汎用サンプル・コントラクト](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/advanced/iot_sample_contract) | データ・モデルと動作に数多くの機能や**トレード・レーン**の特色を追加した拡張サンプル・コントラクト|
+|[基本: シンプル・コントラクト ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/basic/simple_contract){: new_window} | ブロック・チェーンのデバイス・アセット・データを追跡して格納するための簡略版の拡張コントラクト
+|[拡張: IoT 汎用サンプル・コントラクト ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/advanced/iot_sample_contract){: new_window} | データ・モデルと動作に数多くの機能や**トレード・レーン**の特色を追加した拡張サンプル・コントラクト|
 
 
 ## {{site.data.keyword.blockchainfull_notm}} 環境の構成
@@ -192,14 +192,14 @@ Go 言語のチェーン・コードの実行可能ファイル形式で、ス�
 独自のチェーン・コードを開発してテストした後に {{site.data.keyword.blockchainfull_notm}} にデプロイするために、ローカルの開発環境をセットアップする必要があります。この環境には、コントラクトのチェーン・コードを作成するために使用する Go 言語が含まれています。
  1. 開発環境をセットアップします。
    
-開発環境には、Go 言語で構築するチェーン・コードを使用してスマート・コントラクトを作成するために必要なツールが含まれています。詳しくは、Hyperledger 資料の [Setting up the development environment](https://github.com/hyperledger/fabric/blob/master/docs/dev-setup/devenv.md) を参照してください。
+開発環境には、Go 言語で構築するチェーン・コードを使用してスマート・コントラクトを作成するために必要なツールが含まれています。詳しくは、Hyperledger 資料の [Setting up the development environment ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")]( https://github.com/hyperledger/fabric/blob/master/docs/source/dev-setup/devenv.rst){: new_window} を参照してください。
 
  2. チェーン・コード・デバッグ環境をインストールします。
     
-このデバッグ環境には、{{site.data.keyword.blockchainfull_notm}} にスマート・コントラクトをデプロイする前にテストとデバッグを行うために必要なツールが用意されています。詳しくは、Hyperledger 資料の [Writing, Building, and Running Chaincode in a Development Environment](https://github.com/hyperledger/fabric/blob/master/docs/Setup/Chaincode-setup.md) を参照してください。
+このデバッグ環境には、{{site.data.keyword.blockchainfull_notm}} にスマート・コントラクトをデプロイする前にテストとデバッグを行うために必要なツールが用意されています。詳しくは、Hyperledger 資料の [Writing, Building, and Running Chaincode in a Development Environment ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/hyperledger/fabric/blob/master/docs/source/Setup/Chaincode-setup.rst){: new_window} を参照してください。
  3. 開発用のネットワークをセットアップします。
     
-開発用のネットワークによって、スマート・コントラクトの最終テスト用に、より厳密で実動環境に近い環境を用意します。テストしてデバッグしたコントラクトを {{site.data.keyword.blockchainfull_notm}} にデプロイする前の最終テストで、この環境を使用します。詳しくは、Hyperledger 資料の [Setting Up a Network](https://github.com/hyperledger/fabric/blob/master/docs/Setup/Network-setup.md) を参照してください。
+開発用のネットワークによって、スマート・コントラクトの最終テスト用に、より厳密で実動環境に近い環境を用意します。テストしてデバッグしたコントラクトを {{site.data.keyword.blockchainfull_notm}} にデプロイする前の最終テストで、この環境を使用します。詳しくは、Hyperledger 資料の [Setting Up a Network ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/hyperledger/fabric/blob/master/docs/source/Setup/Network-setup.rst){: new_window} を参照してください。
 
 3. オプション: IBM 提供のサンプル・スマート・コントラクトをダウンロードします。
   
@@ -248,7 +248,7 @@ IBM は多数のスマート・コントラクトを提供しています。ダ�
   `http://github.com/{my organization}/{my project}/`
   2. コントラクトを、前に接続したピアに登録します。
     
-REST クライアント (CURL、Postman など) を使用して、登録呼び出しを送信します。登録呼び出しについて詳しくは、[POST registrar API 資料](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/#!/Registrar/registerUser)を参照してください。登録するときには、次の情報を使用してください。
+REST クライアント (CURL、Postman など) を使用して、登録呼び出しを送信します。登録呼び出しについて詳しくは、[POST registrar API 資料 ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/hyperledger/fabric/blob/v0.6/docs/API/CoreAPI.md#registrar){: new_window} を参照してください。登録するときには、次の情報を使用してください。
   <ul>
   <li>URL: `http://api_host:api_port_tls/registrar`
   <li>タイプ: POST
@@ -264,8 +264,7 @@ REST クライアント (CURL、Postman など) を使用して、登録呼び�
   </ul>
   3. コントラクトをピアにデプロイします。
     
-デプロイの呼び出しについて詳しくは、[POST devops/deploy API 資料](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/#!/Devops/chaincodeDeploy)を参照してください。
-    
+デプロイの呼び出しについて詳しくは、[POST/chaincode API 資料 ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/hyperledger/fabric/blob/v0.6/docs/API/CoreAPI.md#chaincode){: new_window} を参照してください。  
 デプロイするときには、次の情報を使用してください。  
   <ul>
   <li>URL: `http://api_host:api_port_tls/chaincode`
@@ -309,7 +308,7 @@ REST クライアント (CURL、Postman など) を使用して、登録呼び�
    9. 以下の情報を入力して、**「次へ」**をクリックします。
      - 契約 ID - コントラクトをデプロイしたときに保存した 128 文字のコントラクト ID を貼り付けます。
      - 契約名 - {{site.data.keyword.iot_short_notm}} でコントラクトを識別するための名前を入力します。
-     
+
      **ヒント:** デバイスのイベント・タイプを検索するには、**「デバイス」**ページに移動し、デバイス名をクリックしてデバイスの詳細ページを開きます。**「センサー情報」**セクションにスクロールダウンして、そのデバイスの使用可能なイベントとデータ・ポイントのリストを確認します。
 
    11. 使用可能なデバイス・プロパティーをコントラクト・パラメーターにマップします。
@@ -333,7 +332,7 @@ REST クライアント (CURL、Postman など) を使用して、登録呼び�
     <li>  Carrier - ストリング
        
     </ul>  
-    デバイス・データをコントラクトにマップする方法について詳しくは、GitHub の「IoT Blockchain samples wiki」の [Data mapping example](https://github.com/ibm-watson-iot/blockchain-samples/wiki/Data-mapping-example) を参照してください。
+デバイス・データをコントラクトにマップする方法について詳しくは、GitHub の「IoT Blockchain samples wiki」の [Data mapping example ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/blockchain-samples/wiki/Data-mapping-example){: new_window} を参照してください。
    12. 要約ページで、情報が正しいことを確認します。
    13. 「ブロック・チェーン」ページに、デバイス・データとコントラクトのマッピングが示されます。
 
@@ -343,7 +342,7 @@ REST クライアント (CURL、Postman など) を使用して、登録呼び�
 
 5. {{site.data.keyword.blockchainfull_notm}} に接続するように Monitoring UI を構成します。
    
- **ヒント:** Monitoring UI をローカル環境にインストールしていない場合には、このときにインストールすることができます。[Blockchain Monitoring UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui) GitHub ディレクトリーにある Monitoring UI の README ドキュメントの手順に従ってください。  
+ **ヒント:** Monitoring UI をローカル環境にインストールしていない場合には、このときにインストールすることができます。[Blockchain Monitoring UI ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window} GitHub ディレクトリーにある Monitoring UI の README ドキュメントの手順に従ってください。  
 **「CONFIGURATION」**ボタンをクリックして構成設定にアクセスします。
     
 次の情報を使用して、コントラクトに接続します。

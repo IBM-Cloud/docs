@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-17"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -95,11 +95,11 @@ lastupdated: "2017-02-17"
 
 以下诀窍描述了如何将 {{site.data.keyword.cloudant_short_notm}} 用作 {{site.data.keyword.iot_short}} 的历史存储：
 
-- [Configure {{site.data.keyword.cloudant_short_notm}} as Historian Data Storage for {{site.data.keyword.iot_short}} ![外部链接图标](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-parti/){: new_window} 诀窍描述了如何在 {{site.data.keyword.cloudant_short_notm}} 上存储设备数据，并演示了如何在作为历史数据存储的 {{site.data.keyword.cloudant_short_notm}} 上配置并存储设备数据。
+- [Configure{{site.data.keyword.cloudant_short_notm}} as Historian Data Storage for {{site.data.keyword.iot_short}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-parti/){: new_window} 诀窍描述了如何在 {{site.data.keyword.cloudant_short_notm}} 上存储设备数据，并演示了如何在作为历史数据存储的 {{site.data.keyword.cloudant_short_notm}} 上配置并存储设备数据。
 
-- [Query and Process {{site.data.keyword.iot_short}} Device Data from {{site.data.keyword.cloudant_short_notm}} ![外部链接图标](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-partii){: new_window} 诀窍显示了如何对 {{site.data.keyword.cloudant_short_notm}} 中存储的设备数据进行查询和执行数据处理操作。
+- [Query and Process {{site.data.keyword.iot_short}} Device Data from {{site.data.keyword.cloudant_short_notm}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-partii){: new_window} 诀窍显示了如何对 {{site.data.keyword.cloudant_short_notm}} 中存储的设备数据进行查询和执行数据处理操作。
 
-- [Visualize Watson IoT Device Data stored in Cloudant NoSQL DB ![外部链接图标](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=27327){: new_window} 诀窍显示了如何链接折线图卡和历史数据存储，以在 Watson IoT Platform 仪表板上显示设备数据。
+- [Visualize Watson IoT Device Data stored in Cloudant NoSQL DB ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=27327){: new_window} 诀窍显示了如何链接折线图卡和历史数据存储，以在 Watson IoT Platform 仪表板上显示设备数据。
 
 
 ## 创建新设计文档  
@@ -109,7 +109,7 @@ lastupdated: "2017-02-17"
 
 {{site.data.keyword.iot_short_notm}} 内包含的缺省设计文档除了实现 summarize 函数之外，还会实现当前历史库中可用的查询。
 
-可以向配置数据库添加其他设计文档，在创建新的存储区时间间隔数据库时，会将这些文档复制到新数据库。要将设计文档添加到配置数据库，请参阅 [Cloudant API 文档 ![外部链接图标](../icons/launch-glyph.svg)](https://docs.cloudant.com/document.html){: new_window}。
+可以向配置数据库添加其他设计文档，在创建新的存储区时间间隔数据库时，会将这些文档复制到新数据库。要将设计文档添加到配置数据库，请参阅 [Cloudant API 文档 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://docs.cloudant.com/document.html){: new_window}。
 
 <!--  # Related links
 {: #rellinks}

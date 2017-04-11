@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-11-18"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -20,8 +20,8 @@ MQTT는 디바이스와 애플리케이션이 {{site.data.keyword.iot_full}}과 
 
 MQTT는 TCP/IP를 통해 실행되며 TCP/IP에 직접 코딩할 수 있지만, MQTT 프로토콜의 세부사항을 처리하는 라이브러리를 사용하도록 선택할 수도 있습니다. 사용할 수 있는 MQTT 클라이언트 라이브러리는 다양합니다. IBM은 다음 사이트에서 사용 가능한 라이브러리를 포함하여 여러 클라이언트 라이브러리의 개발 및 지원에 기여합니다.
 
-- [MQTT 커뮤니티 위키](https://github.com/mqtt/mqtt.github.io/wiki)
-- [Eclipse Paho 프로젝트](http://eclipse.org/paho/)
+- [MQTT 커뮤니티 위키 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/mqtt/mqtt.github.io/wiki){: new_window}
+- [Eclipse Paho 프로젝트 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](http://eclipse.org/paho/){: new_window}
 
 ## 버전 지원
 {: #version-support}

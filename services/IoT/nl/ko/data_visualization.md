@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-17"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -198,4 +198,4 @@ lastupdated: "2017-02-17"
 
 축하합니다! 이제 디바이스의 실시간 데이터를 볼 수 있습니다! 
 
-실시간 디바이스 데이터를 표시하는 방법에 대한 단계별 지시사항은 [Configuring Boards & Cards in the new Watson IoT Dashboard ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/configuring-the-cards-in-the-new-watson-iot-dashboard/){: new_window} 레시피를 참조하십시오.
+실시간 디바이스 데이터를 표시하는 방법에 대한 단계별 지시사항은 [Configuring Boards & Cards in the new Watson IoT Dashboard ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/configuring-the-cards-in-the-new-watson-iot-dashboard/){: new_window} 레시피를 참조하십시오. 

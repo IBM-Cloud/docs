@@ -2,11 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-2-6"
+lastupdated: "2017-03-14"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -45,21 +45,21 @@ Golang 체인코드 실행 파일 양식으로 스마트 계약을 개발하고 
 {: #byb}
 
 {{site.data.keyword.blockchainfull_notm}}, 일반 블록체인 개념과의 연관성 및 해당 역할에 대한 대한 개요를 파악하십시오. 
-- [IBM.com의 {{site.data.keyword.blockchainfull_notm}}](http://www.ibm.com/blockchain/). 
+- IBM.com의 [{{site.data.keyword.blockchainfull_notm}} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.ibm.com/blockchain/){: new_window}.
 - [{{site.data.keyword.blockchainfull_notm}} DOCS](https://console.ng.bluemix.net/docs/services/blockchain/index.html) - {{site.data.keyword.blockchainfull_notm}} 서비스 시작하기. 
-- [{{site.data.keyword.blockchainfull_notm}} API](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/) - {{site.data.keyword.blockchainfull_notm}} API 개요.
-- [개발자용 {{site.data.keyword.blockchainfull_notm}}](http://www.ibm.com/blockchain/for_developers.html) - {{site.data.keyword.Bluemix_notm}}에서 실행을 위해 배치 가능한 라이브 데모와 코드의 자세한 안내를 포함하여 개발 환경에 블록체인을 적용하는 방법의 개요. 
+- [{{site.data.keyword.blockchainfull_notm}} HFC SDK for Node.js(API 문서 포함) ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/hyperledger/fabric/tree/v0.6/docs/API){: new_window} -  {{site.data.keyword.blockchainfull_notm}} API에 대한 개요입니다. 
+- [개발자용 {{site.data.keyword.blockchainfull_notm}} ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.ibm.com/blockchain/for_developers.html){: new_window} - {{site.data.keyword.Bluemix_notm}}에서 실행하기 위해 배치 가능한 코드 및 라이브 데모에 대한 자세한 설명이 포함된 개발 환경에 맞게 블록체인을 적용하는 방법에 대한 개요입니다. 
 
 ## 샘플 스마트 계약
 
 {: #samples}
 
-다수의 샘플 계약을 [https://github.com/ibm-watson-iot/blockchain-samples](https://github.com/ibm-watson-iot/blockchain-samples)에서 다운로드할 수 있습니다. 배치 가능한 체인코드로 자체 유스 케이스를 개발하기 위한 기초로서 샘플 계약을 사용할 수 있습니다. 
+여러 샘플 계약은 [https://github.com/ibm-watson-iot/blockchain-samples ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/blockchain-samples){: new_window}에서 다운로드할 수 있습니다. 배치 가능한 체인코드로 자체 유스 케이스를 개발하기 위한 기초로서 샘플 계약을 사용할 수 있습니다. 
 
 |샘플 계약 |설명 |
 |:---|:---|
-|[Basic: Simple Contract](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/basic/simple_contract) | 블록체인에서 디바이스 자산 데이터를 추적하고 저장할 수 있도록 허용하는 고급 계약의 단순화된 버전
-|[Advanced: IoT Generic Sample Contract](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/advanced/iot_sample_contract) | 데이터 모델과 동작에 대한 **거래선** 종류 및 많은 기능에 대한 고급 샘플 계약|
+|[기본: 단순 계약 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/basic/simple_contract){: new_window} | 블록체인에서 디바이스 자산 데이터를 추적하고 저장할 수 있도록 허용하는 고급 계약의 단순화된 버전
+|[고급: IoT 일반 샘플 계약 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/advanced/iot_sample_contract){: new_window} | 데이터 모델과 동작에 대한 **거래선** 종류 및 많은 기능에 대한 고급 샘플 계약|
 
 
 ## {{site.data.keyword.blockchainfull_notm}} 환경 구성
@@ -182,16 +182,15 @@ Golang 체인코드 실행 파일 양식으로 스마트 계약을 개발하고 
 이제 GoLang으로 자체 스마트 계약 체인코드를 작성하고, 이를 샌드박스 환경에서 테스트하며, 이를 자체 {{site.data.keyword.blockchainfull_notm}} 패브릭에서 배치하고 테스트할 수 있습니다. 
 
 1. 스마트 계약 체인코드를 저장할 수 있도록 GitHub 프로젝트를 작성하십시오.  
-배치하고자 하는 스마트 계약은 공용 GitHub 저장소에 있어야 합니다. 자세한 정보는 https://github.com/을 참조하십시오. 
+배치하고자 하는 스마트 계약은 공용 GitHub 저장소에 있어야 합니다. 자세한 정보는 https://github.com/ 을 참조하십시오. 
 2.  로컬 Hyperledger 개발 및 테스트 환경을 설정하십시오.  
 {{site.data.keyword.blockchainfull_notm}}에 배치하기 전에 자체 체인코드를 개발하고 테스트하려면 로컬 개발 환경을 설정해야 합니다. 이 환경에는 계약에 대한 체인코드를 쓰는 데 사용되는 GoLang이 포함됩니다. 
  1. 개발 환경을 설정하십시오.   
-개발 환경에는 GoLang으로 빌드된 체인코드를 사용하여 스마트 계약을 개발하는 데 필요한 도구가 포함되어 있습니다. 자세한 정보는 Hyperledger 문서의
-[개발 환경 설정](https://github.com/hyperledger/fabric/blob/master/docs/dev-setup/devenv.md)을 참조하십시오. 
+개발 환경에는 GoLang으로 빌드된 체인코드를 사용하여 스마트 계약을 개발하는 데 필요한 도구가 포함되어 있습니다. 자세한 정보는 Hyperledger 문서의 [개발 환경 설정 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")]( https://github.com/hyperledger/fabric/blob/master/docs/source/dev-setup/devenv.rst){: new_window}을 참조하십시오. 
  2. 체인코드 디버깅 환경을 설치하십시오.    
-디버깅 환경은 {{site.data.keyword.blockchainfull_notm}}에 배치하기 전에 스마트 계약을 테스트하고 디버그하는 데 필요한 도구를 제공합니다. 자세한 정보는 Hyperledger 문서의 [개발 환경에서 체인코드 쓰기, 빌드 및 실행](https://github.com/hyperledger/fabric/blob/master/docs/Setup/Chaincode-setup.md)을 참조하십시오. 
+디버깅 환경은 {{site.data.keyword.blockchainfull_notm}}에 배치하기 전에 스마트 계약을 테스트하고 디버그하는 데 필요한 도구를 제공합니다. 자세한 정보는 Hyperledger 문서의 [개발 환경에서 체인코드 작성, 빌드 및 실행 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/hyperledger/fabric/blob/master/docs/source/Setup/Chaincode-setup.rst){: new_window}을 참조하십시오. 
  3. 개발용 네트워크를 설정하십시오.    
-개발용 네트워크에서는 스마트 계약의 최종 테스트를 위한 보다 엄격한 프로덕션 같은 환경을 제공합니다. {{site.data.keyword.blockchainfull_notm}}에 배치하기 전에, 테스트되고 디버그된 계약의 최종 테스트에 이 환경을 사용하십시오. 자세한 정보는 Hyperledger 문서의 [네트워크 설정](https://github.com/hyperledger/fabric/blob/master/docs/Setup/Network-setup.md)을 참조하십시오. 
+개발용 네트워크에서는 스마트 계약의 최종 테스트를 위한 보다 엄격한 프로덕션 같은 환경을 제공합니다. {{site.data.keyword.blockchainfull_notm}}에 배치하기 전에, 테스트되고 디버그된 계약의 최종 테스트에 이 환경을 사용하십시오. 자세한 정보는 Hyperledger 문서의 [네트워크 설정 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/hyperledger/fabric/blob/master/docs/source/Setup/Network-setup.rst){: new_window}을 참조하십시오. 
 
 3. 선택사항: IBM 제공 샘플 스마트 계약을 다운로드하십시오.  
 IBM에서는 다운로드하여 그대로 직접 사용하거나 조직의 목표에 맞게 수정이 가능한 다수의 스마트 계약을 제공합니다.  
@@ -224,7 +223,7 @@ IBM에서는 다운로드하여 그대로 직접 사용하거나 조직의 목�
 예를 들어, 다음 위치로 sample.go 파일을 업로드하십시오.   
   `http://github.com/{my organization}/{my project}/`
   2. 이전에 연결된 피어에서 계약을 등록하십시오.   
-  REST 클라이언트(예: CURL 또는 Postman)를 사용하여 등록 호출을 제출하십시오. 등록 호출에 대한 자세한 정보는 [POST registrar API 문서](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/#!/Registrar/registerUser)를 참조하십시오. 등록 시에는 다음 정보를 사용하십시오. 
+  REST 클라이언트(예: CURL 또는 Postman)를 사용하여 등록 호출을 제출하십시오. 등록 호출에 대한 자세한 정보는 [POST registrar API 문서 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/hyperledger/fabric/blob/v0.6/docs/API/CoreAPI.md#registrar){: new_window}를 참조하십시오. 등록 시에는 다음 정보를 사용하십시오. 
   <ul>
   <li>URL: `http://api_host:api_port_tls/registrar`
   <li>유형: POST
@@ -239,7 +238,7 @@ IBM에서는 다운로드하여 그대로 직접 사용하거나 조직의 목�
 
   </ul>
   3. 계약을 피어에 배치하십시오.   
-  배치 호출에 대한 자세한 정보는 [POST devops/deploy API 문서](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/#!/Devops/chaincodeDeploy)를 참조하십시오.   
+  배치 호출에 대한 자세한 정보는 [POST/chaincode API 문서 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/hyperledger/fabric/blob/v0.6/docs/API/CoreAPI.md#chaincode){: new_window}를 참조하십시오.   
   배치 시에 다음 정보를 사용하십시오.   
   <ul>
   <li>URL: `http://api_host:api_port_tls/chaincode`
@@ -282,7 +281,7 @@ IBM에서는 다운로드하여 그대로 직접 사용하거나 조직의 목�
    9. 다음 정보를 입력하고 **다음**을 클릭하십시오.
      - 계약 ID - 계약을 배치할 때 저장한 128자 계약 ID를 붙여넣으십시오. 
      - 계약 이름 - {{site.data.keyword.iot_short_notm}}에서 계약을 식별하는 이름을 입력하십시오. 
-     
+
      **팁:** 디바이스의 이벤트 유형을 찾으려면 **디바이스** 페이지로 이동하고 디바이스 이름을 클릭하여 디바이스 세부사항 페이지를 여십시오. 아래의 **센서 정보** 섹션으로 화면이동하면 디바이스에 대해 사용 가능한 이벤트 및 데이터 점의 목록을 볼 수 있습니다. 
 
    11. 사용 가능한 디바이스 특성을 계약 매개변수에 맵핑하십시오.    
@@ -299,7 +298,7 @@ IBM에서는 다운로드하여 그대로 직접 사용하거나 조직의 목�
     <li>  온도 - float64  
     <li>  캐리어 - 문자열   
     </ul>  
-    디바이스 데이터를 계약으로 맵핑하는 방법에 대한 자세한 정보는 GitHub에서 IoT 블록체인 샘플 위키의 [데이터 맵핑 예제](https://github.com/ibm-watson-iot/blockchain-samples/wiki/Data-mapping-example)를 참조하십시오. 
+    디바이스 데이터를 계약에 맵핑하는 방법에 대한 자세한 정보는 GitHub의 IoT 블록체인 샘플 위키에서 [데이터 맵핑 예 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/blockchain-samples/wiki/Data-mapping-example){: new_window}를 참조하십시오. 
    12. 요약 페이지에서 정보가 올바른지 확인하십시오. 
    13. 디바이스 데이터 대 계약 맵핑이 블록체인 페이지에 표시됩니다. 
 
@@ -307,7 +306,7 @@ IBM에서는 다운로드하여 그대로 직접 사용하거나 조직의 목�
 스마트 계약을 테스트하려면 {{site.data.keyword.iot_short_notm}}에서 디바이스를 작성하고 디바이스를 {{site.data.keyword.iot_short_notm}}에 연결하며 Blockchain Fabric에 연결하도록 IoT 블록체인을 구성한 후에 블록체인에서 디바이스 메시지를 맵핑하고 저장하도록 {{site.data.keyword.iot_short_notm}}을 구성하여 종단간 테스트를 수행하십시오. {{site.data.keyword.blockchainfull_notm}} 콘솔을 사용하면 블록체인을 보고 원장의 디바이스 데이터를 확인할 수 있습니다. 계약에서 readAsset() 함수를 지원하는 경우에는 모니터링 UI를 사용하여 블록체인을 보고 자체 시나리오의 디바이스 데이터가 블록체인에 영구 저장됨을 볼 수 있습니다. 
 
 5. {{site.data.keyword.blockchainfull_notm}}에 연결하도록 모니터링 UI를 구성하십시오.   
- **팁:** 로컬 환경에서 모니터링 UI를 설치하지 않았으면 지금 이를 수행할 수 있습니다. [블록체인 모니터링 UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui) GitHub 디렉토리에서 사용 가능한 모니터링 UI readme 문서의 지시사항을 따르십시오.   
+ **팁:** 로컬 환경에서 모니터링 UI를 설치하지 않았으면 지금 이를 수행할 수 있습니다. [블록체인 모니터링 UI ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window} GitHub 디렉토리에서 사용 가능한 모니터링 UI Readme 문서의 지시사항을 따르십시오.   
  **구성** 단추를 클릭하여 구성 설정에 액세스하십시오.    
  계약에 연결하려면 다음 정보를 사용하십시오. 
 <table>

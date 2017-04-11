@@ -3,10 +3,10 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-23"
+lastupdated: "2017-03-14"
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -15,12 +15,12 @@ lastupdated: "2017-02-23"
 # 针对设备的 HTTP REST API
 {: #api}
 
-**重要信息：**针对设备的 {{site.data.keyword.iot_full}} HTTP REST API 功能只作为受限 Beta 程序的一部分提供。未来更新可能会包含与此功能当前版本不兼容的更改。请尝试此功能，[让我们了解您的想法](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html)。
+**重要信息：**针对设备的 {{site.data.keyword.iot_full}} HTTP REST API 功能只作为受限 Beta 程序的一部分提供。未来更新可能会包含与此功能当前版本不兼容的更改。请尝试此功能，[让我们了解您的想法 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}。
 
 ## 访问 HTTP REST API 文档
 {: #api_link}
 
-要访问 {{site.data.keyword.iot_short_notm}} HTTP REST API 文档并获取有关如何将设备集成到组织的更多信息，请转至以下 URL：[https://docs.internetofthings.ibmcloud.com/swagger/v0002.html](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html)
+要访问 {{site.data.keyword.iot_short_notm}} HTTP REST API 文档，并获取有关如何将设备集成到组织中的更多信息，请参阅 [API](../reference/api.html)。
 
 {{site.data.keyword.iot_short_notm}} HTTP REST API 的唯一受支持版本是 V2。请确保您的 {{site.data.keyword.iot_short_notm}} 解决方案使用的是 V2。
 
@@ -31,6 +31,8 @@ lastupdated: "2017-02-23"
 
 # 针对设备的 HTTP REST 消息传递 API
 {: #rest_messaging_api}
+
+要访问 {{site.data.keyword.iot_short_notm}} HTTP 消息传递 API 文档并找到使用 HTTP 发布事件的更多信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP 消息传递 API ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}。
 
 ## 发布事件
 {: #event_publication}

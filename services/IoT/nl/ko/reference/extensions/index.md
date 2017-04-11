@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2017-02-03"
+  years: 2015, 2017
+lastupdated: "2017-03-15"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -39,7 +39,7 @@ IBM 플랫폼을 통해 제공되는 기본 제공 Jasper 통합에서는 다음
 다음 구성 단계가 완료된 후 Jasper에 연결된 디바이스의 디바이스 드릴 다운에서 지원되는 오퍼레이션에 액세스할 수 있습니다.
 
 ### Jasper용 REST API
-Jasper용 REST API에 액세스하려면 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![외부 링크 아이콘](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window} 문서의 Jasper 확장기능 절을 참조하십시오. 
+Jasper용 REST API에 액세스하려면 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window} 문서에서 Jasper 확장기능 섹션을 참조하십시오. 
 
 ### Jasper 구성
 
@@ -91,7 +91,7 @@ AT&T 확장기능을 사용하면 다음 AT&T 오퍼레이션을 수행할 수 �
 - 요금제 변경
 
 ### AT&T용 REST API
-AT&T용 REST API에 액세스하려면 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![외부 링크 아이콘](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window} 문서의 AT&T 확장기능 절을 참조하십시오. 
+AT&T용 REST API에 액세스하려면 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window} 문서에서 AT&T 확장 섹션을 참조하십시오. 
 
 ### AT&T의 구성
 
@@ -195,7 +195,7 @@ ARM mbed 플랫폼, 알림 및 비동기 응답에서 수신되는 두 가지 �
   "payload": <Base64 encoded payload>
 }
 ```
-선택한 메소드는 대소문자를 구분합니다. 자원 경로의 처음 '/'는 건너뛰어야 합니다.
+선택한 메소드는 대소문자를 구분합니다. 리소스 경로의 처음 '/'는 건너뛰어야 합니다.
 
 
 다음 주제에 페이로드를 공개해야 합니다.
@@ -223,7 +223,7 @@ https://developer.ibm.com/iotplatform/2016/03/30/watson-iot-platform-integration
 - 위치 상태
 
 ### Orange용 REST API
-Orange용 REST API에 액세스하려면 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![외부 링크 아이콘](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window} 문서의 Orange 확장기능 절을 참조하십시오. 
+Orange용 REST API에 액세스하려면 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window} 문서에서 Orange 확장기능 섹션을 참조하십시오. 
 
 ### Orange 구성
 
@@ -274,7 +274,7 @@ Orange 확장기능을 사용으로 설정하고 나면 Orange SIM 데이터를 
 3. **패키지 추가** 단추를 클릭하십시오. 
 4. 패키지 파일을 선택하고 **열기**를 클릭하십시오. 
 
-API를 사용하여 사용자 정의 디바이스 관리 패키지를 추가하려면 [{{site.data.keyword.iot_short_notm}} API 문서 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}를 참조하십시오. 
+API를 사용하여 사용자 정의 디바이스 관리 패키지를 추가하려면 [{{site.data.keyword.iot_short_notm}} API 문서 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}를 참조하십시오. 
 
 ## 블록체인(Blockchain)
 {: #blockchain}
@@ -293,36 +293,100 @@ API를 사용하여 사용자 정의 디바이스 관리 패키지를 추가하�
  2. **확장기능** 페이지에서 **확장기능 추가**를 클릭하십시오.
  3. 블록체인 확장기능 옆의 **추가**를 클릭하십시오. 
  4. 블록체인 타일에서 **설정**을 클릭하십시오. 
- 3. **블록체인 활성화** 섹션에서 **자세히 보기** 링크를 클릭하여 [IoT 블록체인 서비스 오퍼링 페이지 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg)](http://www.ibm.com/internet-of-things/iot-news/announcements/private-blockchain/){: new_window}로 이동하십시오. 
+ 3. **블록체인 활성화** 섹션에서 **자세히 보기** 링크를 클릭하여 [IoT 블록체인 서비스 오퍼링 페이지 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.ibm.com/internet-of-things/iot-news/announcements/private-blockchain/){: new_window}로 이동하십시오. 
  4. **블록체인 프로젝트 시작**을 클릭하여 *IoT 및 블록체인의 가능성 탐색* 양식을 채우고 제출하십시오.   
  5. 요청이 승인되면 사용자 조직의 블록체인 통합을 사용할 수 있도록 IBM이 사용자에게 연락합니다. 
  6. 조직의 {{site.data.keyword.iot_short_notm}} 대시보드로 돌아와서 [{{site.data.keyword.iot_short_notm}} 블록체인 통합](../../bl_blockchain_integration.html)의 단계에 따라 설정을 완료하십시오. 
 
-
-
-## The Weather Company
+<!-- ## The Weather Company
 {: #weathercompany}
 
-The Weather Company 확장기능은 기존 {{site.data.keyword.iot_short_notm}} 디바이스와 날씨 데이터를 결합합니다. API를 사용하여 업데이트 위치 요청이 작성되었거나 디바이스 관리 메시지를 사용하여 디바이스가 이미 해당 위치를 설정한 경우 The Weather Company의 날씨 데이터가 디바이스 세부사항 보기에 표시됩니다.
+The Weather Company extension combines weather data with your existing {{site.data.keyword.iot_short_notm}} devices. Weather data from The Weather Company appears in the device details view if an update location request has been made by using the API, or if the device has already set its location by using a device management message.
 
-**참고:** 관리 디바이스만 고유 위치를 설정할 수 있습니다. 모든 비관리 디바이스에 API를 사용하여 수동으로 설정된 위치가 있어야 합니다. 디바이스 위치 설정에 대한 자세한 정보는 [위치 찾기 요청](../../devices/device_mgmt/index.html#update-location)을 참조하십시오.
+**Note:** Only managed devices can set their own locations. All unmanaged devices must have their locations set manually by using the API. For more information on setting a device location, see [Update Location requests](../../devices/device_mgmt/index.html#update-location).
 
-### The Weather Company용 REST API
-The Weather Company용 REST API에 액세스하려면 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![외부 링크 아이콘](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather){: new_window} 문서의 디바이스 위치 날씨 절을 참조하십시오. 
+### REST APIs for The Weather Company
+To access the REST API for The Weather Company, see the
+Device Location Weather section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather){: new_window} documentation.
 
-### 날씨 데이터
+### Weather Data
 
-디바이스 위치에 대해 검색된 날씨 데이터를 보려면 **디바이스** 분할창에서 디바이스를 찾고 이를 클릭하십시오. 상세 디바이스 보기에서 **확장기능** 섹션까지 아래로 화면이동하십시오. 다음 날씨 데이터가 나열됩니다.
+To view the weather data retrieved for a device location, find the device in the **Devices** pane and click it. In the detailed device view scroll down to the **Extensions** section. The following weather data is listed:
 
-- 현재 날씨.
-- 현재 온도.
-- 예상된 최대 및 최저 온도.
-- 상대 습도.
-- 기압.
-- 가시성.
-- 풍속.
-- 풍향.
-- 위도.
-- 경도.
+- Current weather.
+- Current temperature.
+- Predicted maximum and minimum temperature.
+- Relative humidity.
+- Pressure.
+- Visibility.
+- Wind speed.
+- Wind direction.
+- Latitude.
+- Longitude.
+-->
 
-<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html){: new_window}. -->
+<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html){: new_window}. -->
+
+## 이메일
+{: #email}
+
+이메일 초대를 사용하여 사용자를 {{site.data.keyword.iot_short_notm}}에 추가할 수 있습니다. 자세한 정보는 [사용자 액세스 관리](../../add_users.html)를 참조하십시오. 
+
+이메일 초대 기능을 사용하려면, 이메일 확장기능이 SendGrid 온라인 서비스 또는 SMTP(Simple Mail Transfer Protocol) 서비스를 사용하도록 구성되어 있어야 합니다. 이메일 확장기능은 SendGrid {{site.data.keyword.Bluemix_notm}} 애플리케이션을 사용할 수도 있습니다. 
+
+### SendGrid 온라인 서비스
+
+SendGrid 온라인 서비스와 함께 사용하도록 이메일 확장기능을 구성하려면 다음 단계를 따르십시오. 
+
+1. SendGrid 온라인 계정에서 인증 API 키를 검색하십시오. 
+2. {{site.data.keyword.iot_short_notm}} 대시보드의 탐색줄에서 **확장기능**을 클릭하십시오. 
+3. **이메일** 섹션에서 **설정**을 클릭하십시오. 
+4. **API 키가 있는 SendGrid**를 선택하십시오. 
+5. 사이트 관리자의 이름과 이메일 주소 및 인증 API 키를 입력하십시오. 
+
+### SMTP 서비스
+
+SMTP 서비스와 함께 사용하도록 이메일 확장기능을 구성하려면 다음 단계를 따르십시오. 
+
+1. {{site.data.keyword.iot_short_notm}} 대시보드의 탐색줄에서 **확장기능**을 클릭하십시오. 
+2. **이메일** 섹션에서 **설정**을 클릭하십시오. 
+3. **SMTP**를 선택하십시오. 
+4. SMTP 서비스의 구성 세부사항을 입력하십시오. 
+
+### SendGrid {{site.data.keyword.Bluemix_notm}} 애플리케이션
+
+SendGrid {{site.data.keyword.Bluemix_notm}} 애플리케이션과 함께 사용하도록 이메일 확장기능을 구성하려면 다음 단계를 따르십시오. 
+
+1. 더미 애플리케이션을 작성하고 SendGrid 서비스를 바인드하십시오.   
+구성 신임 정보를 검색하기 위해 더미 앱에 SendGrid 서비스를 추가하고 바인드하십시오. 
+
+ 1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 **서비스 작성**을 클릭하십시오. 
+ 2. 카탈로그에서 SendGrid 서비스를 선택하고 **작성**을 클릭하십시오. 
+ 3. {{site.data.keyword.Bluemix_notm}} 대시보드에서 {{site.data.keyword.sdk4nodefull}} 애플리케이션을 추가하십시오.
+ 4. {{site.data.keyword.Bluemix_notm}} 대시보드에서 {{site.data.keyword.sdk4nodefull}} 애플리케이션을 클릭하고 **서비스 또는 API 바인드**를 클릭하십시오.
+ 5. SendGrid 서비스를 선택하고 **추가**를 클릭하십시오. 
+ 6. 이제 {{site.data.keyword.sdk4nodefull}} 애플리케이션을 다시 스테이징해야 합니다.
+2. {{site.data.keyword.iot_short_notm}} 서비스 구성을 준비하십시오.   
+{{site.data.keyword.iot_short_notm}} 대시보드를 사용하거나 {{site.data.keyword.iot_short_notm}} API를 사용하여 {{site.data.keyword.iot_short_notm}}을 구성할 수 있습니다.   
+ 1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 {{site.data.keyword.sdk4nodefull}} 애플리케이션을 클릭하십시오.
+ 2. 탐색줄에서 **환경 변수**를 클릭하십시오.
+ 3. 임시 텍스트 파일에 표시된 JSON을 복사하십시오.   
+ JSON은 다음 형식이어야 합니다. 
+```
+{
+  "name": "SendGridServiceName",
+  "label": "user-provided",
+  "credentials": {
+    "password": "xxx",
+    "hostname": "smtp.sendgrid.net",
+    "username": "username"
+  }
+}
+```
+3. 구성 데이터를 {{site.data.keyword.iot_short_notm}} 조직에 추가하십시오. 
+ 1. {{site.data.keyword.iot_short_notm}} 대시보드를 여십시오.
+ 2. 탐색줄에서 **확장기능**을 클릭하십시오.
+ 3. **이메일** 아이콘 아래의 **설정**을 클릭하십시오. 
+ 4. **사용자 이름이 있는 SendGrid**를 선택하십시오. 
+ 5. 임시 텍스트 파일의 구성 데이터를 입력하십시오. 
+ 6. **완료**를 클릭하십시오.

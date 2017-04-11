@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-11-30"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2016-11-30"
 디바이스가 {{site.data.keyword.iot_full}}에서 조직에 직접 연결할 수 없는 경우에는 Java™을 사용하여 게이트웨이를 빌드하고 사용자 정의할 수 있습니다. 게이트웨이 개발을 시작하는 데 도움이 되도록 {{site.data.keyword.iot_short_notm}}용 Java 클라이언트 라이브러리, 문서 및 예제가 제공됩니다.
 {:shortdesc}
 
-## Java 클라이언트 및 자원 다운로드
+## Java 클라이언트 및 리소스 다운로드
 {: #java_client_download}
 
 {{site.data.keyword.iot_short_notm}}의 Java 클라이언트 라이브러리 및 샘플에 액세스하려면 GitHub의 [iot-java](https://github.com/ibm-watson-iot/iot-java) 저장소로 이동하여 설치 지시사항을 완료하십시오. 
@@ -342,12 +342,12 @@ gwClient.api().getDevicesConnectedThroughGateway(gatewayType, gatewayId);
 ## 샘플
 {: #samples}
 
-게이트웨이 및 게이트웨이 뒤에 있는 디바이스를 {{site.data.keyword.iot_short_notm}} 인스턴스에 연결하는 데 도움이 되도록 여러 샘플이 사용 가능합니다. 샘플은 {{site.data.keyword.iot_short_notm}} Java 클라이언트 라이브러리를 사용하며 [게이트웨이 샘플 GitHub 저장소](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples)에 있습니다. 
+게이트웨이 및 게이트웨이 뒤에 있는 디바이스를 {{site.data.keyword.iot_short_notm}} 인스턴스에 연결하는 데 도움이 되도록 여러 샘플이 사용 가능합니다. 샘플은 {{site.data.keyword.iot_short_notm}} Java 클라이언트 라이브러리를 사용하며 [게이트웨이 샘플 GitHub 저장소 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples){: new_window}에 있습니다. 
 
 ## 레시피
 {: #recipes}
 
 | 레시피     | 설명 |
 |----------------|----------------
-|[{{site.data.keyword.iot_short_notm}}에 게이트웨이로서 디바이스 연결](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-gateway-to-watson-iot-platform/)| Raspberry Pi 게이트웨이 및 게이트웨이 뒤의 Arduino Uno 디바이스를 {{site.data.keyword.iot_short_notm}}에 연결하는 방법을 설명하는 GitHub 프로젝트 및 세부 지시사항입니다.
-|[{{site.data.keyword.iot_short_notm}}의 관리 게이트웨이로서 Raspberry Pi](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/)|{{site.data.keyword.iot_short_notm}}에서 관리 디바이스로서 Raspberry Pi를 연결하는 방법과 디바이스 관리 오퍼레이션을 수행하는 방법을 설명하는 이전 게이트웨이 레시피의 확장판입니다.
+|[게이트웨이로 {{site.data.keyword.iot_short_notm}}에 디바이스 연결 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-gateway-to-watson-iot-platform/){: new_window}| Raspberry Pi 게이트웨이 및 게이트웨이 뒤의 Arduino Uno 디바이스를 {{site.data.keyword.iot_short_notm}}에 연결하는 방법을 설명하는 GitHub 프로젝트 및 세부 지시사항입니다.
+|[{{site.data.keyword.iot_short_notm}}에서 관리 게이트웨이 역할의 Raspberry Pi ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/){: new_window}|{{site.data.keyword.iot_short_notm}}에서 관리 디바이스로서 Raspberry Pi를 연결하는 방법과 디바이스 관리 오퍼레이션을 수행하는 방법을 설명하는 이전 게이트웨이 레시피의 확장판입니다.

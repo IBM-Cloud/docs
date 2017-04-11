@@ -1,7 +1,9 @@
-----
+---
 
 copyright:
-  years: 2015, 2016, 2017
+  years: 2015, 2017
+
+lastupdated: "2017-03-14"
 
 ---
 
@@ -13,9 +15,6 @@ copyright:
 
 # In {{site.data.keyword.iot_short_notm}} Geräte entwickeln
 {: #device_dev_index}
-
-Letzte Aktualisierung: 26. November 2016
-{: .last-updated}
 
 Ein Gerät ist alles, was eine Verbindung zum Internet hat und Daten in die Cloud sendet oder aus der Cloud empfängt. Sie können Geräte verwenden, um Ereignisinformationen wie Sensormesswerte in die Cloud zu senden und Befehle von Anwendungen in der Cloud entgegenzunehmen.
 
@@ -55,7 +54,7 @@ Weitere Informationen und Links zu den verfügbaren Programmierungshandbüchern 
 
 Wenn Sie kein geeignetes Programmierungshandbuch für {{site.data.keyword.iot_short_notm}} finden, können Sie ein eigenes Programm schreiben und das MQTT- oder HTTP-Protokoll verwenden, um Ihr Gerät mit {{site.data.keyword.iot_short_notm}} zu verbinden.
 
-MQTT ist ein offener Standard, der von der Standardisierungsorganisation OASIS verwaltet wird und durch ISO international anerkannt ist. Weitere Informationen finden Sie in [OASIS Message Queuing Telemetry Transport](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=mqtt).
+MQTT ist ein offener Standard, der von der Standardisierungsorganisation OASIS verwaltet wird und durch ISO international anerkannt ist. Weitere Informationen finden Sie in [OASIS Message Queuing Telemetry Transport ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=mqtt){: new_window}.
 
 Eine Vielzahl von MQTT-Clientbibliotheken für viele verschiedene Systeme steht zur Verfügung. Dazu gehören die folgenden Umgebungen:
 - http://www.eclipse.org/paho/

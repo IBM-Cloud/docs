@@ -3,10 +3,10 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-23"
+lastupdated: "2017-03-14"
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -15,12 +15,12 @@ lastupdated: "2017-02-23"
 # 디바이스용 HTTP REST API
 {: #api}
 
-**중요:** 디바이스용 {{site.data.keyword.iot_full}} HTTP REST API 기능은 제한된 베타 프로그램의 일부로서만 사용 가능합니다. 향후 업데이트에는 이 기능의 현재 버전과 호환 가능한 변경사항이 포함될 수 있습니다. 이를 시도해 보고 [의견을 알려 주십시오](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html). 
+**중요:** 디바이스용 {{site.data.keyword.iot_full}} HTTP REST API 기능은 제한된 베타 프로그램의 일부로서만 사용 가능합니다. 향후 업데이트에는 이 기능의 현재 버전과 호환 가능한 변경사항이 포함될 수 있습니다. 시도해 보고 [의견을 보내주십시오. ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}
 
 ## HTTP REST API 문서에 액세스
 {: #api_link}
 
-{{site.data.keyword.iot_short_notm}} HTTP REST API 문서에 액세스하고 디바이스를 조직에 통합하는 방법에 대한 자세한 정보를 얻으려면 URL [https://docs.internetofthings.ibmcloud.com/swagger/v0002.html](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html)로 이동하십시오.
+{{site.data.keyword.iot_short_notm}} HTTP REST API 문서에 액세스하고 디바이스를 조직에 통합하는 방법에 대한 정보를 얻으려면 [API](../reference/api.html)를 참조하십시오. 
 
 지원되는 {{site.data.keyword.iot_short_notm}} HTTP REST API의 유일한 버전은 버전 2입니다. {{site.data.keyword.iot_short_notm}} 솔루션이 버전 2를 사용 중인지 확인하십시오. 
 
@@ -32,10 +32,12 @@ lastupdated: "2017-02-23"
 # 디바이스용 HTTP REST 메시징 API
 {: #rest_messaging_api}
 
+{{site.data.keyword.iot_short_notm}} HTTP Messaging API 문서에 액세스하고 HTTP를 사용하여 이벤트 공개에 대한 자세한 정보를 찾으려면 [{{site.data.keyword.iot_short_notm}} HTTP Messaging API ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}를 참조하십시오. 
+
 ## 이벤트 공개
 {: #event_publication}
 
-MQTT 메시징 프로토콜의 사용과 함께, HTTP REST API 명령을 사용하여 HTTP를 통해 {{site.data.keyword.iot_short_notm}}에 이벤트를 공개하도록 디바이스를 구성할 수도 있습니다. 
+MQTT 메시징 프로토콜 외에도 HTTP REST API 명령을 사용하여 {{site.data.keyword.iot_short_notm}}에 HTTP를 통해 이벤트를 공개하도록 디바이스를 구성할 수도 있습니다. 
 
 다음 URL 중 하나를 사용하여 {{site.data.keyword.iot_short_notm}}에 연결된 디바이스에서 `POST` 요청을 제출하십시오. 
 

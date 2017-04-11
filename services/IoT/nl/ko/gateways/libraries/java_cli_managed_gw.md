@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-12-06"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -387,7 +387,7 @@ public abstract void updateFirmware(DeviceFirmware deviceFirmware);
 
 **참고**: 펌웨어 다운로드 또는 업데이트 요청이 경로 재지정된 게이트웨이 및 연결된 디바이스 모두에 대해 라이브러리에 오직 하나의 핸들러만 추가되어야 합니다. 구현에서는 동시에 여러 펌웨어 요청을 처리하기 위해 스레드 또는 스레드 풀을 작성해야 합니다. 
 
-[게이트웨이 샘플 GutHub 저장소](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java)에서 스레드 풀 핸들러의 샘플 구현을 찾을 수 있습니다. 
+[게이트웨이 샘플 GutHub 저장소 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window}에서 스레드 풀 핸들러의 샘플 구현을 찾을 수 있습니다. 
 
 ### `downloadFirmware`의 샘플 구현
 
@@ -401,7 +401,7 @@ public abstract void updateFirmware(DeviceFirmware deviceFirmware);
 
 샘플 펌웨어 다운로드 구현은 다음 코드 샘플에 표시되어 있습니다. 
 
-**중요:** 제공된 코드 샘플에는 스레드 풀 섹션이 포함되지 않습니다. 펌웨어 핸들러의 전체 구현의 경우, 샘플은 [IBM Java 게이트웨이 샘플 GitHub 저장소](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java)에서 사용 가능합니다. 
+**중요:** 제공된 코드 샘플에는 스레드 풀 섹션이 포함되지 않습니다. 펌웨어 핸들러의 전체 구현의 경우 샘플은 [IBM Java 게이트웨이 샘플 GitHub 저장소 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window}에서 사용 가능합니다. 
 
 ```java
 public void downloadFirmware(DeviceFirmware deviceFirmware) {
@@ -536,7 +536,7 @@ public void updateFirmware(DeviceFirmware deviceFirmware) {
 }
 ```
 
-전체 코드는 [게이트웨이 샘플 GitHub 저장소](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java)에 있는 `GatewayFirmwareHandlerSample` 샘플에서 찾을 수 있습니다. 
+전체 코드는 [게이트웨이 샘플 GitHub 저장소 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window}에 있는 `GatewayFirmwareHandlerSample` 샘플에서 찾을 수 있습니다. 
 
 ### 4단계: `ManagedGateway`에 핸들러 추가
 
@@ -547,7 +547,7 @@ GatewayFirmwareHandlerSample fwHandler = new GatewayFirmwareHandlerSample();
 mgdGateway.addFirmwareHandler(fwHandler);
 ```
 
-펌웨어 조치에 대한 자세한 정보는 [디바이스 관리 요청](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/requests.html#/firmware-actions#firmware-actions)을 참조하십시오. 
+펌웨어 조치에 대한 자세한 정보는 [디바이스 관리 요청 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/requests.html#/firmware-actions#firmware-actions){: new_window}을 참조하십시오. 
 
 ## 디바이스 조치
 {: #dev_actions}
@@ -592,7 +592,7 @@ public abstract void handleReboot(DeviceAction action);
 public abstract void handleFactoryReset(DeviceAction action);
 ```
 
-**참고:** 디바이스 조치 요청이 경로 재지정된 게이트웨이 및 연결된 디바이스 모두에 대해 라이브러리에 오직 하나의 핸들러만 추가되어야 합니다. 구현에서는 동시에 여러 디바이스 조치 요청을 처리하기 위해 스레드 또는 스레드 풀을 작성해야 합니다. 스레드 풀을 사용하는 샘플 핸들러 구현은 [iot-gateway-samples GitHub 저장소](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java)에 예시되어 있습니다. 
+**참고:** 디바이스 조치 요청이 경로 재지정된 게이트웨이 및 연결된 디바이스 모두에 대해 라이브러리에 오직 하나의 핸들러만 추가되어야 합니다. 구현에서는 동시에 여러 디바이스 조치 요청을 처리하기 위해 스레드 또는 스레드 풀을 작성해야 합니다. 스레드 풀을 사용하는 샘플러 핸들러 구현은 [iot-gateway-samples GitHub 저장소 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java){: new_window}에 표시됩니다. 
 
 ### `handleReboot`의 샘플 구현
 
@@ -619,7 +619,7 @@ public void handleReboot(DeviceAction action) {
 }
 ```
 
-스레드 풀을 사용하는 전체 샘플러 핸들러 구현은 [iot-gateway-samples GitHub 저장소](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java)에 예시되어 있습니다. 
+스레드 풀을 사용하는 전체 샘플러 핸들러 구현은 [iot-gateway-samples GitHub 저장소 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java){: new_window}에 표시됩니다. 
 
 
 ### `handleFactoryReset`의 샘플 구현
@@ -648,7 +648,7 @@ GatewayActionHandlerSample actionHandler = new GatewayActionHandlerSample();
 mgdGateway.addDeviceActionHandler(actionHandler);
 ```
 
-디바이스 조치에 대한 자세한 정보는 [디바이스 관리 요청](../../devices/device_mgmt/requests.html#/device-actions-reboot#device-actions-reboot)을 참조하십시오. 
+디바이스 조치에 대한 자세한 정보는 [디바이스 관리 요청 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](../../devices/device_mgmt/requests.html#/device-actions-reboot#device-actions-reboot){: new_window}을 참조하십시오. 
 
 ## 디바이스 속성 변경사항 청취
 {: #listen_device_attributes}
@@ -698,16 +698,16 @@ public void propertyChange(PropertyChangeEvent evt) {
 }
 ```
 
-디바이스 속성의 업데이트에 대한 자세한 정보는 [디바이스 관리 요청](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/index.html#/update-device-attributes#update-device-attributes)을 참조하십시오. 
+디바이스 속성 업데이트에 대한 자세한 정보는 [디바이스 관리 요청 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/devices/device_mgmt/index.html#/update-device-attributes#update-device-attributes){: new_window}을 참조하십시오. 
 
 ## 샘플
 {: #samples}
 
-게이트웨이 및 게이트웨이 뒤에 있는 디바이스를 {{site.data.keyword.iot_short_notm}} 인스턴스에 연결하는 데 도움이 되도록 여러 샘플이 사용 가능합니다. 샘플은 {{site.data.keyword.iot_short_notm}} Java 클라이언트 라이브러리를 사용하며 [게이트웨이 샘플 GitHub 저장소](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples)에 있습니다. 
+게이트웨이 및 게이트웨이 뒤에 있는 디바이스를 {{site.data.keyword.iot_short_notm}} 인스턴스에 연결하는 데 도움이 되도록 여러 샘플이 사용 가능합니다. 샘플은 {{site.data.keyword.iot_short_notm}} Java 클라이언트 라이브러리를 사용하며 [게이트웨이 샘플 GitHub 저장소 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples){: new_window}에 있습니다. 
 
 ## 레시피
 {: #recipes}
 
-{{site.data.keyword.iot_short_notm}}에 관리 게이트웨이로서 Rasberry Pi 디바이스를 연결하고 연결된 디바이스를 관리하는 방법을 표시하는 레시피는 [{{site.data.keyword.iot_short_notm}}의 관리 게이트웨이로서 Raspberry Pi](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/)를 참조하십시오. 
+관리 게이트웨이로 Rasberry Pi 디바이스를 {{site.data.keyword.iot_short_notm}}에 연결하고 연결된 디바이스를 관리하는 방법을 보여주는 레시피는 [{{site.data.keyword.iot_short_notm}}에서 관리 게이트웨이 역할의 Raspberry Pi ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/){: new_window}를 참조하십시오. 
 
 이 레시피는 {{site.data.keyword.iot_short_notm}}의 디바이스 관리 프로토콜을 사용하여 게이트웨이 역할을 하는 Raspberry Pi 디바이스에서 Arduino Uno 디바이스를 관리하고 디바이스 관리 오퍼레이션(예: 디바이스 재부팅 또는 스케치 프로그램 추가)을 수행할 수 있는 방법을 설명합니다. 

@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-03-14"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2017-01-17"
 使用 {{site.data.keyword.iot_full}} 的接口映射功能可组织和集成入局和出局设备数据。
 {:shortdesc}
 
-**重要信息：**目前，接口映射功能只作为 Beta 功能提供。在推出最终发行版之前，Beta 更新可能会包含与当前版本不兼容的更改。因此强烈建议在推出最终发行版之前，不要将 Beta 功能用于生产应用程序。要接收其他信息并提供对此 Beta 的反馈，请[注册 IM Beta 程序](https://www.ibm.com/software/support/trial/cst/forms/nomination.wss?id=7050)，并告诉我们您的想法。
+**重要信息：**目前，接口映射功能只作为 Beta 功能提供。在推出最终发行版之前，Beta 更新可能会包含与当前版本不兼容的更改。因此强烈建议在推出最终发行版之前，不要将 Beta 功能用于生产应用程序。要接收其他信息并提供对此 Beta 的反馈，请[注册 IM Beta 程序 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/software/support/trial/cst/forms/nomination.wss?id=7050){: new_window}，并告诉我们您的想法。
 
 ## 概述
 {: #overview}
@@ -75,11 +75,11 @@ JSON 模式用于定义和验证入局事件以及[设备状态](#key_concepts)�
 ## 资源
 {: #resources}
 
-您可以使用 REST API 来管理上面各图中所示的资源。有关 REST API 的信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html) 文档。
+您可以使用 REST API 来管理上面各图中所示的资源。有关 REST API 的信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html){: new_window} 文档。
 
 资源                        | 描述       
 ------------- | ------------- | -------------  
-模式                         | JSON 模式用于定义从设备发布到 {{site.data.keyword.iot_short_notm}} 的入站事件的结构以及所需的设备状态。有关 JSON 模式的更多信息，请参阅 [JSON 模式](http://json-schema.org/)。在接口映射中，引用了两种 JSON 模式 - 事件模式和应用程序接口模式。事件模式用于定义由设备发布到 {{site.data.keyword.iot_short_notm}} 的事件的结构。应用程序接口模式由应用程序接口引用，并用于定义 {{site.data.keyword.iot_short_notm}} 上存储的[设备状态](#key_concepts)的结构。
+模式                         | JSON 模式用于定义从设备发布到 {{site.data.keyword.iot_short_notm}} 的入站事件的结构以及所需的设备状态。有关 JSON 模式的更多信息，请参阅 [JSON 模式 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://json-schema.org/){: new_window}。在接口映射中，引用了两种 JSON 模式 - 事件模式和应用程序接口模式。事件模式用于定义由设备发布到 {{site.data.keyword.iot_short_notm}} 的事件的结构。应用程序接口模式由应用程序接口引用，并用于定义 {{site.data.keyword.iot_short_notm}} 上存储的[设备状态](#key_concepts)的结构。
 事件类型                         | 必须在组织内创建某种事件类型，以使 {{site.data.keyword.iot_short_notm}} 能够处理特定事件内包含的数据。所有事件类型都必须引用一种事件模式。对于 Beta，所有入站事件必须为 JSON 格式。   
 物理接口                         | 物理接口可以与一种或多种事件类型相关联，并定义哪些事件类型与某种设备类型相关联。  
 设备类型                         | 每个连接到 Watson IoT Platform 的设备都必须与一种设备类型相关联。设备类型为共享特征或行为的设备组。在接口映射中，设备类型扩展为包含设备的物理接口以及可用于检索设备状态的应用程序接口。一种设备类型可以配置有多个应用程序接口。有关设备类型的更多信息，请参阅[设备模型](../reference/device_model.html#id_and_device_types)中的“标识和设备类型”部分。
@@ -96,7 +96,7 @@ JSON 模式用于定义和验证入局事件以及[设备状态](#key_concepts)�
 
 使用以下步骤可帮助您配置开始使用接口来映射设备数据所需的资源。
 
-有关 API 的详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html) 文档。
+有关 API 的详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html){: new_window} 文档。
 有关每个步骤的更详细信息，请参阅[示例场景](#scenario)或使用链接直接转至示例场景内的特定步骤。
 
 ### 配置环境以开始使用接口来映射设备数据
@@ -239,7 +239,7 @@ JSON 模式用于定义和验证入局事件以及[设备状态](#key_concepts)�
 
 在此场景中，假定有两种设备类型和两个设备实例。设备实例 *TemperatureSensor1* 与设备类型 *EnvSensor1* 相关联。设备实例 *TemperatureSensor2* 与设备类型 *EnvSensor2* 相关联。
 
-有关使用 REST API 来添加设备类型的信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Types) 文档。
+有关使用 HTTP API 来添加设备类型的信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Type_Configuration){: new_window} 文档。
 
 ### 创建事件模式文件
 {: #step1}
@@ -297,8 +297,7 @@ JSON 模式用于定义和验证入局事件以及[设备状态](#key_concepts)�
 ```
 POST /schemas
 ```
-有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Schemas) 文档。
-
+有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Schemas){: new_window} 文档。
 以下示例显示了如何使用 cURL 创建事件模式资源 *tEventSchema.json*：
 
 ```
@@ -372,7 +371,7 @@ curl --request POST \
 POST /event/types
 ```
 
-有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Event_Types) 文档。
+有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Event_Types){: new_window} 文档。
 
 
 
@@ -442,8 +441,7 @@ curl --request POST \
 ```
 POST /physicalinterfaces
 ```
-有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Physical_Interfaces) 文档。
-
+有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Physical_Interfaces){: new_window} 文档。
 在此场景中，需要两个物理接口，分别用于每种事件类型。
 
 以下示例显示了如何使用 cURL 创建第一个物理接口：
@@ -510,8 +508,7 @@ curl --request POST \
 ```
 POST /physicalinterfaces/{physicalInterfaceId}/events
 ```
-有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Physical_Interfaces) 文档。
-
+有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Physical_Interfaces){: new_window} 文档。
 在此场景中，将向指定的物理接口添加以下事件类型：
 - 摄氏温度事件 *tevt* 将使用来自主题的 *eventId* 以及通过创建事件模式资源而生成的 *eventTypeId*，添加到标识为 *5847d1df6522050001db0e1a* 的物理接口。
 - 华氏温度事件 *tempevt* 将使用来自主题的 *eventId* 以及通过创建事件模式资源而生成的 *eventTypeId*，添加到标识为 *5847d1df6522050001db0e1b* 的物理接口。
@@ -564,7 +561,7 @@ curl --request POST \
 PUT /device/types/{typeId}
 ```
 
-有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) 文档。
+有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types){: new_window} 文档。
 
 
 在此场景中，设备类型 *EnvSensor1* 更新为连接到物理接口 *5847d1df6522050001db0e1a*，并且设备类型 *EnvSensor2* 更新为连接到物理接口 *5847d1df6522050001db0e1b*。
@@ -664,8 +661,7 @@ curl --request PUT \
 ```
 POST /schemas
 ```
-有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Schemas) 文档。
-
+有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Schemas){: new_window} 文档。
 以下示例显示了如何使用 cURL 创建应用程序接口模式：
 
 ```
@@ -705,8 +701,7 @@ curl --request POST \
 ```
 POST /applicationinterfaces
 ```
-有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Application_Interfaces) 文档。
-
+有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Application_Interfaces){: new_window} 文档。
 在此场景中，使用在先前响应中返回的模式标识 *5846ec826522050001db0e11*，向应用程序接口添加应用程序接口模式。
 
 以下示例显示了如何使用 cURL 创建应用程序接口：
@@ -745,8 +740,7 @@ curl --request POST \
 ```
 POST /device/types/{typeId}/applicationinterfaces
 ```
-有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) 文档。
-
+有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types){: new_window} 文档。
 在此场景中，应用程序接口与设备类型 *EnvSensor1* 和设备类型 *EnvSensor2* 相关联。
 
 以下示例显示了如何使用 cURL 向设备类型 *EnvSensor1* 添加引用应用程序模式标识 *5846ec826522050001db0e11* 的应用程序接口 *5846ed076522050001db0e12*：
@@ -824,8 +818,7 @@ curl --request POST \
 ```
 POST /device/types/{typeId}/mappings
 ```
-有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) 文档。
-
+有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types){: new_window} 文档。
 在此场景中，将针对设备类型 *EnvSensor1* 定义映射以用于将入站事件 *tevt* 中的 **t** 属性映射到应用程序接口上的 **temperature** 属性。此外，还将针对设备类型 *EnvSensor1* 定义映射以用于将入站事件 *tempevt* 中的 **temp** 属性映射到应用程序接口上的 **temperature** 属性。
 
 以下示例显示了如何使用 cURL 向设备类型 *EnvSensor1* 添加映射：
@@ -898,8 +891,7 @@ curl --request POST \
 ```
 PATCH /device/types/{typeId}
 ```
-有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) 文档。
-
+有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types){: new_window} 文档。
 在此场景中，需要部署两种设备类型的配置。
 
 以下示例显示了如何使用 cURL 部署设备类型 *EnvSensor1* 的配置：
@@ -967,8 +959,7 @@ curl --request PATCH \
 ```
 GET /device/types/{typeId}/devices/{deviceId}/state/{applicationInterfaceId}
 ```
-有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) 文档。
-
+有关更多详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types){: new_window} 文档。
 以下示例显示了如何使用 cURL 通过引用所创建应用程序接口的标识来检索 *TemperatureSensor1* 的当前状态：
 ```
 curl --request GET \

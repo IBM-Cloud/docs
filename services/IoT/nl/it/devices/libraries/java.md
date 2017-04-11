@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-10-18"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -21,7 +21,7 @@ Puoi utilizzare Java™ per creare e personalizzare i dispositivi che interagisc
 ## Scaricare le risorse e il client Java
 {: #java_client_download}
 
-Per accedere agli esempi e alle librerie client Java per {{site.data.keyword.iot_short_notm}}, vai al repository [iot-java](https://github.com/ibm-watson-iot/iot-java) in GitHub e completa le istruzioni di installazione.
+Per accedere agli esempi e alle librerie client Java per {{site.data.keyword.iot_short_notm}}, vai al repository [iot-java ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/iot-java){: new_window} in GitHub e completa le istruzioni di installazione.
 
 ## Constructor
 {: #constructor}
@@ -406,4 +406,4 @@ public class RegisteredDeviceCommandSubscribe {
 ## Esempi
 {: #samples}
 
-Per un elenco di dispositivi e di esempi di gestione del dispositivo sviluppati utilizzando la libreria Java client {{site.data.keyword.iot_short_notm}}, consulta [iot-device-samples GitHub repository](https://github.com/ibm-messaging/iot-device-samples/tree/master/java).
+Per un elenco di dispositivi e di esempi di gestione del dispositivo sviluppati utilizzando la libreria Java client {{site.data.keyword.iot_short_notm}}, consulta il repository [iot-device-samples GitHub ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-messaging/iot-device-samples/tree/master/java){: new_window}.

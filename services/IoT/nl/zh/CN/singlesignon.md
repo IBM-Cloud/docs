@@ -2,11 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-10-05"
+lastupdated: "2017-03-13"
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -14,8 +14,11 @@ lastupdated: "2016-10-05"
 
 # 配置和使用 {{site.data.keyword.ssoshort}}
 
-{{site.data.keyword.ssofull}} 服务可配置为支持将替代用户认证服务提供者用于 {{site.data.keyword.iot_full}}。{{site.data.keyword.ssoshort}} 支持 SAML 2.0、IBM Cloud Directory、社交提供者（Facebook、LinkedIn 和 Google+）以及 Github。
+{{site.data.keyword.ssofull}} 服务可配置为支持将替代用户认证服务提供者用于 {{site.data.keyword.iot_full}}。
 {: .shortdesc}
+
+{{site.data.keyword.ssoshort}} 支持 SAML 2.0、IBM Cloud Directory、社交提供者（Facebook、LinkedIn 和 Google+）以及 Github。
+有关 {{site.data.keyword.Bluemix_notm}} SSO 服务的更多信息，请参阅[单点登录入门 ![外部链接图标](../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/services/SingleSignOn/index.html){:new_window}。
 
 ## 设置 {{site.data.keyword.ssoshort}}
 

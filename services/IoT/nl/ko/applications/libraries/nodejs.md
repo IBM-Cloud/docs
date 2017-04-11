@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-07-29"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -25,15 +25,15 @@ Node.js의 클라이언트 라이브러리 및 샘플을 조정하여 {{site.dat
 
 제공된 정보와 예제를 사용하면 Node.js를 사용한 애플리케이션 개발을 시작할 수 있습니다. 
 
-## Node.js 클라이언트 및 자원 다운로드
+## Node.js 클라이언트 및 리소스 다운로드
 {: #nodejs_client_download}
 
-{{site.data.keyword.iot_short_notm}}의 Node.js 클라이언트 라이브러리 및 기타 사용 가능한 자원에 액세스하려면 GitHub의 [iot-nodejs](https://github.com/ibm-watson-iot/iot-nodejs) 저장소로 이동하여 설치 지시사항을 완료하십시오. 
+{{site.data.keyword.iot_short_notm}}에 대한 Node.js 클라이언트 라이브러리 및 기타 사용 가능한 리소스에 액세스하려면 GitHub의 [iot-nodejs ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window} 저장소로 이동하여 설치 지시사항을 완료하십시오. 
 
 
-자세한 정보는 다음 자원을 참조하십시오. 
-- GitHub의 [애플리케이션 샘플](https://github.com/ibm-watson-iot/iot-nodejs/tree/master/samples). 
-- NPM의 [ibmiotf](https://www.npmjs.com/package/ibmiotf). 
+자세한 정보는 다음 리소스를 참조하십시오. 
+- GitHub의 [애플리케이션 샘플 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/iot-nodejs/tree/master/samples){: new_window}.
+- NPM의 [ibmiotf ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.npmjs.com/package/ibmiotf){: new_window}.
 - 이 문서의 [참조](#reference_nodejs) 섹션. 
 
 

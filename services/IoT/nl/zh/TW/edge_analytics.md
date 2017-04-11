@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-17"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -33,8 +33,8 @@ lastupdated: "2017-02-17"
 - 確定您要在規則中用來作為條件的裝置內容，已對映至綱目。如需相關資訊，請參閱[連接裝置](iotplatform_task.html)及[建立綱目](im_schemas.html)。
 - 檢閱「邊緣分析」秘訣  
 在「秘訣」入口網站中，有一些秘訣會說明執行「IBM 邊緣分析」所需的步驟。秘訣清楚地說明如何在以 Apache Edgent 為建置基礎的裝置上安裝及配置「IBM 邊緣分析代理程式」，來執行接近 IoT 資料來源的分析。
- - [開始在 IBM Watson IoT Platform 中使用邊緣分析 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/getting-started-with-edge-analytics-in-watson-iot-platform/){: new_window} 秘訣是此系列的開頭。此秘訣說明如何在「筆記型電腦系統及 Raspberry Pi 3 裝置」上設定 Cisco DSA Platform、安裝及配置「IBM 邊緣分析代理程式」來連接至 {{site.data.keyword.iot_short}}、安裝「系統 DS 鏈結」並將它配置成連接至 {{site.data.keyword.iot_short}} 上的「邊緣閘道」以作為連接的裝置、在「邊緣閘道」上定義及啟動「邊緣規則」，以及從 {{site.data.keyword.iot_short}} 管理「邊緣規則」。
- - 若要說明「邊緣分析」的進階使用，[在 IBM Watson IoT Platform 中使用邊緣分析處理警示及裝置動作 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/handling-alerts-and-device-actions-with-edge-analytics-in-ibm-watson-iot-platform/){: new_window} 秘訣示範如何建置自己的「DS 鏈結」，以將資料從連接的 Arduino Uno 裝置傳送至 Raspberry Pi 3 裝置。此秘訣也會示範資料過濾，以及將本端裝置動作處理為「邊緣規則」警示。
+ - [開始在 IBM Watson IoT Platform 中使用邊緣分析 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/tutorials/getting-started-with-edge-analytics-in-watson-iot-platform/){: new_window} 秘訣是此系列的開頭。此秘訣說明如何在「筆記型電腦系統及 Raspberry Pi 3 裝置」上設定 Cisco DSA Platform、安裝及配置「IBM 邊緣分析代理程式」來連接至 {{site.data.keyword.iot_short}}、安裝「系統 DS 鏈結」並將它配置成連接至 {{site.data.keyword.iot_short}} 上的「邊緣閘道」以作為連接的裝置、在「邊緣閘道」上定義及啟動「邊緣規則」，以及從 {{site.data.keyword.iot_short}} 管理「邊緣規則」。
+ - 為了說明「邊緣分析」的進階用法，[在 IBM Watson IoT Platform 中使用邊緣分析處理警示及裝置動作 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/tutorials/handling-alerts-and-device-actions-with-edge-analytics-in-ibm-watson-iot-platform/){: new_window} 秘訣會示範如何建置您自己的「DS 鏈結」，以將資料從連接的 Arduino Uno 裝置傳送至 Raspberry Pi 3 裝置。此秘訣也會示範資料過濾，以及將本端裝置動作處理為「邊緣規則」警示。
 
 ## 管理邊緣規則及動作  
 {: #managing_rules}

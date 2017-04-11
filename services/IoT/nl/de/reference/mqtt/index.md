@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-11-18"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -20,8 +20,8 @@ MQTT ist das primäre Protokoll, das Geräte und Anwendungen für die Kommunikat
 
 MQTT wird über TCP/IP ausgeführt; während es möglich ist, Code direkt an TCP/IP zu richten, können Sie auch eine Bibliothek verwenden, die die Details des MQTT-Protokolls für Sie handhabt. Es steht eine breite Auswahl an MQTT-Clientbibliotheken zur Verfügung. IBM trägt zur Entwicklung und Unterstützung mehrere Clientbibliotheken bei, einschließlich solcher, die auf den folgenden Sites zur Verfügung stehen:
 
-- [Community-Wiki für MQTT](https://github.com/mqtt/mqtt.github.io/wiki)
-- [Eclipse Paho-Projekt](http://eclipse.org/paho/)
+- [Community-Wiki für MQTT ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/mqtt/mqtt.github.io/wiki){: new_window}
+- [Eclipse Paho-Projekt ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](http://eclipse.org/paho/){: new_window}
 
 ## Versionsunterstützung
 {: #version-support}
@@ -85,7 +85,7 @@ Es bestehen auch Größenbegrenzungen für die Nachrichtennutzdaten in {{site.da
 
 ### Formateinschränkungen für Nachrichtennutzdaten
 
-Die Nachrichtennutzdaten können beliebige gültige Zeichenfolgen enthalten, das JSON-Fornat ('json'), das Textformat ('text') und das Binärformat ('bin') werden jedoch häufiger als andere Formattypen verwendet.
+Die Nachrichtennutzdaten können beliebige gültige Zeichenfolgen enthalten, das JSON-Format ('json'), das Textformat ('text') und das Binärformat ('bin') werden jedoch häufiger als andere Formattypen verwendet.
 
 In der folgenden Tabellen werden die Einschränkungen für Nachrichtennutzdaten für verschiedene Formattypen beschrieben:
 

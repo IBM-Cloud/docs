@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-11-18"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -20,8 +20,8 @@ MQTT è il protocollo primario che i dispositivi e le applicazioni utilizzano pe
 
 MQTT viene seguito su TCP/IP e mentre è possibile eseguire la codifica direttamente in TCP/IP, puoi anche scegliere di utilizzare una libreria che gestisce i dettagli del protocollo MQTT al tuo posto. Sono disponibili un'ampia gamma di librerie client MQTT. IBM contribuisce allo sviluppo e al supporto di librerie di client diversi, inclusi quelli che sono disponibili nei seguenti siti:
 
-- [MQTT community wiki](https://github.com/mqtt/mqtt.github.io/wiki)
-- [Eclipse Paho project](http://eclipse.org/paho/)
+- [MQTT community wiki ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/mqtt/mqtt.github.io/wiki){: new_window}
+- [Eclipse Paho project ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](http://eclipse.org/paho/){: new_window}
 
 ## Supporto versione
 {: #version-support}

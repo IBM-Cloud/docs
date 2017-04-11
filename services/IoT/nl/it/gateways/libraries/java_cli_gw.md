@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-11-30"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -342,12 +342,12 @@ gwClient.api().getDevicesConnectedThroughGateway(gatewayType, gatewayId);
 ## Esempi
 {: #samples}
 
-Sono disponibili molti esempi per aiutarti nel collegamento di gateway e dispositivi dietro un gateway alla tua istanza {{site.data.keyword.iot_short_notm}}. Gli esempi utilizzano la libreria client Java {{site.data.keyword.iot_short_notm}} ubicata nel [Gateway Samples GitHub repository](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples).
+Sono disponibili molti esempi per aiutarti nel collegamento di gateway e dispositivi dietro un gateway alla tua istanza {{site.data.keyword.iot_short_notm}}. Gli esempi utilizzano la libreria client Java {{site.data.keyword.iot_short_notm}} ubicata nel [Gateway Samples GitHub repository ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples){: new_window}.
 
 ## Istruzioni specifiche
 {: #recipes}
 
 | Ricetta     | Descrizione|
 |----------------|----------------
-|[Connecting your device as a gateway to {{site.data.keyword.iot_short_notm}}](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-gateway-to-watson-iot-platform/)| Un progetto GitHub e le istruzioni dettagliate che spiegano come collegare un gateway Raspberry Pi e i dispositivi Arduino Uno dietro il gateway a {{site.data.keyword.iot_short_notm}}.
-|[Raspberry Pi as a managed gateway in {{site.data.keyword.iot_short_notm}} ](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/)|Un'estensione della precedente ricetta gateway che spiega come collegare il tuo gateway Raspberry Pi come un dispositivo gestito in {{site.data.keyword.iot_short_notm}} e come eseguire le operazioni di gestione.
+|[Connecting your device as a gateway to {{site.data.keyword.iot_short_notm}} ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-gateway-to-watson-iot-platform/){: new_window}| Un progetto GitHub e le istruzioni dettagliate che spiegano come collegare un gateway Raspberry Pi e i dispositivi Arduino Uno dietro il gateway a {{site.data.keyword.iot_short_notm}}.
+|[Raspberry Pi as a managed gateway in {{site.data.keyword.iot_short_notm}} ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/){: new_window}|Un'estensione della precedente ricetta gateway che spiega come collegare il tuo gateway Raspberry Pi come un dispositivo gestito in {{site.data.keyword.iot_short_notm}} e come eseguire le operazioni di gestione.

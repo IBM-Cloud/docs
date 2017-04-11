@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2017-02-03"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -75,7 +75,7 @@ lastupdated: "2017-02-03"
 3. 按一下**新增套件**按鈕。
 4. 選取套件檔，然後按一下**開啟**。
 
-若要使用 API 新增自訂裝置管理套件，請參閱 [{{site.data.keyword.iot_short_notm}} API 文件 ![外部鏈結圖示](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}。
+若要使用 API 新增自訂裝置管理套件，請參閱 [{{site.data.keyword.iot_short_notm}} API 文件 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}。
 
 ### 延伸規格套件內容
 
@@ -128,7 +128,7 @@ lastupdated: "2017-02-03"
 - 若要刪除裝置管理延伸規格套件，請執行下列指令：
   `DELETE https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
 
-如需裝置管理延伸規格套件之 REST API 的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} API 第 2 版](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}文件。
+如需裝置管理延伸規格套件的 REST API 相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} API 第 2 版 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} 文件。
 
 
 ## 支援自訂裝置管理動作
@@ -163,7 +163,7 @@ lastupdated: "2017-02-03"
 
 ```
 
-如需裝置管理要求的相關資訊，請參閱[裝置管理通訊協定](index.html){: new_window}。
+如需裝置管理要求的相關資訊，請參閱[裝置管理通訊協定](index.html)。
 
 ## 起始自訂裝置管理動作
 {: #initiating_custom_dm_actions}
@@ -468,4 +468,4 @@ lastupdated: "2017-02-03"
 
 下列秘訣示範處理「裝置管理延伸規格」所需的流程：
 
-- [WIoT Platform 中的裝置管理延伸規格套件 ![外部鏈結圖示](../../../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/device-management-extension-packages-in-wiot-platform/){: new_window} 秘訣提供向 {{site.data.keyword.iot_short}} 登錄受管理裝置的指示，因此裝置可以接收及處理「裝置管理延伸規格」動作。秘訣中的程式碼範例是使用「Python 用戶端程式庫」所撰寫。
+- [WIoT Platform 中的裝置管理延伸規格套件 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/tutorials/device-management-extension-packages-in-wiot-platform/){: new_window} 秘訣提供向 {{site.data.keyword.iot_short}} 登錄受管理裝置的指示，讓裝置可以接收及處理「裝置管理延伸規格」動作。秘訣中的程式碼範例是使用「Python 用戶端程式庫」所撰寫。

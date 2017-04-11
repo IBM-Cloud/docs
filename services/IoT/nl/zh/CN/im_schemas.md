@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-03"
+lastupdated: "2017-03-14"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2017-02-03"
 
 **重要信息：**要使用规则和操作，模式是必需的。有关信息，请参阅 [Cloud Analytics](cloud_analytics.html#rules)。
 
-**重要信息：**分析功能是从 {{site.data.keyword.iotrtinsights_full}} 服务合并进来的。如果您的 {{site.data.keyword.iot_short_notm}} 组织用作现有 {{site.data.keyword.iotrtinsights_short}} 实例的数据源，那么在迁移现有 {{site.data.keyword.iotrtinsights_short}} 实例后，才会启用 Cloud Analytics 和 Edge Analytics。继续使用 {{site.data.keyword.iotrtinsights_short}} 仪表板来满足分析需要，直到迁移完成。有关更多信息，请参阅 IBM developerWorks 上的 [IBM Watson IoT Platform 博客 ![外部链接图标](../../icons/launch-glyph.svg)](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} 以及现有 {{site.data.keyword.iotrtinsights_short}} 实例仪表板。  
+**重要信息：**分析功能是从 {{site.data.keyword.iotrtinsights_full}} 服务合并进来的。如果您的 {{site.data.keyword.iot_short_notm}} 组织用作现有 {{site.data.keyword.iotrtinsights_short}} 实例的数据源，那么在迁移现有 {{site.data.keyword.iotrtinsights_short}} 实例后，才会启用 Cloud Analytics 和 Edge Analytics。继续使用 {{site.data.keyword.iotrtinsights_short}} 仪表板来满足分析需要，直到迁移完成。有关更多信息，请参阅 IBM developerWorks 上的 [IBM Watson IoT Platform 博客 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} 以及现有 {{site.data.keyword.iotrtinsights_short}} 实例仪表板。  
 
 ## 添加设备模式
 {: #add_schema}

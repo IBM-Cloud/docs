@@ -87,14 +87,14 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1017"
+     inkscape:window-height="1019"
      id="namedview67"
      showgrid="false"
-     inkscape:zoom="1.8222658"
-     inkscape:cx="350.93674"
-     inkscape:cy="66.228329"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:zoom="1.48"
+     inkscape:cx="323.65081"
+     inkscape:cy="23.017723"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2"
      fit-margin-top="0"
@@ -111,7 +111,7 @@
 	.st5{font-size:11px;}
 </style><text
      sodipodi:linespacing="125%"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;writing-mode:lr;text-anchor:start;"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:ArialMT;-inkscape-font-specification:'ArialMT, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
      y="31.807995"
      x="428.15906"
      id="text52"><tspan
@@ -122,17 +122,15 @@
 <text
      y="53.347538"
      x="167.3461"
-     style="font-size:12.5px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;"
+     style="font-size:11px;font-family:ArialMT"
      id="text60"
-     class="st4 st5"
-     sodipodi:linespacing="125%">{ &quot;t&quot; : 34.5 }</text>
+     class="st4 st5">{ &quot;t&quot; : 34.5 }</text>
 <text
      y="99.481323"
      x="158.73587"
-     style="font-size:12.5px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;"
+     style="font-size:11px;font-family:ArialMT"
      id="text64"
-     class="st4 st5"
-     sodipodi:linespacing="125%">{ &quot;temp&quot; : 72.55 } </text>
+     class="st4 st5">{ &quot;temp&quot; : 72.55 } </text>
 <path
      style="opacity:1;fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-3-4-3)"
      d="m 150.68061,64.685531 91.75413,0"
@@ -153,7 +151,7 @@
      id="path8199-4-4-1-0-5"
      inkscape:connector-curvature="0" /><text
      sodipodi:linespacing="125%"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;writing-mode:lr;text-anchor:start;"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:ArialMT;-inkscape-font-specification:'ArialMT, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
      y="118.83979"
      x="431.76743"
      id="text52-1"><tspan
@@ -163,8 +161,7 @@
        sodipodi:role="line">{ &quot;temperature&quot; : 22.52}</tspan></text>
 <g
      id="Background"
-     transform="translate(-20.022724,-44.937001)"
-     style="" /><rect
+     transform="translate(-20.022724,-44.937001)" /><rect
      ry="0"
      rx="0"
      y="29.080368"
@@ -174,7 +171,7 @@
      id="rect79371-1-6-6-9-8-7-3-5-1-2"
      style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /><text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
      x="55.520477"
      y="37.281235"
      id="text18189-1"
@@ -195,16 +192,15 @@
        x="55.520477"
        y="78.531235"
        id="tspan6878-8"
-       style="font-size:12.5px;stroke:none;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;" /><tspan
+       style="font-size:7.5px;stroke:none" /><tspan
        sodipodi:role="line"
        x="55.520477"
        y="92.281235"
        id="tspan18193-4"
-       style="font-size:12.5px;stroke:none;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;" /></text>
+       style="font-size:7.5px;stroke:none" /></text>
 <g
      id="g5278"
-     transform="translate(2.9739159,31.526045)"
-     style=""><path
+     transform="translate(2.9739159,31.526045)"><path
        id="path5280"
        d="M 40,12 35.33,12 9.67,12 5,12 5,33 9.67,33 35.34,33 40,33 40,12 Z m -9.22,8.06 5.32,0 m -5.32,2.44 5.32,0 m -5.32,2.44 5.32,0 m -18.57,-4.88 5.32,0 m -5.32,2.44 5.32,0 m -5.32,2.44 5.32,0 m -0.02,1.5 7.87,0 0,-7.87 -7.87,0 0,7.87 z m -10.98,-2.5 c 1.1,0 2,0.9 2,2 0,1.1 -0.9,2 -2,2 -1.1,0 -2,-0.9 -2,-2 0,-1.11 0.9,-2 2,-2 z m 1.98,-2.88 -4,0 0,-4 4,0 0,4 z"
        stroke-miterlimit="10"
@@ -219,7 +215,7 @@
      id="rect79371-1-6-6-9-8-7-3-5-1-2-7"
      style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /><text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
      x="56.084686"
      y="92.157532"
      id="text18189-1-4"
@@ -240,16 +236,15 @@
        x="56.084686"
        y="133.40753"
        id="tspan6878-8-0"
-       style="font-size:12.5px;stroke:none;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;" /><tspan
+       style="font-size:7.5px;stroke:none" /><tspan
        sodipodi:role="line"
        x="56.084686"
        y="147.15753"
        id="tspan18193-4-1"
-       style="font-size:12.5px;stroke:none;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;" /></text>
+       style="font-size:7.5px;stroke:none" /></text>
 <g
      id="g5278-5"
-     transform="translate(3.5381459,86.402349)"
-     style=""><path
+     transform="translate(3.5381459,86.402349)"><path
        id="path5280-9"
        d="M 40,12 35.33,12 9.67,12 5,12 5,33 9.67,33 35.34,33 40,33 40,12 Z m -9.22,8.06 5.32,0 m -5.32,2.44 5.32,0 m -5.32,2.44 5.32,0 m -18.57,-4.88 5.32,0 m -5.32,2.44 5.32,0 m -5.32,2.44 5.32,0 m -0.02,1.5 7.87,0 0,-7.87 -7.87,0 0,7.87 z m -10.98,-2.5 c 1.1,0 2,0.9 2,2 0,1.1 -0.9,2 -2,2 -1.1,0 -2,-0.9 -2,-2 0,-1.11 0.9,-2 2,-2 z m 1.98,-2.88 -4,0 0,-4 4,0 0,4 z"
        stroke-miterlimit="10"
@@ -264,13 +259,13 @@
      id="rect79371-1-6-6-9-8-7-3-5-1-2-7-5"
      style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /><text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-     x="608.64691"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+     x="614.64691"
      y="84.680206"
      id="text18189-5-9"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       x="608.64691"
+       x="614.64691"
        y="84.680206"
        id="tspan6913-6">アプリケーション</tspan></text>
 <g
@@ -324,7 +319,7 @@
      width="159.05859"
      id="rect79371-1-6-6-9-8-7-3-5-1-8-2-9"
      style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" /><text
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
      id="text44191"
      font-size="11"
      x="297.63156"
@@ -332,7 +327,7 @@
      sodipodi:linespacing="125%">Watson IoT Platform</text>
 <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
      x="249.5325"
      y="10.736328"
      id="text266398"
@@ -355,22 +350,17 @@
      id="rect79371-1-6-6-9-8-7-3-5-2-2-3"
      style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none" /><g
      id="Page-1_1_"
-     transform="matrix(1.0023432,0,0,0.84790301,249.41194,11.76214)"
-     style=""><g
+     transform="matrix(1.0023432,0,0,0.84790301,249.41194,11.76214)"><g
        transform="translate(-278,-377)"
-       id="Artboard-1-Longer_1_"
-       style=""><g
+       id="Artboard-1-Longer_1_"><g
          transform="translate(279,378)"
-         id="Page-1_2_"
-         style=""><g
-           id="IOt-Icon"
-           style=""><path
+         id="Page-1_2_"><g
+           id="IOt-Icon"><path
              d="m 30.25,30.4 -17.48,0 0,-17.66 17.48,0 0,17.66 z"
              id="Stroke-1_1_"
              inkscape:connector-curvature="0"
              style="fill:none;stroke:#ffffff;stroke-width:1.04999995" /><g
-             id="Group-20"
-             style=""><path
+             id="Group-20"><path
                d="m 24.31,21.55 c 0,-1.54 -1.26,-2.79 -2.81,-2.79 -1.55,0 -2.81,1.25 -2.81,2.79 0,1.54 1.26,2.79 2.81,2.79 1.55,-0.01 2.81,-1.25 2.81,-2.79 l 0,0 z"
                id="Stroke-2"
                inkscape:connector-curvature="0"
@@ -409,17 +399,17 @@
                style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round" /></g></g></g></g></g><text
      sodipodi:linespacing="125%"
      id="text44235-7-0"
-     y="118.23185"
-     x="286.04706"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+     y="116.23185"
+     x="276.04706"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
      xml:space="preserve"><tspan
-       y="118.23185"
-       x="286.04706"
+       y="116.23185"
+       x="276.04706"
        sodipodi:role="line"
        id="tspan6445-3-0">検証とマッピング</tspan></text>
 <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:'MS UI Gothic';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:'MS UI Gothic, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      x="89.821655"
      y="42.703396"
      id="text3411"
@@ -439,12 +429,12 @@
      style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none" /><text
      sodipodi:linespacing="125%"
      id="text44235-7-0-2"
-     y="69.641617"
-     x="283.61414"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+     y="67.641617"
+     x="273.61414"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
      xml:space="preserve"><tspan
-       y="69.641617"
-       x="283.61414"
+       y="67.641617"
+       x="273.61414"
        sodipodi:role="line"
        id="tspan6445-3-0-1">検証とマッピング</tspan></text>
 </svg>

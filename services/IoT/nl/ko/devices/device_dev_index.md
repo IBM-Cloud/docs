@@ -1,7 +1,9 @@
-----
+---
 
 copyright:
-  years: 2015, 2016, 2017
+  years: 2015, 2017
+
+lastupdated: "2017-03-14"
 
 ---
 
@@ -13,9 +15,6 @@ copyright:
 
 # {{site.data.keyword.iot_short_notm}}에서 디바이스 개발
 {: #device_dev_index}
-
-마지막 업데이트 날짜: 2016년 11월 26일
-{: .last-updated}
 
 디바이스는 인터넷에 연결되어 있으며 클라우드에 전송하거나 이로부터 수신할 데이터가 있는 모든 대상입니다. 디바이스를 사용하여 이벤트 정보(예: 센서 측정값)를 클라우드에 전송하고 클라우드의 애플리케이션에서 명령을 받을 수 있습니다. 
 
@@ -55,7 +54,7 @@ MQTT 프로토콜을 사용하여 {{site.data.keyword.iot_short_notm}}에 디바
 
 적합한 {{site.data.keyword.iot_short_notm}} 프로그래밍 안내서를 찾을 수 없으면, 자체 프로그램을 작성하고 MQTT 또는 HTTP 프로토콜을 사용하여 디바이스를 {{site.data.keyword.iot_short_notm}}에 연결할 수 있습니다. 
 
-MQTT는 OASIS 표준 조직에서 관리하며 ISO에서 국제적으로 인정하는 개방형 표준입니다. 자세한 정보는 [OASIS MQTT(Message Queuing Telemetry Transport)](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=mqtt)를 참조하십시오. 
+MQTT는 OASIS 표준 조직에서 관리하며 ISO에서 국제적으로 인정하는 개방형 표준입니다. 자세한 정보는 [OASIS MQTT(Message Queuing Telemetry Transport) ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=mqtt){: new_window}를 참조하십시오. 
 
 다음 환경을 포함하여 많은 서로 다른 시스템에 대해 매우 다양한 MQTT 클라이언트 라이브러리를 사용할 수 있습니다. 
 - http://www.eclipse.org/paho/

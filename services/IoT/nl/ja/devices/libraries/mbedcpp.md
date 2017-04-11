@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-11-22"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -16,10 +16,9 @@ lastupdated: "2016-11-22"
 # デバイス開発者用の mBed C++
 {: #mbedcpp}
 
-[mBed C++ クライアント・ライブラリー](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/)を使用すると、[mBed デバイス](https://www.mbed.com/en/) ([LPC1768](https://developer.mbed.org/platforms/mbed-LPC1768/) や [FRDM-K64F](https://developer.mbed.org/platforms/FRDM-K64F/) など) を {{site.data.keyword.iot_full}} サービスに簡単に接続できます。
-{:shortdesc}
+[mBed C++ クライアント・ライブラリー ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){: new_window} を使用して、[LPC1768](https://developer.mbed.org/platforms/mbed-LPC1768/) や [FRDM-K64F ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.mbed.org/platforms/FRDM-K64F/){: new_window} などの [mBed デバイス ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.mbed.com/en/){: new_window} を {{site.data.keyword.iot_full}} サービスに簡単に接続します。{:shortdesc}
 
-詳しくは、[developer.mbed.org](https://developer.mbed.org/) の [ibmiotf](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/) を参照してください。
+詳しくは、[developer.mbed.org ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.mbed.org/){: new_window} の [ibmiotf ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){: new_window} を参照してください。
 
 このライブラリーでは C++ を使用していますが、動的メモリー割り振りと STL 関数の使用は避けています。その理由は、mBed デバイスには特殊なメモリー・モデルが存在することがあり、移植が難しくなるためです。いずれにしても、このライブラリーを利用するなら、メモリーの使用について最大限に予測可能となります。
 
@@ -28,17 +27,17 @@ lastupdated: "2016-11-22"
 
 |従属関係 |説明|
 |:---|:---|
-|[Eclipse Paho MQTT ライブラリー](https://developer.mbed.org/teams/mqtt/code/MQTT/)|mBed デバイス向けの MQTT クライアント・ライブラリーを提供します。詳しくは、[Embedded MQTT C/C++ client libraries](http://www.eclipse.org/paho/clients/c/embedded/) を参照してください。|
-|[EthernetInterface ライブラリー](https://developer.mbed.org/users/mbed_official/code/EthernetInterface/)|イーサネット経由の mBed IP ライブラリー。|
+|[Eclipse Paho MQTT ライブラリー ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.mbed.org/teams/mqtt/code/MQTT/){: new_window}|mBed デバイス向けの MQTT クライアント・ライブラリーを提供します。詳しくは、[Embedded MQTT C/C++ client libraries ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window} を参照してください|
+|[EthernetInterface ライブラリー ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.mbed.org/users/mbed_official/code/EthernetInterface/){: new_window}|イーサネット経由の mBed IP ライブラリー。|
 
 ## ライブラリーの使用方法
 {: #library_use}
 
-mBed C++ IBMIoTF クライアント・ライブラリーを使用する場合は、[mBed コンパイラー](https://developer.mbed.org/compiler/)を使用してアプリケーションを作成します。mBed コンパイラーは、mBed マイクロコントローラー上で実行されるプログラムを作成、コンパイル、ダウンロードするために構成された、軽量のオンライン C/C++ IDE を提供します。
+mBed C++ IBMIoTF クライアント・ライブラリーを使用する場合は、[mBed コンパイラー ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.mbed.org/compiler/){: new_window} を使用してアプリケーションを作成します。mBed コンパイラーは、mBed マイクロコントローラー上で実行されるプログラムを作成、コンパイル、ダウンロードするために構成された、軽量のオンライン C/C++ IDE を提供します。
 
 **注:** mBed と共に実行するためにインストールまたはセットアップしなければならないものはありません。
 
-ARM mBed NXP LPC 1768 マイクロコントローラーを {{site.data.keyword.iot_short_notm}} に接続する方法については、[mBed C++ client library for IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/mbed-c-client-library-for-ibm-iot-foundation/) レシピを参照してください。
+ARM mBed NXP LPC 1768 マイクロコントローラーを {{site.data.keyword.iot_short_notm}} に接続する方法については、[mBed C++ client library for IBM Watson IoT Platform ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/mbed-c-client-library-for-ibm-iot-foundation/){: new_window} レシピを参照してください。
 
 ## コンストラクター
 {: #constructor}
@@ -162,7 +161,7 @@ ARM mBed NXP LPC 1768 マイクロコントローラーを {{site.data.keyword.i
         status = client.publishEvent("blink", buf);
 	....
 ```
-全体を示すサンプルについては、[IBMIoTClientLibrarySample](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/file/e58533b6bc6b/src/Main.cpp) を参照してください。
+全体を示すサンプルについては、[IBMIoTClientLibrarySample ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/file/e58533b6bc6b/src/Main.cpp){: new_window}を参照してください。
 
 ### イベントの QoS レベルの引き上げ
 
@@ -258,7 +257,7 @@ ARM mBed NXP LPC 1768 マイクロコントローラーを {{site.data.keyword.i
     client.yield(1000);  // allow the MQTT client to receive messages
     ....
 ```
-全体を示すサンプルについては、[IBMIoTClientLibrarySample](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/file/e58533b6bc6b/src/Main.cpp) を参照してください。
+全体を示すサンプルについては、[IBMIoTClientLibrarySample ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/file/e58533b6bc6b/src/Main.cpp){: new_window}を参照してください。
 
 **注:** コマンドを受け取るには `client.yield()` 関数を定期的に呼び出す必要があります。
 `client.yield()` 関数は、Watson IoT Platform からのコマンドをデバイスで受信できるようにし、接続が保持されるようにします。keepAlive 間隔で指定された時間フレーム内で `client.yield()` 関数が呼び出されなかった場合は、プラットフォームから送信されるコマンドをデバイスが受信しなくなります。`client.yield()` 関数に割り当てられる値は、ソケットからデータを読み取ることができる時間の長さ (ミリ秒) を指定します。この時間を過ぎると制御はアプリケーションに戻ります。
@@ -276,4 +275,4 @@ ARM mBed NXP LPC 1768 マイクロコントローラーを {{site.data.keyword.i
 ## サンプル
 {: #samples}
 
-[IBMIoTClientLibrarySample](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/) は、{{site.data.keyword.iot_short_notm}} クライアント・ライブラリーを使用して mbed LPC1768 デバイスまたは FRDM-K64F デバイスをサービス・インスタンスに接続する方法を示すコード・サンプルです。
+[IBMIoTClientLibrarySample ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/){: new_window} は、{{site.data.keyword.iot_short_notm}} クライアント・ライブラリーを使用して mbed LPC1768 デバイスまたは FRDM-K64F デバイスをサービス・インスタンスに接続する方法を示すコード・サンプルです。

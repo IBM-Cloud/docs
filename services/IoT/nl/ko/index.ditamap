@@ -52,8 +52,6 @@ navtitle="Bluemix 및 Watson IoT Platform" scope="peer">
 navtitle="Bluemix의 Watson IoT Platform" scope="peer"/>
 <topicref format="html" href="reference/bluemix_and_platform.html#iot-sla"
 navtitle="서비스 레벨 계약" scope="peer"/>
-<topicref format="html" href="reference/bluemix_and_platform.html#iot-pricing"
-navtitle="IoT 가격 책정" scope="peer"/>
 </topicref>
 <topicref format="html" href="reference/bluemix_and_platform.html#iot-pricing"
 navtitle="IoT 가격 책정" scope="peer"/>
@@ -68,7 +66,7 @@ href="information_management/im_index.html#overview" navtitle="개요"></topicre
 href="information_management/im_index.html#mapping"></topicref>
 <topicref format="html" outputclass="subsection" navtitle="핵심 개념"
 href="information_management/im_index.html#key_concepts"></topicref>
-<topicref format="html" outputclass="subsection" navtitle="자원"
+<topicref format="html" outputclass="subsection" navtitle="리소스"
 href="information_management/im_index.html#resources"></topicref>
 <topicref format="html" outputclass="subsection" navtitle="상위 레벨 워크플로우"
 href="information_management/im_index.html#workflow"></topicref>
@@ -76,8 +74,54 @@ href="information_management/im_index.html#workflow"></topicref>
 href="information_management/im_index.html#scenario"></topicref>
 
 </topicref>
+<topicref format="html" navtitle="인터페이스를 사용하여 디바이스 및 사물의 상태 확인"
+outputclass="subsection" href="information_management/im_index_split.html" audience="blue">
+<topicref format="html" outputclass="subsection"
+href="information_management/im_index_split.html#overview" navtitle="개요"
+></topicref>
+<topicref format="html" outputclass="subsection" navtitle="데이터 플로우"
+href="information_management/im_index_split.html#mapping"></topicref>
+<topicref format="html" outputclass="subsection" navtitle="핵심 개념"
+href="information_management/im_index_split.html#key_concepts"></topicref>
+
+<topicref format="html" outputclass="subsection" navtitle="상위 레벨 워크플로우"
+href="information_management/im_index.html#workflow"></topicref>
+<topicref format="html" outputclass="subsection"
+navtitle="시나리오 1: 디바이스 유형 인터페이스에 대한 작업"
+href="information_management/im_index_scenario.html"></topicref>
+<topicref format="html" outputclass="subsection"
+navtitle="시나리오 2: 사물 유형 인터페이스에 대한 작업"
+href="information_management/im_index_scenario_thing.html"></topicref>
+<topicref format="html" outputclass="subsection" navtitle="리소스"
+href="information_management/im_index_split.html#resources"></topicref>
+</topicref>
 <topicref format="html" href="gateways/gateway-access-control.html"
-navtitle="게이트웨이 액세스 제어" scope="peer"/>
+navtitle="게이트웨이 액세스 제어" scope="peer">
+<topicref format="html" href="gateways/gateway-access-control.html#gw_roles"
+navtitle="역할 지정" locktitle="yes"/>
+<topicref format="html" href="gateways/gateway-access-control.html#devices_groups"
+navtitle="디바이스 및 리소스 그룹" locktitle="yes"/>
+<topicref format="html" href="gateways/gateway-access-control.html#finding_groups"
+navtitle="리소스 그룹 찾기" locktitle="yes"/>
+<topicref format="html" href="gateways/gateway-access-control.html#querying_groups"
+navtitle="리소스 그룹 조회" locktitle="yes"/>
+<topicref format="html" href="gateways/gateway-access-control.html#crt_del_groups"
+navtitle="리소스 그룹 작성 및 삭제" locktitle="yes"/>
+<topicref format="html" href="gateways/gateway-access-control.html#update_groups"
+navtitle="그룹 특성 업데이트" locktitle="yes"/>
+<topicref format="html" href="gateways/gateway-access-control.html#device_group_props"
+navtitle="디바이스 특성 검색 및 업데이트" locktitle="yes"/>
+</topicref>
+<topicref format="html" outputclass="subsection" navtitle="게이트웨이 디바이스용 HTTP Messaging API"
+href="gateways/gw_intro_api.html">
+
+<topicref format="html" href="gateways/gw_intro_api.html#rest_messaging_api"
+navtitle="HTTP Messaging API에 액세스" locktitle="yes"/>
+<topicref format="html" href="gateways/gw_intro_api.html#client_connections"
+navtitle="클라이언트 연결" locktitle="yes"/>
+<topicref href="gateways/gw_intro_api.html#event_publication" format="html"
+navtitle="이벤트 공개"/>
+</topicref>
 <topicref format="html" href="applications/mqtt.html#shared_sub_mixed"
 navtitle="혼합 지속성 공유 구독" locktitle="yes"/>
 </topicref>
@@ -205,7 +249,7 @@ href="information_management/im_index_split.html#overview" audience="blue" navti
 href="information_management/im_index_split.html#mapping"></topicref>
 <topicref format="html" outputclass="subsection" audience="blue" navtitle="핵심 개념"
 href="information_management/im_index_split.html#key_concepts"></topicref>
-<topicref format="html" outputclass="subsection" audience="blue" navtitle="자원"
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="리소스"
 href="information_management/im_index_split.html#resources"></topicref>
 <topicref format="html" outputclass="subsection" audience="blue" navtitle="상위 레벨 워크플로우"
 href="information_management/im_index_split.html#workflow"></topicref>
@@ -214,8 +258,11 @@ href="information_management/im_index_split.html#workflow"></topicref>
 href="information_management/im_index_scenario.html#scenario"></topicref>
 </topicref>
 <topicref format="html" href="add_users.html" navtitle="사용자 액세스 관리" scope="peer">
-<topicref format="html" scope="peer" href="add_users.html#editing-users"
-navtitle="사용자 편집, 차단 및 제거"/>
+<topicref format="html" scope="peer" href="add_users.html#adding-new-users" navtitle="사용자 추가"/>
+<topicref format="html" scope="peer" href="add_users.html#editing-users" navtitle="사용자 편집"/>
+<topicref format="html" scope="peer" href="add_users.html#blocking-users" navtitle="사용자 차단"/>
+<topicref format="html" scope="peer" href="add_users.html#removing-users" navtitle="사용자 제거"
+/>
 </topicref>
 <topicref format="html" href="singlesignon.html" navtitle="IBM 싱글 사인온 사용" scope="peer"/>
 <topicref format="html" href="roles_index.html" navtitle="사용자, 애플리케이션 및 게이트웨이 역할"
@@ -243,62 +290,55 @@ navtitle="히스토리 데이터 스토리지" scope="peer"/>
 navtitle="디바이스 관리" scope="peer"/>
 <topicref format="html" href="reference/extensions/index.html#blockchain" navtitle="블록체인"
 scope="peer"/>
-<topicref format="html" href="reference/extensions/index.html#weathercompany"
-navtitle="The Weather Company" scope="peer"/>
+<topicref format="html" href="reference/extensions/index.html#email" navtitle="이메일" scope="peer"/>
 </topicref>
+<topicref format="html" href="information_management/twc_integration.html"
+navtitle="The Weather Company 데이터 통합"></topicref>
 <topicref format="html" href="bl_blockchain_integration.html"
-navtitle="블록체인 통합" scope="peer">
-<topicref format="html" href="bl_blockchain_integration.html#byb"
-navtitle="시작하기 전에" scope="peer"></topicref>
-<topicref format="html"
-href="bl_blockchain_integration.html#getting_started"
-navtitle=" 블록체인 패브릭에 연결" scope="peer"></topicref>
-<topicref format="html"
-href="bl_blockchain_integration.html#map_device_properties"
-navtitle=" 디바이스 특성 맵핑" scope="peer"></topicref>
+navtitle="블록체인 패브릭 통합" scope="peer">
+<topicref format="html" href="bl_blockchain_integration.html#byb" navtitle="시작하기 전에"
+scope="peer"/>
+<topicref format="html" href="bl_blockchain_integration.html#getting_started"
+navtitle=" 블록체인 패브릭에 연결" scope="peer"/>
+<topicref format="html" href="bl_blockchain_integration.html#map_device_properties"
+navtitle=" 디바이스 특성 맵핑" scope="peer"/>
 <topicref format="html" href="bl_blockchain_integration.html#test_simple"
-navtitle="샘플 스마트 계약 테스트 구동" scope="peer"></topicref>
-<topicref format="html" href="bl_blockchain_integration.html#next_steps"
-navtitle="다음 단계" scope="peer"></topicref>
+navtitle="샘플 스마트 계약 테스트 구동" scope="peer"/>
+<topicref format="html" href="bl_blockchain_integration.html#next_steps" navtitle="다음 단계"
+scope="peer"/>
 </topicref>
+<topicref format="html" href="service_status.html" navtitle="서비스 상태" locktitle="yes"/>
 </topicref>
-<topicref format="html" href="analytics.html"
-navtitle="IoT 데이터 분석" outputclass="subsection" scope="peer">
-<topicref format="html" href="data_visualization.html"
-navtitle="실시간 데이터 시각화" scope="peer">
-<topicref format="html" href="data_visualization.html#default_boards"
-navtitle="기본 보드" scope="peer"></topicref>
+<topicref format="html" href="analytics.html" navtitle="실시간 IoT 데이터 분석"
+outputclass="subsection" scope="peer">
+<topicref format="html" href="data_visualization.html" navtitle="실시간 데이터 시각화"
+scope="peer">
+<topicref format="html" href="data_visualization.html#default_boards" navtitle="기본 보드"
+scope="peer"/>
 <topicref format="html" href="data_visualization.html#visualizing_data"
-navtitle="보드 및 카드 작성" scope="peer"></topicref>
+navtitle="보드 및 카드 작성" scope="peer"/>
 <topicref format="html" href="/custom_cards/custom-cards.html" navtitle="사용자 정의 카드 사용"
 scope="peer"/>
 </topicref>
-<topicref format="html" href="cloud_analytics.html"
-navtitle="클라우드 분석" scope="peer">
-<topicref format="html" href="cloud_analytics.html#byb"
-navtitle="시작하기 전에" scope="peer"></topicref>
+<topicref format="html" href="cloud_analytics.html" navtitle="클라우드 분석" scope="peer">
+<topicref format="html" href="cloud_analytics.html#byb" navtitle="시작하기 전에" scope="peer"/>
 <topicref format="html" href="cloud_analytics.html#managing_rules"
-navtitle="규칙 및 조치 관리" scope="peer"></topicref>
-<topicref format="html" href="cloud_analytics.html#rules"
-navtitle="규칙 작성" scope="peer"></topicref>
+navtitle="규칙 및 조치 관리" scope="peer"/>
+<topicref format="html" href="cloud_analytics.html#rules" navtitle="규칙 작성" scope="peer"/>
 <topicref format="html" href="cloud_analytics.html#conditional"
-navtitle="조건부 규칙 트리거" scope="peer"></topicref>
-<topicref format="html" href="cloud_analytics.html#shared"
-navtitle="조치 작성 및 사용" scope="peer"></topicref>
+navtitle="조건부 규칙 트리거" scope="peer"/>
+<topicref format="html" href="cloud_analytics.html#shared" navtitle="조치 작성 및 사용"
+scope="peer"/>
 </topicref>
-<topicref format="html" href="edge_analytics.html"
-navtitle="에지 분석" scope="peer">
-<topicref format="html" href="edge_analytics.html#byb"
-navtitle="시작하기 전에" scope="peer"></topicref>
+<topicref format="html" href="edge_analytics.html" navtitle="에지 분석" scope="peer">
+<topicref format="html" href="edge_analytics.html#byb" navtitle="시작하기 전에" scope="peer"/>
 <topicref format="html" href="edge_analytics.html#managing_rules"
-navtitle="에지 규칙 및 조치 관리" scope="peer"></topicref>
-<topicref format="html" href="edge_analytics.html#rules"
-navtitle="에지 규칙 작성" scope="peer"></topicref>
-<topicref format="html" href="edge_analytics.html#edge_actions"
-navtitle="에지 조치 작성" scope="peer"></topicref>
-<topicref format="html"
-href="edge_analytics.html#integrate_with_cloud_analytics"
-navtitle="클라우드 분석과 통합" scope="peer"></topicref>
+navtitle="에지 규칙 및 조치 관리" scope="peer"/>
+<topicref format="html" href="edge_analytics.html#rules" navtitle="에지 규칙 작성" scope="peer"/>
+<topicref format="html" href="edge_analytics.html#edge_actions" navtitle="에지 조치 작성"
+scope="peer"/>
+<topicref format="html" href="edge_analytics.html#integrate_with_cloud_analytics"
+navtitle="클라우드 분석과 통합" scope="peer"/>
 <topicref format="html" href="edge_analytics.html#eaa_community" navtitle="Edge Analytics 커뮤니티"
 scope="peer" audience="blue"/>
 </topicref>
@@ -365,6 +405,10 @@ scope="peer"/>
 <topicref format="html" href="applications/api.html#rest_messaging_api"
 navtitle="HTTP REST 메시징 API" locktitle="yes"/>
 </topicref>
+<topicref format="html" href="applications/api_app_REST.html"
+navtitle="애플리케이션용 HTTP REST API" scope="peer" audience="blue"/>
+<topicref format="html" href="applications/api_app_Messaging.html"
+navtitle="애플리케이션용 HTTP 메시징" scope="peer" audience="blue"/>
 <topicref format="html" href="reference/mqtt/index.html" navtitle="MQTT 메시징" scope="peer">
 <topicref format="html" href="reference/mqtt/index.html#version-support" navtitle="버전 지원"
 scope="peer"/>
@@ -411,7 +455,7 @@ href="information_management/im_index.html#overview" audience="blue" navtitle="�
 href="information_management/im_index.html#mapping"></topicref>
 <topicref format="html" outputclass="subsection" audience="blue" navtitle="핵심 개념"
 href="information_management/im_index.html#key_concepts"></topicref>
-<topicref format="html" outputclass="subsection" audience="blue" navtitle="자원"
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="리소스"
 href="information_management/im_index.html#resources"></topicref>
 <topicref format="html" outputclass="subsection" audience="blue" navtitle="상위 레벨 워크플로우"
 href="information_management/im_index.html#workflow"></topicref>
@@ -422,7 +466,7 @@ href="information_management/im_index.html#scenario"></topicref>
 <topicref format="html" href="applications/libraries/python.html"
 navtitle="애플리케이션 개발자용 Python" scope="peer">
 <topicref format="html" href="applications/libraries/python.html#python_client_download"
-navtitle="Python 클라이언트 및 자원 다운로드" scope="peer"/>
+navtitle="Python 클라이언트 및 리소스 다운로드" scope="peer"/>
 <topicref format="html" href="applications/libraries/python.html#constructor" navtitle="생성자"
 scope="peer"/>
 <topicref format="html" href="applications/libraries/python.html#api_calls" navtitle="API 호출"
@@ -457,7 +501,7 @@ navtitle="히스토리 이벤트 검색" scope="peer"/>
 <topicref format="html" href="applications/libraries/nodejs.html"
 navtitle="애플리케이션 개발자용 Node.js" scope="peer">
 <topicref format="html" href="applications/libraries/nodejs.html#nodejs_client_download"
-navtitle="Node.js 클라이언트 및 자원 다운로드" scope="peer"/>
+navtitle="Node.js 클라이언트 및 리소스 다운로드" scope="peer"/>
 <topicref format="html" href="applications/libraries/nodejs.html#constructor" navtitle="생성자"
 scope="peer"/>
 <topicref format="html" href="applications/libraries/nodejs.html#connecting_to_iotp"
@@ -484,7 +528,7 @@ navtitle="참조" scope="peer"/>
 <topicref format="html" href="applications/libraries/java.html"
 navtitle="애플리케이션 개발자용 Java" scope="peer">
 <topicref format="html" href="applications/libraries/java.html#java_client_download"
-navtitle="Java 클라이언트 및 자원 다운로드" scope="peer"/>
+navtitle="Java 클라이언트 및 리소스 다운로드" scope="peer"/>
 <topicref format="html" href="applications/libraries/java.html#constructor" navtitle="생성자"
 scope="peer"/>
 <topicref format="html" href="applications/libraries/java.html#connecting_to_iotp"
@@ -507,7 +551,7 @@ navtitle="샘플" scope="peer"/>
 <topicref format="html" href="applications/libraries/c_sharp.html"
 navtitle="애플리케이션 개발자용 C#" scope="peer">
 <topicref format="html" href="applications/libraries/c_sharp.html#csharp_client_download"
-navtitle="C# 클라이언트 및 자원 다운로드" scope="peer"/>
+navtitle="C# 클라이언트 및 리소스 다운로드" scope="peer"/>
 <topicref format="html" href="applications/libraries/c_sharp.html#constructor"
 navtitle="생성자" scope="peer"/>
 <topicref format="html" href="applications/libraries/c_sharp.html#subscribe_device_events"
@@ -531,6 +575,10 @@ navtitle="HTTP REST 메시징 API" scope="peer"/>
 scope="peer"/>
 <topicref href="devices/api.html#last-event-cache" format="html" navtitle="마지막 이벤트 캐시"/>
 </topicref>
+<topicref format="html" href="devices/api_dev_REST.html" navtitle="디바이스용 HTTP REST API"
+scope="peer" audience="blue"/>
+<topicref format="html" href="devices/api_dev_Messaging.html" navtitle="디바이스용 HTTP 메시징"
+scope="peer" audience="blue"/>
 <topicref format="html" href="reference/mqtt/index.html" navtitle="MQTT 메시징" scope="peer">
 <topicref format="html" href="reference/mqtt/index.html#version-support" navtitle="버전 지원"
 scope="peer"/>
@@ -569,7 +617,7 @@ href="information_management/im_index.html#overview" audience="blue" navtitle="�
 href="information_management/im_index.html#mapping"></topicref>
 <topicref format="html" outputclass="subsection" audience="blue" navtitle="핵심 개념"
 href="information_management/im_index.html#key_concepts"></topicref>
-<topicref format="html" outputclass="subsection" audience="blue" navtitle="자원"
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="리소스"
 href="information_management/im_index.html#resources"></topicref>
 <topicref format="html" outputclass="subsection" audience="blue" navtitle="상위 레벨 워크플로우"
 href="information_management/im_index.html#workflow"></topicref>
@@ -642,7 +690,7 @@ navtitle="API 예제" scope="peer"/>
 <topicref format="html" href="devices/libraries/python.html" navtitle="디바이스 개발자용 Python"
 scope="peer">
 <topicref format="html" href="devices/libraries/python.html#python_client_download"
-navtitle="Python 클라이언트 및 자원 다운로드" scope="peer"/>
+navtitle="Python 클라이언트 및 리소스 다운로드" scope="peer"/>
 <topicref format="html" href="devices/libraries/python.html#constructor" navtitle="생성자"
 scope="peer"/>
 <topicref format="html" href="devices/libraries/python.html#publishing_events"
@@ -655,7 +703,7 @@ navtitle="사용자 정의 메시지 형식 지원" scope="peer"/>
 <topicref format="html" href="devices/libraries/nodejs.html"
 navtitle="디바이스 개발자용 Node.js" scope="peer">
 <topicref format="html" href="devices/libraries/nodejs.html#node.js_client_downloads"
-navtitle="Node.js 클라이언트 및 자원 다운로드" scope="peer"/>
+navtitle="Node.js 클라이언트 및 리소스 다운로드" scope="peer"/>
 <topicref format="html" href="devices/libraries/nodejs.html#constructor" navtitle="생성자"
 scope="peer"/>
 <topicref format="html" href="devices/libraries/nodejs.html#connecting_to_iotp"
@@ -673,7 +721,7 @@ navtitle="클라이언트 연결 끊기" scope="peer"/>
 <topicref format="html" href="devices/libraries/java.html" navtitle="디바이스 개발자용 Java"
 scope="peer">
 <topicref format="html" href="devices/libraries/java.html#java_client_download"
-navtitle="Java 클라이언트 및 자원 다운로드" scope="peer"/>
+navtitle="Java 클라이언트 및 리소스 다운로드" scope="peer"/>
 <topicref format="html" href="devices/libraries/java.html#constructor" navtitle="생성자"
 scope="peer"/>
 <topicref format="html" href="devices/libraries/java.html#connecting_to_iotp"
@@ -687,7 +735,7 @@ navtitle="명령 처리" scope="peer"/>
 <topicref format="html" href="devices/libraries/c_sharp.html" navtitle="디바이스 개발자용 C#"
 scope="peer">
 <topicref format="html" href="devices/libraries/c_sharp.html#csharp_client_download"
-navtitle="C# 클라이언트 및 자원 다운로드" scope="peer"/>
+navtitle="C# 클라이언트 및 리소스 다운로드" scope="peer"/>
 <topicref format="html" href="devices/libraries/c_sharp.html#constructor" navtitle="생성자"
 scope="peer"/>
 <topicref format="html" href="devices/libraries/c_sharp.html#publishing-events"
@@ -702,7 +750,7 @@ navtitle="명령 처리" scope="peer"/>
 <topicref format="html" href="devices/libraries/embedded_c.html"
 navtitle="디바이스 개발자용 Embedded C" scope="peer">
 <topicref format="html" href="devices/libraries/embedded_c.html#embeddedc_client_download"
-navtitle="Embedded C 클라이언트 및 자원 다운로드" scope="peer"/>
+navtitle="Embedded C 클라이언트 및 리소스 다운로드" scope="peer"/>
 <topicref format="html" href="devices/libraries/embedded_c.html#dependencies"
 navtitle="종속 항목" scope="peer"/>
 <topicref format="html" href="devices/libraries/embedded_c.html#installation"
@@ -744,15 +792,13 @@ scope="peer"/>
 navtitle="게이트웨이 개발">
 <topicref format="html" href="gateways/gw_api.html" navtitle="게이트웨이 디바이스용 HTTP REST API"
 scope="peer" audience="blue">
-<topicref format="html" href="gateways/gw_api.html" navtitle="HTTP REST API에 액세스"
+<topicref format="html" href="gateways/gw_api.html#client_connections" navtitle="클라이언트 연결"
 locktitle="yes" audience="blue"/>
-<topicref format="html" href="gateways/gw_api.html#rest_messaging_api"
-navtitle="HTTP REST 메시징 API" scope="peer" audience="blue"/>
-<topicref format="html" href="gateways/gw_api.html#event_publication" navtitle="이벤트 공개"
-scope="peer" audience="blue"/>
 <topicref href="gateways/gw_api.html#last-event-cache" format="html" navtitle="마지막 이벤트 캐시"
 audience="blue"/>
 </topicref>
+<topicref format="html" href="gateways/gw_intro_api.html"
+navtitle="게이트웨이 디바이스용 HTTP 메시징(베타)" scope="peer" audience="blue"/>
 <topicref format="html" href="reference/mqtt/index.html" navtitle="MQTT 메시징" scope="peer">
 <topicref format="html" href="reference/mqtt/index.html#version-support" navtitle="버전 지원"
 scope="peer"/>
@@ -787,7 +833,7 @@ scope="peer"/>
 <topicref format="html" href="gateways/libraries/java_cli_gw.html"
 navtitle="Java를 사용하여 게이트웨이 개발" locktitle="yes">
 <topicref format="html" href="gateways/libraries/java_cli_gw.html#java_client_download"
-navtitle="Java 클라이언트 및 자원 다운로드" scope="peer"/>
+navtitle="Java 클라이언트 및 리소스 다운로드" scope="peer"/>
 <topicref format="html" href="gateways/libraries/java_cli_gw.html#constructor"
 navtitle="생성자" scope="peer"/>
 <topicref format="html" href="gateways/libraries/java_cli_gw.html#connecting_to_iotp"
@@ -843,7 +889,13 @@ navtitle="다음 단계" scope="peer"></topicref>
 </topicref>
 <topicref format="html" href="reference/mqtt/index.html"
 navtitle="참조" outputclass="subsection" scope="peer">
-<topicref format="html" href="reference/rest_api.html" navtitle="API" scope="peer"/>
+<topicref format="html" href="reference/api.html" navtitle="API" scope="peer">
+<topicref format="html" href="reference/api.html#api_about" navtitle="HTTP API 정보" scope="peer"/>
+<topicref format="html" href="reference/api.html#api_http" navtitle="HTTP API" scope="peer"/>
+<topicref format="html" href="reference/api.html#api_extension" navtitle="확장 HTTP API"
+scope="peer"/>
+<topicref format="html" href="reference/api.html#api_beta" navtitle="베타 HTTP API" scope="peer"/>
+</topicref>
 <topicref format="html" href="reference/mqtt/index.html" navtitle="MQTT 메시징" scope="peer">
 <topicref format="html" href="reference/mqtt/index.html#version-support" navtitle="버전 지원"
 scope="peer"/>
@@ -881,42 +933,23 @@ navtitle="조직에 액세스하는 문제점" scope="peer"/>
 navtitle="플랫폼에 연결 문제" scope="peer"/>
 <topicref format="html" href="ts_index.html#disconnection_problem"
 navtitle="간헐적 연결 끊기" scope="peer"></topicref>
+<topicref format="html" href="service_status.html" navtitle="서비스 상태" locktitle="yes"/>
 <topicref format="html" href="ts_index.html#gettinghelp"
 navtitle="도움 및 지원 받기" scope="peer"></topicref>
 </topicref>
 <topicref audience="blue" format="html" href="glossary.html" navtitle="용어집"
 outputclass="subsection" scope="peer"/>
+<topicref audience="blue" navtitle="developerWorks 리소스" href="experimental/experimental.html">
+<topicref audience="blue" navtitle="Cookbook" href="experimental/cookbook.html"/>
 </topicref>
-<topicref audience="blue" navtitle="아래의 테스트 섹션"/>
-<topicref format="html" href="index.html" locktitle="yes" navtitle="시작하기" scope="peer"
-audience="blue">
-<topicref format="html" href="index.html#byb" navtitle="시작하기 전에" scope="peer"/>
-<topicref format="html" href="index.html#up_and_running" navtitle="디바이스 연결"
-scope="peer"/>
-<topicref format="html" href="index.html#analyzing_data" navtitle="디바이스 데이터 분석" scope="peer"/>
-<topicref format="html" href="index.html#develop_applications" navtitle="애플리케이션 개발"
-scope="peer"/>
+<topicref navtitle="관련 링크" href="iot_platform_rel_links.html" audience="blue">
+<topicref navtitle="일반 리소스" href="iot_platform_rel_links.html#general"/>
+<topicref navtitle="튜토리얼 및 샘플" href="iot_platform_rel_links.html#samples"/>
+<topicref navtitle="API 참조" href="iot_platform_rel_links.html#api"/>
+<topicref navtitle="클라이언트 라이브러리"
+href="iot_platform_rel_links.html#client_libraries"/>
+<topicref navtitle="Bluemix 정보" href="iot_platform_rel_links.html#bluemixinfo"/>
+<topicref navtitle="보안" href="iot_platform_rel_links.html#security"/>
 </topicref>
-<topicref format="html" href="iotplatform_overview.html#about_iotplatform" navtitle="정보"
-outputclass="subsection" scope="peer" audience="blue">
-<topicref format="html" href="iotplatform_overview.html#watsoniotplatform_architecture"
-navtitle="아키텍처" outputclass="subsection" scope="peer"/>
-<topicref format="html" href="iotplatform_overview.html#watsoniotplatform_importantconcepts"
-navtitle="개념" scope="peer"/>
-<topicref format="html" href="feature_overview.html" navtitle="기능 개요" scope="peer">
-<topicref format="html" href="feature_overview.html#connect" navtitle="연결" scope="peer"/>
-<topicref format="html" href="feature_overview.html#information_management"
-navtitle="정보 관리" scope="peer"/>
-<topicref format="html" href="feature_overview.html#analytics" navtitle="분석" scope="peer"/>
-<topicref format="html" href="feature_overview.html#risk_management" navtitle="위험 관리"
-scope="peer"/>
-</topicref>
-<topicref audience="blue" format="html" href="reference/standards_and_requirements.html"
-navtitle="지원되는 표준 및 요구사항" scope="peer">
-<topicref format="html" href="reference/standards_and_requirements.html#mqtt" navtitle="MQTT"
-scope="peer"/>
-</topicref>
-<topicref format="html" href="reference/bluemix_and_platform.html"
-navtitle="Bluemix 및 Watson IoT Platform" scope="peer"/>
 </topicref>
 </map>

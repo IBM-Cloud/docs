@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-11-18"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -20,8 +20,8 @@ MQTT は、デバイスとアプリケーションが {{site.data.keyword.iot_fu
 
 MQTT は TCP/IP で実行されます。TCP/IP の直接コーディングも可能ですが、MQTT プロトコルの詳細を処理するライブラリーを使用することもできます。広範囲の MQTT クライアント・ライブラリーが用意されています。IBM は、いくつかのクライアント・ライブラリーの開発やサポートに寄与しています。それには以下のサイトで利用可能なものが含まれます。
 
-- [MQTT コミュニティー Wiki](https://github.com/mqtt/mqtt.github.io/wiki)
-- [Eclipse Paho プロジェクト](http://eclipse.org/paho/)
+- [MQTT community wiki ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/mqtt/mqtt.github.io/wiki){: new_window}
+- [Eclipse Paho プロジェクト ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://eclipse.org/paho/){: new_window}
 
 ## バージョン・サポート
 {: #version-support}

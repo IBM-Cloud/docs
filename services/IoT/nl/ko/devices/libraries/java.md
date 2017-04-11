@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-10-18"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -18,10 +18,10 @@ lastupdated: "2016-10-18"
 Java™를 사용하여 {{site.data.keyword.iot_full}}에서 조직과 상호작용하는 디바이스를 빌드하고 사용자 정의할 수 있습니다. 디바이스 개발을 시작하는 데 도움이 되도록 {{site.data.keyword.iot_short_notm}}의 Java 클라이언트 라이브러리, 문서 및 예가 제공됩니다.
 {:shortdesc}
 
-## Java 클라이언트 및 자원 다운로드
+## Java 클라이언트 및 리소스 다운로드
 {: #java_client_download}
 
-{{site.data.keyword.iot_short_notm}}의 Java 클라이언트 라이브러리 및 샘플에 액세스하려면 GitHub의 [iot-java](https://github.com/ibm-watson-iot/iot-java) 저장소로 이동하여 설치 지시사항을 완료하십시오.
+{{site.data.keyword.iot_short_notm}}에 대한 Java 클라이언트 라이브러리 및 샘플에 액세스하려면, GitHub의 [iot-java ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/iot-java){: new_window} 저장소로 이동하여 설치 지시사항을 완료하십시오. 
 
 ## 생성자
 {: #constructor}
@@ -406,4 +406,4 @@ public class RegisteredDeviceCommandSubscribe {
 ## 샘플
 {: #samples}
 
-{{site.data.keyword.iot_short_notm}} Java 클라이언트 라이브러리를 사용하여 개발된 디바이스 관리 샘플 및 디바이스의 목록은 [iot-device-samples GitHub 저장소](https://github.com/ibm-messaging/iot-device-samples/tree/master/java)를 참조하십시오. 
+{{site.data.keyword.iot_short_notm}} Java 클라이언트 라이브러리를 사용하여 개발되는 디바이스 및 디바이스 관리 샘플 목록에 대해서는 [iot-device-samples GitHub repository ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/iot-device-samples/tree/master/java){: new_window}를 참조하십시오. 

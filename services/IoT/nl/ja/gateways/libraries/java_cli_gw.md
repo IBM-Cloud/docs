@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-11-30"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -36,8 +36,8 @@ lastupdated: "2016-11-30"
 |`id` |ゲートウェイの固有の ID を指定する必須の値。|
 |`auth-method`|使用する認証の方式。サポートされている唯一の方式は `token` です。|
 |`auth-token`|ゲートウェイを {{site.data.keyword.iot_short_notm}} にセキュア接続するための API キー認証トークン。|
-|`clean-session`|true または false 値。永続サブスクリプション・モードでゲートウェイを接続する場合のみ必要です。デフォルトでは、`clean-session` は true に設定されます。|
-|`WebSocket`|true または false 値。Web ソケットを使用してゲートウェイを接続する場合のみ必要です。|
+|`clean-session`|true または false の値。永続サブスクリプション・モードでゲートウェイを接続する場合のみ必要です。デフォルトでは、`clean-session` は true に設定されます。|
+|`WebSocket`|true または false の値。Web ソケットを使用してゲートウェイを接続する場合のみ必要です。|
 |`Port`|接続先のポート番号。8883 か 443 のいずれかを指定してください。ポート番号を指定しない場合、クライアントは、デフォルトのポート番号 8883 で {{site.data.keyword.iot_short_notm}} に接続します。|
 |`MaxInflightMessages`|接続の処理中メッセージの最大数を設定します。デフォルト値は 100 です。|
 |`Automatic-Reconnect`|true か false の値。切断状態になったゲートウェイを自動的に {{site.data.keyword.iot_short_notm}} に再接続する場合は、これを指定する必要があります。デフォルト値は false です。|
@@ -114,7 +114,7 @@ gwClient .connect(10);
 自動的に、または API を使用してコードを開発することによって、{{site.data.keyword.iot_short_notm}} インスタンスに接続されたゲートウェイの背後のデバイスを登録できます。
 
 ### デバイスの自動登録
-ゲートウェイが自身に接続されたデバイスのイベントをパブリッシュしたり、コマンドをサブスクライブしたりするたびに、デバイスを {{site.data.keyword.iot_short_notm}} に自動的に登録できます。
+ゲートウェイがその接続されたデバイスのイベントをパブリッシュしたり、コマンドをサブスクライブしたりするたびに、デバイスを {{site.data.keyword.iot_short_notm}} に自動的に登録できます。
 
 ### API デバイスの登録
 {{site.data.keyword.iot_short_notm}} API を使用して、ゲートウェイの背後のデバイスを {{site.data.keyword.iot_short_notm}} インスタンスに登録することもできます。
@@ -340,12 +340,12 @@ gwClient.api().getDevicesConnectedThroughGateway(gatewayType, gatewayId);
 ## サンプル
 {: #samples}
 
-ゲートウェイとゲートウェイの背後のデバイスを {{site.data.keyword.iot_short_notm}} インスタンスに接続するためのサンプルがいくつか用意されています。これらのサンプルは {{site.data.keyword.iot_short_notm}} Java クライアント・ライブラリーを使用しており、[ゲートウェイ・サンプル GitHub リポジトリー](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples)に置かれています。
+ゲートウェイとゲートウェイの背後のデバイスを {{site.data.keyword.iot_short_notm}} インスタンスに接続するためのサンプルがいくつか用意されています。これらのサンプルは {{site.data.keyword.iot_short_notm}} Java クライアント・ライブラリーを使用しており、[ゲートウェイ・サンプル GitHub リポジトリー ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples){: new_window} に置かれています。
 
 ## レシピ
 {: #recipes}
 
 | レシピ     | 説明|
 |----------------|----------------
-|[Connecting your device as a gateway to {{site.data.keyword.iot_short_notm}}](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-gateway-to-watson-iot-platform/)| GitHub プロジェクト。Raspberry Pi ゲートウェイとゲートウェイの背後の Arduino Uno デバイスを {{site.data.keyword.iot_short_notm}} に接続する方法に関する詳細手順です。
-|[Raspberry Pi as a managed gateway in {{site.data.keyword.iot_short_notm}} ](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/)|上記のゲートウェイ・レシピの拡張。Raspberry Pi ゲートウェイを {{site.data.keyword.iot_short_notm}} 内の管理対象デバイスとして接続する方法と、デバイス管理の操作方法を説明しています。
+|[Connecting your device as a gateway to {{site.data.keyword.iot_short_notm}} ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-gateway-to-watson-iot-platform/){: new_window}| GitHub プロジェクト。Raspberry Pi ゲートウェイとゲートウェイの背後の Arduino Uno デバイスを {{site.data.keyword.iot_short_notm}} に接続する方法に関する詳細手順です。
+|[Raspberry Pi as a managed gateway in {{site.data.keyword.iot_short_notm}} ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/){: new_window}|上記のゲートウェイ・レシピの拡張。Raspberry Pi ゲートウェイを {{site.data.keyword.iot_short_notm}} 内の管理対象デバイスとして接続する方法と、デバイス管理の操作方法を説明しています。

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-20"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -76,10 +76,10 @@ lastupdated: "2017-02-20"
 
 포럼을 사용하여 질문하는 경우 {{site.data.keyword.Bluemix_notm}} 개발 팀이 볼 수 있도록 질문에 태그를 지정하십시오.
 
-* {{site.data.keyword.iot_short_notm}}에서 앱을 개발하거나 배치하는 데 대한 기술적 질문이 있으면 [스택 오버플로우 ![외부 링크 아이콘](../../icons/launch-glyph.svg)](http://stackoverflow.com/search?q=watson-iot+ibm-bluemix){:new_window}에 질문을 게시하고 질문에 "ibm-bluemix" 및 "watson-iot" 태그를 지정하십시오. 
+* {{site.data.keyword.iot_short_notm}}을 사용하여 앱 개발 또는 배치에 대한 기술적 질문이 있는 경우 [스택 오버플로우 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://stackoverflow.com/search?q=watson-iot+ibm-bluemix){:new_window}에 게시하고 질문에 "ibm-bluemix" 및 "watson-iot" 태그를 지정하십시오. 
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
-* 서비스 및 시작하기 지시사항에 대한 질문이 있으면 [IBM developerWorks dW 응답 ![External link icon](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window} 포럼을 사용하십시오. "watson-iot" 및 "bluemix" 태그를 포함하십시오.
+* 서비스 및 시작하기 지시사항에 대한 질문은 [IBM developerWorks dW Answers ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window} 포럼을 사용하십시오. "watson-iot" 및 "bluemix" 태그를 포함하십시오.
 
 포럼 사용에 대한 세부사항은 [도움 받기](https://www.{DomainName}/docs/support/index.html#getting-help)를 참조하십시오.
 
-IBM 지원 티겟 열기에 대한 정보나 지원 레벨 및 티켓 심각도에 대한 정보는 [지원 센터에 문의 ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/support/index.html#contacting-support)를 참조하십시오. 
+IBM 지원 센터 티켓 열기에 대한 정보나 지원 레벨 및 티켓 심각도에 대한 정보는 [지원 센터에 문의 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.{DomainName}/docs/support/index.html#contacting-support)를 참조하십시오. 

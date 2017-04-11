@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-20"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -76,10 +76,10 @@ Bei Problemen und Fragen zur Verwendung von {{site.data.keyword.iot_short_notm}}
 
 Wenn Sie zum Stellen von Fragen die Foren verwenden, müssen Sie Ihre Frage mit einem Tag versehen, damit die {{site.data.keyword.Bluemix_notm}}-Entwicklungsteams auf sie aufmerksam werden.
 
-* Wenn Sie technische Fragen dazu haben, wie eine App mithilfe von {{site.data.keyword.iot_short_notm}} entwickelt oder implementiert wird, posten Sie Ihre Fragen an [Stack Overflow ![Symbol für externen Link](../../icons/launch-glyph.svg)](http://stackoverflow.com/search?q=watson-iot+ibm-bluemix){:new_window} und verwenden Sie die Tags 'ibm-bluemix' und 'watson-iot'.
+* Wenn Sie technische Fragen dazu haben, wie eine App mithilfe von {{site.data.keyword.iot_short_notm}} entwickelt oder implementiert wird, posten Sie Ihre Fragen an [Stack Overflow ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://stackoverflow.com/search?q=watson-iot+ibm-bluemix){:new_window} und verwenden Sie die Tags 'ibm-bluemix' und 'watson-iot'.
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
-* Verwenden Sie für Fragen zu den Anweisungen für Services und die Einführung das Forum [IBM developerWorks dW Answers ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window}. Schließen Sie die Tags 'watson-iot' und 'bluemix' ein.
+* Verwenden Sie für Fragen zu den Anweisungen für Services und die Einführung das Forum [IBM developerWorks dW Answers ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window}. Schließen Sie die Tags 'watson-iot' und 'bluemix' ein.
 
 Weitere Details zur Verwendung der Foren finden Sie in [Hilfe anfordern](https://www.{DomainName}/docs/support/index.html#getting-help).
 
-Informationen zum Öffnen eines IBM Support-Tickets oder zu Supportebenen und zur Priorität von Tickets finden Sie unter [Support kontaktieren ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/support/index.html#contacting-support).
+Informationen zum Öffnen eines IBM Support-Tickets oder zu Supportebenen und zur Priorität von Tickets finden Sie in [Support kontaktieren ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.{DomainName}/docs/support/index.html#contacting-support).

@@ -1,7 +1,9 @@
-----
+---
 
 copyright:
-  years: 2015, 2016, 2017
+  years: 2015, 2017
+
+lastupdated: "2017-03-14"
 
 ---
 
@@ -13,9 +15,6 @@ copyright:
 
 # 在 {{site.data.keyword.iot_short_notm}} 上開發裝置
 {: #device_dev_index}
-
-前次更新：2016 年 11 月 26 日
-{: .last-updated}
 
 裝置具有網際網路連線，並且可將資料傳送至雲端或接收來自雲端的資料。您可以使用裝置將感應器讀數這類事件資訊傳送至雲端，以及接受來自雲端中應用程式的指令。
 
@@ -55,7 +54,7 @@ copyright:
 
 如果您找不到適合的 {{site.data.keyword.iot_short_notm}} 程式設計手冊，則可以撰寫自己的程式，並使用 MQTT 或 HTTP 通訊協定將裝置連接至 {{site.data.keyword.iot_short_notm}}。
 
-MQTT 是由 ISO 認可的 OASIS 國際標準組織所管理的開放式標準。如需相關資訊，請參閱 [OASIS 訊息佇列作業遙測傳輸](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=mqtt)。
+MQTT 是由 ISO 認可的 OASIS 國際標準組織所管理的開放式標準。如需相關資訊，請參閱 [OASIS 訊息佇列作業遙測傳輸 ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=mqtt){: new_window}。
 
 許多不同的系統會有各種 MQTT 用戶端程式庫，包括下列環境：
 - http://www.eclipse.org/paho/

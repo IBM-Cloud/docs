@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-09-01"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -29,10 +29,10 @@ IBM에서는 디바이스, 게이트웨이 및 애플리케이션을 {{site.data
 
 Watson IoT Node는 디바이스 또는 게이트웨이를 {{site.data.keyword.iot_short_notm}}에 연결하기 위한 한 쌍의 노드입니다. 디바이스 또는 게이트웨이는 이러한 노드를 사용하여 이벤트를 전송하고 애플리케이션의 명령을 수신할 수 있습니다. 
 
-Watson IoT Node에 대한 자세한 정보는 다음 자원을 참조하십시오. 
+Watson IoT Node에 대한 자세한 정보는 다음 리소스를 참조하십시오. 
 
-- [GitHub의 Watson IoT Node](https://github.com/ibm-watson-iot/iot-nodered/tree/master/node-red-contrib-ibm-watson-iot)
-- [Watson IoT Node 문서](https://www.npmjs.com/package/node-red-contrib-ibm-watson-iot)
+- [GitHub의 Watson IoT Node ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/iot-nodered/tree/master/node-red-contrib-ibm-watson-iot){: new_window}
+- [Watson IoT Node 문서 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.npmjs.com/package/node-red-contrib-ibm-watson-iot){: new_window}
 
 
 ## IBM IoT App Node  
@@ -43,10 +43,10 @@ Watson IoT Node에 대한 자세한 정보는 다음 자원을 참조하십시�
 
 IBM IoT App Node는 애플리케이션을 {{site.data.keyword.iot_short_notm}}에 연결하기 위한 한 쌍의 노드입니다. 애플리케이션은 노드를 사용하여 디바이스 이벤트를 수신하고 명령을 다시 디바이스로 전송할 수 있습니다. 
 
-IBM IoT App Node에 대한 자세한 정보는 다음 자원을 참조하십시오. 
+IBM IoT App Node에 대한 자세한 정보는 다음 리소스를 참조하십시오. 
 
-- [GitHub의 IBM IoT App Node](https://github.com/ibm-watson-iot/iot-nodered/tree/master/node-red-contrib-scx-ibmiotapp)
-- [IBM IoT App Node 문서](http://flows.nodered.org/node/node-red-contrib-scx-ibmiotapp)
+- [GitHub의 IBM IoT App Node ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/iot-nodered/tree/master/node-red-contrib-scx-ibmiotapp){: new_window}
+- [IBM IoT App Node 문서 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](http://flows.nodered.org/node/node-red-contrib-scx-ibmiotapp){: new_window}
 
 
 ## 자세한 정보 및 샘플   
@@ -54,7 +54,7 @@ IBM IoT App Node에 대한 자세한 정보는 다음 자원을 참조하십시�
 
 
 시작하는 데 도움을 받으려면 다음 샘플 레시피를 사용하십시오. 
-- [Node-RED를 사용하여 {{site.data.keyword.iot_short_notm}} 시작하기](https://developer.ibm.com/recipes/tutorials/getting-started-with-watson-iot-platform-using-node-red/)
-- [Node-RED를 사용하여 {{site.data.keyword.iot_short_notm}}에 디바이스로서 Raspberry Pi 연결](https://developer.ibm.com/recipes/tutorials/deploy-watson-iot-node-on-raspberry-pi/)
+- [Node-RED를 사용하여 {{site.data.keyword.iot_short_notm}} 시작하기 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/getting-started-with-watson-iot-platform-using-node-red/){: new_window}
+- [Node-RED를 사용하여 디바이스로 {{site.data.keyword.iot_short_notm}}에 Raspberry Pi 연결 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/deploy-watson-iot-node-on-raspberry-pi/){: new_window}
 
 자세한 정보는 [Node-RED 스타터로 앱 작성](https://console.ng.bluemix.net/docs/starters/Node-RED/nodered.html#nodered)도 참조하십시오. 

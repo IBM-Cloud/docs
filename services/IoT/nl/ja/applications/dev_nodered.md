@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-09-01"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -31,8 +31,8 @@ Watson IoT Node は、デバイスまたはゲートウェイを {{site.data.key
 
 Watson IoT Node について詳しくは、次のリソースを参照してください。
 
-- [GitHub の Watson IoT Node](https://github.com/ibm-watson-iot/iot-nodered/tree/master/node-red-contrib-ibm-watson-iot)
-- [Watson IoT Node 資料](https://www.npmjs.com/package/node-red-contrib-ibm-watson-iot)
+- [GitHub の Watson IoT Node ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/iot-nodered/tree/master/node-red-contrib-ibm-watson-iot){: new_window}
+- [Watson IoT Node 資料 ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.npmjs.com/package/node-red-contrib-ibm-watson-iot){: new_window}
 
 
 ## IBM IoT App Node  
@@ -45,8 +45,8 @@ IBM IoT App Node は、アプリケーションを {{site.data.keyword.iot_short
 
 IBM IoT App Node について詳しくは、次のリソースを参照してください。
 
-- [GitHub の IBM IoT App Node](https://github.com/ibm-watson-iot/iot-nodered/tree/master/node-red-contrib-scx-ibmiotapp)
-- [IBM IoT App Node 資料](http://flows.nodered.org/node/node-red-contrib-scx-ibmiotapp)
+- [GitHub の IBM IoT App Node ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/iot-nodered/tree/master/node-red-contrib-scx-ibmiotapp){: new_window}
+- [IBM IoT App Node 資料![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://flows.nodered.org/node/node-red-contrib-scx-ibmiotapp){: new_window}
 
 
 ## 詳細とサンプル   
@@ -54,7 +54,7 @@ IBM IoT App Node について詳しくは、次のリソースを参照してく
 
 
 初めて使用する場合は、次のサンプル・レシピを使用すると役に立ちます。
-- [Getting started with {{site.data.keyword.iot_short_notm}} by using Node-RED](https://developer.ibm.com/recipes/tutorials/getting-started-with-watson-iot-platform-using-node-red/)
-- [Connecting Raspberry Pi as a device to {{site.data.keyword.iot_short_notm}} by using Node-RED](https://developer.ibm.com/recipes/tutorials/deploy-watson-iot-node-on-raspberry-pi/)
+- [Getting started with {{site.data.keyword.iot_short_notm}} by using Node-RED ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/getting-started-with-watson-iot-platform-using-node-red/){: new_window}
+- [Connecting Raspberry Pi as a device to {{site.data.keyword.iot_short_notm}} by using Node-RED ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/deploy-watson-iot-node-on-raspberry-pi/){: new_window}
 
 詳しくは、[Node-RED Starter によるアプリの作成](https://console.ng.bluemix.net/docs/starters/Node-RED/nodered.html#nodered)も参照してください。

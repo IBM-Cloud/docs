@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-17"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -33,8 +33,8 @@ lastupdated: "2017-02-17"
 - 确保要用作规则中条件的设备属性已映射到模式。请参阅[连接设备](iotplatform_task.html)和[创建模式](im_schemas.html)以获取更多信息。
 - 查看 Edge Analytics 诀窍  
 在我们的 Recipes 门户网站中，有若干诀窍描述了执行 IBM Edge Analytics 所需的步骤。这些诀窍清楚地描述了如何在基于 Apache Edgent 构建的设备上安装和配置 IBM Edge Analytics Agent，以运行接近 IoT 数据源的分析。
- - 此系列诀窍中，第一个诀窍是 [Getting Started with Edge Analytics in IBM Watson IoT Platform ![外部链接图标](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/getting-started-with-edge-analytics-in-watson-iot-platform/){: new_window}。此诀窍描述了如何在笔记本电脑系统和 Raspberry Pi 3 设备上设置 Cisco DSA 平台，安装并配置 IBM Edge Analytics Agent 以连接到 {{site.data.keyword.iot_short}}，安装系统 DS Link，并将其配置为作为附加设备连接到 {{site.data.keyword.iot_short}} 上的 Edge Gateway，在 Edge Gateway 上定义并激活边缘规则，以及通过 {{site.data.keyword.iot_short}} 管理边缘规则。
- - 为了说明 Edge Analytics 的高级使用情况，[Handling Alerts and Device Actions with Edge Analytics in IBM Watson IoT Platform ![外部链接图标](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/handling-alerts-and-device-actions-with-edge-analytics-in-ibm-watson-iot-platform/){: new_window} 诀窍展示了如何构建自己的 DS Link，以将数据从连接的 Arduino Uno 设备传输到 Raspberry Pi 3 设备。此诀窍还展示了如何作为边缘规则警报的一部分对本地设备操作进行数据过滤和处理。
+ - 此系列诀窍中，第一个诀窍是 [GettingStarted with Edge Analytics in IBM Watson IoT Platform ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/getting-started-with-edge-analytics-in-watson-iot-platform/){: new_window}。此诀窍描述了如何在笔记本电脑系统和 Raspberry Pi 3 设备上设置 Cisco DSA 平台，安装并配置 IBM Edge Analytics Agent 以连接到 {{site.data.keyword.iot_short}}，安装系统 DS Link，并将其配置为作为附加设备连接到 {{site.data.keyword.iot_short}} 上的 Edge Gateway，在 Edge Gateway 上定义并激活边缘规则，以及通过 {{site.data.keyword.iot_short}} 管理边缘规则。
+ - 为了说明 Edge Analytics 的高级使用情况，[Handling Alerts and Device Actions with Edge Analytics in IBM Watson IoT Platform ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/handling-alerts-and-device-actions-with-edge-analytics-in-ibm-watson-iot-platform/){: new_window} 诀窍展示了如何构建自己的 DS Link，以将数据从连接的 Arduino Uno 设备传输到 Raspberry Pi 3 设备。此诀窍还展示了如何作为边缘规则警报的一部分对本地设备操作进行数据过滤和处理。
 
 ## 管理边缘规则和操作  
 {: #managing_rules}

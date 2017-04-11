@@ -2,11 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-2-6"
+lastupdated: "2017-03-14"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -46,21 +46,21 @@ lastupdated: "2017-2-6"
 {: #byb}
 
 取得 {{site.data.keyword.blockchainfull_notm}} 的概觀、其與一般區塊鏈概念的關聯，以及它的作用：
-- IBM.com 上的 [{{site.data.keyword.blockchainfull_notm}}](http://www.ibm.com/blockchain/)。
+- IBM.com 上的 [{{site.data.keyword.blockchainfull_notm}} ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](http://www.ibm.com/blockchain/){: new_window}。
 - [{{site.data.keyword.blockchainfull_notm}} DOCS](https://console.ng.bluemix.net/docs/services/blockchain/index.html) - 開始使用 {{site.data.keyword.blockchainfull_notm}} 服務
-- [{{site.data.keyword.blockchainfull_notm}} API](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/) - {{site.data.keyword.blockchainfull_notm}} API 的概觀。
-- [{{site.data.keyword.blockchainfull_notm}} for Developers](http://www.ibm.com/blockchain/for_developers.html) - 區塊鏈如何融入您開發環境的概觀，包括即時展示以及可部署以在 {{site.data.keyword.Bluemix_notm}} 上執行之程式碼的逐步演練。
+- [{{site.data.keyword.blockchainfull_notm}} HFC SDK for Node.js 與 API 文件 ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/hyperledger/fabric/tree/v0.6/docs/API){: new_window} -  {{site.data.keyword.blockchainfull_notm}} API 的概觀。
+- [{{site.data.keyword.blockchainfull_notm}} for Developers ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](http://www.ibm.com/blockchain/for_developers.html){: new_window} - 區塊鏈如何融入您開發環境的概觀，包括附有動態示範的逐步演練，以及可供部署在 {{site.data.keyword.Bluemix_notm}} 上執行的程式碼。
 
 ## 範例智慧型合約
 
 {: #samples}
 
-您可以從 [https://github.com/ibm-watson-iot/blockchain-samples](https://github.com/ibm-watson-iot/blockchain-samples) 下載許多範例合約。您可以使用範例合約作為基礎，以將您自己的使用案例開發為可部署的鏈碼：
+[https://github.com/ibm-watson-iot/blockchain-samples ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/blockchain-samples){: new_window} 上有多種範例合約可供下載。您可以使用範例合約作為基礎，以將您自己的使用案例開發為可部署的鏈碼：
 
 |範例合約 |說明 |
 |:---|:---|
-|[基本：簡單合約](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/basic/simple_contract) | 簡化版的進階合約可讓您在區塊鏈上追蹤及儲存裝置資產資料
-|[進階：IoT 一般範例合約](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/advanced/iot_sample_contract) | 具有許多特性及**貿易航線**特色的資料模型和行為的進階範例合約|
+|[基本：簡單合約 ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/basic/simple_contract){: new_window} | 簡化版的進階合約可讓您在區塊鏈上追蹤及儲存裝置資產資料
+|[進階：IoT 一般範例合約 ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/advanced/iot_sample_contract){: new_window} | 具有許多特性及**貿易航線**特色的資料模型和行為的進階範例合約|
 
 
 ## 配置 {{site.data.keyword.blockchainfull_notm}} 環境
@@ -190,13 +190,13 @@ lastupdated: "2017-2-6"
 若要先開發及測試您自己的鏈碼，再將它部署至 {{site.data.keyword.blockchainfull_notm}}，您必須設定本端開發環境。此環境包含 GoLang，以用來撰寫合約的鏈碼。
  1. 設定開發環境。
    
-開發環境包含在 GoLang 中使用鏈碼建置來開發智慧型合約所需的工具。如需相關資訊，請參閱 Hyperledger 文件中的 [Setting up the development environment](https://github.com/hyperledger/fabric/blob/master/docs/dev-setup/devenv.md)。
+開發環境包含在 GoLang 中使用鏈碼建置來開發智慧型合約所需的工具。如需相關資訊，請參閱 Hyperledger 文件中的[設定開發環境 ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")]( https://github.com/hyperledger/fabric/blob/master/docs/source/dev-setup/devenv.rst){: new_window}。
  2. 安裝鏈碼除錯環境。
     
-除錯環境提供智慧型合約在部署至 {{site.data.keyword.blockchainfull_notm}} 之前進行測試及除錯所需的工具。如需相關資訊，請參閱 Hyperledger 文件中的 [Writing, Building, and Running Chaincode in a Development Environment](https://github.com/hyperledger/fabric/blob/master/docs/Setup/Chaincode-setup.md)。
+除錯環境提供智慧型合約在部署至 {{site.data.keyword.blockchainfull_notm}} 之前進行測試及除錯所需的工具。如需相關資訊，請參閱 Hyperledger 文件中的[在開發環境中寫入、建置及執行鏈碼 ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/hyperledger/fabric/blob/master/docs/source/Setup/Chaincode-setup.rst){: new_window}。
  3. 設定進行開發的網路。
     
-進行開發的網路提供更嚴格的正式作業類似環境，用來進行智慧型合約的最終測試。使用此環境來進行已測試及已除錯合約的最終測試，再將它們部署至 {{site.data.keyword.blockchainfull_notm}}。如需相關資訊，請參閱 Hyperledger 文件中的 [Setting Up a Network](https://github.com/hyperledger/fabric/blob/master/docs/Setup/Network-setup.md)。
+進行開發的網路提供更嚴格的正式作業類似環境，用來進行智慧型合約的最終測試。使用此環境來進行已測試及已除錯合約的最終測試，再將它們部署至 {{site.data.keyword.blockchainfull_notm}}。如需相關資訊，請參閱 Hyperledger 文件中的[設定網路 ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/hyperledger/fabric/blob/master/docs/source/Setup/Network-setup.rst){: new_window}。
 
 3. 選用項目：下載 IBM 所提供的範例智慧型合約。  
 IBM 提供許多智慧型合約，您可以下載且直接依現狀使用，或進行修改以符合您的組織目標。  
@@ -232,7 +232,7 @@ IBM 提供許多智慧型合約，您可以下載且直接依現狀使用，或�
   例如，將 sample.go 檔案上傳至：  
   `http://github.com/{my organization}/{my project}/`
   2. 向您先前連接的對等節點登錄合約。  
-使用 REST 用戶端（例如 CURL 或 Postman），以提交登錄呼叫。如需登錄呼叫的相關資訊，請參閱 [POST 登記員 API 文件](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/#!/Registrar/registerUser)。登錄時，請使用下列資訊：
+使用 REST 用戶端（例如 CURL 或 Postman），以提交登錄呼叫。如需登錄呼叫的相關資訊，請參閱 [POST 登記員 API 文件 ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/hyperledger/fabric/blob/v0.6/docs/API/CoreAPI.md#registrar){: new_window}。登錄時，請使用下列資訊：
   <ul>
   <li>URL：`http://api_host:api_port_tls/registrar`
   <li>類型：POST
@@ -247,7 +247,7 @@ IBM 提供許多智慧型合約，您可以下載且直接依現狀使用，或�
 
   </ul>
   3. 將合約部署至對等節點。  
-如需部署呼叫的相關資訊，請參閱 [POST 開發/部署 API 文件](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/#!/Devops/chaincodeDeploy)。  
+如需部署呼叫的相關資訊，請參閱 [POST/鏈碼 API 文件 ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/hyperledger/fabric/blob/v0.6/docs/API/CoreAPI.md#chaincode){: new_window}。  
 部署時，請使用下列資訊：  
   <ul>
   <li>URL：`http://api_host:api_port_tls/chaincode`
@@ -290,7 +290,7 @@ IBM 提供許多智慧型合約，您可以下載且直接依現狀使用，或�
    9. 輸入下列資訊，然後按**下一步**：
      - 合約 ID - 貼入在部署合約時所儲存的 128 個字元的合約 ID。
      - 合約名稱 - 輸入名稱以識別 {{site.data.keyword.iot_short_notm}} 中的合約。
-     
+
      **提示：**若要尋找裝置的事件類型，請移至**裝置**頁面，然後按一下裝置名稱以開啟裝置詳細資料頁面。向下捲動至**感應器資訊**區段，以查看裝置的可用事件及資料點清單。
 
    11. 將可用的裝置內容對映至合約參數。  
@@ -309,7 +309,7 @@ IBM 提供許多智慧型合約，您可以下載且直接依現狀使用，或�
     <li>  溫度 - float64  
     <li>  載波 - string   
     </ul>  
-    如需如何將裝置資料對映至合約的相關資訊，請參閱 GitHub 之 IoT Blockchain Samples Wiki 中的 [Data mapping example](https://github.com/ibm-watson-iot/blockchain-samples/wiki/Data-mapping-example)。
+如需如何將裝置資料對映至合約的相關資訊，請參閱 GitHub 上 IoT Blockchain Samples Wiki 中的 [Data mapping example ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/blockchain-samples/wiki/Data-mapping-example){: new_window}。
    12. 在摘要頁面中，驗證資訊正確無誤。
    13. 區塊鏈頁面中會顯示裝置資料與合約的對映。
 
@@ -317,7 +317,7 @@ IBM 提供許多智慧型合約，您可以下載且直接依現狀使用，或�
 若要測試智慧型合約，請執行完整測試，方法是在 {{site.data.keyword.iot_short_notm}} 中建立裝置、將裝置連接至 {{site.data.keyword.iot_short_notm}}、將 IoT 區塊鏈配置成連接至區塊鏈網狀架構，以及將 {{site.data.keyword.iot_short_notm}} 配置成在區塊鏈中對映及儲存裝置訊息。您可以使用 {{site.data.keyword.blockchainfull_notm}} 主控台來檢視區塊鏈，以查看分類帳中的裝置資料。如果您的合約支援 readAsset() 函數，則可以使用監視使用者介面來檢視區塊鏈，以及查看區塊鏈中持續儲存的自有情境中的裝置資料。
 
 5. 將「監視使用者介面」配置成連接至 {{site.data.keyword.blockchainfull_notm}}。  
- **提示：**如果您尚未在本端環境中安裝「監視使用者介面」，則可以立即安裝。請遵循[區塊鏈監視使用者介面](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui) GitHub 目錄內可用「監視使用者介面」ReadMe 文件中的指示。  
+ **提示：**如果您尚未在本端環境中安裝「監視使用者介面」，則可以立即安裝。請遵循「監視使用者介面」ReadMe 文件（位於[區塊鏈監視使用者介面 ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window} GitHub 目錄）中的指示。  
 按一下**配置**按鈕，以存取配置設定。   
 使用下列資訊來連接至合約：
 <table>

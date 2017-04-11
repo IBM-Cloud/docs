@@ -2,21 +2,21 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-08-11"
+lastupdated: "2017-02-28"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
 
 
-# Analytics
+# Analisi dei dati IoT in tempo reale
 {: #analytics}  
 
-Utilizza Watson {{site.data.keyword.iot_full}} analytics per ottenere le informazioni analitiche di cui hai bisogno dai dati non elaborati prodotti dai tuoi dispositivi.  
+Utilizza Watson {{site.data.keyword.iot_full}} analytics per ottenere le informazioni analitiche in tempo reale di cui hai bisogno dai dati non elaborati prodotti dai tuoi dispositivi.   
 {: shortdesc}
 
 Utilizzando [tabelle e schede](data_visualization.html), puoi visualizzare i grafici che rappresentano i valori dei dataset da uno o più dispositivi per una veloce panoramica e comprensione dei dati del dispositivo.
