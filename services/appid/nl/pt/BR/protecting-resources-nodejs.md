@@ -1,8 +1,7 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-03-30"
+  years: 2017 lastupdated: "2017-03-16"
 
 ---
 
@@ -14,8 +13,7 @@ lastupdated: "2017-03-30"
 # Protegendo recursos de Node.js
 {: #protecting-resources-nodejs}
 
-É possível usar o {{site.data.keyword.appid_short}} server SDK para proteger recursos em seu app Node.js.
-{:shortdesc}
+É possível usar o {{site.data.keyword.appid_short}} server SDK para proteger recursos em seu app Node.js.{:shortdesc}
 
 ## Antes de Começar
 {: #before-you-begin}
@@ -48,26 +46,27 @@ O SDK do servidor {{site.data.keyword.appid_short_notm}} usa a estrutura do Pass
   ```
   npm install -save express
   npm install -save passport
-  npm install -save bluemix-appid
+  npm install -save appid-serversdk-nodejs
   ```
   {:pre}
 
 ## Protegendo recursos no Node.js
 {: #protecting-resources-nodesdk}
 
-O fragmento a seguir demonstra como usar `APIStrategy` em um aplicativo Express simples para proteger os métodos GET do terminal `/protected`.
+O fragmento a seguir demonstra como usar a `ApiStrategy` em um aplicativo Express simples para proteger os métodos GET do terminal
+`/protected`.
 
   ```JavaScript
 
   var express = require('express');
   var passport = require('passport');
-  var APIStrategy = require('bluemix-appid').APIStrategy;
+  var ApiStrategy = require('appid-serversdk-nodejs').ApiStrategy;
 
-  passport.use(new APIStrategy());
+  passport.use(new ApiStrategy());
   var app = express();
   app.use(passport.initialize());
 
-  app.get('/protected', passport.authenticate('APIStrategy.STRATEGY_NAME', {session: false }),
+  app.get('/protected', passport.authenticate('appid-api-strategy', {session: false }),
       function(request, response){
           console.log("Securty context", request.securityContext)    
           response.send(200, "Success!");
@@ -84,8 +83,9 @@ O fragmento a seguir demonstra como usar `APIStrategy` em um aplicativo Express 
 
   var express = require('express');
   var passport = require('passport');
-  var WebAppStrategy = require('bluemix-appid').WebAppStrategy;
+  var ApiStrategy = require('appid-serversdk-nodejs').WebStrategy;
   ```
   {:pre}
 
-Para obter mais informações, consulte o <a href="https://github.com/ibm-cloud-security/appid-serversdk-nodejs" target="_blank">{{site.data.keyword.appid_short_notm}} repositório do GitHub Node.js <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo"></a>.
+Para obter mais informações, veja o <a href="https://github.com/ibm-cloud-security/appid-serversdk-nodejs" target="_blank">repositório do GitHub
+<img src="../../icons/launch-glyph.svg" alt="ícone de Link externo"></a>.

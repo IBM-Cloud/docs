@@ -1,8 +1,7 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-03-30"
+  years: 2017 lastupdated: "2017-03-16"
 
 ---
 
@@ -24,7 +23,8 @@ painel.
 ## Desenvolvimento da Web
 {: #web-dev}
 
-O serviço do {{site.data.keyword.appid_short_notm}} protege seu app da web e não requer nenhum SDK especial.<!--- You can use different identity providers in addition to the protection that is provided by the service.---> A integração do {{site.data.keyword.appid_short_notm}} permite que qualquer aplicativo da web,
+O serviço do {{site.data.keyword.appid_short_notm}} protege o seu app da web e não requer nenhum SDK especial. É possível usar provedores de identidade
+diferentes além da proteção que é fornecida pelo serviço. A integração do {{site.data.keyword.appid_short_notm}} permite que qualquer aplicativo da web,
 independentemente da tecnologia que ele implementa, aproveite o protocolo OAuth2.
 
 Para obter informações sobre como configurar o seu app da web para acessar o serviço do {{site.data.keyword.appid_short_notm}}, veja o
