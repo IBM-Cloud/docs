@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-03-23"
 
 ---
 
@@ -29,8 +29,8 @@ You'll need the following:
 * [{{site.data.keyword.Bluemix_notm}} account](https://console.ng.bluemix.net/registration/)
 * [Cloud Foundry CLI ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/cli#downloads){: new_window}
 * [Git ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/downloads){: new_window}
-* Install .NET Core 1.0.0-preview4-004233 SDK from the [preview4 download page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/dotnet/core/blob/master/release-notes/preview4-download.md) instructions.
-* Install the latest .NET Core Runtime from the [dot.net website](https://www.microsoft.com/net/download/core#/runtime)
+* Install .NET Core 1.0.0-preview4-004233 SDK from the [preview4 download page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/dotnet/core/blob/master/release-notes/download-archives/preview4-download.md) instructions.
+* Install the latest .NET Core Runtime from the [dot.net website ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.microsoft.com/net/download/core#/runtime)
 
 ## 1. Clone the sample app
 {: #clone}

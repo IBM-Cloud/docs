@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-04"
 
 ---
 
@@ -144,7 +144,6 @@ We're now going to update your local code to point to this database. We'll creat
   CLOUDANT_USERNAME=
   CLOUDANT_PASSWORD=
   ```
-  {: pre}
 
 2. Back in the {{site.data.keyword.Bluemix_notm}} UI, select your App -> Connections -> Cloudant -> View Credentials
 

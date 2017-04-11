@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-24"
+lastupdated: "2017-03-30"
 
 ---
 
@@ -15,11 +15,21 @@ lastupdated: "2017-01-24"
 
 A list of the latest updates in the aspnet buildpack.
 
+## Mar 29, 2017: Updated ASP.NET Core buildpack v1.0.13-20170330-1023
+
+* Add support for .NET Core runtime 1.0.4
+* Add support for .NET Core runtime 1.1.1
+* Add support for .NET Core SDK 1.0.1
+* Update Node version to 6.10.0
+* Remove support for .NET Core SDK 1.0.0-preview2-003131
+* Remove support for .NET Core SDK 1.0.0-preview3-004056
+
 ## Jan 31, 2017: Updated ASP.NET Core buildpack v1.0.10-20170124-1145
 
 * Add support for .NET Core 1.0.3
 * Add support for .NET Core MSBuild tooling
 * Add support for F# projects
+* Remove support for .NET Core SDK 1.0.0-preview2-003121
 
 ## Dec 9, 2016: Updated ASP.NET Core buildpack v1.0.6-20161205-0912
 
