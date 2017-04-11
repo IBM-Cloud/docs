@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-22"
+lastupdated: "2017-04-10"
 
 ---
 
@@ -133,12 +133,12 @@ You can get the code either of the following ways:
 
 * Run the following command using the CLI:
 
-	```
-	bx dev code <your-project-name>
-	```
-	{: codeblock}
-	
-	`<your-project-name>` should be replaced with the project name that you used during project creation.
+   ```
+   bx dev code <your-project-name>
+   ```
+   {: codeblock}
+
+   Replace `<your-project-name>` with the project name that you specified during project creation.
 
 * Use the {{site.data.keyword.dev_console}}.
 

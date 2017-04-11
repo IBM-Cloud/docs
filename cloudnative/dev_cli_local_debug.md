@@ -35,13 +35,13 @@ Steps to enable debug for a Java application:
 	* Eclipse
       1. Import the “Existing maven project” project into Eclipse.
       2. Create a [Java remote application ![External link icon](../icons/launch-glyph.svg "External link icon")](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm)” debug configuration.
-      3. Enter the IP address or `localhost:<port>`  
-      **Note**: The default port is 9080 for the Java basic Microservices endpoint.
-      4. Enter `7777` for port number.
-      5. Specify the name of the java project that you imported.
+      		1. Enter the IP address or `localhost:<port>`  
+      		2. Enter `7777` for port number.
+      		3. Specify the name of the java project that you imported.
       6. Set a breakpoint in the IDE.
       7. Run the debug configuration.
-      8. Access the endpoint with a browser to recreate the issue.
+      8. Access the endpoint with a browser to recreate the issue.  
+	   **Note**: The default port is 9080 for the Java basic Microservices endpoint.
 	* [IntelliJ ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.jetbrains.com/help/idea/2016.3/run-debug-configuration-remote.html)
 	* [VSCode ![External link icon](../icons/launch-glyph.svg "External link icon")](https://marketplace.visualstudio.com/items?itemName=donjayamanne.javadebugge)
 	* JDK command line: `jdb -attach <host:port>`
