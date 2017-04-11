@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-12-19"
+lastupdated: "2017-04-08"
 ---
 
 {:new_window: target="_blank"}
@@ -45,18 +45,3 @@ Field Name|Description
 `deployment_id`|An internal identifier for the service as created within Compose.
 `uri`|The URI that is used when connecting to the service, which includes the schema (`mysql:`), admin user name and password, host name of the server, port number to connect to and vhost name.
 {: caption="Table 1. {{site.data.keyword.composeForMySQL}} credentials" caption-side="top"}
-
-
-# Related Links
-{: #rellinks}
-
-* [Compose](https://www.compose.com){:new_window}
-* [Compose Articles](https://www.compose.com/articles/){:new_window}
-
-## Tutorials and Samples
-{: #samples}
-* [compose-mysql-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-mysql-helloworld-nodejs){:new_window}
-
-## Related Links
-{: #general}
-* [Compose Help](https://help.compose.com/docs){:new_window}

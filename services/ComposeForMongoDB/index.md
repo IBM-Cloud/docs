@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-12-09"
+lastupdated: "2017-04-08"
 ---
 
 {:new_window: target="_blank"}
@@ -43,17 +43,3 @@ Field Name|Description
 `db_type`|The type of database that is offered by the service: in this case, `mongodb`.
 `name`|The database deployment name.
 {: caption="Table 1. {{site.data.keyword.composeForMongoDB}} credentials" caption-side="top"}
-
-# Related Links
-{: #rellinks}
-
-* [Compose](https://www.compose.com){:new_window}
-* [Compose Articles](https://www.compose.com/articles/){:new_window}
-
-## Tutorials and Samples
-{: #samples}
-* [compose-mongodb-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-mongodb-helloworld-nodejs){:new_window}
-
-## Related Links
-{: #general}
-* [Compose Help](https://help.compose.com/docs){:new_window}

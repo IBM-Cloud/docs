@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-12-19"
+lastupdated: "2017-04-08"
 ---
 
 {:new_window: target="_blank"}
@@ -50,18 +50,3 @@ Field Name|Description
 `uri_cli_2`|An alternative `cqlsh` shell command line that connects to the database instance.
 `uri`|The URI that is used when connecting to the service, which includes the schema (`scylla:`), password, host name of server, port number to connect to, and database name.
 {: caption="Table 1. {{site.data.keyword.composeForScyllaDB}} credentials" caption-side="top"}
-
-
-# Related Links
-{: #rellinks}
-
-* [Compose](https://www.compose.com){:new_window}
-* [Compose Articles](https://www.compose.com/articles/){:new_window}
-
-## Tutorials and Samples
-{: #samples}
-* [compose-scylladb-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-scylladb-helloworld-nodejs){:new_window}
-
-## Related Links
-{: #general}
-* [Compose Help](https://help.compose.com/docs){:new_window}
