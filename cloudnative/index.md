@@ -171,12 +171,3 @@ With the {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}}, you ca
 
 Starters are optimized to be production ready starter code that focuses on demonstrating a key {{site.data.keyword.Bluemix_notm}} integration with a high-value service. Each starter focuses on one service and shows the integration of the service SDKs into the code. In some cases, starters offer a simple user experience to highlight the integration of the service data or interactions with the user. Each starter is configured to be enabled with Authentication, Data, and possibly other capabilities, if you decide to configure them for your project.
 
-
-# Related Links
-{: #rellinks notoc}
-
-## Tutorials and Samples
-{: #samples notoc}
-
-* [Sample: Mobile Backend for Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}
-* [Video Tutorials](https://www.youtube.com/channel/UCRW4t4Hzm9gzuiq5naERkCw){: new_window}
