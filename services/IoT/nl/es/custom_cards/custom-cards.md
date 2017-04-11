@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-10-13"
 
 ---
@@ -130,13 +130,13 @@ Todo correcto. Ha configurado correctamente un servidor de tarjetas y ha despleg
 Después de configurar y verificar la tarjeta HelloWorld, puede expandir las tarjetas personalizadas y crear la suya propia.
 
 El repositorio de la tarjeta personalizada de ejemplo incluye las siguientes tarjetas de ejemplo:
-- HelloWorld
+- HelloWorld  
 Una tarjeta simple que proporciona un ejemplo Hello World básico.
-- Empty
+- Vacía  
 Una tarjeta vacía que contiene la infraestructura para una tarjeta. Utilice esta tarjeta como plantilla al crear una tarjeta desde cero.
-- Webcam
+- Webcam  
 Una tarjeta de cámara web simple. Configure la tarjeta con un URL de webcam y establezca la frecuencia de renovación.
-- iFrame
+- iFrame  
 Una tarjeta iFrame básica que puede utilizar para incorporar cualquier página web segura (HTTPS) en su panel.
 
 Los siguientes pasos de alto nivel crean una nueva tarjeta:

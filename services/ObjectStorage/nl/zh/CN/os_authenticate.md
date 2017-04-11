@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -20,7 +20,9 @@ lastupdated: "2017-01-17"
 
 供应新的 {{site.data.keyword.objectstorageshort}} 实例将在 IBM 公共云中创建独立的 Keystone 项目。Keystone 凭证结构包含一整组属性，以便您可以选择最适合您的应用程序的 OpenStack 令牌请求方法或 OpenStack SDK。将新应用程序绑定到实例时，将创建具有项目访问权的新 Keystone 用户。撤销供应实例后，将删除项目和用户。
 
-有关使用 OpenStack Swift 和 Keystone 的更多信息，请查看 [OpenStack 文档站点](http://docs.openstack.org)。
+有关使用 OpenStack Swift 和 Keystone 的更多信息，请参阅 <a href="http://docs.openstack.org" target="_blank">OpenStack 文档站点。<img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a>
+
+
 
 1. 对 `https://identity.open.softlayer.com/v3/auth/tokens` 发出 POST 请求，如以下 cURL 命令中所示。
   ```

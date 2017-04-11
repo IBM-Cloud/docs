@@ -55,7 +55,7 @@ lastupdated: "2016-04-18"
 請使用其中一個 {{site.data.keyword.Bluemix_notm}} 資料儲存庫服務來持續保存。</dd>
 <dt>資源限制</dt>
 <dd>請注意試用帳戶可使用的資源數量限制。限制如下所示：<table style="width:100%">
-<caption>表格 1. 試用帳戶的 {{site.data.keyword.Bluemix_notm}} 資源限制</caption>
+<caption>表 1. 試用帳戶的 {{site.data.keyword.Bluemix_notm}} 資源限制</caption>
   <th>資源類型</th>	<th>數量限制</th>
 <tr><td>跨所有應用程式使用的服務數目</td> <td>10</td>
 <tr><td>所有應用程式使用的記憶體</td> <td>	2 G</td>

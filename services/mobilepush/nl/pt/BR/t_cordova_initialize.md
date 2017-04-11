@@ -25,15 +25,11 @@ arquivo JavaScript principal (em geral, localizado no diretório **www/js**).
 	```
 1. Modifique o fragmento de código para usar os parâmetros Route e appGUID do
 Bluemix. Clique no link **Opções móveis** no Painel do aplicativo
-Bluemix para obter a rota e o GUID do aplicativo. Use os valores Rota e GUID do App como
-parâmetros no fragmento de código ```BMSClient.initialize```.
+Bluemix para obter a rota e o GUID do aplicativo. Use os valores de GUID de rota e aplicativo como seus parâmetros em seu fragmento de código `BMSClient.initialize`.
 
 
-	**Observação**: Se você tiver criado um app Cordova usando a
-CLI do Cordova, por exemplo, o comando Cordova create app-name, coloque este código
-Javascript no arquivo **index.js**, após a função
-```app.receivedEvent``` dentro da função o```nDeviceReady:
-function()`` para inicializar o cliente BMS.
+	**Nota**: se você tiver criado um aplicativo Cordova usando a CLI Cordova, por exemplo, comando do nome do
+aplicativo de criação Cordova, coloque este código Javascript no arquivo **index.js**, após a função `app.receivedEvent` na função `onDeviceReady: function()` para inicializar o cliente BMS.
 
 	```
 	onDeviceReady: function() {

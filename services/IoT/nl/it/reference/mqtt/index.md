@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-09"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -20,8 +20,8 @@ MQTT è il protocollo primario che i dispositivi e le applicazioni utilizzano pe
 
 MQTT viene seguito su TCP/IP e mentre è possibile eseguire la codifica direttamente in TCP/IP, puoi anche scegliere di utilizzare una libreria che gestisce i dettagli del protocollo MQTT al tuo posto. Sono disponibili un'ampia gamma di librerie client MQTT. IBM contribuisce allo sviluppo e al supporto di librerie di client diversi, inclusi quelli che sono disponibili nei seguenti siti:
 
-- [MQTT community wiki](https://github.com/mqtt/mqtt.github.io/wiki)
-- [Eclipse Paho project](http://eclipse.org/paho/)
+- [MQTT community wiki ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/mqtt/mqtt.github.io/wiki){: new_window}
+- [Eclipse Paho project ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](http://eclipse.org/paho/){: new_window}
 
 ## Supporto versione
 {: #version-support}
@@ -35,11 +35,14 @@ In {{site.data.keyword.iot_short_notm}}, le classi di oggetti primarie sono i di
 
 Il tuo client MQTT identifica se stesso per il servizio {{site.data.keyword.iot_short_notm}} come una classe di oggetti. La classe di oggetti determina le funzionalità del client quando è collegato. La classe di oggetti determina inoltre il meccanismo per l'autenticazione client.
 
-Le applicazioni e i dispositivi funzionano con spazi argomento MQTT differenti. I dispositivi operano all'interno di uno spazio argomenti in ambito dispositivo, mentre le applicazioni hanno accesso completo allo spazio argomenti per un'intera organizzazione. Per ulteriori informazioni, consulta i seguenti argomenti:
+Le applicazioni e i dispositivi funzionano con spazi argomento MQTT differenti.  I dispositivi operano all'interno di uno spazio argomenti in ambito dispositivo, mentre le applicazioni hanno accesso completo allo spazio argomenti per un'intera organizzazione. Per ulteriori informazioni, consulta i seguenti argomenti:
 
-- [Dispositivi](../../devices/mqtt.html)
-- [Applicazioni](../../applications/mqtt.html)
-- [Gateway](../../gateways/mqtt.html)
+- [Messaggistica MQTT per i dispositivi](../../devices/mqtt.html)
+- [Messaggistica MQTT per le applicazioni](../../applications/mqtt.html)
+- [Messaggistica MQTT per i gateway](../../gateways/mqtt.html)
+
+### Messaggi conservati
+{{site.data.keyword.iot_short_notm}} fornisce supporto limitato per la funzione dei messaggi conservati della messaggistica MQTT. Se l'indicatore dei messaggi conservati è impostato su true in un messaggio MQTT inviato da un dispositivo, un gateway o un'applicaizone a {{site.data.keyword.iot_short_notm}}, il messaggio viene gestito come un messaggio non conservato. Le organizzazioni {{site.data.keyword.iot_short_notm}} non sono autorizzate a pubblicare i messaggi conservati. Il servizio {{site.data.keyword.iot_short_notm}} sovrascrive l'indicatore del messaggio conservato quando viene impostato su true ed elabora il messaggio come se l'indicatore fosse impostato su false.
 
 ## Livelli di QOS (quality of service)
 {: #qos-levels}

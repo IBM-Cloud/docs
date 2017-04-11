@@ -18,4 +18,4 @@ lastupdated: "2016-11-03"
 更多构建 | 更多增长 | 更多休息
 ---- | ---- | ----
 将注意力集中在有趣的东西上…… 创建新的应用程序，而不是进行系统管理。 | 在 IBM Cloud 上扩展您的数据。 | IBM 专家会确保您的数据全天候运行，让您高枕无忧。
-{: caption="Table 1. Benefits of using the Work with Data console" caption-side="top"}
+{: caption="表 1. 采用“使用数据”控制台的好处" caption-side="top"}

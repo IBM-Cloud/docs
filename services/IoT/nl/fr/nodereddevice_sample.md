@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-26"
+  years: 2016, 2017
+lastupdated: "2017-03-13"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2016-08-26"
 Utilisez Node-RED pour créer un simulateur de terminal et envoyer des données de terminal simulé à votre organisation {{site.data.keyword.iot_full}}.  
 {:shortdesc}
 
-Node-RED est un outil qui permet de relier des terminaux matériels, des API et des services en ligne selon des méthodes inédites et intéressantes. Pour plus d'informations, voir le site Web [Node-RED](http://nodered.org/).  
+Node-RED est un outil qui permet de relier des terminaux matériels, des API et des services en ligne selon des méthodes inédites et intéressantes. Pour plus d'informations, voir le site Web [Node-RED ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](http://nodered.org/){: new_window}.   
 
 Vous pouvez exécuter votre instance Node-RED dans votre propre environnement ou l'utiliser en tant qu'application {{site.data.keyword.Bluemix_notm}}. Le processus suivant inclut les instructions relatives à {{site.data.keyword.Bluemix_notm}}.
 
@@ -26,7 +26,7 @@ Pour créer et connecter le simulateur de terminal Node-RED :
    Utilisez le simulateur de terminal pour envoyer des messages de terminal MQTT à {{site.data.keyword.iot_short_notm}}. Le simulateur de terminal a simulé l'envoi de données pour un conteneur de fret à un courtier MQTT, par exemple, {{site.data.keyword.iot_short_notm}}.
     1. Connectez-vous à {{site.data.keyword.Bluemix_notm}} (https://console.ng.bluemix.net).
     2. Sélectionnez l'onglet **Catalogue**.
-    3. Localisez la section Boilerplates du catalogue de service et cliquez sur **Node-RED Starter Community BETA**. **Astuce :** Cliquez[ici](https://console.ng.bluemix.net/catalog/starters/node-red-starter/) pour accéder directement à la page Node-RED Starter.
+    3. Localisez la section Boilerplates du catalogue de service et cliquez sur **Node-RED Starter Community BETA**. **Astuce : ** Cliquez[ici ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/catalog/starters/node-red-starter/){: new_window} pour accéder directement à la page Node-RED Starter. 
     4. Sur la page Node-RED Starter, sélectionnez l'espace où vous souhaitez déployer Node-RED, vérifiez les sélections pour Créer une application, puis cliquez sur **Créer** pour ajouter Node-RED à votre organisation Bluemix.  
     Par exemple :  
      - Espace : dev
@@ -44,8 +44,7 @@ Pour créer et connecter le simulateur de terminal Node-RED :
     6. Collez le contenu du presse-papiers dans la zone d'entrée des noeuds d'importation, puis cliquez sur **Ok**.
     Le flux du simulateur de terminal est importé dans l'éditeur de flux.
 
-2. Enregistrez votre terminal auprès de {{site.data.keyword.iot_short_notm}}
-Pour connecter l'exemple de terminal Node-RED, procédez comme suit :
+2. Enregistrez votre terminal auprès de {{site.data.keyword.iot_short_notm}}  . Pour connecter l'exemple de terminal Node-RED, procédez comme suit :
  1. Dans {{site.data.keyword.Bluemix_notm}}, accédez au tableau de bord.
  2. Sélectionnez l'espace dans lequel vous avez déployé {{site.data.keyword.iot_short_notm}}.
  3. Cliquez sur la vignette **{{site.data.keyword.iot_short_notm}}**.
@@ -60,7 +59,7 @@ Pour connecter l'exemple de terminal Node-RED, procédez comme suit :
  13. Cliquez sur **Suivant** pour ajouter votre terminal.
  14. Entrez un ID de terminal, tel que `Device001`.
  15. Facultatif : Entrez des métadonnées de terminal.
- 16. Cliquez sur **Suivant** our ajouter une connexion de terminal à l'aide d'un jeton d'authentification généré automatiquement.
+ 16. Cliquez sur **Suivant** pour ajouter une connexion de terminal à l'aide d'un jeton d'authentification généré automatiquement.
  17. Vérifiez que les informations récapitulatives sont correctes, puis cliquez sur **Ajouter** pour ajouter la connexion.
  18. Sur la page Informations sur le terminal qui s'affiche, copiez et sauvegardez les informations sur le terminal :  
   <ul>

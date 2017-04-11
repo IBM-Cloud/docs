@@ -1,22 +1,22 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-11"
+  years: 2016, 2017
+lastupdated: "2017-02-28"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
 
 
-# Analyse
+# Analyse de données IoT en temps réel
 {: #analytics}  
 
-Utilisez Watson {{site.data.keyword.iot_full}} Analytics pour obtenir les informations d'analyse dont vous avez besoin à partir des données brutes générées par vos terminaux.  
+Utilisez Watson {{site.data.keyword.iot_full}} Analytics pour obtenir les informations d'analyse en temps réel dont vous avez besoin à partir des données brutes générées par vos terminaux.  
 {: shortdesc}
 
 En utilisant des [tableaux et des cartes](data_visualization.html), vous pouvez visualiser des graphiques qui représentent des valeurs de fichier provenant d'un ou de plusieurs terminaux pour une présentation et une compréhension rapides des données de terminal.

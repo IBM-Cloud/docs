@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-13"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2016-09-13"
 {:pre: .pre}
 
 
-# Protocoles de gestion des terminaux
+# Protocole de gestion des terminaux
 {: #index}
 
 ## Introduction
@@ -23,7 +23,7 @@ lastupdated: "2016-09-13"
 
 Les **terminaux gérés** sont définis comme des terminaux qui contiennent un agent de gestion des terminaux. Un agent de gestion des terminaux est un bloc de logique qui permet au terminal d'interagir avec le service de gestion des terminaux de {{site.data.keyword.iot_short_notm}} via le protocole de gestion des terminaux. Les terminaux gérés peuvent effectuer des opérations de gestion des terminaux, y compris des mises à jour d'emplacement, des mises à jour et des téléchargements de microprogramme, des redémarrages et des réinitialisations avec les paramètres d'usine.
 
-Le protocole de gestion des terminaux définit un ensemble d'opérations prises en charge. Un agent de gestion des terminaux peut prendre en charge un sous-ensemble des opérations, mais les opérations sur les **terminaux gérés** et les **terminaux non gérés** doivent être prises en charge. Un terminal qui prend en charge des opérations d'action sur le microprogramme doit également prendre en charge l'observation.
+Le protocole de gestion des terminaux définit un ensemble d'opérations prises en charge. Un agent de gestion des terminaux peut prendre en charge un sous-ensemble des opérations, mais les opérations **manage** et **unmanage** doivent être prises en charge. Un terminal qui prend en charge des opérations d'action sur le microprogramme doit également prendre en charge l'observation.
 
 Le protocole de gestion des terminaux est construit par dessus le protocole de messagerie MQTT. Pour plus d'informations sur l'interaction entre le protocole de gestion des terminaux et MQTT, voir [Connectivité MQTT pour les terminaux](../mqtt.html).
 
@@ -36,6 +36,8 @@ Le protocole de gestion des terminaux est construit par dessus le protocole de m
 4. Un terminal peut communiquer des mises à jour sur son emplacement, des informations de diagnostic et des codes d'erreurs à l'aide du protocole de gestion des terminaux.
 5. Pour traiter les terminaux défectueux parmi un nombre important de terminaux, la demande d'opération sur les **terminaux gérés** inclut un paramètre de durée de vie facultatif. Ce paramètre correspond au nombre de secondes durant lesquelles le terminal doit effectuer une autre demande sur les **terminaux gérés** pour éviter d'être classé comme étant en veille et devenir un terminal non géré.
 6. Lorsqu'un terminal est déclassé, vous pouvez le retirer de {{site.data.keyword.iot_short_notm}} à l'aide du tableau de bord ou de l'API REST.
+
+Voir la recette [Connect Raspberry Pi as Managed Device to IBM Watson IoT Platform ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/){: new_window}.
 
 ### Récapitulatif des codes retour
 

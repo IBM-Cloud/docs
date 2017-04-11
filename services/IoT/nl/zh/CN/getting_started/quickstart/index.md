@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-19"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -14,12 +14,12 @@ lastupdated: "2016-09-19"
 
 # Quickstart
 
-[Quickstart](https://quickstart.internetofthings.ibmcloud.com/#/) 是一种开放式沙箱，可用于将设备快速连接到 {{site.data.keyword.iot_full}}。如果设备支持 MQTT 消息传递协议，那么可将其轻松连接到 Quickstart。
+[Quickstart ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://quickstart.internetofthings.ibmcloud.com/#/){: new_window} 是一种开放式沙箱，可用于将设备快速连接到 {{site.data.keyword.iot_full}}。如果设备支持 MQTT 消息传递协议，那么可将其轻松连接到 Quickstart。
 
-例如，有关说明可如何将不同设备连接到 Quickstart 服务的诀窍和教程，请转至 [DeveloperWorks 诀窍](https://developer.ibm.com/recipes/)，例如：
+例如，有关说明可如何将不同设备连接到 Quickstart 服务的诀窍和教程，请转至 [DeveloperWorks 诀窍 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/){: new_window}，例如：
 
-- [OpenBlocks IoT BX1G](https://developer.ibm.com/recipes/tutorials/openblocks-iot-bx1g-for-iot-foundation-quickstart/)
-- [响应式块](https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/)
+- [OpenBlocks IoT BX1G ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/openblocks-iot-bx1g-for-iot-foundation-quickstart/){: new_window}
+- [响应式块 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/){: new_window}
 
 
 **重要信息：**如果 {{site.data.keyword.iot_short_notm}} 实例使用 Quickstart 服务，那么不支持可扩展应用程序。
@@ -54,7 +54,7 @@ http://quickstart.internetofthings.ibmcloud.com/iotsensor
 
 ## Mosquitto 演示
 
-[Mosquitto](http://mosquitto.org/) 是一款跨平台开放式源代码 MQTT 客户机，可用于试验 {{site.data.keyword.iot_short}} 服务。安装 Mosquitto 客户机后，选择唯一的应用程序标识和设备标识。如果应用程序标识和设备标识不唯一，那么您的测试连接可能会导致与正完成相同 Quickstart 测试过程的其他用户冲突。
+[Mosquitto ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](http://mosquitto.org/){: new_window} 是一款跨平台开放式源代码 MQTT 客户机，可用于试验 {{site.data.keyword.iot_short}} 服务。安装 Mosquitto 客户机后，选择唯一的应用程序标识和设备标识。如果应用程序标识和设备标识不唯一，那么您的测试连接可能会导致与正完成相同 Quickstart 测试过程的其他用户冲突。
 
 *appId*、*type_id*、*device_type* 和 *device_id* 值不得超过 36 个字符，并且仅可包含以下字符：
 - 字母数字字符（a-z、A-Z 和 0-9）
@@ -90,9 +90,9 @@ http://quickstart.internetofthings.ibmcloud.com/iotsensor
 
 ## 相关链接
 
-- [Quickstart](https://quickstart.internetofthings.ibmcloud.com)
-- [DeveloperWorks 诀窍](https://developer.ibm.com/recipes)
-- [OpenBlocks IoT BX1G](https://developer.ibm.com/recipes/tutorials/openblocks-iot-bx1g-for-iot-foundation-quickstart/)
-- [响应式块](https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/)
-- [Quickstart 应用程序](http://quickstart.internetofthings.ibmcloud.com)
-- [Mosquitto](http://mosquitto.org/)
+- [Quickstart ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://quickstart.internetofthings.ibmcloud.com){: new_window}
+- [DeveloperWorks 诀窍 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes){: new_window}
+- [OpenBlocks IoT BX1G ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/openblocks-iot-bx1g-for-iot-foundation-quickstart/){: new_window}
+- [响应式块 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/){: new_window}
+- [Quickstart 应用程序 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](http://quickstart.internetofthings.ibmcloud.com){: new_window}
+- [Mosquitto ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](http://mosquitto.org/){: new_window}

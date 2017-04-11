@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-16"
+  years: 2016, 2017
+lastupdated: "2017-02-17"
 
 ---
 
@@ -17,7 +17,13 @@ lastupdated: "2016-09-16"
 Desde el panel de control de acceso, puede controlar y gestionar el acceso a la organización de {{site.data.keyword.iot_full}}. Puede añadir usuarios añadiéndolos, invitándolos, registrándolos o importándolos. También puede dar distintos niveles de acceso a los usuarios asignando roles.
 {:shortdesc}
 
-## Acceso de usuarios
+- [Adición de nuevos usuarios](#adding-new-users)
+- [Edición de usuarios](#editing-users)
+- [Bloqueo del acceso de usuarios](#blocking-users)
+- [Eliminación de usuarios](#removing-users)
+
+## Adición de nuevos usuarios
+{: #adding-new-users}
 
 Desde el separador **Acceso** del panel de control, puede añadir miembros individuales utilizando las funciones Añadir, Invitar o Registrar. También puede añadir, invitar o registrar varios miembros simultáneamente utilizando la función Importar.
 
@@ -73,7 +79,7 @@ Para registrar un miembro con la organización de {{site.data.keyword.iot_short_
 3. Especifique la dirección de correo electrónico del miembro.
 4. Seleccione un rol para este miembro.
 5. Especifique el asunto, el nombre de reino y el emisor.
-   **Importante:** Asegúrese de que los campos `Asunto`, `Nombre de reino` y `Emisor` cumplen con las recomendaciones y los estándares de OpenID Connect. Para obtener más información, consulte el sitio web de [OpenID Connect](http://openid.net/connect/).
+   **Importante:** Asegúrese de que los campos `Asunto`, `Nombre de reino` y `Emisor` cumplen con las recomendaciones y los estándares de OpenID Connect. Para obtener más información, consulte el sitio web de [OpenID Connect ![icono de enlace externo](../../icons/launch-glyph.svg)](http://openid.net/connect/){: new_window}.
 6. Opcional: Establezca una fecha de caducidad para el miembro.
 7. Pulse **Registrar miembro**.
 
@@ -88,3 +94,31 @@ Para registrar varios miembros simultáneamente, deberá cargar un archivo CSV (
 ### Construir el archivo CSV
 
 Cuando se construye un archivo CSV para importar miembros a su organización, asegúrese de incluir la información necesaria para el método que está utilizando. Utilice comas o puntos y comas para separar columnas. Al cargar el archivo CSV, en **Valores CSV**, asegúrese de que selecciona el separador de columna correcto.
+
+## Edición de usuarios
+{: #editing-users}
+
+Los usuarios se pueden editar para modificar su rol, añadir, eliminar o cambiar una fecha de caducidad de acceso o añadir o eliminar el acceso a la organización.
+
+1. Desde el panel de control de {{site.data.keyword.iot_short_notm}}, pulse **Miembros** en la barra de navegación en la izquierda.
+2. Pulse el icono **Editar** ![Editar](/docs/images/edit_32.svg) junto al usuario que desea editar.
+3. Realice los cambios que desee en el usuario.
+4. Pulse **Guardar**.
+
+## Bloqueo del de acceso de usuarios
+{: #blocking-users}
+
+Se puede bloquear el acceso de los usuarios a la organización {{site.data.keyword.iot_short_notm}} mientras siguen manteniendo la pertenencia a la organización.
+
+1. Desde el panel de control de {{site.data.keyword.iot_short_notm}}, pulse **Miembros** en la barra de navegación en la izquierda.
+2. Pulse el conmutar situado junto al usuario cuyo acceso a la organización {{site.data.keyword.iot_short_notm}} desea bloquear.
+
+
+## Eliminación de usuarios
+{: #removing-users}
+
+Los usuarios se pueden eliminar por completo de la organización {{site.data.keyword.iot_short_notm}}. La eliminación de usuarios no se puede deshacer y los usuarios se deben [añadir a la plataforma](#adding-new-users) para restaurar el acceso.
+
+1. Desde el panel de control de {{site.data.keyword.iot_short_notm}}, pulse **Miembros** en la barra de navegación en la izquierda.
+2. Pulse el icono **Suprimir** ![Suprimir](/docs/images/trash_32.svg) situado junto al usuario que se va a eliminar.
+3. Pulse **Suprimir** en el diálogo de confirmación.

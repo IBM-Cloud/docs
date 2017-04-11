@@ -280,7 +280,7 @@ click the corresponding icon.
 </tr>
 <tr>
 <td><code>POST&nbsp;/{db}/\_bulk\_get</code><p>
-<a href='https://docs.cloudant.com/' target='_blank'><img src='../images/verySmallCloudant.png' alt='Cloudant'/></a>
+<!-- <a href='https://docs.cloudant.com/' target='_blank'><img src='../images/verySmallCloudant.png' alt='Cloudant'/></a> -->
 <a href='http://docs.couchdb.org/en/2.0.0/' target='_blank'><img src='../images/verySmallCouchDB2.png' alt='CouchDB 2.0'/></a>
 </p></td><td>Get multiple documents in a single request.</td>
 </tr>

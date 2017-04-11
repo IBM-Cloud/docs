@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-01"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -31,8 +31,8 @@ Watson IoT Node è una coppia di nodi per la connessione dei tuoi dispositivi o 
 
 Per ulteriori informazioni su Watson IoT Node, consulta le seguenti risorse:
 
-- [Watson IoT Node su GitHub](https://github.com/ibm-watson-iot/iot-nodered/tree/master/node-red-contrib-ibm-watson-iot)
-- [Documentazione Watson IoT Node](https://www.npmjs.com/package/node-red-contrib-ibm-watson-iot)
+- [Watson IoT Node on GitHub ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/iot-nodered/tree/master/node-red-contrib-ibm-watson-iot){: new_window}
+- [Watson IoT Node documentation ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://www.npmjs.com/package/node-red-contrib-ibm-watson-iot){: new_window}
 
 
 ## IBM IoT App Node  
@@ -45,8 +45,8 @@ IBM IoT App Node è una coppia di nodi per la connessione delle tue applicazioni
 
 Per ulteriori informazioni su IBM IoT App Node, consulta le seguenti risorse:
 
-- [IBM IoT App Node su GitHub](https://github.com/ibm-watson-iot/iot-nodered/tree/master/node-red-contrib-scx-ibmiotapp)
-- [Documentazione IBM IoT App Node](http://flows.nodered.org/node/node-red-contrib-scx-ibmiotapp)
+- [IBM IoT App Node on GitHub ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/iot-nodered/tree/master/node-red-contrib-scx-ibmiotapp){: new_window}
+- [IBM IoT App Node documentation ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](http://flows.nodered.org/node/node-red-contrib-scx-ibmiotapp){: new_window}
 
 
 ## Ulteriori informazioni e esempi   
@@ -54,7 +54,7 @@ Per ulteriori informazioni su IBM IoT App Node, consulta le seguenti risorse:
 
 
 Per un'introduzione, utilizza le seguenti 'ricette':
-- [Getting started with {{site.data.keyword.iot_short_notm}} by using Node-RED](https://developer.ibm.com/recipes/tutorials/getting-started-with-watson-iot-platform-using-node-red/)
-- [Connecting Raspberry Pi as a device to {{site.data.keyword.iot_short_notm}} by using Node-RED](https://developer.ibm.com/recipes/tutorials/deploy-watson-iot-node-on-raspberry-pi/)
+- [Getting started with {{site.data.keyword.iot_short_notm}} by using Node-RED ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/getting-started-with-watson-iot-platform-using-node-red/){: new_window}
+- [Connecting Raspberry Pi as a device to {{site.data.keyword.iot_short_notm}} by using Node-RED ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/deploy-watson-iot-node-on-raspberry-pi/){: new_window}
 
 Per ulteriori informazioni, consulta anche [Creating apps with Node-RED Starter](https://console.ng.bluemix.net/docs/starters/Node-RED/nodered.html#nodered).

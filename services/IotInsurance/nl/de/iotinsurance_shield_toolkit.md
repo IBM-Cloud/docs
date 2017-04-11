@@ -1,27 +1,36 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-26"
-
+  years: 2016, 2017
+lastupdated: "2017-03-01"
 ---
 
-
-
-{:new_window: target="\_blank"}
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 
 # Shield-Toolkit
 {: #iot4i_shield_toolkit}
-Bei einem Shield handelt es sich um eine Reihe von Regeln und Aktionen, die durch bestimmte Bedingungen in der Eingabe (Nutzdaten) ausgelöst werden können, die von Sensoren empfangen wird. Shields werden zum Schutz von Eigentum und Benutzern verwendet, indem Gefahren erkannt und die entsprechenden zu ergreifenden Maßnahmen ermittelt werden. Bei diesem Beispiel sehen Sie, wie Sie Ihre Umgebung einrichten, ein Shield definieren, einen Benutzer erstellen und anschließend das Shield dem Benutzer zuordnen können.  Optional können Sie auch Hochstufungen und simulierte Gefahren erzeugen.
+Shields werden zum Schutz von Eigentum und Benutzern verwendet, indem Gefahren erkannt und die entsprechenden automatisierten Maßnahmen erzeugt werden. Sie können die Shields aus der {{site.data.keyword.iotinsurance_short}}-Shields-Bibliothek verwenden oder ändern bzw. mithilfe der folgenden Anweisungen und Beispiele eigene Shields erstellen und implementieren.
 {:shortdesc}
+
+## Informationen zu Shields.
+Bei einem Shield handelt es sich um eine Reihe von Regeln und definierten Aktionen, die durch bestimmte Bedingungen in der Eingabe ausgelöst werden können, die von einem Sensor empfangen wird. Sie können beispielsweise ein Shield mit einer Regel erstellen, die besagt, dass eine Textnachricht gesendet werden soll, falls der Sensor einen Wasserleitungsschaden ermittelt.
+
+## Shields aus der {{site.data.keyword.iotinsurance_short}}-Shields-Bibliothek verwenden
+
+In der [{{site.data.keyword.iotinsurance_short}}-Shields-Bibliothek ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-shields){: new_window} finden Sie ein breites Spektrum an vordefinierten Shields. In der Readme-Datei auf der Site finden Sie Anweisungen zum Herunterladen der Shields sowie zu deren Verwendung.
+
+## Erstellung eines eigenen Shields
+Bei diesem Beispiel sehen Sie, wie Sie Ihre Umgebung einrichten, ein Shield definieren, einen Benutzer erstellen und anschließend das Shield dem Benutzer zuordnen können.  Optional können Sie auch Hochstufungen und simulierte Gefahren erzeugen.  
 
 In den folgenden Abschnitten sehen Sie Codebeispiele für die Erstellung eines einfachen Shields für Wasserleitungsschäden. Im [GitHub-Repository iot4i-api-examples-nodejs](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/) ist eine ganze Reihe von Beispielcode verfügbar.
 
-## Voraussetzungen
+### Voraussetzungen
 Stellen Sie zunächst sicher, dass folgende Voraussetzungen erfüllt sind:
 
 - [Node.js](https://nodejs.org/en/) ist auf Ihrem Computer installiert.  
@@ -32,7 +41,7 @@ Stellen Sie zunächst sicher, dass folgende Voraussetzungen erfüllt sind:
   1. Klonen Sie das [GitHub-Quellcode-Repository](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs) oder laden Sie es auf Ihren Computer herunter.
   2. Installieren Sie die Open-Source-Voraussetzungen des Projekts, indem Sie über eine Befehlszeile in den Ordner wechseln, der die geklonten Quellcodedateien enthält, und dort den Befehl `npm install` ausführen.
 
-## Eigene Umgebung einrichten
+### Eigene Umgebung einrichten
 {: #environment}
 Für die Konfiguration Ihrer Umgebung zum Senden von REST-API-Aufrufen müssen Sie die URL für die API in der Datei config.js konfigurieren. Die Aggregator-URL kann in diesem Kontext ignoriert werden.
 
@@ -47,7 +56,7 @@ var config = module.exports = {
 };
 ```
 
-## Shield-Definition erstellen
+### Shield-Definition erstellen
 {: #create_shield_def}
 
 Methode: POST  
@@ -79,7 +88,7 @@ Dabei gilt Folgendes:
 - **UUID** - Dies ist die Universal Unique Identifier (UUID) des Shields.
 - **actions** - Eine Liste mit Aktionen, die bei der Erzeugung einer Gefahr ausgelöst werden. In diesem Beispiel werden Informationen zu der Gefahr mithilfe einer iOS-Push-Benachrichtigung an die Benutzer-App gesendet.
 
-## Shield-Code erstellen
+### Shield-Code erstellen
 {: #create_shield_code}
 Erstellen Sie in der Datei shieldCode.js einen Shield-Code, um festzulegen, wie die Shield-Engine Nutzdaten verarbeitet.
 
@@ -146,7 +155,7 @@ Jeder Shield-Code enthält Ressourcen, die in den resource/shield.js-Anweisungen
   registerShield(DEMO_SHIELD_UUID, DEMO_SHIELD_NAME, demoEntryCondition, undefined, demoSafelet, demoMessage, DEMO_SHIELD_DELAY);
   ```
 
-## Benutzer erstellen
+### Benutzer erstellen
 {: #create_user}
 
 Methode: POST  
@@ -181,7 +190,7 @@ Dabei gilt Folgendes:
   - 10 - Dashboard
   - 1 - Systemadministrator
 
-## Shield-Zuordnung erstellen
+### Shield-Zuordnung erstellen
 {: #create_shield_assoc}
 
 Methode: POST  
@@ -203,7 +212,7 @@ var userShield = {
 
 
 
-## Simulierte Gefahr einrichten
+### Simulierte Gefahr einrichten
 {: #create_sim_hazard}
 
 Methode: POST  
@@ -240,10 +249,10 @@ var parameters {
 ```
 
 
-## Hochstufung erstellen
+### Hochstufung erstellen
 {: #create_promotion}
 
-{{site.data.keyword.iotinsurance_short}} kann mithilfe der mobilen App Hochstufungen an den Hausbesitzer senden. Mithilfe der Datei createPromotion.js können Sie Hochstufungen einrichten.
+{{site.data.keyword.iotinsurance_short}} kann mithilfe der mobilen App Hochstufungen an den Hausbesitzer senden. Mithilfe der Datei createPromotion.js können Sie Hochstufungen erstellen.
 
 Im folgenden Beispiel sehen Sie, wie eine Hochstufung für einen autorisierten Klempner erstellt wird.
 

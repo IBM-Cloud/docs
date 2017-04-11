@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-27"
+  years: 2016, 2017
+lastupdated: "2017-03-13"
 
 ---
 
@@ -23,8 +23,10 @@ IoT デバイスからデータを受信する操作を開始するには、そ�
 
 接続プロセスを開始する前に、デバイスが {{site.data.keyword.iot_short_notm}} と通信するための以下の要件を満たしていることを確認する必要があります。
 
-- デバイスは、[MQTT 形式](reference/mqtt/index.html)のデバイス・メッセージを送信することによって通信ができなければなりません。
-- デバイス・メッセージは、{{site.data.keyword.iot_short_notm}} [メッセージ・ペイロード](reference/mqtt/index.html#/message-payload)の要件に準拠していなければなりません。
+- デバイスは、HTTP プロトコルまたは MQTT プロトコルを使用して通信できるようでなければなりません。
+- デバイス・メッセージは、{{site.data.keyword.iot_short_notm}} のメッセージ・ペイロードの要件に準拠していなければなりません。
+
+詳細については、[Watson IoT Platform でのデバイスの開発](https://console.ng.bluemix.net/docs/services/IoT/devices/device_dev_index.html)を参照してください。
 
 デバイスを {{site.data.keyword.iot_short_notm}} に接続するには、以下の手順を実行します。
 
@@ -33,25 +35,31 @@ IoT デバイスからデータを受信する操作を開始するには、そ�
 
 デバイスを登録するには、デバイスをデバイス・タイプごとに分類し、デバイスに名前を付けて、デバイス情報を指定します。その後、接続トークンを指定するか、{{site.data.keyword.iot_short_notm}} によって生成されるトークンを受け入れます。
 
-{{site.data.keyword.iot_short_notm}} ダッシュボードを使用する場合は、一度に 1 つずつデバイスを追加します。[{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/post_bulk_devices_add) を使用する場合は、一度に 1 つ以上のデバイスを追加できます。
+{{site.data.keyword.iot_short_notm}} ダッシュボードから一度に 1 つずつデバイスを追加するか、[{{site.data.keyword.iot_short_notm}} API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Bulk_Configuration){: new_window} を使用して一度に 1 つ以上のデバイスを追加することができます。
 
 {{site.data.keyword.iot_short_notm}} ダッシュボードからデバイスを追加するには、以下のようにします。
 
-1. {{site.data.keyword.Bluemix}} ダッシュボードで {{site.data.keyword.iot_short_notm}} サービスのタイルをクリックしてサービスのダッシュボードを開くか、次の URL を使用してダッシュボードに直接アクセスします。
+1. {{site.data.keyword.Bluemix}} ダッシュボードで {{site.data.keyword.iot_short_notm}} サービスのタイルをクリックします。
 
- `https://org_id.internetofthings.ibmcloud.com/dashboard/#/overview `
+2. サービスのページで**「起動 (Launch)」**をクリックして、{{site.data.keyword.iot_short_notm}} 組織の管理作業を開始します。
 
-    *org_id* は、{{site.data.keyword.Bluemix}} 組織の ID です。
+  新しいブラウザー・タブで以下の URL の {{site.data.keyword.iot_short_notm}} Web コンソールが開きます。
 
-2. サービスのページで**「ダッシュボードを起動」**をクリックして、{{site.data.keyword.iot_short_notm}} 組織の管理作業を開始します。
+ ```
+ https://org_id.internetofthings.ibmcloud.com/dashboard/#/overview
+ ```
+
+    ここで、*org_id* は [{{site.data.keyword.iot_short_notm}} 組織](iotplatform_overview.html#organizations){: new_window}の ID です。
 
 3. 「概要」ダッシュボードのメニュー・ペインから**「デバイス」**を選択し、**「デバイスの追加」**をクリックします。
 5. 追加するデバイスのデバイス・タイプを選択するか作成します。
-{{site.data.keyword.iot_short_notm}} に接続する各デバイスには、デバイス・タイプを関連付ける必要があります。デバイス・タイプとは、共通の特性を共有するデバイス・グループのことです。
+  
+{{site.data.keyword.iot_short_notm}} に接続する各デバイスには、デバイス・タイプを関連付ける必要があります。デバイス・タイプとは、共通の特性を共有するデバイス・グループのことです。  
 最初のデバイスを {{site.data.keyword.iot_short_notm}} 組織に追加する時点では、**「デバイス・タイプ」**メニューにデバイス・タイプが表示されません。まずデバイス・タイプを作成する必要があります。
  1. **「デバイス・タイプの作成」**をクリックします。
  2. デバイス・タイプ名 (`my_device_type` など) とそのデバイス・タイプの説明を入力します。
-**重要:** デバイス・タイプ名は 36 文字以下でなければなりません。以下の文字だけを含めることができます。
+   
+ **重要:** デバイス・タイプ名は 36 文字以下でなければなりません。以下の文字だけを含めることができます。
  <ul>
   <li>英数字 (a-z、A-Z、0-9)</li>
   <li>ハイフン (-)</li>
@@ -59,11 +67,14 @@ IoT デバイスからデータを受信する操作を開始するには、そ�
   <li>ピリオド (.)</li>
   </ul>
  3. オプション: デバイス・タイプの属性やメタデータを入力します。
+     
  **ヒント:** 属性とメタデータは、後で追加したり編集したりすることもできます。
  4. **「作成」**をクリックして、新しいデバイス・タイプを追加します。
 10. **「次へ」**をクリックして、選択したデバイス・タイプのデバイスを追加するプロセスを開始します。
 11. デバイス ID を入力します (`my_first_device` など)。
-デバイス ID は、{{site.data.keyword.iot_short_notm}} ダッシュボードでデバイスを識別するために使用され、デバイスを {{site.data.keyword.iot_short_notm}} に接続するための必須パラメーターでもあります。**重要:** デバイス ID は 36 文字以下でなければなりません。以下の文字だけを含めることができます。
+  
+デバイス ID は、{{site.data.keyword.iot_short_notm}} ダッシュボードでデバイスを識別するために使用され、デバイスを {{site.data.keyword.iot_short_notm}} に接続するための必須パラメーターでもあります。  
+**重要:** デバイス ID は 36 文字以下でなければなりません。以下の文字だけを含めることができます。
  <ul>
  <li>英数字 (a-z、A-Z、0-9)</li>
  <li>ハイフン (-)</li>
@@ -72,12 +83,16 @@ IoT デバイスからデータを受信する操作を開始するには、そ�
  </ul>
  **ヒント:** ネットワークに接続されたデバイスの場合は、デバイス MAC アドレス (区切り文字のコロンは付けない) などをデバイス ID として入力できます。  
 12. オプション: **「追加フィールド」**をクリックして、シリアル番号、製造元、型式などのデバイス情報を追加します。
+   
  **ヒント:** この情報は、後で追加したり編集したりすることもできます。
 12. オプション: デバイスの JSON メタデータを入力します。
+   
  **ヒント:** デバイスのメタデータは、後で追加したり編集したりすることもできます。
 13. **「次へ」**をクリックして、デバイスの追加を完了します。
 14. 要約情報が正しいことを確認してから、**「追加」**をクリックして接続を追加します。
-**ヒント:** 自動生成の認証トークンを受け入れることも、自分で認証トークンを指定することもできます。自分でトークンを作成する場合は、長さを 8 文字から 36 文字にして、英数字と以下の特殊文字だけを使用してください。
+  
+**ヒント:** 自動生成の認証トークンを受け入れることも、自分で認証トークンを指定することもできます。  
+自分でトークンを作成する場合は、長さを 8 文字から 36 文字にして、英数字と以下の特殊文字だけを使用してください。
  - ハイフン (-)
  - 下線 (&lowbar;)
  - 感嘆符 (!)
@@ -95,8 +110,8 @@ IoT デバイスからデータを受信する操作を開始するには、そ�
  - デバイス・タイプ (`my_device_type` など)
  - デバイス ID (`my_first_device` など)
  - 認証方式 (`token` など)
- - 認証トークン (`PtBVriRqIg4uh)_-Kl` など)
-**ヒント:** {{site.data.keyword.iot_short_notm}} へのデバイスの接続を構成するときに、組織 ID、認証トークン、デバイス・タイプ、デバイス ID が必要になります。  
+ - 認証トークン (`PtBVriRqIg4uh)_-Kl` など)  
+  **ヒント:** {{site.data.keyword.iot_short_notm}} へのデバイスの接続を構成するときに、組織 ID、認証トークン、デバイス・タイプ、デバイス ID が必要になります。  
 
 これで、デバイスを登録できました。次に、デバイスから {{site.data.keyword.iot_short_notm}} に接続するための構成を行います。
 
@@ -109,26 +124,42 @@ IoT デバイスからデータを受信する操作を開始するには、そ�
 - MQTT メッセージングを使用するようにデバイスをセットアップし、組織 ID、認証トークン、デバイス・タイプ、デバイス ID を使用して認証します。  
 - MQTT プロトコルを使用して、デバイス・メッセージを {{site.data.keyword.iot_short_notm}} 組織に送信します。
 
-**ヒント:** 一般的なデバイスに対応した多数の接続レシピが用意されています。レシピのリストについては、
-IBM.com の[デバイス接続のレシピ](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/)を参照してください。
+**ヒント:** 一般的なデバイスに対応した多数の接続レシピが用意されています。レシピのリストについては、IBM.com の[デバイス接続のレシピ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){: new_window} を参照してください。
 
 デバイスを接続するときには、以下の情報が必要になります。
-- URL: *org_id*.messaging.internetofthings.ibmcloud.com
+- URL: *org_id*.messaging.internetofthings.ibmcloud.com  
 *org_id* は、{{site.data.keyword.iot_short_notm}} 組織の ID です。
 - ポート:
  - 1883
  - 8883 (暗号化)
  - 443 (Web ソケット)
-- デバイス ID: d:*org_id*:*device_type*:*device_id*
+- デバイス ID: d:*org_id*:*device_type*:*device_id*  
 デバイスは、このパラメーターの組み合わせで一意的に識別されます。
-- ユーザー名: use-token-auth
+- ユーザー名: use-token-auth  
 この値の場合は、トークンによる許可を使用しています。
-- パスワード: *認証トークン*
+- パスワード: *認証トークン*  
 この値は、デバイスの登録時に自分で定義した固有のトークンか、デバイスに割り当てられたトークンです。
-- イベント・トピック形式: iot-2/evt/*event_id*/fmt/*format_string*
+- イベント・トピック形式: iot-2/evt/*event_id*/fmt/*format_string*  
 *event_id* では、{{site.data.keyword.iot_short_notm}} に表示されるイベント名を指定します。*format_string* は、イベントの形式 (JSON など) です。
 - メッセージ形式: JSON
-{{site.data.keyword.iot_short_notm}} は、いくつかの形式 (JSON やテキストなど) をサポートします。
+  
+ {{site.data.keyword.iot_short_notm}} は、いくつかの形式 (JSON やテキストなど) をサポートします。
 
 デバイスを接続するための詳細については、技術資料にある[デバイスの MQTT 接続](devices/mqtt.html)を参照してください。
-API 資料の[接続](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Connectivity/post_device_types_deviceType_devices_deviceId_events_eventName)のセクションにも、必要な情報が記載されています。
+
+
+[組織管理 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} API 資料にも、必要な情報が記載されています。
+
+## デバイス接続のレシピ
+
+Watson IoT Platform にデバイスを登録して接続するための詳しい流れについては、以下のレシピをご覧ください。
+
+- [How to Register Devices in IBM Watson IoT Platform ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/how-to-register-devices-in-ibm-iot-foundation/){: new_window}
+
+- [Connecting Raspberry Pi as a Device to Watson IoT using Node-RED ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/deploy-watson-iot-node-on-raspberry-pi/){: new_window}
+
+- [Connect an Arduino Uno device to the IBM Watson IoT Platform ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/connect-an-arduino-uno-device-to-the-ibm-internet-of-things-foundation/){: new_window}
+
+- [Connecting a Sense HAT to Watson IoT using Node-RED ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/connecting-a-sense-hat-to-watson-iot-using-node-red/){: new_window}
+
+- [Connecting Raspberry Pi with Windows IoT Core as a Device to Watson IoT Platform ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-with-windows-iot-core-as-a-device-to-watson-iot-using-node-red/){: new_window}

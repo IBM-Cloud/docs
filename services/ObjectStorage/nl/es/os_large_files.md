@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -17,12 +17,12 @@ lastupdated: "2017-01-17"
 Las cargas están limitadas a un tamaño máximo de 5 GB para una carga única. Sin embargo, puede segmentar objetos grandes en partes más pequeñas y utilizar un archivo de manifiesto para concatenar los segmentos. Una vez se ha concatenado un objeto, no hay tamaño máximo.
 {: shortdesc}
 
-Los objetos grandes pueden ser dinámicos o estáticos. Con objetos grandes estáticos (SLO), no es necesario que los objetos estén en el mismo contenedor; cada segmento se puede almacenar en cualquier contenedor y se le puede asignar cualquier nombre. Con objetos grandes dinámicos, el cliente Swift crea segmentos de contenedor y numerados que se cargan en paralelo en el contenedor. 
+Los objetos grandes pueden ser dinámicos o estáticos. Con objetos grandes estáticos (SLO), no es necesario que los objetos estén en el mismo contenedor; cada segmento se puede almacenar en cualquier contenedor y se le puede asignar cualquier nombre. Con objetos grandes dinámicos, el cliente Swift crea segmentos de contenedor y numerados que se cargan en paralelo en el contenedor.
 
 
 ## Objetos grandes dinámicos: {: #dynamic}
 
-Puede cargar objetos grandes dinámicos de dos maneras: 
+Puede cargar objetos grandes dinámicos de dos maneras:
   * Hacer que el cliente de Swift lo maneje todo automáticamente
   * Utilizar la API Swift para hacerlo usted mismo
 
@@ -38,14 +38,14 @@ El cliente de Swift utiliza el parámetro `-segment-size` para descomponer el ob
 
 #### Utilización de la API de Swift para manejar objetos grandes dinámicos
 
-Usted mismo puede segmentar los objetos para que tengan 5 GB o menos y, a continuación, cargarlos mediante la API de Swift. 
+Usted mismo puede segmentar los objetos para que tengan 5 GB o menos y, a continuación, cargarlos mediante la API de Swift.
 
-**Nota**: Durante la carga, todos los segmentos se deben cargar antes que el archivo de manifiesto. Si el objeto se descarga antes de que se hayan terminado de cargar todos los segmentos, el objeto descargado se concatena de forma incoherente. 
+**Nota**: Durante la carga, todos los segmentos se deben cargar antes que el archivo de manifiesto. Si el objeto se descarga antes de que se hayan terminado de cargar todos los segmentos, el objeto descargado se concatena de forma incoherente.
 
 Puede cargar archivos grandes completando los pasos siguientes.
 
 1. Clasifique los segmentos por nombre en el orden en el que se deben concatenar para formar el objeto original.
-2. Cargue los segmentos en un contenedor independiente del contenedor que aloja el archivo de manifiesto. El regulador para descargas se inicia una vez que se haya cargado el décimo segmento, y aumenta considerablemente el tiempo de carga.   
+2. Cargue los segmentos en un contenedor independiente del contenedor que aloja el archivo de manifiesto. El regulador para descargas se inicia una vez que se haya cargado el décimo segmento, y aumenta considerablemente el tiempo de carga.  
 
     ```
     curl -i -X PUT --data-binary @segment1 -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_name>/<object_name>/000001
@@ -69,7 +69,7 @@ Puede cargar archivos grandes completando los pasos siguientes.
     {: pre}
 
 
-## Objetos grandes estáticos{: #static}
+## Objetos grandes estáticos {: #static}
 
 Los objetos grandes estáticos utilizan segmentos y un archivo de manifiesto, pero le dan un mayor control. Con SLO, los segmentos no tienen que estar en el mismo contenedor; cada segmento se puede almacenar en cualquier contenedor y se les puede dar cualquier nombre. Sin embargo, los segmentos deben tener al menos 1 MB. No es necesario que establezca una cabecera para el archivo de manifiesto, aunque la cabecera “X-Static-Large-Object” se añade automáticamente y se establece en true una vez que se haya cargado un manifiesto correcto.
 {: shortdesc}
@@ -77,7 +77,7 @@ Los objetos grandes estáticos utilizan segmentos y un archivo de manifiesto, pe
 El archivo de manifiesto es un documento JSON que proporciona detalles de los segmentos y que se debe cargar una vez que se hayan cargado todos los segmentos. Los datos que se proporcionan para cada segmento del manifiesto se comparan con los metadatos de los segmentos reales. Si algo no coincide, el manifiesto no se carga.
 
 <table>
-<caption> Tabla 1: Atributos JSON del archivo de manifiesto</caption>
+<caption> Tabla 1: Atributos JSON del archivo de manifiesto </caption>
   <tr>
     <th> Atributo </th>
     <th> Descripción </th>
@@ -100,7 +100,7 @@ El archivo de manifiesto es un documento JSON que proporciona detalles de los se
 
 #### Para cargar archivos grandes
 
-1. Ejecute el siguiente mandato para cargar los segmentos. El regulador para descargas se inicia una vez que se haya cargado el décimo segmento, y aumenta considerablemente el tiempo de carga.   
+1. Ejecute el siguiente mandato para cargar los segmentos. El regulador para descargas se inicia una vez que se haya cargado el décimo segmento, y aumenta considerablemente el tiempo de carga.  
 
     ```
     curl -i -X PUT --data-binary @segment1 -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_one>/<segment>
@@ -132,7 +132,7 @@ El archivo de manifiesto es un documento JSON que proporciona detalles de los se
     ```
     {: pre}
 
-3. Cargue el archivo de manifiesto añadiendo la consulta `multipart-manifest=put` al nombre del manifiesto. 
+3. Cargue el archivo de manifiesto añadiendo la consulta `multipart-manifest=put` al nombre del manifiesto.
 
     ```
     curl -i -X PUT --data-binary @object_name -H "X-Auth-Token: <token>" https://<object-storage_url>/container_two/<object_name>?multipart-manifest=put
@@ -149,7 +149,7 @@ El archivo de manifiesto es un documento JSON que proporciona detalles de los se
 
 #### Cómo trabajar con objetos grandes estáticos
 
-Puede gestionar sus archivos con los siguientes mandatos. 
+Puede gestionar sus archivos con los siguientes mandatos.
 
 **Nota**: Para añadir o eliminar segmentos del objeto, cargue un nuevo archivo de manifiesto con una lista nueva de segmentos. El nombre de manifiesto puede mantenerse igual.
 

@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-11"
+  years: 2015, 2017
 
+lastupdated: "2017-03-14"
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -15,17 +15,24 @@ lastupdated: "2016-10-11"
 # 裝置的 HTTP REST API
 {: #api}
 
-**重要事項：**裝置的 {{site.data.keyword.iot_full}} HTTP REST API 特性僅是有限測試版程式的一部分。未來更新可能包含與此特性的目前版本不相容的變更。請試用，並且[讓我們知道您的想法](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html)。
+**重要事項：**裝置的 {{site.data.keyword.iot_full}} HTTP REST API 特性僅是有限測試版程式的一部分。未來更新可能包含與此特性的目前版本不相容的變更。請試用，並且[讓我們知道您的想法 ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}。
 
-## 存取 HTTP REST API
+## 存取 HTTP REST API 文件
 {: #api_link}
 
-若要存取 {{site.data.keyword.iot_short_notm}} HTTP REST API，以及取得如何將裝置整合至組織的相關資訊，請移至 https://docs.internetofthings.ibmcloud.com/swagger/v0002.html。
+若要存取 {{site.data.keyword.iot_short_notm}} HTTP REST API 文件，以及取得如何將裝置整合至組織中的相關資訊，請參閱 [API](../reference/api.html)。
 
 唯一支援的 {{site.data.keyword.iot_short_notm}} HTTP REST API 版本是第 2 版。請確定您的 {{site.data.keyword.iot_short_notm}} 解決方案使用的是第 2 版。
 
+## 用戶端連線
+{: #client_connections}
+
+如需用戶端安全以及如何將用戶端連接至 {{site.data.keyword.iot_short_notm}} 中裝置的相關資訊，請參閱[將應用程式、裝置及閘道連接至 {{site.data.keyword.iot_short_notm}}](../reference/security/connect_devices_apps_gw.html)。
+
 # 裝置的 HTTP REST 傳訊 API
 {: #rest_messaging_api}
+
+若要存取「{{site.data.keyword.iot_short_notm}} HTTP 傳訊 API」文件，以及尋找使用 HTTP 來發佈事件的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP 傳訊 API ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}。
 
 ## 發佈事件
 {: #event_publication}
@@ -35,26 +42,26 @@ lastupdated: "2016-10-11"
 請使用下列其中一個 URL，來提交來自連接至 {{site.data.keyword.iot_short_notm}} 之裝置的 `POST` 要求：
 
 ### 未受保護的 POST 要求
-<pre class="pre">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
-{: codeblock}
+<pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
 ### 安全的 POST 要求
-<pre class="pre">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
-{: codeblock}
+
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
+
+**附註：**您也可以指定埠 443（預設 SSL 埠）來進行安全 HTTP API 呼叫。
 
 如果您要將裝置或應用程式連接至 Quickstart 服務，請改用下列其中一個 URL：
 
 ### 連接至 Quickstart 的未受保護 POST 要求
-<pre class="pre">http://quickstart.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
-{: codeblock}
+<pre class="pre"><code class="hljs">http://quickstart.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
 ### 連接至 Quickstart 的安全 POST 要求
-<pre class="pre">https://quickstart.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
-{: codeblock}
+<pre class="pre"><code class="hljs">https://quickstart.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
 **重要注意事項：**
 - 在現行 HTTP REST API 版本中，您只能使用 HTTP 傳訊來提交裝置事件。使用 MQTT 傳訊通訊協定，以提交其他裝置管理及控制特性的要求。
 - 因為無法變更授權 HTTP 標頭，所以只能重複使用 HTTP 連線來發佈相同裝置的事件。
+- 您也可以指定埠 443（預設 SSL 埠）來進行安全 HTTP API 呼叫。
 
 ### 鑑別
 
@@ -83,9 +90,6 @@ lastupdated: "2016-10-11"
 
 如需 {{site.data.keyword.iot_short_notm}} 的 MQTT 通訊協定及服務品質水準的相關資訊，請參閱 [MQTT 傳訊](../reference/mqtt/index.html)。
 
-
-<--!
-從已作廢的「特性」開發主題中移動。要與開發人員討論的位置。
 ## 前次事件快取
 {: #last-event-cache}
 
@@ -140,4 +144,3 @@ GET /api/v0002/device/types/<device-type>/devices/<device-id>/events
     }
 ]
 ```
--->

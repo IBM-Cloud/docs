@@ -1,22 +1,21 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-02-22"
+  years: 2016, 2017
+lastupdated: "2017-02-23"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:screen: .screen}
 {:pre: .pre}
 
 # Creazione di trigger e regole
 {: #openwhisk_triggers}
 
-
-I trigger e le regole {{site.data.keyword.openwhisk}} forniscono alla piattaforma funzionalità guidate dagli eventi. Gli eventi provenienti da origini eventi interne ed esterne vengono incanalati attraverso un trigger e le regole consentono alle tue azioni di reagire a tali eventi.
+I trigger e le regole {{site.data.keyword.openwhisk_short}} forniscono alla piattaforma funzionalità guidate dagli eventi. Gli eventi provenienti da origini eventi interne ed esterne vengono incanalati attraverso un trigger e le regole consentono alle tue azioni di reagire a tali eventi.
 {: shortdesc}
 
 ## Creazione di trigger
@@ -72,11 +71,9 @@ Ad esempio, crea un trigger per l'invio di aggiornamenti sull'ubicazione dell'ut
   wsk trigger create locationUpdate
   ```
   {: pre}
-
   ```
   ok: created trigger locationUpdate
   ```
-  {: screen}
 
 2. Verifica di aver creato il trigger, elencando l'insieme dei trigger.
 
@@ -84,12 +81,10 @@ Ad esempio, crea un trigger per l'invio di aggiornamenti sull'ubicazione dell'ut
   wsk trigger list
   ```
   {: pre}
-
   ```
   triggers
   /someNamespace/locationUpdate                            private
   ```
-  {: screen}
 
   Finora hai creato un determinato "canale" per cui possono essere attivati gli eventi.
 
@@ -99,11 +94,9 @@ Ad esempio, crea un trigger per l'invio di aggiornamenti sull'ubicazione dell'ut
   wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
   ```
   {: pre}
-
   ```
   ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
   ```
-  {: screen}
 
 Un trigger che viene attivato senza una regola di accompagnamento da soddisfare non ha un effetto visibile.
 I trigger non possono essere creati in un pacchetto, devono essere creati direttamente in uno spazio dei nomi.
@@ -116,7 +109,7 @@ Le regole vengono utilizzate per associare un trigger a un'azione. Ogni volta ch
 Ad esempio, crea una regola che richiama l'azione "hello" ogni volta che viene pubblicato un aggiornamento sull'ubicazione.
 
 1. Crea un file "hello.js" con il codice azione che useremo:
-  ```
+  ```javascript
   function main(params) {
      return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
@@ -128,7 +121,6 @@ Ad esempio, crea una regola che richiama l'azione "hello" ogni volta che viene p
   wsk trigger update locationUpdate
   ```
   {: pre}
-
   ```
   wsk action update hello hello.js
   ```
@@ -151,34 +143,28 @@ Ad esempio, crea una regola che richiama l'azione "hello" ogni volta che viene p
   wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
   ```
   {: pre}
-
   ```
   ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
   ```
-  {: screen}
 
 5. Verifica che l'azione sia stata richiamata, controllando l'attivazione più recente.
   ```
   wsk activation list --limit 1 hello
   ```
   {: pre}
-
   ```
   activations
   9c98a083b924426d8b26b5f41c5ebc0d             hello
   ```
-  {: screen}
-
   ```
   wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   ```
   {: pre}
-  ```
+  ```json
   {
      "payload": "Hello, Donald from Washington, D.C."
   }
   ```
-  {: screen}
 
   Puoi vedere che l'azione "hello" ha ricevuto il payload dell'evento e ha restituito la stringa prevista.
 
@@ -194,7 +180,9 @@ Puoi anche utilizzare le regole con le sequenze. Ad esempio, è possibile creare
 `recordLocationAndHello` che viene attivata dalla regola `anotherRule`.
   ```
   wsk action create recordLocationAndHello --sequence /whisk.system/utils/echo,hello
+  ```
+  {: pre}
+  ```
   wsk rule create anotherRule locationUpdate recordLocationAndHello
   ```
   {: pre}
- 

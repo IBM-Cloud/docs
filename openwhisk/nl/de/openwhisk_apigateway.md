@@ -1,33 +1,31 @@
 ---
 
- 
-
 copyright:
-
   years: 2016, 2017
-lastupdated: "2017-01-04"
- 
+lastupdated: "2017-03-16"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:screen: .screen}
 {:pre: .pre}
 
-# Aktionen über API Gateway verfügbar machen (experimentell)
+# API-Gateway (experimentell)
 {: #openwhisk_apigateway}
 
-In {{site.data.keyword.openwhisk}} können Sie Ihre Aktionen über die [REST-API](./openwhisk_reference.html#openwhisk_ref_restapi) mit einer HTTP-Anforderung nur über die Methode **POST** aufrufen.
-Dazu muss der HTTP-Client die Anforderung mit dem OpenWhisk-Autorisierungs-API-Schlüssel durchführen. Dabei handelt es sich
-um einen Masterschlüssel, mit dem nicht nur Aktionen aufgerufen, sondern auch Aktionen gelöscht oder weitere Aktionen
-hinzugefügt werden können.
-{: shortdesc}
+[Webaktionen](openwhisk_webactions.html) werden freigegeben, damit sie allgemein verfügbar sind. 
 
-Mit dieser experimentellen Funktion können Sie Aktionen auch mit anderen HTTP-Methoden als POST und ohne den Autorisierungs-API-Schlüssel der Aktion aufrufen.
+Mittels Webaktionen können Sie eine Aktion mit anderen HTTP-Methoden als POST und ohne den Berechtigungs-API-Schlüssel der Aktion aufrufen. 
 
-Mit der CLI können Sie Ihre OpenWhisk-Aktionen über das OpenWhisk-API-Gateway verfügbar machen. 
+Aufgrund des Benutzerfeedbacks wurde für den Build von OpenWhisk-Aktionen, die zur Behandlung von HTTP-Ereignissen geeignet sind, das Programmiermodell mit Webaktionen gewählt. 
+
+Ein Großteil der API-Gateway-Funktionalität wurde in Webaktionen zusammengefasst. Webaktionen ermöglichen Ihnen die Behandlung jedweder HTTP-Anforderungen und die Rückgabe von HTTP-Antworten aus der Webaktion heraus, wobei Sie jederzeit die vollständige Kontrolle behalten. 
+
+Eine überarbeitete API-Gateway-Integration für OpenWhisk wird in Kürze verfügbar sein. Sie wird so konfiguriert sein, dass Ihre Webaktionen von ihr weitergeleitet und hierbei mit API-Gateway-Funktionen wie beispielsweise Ratenbegrenzung, OAuth-Tokenvalidierung, API-Schlüsseln und anderem ausgestattet werden.
+
+**Hinweis:** Die APIs, die Sie mit `wsk api-experimental` erstellt haben, können weiterhin verwendet werden. Sie sollten jedoch Ihre APIs nach und nach in Webaktionen migrieren.
 
 ## Konfiguration der OpenWhisk-CLI
 {: #openwhisk_apigateway_cli}

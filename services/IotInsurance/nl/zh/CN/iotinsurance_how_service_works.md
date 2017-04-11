@@ -1,16 +1,17 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-26"
-
+  years: 2016, 2017
+lastupdated: "2017-03-07"
 ---
 
-
-{:new_window: target="\_blank"}
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
 
 
 # 服务工作方式
@@ -25,21 +26,3 @@ lastupdated: "2016-10-26"
 {{site.data.keyword.iotinsurance_short}} 依赖 {{site.data.keyword.iot_full}} 在其组件之间传递警报和危险有效内容。完整的工作系统需要用户、保障以及用户与保障之间的关联。
 
 ![{{site.data.keyword.iotinsurance_short}} 过程。本主题的正文部分对此图进行了具体描述。](images/IoT4I_process.svg "{{site.data.keyword.iotinsurance_short}} 过程")
-
-# 相关链接
-{: #rellinks}
-
-## 教程和样本
-{: #samples}
-* [GitHub 上的样本移动应用程序代码](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## API 参考
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API 示例](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## 相关链接
-{: #general}
-* [{{site.data.keyword.iot_full}}文档](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [开发人员支持论坛](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-* [堆栈溢出支持论坛](http://stackoverflow.com/questions/tagged/ibm-bluemix)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-1-11"
+lastupdated: "2017-3-16"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -73,7 +73,7 @@ When you run a stage manually, or if it runs because the stage before it is comp
 **Tip:** You can deploy a previous build. On the stage that contains the build, click **View logs and history**. On the page that opens, click to expand the run number and then click the build job. Click **SEND TO**, and select a target.
 
 ###Adding services to apps
-You can add services to your apps and manage those services from your Bluemix dashboard or the Cloud Foundry command line interface (CLI). You can also issue Cloud Foundry CLI commands in scripts for DevOps Services pipeline jobs. For example, you can add a service to an app in the script of a deploy job. For more information about adding services, see [Adding a service to your application](/docs/services/reqnsi.html#add_service).
+You can add services to your apps and manage those services from your Bluemix dashboard or the Cloud Foundry command line interface (CLI). You can also issue Cloud Foundry CLI commands in scripts for pipeline jobs. For example, you can add a service to an app in the script of a deploy job. For more information about adding services, see [Adding a service to your application](/docs/services/reqnsi.html#add_service).
 
 ## Viewing logs
 {: #deliverypipeline_view_logs}
@@ -89,5 +89,3 @@ To view the runtime log of a deployed application, click **View runtime log**.
 In addition to job logs, you can view unit test results, generated artifacts, and code changes for any build job.
 
 You can also run, cancel, or configure a stage from the Stage History page. Click **RUN** to run a stage or **CONFIGURE** to configure a stage. While a stage is running, you can cancel it by clicking the run number and then clicking **CANCEL**.
-
-

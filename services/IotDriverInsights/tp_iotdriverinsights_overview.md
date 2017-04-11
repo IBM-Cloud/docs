@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-25"
+  years: 2016, 2017
+lastupdated: "2017-03-03"
 ---
 
 {:new_window: target="_blank"}
@@ -58,4 +58,4 @@ The Trajectory Pattern Analysis REST API provides requests that you can use to c
    - `getODList` returns the list of O/D pattern information of the specified arguments
    - `deleteJobResult` deletes all of the analyzed results that are related to a job
 
-For more information, see the [{{site.data.keyword.iotdriverinsights_short}} API](http://ibm.biz/IoTDriverBehavior_APIdoc){:new_window} documentation.
+For more information, see the [{{site.data.keyword.iotdriverinsights_short}} API ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/IoTDriverBehavior_APIdoc){:new_window} documentation.

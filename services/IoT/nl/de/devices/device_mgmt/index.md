@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-13"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2016-09-13"
 
 **Verwaltete Geräte** sind als Geräte definiert, die über einen Gerätemanagementagenten verfügen. Ein Gerätemanagementagent ist eine Logikeinheit, die es dem Gerät ermöglicht, über das Gerätemanagementprotokoll mit dem {{site.data.keyword.iot_short_notm}}-Gerätemanagementservice zu interagieren. Verwaltete Geräte können Gerätemanagementoperationen einschließlich von Positionsaktualisierungen, Firmware-Downloads und Aktualisierungen, Neustarts und das Zurücksetzen auf Werkseinstellungen ausführen.
 
-Das Gerätemanagementprotokoll definiert eine Gruppe von unterstützten Operationen. Ein Gerätemanagementagent kann eine Untergruppe der Operationen unterstützen, die Operationen der **verwalteten Geräte** und der **nicht verwalteten Geräte** müssen unterstützt werden. Ein Gerät, das Operationen für Firmwareaktionen unterstützt, muss auch Beobachtungen unterstützen.
+Das Gerätemanagementprotokoll definiert eine Gruppe von unterstützten Operationen. Ein Gerätemanagementagent kann eine Untergruppe der Operationen unterstützen, die Operationen **Verwalten** und **Nicht verwalten**. Ein Gerät, das Operationen für Firmwareaktionen unterstützt, muss auch Beobachtungen unterstützen.
 
 Ein Gerätemanagementprotokoll wird auf der Grundlage eines MQTT-Nachrichtenprotokolls erstellt. Weitere Informationen zu der Vorgehensweise, wie das Gerätemanagementprotokoll mit MQTT interagiert, finden Sie in [MQTT-Konnektivität für Geräte](../mqtt.html).
 
@@ -36,6 +36,8 @@ Ein Gerätemanagementprotokoll wird auf der Grundlage eines MQTT-Nachrichtenprot
 4. Ein Gerät kann Aktualisierungen zu seiner Position, zu Diagnoseinformationen und Fehlercodes mithilfe des Gerätemanagementprotokolls kommunizieren.
 5. Zum Handhaben nicht mehr vorhandener Geräte in Beständen mit einer großen Zahl von Geräten enthält die Anforderung für die Operation **Verwaltete Geräte** einen optionalen Parameter für den Lebenszyklus. Der Parameter für den Lebenszyklus ist die Anzahl der Sekunden, in denen das Geräte eine weitere Anforderung des Typs **Verwaltete Geräte** vornehmen muss, um zu verhindern, dass es als 'ruhend' klassifiziert und damit zu einem 'nicht verwalteten Gerät' wird.
 6. Wenn ein Gerät stillgelegt wird, können Sie es mithilfe des Dashboards oder der REST-API aus {{site.data.keyword.iot_short_notm}} entfernen.
+
+Siehe die Anleitung [Raspberry Pi als verwaltetes Gerät mit IBM Watson IoT Platform verbinden ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/){: new_window}.
 
 ### Zusammenfassung der Rückkehrcodes
 

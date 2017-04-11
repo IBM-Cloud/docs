@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -20,12 +20,12 @@ Swift no tiene una auténtica estructura de directorios, sino que utiliza la den
 
 Para añadir un directorio a un contenedor, debe tener la estructura de directorios colocada en el dispositivo local.
 
-1. Localmente, cree un directorio y guarde el archivo. 
+1. Localmente, cree un directorio y guarde el archivo.
 2. Ejecute el siguiente mandato para cargar un directorio al contenedor.
 
     ```
-swift upload <nombre_contenedor> <nombre_directorio>
-```
+    swift upload <nombre_contenedor> <nombre_directorio>
+    ```
     {: pre}
 
 ## Descarga de un directorio con la CLI
@@ -34,6 +34,6 @@ Para descargar una estructura de directorios, utilice el parámetro `-prefix` pa
 1. Ejecute el siguiente mandato para descargar un directorio.
 
     ```
-swift download <nombre_contenedor> --prefix <directorio>
-```
+    swift download <nombre_contenedor> --prefix <directorio>
+    ```
     {: pre}

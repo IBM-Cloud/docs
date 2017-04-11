@@ -2,9 +2,7 @@
 {: #enable-push-ios-notifications-register}
 
 
-Debe registrar una aplicación (app) con APN para recibir notificaciones remotas, que normalmente
-  se producen después de instalar la app en un dispositivo. Después de que la app reciba la señal de dispositivo que han generado las APN,
-  debe volver a pasarse al Servicio de notificaciones Push.
+Debe registrar una aplicación (app) con APNs para recibir notificaciones remotas, que normalmente se producen después de instalar la app en un dispositivo. Después de que la app reciba la señal de dispositivo que ha generado APNs, debe volver a pasarse al Servicio de notificaciones Push.
 
 Para registrar las aplicaciones y los dispositivos de iOS:
 
@@ -14,14 +12,12 @@ Para registrar las aplicaciones y los dispositivos de iOS:
 
 ##Cree una aplicación de fondo
 
-Cree una aplicación de fondo en el catálogo Bluemix® de la sección de Contenedores modelo, que enlaza automáticamente el servicio Push a esta aplicación. Si ya ha
-                        creado una app de fondo, asegúrese de que enlace la app al Servicio de notificaciones
-                        Push.
+Cree una aplicación de fondo en el catálogo Bluemix® de la sección de Contenedores modelo, que enlaza automáticamente el servicio Push a esta aplicación. Si ya ha creado una app de fondo, asegúrese de que enlace la app al Servicio de notificaciones Push.
 
 ###Objective-C
 
 ```
-	//For Objective-C
+	//Para Objective-C
 	- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0){
 	    [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
@@ -49,12 +45,12 @@ Cree una aplicación de fondo en el catálogo Bluemix® de la sección de Conten
 
 ##Pase la señal a las Notificaciones Push
 
-Después de recibir la señal desde las APN, pase la señal a Notificaciones Push como parte del método ```registerDevice:withDeviceToken```.
+Después de recibir la señal desde APNs, pase la señal a Notificaciones Push como parte del método `registerDevice:withDeviceToken`.
 
 ###Objective-C
 
 ```
-//For Objective-C
+//Para Objective-C
 -( void) application:( UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:( NSData *)deviceToken{
 
    IMFClient *client = [IMFClient sharedInstance];
@@ -65,7 +61,7 @@ Después de recibir la señal desde las APN, pase la señal a Notificaciones Pus
  // get Push instance
 IMFPushClient* push = [IMFPushClient sharedInstance];
 [push registerDeviceToken:deviceToken completionHandler:^(IMFResponse *response,  NSError *error) {
-   if(error){
+   if (error){
      [ self  updateMessage:error .description];
   }  else {
     [ self updateMessage:response .responseJson .description];
@@ -75,7 +71,7 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 
 ###Swift
 
-Después de recibir la señal desde las APN, pase la señal a Notificaciones Push como parte del método ```didRegisterForRemoteNotificationsWithDeviceToken```.
+Después de recibir la señal desde APNS, pase la señal a Notificaciones Push como parte del método `didRegisterForRemoteNotificationsWithDeviceToken`.
 
 ```
 func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -20,7 +20,7 @@ Os uploads são limitados a um tamanho máximo de 5 GB para um único upload. No
 Os objetos grandes podem ser dinâmicos ou estáticos. Com objetos grandes estáticos (SLO), os segmentos não precisam estar no mesmo contêiner; cada segmento pode ser armazenado em qualquer contêiner e receber qualquer nome. Com os objetos grandes dinâmicos, o Cliente Swift cria um contêiner e segmentos numerados que são transferidos por upload em paralelo ao contêiner.
 
 
-## Objetos grandes dinâmicos:{: #dynamic}
+## Objetos grandes dinâmicos: {: #dynamic}
 
 É possível fazer upload de objetos grandes dinâmicos de duas maneiras:
   * Ter o cliente Swift manipulando tudo automaticamente
@@ -81,7 +81,7 @@ possível incluir ou remover segmentos sem precisar atualizar o arquivo manifest
     {: pre}
 
 
-## Objetos grandes estáticos{: #static}
+## Objetos grandes estáticos {: #static}
 
 Os objetos grandes estáticos usam segmentos e um arquivo manifest, mas você tem mais controle. Com SLO, os segmentos não precisam estar no mesmo contêiner; cada segmento pode ser armazenado em qualquer contêiner e receber qualquer nome. No entanto, os segmentos devem ter pelo menos 1 MB. Não é necessário definir um cabeçalho para o arquivo manifest, embora o cabeçalho “X-Static-Large-Object” seja automaticamente incluído e configurado como true após um manifest correto ser transferido por upload.
 {: shortdesc}

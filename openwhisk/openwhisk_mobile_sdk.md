@@ -1,33 +1,17 @@
----
 
-copyright:
-  years: 2016
-lastupdated: "2016-08-26"
+# Using the OpenWhisk mobile SDK
 
----
-
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-
-# Using the {{site.data.keyword.openwhisk_short}} mobile SDK
-{: #openwhisk_mobile_sdk}
-
-{{site.data.keyword.openwhisk}} provides a mobile SDK for iOS and watchOS devices that enables mobile apps to easily fire remote triggers and invoke remote actions. A version for Android is currently not available; Android developers can use the {{site.data.keyword.openwhisk}} REST API directly.
+OpenWhisk provides a mobile SDK for iOS and watchOS devices that enables mobile apps to easily fire remote triggers and invoke remote actions. A version for Android is currently not available; Android developers can use the OpenWhisk REST API directly.
 
 The mobile SDK is written in Swift 3.0 and supports iOS 10 and later releases. You can build the mobile SDK using Xcode 8.0. Legacy Swift 2.2/Xcode 7 versions of the SDK are available up to 0.1.7, though this is now deprecated.
 
 ## Adding the SDK to your app
-{: #openwhisk_add_sdk}
 
 You can install the mobile SDK by using CocoaPods, Carthage, or from the source directory.
 
 ### Installing by using CocoaPods
-{: #openwhisk_add_sdk_cocoapods}
 
-The {{site.data.keyword.openwhisk_short}} SDK for mobile is available for public distribution through CocoaPods. Assuming CocoaPods is installed, put the following lines into a file called 'Podfile' inside the starter app project directory.
+The OpenWhisk SDK for mobile is available for public distribution through CocoaPods. Assuming CocoaPods is installed, put the following lines into a file called 'Podfile' inside the starter app project directory.
 
 ```
 install! 'cocoapods', :deterministic_uuids => false
@@ -37,17 +21,16 @@ target 'MyApp' do
      pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.2.2'
 end
 
-target 'MyApp WatchKit Extension' do
+target 'MyApp WatchKit Extension' do 
      pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.2.2'
 end
 ```
-{: codeblock}
 
-From the command line, type `pod install`. This command installs the SDK for an iOS app with a watchOS extension.  Use the workspace file CocoaPods creates for your app to open the project in Xcode.
+From the command line, type `pod install`. This command installs the SDK for an iOS app with a watchOS extension.  Use the workspace file CocoaPods creates for your app to open the project in Xcode. 
 
 After installation, open your project workspace.  You may get the following warning when building:
 `Use Legacy Swift Language Version” (SWIFT_VERSION) is required to be configured correctly for targets which use Swift. Use the [Edit > Convert > To Current Swift Syntax…] menu to choose a Swift version or use the Build Settings editor to configure the build setting directly.`
-This is caused if Cocoapods does not update the Swift version in the Pods project.  To fix, select the Pods project and the {{site.data.keyword.openwhisk_short}} target.  Go to Build Settings and change the setting `Use Legacy Swift Language Version` to `no`. Alternatively, you can add the following post installation instructions at the end of you Podfile:
+This is caused if Cocoapods does not update the Swift version in the Pods project.  To fix, select the Pods project and the OpenWhisk target.  Go to Build Settings and change the setting `Use Legacy Swift Language Version` to `no`. Alternatively, you can add the following post installation instructions at the end of you Podfile:
 
 ```
 post_install do |installer|
@@ -58,23 +41,19 @@ post_install do |installer|
   end
 end
 ```
-{: codeblock}
 
 ### Installing by using Carthage
-{: #openwhisk_add_sdk_carthage}
 
 Create a file in your app's project directory and name it 'Cartfile'. Put the following line in the file:
 ```
 github "openwhisk/openwhisk-client-swift.git" ~> 0.2.2 # Or latest version
 ```
-{: codeblock}
 
-From the command line, type `carthage update --platform ios`. Carthage downloads and builds the SDK, creates a directory called Carthage in your app's project directory, and puts an {{site.data.keyword.openwhisk_short}}.framework file inside Carthage/build/iOS.
+From the command line, type `carthage update --platform ios`. Carthage downloads and builds the SDK, creates a directory called Carthage in your app's project directory, and puts an OpenWhisk.framework file inside Carthage/build/iOS.
 
-You must then add {{site.data.keyword.openwhisk_short}}.framework to the embedded frameworks in your Xcode project
+You must then add OpenWhisk.framework to the embedded frameworks in your Xcode project
 
 ### Installing from source code
-{: #openwhisk_add_sdk_source}
 
 Source code is available at https://github.com/openwhisk/openwhisk-client-swift.git.
 Open the project by using the `OpenWhisk.xcodeproj` using Xcode.
@@ -82,64 +61,54 @@ The project contains two schemes: "OpenWhisk" (targeted for iOS) and "OpenWhiskW
 Build the project for the targets that you need and add the resulting frameworks to your app (usually in ~/Library/Developer/Xcode/DerivedData/your app name).
 
 ## Installing the starter app example
-{: #openwhisk_install_sdkstart}
 
-You can use the {{site.data.keyword.openwhisk_short}} CLI to download example code that embeds the {{site.data.keyword.openwhisk_short}} SDK framework.  
+You can use the OpenWhisk CLI to download example code that embeds the OpenWhisk SDK framework.  
 
 To install the starter app example, enter the following command:
 ```
-wsk sdk install iOS
+$ wsk sdk install iOS
 ```
-{: pre}
 
-This command downloads a compressed file that contains the starter app. Inside the project directory is a podfile.
+This command downloads a compressed file that contains the starter app. Inside the project directory is a podfile. 
 
 To install the SDK, enter the following command:
 ```
-pod install
+$ pod install
 ```
-{: pre}
 
 ## Getting started with the SDK
-{: #openwhisk_sdk_getstart}
 
-To get up and running quickly, create a WhiskCredentials object with your {{site.data.keyword.openwhisk_short}} API credentials and create an {{site.data.keyword.openwhisk_short}} instance from the object.
+To get up and running quickly, create a WhiskCredentials object with your OpenWhisk API credentials and create an OpenWhisk instance from the object.
 
 For example, use the following example code to create a credentials object:
 
 ```
 let credentialsConfiguration = WhiskCredentials(accessKey: "myKey", accessToken: "myToken")
-
 let whisk = Whisk(credentials: credentialsConfiguration!)
 ```
-{: codeblock}
 
-In previous example, you pass in the `myKey` and `myToken` that you get from {{site.data.keyword.openwhisk_short}}. You can retrieve the key and token with the following CLI command:
+In previous example, you pass in the `myKey` and `myToken` that you get from OpenWhisk. You can retrieve the key and token with the following CLI command:
 
 ```
-wsk property get --auth
+$ wsk property get --auth
 ```
-{: pre}
 ```
 whisk auth        kkkkkkkk-kkkk-kkkk-kkkk-kkkkkkkkkkkk:tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
 ```
-{: screen}
 
 The strings before the colon is your key, and the string after the colon is your token.
 
-## Invoking an {{site.data.keyword.openwhisk_short}} action
-{: #openwhisk_sdk_invoke}
+## Invoking an OpenWhisk action
 
 
 To invoke a remote action, you can call `invokeAction` with the action name. You can specify the namespace that the action belongs to, or leave it blank to accept the default namespace. Use a dictionary to pass parameters to the action as required.
 
 For example:
 
-```
-// In this example, we are invoking an action to print a message to the {{site.data.keyword.openwhisk_short}} Console
+```swift
+// In this example, we are invoking an action to print a message to the OpenWhisk Console
 var params = Dictionary<String, String>()
 params["payload"] = "Hi from mobile"
-
 do {
     try whisk.invokeAction(name: "helloConsole", package: "mypackage", namespace: "mynamespace", parameters: params, hasResult: false, callback: {(reply, error) -> Void in
         if let error = error {
@@ -148,30 +117,24 @@ do {
         } else {
             print("Action invoked!")
         }
-
     })
 } catch {
     print("Error \(error)")
 }
 ```
-{: codeblock}
 
 In the previous example, you invoke the `helloConsole` action by using the default namespace.
 
-## Firing an {{site.data.keyword.openwhisk_short}} trigger
-{: #openwhisk_sdk_fire}
+## Firing an OpenWhisk trigger
 
 To fire a remote trigger, you can call the `fireTrigger` method. Pass in parameters as required by using a dictionary.
 
-```
+```swift
 // In this example we are firing a trigger when our location has changed by a certain amount
-
 var locationParams = Dictionary<String, String>()
 locationParams["payload"] = "{\"lat\":41.27093, \"lon\":-73.77763}"
-
 do {
     try whisk.fireTrigger(name: "locationChanged", package: "mypackage", namespace: "mynamespace", parameters: locationParams, callback: {(reply, error) -> Void in
-
         if let error = error {
             print("Error firing trigger \(error.localizedDescription)")
         } else {
@@ -182,77 +145,63 @@ do {
     print("Error \(error)")
 }
 ```
-{: codeblock}
 
 In the previous example, you are firing a trigger that is called `locationChanged`.
 
 ## Using actions that return a result
-{: #openwhisk_sdk_actionresult}
 
 If the action returns a result, set hasResult to true in the invokeAction call. The result of the action is returned in the reply dictionary, for example:
 
-```
+```swift
 do {
     try whisk.invokeAction(name: "actionWithResult", package: "mypackage", namespace: "mynamespace", parameters: params, hasResult: true, callback: {(reply, error) -> Void in
-
         if let error = error {
             //do something
             print("Error invoking action \(error.localizedDescription)")
-
         } else {
             var result = reply["result"]
             print("Got result \(result)")
         }
-
-
     })
 } catch {
     print("Error \(error)")
 }
 ```
-{: codeblock}
 
 By default, the SDK returns only the activation ID and any result that is produced by the invoked action. To get metadata of the entire response object, which includes the HTTP response status code, use the following setting:
 
-```
+```swift
 whisk.verboseReplies = true
 ```
-{: codeblock}
 
 ## Configuring the SDK
-{: #openwhisk_sdk_configure}
 
-You can configure the SDK to work with different installations of {{site.data.keyword.openwhisk_short}} by using the baseURL parameter. For instance:
+You can configure the SDK to work with different installations of OpenWhisk by using the baseURL parameter. For instance:
 
-```
+```swift
 whisk.baseURL = "http://localhost:8080"
 ```
-{: codeblock}
 
 In this example, you use an installation that is running at localhost:8080. If you do not specify the baseUrl, the mobile SDK uses the instance that is running at https://openwhisk.ng.bluemix.net.
 
-You can pass in a custom NSURLSession in case you require special network handling. For example, you might have your own {{site.data.keyword.openwhisk_short}} installation that uses self-signed certificates:
+You can pass in a custom NSURLSession in case you require special network handling. For example, you might have your own OpenWhisk installation that uses self-signed certificates:
 
-```
+```swift
 // create a network delegate that trusts everything
 class NetworkUtilsDelegate: NSObject, NSURLSessionDelegate {
     func URLSession(session: NSURLSession, didReceiveChallenge challenge: NSURLAuthenticationChallenge, completionHandler: (NSURLSessionAuthChallengeDisposition, NSURLCredential?) -> Void) {
         completionHandler(NSURLSessionAuthChallengeDisposition.UseCredential, NSURLCredential(forTrust: challenge.protectionSpace.serverTrust!))
     }
 }
-
 // create an NSURLSession that uses the trusting delegate
 let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration(), delegate: NetworkUtilsDelegate(), delegateQueue:NSOperationQueue.mainQueue())
-
 // set the SDK to use this urlSession instead of the default shared one
 whisk.urlSession = session
 ```
-{: codeblock}
 
 ### Support for qualified names
-{: #openwhisk_sdk_configure_qual}
 
-All actions and triggers have a fully qualified name that is made up of a namespace, a package, and an action or trigger name. The SDK can accept these elements as parameters when you are invoking an action or firing a trigger. The SDK also provides a function that accepts a fully qualified name that looks like `/mynamespace/mypackage/nameOfActionOrTrigger`. The qualified name string supports unnamed default values for namespaces and packages that all {{site.data.keyword.openwhisk_short}} users have, so the following parsing rules apply:
+All actions and triggers have a fully qualified name that is made up of a namespace, a package, and an action or trigger name. The SDK can accept these elements as parameters when you are invoking an action or firing a trigger. The SDK also provides a function that accepts a fully qualified name that looks like `/mynamespace/mypackage/nameOfActionOrTrigger`. The qualified name string supports unnamed default values for namespaces and packages that all OpenWhisk users have, so the following parsing rules apply:
 
 - qName = "foo" results in namespace = default, package = default, action/trrigger = "foo"
 - qName = "mypackage/foo" results in namespace = default, package = mypackage, action/trigger = "foo"
@@ -262,17 +211,13 @@ All actions and triggers have a fully qualified name that is made up of a namesp
 All other combinations issue a WhiskError.QualifiedName error. Therefore, when you are using qualified names, you must wrap the call in a "`do/try/catch`" construct.
 
 ### SDK button
-{: #openwhisk_sdk_configure_button}
 
 For convenience, the SDK includes a `WhiskButton`, which extends the `UIButton` to allow it to invoke actions.  To use the `WhiskButton`, follow this example:
 
-```
+```swift
 var whiskButton = WhiskButton(frame: CGRectMake(0,0,20,20))
-
 whiskButton.setupWhiskAction("helloConsole", package: "mypackage", namespace: "_", credentials: credentialsConfiguration!, hasResult: false, parameters: nil, urlSession: nil)
-
 let myParams = ["name":"value"]
-
 // Call this when you detect a press event, e.g. in an IBAction, to invoke the action
 whiskButton.invokeAction(parameters: myParams, callback: { reply, error in
     if let error = error {
@@ -281,17 +226,13 @@ whiskButton.invokeAction(parameters: myParams, callback: { reply, error in
         print("Success: \(reply)")
     }
 })
-
 // or alternatively you can set up a "self contained" button that listens for press events on itself and invokes an action
-
 var whiskButtonSelfContained = WhiskButton(frame: CGRectMake(0,0,20,20))
 whiskButtonSelfContained.listenForPressEvents = true
 do {
-
    // use qualified name API which requires do/try/catch
    try whiskButtonSelfContained.setupWhiskAction("mypackage/helloConsole", credentials: credentialsConfiguration!, hasResult: false, parameters: nil, urlSession: nil)
    whiskButtonSelfContained.actionButtonCallback = { reply, error in
-
        if let error = error {
            print("Oh no, error: \(error)")
        } else {
@@ -302,4 +243,3 @@ do {
    print("Error setting up button \(error)")
 }
 ```
-{: codeblock}

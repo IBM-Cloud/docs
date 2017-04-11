@@ -1,0 +1,8 @@
+[ASP.NET Core](/index.html)
+    getting-started.md
+    index.md
+    updates.md    
+    [Using the starter applications](../../cfapps/starter_app_usage.html)
+    [Working with a proxy](../../manageapps/workingWithProxy.html)
+    [Using community buildpacks](../../cfapps/byob.html)
+    [Buildpack support statement](../../manageapps/buildpackSupport.html)    

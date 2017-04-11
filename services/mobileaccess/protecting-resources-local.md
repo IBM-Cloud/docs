@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -11,6 +11,7 @@ lastupdated: "2017-01-08"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+The {{site.data.keyword.amafull}} service is replaced with the {{site.data.keyword.appid_full}} service.
 
 # Using {{site.data.keyword.amashort}} with a local development environment
 {: #protecting-local}

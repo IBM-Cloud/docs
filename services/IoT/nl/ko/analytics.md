@@ -1,22 +1,22 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-11"
+  years: 2016, 2017
+lastupdated: "2017-02-28"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
 
 
-# 분석
+# 실시간 IoT 데이터 분석
 {: #analytics}  
 
-Watson {{site.data.keyword.iot_full}} 분석을 사용하여 디바이스가 생성하는 원시 데이터에서 필요한 분석 정보를 가져올 수 있습니다.   
+Watson {{site.data.keyword.iot_full}} 분석을 사용하여 디바이스가 생성하는 원시 데이터에서 필요한 실시간 분석 정보를 가져올 수 있습니다.   
 {: shortdesc}
 
 [보드 및 카드](data_visualization.html)를 사용하면 디바이스 데이터의 빠른 파악과 이해를 위해 하나 이상의 디바이스의 데이터 세트 값을 표시하는 그래픽을 볼 수 있습니다. 

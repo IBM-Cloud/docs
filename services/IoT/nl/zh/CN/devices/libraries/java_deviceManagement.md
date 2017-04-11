@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-08-02"
+  years: 2015, 2017
+lastupdated: "2016-11-22"
 
 ---
 
@@ -12,19 +12,15 @@ lastupdated: "2016-08-02"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Java 客户机库 - 受管设备
+# 使用 Java 开发受管设备
 {: #java_deviceManagement}
 
 ##简介
 {: #introduction}
 
-此客户机库描述如何将设备与 Java“ibmiotf”客户机库配合使用。要获取有关此模块入门的帮助，请参阅 [Java 客户机库 - 简介](../java/javaintro.html)。
+在 {{site.data.keyword.iot_full}} 中，受管设备是指可以执行设备管理操作（例如，固件、位置和诊断更新）的设备。使用提供的 {{site.data.keyword.iot_short}} Java™ 客户机库和信息可以开发 Java 代码，以用于将连接的设备转换为受管设备。此外，还提供了样本来帮助您开发 Java 代码，以用于将设备连接到“设备管理”服务以及运行设备管理操作。
 
-此部分包含有关设备可如何通过 Java 来使用 {{site.data.keyword.iot_full}} Device Management 服务，并执行管理操作（例如，固件更新、位置更新和诊断更新）的信息。
-
-“设备”部分包含有关设备如何使用 Java ibmiotf 客户机库发布事件和处理命令的信息。
-
-“应用程序”部分包含有关应用程序可如何使用 Java ibmiotf 客户机库来与设备进行交互的信息。
+有关应用程序可以如何使用 Java 客户机库与设备进行交互的更多信息，请参阅[针对应用程序开发者的 Java](../../applications/libraries/java.html)。
 
 ## 设备管理
 {: #device_management}

@@ -1,12 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-27"
+
+years: 2015, 2017
+
+lastupdated: "2017-03-16"
+
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -30,6 +33,7 @@ lastupdated: "2016-10-27"
 - 像直接连接的设备一样，发送和接收自己的传感器数据
 - 代表与其连接的设备发送和接收数据
 - 运行设备管理代理程序，以便可以对其进行管理，还可管理与其连接的设备。
+  
 有关网关开发者的信息，请参阅[网关的 MQTT 连接](mqtt.html)。
 
 您还可以使用网关对网关设备发送的数据执行边缘分析。有关更多信息，请参阅[边缘分析](../edge_analytics.html)和[安装 Edge Analytics Agent](#edge)。
@@ -39,17 +43,20 @@ lastupdated: "2016-10-27"
 
 注册网关涉及将设备分类为网关类型，为网关命名，以及提供网关信息。然后，提供连接令牌，或接受 {{site.data.keyword.iot_short_notm}} 生成的令牌。
 
-**提示：**可以在 {{site.data.keyword.iot_short_notm}} 仪表板中一次添加一个网关，也可以使用 [{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/post_bulk_devices_add) 一次添加一个或多个网关。
+
+**提示：**可以在 {{site.data.keyword.iot_short_notm}} 仪表板中一次添加一个网关，也可以使用[组织管理 API ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window}  一次添加一个或多个网关。
 
 要在 {{site.data.keyword.iot_short_notm}} 仪表板中添加网关，请执行以下操作：
 
 1. 在 {{site.data.keyword.iot_short_notm}} 仪表板中，选择**设备**。
 2. 单击**添加设备**。
 3. 为要添加的设备选择或创建设备类型。
+  
 连接到 {{site.data.keyword.iot_short_notm}} 的每个设备都必须与一种设备类型相关联。设备类型是共享公共特征的设备组。  
  1. 单击**创建设备类型**，然后单击**创建网关类型**。
  2. 输入设备类型名称（例如，`my_gateway_type`）和网关类型描述。
-**重要信息**：设备类型名称不得超过 36 个字符，仅可包含以下字符：
+   
+ **重要信息**：设备类型名称不得超过 36 个字符，仅可包含以下字符：
  <ul>
   <li>字母数字字符（a-z、A-Z 和 0-9）</li>
   <li>连字符（-）</li>
@@ -60,7 +67,9 @@ lastupdated: "2016-10-27"
  4. 单击**创建**以添加新的网关类型。
 10. 单击**下一步**以开始添加具有所选网关类型的网关设备的过程。
 11. 输入设备标识，例如 `my_gateway_device`。
+  
 设备标识用于在 {{site.data.keyword.iot_short_notm}} 仪表板中标识网关设备；设备标识也是用于将网关设备连接到 {{site.data.keyword.iot_short_notm}} 的必需参数。
+  
 **重要信息**：设备标识不得超过 36 个字符，仅可包含以下字符：
  <ul>
  <li>字母数字字符（a-z、A-Z 和 0-9）</li>
@@ -70,21 +79,25 @@ lastupdated: "2016-10-27"
  </ul>
  **提示：**对于连接网络的设备，设备标识可以是（例如）不带任何分隔冒号的设备 MAC 地址。  
 12. 可选：单击**其他字段**以添加网关设备信息，例如序列号、制造商、型号等。
+   
  **提示：**您可以稍后添加和编辑此信息。
-12. 可选：输入设备 JSON 元数据。
+12. 可选：输入设备 JSON 元数据。  
  **提示：**您可以稍后添加和编辑设备元数据。
 13. 单击**下一步**以完成添加网关设备的操作。
 14. 验证摘要信息是否正确，然后单击**添加**以添加网关设备。
+  
 **提示：**您可以选择接受自动生成的认证令牌，或自己提供认证令牌。如果选择创建自己的令牌，请确保令牌的长度介于 8 到 36 个字符之间，包含大小写字母、数字、连字符、下划线或句点的混合。此令牌不得包含重复的字符序列、字典单词、用户名或其他预定义序列。
 15. 在设备信息页面中，复制并保存以下设备信息：  
  - 组织标识，例如 `tubo8x`
  - 设备类型，例如 `my_gateway_type`
  - 设备标识。**提示：**例如，对于网络连接的设备，这可能是不带任何分隔冒号的 MAC 地址。
  - 认证方法，例如 `token`
- - 认证令牌，例如 `PtBVriRqIg4uh)_-Kl`
+ - 认证令牌，例如 `PtBVriRqIg4uh)_-Kl`  
   **提示：**您将需要“组织标识”、“认证令牌”、“设备类型”和“设备标识”来配置设备以连接到 {{site.data.keyword.iot_short_notm}}。  
 
 恭喜，您已注册网关设备。现在，可以配置网关设备以连接到 {{site.data.keyword.iot_short_notm}}
+
+请参阅 [How to Register Gateways in IBM Watson IoT Platform ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/how-to-register-gateways-in-ibm-watson-iot-platform/){:new_window} 诀窍，以获取演示注册网关所需流程的逐步指示信息。
 
 ## 步骤 2：将网关连接到 {{site.data.keyword.iot_short_notm}}
 {: #connect_gateway}
@@ -93,7 +106,7 @@ lastupdated: "2016-10-27"
 
 有关将网关连接到 {{site.data.keyword.iot_short_notm}} 的信息，请参阅[网关的 MQTT 连接](mqtt.html)。
 
-**提示：**有一系列的诀窍可用于将设备连接到 {{site.data.keyword.iot_short_notm}}。有关诀窍的列表，请参阅 IBM.com 上提供的[设备连接诀窍](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/)。
+**提示：**有一系列的诀窍可用于将设备连接到 {{site.data.keyword.iot_short_notm}}。有关诀窍的列表，请参阅 IBM.com 上提供的[设备连接诀窍 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}。
 
 
 ## 步骤 3：通过网关连接设备
@@ -106,23 +119,30 @@ lastupdated: "2016-10-27"
 
 设备成功连接到网关时，会在 {{site.data.keyword.iot_short_notm}} 组织的仪表板上显示该设备。
 
+请参阅 [Connecting Raspberry Pi as a Gateway to Watson IoT ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-as-a-gateway-to-watson-iot-using-node-red/){:new_window} 诀窍，以获取详细的流程和描述。
+
 **注：**在 {{site.data.keyword.iot_short_notm}} 仪表板中，直接连接到 {{site.data.keyword.iot_short_notm}} 的设备和网关会显示“状态”图标以指示其已连接。仪表板将通过网关间接连接的设备显示为“已断开连接”，因为仪表板并不知道该网关的设备连接。
 
 
 ## 安装 Edge Analytics Agent
 {: #edge}
 
-Edge Analytics Agent (EAA) 是基于 [Apache Quarks](http://quarks.incubator.apache.org/) 构建的软件组件，可通过在 {{site.data.keyword.iot_short_notm}} 仪表板中上传和管理边缘分析规则，对网关执行边缘分析操作。有关边缘分析的更多信息，请参阅[边缘分析](../edge_analytics.html)。
+Edge Analytics Agent (EAA) 是基于针对边缘处理优化的 streaming engine 构建的软件组件，可通过在 {{site.data.keyword.iot_short_notm}} 仪表板中上传和管理边缘分析规则，对网关执行边缘分析操作。有关边缘分析的更多信息，请参阅[边缘分析](../edge_analytics.html)。
 
 ### 安装 EAA
 {: #eaa_install}
 
 要在网关上安装 EAA，请执行以下操作：
 1. 在 {{site.data.keyword.iot_short}} 仪表板中，转至**规则**。
-2. 单击**下载 Edge Analytics Agent** 以转至 [IBM Edge Analytics Agent 社区](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true)。
-3. 浏览至 **Files** 部分，然后下载压缩的 *ibm-watson-iot-edge-analytics-dslink-java-0.0.1* 文件。
-4. 有关如何在网关上安装和配置 EAA 软件组件的信息，请参阅以下诀窍：
- - [Getting started with Edge Analytics in Watson IoT Platform](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=19472)
+2. 单击**下载 Edge Agent** 以转至 [IBM Edge Analytics 社区 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true){:new_window}。
+3. 浏览至 **Files** 部分，然后下载适合于您网关类型的压缩目录。  
+对于支持 Java 的设备，Edge Analytics 解决方案作为 SDK 提供，而对于 Cisco 网关设备，则作为 DSLink 提供。
+4. 有关如何在网关上安装和配置 EAA 软件组件的信息，请参阅以下信息：
+ - SDK  
+请参阅 PDF 和自述文件，以及社区中提供的视频链接。  
+ [EdgeRecipe for SDK - Getting Started (SDK) ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/getting-started-with-the-ibm-edge-analytics-sdk-in-watson-iot-platform/){:new_window} 诀窍。
+ - DSLink  
+ [Getting started with Edge Analytics inWatson IoT Platform ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=19472){:new_window} 诀窍。
 
 ### EAA 配置设置
 {: #eaa_configuration}
@@ -130,7 +150,8 @@ Edge Analytics Agent (EAA) 是基于 [Apache Quarks](http://quarks.incubator.apa
 可以使用 EAA config.properties 文件来设置基本软件配置参数。
 
 要更新 EAA 配置，请执行以下操作：
-1. 在运行 EAA 的网关系统上，找到 EAA config.properties 文件。例如：`../dglux-server/dslinks/ibm-watson-iot-edge-analytics-dslink-java-0.0.1/config.properties`
+1. 在运行 EAA 的网关系统上，找到 EAA config.properties 文件。  
+例如：`../dglux-server/dslinks/ibm-watson-iot-edge-analytics-dslink-java-0.0.1/config.properties`
 2. 开始编辑设置之前，请先制作该文件的备份副本。
 3. 打开 config.properties 文件进行编辑。
 4. 编辑环境的配置参数：

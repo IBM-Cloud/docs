@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -12,40 +12,40 @@ lastupdated: "2017-01-17"
 {:pre: .pre}
 
 
-# Granting write access
+# Concessione dell'accesso in scrittura
 
-An {{site.data.keyword.objectstorageshort}} user with an [admin role](/docs/services/ObjectStorage/os_access_types.html) can grant write access for another user and manipulate write ACL combinations.
+Un utente {{site.data.keyword.objectstorageshort}} con un [ruolo da amministratore](/docs/services/ObjectStorage/os_access_types.html) può concedere l'accesso in scrittura a un altro utente e modificare le combinazioni ACL di scrittura.
 {: shortdesc}
 
 <table>
-<caption> Table 1. Write access permissions by option </caption>
+<caption> Tabella 1. Autorizzazioni dell'accesso in scrittura per opzione </caption>
   <tr>
-    <th> Permission </th>
-    <th> Write ACL options </th>
+    <th> Autorizzazione </th>
+    <th> Opzioni Write ACL </th>
   </tr>
   <tr>
-    <td> Write for a specified user in a specific project </td>
+    <td> Scrivi un utente specifico in un progetto specifico </td>
     <td> <code> project_id:user_id </code> </td>
   </tr>
   <tr>
-    <td> Write for a specified user in every project </td>
+    <td> Scrivi un utente specifico in qualsiasi progetto </td>
     <td> <code> &#42;:user_id </code> </td>
   </tr>
   <tr>
-    <td> Write for every user in a specified project </td>
+    <td> Scrivi ogni utente in un progetto specifico </td>
     <td>  <code> project_id:&#42; </code> </td>
   </tr>
   <tr>
-    <td> Write for every user in every project </td>
+    <td> Scrivi ogni utente in ogni progetto </td>
     <td>  <code> &#42;:&#42; </code> </td>
   </tr>
 </table>
 
 
 
-1. Authenticate your credentials by using the information in the service credentials you created.  You receive your {{site.data.keyword.objectstorageshort}} URL and authentication token as an output.
+1. Autentica le tue credenziali utilizzando le informazioni nelle credenziali del servizio che hai creato.  Riceverai il tuo URL e token di autenticazione {{site.data.keyword.objectstorageshort}} come output.
 
-    Swift command:
+    Comando Swift:
 
     ```
     export OS_USER_ID="<user_id>"
@@ -60,41 +60,41 @@ An {{site.data.keyword.objectstorageshort}} user with an [admin role](/docs/serv
     ```
     {: codeblock}
 
-    cURL command:
+    Comando cURL:
 
     ```
     curl -i -H "X-Auth-User:< user_id>" -H "X-Auth-Key:< password>" https://identity.open.softlayer.com/v3
     ```
     {: pre}
 
-2. Grant write access by running the following command.
+2. Concedi l'accesso in scrittura immettendo il seguente comando.
 
-    Swift command:
+    Comando Swift:
 
     ```
     swift post <container_name> --write-acl "<user_id>:<project_id>"
     ```
     {: pre}
 
-    cURL command:
+    Comando cURL:
 
     ```
     curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Write: <user_id>: <project_id>" -H "X-Auth-Token:<OS_AUTH_TOKEN>"
     ```
     {: pre}
 
-    **Note**: Use a comma (,) to separate access control lists.
+    **Nota**: utilizza una virgola (,) per separare gli elenchi del controllo dell'accesso.
 
-3. Verify the write ACL value.
+3. Verifica il valore write ACL.
 
-    Swift command:
+    Comando Swift:
 
     ```
     swift stat <container_name>
     ```
     {: pre}
 
-    cURL command:
+    Comando cURL:
 
     ```
     curl -i <OS_STORAGE_URL> -I -H "X-Auth-Token:<OS_AUTH_TOKEN>"

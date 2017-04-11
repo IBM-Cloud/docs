@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-21"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-17"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -69,6 +69,9 @@ Donde
 
 **Importante:** La carga útil de mensajes está limitada a un máximo de 131072 bytes. Los mensajes mayores de este límite se rechazarán.
 
+### Mensajes retenidos
+Las organizaciones de {{site.data.keyword.iot_short_notm}} no tienen autorización para publicar mensajes MQTT retenidos. Si un dispositivo envía un mensaje retenido, el servicio {{site.data.keyword.iot_short_notm}} modifica el distintivo del mensaje retenido cuando tiene el valor true y procesa el mensaje como si el distintivo estuviera establecido en false.
+
 
 ## Suscripción a mandatos
 {: #subscribing_to_commands}
@@ -91,7 +94,7 @@ El soporte para la gestión del ciclo de vida de dispositivos es opcional. El Pr
 
 ### Niveles de calidad de servicio y sesión limpia
 
-Los dispositivos gestionados pueden publicar los mensajes que tengan un nivel de calidad de servicio (QoS) de 0 o 1. Los mensajes del dispositivo no deben ser mensajes retenidos.
+Los dispositivos gestionados pueden publicar mensajes que tienen un nivel de calidad de servicio (QoS) de 0 o 1.
 
 Los mensajes con QoS=0 pueden descartarse y no persisten una vez que se reinicia el servidor de mensajería. Los mensajes con QoS=1 se pueden poner en cola y persisten una vez que se reinicia el servidor de mensajería. La duración de la suscripción determina si se pone en cola una solicitud. El parámetro `cleansession` de la conexión que ha realizado la suscripción determina la duración de la suscripción.  
 

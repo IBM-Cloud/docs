@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -29,16 +29,16 @@ Sie können gespeicherte Objekte zur Überprüfung oder Bearbeitung über die Be
 
 1.  Wenn Sie nicht bei {{site.data.keyword.Bluemix_notm}} angemeldet sind, melden Sie sich bei der Organisation und dem Bereich mit Ihrer Instanz von {{site.data.keyword.objectstorageshort}} an.
 
-```
-cf login -a api.ng.bluemix.net -u <Benutzer-ID> -p <Kennwort> -o <Organisation> -s <Bereich>
-```
-{: pre}
+    ```
+    cf login -a api.ng.bluemix.net -u <Benutzer-ID> -p <Kennwort> -o <Organisation> -s <Bereich>
+    ```
+    {: pre}
 
 2. Um zu vermeiden, dass Daten durch unbeabsichtigte Überschreibungsaktionen zerstört werden, [richten Sie die Objektversionierung ein](/docs/services/ObjectStorage/os_versioning.html). Wenn Sie keine Objektversionierung wünschen, listen Sie Ihre im Speicher vorhandenen Dateien auf und, falls dies erforderlich sein sollte, benennen Sie das Verzeichnis oder die Dateien vor dem Herunterladen um.
 
 3. Laden Sie eine Datei herunter, indem Sie folgenden Befehl ausführen:
 
-```
-swift download <Containername> <Dateiname>
-```
-{: pre}
+    ```
+    swift download <Containername> <Dateiname>
+    ```
+    {: pre}

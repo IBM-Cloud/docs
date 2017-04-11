@@ -24,7 +24,7 @@ API 密钥以安全方式存储，并由 {{site.data.keyword.mobilepushshort}} �
 
 要设置 FCM，产生 API 密钥和发送方标识，请完成以下步骤：
 
-1. 访问 [Firebase 控制台 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.firebase.google.com/?pli=1 "外部链接图标"){: new_window}。
+1. 访问 [Firebase 控制台 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.firebase.google.com/?pli=1){: new_window}。
 2. 选择**创建新项目**。 
 3. 在“创建项目”窗口中，提供项目名称，选择国家/地区并单击**创建项目**。
 3. 在导航窗格中，单击“设置”图标并选择**项目设置**。

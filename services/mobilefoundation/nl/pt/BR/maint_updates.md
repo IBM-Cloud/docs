@@ -15,7 +15,7 @@ lastupdated:  "2016-08-03"
 e atualização
 {: #maintupdates_mf}
 
-O {{site.data.keyword.mobilefoundation_short}} provisiona um {{site.data.keyword.mfserver_short_notm}} <!--on {{site.data.keyword.containerlong}} as a container group-->. As
+O {{site.data.keyword.mobilefoundation_short}} provisiona um {{site.data.keyword.mfserver_short_notm}}<!-- on {{site.data.keyword.containerlong}} as a container group-->. As
 atualizações no servidor do
 {{site.data.keyword.mobilefoundation_short}} são
 notificadas aos usuários. É possível escolher atualizar o servidor
@@ -55,13 +55,9 @@ Ao aplicar esta atualização, a versão do servidor, conforme
 visto no {{site.data.keyword.mfp_oc_short_notm}}, será
 modificada para indicar a versão da atualização do servidor.
 
-**Nota:**
+### Nota:
+{: #note notoc}
+
 * Os usuários não poderão aplicar suas próprias correções e
 atualizações à sua instância de serviço do {{site.data.keyword.mobilefoundation_short}}.
-* Consulte
-[Recriando
-servidor no plano do Developer](c_using_mfs_p1.html#recreate_mobilefoundation_p1) e
-[Recriando
-servidor no plano Professional 1 Application](c_using_mfs_p2.html#recreate_mobilefoundation_p2) para entender
-a diferença no comportamento nos planos ao clicar em
-**Recriar**.
+* Consulte [Recriando servidor no plano do Developer](c_using_mfs_p1.html#recreate_mobilefoundation_p1) e [Recriando servidor no plano Professional 1 Application](c_using_mfs_p2.html#recreate_mobilefoundation_p2) para entender a diferença no comportamento nos planos ao clicar em **Recriar**.

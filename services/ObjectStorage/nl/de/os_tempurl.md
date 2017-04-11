@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 
@@ -50,7 +50,7 @@ Eine temporäre URL ist eine lange, schwer zu erratende URL, die für einen ange
 
   In der folgenden Tabelle sind die Positionsargumente aufgeführt, mit denen der Swift-Befehl `tempurl` arbeitet.
   <table>
-  <caption> Tabelle 1. Temporäre URL-Positionsargumente</caption>
+  <caption> Tabelle 1. Temporäre URL-Positionsargumente </caption>
     <tr>
       <th> Argument </th>
       <th> Beschreibung </th>

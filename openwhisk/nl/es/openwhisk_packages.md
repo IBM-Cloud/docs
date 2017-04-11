@@ -1,25 +1,21 @@
 ---
 
-
-
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-04"
-
+lastupdated: "2017-02-27"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:screen: .screen}
 {:pre: .pre}
 
 # Uso y creación de paquetes de {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_packages}
 
-
-En {{site.data.keyword.openwhisk}}, puede utilizar paquetes para agrupar un conjunto de acciones relacionadas y
+En {{site.data.keyword.openwhisk_short}}, puede utilizar paquetes para agrupar un conjunto de acciones relacionadas y
 compartirlas con otros.
 
 Un paquete puede incluir *actions* y *feeds* (acciones e información de entrada).
@@ -60,7 +56,6 @@ lista de las entidades de un paquete y obtener una descripción de las entidades
   /whisk.system/github                                                   shared
   /whisk.system/pushnotifications                                        shared
   ```
-  {: screen}
 
 2. Obtener una lista de entidades en el paquete `/whisk.system/cloudant`.
 
@@ -75,7 +70,6 @@ lista de las entidades de un paquete y obtener una descripción de las entidades
    action /whisk.system/cloudant/write: Write document to database
    feed   /whisk.system/cloudant/changes: Database change feed
   ```
-  {: screen}
 
   Esta salida muestra que el paquete Cloudant proporciona dos acciones, `read` y `write`, y un
 elemento de información de entrada de desencadenante llamado `changes`. El elemento de información de entrada
@@ -94,7 +88,6 @@ que las acciones funcionen en una cuenta Cloudant específica, por ejemplo.
   action /whisk.system/cloudant/read: Read document from database
      (params: dbname includeDoc id)
   ```
-  {: screen}
 
   Esta salida muestra que la acción `read` de Cloudant precisa de tres parámetros, incluyendo la base de datos y
 el ID de documento a recuperar.
@@ -116,7 +109,6 @@ la acción `greeting` en el paquete `/whisk.system/samples` con distintos parám
   action /whisk.system/samples/greeting: Print a friendly greeting
      (params: name place)
   ```
-  {: screen}
 
   Observe que la acción `greeting` acepta dos parámetros: `name` y `place`.
 
@@ -126,12 +118,11 @@ la acción `greeting` en el paquete `/whisk.system/samples` con distintos parám
   wsk action invoke --blocking --result /whisk.system/samples/greeting
   ```
   {: pre}
-  ```
+  ```json
   {
       "payload": "Hello, stranger from somewhere!"
   }
   ```
-  {: screen}
 
   La salida es un mensaje genérico porque no se han especificado parámetros.
 
@@ -141,12 +132,11 @@ la acción `greeting` en el paquete `/whisk.system/samples` con distintos parám
   wsk action invoke --blocking --result /whisk.system/samples/greeting --param name Mork --param place Ork
   ```
   {: pre}
-  ```
+  ```json
   {
       "payload": "Hello, Mork from Ork!"
   }
   ```
-  {: screen}
 
   Observe que la salida utiliza los parámetros `name` y `place` que se pasaron a la acción.
 
@@ -171,7 +161,6 @@ En el ejemplo sencillo siguiente, enlaza al paquete `/whisk.system/samples`.
   ```
   ok: created binding valhallaSamples
   ```
-  {: screen}
 
 2. Obtener una descripción del enlace de paquete.
 
@@ -186,7 +175,6 @@ En el ejemplo sencillo siguiente, enlaza al paquete `/whisk.system/samples`.
    action /myNamespace/valhallaSamples/helloWorld: Demonstrates logging facilities
    action /myNamespace/valhallaSamples/curl: Curl a host url
   ```
-  {: screen}
 
   Tenga en cuenta que todas las acciones del paquete `/whisk.system/samples` están disponibles en el enlace del
 paquete `valhallaSamples`.
@@ -202,7 +190,6 @@ paquete `valhallaSamples`.
       "payload": "Hello, Odin from Valhalla!"
   }
   ```
-  {: screen}
 
   Observe en el resultado que la acción hereda el parámetro `place` que ha establecido cuando ha
 creado el enlace del paquete `valhallaSamples`.
@@ -218,7 +205,6 @@ creado el enlace del paquete `valhallaSamples`.
       "payload": "Hello, Odin from Asgard!"
   }
   ```
-  {: screen}
 
   Fíjese que el valor del parámetro `place` especificado con la invocación de la acción sobrescribe
 el valor predeterminado establecido en el enlace del paquete `valhallaSamples`.
@@ -240,7 +226,6 @@ para un desencadenante de {{site.data.keyword.openwhisk_short}}. En este ejemplo
   package /whisk.system/alarms
    feed   /whisk.system/alarms/alarm
   ```
-  {: screen}
 
   ```
   wsk action get --summary /whisk.system/alarms/alarm
@@ -250,7 +235,6 @@ para un desencadenante de {{site.data.keyword.openwhisk_short}}. En este ejemplo
   action /whisk.system/alarms/alarm: Fire trigger when alarm occurs
      (params: cron trigger_payload)
   ```
-  {: screen}
 
   La información de entrada `/whisk.system/alarms/alarm` acepta dos parámetros:
   - `cron`: una especificación crontab de cuándo activar el desencadenante.
@@ -265,11 +249,10 @@ para un desencadenante de {{site.data.keyword.openwhisk_short}}. En este ejemplo
   ```
   ok: created trigger feed everyEightSeconds
   ```
-  {: screen}
 
 3. Crear un archivo 'hello.js' con el código de acción siguiente.
 
-  ```
+  ```javascript
   function main(params) {
       return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
@@ -293,7 +276,6 @@ para un desencadenante de {{site.data.keyword.openwhisk_short}}. En este ejemplo
   ```
   ok: created rule myRule
   ```
-  {: screen}
 
 6. Comprobar que la acción se está invocando, sondeando los registros de activación.
 
@@ -323,7 +305,6 @@ Para crear un paquete personalizado con una acción sencilla en él, pruebe el e
   ```
   ok: created package custom
   ```
-  {: screen}
 
 2. Obtenga un resumen del paquete.
 
@@ -334,14 +315,13 @@ Para crear un paquete personalizado con una acción sencilla en él, pruebe el e
   ```
   package /myNamespace/custom
   ```
-  {: screen}
 
   Fíjese que el paquete está vacío.
 
 3. Cree un archivo llamado `identity.js` que contenga el código de acción siguiente. Esta acción
 devuelve todos los parámetros de entrada.
 
-  ```
+  ```javascript
   function main(args) { return args; }
   ```
   {: codeblock}
@@ -355,7 +335,6 @@ devuelve todos los parámetros de entrada.
   ```
   ok: created action custom/identity
   ```
-  {: screen}
 
   La creación de una acción en un paquete precisa que se añada un nombre de paquete como prefijo del nombre de la acción. No se permite
 anidamiento de paquetes. Un paquete solo puede contener acciones y no puede contener otros paquetes.
@@ -370,7 +349,6 @@ anidamiento de paquetes. Un paquete solo puede contener acciones y no puede cont
   package /myNamespace/custom
    action /myNamespace/custom/identity
   ```
-  {: screen}
 
   Ahora podrá ver la acción `custom/identity` en su espacio de nombres.
 
@@ -380,10 +358,9 @@ anidamiento de paquetes. Un paquete solo puede contener acciones y no puede cont
   wsk action invoke --blocking --result custom/identity
   ```
   {: pre}
-  ```
+  ```json
   {}
   ```
-  {: screen}
 
 
 Puede establecer parámetros predeterminados para todas las entidades de un paquete. Esto se hace estableciendo los parámetros a nivel de
@@ -398,18 +375,18 @@ paquete, que se heredan para todas las acciones del paquete. Para ver cómo func
   ```
   ok: updated package custom
   ```
-  {: screen}
 
 2. Mostrar los parámetros en el paquete y acción, y ver cómo la acción `identity` del paquete hereda los parámetros del paquete.
 
   ```
-  wsk package get custom
+  wsk package get custom parameters
   ```
   {: pre}
   ```
-  ok: got package custom
-  ...
-  "parameters": [
+  ok: got package custom, displaying field parameters
+  ```
+  ```json
+  [
       {
           "key": "city",
           "value": "Austin"
@@ -419,18 +396,17 @@ paquete, que se heredan para todas las acciones del paquete. Para ver cómo func
           "value": "USA"
       }
   ]
-  ...
   ```
-  {: screen}
 
   ```
-  wsk action get custom/identity
+  wsk action get custom/identity parameters
   ```
   {: pre}
   ```
-  ok: got action custom/identity
-  ...
-  "parameters": [
+  ok: got action custom/identity, , displaying field parameters
+  ```
+  ```json
+  [
       {
           "key": "city",
           "value": "Austin"
@@ -440,9 +416,7 @@ paquete, que se heredan para todas las acciones del paquete. Para ver cómo func
           "value": "USA"
       }
   ]
-  ...
   ```
-  {: screen}
 
 3. Invocar la acción de identidad sin parámetros para comprobar que la acción realmente hereda los parámetros.
 
@@ -450,13 +424,12 @@ paquete, que se heredan para todas las acciones del paquete. Para ver cómo func
   wsk action invoke --blocking --result custom/identity
   ```
   {: pre}
-  ```
+  ```json
   {
       "city": "Austin",
       "country": "USA"
   }
   ```
-  {: screen}
 
 4. Invocar la acción de identidad con algunos parámetros. Los parámetros de invocación se fusionan con los parámetros del paquete; los parámetros de invocación prevalecen sobre los parámetros del paquete.
 
@@ -464,14 +437,13 @@ paquete, que se heredan para todas las acciones del paquete. Para ver cómo func
   wsk action invoke --blocking --result custom/identity --param city Dallas --param state Texas
   ```
   {: pre}
-  ```
+  ```json
   {
       "city": "Dallas",
       "country": "USA",
       "state": "Texas"
   }
   ```
-  {: screen}
 
 
 ## Compartición de un paquete
@@ -490,21 +462,19 @@ en el mismo y creen reglas de {{site.data.keyword.openwhisk_short}} y acciones d
   ```
   ok: updated package custom
   ```
-  {: screen}
 
 2. Mostrar la propiedad `publish` del paquete para verificar que ahora es true.
 
   ```
-  wsk package get custom
+  wsk package get custom publish
   ```
   {: pre}
   ```
-  ok: got package custom
-  ...
-  "publish": true,
-  ...
+  ok: got package custom, displaying field publish
   ```
-  {: screen}
+  ```json
+  true
+  ```
 
 
 Ahora otros pueden utilizar su paquete `custom`, incluyendo el enlace al paquete o directamente invocando una
@@ -522,6 +492,5 @@ todo su contenido es también privado.
   package /myNamespace/custom
    action /myNamespace/custom/identity
   ```
-  {: screen}
 
   En el ejemplo anterior, se trabaja con el espacio de nombres `myNamespace` y este espacio de nombres aparece en el nombre completo.

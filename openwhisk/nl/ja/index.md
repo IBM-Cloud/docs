@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-09-09"
+lastupdated: "2017-02-21"
 
 ---
 
@@ -15,14 +15,19 @@ lastupdated: "2016-09-09"
 # {{site.data.keyword.openwhisk_short}} 入門
 
 
-{{site.data.keyword.openwhisk}} は、サーバーレス・コンピューティングまたは Function as a Service (FaaS) とも呼ばれる分散イベント・ドリブン計算サービスです。{{site.data.keyword.openwhisk_short}} は、イベントに応えて、または、Web アプリやモバイル・アプリからの HTTP を介した直接起動に応えて、アプリケーション・ロジックを実行します。イベントは、Bluemix サービス (Cloudant など) および外部ソースから提供できます。開発者は、アプリケーション・ロジックの開発と、オンデマンドで実行されるアクションの作成に専念できます。アクションの実行率は常にイベント率に一致するため、本来の拡張性と回復力に応じたものになり、最適な使用効率をもたらします。使用した分のみ支払えばよく、サーバーを管理する必要はありません。[ソース・コード](https://github.com/openwhisk/openwhisk)を入手し、システムを自身で実行することもできます。
+{{site.data.keyword.openwhisk}} は、サーバーレス・コンピューティングまたは Function as a Service (FaaS) とも呼ばれる分散イベント・ドリブン計算サービスです。{{site.data.keyword.openwhisk_short}} は、イベントに応えて、または、Web アプリやモバイル・アプリからの HTTP を介した直接起動に応えて、アプリケーション・ロジックを実行します。イベントは、Bluemix サービス (Cloudant など) および外部ソースから提供できます。開発者は、アプリケーション・ロジックの開発と、オンデマンドで実行されるアクションの作成に専念できます。この新しいパラダイムの利点は、明示的にサーバーをプロビジョンしたり自動スケーリングについて心配したりしないでよいこと、また、サーバーが稼働しているが要求を処理しない場合のプロセッサー時間の支払いや、高可用性、更新、保守について心配しないですむことです。
+HTTP 呼び出し、データベース状態変更、または、コードの実行をトリガーするその他のタイプのイベントがあるたびに、コードが実行されます。
+課金は実行時間のミリ秒単位で行われ (最も近い 100ms に丸められます)、VM が有益な作業をしているかどうかに関係なく VM 使用の時間単位で課金されるのではありません。
 {: shortdesc}
+
+このプログラミング・モデルは、マイクロサービス、モバイル、IoT、およびその他の多くのアプリに最適です。これに備わっている自動スケーリングおよびロード・バランシングはすぐに使用可能であり、クラスター、ロード・バランサー、http プラグインなどを手動で構成する必要はありません。{{site.data.keyword.openwhisk}} で実行することになれば、ゼロ管理という利点もあります。これは、ハードウェア、ネットワーキング、およびソフトウェアのすべてが IBM によって保守されることを意味します。必要な作業は、実行したいコードを用意し、それを {{site.data.keyword.openwhisk}} に渡すことだけです。残りはまるで魔法のように完了します。サーバーレス・プログラミング・モデルについての優れた概説が、[Martin Fowler のブログ](https://martinfowler.com/articles/serverless.html)にあります。
+
+[Apache OpenWHisk ソース・コード](https://github.com/openwhisk/openwhisk)を入手して、自身でシステムを実行することもできます。
 
 {{site.data.keyword.openwhisk_short}} の動作について詳しくは、『[{{site.data.keyword.openwhisk_short}} 概要](./openwhisk_about.html)』を参照してください。
 
 ブラウザーおよび CLI を使用して、{{site.data.keyword.openwhisk_short}} アプリケーションを開発できます。
 この 2 つには、類似したアプリケーション開発機能がありますが、CLI では、デプロイメントおよび操作をより詳細に制御できます。
-
 
 ## ブラウザーで開発
 {: #openwhisk_start_editor}
@@ -30,44 +35,38 @@ lastupdated: "2016-09-09"
 [ブラウザー](https://console.{DomainName}/openwhisk/editor){: new_window}で {{site.data.keyword.openwhisk_short}} を試して、アクションの作成、トリガーを使用したアクションの自動化、パブリック・パッケージの探索を行ってください。
 OpenWhisk ユーザー・インターフェースのクイック・ツアーについては、[詳細](https://console.{DomainName}/openwhisk/learn){: new_window}ページを参照してください。
 
-## {{site.data.keyword.openwhisk_short}} CLI のセットアップ
+## CLI を使用して開発
 {: #openwhisk_start_configure_cli}
 
 {{site.data.keyword.openwhisk_short}} コマンド・ライン・インターフェース (CLI) を使用して、名前空間および許可鍵をセットアップできます。[「CLI の構成」](https://new-console.{DomainName}/openwhisk/cli){: new_window}に移動し、手順に従ってインストールしてください。
 
-### HTTPS プロキシーを使用するための CLI の構成
-{: #openwhisk_configure_https_proxy_cli}
+## 概要
+{: #openwhisk_start_overview}
+- [OpenWhisk の動作](./openwhisk_about.html)
+- [サーバーレス・アプリケーションの一般的なユース・ケース](./openwhisk_use_cases.html)
+- [OpenWhisk CLI のセットアップと使用](./openwhisk_cli.html)
+- [iOS アプリからの OpenWhisk の使用](./openwhisk_mobile_sdk.html)
 
-HTTPS プロキシーを使用するように CLI をセットアップできます。HTTPS プロキシーをセットアップするには、`HTTPS_PROXY` という名前の環境変数を作成する必要があります。この変数をフォーマット `{PROXY IP}:{PROXY PORT}` を使用して HTTPS プロキシーのアドレスとそのポートに設定する必要があります。
-
-{{site.data.keyword.openwhisk_short}} を CLI と共にセットアップした後、コマンド・ラインから使用を開始できます。
-
-## {{site.data.keyword.openwhisk_short}} CLI の使用 
-{: #openwhisk_start_using_cli}
-
-[環境を構成](https://new-console.{DomainName}/openwhisk/cli){: new_window}した後、{{site.data.keyword.openwhisk_short}} CLI の使用を開始して以下を実行することができます。
-
-* 自身のコード・スニペット (アクション) を {{site.data.keyword.openwhisk_short}} で実行します。『[アクションの作成と起動](./openwhisk_actions.html)』を参照してください。
-* トリガーおよびルールを使用して、アクションがイベントに対応できるようにします。『[トリガーおよびルールの作成](./openwhisk_triggers_rules.html)』を参照してください。
-* パッケージがアクションをどのようにバンドルし、外部イベント・ソースを構成するのかを学習します。『[パッケージの使用と作成](./openwhisk_packages.html)』を参照してください。
-* パッケージ・カタログを検討し、[Cloudant イベント・ソース](./openwhisk_catalog.html#openwhisk_catalog_cloudant)などの外部サービスでアプリケーションを強化します。『[{{site.data.keyword.openwhisk_short}} 対応サービスの使用](./openwhisk_catalog.html)』を参照してください。
-
-
-## iOS アプリからの {{site.data.keyword.openwhisk_short}} の使用
-{: #openwhisk_start_using_ios}
-
-{{site.data.keyword.openwhisk_short}} iOS SDK を使用することによって、{{site.data.keyword.openwhisk_short}} を iOS モバイル・アプリまたは Apple Watch から使用できます。詳しくは、[iOS 資料](./openwhisk_mobile_sdk.html)を参照してください。
-
-## {{site.data.keyword.openwhisk_short}} と REST API の使用
-{: #openwhisk_start_using_restapi}
-
-{{site.data.keyword.openwhisk_short}} 環境が有効になった後、{{site.data.keyword.openwhisk_short}} を、REST API 呼び出しを使用して Web アプリまたはモバイル・アプリと共に使用できます。アクション、アクティベーション、パッケージ、ルール、およびトリガー用の API について詳しくは、[{{site.data.keyword.openwhisk_short}} API 資料](https://new-console.{DomainName}/apidocs/98)を参照してください。
+## プログラミング・モデル
+{: #openwhisk_start_programming}
+- [システムの詳細](./openwhisk_reference.html)
+- [OpenWhisk 提供サービスのカタログ](./openwhisk_catalog.html)
+- [アクション](./openwhisk_actions.html)
+- [トリガーおよびルール](./openwhisk_triggers_rules.html)
+- [フィード](./openwhisk_feeds.html)
+- [パッケージ](./openwhisk_packages.html)
+- [アノテーション](./openwhisk_annotations.html)
+- [Web アクション](./openwhisk_webactions.html)
+- [API ゲートウェイ](./openwhisk_apigateway.html)
+- [エンティティー名](./openwhisk_reference.html#openwhisk_entities)
+- [アクションの意味](./openwhisk_reference.html#openwhisk_semantics)
+- [制限](./openwhisk_reference.html#openwhisk_syslimits)
 
 ## {{site.data.keyword.openwhisk_short}} Hello World 例
 {: #openwhisk_start_hello_world}
 {{site.data.keyword.openwhisk_short}} の入門として、まず次の JavaScript コード例を試してみてください。
 
-```
+```javascript
 /**
  * Hello world as an OpenWhisk action.
  */
@@ -98,13 +97,12 @@ function main(params) {
 
     このコマンドの出力は以下のとおりです。
 
-    ```
-    {
-        "payload": "Hello, World!"
+    ```json
+  {
+      "payload": "Hello, World!"
     }
     ```
-    {: screen}
-
+    
     ```
     wsk action invoke hello --blocking --result --param name Fred
     ```
@@ -112,35 +110,22 @@ function main(params) {
 
     このコマンドの出力は以下のとおりです。
 
-    ```
-    {
-        "payload": "Hello, Fred!"
+    ```json
+  {
+      "payload": "Hello, Fred!"
     }
     ```
-    {: screen}
 
 {{site.data.keyword.openwhisk_short}} のイベント・ドリブン機能を使用して、イベントに応えてこのアクションを起動することもできます。[アラーム・サービス例](./openwhisk_packages.html#openwhisk_packages_trigger)に従って、周期的イベントが生成されるたびに `hello` アクションを起動するイベント・ソースを構成します。
 
 
-## システムの詳細
-{: #openwhisk_system_details}
-
-{{site.data.keyword.openwhisk_short}} に関する追加情報が以下のトピックに記載されています。
-
-* [エンティティー名](./openwhisk_reference.html#openwhisk_entities)
-* [アクションの意味](./openwhisk_reference.html#openwhisk_semantics)
-* [制限](./openwhisk_reference.html#openwhisk_syslimits)
-* [REST API](https://new-console.{DomainName}/apidocs/98)
-
-# 関連リンク
-{: #rellinks notoc}
-
 ## API リファレンス
-{: #api}
+{: #openwhisk_start_api notoc}
 * [REST API の資料](./openwhisk_reference.html#openwhisk_ref_restapi)
 * [REST API](https://new-console.{DomainName}/apidocs/98){:new_window}
 
 ## 関連リンク
-{: #general}
+{: #general notoc}
 * [ディスカバー: {{site.data.keyword.openwhisk_short}}](http://www.ibm.com/cloud-computing/bluemix/openwhisk/){:new_window}
 * [IBM developerWorks の {{site.data.keyword.openwhisk_short}}](https://developer.ibm.com/openwhisk/){:new_window}
+* [Apache {{site.data.keyword.openwhisk_short}} プロジェクト Web サイト](http://openwhisk.org){:new_window}

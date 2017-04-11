@@ -23,7 +23,7 @@ lastupdated: "2017-01-12"
 Die Befehlszeilenschnittstelle (CLI) von Cloud Foundry (cf) stellt Befehle bereit, mit denen Sie Ihre Apps verwalten können. In der nachfolgenden Liste sind die für die App-Verwaltung am häufigsten verwendeten cf-Befehle mit Namen, Optionen, Nutzungen, Voraussetzungen, Beschreibungen und Beispielen aufgeführt. Um alle cf-Befehle und die zugehörigen Hilfeinformationen aufzulisten, verwenden Sie `cf help`. Mit dem Befehl `cf command_name -h` können Sie detaillierte Hilfeinformationen zu einem bestimmten Befehl anzeigen.
 {: shortdesc}
 
-**Hinweis:** Wenn sich in Ihrem Netz zwischen dem Host, auf dem die cf-Befehle ausgeführt werden, und dem Cloud Foundry-API-Endpunkt ein HTTP-Proxy-Server befindet, müssen Sie den Hostnamen oder die IP-Adresse des Proxy-Servers durch Festlegung der Umgebungsvariablen `HTTP_PROXY` angeben. Details hierzu finden Sie unter (http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}Using the cf CLI with an HTTP Proxy Server ![Symbol für externen Link](..![External)/icons/launch-glyph.svg)].
+**Hinweis:** Wenn sich in Ihrem Netz zwischen dem Host, auf dem die cf-Befehle ausgeführt werden, und dem Cloud Foundry-API-Endpunkt ein HTTP-Proxy-Server befindet, müssen Sie den Hostnamen oder die IP-Adresse des Proxy-Servers durch Festlegung der Umgebungsvariablen `HTTP_PROXY` angeben. Details hierzu finden Sie unter [Using the cf CLI with an HTTP Proxy Server ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}.
 
 
 ## Index für Befehle der Cloud Foundry-CLI
@@ -814,7 +814,7 @@ cf -v
 ## Zugehörige Links
 {: #general}
 
-* (https://github.com/cloudfoundry/cli/releases)Cloud Foundry CLI herunterladen ![Symbol für externen Link](![External)../icons/launch-glyph.svg)]
+* [Cloud Foundry-CLI herunterladen ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases)
 {: new_window}
-* (ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)Kurzreferenzkarte - cf-Befehle![Symbol für externen Link](![External)../icons/launch-glyph.svg)]
+* [Referenzkarte - cf-Befehle ![Symbol für externen Link](../../../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
 {: new_window}

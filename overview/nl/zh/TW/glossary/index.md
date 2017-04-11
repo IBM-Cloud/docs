@@ -3,8 +3,8 @@
  
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-31"
+  years: 2016, 2017
+lastupdated: "2017-03-15"
 
  
 
@@ -131,7 +131,7 @@ text between these comment tags.-->
 ### 應用程式 ID (app ID)
 {: #x7909906}
 
-指派給 Bluemix 行動應用程式的 GUID。另請參閱[廣域唯一 ID (globally unique identifier)](#x2390455)。
+指派給 Bluemix 行動應用程式的 GUID。另請參閱[廣域唯一 ID (globally unique identifier)](#x2390455)。另請參閱[{{site.data.keyword.appid_full}}](/docs/services/appid/index.html)
 
 ### 應用程式索引鍵 (application key)
 {: #x7290111}
@@ -753,7 +753,7 @@ Java 保存檔。
 ### 授權碼 (license key)
 {: #x2804840}
 
-管理軟體授權程式使用的授權。當軟體升級或移動、硬體處理器群組變更、新增其他授權使用情況，或購買需要授權碼的新軟體時，軟體授權碼需要安裝在系統上。
+管理軟體授權程式使用的授權。當軟體升級或移動、硬體處理器群組變更、新增其他授權用量，或購買需要授權碼的新軟體時，軟體授權碼需要安裝在系統上。
 
 
 ### 輕量型 API 呼叫 (light API call)
@@ -928,7 +928,7 @@ Java 保存檔。
 ### 專用雲端 (private cloud)
 {: #x4585362}
 
-一種雲端運算環境，僅限由企業與夥伴網路的成員進行存取。另請參閱[公用雲端 (public cloud)](#x4585370)。
+一種雲端運算環境，僅限由企業與合作夥伴網路的成員進行存取。另請參閱[公用雲端 (public cloud)](#x4585370)。
 
 ### 專用映像檔儲存庫 (private image repository)
 {: #x8439215}

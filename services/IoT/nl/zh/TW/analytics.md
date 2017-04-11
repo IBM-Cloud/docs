@@ -1,22 +1,22 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-11"
+  years: 2016, 2017
+lastupdated: "2017-02-28"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
 
 
-# 分析
+# 即時 IoT 資料分析
 {: #analytics}  
 
-使用 Watson {{site.data.keyword.iot_full}} 分析，可從您裝置產生的原始資料中取得您需要的分析資訊。  
+使用 Watson {{site.data.keyword.iot_full}} 分析，可從您裝置產生的原始資料中取得您需要的即時分析資訊。  
 {: shortdesc}
 
 您可以使用[板及卡片](data_visualization.html)，檢視代表資料集值（來自一個以上裝置）的圖形，以快速瀏覽並瞭解裝置資料。

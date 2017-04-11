@@ -15,20 +15,13 @@
    viewBox="0 0 607.56451 321.04471"
    id="svg5645"
    version="1.1"
-   inkscape:version="0.47 r22583"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="architecture_custom_cards.svg"
    inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.png"
    inkscape:export-xdpi="299.98132"
    inkscape:export-ydpi="299.98132">
   <defs
      id="defs5647">
-    <inkscape:perspective
-       sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="0 : 160.52237 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_z="607.56445 : 160.52237 : 1"
-       inkscape:persp3d-origin="303.78223 : 107.01491 : 1"
-       id="perspective369" />
     <linearGradient
        id="linearGradient8459"
        osb:paint="solid">
@@ -1085,17 +1078,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.45664"
+     inkscape:zoom="2.06"
      inkscape:cx="278.54219"
      inkscape:cy="162.34668"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="in"
-     inkscape:window-width="1440"
-     inkscape:window-height="853"
-     inkscape:window-x="-4"
-     inkscape:window-y="-4"
+     inkscape:window-width="1920"
+     inkscape:window-height="1019"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -1305,7 +1298,7 @@
            y="-39.357193" /></flowRegion><flowPara
          id="flowPara7065" /></flowRoot>    <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.3000003px;line-height:125%;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="436.27771"
        y="518.68762"
        id="text266398-0"
@@ -1388,7 +1381,7 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.3000003px;line-height:125%;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="502.53854"
        y="546.58887"
        id="text18189-5-9-1"
@@ -1435,24 +1428,21 @@
          cy="110.6"
          cx="389"
          stroke-miterlimit="10"
-         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none"
-         d="m 407.6,110.6 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.2725,0 -18.6,-8.3275 -18.6,-18.6 0,-10.2725 8.3275,-18.600002 18.6,-18.600002 10.2725,0 18.6,8.327502 18.6,18.600002 z" />
+         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
       <circle
          id="circle5230-5"
          r="18.6"
          cy="250"
          cx="389"
          stroke-miterlimit="10"
-         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none"
-         d="m 407.6,250 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.2725,0 -18.6,-8.3275 -18.6,-18.6 0,-10.2725 8.3275,-18.6 18.6,-18.6 10.2725,0 18.6,8.3275 18.6,18.6 z" />
+         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
       <circle
          id="circle5232-6"
          r="18.6"
          cy="389.39999"
          cx="389"
          stroke-miterlimit="10"
-         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none"
-         d="m 407.6,389.39999 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.2725,0 -18.6,-8.3275 -18.6,-18.6 0,-10.27249 8.3275,-18.6 18.6,-18.6 10.2725,0 18.6,8.32751 18.6,18.6 z" />
+         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
     </g>
     <flowRoot
        xml:space="preserve"
@@ -1479,7 +1469,7 @@
        id="text44235-7-5"
        y="611.60376"
        x="277.67981"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.3000003px;line-height:125%;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
          y="611.60376"
          x="277.67981"
@@ -1543,7 +1533,7 @@
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.3000003px;line-height:125%;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="283.60898"
        y="453.61176"
        id="text44241-0"
@@ -1610,7 +1600,7 @@
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.3000003px;line-height:125%;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="437.62662"
        y="358.89688"
        id="text266398-3-9"
@@ -1668,7 +1658,7 @@
        id="text44235-49"
        y="376.91528"
        x="443.92023"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.3000003px;line-height:125%;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
          y="376.91528"
          x="443.92023"
@@ -1701,7 +1691,7 @@
        style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:#f0f0ef;stroke-opacity:1" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.3000003px;line-height:125%;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="495.55319"
        y="456.78415"
        id="text18189-5-9-1-8"
@@ -1752,24 +1742,21 @@
          cy="110.6"
          cx="389"
          stroke-miterlimit="10"
-         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none"
-         d="m 407.6,110.6 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.2725,0 -18.6,-8.3275 -18.6,-18.6 0,-10.2725 8.3275,-18.600002 18.6,-18.600002 10.2725,0 18.6,8.327502 18.6,18.600002 z" />
+         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
       <circle
          id="circle5230-5-3"
          r="18.6"
          cy="250"
          cx="389"
          stroke-miterlimit="10"
-         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none"
-         d="m 407.6,250 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.2725,0 -18.6,-8.3275 -18.6,-18.6 0,-10.2725 8.3275,-18.6 18.6,-18.6 10.2725,0 18.6,8.3275 18.6,18.6 z" />
+         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
       <circle
          id="circle5232-6-2"
          r="18.6"
          cy="389.39999"
          cx="389"
          stroke-miterlimit="10"
-         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none"
-         d="m 407.6,389.39999 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.2725,0 -18.6,-8.3275 -18.6,-18.6 0,-10.27249 8.3275,-18.6 18.6,-18.6 10.2725,0 18.6,8.32751 18.6,18.6 z" />
+         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
     </g>
     <g
        transform="matrix(0.68983305,0,0,0.63094863,256.07684,243.35849)"
@@ -1844,7 +1831,7 @@
        style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:#f0f0ef;stroke-opacity:1" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.3000003px;line-height:125%;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="-7.9545774"
        y="430.22656"
        id="text266398-0-9"
@@ -1859,7 +1846,7 @@
          id="tspan266402-0-0" /></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.3000003px;line-height:125%;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="42.306259"
        y="450.12781"
        id="text18189-5-9-1-7"
@@ -1910,24 +1897,21 @@
          cy="110.6"
          cx="389"
          stroke-miterlimit="10"
-         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none"
-         d="m 407.6,110.6 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.2725,0 -18.6,-8.3275 -18.6,-18.6 0,-10.2725 8.3275,-18.600002 18.6,-18.600002 10.2725,0 18.6,8.327502 18.6,18.600002 z" />
+         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
       <circle
          id="circle5230-5-2"
          r="18.6"
          cy="250"
          cx="389"
          stroke-miterlimit="10"
-         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none"
-         d="m 407.6,250 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.2725,0 -18.6,-8.3275 -18.6,-18.6 0,-10.2725 8.3275,-18.6 18.6,-18.6 10.2725,0 18.6,8.3275 18.6,18.6 z" />
+         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
       <circle
          id="circle5232-6-0"
          r="18.6"
          cy="389.39999"
          cx="389"
          stroke-miterlimit="10"
-         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none"
-         d="m 407.6,389.39999 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.2725,0 -18.6,-8.3275 -18.6,-18.6 0,-10.27249 8.3275,-18.6 18.6,-18.6 10.2725,0 18.6,8.32751 18.6,18.6 z" />
+         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
     </g>
     <g
        transform="matrix(0.68983305,0,0,0.63094863,-200.93602,235.60822)"
@@ -1971,21 +1955,34 @@
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.3000003px;line-height:125%;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="39.885139"
        y="367.31418"
        id="text18189-1-2"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan3175"></tspan><tspan
+         id="tspan18191-0-2"
+         x="39.885139"
+         y="367.31418" /><tspan
          sodipodi:role="line"
-         id="tspan3177">custom-cards</tspan><tspan
+         x="39.885139"
+         y="381.06418"
+         id="tspan8202-5">custom-cards</tspan><tspan
          sodipodi:role="line"
-         id="tspan3179">IBM 範例自訂</tspan><tspan
+         x="39.885139"
+         y="391.3699"
+         id="tspan6878-8-6"
+         style="font-size:7.5px">IBM 範例自訂</tspan><tspan
          sodipodi:role="line"
-         id="tspan3181">卡片儲存庫</tspan><tspan
+         x="39.885139"
+         y="400.7449"
+         style="font-size:7.5px"
+         id="tspan11208">卡片儲存庫</tspan><tspan
          sodipodi:role="line"
-         id="tspan3183"></tspan></text>
+         x="39.885139"
+         y="410.1199"
+         id="tspan18193-4-2"
+         style="font-size:7.5px" /></text>
     <g
        id="g60812-9-6"
        transform="translate(104.78745,372.35397)"

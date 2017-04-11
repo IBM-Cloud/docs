@@ -1,25 +1,21 @@
 ---
 
-
-
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-04"
-
+lastupdated: "2017-02-27"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:screen: .screen}
 {:pre: .pre}
 
 # Utilizzo e creazione di pacchetti {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_packages}
 
-
-In {{site.data.keyword.openwhisk}}, puoi utilizzare i pacchetti per raggruppare una serie di azioni correlate e condividerle con altri.
+In {{site.data.keyword.openwhisk_short}}, puoi utilizzare i pacchetti per raggruppare una serie di azioni correlate e condividerle con altri.
 
 Un pacchetto può includere *azioni* e *feed*.
 - Un'azione è una parte di codice eseguita su {{site.data.keyword.openwhisk_short}}. Ad esempio, il pacchetto Cloudant include azioni per la lettura e scrittura di record in un database Cloudant.
@@ -54,7 +50,6 @@ In {{site.data.keyword.openwhisk_short}} sono registrati vari pacchetti. Puoi ot
   /whisk.system/github                                                   shared
   /whisk.system/pushnotifications                                        shared
   ```
-  {: screen}
 
 2. Ottieni un elenco delle entità del pacchetto `/whisk.system/cloudant`.
 
@@ -69,7 +64,6 @@ In {{site.data.keyword.openwhisk_short}} sono registrati vari pacchetti. Puoi ot
    action /whisk.system/cloudant/write: Write document to database
    feed   /whisk.system/cloudant/changes: Database change feed
   ```
-  {: screen}
 
   Questo output mostra che il pacchetto Cloudant fornisce due azioni, `read` e `write`, e un solo feed trigger denominato `changes`. Il feed `changes` causa l'attivazione dei trigger all'aggiunta di documenti al database Cloudant specificato.
 
@@ -85,7 +79,6 @@ In {{site.data.keyword.openwhisk_short}} sono registrati vari pacchetti. Puoi ot
   action /whisk.system/cloudant/read: Read document from database
      (params: dbname includeDoc id)
   ```
-  {: screen}
 
   Questo output mostra che l'azione Cloudant `read` richiede tre parametri, compreso il database e l'ID documento da richiamare.
 
@@ -105,7 +98,6 @@ Puoi chiamare le azioni di un pacchetto con la stessa modalità seguita per le a
   action /whisk.system/samples/greeting: Print a friendly greeting
      (params: name place)
   ```
-  {: screen}
 
   Nota che l'azione `greeting` utilizza due parametri: `name` e `place`.
 
@@ -115,12 +107,11 @@ Puoi chiamare le azioni di un pacchetto con la stessa modalità seguita per le a
   wsk action invoke --blocking --result /whisk.system/samples/greeting
   ```
   {: pre}
-  ```
+  ```json
   {
       "payload": "Hello, stranger from somewhere!"
   }
   ```
-  {: screen}
 
   L'output è un messaggio generico perché non è stato specificato alcun parametro.
 
@@ -130,12 +121,11 @@ Puoi chiamare le azioni di un pacchetto con la stessa modalità seguita per le a
   wsk action invoke --blocking --result /whisk.system/samples/greeting --param name Mork --param place Ork
   ```
   {: pre}
-  ```
+  ```json
   {
       "payload": "Hello, Mork from Ork!"
   }
   ```
-  {: screen}
 
   Nota che l'output utilizza i parametri `name` e `place` che sono stati trasmessi all'azione.
 
@@ -158,7 +148,6 @@ Nel semplice esempio di seguito riportato, puoi eseguire il bind del pacchetto `
   ```
   ok: created binding valhallaSamples
   ```
-  {: screen}
 
 2. Ottieni una descrizione del bind del pacchetto.
 
@@ -173,7 +162,6 @@ Nel semplice esempio di seguito riportato, puoi eseguire il bind del pacchetto `
    action /myNamespace/valhallaSamples/helloWorld: Demonstrates logging facilities
    action /myNamespace/valhallaSamples/curl: Curl a host url
   ```
-  {: screen}
 
   Nota che tutte le azioni del pacchetto `/whisk.system/samples` sono disponibili nel bind del pacchetto `valhallaSamples`.
 
@@ -188,7 +176,6 @@ Nel semplice esempio di seguito riportato, puoi eseguire il bind del pacchetto `
       "payload": "Hello, Odin from Valhalla!"
   }
   ```
-  {: screen}
 
   Osserva dal risultato che l'azione eredita il parametro `place` che hai impostato
  quando hai creato il bind del pacchetto `valhallaSamples`.
@@ -204,7 +191,6 @@ Nel semplice esempio di seguito riportato, puoi eseguire il bind del pacchetto `
       "payload": "Hello, Odin from Asgard!"
   }
   ```
-  {: screen}
 
   Nota che il valore del parametro `place` specificato con la chiamata dell'azione sovrascrive il valore predefinito impostato nel bind del pacchetto `valhallaSamples`.
 
@@ -224,7 +210,6 @@ I feed possono essere opportunamente utilizzati per configurare un'origine event
   package /whisk.system/alarms
    feed   /whisk.system/alarms/alarm
   ```
-  {: screen}
 
   ```
   wsk action get --summary /whisk.system/alarms/alarm
@@ -234,7 +219,6 @@ I feed possono essere opportunamente utilizzati per configurare un'origine event
   action /whisk.system/alarms/alarm: Fire trigger when alarm occurs
      (params: cron trigger_payload)
   ```
-  {: screen}
 
   Il feed `/whisk.system/alarms/alarm` utilizza due parametri:
   - `cron`: una specifica crontab che indica quando attivare il trigger.
@@ -249,11 +233,10 @@ I feed possono essere opportunamente utilizzati per configurare un'origine event
   ```
   ok: created trigger feed everyEightSeconds
   ```
-  {: screen}
 
 3. Crea un file 'hello.js' con il seguente codice azione.
 
-  ```
+  ```javascript
   function main(params) {
       return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
@@ -276,7 +259,6 @@ I feed possono essere opportunamente utilizzati per configurare un'origine event
   ```
   ok: created rule myRule
   ```
-  {: screen}
 
 6. Controlla che l'azione venga richiamata tramite il polling dei log di attivazione.
 
@@ -305,7 +287,6 @@ Per creare un pacchetto personalizzato che contenga un'azione semplice, prova il
   ```
   ok: created package custom
   ```
-  {: screen}
 
 2. Ottieni un riepilogo del pacchetto.
 
@@ -316,13 +297,12 @@ Per creare un pacchetto personalizzato che contenga un'azione semplice, prova il
   ```
   package /myNamespace/custom
   ```
-  {: screen}
 
   Nota che il pacchetto è vuoto.
 
 3. Crea un file denominato `identity.js` che contenga il seguente codice azione. Questa azione restituisce tutti i parametri di input.
 
-  ```
+  ```javascript
   function main(args) { return args; }
   ```
   {: codeblock}
@@ -336,7 +316,6 @@ Per creare un pacchetto personalizzato che contenga un'azione semplice, prova il
   ```
   ok: created action custom/identity
   ```
-  {: screen}
 
   Per creare un'azione in un pacchetto devi prefissare il nome dell'azione con un nome pacchetto. La nidificazione dei pacchetti non è consentita. Un pacchetto può contenere solo azioni e non può contenere un altro pacchetto.
 
@@ -350,7 +329,6 @@ Per creare un pacchetto personalizzato che contenga un'azione semplice, prova il
   package /myNamespace/custom
    action /myNamespace/custom/identity
   ```
-  {: screen}
 
   Ora l'azione `custom/identity` viene mostrata nel tuo spazio dei nomi.
 
@@ -360,10 +338,9 @@ Per creare un pacchetto personalizzato che contenga un'azione semplice, prova il
   wsk action invoke --blocking --result custom/identity
   ```
   {: pre}
-  ```
+  ```json
   {}
   ```
-  {: screen}
 
 
 Puoi impostare parametri predefiniti per tutte le entità di un pacchetto. Per far ciò, imposta i parametri a livello di pacchetto ereditati da tutte le azioni del pacchetto. Per vedere come funziona, prova il seguente esempio:
@@ -377,18 +354,18 @@ Puoi impostare parametri predefiniti per tutte le entità di un pacchetto. Per f
   ```
   ok: updated package custom
   ```
-  {: screen}
 
 2. Visualizza i parametri del pacchetto e dell'azione e osserva in che modo l'azione `identity` del pacchetto eredita parametri dal pacchetto.
 
   ```
-  wsk package get custom
+  wsk package get custom parameters
   ```
   {: pre}
   ```
-  ok: got package custom
-  ...
-  "parameters": [
+  ok: got package custom, displaying field parameters
+  ```
+  ```json
+  [
       {
           "key": "city",
           "value": "Austin"
@@ -398,18 +375,17 @@ Puoi impostare parametri predefiniti per tutte le entità di un pacchetto. Per f
           "value": "USA"
       }
   ]
-  ...
   ```
-  {: screen}
 
   ```
-  wsk action get custom/identity
+  wsk action get custom/identity parameters
   ```
   {: pre}
   ```
-  ok: got action custom/identity
-  ...
-  "parameters": [
+  ok: got action custom/identity, , displaying field parameters
+  ```
+  ```json
+  [
       {
           "key": "city",
           "value": "Austin"
@@ -419,9 +395,7 @@ Puoi impostare parametri predefiniti per tutte le entità di un pacchetto. Per f
           "value": "USA"
       }
   ]
-  ...
   ```
-  {: screen}
 
 3. Chiama l'azione identity senza alcun parametro, al fine di verificare che l'azione erediti effettivamente i parametri.
 
@@ -429,13 +403,12 @@ Puoi impostare parametri predefiniti per tutte le entità di un pacchetto. Per f
   wsk action invoke --blocking --result custom/identity
   ```
   {: pre}
-  ```
+  ```json
   {
       "city": "Austin",
       "country": "USA"
   }
   ```
-  {: screen}
 
 4. Chiama l'azione identity con alcuni parametri. I parametri della chiamata vengono uniti ai parametri del pacchetto e li sostituiscono.
 
@@ -443,14 +416,13 @@ Puoi impostare parametri predefiniti per tutte le entità di un pacchetto. Per f
   wsk action invoke --blocking --result custom/identity --param city Dallas --param state Texas
   ```
   {: pre}
-  ```
+  ```json
   {
       "city": "Dallas",
       "country": "USA",
       "state": "Texas"
   }
   ```
-  {: screen}
 
 
 ## Condivisione di un pacchetto
@@ -467,21 +439,19 @@ Una volta eseguiti i test e il debug delle azioni e dei feed compresi in un pacc
   ```
   ok: updated package custom
   ```
-  {: screen}
 
 2. Visualizza la proprietà `publish` del pacchetto per verificare che ora sia true.
 
   ```
-  wsk package get custom
+  wsk package get custom publish
   ```
   {: pre}
   ```
-  ok: got package custom
-  ...
-  "publish": true,
-  ...
+  ok: got package custom, displaying field publish
   ```
-  {: screen}
+  ```json
+  true
+  ```
 
 
 Altri utenti possono ora utilizzare il tuo pacchetto `custom`, includendo il bind del pacchetto o richiamando direttamente un'azione in esso contenuta. Gli altri utenti devono conoscere i nomi completi del pacchetto per poterne eseguire il bind o per chiamare azioni in esso contenute. Le azioni e i feed di un pacchetto condiviso sono *pubblici*. Se il pacchetto è privato, lo sono anche tutti i suoi contenuti.
@@ -496,6 +466,5 @@ Altri utenti possono ora utilizzare il tuo pacchetto `custom`, includendo il bin
   package /myNamespace/custom
    action /myNamespace/custom/identity
   ```
-  {: screen}
 
   Nell'esempio precedente, hai utilizzato lo spazio dei nomi `myNamespace`, che appare nel nome completo.

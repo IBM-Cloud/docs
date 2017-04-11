@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-25"
+  years: 2016, 2017
+lastupdated: "2017-03-03"
 ---
 
 {:new_window: target="_blank"}
@@ -133,7 +133,7 @@ The speed threshold parameters define the medium speed range for each road type 
 |Others|Medium speed range for the Others road type.|10 \- 20|
 |Unknown|Medium speed range for the Unknown road type.|20 \- 60|
 
-### Sample JSON Response of "getLinkInformation" REST API
+#### Sample JSON Response of "getLinkInformation" REST API
 {: #sampleJson}
 
 ```

@@ -11,7 +11,7 @@ lastupdated: "2017-01-11"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Liberty アプリおよび Node.js アプリの管理
+# Liberty アプリおよび Node.js アプリの管理
 {: #app_management}
 
 
@@ -140,7 +140,7 @@ inspector ユーティリティーは、デフォルトで *proxy* を開始し�
 
 | | proxy | noproxy |
 |---|---|---|
-| < &nbsp; 6.3.0 | <br/> https://myApp.mybluemix.net/bluemix-debug/inspector *の* devconsole ユーティリティー | http://127.0.0.1:8790
+| < &nbsp; 6.3.0 | devconsole ユーティリティー **<br/> (https://myApp.mybluemix.net/bluemix-debug/inspector) | http://127.0.0.1:8790
 | >= 6.3.0 | chrome-devtools URL | chrome-devtools URL
 
 *noproxy* と、6.3.0 より前の Node.js バージョンの場合、ローカル・ポート転送を介して URL へのアクセスを有効にします。例えば次のようにします。

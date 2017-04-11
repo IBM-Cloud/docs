@@ -1,7 +1,7 @@
 ---
 
 copyright:
- años: 2015, 2016
+ years: 2015, 2016
 
 ---
 
@@ -27,8 +27,7 @@ Especifica la ruta que se asigna a la aplicación de servidor que ha creado en B
 
 **AppGUID**
 
-Especifica la clave exclusiva asignada a la aplicación que ha creado en Bluemix. Este valor distingue
-                entre mayúsculas y minúsculas.
+Especifica la clave exclusiva asignada a la aplicación que ha creado en Bluemix. Este valor distingue entre mayúsculas y minúsculas.
 
 **bluemixRegionSuffix**
 

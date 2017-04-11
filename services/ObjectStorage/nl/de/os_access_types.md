@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -18,7 +18,7 @@ lastupdated: "2017-01-17"
 {: shortdesc}
 
 <table>
-<caption> Tabelle 1. Definierte Benutzerrollen</caption>
+<caption> Tabelle 1. Definierte Benutzerrollen </caption>
   <tr>
     <th> Benutzer mit Administratorberechtigungen (admin) </th>
     <th> Benutzer ohne Administratorberechtigungen (member) </th>

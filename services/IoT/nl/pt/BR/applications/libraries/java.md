@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-24"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2016-10-24"
 {: #java}
 
 
-É possível construir e customizar aplicativos que interagem com sua organização na {{site.data.keyword.iot_full}} usando Java. Uma biblioteca do cliente Java para a {{site.data.keyword.iot_short_notm}}, documentação e exemplos são fornecidos para ajudá-lo a começar com o desenvolvimento de aplicativos.
+É possível construir e customizar aplicativos que interagem com sua organização no {{site.data.keyword.iot_full}} usando Java™. Uma biblioteca do cliente Java para a {{site.data.keyword.iot_short_notm}}, documentação e exemplos são fornecidos para ajudá-lo a começar com o desenvolvimento de aplicativos.
 
 {:shortdesc}
 
@@ -26,7 +26,7 @@ lastupdated: "2016-10-24"
 Última atualização: 25 de outubro de 2016
 {: .last-updated}
 
-Para acessar as bibliotecas do cliente Java e as amostras para o {{site.data.keyword.iot_short_notm}}, acesse o repositório [iot-java](https://github.com/ibm-watson-iot/iot-java) no GitHub e conclua as instruções de instalação.
+Para acessar as bibliotecas do cliente Java e as amostras para o {{site.data.keyword.iot_short_notm}}, acesse o repositório [iot-java ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-watson-iot/iot-java){: new_window} no GitHub e conclua as instruções de instalação.
 
 
 ## Construtor
@@ -430,7 +430,7 @@ Além de usar MQTT, também é possível configurar seus aplicativos para public
     	boolean status = myClient.publishApplicationEventforDeviceOverHTTP(deviceId, deviceType, "blink", event, ContentType.json);
 ```
 
-Para obter a amostra de código completa, consulte o exemplo de aplicativo [HttpApplicationDeviceEventPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpApplicationDeviceEventPublish.java).
+Para obter a amostra de código completa, veja o exemplo de aplicativo [HttpApplicationDeviceEventPublish ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpApplicationDeviceEventPublish.java){: new_window}.
 
 Com base nas configurações no arquivo de propriedades, o método `publishEventOverHTTP()` publica o evento em iniciação rápida ou no fluxo registrado. Quando `quickstart` é especificado como o ID da organização no arquivo de propriedades, o método `publishEventOverHTTP()` publica o evento para o serviço de iniciação rápida do {{site.data.keyword.iot_short_notm}} em formato
 de HTTP simples. Quando uma organização registrada válida é especificada no arquivo de propriedades, o evento sempre será publicado usando HTTPS (Protocolo de Transporte de Hipertexto Seguro) para que toda a comunicação seja segura.
@@ -477,7 +477,7 @@ Além de usar MQTT, também é possível configurar seus aplicativos para public
 	boolean response = myClient.publishCommandOverHTTP("execute", event);
 ```
 
-Para visualizar a amostra de código completa, consulte o aplicativo de exemplo [HttpCommandPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpCommandPublish.java).
+Para visualizar a amostra de código completa, veja o exemplo de aplicativo [HttpCommandPublish ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpCommandPublish.java){: new_window}.
 
 O protocolo HTTP (Protocolo de Transporte de Hipertexto) fornece entrega 'no máximo uma vez', o que é semelhante ao nível de qualidade de serviço 'no máximo uma vez' (QoS 0) do protocolo MQTT. Ao usar a entrega 'no máximo uma vez' para publicar comandos, o aplicativo deve implementar a lógica de nova tentativa quando ocorre um erro. Para obter mais informações, consulte [API de REST HTTP para aplicativos](../api.html).
 
@@ -485,8 +485,8 @@ O protocolo HTTP (Protocolo de Transporte de Hipertexto) fornece entrega 'no má
 ## Amostras
 {: #samples}
 
--  [MQTTApplicationDeviceEventPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/MQTTApplicationDeviceEventPublish.java) - Um aplicativo de amostra que demonstra como é possível publicar eventos de dispositivos.
--   [RegisteredApplicationCommandPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationCommandPublish.java) - Um aplicativo de amostra que demonstra como é possível publicar um comando em um dispositivo.
--  [RegisteredApplicationSubscribeSample](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationSubscribeSample.java) - Um aplicativo de amostra que demonstra como é possível assinar diferentes eventos, como eventos de dispositivos, comandos de dispositivos, status de dispositivos e status de aplicativos.
--   [SharedSubscriptionSample](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/SharedSubscriptionSample.java) - Um aplicativo de amostra que demonstra como é possível construir um aplicativo escalável que balanceia a carga de mensagens entre diversas instâncias do aplicativo.
--  [Amostra de backup e restauração](https://github.com/ibm-messaging/iot-backup-restore-sample) - uma amostra que apresenta como é possível fazer backup e restaurar a configuração do dispositivo no {{site.data.keyword.cloudant}}.
+-  [MQTTApplicationDeviceEventPublish ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/MQTTApplicationDeviceEventPublish.java){: new_window} - Um aplicativo de amostra que demonstra como é possível publicar eventos de dispositivo.
+-   [RegisteredApplicationCommandPublish ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationCommandPublish.java){: new_window} - Um aplicativo de amostra que demonstra como é possível publicar um comando em um dispositivo.
+-  [RegisteredApplicationSubscribeSample ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationSubscribeSample.java){: new_window} - Um aplicativo de amostra que demonstra como é possível assinar diferentes eventos, como eventos de dispositivo, comandos de dispositivo, status de dispositivo e status de aplicativo.
+-   [SharedSubscriptionSample ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/SharedSubscriptionSample.java){: new_window} - Um aplicativo de amostra que demonstra como é possível construir um aplicativo escalável que balanceia a carga de mensagens em diversas instâncias do aplicativo.
+-  [Amostra de backup e restauração ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/iot-backup-restore-sample){: new_window} - Uma amostra que demonstra como é possível fazer backup e restaurar a configuração do dispositivo no {{site.data.keyword.cloudant}}.

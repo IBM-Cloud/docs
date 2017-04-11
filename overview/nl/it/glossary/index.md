@@ -3,8 +3,8 @@
  
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-31"
+  years: 2016, 2017
+lastupdated: "2017-03-15"
 
  
 
@@ -131,7 +131,7 @@ Un'applicazione di dispositivo web o mobile. Vedi anche [applicazione mobile](#x
 ### ID applicazione
 {: #x7909906}
 
-Un GUID assegnato a un'applicazione mobile Bluemix. Vedi anche [globally unique identifier](#x2390455).
+Un GUID assegnato a un'applicazione mobile Bluemix. Vedi anche [globally unique identifier](#x2390455). Vedi anche [{{site.data.keyword.appid_full}}](/docs/services/appid/index.html)
 
 ### chiave di applicazione
 {: #x7290111}

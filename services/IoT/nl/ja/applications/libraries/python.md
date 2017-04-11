@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-27"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -26,7 +26,7 @@ Python を使用したアプリケーションの開発を始められるよう�
 ## Python クライアントとリソースのダウンロード
 {: #python_client_download}
 
-{{site.data.keyword.iot_short_notm}} 用の Python クライアントや、提供されている他のリソースを利用するには、[iot-python](https://github.com/ibm-messaging/iot-python) リポジトリーに移動し、インストール手順を実行します。
+{{site.data.keyword.iot_short_notm}} 用の Python クライアントやその他の使用可能なリソースを入手するには、GitHub の [iot-python ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-python){: new_window} リポジトリーにアクセスし、インストール手順を実行します。
 
 ## コンストラクター
 {: #constructor}
@@ -40,7 +40,7 @@ options 辞書は、{{site.data.keyword.iot_short_notm}} モジュールと対�
 |`auth-method`|認証の方式。サポートされている唯一の方式は `apikey` です。|
 |`auth-key`|オプションの API キー。auth-method の値を `apikey` に設定する場合は、これを指定する必要があります。|
 |`auth-token`|API キー・トークン。auth-method の値を `apikey` に設定する場合は、これも指定する必要があります。|
-|`clean-session`|true または false 値。永続サブスクリプション・モードでアプリケーションを接続する場合のみ必要です。デフォルトでは、`clean-session` は true に設定されます。|
+|`clean-session`|true または false の値。永続サブスクリプション・モードでアプリケーションを接続する場合のみ必要です。デフォルトでは、`clean-session` は true に設定されます。|
 
 
 options 辞書が提供されない場合、クライアントは未登録デバイスとして {{site.data.keyword.iot_short_notm}} Quickstart サービスに接続されます。
@@ -353,7 +353,7 @@ import ibmiotf.application
 
 client.connect()
 commandData={'rebootDelay' : 50}
-client.publishCommand(myDeviceType, myDeviceId, "reboot", "json", myData)
+client.publishCommand(myDeviceType, myDeviceId, "reboot", "json", commandData)
 ```
 
 
@@ -375,7 +375,7 @@ except IoTFCReSTException as e:
     print("ERROR [" + e.httpcode + "] " + e.message)
 ```
 
-要求と応答のモデル、および HTTP 状況コードについては、[{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) の『Organization Configuration』セクションを参照してください。
+要求と応答のモデルや HTTP 状況コードについては、[{{site.data.keyword.iot_short_notm}} API ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} の『Organization Configuration』セクションを参照してください。
 
 
 ## デバイスの一括操作
@@ -383,7 +383,7 @@ except IoTFCReSTException as e:
 
 アプリケーションで一括操作を使用して、複数のデバイスを同時に取得、追加、削除できます。
 
-照会パラメーター、要求と応答のモデル、HTTP 状況コードのリストについては、[{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/) の『Bulk Operations』セクションを参照してください。
+照会パラメーター、要求と応答のモデル、HTTP 状況コードのリストについては、[{{site.data.keyword.iot_short_notm}} API ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/){: new_window} の『Bulk Operations』セクションを参照してください。
 
 
 ### デバイス情報の取得
@@ -459,7 +459,7 @@ except IoTFCReSTException as e:
 
 組織で作成したデバイス・タイプを、デバイスを追加するためのテンプレートを作成するときに使用できます。{{site.data.keyword.iot_short_notm}} API の機能を使用して、アプリケーションで組織内のデバイス・タイプのリスト表示、作成、削除、表示、更新を行えます。
 
-照会パラメーター、要求と応答のモデル、HTTP 状況コードについては、[{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) 資料の『Device types』セクションを参照してください。
+照会パラメーター、要求と応答のモデル、HTTP 状況コードについては、[{{site.data.keyword.iot_short_notm}} API ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} 資料の『Device types』セクションを参照してください。
 
 
 ### すべてのデバイス・タイプの取得
@@ -601,7 +601,7 @@ except IoTFCReSTException as e:
 API で利用できるデバイス操作には、{{site.data.keyword.iot_short_notm}} 組織内のデバイスのリスト作成、追加、削除、表示、更新、ロケーションの表示、デバイス管理情報の表示などがあります。
 
 
-照会パラメーター、要求と応答のモデル、HTTP 状況コードについては、[{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) の『Device』セクションを参照してください。
+照会パラメーター、要求と応答のモデル、HTTP 状況コードについては、[{{site.data.keyword.iot_short_notm}} API ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} の『Devices』セクションを参照してください。
 
 
 ### 特定のデバイス・タイプのデバイスの取得
@@ -639,7 +639,7 @@ response = apiClient.retrieveDevices("iotsample-arduino", parameters);
 |`metadata`|オプション|カスタム・フィールドの値文字列のペア ([デバイス・タイプを追加するためのサンプル・コード](#sample_device_type)に大まかに示しています)。|
 |`location`|オプション|経度、緯度、高度、精度、measuredDateTime 変数が含まれます。|
 
-これらのパラメーターの詳細や、応答形式、応答コードについては、[API 資料](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Devices/post_device_types_typeId_devices)を参照してください。
+これらのパラメーター、応答形式、応答コードについて詳しくは、[API 資料 ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Devices/post_device_types_typeId_devices){: new_window} を参照してください。
 
 `registerDevice()` メソッドを使用する場合は、必須の deviceID パラメーターと、デバイスに応じて必要なオプションのパラメーターを定義してから、選択したパラメーターを使用してメソッドを呼び出します。
 
@@ -754,7 +754,7 @@ apiCli.getDeviceManagementInformation("iotsample-arduino", "00aabbccde03")
 - デバイス・エラー・コードの取得
 - エラー・コードの追加
 
-照会モデルと応答モデル、応答コード、照会パラメーターについて詳しくは、[API 資料](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) {{site.data.keyword.iot_short_notm}} API 資料を参照してください。
+照会モデルと応答モデル、応答コード、照会パラメーターについて詳しくは、[{{site.data.keyword.iot_short_notm}} API 資料 ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} を参照してください。
 
 ### 診断ログの取得
 

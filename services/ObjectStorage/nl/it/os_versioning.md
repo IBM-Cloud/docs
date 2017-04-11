@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -12,112 +12,132 @@ lastupdated: "2017-01-17"
 {:pre: .pre}
 
 
-# Setting up object versioning {: #setting-up-versioning}
+# Configurazione delle versioni dell'oggetto {: #setting-up-versioning}
 
-You can keep older versions of your objects automatically by setting up object versioning. With versioning, you can see a history of each object.
+Puoi conservare le vecchie versioni dei tuoi oggetti in automatico impostando le versioni dell'oggetto.  Con le versioni dell'oggetto, puoi prevenire sovrascritture non intenzionali e richiamare le precedenti versioni dei tuoi file.
 {: shortdesc}
 
-When you upload a new version of your file to your main container, the previous version is automatically moved into your backup container. If you delete the file from your main container, the most recent version is automatically moved from your backup container into the main container to replace the deleted file.
 
-1. Create a container and give it a name. Replace the variable *container_name* with the name you want to give your container.
+#### Come funzionano le versioni dell'oggetto
+
+Le versioni dell'oggetto sono un modo per un utente di archiviare un oggetto che potrebbe venire modificato. Con le versioni dell'oggetto, la versione corrente del tuo oggetto è sempre disponibile nel tuo contenitore di lavoro e viene eseguito il backup di tutte le versioni precedenti nel tuo contenitore di archiviazione.
+
+<dl>
+  <dt>Memorizzazione</dt>
+    <dd>Un nuovo oggetto che stai utilizzando per l'archiviazione per la prima volta. Questo oggetto può essere un oggetto nuovo o un oggetto modificato che stai caricato per la seconda volta.</dd>
+  <dt>Archivio</dt>
+    <dd>Con le versioni dell'oggetto, quando un oggetto viene salvato con lo stesso nome di un oggetto esistente nel contenitore di lavoro, l'oggetto più vecchio viene spostato nel contenitore di archiviazione. Viene aggiunta una data/ora al nome dell'oggetto.</dd>
+  <dt>Ripristino</dt>
+    <dd>Se un oggetto viene eliminato dal contenitore di lavoro e ne esiste una versione archiviata, essa viene ripristinata.  Puoi ripristinare un oggetto archiviato in qualsiasi momento.</dd>
+</dl>
+
+![Panoramica sulle versioni dell'oggetto](images/os_versioning.png)
+
+Figura 1. Panoramica sulle versioni dell'oggetto
+
+
+#### Esercitazione
+
+Per comprendere le versioni dell'oggetto, completa la seguente esercitazione.
+
+1. Crea un contenitore e forniscigli un nome. Sostituisci la variabile *container_name* con il nome che desideri fornire al tuo contenitore.
 
     ```
     swift post <container_name>
     ```
     {: pre}
 
-2. Create a second container to act as your backup storage and give it a name.
+2. Crea un secondo contenitore da utilizzare come archivio di backup e forniscigli un nome.
 
     ```
-    swift post <backup_container_name>
-    ```
-    {: pre}
-
-3. Set up versioning.
-
-    Swift command:
-
-    ```
-    swift post <container_name> -H "X-Versions-Location: <backup_container_name>"
+    swift post <archive_container_name>
     ```
     {: pre}
 
-    cURL command:
+3. Configura le versioni.
+
+    Comando Swift:
 
     ```
-    curl -i -X PUT -H "X-Auth-Token: <token>" -H "X-Versions-Location:<backup_container_name>" https://<object-storage_url>/<container_name>
+    swift post <container_name> -H "X-Versions-Location: <archive_container_name>"
     ```
     {: pre}
 
-4. Upload an object to your main container for the first time.
+    Comando cURL:
+
+    ```
+    curl -i -X PUT -H "X-Auth-Token: <token>" -H "X-Versions-Location:<archive_container_name>" https://<object-storage_url>/<container_name>
+    ```
+    {: pre}
+
+4. Carica un oggetto nel tuo contenitore di lavoro per la prima volta. 
 
     ```
     swift upload <container_name> <object>
     ```
     {: pre}
 
-5. Make a change to your object.
-
-6. Upload the new version of the object to your main container.
+5. Modifica il tuo oggetto e carica la nuova versione nel tuo contenitore di lavoro.
 
     ```
     swift upload <container_name> <object>
     ```
     {: pre}
 
-7.  The objects in your backup container are automatically named with the following format: `<Length><Object_name>/<Timestamp>`.
-  <table>
-  <caption> Table 1. Naming attributes described </caption>
-    <tr>
-      <th> Attribute </th>
-      <th> Description </th>
-    </tr>
-    <tr>
-      <td> <i> Length </i> </td>
-      <td> The length of the name of your object. This is a 3-character, zero-padded hexadecimal number. </td>
-    </tr>
-    <tr>
-      <td> <i> Object_name </i> </td>
-      <td> The name of your object. </td>
-    </tr>
-    <tr>
-      <td> <i> Timestamp </i> </td>
-      <td> The timestamp of when that version of the object was originally uploaded. </td>
-    </tr>
-  </table>
+6.  L'oggetto nel tuo contenitore di archiviazione viene automaticamente denominato con il seguente formato: `<Length><Object_name>/<time stamp>`.
+    <table>
+    <caption> Tabella 1. Denominazione degli attributi descritti </caption>
+      <tr>
+        <th> Attributo </th>
+        <th> Descrizione </th>
+      </tr>
+      <tr>
+        <td> <i>Length</i> </td>
+        <td> La lunghezza del nome del tuo oggetto. Questo è un numero esadecimale a 3 caratteri senza zeri. </td>
+      </tr>
+      <tr>
+        <td> <i>Object_name</i> </td>
+        <td> Il nome del tuo oggetto. </td>
+      </tr>
+      <tr>
+        <td> <i> data/ora </i> </td>
+        <td> La data/ora in cui questa versione dell'oggetto è stata caricata originalmente. </td>
+      </tr>
+    </table>
 
-
-6. List the objects in your main container to see the new version of your file.
+7. Elenca gli oggetti nel tuo contenitore di lavoro per visualizzare la nuova versione del tuo file. 
 
     ```
     swift list --lh <container_name>
     ```
     {: pre}
 
-7. List objects in your backup container. You see the previous version of your file that is stored in this container. Note that a timestamp is added to your file.
+8. Elenca gli oggetti nel tuo contenitore di archiviazione per visualizzare la versione precedente dei tuoi file con una data/ora accodata. 
 
     ```
     swift list --lh <backup_container_name>
     ```
     {: pre}
 
-8. Delete the object in your main container. When you delete the object, the most recent version in your backup container is automatically moved back into your main container.
+9. Elimina l'oggetto dal tuo contenitore di lavoro. Viene automaticamente ripristinata la versione più recente dal tuo contenitore di archiviazione nel tuo contenitore di lavoro.
+
+    **Nota**: devi eliminare tutte le versioni del tuo file per poter eliminare l'oggetto.
 
     ```
     swift delete <container_name> <object>
     ```
     {: pre}
 
-9. Optional: Disable object versioning.
+10. Facoltativo: disabilita le versioni dell'oggetto.
 
-    Swift command:
+    Comando Swift:
 
     ```
     swift post <container_name> -H "X-Remove-Versions-Location:"
     ```
     {: pre}
 
-    cURL command:
+    Comando cURL:
 
     ```
     cURL -i -X POST -H "X-Auth-Token: <token>" -H "X-Remove-Versions-Location: anyvalue" https://<object-storage_url>/<container_name>

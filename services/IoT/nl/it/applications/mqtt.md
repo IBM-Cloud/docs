@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-30"
+  years: 2015, 2017
+lastupdated: "2017-01-25"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -55,9 +55,12 @@ Un'applicazione può pubblicare eventi come se provenissero da un qualsiasi disp
 
 -  Pubblica nell'argomento iot-2/type/*device_type*/id/*device_id*/evt/*event_id*/fmt/*format_string*
 
-Per passare i dati esistenti da un dispositivo a {{site.data.keyword.iot_short_notm}}, puoi creare un'applicazione per elaborare i dati e pubblicarli in {{site.data.keyword.iot_short_notm}}.
+Per inviare i dati esistenti da un dispositivo a {{site.data.keyword.iot_short_notm}}, puoi creare un'applicazione per elaborare i dati e pubblicarli in {{site.data.keyword.iot_short_notm}}.
 
 **Importante:** il payload dei messaggi è limitato ad un massimo di 131072 byte.  I messaggi che superano il limite vengono rifiutati.
+
+### Messaggi conservati
+Le organizzazioni {{site.data.keyword.iot_short_notm}} non sono autorizzate a pubblicare i messaggi MQTT conservati. Se un'applicazione, un gateway o un dispositivo invia un messaggio conservato, il servizio {{site.data.keyword.iot_short_notm}} sovrascrive l'indicatore del messaggio conservato quando viene impostato su true ed elabora il messaggio come se l'indicatore fosse impostato su false.
 
 ## Pubblicazione comandi dispositivo
 {: #publishing_device_commands}
@@ -133,6 +136,11 @@ Modificando il modo con cui si collegano le tue applicazioni, puoi rendere le tu
 
 Il numero di client necessari per una scalabilità e un bilanciamento del carico ottimali varia a secondo della distribuzione. Per identificare il numero di client ottimale, devi eseguire un test di stress del tuo sistema.
 
+Le applicazioni scalabili sono definite come sottoscrizioni non durevoli o come sottoscrizioni condivise a durata mista (Beta).
+
+### Sottoscrizioni non durevoli
+{: #shared_sub_non_durable}
+
 Per abilitare il bilanciamento del carico, verifica che la sottoscrizione dell'applicazione non sia durevole e che l'ID client nella sottoscrizione corrisponda al seguente formato:
 
 <pre class="pre">A:<var class="keyword varname">orgId</var>:<var class="keyword varname">appId</var></pre>
@@ -143,20 +151,38 @@ Dove:
 -  *orgId* è l'ID dell'organizzazione a sei caratteri univoco generato quando hai registrato il servizio.
 -  *appId* è un identificativo stringa univoco definito dall'utente per il client. La stringa può contenere solo caratteri alfanumerici (a-z, A-Z, 0-9) e i caratteri speciali trattino (-), carattere di sottolineatura (_), e punto (.).
 
+
 **Importante:**
-- Soltanto le sottoscrizioni non durevoli sono supportate per le applicazioni scalabili.
 - L'ID client deve iniziare con un carattere maiuscolo **A** per essere correttamente creato come un'applicazione scalabile da {{site.data.keyword.iot_short_notm}}.
 - Gli altri client che fanno parte dell'applicazione scalabile devono utilizzare lo stesso ID client.
+- Il valore della sessione di pulizia deve essere impostato su false (0) per le sottoscrizioni non durevoli.
 
+### Sottoscrizioni condivise a durata mista (Beta)
+{: #shared_sub_mixed}
 
-### Come funziona
+Il servizio {{site.data.keyword.iot_short_notm}} estende la specifica del protocollo di messaggistica MQTT V3.1.1 per supportare la versione di prova beta delle sottoscrizioni condivise a durata mista. Le sottoscrizioni condivise forniscono le funzionalità di bilanciamento del carico alle applicazioni. Può essere necessaria una sottoscrizione condivisa se un'applicazione aziendale di backend non può elaborare il volume di messaggi che stanno venendo pubblicati per spazio dell'argomento specifico. Ad esempio, quando molti dispositivi pubblicano i messaggi che stanno venendo elaborati da una sola applicazione, può essere necessario utilizzare la funzionalità di bilanciamento del carico di una sottoscrizione condivisa.
 
-Il servizio {{site.data.keyword.iot_short_notm}} estende la specifica del protocollo di messaggistica MQTT V3.1.1 per supportare le sottoscrizioni condivise. Le sottoscrizioni condivise forniscono le funzionalità di bilanciamento del carico alle applicazioni. Può essere necessaria una sottoscrizione condivisa se un'applicazione aziendale di backend non può elaborare il volume di messaggi che stanno venendo pubblicati per spazio dell'argomento specifico. Ad esempio, quando molti dispositivi pubblicano i messaggi che stanno venendo elaborati da una sola applicazione, può essere necessario utilizzare la funzionalità di bilanciamento del carico di una sottoscrizione condivisa. Il supporto della sottoscrizione condivisa {{site.data.keyword.iot_short_notm}} è limitato solo alle sottoscrizioni non durevoli.
+Per le sottoscrizioni condivise a durata mista, assicurati che l'ID client nella sottoscrizione corrisponda al seguente formato:
 
+<pre class="pre">A:<var class="keyword varname">org</var>:<var class="keyword varname">appId</var>:<var class="keyword varname">instanceId</var></pre>
+{: codeblock}
 
-**Esempio**
+Dove:
+- La lettera **A**, il *orgId* e il *appId* nell'ID client sono definiti nello stesso modo delle [sottoscrizioni non durevoli](#shared_sub_non_durable).
+- *instanceID* è una stringa che non deve essere più lunga di 36 caratteri e può contenere solo i seguenti caratteri:
+   - Caratteri alfanumerici (a-z, A-Z, 0-9)
+   - Trattini ( - )
+   - Caratteri di sottolineatura ( _ )
+   - Punti ( . )
 
-Il seguente scenario è un esempio di come funziona un'applicazione scalabile in {{site.data.keyword.iot_short_notm}}:
+**Importante:**
+- Il supporto per le sottoscrizioni condivise a durata mista è disponibile soltanto come una funzione beta. Non implementare le funzioni beta nelle applicazioni di produzione.
+- Il valore della sessione di pulizia può essere impostato su true (1) o false (0) nelle sottoscrizioni condivise a durata mista.
+- I client che si collegano tramite il instanceId utilizzano sottoscrizioni differenti rispetto ai client che si collegano senza il instanceId. Pertanto, se vuoi che più client si colleghino a una sottoscrizione condivisa a durata mista, devi specificare il instanceID in tutte le sottoscrizioni.
+
+**Scenario di esempio**
+
+Il seguente scenario è un esempio di come funziona un'applicazione scalabile non durevole in {{site.data.keyword.iot_short_notm}}:
 
 - Il client uno si collega come **A:abc123:myApplication** e si sottoscrive a tutti gli eventi del dispositivo, il che significa che il client uno riceve il 100% degli eventi del dispositivo che vengono pubblicati.
 - Il client due di collega come **A:abc123:myApplication** e si sottoscrive anche a tutti gli eventi del dispositivo, il che significa che il client uno e il client due condividono tutti gli eventi che vengono pubblicati. Il carico di elaborazione viene condiviso tra il client uno e due.

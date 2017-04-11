@@ -34,14 +34,14 @@ Utilice esta sección como guía para la resolución de problemas comunes de {{s
 
 ### No se admiten trabajadores de servicio en este navegador
 
-**Explicación**: El SDK incluido como parte de `BMSPushSDK.js` que utiliza el trabajador de servicio no está disponible.  
+**Explicación**: El SDK incluido como parte de `BMSPushSDK.js` que utiliza el trabajador de servicio no está disponible. 
 
-**Respuesta del usuario**: Se recomienda cambiar a un navegador que admita el trabajador de servicio. Las versiones admitidas de los navegadores son Firefox versión 49 o posteriores y Chrome versión 53 (64 bits) o posteriores. 
+**Respuesta del usuario**: Se recomienda cambiar a un navegador que admita el trabajador de servicio. Las versiones admitidas de los navegadores son Firefox versión 49 o posteriores y Chrome versión 53 (64 bits) o posteriores.
 
 
 ### SecurityError: La operación no es segura
 
 **Explicación**: Es posible que aparezca un error al habilitar la consola web en Firefox. El soporte de push de web en el servicio de notificación Push requiere que se acceda al sitio web con el protocolo `https`, no con `http`.
 
-**Respuesta del usuario**: Se recomienda intentar conectar con el sitio web mediante `https` desde el navegador. 
+**Respuesta del usuario**: Se recomienda intentar conectar con el sitio web mediante `https` desde el navegador.
 

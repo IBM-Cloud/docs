@@ -12,14 +12,14 @@ lastupdated: "2017-01-11"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Securing apps
+# Securing apps
 {: #securingapps}
 
 
 You can secure your applications by uploading SSL certificates and restricting access to the applications.
 {:shortdesc}
 
-##Creating certificate signing requests
+## Creating certificate signing requests
 {: #ssl_csr}
 
 Before you can upload the SSL certificates to which you are entitled with {{site.data.keyword.Bluemix}}, you must create a certificate signing request (CSR) on your server.

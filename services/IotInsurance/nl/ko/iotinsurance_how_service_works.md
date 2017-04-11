@@ -1,19 +1,20 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-26"
-
+  years: 2016, 2017
+lastupdated: "2017-03-07"
 ---
 
-
-{:new_window: target="\_blank"}
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 
-# 서비스 작업 방법
+
+# 서비스 작업 방식
 {{site.data.keyword.iotinsurance_full}}는 연결된 보험 계약자의 데이터를 수집, 관리, 분석하는 플로우를 작성합니다.
 {:shortdesc}
 
@@ -24,21 +25,3 @@ lastupdated: "2016-10-26"
 {{site.data.keyword.iotinsurance_short}}는 {{site.data.keyword.iot_full}}을 사용하여 컴포넌트 간에 경보와 위험 페이로드를 전달합니다. 전체 작업 시스템에는 사용자, 실드 및 사용자와 실드 간 연관이 필요합니다. 
 
 ![{{site.data.keyword.iotinsurance_short}} 프로세스. 이 다이어그램에 대해서는 주제의 본문에 설명되어 있습니다. ](images/IoT4I_process.svg "{{site.data.keyword.iotinsurance_short}} 프로세스")
-
-# 관련 링크
-{: #rellinks}
-
-## 튜토리얼 및 샘플
-{: #samples}
-* [GitHub에 있는 샘플 모바일 앱 코드](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## API 참조
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API 예](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## 관련 링크
-{: #general}
-* [{{site.data.keyword.iot_full}} 문서](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [개발자 지원 포럼](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-* [스택 오버플로우 지원 포럼](http://stackoverflow.com/questions/tagged/ibm-bluemix)

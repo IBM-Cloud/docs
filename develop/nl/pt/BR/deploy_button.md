@@ -1,8 +1,8 @@
-﻿---
+---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-29"
+  years: 2015, 2017
+lastupdated: "2017-2-21"
 
 ---
 
@@ -115,7 +115,7 @@ Revise estas considerações quando estiver customizando o fragmento para o bot�
 	
 	* Se você preferir armazenar a imagem localmente, será possível fazer download da imagem e armazená-la no repositório Git. Ajuste o caminho para usar o local relativo da imagem. 
 	
-	* Se você deseja usar uma versão traduzida do botão, é possível referenciá-la remotamente ou fazer download dela a partir do [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button). 
+	* Se você desejar usar uma versão traduzida do botão, será possível referenciá-la remotamente ou fazer download em [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button){:new_window}. 
 	
 ##Considerações de repositório para o botão {: #button-repo} 
 
@@ -127,11 +127,12 @@ Revise estas considerações para o repositório do projeto que você usará no 
 Com o arquivo manifest, é possível especificar: 
     <ul>
     <li>Um nome de app exclusivo.</li>  
-    <li>Serviços declarados: Uma extensão manifest, que cria ou procura por serviços obrigatórios ou opcionais que devem ser configurados antes que o app seja implementado, como um serviço de cache de dados. É possível localizar uma lista de serviços, rótulos e planos elegíveis do     {{site.data.keyword.Bluemix_notm}}, usando a <a href="https://github.com/cloudfoundry/cli/releases">Interface da linha de comandos CF</a> para executar o comando <code>cf marketplace</code> ou procurando no <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-_-dWdevcenter-_-devops-services-_-lp#/store">catálogo do {{site.data.keyword.Bluemix_notm}}</a>. 
+    <li>Serviços declarados: Uma extensão manifest, que cria ou procura por serviços obrigatórios ou opcionais que devem ser configurados antes que o app seja implementado, como um serviço de cache de dados. É possível localizar uma lista de serviços, rótulos e planos elegíveis do {{site.data.keyword.Bluemix_notm}} usando o <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Abre em uma nova guia ou janela)">CF Command Line Interface<img class="image" src="../icons/launch-glyph.svg" alt="Ícone de link externo"/></a> para executar o comando <code>cf marketplace</code> ou procurando o <a class="xref" href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-_-dWdevcenter-_-devops-services-_-lp#/store" target="_blank" title="(Abre em uma nova guia ou janela)"> catálogo do {{site.data.keyword.Bluemix_notm}}<img class="image" src="../icons/launch-glyph.svg" alt="Ícone de link externo"/></a>. 
     
+        
     <strong>Nota:</strong> serviços declarados são uma extensão IBM do formato de manifest padrão do Cloud Foundry. Essa extensão pode ser revisada em uma liberação futura conforme o recurso evolui e melhora.
 	
-	<a href="http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#minimal-manifest" target="_blank">Aprenda a criar um arquivo <code>manifest.yml</code>.</a>  
+	<a class="xref" href="http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#minimal-manifest" target="_blank" title="(Abre em uma nova guia ou janela)">Aprender a criar um arquivo <code>manifest.yml</code><img class="image" src="../icons/launch-glyph.svg" alt="Ícone de link externo"/></a>.  
 <pre class="codeblock">
 	---
     #Modelo de manifest.yml
@@ -168,11 +169,10 @@ construção for detectado no diretório-raiz do repositório, uma construção 
 	
 	Construtores suportados: 
 	    <ul>
-		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant:</a> /<code>build.xml</code>, que constrói a saída para a pasta <code>./output/</code> </li>
-		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle:</a> <code>/build.gradle</code>,
-que constrói a saída para a pasta <code>.</code> </li>
-		<li> <a href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank">Grunt:</a> <code>/Gruntfile.js</code>, que constrói a saída para a pasta <code>.</code> </li>
-		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank">Maven:</a> <code>/pom.xml</code>, que constrói a saída para a pasta <code>./target/</code></li>
+		<li> <a class="xref" href="http://ant.apache.org/manual/using.html" target="_blank" title="(Abre em uma nova guia ou janela)">Ant:<img class="image" src="../icons/launch-glyph.svg" alt="Ícone de link externo"/></a> /<code>build.xml</code>, que constrói a saída para a pasta <code>./output/</code> </li>
+		<li> <a class="xref" href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank" title="(Abre em uma nova guia ou janela)">Gradle:<img class="image" src="../icons/launch-glyph.svg" alt="Ícone de link externo"/></a> <code>/build.gradle</code>, que constrói a saída para a pasta <code>. </code> </li>
+		<li> <a class="xref" href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank" title="(Abre em uma nova guia ou janela)">Grunt:<img class="image" src="../icons/launch-glyph.svg" alt="Ícone de link externo"/></a> <code>/Gruntfile.js</code>, que constrói a saída para a pasta <code>. </code> </li>
+		<li> <a class="xref" href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank" title="(Abre em uma nova guia ou janela)">Maven:<img class="image" src="../icons/launch-glyph.svg" alt="Ícone de link externo"/></a> <code>/pom.xml</code>, que constrói a saída para a pasta <code>./target/</code></li>
 	   </ul>
 	</li>	
 	<li>Para configurar o pipeline para o projeto em um diretório <code>.bluemix</code>, inclua um arquivo <code>pipeline.yml</code>. É possível criar um arquivo <code>pipeline.yml</code> manualmente ou gerar um a partir de um projeto existente do DevOps Services. Para criar um arquivo pipeline.yml a partir de um projeto do {{site.data.keyword.jazzhub_short}} e incluí-lo em seu repositório, conclua estas etapas. 
@@ -191,8 +191,8 @@ diretório <code>.bluemix</code>, incluir um arquivo <code>pipeline.yml</code>.
 	    <li>O Dockerfile age como uma espécie de script de construção para o app. Se um Dockerfile for detectado no repositório, o app será construído automaticamente em
 uma imagem antes que seja implementado em um contêiner. Se o próprio app precisar ser construído antes do app ser construído em uma imagem, inclua um script de construção
 para o app, assim como um Dockerfile, conforme descrito anteriormente.</li>
-	    <li> Para aprender mais sobre a criação de Dockerfiles, <a href="https://docs.docker.com/reference/builder/" target="_blank">consulte a documentação do Docker</a>. </li>
-	    <li>É possível criar um arquivo <code>pipeline.yml</code> manualmente ou gerar um a partir de um projeto existente do DevOps Services. Para criar um <code>pipeline.yml</code> manualmente especificamente para contêineres, <a href="https://github.com/Puquios/" target="_blank">consulte os exemplos em GitHub</a>. </li>
+	    <li> Para aprender mais sobre a criação de Dockerfiles, <a class="xref" href="https://docs.docker.com/reference/builder/" target="_blank" title="(Abre em uma nova guia ou janela)">veja a documentação do Docker<img class="image" src="../icons/launch-glyph.svg" alt="Ícone de link externo"/></a>. </li>
+	    <li>É possível criar um arquivo <code>pipeline.yml</code> manualmente ou gerar um a partir de um projeto existente do DevOps Services. Para criar um <code>pipeline.yml</code> manualmente que seja especificamente para contêineres, <a class="xref" href="https://github.com/Puquios/" target="_blank" title="(Abre em uma nova guia ou janela)">veja os exemplos em GitHub<img class="image" src="../icons/launch-glyph.svg" alt="Ícone de link externo"/></a>. </li>
         </ul>
 
  </li>
@@ -200,4 +200,3 @@ para o app, assim como um Dockerfile, conforme descrito anteriormente.</li>
 </ul>
 
 Para obter ajuda com resolução de problemas, consulte [O botão Implementar no Bluemix não implementa um app](/docs/troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}.	
-

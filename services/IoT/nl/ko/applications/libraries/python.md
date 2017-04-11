@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-27"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -23,10 +23,10 @@ Python을 사용하여 {{site.data.keyword.iot_full}}에서 조직과 상호작�
 
 제공된 정보와 예제를 사용하면 Python을 사용한 애플리케이션 개발을 시작할 수 있습니다. 
 
-## Python 클라이언트 및 자원 다운로드
+## Python 클라이언트 및 리소스 다운로드
 {: #python_client_download}
 
-{{site.data.keyword.iot_short_notm}}의 Python 클라이언트 및 기타 사용 가능한 자원에 액세스하려면 GitHub의 [iot-python](https://github.com/ibm-messaging/iot-python) 저장소로 이동하여 설치 지시사항을 완료하십시오. 
+{{site.data.keyword.iot_short_notm}}에 대한 Python 클라이언트 및 기타 사용 가능한 리소스에 액세스하려면 GitHub의 [iot-python ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/iot-python){: new_window} 저장소로 이동하여 설치 지시사항을 완료하십시오. 
 
 ## 생성자
 {: #constructor}
@@ -353,7 +353,7 @@ import ibmiotf.application
 
 client.connect()
 commandData={'rebootDelay' : 50}
-client.publishCommand(myDeviceType, myDeviceId, "reboot", "json", myData)
+client.publishCommand(myDeviceType, myDeviceId, "reboot", "json", commandData)
 ```
 
 
@@ -375,7 +375,7 @@ except IoTFCReSTException as e:
     print("ERROR [" + e.httpcode + "] " + e.message)
 ```
 
-요청 및 응답 모델과 HTTP 상태 코드에 대한 정보는 [{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html)의 조직 구성 섹션을 참조하십시오. 
+요청과 응답 모델 및 HTTP 상태 코드에 대한 정보는 [{{site.data.keyword.iot_short_notm}} API ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}의 조직 구성 섹션을 참조하십시오. 
 
 
 ## 벌크 디바이스 오퍼레이션
@@ -383,7 +383,7 @@ except IoTFCReSTException as e:
 
 애플리케이션은 벌크 오퍼레이션을 사용하여 여러 디바이스를 동시에 가져오고 추가하거나 제거할 수 있습니다. 
 
-조회 매개변수 목록, 요청 및 응답 모델과 HTTP 상태 코드에 대한 정보는 [{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/)의 '벌크 오퍼레이션' 섹션을 참조하십시오. 
+조회 매개변수 목록, 요청 및 응답 모델, HTTP 상태 코드에 대한 정보는 [{{site.data.keyword.iot_short_notm}} API ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/){: new_window}의 '벌크 오퍼레이션' 섹션을 참조하십시오. 
 
 
 ### 디바이스 정보 검색
@@ -458,7 +458,7 @@ except IoTFCReSTException as e:
 
 조직에서 작성하는 디바이스 유형은 디바이스 추가를 위한 템플리트를 작성하는 데 사용될 수 있습니다. {{site.data.keyword.iot_short_notm}} API 기능을 사용하면 애플리케이션이 조직의 디바이스 유형을 나열, 작성, 삭제하고 이를 보거나 업데이트할 수 있습니다. 
 
-조회 매개변수, 요청 및 응답 모델과 HTTP 상태 코드에 대한 정보는 [{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) 문서의 '디바이스 유형' 섹션을 참조하십시오. 
+조회 매개변수, 요청 및 응답 모델, HTTP 상태 코드에 대한 정보는 [{{site.data.keyword.iot_short_notm}} API ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} 문서의 '디바이스 유형' 섹션을 참조하십시오. 
 
 
 ### 모든 디바이스 유형 검색
@@ -473,7 +473,7 @@ import ibmiotf.application
   options = ibmiotf.application.ParseConfigFile(configFilePath)
   client = ibmiotf.application.Client(options)
 
-  listOfDevicesToAdd = [
+ listOfDevicesToAdd = [
       {'typeId' : "pi-model-a", 'deviceId' : '200020002004'},
       {'typeId' : "pi-model-b", 'deviceId' : '200020002005'}
   ]
@@ -599,7 +599,7 @@ except IoTFCReSTException as e:
 
 API에서 사용 가능한 디바이스 오퍼레이션에는 나열, 추가, 제거, 보기, 업데이트, 위치 보기 및 {{site.data.keyword.iot_short_notm}} 조직의 디바이스에 대한 디바이스 관리 정보 보기가 포함됩니다. 
 
-조회 매개변수, 요청 및 응답 모델과 HTTP 상태 코드에 대한 정보는 [{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html)의 '디바이스 섹션'을 참조하십시오. 
+조회 매개변수, 요청 및 응답 모델, HTTP 상태 코드에 대한 정보는 [{{site.data.keyword.iot_short_notm}} API ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}의 '디바이스 섹션'을 참조하십시오. 
 
 
 ### 특성 디바이스 유형의 디바이스 검색
@@ -637,7 +637,7 @@ response = apiClient.retrieveDevices("iotsample-arduino", parameters);
 |`metadata`|선택사항|[디바이스 유형 추가를 위한 샘플 코드](#sample_device_type)에서 개략적으로 설명한 사용자 정의 필드 값 문자열 쌍입니다. |
 |`location`|선택사항|경도, 위도, 고도, 정확도 및 measuredDateTime 변수가 포함됩니다. |
 
-이러한 매개변수와 응답 형식 및 코드에 대한 자세한 정보는 [API 문서](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Devices/post_device_types_typeId_devices)를 참조하십시오. 
+이러한 매개변수 및 응답 형식과 코드에 대한 자세한 정보는 [API 문서 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Devices/post_device_types_typeId_devices){: new_window}를 참조하십시오. 
 
 `registerDevice()` 메소드를 사용할 때는 디바이스에 필요한 필수 deviceID 매개변수 및 선택적 매개변수를 정의한 후에 선택한 매개변수를 사용하여 메소드를 호출하십시오. 
 
@@ -688,7 +688,7 @@ apiCli.getAllDevices({'typeId' : deviceTypeId})
 
 하나 이상의 디바이스 특성을 수정하려면 `updateDevice()` 메소드를 사용하십시오. 
 
-deviceInfo 또는 metadata 매개변수에서 특성을 업데이트할 수 있습니다. 장치 특성을 업데이트하려면 `updateDevice()` 메소드를 호출하기 전에 deviceInfo 매개변수를 정의하십시오. status 매개변수에는 `alert`: True가 포함되어야 합니다. 경보 특성은 디바이스가 {{site.data.keyword.iot_short_notm}} 사용자 인터페이스에서 오류 코드를 표시하는지 여부를 제어하며, 다음 코드 예제에서 개략적으로 설명한 대로 기본적으로 `enabled`: True로 설정되어야 합니다. 
+deviceInfo 또는 metadata 매개변수에서 특성을 업데이트할 수 있습니다. 디바이스 특성을 업데이트하려면 `updateDevice()` 메소드를 호출하기 전에 deviceInfo 매개변수를 정의하십시오. status 매개변수에는 `alert`: True가 포함되어야 합니다. 경보 특성은 디바이스가 {{site.data.keyword.iot_short_notm}} 사용자 인터페이스에서 오류 코드를 표시하는지 여부를 제어하며, 다음 코드 예제에서 개략적으로 설명한 대로 기본적으로 `enabled`: True로 설정되어야 합니다. 
 
 ```python
 status = { "alert": { "enabled": True }  }
@@ -752,7 +752,7 @@ apiCli.getDeviceManagementInformation("iotsample-arduino", "00aabbccde03")
 - 디바이스 오류 코드 검색
 - 오류 코드 추가
 
-조회 및 응답 모델, 응답 코드와 조회 매개변수에 대한 자세한 정보는 [API 문서](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) {{site.data.keyword.iot_short_notm}} API 문서를 참조하십시오. 
+조회 및 응답 모델, 응답 코드 및 조회 매개변수에 대한 자세한 정보는 [API 문서 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} {{site.data.keyword.iot_short_notm}} API 문서를 참조하십시오. 
 
 ### 진단 로그 가져오기
 

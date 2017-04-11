@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-08-02"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -16,11 +16,10 @@ lastupdated: "2016-08-02"
 # mBed C++ pour les développeurs de terminaux
 {: #mbedcpp}
 
-Utilisez la [bibliothèque client mBed C++](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/) pour connecter facilement des [terminaux mBed](https://www.mbed.com/en/), tels que [LPC1768](https://developer.mbed.org/platforms/mbed-LPC1768/) ou  [FRDM-K64F](https://developer.mbed.org/platforms/FRDM-K64F/), au service {{site.data.keyword.iot_full}}.
+Utilisez la [bibliothèque client mBed C++ ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){: new_window} pour connecter facilement des [terminaux mBed ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://www.mbed.com/en/){: new_window}, tels que [LPC1768](https://developer.mbed.org/platforms/mbed-LPC1768/) ou[FRDM-K64F ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.mbed.org/platforms/FRDM-K64F/){: new_window}, au service {{site.data.keyword.iot_full}}.
 {:shortdesc}
 
-
-Pour plus d'informations, voir [ibmiotf](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/) sur le site [developer.mbed.org](https://developer.mbed.org/).
+Pour plus d'informations, voir [ibmiotf ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){: new_window} sur [developer.mbed.org ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.mbed.org/){: new_window}.
 
 Bien que la bibliothèque utilise C++, elle évite les allocations de mémoire dynamiques et l'utilisation de fonctions STL car les terminaux mBed incluent parfois des modèles de mémoire idiosyncratiques qui rendent le portage difficile. Dans tous les cas, la bibliothèque permet de rendre l'utilisation de la mémoire aussi prévisible que possible.
 
@@ -29,17 +28,17 @@ Bien que la bibliothèque utilise C++, elle évite les allocations de mémoire d
 
 |Dépendance |Description|
 |:---|:---|
-|[Eclipse Paho MQTT library](https://developer.mbed.org/teams/mqtt/code/MQTT/)|Fournit une bibliothèque client MQTT pour les terminaux mBed. Pour plus d'informations, voir [Embedded MQTT C/C++ Client Libraries](http://www.eclipse.org/paho/clients/c/embedded/)|
-|[EthernetInterface library](https://developer.mbed.org/users/mbed_official/code/EthernetInterface/)|Bibliothèque IP mBed via Ethernet.|
+|[Bibliothèque Eclipse Paho MQTT ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.mbed.org/teams/mqtt/code/MQTT/){: new_window}|Fournit une bibliothèque client MQTT pour les terminaux mBed. Pour plus d'informations, voir [Embedded MQTT C/C++ Client Libraries ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window}|
+|[EthernetInterface Library ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.mbed.org/users/mbed_official/code/EthernetInterface/){: new_window}|Bibliothèque IP mBed via Ethernet.|
 
 ## Comment utiliser la bibliothèque
 {: #library_use}
 
-Utilisez le [compilateur mBed](https://developer.mbed.org/compiler/) pour créer vos applications lorsque vous utilisez la bibliothèque client mBed C++ IBMIoTF. Le compilateur mBed fournit un environnement de développement intégré C/C++ en ligne, qui est configuré pour vous permettre d'écrire, de compiler et de télécharger des programmes à exécuter sur le microcontrôleur mbed.
+Utilisez le [compilateur mBed ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.mbed.org/compiler/){: new_window} pour créer vos applications lorsque vous utilisez la bibliothèque client mBed C++ IBMIoTF. Le compilateur mBed fournit un environnement de développement intégré C/C++ en ligne, qui est configuré pour vous permettre d'écrire, de compiler et de télécharger des programmes à exécuter sur le microcontrôleur mbed.
 
 **Remarque :** Vous n'avez rien à installer ni à configurer pour commencer à utiliser mbed.
 
-Pour plus d'informations sur la connexion d'un microcontrôleur ARM mBed NXP LPC 1768 à {{site.data.keyword.iot_short_notm}}, voir la recette [mBed C++ Client Library for IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/mbed-c-client-library-for-ibm-iot-foundation/).
+Pour plus d'informations sur la connexion d'un microcontrôleur ARM mBed NXP LPC 1768 à {{site.data.keyword.iot_short_notm}}, voir la recette[mBed C++ client library for IBM Watson IoT Platform ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/mbed-c-client-library-for-ibm-iot-foundation/){: new_window}. 
 
 ## Constructeur
 {: #constructor}
@@ -163,7 +162,7 @@ L'exemple suivant montre comment publier les points de données suivants sur {{s
         status = client.publishEvent("blink", buf);
 	....
 ```
-Pour obtenir l'exemple complet, voir [ IBMIoTClientLibrarySample](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/file/e58533b6bc6b/src/Main.cpp).
+Pour afficher la totalité de l'exemple de code, voir l'exemple d'application [ IBMIoTClientLibrarySample ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/file/e58533b6bc6b/src/Main.cpp){: new_window}.
 
 ### Augmentation du niveau QoS pour un événement
 
@@ -259,7 +258,7 @@ Le code suivant définit un exemple de fonction de rappel de commande qui traite
     client.yield(1000);  // allow the MQTT client to receive messages
     ....
 ```
-Pour obtenir l'exemple complet, voir [ IBMIoTClientLibrarySample](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/file/e58533b6bc6b/src/Main.cpp).
+Pour afficher la totalité de l'exemple de code, voir l'exemple d'application [ IBMIoTClientLibrarySample ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/file/e58533b6bc6b/src/Main.cpp){: new_window}.
 
 **Remarque :** La fonction `client.yield()` doit être appelée régulièrement pour permettre la réception des commandes.
 La fonction `client.yield()` permet au terminal de recevoir des commandes de la part de Watson IoT Platform et maintient la connexion active. Si la fonction `client.yield()` n'est pas appelée dans le délai spécifié par l'intervalle de signal de présence, les commandes envoyées à la plateforme ne seront pas reçues par le terminal. La valeur affectée à la fonction `client.yield()` spécifie la durée (en millisecondes) pendant laquelle les données peuvent être lues à partir du socket avant que l'application ne reprenne la main.
@@ -277,4 +276,4 @@ Pour déconnecter le client et libérer les connexions, exécutez le fragment de
 ## Exemples
 {: #samples}
 
-[IBMIoTClientLibrarySample](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/) est un exemple de code qui montre comment utiliser la bibliothèque client {{site.data.keyword.iot_short_notm}} pour connecter les terminaux mbed LPC1768 ou FRDM-K64F à l'instance de service.
+[IBMIoTClientLibrarySample ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/){: new_window} est un exemple de code qui montre comment utiliser la bibliothèque client {{site.data.keyword.iot_short_notm}} pour connecter les terminaux mbed LPC1768 ou FRDM-K64F à l'instance de service. 

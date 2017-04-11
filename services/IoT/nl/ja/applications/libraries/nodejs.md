@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-07-29"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -28,12 +28,12 @@ Node.js を使用したアプリケーションの開発を始められるよう
 ## Node.js クライアントとリソースのダウンロード
 {: #nodejs_client_download}
 
-{{site.data.keyword.iot_short_notm}} 用の Node.js クライアント・ライブラリーやその他の使用可能なリソースを利用するには、GitHub の [iot-nodejs](https://github.com/ibm-watson-iot/iot-nodejs) リポジトリーにアクセスし、インストール手順を実行します。
+{{site.data.keyword.iot_short_notm}} 用の Node.js クライアント・ライブラリーやその他の使用可能なリソースを利用するには、GitHub の [iot-nodejs ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window} リポジトリーにアクセスし、インストール手順を実行します。
 
 
 詳しくは、以下のリソースを参照してください。
-- GitHub の[アプリケーション・サンプル](https://github.com/ibm-watson-iot/iot-nodejs/tree/master/samples)。
-- NPM の [ibmiotf](https://www.npmjs.com/package/ibmiotf)。
+- GitHub の[アプリケーション・サンプル ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/iot-nodejs/tree/master/samples){: new_window}。
+- NPM の [ibmiotf ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.npmjs.com/package/ibmiotf){: new_window}。
 - この資料の[リファレンス](#reference_nodejs)・セクション。
 
 

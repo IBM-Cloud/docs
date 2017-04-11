@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-02-10"
+lastupdated: "2017-02-23"
 
 ---
 {:new_window: target="_blank"}
@@ -52,7 +52,7 @@ After you no longer have a need for them, you can delete objects and containers 
 
 
 
-## Scheduling object deletion {: #schedule-object-deletion}
+# Scheduling object deletion {: #schedule-object-deletion}
 
 
 You can schedule the deletion of your objects by using either of the `X-Delete-At` or `X-Delete-After` headers.
@@ -62,7 +62,7 @@ The `X-Delete-At` header takes an integer that represents the epoch time at whic
 
 **Note:** The actual deletion of an object might not happen at the exact time indicated. However, the object will expire at the specified time. At that time, the object is longer reachable. The actual deletion will take place the next time the swift-object-expirer daemon that is configured in your Swift cluster runs.
 
-#### To use Swift commands:
+## To use Swift commands:
 
 * To set the object to be deleted at a specific date and time, run the following command:
 
@@ -103,7 +103,7 @@ The `X-Delete-At` header takes an integer that represents the epoch time at whic
 
 
 
-#### To use cURL commands:
+## To use cURL commands:
 
 * To set the object to be deleted on "2016/04/01 08:00:00", use the following command:
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-31"
+  years: 2016, 2017
+lastupdated: "2017-02-03"
 
 ---
 
@@ -22,13 +22,12 @@ lastupdated: "2016-08-31"
 
 ## {{site.data.keyword.iot_short_notm}} 개발
 {: #goals}
-디바이스를 설정하고 {{site.data.keyword.iot_short_notm}}에 연결하며 관심 있는 실시간 데이터를 검색하고 분석할 수 있는 다양한 방법이 있습니다. 
-다음 태스크를 수행하는 데 도움이 되는 정보가 제공됩니다. 
+디바이스를 설정하고 {{site.data.keyword.iot_short_notm}}에 연결하며 관심 있는 실시간 데이터를 검색하고 분석하기 위한 코드를 개발할 수 있습니다. 다음의 공통 태스크를 수행하는 데 도움이 되도록 정보가 제공됩니다. 
 
--  애플리케이션 작성 및 및 관리
+-  애플리케이션 작성 및 관리
 -  디바이스 작성, 연결 및 관리
 -  디바이스 관리 확장
--  게이트웨이 작성 및 및 관리
+-  게이트웨이 작성 및 관리
 -  디바이스 데이터 검색
 
 
@@ -40,7 +39,7 @@ lastupdated: "2016-08-31"
 - MQTT 메시징 프로토콜
 - Python
 - Node.js
-- Java
+- Java™
 - C#
 
 ## 디바이스 개발
@@ -61,7 +60,7 @@ lastupdated: "2016-08-31"
 디바이스가 인터넷에 바로 연결되지 않는 경우에는 제공된 정보를 사용하여 게이트웨이 디바이스를 빌드함으로써 데이터를 검색하고 이를 {{site.data.keyword.iot_short_notm}} 조직의 애플리케이션에 전송하십시오.
 MQTT 메시징 프로토콜은 {{site.data.keyword.iot_short_notm}}에서 게이트웨이 개발을 위해 지원됩니다.
 
-사용 가능한 {{site.data.keyword.iot_short_notm}}용 클라이언트 라이브러리에 대한 링크를 표시하려면 **자원**을 클릭하십시오.
+사용 가능한 클라이언트 라이브러리에 대한 링크 및 자세한 정보는 [{{site.data.keyword.iot_short_notm}} 개발용 클라이언트 라이브러리](iot_platform_client_lib.html)를 참조하십시오. 
 
 # 관련 링크
 {: #rellinks}
@@ -69,10 +68,10 @@ MQTT 메시징 프로토콜은 {{site.data.keyword.iot_short_notm}}에서 게이
 ## {{site.data.keyword.iot_short_notm}}용 클라이언트 라이브러리
 {: #client_libraries}
 
-* [C++](https://github.com/ibm-watson-iot/iot-cpp){:new_window}
-* [C#](https://github.com/ibm-watson-iot/iot-csharp){:new_window}
-* [Embedded C](https://github.com/ibm-watson-iot/iot-embeddedc){:new_window}
-* [Java](https://github.com/ibm-watson-iot/iot-java){:new_window}
-* [mBed C++](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){:new_window}
-* [Node.js](https://github.com/ibm-watson-iot/iot-nodejs){:new_window}
-* [Python](https://github.com/ibm-watson-iot/iot-python){:new_window}
+* [C++ ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-cpp){:new_window}
+* [C# ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-csharp){:new_window}
+* [Embedded C ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-embeddedc){:new_window}
+* [Java ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-java){:new_window}
+* [mBed C++ ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){:new_window}
+* [Node.js ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-nodejs){:new_window}
+* [Python ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-python){:new_window}

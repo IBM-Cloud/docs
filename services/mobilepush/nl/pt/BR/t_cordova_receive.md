@@ -54,7 +54,10 @@ aplicativo.
 
 ```
 // Handle receiving a remote notification
--(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+-(void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo
+fetchCompletionHandler:(void
+(^)(UIBackgroundFetchResult))completionHandler {
 
  [[CDVMFPPush sharedInstance] didReceiveRemoteNotification:userInfo];
 }

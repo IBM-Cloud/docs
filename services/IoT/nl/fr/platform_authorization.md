@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-14"
+  years: 2016, 2017
+lastupdated: "2017-03-13"
 
 ---
 
@@ -21,7 +21,7 @@ Pour connecter votre application à {{site.data.keyword.iot_full}}, vous devez u
 {: #api-key}
 Les clés d'API vous permettent de connecter des applications à votre organisation {{site.data.keyword.iot_short_notm}}. Les applications requièrent une clé d'API pour se connecter à une organisation, ainsi qu'un jeton d'authentification unique qui doit être utilisé avec cette clé d'API.  
 
-Pour plus d'informations sur les connexions d'application, voir [MQTT Connectivity for Applications](https://docs.internetofthings.ibmcloud.com/applications/mqtt.html) dans la documentation du développeur.
+Pour plus d'informations sur les connexions d'application, voir [MQTT Connectivity for Applications ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/applications/mqtt.html){: new_window} dans la documentation du développeur. 
 
 Pour créer une paire clé d'API/jeton d'authentification :  
 1.	Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, accédez à **Applications > Clés d'API**.  
@@ -36,12 +36,8 @@ Pour créer une paire clé d'API/jeton d'authentification :
 
 ## Connexion via une liaison dans Bluemix
 {: #bluemix-binding}
-Vous pouvez lier des applications à votre organisation {{site.data.keyword.iot_short_notm}} à partir de {{site.data.keyword.Bluemix_notm}}. Lorsque vous liez l'application, celle-ci peut uniquement communiquer avec les instances de service figurant dans le même espace ou la même organisation. Toutes les données nécessaires à l'application pour
-communiquer avec l'instance de service se trouvent dans la variable d'environnement VCAP_SERVICES. Si votre application est liée à
-plusieurs services, la variable VCAP_SERVICES inclut les informations de connexion pour chaque instance de service.  
+Vous pouvez lier des applications à votre organisation {{site.data.keyword.iot_short_notm}} à partir de {{site.data.keyword.Bluemix_notm}}. Lorsque vous liez l'application, celle-ci peut uniquement communiquer avec les instances de service figurant dans le même espace ou la même organisation. Toutes les données nécessaires à l'application pour communiquer avec l'instance de service se trouvent dans la variable d'environnement VCAP_SERVICES. Si votre application est liée à plusieurs services, la variable VCAP_SERVICES inclut les informations de connexion pour chaque instance de service.  
 
-Toutefois,
-vous pouvez utiliser des instances de service provenant d'autres espaces ou d'autres organisations, à l'instar d'une application externe. Au lieu de
-créer une liaison, utilisez les données d'identification afin de configurer directement votre instance d'application. Pour plus d'informations, voir [Demande d'une nouvelle instance de service](https://console.{DomainName}/docs/services/reqnsi.html#req_instance) dans la documentation {{site.data.keyword.Bluemix_notm}}.
+Toutefois, vous pouvez utiliser des instances de service provenant d'autres espaces ou d'autres organisations, à l'instar d'une application externe. Au lieu de créer une liaison, utilisez les données d'identification afin de configurer directement votre instance d'application. Pour plus d'informations, voir [Demande d'une nouvelle instance de service](https://console.{DomainName}/docs/services/reqnsi.html#req_instance) dans la documentation {{site.data.keyword.Bluemix_notm}}.
 
 Pour voir les détails relatifs aux applications Bluemix qui sont liées à l'instance de service Bluemix associée à votre organisation, accédez à **Applications > Applications Bluemix**.  

@@ -15,7 +15,7 @@ copyright:
 最終更新日: 2017 年 1 月 16 日
 {: .last-updated}
 
-{{site.data.keyword.mobilepushshort}}には REST (Representational State Transfer) API (アプリケーション・プログラム・インターフェース) を使用できます。また、SDK と[プッシュ API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobile.{DomainName}/imfpush/ "外部リンク・アイコン"){: new_window} を使用して、クライアント・アプリケーションをさらに開発することもできます。
+{{site.data.keyword.mobilepushshort}}には REST (Representational State Transfer) API (アプリケーション・プログラム・インターフェース) を使用できます。また、SDK と [Push API ![アイコン・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobile.{DomainName}/imfpush/){: new_window} を使用して、クライアント・アプリケーションをさらに開発することもできます。
 
 バックエンド・サーバー・アプリケーションとクライアントは、Push REST API を使用して、{{site.data.keyword.mobilepushshort}}機能にアクセスできます。
 
@@ -43,12 +43,12 @@ REST API のベース URL を取得するには、以下の手順を実行しま
 ## Accept-Language ヘッダー
 {: #push-api-rest-accept}
 
-「Accept-Language」ヘッダーは、[Push REST API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobile.{DomainName}/imfpush/ "外部リンク・アイコン"){: new_window}によって出力されるエラー・メッセージに使用する言語を指定します。エラー・メッセージでサポートされる言語は、中国語 (簡体字)、中国語 (繁体字)、英語 (米国)、ドイツ語、フランス語、イタリア語、日本語、韓国語、ポルトガル語、およびスペイン語です。
+「Accept-Language」ヘッダーは、[Push REST API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobile.{DomainName}/imfpush/){: new_window}によって出力されるエラー・メッセージに使用する言語を指定します。エラー・メッセージでサポートされる言語は、中国語 (簡体字)、中国語 (繁体字)、英語 (米国)、ドイツ語、フランス語、イタリア語、日本語、韓国語、ポルトガル語、およびスペイン語です。
 
 ## appSecret 
 {: #push-api-rest-secret}
 
-アプリケーションが {{site.data.keyword.mobilepushshort}} にバインドされると、サービスは appSecret (固有キー) を生成し、それを応答ヘッダーで渡します。IBM {{site.data.keyword.mobilepushshort}} for Bluemix Rest API を使用している場合は、REST API リファレンスを使用して、保護する必要のある API に関する情報を取得してください。詳しくは、[Push REST API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobile.{DomainName}/imfpush/ "外部リンク・アイコン"){: new_window}を参照してください。
+アプリケーションが {{site.data.keyword.mobilepushshort}} にバインドされると、サービスは appSecret (固有キー) を生成し、それを応答ヘッダーで渡します。IBM {{site.data.keyword.mobilepushshort}} for Bluemix Rest API を使用している場合は、REST API リファレンスを使用して、保護する必要のある API に関する情報を取得してください。詳しくは、[Push REST API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobile.{DomainName}/imfpush/){: new_window}を参照してください。
 
 要求ヘッダーには appSecret が含まれている必要があります。含まれていない場合、サーバーは 401 無許可エラー・コードを返します。{{site.data.keyword.mobilepushshort}} がアプリケーションに追加されると、特定の AppID が作成されます。応答の一部として、タグの作成やメッセージの送信に使用される appSecret というヘッダーを取得します。操作は、カタログまたはボイラープレートのサービスを介して行われます。
 

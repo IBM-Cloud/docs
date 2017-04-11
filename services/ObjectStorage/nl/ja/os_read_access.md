@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -48,7 +48,6 @@ lastupdated: "2017-01-17"
     <td> <code> &#42;:&#42; </code> </td>
   </tr>
 </table>
-
 
 
 1. 資格情報を認証します。UI のサービス資格情報タブにある資格情報を使用することも、資格情報を新規に生成することも可能です。新規資格情報の生成について詳しくは、[サービス資格情報の生成 (Generating service credentials)](/docs/services/ObjectStorage/os_credentials.html) を参照してください。出力として、{{site.data.keyword.objectstorageshort}} URL と認証トークンを受け取ります。

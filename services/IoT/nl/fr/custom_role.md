@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-11-10"
 
 ---
@@ -23,20 +23,20 @@ Pour plus d'informations sur les opérations de l'API disponibles pour les rôle
 ## Création d'un rôle personnalisé
 {: #custom-role-create}
 
-Pour créer un rôle personnalisé : 
+Pour créer un rôle personnalisé :
 
 1. Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, ouvrez le volet **Membres** dans la barre de navigation.
 2. Sélectionnez l'onglet **Rôles** et cliquez sur **Nouveau rôle**.
-3. Entrez un nom pour votre rôle personnalisé. 
+3. Entrez un nom pour votre rôle personnalisé.
 4. Facultatif : saisissez une description de votre rôle personnalisé.
 5. Facultatif : les rôles personnalisés peuvent utiliser un rôle existant en tant que modèle. Pour baser le rôle personnalisé sur un rôle utilisateur existant, sélectionnez le rôle dans la liste.
 6. Cliquez sur **Suivant**.
 7. Dans la liste des droits, développez les catégories de droits et sélectionnez les opérations que le rôle personnalisé doit inclure.
-8. Cliquez sur **Ajouter un rôle**. 
+8. Cliquez sur **Ajouter un rôle**.
 
 Le rôle personnalisé est inclus dans la liste des rôles disponibles.
 
-## Edition ou suppression d'un rôle personnalisé 
+## Edition ou suppression d'un rôle personnalisé
 {: #custom-role-edit}
 
 Pour éditer ou supprimer un rôle personnalisé :

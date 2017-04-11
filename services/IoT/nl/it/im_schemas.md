@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-13"
+  years: 2016, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -20,7 +20,7 @@ Per utilizzare le funzioni {{site.data.keyword.iot_short}} come le regole e le a
 
 **Importante:** gli schemi sono necessari per utilizzare le regole le azioni. Per informazioni, consulta [Analisi cloud](cloud_analytics.html#rules).
 
-**Importante:** le funzioni di analisi vengono unite dal servizio {{site.data.keyword.iotrtinsights_full}} Se la tua organizzazione {{site.data.keyword.iot_short_notm}} viene utilizzata come origine dati per un'istanza {{site.data.keyword.iotrtinsights_short}} esistente, Cloud and Edge Analytics non è abilitato finché non siano state migrate le istanze {{site.data.keyword.iotrtinsights_short}} esistenti. Continuare ad utilizzare il dashboard {{site.data.keyword.iotrtinsights_short}} per le tue analisi finché non viene completata la migrazione. Per ulteriori informazioni, consulta il blog [IBM Watson IoT Platform](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} in IBM developerWorks e i tuoi dashboard dell'istanza {{site.data.keyword.iotrtinsights_short}} esistenti.  
+**Importante:** le funzioni di analisi vengono unite dal servizio {{site.data.keyword.iotrtinsights_full}} Se la tua organizzazione {{site.data.keyword.iot_short_notm}} viene utilizzata come origine dati per un'istanza {{site.data.keyword.iotrtinsights_short}} esistente, Cloud and Edge Analytics non è abilitato finché non siano state migrate le istanze {{site.data.keyword.iotrtinsights_short}} esistenti. Continuare ad utilizzare il dashboard {{site.data.keyword.iotrtinsights_short}} per le tue analisi finché non viene completata la migrazione. Per ulteriori informazioni, consulta il blog [IBM Watson IoT Platform blog ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} in IBM developerWorks e i tuoi dashboard dell'istanza {{site.data.keyword.iotrtinsights_short}} esistenti.  
 
 ## Aggiunta di uno schema del dispositivo
 {: #add_schema}
@@ -67,7 +67,9 @@ Per aggiungere uno schema:
  `Float` o `Integer`.</li>
  <li>Proprietà - Un identificativo della proprietà per la proprietà virtuale. Ad esempio:  
 `temp_virt`</li>
-    <li>Calcolo - Aggiungi uno o più componenti per definire una funzione valida. Puoi utilizzare le proprietà, i valori numerici e gli operatori matematici come +, -, \*, /, (, ), AVG e Z-score per creare il tuo calcolo. </br>Il componente AVG viene utilizzato per calcolare il valore della proprietà medio per un periodo di tempo specificato. </br>Il componente Z-score restituisce la differenza nelle unità di deviazione standard tra il punto dati i valore del punto dati principale in un numero di punti dati o in un intervallo di tempo.</br> **Importante:**  i componenti restituiscono solo i punti dati della proprietà se i dati per la proprietà selezionata provengono da un dispositivo collegato a un gateway con installato un EAA (Edge Analytics Agent). Per ulteriori informazioni, consulta [Installazione dell'agent di analisi edge](gateways/dashboard.html#edge). In aggiunta, le condizioni della regola che confrontano i valori AVG e Z-score non sono supportate.</li>
+    <li>Calcolo - Aggiungi uno o più componenti per definire una funzione valida. Puoi utilizzare le proprietà, i valori numerici e gli operatori matematici come +, -, \*, /, ( e ).  
+    Fai clic su **Advanced** per una serie di formule da utilizzare con le serie di punti dati nei dispositivi edge. Per ulteriori informazioni sulle formule avanzate, consulta [Calcoli avanzati per le proprietà virtuali edge](im_vir_calculations.html).  
+    **Importante:** le condizioni della regola che confrontano le proprietà virtuali basate sulle formule avanzate non sono supportate.</li>
     <li>Unità di dati - Facoltativo: l'unità di dati della proprietà. Ad esempio: `C` o `Mph`</li>
     <li> Posizioni decimali - Facoltativo, solo float: il numero di numeri decimali da includere nel dati del dispositivo.</li>
    </ul>

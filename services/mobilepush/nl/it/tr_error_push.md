@@ -12,7 +12,7 @@ copyright:
 
 # Messaggi di errore del servizio {{site.data.keyword.mobilepushshort}}
 {: #errors}
-Ultimo aggiornamento: 16 gennaio 2017
+Ultimo aggiornamento: 13 febbraio 2017
 {: .last-updated}
 
 
@@ -54,7 +54,7 @@ Per ottenere ulteriori informazioni su un errore, cerca il relativo codice di er
         di richiamare le credenziali del servizio APNS (Apple Push Notification Service) prima della loro
         configurazione.
 
-**Risposta utente**: assicurati che il servizio {{site.data.keyword.mobilepushshort}} sia stato configurato con certificati di sicurezza validi per APNs. Per ulteriori informazioni, vedi [Configurazione delle credenziali per APNs ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](t_push_provider_ios.html "Icona link esterno"){: new_window}.
+**Risposta utente**: assicurati che il servizio {{site.data.keyword.mobilepushshort}} sia stato configurato con certificati di sicurezza validi per APNs. Per ulteriori informazioni, vedi [Configurazione delle credenziali per APNs ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](t_push_provider_ios.html){: new_window}.
 
 
 ## FPWSE0004E
@@ -84,7 +84,7 @@ Per ottenere ulteriori informazioni su un errore, cerca il relativo codice di er
 **Spiegazione**: il corpo JSON della richiesta contiene dei parametri non riconosciuti dal server {{site.data.keyword.mobilepushshort}}.
 
 
-**Risposta utente**: verifica che il corpo JSON nella richiesta rispetti il formato della richiesta previsto dal server {{site.data.keyword.mobilepushshort}}. Per ulteriori informazioni, vedi [API REST ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://mobile.{DomainName}/imfpush/ "Icona link esterno"){: new_window}.
+**Risposta utente**: verifica che il corpo JSON nella richiesta rispetti il formato della richiesta previsto dal server {{site.data.keyword.mobilepushshort}}. Per ulteriori informazioni, vedi [API REST![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://mobile.{DomainName}/imfpush/){: new_window}.
 
 
 
@@ -94,7 +94,7 @@ Per ottenere ulteriori informazioni su un errore, cerca il relativo codice di er
 **Spiegazione**: l'URL della richiesta ha una stringa di query con parametri non riconosciuti. Ad esempio, se la richiesta di eliminazione della sottoscrizione ha parametri diversi da deviceId e tagName, si potrebbe verificare questo errore.
 
 
-**Risposta utente**: verifica che il corpo JSON nella richiesta rispetti il formato della richiesta previsto dal server {{site.data.keyword.mobilepushshort}}. Per ulteriori informazioni, vedi [API REST ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://mobile.{DomainName}/imfpush/ "Icona link esterno"){: new_window}.
+**Risposta utente**: verifica che il corpo JSON nella richiesta rispetti il formato della richiesta previsto dal server {{site.data.keyword.mobilepushshort}}. Per ulteriori informazioni, vedi [API REST![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://mobile.{DomainName}/imfpush/){: new_window}.
 
 
 
@@ -104,7 +104,7 @@ Per ottenere ulteriori informazioni su un errore, cerca il relativo codice di er
 **Spiegazione **: l'URL della richiesta ha una stringa di query in cui mancano dei parametri richiesti. Ad esempio, i parametri deviceId e tagName potrebbero non essere presenti nella richiesta di eliminazione della sottoscrizione.
 
 
-**Risposta utente**: verifica che il corpo JSON nella richiesta rispetti il formato della richiesta previsto dal server {{site.data.keyword.mobilepushshort}}. Per ulteriori informazioni, vedi [API REST ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://mobile.{DomainName}/imfpush/ "Icona link esterno"){: new_window}.
+**Risposta utente**: verifica che il corpo JSON nella richiesta rispetti il formato della richiesta previsto dal server {{site.data.keyword.mobilepushshort}}. Per ulteriori informazioni, vedi [API REST![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://mobile.{DomainName}/imfpush/){: new_window}.
 
 
 
@@ -163,6 +163,13 @@ seguenti condizioni:
 
 **Risposta utente**: assicurati che il payload JSON sia valido.
 
+
+## FPWSE0025E
+{: #error_fpwse0025e}
+
+**Spiegazione**: il server non è attualmente in grado di gestire la richiesta.
+
+**Risposta utente**: reinvia la richiesta in un secondo momento.
 
 
 ## FPWSE1007E 

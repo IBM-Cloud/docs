@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-16"
+  years: 2016, 2017
+lastupdated: "2017-03-13"
 
 ---
 
@@ -74,7 +74,7 @@ lastupdated: "2016-09-16"
 
   a. 選取儲存區間隔。儲存區間隔可控制建立新資料庫來儲存裝置資料的頻率。使用選取的儲存區間隔，在所選取時區的午夜建立新的儲存區。
 
-  b. 選取時區。所選取時區的時間將會用來決定應該放入裝置資料的儲存區，而不會使用裝置的本機時間。決定在其中輸入資料的資料庫時，會將正在傳送至 {{site.data.keyword.cloudant_short_notm}} 之裝置資料的時間戳記轉換成選取的時區。
+  b. 選取時區。所選取時區的時間將會用來決定應該放入裝置資料的儲存區，而不會使用裝置的本機時間。決定在其中輸入資料的資料庫時，會將正在傳送至 {{site.data.keyword.cloudant_short_notm}} 之裝置資料的時間戳記轉換為選取的時區。
 
   c. 選擇可決定資料庫名稱的選項。資料庫名稱將是 `iotp_<orgID>_<dbname>_<bucket_name>`，其中：
 
@@ -90,6 +90,18 @@ lastupdated: "2016-09-16"
 
 您的裝置資料現在儲存在 {{site.data.keyword.cloudant}} 中。
 
+## 使用歷程服務的秘訣  
+{: #recipes}
+
+下列秘訣說明如何使用 {{site.data.keyword.cloudant_short_notm}} 作為 {{site.data.keyword.iot_short}} 的「歷程」儲存空間：
+
+- [配置 {{site.data.keyword.cloudant_short_notm}} 作為 {{site.data.keyword.iot_short}} 的歷程資料儲存空間 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-parti/){: new_window} 秘訣說明如何將裝置資料儲存在 {{site.data.keyword.cloudant_short_notm}} 上，並示範如何在 {{site.data.keyword.cloudant_short_notm}} 上配置及儲存裝置資料以作為「歷程資料儲存空間」。
+
+- [查詢及處理來自 {{site.data.keyword.cloudant_short_notm}} 的 {{site.data.keyword.iot_short}} 裝置資料 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-partii){: new_window} 秘訣顯示如何對 {{site.data.keyword.cloudant_short_notm}} 中所儲存的裝置資料查詢及執行資料處理作業。
+
+- [視覺化 Cloudant NoSQL DB 中所儲存的 Watson IoT 裝置資料 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=27327){: new_window} 秘訣顯示如何鏈結「折線圖卡片」與「歷程資料儲存空間」，以在「Watson IoT Platform 儀表板」上顯示裝置資料。
+
+
 ## 建立新的設計文件  
 {: #design_docs}
 
@@ -97,7 +109,7 @@ lastupdated: "2016-09-16"
 
 {{site.data.keyword.iot_short_notm}} 內所含的預設設計文件會實作現行歷程中可用的查詢（不含彙總函數）。
 
-其他設計文件可以新增至配置資料庫，而且會在建立時複製到新的儲存區間隔資料庫。若要將設計文件新增至配置資料庫，請參閱 [Cloudant API 文件](https://docs.cloudant.com/document.html)。
+其他設計文件可以新增至配置資料庫，而且會在建立時複製到新的儲存區間隔資料庫。若要將設計文件新增至配置資料庫，請參閱 [Cloudant API 文件 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.cloudant.com/document.html){: new_window}。
 
 <!--  # Related links
 {: #rellinks}

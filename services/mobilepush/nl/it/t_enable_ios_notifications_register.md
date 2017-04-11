@@ -48,7 +48,7 @@ Crea un'applicazione di backend nella sezione Contenitori tipo del catalogo Blue
 
 ##Invia il token a Push Notifications
 
-Dopo che il token viene ricevuto da APNS, passa il token a Push Notifications come parte del metodo ```registerDevice:withDeviceToken```.
+Dopo che il token viene ricevuto da APNs, passa il token a Push Notifications come parte del metodo `registerDevice:withDeviceToken`.
 
 ###Objective-C
 
@@ -74,7 +74,7 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 
 ###Swift
 
-Dopo che il token viene ricevuto da APNS, passa il token a Push Notifications come parte del metodo ```didRegisterForRemoteNotificationsWithDeviceToken```.
+Dopo che il token viene ricevuto da APNS, passa il token a Push Notifications come parte del metodo `didRegisterForRemoteNotificationsWithDeviceToken`.
 
 ```
 func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){

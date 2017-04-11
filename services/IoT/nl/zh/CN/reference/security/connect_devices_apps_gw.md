@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-08"
+  years: 2015, 2017
+lastupdated: "2017-01-19"
 
 ---
 
@@ -12,10 +12,10 @@ lastupdated: "2016-09-08"
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# 与 {{site.data.keyword.iot_short_notm}} 的应用程序、设备和网关连接
+# 将应用程序、设备和网关连接到 {{site.data.keyword.iot_short_notm}}
 {: #connect_devices_apps_gw}
 
-应用程序、设备和网关可通过 MQTT 协议连接到 {{site.data.keyword.iot_full}}。设备还可通过 HTTP API 连接到 {{site.data.keyword.iot_short_notm}} 并向其发布事件。
+您可以将应用程序、设备和网关通过 MQTT 协议连接到 {{site.data.keyword.iot_full}}。还可以使用 HTTP REST API 将设备连接到 {{site.data.keyword.iot_short_notm}}。
 {: shortdesc}
 
 
@@ -35,13 +35,13 @@ lastupdated: "2016-09-08"
 {: codeblock}
 
 **注释**
-- *orgId* 是注册服务实例时生成的唯一组织标识。
+- 其中，*orgId* 是注册服务实例时生成的唯一组织标识。
 - 如果要将设备或应用程序连接到 Quickstart 服务，请将“quickstart”指定为 *orgId* 值。
 
 ## 端口安全性
 {: #client_port_security}
 
-确保所需端口已打开并启用以进行通信。
+确保所需端口已打开并启用以进行通信。端口 8883 和 443 支持将 TLS 与 MQTT 和 HTTP 协议配合使用的安全连接。端口 1883 支持使用 MQTT 和 HTTP 协议的非安全连接。下表中总结了有关连接类型和关联端口号的信息：   
 
 |连接类型 |端口号|
 |:---|:---|
@@ -49,20 +49,54 @@ lastupdated: "2016-09-08"
 |安全|8883|
 |安全|443|
 
-MQTT 客户机通过使用相应凭证（例如，针对设备的设备认证令牌，以及针对应用程序的 API 密钥和令牌）进行连接。由于通过非安全端口 1883 的 MQTT 消息传递会以明文发送这些凭证，请改为始终使用安全备用端口 8883 或 443。安全端口会对 TLS 凭证强制加密。请注意，必须通过在 Python MQTT 库中使用 tls_set() 方法，在应用程序中启用 TLS。否则，数据的发送可能会不安全。
+MQTT 通过 TCP 和 WebSocket 进行支持。MQTT 客户机通过使用相应凭证（例如，针对设备的设备认证令牌，以及针对应用程序的 API 密钥和令牌）进行连接。由于通过非安全端口 1883 的 MQTT 消息传递会以明文发送这些凭证，请改为始终使用安全备用端口 8883 或 443。TLS 凭证在通过安全端口发送时始终会加密。请注意，必须通过在 Python MQTT 库中使用 tls_set() 方法，在应用程序中启用 TLS。否则，数据的发送可能会不安全。
 
 在端口 8883 或 443 上使用安全 MQTT 消息传递时，较新的客户机库会自动信任 {{site.data.keyword.iot_short_notm}} 所提供的证书。如果这不适用于您的客户机环境，那么可从 [messaging.pem](https://github.com/ibm-messaging/iot-python/blob/master/src/ibmiotf/messaging.pem) 下载和使用完整证书链。
 
 
 ## TLS 需求
 {: #tls_requirements}
+
 一些传输层安全性 (TLS) 客户机库不支持包含通配符的域。如果无法成功更改库，请禁用证书检查。
 
+TLS 需求取决于是要通过 MQTT 还是通过 HTTP 协议连接到 {{site.data.keyword.iot_short_notm}}。以下部分显示了使用缺省服务器证书时支持的密码套件。如果要使用自己的客户机证书，那么支持的密码套件取决于使用的证书。
+
+### 针对 MQTT 连接的 TLS 需求
+
 {{site.data.keyword.iot_short_notm}} 需要 TLS V1.2 和以下密码套件：
-- ECDHE-RSA-AES256-GCM-SHA384
-- AES256-GCM-SHA384
-- ECDHE-RSA-AES128-GCM-SHA256
-- AES128-GCM-SHA256
+
+
+- TLS_RSA_WITH_AES_128_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+- TLS_RSA_WITH_AES_128_CBC_SHA256
+- TLS_DHE_RSA_WITH_AES_128_CBC_SHA256
+- TLS_RSA_WITH_AES_128_GCM_SHA256
+- TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+- TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+- TLS_RSA_WITH_AES_256_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+- TLS_RSA_WITH_AES_256_CBC_SHA256
+- TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
+- TLS_RSA_WITH_AES_256_GCM_SHA384
+- TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+
+### 针对 HTTP 连接的 TLS 需求
+
+如果要使用缺省服务器证书，那么 {{site.data.keyword.iot_short_notm}} 需要 TLS V1、TLS V1.1 或 TLS V1.2 以及以下密码套件：
+
+
+- TLS_RSA_WITH_AES_128_CBC_SHA
+- TLS_RSA_WITH_AES_128_CBC_SHA256
+- TLS_RSA_WITH_AES_128_GCM_SHA256
+- TLS_RSA_WITH_AES_256_CBC_SHA
+- TLS_RSA_WITH_AES_256_CBC_SHA256
+- TLS_RSA_WITH_AES_256_GCM_SHA384
+
 
 ## MQTT 客户机认证
 {: #mqtt_authentication}
@@ -129,7 +163,7 @@ MQTT 客户机通过使用相应凭证（例如，针对设备的设备认证令
 {{site.data.keyword.iot_short_notm}} 服务仅支持对设备进行基于令牌的认证；因此，每个设备仅具有一个有效用户名。
 `use-token-auth` 值向服务指示：网关或设备的认证令牌用作 MQTT 连接的密码。
 
-有关更多信息，请参阅[设备的 MQTT 连接](../../devices/mqtt.html)
+有关更多信息，请参阅[设备的 MQTT 连接](../../devices/mqtt.html)。
 
 #### 密码
 如果客户机使用的是基于令牌的认证，请提交设备认证令牌作为所有 MQTT 连接的密码。

@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-14"
+  years: 2015, 2017
+lastupdated: "2016-11-17"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -57,12 +57,15 @@ Um gateway pode publicar eventos a partir dele mesmo e em nome de qualquer dispo
 |Gateway 1 |mygateway |gateway1 |
 |Dispositivo 1 |mydevice |device1 |
 
--   O Gateway 1 pode publicar seus próprios eventos de status:
+-   O Gateway 1 pode publicar seus próprios eventos de status:  
     `iot-2/type/mygateway/id/gateway1/evt/status/fmt/json`
--   O Gateway 1 pode publicar eventos de status em nome do Dispositivo 1:
+-   O Gateway 1 pode publicar eventos de status em nome do Dispositivo 1:  
     `iot-2/type/mydevice/id/device1/evt/status/fmt/json`
 
 **Importante:** a carga útil da mensagem limita-se a no máximo 131072 bytes. Mensagens maiores que esse limite são rejeitadas.
+
+### Mensagens retidas
+As organizações do {{site.data.keyword.iot_short_notm}} não estão autorizadas a publicar mensagens MQTT retidas. Se um gateway enviar uma mensagem retida, o serviço {{site.data.keyword.iot_short_notm}} substituirá a sinalização de mensagem retida quando ela estiver configurada como true e processará a mensagem como se a sinalização de mensagem retida estivesse configurada como false.
 
 ## Assinando comandos
 {: #subscribing_cmds}
@@ -82,11 +85,11 @@ O curinga MQTT `+` pode ser usado para `typeId`, `deviceId`, `commandId` e `form
 |Dispositivo 1 | mydevice    | device1    |
 
 
--   O Gateway 1 pode assinar comandos direcionados ao gateway:
+-   O Gateway 1 pode assinar comandos direcionados no gateway:  
     `iot-2/type/mygateway/id/gateway1/cmd/+/fmt/+`
--   O Gateway 1 pode assinar comandos enviados ao Dispositivo 1:
+-   O Gateway 1 pode assinar comandos enviados ao Dispositivo 1:  
     `iot-2/type/mydevice/id/device1/cmd/+/fmt/+`
--   O Gateway 1 pode assinar qualquer comando enviado a dispositivos do tipo `mydevice`:
+-   O Gateway 1 pode assinar qualquer comando enviado a dispositivos do tipo `mydevice`:  
      `iot-2/type/mydevice/id/+/cmd/+/fmt/+`
 
 **Importante:** sessões persistentes MQTT especificadas como `cleansession=false` não procuram dispositivos que se conectam a gateways. Se um dispositivo se conectar ao gateway A e depois se conectar ao gateway B, ele não receberá nenhuma mensagem publicada no gateway A para o dispositivo enquanto ele estava desconectado. Um gateway é proprietário do cliente MQTT e da assinatura, mas não dos dispositivos conectados ao gateway.
@@ -133,7 +136,7 @@ Em que
 -   `Topic` é o tópico de solicitação do gateway
 -   `Device_Type` é o tipo de dispositivo do tópico
 -   `Device_Id` é o ID do dispositivo do tópico
--   `Client_ID` é o ID do cliente da solicitação
+-   `Client_ID` é o identificador de cliente da solicitação
 -   `Return_Code` é o código de retorno
 -   `Message` é a mensagem de erro
 
@@ -154,7 +157,7 @@ Suporte para gerenciamento de ciclo de vida de dispositivo é opcional. O protoc
 ### Níveis de qualidade de serviço e sessão limpa
 {: #quality_service}
 
-Os gateways gerenciados podem publicar mensagens que têm um nível de qualidade de serviço (QoS) igual a 0 ou 1. As mensagens do gateway não devem ser mensagens retidas.
+Os gateways gerenciados podem publicar mensagens que tenham um nível de qualidade de serviço (QoS) 0 ou 1.
 
 As mensagens com QoS=0 podem ser descartadas e não persistem após a reinicialização do servidor de sistema de mensagens. As mensagens com QoS=1 podem ser enfileiradas e persistem após a reinicialização do servidor de sistema de mensagens. A durabilidade da assinatura determina se uma solicitação será enfileirada. O parâmetro `cleansession` da conexão que fez a assinatura determina a durabilidade da assinatura.  
 

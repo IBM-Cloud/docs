@@ -16,7 +16,7 @@
    width="501"
    height="340"
    viewBox="0 0 501 340"
-   sodipodi:docname="iot4e_add_washer.svg">
+   sodipodi:docname="IoT4E_add_washer.svg">
   <metadata
      id="metadata4930">
     <rdf:RDF>
@@ -25,7 +25,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -40,17 +40,17 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1600"
-     inkscape:window-height="848"
+     inkscape:window-width="1920"
+     inkscape:window-height="1028"
      id="namedview4926"
      showgrid="false"
-     inkscape:zoom="1.8146739"
-     inkscape:cx="244.40577"
-     inkscape:cy="152.36298"
+     inkscape:zoom="1.8404536"
+     inkscape:cx="250.5"
+     inkscape:cy="168.46319"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg4924" />
+     inkscape:current-layer="layer4" />
   <image
      width="501"
      height="340"
@@ -71,7 +71,14 @@
      y="24.937744"
      x="66.306923"
      id="image4958"
-     xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAigAAABNCAIAAAADyQgSAAAAA3NCSVQICAjb4U/gAAABNElEQVR4 nO3VMQEAIAzAMMC/5+GiHCQK+nXPzAKAynkdAMBfjAeAlPEAkDIeAFLGA0DKeABIGQ8AKeMBIGU8 AKSMB4CU8QCQMh4AUsYDQMp4AEgZDwAp4wEgZTwApIwHgJTxAJAyHgBSxgNAyngASBkPACnjASBl PACkjAeAlPEAkDIeAFLGA0DKeABIGQ8AKeMBIGU8AKSMB4CU8QCQMh4AUsYDQMp4AEgZDwAp4wEg ZTwApIwHgJTxAJAyHgBSxgNAyngASBkPACnjASBlPACkjAeAlPEAkDIeAFLGA0DKeABIGQ8AKeMB IGU8AKSMB4CU8QCQMh4AUsYDQMp4AEgZDwAp4wEgZTwApIwHgJTxAJAyHgBSxgNAyngASBkPACnj ASBlPACkjAeAlPEAkDIeAFIXjMQDl+k1k1oAAAAASUVORK5CYII= "
+     xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAigAAABNCAIAAAADyQgSAAAAA3NCSVQICAjb4U/gAAABNElEQVR4
+nO3VMQEAIAzAMMC/5+GiHCQK+nXPzAKAynkdAMBfjAeAlPEAkDIeAFLGA0DKeABIGQ8AKeMBIGU8
+AKSMB4CU8QCQMh4AUsYDQMp4AEgZDwAp4wEgZTwApIwHgJTxAJAyHgBSxgNAyngASBkPACnjASBl
+PACkjAeAlPEAkDIeAFLGA0DKeABIGQ8AKeMBIGU8AKSMB4CU8QCQMh4AUsYDQMp4AEgZDwAp4wEg
+ZTwApIwHgJTxAJAyHgBSxgNAyngASBkPACnjASBlPACkjAeAlPEAkDIeAFLGA0DKeABIGQ8AKeMB
+IGU8AKSMB4CU8QCQMh4AUsYDQMp4AEgZDwAp4wEgZTwApIwHgJTxAJAyHgBSxgNAyngASBkPACnj
+ASBlPACkjAeAlPEAkDIeAFIXjMQDl+k1k1oAAAAASUVORK5CYII=
+"
      style="image-rendering:optimizeQuality"
      preserveAspectRatio="none"
      height="37.879208"
@@ -94,19 +101,14 @@
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      x="244.68317"
-     y="35.830318"
+     y="49.830318"
      id="text4614-7"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        x="244.68317"
-       y="35.830318"
+       y="49.830318"
        id="tspan6489-0"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15px;font-family:Arial;-inkscape-font-specification:'Arial Bold'">Wählen Sie nun eine simulierte Waschmaschine aus</tspan><tspan
-       sodipodi:role="line"
-       x="244.68317"
-       y="54.580318"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15px;font-family:Arial;-inkscape-font-specification:'Arial Bold'"
-       id="tspan3362">oder erstellen Sie eine neue Waschmaschine</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15px;font-family:Arial;-inkscape-font-specification:'Arial Bold'">Next, choose or add new simulated washer</tspan></text>
   <image
      y="74.38208"
      x="166.28227"
@@ -122,23 +124,16 @@
      inkscape:label="text">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="244.59663"
-       y="68.690964"
+       y="82.690964"
        id="text4614"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan3356"
          x="244.59663"
-         y="68.690964">Es können maximal 5</tspan><tspan
-         sodipodi:role="line"
-         x="244.59663"
-         y="81.190964"
-         id="tspan3360">Waschmaschinen</tspan><tspan
-         sodipodi:role="line"
-         id="tspan3354"
-         x="244.59663"
-         y="93.690964">hinzugefügt werden</tspan></text>
+         y="82.690964"
+         id="tspan6489"
+         style="font-size:10px">You can add up to five washers</tspan></text>
     <g
        id="g5900"
        transform="translate(0,-18)">
@@ -146,36 +141,26 @@
          sodipodi:linespacing="125%"
          id="text4614-7-1"
          y="186.14461"
-         x="85.828247"
+         x="81.828247"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
            style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:'Arial Bold'"
            id="tspan6489-0-2"
            y="186.14461"
-           x="85.828247"
-           sodipodi:role="line">Eigene Wasch-</tspan><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:'Arial Bold'"
-           y="200.20711"
-           x="87.388306"
-           sodipodi:role="line"
-           id="tspan3366">maschinen </tspan></text>
+           x="83.388306"
+           sodipodi:role="line">Your washers </tspan></text>
       <text
          sodipodi:linespacing="125%"
          id="text4614-5"
          y="186.5809"
-         x="259.26059"
+         x="271.26059"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
            style="font-size:9.375px"
            id="tspan6489-8"
            y="186.5809"
-           x="259.26059"
-           sodipodi:role="line">Wählen Sie eine Waschmaschine aus, um deren simulierte</tspan><tspan
-           style="font-size:9.375px"
-           y="198.29965"
-           x="259.26059"
-           sodipodi:role="line"
-           id="tspan3364">Daten zu steuern. Ein neues Fenster wird geöffnet.</tspan></text>
+           x="271.26059"
+           sodipodi:role="line">Select a washer to control its simulated data. A new window will open.</tspan></text>
     </g>
   </g>
 </svg>

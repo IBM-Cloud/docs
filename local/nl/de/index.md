@@ -34,7 +34,6 @@ Darüber hinaus ist eine Reihe von Services als {{site.data.keyword.Bluemix_loca
 |Inbegriffen | [{{site.data.keyword.Bluemix_notm}}-Laufzeiten](/docs/cfapps/runtimes.html) | Machen Sie mit Laufzeiten Ihre App schnell betriebsbereit, ohne Maschinen und Betriebssysteme einrichten und verwalten zu müssen. Alle {{site.data.keyword.Bluemix_notm}}-Laufzeiten stehen Ihnen zur Verwendung in Ihrer {{site.data.keyword.Bluemix_notm}} Local-Instanz zur Verfügung.|
 |Inbegriffen | [{{site.data.keyword.autoscaling}}](/docs/services/Auto-Scaling/index.html)| Dynamisches Erhöhen oder Verringern der Rechenleistung Ihrer Anwendung basierend auf Richtlinien. Mit diesem Service können Sie Ihre {{site.data.keyword.Bluemix}} Local-Umgebung unbegrenzt nutzen.|
 |Optional | [{{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} integriert {{site.data.keyword.APIM}} und IBM StrongLoop in ein einzelnes Angebot, das eine Komplettlösung bietet, um APIs und Microservices zu erstellen, auszuführen, zu verwalten und durchzusetzen. |
-|Optional | [{{site.data.keyword.cloudant}}](/docs/services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} bietet Zugriff auf eine vollständig verwaltete NoSQL-JSON-Datenebene, die permanent aktiv ist. Dieser Service ist mit CouchDB kompatibel und über eine einfache HTTP-Schnittstelle für mobile Anwendungsmodelle und Webanwendungsmodelle zugänglich. Weitere Informationen finden Sie in der vollständigen [Dokumentation ![Symbol für externen Link](../icons/launch-glyph.svg)](http://docs.cloudant.com/BluemixLocal.html){: new_window} und in den [Hardwarevoraussetzungen ![Symbol für externen Link](../icons/launch-glyph.svg)](http://docs.cloudant.com/BluemixLocalHardware.html){: new_window} für eine lokale Umgebung. |
 |Optional | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | Docker-Container in {{site.data.keyword.Bluemix_notm}} Local ausführen. Container sind virtuelle Softwareobjekte, die alle für die Ausführung von Apps erforderlichen Elemente enthalten. Container bieten den Vorteil der Ressourcenisolation und -zuordnung, wobei sie besser portierbar und effizienter als beispielsweise virtuelle Maschinen sind. Informationen zu den Hardwarevoraussetzungen finden Sie unter [IBM {{site.data.keyword.containershort}} in {{site.data.keyword.Bluemix_notm}} Dedicated and Bluemix Local](/docs/containers/container_dl.html). |
 |Optional | [{{site.data.keyword.datacshort}}](/docs/services/DataCache/index.html#data_cache) | Dieser Service bietet ein speicherinternes Datengitter, durch das Szenarios mit verteiltem Caching für Ihre Apps unterstützt werden. Umfasst 50 GB speicherinternen Cache. |
 | Optional (Beta) | [Protokollierung](/docs/monitoringandlogging/cfapps_ml_logs_dedicated_ov.html#container_ml_logs_dedicated_ov) | Stellt Protokolle für Ihre Cloud Foundry-Apps in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle sowie durchsuchbare Protokolle und Dashboards in Kibana bereit. |
@@ -53,7 +52,6 @@ Durch optionale Komponenten, die zusätzlich zum Kauf angeboten werden, können 
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Professional - Kapazitätserweiterung auf 100.000 API-Aufrufe| Diese Erweiterung der {{site.data.keyword.apiconnect_short}} Professional-Umgebung bietet eine zusätzliche Kapazität von 100.000 API-Aufrufen pro Monat. |
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Enterprise - 25 Millionen API-Aufrufe | Diese Umgebung ermöglicht die Ausführung einer privaten Version von {{site.data.keyword.apiconnect_short}} mit einer Kapazität von 25 Millionen API-Aufrufen pro Monat. Richtet sich an API-Projekte auf Unternehmensebene. |
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Enterprise - Kapazitätserweiterung auf 100.000 API-Aufrufe | Diese Erweiterung der {{site.data.keyword.apiconnect_short}} Enterprise-Umgebung bietet eine zusätzliche Kapazität von 100.000 API-Aufrufen pro Monat. |
-|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.cloudant}} Cluster | Diese Umgebung ermöglicht die Bereitstellung eines aus drei Knoten bestehenden Clusters des {{site.data.keyword.cloudant}}-Service. Die Datenkapazität der Knoten legen Sie durch die Infrastruktur fest, die Sie für die lokale Umgebung bereitstellen. |
 |{{site.data.keyword.Bluemix_notm}} Data & Session Cache - Kapazitätserweiterung um 50 GB | Diese Umgebung ermöglicht die Bereitstellung und Ausführung von Data Cache- und Session Cache-Instanzen bis zu einer kumulativen Kapazität von 50 GB. |
 |{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} Local - inkrementelle Erhöhung | Diese zusätzliche Umgebung zum {{site.data.keyword.iot_short}} Local-Basisserviceangebot ermöglicht die Ausführung einer privaten Version von {{site.data.keyword.iot_short}} in der lokalen Umgebung mit einer Kapazität für 100.000 gleichzeitig verbundene Geräte oder Anwendungen und 0,5 TB für den Datenaustausch. |
 |{{site.data.keyword.IBM_notm}} {{site.data.keyword.mobilepush}} Local - Add-on-Instanz | Eine Umgebung, die die Implementierung und Ausführung der {{site.data.keyword.mobilepush}}-Instanz mit der Möglichkeit, 300 zusätzliche Anfragen pro Sekunde zu akzeptieren, bietet. |
@@ -87,7 +85,6 @@ Wenn es sich um eine private Instanz eines {{site.data.keyword.Bluemix_notm}}-Se
 |{{site.data.keyword.apiconnect_short}} 	|Ja   	 	|Ja  	 	|Ja   |
 |Automatisches Prüfprogramm für Eingabehilfen |Ja       |Ja    |Ja   |
 |{{site.data.keyword.rules_short}}		|Ja		|Ja		|Ja |
-|{{site.data.keyword.cloudant}}			|Ja		|Ja		|Ja |
 |{{site.data.keyword.iotmapinsights_short}}    |Ja  |Ja  |Ja  |
 |{{site.data.keyword.conversationshort}}  |Ja  |Ja  |Ja  |
 |{{site.data.keyword.dashdbshort}}		|Ja		|Ja		|Ja |
@@ -251,11 +248,13 @@ Das {{site.data.keyword.Bluemix_notm}}-Bereitstellungsteam lädt das Stammzertif
 ## {{site.data.keyword.Bluemix_local_notm}}-Instanz einrichten
 {: #setuplocal}
 
-{{site.data.keyword.Bluemix_local_notm}} wurde konzipiert, um eine private Version des Produktangebots {{site.data.keyword.Bluemix_notm}} Public bereitzustellen, die auf der von Ihnen ausgewählten Hardware gehostet wird. Sie haben zwei Optionen: Sie können die Hardware in Form von VMware bereitstellen oder {{site.data.keyword.Bluemix_notm}} Local System bestellen. Dieses System befindet sich auf einer vorkonfigurierten PureApplication-Appliance, die Sie über {{site.data.keyword.IBM_notm}} bestellen können. Weitere Informationen zu den Optionen der PureApplication-Appliance finden Sie unter [IBM {{site.data.keyword.Bluemix_notm}} Local System W3500 and W3550 models run cloud native services, enabled middleware, and open pattern workloads concurrently ![Symbol für externen Link](../icons/launch-glyph.svg)](https://www-01.ibm.com/common/ssi/rep_ca/5/897/ENUS216-325/){: new_window}.
+{{site.data.keyword.Bluemix_local_notm}} stellt eine private Version des Produktangebots {{site.data.keyword.Bluemix_notm}} Public bereit, die auf Hardware Ihrer Wahl gehostet wird. Die folgenden beiden Optionen werden allgemein unterstützt:
+* Sie stellen die VMware-Hardware selbst bereit.
+* Sie bestellen das {{site.data.keyword.Bluemix_notm}} Local System, das sich auf einer vorkonfigurierten PureApplication-Appliance befindet, die Sie über {{site.data.keyword.IBM_notm}} bestellen können. Weitere Informationen zu den Optionen der PureApplication-Appliance finden Sie unter [IBM {{site.data.keyword.Bluemix_notm}} Local System W3500 and W3550 models run cloud native services, enabled middleware, and open pattern workloads concurrently ![Symbol für externen Link](../icons/launch-glyph.svg)](https://www-01.ibm.com/common/ssi/rep_ca/5/897/ENUS216-325/){: new_window}.
 
 Für {{site.data.keyword.Bluemix_local_notm}} können Sie die {{site.data.keyword.Bluemix_notm}}-Services und -Laufzeiten verwenden, um Ihre Datenverarbeitungsanforderungen in einer sicheren, vom Kunden gehosteten und verwalteten Cloudumgebung zu unterstützen. {{site.data.keyword.IBM_notm}} bietet Ihnen über eine kennwortgesicherte Anmeldung Zugriff auf {{site.data.keyword.Bluemix_local_notm}}. Sie können auf die Services, Laufzeiten und zugehörigen Ressourcen zugreifen und {{site.data.keyword.Bluemix_notm}}-Apps bereitstellen und entfernen. Überprüfen Sie die folgenden Schritte zur Arbeit mit Ihrem {{site.data.keyword.IBM_notm}} Ansprechpartner zum Einrichten Ihrer lokalen Instanz von {{site.data.keyword.Bluemix_notm}}.
 
-**Hinweis:** Wenn Sie {{site.data.keyword.Bluemix_local_notm}} auf der Hardwareoption {{site.data.keyword.Bluemix_notm}} Local System ausführen möchten, weicht der Einrichtungsprozess möglicherweise insofern ab, als Sie dem IBM Ansprechpartner nicht so viele Informationen zur Verfügung stellen müssen. Des Weiteren können Ihre Rollen und Zuständigkeiten in den Konzeptions- und Fortschrittsphasen aufgrund des Wartungsmodells "Call Home" der PureApplication-Appliance im Umfang reduziert werden, da sich dieses von dem Managementmodell unterscheidet, das für die Verwendung von vom Kunden gehosteten VMware-Systemen erforderlich ist. 
+**Hinweis:** Wenn Sie {{site.data.keyword.Bluemix_local_notm}} auf der {{site.data.keyword.Bluemix_notm}} Local System-Hardware hosten, kann sich der Einrichtungsprozess insofern unterscheiden, als dass Sie dem IBM Ansprechpartner weniger Informationen geben müssen. Ferner kann sich der Umfang Ihrer Rollen und Zuständigkeiten in der Konzeptions- und Fortschrittsphase aufgrund des Call-Home-Wartungsmodells der PureApplication-Appliance gegenüber dem Managementmodell reduzieren, das für die Verwendung kundeneigener VMware erforderlich ist.
 
 Gehen Sie wie folgt vor, um Ihre private Version von {{site.data.keyword.Bluemix_notm}} einzurichten:
 
@@ -413,7 +412,7 @@ kontinuierliche Integration und Bereitstellung mit {{site.data.keyword.IBM_notm}
 |Untersuchen des Betriebssystems | Stellen Sie sicher, dass das Betriebssystemimage Konfomitätsstandards entspricht. {{site.data.keyword.IBM_notm}} stellt Zugriff auf das Betriebssystemimage bereit. | {{site.data.keyword.IBM_notm}} und Kunde |
 {: caption="Table 5. Inception phase tasks" caption-side="top"}
 
-Als nächstes folgt die Fortschrittsphase. Die Fortschrittsphase beschreibt die laufende, interaktive Beziehung zwischen Ihnen und IBM. Die primären Ziele dieser Phase sind unter anderem:
+Als Nächstes folgt die Fortschrittsphase. Die Fortschrittsphase beschreibt die laufende, interaktive Beziehung zwischen Ihnen und IBM. Die primären Ziele dieser Phase sind unter anderem:
 
 - Überprüfen der Kapazität und Koordinieren von erforderlichen Anpassungen.
 - Überprüfen von Wartungs- und Plattformverbesserungen.
@@ -734,9 +733,9 @@ Da der Schutz privater Daten kritisch ist, ist {{site.data.keyword.IBM_notm}} be
 <li>Stellen Sie die Sicherungsdateien für den {{site.data.keyword.IBM_notm}} Administrator bereit, falls eine Wiederherstellung erforderlich sein sollte.</li>
 </ul>
 
-# Zugehörige Links
+# rellinks
 {: rellinks}
-## Allgemein
+## general
 {: general}
 * [Entdecken Sie: {{site.data.keyword.Bluemix_local_notm}} ![Symbol für externen Link](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/hybrid/local/){: new_window}
 * [Neuerungen in {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)

@@ -18,12 +18,12 @@ lastupdated: "2017-02-02"
 # Account standard beta di IBM {{site.data.keyword.Bluemix_notm}} 
 {: #betaintro}
 
-L'Account standard beta di {{site.data.keyword.Bluemix}} introduce un nuovo account gratuito, che offre un nuovo modo di lavorare in {{site.data.keyword.Bluemix_notm}} Public Cloud. A differenza della versione di prova di 30 giorni {{site.data.keyword.Bluemix_notm}}, l'Account standard non ha una scadenza. Puoi continuare a lavorare sulle tue applicazioni {{site.data.keyword.Bluemix_notm}} senza preoccuparti dei limiti di tempo.
+L'Account standard beta di {{site.data.keyword.Bluemix}} introduce un nuovo account gratuito, che offre un nuovo modo di lavorare in {{site.data.keyword.Bluemix_notm}} Public Cloud. A differenza della versione di prova di 30 giorni {{site.data.keyword.Bluemix_notm}}, l'Account standard non ha una scadenza. Puoi continuare a lavorare sulle tue applicazioni {{site.data.keyword.Bluemix_notm}} senza preoccuparti dei limiti di tempo. 
 {:shortdesc}
 
 La partecipazione all'utilizzo dell'Account standard beta è solo su invito. Dopo aver accettato l'invito e creato il tuo Account standard, potrai invitare amici e colleghi a partecipare alla versione Beta.  
 
-## Presentazione dell'Account standard {{site.data.keyword.Bluemix_notm}} 
+## Presentazione dell'Account standard {{site.data.keyword.Bluemix_notm}}
 {: #standardaccount}
 
 Potresti chiederti qual è la differenza tra l'Account standard e l'Account di prova. Nelle seguenti tabelle vengono riepilogati i dettagli chiave relativi all'Account standard {{site.data.keyword.Bluemix_notm}}. 
@@ -91,7 +91,7 @@ Per aiutare gli utenti dell'Account standard a gestire al meglio le proprie riso
 
  * Le applicazioni verranno sospese dopo 10 giorni di inattività dello sviluppo. Ciò è utile quando vuoi lavorare su una nuova applicazione perché non ti ritroverai a raggiungere il limite di 512 MB di quota di memoria. Per riattivare le tue applicazioni, inizia di nuovo a utilizzarle nella riga di comando Cloud Foundry o nella console {{site.data.keyword.Bluemix_notm}}. 
  
- Ecco un elenco di tutti i comandi che riattiveranno la tua applicazione. 
+ Ecco un elenco di tutti i comandi che riattiveranno la tua applicazione.
   * push cf
   * cf restate
   * cf restart
@@ -117,4 +117,4 @@ Per aiutare gli utenti dell'Account standard a gestire al meglio le proprie riso
 
 Se sei stato selezionato per partecipare alla versione Beta, ti viene inviato un invito all'indirizzo e-mail associato al tuo Account di prova {{site.data.keyword.Bluemix_notm}}. Una volta ricevuto l'invito, completa le istruzioni riportate nell'e-mail per registrare l'Account standard. 
 
-Sei interessato a partecipare all'offerta dell'Account standard beta? Chiedi ai tuoi amici e colleghi. Se loro sono stati invitati a partecipare alla versione Beta e hanno creato il proprio Account standard, potranno invitare anche te.  
+Sei interessato a partecipare all'offerta dell'Account standard beta? Chiedi ai tuoi amici e colleghi. Se loro sono stati invitati a partecipare alla versione Beta e hanno creato il proprio Account standard, potranno invitare anche te. 

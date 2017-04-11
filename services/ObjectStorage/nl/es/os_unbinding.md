@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -16,7 +16,7 @@ Si el servicio {{site.data.keyword.objectstorageshort}} se ha enlazado con la ap
 
 ## Desenlazar la instancia
 
-Puede mantener los datos guardados y desenlazar el servicio de la app Cloud Foundry. La cuenta de {{site.data.keyword.objectstorageshort}} no se suprime hasta que se deja de suministrar el servicio. 
+Puede mantener los datos guardados y desenlazar el servicio de la app Cloud Foundry. La cuenta de {{site.data.keyword.objectstorageshort}} no se suprime hasta que se deja de suministrar el servicio.
 
 **Atención**: Si desenlaza una instancia de {{site.data.keyword.objectstorageshort}} desde una aplicación de {{site.data.keyword.Bluemix_notm}}, o si suprime la clave de servicio, se suprimirán todas las credenciales para dicha instancia y no se podrán restaurar. Puede generar credenciales de nube nuevas volviendo a enlazar o creando una nueva clave de servicio.
 

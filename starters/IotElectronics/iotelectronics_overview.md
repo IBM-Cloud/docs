@@ -2,11 +2,15 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-11-29"
+lastupdated: "2017-03-15"
 ---
 
+<!-- Common attributes used in the template are defined as follows: -->
 {:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # About {{site.data.keyword.iotelectronics}}
 {: #iotelectronics_about}
@@ -39,30 +43,12 @@ The starter boilerplate deploys the integrated {{site.data.keyword.iotelectronic
 
 ![{{site.data.keyword.iotelectronics}} Architecture. This diagram is described in the main body of the topic.](images/IoT4E_architecture.svg "{{site.data.keyword.iotelectronics}} architecture")
 
-The {{site.data.keyword.iotelectronics}} starter uses the {{site.data.keyword.iotelectronics}} service and APIs to connect with {{site.data.keyword.iot_short_notm}}. The starter app and sample mobile app communicate with the {{site.data.keyword.iotelectronics}} service and are connected to each other by {{site.data.keyword.amafull}}. The following components are included in the starter:
+The {{site.data.keyword.iotelectronics}} starter uses the {{site.data.keyword.iotelectronics}} service and APIs to connect with {{site.data.keyword.iot_short_notm}}. The starter app and sample mobile app communicate with the {{site.data.keyword.iotelectronics}} service. The following components are included in the starter:
 
 **{{site.data.keyword.iotelectronics}} service** supports user and appliance registration and notifications.
 
 **{{site.data.keyword.iot_full}}** lets your apps communicate with and use data that is collected by your connected appliances, sensors, and gateways.
 
-<!-- **{{site.data.keyword.iotrtinsights_full}}** enables you to enrich and monitor data from your appliances, visualize what's happening now, and respond to emerging conditions by using automated actions. -->
-
-**{{site.data.keyword.amafull}}** enables users of mobile apps to log in by using existing social accounts and ensures that communications with back-end systems are secure.
-
 **{{site.data.keyword.sdk4nodefull}}** enables you to develop, deploy, and scale server-side JavaScript&reg; apps and provides enhanced performance, security, and serviceability.
 
 **Sample mobile app** lets you view the status of and communicate with a simulated appliance by using your mobile device such as a smart phone or tablet. Find out how to get the mobile app in [Using the Mobile app](iotelectronics_config_mobile.html).
-
-# Related Links
-{: #rellinks}
-## Components
-{: #general}
-* [{{site.data.keyword.iot_short}} documentation](https://console.ng.bluemix.net/docs/services/IoT/index.html#gettingstartedtemplate)
-* [{{site.data.keyword.amafull}} documentation](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html)
-* [{{site.data.keyword.sdk4nodefull}} documentation](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
-
-
-## API documentation
-{: #api}
-*  [{{site.data.keyword.iotelectronics}} API](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)
-*  [{{site.data.keyword.iot_short}} API](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)

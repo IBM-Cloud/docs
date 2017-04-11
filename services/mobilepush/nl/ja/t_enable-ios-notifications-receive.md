@@ -15,7 +15,7 @@ iOS デバイスでプッシュ通知を受け取るには、アプリケーシ�
 
 ```
 // For Objective-C
--(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+ -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
 //userInfo dictionary will contain data sent from server.
 }
 ```
@@ -24,9 +24,9 @@ iOS デバイスでプッシュ通知を受け取るには、アプリケーシ�
 iOS デバイスでプッシュ通知を受け取るには、アプリケーションのアプリケーション代行に以下の Swift メソッドを追加します。
 
 ```
- // For Swift
+// For Swift
 func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
-       //UserInfo dictionary will contain data sent from the server
+//UserInfo dictionary will contain data sent from the server
    }
 ```
 

@@ -2,18 +2,18 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-2-6"
+lastupdated: "2017-03-14"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
 
 
-# Developing smart contracts for {{site.data.keyword.iot_short_notm}} blockchain integration
+# Developing blockchain smart contracts
 {: #iotblockchain_link}
 
 Use {{site.data.keyword.blockchainfull}} and the Hyperledger development environment to create and test your own smart contracts deriving from IBM-provided sample contracts.
@@ -45,21 +45,21 @@ The following diagram illustrates {{site.data.keyword.iot_short_notm}} blockchai
 {: #byb}
 
 Get an overview of {{site.data.keyword.blockchainfull_notm}}, how it relates to the general blockchain concept, and what it can do for you:
-- [{{site.data.keyword.blockchainfull_notm}}](http://www.ibm.com/blockchain/) on IBM.com.
+- [{{site.data.keyword.blockchainfull_notm}} ![External link icon](../../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/blockchain/){: new_window} on IBM.com.
 - [{{site.data.keyword.blockchainfull_notm}} DOCS](https://console.ng.bluemix.net/docs/services/blockchain/index.html) -  Getting started with {{site.data.keyword.blockchainfull_notm}} service.
-- [{{site.data.keyword.blockchainfull_notm}} API](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/) -  An overview of the {{site.data.keyword.blockchainfull_notm}} API.
-- [{{site.data.keyword.blockchainfull_notm}} for Developers](http://www.ibm.com/blockchain/for_developers.html)  - An overview of how blockchain fits into your development environment that includes walk-throughs with live demos and code that is deployable to run on {{site.data.keyword.Bluemix_notm}}.
+- [{{site.data.keyword.blockchainfull_notm}} HFC SDK for Node.js with API documentation ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/hyperledger/fabric/tree/v0.6/docs/API){: new_window} -  An overview of the {{site.data.keyword.blockchainfull_notm}} API.
+- [{{site.data.keyword.blockchainfull_notm}} for Developers ![External link icon](../../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/blockchain/for_developers.html){: new_window}  - An overview of how blockchain fits into your development environment that includes walk-throughs with live demos and code that is deployable to run on {{site.data.keyword.Bluemix_notm}}.
 
 ## Sample smart contracts
 
 {: #samples}
 
-A number of sample contracts are available for download from [https://github.com/ibm-watson-iot/blockchain-samples](https://github.com/ibm-watson-iot/blockchain-samples). You can use the sample contracts as a foundation to develop your own use cases into deployable chaincode:
+A number of sample contracts are available for download from [https://github.com/ibm-watson-iot/blockchain-samples ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/blockchain-samples){: new_window}. You can use the sample contracts as a foundation to develop your own use cases into deployable chaincode:
 
 |Sample contract |Description |
 |:---|:---|
-|[Basic: Simple Contract](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/basic/simple_contract) | A simplified version of the advanced contract that allows you to track and store device asset data on the blockchain
-|[Advanced: IoT Generic Sample Contract](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/advanced/iot_sample_contract) | An advanced sample contract with many features and a **trade lane** flavour to its data model and behavior|
+|[Basic: Simple Contract ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/basic/simple_contract){: new_window} | A simplified version of the advanced contract that allows you to track and store device asset data on the blockchain
+|[Advanced: IoT Generic Sample Contract ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/advanced/iot_sample_contract){: new_window} | An advanced sample contract with many features and a **trade lane** flavour to its data model and behavior|
 
 
 ## Configure your {{site.data.keyword.blockchainfull_notm}} environment
@@ -87,36 +87,40 @@ Before you can begin deploying and testing smart contracts, you must set up your
     To write to the blockchain from {{site.data.keyword.iot_short_notm}}, you must first link the services.
      1. In {{site.data.keyword.Bluemix_notm}}, go to the Dashboard
      2. Select the space in which you deployed {{site.data.keyword.blockchainfull_notm}}.
-     3. Click the **Blockchain** tile.
-     4. In the left pane, click **Service credentials**.
-     5. Select a set of service credentials or click **Add credentials** to create a new set of service credentials and give them a descriptive name, such as "IoT-Platform-integration."
+     3. Click the **Blockchain** link under **Services**.
+     4. Click the **Service Credentials** tab.
+     5. Select a set of service credentials or click **New Credential** to create a new set of service credentials and give them a descriptive name, such as "IoT-Platform-integration."
      6. In the JSON-formatted service credentials, make a note of the following parameters:  
-      - Peer information: `api_host` and `api_port`
+      - Peer information: `api_host` and `api_port_tls`
       - User of type 1 (client) information: `username` and `secret`  
 
       Example of service credentials:
      ```json
-     {
-      "credentials": {
+  {
       "peers": [
       {
-       "discovery_host": "169.44.63.203",
-       "discovery_port": "32904",
-       "api_host": "169.44.63.203",
-       "api_port_tls": "443",
-       "api_port": "80",
-       "type": "peer",
-       "network_id": "f621cde2-bdec-4897-b737-da4df144c41f",
-       "container_id": "5750f7734fb06c64d70c443b1dfcf39a3f5de7b51b792294c05dbdbe7d8356f7",
-       "id": "f621cde2-bdec-4897-b737-da4df144c41f_vp1",
-       "api_url": "http://169.44.63.203:32905"
-      },
+        "discovery_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",
+        "discovery_port": 30003,
+        "api_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",
+        "api_port_tls": 5003,
+        "api_port": 5003,
+        "event_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",
+        "event_port": 31003,
+        "type": "peer",
+        "network_id": "fa68cbcbfcec4726932e53e2fa4f3afc",
+        "container_id": "e33f08f85988bf57ccfcf34ccdb80d72489e5bfb46786b570e1a74a6679f804e",
+        "id": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0",
+        "api_url": "http://fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com:5003"
+    },
        ...
       ],
-      "users": [
+      "users": [      
       {
-       "username": "user_type1_fa8e6ef0dc",
-       "secret": "33401036a9"
+        "enrollId": "user_type1_0",
+        "enrollSecret": "63c58806d6",
+        "affiliation": "group1",
+        "username": "user_type1_0",
+        "secret": "63c58806d6"
       },
        ...
        ]
@@ -126,7 +130,7 @@ Before you can begin deploying and testing smart contracts, you must set up your
      **Important:** The user that you select must not be previously registered with a peer other than the peer that you selected.
      7. Click **Back to Dashboard** to return to your {{site.data.keyword.Bluemix_notm}} dashboard.
      8. Select the space in which you deployed {{site.data.keyword.iot_short_notm}}.
-     9. Click the **{{site.data.keyword.iot_short_notm}}** tile.
+     9. Click the **{{site.data.keyword.iot_short_notm}}** link under **Services**.
      10. Click **Launch** to open the {{site.data.keyword.iot_short_notm}} dashboard.
      11. From the {{site.data.keyword.iot_short_notm}} dashboard, select **Extensions** in the menu side bar.
      12. In the **Extensions** page, in the Blockchain tile, click **Setup**, or click ![Gear icon](../images/gear.png "Configure") if you already have fabrics linked.
@@ -152,7 +156,7 @@ Before you can begin deploying and testing smart contracts, you must set up your
    </tr>
    <tr>
    <td>Port</td>
-   <td>The `api_port` number<ul><li>Use port 80 if your implementation does not use TLS.</li><li>Use port 443 if your implementation uses TLS.</li></ul></td>
+   <td>The `api_port_tls` number</td>
    </tr>
    <tr>
    <td>User ID</td>
@@ -164,7 +168,7 @@ Before you can begin deploying and testing smart contracts, you must set up your
    </tr>
    <tr>
    <td>Use TLS</td>
-   <td>On or Off</br>Use Transport Layer Security to encrypt the communication between {{site.data.keyword.iot_short_notm}} and the contract in the fabric. The default port numbers are set by the deployed {{site.data.keyword.iot_short_notm}} instance that you are connecting to.</td>
+   <td>On or Off</br>Use Transport Layer Security to encrypt the communication between {{site.data.keyword.iot_short_notm}} and the contract in the fabric. TLS must be enabled when connecting to an {{site.data.keyword.blockchainfull_notm}} fabric.</td>
    </tr></tbody>
    </table>  
     3. Click **Finish**.
@@ -183,11 +187,11 @@ The smart contracts that you want to deploy must be in a public GitHub repositor
 To develop and test your own chaincode before deploying it to {{site.data.keyword.blockchainfull_notm}}, you must set up a local development environment. This environment includes GoLang, which is used to write the chaincode for your contracts.
  1. Set up the development environment.  
  The development environment includes the tools that you need to develop your smart contracts by using the chaincode build in GoLang. For more information, see
- [Setting up the development environment](https://github.com/hyperledger/fabric/blob/master/docs/dev-setup/devenv.md) in the Hyperledger documentation.
+ [Setting up the development environment ![External link icon](../../../icons/launch-glyph.svg "External link icon")]( https://github.com/hyperledger/fabric/blob/master/docs/source/dev-setup/devenv.rst){: new_window} in the Hyperledger documentation.
  2. Install a chaincode debugging environment.   
- The debugging environment provides you with the tools that you need to test and debug your smart contracts before you deploy them to {{site.data.keyword.blockchainfull_notm}}. For more information, see [Writing, Building, and Running Chaincode in a Development Environment](https://github.com/hyperledger/fabric/blob/master/docs/Setup/Chaincode-setup.md) in the Hyperledger documentation.
+ The debugging environment provides you with the tools that you need to test and debug your smart contracts before you deploy them to {{site.data.keyword.blockchainfull_notm}}. For more information, see [Writing, Building, and Running Chaincode in a Development Environment ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/hyperledger/fabric/blob/master/docs/source/Setup/Chaincode-setup.rst){: new_window} in the Hyperledger documentation.
  3. Set up a network for development.   
- The network for development provides you with a stricter, production-like, environment for final testing of your smart contracts.  Use this environment for final testing of your tested and debugged contracts before you deploy them to {{site.data.keyword.blockchainfull_notm}}. For more information, see [Setting Up a Network](https://github.com/hyperledger/fabric/blob/master/docs/Setup/Network-setup.md) in the Hyperledger documentation.
+ The network for development provides you with a stricter, production-like, environment for final testing of your smart contracts.  Use this environment for final testing of your tested and debugged contracts before you deploy them to {{site.data.keyword.blockchainfull_notm}}. For more information, see [Setting Up a Network ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/hyperledger/fabric/blob/master/docs/source/Setup/Network-setup.rst){: new_window} in the Hyperledger documentation.
 
 3. Optional: Download the IBM-provided sample smart contracts.  
 IBM provides a number of smart contracts that you can download and use directly as-is or modify to suit your organization's goals.  
@@ -220,11 +224,11 @@ To download the sample contracts:
   For example, upload the sample.go file to:  
   `http://github.com/{my organization}/{my project}/`
   2. Register the contract with the peer that you connected to earlier.  
-  Use a REST client like CURL or Postman to submit the register call. For more information about the register call, see the [POST registrar API documentation](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/#!/Registrar/registerUser). Use the following information when registering:
+  Use a REST client like CURL or Postman to submit the register call. For more information about the register call, see the [POST registrar API documentation ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/hyperledger/fabric/blob/v0.6/docs/API/CoreAPI.md#registrar){: new_window}. Use the following information when registering:
   <ul>
-  <li>URL: `http://api_host:api_port/registrar`
+  <li>URL: `http://api_host:api_port_tls/registrar`
   <li>Type: POST
-  <li>Header: `Content type: application/x-www-form-urlencoded`
+  <li>Header: `Content type: application/json`
   <li>Payload:  
   ```json
    {  
@@ -235,29 +239,31 @@ To download the sample contracts:
 
   </ul>
   3. Deploy the contract to the peer.  
-  For more information about the deploy call, see the [POST devops/deploy API documentation](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/#!/Devops/chaincodeDeploy).  
+  For more information about the deploy call, see the [POST/chaincode API documentation ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/hyperledger/fabric/blob/v0.6/docs/API/CoreAPI.md#chaincode){: new_window}.  
   Use the following information when deploying:  
   <ul>
-  <li>URL: `http://api_host:api_port/devops/deploy`
+  <li>URL: `http://api_host:api_port_tls/chaincode`
   <li>Type: POST
-  <li>Header: `Content type: application/x-www-form-urlencoded`
+  <li>Header: `Accept: application/json`
+  <li>Header: `Content type:  application/json`
   <li>Payload:  
   ```
   {
-      "type": "GOLANG",   
-      "chaincodeID": {  
-      "path": "http://github.com/{my organization}/{my project}/sample.go",
-      "name": "string"
+    "jsonrpc": "2.0",
+    "method": "deploy",
+    "params": {
+        "type": 1,
+        "chaincodeID":{
+              "path": "http://github.com/{my organization}/{my project}/sample.go"
+        },
+        "ctorMsg": {
+            "function":"init",
+            "args":["{\"version\":\"1.0\",\"nickname\":\"sample_contract\"}"]
+        },
+        "secureContext": "username"
     },
-    "ctorMsg": {  
-      "function": "init",  
-      "args": [
-        "{\"version\":\"1.0\}"}"
-      ]
-    },
-    "secureContext": "'username'",
-    "confidentialityLevel": "PUBLIC"
-  }
+    "id":1234
+}
   ```  
   </ul>  
   Your contract is deployed to the fabric.  
@@ -267,16 +273,16 @@ To download the sample contracts:
   To start writing device data to the new blockchain smart contracts, you must first map device data to the contracts.  
    1. In {{site.data.keyword.Bluemix_notm}}, go to the Dashboard
    2. Select the space in which you deployed {{site.data.keyword.iot_short_notm}}.
-   3. Click the **{{site.data.keyword.iot_short_notm}}** tile.
+   3. Click the **{{site.data.keyword.iot_short_notm}}** service.
    4. Click **Launch** to open the {{site.data.keyword.iot_short_notm}} dashboard.
    5. Select **Blockchain**  by clicking ![Blockchain.](images/platform_blockchain.png "Blockchain") in the menu side bar.
-   6. Click **Link Contract**.
-   6. Select the fabric name for the fabric that you created earlier.
-   7. Enter the following information:  
+   6. Click **Map Device Data**.
+   7. Select the device type for which you want to store device data in the blockchain and the event name for the events that you want to store. Click **Next**.
+   8. Select the fabric name for the fabric that you created earlier. Click **Next**.
+   9. Enter the following information and click **Next**:
      - Contract ID - Paste in the 128-character contract ID that you saved when you deployed the contract.
      - Contract Name - Enter a name to identify the contract in {{site.data.keyword.iot_short_notm}}.
-     - Select the device type for which you want to store device data in the blockchain.
-     - Select the event name for the events that you want to store.  
+
      **Tip:** To find the event types for a device, go to the **Devices** page and click the device name to open the device details page. Scroll down to the **Sensor Information** section to see a list of the available events and data points for the device.
 
    11. Map the available device properties to contract parameters.   
@@ -293,7 +299,7 @@ To download the sample contracts:
     <li>  Temperature - float64  
     <li>  Carrier - string   
     </ul>  
-    For more information about how to map device data to contracts, see the [Data mapping example](https://github.com/ibm-watson-iot/blockchain-samples/wiki/Data-mapping-example) in the IoT Blockchain samples wiki on GitHub.
+    For more information about how to map device data to contracts, see the [Data mapping example ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/blockchain-samples/wiki/Data-mapping-example){: new_window} in the IoT Blockchain samples wiki on GitHub.
    12. In the summary page, verify that the information is correct.
    13. The device data to contract mapping is shown in the Blockchain page.
 
@@ -301,7 +307,7 @@ To download the sample contracts:
 In order to test your smart contract, perform an end-to-end test by creating a device in {{site.data.keyword.iot_short_notm}}, connecting your device to {{site.data.keyword.iot_short_notm}}, configuring IoT Blockchain to connect to your blockchain fabric, and configuring {{site.data.keyword.iot_short_notm}} to map and store your device messages in the blockchain. By using the {{site.data.keyword.blockchainfull_notm}} console, you can view the blockchain to see the device data in the ledger. If your contract supports the readAsset() function, you can use the monitoring UI to view your blockchain and see the device data from your own scenario being stored indelibly in a blockchain.
 
 5. Configure the Monitoring UI to connect to {{site.data.keyword.blockchainfull_notm}}.  
- **Tip:** If you haven't installed the Monitoring UI in your local environment, you can do it now. Follow the instructions in the Monitoring UI readme document that is available in the [Blockchain Monitoring UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui) GitHub directory.  
+ **Tip:** If you haven't installed the Monitoring UI in your local environment, you can do it now. Follow the instructions in the Monitoring UI readme document that is available in the [Blockchain Monitoring UI ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window} GitHub directory.  
  Access the configuration settings by clicking the **CONFIGURATION** button.   
  Use the following information to connect to a contract:
 <table>
@@ -316,7 +322,7 @@ In order to test your smart contract, perform an end-to-end test by creating a d
 <tr>
 <td>API Host and Port</td>
 <td>`http://peer_URL:port`</td>
-<td>The host and port for the {{site.data.keyword.blockchainfull_notm}} REST API, which is prepended with `http://`. Use the  `api_host` address and `api_port` number. </td>
+<td>The host and port for the {{site.data.keyword.blockchainfull_notm}} REST API, which is prepended with `https://`. Use the  `api_host` address and `api_port_tls` number. </td>
 </tr>
 <tr>
 <td>Chaincode ID</td>

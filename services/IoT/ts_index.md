@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-03"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -76,10 +76,10 @@ If you have problems or questions when using {{site.data.keyword.iot_short_notm}
 
 When using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.Bluemix_notm}} development teams.
 
-* If you have technical questions about developing or deploying an app with {{site.data.keyword.iot_short_notm}}, post your question on [Stack Overflow ![External link icon](../../icons/launch-glyph.svg)](http://stackoverflow.com/search?q=watson-iot+ibm-bluemix){:new_window} and tag your question with "ibm-bluemix" and "watson-iot".
+* If you have technical questions about developing or deploying an app with {{site.data.keyword.iot_short_notm}}, post your question on [Stack Overflow ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/search?q=watson-iot+ibm-bluemix){:new_window} and tag your question with "ibm-bluemix" and "watson-iot".
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
-* For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers ![External link icon](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window} forum. Include the  "watson-iot" and "bluemix" tags.
+* For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window} forum. Include the  "watson-iot" and "bluemix" tags.
 
-See [Getting help ![External link icon](../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/support/index.html#getting-help){: new_window} for more details about using the forums.
+See [Getting help](https://www.{DomainName}/docs/support/index.html#getting-help) for more details about using the forums.
 
-For information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support ![External link icon](../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/support/index.html#contacting-support){: new_window}.
+For information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.{DomainName}/docs/support/index.html#contacting-support).

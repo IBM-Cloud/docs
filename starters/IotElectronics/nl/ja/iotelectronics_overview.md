@@ -1,12 +1,17 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-29"
+  years: 2016, 2017
+lastupdated: "2017-03-10"
 ---
 
-{:new_window: target="\_blank"}
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # {{site.data.keyword.iotelectronics}} について
 {: #iotelectronics_about}
@@ -14,18 +19,18 @@ lastupdated: "2016-11-29"
 {{site.data.keyword.iotelectronics_full}} は、接続された電気製品、センサー、ゲートウェイとの通信や、それらによって収集されたデータの利用をアプリで実行できるようにする、完全に統合された IoT 実動インスタンスです。
 {:shortdesc}
 
-{{site.data.keyword.iotelectronics}} では {{site.data.keyword.iot_full}} サービスを使用することで、開発したアプリケーションをスマート家電に接続します。また、{{site.data.keyword.iot_short_notm}} を使用することで、電気製品からのデータを分析して理解できるようにします。注意を必要とする状態を識別するためのルールを設定し、E メールの送信、Node-RED ワークフローの実行、Web サービスへの接続などの自動応答を定義することができます。  
+{{site.data.keyword.iotelectronics}} では {{site.data.keyword.iot_full}} サービスを使用することで、開発したアプリケーションをスマート家電に接続します。また、{{site.data.keyword.iot_short_notm}} を使用することで、電気製品からのデータを分析して理解できるようにします。注意を必要とする状態を識別するためのルールを設定し、E メールの送信、Node-RED ワークフローの実行、Web サービスへの接続などの自動応答を定義することができます。
 
 ## スターターを見つける
 {: #iot4eFindingStarter}
-{{site.data.keyword.iotelectronics}} Starter は、{{site.data.keyword.Bluemix_notm}} カタログの[ボイラープレート・セクション](https://console.{DomainName}/catalog/starters/iot-for-electronics-starter/)にあります。  
+{{site.data.keyword.iotelectronics}} Starter は、{{site.data.keyword.Bluemix_notm}} カタログの[ボイラープレート・セクション](https://console.{DomainName}/catalog/starters/iot-for-electronics-starter/)にあります。
 
 ## {{site.data.keyword.iotelectronics}} を使用してできること
 {: #Features_iote}
 シミュレート電気製品とデータを使用して、{{site.data.keyword.iotelectronics}} ソリューションの機能を短時間で体験できます。
 
 ### シミュレート電気製品に接続する
-シミュレート電気製品を作成し、それをプラットフォームに接続してストリーミング・ライブ・データを表示します。Web ベースのアプリを使用して、電気製品によるコマンドの受信と操作の実行をシミュレートします。模擬的に障害を発生させて、通知とアラートを生成します。{{site.data.keyword.iotelectronics}} Starter 内では、デモンストレーション用のシミュレート電気製品として、洗濯機が使用されます。接続先に選択する電気製品は、どのタイプのスマート電子デバイスでもかまいません。  
+シミュレート電気製品を作成し、それをプラットフォームに接続してストリーミング・ライブ・データを表示します。Web ベースのアプリを使用して、電気製品によるコマンドの受信と操作の実行をシミュレートします。模擬的に障害を発生させて、通知とアラートを生成します。{{site.data.keyword.iotelectronics}} Starter 内では、デモンストレーション用のシミュレート電気製品として、洗濯機が使用されます。接続先に選択する電気製品は、どのタイプのスマート電子デバイスでもかまいません。
 
 ### サンプルのコンシューマー・モバイル・アプリを試行する
 iOS または Android モバイル・デバイスを使用して、電気製品の所有者が電気製品とのやり取りをどのように行えるかを確かめます。プラットフォームと {{site.data.keyword.Bluemix_notm}} を使用して、コマンドを電気製品に送信し、電気製品からの更新情報を受信します。模擬的な障害イベントを発生させ、その結果をモバイル・アプリで表示します。
@@ -52,17 +57,3 @@ iOS または Android モバイル・デバイスを使用して、電気製品�
 **{{site.data.keyword.sdk4nodefull}}** は、サーバー・サイド JavaScript&reg; アプリを開発、デプロイ、スケーリングできるようにし、強化されたパフォーマンス、セキュリティー、保守容易性を実現します。
 
 **サンプル・モバイル・アプリ**は、スマートフォンやタブレットなどのモバイル・デバイスを使用することによって、シミュレート電気製品の状況を表示し、その電気製品との通信を行えるようにします。モバイル・アプリの入手方法については、[モバイル・アプリの使用](iotelectronics_config_mobile.html)を参照してください。
-
-# 関連リンク
-{: #rellinks}
-## コンポーネント
-{: #general}
-* [{{site.data.keyword.iot_short}} の資料](https://console.ng.bluemix.net/docs/services/IoT/index.html#gettingstartedtemplate)
-* [{{site.data.keyword.amafull}} の資料](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html)
-* [{{site.data.keyword.sdk4nodefull}} の資料](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
-
-
-## API 資料
-{: #api}
-*  [{{site.data.keyword.iotelectronics}} API](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)  
-*  [{{site.data.keyword.iot_short}} API](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)

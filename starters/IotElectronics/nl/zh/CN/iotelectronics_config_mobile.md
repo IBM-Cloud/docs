@@ -1,17 +1,16 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-29"
-
+  years: 2016, 2017
+lastupdated: "2017-03-10"
 ---
 
-
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # 使用移动应用程序
 {: #iot4e_using_mobile}
@@ -39,7 +38,7 @@ lastupdated: "2016-11-29"
 
 要将移动应用程序连接到环境并注册设备，请执行以下任务：
 
-1. 打开 {{site.data.keyword.itoelectronics}} Starter 应用程序。有关指示信息，请参阅[打开 Starter 应用程序](iot4ecreatingappliances.html#iot4e_openAppMain)。
+1. 打开 {{site.data.keyword.iotelectronics}} Starter 应用程序。有关指示信息，请参阅[打开 Starter 应用程序](iot4ecreatingappliances.html#iot4e_openAppMain)。
 
 2. 选择**远程控制连接的设备**。
 

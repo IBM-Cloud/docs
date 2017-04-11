@@ -1,15 +1,16 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-29"
-
+  years: 2016, 2017
+lastupdated: "2017-03-10"
 ---
 
-{:new_window: target="\_blank"}
-
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # スターター・アプリの使用
 {{site.data.keyword.iotelectronics_full}} スターター・アプリでシミュレート電気製品を作成します。{{site.data.keyword.iot_short_notm}} に接続された電気製品を製造メーカーがどのようにモニターできるのか体験します。シミュレート電気製品と手動で対話して、アラート、通知、アクションを起動します。
@@ -23,7 +24,7 @@ lastupdated: "2016-11-29"
 
     ![ダッシュボードの {{site.data.keyword.iotelectronics}}。](images/IoT4E_bm_dashboard.svg "ダッシュボードの {{site.data.keyword.iotelectronics}}")
 
-2. *「アプリは稼働しています」*という状況メッセージがヘッダーに表示されるまで待機してから、**「アプリの表示 (View App)」**をクリックしてスターター・アプリを表示します。  
+2. *「アプリは稼働しています」*という状況メッセージがヘッダーに表示されるまで待機してから、**「アプリの表示 (View App)」**をクリックしてスターター・アプリを表示します。
 
     ![{{site.data.keyword.iotelectronics}} アプリの表示。](images/IoT4E_view_app.svg "{{site.data.keyword.iotelectronics}} アプリの表示")
 
@@ -42,7 +43,7 @@ lastupdated: "2016-11-29"
 
     ![洗濯機の追加。](images/IoT4E_add_washer.svg "洗濯機の追加")
 
-3. 洗濯機をクリックして洗濯機の詳細を表示し、コマンドを発行して障害を発生させます。
+3. 洗濯機の詳細情報を確認するには、洗濯機をクリックします。コマンドと制御パネルで、洗濯機を始動させるか別のタイプの故障をクリックして、状況の変化を確認します。モバイル・アプリから、状況の変化を確認したり洗濯機を制御したりすることもできます。
 
   ![洗濯機の状況の詳細。](images/IoT4E_washer_control.svg "洗濯機の状況の詳細")
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-12-08"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -43,17 +43,17 @@ The following diagram illustrates the general {{site.data.keyword.iot_short_notm
 ## Before you begin
 {: #byb}
 
-- Get an overview of {{site.data.keyword.iot_short_notm}}, how it relates to the general blockchain concept, and what it can do for you at [{{site.data.keyword.iot_short_notm}}](http://www.ibm.com/blockchain/) on IBM.com.
+- Get an overview of {{site.data.keyword.iot_short_notm}}, how it relates to the general blockchain concept, and what it can do for you at [{{site.data.keyword.iot_short_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/blockchain/){: new_window} on IBM.com.
 - [Enable {{site.data.keyword.iot_short_notm}} blockchain integration](reference/extensions/index.html#blockchain) for your organization.
 - Connect devices that produce data that you want to write to the blockchain ledger.  
 Follow the instructions in the [Connecting devices](iotplatform_task.html) topic to connect your devices.
 - Install the Monitoring UI.
-The Monitoring UI is used to verify the connection between {{site.data.keyword.iot_short_notm}} and the blockchain fabric. Follow the instructions in the Monitoring UI readme document that is available in the [Blockchain Monitoring UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui) GitHub directory.
+The Monitoring UI is used to verify the connection between {{site.data.keyword.iot_short_notm}} and the blockchain fabric. Follow the instructions in the Monitoring UI readme document that is available in the [Blockchain Monitoring UI ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window} GitHub directory.
 
 ### Using the IBM basic scenario to get started quickly
 
 To quickly get started with testing {{site.data.keyword.iot_short_notm}} blockchain integration, you can connect to an IBM-provided fabric and map a Node-RED sample device to the IBM-provided sample contract.  The steps required for this scenario are labeled **IBM basic scenario** in this topic.  
-**Important:** Be aware that the IBM-provided sample blockchain ledger and all its data is visible to all users of the sample blockchain. Do not store any sensitive information in the IBM-provided sample blockchain. In addition, sample fabrics that support the sample and trade lane contracts are subject to change, including the connection info for each peer. The connection details are provided in the [IoT Blockchain Connection Info](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections) wiki page in the Watson IoT Blockchain community.
+**Important:** Be aware that the IBM-provided sample blockchain ledger and all its data is visible to all users of the sample blockchain. Do not store any sensitive information in the IBM-provided sample blockchain. In addition, sample fabrics that support the sample and trade lane contracts are subject to change, including the connection info for each peer. The connection details are provided in the [IoT Blockchain Connection Info ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} wiki page in the Watson IoT Blockchain community.
 
 The IBM-provided basic {{site.data.keyword.iot_short_notm}} blockchain integration environment consists of the following components:
 - {{site.data.keyword.Bluemix_notm}}:
@@ -70,7 +70,7 @@ The following architecture diagram illustrates the components that are required 
 
 ![The IoT Blockchain architecture.](blockchain/images/architecture.svg "IoT Blockchain architecture")
 
-**IBM basic scenario:** Create a Node-RED device simulator by following the instructions in the [Creating and connecting a Node-RED device simulator](nodereddevice_sample.html) topic. For blockchain integration, use the blockchain device-specific node information when you import the node data. The node information is available in the [Node-RED Device Simulator](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Node-RED%20Device%20Simulator) wiki page in the Watson IoT Blockchain Community. If needed, contact your IBM blockchain contact to get access to the community.
+**IBM basic scenario:** Create a Node-RED device simulator by following the instructions in the [Creating and connecting a Node-RED device simulator](nodereddevice_sample.html) topic. For blockchain integration, use the blockchain device-specific node information when you import the node data. The node information is available in the [Node-RED Device Simulator ![External link icon](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Node-RED%20Device%20Simulator){: new_window} wiki page in the Watson IoT Blockchain Community. If needed, contact your IBM blockchain contact to get access to the community.
 
 ## Connect to a blockchain fabric
 {: #getting_started}  
@@ -120,7 +120,7 @@ To connect to a blockchain fabric:
 3. In the Configure blockchain section, click **Done** to save the fabric information.
 
 
-**IBM basic scenario:** To connect to the IBM-provided fabric, use the connection details for the Sample Contract that are provided in the [IoT Blockchain Connection Info](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections) wiki page in the Watson IoT Blockchain community. If needed, contact your IBM blockchain contact to get access to the community.
+**IBM basic scenario:** To connect to the IBM-provided fabric, use the connection details for the Sample Contract that are provided in the [IoT Blockchain Connection Info ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} wiki page in the Watson IoT Blockchain community. If needed, contact your IBM blockchain contact to get access to the community.
 
 
 ## Map device data to smart contracts
@@ -157,13 +157,13 @@ To map device data to a contract:
 </tr>
 </tbody>
 </table>
-**IBM basic scenario:** The sample pre-deployed smart contract lets you map device data points to certain contract attributes to store the data point values in the blockchain ledger. Use the sample contract to test device data mapping before you try the more advanced trade lane contracts or write your own contracts. The contract ID is provided in the [IoT Blockchain Connection Info](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections) wiki page in the Watson IoT Blockchain community. If needed, contact your IBM blockchain contact to get access to the community.
+**IBM basic scenario:** The sample pre-deployed smart contract lets you map device data points to certain contract attributes to store the data point values in the blockchain ledger. Use the sample contract to test device data mapping before you try the more advanced trade lane contracts or write your own contracts. The contract ID is provided in the [IoT Blockchain Connection Info ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} wiki page in the Watson IoT Blockchain community. If needed, contact your IBM blockchain contact to get access to the community.
 
 
  8. Create a route to map device properties to contract parameters.  
  The parameters that are available in the contract are imported. For each parameter, enter a corresponding event property.  
  **Important:** Do not include the `d.` that is prepended to the data point in the device message.
- **IBM basic scenario:** If you are using the IBM-provided contracts, map the following parameters that are listed in the [Data mapping](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Data%20Mapping) wiki page in the Watson IoT Blockchain community. If needed, contact your IBM blockchain contact to get access to the community.
+ **IBM basic scenario:** If you are using the IBM-provided contracts, map the following parameters that are listed in the [Data mapping ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Data%20Mapping){: new_window} wiki page in the Watson IoT Blockchain community. If needed, contact your IBM blockchain contact to get access to the community.
  9. In the summary page, verify that all information was entered correctly.
  10. The device data to contract mapping is displayed in the Blockchain page.
 
@@ -173,7 +173,7 @@ Congratulations, you are now up and running!
 {: #test_simple}
 
 If you are connected to the IBM-provided fabric and mapped your device data to the sample contract, you can test the end-to-end data flow from the device to the blockchain ledger. Use the IoT Blockchain Monitoring UI to view the blockchain activity and data for your assets.  
-**Tip:** If the Monitoring UI is not yet installed in your local environment, you can install it now. Follow the instructions in the Monitoring UI readme document that is available in the [Blockchain Monitoring UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui) GitHub directory.  
+**Tip:** If the Monitoring UI is not yet installed in your local environment, you can install it now. Follow the instructions in the Monitoring UI readme document that is available in the [Blockchain Monitoring UI ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window} GitHub directory.  
 1. Configure the Monitoring UI to connect to {{site.data.keyword.iot_short_notm}}.  
  In the Monitoring UI, click **CONFIGURATION** to configure the Monitoring UI connection:
  <table>
@@ -202,7 +202,7 @@ If you are connected to the IBM-provided fabric and mapped your device data to t
 </tr>
 </tbody>
 </table>
-**IBM basic scenario:** To configure the Monitoring UI to connect to basic or trade lane contracts, use the connection details that are provided in the [IoT Blockchain Connection Info](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections) wiki page in the Watson IoT Blockchain community. If needed, contact your IBM blockchain contact to get access to the community.
+**IBM basic scenario:** To configure the Monitoring UI to connect to basic or trade lane contracts, use the connection details that are provided in the [IoT Blockchain Connection Info ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} wiki page in the Watson IoT Blockchain community. If needed, contact your IBM blockchain contact to get access to the community.
 2. In the Node-RED flow editor, click the button on the CON123 node to inject device data, have it sent as a message to {{site.data.keyword.iot_short_notm}}, and written to the {{site.data.keyword.iot_short_notm}} ledger by the simple contract.   
 **Tip:** To get a continual data flow, double-click the inject node, set the Repeat parameter to `interval`, and configure an appropriate interval, such as every 1 minute.
 3. In the Monitoring UI, verify that device data is displayed as expected in the blockchain blocks.  

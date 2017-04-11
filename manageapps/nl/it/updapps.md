@@ -12,14 +12,14 @@ lastupdated: "2016-08-25"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Aggiornamento di applicazioni
+# Aggiornamento di applicazioni
 {: #updatingapps}
 
 
 Per aggiornare le applicazioni in {{site.data.keyword.Bluemix_notm}}, puoi utilizzare il comando cf push o {{site.data.keyword.Bluemix}} DevOps Services. In molti casi, anche per i pacchetti di build integrati quali Node.js, devi inoltre fornire un parametro -c per specificare il comando utilizzato per avviare la tua applicazione.
 {:shortdesc}
 
-##Creazione e utilizzo di un dominio personalizzato
+## Creazione e utilizzo di un dominio personalizzato
 {: #domain}
 
 Per le applicazioni CF e i gruppi di contenitori, puoi utilizzare un dominio personalizzato nell'URL della tua applicazione anziché il dominio di sistema {{site.data.keyword.Bluemix_notm}} predefinito che è mybluemix.net.
@@ -146,7 +146,7 @@ Se hai già distribuito un'applicazione in {{site.data.keyword.Bluemix_notm}} e
 desideri aggiornare l'applicazione a una nuova versione, puoi utilizzare uno dei
 seguenti due approcci per garantire la distribuzione Blue-Green.
 
-###Esempio: Utilizzo del comando cf rename
+### Esempio: Utilizzo del comando cf rename
 
 In questo esempio, il nome dell'applicazione è Blue. L'esempio dimostra come aggiornare la versione di *Blue* utilizzando
 il comando **cf rename** senza interrompere il traffico
@@ -216,7 +216,7 @@ essere eliminata quando è in funzione la nuova.
 
   **Risultato:** l'applicazione *Blue* sta rispondendo all'URL `Blue.mybluemix.net`.
 
-###Esempio: Utilizzo del comando cf map-route
+### Esempio: Utilizzo del comando cf map-route
 
 In questo esempio, *Blue* è l'applicazione
 distribuita in precedenza e *Green* è la versione aggiornata. Questo esempio dimostra come aggiornare la versione di *Blue* utilizzando
@@ -320,7 +320,7 @@ essere eliminata quando è in funzione la nuova.
 
 
 # Link correlati
-{: #rellinks}
+{: #rellinks notoc}
 
 ## Link correlati
 {: #general}

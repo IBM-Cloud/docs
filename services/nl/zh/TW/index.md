@@ -25,7 +25,7 @@ lastupdated: "2017-01-11"
 |協力廠商	|由 IBM 以外的公司所提供的服務。	|協力廠商服務支援是由服務提供者所提供。如果是由 IBM 調查問題，且該問題經判定為協力廠商服務中的錯誤，IBM 並不負責提供修正程式。IBM 會視需要與協力廠商服務提供者分享分析資訊。|
 |社群	|開放程式碼社群所提供的服務。	|社群服務支援是由「{{site.data.keyword.Bluemix_notm}} Developers 社群」所提供。如果是由 IBM 調查問題，且該問題經判定為社群服務中的錯誤，IBM 並不負責提供修正程式。|
 |測試版	|尚未準備好進入正式作業且目前處於開發試用階段的服務。「測試版」服務可協助開發及行銷小組先評量服務價值，再正式發行該服務。	|在 IBM 所提供的測試版服務中判定為錯誤的問題會受到支援，但是 IBM 不負責提供修正程式。此外，還會將問題單的嚴重性指派為 3 或 4（適用時）。如需問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](/docs/support/index.html#contacting-bluemix-support)。|
-{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} services support information" caption-side="top"}
+{: caption="表 1. {{site.data.keyword.Bluemix_notm}} 服務支援資訊" caption-side="top"}
 
 ##實驗性服務
 {: #experimental_services}
@@ -130,7 +130,7 @@ lastupdated: "2017-01-11"
 |{{site.data.keyword.appserver_short}}	|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
 |{{site.data.keyword.workloadscheduler}}	|在美國達拉斯及美國華盛頓州進行管理		|在荷蘭阿姆斯特丹及義大利米蘭進行管理		|在澳洲墨爾本進行管理 |
 |{{site.data.keyword.xpagesservice_short}}	|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
-{: caption="Table 2. Service availability" caption-side="top"}
+{: caption="表 2. 服務可用性" caption-side="top"}
 
 
 ## 服務的持續可用性

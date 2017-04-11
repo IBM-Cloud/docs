@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-01"
+  years: 2016, 2017
+lastupdated: "2017-03-13"
 
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2016-08-01"
 {: #watsoniotplatform_architecture}
 ![Architektur von IBM Watson IoT Platform](images/architecture_platform.svg "Architektur von IBM Watson IoT Platform")
 
-**Wichtig:** Die Analysefunktionen stammen aus dem {{site.data.keyword.iotrtinsights_full}}-Service und werden zusammengeführt. Wenn Ihre {{site.data.keyword.iot_short_notm}}-Organisation als Datenquelle für eine vorhandene {{site.data.keyword.iotrtinsights_short}}-Instanz verwendet wird, sind Cloud Analytics und Edge Analytics erst aktiviert, wenn die vorhandenen {{site.data.keyword.iotrtinsights_short}}-Instanzen migriert wurden. Verwenden Sie weiterhin das {{site.data.keyword.iotrtinsights_short}}-Dashboard für Ihre Analysevorhaben, bis die Migration abgeschlossen ist. Weitere Informationen finden Sie im [Blog zu IBM Watson IoT Platform](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} in IBM developerWorks und in den Dashboards Ihrer vorhandenen {{site.data.keyword.iotrtinsights_short}}-Instanz.  
+**Wichtig:** Die Analysefunktionen stammen aus dem {{site.data.keyword.iotrtinsights_full}}-Service und werden zusammengeführt. Wenn Ihre {{site.data.keyword.iot_short_notm}}-Organisation als Datenquelle für eine vorhandene {{site.data.keyword.iotrtinsights_short}}-Instanz verwendet wird, sind Cloud Analytics und Edge Analytics erst aktiviert, wenn die vorhandenen {{site.data.keyword.iotrtinsights_short}}-Instanzen migriert wurden. Verwenden Sie weiterhin das {{site.data.keyword.iotrtinsights_short}}-Dashboard für Ihre Analysevorhaben, bis die Migration abgeschlossen ist. Weitere Informationen finden Sie im [Blog zu IBM Watson IoT Platform ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} in IBM developerWorks und in den Dashboards Ihrer bestehenden {{site.data.keyword.iotrtinsights_short}}-Instanz.  
 
 {{site.data.keyword.iot_short_notm}} kommuniziert mithilfe der {{site.data.keyword.iot_short_notm}}-API und des {{site.data.keyword.iot_short_notm}}-Nachrichtenprotokolls mit Ihren Anwendungen und Geräten. Das {{site.data.keyword.iot_short_notm}}-Dashboard stellt Verbindungen als Front-End-Benutzerschnittstelle bereit, um Operationen innerhalb der Plattform zu vereinfachen. Gerätedaten können zusammen mit Analyselösungen gespeichert oder verwendet werden.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-02-07"
+lastupdated: "2017-02-28"
 
 ---
 {:new_window: target="_blank"}
@@ -18,7 +18,7 @@ lastupdated: "2017-02-07"
 **The {{site.data.keyword.mqafull}} service is deprecated.** For more information about the status and dates, see the [Retirement of Bluemix Mobile Quality Assurance blog entry ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/?p=72728){: new_window}.
 {:deprecated}
 
-{{site.data.keyword.mqafull}} equips teams to capture tester and live-user experience to continuously build and deliver high-quality mobile apps. 
+{{site.data.keyword.mqafull}} equips teams to capture tester and live-user experience to continuously build and deliver high-quality mobile apps.
 {: shortdesc}
 
 To get up and running quickly with the {{site.data.keyword.mqa}} service, follow these steps:
@@ -26,7 +26,7 @@ To get up and running quickly with the {{site.data.keyword.mqa}} service, follow
 1. After you create an instance <!--[create an instance](https://console.{DomainName}/docs/services/reqnsi.html#req_instance)-->of the {{site.data.keyword.mqa}} service, you can access the {{site.data.keyword.mqa}} Console by clicking your tile in the **Services** section of the {{site.data.keyword.Bluemix}} Dashboard.
 
 	The {{site.data.keyword.mqa}} service launches.
- 
+
 2. Add a mobile app to the {{site.data.keyword.mqa}} instance by selecting **Add MQA App** and providing a name for the app.
 
 3. Download the {{site.data.keyword.mqa}} [Client SDKs ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/support/docview.wss?uid=swg27044490){: new_window} and complete instrumenting your app by continuing with one of the following procedures:
@@ -42,11 +42,11 @@ To get up and running quickly with the {{site.data.keyword.mqa}} service, follow
 	<dl>
 		<dt><strong>Sessions</strong></dt>
 		<dd>Review information about crashes, bugs, feedback, and the state of the device during the session.  See [Viewing session details ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/support/knowledgecenter/SSJML5_6.0.0/com.ibm.mqa.uau.saas.doc/topics/t_ViewingSessionDetails.html){: new_window} in IBM Knowledge Center for more information.</dd>
-		<dt><img src="images/cap_crashicon.jpg" alt=" " /> <strong>Crashes</strong></dt>
+		<dt>![](/images/cap_crashicon.jpg) <strong>Crashes</strong></dt>
 		<dd>Review information about what happened to cause crashes. See [Crash reports ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/support/knowledgecenter/SSJML5_6.0.0/com.ibm.mqa.uau.saas.doc/topics/c_CrashReports.html){: new_window} in IBM Knowledge Center for more information.</dd>
-		<dt><img src="images/cap_bugicon.jpg" alt=" " /> <strong>Bugs</strong></dt>
+		<dt>![](/images/cap_bugicon.jpg) <strong>Bugs</strong></dt>
 		<dd>Review information reported by users such as bug reports, screen captures, and device details. See [Bug reports ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/support/knowledgecenter/SSJML5_6.0.0/com.ibm.mqa.uau.saas.doc/topics/c_BugReports.html){: new_window} in IBM Knowledge Center for more information.</dd>
-		<dt><img src="images/cap_feedbackicon.jpg" alt=" " /><strong>Feedback</strong></dt>
+		<dt>![](/images/cap_feedbackicon.jpg) <strong>Feedback</strong></dt>
 		<dd>Review user feedback responses to see who wrote the feedback, and when. See [User feedback ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/support/knowledgecenter/SSJML5_6.0.0/com.ibm.mqa.uau.saas.doc/topics/c_UserFeedback.html){: new_window} in IBM Knowledge Center for more information.</dd>
 		<dt><strong>Sentiment score (if configured)</strong></dt>
 		<dd>Review the user sentiment score over time and versions to monitor, measure, and improve app quality. See [User sentiment ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/support/knowledgecenter/SSJML5_6.0.0/com.ibm.mqa.uau.saas.doc/topics/UserSentiment.html){: new_window} in IBM Knowledge Center for more information.</dd>
@@ -55,20 +55,20 @@ To get up and running quickly with the {{site.data.keyword.mqa}} service, follow
 	</dl>
 
 	These metrics include the following data:
-		
+
 	* Pre-production data for crashes, bugs, feedback, and sessions.
 	* Production data for crashes, feedback, sentiment, and sessions.
 
 	![Screen capture of the interface where you can view quality metrics for an app.](images/quality_metrics_saas4.gif)
 
-	By viewing this information for your apps, you can determine whether to investigate specific issues further. For example, if the crash rate for an app spikes, you can click the crash rate to view more detailed information on crash reports for that app. 
-	
+	By viewing this information for your apps, you can determine whether to investigate specific issues further. For example, if the crash rate for an app spikes, you can click the crash rate to view more detailed information on crash reports for that app.
+
 5. To view the overall sentiment score for the app, you must configure sentiment analysis:
 
 	1. In the *Sentiment Score* section, click the link to configure sentiment analysis for the selected app.
 
 	2. On the Application Details page, [configure sentiment analysis ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/support/knowledgecenter/SSJML5_6.0.0/com.ibm.mqa.uau.saas.doc/topics/tEnablingUserSentiment.html){: new_window} and save your changes.
-	
+
 
 # Related Links
 {: #rellinks notoc}

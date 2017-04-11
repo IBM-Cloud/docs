@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015，2017
-lastupdated: "2017-01-12"  
+lastupdated: "2017-01-20"  
  
 
 ---
@@ -17,12 +17,14 @@ lastupdated: "2017-01-12"
 # Getting started with the {{site.data.keyword.autoscaling}} service
 {: #autoscaling}
 
+
 In {{site.data.keyword.Bluemix_notm}}, you can automatically manage your application capacity. Use the {{site.data.keyword.autoscaling}} service to automatically increase or decrease the compute capacity of your application. The number of application instances are adjusted dynamically based on the {{site.data.keyword.autoscaling}} policy that you define.
 {:shortdesc} 
 
 ## Contents
   * [Using the {{site.data.keyword.autoscaling}} service in {{site.data.keyword.Bluemix_notm}}](#as-service)
   * [Configuring Node.js apps with the {{site.data.keyword.autoscaling}} service](#node-asagent)
+  * [Configuring Swift apps with the {{site.data.keyword.autoscaling}} service](#swift-asagent)
   * [Manage {{site.data.keyword.autoscaling}} service through RESTful API](#RESTAPI)
   * [Manage {{site.data.keyword.autoscaling}} service through {{site.data.keyword.autoscaling}} CLI](#CLI)
   * [Policy fields for the {{site.data.keyword.autoscaling}} service](#policy_fields)
@@ -36,7 +38,7 @@ To use the {{site.data.keyword.autoscaling}} service, complete the following ste
 1. On {{site.data.keyword.Bluemix_notm}}  Dashboard, click *Add a service or API*, and then select the {{site.data.keyword.autoscaling}} service from the DevOps section in the service catalog. A new window is displayed to present an overview of the {{site.data.keyword.autoscaling}} service.
 2. Select the application that you want to bind the {{site.data.keyword.autoscaling}} service to, and click *Create*. <br/>
 *Remember:* You can bind only ONE {{site.data.keyword.autoscaling}} service to an application. If the application is already bound with another {{site.data.keyword.autoscaling}} service, do not select the application in this step. Otherwise, you will get the CWSCV2004E error.<br/>The Restage Application window is displayed.
-3. In the Restage Application window, click *Restage* to restage your application before you use the new {{site.data.keyword.autoscaling}} service that you just added. <br/><ul><li>For Liberty application, the {{site.data.keyword.autoscaling}} is auto-configured and ready for use after the application restage.</li> <li>For Node.js applications, you must update your application code to enable the {{site.data.keyword.autoscaling}} service before pushing the application to {{site.data.keyword.Bluemix_notm}}. See [Configuring Node.js apps with the {{site.data.keyword.autoscaling}} service](index.html#node_asagent) for more details.</ul><br/> 
+3. In the Restage Application window, click *Restage* to restage your application before you use the new {{site.data.keyword.autoscaling}} service that you just added. <br/><ul><li>For Liberty application, the {{site.data.keyword.autoscaling}} is auto-configured and ready for use after the application restage.</li> <li>For Node.js or Swift applications, you must update your application code to enable the {{site.data.keyword.autoscaling}} service before pushing the application to {{site.data.keyword.Bluemix_notm}}. See [Configuring Node.js apps with the {{site.data.keyword.autoscaling}} service](index.html#node-asagent) or [Configuring Swift apps with the {{site.data.keyword.autoscaling}} service](index.html#swift-asagent) for more details.</ul><br/> 
 After restaging application is completed, you can start to configure the {{site.data.keyword.autoscaling}} service for your application.
 4. To configure the {{site.data.keyword.autoscaling}} for an application, in the {{site.data.keyword.Bluemix_notm}} user interface, click your application that the {{site.data.keyword.autoscaling}} service is bound to.
 5. In the services section on the Dashboard, click the *Auto-Scaling* icon.
@@ -46,8 +48,9 @@ Now you can configure the {{site.data.keyword.autoscaling}} policy, see the metr
 <dl>
 <dt>Policy Configuration</dt>
 <dd>Use this section to create or edit the scaling rules to specify the conditions in which certain scaling activities are to be triggered.<ul>
-<li> For Liberty for Java™ applications, you can define scaling rules for Heap, Memory, Response Time, and Throughput.  
+<li> For Liberty for Java™ applications, you can define scaling rules for Heap, Memory, Response Time, and Throughput.
 <li> For Node.js applications, you can define scaling rules for Heap, Memory, and Throughput.
+<li> For Swift applications, you can define scaling rules for Memory, Throughput and Response Time.
 <li> For Ruby applications, you can define scaling rules for Memory.</ul>
 *Note:* You can define multiple scaling rules for more than one metric type. However, the {{site.data.keyword.autoscaling}} service does not detect conflicts between scaling policies. When you define the scaling policy, you must ensure that multiple scaling rules do not conflict with one another. Otherwise, you might see the total instance number fluctuates because the application scales in 1 minute and scales out the next.<br/><br/>
 If the workload of your application changes dramatically during the peak time and the spare time, you can create a scaling schedule to handle the different scaling requirements for different time periods. Use the Minimum Instance Count parameter that is specified in a schedule to define the baseline of the application instance number, while dynamic scaling rules still apply to the schedule to trigger the scaling in and scaling out actions.</dd>
@@ -70,7 +73,7 @@ To enable the {{site.data.keyword.autoscaling}} service with your Node.js apps, 
 1. Update the package.json file with the following steps: <ol><li>Create a dependency entry for `blumix-autoscaling-agent`, for example `"bluemix-autoscaling-agent": "*"`.<br/><li>(Optional) Set heap limit within the `scripts` section based on the memory that you allocate for your app, for example `"start": "node --max-old-space-size=600 app.js"`. .<br/>*Note:* Set a value for `max-old-space-size` if you want to trigger scaling based on heap usage. If the value is not set when you start your application, the default Node.js heap limit 1.4GB is used regardless how much memory your app is allocated, which might lead to improper auto-scaling decisions.<br/>
 ```
 {
-	"name": "NodejsStarterApp",
+	"name": "Your-App",
 	"version": "0.0.1",
 	"description": "A sample nodejs app for Bluemix",
 	"scripts": {
@@ -96,6 +99,104 @@ var server = http.createServer(function handler(req, res) {
 	}).listen(process.env.PORT || 3000);
 console.log('App is listening on port 3000');
 ```
+
+## Configuring Swift apps with the {{site.data.keyword.autoscaling}} service
+{: #swift-asagent}
+
+To enable the {{site.data.keyword.autoscaling}} service with your Swift apps, besides service provision and binding steps, you need to complete the following steps as well before pushing the app to {{site.data.keyword.Bluemix_notm}}.
+
+1. Update Package.swift file to add dependency declaration of package SwiftMetrics: 
+   ```
+   Package(url: "https://github.com/RuntimeTools/SwiftMetrics.git" , majorVersion: 1)
+   ```
+   A sample Package.swift file is as below: 
+```
+import PackageDescription
+let package = Package(
+    name: "Your-App",
+    targets: [
+      Target(name: "Your-App", dependencies: [])
+    ],
+    dependencies: [
+      .Package(url: "https://github.com/RuntimeTools/SwiftMetrics.git" , majorVersion: 1)
+    ]) 
+```
+2. Add the SwiftMetrics modules to your Swift app. 
+ + Import the packages.
+```   
+import SwiftMetrics
+import SwiftMetricsKitura
+import SwiftMetricsBluemix
+```
+ + Initialize and start the agent: 
+    +  Declare variables of the SwiftMetrics and SwiftMonitor in your app.
+      ```   
+      let sm: SwiftMetrics
+      let monitor: SwiftMonitor
+      ```
+    +  Create instances of the SwiftMetrics and SwiftMonitor classes in your app.
+      ```   
+      sm = try SwiftMetrics()
+      _ = SwiftMetricsKitura(swiftMetricsInstance: sm)
+      _ = SwiftMetricsBluemix(swiftMetricsInstance: sm)
+      monitor = sm.monitor()
+      ```
+    +  A sample of a Swift app that uses SwiftMetrics and Kitura is shown below:
+      ```
+      import Configuration
+      import CloudFoundryConfig
+      import Kitura
+      import SwiftyJSON
+      import Dispatch
+      import LoggerAPI
+      import CloudFoundryEnv
+      import SwiftMetrics
+      import SwiftMetricsKitura
+      import SwiftMetricsBluemix
+      import Foundation
+      public class Controller {
+          let router: Router
+          let configMgr: ConfigurationManager
+          var jsonEndpointEnabled: Bool = true
+          var jsonEndpointDelay: UInt32 = 0
+
+          // Declare variables of the SwiftMetrics and SwiftMonitor in your app
+          let sm: SwiftMetrics
+          let monitor: SwiftMonitor
+
+          var port: Int {
+              get { return configMgr.port }
+          }
+          var url: String {
+              get { return configMgr.url }
+          }
+          init() throws {
+              configMgr = ConfigurationManager().load(.environmentVariables)
+
+              //Create instances of the SwiftMetrics and SwiftMonitor classes in your app
+              sm = try SwiftMetrics()
+              _ = SwiftMetricsKitura(swiftMetricsInstance: sm)
+              _ = SwiftMetricsBluemix(swiftMetricsInstance: sm)
+              monitor = sm.monitor()
+
+              // All web apps need a Router instance to define routes
+              router = Router()
+              // Serve static content from "public"
+              router.all("/", middleware: StaticFileServer())
+              // Basic GET request
+              router.get("/hello", handler: getHello)
+          }
+          
+          public func getHello(request: RouterRequest, response: RouterResponse, next: @escaping () -> Void) throws {
+              Log.debug("GET - /hello route handler...")
+              response.headers["Content-Type"] = "text/plain; charset=utf-8"
+              try response.status(.OK).send("Hello from Kitura-Starter!").end()
+          }
+
+      }
+      ```
+
+*Note:* Currently only Swift application using Kitura framework is supported to use {{site.data.keyword.autoscaling}} service.
 
 ## Manage {{site.data.keyword.autoscaling}} service through RESTful API 
 {: #RESTAPI}
@@ -242,17 +343,20 @@ The {{site.data.keyword.autoscaling}} CLI provides similar functionality as {{si
 | *End Date&Time* |	The end date and time of the schedule set up on a specific date.	|
 {: caption="Table 1. Policy fields in the scaling policy" caption-side="top"}
 
-
 | Metric name | Description | Supported application type |
 |-------------|----------------------| ------------------- |
-| *Heap* |	The usage percentage of the heap memory.	| Liberty for Java (with IBM JDK), Node.js SDK |
-| *Memory*   |	The usage percentage of the memory.	|  All |
-| *Throughput* | The number of the processed requests per second.| Liberty for Java (with IBM JDK), Node.js SDK |
-| *Response time* |	The response time of the processed requests.	| Liberty for Java |
+| *Heap* |     The usage percentage of the heap memory.        | Liberty for Java (with IBM JDK), Node.js SDK |
+| *Memory*   | The usage percentage of the memory.     |  All |
+| *Throughput* | The number of the processed requests per second.| Liberty for Java (with IBM JDK), Node.js SDK, Swift (with Kitura) |
+| *Response time* |    The response time of the processed requests.    | Liberty for Java (with IBM JDK), Swift (with Kitura) |
+
+
 {: caption="Table 2. Supported metric names" caption-side="top"}
 
-*Limitation:* To collect Auto-Scaling metrics data, your application must be deployed as Liberty webapp so that measuring HTTP/HTTPS requests will be processed via Liberty web container.
-+*Limitation:* For Liberty application, only IBM JDK is supported for auto-scaling.
+*Limitation:* To collect {{site.data.keyword.autoscaling}} metrics data, your application must be deployed as Liberty webapp so that measuring HTTP/HTTPS requests will be processed via Liberty web container.
+For example, if you run a Spring Boot application as a "Main-Classs" app, the Liberty buildpack only provides java environment for you, and the app actually runs in the Spring embedded Tomcat container, thus no metrics data will be collected by the Auto-Scaling service. You must run your app as a Liberty WAR in order to work with Auto-Scaling service.<br/> 
+*Limitation:* For Liberty application, only IBM JDK is supported for {{site.data.keyword.autoscaling}}.<br/> 
+*Limitation:* For Swift application, only Kitura framework is supported for {{site.data.keyword.autoscaling}}.<br/> 
 
 ## Error messages
 {: #err_msg}
@@ -341,4 +445,5 @@ Contact the Cloud Administrator for more information.
 * [Scaling virtual servers](https://www.{DomainName}/docs/virtualmachines/vm_index.html#vm_manage_instances){:new_window}
 * [{{site.data.keyword.autoscaling}} CLI](../../cli/plugins/auto-scaling/index.html){:new_window}
 * [{{site.data.keyword.autoscaling}} agent for Node.js](https://www.npmjs.com/package/bluemix-autoscaling-agent){:new_window}
+* [Swift Application Metrics](https://github.com/RuntimeTools/SwiftMetrics){:new_window}
 

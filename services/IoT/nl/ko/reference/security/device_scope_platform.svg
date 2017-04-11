@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="device_scope_platform.svg"
-   inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.png"
+   inkscape:export-filename="S:\PUB\ABD142\ART\WORK\ship1\iot\reference\security\device_scope_platform.png"
    inkscape:export-xdpi="299.98132"
    inkscape:export-ydpi="299.98132">
   <defs
@@ -775,9 +775,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.5505967"
-     inkscape:cx="258.95901"
-     inkscape:cy="132.15748"
+     inkscape:zoom="1.6514684"
+     inkscape:cx="244.2725"
+     inkscape:cy="111.1129"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -926,13 +926,6 @@
        width="176.09998"
        id="rect79371-1-6-6-9-8-7-3-5-1-8-2-9"
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
-    <text
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
-       id="text44191"
-       font-size="11"
-       x="271.81931"
-       y="416.98788"
-       sodipodi:linespacing="125%">Watson IoT Platform</text>
     <rect
        ry="0"
        rx="0"
@@ -958,7 +951,7 @@
          y="506.11569"
          id="tspan8202">IoT <tspan
    style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.00000155px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
-   id="tspan4646">디바이스</tspan> B</tspan><tspan
+   id="tspan4648">디바이스</tspan> B</tspan><tspan
          sodipodi:role="line"
          x="-21.984587"
          y="519.86572"
@@ -972,21 +965,21 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-       x="226.63893"
-       y="371.30804"
+       x="276.63895"
+       y="413.30804"
        id="text266398"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan266400"
-         x="226.63893"
-         y="371.30804">Watson™ IoT Platform </tspan><tspan
+         x="276.63895"
+         y="413.30804" /><tspan
          sodipodi:role="line"
-         x="226.63893"
-         y="386.30804"
+         x="276.63895"
+         y="428.30804"
          id="tspan4887">Org: q1bc3a</tspan><tspan
          sodipodi:role="line"
-         x="226.63893"
-         y="401.30804"
+         x="276.63895"
+         y="443.30804"
          id="tspan266402" /></text>
     <text
        sodipodi:linespacing="125%"
@@ -1014,14 +1007,10 @@
          id="flowPara7065" /></flowRoot>    <text
        sodipodi:linespacing="125%"
        y="417.78812"
-       x="117.73038"
+       x="121.73038"
        font-size="11"
        id="text66184"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">
-      <tspan
-         style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.00000155px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
-         id="tspan4648">인터넷</tspan>
-    </text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000191px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">인터넷</text>
     <path
        inkscape:connector-curvature="0"
        id="path13593"
@@ -1211,7 +1200,7 @@
          y="448.78619"
          id="tspan8202-0">IoT <tspan
    style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.00000155px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
-   id="tspan4644">디바이스</tspan> A</tspan><tspan
+   id="tspan4646">디바이스</tspan> A</tspan><tspan
          sodipodi:role="line"
          x="-22.637196"
          y="462.53619"
@@ -1290,30 +1279,44 @@
        sodipodi:linespacing="125%"
        id="text44235-7"
        y="477.46017"
-       x="284.62738"
+       x="286.62738"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000191px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
          y="477.46017"
-         x="284.62738"
+         x="286.62738"
          sodipodi:role="line"
          id="tspan6445-3">주제 영역</tspan></text>
     <rect
        x="93.283585"
        y="483.8989"
-       width="102.97024"
+       width="111.44754"
        height="15.000008"
        id="rect56941-0-3-9-9-0-9-9-6"
        style="fill:#ffffff" />
     <text
        sodipodi:linespacing="125%"
-       y="488.10379"
-       x="96.12796"
+       y="494.63892"
+       x="96.836777"
        font-size="11"
        id="text56834-0-4-8-0-89-9-0"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.85466957px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
-       transform="scale(0.9867881,1.0133888)">B<tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.85467052px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">B<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000191px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
    id="tspan4652">에 대한 명령이 없음</tspan>
 </text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       x="251.00613"
+       y="377.18326"
+       id="text266398-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="251.00613"
+         y="377.18326"
+         id="tspan4887-5">Watson™ IoT Platform </tspan><tspan
+         sodipodi:role="line"
+         x="251.00613"
+         y="392.18326"
+         id="tspan266402-4" /></text>
   </g>
 </svg>

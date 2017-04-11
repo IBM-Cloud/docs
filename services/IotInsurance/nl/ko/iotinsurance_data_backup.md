@@ -1,16 +1,17 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-29"
+  years: 2016, 2017
+lastupdated: "2017-03-01"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
 
 
 <!-- {{site.data.keyword.iotinsurance_full}}  {{site.data.keyword.iotinsurance_short}}  -->
@@ -23,24 +24,24 @@ lastupdated: "2016-10-29"
 
 *표 1: {{site.data.keyword.iotinsurance_short}} 데이터베이스*
 
-DB 이름       | 변경 빈도    | 변경 이유    | 백업 필수    | 설명
+DB 이름| 변경 빈도| 변경 이유 | 백업 필수 | 설명
 ------------- | -------------| -------------| -------------| -------------
-favorites     |관리          |새 관리자 조치| YES          |-
-Devices       |관리          |새 디바이스나 사용자 추가 또는 제거|YES| Transformer가 메모리에 테이블을 동적으로 생성하고 디바이스 제공업체의 데이터와 함께 상주시킵니다. 직접 연결된 게이트웨이의 경우 이 테이블에 디바이스 사용자를 저장합니다.
-hazardevents  |랜덤          |새 실드 이벤트 발견|YES|-
-Jscode        |관리          |배치된 실드의 새 JS 코드|YES*| 이 관리자는 선택적으로 백업을 건너뛰고 새 JS 코드 버전을 배치할 수 있습니다.
-Promotions    |관리          |새 프로모션 추가|YES|-
-shieldassociations|관리      |새 사용자 또는 실드 추가|YES|-
-Shields       |관리          |새 실드 추가  |YES           |-
-Users         |관리          |새 사용자 추가|YES|-
-aggregation   |-|-|NO|다시 빌드할 수 있습니다.
-aggregationschedule|-|-| NO|다시 빌드할 수 있습니다.
+favorites|관리|새 관리자 조치|예|-
+Devices|관리|새 디바이스나 사용자 추가 또는 제거|예| Transformer가 메모리에 테이블을 동적으로 생성하고 디바이스 제공업체의 데이터로 채웁니다. 직접 연결된 게이트웨이의 경우 이 테이블에 디바이스를 저장합니다.
+hazardevents|랜덤|새 실드 이벤트 발견|예|-
+Jscode|관리|배치된 실드의 새 JS 코드|예*| 이 관리자는 선택적으로 백업을 건너뛰고 새 JS 코드 버전을 배치할 수 있습니다.
+Promotions|관리|새 프로모션 추가|예|-
+shieldassociations|관리|새 사용자 또는 실드 추가|예|-
+Shields|관리|새 실드 추가|예|-
+Users|관리|새 사용자 추가|예|-
+aggregation|-|-|아니오|다시 빌드할 수 있습니다.
+aggregationschedule|-|-| 아니오|다시 빌드할 수 있습니다.
 
 {{site.data.keyword.iotinsurance_short}} 데이터를 백업하려면 다음 단계를 수행하십시오. 
 
 ## 복제본 {{site.data.keyword.cloudant}} 인스턴스 작성
 {: #createinstance}
-[{{site.data.keyword.cloudant}} 복제 지시사항](https://docs.cloudant.com/replication.html)을 사용하여 복제본 {{site.data.keyword.cloudant}} 인스턴스를 작성하십시오. 재해 복구 시 사용할 수 있게 원래 {{site.data.keyword.iotinsurance_short}} 서비스와 다른 위치에 복제본을 작성하십시오. 예를 들어, 원래 인스턴스가 댈러스에 있다면 런던에 복제본을 둘 수 있습니다. 
+[{{site.data.keyword.cloudant}} 복제 지시사항 ![외부 아이콘](../../icons/launch-glyph.svg)](https://docs.cloudant.com/replication.html)을 사용하여 복제본 {{site.data.keyword.cloudant}} 인스턴스를 작성하십시오. 재해 복구 시 사용할 수 있게 원래 {{site.data.keyword.iotinsurance_short}} 서비스와 다른 위치에 복제본을 작성하십시오. 예를 들어, 원래 인스턴스가 댈러스에 있다면 런던에 복제본을 둘 수 있습니다. 
 
 ## 신임 정보 및 URL 찾기
 {: #locate_credentials}
@@ -70,7 +71,7 @@ aggregationschedule|-|-| NO|다시 빌드할 수 있습니다.
 
 8. **데이터 복제**를 클릭합니다.  
 
-9. (선택사항) 후속 복제 태스크에서 이전 데이터를 겹쳐쓰기 때문에 CSV 파일로 데이터를 내보내는 것이 좋습니다. 해당 지시사항은 [Export Cloudant JSON as CSV, RSS, or iCal](https://developer.ibm.com/clouddataservices/2015/09/22/export-cloudant-json-as-csv-rss-or-ical/)을 참조하십시오. 
+9. (선택사항) 후속 복제 태스크에서 이전 데이터를 겹쳐쓰기 때문에 CSV 파일로 데이터를 내보내는 것이 좋습니다. 지시사항은 [Cloudant JSON을 CSV, RSS 또는 iCal로 내보내기 ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://developer.ibm.com/clouddataservices/2015/09/22/export-cloudant-json-as-csv-rss-or-ical/){: new_window}를 참조하십시오. 
 
 10. 각각의 데이터베이스에 대해 이 단계를 반복하십시오. 
 
@@ -92,26 +93,6 @@ aggregationschedule|-|-| NO|다시 빌드할 수 있습니다.
 3. 다음 방법 중 하나로 데이터를 복원합니다. 
   - CSV 백업 파일에서 기본 Cloudant 인스턴스로 직접 데이터를 로드합니다. 
   - 복제된 데이터베이스를 소스로 원래 데이터베이스를 대상으로 사용하는 복제 태스크를 작성합니다. 이 태스크는 복제된 데이터를 원래 데이터베이스로 이동합니다. 
-4. 다음 스크립트를 실행하여 디자인 문서를 다시 작성하고 참조 무결성을 복원합니다. 이 스크립트는 [{{site.data.keyword.iotinsurance_short}} API 예제 GitHub 사이트](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/)에 있습니다. 
+4. 다음 스크립트를 실행하여 디자인 문서를 다시 작성하고 참조 무결성을 복원합니다. 스크립트는 [{{site.data.keyword.iotinsurance_short}} API 예제 GitHub 사이트 ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/){: new_window}에 있습니다. 
   - iot4i-api/wearable-framework/auto-create/create.sh - 이 스크립트는 {{site.data.keyword.cloudant}} 내에 디자인 문서를 다시 작성합니다. 
   - iot4i-api/wearable-framework/health/check-relations - 이 스크립트는 참조 무결성을 다시 설정합니다. 예를 들어, 이 스크립트는 실드를 삭제하였으나 사용자 연관이 남아 있는 케이스를 수정합니다. 
-
-
-# 관련 링크
-{: #rellinks}
-
-## 튜토리얼 및 샘플
-{: #samples}
-* [GitHub에 있는 샘플 모바일 앱 코드](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## API 참조
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API 예](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-
-## 관련 링크
-{: #general}
-* [{{site.data.keyword.iot_full}} 문서](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [개발자 지원 포럼](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-* [스택 오버플로우 지원 포럼](http://stackoverflow.com/questions/tagged/ibm-bluemix)

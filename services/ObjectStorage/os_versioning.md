@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-02-10"
+lastupdated: "2017-02-23"
 
 ---
 {:new_window: target="_blank"}
@@ -18,7 +18,7 @@ You can keep older versions of your objects automatically, by setting up object 
 {: shortdesc}
 
 
-#### How object versioning works
+## How object versioning works
 
 Object versioning is a way for a user to store an object that might change. With versioning, the current version of your object is always available in your working container, and all previous versions are backed up in your archive container.
 

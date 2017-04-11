@@ -1,12 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-27"
+
+years: 2015, 2017
+
+lastupdated: "2017-03-16"
+
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -30,6 +33,7 @@ lastupdated: "2016-10-27"
 - 直接接続されているデバイスのような独自のセンサー・データの送受信
 - 接続されたデバイスのデータの代行送受信
 - 管理可能にするためのデバイス管理エージェントの実行。これによって、接続されたデバイスも管理可能にします。
+  
 ゲートウェイの開発者情報については、[ゲートウェイの MQTT 接続](mqtt.html)を参照してください。
 
 ゲートウェイを使用して、ゲートウェイ・デバイスが送信しているデータに対してエッジ分析を実行することもできます。詳しくは、[エッジ分析](../edge_analytics.html)と[エッジ分析エージェントのインストール](#edge)を参照してください。
@@ -39,17 +43,20 @@ lastupdated: "2016-10-27"
 
 ゲートウェイの登録には、ゲートウェイ・タイプとしてデバイスを分類すること、ゲートウェイに名前を付けること、ゲートウェイ情報を提供することが含まれています。その後、接続トークンを指定するか、{{site.data.keyword.iot_short_notm}} によって生成されるトークンを受け入れます。
 
-**ヒント:** {{site.data.keyword.iot_short_notm}} ダッシュボードから一度に 1 つゲートウェイを追加するか、[{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/post_bulk_devices_add) を使用して一度に 1 つ以上のゲートウェイを追加することができます。
+
+**ヒント:** {{site.data.keyword.iot_short_notm}} ダッシュボードから一度に 1 つずつゲートウェイを追加するか、[組織管理 API ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window} を使用して一度に 1 つ以上のゲートウェイを追加することができます。
 
 {{site.data.keyword.iot_short_notm}} ダッシュボードからゲートウェイを追加するには、以下のようにします。
 
 1. {{site.data.keyword.iot_short_notm}} ダッシュボードで、**「デバイス」**を選択します。
 2. **「デバイスの追加」**をクリックします。
 3. 追加するデバイスのデバイス・タイプを選択するか作成します。
+  
 {{site.data.keyword.iot_short_notm}} に接続する各デバイスには、デバイス・タイプを関連付ける必要があります。デバイス・タイプとは、共通の特性を共有するデバイス・グループのことです。  
  1. **「デバイス・タイプの作成」**、**「ゲートウェイ・タイプの作成」**の順にクリックします。
  2. デバイス・タイプ名 (`my_gateway_type` など) とそのゲートウェイ・タイプの説明を入力します。
-**重要:** デバイス・タイプ名は 36 文字以下でなければなりません。以下の文字だけを含めることができます。
+   
+ **重要:** デバイス・タイプ名は 36 文字以下でなければなりません。以下の文字だけを含めることができます。
  <ul>
   <li>英数字 (a-z、A-Z、0-9)</li>
   <li>ハイフン (-)</li>
@@ -59,7 +66,9 @@ lastupdated: "2016-10-27"
  **ヒント:** 属性とメタデータは、後で追加したり編集したりすることもできます。 4. **「作成」**をクリックして、新しいゲートウェイ・タイプを追加します。
 10. **「次へ」**をクリックして、選択したゲートウェイ・タイプのゲートウェイ・デバイスを追加するプロセスを開始します。
 11. `my_gateway_device` などのデバイス ID を入力します。
-デバイス ID は、{{site.data.keyword.iot_short_notm}} ダッシュボードでゲートウェイ・デバイスを識別するために使用され、ゲートウェイ・デバイスを {{site.data.keyword.iot_short_notm}} に接続するための必須パラメーターでもあります。**重要:** デバイス ID は 36 文字以下でなければなりません。以下の文字だけを含めることができます。
+  
+デバイス ID は、{{site.data.keyword.iot_short_notm}} ダッシュボードでゲートウェイ・デバイスを識別するために使用され、ゲートウェイ・デバイスを {{site.data.keyword.iot_short_notm}} に接続するための必須パラメーターでもあります。  
+**重要:** デバイス ID は 36 文字以下でなければなりません。以下の文字だけを含めることができます。
  <ul>
  <li>英数字 (a-z、A-Z、0-9)</li>
  <li>ハイフン (-)</li>
@@ -68,21 +77,26 @@ lastupdated: "2016-10-27"
  </ul>
  **ヒント:** ネットワークに接続されたデバイスの場合は、デバイス MAC アドレス (区切り文字のコロンは付けない) などをデバイス ID として入力できます。  
 12. オプション: **「追加フィールド」**をクリックして、シリアル番号、製造元、型式などのゲートウェイ・デバイス情報を追加します。
+   
  **ヒント:** この情報は、後で追加したり編集したりすることもできます。
 12. オプション: デバイスの JSON メタデータを入力します。
+   
  **ヒント:** デバイスのメタデータは、後で追加したり編集したりすることもできます。
 13. **「次へ」**をクリックして、ゲートウェイ・デバイスの追加を完了します。
 14. 要約情報が正しいことを確認してから、**「追加」**をクリックしてゲートウェイ・デバイスを追加します。
+  
 **ヒント:** 自動生成の認証トークンを受け入れることも、自分で認証トークンを指定することもできます。自分でトークンを作成する場合は、長さを 8 文字から 36 文字にして、小文字と大文字、数字、記号 (ハイフン、下線、ピリオドのいずれか) を組み合わせる必要があります。反復した文字シーケンスや、辞書に出てくる単語やユーザー名などの事前定義シーケンスをトークンに含めないでください。
 15. デバイス情報のページで、以下のデバイス情報をコピーして保存します。  
  - 組織 ID (`tubo8x` など)
  - デバイス・タイプ (`my_gateway_type` など)
  - デバイス ID。**ヒント:** ネットワーク接続のデバイスの場合は、区切り文字のコロンを使用しない MAC アドレスなどになることもあります。
  - 認証方式 (`token` など)
- - 認証トークン (`PtBVriRqIg4uh)_-Kl` など)
+ - 認証トークン (`PtBVriRqIg4uh)_-Kl` など)  
   **ヒント:** {{site.data.keyword.iot_short_notm}} へのデバイスの接続を構成するときに、組織 ID、認証トークン、デバイス・タイプ、デバイス ID が必要になります。  
 
 これで、ゲートウェイ・デバイスを登録できました。次に、ゲートウェイ・デバイスから {{site.data.keyword.iot_short_notm}} に接続するための構成を行います。
+
+ゲートウェイの登録に必要なフローが示されている、詳細な手順については、[How to Register Gateways in IBM Watson IoT Platform ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/how-to-register-gateways-in-ibm-watson-iot-platform/){:new_window} レシピを参照してください。
 
 ## 手順 2: ゲートウェイを {{site.data.keyword.iot_short_notm}} に接続する
 {: #connect_gateway}
@@ -91,8 +105,7 @@ lastupdated: "2016-10-27"
 
 {{site.data.keyword.iot_short_notm}} へのゲートウェイの接続について詳しくは、[ゲートウェイの MQTT 接続](mqtt.html)を参照してください。
 
-**ヒント:** {{site.data.keyword.iot_short_notm}} へのデバイスの接続では、一連のレシピを使用できます。レシピのリストについては、
-IBM.com の[デバイス接続のレシピ](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/)を参照してください。
+**ヒント:** {{site.data.keyword.iot_short_notm}} へのデバイスの接続では、一連のレシピを使用できます。レシピのリストについては、IBM.com の[デバイス接続のレシピ ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window} を参照してください。
 
 
 ## ステップ 3: ゲートウェイを介したデバイスの接続
@@ -105,23 +118,30 @@ IBM.com の[デバイス接続のレシピ](https://developer.ibm.com/recipes/tu
 
 デバイスがゲートウェイに正常に接続されると、{{site.data.keyword.iot_short_notm}} 組織のダッシュボードに表示されます。
 
+詳しいフローと説明については、レシピ [Connecting Raspberry Pi as a Gateway to Watson IoT ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-as-a-gateway-to-watson-iot-using-node-red/){:new_window} を参照してください。
+
 **注:** {{site.data.keyword.iot_short_notm}} ダッシュボード、デバイス、ゲートウェイが {{site.data.keyword.iot_short_notm}} に直接接続されている場合、接続されていることを示す状況アイコンが表示されます。ゲートウェイに対するデバイス接続は認識されないため、ゲートウェイを介して間接的に接続されているデバイスは、切断されているものとしてダッシュボードに表示されます。
 
 
 ## エッジ分析エージェントのインストール
 {: #edge}
 
-エッジ分析エージェント (EAA) は、[Apache Quarks](http://quarks.incubator.apache.org/) 上に構築されるソフトウェア・コンポーネントです。これを使用して、{{site.data.keyword.iot_short_notm}} ダッシュボードからエッジ分析ルールをアップロード/管理することにより、ゲートウェイに対してエッジ分析操作を実行します。エッジ分析について詳しくは、[エッジ分析](../edge_analytics.html)を参照してください。
+エッジ分析エージェント (EAA) は、エッジ処理用に最適化されたストリーミング・エンジン上に構築されるソフトウェア・コンポーネントです。これを使用して、{{site.data.keyword.iot_short_notm}} ダッシュボードからエッジ分析ルールをアップロード/管理することにより、ゲートウェイに対してエッジ分析操作を実行します。エッジ分析について詳しくは、[エッジ分析](../edge_analytics.html)を参照してください。
 
 ### EAA のインストール
 {: #eaa_install}
 
 ゲートウェイに EAA をインストールするには、次のようにします。
 1. {{site.data.keyword.iot_short}} ダッシュボードで、**「ルール」**に移動します。
-2. **「エッジ・エージェントのダウンロード (Download Edge Agent)」**をクリックして、[IBM エッジ分析エージェントのコミュニティー](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true)に移動します。
-3. **「ファイル」**セクションに移動し、圧縮ファイル *ibm-watson-iot-edge-analytics-dslink-java-0.0.1* をダウンロードします。
-4. EAA ソフトウェア・コンポーネントをゲートウェイにインストールして構成する方法については、以下のレシピを参照してください。
- - [Watson IoT Platform でのエッジ分析の概説](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=19472)
+2. **「エッジ・エージェントのダウンロード」**をクリックして、[IBM エッジ分析のコミュニティー ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true){:new_window} に移動します。
+3. **「ファイル」**セクションに移動し、ゲートウェイのタイプに該当する圧縮ディレクトリーをダウンロードします。  
+エッジ分析ソリューションは、Java をサポートしているデバイスの場合は SDK、Cisco ゲートウェイ・デバイスの場合は DSLink として入手可能です。
+4. EAA ソフトウェア・コンポーネントをゲートウェイにインストールして構成する方法については、以下の情報を参照してください。
+ - SDK  
+コミュニティーで使用可能な PDF ファイル、README ファイル、ビデオのリンクを参照してください。  
+ [SDK でのエッジのレシピ - 概説 (SDK) ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/getting-started-with-the-ibm-edge-analytics-sdk-in-watson-iot-platform/){:new_window} レシピ。
+ - DSLink  
+ [Watson IoT Platform でのエッジ分析の概説 ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=19472){:new_window} レシピ。
 
 ### EAA 構成の設定
 {: #eaa_configuration}
@@ -129,7 +149,8 @@ IBM.com の[デバイス接続のレシピ](https://developer.ibm.com/recipes/tu
 EAA config.properties ファイルを使用して、基本ソフトウェア構成パラメーターを設定することができます。
 
 EAA 構成を更新するには、次のようにします。
-1. EAA が実行されているゲートウェイ・システムで、EAA config.properties ファイルを見つけます。例えば、`../dglux-server/dslinks/ibm-watson-iot-edge-analytics-dslink-java-0.0.1/config.properties` です。
+1. EAA が実行されているゲートウェイ・システムで、EAA config.properties ファイルを見つけます。  
+例えば、`../dglux-server/dslinks/ibm-watson-iot-edge-analytics-dslink-java-0.0.1/config.properties` です。
 2. 設定の編集を開始する前に、ファイルのバックアップ・コピーを作成しておきます。
 3. 編集のために config.properties ファイルを開きます。
 4. 環境に合わせて構成パラメーターを編集します。

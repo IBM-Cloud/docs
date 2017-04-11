@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -18,7 +18,10 @@ lastupdated: "2017-01-17"
 {: shortdesc}
 
 
-Para uma lista abrangente das opções e exemplos da API de REST do {{site.data.keyword.objectstorageshort}}, veja a [Referência completa da API do OpenStack Swift](http://developer.openstack.org/api-ref-objectstorage-v1.html).
+Para obter uma lista abrangente das opções e exemplos da API de REST do {{site.data.keyword.objectstorageshort}}, consulte a <a href="http://developer.openstack.org/api-ref-objectstorage-v1.html" target="_blank">Referência
+completa da API do OpenStack Swift. <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo"></a>
+
+
 
 Antes de editar a URL, deve-se [autenticar](/docs/services/ObjectStorage/os_authenticate.html) a instância de serviço com o Keystone. Certifique-se de observar o seu catálogo de resposta. Ele será semelhante ao exemplo a seguir.
 

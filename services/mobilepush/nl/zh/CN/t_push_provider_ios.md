@@ -19,7 +19,7 @@ copyright:
 
 您需要获取并配置您的 APNs 凭证。APNs 证书由 {{site.data.keyword.mobilepushshort}} 服务安全管理，在连接到 APNs 服务器（提供者）时需要使用该证书。
 
-<!-- 1. Obtain an [Apple Developers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.apple.com/ "External link icon"){: new_window} account.-->
+<!-- 1. Obtain an [Apple Developers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.apple.com/){: new_window} account.-->
 
 <!--2. [Register an App ID](#create-push-credentials-apns-register)
 3. [Create a development and distribution APNs SSL certificate](#create-push-credentials-apns-ssl)
@@ -36,9 +36,9 @@ copyright:
 
 应用程序标识（捆绑标识）是用于识别特定应用程序的唯一标识。每个应用程序都需要应用程序标识。像 {{site.data.keyword.mobilepushshort}} 服务这类的服务都是配置给应用程序标识的。
 
-1. 请确保您具有 [Apple Developer ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.apple.com/ "外部链接图标"){: new_window} 帐户。
-2. 转至 [Apple Developer ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.apple.com "外部链接图标"){: new_window} 门户网站，单击 **Member Center**，然后选择 **Certificates, Identifiers & Profiles**。
-3. 转至 [Apple Developer Library ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW991 "外部链接图标"){: new_window} 中的 **Registering App IDs** 部分，然后遵循指示注册应用程序标识。
+1. 请确保您具有 [Apple Developer ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.apple.com/){: new_window} 帐户。
+2. 转至 [Apple Developer ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.apple.com){: new_window} 门户网站，单击 **Member Center**，然后选择 **Certificates, Identifiers & Profiles**。
+3. 转至 [Apple Developer Library ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW991){: new_window} 中的 **Registering App IDs** 部分，然后遵循指示注册应用程序标识。
 
 注册应用程序标识时，请选择以下选项：
 
@@ -67,7 +67,7 @@ copyright:
 
 <!-- Create a development and distribution SSL certificate. -->
 
-1. 转至 [Apple Developer ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.apple.com "外部链接图标"){: new_window} 网站，单击 **Member Center**，然后选择 **Certificates, Identifiers & Profiles**。
+1. 转至 [Apple Developer ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.apple.com){: new_window} 网站，单击 **Member Center**，然后选择 **Certificates, Identifiers & Profiles**。
 2. 在 **Identifiers** 区域中，单击 **App IDs**。
 3. 在您的应用程序标识列表中，选择您新创建的应用程序标识，然后选择 **Settings**。
 4. 在 **Push Notifications** 区域中，创建开发 SSL 证书，然后创建生产 SSL 证书。
@@ -106,8 +106,8 @@ copyright:
 
 创建开发供应概要文件，如下所示：
 
-1. 转至 [Apple Developer ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.apple.com "外部链接图标"){: new_window} 门户网站，单击 **Member Center**，然后选择 **Certificates, Identifiers & Profiles**。
-2. 转至 [Mac Developer Library ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW62site "外部链接图标"){: new_window}，滚动至 **Creating Development Provisioning Profiles** 部分，然后遵循指示创建开发概要文件。
+1. 转至 [Apple Developer ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.apple.com){: new_window} 门户网站，单击 **Member Center**，然后选择 **Certificates, Identifiers & Profiles**。
+2. 转至 [Mac Developer Library ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW62site){: new_window}，滚动至 **Creating Development Provisioning Profiles** 部分，然后遵循指示创建开发概要文件。
 **注**：配置开发供应概要文件时，请选择以下选项：
 	* **iOS App Development**
 	* **对于 iOS 和 watchOS 应用程序**
@@ -119,7 +119,7 @@ copyright:
 
 使用应用商店供应概要文件可提交应用程序以分发到 App Store。
 
-1. 转至 [Apple Developer ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.apple.com "外部链接图标"){: new_window} 门户网站，单击 **Member Center**，然后选择 **Certificates, Identifiers & Profiles**。
+1. 转至 [Apple Developer ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.apple.com){: new_window} 门户网站，单击 **Member Center**，然后选择 **Certificates, Identifiers & Profiles**。
 2. 双击所下载的供应概要文件，以将其安装到 Xcode 中。
 
 ##在 {{site.data.keyword.mobilepushshort}} 仪表板上设置 APNs
@@ -133,13 +133,14 @@ APNs 所需的证书为 `.p12` 证书。这些证书包含构建和发布应用�
 
 **注**：当 `.cer` 文件出现在钥匙串访问中之后，请将其导出到您的计算机，以创建 `.p12` 证书。
 
-有关使用 APN 的更多信息，请参阅 [iOS Developer Library: Local and Push Notification Programming Guide ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4 "外部链接图标"){: new_window}。
+有关使用 APN 的更多信息，请参阅 [iOS Developer Library: Local and Push Notification Programming Guide ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4){: new_window}。
 
 要在“推送通知”服务仪表板上设置 APNs，请完成以下步骤：
 
 1. 在“推送通知”服务仪表板上选择**配置**。
 2. 选择**移动**选项，以更新 **APNs 推送凭证**表单上的信息。
-3. 根据需要选择**沙箱**（开发）或**生产**（分发），然后上传在先前[步骤](#step18)中创建的 `p.12` 证书。![设置推送通知仪表板](images/wizard.jpg)
-3. 在**密码**字段中，输入与 `.p12` 证书文件相关联的密码，然后单击**保存**。 
+3. 根据需要选择**沙箱**（开发）或**生产**（分发），然后上传在先前[步骤](#step18)中创建的 `p.12` 证书。
+![设置推送通知仪表板](images/wizard.jpg)
+3. 在**密码**字段中，输入与 `.p12` 证书文件相关联的密码，然后单击**保存**。
 
 使用有效的密码成功上传证书后，即可开始发送通知。

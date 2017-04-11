@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -12,51 +12,51 @@ lastupdated: "2017-01-17"
 {:pre: .pre}
 
 
-# Generating service credentials {: #credentials}
+# Generazione delle credenziali del servizio {: #credentials}
 
-Service credentials are used to provide authentication and security for the service. You can generate new credentials by using the CLI or the {{site.data.keyword.Bluemix_notm}} UI.
+Le credenziali del servizio sono utilizzate per fornire l'autenticazione e la protezione del servizio. Puoi generare nuove credenziali utilizzando la CLI o la IU {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
 
-## To add credentials in the UI:
+## Per aggiungere le credenziali alla IU:
 
-1. In the **Service Credentials** tab on your service instance dashboard, click **New Credential** and give it a name.
-2. Optional: In the **Add Inline Configuration Parameters** text field, input the credential information for the role with the [type of access](/docs/services/ObjectStorage/os_access_types.html) you want to give. The information must be formatted as a JSON payload.
-    - To create an administrative user: `{"role":"admin"}`
-    - To create a non-administrative user: `{"role":"member"}`
-3. Click **Add**.
+1. Nella scheda **Credenziali del servizio** nel dashboard della tua istanza del servizio, fai clic su **Nuova credenziale** e forniscile un nome.
+2. Facoltativo: Nel campo di testo **Aggiungi i parametri di configurazione incorporati** immetti le informazioni sulla credenziale per il ruolo con il [tipo di accesso](/docs/services/ObjectStorage/os_access_types.html) che desideri fornire. Le informazioni devono essere formattate come payload JSON.
+    - Per creare un utente amministrativo: `{"role":"admin"}`
+    - Per creare un utente non amministrativo: `{"role":"member"}`
+3. Fai clic su **Aggiungi**.
 
 
-## To add credentials by using Cloud Foundry commands in the CLI:
+## Per aggiungere le credenziali utilizzando i comandi Cloud Foundry nella CLI:
 
-1. If you are not logged in to {{site.data.keyword.Bluemix_notm}}, log in as a user with a developer role. You must be located within the space of the service instance you want to manage.
+1. Se non hai eseguito l'accesso a {{site.data.keyword.Bluemix_notm}}, accedi come utente con un ruolo da sviluppatore. Devi essere posizionato nello spazio dell'istanza del servizio che desideri gestire.
   ```
   cf login -a api.ng.bluemix.net -u <userid> -p <password> -o <organization> -s <space>
   ```
   {: pre}
 
-2. Generate service credentials. Give your credential a name by replacing the variable
-`service-key-name`. Optionally, you can also assign a [user role](/docs/services/ObjectStorage/os_access_types.html).
+2. Generare le credenziali del servizio. Fornisci un nome alla tua credenziale sostituendo la variabile
+`service-key-name`. Facoltativamente, puoi anche assegnare un [ruolo utente](/docs/services/ObjectStorage/os_access_types.html).
 
   ```
   cf create-service-key "<service_instance_name>" <service-key-name> -c '{"role":"<user_role>"}'
   ```
   {: pre}
 
-  Example:
+  Esempio:
   ```
   cf create-service-key "Object-Storage-AclTest" GeorgeKey -c '{"role":"member"}'
   ```
   {: screen}
 
-3. Validate the credentials for the key you created.
+3. Convalida delle credenziali per la chiave che hai creato.
 
   ```
   cf service-keys <service_instance_name>
   ```
   {: pre}
 
-  Example key for an instance that is named Object-Storage-Acl-Test for a user with a member role:
+  Chiave di esempio per un'istanza denominata Object-Storage-Acl-Test per un utente con un ruolo di membro:
 
   ```
   {
@@ -76,16 +76,16 @@ Service credentials are used to provide authentication and security for the serv
 
 
 
-#### To add credentials by using cURL commands in the CLI:
+#### Per aggiungere le credenziali utilizzando i comandi cURL nella CLI:
 
-1. If you are not logged in to {{site.data.keyword.Bluemix_notm}}, log in as a user with a developer role. You must be located within the space of the service instance you want to manage.
+1. Se non hai eseguito l'accesso a {{site.data.keyword.Bluemix_notm}}, accedi come utente con un ruolo da sviluppatore. Devi essere posizionato nello spazio dell'istanza del servizio che desideri gestire.
 
   ```
   cf login -a api.ng.bluemix.net -u <userid> -p <password> -o <organization> -s <space>
   ```
   {: pre}
 
-2. Run the following command to generate service credentials.
+2. Esegui il seguente comando per generare le credenziali del servizio.
 
   ```
   curl "https://api.ng.bluemix.net/v2/service_keys" -d '{   "service_instance_guid": "<service_instance_guid>",   "name: <service_instance_name>", "role: <user_role>"}' -X POST -H "Authorization: <bearer_token>" -H "Content-Type: <content_type" -H "Cookie: <cookie>"
@@ -93,36 +93,34 @@ Service credentials are used to provide authentication and security for the serv
   {: pre}
 
   <table>
-  <caption> Table 1. cURL service credential variables explained </caption>
+  <caption> Tabella 1. Variabili della credenziale del servizio spiegate </caption>
     <tr>
-      <th> Variable  </th>
-      <th> Explanation </th>
+      <th> Variabile  </th>
+      <th> Spiegazione </th>
     </tr>
     <tr>
-      <td> <code>https://api.ng.bluemix.net/v2/service_keys</code> </td>
-      <td> The service key endpoint.  </td>
+      <td> ```https://api.ng.bluemix.net/v2/service_keys``` </td>
+      <td> L'endpoint della chiave del servizio.  </td>
     </tr>
     <tr>
       <td><i> service_instance_guid </i></td>
-      <td> Can be found in your URL.  </td>
+      <td> Può essere trovata nel tuo URL.  </td>
     </tr>
     <tr>
       <td><i> name </i></td>
-      <td> The name of your service instance. </td>
+      <td> Il nome della tua istanza del servizio. </td>
     </tr>
     <tr>
       <td><i> role </i></td>
-      <td> Specify the <a href= /docs/services/ObjectStorage/os_constructing.html>user's role</a> as either an admin or a member. </td>
+      <td> Specifica il <a href= /docs/services/ObjectStorage/os_constructing.html>ruolo dell'utente</a>, amministratore o membro. </td>
     </tr>
     <tr>
       <td><i> bearer_token </i></td>
-      <td> The token that you received when you authenticated your instance with Keystone. </td>
+      <td> Il token che hai ricevuto durante l'autenticazione della tua istanza con Keystone. </td>
     </tr>
   </table>
 
-
-
-3. Validate your credentials by running the following command.
+3. Convalida le tue credenziali eseguendo il seguente comando.
 
   ```
   curl "https://api.ng.bluemix.net/v2/service_instances/b9656309-d994-4dec-a71f-8eac6e2fc7dc/service_keys" -X GET  -H "Authorization: <bearer_token>" -H "Cookie: "

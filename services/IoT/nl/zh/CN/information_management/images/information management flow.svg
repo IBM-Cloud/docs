@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg5443"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   width="655.41003"
+   height="280.60001"
+   viewBox="0 0 655.41003 280.6"
+   sodipodi:docname="Information Management flow.svg">
+  <metadata
+     id="metadata5449">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs5447">
+    <marker
+       style="overflow:visible"
+       id="TriangleOutM-3-4-5"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         transform="scale(0.4,0.4)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         id="path21258-13-6-5"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="TriangleOutM-3-4-5-9"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         transform="scale(0.4,0.4)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         id="path21258-13-6-5-0"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="TriangleOutM-3-4-5-9-4"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         transform="scale(0.4,0.4)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         id="path21258-13-6-5-0-6"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="TriangleOutM-3-4-5-9-4-0"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         transform="scale(0.4,0.4)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         id="path21258-13-6-5-0-6-7"
+         inkscape:connector-curvature="0" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1053"
+     id="namedview5445"
+     showgrid="false"
+     inkscape:zoom="1.8351354"
+     inkscape:cx="499.78988"
+     inkscape:cy="213.73285"
+     inkscape:window-x="338"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5443"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <rect
+     ry="0"
+     rx="0"
+     y="122.89581"
+     x="505.65997"
+     height="50.000008"
+     width="149.25005"
+     id="rect79371-1-6-6-9-8-7-3-5-1-2-7-5"
+     style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+     x="572.20691"
+     y="151.62669"
+     id="text18189-5-9"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="572.20691"
+       y="151.62669"
+       id="tspan6913-6">应用程序</tspan></text>
+  <g
+     id="g5240-2-8"
+     transform="matrix(0.09339234,0,0,0.09339234,506.89652,124.86849)"
+     style="stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none">
+    <rect
+       id="rect5222-4-5"
+       height="110"
+       width="388.89999"
+       stroke-miterlimit="10"
+       y="55.599998"
+       x="55.599998"
+       style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
+    <rect
+       id="rect5224-7-2"
+       height="110"
+       width="388.89999"
+       stroke-miterlimit="10"
+       y="195"
+       x="55.599998"
+       style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
+    <rect
+       id="rect5226-6-7"
+       height="110"
+       width="388.89999"
+       stroke-miterlimit="10"
+       y="334.39999"
+       x="55.599998"
+       style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
+    <circle
+       id="circle5228-0-6"
+       r="18.6"
+       cy="110.6"
+       cx="389"
+       stroke-miterlimit="10"
+       style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
+    <circle
+       id="circle5230-5-6"
+       r="18.6"
+       cy="250"
+       cx="389"
+       stroke-miterlimit="10"
+       style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
+    <circle
+       id="circle5232-6-1"
+       r="18.6"
+       cy="389.39999"
+       cx="389"
+       stroke-miterlimit="10"
+       style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
+  </g>
+  <rect
+     ry="0"
+     rx="0"
+     y="113.00922"
+     x="0"
+     height="69.799599"
+     width="116.60477"
+     id="rect79371-1-6-6-9-8-7-86-3-9"
+     style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+  <text
+     sodipodi:linespacing="125%"
+     y="130.67021"
+     x="75.564331"
+     font-size="12"
+     id="text56820"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">设备类型</text>
+  <rect
+     ry="0"
+     rx="0"
+     y="143.30739"
+     x="7.964241"
+     height="28.838552"
+     width="99.431122"
+     id="rect79371-1-6-6-9-8-7-86-7"
+     style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+  <text
+     sodipodi:linespacing="125%"
+     y="162.6702"
+     x="32.387337"
+     font-size="11"
+     id="text56922"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">设备</text>
+  <g
+     id="g5278-5"
+     transform="matrix(0.7799818,0,0,0.72791181,5.096387,111.34525)">
+    <path
+       id="path5280-9"
+       d="M 40,12 35.33,12 9.67,12 5,12 5,33 9.67,33 35.34,33 40,33 40,12 Z m -9.22,8.06 5.32,0 m -5.32,2.44 5.32,0 m -5.32,2.44 5.32,0 m -18.57,-4.88 5.32,0 m -5.32,2.44 5.32,0 m -5.32,2.44 5.32,0 m -0.02,1.5 7.87,0 0,-7.87 -7.87,0 0,7.87 z m -10.98,-2.5 c 1.1,0 2,0.9 2,2 0,1.1 -0.9,2 -2,2 -1.1,0 -2,-0.9 -2,-2 0,-1.11 0.9,-2 2,-2 z m 1.98,-2.88 -4,0 0,-4 4,0 0,4 z"
+       stroke-miterlimit="10"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#ffffff;stroke-miterlimit:10" />
+  </g>
+  <rect
+     style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none"
+     id="rect7198-5"
+     width="98.255859"
+     height="50.000004"
+     x="-196.70581"
+     y="281.90311"
+     rx="0"
+     ry="0"
+     transform="matrix(0,-1,1,0,0,0)" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     x="-149.13875"
+     y="308.56229"
+     id="text7210-2"
+     sodipodi:linespacing="125%"
+     transform="matrix(0,-1,1,0,0,0)"><tspan
+       sodipodi:role="line"
+       x="-149.13875"
+       y="308.56229"
+       id="tspan7573-7">映射</tspan></text>
+  <rect
+     style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none"
+     id="rect6559"
+     width="113.68275"
+     height="97.93219"
+     x="140.12628"
+     y="98.007072"
+     rx="0"
+     ry="0" />
+  <rect
+     ry="0"
+     rx="0"
+     y="139.16841"
+     x="159.79027"
+     height="43.196156"
+     width="69.911789"
+     id="rect79371-1-6-6-9-8-7-9-9"
+     style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     x="195.06256"
+     y="115.53143"
+     id="text5543"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="195.06256"
+       y="115.53143"
+       id="tspan5547">物理接口</tspan><tspan
+       sodipodi:role="line"
+       x="195.06256"
+       y="129.28143"
+       id="tspan7758">定义</tspan></text>
+  <text
+     sodipodi:linespacing="125%"
+     id="text13959-6"
+     y="163.64946"
+     x="194.0235"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     xml:space="preserve"><tspan
+       id="tspan13963-4"
+       y="163.64946"
+       x="194.0235"
+       sodipodi:role="line">事件类型</tspan></text>
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot7760"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     transform="translate(-80.519965,-21.988094)"><flowRegion
+       id="flowRegion7762" /><flowPara
+       id="flowPara7766" /></flowRoot>  <flowRoot
+     xml:space="preserve"
+     id="flowRoot7821"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     transform="translate(-80.519965,-21.988094)"><flowRegion
+       id="flowRegion7823" /><flowPara
+       id="flowPara7827" /></flowRoot>  <rect
+     style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none"
+     id="rect6559-2"
+     width="127.59026"
+     height="32.36829"
+     x="354.68585"
+     y="130.55891"
+     rx="0"
+     ry="0" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     x="418.23151"
+     y="150.0833"
+     id="text5543-1"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="418.23151"
+       y="150.0833"
+       id="tspan7758-4">应用程序接口</tspan></text>
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot7909"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     transform="translate(-80.519965,-21.988094)"><flowRegion
+       id="flowRegion7911" /><flowPara
+       id="flowPara7915" /></flowRoot>  <flowRoot
+     xml:space="preserve"
+     id="flowRoot7917"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     transform="translate(-80.519965,-21.988094)"><flowRegion
+       id="flowRegion7919" /><flowPara
+       id="flowPara7923" /></flowRoot>  <path
+     inkscape:connector-curvature="0"
+     id="path8199-4-90"
+     d="m 117.34957,147.90902 14.63952,0"
+     style="opacity:1;fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-3-4-5)" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path8199-4-90-8"
+     d="m 261.71555,147.90902 14.63952,0"
+     style="opacity:1;fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-3-4-5-9)" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path8199-4-90-8-7"
+     d="m 333.90207,147.90903 14.63952,0"
+     style="opacity:1;fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-3-4-5-9-4)" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path8199-4-90-8-7-6"
+     d="m 484.91094,147.90902 14.63952,0"
+     style="opacity:1;fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-3-4-5-9-4-0)" />
+  <g
+     id="g56426"
+     transform="matrix(0,-1,1.3574838,0,-518.3338,383.84788)"
+     style="stroke-width:1.28743088;stroke-miterlimit:4;stroke-dasharray:none">
+    <circle
+       cx="326.366"
+       cy="608.59302"
+       r="1.692"
+       id="circle56428"
+       style="fill:#848282;stroke-width:1.28743088;stroke-miterlimit:4;stroke-dasharray:none" />
+  </g>
+  <path
+     inkscape:connector-curvature="0"
+     id="path20115"
+     d="m 283.28397,92.374579 0,-14.3734 48.93903,0 0,14.3734 0,0"
+     style="fill:none;stroke:#83827f;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  <ellipse
+     cy="307.75345"
+     cx="-57.493034"
+     id="path20185"
+     style="fill:#848282;fill-opacity:1;stroke:none;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none"
+     transform="matrix(0,-1,1,0,0,0)"
+     rx="1.6944633"
+     ry="2.3002064" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path20187"
+     d="m 307.75348,78.057679 0,-20.1705"
+     style="fill:none;stroke:#83827f;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  <g
+     id="g8248"
+     transform="translate(-62,64.007069)">
+    <g
+       style="stroke-width:1.28743088;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="matrix(0,1,-1.3574838,0,1085.2563,-154.69741)"
+       id="g56426-0">
+      <circle
+         style="fill:#848282;stroke-width:1.28743088;stroke-miterlimit:4;stroke-dasharray:none"
+         id="circle56428-9"
+         r="1.692"
+         cy="608.59302"
+         cx="326.366" />
+    </g>
+    <path
+       style="fill:none;stroke:#83827f;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 315.72808,137.13711 0,13.65096 -113.11823,0 0,-13.65096 0,0"
+       id="path20115-2"
+       inkscape:connector-curvature="0" />
+    <ellipse
+       ry="2.3002064"
+       rx="1.6944633"
+       transform="matrix(0,1,-1,0,0,0)"
+       style="fill:#848282;fill-opacity:1;stroke:none;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path20185-7"
+       cx="171.65744"
+       cy="-259.16901" />
+    <path
+       style="fill:none;stroke:#83827f;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 259.16897,151.09279 0,20.1705"
+       id="path20187-2"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     id="g8241"
+     transform="translate(-62,68.007069)">
+    <g
+       style="stroke-width:1.28743088;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="matrix(0,1,-1.3574838,0,1306.2138,-191.10896)"
+       id="g56426-0-4">
+      <circle
+         style="fill:#848282;stroke-width:1.28743088;stroke-miterlimit:4;stroke-dasharray:none"
+         id="circle56428-9-4"
+         r="1.692"
+         cy="608.59302"
+         cx="326.366" />
+    </g>
+    <path
+       style="fill:none;stroke:#83827f;stroke-width:1.58022153;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 543.2681,100.76567 0,13.57074 -126.28325,0 0,-13.57074 0,0"
+       id="path20115-2-2"
+       inkscape:connector-curvature="0" />
+    <ellipse
+       ry="2.3002064"
+       rx="1.6944633"
+       transform="matrix(0,1,-1,0,0,0)"
+       style="fill:#848282;fill-opacity:1;stroke:none;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path20185-7-3"
+       cx="135.2459"
+       cy="-480.12653" />
+    <path
+       style="fill:none;stroke:#83827f;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 480.12648,114.68124 0,20.1705"
+       id="path20187-2-5"
+       inkscape:connector-curvature="0" />
+  </g>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="88.995667"
+     y="-84.422066"
+     id="text8282"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan8284"
+       x="88.995667"
+       y="-84.422066" /></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     x="252.31912"
+     y="8.0083017"
+     id="text5543-4"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="252.31912"
+       y="8.0083017"
+       id="tspan7758-7"
+       style="text-align:start;text-anchor:start">将来自设备的</tspan><tspan
+       sodipodi:role="line"
+       x="252.31912"
+       y="21.758301"
+       id="tspan8332"
+       style="text-align:start;text-anchor:start">入局格式映射</tspan><tspan
+       sodipodi:role="line"
+       x="252.31912"
+       y="35.508305"
+       id="tspan8334"
+       style="text-align:start;text-anchor:start">到应用程序使用</tspan><tspan
+       sodipodi:role="line"
+       x="252.31912"
+       y="49.258305"
+       id="tspan8336"
+       style="text-align:start;text-anchor:start">的出局格式。</tspan><tspan
+       sodipodi:role="line"
+       x="252.31912"
+       y="63.008305"
+       id="tspan8330"
+       style="text-align:start;text-anchor:start" /></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     x="140.13103"
+     y="250.78506"
+     id="text5543-4-8"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="140.13103"
+       y="250.78506"
+       id="tspan8330-6"
+       style="text-align:start;text-anchor:start">定义要处理哪些</tspan><tspan
+       sodipodi:role="line"
+       x="140.13103"
+       y="264.53506"
+       style="text-align:start;text-anchor:start"
+       id="tspan8400">事件并定义入局</tspan><tspan
+       sodipodi:role="line"
+       x="140.13103"
+       y="278.28506"
+       style="text-align:start;text-anchor:start"
+       id="tspan8402">消息格式。</tspan><tspan
+       sodipodi:role="line"
+       x="140.13103"
+       y="292.03506"
+       style="text-align:start;text-anchor:start"
+       id="tspan8398" /></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     x="362.65094"
+     y="219.65875"
+     id="text5543-4-6"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="362.65094"
+       y="219.65875"
+       id="tspan8330-9"
+       style="text-align:start;text-anchor:start">定义应用程序使用的</tspan><tspan
+       sodipodi:role="line"
+       x="362.65094"
+       y="233.40875"
+       style="text-align:start;text-anchor:start"
+       id="tspan8418">消息格式。</tspan></text>
+</svg>

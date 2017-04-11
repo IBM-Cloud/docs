@@ -1,17 +1,17 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-26"
-
+  years: 2016, 2017
+lastupdated: "2017-03-08"
 ---
 
-
-
-{:new_window: target="\_blank"}
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
 
 
 # 设备工具包
@@ -19,7 +19,9 @@ lastupdated: "2016-10-26"
 通过使用 {{site.data.keyword.iotinsurance_full}} 设备工具包，您可以将任何设备供应商生产的设备连接到 {{site.data.keyword.iotinsurance_short}} 服务。
 {:shortdesc}
 
-设备可以将数据直接发送到 {{site.data.keyword.iot_full}}，也可以通过设备供应商的云进行发送。您可通过注册授权用户，然后设置设备事件生成和接收来连接设备。使用以下各部分中的指示信息来连接设备。
+设备可以将数据直接发送到 {{site.data.keyword.iot_full}}，也可以通过设备供应商的云进行发送。您可通过注册授权用户，然后设置设备事件生成和接收来连接设备。有关受支持设备和供应商以及样本集成过程的列表，请参阅[受支持的设备和供应商](iotinsurance_supporteddevices.html)。
+
+使用以下各部分中的指示信息来连接设备。
 
 ## 注册授权用户
 {: #reg_users}
@@ -33,6 +35,14 @@ lastupdated: "2016-10-26"
 
 ### 用户注册流程
 {: #user_reg_flow}
+
+用户注册根据供应商而变化。要了解如何获取所需的云访问令牌，以及如何使用 API 将它们注册到 {{site.data.keyword.iotinsurance_short}}，请参阅[受支持的设备和供应商](iotinsurance_supporteddevices.html)。
+
+#### 移动注册流程（*已弃用*）
+
+**注**：移动应用程序仅支持 Wink，且对 {{site.data.keyword.amashort}} 的更改已禁用本节中所述的用户注册流程。
+此流程仅用于 {{site.data.keyword.iotinsurance_short}} V1.0 版的现有实例。
+
 下图显示的是简化的用户注册流程。在此示例中，新用户注册请求是从移动设备发起的。请求由 {{site.data.keyword.amafull}} 进行处理，这将向客户的支持系统提供标识，并向 API 注册服务发送请求。API 注册服务会将 OAuth 请求重定向到设备供应商的云，再由该云验证向客户的支持系统进行的认证。设备供应商的云会将授权代码或令牌返回给 API 注册服务。然后，注册服务会在 {{site.data.keyword.iot_short_notm}} 和 {{site.data.keyword.cloudant}} 中创建用户和唯一 API 令牌。
 
 ![{{site.data.keyword.iotinsurance_short}} 用户注册流程。本主题的正文部分对此图进行了具体描述。](images/IoT4I_reg_user.svg "{{site.data.keyword.iotinsurance_short}} 用户注册流程")
@@ -45,15 +55,15 @@ lastupdated: "2016-10-26"
 
 设备直接连接到 {{site.data.keyword.iot_short_notm}} 时，设备和用户之间的链接会存储在 {{site.data.keyword.iot_short_notm}} 中。{{site.data.keyword.iotinsurance_short}} Transformer 会对这些信息进行高速缓存，然后使用用户的链接来丰富设备事件。
 
-### 设备事件注册流程
-{: #device_event_reg}
+### 云到云 - 设备事件流程
+{: #device_event_flow}
 下图显示的是简化的设备事件流程。在此示例中，设备会检查漏水情况。{{site.data.keyword.iotinsurance_short}} Transformer 会定期轮询供应商的云，以确定设备状态是否有变化。检测到事件时，Transformer 会将该事件发送到 {{site.data.keyword.iot_short_notm}}。{{site.data.keyword.iotinsurance_short}} 保障引擎对事件进行分析后，会生成警报并将警报存储在 {{site.data.keyword.cloudant}} 中。{{site.data.keyword.iot_short_notm}} 会将警报传输到 {{site.data.keyword.iotinsurance_short}} 操作引擎进行分析。然后，操作引擎通过 {{site.data.keyword.mobilepushshort}} 将警报推送到消费者的移动应用程序。  
 
 ![{{site.data.keyword.iotinsurance_short}} 设备事件注册流程。本主题的正文部分对此图进行了具体描述。](images/IoT4I_device_reg.svg "{{site.data.keyword.iotinsurance_short}} 设备事件注册流程")
 
 ### 如何设置设备状态轮询
 {: #device_polling}
-Transformer 微型服务负责轮询和接收状态更新。如果设备供应商的 REST API 支持异步设备更新，那么可以建立预订，使 Transformer 在发生设备状态更新时接收这些更新。否则，可以将 Transformer 设置为轮询设备状态更新。
+Transformer 微服务负责轮询和接收状态更新。如果设备供应商的 REST API 支持异步设备更新，那么可以建立预订，使 Transformer 在发生设备状态更新时接收这些更新。否则，可以将 Transformer 设置为轮询设备状态更新。
 
 以下伪函数调用用于定义轮询流程：
 
@@ -64,8 +74,7 @@ Transformer 微型服务负责轮询和接收状态更新。如果设备供应�
 `getRegisteredUserDevices(userName)` | 检索正在使用该用户名的可用注册用户设备。
 `getProviderDevices(providerUserToken)` | 调用设备提供者 REST API 来获取正在使用该用户不记名令牌的用户设备的状态。
 `findDevicesToAdd()、findDevicesToDel() 和 findDevicesToUpdate()` | 将已注册的设备与设备提供者中当前存在的设备进行比较，以查找新设备、已删除设备和已修改设备。`syncData()` | 通过删除旧设备、添加新设备和更新已修改设备来同步用户设备。  
- `notifyIoTP()` | 将更改（例如 MQTT 事件）通知 {{site.data.keyword.iot_short_notm}}。
-
+ `notifyIoTP()` | 将更改（如 MQTT 事件）通知 {{site.data.keyword.iot_short_notm}}。
 Transformer 向 {{site.data.keyword.iot_short_notm}} 发布状态更新，如以下代码示例中所示。
 ```
 // 如 VCAP.services 中所指定
@@ -147,7 +156,9 @@ dbhelper.bulkDelDevices(userDevices, function (err, results) {
 {: #deploy_new_transformer}
 您可以在部署了 {{site.data.keyword.iotinsurance_short}} 的组织和空间中部署新的 Transformer 实例。  
 
-开始之前，请下载并安装 Cloud Foundry 命令行界面。使用 Cloud Foundry 命令行界面来修改服务实例，并将其部署到 {{site.data.keyword.iot_short_notm}}。有关更多信息，请参阅[开始使用 cf 命令行界面编码](https://www.ng.bluemix.net/docs/#starters/install_cli.html)。
+**注：**有关部署新 Transformer 实例时的信息和协助，请参阅[联系支持](../support/index.html#contacting-support)。
+
+开始之前，请下载并安装 Cloud Foundry 命令行界面。使用 Cloud Foundry 命令行界面来修改服务实例，并将其部署到 {{site.data.keyword.iot_short_notm}}。有关更多信息，请参阅[开始使用 cf 命令行界面编码 ![外部链接图标](../../icons/launch-glyph.svg)](https://www.ng.bluemix.net/docs/#starters/install_cli.html){:new_window}。
 
 1. 在命令行界面中，使用以下命令将目录更改为`包含源和部署描述符 YML 文件的目录`：
 ```
@@ -179,7 +190,7 @@ $ cf stop iot4i-dev-transformer
        APIDOMAIN: iot4insurance-api-v.mybluemix.net
        NODE_MODULES_CACHE: false
   ```
-6. 通过使用以下命令，并将 `newtransformer` 替换为部署描述符文件的名称，以将 Transformer 推送到 {{site.data.keyword.bluemix_notm}} 中：
+6. 通过使用以下命令，并将 `newtransformer` 替换为部署描述符文件的名称，以将 Transformer 推送到 {{site.data.keyword.Bluemix_notm}} 中：
   ```
   $ cf push -f newtransformer.yml
   ```
@@ -187,21 +198,3 @@ $ cf stop iot4i-dev-transformer
   ```
   $ cf logs iot4i-dev-transformer
   ```
-
-# 相关链接
-{: #rellinks}
-
-## 教程和样本
-{: #samples}
-* [GitHub 上的样本移动应用程序代码](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## API 参考
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API 示例](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## 相关链接
-{: #general}
-* [{{site.data.keyword.iot_full}}文档](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [开发人员支持论坛](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-* [堆栈溢出支持论坛](http://stackoverflow.com/questions/tagged/ibm-bluemix)

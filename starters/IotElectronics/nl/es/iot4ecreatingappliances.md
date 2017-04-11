@@ -1,15 +1,16 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-29"
-
+  years: 2016, 2017
+lastupdated: "2017-03-10"
 ---
 
-{:new_window: target="\_blank"}
-
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Utilización de la app de inicio
 Cree dispositivos simulados en la app de inicio de {{site.data.keyword.iotelectronics_full}}. Experimente cómo una empresa de producción puede supervisar dispositivos conectados a {{site.data.keyword.iot_short_notm}}. Interactúa manualmente con el dispositivo simulado para desencadenar alertas, notificaciones y acciones.
@@ -23,7 +24,7 @@ Cree dispositivos simulados en la app de inicio de {{site.data.keyword.iotelectr
 
     ![{{site.data.keyword.iotelectronics}} en el panel de control.](images/IoT4E_bm_dashboard.svg "{{site.data.keyword.iotelectronics}} en el panel de control")
 
-2. Espere a que aparezca el mensaje de estado *La app está ejecutándose* en la cabecera y, a continuación, pulse **Ver app** para mostrar la app del iniciador.  
+2. Espere a que aparezca el mensaje de estado *La app está ejecutándose* en la cabecera y, a continuación, pulse **Ver app** para mostrar la app del iniciador.
 
     ![{{site.data.keyword.iotelectronics}} ver app.](images/IoT4E_view_app.svg "{{site.data.keyword.iotelectronics}} ver app")
 
@@ -42,7 +43,7 @@ En la app de inicio, puede crear y controlar dispositivos simulados como fabrica
 
     ![Adición de una lavadora.](images/IoT4E_add_washer.svg "Adición de una lavadora")
 
-3. Para ver los detalles de la lavadora, emitir mandatos y provocar anomalías, pulse una lavadora.
+3. Para ver los detalles de la lavadora, pulse una lavadora. En el panel de mandato y control, inicie la lavadora o pulse los distintos tipos de error para ver los cambios de estado. También puede ver los cambios de estado y controlar la lavadora desde la app móvil. 
 
   ![Detalles de estado de lavadora.](images/IoT4E_washer_control.svg "Detalles de estado de lavadora")
 

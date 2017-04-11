@@ -20,7 +20,7 @@ Apple Push Notification Service (APNs) を使用して、アプリケーショ�
 APNs の資格情報を取得して構成してください。
 APNs の証明書は、{{site.data.keyword.mobilepushshort}}サービスによって安全に管理され、プロバイダーとしての APNs サーバーへの接続に使用されます。
 
-<!-- 1. Obtain an [Apple Developers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.apple.com/ "External link icon"){: new_window} account.-->
+<!-- 1. Obtain an [Apple Developers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.apple.com/){: new_window} account.-->
 
 <!--2. [Register an App ID](#create-push-credentials-apns-register)
 3. [Create a development and distribution APNs SSL certificate](#create-push-credentials-apns-ssl)
@@ -37,9 +37,9 @@ APNs の証明書は、{{site.data.keyword.mobilepushshort}}サービスによ�
 
 アプリ ID (バンドル ID) は、特定のアプリケーションを識別する固有の ID です。各アプリケーションにアプリ ID が必要です。{{site.data.keyword.mobilepushshort}}サービスのようなサービスが、特定のアプリ ID に対して構成されます。
 
-1. [Apple Developers ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.apple.com/ "外部リンク・アイコン"){: new_window} アカウントを持っていることを確認してください。
-2. [Apple Developer ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.apple.com "外部リンク・アイコン"){: new_window} ポータルにアクセスし、**「Member Center」**をクリックし、**「Certificates, Identifiers & Profiles」**を選択します。
-3. [Apple Developer Library ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW991 "外部リンク・アイコン"){: new_window}の**「Registering App IDs」**セクションにアクセスし、指示に従って App ID を登録します。
+1. [Apple Developers ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.apple.com/){: new_window} アカウントを持っていることを確認してください。
+2. [Apple Developer ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.apple.com){: new_window}ポータルにアクセスし、**「Member Center」**をクリックし、**「Certificates, Identifiers & Profiles」**を選択します。
+3. [Apple Developer Library ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW991){: new_window}の**「Registering App IDs」**セクションにアクセスし、指示に従って App ID を登録します。
 
 アプリ ID を登録する際、以下のオプションを選択します。
 
@@ -68,7 +68,7 @@ APNs は、以下の 2 つのモードで使用できます。
 
 <!-- Create a development and distribution SSL certificate. -->
 
-1. [Apple Developer ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.apple.com "外部リンク・アイコン"){: new_window} Web サイトにアクセスし、**「Member Center」**をクリックし、**「Certificates, Identifiers & Profiles」**を選択します。
+1. [Apple Developer ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.apple.com){: new_window} Web サイトにアクセスし、**「Member Center」**をクリックし、**「Certificates, Identifiers & Profiles」**を選択します。
 2. **「Identifiers (ID)」**エリアで、**「App IDs (アプリ ID)」**をクリックします。
 3. アプリ ID のリストから、<!--newly created-->アプリ ID を選択し、次に、**「Settings (設定)」**を選択します。
 4. **「Push Notifications (プッシュ通知)」**エリアで、開発 SSL 証明書を作成し、次に実動 SSL 証明書を作成します。
@@ -105,8 +105,8 @@ APNs は、以下の 2 つのモードで使用できます。
 
 以下のように、開発プロビジョニング・プロファイルを作成します。
 
-1. [Apple Developer ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.apple.com "外部リンク・アイコン"){: new_window} ポータルにアクセスし、**「Member Center」**をクリックし、**「Certificates, Identifiers & Profiles」**を選択します。
-2. [Mac Developer Library ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW62site "外部リンク・アイコン"){: new_window}にアクセスし、**「Creating Development Provisioning Profiles」**セクションにスクロールし、指示に従って開発プロファイルを作成します。
+1. [Apple Developer ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.apple.com){: new_window}ポータルにアクセスし、**「Member Center」**をクリックし、**「Certificates, Identifiers & Profiles」**を選択します。
+2. [Mac Developer Library ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW62site){: new_window}にアクセスし、**「Creating Development Provisioning Profiles」**セクションにスクロールし、指示に従って開発プロファイルを作成します。
 **注**: 開発プロビジョン・プロファイルを構成する際に、以下のオプションを選択します。
 	* **「iOS App Development (iOS アプリ開発)」**
 	* **「For iOS and watchOS apps (iOS アプリおよび watchOS アプリ用)」 **
@@ -118,7 +118,7 @@ APNs は、以下の 2 つのモードで使用できます。
 
 ストア・プロビジョニング・プロファイルを使用して、ご使用のアプリを配布用にアプリ・ストアにサブミットします。
 
-1. [Apple Developer ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.apple.com "外部リンク・アイコン"){: new_window} ポータルにアクセスし、**「Member Center」**をクリックし、**「Certificates, Identifiers & Profiles」**を選択します。
+1. [Apple Developer ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.apple.com){: new_window}ポータルにアクセスし、**「Member Center」**をクリックし、**「Certificates, Identifiers & Profiles」**を選択します。
 2. ダウンロードしたプロビジョニング・プロファイルをダブルクリックして、Xcode にインストールします。
                     
 
@@ -133,7 +133,7 @@ APNs に必要な証明書は、`.p12` 証明書です。これらの証明書�
 
 **注**: `.cer` ファイルがキー・チェーン・アクセスに配置されたら、それをコンピューターにエクスポートして、`.p12` 証明書を作成します。
 
-APNs の使用について詳しくは、[iOS Developer Library: Local and Push Notification Programming Guide ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4 "外部リンク・アイコン"){: new_window}を参照してください。
+APNs の使用について詳しくは、[iOS Developer Library: Local and Push Notification Programming Guide ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4){: new_window}を参照してください。
 
 「Push Notification」サービス・ダッシュボードで APNs をセットアップするには、以下の手順を実行します。
 

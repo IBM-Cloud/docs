@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-08"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2016-09-08"
 ## Lancement de demandes de gestion des terminaux à l'aide du tableau de bord
 {: #initiating-dm-dashboard}
 
-Les demandes peuvent être lancées via le tableau de bord en accédant à l'onglet **Actions** de la page Terminaux. Le bouton **lancer une action** ouvre une boîte de dialogue dans laquelle vous pouvez sélectionner une action, choisir les terminaux sur lesquels doit porter l'action, et spécifier d'éventuels paramètres supplémentaires pris en charge par l'action que vous avez sélectionnée.
+Les demandes peuvent être lancées via le tableau de bord en utilisant l'onglet **Actions** de la page Terminaux. Cliquez sur le bouton **Lancer une action** pour sélectionner une action, choisir des terminaux et spécifier d'éventuels paramètres supplémentaires pris en charge par l'action que vous avez sélectionnée.
 
 ## Lancement de demandes de gestion des terminaux à l'aide de l'API REST
 {: #initiating-dm-api}
@@ -31,7 +31,7 @@ Les demandes peuvent être lancées à l'aide de l'exemple d'API REST suivant :
 
 `POST https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
-Pour plus d'informations sur le corps d'une demande de gestion des terminaux, voir la [documentation d'API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html).
+Pour plus d'informations sur le corps d'une demande de gestion des terminaux, voir la [documentation de l'API ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ## Actions sur les terminaux
 {: #device-actions}
@@ -82,7 +82,7 @@ iotdm-1/mgmt/initiate/device/reboot
 ### Format de message pour une demande de réamorçage de terminaux
 
 
-Format de la demande :
+Format de demande :
 
 ```
 Message entrant depuis le serveur :
@@ -93,7 +93,7 @@ Topic: iotdm-1/mgmt/initiate/device/reboot
 }
 ```
 
-Format de la réponse :
+Format de réponse :
 
 ```
 Message sortant depuis le terminal :
@@ -178,9 +178,9 @@ Topic: iotdevice-1/response
 ## Actions sur le microprogramme
 {: #firmware-actions}
 
-Le niveau de microprogramme actuellement identifié sur un terminal est stocké dans l'attribut `deviceInfo.fwVersion`. Les attributs `mgmt.firmware` sont utilisés pour effectuer une mise à jour de microprogramme et observer son statut.
+Le niveau de microprogramme identifié sur un terminal est stocké dans l'attribut `deviceInfo.fwVersion`. Les attributs `mgmt.firmware` sont utilisés pour effectuer une mise à jour de microprogramme et observer son statut.
 
-**Important :** Le terminal géré doit prendre en charge l'observation de l'attribut `mgmt.firmware` afin de prendre en charge les actions sur le microprogramme.
+**Important :** Le terminal géré doit prendre en charge l'observation de l'attribut `mgmt.firmware` afin de prendre en charge les actions sur le microprogramme. 
 
 Le processus de mise à jour du microprogramme est scindé en deux actions distinctes :
 - Téléchargement du microprogramme
@@ -190,8 +190,8 @@ Le statut de chacune des actions sur le microprogramme est stocké dans un attri
 
  |Valeur |Etat  | Signification |
  |:---|:---|:---|
- |0  | Inactif        | Actuellement, le terminal ne télécharge pas de microprogramme. |  
- |1  | Téléchargement en cours | Le terminal est actuellement en train de télécharger un microprogramme. |
+ |0  | Inactif        | Le terminal n'est pas en train de télécharger un microprogramme. |  
+ |1  | Téléchargement en cours | Le terminal est en train de télécharger un microprogramme. |
  |2  | Téléchargé  | Le terminal a téléchargé une mise à jour de microprogramme et est prêt à l'installer. |
 
 
@@ -219,8 +219,8 @@ Pour lancer un téléchargement de microprogramme à l'aide de l'API REST, exéc
 Les informations suivantes sont fournies :
 
 - L'action `firmware/download`
-- L'URI de l'image du microprogramme
 - Une liste de terminaux qui doivent recevoir l'image (5 000 terminaux au maximum)
+- L'URI de l'image de microprogramme (facultatif) 
 - La chaîne de vérification permettant de valider l'image (facultatif)
 - Le nom du microprogramme (facultatif)
 - La version du microprogramme (facultatif)
@@ -252,11 +252,13 @@ L'exemple suivant illustre la demande de téléchargement de microprogramme sur 
 }
 ```
 
+Si aucun des paramètres facultatifs n'est défini, la première étape du processus suivant est ignorée.
+
 Le serveur de gestion des terminaux dans {{site.data.keyword.iot_short_notm}} utilise le protocole de gestion des terminaux pour envoyer une demande aux terminaux, ce qui lance le téléchargement de microprogramme. Le processus de téléchargement se décompose comme suit :
 
 1. Une demande de mise à jour des détails de microprogramme est envoyée au sujet `iotdm-1/device/update`.
 La demande de mise à jour permet au terminal de vérifier si le microprogramme demandé est différent de celui actuellement installé. En cas de différence, affectez au paramètre `rc` la valeur `204`, ce qui permet le passage au statut `Modifié`.  
-L'exemple suivant illustre le message qui doit s'afficher pour l'exemple de demande de téléchargement de microprogramme envoyée précédente, ainsi que la réponse à envoyer lorsqu'une différence est détectée :
+L'exemple suivant illustre le message qui doit s'afficher pour l'exemple de demande de téléchargement de microprogramme envoyée précédente, ainsi que la réponse envoyée lorsqu'une différence est détectée :
 ```
    Demande entrante depuis {{site.data.keyword.iot_short_notm}} :
 
@@ -439,6 +441,10 @@ Les informations suivantes sont fournies :
 
 - L'action `firmware/update`
 - La liste des terminaux qui doivent recevoir l'image, tous du même type
+- L'URI de l'image de microprogramme (facultatif) 
+- La chaîne de vérification permettant de valider l'image (facultatif)
+- Le nom du microprogramme (facultatif)
+- La version du microprogramme (facultatif)
 
 Le code suivant est un exemple de demande :
 
@@ -453,6 +459,8 @@ Le code suivant est un exemple de demande :
    }
 
 ```
+
+Si aucun des paramètres facultatifs n'est défini, le premier message reçu par le terminal est une demande de mise à jour de terminal. Cette demande de mise à jour de terminal est semblable au premier message de la demande de téléchargement de microcode.
 
 Pour surveiller le statut de la mise à jour de microprogramme, {{site.data.keyword.iot_short_notm}} commence par déclencher une demande d'observation sur le sujet`iotdm-1/observe`. Lorsque le terminal est prêt à lancer le processus de mise à jour, il envoie une réponse pour laquelle le paramètre `rc` a pour valeur `200`, l'attribut`mgmt.firmware.state` a pour valeur `0` et l'attribut `mgmt.firmware.updateStatus` a pour valeur `0`.
 
@@ -590,3 +598,17 @@ La liste suivante fournit des informations utiles pour le traitement du processu
 
 
 **Important :** Tous les paramètres répertoriés avec l'attribut `mgmt.firmware` doivent être définis en même temps de sorte que s'il existe une observation en cours pour `mgmt.firmware`, un seul message de notification soit envoyé.
+
+## Recettes relatives aux actions sur les terminaux et aux actions sur un microprogramme
+
+Les recettes suivantes décrivent le flux complet requis pour effectuer des actions sur les terminaux et sur un microprogramme.
+
+- [Device Management in WIoT Platform – Roll Back & Factory Reset ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/){: new_window}
+
+- [Device Initiated Firmware Update ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-device-initiated-firmware-upgrade/){: new_window}
+
+- [Platform Initiated Firmware Update ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/){: new_window}
+
+- [Platform Initiated Firmware Update with Background Execution ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/){: new_window}
+
+- [Firmware Roll Back & Factory Reset ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/){: new_window}

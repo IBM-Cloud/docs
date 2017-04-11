@@ -2,10 +2,10 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-05"
+lastupdated: "2017-02-11"
 
 ---
-{:new_window: target="blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 
@@ -52,6 +52,7 @@ Beispiele für häufige Anwendungsfälle für den {{site.data.keyword.objectstor
 * [Herstellen einer Verbindung zu IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} mit Java](https://developer.ibm.com/recipes/tutorials/connecting-to-ibm-object-storage-for-bluemix-with-java/){: new_window}
 * [Python für den Zugriff auf {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.objectstorageshort}} verwenden](https://developer.ibm.com/recipes/tutorials/use-python-to-access-your-bluemix-object-storage/){: new_window}
 * [PHP zur Nutzung von {{site.data.keyword.objectstorageshort}} verwenden](https://developer.ibm.com/recipes/tutorials/use-php-to-leverage-object-storage-for-bluemix/){: new_window}
+* [Node.js zum Zugriff auf Object Storage for Bluemix verwenden](https://developer.ibm.com/recipes/tutorials/use-pkgcloud-to-access-ibm-object-storage-for-bluemix-with-node-js/){: new-window}
 
 ## Kompatible Laufzeiten
 {: #buildpacks}

@@ -17,8 +17,8 @@ lastupdated: "2016-07-20"
 
 
 在某些环境中，例如 [Bluemix Dedicated](/docs/dedicated/index.html#dedicated) 和
-[Bluemix Local](/docs/local/index.html#local)，可以对代理进行设置，以影响应用程序在编译打包和运行时的行为。
-
+[Bluemix Local](/docs/local/index.html#local)，可以对代理进行设置，
+以影响应用程序在编译打包和运行时的行为。
 
 您可以使用以下环境变量，对应用程序进行配置，以使用代理：
   * [http_proxy](https://docs.cloudfoundry.org/buildpacks/proxy-usage.html)
@@ -45,7 +45,7 @@ lastupdated: "2016-07-20"
 并重新编译打包应用程序。应用程序随后将在运行时使用指定的代理设置。有关 Java 代理选项的更多信息，请参阅 [Java 联网和代理](https://docs.oracle.com/javase/8/docs/technotes/guides/net/proxies.html)。
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
 {: #general}
 * [Liberty for Java](/docs/runtimes/liberty/index.html)

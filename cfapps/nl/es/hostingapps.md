@@ -67,8 +67,8 @@ Si su app cumple todos los principios siguientes, será una app lista para la nu
 
 * No se base en características específicas del sistema operativo.
 
-  Si ya ha utilizado características específicas del sistema operativo, puede solucionarlo mediante el uso de bibliotecas de compatibilidad, como Cygwin y Mono. Cygwin es una biblioteca de compatibilidad que proporciona un conjunto de herramientas Linux en un entorno Windows. Mono es una biblioteca de compatibilidad que proporciona capacidades de Windows .NET en Linux.
-
+  Si ya ha utilizado características específicas del sistema operativo, puede solucionarlo mediante el uso de bibliotecas de compatibilidad, como Cygwin y Mono. Cygwin es una biblioteca de compatibilidad que proporciona un conjunto de herramientas Linux en un entorno Windows. Mono es una biblioteca de compatibilidad que proporciona capacidades de Windows .NET en Linux. 
+  
   Evite las dependencias de un sistema operativo específico; en su lugar, utilice servicios proporcionados por la infraestructura middleware o proveedores de servicios.
 
 * No instale su app manualmente.
@@ -77,13 +77,12 @@ Si su app cumple todos los principios siguientes, será una app lista para la nu
 
   Como mínimo, capture la instalación de su app como un conjunto uniforme de scripts que sean independientes del sistema operativo. Mantenga la instalación de su app en un tamaño reducido y portable, para adaptarse a las distintas técnicas de automatización. Además, minimice las dependencias necesarias para la instalación de apps.
 
-Para obtener más información sobre aplicaciones listas para la nube, consulte [The 12-factor application ![icono de enlace externo](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}. 
+Para obtener más información sobre aplicaciones listas para la nube, consulte [The 12-factor application ![icono de enlace externo](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}.
 
 ##Migración de sus apps
 {: #ht_hostapp}
 
-Puede migrar sus apps a {{site.data.keyword.Bluemix_notm}} de forma incremental, en lugar de desplazarla completamente al entorno de nube. Primero puede migrar una parte de
-sus apps y conectar a los datos existentes o sistema de registros mediante el servicio Cloud integration.
+Puede migrar sus apps a {{site.data.keyword.Bluemix_notm}} de forma incremental, en lugar de desplazarla completamente al entorno de nube. Primero puede migrar una parte de sus apps y conectar a los datos existentes o sistema de registros mediante el servicio Cloud integration.
 
 En sus apps de nube, podría necesitar acceso a los datos o servicios de fondo, por ejemplo, un sistema de registros. En {{site.data.keyword.Bluemix_notm}}, puede utilizar el servicio Secure Gateway para establecer un túnel seguro entre una organización de {{site.data.keyword.Bluemix_notm}} y la red principal de fondo empresarial. El servicio permite a las apps en {{site.data.keyword.Bluemix_notm}} acceder a los datos y servicios de la red principal de fondo. Para obtener detalles, consulte [Alcanzar el elemento de fondo empresarial con Bluemix Secure Gateway a través de la consola ![icono de enlace externo](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}.
 
@@ -110,8 +109,7 @@ Puede gestionar su código en el cliente local y utilizar la interfaz de línea 
 Realice los pasos siguientes para migrar su app:
 
 <ol>
-<li>Instalar la interfaz de línea de mandatos de Cloud Foundry. Asegúrese de utilizar la versión
-más reciente de la interfaz de línea de mandatos de cf.
+<li>Instalar la interfaz de línea de mandatos de Cloud Foundry. Asegúrese de utilizar la versión más reciente de la interfaz de línea de mandatos de cf.
 <ol>
 <li>Descargue el programa de instalación para su sistema operativo.</li>
 <li>Siga el asistente de la herramienta para instalar la línea de mandatos.</li>
@@ -139,14 +137,11 @@ más reciente de la interfaz de línea de mandatos de cf.
 
 <li>Envíe su app por Push. Puede subir su app utilizando el mandato push de cf.
 <ol>
-<li>Conecte e inicie sesión en {{site.data.keyword.Bluemix_notm}} ejecutando el mandato siguiente. Seleccione su
-organización y espacio cuando se le solicite.
+<li>Conecte e inicie sesión en {{site.data.keyword.Bluemix_notm}} ejecutando el mandato siguiente. Seleccione su organización y espacio cuando se le solicite.
 <pre>cf login -a https://api.ng.bluemix.net</pre></li>
-<li>En el directorio de la app, escriba el mandato cf push
-con el nombre de la app. El nombre de la app debe ser exclusivo en el entorno {{site.data.keyword.Bluemix_notm}}.
+<li>En el directorio de la app, escriba el mandato cf push con el nombre de la app. El nombre de la app debe ser exclusivo en el entorno {{site.data.keyword.Bluemix_notm}}.
 <pre>cf push nombre_app</pre></li>
-<li>Opcional: Si utiliza un paquete de compilación externo, debe usar la opción -b
-con el mandato push de cf. Por ejemplo:
+<li>Opcional: Si utiliza un paquete de compilación externo, debe usar la opción -b con el mandato push de cf. Por ejemplo:
 <pre>cf push appname -b buildpack_URL</pre>
 <p>Para obtener detalles, consulte Uso de paquetes de compilación.</p>
 </li></ol>

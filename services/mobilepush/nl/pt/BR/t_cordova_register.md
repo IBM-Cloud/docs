@@ -61,7 +61,7 @@ MFPPush.registerDevice({}, success, failure);
 **var token = JSON.parse(response).token**
 
 
-As chaves disponíveis são estas: ```token```, ```userId`` e ```deviceId``.
+As chaves disponíveis são como a seguir: `token`, `userId` e `deviceId`.
 
 O fragmento de código JavaScript a seguir mostra como inicializar o SDK do cliente Bluemix
 Mobile Services, registrar um dispositivo no Serviço de notificação push e atender a
@@ -94,9 +94,9 @@ onDeviceReady: function() {
      var settings = {
          ios: {
              alert: true,
-             badge: true,
-             sound: true
-         }   
+	       badge: true,
+	       sound: true
+	   }   
      };
      MFPPush.registerDevice(settings, success, failure);
      var notification = function(notif){
@@ -113,7 +113,9 @@ Inclua o fragmento de código Objective-C a seguir em sua classe de delegação 
 
 ```
 	// Register the device token with Bluemix Push Notification Service
-	- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+	- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData
+*)deviceToken {
 	  [[CDVMFPPush sharedInstance] didRegisterForRemoteNotifications:deviceToken];
 	}
 	// Handle error when failed to register device token with APNs

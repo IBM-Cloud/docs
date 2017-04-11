@@ -1,16 +1,17 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-29"
+  years: 2016, 2017
+lastupdated: "2017-03-01"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
 
 
 <!-- {{site.data.keyword.iotinsurance_full}}  {{site.data.keyword.iotinsurance_short}}  -->
@@ -26,7 +27,7 @@ lastupdated: "2016-10-29"
 データベース名| 変更の頻度| 変更の理由 | バックアップが必要 | コメント
 ------------- | -------------| -------------| -------------| -------------
 favorites|管理|新しい管理者アクション|はい|-
-Devices|管理|新しいデバイスまたはユーザーの追加または削除|はい| 変換プログラムにより、デバイス・プロバイダーからメモリー内に表が動的生成されます。直接接続のゲートウェイの場合、この表にデバイス・ユーザーが格納されます。
+Devices|管理|新しいデバイスまたはユーザーの追加または削除|はい| 変換プログラムにより、メモリー内に表が動的生成され、デバイス・プロバイダーからのデータがその表に設定されます。直接接続のゲートウェイの場合、この表にデバイスが格納されます。
 hazardevents|ランダム|新しいシールド・イベントの検出|はい|-
 Jscode|管理|シールド用の新しい JS コードのデプロイ|はい*| 管理者は、オプションとして、バックアップをスキップし、JS コードの新しいバージョンをデプロイすることができます。
 Promotions|管理|新しいプロモーションの追加|はい|-
@@ -40,7 +41,7 @@ aggregationschedule|-|-| いいえ|再作成可能。
 
 ## {{site.data.keyword.cloudant}} インスタンスのレプリカの作成
 {: #createinstance}
-{{site.data.keyword.cloudant}} インスタンスのレプリカを作成するには、[{{site.data.keyword.cloudant}} のレプリケーションの手順](https://docs.cloudant.com/replication.html)を使用します。災害復旧が目的の場合、元の {{site.data.keyword.iotinsurance_short}} サービスとは別の場所にレプリカを作成します。例えば、元のインスタンスがダラスにある場合、レプリカをロンドンに作成することができます。
+{{site.data.keyword.cloudant}} インスタンスのレプリカを作成するには、[{{site.data.keyword.cloudant}} のレプリケーションの手順 ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://docs.cloudant.com/replication.html) に従います。災害復旧が目的の場合、元の {{site.data.keyword.iotinsurance_short}} サービスとは別の場所にレプリカを作成します。例えば、元のインスタンスがダラスにある場合、レプリカをロンドンに作成することができます。
 
 ## 資格情報と URL を見つける
 {: #locate_credentials}
@@ -70,7 +71,7 @@ aggregationschedule|-|-| いいえ|再作成可能。
 
 8. **「データのレプリカを生成 (Replicate Data)」**をクリックします。  
 
-9. (オプション) 前のデータは後のレプリケーション・タスクによって上書きされるため、データを CSV ファイルにエクスポートすることを考慮してください。その手順については、[Export Cloudant JSON as CSV, RSS, or iCal](https://developer.ibm.com/clouddataservices/2015/09/22/export-cloudant-json-as-csv-rss-or-ical/) を参照してください。
+9. (オプション) 前のデータは後のレプリケーション・タスクによって上書きされるため、データを CSV ファイルにエクスポートすることを考慮してください。その手順については、[Export Cloudant JSON as CSV, RSS, or iCal ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://developer.ibm.com/clouddataservices/2015/09/22/export-cloudant-json-as-csv-rss-or-ical/){: new_window} を参照してください。
 
 10. データベースごとにこれらのステップを繰り返します。
 
@@ -92,26 +93,6 @@ aggregationschedule|-|-| いいえ|再作成可能。
 3. 以下のいずれかの方法でデータを復元します。
   - CSV バックアップ・ファイルからデータをプライマリー Cloudant インスタンスに直接ロードします。
   - 複製データベースをソースとし、元のデータベースをターゲットとするレプリケーション・タスクを作成します。このタスクにより、複製データが元のデータベースに移動します。
-4. 以下のスクリプトを実行して、設計文書を再作成し、参照整合性をリストアします。これらのスクリプトは、[{{site.data.keyword.iotinsurance_short}} API サンプル GitHub サイト](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/)にあります。
+4. 以下のスクリプトを実行して、設計文書を再作成し、参照整合性をリストアします。これらのスクリプトは、[GitHub の {{site.data.keyword.iotinsurance_short}} API サンプル・サイト ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/){: new_window} にあります。
   - iot4i-api/wearable-framework/auto-create/create.sh - このスクリプトは、{{site.data.keyword.cloudant}} 内に設計文書を再作成します。
   - iot4i-api/wearable-framework/health/check-relations - このスクリプトは、参照整合性を再確立します。例えば、このスクリプトは、シールドが削除されているがユーザーへの関連付けはまだ存在するという状況を修正します。
-
-
-# 関連リンク
-{: #rellinks}
-
-## チュートリアルとサンプル
-{: #samples}
-* [GitHub のサンプル・モバイル・アプリ・コード](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## API リファレンス
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API サンプル](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-
-## 関連リンク
-{: #general}
-* [{{site.data.keyword.iot_full}} 資料](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [開発者サポート・フォーラム](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-* [Stack overflow サポート・フォーラム](http://stackoverflow.com/questions/tagged/ibm-bluemix)

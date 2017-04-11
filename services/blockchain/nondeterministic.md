@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-
+  years: 2016, 2017
+lastupdated: "2017-03-01"
 ---
 
 {:new_window: target="_blank"}
@@ -13,13 +13,10 @@ copyright:
 
 # Non-deterministic chaincode
 {: #ndcc}
-Last updated: 08 November 2016
-{: .last-updated}
+
 
 IBM Blockchain networks support deterministic chaincode only. Using non-deterministic chaincode is not supported, and will cause severe errors, on any blockchain network.
 {:shortdesc}
-
-IBM Blockchain networks support deterministic chaincode only. Using non-deterministic chaincode is not supported, and will cause severe errors, on any blockchain network.
 
 **Non-deterministic chaincode** is any chaincode that does **not** result in the same appended value, over time and across nodes, on the blockchain ledger. By contrast, **deterministic chaincode** always produces the same appended value, over time and across nodes, on the blockchain ledger.
 

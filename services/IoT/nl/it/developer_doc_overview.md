@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-31"
+  years: 2016, 2017
+lastupdated: "2017-02-03"
 
 ---
 
@@ -22,7 +22,7 @@ Le librerie client, il contenuto e gli esempi sono disponibili come supporto nel
 
 ## Sviluppo del tuo {{site.data.keyword.iot_short_notm}}
 {: #goals}
-Esistono molti modi in cui puoi configurare e collegare i tuoi dispositivi a {{site.data.keyword.iot_short_notm}} e per richiamare e analizzare i dati in tempo reale a cui sei interessato. Le informazioni ti vengono fornite per aiutarti ad eseguire le seguenti attività:
+Puoi sviluppare il codice per configurare e collegare i tuoi dispositivi a {{site.data.keyword.iot_short_notm}} e per recuperare e analizzare i dati in tempo reale a cui sei interessato. Ti vengono fornite informazioni per aiutarti ad eseguire le seguenti attività comuni:
 
 -  Crea e gestisci le applicazioni
 -  Crea, collega e gestisci i dispositivi
@@ -39,7 +39,7 @@ Puoi creare e gestire le applicazioni in {{site.data.keyword.iot_short_notm}} ut
 - Protocollo di messaggistica MQTT
 - Python
 - Node.js
-- Java
+- Java™
 - C#
 
 ## Sviluppo del dispositivo
@@ -60,7 +60,7 @@ Puoi creare e gestire i dispositivi in {{site.data.keyword.iot_short_notm}} util
 Se i tuoi dispositivi non possono collegarsi direttamente a internet, utilizza le informazioni fornite per creare un dispositivo gateway per richiamare e inviare i dati alle applicazioni nella tua organizzazione {{site.data.keyword.iot_short_notm}}.
 Il protocollo di messaggistica MQTT è supportato per lo sviluppo del gateway in {{site.data.keyword.iot_short_notm}}.
 
-Per i link alle librerie client disponibili per {{site.data.keyword.iot_short_notm}}, fai clic su **Resources**.
+Per ulteriori informazioni e link alle librerie client disponibili, consulta [Librerie client per lo sviluppo {{site.data.keyword.iot_short_notm}}](iot_platform_client_lib.html).
 
 # Link correlati
 {: #rellinks}
@@ -68,10 +68,10 @@ Per i link alle librerie client disponibili per {{site.data.keyword.iot_short_no
 ## Librerie client per {{site.data.keyword.iot_short_notm}}
 {: #client_libraries}
 
-* [C++](https://github.com/ibm-watson-iot/iot-cpp){:new_window}
-* [C#](https://github.com/ibm-watson-iot/iot-csharp){:new_window}
-* [Embedded C](https://github.com/ibm-watson-iot/iot-embeddedc){:new_window}
-* [Java](https://github.com/ibm-watson-iot/iot-java){:new_window}
-* [mBed C++](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){:new_window}
-* [Node.js](https://github.com/ibm-watson-iot/iot-nodejs){:new_window}
-* [Python](https://github.com/ibm-watson-iot/iot-python){:new_window}
+* [C++ ![icona link esterno](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-cpp){:new_window}
+* [C# ![icona link esterno](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-csharp){:new_window}
+* [Embedded C ![icona link esterno](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-embeddedc){:new_window}
+* [Java ![icona link esterno](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-java){:new_window}
+* [mBed C++ ![icona link esterno](../../icons/launch-glyph.svg)](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){:new_window}
+* [Node.js ![icona link esterno](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-nodejs){:new_window}
+* [Python ![icona link esterno](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-python){:new_window}

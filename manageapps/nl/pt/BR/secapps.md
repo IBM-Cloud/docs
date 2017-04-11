@@ -12,14 +12,14 @@ lastupdated: "2017-01-11"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Protegendo apps
+# Protegendo apps
 {: #securingapps}
 
 
 É possível proteger seus aplicativos fazendo upload de certificados SSL e restringindo acesso aos aplicativos.
 {:shortdesc}
 
-##Criando solicitações de assinatura de certificado
+## Criando solicitações de assinatura de certificado
 {: #ssl_csr}
 
 Antes que seja possível fazer upload dos certificados SSL aos quais você está autorizado com o {{site.data.keyword.Bluemix}}, deve-se criar um certificate signing request (CSR) no servidor.

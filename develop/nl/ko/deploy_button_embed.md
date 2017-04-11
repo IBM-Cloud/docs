@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-29"
+  years: 2015, 2017
+lastupdated: "2017-2-21"
 
 ---
 
@@ -37,18 +37,17 @@ iFrame 플로우는 회사 브랜드를 유지하려는 경우에 유용합니�
 
 <p>
 <a class="xref" href="http://d2bm-iframe-sample.ng.bluemix.net/" target="_blank" title="(새 탭 또는 창에서 열림)">IBM
-Bluemix D2BM iFrame 샘플</a>은 공용 Git 저장소용 iFrame 플로우 예제를
-제공합니다.<div class="image"><img class="image" src="images/d2bm_iframe_sample2.png" alt="Bluemix에 배치 iFrame 플로우 샘플" /></div>
+Bluemix D2BM iFrame 샘플<img class="image" src="../icons/launch-glyph.svg" alt="외부 링크 아이콘"/></a>은 공용 Git 저장소용 iFrame 플로우 예를 제공합니다.<div class="image"><img class="image" src="images/d2bm_iframe_sample2.png" alt="Bluemix에 배치 iFrame 플로우 샘플" /></div>
 </p>
 
 <p>
-이 샘플에 대한 소스를 보려면 <a class="xref" href="https://hub.jazz.net/project/idsorg/d2bm-iframe-sample/overview" target="_blank" title="(새 탭 또는 창에서 열림)">소스</a>를 클릭하십시오.
+이 샘플에 대한 소스를 보려면 <a class="xref" href="https://hub.jazz.net/project/idsorg/d2bm-iframe-sample/overview" target="_blank" title="(새 탭 또는 창에서 열림)">소스<img class="image" src="../icons/launch-glyph.svg" alt="외부 링크 아이콘"/></a>를 클릭하십시오.
 </p>
 
 ##iFrame 플로우 임베드  {: #embed-iframe}  
 
 <ol>
-<li><a href="https://bluemix.net/deploy/embed.js" target="_blank">https://bluemix.net/deploy/embed.js</a>에서 JavaScript 유틸리티를 로드하십시오. 이 유틸리티는 jQuery에 따라 달라지며, 다음 스크립트 태그를 사용자 문서에 추가하여 로드됩니다.
+<li><a class="xref" href="https://bluemix.net/deploy/embed.js" target="_blank" title="(새 탭 또는 창에서 열림)">https://bluemix.net/deploy/embed.js<img class="image" src="../icons/launch-glyph.svg" alt="외부 링크 아이콘"/></a>에서 Javascript 유틸리티를 로드하십시오. 이 유틸리티는 jQuery에 따라 달라지며, 다음 스크립트 태그를 사용자 문서에 추가하여 로드됩니다.
 <pre class="pre">
 <code>&lt;script type="text/javascript" src="https://bluemix.net/deploy/embed.js"&gt;&lt;/script&gt;</code>
 </pre>

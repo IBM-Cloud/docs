@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-19"
+lastupdated: "2017-03-10"
 
 ---
 
@@ -13,6 +13,21 @@ lastupdated: "2017-01-19"
 {: #latest_updates}
 
 ## A list of the latest updates in the Liberty buildpack.
+
+### March 14, 2017: Updated Liberty buildpack v3.8-20170308-1507
+
+* The default Liberty runtime version was updated to the 17.0.0.1 release.
+* The default Liberty runtime also includes the PI75512 WebSockets iFix. 
+* The monthly Liberty runtime version was updated to the [2017.2.0.0](https://developer.ibm.com/wasdev/blog/2017/02/17/beta-websphere-liberty-tools-february-2017/) release. 
+* The IBM JRE versions 8 and 7.1 were updated to SR4 FP1. 
+* The auto-configuration support was also extended to work with [ibm-websphere-extreme-scale IBM Container](https://console.ng.bluemix.net/docs/images/docker_image_extreme_scale/ibm-websphere-extreme-scale_starter.html). 
+* The auto-configuration support for [Cloudant NoSQL Database](https://console.ng.bluemix.net/docs/services/Cloudant/index.html) was updated to provide the option of using the Cloudant Java Library instead of org.ektorp. To enable the use of the Cloudant Java Library you must set the following environment variable:    
+```
+cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudant'
+```
+* The buildpack also provides an updated version of the agent for the [Auto-Scaling service](/docs/services/Auto-Scaling/index.html) and a number of application management enhancements.
+* This buildpack also changes the way auto-configuration works for the [Monitoring and Analytics service](/docs/services/monana/index.html). Applications using the Free plan will no longer have the log capability added to their applications; it is being replaced by logmet.  
+
 
 ### January 23, 2017: Updated Liberty buildpack v3.7-20170118-2046
 * The monthly Liberty runtime version was updated to the [2017.1.0.0](https://developer.ibm.com/wasdev/blog/2017/01/20/beta-websphere-liberty-tools-january-2017/) release.
@@ -247,8 +262,8 @@ The updated JREs contain [latest security fixes](http://www-01.ibm.com/support/d
   * When your applications are pushed again, they use IBM SDK for Java Version 7.1-1.0. This comes with a substantial performance upgrade. Your application shows better throughput and reduced memory usage. See more about the IBM Java SDK [here](http://www-01.ibm.com/support/docview.wss?uid=swg21671466).
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
-{: #general}
+{: #general notoc}
   * [Liberty runtime](index.html)
   * [Liberty Profile Overview](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

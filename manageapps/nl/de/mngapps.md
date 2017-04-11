@@ -10,7 +10,7 @@ lastupdated: "2015-03-17"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-#Anwendungen verwalten
+# Anwendungen verwalten
 {: #manageapps}
 
 Mithilfe des Dashboards in der {{site.data.keyword.Bluemix}}-Benutzerschnittstelle können Sie Ihre Anwendungen und Services anzeigen und verwalten sowie die Ressourcennutzung anhand der Messanzeigen für Kontingente überwachen.

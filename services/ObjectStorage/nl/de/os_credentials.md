@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -93,13 +93,13 @@ Serviceberechtigungsnachweise werden zur Bereitstellung der Authentifizierung un
   {: pre}
 
   <table>
-  <caption> Tabelle 1. Beschriebene Variablen für die cURL-Serviceberechtigungsnachweise</caption>
+  <caption> Tabelle 1. Beschriebene Variablen für die cURL-Serviceberechtigungsnachweise </caption>
     <tr>
       <th> Variable  </th>
       <th> Erläuterung </th>
     </tr>
     <tr>
-      <td> <code>https://api.ng.bluemix.net/v2/service_keys</code> </td>
+      <td> ```https://api.ng.bluemix.net/v2/service_keys``` </td>
       <td> Der Endpunkt des Serviceschlüssels.  </td>
     </tr>
     <tr>
@@ -119,8 +119,6 @@ Serviceberechtigungsnachweise werden zur Bereitstellung der Authentifizierung un
       <td> Das Token, das Sie bei der Authentifizierung der Instanz mit Keystone erhalten haben. </td>
     </tr>
   </table>
-
-
 
 3. Überprüfen Sie Ihre Berechtigungsnachweise, indem Sie den folgenden Befehl ausführen.
 

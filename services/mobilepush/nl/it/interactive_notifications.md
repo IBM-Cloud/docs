@@ -1,4 +1,4 @@
-ka---
+---
 
 copyright:
  years: 2015, 2017
@@ -12,7 +12,7 @@ copyright:
 
 # Notifiche interattive
 {: #interactive-notifications}
-Ultimo aggiornamento: 18 gennaio 2017
+Ultimo aggiornamento: 23 gennaio 2017
 {: .last-updated}
 
 Le notifiche interattive consentono agli utenti di rispondere a una notifica senza aprire l'applicazione. Quando viene ricevuta una notifica, il dispositivo visualizza i pulsanti di azione insieme al messaggio di notifica. Le notifiche interattive sono supportare sui dispositivi iOS con versione 8 o successiva. Per le notifiche interattive inviate a dispositivi iOS precedenti alla versione 8, le azioni di notifica non vengono visualizzate.
@@ -24,7 +24,7 @@ La notifica interattiva può essere inviata utilizzando il dashboard Push o util
 
 Dalla console {{site.data.keyword.mobilepushshort}}: 
 
-1. Nella scheda delle notifiche nel dashboard push, fai clic su **Invia notifica**. 
+1. Nella scheda delle notifiche del dashboard Push, fai clic su **Invia notifica**. 
 2. Scegli i tuoi destinatari per la notifica e fai clic su **Avanti**. 
 3. Nella pagina di composizione della notifica, può essere inviato un push interattivo impostando il tipo su predefinito o misto e specificando il valore della categoria nella scheda del delle opzioni avanzate. Per configurare il valore della categoria sul client, controlla **Gestione {{site.data.keyword.mobilepushshort}}** interattiva nella sezione dell'applicazione iOS nativa.
 

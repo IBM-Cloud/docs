@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-21"
+  years: 2016, 2017
+lastupdated: "2016-12-12"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -14,8 +14,6 @@ lastupdated: "2016-10-21"
 
 # {{site.data.keyword.Bluemix_notm}} y {{site.data.keyword.iot_short_notm}}
 {: #iot-bluemix-index}
-Última actualización: 21 de octubre de 2016
-{: .last-updated}
 
 El {{site.data.keyword.iot_full}} es un servicio disponible en {{site.data.keyword.Bluemix}}. Puede acceder al panel de instrumentos de la organización de {{site.data.keyword.iot_short_notm}} utilizando el panel de instrumentos de {{site.data.keyword.Bluemix_notm}}. Como servicio de {{site.data.keyword.Bluemix_notm}}, {{site.data.keyword.iot_short_notm}} se puede integrar con otros servicios alojados en {{site.data.keyword.Bluemix_notm}}. Se pueden encontrar detalles de las integraciones específicas de servicio de terceros en las [Integraciones de servicio externas](/extensions/index.html)
 {:shortdesc}
@@ -28,25 +26,28 @@ Las instancias del {{site.data.keyword.iot_short_notm}} se pueden crear en el pa
 ## Acuerdo de nivel de servicio de {{site.data.keyword.iot_short_notm}}
 {: #iot-sla}
 
-El {{site.data.keyword.iot_short_notm}} tiene suministros para un nivel de servicio especificado. Para obtener más información sobre el acuerdo de nivel de servicio, consulte [Acuerdo de nivel de servicio de {{site.data.keyword.iot_short_notm}}](http://www-03.ibm.com/software/sla/sladb.nsf/pdf/6738-03/$file/i126-6738-03_06-2016_en_US.pdf).
+El {{site.data.keyword.iot_short_notm}} tiene suministros para un nivel de servicio especificado. Para obtener más información sobre el acuerdo de nivel de servicio, consulte [Acuerdo de nivel de servicio de {{site.data.keyword.iot_short_notm}} ![icono de enlace externo](../../../icons/launch-glyph.svg)](http://www-03.ibm.com/software/sla/sladb.nsf/pdf/6738-03/$file/i126-6738-03_06-2016_en_US.pdf){: new_window}.
 
 ## Acuerdo de nivel de servicio de {{site.data.keyword.Bluemix_notm}}
 
-{{site.data.keyword.Bluemix_notm}} publica términos de uso que difieren en función de si [Acuerdo de servicios en la nube de IBM](http://www-05.ibm.com/support/operations/files/pdf/csa_us.pdf?cm_mc_uid=65870113399114371461368&cm_mc_sid_50200000=1469524513) o el [Acuerdo de IBM International Passport Advantage](https://www-01.ibm.com/software/passportadvantage/pa_agreements.html) se aplican al usuario. Para obtener más información sobre el Acuerdo de nivel de servicio de {{site.data.keyword.Bluemix_notm}}, consulte [Términos de {{site.data.keyword.Bluemix_notm}}](.../.../.../navigation/notices.html#terms).
+{{site.data.keyword.Bluemix_notm}} publica términos de uso que difieren en función de si [Acuerdo de servicios en la nube de IBM ![icono de enlace externo](../../../icons/launch-glyph.svg)](http://www-05.ibm.com/support/operations/files/pdf/csa_us.pdf?cm_mc_uid=65870113399114371461368&cm_mc_sid_50200000=1469524513){: new_window} o el [Acuerdo de IBM International Passport Advantage ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://www-01.ibm.com/software/passportadvantage/pa_agreements.html){: new_window} se aplican al usuario. Para obtener más información sobre el Acuerdo de nivel de servicio de {{site.data.keyword.Bluemix_notm}}, consulte [Términos de {{site.data.keyword.Bluemix_notm}}](.../.../.../navigation/notices.html#terms).
 
 ## Tarifas de {{site.data.keyword.iot_short_notm}}
 {: #iot-pricing}
 
-El {{site.data.keyword.iot_short_notm}} ofrece dos modelos de tarifas: Gratis y Estándar. La tarifa Gratis de {{site.data.keyword.iot_short_notm}} permite hasta 20 dispositivos registrados, 100 MB de datos intercambiados, y un máximo de 10 aplicaciones enlazadas.
+El {{site.data.keyword.iot_short_notm}} ofrece dos modelos de tarifas: Gratis y Estándar.
 
-La tarifa de {{site.data.keyword.iot_short_notm}} permite un número ilimitado de dispositivos registrados, 100 MB de datos intercambiados de forma gratuita, y un coste por MB de datos intercambiados después de los primeros 100 MB.
+### Calculadora de tarifas de IoT
+Para obtener más información sobre los planes y modelos de tarifas de {{site.data.keyword.iot_short_notm}} disponibles:
+1. Vaya a la [Calculadora de tarifas de IoT ![icono de enlace externo](../../../icons/launch-glyph.svg)](http://iot-cost-calculator.ng.bluemix.net/){: new_window}.  
+2. Pulse **Añadir** o **Configurar** junto al elemento Plataforma Internet de las cosas.
+3. Seleccione un **Nivel de tarifas** y escriba los valores estimados de la cantidad de datos que tiene intención de intercambiar, analizar en la nube y analizar en dispositivos periféricos.  
+Se muestra el precio estimado del nivel seleccionado y la carga de datos.
 
-Para obtener más información sobre la tarifa de {{site.data.keyword.iot_short_notm}}:
-
-1. En el panel de control de {{site.data.keyword.Bluemix_notm}}, pulse el {{site.data.keyword.iot_short_notm}}.
-2. Desde el menú de navegación de la izquierda, seleccione **Plan**.
-
-Aparecerán los planes de precios.
+### Información sobre el plan actual
+1. En el panel de control de {{site.data.keyword.Bluemix_notm}}, pulse el mosaico de la Plataforma de Internet de las cosas correspondiente a la organización de {{site.data.keyword.iot_short_notm}} para la que desea información sobre el plan actual.
+2. Seleccione el separador **Plan**.  
+Se muestran los detalles del plan de tarifas actual.
 
 # Enlaces relacionados
 {: #rellinks}
@@ -55,8 +56,9 @@ Aparecerán los planes de precios.
 ## Enlaces relacionados
 {: #general}
 
-* [Seguridad de {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
-* [Seguridad de la plataforma de {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
-* [Conformidad de {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [Seguridad de {{site.data.keyword.BluSoftlayer}}](http://www.softlayer.com/security){:new_window}
-* [Conformidad de {{site.data.keyword.BluSoftlayer}}](http://www.softlayer.com/compliance){:new_window}
+* [Calculadora de tarifas de IoT ![icono de enlace externo](../../../icons/launch-glyph.svg)](http://iot-cost-calculator.ng.bluemix.net/){:new_window}
+* [Seguridad de {{site.data.keyword.Bluemix_notm}} ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
+* [Seguridad de la plataforma {{site.data.keyword.Bluemix_notm}}![icono de enlace externo](../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
+* [Conformidad de {{site.data.keyword.Bluemix_notm}} ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
+* [Seguridad de {{site.data.keyword.BluSoftlayer}} ![icono de enlace externo](../../../icons/launch-glyph.svg)](http://www.softlayer.com/security){:new_window}
+* [Conformidad de {{site.data.keyword.BluSoftlayer}} ![icono de enlace externo](../../../icons/launch-glyph.svg)](http://www.softlayer.com/compliance){:new_window}

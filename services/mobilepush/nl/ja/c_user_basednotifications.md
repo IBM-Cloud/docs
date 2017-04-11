@@ -20,7 +20,7 @@ copyright:
 ## ユーザー ID を使用したデバイスの登録
 ユーザー ID によってターゲット指定されるプッシュ通知を有効にするには、必ず、「ユーザー ID」フィールドを設定した状態でデバイスを登録してください。     
 
-ユーザー ID には、アプリケーションがデバイス登録 API に提供する任意のストリングが可能です。通常、モバイル・アプリケーションはまず、[{{site.data.keyword.amafull}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html "外部リンク・アイコン"){: new_window}などの認証サービスに対してモバイル・アプリ・ユーザーを認証する認証サイクルを実行します。認証に成功すると、認証済みユーザー ID がプッシュ・デバイス登録 API に渡されます。 
+ユーザー ID には、アプリケーションがデバイス登録 API に提供する任意のストリングが可能です。通常、モバイル・アプリケーションはまず、[{{site.data.keyword.amafull}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html){: new_window}などの認証サービスに対してモバイル・アプリ・ユーザーを認証する認証サイクルを実行します。認証に成功すると、認証済みユーザー ID がプッシュ・デバイス登録 API に渡されます。 
 
 ## ユーザーのログインおよびログアウトの同期化 
 

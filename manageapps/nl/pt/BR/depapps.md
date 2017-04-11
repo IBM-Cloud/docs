@@ -56,7 +56,7 @@ Para obter mais detalhes sobre o comando **cf push**, veja [cf push](/docs/cli/r
 ### Migrando um app existente para o Diego
 {: #migrateapp}
 
-Diego é a arquitetura padrão do Cloud Foundry para o {{site.data.keyword.Bluemix_notm}} e o suporte para os DEAs será removido, portanto, deve-se migrar todos os aplicativos existentes atualizando cada app. Inicie a migração de seus apps para o Diego atualizando o aplicativo com a sinalização do Diego. O aplicativo tentará imediatamente iniciar a execução no Diego e parará a execução nos DEAs. 
+Diego é a arquitetura padrão do Cloud Foundry para o {{site.data.keyword.Bluemix_notm}} e o suporte para os DEAs será removido, portanto, deve-se migrar todos os aplicativos existentes atualizando cada app. Inicie a migração de seus apps para o Diego atualizando o aplicativo com a sinalização do Diego. O aplicativo tentará imediatamente iniciar a execução no Diego e parará a execução nos DEAs.
 
 Como seu aplicativo é atualizado da arquitetura do DEA para o Diego, talvez você passe por um curto tempo de inatividade ou por um tempo de inatividade prolongado, se o aplicativo não for compatível com o Diego. Para limitar o tempo de atividade, execute uma [blue-green deploy](/docs/manageapps/updapps.html#blue_green) implementando uma cópia de seu aplicativo no Diego e, em seguida, alternando rotas e reduzindo a escala no aplicativo DEA.
 
@@ -72,7 +72,7 @@ Conclua as etapas a seguir para migrar seu app para o Diego:
 Depois de atualizar o app, verifique se ele foi iniciado. Se o app migrado falhar ao iniciar, ele permanecerá off-line até você identificar e resolver o problema e, em seguida, reiniciar o app.
 
 A IBM alertará sobre o próximo período de migração obrigatória quando o suporte de arquitetura do DEA for removido e, se você não tiver migrado seus apps, a equipe de operações migrará todos para você.
-  
+
 Para validar em qual backend o aplicativo está em execução, use o comando a seguir:
 
   ```
@@ -288,7 +288,7 @@ cf push -f appManifest.yml
 |**env**	|As variáveis de ambiente customizadas do aplicativo.|`env: DEV_ENV: production`|
 {: caption="Table 1. Supported options in the manifest YAML file" caption-side="top"}
 
-### Um arquivo `manifest.yml` de amostra
+### Um arquivo manifest.yml de amostra
 
 O exemplo a seguir mostra um arquivo manifest para um aplicativo Node.js que usa
 o buildpack do Node.js da comunidade integrada no
@@ -484,7 +484,7 @@ instância de servidor de perfil do Liberty no DEA.</dd>
 	  <dd>O local da saída gerada, como arquivos de log e diretório ativo de uma instância de
 servidor de perfil do Liberty em execução.</dd>
 	  </dl>
-</li>   
+</li>
 <li>As variáveis a seguir são definidas pelo Buildpack do Node.js:
 	<dl>
 	<dt><strong>BUILD_DIR</strong></dt>
@@ -608,7 +608,7 @@ tmp/
 ```
 
 # Links Relacionados
-{: #rellinks}
+{: #rellinks notoc}
 
 ## Links Relacionados
 {: #general}

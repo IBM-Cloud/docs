@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-26"
+  years: 2016, 2017
+lastupdated: "2017-02-23"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:screen: .screen}
 {:pre: .pre}
 
 # 使用 {{site.data.keyword.openwhisk_short}} 行動 SDK
@@ -88,7 +88,7 @@ github "openwhisk/openwhisk-client-swift.git" ~> 0.2.2 # Or latest version
 
 若要安裝入門範本應用程式範例，請輸入下列指令：
 
-```
+```bash
 wsk sdk install iOS
 ```
 {: pre}
@@ -97,7 +97,7 @@ wsk sdk install iOS
 
 若要安裝 SDK，請輸入下列指令：
 
-```
+```bash
 pod install
 ```
 {: pre}
@@ -109,14 +109,16 @@ pod install
 
 例如，使用下列範例程式碼來建立認證物件：
 
-```
-let credentialsConfiguration = WhiskCredentials(accessKey: "myKey", accessToken: "myToken")let whisk = Whisk(credentials: credentialsConfiguration!)
+```swift
+let credentialsConfiguration = WhiskCredentials(accessKey: "myKey", accessToken: "myToken")
+
+let whisk = Whisk(credentials: credentialsConfiguration!)
 ```
 {: codeblock}
 
 在前一個範例中，您傳入從 {{site.data.keyword.openwhisk_short}} 取得的 `myKey` 及 `myToken`。您可以使用下列 CLI 指令來擷取金鑰及記號：
 
-```
+```bash
 wsk property get --auth
 ```
 {: pre}
@@ -135,7 +137,7 @@ whisk auth        kkkkkkkk-kkkk-kkkk-kkkk-kkkkkkkkkkkk:ttttttttttttttttttttttttt
 
 例如：
 
-```
+```swift
 // In this example, we are invoking an action to print a message to the {{site.data.keyword.openwhisk_short}} Console
 var params = Dictionary<String, String>()
 params["payload"] = "Hi from mobile"
@@ -163,8 +165,10 @@ do {
 
 若要發動遠端觸發程式，您可以呼叫 `fireTrigger` 方法。使用字典，視需要傳入參數。
 
-```
-// In this example we are firing a trigger when our location has changed by a certain amountvar locationParams = Dictionary<String, String>()
+```swift
+// In this example we are firing a trigger when our location has changed by a certain amount
+
+var locationParams = Dictionary<String, String>()
 locationParams["payload"] = "{\"lat\":41.27093, \"lon\":-73.77763}"do {try whisk.fireTrigger(name: "locationChanged", package: "mypackage", namespace: "mynamespace", parameters: locationParams, callback: {(reply, error) -> Void inif let error = error {
             print("Error firing trigger \(error.localizedDescription)")
         } else {
@@ -184,8 +188,9 @@ locationParams["payload"] = "{\"lat\":41.27093, \"lon\":-73.77763}"do {try whisk
 
 如果動作傳回結果，請在 invokeAction 呼叫中將 hasResult 設定為 true。回覆字典中會傳回動作的結果，例如：
 
-```
-do {try whisk.invokeAction(name: "actionWithResult", package: "mypackage", namespace: "mynamespace", parameters: params, hasResult: true, callback: {(reply, error) -> Void inif let error = error {
+```swift
+do {
+    try whisk.invokeAction(name: "actionWithResult", package: "mypackage", namespace: "mynamespace", parameters: params, hasResult: true, callback: {(reply, error) -> Void inif let error = error {
             //do something
             print("Error invoking action \(error.localizedDescription)")} else {
 var result = reply["result"]
@@ -202,7 +207,7 @@ var result = reply["result"]
 
 SDK 預設只會傳回啟動 ID 以及所呼叫動作所產生的任何結果。若要取得整個回應物件的 meta 資料（包括 HTTP 回應狀態碼），請使用下列設定：
 
-```
+```swift
 whisk.verboseReplies = true
 ```
 {: codeblock}
@@ -212,7 +217,7 @@ whisk.verboseReplies = true
 
 您可以使用 baseURL 參數配置 SDK，以使用不同的 {{site.data.keyword.openwhisk_short}} 安裝。例如：
 
-```
+```swift
 whisk.baseURL = "http://localhost:8080"
 ```
 {: codeblock}
@@ -221,9 +226,10 @@ whisk.baseURL = "http://localhost:8080"
 
 如果您需要特殊網路處理，則可以傳入自訂 NSURLSession。例如，您可能自己有使用自簽憑證的 {{site.data.keyword.openwhisk_short}} 安裝：
 
-```
+```swift
 // create a network delegate that trusts everything
-class NetworkUtilsDelegate: NSObject, NSURLSessionDelegate {func URLSession(session: NSURLSession, didReceiveChallenge challenge: NSURLAuthenticationChallenge, completionHandler: (NSURLSessionAuthChallengeDisposition, NSURLCredential?) -> Void) {
+class NetworkUtilsDelegate: NSObject, NSURLSessionDelegate {
+    func URLSession(session: NSURLSession, didReceiveChallenge challenge: NSURLAuthenticationChallenge, completionHandler: (NSURLSessionAuthChallengeDisposition, NSURLCredential?) -> Void) {
         completionHandler(NSURLSessionAuthChallengeDisposition.UseCredential, NSURLCredential(forTrust: challenge.protectionSpace.serverTrust!))
     }
 }
@@ -251,7 +257,7 @@ whisk.urlSession = session
 
 為方便起見，SDK 包含 `WhiskButton`，以擴充 `UIButton` 容許它呼叫動作。若要使用 `WhiskButton`，請遵循此範例：
 
-```
+```swift
 var whiskButton = WhiskButton(frame: CGRectMake(0,0,20,20))
 
 whiskButton.setupWhiskAction("helloConsole", package: "mypackage", namespace: "_", credentials: credentialsConfiguration!, hasResult: false, parameters: nil, urlSession: nil)

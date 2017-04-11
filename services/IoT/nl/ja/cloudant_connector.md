@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-16"
+  years: 2016, 2017
+lastupdated: "2017-03-13"
 
 ---
 
@@ -90,6 +90,18 @@ Bluemix 組織で開発者特権を持っていることと、Bluemix を介し�
 
 これで、デバイス・データが {{site.data.keyword.cloudant}} に保管されます。
 
+## ヒストリアン・サービスの使用に関するレシピ  
+{: #recipes}
+
+以下のレシピは、{{site.data.keyword.iot_short}} 用ヒストリアン・ストレージとしての {{site.data.keyword.cloudant_short_notm}} の使用法を示しています。
+
+- [Configure {{site.data.keyword.cloudant_short_notm}} as Historian Data Storage for {{site.data.keyword.iot_short}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-parti/){: new_window} レシピでは、{{site.data.keyword.cloudant_short_notm}} へのデバイス・データの保管方法について説明し、実際に {{site.data.keyword.cloudant_short_notm}} をヒストリアン・データ・ストレージとして構成してデバイス・データを保管する方法を示しています。
+
+- [Query and Process {{site.data.keyword.iot_short}} Device Data from {{site.data.keyword.cloudant_short_notm}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-partii){: new_window} レシピでは、{{site.data.keyword.cloudant_short_notm}} に保管されたデバイス・データに対する照会とデータ処理操作の実行方法について説明しています。
+
+- [Visualize Watson IoT Device Data stored in Cloudant NoSQL DB ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=27327){: new_window} レシピでは、ライン・チャート・カードとヒストリアン・データ・ストレージの間にリンクを作成して Watson IoT Platform ダッシュボードにデバイス・データを表示する方法について説明しています。
+
+
 ## 設計文書の新規作成  
 {: #design_docs}
 
@@ -98,7 +110,7 @@ Bluemix 組織で開発者特権を持っていることと、Bluemix を介し�
 
 {{site.data.keyword.iot_short_notm}} に含まれているデフォルトの設計文書は、要約機能とは別に、現在のヒストリアンで使用可能なクエリーを実装します。
 
-設計文書を構成データベースにさらに追加することができます。それらの設計文書は、作成時に新規バケット間隔データベースにコピーされます。設計文書を構成データベースに追加する場合は、[Cloudant API の資料](https://docs.cloudant.com/document.html)を参照してください。
+設計文書を構成データベースにさらに追加することができます。それらの設計文書は、作成時に新規バケット間隔データベースにコピーされます。設計文書を構成データベースに追加する場合は、[Cloudant API の資料 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.cloudant.com/document.html){: new_window} を参照してください。
 
 <!--  # Related links
 {: #rellinks}

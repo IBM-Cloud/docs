@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-27"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2016-10-27"
 ## 下载 Python 客户机和资源
 {: #python_client_download}
 
-要访问 {{site.data.keyword.iot_short_notm}} 的 Python 客户机和其他可用资源，请转至 GitHub 中的 [iot-python](https://github.com/ibm-watson-iot/iot-python) 存储库，并完成安装指示信息。
+要访问 {{site.data.keyword.iot_short_notm}} 的 Python 客户机和其他可用资源，请转至 GitHub 中的 [iot-python ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/iot-python){: new_window} 存储库，并完成安装指示信息。
 
 ## 构造方法
 {: #constructor}
@@ -151,7 +151,7 @@ client.commandCallback = myCommandCallback
 ## 定制消息格式支持
 {: #custom_message_format}
 
-缺省情况下，消息格式设置为 `json`，这意味着库支持对 JSON 格式的 Python 字典对象进行编码和解码。消息格式设置为 `json-iotf` 时，会根据 {{site.data.keyword.iot_short_notm}} JSON 有效内容规范对消息编码。要添加对自己的定制消息格式的支持，请参阅 GitHub 中的 [Custom Message Format sample](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat)。
+缺省情况下，消息格式设置为 `json`，这意味着库支持对 JSON 格式的 Python 字典对象进行编码和解码。消息格式设置为 `json-iotf` 时，会根据 {{site.data.keyword.iot_short_notm}} JSON 有效内容规范对消息编码。要添加对自己的定制消息格式的支持，请参阅 GitHub 中的 [Custom Message Format sample ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat){: new_window}。
 
 创建定制编码器模块后，必须在设备客户机中注册该模块，如以下示例中所概述：
 

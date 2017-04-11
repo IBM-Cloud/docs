@@ -24,7 +24,7 @@ La clave de la API se almacena de forma segura y la utiliza el servicio {{site.d
 
 Para configurar el FCM, genere la clave de API y el ID de remitente y siga estos pasos:
 
-1. Visite la [Consola de Firebase ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://console.firebase.google.com/?pli=1 "icono de enlace externo"){: new_window}.
+1. Visite la [Consola de Firebase ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://console.firebase.google.com/?pli=1){: new_window}.
 2. Seleccione **Crear nuevo proyecto**. 
 3. En la ventana Crear un proyecto, proporcione un nombre de proyecto, elija un país/región y pulse **Crear proyecto**.
 3. En el panel de navegación, pulse el icono Valores y seleccione **Valores del proyecto**.

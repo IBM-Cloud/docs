@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-24"
+lastupdated: "2017-02-22"
 
 ---
 
@@ -57,7 +57,7 @@ Vous pouvez afficher les notifications pour votre environnement local ou dédié
 |-----------------|-------------------|
 | Mises à jour de maintenance | Pour afficher la liste complète ainsi que l'historique de vos notifications en attente et consultées, cliquez sur **ADMINISTRATION &gt; INFORMATIONS SYSTEME** &gt; *Nombre* **en attente**. Vous êtes également prévenu en cas d'événements de mise à jour de maintenance planifiés avec interruption dans la page Statut. Cliquez sur **Support** &gt; **Statut**. Vous pouvez étendre la capacité de notification en configurant un abonnement envoyant un courrier électronique aux destinataires de votre choix. Vous pouvez également configurer un abonnement utilisant des webhooks pour intégrer les notifications de la page Administration au service Web de votre choix.|
 | Incidents critiques | Vous êtes prévenu en cas d'incident critique dans la page Statut. Cliquez sur **Support** &gt; **Statut**. Vous pouvez étendre la capacité de notification en configurant un abonnement aux notifications qui envoie un courrier électronique au destinataire de votre choix. Vous pouvez également configurer un abonnement utilisant des webhooks pour intégrer les notifications de la page Administration au service Web de votre choix.  |  
-| Evénements de seuil | Vous pouvez configurer un abonnement à des événements qui envoie un courrier électronique au destinataire de votre choix lorsque les seuils de ressource pour le disque physique, la mémoire physique, le disque réservé ou la mémoire réservée sont atteints dans votre environnement. Vous pouvez également configurer un abonnement utilisant des webhooks pour intégrer les notifications au service Web de votre choix.  |  
+| Evénements de seuil | Vous pouvez configurer un abonnement de notification qui envoie un courrier électronique au destinataire de votre choix lorsque les seuils pour le quota d'organisation, le disque physique, la mémoire physique, le disque réservé ou la mémoire réservée sont atteints dans votre environnement. Vous pouvez également configurer un abonnement utilisant des webhooks pour intégrer les notifications au service Web de votre choix.  |  
 | Statut {{site.data.keyword.Bluemix_notm}} | Vous pouvez toujours examiner le statut le plus récent de la plateforme, des services et de votre instance {{site.data.keyword.Bluemix_notm}} sur la page Statut. Cliquez sur **Support** &gt; **Statut**.  |
 {: caption="Table 2. Event types and notifications methods" caption-side="top"}
 
@@ -109,7 +109,7 @@ Pour créer un abonnement par courrier électronique ou webhook depuis la page *
 | Activé | Sélectionnez l'option d'activation des notifications par courrier électronique. Effacez la sélection pour désactiver la notification par courrier électronique. Les abonnements sont activés par défaut. |
 | Type | Sélectionnez **Courrier électronique**. |
 | Evénement | Sélectionnez **Seuil**. |
-| Seuil | Sélectionnez le type de seuil pour lequel vous voulez recevoir des notifications : disque physique, mémoire physique, disque réservé ou mémoire réservée. |
+| Seuil | Sélectionnez le type de seuil pour lequel vous voulez recevoir des notifications : quota d'organisation, disque physique, mémoire physique, disque réservé ou mémoire réservée. |
 | Direction du seuil | Sélectionnez la direction dans laquelle les données doivent être classées, c'est-à-dire Croissant ou Décroissant, lorsqu'elles dépassent ou passent sous la valeur Notifier lors du dépassement du seuil/lors du passage sous le seuil que vous avez définie. Par exemple, si la valeur Notifier lors du dépassement du seuil/lors du passage sous le seuil est de 50 % et que la direction est décroissante, vous ne recevez de notification que si le pourcentage d'utilisation passe de 50 % ou plus à moins de 50 %. Si vous définissez la direction croissante, vous recevez une notification lorsque le pourcentage d'utilisation passe de moins de 50 % à plus de 50 %.
 | Notifier lors du dépassement du seuil (%) | Entrez le seuil en pourcentage à partir duquel vous voulez recevoir une notification. Si vous avez choisi la propriété Croissant dans la zone Direction du seuil, la notification par courrier électronique est envoyée lorsque le seuil dépasse ce pourcentage. |
 | Notifier lors du passage sous le seuil (%) | Entrez le seuil en pourcentage à partir duquel vous voulez recevoir une notification. Si vous avez choisi la propriété Décroissant dans la zone Direction du seuil, la notification par courrier électronique est envoyée lorsque le seuil passe sous ce pourcentage. |
@@ -119,10 +119,11 @@ Pour créer un abonnement par courrier électronique ou webhook depuis la page *
 | A | Entrez l'adresse ou les adresses électroniques des destinataires de la notification par courrier électronique dans une liste séparée par des virgules. Développez les options "cc" ou "bcc" pour ajouter d'autres destinataires au courrier électronique. Cette zone est obligatoire. |
 {: caption="Table 4. Fields for email notification subscriptions about maintenance updates or incidents" caption-side="top"}
 
-Les données de seuil sont collectées toutes les six heures. Une notification n'est envoyée qu'une fois lorsque la valeur dépasse ou passe sous la valeur que vous avez définie. Aucune nouvelle notification n'est envoyée sauf si la valeur passe sous le seuil, si vous avez choisi la propriété Croissant, puis dépasse à nouveau le seuil. De même, si vous avez choisi la propriété Décroissant, vous ne recevez de nouvelle notification que si la valeur dépasse le seuil que vous avez défini, puis passe à nouveau sous le seuil. 
+Les données de seuil sont collectées toutes les six heures. Une notification n'est envoyée qu'une fois lorsque la valeur dépasse ou passe sous la valeur que vous avez définie. Si vous avez choisi la propriété Croissant, aucune nouvelle notification n'est envoyée sauf si la valeur passe sous le seuil, puis dépasse à nouveau le seuil. De même, si vous avez choisi la propriété Décroissant, vous ne recevez une notification que si la valeur dépasse le seuil que vous avez défini, puis passe à nouveau sous le seuil. 
 
-Si vous ne voulez pas attendre six heures avant l'envoi de la notification lorsque le seuil est atteint, après avoir rempli les zones du formulaire, vous pouvez cliquer sur **Sauvegarder et tester** pour sauvegarder et tester la notification avec des exemples de données.
+Si vous ne voulez pas attendre six heures avant l'envoi de la notification lorsque le seuil est atteint, après avoir rempli les zones du formulaire, vous pouvez cliquer sur **Sauvegarder et tester** pour recevoir une notification de test avec des exemples de données.  
 
+Une notification de seuil de quota inclut uniquement les organisations qui ont dépassé le pourcentage de seuil spécifié au cours de la période de 6 heures correspondant à cette notification. Les organisations qui ont dépassé un seuil au cours des périodes de 6 heures précédentes ne seront pas incluses, même si elles sont toujours au-dessus ou au-dessous du seuil.  Les  trois ressources qui constituent un quota d'organisation (mémoire réservée, services et routes) sont considérées de manière indépendante lorsqu'il s'agit de déterminer si une notification de quota d'organisation doit être envoyée. Par exemple, si la quantité de mémoire réservée utilisée par une organisation dépasse 50 % du quota de l'organisation, un seuil de quota d'organisation configuré avec une valeur de 50 % provoque l'envoi d'une notification.  Ultérieurement, si le nombre de services utilisés par la même organisation dépasse 50 % du quota de l'organisation, même si la quantité de mémoire utilisée est inchangée, le même abonnement à un seuil de quota d'organisation provoque également l'envoi d'une notification.
 
 {: #webhooknotsub}
 
@@ -156,7 +157,7 @@ Si vous ne voulez pas attendre six heures avant l'envoi de la notification lorsq
 | Activé | Sélectionnez l'option d'activation de la notification. Effacez la sélection pour désactiver la notification. Les abonnements sont activés par défaut. |
 | Type | Sélectionnez **Webhook**. |
 | Evénement | Sélectionnez **Seuil**. |
-| Seuil | Sélectionnez le type de seuil pour lequel vous voulez recevoir des notifications : disque physique, mémoire physique, disque réservé ou mémoire réservée. |
+| Seuil | Sélectionnez le type de seuil pour lequel vous voulez recevoir des notifications : quota d'organisation, disque physique, mémoire physique, disque réservé ou mémoire réservée.|
 | Direction du seuil | Indiquez si vous voulez afficher les données de seuil dans l'ordre croissant ou décroissant.  |
 | Notifier lors du passage sous le seuil (%) | Si vous avez sélectionné une **direction de seuil** **décroissante**, entrez le seuil en pourcentage à partir duquel vous voulez recevoir une notification. Lorsque le seuil passe sous ce pourcentage, la notification par webhook est envoyée. |
 | Notifier lors du dépassement du seuil (%) | Si vous avez sélectionné une **direction de seuil** **croissante**, entrez le seuil en pourcentage à partir duquel vous voulez recevoir une notification. Lorsque le seuil dépasse ce pourcentage, la notification par webhook est envoyée. |
@@ -168,6 +169,11 @@ Si vous ne voulez pas attendre six heures avant l'envoi de la notification lorsq
 | URL | Entrez l'URL pour connexion à votre service Web. |
 {: caption="Table 6. Form fields for a webhook notification subscription about thresholds" caption-side="top"}
 
+Les données de seuil sont collectées toutes les six heures. Une notification n'est envoyée qu'une fois lorsque la valeur dépasse ou passe sous la valeur que vous avez définie. Aucune nouvelle notification n'est envoyée sauf si la valeur passe sous le seuil, si vous avez choisi la propriété Croissant, puis dépasse à nouveau le seuil. De même, si vous avez choisi la propriété Décroissant, vous ne recevez de nouvelle notification que si la valeur dépasse le seuil que vous avez défini, puis passe à nouveau sous le seuil. 
+
+Si vous ne voulez pas attendre six heures avant l'envoi de la notification lorsque le seuil est atteint, après avoir rempli les zones du formulaire, vous pouvez cliquer sur **Sauvegarder et tester** pour sauvegarder et tester la notification avec des exemples de données.
+
+Une notification de seuil de quota inclut uniquement les organisations qui ont dépassé le pourcentage de seuil spécifié au cours de la période de 6 heures correspondant à cette notification. Les organisations qui ont dépassé un seuil au cours des périodes de 6 heures précédentes ne seront pas incluses, même si elles sont toujours au-dessus/au-dessous du seuil.  Les  trois ressources qui constituent un quota d'organisation (mémoire réservée, services et routes) sont considérées de manière indépendante lorsqu'il s'agit de déterminer si une notification de quota d'organisation doit être envoyée. Par exemple, si la quantité de mémoire réservée utilisée par une organisation dépasse 50 % du quota de l'organisation, un seuil de quota d'organisation configuré avec une valeur de 50 % provoque l'envoi d'une notification.  Ultérieurement, si le nombre de services utilisés par la même organisation dépasse 50 % du quota de l'organisation, même si la quantité de mémoire utilisée est inchangée, le même abonnement à un seuil de quota d'organisation provoque également l'envoi d'une notification.
 
 {: #payload}
 
@@ -191,6 +197,7 @@ Si vous ne voulez pas attendre six heures avant l'envoi de la notification lorsq
 
 | **Valeur IBM** | **Description** | **Type d'événement** |
 |----------------|----------------|------------------------|
+| {{content.org_quota}} | Seuil de quota d'organisation | Seuil |
 | {{content.physical_disk}} | Seuil de disque physique | Seuil |
 | {{content.physical_memory}} | Seuil de mémoire physique | Seuil |  
 | {{content.reserved_disk}} | Seuil de disque réservé | Seuil |
@@ -292,17 +299,12 @@ La section Mises à jour affiche le nombre de notifications relatives à des mis
 
 <dl>
 <dt>Mises à jour sans interruption</dt>
-<dd>Une mise à jour sans interruption n'a pas d'impact sur votre environnement, vos applications en cours d'exécution ou l'accès de vos utilisateurs à vos applications. Ce type de mise à jour ne requiert pas d'approbation au cas par cas. Ces mises à jour sont appliquées au cours des fenêtres de
-disponibilité pré-approuvées pour la maintenance que vous avez définies dans la page Mises à jour du système.</dd>
+<dd>Une mise à jour sans interruption n'a pas d'impact sur votre environnement, vos applications en cours d'exécution ou l'accès de vos utilisateurs à vos applications. Ce type de mise à jour ne requiert pas d'approbation au cas par cas. Ces mises à jour sont appliquées au cours des fenêtres de disponibilité pré-approuvées pour la maintenance que vous avez définies dans la page Mises à jour du système.</dd>
 <dt>Mises à jour avec interruption</dt>
-<dd>Une mise à jour avec interruption peut avoir un impact sur votre environnement, les applications en cours d'exécution ou l'accès de vos utilisateurs à vos applications. Vous pouvez planifier et approuver chacune de ces mises à jour de maintenance dans la fenêtre de maintenance de 21 jours allouée pour
-vous assurer que la mise à jour ne sera pas appliquée pendant les heures de bureau critiques. Vous pouvez sélectionner la date et l'heure de déploiement
-suggérées en fonction de vos fenêtres de mise à jour pré-approuvées ou sélectionner deux combinaisons date-heure supplémentaires parmi lesquelles IBM
-pourra choisir lors de l'application de la mise à jour.</dd>
+<dd>Une mise à jour avec interruption peut avoir un impact sur votre environnement, les applications en cours d'exécution ou l'accès de vos utilisateurs à vos applications. Vous pouvez planifier et approuver chacune de ces mises à jour de maintenance dans la fenêtre de maintenance de 21 jours allouée pour vous assurer que la mise à jour ne sera pas appliquée pendant les heures de bureau critiques. Vous pouvez sélectionner la date et l'heure de déploiement suggérées en fonction de vos fenêtres de mise à jour pré-approuvées ou sélectionner deux combinaisons date-heure supplémentaires parmi lesquelles IBM pourra choisir lors de l'application de la mise à jour.</dd>
 </dl>
 
-Pour plus d'informations sur la définition de fenêtres de maintenance pré-approuvées et la définition de dates d'indisponibilité spécifiques pour la
-maintenance, voir [Mises à jour de maintenance](index.html#oc_schedulemaintenance).
+Pour plus d'informations sur la définition de fenêtres de maintenance pré-approuvées et la définition de dates d'indisponibilité spécifiques pour la maintenance, voir [Mises à jour de maintenance](index.html#oc_schedulemaintenance).
 
 ### Informations système générales
 
@@ -315,8 +317,7 @@ Dans la section Informations générales, vous pouvez consulter les informations
 
 ### Détails de la configuration LDAP
 
-Dans la section Détails de la configuration LDAP, vous pouvez sélectionner le serveur LDAP et afficher des informations sur les mappages des
-utilisateurs et des groupes. Si vous utilisez un ID Web {{site.data.keyword.IBM}}, il est indiqué dans cette section.
+Dans la section Détails de la configuration LDAP, vous pouvez sélectionner le serveur LDAP et afficher des informations sur les mappages des utilisateurs et des groupes. Si vous utilisez un ID Web {{site.data.keyword.IBM}}, il est indiqué dans cette section.
 
 ## Affichage de l'utilisation et des rapports
 {: #oc_resource}
@@ -338,56 +339,35 @@ des ressources**.
 
 Dans la section **Utilisation des ressources**, vous pouvez consulter les informations suivantes :
 
-- Des informations sur l'utilisation des ressources, comme la quantité de mémoire et l'espace disque pouvant être réservés et physiquement
-disponibles, ainsi que la quantité de mémoire et l'espace disque actuellement réservés et physiquement utilisés.  Vous pouvez également consulter des
-informations sur l'utilisation moyenne de l'unité centrale dans tous les agents DEA. Pour des informations plus détaillées sur l'utilisation de la mémoire,
-du disque et de l'unité centrale, voir [Détails sur la mémoire, le disque et l'unité centrale](index.html#resourceusagedetails).
-- Des informations sur l'utilisation du réseau relatives à la bande passante entrante et à la bande passante sortante, au cours des 6 dernières
-heures ou du dernier jour. Les données affichées dépendent de la somme du trafic entrant et sortant pour les réseaux publics et privés.
-- Le temps de réponse moyen pour {{site.data.keyword.Bluemix_notm}} au cours des 10 dernières minutes, de la dernière heure et du dernier
-jour.
+- Des informations sur l'utilisation des ressources, comme la quantité de mémoire et l'espace disque pouvant être réservés et physiquement disponibles, ainsi que la quantité de mémoire et l'espace disque actuellement réservés et physiquement utilisés.  Vous pouvez également consulter des informations sur l'utilisation moyenne de l'unité centrale dans tous les agents DEA. Pour des informations plus détaillées sur l'utilisation de la mémoire, du disque et de l'unité centrale, voir [Détails sur la mémoire, le disque et l'unité centrale](index.html#resourceusagedetails).
+- Des informations sur l'utilisation du réseau relatives à la bande passante entrante et à la bande passante sortante, au cours des 6 dernières heures ou du dernier jour. Les données affichées dépendent de la somme du trafic entrant et sortant pour les réseaux publics et privés.
+- Le temps de réponse moyen pour {{site.data.keyword.Bluemix_notm}} au cours des 10 dernières minutes, de la dernière heure et du dernier jour.
 - Le nombre moyen de transactions par seconde pour {{site.data.keyword.Bluemix_notm}} au cours des dix minutes précédentes, de l'heure précédente ou du jour précédent.
 
 #### Détails sur la mémoire, le disque et l'unité centrale
 {: #resourceusagedetails}
 
-Dans la section **Utilisation des ressources**, vous pouvez afficher un récapitulatif des quantités
-**réservées** et **physiques** pour votre mémoire et votre disque.    
+Dans la section **Utilisation des ressources**, vous pouvez afficher un récapitulatif des quantités **réservées** et **physiques** pour votre mémoire et votre disque.    
 	<dl>
 	<dt><strong>Physique</strong></dt>
 	<dd>Quantité de mémoire ou espace disque acheté pour votre environnement.</dd>
 	<dt><strong>Réservée</strong></dt>
-	<dd>Quantité totale de mémoire ou espace disque disponible pour la réservation par toutes les applications déployées et en cours d'exécution dans votre
-environnement. Etant donné que les applications utilisent rarement toute la mémoire qu'elles réservent, la valeur physique est généralement inférieure
-à la valeur réservée.</dd>
+	<dd>Quantité totale de mémoire ou espace disque disponible pour la réservation par toutes les applications déployées et en cours d'exécution dans votre environnement. Etant donné que les applications utilisent rarement toute la mémoire qu'elles réservent, la valeur physique est généralement inférieure à la valeur réservée.</dd>
 	</dl>
 
-En plus de la représentation graphique, vous pouvez afficher le pourcentage de mémoire et d'espace disque que votre environnement utilise. Vous pouvez
-également afficher les quantités réservées et physiques, en gigaoctets, dans le cadre de l'utilisation réelle, par rapport à la quantité disponible.
+En plus de la représentation graphique, vous pouvez afficher le pourcentage de mémoire et d'espace disque que votre environnement utilise. Vous pouvez également afficher les quantités réservées et physiques, en gigaoctets, dans le cadre de l'utilisation réelle, par rapport à la quantité disponible.
 
-Pour afficher l'utilisation de votre mémoire, de votre disque ou de
-votre unité centrale par agent DEA, cliquez sur **Répartition**.  
+Pour afficher l'utilisation de votre mémoire, de votre disque ou de votre unité centrale par agent DEA, cliquez sur **Répartition**.  
 
-Pour des informations plus détaillées sur votre utilisation de la mémoire réservée et physique ou du disque pour une période donnée, cliquez sur
-**Historique**. Vous
-pouvez choisir d'afficher les données hebdomadaires ou mensuelles. La vue de l'utilisation historique affiche un graphique de l'utilisation de la mémoire
-ou du disque pour la période que vous choisissez.  
+Pour des informations plus détaillées sur votre utilisation de la mémoire réservée et physique ou du disque pour une période donnée, cliquez sur **Historique**. Vous pouvez choisir d'afficher les données hebdomadaires ou mensuelles. La vue de l'utilisation historique affiche un graphique de l'utilisation de la mémoire ou du disque pour la période que vous choisissez.  
 	<dl>
 	<dt><strong>Limite mémoire réservée</strong></dt>
-	<dd>Affichée sous forme de ligne en pointillés horizontale, la limite mémoire réservée est la quantité totale de mémoire ou d'espace disque qui peut être
-réservée
-collectivement par toutes les applications qui s'exécutent dans votre environnement.</dd>
+	<dd>Affichée sous forme de ligne en pointillés horizontale, la limite mémoire réservée est la quantité totale de mémoire ou d'espace disque qui peut être réservée collectivement par toutes les applications qui s'exécutent dans votre environnement.</dd>
 	<dt><strong>Réservée</strong></dt>
-	<dd>La zone Réservée indique la mémoire ou l'espace disque qui est réservé collectivement par toutes les applications qui s'exécutent dans votre
-environnement.
-	<p>Pour
-identifier les organisations qui ont réservé le plus de mémoire à un moment précis, passez votre souris sur le point à côté de la zone Réservée qui
-est associée à ce moment. Ensuite, vous pouvez cliquer sur une organisation dans le graphique circulaire pour afficher davantage d'informations sur cette
-organisation.</p></dd>
+	<dd>La zone Réservée indique la mémoire ou l'espace disque qui est réservé collectivement par toutes les applications qui s'exécutent dans votre environnement.
+	<p>Pour identifier les organisations qui ont réservé le plus de mémoire à un moment précis, passez votre souris sur le point à côté de la zone Réservée qui est associée à ce moment. Ensuite, vous pouvez cliquer sur une organisation dans le graphique circulaire pour afficher davantage d'informations sur cette organisation.</p></dd>
 	<dt><strong>Limite physique</strong></dt>
-	<dd>Affichée sous forme de ligne en pointillés horizontale, la limite physique indique la quantité de mémoire physique ou d'espace disque qui a été achetée
-pour votre
-environnement.</dd>
+	<dd>Affichée sous forme de ligne en pointillés horizontale, la limite physique indique la quantité de mémoire physique ou d'espace disque qui a été achetée pour votre environnement.</dd>
 	<dt><strong>Physique</strong></dt>
 	<dd>La zone Physique affiche la quantité de mémoire ou d'espace disque utilisée.</dd>
 	</dl>
@@ -396,14 +376,7 @@ environnement.</dd>
 ### Utilisation du compte
 {: #accountusage}
 
-Vous pouvez afficher l'utilisation mensuelle pour votre compte, pour votre environnement dédié ou local. Vous pouvez utiliser ces données afin de
-déterminer les frais à facturer à des organisations spécifiques en fonction de leur consommation. Tous les utilisateurs de la console d'administration
-qui disposent du droit **Utilisateurs** avec l'accès **Lecture** peuvent afficher les données d'utilisation du
-compte. De plus, les responsables de la facturation des organisations peuvent afficher les données d'utilisation du compte pour leurs organisations, même
-s'ils ne disposent pas du droit **Utilisateurs** dans la console d'administration. En tant qu'administrateur de la console (droit de
-superutilisateur), vous pouvez affecter le rôle de responsable de la
-facturation pour des organisations en cliquant sur
-**Compte** &gt; **Gérer les organisations**.
+Vous pouvez afficher l'utilisation mensuelle pour votre compte, pour votre environnement dédié ou local. Vous pouvez utiliser ces données afin de déterminer les frais à facturer à des organisations spécifiques en fonction de leur consommation. Tous les utilisateurs de la console d'administration qui disposent du droit **Utilisateurs** avec l'accès **Lecture** peuvent afficher les données d'utilisation du compte. De plus, les responsables de la facturation des organisations peuvent afficher les données d'utilisation du compte pour leurs organisations, même s'ils ne disposent pas du droit **Utilisateurs** dans la console d'administration. En tant qu'administrateur de la console (droit de superutilisateur), vous pouvez affecter le rôle de responsable de la facturation pour des organisations en cliquant sur **Compte** &gt; **Gérer les organisations**.
 
 Pour afficher les données d'utilisation du compte, procédez comme suit :
 
@@ -417,19 +390,14 @@ Pour afficher les données d'utilisation du compte, procédez comme suit :
 <li>Les instances de service qui sont utilisées</li>
 </ul>
 </li>
-<li>Facultatif : affichez vos données pour un mois spécifique en utilisant le menu <strong>Votre activité de cloud</strong> pour sélectionner le mois de
-votre choix.</li>
-<li>Facultatif : cliquez sur <strong>EXPORTER DES DONNEES</strong> et sélectionnez <strong>CSV</strong> ou <strong>JSON</strong> afin d'exporter vos
-données pour le mois sélectionné dans un fichier <code>CSV</code> ou <code>JSON</code>.</li>
+<li>Facultatif : affichez vos données pour un mois spécifique en utilisant le menu <strong>Votre activité de cloud</strong> pour sélectionner le mois de votre choix.</li>
+<li>Facultatif : cliquez sur <strong>EXPORTER DES DONNEES</strong> et sélectionnez <strong>CSV</strong> ou <strong>JSON</strong> afin d'exporter vos données pour le mois sélectionné dans un fichier <code>CSV</code> ou <code>JSON</code>.</li>
 </ol>
 
-Vous pouvez aussi afficher l'utilisation mensuelle et les frais associés au niveau du compte pour vos contextes d'exécution, vos applications et vos
-services qui sont mis à disposition depuis l'environnement {{site.data.keyword.Bluemix_notm}} public. Vous pouvez utiliser ces données afin de
-déterminer les frais à facturer à des organisations spécifiques en fonction de leur consommation.
+Vous pouvez aussi afficher l'utilisation mensuelle et les frais associés au niveau du compte pour vos contextes d'exécution, vos applications et vos services qui sont mis à disposition depuis l'environnement {{site.data.keyword.Bluemix_notm}} public. Vous pouvez utiliser ces données afin de déterminer les frais à facturer à des organisations spécifiques en fonction de leur consommation.
 
 <ol>
-<li>Cliquez sur <strong>Compte</strong> &gt; <strong>Tableau de bord de
-l'utilisation</strong>.</li>
+<li>Cliquez sur <strong>Compte</strong> &gt; <strong>Tableau de bord de l'utilisation</strong>.</li>
 <li>Cliquez sur <strong>Public</strong>.</li>
 <li>Sélectionnez l'organisation pour laquelle afficher les données.</li>
 <li>Vous pouvez afficher des détails sur l'utilisation pour les catégories suivantes :
@@ -440,18 +408,15 @@ l'utilisation</strong>.</li>
 <li>Un récapitulatif des frais pour tous les contextes d'exécution, tous les services et toutes les applications qui sont mis à disposition</li>
 </ul>
 </li>
-<li>Facultatif : affichez vos données pour un mois spécifique en sélectionnant le mois de votre choix dans le graphique à barres. Les données pour le mois
-en cours s'affichent par défaut.</li>
-<li>Facultatif : cliquez sur <strong>EXPORTER DES DONNEES</strong> et sélectionnez <strong>CSV</strong> ou <strong>JSON</strong> afin d'exporter vos
-données pour le mois sélectionné dans un fichier <code>CSV</code> ou <code>JSON</code>.</li>
+<li>Facultatif : affichez vos données pour un mois spécifique en sélectionnant le mois de votre choix dans le graphique à barres. Les données pour le mois en cours s'affichent par défaut.</li>
+<li>Facultatif : cliquez sur <strong>EXPORTER DES DONNEES</strong> et sélectionnez <strong>CSV</strong> ou <strong>JSON</strong> afin d'exporter vos données pour le mois sélectionné dans un fichier <code>CSV</code> ou <code>JSON</code>.</li>
 </ol>
 
 
 ### Utilisation des organisations
 {: #orgusage}
 
-Pour afficher l'utilisation par organisation, cliquez sur **ADMINISTRATION &gt; ADMINISTRATION DES ORGANISATIONS**, puis
-sélectionnez une organisation dans **Liste des organisations**. La page **Gérer les organisations** de l'organisation sélectionnée affiche les informations suivantes sur l'utilisation :
+Pour afficher l'utilisation par organisation, cliquez sur **ADMINISTRATION &gt; ADMINISTRATION DES ORGANISATIONS**, puis sélectionnez une organisation dans **Liste des organisations**. La page **Gérer les organisations** de l'organisation sélectionnée affiche les informations suivantes sur l'utilisation :
 
 - Le nombre de services utilisés
 - Le nombre de routes utilisées
@@ -473,11 +438,7 @@ Effectuez l'une des opérations suivantes :
 - Vous pouvez effectuer une recherche dans votre collection de rapports et de journaux. La recherche s'applique aux noms de rapport ainsi qu'au contenu textuel des rapports et des journaux. Vous pouvez aussi choisir de filtrer votre recherche par **événements d'administration**, **rapports DataPower**, **pare-feu** et **audit de connexion**.
 - Lors de l'affichage d'un rapport ou d'un journal, vous pouvez cliquer sur l'icône ![Télécharger](images/icon_download.png) pour télécharger le rapport.
 
-Le tableau ci-dessous présente la liste des rapports de sécurité qui sont générés pour l'environnement {{site.data.keyword.Bluemix_notm}}
-local et l'environnement {{site.data.keyword.Bluemix_notm}} dédié. La plupart des rapports sont générés quotidiennement. Toutefois, les
-rapports sur les événements de gestion des clés et de chiffrement sont générés mensuellement. Tous les rapports sont conservés pendant 90 jours dans la
-console d'administration, à partir de laquelle vous pouvez y accéder. Au bout de ces 90 jours, {{site.data.keyword.Bluemix_notm}} les tient à
-disposition hors ligne sur demande pendant 9 mois. Au total, les rapports sont disponibles en vue de leur extraction pendant un an.
+Le tableau ci-dessous présente la liste des rapports de sécurité qui sont générés pour l'environnement {{site.data.keyword.Bluemix_notm}} local et l'environnement {{site.data.keyword.Bluemix_notm}} dédié. La plupart des rapports sont générés quotidiennement. Toutefois, les rapports sur les événements de gestion des clés et de chiffrement sont générés mensuellement. Tous les rapports sont conservés pendant 90 jours dans la console d'administration, à partir de laquelle vous pouvez y accéder. Au bout de ces 90 jours, {{site.data.keyword.Bluemix_notm}} les tient à disposition hors ligne sur demande pendant 9 mois. Au total, les rapports sont disponibles en vue de leur extraction pendant un an.
 
 
 {: #ld_table9}
@@ -510,45 +471,30 @@ Vous pouvez afficher le statut de l'environnement {{site.data.keyword.Bluemix_no
 
 ### Statut de l'environnement {{site.data.keyword.Bluemix_notm}}
 
-Vous pouvez surveiller le statut de votre instance {{site.data.keyword.Bluemix_notm}} à l'aide de la page Statut de
-{{site.data.keyword.Bluemix_notm}}. Cliquez sur
-**Support** &gt; **Statut**.
+Vous pouvez surveiller le statut de votre instance {{site.data.keyword.Bluemix_notm}} à l'aide de la page Statut de {{site.data.keyword.Bluemix_notm}}. Cliquez sur **Support** &gt; **Statut**.
 
 La page Statut est l'emplacement central pour rechercher des notifications et des annonces sur les événements clés affectant la plateforme {{site.data.keyword.Bluemix_notm}} et les principaux services dans {{site.data.keyword.Bluemix_notm}}. Vous pouvez vous abonner à un flux RSS pour recevoir les notifications automatiquement et ne pas avoir à les rechercher. Pour plus d'informations sur la page Statut et la configuration du flux RSS, voir [Affichage de {{site.data.keyword.Bluemix_notm}}](../support/index.html#viewing-bluemix-status).
 
 ### Statut de la console d'administration
 
-Après le déploiement initial de votre environnement {{site.data.keyword.Bluemix_notm}}, une vérification est effectuée automatiquement sur
-les composants utilisés pour administrer l'environnement. Vous pouvez accéder à la page Vérification de la console d'administration afin de vérifier le statut des composants après l'exécution de la
-vérification. Pour
-ouvrir cette page, accédez à <code>https://console.&lt;sous-domaine&gt;.bluemix.net/check</code>, où `<sous-domaine>` est le nom de
-votre instance locale ou dédiée.
+Après le déploiement initial de votre environnement {{site.data.keyword.Bluemix_notm}}, une vérification est effectuée automatiquement sur les composants utilisés pour administrer l'environnement. Vous pouvez accéder à la page Vérification de la console d'administration afin de vérifier le statut des composants après l'exécution de la vérification. Pour ouvrir cette page, accédez à <code>https://console.&lt;sous-domaine&gt;.bluemix.net/check</code>, où `<sous-domaine>` est le nom de votre instance locale ou dédiée.
 
-Vous pouvez effectuer une vérification à tout moment. Vous devez être connecté pour pouvoir sélectionner l'option d'exécution de la vérification. Si
-vous rencontrez des problèmes lors de l'ajout d'un utilisateur, de l'édition d'une organisation ou de la gestion de vos services, exécutez cette
-vérification afin de déterminer si des composants sont défaillants ou déconnectés. Vous pouvez ouvrir un ticket de demande de service avec les informations
-générées par la vérification pour une résolution rapide du problème.
+Vous pouvez effectuer une vérification à tout moment. Vous devez être connecté pour pouvoir sélectionner l'option d'exécution de la vérification. Si vous rencontrez des problèmes lors de l'ajout d'un utilisateur, de l'édition d'une organisation ou de la gestion de vos services, exécutez cette vérification afin de déterminer si des composants sont défaillants ou déconnectés. Vous pouvez ouvrir un ticket de demande de service avec les informations générées par la vérification pour une résolution rapide du problème.
 
 ## Gestion de votre catalogue
 {: #oc_catalog}
 
-Vous pouvez choisir les services {{site.data.keyword.Bluemix_notm}} que les utilisateurs peuvent voir dans le
-catalogue {{site.data.keyword.Bluemix_notm}}. Cliquez sur **ADMINISTRATION &gt; GESTION DES CATALOGUES**.
+Vous pouvez choisir les services {{site.data.keyword.Bluemix_notm}} que les utilisateurs peuvent voir dans le catalogue {{site.data.keyword.Bluemix_notm}}. Cliquez sur **ADMINISTRATION &gt; GESTION DES CATALOGUES**.
 
-Sélectionnez une vignette de service pour éditer la visibilité du plan de service. Pour éditer
-la visibilité, sélectionnez l'une des options suivantes :
+Sélectionnez une vignette de service pour éditer la visibilité du plan de service. Pour éditer la visibilité, sélectionnez l'une des options suivantes :
 
-- Pour afficher un service masqué de sorte que vos utilisateurs puissent le voir dans le catalogue, sélectionnez
-**ACTIVER TOUS LES PLANS**.
-- Pour masquer un service de sorte que vos utilisateurs ne le voient pas dans le catalogue
-{{site.data.keyword.Bluemix_notm}}, sélectionnez **DESACTIVER TOUS LES PLANS**.
-- Pour contrôler la visibilité d'un plan individuel, sélectionnez le nom du plan, puis utilisez le menu déroulant afin de sélectionner
-**Activer pour toutes les organisations**, **Désactiver pour toutes les organisations** ou **Activer le plan pour des organisations spécifiques**.
+- Pour afficher un service masqué de sorte que vos utilisateurs puissent le voir dans le catalogue, sélectionnez **ACTIVER TOUS LES PLANS**.
+- Pour masquer un service de sorte que vos utilisateurs ne le voient pas dans le catalogue {{site.data.keyword.Bluemix_notm}}, sélectionnez **DESACTIVER TOUS LES PLANS**.
+- Pour contrôler la visibilité d'un plan individuel, sélectionnez le nom du plan, puis utilisez le menu déroulant afin de sélectionner **Activer pour toutes les organisations**, **Désactiver pour toutes les organisations** ou **Activer le plan pour des organisations spécifiques**.
 
 <!-- staging only start -->
 
-Vous pouvez également gérer l'ordre de priorité des packs de construction disponibles pour sélection par vos développeurs lorsqu'ils créent des
-applications compte tenu de leur compatibilité.
+Vous pouvez également gérer l'ordre de priorité des packs de construction disponibles pour sélection par vos développeurs lorsqu'ils créent des applications compte tenu de leur compatibilité.
 
 1. Accédez à **ADMINISTRATION &gt; GESTION DU CATALOGUE**.
 2. Accédez à la section **Traitement**.
@@ -578,8 +524,7 @@ Prenez connaissance des informations suivantes et effectuez les étapes d'enregi
 
 **Avant de commencer** : <a href="http://docs.cloudfoundry.org/services/api.html" target="_blank">implémentez l'API de courtier de services Cloud Foundry <img src="../icons/launch-glyph.svg" alt="icône de lien externe"></a> pour permettre la communication entre votre service et {{site.data.keyword.Bluemix_notm}}. L'API de courtier de services est un ensemble de noeuds finaux REST consommés par {{site.data.keyword.Bluemix_notm}}.
 
-Lorsque vous implémentez le courtier de services, dans la réponse JSON de <code>GET /v2/catalog</code>, vous devez fournir les définitions pour vos service et vos plans de service, notamment les informations relatives au service que vous voulez afficher. Par exemple, examinez l'exemple de code JSON
-de la réponse du catalogue (GET) :
+Lorsque vous implémentez le courtier de services, dans la réponse JSON de <code>GET /v2/catalog</code>, vous devez fournir les définitions pour vos service et vos plans de service, notamment les informations relatives au service que vous voulez afficher. Par exemple, examinez l'exemple de code JSON de la réponse du catalogue (GET) :
 
 ```
 {
@@ -736,8 +681,7 @@ Les tableaux ci-dessous peuvent vous aider à remplir le fichier JSON.
 ```
 {: pre}
 
-L'exemple suivant montre comment la réponse JSON de GET /v2/catalog est mappée à la page des détails du service dans le
-catalogue {{site.data.keyword.Bluemix_notm}} :
+L'exemple suivant montre comment la réponse JSON de GET /v2/catalog est mappée à la page des détails du service dans le catalogue {{site.data.keyword.Bluemix_notm}} :
 
 ![Détails du service dans le catalogue.](images/metadata.png "Vue des détails du service dans le catalogue Bluemix")
 
@@ -785,29 +729,24 @@ L'exemple ci-après montre comment la réponse JSON de GET /v2/catalog est mapp�
 </li>
 <li>Cliquez sur <strong>CONNECTER</strong>.</li>
 <li>Passez en revue les informations relatives à votre service, notamment les plans disponibles, l'icône et la description du service.<br />
-<p><strong>Remarque</strong> : si vous devez changer les informations de catalogue pour le service, mettez à jour votre courtier de services et
-lancez à nouveau le processus d'enregistrement en remplissant le formulaire.</p>
+<p><strong>Remarque</strong> : si vous devez changer les informations de catalogue pour le service, mettez à jour votre courtier de services et lancez à nouveau le processus d'enregistrement en remplissant le formulaire.</p>
 </li>
 <li>Cliquez sur <strong>ENREGISTRER</strong>.</li>
 <li>Choisissez d'activer tous les plans ou des plans spécifiques seulement pour le service. Tous les plans sont désactivés par défaut.</li>
 <li>Activez l'instance de service pour toutes les organisations ou pour des organisations spécifiques.</li>
 </ol>
 
-A présent, votre service apparaît dans la catégorie Services personnalisés de votre catalogue {{site.data.keyword.Bluemix_notm}}. Accédez à
-**ADMINISTRATION &gt; GESTION DES CATALOGUES** et sélectionnez la vignette dans le catalogue. Vous pouvez activer différents plans et
-éditer la visibilité d'un plan pour vos organisations à tout moment.
+A présent, votre service apparaît dans la catégorie Services personnalisés de votre catalogue {{site.data.keyword.Bluemix_notm}}. Accédez à **ADMINISTRATION &gt; GESTION DES CATALOGUES** et sélectionnez la vignette dans le catalogue. Vous pouvez activer différents plans et éditer la visibilité d'un plan pour vos organisations à tout moment.
 
 
 ## Administration des organisations
 {: #oc_organizations}
 
-Vous pouvez gérer vos organisations en créant et en supprimant des organisations, en ajoutant ou en retirant des responsables pour les
-organisations, et en surveillant l'utilisation des quotas afin de prendre les meilleures décisions pour votre entreprise.
+Vous pouvez gérer vos organisations en créant et en supprimant des organisations, en ajoutant ou en retirant des responsables pour les organisations, et en surveillant l'utilisation des quotas afin de prendre les meilleures décisions pour votre entreprise.
 
 Cliquez sur **ADMINISTRATION &gt; ADMINISTRATION DES ORGANISATIONS**.
 
-Vous pouvez développer et afficher diverses sections. Vous pouvez aussi passer en revue et gérer les plans d'établissement des quotas pour vos
-organisations.
+Vous pouvez développer et afficher diverses sections. Vous pouvez aussi passer en revue et gérer les plans d'établissement des quotas pour vos organisations.
 
 ### Création d'organisations
 
@@ -866,23 +805,14 @@ Les types ci-après d'utilisation de la mémoire sont affichés dans le graphiqu
 ### Gestion des quotas
 {: #manageorgquota}
 
-Un quota représente les limites de ressources pour les organisations de
-votre environnement et est affecté lorsque l'organisation est créée. Toute application ou tout service dans un espace de
-l'organisation contribue à l'utilisation du quota alloué. Pour gérer le
-quota d'une organisation, procédez comme suit :
+Un quota représente les limites de ressources pour les organisations de votre environnement et est affecté lorsque l'organisation est créée. Toute application ou tout service dans un espace de l'organisation contribue à l'utilisation du quota alloué. Pour gérer le quota d'une organisation, procédez comme suit :
 
 <ol>
-<li>Cliquez dans le graphique sur la barre correspondant à l'organisation que
-vous voulez éditer dans la section Utilisation de la mémoire de l'organisation ou sélectionnez le nom de l'organisation dans la section Liste des
-organisations. Dans la page Informations sur l'organisation, vous
-pouvez renommer l'organisation et ajouter ou supprimer des responsables.
-<p><strong>Remarque</strong> : vous recevez un message si vous sélectionnez un plan d'établissement des quotas qui n'est pas suffisant pour l'utilisation en
-cours pour l'organisation.</p></li>
-<li>Cliquez sur <strong>Cloud Foundry</strong> ou sur
-<strong>Conteneurs</strong>.  Par défaut, la page du quota Cloud Foundry s'ouvre. 
+<li>Cliquez dans le graphique sur la barre correspondant à l'organisation que vous voulez éditer dans la section Utilisation de la mémoire de l'organisation ou sélectionnez le nom de l'organisation dans la section Liste des organisations. Dans la page Informations sur l'organisation, vous pouvez renommer l'organisation et ajouter ou supprimer des responsables.
+<p><strong>Remarque</strong> : vous recevez un message si vous sélectionnez un plan d'établissement des quotas qui n'est pas suffisant pour l'utilisation en cours pour l'organisation.</p></li>
+<li>Cliquez sur <strong>Cloud Foundry</strong> ou sur <strong>Conteneurs</strong>.  Par défaut, la page du quota Cloud Foundry s'ouvre. 
 <ul>
-<li>A partir de la page Cloud Foundry, vous pouvez sélectionner un plan et
-afficher les détails du quota des ressources suivantes :
+<li>A partir de la page Cloud Foundry, vous pouvez sélectionner un plan et afficher les détails du quota des ressources suivantes :
 <ul>
 <li>Services</li>
 <li>Routes</li>
@@ -890,36 +820,21 @@ afficher les détails du quota des ressources suivantes :
 <li>Allocation des applications</li>
 </ul>
 </li>
-<li>Dans la page <strong>Conteneurs</strong>, vous pouvez affecter des valeurs
-entières aux zones suivantes :
+<li>Dans la page <strong>Conteneurs</strong>, vous pouvez affecter des valeurs entières aux zones suivantes :
 <dl class="parml">
 <dt class="pt dlterm">Limite d'image</dt>
-<dd class="pd">Nombre maximal d'images de conteneur pouvant être contenues dans
-votre registre privé. Une image de conteneur est la base de chaque conteneur que vous créez. Une image est créée depuis un Dockerfile, lequel est un fichier en lecture
-seule contenant le système d'exploitation, l'application et toutes ses
-dépendances, et décrivant comment un conteneur est configuré. Les images sont
-partagées entre tous les membres d'une organisation.</dd>
+<dd class="pd">Nombre maximal d'images de conteneur pouvant être contenues dans votre registre privé. Une image de conteneur est la base de chaque conteneur que vous créez. Une image est créée depuis un Dockerfile, lequel est un fichier en lecture seule contenant le système d'exploitation, l'application et toutes ses dépendances, et décrivant comment un conteneur est configuré. Les images sont partagées entre tous les membres d'une organisation.</dd>
 <dt class="pt dlterm">Allocation de mémoire par défaut</dt>
-<dd>Quantité de mémoire de conteneur automatiquement allouée à la création d'un
-nouvel espace. Lors de la création d'un conteneur, vous devez choisir une
-taille de conteneur. Cette taille détermine la quantité de mémoire que le
-conteneur peut utiliser sur l'hôte de calcul et est comptabilisée dans votre
-limite de mémoire de conteneur. </dd>
+<dd>Quantité de mémoire de conteneur automatiquement allouée à la création d'un nouvel espace. Lors de la création d'un conteneur, vous devez choisir une taille de conteneur. Cette taille détermine la quantité de mémoire que le conteneur peut utiliser sur l'hôte de calcul et est comptabilisée dans votre limite de mémoire de conteneur. </dd>
 <dt class="pt dlterm">Allocation de mémoire maximale</dt>
-<dd>Quantité maximale de mémoire de conteneur pouvant être allouée entre tous
-les espaces d'une organisation.</dd>
+<dd>Quantité maximale de mémoire de conteneur pouvant être allouée entre tous les espaces d'une organisation.</dd>
 <dt class="pt dlterm">Adresses IP flottantes par défaut</dt>
-<dd>Nombre d'adresses IP publiques automatiquement allouées à la création d'un
-nouvel espace. Vous pouvez lier des adresses IP publiques à des conteneurs
-isolées et des groupes de conteneurs afin de les rendre accessibles depuis Internet.</dd>
+<dd>Nombre d'adresses IP publiques automatiquement allouées à la création d'un nouvel espace. Vous pouvez lier des adresses IP publiques à des conteneurs isolées et des groupes de conteneurs afin de les rendre accessibles depuis Internet.</dd>
 <dt class="pt dlterm">Adresses IP flottantes maximales</dt>
-<dd>Nombre maximal d'adresses IP publiques pouvant être allouées entre tous les
-espaces d'une organisation.</dd>
+<dd>Nombre maximal d'adresses IP publiques pouvant être allouées entre tous les espaces d'une organisation.</dd>
 </dl>
-<strong>Remarque</strong> : si vous ne disposez pas encore de conteneurs dans
-votre environnement, ou si les conteneurs de votre environnement ne sont pas
-encore configurés, vous obtenez un message d'erreur.
-<p>Pour plus d'informations sur les conteneurs, voir [A propos d'IBM containers](https://console.ng.bluemix.net/docs/containers/container_ov.html). Pour plus d'informations sur les quotas de conteneur, voir [Quota et comptes Bluemix]( https://console.ng.bluemix.net/docs/containers/container_planning_org_ov.html#container_planning_quota).</p>
+<strong>Remarque</strong> : si vous ne disposez pas encore de conteneurs dans votre environnement, ou si les conteneurs de votre environnement ne sont pas encore configurés, vous obtenez un message d'erreur.
+<p>Pour plus d'informations sur les conteneurs, voir [A propos d'IBM containers](/docs/containers/container_ov.html). Pour plus d'informations sur les quotas de conteneur, voir [Quota et comptes Bluemix](/docs/containers/container_planning_org_ov.html#container_planning_quota).</p>
 <strong>Remarque :</strong> Les conteneurs ne sont pas disponibles dans la région {{site.data.keyword.Bluemix_notm}} Sydney.</li>
 </ul>
 <li>Pour sauvegarder les modifications que vous avez apportées dans la page Gérer l'organisation, cliquez sur <strong>SAUVEGARDER</strong>.</li>
@@ -929,9 +844,7 @@ encore configurés, vous obtenez un message d'erreur.
 ### Gestion de vos organisations depuis la liste des organisations
 {: #manageorgfrolis}
 
-Dans la section Liste des organisations, vous pouvez afficher toutes les organisations de l'environnement
-{{site.data.keyword.Bluemix_notm}}, et vous pouvez effectuer des actions pour des organisations individuelles en cliquant sur le nom de
-l'organisation.
+Dans la section Liste des organisations, vous pouvez afficher toutes les organisations de l'environnement {{site.data.keyword.Bluemix_notm}}, et vous pouvez effectuer des actions pour des organisations individuelles en cliquant sur le nom de l'organisation.
 
 - Pour supprimer une organisation, cliquez sur l'icône **Supprimer** ![Supprimer](images/icon_trash.svg) dans la colonne Actions.
 - Afin d'afficher le plan d'établissement des quotas et l'utilisation pour une organisation, cliquez sur le nom de l'organisation dans la liste. La page **Gérer les organisations** de l'organisation sélectionnée affiche les informations suivantes sur l'utilisation :
@@ -942,12 +855,8 @@ l'organisation.
   - Un graphique de l'allocation des applications qui indique quelles sont les applications incluses dans le quota de mémoire utilisé
   - Un graphique de l'utilisation des applications mesurée qui représente un rapport sur trois mois du nombre de Go/heure consommé par application déployée. Vous pouvez sélectionner la **vue Liste** pour examiner les données de toutes les applications, notamment l'allocation mémoire par application et l'utilisation mesurée en Go par heure au cours des trois derniers mois.
 
-- Pour éditer le nom de l'organisation et ajouter ou retirer des responsables, cliquez sur le nom de l'organisation dans la liste et suivez les
-invites à l'écran.
-- Pour afficher des informations sur un utilisateur particulier de
-l'organisation que vous visualiser, cliquez sur le nom d'utilisateur pour voir
-les Informations utilisateur. Vous pouvez ensuite cliquer sur le nom de
-l'organisation pour revenir aux Informations sur l'organisation. 
+- Pour éditer le nom de l'organisation et ajouter ou retirer des responsables, cliquez sur le nom de l'organisation dans la liste et suivez les invites à l'écran.
+- Pour afficher des informations sur un utilisateur particulier de l'organisation que vous visualiser, cliquez sur le nom d'utilisateur pour voir les Informations utilisateur. Vous pouvez ensuite cliquer sur le nom de l'organisation pour revenir aux Informations sur l'organisation. 
 
 ## Gestion des utilisateurs et des droits
 {: #oc_useradmin}
@@ -955,48 +864,36 @@ l'organisation pour revenir aux Informations sur l'organisation.
 Vous pouvez utiliser des utilisateurs individuels ou des groupes d'utilisateurs. En général, les utilisateurs sont ajoutés à votre instance {{site.data.keyword.Bluemix_notm}} depuis le registre d'utilisateurs de votre société via LDAP (Lightweight Directory Access Protocol). Vous pouvez aussi afficher les droits utilisateur. Si vous disposez du droit **Superutilisateur**, vous pouvez également définir et gérer les droits des autres utilisateurs. Cliquez sur **ADMINISTRATION &gt; ADMINISTRATION DES UTILISATEURS**.
 
 La page Administration des utilisateurs affiche tous les utilisateurs pour l'instance locale ou dédiée. Les droits de chaque utilisateur sont affichés sous forme d'icônes dans le tableau. Les droits possibles sont les suivants : Aucun, **Superutilisateur**, **Accès de base**,**Connexion**, **Catalogue**, **Rapports** et **Utilisateurs**.
-Les droits **Superutilisateur** et **Accès de base** peuvent être associés à la valeur **Activé**
-ou **Désactivé**, alors que les droits restants sont activés ou désactivés avec des types d'accès spécifiques, notamment
-**Lecture** ou
-**Ecriture**, représentés par des icônes. Voir [Droits](#permissions) pour la description de chaque type et l'explication des icônes.
+Les droits **Superutilisateur** et **Accès de base** peuvent être associés à la valeur **Activé** ou **Désactivé**, alors que les droits restants sont activés ou désactivés avec des types d'accès spécifiques, notamment **Lecture** ou **Ecriture**, représentés par des icônes. Voir [Droits](#permissions) pour la description de chaque type et l'explication des icônes.
 
 ### Gestion des utilisateurs
 {: #workwithusers}
 
-En fonction de l'accès **Lecture** ou **Ecriture** pour les droits des utilisateurs, vous pouvez rechercher des utilisateurs existants, retirer des utilisateurs et ajouter des utilisateurs individuellement ou via un groupe. Si vous possédez le droit **Superutilisateur**, vous disposez d'un accès complet vous permettant d'exécuter n'importe quelle
-tâche pour la gestion des utilisateurs dans l'environnement. Passez en revue les tâches de gestion des utilisateurs suivantes et le niveau d'accès requis pour accomplir chacune de ces tâches :
+En fonction de l'accès **Lecture** ou **Ecriture** pour les droits des utilisateurs, vous pouvez rechercher des utilisateurs existants, retirer des utilisateurs et ajouter des utilisateurs individuellement ou via un groupe. Si vous possédez le droit **Superutilisateur**, vous disposez d'un accès complet vous permettant d'exécuter n'importe quelle tâche pour la gestion des utilisateurs dans l'environnement. Passez en revue les tâches de gestion des utilisateurs suivantes et le niveau d'accès requis pour accomplir chacune de ces tâches :
 
-* Localisez les utilisateurs. Si vous disposez des accès **Lecture** ou **Ecriture** et que vous connaissez une partie ou la totalité du nom d'utilisateur, vous pouvez localiser des utilisateurs dans la table à l'aide de la zone **Rechercher**. Vous pouvez également filtrer la liste des utilisateurs en fonction de leur organisation et de leurs droits. Pour filtrer une liste d'utilisateurs,
-procédez comme suit :
+* Localisez les utilisateurs. Si vous disposez des accès **Lecture** ou **Ecriture** et que vous connaissez une partie ou la totalité du nom d'utilisateur, vous pouvez localiser des utilisateurs dans la table à l'aide de la zone **Rechercher**. Vous pouvez également filtrer la liste des utilisateurs en fonction de leur organisation et de leurs droits. Pour filtrer une liste d'utilisateurs, procédez comme suit :
   <ol>
   <li>Cliquez sur <strong>Filtrer</strong>.</li>
   <li> Cliquez sur <strong>Organisations</strong> ou <strong>Droits</strong>, selon le filtrage que vous voulez appliquer.
   <dl>
 	<dt><strong>Organisation</strong></dt>
-	<dd>Pour filtrer des utilisateurs par organisation, commencez à saisir le nom de l'organisation dans la zone <strong>Organisation</strong> et sélectionnez
-l'organisation dans la liste. Ensuite, sélectionnez le ou les rôles affectés aux utilisateurs dans l'organisation.</dd>
+	<dd>Pour filtrer des utilisateurs par organisation, commencez à saisir le nom de l'organisation dans la zone <strong>Organisation</strong> et sélectionnez l'organisation dans la liste. Ensuite, sélectionnez le ou les rôles affectés aux utilisateurs dans l'organisation.</dd>
 	<dt><strong>Droits</strong></dt>
-	<dd>Pour filtrer les utilisateurs en fonction de leurs droits, sélectionnez d'abord le type d'utilisateur. Par exemple, vous pouvez choisir d'afficher
-tous les superutilisateurs. Pour les droits autres que <strong>Superutilisateur</strong> ou <strong>Accès de base</strong>, vous pouvez aussi sélectionner
-le type d'accès, par exemple <strong>Lecture</strong> ou <strong>Ecriture</strong>.</dd>
+	<dd>Pour filtrer les utilisateurs en fonction de leurs droits, sélectionnez d'abord le type d'utilisateur. Par exemple, vous pouvez choisir d'afficher tous les superutilisateurs. Pour les droits autres que <strong>Superutilisateur</strong> ou <strong>Accès de base</strong>, vous pouvez aussi sélectionner le type d'accès, par exemple <strong>Lecture</strong> ou <strong>Ecriture</strong>.</dd>
 	</dl></li>
   <li>Cliquez sur <strong>Appliquer</strong>.</li>
    </ol>
 
-   La fenêtre Administration des utilisateurs affiche les filtres que vous définissez et les utilisateurs qui sont trouvés avec les filtres
-spécifiés. Ensuite, vous pouvez rechercher un utilisateur dans la table filtrée. Vous pouvez aussi modifier la liste des filtres spécifiés en retirant une
-option de filtre de la liste.
+   La fenêtre Administration des utilisateurs affiche les filtres que vous définissez et les utilisateurs qui sont trouvés avec les filtres spécifiés. Ensuite, vous pouvez rechercher un utilisateur dans la table filtrée. Vous pouvez aussi modifier la liste des filtres spécifiés en retirant une option de filtre de la liste.
 
 * Ajoutez un seul utilisateur. Si vous disposez des droits **Superutilisateur** ou **Utilisateurs** avec un accès **Ecriture**, vous pouvez ajouter des utilisateurs.
 
   1. Pour ajouter un seul utilisateur depuis votre annuaire LDAP, cliquez sur **Ajouter un utilisateur**.
   2. Dans la zone **Rechercher**, entrez l'adresse électronique de l'utilisateur, puis sélectionnez l'utilisateur dans la liste.
-  3. Ensuite, dans la zone **Organisation**, choisissez l'organisation à laquelle ajouter l'utilisateur en entrant le nom de
-l'organisation et en le sélectionnant dans la liste.
+  3. Ensuite, dans la zone **Organisation**, choisissez l'organisation à laquelle ajouter l'utilisateur en entrant le nom de l'organisation et en le sélectionnant dans la liste.
   4. Pour ajouter l'utilisateur à l'organisation sélectionnée, cliquez sur **Ajouter un utilisateur**.
 
-  **Remarque** : lorsque l'opération d'ajout aboutit, l'utilisateur est ajouté au tableau pour que vous puissiez
-l'afficher et le rechercher. Lorsque des utilisateurs sont ajoutés, aucun droit ne leur est affecté.
+  **Remarque** : lorsque l'opération d'ajout aboutit, l'utilisateur est ajouté au tableau pour que vous puissiez l'afficher et le rechercher. Lorsque des utilisateurs sont ajoutés, aucun droit ne leur est affecté.
 
 * Ajoutez un groupe d'utilisateurs depuis votre annuaire LDAP. Si vous disposez des droits **Superutilisateur** ou **Utilisateurs** avec un accès **Ecriture**, vous pouvez ajouter des utilisateurs.
 
@@ -1016,17 +913,14 @@ l'afficher et le rechercher. Lorsque des utilisateurs sont ajoutés, aucun droit
   3. Indiquez les valeurs d'utilisateur dans les colonnes requises. Si vous n'utilisez pas d'annuaire LDAP, utilisez les en-têtes de colonne requis et les en-têtes de colonne facultatifs pour les utilisateurs que vous importez.
   4. Sauvegardez votre fichier et cliquez sur **Envoyer le fichier par téléchargement**.
 
-  **Remarque** : Les colonnes de votre feuille de calcul peuvent apparaître dans n'importe quel ordre tant que toutes les colonnes requises sont présentes. Si l'importation aboutit, vous recevez un message de confirmation indiquant que tous les utilisateurs ont été ajoutés. Si l'importation n'a abouti que pour certains
-utilisateurs, consultez le message d'erreur afin de prendre des mesures pour les utilisateurs qui n'ont pas pu être ajoutés.
+  **Remarque** : Les colonnes de votre feuille de calcul peuvent apparaître dans n'importe quel ordre tant que toutes les colonnes requises sont présentes. Si l'importation aboutit, vous recevez un message de confirmation indiquant que tous les utilisateurs ont été ajoutés. Si l'importation n'a abouti que pour certains utilisateurs, consultez le message d'erreur afin de prendre des mesures pour les utilisateurs qui n'ont pas pu être ajoutés.
 
-* Retirez des utilisateurs. Si vous disposez du droit **Superutilisateur** ou du droit **Utilisateurs** avec l'accès
-**Ecriture**, vous pouvez retirer définitivement des utilisateurs de l'environnement.
+* Retirez des utilisateurs. Si vous disposez du droit **Superutilisateur** ou du droit **Utilisateurs** avec l'accès **Ecriture**, vous pouvez retirer définitivement des utilisateurs de l'environnement.
 
     1. Localisez l'utilisateur et cliquez sur l'icône ![Supprimer](images/icon_trash.svg).
     2. Cliquez sur **Retirer**.
 
-* Pour éditer les droits et les organisations des utilisateurs, vous devez disposer du droit **Superutilisateur**. Pour éditer les droits des utilisateurs, localisez ces derniers et cliquez sur leur nom. Dans
-la page **Edition d'utilisateur**, vous pouvez activer ou désactiver les droits :
+* Pour éditer les droits et les organisations des utilisateurs, vous devez disposer du droit **Superutilisateur**. Pour éditer les droits des utilisateurs, localisez ces derniers et cliquez sur leur nom. Dans la page **Edition d'utilisateur**, vous pouvez activer ou désactiver les droits :
 
     * Sélectionnez **Activé** dans la liste pour activer le droit **Superutilisateur** ou **Accès de base**.
     * Sélectionnez **Lecture** dans la liste pour que l'utilisateur dispose de l'accès **Lecture** (en lecture seule) pour ce droit ou sélectionnez **Ecriture** pour que l'utilisateur dispose de l'accès **Ecriture** (édition ou ajout et retrait) pour ce droit.
@@ -1039,17 +933,12 @@ la page **Edition d'utilisateur**, vous pouvez activer ou désactiver les droits
     1. Pour ajouter un utilisateur à une organisation, sélectionnez le nom de celui-ci dans le tableau pour accéder à la page **Edition d'utilisateur**. Ensuite, utilisez la zone de recherche pour localiser une organisation, sélectionnez celle-ci dans la liste, puis cliquez sur **Sauvegarder**.
     2. Pour retirer un utilisateur d'une organisation, sélectionnez le nom de l'utilisateur concerné dans le tableau afin d'accéder à la page **Edition d'utilisateur**. Ensuite, cliquez sur ![Retirer](images/icon_remove.svg) pour l'organisation dont vous souhaitez retirer l'utilisateur, puis cliquez sur **Sauvegarder**.
     
-* Pour afficher les informations sur l'organisation à laquelle
-l'utilisateur est affecté, cliquez sur le nom de l'organisation pour afficher
-les Informations sur l'organisation. Vous pouvez ensuite cliquer sur le nom
-d'utilisateur pour revenir aux Informations utilisateur. 
+* Pour afficher les informations sur l'organisation à laquelle l'utilisateur est affecté, cliquez sur le nom de l'organisation pour afficher les Informations sur l'organisation. Vous pouvez ensuite cliquer sur le nom d'utilisateur pour revenir aux Informations utilisateur. 
 
 ### Droits
 {: #permissions}
 
-Les droits suivants peuvent être accordés aux utilisateurs avec des niveaux d'accès particuliers (lecture ou écriture) qui permettent à ces
-derniers d'exécuter des tâches
-spécifiques dans la console d'administration.
+Les droits suivants peuvent être accordés aux utilisateurs avec des niveaux d'accès particuliers (lecture ou écriture) qui permettent à ces derniers d'exécuter des tâches spécifiques dans la console d'administration.
 
 
 {: #ld_table14}
@@ -1063,43 +952,39 @@ spécifiques dans la console d'administration.
 | Utilisateurs | Les utilisateurs disposant du droit **Utilisateurs** peuvent afficher (accès **Lecture**) la liste d'utilisateurs ou ajouter ou retirer des utilisateurs (accès **Ecriture**). Ce droit ne vous permet pas de définir des droits pour d'autres utilisateurs. L'accès en écriture permet à l'utilisateur d'ajouter de nouveaux utilisateurs à l'environnement, de supprimer des utilisateurs de l'environnement et d'ajouter des utilisateurs existants à des organisations qui existent déjà dans l'environnement. De plus, l'accès **Ecriture** permet à l'utilisateur d'ajouter de nouvelles organisations, de supprimer des organisations et d'éditer les utilisateurs des organisations. |
 {: caption="Table 14. Permissions" caption-side="top"}
 
-## Gestion des utilisateurs avec l'API REST Admin
-{: #usingadminapi}
+## Utilisation d'API REST 
+{: #auth_adminapi}
 
-Vous pouvez utiliser l'API REST `Admin` afin d'ajouter et de retirer des utilisateurs pour votre instance {{site.data.keyword.Bluemix_notm}}.
-Les noeuds finaux de l'API REST `Admin` et les réponses JSON sont fournis sur une base expérimentale afin de permettre des opérations de base depuis une ligne de commande. Les noeuds finaux et les adresses URL qui figurent dans les exemples de cette documentation peuvent changer ou être abandonnés dans un délai court.
+Pour utiliser les commandes d'API REST, vous devez d'abord vous authentifier. Pour générer et prendre en charge des sessions, vous pouvez utiliser des commandes cURL pour exécuter les tâches suivantes :
 
-Bien que vous puissiez choisir d'utiliser d'autres outils, les outils suivants sont prérequis pour les exemples ci-après.
-* cURL, pour entrer les demandes d'API REST sous forme de commandes. cURL est un utilitaire gratuit que vous pouvez utiliser pour envoyer des demandes HTTP à un serveur et recevoir les réponses du serveur via une interface de ligne de commande. Vous pouvez le télécharger depuis le [site de téléchargement cURL ![icône de lien externe](../icons/launch-glyph.svg)](http://curl.haxx.se/download.html){: new_window}.
-* Python, pour utiliser l'outil JSON de formatage de Python. Cet outil facultatif transforme le texte JSON en entrée en sortie facile à lire. Vous pouvez télécharger Python depuis le [site des téléchargements Python ![icône de lien externe](../icons/launch-glyph.svg)](https://www.python.org/downloads){: new_window}.
+* [Connexion à la console d'administration](#auth_loginapi) 
+* [Stockage de votre ID utilisateur et de votre mot de passe](#auth_setuidpw)
+* [Stockage de cookies](#auth_apistorecook)
+* [Réutilisation de cookies](#auth_apireusecook)
 
 ### Connexion à la console d'administration
+{: #auth_loginapi}
 
-Pour pouvoir exécuter des requêtes d'API `Admin`, vous devez vous connecter à la console d'administration. Si vous disposez des droits **Superutilisateur** ou **Utilisateurs** avec un accès **Ecriture**, vous pouvez ajouter ou retirer des utilisateurs. Vous devez disposer du droit **Superutilisateur** pour éditer les droits des autres utilisateurs.
+Pour pouvoir exécuter des requêtes d'API `Admin`, vous devez vous connecter à la console d'administration. 
 
-Pour vous connecter à la console d'administration, vous pouvez utiliser l'authentification d'accès de base sur le noeud final
-`https://<votre_hôte>.ibm.com/login`. Le serveur renvoie un cookie avec votre session. Vous utilisez ce cookie pour toutes les opérations avec la console d'administration.
+Pour vous connecter à la console d'administration, vous pouvez utiliser l'authentification d'accès de base sur le noeud final `https://console.<region>.bluemix.net/login`. Le serveur renvoie un cookie avec votre session. Vous utilisez ce cookie pour toutes les opérations avec la console d'administration.
 
 **Remarque :** la session n'est plus valide si elle n'est pas utilisée pendant quelques heures.
 
 Pour vous connecter à la console d'administration, exécutez la commande suivante :
 
-
-`curl --user <id_utilisateur>:<mot_de_passe> -c ./cookies.txt --header "Accept: application/json"
-https://<votre_hôte>.ibm.com/login | python -m json.tool`
+`curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/login | python -m json.tool`
 {: codeblock}
 
 <dl class="parml">
-
 <dt class="pt dlterm">--user <em>id_utilisateur</em>:<em>mot_de_passe</em></dt>
 <dd class="pd">Accepte l'ID utilisateur et le mot de passe et envoie un en-tête d'autorisation de base.</dd>
-
 <dt class="pt dlterm">-c <em>nom_fichier</em></dt>
 <dd class="pd">Stocke l'ID utilisateur et le mot de passe spécifiés sous forme de cookie dans le fichier spécifié.</dd>
-
+<dt class="pt dlterm">-b <em>nom_fichier</em></dt>
+<dd class="pd">Extrait l'ID utilisateur et le mot de passe spécifiés sous forme de cookie dans le fichier spécifié.</dd>
 <dt class="pt dlterm">--header</dt>
 <dd class="pd">Envoie un en-tête Accept.</dd>
-
 </dl>
 
 Voici un exemple de sortie pour
@@ -1115,13 +1000,69 @@ cette commande :
 ```
 {: screen}
 
+### Stockage de votre ID utilisateur et de votre mot de passe
+{: #auth_setuidpw}
+
+Vous pouvez également stocker votre ID utilisateur et votre mot de passe de manière à ne pas avoir à les saisir manuellement chaque fois que vous vous connectez.  Pour stocker votre ID utilisateur et votre mot de passe afin de les réutiliser ultérieurement, utilisez l'exemple cURL suivant :
+
+`curl -X GET -H "Authorization: Basic <redacted>" -H "Accept: application/json" "http://localhost:3000/login"`
+{: codeblock}
+
+Pour configurer vos informations de connexion dans un fichier distinct, puis appeler ce fichier de manière à ne pas avoir à le saisir à nouveau pour chaque demande d'authentification, utilisez l'option `--netrc` fournie par la commande cURL.
+
+Pour utiliser l'option `--netrc` avec cURL, commencez par créer un fichier dans le répertoire de base de l'utilisateur en procédant de l'une des manières suivantes :
+* Sur un système Unix, créez un fichier nommé .netrc 
+* Sur un système Windows, créez un fichier nommé _netrc. 
+
+Dans le fichier, entrez les informations suivantes :
+
+`machine console.<region>.bluemix.net
+login <id>
+password <password>`
+{: codeblock}
+
+Lors de l'appel d'une commande cURL, ajoutez l'argument suivant : `--netrc`.
+<p>Pour utiliser un fichier netrc situé dans un autre répertoire, utilisez l'option `--netrc-file [file]`, `[file]` correspondant à l'emplacement du fichier netrc.</p>
+</li>
+</ol>
+
+
+### Stockage de cookies
+{: #auth_apistorecook}
+
+Lorsque vous vous connectez à la console d'administration, le serveur renvoie un cookie avec votre session. Ce cookie est requis dans le cadre du processus de connexion pour les futurs appels API relatifs à toutes les opérations liées à la console d'administration. Vous pouvez stocker des cookies afin de les utiliser ultérieurement.
+
+Pour stocker des cookies après vous être connecté, utilisez l'option `-c`, comme illustré dans l'exemple CURL suivant :
+
+`curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/login | python -m json.tool`
+{: codeblock}
+
+### Réutilisation de cookies
+{: #auth_apireusecook}
+
+Pour réutiliser des cookies, utilisez l'option `-b` avec le nom de fichier de cookie que vous avez affecté à l'aide de l'option `-c`, comme illustré dans l'exemple CURL suivant :
+
+`curl --user <user_id>:<password> -b ./cookies.txt`
+{: codeblock}
+
+## Gestion des utilisateurs avec l'API REST Admin
+
+{: #usingadminapi}
+
+Vous pouvez utiliser l'API REST `Admin` afin d'ajouter et de retirer des utilisateurs pour votre instance {{site.data.keyword.Bluemix_notm}}.
+Les noeuds finaux de l'API REST `Admin` et les réponses JSON sont fournis sur une base expérimentale afin de permettre des opérations de base depuis une ligne de commande. Les noeuds finaux et les adresses URL qui figurent dans les exemples de cette documentation peuvent changer ou être abandonnés dans un délai court.
+
+Si vous disposez des droits **Superutilisateur** ou **Utilisateurs** avec un accès **Ecriture**, vous pouvez ajouter ou retirer des utilisateurs. Vous devez disposer du droit **Superutilisateur** pour éditer les droits des autres utilisateurs.
+
+Bien que vous puissiez choisir d'utiliser d'autres outils, les outils suivants sont prérequis pour les exemples ci-après.
+* cURL, pour entrer les demandes d'API REST sous forme de commandes. cURL est un utilitaire gratuit que vous pouvez utiliser pour envoyer des demandes HTTP à un serveur et recevoir les réponses du serveur via une interface de ligne de commande. Vous pouvez le télécharger depuis le [site de téléchargement cURL ![icône de lien externe](../icons/launch-glyph.svg)](http://curl.haxx.se/download.html){: new_window}.
+* Python, pour utiliser l'outil JSON de formatage de Python. Cet outil facultatif transforme le texte JSON en entrée en sortie facile à lire. Vous pouvez télécharger Python depuis le [site des téléchargements Python ![icône de lien externe](../icons/launch-glyph.svg)](https://www.python.org/downloads){: new_window}.
+
+
 ### Liste des organisations
 {: #listingorg}
 
-Lorsque vous ajoutez un utilisateur, vous devez spécifier une organisation. Vous pouvez utiliser l'API REST `Admin` pour
-répertorier toutes les organisations. Vous devez disposer du droit **Utilisateurs** avec l'accès **Lecture** pour
-pouvoir
-répertorier les organisations. Pour répertorier toutes les organisations, exécutez la commande suivante :
+Lorsque vous ajoutez un utilisateur, vous devez spécifier une organisation. Vous pouvez utiliser l'API REST `Admin` pour répertorier toutes les organisations. Vous devez disposer du droit **Utilisateurs** avec l'accès **Lecture** pour pouvoir répertorier les organisations. Pour répertorier toutes les organisations, exécutez la commande suivante :
 
 `curl -b ./cookies.txt https://<votre_hôte>.ibm.com/codi/v1/organizations | python -m json.tool`
 {: codeblock}
@@ -1129,8 +1070,7 @@ répertorier les organisations. Pour répertorier toutes les organisations, exé
 <dl class="parml">
 
 <dt class="pt dlterm">-b <em>nom_fichier</em></dt>
-<dd class="pd">Transmet l'ID utilisateur et le mot de passe stockés précédemment avec l'option <samp class="ph codeph">-c</samp> dans le fichier sur le serveur HTTP sous forme
-de cookie.</dd>
+<dd class="pd">Transmet l'ID utilisateur et le mot de passe stockés précédemment avec l'option <samp class="ph codeph">-c</samp> dans le fichier sur le serveur HTTP sous forme de cookie.</dd>
 
 </dl>
 
@@ -1163,18 +1103,14 @@ cette commande :
 ### Liste des utilisateurs
 {: #listingusr}
 
-Vous pouvez déterminer si un utilisateur a déjà été ajouté à votre environnement {{site.data.keyword.Bluemix_notm}} en utilisant l'API
-REST `Admin` afin de répertorier les utilisateurs enregistrés. Vous devez disposer du droit **Utilisateurs** avec
-l'accès **Lecture** pour pouvoir répertorier les utilisateurs enregistrés. Pour répertorier tous les utilisateurs, exécutez la commande
-suivante :
+Vous pouvez déterminer si un utilisateur a déjà été ajouté à votre environnement {{site.data.keyword.Bluemix_notm}} en utilisant l'API REST `Admin` afin de répertorier les utilisateurs enregistrés. Vous devez disposer du droit **Utilisateurs** avec l'accès **Lecture** pour pouvoir répertorier les utilisateurs enregistrés. Pour répertorier tous les utilisateurs, exécutez la commande suivante :
 
 `curl -b ./cookies.txt https://<votre_hôte>.ibm.com/codi/v1/users | python -m json.tool`
 {: codeblock}
 
 <dl class="parml">
 <dt class="pt dlterm">-b <em>nom_fichier</em></dt>
-<dd class="pd">Transmet l'ID utilisateur et le mot de passe stockés précédemment avec l'option <samp class="ph codeph">-c</samp> dans le fichier sur le serveur HTTP sous forme
-de cookie.</dd>
+<dd class="pd">Transmet l'ID utilisateur et le mot de passe stockés précédemment avec l'option <samp class="ph codeph">-c</samp> dans le fichier sur le serveur HTTP sous forme de cookie.</dd>
 </dl>
 
 Pour chaque utilisateur enregistré, les résultats incluent les informations suivantes :
@@ -1238,25 +1174,19 @@ cette commande :
 ```
 {: screen}
 
-
-
 ### Ajout d'un utilisateur
 
-Vous pouvez utiliser l'API REST `Admin` pour ajouter des utilisateurs à l'instance {{site.data.keyword.Bluemix_notm}}. Vous
-devez disposer du droit **Utilisateurs** avec l'accès **Ecriture** pour pouvoir ajouter des utilisateurs ou du droit **Superutilisateur** (ops.admin) pour la console d'administration. De plus, en tant qu'administrateur, vous pouvez autoriser les membres d'organisation qui ne disposent pas des droits `Utilisateur` ou `Superutilisateur` à ajouter de nouveaux utilisateurs uniquement à leur organisation. Utilisez la commande d'API suivante pour cette fonction spécifique pour les responsables d'organisation :
+Vous pouvez utiliser l'API REST `Admin` pour ajouter des utilisateurs à l'instance {{site.data.keyword.Bluemix_notm}}. Vous devez disposer du droit **Utilisateurs** avec l'accès **Ecriture** pour pouvoir ajouter des utilisateurs ou du droit **Superutilisateur** (ops.admin) pour la console d'administration. De plus, en tant qu'administrateur, vous pouvez autoriser les membres d'organisation qui ne disposent pas des droits `Utilisateur` ou `Superutilisateur` à ajouter de nouveaux utilisateurs uniquement à leur organisation. Utilisez la commande d'API suivante pour cette fonction spécifique pour les responsables d'organisation :
 
 ```
 PUT console.<sous-domaine>.bluemix.net/codi/env_config/allow_managers?flag=<TRUE ou FALSE>
 ```
 {: screen}
 
-Vous pouvez ajouter un utilisateur ou une liste d'utilisateurs. Vous pouvez ajouter des utilisateurs à une seule organisation ou à plusieurs
-organisations. Pour ajouter un utilisateur, vous devez fournir les informations suivantes :
+Vous pouvez ajouter un utilisateur ou une liste d'utilisateurs. Vous pouvez ajouter des utilisateurs à une seule organisation ou à plusieurs organisations. Pour ajouter un utilisateur, vous devez fournir les informations suivantes :
 
-* Prénom et nom de l'utilisateur. Indiquez les valeurs `"first_name"` et `"last_name"` figurant dans
-[Liste des utilisateurs](index.html#listingusr).
-* Adresse électronique et ID utilisateur. Indiquez la valeur `"user_id"` figurant dans [Liste des
-utilisateurs](index.html#listingusr) pour l'adresse électronique et l'ID utilisateur.
+* Prénom et nom de l'utilisateur. Indiquez les valeurs `"first_name"` et `"last_name"` figurant dans [Liste des utilisateurs](index.html#listingusr).
+* Adresse électronique et ID utilisateur. Indiquez la valeur `"user_id"` figurant dans [Liste des utilisateurs](index.html#listingusr) pour l'adresse électronique et l'ID utilisateur.
 * `"guid"`. Indiquez l'identificateur global unique de l'organisation figurant dans [Liste des organisations](index.html#listingorg).
 
 Vous
@@ -1267,8 +1197,7 @@ fournissez les informations dans un fichier JSON.
 
 <dl class="parml">
 <dt class="pt dlterm">-b <em>nom_fichier</em></dt>
-<dd class="pd">Transmet l'ID utilisateur et le mot de passe stockés précédemment avec l'option <samp class="ph codeph">-c</samp> dans le fichier sur le serveur HTTP sous forme
-de cookie.</dd>
+<dd class="pd">Transmet l'ID utilisateur et le mot de passe stockés précédemment avec l'option <samp class="ph codeph">-c</samp> dans le fichier sur le serveur HTTP sous forme de cookie.</dd>
 </dl>
 
 <ol>
@@ -1294,9 +1223,9 @@ de cookie.</dd>
 }
 </pre>
 </li>
-<li>Envoyez le contenu du fichier JSON au noeud final de l'utilisateur en exécutant la commande suivante :<br/><br/>
+<li>Publiez le contenu du fichier JSON sur le noeud final de l'utilisateur en exécutant la commande suivante :<br/><br/>
 <code>
-curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.json https://<votre_hôte>.ibm.com/codi/v1/users
+curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.json https://<your_host>.ibm.com/codi/v1/users
 </code>
 </li>
 </ol>
@@ -1339,11 +1268,9 @@ cette commande :
 
 ### Retrait d'un utilisateur
 
-Vous pouvez utiliser l'API REST `Admin` pour retirer des utilisateurs de l'instance {{site.data.keyword.Bluemix_notm}}. Vous
-devez disposer du droit **Utilisateurs** avec l'accès **Ecriture** pour pouvoir retirer des utilisateurs.
+Vous pouvez utiliser l'API REST `Admin` pour retirer des utilisateurs de l'instance {{site.data.keyword.Bluemix_notm}}. Vous devez disposer du droit **Utilisateurs** avec l'accès **Ecriture** pour pouvoir retirer des utilisateurs.
 
-Pour retirer un utilisateur, vous devez
-fournir l'ID de l'utilisateur. Exécutez la commande suivante :
+Pour retirer un utilisateur, vous devez fournir l'ID de l'utilisateur. Exécutez la commande suivante :
 
 `curl -v -b ./cookies.txt -X DELETE
 https://<votre_hôte>.ibm.com/codi/v1/users?user_id=<un_id_utilisateur@domaine.com>`
@@ -1354,8 +1281,7 @@ https://<votre_hôte>.ibm.com/codi/v1/users?user_id=<un_id_utilisateur@domaine.c
 <dd class="pd">Spécifie une demande DELETE.</dd>
 </dl>
 
-Voici un exemple de sortie pour
-cette commande :
+Voici un exemple de sortie pour cette commande :
 
 ```
  * connect to ::1 port 3000 failed: Connection refused
@@ -1381,77 +1307,80 @@ cette commande :
 ## API pour les mesures (expérimental)
 {: #envappmetricsapi}
 
-Vous pouvez employer deux API expérimentales pour regrouper des mesures
-relatives à votre environnement ou à vos applications. Ces API renvoient
-un tableau de points de données des mesures demandées sur la durée indiquée.
+Vous pouvez employer trois API expérimentales pour regrouper des mesures relatives à votre environnement ou à vos applications. Ces API renvoient un tableau de points de données des mesures demandées sur la durée indiquée.
 
-Les API de mesures décrites dans les sections suivantes sont accessibles
-à partir du noeud final spécifique de la région, par exemple : 
+Les API de mesures décrites dans les sections suivantes sont accessibles à partir du noeud final spécifique de la région, par exemple : 
 
- `https://console.<région>.bluemix.net/admin/metrics`
+`https://console.<région>.bluemix.net/admin/metrics`
 {: codeblock}
 
 **Remarques** :
 
 1. Un utilisateur peut effectuer jusqu'à 200 demandes d'API de mesures par heure.
 2. Chaque demande d'API renvoie jusqu'à 200 points de données par demande. Si des données supplémentaires sont disponibles, une URL est fournie en réponse au chargement de l'ensemble de données suivant.
+3. Chaque demande d'API nécessite qu'un utilisateur dispose au moins des droits d'accès de base à la console d'administration.  Des droits supplémentaires peuvent être nécessaires, comme indiqué ci-dessous.
 
 ## Regroupement des mesures relatives à votre environnement 
 
-Vous pouvez utiliser l'API d'environnement expérimentale pour regrouper
-des informations de niveau supérieur relatives à votre environnement sur une
-période que vous définissez. Les points de données disponibles sur la durée
-indiquée sont renvoyés. Les données sont enregistrées environ toutes les
-heures. SI, par exemple, vous avez demandé six heures de données relatives à
-l'unité centrale de votre environnement, la réponse inclut les données
-relatives à l'unité centrale pour chacune des six heures demandées.
+Vous pouvez utiliser l'API d'environnement expérimentale pour regrouper des informations de niveau supérieur relatives à votre environnement sur une période que vous définissez. Les points de données disponibles sur la durée indiquée sont renvoyés. Les données sont enregistrées environ toutes les heures. SI, par exemple, vous avez demandé six heures de données relatives à l'unité centrale de votre environnement, la réponse inclut les données relatives à l'unité centrale pour chacune des six heures demandées.
 
- ### Noeuds finaux d'environnment 
- 
+
+### Noeuds finaux d'environnement 
+
 Vous pouvez utiliser le noeud final suivant pour appeler cette commande d'API : `/api/v1/env`
+
+**Remarque** : l'un des droits suivants sont nécessaires pour accéder à ces noeuds finaux : **Accès de base**, **Accès en lecture de l'utilisateur**, **Accès en écriture de l'utilisateur** ou **Superutilisateur**
 
 ### Paramètres de requête des mesures relatives à l'environnement
 
-Les paramètres de requête suivants permettent de regrouper les mesures
-relatives à l'unité centrale, le disque, la mémoire, le réseau et les applications :
+Les paramètres de requête suivants permettent de regrouper les mesures relatives à l'unité centrale, le disque, la mémoire, le réseau, le quota et les applications :
 
 <dl class="parml">
 <dt class="pt dlterm">metric</dt>
-<dd class="pd">Une ou plusieurs des valeurs suivantes, séparées par une virgule
-: `memory`, `disk`, `cpu`,
-`network` et `apps`.</dd>
+<dd class="pd">Une ou plusieurs des valeurs suivantes séparées par une virgule : `memory`, `disk`, `cpu`, `network`, `quota` et `apps`.</dd>
 <dt class="pt dlterm">startTime</dt>
 <dd class="pd">Point le plus ancien dans le temps à partir duquel les données sont renvoyées. Si aucun paramètre startTime n'est indiqué, le point de données disponible le plus récent est inclus. Par exemple, pour regrouper les données situées entre 14h et 17h, indiquez la valeur correspondant à 14h pour startTime.</dd>
 <dt class="pt dlterm">endTime</dt>
 <dd class="pd">Point le plus récent dans le temps à partir duquel les données sont renvoyées. Si aucun paramètre endTime n'est indiqué, le point de données le plus récent est utilisé. Par exemple, pour regrouper les données situées entre 14h et 17h, indiquez la valeur correspondant à 17h pour endTime.</dd>
 <dt class="pt dlterm">sort</dt>
-<dd class="pd">Ordre dans lequel les données sont renvoyées. Les valeurs
-valides sont `asc` (croissant) et `desc`
-(décroissant). La
-valeur par défaut est l'ordre décroissant qui renvoie d'abord les données les
-plus récentes. </dd>
+<dd class="pd">Ordre dans lequel les données sont renvoyées. Les valeurs valides sont `asc` (croissant) et `desc` (décroissant). La valeur par défaut est l'ordre décroissant qui renvoie d'abord les données les plus récentes. </dd>
 </dl>
 
- L'exemple suivant utilise les paramètres de requête pour regrouper des
-mesures sur votre environnement : 
- 
- ```
- curl -b ./cookies.txt --header "Accept: application/json" https://console.<région>.bluemix.net/admin/metrics/api/v1/env?metric=cpu,network,disk,apps,memory
- ```
+L'exemple suivant utilise les paramètres de requête pour regrouper des mesures sur votre environnement :
+
+```
+curl -b ./cookies.txt --header "Accept: application/json" https://console.<région>.bluemix.net/admin/metrics/api/v1/env?metric=cpu,network,disk,apps,memory
+```
 {: codeblock}
+
 
 ### Format des données de mesure relatives à l'environnement
 
 Les sections suivantes indiquent le format des données.
 
- * Pour regrouper les enregistrements de données concernant
-l'utilisation de la mémoire, employez le format de données suivant :
+ * Pour regrouper les enregistrements de données concernant l'utilisation de la mémoire, employez le format de données suivant :
  
 ```
 {
   "sample_time": 1477494000000,
   "memory": {
-    "cell": {
+    "total": {
+      "physical": {
+        "total_gb": 1728,
+        "used": {
+          "value_gb": 673.68,
+          "percent": 38.99
+        }
+      },
+    "allocated": {
+        "reserved_gb": 3456,
+        "total_allocated": {
+          "value_gb": 2575.18,
+          "percent": 74.51
+        }
+      },
+    },
+  	"cell": {
       "physical": {
         "total_gb": 864,
       "used": {
@@ -1514,13 +1443,28 @@ l'utilisation de la mémoire, employez le format de données suivant :
 ```
 {: screen}
 
- * Pour regrouper les enregistrements de données concernant
-l'utilisation du disque, employez le format de données suivant :
+ * Pour regrouper les enregistrements de données concernant l'utilisation du disque, employez le format de données suivant :
  
 ```
 {
   "sample_time": 1477494000000,
   "disk": {
+    "total": {
+      "physical": {
+        "total_gb": 16200,
+        "used": {
+          "value_gb": 1614,
+          "percent": 9.96
+        }
+      },
+    "allocated": {
+        "reserved_gb": 32400,
+        "total_allocated": {
+          "value_gb": 3979,
+          "percent": 12.28
+        }
+      },
+    },
     "cell": {
       "physical": {
         "total_gb": 8100,
@@ -1584,18 +1528,20 @@ l'utilisation du disque, employez le format de données suivant :
 ```
 {: screen}
 
- * Pour regrouper les enregistrements de données concernant
-l'utilisation de l'unité centrale, employez le format de données suivant :
+ * Pour regrouper les enregistrements de données concernant l'utilisation de l'unité centrale, employez le format de données suivant :
  
 ```
 {
   "sample_time": 1477494000000,
   "cpu": {
+    "total": {
+      "average_percent_cpu_used": 14.725
+    },
     "cell": {
-      "average_percent_cpu_used": 27.288461538461544
+      "average_percent_cpu_used": 19
     },
     "dea": {
-      "average_percent_cpu_used": 27.288461538461544
+      "average_percent_cpu_used": 10.45
     },
     "cpu_by_container": [
       {
@@ -1615,16 +1561,16 @@ l'utilisation de l'unité centrale, employez le format de données suivant :
         "wait_percent": "0.0"
       },
       {
-        "name": "dea_next/2",
-        "type": "dea",
+        "name": "cell/1",
+        "type": "cell",
         "ip": "169.53.230.49",
         "sys_percent": "5.3",
         "user_percent": "1.9",
         "wait_percent": "0.0"
       },
       {
-        "name": "dea_next/3",
-        "type": "dea",
+        "name": "cell/2",
+        "type": "cell",
         "ip": "169.44.109.231",
         "sys_percent": "8.2",
         "user_percent": "22.6",
@@ -1680,16 +1626,36 @@ l'utilisation de l'unité centrale, employez le format de données suivant :
       }
       ],
         "bandwidth": {
-        "in_mbps": 10855,
-        "out_mbps": 38090
+        "in_kbps": 10855,
+        "out_kbps": 38090
       }
   }
 }
 ```
 {: screen}
 
-* Pour regrouper les enregistrements de données concernant vos applications, employez le format de données suivant :
+* Pour regrouper les enregistrements de données concernant l'utilisation de quota, employez le format de données suivant :
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "quota": {
+    "reserved_memory": {
+      "total_bytes": 33176474877952
+    },
+    "services": {
+      "total": 111650
+    },
+    "routes": {
+      "total": 1675000
+    }
+  }
+}
+```
+{: screen}
 
+* Pour regrouper les enregistrements de données concernant vos applications, employez le format de données suivant :
+ 
 ```
 {
   "sample_time": 1477494000000,
@@ -1714,32 +1680,74 @@ l'utilisation de l'unité centrale, employez le format de données suivant :
 ```
 {: screen}
 
+## Regroupement des mesures relatives à vos organisations
+
+Des données sont enregistrées pour toutes les organisations environ toutes les heures. Une demande de mesure particulière renvoie ces informations pour toutes les organisations de chaque échantillon de données de la période indiquée, dans l'ordre décroissant de la mesure demandée. Par exemple, si vous demandez la mesure relative à la mémoire de toutes les organisations sur une période de six heures dans un environnement comportant 200 applications, 1200 enregistrements sont renvoyés : 200 par heure.
+
+Pour réduire la quantité d'informations renvoyées pour chaque échantillon de données sur la période demandée, vous pouvez indiquer une option count. Si vous ajoutez l'option count avec une valeur égale à 5, l'exemple précédent renvoie 30 enregistrements, qui représentent les 5 organisations les plus importantes par mémoire de chaque échantillon de données.
+
+### Noeuds finaux relatifs aux organisations 
+
+Vous pouvez utiliser les noeuds finaux suivants pour appeler cette commande d'API :
+* `/api/v1/org/memory/physical`
+* `/api/v1/org/memory/reserved`
+* `/api/v1/org/disk/physical`
+* `/api/v1/org/disk/reserved`
+
+**Remarque** : l'un des droits suivants sont nécessaires pour accéder à ces noeuds finaux : **Accès en lecture de l'utilisateur**, **Accès en écriture de l'utilisateur** ou **Superutilisateur**
+
+### Paramètres de requête relatifs aux organisations
+ 
+Utilisez les paramètres de requête suivants pour regrouper des mesures concernant vos organisations :
+
+<dl class="parml">
+<dt class="pt dlterm">startTime</dt>
+<dd class="pd">Point le plus ancien dans le temps à partir duquel les données sont renvoyées. Si aucun paramètre startTime n'est indiqué, le point de données disponible le plus récent est inclus. Par exemple, pour regrouper les données situées entre 14h et 17h, indiquez la valeur correspondant à 14h pour startTime.</dd>
+<dt class="pt dlterm">endTime</dt>
+<dd class="pd">Point le plus récent dans le temps à partir duquel les données sont renvoyées. Si aucun paramètre endTime n'est indiqué, le point de données le plus récent est utilisé. Par exemple, pour regrouper les données situées entre 14h et 17h, indiquez la valeur correspondant à 17h pour endTime.</dd>
+<dt class="pt dlterm">count</dt>
+<dd class="pd">Nombre d'enregistrements à renvoyer pour chaque échantillon de données.
+</dd>
+<dt class="pt dlterm">minValue</dt>
+<dd class="pd">Valeur la plus petite à renvoyer pour la mesure indiquée.  Si aucune valeur n'est indiquée, toutes les valeurs sont renvoyées.  Par exemple, pour regrouper les organisations qui utilisent au moins 20000 octets de mémoire physique, spécifiez une valeur de minValue égale à 20000.
+</dd>
+</dl>
+
+L'exemple suivant regroupe les mesures concernant vos organisations :
+
+```
+curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/org/memory/physical?count=5&startTime=2016-12-02T16:54:09.467Z
+```
+{: codeblock}
+
+### Format de réponse relatif aux organisations
+
+```
+{
+   docs: [],
+   next_url:
+}
+```
+{: screen}
+
+Chaque document renvoyé représente les mesures demandées pour une organisation de chaque échantillon de données, au moment de la demande.
+
 ## Regroupement des mesures relatives à vos applications
 
-Les données sont enregistrées pour toutes les applications environ toutes
-les heures. Une demande de mesure particulière renvoie ces informations pour
-toutes les applications de chaque échantillon de données de la période
-indiquée, dans l'ordre décroissant de la mesure demandée. Par exemple, si vous
-demander la mesure relative à l'unité centrale de toutes les applications sur
-une période de six heures dans un environnement comportant 200 applications,
-120 enregistrements sont renvoyés : 200 par heure.
+Les données sont enregistrées pour toutes les applications environ toutes les heures. Une demande de mesure particulière renvoie ces informations pour toutes les applications de chaque échantillon de données de la période indiquée, dans l'ordre décroissant de la mesure demandée. Par exemple, si vous demander la mesure relative à l'unité centrale de toutes les applications sur une période de six heures dans un environnement comportant 200 applications, 1200 enregistrements sont renvoyés : 200 par heure.
 
-Pour réduire la quantité d'informations renvoyées pour chaque échantillon
-de données sur la période demandée, vous pouvez indiquer une option count. Si
-vous ajoutez l'option count avec une valeur égale à 5, l'exemple précédent
-renvoie 30 enregistrements, qui représentent les 5 applications les plus
-importantes par unité centrale de chaque échantillon de données.
+Pour réduire la quantité d'informations renvoyées pour chaque échantillon de données sur la période demandée, vous pouvez indiquer une option count. Si vous ajoutez l'option count avec une valeur égale à 5, l'exemple précédent renvoie 30 enregistrements, qui représentent les 5 applications les plus importantes par unité centrale de chaque échantillon de données.
 
 ### Noeuds finaux des applications 
 
-Vous pouvez utiliser les noeuds finaux suivants pour appeler cette
-commande d'API :
+Vous pouvez utiliser les noeuds finaux suivants pour appeler cette commande d'API :
 * `/api/v1/app/cpu/physical` 
 * `/api/v1/app/memory/physical`
 * `/api/v1/app/memory/reserved`
 * `/api/v1/app/disk/physical`
 * `/api/v1/app/disk/reserved`
 
+**Remarque** : l'un des droits suivants sont nécessaires pour accéder à ces noeuds finaux : **Accès en lecture de l'utilisateur**, **Accès en écriture de l'utilisateur** ou **Superutilisateur**
 
 ### Paramètres de requête relatifs aux applications
  
@@ -1754,10 +1762,7 @@ Utilisez les paramètres de requête suivants pour regrouper des mesures concern
 <dd class="pd">Nombre d'enregistrements à renvoyer pour chaque échantillon de données.
 </dd>
 <dt class="pt dlterm">minValue</dt>
-<dd class="pd">Valeur la plus petite à renvoyer pour la mesure indiquée. Si
-aucune valeur n'est indiquée, toutes les valeurs sont renvoyées. Par exemple,
-pour regrouper les applications qui utilisent au moins 20000 octets de
-mémoire physique, spécifiez une valeur de minValue égale à 20000.
+<dd class="pd">Valeur la plus petite à renvoyer pour la mesure indiquée. Si aucune valeur n'est indiquée, toutes les valeurs sont renvoyées. Par exemple, pour regrouper les applications qui utilisent au moins 20000 octets de mémoire physique, spécifiez une valeur de minValue égale à 20000.
 </dd>
 </dl>
 
@@ -1767,6 +1772,7 @@ L'exemple suivant regroupe les mesures concernant vos applications :
 curl -b ./cookies.txt --header "Accept: application/json" https://console.<région>.bluemix.net/admin/metrics/api/v1/app/cpu/physical?count=5&startTime=2016-12-02T16:54:09.467Z
 ```
 {: codeblock}
+
 
 ### Format de réponse pour les applications
 
@@ -2006,16 +2012,16 @@ Une fois l'interface de ligne de commande cf installée, vous pouvez ajouter le 
 Procédez comme suit pour ajouter le référentiel et installer le plug-in :
 
 <ol>
-<li>Pour ajouter le référentiel de plug-in d'administration {{site.data.keyword.Bluemix_notm}}, exécutez la commande suivante : <br/><br/>
+<li>Pour ajouter le plug-in d'administration {{site.data.keyword.Bluemix_notm}}, exécutez la commande suivante :<br/><br/>
 <code>
-cf add-plugin-repo BluemixAdmin https://console.&lt;sous-domaine&gt;.bluemix.net/cli
+cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli
 </code><br/><br/>
 <dl class="parml">
 <dt class="pt dlterm">&lt;sous-domaine&gt;</dt>
 <dd class="pd">Sous-domaine de l'adresse URL pour votre instance {{site.data.keyword.Bluemix_notm}}.</dd>
 </dl>
 </li>
-<li>Pour installer le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}, exécutez la commande suivante :<br/><br/>
+<li>Pour installer le plug-in de l'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}, exécutez la commande suivante :<br/><br/>
 <code>
 cf install-plugin bluemix-admin-cli -r BluemixAdmin
 </code>

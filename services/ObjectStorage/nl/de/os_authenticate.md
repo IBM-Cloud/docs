@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -20,7 +20,9 @@ Für die Interaktion mit dem Service müssen Sie die {{site.data.keyword.objects
 
 Durch die Bereitstellung einer neuen {{site.data.keyword.objectstorageshort}}-Instanz wird in der IBM Public Cloud ein isoliertes Keystone-Projekt erstellt. Die Struktur der Keystone Berechtigungsnachweise enthält einen vollständigen Satz von Attributen, sodass Sie die Methode für die OpenStack-Tokenanforderung oder das OpenStack-SDK auswählen können, das sich am besten für Ihre App eignet. Wenn Sie eine neue Anwendung an die Instanz binden, wird ein neuer Keystone-Benutzer mit Zugriff auf das Projekt erstellt. Wenn Sie die Instanz löschen, werden auch Projekt und Benutzer gelöscht.
 
-Weitere Informationen zur Verwendung von OpenStack Swift und Keystone sind auf der [OpenStack-Dokumentationssite](http://docs.openstack.org) verfügbar.
+Weitere Informationen zur Verwendung von OpenStack Swift und Keystone sind auf der <a href="http://docs.openstack.org" target="_blank">OpenStack-Dokumentationssite <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a> verfügbar.
+
+
 
 1. Senden Sie eine POST-Anforderung an `https://identity.open.softlayer.com/v3/auth/tokens`, wie im folgenden cURL-Befehl dargestellt.
   ```
@@ -155,7 +157,7 @@ Weitere Informationen zur Verwendung von OpenStack Swift und Keystone sind auf d
   {: screen}
 
   <table>
-  <caption> Tabelle 1. Erläuterung zu Antworten auf POST-Anforderungen</caption>
+  <caption> Tabelle 1. Erläuterung zu Antworten auf POST-Anforderungen </caption>
     <tr>
       <th> Antwortendpunkt </th>
       <th> Erläuterung </th>

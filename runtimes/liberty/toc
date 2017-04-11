@@ -1,0 +1,25 @@
+[Liberty for Java](/index.html)
+    getting-started.md
+    index.md
+    optionsForPushing.md
+    libertyFeatures.md
+    usingBetaFeatures.md
+    autoConfig.md
+    monitoring/index.md
+        monitoring/jconsole.md
+        monitoring/dynatrace.md
+        monitoring/newRelic.md
+    customizingJRE.md
+    memoryLimits.md
+    loggingAndTracing.md
+    environmentVariables.md
+    buildpackDefaults.md
+    offlineMode.md
+    ts_index.md   
+    updates.md
+    secureWebApp.md
+    [Using the starter applications](../../cfapps/starter_app_usage.html)
+    [Managing Liberty and Node.js apps](../../manageapps/app_mng.html)
+    [Working with a proxy](../../manageapps/workingWithProxy.html)
+    [Using community buildpacks](../../cfapps/byob.html)
+    [Buildpack support statement](../../manageapps/buildpackSupport.html)

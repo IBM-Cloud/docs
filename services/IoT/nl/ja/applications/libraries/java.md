@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-24"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2016-10-24"
 {: #java}
 
 
-Java を使用して、{{site.data.keyword.iot_full}} の組織と対話するアプリケーションを作成し、カスタマイズできます。アプリケーション開発を簡単に始められるように、{{site.data.keyword.iot_short_notm}} に対応した Java クライアント・ライブラリー、資料、サンプルが用意されています。
+Java™ を使用して、{{site.data.keyword.iot_full}} の組織と対話するアプリケーションを作成し、カスタマイズできます。アプリケーション開発を簡単に始められるように、{{site.data.keyword.iot_short_notm}} に対応した Java クライアント・ライブラリー、資料、サンプルが用意されています。
 
 {:shortdesc}
 
@@ -26,7 +26,7 @@ Java を使用して、{{site.data.keyword.iot_full}} の組織と対話する�
 最終更新日: 2016 年 10 月 25 日
 {: .last-updated}
 
-{{site.data.keyword.iot_short_notm}} 用の Java クライアント・ライブラリーとサンプルを利用するには、GitHub の [iot-java](https://github.com/ibm-watson-iot/iot-java) リポジトリーにアクセスし、インストール手順を実行します。
+{{site.data.keyword.iot_short_notm}} 用の Java クライアント・ライブラリーとサンプルを利用するには、GitHub の [iot-java ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/iot-java){: new_window} リポジトリーにアクセスし、インストール手順を実行します。
 
 
 ## コンストラクター
@@ -41,7 +41,7 @@ Java を使用して、{{site.data.keyword.iot_full}} の組織と対話する�
 |`auth-method`  |認証の方式。サポートされている唯一の方式は `apikey` です。|
 |`auth-key`   |オプションの API キー。auth-method の値を `apikey` に設定する場合は、これを指定する必要があります。|
 |`auth-token`   |API キー・トークン。auth-method の値を `apikey` に設定する場合は、これも指定する必要があります。 |
-|`clean-session`|true または false 値。永続サブスクリプション・モードでアプリケーションを接続する場合のみ必要です。デフォルトでは、`clean-session` は `true` に設定されます。|
+|`clean-session`|true または false の値。永続サブスクリプション・モードでアプリケーションを接続する場合のみ必要です。デフォルトでは、`clean-session` は `true` に設定されます。|
 |`Port`|接続先のポート番号。8883 か 443 のいずれかを指定してください。ポート番号を指定しない場合、クライアントは、デフォルトのポート番号 8883 で {{site.data.keyword.iot_short_notm}} に接続します。|
 |`MaxInflightMessages`  |接続の処理中メッセージの最大数を設定します。デフォルト値は 100 です。|
 |`Automatic-Reconnect`  |true か false の値。切断状態になったデバイスを自動的に {{site.data.keyword.iot_short_notm}} に再接続する場合は、これを指定する必要があります。デフォルト値は false です。|
@@ -428,7 +428,7 @@ MQTT のほかにも、HTTP を使用してデバイス・イベントを {{site
     	boolean status = myClient.publishApplicationEventforDeviceOverHTTP(deviceId, deviceType, "blink", event, ContentType.json);
 ```
 
-コード・サンプル全体を確認するには、[HttpApplicationDeviceEventPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpApplicationDeviceEventPublish.java) というアプリケーションのサンプルを参照してください。
+コード・サンプル全体を確認するには、[HttpApplicationDeviceEventPublish ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpApplicationDeviceEventPublish.java){: new_window} というアプリケーションのサンプルを参照してください。
 
 プロパティー・ファイルの設定に基づいて、`publishEventOverHTTP()` メソッドが、Quickstart または登録されたフローでイベントをパブリッシュします。プロパティー・ファイルで組織 ID として `quickstart` を指定すると、`publishEventOverHTTP()` メソッドは、{{site.data.keyword.iot_short_notm}} Quickstart サービスにプレーン HTTP 形式でイベントをパブリッシュします。登録されている有効な組織をプロパティー・ファイルに指定した場合は、イベントのパブリッシュに必ず HTTPS が使用されるため、すべての通信が保護されます。
 
@@ -474,7 +474,7 @@ MQTT のほかにも、HTTP を使用してコマンドを接続先のデバイ�
 	boolean response = myClient.publishCommandOverHTTP("execute", event);
 ```
 
-コード・サンプル全体を確認するには、[HttpCommandPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpCommandPublish.java) というアプリケーションのサンプルを参照してください。
+コード・サンプル全体を確認するには、[HttpCommandPublish ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpCommandPublish.java){: new_window} というアプリケーションのサンプルを参照してください。
 
 HTTP プロトコルによる配信は「最高 1 回」の送信です。これは、MQTT プロトコルのサービス品質レベル「最高 1 回」(QoS 0) に似ています。「最高 1 回」の送信を使用してコマンドをパブリッシュする場合、アプリケーションはエラー発生時の再試行ロジックを実装する必要があります。詳しくは、[アプリケーションの HTTP REST API](../api.html)を参照してください。
 
@@ -482,8 +482,8 @@ HTTP プロトコルによる配信は「最高 1 回」の送信です。これ
 ## サンプル
 {: #samples}
 
--  [MQTTApplicationDeviceEventPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/MQTTApplicationDeviceEventPublish.java) - デバイス・イベントをパブリッシュする方法を示すサンプル・アプリケーション。
--   [RegisteredApplicationCommandPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationCommandPublish.java) - コマンドをデバイスにパブリッシュする方法を示すサンプル・アプリケーション。
--  [RegisteredApplicationSubscribeSample](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationSubscribeSample.java) - デバイス・イベント、デバイス・コマンド、デバイス状況、アプリケーション状況などのさまざまなイベントをサブスクライブする方法を示すサンプル・アプリケーション。
--   [SharedSubscriptionSample](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/SharedSubscriptionSample.java) - 複数のアプリケーション・インスタンス間でメッセージのロード・バランシングを行うスケーラブルなアプリケーションを作成する方法を示すサンプル・アプリケーション。
--  [Backup-restore-sample](https://github.com/ibm-messaging/iot-backup-restore-sample) - {{site.data.keyword.cloudant}}のデバイス構成をバックアップおよびリストアする方法を示すサンプル。
+-  [MQTTApplicationDeviceEventPublish ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/MQTTApplicationDeviceEventPublish.java){: new_window} - デバイス・イベントをパブリッシュする方法を示すサンプル・アプリケーション。
+-   [RegisteredApplicationCommandPublish ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationCommandPublish.java){: new_window} - コマンドをデバイスにパブリッシュする方法を示すサンプル・アプリケーション。
+-  [RegisteredApplicationSubscribeSample ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationSubscribeSample.java){: new_window} - デバイス・イベント、デバイス・コマンド、デバイス状況、アプリケーション状況などのさまざまなイベントをサブスクライブする方法を示すサンプル・アプリケーション。
+-   [SharedSubscriptionSample ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/SharedSubscriptionSample.java){: new_window} - 複数のアプリケーション・インスタンス間でメッセージのロード・バランシングを行うスケーラブルなアプリケーションを作成する方法を示すサンプル・アプリケーション。
+-  [Backup-restore-sample ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/iot-backup-restore-sample){: new_window} - {{site.data.keyword.cloudant}}のデバイス構成をバックアップおよびリストアする方法を示すサンプル。

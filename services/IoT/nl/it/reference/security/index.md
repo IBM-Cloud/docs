@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-21"
+  years: 2016, 2017
+lastupdated: "2017-03-17"
 
 ---
 
@@ -15,8 +15,6 @@ lastupdated: "2016-10-21"
 
 # {{site.data.keyword.iot_short_notm}} security
 {: #sec-index}
-Ultimo aggiornamento: 21 ottobre 2016
-{: .last-updated}
 
 Come un servizio ospitato sul cloud {{site.data.keyword.iot_full}} incorpora la sicurezza come aspetto importante della sua architettura.
 {: shortdesc}
@@ -33,7 +31,7 @@ Il seguente documento delle risposte a domande comuni su come i dati della tua o
 
 {{site.data.keyword.iot_short_notm}} viene eseguito nella piattaforma {{site.data.keyword.Bluemix_notm}} e quindi si basa su {{site.data.keyword.Bluemix_notm}} e {{site.data.keyword.BluSoftlayer_full}} per l'accesso e la connettività. La dipendenza da {{site.data.keyword.Bluemix_notm}} e {{site.data.keyword.BluSoftlayer}} rende la sicurezza e l'affidabilità di {{site.data.keyword.Bluemix_notm}} e {{site.data.keyword.BluSoftlayer}} importante per gli utenti di {{site.data.keyword.iot_short_notm}}
 
-Per ulteriori dettagli sulla sicurezza di {{site.data.keyword.Bluemix_notm}}, consulta [{{site.data.keyword.Bluemix_notm}} platform security](https://console.ng.bluemix.net/docs/security/index.html#platform-security).
+Per ulteriori dettagli sulla sicurezza di {{site.data.keyword.Bluemix_notm}}, consulta [{{site.data.keyword.Bluemix_notm}} platform security](index.html#platform-security).
 
 ## {{site.data.keyword.iot_short_notm}} Conformità di sicurezza
 {: #compliance}  
@@ -69,11 +67,13 @@ Le credenziali del dispositivo e le chiavi API possono essere revocate individua
 ## Come assicuriamo che i tuoi dispositivi siano collegati in modo sicuro a {{site.data.keyword.iot_short_notm}}?
 {: #secure-device-connection}
 
-I dispositivi collegati utilizzando una combinazione di ID client e token di autenticazione generati durante l'aggiunta dei dispositivi alla piattaforma. viene utilizzato per consentire l'interoperabilità semplice per molte piattaforme e linguaggi. {{site.data.keyword.iot_short_notm}} supporta la connettività su TLS v1.2.
+I dispositivi si collegano utilizzando un ID client o il token di autenticazione o entrambi, generati quando sono stati aggiunti alla tua piattaforma. MQTT viene utilizzato per consentire l'interoperabilità semplice per molte piattaforme e linguaggi. {{site.data.keyword.iot_short_notm}} supporta la connettività su TLS v1.2.
 
 ![immagine](connectivity_platform.svg)
 
-Per ulteriori informazioni sui requisiti della suite chipher e TLS, consulta la sezione [TLS requirements](https://console.ng.bluemix.net/docs/services/IoT/reference/security/connect_devices_apps_gw.html#tls_requirements)  nella documentazione `Application, device, and gateway connections to Watson IoT Platform`.
+Per ulteriori informazioni sui requisiti della suite chipher e TLS, consulta la sezione [TLS requirements](connect_devices_apps_gw.html#tls_requirements)  nella documentazione `Application, device, and gateway connections to Watson IoT Platform`.
+
+Puoi utilizzare i certificati e le politiche di sicurezza per migliorare la sicurezza della connessione del dispositivo. Le politiche di sicurezza possono essre impostate per consentire le connessioni non crittografate, per definire solo le connessioni TLS (transport layer security) e per consentire ai dispositivi di autenticarsi con i certificati lato client. È possibile utilizzare le blacklist per specificare i dispositivi a cui non è consentito collegarsi o le whitelist che possono essere utilizzate per consentire il collegamento a dispositivi specifici. Per ulteriori informazioni sulla sicurezza avanzata, vedi [Gestione della sicurezza e del rischio](RM_security.html).
 
 ## Come preveniamo la perdita dei dati tra i dispositivi IoT?
 {: #prevent-leak-devices}
@@ -106,8 +106,8 @@ Lo spazio argomenti in cui operano i dispositivi e le applicazioni ha come ambit
 ## Link correlati
 {: #general}
 * [Introduzione a {{site.data.keyword.iot_short_notm}}](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [{{site.data.keyword.Bluemix_notm}} security](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
-* [{{site.data.keyword.Bluemix_notm}} platform security](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
+* [{{site.data.keyword.Bluemix_notm}} security ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
+* [{{site.data.keyword.Bluemix_notm}} platform security ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} compliance](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} security](http://www.softlayer.com/security){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} compliance](http://www.softlayer.com/compliance){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} security ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](http://www.softlayer.com/security){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} compliance ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](http://www.softlayer.com/compliance){:new_window}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -13,8 +13,7 @@ lastupdated: "2017-01-17"
 É possível usar a CLI do Swift, a API ou a UI do Bluemix para gerenciar objetos e contêineres.
 {: shortdesc}
 
-Antes de gerenciar objetos, assegure-se de ter [autenticado](/docs/services/ObjectStorage/os_authenticate.html) sua instância de serviço, [gerado](/docs/services/ObjectStorage/os_credentials.html)
-as credenciais de serviço e [configurado](/docs/services/ObjectStorage/os_configuring.html) a CLI do Swift.
+Antes de gerenciar objetos, assegure-se de ter [autenticado](/docs/services/ObjectStorage/os_authenticate.html) sua instância de serviço, [gerado](/docs/services/ObjectStorage/os_credentials.html) as credenciais de serviço e [configurado](/docs/services/ObjectStorage/os_configuring.html) a CLI do Swift.
 
 Mantenha os seguintes pontos em mente quando estiver gerenciando objetos:
   * Não há nenhum limite para a quantia de dados que podem ser armazenados, mas cada upload não pode conter mais do que 5 GB. Se for necessário fazer upload de arquivos maiores que 5 GB, siga as etapas localizadas em [armazenando objetos grandes](/docs/services/ObjectStorage/os_large_files.html).

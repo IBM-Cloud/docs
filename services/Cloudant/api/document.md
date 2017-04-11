@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-31"
+lastupdated: "2017-03-01"
 
 ---
 
@@ -11,6 +11,8 @@ lastupdated: "2017-01-31"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+<!-- Acrolinx: 2017-03-01 -->
 
 # Documents
 
@@ -34,17 +36,17 @@ or generated automatically as a
 [UUID ![External link icon](../images/launch-glyph.svg "External link icon")](http://en.wikipedia.org/wiki/Universally_unique_identifier){:new_window} by Cloudant.
 
 The `_rev` field is a revision number,
-and is [essential to Cloudant's replication protocol](../guides/mvcc.html).
+and is [essential to the Cloudant replication protocol](../guides/mvcc.html).
 In addition to these two mandatory fields,
-documents can generally contain any other content that can be described using JSON.
+documents can generally contain any other content that can be described by using JSON.
 
-Field names beginning with the underscore character (`_`) are reserved in Cloudant.
-This means you cannot normally have your own field names that begin with an underscore.
+Field names that begin with the underscore character (`_`) are reserved in Cloudant.
+This rule means that you cannot normally have your own field names that begin with an underscore.
 For example,
-the field `example` would be permitted,
+the field `example` would be accepted,
 but the field `_example` would result in a `doc_validation` error message.
 
-_Example of JSON document attempting to create a topmost field with an underscore prefix:_
+_Example of JSON document that attempts to create a topmost field with an underscore prefix:_
 
 ```json
 {
@@ -53,7 +55,7 @@ _Example of JSON document attempting to create a topmost field with an underscor
 ```
 {:codeblock}
 
-_Error message returned when attempting to create a topmost field with an underscore prefix:_
+_Error message that is returned when you attempt to create a topmost field with an underscore prefix:_
 
 ```json
 {
@@ -67,7 +69,7 @@ However,
 if the field name is for an object _nested within_ the document,
 it is possible to use an underscore prefix for the field name.
 
-_Example of JSON document attempting to create a field with an underscore prefix, nested within an object:_
+_Example of JSON document that attempts to create a field with an underscore prefix, nested within an object:_
 
 ```json
 {
@@ -79,7 +81,7 @@ _Example of JSON document attempting to create a field with an underscore prefix
 ```
 {:codeblock}
 
-_Example success message (abbreviated) returned when creating a nested field with an underscore prefix:_
+_Example success message (abbreviated) returned when a nested field with an underscore prefix is created:_
 
 ```json
 {
@@ -91,13 +93,13 @@ _Example success message (abbreviated) returned when creating a nested field wit
 {:codeblock}
 
 Cloudant uses an [eventually consistent](../guides/cap_theorem.html#consistency) model for data.
-This means that under some conditions,
-it is possible that if your application performs a document write or update,
+This model means that under some conditions,
+it is possible that if your application writes or updates a document,
 followed immediately by a read of the same document,
 older document content is retrieved.
 In other words,
 your application would see the document content as it was *before* the write or update occurred.
-For more information about this,
+For more information about this model,
 see the topic on [Consistency](../guides/cap_theorem.html#consistency).
 
 <div id="documentCreate"></div>
@@ -107,7 +109,7 @@ see the topic on [Consistency](../guides/cap_theorem.html#consistency).
 To create a document,
 send a `POST` request with the document's JSON content to `https://$USERNAME.cloudant.com/$DATABASE`.
 
-_Creating a document, using HTTP:_
+_Creating a document by using HTTP:_
 
 ```http
 POST /$DATABASE HTTP/1.1
@@ -115,7 +117,7 @@ Content-Type: application/json
 ```
 {:codeblock}
 
-_Creating a document, using the command line:_
+_Creating a document by using the command line:_
 
 ```sh
 curl https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DATABASE \
@@ -124,6 +126,8 @@ curl https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DATABASE \
 	-d "$JSON"
 ```
 {:codeblock}
+
+<!--
 
 _Creating a document, using Javascript:_
 
@@ -140,7 +144,9 @@ db.insert($JSON, function (err, body, headers) {
 ```
 {:codeblock}
 
-_Example document, specified using JSON:_
+-->
+
+_Example JSON document:_
 
 ```json
 {
@@ -155,7 +161,7 @@ _Example document, specified using JSON:_
 ```
 {:codeblock}
 
-The response is a JSON document containing the ID of the created document,
+The response is a JSON document that contains the ID of the created document,
 the revision string,
 and `"ok": true`.
 
@@ -163,8 +169,8 @@ If you did not provide an `_id` field,
 Cloudant generates one automatically as a
 [UUID ![External link icon](../images/launch-glyph.svg "External link icon")](http://en.wikipedia.org/wiki/Universally_unique_identifier){:new_window}.
 
-If creation of the document failed,
-the response contains a description of the error.
+A failure to create the document results in a
+response that contains a description of the error.
 
 _Example response after successfully creating a document:_
 
@@ -177,7 +183,7 @@ _Example response after successfully creating a document:_
 ```
 {:codeblock}
 
->	**Note**: If the write [quorum](#quorum) cannot be met when creating a document,
+>	**Note**: If the write [quorum](#quorum) cannot be met during an attempt to create a document,
 a [`202` response](http.html#202) is returned.
 
 ## Read
@@ -192,29 +198,31 @@ you can [query the database](database.html#get-documents) for all documents.
 eventually consistent nature of Cloudant,
 reads might return stale data.
 In particular,
-data that has just been written,
+data that were written recently,
 even by the same client,
 might not be returned from a read request immediately following the write request.
 To work around this behavior,
-a client can cache state locally.
+a client can cache the state of data locally.
 Caching also helps to keep request counts down,
 increase application performance,
 and decrease load on the database cluster.
-This also applies to other read requests such as to map-reduce and search indexes.
+This behavior also applies to other read requests such as to map-reduce and search indexes.
 
-_Example of retrieving a document, using HTTP:_
+_Example of retrieving a document by using HTTP:_
 
 ```http
 GET /$DATABASE/$DOCUMENT_ID HTTP/1.1
 ```
 {:codeblock}
 
-_Example of retrieving a document, using the command line:_
+_Example of retrieving a document by using the command line:_
 
 ```sh
 curl https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DATABASE/$DOCUMENT_ID
 ```
 {:codeblock}
+
+<!--
 
 _Example of retrieving a document, using Javascript:_
 
@@ -231,7 +239,10 @@ db.get($JSON._id, function (err, body, headers) {
 ```
 {:codeblock}
 
-The response contains the document you requested or a description of the error if the document could not be retrieved.
+-->
+
+The response contains the document that you requested,
+or a description of the error if the document cannot be retrieved.
 
 _Example response:_
 
@@ -251,7 +262,7 @@ _Example response:_
 
 ### Query Parameters
 
-This is a list of parameters you can add to the URL in the usual way,
+You can add some query parameters to the URL,
 for example `/mydatabase/doc?attachments=true&conflicts=true`.
 
 All parameters are *optional*.
@@ -260,13 +271,13 @@ Name                | Type | Description | Default
 --------------------|------|-------------|--------
 `attachments`       | boolean | Includes attachments bodies in response. | false
 `att_encoding_info` | boolean | Includes encoding information in attachment stubs if the particular attachment is compressed. | false
-`atts_since`        | array of revision strings | Includes attachments only since specified revisions. Doesn’t includes attachments for specified revisions. | []
+`atts_since`        | array of revision strings | Includes attachments only since specified revisions. Does not include attachments for specified revisions. | []
 `conflicts`         | boolean | Includes information about conflicts in document. | false
 `deleted_conflicts` | boolean | Includes information about deleted conflicted revisions. | false
-`latest`            | boolean | Forces retrieving latest “leaf” revision, no matter what rev was requested. | false
+`latest`            | boolean | Forces retrieval of the most recent 'leaf' revision, no matter what revision was requested. | false
 `local_seq`         | boolean | Includes last update sequence number for the document. | false
-`meta`              | boolean | Acts same as specifying all conflicts, deleted_conflicts and open_revs query parameters. | false
-`open_revs`         | array or `all` | Retrieves documents of specified leaf revisions. Additionally, it accepts value as all to return all leaf revisions. | []
+`meta`              | boolean | Acts same as specifying the `conflicts`, `deleted_conflicts` and `open_revs` query parameters. | false
+`open_revs`         | array or `all` | Retrieves documents of specified leaf revisions. Additionally, it accepts the value `all` to return all leaf revisions. | []
 `rev`               | string | Retrieves document of specified revision. | -
 `revs`              | boolean | Includes list of all known document revisions. | false
 `revs_info`         | boolean | Includes detailed information for all known document revisions. | false
@@ -274,35 +285,35 @@ Name                | Type | Description | Default
 ## Read Many
 
 To fetch more than one document at a time,
-[query the database](database.html#get-documents),
-using the `include_docs` option.
+[query the database](database.html#get-documents)
+by using the `include_docs` option.
 
 ## Update
 
 To update a document,
-send a `PUT` request with the updated JSON content *and* the latest `_rev` value
+send a `PUT` request with the updated JSON content *and* the most recent `_rev` value
 to `https://$USERNAME.cloudant.com/$DATABASE/$DOCUMENT_ID`.
 You can also use this `PUT` method to create a document,
-in which case you do not need to supply the latest `_rev` value.
+in which case you do not need to supply the most recent `_rev` value.
 
->   **Note**: If you fail to provide the latest `_rev` when updating an existing document,
+>   **Note**: If you fail to provide the most recent `_rev` when you attempt to update an existing document,
     Cloudant responds with a [409 error](http.html#409).
-    This error prevents you overwriting data changed by other processes.
+    This error prevents you overwriting data that were changed by other processes.
     If the write [quorum](#quorum) cannot be met, a [`202` response](http.html#202) is returned.
 
 >   **Note**: Any document update can lead to a conflict,
-    especially when replicating updated documents.
+    especially when you replicate updated documents.
     More information about avoiding and resolving conflicts is in
     the [Document Versioning and MVCC guide](../guides/mvcc.html).
 
-_Example of updating a document, using HTTP:_
+_Example of using HTTP to update a document:_
 
 ```http
 PUT /$DATABASE/$DOCUMENT_ID HTTP/1.1
 ```
 {:codeblock}
 
-_Example of updating a document, using the command line:_
+_Example of using the command line to update a document, :_
 
 ```sh
 # make sure $JSON contains the correct `_rev` value!
@@ -312,6 +323,8 @@ curl https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DATABASE/$DOCUMENT_ID \
 	-d "$JSON"
 ```
 {:codeblock}
+
+<!--
 
 _Example of updating a document, using Javascript:_
 
@@ -331,7 +344,9 @@ db.insert($JSON, $JSON._id, function (err, body, headers) {
 ```
 {:codeblock}
 
-_Example of JSON data containing an updated document:_
+-->
+
+_Example of JSON data that contains an updated document:_
 
 ```json
 {
@@ -351,7 +366,7 @@ _Example of JSON data containing an updated document:_
 The response contains the ID and the new revision of the document,
 or an error message if the update failed.
 
-_Example response following a successful update:_
+_Example response after a successful update:_
 
 ```json
 {
@@ -367,41 +382,43 @@ _Example response following a successful update:_
 ## Delete
 
 To delete a document,
-send a `DELETE` request with the document's latest `_rev` in the query string,
+send a `DELETE` request with the document's most recent `_rev` in the query string,
 to `https://$USERNAME.cloudant.com/$DATABASE/$DOCUMENT_ID`.
 
 The response contains the ID and the new revision of the document,
 or an error message if the delete failed.
 
->	**Note**: If you fail to provide the latest `_rev`,
+>	**Note**: If you fail to provide the most recent `_rev`,
 Cloudant responds with a [409 error](http.html#409).
-This error prevents you overwriting data changed by other clients.
+This error prevents you overwriting data that were changed by other clients.
 If the write [quorum](#quorum) cannot be met,
 a [`202` response](http.html#202) is returned.
 
 >	**Note**: Cloudant does not completely delete the specified document.
 Instead,
-it leaves a [tombstone](#-tombstone-documents) with very basic information about the document.
+it leaves a [tombstone](#-tombstone-documents) with basic information about the document.
 The tombstone is required so that the delete action can be replicated to other copies of the database.
 Since the tombstones stay in the database indefinitely,
 creating new documents and deleting them increases the disk space usage of a database.
 They might also increase the query time for the primary index,
 which is used to look up documents by their ID.
 
-_Example of a delete request, using HTTP:_
+_Example of using HTTP to delete a document:_
 
 ```http
 DELETE /$DATABASE/$DOCUMENT_ID?rev=$REV HTTP/1.1
 ```
 {:codeblock}
 
-_Example of a delete request, using the command line:_
+_Example of using the command line to delete a document:_
 
 ```sh
 # make sure $JSON contains the correct `_rev` value!
 curl https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DATABASE/$DOCUMENT_ID?rev=$REV -X DELETE
 ```
 {:codeblock}
+
+<!--
 
 _Example of a delete request, using Javascript:_
 
@@ -419,7 +436,9 @@ db.destroy($JSON._id, $REV, function (err, body, headers) {
 ```
 {:codeblock}
 
-_Example response following a successful deletion request:_
+-->
+
+_Example response after a successful deletion request:_
 
 ```json
 {
@@ -432,14 +451,12 @@ _Example response following a successful deletion request:_
 
 ## 'Tombstone' documents
 
-Tombstone documents are small documents retained in place within a database when the original document is deleted.
+Tombstone documents are small documents that are retained in place within a database when the original document is deleted.
 Their purpose is to allow the deletion to be replicated.
 
-When the replication has completed,
+When the replication completes,
 the tombstones are no longer required.
-Normally,
-this is not a problem,
-as automatic compaction helps ensure that only the minimal amount of data is retained and transferred during replication.
+Automatic compaction helps ensure that only the minimal amount of data is retained and transferred during replication.
 Nevertheless,
 tombstone documents are not automatically removed,
 or 'purged'.
@@ -456,9 +473,9 @@ you might want to remove the tombstones.
 ### Simple removal of 'tombstone' documents
 
 To remove tombstones manually,
-perform the following steps:
+do the following steps:
 
-1.	Create a new database to hold the required documents.
+1.	Create a database to hold the required documents.
 	The new database is intended to hold all documents _except_ the tombstone documents.
 2.	Set up a [filtered replication](advanced_replication.html#filtered-replication) to
 	replicate documents from the original database to the new database.
@@ -467,10 +484,10 @@ perform the following steps:
 	switch your application logic to use the new database.
 4.	Verify that your applications work correctly with the new database.
 	When you are satisfied that everything is working correctly,
-	you might wish to delete the old database.
+	you might want to delete the old database.
 
 >	**Note**: In general,
-you should try to design and implement your applications to perform the minimum necessary amount of deletion.
+try to design and implement your applications to do the minimum necessary amount of deletion.
 
 _Example filter to exclude deleted documents during a replication:_
 
@@ -486,8 +503,8 @@ _Example filter to exclude deleted documents during a replication:_
 
 ### Advanced removal of tombstone documents
 
-The simple removal technique described [previously](#simple-removal-of-tombstone-documents) works well,
-so long as documents are not being updated in the source database while the replication takes place.
+The [simple removal technique](#simple-removal-of-tombstone-documents) works well,
+if documents are not being updated in the source database while the replication takes place.
 
 If updates _are_ made during replication,
 it is possible that a complete document is replicated to the target database as normal,
@@ -499,31 +516,31 @@ As a result,
 the document that was deleted from the source database is not deleted from the target database,
 causing an inconsistency.
 
-A solution is to perform more advanced removal of tombstones using
+A solution is to do more advanced removal of tombstones by using
 a [`validate_doc_update` function ![External link icon](../images/launch-glyph.svg "External link icon")](http://docs.couchdb.org/en/1.6.1/couchapp/ddocs.html#validate-document-update-functions){:new_window}.
 
 A `validate_doc_update` function is stored in a design document.
-The function is executed every time a document is updated in the database.
-The function can be used to prevent invalid or unauthorized document updates from being performed.
+The function is run every time that a document is updated in the database.
+The function can be used to prevent invalid or unauthorized document updates.
 
-The function works using the following parameters:
+The function works by using the following parameters:
 
 -	The new version of the document.
 -	The current version of the document in the database.
 -	A user context,
-	which provides details about the user supplying the updated document.
+	which provides details about the user that supplied the updated document.
 
-The function inspects the request to determine if the update should proceed.
-If the update is permitted,
-the function simply returns.
-If the update is not permitted,
+The function inspects the request to determine whether the update is allowed to proceed.
+If the update is acceptable,
+the function returns.
+If the update is not acceptable,
 a suitable error object is returned.
 In particular,
 if the user is not authorized to make the update,
 an `unauthorized` error object is returned,
 along with an explanatory error message.
 Similarly,
-if the requested update is not allowed for some reason (such as some mandatory fields being absent from the new document),
+if the requested update is not allowed for some reason (such as when some mandatory fields are absent from the new document),
 then a `forbidden` error object is returned,
 again with an explanatory error message.
 
@@ -531,22 +548,22 @@ For tombstone removal,
 a suitable `validate_doc_update` function would work as follows:
 
 1.	If the update is to apply a change to an existing document (`oldDoc`) within the target database,
-	the function allows this by simply returning.
+	the function allows the change by returning.
 	The reason is that the update affected a document that was copied to the target database during the replication,
-	but which has subsequently changed in the source database during the replication.
+	but then changed in the source database during the replication.
 	It is possible that the change was a `DELETE`,
 	resulting in a tombstone record in the target database.
 	The tombstone record is removed by a subsequent replication process at some point in the future.
 2.	If the target database does _not_ have a copy of the current document,
 	_and_ the update document has the `_deleted` property (indicating that it is a tombstone),
-	then the update must be a tombstone _and_ it has been encountered before,
-	so the update should be rejected.
+	then the update must be a tombstone _and_ it was encountered before,
+	so the update must be rejected.
 3.	Finally,
-	if the function has not yet returned or thrown an error,
+	if the function did not return or throw an error,
 	allow the update to replicate to the target database,
 	as some other condition applies.
 
-_Example `validate_doc_update` function to reject deleted documents not already present in the target database:_
+_Example JavaScript `validate_doc_update` function to reject deleted documents not already present in the target database:_
 
 ```javascript
 function(newDoc, oldDoc, userCtx) {
@@ -565,7 +582,7 @@ function(newDoc, oldDoc, userCtx) {
 ```
 {:codeblock}
 
-To use a `validate-doc-update` function to remove tombstone documents:
+To use a `validate_doc_update` function to remove tombstone documents:
 
 1.	Stop replication from the source to the target database.
 2.	If appropriate,
@@ -579,45 +596,45 @@ To use a `validate-doc-update` function to remove tombstone documents:
 	switch your application logic to use the new database.
 6.	Verify that your applications work correctly with the new database.
 	When you are satisfied that everything is working correctly,
-	you might wish to delete the old database.
+	you might want to delete the old database.
 
 A variation for using the `validate_doc_update` function to remove tombstone documents if possible.
 You might add some metadata to the tombstone documents,
 for example to record the deletion date.
-The function could then inspect the metadata and permit deletion documents through
-if they have not been applied to the target database,
-in order to replicate the deletion correctly.
+The function might then inspect the metadata and allow deletion documents through
+if they must be applied to the target database.
+This check helps ensure correct replication of the deletion.
 
 ### Performance implications of tombstone removal
 
-Remember that tombstones are used for more consistent deletion of documents from databases.
-This is especially important for mobile devices:
+Tombstones are used for more consistent deletion of documents from databases.
+This purpose is especially important for mobile devices:
 without tombstone documents,
 a deletion might not replicate correctly to a mobile device,
 with the result that documents might never be deleted from the device.
 
-If you recreate a database,
+If you re-create a database,
 for example to be a new target for a replication,
 any clients that use the target database as a server _must_ work through _all_ the changes again,
-because the database sequence numbers are likely to have changed.
+because the database sequence numbers are likely to be different.
 
 >	**Note**: If you are using a `validate_doc_update` function,
-you should avoid replicating that function to clients.
-This is to prevent the possibility of unwanted side effects as a result of having the function present on the client.
+avoid replicating that function to clients.
+This rule is to prevent the possibility of unwanted side effects as a result of having the function present on the client.
 
 >	**Note**: [Cloudant Sync](../libraries/supported.html#mobile) libraries do not replicate design documents,
-so replication of `validate_doc_update` functions should not normally be a problem for Cloudant.
+so replication of `validate_doc_update` functions is not normally a problem for Cloudant.
 However,
-other clients might replicate design documents or `validate_doc_update` functions,
+other clients might replicate the design documents or `validate_doc_update` functions,
 potentially resulting in unwanted side effects.
 
 ## Bulk Operations
 
-The bulk document API allows you to create and update multiple documents at the same time within a single request.
+Use the bulk document API to create and update multiple documents at the same time within a single request.
 The basic operation is similar to creating or updating a single document,
 except that you batch the document structure and information.
 
-When creating new documents the document ID is optional.
+When you create new documents, the document ID is optional.
 For updating existing documents,
 you must provide the document ID,
 revision information,
@@ -637,13 +654,13 @@ Field  | Description             | Type             | Optional
 
 Each `docs` array object has the following structure:
 
-Field      | Description                             | Type    | Optional
------------|-----------------------------------------|---------|---------
-`_id`      | Document ID                             | String  | Optional only for new documents.
-`_rev`     | Document revision                       | String  | Mandatory for updates and deletes, not used for new documents.
-`_deleted` | Whether the document should be deleted. | Boolean | Yes
+Field      | Description                           | Type    | Optional
+-----------|---------------------------------------|---------|---------
+`_id`      | Document ID                           | String  | Optional only for new documents.
+`_rev`     | Document revision                     | String  | Mandatory for updates and deletes, not used for new documents.
+`_deleted` | Whether the document must be deleted. | Boolean | Yes
 
-_Example request to create, update, or delete multiple documents, using HTTP:_
+_Example of using HTTP to create, update, or delete multiple documents:_
 
 ```http
 POST /$DATABASE/_bulk_docs HTTP/1.1
@@ -651,7 +668,7 @@ Content-Type: application/json
 ```
 {:codeblock}
 
-_Example request to create, update, or delete multiple documents, using the command line:_
+_Example of using the command line to create, update, or delete multiple documents:_
 
 ```sh
 curl https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DATABASE/_bulk_docs \
@@ -660,6 +677,8 @@ curl https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DATABASE/_bulk_docs \
 	-d "$JSON"
 ```
 {:codeblock}
+
+<!--
 
 _Example request to create, update, or delete multiple documents, using Javascript:_
 
@@ -675,6 +694,8 @@ db.bulk($JSON, function (err, body) {
 });
 ```
 {:codeblock}
+
+-->
 
 _Example JSON describing the update, creation, and deletion of three documents in one bulk request:_
 
@@ -707,14 +728,14 @@ _Example JSON describing the update, creation, and deletion of three documents i
 
 ### Bulk request responses
 
-The HTTP status code received in response tells you whether the request was fully or partially successful.
+The HTTP status code that is received in response indicates whether the request was fully or partially successful.
 In the response body itself,
 you get an array with detailed information for each document in the request.
 
 Code | Description
 -|-
-`201` | The request succeeded, but this does not imply all documents were updated. Inspect the response body to determine the status of each requested change, and [address any problems](#bulk-document-validation-and-conflict-errors).
-`202` | For at least one document, the write [quorum](#quorum) has not been met.
+`201` | The request did succeed, but this success does not imply all documents were updated. Inspect the response body to determine the status of each requested change, and [address any problems](#bulk-document-validation-and-conflict-errors).
+`202` | For at least one document, the write [quorum](#quorum) was not met.
 
 _Example response from a bulk request:_
 
@@ -780,8 +801,8 @@ _Example JSON for a bulk insert of three documents:_
 ```
 {:codeblock}
 
-The return code from a successful bulk insertion is [`201`](http.html#201),
-with the content of the returned structure indicating specific success
+The return code from a successful bulk insertion is [`201`](http.html#201).
+The content of the returned structure indicates success
 or other information messages on a per-document basis.
 
 _Example response header after successful bulk insert of three documents:_
@@ -797,12 +818,15 @@ x-couch-request-id: e8ff64d5
 ```
 {:codeblock}
 
-The returned JSON contains a list of the documents created,
+The returned JSON contains a list of the documents that were created,
 including their revision and ID values.
 
-The content and structure of the returned JSON depends on the transaction semantics being used for the bulk update;
-see [Bulk Documents Transaction Semantics](#bulk-documents-transaction-semantics) for more information.
-Conflicts and validation errors when updating documents in bulk must be handled separately;
+The content and structure of the returned JSON depends on the transaction semantics that are used for the bulk update.
+For more information,
+see [Bulk Documents Transaction Semantics](#bulk-documents-transaction-semantics).
+
+Conflicts and validation errors that occur when you update documents in bulk must be handled separately.
+For more information,
 see [Bulk Document Validation and Conflict Errors](#bulk-document-validation-and-conflict-errors).
 
 _Example response content after successful bulk insert of three documents:_
@@ -834,7 +858,7 @@ Optionally,
 you can delete documents during a bulk update by adding a `_deleted` field with a value of `true`
 to each affected document ID and revision combination within the request JSON structure.
 
-_Example request to perform bulk update, using HTTP:_
+_Example of using HTTP to do a bulk update:_
 
 ```http
 POST /test/_bulk_docs HTTP/1.1
@@ -842,7 +866,7 @@ Accept: application/json
 ```
 {:codeblock}
 
-_Example request to perform bulk update, using the command line:_
+_Example of using the command line to do a bulk update:_
 
 ```sh
 curl -X POST "https://$USERNAME.cloudant.com/$DATABASE/_bulk_docs" \
@@ -893,7 +917,7 @@ _Example JSON structure to request bulk update of documents:_
 The return JSON structure summarizes the updated documents,
 with the new revision and ID information.
 
-_Example JSON structure returned after bulk update:_
+_Example JSON structure that is returned after bulk update:_
 
 ```json
 [
@@ -916,8 +940,8 @@ _Example JSON structure returned after bulk update:_
 ### Bulk Documents Transaction Semantics
 
 If your request receives a [`202` response](http.html#202),
-the only guarantee is that some of the document tasks were processed completely.
-The response body contains the list of documents successfully inserted or updated during the process.
+the only certainty is that _some_ of the document tasks were processed completely.
+The response body contains the list of documents that were successfully inserted or updated during the process.
 
 A successful document update is indicated by the presence of a new `_rev` parameter for the document,
 indicating that a new document revision was successfully created.
@@ -925,10 +949,10 @@ indicating that a new document revision was successfully created.
 If a document update failed,
 then you get an `error` of type `conflict` for that document.
 In this case,
-no new revision has been created.
+no new revision was created.
 You must submit the document update again,
 with the same revision tag,
-to re-try the document update.
+to retry the document update.
 
 _Example bulk update response with errors:_
 
@@ -957,8 +981,8 @@ _Example bulk update response with errors:_
 
 The JSON returned by the `_bulk_docs` operation consists of an array of JSON structures,
 one for each document in the original submission.
-The returned JSON structure should be examined
-to ensure that all of the documents submitted in the original request were successfully added to the database.
+The returned JSON structure must be examined
+to ensure that all of the documents that were submitted in the original request were successfully added to the database.
 
 The structure of the returned information is as follows:
 
@@ -977,7 +1001,7 @@ Field    | Description                        | Type
 `reason` | Error string with extended reason. | String
 
 When a document (or document revision) is not correctly committed to the database because of an error,
-you should check the `error` field to determine error type and course of action.
+you must check the `error` field to determine error type and course of action.
 The error is one of [`conflict`](#conflict) or [`forbidden`](#forbidden).
 
 ### `conflict`
@@ -985,17 +1009,17 @@ The error is one of [`conflict`](#conflict) or [`forbidden`](#forbidden).
 The document as submitted is in conflict.
 If you used the default bulk transaction mode,
 then the new revision was not created.
-You must re-submit the document to the database.
+You must resubmit the document to the database.
 
-Conflict resolution of documents added using the bulk docs interface is identical
-to the resolution procedures used when resolving conflict errors during replication.
+Conflict resolution of documents added by using the bulk docs interface is identical
+to the resolution procedures used when you resolve conflict errors during replication.
 
 ### `forbidden`
 
-Entries with this error type indicate that the validation routine applied
-to the document during submission has returned an error.
+Entries with this error type indicate that the validation routine that was applied
+to the document during submission returned an error.
 
-_Example javascript to produce `forbidden` error as part of a validation function:_
+_Example JavaScript to produce `forbidden` error as part of a validation function:_
 
 ```javascript
 throw({forbidden: 'invalid recipe ingredient'});
@@ -1019,11 +1043,11 @@ _Example error message from a validation function:_
 
 In a distributed system,
 it is possible that a request might take some time to complete.
-A 'quorum' mechanism is used to help determine when a given request,
+A 'quorum' mechanism is used to help determine when a request,
 such as a write or read,
-has completed successfully.
+completes successfully.
 
-For help understanding quorum settings and their implications on dedicated Cloudant systems,
+For help to understand quorum settings and their implications on dedicated Cloudant systems,
 contact Cloudant support.
 
 ## TTL - Time to Live
@@ -1031,17 +1055,17 @@ contact Cloudant support.
 [Time to Live ![External link icon](../images/launch-glyph.svg "External link icon")](https://en.wikipedia.org/wiki/Time_to_live){:new_window} (TTL) is a property of data,
 where after a relative amount of time,
 or at an absolute time,
-the data is deemed to have expired.
+the data is deemed to be expired.
 The data itself might be deleted or moved to an alternative (archive) location.
 
-Cloudant does _not_ support Time to Live functionality.
+Cloudant does _not_ support Time to Live functions.
 
 The reason is that Cloudant documents are only 'soft' deleted,
-not completely deleted.
+not deleted.
 The soft deletion involves replacing the original document with a [smaller record](#-tombstone-documents).
 This small record or 'tombstone' is required for replication purposes;
 it helps ensure that the correct revision to use can be identified during replication.
 
-If TTL were available in Cloudant,
+If the TTL capability was available in Cloudant,
 the resulting potential increase in short-lived documents and soft deletion records
-would mean that the database size could grow in an unbounded fashion.
+would mean that the database size might grow in an unbounded fashion.

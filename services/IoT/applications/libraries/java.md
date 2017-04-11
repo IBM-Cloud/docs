@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-11-22"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -26,7 +26,7 @@ You can build and customize applications that interact with your organization on
 Last updated: 25 October 2016
 {: .last-updated}
 
-To access the Java client libraries and samples for {{site.data.keyword.iot_short_notm}}, go to the [iot-java](https://github.com/ibm-watson-iot/iot-java) repository in GitHub and complete the installation instructions.
+To access the Java client libraries and samples for {{site.data.keyword.iot_short_notm}}, go to the [iot-java ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-java){: new_window} repository in GitHub and complete the installation instructions.
 
 
 ## Constructor
@@ -428,7 +428,7 @@ In addition to using MQTT, you can also configure your applications to publish d
     	boolean status = myClient.publishApplicationEventforDeviceOverHTTP(deviceId, deviceType, "blink", event, ContentType.json);
 ```
 
-For the complete code sample, see the [HttpApplicationDeviceEventPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpApplicationDeviceEventPublish.java) application example.
+For the complete code sample, see the [HttpApplicationDeviceEventPublish ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpApplicationDeviceEventPublish.java){: new_window} application example.
 
 Based on the settings in the properties file, the `publishEventOverHTTP()` method publishes the event in either Quickstart or in Registered flow. When  `quickstart` is specified as the organization ID in the properties file, the `publishEventOverHTTP()` method publishes the event to the {{site.data.keyword.iot_short_notm}} Quickstart service in plain HTTP format. When a valid registered organization is specified in the properties file, the event is always published by using HTTPS so that all of the communication is secure.
 
@@ -474,7 +474,7 @@ In addition to using MQTT, you can also configure your applications to publish c
 	boolean response = myClient.publishCommandOverHTTP("execute", event);
 ```
 
-To view the complete code sample, see the [HttpCommandPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpCommandPublish.java) application example.
+To view the complete code sample, see the [HttpCommandPublish ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpCommandPublish.java){: new_window} application example.
 
 The HTTP protocol provides 'at most once' delivery, which is similar to the 'at most once' (QoS 0) quality of service level of the MQTT protocol. When you use 'at most once' delivery to publish commands, the application must implement retry logic when there is an error. For more information, see [HTTP REST API for applications](../api.html).
 
@@ -482,8 +482,8 @@ The HTTP protocol provides 'at most once' delivery, which is similar to the 'at 
 ## Samples
 {: #samples}
 
--  [MQTTApplicationDeviceEventPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/MQTTApplicationDeviceEventPublish.java) - A sample application that shows how you can  publish device events.
--   [RegisteredApplicationCommandPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationCommandPublish.java) - A sample application that shows how you can publish a command to a device.
--  [RegisteredApplicationSubscribeSample](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationSubscribeSample.java) - A sample application that shows how you can subscribe to different events such as device events, device commands, device status, and application status.
--   [SharedSubscriptionSample](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/SharedSubscriptionSample.java) - A sample application that shows how you can build a scalable application that balances the load of messages across multiple instances of the application.
--  [Backup-restore-sample](https://github.com/ibm-messaging/iot-backup-restore-sample) - A sample that shows how you can back up and restore the device configuration in {{site.data.keyword.cloudant}}.
+-  [MQTTApplicationDeviceEventPublish ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/MQTTApplicationDeviceEventPublish.java){: new_window} - A sample application that shows how you can  publish device events.
+-   [RegisteredApplicationCommandPublish ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationCommandPublish.java){: new_window} - A sample application that shows how you can publish a command to a device.
+-  [RegisteredApplicationSubscribeSample ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationSubscribeSample.java){: new_window} - A sample application that shows how you can subscribe to different events such as device events, device commands, device status, and application status.
+-   [SharedSubscriptionSample ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/SharedSubscriptionSample.java){: new_window} - A sample application that shows how you can build a scalable application that balances the load of messages across multiple instances of the application.
+-  [Backup-restore-sample ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-backup-restore-sample){: new_window} - A sample that shows how you can back up and restore the device configuration in {{site.data.keyword.cloudant}}.

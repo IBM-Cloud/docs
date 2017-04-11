@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+The {{site.data.keyword.amafull}} service is replaced with the {{site.data.keyword.appid_full}} service.
 
 # Enabling Google authentication for Cordova apps
 {: #google-auth-cordova}
@@ -128,7 +130,9 @@ Initialize the {{site.data.keyword.amashort}} Authorization Manager in Objective
 ```
 {: codeblock}
 
-**Note:**
+
+####Note:
+{: #note notoc}
 
 * Replace `<your_module_name>` with the module name of your project. For example, if your module name is `Cordova`, then the import line should be `#import "Cordova-Swift.h"` Find the module name go to the
 `Build Settings`  tab,  `Packaging` > `Product Module Name`.

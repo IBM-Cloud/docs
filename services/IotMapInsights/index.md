@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-25"
+  years: 2016, 2017
+lastupdated: "2017-03-31"
 ---
 
 {:shortdesc: .shortdesc}
@@ -12,7 +12,7 @@ lastupdated: "2016-11-25"
 {:pre: .pre}
 
 
-# Getting started with {{site.data.keyword.iotmapinsights_short}}
+# Getting started with Context Mapping
 {: #iotdriverinsights_index}
 
 {{site.data.keyword.iotmapinsights_full}} is a service on {{site.data.keyword.Bluemix}} that you can use to enable geospatial functions, such as map matching and shortest path search for global road networks, in your applications. Use the powerful capabilities of {{site.data.keyword.iotmapinsights_short}} to build smart automotive solutions.
@@ -33,11 +33,11 @@ The following features are available by using the {{site.data.keyword.iotmapinsi
 ## Before you begin
 {: #byb}
 
-1. When you add an instance of the service from the [{{site.data.keyword.Bluemix_notm}} catalog](https://console.ng.bluemix.net/catalog/services/iot-automotive/){: new_window}, ensure that it is not bound to an app and that you make a note of the automatically generated tenant ID, user name, and password values. You need these values later to access the service by using the   {{site.data.keyword.iotmapinsights_short}} API.
+1. When you add an instance of the service from the [{{site.data.keyword.Bluemix_notm}} catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/catalog/services/iot-automotive/){: new_window}, ensure that it is not bound to an app and that you make a note of the automatically generated tenant ID, user name, and password values. You need these values later to access the service by using the   {{site.data.keyword.iotmapinsights_short}} API.
 
-2. Familiarize yourself with [OpenStreetMap](http://www.openstreetmap.org/){: new_window}.  
+2. Familiarize yourself with [OpenStreetMap ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.openstreetmap.org/){: new_window}.  
 
- The {{site.data.keyword.iotmapinsights_short}} service uses the road network data, in WGS84 coordinates, which is extracted from [OpenStreetMap](http://www.openstreetmap.org/){: new_window}. Only the roads that a car can travel on are used for analysis.  
+ The {{site.data.keyword.iotmapinsights_short}} service uses the road network data, in WGS84 coordinates, which is extracted from [OpenStreetMap ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.openstreetmap.org/){: new_window}. Only the roads that a car can travel on are used for analysis.  
 
  The following map regions are supported:
 
@@ -95,37 +95,41 @@ Search for traffic events that are within a specific rectangular area and option
 
 ## Starter experience
 {: #starter_exp}
-Experience the capabilities of {{site.data.keyword.iotmapinsights_short}} and other {{site.data.keyword.iot4auto_short}} services. Visit the [{{site.data.keyword.iot4auto_short}} Starter Experience](https://iot-for-automotive-starter-experience.mybluemix.net){:new_window} page to play an interactive demo and try out some starter apps that provide examples of how you can use several {{site.data.keyword.iot4auto_short}} services on {{site.data.keyword.Bluemix_notm}} to build automotive solutions.
+Experience the capabilities of {{site.data.keyword.iotmapinsights_short}} and other {{site.data.keyword.iot4auto_short}} services. Visit the [{{site.data.keyword.iot4auto_short}} Starter Experience ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://iot-for-automotive-starter-experience.mybluemix.net){:new_window} page to play an interactive demo and try out some starter apps that provide examples of how you can use several {{site.data.keyword.iot4auto_short}} services on {{site.data.keyword.Bluemix_notm}} to build automotive solutions.
 
+## Service availability and updates
+{: #service_up}
+To find out about the status and any upcoming planned service maintenance updates for the {{site.data.keyword.iotmapinsights_short}} API services on {{site.data.keyword.Bluemix_notm}}, go to the [IBM Watson IoT Service Health Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://status.internetofthings.ibmcloud.com).
 
 # Related Links
-{: #rellinks}
+{: #rellinks notoc}
 
 ## Related Links
 {: #general}
 
-* [Getting started with {{site.data.keyword.iot4auto_short}} ](../IoTAutomotive/index.html){:new_window}
-* [Getting started with {{site.data.keyword.iotdriverinsights_short}}](../IotDriverInsights/index.html){:new_window}
-* [Getting started with {{site.data.keyword.iot_full}}](https://www.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
-* [dW Answers on IBM developerWorks](https://developer.ibm.com/answers/topics/iot-context-mapping){:new_window}
-* [Stack Overflow](http://stackoverflow.com/questions/tagged/iot-context-mapping){:new_window}
-* [What's new in Bluemix Services](http://www.ng.bluemix.net/docs/whatsnew/index.html#services_category){:new_window}
-* [OpenStreetMap](http://www.openstreetmap.org/){:new_window}
-* [&copy; OpenStreetMap contributors](http://www.openstreetmap.org/copyright){:new_window}
-* [Open Data Commons Open Database License (ODbL)](http://opendatacommons.org/licenses/odbl/){:new_window}
+* [IBM Watson IoT Service Health Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://status.internetofthings.ibmcloud.com){:new_window}
+* [Getting started with {{site.data.keyword.iot4auto_short}}  ![External link icon](../../icons/launch-glyph.svg "External link icon")](../IoTAutomotive/index.html){:new_window}
+* [Getting started with {{site.data.keyword.iotdriverinsights_short}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](../IotDriverInsights/index.html){:new_window}
+* [Getting started with {{site.data.keyword.iot_full}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
+* [dW Answers on IBM developerWorks ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/iot-context-mapping){:new_window}
+* [Stack Overflow ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/questions/tagged/iot-context-mapping){:new_window}
+* [What's new in Bluemix Services ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ng.bluemix.net/docs/whatsnew/index.html#services_category){:new_window}
+* [OpenStreetMap ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.openstreetmap.org/){:new_window}
+* [&copy; OpenStreetMap contributors ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.openstreetmap.org/copyright){:new_window}
+* [Open Data Commons Open Database License (ODbL) ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://opendatacommons.org/licenses/odbl/){:new_window}
 
 
 ## Tutorials and Samples
 {: #samples}
 
-* [IBM IoT for Automotive Starter Experience](https://iot-for-automotive-starter-experience.mybluemix.net){:new_window}
-* [{{site.data.keyword.iotmapinsights_short}} and  {{site.data.keyword.iotdriverinsights_short}} tutorial part 1](https://github.com/IBM-Bluemix/car-data-management){:new_window}
-* [{{site.data.keyword.iotmapinsights_short}} and  {{site.data.keyword.iotdriverinsights_short}} tutorial part 2](https://github.com/IBM-Bluemix/map-driver-insights){:new_window}
+* [IBM IoT for Automotive Starter Experience ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://iot-for-automotive-starter-experience.mybluemix.net){:new_window}
+* [{{site.data.keyword.iotmapinsights_short}} and  {{site.data.keyword.iotdriverinsights_short}} tutorial part 1 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/car-data-management){:new_window}
+* [{{site.data.keyword.iotmapinsights_short}} and  {{site.data.keyword.iotdriverinsights_short}} tutorial part 2 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/map-driver-insights){:new_window}
 
 
 ## API Reference
 {: #api}
-* [{{site.data.keyword.iot4auto_short}} API docs: Vehicle Data Hub](http://ibm.biz/IoT4Auto_VDH_APIdoc){:new_window}
-* [{{site.data.keyword.iot4auto_short}} API docs: Asset](http://ibm.biz/IoT4Auto_Asset_APIdoc){:new_window}
-* [Contextual Map service APIs](http://ibm.biz/IoTContextMapping_APIdoc){:new_window}
-* [Driver Behavior service APIs]( http://ibm.biz/IoTDriverBehavior_APIdoc){:new_window}
+* [{{site.data.keyword.iot4auto_short}} API docs: Vehicle Data Hub ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/IoT4Auto_VDH_APIdoc){:new_window}
+* [{{site.data.keyword.iot4auto_short}} API docs: Asset ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/IoT4Auto_Asset_APIdoc){:new_window}
+* [Contextual Map service APIs ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/IoTContextMapping_APIdoc){:new_window}
+* [Driver Behavior service APIs ![External link icon](../../icons/launch-glyph.svg "External link icon")]( http://ibm.biz/IoTDriverBehavior_APIdoc){:new_window}

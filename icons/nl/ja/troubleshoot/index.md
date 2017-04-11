@@ -26,7 +26,7 @@ lastupdated: "2017-01-11"
 ## {{site.data.keyword.Bluemix_notm}} にログインできない
 {: #ts_logintobm}
 
-{{site.data.keyword.Bluemix_notm}} にログインするには、有効な IBMid とパスワードが必要です。
+{{site.data.keyword.Bluemix_notm}} にログインするには、有効な IBM ID とパスワードが必要です。
 
 
 {{site.data.keyword.Bluemix_notm}} にサインインしようとすると、以下のエラー・メッセージが表示されます。
@@ -35,13 +35,13 @@ lastupdated: "2017-01-11"
 `入力したパスワードは正しくありません。`
 
 
-{{site.data.keyword.Bluemix_notm}} へのサインインに使用した IBMid およびパスワードが無効です。
+{{site.data.keyword.Bluemix_notm}} へのサインインに使用した IBM ID およびパスワードが無効です。
 {: tsCauses} 
  
 
-有効な IBMid とパスワードを取得するには、「マイ IBM プロファイル (My IBM profile)」ページに移動し、以下のいずれかのステップを実行します。
+有効な IBM ID とパスワードを取得するには、「マイ IBM プロファイル (My IBM profile)」ページに移動し、以下のいずれかのステップを実行します。
 {: tsResolve}
-  * IBM ID を登録済みであり、自分の ID とパスワードが有効であるかどうかを確認したい場合は、**「サインイン」**をクリックし、「サインイン」ページで IBM ID とパスワードを入力します。パスワードを忘れた場合は、「サインイン」ページにある**「パスワードを忘れた場合 (Forgot your password)」**をクリックして、パスワードをリセットします。IBMid を忘れた場合、あるいはパスワードに関する問題が続く場合は、Worldwide IBM Registration Help Desk にご相談ください。 
+  * IBM ID を登録済みであり、自分の ID とパスワードが有効であるかどうかを確認したい場合は、**「サインイン」**をクリックし、「サインイン」ページで IBM ID とパスワードを入力します。パスワードを忘れた場合は、「サインイン」ページにある**「パスワードを忘れた場合 (Forgot your password)」**をクリックして、パスワードをリセットします。IBM ID を忘れた場合、あるいはパスワードに関する問題が続く場合は、Worldwide IBM Registration Help Desk にご相談ください。 
   * IBM ID をお持ちでない場合は、**「登録」**をクリックして IBM ID とパスワードを登録してください。 
   
 **注:** IBM の従業員の場合、IBM ID はイントラネット・ログイン ID とは異なる可能性があります。 
@@ -942,7 +942,7 @@ Node.js アプリを更新する際、または Node.js アプリを {{site.data
 		{
       ...
   	   "scripts": {
-"start": "node app.js"
+	 		 "start": "node app.js"
  	   }
 	}
 	    ```
@@ -1167,7 +1167,7 @@ Git リポジトリーが複製されない場合は、リポジトリーまた�
   * エラー・メッセージに、ビルドに問題が存在すると示されている場合は、アプリのビルドを妨げている、コードに関わる問題をすべて修正します。そのコードに問題が含まれていないことを検証するには、Git コマンドを使用してコードをビルドします。
     1. Git リポジトリーを複製します。
     ```
-git clone <git_repository_URL>
+    git clone <git_repository_URL>
     ```
 	2. アプリのディレクトリーを開きます。
 	```
@@ -1268,7 +1268,7 @@ Eclipse Orion {{site.data.keyword.webide}} に実行バーが見つからない�
 アカウントを再アクティブ化するには、[{{site.data.keyword.Bluemix_notm}} サポート ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window} にお問い合わせください。E メールには、以下の情報を含めてください。
 {: tsResolve}
 
-  * {{site.data.keyword.Bluemix_notm}} へのログインに使用している IBMid。
+  * {{site.data.keyword.Bluemix_notm}} へのログインに使用している IBM ID。
   * アプリを作成している組織の名前。この情報は、サポート・チームが、組織内の正しい役割またはメンバーシップがユーザーに割り当てられているかどうかを判別するのに役立ちます。
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-06-10"
+lastupdated: "2017-02-07"
 
 ---
 
@@ -77,8 +77,8 @@ If you are enabling the beta features on an existing application, don't forget t
 {: #codeblock}
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
-{: #general}
+{: #general notoc}
 * [Liberty runtime](index.html)
 * [Liberty Profile Overview](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

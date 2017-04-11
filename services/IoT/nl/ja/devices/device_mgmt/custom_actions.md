@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-05"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -64,6 +64,19 @@ lastupdated: "2016-09-05"
 
 ```
 
+### カスタム・デバイス管理パッケージの追加
+
+カスタム・デバイス管理パッケージは、{{site.data.keyword.iot_short_notm}} ダッシュボードまたは API のいずれかを使用して追加できます。
+
+{{site.data.keyword.iot_short_notm}} ダッシュボードを使用してカスタム・デバイス管理パッケージを追加するには、次のようにします。
+
+1. {{site.data.keyword.iot_short_notm}} ダッシュボードのナビゲーション・バーから**「設定」 **をクリックします。
+2. **「カスタム・デバイス管理パッケージ」**をクリックします。
+3. **「パッケージの追加」**ボタンをクリックします。
+4. パッケージ・ファイルを選択し、**「開く」**をクリックします。
+
+API を使用してカスタム・デバイス管理パッケージを追加する場合は、[{{site.data.keyword.iot_short_notm}} API 資料 ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} を参照してください。
+
 ### 拡張パッケージのプロパティー
 
 デバイス管理拡張パッケージには、以下のプロパティーが含まれます。
@@ -115,7 +128,7 @@ lastupdated: "2016-09-05"
 - デバイス管理拡張パッケージを削除する:
   `DELETE https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
 
-デバイス管理拡張パッケージ用 REST API について詳しくは、[{{site.data.keyword.iot_short_notm}} API V2](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} のドキュメントを参照してください。
+デバイス管理拡張パッケージ用 REST API について詳しくは、[{{site.data.keyword.iot_short_notm}} API V2 ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} の資料を参照してください。
 
 
 ## カスタム・デバイス管理アクションのサポート
@@ -150,7 +163,7 @@ lastupdated: "2016-09-05"
 
 ```
 
-デバイス管理要求について詳しくは、[デバイス管理プロトコル](index.html){: new_window}を参照してください。
+デバイス管理要求について詳しくは、[デバイス管理プロトコル](index.html)を参照してください。
 
 ## カスタム・デバイス管理アクションの開始
 {: #initiating_custom_dm_actions}
@@ -450,3 +463,9 @@ lastupdated: "2016-09-05"
 - 特定のデバイス管理要求の状況を表示するには、以下のようにします。
 
 `curl -XGET -H "Content-Type: application/json" -u "<apiKey>:<apiToken>" https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/requests/<requestId>`
+
+## デバイス管理拡張に関するレシピ
+
+以下のレシピには、デバイス管理拡張の操作に必要なフローが示されています。
+
+- [Device Management Extension Packages in WIoT Platform ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/device-management-extension-packages-in-wiot-platform/){: new_window} レシピでは、管理対象デバイスがデバイス管理拡張アクションを受け取って操作できるように、デバイスを {{site.data.keyword.iot_short}} に登録する方法について説明します。レシピのコード・サンプルは、Python Client Library を使用して記述されています。

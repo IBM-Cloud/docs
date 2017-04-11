@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -60,8 +60,8 @@ at java.lang.reflect.Method.invoke(Unknown Source)
 
 使用討論區提問時，請標記您的問題，以便 {{site.data.keyword.Bluemix_notm}} 開發團隊能看到它。
 
-* 如果您有 {{site.data.keyword.objectstorageshort}} 的相關技術問題，請將問題張貼到 [Stack Overflow](http://stackoverflow.com/search?q=object-storage+ibm-bluemix){: new_window}，並使用 "ibm-bluemix" 及 "object-storage" 來標記您的問題。
-* 若是服務及開始使用指示的相關問題，請使用 [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/objectstorage/?smartspace=bluemix){: new_window} 討論區。請併入 "objectstorage" 及 "bluemix" 標籤。
+* 如果您有 {{site.data.keyword.objectstorageshort}} 的相關技術問題，請將問題張貼到 <a href="http://stackoverflow.com/search?q=object-storage+ibm-bluemix" target="_blank">Stack Overflow <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示"></a> ，並使用 "ibm-bluemix" 及 "object-storage" 來標記您的問題。
+* 若是服務及開始使用指示的相關問題，請使用 <a href="https://developer.ibm.com/answers/topics/objectstorage/?smartspace=bluemix" target="_blank">IBM developerWorks dW Answers <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示"></a> 討論區。請包含 "objectstorage" 及 "bluemix" 標籤。
 
 如需使用討論區的詳細資料，請參閱[取得協助](/docs/support/index.html#getting-help)。
 

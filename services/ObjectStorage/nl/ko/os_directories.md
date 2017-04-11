@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -24,8 +24,8 @@ Swift에는 실제 디렉토리 구조가 없지만 이름을 지정하여 디�
 2. 다음 명령을 실행하여 디렉토리를 컨테이너에 업로드하십시오.
 
     ```
-swift upload <container_name> <directory_name>
-```
+    swift upload <container_name> <directory_name>
+    ```
     {: pre}
 
 ## CLI로 디렉토리 다운로드
@@ -34,6 +34,6 @@ swift upload <container_name> <directory_name>
 1. 다음 명령을 실행하여 디렉토리를 다운로드하십시오. 
 
     ```
-swift download <container_name> --prefix <directory>
-```
+    swift download <container_name> --prefix <directory>
+    ```
     {: pre}

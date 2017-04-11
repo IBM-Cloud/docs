@@ -1,16 +1,17 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-29"
+  years: 2016, 2017
+lastupdated: "2017-03-01"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
 
 
 <!-- {{site.data.keyword.iotinsurance_full}}  {{site.data.keyword.iotinsurance_short}}  -->
@@ -23,10 +24,10 @@ La seguente tabella mostra i database {{site.data.keyword.iotinsurance_short}} a
 
 *Tabella 1: Database {{site.data.keyword.iotinsurance_short}}*
 
-Nomi database | Frequenza di modifica| Motivo della modifica | Richiede il backup | Commenti
+Nomi database| Frequenza di modifica| Motivo della modifica | Richiede il backup | Commenti
 ------------- | -------------| -------------| -------------| -------------
 favorites|Gestione|Nuova azione dell'amministratore|SÍ|-
-Devices|Gestione|Aggiunti o rimossi nuovi dispositivi o utenti|SÍ| Il trasformatore genera dinamicamente una tabella nella memoria dal provider del dispositivo. Per i gateway collegati direttamente, questa tabella archivia gli utenti del dispositivo.
+Devices|Gestione|Aggiunti o rimossi nuovi dispositivi o utenti|SÍ| Il trasformatore genera dinamicamente una tabella nella memoria e la compila con i dati dal provider del dispositivo. Per i gateway collegati direttamente, questa tabella archivia i dispositivi.
 hazardevents|Casuale|Individuato nuovo evento scudo|SÍ|-
 Jscode|Gestione|Distribuito nuovo codice JS per gl iscudi|SÍ*| L'amministratore può facoltativamente saltare il backup e distribuire una nuova versione del codice JS.
 Promotions|Gestione|Aggiunta nuova promozione|SÍ|-
@@ -40,7 +41,7 @@ Per eseguire il backup dei dati {{site.data.keyword.iotinsurance_short}} esegui 
 
 ## Creazione di un'istanza {{site.data.keyword.cloudant}} di replica
 {: #createinstance}
-Crea un'istanza {{site.data.keyword.cloudant}} di replica utilzzando le [Istruzioni per la replica {{site.data.keyword.cloudant}}](https://docs.cloudant.com/replication.html). Per scopi di ripristino di emergenza, crea la replica in una posizione differente rispetto al servizio {{site.data.keyword.iotinsurance_short}} originale. Ad esempio, se la tua istanza originale è a Dallas, la replica potrebbe essere a Londra.
+Crea un'istanza {{site.data.keyword.cloudant}} di replica utilzzando le [{{site.data.keyword.cloudant}}Istruzioni per la replica ![icona link esterno](../../icons/launch-glyph.svg)](https://docs.cloudant.com/replication.html). Per scopi di ripristino di emergenza, crea la replica in una posizione differente rispetto al servizio {{site.data.keyword.iotinsurance_short}} originale. Ad esempio, se la tua istanza originale è a Dallas, la replica potrebbe essere a Londra.
 
 ## Individua le credenziali e gli URL
 {: #locate_credentials}
@@ -48,7 +49,7 @@ Individua le credenziali e gli URL per la tua istanza {{site.data.keyword.clouda
 1. Apri il servizio {{site.data.keyword.cloudant}}.
 2. Fai clic sulla scheda **Credenziali del servizio** ubicata al di sotto del nome del servizio.
 3. Fai clic su **Visualizza credenziali**.
-4. Prendi nota dell'ID utente e della password. 
+4. Prendi nota dell'ID utente e della password.
 
 ## Creazione di nuove attività di replica
 {: #create_replication}
@@ -70,7 +71,7 @@ Crea un'attività di replica per ogni database di cui si deve eseguire il backup
 
 8. Fai clic su **Replica i dati**.  
 
-9. (facoltativo) Poiché le attività di replica successive sovrascrivono i dati precedenti, considera di esportare i dati in un file CSV.  Per le istruzioni, consulta [Esporta Cloudant JSON come CSV, RSS o iCal](https://developer.ibm.com/clouddataservices/2015/09/22/export-cloudant-json-as-csv-rss-or-ical/).
+9. (facoltativo) Poiché le attività di replica successive sovrascrivono i dati precedenti, considera di esportare i dati in un file CSV.  Per le istruzioni, consulta [Esporta Cloudant JSON come CSV, RSS o iCal ![icona link esterno](../../icons/launch-glyph.svg)](https://developer.ibm.com/clouddataservices/2015/09/22/export-cloudant-json-as-csv-rss-or-ical/){: new_window}.
 
 10. Ripeti questi passi per ogni database.
 
@@ -78,7 +79,7 @@ Crea un'attività di replica per ogni database di cui si deve eseguire il backup
 {: #run_backup}
 Dopo aver creato le attività di replica, puoi rieseguire i backup in qualsiasi momento.
 1. Apri la tua console {{site.data.keyword.Bluemix_notm}}.
-2. Apri il tuo servizio {{site.data.keyword.cloudant}} originale. 
+2. Apri il tuo servizio {{site.data.keyword.cloudant}} originale.
 3. Fai clic su **Avvia** per aprire il dashboard {{site.data.keyword.cloudant}}.
 4. Nel menu, fai clic su **Replica** e seleziona quindi **Tutte le repliche**.
 5. Seleziona tutti i database e riesegui ogni replica. Puoi controllare lo stato dei lavori in corso facendo clic su **Repliche attive**.
@@ -92,26 +93,6 @@ Puoi ripristinare i dati da un database replicato o caricando un file CSV salvat
 3. Rirpistina i dati in uno dei seguenti modi:
   - Carica direttamente i dati da un file di backup CSV nell'istanza Cloudant principale
   - Crea un'attività di replica che dispone di un database replicato come l'origine e il database originale come la destinazione. Questa attività sposta i dati replicati nel database originale.
-4. Esegui i seguenti script per ricreare i documenti di progettazione e ripristinare l'integrità di riferimento.  Gli script sono ubicati in [{{site.data.keyword.iotinsurance_short}} API examples GitHub site](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/)
+4. Esegui i seguenti script per ricreare i documenti di progettazione e ripristinare l'integrità di riferimento.  Gli script sono ubicati in [{{site.data.keyword.iotinsurance_short}} API examples GitHub site ![icona link esterno](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/){: new_window}.
   - iot4i-api/wearable-framework/auto-create/create.sh - Questo script ricrea i documenti di progetttazioni all'interno di {{site.data.keyword.cloudant}}.
   - iot4i-api/wearable-framework/health/check-relations - Questo script ristabilisce l'integrità di riferimento. Ad esempio, lo script correggere un caso in cui uno scudo viene eliminato ma l'associazione a un utente ancora esiste.
-
-
-# Link correlati
-{: #rellinks}
-
-## Esercitazioni ed esempi
-{: #samples}
-* [Sample mobile app code on GitHub](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## Riferimento API
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API Examples](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-
-## Link correlati
-{: #general}
-* [Documentazione {{site.data.keyword.iot_full}}](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [Developer support forum](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-* [Stack overflow support forum](http://stackoverflow.com/questions/tagged/ibm-bluemix)

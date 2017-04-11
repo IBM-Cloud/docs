@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-14"
+  years: 2015, 2017
+lastupdated: "2016-11-17"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -58,11 +58,16 @@ Une passerelle peut publier des événements elle-même ou pour le compte de n'i
 |Terminal 1 |monterminal |terminal1 |
 
 -   La passerelle 1 peut publier ses propres événements de statut :
+      
     `iot-2/type/mygateway/id/gateway1/evt/status/fmt/json`
 -   La passerelle 1 peut publier ses propres événements de statut pour le compte du terminal 1 :
+      
     `iot-2/type/mydevice/id/device1/evt/status/fmt/json`
 
 **Important :** La taille du contenu du message ne peut pas être supérieure à 131072 octets. Les messages dont la taille est plus grande sont rejetés.
+
+### Messages conservés
+Les organisations {{site.data.keyword.iot_short_notm}} ne sont pas autorisées à publier des messages MQTT conservés. Si une passerelle envoie un message conservé, le service {{site.data.keyword.iot_short_notm}} écrase l'indicateur de message conservé lorsqu'il a pour valeur true et traite le message comme si l'indicateur de message conservé avait pour valeur false.
 
 ## Abonnement à des commandes
 {: #subscribing_cmds}
@@ -83,10 +88,13 @@ Le caractère générique `+` MQTT sera utilisé pour `typeId`, `deviceId`, `com
 
 
 -   La passerelle 1 peut s'abonner à des commandes qui lui sont envoyées :
+      
     `iot-2/type/mygateway/id/gateway1/cmd/+/fmt/+`
 -   La passerelle 1 peut s'abonner à des commandes envoyées au terminal 1 :
+      
     `iot-2/type/mydevice/id/device1/cmd/+/fmt/+`
 -   La passerelle 1 peut s'abonner à n'importe quelle commande envoyée aux  terminaux de type `mydevice` :
+       
      `iot-2/type/mydevice/id/+/cmd/+/fmt/+`
 
 **Important :** Les sessions persistantes MQTT spécifiées sous la forme `cleansession=false` ne recherchent pas les terminaux qui se connectent à des passerelles. Si un terminal se connecte à la passerelle A, puis à la passerelle B, il ne reçoit aucun des messages qui ont été publiés sur la passerelle A pour ce terminal alors qu'il était déconnecté. Une passerelle possède le client et l'abonnement MQTT, mais pas les terminaux qui sont connectés à la passerelle.
@@ -154,7 +162,7 @@ La prise en charge de la gestion du cycle de vie des terminaux est facultative. 
 ### Niveaux de qualité de service et option 'clean session'
 {: #quality_service}
 
-Les passerelles gérées peuvent publier des messages dotés du niveau de qualité de service (QoS) 0 ou 1. Les messages de la passerelle ne doivent pas être des messages conservés.
+Les passerelles gérées peuvent publier des messages dotés du niveau de qualité de service (QoS) 0 ou 1.
 
 Les messages dotés du niveau QoS=0 peuvent être supprimés et ne sont pas conservés après le redémarrage du serveur de messagerie. Les messages dotés du niveau QoS=1 peuvent être placés en file d'attente et ne sont pas conservés après le redémarrage du serveur de messagerie. La durabilité de l'abonnement détermine si une demande a été placée en file d'attente. Le paramètre `cleansession` de la connexion qui a effectué l'abonnement détermine la durabilité de l'abonnement.  
 

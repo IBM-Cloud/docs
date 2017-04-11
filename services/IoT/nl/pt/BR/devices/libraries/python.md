@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-27"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -24,7 +24,7 @@ Use as informações e exemplos que são fornecidos para iniciar o desenvolvimen
 ## Fazendo download de cliente e recursos do Python
 {: #python_client_download}
 
-Para acessar o cliente Python para o {{site.data.keyword.iot_short_notm}} e outros recursos disponíveis, acesse o repositório [iot-python](https://github.com/ibm-watson-iot/iot-python) no GitHub e conclua as instruções de instalação.
+Para acessar o cliente Python para o {{site.data.keyword.iot_short_notm}} e outros recursos disponíveis, acesse o repositório [iot-python ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-watson-iot/iot-python){: new_window} no GitHub e conclua as instruções de instalação.
 
 ## Construtor
 {: #constructor}
@@ -151,7 +151,7 @@ client.commandCallback = myCommandCallback
 ## Suporte ao formato de mensagem personalizada
 {: #custom_message_format}
 
-Por padrão, o formato da mensagem está configurado como `json`, o que significa que a biblioteca suporta a codificação e a decodificação de objetos do dicionário Python no formato JSON. Quando o formato da mensagem é configurado como `json-iotf`, a mensagem é codificada em conformidade com a especificação de carga útil JSON do {{site.data.keyword.iot_short_notm}}. Para incluir suporte para seus próprios formatos de mensagem customizados, consulte a [Amostra do Formato de mensagem customizado](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat) no GitHub.
+Por padrão, o formato da mensagem está configurado como `json`, o que significa que a biblioteca suporta a codificação e a decodificação de objetos do dicionário Python no formato JSON. Quando o formato da mensagem é configurado como `json-iotf`, a mensagem é codificada em conformidade com a especificação de carga útil JSON do {{site.data.keyword.iot_short_notm}}. Para incluir suporte para seus próprios formatos de mensagem customizados, veja a [Amostra do Formato de mensagem customizado ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat){: new_window} no GitHub.
 
 Ao criar um módulo codificador customizado, deve-se registrá-lo no cliente do dispositivo conforme esboçado no exemplo a seguir:
 

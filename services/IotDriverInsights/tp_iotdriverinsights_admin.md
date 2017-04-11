@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-25"
+  years: 2016, 2017
+lastupdated: "2017-03-03"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,6 @@ lastupdated: "2016-10-25"
 {: #tp_iotdriverinsights_admin}
 
 To administer the Trajectory Pattern Analysis service, use the administration console on the {{site.data.keyword.Bluemix_notm}} dashboard. From the administration console, you can configure parameters for Trajectory Pattern Analysis and manage the data that is stored in the service. You can also view the tenant information and reset the tenant password.
-
 {:shortdesc}
 
 ## Starting the administration console

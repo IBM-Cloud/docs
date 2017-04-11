@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-18"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -15,13 +15,13 @@ lastupdated: "2016-10-18"
 # 针对设备开发者的 Java
 {: #java}
 
-您可以使用 Java 来构建和定制设备，以用于在 {{site.data.keyword.iot_full}} 上与您的组织进行交互。提供的 {{site.data.keyword.iot_short_notm}} Java 客户机库、文档和示例可帮助您开始进行设备开发。
+您可以使用 Java™ 来构建和定制设备，以用于在 {{site.data.keyword.iot_full}} 上与您的组织进行交互。提供的 {{site.data.keyword.iot_short_notm}} Java 客户机库、文档和示例可帮助您开始进行设备开发。
 {:shortdesc}
 
 ## 下载 Java 客户机和资源
 {: #java_client_download}
 
-要访问 {{site.data.keyword.iot_short_notm}} 的 Java 客户机库和样本，请转至 GitHub 中的 [iot-java](https://github.com/ibm-watson-iot/iot-java) 存储库，并完成安装指示信息。
+要访问 {{site.data.keyword.iot_short_notm}} 的 Java 客户机库和样本，请转至 GitHub 中的 [iot-java ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/iot-java){: new_window} 存储库，并完成安装指示信息。
 
 ## 构造方法
 {: #constructor}
@@ -40,6 +40,7 @@ lastupdated: "2016-10-18"
 |`MaxInflightMessages`  |设置连接的最大未完成消息数。缺省值为 100。|
 |`Automatic-Reconnect`  |true 或 false 值，要自动将处于断开连接状态的设备重新连接到 {{site.data.keyword.iot_short_notm}} 时是必需的。缺省值为 false。|
 |`Disconnected-Buffer-Size`|客户机处于断开连接状态时可以存储在内存中的最大消息数。缺省值为 5000。|
+|`WebSocket`|true 或 false 值，仅当要使用与 {{site.data.keyword.iot_short_notm}} 的 websocket 连接时是必需的。缺省值为 false。|
 
 **注：**要以持久预订方式连接设备，请将 `clean-session` 设置为 `false`。有关干净会话的更多信息，请参阅 [MQTT 文档](../../reference/mqtt/index.html#subscription-buffers-and-clean-session)的“预订缓冲区和干净会话”部分。
 
@@ -406,4 +407,4 @@ public class RegisteredDeviceCommandSubscribe {
 ## 样本
 {: #samples}
 
-有关使用 {{site.data.keyword.iot_short_notm}} Java 客户机库开发的设备和设备管理样本的列表，请参阅 [iot-device-samples GitHub 存储库](https://github.com/ibm-messaging/iot-device-samples/tree/master/java)。
+有关使用 {{site.data.keyword.iot_short_notm}} Java 客户机库开发的设备和设备管理样本的列表，请参阅 [iot-device-samples GitHub 存储库 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/iot-device-samples/tree/master/java){: new_window}。

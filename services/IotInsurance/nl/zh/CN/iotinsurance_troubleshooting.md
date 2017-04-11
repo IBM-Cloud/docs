@@ -1,16 +1,17 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-27"
-
+  years: 2016, 2017
+lastupdated: "2017-03-08"
 ---
+
 <!-- Common attributes used in the template are defined as follows: -->
-{:tsSymptoms: .tsSymptoms}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # {{site.data.keyword.iotinsurance_short}} 故障诊断
 {: #ts}
@@ -55,33 +56,14 @@ lastupdated: "2016-10-27"
 
 如果您在使用 {{site.data.keyword.iotinsurance_full}} 时遇到任何问题或疑问，可以检查 {{site.data.keyword.Bluemix_notm}}，或者通过论坛搜索信息或进行提问来获取帮助。您还可以提交支持凭单。
 
-* 您可以通过转至 [Bluemix 状态页面](https://developer.ibm.com/bluemix/support/#status){:new_window}来检查 {{site.data.keyword.Bluemix_notm}} 是否可用。
+- 您可以通过转至 [Bluemix 状态页面 ![外部链接图标](../../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/support/#status){:new_window} 来检查 {{site.data.keyword.Bluemix_notm}} 是否可用。
 
-* 可以查看论坛以了解是否有其他用户遇到相同问题。使用论坛进行提问时，请对问题进行标记，以便 {{site.data.keyword.Bluemix_notm}} 开发团队能看到您的问题。
+- 可以查看论坛以了解是否有其他用户遇到相同问题。使用论坛进行提问时，请对问题进行标记，以便 {{site.data.keyword.Bluemix_notm}} 开发团队能看到您的问题。
   <!--Insert the appropriate Stack Overflow tag for your service for <service_keyword> in URL and text below:  -->
-* 有关使用 {{site.data.keyword.iotinsurance_short}} 开发或部署应用程序的技术问题，请将问题发布到 [Stack Overflow](http://stackoverflow.com/search?q=iot-insurance+ibm-bluemix){:new_window} 上，并使用“ibm-bluemix”和“iot-for-insurance”标注问题。
+- 有关使用 {{site.data.keyword.iotinsurance_short}} 开发或部署应用程序的技术问题，请将问题发布到 [Stack Overflow ![外部链接图标](../../icons/launch-glyph.svg)](http://stackoverflow.com/search?q=iot-insurance+ibm-bluemix){:new_window} 上，并使用“ibm-bluemix”和“iot-for-insurance”标注问题。
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
-* 有关服务和入门指示信息的问题，请使用 [IBM developerWorks dWAnswers](https://developer.ibm.com/answers/topics/iot-insurance/?smartspace=bluemix){:new_window} 论坛。请加上“iot-for-insurance”和“bluemix”标记。
+- 有关服务和入门指示信息的问题，请使用 [IBM developerWorks dWAnswers ![外部链接图标](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/topics/iot-insurance/?smartspace=bluemix){:new_window} 论坛。请加上“iot-for-insurance”和“bluemix”标记。
 
 请参阅[获取帮助](https://www.{DomainName}/docs/support/index.html#getting-help)，以获取有关使用论坛的更多详细信息。
 
-* 如果仍不能解决问题，可以提交 IBM 支持凭单。有关提交 IBM 支持凭单或者有关支持级别和凭单严重性的信息，请参阅[联系支持人员](https://www.{DomainName}/docs/support/index.html#contacting-support)。
-
-
-# 相关链接
-{: #rellinks}
-
-## 教程和样本
-{: #samples}
-* [GitHub 上的样本移动应用程序代码](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## API 参考
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API 示例](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## 相关链接
-{: #general}
-* [{{site.data.keyword.iot_full}}文档](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [开发人员支持论坛](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-  * [堆栈溢出支持论坛](http://stackoverflow.com/questions/tagged/ibm-bluemix)
+- 如果仍不能解决问题，可以提交 IBM 支持凭单。有关提交 IBM 支持凭单或者有关支持级别和凭单严重性的信息，请参阅[联系支持人员](../support/index.html#contacting-support)。

@@ -16,7 +16,7 @@
    width="501"
    height="340"
    viewBox="0 0 501 340"
-   sodipodi:docname="IoT4E_add_washer.svg">
+   sodipodi:docname="iot4e_add_washer.svg">
   <metadata
      id="metadata4930">
     <rdf:RDF>
@@ -25,7 +25,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -41,16 +41,16 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1028"
+     inkscape:window-height="1015"
      id="namedview4926"
      showgrid="false"
      inkscape:zoom="1.8404536"
-     inkscape:cx="250.5"
+     inkscape:cx="125.25914"
      inkscape:cy="168.46319"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer4" />
+     inkscape:current-layer="svg4924" />
   <image
      width="501"
      height="340"
@@ -71,14 +71,7 @@
      y="24.937744"
      x="66.306923"
      id="image4958"
-     xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAigAAABNCAIAAAADyQgSAAAAA3NCSVQICAjb4U/gAAABNElEQVR4
-nO3VMQEAIAzAMMC/5+GiHCQK+nXPzAKAynkdAMBfjAeAlPEAkDIeAFLGA0DKeABIGQ8AKeMBIGU8
-AKSMB4CU8QCQMh4AUsYDQMp4AEgZDwAp4wEgZTwApIwHgJTxAJAyHgBSxgNAyngASBkPACnjASBl
-PACkjAeAlPEAkDIeAFLGA0DKeABIGQ8AKeMBIGU8AKSMB4CU8QCQMh4AUsYDQMp4AEgZDwAp4wEg
-ZTwApIwHgJTxAJAyHgBSxgNAyngASBkPACnjASBlPACkjAeAlPEAkDIeAFLGA0DKeABIGQ8AKeMB
-IGU8AKSMB4CU8QCQMh4AUsYDQMp4AEgZDwAp4wEgZTwApIwHgJTxAJAyHgBSxgNAyngASBkPACnj
-ASBlPACkjAeAlPEAkDIeAFIXjMQDl+k1k1oAAAAASUVORK5CYII=
-"
+     xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAigAAABNCAIAAAADyQgSAAAAA3NCSVQICAjb4U/gAAABNElEQVR4 nO3VMQEAIAzAMMC/5+GiHCQK+nXPzAKAynkdAMBfjAeAlPEAkDIeAFLGA0DKeABIGQ8AKeMBIGU8 AKSMB4CU8QCQMh4AUsYDQMp4AEgZDwAp4wEgZTwApIwHgJTxAJAyHgBSxgNAyngASBkPACnjASBl PACkjAeAlPEAkDIeAFLGA0DKeABIGQ8AKeMBIGU8AKSMB4CU8QCQMh4AUsYDQMp4AEgZDwAp4wEg ZTwApIwHgJTxAJAyHgBSxgNAyngASBkPACnjASBlPACkjAeAlPEAkDIeAFLGA0DKeABIGQ8AKeMB IGU8AKSMB4CU8QCQMh4AUsYDQMp4AEgZDwAp4wEgZTwApIwHgJTxAJAyHgBSxgNAyngASBkPACnj ASBlPACkjAeAlPEAkDIeAFIXjMQDl+k1k1oAAAAASUVORK5CYII= "
      style="image-rendering:optimizeQuality"
      preserveAspectRatio="none"
      height="37.879208"
@@ -99,7 +92,7 @@ ASBlPACkjAeAlPEAkDIeAFIXjMQDl+k1k1oAAAAASUVORK5CYII=
   </g>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
      x="244.68317"
      y="49.830318"
      id="text4614-7"
@@ -108,7 +101,7 @@ ASBlPACkjAeAlPEAkDIeAFIXjMQDl+k1k1oAAAAASUVORK5CYII=
        x="244.68317"
        y="49.830318"
        id="tspan6489-0"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15px;font-family:Arial;-inkscape-font-specification:'Arial Bold'">다음으로, 시뮬레이션된 새 세탁기를 선택하거나 추가하십시오.</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%;stroke:#000000;stroke-opacity:1;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none">다음으로, 시뮬레이션된 새 세탁기를 선택하거나 추가하십시오.</tspan></text>
   <image
      y="74.38208"
      x="166.28227"
@@ -124,16 +117,16 @@ ASBlPACkjAeAlPEAkDIeAFIXjMQDl+k1k1oAAAAASUVORK5CYII=
      inkscape:label="text">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="244.59663"
-       y="82.690964"
+       y="78.690964"
        id="text4614"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          x="244.59663"
-         y="82.690964"
+         y="78.690964"
          id="tspan6489"
-         style="font-size:10px">최대 5개까지 세탁기를 추가할 수 있습니다.</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle">최대 5개까지 세탁기를 추가할 수 있습니다.</tspan></text>
     <g
        id="g5900"
        transform="translate(0,-18)">
@@ -142,9 +135,9 @@ ASBlPACkjAeAlPEAkDIeAFIXjMQDl+k1k1oAAAAASUVORK5CYII=
          id="text4614-7-1"
          y="186.14461"
          x="81.828247"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
          xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:'Arial Bold'"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%;stroke:#000000;stroke-opacity:1;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
            id="tspan6489-0-2"
            y="186.14461"
            x="83.388306"
@@ -154,9 +147,9 @@ ASBlPACkjAeAlPEAkDIeAFIXjMQDl+k1k1oAAAAASUVORK5CYII=
          id="text4614-5"
          y="186.5809"
          x="271.26059"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.375px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
          xml:space="preserve"><tspan
-           style="font-size:9.375px"
+           style="font-size:9.375px;-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%;"
            id="tspan6489-8"
            y="186.5809"
            x="271.26059"

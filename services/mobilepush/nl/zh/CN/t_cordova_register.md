@@ -55,7 +55,7 @@ MFPPush.registerDevice({}, success, failure);
 可使用 JSON.parse 访问 JavaScript 中成功响应参数的内容：**var token = JSON.parse(response).token**
 
 
-可用键如下所示：```token```、```userId`` 和 ```deviceId``。
+可用键如下所示：`token`、`userId` 和 `deviceId`。
 
 以下 JavaScript 代码片段显示如何初始化 Bluemix Mobile Services 推送客户机 SDK，向 Push Notification Service 注册设备以及侦听推送通知。将此代码放入 JavaScript 文件中。
 
@@ -86,17 +86,15 @@ onDeviceReady: function() {
      var settings = {
          ios: {
 alert: true,
-             badge: true,
-             sound: true
-         }   
-     };
+	       badge: true,
+	       sound: true
+	   }
+	     };
      MFPPush.registerDevice(settings, success, failure);
      var notification = function(notif){
          alert (notif.message);
      };
-     MFPPush.registerNotificationsCallback(notification);
-
- }
+     MFPPush.registerNotificationsCallback(notification);}
 ```
 
 ## Objective-C
@@ -105,12 +103,10 @@ alert: true,
 
 ```
 	// Register the device token with Bluemix Push Notification Service
-
 	- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 	  [[CDVMFPPush sharedInstance] didRegisterForRemoteNotifications:deviceToken];
 	}
 	// Handle error when failed to register device token with APNs
-
 	- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error {
 	   [[CDVMFPPush sharedInstance] didFailToRegisterForRemoteNotificationsWithError:error];
 	}

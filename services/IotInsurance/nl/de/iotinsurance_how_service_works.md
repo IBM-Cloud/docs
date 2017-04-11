@@ -1,16 +1,17 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-26"
-
+  years: 2016, 2017
+lastupdated: "2017-03-07"
 ---
 
-
-{:new_window: target="\_blank"}
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
 
 
 # Funktionsweise des Service
@@ -24,21 +25,3 @@ Ein verbundener Sensor ermittelt ein Ereignis, z. B. einen Wasserleitungsschaden
 {{site.data.keyword.iotinsurance_short}} ist für die Übergabe von Nutzdaten zu Alerts und Gefahren zwischen den Komponenten auf {{site.data.keyword.iot_full}} angewiesen. Für ein vollständiges, funktionierendes System sind Benutzer, Shields und Zuordnungen zwischen Benutzern und Shields erforderlich.
 
 ![{{site.data.keyword.iotinsurance_short}}-Prozess. Dieses Diagramm wird im Textkörper des Themas beschrieben.](images/IoT4I_process.svg "{{site.data.keyword.iotinsurance_short}}-Prozess")
-
-# Zugehörige Links
-{: #rellinks}
-
-## Lernprogramme und Beispiele
-{: #samples}
-* [Code einer mobilen Beispiel-App unter GitHub](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## API-Referenz
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}}-API](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}}-API-Beispiele](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## Zugehörige Links
-{: #general}
-* [{{site.data.keyword.iot_full}}-Dokumentation](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [Support-Forum für Entwickler](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-* [Stack Overflow-Support-Forum](http://stackoverflow.com/questions/tagged/ibm-bluemix)

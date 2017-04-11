@@ -67,16 +67,13 @@ MFPPush.registerNotificationsCallback(notification);
 
 ```
 // Handle receiving a remote notification
-funcapplication(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: ){
-
-    CDVMFPPush.sharedInstance().didReceiveRemoteNotification(userInfo)
+funcapplication(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: ){CDVMFPPush.sharedInstance().didReceiveRemoteNotification(userInfo)
 }
 ```
 
 ```
 // Handle receiving a remote notification on launch
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
 
     CDVMFPPush.sharedInstance().didReceiveRemoteNotificationOnLaunch(launchOptions)
 }

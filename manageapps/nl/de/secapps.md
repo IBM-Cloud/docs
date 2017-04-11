@@ -12,14 +12,14 @@ lastupdated: "2017-01-11"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Apps schützen
+# Apps schützen
 {: #securingapps}
 
 
 Sie können Ihre Anwendungen schützen, indem Sie SSL-Zertifikate hochladen und den Zugriff auf die Anwendungen beschränken.
 {:shortdesc}
 
-##Zertifikatssignieranforderungen erstellen
+## Zertifikatssignieranforderungen erstellen
 {: #ssl_csr}
 
 Bevor Sie die SSL-Zertifikate hochladen können, für die Sie in {{site.data.keyword.Bluemix}} berechtigt sind, müssen Sie auf
@@ -83,7 +83,7 @@ Kontoeigner, der ein Konto für eine kostenlose Testversion besitzt, dürfen Sie
 Bevor Sie Zertifikate hochladen können,
 müssen Sie eine Zertifikatssignieranforderung erstellen. Siehe [Zertifikatssignieranforderungen erstellen](#ssl_csr).
 
-^Wenn Sie eine angepasste Domäne verwenden, um das SSL-Zertifikat ordnungsgemäß bereitzustellen, müssen Sie die folgenden Regionsendpunkte verwenden, um die URL-Route zur Verfügung zu stellen, die Ihrer Organisation in Bluemix zugeordnet ist.
+Wenn Sie eine angepasste Domäne verwenden, um das SSL-Zertifikat ordnungsgemäß bereitzustellen, müssen Sie die folgenden Regionsendpunkte verwenden, um die URL-Route zur Verfügung zu stellen, die Ihrer Organisation in Bluemix zugeordnet ist.
 
   * US-South: secure.us-south.bluemix.net
   * EU-GB: secure.eu-gb.bluemix.net

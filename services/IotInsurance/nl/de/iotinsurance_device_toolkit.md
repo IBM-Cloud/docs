@@ -1,17 +1,17 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-26"
-
+  years: 2016, 2017
+lastupdated: "2017-03-08"
 ---
 
-
-
-{:new_window: target="\_blank"}
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
 
 
 # Gerätetoolkit
@@ -19,7 +19,9 @@ lastupdated: "2016-10-26"
 Mithilfe des {{site.data.keyword.iotinsurance_full}}-Gerätetoolkits können Sie Geräte, die von einem beliebigen Geräteanbieter hergestellt werden, mit Ihrem {{site.data.keyword.iotinsurance_short}}-Service verbinden.
 {:shortdesc}
 
-Geräte können Daten direkt an {{site.data.keyword.iot_full}} oder über die Cloud des Geräteanbieters senden. Sie verbinden Geräte durch die Registrierung berechtigter Benutzer und durch anschließende Einrichtung von Geräteereignisgenerierung und -empfang. Befolgen Sie für die Verbindung Ihrer Geräte die Anweisungen in den folgenden Abschnitten.
+Geräte können Daten direkt an {{site.data.keyword.iot_full}} oder über die Cloud des Geräteanbieters senden. Sie verbinden Geräte durch die Registrierung berechtigter Benutzer und durch anschließende Einrichtung von Geräteereignisgenerierung und -empfang. Eine Liste der unterstützten Geräte und Anbieter sowie Beispiele für Integrationsprozeduren finden Sie im Abschnitt zu den [unterstützten Geräten und Anbietern](iotinsurance_supporteddevices.html).
+
+Befolgen Sie für die Verbindung Ihrer Geräte die Anweisungen in den folgenden Abschnitten.
 
 ## Berechtigte Benutzer registrieren
 {: #reg_users}
@@ -33,6 +35,14 @@ Im folgenden Diagramm sehen Sie einen vereinfachten OAuth-Ablauf, bei dem {{site
 
 ### Benutzerregistrierungsablauf
 {: #user_reg_flow}
+
+Die Benutzerregistrierung variiert nach Anbieter. Informationen zum Abrufen der erforderlichen Cloudzugriffstoken sowie zu deren Registrierung in {{site.data.keyword.iotinsurance_short}} mithilfe der API finden Sie im Abschnitt zu den [unterstützten Geräten und Anbietern](iotinsurance_supporteddevices.html).
+
+#### Ablauf einer mobilen Registrierung (*veraltet*)
+
+**Hinweis**: Die mobile App unterstützt nur Wink; außerdem wurde durch Änderungen an {{site.data.keyword.amashort}}
+der in diesem Abschnitt beschriebene Ablauf einer Benutzerregistrierung inaktiviert. Dieser Ablauf ist nur für vorhandene Instanzen der Version 1.0 von {{site.data.keyword.iotinsurance_short}} verfügbar.
+
 Im folgenden Diagramm ist ein vereinfachter Benutzerregistrierungsablauf zu sehen. In diesem Beispiel wird eine neue Benutzerregistrierungsanforderung von einem Mobilgerät abgesetzt. Die Anforderung wird von {{site.data.keyword.amafull}} verarbeitet; diese Funktion stellt dem Kundenunterstützungssystem eine ID bereit und sendet die Anforderung an den API-Registrierungsservice. Der API-Registrierungsservice leitet die OAuth-Anforderung an die Cloud des Geräteanbieters weiter, der wiederum die Authentifizierung mit dem Kundenunterstützungssystem verifiziert. Die Cloud des Geräteanbieters gibt den Berechtigungscode oder das Token an den API-Registrierungsservice zurück. Der Registrierungsservice erstellt dann den Benutzer und ein eindeutiges API-Token in {{site.data.keyword.iot_short_notm}} und in {{site.data.keyword.cloudant}}.
 
 ![{{site.data.keyword.iotinsurance_short}}-Benutzerregistrierungsablauf. Dieses Diagramm wird im Textkörper des Themas beschrieben.](images/IoT4I_reg_user.svg "{{site.data.keyword.iotinsurance_short}}-Benutzerregistrierungsablauf")
@@ -45,8 +55,8 @@ Wenn das Gerät über die Cloud des Anbieters verbunden ist, werden Geräteereig
 
 Wenn das Gerät direkt mit {{site.data.keyword.iot_short_notm}} verbunden ist, wird die Verknüpfung zwischen dem Gerät und dem Benutzer in {{site.data.keyword.iot_short_notm}} gespeichert. Der {{site.data.keyword.iotinsurance_short}}-Transformator stellt diese Informationen in den Caches und versieht Geräteereignisse dann mit der Verknüpfung zum Benutzer.
 
-### Registrierungsablauf für Geräteereignisse
-{: #device_event_reg}
+### Cloud-to-Cloud - Geräteereignisablauf
+{: #device_event_flow}
 Im folgenden Diagramm ist ein vereinfachter Geräteereignisablauf zu sehen. In diesem Beispiel erkennt das Gerät einen Wasserleitungsschaden. Der {{site.data.keyword.iotinsurance_short}}-Transformator setzt in regelmäßigen Abständen einen Sendeaufruf an die Anbietercloud ab, um Änderungen am Gerätestatus abzurufen. Wird das Ereignis erkannt, sendet der Transformator es an {{site.data.keyword.iot_short_notm}}. Die {{site.data.keyword.iotinsurance_short}}-Shield-Engine analysiert das Ereignis und generiert anschließend einen Alert und speichert den Alert in {{site.data.keyword.cloudant}}. {{site.data.keyword.iot_short_notm}} leitet den Alert zur Analyse an die {{site.data.keyword.iotinsurance_short}}-Aktionsengine weiter. Die Aktionsengine überträgt den Alert dann mit {{site.data.keyword.mobilepushshort}} per Push-Operation an die mobile App des Kunden.  
 
 ![{{site.data.keyword.iotinsurance_short}}-Registrierungsablauf für Geräteereignisse. Dieses Diagramm wird im Textkörper des Themas beschrieben.](images/IoT4I_device_reg.svg "{{site.data.keyword.iotinsurance_short}}Registrierungsablauf für Geräteereignisse")
@@ -65,7 +75,7 @@ Pseudofunktion | Beschreibung
 `getProviderDevices(providerUserToken)` | Ruft die REST-API des Geräteproviders auf, um den Status von Benutzergeräten anzufordern, die das Trägertoken des Benutzers verwenden.
 `findDevicesToAdd(), findDevicesToDel(), findDevicesToUpdate()` | Sucht nach neuen Geräten, nach gelöschten und geänderten Geräten, und zwar durch Vergleichen der registrierten Geräte mit Geräten, die derzeit beim Geräteprovider existieren.
 ` syncData()` | Synchronisiert die Benutzergeräte durch Löschen alter Geräte, durch Hinzufügen neuer Geräte und durch Aktualisieren geänderter Geräte.  
- `notifyIoTP()` | Die IoT Platform über Änderungen wie MQTT-Ereignisse informieren.
+ `notifyIoTP()` | Die {{site.data.keyword.iot_short_notm}} über Änderungen wie MQTT-Ereignisse informieren.
 
 Der Transformator sendet Statusaktualisierungen an {{site.data.keyword.iot_short_notm}}, wie im folgenden Codebeispiel dargestellt.
 ```
@@ -148,7 +158,9 @@ dbhelper.bulkDelDevices(userDevices, function (err, results) {
 {: #deploy_new_transformer}
 Sie können eine neue Transformatorinstanz in derselben Organisation und im selben Bereich bereitstellen, in dem auch {{site.data.keyword.iotinsurance_short}} bereitgestellt ist.  
 
-Bevor Sie beginnen, müssen Sie die Cloud Foundry-Befehlszeilenschnittstelle herunterladen und installieren. Verwenden Sie die Cloud Foundry-Befehlszeilenschnittstelle, um Serviceinstanzen für {{site.data.keyword.iot_short_notm}} zu ändern und bereitzustellen. Weitere Informationen finden Sie im Thema zum [Starten der Codierung mit der CF-Befehlszeilenschnittstelle](https://www.ng.bluemix.net/docs/#starters/install_cli.html).
+**Hinweis:** Informationen und Unterstützung zur Bereitstellung einer neuen Transformerinstanz finden Sie im Abschnitt zur [Kontaktaufnahme mit dem Support](../support/index.html#contacting-support).
+
+Bevor Sie beginnen, müssen Sie die Cloud Foundry-Befehlszeilenschnittstelle herunterladen und installieren. Verwenden Sie die Cloud Foundry-Befehlszeilenschnittstelle, um Serviceinstanzen für {{site.data.keyword.iot_short_notm}} zu ändern und bereitzustellen. Weitere Informationen finden Sie im Thema zum [Starten der Codierung mit der CF-Befehlszeilenschnittstelle ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://www.ng.bluemix.net/docs/#starters/install_cli.html){:new_window}.
 
 1. Wechseln Sie in der Befehlszeilenschnittstelle mithilfe des folgenden Befehls zum `Verzeichnis mit Quellen und YML-Datei des Bereitstellungsdeskriptors`:
 ```
@@ -180,7 +192,7 @@ $ cf stop iot4i-dev-transformer
        APIDOMAIN: iot4insurance-api-v.mybluemix.net
        NODE_MODULES_CACHE: false
   ```
-6. Übertragen Sie mithilfe des folgenden Befehls Ihren Transformator per Push-Operation an {{site.data.keyword.bluemix_notm}} und ersetzen Sie `newtransformer` durch den Namen Ihrer Bereitstellungsdeskriptordatei:
+6. Übertragen Sie mithilfe des folgenden Befehls Ihren Transformator per Push-Operation an {{site.data.keyword.Bluemix_notm}} und ersetzen Sie `newtransformer` durch den Namen Ihrer Bereitstellungsdeskriptordatei:
   ```
   $ cf push -f newtransformer.yml
   ```
@@ -188,21 +200,3 @@ $ cf stop iot4i-dev-transformer
   ```
   $ cf logs iot4i-dev-transformer
   ```
-
-# Zugehörige Links
-{: #rellinks}
-
-## Lernprogramme und Beispiele
-{: #samples}
-* [Code einer mobilen Beispiel-App unter GitHub](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## API-Referenz
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}}-API](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}}-API-Beispiele](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## Zugehörige Links
-{: #general}
-* [{{site.data.keyword.iot_full}}-Dokumentation](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [Support-Forum für Entwickler](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-* [Stack Overflow-Support-Forum](http://stackoverflow.com/questions/tagged/ibm-bluemix)

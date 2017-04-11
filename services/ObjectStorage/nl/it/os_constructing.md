@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -12,15 +12,17 @@ lastupdated: "2017-01-17"
 {:pre: .pre}
 
 
-# Constructing your {{site.data.keyword.objectstorageshort}} URL to use the Swift REST API
+# Creazione del tuo URL {{site.data.keyword.objectstorageshort}} per utilizzare l'API REST Swift
 
-You can use the Swift REST API with a command-line client interface, such as cURL, or call the API from your application.
+Puoi utilizzare l'API REST Swift con un'interfaccia client di riga di comando, come cURL, oppure richiamare l'API dalla tua applicazione.
 {: shortdesc}
 
 
-For a comprehensive list of the {{site.data.keyword.objectstorageshort}} REST API options and examples, see the [OpenStack Swift API complete reference](http://developer.openstack.org/api-ref-objectstorage-v1.html).
+Per un elenco completo delle opzioni e degli esempi dell'API REST {{site.data.keyword.objectstorageshort}}, consulta la <a href="http://developer.openstack.org/api-ref-objectstorage-v1.html" target="_blank">guida di riferimento completa per l'API Swift OpenStack. <img src="../../icons/launch-glyph.svg" alt="icona link esterno"></a>
 
-Before you can compose your URL, you must [authenticate](/docs/services/ObjectStorage/os_authenticate.html) your service instance with Keystone. Be sure to note your catalog response. It will look similar to the following example.
+
+
+Prima di poter comporre il tuo URL, devi [autenticare](/docs/services/ObjectStorage/os_authenticate.html) la tua istanza del servizio con Keystone. Assicurati di prendere nota della tua risposta del catalogo. Sarà simile al seguente esempio.
 
 ```
 {
@@ -34,8 +36,8 @@ Before you can compose your URL, you must [authenticate](/docs/services/ObjectSt
 {: codeblock}
 
 
-Add the namespace of your container and object to the end of your {{site.data.keyword.objectstorageshort}} URL as shown in the following image.
+Aggiungi lo spazio di nomi del tuo contenitore e oggetto alla fine del tuo URL {{site.data.keyword.objectstorageshort}} come illustrato nella seguente immagine.
 
-![{{site.data.keyword.objectstorageshort}} URL pieces shown in an example image](images/Swift_URL.png)
+Parti URL ![{{site.data.keyword.objectstorageshort}} visualizzate in un'immagine di esempio](images/Swift_URL.png)
 
-Figure 1. {{site.data.keyword.objectstorageshort}} URL example
+Figura 1. Esempio URL {{site.data.keyword.objectstorageshort}}

@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-09"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -20,8 +20,8 @@ MQTT는 디바이스와 애플리케이션이 {{site.data.keyword.iot_full}}과 
 
 MQTT는 TCP/IP를 통해 실행되며 TCP/IP에 직접 코딩할 수 있지만, MQTT 프로토콜의 세부사항을 처리하는 라이브러리를 사용하도록 선택할 수도 있습니다. 사용할 수 있는 MQTT 클라이언트 라이브러리는 다양합니다. IBM은 다음 사이트에서 사용 가능한 라이브러리를 포함하여 여러 클라이언트 라이브러리의 개발 및 지원에 기여합니다.
 
-- [MQTT 커뮤니티 위키](https://github.com/mqtt/mqtt.github.io/wiki)
-- [Eclipse Paho 프로젝트](http://eclipse.org/paho/)
+- [MQTT 커뮤니티 위키 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/mqtt/mqtt.github.io/wiki){: new_window}
+- [Eclipse Paho 프로젝트 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](http://eclipse.org/paho/){: new_window}
 
 ## 버전 지원
 {: #version-support}
@@ -36,15 +36,18 @@ MQTT 클라이언트는 {{site.data.keyword.iot_short_notm}} 서비스에 스스
 
 애플리케이션과 디바이스는 서로 다른 MQTT 주제 공간에서 작동합니다. 디바이스는 디바이스 범위 주제 공간 내에서 작업하지만 애플리케이션은 전체 조직에 대한 주제 공간에 대한 전체 액세스를 가집니다. 자세한 정보는 다음 주제를 참조하십시오.
 
-- [디바이스](../../devices/mqtt.html)
-- [애플리케이션](../../applications/mqtt.html)
-- [게이트웨이](../../gateways/mqtt.html)
+- [디바이스용 MQTT 메시징](../../devices/mqtt.html)
+- [애플리케이션용 MQTT 메시징](../../applications/mqtt.html)
+- [게이트웨이용 MQTT 메시징](../../gateways/mqtt.html)
+
+### 보유 메시지
+{{site.data.keyword.iot_short_notm}}은 MQTT 메시징의 보유 메시지 기능에 대한 제한된 지원을 제공합니다. 디바이스, 게이트웨이 또는 애플리케이션에서 {{site.data.keyword.iot_short_notm}}에 전송된 MQTT 메시지에서 보유 메시지 플래그가 true로 설정된 경우에는 메시지가 비보유 메시지로서 처리됩니다. {{site.data.keyword.iot_short_notm}} 조직은 보유 메시지를 공개할 권한이 없습니다. {{site.data.keyword.iot_short_notm}} 서비스는 true로 설정된 경우 보유 메시지 플래그를 대체하며, 보유 메시지 플래그가 false로 설정된 것처럼 메시지를 처리합니다. 
 
 ## 서비스 품질(QoS) 레벨
 {: #qos-levels}
 
 MQTT 프로토콜에서는 클라이언트와 서버 간에 메시지를 전달하기 위해 세 개의 서비스 품질(QoS)을 제공합니다. 즉 "한 번 이하", "한 번 이상" 및 "정확하게 한 번"입니다.
-서비스 품질 레벨을 사용하여 이벤트와 명령을 보낼 수 있지만 사용자의 요구사항에 맞는 서비스 레벨을 신중하게 고려해야 합니다. 서비스 품질(QoS) 레벨 '2'를 선택하는 것이 레벨 '0'을 선택하는 것보다 항상 나은 것은 아닙니다. 
+서비스 품질(QoS) 레벨을 사용하여 이벤트와 명령을 전송할 수 있지만, 사용자의 요구사항에 맞는 올바른 서비스 레벨을 신중하게 고려해야 합니다. 서비스 품질(QoS) 레벨 '2'를 선택하는 것이 레벨 '0'을 선택하는 것보다 항상 나은 것은 아닙니다. 
 
 ### 한 번 이하(QoS0)
 
@@ -82,7 +85,7 @@ MQTT 정리 세션 옵션을 사용하여 구독 버퍼에 액세스하십시오
 
 ### 메시지 페이로드 형식 제한사항
 
-메시지 페이로드에는 임의의 유요한 문자열이 포함될 수 있지만, JSON("json"), 텍스트("text") 및 2진("bin") 형식이 다른 형식 유형보다 많이 사용됩니다.
+메시지 페이로드에는 임의의 유효한 문자열이 포함될 수 있지만, JSON("json"), 텍스트("text") 및 2진("bin") 형식이 다른 형식 유형보다 많이 사용됩니다.
 
 다음 표에서는 다른 형식 유형의 메시지 페이로드 제한사항을 간략하게 설명합니다.
 

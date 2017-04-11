@@ -1,22 +1,22 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-11"
+  years: 2016, 2017
+lastupdated: "2017-02-28"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
 
 
-# 分析
+# 实时 IoT 数据分析
 {: #analytics}  
 
-使用 Watson {{site.data.keyword.iot_full}} Analytics 可从设备生成的原始数据中获取所需的分析信息。  
+使用 Watson {{site.data.keyword.iot_full}} Analytics 可从设备生成的原始数据中获取所需的实时分析信息。  
 {: shortdesc}
 
 通过使用[板和卡](data_visualization.html)，可以查看表示来自一个或多个设备的数据集值的图形，以快速概览和了解设备数据。

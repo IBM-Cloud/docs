@@ -1,7 +1,7 @@
 ---
 
-Copyright :
-  Années : 2015, 2016
+copyright:
+ years: 2015, 2016
 
 ---
 
@@ -37,7 +37,7 @@ Select organization space](images/create_a_service3.jpg)
 1. Sélectionnez **IBM Push Notifications** et depuis le menu déroulant **Espace**, sélectionnez votre organisation.
 
 	![Menu déroulant Espace d'organisation](images/create_service_org.jpg)
-1. Dans la zone **Nom du service**, entrez le nom du service Notification push.
+1. Dans la zone **Nom du service**, entrez le nom du service de notifications push.
 
 1. Dans le menu **Plan sélectionné**, sélectionnez un plan et cliquez sur le bouton **CREER**.
 

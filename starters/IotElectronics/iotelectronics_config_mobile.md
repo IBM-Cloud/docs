@@ -2,16 +2,16 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-11-29"
-
+lastupdated: "2017-03-15"
 ---
-
 
 <!-- Common attributes used in the template are defined as follows: -->
 {:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # Using the mobile app
 {: #iot4e_using_mobile}
@@ -19,9 +19,7 @@ lastupdated: "2016-11-29"
 Get started with the {{site.data.keyword.iotelectronics_full}} mobile app to see how you can receive alerts, send commands, and check the status of your connected appliances by using your mobile device, such as a smartphone or tablet.
 {:shortdesc}
 
-Before you can use the mobile app, you must complete the following tasks:
-  - Deploy an instance of the {{site.data.keyword.iotelectronics}} starter in your {{site.data.keyword.Bluemix_notm}} organization. Deploying an instance of the starter automatically deploys the component applications and services of the starter.
-  - [Enable mobile communications and security](iotelectronics_config_mca.html) by configuring {{site.data.keyword.amafull}}.
+Before you can use the mobile app, you must deploy an instance of the {{site.data.keyword.iotelectronics}} starter in your {{site.data.keyword.Bluemix_notm}} organization. Deploying an instance of the starter automatically deploys the component applications and services of the starter.
 
 To get started with the mobile app, complete the following tasks:
 1. [Download the mobile app](#iot4e_downloadmobile) to your mobile device.
@@ -39,7 +37,7 @@ You can get the mobile app for iOS or Android mobile devices.
 
 To connect the mobile app to your environment and register your appliances, perform the following tasks:
 
-1. Open your {{site.data.keyword.itoelectronics}} starter app. For instructions, see [Opening the starter app](iot4ecreatingappliances.html#iot4e_openAppMain).
+1. Open your {{site.data.keyword.iotelectronics}} starter app. For instructions, see [Opening the starter app](iot4ecreatingappliances.html#iot4e_openAppMain).
 
 2. Select **Remotely control your connected appliances**.
 

@@ -1,17 +1,17 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-26"
-
+  years: 2016, 2017
+lastupdated: "2017-03-08"
 ---
 
-
-
-{:new_window: target="\_blank"}
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
 
 
 # 裝置工具箱
@@ -19,7 +19,9 @@ lastupdated: "2016-10-26"
 使用「{{site.data.keyword.iotinsurance_full}} 裝置工具箱」，即可將任何裝置供應商所製造的裝置連接至 {{site.data.keyword.iotinsurance_short}} 服務。
 {:shortdesc}
 
-裝置可以將資料直接或透過裝置供應商的雲端傳送至 {{site.data.keyword.iot_full}}。登錄授權使用者，然後設定裝置事件產生及接收，即可連接裝置。請使用下列各節中的指示來連接裝置。
+裝置可以將資料直接或透過裝置供應商的雲端傳送至 {{site.data.keyword.iot_full}}。登錄授權使用者，然後設定裝置事件產生及接收，即可連接裝置。如需支援的裝置及供應商清單，以及範例整合程序，請參閱[支援的裝置及供應商](iotinsurance_supporteddevices.html)。
+
+請使用下列各節中的指示來連接裝置。
 
 ## 登錄授權使用者
 {: #reg_users}
@@ -33,6 +35,13 @@ lastupdated: "2016-10-26"
 
 ### 使用者登錄流程
 {: #user_reg_flow}
+
+使用者登錄會視供應商而不同。若要瞭解如何取得必要的雲端存取記號，以及如何使用 API 向 {{site.data.keyword.iotinsurance_short}} 登錄它們，請參閱[支援的裝置及供應商](iotinsurance_supporteddevices.html)。
+
+#### 行動登錄流程（*已淘汰*）
+
+**附註**：行動應用程式只支援 Wink，且 {{site.data.keyword.amashort}} 的變更已停用本節所述的使用者登錄流程。此流程僅適用於 {{site.data.keyword.iotinsurance_short}} 1.0 版的現有實例。
+
 下圖顯示簡化使用者登錄流程。在此範例中，是從行動裝置提出新的使用者登錄要求。要求是由 {{site.data.keyword.amafull}} 處理，以將 ID 提供給客戶的支援系統，並將要求傳送給 API 登錄服務。API 登錄服務會將 OAuth 要求重新導向至裝置供應商的雲端，接著驗證與客戶支援系統的鑑別。裝置供應商的雲端會將授權碼或記號傳回給 API 登錄服務。登錄服務接著會在 {{site.data.keyword.iot_short_notm}} 及 {{site.data.keyword.cloudant}} 中建立使用者及唯一 API 記號。
 
 ![{{site.data.keyword.iotinsurance_short}} 使用者登錄流程。主題本文會說明本圖。](images/IoT4I_reg_user.svg "{{site.data.keyword.iotinsurance_short}} 使用者登錄流程")
@@ -45,8 +54,8 @@ lastupdated: "2016-10-26"
 
 直接將裝置連接至 {{site.data.keyword.iot_short_notm}} 時，裝置與使用者之間的鏈結會儲存在 {{site.data.keyword.iot_short_notm}} 中。{{site.data.keyword.iotinsurance_short}} Transformer 會快取該資訊，然後利用使用者鏈結來強化裝置事件。
 
-### 裝置事件登錄流程
-{: #device_event_reg}
+### 雲端對雲端 - 裝置事件流程
+{: #device_event_flow}
 下圖顯示簡化裝置事件流程。在此範例中，裝置偵測到漏水。{{site.data.keyword.iotinsurance_short}} Transformer 會定期輪詢供應商的雲端，以尋找裝置狀態的變更。偵測到事件時，轉換器會將它傳送給 {{site.data.keyword.iot_short_notm}}。{{site.data.keyword.iotinsurance_short}} 防護引擎會分析事件，然後產生警示，並將警示儲存在 {{site.data.keyword.cloudant}} 中。{{site.data.keyword.iot_short_notm}} 會將警示傳送給 {{site.data.keyword.iotinsurance_short}} 動作引擎，以進行分析。動作引擎接著會透過 {{site.data.keyword.mobilepushshort}} 將警示推送至消費者的行動應用程式。  
 
 ![{{site.data.keyword.iotinsurance_short}} 裝置事件登錄流程。主題本文會說明本圖。](images/IoT4I_device_reg.svg "{{site.data.keyword.iotinsurance_short}} 裝置事件登錄流程")
@@ -148,7 +157,9 @@ dbhelper.bulkDelDevices(userDevices, function (err, results) {
 {: #deploy_new_transformer}
 您可以在部署 {{site.data.keyword.iotinsurance_short}} 的相同組織及空間中部署新的轉換器實例。  
 
-開始之前，請下載並安裝 Cloud Foundry 指令行介面。使用 Cloud Foundry 指令行介面，以修改服務實例並將其部署至 {{site.data.keyword.iot_short_notm}}。如需相關資訊，請參閱[開始使用 cf 指令行介面撰寫程式碼](https://www.ng.bluemix.net/docs/#starters/install_cli.html)。
+**附註：**如需部署新轉換器實例的相關資訊和協助，請參閱[與支援中心聯絡](../support/index.html#contacting-support)。
+
+開始之前，請下載並安裝 Cloud Foundry 指令行介面。使用 Cloud Foundry 指令行介面，以修改服務實例並將其部署至 {{site.data.keyword.iot_short_notm}}。如需相關資訊，請參閱[開始使用 cf 指令行介面撰寫程式碼 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://www.ng.bluemix.net/docs/#starters/install_cli.html){:new_window}。
 
 1. 在指令行介面中，使用下列指令，將目錄切換至`包含來源及部署描述子 YML 檔的目錄`：
 ```
@@ -180,7 +191,7 @@ $ cf stop iot4i-dev-transformer
        APIDOMAIN: iot4insurance-api-v.mybluemix.net
        NODE_MODULES_CACHE: false
   ```
-6. 使用下列指令，將 `newtransformer` 取代為部署描述子檔案名稱，以將轉換器推送至 {{site.data.keyword.bluemix_notm}}：
+6. 使用下列指令，將 `newtransformer` 取代為部署描述子檔案名稱，以將轉換器推送至 {{site.data.keyword.Bluemix_notm}}：
   ```
   $ cf push -f newtransformer.yml
   ```
@@ -188,21 +199,3 @@ $ cf stop iot4i-dev-transformer
   ```
   $ cf logs iot4i-dev-transformer
   ```
-
-# 相關鏈結
-{: #rellinks}
-
-## 指導教學及範例
-{: #samples}
-* [GitHub 上的範例行動應用程式碼](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## API 參考資料
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API 範例](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## 相關鏈結
-{: #general}
-* [{{site.data.keyword.iot_full}} 文件](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [開發人員支援討論區](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-* [Stack Overflow 支援討論區](http://stackoverflow.com/questions/tagged/ibm-bluemix)

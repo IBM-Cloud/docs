@@ -12,7 +12,7 @@ copyright:
 
 # userId によるデバイスの登録
 {: #register_device_with_userId}
-最終更新日: 2017 年 1 月 11 日
+最終更新日: 2017 年 2 月 6 日
 {: .last-updated}
 
 userId ベースの通知への登録を行うには、以下の手順を実行します。
@@ -22,9 +22,9 @@ userId ベースの通知への登録を行うには、以下の手順を実行�
 
 {{site.data.keyword.mobilepushshort}}サービスの `AppGUID` および `clientSecret` キーを使用して MFPPush クラスを初期化します。
 ```
-// Initialize the MFPPush
-	push = MFPPush.getInstance();
-	push.initialize(getApplicationContext(),"AppGUID", "clientSecret");
+// Initialize the Push Notifications service
+push = MFPPush.getInstance();
+push.initialize(getApplicationContext(),"AppGUID", "clientSecret");
 ```
 	{: codeblock}
 
@@ -33,22 +33,21 @@ userId ベースの通知への登録を行うには、以下の手順を実行�
 - **clientSecret**: これは、{{site.data.keyword.mobilepushshort}} サービスの clientSecret キーです。
 
   **registerDeviceWithUserId** API を使用して、デバイスを{{site.data.keyword.mobilepushshort}}に登録します。
+
 ```
-// Register the device to {{site.data.keyword.mobilepushshort}}.
-	push.registerDeviceWithUserId("userId",new MFPPushResponseListener<String>() {
-    @Override
-    public void onSuccess(String deviceId) {
-        Log.d("Device is registered with Push Service.");
-  }
-  @Override
-    public void onFailure(MFPPushException ex) {
-        Log.d("Error registering with Push Service...\n"
+// Register the device to Push Notifications
+push.registerDeviceWithUserId("userId",new MFPPushResponseListener<String>() {
+		@Override
+		public void onSuccess(String response) {
+		Log.d("Device is registered with Push Service.");}
+		@Override
+		public void onFailure(MFPPushException ex) {
+		  Log.d("Error registering with Push Service...\n"
         + "Push notifications will not be received.");
-  }
-});
+		}
+		});
 ```
 	{: codeblock}
-
 
 - **userId**: {{site.data.keyword.mobilepushshort}} への登録を行うための固有の userId 値を渡します。
 
@@ -60,9 +59,9 @@ userId ベースの通知への登録を行うには、以下の手順を実行�
 以下の API を使用して、UserId ベースの{{site.data.keyword.mobilepushshort}}への登録を行います。
 
 ```
-// Register device for push notification with UserId
+// Register device for Push Notification with UserId
 var options = {"userId": "Your User Id value"};
-BMSPush.registerDevice(options,success, failure);
+BMSPush.registerDevice(options,success, failure); 
 ```
 	{: codeblock}
 
@@ -87,10 +86,10 @@ BMSPush.registerDevice(options,success, failure);
 **registerWithUserId** API を使用して、デバイスを{{site.data.keyword.mobilepushshort}}に登録します。
 
 ```
-// Register the device to Push Notifications service.
-	push.registerWithDeviceToken("deviceToken", WithUserId: "userId")  { (response, statusCode, error) -> Void in
-	if error.isEmpty {
-    print( "Response during device registration : \(response)")
+// Register the device to Push Notifications service
+push.registerWithDeviceToken("deviceToken", WithUserId: "userId")  { (response, statusCode, error) -> Void in
+if error.isEmpty {
+  print( "Response during device registration : \(response)")
         print( "status code during device registration : \(statusCode)")
     } else {
         print( "Error during device registration \(error) ")
@@ -149,8 +148,8 @@ var params = {
 正常に初期化された後、userId を使用して Web アプリケーションを登録する必要があります。
 
 ```
-    bmsPush.registerWithUserId("UserId", function(response) {
-      alert(response.response)
+bmsPush.registerWithUserId("UserId", function(response) {
+ alert(response.response)
   })
 ```
 	{: codeblock}

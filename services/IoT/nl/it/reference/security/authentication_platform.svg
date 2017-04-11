@@ -706,8 +706,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.3309692"
-     inkscape:cx="311.95335"
-     inkscape:cy="150.39365"
+     inkscape:cx="316.5918"
+     inkscape:cy="125.18511"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -720,7 +720,8 @@
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
-     fit-margin-bottom="0" />
+     fit-margin-bottom="0"
+     inkscape:snap-text-baseline="true" />
   <metadata
      id="metadata5650">
     <rdf:RDF>
@@ -777,10 +778,10 @@
     <rect
        ry="0"
        rx="0"
-       y="351.84613"
-       x="207.3998"
-       height="203.28908"
-       width="390.69778"
+       y="369.00638"
+       x="206.54178"
+       height="186.1288"
+       width="391.55582"
        id="rect79371-1-6-6-9-8-7-80-8-4"
        style="fill:#f0f0ef;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <g
@@ -893,12 +894,18 @@
        id="rect79371-1-6-6-9-8-7-3-5-1-8-2-9"
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <text
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25000112px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;"
        id="text44191"
        font-size="11"
-       x="271.81931"
-       y="416.98788"
-       sodipodi:linespacing="125%">Watson IoT Platform</text>
+       x="339.81931"
+       y="382.98788"
+       sodipodi:linespacing="125%">
+      <tspan
+         sodipodi:role="line"
+         id="tspan3612"
+         x="339.81931"
+         y="382.98788">Watson IoT Platform</tspan>
+    </text>
     <rect
        ry="0"
        rx="0"
@@ -922,8 +929,17 @@
          sodipodi:role="line"
          x="42.015415"
          y="464.11569"
+         id="tspan8202">Dispositivi IoT</tspan><tspan
+         sodipodi:role="line"
+         x="42.015415"
+         y="477.86569"
+         id="tspan6878-8"
+         style="font-size:7.5px;stroke:none" /><tspan
+         sodipodi:role="line"
+         x="42.015415"
+         y="491.61569"
          id="tspan18193-4"
-         style="font-size:11px;stroke:none">Dispositivi IoT</tspan></text>
+         style="font-size:7.5px;stroke:none" /></text>
     <rect
        ry="0"
        rx="0"
@@ -940,14 +956,18 @@
        x="288.40372"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
-         id="tspan44239-7"
          y="484.93506"
          x="288.40372"
-         sodipodi:role="line">API Rest &amp; </tspan><tspan
+         sodipodi:role="line"
+         id="tspan7973">API Rest &amp; </tspan><tspan
          y="498.68506"
          x="288.40372"
          sodipodi:role="line"
-         id="tspan6445-3">in tempo reale</tspan></text>
+         id="tspan3615">in tempo reale</tspan><tspan
+         y="512.43506"
+         x="288.40372"
+         sodipodi:role="line"
+         id="tspan6445-3" /></text>
     <rect
        ry="0"
        rx="0"
@@ -971,34 +991,36 @@
          sodipodi:role="line"
          x="40.151447"
          y="391.96463"
+         id="tspan8202-7">Gateway IoT</tspan><tspan
+         sodipodi:role="line"
+         x="40.151447"
+         y="405.71463"
+         id="tspan6808-9"
+         style="font-size:7.5px" /><tspan
+         sodipodi:role="line"
+         x="40.151447"
+         y="419.46463"
+         id="tspan6878-8-3"
+         style="font-size:7.5px" /><tspan
+         sodipodi:role="line"
+         x="40.151447"
+         y="433.21463"
          id="tspan18193-4-9"
-         style="font-size:11px">Gateway IoT</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-       x="226.63893"
-       y="371.30804"
-       id="text266398"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan266400"
-         x="226.63893"
-         y="371.30804">Watson™ IoT Platform </tspan><tspan
-         sodipodi:role="line"
-         x="226.63893"
-         y="386.30804"
-         id="tspan4887">Organizzazione: q1bc3a</tspan><tspan
-         sodipodi:role="line"
-         x="226.63893"
-         y="401.30804"
-         id="tspan266402" /></text>
+         style="font-size:7.5px" /></text>
     <text
        sodipodi:linespacing="125%"
        y="348.52588"
        x="206.43343"
        font-size="13"
        id="text56812"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">IBM® Bluemix</text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.00000082px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Bold';text-align:start;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;">
+      <tspan
+         sodipodi:role="line"
+         id="tspan3619" />
+      <tspan
+         sodipodi:role="line"
+         id="tspan3621">IBM® Bluemix</tspan>
+    </text>
     <path
        inkscape:connector-curvature="0"
        id="path8199-4"
@@ -1046,15 +1068,15 @@
          sodipodi:role="line"
          x="303.71616"
          y="588.51544"
-         id="tspan44245">Dashboard</tspan><tspan
+         id="tspan9810">Dashboard</tspan><tspan
          sodipodi:role="line"
          x="303.71616"
          y="602.26544"
-         id="tspan3620">Watson IoT </tspan><tspan
+         id="tspan3623">Watson IoT </tspan><tspan
          sodipodi:role="line"
          x="303.71616"
          y="616.01544"
-         id="tspan9810">Platform</tspan></text>
+         id="tspan3625">Platform</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path11965"
@@ -1404,19 +1426,17 @@
            y="-62.752552" /></flowRegion><flowPara
          id="flowPara5808" /></flowRoot>    <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:35.29776001px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="267.18564"
-       y="563.16937"
+       style="font-style:normal;font-weight:normal;font-size:37.13201141px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="253.97842"
+       y="592.43457"
        id="text4681"
        sodipodi:linespacing="125%"
-       transform="scale(0.88244397,1.1332164)"><tspan
+       transform="scale(0.92830029,1.0772376)"><tspan
          sodipodi:role="line"
-         x="267.18564"
-         y="563.16937"
-         style="font-size:11.03055096px"
-         id="tspan4687">Autenticazione tramite <tspan
-   style="font-weight:bold"
-   id="tspan5809">ID IBM</tspan></tspan></text>
+         x="253.97842"
+         y="592.43457"
+         style="font-size:11.603755px"
+         id="tspan4687">Autenticazione tramite ID IBM</tspan></text>
     <rect
        x="152.64145"
        y="527.10138"
@@ -1518,19 +1538,27 @@
          x="-27.655277"
          y="591.38055"
          style="font-size:12.50000191px"
-         id="tspan4687-8">Utilizza le <tspan
-   style="font-weight:bold"
-   id="tspan5838"> chiavi API</tspan></tspan><tspan
+         id="tspan11042">Utilizza le  chiavi API</tspan><tspan
          sodipodi:role="line"
          x="-27.655277"
          y="607.00555"
          style="font-size:12.50000191px"
-         id="tspan5834">per effettuare chiamate </tspan><tspan
+         id="tspan3608">per effettuare chiamate </tspan><tspan
          sodipodi:role="line"
          x="-27.655277"
          y="622.63055"
          style="font-size:12.50000191px"
-         id="tspan5832">REST autenticate</tspan></text>
+         id="tspan3610">REST autenticate</tspan><tspan
+         sodipodi:role="line"
+         x="-27.655277"
+         y="638.25555"
+         style="font-size:12.50000191px"
+         id="tspan5836" /><tspan
+         sodipodi:role="line"
+         x="-27.655277"
+         y="653.88055"
+         style="font-size:12.50000191px"
+         id="tspan5832" /></text>
     <text
        sodipodi:linespacing="125%"
        y="635.88947"
@@ -1553,5 +1581,19 @@
          inkscape:connector-curvature="0"
          style="fill:#66d1f5;fill-opacity:1" />
     </g>
+    <text
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.47680759px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
+       id="text44191-9"
+       font-size="11"
+       x="348.18701"
+       y="359.42984"
+       sodipodi:linespacing="125%"
+       transform="scale(0.8167413,1.2243779)">
+      <tspan
+         y="359.42984"
+         x="348.18701"
+         sodipodi:role="line"
+         id="tspan3612-2">Org: q1bc3a</tspan>
+    </text>
   </g>
 </svg>

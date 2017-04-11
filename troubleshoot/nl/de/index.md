@@ -39,7 +39,7 @@ Die IBMid und das Kennwort für die Anmeldung an {{site.data.keyword.Bluemix_not
 {: tsCauses} 
  
 
-Wenn Sie eine gültige IBMid und ein gültiges Kennwort erhalten möchten, rufen Sie die Seite 'My IBM Profile' auf und führen anschließend einen der folgenden Schritte aus:
+Wenn Sie eine gültige IBMid und ein gültiges Kennwort erhalten möchten, rufen Sie die Seite 'Mein IBM Profil' auf und führen anschließend einen der folgenden Schritte aus:
 {: tsResolve}
   * Wenn Sie bereits eine IBMid registriert haben und überprüfen möchten, ob die ID und das Kennwort gültig sind, klicken Sie auf **Anmelden** und geben die IBMid und das Kennwort auf der Anmeldeseite an. Wenn Sie das Kennwort vergessen haben, klicken Sie auf der Anmeldeseite auf **Kennwort vergessen**, um das Kennwort zurückzusetzen. Wenn Sie Ihre IBMid vergessen haben oder weiterhin Probleme mit dem Kennwort haben, suchen Sie auf der Site 'Worldwide IBM Registration Helpdesk' nach Hilfe. 
   * Wenn Sie über keine IBMid verfügen, klicken Sie auf **Registrieren**, um eine IBMid und ein Kennwort zu erhalten. 
@@ -98,10 +98,7 @@ unterstützt, und Ihre DNS-Einstellungen zur Aktivierung der automatischen Funkt
 zwischen {{site.data.keyword.Bluemix_notm}}-Regionen manuell konfigurieren. DNS-Anbieter mit dieser Funktion sind z. B. NSONE, Akamai, Dyn.
 {: tsResolve}
 
-Wenn Sie Ihre DNS-Einstellungen konfigurieren, müssen Sie die öffentlichen IP-Adressen der {{site.data.keyword.Bluemix_notm}}-Regionen angeben, in denen Ihre Apps ausgeführt werden. Verwenden Sie zum Abrufen der öffentlichen IP-Adresse
-einer {{site.data.keyword.Bluemix_notm}}-Region
-den Befehl `nslookup`. Sie können in einem Befehlszeilenfenster beispielsweise
-den folgenden Befehl eingeben:
+Wenn Sie Ihre DNS-Einstellungen konfigurieren, müssen Sie die öffentlichen IP-Adressen der {{site.data.keyword.Bluemix_notm}}-Regionen angeben, in denen Ihre Apps ausgeführt werden. Verwenden Sie zum Abrufen der öffentlichen IP-Adresse einer {{site.data.keyword.Bluemix_notm}}-Region den Befehl `nslookup`. Sie können in einem Befehlszeilenfenster beispielsweise den folgenden Befehl eingeben:
 ```
 nslookup mybluemix.net
 ```
@@ -123,7 +120,7 @@ Wenn Sie sich für ein {{site.data.keyword.Bluemix_notm}}-Testkonto registriert 
 Wenn Sie sich für ein {{site.data.keyword.Bluemix_notm}}-Testkonto registriert haben, erhalten Sie eine Bestätigungs-E-Mail. Sie müssen auf den Link in dieser Bestätigungs-E-Mail klicken, um den Registrierungsprozess abzuschließen.
 {: tsCauses} 
 
-Die Bestätigungs-E-Mail wird an die E-Mail-Adresse gesendet, die Sie angegeben haben. Überprüfen Sie Ihren Posteingang und Ihren Ordner für Junk-Mail. Wenn Sie die Bestätigungs-E-Mail nicht empfangen haben, wenden Sie sich an den [{{site.data.keyword.Bluemix_notm}}-Support ![Symbol für externen Link](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}.   
+Die Bestätigungs-E-Mail wird an die E-Mail-Adresse gesendet, die Sie angegeben haben. Überprüfen Sie Ihren Posteingang und Ihren Ordner für Junk-Mail. Wenn Sie die Bestätigungs-E-Mail nicht empfangen haben, wenden Sie sich an den [{{site.data.keyword.Bluemix_notm}}-Support ![Symbol für externen Link](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}.  
 {: tsResolve}
 
 
@@ -218,7 +215,7 @@ Sie können nach Bedarf mindestens eine der folgenden Aktionen ausführen:
   * Von {{site.data.keyword.Bluemix_notm}} abmelden und anschließend wieder anmelden.
   * Den persönlichen Browsingmodus des Browsers verwenden. 
   * Die Cookies und den Cache des Browsers löschen.
-  * Einen anderen Browser verwenden. Informationen zu den Versionen der Browser, die von {{site.data.keyword.Bluemix_notm}} unterstützt werden, finden Sie in den [Voraussetzungen für {{site.data.keyword.Bluemix_notm}} ![Symbol für externen Link](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}. 
+  * Einen anderen Browser verwenden. Informationen zu den Versionen der Browser, die von {{site.data.keyword.Bluemix_notm}} unterstützt werden, finden Sie in den [Voraussetzungen für {{site.data.keyword.Bluemix_notm}} ![Symbol für externen Link](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}.
   * Wenn Sie die cf-Befehlszeilenschnittstelle installiert haben, geben Sie den Befehl `cf apps` ein, um anzuzeigen, ob die Anwendung aktiv ist.
   
   
@@ -310,7 +307,7 @@ Führen Sie die folgenden Schritte aus, um zu überprüfen, welche Java-Version 
 
 Wenn Ihre Workbench IBM JVM 7 oder 8 verwendet bzw. eine frühere Version als Oracle JVM 8, führen Sie die folgenden Schritte aus, um zu Oracle JVM 8 zu wechseln:
 
-  1. Laden Sie Oracle JVM 8 herunter und installieren Sie es (Details hierzu finden Sie unter [Java SE Downloads ![Symbol für externen Link](../icons/launch-glyph.svg)](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window}). 
+  1. Laden Sie Oracle JVM 8 herunter und installieren Sie es (Details hierzu finden Sie unter [Java SE Downloads ![Symbol für externen Link](../icons/launch-glyph.svg)](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window}).
   2. Starten Sie Eclipse erneut.
   3. Überprüfen Sie, ob die Eigenschaft `eclipse.vm` auf Ihre neue Oracle JVM 8-Installation verweist.
 
@@ -376,7 +373,7 @@ um einen Bereich zu erstellen:
   * Klicken Sie auf das Symbol {{site.data.keyword.avatar}} ![Avatarsymbol](images/account_support.svg), um das Widget 'Konto und Unterstützung' zu öffnen. Wählen Sie die Organisation aus, in der Sie den Bereich erstellen möchten, und klicken Sie anschließend auf **Bereich erstellen**.
   * Geben Sie in der Befehlszeilenschnittstelle 'cf' Folgendes ein: `cf create-space <Name des Bereichs> -o <Name der Organisation>`.
 
-Wiederholen Sie den Vorgang. Wird diese Nachricht erneut angezeigt, rufen Sie die [Bluemix-Statusseite ![Symbol für externen Link](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window} auf, um zu prüfen, ob für einen Service oder eine Komponente ein Problem vorliegt. 
+Wiederholen Sie den Vorgang. Wird diese Nachricht erneut angezeigt, rufen Sie die [Bluemix-Statusseite ![Symbol für externen Link](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window} auf, um zu prüfen, ob für einen Service oder eine Komponente ein Problem vorliegt.
 
 
 
@@ -430,11 +427,11 @@ Statt die Berechtigungsnachweise in Ihrer App fest zu codieren, verwenden Sie Ve
 ```
 process.env.VCAP_SERVICES
 ```
-Weitere Informationen zu den Befehlen, die Sie in anderen Programmsprachen verwenden können, finden Sie unter [Java ![Symbol für externen Link](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} und [Ruby ![Symbol für externen Link](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}.
+Weitere Informationen zu den Befehlen, die Sie in anderen Programmsprachen verwenden können, finden Sie unter [Java ![Symbol für externen Link](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} und [Ruby ![Symbol für externen Link](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}. 
+ 
 
-
-
-
+ 
+ 
 
 
 
@@ -470,19 +467,14 @@ Sie müssen die Facette aus dem Eclipse-Projekt entfernen,
 damit Sie Ihre App mit IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} bereitstellen können.
 {: tsResolve} 
 
-Um die
-Facette zu entfernen, klicken Sie für das Projekt in IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}
-auf **Projekt>Eigenschaften>Projektfacetten**. Nehmen Sie anschließend die Markierung des Kontrollkästchens für die nicht unterstützte Facette zurück. 
+Um die Facette zu entfernen, klicken Sie für das Projekt in IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} auf **Projekt>Eigenschaften>Projektfacetten**. Nehmen Sie anschließend die Markierung des Kontrollkästchens für die nicht unterstützte Facette zurück. 
 
 
 
 ## Fehler des Typs '502 Bad Gateway' empfangen
 {: #ts_502_error}
 
-Wenn Sie bei der Interaktion mit Apps
-unter {{site.data.keyword.Bluemix_notm}} Fehler vom Typ '502 Bad Gateway' erhalten,
-überprüfen Sie die {{site.data.keyword.Bluemix_notm}}-Seite 'Status'
-und führen Sie anschließend die entsprechenden Aktionen durch.
+Wenn Sie bei der Interaktion mit Apps unter {{site.data.keyword.Bluemix_notm}} Fehler vom Typ '502 Bad Gateway' erhalten, überprüfen Sie die {{site.data.keyword.Bluemix_notm}}-Seite 'Status' und führen Sie anschließend die entsprechenden Aktionen durch.
 
  
 
@@ -513,15 +505,11 @@ führen Sie die folgenden Schritte aus, um das Problem zu lösen:
 {: tsResolve}
 
   * Wiederholen Sie die Aktion.
-    * Laden Sie die Seite erneut durch Drücken der Taste F5 auf Ihrer Tastatur oder durch
-Klicken auf die Schaltfläche für die Aktualisierung. Wenn dieser Schritt nicht funktioniert, leeren Sie den Cache und die Cookies des Browsers
-und laden Sie die Seite anschließend erneut.
+    * Laden Sie die Seite erneut durch Drücken der Taste F5 auf Ihrer Tastatur oder durch Klicken auf die Schaltfläche für die Aktualisierung. Wenn dieser Schritt nicht funktioniert, leeren Sie den Cache und die Cookies des Browsers und laden Sie die Seite anschließend erneut.
 	* Verwenden Sie einen anderen Browser.
-	* Führen Sie für Ihren Router, Ihr Modem und Ihren Computer einen Warmstart durch. Durch eines Warmstart dieser Geräte
-können verschiedene Fehler bereinigt werden, die zu dem Fehler 502 führen. 
-  * Warten Sie und wiederholen Sie den Vorgang zu einem späteren Zeitpunkt. Bei einigen Instanzen kann es in Verbindung mit
-Ihrem Internet-Service-Provider oder den {{site.data.keyword.Bluemix_notm}}-Services zu vorübergehenden Problemen kommen. Warten Sie, bis die vorübergehenden Probleme gelöst wurden.
-  * Wenn das Problem dennoch bestehen bleibt, wenden Sie sich an den {{site.data.keyword.Bluemix_notm}}-Support. Weitere Informationen finden Sie unter [Kontaktaufnahme mit dem {{site.data.keyword.Bluemix_notm}}-Support ![Symbol für externen Link](../icons/launch-glyph.svg)](/docs/support/index.html#contacting-bluemix-support){: new_window}.  
+	* Führen Sie für Ihren Router, Ihr Modem und Ihren Computer einen Warmstart durch. Durch eines Warmstart dieser Geräte können verschiedene Fehler bereinigt werden, die zu dem Fehler 502 führen. 
+  * Warten Sie und wiederholen Sie den Vorgang zu einem späteren Zeitpunkt. Bei einigen Instanzen kann es in Verbindung mit Ihrem Internet-Service-Provider oder den {{site.data.keyword.Bluemix_notm}}-Services zu vorübergehenden Problemen kommen. Warten Sie, bis die vorübergehenden Probleme gelöst wurden.
+  * Wenn das Problem dennoch bestehen bleibt, wenden Sie sich an den {{site.data.keyword.Bluemix_notm}}-Support. Weitere Informationen finden Sie unter [Kontaktaufnahme mit dem {{site.data.keyword.Bluemix_notm}}-Support ![Symbol für externen Link](../icons/launch-glyph.svg)](/docs/support/index.html#contacting-bluemix-support){: new_window}. 
 
 
 
@@ -589,37 +577,28 @@ dass kein Cookie definiert werden kann. Dieses Cookie muss über die IBM® Bluem
 Zur Lösung dieses Problems stehen Ihnen die folgenden Möglichkeiten zur Verfügung:
 {: tsResolve}
 
-  * Befolgen Sie die Anweisungen in dem Fenster, das in der
-{{site.data.keyword.Bluemix_notm}}-Konsole geöffnet wird. Klicken Sie auf die Schaltfläche. Vorübergehend wird ein weiteres Browserfenster geöffnet. In diesem Fenster legt DevOps Services das Authentifizierungscookie fest.
-  * Rufen Sie auf einer weiteren Browserregisterkarte https://hub.jazz.net auf und melden Sie sich an. Kehren Sie zur {{site.data.keyword.Bluemix_notm}}-Konsole
-zurück und aktualisieren Sie die Seite. Klicken Sie erneut auf **Git hinzufügen**.
-  * Ändern Sie Ihre Browsereinstellungen so, dass Cookies von Drittanbietern möglich sind, und klicken Sie erneut auf 'Git hinzufügen'. Details zur Konfiguration dieser Einstellungen
-finden Sie in der Dokumentation Ihres Browsers:
+  * Befolgen Sie die Anweisungen in dem Fenster, das in der {{site.data.keyword.Bluemix_notm}}-Konsole geöffnet wird. Klicken Sie auf die Schaltfläche. Vorübergehend wird ein weiteres Browserfenster geöffnet. In diesem Fenster legt DevOps Services das Authentifizierungscookie fest.
+  * Rufen Sie auf einer weiteren Browserregisterkarte https://hub.jazz.net auf und melden Sie sich an. Kehren Sie zur {{site.data.keyword.Bluemix_notm}}-Konsole zurück und aktualisieren Sie die Seite. Klicken Sie erneut auf **Git hinzufügen**.
+  * Ändern Sie Ihre Browsereinstellungen so, dass Cookies von Drittanbietern möglich sind, und klicken Sie erneut auf 'Git hinzufügen'. Details zur Konfiguration dieser Einstellungen finden Sie in der Dokumentation Ihres Browsers:
     * [Mozilla Firefox ![Symbol für externen Link](../icons/launch-glyph.svg)](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences#w_how-do-i-change-cookie-settings){: new_window}
 	* [Google Chrome ![Symbol für externen Link](../icons/launch-glyph.svg)](https://support.google.com/chrome/answer/95647){: new_window}
 	* [Apple Safari ![Symbol für externen Link](../icons/launch-glyph.svg)](https://support.apple.com/kb/PH17191){: new_window}
-	* [Microsoft Internet Explorer ![Symbol für externen Link](../icons/launch-glyph.svg)](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window}
-Falls das Problem durch diese Ausweichlösungen nicht behoben wird, senden Sie eine E-Mail an idslogin@jazz.net. 
+	* [Microsoft Internet Explorer ![Symbol für externen Link](../icons/launch-glyph.svg)](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window} Falls das Problem durch diese Ausweichlösungen nicht behoben wird, senden Sie eine E-Mail an idslogin@jazz.net.
 
 
 
 ## Android-Apps empfangen keine Push-Benachrichtigungen
 {: #ts_push}
 
-In bestimmten Regionen, in denen nicht auf Google zugegriffen werden kann,
-empfangen Android-Apps keine Benachrichtigungen, die Sie über den IBM Push-Service senden. In diesem Fall können Sie als Ausweichlösung Services von Drittanbietern verwenden.
+In bestimmten Regionen, in denen nicht auf Google zugegriffen werden kann, empfangen Android-Apps keine Benachrichtigungen, die Sie über den IBM Push-Service senden. In diesem Fall können Sie als Ausweichlösung Services von Drittanbietern verwenden.
 
  
 
-Sie binden einen Push-Service für Ihre Bluemix-App und senden eine Nachricht an die registrierten Geräte. Jedoch können Apps, die auf der Android-Plattform entwickelt wurden,
-Ihre Benachrichtigungen in bestimmten Regionen nicht empfangen. 
+Sie binden einen Push-Service für Ihre Bluemix-App und senden eine Nachricht an die registrierten Geräte. Jedoch können Apps, die auf der Android-Plattform entwickelt wurden, Ihre Benachrichtigungen in bestimmten Regionen nicht empfangen.
 {: tsSymptoms}
 
  
-Der IBM Push-Service nutzt den GCM-Service (Google Cloud Messaging),
-um Benachrichtigungen an mobile Apps zu versenden, die auf der Android-Plattform entwickelt wurden. Zur Aktivierung der Android-Apps für den Empfang von Benachrichtigungen
-muss der GCM-Service (Google Cloud Messaging) für die mobilen Apps zugänglich sein. In Regionen, in denen der GCM-Service nicht von den Android-Apps erreicht werden kann,
-können die Android-Apps keine Push-Benachrichtigungen empfangen.
+Der IBM Push-Service nutzt den GCM-Service (Google Cloud Messaging), um Benachrichtigungen an mobile Apps zu versenden, die auf der Android-Plattform entwickelt wurden. Zur Aktivierung der Android-Apps für den Empfang von Benachrichtigungen muss der GCM-Service (Google Cloud Messaging) für die mobilen Apps zugänglich sein. In Regionen, in denen der GCM-Service nicht von den Android-Apps erreicht werden kann, können die Android-Apps keine Push-Benachrichtigungen empfangen.
 {: tsCauses}
 
  
@@ -856,8 +835,7 @@ Wenn Sie eine Anwendung mithilfe der cf-Befehlszeilenschnittstelle per Push-Oper
 ```
 cf api https://api.eu-gb.bluemix.net
 ```
-Wenn Sie eine Anwendung mithilfe von Eclipse Tools mit einer Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen, müssen Sie zuerst einen {{site.data.keyword.Bluemix_notm}}-Server erstellen und den API-Endpunkt der {{site.data.keyword.Bluemix_notm}}-Region angeben, in der die Organisation erstellt wurde. Weitere Informationen zur Verwendung
-der Eclipse-Tools finden Sie im Thema zur [Bereitstellung von Apps mit IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html).  
+Wenn Sie eine Anwendung mithilfe von Eclipse Tools mit einer Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen, müssen Sie zuerst einen {{site.data.keyword.Bluemix_notm}}-Server erstellen und den API-Endpunkt der {{site.data.keyword.Bluemix_notm}}-Region angeben, in der die Organisation erstellt wurde. Weitere Informationen zur Verwendung der Eclipse-Tools finden Sie im Thema zur [Bereitstellung von Apps mit IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html).  
   
   
 
@@ -1037,7 +1015,7 @@ in Abhängigkeit von der Ursache durch, die zu dem Problem geführt hat:
  }
     ```
 	
-Weitere Tipps zu Node.js-Apps finden Sie in den [Tipps zu Node.js-Anwendungen ![Symbol für externen Link](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}. 	
+Weitere Tipps zu Node.js-Apps finden Sie in den [Tipps zu Node.js-Anwendungen ![Symbol für externen Link](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.	
 
 
 
@@ -1299,7 +1277,7 @@ Wenn Sie das GitHub-Projekt so konfiguriert haben, dass bei der Übertragung von
 6. Stellen Sie sicher, dass keine Fehler vorliegen, indem Sie das Statussymbol erneut überprüfen.
    ![Statussymbol ohne Fehler](images/githubResolved_small.png)
 
-Weitere Informationen finden Sie unter [Setting up GitHub for Bluemix DevOps Services projects ![Symbol für externen Link](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/githubhooks/){: new_window}. 
+Weitere Informationen finden Sie unter [Setting up GitHub for Bluemix DevOps Services projects ![Symbol für externen Link](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/githubhooks/){: new_window}.
 
 
 # Fehlerbehebung für die Verwaltung von Konten
@@ -1447,14 +1425,14 @@ Einige Buildpacks sind nicht so konfiguriert, dass sie alle aktualisierten Kompo
 Sie können Buildpacks verwenden, die über integrierte Mechanismen verfügen, mit denen das Laden veralteter Komponenten vermieden wird. Zwei Beispiele für diese Buildpacks sind nachfolgend aufgeführt: 
 {: tsResolve}
 
-  * [Cloud Foundry Java-Buildpack ![Symbol für externen Link](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack){: new_window}. Dieses Buildpack verfügt über einen integrierten Mechanismus, der sicherstellt, dass die neueste Version des Buildpacks verwendet wird. Weitere Informationen zur Funktionsweise dieses Mechanismus finden Sie unter [extending-caches.md ![Symbol für externen Link](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}.  
+  * [Cloud Foundry Java-Buildpack ![Symbol für externen Link](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack){: new_window}. Dieses Buildpack verfügt über einen integrierten Mechanismus, der sicherstellt, dass die neueste Version des Buildpacks verwendet wird. Weitere Informationen zur Funktionsweise dieses Mechanismus finden Sie unter [extending-caches.md ![Symbol für externen Link](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
   * [Cloud Foundry Node.js-Buildpack ![Symbol für externen Link](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}. Dieses Buildpack verfügt über eine ähnliche Funktionalität, die Umgebungsvariablen nutzt. Damit das Node.js-Buildpack jedes mal Knotenmodule aus dem Internet herunterladen kann, geben Sie in der cf-Befehlszeilenschnittstelle den folgenden Befehl ein: 	
   ```
   set NODE_MODULES_CACHE=false
   ```
 Wenn das verwendete Buildpack keinen Mechanismus zum automatischen Laden der neuesten Komponenten bereitstellt, können Sie den Inhalt des Cacheverzeichnisses manuell löschen und eine Push-Operation für Ihre App durchführen, indem Sie die folgenden Schritte ausführen:
-  1. Checken Sie eine Verzweigung eines Null-Buildpacks aus, z. B. https://github.com/ryandotsmith/null-buildpack. Informationen zum Auschecken einer Verzweigung finden Sie unter [Git Basics - Getting a Git Repository ![Symbol für externen Link](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}.   
-  2. Fügen Sie die folgende Zeile zur Datei `null-buildpack/bin/compile` hinzu und schreiben Sie die Änderungen fest. Informationen zum Festschreiben von Änderungen finden Sie unter [Git Basics - Recording Changes to the Repository ![Symbol für externen Link](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}. 
+  1. Checken Sie eine Verzweigung eines Null-Buildpacks aus, z. B. https://github.com/ryandotsmith/null-buildpack. Informationen zum Auschecken einer Verzweigung finden Sie unter [Git Basics - Getting a Git Repository ![Symbol für externen Link](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}.  
+  2. Fügen Sie die folgende Zeile zur Datei `null-buildpack/bin/compile` hinzu und schreiben Sie die Änderungen fest. Informationen zum Festschreiben von Änderungen finden Sie unter [Git Basics - Recording Changes to the Repository ![Symbol für externen Link](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
   ```
   rm -rfv $2/*
   ```

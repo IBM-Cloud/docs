@@ -55,7 +55,7 @@ Após a instalação da interface da linha de comandos, é possível iniciar:
 
   3.  Faça mudanças no código de seu app conforme necessário. Por exemplo, se você estiver usando um aplicativo de amostra do {{site.data.keyword.Bluemix}} e seu app contiver o arquivo `src/main/webapp/index.html`, será possível modificá-lo e editar "Obrigado por criar..." para dizer algo novo. Assegure-se de que o app seja executado localmente antes de implementá-lo de volta no {{site.data.keyword.Bluemix_notm}}.
 
-    Anote o arquivo `manifest.yml`. Ao implementar seu app de volta no {{site.data.keyword.Bluemix_notm}}, esse arquivo será usado para determinar a URL de seu aplicativo, a alocação de memória, o número de instâncias e outros parâmetros essenciais. É possível [ler mais sobre o arquivo manifest ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html "Ícone de link externo"){: new_window} na documentação do Cloud Foundry.
+    Anote o arquivo `manifest.yml`. Ao implementar seu app de volta no {{site.data.keyword.Bluemix_notm}}, esse arquivo será usado para determinar a URL de seu aplicativo, a alocação de memória, o número de instâncias e outros parâmetros essenciais. É possível [ler mais sobre o arquivo manifest ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){: new_window} na documentação do Cloud Foundry.
 
     Preste atenção também no arquivo `README.md`, que contém detalhes como instruções de construção, se aplicável.
 

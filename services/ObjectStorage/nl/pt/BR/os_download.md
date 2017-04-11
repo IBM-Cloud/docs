@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -29,16 +29,16 @@ lastupdated: "2017-01-17"
 
 1.  Se você não tiver efetuado login no {{site.data.keyword.Bluemix_notm}}, efetue login na organização e no espaço que contêm sua instância do {{site.data.keyword.objectstorageshort}}.
 
-```
-cf login -a api.ng.bluemix.net -u <userid> -p <password> -o <organization> -s <space>
-```
-{: pre}
+    ```
+    cf login -a api.ng.bluemix.net -u <userid> -p <password> -o <organization> -s <space>
+    ```
+    {: pre}
 
 2. Para evitar a destruição de dados por sobrescrições não intencionais, [configure o controle de versão do objeto](/docs/services/ObjectStorage/os_versioning.html). Se você não desejar o controle de versão de objetos, liste seus arquivos existentes no armazenamento e, se necessário, renomeie o diretório ou os arquivos antes de fazer o download.
 
 3. Faça download de um arquivo executando o comando a seguir:
 
-```
-swift download <container_name> <file_name>
-```
-{: pre}
+    ```
+    swift download <container_name> <file_name>
+    ```
+    {: pre}

@@ -1,0 +1,121 @@
+{
+  "id": "homepage",
+	"items": [{
+    "id": "docs_homepage_runtimes",
+    "title": "Commencez par déployer votre première application",
+    "items": [{
+      "title": "Liberty for Java",
+      "img": "homepage/images/javaweb_featured.svg",
+      "href": "runtimes/liberty/getting-started.html"
+    }, {
+      "title": "SDK for Node.js",
+      "img": "homepage/images/node_featured.svg",
+      "href": "runtimes/nodejs/getting-started.html"
+    }, {
+      "title": "ASP.NET Core",
+      "img": "homepage/images/dotnet_featured.svg",
+      "href": "runtimes/dotnet/getting-started.html"
+    }, {
+      "title": "Swift",
+      "img": "homepage/images/swift.svg",
+      "href": "runtimes/swift/getting-started.html"
+    }, {
+      "title": "XPages",
+      "img": "homepage/images/xpages_featured.svg",
+      "href": "starters/xpages/index.html"
+    }, {
+      "title": "Go",
+      "img": "homepage/images/go_featured.svg",
+      "href": "runtimes/go/getting-started.html"
+    }, {
+      "title": "PHP",
+      "img": "homepage/images/php_featured.svg",
+      "href": "runtimes/php/getting-started.html"
+    }, {
+      "title": "Python",
+      "img": "homepage/images/python_featured.svg",
+      "href": "runtimes/python/getting-started.html"
+    }, {
+      "title": "Ruby",
+      "img": "homepage/images/ruby_featured.svg",
+      "href": "runtimes/ruby/getting-started.html"
+    }, {
+      "title": "Tomcat",
+      "img": "homepage/images/i-runtime-tomcat.svg",
+      "href": "runtimes/tomcat/getting-started.html"
+    }]
+    
+    }, {
+    "id": "docs_homepage_platform",
+    "title": "Plateforme Bluemix",
+    "items": [{
+	    	"title": "Qu'est-ce que Bluemix ?",
+		"description": "Une nouvelle façon d'expérimenter le cloud en combinant une infrastructure, des applications et des services.",
+		"img": "homepage/images/WhatIsBluemix-icon.svg",
+		"href": "overview/whatisbluemix.html"
+    }, {
+		"title": "Configuration de votre compte",
+		"description": "Mettez à jour votre profil, définissez des notifications relatives à votre compte et à vos dépenses, invitez des membres d'équipe ou gérez des organisations et des espaces.",
+		"img": "homepage/images/admin.svg",
+		"href": "admin/adminpublic.html"
+	}, {
+		"title": "Interface de ligne de commande et outils de développement",
+		"description": "Accédez à des outils tels qu'une interface de ligne de commande (CLI) unifiée et des plug-in d'interface de ligne de commande.",
+		"img": "homepage/images/cli.svg",
+		"href": "cli/index.html"
+	}, {
+		"title": "Disponibilité des services",
+		"description": "Découvrez les types et la disponibilité des services.",
+		"href": "services/index.html"
+	}, {
+		"title": "Gestion des applications",
+		"description": "Utilisez le tableau de bord dans l'interface utilisateur Bluemix pour afficher et gérer vos applications et vos services.",
+		"img": "homepage/images/manage_apps.svg",
+		"href": "manageapps/mngapps.html"
+	}, {
+		"title": "Surveillance et journalisation",
+		"description": "Effectuez le suivi du flux de données et de l'utilisation des applications afin de mieux comprendre votre déploiement.",
+		"img": "homepage/images/monitor_log.svg",
+		"href": "monitor_log/monitoringandlogging.html"
+	}, {
+		"title": "Sécurité Bluemix",
+		"description": "Découvrez comment Bluemix assure une sécurité fonctionnelle, d'infrastructure, opérationnelle et physique.",
+		"img": "homepage/images/platform_security.svg",
+		"href": "security/index.html"
+	}, {
+		"title": "Hybride",
+		"description": "Distribué en tant que service dans des modèles de déploiement dédiés et sur site.",
+		"img": "homepage/images/hybrid.svg",
+		"href": "hybrid/index.html"
+	}, {
+		"title": "Tarification",
+		"description": "Estimez les coûts avec la calculatrice et affichez les coûts réels dans la vue Détails sur l'utilisation.",
+		"img": "homepage/images/pricing.svg",
+		"href": "pricing/index.html"
+	}, {
+		"title": "Traitement des incidents",
+		"description": "Si vous rencontrez des problèmes liés à la plateforme, procédez à une opération de traitement des incidents afin de déterminer les actions à mener.",
+		"img": "homepage/images/troubleshoot.svg",
+		"href": "troubleshoot/troubleshoot.html"
+	}, {
+		"title": "Mentions légales et conditions d'utilisation",
+		"description": "Mentions légales et conditions d'utilisation.",
+		"href": "navigation/notices.html"
+	}, {
+		"title": "Glossaire",
+		"description": "Termes de glossaire relatifs à Bluemix.",
+		"href": "overview/glossary/index.html"
+	}, {
+		"title": "Nouveautés",
+		"description": "Présentation des nouveautés de Bluemix",
+		"href": "whatsnew/index.html"
+	}, {
+		"title": "Architecture Center",
+		"description": "Parcourez nos architectures pour déterminer ce qui convient le mieux à vos applications en cloud.",
+		"img": "homepage/images/architectures.svg",
+		"href": "https://www.ibm.com/devops/method/category/architectures"
+	}]
+
+    }]
+  }
+

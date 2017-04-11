@@ -1,22 +1,21 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-02-22"
+  years: 2016, 2017
+lastupdated: "2017-02-23"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:screen: .screen}
 {:pre: .pre}
 
 # 建立觸發程式及規則
 {: #openwhisk_triggers}
 
-
-{{site.data.keyword.openwhisk}} 觸發程式及規則將事件驅動功能帶給平台。來自外部及內部事件來源的事件是透過觸發程式進行傳送，而規則容許您的動作反應這些事件。
+{{site.data.keyword.openwhisk_short}} 觸發程式及規則將事件驅動功能帶給平台。來自外部及內部事件來源的事件是透過觸發程式進行傳送，而規則容許您的動作反應這些事件。
 {: shortdesc}
 
 ## 建立觸發程式
@@ -69,11 +68,9 @@ lastupdated: "2016-02-22"
 wsk trigger create locationUpdate
   ```
   {: pre}
-
   ```
 ok: created trigger locationUpdate
   ```
-  {: screen}
 
 2. 列出這組觸發程式，確認您已建立觸發程式。
 
@@ -81,12 +78,10 @@ ok: created trigger locationUpdate
 wsk trigger list
   ```
   {: pre}
-
   ```
 triggers
   /someNamespace/locationUpdate                            private
   ```
-  {: screen}
 
   到目前為止，您已建立可發動事件的具名「通道」。
 
@@ -96,11 +91,9 @@ triggers
   wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
   ```
   {: pre}
-
   ```
 ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
   ```
-  {: screen}
 
 發動觸發程式時，如果沒有隨附可供比對的規則，則不會有可見的效果。
 觸發程式無法在套件內建立，必須直接在名稱空間下建立。
@@ -114,8 +107,8 @@ ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
 
 1. 使用我們將使用的動作碼來建立 'hello.js' 檔案：
   
-  ```
-function main(params) {
+  ```javascript
+  function main(params) {
      return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
   ```
@@ -127,7 +120,6 @@ function main(params) {
 wsk trigger update locationUpdate
   ```
   {: pre}
-
   ```
 wsk action update hello hello.js
   ```
@@ -151,11 +143,9 @@ wsk action update hello hello.js
   wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
   ```
   {: pre}
-
   ```
 ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
   ```
-  {: screen}
 
 5. 檢查最新的啟動，來驗證已呼叫動作。
   
@@ -163,23 +153,19 @@ ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
 wsk activation list --limit 1 hello
   ```
   {: pre}
-
   ```
 activations
   9c98a083b924426d8b26b5f41c5ebc0d             hello
   ```
-  {: screen}
-
   ```
 wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   ```
   {: pre}
-  ```
+  ```json
   {
      "payload": "Hello, Donald from Washington, D.C."
   }
   ```
-  {: screen}
 
   您看到 hello 動作接收到事件有效負載並傳回預期字串。
 
@@ -192,7 +178,9 @@ wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
 您也可以搭配使用規則與序列。例如，某人可以建立透過規則 `anotherRule` 所啟動的動作序列 `recordLocationAndHello`。
   ```
   wsk action create recordLocationAndHello --sequence /whisk.system/utils/echo,hello
+  ```
+  {: pre}
+  ```
   wsk rule create anotherRule locationUpdate recordLocationAndHello
   ```
   {: pre}
- 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -18,7 +18,7 @@ Los usuarios de {{site.data.keyword.objectstorageshort}} pueden ser administrati
 {: shortdesc}
 
 <table>
-<caption> Tabla 1. Roles de usuario definidos</caption>
+<caption> Tabla 1. Roles de usuario definidos </caption>
   <tr>
     <th> Usuarios administrativos (admin) </th>
     <th> Usuarios no administrativos (miembro) </th>

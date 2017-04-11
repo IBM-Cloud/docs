@@ -1,28 +1,37 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-26"
-
+  years: 2016, 2017
+lastupdated: "2017-03-01"
 ---
 
-
-
-{:new_window: target="\_blank"}
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 
 # Toolkit dello scudo
 {: #iot4i_shield_toolkit}
-Un scudo è una serie di regole e azioni che possono essere attivate da condizioni specifiche nell'input, che è un payload, che vengono ricevute dai sensori. Gli scudi vengono utilizzati per proteggere appropriatamente gli utenti identificando i pericoli e creando delle risposte adeguate.  Questo esempio ti mostra come puoi configurare il tuo ambiente, definire uno scudo, creare un utente e quindi associare lo scudo all'utente.  Puoi inoltre facoltativamente creare promozioni e pericoli simulati.
+Utilizza gli scudi per proteggere appropriatamente gli utenti identificando i pericoli e crea le risposte automatizzate appropriate. Utilizza o modifica gli scudi inclusi nella libreria degli scudi {{site.data.keyword.iotinsurance_short}} o crea e implementa i tuoi propri scudi utilizzando i seguenti esempi o istruzioni.
 {:shortdesc}
+
+## Informazioni sugli scudi.
+Uno scudo è una serie di regole e azioni definite che possono essere attivate da condizioni specifiche nell'input che viene ricevuto da un sensore. Ad esempio, potresti creare uno scudo con una regola che crei un messaggio di testo che deve essere inviato se il sensore individua una fuoriuscita d'acqua.
+
+## Utilizzare gli scudi dalla libreria degli scudi {{site.data.keyword.iotinsurance_short}}
+
+Puoi trovare un vasto assortimento di scudi predefiniti nella libreria degli scudi [{{site.data.keyword.iotinsurance_short}} ![icona link esterno](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-shields){: new_window}. Visualizza il file README su tale sito per le istruzioni su come scaricare ed iniziare ad utilizzare gli scudi.
+
+## Creazione del tuo proprio scudo
+Questo esempio ti mostra come puoi configurare il tuo ambiente, definire uno scudo, creare un utente e quindi associare lo scudo all'utente.  Puoi inoltre facoltativamente creare promozioni e pericoli simulati.  
 
 Gli esempi di codice per la creazione di un scudo semplice per le fuoriuscite d'acqua vengono illustrate nelle seguenti sezioni. Una serie completa di codici di esempio è disponibile in [iot4i-api-examples-nodejs GitHub repository](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/).
 
-## Prerequisiti
-Prima di iniziare, assicurati che siano implementati i seguenti prerequisiti: 
+### Prerequisiti
+Prima di iniziare, assicurati che siano implementati i seguenti prerequisiti:
 
 - [Node.js](https://nodejs.org/en/) installato sul tuo computer.  
 - Un ambiente di runtime abilitato con Node.js come Eclipse.
@@ -32,7 +41,7 @@ Prima di iniziare, assicurati che siano implementati i seguenti prerequisiti:
   1. Clona o scarica il [GitHub source code repository](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs) sul tuo computer.
   2. Installa i prerequisiti open source del progetto utilizzando una riga di comando per andare alla cartella che contiene i file del codice di origine clonati ed esegui il comando `npm install`.
 
-## Configurazione dell'ambiente 
+### Configurazione dell'ambiente
 {: #environment}
 Per configurare il tuo ambiente per inviare le chiamate API REST, devi configurare l'URL per l'API nel file config.js. L'URL aggregatore può essere ignorato in questo contesto.
 
@@ -47,7 +56,7 @@ var config = module.exports = {
 };
 ```
 
-## Creazione di una definizione scudo
+### Creazione di una definizione scudo
 {: #create_shield_def}
 
 Metodo: POST  
@@ -79,7 +88,7 @@ dove:
 - **UUID** - L'UUID (universal unique identifier) dello scudo.
 - **actions** - Un elenco di azioni che vengono attivate quando viene creato un pericolo. In questo esempio, le informazioni sul pericolo vengono inviate all'applicazione dell'utente utilizzando una notifica push iOS.
 
-## Creazione di un codice scudo
+### Creazione di un codice scudo
 {: #create_shield_code}
 Crea un codice scudo nel file shieldCode.js per definire come il motore dello scudo elabora un payload.
 
@@ -146,7 +155,7 @@ Ogni codice scudo contiene le risorse definite nelle istruzioni resource/shield.
   registerShield(DEMO_SHIELD_UUID, DEMO_SHIELD_NAME, demoEntryCondition, undefined, demoSafelet, demoMessage, DEMO_SHIELD_DELAY);
   ```
 
-## Creazione di un utente
+### Creazione di un utente
 {: #create_user}
 
 Metodo: POST  
@@ -181,7 +190,7 @@ dove:
   - 10 - dashboard
   - 1 - amministratore di sistema
 
-## Creazione di un'associazione dello scudo
+### Creazione di un'associazione dello scudo
 {: #create_shield_assoc}
 
 Metodo: POST  
@@ -190,7 +199,7 @@ https://iot4i-docs-api.mybluemix.net/dist/#!/shieldassociation/addShieldAssociat
 
 Crea un'associazione dello scudo che collega lo scudo all'utente in createUserShieldAssociation.js.
 
-Il seguente esempio mostra un'associazione dello scudo per lo scudo e l'utente che sono stati creati nelle sezioni precedenti. 
+Il seguente esempio mostra un'associazione dello scudo per lo scudo e l'utente che sono stati creati nelle sezioni precedenti.
 
 ```
 var userShield = {
@@ -203,7 +212,7 @@ var userShield = {
 
 
 
-## Creazione di un pericolo simulato
+### Creazione di un pericolo simulato
 {: #create_sim_hazard}
 
 Metodo: POST  
@@ -212,7 +221,7 @@ https://iot4i-docs-api.mybluemix.net/dist/#!/global/sendPayloadToMQTT
 
 Puoi creare un payload di pericolo simulato per verificare i tuoi scudi.
 
-Il seguente esempio mostra come creare un payload che attiva lo scudo creato nell'esempio precedente ed invia un avviso all'utente associato. 
+Il seguente esempio mostra come creare un payload che attiva lo scudo creato nell'esempio precedente ed invia un avviso all'utente associato.
 
 ```
 var parameters {
@@ -240,12 +249,12 @@ var parameters {
 ```
 
 
-## Creazione di una promozione
+### Creazione di una promozione
 {: #create_promotion}
 
 {{site.data.keyword.iotinsurance_short}} può inviare promozioni ai proprietari di casa utilizzando l'applicazione mobile. Crea le promozioni utilizzando il file createPromotion.js.
 
-Il seguente esempio mostra come creare una promozione per un idraulico autorizzato. 
+Il seguente esempio mostra come creare una promozione per un idraulico autorizzato.
 
 ```
 var promotion = {

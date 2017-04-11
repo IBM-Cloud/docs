@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-26"
+  years: 2016, 2017
+lastupdated: "2017-03-08"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -17,6 +17,7 @@ lastupdated: "2016-10-26"
 
 
 # Introduzione a {{site.data.keyword.iotinsurance_short}}
+{: #gettingstarted}
 
 {{site.data.keyword.iotinsurance_full}} è un servizio {{site.data.keyword.Bluemix_notm}} che puoi utilizzare per raccogliere, gestire e analizzare i dati dai possessori della polizza collegati. {{site.data.keyword.iotinsurance_short}} ti fornisce la capacità di fornire valutazioni del rischio, protezione in tempo reale e riduzione dei costi della polizza personalizzati.
 {:shortdesc}
@@ -36,39 +37,49 @@ Per essere operativo con questo servizio, devi distribuire i servizi e le applic
 
   Ogni istanza del servizio utilizza il piano del servizio predefinito. Puoi eseguire l'upgrade di ogni piano del servizio in un secondo momento andando nella console del servizio. Puoi anche utilizzare un'istanza esistente di un servizio eliminando la nuova istanza e eseguendo il bind manualmente dell'istanza esistente al servizio {{site.data.keyword.iotinsurance_short}}. Per ulteriori informazioni sulle applicazioni, consulta [Informazioni su {{site.data.keyword.iotinsurance_short}}](iotinsurance_overview.html).
 
+  **Nota**: {{site.data.keyword.iotinsurance_short}} non distribuisce più {{site.data.keyword.amafull}} o {{site.data.keyword.mobilepushfull}}. Le versioni precedenti di {{site.data.keyword.iotinsurance_short}} utilizzano il servizio {{site.data.keyword.amashort}} per elaborare le risposte dall'applicazione mobile. Questo processo continua a funzionare per tutte le istanze esistenti di {{site.data.keyword.iotinsurance_short}}. Tuttavia, devi creare un processo di autenticazione personalizzato per utilizzare l'applicazione mobile con le nuove istanze di
+  {{site.data.keyword.iotinsurance_short}}. Puoi anche facoltativamente [creare un'istanza di {{site.data.keyword.mobilepushshort}}](https://console.ng.bluemix.net/docs/services/mobilepush/index.html), configurarla e associarla all'API {{site.data.keyword.iotinsurance_short}}.
+
 2. Verifica che il dashboard {{site.data.keyword.iotinsurance_short}} sia funzionale e che tu possa accedere alle API.
   1. Apri il dashboard {{site.data.keyword.iotinsurance_short}} facendo clic su **Apri**. Accetta le credenziali precompilate facendo clic su **Accedi**.
   2. Ritorna alla console del servizio {{site.data.keyword.iotinsurance_short}} e visualizza le API facendo clic su **API**.
 
-  **Nota:** dopo la distribuzione, puoi accedere al dashboard o alle API direttamente immettendo i rispettivi URL nel tuo browser. Quando utilizzi questo metodo, devi immettere le credenziali del servizio {{site.data.keyword.iotinsurance_short}}. Per individuare le credenziali, ritorna alla console del servizio {{site.data.keyword.iotinsurance_short}}. Fai clic sulla scheda **Credenziali del servizio** e quindi su **Visualizza credenziali**. Prendi nota dell'ID utente e della password. 
+  **Nota:** dopo la distribuzione, puoi accedere al dashboard o alle API direttamente immettendo i rispettivi URL nel tuo browser. Quando utilizzi questo metodo, devi immettere le credenziali del servizio {{site.data.keyword.iotinsurance_short}}. Per individuare le credenziali, ritorna alla console del servizio {{site.data.keyword.iotinsurance_short}}. Fai clic sulla scheda **Credenziali del servizio** e quindi su **Visualizza credenziali**. Prendi nota dell'ID utente e della password.
 
-## Configurazione dei servizi
+
+<!--
+## Configuring
 {: #iot4i_configservices}
-Esegui le seguenti attività per configurare i servizi:
 
-### Configurazione di {{site.data.keyword.amashort}}
+
+
+### Configuring {{site.data.keyword.amashort}}
 {: #config_ama}
-1. Ritorna alla tua console Bluemix. Vengono visualizzati tutti i servizi e le applicazioni che sono stati distribuiti da {{site.data.keyword.iotinsurance_short}}.
+1. Return to your Bluemix console. All apps and services that were deployed by {{site.data.keyword.iotinsurance_short}} are displayed.
 
-1. Copia l'URL dell'applicazione API {{site.data.keyword.iotinsurance_short}}. Fai clic con il tasto destro del mouse sull'applicazione API e seleziona **Copia posizione link**. 
+2. Copy the URL of the {{site.data.keyword.iotinsurance_short}} API application. Right-click the API application and select **Copy Link Location**.
 
-2. Apri il servizio {{site.data.keyword.amashort}}. Il servizio è disponibile nella sezione Servizi della tua console {{site.data.keyword.Bluemix_notm}}.
+3. Open the {{site.data.keyword.amashort}} service. The service is available in the Services section of your {{site.data.keyword.Bluemix_notm}} console.
 
-3. Abilita l'autenticazione facendo clic su **Attivo**.
+4. Enable authentication by clicking **On**.
 
-4. Nella sezione **Personalizza**, fai clic su **Configura** e immetti quindi le seguenti credenziali di autenticazione:
+5. In the **Custom** section, enter the following authentication credentials:
 
-  - **Nome realm**: `IoT4I`
+  - **Realm name**: `IoT4I`
 
-  - **URL provider di identità personalizzato**: incolla l'URL dell'applicazione API che hai copiato nel primo passo.
+  - **Custom Identity Provider Url**: Paste the URL of the API application that you copied in a previous step.
 
-  - **I tuoi URI di reindirizzamento dell'applicazione web**: lascia questo campo vuoto.
+  - **Your Web Application Redirect URIs**: Leave this field blank.
 
-5. Salva le tue impostazioni. Ora puoi ritornare alla console del servizio {{site.data.keyword.iotinsurance_short}} o alla tua console {{site.data.keyword.Bluemix_notm}}.
+6. Save your settings. You can now return to the {{site.data.keyword.iotinsurance_short}} service console or your {{site.data.keyword.Bluemix_notm}} console.
+-->
 
-### Configurazione di {{site.data.keyword.mobilepushshort}}
+
+## Creazione e configurazione di {{site.data.keyword.mobilepushshort}}
 {: #config_push}
-Per abilitare le notifiche push per un'applicazione mobile esistente, devi configurare il servizio {{site.data.keyword.mobilepushshort}} e aggiungere un file Public Key Cryptography Standards (PKCS) 12. Per informazioni sull'applicazione mobile, consulta [Installazione e collegamento dell'applicazione mobile di esempio](iotinsurance_mobile_app.html). Per informazioni su {{site.data.keyword.mobilepushshort}}, consulta [Getting started with Push Notifications](https://console.stage1.ng.bluemix.net/docs/services/mobilepush/index.html).
+Per abilitare le notifiche push per un'applicazione mobile esistente, puoi facoltativamente creare un'istanza del servizio {{site.data.keyword.mobilepushshort}}, associarla all'API {{site.data.keyword.iotinsurance_short}} e aggiungere il file Public Key Cryptography Standards (PKCS) 12. Per informazioni sull'applicazione mobile, consulta [Installazione e collegamento dell'applicazione mobile di esempio](iotinsurance_mobile_app.html). Per informazioni su {{site.data.keyword.mobilepushshort}}, consulta [Getting started with Push Notifications](https://console.ng.bluemix.net/docs/services/mobilepush/index.html).
+
+Per configurare il servizio dopo la creazione, esegui la seguente procedura:
 
   1. Apri il servizio {{site.data.keyword.mobilepushshort}}.
   2. Fai clic su **Configura**.
@@ -80,24 +91,25 @@ Operazioni successive
 Impara cosa puoi fare con {{site.data.keyword.iotinsurance_short}}.
 
 - Utilizza le istruzioni e le API nel toolkit dello scudo per creare [un'associazione scudo e un utente](iotinsurance_shield_toolkit.html).
-- Installare e collegare l'[applicazione mobile di esempio](iotinsurance_mobile_app.html).
-- Scarica o visualizza tutte le [API sul sito GitHub](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples).
+<!-- - Install and connect the [sample mobile app](iotinsurance_mobile_app.html). -->
+- Scarica o visualizza tutte le [API sul sito GitHub![icona link esterno](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}.
 
 # Link correlati
 {: #rellinks}
 
 ## Esercitazioni ed esempi
 {: #samples}
-* [Sample mobile app code on GitHub](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
+* [{{site.data.keyword.iotinsurance_short}} shields library ![icona link esterno](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-shields){: new_window}
+* [Sample mobile app code on GitHub ![icona link esterno](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
 
 ## Riferimento API
 {: #api}
-* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API Examples](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
+* [{{site.data.keyword.iotinsurance_short}} API ![icona link esterno](../../icons/launch-glyph.svg)](https://iot4i-api-docs.mybluemix.net/){:new_window}
+* [{{site.data.keyword.iotinsurance_short}} API Examples ![icona link esterno](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
 
 
 ## Link correlati
 {: #general}
 * [Documentazione {{site.data.keyword.iot_full}}](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [Developer support forum](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-* [Stack overflow support forum](http://stackoverflow.com/questions/tagged/ibm-bluemix)
+* [Developer support forum ![icona link esterno](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix]){:new_window}
+* [Stack overflow support forum ![icona link esterno](../../icons/launch-glyph.svg)](http://stackoverflow.com/questions/tagged/ibm-bluemix){:new_window}

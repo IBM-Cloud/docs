@@ -1,43 +1,42 @@
 {
   "id": "docs_homepage_services",
-  "title": "Come utilizzare i servizi Bluemix",
-  "subtitle": "Informazioni relative ai tipi di servizio e sulla disponibilità",
-  "subtitleHref": "services/index.html",
+  "title": "Elaborazione e servizi",
   "items": [{
     "id": "cfApp",
     "title": "Applicazioni Cloud Foundry",
+    "img": "homepage/images/cloud-foundry.svg",
     "href": "cfapps/index.html",
     "category_id": "compute"
   }, {
-    "title": "Runtime",
-    "href": "cfapps/runtimes.html",
-    "category_id": "compute"
-  }, {
     "title": "Contenitori tipo",
+    "img": "homepage/images/Bluemix-logo.svg",
     "href": "cfapps/boilerplates.html",
     "category_id": "compute"
   }, {
+    "id": "whisk-rt",
     "title": "IBM OpenWhisk",
+    "img": "homepage/images/whisk_icon.svg",
     "href": "openwhisk/index.html",
     "category_id": "compute"
   }, {
     "id": "container",
     "title": "Servizio IBM Bluemix Container",
+    "img": "homepage/images/containerServiceIcon.svg",
     "href": "containers/container_index.html",
     "category_id": "compute"
   }, {
     "type": "extra",
-    "title": "Prova a lavorare con i dati",
+    "title": "Utilizzo dei dati",
     "href": "services/WorkWithData/index.html",
     "category_id": "data"
   }, {
     "type": "extra",
-    "title": "Prova Dedicated GitHub Enterprise",
+    "title": "Dedicated GitHub Enterprise",
     "href": "services/ghededicated/index.html",
     "category_id": "devops"
   }, {
     "type": "extra",
-    "title": "Prova la creazione di progetti mobili",
+    "title": "Creazione di progetti mobili",
     "href": "mobile/index.html",
     "category_id": "mobile"
   }]

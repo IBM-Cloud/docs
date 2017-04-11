@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-27"
+  years: 2016, 2017
+lastupdated: "2017-03-13"
 
 ---
 
@@ -24,8 +24,6 @@ Geräte senden ihre Daten an ein für Edge Analytics aktiviertes Gateway, in dem
 Das folgende Diagramm veranschaulicht die allgemeine Architektur einer {{site.data.keyword.iot_full}}-Umgebung mit Edge Analytics.
 ![IBM Watson IoT Platform für Edge Analytics-Architektur](images/architecture_platform_edge.svg "IBM Watson IoT Platform mit Edge Analytics-Architektur")
 
-**Wichtig:** Die Analysefunktionen stammen aus dem {{site.data.keyword.iotrtinsights_full}}-Service und werden zusammengeführt. Wenn Ihre {{site.data.keyword.iot_short_notm}}-Organisation als Datenquelle für eine vorhandene {{site.data.keyword.iotrtinsights_short}}-Instanz verwendet wird, sind Cloud Analytics und Edge Analytics erst aktiviert, wenn die vorhandenen {{site.data.keyword.iotrtinsights_short}}-Instanzen migriert wurden. Verwenden Sie weiterhin das {{site.data.keyword.iotrtinsights_short}}-Dashboard für Ihre Analysevorhaben, bis die Migration abgeschlossen ist. Weitere Informationen finden Sie im [Blog zu IBM Watson IoT Platform](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} in IBM developerWorks und in den Dashboards Ihrer vorhandenen {{site.data.keyword.iotrtinsights_short}}-Instanz.  
-
 ## Vorbereitende Schritte
 {: #byb}
 
@@ -33,6 +31,10 @@ Bevor Sie mit der Erstellung von Edge-Regeln und -Aktionen beginnen:
 - Stellen Sie sicher, dass Ihr Gateway mit {{site.data.keyword.iot_short}} verbunden ist und dass Gerätedaten übertragen werden. Weitere Informationen finden Sie in [Gateways verbinden](gateways/dashboard.html).
 - Installieren Sie Edge Analytics Agent (EAA) in Ihrem Gateway. Informationen finden Sie in [Edge Analytics-Agent installieren](gateways/dashboard.html#edge). </br> **Tipp:** Für EAA aktivierte Gateways stellen EAA-Diagnosedaten in Form von Gerätenachrichten von Gateways zur Verfügung. Informationen finden Sie in [Diagnosemesswerte des Edge Analytics-Agenten](#eaa_metrics).
 - Stellen Sie sicher, dass die Geräteeigenschaften, die Sie als Bedingungen in Ihren Regeln verwenden möchten, Schemas zugeordnet sind. Weitere Informationen finden Sie in [Geräte verbinden](iotplatform_task.html) und [Schemas erstellen](im_schemas.html).
+- Lesen Sie die Edge Analytics-Anleitungen.  
+Ihr Anleitungsportal enthält einige Anleitungen, in denen die erforderlichen Schritte zum Ausführen von IBM Edge Analytics beschrieben sind. Diese Anleitungen beschreiben die Vorgehensweise zum Installieren und Konfigurieren von IBM Edge Analytics Agent auf einem Gerät, das auf dem Fundament von Apache Edgent aufbaut, um Analyseprozesse in der Nähe einer IoT-Datenquelle auszuführen.
+ - Die Anleitung [Einführung in Edge Analytics in IBM Watson IoT Platform ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/recipes/tutorials/getting-started-with-edge-analytics-in-watson-iot-platform/){: new_window} bildet den Anfang dieser Reihe. Diese Anleitung beschreibt das Einrichten von Cisco DSA Platform auf einem Laptop System- und einem Raspberry Pi 3-Gerät, das Installieren und Konfigurieren von IBM Edge Analytics Agent zum Herstellen einer Verbindung zu {{site.data.keyword.iot_short}}, das Installieren und Konfigurieren von System DS Link zum Herstellen einer Verbindung zu Edge Gateway unter {{site.data.keyword.iot_short}} als angeschlossenes Gerät, das Definieren und Aktivieren der Edge-Regel auf dem Edge-Gateway und das Verwalten der Edge-Regel mit {{site.data.keyword.iot_short}}.
+ - Als Beispiel für die innovative Verwendung von Edge Analytics veranschaulicht die Anleitung [Alerts und Geräteaktionen mit Edge Analytics in IBM Watson IoT Platform verarbeiten ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/recipes/tutorials/handling-alerts-and-device-actions-with-edge-analytics-in-ibm-watson-iot-platform/){: new_window} die Vorgehensweise zum Erstellen eines eigenen DS-Links für die Datenübertragung von einem verbundenen Arduino Uno-Gerät auf ein Raspberry Pi 3-Gerät. Darüber hinaus veranschaulicht diese Anleitung die Datenfilterung und die Verarbeitung lokaler Geräteaktionen als Teil des Edge-Regelalerts.
 
 ## Edge-Regeln und -Aktionen verwalten  
 {: #managing_rules}
@@ -193,22 +195,31 @@ Gehen Sie wie folgt vor, um Informationen zum Status des Gateways anzuzeigen:
  Eigenschaft | Beschreibung
  --- | ---
  `MsgInCount` |Die Anzahl der an den Edge Analytics-Agenten (EAA) gesendeten Nachrichten.
- `MsgInRate` | Die geschätzte Anzahl von Nachrichten pro Sekunde, die in der vergangenen Minute an den Edge Analytics-Agenten gesendet wurden.    
+ `MsgInRate` | Die geschätzte Anzahl von Nachrichten pro Sekunde, die in der vergangenen Minute an den Edge Analytics-Agenten gesendet wurden.  
  `LastHeartBeat` | Die Zeitmarke in Millisekunden des Zeitpunkts, an dem die letzte Heartbeatnachricht generiert wurde. Mindestens alle 10 Sekunden wird eine Heartbeatnachricht generiert.
-`CurrentTimestamp` | Die Zeitmarke in Millisekunden des Zeitpunkts, an dem die aktuelle Überwachungsnachricht generiert wurde.
+ `CurrentTimestamp` | Die Zeitmarke in Millisekunden des Zeitpunkts, an dem die aktuelle Überwachungsnachricht generiert wurde.
  `IsAlive` | Diese Eigenschaft hat den Wert '0', wenn der Unterschied zwischen `LastHeartBeat` und `CurrentTimestamp` größer als 20 Sekunden ist.
  `BytesOutCount` | Die Anzahl der Nachrichtenbyte, die vom EAA an {{site.data.keyword.iot_short}} gesendet werden.
- `BytesOutRate` | Die geschätzte Anzahl der Nachrichtenbyte pro Sekunde, die vom EAA in der vergangenen Minute an {{site.data.keyword.iot_short}} gesendet wurden. `BytesInCount` | Die Anzahl der Nachrichtenbyte, die von {{site.data.keyword.iot_short}} an den EAA gesendet wurden.
- `BytesInRate` | Die geschätzte Anzahl der Nachrichtenbyte pro Sekunde, die in der vergangenen Minute von {{site.data.keyword.iot_short}} an den EAA gesendet wurden. `RuleBytesInCount` |Die Anzahl der Nachrichtenbyte, die an die Basis der EAA-Regelengine gesendet wurden. </br> **Hinweis:** Falls für einen Gerätetyp keine Regel festgelegt wurde, werden Nachrichten für diesen Gerätetyp nicht an die Basis der Regelengine gesendet.
- `RuleBytesInRate` | Die geschätzte Anzahl von Nachrichtenbyte pro Sekunde, die in der vergangenen Minute an die Basis der EAA-Regelengine gesendet wurden. `MsgOutCount` | Die Anzahl der Nachrichten, die vom Edge Analytics-Agenten (EAA) an {{site.data.keyword.iot_short}} gesendet wurden.
- `MsgOutRate` | Die geschätzte Anzahl von Nachrichtenbyte pro Sekunde, die in der vergangenen Minute vom Edge Analytics-Agenten (EAA) an {{site.data.keyword.iot_short}} gesendet wurden.`MsgReducePercent` | Die prozentuale Differenz zwischen eingehenden und ausgehenden Nachrichten. </br>Für die Berechnung wird folgende Formel verwendet: `(msgIn - msgOut) / msgIn`
+ `BytesOutRate` | Die geschätzte Anzahl der Nachrichtenbyte pro Sekunde, die vom EAA in der vergangenen Minute an {{site.data.keyword.iot_short}} gesendet wurden.
+ `BytesInCount` | Die Anzahl der Nachrichtenbyte, die von {{site.data.keyword.iot_short}} an den EAA gesendet wurden.
+ `BytesInRate` | Die geschätzte Anzahl der Nachrichtenbyte pro Sekunde, die in der vergangenen Minute von {{site.data.keyword.iot_short}} an den EAA gesendet wurden.
+ `RuleBytesInCount` |Die Anzahl der Nachrichtenbyte, die an die Basis der EAA-Regelengine gesendet wurden. </br> **Hinweis:** Falls für einen Gerätetyp keine Regel festgelegt wurde, werden Nachrichten für diesen Gerätetyp nicht an die Basis der Regelengine gesendet.
+ `RuleBytesInRate` | Die geschätzte Anzahl von Nachrichtenbyte pro Sekunde, die in der vergangenen Minute an die Basis der EAA-Regelengine gesendet wurden.
+ `MsgOutCount` | Die Anzahl der Nachrichten, die vom Edge Analytics-Agenten (EAA) an {{site.data.keyword.iot_short}} gesendet wurden.
+ `MsgOutRate` | Die geschätzte Anzahl von Nachrichtenbyte pro Sekunde, die in der vergangenen Minute vom Edge Analytics-Agenten (EAA) an {{site.data.keyword.iot_short}} gesendet wurden.
+ `MsgReducePercent` | Die prozentuale Differenz zwischen eingehenden und ausgehenden Nachrichten. </br>Für die Berechnung wird folgende Formel verwendet: `(msgIn - msgOut) / msgIn`
 `BytesReducePercent` | Die prozentuale Differenz zwischen eingehenden und ausgehenden Byte. </br>Für die Berechnung wird folgende Formel verwendet: `(bytesIn - bytesOut) / bytesIn`
 `MsgRateReduce` | Die prozentuale Differenz zwischen der eingehenden und der ausgehenden Nachrichtenrate. </br>Für die Berechnung wird folgende Formel verwendet: `(msgInRate - msgOutRate) / msgInRate`
 `BytesRateReduce` | Die prozentuale Differenz zwischen eingehenden und ausgehenden Nachrichtenbyte. </br>Für die Berechnung wird folgende Formel verwendet: `(bytesInRate - bytesOutRate) / bytesInRate`
-`SystemLoad` | Die aktuelle Systembelastung des Systems, auf dem der Edge Analytics-Agent (EAA) ausgeführt wird. **Hinweis:** Die CPU-Rate wird nur gesendet, wenn auf dem System, auf dem der Edge Analytics-Agent ausgeführt wird, der Befehl `mpstat` vorhanden ist. Andernfalls wird die durchschnittliche Systembelastung der vergangenen Minute gesendet. </br>'Die durchschnittliche Systembelastung ist die für einen bestimmten Zeitraum geltende durchschnittliche Summe der Anzahl von ausführbaren Entitäten, die sich in der Warteschlange für die verfügbaren Prozessoren befinden, und der Anzahl von ausführbaren Entitäten, die auf den verfügbaren Prozessen aktiv sind. Es hängt vom Betriebssystem ab, wie die durchschnittliche Last berechnet wird; es handelt sich in der Regel jedoch um einen geglätteten zeitabhängigen Durchschnitt. Wenn die durchschnittliche Last nicht verfügbar ist, wird ein negativer Wert zurückgegeben.' - Javadoc für *ManagementFactory.getOperatingSystemMXBean*.
- `FreeMemory` | Die Anzahl der Byte des freien Speichers für die Java Virtual Machine (JVM), auf der der Edge Analytics-Agent (EAA) ausgeführt wird.
+`SystemLoad` | Die aktuelle Systembelastung des Systems, auf dem der Edge Analytics-Agent (EAA) ausgeführt wird. **Hinweis:** Die CPU-Rate wird nur gesendet, wenn auf dem System, auf dem der Edge Analytics-Agent ausgeführt wird, der Befehl `mpstat` vorhanden ist. Andernfalls wird die durchschnittliche Systembelastung der vergangenen Minute gesendet. </br>'Die durchschnittliche Systembelastung ist die für einen bestimmten Zeitraum geltende durchschnittliche Summe der Anzahl von ausführbaren Entitäten, die sich in der Warteschlange für die verfügbaren Prozessoren befinden, und der Anzahl von ausführbaren Entitäten, die auf den verfügbaren Prozessen aktiv sind. Es hängt vom Betriebssystem ab, wie die durchschnittliche Last berechnet wird; es handelt sich in der Regel jedoch um einen geglätteten zeitabhängigen Durchschnitt. Wenn die durchschnittliche Last nicht verfügbar ist, wird ein negativer Wert zurückgegeben. ' - Javadoc für *ManagementFactory.getOperatingSystemMXBean*.
+ `FreeMemory` | Die Anzahl der Byte des freien Speichers für die Java™ Virtual Machine (JVM), auf der der Edge Analytics-Agent (EAA) ausgeführt wird.
  `MemoryUsed` | Die Anzahl der Byte des JVM-Speichers, die vom Edge Analytics-Agenten (EAA) verwendet wird.
  `InQueueSize` | Die Anzahl der Nachrichten, die zur Verarbeitung durch den Edge Analytics-Agenten in die Warteschlange gestellt wurden.
  `RuleNumber` | Die Anzahl der definierten Regeln in der Basis der Regelengine.
  `ProcessorNumber` | Für Debugzwecke. Die Anzahl der definierten Prozessoren in der Basis der Regelengine. </br>**Hinweis:** Ein Prozessor ist die minimale Ausführungseinheit in der Basis der Regelengine.
  `DataPointsInWindow` | Die Gesamtzahl der Datenpunkte, die im Zeitfenster gepuffert werden. Die Bytegröße eines Datenpunkts ist je nach seinem Datentyp unterschiedlich. Die Größe eines Datenpunkts mit dem Format 'float' oder 'int' beträgt beispielsweise 8 Byte, während die Größe eines Datenpunkts mit dem Typ 'string' abhängig von seiner Länge unterschiedlich ist.  In den meisten Fällen können Sie die Speicherbelegung des Zeitfensters mithilfe der folgenden Formel schätzen: `DataPointsInWindow * 8`.
+
+## Edge Analytics-Community
+{: #eaa_community}
+
+Sie können das Edge Analytics SDK von der [Seite der IBM Edge Analytics-Community](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true) herunterladen. Das SDK umfasst die SDK-JAR-Datei, Javadoc, Beispielcode, Links zu Anleitungen und Readme-Dateien. In der Community können Sie außerdem Videos zur Einführung in Edge Analytics ansehen; im Communityforum können Sie Fragen stellen.

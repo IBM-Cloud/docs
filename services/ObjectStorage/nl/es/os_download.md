@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -29,16 +29,16 @@ Puede descargar los objetos almacenados para su revisión o edición mediante la
 
 1.  Si no ha iniciado la sesión en {{site.data.keyword.Bluemix_notm}}, inicie la sesión en la organización y espacio que contiene su instancia de {{site.data.keyword.objectstorageshort}}.
 
-```
-cf login -a api.ng.bluemix.net -u <userid> -p <password> -o <organization> -s <space>
-```
-{: pre}
+    ```
+    cf login -a api.ng.bluemix.net -u <userid> -p <password> -o <organization> -s <space>
+    ```
+    {: pre}
 
 2. Para evitar la destrucción de datos debido a sobrescrituras accidentales, [configure el mantenimiento de versiones de objetos](/docs/services/ObjectStorage/os_versioning.html). Si no desea el mantenimiento de versiones de objetos, genere una lista de los archivos existentes en el almacén y, si es necesario, renombre el directorio o los archivos antes de descargarlos.
 
 3. Descargue un archivo ejecutando el siguiente mandato:
 
-```
-swift download <nombre_contenedor> <nombre_contenedor>
-```
-{: pre}
+    ```
+    swift download <nombre_contenedor> <nombre_contenedor>
+    ```
+    {: pre}

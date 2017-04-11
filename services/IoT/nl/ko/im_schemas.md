@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-13"
+  years: 2016, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2016-10-13"
 
 **중요:** 스키마는 규칙과 조치를 사용하는 데 필요합니다. 자세한 정보는 [클라우드 분석](cloud_analytics.html#rules)을 참조하십시오.
 
-**중요:** 분석 기능은 {{site.data.keyword.iotrtinsights_full}} 서비스에서 병합됩니다. {{site.data.keyword.iot_short_notm}} 조직이 기존 {{site.data.keyword.iotrtinsights_short}} 인스턴스의 데이터 소스로 사용되는 경우 {{site.data.keyword.iotrtinsights_short}} 인스턴스가 마이그레이션된 후에야 클라우드 및 에지 분석이 사용됩니다. 마이그레이션이 완료될 때까지 분석이 필요할 때는 계속 {{site.data.keyword.iotrtinsights_short}} 대시보드를 사용하십시오. 자세한 정보는 기존 {{site.data.keyword.iotrtinsights_short}} 인스턴스 대시보드 및 IBM developerWorks의 [IBM Watson IoT Platform 블로그](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window}를 참조하십시오.  
+**중요:** 분석 기능은 {{site.data.keyword.iotrtinsights_full}} 서비스에서 병합됩니다. {{site.data.keyword.iot_short_notm}} 조직이 기존 {{site.data.keyword.iotrtinsights_short}} 인스턴스의 데이터 소스로 사용되는 경우 {{site.data.keyword.iotrtinsights_short}} 인스턴스가 마이그레이션된 후에야 클라우드 및 에지 분석이 사용됩니다. 마이그레이션이 완료될 때까지 분석이 필요할 때는 계속 {{site.data.keyword.iotrtinsights_short}} 대시보드를 사용하십시오. 자세한 정보는 IBM developerWorks의 [IBM Watson IoT Platform 블로그 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} 및 기존 {{site.data.keyword.iotrtinsights_short}} 인스턴스 대시보드를 참조하십시오.   
 
 ## 디바이스 스키마 추가
 {: #add_schema}
@@ -29,8 +29,8 @@ lastupdated: "2016-10-13"
 1. **디바이스 > 스키마 관리**로 이동하고 **스키마 추가**를 클릭합니다.  
 2. 이 메시지 스키마와 연관될 디바이스 유형을 선택합니다. **중요:** 디바이스 유형마다 하나의 스키마만 정의할 수 있습니다.
 
-3. 하나 이상의 특성을 추가합니다.
-    연결된 디바이스에서 특성을 선택하거나, 기존 특성을 수정하거나 결합하는 가상 특성을 작성하거나, 수동으로 특성을 추가할 수 있습니다.  
+3. 하나 이상의 특성을 추가합니다.  
+연결된 디바이스에서 특성을 선택하거나, 기존 특성을 수정하거나 결합하는 가상 특성을 작성하거나, 수동으로 특성을 추가할 수 있습니다.  
 
     **팁:** 사용 가능한 특성은 디바이스에서 전송한 메시지의 페이로드에 정의됩니다. {{site.data.keyword.iot_short}} 페이로드 형식에 대한 정보는 [메시지 페이로드](reference/mqtt/index.html#message-payloadl "메시지 페이로드.") 주제를 참조하십시오.   
   <dl>
@@ -67,12 +67,14 @@ lastupdated: "2016-10-13"
  `Float` 또는 `Integer`.</li>
  <li>특성 - 가상 특성의 특성 ID입니다. 예를 들어 다음과 같습니다.  
 `temp_virt`</li>
-    <li>계산 - 올바른 함수를 정의하기 위해 하나 이상의 컴포넌트를 추가합니다. 특성, 숫자 값 및 수학 연산자(예: +, -, \*, /, (, ), AVG 및 Z-스코어)를 사용하여 계산을 빌드할 수 있습니다. </br>AVG 컴포넌트는 지정된 기간 동안 평균 특성 값을 계산하는 데 사용합니다. </br>Z-스코어 컴포넌트는 데이터 점과 평균 데이터 점 값(특정 기간 동안 또는 다수의 데이터 점 간의 평균 데이터 점 값) 사이의 표준 편차 단위 차이값을 리턴합니다. </br> **중요:** AVG 및 Z-스코어 컴포넌트는 Edge Analytics Agent가 설치된 게이트웨이에 연결된 디바이스에서 선택한 특성의 데이터가 입력되는 경우에만 특성 데이터 점을 리턴합니다. 자세한 정보는 [Edge Analytics Agent 설치](gateways/dashboard.html#edge)를 참조하십시오.또한 AVG 및 Z-스코어 값을 비교하는 규칙 조건이 지원되지 않습니다. </li>
+    <li>계산 - 올바른 함수를 정의하기 위해 하나 이상의 컴포넌트를 추가합니다. 특성, 숫자 값, 그리고  +, -, \*, /, ( 및 ) 등의 수학 연산자를 사용할 수 있습니다.   
+    에지 디바이스의 데이터 점 시리즈에서 사용할 공식 세트에 대해 **고급**을 클릭하십시오. 고급 공식에 대한 자세한 정보는 [에지 가상 특성에 대한 고급 계산](im_vir_calculations.html)을 참조하십시오.  
+    **중요:** 고급 공식을 기반으로 가상 특성을 비교하는 규칙 조건은 지원되지 않습니다. </li>
     <li>데이터 단위 - 선택사항: 특성의 데이터 단위입니다. 예를 들어 `C` 또는 `Mph`입니다.</li>
     <li> 소수점 자리 - 선택사항으로, float 전용입니다. 디바이스 데이터에 포함할 10진수 수입니다.</li>
    </ul>
    </li>
-   <li>**완료**를 클릭하여 특성을 작성합니다. </li>
+   <li>**완료**를 클릭하여 특성을 작성합니다.</li>
   </ol>
   </dd>
   <dt>연결된 디바이스에서 특성 선택</dt>

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-01"
+  years: 2016, 2017
+lastupdated: "2017-03-13"
 
 ---
 
@@ -33,7 +33,7 @@ O painel do {{site.data.keyword.iot_full}} têm as placas padrão a seguir:
 |Visão Geral do Uso  | Mostra estatísticas de uso para sua organização. Lista os tipos de dispositivo e os dados que são consumidos.
 |Análise de dados central da regra | Mostra as regras para sua organização. Cartões adicionais listam alertas acionados, dispositivos associados, propriedades dos dispositivos e informações de alerta. |  
 |Análise de dados central do dispositivo | Mostra os dispositivos que estão conectados à sua organização. Cartões adicionais mostram alertas para um dispositivo selecionado, informações para um dispositivo selecionado, propriedades do dispositivo e informações de alerta. |
-|Gerenciamento de risco e segurança | Mostra cartões que resumem o status de segurança geral. Os operadores do sistema e os analistas de segurança podem visualizar detalhes de conformidade, status de conexão para dispositivos, as causas das falhas de conexão e os dispositivos bloqueados ou permitidos por meio de uma lista de bloqueio ou uma lista de desbloqueio. No cartão Conformidade de conexão, o usuário pode realizar drill down para um relatório detalhado sobre dispositivos fora de conformidade e pode exportar o relatório para o Excel.  |
+|Gerenciamento de risco e segurança | Mostra cartões que resumem o status de segurança geral. Os operadores do sistema e os analistas de segurança podem visualizar detalhes de conformidade, status de conexão para dispositivos, as causas das falhas de conexão e os dispositivos bloqueados ou permitidos por meio de uma lista de bloqueio ou uma lista de desbloqueio.  No cartão Conformidade de conexão, o usuário pode realizar drill down para um relatório detalhado sobre dispositivos fora de conformidade e pode exportar o relatório para o Excel. |
 
 É possível atualizar essas placas incluindo, atualizando e removendo cartões.
 
@@ -196,3 +196,5 @@ Para determinados tipos de cartão, é possível clicar em **Configurações** p
 7.	Por fim, posicione o novo cartão em sua placa arrastando-o para uma boa localização.  
 
 Ótimo! Agora é possível ver os dados em tempo real de seu dispositivo!
+
+Para obter instruções passo a passo sobre como exibir dados do dispositivo em tempo real, veja a orientação [Configurando placas e cartões no novo Painel do Watson IoT ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/configuring-the-cards-in-the-new-watson-iot-dashboard/){: new_window}.

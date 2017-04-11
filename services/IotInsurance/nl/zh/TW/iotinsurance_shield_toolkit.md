@@ -1,38 +1,49 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-26"
-
+  years: 2016, 2017
+lastupdated: "2017-03-01"
 ---
 
-
-
-{:new_window: target="\_blank"}
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 
 # 防護工具箱
 {: #iot4i_shield_toolkit}
-防護是接收自感應器的輸入（即有效負載）中可透過特定狀況觸發的一組規則及動作。防護可用來透過識別危害及建立適當的回應來保護內容及使用者。此範例顯示如何設定環境、定義防護、建立使用者，然後建立防護與使用者的關聯。您也可以選擇性地建立促銷活動及模擬的危害。
+使用防護可透過識別危害及建立適當的自動回應來保護內容及使用者。使用或修改 {{site.data.keyword.iotinsurance_short}} 防護程式庫中包含的防護，或使用下列指示及範例建立並實作您自己的防護。
 {:shortdesc}
+
+## 關於防護
+防護是一組規則及定義動作，可以由接收自感應器的輸入中的特定狀況觸發。例如，您可以建立防護，其規則導致每當感應器偵測到漏水時就傳送文字訊息。
+
+## 使用來自 {{site.data.keyword.iotinsurance_short}} 防護程式庫的防護
+
+您可以在 [{{site.data.keyword.iotinsurance_short}} 防護程式庫 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-shields){: new_window} 中找到一套廣泛的預先定義防護。檢視該網站上的 README 檔，以取得下載和開始使用防護的指示。
+
+## 建立自己的防護
+此範例顯示如何設定環境、定義防護、建立使用者，然後建立防護與使用者的關聯。您也可以選擇性地建立促銷活動及模擬的危害。
+  
 
 下列各節會顯示用於建立漏水之簡單防護的程式碼範例。[iot4i-api-examples-nodejs GitHub 儲存庫](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/)會提供一組完整範例程式碼。
 
-## 必要條件
+### 必要條件
 開始之前，請確定已具有下列必要條件：
 
 - 電腦上所安裝的 [Node.js](https://nodejs.org/en/)。  
 - 已啟用 Node.js 的運行環境（例如 Eclipse）。
 - Git 軟體及 [API 範例的 GitHub 原始碼儲存庫](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs)的存取。或者，您可以下載[保存與原始碼檔案](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/archive/master.zip)。
 - 備妥的原始碼。
-  若要準備原始碼，請執行下列動作：
+    
+若要準備原始碼，請執行下列動作：
   1. 將 [GitHub 原始碼儲存庫](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs)複製或下載至電腦。
   2. 使用指令行以移至包含所複製原始碼檔案的資料夾，並執行 `npm install` 指令，來安裝專案的開放程式碼必要條件。
 
-## 設定環境
+### 設定環境
 {: #environment}
 若要配置環境來傳送 REST API 呼叫，您必須在 config.js 檔案中配置 API 的 URL。在此環境定義中可以忽略聚集器 URL。
 
@@ -47,7 +58,7 @@ var config = module.exports = {
 };
 ```
 
-## 建立防護定義
+### 建立防護定義
 {: #create_shield_def}
 
 方法：POST  
@@ -79,7 +90,7 @@ var shield = {
 - **UUID** - 防護的通用唯一 ID (UUID)。
 - **actions** - 建立危害時所觸發的動作清單。在此範例中，會使用 iOS 推送通知，將危害的相關資訊傳送至使用者的應用程式。
 
-## 建立防護程式碼
+### 建立防護程式碼
 {: #create_shield_code}
 在 shieldCode.js 檔案中建立防護程式碼，以定義防護引擎如何處理有效負載。
 
@@ -141,12 +152,12 @@ var shieldCode = {
   };
   ```
 
-  - 登錄防護 - 防護程式碼中必須呼叫以在防護引擎中登錄防護的預先定義函數。範例中的 **undefined** 值代表這個特定範例中不需要的前置處理函數。在部分防護中，可以使用前置處理函數來重新排列有效負載中的資料。例如，如果以華氏報告溫度讀數，而 Safelet 需要攝氏，則可以使用前置處理函數，將溫度轉換成必要值。  
+  - 登錄防護 - 防護程式碼中必須呼叫以在防護引擎中登錄防護的預先定義函數。範例中的 **undefined** 值代表這個特定範例中不需要的前置處理函數。在部分防護中，可以使用前置處理函數來重新排列有效負載中的資料。例如，如果以華氏報告溫度讀數，而 Safelet 需要攝氏，則可以使用前置處理函數，將溫度轉換為必要值。  
   ```
   registerShield(DEMO_SHIELD_UUID, DEMO_SHIELD_NAME, demoEntryCondition, undefined, demoSafelet, demoMessage, DEMO_SHIELD_DELAY);
   ```
 
-## 建立使用者
+### 建立使用者
 {: #create_user}
 
 方法：POST  
@@ -181,7 +192,7 @@ var user = {
   - 10 - 儀表板
   - 1 - 系統管理者
 
-## 建立防護關聯
+### 建立防護關聯
 {: #create_shield_assoc}
 
 方法：POST  
@@ -203,7 +214,7 @@ var userShield = {
 
 
 
-## 建立模擬的危害
+### 建立模擬的危害
 {: #create_sim_hazard}
 
 方法：POST  
@@ -240,7 +251,7 @@ var parameters {
 ```
 
 
-## 建立促銷活動
+### 建立促銷活動
 {: #create_promotion}
 
 {{site.data.keyword.iotinsurance_short}} 可以使用行動應用程式，以將促銷活動傳送給屋主。使用 createPromotion.js 檔案來建立促銷活動。

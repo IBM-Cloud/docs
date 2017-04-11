@@ -1,19 +1,19 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-26"
+  years: 2016, 2017
+lastupdated: "2017-03-08"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # 關於 {{site.data.keyword.iotinsurance_short}}
 {: #about}
-前次更新：2016 年 10 月 21 日
-{: .last-updated}
 
 {{site.data.keyword.iotinsurance_full}} 是一個整合 IoT 正式作業實例，可收集並分析投保人的完整背景資料，以提供個人化風險評量、即時保護及保單成本降低。
 {: shortdesc}
@@ -25,7 +25,9 @@ lastupdated: "2016-10-26"
 
 ![{{site.data.keyword.iotinsurance_short}} 架構。主題本文會說明本圖。](images/IoT4I_architecture.svg "{{site.data.keyword.iotinsurance_short}} 架構")
 
-{{site.data.keyword.iotinsurance_short}} 元件會如本節所述地一起運作。此組織也會顯示在架構圖中。{{site.data.keyword.iotinsurance_short}} 儀表板會顯示 {{site.data.keyword.iot_short_notm}} 及 {{site.data.keyword.cloudantfull}} 資料庫中所儲存的資料。透過 Wink 雲端所連接的使用者智慧型裝置會將資料傳送至 Transformer，而 Transformer 會處理資料，並將它傳送至 {{site.data.keyword.iot_short_notm}}。資料是由防護引擎所處理，而且，如果資料符合防護準則，則會透過 API 傳送至「動作引擎」。「動作引擎」會使用 {{site.data.keyword.mobilepushfull}} 將通知傳送至使用者的行動應用程式。使用者也可以使用行動應用程式來回應警示或優惠。回應是由 {{site.data.keyword.amafull}} 服務處理，並透過 API 傳回至 {{site.data.keyword.iot_short_notm}}，再傳回至 {{site.data.keyword.iotinsurance_short}} 儀表板。
+{{site.data.keyword.iotinsurance_short}} 元件會如本節所述地一起運作。此組織也會顯示在架構圖中。{{site.data.keyword.iotinsurance_short}} 儀表板會顯示 {{site.data.keyword.iot_short_notm}} 及 {{site.data.keyword.cloudantfull}} 資料庫中所儲存的資料。使用者的智慧型裝置可以透過雲端連接，或是直接連接至 {{site.data.keyword.iot_short_notm}}。如果是透過雲端連接，它們會傳送資料到 Transformer，而 Transformer 會處理資料，並將它傳送至 {{site.data.keyword.iot_short_notm}}。來自 {{site.data.keyword.weatherfull}} 的資料也可以取回到 {{site.data.keyword.iotinsurance_short}} Weather Company Data Transformer，從那裡再取回到 {{site.data.keyword.iot_short_notm}}。資料是由防護引擎處理，防護引擎會產生事件並透過 API 傳送至「動作引擎」。「動作引擎」可以選擇性地使用 {{site.data.keyword.mobilepushfull}} 將通知傳送至使用者的行動應用程式。使用者也可以使用行動應用程式來回應警示或優惠。
+
+**附註**：較舊版的 {{site.data.keyword.iotinsurance_short}} 使用 {{site.data.keyword.amafull}} 服務來處理回應，並透過 API 將它們傳回 {{site.data.keyword.iot_short_notm}}，然後傳回 {{site.data.keyword.iotinsurance_short}} 儀表板。這個處理程序仍然適用於舊版 {{site.data.keyword.iotinsurance_short}} 的實例。不過，新的 {{site.data.keyword.iotinsurance_short}} 實例不包含 {{site.data.keyword.amashort}} 或 {{site.data.keyword.mobilepushshort}}。若要使用行動應用程式，您必須建立自訂鑑別處理程序。您也可以選擇性地建立並連結 [{{site.data.keyword.mobilepushshort}} 實例](../mobilepush/index.html)至 API，以啟用推送通知。
 
 ## 保險儀表板
 {: #insurance_dashboard}
@@ -37,7 +39,7 @@ lastupdated: "2016-10-26"
 {: #mobileapp}
 範例行動應用程式是投保人（例如屋主）檢視及回應 {{site.data.keyword.iotinsurance_short}} 從其住家感應器傳送之資訊的位置。
 
-屋主可以使用行動裝置授權服務連接至感應器提供者的雲端，以傳送及接收資料。例如，感應器偵測到漏水時，屋主可能會在行動入門範本應用程式中接收到通知。如需相關資訊，請參閱[安裝及連接範例行動應用程式](iotinsurance_mobile_app.html})。
+屋主可以使用行動裝置授權服務連接至感應器提供者的雲端，以傳送及接收資料。例如，感應器偵測到漏水時，屋主可能會在行動入門範本應用程式中接收到通知。如需相關資訊，請參閱[安裝及連接範例行動應用程式](iotinsurance_mobile_app.html)。
 
 ## REST 及即時 API
 {: #rest_api}
@@ -54,11 +56,22 @@ API 範例可用來協助您開始使用一般實務範例。如需相關資訊�
 
 ## Transformer
 {: #transformer}
-Transformer 要求來自雲端伺服器 API 的新資訊，並轉換它，使其符合 {{site.data.keyword.iotinsurance_short}} 中的資料。接著會發佈資料，以供其餘的 {{site.data.keyword.iotinsurance_short}} 實作使用。使用者必須授權 Transformer 元件存取感應器雲端資料以及處理記錄的資料。授權是使用行動入門範本應用程式所授與。Wink 是目前支援的唯一雲端供應商。
+Transformer 要求來自雲端伺服器 API 的新資訊，並轉換它，使其符合 {{site.data.keyword.iotinsurance_short}} 中的資料。接著會發佈資料，以供其餘的 {{site.data.keyword.iotinsurance_short}} 實作使用。使用者必須授權 Transformer 元件存取感應器雲端資料以及處理記錄的資料。{{site.data.keyword.iotinsurance_short}} 支援多個雲端供應商及裝置。如需支援雲端供應商完整清單，以及如何將裝置連接至 {{site.data.keyword.iotinsurance_short}} 的指示，請參閱[支援的裝置及供應商](iotinsurance_supporteddevices.html)。
+
+## Weather Company Data Transformer
+{: #wcdtransformer}
+Weather Company 應用程式會將來自 Weather Company Data Service 的相關天氣資料注入到 IoT4I 資料串流。此資料便可以用來建置啟用天氣功能的防護。
+
+**附註**：Weather Company Data Transformer 僅以概念證明或技術預覽的形式受到支援，不作為正式作業之用。
 
 ## 防護引擎
 {: #shield_engine}
 根據事件中所儲存的資訊，「防護」引擎會判斷是否發生危害（例如漏水）。如果識別出危害，則會將它傳遞給「動作引擎」。
+
+防護是客戶從保險提供者取得的特定保護。例如，屋主購買住家保險，針對火災、水害、竊盜及其他危害進行防護。{{site.data.keyword.iotinsurance_short}} 解決方案提供針對水的內建防護。在包含水的事件威脅到住家時，客戶會接收到警告並且可以進行回應。開發人員可以使用 REST API 來新增更多防護。
+  
+
+防護會在 {{site.data.keyword.iotinsurance_short}} 分析引擎中執行。分析引擎會識別危害類型（例如，*Water is detected*）、送出危害之感應器的使用者帳戶，以及與帳戶相關聯的防護。會根據該資訊來採取動作。您可以使用或修改 {{site.data.keyword.iotinsurance_short}} 防護程式庫中包含的防護，或建立並實作您自己的防護。如需防護及 [{{site.data.keyword.iotinsurance_short}} 防護程式庫 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-shields){: new_window} 的相關資訊，請參閱[防護工具箱](iotinsurance_shield_toolkit.html)。
 
 ## 動作引擎
 {: #action_engine}
@@ -66,25 +79,22 @@ Transformer 要求來自雲端伺服器 API 的新資訊，並轉換它，使其
 
 您可以使用 {{site.data.keyword.iotinsurance_short}} API 在 JavaScript 中建立新防護。
 
-## 防護
-{: #shields}
-防護是客戶從保險提供者取得的特定保護。例如，屋主購買住家保險，針對火災、水害、竊盜及其他危害進行防護。{{site.data.keyword.iotinsurance_short}} 解決方案提供針對水的內建防護。在包含水的事件威脅到住家時，客戶會接收到警告並且可以進行回應。開發人員可以使用 REST API 來新增更多防護。
-防護會在 {{site.data.keyword.iotinsurance_short}} 分析引擎中執行。分析引擎會識別危害類型（例如，*Water is detected*）、送出危害之感應器的使用者帳戶，以及與帳戶相關聯的防護。會根據該資訊來採取動作。
+
 
 # 相關鏈結
 {: #rellinks}
 
 ## 指導教學及範例
 {: #samples}
-* [GitHub 上的範例行動應用程式碼](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
+* [GitHub 上的範例行動應用程式碼 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
 
 ## API 參考資料
 {: #api}
-* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API 範例](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
+* [{{site.data.keyword.iotinsurance_short}} API ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://iot4i-api-docs.mybluemix.net/){:new_window}
+* [{{site.data.keyword.iotinsurance_short}} API 範例 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
 
 ## 相關鏈結
 {: #general}
-* [{{site.data.keyword.iot_full}} 文件](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [開發人員支援討論區](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-* [Stack Overflow 支援討論區](http://stackoverflow.com/questions/tagged/ibm-bluemix)
+* [{{site.data.keyword.iot_full}} 文件](https://console.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
+* [開發人員支援討論區 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix]){:new_window}
+* [Stack Overflow 支援討論區 ![外部鏈結圖示](../../icons/launch-glyph.svg)](http://stackoverflow.com/questions/tagged/ibm-bluemix){:new_window}

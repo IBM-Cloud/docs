@@ -17,10 +17,10 @@ Before you can use the Push Notification Service Cordova plug-in, you need to in
 	```
 	BMSClient.initialize("https://myapp.mybluemix.net","abcd1234-abcd-1234-abcd-abcd1234abcd");
 	```
-1. Modify the code snippet to use your Bluemix Route and appGUID parameters. Click the **Mobile Options** link in your Bluemix Application Dashboard to get the application Route and App GUID. Use the Route and App GUID values as your parameters in your ```BMSClient.initialize``` code snippet.
+1. Modify the code snippet to use your Bluemix Route and appGUID parameters. Click the **Mobile Options** link in your Bluemix Application Dashboard to get the application Route and App GUID. Use the Route and App GUID values as your parameters in your `BMSClient.initialize` code snippet.
 
 
-	**Note**: If you have created a Cordova app using the Cordova CLI, for example, Cordova create app-name command, put this Javascript code in the **index.js** file, after the ```app.receivedEvent``` function within the o```nDeviceReady: function()``` function to initialize the BMS client.
+	**Note**: If you have created a Cordova app using the Cordova CLI, for example, Cordova create app-name command, put this Javascript code in the **index.js** file, after the `app.receivedEvent` function within the `onDeviceReady: function()` function to initialize the BMS client.
 
 	```
 	onDeviceReady: function() {

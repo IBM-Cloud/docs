@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-30"
+  years: 2016, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -46,21 +46,21 @@ Le diagramme suivant illustre l'environnement de développement d'intégration d
 {: #byb}
 
 Découvrez le produit {{site.data.keyword.blockchainfull_notm}}, de quelle manière il est lié au concept général de chaîne de blocs et ce qu'il peut faire pour vous :
-- [{{site.data.keyword.blockchainfull_notm}}](http://www.ibm.com/blockchain/) sur IBM.com.
-- [{{site.data.keyword.blockchainfull_notm}} DOCS](https://console.ng.bluemix.net/docs/services/blockchain/index.html) -  Getting started with {{site.data.keyword.blockchainfull_notm}} service.
-- [{{site.data.keyword.blockchainfull_notm}} API](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/) - Présentation de l'API {{site.data.keyword.blockchainfull_notm}} .
-- [{{site.data.keyword.blockchainfull_notm}} for Developers](http://www.ibm.com/blockchain/for_developers.html) - Présentation de la façon dont la chaîne de blocs s'intègre dans votre environnement de développement, incluant des procédures pas à pas avec des démonstrations opérationnelles et du code déployable à exécuter sur {{site.data.keyword.Bluemix_notm}}.
+- [{{site.data.keyword.blockchainfull_notm}} ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/blockchain/){: new_window} sur le site IBM.com.
+- [{{site.data.keyword.blockchainfull_notm}} DOCS](https://console.ng.bluemix.net/docs/services/blockchain/index.html) -  Mise en route du service {{site.data.keyword.blockchainfull_notm}}. 
+- [{{site.data.keyword.blockchainfull_notm}} HFC SDK for Node.js avec documentation API ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://github.com/hyperledger/fabric/tree/v0.6/docs/API){: new_window} - Présentation de l'API {{site.data.keyword.blockchainfull_notm}}.
+- [{{site.data.keyword.blockchainfull_notm}} pour les développeurs ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/blockchain/for_developers.html){: new_window} - Présentation de la façon dont blockchain s'intègre dans votre environnement de développement, avec des procédures détaillées et des démonstrations et du code déployable pour s'exécuter sur {{site.data.keyword.Bluemix_notm}}.
 
 ## Exemples de contrats intelligents
 
 {: #samples}
 
-Un certain nombre d'exemples de contrats peuvent être téléchargés depuis le site [https://github.com/ibm-watson-iot/blockchain-samples](https://github.com/ibm-watson-iot/blockchain-samples). Vous pouvez utiliser les exemples de contrats comme base pour développer vos propres cas d'utilisation dans un code en chaîne déployable :
+Un certain nombre d'exemples de contrats peuvent être téléchargés depuis le site [https://github.com/ibm-watson-iot/blockchain-samples ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/blockchain-samples){: new_window}. Vous pouvez utiliser les exemples de contrats comme base pour développer vos propres cas d'utilisation dans un code en chaîne déployable :
 
 |Exemple de contrat |Description |
 |:---|:---|
-|[De base : Contrat simple](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/basic/simple_contract) | Version simplifiée du contrat avancé qui vous permet de suivre et stocker des données d'actif de terminal sur la chaîne de blocs.
-|[Avancé : Exemple de contrat générique IoT](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/advanced/iot_sample_contract) | Exemple de contrat avancé doté de nombreuses fonctions et dont le modèle de données et le comportement revêtent un aspect **commercial**.|
+|[De base : Contrat simple ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/basic/simple_contract){: new_window} | Version simplifiée du contrat avancé qui vous permet de suivre et stocker des données d'actif de terminal sur la chaîne de blocs.
+|[Avancé : Exemple de contrat générique IoT ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/advanced/iot_sample_contract){: new_window} | Exemple de contrat avancé doté de nombreuses fonctions et dont le modèle de données et le comportement revêtent un aspect **commercial**.|
 
 
 ## Configuration de votre environnement {{site.data.keyword.blockchainfull_notm}}
@@ -71,12 +71,11 @@ Avant de commencer à déployer et tester des contrats intelligents, vous devez 
 **Remarque : L'intégration de chaîne de blocs ** {{site.data.keyword.iot_short_notm}} prend en charge la connexion aux matrices {{site.data.keyword.blockchainfull_notm}} et aux matrices Hyperledger. Les exemples suivants sont basés sur l'utilisation d'{{site.data.keyword.blockchainfull_notm}}.
 
 1. Créez et configurez votre matrice {{site.data.keyword.blockchainfull_notm}}.
-
 L'intégration de chaîne de blocs {{site.data.keyword.iot_short_notm}} requiert la matrice {{site.data.keyword.blockchainfull_notm}} pour gérer le grand livre de chaîne de blocs, les contrats intelligents et l'infrastructure de chaîne de blocs générale. L'intégration de chaîne de blocs {{site.data.keyword.Bluemix_notm}} utilise {{site.data.keyword.blockchainfull_notm}} pour gérer les chaînes. Si vous avez accès à un environnement {{site.data.keyword.blockchainfull_notm}} existant, vous pouvez l'utiliser. Sinon, vous devez créer une instance d'{{site.data.keyword.blockchainfull_notm}} à partir du [catalogue](https://console.ng.bluemix.net/catalog/services/blockchain/) {{site.data.keyword.Bluemix_notm}}.
 
   1. A partir de votre tableau de bord de compte {{site.data.keyword.Bluemix_notm}}, cliquez sur **Utiliser des services ou des API**.
-  2. Localisez la section expérimentale du catalogue de service et sélectionnez **Chaîne de blocs**.  
-   **Astuce :** Cliquez [ici](https://console.ng.bluemix.net/catalog/services/blockchain/) pour accéder directement à la page de service expérimental d'{{site.data.keyword.blockchainfull_notm}}.
+  2. Localisez la section Services d'application du catalogue de service et sélectionnez **Chaîne de blocs**.  
+   **Astuce :** Cliquez sur [here](https://console.ng.bluemix.net/catalog/services/blockchain/) pour accéder directement à la page de service d'{{site.data.keyword.blockchainfull_notm}}.
   3. Sur la page de service d'{{site.data.keyword.blockchainfull_notm}}, vérifiez les sélections pour Ajout de service :  
     - Espace - Si l'espace dont vous disposez est plus étendu que l'espace `dev` par défaut, vérifiez que vous déployez bien le service dans l'espace souhaité.
     - Appli - Laissez non lié.
@@ -85,40 +84,44 @@ L'intégration de chaîne de blocs {{site.data.keyword.iot_short_notm}} requiert
   4. Cliquez sur **Créer** pour déployer {{site.data.keyword.blockchainfull_notm}} sur {{site.data.keyword.Bluemix_notm}}.  
   La chaîne de blocs est initialement déployée avec deux noeuds homologues. Vous pouvez ajouter d'autres noeuds selon vos besoins.
 
-4. Liez {{site.data.keyword.iot_short_notm}} à votre service {{site.data.keyword.blockchainfull_notm}}
+4. Liez {{site.data.keyword.iot_short_notm}} à votre service {{site.data.keyword.blockchainfull_notm}}  
     Pour écrire sur la chaîne de blocs depuis {{site.data.keyword.iot_short_notm}}, vous devez d'abord lier les services.
      1. Dans {{site.data.keyword.Bluemix_notm}}, accédez au tableau de bord.
      2. Sélectionnez l'espace dans lequel vous avez déployé {{site.data.keyword.blockchainfull_notm}}.
-     3. Cliquez sur la vignette **Chaîne de blocs**.
-     4. Dans le panneau de gauche, cliquez sur **Données d'identification pour le service**.
-     5. Sélectionnez un ensemble de données d'identification pour le service ou cliquez sur **Ajouter des données d'identification** pour créer un nouvel ensemble de données d'identification pour le service et attribuez à cet ensemble un nom descriptif, par exemple, "IoT-Platform-integration."
+     3. Cliquez sur le lien **Blockchain** sous **Services**.
+     4. Cliquez sur l'onglet **Données d'identification pour le service**.
+     5. Sélectionnez un ensemble de données d'identification pour le service ou cliquez sur **Nouvelles données d'identification du service** pour créer un nouvel ensemble de données d'identification pour le service et attribuez à cet ensemble un nom descriptif, par exemple, "IoT-Platform-integration."
      6. Dans les données d'identification pour le service au format JSON, notez les paramètres suivants :  
-      - Informations homologue : `api_host` et `api_port`
+      - Informations homologue : `api_host` and `api_port_tls`
       - Informations utilisateur de type 1 (client) : `username` et `secret`  
 
       Exemple de données d'identification pour le service
      ```json
     {
-      "credentials": {
       "peers": [
       {
-       "discovery_host": "169.44.63.203",
-       "discovery_port": "32904",
-       "api_host": "169.44.63.203",
-       "api_port_tls": "443",
-       "api_port": "80",
-       "type": "peer",
-       "network_id": "f621cde2-bdec-4897-b737-da4df144c41f",
-       "container_id": "5750f7734fb06c64d70c443b1dfcf39a3f5de7b51b792294c05dbdbe7d8356f7",
-       "id": "f621cde2-bdec-4897-b737-da4df144c41f_vp1",
-       "api_url": "http://169.44.63.203:32905"
-      },
+        "discovery_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",
+        "discovery_port": 30003,
+        "api_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",
+        "api_port_tls": 5003,
+        "api_port": 5003,
+        "event_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",
+        "event_port": 31003,
+        "type": "peer",
+        "network_id": "fa68cbcbfcec4726932e53e2fa4f3afc",
+        "container_id": "e33f08f85988bf57ccfcf34ccdb80d72489e5bfb46786b570e1a74a6679f804e",
+        "id": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0",
+        "api_url": "http://fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com:5003"
+    },
        ...
       ],
       "users": [
       {
-       "username": "user_type1_fa8e6ef0dc",
-       "secret": "33401036a9"
+        "enrollId": "user_type1_0",
+        "enrollSecret": "63c58806d6",
+        "affiliation": "group1",
+        "username": "user_type1_0",
+        "secret": "63c58806d6"
       },
        ...
        ]
@@ -128,21 +131,51 @@ L'intégration de chaîne de blocs {{site.data.keyword.iot_short_notm}} requiert
      **Important :** L'utilisateur que vous sélectionnez ne doit pas être déjà enregistré avec un homologue autre que celui que vous avez sélectionné.
      7. Cliquez sur **Retour au tableau de bord** pour revenir à votre tableau de bord {{site.data.keyword.Bluemix_notm}}.
      8. Sélectionnez l'espace dans lequel vous avez déployé {{site.data.keyword.iot_short_notm}}.
-     9. Cliquez sur la vignette **{{site.data.keyword.iot_short_notm}}**.
+     9. Cliquez sur le lien **{{site.data.keyword.iot_short_notm}}** sous **Services**.
      10. Cliquez sur **Lancer** pour ouvrir le tableau de bord {{site.data.keyword.iot_short_notm}}.
-     11. Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, sélectionnez **Paramètres > Connexions** en cliquant sur ![Paramètres.](images/platform_settings.png "Paramètres") dans la barre latérale de menus.
-     12. Dans la section Extensions, sous la chaîne de blocs, cliquez sur **Ajouter connexion de matrice**.   
-    Les zones de connexion de matrice s'affichent automatiquement sur la page, et remplacent la table.  
-    **Remarque :** L'intégration de chaîne de blocs doit être activée pour permettre l'ajout de matrices. Pour plus d'informations, voir [Chaîne de blocs](../../reference/extensions/index.html#blockchain) dans la rubrique Intégrations de service externe.
-     14. Entrez les informations suivantes pour vous connecter à la matrice :
-      - Nom de matrice - Entrez un nom permettant d'identifier la matrice dans {{site.data.keyword.iot_short_notm}}.
-      - Adresse homologue - Entrez l'adresse `api_host`.
-      - Numéro de port - Entrez le numéro `api_port` ou le numéro `api_port_tls`. Utilisez le port 80 si votre implémentation n'utilise pas TLS. Utilisez le port 443 si votre implémentation utilise TLS.
-      - Utiliser TLS - Utilisez le protocole TLS pour chiffrer la communication entre {{site.data.keyword.iot_short_notm}} et le contrat dans la matrice. Les numéros de port par défaut sont définis par l'instance {{site.data.keyword.iot_short_notm}} déployée à laquelle vous vous connectez.
-      - ID utilisateur - Entrez la chaîne `username`.
-      - Valeur confidentielle de l'utilisateur - Entrez la chaîne `secret`.
-     15. Cliquez sur **Confirmer toutes les modifications**
-  La table de matrice est renseignée avec la nouvelle connexion de matrice.  
+     11. Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, sélectionnez **Extensions** dans barre latérale de menus.
+     12. Sur la page **Extensions**, dans le titre Blockchain, cliquez sur **Configuration** ou sur l'![icône représentant un engrenage](../images/gear.png "Configure") si des matrices sont déjà liées.
+     13. Dans la section Configuration de la chaîne de blocs, cliquez sur **Ajouter une matrice**, puis entrez des informations sur la matrice.
+    **Remarque :** L'intégration de chaîne de blocs doit être activée pour permettre l'ajout de matrices. Pour plus d'informations, voir [Chaîne de blocs](../reference/extensions/index.html#blockchain) dans la rubrique Intégrations de service externe. 
+    1. Dans l'onglet **Matrice**, entrez un nom permettant d'identifier la matrice dans {{site.data.keyword.iot_short_notm}}, puis cliquez sur **Suivant**.   
+    2. Dans l'onglet **Homologue**, entrez les informations sur l'homologue :  
+   <table>
+   <thead>
+   <tr>
+   <th>Paramètre</th>
+   <th>Valeur</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>Nom</td>
+   <td>Entrez un nom permettant d'identifier l'homologue dans {{site.data.keyword.iot_short_notm}}.</td>
+   </tr>
+   <tr>
+   <td>Hôte</td>
+   <td>Adresse `api_host` pour le serveur homologue de validation 1</td>
+   </tr>
+   <tr>
+   <td>Port</td>
+   <td>Numéro `api_port_tls`</td>
+   </tr>
+   <tr>
+   <td>ID d'utilisateur</td>
+   <td>Chaîne `nom d'utilisateur` pour l'utilisateur qui a été utilisée afin d'enregistrer le contrat intelligent avec la chaîne de blocs. Vous utiliserez également cet ID d'utilisateur pour configurer ultérieurement l'interface utilisateur simple.</td>
+   </tr>
+   <tr>
+   <td>Clé secrète</td>
+   <td>Chaîne `secrète` pour l'utilisateur</td>
+   </tr>
+   <tr>
+   <td>Utiliser TLS</td>
+   <td>En fonction ou Hors fonction</br>Utilisez le protocole TLS pour chiffrer la communication entre {{site.data.keyword.iot_short_notm}} et le contrat dans la matrice. Le protocole TLS doit être activé lors de la connexion à une matrice {{site.data.keyword.blockchainfull_notm}}.</td>
+   </tr></tbody>
+   </table>  
+    3. Cliquez sur **Terminer**.
+     3. Dans la section Configuration de la chaîne de blocs, cliquez sur **Terminé** pour sauvegarder les informations sur la matrice.    
+
+La table de matrice est renseignée avec la nouvelle connexion de matrice.  
 
 ## Création, test et déploiement de vos contrats intelligents
 {: #test_contracts}
@@ -154,16 +187,16 @@ Les contrats intelligent que vous souhaitez déployer doivent figurer dans un r�
 2.  Configurez un développement Hyperledger local et un environnement de test.  
 Pour développer et tester votre propre code en chaîne avant de le déployer sur {{site.data.keyword.blockchainfull_notm}}, vous devez configurer un environnement de développement local. Cet environnement comprend le langage GoLang que vous utilisez afin d'écrire le code en chaîne pour vos contrats.
  1. Configurez l'environnement de développement.  
- L'environnement de développement inclut les outils dont vous avez besoin pour développer vos contrats intelligents à l'aide de la génération de code en chaîne en GoLang. Pour plus d'informations, voir [Setting up the development environment](https://github.com/hyperledger/fabric/blob/master/docs/dev-setup/devenv.md) dans la documentation Hyperledger.
+ L'environnement de développement inclut les outils dont vous avez besoin pour développer vos contrats intelligents à l'aide de la génération de code en chaîne en GoLang. Pour plus d'informations, voir [Setting up the development environment ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")]( https://github.com/hyperledger/fabric/blob/master/docs/source/dev-setup/devenv.rst){: new_window} dans la documentation Hyperledger. 
  2. Installez un environnement de débogage de code en chaîne.   
- L'environnement de débogage fournit les outils dont vous avez besoin pour tester et déboguer vos contrats intelligents avant de les déployer sur {{site.data.keyword.blockchainfull_notm}}. Pour plus d'informations, voir [Writing, Building, and Running Chaincode in a Development Environment](https://github.com/hyperledger/fabric/blob/master/docs/Setup/Chaincode-setup.md) dans la documentation Hyperledger.
+ L'environnement de débogage fournit les outils dont vous avez besoin pour tester et déboguer vos contrats intelligents avant de les déployer sur {{site.data.keyword.blockchainfull_notm}}. Pour plus d'informations, voir [Writing, Building, and Running Chaincode in a Development Environment ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://github.com/hyperledger/fabric/blob/master/docs/source/Setup/Chaincode-setup.rst){: new_window} dans la documentation Hyperledger. 
  3. Configurez un réseau pour le développement.   
- Le réseau pour le développement fournit un environnement de type production plus strict dans lequel vous pouvez réaliser des tests finaux sur vos contrats intelligents.  Utilisez cet environnement pour réaliser des tests finaux sur les contrats testés et débogués avant de les déployer sur {{site.data.keyword.blockchainfull_notm}}. Pour plus d'informations, voir [Setting Up a Network](https://github.com/hyperledger/fabric/blob/master/docs/Setup/Network-setup.md) dans la documentation Hyperledger.
+ Le réseau pour le développement fournit un environnement de type production plus strict dans lequel vous pouvez réaliser des tests finaux sur vos contrats intelligents.  Utilisez cet environnement pour réaliser des tests finaux sur les contrats testés et débogués avant de les déployer sur {{site.data.keyword.blockchainfull_notm}}. Pour plus d'informations, voir [Setting Up a Network ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://github.com/hyperledger/fabric/blob/master/docs/source/Setup/Network-setup.rst){: new_window} dans la documentation Hyperledger. 
 
 3. Facultatif : Téléchargez les exemples de contrats intelligents fournis par IBM.  
 IBM fournit un certain nombre de contrats intelligents que vous pouvez télécharger et utiliser directement en l'état ou que vous pouvez adapter aux objectifs de votre organisation.  
 Pour télécharger les exemples de contrats :
- 1. Accédez au référentiel d'exemples de chaîne de blocs à l'adresse https://github.com/ibm-watson-iot/blockchain-samples/
+ 1. Accédez au référentiel d'exemples de chaîne de blocs à l'adresse https://github.com/ibm-watson-iot/blockchain-samples/  
  Les dossiers basic_contract_hyperledger et trade_lane_contract_hyperledger contiennent respectivement les contrats de base et les contrats commerciaux.
  3. Utilisez `git clone` dans le terminal pour cloner le projet https://github.com/ibm-watson-iot/blockchain-samples.  
  **Astuce :** Vous pouvez également télécharger un fichier compressé du projet en cliquant sur **Download ZIP** depuis la page de projet.
@@ -189,14 +222,15 @@ Pour télécharger les exemples de contrats :
  Après avoir testé et vérifié votre contrat localement, vous pouvez le déployer sur votre matrice {{site.data.keyword.blockchainfull_notm}} pour le tester.
   1. Téléchargez votre contrat sur votre référentiel GitHub public.  
   Par exemple, téléchargez le fichier sample.go sur :
+    
   `http://github.com/{my organization}/{my project}/`
   2. Enregistrez le contrat avec l'homologue auquel vous vous êtes connecté précédemment.  
-  Utilisez un client REST, tel que CURL ou Postman, pour soumettre l'appel d'enregistrement. Pour plus d'informations sur l'appel d'enregistrement, voir la [documentation d'API POST registrar](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/#!/Registrar/registerUser). Utilisez les informations suivantes lors de l'enregistrement :
+  Utilisez un client REST, tel que CURL ou Postman, pour soumettre l'appel d'enregistrement. Pour plus d'informations sur l'appel de registre, voir la  [documentation d'API de registre POST ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://github.com/hyperledger/fabric/blob/v0.6/docs/API/CoreAPI.md#registrar){: new_window}. Utilisez les informations suivantes lors de l'enregistrement :
   <ul>
-  <li>URL: `http://api_host:api_port/registrar`
-  <li>Type: POST
-  <li>Header: `Content type: application/x-www-form-urlencoded`
-  <li>Payload:  
+  <li>URL : `http://api_host:api_port_tls/registrar`
+  <li>Type : POST
+  <li>Header : `Content type: application/json`
+  <li>Payload :  
   ```json
    {  
         "enrollId": "{username}",      
@@ -206,29 +240,31 @@ Pour télécharger les exemples de contrats :
 
   </ul>
   3. Déployez le contrat sur l'homologue.  
-  Pour plus d'informations sur l'appel de déploiement, voir la [documentation d'API POST devops/deploy](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/#!/Devops/chaincodeDeploy).  
+  Pour plus d'informations sur l'appel de déploiement, voir la [documentation d'API POST/chaincode ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://github.com/hyperledger/fabric/blob/v0.6/docs/API/CoreAPI.md#chaincode){: new_window}.  
   Utilisez les informations suivantes lors du déploiement :  
   <ul>
-  <li>URL: `http://api_host:api_port/devops/deploy`
-  <li>Type: POST
-  <li>Header: `Content type: application/x-www-form-urlencoded`
-  <li>Payload:  
+  <li>URL : `http://api_host:api_port_tls/chaincode`
+  <li>Type : POST
+  <li>Header : `Accept: application/json`
+  <li>Header : `Content type:  application/json`
+  <li>Payload :  
   ```
   {
-      "type": "GOLANG",   
-      "chaincodeID": {  
-      "path": "http://github.com/{my organization}/{my project}/sample.go",
-      "name": "string"
+    "jsonrpc": "2.0",
+    "method": "deploy",
+    "params": {
+        "type": 1,
+        "chaincodeID":{
+              "path": "http://github.com/{my organization}/{my project}/sample.go"
+        },
+        "ctorMsg": {
+            "function":"init",
+            "args":["{\"version\":\"1.0\",\"nickname\":\"sample_contract\"}"]
+        },
+        "secureContext": "username"
     },
-    "ctorMsg": {  
-      "function": "init",  
-      "args": [
-        "{\"version\":\"1.0\}"}"
-      ]
-    },
-    "secureContext": "'username'",
-    "confidentialityLevel": "PUBLIC"
-  }
+    "id":1234
+}
   ```  
   </ul>  
   Votre contrat est déployé sur la matrice.  
@@ -238,16 +274,16 @@ Pour télécharger les exemples de contrats :
   Avant d'écrire des données de terminal sur les nouveaux contrats intelligents de chaîne de blocs, vous devez d'abord mapper les données de terminal aux contrats.  
    1. Dans {{site.data.keyword.Bluemix_notm}}, accédez au tableau de bord.
    2. Sélectionnez l'espace dans lequel vous avez déployé {{site.data.keyword.iot_short_notm}}.
-   3. Cliquez sur la vignette **{{site.data.keyword.iot_short_notm}}**.
+   3. Cliquez sur le service **{{site.data.keyword.iot_short_notm}}**.
    4. Cliquez sur **Lancer** pour ouvrir le tableau de bord {{site.data.keyword.iot_short_notm}}.
    5. Sélectionnez **Chaîne de blocs** en cliquant sur ![Chaîne de blocs.](images/platform_blockchain.png "Chaîne de blocs") dans la barre latérale de menus.
-   6. Cliquez sur **Lier le contrat**.
-   6. Sélectionnez le nom de la matrice que vous avez créée précédemment.
-   7. Entrez les informations suivantes :  
+   6. Cliquez sur **Mapper les données de terminal**.
+   7. Sélectionnez le type de terminal pour lequel vous souhaitez stocker des données de terminal dans la chaîne de blocs et le nom d'événement des événements que vous souhaitez stocker. Cliquez sur **Suivant**.
+   8. Sélectionnez le nom de la matrice que vous avez créée précédemment. Cliquez sur **Suivant**.
+   9. Entrez les informations suivantes et cliquez sur **Suivant** :
      - ID de contrat : Collez l'ID de contrat de 128 caractères que vous avez sauvegardé lors du déploiement du contrat.
      - Nom de contrat : Entrez un nom permettant d'identifier le contrat dans {{site.data.keyword.iot_short_notm}}.
-     - Sélectionnez le type de terminal pour lequel vous souhaitez stocker des données de terminal dans la chaîne de blocs.
-     - Sélectionnez le nom des événements que vous souhaitez stocker.  
+
      **Astuce :** Afin de rechercher les types d'événement pour un terminal, accédez à la page **Terminaux** et cliquez sur le nom de terminal pour ouvrir la page des détails de terminal. Faites défiler l'écran vers le bas jusqu'à la section **Informations sur le capteur** pour voir la liste des événements et points de données disponibles pour le terminal.
 
    11. Mappez les propriétés de terminal disponibles aux paramètres de contrat.   
@@ -264,7 +300,7 @@ Pour télécharger les exemples de contrats :
     <li>  Temperature - flottant 64  
     <li>  Carrier - chaîne   
     </ul>  
-    Pour plus d'informations sur le mappage des données de terminal aux contrats, voir [Data mapping example](https://github.com/ibm-watson-iot/blockchain-samples/wiki/Data-mapping-example) dans le wiki des exemples IoT Blockchain sur GitHub.
+    Pour plus d'informations sur le mappage des données de terminal aux contrats, voir l'[exemple de mappage de données ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/blockchain-samples/wiki/Data-mapping-example){: new_window} dans le wiki des exemples IoT Blockchain sur GitHub.
    12. Sur la page de synthèse, vérifiez que les informations sont correctes.
    13. Le mappage de données de terminal au contrat s'affiche sur la page de chaîne de blocs.
 
@@ -272,7 +308,7 @@ Pour télécharger les exemples de contrats :
 Pour tester votre contrat intelligent, effectuez un test de bout en bout en créant un  terminal dans {{site.data.keyword.iot_short_notm}}, en connectant votre terminal à {{site.data.keyword.iot_short_notm}}, en configurant IoT Blockchain pour qu'il se connecte à votre matrice de chaîne de blocs et en configurant  {{site.data.keyword.iot_short_notm}} pour qu'il mappe et stocke vos messages de terminal dans la chaîne de blocs. A l'aide de la console {{site.data.keyword.blockchainfull_notm}}, vous pouvez afficher la chaîne de blocs pour voir les données de terminal dans le grand livre. Si votre contrat prend en charge la fonction readAsset(), vous pouvez utiliser l'interface utilisateur de surveillance pour afficher votre chaîne de blocs et voir les données de terminal de votre propre scénario stockées de manière indélébile dans une chaîne de blocs.
 
 5. Configurez l'interface utilisateur de surveillance pour qu'elle se connecte à {{site.data.keyword.blockchainfull_notm}}.  
- **Astuce :** Si vous n'avez pas encore installé l'interface utilisateur de surveillance dans votre environnement local, vous pouvez l'installer dès maintenant. Suivez les instructions décrites dans le fichier Readme Monitoring UI disponible dans le répertoire GitHub [Blockchain Monitoring UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui).  
+ **Astuce :** Si vous n'avez pas encore installé l'interface utilisateur de surveillance dans votre environnement local, vous pouvez l'installer dès maintenant. Suivez les instructions décrites dans le fichier Readme Monitoring UI disponible dans le répertoire GitHub [Blockchain Monitoring UI ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window}.   
  Accédez aux paramètres de configuration en cliquant sur le bouton **CONFIGURATION**.   
  Utilisez les informations suivantes pour vous connecter à un contrat :
 <table>
@@ -287,7 +323,7 @@ Pour tester votre contrat intelligent, effectuez un test de bout en bout en cré
 <tr>
 <td>Hôte et port d'API</td>
 <td>`http://peer_URL:port`</td>
-<td>Hôte et port de l'API REST {{site.data.keyword.blockchainfull_notm}} auxquels `http://` est ajouté en préfixe. Utilisez l'adresse `api_host` et le numéro `api_port`. </td>
+<td>Hôte et port de l'API REST {{site.data.keyword.blockchainfull_notm}}, auxquels `https://` est ajouté en préfixe. Utilisez l'adresse `api_host` et le numéro de port `api_port_tls`. </td>
 </tr>
 <tr>
 <td>ID de code en chaîne</td>
@@ -314,11 +350,11 @@ Pour tester votre contrat intelligent, effectuez un test de bout en bout en cré
 
 3. Dans l'interface utilisateur de surveillance, vérifiez que votre configuration fonctionne comme prévu.  
 Utilisez les composants de l'interface utilisateur de surveillance pour interagir avec votre contrat de chaîne de blocs :  
- - Opérations sur le code en chaîne
+ - Opérations sur le code en chaîne  
  Vérifiez que les opérations sur le code en chaîne propres au contrat peuvent être exécutées comme prévu. Par exemple, pour le contrat de base, vérifiez que l'exécution d'une fonction `createAsset` entraîne l'ajout d'un actif sur la chaîne de blocs.
- - Contenu de réponse
+ - Contenu de réponse  
  Vérifiez que les réponses aux demandes des homologues apparaissent comme prévu lorsque vous soumettez des demandes REST à partir de l'onglet des opérations sur le code en chaîne.
- - Chaîne de blocs
+ - Chaîne de blocs  
 Vérifiez que des blocs sont ajoutés à la chaîne lorsque vous injectez des données à partir d'un terminal lié ou lorsque vous utilisez le composant des opérations sur le code en chaîne.    
 
 ## Etapes suivantes

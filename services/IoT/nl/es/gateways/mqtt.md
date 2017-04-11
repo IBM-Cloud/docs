@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-14"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-17"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -58,11 +58,16 @@ Una pasarela puede publicar sucesos de sí misma y en nombre de cualquier dispos
 |Dispositivo 1 |mi_dispositivo |dispositivo1 |
 
 -   La Pasarela 1 puede publicar sus propios sucesos de estado:
+      
     `iot-2/type/mygateway/id/gateway1/evt/status/fmt/json`
 -   La Pasarela 1 puede publicar sucesos de estado en nombre del Dispositivo 1:
+      
     `iot-2/type/mydevice/id/device1/evt/status/fmt/json`
 
 **Importante:** La carga útil de mensajes está limitada a un máximo de 131072 bytes. Los mensajes mayores de este límite se rechazarán.
+
+### Mensajes retenidos
+Las organizaciones de {{site.data.keyword.iot_short_notm}} no tienen autorización para publicar mensajes MQTT retenidos. Si una pasarela envía un mensaje retenido, el servicio {{site.data.keyword.iot_short_notm}} modifica el distintivo del mensaje retenido cuando tiene el valor true y procesa el mensaje como si el distintivo estuviera establecido en false.
 
 ## Suscripción a mandatos
 {: #subscribing_cmds}
@@ -83,10 +88,13 @@ El comodín `+` de MQTT puede utilizarse para `typeId`, `deviceId`, `commandId` 
 
 
 -   La Pasarela 1 puede suscribirse a los mandatos dirigidos a la pasarela:
+      
     `iot-2/type/mygateway/id/gateway1/cmd/+/fmt/+`
 -   La Pasarela 1 puede suscribirse a mandatos que se envían a Dispositivo 1:
+      
     `iot-2/type/mydevice/id/device1/cmd/+/fmt/+`
 -   La Pasarela 1 puede suscribirse a cualquier mandato que se envía a los dispositivos de tipo `mydevice`:
+       
      `iot-2/type/mydevice/id/+/cmd/+/fmt/+`
 
 **Importante:** Las sesiones persistentes de MQTT que se especifican como `cleansession=false` no buscan dispositivos que se conectan a pasarelas. Si un dispositivo se conecta a la pasarela A y, más adelante, se conecta a la pasarela B, no recibe ningún mensaje que se haya publicado en la pasarela A para dicho dispositivo mientras ha estado desconectado. Una pasarela es propietaria del cliente y la suscripción de MQTT, pero no los dispositivos que estén conectados a la pasarela.
@@ -154,7 +162,7 @@ El soporte para la gestión del ciclo de vida de dispositivos es opcional. El pr
 ### Niveles de calidad de servicio y sesión limpia
 {: #quality_service}
 
-Las pasarelas gestionadas pueden publicar mensajes que tienen un nivel de calidad de servicio (QoS) de 0 o 1. Los mensajes de la pasarela no deben ser mensajes retenidos.
+Las pasarelas gestionadas pueden publicar mensajes que tienen un nivel de calidad de servicio (QoS) de 0 o 1.
 
 Los mensajes con QoS=0 pueden descartarse y no persisten una vez que se reinicia el servidor de mensajería. Los mensajes con QoS=1 se pueden poner en cola y persisten una vez que se reinicia el servidor de mensajería. La duración de la suscripción determina si se pone en cola una solicitud. El parámetro `cleansession` de la conexión que ha realizado la suscripción determina la duración de la suscripción.  
 

@@ -379,11 +379,11 @@ Python 조치는 Python 2.7.12를 사용하여 기본적으로 실행됩니다.
 ## Docker 조치
 {: #openwhisk_ref_docker}
 
-Docker 조치는 Docker 컨테이너 내의 사용자 제공 2진을 실행합니다. 2진은 [python:2.7.12-alpine](https://hub.docker.com/r/library/python)을 기반으로 하는 Docker 이미지에서 실행되므로 2진은 이 배포판과 호환 가능해야 합니다. 
+Docker 조치는 Docker 컨테이너 내의 사용자 제공 바이너리를 실행합니다. 바이너리는 [python:2.7.12-alpine](https://hub.docker.com/r/library/python)을 기반으로 하는 Docker 이미지에서 실행되므로 바이너리는 이 배포판과 호환 가능해야 합니다. 
 
 Docker 스켈레톤은 OpenWhisk 호환 가능 Docker 이미지를 빌드하는 편리한 방법입니다. `wsk sdk install docker` CLI 명령을 사용하여 스켈레톤을 설치할 수 있습니다.
 
-기본 2진 프로그램은 컨테이너 내부(`/action/exec`)에 있어야 합니다. 실행 파일은 `stdin`을 통해 입력 인수를 수신하고 `stdout`를 통해 결과를 리턴해야 합니다.
+기본 바이너리 프로그램은 컨테이너 내부(`/action/exec`)에 있어야 합니다. 실행 파일은 `stdin`을 통해 입력 인수를 수신하고 `stdout`를 통해 결과를 리턴해야 합니다.
 
 `dockerSkeleton`에 포함된 `Dockerfile`을 수정하여 모든 컴파일 단계 또는 종속 항목을 포함시킬 수 있습니다. 
 

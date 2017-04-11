@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-10-16"
 
 ---
@@ -91,12 +91,12 @@ Visualizar informações de uso da organização|-|-
 Operações de controle de acesso || Funções de gateway|
 :--------: | ---------------------|------------------------
            | **Gateway padrão** | **Gateway privilegiado**
-Visualizar propriedades de usuário (incluindo direitos de acesso)|-|-
+Visualizar propriedades de usuários (incluindo direitos de acesso)|-|-
 Visualizar propriedades próprias dos usuários (incluindo direitos de acesso)|-|-
-Gerenciar usuários (incluindo direitos de acesso|-|-		
-Visualizar propriedades de chave API (interface de programação de aplicativos) (incluindo direitos de acesso)|-|-		
-Visualizar propriedades próprias da chave API (interface de programação de aplicativos) (incluindo direitos de acesso)|-|-		
-Criar, atualizar ou excluir chaves API (interface de programação de aplicativos) (incluindo direitos de acesso)|-|-
+Gerenciar usuários (incluindo direitos de acesso)|-|-		
+Visualizar propriedades da chave API (incluindo direitos de acesso)|-|-		
+Visualizar propriedades próprias da chave API (incluindo direitos de acesso)|-|-		
+Criar, atualizar ou excluir chaves API (incluindo direitos de acesso)|-|-
 Visualizar propriedades do dispositivo (incluindo direitos de acesso)|P|X
 Visualizar propriedades próprias do dispositivo (incluindo direitos de acesso)|P|X		
 Criar, atualizar, excluir dispositivo (incluindo direitos de acesso)|-|X

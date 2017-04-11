@@ -2,11 +2,11 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -39,7 +39,8 @@ pip install python-keystoneclient
 ```
 {: pre}
 
-有关必备软件的更多信息，请参阅 [OpenStack 文档](http://docs.openstack.org/user-guide/common/cli_install_openstack_command_line_clients.html#install-the-prerequisite-software){: new_window}。
+有关必备软件的更多信息，请参阅 <a href="http://docs.openstack.org/user-guide/common/cli_install_openstack_command_line_clients.html#install-the-prerequisite-software" target="_blank">OpenStack 文档。<img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a>
+
 
 
 ## 设置客户机 {: #setup-swift-client}

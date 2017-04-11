@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-07"
+  years: 2015, 2017
+lastupdated: "2016-03-14"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -35,17 +35,17 @@ L'API REST HTTP {{site.data.keyword.iot_short_notm}} prend en charge les fonctio
 - Publication d'événement de terminal (bêta)
 - Interrogation de statut de service (extraction des statuts de service par organisation)
 
-## Accès à l'API REST HTTP
+## Accès à la documentation de l'API REST HTTP
 {: #api_link}
 
-Pour accéder à l'API REST HTTP {{site.data.keyword.iot_short_notm}} et obtenir davantage d'informations sur la génération et la personnalisation de vos applications, voir https://docs.internetofthings.ibmcloud.com/swagger/v0002.html.
+Pour accéder à la documentation de l'API REST HTTP {{site.data.keyword.iot_short_notm}} et obtenir davantage d'informations sur la génération et personnalisation de vos applications, voir [API](../reference/api.html).
 
 La seule version de l'API REST HTTP {{site.data.keyword.iot_short_notm}} prise en charge est la version 2. Assurez-vous que vos solutions {{site.data.keyword.iot_short_notm}} utilisent bien la version 2.
 
-
-
-# API de messagerie REST HTTP pour les applications
+# API de messagerie HTTP pour les applications
 {: #rest_messaging_api}
+
+Pour accéder à la documentation de l'API de messagerie HTTP {{site.data.keyword.iot_short_notm}} et obtenir davantage d'informations sur la publication d'événements et l'envoi de commandes à l'aide de HTTP, voir [{{site.data.keyword.iot_short_notm}} HTTP Messaging API ![Icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}.
 
 ## Publication d'événements et de commandes
 {: #event_command_publication}
@@ -53,31 +53,33 @@ La seule version de l'API REST HTTP {{site.data.keyword.iot_short_notm}} prise e
 Outre l'utilisation du protocole de messagerie MQTT, vous pouvez également configurer vos applications pour qu'elles publient des événements et des commandes sur {{site.data.keyword.iot_short_notm}} via HTTP en exécutant l'une des commandes d'API REST HTTP suivantes :
 
 ### Demande de publication (POST) d'événement non sécurisée
-<pre class="pre">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
-{: codeblock}
+<pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
 ### Demande de publication (POST) d'événement sécurisée
-<pre class="pre">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
-{: codeblock}
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
+
+**Remarque :** Le port 443, port SSL par défaut, peut également être spécifié pour les appels API HTTP sécurisés.
 
 ### Demande de publication (POST) de commande non sécurisée
-<pre class="pre">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">eventId</var></pre>
-{: codeblock}
+<pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">eventId</var></code></pre>
+
 
 ### Demande de publication (POST) de commande sécurisée
-<pre class="pre">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">eventId</var></pre>
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">eventId</var></code></pre>
 {: codeblock}
 
 Si vous connectez un terminal ou une application au service Quickstart, remplacez la valeur d'**orgId** par la chaîne 'quickstart'.
 
-Remarque : Si les applications peuvent réutiliser une connexion HTTP pour publier des événements ou des commandes sur différents terminaux, l'en-tête HTTP d'autorisation quant à lui ne peut pas être modifié.
+**Remarques :**
+- Si les applications peuvent réutiliser une connexion HTTP pour publier des événements ou des commandes sur différents terminaux, l'en-tête HTTP d'autorisation quant à lui ne peut pas être modifié.
+- Le port 443, port SSL par défaut, peut également être spécifié pour les appels API HTTP sécurisés.
 
 ### Authentification
 
 Toutes les demandes doivent inclure un en-tête d'autorisation. L'authentification de base est la seule méthode prise en charge. Les applications sont authentifiées à l'aide de clés d'API. Lorsqu'une application effectue une demande via l'API REST HTTP {{site.data.keyword.iot_short_notm}}, les données d'identification suivantes sont requises :
 
 ```
-username = API key (for example, a-orgId-a84ps90Ajs)
+username = API key (for example, a/orgId/a84ps90Ajs)
 password = Authentication token
 ```
 

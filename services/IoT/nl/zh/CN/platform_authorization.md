@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-14"
+  years: 2016, 2017
+lastupdated: "2017-03-13"
 
 ---
 
@@ -21,12 +21,13 @@ lastupdated: "2016-09-14"
 {: #api-key}
 将应用程序连接到 {{site.data.keyword.iot_short_notm}} 组织时，会使用 API 密钥。应用程序需要用于连接到组织的 API 密钥以及必须与该 API 密钥配合使用的唯一认证令牌。  
 
-有关应用程序连接的更多信息，请参阅开发者文档中的[应用程序的 MQTT 连接](https://docs.internetofthings.ibmcloud.com/applications/mqtt.html)。
+有关应用程序连接的更多信息，请参阅开发者文档中的[应用程序的 MQTT 连接 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/applications/mqtt.html){: new_window}。
 
 
 要创建新的 API 密钥和认证令牌对，请执行以下操作：  
 1.	在 {{site.data.keyword.iot_short_notm}} 仪表板中，转至**应用程序 > API 密钥**。  
 2.	单击**生成 API 密钥**。
+  
 **重要信息：**记录 API 密钥和令牌对。认证令牌是不可恢复的。如果丢失或忘记此令牌，需要重新注册 API 密钥以生成新的认证令牌。
  - API 密钥示例为 `a-organization_id-a84ps90Ajs`  
  - 令牌示例为 `MP$08VKz!8rXwnR-Q*`  

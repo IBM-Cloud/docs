@@ -25,23 +25,23 @@ El despliegue de una app en {{site.data.keyword.Bluemix_notm}} incluye dos fases
 Cloud Foundry admite Diego, que es la nueva arquitectura predeterminada de tiempo de ejecución que ofrece un conjunto de funciones que mejoran el desarrollo de aplicaciones para albergar y construir plataformas en la nube. Esta actualización de arquitectura ofrece una mejora en el funcionamiento general y en el rendimiento de la plataforma Cloud Foundry. La nueva arquitectura ofrece soporte para diversas tecnologías de contenedor de aplicaciones, que incluyen Garden y Windows, un paquete SSH que permite el inicio de sesión directo con el contenedor de aplicaciones y otros cambios innovadores. Para obtener más información sobre la reciente actualización de la arquitectura, consulte [{{site.data.keyword.Bluemix_notm}} Cloud Foundry: Diego is live ![icono de enlace externo](../icons/launch-glyph.svg)](https://www.ibm.com/blogs/bluemix/2017/01/bluemix-cloud-foundry-diego-live/){: new_window}.
 
 
-Todas las nuevas aplicaciones que cree se ejecutarán en Diego; debe comenzar a migrar sus aplicaciones existentes que se ejecuten en DEA a la nueva arquitectura Diego. 
+Todas las nuevas aplicaciones que cree se ejecutarán en Diego; debe comenzar a migrar sus aplicaciones existentes que se ejecuten en DEA a la nueva arquitectura Diego.
 
-**Nota**: la arquitectura Diego de Cloud Foundry afecta a todos los entornos de región pública de {{site.data.keyword.Bluemix_notm}}. Los entornos {{site.data.keyword.Bluemix_notm}} dedicado y {{site.data.keyword.Bluemix_notm}} local se actualizarán más adelante. 
+**Nota**: la arquitectura Diego de Cloud Foundry afecta a todos los entornos de región pública de {{site.data.keyword.Bluemix_notm}}. Los entornos {{site.data.keyword.Bluemix_notm}} dedicado y {{site.data.keyword.Bluemix_notm}} local se actualizarán más adelante.
 
 ### Transferencia de una app
 {: #diego}
 
-Durante la fase de transferencia, Diego se encarga de todos los aspectos relacionados con la orquestación del contenedor de aplicaciones. Cuando envía una app, el controlador en la nube envía una solicitud de transferencia a Diego, que se encarga de asignar las instancias de la app. El programa de fondo Diego coordina los contenedores de aplicaciones para garantizar la tolerancia de errores y la coherencia a largo plazo, que equilibra la carga entre una serie de máquinas virtuales denominadas células. Además, Diego garantiza que los usuarios puedan acceder a los registros de sus apps. Todos los componentes de Diego están diseñados para poderse agrupar en clúster, lo que significa que puede crear distintas zonas de disponibilidad. 
+Durante la fase de transferencia, Diego se encarga de todos los aspectos relacionados con la orquestación del contenedor de aplicaciones. Cuando envía una app, el controlador en la nube envía una solicitud de transferencia a Diego, que se encarga de asignar las instancias de la app. El programa de fondo Diego coordina los contenedores de aplicaciones para garantizar la tolerancia de errores y la coherencia a largo plazo, que equilibra la carga entre una serie de máquinas virtuales denominadas células. Además, Diego garantiza que los usuarios puedan acceder a los registros de sus apps. Todos los componentes de Diego están diseñados para poderse agrupar en clúster, lo que significa que puede crear distintas zonas de disponibilidad.
 
 Para validar el estado de las apps, Diego da soporte a las mismas comprobaciones basadas en puerto que se han utilizado para DEA. Sin embargo, Diego está diseñado para poder tener opciones más genéricas, como comprobaciones de estado basadas en URL, que se habilitarán en el futuro.
 
 #### Transferencia de una nueva app
 {: #stageapp}
 
-Todas las apps nuevas se despliegan en la arquitectura de Diego. Para transferir una nueva aplicación, despliegue la app con el mandato **cf push**: 
+Todas las apps nuevas se despliegan en la arquitectura de Diego. Para transferir una nueva aplicación, despliegue la app con el mandato **cf push**:
 
-  1. Despliegue la aplicación: 
+  1. Despliegue la aplicación:
   ```
   $ cf push APPLICATION_NAME
   ```
@@ -51,12 +51,11 @@ Para ver más detalles sobre el mandato **cf push**, consulte [cf push](/docs/cl
 ### Migración de una app existente a Diego
 {: #migrateapp}
 
-Diego es la arquitectura predeterminada de Cloud Foundry para {{site.data.keyword.Bluemix_notm}} y se retirará el soporte para DEA, de modo que debe migrar todas sus aplicaciones existentes actualizando cada app. Comience la migración de sus apps a Diego actualizando la aplicación con el distintivo Diego. La aplicación intentará inmediatamente ejecutarse en Diego y dejará de ejecutarse en los DEA.  
+Diego es la arquitectura predeterminada de Cloud Foundry para {{site.data.keyword.Bluemix_notm}} y se retirará el soporte para DEA, de modo que debe migrar todas sus aplicaciones existentes actualizando cada app. Comience la migración de sus apps a Diego actualizando la aplicación con el distintivo Diego. La aplicación intentará inmediatamente ejecutarse en Diego y dejará de ejecutarse en los DEA.
 
-A medida que la aplicación se actualiza desde la arquitectura DEA a Diego, es posible que se produzca un breve intervalo de inactividad, o quizás un intervalo de inactividad prolongado, si la aplicación no es compatible con Diego. Para limitar este intervalo de inactividad, realice un [despliegue de tipo blue-green](/docs/manageapps/updapps.html#blue_green) desplegando una copia de la aplicación en Diego y luego intercambiando rutas y escalando hacia abajo la aplicación DEA. 
+A medida que la aplicación se actualiza desde la arquitectura DEA a Diego, es posible que se produzca un breve intervalo de inactividad, o quizás un intervalo de inactividad prolongado, si la aplicación no es compatible con Diego. Para limitar este intervalo de inactividad, realice un [despliegue de tipo blue-green](/docs/manageapps/updapps.html#blue_green) desplegando una copia de la aplicación en Diego y luego intercambiando rutas y escalando hacia abajo la aplicación DEA.
 
 Siga estos pasos para migrar su app a Diego:
-
 
  1.  Instale la [CLI cf ![icono de enlace externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window} y el [plugin de CLI Diego-Enabler ![icono de enlace externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window}.
  2. Revise la [lista de problemas conocidos](depapps.html#knownissues).
@@ -65,11 +64,11 @@ Siga estos pasos para migrar su app a Diego:
   $ cf enable-diego APPLICATION_NAME
   ```
 
-Después de actualizar la app, compruebe que la app se ha iniciado. Si la app migrada no se puede iniciar, permanecerá fuera de línea hasta que identifica y solucione el problema; luego reinicie la app. 
+Después de actualizar la app, compruebe que la app se ha iniciado. Si la app migrada no se puede iniciar, permanecerá fuera de línea hasta que identifica y solucione el problema; luego reinicie la app.
 
-IBM le avisará del periodo de migración obligatoria cuando se retire el soporte de la arquitectura DEA; si para entonces aún no ha migrado sus apps, lo hará el equipo de operaciones. 
-  
-Para validar el programa de fondo en el que ejecuta la aplicación, utilice el siguiente mandato: 
+IBM le avisará del periodo de migración obligatoria cuando se retire el soporte de la arquitectura DEA; si para entonces aún no ha migrado sus apps, lo hará el equipo de operaciones.
+
+Para validar el programa de fondo en el que ejecuta la aplicación, utilice el siguiente mandato:
 
   ```
   $ cf has-diego-enabled APPLICATION_NAME
@@ -78,46 +77,44 @@ Para validar el programa de fondo en el que ejecuta la aplicación, utilice el s
 #### Problemas conocidos de la migración a Diego
 {: #knownissues}
 
-Estos son los problemas conocidos que quizás deba solucionar cuando migre sus apps a Diego: 
+Estos son los problemas conocidos que quizás deba solucionar cuando migre sus apps a Diego:
 
   * Las aplicaciones de Worker desplegadas con la opción `--no-route` no se indican como aplicaciones en buen estado. Para evitar este problema, inhabilite la comprobación de estado basada en puerto con el mandato `cf set-health-check APP_NAME none`.
-  * Diego no utiliza la variable de entorno VCAP_APP_HOST. Si el código hace referencia a esta variable, elimínela. 
-  * Diego no utiliza la variable de entorno VCAP_APP_PORT. Si el código hace referencia a esta variable, sustitúyala por PORT.
   * El mandato **cf files** ya no recibe soporte. Se ha sustituido por el mandato **cf ssh**. Para ver más detalles sobre el mandato **cf ssh**, consulte [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh).
   * Algunas apps utilizan un número alto de descriptores de archivo (inodes). Si detecta este problema, debe aumentar la cuota de disco para la app con el mandato `cf scale APP_NAME [-k DISK]`.
 
 Para ver una lista completa de problemas conocidos, consulte la página de documentación de Cloud Foundry sobre [Migración a Diego ![icono de enlace externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/diego-design-notes/blob/master/migrating-to-diego.md){: new_window}.
 
-Hasta que se retire el soporte para la arquitectura DEA antigua, puede ejecutar el siguiente mandato para volver a utilizar DEA: `cf disable-diego APPLICATION_NAME`. También puede seguir desplegando nuevas apps en la arquitectura DEA hasta que se retire el soporte: 
+Hasta que se retire el soporte para la arquitectura DEA antigua, puede ejecutar el siguiente mandato para volver a utilizar DEA: `cf disable-diego APPLICATION_NAME`. También puede seguir desplegando nuevas apps en la arquitectura DEA hasta que se retire el soporte:
 
-**Nota**: debe tener instalada la [CLI cf ![icono de enlace externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window} y el [plugin de CLI Diego-Enabler ![icono de enlace externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window} para poder utilizar el mandato `disable-diego`. 
+**Nota**: debe tener instalada la [CLI cf ![icono de enlace externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window} y el [plugin de CLI Diego-Enabler ![icono de enlace externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window} para poder utilizar el mandato `disable-diego`.
 
 1. Despliegue la aplicación sin iniciarla:
 ```
-  $ cf push APPLICATION_NAME --no-start
-  ```
-2. Ejecute el mandato disable-diego: 
+$ cf push APPLICATION_NAME --no-start
 ```
-  $ cf disable-diego APPLICATION_NAME
-  ```
+2. Ejecute el mandato disable-diego:
+```
+$ cf disable-diego APPLICATION_NAME
+```
 3. Inicie la aplicación:
 ```
-  $ cf start APPLICATION_NAME
-  ```
+$ cf start APPLICATION_NAME
+```
 
 ### Inicio de una app
 {: #startapp}
 
-Cuando se inicia una app, se crea la instancia o instancias del contenedor de aplicaciones. Para aplicaciones que se ejecutan en Diego, puede utilizar el mandato **cf ssh** o **cf scp** para acceder al sistema de archivos del contenedor de aplicaciones que incluye los registros. El mandato **cf files** no funciona para las apps que se ejecutan en la arquitectura Diego. 
+Cuando se inicia una app, se crea la instancia o instancias del contenedor de aplicaciones. Para aplicaciones que se ejecutan en Diego, puede utilizar el mandato **cf ssh** o **cf scp** para acceder al sistema de archivos del contenedor de aplicaciones que incluye los registros. El mandato **cf files** no funciona para las apps que se ejecutan en la arquitectura Diego.
 
-**Nota**: si aún tiene aplicaciones que se ejecutan en DEA, puede utilizar el mandato **cf files** para ver los archivos del contenedor de aplicaciones hasta que se retire el soporte de DEA. 
+**Nota**: si aún tiene aplicaciones que se ejecutan en DEA, puede utilizar el mandato **cf files** para ver los archivos del contenedor de aplicaciones hasta que se retire el soporte de DEA.
 
 Si la app no se puede iniciar, la aplicación se detiene y todo el contenido del contenedor de aplicaciones se elimina. Por lo tanto, si una app se detiene o si el proceso de transferencia de una app falla, no dispondrá de archivos de registro.
 
 Si los registros de la aplicación dejan de estar disponibles de modo que no se pueden utilizar los mandatos **cf ssh**, **cf scp** o **cf files** para ver la causa de los errores de transferencia en el contenedor de aplicaciones, puede utilizar en su lugar el mandato **cf logs**. El mandato **cf
 logs** utiliza el agregador de registros de Cloud Foundry para recopilar detalles sobre los registros de la app y del sistema y puede ver lo que se ha colocado en el almacenamiento intermedio del agregador de registros. Para obtener más información sobre el agregador de registros, consulte [Inicio de una sesión en Cloud Foundry ![icono de enlace externo](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}..
 
-**Nota:** El tamaño del almacenamiento intermedio está limitado. Si una aplicación se ejecuta durante mucho rato y no se reinicia, es posible que no se muestren registros cuando escriba el mandato `cf logs appname --recent` porque el almacenamiento intermedio de registros se haya borrado. Por lo tanto, para depurar errores de transferencia de una aplicación grande, puede especificar el mandato `cf logs nombreapp` en una línea de mandatos que no sea la interfaz de línea de mandatos cf para efectuar un seguimiento de los registros cuando despliegue la aplicación. 
+**Nota:** El tamaño del almacenamiento intermedio está limitado. Si una aplicación se ejecuta durante mucho rato y no se reinicia, es posible que no se muestren registros cuando escriba el mandato `cf logs appname --recent` porque el almacenamiento intermedio de registros se haya borrado. Por lo tanto, para depurar errores de transferencia de una aplicación grande, puede especificar el mandato `cf logs nombreapp` en una línea de mandatos que no sea la interfaz de línea de mandatos cf para efectuar un seguimiento de los registros cuando despliegue la aplicación.
 
 Si tiene problemas para transferir sus apps en {{site.data.keyword.Bluemix_notm}}, siga los pasos del apartado [Depuración de errores de transferencia](/docs/debug/index.html#debugging-staging-errors) para solucionar el problema.
 
@@ -152,7 +149,8 @@ utilice el mandato siguiente:
   cf push nombre_app -p app.war
   ```
   O, puede especificar un directorio que contenga los archivos de app mediante el mandato siguiente:
-```
+
+  ```
   cf push nombre_app -p "./app"
   ```
 
@@ -245,7 +243,7 @@ cf push -f appManifest.yml
 |**env**	|Las variables de entorno personalizadas de la app.|`env: DEV_ENV: production`|
 {: caption="Table 1. Supported options in the manifest YAML file" caption-side="top"}
 
-### Un ejemplo de archivo `manifest.yml`
+### Un archivo de ejemplo manifest.yml
 
 En el ejemplo siguiente se muestra un archivo de manifiesto para una app Node.js que utiliza el paquete de compilación Node.js integrado de la comunidad en {{site.data.keyword.Bluemix_notm}}.
 
@@ -413,7 +411,7 @@ Las variables definidas por un paquete de compilación varían según cada paque
 
 <ul>
     <li>Las variables siguientes están definidas por el paquete de compilación de Liberty:
-	
+
 	  <dl>
 	  <dt><strong>JAVA_HOME</strong></dt>
 	  <dd>La ubicación del SDK de Java que ejecuta la app.</dd>
@@ -426,7 +424,7 @@ Las variables definidas por un paquete de compilación varían según cada paque
 	  <dt><strong>WLP_OUTPUT_DIR</strong></dt>
 	  <dd>La ubicación de las salidas que se generen como archivos de registro y directorios de trabajo de una instancia de servidor de un perfil de Liberty en ejecución.</dd>
 	  </dl>
-</li>   
+</li>
 <li>Las variables siguientes están definidas por el paquete de compilación de Node.js:
 	<dl>
 	<dt><strong>BUILD_DIR</strong></dt>
@@ -529,12 +527,12 @@ tmp/
 ```
 
 # Enlaces relacionados
-{: #rellinks}
+{: #rellinks notoc}
 
 ## Enlaces relacionados
 {: #general}
 
-* [Despliegue con manifiestos de app ![icono de enlace externo](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){:new_window} 
+* [Despliegue con manifiestos de app ![icono de enlace externo](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){:new_window}
 * [CF Manifest Generator ![icono de enlace externo](../icons/launch-glyph.svg)](http://cfmanigen.mybluemix.net/){:new_window}
 * [Iniciación a cf v6 ![icono de enlace externo](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html){:new_window}
 * [Iniciación a IBM Continuous Delivery Pipeline for Bluemix](/docs/services/DeliveryPipeline/index.html#getstartwithCD)

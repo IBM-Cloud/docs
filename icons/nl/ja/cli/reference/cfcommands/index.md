@@ -23,7 +23,7 @@ lastupdated: "2017-01-12"
 Cloud Foundry (cf) コマンド・ライン・インターフェース (CLI) は、アプリを管理するための一連のコマンドを提供します。以下の情報では、アプリを管理するために最もよく使用される cf コマンドをリストし、コマンドの名前、オプション、使用法、前提条件、説明、および例を示します。すべての cf コマンドと関連ヘルプ情報をリストするには、`cf help` を使用します。特定のコマンドの詳細なヘルプ情報を表示するには、`cf command_name -h` を使用します。
 {: shortdesc}
 
-**注**: ネットワークに cf コマンドを実行するホストと Cloud Foundry API エンドポイント間の HTTP プロキシー・サーバーが含まれる場合は、`HTTP_PROXY` 環境変数を設定して、プロキシー・サーバーのホスト名または IP アドレスを指定する必要があります。詳しくは、[Using the cf CLI with an HTTP Proxy Server ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window} を参照してください。
+**注**: ネットワークに cf コマンドを実行するホストと Cloud Foundry API エンドポイント間の HTTP プロキシー・サーバーが含まれる場合は、`HTTP_PROXY` 環境変数を設定して、プロキシー・サーバーのホスト名または IP アドレスを指定する必要があります。詳しくは、[Using the cf CLI with an HTTP Proxy Server ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window} を参照してください。
 
 
 ## Cloud Foundry CLI コマンドの索引
@@ -413,7 +413,7 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 <dd>自分のパスワード。</dd>
 <dd>*重要:* コマンド・ライン・インターフェースで *-p* パラメーターを使用してパスワードを指定すると、パスワードがコマンド・ライン履歴に記録される可能性があります。セキュリティー上の理由から、パスワードの指定には -p パラメーターを使用しないようにしてください。代わりに、コマンド・ライン・インターフェースでプロンプトが出された場合にパスワードを入力します。</dd>
 <dt>*-sso*</dt>
-<dd>フェデレーテッド ID でログインする場合は、シングル・サインオン・オプション (SSO) を使用する必要があります。IBMid でログインする場合は、その必要はありません。フェデレーテッド ID でサインインしようとしたときに SSO パラメーターを指定していない場合、SSO パラメーターを含めるように求めるプロンプトが出されます。SSO パラメーターを使用すると、ログイン時にワンタイム・パスコードの入力を求められます。</dd>
+<dd>フェデレーテッド ID でログインする場合は、シングル・サインオン・オプション (SSO) を使用する必要があります。IBM ID でログインする場合は、その必要はありません。フェデレーテッド ID でサインインしようとしたときに SSO パラメーターを指定していない場合、SSO パラメーターを含めるように求めるプロンプトが出されます。SSO パラメーターを使用すると、ログイン時にワンタイム・パスコードの入力を求められます。</dd>
 <dt>*-o*organization_name</dt>
 <dd>ログイン先の組織の名前。</dd>
 <dt>*-s*space_name</dt>
@@ -818,5 +818,7 @@ cf -v
 ## 関連リンク
 {: #general}
 
-* [Cloud Foundry CLI のダウンロード ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
-* [クイック・リファレンス・カード - cf コマンド ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html){: new_window}
+* [Cloud Foundry CLI のダウンロード ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases)
+{: new_window}
+* [クイック・リファレンス・カード - cf コマンド ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
+{: new_window}

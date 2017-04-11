@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-07-29"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -28,12 +28,12 @@ Use as informações e exemplos que são fornecidos para iniciar o desenvolvimen
 ## Fazendo download de cliente e recursos do Node.js
 {: #nodejs_client_download}
 
-Para acessar as bibliotecas do cliente em Node.js para o {{site.data.keyword.iot_short_notm}} e outros recursos disponíveis, acesse o repositório [iot-nodejs](https://github.com/ibm-watson-iot/iot-nodejs) no GitHub e conclua as instruções de instalação.
+Para acessar as bibliotecas do cliente Node.js para o {{site.data.keyword.iot_short_notm}} e outros recursos disponíveis, acesse o repositório [iot-nodejs ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window} no GitHub e conclua as instruções de instalação.
 
 
 Para obter mais informações, consulte os recursos a seguir:
-- [Amostras de aplicativos](https://github.com/ibm-watson-iot/iot-nodejs/tree/master/samples) no GitHub.
-- [ibmiotf](https://www.npmjs.com/package/ibmiotf) no NPM.
+- [Amostras de aplicativos ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-watson-iot/iot-nodejs/tree/master/samples){: new_window} no GitHub.
+- [ibmiotf ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://www.npmjs.com/package/ibmiotf){: new_window} no NPM.
 - Seção [Referência](#reference_nodejs) deste documento.
 
 
@@ -472,4 +472,4 @@ A tabela a seguir descreve os parâmetros que são usados nas funções descrita
 |`format`|Seqüência de caracteres|O formato pode ser qualquer sequência, por exemplo, JSON.  |
 |`data`|Dicionário|Os dados para a carga útil da mensagem. O comprimento máximo é 131072 bytes.|
 |`payload`|Seqüência de caracteres|Os dados para a carga útil da mensagem. O comprimento máximo é 131072 bytes.|
-|`topic`|Seqüência de caracteres|Ao publicar como um dispositivo, a sequência de tópicos não inclui o tipo de dispositivo ou o ID do dispositivo; estes são obtidos do ID do cliente.  Por exemplo, `iot-2/evt/event_id/fmt/format_string`.  Ao publicar como um aplicativo ou gateway em nome de um dispositivo, o tópico deve incluir o tipo de dispositivo e o ID do dispositivo.  Por exemplo, `iot-2/type/device_type/id/device_id/evt/event_id/fmt/format_string`.|
+|`topic`|Seqüência de caracteres|Ao publicar como um dispositivo, a sequência de tópicos não inclui o tipo de dispositivo ou o ID do dispositivo; estes são obtidos do identificador de cliente.  Por exemplo, `iot-2/evt/event_id/fmt/format_string`.  Ao publicar como um aplicativo ou gateway em nome de um dispositivo, o tópico deve incluir o tipo de dispositivo e o ID do dispositivo.  Por exemplo, `iot-2/type/device_type/id/device_id/evt/event_id/fmt/format_string`.|

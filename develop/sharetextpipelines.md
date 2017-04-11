@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-21"
+  years: 2015, 2017
+lastupdated: "2017-3-16"
 
 ---
 
@@ -11,14 +11,14 @@ lastupdated: "2016-12-21"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#Sharing text-based pipelines in {{site.data.keyword.jazzhub_short}} sample projects {: #share-pipeline}
+#Sharing text-based pipelines in sample projects {: #share-pipeline}
 
-For sample projects that are deployed to {{site.data.keyword.Bluemix_notm}} through the Deploy to {{site.data.keyword.Bluemix_notm}} button, you can define {{site.data.keyword.jazzhub_short}} pipeline configurations as YAML files. Pipelines that are defined as text can be shared so that the people who fork your project don't have to configure their own pipelines. This feature is under development: the YAML format and implementation might change at any time. Currently, this feature is available only for projects with Git and GitHub repositories that target {{site.data.keyword.Bluemix_notm}}. 
+For sample projects that are deployed to {{site.data.keyword.Bluemix_notm}} through the Deploy to {{site.data.keyword.Bluemix_notm}} button, you can define pipeline configurations as YAML files. Pipelines that are defined as text can be shared so that the people who fork your project don't have to configure their own pipelines. This feature is under development: the YAML format and implementation might change at any time. Currently, this feature is available only for projects with Git and GitHub repositories that target {{site.data.keyword.Bluemix_notm}}. 
 {: shortdesc} 
 
 In the sample project's root directory, you must have a folder named `.bluemix` that contains a `pipeline.yml` file.
 
-When a project is cloned by using the Deploy to {{site.data.keyword.Bluemix_notm}} button, {{site.data.keyword.jazzhub_short}} creates a pipeline that is based on the `pipeline.yml` file. 
+When a project is cloned by using the Deploy to {{site.data.keyword.Bluemix_notm}} button, a pipeline that is based on the `pipeline.yml` file is created. 
 
 Example: 
 ``` 
@@ -29,7 +29,7 @@ Example:
 ```
 {: codeblock} 
 
-The YAML file format is a single YAML document that contains a pipeline specification. The following sample {{site.data.keyword.jazzhub_short}} pipeline builds a Java app with Ant in one stage. Then, in another stage, the pipeline deploys the app to {{site.data.keyword.Bluemix_notm}}. 
+The YAML file format is a single YAML document that contains a pipeline specification. The following sample pipeline builds a Java app with Ant in one stage. Then, in another stage, the pipeline deploys the app to {{site.data.keyword.Bluemix_notm}}. 
 
 ``` 
 ---
@@ -206,7 +206,7 @@ You can generate a YAML file from a pipeline.
 Generate the file from an existing pipeline with a URL in this format:
 
 ```
-<DevOps Services domain>/pipeline/user/project/yaml
+<domain>/pipeline/user/project/yaml
 ```
 {: codeblock} 
 

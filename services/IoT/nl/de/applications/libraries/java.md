@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-24"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2016-10-24"
 {: #java}
 
 
-Sie können mithilfe von Java Anwendungen erstellen und anpassen, die in {{site.data.keyword.iot_full}} mit Ihrer Organisation interagieren. Es werden eine Java-Clientbibliothek für {{site.data.keyword.iot_short_notm}}, Dokumentation und Beispiele bereitgestellt, die Sie bei den ersten Schritten der Anwendungsentwicklung unterstützen.
+Sie können mithilfe von Java™ Anwendungen erstellen und anpassen, die in {{site.data.keyword.iot_full}} mit Ihrer Organisation interagieren. Es werden eine Java-Clientbibliothek für {{site.data.keyword.iot_short_notm}}, Dokumentation und Beispiele bereitgestellt, die Sie bei den ersten Schritten der Anwendungsentwicklung unterstützen.
 
 {:shortdesc}
 
@@ -26,7 +26,7 @@ Sie können mithilfe von Java Anwendungen erstellen und anpassen, die in {{site.
 Letzte Aktualisierung: 25. Oktober 2016
 {: .last-updated}
 
-Wechseln Sie für den Zugriff auf die Java-Clientbibliotheken und Beispiele für {{site.data.keyword.iot_short_notm}} in das Repository [iot-java](https://github.com/ibm-watson-iot/iot-java) in GitHub und folgen Sie den Installationsanweisungen.
+Wechseln Sie für den Zugriff auf die Java-Clientbibliotheken und Beispiele für {{site.data.keyword.iot_short_notm}} in das Repository [iot-java ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-watson-iot/iot-java){: new_window} in GitHub und folgen Sie den Installationsanweisungen.
 
 
 ## Konstruktor
@@ -428,7 +428,7 @@ Zusätzlich zur Verwendung von MQTT können Sie Ihre Anwendungen auch so konfigu
     	boolean status = myClient.publishApplicationEventforDeviceOverHTTP(deviceId, deviceType, "blink", event, ContentType.json);
 ```
 
-Das vollständige Codebeispiel finden Sie im Anwendungsbeispiel [HttpApplicationDeviceEventPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpApplicationDeviceEventPublish.java).
+Das vollständige Codebeispiel finden Sie im Anwendungsbeispiel [HttpApplicationDeviceEventPublish ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpApplicationDeviceEventPublish.java){: new_window}.
 
 Je nach den Einstellungen in der Eigenschaftendatei wird das Ereignis mit der Methode `publishEventOverHTTP()` entweder im Quickstart-Modus oder im Modus des registrierten Ablaufs publiziert. Wenn in der Eigenschaftendatei als Organisations-ID `quickstart` angegeben ist, publiziert die Methode `publishEventOverHTTP()` das Ereignis mithilfe des {{site.data.keyword.iot_short_notm}}-Quickstart-Service im einfachen HTTP-Format. Wenn eine gültige registrierte Organisation in der Eigenschaftendatei angegeben ist, wird das Ereignis stets mithilfe von HTTPS publiziert, damit die gesamte Kommunikation geschützt ist.
 
@@ -474,7 +474,7 @@ Zusätzlich zu MQTT können Sie Ihre Anwendungen auch so konfigurieren, dass Bef
 	boolean response = myClient.publishCommandOverHTTP("execute", event);
 ```
 
-Das vollständige Codebeispiel sehen Sie im Anwendungsbeispiel [HttpCommandPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpCommandPublish.java).
+Das vollständige Codebeispiel finden Sie im Anwendungsbeispiel [HttpCommandPublish ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpCommandPublish.java){: new_window}.
 
 Das HTTP-Protokoll bietet die Zustellung 'höchstens einmal', die der Servicequalitätsstufe 'höchstens einmal' (QoS 0) des MQTT-Protokolls ähnelt. Wenn Sie die Zustellungsart 'höchstens einmal' zum Publizieren von Befehlen verwenden, muss die Anwendung Wiederholungslogik implementieren, falls ein Fehler auftritt. Weitere Informationen finden Sie in [HTTP-REST-API für Anwendungen](../api.html).
 
@@ -482,8 +482,8 @@ Das HTTP-Protokoll bietet die Zustellung 'höchstens einmal', die der Servicequa
 ## Beispiele
 {: #samples}
 
--  [MQTTApplicationDeviceEventPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/MQTTApplicationDeviceEventPublish.java) - Eine Beispielwendung, die die Vorgehensweise beim Publizieren von Geräteereignissen veranschaulicht.
--   [RegisteredApplicationCommandPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationCommandPublish.java) - Eine Beispielanwendung, die die Vorgehensweise beim Publizieren eines Befehls in einem Gerät veranschaulicht.
--  [RegisteredApplicationSubscribeSample](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationSubscribeSample.java) - Eine Beispielanwendung, die die Vorgehensweise beim Subskribieren unterschiedlicher Ereignisse wie beispielsweise Geräteereignisse, Gerätebefehle, Gerätestatus und Anwendungsstatus veranschaulicht.
--   [SharedSubscriptionSample](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/SharedSubscriptionSample.java) - Eine Beispielanwendung, die die Vorgehensweise beim Erstellen einer skalierbaren Anwendung veranschaulicht, die die Nachrichtenlast gleichmäßig auf mehrere Instanzen der Anwendung aufteilt.
--  [Backup-restore-sample](https://github.com/ibm-messaging/iot-backup-restore-sample) - Ein Beispiel, das die Vorgehensweise beim Backup und Wiederherstellen der Gerätekonfiguration in {{site.data.keyword.cloudant}} zeigt.
+-  [MQTTApplicationDeviceEventPublish ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/MQTTApplicationDeviceEventPublish.java){: new_window} - Eine Beispielwendung, die die Vorgehensweise beim Publizieren von Geräteereignissen veranschaulicht.
+-   [RegisteredApplicationCommandPublish ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationCommandPublish.java){: new_window} - Eine Beispielanwendung, die die Vorgehensweise beim Publizieren eines Befehls in einem Gerät veranschaulicht.
+-  [RegisteredApplicationSubscribeSample ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationSubscribeSample.java){: new_window} - Eine Beispielanwendung, die die Vorgehensweise beim Subskribieren unterschiedlicher Ereignisse wie beispielsweise Geräteereignisse, Gerätebefehle, Gerätestatus und Anwendungsstatus veranschaulicht.
+-   [SharedSubscriptionSample ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/SharedSubscriptionSample.java){: new_window} - Eine Beispielanwendung, die die Vorgehensweise beim Erstellen einer skalierbaren Anwendung veranschaulicht, die die Nachrichtenlast gleichmäßig auf mehrere Instanzen der Anwendung aufteilt.
+-  [Backup-restore-sample ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/iot-backup-restore-sample){: new_window} - Ein Beispiel, das die Vorgehensweise beim Backup und Wiederherstellen der Gerätekonfiguration in {{site.data.keyword.cloudant}} zeigt.

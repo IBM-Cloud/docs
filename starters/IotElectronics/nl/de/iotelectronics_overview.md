@@ -1,12 +1,17 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-29"
+  years: 2016, 2017
+lastupdated: "2017-03-10"
 ---
 
-{:new_window: target="\_blank"}
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # Informationen zu {{site.data.keyword.iotelectronics}}
 {: #iotelectronics_about}
@@ -14,18 +19,18 @@ lastupdated: "2016-11-29"
 Bei {{site.data.keyword.iotelectronics_full}} handelt es sich um eine integrierte IoT-Produktionsinstanz, mit der Ihre Apps mit Ihren verbundenen Appliances, Sensoren und Gateways kommunizieren und Daten verarbeiten können, die über diese Komponenten erfasst werden.
 {:shortdesc}
 
-{{site.data.keyword.iotelectronics}} nutzt für die Herstellung einer Verbindung zwischen Ihren smarten elektronischen Appliances und den von Ihnen entwickelten Anwendungen den Service {{site.data.keyword.iot_full}}. Außerdem wird {{site.data.keyword.iot_short_notm}} für Ihre Unterstützung bei der Analyse und dem Einblick in die Daten aus Ihren Appliances verwendet. Sie können Regeln erstellen, damit Bedingungen ermittelt werden können, die Ihrer Aufmerksamkeit bedürfen, und um automatische Antworten zu definieren, z. B. das Senden von E-Mails, das Ausführen eines Node-RED-Workflows oder das Herstellen einer Verbindung zu Web-Services.  
+{{site.data.keyword.iotelectronics}} nutzt für die Herstellung einer Verbindung zwischen Ihren smarten elektronischen Appliances und den von Ihnen entwickelten Anwendungen den Service {{site.data.keyword.iot_full}}. Außerdem wird {{site.data.keyword.iot_short_notm}} für Ihre Unterstützung bei der Analyse und dem Einblick in die Daten aus Ihren Appliances verwendet. Sie können Regeln erstellen, damit Bedingungen ermittelt werden können, die Ihrer Aufmerksamkeit bedürfen, und um automatische Antworten zu definieren, z. B. das Senden von E-Mails, das Ausführen eines Node-RED-Workflows oder das Herstellen einer Verbindung zu Web-Services.
 
 ## Starter suchen
 {: #iot4eFindingStarter}
-Der {{site.data.keyword.iotelectronics}}-Starter befindet sich im [Abschnitt 'Boilerplates'](https://console.{DomainName}/catalog/starters/iot-for-electronics-starter/) des {{site.data.keyword.Bluemix_notm}}-Katalogs.  
+Der {{site.data.keyword.iotelectronics}}-Starter befindet sich im [Abschnitt 'Boilerplates'](https://console.{DomainName}/catalog/starters/iot-for-electronics-starter/) des {{site.data.keyword.Bluemix_notm}}-Katalogs.
 
 ## Wie {{site.data.keyword.iotelectronics}} genutzt werden kann
 {: #Features_iote}
 Mithilfe simulierter Appliances und Daten können Sie die Features der {{site.data.keyword.iotelectronics}}-Lösung rasch und unkompliziert kennenlernen.
 
 ### Simulierte Appliances verbinden
-Sie können simulierte Appliances erstellen und diese mit der Plattform verbinden, um Live-Stream-Daten anzuzeigen. Mithilfe einer webbasierten App können Sie den Empfang von Befehlen und die Durchführung von Operationen für eine Appliance simulieren. Für die Generierung von Anmerkungen und Alerts können Sie Fehler simulieren. Zu Demonstrationszwecken werden Waschmaschinen als simulierte Appliances für den {{site.data.keyword.iotelectronics}}-Starter verwendet. Die von Ihnen zur Herstellung einer Verbindung ausgewählte Appliance kann ein beliebiger Typ von intelligentem Elektronikgerät sein.  
+Sie können simulierte Appliances erstellen und diese mit der Plattform verbinden, um Live-Stream-Daten anzuzeigen. Mithilfe einer webbasierten App können Sie den Empfang von Befehlen und die Durchführung von Operationen für eine Appliance simulieren. Für die Generierung von Anmerkungen und Alerts können Sie Fehler simulieren. Zu Demonstrationszwecken werden Waschmaschinen als simulierte Appliances für den {{site.data.keyword.iotelectronics}}-Starter verwendet. Die von Ihnen zur Herstellung einer Verbindung ausgewählte Appliance kann ein beliebiger Typ von intelligentem Elektronikgerät sein.
 
 ### Beispiel für eine mobile Nutzer-App ausprobieren
 Wenn Sie ein mobiles iOS-oder Android-Gerät verwenden, können Sie sehen, wie ein Applianceeigner mit der Appliance interagieren kann. Über die Plattform und mithilfe von {{site.data.keyword.Bluemix_notm}} können Sie Befehle an die Appliance senden und Aktualisierungen aus der Appliance empfangen. Sie können Fehlerereignisse simulieren und die Ergebnisse in der mobilen App anzeigen.
@@ -52,17 +57,3 @@ Mit **{{site.data.keyword.iot_full}}** können Ihre Apps mit Ihren verbundenen A
 Mit **{{site.data.keyword.sdk4nodefull}}** können Sie serverseitige JavaScript&reg;-Apps entwickeln, bereitstellen und skalieren; außerdem bietet Ihnen diese Software erweiterte Leistung, Sicherheit und Funktionsfähigkeit.
 
 Mit dem **Beispiel für eine mobile App** können Sie über Ihr Mobilgerät wie ein Smartphone oder ein Tablet den Status einer simulierten Appliance anzeigen und mit einer solchen kommunizieren. Unter [Verwenden der mobilen App](iotelectronics_config_mobile.html) finden Sie heraus, wie Sie die mobile App abrufen können.
-
-# Zugehörige Links
-{: #rellinks}
-## Komponenten
-{: #general}
-* [{{site.data.keyword.iot_short}}-Dokumentation](https://console.ng.bluemix.net/docs/services/IoT/index.html#gettingstartedtemplate)
-* [{{site.data.keyword.amafull}}-Dokumentation](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html)
-* [{{site.data.keyword.sdk4nodefull}}-Dokumentation](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
-
-
-## API-Dokumentation
-{: #api}
-*  [{{site.data.keyword.iotelectronics}}-API](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)  
-*  [{{site.data.keyword.iot_short}}-API](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)

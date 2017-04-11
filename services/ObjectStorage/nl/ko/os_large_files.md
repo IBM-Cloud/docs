@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -32,8 +32,8 @@ Swift 클라이언트에서는 `-segment-size` 매개변수를 사용하여 오�
 
 1. {{site.data.keyword.Bluemix_notm}}에 로그인하고 업로드할 준비가 되면 다음 명령을 실행하여 파일을 세그먼트화하십시오. 
     ```
-swift upload <container_name> <file_name> --segment-size <size_in_bytes>
-```
+    swift upload <container_name> <file_name> --segment-size <size_in_bytes>
+    ```
     {: pre}
 
 #### Swift API를 사용하여 DLO(Dynamic Large Objects) 처리

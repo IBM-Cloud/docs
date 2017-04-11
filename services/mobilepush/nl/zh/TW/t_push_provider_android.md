@@ -24,7 +24,7 @@ API 金鑰會安全地儲存並供 {{site.data.keyword.mobilepushshort}} Service
 
 若要設定 FCM 以及產生 API 金鑰和「傳送端 ID」，請完成下列步驟：
 
-1. 造訪 [Firebase 主控台 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.firebase.google.com/?pli=1 "外部鏈結圖示"){: new_window}。
+1. 造訪 [Firebase 主控台 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.firebase.google.com/?pli=1){: new_window}。
 2. 選取**建立新專案**。 
 3. 在「建立專案」視窗中，提供專案名稱、選擇國家/地區，然後按一下**建立專案**。
 3. 在導覽窗格中，按一下「設定」圖示，然後選取**專案設定**。
@@ -35,8 +35,7 @@ API 金鑰會安全地儲存並供 {{site.data.keyword.mobilepushshort}} Service
 
 **附註：**您將需要「FCM/GCM API 金鑰」及「傳送端 ID」（專案號碼）。
 
-1. 開啟 Bluemix 儀表板，然後按一下您已建立的 {{site.data.keyword.mobilepushfull}} Service 實例來開啟儀表板。即會顯示 Push 儀表板。若要設定適用於 Android 的未連結 {{site.data.keyword.mobilepushshort}} Service，請選取「未連結 {{site.data.keyword.mobilepushshort}} Service」圖示來開啟 {{site.data.keyword.mobilepushshort}} Service 儀表板。
- 
+1. 開啟 Bluemix 儀表板，然後按一下您已建立的 {{site.data.keyword.mobilepushfull}} Service 實例來開啟儀表板。即會顯示 Push 儀表板。若要設定適用於 Android 的未連結 {{site.data.keyword.mobilepushshort}} Service，請選取「未連結 {{site.data.keyword.mobilepushshort}} Service」圖示來開啟 {{site.data.keyword.mobilepushshort}} Service 儀表板。 
 
 ![Push 儀表板](images/push_unbound.jpg)
 

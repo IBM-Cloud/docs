@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-23"
+  years: 2016, 2017
+lastupdated: "2017-03-13"
 
 ---
 
@@ -20,12 +20,11 @@ En utilisant {{site.data.keyword.iot_short}} Cloud Analytics, vous spécifiez de
 
 Par exemple, vous pouvez créer une règle garantissant que lorsque le terminal est supprimé ou que la température du terminal augmente, une alerte est envoyée au tableau de bord du terminal de l'utilisateur et un courrier électronique est envoyé à l'administrateur.
 
-**Important :** Les fonctions d'analyse sont fusionnées à partir du service {{site.data.keyword.iotrtinsights_full}}. Si votre organisation {{site.data.keyword.iot_short_notm}} est utilisée comme source de données pour une instance {{site.data.keyword.iotrtinsights_short}} existante, Cloud and Edge Analytics n'est pas activé tant que les instances {{site.data.keyword.iotrtinsights_short}} existantes n'ont pas été migrées. Continuez d'utiliser le tableau de bord {{site.data.keyword.iotrtinsights_short}} pour vos besoins en analyse tant que la migration n'est pas terminée. Pour plus d'informations, voir le [blogue IBM Watson IoT Platform](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} sur IBM developerWorks et vos tableaux de bord de l'instance {{site.data.keyword.iotrtinsights_short}} existante.  
-
 ## Avant de commencer
 {: #byb}
 Assurez-vous que les propriétés de terminal que vous souhaitez utiliser comme conditions dans vos règles ont été mappées à des schémas. Pour plus d'informations, voir [Connexion de terminaux](iotplatform_task.html) et [Création de schémas](im_schemas.html).
 
+En outre, consultez la recette [Using Rules and Actions with {{site.data.keyword.iot_short}} Cloud Analytics ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){: new_window} pour comprendre les règles et les actions utilisées dans Cloud Analytics. 
 
 ## Gestion des règles et des actions  
 {: #managing_rules}
@@ -55,10 +54,10 @@ Pour créer une règle :
 3. Pour configurer la logique de règle, ajoutez une ou plusieurs conditions IF à utiliser en tant que déclencheurs pour la règle.  
 Vous pouvez ajouter des conditions sur des lignes parallèles afin de les appliquer en tant que conditions OR ou vous pouvez ajouter des conditions dans des colonnes séquentielles afin de les appliquer en tant que conditions AND.  
 **Important :** Pour déclencher une condition qui compare deux propriétés ou pour déclencher au moins deux conditions de propriété combinées de manière séquentielle à l'aide de l'opérateur AND, les points de données de déclenchement doivent être inclus dans le même message de terminal. Si les données sont reçues dans plusieurs messages, la condition ou les conditions séquentielles ne se déclenchent pas.  
-**Exemples :**
+**Exemples :**   
 Une règle simple peut déclencher une alerte si une valeur de paramètre est supérieure à une valeur spécifiée :
-Condition = `temp_cpu>80`
-Une règle plus complexe peut déclencher une alerte lorsqu'une combinaison de seuils est atteinte :
+Condition = `temp_cpu>80`  
+Une règle plus complexe peut être déclenchée lorsqu'une combinaison de seuils est atteinte :
 Condition = `temp_cpu>60 AND cpu_load>90`   
 
 4. Configurez les exigences de déclenchement conditionnel pour votre règle.  
@@ -161,7 +160,7 @@ Pour créer l'action Envoyer un courrier électronique :
 ### IFTTT  
 {: #ifttt}
 
-Utilisez l'action IFTTT pour déclencher une recette IFTTT lorsqu'une règle est déclenchée. Pour plus d'informations sur le déclenchement d'actions, telles que les recettes IFTTT, voir l'article [Maker Channel](https://ifttt.com/maker) sur le site IFTTT.
+Utilisez l'action IFTTT pour déclencher une recette IFTTT lorsqu'une règle est déclenchée. Pour plus d'informations sur le déclenchement d'actions, telles que les recettes IFTTT, voir l'article [Maker Channel ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://ifttt.com/maker){: new_window} sur le site IFTTT. 
 
 Exemple : [Utiliser IFTTT pour publier une carte Trello](#iftttex).
 
@@ -230,7 +229,7 @@ Corps | Par défaut, le corps du texte est prérempli avec toutes les variables 
 Dans cet exemple, l'action est configurée pour utiliser Node-Red avec un noeud Twilio afin d'envoyer un message texte au technicien de maintenance.
 
 Pour créer l'action Envoyer un message texte :
-1. Dans Twilio, localisez ou créez un nouveau service de messagerie à utiliser pour envoyer des messages texte depuis votre compte Twilio. Pour plus d'informations, voir la [documentation Twilio](https://www.twilio.com/help).
+1. Dans Twilio, localisez ou créez un nouveau service de messagerie à utiliser pour envoyer des messages texte depuis votre compte Twilio. Pour plus d'informations, voir la [documentation Twilio ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.twilio.com/help){: new_window}.
 2. Dans Bluemix, configurez votre compte Node-RED et connectez-vous à ce compte à l'aide de l'URL Node-RED `http://mynodered.mybluemix.net/red/`. Pour plus d'informations, voir la rubrique [Creating apps with Node-RED Starter](https://www.ng.bluemix.net/docs/starters/Node-RED/nodered.html) dans la documentation Bluemix.
 3. Dans Node-RED, créez un simple flux à deux noeuds, tel que [RTI-alert]->[SMS],  
 où le premier noeud est un noeud HTTP et le second noeud est un noeud Twilio.
@@ -248,7 +247,7 @@ où le premier noeud est un noeud HTTP et le second noeud est un noeud Twilio.
   <li>Envoyer un SMS à - `Numéro de téléphone du technicien de maintenance`</li>
   <li>Nom - **SMS**</li>
   </ul>
-  4. Connectez les noeuds entre eux
+  4. Connectez les noeuds entre eux  
   Connectez les noeuds http et twilio entre eux en faisant glisser le port de sortie de l'un des noeuds vers le port d'entrée de l'autre noeud.
   5. Cliquez sur le bouton **Déployer** pour déployer le flux sur le serveur.
 4. Dans le tableau de bord {{site.data.keyword.iot_short}}, accédez à **Règles > Actions** et créez une nouvelle action dotée des paramètres suivants :
@@ -269,7 +268,7 @@ où le premier noeud est un noeud HTTP et le second noeud est un noeud Twilio.
 
 Utilisez l'action Webhook pour envoyer une demande HTTP au service Web activé par Webhook lorsqu'une alerte est déclenchée. Par exemple, un Webhook peut être utilisé afin d'ouvrir une demande de service pour un actif si un détecteur présent dans le terminal signale une lecture incorrecte.
 
-Example: [Utilisation d'un Webhook pour effectuer une publication sur Slack](#webhookex).
+Exemple : [Utilisation d'un Webhook pour effectuer une publication sur Slack](#webhookex).
 
 Les paramètres suivants sont utilisés pour configurer une action Webhook :
 
@@ -291,7 +290,7 @@ Corps | Corps de l'appel Webhook.  Disponible pour les méthodes OPTIONS, PATCH,
 Dans cet exemple, l'action est configurée pour utiliser un Webhook afin de publier un message sur le canal Slack #service-requests.
 
 Pour créer l'action de publication sur Slack :
-1. Dans Slack, configurez l'intégration de Webhooks entrants pour le canal #service-requests. Notez l'URL des Webhooks. Pour plus d'informations, voir la [documentation Slack](https://api.slack.com/incoming-webhooks).
+1. Dans Slack, configurez l'intégration de Webhooks entrants pour le canal #service-requests. Notez l'URL des Webhooks. Pour plus d'informations, voir la [documentation Slack ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://api.slack.com/incoming-webhooks){: new_window}.
 2. Dans le tableau de bord {{site.data.keyword.iot_short}}, accédez à **Règles > Actions** et créez une nouvelle action dotée des paramètres suivants :
  - Nom - `Publier une demande de maintenance sur Slack`
  - Type - **Webhook**
@@ -302,7 +301,7 @@ Pour créer l'action de publication sur Slack :
  ```json
  {"text":"*Un terminal nécessite votre attention*\n Heure : {{timestamp}}\n {{site.data.keyword.iot_short}} instance : {{tenantId}}\n Terminal : {{deviceId}}\n Règle : {{ruleName}}\n Description : {{ruleDescription}}\n Condition : {{ruleCondition}}\n Message de terminal brut : \n{{message}}"}
  ```  
-  **Important :** Le Webhook Slack doit au moins contenir la zone "text". Pour plus d'informations, voir la rubrique [Incoming Webhooks](https://api.slack.com/incoming-webhooks "documentation Slack") dans la documentation Slack.
+  **Important :** Le Webhook Slack doit au moins contenir la zone "text". Pour plus d'informations, voir la rubrique [Incoming Webhooks ![Icône de lien externe](../icons/launch-glyph.svg)](https://api.slack.com/incoming-webhooks "Slack documentation"){: new_window} dans la documentation Slack.
 11. Cliquez sur **Terminer** pour sauvegarder l'action.
 
 
@@ -324,3 +323,17 @@ Variable | Description
 `{{ruleDescription}}`| Description de la règle qui inclut l'action.
 `{{ruleCondition}}` | Condition de règle qui a déclenché l'action.
 `{{message}}` | Message brut du terminal qui contenait la valeur de point de données ayant déclenché la règle.
+
+## Recettes relatives à Cloud Analytics
+
+Les recettes suivantes expliquent comment utiliser les fonctions Cloud Analytics pour différents scénarios d'utilisation :
+
+- [Real Time Data Analysis Using IBM Watson™ IoT Platform Analytics ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/real-time-data-analysis-using-ibm-watson-iot-platform-analytics/){: new_window}
+
+- [Predictive Analytics on IOT Sample Data ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/predictive-analytics-on-iot-sample-data/){: new_window}
+
+- [Device List Card SIMPLIFIES Real Time Device Monitoring on WIoTP Dashboard ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/device-list-card-simplifies-real-time-device-monitoring-on-wiotp-dashboard/){: new_window}
+
+- [Perform Actions in IBM Watson IoT Platform Cloud Analytics ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/perform-actions-in-ibm-watson-iot-platform-cloud-analytics/){: new_window}
+
+- [Use IBM Data Science Experience to detect time series anomalies ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/use-ibm-data-science-experience-to-detect-time-series-anomalies/){: new_window}

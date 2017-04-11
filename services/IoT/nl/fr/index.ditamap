@@ -47,7 +47,83 @@ navtitle="Normes et exigences" scope="peer">
 scope="peer"/>
 </topicref>
 <topicref format="html" href="reference/bluemix_and_platform.html"
-navtitle="Bluemix et Watson IoT Platform" scope="peer"/>
+navtitle="Bluemix et Watson IoT Platform" scope="peer">
+<topicref format="html" href="reference/bluemix_and_platform.html#iot-bluemix-work"
+navtitle="Watson IoT Platform dans Bluemix" scope="peer"/>
+<topicref format="html" href="reference/bluemix_and_platform.html#iot-sla"
+navtitle="Accord sur les niveaux de service" scope="peer"/>
+</topicref>
+<topicref format="html" href="reference/bluemix_and_platform.html#iot-pricing"
+navtitle="Tarification IoT" scope="peer"/>
+</topicref>
+<topicref format="html" href="iotplatform_beta_features.html" navtitle="Fonctionnalités bêta"
+outputclass="subsection" scope="peer">
+<topicref format="html" navtitle="Utilisation d'interfaces pour mapper des données de terminal" outputclass="subsection"
+href="information_management/im_index.html">
+<topicref format="html" outputclass="subsection"
+href="information_management/im_index.html#overview" navtitle="Présentation"></topicref>
+<topicref format="html" outputclass="subsection" navtitle="Flux de données"
+href="information_management/im_index.html#mapping"></topicref>
+<topicref format="html" outputclass="subsection" navtitle="Concepts clés"
+href="information_management/im_index.html#key_concepts"></topicref>
+<topicref format="html" outputclass="subsection" navtitle="Ressources"
+href="information_management/im_index.html#resources"></topicref>
+<topicref format="html" outputclass="subsection" navtitle="Flux de travaux de niveau supérieur"
+href="information_management/im_index.html#workflow"></topicref>
+<topicref format="html" outputclass="subsection" navtitle="Exemple de scénario"
+href="information_management/im_index.html#scenario"></topicref>
+
+</topicref>
+<topicref format="html" navtitle="Utilisation d'interfaces pour visualiser l'état de vos terminaux et éléments"
+outputclass="subsection" href="information_management/im_index_split.html" audience="blue">
+<topicref format="html" outputclass="subsection"
+href="information_management/im_index_split.html#overview" navtitle="Présentation"
+></topicref>
+<topicref format="html" outputclass="subsection" navtitle="Flux de données"
+href="information_management/im_index_split.html#mapping"></topicref>
+<topicref format="html" outputclass="subsection" navtitle="Concepts clés"
+href="information_management/im_index_split.html#key_concepts"></topicref>
+
+<topicref format="html" outputclass="subsection" navtitle="Flux de travaux de niveau supérieur"
+href="information_management/im_index.html#workflow"></topicref>
+<topicref format="html" outputclass="subsection"
+navtitle="Scénario 1 : Utilisation des interfaces de type terminal"
+href="information_management/im_index_scenario.html"></topicref>
+<topicref format="html" outputclass="subsection"
+navtitle="Scénario 2 : Utilisation des interfaces de type élément"
+href="information_management/im_index_scenario_thing.html"></topicref>
+<topicref format="html" outputclass="subsection" navtitle="Ressources"
+href="information_management/im_index_split.html#resources"></topicref>
+</topicref>
+<topicref format="html" href="gateways/gateway-access-control.html"
+navtitle="Contrôle d'accès aux passerelles" scope="peer">
+<topicref format="html" href="gateways/gateway-access-control.html#gw_roles"
+navtitle="Affectation d'un rôle" locktitle="yes"/>
+<topicref format="html" href="gateways/gateway-access-control.html#devices_groups"
+navtitle="Terminaux et groupes de ressources" locktitle="yes"/>
+<topicref format="html" href="gateways/gateway-access-control.html#finding_groups"
+navtitle="Recherche d'un groupe de ressources" locktitle="yes"/>
+<topicref format="html" href="gateways/gateway-access-control.html#querying_groups"
+navtitle="Analyse d'un groupe de ressources" locktitle="yes"/>
+<topicref format="html" href="gateways/gateway-access-control.html#crt_del_groups"
+navtitle="Création et suppression d'un groupe de ressources" locktitle="yes"/>
+<topicref format="html" href="gateways/gateway-access-control.html#update_groups"
+navtitle="Mise à jour des propriétés de groupe" locktitle="yes"/>
+<topicref format="html" href="gateways/gateway-access-control.html#device_group_props"
+navtitle="Extraction et mise à jour de propriétés de terminal" locktitle="yes"/>
+</topicref>
+<topicref format="html" outputclass="subsection" navtitle="API de messagerie HTTP pour les terminaux de passerelle"
+href="gateways/gw_intro_api.html">
+
+<topicref format="html" href="gateways/gw_intro_api.html#rest_messaging_api"
+navtitle="Accès aux API de messagerie HTTP" locktitle="yes"/>
+<topicref format="html" href="gateways/gw_intro_api.html#client_connections"
+navtitle="Connexions client" locktitle="yes"/>
+<topicref href="gateways/gw_intro_api.html#event_publication" format="html"
+navtitle="Publication d'événements"/>
+</topicref>
+<topicref format="html" href="applications/mqtt.html#shared_sub_mixed"
+navtitle="Abonnement partagé à durabilité mixte" locktitle="yes"/>
 </topicref>
 <topicref format="html" href="reference/security/index.html"
 navtitle="Sécurité de Watson IoT Platform" scope="peer">
@@ -74,11 +150,11 @@ href="reference/security/index.html#prevent-leak-org"
 navtitle="Sécurité d'une organisation à l'autre" scope="peer">
 </topicref>
 <topicref format="html" href="reference/security/connect_devices_apps_gw.html"
-navtitle="Connexions d'application, de terminal et de passerelle" scope="peer">
+navtitle="Connexion d'applications, de terminaux et de passerelles" scope="peer">
 <topicref format="html" href="reference/security/connect_devices_apps_gw.html#client_connect_url"
 outputclass="subsection" scope="peer" navtitle="URL de connexion client"/>
 <topicref format="html" href="reference/security/connect_devices_apps_gw.html#client_port_security"
-outputclass="subsection" scope="peer" navtitle="Sécurité de port client"/>
+outputclass="subsection" scope="peer" navtitle="Sécurité du port"/>
 <topicref format="html" href="reference/security/connect_devices_apps_gw.html#tls_requirements"
 outputclass="subsection" scope="peer" navtitle="Exigences TLS"/>
 <topicref format="html" href="reference/security/connect_devices_apps_gw.html#mqtt_authentication"
@@ -89,9 +165,21 @@ navtitle="Sécurité serveur de cartes personnalisées" scope="peer"/>
 <topicref format="html" href="reference/security/RM_security.html"
 navtitle="Gestion des risques et de la sécurité" scope="peer">
 <topicref format="html" href="reference/security/set_up_certificates.html"
-navtitle="Configuration des certificats" scope="peer"/>
+navtitle="Configuration des certificats" scope="peer">
+<topicref href="reference/security/set_up_certificates.html#cert_reqs"
+navtitle="Exigences du certificat"/>
+<topicref href="reference/security/set_up_certificates.html#reg_ca_cert"
+navtitle="Enregistrement de certificats d'autorité de certification"/>
+<topicref href="reference/security/set_up_certificates.html#reg_msg_cert"
+navtitle="Enregistrement des certificats de serveur de messagerie"/>
+</topicref>
 <topicref format="html" href="reference/security/set_up_policies.html"
-navtitle="Configuration des règles de sécurité" scope="peer"/>
+navtitle="Configuration des règles de sécurité" scope="peer">
+<topicref href="reference/security/set_up_policies.html#config_connect"
+navtitle="Configuration des règles de connexion"/>
+</topicref>
+<topicref href="reference/security/set_up_policies.html#config_black_white"
+navtitle="Configuration des listes noires et des listes blanches"/>
 </topicref>
 </topicref>
 <topicref format="html" href="iotplatform_task.html#devices"
@@ -148,10 +236,34 @@ navtitle="Création de schémas" scope="peer">
 <topicref format="html" href="im_schemas.html#add_schema"
 navtitle="Ajout d'un schéma de terminal" scope="peer"></topicref>
 <topicref format="html" href="im_schemas.html#identify-datapoints"
-navtitle="Identification de propriétés de terminal" scope="peer"></topicref>
+navtitle="Identification de propriétés de terminal" scope="peer"/>
+<topicref format="html" href="im_vir_calculations.html"
+navtitle="Calculs avancés pour les propriétés virtuelles" scope="peer"/>
 </topicref>
-<topicref format="html" href="add_users.html"
-navtitle="Gestion des accès utilisateur" scope="peer"></topicref>
+<topicref format="html" navtitle="Utilisation d'interfaces pour mapper des données de terminal (bêta)"
+outputclass="subsection" href="information_management/im_index_split.html" audience="blue">
+<topicref format="html" outputclass="subsection"
+href="information_management/im_index_split.html#overview" audience="blue" navtitle="Présentation"
+></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="Flux de données"
+href="information_management/im_index_split.html#mapping"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="Concepts clés"
+href="information_management/im_index_split.html#key_concepts"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="Ressources"
+href="information_management/im_index_split.html#resources"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="Flux de travaux de niveau supérieur"
+href="information_management/im_index_split.html#workflow"></topicref>
+
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="Exemple de scénario"
+href="information_management/im_index_scenario.html#scenario"></topicref>
+</topicref>
+<topicref format="html" href="add_users.html" navtitle="Gestion des accès utilisateur" scope="peer">
+<topicref format="html" scope="peer" href="add_users.html#adding-new-users" navtitle="Ajout d'utilisateurs"/>
+<topicref format="html" scope="peer" href="add_users.html#editing-users" navtitle="Edition d'utilisateurs"/>
+<topicref format="html" scope="peer" href="add_users.html#blocking-users" navtitle="Blocage d'utilisateurs"/>
+<topicref format="html" scope="peer" href="add_users.html#removing-users" navtitle="Retrait d'utilisateurs"
+/>
+</topicref>
 <topicref format="html" href="singlesignon.html" navtitle="Utilisation d'IBM Single Sign On" scope="peer"/>
 <topicref format="html" href="roles_index.html" navtitle="Rôles d'utilisateur, d'application et de passerelle"
 outputclass="subsection" scope="peer">
@@ -176,62 +288,59 @@ scope="peer"/>
 navtitle="Stockage de données historiques" scope="peer"/>
 <topicref format="html" href="reference/extensions/index.html#device_mgmt"
 navtitle="Gestion des terminaux" scope="peer"/>
-<topicref format="html" href="reference/extensions/index.html#blockchain"
-navtitle="Chaîne de blocs" scope="peer"></topicref>
+<topicref format="html" href="reference/extensions/index.html#blockchain" navtitle="Chaîne de blocs"
+scope="peer"/>
+<topicref format="html" href="reference/extensions/index.html#email" navtitle="Courrier électronique" scope="peer"/>
 </topicref>
+<topicref format="html" href="information_management/twc_integration.html"
+navtitle="Intégration de données The Weather Company"></topicref>
 <topicref format="html" href="bl_blockchain_integration.html"
-navtitle="Intégration de chaîne de blocs" scope="peer">
-<topicref format="html" href="bl_blockchain_integration.html#byb"
-navtitle="Avant de commencer" scope="peer"></topicref>
-<topicref format="html"
-href="bl_blockchain_integration.html#getting_started"
-navtitle=" Connexion à une matrice de chaîne de blocs" scope="peer"></topicref>
-<topicref format="html"
-href="bl_blockchain_integration.html#map_device_properties"
-navtitle=" Mappage de propriétés de terminal" scope="peer"></topicref>
+navtitle="Intégration de matrices de chaîne de blocs" scope="peer">
+<topicref format="html" href="bl_blockchain_integration.html#byb" navtitle="Avant de commencer"
+scope="peer"/>
+<topicref format="html" href="bl_blockchain_integration.html#getting_started"
+navtitle=" Connexion à une matrice de chaîne de blocs" scope="peer"/>
+<topicref format="html" href="bl_blockchain_integration.html#map_device_properties"
+navtitle=" Mappage de propriétés de terminal" scope="peer"/>
 <topicref format="html" href="bl_blockchain_integration.html#test_simple"
-navtitle="Test de l'exemple de contrat intelligent" scope="peer"></topicref>
-<topicref format="html" href="bl_blockchain_integration.html#next_steps"
-navtitle="Etapes suivantes" scope="peer"></topicref>
+navtitle="Test de l'exemple de contrat intelligent" scope="peer"/>
+<topicref format="html" href="bl_blockchain_integration.html#next_steps" navtitle="Etapes suivantes"
+scope="peer"/>
 </topicref>
+<topicref format="html" href="service_status.html" navtitle="Statut de service" locktitle="yes"/>
 </topicref>
-<topicref format="html" href="analytics.html"
-navtitle="Analyse de données IoT" outputclass="subsection" scope="peer">
-<topicref format="html" href="data_visualization.html"
-navtitle="Visualisation de données en temps réel" scope="peer">
-<topicref format="html" href="data_visualization.html#default_boards"
-navtitle="Cartes par défaut" scope="peer"></topicref>
+<topicref format="html" href="analytics.html" navtitle="Analyse de données IoT en temps réel"
+outputclass="subsection" scope="peer">
+<topicref format="html" href="data_visualization.html" navtitle="Visualisation de données en temps réel"
+scope="peer">
+<topicref format="html" href="data_visualization.html#default_boards" navtitle="Cartes par défaut"
+scope="peer"/>
 <topicref format="html" href="data_visualization.html#visualizing_data"
-navtitle="Création de tableaux et de cartes" scope="peer"></topicref>
+navtitle="Création de tableaux et de cartes" scope="peer"/>
 <topicref format="html" href="/custom_cards/custom-cards.html" navtitle="Utilisation de cartes personnalisées"
 scope="peer"/>
 </topicref>
-<topicref format="html" href="cloud_analytics.html"
-navtitle="Cloud Analytics" scope="peer">
-<topicref format="html" href="cloud_analytics.html#byb"
-navtitle="Avant de commencer" scope="peer"></topicref>
+<topicref format="html" href="cloud_analytics.html" navtitle="Cloud Analytics" scope="peer">
+<topicref format="html" href="cloud_analytics.html#byb" navtitle="Avant de commencer" scope="peer"/>
 <topicref format="html" href="cloud_analytics.html#managing_rules"
-navtitle="Gestion des règles et des actions" scope="peer"></topicref>
-<topicref format="html" href="cloud_analytics.html#rules"
-navtitle="Création de règles" scope="peer"></topicref>
+navtitle="Gestion des règles et des actions" scope="peer"/>
+<topicref format="html" href="cloud_analytics.html#rules" navtitle="Création de règles" scope="peer"/>
 <topicref format="html" href="cloud_analytics.html#conditional"
-navtitle="Déclenchement de règle conditionnel" scope="peer"></topicref>
-<topicref format="html" href="cloud_analytics.html#shared"
-navtitle="Création et utilisation d'actions" scope="peer"></topicref>
+navtitle="Déclenchement de règle conditionnel" scope="peer"/>
+<topicref format="html" href="cloud_analytics.html#shared" navtitle="Création et utilisation d'actions"
+scope="peer"/>
 </topicref>
-<topicref format="html" href="edge_analytics.html"
-navtitle="Edge Analytics" scope="peer">
-<topicref format="html" href="edge_analytics.html#byb"
-navtitle="Avant de commencer" scope="peer"></topicref>
+<topicref format="html" href="edge_analytics.html" navtitle="Edge Analytics" scope="peer">
+<topicref format="html" href="edge_analytics.html#byb" navtitle="Avant de commencer" scope="peer"/>
 <topicref format="html" href="edge_analytics.html#managing_rules"
-navtitle="Gestion des règles et des actions Edge" scope="peer"></topicref>
-<topicref format="html" href="edge_analytics.html#rules"
-navtitle="Création de règles Edge" scope="peer"></topicref>
-<topicref format="html" href="edge_analytics.html#edge_actions"
-navtitle="Création d'actions Edge" scope="peer"></topicref>
-<topicref format="html"
-href="edge_analytics.html#integrate_with_cloud_analytics"
-navtitle="Intégration à Cloud Analytics" scope="peer"></topicref>
+navtitle="Gestion des règles et des actions Edge" scope="peer"/>
+<topicref format="html" href="edge_analytics.html#rules" navtitle="Création de règles Edge" scope="peer"/>
+<topicref format="html" href="edge_analytics.html#edge_actions" navtitle="Création d'actions Edge"
+scope="peer"/>
+<topicref format="html" href="edge_analytics.html#integrate_with_cloud_analytics"
+navtitle="Intégration à Cloud Analytics" scope="peer"/>
+<topicref format="html" href="edge_analytics.html#eaa_community" navtitle="Communauté Edge Analytics"
+scope="peer" audience="blue"/>
 </topicref>
 </topicref>
 <topicref format="html" href="samples_main.html"
@@ -273,10 +382,8 @@ navtitle="Démonstration Mosquitto" scope="peer"></topicref>
 <topicref format="html" href="developer_doc_overview.html"
 navtitle="Développement de Watson IoT Platform" outputclass="subsection"
 scope="peer">
-<topicref format="html" href="iot_platform_client_lib.html" navtitle="Bibliothèques client" scope="peer"
-audience="yellow"/>
-<topicref format="html" href="iot_platform_client_lib.html" navtitle="API et bibliothèques client"
-scope="peer" audience="blue"/>
+<topicref format="html" href="reference/rest_api.html" navtitle="API" scope="peer"/>
+<topicref format="html" href="iot_platform_client_lib.html" navtitle="Bibliothèques client" scope="peer"/>
 <topicref format="html" href="applications/dev_nodered.html"
 navtitle="Développement de Watson IoT Platform à l'aide de Node-RED" scope="peer" locktitle="yes">
 <topicref format="html" href="applications/dev_nodered.html#watson_iot_node"
@@ -298,6 +405,10 @@ scope="peer"/>
 <topicref format="html" href="applications/api.html#rest_messaging_api"
 navtitle="API de messagerie REST HTTP" locktitle="yes"/>
 </topicref>
+<topicref format="html" href="applications/api_app_REST.html"
+navtitle="API REST HTTP pour les applications" scope="peer" audience="blue"/>
+<topicref format="html" href="applications/api_app_Messaging.html"
+navtitle="Messagerie HTTP pour les applications" scope="peer" audience="blue"/>
 <topicref format="html" href="reference/mqtt/index.html" navtitle="Messagerie MQTT" scope="peer">
 <topicref format="html" href="reference/mqtt/index.html#version-support" navtitle="Support de version"
 scope="peer"/>
@@ -335,6 +446,23 @@ navtitle="Restrictions liées à Quickstart" scope="peer"/>
 <topicref format="html" href="applications/mqtt.html#scalable_apps" navtitle="Applications évolutives"
 scope="peer"/>
 </topicref>
+<topicref format="html" navtitle="Utilisation d'interfaces pour mapper des données de terminal (bêta)"
+outputclass="subsection" href="information_management/im_index.html" audience="blue">
+<topicref format="html" outputclass="subsection"
+href="information_management/im_index.html#overview" audience="blue" navtitle="Présentation"
+></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="Flux de données"
+href="information_management/im_index.html#mapping"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="Concepts clés"
+href="information_management/im_index.html#key_concepts"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="Ressources"
+href="information_management/im_index.html#resources"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="Flux de travaux de niveau supérieur"
+href="information_management/im_index.html#workflow"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="Exemple de scénario"
+href="information_management/im_index.html#scenario"></topicref>
+
+</topicref>
 <topicref format="html" href="applications/libraries/python.html"
 navtitle="Python pour les développeurs d'applications" scope="peer">
 <topicref format="html" href="applications/libraries/python.html#python_client_download"
@@ -352,7 +480,7 @@ navtitle="Abonnement au statut des terminaux" scope="peer"/>
 <topicref format="html" href="applications/libraries/python.html#handling_device_updates"
 navtitle="Traitement des mises à jour du statut des terminaux" scope="peer"/>
 <topicref format="html" href="applications/libraries/python.html#publishing_device_events"
-navtitle="Publication d'événements à partir de terminaux" scope="peer"/>
+navtitle="Publication des événements à partir de terminaux" scope="peer"/>
 <topicref format="html" href="applications/libraries/python.html#publishing_commands_devices"
 navtitle="Publication de commandes sur des terminaux" scope="peer"/>
 <topicref format="html" href="applications/libraries/python.html#org_details"
@@ -389,7 +517,7 @@ navtitle="Abonnement aux événements d'un terminal" scope="peer"/>
 <topicref format="html" href="applications/libraries/nodejs.html#subscribing_device_status"
 navtitle="Abonnement au statut des terminaux" scope="peer"/>
 <topicref format="html" href="applications/libraries/nodejs.html#publishing_device_events"
-navtitle="Publication d'événements à partir de terminaux" scope="peer"/>
+navtitle="Publication des événements à partir de terminaux" scope="peer"/>
 <topicref format="html" href="applications/libraries/nodejs.html#publishing_commands_devices"
 navtitle="Publication de commandes sur des terminaux" scope="peer"/>
 <topicref format="html" href="applications/libraries/nodejs.html#disconnect_client"
@@ -414,7 +542,7 @@ navtitle="Abonnement au statut des terminaux" scope="peer"/>
 <topicref format="html" href="applications/libraries/java.html#handling_device_status_updates"
 navtitle="Traitement des mises à jour du statut des terminaux" scope="peer"/>
 <topicref format="html" href="applications/libraries/java.html#publishing_events_devices"
-navtitle="Publication d'événements à partir de terminaux" scope="peer"/>
+navtitle="Publication des événements à partir de terminaux" scope="peer"/>
 <topicref format="html" href="applications/libraries/java.html#publishing_commands_devices"
 navtitle="Publication de commandes sur des terminaux" scope="peer"/>
 <topicref format="html" href="applications/libraries/java.html#samples"
@@ -431,7 +559,7 @@ navtitle="Abonnement aux événements d'un terminal" scope="peer"/>
 <topicref format="html" href="applications/libraries/c_sharp.html#subscribe_device_status"
 navtitle="Abonnement au statut des terminaux" scope="peer"/>
 <topicref format="html" href="applications/libraries/c_sharp.html#publish_events_devices"
-navtitle="Publication d'événements à partir de terminaux" scope="peer"/>
+navtitle="Publication des événements à partir de terminaux" scope="peer"/>
 <topicref format="html" href="applications/libraries/c_sharp.html#publish_commands_devices"
 navtitle="Publication de commandes sur des terminaux" scope="peer"/>
 </topicref>
@@ -445,7 +573,12 @@ locktitle="yes"/>
 navtitle="API de messagerie REST HTTP" scope="peer"/>
 <topicref format="html" href="devices/api.html#event_publication" navtitle="Publication d'événements"
 scope="peer"/>
+<topicref href="devices/api.html#last-event-cache" format="html" navtitle="Dernier cache d'événement"/>
 </topicref>
+<topicref format="html" href="devices/api_dev_REST.html" navtitle="API REST HTTP pour les terminaux"
+scope="peer" audience="blue"/>
+<topicref format="html" href="devices/api_dev_Messaging.html" navtitle="Messagerie HTTP pour les terminaux"
+scope="peer" audience="blue"/>
 <topicref format="html" href="reference/mqtt/index.html" navtitle="Messagerie MQTT" scope="peer">
 <topicref format="html" href="reference/mqtt/index.html#version-support" navtitle="Support de version"
 scope="peer"/>
@@ -474,6 +607,23 @@ scope="peer"/>
 navtitle="Abonnement à des commandes" scope="peer"/>
 <topicref format="html" href="devices/mqtt.html#managed-devices" navtitle="Terminaux gérés"
 scope="peer"/>
+</topicref>
+<topicref format="html" navtitle="Utilisation d'interfaces pour mapper des données de terminal (bêta)"
+outputclass="subsection" href="information_management/im_index.html" audience="blue">
+<topicref format="html" outputclass="subsection"
+href="information_management/im_index.html#overview" audience="blue" navtitle="Présentation"
+></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="Flux de données"
+href="information_management/im_index.html#mapping"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="Concepts clés"
+href="information_management/im_index.html#key_concepts"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="Ressources"
+href="information_management/im_index.html#resources"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="Flux de travaux de niveau supérieur"
+href="information_management/im_index.html#workflow"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="Exemple de scénario"
+href="information_management/im_index.html#scenario"></topicref>
+
 </topicref>
 <topicref format="html" href="devices/device_mgmt/index.html" navtitle="Protocole de gestion des terminaux"
 scope="peer">
@@ -640,6 +790,15 @@ scope="peer"/>
 </topicref>
 <topicref format="html" href="gateways/gw_dev_index.html" outputclass="subsection"
 navtitle="Développement de passerelles">
+<topicref format="html" href="gateways/gw_api.html" navtitle="API REST HTTP pour les terminaux de passerelle"
+scope="peer" audience="blue">
+<topicref format="html" href="gateways/gw_api.html#client_connections" navtitle="Connexions client"
+locktitle="yes" audience="blue"/>
+<topicref href="gateways/gw_api.html#last-event-cache" format="html" navtitle="Dernier cache d'événement"
+audience="blue"/>
+</topicref>
+<topicref format="html" href="gateways/gw_intro_api.html"
+navtitle="Messagerie HTTP pour les terminaux de passerelle (bêta)" scope="peer" audience="blue"/>
 <topicref format="html" href="reference/mqtt/index.html" navtitle="Messagerie MQTT" scope="peer">
 <topicref format="html" href="reference/mqtt/index.html#version-support" navtitle="Support de version"
 scope="peer"/>
@@ -672,7 +831,7 @@ scope="peer"/>
 scope="peer"/>
 </topicref>
 <topicref format="html" href="gateways/libraries/java_cli_gw.html"
-navtitle="Java pour les développeurs de passerelle" audience="blue">
+navtitle="Développement de passerelles à l'aide de Java" locktitle="yes">
 <topicref format="html" href="gateways/libraries/java_cli_gw.html#java_client_download"
 navtitle="Téléchargement du client et des ressources Java" scope="peer"/>
 <topicref format="html" href="gateways/libraries/java_cli_gw.html#constructor"
@@ -687,28 +846,30 @@ navtitle="Traitement des commandes" scope="peer"/>
 scope="peer"/>
 </topicref>
 <topicref format="html" href="gateways/libraries/java_cli_managed_gw.html"
-navtitle="Développement de passerelles gérées (Java) " scope="peer" audience="blue">
+navtitle="Développement de passerelles gérées (Java)" scope="peer">
 <topicref format="html" href="gateways/libraries/java_cli_managed_gw.html"
-navtitle="Service de gestion de terminaux" scope="peer" audience="blue"/>
+navtitle="Service de gestion de terminaux" scope="peer"/>
 <topicref format="html" href="gateways/libraries/java_cli_managed_gw.html#create_device_model"
-navtitle="Création du modèle de terminal" scope="peer" audience="blue"/>
+navtitle="Création du modèle de terminal" scope="peer"/>
 <topicref format="html" href="gateways/libraries/java_cli_managed_gw.html#construct_managed_gateway"
-navtitle="Constructeurs ManagedGateway" scope="peer" audience="blue"/>
+navtitle="Constructeurs ManagedGateway" scope="peer"/>
 <topicref format="html" href="gateways/libraries/java_cli_managed_gw.html#dm_requests"
-navtitle="Demandes de gestion des terminaux" scope="peer" audience="blue"/>
+navtitle="Demandes de gestion des terminaux" scope="peer"/>
 <topicref format="html" href="gateways/libraries/java_cli_managed_gw.html#location_updates"
-navtitle="Mise à jour d'emplacement " audience="blue"/>
+navtitle="Mise à jour d'emplacement"/>
 <topicref format="html" href="gateways/libraries/java_cli_managed_gw.html#errors"
-navtitle="Traitement de code d'erreur " scope="peer" audience="blue"/>
+navtitle="Traitement de code d'erreur" scope="peer"/>
 <topicref format="html" href="gateways/libraries/java_cli_managed_gw.html#firmware"
-navtitle="Mises à jour et actions du microprogramme" scope="peer" audience="blue"/>
+navtitle="Mises à jour et actions sur un microprogramme" scope="peer"/>
 <topicref format="html" href="gateways/libraries/java_cli_managed_gw.html#dev_actions"
-navtitle="Actions sur les terminaux" scope="peer" audience="blue"/>
+navtitle="Actions sur les terminaux" scope="peer"/>
 <topicref format="html" href="gateways/libraries/java_cli_managed_gw.html#samples"
-navtitle="Exemples" scope="peer" audience="blue"/>
+navtitle="Exemples" scope="peer"/>
 <topicref format="html" href="gateways/libraries/java_cli_managed_gw.html#recipes"
-navtitle="Recettes" scope="peer" audience="blue"/>
+navtitle="Recettes" scope="peer"/>
 </topicref>
+<topicref format="html" href="gateways/gateway-access-control.html"
+navtitle="Contrôle d'accès aux passerelles (bêta)" scope="peer"/>
 </topicref>
 <topicref format="html" href="blockchain/dev_blockchain.html"
 navtitle="Développement pour l'intégration de chaîne de blocs" outputclass="subsection"
@@ -726,32 +887,15 @@ navtitle="Création, test et déploiement de contrats" scope="peer"></topicref>
 <topicref format="html" href="blockchain/dev_blockchain.html#next_steps"
 navtitle="Etapes suivantes" scope="peer"></topicref>
 </topicref>
-<topicref format="html" navtitle="Information Management (bêta)" outputclass="subsection"
-href="information_management/im_index.html" audience="blue">
-<topicref format="html" outputclass="subsection" href="information_management/im_index.html#mapping"
-audience="blue" navtitle="Mappages"></topicref>
-<topicref format="html" outputclass="subsection" audience="blue" navtitle="API"
-href="information_management/im_index.html#api"></topicref>
-<topicref format="html" outputclass="subsection" audience="blue" navtitle="Schémas"
-href="information_management/im_index.html#schema"></topicref>
-<topicref format="html" outputclass="subsection" audience="blue" navtitle="Types d'événement"
-href="information_management/im_index.html#event_type"></topicref>
-<topicref format="html" outputclass="subsection" audience="blue" navtitle="Interfaces physiques"
-href="information_management/im_index.html#physical_interface"></topicref>
-<topicref format="html" outputclass="subsection" audience="blue" navtitle="Interfaces d'application"
-href="information_management/im_index.html#application_interfaces"></topicref>
-<topicref format="html" outputclass="subsection" audience="blue" navtitle="Types de terminal"
-href="information_management/im_index.html#device_type"></topicref>
-<topicref format="html" outputclass="subsection" audience="blue" navtitle="Flux de travaux de niveau supérieur"
-href="information_management/im_index.html#workflow"></topicref>
-<topicref format="html" outputclass="subsection" audience="blue" navtitle="Scénario de bout en bout"
-href="information_management/im_index.html#scenario"></topicref>
-<topicref format="html" outputclass="subsection" audience="blue" navtitle="Etapes suivantes"
-href="information_management/im_index.html#nextsteps"></topicref>
-
-</topicref>
 <topicref format="html" href="reference/mqtt/index.html"
 navtitle="Référence" outputclass="subsection" scope="peer">
+<topicref format="html" href="reference/api.html" navtitle="API" scope="peer">
+<topicref format="html" href="reference/api.html#api_about" navtitle="A propos des API HTTP" scope="peer"/>
+<topicref format="html" href="reference/api.html#api_http" navtitle="API HTTP" scope="peer"/>
+<topicref format="html" href="reference/api.html#api_extension" navtitle="API HTTP d'extension"
+scope="peer"/>
+<topicref format="html" href="reference/api.html#api_beta" navtitle="API HTTP bêta" scope="peer"/>
+</topicref>
 <topicref format="html" href="reference/mqtt/index.html" navtitle="Messagerie MQTT" scope="peer">
 <topicref format="html" href="reference/mqtt/index.html#version-support" navtitle="Support de version"
 scope="peer"/>
@@ -783,46 +927,29 @@ navtitle="Attributs étendus" scope="peer"></topicref>
 <topicref format="html" href="ts_index.html"
 navtitle="Traitement des incidents liés à Watson IoT Platform" outputclass="subsection"
 scope="peer">
+<topicref format="html" href="ts_index.html#access-expiry-problem"
+navtitle="Problème lors de l'accès à votre organisation" scope="peer"/>
 <topicref format="html" href="ts_index.html#connection_problem"
-navtitle="Problème lors de la connexion à la plateforme" scope="peer"></topicref>
+navtitle="Problème lors de la connexion à la plateforme" scope="peer"/>
 <topicref format="html" href="ts_index.html#disconnection_problem"
 navtitle="Déconnexions par intermittence" scope="peer"></topicref>
+<topicref format="html" href="service_status.html" navtitle="Statut de service" locktitle="yes"/>
 <topicref format="html" href="ts_index.html#gettinghelp"
 navtitle="Aide et support" scope="peer"></topicref>
 </topicref>
 <topicref audience="blue" format="html" href="glossary.html" navtitle="Glossaire"
 outputclass="subsection" scope="peer"/>
+<topicref audience="blue" navtitle="Ressources developerWorks" href="experimental/experimental.html">
+<topicref audience="blue" navtitle="Cookbook" href="experimental/cookbook.html"/>
 </topicref>
-<topicref audience="blue" navtitle="TESTER LES SECTIONS CI-DESSOUS"/>
-<topicref format="html" href="index.html" locktitle="yes" navtitle="Initiation" scope="peer"
-audience="blue">
-<topicref format="html" href="index.html#byb" navtitle="Avant de commencer" scope="peer"/>
-<topicref format="html" href="index.html#up_and_running" navtitle="Connexion des terminaux"
-scope="peer"/>
-<topicref format="html" href="index.html#analyzing_data" navtitle="Analyse des données de terminal" scope="peer"/>
-<topicref format="html" href="index.html#develop_applications" navtitle="Développement d'applications"
-scope="peer"/>
+<topicref navtitle="Liens connexes" href="iot_platform_rel_links.html" audience="blue">
+<topicref navtitle="Ressources générales" href="iot_platform_rel_links.html#general"/>
+<topicref navtitle="Tutoriels et exemples" href="iot_platform_rel_links.html#samples"/>
+<topicref navtitle="Informations de référence sur l'API" href="iot_platform_rel_links.html#api"/>
+<topicref navtitle="Bibliothèques client"
+href="iot_platform_rel_links.html#client_libraries"/>
+<topicref navtitle="Informations Bluemix " href="iot_platform_rel_links.html#bluemixinfo"/>
+<topicref navtitle="Sécurité" href="iot_platform_rel_links.html#security"/>
 </topicref>
-<topicref format="html" href="iotplatform_overview.html#about_iotplatform" navtitle="A propos de"
-outputclass="subsection" scope="peer" audience="blue">
-<topicref format="html" href="iotplatform_overview.html#watsoniotplatform_architecture"
-navtitle="Architecture" outputclass="subsection" scope="peer"/>
-<topicref format="html" href="iotplatform_overview.html#watsoniotplatform_importantconcepts"
-navtitle="Concepts" scope="peer"/>
-<topicref format="html" href="feature_overview.html" navtitle="Présentation des fonctions" scope="peer">
-<topicref format="html" href="feature_overview.html#connect" navtitle="Connexion" scope="peer"/>
-<topicref format="html" href="feature_overview.html#information_management"
-navtitle="Gestion des informations" scope="peer"/>
-<topicref format="html" href="feature_overview.html#analytics" navtitle="Analyse" scope="peer"/>
-<topicref format="html" href="feature_overview.html#risk_management" navtitle="Gestion des risques"
-scope="peer"/>
-</topicref>
-<topicref audience="blue" format="html" href="reference/standards_and_requirements.html"
-navtitle="Normes prises en charge et exigences" scope="peer">
-<topicref format="html" href="reference/standards_and_requirements.html#mqtt" navtitle="MQTT"
-scope="peer"/>
-</topicref>
-<topicref format="html" href="reference/bluemix_and_platform.html"
-navtitle="Bluemix et Watson IoT Platform" scope="peer"/>
 </topicref>
 </map>

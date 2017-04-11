@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-18"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -15,13 +15,13 @@ lastupdated: "2016-10-18"
 # Java para desenvolvedores de dispositivos
 {: #java}
 
-É possível construir e customizar dispositivos que interagem com sua organização no {{site.data.keyword.iot_full}} usando Java. Uma biblioteca do cliente Java para {{site.data.keyword.iot_short_notm}}, documentação e exemplos são fornecidos para ajudá-lo a começar com o desenvolvimento do dispositivo.
+É possível construir e customizar dispositivos que interagem com sua organização no {{site.data.keyword.iot_full}} usando Java™. Uma biblioteca do cliente Java para {{site.data.keyword.iot_short_notm}}, documentação e exemplos são fornecidos para ajudá-lo a começar com o desenvolvimento do dispositivo.
 {:shortdesc}
 
 ## Fazendo download de cliente e recursos de Java
 {: #java_client_download}
 
-Para acessar as bibliotecas do cliente Java e as amostras para o {{site.data.keyword.iot_short_notm}}, acesse o repositório [iot-java](https://github.com/ibm-watson-iot/iot-java) no GitHub e conclua as instruções de instalação.
+Para acessar as bibliotecas do cliente Java e as amostras para o {{site.data.keyword.iot_short_notm}}, acesse o repositório [iot-java ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-watson-iot/iot-java){: new_window} no GitHub e conclua as instruções de instalação.
 
 ## Construtor
 {: #constructor}
@@ -41,6 +41,7 @@ O construtor cria a instância do cliente e aceita o objeto `Properties`, que co
 |`Automatic-Reconnect`  |Um valor true ou false que é necessário quando você deseja reconectar automaticamente o dispositivo ao {{site.data.keyword.iot_short_notm}} enquanto ele está em um estado desconectado. O valor-padrão é false.|
 |`Disconnected-Buffer-Size`|O número máximo de mensagens que podem ser armazenadas na memória enquanto o cliente está desconectado. O valor-padrão é
 5000.|
+|`WebSocket`|Um valor true ou false necessário quando você deseja usar conexões de websocket com o {{site.data.keyword.iot_short_notm}}. O valor-padrão é false.|
 
 **Nota:** para conectar o dispositivo no modo de assinatura durável, configure `clean-session` para `false`. Para obter mais informações sobre sessão limpa, consulte a seção 'Buffers de assinatura e sessão limpa' da [Documentação de MQTT](../../reference/mqtt/index.html#subscription-buffers-and-clean-session).
 
@@ -407,5 +408,4 @@ public class RegisteredDeviceCommandSubscribe {
 ## Amostras
 {: #samples}
 
-Para obter uma lista de dispositivos e amostras de gerenciamento de dispositivo que são desenvolvidas usando a biblioteca de cliente Java {{site.data.keyword.iot_short_notm}}, consulte o
-[repositório GitHub de amostras de dispositivos de IOT](https://github.com/ibm-messaging/iot-device-samples/tree/master/java).
+Para obter uma lista de amostras de dispositivo e de gerenciamento de dispositivo desenvolvidas usando a biblioteca de cliente Java do {{site.data.keyword.iot_short_notm}}, veja o [repositório do GitHub iot-device-samples ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/iot-device-samples/tree/master/java){: new_window}.

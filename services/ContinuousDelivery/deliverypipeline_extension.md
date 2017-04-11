@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-09"
+  years: 2015, 2017
+lastupdated: "2017-3-16"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2016-12-09"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Extending the {{site.data.keyword.deliverypipeline}} 
+# Extending the {{site.data.keyword.deliverypipeline}}
 {: #deliverypipeline_extending}
 
 You can extend the {{site.data.keyword.deliverypipeline}} capabilities by configuring your jobs to use supported services. For example, test jobs can run static code scans and build jobs can globalize strings.
@@ -45,7 +45,7 @@ A pipeline that uses the Static Analyzer service typically includes these stages
 
 ### Creating a static code scan
 
-Before you begin, [review the Terms of Use for the service](http://www.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01){: new_window} ![External link icon, link opens in a new window](images/launch--glyph.svg).
+Before you begin, [review the Terms of Use for the service ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01){: new_window}
 
 <!-- Use ordered list markup for the step section. Include code examples as needed. -->
 
@@ -186,7 +186,7 @@ Before you begin, create or copy a Slack WebHook URL:
 3. Select a channel and click **Add Incoming WebHooks Integration**.
 4. Add a **WebHook URL** or copy an existing one.
 
-For more information, see [Incoming WebHooks in the Slack documentation](https://api.slack.com/incoming-webhooks){: new_window}.
+For more information, see [Incoming WebHooks in the Slack documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://api.slack.com/incoming-webhooks){: new_window}.
 
 To create Slack notifications:
 
@@ -237,7 +237,7 @@ To create Slack notifications:
 
 6. Repeat these steps to send Slack notifications for other stages that include IBM Container Service, IBM Security Analyzer, and IBM Globalization jobs.
 
-The build notification that is displayed in Slack includes a link to the DevOps Services project and sometimes to the project's dashboard. For a Slack user to open these links, the user must be registered with DevOps Services and be a member of the project that the pipeline is configured in.
+The build notification that is displayed in Slack includes a link to the project and sometimes to the project's dashboard. For a Slack user to open these links, the user must be registered with Bluemix and be a member of the project that the pipeline is configured in.
 
 ## Creating HipChat notifications for builds in the pipeline
 {: #deliverypipeline_hipchat}
@@ -326,12 +326,12 @@ To create HipChat notifications:
 ## Using Active Deploy for zero downtime deployment in the pipeline
 {: #deliverypipeline_activedeploy}
 
-You can automate the continuous deployment of your apps or container groups by using the IBM® Active Deploy service in the Bluemix® DevOps Services Delivery Pipeline. For more information about getting started, see the [Active Deploy documentation](/docs/services/ActiveDeploy/updatingapps.html#adpipeline){: new_window}.
+You can automate the continuous deployment of your apps or container groups by using the IBM® Active Deploy service in the Delivery Pipeline. For more information about getting started, see the [Active Deploy documentation](/docs/services/ActiveDeploy/updatingapps.html#adpipeline){: new_window}.
 
 ## Building and deploying container images with the pipeline
 {: #deliverypipeline_containers}
 
-You can automate your app builds and container deployments to Bluemix® by using the IBM® Continuous Delivery Pipeline for Bluemix. The Delivery Pipeline service in DevOps services supports:
+You can automate your app builds and container deployments to Bluemix by using the IBM Continuous Delivery Pipeline for Bluemix. The Delivery Pipeline service supports:
   - Building Docker images
   - Deploying images in containers to Bluemix
 

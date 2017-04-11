@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-27"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -16,14 +16,15 @@ lastupdated: "2016-10-27"
 # デバイス開発者用の Python
 {: #python}
 
-Python を使用して、{{site.data.keyword.iot_full}} で組織と対話するデバイス・コードをビルド/開発することができます。{{site.data.keyword.iot_short_notm}} 用の Python クライアントは、MQTT や HTTP などの基礎的なプロトコルを抽象化することで、{{site.data.keyword.iot_short_notm}} 機能とのシンプルな対話を促進する API を備えています。{:shortdesc}
+Python を使用して、{{site.data.keyword.iot_full}} で組織と対話するデバイス・コードをビルド/開発することができます。{{site.data.keyword.iot_short_notm}} 用の Python クライアントは、MQTT や HTTP などの基礎的なプロトコルを抽象化することで、{{site.data.keyword.iot_short_notm}} 機能とのシンプルな対話を促進する API を備えています。
+{:shortdesc}
 
 提供されている情報と例を使用し、Python を使用したデバイスの開発を開始します。
 
 ## Python クライアントとリソースのダウンロード
 {: #python_client_download}
 
-{{site.data.keyword.iot_short_notm}} 用の Python クライアントやその他の使用可能なリソースを利用するには、GitHub の [iot-python](https://github.com/ibm-watson-iot/iot-python) リポジトリーにアクセスし、インストール手順を実行します。
+{{site.data.keyword.iot_short_notm}} 用の Python クライアントやその他の使用可能なリソースを入手するには、GitHub の [iot-python ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-python){: new_window} リポジトリーにアクセスし、インストール手順を実行します。
 
 ## コンストラクター
 {: #constructor}
@@ -37,7 +38,7 @@ options 辞書は、{{site.data.keyword.iot_short_notm}} モジュールと対�
 |`id`|デバイスを特定するための固有の ID。通常、特定のデバイス・タイプにおいて、デバイス ID はそのデバイスの固有の ID です (シリアル番号や MAC アドレスなど)。|
 |`auth-method`|認証の方式。サポートされている唯一の方式は `apikey` です。|
 |`auth-token`|API キー・トークン。auth-method の値を `apikey` に設定する場合は、これも指定する必要があります。|
-|`clean-session`|true または false 値。永続サブスクリプション・モードでアプリケーションを接続する場合のみ必要です。デフォルトでは、`clean-session` は true に設定されます。|
+|`clean-session`|true または false の値。永続サブスクリプション・モードでアプリケーションを接続する場合のみ必要です。デフォルトでは、`clean-session` は true に設定されます。|
 
 options 辞書が提供されない場合、クライアントは未登録デバイスとして {{site.data.keyword.iot_short_notm}} Quickstart サービスに接続されます。
 
@@ -150,7 +151,7 @@ client.commandCallback = myCommandCallback
 ## カスタム・メッセージ形式のサポート
 {: #custom_message_format}
 
-デフォルトでは、メッセージ形式は `json` に設定されます。つまり、ライブラリーが JSON 形式の Python 辞書オブジェクトのエンコードとデコードをサポートします。メッセージの形式が `json-iotf` に設定されると、メッセージは {{site.data.keyword.iot_short_notm}} JSON ペイロードの仕様に応じてエンコードされます。独自のカスタム・メッセージ形式のサポートを追加する場合は、GitHub の[カスタム・メッセージ形式のサンプル](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat)を参照してください。
+デフォルトでは、メッセージ形式は `json` に設定されます。つまり、ライブラリーが JSON 形式の Python 辞書オブジェクトのエンコードとデコードをサポートします。メッセージの形式が `json-iotf` に設定されると、メッセージは {{site.data.keyword.iot_short_notm}} JSON ペイロードの仕様に応じてエンコードされます。独自のカスタム・メッセージ形式のサポートを追加する場合は、GitHub の[カスタム・メッセージ形式のサンプル ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat){: new_window} を参照してください。
 
 カスタム・エンコーダー・モジュールを作成するときは、以下の例に示されているように、デバイス・クライアントに登録する必要があります。
 

@@ -18,4 +18,4 @@ lastupdated: "2016-11-03"
 建置更多內容 | 更加成長 | 安心睡好覺
 ---- | ---- | ----
 專注在有趣的事情... 建立新的應用程式，而不是系統管理。 | 在 IBM Cloud 上擴充您的資料。 | 放輕鬆休息，有 IBM 專家維持您的資料全年無休地執行。
-{: caption="Table 1. Benefits of using the Work with Data console" caption-side="top"}
+{: caption="表 1. 使用「使用資料」主控台的好處" caption-side="top"}

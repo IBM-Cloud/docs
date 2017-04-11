@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-26"
+  years: 2016, 2017
+lastupdated: "2017-03-08"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -22,17 +22,20 @@ lastupdated: "2016-10-26"
 L'applicazione mobile di esempio {{site.data.keyword.iotinsurance_full}} è un'implementazione di riferimento per un client mobile di {{site.data.keyword.iotinsurance_short}}. Puoi utilizzare l'applicazione per registrare nuovi dispositivi nel sistema e per ricevere avvisi per i dispositivi.
 {:shortdesc}
 
+**Nota**: {{site.data.keyword.iotinsurance_short}} non distribuisce più {{site.data.keyword.amafull}} o {{site.data.keyword.mobilepushfull}}. Le versioni precedenti di {{site.data.keyword.iotinsurance_short}} utilizzano il servizio {{site.data.keyword.amashort}} per elaborare le risposte dall'applicazione mobile. Questo processo continua a funzionare per tutte le istanze esistenti di {{site.data.keyword.iotinsurance_short}}. Tuttavia, devi creare un processo di autenticazione personalizzato per utilizzare l'applicazione mobile con le nuove istanze di
+  {{site.data.keyword.iotinsurance_short}}. Puoi anche facoltativamente [creare un'istanza di {{site.data.keyword.mobilepushshort}}](../mobilepush/index.html), configurarla e associarla all'API {{site.data.keyword.iotinsurance_short}}.
+
 **Prerequisiti:** prima di iniziare, assicurati che siano implementati i seguenti prerequisiti:
   - Un ambiente di sviluppo integrato Apple Xcode 8 o superiore.
   - Un dispositivo mobile iPhone iOS 9.0 o superiore.
-  - CocoaPods installato sul tuo computer. Consulta il [sito web CocoaPods](https://guides.cocoapods.org/using/getting-started.html).
+  - CocoaPods installato sul tuo computer. Consulta il [sito web CocoaPods ![icona link esterno](../../icons/launch-glyph.svg)](https://guides.cocoapods.org/using/getting-started.html){: new_window}.
   - I [parametri](#iot4i_mobileParam) necessari per collegare l'applicazione mobile di esempio alla tua istanza del servizio.
 
 ## Creazione dell'applicazione mobile di esempio
 {: #building_mobile}
 Per provare l'applicazione mobile di esempio, completa la seguente procedura:
 
-1. Clona [il repository del codice di origine per l'applicazione mobile di esempio](https://github.com/ibm-watson-iot/ioti-mobile) in un computer su cui è installato Xcode 7.3 o superiore.
+1. Clona [il repository del codice di origine per l'applicazione mobile di esempio ![icona link esterno](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-mobile){: new_window} in un computer su cui è installato Xcode 7.3 o superiore.
 2. Installa i pacchetti richiesti e genera il file IoT4I.xcworkspace eseguendo un comando CocoaPods pod install nel tuo progetto. CocoaPods deve essere installato per completare questa azione.
 3. Apri il progetto in Xcode facendo doppio clic sul file IoT4I.xcworkspace.
 4. Collega il tuo iPhone al tuo computer e selezionalo come una destinazione integrata.
@@ -41,9 +44,9 @@ Per provare l'applicazione mobile di esempio, completa la seguente procedura:
   - Modifica l'**Identificativo bundle** con un identificativo univoco, ad esempio: **myIoT4Ibundle**.
   - Imposta **Team** con il nome del tuo team personale e quindi fai clic su **Risolvi problema**.
 7. Per collegare la tua applicazione alla tua istanza di {{site.data.keyword.iotinsurance_short}}, imposta i seguenti parametri nel file **constants.swift**:  
-    - [applicationRoute](#iot4i_mobileParam) = L'URL della tua istanza di {{site.data.keyword.iotinsurance_short}}
-    - [applicationId](#iot4i_mobileParam) = L'URL della tua istanza di {{site.data.keyword.amashort}}
-8. Nel tuo computer, fai clic sulla freccia per creare ed eseguire lo schema corrente. L'applicazione mobile di esempio è installata sul tuo telefono. Per ulteriori informazioni, consulta [Apple developer instructions for running apps on devices from Xcode](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/LaunchingYourApponDevices/LaunchingYourApponDevices.html).
+    - [applicationRoute](#iot4i_mobileParam) = l'URL per l'applicazione API {{site.data.keyword.iotinsurance_short}}. Puoi trovare questo valore nella scheda delle credenziali del servizio della console del servizio {{site.data.keyword.iotinsurance_short}}.
+    - [applicationId](#iot4i_mobileParam) = il GUID della tua istanza di {{site.data.keyword.amashort}}. Puoi trovare questo valore aprendo {{site.data.keyword.amashort}}, e quindi facendo clic su **Opzioni per dispositivi mobili**.  Il valore è denominato GUID applicazione / TenantId.
+8. Nel tuo computer, fai clic sulla freccia per creare ed eseguire lo schema corrente. L'applicazione mobile di esempio è installata sul tuo telefono. Per ulteriori informazioni, consulta [Apple developer instructions for running apps on devices from Xcode ![icona link esterno](../../icons/launch-glyph.svg)](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/LaunchingYourApponDevices/LaunchingYourApponDevices.html){: new_window}.
 
   **Nota:** se viene visualizzato un errore quando tenti la creazione con il testo *Impossibile avviare IoT4I perché non hai ancora verificato che il tuo certificato Developer App è sicuro sul tuo dispositivo*, selezionati come sviluppatore sicuro nel seguente modo:  
     1. Nel tuo telefono, vai a **Impostazioni > Generale > Gestione dispositivo > tuoIDsviluppatore**.
@@ -55,7 +58,7 @@ Per provare l'applicazione mobile di esempio, completa la seguente procedura:
 
 Esegui le seguenti attività per abilitare le notifiche push per il tuo dispositivo mobile. Devi disporre di un'appartenenza a un account da sviluppatore Apple valido per utilizzare il servizio di notifica push.
 
-1. Accedi al tuo account da sviluppatore Apple all'indirizzo https://developer.apple.com/account.
+1. Accedi al tuo [account da sviluppatore Apple ![icona link esterno](../../icons/launch-glyph.svg)](https://developer.apple.com/account){: new_window}.
 
 2. Crea un file certificato.
   1. Seleziona **Certificates, Identifiers & Profiles**.
@@ -86,23 +89,9 @@ Esegui le seguenti attività per abilitare le notifiche push per il tuo disposit
 
 5. Crea un file Public Key Cryptography Standards (PKCS) 12 e aggiungilo al servizio {{site.data.keyword.mobilepushshort}}.
   1. Apri Keychain Access e seleziona **My Certificates**.
-  2. Fai clic con il tasto destro su **Apple Development IOS Push Service: (bundleID)** e quindi esporta, salva e immetti una password per il file. 
+  2. Fai clic con il tasto destro su **Apple Development IOS Push Service: (bundleID)** e quindi esporta, salva e immetti una password per il file.
   3. Nella tua console {{site.data.keyword.Bluemix_notm}}, apri il servizio {{site.data.keyword.mobilepushshort}}.
   4. Fai clic su **Configura**.
   5. Nella sezione Apple Push Notifications Certificate, carica il file PKCS 12 e immetti la password password.
   6. In Xcode, modifica l'identificativo bundle con uno di quelli creati precedentemente.
   7. Esegui l'applicazione e concedi le autorizzazioni per il servizio Push Notification.
-
-# Link correlati
-{: #rellinks}
-
-## Riferimento API
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API Examples](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## Link correlati
-{: #general}
-* [Documentazione {{site.data.keyword.iot_full}}](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [Developer support forum](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-* [Stack overflow support forum](http://stackoverflow.com/questions/tagged/ibm-bluemix)

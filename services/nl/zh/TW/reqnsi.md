@@ -7,7 +7,7 @@ lastupdated: "2017-01-11"
 ---
 
 
-{:new_window: target="_blank"}  
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 
@@ -42,10 +42,7 @@ lastupdated: "2017-01-11"
 |協力廠商	|由 IBM 以外的公司所提供的服務。	|協力廠商服務支援是由服務提供者所提供。如果是由 IBM 調查問題，且該問題經判定為協力廠商服務中的錯誤，IBM 並不負責提供修正程式。IBM 會視需要與協力廠商服務提供者分享分析資訊。|
 |社群	|開放程式碼社群所提供的服務。	|社群服務支援是由「{{site.data.keyword.Bluemix_notm}} Developers 社群」所提供。如果是由 IBM 調查問題，且該問題經判定為社群服務中的錯誤，IBM 並不負責提供修正程式。|
 |測試版	|尚未準備好進入正式作業且目前處於開發試用階段的服務。「測試版」服務可協助開發及行銷小組先評量服務價值，再正式發行該服務。	|在 IBM 所提供的測試版服務中判定為錯誤的問題會受到支援，但是 IBM 不負責提供修正程式。此外，還會將問題單的嚴重性指派為 3 或 4（適用時）。如需問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](/docs/support/index.html#contacting-bluemix-support)。|
-{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} services support information" caption-side="top"}
-
-
-
+{: caption="表 1. {{site.data.keyword.Bluemix_notm}} 服務支援資訊" caption-side="top"}
 
 {{site.data.keyword.Bluemix_notm}} 也有您可以試用的實驗性服務。若要檢視所有可用的實驗性服務、樣板及運行環境，請登入 {{site.data.keyword.Bluemix_notm}}，並捲動至「型錄」尾端，然後按一下 **{{site.data.keyword.Bluemix_notm}} 實驗型錄**。
 
@@ -141,8 +138,7 @@ lastupdated: "2017-01-11"
 *表 2. 服務可用性*
 
 
-{: caption="Table 2. Service availability" caption-side="top"}
-
+{: caption="表 2. 服務可用性" caption-side="top"}
 
 
 # 將服務新增至您的應用程式
@@ -232,7 +228,49 @@ cf bind-service appname service_instance
 ## 讓外部應用程式能使用 {{site.data.keyword.Bluemix_notm}} 服務
 {: #accser_external}
 
-您可能有在 {{site.data.keyword.Bluemix_notm}} 之外建立和執行的應用程式，或是您可能使用協力廠商工具。如果 {{site.data.keyword.Bluemix_notm}} 服務提供可從網際網路存取的端點，您可以使用那些服務來搭配本端應用程式或協力廠商工具。
+您可能有在 {{site.data.keyword.Bluemix_notm}} 之外建立和執行的應用程式，或是您可能使用協力廠商工具。如果 {{site.data.keyword.Bluemix_notm}} 服務提供可從網際網路存取的服務金鑰，您可以使用那些服務來搭配本端應用程式或協力廠商工具。
+
+下列服務提供您可在外部使用的服務金鑰：
+
+* {{site.data.keyword.amashort_old}} <!--Advanced Mobile Access-->
+* {{site.data.keyword.alchemyapishort}} <!--AlchemyAPI-->
+* {{site.data.keyword.alertnotificationshort}} <!--Alert Notification-->
+* {{site.data.keyword.sparks}} <!--Analytics for Apache Spark-->
+* {{site.data.keyword.appseccloudshort}} <!--Application Security on Cloud-->
+* {{site.data.keyword.blockchain}} <!--Blockchain-->
+* {{site.data.keyword.cloudant}} <!--Cloudant&reg; NoSQL DB-->
+* {{site.data.keyword.iotmapinsights_short}} <!--Context Mapping-->
+* {{site.data.keyword.conversationshort}} <!--Conversation-->
+* {{site.data.keyword.dashdbshort}} <!--dashDB-->
+* {{site.data.keyword.discoveryshort}} <!--Discovery-->
+* {{site.data.keyword.documentconversionshort}} <!--Document Conversion-->
+* {{site.data.keyword.iotdriverinsights_short}} <!--Driver Behavior-->
+* {{site.data.keyword.geospatialshort_Geospatial}} <!--Geospatial Analytics-->
+* {{site.data.keyword.GlobalizationPipeline_short}} <!--Globalization Pipeline-->
+* {{site.data.keyword.appconserviceshort}} <!--IBM&reg; App Connect-->
+* {{site.data.keyword.dataworks_short}} <!--IBM&reg; Data Connect-->
+* {{site.data.keyword.graphshort}} <!--IBM&reg; Graph-->
+* {{site.data.keyword.iotelectronics_full}} <!--IBM&reg; IoT for Electronics-->
+* {{site.data.keyword.twittershort}} <!--Insights for Twitter-->
+* {{site.data.keyword.iot4auto_short}} <!--IoT for Automotive-->
+* {{site.data.keyword.iotinsurance_short}} <!--IoT for Insurance-->
+* {{site.data.keyword.languagetranslatorshort}} <!--Language Translator-->
+* {{site.data.keyword.dwl_short}} <!--Lift-->
+* {{site.data.keyword.messagehub}} <!--Message Hub-->
+* {{site.data.keyword.mobileanalytics_short}} <!--Mobile Analytics-->
+* {{site.data.keyword.nlclassifiershort}} <!--Natural Language Classifier-->
+* {{site.data.keyword.objectstorageshort}} <!--Object Storage-->
+* {{site.data.keyword.personalityinsightsshort}} <!--Personality Insights-->
+* {{site.data.keyword.HybridConnect_short}} <!--Product Insights-->
+* {{site.data.keyword.mobilepush}} <!--Push-->
+* {{site.data.keyword.retrieveandrankshort}} <!--Retrieve and Rank-->
+* {{site.data.keyword.speechtotextshort}} <!-- Speech to Text-->
+* {{site.data.keyword.streaminganalyticsshort}} <!--Streaming Analytics-->
+* {{site.data.keyword.texttospeechshort}} <!--Text to Speech-->
+* {{site.data.keyword.toneanalyzershort}} <!--Tone Analyzer-->
+* {{site.data.keyword.tradeoffanalyticsshort}} <!--Tradeoff Analytics-->
+* {{site.data.keyword.weather_short}} <!--Weather Company Data-->
+* {{site.data.keyword.workloadscheduler}} <!--Workload Scheduler-->
 
 若要讓外部應用程式或協力廠商工具能使用 {{site.data.keyword.Bluemix_notm}} 服務，請完成下列步驟：
 
@@ -304,7 +342,7 @@ cf uups testups2 -l syslog://example2.com
 
 您現在可以將應用程式配置成使用外部資源。如需如何配置應用程式與服務互動的相關資訊，請參閱[配置應用程式以與服務互動](#config){: new_window}。
 
-## 在另一個地區使用服務
+## 在另一個地區中使用服務
 {: #cross_region_service}
 
 如果您的服務實例建立並連結到某個地區中的應用程式，則可以使用下列其中一種方法，在另一個地區中使用這個服務實例：

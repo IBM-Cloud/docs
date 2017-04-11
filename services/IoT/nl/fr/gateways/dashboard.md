@@ -1,12 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-27"
+
+years: 2015, 2017
+
+lastupdated: "2017-03-16"
+
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -26,7 +29,7 @@ Les passerelles représentent une classe spécialisée de terminal dans {{site.d
 {: #Prerequisites}
 
 Les terminaux de passerelle possèdent des autorisations supplémentaires par rapport aux terminaux réguliers et peuvent exécuter les fonctions suivantes :
-- Enregistrer de nouveaux terminaux sur {{site.data.keyword.iot_short_notm}} 
+- Enregistrer de nouveaux terminaux sur {{site.data.keyword.iot_short_notm}}
 - Envoyer et recevoir leurs propres données de détection, tout comme un terminal connecté
 - Envoyer et recevoir des données pour le compte des terminaux qui leur sont connectés
 - Exécuter un agent de gestion des terminaux, de manière à pouvoir le gérer, et gérer les terminaux qui lui sont connectés  
@@ -39,7 +42,8 @@ Vous pouvez également utiliser des passerelles pour exécuter des fonctions Edg
 
 Enregistrer une passerelle implique de classifier le terminal en tant que type de passerelle, de donner un nom à la passerelle et de fournir des informations la concernant. Vous indiquez ensuite un jeton de connexion ou vous acceptez un jeton qui est généré par {{site.data.keyword.iot_short_notm}}.
 
-**Astuce :** Vous pouvez ajouter une seule passerelle à la fois depuis le tableau de bord {{site.data.keyword.iot_short_notm}} ou vous pouvez utiliser l'[API {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/post_bulk_devices_add) pour ajouter une ou plusieurs passerelles à la fois.
+
+**Astuce :** Vous pouvez ajouter une seule passerelle à la fois depuis le tableau de bord {{site.data.keyword.iot_short_notm}} ou vous pouvez utiliser l'[API d'administration d'organisation ![Icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window} pour ajouter une ou plusieurs passerelles à la fois. 
 
 Pour ajouter une passerelle depuis le tableau de bord {{site.data.keyword.iot_short_notm}} :
 
@@ -48,17 +52,19 @@ Pour ajouter une passerelle depuis le tableau de bord {{site.data.keyword.iot_sh
 3. Sélectionnez ou créez un type de terminal pour le terminal que vous ajoutez.  
 Chaque terminal connecté à {{site.data.keyword.iot_short_notm}} doit être associé à un type de terminal. Les types de terminal sont des groupes de terminaux ayant des caractéristiques communes.  
  1. Cliquez sur **Créer un type de terminal**, puis sur **Créer un type de passerelle**.
- 2. Entrez un nom de type de terminal, par exemple, `my_gateway_type`, et une description pour le type de passerelle.**Important :** Le nom du type de terminal ne doit pas dépasser 36 caractères et peut uniquement contenir les caractères suivants :
+ 2. Entrez un nom de type de terminal, par exemple, `my_gateway_type`, et une description pour le type de passerelle.   
+ **Important :** Le nom du type de terminal ne doit pas dépasser 36 caractères et peut uniquement contenir les caractères suivants :
  <ul>
   <li>Caractères alphanumériques (a-z, A-Z, 0-9)</li>
   <li>Traits d'union (-)</li>
   <li>Traits de soulignement (&lowbar;)</li>
   <li>Points (.)</li>
-  </ul>3. Facultatif : Entrez des métadonnées et des attributs de type de passerelle.     
+  </ul>3. Facultatif : Entrez des métadonnées et des attributs de type de passerelle.    
  **Astuce :** Vous pouvez ajouter et éditer des attributs et des métadonnées ultérieurement.
  4. Cliquez sur **Créer** pour ajouter le nouveau type de passerelle.
 10. Cliquez sur **Suivant** pour commencer le processus d'ajout de votre terminal de passerelle avec le type de passerelle sélectionné.
-11. Entrez un ID de terminal, tel que `my_gateway_device`.  L'ID de terminal permet d'identifier le terminal de passerelle dans le tableau de bord {{site.data.keyword.iot_short_notm}} et représente également un paramètre requis pour la connexion de votre terminal de passerelle à {{site.data.keyword.iot_short_notm}}.  
+11. Entrez un ID de terminal, tel que `my_gateway_device`.  
+L'ID de terminal permet d'identifier le terminal de passerelle dans le tableau de bord {{site.data.keyword.iot_short_notm}} et représente également un paramètre requis pour la connexion de votre terminal de passerelle à {{site.data.keyword.iot_short_notm}}.  
 **Important :** L'ID de terminal ne doit pas dépasser 36 caractères et peut uniquement contenir les caractères suivants :
  <ul>
  <li>Caractères alphanumériques (a-z, A-Z, 0-9)</li>
@@ -66,8 +72,7 @@ Chaque terminal connecté à {{site.data.keyword.iot_short_notm}} doit être ass
  <li>Traits de soulignement (&lowbar;)</li>
  <li>Points (.)</li>  
  </ul>
- **Astuce :** Pour les terminaux connectés à un réseau, l'ID de terminal pourrait être par exemple l'adresse MAC du terminal sans aucun deux-points de séparation.
-  
+ **Astuce :** Pour les terminaux connectés à un réseau, l'ID de terminal pourrait être par exemple l'adresse MAC du terminal sans aucun deux-points de séparation.  
 12. Facultatif : Cliquez sur **Zones supplémentaires** pour ajouter des informations de terminal de passerelle, par exemple, le numéro de série, le fabricant, le modèle, etc.  
  **Astuce :** Vous pouvez ajouter et éditer ces informations ultérieurement.
 12. Facultatif : Entrez les métadonnées JSON de terminal.  
@@ -80,10 +85,12 @@ Chaque terminal connecté à {{site.data.keyword.iot_short_notm}} doit être ass
  - Type de terminal, par exemple, `my_gateway_type`
  - ID de terminal. **Astuce :** Pour les terminaux connectés à un réseau, cela pourrait être par exemple l'adresse MAC sans aucun deux-points de séparation.
  - Méthode d'authentification, par exemple, `token`
- - Jeton d'authentification, par exemple, `PtBVriRqIg4uh)_-Kl`
+ - Jeton d'authentification, par exemple, `PtBVriRqIg4uh)_-Kl`  
   **Astuce :** Vous aurez besoin d'un ID d'organisation, d'un jeton d'authentification, d'un type de terminal et d'un ID de terminal pour configurer votre terminal afin qu'il se connecte à {{site.data.keyword.iot_short_notm}}.  
 
 Félicitations, vous avez enregistré votre terminal de passerelle. Vous pouvez maintenant configurer votre terminal de passerelle pour qu'il se connecte à {{site.data.keyword.iot_short_notm}}.
+
+Pour obtenir les instructions étape par étape qui illustrent le flux requis pour enregistrer une passerelle, voir la recette [How to Register Gateways in IBM Watson IoT Platform ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/how-to-register-gateways-in-ibm-watson-iot-platform/){:new_window}. 
 
 ## Etape2 : Connexion de votre passerelle à {{site.data.keyword.iot_short_notm}}
 {: #connect_gateway}
@@ -92,7 +99,7 @@ Après avoir enregistré une passerelle auprès de {{site.data.keyword.iot_short
 
 Pour plus d'informations sur la connexion de votre passerelle à {{site.data.keyword.iot_short_notm}}, voir [Connectivité MQTT pour les passerelles](mqtt.html).
 
-**Astuce :** Il existe une gamme de recettes disponibles pour la connexion de terminaux à {{site.data.keyword.iot_short_notm}}. Pour obtenir une liste de recettes, voir les [recettes de connexion de terminal](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/) disponibles sur IBM.com.
+**Astuce :** Il existe une gamme de recettes disponibles pour la connexion de terminaux à {{site.data.keyword.iot_short_notm}}. Pour obtenir une liste de recettes, voir les [recettes de connexion de terminal ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window} disponibles sur le site IBM.com.
 
 
 ## Etape 3 : Connexion de terminaux via la passerelle
@@ -105,23 +112,30 @@ Pour plus d'informations sur l'enregistrement automatique de terminal et la publ
 
 Lorsqu'un terminal se connecte à votre passerelle, il s'affiche sur le tableau de bord de votre organisation {{site.data.keyword.iot_short_notm}}.
 
+Pour obtenir un flux détaillé et une description, voir la recette [Connecting Raspberry Pi as a Gateway to Watson IoT ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-as-a-gateway-to-watson-iot-using-node-red/){:new_window}. 
+
 **Remarque :** Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, les terminaux et les passerelles qui sont directement connectés à {{site.data.keyword.iot_short_notm}} affichent une icône de statut sur le tableau de bord pour indiquer qu'ils sont connectés. Le tableau de bord affiche les terminaux qui sont connectés indirectement via une passerelle comme des terminaux étant déconnectés car il ne reconnaît pas les terminaux qui sont connectés via la passerelle.
 
 
 ## Installation d'Edge Analytics Agent
 {: #edge}
 
-Edge Analytics Agent (EAA) est un composant logiciel qui s'intègre par dessus [Apache Quarks](http://quarks.incubator.apache.org/) pour exécuter des opérations Edge Analytics sur une passerelle en téléchargeant et en gérant des règles Edge Analytics depuis le tableau de bord {{site.data.keyword.iot_short_notm}}. Pour plus d'informations sur Edge Analytics, voir [Edge Analytics](../edge_analytics.html).
+Edge Analytics Agent (EAA) est un composant logiciel qui s'intègre par dessus un moteur de flux de données optimisé pour le traitement de la périphérie afin d'exécuter des opérations Edge Analytics sur une passerelle en téléchargeant et en gérant des règles Edge Analytics depuis le tableau de bord {{site.data.keyword.iot_short_notm}}. Pour plus d'informations sur Edge Analytics, voir [Edge Analytics](../edge_analytics.html).
 
 ### Installation d'EAA
 {: #eaa_install}
 
 Pour installer l'agent EAA sur votre passerelle :
 1. Dans le tableau de bord {{site.data.keyword.iot_short}}, accédez à **Règles**.
-2. Cliquez sur **Télécharger Edge Agent** pour accéder à la [communauté IBM Edge Analytics Agent](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true).
-3. Accédez à la section **Fichiers** et téléchargez le fichier *ibm-watson-iot-edge-analytics-dslink-java-0.0.1* compressé.
-4. Pour plus d'informations sur l'installation et la configuration du composant logiciel EAA sur votre passerelle, voir la recette suivante :
- - [Getting started with Edge Analytics in Watson IoT Platform](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=19472)
+2. Cliquez sur **Télécharger un agent Edge** pour accéder à la [communauté IBM Edge Analytics ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true){:new_window}.
+3. Accédez à la section **Fichiers** et téléchargez les répertoires compressés appropriés pour votre type de passerelle.   
+La solution Edge Analytics est disponible en tant que logiciel SDK pour les terminaux qui prennent en charge Java en tant que DSLink pour les terminaux de passerelle Cisco. 
+4. Pour plus d'informations sur l'installation et la configuration du composant logiciel EAA sur votre passerelle, voir les informations suivantes : 
+ - Logiciel SDK  
+ Voir le PDF et le fichier Readme, ainsi que les liens de vidéo disponibles dans la communauté.   
+ La recette [Edge Recipe for SDK - Getting Started (SDK) ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/getting-started-with-the-ibm-edge-analytics-sdk-in-watson-iot-platform/){:new_window}. 
+ - DSLink  
+ La recette [Getting started with Edge Analytics in Watson IoT Platform ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=19472){:new_window}. 
 
 ### Paramètres de configuration de l'agent EAA
 {: #eaa_configuration}

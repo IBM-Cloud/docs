@@ -37,9 +37,7 @@ years: 2015, 2017
 
 順利設定基本通知之後，即可選擇配置標籤型通知及進階選項。
 
-將這些 {{site.data.keyword.mobilepushshort}} Service 特性新增至您的應用程式。
-若要使用標籤型通知，請參閱[標籤型通知](c_tag_basednotifications.html)。
-若要使用進階通知選項，請參閱[進階通知](t_advance_badge_sound_payload.html)。
+將這些 {{site.data.keyword.mobilepushshort}} Service 特性新增至您的應用程式。若要使用標籤型通知，請參閱[標籤型通知](c_tag_basednotifications.html)。若要使用進階通知選項，請參閱[進階通知](t_advance_badge_sound_payload.html)。
 
 
 

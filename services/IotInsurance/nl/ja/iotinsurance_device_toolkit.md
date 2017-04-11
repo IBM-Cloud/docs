@@ -1,17 +1,17 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-26"
-
+  years: 2016, 2017
+lastupdated: "2017-03-08"
 ---
 
-
-
-{:new_window: target="\_blank"}
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
 
 
 # デバイス・ツールキット
@@ -19,7 +19,9 @@ lastupdated: "2016-10-26"
 {{site.data.keyword.iotinsurance_full}} デバイス・ツールキットを使用することにより、任意のデバイス・ベンダー製のデバイスを {{site.data.keyword.iotinsurance_short}} サービスに接続することができます。
 {:shortdesc}
 
-デバイスは、{{site.data.keyword.iot_full}} に対して、直接、またはデバイス・ベンダーのクラウドを介してデータを送信できます。デバイスを接続するには、許可ユーザーを登録してから、デバイス・イベントの生成と受信をセットアップします。デバイスを接続するには、以下のセクションの手順を使用してください。
+デバイスは、{{site.data.keyword.iot_full}} に対して、直接、またはデバイス・ベンダーのクラウドを介してデータを送信できます。デバイスを接続するには、許可ユーザーを登録してから、デバイス・イベントの生成と受信をセットアップします。サポートされるデバイスとベンダーのリスト、および統合手順サンプルについては、[サポートされるデバイスとベンダー](iotinsurance_supporteddevices.html)を参照してください。
+
+デバイスを接続するには、以下のセクションの手順を使用してください。
 
 ## 許可ユーザーの登録
 {: #reg_users}
@@ -33,6 +35,14 @@ lastupdated: "2016-10-26"
 
 ### ユーザー登録のフロー
 {: #user_reg_flow}
+
+ユーザー登録はベンダーごとに異なります。必要なクラウド・アクセス・トークンを取得する方法と、API を使用してそのトークンを {{site.data.keyword.iotinsurance_short}} に登録する方法を確認するには、[サポートされるデバイスとベンダー](iotinsurance_supporteddevices.html)を参照してください。
+
+#### モバイル登録のフロー (*非推奨*)
+
+**注**: モバイル・アプリは Wink のみをサポートしています。また、{{site.data.keyword.amashort}} に加えられた変更により、このセクションで説明されているユーザー登録のフローを使用できなくなりました。
+このフローは、既存のバージョン 1.0 の {{site.data.keyword.iotinsurance_short}} インスタンスでのみ使用できます。
+
 以下の図に、簡略化したユーザー登録のフローを示します。このサンプルでは、新しいユーザー登録要求がモバイル・デバイスから出されます。要求は {{site.data.keyword.amafull}} によって処理されます。ここで顧客のサポート・システムのための ID が提供され、API 登録サービスに対して要求が送信されます。API 登録サービスにより OAuth 要求がデバイス・ベンダーのクラウドに転送されます。そこで、顧客のサポート・システムによる認証が検証されます。デバイス・ベンダーのクラウドから、API 登録サービスに許可コードまたはトークンが返されます。次に登録サービスは、{{site.data.keyword.iot_short_notm}} と {{site.data.keyword.cloudant}} の中にユーザーと固有 API トークンを作成します。
 
 ![{{site.data.keyword.iotinsurance_short}} ユーザー登録のフロー。この図については、トピックのメイン本体で説明されています。](images/IoT4I_reg_user.svg "{{site.data.keyword.iotinsurance_short}} ユーザー登録のフロー")
@@ -45,8 +55,8 @@ lastupdated: "2016-10-26"
 
 デバイスが {{site.data.keyword.iot_short_notm}} に直接接続されている場合、デバイスとユーザーとの間のリンクが {{site.data.keyword.iot_short_notm}} に保管されます。{{site.data.keyword.iotinsurance_short}} 変換プログラムによってその情報がキャッシュに入れられ、デバイス・イベントにユーザーへのリンクが追加されます。
 
-### デバイス・イベント登録のフロー
-{: #device_event_reg}
+### クラウド・トゥー・クラウド - デバイス・イベントのフロー
+{: #device_event_flow}
 以下の図に、簡略化したデバイス・イベントのフローを示します。この例では、デバイスによって水漏れが検出されます。{{site.data.keyword.iotinsurance_short}} 変換プログラムは、定期的にベンダーのクラウドをポーリングして、デバイス状況の変更を調べます。イベントが検出された場合、変換プログラムはそれを {{site.data.keyword.iot_short_notm}} に送信します。{{site.data.keyword.iotinsurance_short}} シールド・エンジンによってイベントが分析された後、アラートが生成され、そのアラートが {{site.data.keyword.cloudant}} に保管されます。そのアラートは、{{site.data.keyword.iot_short_notm}} によって {{site.data.keyword.iotinsurance_short}} アクション・エンジンに転送されて、分析されることになります。次にアクション・エンジンは、{{site.data.keyword.mobilepushshort}} を介してアラートを利用者のモバイル・アプリにプッシュします。  
 
 ![{{site.data.keyword.iotinsurance_short}} デバイス・イベント登録のフローこの図については、トピックのメイン本体で説明されています。](images/IoT4I_device_reg.svg "{{site.data.keyword.iotinsurance_short}} デバイス・イベント登録のフロー")
@@ -65,7 +75,7 @@ lastupdated: "2016-10-26"
 `getProviderDevices(providerUserToken)` | ユーザー・ベアラー・トークンを使用しているユーザー・デバイスの状況を取得するためのデバイス・プロバイダー REST API を呼び出します。
 `findDevicesToAdd(), findDevicesToDel(), findDevicesToUpdate()` | 登録済みデバイスと、デバイス・プロバイダーの中に現在存在するデバイスとを比較することにより、新しいデバイス、削除されたデバイス、変更が加えられたデバイスを検索します。
 `syncData()` | 古いデバイスを削除し、新しいデバイスを追加し、修正が加えられたデバイスを更新することにより、ユーザー・デバイスを同期します。  
- `notifyIoTP()` | IoTP に対し、変更を MQTT イベントとして通知します。
+ `notifyIoTP()` | {{site.data.keyword.iot_short_notm}} に対し、MQTT イベントなどの変更を通知します。
 
 変換プログラムは、以下のサンプル・コードに示されているように、状況の更新を {{site.data.keyword.iot_short_notm}} に通知します。
 ```
@@ -148,7 +158,9 @@ dbhelper.bulkDelDevices(userDevices, function (err, results) {
 {: #deploy_new_transformer}
 変換プログラムの新しいインスタンスを、{{site.data.keyword.iotinsurance_short}} がデプロイされているのと同じ組織そしてスペース内にデプロイすることができます。  
 
-開始する前に、Cloud Foundry コマンド・ライン・インターフェースをダウンロードし、インストールしてください。Cloud Foundry コマンド・ライン・インターフェースを使用してサービス・インスタンスを変更し、それを {{site.data.keyword.iot_short_notm}} にデプロイします。詳しくは、[cf コマンド・ライン・インターフェースを使用したコーディングの開始](https://www.ng.bluemix.net/docs/#starters/install_cli.html)を参照してください。
+**注:** 変換プログラムの新しいインスタンスをデプロイするときに情報や支援を得るには、[サポートへのお問い合わせ](../support/index.html#contacting-support)を参照してください。
+
+開始する前に、Cloud Foundry コマンド・ライン・インターフェースをダウンロードし、インストールしてください。Cloud Foundry コマンド・ライン・インターフェースを使用してサービス・インスタンスを変更し、それを {{site.data.keyword.iot_short_notm}} にデプロイします。詳しくは、[cf コマンド・ライン・インターフェースを使用したコーディングの開始 ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ng.bluemix.net/docs/#starters/install_cli.html){:new_window} を参照してください。
 
 1. コマンド・ライン・インターフェースで、以下のコマンドを使用して、ディレクトリーを`ソースとデプロイメント記述子 YML ファイルを格納するディレクトリー`に変更します。
 ```
@@ -180,7 +192,7 @@ $ cf stop iot4i-dev-transformer
        APIDOMAIN: iot4insurance-api-v.mybluemix.net
        NODE_MODULES_CACHE: false
   ```
-6. 変換プログラムを {{site.data.keyword.bluemix_notm}} の中にプッシュします。そのためには、以下のコマンドを使用して、`newtransformer` を、デプロイメント記述子ファイルの名前に置き換えます。
+6. 変換プログラムを {{site.data.keyword.Bluemix_notm}} の中にプッシュします。そのためには、以下のコマンドを使用して、`newtransformer` を、デプロイメント記述子ファイルの名前に置き換えます。
   ```
   $ cf push -f newtransformer.yml
   ```
@@ -188,21 +200,3 @@ $ cf stop iot4i-dev-transformer
   ```
   $ cf logs iot4i-dev-transformer
   ```
-
-# 関連リンク
-{: #rellinks}
-
-## チュートリアルとサンプル
-{: #samples}
-* [GitHub のサンプル・モバイル・アプリ・コード](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## API リファレンス
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API サンプル](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## 関連リンク
-{: #general}
-* [{{site.data.keyword.iot_full}} 資料](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [開発者サポート・フォーラム](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-* [Stack overflow サポート・フォーラム](http://stackoverflow.com/questions/tagged/ibm-bluemix)

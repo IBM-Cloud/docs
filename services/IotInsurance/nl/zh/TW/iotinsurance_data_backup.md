@@ -1,16 +1,17 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-29"
+  years: 2016, 2017
+lastupdated: "2017-03-01"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
 
 
 <!-- {{site.data.keyword.iotinsurance_full}}  {{site.data.keyword.iotinsurance_short}}  -->
@@ -26,7 +27,7 @@ lastupdated: "2016-10-29"
 資料庫名稱| 變更頻率| 變更原因 | 需要備份 | 註解
 ------------- | -------------| -------------| -------------| -------------
 favorites|管理|新的管理者動作|是|-
-Devices|管理|已新增或移除新的裝置或使用者|是| 轉換器會從裝置提供者中於記憶體中動態產生表格。對於直接連接的閘道，此表格會儲存裝置使用者。
+Devices|管理|已新增或移除新的裝置或使用者|是| 轉換器會於記憶體中動態產生表格，並且移入來自裝置提供者的資料。對於直接連接的閘道，此表格會儲存裝置。
 hazardevents|隨機|偵測到新的防護事件|是|-
 Jscode|管理|已部署防護的新 JS 程式碼|是*| 管理者可以選擇性地跳過備份及部署 JS 程式碼的新版本。
 Promotions|管理|已新增新的促銷活動|是|-
@@ -40,7 +41,7 @@ aggregationschedule|-|-| 否|可以予以重建。
 
 ## 建立抄本 {{site.data.keyword.cloudant}} 實例
 {: #createinstance}
-使用 [{{site.data.keyword.cloudant}} 抄寫指示](https://docs.cloudant.com/replication.html)，以建立抄本 {{site.data.keyword.cloudant}} 實例。若要進行災難回復，請透過原始 {{site.data.keyword.iotinsurance_short}} 服務在不同的位置中建立抄本。例如，如果原始實例位在達拉斯，則抄本可能位在倫敦。
+使用 [{{site.data.keyword.cloudant}} 抄寫指示 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://docs.cloudant.com/replication.html)，以建立抄本 {{site.data.keyword.cloudant}} 實例。若要進行災難回復，請透過原始 {{site.data.keyword.iotinsurance_short}} 服務在不同的位置中建立抄本。例如，如果原始實例位在達拉斯，則抄本可能位在倫敦。
 
 ## 尋找認證及 URL
 {: #locate_credentials}
@@ -70,7 +71,7 @@ aggregationschedule|-|-| 否|可以予以重建。
 
 8. 按一下**抄寫資料**。  
 
-9. （選用）因為後續的抄寫作業會改寫前一個資料，所以請考慮將資料匯出至 CSV 檔。如需指示，請參閱[將 Cloudant JSON 匯出為 CSV、RSS 或 iCal](https://developer.ibm.com/clouddataservices/2015/09/22/export-cloudant-json-as-csv-rss-or-ical/)。
+9. （選用）因為後續的抄寫作業會改寫前一個資料，所以請考慮將資料匯出至 CSV 檔。如需指示，請參閱 [Export Cloudant JSON as CSV, RSS, or iCal ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://developer.ibm.com/clouddataservices/2015/09/22/export-cloudant-json-as-csv-rss-or-ical/){: new_window}。
 
 10. 針對每一個資料庫重複這些步驟。
 
@@ -92,26 +93,6 @@ aggregationschedule|-|-| 否|可以予以重建。
 3. 使用下列其中一種方式來還原資料：
   - 將 CSV 備份檔中的資料直接載入至主要 Cloudant 實例
   - 建立將已抄寫資料庫當作來源並將原始資料庫當作目標的抄寫作業。此作業會將已抄寫的資料移至原始資料庫。
-4. 執行下列 Script 來重建設計文件，以及還原參照完整性。Script 位於 [{{site.data.keyword.iotinsurance_short}} API 範例 GitHub 網站](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/)
+4. 執行下列 Script 來重建設計文件，以及還原參照完整性。Script 位於 [{{site.data.keyword.iotinsurance_short}} API 範例 GitHub 網站 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/){: new_window}。
   - iot4i-api/wearable-framework/auto-create/create.sh - 此 Script 會在 {{site.data.keyword.cloudant}} 內重建設計文件。
   - iot4i-api/wearable-framework/health/check-relations - 此 Script 會重新建立參照完整性。例如，此 Script 會更正已刪除防護但使用者關聯仍然存在的情況。
-
-
-# 相關鏈結
-{: #rellinks}
-
-## 指導教學及範例
-{: #samples}
-* [GitHub 上的範例行動應用程式碼](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## API 參考資料
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API 範例](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-
-## 相關鏈結
-{: #general}
-* [{{site.data.keyword.iot_full}} 文件](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [開發人員支援討論區](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-* [Stack Overflow 支援討論區](http://stackoverflow.com/questions/tagged/ibm-bluemix)

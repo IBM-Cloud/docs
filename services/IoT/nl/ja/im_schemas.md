@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-13"
+  years: 2016, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2016-10-13"
 
 **重要:** ルールやアクションを使用するにはスキーマが必要です。詳しくは、[クラウド分析](cloud_analytics.html#rules)を参照してください。
 
-**重要:** 分析機能は、{{site.data.keyword.iotrtinsights_full}} サービスからマージされます。既存の {{site.data.keyword.iotrtinsights_short}} インスタンスのデータ・ソースとして {{site.data.keyword.iot_short_notm}} 組織を使用する場合は、既存の {{site.data.keyword.iotrtinsights_short}} インスタンスのマイグレーションが完了するまでクラウド分析とエッジ分析が有効になりません。マイグレーションが完了するまでは、引き続き {{site.data.keyword.iotrtinsights_short}} ダッシュボードを使用して分析要件に対応してください。詳しくは、IBM developerWorks にある [IBM Watson IoT Platform のブログ](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window}や既存の {{site.data.keyword.iotrtinsights_short}} インスタンス・ダッシュボードをご覧ください。  
+**重要:** 分析機能は、{{site.data.keyword.iotrtinsights_full}} サービスからマージされます。既存の {{site.data.keyword.iotrtinsights_short}} インスタンスのデータ・ソースとして {{site.data.keyword.iot_short_notm}} 組織を使用する場合は、既存の {{site.data.keyword.iotrtinsights_short}} インスタンスのマイグレーションが完了するまでクラウド分析とエッジ分析が有効になりません。マイグレーションが完了するまでは、引き続き {{site.data.keyword.iotrtinsights_short}} ダッシュボードを使用して分析要件に対応してください。詳しくは、IBM developerWorks にある [IBM Watson IoT Platform のブログ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} および既存の {{site.data.keyword.iotrtinsights_short}} インスタンス・ダッシュボードをご覧ください。  
 
 ## デバイス・スキーマの追加
 {: #add_schema}
@@ -30,7 +30,8 @@ lastupdated: "2016-10-13"
 2. このメッセージ・スキーマに関連付けるデバイス・タイプを選択します。**重要:** 1 つのデバイス・タイプにつき 1 つのスキーマだけを定義できます。
 
 3. 1 つ以上のプロパティーを追加します。
-    接続先のデバイスからプロパティーを選択することも、既存のプロパティーを変更したり組み合わせたりする仮想プロパティーを作成することも、プロパティーを手動で追加することもできます。  
+      
+接続先のデバイスからプロパティーを選択することも、既存のプロパティーを変更したり組み合わせたりする仮想プロパティーを作成することも、プロパティーを手動で追加することもできます。  
 
     **ヒント:** 使用可能なプロパティーは、デバイスから送信されるメッセージのペイロードで定義されています。{{site.data.keyword.iot_short}} のペイロードの形式の詳細については、[メッセージ・ペイロード](reference/mqtt/index.html#message-payloadl "メッセージ・ペイロード")のトピックを参照してください。   
   <dl>
@@ -67,7 +68,9 @@ lastupdated: "2016-10-13"
  `Float` または `Integer`。</li>
  <li>プロパティー - 仮想プロパティーのプロパティー ID。以下に例を示します。  
 `temp_virt`</li>
-    <li>計算 - 有効な関数を定義するために 1 つ以上の構成要素を追加します。プロパティー、数値、演算子 (+、-、\*、/、(、)、AVG、Z-score など) を使用して計算式を作成できます。</br>構成要素として AVG を使用すれば、指定期間のプロパティー値の平均を計算できます。</br>Z-score 構成要素は、データ・ポイント値と、いくつかのデータ・ポイントの平均値または一定期間のデータ・ポイントの平均値との間の標準偏差の差を返します。</br> **重要:** 構成要素 AVG と Z-score からプロパティーのデータ・ポイントが返されるのは、選択したプロパティーのデータが、エッジ分析エージェントをインストールしたゲートウェイに接続したデバイスからのデータである場合に限られます。詳しくは、[エッジ分析エージェントのインストール](gateways/dashboard.html#edge)を参照してください。なお、AVG の値と Z-score の値を比較するルール条件はサポートされていません。</li>
+    <li>計算 - 有効な関数を定義するために 1 つ以上の構成要素を追加します。プロパティー、数値、演算子 (+、-、\*、/、(、) など) を使用できます。  
+エッジ・デバイスの一連のデータ・ポイントで使用する数式セットの**「詳細」**をクリックしてください。高度な数式の詳細については、[エッジ仮想プロパティーの高度な計算](im_vir_calculations.html)を参照してください。  
+    **重要:** 高度な数式に基づいて仮想プロパティーを比較するルール条件は使用できません。</li>
     <li>データ単位 - オプション: プロパティーのデータ単位。例えば、`C` または `Mph` です。</li>
     <li> 小数点以下の桁数 - オプション、Float のみ: デバイス・データに組み込む小数点以下の桁数。</li>
    </ul>

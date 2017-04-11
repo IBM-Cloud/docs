@@ -12,7 +12,7 @@ years: 2015, 2017
 
 #啟用 iOS 應用程式來傳送 {{site.data.keyword.mobilepushshort}}
 {: #enable-push-ios-notifications}
-前次更新：2017 年 1 月 16 日
+前次更新：2017 年 2 月 14 日
 {: .last-updated}
 
 您可讓 iOS 應用程式傳送 {{site.data.keyword.mobilepushshort}} 至您的裝置。
@@ -23,7 +23,7 @@ years: 2015, 2017
 
 針對現有的 Xcode 專案，您可以使用 CocoaPods 相依關係管理工具來設定 Bluemix Mobile Services Client SDK。替代方案是手動安裝 SDK。
 
-若要檢視 Swift Push Readme 檔，請移至 [Readme ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master "外部鏈結圖示"){: new_window}。
+若要檢視 Swift Push Readme 檔，請移至 [Readme ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master){: new_window}。
 
 
 
@@ -35,7 +35,7 @@ years: 2015, 2017
 3. 在產生的 Podfile 中，新增必要 SDK 相依關係。請複製下列 Podfile。
    
 	```
-	source 'https://github.com/CocoaPods/Specs.git'
+		source 'https://github.com/CocoaPods/Specs.git'
 	// Copy the following list as is and remove the dependencies you do not need.
 	use_frameworks!
 	target 'MyApp' do
@@ -61,7 +61,7 @@ $ open App.xcworkspace
 ##使用 Carthage 新增架構
 {: #carthage}
 
-使用 [Carthage ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos "外部鏈結圖示"){: new_window}，將架構新增至您的專案。請注意，不支援 Xcode8 形式的 Carthage。
+使用 [Carthage ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos){: new_window}，將架構新增至您的專案。請注意，不支援 Xcode8 形式的 Carthage。
 
 1. 在 Cartfile 中新增 `BMSPush` 架構：
 ```
@@ -69,7 +69,7 @@ github "github "ibm-bluemix-mobile-services/bms-clientsdk-swift-push" ~> 1.0"
 ```
 	{: codeblock}
 2. 執行 `carthage update` 指令。建置完成時，請將 `BMSPush.framework`、`BMSCore.framework` 及 `BMSAnalyticsAPI.framework` 拖曳至 Xcode 專案。
-3. 遵循在 [Carthage ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos "外部鏈結圖示"){: new_window}網站的指示，以完成整合。
+3. 遵循在 [Carthage ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos){: new_window} 網站的指示，以完成整合。
 
 ##設定 iOS SDK
 {: ios-sdk}
@@ -88,18 +88,19 @@ didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
 {: using-imported-frameworks}
 
 在您的程式碼中參照 SDK。請確定已具備下列必備項目。
-	- iOS 8.0 或以上版本	
-	- Xcode 7
+
+- iOS 8.0 或以上版本	
+- Xcode 7
 
 撰寫相關標頭的 `#import` 指引，例如：
-	```
-	//swift
-	import BMSCore
-	import BMSPush
-	```
+```
+//swift
+import BMSCore
+import BMSPush
+```
 		{: codeblock}
 
-若要讀取 Swift Push Readme 檔案，請參閱 [Readme ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master "外部鏈結圖示"){: new_window}。
+若要閱讀 Swift Push Readme 檔案，請參閱 [Readme ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master){: new_window}。
 
 **附註**：使用 CocoaPods 指令 `pod install` 或 `pod update` 更新 Pods 專案時，可能會置換 Bluemix Mobile Services 來源資料夾。如果您要保留原始檔案的自訂版本，請確保先進行備份，然後再發出下列其中一個指令。
 
@@ -109,7 +110,7 @@ didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
 
 移至 **Xcode > 建置設定 > 建置選項，然後將啟用位元碼**設為**否**。
 
-**注意**：自 iOS 9 開始，對「應用程式傳輸安全 (ATS)」特性進行的變更可能會影響您處理鑑別處理程序的方式。下列部落格文章說明這些變更的相關資訊：[ATS and Bitcode in iOS 9![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/mobilefirstplatform/2015/09/09/ats-and-bitcode-in-ios9/ "外部鏈結圖示"){: new_window} 及 [Connect your iOS 9 app to Bluemix today![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/ "外部鏈結圖示"){: new_window}。
+**注意**：自 iOS 9 開始，對「應用程式傳輸安全 (ATS)」特性進行的變更可能會影響您處理鑑別處理程序的方式。下列部落格文章說明這些變更的相關資訊：[ATS and Bitcode in iOS 9 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/mobilefirstplatform/2015/09/09/ats-and-bitcode-in-ios9/){: new_window} and [Connect your iOS 9 app to Bluemix today ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/){: new_window}。
 
 ## 起始設定 Push SDK for iOS 應用程式
 {: #enable-push-ios-notifications-initialize}
@@ -158,7 +159,7 @@ myBMSClient.initialize(bluemixRegion: "Location where your app is hosted.")
 {: initializing-the-client-Push-SDK}
 
 ```
-//Initialize client Push SDK for Swift
+	//Initialize client Push SDK for Swift
 let push = BMSPushClient.sharedInstance
 push.initializeWithAppGUID("appGUID", clientSecret:"clientSecret")
 ```
@@ -203,7 +204,7 @@ func application (_application: UIApplication, didRegisterForRemoteNotifications
             print( "Error during device registration \n  - status code: \(statusCode) \n Error :\(error) \n")
         }
     }
-}
+  }
 ```
 	{: codeblock}
 
@@ -227,7 +228,7 @@ func application(_ application: UIApplication, didReceiveRemoteNotification user
 若要監視通知的現行狀態，請將下列 Swift 方法新增至應用程式的應用程式委派。
 
 ```
-// Send notification status when app is opened by clicking the notifications
+	// Send notification status when app is opened by clicking the notifications
 func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
  let push =  BMSPushClient.sharedInstance
  let respJson = (userInfo as NSDictionary).value(forKey: "payload") as! String
@@ -242,7 +243,7 @@ func application(_ application: UIApplication, didReceiveRemoteNotification user
 	{: codeblock}
 
 ```
-// Send notification status when the app is in background mode.
+	// Send notification status when the app is in background mode.
 func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
  let payLoad = ((((userInfo as NSDictionary).value(forKey: "aps") as! NSDictionary).value(forKey: "alert") as! NSDictionary).value(forKey: "body") as! NSString)
  self.showAlert(title: "Recieved Push notifications", message: payLoad)
@@ -294,18 +295,18 @@ func application(_ application: UIApplication, didReceiveRemoteNotification user
 若要啟用互動式通知，請使用下列程式碼：
 
 ```
-// This defines the button action.
+	// This defines the button action.
 let actionOne = BMSPushNotificationAction(identifierName: "ACCEPT", buttonTitle: "Accept", isAuthenticationRequired: false, defineActivationMode: UIUserNotificationActivationMode.background)
  let actionTwo = BMSPushNotificationAction(identifierName: "DECLINE", buttonTitle: "Decline", isAuthenticationRequired: false, defineActivationMode: UIUserNotificationActivationMode.background)
 ```
 	{: codeblock}
 ```
-// This defines category for the buttons
+	// This defines category for the buttons
 let category = BMSPushNotificationActionCategory(identifierName: "category", buttonActions: [actionOne, actionTwo])
 ```
 	{: codeblock}
 ```
-// This updates the registration to include the buttonsPass the defined category into iOS BMSPushClientOptions
+	// This updates the registration to include the buttonsPass the defined category into iOS BMSPushClientOptions
 let notificationOptions = BMSPushClientOptions(categoryName: [category])
 let push = BMSPushClient.sharedInstance
 push.initializeWithAppGUID(appGUID: "APP-GUID-HERE", clientSecret:"CLIENT-SECRET-HERE", options: notificationOptions)
@@ -327,4 +328,6 @@ push.initializeWithAppGUID(appGUID: "APP-GUID-HERE", clientSecret:"CLIENT-SECRET
 
 順利設定基本通知之後，您就可以配置標籤型通知及進階選項。
 
-將這些 Push Notifications Service 特性新增至您的應用程式。若要使用標籤型通知，請參閱[標籤型通知](c_tag_basednotifications.html)。若要使用進階通知選項，請參閱[啟用進階推送通知](t_advance_badge_sound_payload.html)。
+將這些 Push Notifications Service 特性新增至您的應用程式。
+若要使用標籤型通知，請參閱[標籤型通知](c_tag_basednotifications.html)。
+若要使用進階通知選項，請參閱[啟用進階推送通知](t_advance_badge_sound_payload.html)。

@@ -34,10 +34,9 @@ Par ailleurs, un éventail de services est disponible en tant que services de {{
 |Inclus | [Contextes d'exécution {{site.data.keyword.Bluemix_notm}}](/docs/cfapps/runtimes.html) | Utilisez des contextes d'exécution pour que votre application soit opérationnelle rapidement, sans qu'il soit nécessaire de configurer et de gérer des machines et des systèmes d'exploitation. Vous pouvez utiliser tous les contextes d'exécution {{site.data.keyword.Bluemix_notm}} dans votre instance {{site.data.keyword.Bluemix_notm}} locale.|
 |Inclus | [{{site.data.keyword.autoscaling}}](/docs/services/Auto-Scaling/index.html)| Augmentez ou diminuez dynamiquement la capacité de traitement de votre application en fonction de règles. Avec ce service, vous bénéficiez d'une utilisation illimitée dans votre environnement {{site.data.keyword.Bluemix}} local.|
 |Facultatif | [{{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} intègre {{site.data.keyword.APIM}} et IBM StrongLoop dans une offre unique qui fournit une solution complète pour la création, l'exécution, la gestion et l'application d'API et de microservices. |
-|Facultatif | [{{site.data.keyword.cloudant}}](/docs/services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} fournit l'accès à une couche de données JSON NoSQL entièrement gérée toujours active. Ce service est compatible avec CouchDB et accessible via une interface HTTP facile à utiliser pour les modèles d'application mobile et Web. Pour plus d'informations, voir la [documentation ![icône de lien externe](../icons/launch-glyph.svg)](http://docs.cloudant.com/BluemixLocal.html){: new_window} complète et la [configuration matérielle requise![icône de lien externe](../icons/launch-glyph.svg)](http://docs.cloudant.com/BluemixLocalHardware.html){: new_window} pour les environnements locaux. |
 |Facultatif | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | Conteneurs Run Docker dans l'environnement {{site.data.keyword.Bluemix_notm}} local. Les conteneurs sont des objets logiciels virtuels qui incluent tous les éléments qu'une application a besoin d'exécuter. Un conteneur tire parti de l'isolation et de l'allocation des ressources, mais est plus portable et efficace que, par exemple, une machine virtuelle. Pour des informations sur la configuration matérielle requise, voir [IBM {{site.data.keyword.containershort}} dans les environnements {{site.data.keyword.Bluemix_notm}} dédié et local](/docs/containers/container_dl.html). |
 |Facultatif | [{{site.data.keyword.datacshort}}](/docs/services/DataCache/index.html#data_cache) | Ce service fournit une grille de données en mémoire qui prend en charge des scénarios de mise en cache distribuée pour vos applications. Il inclut 50 Go de mémoire cache interne. |
-|Facultatif (bêta) | [Logging](/docs/monitoringandlogging/cfapps_ml_logs_dedicated_ov.html#container_ml_logs_dedicated_ov) | Fournit des journaux pour vos applications Cloud Foundry dans votre interface utilisateur {{site.data.keyword.Bluemix_notm}} et des journaux permettant une recherche et des tableaux de bord dans Kibana. |
+| Facultatif (bêta) | [Logging](/docs/monitoringandlogging/cfapps_ml_logs_dedicated_ov.html#container_ml_logs_dedicated_ov) | Fournit des journaux pour vos applications Cloud Foundry dans votre interface utilisateur {{site.data.keyword.Bluemix_notm}} et des journaux permettant une recherche et des tableaux de bord dans Kibana. |
 |Facultatif | [{{site.data.keyword.mobilepush}}](/docs/services/mobilepush/index.html) | {{site.data.keyword.mobilepush}} est un service que vous pouvez utiliser pour envoyer des notifications à un périphérique iOS ou Android. Les notifications peuvent être ciblées pour tous les utilisateurs d'application ou pour un ensemble spécifique d'utilisateurs et de périphériques à l'aide d'étiquettes. Vous pouvez administrer des périphériques, des étiquettes et des abonnements. Vous pouvez aussi utiliser un logiciel SDK (kit de développement de logiciels) et des API (interfaces de programme d'application) REST (Representational State Transfer) pour développer plus en détail vos applications client. |
 |Facultatif | [{{site.data.keyword.sescashort}}](/docs/services/SessionCache/index.html#session_cache) | Pour augmenter la redondance, {{site.data.keyword.sescashort}} fournit une réplique d'une session qu'il stocke en cache. Par conséquent, en cas de microcoupure ou d'indisponibilité, votre application client peut continuer à accéder à la session en cache. Le service prend en charge des scénarios de mise en cache de session pour les applications Web et mobiles. |
 |Facultatif | [{{site.data.keyword.iot_short}}](/docs/services/IoT/index.html) | Ce service permet à vos applications de communiquer et de consommer les données collectées par vos périphériques connectés, capteurs et passerelles. L'offre de base locale inclut un environnement initial permettant l'exécution d'une version privée d'IBM {{site.data.keyword.iot_short}} dans l'environnement local, avec une capacité de 100000 périphériques ou applications connectés simultanément et 1,6 To d'échange de données. |
@@ -45,7 +44,7 @@ Par ailleurs, un éventail de services est disponible en tant que services de {{
 {: #table01}
 
 
-Vous pouvez acquérir des composants facultatifs pour élargir la capacité de vos ressources et périphériques. Vous pouvez acquérir ces composants en contactant l'équipe commerciale. Accédez à la page [Contactez-nous](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs) for pour plus d'informations sur la manière de contacter un ingénieur commercial. Pour rehausser votre plan pour un service, vous pouvez sélectionner un plan depuis la vignette Service dans votre catalogue.
+Vous pouvez acquérir des composants facultatifs pour élargir la capacité de vos ressources et périphériques. Vous pouvez acquérir ces composants en contactant l'équipe commerciale. Accédez à la page [Contactez-nous](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs) pour plus d'informations sur la manière de contacter un ingénieur commercial. Pour rehausser votre plan pour un service, vous pouvez sélectionner un plan depuis la vignette Service dans votre catalogue.
 
 | **Nom ** | **Description** |
 |----------|-----------------|
@@ -53,7 +52,6 @@ Vous pouvez acquérir des composants facultatifs pour élargir la capacité de v
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Professional 100 thousand API Calls increase| Extension de l'environnement {{site.data.keyword.apiconnect_short}} Professional offrant une capacité supplémentaire de 100000  appels d'API par mois. |
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Enterprise 25 Million API Calls | Environnement permettant l'exécution d'une version privée de {{site.data.keyword.apiconnect_short}} avec une capacité de 25 millions d'appels d'API par mois ciblant des projets d'API au niveau de l'entreprise. |
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Enterprise 100 thousand API Calls increase | Extension de l'environnement {{site.data.keyword.apiconnect_short}} Enterprise offrant une capacité supplémentaire de 100000 appels d'API par mois. |
-|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.cloudant}} Cluster | Environnement permettant le déploiement d'un cluster de 3 noeuds du service {{site.data.keyword.cloudant}}. La capacité de données des noeuds est déterminée par l'infrastructure fournie par vous pour l'environnement local. |
 |{{site.data.keyword.Bluemix_notm}} Data & Session Cache 50 GB capacity increase | Environnement permettant le déploiement et l'exécution d'instances Data Cache et Session Cache jusqu'à une capacité cumulée de 50 Go. |
 |{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} Local incremental increase | Environnement s'ajoutant à l'offre de service de base {{site.data.keyword.iot_short}} Local et permettant l'exécution d'une version privée d'{{site.data.keyword.iot_short}} dans l'environnement local, avec une capacité de 100000 périphériques ou applications connectés simultanément et 0,5 To d'échange de données. |
 |{{site.data.keyword.IBM_notm}} {{site.data.keyword.mobilepush}} Local add-on instance | Environnement permettant le déploiement et l'exécution d'une instance {{site.data.keyword.mobilepush}} avec la possibilité d'accepter 300 demandes supplémentaires par seconde. |
@@ -87,7 +85,6 @@ Si vous disposez d'une instance privée d'un service {{site.data.keyword.Bluemix
 |{{site.data.keyword.apiconnect_short}} 	|Oui   	 	|Oui  	 	|Oui   |
 |Automated Accessibility Checker |Oui       |Oui    |Oui   |
 |{{site.data.keyword.rules_short}}		|Oui		|Oui		|Oui |
-|{{site.data.keyword.cloudant}}			|Oui		|Oui		|Oui |
 |{{site.data.keyword.iotmapinsights_short}}    |Oui  |Oui  |Oui  |
 |{{site.data.keyword.conversationshort}}  |Oui  |Oui  |Oui  |
 |{{site.data.keyword.dashdbshort}}		|Oui		|Oui		|Oui |
@@ -266,25 +263,13 @@ prendre de deux à quatre jours selon votre fenêtre de maintenance disponible.
 ## Configuration de votre instance {{site.data.keyword.Bluemix_local_notm}}
 {: #setuplocal}
 
-{{site.data.keyword.Bluemix_local_notm}} a été conçu pour fournir
-une version privée de l'offre d'environnement
-{{site.data.keyword.Bluemix_notm}} public qui est hébergée sur le matériel de votre choix. Les
-deux options généralement prises en charge sont les suivantes : vous fournissez
-le matériel sous la forme de VMware ou vous choisissez de commander le
-système {{site.data.keyword.Bluemix_notm}} Local System intégré dans un
-appareil PureApplication préconfiguré que vous pouvez vous procurer via {{site.data.keyword.IBM_notm}}. Pour plus d'informations sur les options de l'appareil PureApplication, voir [IBM {{site.data.keyword.Bluemix_notm}} Local System W3500 and W3550 models run cloud native services, enabled middleware, and open pattern workloads concurrently ![icône de lien externe](../icons/launch-glyph.svg)](https://www-01.ibm.com/common/ssi/rep_ca/5/897/ENUS216-325/){: new_window}.
+{{site.data.keyword.Bluemix_local_notm}} fournit une version privée de l'offre d'environnement {{site.data.keyword.Bluemix_notm}} public qui est hébergée sur le matériel de votre choix. Les deux options couramment prises en charge sont les suivantes :
+* Vous fournissez le matériel sous la forme de VMware.
+* Vous commandez le système local {{site.data.keyword.Bluemix_notm}} intégré dans un appareil PureApplication préconfiguré que vous pouvez vous procurer via {{site.data.keyword.IBM_notm}}. Pour plus d'informations sur les options de l'appareil PureApplication, voir [IBM {{site.data.keyword.Bluemix_notm}} Local System W3500 and W3550 models run cloud native services, enabled middleware, and open pattern workloads concurrently ![icône de lien externe](../icons/launch-glyph.svg)](https://www-01.ibm.com/common/ssi/rep_ca/5/897/ENUS216-325/){: new_window}.
 
 Pour {{site.data.keyword.Bluemix_local_notm}}, vous pouvez utiliser les services et les contextes d'exécution {{site.data.keyword.Bluemix_notm}} pour répondre à vos besoins informatiques dans un environnement de cloud sécurisé, géré et hébergé par le client. {{site.data.keyword.IBM_notm}} fournit l'accès à l'environnement {{site.data.keyword.Bluemix_local_notm}} par le biais d'une connexion sécurisée par mot de passe. Vous pouvez accéder aux services, aux contextes d'exécution et aux ressources associées, et déployer et retirer des applications {{site.data.keyword.Bluemix_notm}}. Suivez les étapes ci-après pour collaborer avec votre interlocuteur {{site.data.keyword.IBM_notm}} afin de configuration votre instance locale de {{site.data.keyword.Bluemix_notm}}.
 
-**Remarque** : Si vous choisissez d'héberger
-{{site.data.keyword.Bluemix_local_notm}} sur l'option matérielle
-{{site.data.keyword.Bluemix_notm}} Local System, le processus configuré
-peut être différent car il n'est pas nécessaire de communiquer autant
-d'informations au représentant IBM. En outre, vos rôles et responsabilités tout
-au long des phases de conception et de progression risquent d'être réduits
-en raison du modèle de maintenance de l'appareil PureApplication, par rapport
-au modèle de gestion nécessaire à l'utilisation d'un VMware en possession du
-client.
+**Remarque** : Si vous hébergez {{site.data.keyword.Bluemix_local_notm}} sur l'option matérielle {{site.data.keyword.Bluemix_notm}} Local System, le processus de configuration peut être différent car vous devez communiquer moins d'informations au représentant IBM. En outre, vos rôles et responsabilités tout au long des phases de conception et de progression risquent d'être réduits en raison du modèle de maintenance "appel vers IBM" de l'appareil PureApplication, par rapport au modèle de gestion nécessaire à l'utilisation d'un VMware en possession du client.
 
 Pour configurer votre version privée de {{site.data.keyword.Bluemix_notm}} :
 
@@ -297,7 +282,8 @@ Pour configurer votre version privée de {{site.data.keyword.Bluemix_notm}} :
 	<li>Identifiez les échéances pour chaque phase de configuration de votre instance {{site.data.keyword.Bluemix_local_notm}}.</li>
 	</ol>
 	</li>
-<li>Une fois votre plateforme et votre compte créés, vous identifiez les personnes de votre organisation à affecter aux rôles nécessaires à la configuration et à l'exécution de votre instance locale. Pour plus d'informations sur les rôles que vous attribuez, voir <a href="/docs/local/index.html#rolesresponsibilities">Rôles et responsabilité de l'environnement {{site.data.keyword.Bluemix_notm}} local</a>. </li>
+<li>Une fois votre plateforme et votre compte créés, vous identifiez les personnes de votre organisation à affecter aux rôles nécessaires à la configuration et à l'exécution de votre instance locale. Pour plus d'informations sur les rôles que vous attribuez, voir <a href="/docs/local/index.html#rolesresponsibilities">Rôles et responsabilité de l'environnement {{site.data.keyword.Bluemix_notm}} local</a>.
+</li>
 <li>Vous fournissez le matériel et {{site.data.keyword.IBM_notm}} vous aide à définir et à établir la connectivité du réseau entre votre réseau d'entreprise et votre instance {{site.data.keyword.Bluemix_local_notm}}. Pour plus d'informations sur les exigences de l'infrastructure, voir <a href="index.html#localinfra">Exigences de l'infrastructure d'un environnement {{site.data.keyword.Bluemix_local_notm}}</a>.
 	<ol type="a">
 	<li>{{site.data.keyword.IBM_notm}} configure l'accès réseau et LDAP en fonction des éléments que vous avez fournis. L'accès administrateur est accordé aux contacts que vous désignez. Vous devez également désigner un contact pour le support et la facturation.</li>

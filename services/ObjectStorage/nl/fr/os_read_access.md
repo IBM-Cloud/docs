@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -50,7 +50,6 @@ Un utilisateur {{site.data.keyword.objectstorageshort}} avec un [rôle admin](/d
 </table>
 
 
-
 1. Authentifiez vos données d'identification. Vous pouvez utiliser les données d'identification qui se trouvent dans l'onglet des données d'identification de service de l'interface utilisateur ou générer de nouvelles données d'identification. Pour plus d'informations sur la génération de nouvelles données d'identification, voir la rubrique relative à la [génération des données d'identification de service](/docs/services/ObjectStorage/os_credentials.html). Vous recevez votre URL {{site.data.keyword.objectstorageshort}} et votre jeton d'authentification dans une sortie spécifique.
 
     Commande Swift :
@@ -90,7 +89,6 @@ Un utilisateur {{site.data.keyword.objectstorageshort}} avec un [rôle admin](/d
     ```
     {: pre}
     **Remarque** : utilisez une virgule (,) pour séparer les listes de contrôle d'accès.
-
 
 3. Vérifiez la valeur de liste de contrôle d'accès en lecture.
 

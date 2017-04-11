@@ -1,43 +1,42 @@
 {
   "id": "docs_homepage_services",
-  "title": "如何使用 Bluemix 服務",
-  "subtitle": "瞭解服務類型和可用性",
-  "subtitleHref": "services/index.html",
+  "title": "運算及服務",
   "items": [{
     "id": "cfApp",
     "title": "Cloud Foundry 應用程式",
+    "img": "homepage/images/cloud-foundry.svg",
     "href": "cfapps/index.html",
     "category_id": "compute"
   }, {
-    "title": "運行環境",
-    "href": "cfapps/runtimes.html",
-    "category_id": "compute"
-  }, {
     "title": "樣板",
+    "img": "homepage/images/Bluemix-logo.svg",
     "href": "cfapps/boilerplates.html",
     "category_id": "compute"
   }, {
+    "id": "whisk-rt",
     "title": "IBM OpenWhisk",
+    "img": "homepage/images/whisk_icon.svg",
     "href": "openwhisk/index.html",
     "category_id": "compute"
   }, {
     "id": "container",
     "title": "IBM Bluemix Container Service",
+    "img": "homepage/images/containerServiceIcon.svg",
     "href": "containers/container_index.html",
     "category_id": "compute"
   }, {
     "type": "extra",
-    "title": "嘗試處理資料",
+    "title": "使用資料",
     "href": "services/WorkWithData/index.html",
     "category_id": "data"
   }, {
     "type": "extra",
-    "title": "嘗試專用 GitHub Enterprise",
+    "title": "專用 GitHub Enterprise",
     "href": "services/ghededicated/index.html",
     "category_id": "devops"
   }, {
     "type": "extra",
-    "title": "嘗試建置行動專案",
+    "title": "建置行動專案",
     "href": "mobile/index.html",
     "category_id": "mobile"
   }]

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-24"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2016-10-24"
 {: #java}
 
 
-您可以使用 Java 來建置及自訂應用程式，在 {{site.data.keyword.iot_full}} 上與組織互動。我們提供了 {{site.data.keyword.iot_short_notm}} 的 Java 用戶端程式庫、文件及範例，以協助您開始進行應用程式開發。
+您可以使用 Java™ 來建置及自訂應用程式，在 {{site.data.keyword.iot_full}} 上與組織互動。我們提供了 {{site.data.keyword.iot_short_notm}} 的 Java 用戶端程式庫、文件及範例，以協助您開始進行應用程式開發。
 
 {:shortdesc}
 
@@ -26,7 +26,7 @@ lastupdated: "2016-10-24"
 前次更新：2016 年 10 月 25 日
 {: .last-updated}
 
-若要存取適用於 {{site.data.keyword.iot_short_notm}} 的 Java 用戶端程式庫及範例，請移至 GitHub 中的 [iot-java](https://github.com/ibm-watson-iot/iot-java) 儲存庫，並完成安裝指示。
+若要存取適用於 {{site.data.keyword.iot_short_notm}} 的 Java 用戶端程式庫及範例，請移至 GitHub 中的 [iot-java ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-java){: new_window} 儲存庫，並完成安裝指示。
 
 
 ## 建構子
@@ -393,7 +393,7 @@ lastupdated: "2016-10-24"
 ```
 **附註：**在前一個程式碼範例中，事件的有效負載必須為字串格式。
 
-任何 XML 資料都可以轉換成字串並進行發佈，如下所示：
+任何 XML 資料都可以轉換為字串並進行發佈，如下所示：
 
 ```
     status = myClient.publishEvent("load", xmlConvertedString, "xml", 2);
@@ -428,7 +428,7 @@ lastupdated: "2016-10-24"
     	boolean status = myClient.publishApplicationEventforDeviceOverHTTP(deviceId, deviceType, "blink", event, ContentType.json);
 ```
 
-如需完整程式碼範例，請參閱 [HttpApplicationDeviceEventPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpApplicationDeviceEventPublish.java) 應用程式範例。
+如需完整程式碼範例，請參閱 [HttpApplicationDeviceEventPublish ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpApplicationDeviceEventPublish.java){: new_window} 應用程式範例。
 
 根據內容檔中的設定，`publishEventOverHTTP()` 方法會在 Quickstart 流程或已登錄流程中發佈事件。在內容檔中將 `quickstart` 指定為組織 ID 時，`publishEventOverHTTP()` 方法會以一般 HTTP 格式將事件發佈至 {{site.data.keyword.iot_short_notm}} 的 Quickstart 服務。在內容檔中指定有效的已登錄組織時，一律會使用 HTTPS 來發佈事件，因此，所有通訊都是安全的。
 
@@ -474,7 +474,7 @@ HTTP 通訊協定提供「最多一次」遞送，這與 MQTT 通訊協定的「
 	boolean response = myClient.publishCommandOverHTTP("execute", event);
 ```
 
-若要檢視完整程式碼範例，請參閱 [HttpCommandPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpCommandPublish.java) 應用程式範例。
+若要檢視完整程式碼範例，請參閱 [HttpCommandPublish ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpCommandPublish.java){: new_window} 應用程式範例。
 
 HTTP 通訊協定提供「最多一次」遞送，這與 MQTT 通訊協定的「最多一次」(QoS 0) 服務品質水準類似。當您使用「最多一次」遞送來發佈指令時，應用程式必須在發生錯誤時實作重試邏輯。如需相關資訊，請參閱[應用程式的 HTTP REST API](../api.html)。
 
@@ -482,8 +482,8 @@ HTTP 通訊協定提供「最多一次」遞送，這與 MQTT 通訊協定的「
 ## 範例
 {: #samples}
 
--  [MQTTApplicationDeviceEventPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/MQTTApplicationDeviceEventPublish.java) - 顯示如何發佈裝置事件的範例應用程式。
--   [RegisteredApplicationCommandPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationCommandPublish.java) - 顯示如何將指令發佈至裝置的範例應用程式。
--  [RegisteredApplicationSubscribeSample](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationSubscribeSample.java) - 顯示如何訂閱不同事件（例如裝置事件、裝置指令、裝置狀態及應用程式狀態）的範例應用程式。
--   [SharedSubscriptionSample](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/SharedSubscriptionSample.java) - 顯示如何建置可擴充應用程式來平衡多個應用程式實例之間訊息負載的範例應用程式。
--  [Backup-restore-sample](https://github.com/ibm-messaging/iot-backup-restore-sample) - 顯示如何在 {{site.data.keyword.cloudant}} 中備份及還原裝置配置的範例。
+-  [MQTTApplicationDeviceEventPublish ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/MQTTApplicationDeviceEventPublish.java){: new_window} - 顯示如何發佈裝置事件的範例應用程式。
+-   [RegisteredApplicationCommandPublish ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationCommandPublish.java){: new_window} - 顯示如何將指令發佈至裝置的範例應用程式。
+-  [RegisteredApplicationSubscribeSample ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationSubscribeSample.java){: new_window} - 顯示如何訂閱不同事件（例如裝置事件、裝置指令、裝置狀態及應用程式狀態）的範例應用程式。
+-   [SharedSubscriptionSample ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/SharedSubscriptionSample.java){: new_window} - 顯示如何建置可擴充應用程式來平衡多個應用程式實例之間訊息負載的範例應用程式。
+-  [Backup-restore-sample ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/iot-backup-restore-sample){: new_window} - 顯示如何在 {{site.data.keyword.cloudant}} 中備份及還原裝置配置的範例。

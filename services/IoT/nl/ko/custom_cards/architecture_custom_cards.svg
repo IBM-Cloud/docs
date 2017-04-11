@@ -17,7 +17,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="architecture_custom_cards.svg"
-   inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.png"
+   inkscape:export-filename="S:\PUB\ABD142\ART\WORK\ship1\iot\custom_cards\architecture_custom_cards.png"
    inkscape:export-xdpi="299.98132"
    inkscape:export-ydpi="299.98132">
   <defs
@@ -1102,7 +1102,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1298,7 +1298,7 @@
            y="-39.357193" /></flowRegion><flowPara
          id="flowPara7065" /></flowRoot>    <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.00000191px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.00000191px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.50000006;stroke-miterlimit:4;stroke-dasharray:none"
        x="436.27771"
        y="518.68762"
        id="text266398-0"
@@ -1468,20 +1468,19 @@
     <text
        sodipodi:linespacing="125%"
        id="text44235-7-5"
-       y="611.60376"
-       x="277.67981"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-       xml:space="preserve"><tspan
-         y="611.60376"
-         x="277.67981"
+       y="597.7912"
+       x="284.13712"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.75157642px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"
+       transform="scale(0.97741583,1.023106)"><tspan
+         y="597.7912"
+         x="284.13712"
          sodipodi:role="line"
-         id="tspan5128"
-         style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.00000155px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%">사용자 정의 카드</tspan><tspan
-         y="625.35376"
-         x="277.67981"
+         id="tspan5128">사용자 정의 카드</tspan><tspan
+         y="611.5412"
+         x="284.13712"
          sodipodi:role="line"
-         id="tspan6186"
-         style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.00000155px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%">확장기능</tspan></text>
+         id="tspan6186">확장기능</tspan></text>
     <rect
        style="opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:1.00000012;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4785"
@@ -1604,18 +1603,18 @@
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.00000191px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.50000006;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.00000191px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.50000006;stroke-miterlimit:4;stroke-dasharray:none"
        x="437.62662"
-       y="360.89688"
+       y="358.89688"
        id="text266398-3-9"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          x="437.62662"
-         y="360.89688"
+         y="358.89688"
          id="tspan6717-0">로컬 환경</tspan><tspan
          sodipodi:role="line"
          x="437.62662"
-         y="375.89688"
+         y="373.89688"
          id="tspan266402-8-8" /></text>
     <rect
        ry="0"
@@ -1838,7 +1837,7 @@
        style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:#f0f0ef;stroke-opacity:1" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.00000191px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.00000191px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.50000006;stroke-miterlimit:4;stroke-dasharray:none"
        x="-7.9545774"
        y="430.22656"
        id="text266398-0-9"
@@ -1963,36 +1962,37 @@
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-       x="39.885139"
-       y="367.31418"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.68121052px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       x="41.100822"
+       y="356.6691"
        id="text18189-1-2"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       transform="scale(0.97101915,1.0298458)"><tspan
          sodipodi:role="line"
          id="tspan18191-0-2"
-         x="39.885139"
-         y="367.31418" /><tspan
+         x="41.100822"
+         y="356.6691" /><tspan
          sodipodi:role="line"
-         x="39.885139"
-         y="381.06418"
+         x="41.100822"
+         y="370.4191"
          id="tspan8202-5">custom-cards</tspan><tspan
          sodipodi:role="line"
-         x="39.885139"
-         y="391.3699"
+         x="41.100822"
+         y="380.72482"
          id="tspan6878-8-6"
-         style="font-size:7.5px">IBM <tspan
-   style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:7.50000089px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+         style="font-size:7.2826438px">IBM <tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.28264475px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
    id="tspan4915">샘플 사용자 정의 </tspan></tspan><tspan
          sodipodi:role="line"
-         x="39.885139"
-         y="400.7449"
-         style="font-size:7.50000089px;-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+         x="41.100822"
+         y="390.6716"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.28264475px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan11208">카드 저장소</tspan><tspan
          sodipodi:role="line"
-         x="39.885139"
-         y="410.1199"
+         x="41.100822"
+         y="400.0466"
          id="tspan18193-4-2"
-         style="font-size:7.50000089px;-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%" /></text>
+         style="font-size:7.2826438px" /></text>
     <g
        id="g60812-9-6"
        transform="translate(104.78745,372.35397)"

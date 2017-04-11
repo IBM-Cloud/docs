@@ -118,11 +118,11 @@ spam folder. If you still have not received your email confirmation, contact <a 
 
 
 Dopo aver eseguito la registrazione per un account di prova {{site.data.keyword.Bluemix_notm}},
-riceverai un'email di conferma. Dovrai fare clic sul link
+riceverai un'e-mail di conferma. Dovrai fare clic sul link
 che si trova nella email di conferma per completare il processo di registrazione.
 {: tsCauses} 
 
-L'email di conferma viene inviata all'indirizzo di posta
+L'e-mail di conferma viene inviata all'indirizzo di posta
 da te fornito. Controlla la cartella della posta in arrivo e quella della posta indesiderata. Se non hai ricevuto un'e-mail di conferma, contatta il [{{site.data.keyword.Bluemix_notm}} Supporto ![icona link esterno](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}.  
 {: tsResolve}
 
@@ -467,11 +467,11 @@ Invece di impostare come hardcoded le credenziali nella tua applicazione, utiliz
 ```
 process.env.VCAP_SERVICES
 ```
-Per ulteriori informazioni sui comandi che puoi utilizzare in altri linguaggi di programmazione, consulta [Java ![icona link esterno](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} e [Ruby ![icona link esterno](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}.
+Per ulteriori informazioni sui comandi che puoi utilizzare in altri linguaggi di programmazione, consulta [Java ![icona link esterno](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} e [Ruby ![icona link esterno](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}. 
+ 
 
-
-
-
+ 
+ 
 
 
 

@@ -6,35 +6,35 @@ générales qui sont envoyées à toutes les applications. Vous pouvez créer et
 
 ## Android
 
-L'API **getTags** renvoie la liste des balises disponibles auxquelles le périphérique peut s'abonner. Lorsqu'un
-périphérique est abonné à une balise en particulier, il peut recevoir toutes les notifications push envoyées pour cette balise.
+L'API **getTags** renvoie la liste des balises disponibles auxquelles l'appareil peut s'abonner. Lorsqu'un
+appareil est abonné à une balise en particulier, il peut recevoir toutes les notifications push envoyées pour cette balise.
 
-Copiez les fragments de code ci-après dans votre application mobile Android afin d'obtenir la liste des balises auxquelles le périphérique est
+Copiez les fragments de code ci-après dans votre application mobile Android afin d'obtenir la liste des balises auxquelles l'appareil est
 abonné ainsi que la liste des balises disponibles.
 
-Utilisez l'API **getTags** pour obtenir la liste des balises disponibles auxquelles le périphérique peut s'abonner.
+Utilisez l'API **getTags** pour obtenir la liste des balises disponibles auxquelles l'appareil peut s'abonner.
 
 ```
-// Obtenez la liste des balises disponibles auxquelles le périphérique peut s'abonner
+// Get a list of available tags to which the device can subscribe
 push.getTags(new MFPPushResponseListener<List<String>>(){  
    @Override
-    public void onSuccess(List<String> tags) { 
+   public void onSuccess(List<String> tags){
    updateTextView("Retrieved available tags: " + tags);  
    System.out.println("Available tags are: "+tags);
    availableTags = tags;   
    subscribeToTag();   
   }    
   @Override    
-  public void onFailure(MFPPushException ex) {
+  public void onFailure(MFPPushException ex){
      updateTextView("Error getting available tags.. " + ex.getMessage());
   }
 })  
 ```
 
-Utilisez l'API **getSubscriptions** pour obtenir la liste des balises auxquelles le périphérique est abonné.
+Utilisez l'API **getSubscriptions** pour obtenir la liste des balises auxquelles l'appareil est abonné.
 
 ```
-// Obtenez la liste des balises auxquelles le périphérique est abonné.
+// Get a list of tags that to which the device is subscribed.
 push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
     @Override
     public void onSuccess(List<String> tags) {
@@ -52,12 +52,12 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
 
 ## Cordova
 
-Copiez les fragments de code ci-après dans votre application mobile afin d'obtenir la liste des balises auxquelles le périphérique est abonné ainsi que la liste des balises disponibles auxquelles le périphérique peut s'abonner.
+Copiez les fragments de code ci-après dans votre application mobile afin d'obtenir la liste des balises auxquelles l'appareil est abonné ainsi que la liste des balises disponibles auxquelles l'appareil peut s'abonner.
 
-Renvoyez un tableau des balises auxquelles le périphérique peut s'abonner.
+Renvoyez un tableau des balises auxquelles l'appareil peut s'abonner.
 
 ```
-//Obtenez la liste des balises disponibles auxquelles le périphérique peut s'abonner
+//Get a list of available tags to which the device can subscribe
 MFPPush.retrieveAvailableTags(function(tags) {
     alert(tags);
 }, null);
@@ -65,7 +65,7 @@ MFPPush.retrieveAvailableTags(function(tags) {
 ```
 
 ```
-//Obtenez la liste des balises disponibles auxquelles le périphérique est abonné.
+//Get a list of available tags to which the device is subscribed.
 MFPPush.getSubscriptionStatus(function(tags) {
     alert(tags);
 }, null);
@@ -73,15 +73,15 @@ MFPPush.getSubscriptionStatus(function(tags) {
 
 ## Objective-C
 
-Copiez les fragments de code ci-après dans votre application iOS développée à l'aide de la méthode Objective-C afin d'obtenir la liste des balises auxquelles le périphérique est abonné ainsi que la liste des balises disponibles auxquelles le périphérique peut s'abonner.
+Copiez les fragments de code ci-après dans votre application iOS développée à l'aide de la méthode Objective-C afin d'obtenir la liste des balises auxquelles l'appareil est abonné ainsi que la liste des balises disponibles auxquelles l'appareil peut s'abonner.
 
-Utilisez l'API **retrieveAvailableTags** ci-après pour obtenir la liste des balises disponibles auxquelles le périphérique peut s'abonner.
+Utilisez l'API **retrieveAvailableTags** ci-après pour obtenir la liste des balises disponibles auxquelles l'appareil peut s'abonner.
 
 ```
-//Obtenez la liste des balises disponibles auxquelles le périphérique peut s'abonner
+//Get a list of available tags to which the device can subscribe 
 [push retrieveAvailableTagsWithCompletionHandler:
-^(IMFResponse *response, NSError *error){
- if(error) {    
+^(IMFResponse *response, NSError *error){ 
+ if(error){    
    [self updateMessage:error.description];  
  } else {
    [self updateMessage:@"Successfully retrieved available tags."];
@@ -92,14 +92,14 @@ Utilisez l'API **retrieveAvailableTags** ci-après pour obtenir la liste des bal
 }];
 ```
        
-Utilisez l'API **retrieveSubscriptions** pour obtenir la liste des balises auxquelles le périphérique est abonné.
+Utilisez l'API **retrieveSubscriptions** pour obtenir la liste des balises auxquelles l'appareil est abonné.
 
 
 ```
-// Obtenez la liste des balises auxquelles le périphérique est abonné.
+// Get a list of tags that to which the device is subscribed.
 [push retrieveSubscriptionsWithCompletionHandler:
 ^(IMFResponse *response, NSError *error) {
-  if(error) {
+  if(error){
      [self updateMessage:error.description];
    } else {
      [self updateMessage:@"Successfully retrieved subscriptions."];
@@ -112,16 +112,16 @@ subscribedTags = [response subscriptions];
 
 ## Swift
 
-L'API **retrieveAvailableTagsWithCompletionHandler** renvoie la liste des balises disponibles auxquelles le périphérique peut s'abonner. Lorsqu'un
-périphérique est abonné à une balise en particulier, il peut recevoir toutes les notifications push envoyées pour cette balise.
+L'API **retrieveAvailableTagsWithCompletionHandler** renvoie la liste des balises disponibles auxquelles l'appareil peut s'abonner. Lorsqu'un
+appareil est abonné à une balise en particulier, il peut recevoir toutes les notifications push envoyées pour cette balise.
 
 Appelez le service Push pour obtenir les abonnements à une balise.
 
-Copiez les fragments de code ci-après dans votre application mobile Swift afin d'obtenir la liste des balises auxquelles le périphérique est abonné ainsi que la liste des balises disponibles auxquelles le périphérique peut s'abonner.
+Copiez les fragments de code ci-après dans votre application mobile Swift afin d'obtenir la liste des balises auxquelles l'appareil est abonné ainsi que la liste des balises disponibles auxquelles l'appareil peut s'abonner.
 
 
 ```
-//Obtenez la liste des balises disponibles auxquelles le périphérique peut s'abonner
+//Get a list of available tags to which the device can subscribe
 push.retrieveAvailableTagsWithCompletionHandler({ (response, statusCode, error) -> Void in
 
     if error.isEmpty {
@@ -137,7 +137,7 @@ push.retrieveAvailableTagsWithCompletionHandler({ (response, statusCode, error) 
 ```
 
 ```
-//Obtenez la liste des balises disponibles auxquelles le périphérique est abonné
+//Get a list of available tags to which the device is subscribed
 push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) -> Void in
     if error.isEmpty {
 

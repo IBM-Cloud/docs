@@ -10,8 +10,8 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-#Activation des notifications push avancées
-Dernière mise à jour : 11 janvier 2017
+#Activation des {{site.data.keyword.mobilepushshort}} avancées
+Dernière mise à jour : 23 janvier 2017
 {: .last-updated}
 
 Configurez un badge iOS, un son, un contenu JSON supplémentaire, des notifications interactives et la conservation des notifications.
@@ -74,71 +74,5 @@ protected void onPause() {
 } 
 ```
 	{: codeblock}
-## Activations des notifications iOS interactives  
-{: #enable-actionable-notifications-ios}
 
-A la différence des notifications de type {{site.data.keyword.mobilepushshort}} traditionnelles, les notifications interactives invitent les utilisateurs à effectuer une sélection quand ils reçoivent l'alerte de notification sans ouvrir l'application. 
-
-Procédez comme suit pour activer les notifications de type {{site.data.keyword.mobilepushshort}} dans votre application.
-
-1. Créez une réponse utilisateur.
-```
-//For Swift
-	let acceptAction = UIMutableUserNotificationAction()
-	acceptAction.identifier = "ACCEPT_ACTION"
-	acceptAction.title = "Accept"
-	acceptAction.destructive = false
-	acceptAction.authenticationRequired = false
-	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground
-```
-	{: codeblock}
-```
-//For Swift
-	let declineAction = UIMutableUserNotificationAction()
-	declineAction.identifier = "DECLINE_ACTION"
-	declineAction.title = "Decline"
-	declineAction.destructive = true
-	declineAction.authenticationRequired = false
-	declineAction.activationMode = UIUserNotificationActivationMode.Background
-```
-	{: codeblock}
-
-2. Créez une catégorie de notification et définissez une action. **UIUserNotificationActionContextDefault** ou **UIUserNotificationActionContextMinimal** sont des contextes valides.
-```
-// For Swift
-	let pushCategory = UIMutableUserNotificationCategory()
-	pushCategory.identifier = "TODO_CATEGORY"
-	pushCategory.setActions([acceptAction, declineAction], forContext: UIUserNotificationActionContext.Default)
-```
-	{: codeblock}
-
-1. Créez le paramètre de notification et affectez les catégories de l'étape antérieure.
-```
-// For Swift
-	let categories = NSSet(array:[pushCategory]);
-```
-	{: codeblock}
-
-1. Créez la notification locale ou éloignée et affectez-lui l'identité de la catégorie.
-```
-//For Swift
-	let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: categories as? Set<UIUserNotificationCategory>)
-    UIApplication.sharedApplication().registerUserNotificationSettings(settings)
-    UIApplication.sharedApplication().registerForRemoteNotifications() 
-```
-	{: codeblock}
-	
-## Traitement des notifications iOS interactives  
-{: #actionable-notifications}
-
-Lors de la réception d'une notification interactive, le contrôle est transmis à la méthode suivante en fonction de l'identificateur choisi.
-
- 
-```
-func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
-      //must call completion handler when finished
-      completionHandler()
-  }
-```    
-	{: codeblock}
     

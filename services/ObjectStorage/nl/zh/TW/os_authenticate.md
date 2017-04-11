@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -20,7 +20,9 @@ lastupdated: "2017-01-17"
 
 佈建新的 {{site.data.keyword.objectstorageshort}} 實例會在 IBM Public Cloud 中建立隔離的 Keystone 專案。Keystone 認證結構包含一組完整的屬性，以便您可以選擇最符合您應用程式的 OpenStack 記號要求方法或 OpenStack SDK。當您將新的應用程式連結至實例時，會建立具有專案存取權的新 Keystone 使用者。當您取消佈建實例時，會刪除專案及使用者。
 
-如需使用 OpenStack Swift 和 Keystone 的相關資訊，請檢視 [OpenStack 文件網站](http://docs.openstack.org)。
+如需使用 OpenStack Swift 和 Keystone 的相關資訊，請檢視 <a href="http://docs.openstack.org" target="_blank">OpenStack 文件網站 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示"></a>。
+
+
 
 1. 對 `https://identity.open.softlayer.com/v3/auth/tokens` 提出 POST 要求，如下列 cURL 指令中所示。
   ```

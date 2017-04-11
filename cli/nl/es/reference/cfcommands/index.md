@@ -23,8 +23,7 @@ lastupdated: "2017-01-12"
 La interfaz de línea de mandatos (CLI) de Cloud Foundry (cf) proporciona un conjunto de mandatos para gestionar las apps. En la siguiente información se indican los mandatos cf más comúnmente utilizados para gestionar aplicaciones e incluye sus nombres, opciones, uso, requisitos previos, descripciones y ejemplos. Para ver una lista de todos los mandatos cf y su información de ayuda asociada, utilice `cf help`. Utilice `cf nombre_mandato -h` para ver información de ayuda detallada sobre un determinado mandato.
 {: shortdesc}
 
-**Nota**: Si la red contiene un servidor proxy HTTP entre el host que ejecuta los mandatos cf y el punto final de la API de
-Cloud Foundry, debe especificar el nombre de host o la dirección IP del servidor proxy mediante la variable de entorno `HTTP_PROXY`. Para ver detalles, consulte el apartado (http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}Utilización de la CLI cf con un servidor proxy HTTP ![icono de enlace externo](..![External)/icons/launch-glyph.svg)].
+**Nota**: Si la red contiene un servidor proxy HTTP entre el host que ejecuta los mandatos cf y el punto final de la API de Cloud Foundry, debe especificar el nombre de host o la dirección IP del servidor proxy mediante la variable de entorno `HTTP_PROXY`. Para obtener detalles, consulte [Utilización de la CLI cf con un servidor proxy HTTP ![icono de enlace externo](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}.
 
 
 ## Índice de mandatos de CLI de Cloud Foundry
@@ -33,7 +32,7 @@ Cloud Foundry, debe especificar el nombre de host o la dirección IP del servido
 Utilice el índice de la siguiente tabla para hacer referencia a los mandatos de Cloud Foundry utilizados con frecuencia:
 
 <table summary="Mandatos de Cloud Foundry generales ordenados alfabéticamente que tienen enlaces que le proporcionan más información para el mandato">
- <caption>Tabla 1. Mandatos generales de Cloud Foundry</caption>
+<caption>Tabla 1. Mandatos generales de Cloud Foundry</caption>
  <thead>
  <th colspan="6">Mandatos de Cloud Foundry generales</th>
  </thead>
@@ -51,7 +50,7 @@ Utilice el índice de la siguiente tabla para hacer referencia a los mandatos de
 
 
 <table summary="Mandatos ordenados alfabéticamente para gestionar apps, espacios y servicios. Cada mandato tiene un enlace que le proporciona más información para el mandato.">
- <caption>Tabla 2. Mandatos para gestionar apps, espacios y servicios</caption>
+<caption>Tabla 2. Mandatos para gestionar apps, espacios y servicios</caption>
  <thead>
  <th colspan="5">Mandatos para gestionar apps, espacios y servicios</th>
  </thead>
@@ -68,10 +67,10 @@ Utilice el índice de la siguiente tabla para hacer referencia a los mandatos de
  <td>[events](/docs/cli/reference/cfcommands/index.html#cf_events)</td>
  <td>[logs](/docs/cli/reference/cfcommands/index.html#cf_logs)</td>
  <td>[marketplace](/docs/cli/reference/cfcommands/index.html#cf_marketplace)</td>
- <td>[enviar](/docs/cli/reference/cfcommands/index.html#cf_push)</td>
+ <td>[push](/docs/cli/reference/cfcommands/index.html#cf_push)</td>
   </tr>
  <tr>
- <td>[escalar](/docs/cli/reference/cfcommands/index.html#cf_scale)</td>
+ <td>[scale](/docs/cli/reference/cfcommands/index.html#cf_scale)</td>
  <td>[services](/docs/cli/reference/cfcommands/index.html#cf_services)
  <td>[set-env](/docs/cli/reference/cfcommands/index.html#cf_set-env)</td>
  <td>[ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh)</td>
@@ -96,8 +95,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
    <dl>
    <dt>BluemixServerURL (opcional)</dt>
    <dd>El URL del punto final API de Bluemix que debe especificar al conectarse a {{site.data.keyword.Bluemix_notm}}. Normalmente, este URL es `https://api.{DomainName}`.
-   Si desea visualizar el URL del punto final API que está utilizando actualmente
-no tiene que especificar este parámetro para el mandato cf api.</dd>
+   Si desea visualizar el URL del punto final API que está utilizando actualmente no tiene que especificar este parámetro para el mandato cf api.</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>Inhabilita el proceso de validación de SSL. El uso de este parámetro puede ocasionar problemas de seguridad.</dd>
    <dt>* --unset</dt>
@@ -128,9 +126,7 @@ cf api api.ng.bluemix.network --skip-ssl-validation
 ## cf apps
 {: #cf_apps}
 
-Lista todas las
-apps desplegadas en el espacio actual. También se visualiza el estado
-de cada app.
+Lista todas las apps desplegadas en el espacio actual. También se visualiza el estado de cada app.
 
 Suponga que tiene una instancia para una app, en la columna instancias de la respuesta desde el mandato cf apps, verá 1/1 si la app está activa y 0/1 si la app está desactivada. Si ve ?/1, lo que indica que el estado de la instancia de la app es desconocido, puede copiar el URL de la app en su navegador para comprobar si la app responde, o puede poner el registro en cola mediante el mandato `cf logs nombre_app` para ver si la app está generando contenido de registro.
 
@@ -144,8 +140,7 @@ cf apps
 ## cf bind-service
 {: #cf_bind-service}
 
-Enlaza
-una instancia de servicio existente a su app.
+Enlaza una instancia de servicio existente a su app.
 
 ```
 cf bind-service nombre_app instancia_servicio
@@ -676,14 +671,14 @@ cf set-env my_app variable_a 123
 ## cf ssh
 {: #cf_ssh}
 
-Accede de forma segura al contenedor de aplicaciones. Se puede utilizar el mandato `cf ssh` para configurar una sesión SSH interactiva, ejecutar mandatos remotos, transferir archivos y configurar el reenvío de puertos con una determinada instancia del contenedor de aplicaciones. 
+Accede de forma segura al contenedor de aplicaciones. Se puede utilizar el mandato `cf ssh` para configurar una sesión SSH interactiva, ejecutar mandatos remotos, transferir archivos y configurar el reenvío de puertos con una determinada instancia del contenedor de aplicaciones.
 
 ```
 cf ssh
 ```
 <strong>Requisitos previos</strong>: `cf api`, `cf login`, `cf target`
 
-De forma predeterminada, el acceso SSH está habilitado para aplicaciones Diego. Puede utilizar el mandato `cf ssh-enabled` para verificar si el acceso SSH está habilitado o el mandato `cf enable-ssh` para habilitar el acceso si está inhabilitado.  
+De forma predeterminada, el acceso SSH está habilitado para aplicaciones Diego. Puede utilizar el mandato `cf ssh-enabled` para verificar si el acceso SSH está habilitado o el mandato `cf enable-ssh` para habilitar el acceso si está inhabilitado. 
 
 <strong>Opciones de mandato</strong>:
 
@@ -691,7 +686,7 @@ De forma predeterminada, el acceso SSH está habilitado para aplicaciones Diego.
 <dt>nombre_app</dt>
 <dd>El nombre de la app.</dd>
 <dt>-c</dt>
-<dd>Especifica el mandato remoto que se va a ejecutar. </dd>
+<dd>Especifica el mandato remoto que se va a ejecutar.</dd>
 <dt>-i</dt>
 <dd>Destinado a una instancia específica de una aplicación. Si no se especifica, se utiliza la primera instancia de la aplicación (una instancia con índice 0).</dd>
 <dt>-L</dt>
@@ -710,17 +705,17 @@ $ cf ssh my_app
 ```
 {: codeblock}
 
-Ejecución de un solo mandato en la instancia del contenedor de aplicaciones `my_app`. 
+Ejecución de un solo mandato en la instancia del contenedor de aplicaciones `my_app`.
 ```
 $ cf ssh my_app -c "ls -l"
 ```
 
-Transferencia de un solo archivo desde la instancia del contenedor de aplicaciones `my_app`. 
+Transferencia de un solo archivo desde la instancia del contenedor de aplicaciones `my_app`.
 ```
 $ cf ssh my_app -c "/bin/cat logs/messages.log" > messages.log
 ```
 
-Configuración del reenvío de puertos del puerto 7777 de la máquina local al puerto 8888 de la instancia del contenedor de aplicaciones `my_app`. 
+Configuración del reenvío de puertos del puerto 7777 de la máquina local al puerto 8888 de la instancia del contenedor de aplicaciones `my_app`.
 ```
 $ cf ssh -N -T -L 7777:localhost:8888 my_app
 
@@ -830,7 +825,7 @@ cf -v
 ## Enlaces relacionados
 {: #general}
 
-* (https://github.com/cloudfoundry/cli/releases)Descargar la CLI de Cloud Foundry ![icono de enlace externo](![External)../icons/launch-glyph.svg)]
+* [Descargar la CLI de Cloud Foundry ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases)
 {: new_window}
-* (ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)Tarjeta de referencia rápida - mandatos cf ![icono de enlace externo](![External)../icons/launch-glyph.svg)]
+* [Tarjeta de referencia rápida - mandatos cf ![icono de enlace externo](../../../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
 {: new_window}

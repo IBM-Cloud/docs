@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-21"
+  years: 2015, 2017
+lastupdated: "2017-4-5"
 
 ---
 
@@ -45,8 +45,7 @@ A pipeline that uses the Static Analyzer service typically includes these stages
 
 ### Creating a static code scan
 
-
-Before you begin, review the [Terms of Use for the service](http://www-03.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01).
+Before you begin, review the [Terms of Use for the service ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01){:new_window}.
 
 <!-- Use ordered list markup for the step section. Include code examples as needed. -->
 
@@ -74,7 +73,7 @@ Before you begin, review the [Terms of Use for the service](http://www-03.ibm.co
 
     * If you want the pipeline to check your Bluemix space for the service and an app that binds the service to the container, select the check box. If the service or bound app does not exist, the pipeline adds the free plan of the service to your space. The bound app that is created is named `pipeline_bridge_app`. Then, the pipeline uses the credentials from pipeline_bridge_app to access the bound services.
 
-    * If you already configured the service and bound app in your Bluemix space already, or if you want to [configure these requirements manually](https://www.ng.bluemix.net/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline), leave the check box cleared.
+    * If you already configured the service and bound app in your Bluemix space already, or if you want to [configure these requirements manually](/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline), leave the check box cleared.
 
   f. In the **Minutes to wait for analysis to complete** field, type a value of 0 - 59 minutes. The default value is 5 minutes. A URL to the Static Analyzer dashboard is in the console logs at the end of the job.
 
@@ -107,7 +106,7 @@ Console output examples:
 **Pending scan**
 ![Example pending scan](images/analyzer_pending.png)
 
-For more information about using the Static Analyzer service, see [the Static Analyzer service docs](https://console.ng.bluemix.net/docs/services/ApplicationSecurityonCloud/index.html).
+For more information about using the Static Analyzer service, see the [Static Analyzer service docs](/docs/services/ApplicationSecurityonCloud/index.html).
 
 <!--
 
@@ -187,7 +186,7 @@ Before you begin, create or copy a Slack WebHook URL:
 3. Select a channel and click **Add Incoming WebHooks Integration**.
 4. Add a **WebHook URL** or copy an existing one.
 
-For more information, see [Incoming WebHooks in the Slack documentation](https://api.slack.com/incoming-webhooks).
+For more information, see [Incoming WebHooks in the Slack documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://api.slack.com/incoming-webhooks){:new_window}.
 
 To create Slack notifications:
 
@@ -195,8 +194,8 @@ To create Slack notifications:
 2. In the **ENVIRONMENT PROPERTIES** tab, click **ADD PROPERTY**.
 3. Select **Text property**.
 4. Enter the name and a value for the environment property. Repeat to create multiple environment properties.
-  
-  <table>
+
+   <table>
   <tr>
   <th>Name</th>
   <th>Value</th>
@@ -237,7 +236,7 @@ To create Slack notifications:
 
 6. Repeat these steps to send Slack notifications for other stages that include IBM Container Service, IBM Security Analyzer, and IBM Globalization jobs.
 
-The build notification that is displayed in Slack includes a link to the DevOps Services project and sometimes to the project's dashboard. For a Slack user to open these links, the user must be registered with DevOps Services and be a member of the project that the pipeline is configured in.
+The build notification that is displayed in Slack includes a link to the project and sometimes to the project's dashboard. For a Slack user to open these links, the user must be registered with Bluemix and be a member of the project that the pipeline is configured in.
 
 ## Creating HipChat notifications for builds in the pipeline
 {: #deliverypipeline_hipchat}
@@ -255,7 +254,7 @@ To create HipChat notifications:
 2. In the **ENVIRONMENT PROPERTIES** tab, click **ADD PROPERTY**.
 3. Select **Text Property**.
 4. Enter the name and a value for the environment property. Repeat to create multiple environment properties.
- 
+
   <table>
   <tr>
   <th>Name</th>
@@ -325,13 +324,13 @@ To create HipChat notifications:
 ## Using Active Deploy for zero downtime deployment in the pipeline
 {: #deliverypipeline_activedeploy}
 
-You can automate the continuous deployment of your apps or container groups by using the IBM® Active Deploy service in the Bluemix® DevOps Services Delivery Pipeline. For more information about getting started, see the [Active Deploy documentation](https://new-console.ng.bluemix.net/docs/services/ActiveDeploy/updatingapps.html#adpipeline).
+You can automate the continuous deployment of your apps or container groups by using the IBM Active Deploy service in the Delivery Pipeline. For more information about getting started, see the [Active Deploy documentation](/docs/services/ActiveDeploy/updatingapps.html#adpipeline).
 
 ## Building and deploying container images with the pipeline
 {: #deliverypipeline_containers}
 
-You can automate your app builds and container deployments to Bluemix® by using the IBM® Continuous Delivery Pipeline for Bluemix. The Delivery Pipeline service in DevOps services supports:
+You can automate your app builds and container deployments to Bluemix by using the IBM Continuous Delivery Pipeline for Bluemix. The Delivery Pipeline service supports:
   - Building Docker images
   - Deploying images in containers to Bluemix
 
-For more information about getting started, see the [Delivery Pipeline and containers overview](https://new-console.ng.bluemix.net/docs/containers/container_pipeline_ov.html#container_pipeline_ov).
+For more information about getting started, see the [Delivery Pipeline and containers overview](/docs/containers/container_pipeline_ov.html#container_pipeline_ov).

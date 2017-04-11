@@ -2,12 +2,13 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-16"
+lastupdated: "2017-03-15"
 
 ---
 
 {:codeblock:.codeblock}
 
+The {{site.data.keyword.amafull}} service is replaced with the {{site.data.keyword.appid_full}} service.
 
 # Configuring custom authentication for your {{site.data.keyword.amashort}} iOS (Swift SDK) app
 {: #custom-ios}

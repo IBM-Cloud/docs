@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-21"
+  years: 2015, 2017
+lastupdated: "2016-11-17"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -69,6 +69,9 @@ Quickstart 服務是最快速的服務水準。它不提供任何接收確認，
 
 **重要事項：**訊息有效負載上限為 131072 個位元組。大於此限制的訊息都會被拒絕。
 
+### 保留的訊息
+{{site.data.keyword.iot_short_notm}} 組織未獲授權，無法發佈保留的 MQTT 訊息。如果裝置傳送保留的訊息，則 {{site.data.keyword.iot_short_notm}} 服務會置換設為 true 的保留的訊息旗標，而且處理訊息的方式就像保留的訊息旗標設為 false 一樣。
+
 
 ## 訂閱指令
 {: #subscribing_to_commands}
@@ -91,7 +94,7 @@ Quickstart 服務是最快速的服務水準。它不提供任何接收確認，
 
 ### 服務品質水準及全新階段作業
 
-受管理裝置可以發佈服務品質 (QoS) 水準為 0 或 1 的訊息。來自該裝置的訊息不得為保留的訊息。
+受管理裝置可以發佈服務品質 (QoS) 水準為 0 或 1 的訊息。
 
 QoS=0 的訊息可以捨棄，而且在傳訊伺服器重新啟動之後，不會持續保存。QoS=1 的訊息可以置入佇列，而且在傳訊伺服器重新啟動之後，會持續保存。訂閱的延續性會決定是否將要求置入佇列。用來訂閱之連線的 `cleansession` 參數會決定訂閱的延續性。  
 

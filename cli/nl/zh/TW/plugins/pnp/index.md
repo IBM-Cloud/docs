@@ -86,7 +86,7 @@ chmod a+x ./private-network-peering-linux-amd64
 | pnp-create  | 建立專用網路對等作業連線   |
 | pnp-delete  | 刪除專用網路對等作業連線   |
 | pnp-show    | 列出所有專用網路對等作業連線  |
-{: caption="Table 1. Private network peering commands" caption-side="top"}
+{: caption="表 1. 專用網路對等作業指令" caption-side="top"}
 
 
 ### 指令用法

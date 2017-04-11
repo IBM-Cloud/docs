@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="connectivity_platform.svg"
-   inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.png"
+   inkscape:export-filename="S:\PUB\ABD142\ART\WORK\ship1\iot\reference\security\connectivity_platform.png"
    inkscape:export-xdpi="299.98132"
    inkscape:export-ydpi="299.98132">
   <defs
@@ -1075,11 +1075,11 @@
        id="rect79371-1-6-6-9-8-7-3-5-1-8-2-9"
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <text
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000191px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
        id="text44191"
        font-size="11"
-       x="366.57446"
-       y="465.8287"
+       x="346.57446"
+       y="429.8287"
        sodipodi:linespacing="125%">Watson IoT Platform</text>
     <rect
        ry="0"
@@ -1106,7 +1106,7 @@
          y="512.95654"
          id="tspan8202">IoT <tspan
    style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.00000155px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
-   id="tspan4753">디바이스</tspan></tspan><tspan
+   id="tspan4772">디바이스</tspan></tspan><tspan
          sodipodi:role="line"
          x="136.77055"
          y="526.70654"
@@ -1170,7 +1170,7 @@
          y="440.80542"
          id="tspan8202-7">IoT <tspan
    style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.00000155px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
-   id="tspan4751">게이트웨이</tspan></tspan><tspan
+   id="tspan4770">게이트웨이</tspan></tspan><tspan
          sodipodi:role="line"
          x="134.90659"
          y="454.55542"
@@ -1188,22 +1188,18 @@
          style="font-size:7.5px" /></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-       x="321.39407"
-       y="420.14883"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.25000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       x="369.39407"
+       y="484.14883"
        id="text266398"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan266400"
-         x="321.39407"
-         y="420.14883">Watson™ IoT Platform </tspan><tspan
-         sodipodi:role="line"
-         x="321.39407"
-         y="435.14883"
+         x="369.39407"
+         y="484.14883"
          id="tspan4887">Org: q1bc3a</tspan><tspan
          sodipodi:role="line"
-         x="321.39407"
-         y="450.14883"
+         x="369.39407"
+         y="498.21133"
          id="tspan266402" /></text>
     <text
        sodipodi:linespacing="125%"
@@ -1464,35 +1460,40 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000191px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="72.772636"
-       y="566.47717"
+       y="564.47717"
        id="text4681-6"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan4763"
+         id="tspan4760"
          x="72.772636"
-         y="566.47717"><tspan
+         y="564.47717"><tspan
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.50000191px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start"
-   id="tspan4775">TLS</tspan>(v1.2)<tspan
+   id="tspan4782">TLS</tspan> (v1.2)<tspan
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000191px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-   id="tspan4771">를 통한</tspan></tspan><tspan
+   id="tspan4774">를 통한 </tspan></tspan><tspan
          sodipodi:role="line"
-         id="tspan4765"
+         id="tspan4762"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000191px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          x="72.772636"
-         y="582.875">연결 전체 지원. </tspan><tspan
+         y="580.875">연결 전체 지원. </tspan><tspan
          sodipodi:role="line"
-         id="tspan4767"
+         id="tspan4764"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000191px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          x="72.772636"
-         y="598.5">개방형 표준</tspan><tspan
+         y="596.5"> 개방형 표준</tspan><tspan
          sodipodi:role="line"
-         id="tspan4769"
+         id="tspan4766"
          x="72.772636"
-         y="615.37177"><tspan
+         y="613.37177"><tspan
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.50000191px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start"
-   id="tspan4777">MQTT</tspan>(v3.1.1)<tspan
+   id="tspan4784">MQTT</tspan> (v3.1.1)<tspan
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000191px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-   id="tspan4773">가 지원됩니다</tspan>. </tspan></text>
+   id="tspan4778">가 </tspan></tspan><tspan
+         sodipodi:role="line"
+         id="tspan4768"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000191px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+         x="72.772636"
+         y="629.76959"> 지원됩니다.</tspan></text>
     <g
        id="g11065"
        transform="translate(292.82563,483.0889)">

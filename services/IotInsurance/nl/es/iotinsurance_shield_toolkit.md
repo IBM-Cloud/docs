@@ -1,27 +1,36 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-26"
-
+  years: 2016, 2017
+lastupdated: "2017-03-01"
 ---
 
-
-
-{:new_window: target="\_blank"}
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 
 # Kit de herramientas de cobertura
 {: #iot4i_shield_toolkit}
-Una cobertura es un conjunto de reglas y acciones que se activan por condiciones específicas en la entrada, que es una carga útil, recibida desde sensores. Las coberturas se utilizan para proteger la propiedad y los usuarios identificando riesgos y creando las respuestas adecuadas. En este ejemplo se muestra cómo configurar el entorno, definir una cobertura, crear un usuario y asociar la cobertura con el usuario. De forma opcional, también puede crear promociones y riesgos simulados.
+Utilice coberturas para proteger la propiedad y los usuarios identificando riesgos y creando las respuestas automatizadas adecuadas. Utilice o modifique las coberturas que se incluyen en la biblioteca de coberturas de {{site.data.keyword.iotinsurance_short}} o bien cree e implemente sus propias coberturas utilizando las instrucciones y ejemplos a continuación.
 {:shortdesc}
+
+## Acerca de las coberturas.
+Una cobertura es un conjunto de reglas y acciones definidas que se activan por condiciones específicas en la entrada recibida desde un sensor. Por ejemplo, podría crear una cobertura con una regla que provoque que se envíe un mensaje de texto cuando el sensor detecte una fuga de agua.
+
+## Utilización de coberturas de la biblioteca de coberturas de {{site.data.keyword.iotinsurance_short}}
+
+Encontrará un amplio surtido de coberturas predefinidas en la [biblioteca de coberturas de {{site.data.keyword.iotinsurance_short}} ![Icono de enlace externo](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-shields){: new_window}. Consulte el archivo README del sitio para obtener instrucciones para descargar y empezar a utilizar las coberturas.
+
+## Creación de su propia cobertura
+En este ejemplo se muestra cómo configurar el entorno, definir una cobertura, crear un usuario y asociar la cobertura con el usuario.  De forma opcional, también puede crear promociones y riesgos simulados.  
 
 En las siguientes secciones se muestran ejemplos de código para crear una cobertura simple para fugas de agua. Encontrará un conjunto completo de código disponible en el [repositorio GitHub iot4i-api-examples-nodejs](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/).
 
-## Requisitos previos
+### Requisitos previos
 Antes de comenzar, asegúrese de que se cumplan los siguientes requisitos previos:
 
 - [Node.js](https://nodejs.org/en/) instalado en su sistema.  
@@ -32,7 +41,7 @@ Antes de comenzar, asegúrese de que se cumplan los siguientes requisitos previo
   1. Clone o descargue el [repositorio de código fuente de GitHub](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs) a su sistema.
   2. Instale los requisitos previos de fuente abierta del proyecto utilizando una línea de mandatos para ir a la carpeta que contiene los archivos de código fuente clonados, y ejecutando el mandato `npm install`.
 
-## Configuración del entorno
+### Configuración del entorno
 {: #environment}
 Para configurar el entorno para enviar llamadas REST API, debe configurar el URL para la API en el archivo config.js. El URL del agregador puede ignorarse en este contexto.
 
@@ -47,7 +56,7 @@ var config = module.exports = {
 };
 ```
 
-## Creación de una definición de cobertura
+### Creación de una definición de cobertura
 {: #create_shield_def}
 
 Método: POST  
@@ -79,7 +88,7 @@ siendo:
 - **UUID** - El identificador exclusivo universal (UUID) de la cobertura.
 - **actions** - Una lista de acciones que se activan cuando se crea un riesgo. En este ejemplo, la información sobre el riesgo se envía a la aplicación del usuario utilizando una notificación push IOS.
 
-## Creación de un código de cobertura
+### Creación de un código de cobertura
 {: #create_shield_code}
 Cree un código de cobertura en el archivo shieldCode.js para definir cómo el motor de coberturas procesa una carga útil.
 
@@ -146,7 +155,7 @@ Cada código de cobertura contiene recursos que se definen en las sentencias res
   registerShield(DEMO_SHIELD_UUID, DEMO_SHIELD_NAME, demoEntryCondition, undefined, demoSafelet, demoMessage, DEMO_SHIELD_DELAY);
   ```
 
-## Creación de un usuario
+### Creación de un usuario
 {: #create_user}
 
 Método: POST  
@@ -181,7 +190,7 @@ siendo:
   - 10 - panel de control
   - 1 - administrador del sistema
 
-## Creación de una asociación de coberturas
+### Creación de una asociación de coberturas
 {: #create_shield_assoc}
 
 Método: POST  
@@ -203,7 +212,7 @@ var userShield = {
 
 
 
-## Creación de un riesgo simulado
+### Creación de un riesgo simulado
 {: #create_sim_hazard}
 
 Método: POST  
@@ -240,10 +249,10 @@ var parameters {
 ```
 
 
-## Creación de una promoción
+### Creación de una promoción
 {: #create_promotion}
 
-{{site.data.keyword.iotinsurance_short}} puede enviar promociones al propietario del hogar mediante la aplicación móvil. Cree promociones mediante el archivo createPromotion.js.
+{{site.data.keyword.iotinsurance_short}} puede enviar promociones al propietario del hogar mediante la aplicación móvil. Cree promociones utilizando el archivo createPromotion.js.
 
 El siguiente ejemplo muestra cómo crear una promoción para un fontanero autorizado.
 

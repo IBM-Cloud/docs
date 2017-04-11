@@ -3,8 +3,8 @@
  
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-31"
+  years: 2016, 2017
+lastupdated: "2017-03-15"
 
  
 
@@ -132,7 +132,7 @@ Web アプリケーションまたはモバイル・デバイス・アプリケ�
 ### アプリ ID (app ID)
 {: #x7909906}
 
-Bluemix モバイル・アプリケーションに割り当てられる GUID。[「グローバル固有 ID (globally unique identifier)」](#x2390455)も参照。
+Bluemix モバイル・アプリケーションに割り当てられる GUID。[「グローバル固有 ID (globally unique identifier)」](#x2390455)も参照。[{{site.data.keyword.appid_full}}](/docs/services/appid/index.html)も参照。
 
 ### アプリケーション・キー (application key)
 {: #x7290111}
@@ -537,7 +537,7 @@ root)」](#x2042234)も参照。
 ### フェデレート (federate)
 {: #x2763229}
 
-複数のエンティティーをマージすること。例えば、ある企業の登録したドメインが IBMid とフェデレートされる。
+複数のエンティティーをマージすること。例えば、ある企業の登録したドメインが IBM ID とフェデレートされる。
 
 ### フィード (feed)
 {: #x3129185}

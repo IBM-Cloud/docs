@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-29"
+  years: 2015, 2017
+lastupdated: "2017-2-21"
 
 ---
 
@@ -113,7 +113,7 @@ Review these considerations when you are customizing the snippet for your Deploy
 	
 	* If you prefer to store the image locally, you can download the image and store it in your Git repository. Adjust the path to use the relative location of the image. 
 	
-	* If you want to use a translated version of the button, you can reference it remotely or download it from [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button). 
+	* If you want to use a translated version of the button, you can reference it remotely or download it from [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button![External link icon](../icons/launch-glyph.svg "External link icon")](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button){:new_window}. 
 	
 ##Repository considerations for the button {: #button-repo} 
 
@@ -125,11 +125,12 @@ Review these considerations for the project repository that you will use in your
 With the manifest file, you can specify: 
     <ul>
     <li>A unique app name.</li>  
-    <li>Declared services: A manifest extension, which creates or looks for the required or optional services that are expected to be     set up before the app is deployed, such as a data cache service. You can find a list of the eligible     {{site.data.keyword.Bluemix_notm}} services, labels, and plans by using the <a href="https://github.com/cloudfoundry/cli/releases">CF Command Line Interface</a> to run the <code>cf marketplace</code> command or by browsing the <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-_-dWdevcenter-_-devops-services-_-lp#/store">{{site.data.keyword.Bluemix_notm}} catalog</a>. 
+    <li>Declared services: A manifest extension, which creates or looks for the required or optional services that are expected to be     set up before the app is deployed, such as a data cache service. You can find a list of the eligible     {{site.data.keyword.Bluemix_notm}} services, labels, and plans by using the <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Opens in a new tab or window)">CF Command Line Interface<img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a> to run the <code>cf marketplace</code> command or by browsing the <a class="xref" href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-_-dWdevcenter-_-devops-services-_-lp#/store" target="_blank" title="(Opens in a new tab or window)"> {{site.data.keyword.Bluemix_notm}} catalog<img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a>. 
     
+        
     <strong>Note:</strong> Declared services is an IBM extension of the standard Cloud Foundry manifest format. This extension might be revised in a future release as the feature evolves and improves.
 	
-	<a href="http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#minimal-manifest" target="_blank">Learn how to create a <code>manifest.yml</code> file.</a>  
+	<a class="xref" href="http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#minimal-manifest" target="_blank" title="(Opens in a new tab or window)">Learn how to create a <code>manifest.yml</code> file<img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a>.  
 <pre class="codeblock">
 	---
     #Template manifest.yml
@@ -165,10 +166,10 @@ With the manifest file, you can specify:
 	
 	Supported builders: 
 	    <ul>
-		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant:</a> /<code>build.xml</code>, which builds output to the <code>./output/</code> folder </li>
-		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle:</a> <code>/build.gradle</code>, which builds output to the <code>. </code> folder </li>
-		<li> <a href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank">Grunt:</a> <code>/Gruntfile.js</code>, which builds output to the <code>. </code> folder </li>
-		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank">Maven:</a> <code>/pom.xml</code>, which builds output to the <code>./target/</code> folder</li>
+		<li> <a class="xref" href="http://ant.apache.org/manual/using.html" target="_blank" title="(Opens in a new tab or window)">Ant:<img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a> /<code>build.xml</code>, which builds output to the <code>./output/</code> folder </li>
+		<li> <a class="xref" href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank" title="(Opens in a new tab or window)">Gradle:<img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a> <code>/build.gradle</code>, which builds output to the <code>. </code> folder </li>
+		<li> <a class="xref" href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank" title="(Opens in a new tab or window)">Grunt:<img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a> <code>/Gruntfile.js</code>, which builds output to the <code>. </code> folder </li>
+		<li> <a class="xref" href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank" title="(Opens in a new tab or window)">Maven:<img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a> <code>/pom.xml</code>, which builds output to the <code>./target/</code> folder</li>
 	   </ul>
 	</li>	
 	<li>To configure pipeline for the project, in a <code>.bluemix</code> directory, include a <code>pipeline.yml</code> file. You can create a <code>pipeline.yml</code> file manually or you can generate one from an existing DevOps Services project. To create a pipeline.yml file from a {{site.data.keyword.jazzhub_short}} project and add it to your repository, complete these steps. 
@@ -184,8 +185,8 @@ With the manifest file, you can specify:
 	<li>To deploy an app in a container by using <strong>IBM Containers</strong>, you must include Dockerfile in the root directory of the repository and, in a <code>.bluemix</code> directory, include a <code>pipeline.yml</code> file. 
 	<ul>
 	    <li>The Dockerfile acts as a kind of build script for the app. If a Dockerfile is detected in the repository, the app is automatically built into an image before it is deployed in a container. If the app itself must be built before the app is built into an image, include a build script for the app as well as a Dockerfile, as previously described.</li>
-	    <li> To learn more about creating Dockerfiles, <a href="https://docs.docker.com/reference/builder/" target="_blank">see the Docker documentation</a>. </li>
-	    <li>You can create a <code>pipeline.yml</code> file manually or you can generate one from an existing DevOps Services project. To create a <code>pipeline.yml</code> manually that is specifically for containers, <a href="https://github.com/Puquios/" target="_blank">see the examples in GitHub</a>. </li>
+	    <li> To learn more about creating Dockerfiles, <a class="xref" href="https://docs.docker.com/reference/builder/" target="_blank" title="(Opens in a new tab or window)">see the Docker documentation<img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a>. </li>
+	    <li>You can create a <code>pipeline.yml</code> file manually or you can generate one from an existing DevOps Services project. To create a <code>pipeline.yml</code> manually that is specifically for containers, <a class="xref" href="https://github.com/Puquios/" target="_blank" title="(Opens in a new tab or window)">see the examples in GitHub<img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a>. </li>
         </ul>
 
  </li>
@@ -193,4 +194,3 @@ With the manifest file, you can specify:
 </ul>
 
 For troubleshooting help, see [Deploy to Bluemix button doesn't deploy an app](/docs/troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}.	
-

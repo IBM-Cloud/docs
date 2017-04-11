@@ -82,7 +82,7 @@ If you convert your account during your free trial, your free allowances are lim
 ##What it costs
 {: #what_it_costs}
 
-Charges vary depending on the resources used by a particular service, runtime, container, virtual server, or support option. The resources can be the number of API calls, the number of instances, memory, storage, and so on. {{site.data.keyword.Bluemix_notm}} also provides detailed cost estimators, and a down-to-the-penny cost calculator to help you plan for charges. You can check the actual cost after you build your apps by using the *Usage Dashboard* view. For more detailed information about charges, see [How you are charged](index.html#charges).
+Charges vary depending on the resources used by a particular service, runtime, container, or support option. The resources can be the number of API calls, the number of instances, memory, storage, and so on. {{site.data.keyword.Bluemix_notm}} also provides detailed cost estimators, and a down-to-the-penny cost calculator to help you plan for charges. You can check the actual cost after you build your apps by using the *Usage Dashboard* view. For more detailed information about charges, see [How you are charged](index.html#charges).
  
 
 ##Promo code
@@ -280,20 +280,6 @@ The following table illustrates how much you pay with a plan that is based on a 
 |... |	... |	...|
 |5200 |	The number of items falls into Tier 5, so the total price is $5000 USD. |	$5000 USD|
 {:caption="Table 6. Charge calculation by using the block tier pricing model" caption-side="top"}
-
-### Free allowances for virtual servers
-{: #vms}
-
-You can use {{site.data.keyword.virtualmachineslong}} in the IBM public cloud as a beta feature at no charge. Free allowances are provided for the number of virtual server images that you can create, the number of IP addresses that are assigned, as well as the amount of memory that can be used.
-
-The following items are the free allowances for the {{site.data.keyword.virtualmachineslong}} beta:
-
-* 2 instances
-* 2 virtual CPUs
-* 8 GB memory
-* 200 GB block storage
-* 5 public IP addresses
-
 
 ##How to estimate your costs
 {: #cost}

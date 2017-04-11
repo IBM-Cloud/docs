@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-27"
+  years: 2016, 2017
+lastupdated: "2017-03-13"
 
 ---
 
@@ -24,8 +24,6 @@ lastupdated: "2016-10-27"
 下图说明了 {{site.data.keyword.iot_full}} 边缘分析环境的一般体系结构。
 ![具有边缘分析体系结构的 IBM Watson IoT Platform](images/architecture_platform_edge.svg "具有边缘分析体系结构的 IBM Watson IoT Platform")
 
-**重要信息：**分析功能是从 {{site.data.keyword.iotrtinsights_full}} 服务合并进来的。如果您的 {{site.data.keyword.iot_short_notm}} 组织用作现有 {{site.data.keyword.iotrtinsights_short}} 实例的数据源，那么在迁移现有 {{site.data.keyword.iotrtinsights_short}} 实例后，才会启用 Cloud Analytics 和 Edge Analytics。继续使用 {{site.data.keyword.iotrtinsights_short}} 仪表板来满足分析需要，直到迁移完成。有关更多信息，请参阅 IBM developerWorks 上的 [IBM Watson IoT Platform 博客](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window}以及现有 {{site.data.keyword.iotrtinsights_short}} 实例仪表板。  
-
 ## 开始之前
 {: #byb}
 
@@ -33,6 +31,10 @@ lastupdated: "2016-10-27"
 - 确保网关已连接到 {{site.data.keyword.iot_short}}，并且正在传输设备数据。请参阅[连接网关](gateways/dashboard.html)以获取更多信息。
 - 在网关上安装 Edge Analytics Agent (EAA)。有关信息，请参阅[安装 Edge Analytics Agent](gateways/dashboard.html#edge)。</br> **提示：**支持 EAA 的网关以网关设备消息的形式提供 EAA 诊断数据。有关信息，请参阅 [Edge Analytics Agent 诊断度量值](#eaa_metrics)。
 - 确保要用作规则中条件的设备属性已映射到模式。请参阅[连接设备](iotplatform_task.html)和[创建模式](im_schemas.html)以获取更多信息。
+- 查看 Edge Analytics 诀窍  
+在我们的 Recipes 门户网站中，有若干诀窍描述了执行 IBM Edge Analytics 所需的步骤。这些诀窍清楚地描述了如何在基于 Apache Edgent 构建的设备上安装和配置 IBM Edge Analytics Agent，以运行接近 IoT 数据源的分析。
+ - 此系列诀窍中，第一个诀窍是 [GettingStarted with Edge Analytics in IBM Watson IoT Platform ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/getting-started-with-edge-analytics-in-watson-iot-platform/){: new_window}。此诀窍描述了如何在笔记本电脑系统和 Raspberry Pi 3 设备上设置 Cisco DSA 平台，安装并配置 IBM Edge Analytics Agent 以连接到 {{site.data.keyword.iot_short}}，安装系统 DS Link，并将其配置为作为附加设备连接到 {{site.data.keyword.iot_short}} 上的 Edge Gateway，在 Edge Gateway 上定义并激活边缘规则，以及通过 {{site.data.keyword.iot_short}} 管理边缘规则。
+ - 为了说明 Edge Analytics 的高级使用情况，[Handling Alerts and Device Actions with Edge Analytics in IBM Watson IoT Platform ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/handling-alerts-and-device-actions-with-edge-analytics-in-ibm-watson-iot-platform/){: new_window} 诀窍展示了如何构建自己的 DS Link，以将数据从连接的 Arduino Uno 设备传输到 Raspberry Pi 3 设备。此诀窍还展示了如何作为边缘规则警报的一部分对本地设备操作进行数据过滤和处理。
 
 ## 管理边缘规则和操作  
 {: #managing_rules}
@@ -62,7 +64,10 @@ lastupdated: "2016-10-27"
 1. 在 {{site.data.keyword.iot_short}} 仪表板中，转至**规则**。
 2. 单击**创建边缘规则**，为规则命名，提供描述，选择要应用规则的边缘设备类型，然后单击**下一步**。  
 3. 设置规则逻辑。
-添加一个或多个 IF 条件以用作规则的触发器。可以通过并列行的方式添加条件以将其应用为 OR 条件，也可以通过顺序列的方式添加条件以将其应用为 AND 条件。
+  
+添加一个或多个 IF 条件以用作规则的触发器。  
+可以通过并列行的方式添加条件以将其应用为 OR 条件，也可以通过顺序列的方式添加条件以将其应用为 AND 条件。
+  
 **注：**为了能够选择设备属性作为规则的输入，必须将该属性映射到模式。请参阅[创建模式](im_schemas.html)以获取更多信息。  
 
 **重要信息：**要触发用于比较两个属性的条件，或者触发使用 AND 以顺序方式组合的两个或更多属性条件，触发数据点必须包含在同一设备消息中。如果数据是在多个消息中收到的，那么不会触发该条件或这些顺序条件。
@@ -77,7 +82,9 @@ lastupdated: "2016-10-27"
 `temp>60 AND capacity>50`   
 
 4. 为规则配置有条件触发需求。
+  
 要控制一段时间内为某个规则触发的警报数和操作数，可以为该规则配置有条件触发需求。
+  
 **重要信息：**有条件触发将作用于该规则中的任何条件。例如，如果某个规则使用 OR 设置了 5 个不同的并行条件，那么每个为 true 的条件都会计入有条件触发器计数。要为规则设置有条件触发，请执行以下操作：
  1. 在规则编辑器中，单击缺省的**每次满足条件时触发**链接，以打开“设置频率需求”对话框。
  2. 选择并配置要在规则中使用的有条件触发器。
@@ -87,10 +94,12 @@ lastupdated: "2016-10-27"
  </ul>  
 有关有条件触发器的更详细描述，请参阅“云分析”部分中的[有条件规则触发](cloud_analytics.html#conditional "有条件触发概述")。
 5. 创建或选择在满足规则条件时执行的一个或多个操作。
+  
 有关边缘操作的更多信息，请参阅[创建边缘操作](#edge_actions "创建边缘操作")。
+   
 示例：操作可以是将设备数据发送到云，或者是将警报写入本地文件。
-3. **可选**：为规则选择警报优先级。
- 优先级用于对**基于规则的分析**板中显示的警报分类。缺省优先级为“低”。
+3. **可选**：为规则选择警报优先级。  
+优先级用于对**基于规则的分析**板中显示的警报分类。缺省优先级为“低”。
 6. 对规则满意后，单击**保存**。
 
 规则已创建并添加到浏览仪表板。现在，可以在打开的**边缘规则网关**板中[激活](#manage)该规则。
@@ -105,6 +114,7 @@ lastupdated: "2016-10-27"
 1. 在 {{site.data.keyword.iot_short}} 仪表板中，转至**规则**。
 2. 在“规则”仪表板中，选择**操作**选项卡。
 2. 单击**创建操作**，为操作命名，提供描述，选择操作类型，然后单击**下一步**。
+  
 边缘分析支持两种操作类型：
 <dl>
 <dt>将事件转发到云</dt>  
@@ -121,7 +131,7 @@ lastupdated: "2016-10-27"
 您可以执行以下操作：
 <ul>
  <li>包含所有设备属性和虚拟属性
- <li>仅包含模型定义的属性和虚拟属性  
+ <li>仅包含模式定义的属性和虚拟属性  
  </ul>
  </dd>
 <dt>警报</dt>  
@@ -148,8 +158,10 @@ lastupdated: "2016-10-27"
 
 要激活边缘规则，请执行以下操作：
 1. 在“规则”仪表板中，针对要管理的边缘规则单击**管理规则**按钮。
+  
 在打开的**边缘规则网关**板中，可以看到所有已连接且支持 EAA 的网关的列表。未上传并激活规则的网关的规则状态为*无*。
 2. 找到要在其上激活规则的网关，然后从“选择操作”列的菜单中，选择**激活**。
+  
 边缘规则会上传到网关。上传完成并且规则激活后，“规则状态”会更改为**活动**。  
 
 现在，规则已在网关上激活，当满足规则条件时，将触发配置的操作。
@@ -205,9 +217,13 @@ lastupdated: "2016-10-27"
 `MsgRateReduce` | 入局和出局消息速率之间的百分比差值。</br>计算公式如下：`(msgInRate - msgOutRate) / msgInRate`
 `BytesRateReduce` | 入局和出局消息字节之间的百分比差值。</br>计算公式如下：`(bytesInRate - bytesOutRate) / bytesInRate`
 `SystemLoad` | 运行 EAA 的系统的当前系统负载。**注：**仅当 `mpstat` 命令在运行 EAA 的系统上可用时，才会发送 CPU 速率。否则会发送上一分钟的系统负载平均值。</br>“系统负载平均值等于在一段时间内，排队等待可用处理器的可运行实体数与在可用处理器上运行的可运行实体数之和的平均值。平均负载的计算方法是特定于操作系统的，但通常为呈衰减趋势且与时间相关的平均值。如果负载平均值不可用，那么将返回负值。” -
-*ManagementFactory.getOperatingSystemMXBean* 的 javadoc。`FreeMemory` | 运行 EAA 的 Java 虚拟机 (JVM) 的可用内存字节数。
+*ManagementFactory.getOperatingSystemMXBean* 的 javadoc。`FreeMemory` | 运行 EAA 的 Java™ 虚拟机 (JVM) 的可用内存字节数。
 `MemoryUsed` | EAA 使用的 JVM 内存的字节数。
 `InQueueSize` | 排队等待 EAA 处理的消息数。
 `RuleNumber` | 在规则引擎核心中定义的规则数。
 `ProcessorNumber` | 用于调试用途。规则引擎核心中定义的处理器数。</br>**注：**处理器是规则引擎核心中的最小执行单元。
 `DataPointsInWindow` | 在时间窗口中缓存的数据点总数。数据点的字节大小根据其数据类型而有所不同。例如，float/int 数据点大小为 8 字节，而 string 数据点大小根据其长度而变化。在大多数情况下，可以使用以下公式来估算时间窗口的内存使用量：`DataPointsInWindow * 8`。
+## Edge Analytics 社区
+{: #eaa_community}
+
+可以从 [IBMEdge Analytics 社区页面](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true)下载 Edge Analytics SDK。SDK 包括 SDK JAR 文件、Javadoc、样本代码、诀窍链接和自述文件。在社区中，还可以观看视频，以快速入门和熟悉运用 Edge Analytics，可以使用社区论坛来问问题。

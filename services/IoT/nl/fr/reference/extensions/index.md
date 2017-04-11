@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-18"
+  years: 2015, 2017
+lastupdated: "2017-03-15"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -39,7 +39,7 @@ L'intégration Jasper fournie par notre plateforme assure la prise en charge des
 Les opérations prises en charge sont accessibles dans le menu d'exploration d'un terminal connecté via Jasper, après l'exécution des étapes de configuration ci-dessous.
 
 ### API REST pour Jasper
-Pour accéder à l'API REST pour Jasper, reportez-vous à la section Jasper Extension dans la documentation [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension).
+Pour accéder à l'API REST pour Jasper, voir la section Jasper Extension dans la documentation de l'[API REST HTTP {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window}. 
 
 ### Configuration pour Jasper
 
@@ -91,7 +91,7 @@ L'extension AT&T permet d'effectuer les opérations AT&T suivantes
 - Modification du plan tarifaire
 
 ### API REST pour AT&T
-Pour accéder à l'API REST pour AT&T, reportez-vous à la section AT&T Extension dans la documentation [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension).
+Pour accéder à l'API REST pour AT&T, voir la section AT&T Extension dans la documentation de l'[API REST HTTP {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window}. 
 
 ### Configuration pour AT&T
 
@@ -110,7 +110,7 @@ Pour connecter votre organisation {{site.data.keyword.iot_short_notm}} à votre 
 
 
 2. Configurez vos terminaux
-Vous pouvez configurer les terminaux connectés à votre organisation {{site.data.keyword.iot_short_notm}} et à votre compte AT&T afin d'afficher les données provenant d'AT&T dans le tableau de bord {{site.data.keyword.iot_short_notm}}.
+Vous pouvez configurer les terminaux connectés à votre organisation {{site.data.keyword.iot_short_notm}} et à votre compte AT&T afin d'afficher les données provenant d'AT&T dans le tableau de bord {{site.data.keyword.iot_short_notm}}.  
 **Important :** La configuration d'AT&T ne peut pas être appliquée dans le cadre du processus d'ajout de terminal. Seuls les terminaux précédemment connectés peuvent être configurés avec AT&T.  
 Pour configurer vos terminaux connectés via AT&T, procédez comme suit :
  1. Sur l'onglet Terminaux de votre tableau de bord {{site.data.keyword.iot_short_notm}}, localisez le terminal connecté via AT&T à configurer.
@@ -223,7 +223,7 @@ Si vous disposez d'un terminal connecté à votre service {{site.data.keyword.io
 - Statut d'emplacement
 
 ### API REST pour Orange
-Pour accéder à l'API REST pour Orange, reportez-vous à la section Orange Extension dans la documentation [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension).
+Pour accéder à l'API REST pour Orange, voir la section Orange Extension dans la documentation de l'[API REST HTTP {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window}. 
 
 ### Configuration pour Orange
 
@@ -251,7 +251,7 @@ Une fois l'extension Orange activée, chaque terminal doté d'une carte SIM Oran
 ```
 Une fois l'organisation correctement configurée, la section *Extensions* s'affiche sous la section *Configuration des extensions* dans la vue *Exploration du terminal*.
 
-## Stockage des données d'historique
+## Stockage des données historiques
 {: #historical_data}
 
 L'extension de stockage de données historiques vous permet de localiser et configurer des services de stockage de message compatibles, par exemple, [{{site.data.keyword.cloudantfull}}](../../cloudant_connector.html) ou [{{site.data.keyword.messagehub_full}}](../../message_hub.html) pour vos données IoT.
@@ -259,9 +259,22 @@ L'extension de stockage de données historiques vous permet de localiser et conf
 ## Packages de gestion des terminaux personnalisés
 {: #device_mgmt}
 
-La gestion des terminaux est une fonction principale du service {{site.data.keyword.iot_short_notm}} ; elle peut toutefois être étendue pour développer des fonctions supplémentaires.
+La gestion des terminaux est une fonction principale du service {{site.data.keyword.iot_short_notm}} ; elle peut toutefois être étendue pour développer des fonctions supplémentaires. Les packages de gestion des terminaux personnalisés doivent être composés d'un document JSON valide et définir au moins une action de gestion des terminaux personnalisée.
 
-L'extension Gestion des terminaux vous permet d'installer des fonctions personnalisées pour la gestion des terminaux. Pour plus d'informations sur les fonctions de gestion des terminaux personnalisées, voir [Extensions personnalisées de gestion des terminaux](../../devices/device_mgmt/custom_actions.html){: new_window}.
+Pour plus d'informations sur les fonctions de gestion des terminaux personnalisées, y compris un exemple du format JSON requis, voir [Extensions personnalisées de gestion des terminaux](../../devices/device_mgmt/custom_actions.html){: new_window}.
+
+### Ajout d'un package de gestion des terminaux personnalisé
+
+Vous pouvez ajouter un package de gestion des terminaux personnalisé à l'aide du tableau de nord {{site.data.keyword.iot_short_notm}} ou de l'API.
+
+Pour ajouter un package de gestion des terminaux personnalisé à l'aide du tableau de bord {{site.data.keyword.iot_short_notm}} :
+
+1. Depuis votre tableau de bord {{site.data.keyword.iot_short_notm}}, cliquez sur **Paramètres** dans la barre de navigation.
+2. Cliquez sur **Packages de gestion des terminaux personnalisés**.
+3. Cliquez sur le bouton **Ajouter un package**.
+4. Sélectionnez votre fichier de package et cliquez sur **Ouvrir**.
+
+Pour ajouter un package de gestion des terminaux personnalisé à l'aide de l'API, voir la [documentation de l'API {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ## Chaîne de blocs
 {: #blockchain}
@@ -275,36 +288,105 @@ L'extension Gestion des terminaux vous permet d'installer des fonctions personna
 
 ### Configuration pour la chaîne de blocs
 
-L'intégration de chaîne de blocs à {{site.data.keyword.iot_short_notm}} est une offre de services qui n'est pas activée par défaut dans {{site.data.keyword.iot_short_notm}}. Pour activer la fonction dans votre environnement, procédez comme suit :
+L'intégration de chaîne de blocs à {{site.data.keyword.iot_short_notm}} est une offre de services qui n'est pas activée par défaut dans {{site.data.keyword.iot_short_notm}}. Pour activer la fonction dans votre organisation, procédez comme suit :
  1. Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, sélectionnez **Extensions**.
- 2. Cliquez sur le lien **Informations complémentaires** en regard de l'extension de chaîne de blocs pour accéder à la page des offres de services IoT Blockchain.
- 3. Remplissez et soumettez le formulaire de demande de service.   
-L'approbation du service prend généralement une journée. Une fois votre demande approuvée, vous recevez un courrier électronique contenant les instructions permettant d'activer l'intégration de chaîne de blocs dans votre organisation {{site.data.keyword.iot_short_notm}}.
- 5. Revenez au tableau de bord {{site.data.keyword.iot_short_notm}} pour que votre organisation puisse terminer la configuration. Pour plus d'informations, voir [Intégration de chaîne de blocs {{site.data.keyword.iot_short_notm}}](../../bl_blockchain_integration.html).
+ 2. Sur la page **Extensions**, cliquez sur **Ajouter une extension**.
+ 3. Cliquez sur **Ajouter** en regard de l'extension Blockchain.
+ 4. Dans le titre Blockchain, cliquez sur **Configuration**.
+ 3. Dans la section **Activer Blockchain**, cliquez sur le lien **En savoir plus** pour accéder à la page [IoT Blockchain Services Offering ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/internet-of-things/iot-news/announcements/private-blockchain/){: new_window}.
+ 4. Cliquez sur **Démarrez votre projet de chaîne de blocs** pour renseigner et soumettre le formulaire *Explorez le potentiel d'IoT et de Blockchain*.  
+ 5. Lorsque votre demande est approuvée, IBM vous contacte pour activer l'intégration de chaîne de blocs à votre organisation.
+ 6. Revenez au tableau de bord {{site.data.keyword.iot_short_notm}} pour que votre organisation puisse terminer la configuration en suivant les étapes décrites dans [Intégration de chaîne de blocs {{site.data.keyword.iot_short_notm}}](../../bl_blockchain_integration.html).
 
-## The Weather Company
+<!-- ## The Weather Company
 {: #weathercompany}
 
-L'extension The Weather Company associe des données météorologiques à vos terminaux {{site.data.keyword.iot_short_notm}} existants. Les données météorologiques de The Weather Company apparaissent dans la vue de détails du terminal si une demande de mise à jour d'emplacement a été émise par l'API ou si le terminal a déjà défini son emplacement à l'aide d'un message de gestion de terminaux.
+The Weather Company extension combines weather data with your existing {{site.data.keyword.iot_short_notm}} devices. Weather data from The Weather Company appears in the device details view if an update location request has been made by using the API, or if the device has already set its location by using a device management message.
 
-**Remarque :** Seuls les terminaux gérés peuvent définir leurs propres emplacements. Les emplacements de tous les terminaux non gérés doivent être définis manuellement à l'aide de l'API. Pour plus d'informations sur la définition d'un emplacement de terminal, voir [Demandes de mise à jour d'emplacement](../../devices/device_mgmt/index.html#update-location).
+**Note:** Only managed devices can set their own locations. All unmanaged devices must have their locations set manually by using the API. For more information on setting a device location, see [Update Location requests](../../devices/device_mgmt/index.html#update-location).
 
-### API REST pour The Weather Company
-Pour accéder à l'API REST pour The Weather Company, reportez-vous à la section Device Location Weather dans la documentation [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather).
+### REST APIs for The Weather Company
+To access the REST API for The Weather Company, see the
+Device Location Weather section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather){: new_window} documentation.
 
-### Données météorologiques
+### Weather Data
 
-Pour afficher les données météorologiques extraites pour un emplacement de terminal, localisez le terminal dans le panneau **Devices** et cliquez dessus. Dans la vue de détails du terminal, faites défiler l'écran jusqu'à la section **Extensions**. Les données météorologiques suivantes sont répertoriées :
+To view the weather data retrieved for a device location, find the device in the **Devices** pane and click it. In the detailed device view scroll down to the **Extensions** section. The following weather data is listed:
 
-- Météo en cours.
-- Température en cours.
-- Températures maximale et minimale prévues.
-- Humidité relative.
-- Pression.
-- Visibilité.
-- Vitesse du vent.
-- Direction du vent.
+- Current weather.
+- Current temperature.
+- Predicted maximum and minimum temperature.
+- Relative humidity.
+- Pressure.
+- Visibility.
+- Wind speed.
+- Wind direction.
 - Latitude.
 - Longitude.
+-->
 
-<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html). -->
+<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html){: new_window}. -->
+
+## Courrier électronique
+{: #email}
+
+Des utilisateurs peuvent être ajoutés à {{site.data.keyword.iot_short_notm}} via des invitations par courrier électronique. Pour plus d'informations, voir  [Gestion des accès utilisateur](../../add_users.html).
+
+L'utilisation de la fonction d'invitation par courrier électronique nécessite de configurer une extension de messagerie pour utiliser le service en ligne SendGrid ou un service SMTP (Simple Mail Transfer Protocol). L'extension peut également utiliser l'application {{site.data.keyword.Bluemix_notm}} SendGrid. 
+
+### Service en ligne SendGrid
+
+Pour configurer l'extension de messagerie à utiliser avec le service en ligne SendGrid, procédez comme suit :
+
+1. Récupérez la clé d'API autorisée à partir de votre compte en ligne SendGrid. 
+2. Dans votre tableau de bord {{site.data.keyword.iot_short_notm}}, cliquez sur **Extensions** dans la barre de navigation. 
+3. Dans la section **Adresse électronique**, cliquez sur **Configurer**.
+4. Sélectionnez **SendGrid avec clé d'API**. 
+5. Entrez le nom et l'adresse électronique de votre administrateur de site, ainsi que la clé d'API autorisée. 
+
+### Service SMTP
+
+Pour configurer l'extension de messagerie à utiliser avec un service SMTP, procédez comme suit :
+
+1. Dans votre tableau de bord {{site.data.keyword.iot_short_notm}}, cliquez sur **Extensions** dans la barre de navigation. 
+2. Dans la section **Adresse électronique**, cliquez sur **Configurer**.
+3. Sélectionnez **SMTP**.
+4. Entrez les détails de configuration pour votre service SMTP. 
+
+### Application {{site.data.keyword.Bluemix_notm}} SendGrid
+
+Pour configurer l'extension de messagerie à utiliser avec l'application {{site.data.keyword.Bluemix_notm}} SendGrid, procédez comme suit :
+
+1. Créez une application factice et établissez une liaison avec le service SendGrid.   
+Pour récupérer les informations d'identification de configuration credentials, ajoutez le service SendGrid et établissez une liaison entre celui-ci et une application factice. 
+
+ 1. Depuis votre tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur **Créer un service**. 
+ 2. Sélectionnez le service SendGrid dans le catalogue, puis cliquez sur **Créer**.
+ 3. Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, ajoutez l'application {{site.data.keyword.sdk4nodefull}}.
+ 4. Cliquez sur l'application {{site.data.keyword.sdk4nodefull}} à partir du tableau de bord {{site.data.keyword.Bluemix_notm}}, puis cliquez sur **Lier un service ou une API**.
+ 5. Sélectionnez le service SendGrid, puis cliquez sur **Ajouter**.
+ 6. L'application {{site.data.keyword.sdk4nodefull}} doit à présent être reconstituée.
+2. Préparez-vous à configurer le service {{site.data.keyword.iot_short_notm}}.   
+{{site.data.keyword.iot_short_notm}} peut être configuré à l'aide du tableau de bord {{site.data.keyword.iot_short_notm}} ou en utilisant l'API {{site.data.keyword.iot_short_notm}}.   
+ 1. Cliquez sur l'application {{site.data.keyword.sdk4nodefull}} dans le tableau de bord {{site.data.keyword.Bluemix_notm}}.
+ 2. Cliquez sur **Variables d'environnement** dans la barre de navigation.
+ 3. Copiez les données JSON affichées dans un fichier texte temporaire.  
+Les données JSON doivent se présenter au format suivant :
+```
+{
+  "name": "SendGridServiceName",
+  "label": "user-provided",
+  "credentials": {
+    "password": "xxx",
+    "hostname": "smtp.sendgrid.net",
+    "username": "username"
+  }
+}
+```
+3. Ajoutez les données de configuration à l'organisation {{site.data.keyword.iot_short_notm}}. 
+ 1. Ouvrez le tableau de bord {{site.data.keyword.iot_short_notm}}.
+ 2. Cliquez sur **Extensions** dans la barre de navigation.
+ 3. Cliquez sur **Configurer** sous l'icône **Courrier électronique**.
+ 4. Sélectionnez **SendGrid avec nom d'utilisateur**.
+ 5. Entrez les données de configuration à partir du fichier texte temporaire. 
+ 6. Cliquez sur **Terminé**.

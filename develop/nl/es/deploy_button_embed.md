@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-29"
+  years: 2015, 2017
+lastupdated: "2017-2-21"
 
 ---
 
@@ -43,19 +43,18 @@ con un repositorio Git nuevo.
 ##Ejemplo de flujo de iFrame {: #iframe-example}
 
 <p>
-El ejemplo de <a class="xref" href="http://d2bm-iframe-sample.ng.bluemix.net/" target="_blank" title="(se abre en un separador o ventana nueva)">IBM
-Bluemix D2BM iFrame</a> proporciona un ejemplo de flujo de iFrame
-para un repositorio público de Git.<div class="image"><img class="image" src="images/d2bm_iframe_sample2.png" alt="Ejemplo de flujo Desplegar en Bluemix iFrame" /></div>
+El <a class="xref" href="http://d2bm-iframe-sample.ng.bluemix.net/" target="_blank" title="(Se abre en un nuevo separador o ventana)">ejemplo de IBM
+Bluemix D2BM iFrame<img class="image" src="../icons/launch-glyph.svg" alt="icono de enlace externo"/></a> proporciona un ejemplo de flujo de iFrame para un repositorio Git público.<div class="image"><img class="image" src="images/d2bm_iframe_sample2.png" alt="Ejemplo de flujo Desplegar en Bluemix iFrame" /></div>
 </p>
 
 <p>
-Para ver el origen de este ejemplo, pulse <a class="xref" href="https://hub.jazz.net/project/idsorg/d2bm-iframe-sample/overview" target="_blank" title="(se abre en un separador o ventana nueva)">origen</a>.
+Para ver el origen de este ejemplo, pulse <a class="xref" href="https://hub.jazz.net/project/idsorg/d2bm-iframe-sample/overview" target="_blank" title="(Se abre en un nuevo separador o ventana)">origen<img class="image" src="../icons/launch-glyph.svg" alt="icono de enlace externo"/></a>.
 </p>
 
 ##Incluir el flujo de iFrame {: #embed-iframe}  
 
 <ol>
-<li>Cargue el programa de utilidad JavaScript desde <a href="https://bluemix.net/deploy/embed.js" target="_blank">https://bluemix.net/deploy/embed.js</a>. Este
+<li>Cargue el programa de utilidad de JavaScript desde <a class="xref" href="https://bluemix.net/deploy/embed.js" target="_blank" title="(Se abre en un nuevo separador o ventana)">https://bluemix.net/deploy/embed.js<img class="image" src="../icons/launch-glyph.svg" alt="icono de enlace externo"/></a>. Este
 programa de utilidad depende de jQuery y se carga añadiendo
 la siguiente etiqueta de script al documento:
 <pre class="pre">

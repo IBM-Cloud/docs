@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-13"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2016-09-13"
 
 **受管理裝置**定義為包含裝置管理代理程式的裝置。裝置管理代理程式是一套邏輯，可讓裝置使用「裝置管理通訊協定」來與 {{site.data.keyword.iot_short_notm}} Device Management 服務互動。受管理裝置可以執行裝置管理作業，包括位置更新、韌體下載與更新、重新開機及重設為原廠設定。
 
-「裝置管理通訊協定」定義一組支援的作業。裝置管理代理程式可以支援一部分的作業，但是必須支援**受管理裝置**及**未受管理裝置**作業。支援韌體動作作業的裝置也必須支援觀察。
+「裝置管理通訊協定」定義一組支援的作業。裝置管理代理程式可支援一部分作業，但必須支援**管理**及**取消管理**作業。支援韌體動作作業的裝置也必須支援觀察。
 
 「裝置管理通訊協定」是以 MQTT 傳訊通訊協定為建置基礎。如需「裝置管理通訊協定」如何與 MQTT 互動的相關資訊，請參閱[裝置的 MQTT 連線功能](../mqtt.html)。
 
@@ -36,6 +36,8 @@ lastupdated: "2016-09-13"
 4. 裝置可以使用「裝置管理通訊協定」來傳遞有關其位置、診斷資訊及錯誤碼的更新。
 5. 若要處理大型裝置母體中的已廢止裝置，**受管理裝置**作業要求會包含選用性的 lifetime 參數。lifetime 參數是秒數，裝置必須在這段時間內提出另一個**管理裝置**要求，來避免被分類為休眠及變成未受管理裝置。
 6. 裝置解除任務時，您可以使用儀表板或 REST API，將它從 {{site.data.keyword.iot_short_notm}} 中移除。
+
+請參閱秘訣：[將 Raspberry Pi 當作受管理裝置連接至 IBM Watson IoT Platform ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/){: new_window}。
 
 ### 回覆碼摘要
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -45,7 +45,7 @@ lastupdated: "2017-01-17"
   ```
   {: pre}
 
-**附註**：如果收到錯誤訊息，請確認已安裝[必備軟體](/docs/services/ObjectStorage/os_configuring.html#install-swift-client)。
+  **附註**：如果收到錯誤訊息，請確認已安裝[必備軟體](/docs/services/ObjectStorage/os_configuring.html#install-swift-client)。
 
 3. 選用：若要驗證已建立容器，請執行下列指令來列出容器。
 

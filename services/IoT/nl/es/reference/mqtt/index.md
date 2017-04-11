@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-09"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-18"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -34,17 +34,20 @@ En {{site.data.keyword.iot_short_notm}}, las clases primarias de cosas son dispo
 
 El cliente MQTT se identifica a sí mismo ante el servicio {{site.data.keyword.iot_short_notm}} como una clase de cosas. La clase de cosas determina las posibilidades del cliente cuando está conectado. La clase de cosas también determina el mecanismo para la autenticación de clientes.
 
-Las aplicaciones y los dispositivos funcionan con distintos espacios de temas de MQTT. Los dispositivos funcionan dentro de un espacio de tema del ámbito del dispositivo, mientras que las aplicaciones tienen acceso completo al espacio de temas para toda una organización. Para obtener más información consulte los siguientes temas:
+Las aplicaciones y los dispositivos funcionan con distintos espacios de temas de MQTT.  Los dispositivos funcionan dentro de un espacio de tema del ámbito del dispositivo, mientras que las aplicaciones tienen acceso completo al espacio de temas para toda una organización. Para obtener más información consulte los siguientes temas:
 
-- [Dispositivos](../../devices/mqtt.html)
-- [Aplicaciones](../../applications/mqtt.html)
-- [Pasarelas](../../gateways/mqtt.html)
+- [Mensajería MQTT para dispositivos](../../devices/mqtt.html)
+- [Mensajería MQTT para aplicaciones](../../applications/mqtt.html)
+- [Mensajería MQTT para pasarelas](../../gateways/mqtt.html)
+
+### Mensajes retenidos
+{{site.data.keyword.iot_short_notm}} proporciona soporte limitado para la característica de mensajes retenidos de la mensajería MQTT. Si el distintivo de mensaje retenido está establecido en true en un mensaje MQTT que se envía desde un dispositivo, pasarela o aplicación a {{site.data.keyword.iot_short_notm}}, el mensaje se gestiona como un mensaje no retenido. Las organizaciones de {{site.data.keyword.iot_short_notm}} no tienen autorización para publicar mensajes retenidos. El servicio {{site.data.keyword.iot_short_notm}} modifica el distintivo de mensaje retenido cuando está establecido en true y procesa el mensaje como si el distintivo de mensaje retenido estuviera establecido en false.
 
 ## Niveles de calidad de servicio
 {: #qos-levels}
 
 El protocolo MQTT proporciona tres calidades de servicio para la entrega de mensajes entre clientes y servidores: "como máximo una vez", "como mínimo una vez" y "exactamente una vez".
-Mientras que puede enviar sucesos y mandatos mediante cualquier calidad de nivel de servicio, deberá considerar cuidadosamente si el nivel de servicio correcto se ajusta a sus necesidades. La calidad de nivel de servicio '2' no es siempre una mejor opción que el nivel '0'. 
+Mientras que puede enviar sucesos y mandatos mediante cualquier calidad de nivel de servicio, deberá considerar cuidadosamente cuál es el nivel de servicio que mejor se ajusta a sus necesidades. La calidad de nivel de servicio '2' no es siempre una mejor opción que el nivel '0'.
 
 ### Como máximo una vez (QoS0)
 
@@ -102,6 +105,6 @@ Binario | Sin restricciones.
 ## Intervalo de estado activo de MQTT
 {: #mqtt-keep-alive}
 
-El de intervalo de estado activo de MQTT, que se mide en segundos, define el tiempo máximo que puede pasar sin comunicación entre el cliente y el intermediario. El cliente MQTT debe asegurarse de que, en ausencia de cualquier otra comunicación con el intermediario, se envíe un paquete PINGREQ. El intervalo de estado de actividad permite al cliente y al intermediario detectar que la red ha fallado, lo que da lugar a la interrupción de la conexión, sin necesidad de esperar a que se alcance el periodo de tiempo de espera excedido de TCP/IP. 
+El de intervalo de estado activo de MQTT, que se mide en segundos, define el tiempo máximo que puede pasar sin comunicación entre el cliente y el intermediario. El cliente MQTT debe asegurarse de que, en ausencia de cualquier otra comunicación con el intermediario, se envíe un paquete PINGREQ. El intervalo de estado de actividad permite al cliente y al intermediario detectar que la red ha fallado, lo que da lugar a la interrupción de la conexión, sin necesidad de esperar a que se alcance el periodo de tiempo de espera excedido de TCP/IP.
 
-Si los clientes MQTT de {{site.data.keyword.iot_short_notm}} utilizan suscripciones compartidas, el valor del intervalo de estado de actividad sólo se puede establecer entre 1 y 3600 segundos. Si se solicita el valor 0 o un valor mayor que 3600, el intermediario de {{site.data.keyword.iot_short_notm}} establece el intervalo de estado de actividad en 3600 segundos. 
+Si los clientes MQTT de {{site.data.keyword.iot_short_notm}} utilizan suscripciones compartidas, el valor del intervalo de estado de actividad sólo se puede establecer entre 1 y 3600 segundos. Si se solicita el valor 0 o un valor mayor que 3600, el intermediario de {{site.data.keyword.iot_short_notm}} establece el intervalo de estado de actividad en 3600 segundos.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -23,7 +23,9 @@ structure des données d'identification Keystone inclut un jeu complet d'attribu
 OpenStack ou bien le SDK OpenStack qui convient le mieux à votre application. Lorsque vous liez une nouvelle application à
 l'instance, un nouvel utilisateur Keystone avec accès au projet est créé. Quand vous annulez la mise à disposition de l'instance, le projet et l'utilisateur sont supprimés.
 
-Pour plus d'informations sur l'utilisation d'OpenStack Swift et de Keystone, voir le [site de documentation d'OpenStack](http://docs.openstack.org).
+Pour plus d'informations sur l'utilisation d'OpenStack Swift et de Keystone, reportez-vous au site de la <a href="http://docs.openstack.org" target="_blank">Documentation OpenStack. <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a>
+
+
 
 1. Soumettez une requête POST à `https://identity.open.softlayer.com/v3/auth/tokens` comme illustré dans la commande
 cURL suivante.
@@ -160,7 +162,7 @@ de réponse suivant a été élagué afin d'afficher uniquement les informations
   {: screen}
 
   <table>
-  <caption> Tableau 1. Explication de la réponse à la requête Post</caption>
+  <caption> Tableau 1. Explication de la réponse à la requête Post </caption>
     <tr>
       <th> Noeud final de réponse </th>
       <th> Explication </th>

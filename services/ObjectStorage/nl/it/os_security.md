@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -10,14 +10,14 @@ lastupdated: "2017-01-17"
 
 
 
-# Managing access
+# Gestione dell'accesso
 
-Access Control Lists can be used to manage access to the service. [Admin users](/docs/services/ObjectStorage/os_access_types.html) can grant read and write access, as well as remove access.
+Gli elenchi del controllo dell'accesso possono essere utilizzati per gestire l'accesso al servizio. [Gli utenti amministratori](/docs/services/ObjectStorage/os_access_types.html) possono concedere l'accesso in lettura e scrittura, così come rimuoverlo.
 {: shortdesc}
 
-Before managing access by using the UI or the Swift CLI, ensure that you have configured the service and begun storing objects.
+Prima di gestire l'accesso utilizzando la IU o la CLI Swift, assicurati di aver configurato il servizio e avviato l'archiviazione degli oggetti.
 
-When you are working with access control lists, keep the following points in mind:
-  * When a user creates a container, they are automatically granted admin privileges to that container.
-  * Access control lists are not available for the service instance, storage account, or at the project level. Access can be managed at the container or object level only.
-  * Be sure to verify that access to a container was [removed](/docs/services/ObjectStorage/os_remove_access.html).
+Quando stai utilizzando gli elenchi del controllo dell'accesso, tieni i seguenti punti in mente:
+  * Quando un utente crea un contenitore, gli vengono automaticamente concessi i privilegi da amministratore per tale contenitore.
+  * Gli elenchi del controllo dell'accesso non sono disponibili per l'istanza del servizio, per l'account di archiviazione o al livello del progetto. L'accesso può essere gestito solo al livello del contenitore o dell'oggetto.
+  * Assicurati di verificare che l'accesso a un contenitore sia stato [rimosso](/docs/services/ObjectStorage/os_remove_access.html).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-06-29"
+lastupdated: "2017-03-20"
 
 ---
 
@@ -25,7 +25,7 @@ Before you can visualize your data, your must take the following actions:
 
 - Register your devices to your {{site.data.keyword.iot_short_notm}} organization.
 - Ensure that your devices are sending events to the {{site.data.keyword.iot_short_notm}}.
-- [Download the visualization sample](https://github.com/ibm-messaging/iot-visualization/archive/v0.2.0.zip) from the github repository and extract the .zip file.
+- [Download the visualization sample](https://github.com/ibm-watson-iot/rickshaw4iot/archive/master.zip) from the github repository and extract the .zip file.
 - [Install the cf command-line tool](../../starters/install_cli.html) from {{site.data.keyword.Bluemix_notm}}.
 
 ## Running the sample in {{site.data.keyword.Bluemix_notm}}
@@ -106,13 +106,4 @@ The file that references the Paho MQTT library to subscribe to device topics and
 
 Device events are passed to the `realtimeGraph.js` file to plot the graph.
 
-## Customizing the historic data display
-{: #customize_historical_display}
-
-The directory containing graphical visualization code for historic device data is `public/js/historian`. The graphing logic can be customized by editing `public/js/historian/historianGraph.js`.
-
-The file that controls ReST API calls to collect historic device data is `public/js/historian/historian.js`.
-
-Historic data is passed to the `historianGraph.js` file to plot the graph.
-
-A more detailed developer's guide is available from the Github iot-visualization wiki.
+A more detailed developer's guide is available from the [Github wiki ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/rickshaw4iot/wiki){:new_window}.

@@ -141,7 +141,8 @@ OpenWhisk は、副次作用として特定の並行一貫性モデルを保証�
 JavaScript で記述されたアクションは、単一ファイルに限定されなければなりません。ファイルは複数の関数を含むことができますが、規則により `main` という関数が存在しなければならず、これが、アクションを起動したときに呼び出されます。例えば、以下は、複数の関数を含むアクションの例です。
 
 ```
-function main() {return { payload: helper() }
+function main() {
+    return { payload: helper() }
 }
 
 function helper() {
@@ -168,7 +169,8 @@ JavaScript アクションのアクティベーションは、main 関数が以�
 ```
 // an action in which each path results in a synchronous activation
 function main(params) {
-  if (params.payload == 0) {return;
+  if (params.payload == 0) {
+     return;
   } else if (params.payload == 1) {
      return {payload: 'Hello, World!'};
   } else if (params.payload == 2) {
@@ -188,7 +190,7 @@ JavaScript アクションのアクティベーションは、main 関数が Pro
 function main(args) {
      return new Promise(function(resolve, reject) {
        setTimeout(function() {
-            resolve({ done: true });
+         resolve({ done: true });
        }, 100);
     })
  }
@@ -201,7 +203,7 @@ function main(args) {
 function main(args) {
      return new Promise(function(resolve, reject) {
        setTimeout(function() {
-            reject({ done: true });
+         reject({ done: true });
        }, 100);
     })
  }
@@ -211,16 +213,16 @@ function main(args) {
 アクションは、ある入力では同期で、別の入力では非同期であることもあります。以下に例を示します。
 
 ```
-function main(params) {
-     if (params.payload) {
+  function main(params) {
+      if (params.payload) {
          // asynchronous activation
          return new Promise(function(resolve, reject) {
                 setTimeout(function() {
-        resolve({ done: true });
-       }, 100);
-    })
- } else {
-// synchronous activation
+                  resolve({ done: true });
+                }, 100);
+             })
+      }  else {
+         // synchronous activation
          return {done: true};
       }
   }

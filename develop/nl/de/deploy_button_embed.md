@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-29"
+  years: 2015, 2017
+lastupdated: "2017-2-21"
 
 ---
 
@@ -39,18 +39,17 @@ eine Standardschaltfläche [In {{site.data.keyword.Bluemix_notm}} bereitstellen]
 ##Beispiele für das iFrame-Muster {: #iframe-example}
 
 <p>
-Unter <a class="xref" href="http://d2bm-iframe-sample.ng.bluemix.net/" target="_blank" title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)">IBM
-Bluemix D2BM iFrame Sample</a> wird ein Beispiel für das iFrame-Muster für ein öffentliches Git-Repository zur Verfügung gestellt.<div class="image"><img class="image" src="images/d2bm_iframe_sample2.png" alt="Beispiel für das iFrame-Muster 'In Bluemix bereitstellen'" /></div>
+Unter <a class="xref" href="http://d2bm-iframe-sample.ng.bluemix.net/" target="_blank" title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)">IBM Bluemix D2BM iFrame Sample<img class="image" src="../icons/launch-glyph.svg" alt="Symbol für externen Link"/></a> wird ein Beispiel für das iFrame-Muster für ein öffentliches Git-Repository zur Verfügung gestellt.<div class="image"><img class="image" src="images/d2bm_iframe_sample2.png" alt="Beispiel für das iFrame-Muster 'In Bluemix bereitstellen'" /></div>
 </p>
 
 <p>
-Klicken Sie auf <a class="xref" href="https://hub.jazz.net/project/idsorg/d2bm-iframe-sample/overview" target="_blank" title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)">Quelle</a>, um die Quelle für dieses Beispiel anzuzeigen.
+Klicken Sie auf <a class="xref" href="https://hub.jazz.net/project/idsorg/d2bm-iframe-sample/overview" target="_blank" title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)">Quelle <img class="image" src="../icons/launch-glyph.svg" alt="Symbol für externen Link"/></a>, um die Quelle für dieses Beispiel anzuzeigen.
 </p>
 
 ##iFrame-Muster integrieren {: #embed-iframe}  
 
 <ol>
-<li>Laden Sie das JavaScript-Dienstprogramm aus <a href="https://bluemix.net/deploy/embed.js" target="_blank">https://bluemix.net/deploy/embed.js</a>. Dieses Dienstprogramm ist von jQuery abhängig und wird durch Hinzufügen des folgenden Script-Tags zu Ihrem Dokument geladen:
+<li>Laden Sie das JavaScript-Dienstprogramm von <a class="xref" href="https://bluemix.net/deploy/embed.js" target="_blank" title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)">https://bluemix.net/deploy/embed.js<img class="image" src="../icons/launch-glyph.svg" alt="Symbol für externen Link"/></a>. Dieses Dienstprogramm ist von jQuery abhängig und wird durch Hinzufügen des folgenden Script-Tags zu Ihrem Dokument geladen:
 <pre class="pre">
 <code>&lt;script type="text/javascript" src="https://bluemix.net/deploy/embed.js"&gt;&lt;/script&gt;</code>
 </pre>

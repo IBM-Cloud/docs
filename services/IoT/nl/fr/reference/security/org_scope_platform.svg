@@ -92,8 +92,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.1566406"
-     inkscape:cx="324.76197"
-     inkscape:cy="123.41672"
+     inkscape:cx="444.2897"
+     inkscape:cy="191.71797"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -367,284 +367,308 @@
            id="circle5232-6-1" />
       </g>
     </g>
-    <rect
-       ry="0"
-       rx="0"
-       y="313.24237"
-       x="202.60654"
-       height="342.53656"
-       width="213.71759"
-       id="rect79371-1-6-6-9-8-7-80-8-4"
-       style="fill:#f0f0ef;fill-opacity:1;fill-rule:evenodd;stroke:none" />
-    <rect
-       ry="0"
-       rx="0"
-       y="350.478"
-       x="220.31973"
-       height="125.78778"
-       width="176.09998"
-       id="rect79371-1-6-6-9-8-7-3-5-1-8-2-9"
-       style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
-    <text
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
-       id="text44191"
-       font-size="11"
-       x="267.02603"
-       y="378.38419"
-       sodipodi:linespacing="125%">Watson IoT Platform</text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-       x="221.84567"
-       y="332.70428"
-       id="text266398"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan266400"
-         x="221.84567"
-         y="332.70428">Watson™ IoT Platform </tspan><tspan
-         sodipodi:role="line"
-         x="221.84567"
-         y="347.70432"
-         id="tspan4887">Org : q1bc3a</tspan><tspan
-         sodipodi:role="line"
-         x="221.84567"
-         y="362.70432"
-         id="tspan266402" /></text>
-    <text
-       sodipodi:linespacing="125%"
-       y="309.92212"
-       x="201.64017"
-       font-size="13"
-       id="text56812"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">IBM® Bluemix</text>
     <g
-       id="Page-1_1_"
-       transform="translate(222.23754,352.17349)">
+       id="g6488"
+       transform="translate(118.35589,84.544767)">
+      <rect
+         style="fill:#f0f0ef;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="rect79371-1-6-6-9-8-7-80-8-4"
+         width="213.71759"
+         height="342.53656"
+         x="84.250648"
+         y="228.69762"
+         rx="0"
+         ry="0" />
+      <rect
+         style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="rect79371-1-6-6-9-8-7-3-5-1-8-2-9"
+         width="176.09998"
+         height="125.78778"
+         x="101.96384"
+         y="265.93323"
+         rx="0"
+         ry="0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text266398"
+         y="286.15955"
+         x="151.48978"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="286.15955"
+           x="151.48978"
+           id="tspan266400"
+           sodipodi:role="line" /><tspan
+           id="tspan4887"
+           y="301.15955"
+           x="151.48978"
+           sodipodi:role="line">Org : q1bc3a</tspan><tspan
+           id="tspan266402"
+           y="316.15955"
+           x="151.48978"
+           sodipodi:role="line" /></text>
+      <text
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
+         id="text56812"
+         font-size="13"
+         x="83.284279"
+         y="225.37737"
+         sodipodi:linespacing="125%">IBM® Bluemix</text>
       <g
-         transform="translate(-278,-377)"
-         id="Artboard-1-Longer_1_">
+         transform="translate(103.88165,267.62872)"
+         id="Page-1_1_">
         <g
-           transform="translate(279,378)"
-           id="Page-1_2_">
+           id="Artboard-1-Longer_1_"
+           transform="translate(-278,-377)">
           <g
-             id="IOt-Icon">
-            <path
-               d="m 30.25,30.4 -17.48,0 0,-17.66 17.48,0 0,17.66 z"
-               id="Stroke-1_1_"
-               inkscape:connector-curvature="0"
-               style="fill:none;stroke:#ffffff;stroke-width:1.04999995" />
+             id="Page-1_2_"
+             transform="translate(279,378)">
             <g
-               id="Group-20">
+               id="IOt-Icon">
               <path
-                 d="m 24.31,21.55 c 0,-1.54 -1.26,-2.79 -2.81,-2.79 -1.55,0 -2.81,1.25 -2.81,2.79 0,1.54 1.26,2.79 2.81,2.79 1.55,-0.01 2.81,-1.25 2.81,-2.79 l 0,0 z"
-                 id="Stroke-2"
+                 style="fill:none;stroke:#ffffff;stroke-width:1.04999995"
                  inkscape:connector-curvature="0"
-                 style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linecap:round;stroke-linejoin:round" />
-              <path
-                 d="m 10.64,19.29 -4.77,0 C 4.84,19.29 4,18.46 4,17.43 L 4,16.7 c 0,-1.03 0.84,-1.86 1.87,-1.86 l 4.77,0"
-                 id="Stroke-4"
-                 inkscape:connector-curvature="0"
-                 style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round" />
-              <path
-                 d="m 10.64,27.31 -4.77,0 C 4.84,27.31 4,26.47 4,25.45 l 0,-0.73 c 0,-1.03 0.84,-1.86 1.87,-1.86 l 4.77,0"
-                 id="Stroke-6"
-                 inkscape:connector-curvature="0"
-                 style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round" />
-              <path
-                 d="m 32.36,23.35 4.77,0 c 1.03,0 1.87,0.83 1.87,1.86 l 0,0.73 c 0,1.03 -0.84,1.86 -1.87,1.86 l -4.77,0"
-                 id="Stroke-8"
-                 inkscape:connector-curvature="0"
-                 style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round" />
-              <path
-                 d="m 32.36,15.34 4.77,0 c 1.03,0 1.87,0.83 1.87,1.86 l 0,0.73 c 0,1.03 -0.84,1.86 -1.87,1.86 l -4.77,0"
-                 id="Stroke-10"
-                 inkscape:connector-curvature="0"
-                 style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round" />
-              <path
-                 d="m 19.72,32.39 0,4.75 c 0,1.03 -0.84,1.86 -1.87,1.86 l -0.73,0 c -1.03,0 -1.87,-0.83 -1.87,-1.86 l 0,-4.75"
-                 id="Stroke-12"
-                 inkscape:connector-curvature="0"
-                 style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round" />
-              <path
-                 d="m 27.76,32.39 0,4.75 c 0,1.03 -0.84,1.86 -1.87,1.86 l -0.73,0 c -1.03,0 -1.87,-0.83 -1.87,-1.86 l 0,-4.75"
-                 id="Stroke-14"
-                 inkscape:connector-curvature="0"
-                 style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round" />
-              <path
-                 d="m 23.3,10.61 0,-4.75 C 23.3,4.83 24.13,4 25.16,4 l 0.73,0 c 1.03,0 1.87,0.83 1.87,1.86 l 0,4.75"
-                 id="Stroke-16"
-                 inkscape:connector-curvature="0"
-                 style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round" />
-              <path
-                 d="m 15.25,10.61 0,-4.75 C 15.25,4.83 16.09,4 17.12,4 l 0.73,0 c 1.03,0 1.87,0.83 1.87,1.86 l 0,4.75"
-                 id="Stroke-18"
-                 inkscape:connector-curvature="0"
-                 style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round" />
+                 id="Stroke-1_1_"
+                 d="m 30.25,30.4 -17.48,0 0,-17.66 17.48,0 0,17.66 z" />
+              <g
+                 id="Group-20">
+                <path
+                   style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linecap:round;stroke-linejoin:round"
+                   inkscape:connector-curvature="0"
+                   id="Stroke-2"
+                   d="m 24.31,21.55 c 0,-1.54 -1.26,-2.79 -2.81,-2.79 -1.55,0 -2.81,1.25 -2.81,2.79 0,1.54 1.26,2.79 2.81,2.79 1.55,-0.01 2.81,-1.25 2.81,-2.79 l 0,0 z" />
+                <path
+                   style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round"
+                   inkscape:connector-curvature="0"
+                   id="Stroke-4"
+                   d="m 10.64,19.29 -4.77,0 C 4.84,19.29 4,18.46 4,17.43 L 4,16.7 c 0,-1.03 0.84,-1.86 1.87,-1.86 l 4.77,0" />
+                <path
+                   style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round"
+                   inkscape:connector-curvature="0"
+                   id="Stroke-6"
+                   d="m 10.64,27.31 -4.77,0 C 4.84,27.31 4,26.47 4,25.45 l 0,-0.73 c 0,-1.03 0.84,-1.86 1.87,-1.86 l 4.77,0" />
+                <path
+                   style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round"
+                   inkscape:connector-curvature="0"
+                   id="Stroke-8"
+                   d="m 32.36,23.35 4.77,0 c 1.03,0 1.87,0.83 1.87,1.86 l 0,0.73 c 0,1.03 -0.84,1.86 -1.87,1.86 l -4.77,0" />
+                <path
+                   style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round"
+                   inkscape:connector-curvature="0"
+                   id="Stroke-10"
+                   d="m 32.36,15.34 4.77,0 c 1.03,0 1.87,0.83 1.87,1.86 l 0,0.73 c 0,1.03 -0.84,1.86 -1.87,1.86 l -4.77,0" />
+                <path
+                   style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round"
+                   inkscape:connector-curvature="0"
+                   id="Stroke-12"
+                   d="m 19.72,32.39 0,4.75 c 0,1.03 -0.84,1.86 -1.87,1.86 l -0.73,0 c -1.03,0 -1.87,-0.83 -1.87,-1.86 l 0,-4.75" />
+                <path
+                   style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round"
+                   inkscape:connector-curvature="0"
+                   id="Stroke-14"
+                   d="m 27.76,32.39 0,4.75 c 0,1.03 -0.84,1.86 -1.87,1.86 l -0.73,0 c -1.03,0 -1.87,-0.83 -1.87,-1.86 l 0,-4.75" />
+                <path
+                   style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round"
+                   inkscape:connector-curvature="0"
+                   id="Stroke-16"
+                   d="m 23.3,10.61 0,-4.75 C 23.3,4.83 24.13,4 25.16,4 l 0.73,0 c 1.03,0 1.87,0.83 1.87,1.86 l 0,4.75" />
+                <path
+                   style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round"
+                   inkscape:connector-curvature="0"
+                   id="Stroke-18"
+                   d="m 15.25,10.61 0,-4.75 C 15.25,4.83 16.09,4 17.12,4 l 0.73,0 c 1.03,0 1.87,0.83 1.87,1.86 l 0,4.75" />
+              </g>
             </g>
           </g>
         </g>
       </g>
-    </g>
-    <rect
-       ry="0"
-       rx="0"
-       y="409.49271"
-       x="238.19612"
-       height="50.000008"
-       width="137.15326"
-       id="rect79371-1-6-6-9-8-7-3-5-2-2"
-       style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none" />
-    <rect
-       ry="0"
-       rx="0"
-       y="513.22906"
-       x="223.61217"
-       height="125.78779"
-       width="176.09999"
-       id="rect79371-1-6-6-9-8-7-3-5-1-8-2-9-5"
-       style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
-    <text
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
-       id="text44191-9"
-       font-size="11"
-       x="270.31845"
-       y="541.13525"
-       sodipodi:linespacing="125%">Watson IoT Platform</text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-       x="225.13811"
-       y="495.45541"
-       id="text266398-8"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan266400-1"
-         x="225.13811"
-         y="495.45541">Watson™ IoT Platform </tspan><tspan
-         sodipodi:role="line"
-         x="225.13811"
-         y="510.45541"
-         id="tspan4887-4">Org : f9gh4b</tspan><tspan
-         sodipodi:role="line"
-         x="225.13811"
-         y="525.45538"
-         id="tspan266402-7" /></text>
-    <g
-       id="Page-1_1_-1"
-       transform="translate(225.52994,514.92453)">
+      <rect
+         style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="rect79371-1-6-6-9-8-7-3-5-2-2"
+         width="137.15326"
+         height="50.000008"
+         x="119.84023"
+         y="324.94794"
+         rx="0"
+         ry="0" />
+      <rect
+         style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="rect79371-1-6-6-9-8-7-3-5-1-8-2-9-5"
+         width="176.09999"
+         height="125.78779"
+         x="105.25628"
+         y="428.68433"
+         rx="0"
+         ry="0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text266398-8"
+         y="464.91064"
+         x="154.78223"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           id="tspan4887-4"
+           y="464.91064"
+           x="154.78223"
+           sodipodi:role="line">Org : f9gh4b </tspan><tspan
+           id="tspan266402-7"
+           y="479.91064"
+           x="154.78223"
+           sodipodi:role="line" /></text>
       <g
-         transform="translate(-278,-377)"
-         id="Artboard-1-Longer_1_-5">
+         transform="translate(107.17405,430.37976)"
+         id="Page-1_1_-1">
         <g
-           transform="translate(279,378)"
-           id="Page-1_2_-4">
+           id="Artboard-1-Longer_1_-5"
+           transform="translate(-278,-377)">
           <g
-             id="IOt-Icon-3">
-            <path
-               d="m 30.25,30.4 -17.48,0 0,-17.66 17.48,0 0,17.66 z"
-               id="Stroke-1_1_-9"
-               inkscape:connector-curvature="0"
-               style="fill:none;stroke:#ffffff;stroke-width:1.04999995" />
+             id="Page-1_2_-4"
+             transform="translate(279,378)">
             <g
-               id="Group-20-7">
+               id="IOt-Icon-3">
               <path
-                 d="m 24.31,21.55 c 0,-1.54 -1.26,-2.79 -2.81,-2.79 -1.55,0 -2.81,1.25 -2.81,2.79 0,1.54 1.26,2.79 2.81,2.79 1.55,-0.01 2.81,-1.25 2.81,-2.79 l 0,0 z"
-                 id="Stroke-2-1"
+                 style="fill:none;stroke:#ffffff;stroke-width:1.04999995"
                  inkscape:connector-curvature="0"
-                 style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linecap:round;stroke-linejoin:round" />
-              <path
-                 d="m 10.64,19.29 -4.77,0 C 4.84,19.29 4,18.46 4,17.43 L 4,16.7 c 0,-1.03 0.84,-1.86 1.87,-1.86 l 4.77,0"
-                 id="Stroke-4-6"
-                 inkscape:connector-curvature="0"
-                 style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round" />
-              <path
-                 d="m 10.64,27.31 -4.77,0 C 4.84,27.31 4,26.47 4,25.45 l 0,-0.73 c 0,-1.03 0.84,-1.86 1.87,-1.86 l 4.77,0"
-                 id="Stroke-6-7"
-                 inkscape:connector-curvature="0"
-                 style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round" />
-              <path
-                 d="m 32.36,23.35 4.77,0 c 1.03,0 1.87,0.83 1.87,1.86 l 0,0.73 c 0,1.03 -0.84,1.86 -1.87,1.86 l -4.77,0"
-                 id="Stroke-8-5"
-                 inkscape:connector-curvature="0"
-                 style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round" />
-              <path
-                 d="m 32.36,15.34 4.77,0 c 1.03,0 1.87,0.83 1.87,1.86 l 0,0.73 c 0,1.03 -0.84,1.86 -1.87,1.86 l -4.77,0"
-                 id="Stroke-10-0"
-                 inkscape:connector-curvature="0"
-                 style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round" />
-              <path
-                 d="m 19.72,32.39 0,4.75 c 0,1.03 -0.84,1.86 -1.87,1.86 l -0.73,0 c -1.03,0 -1.87,-0.83 -1.87,-1.86 l 0,-4.75"
-                 id="Stroke-12-9"
-                 inkscape:connector-curvature="0"
-                 style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round" />
-              <path
-                 d="m 27.76,32.39 0,4.75 c 0,1.03 -0.84,1.86 -1.87,1.86 l -0.73,0 c -1.03,0 -1.87,-0.83 -1.87,-1.86 l 0,-4.75"
-                 id="Stroke-14-4"
-                 inkscape:connector-curvature="0"
-                 style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round" />
-              <path
-                 d="m 23.3,10.61 0,-4.75 C 23.3,4.83 24.13,4 25.16,4 l 0.73,0 c 1.03,0 1.87,0.83 1.87,1.86 l 0,4.75"
-                 id="Stroke-16-3"
-                 inkscape:connector-curvature="0"
-                 style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round" />
-              <path
-                 d="m 15.25,10.61 0,-4.75 C 15.25,4.83 16.09,4 17.12,4 l 0.73,0 c 1.03,0 1.87,0.83 1.87,1.86 l 0,4.75"
-                 id="Stroke-18-3"
-                 inkscape:connector-curvature="0"
-                 style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round" />
+                 id="Stroke-1_1_-9"
+                 d="m 30.25,30.4 -17.48,0 0,-17.66 17.48,0 0,17.66 z" />
+              <g
+                 id="Group-20-7">
+                <path
+                   style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linecap:round;stroke-linejoin:round"
+                   inkscape:connector-curvature="0"
+                   id="Stroke-2-1"
+                   d="m 24.31,21.55 c 0,-1.54 -1.26,-2.79 -2.81,-2.79 -1.55,0 -2.81,1.25 -2.81,2.79 0,1.54 1.26,2.79 2.81,2.79 1.55,-0.01 2.81,-1.25 2.81,-2.79 l 0,0 z" />
+                <path
+                   style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round"
+                   inkscape:connector-curvature="0"
+                   id="Stroke-4-6"
+                   d="m 10.64,19.29 -4.77,0 C 4.84,19.29 4,18.46 4,17.43 L 4,16.7 c 0,-1.03 0.84,-1.86 1.87,-1.86 l 4.77,0" />
+                <path
+                   style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round"
+                   inkscape:connector-curvature="0"
+                   id="Stroke-6-7"
+                   d="m 10.64,27.31 -4.77,0 C 4.84,27.31 4,26.47 4,25.45 l 0,-0.73 c 0,-1.03 0.84,-1.86 1.87,-1.86 l 4.77,0" />
+                <path
+                   style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round"
+                   inkscape:connector-curvature="0"
+                   id="Stroke-8-5"
+                   d="m 32.36,23.35 4.77,0 c 1.03,0 1.87,0.83 1.87,1.86 l 0,0.73 c 0,1.03 -0.84,1.86 -1.87,1.86 l -4.77,0" />
+                <path
+                   style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round"
+                   inkscape:connector-curvature="0"
+                   id="Stroke-10-0"
+                   d="m 32.36,15.34 4.77,0 c 1.03,0 1.87,0.83 1.87,1.86 l 0,0.73 c 0,1.03 -0.84,1.86 -1.87,1.86 l -4.77,0" />
+                <path
+                   style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round"
+                   inkscape:connector-curvature="0"
+                   id="Stroke-12-9"
+                   d="m 19.72,32.39 0,4.75 c 0,1.03 -0.84,1.86 -1.87,1.86 l -0.73,0 c -1.03,0 -1.87,-0.83 -1.87,-1.86 l 0,-4.75" />
+                <path
+                   style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round"
+                   inkscape:connector-curvature="0"
+                   id="Stroke-14-4"
+                   d="m 27.76,32.39 0,4.75 c 0,1.03 -0.84,1.86 -1.87,1.86 l -0.73,0 c -1.03,0 -1.87,-0.83 -1.87,-1.86 l 0,-4.75" />
+                <path
+                   style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round"
+                   inkscape:connector-curvature="0"
+                   id="Stroke-16-3"
+                   d="m 23.3,10.61 0,-4.75 C 23.3,4.83 24.13,4 25.16,4 l 0.73,0 c 1.03,0 1.87,0.83 1.87,1.86 l 0,4.75" />
+                <path
+                   style="fill:none;stroke:#ffffff;stroke-width:1.04999995;stroke-linejoin:round"
+                   inkscape:connector-curvature="0"
+                   id="Stroke-18-3"
+                   d="m 15.25,10.61 0,-4.75 C 15.25,4.83 16.09,4 17.12,4 l 0.73,0 c 1.03,0 1.87,0.83 1.87,1.86 l 0,4.75" />
+              </g>
             </g>
           </g>
         </g>
       </g>
+      <rect
+         style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="rect79371-1-6-6-9-8-7-3-5-2-2-0"
+         width="137.15327"
+         height="50.000011"
+         x="123.13268"
+         y="487.69904"
+         rx="0"
+         ry="0" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         x="132.77061"
+         y="503.06281"
+         id="text44235-7-4"
+         sodipodi:linespacing="125%"><tspan
+           id="tspan13797"
+           sodipodi:role="line"
+           x="132.77061"
+           y="503.06281">Espace de sujet : f9gh4b</tspan><tspan
+           id="tspan14869"
+           sodipodi:role="line"
+           x="132.77061"
+           y="516.81281">Terminal C</tspan><tspan
+           id="tspan14877"
+           sodipodi:role="line"
+           x="132.77061"
+           y="530.56281">Application 2</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         x="129.05606"
+         y="339.18427"
+         id="text44235-7-4-7"
+         sodipodi:linespacing="125%"><tspan
+           id="tspan13797-0"
+           sodipodi:role="line"
+           x="129.05606"
+           y="339.18427">Espace de sujet : q1bc3a</tspan><tspan
+           id="tspan14867"
+           sodipodi:role="line"
+           x="129.05606"
+           y="352.93427">Terminal A</tspan><tspan
+           id="tspan14871"
+           sodipodi:role="line"
+           x="129.05606"
+           y="366.68427">Application 1</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text266398-1"
+         y="250.94772"
+         x="123.83478"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="250.94772"
+           x="123.83478"
+           id="tspan266400-4"
+           sodipodi:role="line">Watson™ IoT Platform </tspan><tspan
+           id="tspan4887-47"
+           y="265.94772"
+           x="123.83478"
+           sodipodi:role="line" /><tspan
+           id="tspan266402-5"
+           y="280.94772"
+           x="123.83478"
+           sodipodi:role="line" /></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text266398-7"
+         y="410.35199"
+         x="124.00162"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="410.35199"
+           x="124.00162"
+           id="tspan266400-2"
+           sodipodi:role="line">Watson™ IoT Platform </tspan><tspan
+           id="tspan4887-7"
+           y="425.35199"
+           x="124.00162"
+           sodipodi:role="line" /><tspan
+           id="tspan266402-0"
+           y="440.35199"
+           x="124.00162"
+           sodipodi:role="line" /></text>
     </g>
-    <rect
-       ry="0"
-       rx="0"
-       y="572.24377"
-       x="241.48857"
-       height="50.000011"
-       width="137.15327"
-       id="rect79371-1-6-6-9-8-7-3-5-2-2-0"
-       style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none" />
-    <text
-       sodipodi:linespacing="125%"
-       id="text44235-7-4"
-       y="587.60754"
-       x="249.1265"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-       xml:space="preserve"><tspan
-         y="587.60754"
-         x="249.1265"
-         sodipodi:role="line"
-         id="tspan13797">Espace de sujet : f9gh4b</tspan><tspan
-         y="601.35754"
-         x="249.1265"
-         sodipodi:role="line"
-         id="tspan14869">Terminal C</tspan><tspan
-         y="615.10754"
-         x="249.1265"
-         sodipodi:role="line"
-         id="tspan14877">Application 2</tspan></text>
-    <text
-       sodipodi:linespacing="125%"
-       id="text44235-7-4-7"
-       y="423.72903"
-       x="245.41193"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-       xml:space="preserve"><tspan
-         y="423.72903"
-         x="245.41193"
-         sodipodi:role="line"
-         id="tspan13797-0">Espace de sujet : q1bc3a</tspan><tspan
-         y="437.47903"
-         x="245.41193"
-         sodipodi:role="line"
-         id="tspan14867">Terminal A</tspan><tspan
-         y="451.22903"
-         x="245.41193"
-         sodipodi:role="line"
-         id="tspan14871">Application 1</tspan></text>
     <g
        id="g6562"
        transform="translate(78.622125,-21.581331)">
@@ -684,7 +708,7 @@
        style="opacity:1;fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-3-4)" />
     <rect
        x="64.893433"
-       y="419.45322"
+       y="421.45322"
        width="127.9248"
        height="26.48238"
        id="rect56941-0-3-9"
@@ -698,14 +722,14 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">
       <tspan
          sodipodi:role="line"
-         id="tspan3463"
+         id="tspan3466"
          x="128.23328"
-         y="430.37378">Pas de</tspan>
+         y="430.37378">Pas de commande</tspan>
       <tspan
          sodipodi:role="line"
-         id="tspan3465"
+         id="tspan3468"
          x="128.23328"
-         y="444.12378">commande pour A</tspan>
+         y="444.12378">pour A</tspan>
     </text>
     <rect
        style="opacity:1;fill:#000000;fill-opacity:0;stroke:none;stroke-width:0.90653205;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -728,21 +752,21 @@
        style="opacity:1;fill:#ffffff" />
     <text
        sodipodi:linespacing="125%"
-       y="431.28076"
+       y="429.28076"
        x="487.67786"
        font-size="11"
        id="text56834-0-4-8-0-89-9-0-1"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">
       <tspan
          sodipodi:role="line"
-         id="tspan3521"
+         id="tspan3470"
          x="487.67786"
-         y="431.28076">Pas de message</tspan>
+         y="429.28076">Pas de message</tspan>
       <tspan
          sodipodi:role="line"
-         id="tspan3523"
+         id="tspan3472"
          x="487.67786"
-         y="445.03076">pour l'application 1</tspan>
+         y="443.03076">pour l'application 1</tspan>
     </text>
     <path
        inkscape:connector-curvature="0"
@@ -759,19 +783,19 @@
     <text
        sodipodi:linespacing="125%"
        y="603.26819"
-       x="125.28064"
+       x="127.28064"
        font-size="11"
        id="text56834-0-4-8-0-89-9-4"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">
       <tspan
          sodipodi:role="line"
-         id="tspan3459"
-         x="125.28064"
+         id="tspan3462"
+         x="127.28064"
          y="603.26819">Message pour</tspan>
       <tspan
          sodipodi:role="line"
-         id="tspan3461"
-         x="125.28064"
+         id="tspan3464"
+         x="127.28064"
          y="617.01819">l'application 1</tspan>
     </text>
     <path

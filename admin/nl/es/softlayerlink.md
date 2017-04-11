@@ -22,7 +22,7 @@ Si tiene una cuenta de prueba de {{site.data.keyword.Bluemix_notm}} y desea acce
 
 Puede unificar las cuentas de facturación existentes de {{site.data.keyword.Bluemix_notm}} y SoftLayer enlazando las cuentas. Cuando enlace las cuentas, se le facturará mediante {{site.data.keyword.Bluemix_notm}} para ambos recursos de {{site.data.keyword.Bluemix_notm}} y SoftLayer.
 
-**Atención:** Una cuenta de suscripción de {{site.data.keyword.Bluemix_notm}} no se puede enlazar con una cuenta de SoftLayer. Para acceder al panel de control Infraestructura, debe crear una cuenta Pago según uso, una segunda cuenta, que se enlaza automáticamente con una cuenta SoftLayer. A continuación, recibirá dos facturas, una para cada cuenta de {{site.data.keyword.Bluemix_notm}}. Aunque los recursos de la infraestructura se facturarán en una cuenta Pago según uso independiente, los recursos se pueden utilizar con aplicaciones y servicios en su cuenta de suscripción. Por ejemplo, si activa un servicio de Watson en su cuenta de suscripción, puede copiar las credenciales de servicio y, a continuación, añadir las credenciales a la aplicación nativa que se obtiene de la cuenta Pago según uso.
+**Atención:** Una cuenta de suscripción de {{site.data.keyword.Bluemix_notm}} no se puede enlazar con una cuenta de SoftLayer. Para acceder al panel de control Infraestructura, debe crear una cuenta Pago según uso, una segunda cuenta, que se enlaza automáticamente con una cuenta SoftLayer. A continuación, recibirá dos facturas, una para cada cuenta de {{site.data.keyword.Bluemix_notm}}. Aunque los recursos de la infraestructura se facturarán en una cuenta Pago según uso independiente, los recursos se pueden utilizar con aplicaciones y servicios en su cuenta de suscripción. Por ejemplo, si activa un servicio de Watson en su cuenta de suscripción, puede copiar las credenciales de servicio y, a continuación, añadir las credenciales a la aplicación nativa que se obtiene de la cuenta Pago según uso. 
 {:shortdesc}
 
 ## Actualización a una cuenta de Pago según uso de {{site.data.keyword.Bluemix_notm}}
@@ -92,49 +92,64 @@ Para obtener más información sobre cómo invitar a miembros a través de la in
 ## Cambiar al ID de IBM
 {: #ibmid_switch}
 
-La autenticación en SoftLayer ahora utiliza el ID de IBM para proporcionar un inicio de sesión único para todo {{site.data.keyword.Bluemix_notm}}. Las cuentas existentes de SoftLayer se están habilitando para poder cambiar a la autenticación mediante ID de IBM y el asistente de migración le guiará por este proceso de cambio.
+Ahora la autenticación en SoftLayer utiliza el ID de IBM para proporcionar un inicio de sesión único para todo {{site.data.keyword.Bluemix_notm}}. Las cuentas existentes de SoftLayer se están habilitando para poder cambiar a la autenticación mediante ID de IBM.
+Un asistente de migración le guiará por este cambio.
 {:shortdesc}
 
-Si es un usuario maestro y no ve el indicador para conmutar a un ID de IBM en el {{site.data.keyword.slportal}}, [póngase en contacto con el equipo de soporte de IBM](https://console.ng.bluemix.net/docs/support/index.html#contacting-support) para obtener ayuda para habilitar esta característica. 
+Si es un usuario maestro y no ve el indicador para cambiar a un ID de IBM en el {{site.data.keyword.slportal}}, [póngase en contacto con el equipo de soporte de IBM](/docs/support/index.html#contacting-support) para obtener ayuda para habilitar esta característica.
 
-Cuando empiece a conmutar al ID de IBM, siempre puede cancelar la conmutación antes de finalizar el proceso. Sin embargo, se le seguirá solicitando que cambie al ID de IBM la próxima vez que inicie sesión. Cada cuenta que piense enlazar a la cuenta de {{site.data.keyword.Bluemix_notm}} debe ser propiedad de un ID de IBM exclusivo con una dirección de correo electrónico exclusiva. 
+Cuando empiece a cambiar a un ID de IBM, siempre puede cancelar el cambio antes de finalizar el proceso. Sin embargo, cada vez que inicie una sesión, se mostrará el indicador para cambiar a un ID de IBM. Cada cuenta de SoftLayer que piense enlazar a la cuenta de {{site.data.keyword.Bluemix_notm}} debe ser propiedad de un ID de IBM exclusivo con una dirección de correo electrónico exclusiva.
 
-Para cambiar su nombre de usuario de SoftLayer existente por un ID de IBM, siga estos pasos:
+Para pasar de un nombre de usuario de SoftLayer existente a un ID de IBM, siga estos pasos:
 
- 1. Si ha seleccionado **Más tarde** en el indicador inicial después de iniciar la sesión pero ha decidido que desea empezar a cambiar a la autenticación con ID de IBM en la sesión actual, vaya a la página Editar perfil de usuario y pulse **Cambiar a ID de IBM**.
- 2. Siga las indicaciones del asistente para crear el ID de IBM. El ID de IBM es una dirección de correo electrónica exclusiva y no se puede modificar después de que se cree. Puede actualizar el correo electrónico asociado con el perfil más adelante; de forma predeterminada dicho valor se establece como lo que se ha definido para el ID de IBM. Recibirá un correo electrónico con su código de registro que le indicará que ha completado el asistente de migración.  
- 3. Cuando reciba el correo electrónico, siga el enlace o copie el URL en un navegador y especifique el código de registro. El código es válido durante 7 días y solo se puede utilizar una vez. 
+ 1. Inicie una sesión en su cuenta de SoftLayer. Cuando se muestre el indicador para cambiar a un ID de IBM, pulse **Aceptar**. 
  
+    Si ya ha iniciado una sesión (ha pulsado **Más tarde** en el indicador para cambiar a un ID de IBM), pero desea cambiar a la autenticación mediante ID de IBM en la sesión actual, vaya a la página Editar perfil de usuario y pulse **Cambiar a ID de IBM**.
+	
+ 2. Siga las indicaciones del asistente para crear el ID de IBM. 
  
-Después de cambiar a autenticación con ID de IBM, solo podrá iniciar la sesión en su cuenta con su ID de IBM. En el indicador de inicio de sesión, pulse **Iniciar sesión con el ID de IBM** en lugar de especificar el nombre de usuario y contraseña de SoftLayer.
+    Para crear un nuevo ID de IBM, escriba una dirección de correo electrónico que no utilice actualmente ningún otro ID de IBM. El nuevo ID de IBM utilizará la dirección de correo electrónico como nombre de usuario y la dirección de correo electrónico. Una vez creado el ID de IBM, puede actualizar la dirección de correo electrónico asociada al ID de IBM, pero no puede cambiar el nombre de usuario. El correo electrónico de invitación irá a la dirección de correo electrónico especificada. 
+    
+    Una vez completado el asistente, recibirá un correo electrónico con su código de registro.
  
-Si consulta su pedido como cliente nuevo, se le pedirá una dirección de correo electrónico para la cuenta del ID de IBM existente o que cree una cuenta nueva del ID de IBM. Si crea un nuevo ID de IBM, escriba la dirección de correo electrónico del nuevo ID de IBM. El correo electrónico de invitación se enviará a esta dirección de correo electrónico, que también constituye el nombre de usuario para el nuevo ID de IBM. 
+ 3. Cuando reciba el correo electrónico, siga el enlace o copie el URL en un navegador y especifique el código de registro. El código es válido durante 7 días y solo se puede utilizar una vez.
+ 
+    Después de cambiar a autenticación con ID de IBM, solo podrá iniciar la sesión en su cuenta con su ID de IBM. En el indicador de inicio de sesión de la cuenta, vaya a la sección **Inicio de sesión de cuenta de ID de IBM** y pulse **Iniciar sesión con ID de IBM**. No utilice los campos el **Nombre de usuario** y **Contraseña** que ha utilizado previamente con su ID de SoftLayer.
+ 
+Si consulta su pedido como cliente nuevo, se le solicitará su ID de IBM o se le pedirá que cree un nuevo ID de IBM.  
+
+ * Para utilizar un ID de IBM existente, escriba la dirección de correo electrónico del ID de IBM si es exclusivo (es decir, no compartido entre varios ID de IBM). 
+ 
+ * Para crear un nuevo ID de IBM, escriba una dirección de correo electrónico que no utilice actualmente ningún otro ID de IBM. El nuevo ID de IBM utilizará la dirección de correo electrónico como nombre de usuario y la dirección de correo electrónico. Una vez creado el ID de IBM, puede actualizar la dirección de correo electrónico asociada al ID de IBM, pero no puede cambiar el nombre de usuario. El correo electrónico de invitación irá a la dirección de correo electrónico especificada. 
+
+Para resolver problemas de inicio de sesión en con el ID de IBM, consulte [Resolución de problemas para acceder a Bluemix](/docs/troubleshoot/ts_accessing.html#accessing).
+
 
 ### Cómo permitir a los usuarios que cambien a un ID de IBM
 {: #link_accounts_resellers}
 
-En algunos casos, para que un usuario pueda cambiar a un ID de IBM, el concesionario o distribuidor debe habilitar la cuenta para que utilice la autenticación con ID de IBM.  
+En algunos casos, para que un usuario pueda cambiar a un ID de IBM, el concesionario o distribuidor debe habilitar la cuenta para que utilice la autenticación con ID de IBM. 
 
- * Para permitir que una cuenta existente con credenciales antiguas de SoftLayer utilice la autenticación con ID de IBM, [póngase en contacto con el equipo de soporte de IBM](https://console.ng.bluemix.net/docs/support/index.html#contacting-support) para que habilite la migración a ID de IBM. Este debe estar habilitado para cada cuenta existente de usuario final que desee enlazar a una cuenta de {{site.data.keyword.Bluemix_notm}}. 
+ * Para permitir que una cuenta existente con credenciales antiguas de SoftLayer utilice la autenticación con ID de IBM, [póngase en contacto con el equipo de soporte de IBM](https://console.ng.bluemix.net/docs/support/index.html#contacting-support) para que habilite la migración a ID de IBM. Este debe estar habilitado para cada cuenta existente de usuario final que desee enlazar a una cuenta de {{site.data.keyword.Bluemix_notm}}.
  
- * Para garantizar que las nuevas cuentas de usuario se creen con un ID de IBM, se debe establecer el atributo `CREATE_NEW_ACCOUNT_WITH_IBMid_AUTHENTICATION` en la cuenta de usuario maestro. [Póngase en contacto con el equipo de soporte de IBM](https://console.ng.bluemix.net/docs/support/index.html#contacting-support) o con su proveedor para que establezca este atributo para sus cuentas. 
+ * Para garantizar que las nuevas cuentas de usuario se creen con un ID de IBM, se debe establecer el atributo `CREATE_NEW_ACCOUNT_WITH_IBMid_AUTHENTICATION` en la cuenta de usuario maestro. [Póngase en contacto con el equipo de soporte de IBM](https://console.ng.bluemix.net/docs/support/index.html#contacting-support) o con su proveedor para que establezca este atributo para sus cuentas.
  
 ### Enlace de sus cuentas de usuario
 {: #link_user_accounts}
-Después de que los usuarios cambien a la autenticación con ID de IBM, los concesionarios y distribuidores pueden enlazar cuentas de SoftLayer y de {{site.data.keyword.Bluemix_notm}}. 
+Después de que los usuarios cambien a la autenticación con ID de IBM, los concesionarios y distribuidores pueden enlazar cuentas de SoftLayer y de {{site.data.keyword.Bluemix_notm}}.
 
 **Nota:** 
-  * El usuario maestro de la cuenta que se enlaza debe ser un ID de IBM. 
+  * El usuario maestro de la cuenta que se enlaza debe ser un ID de IBM.
   * Inicie una sesión en cada cuenta de usuario final como usuario maestro. Vaya a la página de perfil de usuario y pulse **Cambiar al ID de IBM**.
-  * Cada cuenta que enlace a la cuenta de {{site.data.keyword.Bluemix_notm}} debe ser propiedad de un ID de IBM exclusivo con una dirección de correo electrónico exclusiva. Aunque un ID de IBM puede poseer varias cuentas de SoftLayer, no puede enlazar las cuentas a cuentas de {{site.data.keyword.Bluemix_notm}}. Si un ID de IBM es el usuario maestro de varias cuentas de SoftLayer y desea enlazar dichas cuentas a cuentas de {{site.data.keyword.Bluemix_notm}}, debe cambiar los usuarios maestros para disponer de un ID de IBM exclusivo para cada cuenta. Póngase en contacto con el [equipo de soporte de IBM SoftLayer ![icono de enlace externo](../icons/launch-glyph.svg)](https://knowledgelayer.softlayer.com/topic/support){: new_window} para cambiar el usuario maestro en una cuenta de SoftLayer. 
+  * Cada cuenta que enlace a la cuenta de {{site.data.keyword.Bluemix_notm}} debe ser propiedad de un ID de IBM exclusivo con una dirección de correo electrónico exclusiva. Aunque un ID de IBM puede poseer varias cuentas de SoftLayer, no puede enlazar las cuentas a cuentas de {{site.data.keyword.Bluemix_notm}}. Si un ID de IBM es el usuario maestro de varias cuentas de SoftLayer y desea enlazar dichas cuentas a cuentas de {{site.data.keyword.Bluemix_notm}}, debe cambiar los usuarios maestros para disponer de un ID de IBM exclusivo para cada cuenta. Póngase en contacto con el [equipo de soporte de IBM SoftLayer ![icono de enlace externo](../icons/launch-glyph.svg)](https://knowledgelayer.softlayer.com/topic/support){: new_window} para cambiar el usuario maestro en una cuenta de SoftLayer.
   
-Siga estos pasos para enlazar cada cuenta a una cuenta de {{site.data.keyword.Bluemix_notm}}:  
+Siga estos pasos para enlazar cada cuenta a una cuenta de {{site.data.keyword.Bluemix_notm}}: 
 
- 1. Para crear una nueva cuenta de {{site.data.keyword.Bluemix_notm}} o para enlazar con una cuenta de {{site.data.keyword.Bluemix_notm}} existente, inicie una sesión en la cuenta de SoftLayer como usuario maestro y pulse el enlace **{{site.data.keyword.Bluemix_notm}}**. Esto le ofrecerá la oportunidad de crear una nueva cuenta de {{site.data.keyword.Bluemix_notm}} o de enlazar con una cuenta existente de {{site.data.keyword.Bluemix_notm}}. El ID de IBM que constituya el usuario maestro para la cuenta de SoftLayer debe ser propietario de la cuenta de Bluemix con la que está enlazando. Siga las indicaciones del asistente, incluida la adición de los usuarios de la cuenta de SoftLayer a la cuenta de {{site.data.keyword.Bluemix_notm}}.  
- 2. Después de enlazar la cuenta, indique a los usuarios finales de la cuenta que migren al ID de IBM. Luego los usuarios finales podrán acceder a los paneles de control de infraestructura, aplicaciones y servicios de la consola de {{site.data.keyword.Bluemix_notm}}. 
- 3. Cuando se añadan nuevos usuarios a la cuenta enlazada, tendrá que añadirlos a la cuenta de SoftLayer y a la cuenta de {{site.data.keyword.Bluemix_notm}} para que tengan acceso a todas las funciones de la consola unificada. 
+ 1. Para crear una nueva cuenta de {{site.data.keyword.Bluemix_notm}} o para enlazar con una cuenta de {{site.data.keyword.Bluemix_notm}} existente, inicie una sesión en la cuenta de SoftLayer como usuario maestro y pulse el enlace **{{site.data.keyword.Bluemix_notm}}**. Esto le ofrecerá la oportunidad de crear una nueva cuenta de {{site.data.keyword.Bluemix_notm}} o de enlazar con una cuenta existente de {{site.data.keyword.Bluemix_notm}}. El ID de IBM que constituya el usuario maestro para la cuenta de SoftLayer debe ser propietario de la cuenta de Bluemix con la que está enlazando. Siga las indicaciones del asistente, incluida la adición de los usuarios de la cuenta de SoftLayer a la cuenta de {{site.data.keyword.Bluemix_notm}}. 
+ 2. Después de enlazar la cuenta, indique a los usuarios finales de la cuenta que migren al ID de IBM. Luego los usuarios finales podrán acceder a los paneles de control de infraestructura, aplicaciones y servicios de la consola de {{site.data.keyword.Bluemix_notm}}.
+ 3. Cuando se añadan nuevos usuarios a la cuenta enlazada, tendrá que añadirlos a la cuenta de SoftLayer y a la cuenta de {{site.data.keyword.Bluemix_notm}} para que tengan acceso a todas las funciones de la consola unificada.
  
-**Recomendación:** migre únicamente cuentas de usuario final a un ID de IBM. No migre cuentas derivadas, que son cuentas padre de cuentas de usuario final y no contienen recursos. Los usuarios de cuentas derivadas que migren a un ID de IBM pierden la posibilidad de iniciar una sesión en el portal de Brand Agent Portal (BAP). 
+**Recomendación:** migre únicamente cuentas de usuario final a un ID de IBM. No migre cuentas derivadas, que son cuentas padre de cuentas de usuario final y no contienen recursos. Los usuarios de cuentas derivadas que migren a un ID de IBM pierden la posibilidad de iniciar una sesión en el portal de Brand Agent Portal (BAP).
 
 <!--
 ### Mapping multiple SoftLayer accounts to one IBMid
@@ -189,7 +204,7 @@ No todos los servicios de {{site.data.keyword.Bluemix_notm}} pueden utilizarse c
 * {{site.data.keyword.mqa}}
 * {{site.data.keyword.mobileappbuilder_short}}
 * {{site.data.keyword.mql}}
-* {{site.data.keyword.nlclassifierlshort}}
+* {{site.data.keyword.nlclassifiershort}}
 * {{site.data.keyword.objectstorageshort}}
 * {{site.data.keyword.personalityinsightsshort}}
 * {{site.data.keyword.presenceinsightsshort}}

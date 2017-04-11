@@ -148,7 +148,7 @@ Specifies the unique key that is assigned to the application that you created on
 
 **bluemixRegionSuffix**
 
-Specifies the location where the app is hosted. The ```bluemixRegion``` parameter specifies which Bluemix deployment you are using. You can set this value with a ```BMSClient.REGION``` static property and use one of three values:
+Specifies the location where the app is hosted. The `bluemixRegion` parameter specifies which Bluemix deployment you are using. You can set this value with a `BMSClient.REGION` static property and use one of three values:
 
 - BMSClient.REGION_US_SOUTH
 - BMSClient.REGION_UK
@@ -204,7 +204,7 @@ Create a backend application in the Boilerplates section Bluemix® catalog, whic
 
 ##Pass the token to Push Notifications
 
-After the token is received from APNs, pass the token to Push Notifications as part of the ```registerDevice:withDeviceToken``` method.
+After the token is received from APNs, pass the token to Push Notifications as part of the `registerDevice:withDeviceToken` method.
 
 ###Objective-C
 
@@ -230,7 +230,7 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 
 ###Swift
 
-After the token is received from APNS, pass the token to Push Notifications as part of the ```didRegisterForRemoteNotificationsWithDeviceToken``` method.
+After the token is received from APNS, pass the token to Push Notifications as part of the `didRegisterForRemoteNotificationsWithDeviceToken` method.
 
 ```
 func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){

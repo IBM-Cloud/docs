@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-29"
+  years: 2015, 2017
+lastupdated: "2017-2-21"
 
 ---
 
@@ -44,17 +44,17 @@ nom d'application précédent, de votre nom d'utilisateur et de l'heure.
 ##Exemple de flux de trame d'information {: #iframe-example}
 
 <p>
-L'<a class="xref" href="http://d2bm-iframe-sample.ng.bluemix.net/" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre">exemple IBM Bluemix D2BM iFrame</a> fournit un exemple de flux de trame d'information pour un référentiel Git public.<div class="image"><img class="image" src="images/d2bm_iframe_sample2.png" alt="Exemple de flux de trame d'information Déployer dans Bluemix" /></div>
+L'<a class="xref" href="http://d2bm-iframe-sample.ng.bluemix.net/" target="_blank" title="(s'ouvre dans un nouvel onglet ou une nouvelle fenêtre)">exemple IBM Bluemix D2BM iFrame<img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a> fournit un exemple de flux de trame d'information pour un référentiel Git public.<div class="image"><img class="image" src="images/d2bm_iframe_sample2.png" alt="Exemple de flux de trame d'information Déployer dans Bluemix" /></div>
 </p>
 
 <p>
-Pour afficher la source de cet exemple, cliquez sur <a class="xref" href="https://hub.jazz.net/project/idsorg/d2bm-iframe-sample/overview" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)">source</a>.
+Pour afficher la source de cet exempke, cliquez sur <a class="xref" href="https://hub.jazz.net/project/idsorg/d2bm-iframe-sample/overview" target="_blank" title="(s'ouvre dans un nouvel onglet ou une nouvelle fenêtre)">source<img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a>.
 </p>
 
 ##Incorporation du flux de trame d'information {: #embed-iframe}  
 
 <ol>
-<li>Chargez l'utilitaire JavaScript depuis <a href="https://bluemix.net/deploy/embed.js" target="_blank">https://bluemix.net/deploy/embed.js</a>. Cet utilitaire dépend de jQuery. Pour le charger, ajoutez la balise de script suivante à votre document :
+<li>Chargez l'utilitaire JavaScript depuis <a class="xref" href="https://bluemix.net/deploy/embed.js" target="_blank" title="(s'ouvre dans un nouvel onglet ou une nouvelle fenêtre)">https://bluemix.net/deploy/embed.js<img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a>. Cet utilitaire dépend de jQuery. Pour le charger, ajoutez la balise de script suivante à votre document :
 <pre class="pre">
 <code>&lt;script type="text/javascript" src="https://bluemix.net/deploy/embed.js"&gt;&lt;/script&gt;</code>
 </pre>
@@ -66,9 +66,7 @@ Pour afficher la source de cet exemple, cliquez sur <a class="xref" href="https:
 <dd class="pd">ID du noeud domNode dans lequel insérer la trame d'information à votre contenu.</dd>
 
 <dt class="pt dlterm">callback</dt>
-<dd class="pd">Cet argument est appelé lorsque le flux de trame d'information est terminé ou si une
-erreur se produit. L'argument répond avec un résultat. Le fragment de code suivant
-indique un rappel de résultat ayant abouti :</dd>
+<dd class="pd">Cet argument est appelé lorsque le flux de trame d'information est terminé ou si une erreur se produit. L'argument répond avec un résultat. Le fragment de code suivant indique un rappel de résultat ayant abouti :</dd>
 
 <dt class="pt dlterm">args</dt>
 <dd class="pd">Objet contenant les paramètres d'entrée au widget. Les paramètres suivants sont disponibles :
@@ -111,6 +109,4 @@ est <code>470</code>.</dd>
 </li>
 </ol>  
 
-**Astuce :** pour minimiser l'interaction avec la trame d'information, vous pouvez préremplir les zones
-**app_name**,
-**region_id**, **organization_guid**, **space_guid** et **auto_login**.
+**Astuce :** pour minimiser l'interaction avec la trame d'information, vous pouvez préremplir les zones **app_name**, **region_id**, **organization_guid**, **space_guid** et **auto_login**.

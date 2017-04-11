@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -60,7 +60,8 @@ Depois que você não tiver mais necessidade deles, será possível excluir os o
 
 O cabeçalho `X-Delete-At` usa um número inteiro que representa o período de tempo no qual excluir o objeto. O cabeçalho `X-Delete_After` usa um número inteiro que representa o número de segundos após os quais o objeto é excluído.
 
-**Nota:** a exclusão real de um objeto pode não acontecer no horário exato indicado. No entanto, o objeto irá de fato expirar no horário especificado. Nesse momento, o objeto ainda estará acessível. A exclusão real ocorrerá na próxima vez que o daemon swift-object-expirer, que está configurado em seu cluster Swift, for executado.
+**Nota:** a exclusão real de um objeto pode não acontecer no horário exato indicado. No
+entanto, o objeto expirará no horário especificado. Nesse momento, o objeto ainda estará acessível. A exclusão real ocorrerá na próxima vez que o daemon swift-object-expirer, que está configurado em seu cluster Swift, for executado.
 
 #### Para usar comandos Swift:
 

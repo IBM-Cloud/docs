@@ -20,7 +20,7 @@ Auf Benutzer-ID basierte Push-Benachrichtigungen zielen mit angepassten Nachrich
 ## Gerät mit Benutzer-ID registrieren
 Um Push-Benachrichtigungen zu aktivieren, die auf einer Benutzer-ID basieren, müssen Sie sicherstellen, dass Sie das Gerät mit einer Benutzer-ID registrieren.     
 
-Die Benutzer-ID kann eine beliebige Zeichenfolge sein, die die Anwendung gegenüber der API für die Geräteregistrierung bereitstellt. Normalerweise führt eine mobile Anwendung zuerst einen Authentifizierungszyklus aus, in dessen Verlauf der Benutzer mobiler Apps bei einem Authentifizierungsservice wie [{{site.data.keyword.amafull}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html "Symbol für externen Link"){: new_window} authentifiziert wird. Nach der erfolgreichen Authentifizierung wird die ID des authentifizierten Benutzers dann an die API für Push-Geräteregistrierungen übergeben. 
+Die Benutzer-ID kann eine beliebige Zeichenfolge sein, die die Anwendung gegenüber der API für die Geräteregistrierung bereitstellt. Normalerweise führt eine mobile Anwendung zuerst einen Authentifizierungszyklus aus, in dessen Verlauf der Benutzer mobiler Apps bei einem Authentifizierungsservice wie [{{site.data.keyword.amafull}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html){: new_window} authentifiziert wird. Nach der erfolgreichen Authentifizierung wird die ID des authentifizierten Benutzers dann an die API für Push-Geräteregistrierungen übergeben. 
 
 ## Benutzeranmeldung/-abmeldung synchronisieren 
 

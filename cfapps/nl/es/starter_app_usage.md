@@ -23,7 +23,7 @@ Siga estos pasos para usar las aplicaciones de inicio.
 {:shortdesc}
 
 1. En el [Catálogo de {{site.data.keyword.Bluemix_notm}}](https://console.{DomainName}/catalog/),
-vaya a la sección Apps de Cloud Foundry. 
+vaya a la sección Apps de Cloud Foundry.
 2. Pulse en el tiempo de ejecución que quiera utilizar.
 3. Inicie sesión en {{site.data.keyword.Bluemix_notm}}, si aún no lo ha hecho.
 4. Proporcione el nombre de app, modifique el nombre de host si fuera necesario, y pulse **Crear**.

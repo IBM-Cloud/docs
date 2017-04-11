@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-08"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2016-09-08"
 ## Gerätemanagementanforderungen mithilfe des Dashboards initiieren
 {: #initiating-dm-dashboard}
 
-Anforderungen können über das Dashboard durch Navigieren zur Registerkarte **Aktionen** auf der Seite 'Geräte' initiiert werden. Mit der Schaltfläche **Aktion initiieren** wird ein Dialogfeld geöffnet, indem Sie Aktionen auswählen, Geräte, auf denen die Aktion ausgeführt werden soll, auswählen und alle zusätzlichen Parameter angeben können, die von der ausgewähltes Aktion unterstützt werden.
+Anforderungen können über das Dashboard durch Verwenden der Registerkarte **Aktionen** auf der Seite 'Geräte' initiiert werden. Klicken Sie auf **Aktion initiieren**, um eine Aktion auszuwählen, um Geräte auszuwählen und um lle zusätzlichen Parameter anzugeben, die von der ausgewählten Aktion unterstützt werden.
 
 ## Gerätemanagementanforderungen mithilfe der REST-API initiieren
 {: #initiating-dm-api}
@@ -31,7 +31,7 @@ Anforderungen können mithilfe des folgenden REST-API-Beispiels initiiert werden
 
 `POST https://<Organisation>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
-Weitere Informationen zum Hauptteil einer Gerätemanagementanforderung finden Sie in der [API-Dokumentation](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html).
+ere Informationen zum Hauptteil einer Gerätemanagementanforderung finden Sie in der [API-Dokumentation ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ## Geräteaktionen
 {: #device-actions}
@@ -190,8 +190,8 @@ Der Status der einzelnen Firmwareaktionen wird in einem separaten Attribut auf d
 
  |Wert |Status  | Bedeutung |
  |:---|:---|:---|
- |0  | Inaktiv        | Von dem Gerät wird derzeit keine Firmware heruntergeladen. |  
- |1  | Download läuft | Das Gerät lädt derzeit Firmware herunter. |
+ |0  | Inaktiv        | Das Gerät lädt keine Firmware herunter. |  
+ |1  | Download läuft | Das Gerät lädt Firmware herunter. |
  |2  | Heruntergeladen  | Das Firmware-Update wurde von dem Gerät erfolgreich heruntergeladen und kann jetzt installiert werden. |
 
 
@@ -219,8 +219,8 @@ Zum Initiieren des Herunterladens von Firmware mithilfe der REST-API setzen Sie 
 Folgende Informationen werden angegeben:
 
 - Die Aktion `firmware/download`
-- Der URI für das Firmware-Image
 - Eine Liste der Geräte, die das Image erhalten sollen, mit maximal 5000 Geräten
+- Die URI für das Firmware-Image (optional)
 - Verifizierungszeichenfolge zum Überprüfen des Image (optional)
 - Firmware-Name (optional)
 - Firmwareversion (optional)
@@ -252,11 +252,13 @@ Das folgende Beispiel zeigt die Anforderung zum Herunterladen von Firmware, die 
 }
 ```
 
+Wenn keine optionalen Parameter angegeben sind, wird der erste Schritt im folgenden Prozess übersprungen.
+
 Der Gerätemanagementserver in {{site.data.keyword.iot_short_notm}} verwendet das Gerätemanagementprotokoll, um eine Anforderung an die Geräte zu senden, mit der der Download von Firmware initiiert wird. Der Prozess zum Herunterladen besteht aus den folgenden Schritten:
 
 1. An das Topic `iotdm-1/device/update` wird eine Anforderung zum Aktualisieren von Firmwaredetails gesendet.
 Die Aktualisierungsanforderung veranlasst das Gerät zu prüfen, ob sich die angeforderte Firmware von der aktuell installierten Firmware unterscheidet. Falls ein Unterschied besteht, müssen Sie den Parameter `rc` auf den Wert `204` festlegen, wodurch der Status in 'Geändert' (`Changed`) umgesetzt wird.  
-Das folgende Beispiel zeigt, welche Nachricht für die zuvor gesendete Beispielanforderung zum Herunterladen von Firmware zu erwarten ist und welche Antwort gesendet werden sollte, wenn ein Unterschied festgestellt wird:
+Das folgende Beispiel zeigt, welche Nachricht für die zuvor gesendete Beispielanforderung zum Herunterladen von Firmware zu erwarten ist und welche Antwort gesendet wird, wenn ein Unterschied festgestellt wird:
 ```
    Incoming request from the {{site.data.keyword.iot_short_notm}}:
 
@@ -421,7 +423,7 @@ Folgende Informationen sind bei der Fehlerbehandlung nützlich:
 - Wenn der Versuch, die Firmware herunterzuladen, fehlschlägt, legen Sie für den Parameter `rc` den Wert `500` fest und stellen Sie den Parameter `message` entsprechend ein.
 - Wenn der Download von Firmware nicht unterstützt wird, legen Sie für den Parameter `rc` den Wert `500` fest und stellen Sie den Parameter `message` entsprechend ein.
 - Wenn vom Gerät eine Anforderung zum Ausführen empfangen wird, ändern Sie für das Attribut `mgmt.firmware.state` die Einstellung von `0` (Idle - Inaktiv) in `1` (Downloading - Download läuft).
-- Wenn der Download erfolgreich abgeschlossen wurde, legen Sie für das Attribut `mgmt.firmware.state` die Einstellung `2` (Downloaded - Heruntergeladen).
+- Wenn der Download erfolgreich abgeschlossen ist, legen Sie für das Attribut `mgmt.firmware.state` die Einstellung `2` (Downloaded - Heruntergeladen).
 - Wenn während des Herunterladens ein Fehler auftritt, legen Sie für das Attribut `mgmt.firmware.state` die Einstellung `0` (Idle - Inaktiv) und für das Attribut `mgmt.firmware.updateStatus` einen der folgenden Werte für den Fehlerstatus fest:
   - 2 (Speicherkapazität erschöpft)
   - 3 (Verbindung unterbrochen)
@@ -439,6 +441,10 @@ Folgende Informationen werden angegeben:
 
 - Die Aktion `firmware/update`
 - Eine Liste der Geräte, die das Image erhalten sollen und die alle denselben Gerätetyp aufweisen müssen.
+- Die URI für das Firmware-Image (optional)
+- Verifizierungszeichenfolge zum Überprüfen des Image (optional)
+- Firmware-Name (optional)
+- Firmwareversion (optional)
 
 Der folgende Code ist eine Beispielanforderung:
 
@@ -453,6 +459,8 @@ Der folgende Code ist eine Beispielanforderung:
    }
 
 ```
+
+Ist ein optionaler Parameter angegeben, ist die erste Nachricht, die vom Gerät empfangen wird, eine Anforderung des Typs 'Geräteattribute aktualisieren'. Diese Anforderung entspricht der ersten Nachricht bei einer Anforderung zum Herunterladen von Firmware.
 
 Zum Überwachen des Status des Firmware-Updates löst {{site.data.keyword.iot_short_notm}} zunächst eine Beobachtungsanforderung im Topic `iotdm-1/observe` aus. Wenn das Gerät für den Start des Aktualisierungsprozesses bereit ist, sendet es eine Antwort, bei der für den Parameter `rc` der Wert `200`, für das Attribut `mgmt.firmware.state` die Einstellung `0` und für das Attribut `mgmt.firmware.updateStatus` die Einstellung `0` festgelegt ist.
 
@@ -590,3 +598,17 @@ Die folgende Liste bietet einige nützliche Informationen zur Fehler- und Prozes
 
 
 **Wichtig:** Alle Parameter, die als Bestandteil des Attributs `mgmt.firmware` aufgelistet sind, müssen gleichzeitig festgelegt werden, damit nur eine einzige Hinweisnachricht gesendet wird, falls eine aktuelle Beobachtung für `mgmt.firmware` besteht.
+
+## Anleitungen zu Geräteaktionen und Firmwareaktionen
+
+Die folgenden Anleitungen beschreiben den vollständigen erforderlichen Ablauf zum Ausführen von Geräte- und Firmwareaktionen.
+
+- [Gerätemanagement in WIoT Platform – Rollback & Zurücksetzen auf Werkseinstellungen ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/){: new_window}
+
+- [Vom Gerät eingeleitetes Firmware-Update ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-device-initiated-firmware-upgrade/){: new_window}
+
+- [Von der Plattform eingeleitetes Firmware-Update ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/){: new_window}
+
+- [Von der Plattform eingeleitetes Firmware-Update zur Ausführung im Hintergrund ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/){: new_window}
+
+- [Firmware-Rollback & Zurücksetzen auf Werkseinstellungen ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/){: new_window}

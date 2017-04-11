@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-13"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2016-09-13"
 
 **Dispositivi gestiti** sono definiti come dispositivi che contengono un agent di gestione del dispositivo. Un agent di gestione del dispositivo è un insieme di logica che consente al dispositivo di interagire con il servizio di gestione del dispositivo {{site.data.keyword.iot_short_notm}} utilizzando il protocollo di gestione del dispositivo. I dispositivi gestiti possono eseguire operazioni di gestione del dispositivo inclusi gli aggiornamenti dell'ubicazione, gli scaricamenti e gli aggiornamenti del firmware, i riavvi e le reimpostazioni dei valori predefiniti.
 
-Il protocollo di gestione del dispositivo definisce un insieme di operazioni supportate. Un agent di gestione del dispositivo può supportare un insieme secondario di operazioni, ma devono essere supportate le operazioni **dispositivi gestiti** e **dispositivi non gestiti**. Un dispositivo che supporta le operazioni di azione firmware deve supportare anche l'osservazione.
+Il protocollo di gestione del dispositivo definisce un insieme di operazioni supportate. Un agent di gestione del dispositivo può supportare un insieme secondario di operazioni, ma devono essere supportate le operazioni **gestione** e **annulla gestione**. Un dispositivo che supporta le operazioni di azione firmware deve supportare anche l'osservazione.
 
 Il protocollo di gestione del dispositivo è creato con il protocollo di messaggistica MQTT. Per ulteriori informazioni su come il protocollo di gestione del dispositivo interagisce con MQTT, consulta [Connettività MQTT per i dispositivi](../mqtt.html).
 
@@ -36,6 +36,8 @@ Il protocollo di gestione del dispositivo è creato con il protocollo di messagg
 4. Un dispositivo può comunicare gli aggiornamenti sulla sua ubicazione, le informazioni di diagnostica e i codici di errore utilizzando il protocollo di gestione del dispositivo.
 5. Per gestire i dispositivi inattivi in un grande gruppo di dispositivi, la richiesta dell'operazione **dispositivi gestiti** include un parametro sul ciclo di vita facoltativo. Un parametro del ciclo di vita è il numero di secondi in cui il dispositivo deve effettuare un'altra richiesta **dispositivi gestiti** per evitare di essere classificato come inattivo e diventare un dispositivo non gestito.
 6. Quando un dispositivo viene ritirato, puoi rimuoverlo da {{site.data.keyword.iot_short_notm}} utilizzando il dashboard o l'API REST.
+
+Fai riferimento alla ricetta [Connect Raspberry Pi as Managed Device to IBM Watson IoT Platform ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/){: new_window}.
 
 ### Riepilogo codice di ritorno
 

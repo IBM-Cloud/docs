@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-11-17"
+  years: 2015, 2017
+lastupdated: "2017-03-21"
 
 ---
 
@@ -59,7 +59,7 @@ The password for each device is the unique authentication token that was generat
 
 Devices publish to the event topics in the following format:
 
-<pre class="pre">iot-2/evt/<var class="keyword varname">event_id</var>/fmt/<var class="keyword varname">format_string</var></pre>
+<pre class="pre"><code class="hljs">iot-2/evt/<var class="keyword varname">event_id</var>/fmt/<var class="keyword varname">format_string</var></code></pre>
 {: codeblock}
 
 Where
@@ -78,7 +78,7 @@ Where
 
 Devices can subscribe to command topics in the following format:
 
-<pre class="pre">iot-2/cmd/<var class="keyword varname">command_id</var>/fmt/<var class="keyword varname">format_string</var></pre>
+<pre class="pre"><code class="hljs">iot-2/cmd/<var class="keyword varname">command_id</var>/fmt/<var class="keyword varname">format_string</var></code></pre>
 {: codeblock}
 
 Where
@@ -126,7 +126,7 @@ All messages are sent in JSON format.
 **Requests**  
 Requests are formatted as shown in the following code sample:
 
-<pre class="pre">{  "d": {...}, "<var class="keyword varname">reqId</var>": "b53eb43e-401c-453c-b8f5-94b73290c056" }</pre>
+<pre class="pre"><code class="hljs">{  "d": {...}, "<var class="keyword varname">reqId</var>": "b53eb43e-401c-453c-b8f5-94b73290c056" }</code></pre>
 {: codeblock}
 
 Where:

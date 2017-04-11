@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="device_scope_platform.svg"
-   inkscape:export-filename="C:\2.DTP\BM110ABD142\ge\iot\reference\security\bitmap.png"
+   inkscape:export-filename="C:\2.DTP\_Archive\2016\BM110ABD142 - 2 + 1\ge\iot\reference\security\device_scope_platform.png"
    inkscape:export-xdpi="299.98132"
    inkscape:export-ydpi="299.98132">
   <defs
@@ -926,13 +926,6 @@
        width="176.09998"
        id="rect79371-1-6-6-9-8-7-3-5-1-8-2-9"
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
-    <text
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
-       id="text44191"
-       font-size="11"
-       x="271.81931"
-       y="416.98788"
-       sodipodi:linespacing="125%">Watson IoT Platform</text>
     <rect
        ry="0"
        rx="0"
@@ -967,25 +960,6 @@
          y="533.61572"
          id="tspan18193-4"
          style="font-size:7.5px;stroke:none" /></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-       x="226.63893"
-       y="371.30804"
-       id="text266398"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan266400"
-         x="226.63893"
-         y="371.30804">Watson™ IoT Platform </tspan><tspan
-         sodipodi:role="line"
-         x="226.63893"
-         y="386.30804"
-         id="tspan4887">Organisation: q1bc3a</tspan><tspan
-         sodipodi:role="line"
-         x="226.63893"
-         y="401.30804"
-         id="tspan266402" /></text>
     <text
        sodipodi:linespacing="125%"
        y="348.52588"
@@ -1297,5 +1271,39 @@
        font-size="11"
        id="text56834-0-4-8-0-89-9-0"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Kein Befehl für B</text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       x="276.63895"
+       y="413.30804"
+       id="text266398"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan266400"
+         x="276.63895"
+         y="413.30804" /><tspan
+         sodipodi:role="line"
+         x="276.63895"
+         y="428.30804"
+         id="tspan4887">Org: q1bc3a</tspan><tspan
+         sodipodi:role="line"
+         x="276.63895"
+         y="443.30804"
+         id="tspan266402" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       x="251.00613"
+       y="377.18326"
+       id="text266398-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="251.00613"
+         y="377.18326"
+         id="tspan4887-5">Watson™ IoT Platform </tspan><tspan
+         sodipodi:role="line"
+         x="251.00613"
+         y="392.18326"
+         id="tspan266402-4" /></text>
   </g>
 </svg>

@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-19"
+  years: 2016, 2017
+lastupdated: "2017-03-17"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -21,7 +21,7 @@ lastupdated: "2016-10-19"
 ## Avant de commencer
 {: #byb}
 
-Avant de connecter des terminaux et d'utiliser des données, inscrivez-vous à un compte {{site.data.keyword.Bluemix_notm}} et créez une instance du service {{site.data.keyword.iot_short_notm}} dans votre organisation {{site.data.keyword.Bluemix_notm}}. Vous pouvez créer une instance {{site.data.keyword.iot_short_notm}} directement depuis la page [{{site.data.keyword.iot_short_notm}} dans le catalogue de services Bluemix](https://console.{DomainName}/catalog/services/internet-of-things-platform/).  
+Avant de connecter des terminaux et d'utiliser des données, inscrivez-vous à un compte {{site.data.keyword.Bluemix_notm}} et créez une instance du service {{site.data.keyword.iot_short_notm}} dans votre organisation {{site.data.keyword.Bluemix_notm}}. Vous pouvez créer une instance {{site.data.keyword.iot_short_notm}} directement depuis la page [{{site.data.keyword.iot_short_notm}} dans le catalogue de services Bluemix ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/internet-of-things-platform/){:new_window}.  
 
 Pour obtenir des informations détaillées sur l'inscription à un compte {{site.data.keyword.Bluemix_notm}}, la configuration de régions et d'autres paramètres de gestion de compte, voir [Gestion de votre compte Bluemix](https://console.ng.bluemix.net/docs/admin/account.html#signup).
 
@@ -34,9 +34,9 @@ Pour être rapidement opérationnel avec le service, examinez les options suivan
 
    |   Le service est déployé | Le service n'est pas déployé
   ------------- | -------------
-  **J'ai un terminal à connecter** | [Connectez votre terminal à {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task).| Explorez la connexion de terminal dans la [démonstration Play organization](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
-  **Je n'ai aucun terminal à connecter** | [Créer et connecter un simulateur de terminal Node-RED](nodereddevice_sample.html){:new_window} | Commencez à utiliser [Watson IoT Platform Starter](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html){:new_window}.
-Pour plus d'informations sur la connexion de types de terminal spécifiques à {{site.data.keyword.iot_short_notm}}, voir les [recettes developerWorks](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}.  
+  **J'ai un terminal à connecter** | [Connectez votre terminal à {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task).| Explorez la connexion de terminal dans la [démonstration Play organization ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
+  **Je n'ai aucun terminal à connecter** | [Créer et connecter un simulateur de terminal Node-RED](nodereddevice_sample.html){:new_window} | Commencez à utiliser [Watson IoT Platform Starter](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html).
+Pour plus d'informations sur la connexion de types de terminal spécifiques à {{site.data.keyword.iot_short_notm}}, voir les [recettes developerWorks ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}.  
 
 Pour la documentation du développeur de connexion de terminal, voir :
 - [Connectivité MQTT pour les terminaux](devices/mqtt.html)
@@ -51,7 +51,7 @@ Commencez par explorer les données en temps réel envoyées par les terminaux �
 - [Tableaux et cartes](data_visualization.html) pour visualiser vos données de terminal en temps réel
 - [Règles et actions](analytics.html) déclenchées par les données de terminal en temps réel
 
-Pour un exemple montrant comment démarrer rapidement, voir la recette developerWorks [Using Rules and Actions with IBM Watson IoT Platform Cloud Analytics](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){:new_window}.
+Pour un exemple montrant comment démarrer rapidement, voir la recette developerWorks [Using Rules and Actions with IBM Watson IoT Platform Cloud Analytics ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){:new_window}. 
 
 ## Etape 3 : Créer des applications destinées à consommer vos données de terminal
 {: #develop_applications}
@@ -59,7 +59,7 @@ Pour un exemple montrant comment démarrer rapidement, voir la recette developer
 Etendez les fonctions d'analyse de données de {{site.data.keyword.iot_short_notm}} en créant et en connectant vos propres applications afin qu'elles consomment des données de terminal historiques et en temps réel.
 
 Pour plus d'informations, voir les rubriques suivantes :   
-- Explorez la [documentation de développeur d'applications](applications/api.html) et la [{{site.data.keyword.iot_short_notm}}documentation d'API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#/){:new_window}.
+- Explorez la [documentation de développeur d'applications](applications/api.html) et la [{{site.data.keyword.iot_short_notm}}documentation d'API](reference/api.html).
 - Explorez les [bibliothèques client {{site.data.keyword.iot_short_notm}} ](iot_platform_client_lib.html) qui fournissent des outils et des fichiers pour générer et développer du code afin d'intégrer et de connecter vos terminaux et vos applications.
 - [Connectez un service {{site.data.keyword.cloudantfull}} ](cloudant_connector.html) à votre {{site.data.keyword.iot_short_notm}} pour stocker les données de terminal historiques.
 
@@ -68,15 +68,17 @@ Pour plus d'informations, voir les rubriques suivantes :
 
 # Liens connexes
 {: #rellinks}
+* [IBM Watson IoT Service Health Dashboard](https://status.internetofthings.ibmcloud.com){:new_window}
+
 ## Tutoriels et exemples
 {: #samples}
-* [Recettes relatives à la connexion de vos terminaux](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}
-* [{{site.data.keyword.iot_short_notm}} Play organization](https://play.internetofthings.ibmcloud.com/){:new_window}
-* [Connexion d'un Intel Galileo à {{site.data.keyword.iot_short_notm}}](https://developer.ibm.com/recipes/tutorials/connect-an-intel-galileo-to-the-internet-of-things-foundation-connect/){:new_window}
-* [Connexion d'un kit de démarrage ARM® mbed™ IoT Starter Kit](https://developer.ibm.com/recipes/tutorials/arm-mbed-iot-starter-kit-part-1/){:new_window}
-* [Connexion d'un terminal Raspberry Pi à {{site.data.keyword.iot_short_notm}}](https://developer.ibm.com/recipes/tutorials/raspberry-pi-4/){:new_window}
+* [Recettes relatives à la connexion de vos terminaux ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}
+* [{{site.data.keyword.iot_short_notm}} Play organization ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://play.internetofthings.ibmcloud.com/){:new_window}
+* [Connecting an Intel Galileo to the {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/connect-an-intel-galileo-to-the-internet-of-things-foundation-connect/){:new_window}
+* [Connecting an ARM® mbed™ IoT Starter Kit ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/arm-mbed-iot-starter-kit-part-1/){:new_window}
+* [Connecting a Raspberry Pi to {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/raspberry-pi-4/){:new_window}
 
 ## Informations de référence sur l'API
 {: #api}
-* [{{site.data.keyword.iot_short_notm}}Documentation d'API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#/){:new_window}
+* [Documentation de l'API {{site.data.keyword.iot_short_notm}}](../reference/api.html)
 * [Documentation de développeur](developer_doc_overview.html)

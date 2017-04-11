@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-27"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -26,7 +26,7 @@ Verwenden Sie die bereitgestellten Informationen und Beispiele, um mit der Entwi
 ## Python-Client und Ressourcen herunterladen
 {: #python_client_download}
 
-Wechseln Sie für den Zugriff auf den Python-Client für {{site.data.keyword.iot_short_notm}} und auf andere verfügbare Ressourcen in das Repository [iot-python](https://github.com/ibm-messaging/iot-python) in GitHub und folgen Sie den Installationsanweisungen.
+Wechseln Sie für den Zugriff auf den Python-Client für {{site.data.keyword.iot_short_notm}} und auf andere verfügbare Ressourcen in das Repository [iot-python ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/iot-python){: new_window} in GitHub und folgenden Sie den Installationsanweisungen.
 
 ## Konstruktor
 {: #constructor}
@@ -353,7 +353,7 @@ import ibmiotf.application
 
 client.connect()
 commandData={'rebootDelay' : 50}
-client.publishCommand(myDeviceType, myDeviceId, "reboot", "json", myData)
+client.publishCommand(myDeviceType, myDeviceId, "reboot", "json", commandData)
 ```
 
 
@@ -375,7 +375,7 @@ except IoTFCReSTException as e:
     print("ERROR [" + e.httpcode + "] " + e.message)
 ```
 
-Der Abschnitt zur Organisationskonfiguration in der [{{site.data.keyword.iot_short_notm}}-API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) enthält Informationen zum Anforderungs-/Antwortmodell und zu den HTTP-Statuscodes.
+Der Abschnitt zur Organisationskonfiguration in der [{{site.data.keyword.iot_short_notm}}-API ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} enthält Informationen zum Anforderungs-/Antwortmodell und zu den HTTP-Statuscodes.
 
 
 ## Massenoperationen für Geräte
@@ -383,7 +383,7 @@ Der Abschnitt zur Organisationskonfiguration in der [{{site.data.keyword.iot_sho
 
 Ihre Anwendungen können mithilfe von Massenoperationen mehrere Geräte gleichzeitig abrufen, hinzufügen oder entfernen.
 
-Der Abschnitt zu den Massenoperationen in der [{{site.data.keyword.iot_short_notm}}-API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/) enthält Informationen zu der Liste der Abfrageparameter, zum Anforderungs-/Antwortmodell und zu HTTP-Statuscodes.
+Der Abschnitt zu den Massenoperationen in der [{{site.data.keyword.iot_short_notm}}-API ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/){: new_window} enthält Informationen zu der Liste der Abfrageparameter, zum Anforderungs-/Antwortmodell und zu HTTP-Statuscodes.
 
 
 ### Geräteinformationen abrufen
@@ -458,7 +458,7 @@ except IoTFCReSTException as e:
 
 Die Gerätetypen, die Sie in Ihrer Organisation erstellen, können zum Erstellen von Vorlagen für das Hinzufügen von Geräten verwendet werden. Durch Verwenden der Funktionen der {{site.data.keyword.iot_short_notm}}-API können Ihre Anwendungen Gerätetypen in Ihrer Organisation auflisten, erstellen, löschen, anzeigen oder aktualisieren.
 
-Der Abschnitt 'Gerätetypen' der Dokumentation zur [{{site.data.keyword.iot_short_notm}}-API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) enthält Informationen zu Abfrageparametern, zum Anforderungs-/Antwortmodell und zu HTTP-Statuscodes.
+Der Abschnitt 'Gerätetypen' der Dokumentation zur [{{site.data.keyword.iot_short_notm}}-API ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} enthält Informationen zu Abfrageparametern, zum Anforderungs-/Antwortmodell und zu HTTP-Statuscodes. 
 
 
 ### Alle Gerätetypen abrufen
@@ -599,7 +599,7 @@ except IoTFCReSTException as e:
 
 Die in der API verfügbaren Geräteoperationen umfassen das Auflisten, Hinzufügen, Entfernen, Anzeigen, Aktualisieren, Anzeigen von Standorten und Anzeigen von Gerätemanagementinformationen zu Geräten in einer {{site.data.keyword.iot_short_notm}}-Organisation.
 
-Der Abschnitt über Geräte in der [{{site.data.keyword.iot_short_notm}}-API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) enthält Informationen zu den Abfrageparametern, zum Anforderungs-/Antwortmodell und zu den HTTP-Statuscodes.
+Der Abschnitt über Geräte in der [{{site.data.keyword.iot_short_notm}}-API ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} enthält Informationen zu den Abfrageparametern, zum Anforderungs-/Antwortmodell und zu den HTTP-Statuscodes.
 
 
 ### Geräte eines bestimmten Gerätetyps abrufen
@@ -637,7 +637,7 @@ Verwenden Sie zum Hinzufügen eines Geräts zu einer {{site.data.keyword.iot_sho
 |`metadata`|Optional|Zeichenfolgepaare aus angepassten Feldern und Werten, wie in [Beispielcode zum Hinzufügen eines Gerätetyps](#sample_device_type) dargestellt.|
 |`location`|Optional|Enthält die Variablen 'longitude', 'latitude', 'elevation', 'accuracy' und 'measuredDateTime'.|
 
-In der [API-Dokumentation](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Devices/post_device_types_typeId_devices) finden Sie weitere Informationen zu diesen Parametern und zum Antwortformat sowie den Codes.
+In der [API-Dokumentation ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Devices/post_device_types_typeId_devices){: new_window} finden Sie weitere Informationen zu diesen Parametern und zum Antwortformat sowie den Codes.
 
 Wenn Sie die Methode `registerDevice()` verwenden, müssen Sie den obligatorischen Parameter 'deviceID' und die optionalen Parameter definieren, die für Ihr Gerät erforderlich sind, und Sie müssen die Methode anschließend mithilfe der von Ihnen ausgewählten Parameter aufrufen.
 
@@ -752,7 +752,7 @@ Mit den Gerätediagnoseinformationen können Sie folgende Tasks für die Fehlerb
 - Fehlercodes zu einem Gerät abrufen
 - Fehlercodes hinzufügen
 
-In der {{site.data.keyword.iot_short_notm}}-API-Dokumentation ([API-Dokumentation](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html)) finden Sie weitere Informationen zu Anforderungs-/Antwortmodellen, Antwortcodes und Abfrageparametern.
+In der [{{site.data.keyword.iot_short_notm}}-API-Dokumentation ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} finden Sie weitere Informationen zu Anforderungs-/Antwortmodellen, Antwortcodes und Abfrageparametern.
 
 ### Diagnoseprotokolle abrufen
 

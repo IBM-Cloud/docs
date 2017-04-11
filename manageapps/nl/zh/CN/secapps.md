@@ -12,14 +12,14 @@ lastupdated: "2017-01-11"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#保护应用程序
+# 保护应用程序
 {: #securingapps}
 
 
 您可以通过上传 SSL 证书并限制对应用程序的访问来保护应用程序。
 {:shortdesc}
 
-##创建证书签名请求
+## 创建证书签名请求
 {: #ssl_csr}
 
 通过 {{site.data.keyword.Bluemix}} 上传您有权使用的 SSL 证书之前，必须在服务器上创建证书签名请求 (CSR)。

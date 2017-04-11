@@ -7,15 +7,14 @@ lastupdated: "2017-01-11"
 ---
 
 
-{:new_window: target="_blank"}  
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 
 #Services
 {: #services}
 
-Vous trouverez les services disponibles dans le **catalogue** sous **Services**, dans l'interface utilisateur
-{{site.data.keyword.Bluemix}}.
+Vous trouverez les services disponibles dans le **catalogue** sous **Services**, dans l'interface utilisateur {{site.data.keyword.Bluemix}}.
 {:shortdesc}
 
 
@@ -30,11 +29,9 @@ présente les services de deux façons : par catégorie de services et par type 
 
 <dl>
 <dt><strong>Catégorie</strong></dt>
-<dd>Les services {{site.data.keyword.Bluemix_notm}} sont organisés dans différentes catégories. Dans chaque
-catégorie de services, les services créés par IBM sont répertoriés en premier, suivis des services de tiers, puis des services de communauté.</dd>
+<dd>Les services {{site.data.keyword.Bluemix_notm}} sont organisés dans différentes catégories. Dans chaque catégorie de services, les services créés par IBM sont répertoriés en premier, suivis des services de tiers, puis des services de communauté.</dd>
 <dt><strong>Support</strong></dt>
-<dd>Plusieurs niveaux de support existent pour les services {{site.data.keyword.Bluemix_notm}}. Le tableau
-suivant décrit les informations de support générales pour les services {{site.data.keyword.Bluemix_notm}} :
+<dd>Plusieurs niveaux de support existent pour les services {{site.data.keyword.Bluemix_notm}}. Le tableau suivant décrit les informations de support générales pour les services {{site.data.keyword.Bluemix_notm}} :
 
 </dd>
 </dl>
@@ -43,19 +40,10 @@ suivant décrit les informations de support générales pour les services {{site
 
 |Type	|Description	|Détails du support|
 |:------|:--------------|:--------------|
-|IBM	|Service fourni par IBM et généralement disponible.	|Les problèmes considérés comme un défaut d'un service fourni par IBM généralement disponible sont traités. Le support dépend de la
-gravité que vous définissez. Pour plus d'informations sur la gravité des tickets, voir
-[Contacter le service de support](/docs/support/index.html#contacting-bluemix-support).|
-|Tiers	|Service fourni par une société autre qu'IBM.	|Le support des services de tiers est assuré par le fournisseur de service. Si IBM examine un
-problème et détermine qu'il s'agit d'un défaut d'un service de tiers, elle n'est pas obligée de fournir un correctif. IBM partagera son analyse avec le
-fournisseur de service de tiers si nécessaire.|
-|Communauté	|Service fourni par une communauté open source.	|Le support des services de communauté est assuré par la communauté des développeurs
-{{site.data.keyword.Bluemix_notm}}. Si IBM examine un problème et détermine qu'il s'agit d'un défaut d'un service de communauté, elle n'est pas
-obligée de fournir un correctif.|
-|Bêta	|Service qui n'est pas prêt pour la phase de production et qui se trouve au stade d'essai de développement. Un service bêta peut aider les équipes de développement et marketing à évaluer la valeur d'un service avant de le rendre généralement disponible.	|Les
-problèmes
-identifiés comme défauts dans un service bêta fourni par IBM sont pris en charge, mais IBM n'est pas obligée de fournir un correctif. De plus, le ticket de problème sera associé à une gravité de 3 ou 4 si
-applicable. Pour des informations sur la gravité des tickets, voir [Contacter le service de support](/docs/support/index.html#contacting-bluemix-support).|
+|IBM	|Service fourni par IBM et généralement disponible.	|Les problèmes considérés comme un défaut d'un service fourni par IBM généralement disponible sont traités. Le support dépend de la gravité que vous définissez. Pour plus d'informations sur la gravité des tickets, voir [Contacter le service de support](/docs/support/index.html#contacting-bluemix-support).|
+|Tiers	|Service fourni par une société autre qu'IBM.	|Le support des services de tiers est assuré par le fournisseur de service. Si IBM examine un problème et détermine qu'il s'agit d'un défaut d'un service de tiers, elle n'est pas obligée de fournir un correctif. IBM partagera son analyse avec le fournisseur de service de tiers si nécessaire.|
+|Communauté	|Service fourni par une communauté open source.	|Le support des services de communauté est assuré par la communauté des développeurs {{site.data.keyword.Bluemix_notm}}. Si IBM examine un problème et détermine qu'il s'agit d'un défaut d'un service de communauté, elle n'est pas obligée de fournir un correctif.|
+|Bêta	|Service qui n'est pas prêt pour la phase de production et qui se trouve au stade d'essai de développement. Un service bêta peut aider les équipes de développement et marketing à évaluer la valeur d'un service avant de le rendre généralement disponible.	|Les problèmes identifiés comme défauts dans un service bêta fourni par IBM sont pris en charge, mais IBM n'est pas obligée de fournir un correctif. De plus, le ticket de problème sera associé à une gravité de 3 ou 4 si applicable. Pour des informations sur la gravité des tickets, voir [Contacter le service de support](/docs/support/index.html#contacting-bluemix-support).|
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} information du service de support" caption-side="top"}
 
 
@@ -267,44 +255,74 @@ automatiquement](/docs/troubleshoot/index.html#ts_topmenubar) pour plus d'inform
 ## Utilisation des services {{site.data.keyword.Bluemix_notm}} avec des applications externes
 {: #accser_external}
 
-Vous pouvez disposer d'applications créées et exécutées en dehors de {{site.data.keyword.Bluemix_notm}}, mais également utiliser des outils tiers. Si
-des services {{site.data.keyword.Bluemix_notm}} fournissent des noeuds finaux accessibles depuis Internet,
-vous pouvez utiliser ces services dans vos applications locales ou dans des outils tiers.
+Vous pouvez disposer d'applications créées et exécutées en dehors de {{site.data.keyword.Bluemix_notm}}, mais également utiliser des outils tiers. Si des services {{site.data.keyword.Bluemix_notm}} fournissent des clés de service accessibles depuis Internet, vous pouvez utiliser ces services dans vos applications locales ou dans des outils tiers.
+
+Les services suivants vous fournissent des clés de service pour un usage externe :
+
+* {{site.data.keyword.amashort_old}} <!--Advanced Mobile Access-->
+* {{site.data.keyword.alchemyapishort}} <!--AlchemyAPI-->
+* {{site.data.keyword.alertnotificationshort}} <!--Alert Notification-->
+* {{site.data.keyword.sparks}} <!--Analytics for Apache Spark-->
+* {{site.data.keyword.appseccloudshort}} <!--Application Security on Cloud-->
+* {{site.data.keyword.blockchain}} <!--Blockchain-->
+* {{site.data.keyword.cloudant}} <!--Cloudant&reg; NoSQL DB-->
+* {{site.data.keyword.iotmapinsights_short}} <!--Context Mapping-->
+* {{site.data.keyword.conversationshort}} <!--Conversation-->
+* {{site.data.keyword.dashdbshort}} <!--dashDB-->
+* {{site.data.keyword.discoveryshort}} <!--Discovery-->
+* {{site.data.keyword.documentconversionshort}} <!--Document Conversion-->
+* {{site.data.keyword.iotdriverinsights_short}} <!--Driver Behavior-->
+* {{site.data.keyword.geospatialshort_Geospatial}} <!--Geospatial Analytics-->
+* {{site.data.keyword.GlobalizationPipeline_short}} <!--Globalization Pipeline-->
+* {{site.data.keyword.appconserviceshort}} <!--IBM&reg; App Connect-->
+* {{site.data.keyword.dataworks_short}} <!--IBM&reg; Data Connect-->
+* {{site.data.keyword.graphshort}} <!--IBM&reg; Graph-->
+* {{site.data.keyword.iotelectronics_full}} <!--IBM&reg; IoT for Electronics-->
+* {{site.data.keyword.twittershort}} <!--Insights for Twitter-->
+* {{site.data.keyword.iot4auto_short}} <!--IoT for Automotive-->
+* {{site.data.keyword.iotinsurance_short}} <!--IoT for Insurance-->
+* {{site.data.keyword.languagetranslatorshort}} <!--Language Translator-->
+* {{site.data.keyword.dwl_short}} <!--Lift-->
+* {{site.data.keyword.messagehub}} <!--Message Hub-->
+* {{site.data.keyword.mobileanalytics_short}} <!--Mobile Analytics-->
+* {{site.data.keyword.nlclassifiershort}} <!--Natural Language Classifier-->
+* {{site.data.keyword.objectstorageshort}} <!--Object Storage-->
+* {{site.data.keyword.personalityinsightsshort}} <!--Personality Insights-->
+* {{site.data.keyword.HybridConnect_short}} <!--Product Insights-->
+* {{site.data.keyword.mobilepush}} <!--Push-->
+* {{site.data.keyword.retrieveandrankshort}} <!--Retrieve and Rank-->
+* {{site.data.keyword.speechtotextshort}} <!-- Speech to Text-->
+* {{site.data.keyword.streaminganalyticsshort}} <!--Streaming Analytics-->
+* {{site.data.keyword.texttospeechshort}} <!--Text to Speech-->
+* {{site.data.keyword.toneanalyzershort}} <!--Tone Analyzer-->
+* {{site.data.keyword.tradeoffanalyticsshort}} <!--Tradeoff Analytics-->
+* {{site.data.keyword.weather_short}} <!--Weather Company Data-->
+* {{site.data.keyword.workloadscheduler}} <!--Workload Scheduler-->
 
 Pour autoriser une application externe ou un outil tiers à utiliser un service {{site.data.keyword.Bluemix_notm}}, procédez comme suit :
 
 1. Demandez une instance du service.
-    1. Dans le tableau de bord de l'interface utilisateur {{site.data.keyword.Bluemix_notm}}, cliquez sur **Utiliser des services
-ou des API**. Le catalogue s'affiche.
-    2. Dans le catalogue, sélectionnez le service de votre choix en cliquant sur la vignette correspondante. La page des détails du
-service s'ouvre.
+    1. Dans le tableau de bord de l'interface utilisateur {{site.data.keyword.Bluemix_notm}}, cliquez sur **Utiliser des services ou des API**. Le catalogue s'affiche.
+    2. Dans le catalogue, sélectionnez le service de votre choix en cliquant sur la vignette correspondante. La page des détails du service s'ouvre.
     3. Dans la fenêtre Ajout de service, conservez la sélection **Laisser non lié** pour la liste **Appli**. Cette sélection signifie que le service n'est pas connecté à une application {{site.data.keyword.Bluemix_notm}}.
-    4. Faites toutes les sélections requises. Cliquez ensuite sur **Créer**. Une instance de service est créée et le tableau de
-bord du service s'affiche.
+    4. Faites toutes les sélections requises. Cliquez ensuite sur **Créer**. Une instance de service est créée et le tableau de bord du service s'affiche.
 2. Dans le panneau de navigation du tableau de bord du service, vous pouvez sélectionner **Données d'identification pour le service** pour
 afficher ou ajouter des données d'identification au format JSON. Utilisez la clé d'API affichée comme données d'identification pour vous connecter à l'instance de service.
 
 Votre application qui s'exécute en dehors de {{site.data.keyword.Bluemix_notm}} peut désormais accéder au
 service {{site.data.keyword.Bluemix_notm}}.
 
-**Remarque :** si vous souhaitez supprimer des instances de service ou consulter les informations de facturation, vous devez
-revenir à votre tableau de bord dans l'interface
-utilisateur afin de gérer les instances de service.
+**Remarque :** si vous souhaitez supprimer des instances de service ou consulter les informations de facturation, vous devez revenir à votre tableau de bord dans l'interface utilisateur afin de gérer les instances de service.
 
 ## Création d'une instance de service fournie par l'utilisateur
 {: #user_provide_services}
 
-Certaines de vos ressources peuvent être gérées hors de {{site.data.keyword.Bluemix_notm}}. Si vous
-disposez des données d'identification permettant d'accéder à ces ressources externes depuis Internet, vous pouvez créer des instances de service
-{{site.data.keyword.Bluemix_notm}} fournies par l'utilisateur afin de représenter vos ressources externes et de
-communiquer avec elles.
+Certaines de vos ressources peuvent être gérées hors de {{site.data.keyword.Bluemix_notm}}. Si vous disposez des données d'identification permettant d'accéder à ces ressources externes depuis Internet, vous pouvez créer des instances de service {{site.data.keyword.Bluemix_notm}} fournies par l'utilisateur afin de représenter vos ressources externes et de communiquer avec elles.
 
 Pour créer une instance de service fournie par l'utilisateur et la lier à une application, procédez comme suit :
 
-1. Créez une instance de service fournie par l'utilisateur avec la commande **cf create-user-provided-service** ou **cf
-cups** :
-    * Pour créer une instance de service fournie par l'utilisateur générale, utilisez l'option **-p** et séparez les noms de paramètre par une
-virgule. L'interface de ligne de commande cf vous invite alors à entrer chaque paramètre. Par exemple :
+1. Créez une instance de service fournie par l'utilisateur avec la commande **cf create-user-provided-service** ou **cf cups** :
+    * Pour créer une instance de service fournie par l'utilisateur générale, utilisez l'option **-p** et séparez les noms de paramètre par une virgule. L'interface de ligne de commande cf vous invite alors à entrer chaque paramètre. Par exemple :
         ```
         cf cups testups1 -p "hôte, port, nombd, nomutilisateur, motdepasse"
         host> pubsub01.exemple.com
@@ -316,8 +334,7 @@ virgule. L'interface de ligne de commande cf vous invite alors à entrer chaque 
         OK
         ```
 
-    * Pour créer une instance de service qui envoie des informations à un logiciel de gestion de journal tiers, utilisez l'option **-l** et
-spécifiez la destination fournie par le logiciel de gestion de journal tiers. Par exemple :
+    * Pour créer une instance de service qui envoie des informations à un logiciel de gestion de journal tiers, utilisez l'option **-l** et spécifiez la destination fournie par le logiciel de gestion de journal tiers. Par exemple :
 
         ```
         cf cups testups2 -l syslog://example.com
@@ -325,11 +342,9 @@ spécifiez la destination fournie par le logiciel de gestion de journal tiers. P
         OK
         ```
 
-    Pour mettre à jour un ou plusieurs paramètres de l'instance de service fournie par l'utilisateur, utilisez la commande **cf
-update-user-provided-service** ou **cf uups**.
+    Pour mettre à jour un ou plusieurs paramètres de l'instance de service fournie par l'utilisateur, utilisez la commande **cf update-user-provided-service** ou **cf uups**.
 
-    * Pour mettre à jour une instance de service fournie par l'utilisateur générale, utilisez l'option **-p** et spécifiez les clés et les
-valeurs des paramètres dans un objet json. Par exemple :
+    * Pour mettre à jour une instance de service fournie par l'utilisateur générale, utilisez l'option **-p** et spécifiez les clés et les valeurs des paramètres dans un objet json. Par exemple :
 
         ```
         cf uups testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
@@ -353,41 +368,29 @@ valeurs des paramètres dans un objet json. Par exemple :
 	OK
 	```
 
-A présent, vous pouvez configurer votre application afin d'utiliser les ressources externes. Pour des informations sur la configuration de votre
-application pour l'interaction avec un service, voir [Configuration de votre application pour l'interaction avec un
-service](#config){: new_window}.
+A présent, vous pouvez configurer votre application afin d'utiliser les ressources externes. Pour des informations sur la configuration de votre application pour l'interaction avec un service, voir [Configuration de votre application pour l'interaction avec un service](#config){: new_window}.
 
 ## Utilisation des services dans une autre région
 {: #cross_region_service}
 
-Si une instance de service est créée et liée à des applications dans une région, vous pouvez l'utiliser dans une autre région de l'une des façons
-suivantes :
+Si une instance de service est créée et liée à des applications dans une région, vous pouvez l'utiliser dans une autre région de l'une des façons suivantes :
 
-  * Utilisez les données d'identification du service pour configurer votre instance d'application directement. Voir
-[Utilisation des services {{site.data.keyword.Bluemix_notm}} avec des applications externes](#accser_external)
+  * Utilisez les données d'identification du service pour configurer votre instance d'application directement. Voir [Utilisation des services {{site.data.keyword.Bluemix_notm}} avec des applications externes](#accser_external)
 pour des détails.
   * Créez un service fourni par l'utilisateur comme pont.
 
-	Supposez que vous vous trouviez dans la région dans laquelle vous voulez utiliser l'instance de service. Pour utiliser une instance de service qui
-existe dans une autre région, procédez comme suit :
+	Supposez que vous vous trouviez dans la région dans laquelle vous voulez utiliser l'instance de service. Pour utiliser une instance de service qui existe dans une autre région, procédez comme suit :
 
-      1. Passez dans la région dans laquelle l'instance de service existe. Dans la barre de menu {{site.data.keyword.Bluemix_notm}}, développez
-**Région** ou cliquez sur l'icône **Région**, puis sélectionnez la région dans laquelle l'instance de service existe.
+      1. Passez dans la région dans laquelle l'instance de service existe. Dans la barre de menu {{site.data.keyword.Bluemix_notm}}, développez **Région** ou cliquez sur l'icône **Région**, puis sélectionnez la région dans laquelle l'instance de service existe.
 
-      2. Récupérez les données d'identification et les paramètres de connexion depuis la variable d'environnement VCAP_SERVICES de l'instance de service
-dans la région dans laquelle le service existe. Procédez comme suit :
+      2. Récupérez les données d'identification et les paramètres de connexion depuis la variable d'environnement VCAP_SERVICES de l'instance de service dans la région dans laquelle le service existe. Procédez comme suit :
 
-	       1. Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur la vignette de votre application. La page Présentation
-s'affiche.
-	       2. Dans le panneau de navigation, cliquez sur **Variables d'environnement**. Les détails de la variable d'environnement
-*VCAP_SERVICES* sont affichés. Enregistrez le contenu JSON pour
-l'instance de service.
+	       1. Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur la vignette de votre application. La page Présentation s'affiche.
+	       2. Dans le panneau de navigation, cliquez sur **Variables d'environnement**. Les détails de la variable d'environnement *VCAP_SERVICES* sont affichés. Enregistrez le contenu JSON pour l'instance de service.
 
-      3. Passez dans la région dans laquelle vous voulez utiliser l'instance de service. Dans la barre de menu {{site.data.keyword.Bluemix_notm}}, développez **Région** ou cliquez sur l'icône **Région**, puis sélectionnez la région dans laquelle
-utiliser l'instance de service.
+      3. Passez dans la région dans laquelle vous voulez utiliser l'instance de service. Dans la barre de menu {{site.data.keyword.Bluemix_notm}}, développez **Région** ou cliquez sur l'icône **Région**, puis sélectionnez la région dans laquelle utiliser l'instance de service.
 
-      4. Créez une instance de service fournie par l'utilisateur en utilisant les données d'identification et les paramètres de connexion que vous avez
-enregistrés depuis la variable d'environnement *VCAP_SERVICES*. Pour plus d'informations sur la création d'une instance de service fournie par l'utilisateur, voir [Création d'une instance de service fournie par l'utilisateur](#user_provide_services).
+      4. Créez une instance de service fournie par l'utilisateur en utilisant les données d'identification et les paramètres de connexion que vous avez enregistrés depuis la variable d'environnement *VCAP_SERVICES*. Pour plus d'informations sur la création d'une instance de service fournie par l'utilisateur, voir [Création d'une instance de service fournie par l'utilisateur](#user_provide_services).
 
       5. Liez l'instance de service fournie par l'utilisateur à votre application avec la commande suivante :
 
@@ -403,17 +406,13 @@ enregistrés depuis la variable d'environnement *VCAP_SERVICES*. Pour plus d'inf
 ## Utilisation des services dans un autre service
 {: #s2s_binding}
 
-L'autorisation d'accès au service permet à un service d'accéder à un autre service directement. Vous pouvez autoriser et configurer l'accès d'une
-instance de service à d'autres instances de service dans le tableau de bord {{site.data.keyword.Bluemix_notm}}.
+L'autorisation d'accès au service permet à un service d'accéder à un autre service directement. Vous pouvez autoriser et configurer l'accès d'une instance de service à d'autres instances de service dans le tableau de bord {{site.data.keyword.Bluemix_notm}}.
 
 Pour utiliser une instance de service depuis un autre service, procédez comme suit :
 
-1. Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur la vignette du service auquel accéder. Le tableau de bord du
-service s'ouvre.
-2. Dans le panneau de navigation, cliquez sur **Gérer** pour autoriser la liaison depuis d'autres instances de service à
-l'aide de la console de l'instance de service.
-3. Si vous voulez refuser à d'autres services l'accès à l'instance de service, cliquez sur **Autorisation d'accès au service** dans le
-panneau de navigation, puis utilisez **Révoquer** pour supprimer la liaison de service.
+1. Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur la vignette du service auquel accéder. Le tableau de bord du service s'ouvre.
+2. Dans le panneau de navigation, cliquez sur **Gérer** pour autoriser la liaison depuis d'autres instances de service à l'aide de la console de l'instance de service.
+3. Si vous voulez refuser à d'autres services l'accès à l'instance de service, cliquez sur **Autorisation d'accès au service** dans le panneau de navigation, puis utilisez **Révoquer** pour supprimer la liaison de service.
 
 # rellinks
 {: #rellinks}

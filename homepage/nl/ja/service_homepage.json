@@ -1,43 +1,42 @@
 {
   "id": "docs_homepage_services",
-  "title": "Bluemix サービスの使用法",
-  "subtitle": "サービス・タイプと可用性についての詳細",
-  "subtitleHref": "services/index.html",
+  "title": "計算およびサービス",
   "items": [{
     "id": "cfApp",
     "title": "Cloud Foundry アプリケーション",
+    "img": "homepage/images/cloud-foundry.svg",
     "href": "cfapps/index.html",
     "category_id": "compute"
   }, {
-    "title": "ランタイム",
-    "href": "cfapps/runtimes.html",
-    "category_id": "compute"
-  }, {
     "title": "ボイラープレート",
+    "img": "homepage/images/Bluemix-logo.svg",
     "href": "cfapps/boilerplates.html",
     "category_id": "compute"
   }, {
+    "id": "whisk-rt",
     "title": "IBM OpenWhisk",
+    "img": "homepage/images/whisk_icon.svg",
     "href": "openwhisk/index.html",
     "category_id": "compute"
   }, {
     "id": "container",
     "title": "IBM Bluemix Container Service",
+    "img": "homepage/images/containerServiceIcon.svg",
     "href": "containers/container_index.html",
     "category_id": "compute"
   }, {
     "type": "extra",
-    "title": "データの処理の試行",
+    "title": "データの処理",
     "href": "services/WorkWithData/index.html",
     "category_id": "data"
   }, {
     "type": "extra",
-    "title": "Dedicated GitHub Enterprise の試行",
+    "title": "Dedicated GitHub Enterprise",
     "href": "services/ghededicated/index.html",
     "category_id": "devops"
   }, {
     "type": "extra",
-    "title": "モバイル・プロジェクトのビルドの試行",
+    "title": "モバイル・プロジェクトのビルド",
     "href": "mobile/index.html",
     "category_id": "mobile"
   }]

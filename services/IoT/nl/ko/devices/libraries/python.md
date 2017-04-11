@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-27"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -21,10 +21,10 @@ lastupdated: "2016-10-27"
 
 Python를 사용하여 디바이스 디버깅을 시작하도록 제공된 예와 정보를 사용하십시오.
 
-## Python 클라이언트 및 자원 다운로드
+## Python 클라이언트 및 리소스 다운로드
 {: #python_client_download}
 
-{{site.data.keyword.iot_short_notm}}의 Python 클라이언트 및 기타 사용 가능한 자원에 액세스하려면 GitHub의 [iot-python](https://github.com/ibm-watson-iot/iot-python) 저장소로 이동하여 설치 지시사항을 완료하십시오.
+{{site.data.keyword.iot_short_notm}}에 대한 Python 클라이언트 및 기타 사용 가능한 리소스에 액세스하려면 GitHub의 [iot-python ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/iot-python){: new_window} 저장소로 이동하여 설치 지시사항을 완료하십시오. 
 
 ## 생성자
 {: #constructor}
@@ -152,7 +152,7 @@ client.commandCallback = myCommandCallback
 ## 사용자 정의 메시지 형식 지원
 {: #custom_message_format}
 
-기본적으로 메시지 형식은 `json`으로 설정되며, 라이브러리에서 JSON 형식의 Python 사전 오브젝트를 인코딩하고 디코딩하도록 지원합니다. 메시지 형식이 `json-iotf`로 설정되면 {{site.data.keyword.iot_short_notm}} JSON 페이로드 스펙에 따라 메시지가 인코딩됩니다. 고유 사용자 정의 메시지 형식의 지원을 추가하려면 GitHub의 [사용자 정의 메시지 형식 샘플](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat)을 참조하십시오.
+기본적으로 메시지 형식은 `json`으로 설정되며, 라이브러리에서 JSON 형식의 Python 사전 오브젝트를 인코딩하고 디코딩하도록 지원합니다. 메시지 형식이 `json-iotf`로 설정되면 {{site.data.keyword.iot_short_notm}} JSON 페이로드 스펙에 따라 메시지가 인코딩됩니다. 고유 사용자 정의 메시지 형식에 대한 지원을 추가하려면 GitHub의 [사용자 정의 메시지 형식 샘플 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat){: new_window}을 참조하십시오. 
 
 다음 예에 간략하게 설명된 대로 사용자 정의 인코더 모듈을 작성하면 디바이스 클라이언트에 등록해야 합니다.
 

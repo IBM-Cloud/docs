@@ -12,14 +12,14 @@ lastupdated: "2016-08-25"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#更新應用程式
+# 更新應用程式
 {: #updatingapps}
 
 
 您可以使用 cf push 指令或 {{site.data.keyword.Bluemix}} DevOps Services，來更新 {{site.data.keyword.Bluemix_notm}} 中的應用程式。在許多情況下，即使是內建建置套件（例如 Node.js），您還是必須提供 -c 參數來指定用來啟動應用程式的指令。
 {:shortdesc}
 
-##建立及使用自訂網域
+## 建立及使用自訂網域
 {: #domain}
 
 對於 CF 應用程式及容器群組，您可以在應用程式的 URL 中使用自訂網域，而不使用預設的 {{site.data.keyword.Bluemix_notm}} 系統網域（即 mybluemix.net）。
@@ -125,7 +125,7 @@ cf delete-route domain -n hostname -f
 
 如果已經將應用程式部署至 {{site.data.keyword.Bluemix_notm}}，且想要將應用程式更新成新版本，您可以使用下列兩種方法其中之一來確保藍綠部署。
 
-###範例：使用 cf rename 指令
+### 範例：使用 cf rename 指令
 
 在此範例中，應用程式的名稱為 Blue。此範例示範如何使用 **cf rename** 指令來更新 *Blue* 的版本，而不用中斷應用程式的資料流量。更新版本安裝完成時，即可選擇性地刪除舊版的 *Blue*。
 
@@ -191,7 +191,7 @@ cf delete Green -f
 
   **結果：** *Blue* 應用程式正在回應 URL `Blue.mybluemix.net`。
 
-###範例：使用 cf map-route 指令
+### 範例：使用 cf map-route 指令
 
 在此範例中，*Blue* 是先前部署的應用程式，而 *Green* 是更新後的版本。此範例示範如何使用 **cf map-route** 指令更新 *Blue* 的版本，而不用中斷應用程式的資料流量。更新版本安裝完成時，即可選擇性地刪除舊版的 *Blue*。
 
@@ -290,10 +290,10 @@ cf delete Blue -f
 
 
 # 相關鏈結
-{: #rellinks}
+{: #rellinks notoc}
 
 ## 相關鏈結
 {: #general}
 
-* [藍綠部署 ![外部鏈結圖示](../icons/launch-glyph.svg)](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
+* [BlueGreenDeployment ![外部鏈結圖示](../icons/launch-glyph.svg)](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
 * [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services ![外部鏈結圖示](../icons/launch-glyph.svg)](https://hub.jazz.net/){:new_window}

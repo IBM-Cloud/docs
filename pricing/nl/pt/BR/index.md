@@ -82,7 +82,7 @@ Se você converter sua conta durante a avaliação grátis, seus abonos grátis 
 ##Qual é o custo
 {: #what_it_costs}
 
-Os encargos variam dependendo dos recursos usados por um determinado serviço, tempo de execução, contêiner, servidor virtual ou opção de suporte. O recurso pode ser o número de chamadas API, o número de instâncias, a memória, o armazenamento e assim por diante. O {{site.data.keyword.Bluemix_notm}} também fornece estimadores de custo detalhados e uma calculadora de custo que não deixa escapar nenhum centavo para ajudar você a planejar os encargos. É possível verificar o custo real após a construção de seus aplicativos, usando a visualização *Detalhes de uso*. Para obter informações mais detalhadas sobre encargos, veja [Como você é cobrado](index.html#charges).
+Os encargos variam dependendo dos recursos usados por um determinado serviço, tempo de execução, contêiner ou opção de suporte. O recurso pode ser o número de chamadas API, o número de instâncias, a memória, o armazenamento e assim por diante. O {{site.data.keyword.Bluemix_notm}} também fornece estimadores de custo detalhados e uma calculadora de custo que não deixa escapar nenhum centavo para ajudar você a planejar os encargos. É possível verificar o custo real após a construção de seus aplicativos, usando a visualização *Detalhes de uso*. Para obter informações mais detalhadas sobre encargos, veja [Como você é cobrado](index.html#charges).
  
 
 ##Código promocional
@@ -281,20 +281,6 @@ A tabela a seguir ilustra o quanto do valor que você paga pelo seu plano se bas
 |5.200 |	O número de itens se enquadra na Camada 5, assim o preço total é US$ 5.000. |	US$ 5.000|
 {:caption="Table 6. Charge calculation by using the block tier pricing model" caption-side="top"}
 
-### Abonos grátis para servidores virtuais
-{: #vms}
-
-É possível usar {{site.data.keyword.virtualmachineslong}} na nuvem pública da IBM como um recurso beta sem encargos. Abonos grátis são fornecidos para o número de imagens do servidor virtual que você pode criar, o número de endereços IP que são designados, bem como a quantia de memória que pode ser usada.
-
-Os itens a seguir são os abonos grátis para as {{site.data.keyword.virtualmachineslong}} beta:
-
-* 2 instâncias
-* 2 CPUs virtuais
-* 8 GB de memória
-* 200 GB de armazenamento de bloco
-* 5 endereços IP públicos
-
-
 ##Como estimar seus custos
 {: #cost}
 
@@ -442,11 +428,12 @@ Para abrir a visualização **Notificações**, clique em **Conta** &gt; *your_a
 Apenas determinados serviços oferecem a possibilidade de mudança de plano de serviço. Se mudanças de plano estiverem ativadas para o serviço, o Painel de serviço exibirá uma opção **Plano** na navegação. Cada serviço terá um conjunto diferente de etapas subsequentes se você mudar o seu plano.
 
 1. Para mudar seu plano, no Painel de serviço, clique em **Plano**. Normalmente, é possível fazer upgrade do plano ou reduzi-lo.
-2. Depois de mudar o plano, você deverá executar um conjunto de etapas subsequentes. As etapas serão diferentes dependendo do tipo de mudança de plano e do serviço. Por exemplo, se você reduziu o seu plano, pode precisar remontar o seu app. Ou, se você fez upgrade do seu plano, pode precisar remontar o seu app e tomar outras ações.<br/><br/>Para remontar o seu app, acesse o Painel do {{site.data.keyword.Bluemix_notm}} e localize o app ao qual o serviço está ligado. No menu do app, selecione **Reiniciar app**.<br/><br/>Outras ações da próxima etapa dependem do serviço. Veja as ações específicas na tabela a seguir.
+2. Depois de mudar o plano, você deverá executar um conjunto de etapas subsequentes. As etapas serão diferentes dependendo do tipo de mudança de plano e do serviço. Por exemplo, se você reduziu o seu plano, pode precisar remontar o seu app. Ou, se você fez upgrade do seu plano, pode precisar remontar o seu app e tomar outras ações.<br/><br/>Para remontar seu app, acesse o Painel do {{site.data.keyword.Bluemix_notm}} e localize o app ao qual o serviço está ligado. No menu do app, selecione **Reiniciar app**.<br/><br/>Outras ações de etapa subsequente dependem do serviço. Veja as ações específicas na tabela a seguir.
 
 |Serviço |	Informações|
 |--------|-------------|
-|Presence Insights 	|Se você tiver um plano Lite e exceder os abonos grátis, uma mensagem 403 é exibida ou registrada para indicar que você não está mais autorizado e que a sua instância de serviço está desativada. Além disso, as chamadas API REST do POST são rejeitadas com uma resposta 403.<br/><br/>Se o seu serviço estiver desativado porque o abono grátis foi excedido, é possível fazer upgrade de um plano Lite para um plano Pago. Seu serviço é ativado novamente dentro de 2 horas.<br/><br/>Se você tiver um plano Pago, é possível reduzir seu plano para o plano Lite, desde que seu uso permaneça dentro do respectivo abono do plano Lite para eventos e armazenamento total.<br/><br/>Ao fazer upgrade ou reduzir seu plano, não é necessário remontar ou reiniciar seus apps.|
+|Presence Insights 	|Se você tiver um plano Lite e exceder os abonos grátis, uma mensagem 403 é exibida ou registrada para indicar que você não está mais autorizado e que a sua instância de serviço está desativada. Ademais, as chamadas API REST do POST serão
+rejeitadas com a resposta 403.<br/><br/>Se o serviço estiver desativado porque o abono grátis foi excedido, será necessário fazer upgrade de um plano Lite para um plano Pago. O seu serviço será reativado em 2 horas.<br/><br/>Se você tiver um plano Pago, será possível reduzi-lo para o plano Lite, desde que seu uso permaneça dentro do abono do plano Lite para eventos e armazenamento total.<br/><br/>Ao fazer upgrade ou reduzir seu plano, você não precisará remontar ou reiniciar seus apps.|
 {:caption="Table 9. Next steps for changing your plan" caption-side="top"}
 
 ###Como mudar seu plano por meio da interface de linha de comandos

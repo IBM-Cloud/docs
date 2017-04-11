@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-26"
+  years: 2016, 2017
+lastupdated: "2017-03-13"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2016-08-26"
 Node-RED를 사용하여 디바이스 시뮬레이터를 작성하고 시뮬레이션된 디바이스 데이터를 {{site.data.keyword.iot_full}} 조직에 보냅니다.  
 {:shortdesc}
 
-Node-RED는 새롭고 흥미로운 방식으로 하드웨어 디바이스, API 및 온라인 서비스를 함께 연결하는 데 사용하는 도구입니다. 자세한 정보는 [Node-RED](http://nodered.org/) 웹 사이트를 참조하십시오.  
+Node-RED는 새롭고 흥미로운 방식으로 하드웨어 디바이스, API 및 온라인 서비스를 함께 연결하는 데 사용하는 도구입니다. 자세한 정보는 [Node-RED ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://nodered.org/){: new_window} 웹 사이트를 참조하십시오.   
 
 고유 환경에서 Node-RED 인스턴스를 실행하고 {{site.data.keyword.Bluemix_notm}} 애플리케이션으로 사용할 수 있습니다. 다음 프로세스에는 {{site.data.keyword.Bluemix_notm}}의 지시사항이 포함됩니다.
 
@@ -26,9 +26,9 @@ Node-RED 디바이스 시뮬레이터를 작성하여 연결하려면 다음을 
    디바이스 시뮬레이터를 사용하여 MQTT 디바이스 메시지를 {{site.data.keyword.iot_short_notm}}에 보냅니다. 디바이스 시뮬레이터는 운송 컨테이너의 데이터를 MQTT 브로커(예: {{site.data.keyword.iot_short_notm}})에 보내기를 시뮬레이션합니다.
     1. https://console.ng.bluemix.net에서 {{site.data.keyword.Bluemix_notm}}에 로그인합니다.
     2. **카탈로그** 탭을 선택합니다.
-    3. 서비스 카탈로그의 표준 유형 섹셩늘 찾아 **Node-RED Starter Community BETA**를 클릭합니다. **팁:** [여기](https://console.ng.bluemix.net/catalog/starters/node-red-starter/)를 클릭하여 Node-RED Starter 페이지로 직접 이동하십시오.
-    4. Node-RED Starter 페이지에서 Node-RED를 배치할 영역을 선택하고 앱 작성 선택사항을 확인하고 **작성**을 클릭하여 Node-RED를 Bluemix 조직에 추가합니다.
-    예를 들어 다음과 같습니다.  
+    3. 서비스 카탈로그의 표준 유형 섹션을 찾아 **Node-RED Starter Community BETA**를 클릭합니다. **팁:** Node-RED Starter 페이지로 바로 이동하려면 [여기 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.ng.bluemix.net/catalog/starters/node-red-starter/){: new_window}를 클릭하십시오. 
+    4. Node-RED Starter 페이지에서 Node-RED를 배치할 영역을 선택하고 앱 작성 선택사항을 확인하고 **작성**을 클릭하여 Node-RED를 Bluemix 조직에 추가합니다.  
+예를 들어 다음과 같습니다.  
      - 영역: dev
      - 이름: myDevice
      - 호스트: myDevice
@@ -36,7 +36,7 @@ Node-RED 디바이스 시뮬레이터를 작성하여 연결하려면 다음을 
     나머지 옵션은 기본값으로 두십시오. 애플리케이션이 배치되고 나면 Node-RED로 코딩 시작 페이지가 표시됩니다.  
     **참고:** 스테이징 프로세스는 몇 분이 걸릴 수 있습니다.
 
-    3. 라우트 링크를 클릭하여 Node-RED를 엽니다.
+    3. 라우트 링크를 클릭하여 Node-RED를 엽니다.  
     예: `http://simulatedDevice.mybluemix.net`
     4. **Node-RED 플로우 편집기로 이동**을 클릭하여 편집기를 엽니다.
     5. 이 문서의 [Node-RED 노드 플로우 데이터](#flow_data) 섹션에 있는 Node-RED 플로우 데이터를 복사합니다.
@@ -44,7 +44,7 @@ Node-RED 디바이스 시뮬레이터를 작성하여 연결하려면 다음을 
     6. 가져오기 노드 입력 필드에 클립보드를 붙여넣고 **확인**을 클릭합니다.
     디바이스 시뮬레이터 플로우를 플로우 편집기로 가져옵니다.
 
-2. {{site.data.keyword.iot_short_notm}}에 디바이스 등록
+2. {{site.data.keyword.iot_short_notm}}  에 디바이스 등록
 다음 단계를 따라 Node-RED 샘플 디바이스에 연결하십시오.
  1. {{site.data.keyword.Bluemix_notm}}에서 대시보드로 이동합니다.
  2. {{site.data.keyword.iot_short_notm}}을 배치한 영역을 선택합니다.
@@ -66,7 +66,8 @@ Node-RED 디바이스 시뮬레이터를 작성하여 연결하려면 다음을 
   <ul>
   <li> 조직 ID
   <li> 디바이스 유형
-  <li> 디바이스 ID<li> 인증 메소드
+  <li> 디바이스 ID
+<li> 인증 메소드
   <li> 인증 토큰
   </ul>
   **팁:** 연결을 완료하기 위해 Node-Red 애플리케이션 구성을 완료하려면 다음 몇 단계에서 조직 ID, 인증 토큰, 디바이스 유형 및 디바이스 ID가 필요합니다.
@@ -95,10 +96,10 @@ Node-RED 디바이스 시뮬레이터를 작성하여 연결하려면 다음을 
 
 4. 디바이스 연결 유효성 검증
  1. 다른 브라우저 탭 또는 창에서 {{site.data.keyword.iot_short_notm}} 대시보드를 엽니다.
- 2. **디바이스**를 선택하고 **Device001** 또는 추가한 디바이스 이름이 다른 경우 해당 이름을 클릭합니다.
- 디바이스 정보 페이지가 열립니다. 이 보기를 사용하면 디바이스의 연결 상태를 볼 수 있습니다. 이 단계에서는 디바이스가 연결된 것으로 표시되어야 합니다.   
- 3. Node-RED 플로우 편집기로 돌아가 삽입 노드의 단추를 클릭하여 자산 페이로드를 생성합니다.
- 페이로드는 다음 데이터 점을 포함합니다.  
+ 2. **디바이스**를 선택하고 **Device001** 또는 추가한 디바이스 이름이 다른 경우 해당 이름을 클릭합니다.  
+디바이스 정보 페이지가 열립니다. 이 보기를 사용하면 디바이스의 연결 상태를 볼 수 있습니다. 이 단계에서는 디바이스가 연결된 것으로 표시되어야 합니다.   
+ 3. Node-RED 플로우 편집기로 돌아가 삽입 노드의 단추를 클릭하여 자산 페이로드를 생성합니다.  
+페이로드는 다음 데이터 점을 포함합니다.  
  ```
  {"d":
   { "name":"My Device",

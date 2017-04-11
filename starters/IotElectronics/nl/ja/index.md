@@ -1,14 +1,18 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-29"
+  years: 2016, 2017
+lastupdated: "2017-03-10"
 ---
 
-{:new_window: target="\_blank"}
-
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
+<!-- Note to writers - index.md and iot4egettingstarted.md are (almost) duplicates and a change to one should be made to both. index.md appears within the product app as the getting started page. iot4egettingstarted.md appears as the top level topic in the docs toc. -->
 
 # {{site.data.keyword.iotelectronics}} Starter によるアプリの作成
 
@@ -27,7 +31,8 @@ lastupdated: "2016-11-29"
 
 - [スターター・アプリを操作して、](https://console.ng.bluemix.net/docs/starters/IotElectronics/iot4ecreatingappliances.html){{site.data.keyword.iot_short_notm}} に接続された電気製品を製造メーカーがどのようにモニターできるのか体験します。
 - [サンプル・モバイル・アプリを操作して、](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html)電気製品の所有者が電気製品の登録および電気製品とのやり取りをどのように行うことができるのか体験します。
-- [API を操作して、](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)独自の {{site.data.keyword.iotelectronics}} アプリをカスタマイズして展開する方法を確認します。
+- {{site.data.keyword.iot_short_notm}} で[データを操作してユーザーとデバイスを管理します](iotelectronics_dashboard.html)。
+- [API を操作して ![外部リンクのアイコン](../../icons/launch-glyph.svg)](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html){: new_window}、独自の {{site.data.keyword.iotelectronics}} アプリをカスタマイズして展開する方法を確認します。
 
 ## コンポーネントの詳細を確認する
 - [{{site.data.keyword.iotelectronics}} の資料](iotelectronics_overview.html)

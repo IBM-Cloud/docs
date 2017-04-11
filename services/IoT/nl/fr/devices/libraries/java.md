@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-18"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -21,7 +21,7 @@ Vous pouvez créer et personnaliser des terminaux qui interagissent avec votre o
 ## Téléchargement du client et des ressources Java
 {: #java_client_download}
 
-Pour accéder aux bibliothèques et exemples client Java pour {{site.data.keyword.iot_short_notm}}, accédez au référentiel [iot-java](https://github.com/ibm-watson-iot/iot-java) dans GitHub et exécutez les instructions d'installation.
+Pour accéder aux bibliothèques et exemples client Java pour {{site.data.keyword.iot_short_notm}}, accédez au référentiel [iot-java ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-java){: new_window} dans GitHub et exécutez des instructions d'installation. 
 
 ## Constructeur
 {: #constructor}
@@ -40,6 +40,7 @@ Le constructeur génère l'instance client et accepte l'objet `Propriétés` con
 |`MaxInflightMessages`  |Définit le nombre maximal de messages en cours pour la connexion. La valeur par défaut est 100.|
 |`Automatic-Reconnect`  |Valeur true ou false qui est requise lorsque vous souhaitez reconnecter automatiquement le terminal à {{site.data.keyword.iot_short_notm}} alors qu'il est en ode déconnecté. La valeur par défaut est false.|
 |`Disconnected-Buffer-Size`|Nombre maximal de messages qui peut être stocké en mémoire alors que le client est déconnecté. La valeur par défaut est 5 000.|
+|`WebSocket`|Valeur true ou false requise uniquement si vous souhaitez utiliser des connexions WebSocket avec {{site.data.keyword.iot_short_notm}}. La valeur par défaut est false.|
 
 **Remarque :** Pour connecter le terminal en mode d'abonnement durable, affectez la valeur `false` à l'option `clean-session`. Pour plus d'informations sur l'option 'clean-session', voir la section 'Subscription Buffers and Clean Session' de la [documentation MQTT](../../reference/mqtt/index.html#subscription-buffers-and-clean-session).
 
@@ -405,4 +406,4 @@ public class RegisteredDeviceCommandSubscribe {
 ## Exemples
 {: #samples}
 
-Pour obtenir une liste d'exemples de terminal et de gestion des terminaux développés à l'aide de la bibliothèque client Java {{site.data.keyword.iot_short_notm}}, voir le [référentiel GitHub iot-device-samples](https://github.com/ibm-messaging/iot-device-samples/tree/master/java).
+Pour obtenir une liste d'exemples de terminal et de gestion des terminaux développés à l'aide de la bibliothèque client Java {{site.data.keyword.iot_short_notm}}, voir le [référentiel GitHub iot-device-samples ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-device-samples/tree/master/java){: new_window}.

@@ -1,16 +1,17 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-29"
+  years: 2016, 2017
+lastupdated: "2017-03-01"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
 
 
 <!-- {{site.data.keyword.iotinsurance_full}}  {{site.data.keyword.iotinsurance_short}}  -->
@@ -26,7 +27,7 @@ En la tabla siguiente se muestran las bases de datos de {{site.data.keyword.ioti
 Nombres de base de datos| Frecuencia de cambio| Razón del cambio | Requiere copia de seguridad | Comentarios
 ------------- | -------------| -------------| -------------| -------------
 favorites|Administración|Nueva acción de administrador|YES|-
-Devices|Administración|Nuevos dispositivos o usuarios añadidos o eliminados|YES| El transformador genera una tabla de forma dinámica en la memoria desde el proveedor de dispositivos. Para pasarelas conectadas directamente, esta tabla almacena los usuarios de dispositivos.
+Devices|Administración|Nuevos dispositivos o usuarios añadidos o eliminados|YES| El transformador genera una tabla de forma dinámica en la memoria y la rellena con datos del proveedor del dispositivo. Para pasarelas conectadas directamente, esta tabla almacena los dispositivos.
 hazardevents|Aleatoria|Detectado nuevo suceso de cobertura|YES|-
 Jscode|Administración|Desplegado nuevo código JS para coberturas|YES*| De forma opcional, el administrador puede omitir la copia de seguridad y desplegar una versión nueva del código JS.
 Promotions|Administración|Nueva promoción añadida|YES|-
@@ -35,11 +36,12 @@ Shields|Administración|Nueva cobertura añadida|YES|-
 Users|Administración|Nuevo usuario añadido|YES|-
 aggregation|-|-|NO|Se puede volver a crear.
 aggregationschedule|-|-| NO|Se puede volver a crear.
+
 Para realizar la copia de seguridad de los datos de {{site.data.keyword.iotinsurance_short}}, lleve a cabo los siguientes pasos:
 
 ## Creación de una instancia de {{site.data.keyword.cloudant}} de réplica
 {: #createinstance}
-Cree una instancia de {{site.data.keyword.cloudant}} de réplica utilizando las instrucciones de réplica de [{{site.data.keyword.cloudant}}](https://docs.cloudant.com/replication.html). Para fines de recuperación tras desastre, cree la réplica en una ubicación distinta del servicio de {{site.data.keyword.iotinsurance_short}} original. Por ejemplo, si la instancia original está en Dallas, la réplica podría estar en Londres.
+Cree una instancia de {{site.data.keyword.cloudant}} de réplica utilizando las instrucciones de réplica de [{{site.data.keyword.cloudant}} ![Icono de enlace externo](../../icons/launch-glyph.svg)](https://docs.cloudant.com/replication.html). Para fines de recuperación tras desastre, cree la réplica en una ubicación distinta del servicio de {{site.data.keyword.iotinsurance_short}} original. Por ejemplo, si la instancia original está en Dallas, la réplica podría estar en Londres.
 
 ## Localización de credenciales y URL
 {: #locate_credentials}
@@ -69,7 +71,7 @@ Cree una tarea de réplica para cada base de datos que debe tener copia de segur
 
 8. Pulse **Replicar datos**.  
 
-9. (opcional) Como las tareas de réplica posteriores sobrescriben los datos anteriores, considere la opción de exportar los datos a un archivo CSV. Para obtener instrucciones, consulte [Exportar Cloudant JSON como CSV, RSS o iCal](https://developer.ibm.com/clouddataservices/2015/09/22/export-cloudant-json-as-csv-rss-or-ical/).
+9. (opcional) Como las tareas de réplica posteriores sobrescriben los datos anteriores, considere la opción de exportar los datos a un archivo CSV.  Para obtener instrucciones, consulte [Exportar Cloudant JSON como CSV, RSS o iCal ![Icono de enlace externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/clouddataservices/2015/09/22/export-cloudant-json-as-csv-rss-or-ical/){: new_window}.
 
 10. Repita estos pasos para cada base de datos.
 
@@ -91,26 +93,6 @@ Puede restaurar los datos de una base de datos replicada o cargando un archivo C
 3. Restaure los datos de una de estas formas:
   - Cargue los datos desde un archivo de copia de seguridad CSV directamente a la instancia de Cloudant primaria
   - Cree una tarea de réplica que tenga la base de datos replicada como el origen y la base de datos original como el destino. Esta tarea transfiere los datos replicados a la base de datos original.
-4. Ejecute los siguientes scripts para volver a crear documentos de diseño y restaurar la integridad referencial. Los scripts están ubicados en el [Sitio de GitHub de ejemplos de API de {{site.data.keyword.iotinsurance_short}}](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/)
+4. Ejecute los siguientes scripts para volver a crear documentos de diseño y restaurar la integridad referencial.  Los scripts están ubicados en el [{{site.data.keyword.iotinsurance_short}} sitio de GitHub de ejemplos de API ![Icono de enlace externo](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/){: new_window}.
   - iot4i-api/wearable-framework/auto-create/create.sh - Este script vuelve a crear los documentos de diseño en {{site.data.keyword.cloudant}}.
   - iot4i-api/wearable-framework/health/check-relations - Este script restablece la integridad referencial. Por ejemplo, el script corrige un caso en el que se suprime la cobertura pero aún existe la asociación a un usuario.
-
-
-# Enlaces relacionados
-{: #rellinks}
-
-## Guías de aprendizaje y ejemplos
-{: #samples}
-* [Código de app para móvil de ejemplo en GitHub](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## Referencia de API
-{: #api}
-* [API de {{site.data.keyword.iotinsurance_short}}](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [Ejemplos de API de {{site.data.keyword.iotinsurance_short}}](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-
-## Enlaces relacionados
-{: #general}
-* [Documentación de {{site.data.keyword.iot_full}}](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [Foro de soporte para desarrolladores](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-* [Foro de soporte de Stack Overflow](http://stackoverflow.com/questions/tagged/ibm-bluemix)

@@ -71,6 +71,8 @@ curl https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DATABASE/$DOCUMENT_ID/$
 ```
 {:codeblock}
 
+<!--
+
 _Example instruction for creating or updating an attachment, using Javascript:_
 
 ```javascript
@@ -91,6 +93,8 @@ fs.readFile($FILEPATH, function (err, data) {
 });
 ```
 {:codeblock}
+
+-->
 
 The response contains the document ID and the new document revision.
 
@@ -131,6 +135,8 @@ curl https://$USERNAME.cloudant.com/$DATABASE/$DOCUMENT_ID/$ATTACHMENT \
 ```
 {:codeblock}
 
+<!--
+
 _Example of reading an attachment, using Javascript:_
 
 ```javascript
@@ -144,6 +150,8 @@ db.attachment.get($DOCUMENT_ID, $FILENAME, function (err, body) {
 });
 ```
 {:codeblock}
+
+-->
 
 ## Delete
 
@@ -169,6 +177,8 @@ curl https://$USERNAME.cloudant.com/$DATABASE/$DOCUMENT_ID/$ATTACHMENT?rev=$REV 
 ```
 {:codeblock}
 
+<!--
+
 _Example of deleting an attachment, using Javascript:_
 
 ```javascript
@@ -182,6 +192,8 @@ db.attachment.destroy($DOCUMENT_ID, $FILENAME, $REV, function (err, body) {
 });
 ```
 {:codeblock}
+
+-->
 
 If the deletion is successful,
 the response contains `"ok": true`,

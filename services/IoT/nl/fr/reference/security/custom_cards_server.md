@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-13"
+  years: 2016, 2017
+lastupdated: "2016-11-29"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2016-10-13"
 {:pre: .pre}
 
 # Sécurisation du serveur de cartes personnalisées
-{: #securing_custom_cards
+{: #securing_custom_cards}
 
 Les serveurs de cartes personnalisées sont des serveurs Web standard qui hébergent le code javascript de cartes personnalisées. Pour assurer l'intégrité de votre environnement {{site.data.keyword.iot_short_notm}}, vous devez sécuriser votre serveur de cartes personnalisées en exécutant les étapes de sécurisation des données source de carte décrites dans cette rubrique.
 {:shortdesc}

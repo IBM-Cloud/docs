@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-29"
+  years: 2016, 2017
+lastupdated: "2017-03-08"
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# About {{site.data.keyword.iot4auto_short}} (Experimental)
+# About IoT for Automotive (Experimental)
 {: #iotautomotive_overview}
 
 {{site.data.keyword.iot4auto_full}} is a {{site.data.keyword.Bluemix_notm}} service that links drivers and vehicles to the surrounding environment to improve the mobility experience.

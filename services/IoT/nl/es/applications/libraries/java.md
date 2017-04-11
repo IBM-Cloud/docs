@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-24"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-22"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2016-10-24"
 {: #java}
 
 
-Puede crear y personalizar aplicaciones que interactúan con su organización en {{site.data.keyword.iot_full}} utilizando Java. Se proporciona una biblioteca de cliente Java para {{site.data.keyword.iot_short_notm}}, documentación y ejemplos para ayudarle a iniciarse con el desarrollo de aplicaciones.
+Puede crear y personalizar aplicaciones que interactúan con su organización en {{site.data.keyword.iot_full}} utilizando Java™. Se proporciona una biblioteca de cliente Java para {{site.data.keyword.iot_short_notm}}, documentación y ejemplos para ayudarle a iniciarse con el desarrollo de aplicaciones.
 
 {:shortdesc}
 
@@ -32,7 +32,7 @@ Para acceder a las bibliotecas y a los ejemplos de cliente Java para {{site.data
 ## Constructor
 {: #constructor}
 
-El constructor compila la instancia del cliente y acepta el objeto `Propiedades`, que contiene las siguientes definiciones:
+El constructor compila la instancia del cliente y acepta el objeto `Properties`, que contiene las siguientes definiciones:
 
 | Definición     |Descripción     |
 |----------------|----------------|
@@ -399,7 +399,7 @@ Cualquier dato XML se puede convertir a serie y publicarse como se indica a cont
     status = myClient.publishEvent("load", xmlConvertedString, "xml", 2);
 ```
 
-De forma similar, para publicar eventos en formato binario, utilice la matriz de bytes, tal como se describe en el ejemplo siguiente:
+De forma similar, para publicar sucesos en formato binario, utilice la matriz de bytes, tal como se describe en el ejemplo siguiente:
 
 ```
     myClient.connect();

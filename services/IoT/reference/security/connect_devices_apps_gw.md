@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2017-01-19"
+  years: 2015, 2017
+lastupdated: "2017-04-05"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-01-19"
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# Connecting applications, devices, and gateways to {{site.data.keyword.iot_short_notm}}
+# Connecting applications, devices, and gateways using the API
 {: #connect_devices_apps_gw}
 
 You can connect applications, devices, and gateways to {{site.data.keyword.iot_full}} through the MQTT protocol. You can also use the HTTP REST API to connect devices to {{site.data.keyword.iot_short_notm}}.
@@ -31,7 +31,7 @@ To connect device, application, and gateway clients to your {{site.data.keyword.
 
 ### HTTP REST API connection URL
 
-<pre class="pre">https://<var class="keyword varname">orgId</var>.internetofthings.ibmcloud.com/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.internetofthings.ibmcloud.com/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 {: codeblock}
 
 **Notes**

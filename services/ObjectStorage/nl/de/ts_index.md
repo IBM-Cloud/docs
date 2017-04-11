@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -60,8 +60,8 @@ Hilfe zu Problemen oder Fragen bei Verwendung von {{site.data.keyword.objectstor
 
 Wenn Sie in Foren eine Frage stellen, versehen Sie Ihre Frage mit einem Tag, sodass sie von den {{site.data.keyword.Bluemix_notm}}-Entwicklungsteams registriert wird.
 
-* Wenn Sie technische Fragen zu {{site.data.keyword.objectstorageshort}} haben, stellen Sie Ihre Frage auf [Stack Overflow](http://stackoverflow.com/search?q=object-storage+ibm-bluemix){: new_window} und versehen Sie sie mit den Tags "ibm-bluemix" und "object-storage".
-* Bei Fragen zum Service sowie zum Abruf von Einführungsanweisungen wenden Sie sich an das Forum [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/objectstorage/?smartspace=bluemix){: new_window}. Versehen Sie Ihre Anfrage mit den Tags "objectstorage" und "bluemix".
+* Wenn Sie technische Fragen zu {{site.data.keyword.objectstorageshort}} haben, posten Sie Ihre Frage bei <a href="http://stackoverflow.com/search?q=object-storage+ibm-bluemix" target="_blank">Stack Overflow <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a> und versehen Sie sie mit den Tags "ibm-bluemix" und "object-storage".
+* Bei Fragen zum Service sowie zum Abruf von Einführungsanweisungen wenden Sie sich an das Forum <a href="https://developer.ibm.com/answers/topics/objectstorage/?smartspace=bluemix" target="_blank">IBM developerWorks dW Answers <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a>. Versehen Sie Ihre Anfrage mit den Tags "objectstorage" und "bluemix".
 
 Unter [Hilfe anfordern](/docs/support/index.html#getting-help) finden Sie weitere Informationen zur Nutzung der Foren.
 

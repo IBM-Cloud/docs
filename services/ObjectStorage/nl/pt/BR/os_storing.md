@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -51,7 +51,7 @@ caixa de diálogo é aberta.
   ```
   {: pre}
 
-**Observação**: se você receber uma mensagem de erro, confirme que o [software obrigatório](/docs/services/ObjectStorage/os_configuring.html#install-swift-client) está instalado.
+  **Observação**: se você receber uma mensagem de erro, confirme que o [software obrigatório](/docs/services/ObjectStorage/os_configuring.html#install-swift-client) está instalado.
 
 3. Opcional: para verificar se o contêiner foi criado, execute o comando a seguir para listar os contêineres.
 

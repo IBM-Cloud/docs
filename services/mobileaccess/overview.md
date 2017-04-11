@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-30"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -11,6 +11,8 @@ lastupdated: "2017-01-30"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+The {{site.data.keyword.amafull}} service is replaced with the {{site.data.keyword.appid_full}} service.
 
 # About {{site.data.keyword.amashort}}
 {: #mca-overview}
@@ -91,15 +93,14 @@ The following diagram describes how a request flows from the client SDK to your 
 ## Getting help and support for {{site.data.keyword.amashort}}
 {: #gettinghelp}
 
-If you have problems or questions when using {{site.data.keyword.amashort}}, you can get help by searching for information or by asking questions through a forum. You can also open a support ticket. 
+If you have problems or questions when using {{site.data.keyword.amashort}}, you can get help by searching for information or by asking questions through a forum. You can also open a support ticket.
 
 When using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.Bluemix_notm}} development teams.
 
-* If you have technical questions about developing or deploying an app with {{site.data.keyword.amashort}}, post your question on [Stack Overflow ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/search?q={{site.data.keyword.amashort}}+ibm-bluemix){: new_window} and tag your question with "ibm-bluemix" and "{{site.data.keyword.amashort}}".
+* If you have technical questions about developing or deploying an app with {{site.data.keyword.amashort}}, post your question on [Stack Overflow ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/search?q={{site.data.keyword.amashort}}+ibm-bluemix){: new_window} and tag your question with `ibm-bluemix` and `{{site.data.keyword.amashort}}`.
 * For questions about the service and getting started instructions, use the [IBM developerWorks ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=mobile+client+access%20%2B[bluemix]){: new_window}.
 
 
 See [Getting help](https://www.{DomainName}/docs/support/index.html#getting-help) for more details about using the forums.
 
 For information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support](https://www.{DomainName}/docs/support/index.html#contacting-support).
-

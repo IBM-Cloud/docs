@@ -1,35 +1,43 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-26"
-
+  years: 2016, 2017
+lastupdated: "2017-03-01"
 ---
 
-
-
-{:new_window: target="\_blank"}
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 
 # Kit de ferramentas de blindagem
 {: #iot4i_shield_toolkit}
-Uma blindagem é um conjunto de regras e ações que podem ser acionadas por condições
-específicas na entrada, que é uma carga útil, recebida de sensores. As blindagens são
-usadas para proteger a propriedade e os usuários, identificando riscos e criando as respostas
-apropriadas. Este exemplo mostra como configurar seu ambiente, definir uma blindagem,
-criar um usuário e, em seguida, associar a blindagem ao usuário. É possível também criar
-promoções e riscos simulados.
-{:shortdesc}
+Use blindagens para proteger a propriedade e os usuários por meio da identificação de riscos
+e da criação de respostas automatizadas apropriadas. Use ou modifique as blindagens que estão incluídas na biblioteca de blindagens do {{site.data.keyword.iotinsurance_short}} ou crie e implemente suas próprias blindagens usando as instruções e os exemplos a seguir.{:shortdesc}
+
+## Sobre as blindagens.
+Uma blindagem é um conjunto de regras e ações definidas que podem ser acionadas por condições específicas na entrada que é recebida de um sensor. Por exemplo, é possível criar uma blindagem com uma regra para o envio de uma mensagem de texto sempre que o sensor detectar um vazamento de água.
+
+## Usando blindagens da biblioteca de blindagens do
+{{site.data.keyword.iotinsurance_short}}
+
+É possível localizar uma ampla variedade de blindagens predefinidas na [biblioteca de blindagens do {{site.data.keyword.iotinsurance_short}} ![Ícone de link externo](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-shields){: new_window}. Visualize o arquivo LEIA-ME no site para obter instruções para fazer download e começar a usar
+as blindagens.
+
+## Criando sua própria blindagem
+Este exemplo mostra como configurar seu ambiente, definir uma blindagem,
+criar um usuário e, em seguida, associar a blindagem ao usuário.  É possível também criar
+promoções e riscos simulados.  
 
 Amostras de código para criar uma blindagem simples para vazamentos de água são
 mostradas nas seções a seguir. Um conjunto completo de código de exemplo está disponível
 no [Diretório do
 GitHub iot4i-api-examples-nodejs](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/).
 
-## Pré-requisitos
+### Pré-requisitos
 Antes de iniciar, assegure-se de que os pré-requisitos a seguir estejam adequados:
 
 - [Node.js](https://nodejs.org/en/) instalado no computador.  
@@ -40,7 +48,7 @@ Antes de iniciar, assegure-se de que os pré-requisitos a seguir estejam adequad
   1. Clone ou faça download do [Repositório de código-fonte GitHub](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs) para seu computador.
   2. Instale os pré-requisitos de software livre do projeto usando uma linha de comandos para acessar a pasta que contém os arquivos de código-fonte clonados e executando o comando `npm install`.
 
-## Configurando o Ambiente
+### Configurando o Ambiente
 {: #environment}
 Para configurar seu ambiente para enviar chamadas de API REST, deve-se configurar a URL
 para a API no arquivo config.js. A URL do agregador pode ser ignorada nesse contexto.
@@ -56,14 +64,14 @@ var config = module.exports = {
 };
 ```
 
-## Criando uma definição de blindagem
+### Criando uma definição de blindagem
 {: #create_shield_def}
 
 Método: POST  
 API: /shield  
 https://iot4i-docs-api.mybluemix.net/dist/#!/shield/addShield
 
-Crie uma definição de blindagem no arquivo createShield.js. O exemplo a seguir
+Crie uma definição de blindagem no arquivo createShield.js.  O exemplo a seguir
 mostra uma blindagem simples que detecta um vazamento de água.
 
 ```
@@ -90,7 +98,7 @@ que:
 - **UUID** - O identificador exclusivo universal (UUID) da blindagem.
 - **actions** - Uma lista de ações que são acionadas quando um risco é criado. Nesse exemplo, informações sobre o risco são enviadas para o app do usuário utilizando uma notificação push do iOS.
 
-## Criando um código de blindagem
+### Criando um código de blindagem
 {: #create_shield_code}
 Crie um código de blindagem no arquivo shieldCode.js para definir como o mecanismo de blindagem processa uma carga útil.
 
@@ -165,7 +173,7 @@ de pré-processamento poderá ser usada para converter as temperaturas para o va
   registerShield(DEMO_SHIELD_UUID, DEMO_SHIELD_NAME, demoEntryCondition, undefined, demoSafelet, demoMessage, DEMO_SHIELD_DELAY);
   ```
 
-## Criando um usuário
+### Criando um usuário
 {: #create_user}
 
 Método: POST  
@@ -201,7 +209,7 @@ que:
   - 10 - painel
   - 1 - administrador do sistema
 
-## Criando uma associação de blindagem
+### Criando uma associação de blindagem
 {: #create_shield_assoc}
 
 Método: POST  
@@ -223,7 +231,7 @@ var userShield = {
 
 
 
-## Criando um risco simulado
+### Criando um risco simulado
 {: #create_sim_hazard}
 
 Método: POST  
@@ -261,11 +269,11 @@ var parameters {
 ```
 
 
-## Criando uma Promoção
+### Criando uma Promoção
 {: #create_promotion}
 
-O {{site.data.keyword.iotinsurance_short}} pode enviar promoções para o
-proprietário usando o app móvel. Crie promoções usando o arquivo createPromotion.js. 
+O {{site.data.keyword.iotinsurance_short}} pode enviar promoções para o proprietário
+usando o app móvel. Crie promoções usando o arquivo createPromotion.js.
 
 O exemplo a seguir mostra como criar uma promoção para um encanador autorizado.
 

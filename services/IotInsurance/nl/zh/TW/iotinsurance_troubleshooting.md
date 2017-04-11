@@ -1,16 +1,17 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-27"
-
+  years: 2016, 2017
+lastupdated: "2017-03-08"
 ---
+
 <!-- Common attributes used in the template are defined as follows: -->
-{:tsSymptoms: .tsSymptoms}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # {{site.data.keyword.iotinsurance_short}} 疑難排解
 {: #ts}
@@ -30,7 +31,7 @@ lastupdated: "2016-10-27"
 {: tsCauses}
 
 您可以增加帳戶的記憶體配額，或是減少服務及應用程式使用的記憶體。
-- 若要增加帳戶的記憶體配額，您可以[將試用帳戶轉換成付費帳戶](https://console.ng.bluemix.net/docs/pricing/index.html#pay-accounts)。
+- 若要增加帳戶的記憶體配額，您可以[將試用帳戶轉換為付費帳戶](https://console.ng.bluemix.net/docs/pricing/index.html#pay-accounts)。
 - 若要快速減少使用中的記憶體，請移除非 {{site.data.keyword.iotinsurance_short}} 的所有服務及應用程式。重新啟動 {{site.data.keyword.iotinsurance_short}} 服務，讓變更生效。
 - 針對具有超過 2 GB 總記憶體的付費帳戶，您可能可以藉由調整其他應用程式或服務使用的記憶體量而避免移除它們。如需相關資訊，請參閱[已超出組織的記憶體限制](https://console.ng.bluemix.net/docs/troubleshoot/ts_apps.html#ts_outofmemory)。
 {: tsResolve}
@@ -55,33 +56,14 @@ lastupdated: "2016-10-27"
 
 如果您在使用 {{site.data.keyword.iotinsurance_full}} 時有問題或疑問，請檢查 {{site.data.keyword.Bluemix_notm}}，或者透過搜尋資訊或透過討論區提出問題來取得協助。您也可以開啟支援問題單。
 
-* 您可以移至 [Bluemix 狀態頁面](https://developer.ibm.com/bluemix/support/#status){:new_window}來檢查 {{site.data.keyword.Bluemix_notm}} 是否可用。
+- 您可以移至 [Bluemix 狀態頁面 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/support/#status){:new_window} 來檢查 {{site.data.keyword.Bluemix_notm}} 是否可用。
 
-* 您可以檢閱討論區，以查看其他使用者是否發生相同的問題。使用討論區提出問題時，請標記您的問題，讓 {{site.data.keyword.Bluemix_notm}} 開發團隊可以看到它。
+- 您可以檢閱討論區，以查看其他使用者是否發生相同的問題。使用討論區提出問題時，請標記您的問題，讓 {{site.data.keyword.Bluemix_notm}} 開發團隊可以看到它。
   <!--Insert the appropriate Stack Overflow tag for your service for <service_keyword> in URL and text below:  -->
-* 如果您有使用 {{site.data.keyword.iotinsurance_short}} 開發或部署應用程式的相關技術問題，請將問題張貼在 [Stack Overflow](http://stackoverflow.com/search?q=iot-insurance+ibm-bluemix){:new_window}，並使用 "ibm-bluemix" 及 "iot-for-insurance" 來標記您的問題。
+- 如果您有使用 {{site.data.keyword.iotinsurance_short}} 開發或部署應用程式的相關技術問題，請將問題張貼在 [Stack Overflow ![外部鏈結圖示](../../icons/launch-glyph.svg)](http://stackoverflow.com/search?q=iot-insurance+ibm-bluemix){:new_window}，並使用 "ibm-bluemix" 及 "iot-for-insurance" 來標記您的問題。
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
-* 若是服務及開始使用指示的相關問題，請使用 [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/iot-insurance/?smartspace=bluemix){:new_window} 討論區。請加上 "iot-for-insurance" 及 "bluemix" 標籤。
+- 若是服務及開始使用指示的相關問題，請使用 [IBM developerWorks dW Answers ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/topics/iot-insurance/?smartspace=bluemix){:new_window} 討論區。請加上 "iot-for-insurance" 及 "bluemix" 標籤。
 
 如需使用討論區的詳細資料，請參閱[取得協助](https://www.{DomainName}/docs/support/index.html#getting-help)。
 
-* 如果您仍然無法解決問題，則可以開啟 IBM 支援問題單。如需開啟 IBM 支援問題單的相關資訊，或支援層次與問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](https://www.{DomainName}/docs/support/index.html#contacting-support)。
-
-
-# 相關鏈結
-{: #rellinks}
-
-## 指導教學及範例
-{: #samples}
-* [GitHub 上的範例行動應用程式碼](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## API 參考資料
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API 範例](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## 相關鏈結
-{: #general}
-* [{{site.data.keyword.iot_full}} 文件](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [開發人員支援討論區](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-  * [Stack Overflow 支援討論區](http://stackoverflow.com/questions/tagged/ibm-bluemix)
+- 如果您仍然無法解決問題，則可以開啟 IBM 支援問題單。如需開啟 IBM 支援問題單的相關資訊，或支援層次與問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](../support/index.html#contacting-support)。

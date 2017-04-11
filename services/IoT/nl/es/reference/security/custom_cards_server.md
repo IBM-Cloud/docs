@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-13"
+  years: 2016, 2017
+lastupdated: "2016-11-29"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2016-10-13"
 {:pre: .pre}
 
 # Protección del servidor de tarjetas personalizadas
-{: #securing_custom_cards
+{: #securing_custom_cards}
 
 Los servidores de tarjetas personalizadas son servidores web estándares que alojan el código javascript de las tarjetas personalizadas. Para garantizar la integridad del entorno de {{site.data.keyword.iot_short_notm}}, debe proteger el servidor de tarjetas personalizadas realizando los pasos necesarios para proteger el origen de las tarjetas como se describe en este tema.
 {:shortdesc}

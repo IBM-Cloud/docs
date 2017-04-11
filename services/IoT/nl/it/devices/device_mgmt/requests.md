@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-08"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2016-09-08"
 ## Avviare le richieste di gestione del dispositivo utilizzando il dashboard
 {: #initiating-dm-dashboard}
 
-Le richiesta possono essere avviate tramite il dashboard andando nella scheda **Actions** della pagina del dispositivo. Il pulsante **Initiate Action** apre una casella di dialogo dove puoi selezionare un'azione, selezionare i dispositivi su cui eseguire l'azione e specificare tutti i parametri aggiuntivi che l'azione selezionata supporta.
+Le richiesta possono essere avviate tramite il dashboard utilizzando la scheda **Actions** della pagina del dispositivo. Fai clic su **Initiate Action** per selezionare un'azione, per selezionare tutti dispositivi e specificare tutti i parametri aggiuntivi che l'azione selezionata supporta.
 
 ## Avviare le richieste di gestione del dispositivo utilizzando l'API REST
 {: #initiating-dm-api}
@@ -31,7 +31,7 @@ Le richieste possono essere avviate utilizzando il seguente esempio API REST:
 
 `POST https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
-Per ulteriori informazioni sul corpo di una richiesta di gestione del dispositivo, fai riferimento alla [API documentation](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html).
+Per ulteriori informazioni sul corpo di una richiesta di gestione del dispositivo, consulta [API documentation ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ## Azioni dispositivo
 {: #device-actions}
@@ -178,9 +178,9 @@ Topic: iotdevice-1/response
 ## Azioni firmware
 {: #firmware-actions}
 
-Il livello di firmware al momento noto di un dispositivo viene archiviato nell'attributo `deviceInfo.fwVersion`. Gli attributi `mgmt.firmware` sono utilizzati per eseguire l'aggiornamento firmware e osservarne lo stato.
+Il livello di firmware noto di un dispositivo viene archiviato nell'attributo `deviceInfo.fwVersion`. Gli attributi `mgmt.firmware` sono utilizzati per eseguire l'aggiornamento firmware e osservarne lo stato.
 
-**Importante:** il dispositivo gestito deve supportare l'osservazione dell'attributo `mgmt.firmware` per supportare le azioni firmware.
+**Importante:** il dispositivo gestito deve supportare l'osservazione dell'attributo `mgmt.firmware` per supportare le azioni firmware. 
 
 Il processo di aggiornamento firmware è diviso in azioni distinte:
 - Scaricamento del firmware
@@ -190,8 +190,8 @@ Lo stato di ogni azione firmware viene archiviato in un attributo diverso del di
 
  |Valore |Stato  | Spiegazione |
  |:---|:---|:---|
- |0  | In sospeso        | Il dispositivo non sta al momento scaricando il firmware. |  
- |1  | Scaricamento in corso | Il dispositivo sta al momento scaricando il firmware. |
+ |0  | In sospeso        | Il dispositivo non sta scaricando il firmware.  |  
+ |1  | Scaricamento in corso | Il dispositivo sta scaricando il firmware.  |
  |2  | Scaricamento completato  | Il dispositivo ha scaricato correttamente un aggiornamento firmware ed è pronto per installarlo. |
 
 
@@ -219,8 +219,8 @@ Per avviare uno scaricamento del firmware utilizzando l'API REST, immetti una ri
 Vengono fornite le seguenti informazioni:
 
 - L'azione `firmware/download`
-- L'URI per l'immagine del firmware
 - Un elenco di dispositivi per ricevere l'immagine, con un massimo di 5000 dispositivi
+- L'URI per l'immagine del firmware (facoltativo) 
 - La stringa di verifica per convalidare l'immagine (facoltativo)
 - Nome del firmware (facoltativo)
 - Versione del firmware (facoltativo)
@@ -252,11 +252,13 @@ Il seguente esempio mostra la richiesta di scaricamento del firmware su cui si b
 }
 ```
 
+Se nessuno dei parametri facoltativi viene specificato, il primo passo nel seguente processo viene saltato.
+
 Il server di gestione del dispositivo in {{site.data.keyword.iot_short_notm}} utilizza il protocollo di gestione del dispositivo per inviare una richiesta ai dispositivi, che avvia lo scaricamento del firmware. Il processo di download è costituito dai seguenti passi:
 
 1. Una richiesta di aggiornamento dei dettagli del firmware viene inviata nell'argomento `iotdm-1/device/update`.
 La richiesta di aggiornamento consente la convalida del dispositivo se il firmware richiesto è diverso dal firmware correntemente installato. Se esiste una differenza, imposta il parametro `rc` su `204`, che viene convertito nello stato `Changed`.  
-Il seguente esempio mostra quale messaggio attendere dal precedente invio della richiesta di scaricamento del firmware di esempio e quale risposta deve essere inviata quando viene individuata una differenza:
+Il seguente esempio mostra quale messaggio attendere dal precedente invio della richiesta di scaricamento del firmware di esempio e quale risposta viene inviata quando viene individuata una differenza: 
 ```
    Incoming request from the {{site.data.keyword.iot_short_notm}}:
 
@@ -427,7 +429,7 @@ Le seguenti informazioni sono utili per la gestione degli errori:
 - Se il tentativo di scaricamento del firmware fallisce, imposta il parametro `rc` su `500` e facoltativamente di conseguenza il parametro `message`.
 - Se lo scaricamento del firmware non è supportato, imposta il parametro `rc` su `500` e facoltativamente di conseguenza il parametro `message`.
 - Quando una richiesta di esecuzione viene ricevuta dal dispositivo, modifica l'attributo `mgmt.firmware.state` da `0` (In sospeso) in `1` (Scaricamento in corso).
-- Quando lo scaricamento è stato completato correttamente, imposta l'attributo `mgmt.firmware.state` su `2` (Scaricamento completato).
+- Quando lo scaricamento è stato completato correttamente, imposta l'attributo `mgmt.firmware.state` su `2` (Scaricamento completato). 
 - Se si verifica un errore durante lo scaricamento, imposta l'attributo `mgmt.firmware.state` su `0` (In sospeso) e l'attributo `mgmt.firmware.updateStatus` su uno dei seguenti valori di stato dell'errore:
   - 2 (Memoria insufficiente)
   - 3 (Connessione persa)
@@ -445,6 +447,10 @@ Vengono fornite le seguenti informazioni:
 
 - L'azione `firmware/update`
 - L'elenco di dispositivi per ricevere l'immagine, tutti dello stesso tipo di dispositivo.
+- L'URI per l'immagine del firmware (facoltativo) 
+- La stringa di verifica per convalidare l'immagine (facoltativo)
+- Nome del firmware (facoltativo)
+- Versione del firmware (facoltativo)
 
 Il seguente codice è una richiesta di esempio:
 
@@ -459,6 +465,8 @@ Il seguente codice è una richiesta di esempio:
    }
 
 ```
+
+Se nessuno dei parametri facoltativi viene specificato, il primo messaggio ricevuto dal dispositivo è una richiesta di aggiornamento del dispositivo. Questa richiesta di aggiornamento del dispositivo è simile al primo messaggio della richiesta di scaricamento del firmware.
 
 Per monitorare lo stato dell'aggiornamento del firmware, {{site.data.keyword.iot_short_notm}} attiva una richiesta di osservazione nell'argomento `iotdm-1/observe`. Quando il dispositivo è pronto ad avviare il processo di aggiornamento, invia una risposta con il parametro `rc` impostato su `200`, l'attributo `mgmt.firmware.state` impostato su `0` e l'attributo `mgmt.firmware.updateStatus` impostato su `0`.
 
@@ -597,3 +605,17 @@ Il seguente elenco fornisce alcune informazioni utili sulla gestione del process
 
 
 **Importante:** tutti i parametri elencati come parte dell'attributo `mgmt.firmware` devono essere impostati contemporaneamente in modo che se è in corso un'osservazione per `mgmt.firmware`, viene inviato un solo messaggio notifica.
+
+## Ricette sulle azioni dispositivo e firmware
+
+Le seguenti ricette mostrano il flusso completo necessario per eseguire le azioni dispositivo e firmware.
+
+- [Device Management in WIoT Platform – Roll Back & Factory Reset ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/){: new_window}
+
+- [Device Initiated Firmware Update ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-device-initiated-firmware-upgrade/){: new_window}
+
+- [Platform Initiated Firmware Update ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/){: new_window}
+
+- [Platform Initiated Firmware Update with Background Execution ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/){: new_window}
+
+- [Firmware Roll Back & Factory Reset ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/){: new_window}

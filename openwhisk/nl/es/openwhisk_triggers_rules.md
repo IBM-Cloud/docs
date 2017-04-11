@@ -1,22 +1,21 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-02-22"
+  years: 2016, 2017
+lastupdated: "2017-02-23"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:screen: .screen}
 {:pre: .pre}
 
 # Creación de desencadenantes y reglas
 {: #openwhisk_triggers}
 
-
-Los desencadenantes y reglas de {{site.data.keyword.openwhisk}} aportan prestaciones dirigidas por sucesos a la plataforma. Los sucesos de orígenes de sucesos externos e internos se ponen en el canal por medio de un desencadenante, y las reglas permiten sus acciones de respuesta para dichos sucesos.
+Los desencadenantes y reglas de {{site.data.keyword.openwhisk_short}} aportan prestaciones dirigidas por sucesos a la plataforma. Los sucesos de orígenes de sucesos externos e internos se ponen en el canal por medio de un desencadenante, y las reglas permiten sus acciones de respuesta para dichos sucesos.
 {: shortdesc}
 
 ## Creación de desencadenantes
@@ -76,11 +75,9 @@ Como ejemplo, cree un desencadenante para enviar actualizaciones de ubicación d
   wsk trigger create locationUpdate
   ```
   {: pre}
-
   ```
   ok: created trigger locationUpdate
   ```
-  {: screen}
 
 2. Compruebe que ha creado el desencadenante mostrando una lista del conjunto de desencadenantes.
 
@@ -88,12 +85,10 @@ Como ejemplo, cree un desencadenante para enviar actualizaciones de ubicación d
   wsk trigger list
   ```
   {: pre}
-
   ```
   triggers
   /someNamespace/locationUpdate                            private
   ```
-  {: screen}
 
   Hasta ahora ha creado un "canal" con nombre, para el que se pueden activar sucesos.
 
@@ -103,11 +98,9 @@ Como ejemplo, cree un desencadenante para enviar actualizaciones de ubicación d
   wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
   ```
   {: pre}
-
   ```
   ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
   ```
-  {: screen}
 
 Un desencadenante que se activa sin una regla que lo acompañe con la que cotejarlo, no tendrá ningún efecto visible.
 Los desencadenantes no se pueden crear dentro de un paquete; deben crearse directamente bajo un espacio de nombres.
@@ -121,7 +114,7 @@ se invoca con parámetros de suceso.
 Como ejemplo, cree una regla que invoque la acción hello siempre que se publique una actualización de ubicación.
 
 1. Cree el archivo 'hello.js' con el código de acción que usaremos:
-  ```
+  ```javascript
   function main(params) {
      return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
@@ -133,7 +126,6 @@ Como ejemplo, cree una regla que invoque la acción hello siempre que se publiqu
   wsk trigger update locationUpdate
   ```
   {: pre}
-
   ```
   wsk action update hello hello.js
   ```
@@ -156,34 +148,28 @@ Como ejemplo, cree una regla que invoque la acción hello siempre que se publiqu
   wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
   ```
   {: pre}
-
   ```
   ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
   ```
-  {: screen}
 
 5. Compruebe que la acción se ha invocado, revisando la activación más reciente.
   ```
   wsk activation list --limit 1 hello
   ```
   {: pre}
-
   ```
   activations
   9c98a083b924426d8b26b5f41c5ebc0d             hello
   ```
-  {: screen}
-
   ```
   wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   ```
   {: pre}
-  ```
+  ```json
   {
      "payload": "Hello, Donald from Washington, D.C."
   }
   ```
-  {: screen}
 
   Verá que la acción hello ha recibido la carga del suceso y ha devuelto la serie prevista.
 
@@ -199,6 +185,9 @@ También puede utilizar reglas con secuencias. Por ejemplo, se puede crear una s
 `recordLocationAndHello` que se active mediante la regla `anotherRule`.
   ```
   wsk action create recordLocationAndHello --sequence /whisk.system/utils/echo,hello
+  ```
+  {: pre}
+  ```
   wsk rule create anotherRule locationUpdate recordLocationAndHello
   ```
   {: pre}

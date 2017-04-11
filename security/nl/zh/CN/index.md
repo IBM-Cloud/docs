@@ -338,7 +338,7 @@ dashDB 服务使用嵌入的 LDAP 服务器进行用户认证。应用程序和�
 |{{site.data.keyword.mql}}				|是	|是	|是	|	 		|
 |{{site.data.keyword.SecureGateway}}			|是	|是 |	|	 		|
 |{{site.data.keyword.sescashort}}     |是 |是 |是	|  |
-{: caption="Table 1. Platform and service compliance" caption-side="top"}
+{: caption="表 1. 平台和服务合规性" caption-side="top"}
 
 # 相关链接
 {: #rellinks}

@@ -1,16 +1,17 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-26"
-
+  years: 2016, 2017
+lastupdated: "2017-03-07"
 ---
 
-
-{:new_window: target="\_blank"}
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
 
 
 # Come funziona il sevizio
@@ -24,21 +25,3 @@ Un sensore collegato rileva un evento, come una fuoriuscita d'acqua ed invia que
 {{site.data.keyword.iotinsurance_short}} si basa su {{site.data.keyword.iot_full}} per trasmettere l'avviso e i payload di pericolo tra i componenti. Un sistema di lavoro completo richiede utenti, scudi e associazioni tra gli utenti e gli scudi.
 
 ![{{site.data.keyword.iotinsurance_short}} Processo. Questo diagramma è descritto nel corpo principale dell'argomento.](images/IoT4I_process.svg "{{site.data.keyword.iotinsurance_short}} processo")
-
-# Link correlati
-{: #rellinks}
-
-## Esercitazioni ed esempi
-{: #samples}
-* [Sample mobile app code on GitHub](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## Riferimento API
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API Examples](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## Link correlati
-{: #general}
-* [Documentazione {{site.data.keyword.iot_full}}](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [Developer support forum](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-* [Stack overflow support forum](http://stackoverflow.com/questions/tagged/ibm-bluemix)

@@ -44,6 +44,8 @@ curl -u $USERNAME https://$USERNAME.cloudant.com
 ```
 {:codeblock}
 
+<!--
+
 _Example of connecting to your Cloudant account, using Javascript:_
 
 ```javascript
@@ -56,6 +58,8 @@ account.request(function (err, body) {
 });
 ```
 {:codeblock}
+
+-->
 
 _Example of connecting to your Cloudant account, using Python:_
 

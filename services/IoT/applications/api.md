@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-12-01"
+  years: 2015, 2017
+lastupdated: "2016-03-14"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -38,14 +38,14 @@ The {{site.data.keyword.iot_short_notm}} HTTP REST API supports the following ca
 ## Accessing the HTTP REST API documentation
 {: #api_link}
 
-To access the {{site.data.keyword.iot_short_notm}} HTTP REST API documentation and obtain more information about how to build and customize your applications, go to  https://docs.internetofthings.ibmcloud.com/swagger/v0002.html.
+To access the {{site.data.keyword.iot_short_notm}} HTTP REST API documentation and obtain more information about how to build and customize your applications, see [APIs](../reference/api.html).
 
 The only version of the {{site.data.keyword.iot_short_notm}} HTTP REST API that is supported is version 2. Ensure that your {{site.data.keyword.iot_short_notm}} solutions are using version 2.
 
-
-
-# HTTP REST messaging API for applications
+# HTTP Messaging APIs for applications
 {: #rest_messaging_api}
+
+To access the {{site.data.keyword.iot_short_notm}} HTTP Messaging API documentation and find more information about publishing events and sending commands by using HTTP, see [{{site.data.keyword.iot_short_notm}} HTTP Messaging API ![External link icon](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}.
 
 ## Publishing events and commands
 {: #event_command_publication}
@@ -53,27 +53,25 @@ The only version of the {{site.data.keyword.iot_short_notm}} HTTP REST API that 
 In addition to using the MQTT messaging protocol, you can also configure your applications to publish events and commands to the {{site.data.keyword.iot_short_notm}} over HTTP by using one of the following HTTP REST API commands:
 
 ### Non-secure event POST request
-<pre class="pre">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
-{: codeblock}
+<pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
 ### Secure event POST request
-<pre class="pre">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
-{: codeblock}
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
 **Note:** Port 443, the default SSL port, can also be specified for secure HTTP API calls.
 
 ### Non-secure command POST request
-<pre class="pre">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">eventId</var></pre>
-{: codeblock}
+<pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">eventId</var></code></pre>
+
 
 ### Secure command POST request
-<pre class="pre">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">eventId</var></pre>
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">eventId</var></code></pre>
 {: codeblock}
 
 If you are connecting a device or application to the Quickstart service, replace **orgId** with the string 'quickstart'.
 
-**Notes:** 
-- While applications can reuse an HTTP connection to post events or commands to different devices, the authorization HTTP header cannot be changed. 
+**Notes:**
+- While applications can reuse an HTTP connection to post events or commands to different devices, the authorization HTTP header cannot be changed.
 - Port 443, the default SSL port, can also be specified for secure HTTP API calls.
 
 ### Authentication
@@ -81,7 +79,7 @@ If you are connecting a device or application to the Quickstart service, replace
 All requests must include an authorization header. Basic authentication is the only method that is supported. Applications are authenticated by using API keys. When an application makes any request through the  {{site.data.keyword.iot_short_notm}} HTTP REST API, the following credentials are required:
 
 ```
-username = API key (for example, a-orgId-a84ps90Ajs)
+username = API key (for example, a/orgId/a84ps90Ajs)
 password = Authentication token
 ```
 

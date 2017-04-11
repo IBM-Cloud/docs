@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-25"
+  years: 2016, 2017
+lastupdated: "2017-03-31"
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +15,6 @@ lastupdated: "2016-11-25"
 {: #tp_index}
 
 Trajectory Pattern Analysis API is a service within the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iotdriverinsights_full}} service that you can use to analyze the geographical movement and route patterns of driving trips from transmitted car probe data.
-
 {:shortdesc}
 
 The following diagram outlines a typical sequence of API calls in the Trajectory Pattern Analysis service:
@@ -76,18 +75,18 @@ Finally, get the list of GPS points of a specific route pattern.
 When you complete the steps, a set of analyzed trajectory pattern data is generated in your organization.  Use your applications or your preferred analytics software to process the information further into more meaningful business data.
 
 # Related Links
-{: #rellinks}
+{: #rellinks notoc}
 
 ## API reference
 {: #api}
 
-* [API docs](http://ibm.biz/IoTDriverBehavior_APIdoc){:new_window}
+* [API docs ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/IoTDriverBehavior_APIdoc){:new_window}
 
 ## Other resources
 {: #general}
 
 * [Getting started with {{site.data.keyword.iotmapinsights_short}}](../IotMapInsights/index.html){:new_window}
-* [Getting started with {{site.data.keyword.iot_full}}](https://www.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
-* [dW Answers on IBM developerWorks](https://developer.ibm.com/answers/topics/iot-driver-behavior){:new_window}
-* [Stack Overflow](http://stackoverflow.com/questions/tagged/iot-driver-behavior){:new_window}
-* [What's new in Bluemix Services](http://www.ng.bluemix.net/docs/whatsnew/index.html#services_category){:new_window}
+* [Getting started with {{site.data.keyword.iot_full}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
+* [dW Answers on IBM developerWorks ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/iot-driver-behavior){:new_window}
+* [Stack Overflow ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/questions/tagged/iot-driver-behavior){:new_window}
+* [What's new in Bluemix Services ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ng.bluemix.net/docs/whatsnew/index.html#services_category){:new_window}

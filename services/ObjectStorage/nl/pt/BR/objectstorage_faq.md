@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -19,7 +19,7 @@ Esta FAQ fornece respostas às perguntas comuns sobre o serviço {{site.data.key
 O serviço {{site.data.keyword.objectstorageshort}} oferece duas opções de plano, Free e Standard. A [precificação](https://www.ibm.com/cloud-computing/bluemix/pricing/) varia dependendo do plano escolhido.
 
 <table>
-<caption> Tabela 1. Comparação dos planos Grátis e Padrão</caption>
+<caption> Tabela 1. Comparação dos planos Grátis e Padrão </caption>
   <tr>
     <th> Plano grátis </th>
     <th> Plano padrão </th>

@@ -1,25 +1,21 @@
 ---
 
-
-
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-04"
-
+lastupdated: "2017-02-27"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:screen: .screen}
 {:pre: .pre}
 
 # {{site.data.keyword.openwhisk_short}} 패키지 사용 및 작성
 {: #openwhisk_packages}
 
-
-{{site.data.keyword.openwhisk}}에서 패키지를 사용하여 일련의 연관된 조치를 번들화하고 이를 다른 사용자와 공유할 수 있습니다.
+{{site.data.keyword.openwhisk_short}}에서 패키지를 사용하여 일련의 연관된 조치를 번들화하고 이를 다른 사용자와 공유할 수 있습니다.
 
 패키지는 *조치* 및 *피드*를 포함할 수 있습니다.
 - 조치는 {{site.data.keyword.openwhisk_short}}에서 실행되는 코드 조각입니다. 예를 들어, Cloudant 패키지에는 Cloudant 데이터베이스에 대한 레코드를 읽고 쓰는 조치가 포함됩니다.
@@ -54,7 +50,6 @@ lastupdated: "2017-01-04"
   /whisk.system/github                                                   shared
   /whisk.system/pushnotifications                                        shared
   ```
-  {: screen}
 
 2. `/whisk.system/cloudant` 패키지 내의 엔티티 목록을 가져오십시오.
 
@@ -69,7 +64,6 @@ lastupdated: "2017-01-04"
    action /whisk.system/cloudant/write: Write document to database
    feed   /whisk.system/cloudant/changes: Database change feed
   ```
-  {: screen}
 
   이 출력은 Cloudant 패키지가 두 개의 조치(`read` 및 `write`), 한 개의 트리거 피드(`changes`)를 제공하는 것을 보여줍니다. `changes` 피드는 지정된 Cloudant 데이터베이스에 문서가 추가될 때 트리거가 실행되도록 만듭니다.
 
@@ -85,7 +79,6 @@ lastupdated: "2017-01-04"
   action /whisk.system/cloudant/read: Read document from database
      (params: dbname includeDoc id)
   ```
-  {: screen}
 
   이 출력은 Cloudant `read` 조치에 검색할 데이터베이스 및 문서 ID를 포함하여 세 개의 매개변수가 필요함을 표시합니다.
 
@@ -105,7 +98,6 @@ lastupdated: "2017-01-04"
   action /whisk.system/samples/greeting: Print a friendly greeting
      (params: name place)
   ```
-  {: screen}
 
   `greeting` 조치에 두 개의 매개변수(`name` 및 `place`)가 사용되는 것에 주의하십시오.
 
@@ -115,12 +107,11 @@ lastupdated: "2017-01-04"
   wsk action invoke --blocking --result /whisk.system/samples/greeting
   ```
   {: pre}
-  ```
+  ```json
   {
       "payload": "Hello, stranger from somewhere!"
   }
   ```
-  {: screen}
 
   매개변수가 지정되지 않았기 때문에 출력은 일반 메시지입니다.
 
@@ -130,12 +121,11 @@ lastupdated: "2017-01-04"
   wsk action invoke --blocking --result /whisk.system/samples/greeting --param name Mork --param place Ork
   ```
   {: pre}
-  ```
+  ```json
   {
       "payload": "Hello, Mork from Ork!"
   }
   ```
-  {: screen}
 
   조치에 전달된 `name` 및 `place` 매개변수가 출력에 사용되고 있음에 주의하십시오.
 
@@ -158,7 +148,6 @@ lastupdated: "2017-01-04"
   ```
   ok: created binding valhallaSamples
   ```
-  {: screen}
 
 2. 패키지 바인딩의 설명을 가져오십시오.
 
@@ -173,7 +162,6 @@ lastupdated: "2017-01-04"
    action /myNamespace/valhallaSamples/helloWorld: Demonstrates logging facilities
    action /myNamespace/valhallaSamples/curl: Curl a host url
   ```
-  {: screen}
 
   `/whisk.system/samples` 패키지 내의 모든 조치를 `valhallaSamples` 패키지 바인딩에서 사용할 수 있습니다.
 
@@ -188,7 +176,6 @@ lastupdated: "2017-01-04"
       "payload": "Hello, Odin from Valhalla!"
   }
   ```
-  {: screen}
 
   결과를 보면, 사용자가 `valhallaSamples` 패키지 바인딩을 작성할 때 설정한 `place` 매개변수를 조치에서 상속했음을 알 수 있습니다.
 
@@ -203,7 +190,6 @@ lastupdated: "2017-01-04"
       "payload": "Hello, Odin from Asgard!"
   }
   ```
-  {: screen}
 
   조치 호출과 함께 지정된 `place` 매개변수값이 `valhallaSamples` 패키지 바인딩에서 설정된 기본값을 겹쳐쓰는 것을 알 수 있습니다.
 
@@ -223,7 +209,6 @@ lastupdated: "2017-01-04"
   package /whisk.system/alarms
    feed   /whisk.system/alarms/alarm
   ```
-  {: screen}
 
   ```
   wsk action get --summary /whisk.system/alarms/alarm
@@ -233,7 +218,6 @@ lastupdated: "2017-01-04"
   action /whisk.system/alarms/alarm: Fire trigger when alarm occurs
      (params: cron trigger_payload)
   ```
-  {: screen}
 
   `/whisk.system/alarms/alarm` 피드는 두 개의 매개변수를 사용합니다.
   - `cron`: 트리거를 실행할 시기의 crontab 스펙입니다.
@@ -248,11 +232,10 @@ lastupdated: "2017-01-04"
   ```
   ok: created trigger feed everyEightSeconds
   ```
-  {: screen}
 
 3. 다음 조치 코드를 사용하여 'hello.js' 파일을 작성하십시오.
 
-  ```
+  ```javascript
   function main(params) {
       return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
@@ -275,7 +258,6 @@ lastupdated: "2017-01-04"
   ```
   ok: created rule myRule
   ```
-  {: screen}
 
 6. 활성화 로그에 대한 폴링에 의해 조치가 호출되는지 확인하십시오.
 
@@ -304,7 +286,6 @@ lastupdated: "2017-01-04"
   ```
   ok: created package custom
   ```
-  {: screen}
 
 2. 패키지의 요약을 가져오십시오.
 
@@ -315,13 +296,12 @@ lastupdated: "2017-01-04"
   ```
   package /myNamespace/custom
   ```
-  {: screen}
 
   패키지가 비어 있습니다.
 
 3. 다음 조치 코드를 포함하는 `identity.js`라는 파일을 작성하십시오. 이 조치는 모든 입력 매개변수를 리턴합니다.
 
-  ```
+  ```javascript
   function main(args) { return args; }
   ```
   {: codeblock}
@@ -335,7 +315,6 @@ lastupdated: "2017-01-04"
   ```
   ok: created action custom/identity
   ```
-  {: screen}
 
   패키지에서 조치를 작성하려면 패키지 이름을 조치의 접두부로 사용해야 합니다. 패키지 중첩은 허용되지 않습니다. 패키지는 조치만 포함할 수 있으며 다른 패키지는 포함할 수 없습니다.
 
@@ -349,7 +328,6 @@ lastupdated: "2017-01-04"
   package /myNamespace/custom
    action /myNamespace/custom/identity
   ```
-  {: screen}
 
   이제 네임스페이스에서 `custom/identity` 조치를 볼 수 있습니다.
 
@@ -359,10 +337,9 @@ lastupdated: "2017-01-04"
   wsk action invoke --blocking --result custom/identity
   ```
   {: pre}
-  ```
+  ```json
   {}
   ```
-  {: screen}
 
 
 패키지 내의 모든 엔티티에 대해 기본 매개변수를 설정할 수 있습니다. 패키지의 모든 조치에서 상속하는 패키지 레벨 매개변수를 설정하여 이를 수행합니다. 작동 방법을 보려면 다음 예를 시도해 보십시오.
@@ -376,18 +353,18 @@ lastupdated: "2017-01-04"
   ```
   ok: updated package custom
   ```
-  {: screen}
 
 2. 패키지 및 조치에 매개변수를 표시하고 패키지 내의 `identity` 조치가 패키지에서 매개변수를 상속하는 방법을 보십시오.
 
   ```
-  wsk package get custom
+  wsk package get custom parameters
   ```
   {: pre}
   ```
-  ok: got package custom
-  ...
-  "parameters": [
+  ok: got package custom, displaying field parameters
+  ```
+  ```json
+  [
       {
           "key": "city",
           "value": "Austin"
@@ -397,18 +374,17 @@ lastupdated: "2017-01-04"
           "value": "USA"
       }
   ]
-  ...
   ```
-  {: screen}
 
   ```
-  wsk action get custom/identity
+  wsk action get custom/identity parameters
   ```
   {: pre}
   ```
-  ok: got action custom/identity
-  ...
-  "parameters": [
+  ok: got action custom/identity, , displaying field parameters
+  ```
+  ```json
+  [
       {
           "key": "city",
           "value": "Austin"
@@ -418,9 +394,7 @@ lastupdated: "2017-01-04"
           "value": "USA"
       }
   ]
-  ...
   ```
-  {: screen}
 
 3. 조치가 실제로 매개변수를 상속하는지 확인하려면 매개변수 없이 identity 조치를 호출하십시오.
 
@@ -428,13 +402,12 @@ lastupdated: "2017-01-04"
   wsk action invoke --blocking --result custom/identity
   ```
   {: pre}
-  ```
+  ```json
   {
       "city": "Austin",
       "country": "USA"
   }
   ```
-  {: screen}
 
 4. 일부 매개변수를 사용하여 identity 조치를 호출하십시오. 호출 매개변수가 패키지 매개변수와 병합되어 호출 매개변수가 패키지 매개변수를 대체합니다.
 
@@ -442,14 +415,13 @@ lastupdated: "2017-01-04"
   wsk action invoke --blocking --result custom/identity --param city Dallas --param state Texas
   ```
   {: pre}
-  ```
+  ```json
   {
       "city": "Dallas",
       "country": "USA",
       "state": "Texas"
   }
   ```
-  {: screen}
 
 
 ## 패키지 공유
@@ -466,21 +438,19 @@ lastupdated: "2017-01-04"
   ```
   ok: updated package custom
   ```
-  {: screen}
 
 2. 패키지의 `publish` 특성을 표시하여 true인지 확인하십시오.
 
   ```
-  wsk package get custom
+  wsk package get custom publish
   ```
   {: pre}
   ```
-  ok: got package custom
-  ...
-  "publish": true,
-  ...
+  ok: got package custom, displaying field publish
   ```
-  {: screen}
+  ```json
+  true
+  ```
 
 
 이제 기타 사용자가 패키지에 대해 바인딩하거나 패키지에서 조치를 직접 호출하는 것을 포함하여 사용자의 `custom` 패키지를 사용할 수 있습니다. 기타 사용자가 패키지를 바인딩하거나 패키지에서 조치를 호출하려면 패키지의 완전한 이름을 알아야 합니다. 공유 패키지 내의 조치 및 피드는 *public*입니다. 패키지가 개인용이면 모든 컨텐츠 또한 개인용입니다.
@@ -495,6 +465,5 @@ lastupdated: "2017-01-04"
   package /myNamespace/custom
    action /myNamespace/custom/identity
   ```
-  {: screen}
 
   이전 예에서, 사용자는 `myNamespace` 네임스페이스 관련 작업 중이며 이 네임스페이스는 완전한 이름으로 표시됩니다. 

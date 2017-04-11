@@ -1,7 +1,9 @@
-----
+---
 
 copyright:
-  years: 2015, 2016, 2017
+  years: 2015, 2017
+
+lastupdated: "2017-04-03"
 
 ---
 
@@ -14,9 +16,6 @@ copyright:
 # Developing devices on {{site.data.keyword.iot_short_notm}}
 {: #device_dev_index}
 
-Last updated: 26 November 2016
-{: .last-updated}
-
 A device is anything that has a connection to the internet and has data to send to or receive from the cloud. You can use devices to send event information such as sensor readings to the cloud, and to accept commands from applications in the cloud.
 
 Devices publish data to the {{site.data.keyword.iot_short_notm}} by using events. The device controls the content of the event and assigns a name for each event that is sent. When an event is received by the {{site.data.keyword.iot_short_notm}} from a device, the credentials of the connection on which the event was received are used to determine from which device the event was sent. This architecture prevents a device from impersonating another device.
@@ -24,7 +23,7 @@ Devices publish data to the {{site.data.keyword.iot_short_notm}} by using events
 For more information about key concepts, including devices, see [About Watson IoT Platform](https://console.ng.bluemix.net/docs/services/IoT/iotplatform_overview.html#watsoniotplatform_importantconcepts).
 
 
-# Connecting your device to {{site.data.keyword.iot_short_notm}}
+## Connecting your device to {{site.data.keyword.iot_short_notm}}
 {: #device_connect}
 You can connect your device to {{site.data.keyword.iot_short_notm}} by using HTTP or MQTT protocols. Use HTTP if you want a configure request-response scenario, such as when someone makes a purchase and receives an acknowledgement. Use MQTT if you want to configure an event scenario, such as when someone rings a doorbell and causes an alert to be triggered in a mobile device.
 
@@ -35,7 +34,7 @@ If you want to connect your device without registering it, for example to run a 
 For more information about connecting your device to the {{site.data.keyword.iot_short_notm}} by using the HTTP protocol, see [HTTP REST API for devices](https://console.ng.bluemix.net/docs/services/IoT/devices/api.html).
 For more information about connecting your device to the {{site.data.keyword.iot_short_notm}} by using the MQTT protocol, see [MQTT connectivity for devices](https://console.ng.bluemix.net/docs/services/IoT/devices/mqtt.html).
 
-# Getting started with developing devices
+## Getting started with developing devices
 {: #get_started}
 If you have a device that is already enabled for {{site.data.keyword.iot_short_notm}}, you can simply start using it.
 
@@ -55,7 +54,7 @@ For more information and links to the programming guides that are available, see
 
 If you cannot find a suitable {{site.data.keyword.iot_short_notm}} programming guide, you can write your own program and use MQTT or HTTP protocol to connect your device to the {{site.data.keyword.iot_short_notm}}.
 
-MQTT is an open standard managed by the OASIS standards organization and international recognized by ISO. For more information, see [OASIS Message Queuing Telemetry Transport](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=mqtt).
+MQTT is an open standard managed by the OASIS standards organization and international recognized by ISO. For more information, see [OASIS Message Queuing Telemetry Transport ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=mqtt){: new_window}.
 
 A wide variety of MQTT client libraries are available for many different systems, including the following environments:
 - http://www.eclipse.org/paho/

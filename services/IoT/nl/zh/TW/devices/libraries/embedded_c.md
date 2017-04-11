@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-08-02"
+  years: 2015, 2017
+lastupdated: "2017-03-13"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2016-08-02"
 ## 下載嵌入式 C 用戶端及資源
 {: #embeddedc_client_download}
 
-若要存取適用於 {{site.data.keyword.iot_short_notm}} 的嵌入式 C 用戶端程式庫及範例，請移至 GitHub 中的 [iotf-embeddedc](https://github.com/ibm-messaging/iotf-embeddedc) 儲存庫，並完成安裝指示。
+若要存取適用於 {{site.data.keyword.iot_short_notm}} 的內嵌式 C 用戶端程式庫及範例，請移至 GitHub 中的 [iotf-embeddedc ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/iotf-embeddedc){: new_window} 儲存庫，並完成安裝指示。
 
 
 ## 相依關係
@@ -30,7 +30,7 @@ lastupdated: "2016-08-02"
 
 |相依關係 |說明|
 |:---|:---|
-|[Eclipse Paho 嵌入式 C 程式庫](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git) |提供 MQTT C 用戶端程式庫。如需相關資訊，請參閱 [MQTT 用戶端套件 - 適用於嵌入式裝置的 C](http://www.eclipse.org/paho/clients/c/embedded/)。|
+|[Eclipse Paho 內嵌式 C 程式庫 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git){: new_window} |提供 MQTT C 用戶端程式庫。如需相關資訊，請參閱 [MQTT 用戶端套件 - 適用於嵌入式裝置的 C ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window}。|
 
 
 ## 安裝
@@ -224,4 +224,4 @@ lastupdated: "2016-08-02"
 ## 範例
 {: #samples}
 
-[GitHub](https://github.com/ibm-messaging/iotf-embeddedc/tree/master/samples) 中提供範例裝置及應用程式碼。
+[GitHub ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/iotf-embeddedc/tree/master/samples){: new_window} 中提供裝置及應用程式碼範例。

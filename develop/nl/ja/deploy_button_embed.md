@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-29"
+  years: 2015, 2017
+lastupdated: "2017-2-21"
 
 ---
 
@@ -36,17 +36,18 @@ lastupdated: "2016-11-29"
 ##iFrame フローの例 {: #iframe-example}
 
 <p>
-<a class="xref" href="http://d2bm-iframe-sample.ng.bluemix.net/" target="_blank" title="(新しいタブまたはウィンドウで開きます)">IBM Bluemix D2BM iFrame サンプル</a>は、パブリック Git リポジトリーの iFrame フローの例を示します。<div class="image"><img class="image" src="images/d2bm_iframe_sample2.png" alt="「Bluemix にデプロイ」iFrame フローの例" /></div>
+<a class="xref" href="http://d2bm-iframe-sample.ng.bluemix.net/" target="_blank" title="(新しいタブまたはウィンドウで開きます)">IBM
+Bluemix D2BM iFrame サンプル <img class="image" src="../icons/launch-glyph.svg" alt="「外部リンク」アイコン"/></a> は、パブリック Git リポジトリーの iFrame フローの例を示します。<div class="image"><img class="image" src="images/d2bm_iframe_sample2.png" alt="「Bluemix にデプロイ」iFrame フローの例" /></div>
 </p>
 
 <p>
-このサンプルのソースを表示するには、<a class="xref" href="https://hub.jazz.net/project/idsorg/d2bm-iframe-sample/overview" target="_blank" title="(新しいタブまたはウィンドウで開きます)">source</a> をクリックしてください。
+このサンプルのソースを表示するには、<a class="xref" href="https://hub.jazz.net/project/idsorg/d2bm-iframe-sample/overview" target="_blank" title="(新しいタブまたはウィンドウで開きます)">ソース <img class="image" src="../icons/launch-glyph.svg" alt="「外部リンク」アイコン"/></a> をクリックしてください。
 </p>
 
 ##iFrame フローの埋め込み {: #embed-iframe}  
 
 <ol>
-<li><a href="https://bluemix.net/deploy/embed.js" target="_blank">https://bluemix.net/deploy/embed.js</a> から JavaScript ユーティリティーをロードします。このユーティリティーは jQuery に依存しており、文書に以下のスクリプト・タグを追加するとロードされます。
+<li><a class="xref" href="https://bluemix.net/deploy/embed.js" target="_blank" title="(新しいタブまたはウィンドウで開きます)">https://bluemix.net/deploy/embed.js<img class="image" src="../icons/launch-glyph.svg" alt="「外部リンク」アイコン"/></a> から JavaScript ユーティリティーをロードします。このユーティリティーは jQuery に依存しており、文書に以下のスクリプト・タグを追加するとロードされます。
 <pre class="pre">
 <code>&lt;script type="text/javascript" src="https://bluemix.net/deploy/embed.js"&gt;&lt;/script&gt;</code>
 </pre>

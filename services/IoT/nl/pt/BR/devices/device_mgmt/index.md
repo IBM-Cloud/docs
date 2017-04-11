@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-13"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -23,7 +23,7 @@ O {{site.data.keyword.iot_full}} reconhece duas classes de dispositivo: **dispos
 
 **Dispositivos gerenciados** são definidos como dispositivos que contêm um agente de gerenciamento de dispositivo. Um agente de gerenciamento de dispositivo é um conjunto de lógica que permite que o dispositivo interaja com o serviço de Gerenciamento de dispositivo do {{site.data.keyword.iot_short_notm}} usando o Protocolo de gerenciamento de dispositivo. Os dispositivos gerenciados podem executar operações de gerenciamento de dispositivo, incluindo atualizações de localização, downloads de firmware e atualizações, reinicializações e reconfigurações de fábrica.
 
-O Protocolo de Gerenciamento de Dispositivo define um conjunto de operações suportadas. Um agente de gerenciamento de dispositivo pode suportar um subconjunto das operações, mas as operações de **dispositivos gerenciados** e **dispositivos não gerenciados** devem ser suportadas. Um dispositivo que suporta operações de ação de firmware também deve suportar observação.
+O Protocolo de Gerenciamento de Dispositivo define um conjunto de operações suportadas. Um agente de gerenciamento de dispositivo pode suportar um subconjunto das operações, mas as operações de **gerenciamento** e **cancelamento de gerenciamento** devem ser suportadas. Um dispositivo que suporta operações de ação de firmware também deve suportar observação.
 
 O Protocolo de gerenciamento de dispositivo é construído com base no protocolo de sistema de mensagens MQTT. Para obter mais informações sobre como o Protocolo de gerenciamento de dispositivo interage com MQTT, consulte [Conectividade MQTT para dispositivos](../mqtt.html).
 
@@ -36,6 +36,8 @@ O Protocolo de gerenciamento de dispositivo é construído com base no protocolo
 4. Um dispositivo pode comunicar atualizações sobre sua localização, informações de diagnóstico e códigos de erro usando o Protocolo de gerenciamento de dispositivo.
 5. Para manipular dispositivos extintos em grandes populações de dispositivos, a solicitação da operação de **dispositivos gerenciados** inclui um parâmetro de tempo de vida opcional. O parâmetro de tempo de vida é o número de segundos no qual o dispositivo deve fazer outra solicitação de **dispositivos gerenciados** para evitar ser classificado como inativo e se tornar um dispositivo não gerenciado.
 6. Quando um dispositivo for desatribuído, será possível removê-lo do {{site.data.keyword.iot_short_notm}} usando o painel ou a API (interface de programação de aplicativos) REST.
+
+Veja a orientação [Conectar o Raspberry Pi como dispositivo gerenciado ao IBM Watson IoT Platform ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/){: new_window}.
 
 ### Resumo de códigos de retorno
 

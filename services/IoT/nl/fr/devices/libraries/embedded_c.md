@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-08-02"
+  years: 2015, 2017
+lastupdated: "2017-03-13"
 
 ---
 
@@ -22,7 +22,7 @@ Vous pouvez utiliser Embedded C pour générer et personnaliser des terminaux qu
 ## Téléchargement du client et des ressources Embedded C
 {: #embeddedc_client_download}
 
-Pour accéder aux bibliothèques et exemples client Embedded C pour {{site.data.keyword.iot_short_notm}}, accédez au référentiel [iotf-embeddedc](https://github.com/ibm-messaging/iotf-embeddedc) dans GitHub et exécutez les instructions d'installation.
+Pour accéder aux bibliothèques et exemples client Embedded C pour {{site.data.keyword.iot_short_notm}}, accédez au référentiel [iotf-embeddedc ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iotf-embeddedc){: new_window} dans GitHub et exécutez les instructions d'installation. 
 
 
 ## Dépendances
@@ -30,7 +30,7 @@ Pour accéder aux bibliothèques et exemples client Embedded C pour {{site.data.
 
 |Dépendance |Description|
 |:---|:---|
-|[Bibliothèque Eclipse Paho Embedded C](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git) |Fournit une bibliothèque client MQTT C. Pour plus d'informations, voir [MQTT Client Package -  C for embedded devices](http://www.eclipse.org/paho/clients/c/embedded/).|
+|[Bibliothèque Eclipse Paho Embedded C ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git){: new_window} |Fournit une bibliothèque client MQTT C. Pour plus d'informations, voir [MQTT Client Package -  C for embedded devices ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window}.|
 
 
 ## Installation
@@ -224,4 +224,4 @@ Pour déconnecter le client et libérer les connexions, exécutez le fragment de
 ## Exemples
 {: #samples}
 
-Un exemple de terminal et le code d'application sont fournis dans [GitHub](https://github.com/ibm-messaging/iotf-embeddedc/tree/master/samples).
+Un exemple de terminal et le code d'application sont fournis dans [GitHub ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iotf-embeddedc/tree/master/samples){: new_window}.

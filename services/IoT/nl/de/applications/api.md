@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-07"
+  years: 2015, 2017
+lastupdated: "2016-03-14"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -35,17 +35,17 @@ Die {{site.data.keyword.iot_short_notm}}-HTTP-REST-API unterstützt folgende Fun
 - Publizieren von Geräteereignissen (Beta)
 - Abfragen des Servicestatus (Servicestatusangaben nach Organisation abrufen)
 
-## Zugriff auf HTTP-REST-API
+## Zugriff auf die Dokumentation der HTTP-REST-API
 {: #api_link}
 
-Für den Zugriff auf die {{site.data.keyword.iot_short_notm}}-HTTP-REST-API und zum Abrufen weiterer Informationen zur Vorgehensweise beim Erstellen und Anpassen Ihrer Anwendungen rufen Sie die Webadresse 'https://docs.internetofthings.ibmcloud.com/swagger/v0002.html' auf.
+Weitere Informationen zum Zugriff auf die Dokumentation der {{site.data.keyword.iot_short_notm}}-HTTP-REST-API und zur Vorgehensweise beim Erstellen und Anpassen Ihrer Anwendungen finden Sie in [APIs](../reference/api.html).
 
 Nur Version 2 der {{site.data.keyword.iot_short_notm}}-HTTP-REST-API ist unterstützt. Stellen Sie sicher, dass Ihre {{site.data.keyword.iot_short_notm}}-Lösungen Version 2 verwenden.
 
-
-
-# HTTP-REST-Messaging-API für Anwendungen
+# HTTP-Messaging-APIs für Anwendungen
 {: #rest_messaging_api}
+
+Weitere Informationen zum Zugriff auf die Dokumentation der {{site.data.keyword.iot_short_notm}}-HTTP-Messaging-API und zur Vorgehensweise beim Publizieren von Ereignissen und Senden von Befehlen mithilfe von HTTP finden Sie in [{{site.data.keyword.iot_short_notm}}-HTTP-Messaging-API ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}.
 
 ## Ereignisse und Befehle publizieren
 {: #event_command_publication}
@@ -53,31 +53,33 @@ Nur Version 2 der {{site.data.keyword.iot_short_notm}}-HTTP-REST-API ist unterst
 Zusätzlich zur Verwendung des MQTT-Nachrichtenprotokolls können Sie Ihre Anwendungen auch so konfigurieren, dass Ereignisse und Befehle in {{site.data.keyword.iot_short_notm}} über HTTP mithilfe eines der folgenden HTTP-REST-API-Befehle publiziert werden:
 
 ### Nicht sichere POST-Anforderung für Ereignisse
-<pre class="pre">http://<var class="keyword varname">Organisations-ID</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/application/types/<var class="keyword varname">Typ-ID</var>/devices/<var class="keyword varname">Geräte-ID</var>/events/<var class="keyword varname">Ereignis-ID</var></pre>
-{: codeblock}
+<pre class="pre"><code class="hljs">http://<var class="keyword varname">Organisations-ID</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">Typ-ID</var>/devices/<var class="keyword varname">Geräte-ID</var>/events/<var class="keyword varname">Ereignis-ID</var></code></pre>
 
 ### Sichere POST-Anforderung für Ereignisse
-<pre class="pre">https://<var class="keyword varname">Organisations-ID</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/application/types/<var class="keyword varname">Typ-ID</var>/devices/<var class="keyword varname">Geräte-ID</var>/events/<var class="keyword varname">Ereignis-ID</var></pre>
-{: codeblock}
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">Organisations-ID</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">Typ-ID</var>/devices/<var class="keyword varname">Geräte-ID</var>/events/<var class="keyword varname">Ereignis-ID</var></code></pre>
+
+**Hinweis:** Port 443, der SSL-Standardport, kann auch für sichere HTTP-API-Aufrufe angegeben werden.
 
 ### Nicht sichere POST-Anforderung für Befehle
-<pre class="pre">http://<var class="keyword varname">Organisations-ID</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/application/types/<var class="keyword varname">Typ-ID</var>/devices/<var class="keyword varname">Geräte-ID</var>/commands/<var class="keyword varname">Ereignis-ID</var></pre>
-{: codeblock}
+<pre class="pre"><code class="hljs">http://<var class="keyword varname">Organisations-ID</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/application/types/<var class="keyword varname">Typ-ID</var>/devices/<var class="keyword varname">Geräte-ID</var>/commands/<var class="keyword varname">Ereignis-ID</var></code></pre>
+
 
 ### Sichere POST-Anforderung für Befehle
-<pre class="pre">https://<var class="keyword varname">Organisations-ID</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/application/types/<var class="keyword varname">Typ-Id</var>/devices/<var class="keyword varname">Geräte-ID</var>/commands/<var class="keyword varname">Ereignis-ID</var></pre>
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">Organisations-ID</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/application/types/<var class="keyword varname">Typ-ID</var>/devices/<var class="keyword varname">Geräte-ID</var>/commands/<var class="keyword varname">Ereignis-ID</var></code></pre>
 {: codeblock}
 
 Wenn Sie eine Verbindung zwischen einem Gerät oder einer Anwendung und dem Quickstart-Service herstellen wollen, ersetzen Sie **Organisations-ID** durch die Zeichenfolge 'quickstart'.
 
-Hinweis: Zwar können Anwendungen eine HTTP-Verbindung wiederverwenden, um Ereignisse oder Befehle an andere Geräte zu posten; der Berechtigungs-HTTP-Header kann jedoch nicht geändert werden.
+**Hinweise:**
+- Zwar können Anwendungen eine HTTP-Verbindung wiederverwenden, um Ereignisse oder Befehle an andere Geräte zu posten, der HTTP-Header für die Berechtigung kann jedoch nicht geändert werden.
+- Port 443, der SSL-Standardport, kann auch für sichere HTTP-API-Aufrufe angegeben werden.
 
 ### Authentifizierung
 
 Alle Anforderungen müssen einen Berechtigungsheader enthalten. Die Basisauthentifizierung ist die einzige Methode, die unterstützt ist. Anwendungen werden mithilfe von API-Schlüsseln authentifiziert. Wenn eine Anwendung über die {{site.data.keyword.iot_short_notm}}-HTTP-REST-API eine Anforderung ausgibt, sind folgende Berechtigungsnachweise erforderlich:
 
 ```
-username = API-Schlüssel (Beispiel: a-Organisations-ID-a84ps90Ajs)
+username = API-Schlüssel (Beispiel: a/orgId/a84ps90Ajs)
 password = Authentifizierungstoken
 ```
 

@@ -197,7 +197,6 @@ CF_ORGANIZATION_ID	| GUID de org.
 CF_SPACE |	Nombre de espacio
 CF_SPACE_ID |	GUID de espacio
 CF_APP	| Nombre de app
-
 {: caption="Table 1. Environment variables" caption-side="top"}
 
 **GENERACIÓN DE UN ARCHIVO YAML DESDE UN CONDUCTO** 

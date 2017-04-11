@@ -28,9 +28,9 @@ Cordova 是一個平台，可使用 JavaScript、CSS 及 HTML 來建置混合式
 
 1. 下載最新的 Android Studio SDK 及 Xcode 版本。
 1. 設定您的模擬器。若為 Android Studio，請使用支援 Google Play API 的模擬器。
-1. 安裝 Git 指令行工具。若為 Windows，請確保選取**從 Windows 命令提示字元執行 Git** 選項。如需如何下載及安裝此工具的相關資訊，請參閱 [Git ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git-scm.com/downloads "外部鏈結圖示"){: new_window}。
-1. 安裝 Node.js 及「Node 套件管理程式 (NPM)」工具。NPM 指令行工具與 Node.js 組合在一起。如需如何下載及安裝 Node.js 的相關資訊，請參閱 [Node.js ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://nodejs.org/en/download/ "外部鏈結圖示"){: new_window}。
-1. 從指令行中，使用 **npm install -g cordova** 指令來安裝 Cordova 指令行工具。若要使用 Cordova Push 外掛程式，這是必要動作。如需如何安裝 Cordova 以及設定 Cordova 應用程式的相關資訊，請參閱 [Cordova Apache ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cordova.apache.org/#getstarted "外部鏈結圖示"){: new_window}。如需相關資訊，請參閱 Cordova Push 外掛程式 [Readme 檔 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push "外部鏈結圖示"){: new_window}。
+1. 安裝 Git 指令行工具。若為 Windows，請確保選取**從 Windows 命令提示字元執行 Git** 選項。如需如何下載及安裝此工具的相關資訊，請參閱 [Git ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git-scm.com/downloads){: new_window}。
+1. 安裝 Node.js 及「Node 套件管理程式 (NPM)」工具。NPM 指令行工具與 Node.js 組合在一起。如需如何下載及安裝 Node.js 的相關資訊，請參閱 [Node.js ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://nodejs.org/en/download/){: new_window}。
+1. 從指令行中，使用 **npm install -g cordova** 指令來安裝 Cordova 指令行工具。若要使用 Cordova Push 外掛程式，這是必要動作。如需如何安裝 Cordova 以及設定 Cordova 應用程式的相關資訊，請參閱 [Cordova Apache ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cordova.apache.org/#getstarted){: new_window}。如需相關資訊，請參閱 Cordova Push 外掛程式 [Readme 檔 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push){: new_window}。
 1. 切換至您要在其中建立 Cordova 應用程式的資料夾，並執行下列指令來建立 Cordova 應用程式。如果您有現存的 Cordova 應用程式，請移至步驟 3。
 ```cordova create your_app_name
 cd your_app_name

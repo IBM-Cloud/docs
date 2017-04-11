@@ -443,6 +443,8 @@ curl https://$USERNAME.cloudant.com/$DATABASE/_design/$DESIGN_DOC/_search/$INDEX
 ```
 {:codeblock}
 
+<!--
+
 _Example of using JavaScript to query an index:_
 
 ```javascript
@@ -459,6 +461,8 @@ db.search($DESIGN_ID, $SEARCH_INDEX, {
 });
 ```
 {:codeblock}
+
+-->
 
 ### Query Parameters
 

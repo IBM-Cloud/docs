@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-09"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -20,8 +20,8 @@ MQTT は、デバイスとアプリケーションが {{site.data.keyword.iot_fu
 
 MQTT は TCP/IP で実行されます。TCP/IP の直接コーディングも可能ですが、MQTT プロトコルの詳細を処理するライブラリーを使用することもできます。広範囲の MQTT クライアント・ライブラリーが用意されています。IBM は、いくつかのクライアント・ライブラリーの開発やサポートに寄与しています。それには以下のサイトで利用可能なものが含まれます。
 
-- [MQTT コミュニティー Wiki](https://github.com/mqtt/mqtt.github.io/wiki)
-- [Eclipse Paho プロジェクト](http://eclipse.org/paho/)
+- [MQTT community wiki ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/mqtt/mqtt.github.io/wiki){: new_window}
+- [Eclipse Paho プロジェクト ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://eclipse.org/paho/){: new_window}
 
 ## バージョン・サポート
 {: #version-support}
@@ -36,15 +36,18 @@ MQTT クライアントは、モノのクラスとして自身の情報を {{sit
 
 アプリケーションとデバイスは、別々の MQTT トピック・スペースで動作します。デバイスはデバイス・スコープのトピック・スペース内で動作する一方、アプリケーションには組織全体のトピック・スペースに対して全アクセス権限が付与されます。詳しくは、以下のトピックを参照してください。
 
-- [デバイス](../../devices/mqtt.html)
-- [アプリケーション](../../applications/mqtt.html)
-- [ゲートウェイ](../../gateways/mqtt.html)
+- [デバイス用の MQTT メッセージング](../../devices/mqtt.html)
+- [アプリケーション用の MQTT メッセージング](../../applications/mqtt.html)
+- [ゲートウェイ用の MQTT メッセージング](../../gateways/mqtt.html)
+
+### 保存メッセージ
+{{site.data.keyword.iot_short_notm}} には、MQTT メッセージングの保存メッセージ・フィーチャーに対する制限付きサポートが用意されています。デバイス、ゲートウェイ、またはアプリケーションから {{site.data.keyword.iot_short_notm}} へ送信される MQTT メッセージで保存メッセージ・フラグが true に設定されている場合、メッセージは未保存メッセージとして処理されます。{{site.data.keyword.iot_short_notm}} の組織は、保存メッセージをパブリッシュする権限を持っていません。{{site.data.keyword.iot_short_notm}}サービスは、保存メッセージのフラグが true に設定されている場合でもそのフラグをオーバーライドし、そのフラグが false に設定されている場合と同じ要領でメッセージを処理します。
 
 ## サービス品質のレベル
 {: #qos-levels}
 
 MQTT プロトコルでは、クライアントとサーバーの間のメッセージ配信について、「最高 1 回」、「最低 1 回」、そして「ちょうど 1 回」の 3 つのサービス品質が提供されています。
-イベントとコマンドの送信では任意のサービス品質レベルを使用できますが、実際のニーズに合った適切なサービス・レベルは何かを注意深く考慮する必要があります。必ずしも、サービス品質レベル 2 がレベル 0 よりも優れたオプションであるわけではありません。
+イベントとコマンドの送信では任意のサービス品質レベルを使用できますが、実際のニーズに合った適切なサービス・レベルとは何かを注意深く考慮する必要があります。必ずしも、サービス品質レベル 2 がレベル 0 よりも優れたオプションであるわけではありません。
 
 ### 最高 1 回 (QoS0)
 

@@ -23,7 +23,7 @@
 		"href": "manageapps/mngapps.html"
 	}, {
 		"title": "監視及記載",
-		"description": "遵循應用程式使用及資料流程，以深入瞭解部署。",
+		"description": "追蹤應用程式用量及資料流程，以深入瞭解部署。",
 		"img": "homepage/images/monitor_log.svg",
 		"href": "monitor_log/monitoringandlogging.html"
 	}, {

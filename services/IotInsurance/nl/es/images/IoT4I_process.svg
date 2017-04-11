@@ -3043,11 +3043,11 @@
          id="tspan4740"
          sodipodi:role="line"
          x="140.70709"
-         y="168.23174">Raw</tspan><tspan
+         y="168.23174">Carga útil</tspan><tspan
          sodipodi:role="line"
          x="140.70709"
          y="181.98174"
-         id="tspan16824">payload</tspan></text>
+         id="tspan16824">sin formato</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text44241-1-5-9-4-1"
@@ -3088,11 +3088,11 @@
          y="716.65521"
          x="265.08008"
          sodipodi:role="line"
-         id="tspan4890-1-9">IoT for Insurance</tspan><tspan
+         id="tspan4890-1-9">Motor de acción de</tspan><tspan
          y="730.40521"
          x="265.08008"
          sodipodi:role="line"
-         id="tspan7488-1">Action Engine</tspan></text>
+         id="tspan7488-1">IoT for Insurance</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text44241-1-5-9-1-5"
@@ -3133,7 +3133,7 @@
          sodipodi:role="line"
          x="133.37259"
          y="139.80515"
-         id="tspan8202">Water sensor</tspan><tspan
+         id="tspan8202">Sensor de agua</tspan><tspan
          sodipodi:role="line"
          x="133.37259"
          y="153.55515"
@@ -3158,7 +3158,7 @@
          sodipodi:role="line"
          x="259.228"
          y="141.73816"
-         id="tspan8202-3">Smoke sensor</tspan><tspan
+         id="tspan8202-3">Sensor de humo</tspan><tspan
          sodipodi:role="line"
          x="259.228"
          y="155.48816"
@@ -3183,7 +3183,7 @@
          sodipodi:role="line"
          x="387.44424"
          y="142.28226"
-         id="tspan8202-4">Door lock sensor</tspan><tspan
+         id="tspan8202-4">Sensor de cerradura</tspan><tspan
          sodipodi:role="line"
          x="387.44424"
          y="156.03226"
@@ -3219,11 +3219,11 @@
          y="461.58636"
          x="265.08008"
          sodipodi:role="line"
-         id="tspan4890-1-96">IoT for Insurance</tspan><tspan
+         id="tspan4890-1-96">Motor de coberturas</tspan><tspan
          y="475.33636"
          x="265.08008"
          sodipodi:role="line"
-         id="tspan7488-4">Shield Engine</tspan></text>
+         id="tspan7488-4">de IoT for Insurance</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text44241-1-5-9-1-2-5"
@@ -3234,11 +3234,11 @@
          y="527.25195"
          x="253.11794"
          sodipodi:role="line"
-         id="tspan7488-4-9">Water</tspan><tspan
+         id="tspan7488-4-9">Cobertura</tspan><tspan
          y="541.00195"
          x="253.11794"
          sodipodi:role="line"
-         id="tspan11925">Shield</tspan></text>
+         id="tspan11925">de agua</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text44241-1-5-9-1-2-5-7"
@@ -3249,11 +3249,11 @@
          y="527.31909"
          x="333.62689"
          sodipodi:role="line"
-         id="tspan7488-4-9-7">Smoke</tspan><tspan
+         id="tspan7488-4-9-7">Cobertura</tspan><tspan
          y="541.06909"
          x="333.62689"
          sodipodi:role="line"
-         id="tspan11925-7">Shield</tspan></text>
+         id="tspan11925-7">de humo</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
@@ -3264,15 +3264,15 @@
          id="tspan7488-4-9-76"
          sodipodi:role="line"
          x="253.4053"
-         y="585.94238">Door</tspan><tspan
+         y="585.94238">Cobertura</tspan><tspan
          sodipodi:role="line"
          x="253.4053"
          y="599.69238"
-         id="tspan11974">Lock</tspan><tspan
+         id="tspan11974">de</tspan><tspan
          id="tspan11925-0"
          sodipodi:role="line"
          x="253.4053"
-         y="613.44238">Shield</tspan></text>
+         y="613.44238">cerradura</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text44241-1-5-9-1-2-5-0"
@@ -3283,11 +3283,11 @@
          y="592.88452"
          x="333.62689"
          sodipodi:role="line"
-         id="tspan7488-4-9-9">Custom</tspan><tspan
+         id="tspan7488-4-9-9">Coberturas</tspan><tspan
          y="606.63452"
          x="333.62689"
          sodipodi:role="line"
-         id="tspan11925-1">Shields</tspan></text>
+         id="tspan11925-1">personalizadas</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
@@ -3298,11 +3298,11 @@
          id="tspan4740-7"
          sodipodi:role="line"
          x="270.27676"
-         y="168.22516">Raw</tspan><tspan
+         y="168.22516">Carga útil</tspan><tspan
          sodipodi:role="line"
          x="270.27676"
          y="181.97516"
-         id="tspan16824-2">payload</tspan></text>
+         id="tspan16824-2">sin formato</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
@@ -3313,11 +3313,11 @@
          id="tspan4740-5"
          sodipodi:role="line"
          x="408.47119"
-         y="168.9196">Raw</tspan><tspan
+         y="168.9196">Carga útil</tspan><tspan
          sodipodi:role="line"
          x="408.47119"
          y="182.6696"
-         id="tspan16824-25">payload</tspan></text>
+         id="tspan16824-25">sin formato</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
@@ -3328,11 +3328,11 @@
          id="tspan4740-75"
          sodipodi:role="line"
          x="261.24896"
-         y="297.39185">Processed</tspan><tspan
+         y="297.39185">Carga útil</tspan><tspan
          sodipodi:role="line"
          x="261.24896"
          y="311.14185"
-         id="tspan16824-20">payload</tspan></text>
+         id="tspan16824-20">procesada</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
@@ -3343,7 +3343,7 @@
          sodipodi:role="line"
          x="248.40414"
          y="658.52631"
-         id="tspan16824-4">Hazard event</tspan></text>
+         id="tspan16824-4">Suceso de riesgo</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -3355,11 +3355,11 @@
          id="tspan19274"
          x="143.58142"
          y="39.187923"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.75000095px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;text-anchor:start">IBM® IoT for Insurance</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.75000095px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;text-anchor:start">Proceso de cobertura de</tspan><tspan
          sodipodi:role="line"
          x="143.58142"
          y="56.375423"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.75000095px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;text-anchor:start"
-         id="tspan19276">Shield Process</tspan></text>
+         id="tspan19276">IBM® IoT for Insurance</tspan></text>
   </g>
 </svg>

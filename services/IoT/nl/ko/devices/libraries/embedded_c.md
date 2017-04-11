@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-08-02"
+  years: 2015, 2017
+lastupdated: "2017-03-13"
 
 ---
 
@@ -19,10 +19,10 @@ lastupdated: "2016-08-02"
 Embedded C를 사용하여 {{site.data.keyword.iot_full}}에서 조직과 상호작용하는 디바이스를 빌드하고 사용자 정의할 수 있습니다. 제공된 정보와 예제를 사용하면 Embedded C를 사용한 디바이스 개발을 시작할 수 있습니다.
 {:shortdesc}
 
-## Embedded C 클라이언트 및 자원 다운로드
+## Embedded C 클라이언트 및 리소스 다운로드
 {: #embeddedc_client_download}
 
-{{site.data.keyword.iot_short_notm}}의 Embedded C 클라이언트 라이브러리와 샘플에 액세스하려면 GitHub의 [iotf-embeddedc](https://github.com/ibm-messaging/iotf-embeddedc) 저장소로 이동하여 설치 지시사항을 완료하십시오. 
+{{site.data.keyword.iot_short_notm}}에 대한 임베디드 C  클라이언트 라이브러리 및 샘플에 액세스하려면, GitHub의 [iotf-embeddedc ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/iotf-embeddedc){: new_window} 저장소로 이동하여 설치 지시사항을 완료하십시오. 
 
 
 ## 종속 항목
@@ -30,7 +30,7 @@ Embedded C를 사용하여 {{site.data.keyword.iot_full}}에서 조직과 상호
 
 |종속 항목 |설명|
 |:---|:---|
-|[Eclipse Paho Embedded C 라이브러리](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git) |MQTT C 클라이언트 라이브러리를 제공합니다. 자세한 정보는 [MQTT 클라이언트 패키지 - 임베디드 디바이스용 C](http://www.eclipse.org/paho/clients/c/embedded/)를 참조하십시오. |
+|[Eclipse Paho 임베디드 C 라이브러리 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git){: new_window} |MQTT C 클라이언트 라이브러리를 제공합니다. 자세한 정보는 [MQTT 클라이언트 패키지 -  임베디드 디바이스용 C ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window}을 참조하십시오. |
 
 
 ## 설치
@@ -162,6 +162,7 @@ Embedded C의 {{site.data.keyword.iot_short_notm}} 클라이언트 라이브러�
 
 ```
 	#include "iotfclient.h"
+
 	void myCallback (char* commandName, char* format, void* payload)
 	{
 	printf("The command received :: %s\n", commandName);
@@ -224,4 +225,4 @@ Embedded C의 {{site.data.keyword.iot_short_notm}} 클라이언트 라이브러�
 ## 샘플
 {: #samples}
 
-샘플 디바이스 및 애플리케이션 코드는 [GitHub](https://github.com/ibm-messaging/iotf-embeddedc/tree/master/samples)에서 제공됩니다. 
+샘플 디바이스 및 애플리케이션 코드는 [GitHub ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/iotf-embeddedc/tree/master/samples){: new_window}에 제공됩니다. 

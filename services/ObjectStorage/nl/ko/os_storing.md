@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -41,17 +41,17 @@ UI나 CLI를 사용하여 오브젝트를 스토리지에 업로드할 수 있�
 2. 다음 명령을 실행하여 {{site.data.keyword.objectstorageshort}} 컨테이너를 작성하십시오. 이제 *container_name* 변수가 사용자에 의해 설정됩니다. 
 
   ```
-swift post <container_name>
-```
+  swift post <container_name>
+  ```
   {: pre}
 
-**참고**: 오류 메시지가 수신되면 [필수 소프트웨어](/docs/services/ObjectStorage/os_configuring.html#install-swift-client)를 설치했는지 확인하십시오. 
+  **참고**: 오류 메시지를 수신하는 경우 [필수 소프트웨어](/docs/services/ObjectStorage/os_configuring.html#install-swift-client)가 설치되어 있는지 확인하십시오. 
 
 3. 선택사항: 컨테이너가 작성되었는지 확인하려면 다음 명령을 실행하여 컨테이너를 나열하십시오. 
 
   ```
-swift list
-```
+  swift list
+  ```
   {: pre}
 
 4. 실수로 데이터를 겹쳐써서 데이터가 손상되는 일이 발생하지 않도록 [오브젝트 버전화 설정](/docs/services/ObjectStorage/os_versioning.html)을 수행하십시오. 오브젝트 버전화를 원하지 않는 경우에는 저장소의 기존 파일을 나열하여 필요에 따라 디렉토리 또는 파일의 이름을 바꾼 후 업로드하십시오.
@@ -59,8 +59,8 @@ swift list
 5. 다음 명령을 실행하여 컨테이너에 파일을 업로드하십시오. 
 
   ```
-swift upload <container_name> <file_name>
-```
+  swift upload <container_name> <file_name>
+  ```
   {: pre}
 
   **참고**: 5GB를 초과하는 파일을 업로드하려면 [추가 단계가 필요](/docs/services/ObjectStorage/os_large_files.html)합니다. 
@@ -68,6 +68,6 @@ swift upload <container_name> <file_name>
 6. 선택사항: 업로드에 성공했는지 확인하려면 다음 명령을 실행하여 컨테이너의 컨텐츠를 표시하십시오. 
 
   ```
-swift list <container_name>
-```
+  swift list <container_name>
+  ```
   {: pre}

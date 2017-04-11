@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-30"
+  years: 2015, 2017
+lastupdated: "2017-01-25"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -55,9 +55,12 @@ Eine Anwendung kann Ereignisse so publizieren, als stammten diese von einem beli
 
 -  Publish to topic iot-2/type/*Gerätetyp*/id/*Geräte-ID*/evt/*Ereignis-ID*/fmt/*Format_Zeichenfolge*
 
-Um vorhandene Daten von einem Gerät an {{site.data.keyword.iot_short_notm}} zu übertragen, können Sie eine Anwendung erstellen, mit der die Daten verarbeitet und in {{site.data.keyword.iot_short_notm}} publiziert werden.
+Um vorhandene Daten von einem Gerät an {{site.data.keyword.iot_short_notm}} zu senden, können Sie eine Anwendung erstellen, mit der die Daten verarbeitet und in {{site.data.keyword.iot_short_notm}} publiziert werden.
 
 **Wichtig:** Der Umfang der Nachrichtennutzdaten ist auf maximal 131072 Byte begrenzt.  Nachrichten, die den Grenzwert überschreiten, werden abgelehnt.
+
+### Aufbewahrte Nachrichten
+{{site.data.keyword.iot_short_notm}}-Organisationen sind nicht dazu berechtigt, aufbewahrte MQTT-Nachrichten zu publizieren. Wenn eine Anwendung, ein Gateway oder ein Gerät eine aufbewahrte Nachricht sendet, überschreibt der {{site.data.keyword.iot_short_notm}}-Service das Flag für aufbewahrte Nachricht, sofern es auf den Wert 'true' gesetzt ist, und verarbeitet die Nachricht so, als wäre das Flag auf 'false' gesetzt.
 
 ## Gerätebefehle publizieren
 {: #publishing_device_commands}
@@ -133,6 +136,11 @@ Durch Anpassen der Art und Weise, wie Ihre Anwendungen Verbindungen herstellen, 
 
 Die Anzahl der Clients, die für einen optimalen Lastausgleich und eine optimale Skalierbarkeit erforderlich sind, ist je nach Bereitstellung unterschiedlich. Um die optimale Anzahl von Clients zu ermitteln, müssen Sie für Ihr System einen Stresstest ausführen.
 
+Skalierbare Anwendungen werden als nicht permanente Subskriptionen definiert oder als gemeinsam genutzte Subskriptionen mit variabler Permanenz (Beta).
+
+### Nicht permanente Subskriptionen
+{: #shared_sub_non_durable}
+
 Stellen Sie zum Aktivieren der Lastverteilung sicher, dass die Anwendungssubskription nicht permanent ist und dass die Client-ID in der Subskription mit dem folgenden Format übereinstimmt:
 
 <pre class="pre">A:<var class="keyword varname">Organisations-ID</var>:<var class="keyword varname">Anwendungs-ID</var></pre>
@@ -143,23 +151,41 @@ Dabei gilt:
 -  *Organisations-ID* ist die aus sechs Zeichen bestehende eindeutige Organisations-ID, die beim Registrieren des Service generiert wurde.
 -  *Anwendungs-ID* ist eine benutzerdefinierte eindeutige Zeichenfolge-ID für den Client. Die Zeichenfolge kann nur alphanumerische Zeichen (a-z, A-Z, 0-9) und als Sonderzeichen den Gedankenstrich (-), das Unterstreichungszeichen (_) und den Punkt (.) enthalten.
 
+
 **Wichtig:**
-- Für skalierbare Anwendungen werden nur Subskriptionen unterstützt, die nicht permanent sind.
 - Die Client-ID muss mit dem Zeichen **A** in Großschreibung beginnen, um von {{site.data.keyword.iot_short_notm}} ordnungsgemäß als skalierbare Anwendung bezeichnet zu werden.
 - Andere Clients, die Teil der skalierbaren Anwendung sind, müssen dieselbe Client-ID verwenden.
+- Der Sitzungsbereinigungswert für nicht permanente Subskriptionen muss auf 'false' (0) festgelegt werden.
 
+### Gemeinsam genutzte Subskriptionen mit variabler Permanenz (Beta)
+{: #shared_sub_mixed}
 
-### Funktionsweise
+Der {{site.data.keyword.iot_short_notm}}-Service erweitert die Spezifikation des Nachrichtenprotokolls von MQTT V3.1.1, um einen Beta-Test für gemeinsam genutzte Subskriptionen mit variabler Permanenz zu unterstützen. Gemeinsam genutzte Subskriptionen stellen für Anwendungen Funktionen für den Lastausgleich zur Verfügung. Eine gemeinsam genutzte Subskription ist möglicherweise erforderlich, wenn eine Back-End-Unternehmensanwendung den Umfang der Nachrichten, die in einem bestimmten Topic-Bereich publiziert werden sollen, nicht verarbeiten kann. Wenn beispielsweise viele Geräte Nachrichten publizieren, die von einer einzigen Anwendung verarbeitet werden, ist es möglicherweise erforderlich, die Lastausgleichsfunktion einer gemeinsam genutzten Subskription zu verwenden.
 
-Der {{site.data.keyword.iot_short_notm}}-Service erweitert die Spezifikation des Nachrichtenprotokolls von MQTT Version 3.1.1, um gemeinsam genutzte Subskriptionen zu unterstützen. Gemeinsam genutzte Subskriptionen stellen für Anwendungen Funktionen für den Lastausgleich zur Verfügung. Eine gemeinsam genutzte Subskription ist möglicherweise erforderlich, wenn eine Back-End-Unternehmensanwendung den Umfang der Nachrichten, die in einem bestimmten Topic-Bereich publiziert werden sollen, nicht verarbeiten kann. Wenn beispielsweise viele Geräte Nachrichten publizieren, die von einer einzigen Anwendung verarbeitet werden, ist es möglicherweise erforderlich, die Lastausgleichsfunktion einer gemeinsam genutzten Subskription zu verwenden. Die {{site.data.keyword.iot_short_notm}}-Unterstützung gemeinsam genutzter Subskriptionen ist auf nicht permanente Subskriptionen eingeschränkt.
+Stellen Sie bei gemeinsam genutzten Subskriptionen mit variabler Permanenz sicher, dass die Client-ID in der Subskription mit dem folgenden Format übereinstimmt:
 
+<pre class="pre">A:<var class="keyword varname">Organisations-ID</var>:<var class="keyword varname">Anwendungs-ID</var>:<var class="keyword varname">Instanz-ID</var></pre>
+{: codeblock}
 
-**Beispiel**
+Dabei gilt:
+- Die Zeichen für **A**, *Organisations-ID* und *Anwendungs-ID* in der Client-ID werden auf die gleiche Weise definiert wie bei [nicht permanenten Subskriptionen](#shared_sub_non_durable).
+- Die Zeichenfolge für *Instanz-ID* darf maximal 36 Zeichen umfassen und nur die folgenden Zeichen enthalten:
+   - Alphanumerische Zeichen (a-z, A-Z, 0-9)
+   - Gedankenstriche (-)
+   - Unterstreichungszeichen (_)
+   - Punkte (.)
 
-Das folgende Szenario ist ein Beispiel dafür, wie eine skalierbare Anwendung in {{site.data.keyword.iot_short_notm}} funktioniert:
+**Wichtig:**
+- Unterstützung für gemeinsam genutzte Subskriptionen mit variabler Permanenz wird nur als Betafunktion bereitgestellt. Implementieren Sie Betafunktionen nicht in Produktionsanwendungen.
+- Der Wert für bereinigte Sitzung kann in gemeinsam genutzten Subskriptionen mit variabler Permanenz auf 'true' (1) oder 'false' (0) gesetzt werden.
+- Clients, die Verbindungen mit der Instanz-ID herstellen, verwenden andere Subskriptionen als Clients, die Verbindungen ohne die Instanz-ID herstellen. Wenn mehrere Clients Verbindungen in einer gemeinsam genutzten Subskription mit variabler Permanenz herstellen sollen, müssen Sie daher die Instanz-ID in allen Subskriptionen angeben.
+
+**Beispielszenario**
+
+Das folgende Szenario ist ein Beispiel dafür, wie eine nicht permanente skalierbare Anwendung in {{site.data.keyword.iot_short_notm}} funktioniert:
 
 - Der erste Client stellt als **A:abc123:myApplication** eine Verbindung her und subskribiert alle Geräteereignisse; dies bedeutet, dass der erste Client 100 % der publizierten Geräteereignisse empfängt.
-- Der zweite Client stellt als **A:abc123:myApplication** eine Verbindung her und subskribiert ebenfalls alle Geräteereignisse; dies bedeutet, dass der erste und der zweite Client alle publizierten Ereignisse gemeinsam nutzen. Die Systembelastung wird zwischen dem ersten und dem zweiten Client aufgeteilt.
-- Der dritte Client stellt als **A:abc123:myApplication** eine Verbindung her und subskribiert ebenfalls alle Geräteereignisse; dies bedeutet, dass der erste, der zweite und der dritte Client die aufgrund der Ereignisse vorhandene Systembelastung teilen.
+- Client 2 stellt als **A:abc123:myApplication** eine Verbindung her und subskribiert außerdem alle Geräteereignisse. Dies bedeutet, dass Client 1 und Client 2 alle publizierten Ereignisse gemeinsam nutzen. Die Systembelastung wird zwischen dem ersten und dem zweiten Client aufgeteilt.
+- Client 3 stellt als **A:abc123:myApplication** eine Verbindung her und subskribiert ebenfalls alle Geräteereignisse. Dies bedeutet, dass Client 1, Client 2 und Client 3 den Verarbeitungsaufwand für Ereignisse miteinander teilen.
 - Der zweite und der dritte Client beenden anschließend die Subskription der Geräteereignisse; dies bedeutet, dass nur der erste Client alle publizierten Geräteereignisse empfängt. Während die Verbindung des zweiten und des dritten Clients zum Service weiterhin besteht, empfängt der erste Client 100 % der publizierten Geräteereignisse.
 - Wenn zwei oder mehr Anwendungen eine Subskription gemeinsam nutzen, treffen Nachrichten möglicherweise nicht in derselben Reihenfolge ein, in der sie gesendet wurden. Beispielsweise kann Nachricht B beim ersten Client eintreffen, bevor Nachricht A beim zweiten Client eintrifft, obwohl Nachricht A zuerst gesendet wurde.

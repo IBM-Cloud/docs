@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-21"
+  years: 2016, 2017
+lastupdated: "2017-03-13"
 
 ---
 
@@ -14,10 +14,8 @@ lastupdated: "2016-10-21"
 
 # {{site.data.keyword.Bluemix_notm}} 和 {{site.data.keyword.iot_short_notm}}
 {: #iot-bluemix-index}
-上次更新时间：2016 年 10 月 21 日
-{: .last-updated}
 
-{{site.data.keyword.iot_full}} 是 {{site.data.keyword.Bluemix}} 中提供的服务。您可以通过使用 {{site.data.keyword.Bluemix_notm}} 仪表板访问 {{site.data.keyword.iot_short_notm}} 组织仪表板。作为 {{site.data.keyword.Bluemix_notm}} 服务，{{site.data.keyword.iot_short_notm}} 可与 {{site.data.keyword.Bluemix_notm}} 上托管的其他服务集成。可以在[外部服务集成](/extensions/index.html)中找到特定第三方服务集成的详细信息
+{{site.data.keyword.iot_full}} 是 {{site.data.keyword.Bluemix}} 中提供的服务。您可以通过使用 {{site.data.keyword.Bluemix_notm}} 仪表板访问 {{site.data.keyword.iot_short_notm}} 组织仪表板。作为 {{site.data.keyword.Bluemix_notm}} 服务，{{site.data.keyword.iot_short_notm}} 可与 {{site.data.keyword.Bluemix_notm}} 上托管的其他服务集成。可以在[外部服务集成](extensions/index.html)主题中找到特定第三方服务集成的详细信息。
 {:shortdesc}
 
 ## {{site.data.keyword.iot_short_notm}} 如何用于 {{site.data.keyword.Bluemix_notm}}
@@ -28,25 +26,28 @@ lastupdated: "2016-10-21"
 ## {{site.data.keyword.iot_short_notm}} 服务级别协议 (SLA)
 {: #iot-sla}
 
-{{site.data.keyword.iot_short_notm}} 针对指定的服务级别有相应规定。有关服务级别协议的详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} 服务级别协议](http://www-03.ibm.com/software/sla/sladb.nsf/pdf/6738-03/$file/i126-6738-03_06-2016_en_US.pdf)。
+{{site.data.keyword.iot_short_notm}} 针对指定的服务级别有相应规定。有关服务级别协议的详细信息，请参阅 [{{site.data.keyword.iot_short_notm}} 服务级别协议 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://www-03.ibm.com/software/sla/sladb.nsf/pdf/6738-03/$file/i126-6738-03_06-2016_en_US.pdf){: new_window}。
 
 ## {{site.data.keyword.Bluemix_notm}} 服务级别协议
 
-{{site.data.keyword.Bluemix_notm}} 发布使用条款，这些使用条款根据用户所适用的是 [IBM Cloud Services 协议](http://www-05.ibm.com/support/operations/files/pdf/csa_us.pdf?cm_mc_uid=65870113399114371461368&cm_mc_sid_50200000=1469524513)还是 [IBM International Passport Advantage 协议](https://www-01.ibm.com/software/passportadvantage/pa_agreements.html)而有所不同。有关 {{site.data.keyword.Bluemix_notm}} 服务级别协议的更多信息，请参阅 [{{site.data.keyword.Bluemix_notm}} 条款](.../.../.../navigation/notices.html#terms)。
+{{site.data.keyword.Bluemix_notm}} 发布使用条款，这些使用条款根据用户所适用的是 [IBM Cloud Services 协议 ![外部链接图标](../../../icons/launch-glyph.svg)](http://www-05.ibm.com/support/operations/files/pdf/csa_us.pdf?cm_mc_uid=65870113399114371461368&cm_mc_sid_50200000=1469524513){: new_window} 还是 [IBM International Passport Advantage 协议 ![外部链接图标](../../../icons/launch-glyph.svg)](https://www-01.ibm.com/software/passportadvantage/pa_agreements.html){: new_window} 而有所不同。有关 {{site.data.keyword.Bluemix_notm}} 服务级别协议的更多信息，请参阅 [{{site.data.keyword.Bluemix_notm}} 条款 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://console.{DomainName}/docs/navigation/notices.html#terms){:new_window}。
 
 ## {{site.data.keyword.iot_short_notm}} 定价
 {: #iot-pricing}
 
-{{site.data.keyword.iot_short_notm}} 提供了两种定价模型：免费和标准。{{site.data.keyword.iot_short_notm}} 免费定价允许最多 20 个注册设备、交换 100 MB 的数据以及最多 10 个绑定应用程序。
+{{site.data.keyword.iot_short_notm}} 提供了两种定价模型：免费和标准。
 
-{{site.data.keyword.iot_short_notm}} 定价允许无限数量的注册设备、免费交换 100 MB 的数据，另外在达到前 100 MB 后所交换的每 MB 数据会产生开销。
+### IoT Pricing Calculator
+有关可用 {{site.data.keyword.iot_short_notm}} 套餐和定价模型的更多信息：
+1. 转至 [IoT Pricing calculator ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://iot-cost-calculator.ng.bluemix.net/){: new_window}。  
+2. 单击 Internet of Things Platform 项旁的**添加**或**配置**。
+3. 选择**定价层**，然后输入您计划交换的数据量的估算值，对云进行分析，并对边缘设备进行分析。  
+这将显示所选层和数据负载的价格估算。
 
-有关 {{site.data.keyword.iot_short_notm}} 定价的更多信息：
-
-1. 在 {{site.data.keyword.Bluemix_notm}} 仪表板上，单击 {{site.data.keyword.iot_short_notm}}。
-2. 从左侧导航菜单中，选择**套餐**。
-
-这将显示定价套餐。
+### 当前套餐信息
+1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”上，单击需要其当前套餐信息的 {{site.data.keyword.iot_short_notm}} 组织的 Internet of Things Platform 磁贴。
+2. 选择**套餐**选项卡。  
+这将显示当前定价套餐的详细信息。
 
 # 相关链接
 {: #rellinks}
@@ -55,8 +56,9 @@ lastupdated: "2016-10-21"
 ## 相关链接
 {: #general}
 
-* [{{site.data.keyword.Bluemix_notm}} 安全性](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
-* [{{site.data.keyword.Bluemix_notm}} 平台安全性](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
-* [{{site.data.keyword.Bluemix_notm}} 合规性](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} 安全性](http://www.softlayer.com/security){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} 合规性](http://www.softlayer.com/compliance){:new_window}
+* [IoT Pricing Calculator ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://iot-cost-calculator.ng.bluemix.net/){:new_window}
+* [{{site.data.keyword.Bluemix_notm}} 安全 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
+* [{{site.data.keyword.Bluemix_notm}} 平台安全 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
+* [{{site.data.keyword.Bluemix_notm}} 合规性 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} 安全 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://www.softlayer.com/security){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} 合规性 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://www.softlayer.com/compliance){:new_window}

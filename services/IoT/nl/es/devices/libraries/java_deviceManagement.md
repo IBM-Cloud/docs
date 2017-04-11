@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-08-02"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-22"
 
 ---
 
@@ -12,27 +12,24 @@ lastupdated: "2016-08-02"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Biblioteca de clientes Java: dispositivos gestionados
+# Desarrollo de dispositivos gestionados mediante Java
 {: #java_deviceManagement}
 
 ##Introducción
 {: #introduction}
 
-Esta biblioteca de cliente describe cómo utilizar dispositivos con la biblioteca de cliente 'ibmiotf' de Java. Para obtener ayuda acerca de cómo empezar con este módulo, consulte [Biblioteca de cliente de Java: Introducción](../java/javaintro.html).
+En {{site.data.keyword.iot_full}}, un dispositivo gestionado es un dispositivo que puede realizar operaciones de gestión de dispositivos, como por ejemplo actualizaciones de firmware, ubicación y diagnóstico.
+Mediante la biblioteca de cliente Java™ de {{site.data.keyword.iot_short}} y la información que se proporciona, puede desarrollar código Java para convertir sus dispositivos conectados en dispositivos gestionados. También se proporcionan ejemplos para ayudarle a desarrollar código Java para conectar un dispositivo al servicio de gestión de dispositivos y ejecutar operaciones de gestión de dispositivos.
 
-Esta sección contiene información sobre cómo pueden conectarse los dispositivos al servicio de Gestión de dispositivos de {{site.data.keyword.iot_full}} utilizando Java y realizar las operaciones de gestión de dispositivos como Actualización de firmware, actualización de ubicación y actualización de diagnóstico.
-
-La sección Dispositivo contiene información sobre cómo los dispositivos publican los sucesos y manejan los mandatos utilizando la biblioteca de cliente Java ibmiotf.
-
-La sección Aplicaciones contiene información sobre cómo pueden utilizar las aplicaciones la biblioteca de cliente Java ibmiotf para interactuar con los dispositivos.
+Para obtener más información sobre cómo pueden sus aplicaciones utilizar la biblioteca de cliente Java para interactuar con dispositivos, consulte [Java para desarrolladores de aplicaciones](../../applications/libraries/java.html).
 
 ## Gestión de dispositivos
 {: #device_management}
 
 La característica [gestión de dispositivos](../reference/device_mgmt.html) mejora el servicio de {{site.data.keyword.iot_short_notm}} con más posibilidades para la gestión de dispositivos. La gestión de dispositivos establece una diferencia entre dispositivos gestionados y no gestionados:
 
--   **Dispositivos gestionados** se definen como los dispositivos que tienen un agente de gestión instalado. El agente de gestión envía y recibe metadatos de dispositivos y responde a los mandatos de gestión de dispositivos desde el {{site.data.keyword.iot_short_notm}}.
--   **Dispositivos no gestionados** son cualquier dispositivo que no tenga un agente de gestión de dispositivos. Todos los dispositivos inician su ciclo vital como dispositivos no gestionados, y pueden transicionar a dispositivos gestionados enviando un mensaje desde un agente de gestión de dispositivos al {{site.data.keyword.iot_short_notm}}.
+-   **Dispositivos gestionados** se definen como los dispositivos que tienen un agente de gestión instalado. El agente de gestión envía y recibe metadatos de dispositivos y responde a los mandatos de gestión de dispositivos desde {{site.data.keyword.iot_short_notm}}.
+-   **Dispositivos no gestionados** son cualquier dispositivo que no tenga un agente de gestión de dispositivos. Todos los dispositivos inician su ciclo vital como dispositivos no gestionados, y pueden transicionar a dispositivos gestionados enviando un mensaje desde un agente de gestión de dispositivos a {{site.data.keyword.iot_short_notm}}.
 
 ## Conexión al servicio de Gestión de dispositivos de {{site.data.keyword.iot_short_notm}}
 {: #connecting_dm_service}
@@ -325,7 +322,7 @@ Para obtener más información sobre la operación de Diagnóstico, consulte la 
 ## Acciones de firmware
 {: #firmware_actions}
 
-El proceso de Actualización de firmware está separado en dos acciones distintas:
+El proceso de actualización del firmware se divide en dos acciones distintas:
 
 * Descarga de firmware
 * Actualización de firmware
@@ -624,7 +621,7 @@ Consulte [esta página](../device_mgmt/operations/device_actions.html) para obte
 ## Escuchar los cambios de atributos de dispositivos
 {: #listen_device_attribute}
 
-Esta biblioteca de cliente ibmiotf actualiza los objetos correspondientes siempre que haya una solicitud de actualización de la {{site.data.keyword.iot_short_notm}}, estas solicitudes de actualización las inicia la aplicación ya sea directamente o indirectamente (Actualización de firmware) a través de la API REST de {{site.data.keyword.iot_short_notm}}. Además de actualizar estos atributos, la biblioteca proporciona un mecanismo donde se puede notificar el dispositivo cuando se actualice un atributo del dispositivo.
+Esta biblioteca de cliente ibmiotf actualiza los objetos correspondientes siempre que haya una solicitud de actualización de la {{site.data.keyword.iot_short_notm}}, estas solicitudes de actualización las inicia la aplicación ya sea directamente o indirectamente (Actualización de firmware) a través de la API REST de {{site.data.keyword.iot_short_notm}}. Además de actualizar estos atributos, la biblioteca proporciona un mecanismo mediante el que se puede notificar al dispositivo cuando se actualiza un atributo del dispositivo.
 
 Los atributos que se pueden actualizar mediante esta operación son `location`, `metadata`, `device information` y `firmware`.
 

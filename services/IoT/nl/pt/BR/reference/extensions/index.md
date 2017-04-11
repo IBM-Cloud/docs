@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-18"
+  years: 2015, 2017
+lastupdated: "2017-03-15"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -39,7 +39,7 @@ A integração de Jasper integrada fornecida por nossa plataforma fornece suport
 É possível acessar as operações suportadas no drill down de dispositivo de um dispositivo conectado Jasper após a conclusão das etapas de configuração a seguir.
 
 ### APIs de REST para Jasper
-Para acessar a API de REST para Jasper, consulte a seção Jasper Extension na documentação [{{site.data.keyword.iot_short_notm}} API de REST HTTP](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension).
+Para acessar a API de REST para Jasper, veja a seção Extensão Jasper na documentação da [API de REST HTTP do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window}.
 
 ### Configuração para Jasper
 
@@ -91,7 +91,7 @@ A extensão AT&T permite as operações a seguir da AT&T:
 - Alterar o plano de taxa
 
 ### APIs de REST para AT&T
-Para acessar a API de REST para AT&T, consulte a seção AT&T Extension na documentação [{{site.data.keyword.iot_short_notm}} API de REST HTTP](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension).
+Para acessar a API de REST para AT&T, veja a seção Extensão AT&T na documentação da [API de REST HTTP do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window}.
 
 ### Configuração para a AT&T
 
@@ -223,7 +223,7 @@ Se você tiver um dispositivo que esteja conectado ao serviço do {{site.data.ke
 - Status do Local
 
 ### APIs de REST para Orange
-Para acessar a API de REST para Orange, consulte a seção Orange Extension na documentação [{{site.data.keyword.iot_short_notm}} API de REST HTTP](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension).
+Para acessar a API de REST para Orange, veja a seção Extensão Orange na documentação da [API de REST HTTP do {{site.data.keyword.iot_short_notm}}![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window}.
 
 ### Configuração para a Orange
 
@@ -254,15 +254,27 @@ Quando a organização estiver configurada com sucesso, a seção *Extensões* s
 ## Armazenamento de dados históricos
 {: #historical_data}
 
-A extensão de armazenamento de dados históricos permite localizar e configurar serviços de armazenamento de mensagens compatíveis, tais como [{{site.data.keyword.cloudantfull}}](../../cloudant_connector.html)
-ou [{{site.data.keyword.messagehub_full}}](../../message_hub.html) para seus dados da IoT.
+A extensão de armazenamento de dados históricos permite localizar e configurar serviços de armazenamento de mensagens compatíveis, tais como [{{site.data.keyword.cloudantfull}}](../../cloudant_connector.html) ou [{{site.data.keyword.messagehub_full}}](../../message_hub.html) para seus dados da IoT.
 
-## Pacotes de gerenciamento de dispositivos customizados
+## Pacotes de gerenciamento de dispositivo customizado
 {: #device_mgmt}
 
-O gerenciamento de dispositivo é um recurso principal do {{site.data.keyword.iot_short_notm}}, no entanto, ele pode ser estendido para desenvolver funcionalidade adicional.
+O gerenciamento de dispositivo é um recurso principal do {{site.data.keyword.iot_short_notm}}, no entanto, ele pode ser estendido para desenvolver funcionalidade adicional. Os pacotes de gerenciamento de dispositivo customizado devem consistir em JSON válido e definir pelo menos uma ação de gerenciamento de dispositivo customizado.
 
-A extensão de gerenciamento de dispositivo permite instalar funções customizadas para gerenciamento de dispositivo. Para obter mais informações sobre as funções customizadas de gerenciamento de dispositivo, consulte [extensões customizadas de gerenciamento de dispositivo](../../devices/device_mgmt/custom_actions.html){: new_window}.
+Para obter mais informações sobre as funções de gerenciamento de dispositivo customizado, incluindo um exemplo do formato JSON necessário, veja [extensões customizadas de gerenciamento de dispositivo](../../devices/device_mgmt/custom_actions.html){: new_window}.
+
+### Incluindo um pacote de gerenciamento de dispositivo customizado
+
+Os pacotes de gerenciamento de dispositivo customizado podem ser incluídos usando o painel do {{site.data.keyword.iot_short_notm}} ou usando a API.
+
+Para incluir um pacote de gerenciamento de dispositivo customizado usando o painel do {{site.data.keyword.iot_short_notm}}:
+
+1. No painel do {{site.data.keyword.iot_short_notm}}, clique em **Configurações** na barra de navegação.
+2. Clique em **Pacotes de gerenciamento de dispositivo customizado**.
+3. Clique no botão **Incluir pacote**.
+4. Selecione seu arquivo de pacote e clique em **Abrir**.
+
+Para incluir um pacote de gerenciamento de dispositivo customizado usando a API, veja a [documentação da API do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ## Blockchain
 {: #blockchain}
@@ -276,37 +288,105 @@ O {{site.data.keyword.iot_short_notm}} com blockchain permite que dispositivos I
 
 ### Configuração para blockchain
 
-A integração de blockchain ao {{site.data.keyword.iot_short_notm}} é uma oferta de serviços que não está ativada por padrão no {{site.data.keyword.iot_short_notm}}. Para ativar o recurso em seu ambiente, conclua as etapas a seguir:
- 1. No painel {{site.data.keyword.iot_short_notm}}, **Extensões**.
- 2. Clique no link **Diga-me mais** ao lado da extensão Blockchain para acessar a página Oferta de serviços blockchain de IoT.
- 3. Preencha e envie o formulário de solicitação de serviço.   
-A aprovação do serviço geralmente leva aproximadamente um dia. Após sua solicitação ser aprovada, você receberá um e-mail com instruções sobre como ativar a integração de blockchain em sua organização do {{site.data.keyword.iot_short_notm}}.
- 5. Retorne ao painel do {{site.data.keyword.iot_short_notm}} de sua organização para concluir a configuração. Para obter mais informações, consulte [Integração de blcokchain ao {{site.data.keyword.iot_short_notm}}](../../bl_blockchain_integration.html).
+A integração de blockchain ao {{site.data.keyword.iot_short_notm}} é uma oferta de serviços que não está ativada por padrão no {{site.data.keyword.iot_short_notm}}. Para ativar o recurso em sua organização, conclua as etapas a seguir:
+ 1. No painel do {{site.data.keyword.iot_short_notm}}, selecione **Extensões**.
+ 2. Na página **Extensões**, clique em **Incluir extensão**.
+ 3. Clique em **Incluir** próximo à extensão de Blockchain.
+ 4. No quadro Blockchain, clique em **Configurar**.
+ 3. Na seção **Ativar Blockchain**, clique no link **Saiba mais** para acessar a [página Oferta de serviços do IoT Blockchain ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](http://www.ibm.com/internet-of-things/iot-news/announcements/private-blockchain/){: new_window}.
+ 4. Clique em **Instalar com kickstart seu projeto de blockchain** para preencher e enviar o formulário *Explorar o potencial de IoT e Blockchain*.  
+ 5. Após a aprovação de sua solicitação, a IBM entrará em contato com você para ativar a integração de blockchain para sua organização.
+ 6. Retorne ao painel do {{site.data.keyword.iot_short_notm}} de sua organização para concluir a configuração seguindo as etapas de [Integração de blockchain ao {{site.data.keyword.iot_short_notm}}](../../bl_blockchain_integration.html).
 
-## The Weather Company
+<!-- ## The Weather Company
 {: #weathercompany}
 
-A extensão Weather Company combina dados de clima com seus dispositivos {{site.data.keyword.iot_short_notm}} existentes. Os dados de clima do Weather Company aparecem na visualização de detalhes do dispositivo se uma solicitação de localização de atualização foi feita usando a API ou se o dispositivo já tiver configurado seu local usando uma mensagem de gerenciamento de dispositivo.
+The Weather Company extension combines weather data with your existing {{site.data.keyword.iot_short_notm}} devices. Weather data from The Weather Company appears in the device details view if an update location request has been made by using the API, or if the device has already set its location by using a device management message.
 
-**Observação:** apenas dispositivos gerenciados podem configurar suas próprias localizações. Todos os dispositivos não gerenciados devem ter seus locais configurados manualmente usando a API. Para obter mais informações sobre a configuração de um local do dispositivo, consulte [Atualizar solicitações de localização](../../devices/device_mgmt/index.html#update-location).
+**Note:** Only managed devices can set their own locations. All unmanaged devices must have their locations set manually by using the API. For more information on setting a device location, see [Update Location requests](../../devices/device_mgmt/index.html#update-location).
 
-### APIs de REST para The Weather Company
-Para acessar a API de REST para The Weather Company, consulte a seção
-Device Location Weather na documentação [{{site.data.keyword.iot_short_notm}} API de REST HTTP](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather).
+### REST APIs for The Weather Company
+To access the REST API for The Weather Company, see the
+Device Location Weather section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather){: new_window} documentation.
 
-### Dados de clima
+### Weather Data
 
-Para visualizar os dados de clima recuperados para um local do dispositivo, localize o dispositivo na área de janela **Dispositivos** e clique nele. Na visualização de dispositivo detalhada, role para baixo para a seção **Extensões**. Os dados de clima a seguir são listados:
+To view the weather data retrieved for a device location, find the device in the **Devices** pane and click it. In the detailed device view scroll down to the **Extensions** section. The following weather data is listed:
 
-- Clima atual.
-- Temperatura atual.
-- A temperatura máxima e mínima predita.
-- Umidade relativa.
-- Pressão.
-- Visibilidade.
-- Velocidade do vento.
-- Direção do vento.
+- Current weather.
+- Current temperature.
+- Predicted maximum and minimum temperature.
+- Relative humidity.
+- Pressure.
+- Visibility.
+- Wind speed.
+- Wind direction.
 - Latitude.
 - Longitude.
+-->
 
-<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html). -->
+<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html){: new_window}. -->
+
+## e-mail
+{: #email}
+
+Os usuários podem ser incluídos no {{site.data.keyword.iot_short_notm}} usando convites de e-mail. Para obter informações, veja [Gerenciando o acesso de usuário](../../add_users.html).
+
+Para usar o recurso de convite por e-mail, uma extensão de e-mail deve ser configurada para usar o serviço on-line SendGrid ou um serviço de Protocolo Simples de Transporte de Correio (SMTP). A extensão também pode usar o aplicativo SendGrid {{site.data.keyword.Bluemix_notm}}.
+
+### Serviço on-line SendGrid
+
+Para configurar a extensão de e-mail para uso com o serviço on-line SendGrid, siga estas etapas:
+
+1. Recupere a chave API autorizada da sua conta SendGrid on-line.
+2. No painel do {{site.data.keyword.iot_short_notm}}, clique em **Extensões** na barra de navegação.
+3. Na seção **E-mail**, clique em **Configurar**.
+4. Selecione **SendGrid com a chave API**
+5. Insira o nome e o endereço de e-mail do administrador do site e a chave API autorizada.
+
+### Serviço SMTP
+
+Para configurar a extensão de e-mail para uso com um serviço SMTP, siga estas etapas:
+
+1. No painel do {{site.data.keyword.iot_short_notm}}, clique em **Extensões** na barra de navegação.
+2. Na seção **E-mail**, clique em **Configurar**.
+3. Selecione **SMTP**.
+4. Insira os detalhes de configuração do serviço SMTP.
+
+### Aplicativo SendGrid {{site.data.keyword.Bluemix_notm}}
+
+Para configurar a extensão de e-mail para uso com o aplicativo SendGrid {{site.data.keyword.Bluemix_notm}}, siga estas etapas:
+
+1. Crie um aplicativo simulado e ligue-o ao serviço SendGrid.  
+Para recuperar as credenciais de configuração, inclua e ligue o serviço SendGrid a um app simulado.
+
+ 1. No painel do {{site.data.keyword.Bluemix_notm}}, clique em **Criar serviço**.
+ 2. Selecione o serviço SendGrid no catálogo e clique em **Criar**.
+ 3. No painel {{site.data.keyword.Bluemix_notm}}, inclua o aplicativo {{site.data.keyword.sdk4nodefull}}.
+ 4. Clique no aplicativo {{site.data.keyword.sdk4nodefull}} no painel {{site.data.keyword.Bluemix_notm}} e clique em **Ligar um serviço ou API**.
+ 5. Selecione o serviço SendGrid e clique em **Incluir**.
+ 6. O aplicativo {{site.data.keyword.sdk4nodefull}} deve agora ser estagiado novamente.
+2. Prepare-se para configurar o serviço {{site.data.keyword.iot_short_notm}}.  
+O {{site.data.keyword.iot_short_notm}} pode ser configurado usando o painel do {{site.data.keyword.iot_short_notm}} ou usando a API do {{site.data.keyword.iot_short_notm}}.  
+ 1. Clique no aplicativo {{site.data.keyword.sdk4nodefull}} no painel {{site.data.keyword.Bluemix_notm}}.
+ 2. Clique em **Variáveis de ambiente** na barra de navegação.
+ 3. Copie o JSON exibido para um arquivo de texto provisório.  
+ O JSON deve ter o formato a seguir:
+```
+{
+  "name": "SendGridServiceName",
+  "label": "user-provided",
+  "credentials": {
+    "password": "xxx",
+    "hostname": "smtp.sendgrid.net",
+    "username": "username"
+  }
+}
+```
+3. Inclua os dados de configuração na organização do {{site.data.keyword.iot_short_notm}}.
+ 1. Abra o painel {{site.data.keyword.iot_short_notm}}.
+ 2. Clique em **Extensões** na barra de navegação.
+ 3. Clique em **Configurar** no ícone **E-mail**.
+ 4. Selecione **SendGrid com nome do usuário**.
+ 5. Insira os dados de configuração do arquivo de texto provisório.
+ 6. Clique em **Pronto**.

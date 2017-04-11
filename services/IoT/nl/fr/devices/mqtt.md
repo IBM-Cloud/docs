@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-21"
+  years: 2015, 2017
+lastupdated: "2016-11-17"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -33,7 +33,7 @@ Quickstart est le niveau de service le plus rapide. Il n'offre pas de confirmati
 Si vous écrivez un code de terminal à utiliser avec Quickstart, vous devez savoir que les fonctions de service {{site.data.keyword.iot_short_notm}} suivantes ne sont pas prises en charge en mode Quickstart :
 
 -  Abonnement à des commandes
--  Protocoles de gestion des terminaux
+-  Protocole de gestion des terminaux
 -  Sessions propres ou durables
 
 **Important :** Il se peut que les messages envoyés par les terminaux à une fréquence supérieure à un par seconde soient annulés.
@@ -65,9 +65,12 @@ Les terminaux effectuent des publications sur les sujets d'événement au format
 Où
 
 -  **event_id** est l'ID de l'événement, par exemple, `status`.  L'ID d'événement peut être n'importe quelle chaîne valide dans MQTT. Si aucun caractère générique n'est utilisé, les applications d'abonné doivent utiliser cette chaîne dans leur sujet d'abonnement afin de recevoir les événements publiés sur leur sujet.
--  **format_string** est une chaîne qui définit le type de contenu du message de manière à permettre au destinataire de celui-ci de savoir comment faire l'analyse syntaxique du contenu. Les valeurs de type de contenu les plus courantes sont notammement "json", "xml", "txt" et "csv". La valeur peut être n'importe quelle chaîne valide dans MQTT.
+-  **format_string** est une chaîne qui définit le type de contenu du message de manière à permettre au destinataire de celui-ci de savoir comment faire l'analyse syntaxique du contenu. Les valeurs de type de contenu les plus courantes sont notamment "json", "xml", "txt" et "csv". La valeur peut être n'importe quelle chaîne valide dans MQTT.
 
 **Important :** La taille du contenu du message ne peut pas être supérieure à 131072 octets. Les messages dont la taille est plus grande sont rejetés.
+
+### Messages conservés
+Les organisations {{site.data.keyword.iot_short_notm}} ne sont pas autorisées à publier des messages MQTT conservés. Si un terminal envoie un message conservé, le service {{site.data.keyword.iot_short_notm}} écrase l'indicateur de message conservé lorsqu'il a pour valeur true et traite le message comme si l'indicateur de message conservé avait pour valeur false.
 
 
 ## Abonnement à des commandes
@@ -80,7 +83,7 @@ Les terminaux peuvent s'abonner à des sujets de commande en utilisant le format
 
 Où
  - **command_id** est l'ID de la commande, par exemple, `update`. L'ID de commande peut être n'importe quelle chaîne valide dans le protocole MQTT.  Si aucun caractère générique n'est utilisé, un terminal doit utiliser cette chaîne dans son sujet d'abonnement afin de recevoir les commandes qui sont publiées sur son sujet.
- - **format_string** est une chaîne qui définit le type de contenu de la commande de manière à permettre au destinataire de celle-ci de savoir comment faire l'analyse syntaxique du contenu. Les valeurs de type de contenu les plus courantes sont notammement "json", "xml", "txt" et "csv". La valeur peut être n'importe quelle chaîne valide dans MQTT.
+ - **format_string** est une chaîne qui définit le type de contenu de la commande de manière à permettre au destinataire de celle-ci de savoir comment faire l'analyse syntaxique du contenu. Les valeurs de type de contenu les plus courantes sont notamment "json", "xml", "txt" et "csv". La valeur peut être n'importe quelle chaîne valide dans MQTT.
 
 les terminaux ne peuvent pas s'abonner à des événements provenant d'autres terminaux. Un terminal reçoit des commandes qui sont publiées uniquement sur son propre terminal.
 
@@ -91,7 +94,7 @@ La prise en charge de la gestion du cycle de vie des terminaux est facultative. 
 
 ### Niveaux de qualité de service et option 'clean session'
 
-Les terminaux gérés peuvent publier des messages dotés du niveau de qualité de service (QoS) 0 ou 1. Les messages du terminal ne doivent pas être des messages conservés.
+Les terminaux gérés peuvent publier des messages dotés du niveau de qualité de service (QoS) 0 ou 1.
 
 Les messages dotés du niveau QoS=0 peuvent être supprimés et ne sont pas conservés après le redémarrage du serveur de messagerie. Les messages dotés du niveau QoS=1 peuvent être placés en file d'attente et ne sont pas conservés après le redémarrage du serveur de messagerie. La durabilité de l'abonnement détermine si une demande a été placée en file d'attente. Le paramètre `cleansession` de la connexion qui a effectué l'abonnement détermine la durabilité de l'abonnement.  
 

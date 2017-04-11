@@ -11,7 +11,7 @@ lastupdated: "2017-01-11"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Gestión de Liberty y Node.js
+# Gestión de Liberty y Node.js
 {: #app_management}
 
 
@@ -34,21 +34,21 @@ Cuando esta opción está habilitada, el paquete de compilación inicia un agent
 #### noproxy
 {: #noproxy}
 
-El programa de utilidad *noproxy* inhabilita el programa de utilidad *proxy* que de otro modo habría creado automáticamente uno de los otros programas de utilidad. Con Diego no se necesita el proxy, ya que Diego ofrece la posibilidad de ejecutar *ssh* directamente en la aplicación y configurar el reenvío de puertos. 
+El programa de utilidad *noproxy* inhabilita el programa de utilidad *proxy* que de otro modo habría creado automáticamente uno de los otros programas de utilidad. Con Diego no se necesita el proxy, ya que Diego ofrece la posibilidad de ejecutar *ssh* directamente en la aplicación y configurar el reenvío de puertos.
 
-El programa de utilidad *noproxy* solo se aplica a las aplicaciones que se ejecutan en una célula de Diego. 
+El programa de utilidad *noproxy* solo se aplica a las aplicaciones que se ejecutan en una célula de Diego.
 
 
 
 #### devconsole
 {: #devconsole}
 
-El programa de utilidad de consola de desarrollo (*devconsole*) permite a los usuarios reiniciar, detener o suspender sus apps. Los usuarios también pueden habilitar o acceder al shell y a los programas de utilidad de inspección. Pueden acceder en el siguiente URL:
+El programa de utilidad de consola de desarrollo (*devconsole*) permite a los usuarios reiniciar, detener o suspender sus apps. Los usuarios también pueden habilitar o acceder al shell y a los programas de utilidad de inspección.  Pueden acceder en el siguiente URL:
 ```
   https://<yourappname>.mybluemix.net/bluemix-debug/manage
 ```
 
-Para Node versión 6.3.0 o posterior, la consola de desarrollo proporciona un botón de reinicio para la aplicación y el acceso al programa de utilidad de shell. Consulte el debate de *inspector* para obtener más información.
+Para Node versión 6.3.0 o posterior, la consola de desarrollo proporciona un botón de reinicio para la aplicación y el acceso al programa de utilidad de shell.  Consulte el debate de *inspector* para obtener más información.
 
 El programa de utilidad *devconsole* también inicia *proxy*.
 
@@ -72,7 +72,7 @@ Luego conecte con el cliente de Health Center, utilice una [conexión MQTT ![ico
 #### shell
 {: #shell}
 
-El programa de utilidad *shell* permite un shell basado en web. Se puede acceder a él desde el programa de utilidad *devconsole* o accediendo al siguiente URL:
+El programa de utilidad *shell* permite un shell basado en web.  Se puede acceder a él desde el programa de utilidad *devconsole* o accediendo al siguiente URL:
 
 ```
   https://<yourappname>.mybluemix.net/bluemix-debug/shell
@@ -82,7 +82,7 @@ Se muestra una ventana de terminal con acceso de shell en la app después de acc
 
 El programa de utilidad *shell* también inicia *proxy*.
 
-Diego proporciona un shell interactivo a través del mandato `cf ssh`, ya que el programa de utilidad *shell* solo resulta útil para aplicaciones que se ejecutan en un DEA. 
+Diego proporciona un shell interactivo a través del mandato `cf ssh`, ya que el programa de utilidad *shell* solo resulta útil para aplicaciones que se ejecutan en un DEA.
 
 ### Estos programas de utilidad solo admiten Liberty
 {: #liberty_utilities}
@@ -107,14 +107,14 @@ A continuación, para conectar en Eclipse, utilice "Configuración de Java remot
 
 El programa de utilidad *jmx* permite al conector JMX REST permitir que un cliente JMX remoto gestione la app mediante las credenciales de usuario de {{site.data.keyword.Bluemix_notm}}.
 
-Para obtener más información sobre la configuración de un conector JMX, consulte [Configuración de una conexión JMX segura con el perfil de Liberty ![icono de enlace externo](../icons/launch-glyph.svg)](https://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/twlp_admin_restconnector.html){:new_window}. 
+Para obtener más información sobre la configuración de un conector JMX, consulte [Configuración de una conexión JMX segura con el perfil de Liberty ![icono de enlace externo](../icons/launch-glyph.svg)](https://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/twlp_admin_restconnector.html){:new_window}.
 
 El programa de utilidad *jmx* no inicia el proxy.
 
 #### localjmx
 {: #localjmx}
 
-El programa de utilidad *localjmx* habilita la característica de Liberty [localConnector-1.0 ![icono de enlace externo](../icons/launch-glyph.svg)](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feature_localConnector-1.0.html){:new_window}. Junto con el reenvío de puerto local, esto ofrece un método alternativo para permitir que un cliente JMX remoto pueda gestionar la aplicación. 
+El programa de utilidad *localjmx* habilita la característica de Liberty [localConnector-1.0 ![icono de enlace externo](../icons/launch-glyph.svg)](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feature_localConnector-1.0.html){:new_window}. Junto con el reenvío de puerto local, esto ofrece un método alternativo para permitir que un cliente JMX remoto pueda gestionar la aplicación.
 
 El programa de utilidad *localjmx* solo se aplica a las aplicaciones que se ejecutan en una célula de Diego. Para utilizar *localjmx*, primero establezca el reenvío de puertos con el mandato `cf ssh`. Por ejemplo:
 
@@ -122,7 +122,7 @@ El programa de utilidad *localjmx* solo se aplica a las aplicaciones que se ejec
 $ cf ssh -N -T -L 5000:127.0.0.1:5000 <appName>
 ```
 
-Luego, para conectar con JConsole, elija "Proceso remoto", especifique `127.0.0.1:5000` y utilice una conexión insegura. 
+Luego, para conectar con JConsole, elija "Proceso remoto", especifique `127.0.0.1:5000` y utilice una conexión insegura.
 
 
 ### Estos programas de utilidad solo admiten Node.js
@@ -133,9 +133,9 @@ Luego, para conectar con JConsole, elija "Proceso remoto", especifique `127.0.0.
 
 Para las versiones de Node.js anteriores a la 6.3.0, *inspector* habilita la interfaz del depurador del inspector de nodos. El proceso del *inspector* se ejecuta en el contenedor de la app. Utilice este programa de utilidad para crear perfiles de uso de CPU, añadir puntos de interrupción y depurar código, todo mientras la app se ejecuta en {{site.data.keyword.Bluemix_notm}}. Para obtener más información sobre el módulo del inspector de nodos, consulte [node-inspector en GitHub ![icono de enlace externo](../icons/launch-glyph.svg)](https://github.com/node-inspector/node-inspector){:new_window}.
 
-Para Node.js versiones 6.3.0 y posteriores, el *inspector* utiliza el [V8 Inspector Integration for Node.js ![icono de enlace externo](../icons/launch-glyph.svg)](https://nodejs.org/dist/latest-v6.x/docs/api/debugger.html#debugger_v8_inspector_integration_for_node_js){:new_window}. 
+Para Node.js versiones 6.3.0 y posteriores, el *inspector* utiliza el [V8 Inspector Integration for Node.js ![icono de enlace externo](../icons/launch-glyph.svg)](https://nodejs.org/dist/latest-v6.x/docs/api/debugger.html#debugger_v8_inspector_integration_for_node_js){:new_window}.
 
-El programa de utilidad inspector inicia *proxy* de forma predeterminada, pero la forma en que realice la depuración remota dependerá de la versión de Node.js y del uso de *proxy* o *noproxy*.  En la tabla siguiente se muestra cómo acceder a la depuración remota en diversos escenarios. 
+El programa de utilidad inspector inicia *proxy* de forma predeterminada, pero la forma en que realice la depuración remota dependerá de la versión de Node.js y del uso de *proxy* o *noproxy*.  En la tabla siguiente se muestra cómo acceder a la depuración remota en diversos escenarios.
 
 | | proxy | noproxy |
 |---|---|---|
@@ -148,7 +148,7 @@ Para versiones de *noproxy* y Node.js anteriores a 6.3.0, permita el acceso al U
 $ cf ssh -N -T -L <localPort>:127.0.0.1:8790 <appName>
 ```
 
-Luego vaya a http://127.0.0.1:8790 en el navegador web de Chrome. Cambie el puerto estableciendo la variable de entorno BLUEMIX_APP_MGMT_INSPECTOR: 
+Luego vaya a http://127.0.0.1:8790 en el navegador web de Chrome.  Cambie el puerto estableciendo la variable de entorno BLUEMIX_APP_MGMT_INSPECTOR:
 
 ```
 $ cf set-env <appName> BLUEMIX_APP_MGMT_INSPECTOR='{port: 9790}'
@@ -169,7 +169,7 @@ Permita el acceso al URL mediante reenvío de puertos locales. Por ejemplo:
 $ cf ssh -N -T -L 9229:127.0.0.1:9229 <appName>
 ```
 
-Necesitará una versión actualizada del navegador web de Chrome para ir a este URL. El proxy no direccionará el tráfico al inspector en este caso de ejemplo. 
+Necesitará una versión actualizada del navegador web de Chrome para ir a este URL. El proxy no direccionará el tráfico al inspector en este caso de ejemplo.
 
 #### trace
 {: #trace}
@@ -195,12 +195,14 @@ Para habilitar las utilidades de App Management, defina la variable de entorno *
 Por ejemplo, para habilitar los programas de utilidad *devconsole* y *shell*, ejecute el siguiente mandato:
 
 ```
-$ cf set-env myApp BLUEMIX_APP_MGMT_ENABLE devconsole+shell```
+$ cf set-env myApp BLUEMIX_APP_MGMT_ENABLE devconsole+shell
+```
 
 Vuelva a transferir la app después de establecer la variable de entorno:
 
 ```
-$ cf restage myApp```
+$ cf restage myApp
+```
 
 Si no desea que los programas de utilidad App Management se instalen con la app, establezca la variable de entorno
 *BLUEMIX_APP_MGMT_INSTALL* en 'false' y vuelva a transferir la app.
@@ -215,11 +217,11 @@ $ cf restage myApp
 ## Restricciones
 {: #restrictions}
 
-* App Management solo admite apps de una sola instancia cuando la aplicación se ejecuta en un nodo DEA. 
+* App Management solo admite apps de una sola instancia cuando la aplicación se ejecuta en un nodo DEA.
 * Los cambios que realice en la app utilizando App Management son transitorios y se perderán al salir de esta modalidad. Esta modalidad es solo para uso de desarrollo temporal, y no está concebida para su uso como entorno de producción debido a su rendimiento.
 * La mayoría de los programas de utilidad
 de App Management no funcionan si define el mandato start en el archivo `manifest.yml` (mandato) o en la CLI CF
-(-c). Dichos métodos son alteraciones temporales de paquetes de compilación y son antipatrones para iniciar apps Node.js. Para obtener resultados óptimos, establezca el mandato start en el archivo `package.json` o en `Procfile`. 
+(-c). Dichos métodos son alteraciones temporales de paquetes de compilación y son antipatrones para iniciar apps Node.js. Para obtener resultados óptimos, establezca el mandato start en el archivo `package.json` o en `Procfile`.
 
 ## Modalidad de desarrollo de Eclipse Tools
 {: #devmode}

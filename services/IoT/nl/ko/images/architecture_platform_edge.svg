@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="architecture_platform_edge.svg"
-   inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.png"
+   inkscape:export-filename="S:\PUB\ABD142\ART\WORK\ship1\iot\images\architecture_platform_edge.png"
    inkscape:export-xdpi="299.98132"
    inkscape:export-ydpi="299.98132">
   <defs
@@ -776,7 +776,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.1666592"
-     inkscape:cx="198.46223"
+     inkscape:cx="304.84721"
      inkscape:cy="148.82247"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -1132,11 +1132,11 @@
            y="-39.357193" /></flowRegion><flowPara
          id="flowPara7065" /></flowRoot>    <text
        sodipodi:linespacing="125%"
-       y="648.31024"
+       y="649.23334"
        x="141.24741"
        font-size="11"
        id="text66184"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000191px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">인터넷</text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000155px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;">인터넷</text>
     <path
        inkscape:connector-curvature="0"
        id="path13593"
@@ -1612,8 +1612,8 @@
          sodipodi:role="line"
          x="-16.57482"
          y="554.04181"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.00000095px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-         id="tspan5587"> 에지 분석 사용 게이트웨이.</tspan></text>
+         style="font-size:10.00000119px;-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+         id="tspan5587">에지 분석 사용 게이트웨이. </tspan></text>
     <rect
        ry="0"
        rx="0"

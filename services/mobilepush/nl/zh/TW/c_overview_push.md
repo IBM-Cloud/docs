@@ -21,7 +21,7 @@ IBM {{site.data.keyword.mobilepushshort}} 是您可以用來傳送通知至裝�
 
 - 使用型錄中的 MobileFirst Services Starter 樣板建立 Bluemix 應用程式。這將建立連結至 Bluemix 後端應用程式的 Push Notifications 服務。
 - 直接從 Mobile 型錄建立取消連結 Push Notifications 服務。您可以稍後連結至應用程式或甚至選擇使用它來取消連結。 
-- 使用 [Mobile 儀表板 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/docs/mobile/services.html "外部鏈結圖示"){: new_window}。
+- 使用 [Mobile 儀表板 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/docs/mobile/services.html){: new_window}。
 
 請注意，{{site.data.keyword.mobilepushshort}} 監視標籤不會顯示分析資料。
 
@@ -69,7 +69,7 @@ IBM {{site.data.keyword.mobilepushshort}} Service 使用平台專用 Push Notifi
 - **appSecret**：'appSecret' 會保護一般由後端應用程式所呼叫的 API（例如，傳送 {{site.data.keyword.mobilepushshort}} 的 API，以及配置設定的 API）。
 - **clientSecret**：'clientSecret' 會保護一般由行動用戶端應用程式所呼叫的 API。只有一個 API 與使用需要此 'clientSecret' 的相關聯 UserId 登錄裝置有關。從行動用戶端呼叫的其他 API 都不需要 clientSecret。 
 
-連結應用程式與 {{site.data.keyword.mobilepushshort}} Service 時，會將 'appSecret' 及 'clientSecret' 配置給每個服務實例。請參閱 [REST API ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mobile.{DomainName}/imfpush/ "外部鏈結圖示") 文件，以取得如何傳遞密碼以及針對哪些 API 傳遞的相關資訊。
+連結應用程式與 {{site.data.keyword.mobilepushshort}} Service 時，會將 'appSecret' 及 'clientSecret' 配置給每個服務實例。請參閱 [REST API ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mobile.{DomainName}/imfpush/) 文件，以取得如何傳遞密碼以及針對哪些 API 傳遞的相關資訊。
 
 **附註**：只有在使用 userId 欄位登錄或更新裝置時，才需要舊版應用程式來傳遞 clientSecret。行動及瀏覽器用戶端所呼叫的所有其他 API 都不需要 clientSecret。這些舊應用程式可以選擇性地繼續使用 clientSecret 進行裝置登錄或更新呼叫。不過，強烈建議所有用戶端 API 呼叫都強制執行 clientSecret 檢查。若要在現有應用程式中強制執行此作業，則有一個已發佈的新 'verifyClientSecret' API 可供使用。對於新的應用程式，將會對所有用戶端 API 呼叫強制執行 clientSecret 檢查，而且使用 'verfiyClientSecret' API 無法變更此行為。
 

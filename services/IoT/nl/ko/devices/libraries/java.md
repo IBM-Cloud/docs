@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-18"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -15,13 +15,13 @@ lastupdated: "2016-10-18"
 # 디바이스 개발자용 Java
 {: #java}
 
-Java를 사용하여 {{site.data.keyword.iot_full}}에서 조직과 상호작용하는 디바이스를 빌드하고 사용자 정의할 수 있습니다. 디바이스 개발을 시작하는 데 도움이 되도록 {{site.data.keyword.iot_short_notm}}의 Java 클라이언트 라이브러리, 문서 및 예가 제공됩니다.
+Java™를 사용하여 {{site.data.keyword.iot_full}}에서 조직과 상호작용하는 디바이스를 빌드하고 사용자 정의할 수 있습니다. 디바이스 개발을 시작하는 데 도움이 되도록 {{site.data.keyword.iot_short_notm}}의 Java 클라이언트 라이브러리, 문서 및 예가 제공됩니다.
 {:shortdesc}
 
-## Java 클라이언트 및 자원 다운로드
+## Java 클라이언트 및 리소스 다운로드
 {: #java_client_download}
 
-{{site.data.keyword.iot_short_notm}}의 Java 클라이언트 라이브러리 및 샘플에 액세스하려면 GitHub의 [iot-java](https://github.com/ibm-watson-iot/iot-java) 저장소로 이동하여 설치 지시사항을 완료하십시오.
+{{site.data.keyword.iot_short_notm}}에 대한 Java 클라이언트 라이브러리 및 샘플에 액세스하려면, GitHub의 [iot-java ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/iot-java){: new_window} 저장소로 이동하여 설치 지시사항을 완료하십시오. 
 
 ## 생성자
 {: #constructor}
@@ -40,6 +40,7 @@ Java를 사용하여 {{site.data.keyword.iot_full}}에서 조직과 상호작용
 |`MaxInflightMessages`  |연결을 위한 인플라이트 메시지의 최대 수를 설정합니다. 기본값은 100입니다.|
 |`Automatic-Reconnect`  |연결이 끊긴 상태일 때 {{site.data.keyword.iot_short_notm}}에 디바이스를 자동으로 다시 연결하려는 경우에 필요한 true 또는 false 값입니다. 기본값은 false입니다.|
 |`Disconnected-Buffer-Size`|클라이언트가 연결이 끊겼을 때 메모리에 저장할 수 있는 최대 메시지 수입니다. 기본값은 5000입니다.|
+|`WebSocket`|{{site.data.keyword.iot_short_notm}}에서 WebSocket 연결을 사용하고자 할 때 필요한 true 또는 false 값입니다. 기본값은 false입니다.|
 
 **참고:** 지속적 구독 모드에서 디바이스를 연결하려면 `clean-session`을 `false`로 설정하십시오. 정리 세션에 대한 자세한 정보는 [MQTT 문서](../../reference/mqtt/index.html#subscription-buffers-and-clean-session)의 '구독 버퍼 및 정리 세션' 섹션을 참조하십시오.
 
@@ -405,4 +406,4 @@ public class RegisteredDeviceCommandSubscribe {
 ## 샘플
 {: #samples}
 
-{{site.data.keyword.iot_short_notm}} Java 클라이언트 라이브러리를 사용하여 개발한 디바이스 및 디바이스 관리 샘플 목록은 [iot-device-samples GitHub 저장소](https://github.com/ibm-messaging/iot-device-samples/tree/master/java)를 참조하십시오.
+{{site.data.keyword.iot_short_notm}} Java 클라이언트 라이브러리를 사용하여 개발되는 디바이스 및 디바이스 관리 샘플 목록에 대해서는 [iot-device-samples GitHub repository ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/iot-device-samples/tree/master/java){: new_window}를 참조하십시오. 

@@ -17,24 +17,24 @@ lastupdated: "2017-01-12"
 {:codeblock: .codeblock}
 
 
-# Cloud Foundry (cf) commands
+# Comandi Cloud Foundry (cf)
 {: #cf}
 
-The Cloud Foundry (cf) command line interface (CLI) provides a set of commands for managing your apps. The following information lists the cf commands used most commonly for managing apps and includes their names, options, usage, prerequisites, descriptions, and examples. To list all of the cf commands and associated help information, use `cf help`. Use `cf command_name -h` to view detailed help information for a particular command.
+L'interfaccia di riga comando (CLI) Cloud Foundry (cf) fornisce una serie di comandi per gestire le tue applicazioni. Le seguenti informazioni elencano i comandi cf più utilizzati per la gestione delle applicazioni e includono i relativi nomi, opzioni, utilizzo, prerequisiti, descrizioni ed esempi. Per elencare tutti i comandi cf e le informazioni di guida associate, utilizza `cf help`. Utilizza `cf nome_comando -h` per visualizzare delle informazioni di guida dettagliate per uno specifico comando.
 {: shortdesc}
 
-**Note**: If your network contains an HTTP proxy server between the host that runs the cf commands and the Cloud Foundry API endpoint, you must specify the host name or IP address of the proxy server by setting the `HTTP_PROXY` environment variable. For details, see [Using the cf CLI with an HTTP Proxy Server ![External link icon](..![External link icon](../../../icons/launch-glyph.svg)/icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}.
+**Nota**: se la tua rete contiene un server proxy HTTP tra l'host che esegue i comandi cf e l'endpoint API Cloud Foundry, devi specificare il nome host o l'indirizzo IP del server proxy impostando la variabile di ambiente `HTTP_PROXY`. Per i dettagli,vedi [Utilizzo della CLI cf con un server proxy HTTP ![icona link esterno](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}.
 
 
-## Cloud Foundry CLI commands index
+## Indice dei comandi della CLI Cloud Foundry
 {: #CLIname_commands_index}
 
-Use the index in the following table to refer to the frequently used Cloud Foundry commands:
+Utilizza l'indice nella seguente tabella per fare riferimento ai comandi Cloud Foundry più utilizzati:
 
-<table summary="Alphabetically ordered general Cloud Foundry commands that have links that bring you to more info for the command">
-<caption>Table 1. General Cloud Foundry commands</caption>
+<table summary="Comandi generali di Cloud Foundry riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
+<caption>Tabella 1. Comandi generali di Cloud Foundry</caption>
  <thead>
- <th colspan="6">General Cloud Foundry commands</th>
+ <th colspan="6">Comandi generali di Cloud Foundry</th>
  </thead>
  <tbody>
  <tr>
@@ -43,16 +43,16 @@ Use the index in the following table to refer to the frequently used Cloud Found
  <td>[login](/docs/cli/reference/cfcommands/index.html#cf_login)</td>
  <td>[stacks](/docs/cli/reference/cfcommands/index.html#cf_stacks)</td>
  <td>[target](/docs/cli/reference/cfcommands/index.html#cf_target)</td>
- <td>[-v](/docs/cli/reference/cfcommands/index.html#cf_v)</td>
+ <td>[-v ](/docs/cli/reference/cfcommands/index.html#cf_v)</td>
  </tr>
    </tbody>
  </table>
 
 
-<table summary="Alphabetically ordered commands for managing apps, spaces, and services. Each command has a link that brings you to more info for the command.">
-<caption>Table 2. Commands for managing apps, spaces, and services</caption>
+<table summary="Comandi in ordine alfabetico per la gestione di applicazioni, spazi e servizi. Ogni comando ha un link che porta a ulteriori informazioni sul comando.">
+<caption>Tabella 2. Comandi per la gestione di applicazioni, spazi e servizi</caption>
  <thead>
- <th colspan="5">Commands for managing apps, spaces, and services</th>
+ <th colspan="5">Comandi per la gestione di applicazioni, spazi e servizi</th>
  </thead>
  <tbody>
  <tr>
@@ -67,10 +67,10 @@ Use the index in the following table to refer to the frequently used Cloud Found
  <td>[events](/docs/cli/reference/cfcommands/index.html#cf_events)</td>
  <td>[logs](/docs/cli/reference/cfcommands/index.html#cf_logs)</td>
  <td>[marketplace](/docs/cli/reference/cfcommands/index.html#cf_marketplace)</td>
- <td>[push](/docs/cli/reference/cfcommands/index.html#cf_push)</td>
+ <td>[push (eseguire il)](/docs/cli/reference/cfcommands/index.html#cf_push)</td>
   </tr>
  <tr>
- <td>[scale](/docs/cli/reference/cfcommands/index.html#cf_scale)</td>
+ <td>[ingrandire](/docs/cli/reference/cfcommands/index.html#cf_scale)</td>
  <td>[services](/docs/cli/reference/cfcommands/index.html#cf_services)
  <td>[set-env](/docs/cli/reference/cfcommands/index.html#cf_set-env)</td>
  <td>[ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh)</td>
@@ -82,41 +82,41 @@ Use the index in the following table to refer to the frequently used Cloud Found
 ## cf api
 {: #cf_api}
 
-Use this command to display or specify the URL of the API endpoint of {{site.data.keyword.Bluemix_notm}}.
+Utilizza questo comando per visualizzare o specificare l'URL dell'endpoint API di {{site.data.keyword.Bluemix_notm}}.
 
 ```
 cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 ```
 
-<strong>Prerequisites</strong>: None.
+<strong>Prerequisiti</strong>: Nessuno.
 
-<strong>Command options</strong>:
+<strong>Opzioni del comando</strong>:
 
    <dl>
-   <dt>BluemixServerURL (optional)</dt>
-   <dd>The URL of the Bluemix API endpoint that you must specify when you connect to {{site.data.keyword.Bluemix_notm}}. Typically, this URL is `https://api.{DomainName}`.
-   If you want to display the URL of the API endpoint that you are currently using, you do not need to specify this parameter for the cf api command.</dd>
+   <dt>BluemixServerURL (facoltativo)</dt>
+   <dd>L'URL dell'endpoint API Bluemix che devi specificare quando stabilisci una connessione a {{site.data.keyword.Bluemix_notm}}. Solitamente, questo URL è `https://api.{DomainName}`.
+   Se vuoi visualizzare l'URL dell'endpoint API che stai attualmente utilizzando, non hai bisogno di specificare questo parametro per il comando cf api.</dd>
    <dt>* --skip-ssl-validation</dt>
-   <dd>Disables the SSL validation process. Use of this parameter might cause security problems.</dd>
+   <dd>Disabilita il processo di convalida SSL. L'utilizzo di questo parametro può causare problemi di sicurezza.</dd>
    <dt>* --unset</dt>
-   <dd>Removes connection information for all API endpoints.</dd>
+   <dd>Rimuove le informazioni di connessione per tutti gli endpoint API.</dd>
     </dl>
 
-<strong>Examples</strong>:
+<strong>Esempi</strong>:
 
-View the current API endpoint
+Visualizza l'endpoint API corrente
 ```
 cf api
 ```
 {: codeblock}
 
-Remove connection to all API endpoints for api.ng.bluemix.net
+Rimuovi la connessione a tutti gli endpoint API per api.ng.bluemix.net
 ```
 cf api api.ng.bluemix.network --unset
 ```
 {: codeblock}
 
-Disable the SSL validation process for api.ng.bluemix.network
+Disabilita il processo di convalida SSL per api.ng.bluemix.network
 ```
 cf api api.ng.bluemix.network --skip-ssl-validation
 ```
@@ -126,40 +126,42 @@ cf api api.ng.bluemix.network --skip-ssl-validation
 ## cf apps
 {: #cf_apps}
 
-Lists all of the applications that you deployed in the current space. The status of each application is also displayed.
+Elenca tutte le applicazioni da te distribuite nello spazio corrente. Viene visualizzato anche lo
+stato di ciascuna applicazione.
 
-Assume that you have one instance for an app, in the instances column of the response from the cf apps command, you see 1/1 if your app is up and 0/1 if your app is down. If you see ?/1, which indicates that the app instance state is unknown, you can copy the app URL to your browser to check whether your app responds, or you can tail the log by the `cf logs appname` command to see if the app is generating log content.
+Presumi di avere una istanza per un'applicazione; nella colonna delle istanze della risposta dal comando cf apps, vedi 1/1 se la tua applicazione è attiva e 0/1 se è invece inattiva. Se vedi ?/1, che indica che lo stato dell'istanza dell'applicazione è sconosciuto, puoi copiare l'URL dell'applicazione nel tuo browser per verificare se l'applicazione risponde oppure puoi controllare la parte finale del log utilizzando il comando `cf logs appname` per vedere se l'applicazione sta generando il contenuto del log.
 
 ```
 cf apps
 ```
 
-<strong>Prerequisites</strong>: `cf api`, `cf login`, `cf target`
+<strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
 
 ## cf bind-service
 {: #cf_bind-service}
 
-Binds an existing service instance to your application.
+Esegue il bind di un'istanza del servizio
+esistente alla tua applicazione.
 
 ```
-cf bind-service appname service_instance
+cf bind-service nome_applicazione istanza_servizio
 ```
 
-<strong>Prerequisites</strong>: `cf api`, `cf login`, `cf target`
+<strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Command options</strong>:
+<strong>Opzioni del comando</strong>:
 
    <dl>
-   <dt>appname (required)</dt>
-   <dd>The name of the application.</dd>
-   <dt>service_instance (required)</dt>
-   <dd>The name of the existing service instance.</dd>
+   <dt>nome_applicazione (obbligatorio)</dt>
+   <dd>Il nome dell'applicazione.</dd>
+   <dt>istanza_servizio (obbligatorio)</dt>
+   <dd>Il nome dell'istanza del servizio esistente.</dd>
     </dl>
 
-<strong>Examples</strong>:
+<strong>Esempi</strong>:
 
-Bind a service instance named `my_dataworks` to your app named `my_app`.
+Esegui il bind di un'istanza del servizio denominata `my_dataworks` alla tua applicazione denominata `my_app`.
 ```
 cf bind-service my_app my_dataworks
 ```
@@ -169,28 +171,29 @@ cf bind-service my_app my_dataworks
 ## cf create-service
 {: #cf_create-service}
 
-Creates a service instance
+Crea un'istanza del servizio
 
 ```
-cf create-service service_name service_plan service_instance
+cf create-service nome_servizio piano_servizio istanza_servizio
 ```
 
-<strong>Prerequisites</strong>: `cf api`, `cf login`, `cf target`
+<strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Command options</strong>:
+<strong>Opzioni del comando</strong>:
 
    <dl>
-   <dt>service_name (required)</dt>
-   <dd>The name of the service.</dd>
-   <dt>service_plan (required)</dt>
-   <dd>The name of the service plan.</dd>
-   <dt>service_instance (required)</dt>
-   <dd>The name that you want to use for the new service instance that you create.</dd>
+   <dt>nome_servizio (obbligatorio)</dt>
+   <dd>Il nome del servizio.</dd>
+   <dt>piano_servizio (obbligatorio)</dt>
+   <dd>Il nome del piano di servizio.</dd>
+   <dt>istanza_servizio (obbligatorio)</dt>
+   <dd>Il nome che vuoi utilizzare per la nuova istanza del servizio da te
+creata.</dd>
     </dl>
 
-<strong>Examples</strong>:
+<strong>Esempi</strong>:
 
-Create an instance of the {{site.data.keyword.dataworks_short}} service with a `free` plan.
+Crea un'istanza del servizio {{site.data.keyword.dataworks_short}} con un piano `free`.
 ```
 cf create-service DataWorks free my_dataworks
 ```
@@ -200,30 +203,30 @@ cf create-service DataWorks free my_dataworks
 ## cf create-space
 {: #cf_create-space}
 
-Creates a space.
+Crea uno spazio.
 
 ```
-cf create-space space_name [-o] [-q]
+cf create-space nome_spazio [-o] [-q]
 ```
 
-<strong>Prerequisites</strong>: `cf api`, `cf login`
+<strong>Prerequisiti</strong>: `cf api`, `cf login`
 
-<strong>Command options</strong>:
+<strong>Opzioni del comando</strong>:
 
    <dl>
-   <dt>space_name (required)</dt>
-   <dd>The name of the space.</dd>
-   <dt>*-o* (optional)</dt>
-   <dd>The name of the organization that you want to create a space within.</dd>
-   <dt>*-q* (optional)</dt>
-   <dd>The quota to assign to the newly created space. If not specified, a default quota is automatically assigned.</dd>
+   <dt>nome_spazio (obbligatorio)</dt>
+   <dd>Il nome dello spazio.</dd>
+   <dt>*-o* (facoltativo)</dt>
+   <dd>Il nome dell'organizzazione in cui vuoi creare uno spazio.</dd>
+   <dt>*-q* (facoltativo)</dt>
+   <dd>La quota da assegnare allo spazio appena creato. Se non viene specificata, viene automaticamente assegnata una quota predefinita.</dd>
     </dl>
 
-<strong>Examples</strong>:
+<strong>Esempi</strong>:
 
-Create a space named new_space
+Crea uno spazio denominato nuovo_spazio
 ```
-cf create-space new_space
+cf create-space nuovo_spazio
 ```
 {: codeblock}
 
@@ -231,46 +234,47 @@ cf create-space new_space
 ## cf delete
 {: #cf_delete}
 
-Deletes an existing application.
+Elimina
+un'applicazione esistente.
 
 ```
-cf delete appname [-f] [-r]
+cf delete nome_applicazione [-f] [-r]
 ```
 
-<strong>Prerequisites</strong>: `cf api`, `cf login`, `cf target`
+<strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Command options</strong>:
+<strong>Opzioni del comando</strong>:
 
    <dl>
-   <dt>appname (required)</dt>
-   <dd>The name of the application.</dd>
-   <dt>*-f* (optional)</dt>
-   <dd>Forces deletion of the application without any confirmation.</dd>
-   <dt>*-r* (optional)</dt>
-   <dd>Deletes all domain names that are associated with the application. </dd>
+   <dt>nome_applicazione (obbligatorio)</dt>
+   <dd>Il nome dell'applicazione.</dd>
+   <dt>*-f* (facoltativo)</dt>
+   <dd>Forza l'eliminazione dell'applicazione senza alcuna conferma.</dd>
+   <dt>*-r* (facoltativo)</dt>
+   <dd>Elimina tutti i nomi dominio associati all'applicazione. </dd>
     </dl>
 
-<strong>Examples</strong>:
+<strong>Esempi</strong>:
 
-Deletes an application named `my_app` (will require confirmation).
+Elimina un'applicazione denominata `my_app` (richiede conferma).
 ```
 cf delete my_app
 ```
 {: codeblock}
 
-Deletes an application named `my_app` without requiring confirmation.
+Elimina un'applicazione denominata `my_app` senza richiedere conferma.
 ```
 cf delete my_app -f
 ```
 {: codeblock}
 
-Deletes an application named `my_app` and all domain names associated with `my_app`.
+Elimina un'applicazione denominata `my_app` e tutti i nomi dominio associati a `my_app`.
 ```
 cf delete my_app -r
 ```
 {: codeblock}
 
-Deletes an application named `my_app` and all domain names associated with `my_app` without requiring confirmation.
+Elimina un'applicazione denominata `my_app` e tutti i nomi dominio associati a `my_app` senza richiedere conferma.
 ```
 cf delete my_app -f -r
 ```
@@ -280,45 +284,45 @@ cf delete my_app -f -r
 ## cf delete-space
 {: #cf_delete-space}
 
-Deletes a space.
+Elimina uno spazio.
 
 ```
-cf delete-space space_name [-f]
+cf delete-space nome_spazio [-f]
 ```
 
-<strong>Prerequisites</strong>: `cf api`, `cf login`
+<strong>Prerequisiti</strong>: `cf api`, `cf login`
 
-<strong>Command options</strong>:
+<strong>Opzioni del comando</strong>:
 
    <dl>
-   <dt>space_name (required)</dt>
-   <dd>The name of the space.</dd>
-   <dt>*-f* (optional)</dt>
-   <dd>Forces deletion of the space without any confirmation.</dd>
-   *Note:* Deleting a space is an irreversible operation.
+   <dt>nome_spazio (obbligatorio)</dt>
+   <dd>Il nome dello spazio.</dd>
+   <dt>*-f* (facoltativo)</dt>
+   <dd>Forza l'eliminazione dello spazio senza alcuna conferma.</dd>
+   *Nota:* l'eliminazione di uno spazio è un'operazione irreversibile.
     </dl>
 
-<strong>Examples</strong>:
+<strong>Esempi</strong>:
 
-Deletes an application named `my_app` (will require confirmation).
+Elimina un'applicazione denominata `my_app` (richiede conferma).
 ```
 cf delete my_app
 ```
 {: codeblock}
 
-Deletes an application named `my_app` without requiring confirmation.
+Elimina un'applicazione denominata `my_app` senza richiedere conferma.
 ```
 cf delete my_app -f
 ```
 {: codeblock}
 
-Deletes an application named `my_app` and all domain names associated with `my_app`.
+Elimina un'applicazione denominata `my_app` e tutti i nomi dominio associati a `my_app`.
 ```
 cf delete my_app -r
 ```
 {: codeblock}
 
-Deletes an application named `my_app` and all domain names associated with `my_app` without requiring confirmation.
+Elimina un'applicazione denominata `my_app` e tutti i nomi dominio associati a `my_app` senza richiedere conferma.
 ```
 cf delete my_app -f -r
 ```
@@ -328,24 +332,25 @@ cf delete my_app -f -r
 ## cf events
 {: #cf_events}
 
-Displays runtime events that are related to an application.
+Visualizza
+gli eventi di runtime che sono correlati ad un'applicazione.
 
 ```
-cf events [appname]
+cf events [nomeapplicazione]
 ```
 
-<strong>Prerequisites</strong>: `cf api`, `cf login`, `cf target`
+<strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Command options</strong>:
+<strong>Opzioni del comando</strong>:
 
    <dl>
-   <dt>appname</dt>
-   <dd>The name of the application.</dd>
+   <dt>nomeapplicazione</dt>
+   <dd>Il nome dell'applicazione.</dd>
    </dl>
 
-<strong>Examples</strong>:
+<strong>Esempi</strong>:
 
-Displays the events for an application named `my_app`.
+Visualizza gli eventi per un'applicazione denominata `my_app`.
 ```
 cf events my_app
 ```
@@ -355,30 +360,30 @@ cf events my_app
 ## cf help
 {: #cf_help}
 
-Displays help information for all cf commands or for a specific cf command.
+Visualizza le informazioni di guida per tutti i comandi cf o per un comando cf specifico.
 
 ```
-cf help [command_name]
+cf help [nome_comando]
 ```
 
-<strong>Prerequisites</strong>: None.
+<strong>Prerequisiti</strong>: Nessuno.
 
-<strong>Command options</strong>:
+<strong>Opzioni del comando</strong>:
 
    <dl>
-   <dt>command_name (optional)</dt>
-   <dd>The name of a command.</dd>
+   <dt>nome_comando (facoltativo)</dt>
+   <dd>Il nome di un comando.</dd>
     </dl>
 
-<strong>Examples</strong>:
+<strong>Esempi</strong>:
 
-Display the help information for all cf commands.
+Visualizza le informazioni di guida per tutti i comandi cf.
 ```
 cf help
 ```
 {: codeblock}
 
-Display the help information for the events command.
+Visualizza le informazioni di guida per il comando di eventi.
 ```
 cf help events
 ```
@@ -388,61 +393,62 @@ cf help events
 ## cf login
 {: #cf_login}
 
-Logs you in to {{site.data.keyword.Bluemix_notm}}.
+Ti fa accedere a {{site.data.keyword.Bluemix_notm}}.
 
-**Note**: If you are logging in with a [federated ID](/docs/admin/account.html#signup), you must use the single sign-on (SSO) parameter to log in.
+**Nota**: se stai eseguendo l'accesso con un [ID federato](/docs/admin/account.html#signup), devi utilizzare il parametro SSO (single sign-on) per accedere.
 
 ```
 cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s space_name] [--skip-ssl-validation]
 ```
 
-<strong>Prerequisites</strong>: None.
+<strong>Prerequisiti</strong>: Nessuno.
 
-<strong>Command options</strong>:
+<strong>Opzioni del comando</strong>:
 
 <dl>
-<dt>*-a* https://api.{DomainName} (optional)</dt>
-<dd>The URL of the API endpoint of {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt>*-u* user_name (optional)</dt>
-<dd>Your user name.</dd>
-<dt>*-p* password (optional)</dt>
-<dd>Your password.</dd>
-<dd>*Important:* If you provide your password by using the *-p* parameter on the command line interface, the password might be recorded in the command line history. For security reasons, avoid providing the password by using the -p parameter. Instead, enter the password when the command line interface prompts you.</dd>
+<dt>*-a* https://api.{DomainName} (facoltativo)</dt>
+<dd>L'URL dell'endpoint API di {{site.data.keyword.Bluemix_notm}}.</dd>
+<dt>*-u* nome_utente (facoltativo)</dt>
+<dd>Il tuo nome utente.</dd>
+<dt>*-p* password (facoltativo)</dt>
+<dd>La tua password.</dd>
+<dd>*Importante:* se fornisci la tua password utilizzando il parametro *-p* sull'interfaccia riga di comando, la password potrebbe essere registrata nella cronologia della riga di comando. Per motivi di sicurezza, evita di fornire la password utilizzando il parametro
+-p. Immetti invece la password quando te lo chiede l'interfaccia riga di comando.</dd>
 <dt>*-sso*</dt>
-<dd>You must use the single sign-on option (SSO) when logging in with a federated ID. This is not required when logging in with an IBMid. If you try to sign in with a federated ID, and you do not specify the SSO parameter, you will be prompted to include it. Using the SSO parameter prompts you to enter the one-time passcode upon login.</dd>
-<dt>*-o* organization_name</dt>
-<dd>The name of the organization that you want to log in to.</dd>
-<dt>*-s* space_name</dt>
-<dd>The name of the space that you want to log in to.</dd>
-<dt>*--skip-ssl-validation* (optional)</dt>
-<dd>Disables the SSL validation process. Use of this parameter might cause security problems.</dd>
+<dd>Devi utilizzare l'opzione SSO (single sign-on ) quando accedi con un ID federato. Non è necessario quando accedi con un ID IBM. Se tenti di collegarti con un ID federato e non specifichi il parametro SSO, ti verrà richiesto di includerlo. Utilizza la richiesta del parametro SSO per immettere la passcode monouso all'accesso.</dd>
+<dt>*-o*nome_organizzazione</dt>
+<dd>Il nome dell'organizzazione alla quale desideri effettuare l'accesso.</dd>
+<dt>*-s*nome_spazio</dt>
+<dd>Il nome dello spazio al quale desideri effettuare l'accesso.</dd>
+<dt>*--skip-ssl-validation* (facoltativo)</dt>
+<dd>Disabilita il processo di convalida SSL. L'utilizzo di questo parametro può causare problemi di sicurezza.</dd>
 </dl>
 
-*Note:* If you provide your password in the *-p* parameter of this command, your password might be recorded in the shell command history file and might be visible to other users of the local operating system.
+*Nota:* se fornisci la tua password nel parametro *-p* di questo comando, la tua password potrebbe essere registrata nel file di cronologia dei comandi della shell e potrebbe essere visibile ad altri utenti del sistema operativo locale.
 
-<strong>Examples</strong>:
+<strong>Esempi</strong>:
 
-Log in to {{site.data.keyword.Bluemix_notm}}.
+Accedi a {{site.data.keyword.Bluemix_notm}}.
 ```
 cf login
 ```
 {: codeblock}
 
-Log in to {{site.data.keyword.Bluemix_notm}} with a defined endpoint of `https://api.ng.bluemix.net`.
+Accedi a {{site.data.keyword.Bluemix_notm}} con un endpoint definito di `https://api.ng.bluemix.net`.
 ```
 cf login -a https://api.ng.bluemix.net
 ```
 {: codeblock}
 
-Log in to {{site.data.keyword.Bluemix_notm}} with a defined endpoint of `https://api.ng.bluemix.net`, a user name of `user_name`, and no specified password for security reasons.
+Accedi a {{site.data.keyword.Bluemix_notm}} con un endpoint definito di `https://api.ng.bluemix.net`, un nome utente `nome_utente` e nessuna password specificata per motivi di sicurezza.
 ```
-cf login -a https://api.ng.bluemix.net -u user_name
+cf login -a https://api.ng.bluemix.net -u nome_utente
 ```
 {: codeblock}
 
-Log in to {{site.data.keyword.Bluemix_notm}} with a defined endpoint of `https://api.ng.bluemix.net`, a user name of `user_name`, no specified password for security reasons, and an organization name of `org_name` and space name of `space_name`.
+Accedi a {{site.data.keyword.Bluemix_notm}} con un endpoint definito di `https://api.ng.bluemix.net`, un nome utente `nome_utente`, nessuna password specificata per motivi di sicurezza e un nome organizzazione `nome_organizzazione` e nome spazio `nome_spazio`.
 ```
-cf login -a https://api.ng.bluemix.net -u user_name -o org_name -s space_name
+cf login -a https://api.ng.bluemix.net -u nome_utente -o nome_organizzazione -s nome_spazio
 ```
 {: codeblock}
 
@@ -450,31 +456,32 @@ cf login -a https://api.ng.bluemix.net -u user_name -o org_name -s space_name
 ## cf logs
 {: #cf_logs}
 
-Displays the STDOUT and STDERR log streams of an application.
+Visualizza i flussi di log
+STDOUT e STDERR di un'applicazione.
 
 ```
-cf logs appname [--recent]
+cf logs nomeapplicazione [--recent]
 ```
-<strong>Prerequisites</strong>: `cf api`, `cf login`, `cf target`
+<strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Command options</strong>:
+<strong>Opzioni del comando</strong>:
 
 <dl>
-<dt>appname</dt>
-<dd>The name of the application.</dd>
-<dt>*--recent* (optional)</dt>
-<dd>Retrieves recent logs.</dd>
+<dt>nomeapplicazione</dt>
+<dd>Il nome dell'applicazione.</dd>
+<dt>*--recent* (facoltativo)</dt>
+<dd>Richiama i log recenti.</dd>
 </dl>
 
-<strong>Examples</strong>:
+<strong>Esempi</strong>:
 
-Display the log streams for an application named `my_app`.
+Visualizza i flussi di log per un'applicazione denominata `my_app`.
 ```
 cf logs my_app
 ```
 {: codeblock}
 
-Display the recent log streams for an application named `my_app`.
+Visualizza i flussi di log recenti per un'applicazione denominata `my_app`.
 ```
 cf logs my_app --recent
 ```
@@ -484,18 +491,19 @@ cf logs my_app --recent
 ## cf marketplace
 {: #cf_marketplace}
 
-Lists all of the services that are available in the marketplace. The services listed by this command are also shown in the {{site.data.keyword.Bluemix_notm}} Catalog.
+Elenca tutti
+i servizi disponibili nel marketplace. I servizi elencati da questo comando sono visualizzati anche nel catalogo {{site.data.keyword.Bluemix_notm}}.
 
 ```
 cf marketplace
 ```
-<strong>Prerequisites</strong>: `cf api`
+<strong>Prerequisiti</strong>: `cf api`
 
-<strong>Command options</strong>: None.
+<strong>Opzioni del comando</strong>: Nessuna.
 
-<strong>Examples</strong>:
+<strong>Esempi</strong>:
 
-List all services in the marketplace
+Elenca tutti i servizi nel marketplace
 ```
 cf marketplace
 ```
@@ -505,60 +513,61 @@ cf marketplace
 ## cf push
 {: #cf_push}
 
-Deploys a new application to {{site.data.keyword.Bluemix_notm}}, or updates an existing application in {{site.data.keyword.Bluemix_notm}}.
+Distribuisce una nuova applicazione a {{site.data.keyword.Bluemix_notm}} oppure aggiorna un'applicazione esistente in {{site.data.keyword.Bluemix_notm}}.
 
 ```
 cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i instance_number] [-k disk_limit] [-m memory_limit] [-n host_name] [-p app_path] [-s stack_name] [-t timeout_length] [--no-hostname] [--no-manifest] [--no-route] [--no-start] [--random-route]
 ```
 
-<strong>Prerequisites</strong>: `cf api`, `cf login`, `cf target`
+<strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Command options</strong>:
+<strong>Opzioni del comando</strong>:
 
 <dl>
-<dt>appname (required)</dt>
-<dd>The name of the application.</dd>
-<dt>*-b* buildpack_name (optional)</dt>
-<dd>The name of the buildpack. The buildpack_name can be a custom buildpack by name (for example liberty-for-java), or a Git URL (for example https://github.com/cloudfoundry/java-buildpack.git), or a Git URL with a branch or tag (for example, https://github.com/cloudfoundry/java-buildpack.git#v3.3.0 for the v3.3.0 tag).</dd>
-<dt>*-c* start_command (optional)</dt>
-<dd>The start command of your application. To use the default start command, specify a value of null for this option. </dd>
-<dt>*-f* manifest_path (optional)</dt>
-<dd>The path to the manifest file. The default manifest file is manifest.yml under the root directory of your application.</dd>
-<dt>*-i* instance_number (optional)</dt>
-<dd>The number of instances.</dd>
-<dt>*-k* disk_limit (optional)</dt>
-<dd>The disk limit for the application. Possible values are *256M*, *1024M*, or *1G*.</dd>
-<dt>*-m* memory_limit (optional)</dt>
-<dd>The memory limit for the application. Possible values are *256M*, *1024M*, or *1G*.</dd>
-<dt>*-n* host_name (optional)</dt>
-<dd>The host name for the application, for example, *my-subdomain*.</dd>
-<dt>*-p* app_path (optional)</dt>
-<dd>The path to the application directory or the application archive file.</dd>
-<dt>*-s* stack_name (optional)</dt>
-<dd>The stack to run the apps. A stack is per-built file system including the operation system. Use `cf stacks` to view the available stacks in {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt>*-t* timeout (optional)</dt>
-<dd>Maximum time in seconds for the application to start. Other server-side timeouts might override this value.</dd>
-<dt>*--no-hostname* (optional)</dt>
-<dd>Maps the {{site.data.keyword.Bluemix_notm}} system domain to this application.</dd>
-<dt>*--no-manifest* (optional)</dt>
-<dd>Ignores the default manifest file.</dd>
-<dt>*--no-route* (optional)</dt>
-<dd>Does not map a route to this application.</dd>
-<dt>*--no-start* (optional)</dt>
-<dd>Does not start the application after the application is deployed.</dd>
-<dt>*--random-route* (optional)</dt>
-<dd>Creates a random route for the application.</dd>
+<dt>nome_applicazione (obbligatorio)</dt>
+<dd>Il nome dell'applicazione.</dd>
+<dt>*-b* nome_pacchettodibuild (facoltativo)</dt>
+<dd>Il nome del pacchetto di build. Il nome_pacchettodibuild può essere un pacchetto di build personalizzato in base al nome (ad esempio liberty-for-java) oppure un URL Git (ad esempio https://github.com/cloudfoundry/java-buildpack.git) oppure un URL Git con un ramo o tag (ad esempio, https://github.com/cloudfoundry/java-buildpack.git#v3.3.0 per la tag v3.3.0).</dd>
+<dt>*-c* comando_di_avvio (facoltativo)</dt>
+<dd>Il comando di avvio della tua applicazione. Per utilizzare il comando di avvio predefinito, specifica un valore null per questa opzione. </dd>
+<dt>*-f* percorso_manifest (facoltativo)</dt>
+<dd>Il percorso al file manifest. Il file manifest predefinito è manifest.yml sotto la directory root della tua applicazione.</dd>
+<dt>*-i* numero_istanze (facoltativo)</dt>
+<dd>Il numero di istanze.</dd>
+<dt>*-k* limite_dico (facoltativo)</dt>
+<dd>Il limite di disco per l'applicazione. I valori possibili sono *256M*, *1024M* o *1G*.</dd>
+<dt>*-m* limite_memoria (facoltativo)</dt>
+<dd>Il limite di memoria per l'applicazione. I valori possibili sono *256M*, *1024M* o *1G*.</dd>
+<dt>*-n* nome_host (facoltativo)</dt>
+<dd>Il nome host per l'applicazione, ad esempio *my-subdomain*.</dd>
+<dt>*-p* percorso_applicazione (facoltativo)</dt>
+<dd>Il percorso alla directory dell'applicazione o al file di archivio dell'applicazione.</dd>
+<dt>*-s* nome_stack (facoltativo)</dt>
+<dd>Lo stack per l'esecuzione delle applicazioni. Uno stack è un file system precostruito che include il sistema operativo. Utilizza `cf stacks` per visualizzare gli stack disponibili in {{site.data.keyword.Bluemix_notm}}.</dd>
+<dt>*-t* timeout (facoltativo)</dt>
+<dd>Il tempo massimo in secondi per l'avvio dell'applicazione. Altri timeout lato server potrebbero
+sovrascrivere questo valore.</dd>
+<dt>*--no-hostname* (facoltativo)</dt>
+<dd>Associa il dominio di sistema {{site.data.keyword.Bluemix_notm}} a questa applicazione.</dd>
+<dt>*--no-manifest* (facoltativo)</dt>
+<dd>Ignora il file manifest predefinito.</dd>
+<dt>*--no-route* (facoltativo)</dt>
+<dd>Non associa una rotta a questa applicazione.</dd>
+<dt>*--no-start* (facoltativo)</dt>
+<dd>Non avvia l'applicazione dopo che essa è stata distribuita.</dd>
+<dt>*--random-route* (facoltativo)</dt>
+<dd>Crea una rotta casuale per l'applicazione.</dd>
 </dl>
 
-<strong>Examples</strong>:
+<strong>Esempi</strong>:
 
-Start an application named `my_app` with the default start command.
+Avvia un'applicazione denominata `my_app` con il comando di avvio predefinito.
 ```
 cf push `my_app` -c null
 ```
 {: codeblock}
 
-Start an application named `my_app` with the option to run a script file named `run.sh`.
+Avvia un'applicazione denominata `my_app` con l'opzione per eseguire un file di script denominato `run.sh`.
 ```
 cf push `my_app` -c "bash ./<run.sh>"
 ```
@@ -569,38 +578,39 @@ cf push `my_app` -c "bash ./<run.sh>"
 ## cf scale
 {: #cf_scale}
 
-Displays or changes the instance number, disk space limit, and memory limit for an application.
+Visualizza o modifica il numero di istanze,
+il limite di spazio su disco e il limite di memoria per un'applicazione.
 
 ```
 cf scale appname [-i instance_number] [-k disk_limit] [-m memory_limit] [-f]
 ```
 
-<strong>Prerequisites</strong>: `cf api`, `cf login`, `cf target`
+<strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Command options</strong>:
+<strong>Opzioni del comando</strong>:
 
 <dl>
-<dt>appname (required)</dt>
-<dd>The name of the application.</dd>
-<dt>*-i* instance_number (optional)</dt>
-<dd>The number of instances</dd>
-<dt>*-k* disk_limit (optional)</dt>
-<dd>The disk limit for the application; possible values are `256M`, `1024M`, or `1G`.</dd>
-<dt>*-m* memory_limit (optional)</dt>
-<dd>The memory limit for the application; possible values are `256M`, `1024M`, or `1G`.</dd>
-<dt>*-f* (optional)</dt>
-<dd>Forces the application to restart without prompt.</dd>
+<dt>nome_applicazione (obbligatorio)</dt>
+<dd>Il nome dell'applicazione.</dd>
+<dt>*-i* numero_istanze (facoltativo)</dt>
+<dd>Il numero di istanze</dd>
+<dt>*-k* limite_dico (facoltativo)</dt>
+<dd>Il limite di disco per l'applicazione; i valori possibili sono `256M`, `1024M` o `1G`.</dd>
+<dt>*-m* limite_memoria (facoltativo)</dt>
+<dd>Il limite di memoria per l'applicazione; i valori possibili sono `256M`, `1024M` o `1G`.</dd>
+<dt>*-f* (facoltativo)</dt>
+<dd>Forza il riavvio dell'applicazione senza che venga presentata alcuna richiesta.</dd>
 </dl>
 
-<strong>Examples</strong>:
+<strong>Esempi</strong>:
 
-Display the instance number, disk space limit, and memory limit for an application named `my_app`.
+Visualizza il numero di istanze, il limite di spazio su disco e il limite di memoria per un'applicazione denominata `my_app`.
 ```
 cf scale my_app
 ```
 {: codeblock}
 
-Modify the instance number to `1234`, disk space limit to `1G`, and memory limit to `1G` for an app named `my_app`.
+Modifica il numero di istanze in `1234`, il limite di spazio su disco in `1G` e il limite di memoria in `1G` per un'applicazione denominata `my_app`.
 ```
 cf scale appname -i 1234 -k 1G -m 1G
 ```
@@ -610,18 +620,19 @@ cf scale appname -i 1234 -k 1G -m 1G
 ## cf services
 {: #cf_services}
 
-Lists all of the services that are available in the current space.
+Elenca tutti i servizi
+disponibili nello spazio corrente.
 
 ```
 cf services
 ```
-<strong>Prerequisites</strong>: `cf api`, `cf login`, `cf target`
+<strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Command options</strong>: None.
+<strong>Opzioni del comando</strong>: Nessuna.
 
-<strong>Examples</strong>:
+<strong>Esempi</strong>:
 
-List all services in the current space.
+Elenca tutti i servizi nello spazio corrente.
 ```
 cf services
 ```
@@ -631,27 +642,27 @@ cf services
 ## cf set-env
 {: #cf_set-env}
 
-Sets an environment variable for an application
+Imposta una variabile di ambiente per un'applicazione
 
 ```
-cf set-env appname var_name var_value
+cf set-env nomeapplicazione nome_var valore_var
 ```
-<strong>Prerequisites</strong>: `cf api`, `cf login`, `cf target`
+<strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Command options</strong>:
+<strong>Opzioni del comando</strong>:
 
 <dl>
-<dt>appname (required)</dt>
-<dd>The name of the application.</dd>
-<dt>var_name (required)</dt>
-<dd>The name of the environment variable.</dd>
-<dt>var_value (required)</dt>
-<dd>The value of the environment variable.</dd>
+<dt>nome_applicazione (obbligatorio)</dt>
+<dd>Il nome dell'applicazione.</dd>
+<dt>nome_var (obbligatorio)</dt>
+<dd>Il nome della variabile di ambiente.</dd>
+<dt>valore_var (obbligatorio)</dt>
+<dd>Il valore della variabile di ambiente.</dd>
 </dl>
 
-<strong>Examples</strong>:
+<strong>Esempi</strong>:
 
-Set an environment variable named `variable_a` with a value of `123` for the application named `my_app`.
+Imposta una variabile di ambiente denominata `variable_a` con un valore `123` per l'applicazione denominata `my_app`.
 ```
 cf set-env my_app variable_a 123
 ```
@@ -661,51 +672,51 @@ cf set-env my_app variable_a 123
 ## cf ssh
 {: #cf_ssh}
 
-Securely access the application container. The `cf ssh` command can be used to set up an interactive SSH session, run remote commands, transfer files, and set up port forwarding with a specific application container instance.
+Accedere in sicurezza al contenitore dell'applicazione. Il comando `cf ssh` può essere utilizzato per configurare una sessione SSH interattiva, eseguire comandi remoti, trasferire file e configurare l'inoltro alla porta con un'istanza del contenitore dell'applicazione specifica.
 
 ```
 cf ssh
 ```
-<strong>Prerequisites</strong>: `cf api`, `cf login`, `cf target`
+<strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-By default, SSH access is enabled for Diego applications. You can use the `cf ssh-enabled` command to verify if SSH access is enabled or the `cf enable-ssh` command to enable the access if it was disabled. 
+Per impostazione predefinita, l'accesso SSH è abilitato per le applicazioni Diego. Puoi utilizzare il comando `cf ssh-enabled` per verificare se l'accesso SSH è abilitato o il comando `cf enable-ssh` per abilitarlo se è disabilitato. 
 
-<strong>Command options</strong>:
+<strong>Opzioni del comando</strong>:
 
 <dl>
-<dt>appname</dt>
-<dd>The name of the application.</dd>
+<dt>nomeapplicazione</dt>
+<dd>Il nome dell'applicazione.</dd>
 <dt>-c</dt>
-<dd>Specifies a remote command to run.</dd>
+<dd>Specifica un comando remoto per l'esecuzione.</dd>
 <dt>-i</dt>
-<dd>Targets a specific instance of an application. If not specified, the first instance of the application is used (an instance with index 0).</dd>
+<dd>Indirizza un'istanza specifica di un'applicazione. Se non specificato, viene utilizzata la prima istanza dell'applicazione (un'istanza con indice 0).</dd>
 <dt>-L</dt>
-<dd>Enables local port forwarding, which binds an output port on your machine to an input port on the application VM.</dd>
+<dd>Abilita l'inoltro alla porta locale, che esegue il bind di una porta di output sulla tua macchina a una porta di input nella VM dell'applicazione.</dd>
 <dt>-N</dt>
-<dd>Do not run a remote command.</dd>
-<dt>-t, -tt, or -T</dt>
-<dd>Enables you to run an SSH session in pseudo-tty mode rather than generate terminal line output.<dd>
+<dd>Non esegue un comando remoto.</dd>
+<dt>-t, -tt o -T</dt>
+<dd>Ti abilita ad eseguire una sessione SSH in modalità pseudo-tty che genera l'output di riga del terminale.<dd>
 </dl>
 
-<strong>Examples</strong>:
+<strong>Esempi</strong>:
 
-Start an interactive SSH session with the container instance running the `my_app` application.
+Avvia una sessione SSH interattiva con un'immagine del contenitore eseguendo l'applicazione `my_app`.
 ```
 $ cf ssh my_app
 ```
 {: codeblock}
 
-Run a single command on the `my_app` application container instance.
+Esegui un solo comando nell'istanza del contenitore dell'applicazione `my_app`.
 ```
 $ cf ssh my_app -c "ls -l"
 ```
 
-Transfer a single file from the `my_app` application container instance.
+Trasferisci un solo file dall'istanza del contenitore dell'applicazione `my_app`.
 ```
 $ cf ssh my_app -c "/bin/cat logs/messages.log" > messages.log
 ```
 
-Setup port forwarding of the 7777 port on the local machine to the 8888 port on the `my_app` application container instance.
+Configura l'inoltro alla porta della porta 7777 nella macchina locale alla porta 8888 nell'istanza del contenitore dell'applicazione `my_app`.
 ```
 $ cf ssh -N -T -L 7777:localhost:8888 my_app
 
@@ -714,18 +725,20 @@ $ cf ssh -N -T -L 7777:localhost:8888 my_app
 ## cf stacks
 {: #cf_stacks}
 
-Lists all stacks. A stack is a pre-built file system, including an operating system that can run apps.
+Elenca tutti
+gli stack. Uno stack è un file system precostruito, compreso un sistema operativo che può eseguire
+le applicazioni.
 
 ```
 cf stacks
 ```
-<strong>Prerequisites</strong>: `cf api`, `cf login`
+<strong>Prerequisiti</strong>: `cf api`, `cf login`
 
-<strong>Command options</strong>: None.
+<strong>Opzioni del comando</strong>: Nessuna.
 
-<strong>Examples</strong>:
+<strong>Esempi</strong>:
 
-List all stacks.
+Elenca tutti gli stack.
 ```
 cf stacks
 ```
@@ -735,23 +748,23 @@ cf stacks
 ## cf stop
 {: #cf_stop}
 
-Stops an application
+Arresta un'applicazione
 
 ```
-cf stop appname
+cf stop nome_applicazione
 ```
-<strong>Prerequisites</strong>: `cf api`, `cf login`, `cf target`
+<strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Command options</strong>:
+<strong>Opzioni del comando</strong>:
 
 <dl>
-<dt>appname (required)</dt>
-<dd>The name of the application.</dd>
+<dt>nome_applicazione (obbligatorio)</dt>
+<dd>Il nome dell'applicazione.</dd>
 </dl>
 
-<strong>Examples</strong>:
+<strong>Esempi</strong>:
 
-Stop the application named `my_app`.
+Arresta l'applicazione denominata `my_app`.
 ```
 cf stop my_app
 ```
@@ -761,25 +774,25 @@ cf stop my_app
 ## cf target
 {: #cf_target}
 
-Sets or views the targeted organization or space
+Imposta o visualizza l'organizzazione o spazio di destinazione
 
 ```
 cf target [-o org_name] [-s space_name]
 ```
-<strong>Prerequisites</strong>: `cf api`, `cf login`
+<strong>Prerequisiti</strong>: `cf api`, `cf login`
 
-<strong>Command options</strong>:
+<strong>Opzioni del comando</strong>:
 
 <dl>
-<dt>-o *org_name* (optional)</dt>
-<dd>The name of the organization where the space is located.</dd>
-<dt>-s *space_name* (optional)</dt>
-<dd>The name of the space.</dd>
+<dt>-o *nome_organizzazione* (facoltativo)</dt>
+<dd>Il nome dell'organizzazione in cui si trova lo spazio.</dd>
+<dt>-s *nome_spazio* (facoltativo)</dt>
+<dd>Il nome dello spazio.</dd>
 </dl>
 
-<strong>Examples</strong>:
+<strong>Esempi</strong>:
 
-Set the target to the organization named "my_org" and the space named "my_space".
+Imposta la destinazione sull'organizzazione denominata "my_org" e sullo spazio denominato "my_space".
 ```
 cf target -o my_org -s my_space
 ```
@@ -789,18 +802,19 @@ cf target -o my_org -s my_space
 ## cf -v
 {: #cf_v}
 
-Displays the version of the cf command line interface.
+Visualizza la versione
+dell'interfaccia riga di comando cf.
 
 ```
 cf -v
 ```
-<strong>Prerequisites</strong>: None.
+<strong>Prerequisiti</strong>: Nessuno.
 
-<strong>Command options</strong>: None.
+<strong>Opzioni del comando</strong>: Nessuna.
 
-<strong>Examples</strong>:
+<strong>Esempi</strong>:
 
-Display the version of the cf command line interface.
+Visualizza la versione dell'interfaccia riga di comando cf.
 ```
 cf -v
 ```
@@ -808,13 +822,13 @@ cf -v
 
 
 
-# Related Links
+# Link correlati
 {: #rellinks}
 
-## Related Links
+## Link correlati
 {: #general}
 
-* [Download Cloud Foundry CLI ![External link icon](![External link icon](../../../icons/launch-glyph.svg)../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases)
+* [Scarica CLI Cloud Foundry ![icona link esterno](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases)
 {: new_window}
-* [Quick Reference Card - cf commands ![External link icon](![External link icon](../../../icons/launch-glyph.svg)../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
+* [Quick Reference Card - cf commands ![icona link esterno](../../../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
 {: new_window}

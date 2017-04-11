@@ -3,8 +3,8 @@
  
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-31"
+  years: 2016, 2017
+lastupdated: "2017-03-15"
 
  
 
@@ -584,7 +584,7 @@ IBM Mobile Quality Assurance에 데이터를 보고할 때 애플리케이션이
 ### 앱 ID(app ID)
 {: #x7909906}
 
-Bluemix 모바일 애플리케이션에 지정된 GUID입니다. [GUID(Globally Unique Identifier)](#x2390455)도 참조하십시오.
+Bluemix 모바일 애플리케이션에 지정된 GUID입니다. [GUID](#x2390455)도 참조하십시오. [{{site.data.keyword.appid_full}}](/docs/services/appid/index.html)도 참조하십시오.
 
 ### 앱(app)
 {: #x4281528}
@@ -686,7 +686,7 @@ Java EE 표준에 따라 정의된 압축 파일의 형식으로, 웹 애플리�
 ### 인증 기관(CA, certificate authority)
 {: #x2016383}
 
-디지털 인증서를 발급하는 신뢰할 수 있는 써드파티 조직 또는 회사입니다. 인증 기관은 일반적으로 고유한 인증서가 부여되는 개인의 ID를 확인합니다. [중간 인증서](#x3753781), [SSL(Secure Sockets Layer)](#x2038004), [신뢰할 수 있는 루트](#x2042234)도 참조하십시오.
+디지털 인증서를 발급하는 신뢰할 수 있는 써드파티 조직 또는 회사입니다. 인증 기관은 일반적으로 고유한 인증서가 부여되는 개인의 ID를 확인합니다. [중간 인증서](#x3753781), [SSL](#x2038004), [신뢰할 수 있는 루트](#x2042234)도 참조하십시오.
 
 ### 인증(AuthN, authentication)
 {: #x2014567}

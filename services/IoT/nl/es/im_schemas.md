@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-13"
+  years: 2016, 2017
+lastupdated: "2017-02-03"
 
 ---
 
@@ -20,7 +20,7 @@ Para utilizar características de {{site.data.keyword.iot_short}} como, por ejem
 
 **Importante:** Los esquemas son necesarios para utilizar reglas y acciones. Para obtener información, consulte [Cloud Analytics](cloud_analytics.html#rules).
 
-**Importante:** Las características de análisis se fusionan desde el servicio de {{site.data.keyword.iotrtinsights_full}}. Si la organización de {{site.data.keyword.iot_short_notm}} se utiliza como un origen de datos para una instancia existente de {{site.data.keyword.iotrtinsights_short}}, Cloud y Edge Analytics no se habilitarán hasta que se hayan migrado las instancias existentes de {{site.data.keyword.iotrtinsights_short}}. Siga utilizando el panel de control de {{site.data.keyword.iotrtinsights_short}} para sus necesidades de análisis hasta que se haya completado la migración. Para obtener más información, consulte el [Blog de IBM Watson IoT Platform](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} en IBM developerWorks y los paneles de control de instancias existentes de {{site.data.keyword.iotrtinsights_short}}.  
+**Importante:** Las características de análisis se fusionan desde el servicio de {{site.data.keyword.iotrtinsights_full}}. Si la organización de {{site.data.keyword.iot_short_notm}} se utiliza como un origen de datos para una instancia existente de {{site.data.keyword.iotrtinsights_short}}, Cloud y Edge Analytics no se habilitarán hasta que se hayan migrado las instancias existentes de {{site.data.keyword.iotrtinsights_short}}. Siga utilizando el panel de control de {{site.data.keyword.iotrtinsights_short}} para sus necesidades de análisis hasta que se haya completado la migración. Para obtener más información, consulte el [Blog de IBM Watson IoT Platform ![icono de enlace externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} en IBM developerWorks y los paneles de control de instancias existentes de {{site.data.keyword.iotrtinsights_short}}.  
 
 ## Adición de un esquema de dispositivo
 {: #add_schema}
@@ -67,7 +67,9 @@ Para añadir un esquema:
  `Flotante` o `Entero`.</li>
  <li>Propiedad: Un identificador de propiedad para la propiedad virtual. Por ejemplo:  
 `temp_virt`</li>
-    <li>Cálculo: Añada uno o varios componentes para definir una función válida. Puede utilizar propiedades, valores numéricos y operadores matemáticos como por ejemplo +, -, \*, /, (, ), AVG y Z-score para crear el cálculo. </br>El componente AVG se utiliza para calcular el valor de propiedad promedio durante un periodo de tiempo especificado. </br>El componente Z-score devuelve la diferencia en unidades de desviación estándar entre el punto de datos y el valor medio de punto de datos sobre un número de puntos de datos o sobre un periodo de tiempo. </br> **Importante:** Los componentes AVG y z-score sólo devuelven puntos de datos de propiedades si los datos para la propiedad seleccionada proviene de un dispositivo que está conectado a una pasarela con Edge Analytics Agent instalado. Para obtener más información, consulte [Instalación de Edge Analytics Agent](gateways/dashboard.html#edge). Además, no se da soporte a las condiciones de regla que comparan los valores de AVG y Z-score. </li>
+    <li>Cálculo: Añada uno o varios componentes para definir una función válida. También puede utilizar propiedades, valores numéricos y operadores matemáticos como +, -, \*, /, (, y ).  
+    Pulse **Avanzado** para ver un conjunto de fórmulas que puede utilizar con series de puntos de datos en dispositivos de extremo. Para obtener más información sobre las fórmulas avanzadas, consulte [Cálculos avanzados para propiedades virtuales de extremo](im_vir_calculations.html).  
+    **Importante:** las condiciones de regla que comparan propiedades en función de fórmulas avanzadas no reciben soporte.</li>
     <li>Unidad de datos - Opcional: La unidad de datos de la propiedad. Por ejemplo: `C` o `Mph`</li>
     <li> Posiciones decimales - Opcional, sólo flotante: El número de decimales a incluir en los datos de dispositivo.</li>
    </ul>

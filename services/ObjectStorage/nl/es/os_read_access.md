@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -18,7 +18,7 @@ Un usuario de {{site.data.keyword.objectstorageshort}} con [rol de administrador
 {: shortdesc}
 
 <table>
-<caption> Tabla 1. Permisos de acceso de lectura por opción</caption>
+<caption> Tabla 1. Permisos de acceso de lectura por opción </caption>
   <tr>
     <th> Permiso </th>
     <th> Opciones de ACL de lectura </th>
@@ -48,7 +48,6 @@ Un usuario de {{site.data.keyword.objectstorageshort}} con [rol de administrador
     <td> <code> &#42;:&#42; </code> </td>
   </tr>
 </table>
-
 
 
 1. Autenticar las credenciales. Puede utilizar las credenciales que se encuentran en el separador de credenciales de servicio de la IU o bien puede generar credenciales nuevas. Para obtener más información sobre la generación de nuevas credenciales, consulte [Generación de credenciales de servicio](/docs/services/ObjectStorage/os_credentials.html). Recibirá el URL de {{site.data.keyword.objectstorageshort}} y la señal de autenticación como salida.
@@ -91,7 +90,6 @@ Un usuario de {{site.data.keyword.objectstorageshort}} con [rol de administrador
     {: pre}
     **Nota**: Utilice una coma (,) para separar las listas de control de acceso.
 
-
 3. Verifique el valor de ACL de lectura.
 
     Mandato Swift:
@@ -108,7 +106,7 @@ Un usuario de {{site.data.keyword.objectstorageshort}} con [rol de administrador
     ```
     {: pre}
 
-    Ejemplo: El valor `X-Container-Read` muestra el contenedor y el acceso a los que se otorga acceso de lectura. 
+    Ejemplo: El valor `X-Container-Read` muestra el contenedor y el acceso a los que se otorga acceso de lectura.
 
     ```
     HTTP/1.1 204 No Content

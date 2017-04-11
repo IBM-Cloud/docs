@@ -1,31 +1,31 @@
 ---
 
- 
-
 copyright:
-
   years: 2016, 2017
-lastupdated: "2017-01-04"
- 
+lastupdated: "2017-03-16"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:screen: .screen}
 {:pre: .pre}
 
-# API ゲートウェイを介したアクションの公開 (試験的)
+# API ゲートウェイ (試験的)
 {: #openwhisk_apigateway}
 
-{{site.data.keyword.openwhisk}} では、[REST API](./openwhisk_reference.html#openwhisk_ref_restapi) を使用したアクションの起動は、**POST** メソッドを介した HTTP 要求のみを使用して行うことができます。
-これには、アクションの起動を許可するのに加えて多くのアクションの削除および作成も許可するマスター・キーである OpenWhisk 許可 API キーを使用して、HTTP クライアントが要求を行うことが必要です。
-{: shortdesc}
+[Web アクション](openwhisk_webactions.html)が一般出荷版向けにリリースされました。
 
-この試験的フィーチャーによって、アクションの許可 API キーなしで、POST 以外の HTTP メソッドを使用してアクションを起動できるようになります。
+Web アクションを使用すると、アクションの許可 API キーなしで、POST 以外の HTTP メソッドを使用してアクションを起動できます。
 
-CLI を使用して、OpenWhisk API ゲートウェイを介して OpenWhisk アクションを公開します。 
+ユーザーのフィードバックの結果として、Web アクションは、HTTP イベントの処理が可能な OpenWhisk アクションをビルドするためのプログラミング・モデルとして選択されました。
+
+ほとんどの API ゲートウェイ機能が Web アクションに統合されており、Web アクションを使用すれば、Web アクションから完全に制御してすべての HTTP 要求を処理し、HTTP 応答を返すことができます。 
+
+OpenWhisk API ゲートウェイ統合の改訂版を、近い将来ご利用いただけます。これは Web アクションのプロキシーとして構成され、レート限度、oauth トークン検証、API キーなどの API ゲートウェイ機能を Web アクションに提供します。
+
+**注:** `wsk api-experimental` を使用して作成された API は引き続き機能しますが、ご使用の API の Web アクションへのマイグレーションに着手することをお勧めします。
 
 ## OpenWhisk CLI 構成
 {: #openwhisk_apigateway_cli}

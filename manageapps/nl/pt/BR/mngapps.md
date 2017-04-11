@@ -10,7 +10,7 @@ lastupdated: "2015-03-17"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-#Gerenciando aplicativos
+# Gerenciando aplicativos
 {: #manageapps}
 
 É possível usar o Painel na interface com o usuário do {{site.data.keyword.Bluemix}} para visualizar e gerenciar seus aplicativos e serviços, além de monitorar o uso de recursos usando os calibradores de cota.

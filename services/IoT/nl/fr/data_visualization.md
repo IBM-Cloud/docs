@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-01"
+  years: 2016, 2017
+lastupdated: "2017-03-13"
 
 ---
 
@@ -33,7 +33,7 @@ Le tableau de bord {{site.data.keyword.iot_full}} comporte les tableaux par déf
 |Présentation de l'utilisation  | Affiche les statistiques d'utilisation relatives à votre organisation. Répertorie les types de terminal, ainsi que les données consommées.
 |Analyse centrée sur la règle | Affiche les règles de votre organisation. Des cartes supplémentaires recensent les alertes déclenchées, les terminaux associés, les propriétés de terminal et les informations d'alerte. |  
 |Analyse centrée sur le terminal | Affiche les terminaux qui sont connectés à votre organisation. Des cartes supplémentaires affichent des alertes pour un terminal sélectionné, des informations relatives à un terminal sélectionné, et des informations d'alerte. |
-|Gestion des risques et de la sécurité | Affiche des cartes qui résument l'état général de la sécurité. Les opérateurs système et les analystes de sécurité peuvent afficher des détails sur la conformité, l'état de connexion des terminaux, les causes des pannes de connexion et les terminaux qui sont bloqués ou autorisés via une liste noire ou une liste blanche. À partir de la carte de conformité de connexion, l'utilisateur peut obtenir un rapport détaillé sur les terminaux non conformes et peut exporter le rapport vers Excel. |
+|Gestion des risques et de la sécurité | Affiche des cartes qui résument l'état général de la sécurité. Les opérateurs système et les analystes de sécurité peuvent afficher des détails sur la conformité, l'état de connexion des terminaux, les causes des pannes de connexion et les terminaux qui sont bloqués ou autorisés via une liste noire ou une liste blanche.  À partir de la carte de conformité de connexion, l'utilisateur peut obtenir un rapport détaillé sur les terminaux non conformes et peut exporter le rapport vers Excel. |
 
 Vous pouvez mettre à jour ces tableaux en ajoutant, en mettant à jour et en retirant des cartes.
 
@@ -196,3 +196,5 @@ Pour certains types de carte, vous pouvez cliquer sur **Paramètres** pour confi
 7.	Enfin, positionnez la nouvelle carte sur votre tableau en la faisant glisser vers l'emplacement approprié.  
 
 Parfait ! Vous pouvez désormais voir les données en temps réel de votre terminal !
+
+Pour obtenir les instructions étape par étape relatives à l'affichage des données de terminal en temps réel, voir la recette [Configuring Boards & Cards in the new Watson IoT Dashboard ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/configuring-the-cards-in-the-new-watson-iot-dashboard/){: new_window}. 

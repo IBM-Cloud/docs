@@ -12,13 +12,12 @@ iOs 애플리케이션 및 디바이스를 등록하려면 다음을 수행하�
 
 ##백엔드 애플리케이션 작성
 
-Boilerplates 섹션 Bluemix® 카탈로그에서 푸시 서비스를 이 애플리케이션에 자동으로 바인드하는 백엔드 애플리케이션을 작성하십시오. 백엔드 앱을 이미 작성한 경우 앱을 푸시 알림 서비스에 바인드해야 합니다. 
+표준 유형 섹션 Bluemix® 카탈로그에서 푸시 서비스를 이 애플리케이션에 자동으로 바인드하는 백엔드 애플리케이션을 작성하십시오. 백엔드 앱을 이미 작성한 경우 앱을 푸시 알림 서비스에 바인드해야 합니다. 
 
 ###Objective-C
 
 ```
 	//For Objective-C
-
 	- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0){
      [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
@@ -46,7 +45,7 @@ Boilerplates 섹션 Bluemix® 카탈로그에서 푸시 서비스를 이 애플�
 
 ##토큰을 푸시 알림에 전달
 
-APNs로부터 토큰이 수신되면 ```registerDevice:withDeviceToken``` 메소드의 일부로 푸시 알림에 토큰을 전달하십시오. 
+APNs에서 토큰이 수신되면 이 토큰을 `registerDevice:withDeviceToken` 메소드의 일부로 푸시 알림에 전달하십시오. 
 
 ###Objective-C
 
@@ -55,17 +54,11 @@ APNs로부터 토큰이 수신되면 ```registerDevice:withDeviceToken``` 메소
 -( void) application:( UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:( NSData *)deviceToken{
 
    IMFClient *client = [IMFClient sharedInstance];
-
-
- [client initializeWithBackendRoute:@"your-backend-route-here" backendGUID:@"Your-backend-GUID-here"];
-
-
-
- // get Push instance
+[client initializeWithBackendRoute:@"your-backend-route-here" backendGUID:@"Your-backend-GUID-here"];
+// get Push instance
 IMFPushClient* push = [IMFPushClient sharedInstance];
 [push registerDeviceToken:deviceToken completionHandler:^(IMFResponse *response,  NSError *error) {
-   if(error){             
-
+   if (error){
      [ self  updateMessage:error .description];
   }  else {
     [ self updateMessage:response .responseJson .description];
@@ -75,7 +68,7 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 
 ###Swift
 
-APNS로부터 토큰이 수신되면 ```didRegisterForRemoteNotificationsWithDeviceToken``` 메소드의 일부로 푸시 알림에 토큰을 전달하십시오. 
+APNS에서 토큰이 수신되면 이 토큰을 `didRegisterForRemoteNotificationsWithDeviceToken` 메소드의 일부로 푸시 알림에 전달하십시오. 
 
 ```
 func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-27"
+  years: 2016, 2017
+lastupdated: "2017-03-13"
 
 ---
 
@@ -24,8 +24,6 @@ Os dispositivos enviam seus dados a um gateway ativado por Edge Analytics em que
 O diagrama a seguir ilustra a arquitetura geral de um ambiente de Edge Analytics do {{site.data.keyword.iot_full}}.
 ![IBM Watson IoT Platform para arquitetura de Edge Analytics](images/architecture_platform_edge.svg "IBM Watson IoT Platform com arquitetura de Edge Analytics")
 
-**Importante:** os recursos de análise de dados são mesclados a partir do serviço do {{site.data.keyword.iotrtinsights_full}}. Se sua organização do {{site.data.keyword.iot_short_notm}} for usada como uma origem de dados para uma instância existente do {{site.data.keyword.iotrtinsights_short}}, Cloud e Edge Analytics não estarão ativados até após a migração das instâncias existentes do {{site.data.keyword.iotrtinsights_short}}. Continue a usar o painel do {{site.data.keyword.iotrtinsights_short}} para suas necessidades de análise de dados até que a migração seja concluída. Para obter mais informações, consulte o [Blog do IBM Watson Platform IoT](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} no IBM developerWorks e os painéis de sua instância existente do {{site.data.keyword.iotrtinsights_short}}.  
-
 ## Antes de iniciar
 {: #byb}
 
@@ -33,6 +31,10 @@ Antes de iniciar a criação de regras e ações de Edge Analytics:
 - Certifique-se de que o gateway esteja conectado ao {{site.data.keyword.iot_short}} e que os dados do dispositivo estejam sendo transmitidos. Consulte [Conectando gateways](gateways/dashboard.html) para obter mais informações.
 - Instale o Edge Analytics Agent (EAA) em seu gateway. Para obter informações, consulte [Instalando o Edge Analytics Agent](gateways/dashboard.html#edge). </br> **Dica:** gateways ativados para o EAA fornecem dados de diagnóstico do EAA no formato de mensagens do dispositivo de gateway. Para obter informações, consulte [Métricas de diagnóstico do Edge Analytics Agent](#eaa_metrics).
 - Certifique-se de que as propriedades do dispositivo que você deseja usar como condições em suas regras sejam mapeadas para esquemas. Consulte [Conectando dispositivos](iotplatform_task.html) e [Criando esquemas](im_schemas.html) para obter mais informações.
+- Revise as orientações do Edge Analytics  
+Em nosso portal Orientações, algumas orientações descrevem as etapas que são necessárias para executar o IBM Edge Analytics. As orientações descrevem claramente como instalar e configurar o IBM Edge Analytics Agent em um dispositivo construído sobre o Apache Edgent para executar análise próxima a uma origem de dados da IoT.
+ - A orientação [Introdução ao Edge Analytics no IBM Watson IoT Platform ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/getting-started-with-edge-analytics-in-watson-iot-platform/){: new_window} é o início dessa série. Essa orientação descreve como configurar o Cisco DSA Platform em um Sistema Laptop e um Dispositivo Raspberry Pi 3, como instalar e configurar o IBM Edge Analytics Agent para se conectar ao {{site.data.keyword.iot_short}}, como instalar o Sistema DS Link e configurá-lo para se conectar ao Gateway do Edge Analytics no {{site.data.keyword.iot_short}} como um dispositivo conectado, como definir e ativar a Regra do Edge no Edge Gateway e o gerenciamento da Regra de Edge Analytics por meio do {{site.data.keyword.iot_short}}.
+ - Para ilustrar um uso avançado do Edge Analytics, a orientação [Manipulando alertas e ações de dispositivo com o Edge Analytics no IBM Watson IoT Platform ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/handling-alerts-and-device-actions-with-edge-analytics-in-ibm-watson-iot-platform/){: new_window} exibe um showcase de como construir seu próprio Link DS para transferir dados de um dispositivo Arduino Uno conectado a um dispositivo Raspberry Pi 3. A orientação também exibe um showcase de filtragem de dados e manipulação de ações de dispositivo local como parte do alerta da Regra do Edge.
 
 ## Gerenciando regras e ações de borda  
 {: #managing_rules}
@@ -204,10 +206,16 @@ Para ver informações sobre o estado do gateway:
  `MsgOutCount` | O número de mensagens que foram enviadas pelo EAA ao {{site.data.keyword.iot_short}}.
  `MsgOutRate` | O número estimado de bytes de mensagens por segundo que são enviados pelo EAA ao {{site.data.keyword.iot_short}} durante o último minuto.
  `MsgReducePercent` | A diferença de porcentagem entre mensagens recebidas e não enviadas. </br>A fórmula a seguir é usada para o cálculo: `(msgIn - msgOut) / msgIn` `BytesReducePercent` | A diferença de porcentagem entre bytes recebidos e de saída. </br>A fórmula a seguir é usada para o cálculo: `(bytesIn - bytesOut) / bytesIn`
-`MsgRateReduce` | A diferença de porcentagem entre a taxa de mensagens recebidas e não enviadas. </br>A fórmula a seguir é usada para o cálculo: `(msgInRate - msgOutRate) / msgInRate` `BytesRateReduce` | A diferença de porcentagem entre bytes de mensagens recebidas e não enviadas. </br>A fórmula a seguir é usada para o cálculo: `(bytesInRate - bytesOutRate) / bytesInRate` `SystemLoad` | O carregamento do sistema atual para o sistema no qual o EAA está em execução.**Nota:** a taxa da CPU (unidade central de processamento) será enviada apenas se o comando `mpstat` estiver disponível no sistema no qual o EAA está em execução. Caso contrário, a média de carregamento do sistema para o último minuto será enviada. </br>“A média de carregamento do sistema é a soma do número de entidades executáveis enfileiradas para os processadores disponíveis e o número de entidades executáveis em execução nos processadores disponíveis em média durante um período de tempo. A maneira na qual a média de carregamento é calculada é específica do sistema operacional, mas geralmente é uma média controlada dependente de tempo. Se a média de carregamento não estiver disponível, um valor negativo será retornado. ” - javadoc para *ManagementFactory.getOperatingSystemMXBean*.
- `FreeMemory` | O número de bytes de memória livre para a Java Virtual Machine (JVM) em que o EAA está em execução.
+`MsgRateReduce` | A diferença de porcentagem entre a taxa de mensagens recebidas e não enviadas. </br>A fórmula a seguir é usada para o cálculo: `(msgInRate - msgOutRate) / msgInRate` `BytesRateReduce` | A diferença de porcentagem entre bytes de mensagens recebidas e não enviadas. </br>A fórmula a seguir é usada para o cálculo: `(bytesInRate - bytesOutRate) / bytesInRate` `SystemLoad` | O carregamento do sistema atual para o sistema no qual o EAA está em execução. **Nota:** a taxa da CPU (unidade central de processamento) será enviada apenas se o comando `mpstat` estiver disponível no sistema no qual o EAA está em execução. Caso contrário, a média de carregamento do sistema para o último minuto será enviada. </br>“A média de carregamento do sistema é a soma do número de entidades executáveis enfileiradas para os processadores disponíveis e o número de entidades executáveis em execução nos processadores disponíveis em média durante um período de tempo. A maneira na qual a média de carregamento é calculada é específica do sistema operacional, mas geralmente é uma média controlada dependente de tempo. Se a média de carregamento não estiver disponível, um valor negativo será retornado. ” - javadoc para *ManagementFactory.getOperatingSystemMXBean*.
+ `FreeMemory` | O número de bytes de memória livre para a Java™ Virtual Machine (JVM) na qual o EAA está em execução.
  `MemoryUsed` | O número de bytes de memória da JVM usado pelo EAA.
  `InQueueSize` | O número de mensagens que são enfileiradas para processamento pelo EAA.
  `RuleNumber` | O número de regras definidas no núcleo do mecanismo de regras.
  `ProcessorNumber` | Para uso de depuração. O número de processadores definidos no núcleo do mecanismo de regras. </br>**Nota:** um processador é a unidade mínima de execução no núcleo do mecanismo de regras.
  `DataPointsInWindow` | O número total de pontos de dados que são armazenados em buffer no espaço de tempo. O tamanho em bytes de um ponto de dados difere dependendo de seu tipo de dados. Por exemplo, o tamanho de um ponto de dados float/int é 8 bytes, enquanto que o tamanho de um ponto de dados string difere dependendo de seu comprimento.  Na maioria dos casos, é possível estimar o uso de memória para o espaço de tempo usando a fórmula a seguir: `DataPointsInWindow * 8`.
+
+## Comunidade do Edge Analytics
+{: #eaa_community}
+
+É possível fazer download do SDK do Edge Analytics na [página
+da comunidade do IBM Edge Analytics](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true). O SDK inclui o arquivo JAR do SDK, o Javadoc, a amostra de código, os links de orientação e os arquivos LEIA-ME. Na comunidade, também é possível ver vídeos de como o Edge Analytics funciona e usar o fórum da comunidade para fazer perguntas.

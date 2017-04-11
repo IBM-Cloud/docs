@@ -30,8 +30,9 @@ lastupdated: "2017-01-11"
 | **類型**        | **名稱**            | **說明** |
 |-----------------|-------------------|-------------------|
 |內含 | [{{site.data.keyword.Bluemix_notm}} 運行環境](/docs/cfapps/runtimes.html) | 使用運行環境可快速啟動並執行您的應用程式，而不需要設定及管理機器和作業系統。您可以在 {{site.data.keyword.Bluemix_dedicated_notm}} 實例中使用所有 {{site.data.keyword.Bluemix_notm}} 運行環境。|
-| 內含 | [{{site.data.keyword.autoscaling}}](/docs/services/Auto-Scaling/index.html) | 根據原則，動態增加或減少應用程式的運算能力。使用此服務，即可在 {{site.data.keyword.Bluemix_dedicated_notm}} 環境中無限制地使用。 |
+| 內含 | [{{site.data.keyword.autoscaling}}](/docs/services/Auto-Scaling/index.html) | 根據原則，動態增加或減少應用程式的運算能力。使用此服務，即可在 {{site.data.keyword.Bluemix_dedicated_notm}} 環境中無限制地使用。附註：自動擴充目前僅與 Cloud Foundry 運行環境搭配使用 |
 |選用 | [{{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} 將 {{site.data.keyword.APIM}} 及 IBM StrongLoop 整合成單一供應項目，提供綜合性解決方案來建立、執行、管理及強制執行 API 和微服務。 |
+|選用 | [{{site.data.keyword.rules_short}}](/docs/services/rules/rules.html) | {{site.data.keyword.rules_short}} 提供綜合性環境，以自動化及執行經常發生且可重複的規則型商業決策。它也可降低 IT 技能需求，讓商業使用者或開發人員，快速建立決策模型並以較低的成本進行測試。 |
 |選用 | [{{site.data.keyword.cloudant}}](/docs/services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} 提供對於始終處於開啟狀態之完整受管理 NoSQL JSON 資料層的存取。此服務與 CouchDB 相容，而且可透過方便使用的 HTTP 介面來存取，可用於行動及 Web 應用程式模型。 |
 |選用 | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | 在 {{site.data.keyword.Bluemix_dedicated_notm}} 上執行 Docker 容器。容器是虛擬軟體物件，其中包含應用程式執行所需的所有元素。容器具有資源隔離及配置的優點，而且比虛擬機器（舉例來說）更容易攜帶且更具效率。如需硬體需求的相關資訊，請參閱 [{{site.data.keyword.Bluemix_dedicated_notm}} 及 Bluemix 本端中的 IBM {{site.data.keyword.containershort}}](/docs/containers/container_dl.html)。|
 | 選用 | [{{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery/index.html) | 使用「{{site.data.keyword.contdelivery_short}} 專用」來自動進行建置、單元測試、部署及其他作業。透過豐富的 Web 型 IDE 編輯及推送程式碼。建立工具鏈來啟用工具整合，以支援開發、部署及操作作業。 |
@@ -45,7 +46,7 @@ lastupdated: "2017-01-11"
 |選用 | [{{site.data.keyword.sescashort}}](/docs/services/SessionCache/index.html#session_cache) | 為了提高備援，{{site.data.keyword.sescashort}} 會提供快取中所儲存階段作業的抄本。因此，電壓過低或作業中斷時，用戶端應用程式仍然保有快取中階段作業的存取權。此服務支援 Web 及行動應用程式的階段作業快取情境。 |
 | 選用 | [{{site.data.keyword.iot_short}}](/docs/services/IoT/index.html) | 此服務可讓您的應用程式與已連接的裝置、感應器及閘道進行通訊，並且耗用這些項目所收集的資料。基本供應項目允許在專用環境內執行專用版本的 {{site.data.keyword.iot_short}}，其容量為 100,000 台同時連接的裝置或應用程式，以及 1.6 TB 的資料交換。 |
 | 選用 | [{{site.data.keyword.appserver_short}}](/docs/services/ApplicationServeronCloud/index.html) | IBM {{site.data.keyword.appserver_short}} for IBM {{site.data.keyword.Bluemix_notm}} 是一項服務，可協助在 {{site.data.keyword.Bluemix_notm}} 的受管理雲端環境中快速設定預先配置的 {{site.data.keyword.appserver_short}} Liberty、Traditional Network Deployment 或 Traditional WebSphere Java EE 實例。 |
-{: caption="Table 1. Dedicated Services" caption-side="top"}
+{: caption="表 1. 專用服務" caption-side="top"}
 {: #table01}
 
 
@@ -58,6 +59,7 @@ lastupdated: "2017-01-11"
 |專用 {{site.data.keyword.apiconnect_short}} Professional 10 萬個 API 呼叫增加 | {{site.data.keyword.apiconnect_short}} Professional 環境的延伸，每月可提供 10 萬個 API 呼叫的額外容量。 |
 |專用 {{site.data.keyword.apiconnect_short}} Enterprise 2500 萬個 API 呼叫 | 此環境允許在容量為每月 2500 萬個 API 呼叫的專用環境內，執行專用版本的 {{site.data.keyword.apiconnect_short}}，目標為整個企業的 API 專案。 |
 |專用 {{site.data.keyword.apiconnect_short}} Enterprise 10 萬個 API 呼叫增加 | {{site.data.keyword.apiconnect_short}} Enterprise 環境的延伸，每月可提供 10 萬個 API 呼叫的額外容量。 |
+|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.rules_short}} 1 百萬個規則決策 | 「規則決策」為從規則執行伺服器呼叫規則集所產生的結果。必須取得足夠的授權，才能涵蓋在計費期間執行或處理的「規則決策」總數（四捨五入至最接近的百萬位數）。此「雲端服務」所測量的「規則決策」是對規則執行伺服器進行以取得決策的呼叫。 |
 |專用 {{site.data.keyword.cloudant}} 1.6 TB 容量增加 | 包括在設計容量為 1.6 TB 的專用環境內，執行專用版本的 {{site.data.keyword.cloudantfull}}。  |
 |專用 {{site.data.keyword.datacshort}} 及 {{site.data.keyword.sescashort}} 50 GB 容量增加 | 此環境允許部署及執行 {{site.data.keyword.datacshort}} 和 {{site.data.keyword.sescashort}} 實例，最多有 50 GB 的累積容量。 |
 |{{site.data.keyword.contdelivery_short}} 專用實例 | 在專用環境內執行的 {{site.data.keyword.contdelivery_short}} 的專用版本。容量取決於「{{site.data.keyword.contdelivery_short}} 專用授權使用者」授權。 |
@@ -78,7 +80,7 @@ lastupdated: "2017-01-11"
 |IBM {{site.data.keyword.appserver_short}} for {{site.data.keyword.Bluemix_notm}} - 專用中型| {{site.data.keyword.Bluemix_notm}} 的受管理雲端環境中的預先配置 {{site.data.keyword.appserver_short}} Liberty、Traditional Network Deployment 或 Traditional WebSphere Java EE 實例，每個月有 128 個 vCore、256GB RAM 及 2TB HDD。 |
 |IBM {{site.data.keyword.appserver_short}} for {{site.data.keyword.Bluemix_notm}} - 專用大型| {{site.data.keyword.Bluemix_notm}} 的受管理雲端環境中的預先配置 {{site.data.keyword.appserver_short}} Liberty、Traditional Network Deployment 或 Traditional WebSphere Java EE 實例，每個月有 256 個 vCore、512GB RAM 及 4TB HDD。 |
 |IBM {{site.data.keyword.appserver_short}} for {{site.data.keyword.Bluemix_notm}} - 專用| {{site.data.keyword.Bluemix_notm}} 的受管理雲端環境中的預先配置 {{site.data.keyword.appserver_short}} Liberty、Traditional Network Deployment 或 Traditional WebSphere Java EE 實例，每個月有「HDD 擴充」及 1TB。 |
-{: caption="Table 2. Optional service components for purchase" caption-side="top"}
+{: caption="表 2. 選購性服務元件" caption-side="top"}
 {: #table02}
 
 
@@ -89,7 +91,7 @@ lastupdated: "2017-01-11"
 |專用直接鏈結 1 Gbps 容量 | 直接連接至針對資料傳送所設計的適當 {{site.data.keyword.BluSoftlayer}} 網路存在點的專用網路鏈結，最高 1 Gbps。 |
 |專用直接鏈結 10 Gbps 容量 | 直接連接至針對資料傳送所設計的適當 {{site.data.keyword.BluSoftlayer}} 網路存在點的專用網路鏈結，最高 10 Gbps。 |
 |IBM Bluemix 專用硬體防火牆 - 高可用性 | 備用的 1 Gbps 硬體防火牆，配置來保護「專用」環境內相同 VLAN 上的單一、多台或所有伺服器。 |
-{: caption="Table 3. Optional platform add-on components for purchase" caption-side="top"}
+{: caption="表 3. 選購性平台附加程式元件" caption-side="top"}
 {: #table03}
 
 **附註**：{{site.data.keyword.Bluemix_dedicated_notm}} 元件可能會指出特定的已配置容量（例如 GB 數或每秒交易數）。因為任何雲端服務配置的實際容量實際上會因許多因素而不同，所以實際容量實際上可能會高於或低於已配置的容量。
@@ -152,7 +154,7 @@ lastupdated: "2017-01-11"
 |{{site.data.keyword.iot_short}}		|是		|是		|否|
 |{{site.data.keyword.weather_short}}		|是		|是		|是|
 |{{site.data.keyword.workloadscheduler}}	|是		|是		|是 |
-{: caption="Table 4. Services available for syndication from {{site.data.keyword.Bluemix_notm}} Public by region" caption-side="top"}
+{: caption="表 4. 依地區可從 {{site.data.keyword.Bluemix_notm}} 公用聯合的服務" caption-side="top"}
 {: #table04}
 
 **附註**：此表格不包括協力廠商服務。請檢查協力廠商服務選項的專用型錄。
@@ -201,7 +203,7 @@ lastupdated: "2017-01-11"
 <dd>
 企業網路環境可能具有 {{site.data.keyword.Bluemix_dedicated_notm}} 的安全專用雙向網路鏈結。這可讓 {{site.data.keyword.Bluemix_dedicated_notm}} 中所管理的應用程式存取企業中的服務及資源（包括資料來源及企業服務）。此網路鏈結也可讓 {{site.data.keyword.Bluemix_dedicated_notm}} 使用您的 LDAP 鑑別您企業的開發人員及管理者。<br>
 <br>
-有數個選項可建立安全專用網路鏈結。請告知 IBM 技術專家有關您企業的最佳網路選項。<br>
+有數個選項可建立安全專用網路鏈結。請與 IBM 技術專家商討最適合貴企業的網路選項。<br>
 <br>
 從 {{site.data.keyword.Bluemix_dedicated_notm}} 到您企業網路的預設連線使用「虛擬私密網路 (VPN)」。{{site.data.keyword.Bluemix_dedicated_notm}} 具有針對高可用性所配置的「專用 1 Gbps Vyatta VPN」終止。
 <br>
@@ -214,17 +216,17 @@ lastupdated: "2017-01-11"
 
 {{site.data.keyword.Bluemix_dedicated_notm}} 的設計是為了提供「{{site.data.keyword.Bluemix_notm}} 公用」供應項目的專用版本。您可以使用 {{site.data.keyword.Bluemix_notm}} 服務及運行環境，來支援 IBM 所管理的 {{site.data.keyword.BluSoftlayer}} 帳戶中的運算需求。
 
-IBM 讓您能使用受到密碼保護的登入方式來存取 {{site.data.keyword.Bluemix_dedicated_notm}}。您可以存取服務、運行環境及相關聯的資源，也可以部署及移除 {{site.data.keyword.Bluemix_notm}} 應用程式。IBM 充分運用多個 {{site.data.keyword.BluSoftlayer}} 位置來交付 {{site.data.keyword.Bluemix_dedicated_notm}}，讓您可以在接近您的位置取得專用版本。
+IBM 讓您能使用受到密碼保護的登入方式來存取 {{site.data.keyword.Bluemix_dedicated_notm}}。您可以存取服務、運行環境及相關聯的資源，也可以部署及移除 {{site.data.keyword.Bluemix_notm}} 應用程式。IBM 利用多個 {{site.data.keyword.BluSoftlayer}} 位置來交付 {{site.data.keyword.Bluemix_dedicated_notm}}，因此您可以在接近您的位置取得專用版本。
 
 若要設定您的 {{site.data.keyword.Bluemix_notm}} 專用版本，請執行下列動作：
 
 <ol>
-<li>若要開始使用，請聯絡 IBM 指定客戶業務代表，或<a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank">聯絡 {{site.data.keyword.Bluemix_notm}} <img src="../icons/launch-glyph.svg" alt="外部鏈結圖示"></a>。</li>
+<li>若要開始使用，請與 IBM 指定的客戶業務代表聯絡，或<a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank">與 {{site.data.keyword.Bluemix_notm}} 聯絡 <img src="../icons/launch-glyph.svg" alt="外部鏈結圖示"></a>。</li>
 <li>向 IBM 確認您的 {{site.data.keyword.Bluemix_dedicated_notm}} 實例費用。每月的經常性費用是根據您要使用的專用服務，再加上所有 {{site.data.keyword.Bluemix_notm}} 公用服務的訂閱。您會收到關於任何超出訂閱合約之使用項目的發票。</li>
 <li>識別設定 {{site.data.keyword.Bluemix_dedicated_notm}} 實例的每一個階段的截止時間。如需每一個階段和所涉及作業的相關資訊，請參閱 <a href="/docs/dedicated/index.html#rolesresponsibilities">{{site.data.keyword.Bluemix_dedicated_notm}} 角色及責任</a>。</li>
-<li>為您的專用實例選取 <a href="http://www.softlayer.com/data-centers" target="_blank">{{site.data.keyword.BluSoftlayer}} 資料中心位置 <img src="../icons/launch-glyph.svg" alt="外部鏈結圖示"></a>。然後，建立您的專用平台及帳戶。對於您的帳戶，請識別組織中負責維持專用實例運作所需角色的人員。如需您可指派之角色的相關資訊，請參閱 <a href="/docs/dedicated/index.html#rolesresponsibilities">{{site.data.keyword.Bluemix_dedicated_notm}} 角色及責任</a>。
+<li>為您的專用實例選取 <a href="http://www.softlayer.com/data-centers" target="_blank">{{site.data.keyword.BluSoftlayer}} 資料中心位置 <img src="../icons/launch-glyph.svg" alt="外部鏈結圖示"></a>。然後，建立您的專用平台及帳戶。對於您的帳戶，請識別組織中負責維持專用實例運作所需角色的人員。如需您指派之角色的相關資訊，請參閱 <a href="/docs/dedicated/index.html#rolesresponsibilities">{{site.data.keyword.Bluemix_dedicated_notm}} 角色及責任</a>。
 </li>
-<li>定義並建立公司網路與 {{site.data.keyword.Bluemix_dedicated_notm}} 實例之間的網路連線功能。有必要的網路安全應用裝置，其中包括防火牆和侵入防禦功能以及此選項的相關聯成本。
+<li>定義並建立組織網路與 {{site.data.keyword.Bluemix_dedicated_notm}} 實例之間的網路連線功能。有必要的網路安全應用裝置，其中包括防火牆和侵入防禦功能以及此選項的相關聯成本。
 	<ol type="a">
 	<li>IBM 針對專用實例安裝監視及安全基礎架構。</li>
 	<li>IBM 會安裝您選取的單一承租戶專用服務。</li>
@@ -270,21 +272,21 @@ IBM 讓您能使用受到密碼保護的登入方式來存取 {{site.data.keywor
 
 <dl>
 <dt>**採購聯絡人**</dt>
-<dd>與 IBM 業務代表一起建立您的 {{site.data.keyword.Bluemix_dedicated_notm}} 環境，包括識別您組織中處理專案任何層面的正確人員。指派給此角色的人員將擔當專案管理的角色，負責對型樣選取、商業安排以及客戶資源存取安排進行監視。採購聯絡人是設定專用實例和追蹤部署過程的整體聯絡人。</dd>
+<dd>與 IBM 業務代表一起建立您的 {{site.data.keyword.Bluemix_dedicated_notm}} 環境，包括識別組織中處理專案任何層面的正確人員。指派給此角色的人員將擔當專案管理的角色，負責對型樣選取、商業安排以及客戶資源存取安排進行監視。採購聯絡人是設定專用實例和追蹤部署過程的整體聯絡人。</dd>
 <dt>**規範管理者**</dt>
 <dd>與 IBM 業務代表一起選取符合您安全需求的拓蹼及部署選項。指派給這個角色的人員會與 IBM 規範顧問一起確定哪些部署模式能達到規範目標。</dd>
 <dt>**網路專家**</dt>
 <dd>與 IBM 業務代表一起訂定 {{site.data.keyword.Bluemix_notm}} 部署的網路方案。指派給這個角色的人員會檢查 IBM 所需的必要網路規格，並與 IBM 一起訂定實作計劃。安裝及驗證階段結束時，指派給這個角色的人員會進行核准，確認網路配置符合組織標準。</dd>
 <dt>**DevOps 聯絡人**</dt>
 <dd>與 IBM 業務代表一起計劃並套用 {{site.data.keyword.Bluemix_notm}} 平台、服務及運行環境所需的維護更新作業。指派給這個角色的人員也會與 IBM 業務代表一起配置您的 {{site.data.keyword.Bluemix_dedicated_notm}} 實例。</dd>
-<dt>作業焦點</dt>
-<dd>一旦環境開始運行，視需要與 IBM 支援團隊合作。這是對「管理」主控台具有「超級使用者」存取權的人員，其可核准並排定 Bluemix 環境的維護更新，而且隨時可在發生重要突發事件時予以協助。指派給這個角色的人員必須具備 Bluemix 環境的技術知識，而且其所處位置可以聯繫公司內對可能受到影響的區域（例如，網路或安全）具備專業技能的其他人員。</dd>
+<dt>作業聯絡人</dt>
+<dd>一旦環境開始運行，視需要與 IBM 支援團隊合作。這是對「管理」主控台具有「超級使用者」存取權的人員，其可核准並排定 Bluemix 環境的維護更新，而且隨時可在發生重要突發事件時予以協助。指派給這個角色的人員必須具備 Bluemix 環境的技術知識，而且其職位可以聯繫公司內對可能受到影響的區域（例如，網路或安全）具備專業技能的其他人員。</dd>
 </dl>
 
-您的客戶代表會與其他合作的 IBM 專家一起合作，確保您隨時擁有所需的支援。您可以升級至「高階」支援層，以與您帳戶的專用「客戶成功經理 (CSM)」合作。如需不同支援層的相關資訊，請參閱[聯絡支援中心](../support/index.html#contacting-support)。CSM 會完成下列類型的作業：
+您的客戶代表會與其他合作的 IBM 專家一起合作，確保您隨時擁有所需的支援。您可以升級至「高階」支援層，以與您帳戶的專用「客戶成功經理 (CSM)」合作。如需不同支援層的相關資訊，請參閱[與支援中心聯絡](../support/index.html#contacting-support)。CSM 會完成下列類型的作業：
 
 <ul>
-<li>啟用 {{site.data.keyword.Bluemix_dedicated_notm}} 環境的快速採用。</li>
+<li>促成 {{site.data.keyword.Bluemix_dedicated_notm}} 環境的快速採用。</li>
 <li>提供有價值的教育訓練及啟用資料，以改善自給自足。</li>
 <li>建立您與所使用的 {{site.data.keyword.Bluemix_notm}} 開發、支援及服務之間的長期關係。</li>
 </ul>
@@ -333,7 +335,7 @@ IBM 讓您能使用受到密碼保護的登入方式來存取 {{site.data.keywor
 |檢查實體基礎架構 | 檢查可管理威脅解決方案元件的實體場所，並檢查保護資料中心用的安全控制。 | 客戶 |
 |檢查監視軟體 | 檢查監視及管理元件（如呈報及問題判斷計劃中所定義）。 | 客戶 |
 |檢查 OS | 檢查以確保作業系統映像檔符合規範標準。IBM 提供 OS 映像檔的存取權。 | IBM 及客戶皆負有責任 |
-{: caption="Table 5. Inception phase tasks" caption-side="top"}
+{: caption="表 5. 初始階段作業" caption-side="top"}
 
 
 接下來是進度階段。進度階段說明您與 IBM Cloud 之間的進行中協同關係。此階段的主要目標包括下列各項：
@@ -358,7 +360,7 @@ IBM 讓您能使用受到密碼保護的登入方式來存取 {{site.data.keywor
 |狀態報告、審核協調及規範會議  | 完成狀態報告、外部審核協調，以及規範審查狀態會議的呈現。 | IBM |
 |聘雇及商業需求驗證 | 完成可存取客戶環境之 IBM 業務代表的每季聘雇驗證及持續商業需求驗證。 | IBM |
 |解決安全漏洞 | 解決平台中所報告的安全漏洞。 | IBM |
-{: caption="Table 6. Progression phase tasks" caption-side="top"}
+{: caption="表 6. 進度階段作業" caption-side="top"}
 
 最終階段「完成」代表您與 IBM {{site.data.keyword.Bluemix_notm}} 之間的關係結束。此階段的主要作業包括下列各項：
 
@@ -373,7 +375,7 @@ IBM 讓您能使用受到密碼保護的登入方式來存取 {{site.data.keywor
 |解除任務環境 | 關閉環境的存取權及認證。 | IBM 及客戶皆負有責任 |
 |移除客戶網路連線 | 移除 IBM 與客戶環境之間的網路連線。 | IBM 及客戶皆負有責任 |
 |回收基礎架構 | 根據 {{site.data.keyword.BluSoftlayer}} 定義的處理程序，回收您的環境。 | IBM |
-{: caption="Table 7. Completion phase tasks" caption-side="top"}
+{: caption="表 7. 完成階段作業" caption-side="top"}
 
 ##維護您的專用實例
 {: #maintaindedicated}
@@ -404,7 +406,7 @@ IBM 會針對「狀態」頁面上每一個維護時間範圍所計劃的變更�
 
 ### 客戶偵測到的問題
 
-如果您識別到需要 IBM 支援中心及作業注意的問題，則可以使用數種不同的方法來聯絡支援中心。如需如何聯絡支援中心的相關資訊，請參閱[聯絡支援中心](../support/index.html#contacting-bluemix-support-local)。根據問題，您及（或）IBM 會一起合作來修正問題。
+如果您識別到需要 IBM 支援中心及作業注意的問題，則可以使用數種不同的方法來與支援中心聯絡。如需如何與支援中心聯絡的相關資訊，請參閱[與支援中心聯絡](../support/index.html#contacting-bluemix-support-local)。根據問題，您及（或）IBM 會一起合作來修正問題。
 
 ### IBM 偵測到的重要突發事件
 
@@ -416,9 +418,9 @@ IBM 會針對「狀態」頁面上每一個維護時間範圍所計劃的變更�
 
 圖 2. 突發事件回應程序
 
-根據問題，您及（或）IBM 會一起合作來修正問題。如果您有關於突發事件的問題，或者需要 IBM 業務代表來協助您解決問題，則可以開啟支援問題單。如需如何聯絡支援中心的相關資訊，請參閱[聯絡支援中心](/docs/support/index.html#contacting-bluemix-support-local)。
+根據問題，您及（或）IBM 會一起合作來修正問題。如果您有關於突發事件的問題，或者需要 IBM 業務代表來協助您解決問題，則可以開啟支援問題單。如需如何與支援中心聯絡的相關資訊，請參閱[與支援中心聯絡](/docs/support/index.html#contacting-bluemix-support-local)。
 
-**附註**：我們會 24 小時全年無休地監視嚴重性 1 支援問題單。其他問題單的處理時間是從星期日晚上 10:00 GMT 到星期六凌晨 12:00 GMT。如需支援問題單嚴重性以及與支援中心合作的相關資訊，請參閱<a href="/docs/support/index.html#contacting-bluemix-support-local">聯絡支援中心</a>。
+**附註**：我們會 24 小時全年無休地監視嚴重性 1 支援問題單。其他問題單的處理時間是從星期日晚上 10:00 GMT 到星期六凌晨 12:00 GMT。如需支援問題單嚴重性以及與支援中心合作的相關資訊，請參閱<a href="/docs/support/index.html#contacting-bluemix-support-local">與支援中心聯絡</a>。
 
 
 ## {{site.data.keyword.Bluemix_dedicated_notm}} 的災難回復
@@ -444,7 +446,7 @@ IBM 會針對「狀態」頁面上每一個維護時間範圍所計劃的變更�
 
 若要部署至第二個位置或多個位置，您必須遵循與用來啟用主要地理位置類似的處理程序：
 
-1. 啟用新的專用環境來管理您應用程式的其他實例。若要建立新的環境，請聯絡 IBM 銷售團隊來起始處理程序。如需設定專用實例的相關資訊，請參閱[設定 {{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#setupdedicated)。您必須分別登入才能存取每一個環境。所管理環境的每一個實體位置都應該與原始位置距離最少 200 公里，以確保可用性。
+1. 啟用新的專用環境來管理您應用程式的其他實例。若要建立新的環境，請與 IBM 銷售團隊聯絡，來起始處理程序。如需設定專用實例的相關資訊，請參閱[設定 {{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#setupdedicated)。您必須分別登入才能存取每一個環境。所管理環境的每一個實體位置都應該與原始位置距離最少 200 公里，以確保可用性。
 2. 取得將管理新的已部署應用程式的唯一網域名稱。比方說，如果您的原始網域是 *mycompany.caeast.bluemix.net*，則可以建立具有新網域（例如 *mycompany.cawest.bluemix.net*）的新的本端環境，並部署至新網域。
 3. 每次部署原始應用程式時，也都會部署至新位置。如需部署的相關資訊，請參閱[上傳應用程式](/docs/starters/upload_app.html)。
 
@@ -461,7 +463,7 @@ IBM 會針對「狀態」頁面上每一個維護時間範圍所計劃的變更�
 * 根據應用程式性能檢查，提供網站失效接手
 * 在端點之間使用加權遞送
 
-您可以選擇廣域負載平衡器（例如 Akamai 或 Dyn）。如需使用 Akamai 作為廣域負載平衡器的相關資訊，請參閱 [Global traffic management ![外部鏈結圖示](../icons/launch-glyph.svg)](https://www.akamai.com/us/en/solutions/products/web-performance/global-traffic-management.jsp "在新視窗開啟"){: new_window}。如需使用 Dyn 作為廣域負載平衡器的相關資訊，請參閱 [4 Reasons Businesses Are Taking Global Load Balancing to the Cloud ![外部鏈結圖示](../icons/launch-glyph.svg)](http://dyn.com/blog/4-reasons-businesses-are-taking-global-load-balancing-to-the-cloud/){: new_window}。
+您可以選擇廣域負載平衡器（例如 Akamai 或 Dyn）。如需使用 Akamai 作為廣域負載平衡器的相關資訊，請參閱 [Global traffic management ![外部鏈結圖示](../icons/launch-glyph.svg)](https://www.akamai.com/us/en/solutions/products/web-performance/global-traffic-management.jsp "在新視窗中開啟"){: new_window}。如需使用 Dyn 作為廣域負載平衡器的相關資訊，請參閱 [4 Reasons Businesses Are Taking Global Load Balancing to the Cloud ![外部鏈結圖示](../icons/launch-glyph.svg)](http://dyn.com/blog/4-reasons-businesses-are-taking-global-load-balancing-to-the-cloud/){: new_window}。
 
 ### 高可用性
 {: #ha}
@@ -473,7 +475,7 @@ IBM 會針對「狀態」頁面上每一個維護時間範圍所計劃的變更�
 <dl>
 <dt>Cloud Foundry 中的 DEA 可擴充性</dt>
 <dd>Cloud Foundry <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">Droplet Execution Agent (DEA) <img src="../icons/launch-glyph.svg" alt="外部鏈結圖示"></a> 會對其內部執行的應用程式執行性能檢查。如果應用程式或 DEA 本身發生問題，則會將應用程式的其他實例部署至替代 DEA，以處理問題。如需相關資訊，請參閱 <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">Configuring CF for High Availability with Redundancy <img src="../icons/launch-glyph.svg" alt="外部鏈結圖示"></a>。
-<p>若要確保您應用程式的高可用性，您需要有足夠的運算資源來平衡負載，而且也可能需要其他運算資源來支援可能的失敗。如果您需要增加 DEA 儲存區來調整環境以為失敗做準備，或者處理應用程式實例的負載驟升，則可以與 IBM 業務代表合作來訂購額外的 DEA，並確定您有適當的硬體可支援新增的資源。
+<p>若要確保您應用程式的高可用性，您需要有足夠的運算資源來平衡負載，而且也可能需要其他運算資源來支援可能的失敗。如果您需要增加 DEA 儲存區來擴充環境以為失敗做準備，或者處理應用程式實例的負載驟升，則可以與 IBM 業務代表合作來訂購額外的 DEA，並確定您有適當的硬體可支援新增的資源。
 </p>
 </dd>
 <dt>{{site.data.keyword.BluSoftlayer}} 備援</dt>

@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-26"
+  years: 2016, 2017
+lastupdated: "2017-02-23"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:screen: .screen}
 {:pre: .pre}
 
 # Uso del SDK móvil de {{site.data.keyword.openwhisk_short}}
@@ -92,7 +92,7 @@ A utilizar la CLI de {{site.data.keyword.openwhisk_short}} para descargar códig
 SDK de {{site.data.keyword.openwhisk_short}}.  
 
 Para instalar el ejemplo de app starter, especifique el mandato siguiente:
-```
+```bash
 wsk sdk install iOS
 ```
 {: pre}
@@ -100,7 +100,7 @@ wsk sdk install iOS
 Este mandato descarga un archivo comprimido que contiene la app de inicio. Dentro del directorio del proyecto está el podfile.
 
 Para instalar el SDK, especifique el mandato siguiente:
-```
+```bash
 pod install
 ```
 {: pre}
@@ -113,7 +113,7 @@ y cree una instancia de {{site.data.keyword.openwhisk_short}} a partir del objet
 
 Por ejemplo, utilice el siguiente código de ejemplo para crear un objeto de credenciales:
 
-```
+```swift
 let credentialsConfiguration = WhiskCredentials(accessKey: "myKey", accessToken: "myToken")
 
 let whisk = Whisk(credentials: credentialsConfiguration!)
@@ -122,7 +122,7 @@ let whisk = Whisk(credentials: credentialsConfiguration!)
 
 En el ejemplo anterior, pasará los elementos `myKey` y `myToken` que obtiene de {{site.data.keyword.openwhisk_short}}. Puede recuperar la clave y la señal con el mandato de CLI siguiente:
 
-```
+```bash
 wsk property get --auth
 ```
 {: pre}
@@ -143,7 +143,7 @@ según sea necesario.
 
 Por ejemplo:
 
-```
+```swift
 // En este ejemplo, invocamos una acción para imprimir un mensaje en la consola de {{site.data.keyword.openwhisk_short}}
 var params = Dictionary<String, String>()
 params["payload"] = "Hi from mobile"
@@ -172,7 +172,7 @@ En el ejemplo anterior, se invoca la acción `helloConsole` usando el espacio de
 Para activar un desencadenante remoto, puede llamar al método `fireTrigger`. Pase los parámetros según
 sea necesario, mediante un diccionario.
 
-```
+```swift
 // En este ejemplo, activamos un desencadenante cuando nuestra ubicación ha cambiado por una cantidad determinada
 
 var locationParams = Dictionary<String, String>()
@@ -201,7 +201,7 @@ En el ejemplo anterior, se activa el desencadenante `locationChanged`.
 Si la acción devuelve un resultado, establezca hasResult en true en la llamada a invokeAction. El resultado de la acción
 se devuelve en el diccionario de respuesta, por ejemplo:
 
-```
+```swift
 do {
     try whisk.invokeAction(name: "actionWithResult", package: "mypackage", namespace: "mynamespace", parameters: params, hasResult: true, callback: {(reply, error) -> Void in
 
@@ -226,7 +226,7 @@ De forma predeterminada, el SDK solo devuelve el ID de activación y cualquier r
 del objeto de respuesta completo, que incluye el código de estado de la respuesta HTTP,
 utilice el siguiente valor:
 
-```
+```swift
 whisk.verboseReplies = true
 ```
 {: codeblock}
@@ -237,7 +237,7 @@ whisk.verboseReplies = true
 Puede configurar el SDK para que funcione con distintas instalaciones de {{site.data.keyword.openwhisk_short}} usando el parámetro
 baseURL. Por ejemplo:
 
-```
+```swift
 whisk.baseURL = "http://localhost:8080"
 ```
 {: codeblock}
@@ -248,7 +248,7 @@ la instancia en ejecución en https://openwhisk.ng.bluemix.net.
 Puede pasar una sesión NSURLSession personalizada en caso de que necesite gestión especial de red. Por ejemplo, podría tener su propia
 instalación {{site.data.keyword.openwhisk_short}} que utilice certificados autofirmados:
 
-```
+```swift
 // crear un delegado de red que confíe en todo
 class NetworkUtilsDelegate: NSObject, NSURLSessionDelegate {
     func URLSession(session: NSURLSession, didReceiveChallenge challenge: NSURLAuthenticationChallenge, completionHandler: (NSURLSessionAuthChallengeDisposition, NSURLCredential?) -> Void) {
@@ -286,7 +286,7 @@ llamada en un constructor "`do/try/catch`".
 
 Por comodidad, el SDK incluye un `WhiskButton`, que amplía `UIButton` para permitirle invocar acciones.  Para utilizar este `WhiskButton`, siga este ejemplo:
 
-```
+```swift
 var whiskButton = WhiskButton(frame: CGRectMake(0,0,20,20))
 
 whiskButton.setupWhiskAction("helloConsole", package: "mypackage", namespace: "_", credentials: credentialsConfiguration!, hasResult: false, parameters: nil, urlSession: nil)

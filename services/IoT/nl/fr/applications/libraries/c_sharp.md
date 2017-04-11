@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-07-28"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -23,7 +23,7 @@ Vous pouvez utiliser C# pour générer et personnaliser des applications qui int
 ## Téléchargement du client et des ressources C#
 {: #csharp_client_download}
 
-Pour accéder aux bibliothèques et exemples client C# pour {{site.data.keyword.iot_short_notm}}, accédez au référentiel [iot-csharp](https://github.com/ibm-watson-iot/iot-csharp) dans GitHub et exécutez les instructions d'installation.
+Pour accéder aux bibliothèques et exemples client C# pour {{site.data.keyword.iot_short_notm}}, accédez au référentiel [iot-csharp ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-csharp){: new_window} dans GitHub et exécutez les instructions d'installation. 
 
 
 ## Constructeur
@@ -49,7 +49,7 @@ applicationClient.connect();
 ## Abonnement aux événements d'un terminal
 {: #subscribe_device_events}
 
-Les terminaux utilisent des événements pour publier des données sur  l'instance {{site.data.keyword.iot_short_notm}}. Le terminal contrôle le contenu de l'événement et affecte un nom à chaque événement qu'il envoie.
+Les terminaux utilisent des événements pour publier des données sur l'instance {{site.data.keyword.iot_short_notm}}. Le terminal contrôle le contenu de l'événement et affecte un nom à chaque événement qu'il envoie.
 
 Lorsqu'un événement est reçu par l'instance {{site.data.keyword.iot_short_notm}}, les données d'identification de l'événement reçu identifient le terminal qui a envoyé l'événement, ce qui signifie qu'un terminal ne peut pas simuler les droits d'accès d'un autre terminal.
 

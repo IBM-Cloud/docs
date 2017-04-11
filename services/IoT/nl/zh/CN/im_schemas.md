@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-13"
+  years: 2016, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2016-10-13"
 
 **重要信息：**要使用规则和操作，模式是必需的。有关信息，请参阅 [Cloud Analytics](cloud_analytics.html#rules)。
 
-**重要信息：**分析功能是从 {{site.data.keyword.iotrtinsights_full}} 服务合并进来的。如果您的 {{site.data.keyword.iot_short_notm}} 组织用作现有 {{site.data.keyword.iotrtinsights_short}} 实例的数据源，那么在迁移现有 {{site.data.keyword.iotrtinsights_short}} 实例后，才会启用 Cloud Analytics 和 Edge Analytics。继续使用 {{site.data.keyword.iotrtinsights_short}} 仪表板来满足分析需要，直到迁移完成。有关更多信息，请参阅 IBM developerWorks 上的 [IBM Watson IoT Platform 博客](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window}以及现有 {{site.data.keyword.iotrtinsights_short}} 实例仪表板。  
+**重要信息：**分析功能是从 {{site.data.keyword.iotrtinsights_full}} 服务合并进来的。如果您的 {{site.data.keyword.iot_short_notm}} 组织用作现有 {{site.data.keyword.iotrtinsights_short}} 实例的数据源，那么在迁移现有 {{site.data.keyword.iotrtinsights_short}} 实例后，才会启用 Cloud Analytics 和 Edge Analytics。继续使用 {{site.data.keyword.iotrtinsights_short}} 仪表板来满足分析需要，直到迁移完成。有关更多信息，请参阅 IBM developerWorks 上的 [IBM Watson IoT Platform 博客 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} 以及现有 {{site.data.keyword.iotrtinsights_short}} 实例仪表板。  
 
 ## 添加设备模式
 {: #add_schema}
@@ -30,12 +30,13 @@ lastupdated: "2016-10-13"
 2. 选择要与此消息模式关联的设备类型。**重要信息：**对于一种设备类型，仅可定义一个模式。
 
 3. 添加一个或多个属性。
-    您可以从连接的设备选择属性，创建用于修改或组合现有属性的虚拟属性，或手动添加属性。  
+      
+您可以从连接的设备选择属性，创建用于修改或组合现有属性的虚拟属性，或手动添加属性。  
 
     **提示：**设备所发送的消息的有效内容中定义了可用属性。有关 {{site.data.keyword.iot_short}} 有效内容格式的信息，请参阅[消息有效内容](reference/mqtt/index.html#message-payloadl "消息有效内容。")主题。   
   <dl>
   <dt>手动添加属性</dt>
-  <p><b>提示：</b>要创建嵌套属性结构，请首先添加具有 Parent 数据类型的属性。然后，可在属性表中单击 ![“添加子代”图标。](images/add_child.png "添加子代") 以添加一个或多个子属性。</p>
+  <p><b>提示：</b>要创建嵌套属性结构，请首先添加具有 Parent 数据类型的属性。然后，可在属性表中单击 ![“添加子代”图标](images/add_child.png "添加子代") 以添加一个或多个子属性。</p>
   <dd>
   <ol>
     <li>选择**手动**选项卡。</li>
@@ -67,7 +68,9 @@ lastupdated: "2016-10-13"
  `Float` 或 `Integer`。</li>
  <li>属性 - 虚拟属性的属性标识。例如：  
 `temp_virt`</li>
-    <li>计算 - 添加一个或多个组件以定义有效函数。可使用属性、数字值和数学运算符（例如 +、-、\*、/、(、)、AVG 和 Z 分数）来构建计算。</br>AVG 组件用于计算某个指定时间段内的平均属性值。</br>Z 分数组件返回在一定数量的数据点中或者在一段时间内，该数据点与平均数据点值之间标准差的差别。</br> **重要信息：**如果所选属性的数据来自连接网关的设备，并且网关安装了边缘分析代理程序，那么 AVG 和 Z 分数组件仅返回属性数据点。有关更多信息，请参阅[安装 Edge Analytics Agent](gateways/dashboard.html#edge)。此外，不支持比较 AVG 和 Z 分数值的规则条件。</li>
+    <li>计算 - 添加一个或多个组件以定义有效函数。可使用属性、数字值和数学运算符，例如 +、-、\*、/、( 和 )。  
+    对于一组公式单击**高级**，以用于边缘设备上的数据点序列。有关高级公式的更多信息，请参阅[边缘虚拟属性的高级计算](im_vir_calculations.html)。  
+    **重要信息：**不支持用于基于高级公式比较虚拟属性的规则条件。</li>
     <li>数据单位 - 可选：属性的数据单位。例如：`C` 或 `Mph`</li>
     <li> 小数位 - 可选，仅浮点型：设备数据中要包含的小数位数。</li>
    </ul>

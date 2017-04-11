@@ -41,7 +41,7 @@ lastupdated: "2017-01-11"
 
 若要取得有效的 IBM ID 及密碼，請移至「我的 IBM 設定檔」頁面，然後完成下列其中一個步驟：
 {: tsResolve}
-  * 如果您已登錄一個 IBM ID，而想要檢查您的 ID 及密碼是否有效，請按一下**登入**，並在「登入」頁面上輸入您的 IBM ID 及密碼。如果您忘記密碼，請按一下「登入」頁面上的**忘記密碼**來重設密碼。如果您忘記 IBM ID 或是持續發生密碼問題，請聯絡 Worldwide IBM Registration Help Desk 以取得協助。 
+  * 如果您已登錄一個 IBM ID，而想要檢查您的 ID 及密碼是否有效，請按一下**登入**，並在「登入」頁面上輸入您的 IBM ID 及密碼。如果您忘記密碼，請按一下「登入」頁面上的**忘記密碼**來重設密碼。如果您忘記 IBM ID 或是持續發生密碼問題，請與 Worldwide IBM Registration Help Desk 聯絡以取得協助。 
   * 如果您沒有 IBM ID，請按一下**登錄**來登錄一個 IBM ID 及密碼。 
   
 **附註：**對於 IBM 員工而言，IBM ID 可能與內部網路登入 ID 不同。 
@@ -109,13 +109,13 @@ nslookup mybluemix.net
 在登錄取得 {{site.data.keyword.Bluemix_notm}} 試用帳戶之後，您可能無法登入 {{site.data.keyword.Bluemix_notm}}。相反地，您看到下列訊息：
 {: tsSymptoms}
 
-<code>您的帳戶處於擱置狀態。請稍候，最晚 24 小時即會收到電子郵件確認信，同時也請檢查垃圾郵件資料夾。如果您仍未收到電子郵件確認，請聯絡 <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix 支援中心<img src="../icons/launch-glyph.svg" alt="外部鏈結圖示"></a>。</code>
+<code>您的帳戶處於擱置狀態。請稍候，最晚 24 小時即會收到電子郵件確認信，同時也請檢查垃圾郵件資料夾。如果您仍未收到電子郵件確認，請與 <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix 支援中心 <img src="../icons/launch-glyph.svg" alt="外部鏈結圖示"></a> 聯絡。</code>
 
 
 在登錄取得 {{site.data.keyword.Bluemix_notm}} 試用帳戶之後，您會收到一封確認電子郵件。您必須按一下此封確認電子郵件中的鏈結，才能完成登錄程序。
 {: tsCauses} 
 
-確認電子郵件會寄送到您提供的電子郵件位址。請檢查您的收件匣以及垃圾郵件資料夾。如果您尚未收到確認電子郵件，請聯絡 [{{site.data.keyword.Bluemix_notm}} 支援中心 ![外部鏈結圖示](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}。  
+確認電子郵件會寄送到您提供的電子郵件位址。請檢查您的收件匣以及垃圾郵件資料夾。如果您尚未收到確認電子郵件，請與 [{{site.data.keyword.Bluemix_notm}} 支援中心 ![外部鏈結圖示](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window} 聯絡。  
 {: tsResolve}
 
 
@@ -159,7 +159,7 @@ nslookup mybluemix.net
   
 如果您因自己是合作人員（而非成員）而無法邀請使用者，則您必須刪除先前的 {{site.data.keyword.Bluemix_notm}} 帳戶，然後受邀以組織成員的身分加入帳戶。若要刪除先前的帳戶並以成員的身分加入帳戶，請完成下列步驟： 
 
-  1. 聯絡 [{{site.data.keyword.Bluemix_notm}} 支援中心 ![外部鏈結圖示](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window}，以開啟支援問題單並要求刪除您的帳戶。如果您的資料與要儲存並移至新帳戶的舊帳戶相關聯，請在電子郵件中包含此資訊。 
+  1. 與 [{{site.data.keyword.Bluemix_notm}} 支援中心 ![外部鏈結圖示](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} 聯絡，以開啟支援問題單並要求刪除您的帳戶。如果您的資料與要儲存並移至新帳戶的舊帳戶相關聯，請在電子郵件中包含此資訊。 
   2. 刪除您的帳戶之後，請讓具有組織管理員角色的使用者，邀請您以組織管理員的身分加入組織。然後，透過該邀請註冊 {{site.data.keyword.Bluemix_notm}}。 
 
 
@@ -471,7 +471,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 會依專案資料類�
 
  
 
-如果您懷疑 {{site.data.keyword.Bluemix_notm}} 服務已關閉，請先檢查 [{{site.data.keyword.Bluemix_notm}} 狀態 ![外部鏈結圖示](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window} 頁面。您可能想要使用另一個 {{site.data.keyword.Bluemix_notm}} 地區的服務作為暫行解決方法。詳細資訊位於[使用另一個地區的服務](/docs/services/reqnsi.html#cross_region_service)。如果服務狀態正常，請嘗試下列步驟來解決問題：
+如果您懷疑 {{site.data.keyword.Bluemix_notm}} 服務已關閉，請先檢查 [{{site.data.keyword.Bluemix_notm}} 狀態 ![外部鏈結圖示](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window} 頁面。您可能想要在另一個 {{site.data.keyword.Bluemix_notm}} 地區中使用服務作為暫行解決方法。詳細資訊位於[在另一個地區中使用服務](/docs/services/reqnsi.html#cross_region_service)。如果服務狀態正常，請嘗試下列步驟來解決問題：
 {: tsResolve}
 
   * 重試動作：
@@ -659,12 +659,12 @@ cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/n
 	  1. 檢查有多少記憶體用於應用程式：
 	  ```
 	  cf apps
-```
+	  ```
 	     cf apps 指令會列出您在現行空間中部署的所有應用程式。也會顯示每個一應用程式的狀態。
       2. 若要減少應用程式所使用的記憶體量，請減少應用程式實例的數目及（或）記憶體上限：
 	  ```
 	  cf push <appname> -p <app_path> -i <instance_number> -m <memory_limit>
-```
+      ```
 	  3. 重新啟動應用程式，讓變更生效。
 
 
@@ -742,9 +742,8 @@ cf push <appname> -p <app_path>
 
   * 如果 `manifest.yml` 檔案未儲存在專案的最上層，請將它儲存在那裡。
   * 如果應用程式儲存在子目錄中，請在 `manifest.yml` 檔案中指定該子目錄的路徑。
-  
   ```
-path: path_to_application
+   path: path_to_application
    ```
   * 在與應用程式相同的目錄中，建立 `package.json` 檔案。
 
@@ -818,15 +817,13 @@ cf api https://api.eu-gb.bluemix.net
 在您使用的網域內，您指定的主機名稱必須是唯一的。若要指定不同的主機名稱，請使用下列其中一種方法：
 {: tsResolve} 
 
-  * 如果您使用 `manifest.yml` 檔案來部署應用程式，請在 host 選項中指定主機名稱。
-	 
+  * 如果您使用 `manifest.yml` 檔案來部署應用程式，請在 host 選項中指定主機名稱。	 
     ```
-host: <hostname>	
+    host: <hostname>	
 	```
-  * 如果您從命令提示字元部署應用程式，請搭配使用 `cf push` 指令與 **-n** 選項。
- 
+  * 如果您從命令提示字元部署應用程式，請搭配使用 `cf push` 指令與 **-n** 選項。 
     ```
-cf push <appname> -p <app_path> -n <hostname>
+    cf push <appname> -p <app_path> -n <hostname>
     ```
 
 
@@ -885,7 +882,7 @@ cf push MyUniqueAppName02 -p "./app.war"
   * 在 Servlet 原始檔中 
     ```
 	response.setContentType("text/html; charset=UTF-8");
-```
+	```
   * 在 JSP 中 
     ```
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -931,7 +928,7 @@ cf push MyUniqueAppName02 -p "./app.war"
       * 使用 cf 指令行介面。例如： 
         ```
 		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
-```
+		```
 	  * 使用 [package.json ![外部鏈結圖示](../icons/launch-glyph.svg)](https://docs.npmjs.com/json){: new_window} 檔案。例如：
 	    ```
 		{
@@ -1062,12 +1059,12 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 
   * 如果您使用 `manifest.yml` 檔案來部署應用程式，請使用 buildpack 選項指定自訂建置套件的 URL 或名稱。例如：
   ```
-buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
-```
+  buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
+  ```
   * 如果您從命令提示字元部署應用程式，請使用 `cf push` 指令，並使用 **-b** 選項指定自訂建置套件。例如：
     ```
 	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
-```
+	```
 	
   
 
@@ -1159,34 +1156,32 @@ buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
   * 如果錯誤訊息指出目標空間中已經有必要的服務，請選取其他的空間來使用。
   * 如果錯誤訊息指出建置有問題，請修正導致無法建置應用程式的任何程式碼問題。若要驗證程式碼沒有任何問題，請使用 Git 指令來建置程式碼：
     1. 複製 Git 儲存庫：
-    
     ```
-git clone <git_repository_URL>
-```
+    git clone <git_repository_URL>
+    ```
 	2. 開啟應用程式目錄：
-	
 	```
 	cd <appname>
-```
+	```
 	3. 建立應用程式：
 	```
 	<appname> create
-```
+	```
 	4. 必要的話，請佈建附加程式。
 	5. 新增任何必要的配置變數。
 	6. 推送程式碼：
 	```
 	git push <appname> master
-```
+	```
 	7. 驗證已正確建置應用程式。
 	8. 必要的話，請執行後置部署指令：
 	```
 	<appname> run
-```
+	```
 	9. 開啟應用程式，並驗證其運作正常：
 	```
 	<appname> open
-```
+	```
 
 ## 從執行列部署應用程式失敗
 {: #deployinganappfromtherunbarfails}
@@ -1260,7 +1255,7 @@ git clone <git_repository_URL>
 
  
 
-若要重新啟動您的帳戶，請聯絡 [{{site.data.keyword.Bluemix_notm}} 支援中心 ![外部鏈結圖示](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}。在電子郵件中，您必須包含下列資訊：
+若要重新啟動您的帳戶，請與 [{{site.data.keyword.Bluemix_notm}} 支援中心 ![外部鏈結圖示](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window} 聯絡。在電子郵件中，您必須包含下列資訊：
 {: tsResolve}
 
   * 您用來登入 {{site.data.keyword.Bluemix_notm}} 的 IBM ID。
@@ -1380,22 +1375,22 @@ git clone <git_repository_URL>
   * [Cloud Foundry Java 建置套件 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack){: new_window}。這個建置套件具有內建的機制，可以確保使用最新版本的建置套件。如需此機制運作方式的相關資訊，請參閱 [extending-caches.md ![外部鏈結圖示](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}。 
   * [Cloud Foundry Node.js 建置套件 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}。這個建置套件功能與使用環境變數類似。為了讓 Node.js 建置套件能每次從網際網路下載 node 模組，請在 cf 指令行介面中，鍵入下列指令： 	
   ```
-set NODE_MODULES_CACHE=false
-```
+  set NODE_MODULES_CACHE=false
+  ```
 如果您使用的建置套件未提供自動載入最新元件的機制，可以手動刪除快取目錄中的內容，然後採取下列步驟來重新推送應用程式：
   1. 移出空值建置套件的分支，例如 https://github.com/ryandotsmith/null-buildpack。如需如何移出分支的相關資訊，請參閱 [Git Basics - Getting a Git Repository ![外部鏈結圖示](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}。  
   2. 將下行新增到 `null-buildpack/bin/compile` 檔案並確定變更。如需如何確定變更的相關資訊，請參閱 [Git Basics - Recording Changes to the Repository ![外部鏈結圖示](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}。
   ```
-rm -rfv $2/*
-```
+  rm -rfv $2/*
+  ```
   3. 使用下列指令，用已修改的空值建置套件推送應用程式，以刪除快取。完成此步驟之後，應用程式快取目錄中的所有內容都會刪除。
   ```
-cf push appname -p app_path -b <modified_null_buildpack>
-```
+  cf push appname -p app_path -b <modified_null_buildpack>
+  ```
   4. 使用下列指令，用您想要使用的最新建置套件來推送應用程式： 
   ```
-cf push appname -p app_path -b <latest_buildpack>
-```
+  cf push appname -p app_path -b <latest_buildpack>
+  ```
   
 	
 
@@ -1466,12 +1461,12 @@ pid @{HOME}/nginx/logs/nginx.pid;
 	 ```
 	 web.py==0.37
      wsgiref==0.1.2
-```
+	 ```
 	如需如何配置 `requirements.txt` 檔案的相關資訊，請參閱[需求檔案](https://pip.readthedocs.org/en/1.1/requirements.html)。
   2. 在 Python 應用程式的根目錄中，新增 `Procfile` 檔案。`Procfile` 檔案必須包含 Python 應用程式的啟動指令。在下列指令中，*yourappname* 是 Python 應用程式的名稱，而 *PORT* 是 Python 應用程式必須用來接收應用程式使用者要求的埠號。*$PORT* 是選用項目。如果您未於啟動指令中指定 PORT，則會改用應用程式內部的 `VCAP_APP_PORT` 環境變數下的埠號。 
 	```
 	web: python <yourappname>.py $PORT
-```
+	```
 您現在可以將協力廠商的 Python 檔案庫匯入 {{site.data.keyword.Bluemix_notm}} 了。
 
 
@@ -1599,10 +1594,10 @@ pid @{HOME}/nginx/logs/nginx.pid;
 {: tsCauses} 
 
   * 傾出檔案是與執行中應用程式實例一起產生，而且檔案會耗盡配置的磁碟限額。一個應用程式實例的磁碟限額預設為 1 GB。您可以按一下**儀表板 > 應用程式 > 應用程式運行環境**，來檢查您的磁碟用量。下列範例顯示兩個應用程式實例的運行環境資訊（包括磁碟用量）：
-
     ```
-Instance	State	CPU	Memory Usage	Disk Usage
-0		Running	1.0%	344.8MB/512MB	236.8MB/1GB
+    Instance	State	CPU	Memory Usage	Disk Usage
+
+	0		Running	1.0%	344.8MB/512MB	236.8MB/1GB
 	2		Running	2.3%	361.2MB/512MB	235.7MB/1GB
     ```
   * 磁碟限額受限於現行組織配額。
@@ -1617,7 +1612,7 @@ Instance	State	CPU	Memory Usage	Disk Usage
   * 在部署資訊清單中包括下列項目，以較大的磁碟限額來重新部署應用程式：
     ```
 	disk_quota: 2048
-```
+	```
 	
 	
 

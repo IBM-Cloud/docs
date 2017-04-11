@@ -12,14 +12,14 @@ lastupdated: "2017-01-11"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#アプリの保護
+# アプリの保護
 {: #securingapps}
 
 
 SSL 証明書をアップロードし、アプリケーションへのアクセスを制限することにより、アプリケーションを保護することができます。
 {:shortdesc}
 
-##証明書署名要求の作成
+## 証明書署名要求の作成
 {: #ssl_csr}
 
 {{site.data.keyword.Bluemix}} で許可された SSL 証明書をアップロードするには、その前にご使用のサーバーで証明書署名要求 (CSR) を作成しなければなりません。

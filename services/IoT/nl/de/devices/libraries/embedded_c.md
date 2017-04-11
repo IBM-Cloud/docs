@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-08-02"
+  years: 2015, 2017
+lastupdated: "2017-03-13"
 
 ---
 
@@ -22,7 +22,7 @@ Verwenden Sie Embedded C, um Geräte zu erstellen und anzupassen, die in {{site.
 ## Embedded C-Client und Ressourcen herunterladen
 {: #embeddedc_client_download}
 
-Wechseln Sie für den Zugriff auf die Embedded C-Clientbibliotheken und Beispiele für {{site.data.keyword.iot_short_notm}} in GitHub in das Repository [iotf-embeddedc](https://github.com/ibm-messaging/iotf-embeddedc) und folgen Sie den Installationsanweisungen.
+Wechseln Sie für den Zugriff auf die Embedded C-Clientbibliotheken und Beispiele für {{site.data.keyword.iot_short_notm}} in GitHub in das Repository [iotf-embeddedc ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/iotf-embeddedc){: new_window} und folgen Sie den Installationsanweisungen.
 
 
 ## Abhängigkeiten
@@ -30,7 +30,7 @@ Wechseln Sie für den Zugriff auf die Embedded C-Clientbibliotheken und Beispiel
 
 |Abhängigkeit |Beschreibung|
 |:---|:---|
-|[Bibliothek für Eclipse Paho Embedded C](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git) |Stellt eine MQTT-C-Clientbibliothek bereit. Weitere Informationen finden Sie unter [MQTT Client Package -  C for embedded devices](http://www.eclipse.org/paho/clients/c/embedded/).|
+|[Bibliothek für Eclipse Paho Embedded C ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git){: new_window} |Stellt eine MQTT-C-Clientbibliothek bereit. Weitere Informationen finden Sie in [MQTT Client Package -  C for embedded devices ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window}.|
 
 
 ## Installation
@@ -224,4 +224,4 @@ Zum Trennen der Verbindung zum Client und zum Freigeben der Verbindungen führen
 ## Beispiele
 {: #samples}
 
-Beispielcode für Geräte und Anwendungen wird in [GitHub](https://github.com/ibm-messaging/iotf-embeddedc/tree/master/samples) bereitgestellt.
+Beispielcode für Geräte und Anwendungen wird in [GitHub ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/iotf-embeddedc/tree/master/samples){: new_window} bereitgestellt.

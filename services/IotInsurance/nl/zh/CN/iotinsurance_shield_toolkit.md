@@ -1,37 +1,48 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-26"
-
+  years: 2016, 2017
+lastupdated: "2017-03-01"
 ---
 
-
-
-{:new_window: target="\_blank"}
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 
 # 保障工具包
 {: #iot4i_shield_toolkit}
-保障是一组规则和操作，从传感器接收到的输入（即有效内容）中的特定条件会触发这些操作。保障的作用是通过识别危险并创建相应的响应来保护财产和用户。此示例显示了如何设置环境，定义保障，创建用户，然后将保障与用户相关联。您还可以选择创建升级和模拟危险。
+使用保障通过识别危险并创建相应的自动响应来保护财产和用户。通过使用下面的指示信息和示例，来使用或修改 {{site.data.keyword.iotinsurance_short}} 保障库中包含的保障或创建并实施自己的保障。
 {:shortdesc}
+
+## 关于保障。
+保障是一组规则和定义的操作，从传感器接收到的输入中的特定条件会触发这些操作。例如，您可以使用某个规则来创建保障，通过该规则，在传感器检测到漏水时会发送短信。
+
+## 从 {{site.data.keyword.iotinsurance_short}} 保障库使用保障
+
+您可以在 [{{site.data.keyword.iotinsurance_short}} 保障库 ![外部链接](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-shields){: new_window} 中找到各种预定义保障。请查看该站点上的自述文件，以获取下载和开始使用保障的指示信息。
+
+## 创建自己的保障
+此示例显示了如何设置环境，定义保障，创建用户，然后将保障与用户相关联。您还可以选择创建升级和模拟危险。
+  
 
 以下各部分中说明了用于创建简单漏水保障的代码样本。[iot4i-api-examples-nodejs GitHub 存储库](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/)中提供了一组完整的示例代码。
 
-## 先决条件
+### 先决条件
 开始之前，请确保满足以下先决条件：
 
 - 已在计算机上安装 [Node.js](https://nodejs.org/en/)。  
 - 支持 Node.js 的运行时环境，例如 Eclipse。
 - Git 软件以及对 [API 示例的 GitHub 源代码存储库](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs)的访问权。或者，您可以下载[带有源代码文件的归档](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/archive/master.zip)。
-- 准备好的源代码。要准备源代码，请完成以下步骤：
+- 准备好的源代码。  
+要准备源代码，请完成以下步骤：
   1. 将 [GitHub 源代码存储库](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs)克隆或下载到您的计算机。
   2. 通过使用命令行转至包含克隆的源代码文件的文件夹并运行 `npm install` 命令来安装项目的开放式源代码必备软件。
 
-## 设置环境
+### 设置环境
 {: #environment}
 要将环境配置为发送 REST API 调用，必须在 config.js 文件中配置 API 的 URL。在此上下文中可忽略聚集器 URL。
 
@@ -46,7 +57,7 @@ var config = module.exports = {
 };
 ```
 
-## 创建保障定义
+### 创建保障定义
 {: #create_shield_def}
 
 方法：POST  
@@ -78,7 +89,7 @@ var shield = {
 - **UUID** - 保障的通用唯一标识 (UUID)。
 - **actions** - 发生危险时触发的操作的列表。在此示例中，会使用 iOS 推送通知将有关危险的信息发送到用户的应用程序。
 
-## 创建保障代码
+### 创建保障代码
 {: #create_shield_code}
 在 shieldCode.js 文件中创建保障代码，以定义保障引擎如何处理有效内容。
 
@@ -145,7 +156,7 @@ var shieldCode = {
   registerShield(DEMO_SHIELD_UUID, DEMO_SHIELD_NAME, demoEntryCondition, undefined, demoSafelet, demoMessage, DEMO_SHIELD_DELAY);
   ```
 
-## 创建用户
+### 创建用户
 {: #create_user}
 
 方法：POST  
@@ -180,7 +191,7 @@ var user = {
   - 10 - 仪表板
   - 1 - 系统管理员
 
-## 创建保障关联
+### 创建保障关联
 {: #create_shield_assoc}
 
 方法：POST  
@@ -202,7 +213,7 @@ var userShield = {
 
 
 
-## 创建模拟危险
+### 创建模拟危险
 {: #create_sim_hazard}
 
 方法：POST  
@@ -239,7 +250,7 @@ var parameters {
 ```
 
 
-## 创建升级
+### 创建升级
 {: #create_promotion}
 
 {{site.data.keyword.iotinsurance_short}} 可以使用移动应用程序向房主发送升级。使用 createPromotion.js 文件来创建升级。

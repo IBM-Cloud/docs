@@ -10,7 +10,7 @@ lastupdated: "2015-03-17"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-#Gestión de app
+# Gestión de app
 {: #manageapps}
 
 Puede utilizar el panel de control de la interfaz de usuario de {{site.data.keyword.Bluemix}} para ver y gestionar sus apps y servicios y para supervisar el uso de recursos mediante los indicadores de cuota.

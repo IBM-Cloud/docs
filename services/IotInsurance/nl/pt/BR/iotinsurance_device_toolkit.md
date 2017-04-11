@@ -1,17 +1,17 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-26"
-
+  years: 2016, 2017
+lastupdated: "2017-03-08"
 ---
 
-
-
-{:new_window: target="\_blank"}
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
 
 
 # Kit de ferramentas de dispositivo
@@ -20,7 +20,11 @@ Usando o kit de ferramentas de dispositivo do {{site.data.keyword.iotinsurance_f
 {:shortdesc}
 
 Os dispositivos podem enviar dados diretamente ao
-{{site.data.keyword.iot_full}} ou por meio da nuvem do fornecedor do dispositivo. Conecte os dispositivos registrando os usuários autorizados e, em seguida, configurando a geração e a recepção de evento de dispositivo. Use as instruções nas seções a seguir para conectar seus dispositivos.
+{{site.data.keyword.iot_full}} ou por meio da nuvem do fornecedor do dispositivo. Conecte os dispositivos registrando os usuários autorizados e, em seguida, configurando a geração e a recepção de evento de dispositivo. Para obter uma lista dos dispositivos e fornecedores suportados, bem como dos
+procedimentos de integração de amostra, veja [Dispositivos
+e fornecedores suportados](iotinsurance_supporteddevices.html).
+
+Use as instruções nas seções a seguir para conectar seus dispositivos.
 
 ## Registrando usuários autorizados
 {: #reg_users}
@@ -38,11 +42,21 @@ provedor então concede autorização e opcionalmente retorna um código OAuth p
 atualizações. O diagrama mostra um fluxo muito básico; provedores OAuth geralmente
 oferecem diversos terminais REST para as etapas que são descritas no diagrama.  
 
-![Fluxo do processo OAuth do {{site.data.keyword.iotinsurance_short}}. Este diagrama é descrito no corpo
-principal do tópico.](images/IoT4I_oauth_flow.svg "{{site.data.keyword.iotinsurance_short}} OAuth process flow")
+![Fluxo do processo OAuth do {{site.data.keyword.iotinsurance_short}}. Este diagrama é descrito no corpo principal do tópico.](images/IoT4I_oauth_flow.svg "{{site.data.keyword.iotinsurance_short}} OAuth process flow")
 
 ### Fluxo de registro do usuário
 {: #user_reg_flow}
+
+O registro do usuário varia por fornecedor. Para entender como obter os tokens de acesso
+de nuvem necessários e como registrá-los no {{site.data.keyword.iotinsurance_short}} usando
+a API, veja [Dispositivos e fornecedores suportados](iotinsurance_supporteddevices.html).
+
+#### Fluxo do registro móvel (*descontinuado*)
+
+**Nota**: o app móvel suporta somente o Wink, e mudanças no {{site.data.keyword.amashort}} desativaram o fluxo de registro do usuário que
+é descrito nesta seção. Esse fluxo está disponível somente para instâncias existentes da
+versão 1.0 do {{site.data.keyword.iotinsurance_short}}.
+
 O diagrama a seguir mostra um fluxo de registro do usuário simplificado. Nesse exemplo,
 uma nova solicitação de registro do usuário é feita de um dispositivo móvel. A
 solicitação é processada pelo {{site.data.keyword.amafull}}, que fornece um
@@ -79,8 +93,8 @@ armazenado no {{site.data.keyword.iot_short_notm}}. O transformador do
 {{site.data.keyword.iotinsurance_short}} armazena em cache essas informações
 e, em seguida, enriquece os eventos de dispositivo com o link para o usuário.
 
-### Fluxo de registro de eventos do dispositivo
-{: #device_event_reg}
+### Nuvem para nuvem - fluxo de eventos do dispositivo
+{: #device_event_flow}
 O diagrama a seguir mostra um fluxo de evento de dispositivo simplificado. Nesse exemplo,
 um dispositivo detecta um vazamento de água. O transformador do
 {{site.data.keyword.iotinsurance_short}} periodicamente pesquisa a nuvem do
@@ -112,8 +126,7 @@ Pseudo-função | Description (Descrição)
 `getProviderDevices(providerUserToken)` | Chama a API REST do provedor de dispositivo para obter o status dos dispositivos do usuário que estão utilizando o token de acesso do usuário.
 `findDevicesToAdd(), findDevicesToDel(), findDevicesToUpdate()` | Localiza os dispositivos novos, excluídos e modificados, comparando dispositivos registrados com dispositivos que existem atualmente no provedor de dispositivo.
 ` syncData()` | Sincronize os dispositivos do usuário, excluindo dispositivos antigos, incluindo novos e atualizando os modificados.  
- `notifyIoTP()` | Notifique o IoTP com as mudanças como eventos MQTT.
-
+ `notifyIoTP()` | Notifique o {{site.data.keyword.iot_short_notm}} sobre as mudanças, tais como eventos MQTT.
 O transformador posta atualizações de status para o {{site.data.keyword.iot_short_notm}}, conforme mostrado no exemplo de código a seguir.
 ```
 // as specified in VCAP.services
@@ -144,7 +157,7 @@ try {
 
 O transformador usa o {{site.data.keyword.cloudant}} para acessar dados do
 usuário, como token de acesso, e para armazenar o último status conhecido do dispositivo
-para propósitos de comparação. Os métodos e fragmentos de código do
+para propósitos de comparação.  Os métodos e fragmentos de código do
 {{site.data.keyword.cloudant}} a seguir são fornecidos como referência.  
 
 `getUserTokensByProvider` Esse método obtém todos os tokens do usuário de um provedor específico.
@@ -198,11 +211,13 @@ dbhelper.bulkDelDevices(userDevices, function (err, results) {
 {: #deploy_new_transformer}
 É possível implementar uma nova instância de transformador na mesma organização e espaço em que o {{site.data.keyword.iotinsurance_short}} é implementado.  
 
+**Nota:** para obter informações e assistência ao implementar uma nova
+instância do Transformer, veja [Entrando em
+contato com o suporte](../support/index.html#contacting-support).
+
 Antes de iniciar, faça download e instale a interface de linha de comandos do Cloud
 Foundry. Use a interface de linha de comandos do Cloud Foundry para modificar e
-implementar instâncias de serviço para o {{site.data.keyword.iot_short_notm}}. Para obter mais informações, consulte
-[Iniciar
-codificação com a interface da linha de comandos cf](https://www.ng.bluemix.net/docs/#starters/install_cli.html).
+implementar instâncias de serviço para o {{site.data.keyword.iot_short_notm}}. Para obter mais informações, veja [Iniciar codificação com a interface da linha de comandos cf ![Ícone de link externo](../../icons/launch-glyph.svg)](https://www.ng.bluemix.net/docs/#starters/install_cli.html){:new_window}.
 
 1. Na interface da linha de comandos, mude seu diretório para o `diretório
 com as origens e o arquivo YML descritor de implementação` usando o
@@ -217,7 +232,7 @@ e anote o nome do transformador. O nome termina com `transformer`.
 ```
 $ cf stop iot4i-dev-transformer
 ```
-4. Liste todos os serviços incluídos no {{site.data.keyword.iotinsurance_short}} e anote os nomes dos serviços {{site.data.keyword.iot_short_notm}} e {{site.data.keyword.cloudant}}. O nome dos serviços do {{site.data.keyword.iot_short_notm}} inclui as letras `iotf` no nome. O nome do serviço do {{site.data.keyword.cloudant}} inclui `cloudant` no nome.
+4. Liste todos os serviços incluídos no {{site.data.keyword.iotinsurance_short}} e anote os nomes dos serviços {{site.data.keyword.iot_short_notm}} e {{site.data.keyword.cloudant}}.  O nome dos serviços do {{site.data.keyword.iot_short_notm}} inclui as letras `iotf` no nome. O nome do serviço do {{site.data.keyword.cloudant}} inclui `cloudant` no nome.
 
 5. Usando os nomes que você anotou nas etapas anteriores, crie um arquivo descritor de implementação semelhante ao exemplo a seguir.  
   ```
@@ -237,7 +252,7 @@ $ cf stop iot4i-dev-transformer
        APIDOMAIN: iot4insurance-api-v.mybluemix.net
        NODE_MODULES_CACHE: false
   ```
-6. Envie por push o transformador para o {{site.data.keyword.bluemix_notm}} usando o
+6. Envie por push o transformador para o {{site.data.keyword.Bluemix_notm}} usando o
 comando a seguir, substituindo `newtransformer` pelo nome do seu arquivo
 descritor de implementação:
   ```
@@ -247,21 +262,3 @@ descritor de implementação:
   ```
   $ cf logs iot4i-dev-transformer
   ```
-
-# Links Relacionados
-{: #rellinks}
-
-## Tutoriais e amostras
-{: #samples}
-* [Código de app móvel de amostra no GitHub](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## Referência de API
-{: #api}
-* [API do {{site.data.keyword.iotinsurance_short}}](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [Exemplos de API do {{site.data.keyword.iotinsurance_short}}](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## Links Relacionados
-{: #general}
-* [Documentação do {{site.data.keyword.iot_full}}](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [Fórum de suporte do desenvolvedor](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-* [Fórum de suporte do Stack overflow](http://stackoverflow.com/questions/tagged/ibm-bluemix)

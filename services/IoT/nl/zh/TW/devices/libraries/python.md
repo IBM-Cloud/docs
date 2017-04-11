@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-27"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2016-10-27"
 ## 下載 Python 用戶端及資源
 {: #python_client_download}
 
-若要存取適用於 {{site.data.keyword.iot_short_notm}} 的 Python 用戶端及其他可用的資源，請移至 GitHub 中的 [iot-python](https://github.com/ibm-watson-iot/iot-python) 儲存庫，並完成安裝指示。
+若要存取適用於 {{site.data.keyword.iot_short_notm}} 的 Python 用戶端及其他可用的資源，請移至 GitHub 中的 [iot-python ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-python){: new_window} 儲存庫，並完成安裝指示。
 
 ## 建構子
 {: #constructor}
@@ -152,7 +152,7 @@ client.commandCallback = myCommandCallback
 ## 自訂訊息格式支援
 {: #custom_message_format}
 
-訊息格式預設為 `json`，這表示，程式庫支援 JSON 格式的 Python 字典物件編碼及解碼。當訊息格式設為 `json-iotf` 時，訊息會根據 {{site.data.keyword.iot_short_notm}}「JSON 有效負載」規格進行編碼。若要為您自己的自訂訊息格式新增支援，請參閱 GitHub 中的[自訂訊息格式範例](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat)。
+訊息格式預設為 `json`，這表示，程式庫支援 JSON 格式的 Python 字典物件編碼及解碼。當訊息格式設為 `json-iotf` 時，訊息會根據 {{site.data.keyword.iot_short_notm}}「JSON 有效負載」規格進行編碼。若要為您自己的自訂訊息格式新增支援，請參閱 GitHub 中的[自訂訊息格式範例 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat){: new_window}。
 
 建立自訂編碼器模組時，您必須在裝置用戶端中登錄它，如下列範例所概述：
 

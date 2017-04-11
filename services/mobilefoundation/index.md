@@ -127,10 +127,10 @@ Go to [Using the Mobile Foundation service to set up MobileFirst Server<!-- on I
 
 
 # Related Links
-{: #rellinks}
+{: #rellinks  notoc}
 
 ## Related Links
-{: #general}
+{: #general notoc}
 
 *	[IBM MobileFirst Platform Foundation V8.0.0 product documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}
 *	[IBM MobileFirst Platform Developer Center ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://mobilefirstplatform.ibmcloud.com){: new_window}

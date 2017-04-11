@@ -76,7 +76,7 @@ cf plugins
 Utilice el índice en la siguiente tabla para hacer referencia a los mandatos de CLI dev_mode utilizados con frecuencia:
 
 <table summary="Índice de mandatos de dev_mode">
- <caption>Tabla 1. Mandatos de dev_mode</caption>
+<caption>Tabla 1. Mandatos de dev_mode</caption>
  <thead>
  <th colspan="4">Mandatos de dev_mode</th>
  </thead>

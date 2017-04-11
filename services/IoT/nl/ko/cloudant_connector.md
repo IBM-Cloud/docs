@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-16"
+  years: 2016, 2017
+lastupdated: "2017-03-13"
 
 ---
 
@@ -90,6 +90,18 @@ Bluemix 조직에서 개발자 권한이 있는지와 Bluemix를 통해 사인�
 
 이제 디바이스 데이터가 {{site.data.keyword.cloudant}}에 저장됩니다. 
 
+## 히스토리언 서비스 사용에 대한 레시피  
+{: #recipes}
+
+다음 레시피는 {{site.data.keyword.iot_short}}의 히스토리언 스토리지로서 {{site.data.keyword.cloudant_short_notm}}를 사용하는 방법을 설명합니다. 
+
+- [{{site.data.keyword.iot_short}}에 대한 히스토리언 데이터 스토리지로 {{site.data.keyword.cloudant_short_notm}} 구성 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-parti/){: new_window} 레시피는 디바이스 데이터가 {{site.data.keyword.cloudant_short_notm}}에 저장되는 방법을 설명하고 히스토리언 데이터 스토리지로서 {{site.data.keyword.cloudant_short_notm}}에 디바이스 데이터를 구성 및 저장하는 방법을 보여줍니다. 
+
+- [{{site.data.keyword.cloudant_short_notm}}에서 {{site.data.keyword.iot_short}} 디바이스 데이터 조회 및 처리 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-partii){: new_window} 레시피는 {{site.data.keyword.cloudant_short_notm}}에 저장되는 디바이스 데이터를 조회하고 이에 대한 데이터 처리 오퍼레이션을 수행하는 방법을 표시합니다. 
+
+- [Cloudant NoSQL DB에 저장된 Watson IoT 디바이스 데이터 시각화 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=27327){: new_window} 레시피는 Watson IoT Platform 대시보드에 디바이스 데이터를 표시하기 위해 선형 차트 카드와 히스토리언 데이터 스토리지 간의 연결 방법을 보여줍니다. 
+
+
 ## 새 디자인 문서 작성   
 {: #design_docs}
 
@@ -98,7 +110,7 @@ Bluemix 조직에서 개발자 권한이 있는지와 Bluemix를 통해 사인�
 
 {{site.data.keyword.iot_short_notm}} 내에 포함된 기본 디자인 문서는 요약 기능과는 별도로 현재 히스토리언에서 사용 가능한 조회를 구현합니다. 
 
-추가적인 디자인 문서가 구성 데이터베이스에 추가될 수 있으며, 작성 시에 새 버킷 간격 데이터베이스에 복사됩니다. 디자인 문서를 구성 데이터베이스에 추가하려면 [Cloudant API 문서](https://docs.cloudant.com/document.html)를 참조하십시오. 
+추가적인 디자인 문서가 구성 데이터베이스에 추가될 수 있으며, 작성 시에 새 버킷 간격 데이터베이스에 복사됩니다. 구성 데이터베이스에 디자인 문서를 추가하려면 [Cloudant API 문서 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.cloudant.com/document.html){: new_window}를 참조하십시오. 
 
 <!--  # Related links
 {: #rellinks}

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-10-13"
 
 ---
@@ -116,7 +116,7 @@ Bevor Sie Ihre Karten in {{site.data.keyword.iot_short_notm}} verwenden können,
 9. Verknüpfen Sie Ihren Kartenserver mit {{site.data.keyword.iot_short_notm}}.
 Verknüpfen Sie Ihren neu implementierten Server für angepasste Karten mit {{site.data.keyword.iot_short_notm}}.  
 **Tipp:** Da Ihr Server für angepasste Karten eine vollständige Replik des Servers für Kartenbeispiele sein kann, werden Ihnen in Ihrer Umgebung möglicherweise Duplikatkarten angezeigt. Entfernen Sie die Verbindung zum Server für Kartenbeispiele, um nur die Karten von Ihrem Server für angepasste Karten anzuzeigen.
- 1. Wechseln Sie zur Option für die **Erweiterungen**.
+ 1. Wechseln Sie zu der Option für die **Erweiterungen**.
  2. Klicken Sie auf der Kachel **Angepasste Karte** auf das Zahnradsymbol, um die Konfiguration zu aktualisieren.
  4. Klicken Sie im Abschnitt für die Konfiguration von angepassten Karten auf **Hinzufügen** und geben Sie im Serverfeld die sichere URL (HTTPS) für Ihren Server für angepasste Karten ein.  
 **Wichtig:** Überprüfen Sie, ob Sie eine Verbindung zu dem richtigen bekannten und geschützten Server für angepasste Karten herstellen.
@@ -130,13 +130,13 @@ Gut! Sie haben erfolgreich einen Kartenserver eingerichtet und Ihre erste Beispi
 Nach der Konfiguration und Überprüfung der HelloWorld-Karte können Sie die angepassten Karten erweitern und eigene erstellen.
 
 Das Beispielrepository für angepasste Karten enthält folgende Beispielkarten:
-- HelloWorld
-Eine einfache Karte, die das Basisbeispiel 'Hello World' umfasst.
-- Leer
+- HelloWorld  
+Eine einfache Karte, die das Basisbeispiel 'Hello World' bereitstellt.
+- Empty  
 Eine leere Karte, die die Infrastruktur für eine Karte enthält. Verwenden Sie diese Karte als Vorlage, wenn Sie eine Karte völlig neu erstellen.
-- Webcam
+- Webcam  
 Eine einfache Webcam-Karte. Konfigurieren Sie die Karte mit einer Webcam-URL und legen Sie die Bildwiederholfrequenz fest.
-- iFrame
+- iFrame  
 Eine einfache iFrame-Karte, die Sie verwenden können, um eine beliebige sichere Webseite (HTTPS) in Ihr Board zu integrieren.
 
 Mit den folgenden allgemeinen Schritten wird eine neue Karte erstellt:

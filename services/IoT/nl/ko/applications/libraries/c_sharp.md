@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-07-28"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -20,10 +20,10 @@ lastupdated: "2016-07-28"
 C#을 사용하여 {{site.data.keyword.iot_full}}에서 조직과 상호작용하는 애플리케이션을 빌드하고 사용자 정의할 수 있습니다. 제공된 정보와 예제를 사용하면 C#을 사용한 애플리케이션 개발을 시작할 수 있습니다.
 {:shortdesc}
 
-## C# 클라이언트 및 자원 다운로드
+## C# 클라이언트 및 리소스 다운로드
 {: #csharp_client_download}
 
-{{site.data.keyword.iot_short_notm}}의 C# 클라이언트 라이브러리와 샘플에 액세스하려면 GitHub의 [iot-csharp](https://github.com/ibm-watson-iot/iot-csharp) 저장소로 이동하여 설치 지시사항을 완료하십시오. 
+{{site.data.keyword.iot_short_notm}}에 대한 C# 클라이언트 라이브러리 및 샘플에 액세스하려면 GitHub의 [iot-csharp ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/iot-csharp){: new_window} 저장소로 이동하여 설치 지시사항을 완료하십시오. 
 
 
 ## 생성자

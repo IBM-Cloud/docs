@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE map PUBLIC "-//IBM//DTD DITA IBM Map//EN"
+ "ibm-map.dtd">
+
+
+<map xml:lang="ko-kr">
+<title>Watson IoT Platform</title>
+<topicref format="html" href="index.html" locktitle="yes"
+navtitle="Watson IoT Platform" scope="peer">
+<topicref format="html" href="index.html" locktitle="yes"
+navtitle="시작하기" scope="peer">
+<topicref format="html" href="index.html#byb" navtitle="시작하기 전에"
+scope="peer"></topicref>
+<topicref format="html" href="index.html#up_and_running"
+navtitle="디바이스 연결" scope="peer"></topicref>
+<topicref format="html" href="index.html#analyzing_data"
+navtitle="디바이스 데이터 분석" scope="peer"></topicref>
+<topicref format="html" href="index.html#develop_applications"
+navtitle="애플리케이션 개발" scope="peer"></topicref>
+</topicref>
+<topicref format="html"
+href="iotplatform_overview.html#about_iotplatform" navtitle="정보"
+outputclass="subsection" scope="peer">
+<topicref format="html"
+href="iotplatform_overview.html#watsoniotplatform_architecture"
+navtitle="아키텍처" outputclass="subsection" scope="peer">
+</topicref>
+<topicref format="html"
+href="iotplatform_overview.html#watsoniotplatform_importantconcepts"
+navtitle="개념" scope="peer"></topicref>
+<topicref format="html" href="feature_overview.html"
+navtitle="기능 개요" scope="peer">
+<topicref format="html" href="feature_overview.html#connect"
+navtitle="연결" scope="peer"></topicref>
+<topicref format="html"
+href="feature_overview.html#information_management"
+navtitle="정보 관리" scope="peer"></topicref>
+<topicref format="html" href="feature_overview.html#analytics"
+navtitle="분석" scope="peer"></topicref>
+<topicref format="html" href="feature_overview.html#risk_management"
+navtitle="위험 관리" scope="peer"></topicref>
+</topicref>
+<topicref  format="html" href="reference/standards_and_requirements.html"
+navtitle="표준 및 요구사항" scope="peer">
+<topicref format="html" href="reference/standards_and_requirements.html#mqtt" navtitle="MQTT"
+scope="peer"/>
+</topicref>
+<topicref format="html" href="reference/bluemix_and_platform.html"
+navtitle="Bluemix 및 Watson IoT Platform" scope="peer">
+<topicref format="html" href="reference/bluemix_and_platform.html#iot-bluemix-work"
+navtitle="Bluemix의 Watson IoT Platform" scope="peer"/>
+<topicref format="html" href="reference/bluemix_and_platform.html#iot-sla"
+navtitle="서비스 레벨 계약" scope="peer"/>
+</topicref>
+<topicref format="html" href="reference/bluemix_and_platform.html#iot-pricing"
+navtitle="IoT 가격 책정" scope="peer"/>
+</topicref>
+<topicref format="html" href="iotplatform_beta_features.html" navtitle="베타 기능"
+outputclass="subsection" scope="peer">
+<topicref format="html" navtitle="인터페이스를 사용하여 디바이스 데이터 맵핑" outputclass="subsection"
+href="information_management/im_index.html">
+<topicref format="html" outputclass="subsection"
+href="information_management/im_index.html#overview" navtitle="개요"></topicref>
+<topicref format="html" outputclass="subsection" navtitle="데이터 플로우"
+href="information_management/im_index.html#mapping"></topicref>
+<topicref format="html" outputclass="subsection" navtitle="핵심 개념"
+href="information_management/im_index.html#key_concepts"></topicref>
+<topicref format="html" outputclass="subsection" navtitle="리소스"
+href="information_management/im_index.html#resources"></topicref>
+<topicref format="html" outputclass="subsection" navtitle="상위 레벨 워크플로우"
+href="information_management/im_index.html#workflow"></topicref>
+<topicref format="html" outputclass="subsection" navtitle="예제 시나리오"
+href="information_management/im_index.html#scenario"></topicref>
+
+</topicref>
+<topicref format="html" navtitle="인터페이스를 사용하여 디바이스 및 사물의 상태 확인"
+outputclass="subsection" href="information_management/im_index_split.html" audience="blue">
+<topicref format="html" outputclass="subsection"
+href="information_management/im_index_split.html#overview" navtitle="개요"
+></topicref>
+<topicref format="html" outputclass="subsection" navtitle="데이터 플로우"
+href="information_management/im_index_split.html#mapping"></topicref>
+<topicref format="html" outputclass="subsection" navtitle="핵심 개념"
+href="information_management/im_index_split.html#key_concepts"></topicref>
+
+<topicref format="html" outputclass="subsection" navtitle="상위 레벨 워크플로우"
+href="information_management/im_index.html#workflow"></topicref>
+<topicref format="html" outputclass="subsection"
+navtitle="시나리오 1: 디바이스 유형 인터페이스에 대한 작업"
+href="information_management/im_index_scenario.html"></topicref>
+<topicref format="html" outputclass="subsection"
+navtitle="시나리오 2: 사물 유형 인터페이스에 대한 작업"
+href="information_management/im_index_scenario_thing.html"></topicref>
+<topicref format="html" outputclass="subsection" navtitle="리소스"
+href="information_management/im_index_split.html#resources"></topicref>
+</topicref>
+<topicref format="html" href="gateways/gateway-access-control.html"
+navtitle="게이트웨이 액세스 제어" scope="peer">
+<topicref format="html" href="gateways/gateway-access-control.html#gw_roles"
+navtitle="역할 지정" locktitle="yes"/>
+<topicref format="html" href="gateways/gateway-access-control.html#devices_groups"
+navtitle="디바이스 및 리소스 그룹" locktitle="yes"/>
+<topicref format="html" href="gateways/gateway-access-control.html#finding_groups"
+navtitle="리소스 그룹 찾기" locktitle="yes"/>
+<topicref format="html" href="gateways/gateway-access-control.html#querying_groups"
+navtitle="리소스 그룹 조회" locktitle="yes"/>
+<topicref format="html" href="gateways/gateway-access-control.html#crt_del_groups"
+navtitle="리소스 그룹 작성 및 삭제" locktitle="yes"/>
+<topicref format="html" href="gateways/gateway-access-control.html#update_groups"
+navtitle="그룹 특성 업데이트" locktitle="yes"/>
+<topicref format="html" href="gateways/gateway-access-control.html#device_group_props"
+navtitle="디바이스 특성 검색 및 업데이트" locktitle="yes"/>
+</topicref>
+<topicref format="html" outputclass="subsection" navtitle="게이트웨이 디바이스용 HTTP Messaging API"
+href="gateways/gw_intro_api.html">
+
+<topicref format="html" href="gateways/gw_intro_api.html#rest_messaging_api"
+navtitle="HTTP Messaging API에 액세스" locktitle="yes"/>
+<topicref format="html" href="gateways/gw_intro_api.html#client_connections"
+navtitle="클라이언트 연결" locktitle="yes"/>
+<topicref href="gateways/gw_intro_api.html#event_publication" format="html"
+navtitle="이벤트 공개"/>
+</topicref>
+<topicref format="html" href="applications/mqtt.html#shared_sub_mixed"
+navtitle="혼합 지속성 공유 구독" locktitle="yes"/>
+</topicref>
+<topicref format="html" href="reference/security/index.html"
+navtitle="Watson IoT Platform 보안" scope="peer">
+<topicref format="html"
+href="reference/security/index.html#iot-bluemix-sec"
+navtitle="Watson IoT Platform 및 Bluemix" scope="peer"></topicref>
+<topicref format="html" href="reference/security/index.html#compliance"
+navtitle="보안 준수" scope="peer"></topicref>
+<topicref format="html" href="reference/security/index.html#terminology"
+navtitle="용어" scope="peer"></topicref>
+<topicref format="html" href="reference/security/index.html#secure-org"
+navtitle="조직 관리 보안" scope="peer"></topicref>
+<topicref format="html"
+href="reference/security/index.html#secure-credentials"
+navtitle="디바이스 및 애플리케이션 보안" scope="peer"></topicref>
+<topicref format="html"
+href="reference/security/index.html#secure-device-connection"
+navtitle="디바이스 연결 보안" scope="peer"></topicref>
+<topicref format="html"
+href="reference/security/index.html#prevent-leak-devices"
+navtitle="디바이스 간 보안" scope="peer"></topicref>
+<topicref format="html"
+href="reference/security/index.html#prevent-leak-org"
+navtitle="조직 간 보안" scope="peer">
+</topicref>
+<topicref format="html" href="reference/security/connect_devices_apps_gw.html"
+navtitle="애플리케이션, 디바이스 및 게이트웨이 연결" scope="peer">
+<topicref format="html" href="reference/security/connect_devices_apps_gw.html#client_connect_url"
+outputclass="subsection" scope="peer" navtitle="클라이언트 연결 URL"/>
+<topicref format="html" href="reference/security/connect_devices_apps_gw.html#client_port_security"
+outputclass="subsection" scope="peer" navtitle="포트 보안"/>
+<topicref format="html" href="reference/security/connect_devices_apps_gw.html#tls_requirements"
+outputclass="subsection" scope="peer" navtitle="TLS 요구사항"/>
+<topicref format="html" href="reference/security/connect_devices_apps_gw.html#mqtt_authentication"
+outputclass="subsection" scope="peer" navtitle="MQTT 클라이언트 인증"/>
+</topicref>
+<topicref format="html" href="reference/security/custom_cards_server.html"
+navtitle="사용자 정의 카드 서버 보안" scope="peer"/>
+<topicref format="html" href="reference/security/RM_security.html"
+navtitle="위험 및 보안 관리" scope="peer">
+<topicref format="html" href="reference/security/set_up_certificates.html"
+navtitle="인증서 구성" scope="peer">
+<topicref href="reference/security/set_up_certificates.html#cert_reqs"
+navtitle="인증서 요구사항"/>
+<topicref href="reference/security/set_up_certificates.html#reg_ca_cert"
+navtitle="CA 인증서 등록"/>
+<topicref href="reference/security/set_up_certificates.html#reg_msg_cert"
+navtitle="메시징 서버 인증서 등록"/>
+</topicref>
+<topicref format="html" href="reference/security/set_up_policies.html"
+navtitle="보안 정책 구성" scope="peer">
+<topicref href="reference/security/set_up_policies.html#config_connect"
+navtitle="연결 정책 구성"/>
+</topicref>
+<topicref href="reference/security/set_up_policies.html#config_black_white"
+navtitle="블랙리스트 및 화이트리스트 구성"/>
+</topicref>
+</topicref>
+<topicref format="html" href="iotplatform_task.html#devices"
+navtitle="Watson IoT Platform 관리" outputclass="subsection"
+scope="peer">
+<topicref format="html" href="iotplatform_task.html#devices"
+navtitle="디바이스 연결" scope="peer">
+<topicref format="html" href="iotplatform_task.html#byb"
+navtitle="시작하기 전에" scope="peer"></topicref>
+<topicref format="html"
+href="iotplatform_task.html#iotplatform_subtask1"
+navtitle="디바이스 등록" scope="peer"></topicref>
+<topicref format="html" href="iotplatform_task.html#iotplatform_subtask2"
+navtitle="디바이스 연결" scope="peer"></topicref>
+<topicref audience="blue" format="html"
+href="reference/device_model.html" navtitle="디바이스 모델" scope="peer">
+</topicref>
+</topicref>
+<topicref format="html" href="gateways/dashboard.html"
+navtitle="게이트웨이 연결" scope="peer">
+<topicref format="html" href="gateways/dashboard.html#Prerequisites"
+navtitle="시작하기 전에" scope="peer"></topicref>
+<topicref format="html" href="gateways/dashboard.html#register_gateway"
+navtitle="게이트웨이 등록" scope="peer"></topicref>
+<topicref format="html" href="gateways/dashboard.html#connect_gateway"
+navtitle="게이트웨이 연결" scope="peer"></topicref>
+<topicref format="html" href="gateways/dashboard.html#gateway_devices"
+navtitle="게이트웨이 디바이스 설정" scope="peer"></topicref>
+<topicref format="html" href="gateways/dashboard.html#edge"
+navtitle="EAA(Edge Analytics Agent) 설치" scope="peer"></topicref>
+</topicref>
+<topicref format="html" href="platform_authorization.html"
+navtitle="애플리케이션 연결" scope="peer">
+<topicref format="html" href="platform_authorization.html#api-key"
+navtitle="API 키 연결" scope="peer"></topicref>
+<topicref format="html"
+href="platform_authorization.html#bluemix-binding"
+navtitle="Bluemix 바인딩 연결" scope="peer"></topicref>
+</topicref>
+<topicref format="html" href="cloudant_connector.html"
+navtitle="Cloudant 히스토리언 서비스 연결" scope="peer">
+<topicref format="html" href="cloudant_connector.html#byb"
+navtitle="시작하기 전에" scope="peer"></topicref>
+<topicref format="html" href="cloudant_connector.html#design_docs"
+navtitle="새 디자인 문서 작성 " scope="peer"></topicref>
+</topicref>
+<topicref format="html" href="message_hub.html"
+navtitle="메시지 허브 히스토리언 서비스 연결" scope="peer">
+<topicref format="html" href="cloudant_connector.html#byb" navtitle="시작하기 전에" scope="peer"
+/>
+</topicref>
+<topicref format="html" href="im_schemas.html"
+navtitle="스키마 작성" scope="peer">
+<topicref format="html" href="im_schemas.html#add_schema"
+navtitle="디바이스 스키마 추가" scope="peer"></topicref>
+<topicref format="html" href="im_schemas.html#identify-datapoints"
+navtitle="디바이스 특성 식별" scope="peer"/>
+<topicref format="html" href="im_vir_calculations.html"
+navtitle="가상 특성의 고급 계산" scope="peer"/>
+</topicref>
+<topicref format="html" navtitle="인터페이스를 사용하여 디바이스 데이터 맵핑(베타)"
+outputclass="subsection" href="information_management/im_index_split.html" audience="blue">
+<topicref format="html" outputclass="subsection"
+href="information_management/im_index_split.html#overview" audience="blue" navtitle="개요"
+></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="데이터 플로우"
+href="information_management/im_index_split.html#mapping"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="핵심 개념"
+href="information_management/im_index_split.html#key_concepts"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="리소스"
+href="information_management/im_index_split.html#resources"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="상위 레벨 워크플로우"
+href="information_management/im_index_split.html#workflow"></topicref>
+
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="예제 시나리오"
+href="information_management/im_index_scenario.html#scenario"></topicref>
+</topicref>
+<topicref format="html" href="add_users.html" navtitle="사용자 액세스 관리" scope="peer">
+<topicref format="html" scope="peer" href="add_users.html#adding-new-users" navtitle="사용자 추가"/>
+<topicref format="html" scope="peer" href="add_users.html#editing-users" navtitle="사용자 편집"/>
+<topicref format="html" scope="peer" href="add_users.html#blocking-users" navtitle="사용자 차단"/>
+<topicref format="html" scope="peer" href="add_users.html#removing-users" navtitle="사용자 제거"
+/>
+</topicref>
+<topicref format="html" href="singlesignon.html" navtitle="IBM 싱글 사인온 사용" scope="peer"/>
+<topicref format="html" href="roles_index.html" navtitle="사용자, 애플리케이션 및 게이트웨이 역할"
+outputclass="subsection" scope="peer">
+<topicref format="html" href="managing_user_roles.html" navtitle="사용자 역할 관리" scope="peer"/>
+<topicref format="html" href="custom_role.html" navtitle="사용자 정의 역할 사용" scope="peer"/>
+<topicref format="html" href="reference/roles_access.html"
+navtitle="사용자 역할의 액세스 레벨" scope="peer"/>
+<topicref format="html" href="reference/app_roles_access.html"
+navtitle="애플리케이션 역할의 액세스 레벨" scope="peer"/>
+<topicref format="html" href="reference/gateway_roles_access.html"
+navtitle="게이트웨이 역할의 액세스 레벨" scope="peer"/>
+</topicref>
+<topicref format="html" href="reference/extensions/index.html"
+navtitle="외부 서비스 통합" scope="peer">
+<topicref format="html" href="reference/extensions/index.html#jasper"
+navtitle="Jasper" scope="peer"></topicref>
+<topicref format="html" href="reference/extensions/index.html#att" navtitle="AT&amp;T" scope="peer"/>
+<topicref format="html" href="reference/extensions/index.html#arm" navtitle="ARM mbed 커넥터"
+scope="peer"/>
+<topicref format="html" href="reference/extensions/index.html#orange" navtitle="Orange" scope="peer"/>
+<topicref format="html" href="reference/extensions/index.html#historical_data"
+navtitle="히스토리 데이터 스토리지" scope="peer"/>
+<topicref format="html" href="reference/extensions/index.html#device_mgmt"
+navtitle="디바이스 관리" scope="peer"/>
+<topicref format="html" href="reference/extensions/index.html#blockchain" navtitle="블록체인"
+scope="peer"/>
+<topicref format="html" href="reference/extensions/index.html#email" navtitle="이메일" scope="peer"/>
+</topicref>
+<topicref format="html" href="information_management/twc_integration.html"
+navtitle="The Weather Company 데이터 통합"></topicref>
+<topicref format="html" href="bl_blockchain_integration.html"
+navtitle="블록체인 패브릭 통합" scope="peer">
+<topicref format="html" href="bl_blockchain_integration.html#byb" navtitle="시작하기 전에"
+scope="peer"/>
+<topicref format="html" href="bl_blockchain_integration.html#getting_started"
+navtitle=" 블록체인 패브릭에 연결" scope="peer"/>
+<topicref format="html" href="bl_blockchain_integration.html#map_device_properties"
+navtitle=" 디바이스 특성 맵핑" scope="peer"/>
+<topicref format="html" href="bl_blockchain_integration.html#test_simple"
+navtitle="샘플 스마트 계약 테스트 구동" scope="peer"/>
+<topicref format="html" href="bl_blockchain_integration.html#next_steps" navtitle="다음 단계"
+scope="peer"/>
+</topicref>
+<topicref format="html" href="service_status.html" navtitle="서비스 상태" locktitle="yes"/>
+</topicref>
+<topicref format="html" href="analytics.html" navtitle="실시간 IoT 데이터 분석"
+outputclass="subsection" scope="peer">
+<topicref format="html" href="data_visualization.html" navtitle="실시간 데이터 시각화"
+scope="peer">
+<topicref format="html" href="data_visualization.html#default_boards" navtitle="기본 보드"
+scope="peer"/>
+<topicref format="html" href="data_visualization.html#visualizing_data"
+navtitle="보드 및 카드 작성" scope="peer"/>
+<topicref format="html" href="/custom_cards/custom-cards.html" navtitle="사용자 정의 카드 사용"
+scope="peer"/>
+</topicref>
+<topicref format="html" href="cloud_analytics.html" navtitle="클라우드 분석" scope="peer">
+<topicref format="html" href="cloud_analytics.html#byb" navtitle="시작하기 전에" scope="peer"/>
+<topicref format="html" href="cloud_analytics.html#managing_rules"
+navtitle="규칙 및 조치 관리" scope="peer"/>
+<topicref format="html" href="cloud_analytics.html#rules" navtitle="규칙 작성" scope="peer"/>
+<topicref format="html" href="cloud_analytics.html#conditional"
+navtitle="조건부 규칙 트리거" scope="peer"/>
+<topicref format="html" href="cloud_analytics.html#shared" navtitle="조치 작성 및 사용"
+scope="peer"/>
+</topicref>
+<topicref format="html" href="edge_analytics.html" navtitle="에지 분석" scope="peer">
+<topicref format="html" href="edge_analytics.html#byb" navtitle="시작하기 전에" scope="peer"/>
+<topicref format="html" href="edge_analytics.html#managing_rules"
+navtitle="에지 규칙 및 조치 관리" scope="peer"/>
+<topicref format="html" href="edge_analytics.html#rules" navtitle="에지 규칙 작성" scope="peer"/>
+<topicref format="html" href="edge_analytics.html#edge_actions" navtitle="에지 조치 작성"
+scope="peer"/>
+<topicref format="html" href="edge_analytics.html#integrate_with_cloud_analytics"
+navtitle="클라우드 분석과 통합" scope="peer"/>
+<topicref format="html" href="edge_analytics.html#eaa_community" navtitle="Edge Analytics 커뮤니티"
+scope="peer" audience="blue"/>
+</topicref>
+</topicref>
+<topicref format="html" href="samples_main.html"
+navtitle="IoT 샘플 사용" outputclass="subsection" scope="peer">
+<topicref format="html" href="nodereddevice_sample.html"
+navtitle="Node-RED 디바이스 시뮬레이터" scope="peer">
+<topicref format="html" href="nodereddevice_sample.html#flow_data"
+navtitle="Node-RED 노드 데이터" scope="peer"></topicref>
+</topicref>
+<topicref format="html" href="visualizingdata_sample.html"
+navtitle="샘플 시각화" scope="peer">
+<topicref format="html" href="visualizingdata_sample.html#byb"
+navtitle="시작하기 전에" scope="peer"></topicref>
+<topicref format="html" href="visualizingdata_sample.html#running_sample"
+navtitle="샘플 실행" scope="peer"></topicref>
+<topicref format="html"
+href="visualizingdata_sample.html#customize_sample"
+navtitle="샘플 사용자 정의" scope="peer"></topicref>
+<topicref format="html"
+href="visualizingdata_sample.html#customize_real_time_display"
+navtitle="실시간 표시 사용자 정의" scope="peer"></topicref>
+<topicref format="html"
+href="visualizingdata_sample.html#customize_historical_display"
+navtitle="히스토리 표시 사용자 정의" scope="peer"></topicref>
+</topicref>
+<topicref format="html" href="getting_started/quickstart/index.html"
+navtitle="Quickstart" scope="peer">
+<topicref format="html"
+href="getting_started/quickstart/index.html#simulated_devices"
+navtitle="시뮬레이션된 디바이스" scope="peer"></topicref>
+<topicref format="html"
+href="getting_started/quickstart/index.html#data_visualization"
+navtitle="데이터 시각화" scope="peer"></topicref>
+<topicref format="html"
+href="getting_started/quickstart/index.html#mosquitto_demonstration"
+navtitle="Mosquitto 데모" scope="peer"></topicref>
+</topicref>
+</topicref>
+<topicref format="html" href="developer_doc_overview.html"
+navtitle="Watson IoT Platform용 개발" outputclass="subsection"
+scope="peer">
+<topicref format="html" href="reference/rest_api.html" navtitle="API" scope="peer"/>
+<topicref format="html" href="iot_platform_client_lib.html" navtitle="클라이언트 라이브러리" scope="peer"/>
+<topicref format="html" href="applications/dev_nodered.html"
+navtitle="Node-RED를 사용하여 Watson IoT Platform 개발" scope="peer" locktitle="yes">
+<topicref format="html" href="applications/dev_nodered.html#watson_iot_node"
+navtitle="Watson IoT Node" locktitle="yes" scope="peer"/>
+<topicref format="html" href="applications/dev_nodered.html#watson_app_node"
+navtitle="IBM IoT App Node" locktitle="yes" scope="peer"/>
+<topicref format="html" href="applications/dev_nodered.html#more_info" navtitle="자세한 정보"
+locktitle="yes" scope="peer"/>
+</topicref>
+</topicref>
+<topicref format="html" href="applications/app_dev_index.html" outputclass="subsection"
+navtitle="애플리케이션 개발">
+<topicref format="html" href="applications/api.html" navtitle="애플리케이션용 HTTP REST API"
+scope="peer">
+<topicref format="html" href="applications/api.html#capabilities" navtitle="REST API 기능"
+scope="peer"/>
+<topicref format="html" href="applications/api.html#api_link" navtitle="HTTP REST API에 액세스"
+scope="peer"/>
+<topicref format="html" href="applications/api.html#rest_messaging_api"
+navtitle="HTTP REST 메시징 API" locktitle="yes"/>
+</topicref>
+<topicref format="html" href="applications/api_app_REST.html"
+navtitle="애플리케이션용 HTTP REST API" scope="peer" audience="blue"/>
+<topicref format="html" href="applications/api_app_Messaging.html"
+navtitle="애플리케이션용 HTTP 메시징" scope="peer" audience="blue"/>
+<topicref format="html" href="reference/mqtt/index.html" navtitle="MQTT 메시징" scope="peer">
+<topicref format="html" href="reference/mqtt/index.html#version-support" navtitle="버전 지원"
+scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html"
+navtitle="애플리케이션, 디바이스 및 게이트웨이 클라이언트" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#qos-levels"
+navtitle="서비스 품질(QoS) 레벨" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#subscription-buffers-and-clean-session"
+navtitle="구독 버퍼 및 정리 세션" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#message-payload"
+navtitle="메시지 페이로드 제한사항" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#mqtt-keep-alive"
+navtitle="MQTT 활성 유지 간격"/>
+</topicref>
+<topicref format="html" href="applications/mqtt.html" navtitle="애플리케이션용 MQTT 연결"
+scope="peer">
+<topicref format="html" href="applications/mqtt.html#client_connections"
+navtitle="클라이언트 연결" scope="peer"/>
+<topicref format="html" href="applications/mqtt.html#mqtt_authentication"
+navtitle="MQTT 인증" scope="peer"/>
+<topicref format="html" href="applications/mqtt.html#publishing_device_events"
+navtitle="디바이스 이벤트 공개" scope="peer"/>
+<topicref format="html" href="applications/mqtt.html#publishing_device_commands"
+navtitle="디바이스 명령 공개" scope="peer"/>
+<topicref format="html" href="applications/mqtt.html#subscribe_device_events"
+navtitle="디바이스 이벤트 구독" scope="peer"/>
+<topicref format="html" href="applications/mqtt.html#subscribe_device_commands"
+navtitle="디바이스 명령 구독" scope="peer"/>
+<topicref format="html" href="applications/mqtt.html#subscribe_device_status"
+navtitle="디바이스 상태 메시지 구독" scope="peer"/>
+<topicref format="html" href="applications/mqtt.html#subscribe_app_status"
+navtitle="애플리케이션 상태 메시지 구독" scope="peer"/>
+<topicref format="html" href="applications/mqtt.html#quickstart_restrictions"
+navtitle="Quickstart 제한사항" scope="peer"/>
+<topicref format="html" href="applications/mqtt.html#scalable_apps" navtitle="확장 가능 애플리케이션"
+scope="peer"/>
+</topicref>
+<topicref format="html" navtitle="인터페이스를 사용하여 디바이스 데이터 맵핑(베타)"
+outputclass="subsection" href="information_management/im_index.html" audience="blue">
+<topicref format="html" outputclass="subsection"
+href="information_management/im_index.html#overview" audience="blue" navtitle="개요"
+></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="데이터 플로우"
+href="information_management/im_index.html#mapping"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="핵심 개념"
+href="information_management/im_index.html#key_concepts"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="리소스"
+href="information_management/im_index.html#resources"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="상위 레벨 워크플로우"
+href="information_management/im_index.html#workflow"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="예제 시나리오"
+href="information_management/im_index.html#scenario"></topicref>
+
+</topicref>
+<topicref format="html" href="applications/libraries/python.html"
+navtitle="애플리케이션 개발자용 Python" scope="peer">
+<topicref format="html" href="applications/libraries/python.html#python_client_download"
+navtitle="Python 클라이언트 및 리소스 다운로드" scope="peer"/>
+<topicref format="html" href="applications/libraries/python.html#constructor" navtitle="생성자"
+scope="peer"/>
+<topicref format="html" href="applications/libraries/python.html#api_calls" navtitle="API 호출"
+scope="peer"/>
+<topicref format="html" href="applications/libraries/python.html#subscribe_device_events"
+navtitle="디바이스 이벤트 구독" scope="peer"/>
+<topicref format="html" href="applications/libraries/python.html#handling_events_devices"
+navtitle="디바이스에서 이벤트 처리" scope="peer"/>
+<topicref format="html" href="applications/libraries/python.html#subscribe_device_status"
+navtitle="디바이스 상태 구독" scope="peer"/>
+<topicref format="html" href="applications/libraries/python.html#handling_device_updates"
+navtitle="디바이스에서 상태 업데이트 처리" scope="peer"/>
+<topicref format="html" href="applications/libraries/python.html#publishing_device_events"
+navtitle="디바이스에서 이벤트 공개" scope="peer"/>
+<topicref format="html" href="applications/libraries/python.html#publishing_commands_devices"
+navtitle="디바이스에 명령 공개" scope="peer"/>
+<topicref format="html" href="applications/libraries/python.html#org_details"
+navtitle="조직 세부사항" scope="peer"/>
+<topicref format="html" href="applications/libraries/python.html#bulk_device_ops"
+navtitle="벌크 디바이스 오퍼레이션" scope="peer"/>
+<topicref format="html" href="applications/libraries/python.html#device_type_ops"
+navtitle="디바이스 유형 오퍼레이션" scope="peer"/>
+<topicref format="html" href="applications/libraries/python.html#device_ops"
+navtitle="디바이스 오퍼레이션" scope="peer"/>
+<topicref format="html" href="applications/libraries/python.html#device_diag_ops"
+navtitle="디바이스 진단 오퍼레이션" scope="peer"/>
+<topicref format="html" href="applications/libraries/python.html#connection_problem_determination"
+navtitle="연결 문제점 판별" scope="peer"/>
+<topicref format="html" href="applications/libraries/python.html#historical_event_retrieval"
+navtitle="히스토리 이벤트 검색" scope="peer"/>
+</topicref>
+<topicref format="html" href="applications/libraries/nodejs.html"
+navtitle="애플리케이션 개발자용 Node.js" scope="peer">
+<topicref format="html" href="applications/libraries/nodejs.html#nodejs_client_download"
+navtitle="Node.js 클라이언트 및 리소스 다운로드" scope="peer"/>
+<topicref format="html" href="applications/libraries/nodejs.html#constructor" navtitle="생성자"
+scope="peer"/>
+<topicref format="html" href="applications/libraries/nodejs.html#connecting_to_iotp"
+navtitle="Watson IoT Platform에 연결" scope="peer"/>
+<topicref format="html" href="applications/libraries/nodejs.html#logging" navtitle="로깅"
+scope="peer"/>
+<topicref format="html" href="applications/libraries/nodejs.html#shared_subscriptions"
+navtitle="공유 구독" scope="peer"/>
+<topicref format="html" href="applications/libraries/nodejs.html#handling_errors"
+navtitle="오류 처리" scope="peer"/>
+<topicref format="html" href="applications/libraries/nodejs.html#subscribing_device_events"
+navtitle="디바이스 이벤트 구독" scope="peer"/>
+<topicref format="html" href="applications/libraries/nodejs.html#subscribing_device_status"
+navtitle="디바이스 상태 구독" scope="peer"/>
+<topicref format="html" href="applications/libraries/nodejs.html#publishing_device_events"
+navtitle="디바이스에서 이벤트 공개" scope="peer"/>
+<topicref format="html" href="applications/libraries/nodejs.html#publishing_commands_devices"
+navtitle="디바이스에 명령 공개" scope="peer"/>
+<topicref format="html" href="applications/libraries/nodejs.html#disconnect_client"
+navtitle="클라이언트 연결 끊기" scope="peer"/>
+<topicref format="html" href="applications/libraries/nodejs.html#reference_nodejs"
+navtitle="참조" scope="peer"/>
+</topicref>
+<topicref format="html" href="applications/libraries/java.html"
+navtitle="애플리케이션 개발자용 Java" scope="peer">
+<topicref format="html" href="applications/libraries/java.html#java_client_download"
+navtitle="Java 클라이언트 및 리소스 다운로드" scope="peer"/>
+<topicref format="html" href="applications/libraries/java.html#constructor" navtitle="생성자"
+scope="peer"/>
+<topicref format="html" href="applications/libraries/java.html#connecting_to_iotp"
+navtitle="Watson IoT Platform에 연결" scope="peer"/>
+<topicref format="html" href="applications/libraries/java.html#subscribing_device_events"
+navtitle="디바이스 이벤트 구독" scope="peer"/>
+<topicref format="html" href="applications/libraries/java.html#handling_device_events"
+navtitle="디바이스에서 이벤트 처리" scope="peer"/>
+<topicref format="html" href="applications/libraries/java.html#subscribing_device_status"
+navtitle="디바이스 상태 구독" scope="peer"/>
+<topicref format="html" href="applications/libraries/java.html#handling_device_status_updates"
+navtitle="디바이스에서 상태 업데이트 처리" scope="peer"/>
+<topicref format="html" href="applications/libraries/java.html#publishing_events_devices"
+navtitle="디바이스에서 이벤트 공개" scope="peer"/>
+<topicref format="html" href="applications/libraries/java.html#publishing_commands_devices"
+navtitle="디바이스에 명령 공개" scope="peer"/>
+<topicref format="html" href="applications/libraries/java.html#samples"
+navtitle="샘플" scope="peer"/>
+</topicref>
+<topicref format="html" href="applications/libraries/c_sharp.html"
+navtitle="애플리케이션 개발자용 C#" scope="peer">
+<topicref format="html" href="applications/libraries/c_sharp.html#csharp_client_download"
+navtitle="C# 클라이언트 및 리소스 다운로드" scope="peer"/>
+<topicref format="html" href="applications/libraries/c_sharp.html#constructor"
+navtitle="생성자" scope="peer"/>
+<topicref format="html" href="applications/libraries/c_sharp.html#subscribe_device_events"
+navtitle="디바이스 이벤트 구독" scope="peer"/>
+<topicref format="html" href="applications/libraries/c_sharp.html#subscribe_device_status"
+navtitle="디바이스 상태 구독" scope="peer"/>
+<topicref format="html" href="applications/libraries/c_sharp.html#publish_events_devices"
+navtitle="디바이스에서 이벤트 공개" scope="peer"/>
+<topicref format="html" href="applications/libraries/c_sharp.html#publish_commands_devices"
+navtitle="디바이스에 명령 공개" scope="peer"/>
+</topicref>
+</topicref>
+<topicref format="html" href="devices/device_dev_index.html" navtitle="디바이스 개발"
+outputclass="subsection" locktitle="yes">
+<topicref format="html" href="devices/api.html" navtitle="디바이스용 HTTP REST API" scope="peer">
+<topicref format="html" href="devices/api.html" navtitle="HTTP REST API에 액세스"
+locktitle="yes"/>
+<topicref format="html" href="devices/api.html#rest_messaging_api"
+navtitle="HTTP REST 메시징 API" scope="peer"/>
+<topicref format="html" href="devices/api.html#event_publication" navtitle="이벤트 공개"
+scope="peer"/>
+<topicref href="devices/api.html#last-event-cache" format="html" navtitle="마지막 이벤트 캐시"/>
+</topicref>
+<topicref format="html" href="devices/api_dev_REST.html" navtitle="디바이스용 HTTP REST API"
+scope="peer" audience="blue"/>
+<topicref format="html" href="devices/api_dev_Messaging.html" navtitle="디바이스용 HTTP 메시징"
+scope="peer" audience="blue"/>
+<topicref format="html" href="reference/mqtt/index.html" navtitle="MQTT 메시징" scope="peer">
+<topicref format="html" href="reference/mqtt/index.html#version-support" navtitle="버전 지원"
+scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html"
+navtitle="애플리케이션, 디바이스 및 게이트웨이 클라이언트" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#qos-levels"
+navtitle="서비스 품질(QoS) 레벨" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#subscription-buffers-and-clean-session"
+navtitle="구독 버퍼 및 정리 세션" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#message-payload"
+navtitle="메시지 페이로드 제한사항" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#mqtt-keep-alive"
+navtitle="MQTT 활성 유지 간격"/>
+</topicref>
+<topicref format="html" href="devices/mqtt.html" navtitle="디바이스용 MQTT 연결"
+scope="peer" locktitle="yes">
+<topicref format="html" href="devices/mqtt.html#client_connections" navtitle="클라이언트 연결"
+scope="peer"/>
+<topicref format="html" href="devices/mqtt.html#connecting_devices"
+navtitle="Quickstart에 디바이스 연결" scope="peer"/>
+<topicref format="html" href="devices/mqtt.html#mqtt_authentication" navtitle="MQTT 인증"
+scope="peer"/>
+<topicref format="html" href="devices/mqtt.html#publishing_events" navtitle="이벤트 공개"
+scope="peer"/>
+<topicref format="html" href="devices/mqtt.html#subscribing_to_commands"
+navtitle="명령 구독" scope="peer"/>
+<topicref format="html" href="devices/mqtt.html#managed-devices" navtitle="관리 디바이스"
+scope="peer"/>
+</topicref>
+<topicref format="html" navtitle="인터페이스를 사용하여 디바이스 데이터 맵핑(베타)"
+outputclass="subsection" href="information_management/im_index.html" audience="blue">
+<topicref format="html" outputclass="subsection"
+href="information_management/im_index.html#overview" audience="blue" navtitle="개요"
+></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="데이터 플로우"
+href="information_management/im_index.html#mapping"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="핵심 개념"
+href="information_management/im_index.html#key_concepts"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="리소스"
+href="information_management/im_index.html#resources"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="상위 레벨 워크플로우"
+href="information_management/im_index.html#workflow"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="예제 시나리오"
+href="information_management/im_index.html#scenario"></topicref>
+
+</topicref>
+<topicref format="html" href="devices/device_mgmt/index.html" navtitle="디바이스 관리 프로토콜"
+scope="peer">
+<topicref format="html" href="devices/device_mgmt/index.html#introduction" navtitle="소개"
+scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/index.html#manage_device_request"
+navtitle="디바이스 관리" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/index.html#manage-unmanage"
+navtitle="디바이스 비관리" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/index.html#update-location"
+navtitle="위치 업데이트" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/index.html#update-attributes"
+navtitle="디바이스 속성 업데이트" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/index.html#diag-add-error-code"
+navtitle="오류 코드 추가" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/index.html#diag-clear-error-codes"
+navtitle="오류 코드 지우기" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/index.html#diag-add-log" navtitle="로그 추가"
+scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/index.html#diag-clear-logs" navtitle="로그 지우기"
+scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/index.html#observations-observe"
+navtitle="속성 변경사항 관찰" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/index.html#observations-cancel"
+navtitle="속성 관찰 취소" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/index.html#observations-notify"
+navtitle="속성 변경사항 알림" scope="peer"/>
+</topicref>
+<topicref format="html" href="devices/device_mgmt/requests.html"
+navtitle="디바이스 관리 요청" scope="peer">
+<topicref format="html" href="devices/device_mgmt/requests.html#initiating-dm-dashboard"
+navtitle="대시보드를 통해 요청 시작" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/requests.html#initiating-dm-api"
+navtitle="REST API를 통해 요청 시작" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/requests.html#device-actions"
+navtitle="디바이스 조치" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/requests.html#device-actions-reboot"
+navtitle="디바이스 조치 - 재부팅" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/requests.html#device-actions-factory-reset"
+navtitle="디바이스 조치 - 팩토리 재설정" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/requests.html#firmware-actions"
+navtitle="펌웨어 조치" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/requests.html#firmware-actions-download"
+navtitle="펌웨어 조치 - 다운로드" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/requests.html#firmware-actions-update"
+navtitle="펌웨어 조치 - 업데이트" scope="peer"/>
+</topicref>
+<topicref format="html" href="devices/device_mgmt/custom_actions.html"
+navtitle="디바이스 관리 확장" scope="peer">
+<topicref format="html" href="devices/device_mgmt/custom_actions.html#device_management_ext"
+navtitle="디바이스 관리 확장 패키지" scope="peer"/>
+<topicref format="html"
+href="devices/device_mgmt/custom_actions.html#supporting_custom_device_management_actions"
+navtitle="사용자 정의 디바이스 관리 조치 지원" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/custom_actions.html#initiating_custom_dm_actions"
+navtitle="사용자 정의 디바이스 관리 조치 시작" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/custom_actions.html#handling_custom_dm_actions"
+navtitle="사용자 정의 디바이스 관리 조치 처리" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/custom_actions.html#example" navtitle="예제"
+scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/custom_actions.html#api_examples"
+navtitle="API 예제" scope="peer"/>
+</topicref>
+<topicref format="html" href="devices/libraries/python.html" navtitle="디바이스 개발자용 Python"
+scope="peer">
+<topicref format="html" href="devices/libraries/python.html#python_client_download"
+navtitle="Python 클라이언트 및 리소스 다운로드" scope="peer"/>
+<topicref format="html" href="devices/libraries/python.html#constructor" navtitle="생성자"
+scope="peer"/>
+<topicref format="html" href="devices/libraries/python.html#publishing_events"
+navtitle="이벤트 공개" scope="peer"/>
+<topicref format="html" href="devices/libraries/python.html#handling_commands"
+navtitle="명령 처리" scope="peer"/>
+<topicref format="html" href="devices/libraries/python.html#custom_message_format"
+navtitle="사용자 정의 메시지 형식 지원" scope="peer"/>
+</topicref>
+<topicref format="html" href="devices/libraries/nodejs.html"
+navtitle="디바이스 개발자용 Node.js" scope="peer">
+<topicref format="html" href="devices/libraries/nodejs.html#node.js_client_downloads"
+navtitle="Node.js 클라이언트 및 리소스 다운로드" scope="peer"/>
+<topicref format="html" href="devices/libraries/nodejs.html#constructor" navtitle="생성자"
+scope="peer"/>
+<topicref format="html" href="devices/libraries/nodejs.html#connecting_to_iotp"
+navtitle="Watson IoT Platform에 연결" scope="peer"/>
+<topicref format="html" href="devices/libraries/nodejs.html#logging" navtitle="로깅" scope="peer"/>
+<topicref format="html" href="devices/libraries/nodejs.html#publishing_events"
+navtitle="이벤트 공개" scope="peer"/>
+<topicref format="html" href="devices/libraries/nodejs.html#handling_commands"
+navtitle="명령 처리" scope="peer"/>
+<topicref format="html" href="devices/libraries/nodejs.html#handling_errors"
+navtitle="오류 처리" scope="peer"/>
+<topicref format="html" href="devices/libraries/nodejs.html#disconnecting_client"
+navtitle="클라이언트 연결 끊기" scope="peer"/>
+</topicref>
+<topicref format="html" href="devices/libraries/java.html" navtitle="디바이스 개발자용 Java"
+scope="peer">
+<topicref format="html" href="devices/libraries/java.html#java_client_download"
+navtitle="Java 클라이언트 및 리소스 다운로드" scope="peer"/>
+<topicref format="html" href="devices/libraries/java.html#constructor" navtitle="생성자"
+scope="peer"/>
+<topicref format="html" href="devices/libraries/java.html#connecting_to_iotp"
+navtitle="Watson IoT Platform에 연결" scope="peer"/>
+<topicref format="html" href="devices/libraries/java.html#publishing_events"
+navtitle="이벤트 공개" scope="peer"/>
+<topicref format="html" href="devices/libraries/java.html#handling_commands"
+navtitle="명령 처리" scope="peer"/>
+<topicref format="html" href="devices/libraries/java.html#samples" navtitle="샘플" scope="peer"/>
+</topicref>
+<topicref format="html" href="devices/libraries/c_sharp.html" navtitle="디바이스 개발자용 C#"
+scope="peer">
+<topicref format="html" href="devices/libraries/c_sharp.html#csharp_client_download"
+navtitle="C# 클라이언트 및 리소스 다운로드" scope="peer"/>
+<topicref format="html" href="devices/libraries/c_sharp.html#constructor" navtitle="생성자"
+scope="peer"/>
+<topicref format="html" href="devices/libraries/c_sharp.html#publishing-events"
+navtitle="이벤트 공개" scope="peer"/>
+<topicref format="html" href="devices/libraries/c_sharp.html#publish_event_default_qos"
+navtitle="기본 QoS 레벨에 공개" scope="peer"/>
+<topicref format="html" href="devices/libraries/c_sharp.html#publish_event_user_qos"
+navtitle="사용자 정의 QoS 레벨에 공개" scope="peer"/>
+<topicref format="html" href="devices/libraries/c_sharp.html#handling_commands"
+navtitle="명령 처리" scope="peer"/>
+</topicref>
+<topicref format="html" href="devices/libraries/embedded_c.html"
+navtitle="디바이스 개발자용 Embedded C" scope="peer">
+<topicref format="html" href="devices/libraries/embedded_c.html#embeddedc_client_download"
+navtitle="Embedded C 클라이언트 및 리소스 다운로드" scope="peer"/>
+<topicref format="html" href="devices/libraries/embedded_c.html#dependencies"
+navtitle="종속 항목" scope="peer"/>
+<topicref format="html" href="devices/libraries/embedded_c.html#installation"
+navtitle="설치" scope="peer"/>
+<topicref format="html" href="devices/libraries/embedded_c.html#initialize_client_library"
+navtitle="클라이언트 라이브러리 초기화" scope="peer"/>
+<topicref format="html" href="devices/libraries/embedded_c.html#connecting_service"
+navtitle="서비스에 연결" scope="peer"/>
+<topicref format="html" href="devices/libraries/embedded_c.html#handling_commands"
+navtitle="명령 처리" scope="peer"/>
+<topicref format="html" href="devices/libraries/embedded_c.html#publishing_events"
+navtitle="이벤트 공개" scope="peer"/>
+<topicref format="html" href="devices/libraries/embedded_c.html#disconnect_client"
+navtitle="클라이언트 연결 끊기" scope="peer"/>
+<topicref format="html" href="devices/libraries/embedded_c.html#samples" navtitle="샘플"
+scope="peer"/>
+</topicref>
+<topicref format="html" href="devices/libraries/mbedcpp.html"
+navtitle="디바이스 개발자용 mBed C++" scope="peer">
+<topicref format="html" href="devices/libraries/mbedcpp.html#dependencies" navtitle="종속 항목"
+scope="peer"/>
+<topicref format="html" href="devices/libraries/mbedcpp.html#library_use"
+navtitle="라이브러리 사용 방법" scope="peer"/>
+<topicref format="html" href="devices/libraries/mbedcpp.html#constructor" navtitle="생성자"
+scope="peer"/>
+<topicref format="html" href="devices/libraries/mbedcpp.html#connecting_to_iotp"
+navtitle="Watson IoT Platform에 연결" scope="peer"/>
+<topicref format="html" href="devices/libraries/mbedcpp.html#publishing_events"
+navtitle="이벤트 공개" scope="peer"/>
+<topicref format="html" href="devices/libraries/mbedcpp.html#handling_commands"
+navtitle="명령 처리" scope="peer"/>
+<topicref format="html" href="devices/libraries/mbedcpp.html#disconnect_client"
+navtitle="클라이언트 연결 끊기" scope="peer"/>
+<topicref format="html" href="devices/libraries/mbedcpp.html#samples" navtitle="샘플"
+scope="peer"/>
+</topicref>
+</topicref>
+<topicref format="html" href="gateways/gw_dev_index.html" outputclass="subsection"
+navtitle="게이트웨이 개발">
+<topicref format="html" href="gateways/gw_api.html" navtitle="게이트웨이 디바이스용 HTTP REST API"
+scope="peer" audience="blue">
+<topicref format="html" href="gateways/gw_api.html#client_connections" navtitle="클라이언트 연결"
+locktitle="yes" audience="blue"/>
+<topicref href="gateways/gw_api.html#last-event-cache" format="html" navtitle="마지막 이벤트 캐시"
+audience="blue"/>
+</topicref>
+<topicref format="html" href="gateways/gw_intro_api.html"
+navtitle="게이트웨이 디바이스용 HTTP 메시징(베타)" scope="peer" audience="blue"/>
+<topicref format="html" href="reference/mqtt/index.html" navtitle="MQTT 메시징" scope="peer">
+<topicref format="html" href="reference/mqtt/index.html#version-support" navtitle="버전 지원"
+scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html"
+navtitle="애플리케이션, 디바이스 및 게이트웨이 클라이언트" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#qos-levels"
+navtitle="서비스 품질(QoS) 레벨" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#subscription-buffers-and-clean-session"
+navtitle="구독 버퍼 및 정리 세션" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#message-payload"
+navtitle="메시지 페이로드 제한사항" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#mqtt-keep-alive"
+navtitle="MQTT 활성 유지 간격"/>
+</topicref>
+<topicref format="html" href="gateways/mqtt.html" navtitle="게이트웨이용 MQTT 연결"
+scope="peer">
+<topicref format="html" href="gateways/mqtt.html#MQTT_client_connection"
+navtitle="클라이언트 연결" scope="peer"/>
+<topicref format="html" href="gateways/mqtt.html#authentication" navtitle="MQTT 인증"
+scope="peer"/>
+<topicref format="html" href="gateways/mqtt.html#pub_events" navtitle="이벤트 공개"
+scope="peer"/>
+<topicref format="html" href="gateways/mqtt.html#subscribing_cmds"
+navtitle="명령 구독" scope="peer"/>
+<topicref format="html" href="gateways/mqtt.html#auto-reg" navtitle="게이트웨이 자동 등록"
+scope="peer"/>
+<topicref format="html" href="gateways/mqtt.html#notification" navtitle="게이트웨이 알림"
+scope="peer"/>
+<topicref format="html" href="gateways/mqtt.html#managed_gateways" navtitle="관리 게이트웨이"
+scope="peer"/>
+</topicref>
+<topicref format="html" href="gateways/libraries/java_cli_gw.html"
+navtitle="Java를 사용하여 게이트웨이 개발" locktitle="yes">
+<topicref format="html" href="gateways/libraries/java_cli_gw.html#java_client_download"
+navtitle="Java 클라이언트 및 리소스 다운로드" scope="peer"/>
+<topicref format="html" href="gateways/libraries/java_cli_gw.html#constructor"
+navtitle="생성자" scope="peer"/>
+<topicref format="html" href="gateways/libraries/java_cli_gw.html#connecting_to_iotp"
+navtitle="Watson IoT Platform에 연결" scope="peer"/>
+<topicref format="html" href="gateways/libraries/java_cli_gw.html#publishing_events"
+navtitle="이벤트 공개" scope="peer"/>
+<topicref format="html" href="gateways/libraries/java_cli_gw.html#handling_commands"
+navtitle="명령 처리" scope="peer"/>
+<topicref format="html" href="gateways/libraries/java_cli_gw.html#samples" navtitle="샘플"
+scope="peer"/>
+</topicref>
+<topicref format="html" href="gateways/libraries/java_cli_managed_gw.html"
+navtitle="관리 게이트웨이 개발(Java)" scope="peer">
+<topicref format="html" href="gateways/libraries/java_cli_managed_gw.html"
+navtitle="디바이스 관리 서비스" scope="peer"/>
+<topicref format="html" href="gateways/libraries/java_cli_managed_gw.html#create_device_model"
+navtitle="디바이스 모델 작성" scope="peer"/>
+<topicref format="html" href="gateways/libraries/java_cli_managed_gw.html#construct_managed_gateway"
+navtitle="관리 게이트웨이 생성자" scope="peer"/>
+<topicref format="html" href="gateways/libraries/java_cli_managed_gw.html#dm_requests"
+navtitle="디바이스 관리 요청" scope="peer"/>
+<topicref format="html" href="gateways/libraries/java_cli_managed_gw.html#location_updates"
+navtitle="위치 업데이트"/>
+<topicref format="html" href="gateways/libraries/java_cli_managed_gw.html#errors"
+navtitle="오류 코드 처리" scope="peer"/>
+<topicref format="html" href="gateways/libraries/java_cli_managed_gw.html#firmware"
+navtitle="펌웨어 업데이트 및 조치" scope="peer"/>
+<topicref format="html" href="gateways/libraries/java_cli_managed_gw.html#dev_actions"
+navtitle="디바이스 조치" scope="peer"/>
+<topicref format="html" href="gateways/libraries/java_cli_managed_gw.html#samples"
+navtitle="샘플" scope="peer"/>
+<topicref format="html" href="gateways/libraries/java_cli_managed_gw.html#recipes"
+navtitle="레시피" scope="peer"/>
+</topicref>
+<topicref format="html" href="gateways/gateway-access-control.html"
+navtitle="게이트웨이 액세스 제어(베타)" scope="peer"/>
+</topicref>
+<topicref format="html" href="blockchain/dev_blockchain.html"
+navtitle="블록체인 통합용으로 개발" outputclass="subsection"
+scope="peer">
+<topicref format="html" href="blockchain/dev_blockchain.html#byb"
+navtitle="시작하기 전에" scope="peer"></topicref>
+<topicref format="html" href="blockchain/dev_blockchain.html#samples"
+navtitle="샘플 스마트 계약" scope="peer"></topicref>
+<topicref format="html"
+href="blockchain/dev_blockchain.html#configure_environment"
+navtitle="블록체인 패브릭 구성" scope="peer"></topicref>
+<topicref format="html"
+href="blockchain/dev_blockchain.html#test_contracts"
+navtitle="계약 작성, 테스트 및 배치" scope="peer"></topicref>
+<topicref format="html" href="blockchain/dev_blockchain.html#next_steps"
+navtitle="다음 단계" scope="peer"></topicref>
+</topicref>
+<topicref format="html" href="reference/mqtt/index.html"
+navtitle="참조" outputclass="subsection" scope="peer">
+<topicref format="html" href="reference/api.html" navtitle="API" scope="peer">
+<topicref format="html" href="reference/api.html#api_about" navtitle="HTTP API 정보" scope="peer"/>
+<topicref format="html" href="reference/api.html#api_http" navtitle="HTTP API" scope="peer"/>
+<topicref format="html" href="reference/api.html#api_extension" navtitle="확장 HTTP API"
+scope="peer"/>
+<topicref format="html" href="reference/api.html#api_beta" navtitle="베타 HTTP API" scope="peer"/>
+</topicref>
+<topicref format="html" href="reference/mqtt/index.html" navtitle="MQTT 메시징" scope="peer">
+<topicref format="html" href="reference/mqtt/index.html#version-support" navtitle="버전 지원"
+scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html"
+navtitle="애플리케이션, 디바이스 및 게이트웨이 클라이언트" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#qos-levels"
+navtitle="서비스 품질(QoS) 레벨" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#subscription-buffers-and-clean-session"
+navtitle="구독 버퍼 및 정리 세션" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#message-payload"
+navtitle="메시지 페이로드 제한사항" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#mqtt-keep-alive"
+navtitle="MQTT 활성 유지 간격"/>
+</topicref>
+<topicref format="html" href="reference/device_model.html"
+navtitle="디바이스 모델" scope="peer">
+<topicref format="html" href="reference/device_model.html#device_id"
+navtitle="디바이스 ID" scope="peer"></topicref>
+<topicref format="html"
+href="reference/device_model.html#id_and_device_types"
+navtitle="ID 및 디바이스 유형" scope="peer"></topicref>
+<topicref format="html" href="reference/device_model.html#attributes"
+navtitle="속성" scope="peer"></topicref>
+<topicref format="html"
+href="reference/device_model.html#extended_attributes"
+navtitle="확장 속성" scope="peer"></topicref>
+</topicref>
+</topicref>
+<topicref format="html" href="ts_index.html"
+navtitle="Watson IoT Platform 문제점 해결" outputclass="subsection"
+scope="peer">
+<topicref format="html" href="ts_index.html#access-expiry-problem"
+navtitle="조직에 액세스하는 문제점" scope="peer"/>
+<topicref format="html" href="ts_index.html#connection_problem"
+navtitle="플랫폼에 연결 문제" scope="peer"/>
+<topicref format="html" href="ts_index.html#disconnection_problem"
+navtitle="간헐적 연결 끊기" scope="peer"></topicref>
+<topicref format="html" href="service_status.html" navtitle="서비스 상태" locktitle="yes"/>
+<topicref format="html" href="ts_index.html#gettinghelp"
+navtitle="도움 및 지원 받기" scope="peer"></topicref>
+</topicref>
+<topicref audience="blue" format="html" href="glossary.html" navtitle="용어집"
+outputclass="subsection" scope="peer"/>
+<topicref audience="blue" navtitle="developerWorks 리소스" href="experimental/experimental.html">
+<topicref audience="blue" navtitle="Cookbook" href="experimental/cookbook.html"/>
+</topicref>
+<topicref navtitle="관련 링크" href="iot_platform_rel_links.html" audience="blue">
+<topicref navtitle="일반 리소스" href="iot_platform_rel_links.html#general"/>
+<topicref navtitle="튜토리얼 및 샘플" href="iot_platform_rel_links.html#samples"/>
+<topicref navtitle="API 참조" href="iot_platform_rel_links.html#api"/>
+<topicref navtitle="클라이언트 라이브러리"
+href="iot_platform_rel_links.html#client_libraries"/>
+<topicref navtitle="Bluemix 정보" href="iot_platform_rel_links.html#bluemixinfo"/>
+<topicref navtitle="보안" href="iot_platform_rel_links.html#security"/>
+</topicref>
+</topicref>
+</map>

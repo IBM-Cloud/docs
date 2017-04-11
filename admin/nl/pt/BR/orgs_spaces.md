@@ -47,7 +47,7 @@ obter informações detalhadas, veja
 <dt>Domínios</dt>
 <dd>Fornecem a rota na Internet que é alocada para a organização. Uma rota tem um subdomínio e um domínio. Um subdomínio normalmente é o nome do aplicativo. Um
 domínio pode ser um domínio do sistema ou um domínio customizado que você registrou para
-seu aplicativo. Consulte [Gerenciando domínios customizados](orgs_spaces.html#managedomains).<br/>
+seu aplicativo. Veja [Gerenciando domínios customizados](orgs_spaces.html#managedomains).<br/>
 <p>**Nota**: Se um domínio customizado for incluído, deve-se configurar seu servidor DNS para resolver seu domínio customizado para apontar para o domínio de sistema {{site.data.keyword.Bluemix_notm}}. Dessa
 maneira, quando o
 {{site.data.keyword.Bluemix_notm}}
@@ -56,7 +56,7 @@ para o aplicativo.</p></dd>
 <dt>Cota</dt>
 <dd>Representa os limites de recurso para a organização, incluindo o número de serviços e a quantia de memória
 que pode ser alocada para uso pela organização. As cotas são designadas quando as organizações são criadas. Qualquer
-aplicativo ou serviço em um espaço da organização contribui para o uso da cota. Com planos de Pagamento por uso ou de Assinatura, é possível ajustar a sua cota para aplicativos e contêineres do Cloud Foundry
+aplicativo ou serviço em um espaço da organização contribui para o uso da cota. A cota não é um valor máximo aplicado. Em vez disso, é um acionador para notificações de gastos. Com planos de Pagamento por uso ou de Assinatura, é possível ajustar a sua cota para aplicativos e contêineres do Cloud Foundry
 conforme as necessidades de mudança da sua organização. Consulte [Gerenciando cota](orgs_spaces.html#managequota).</dd>
 </dl>
 
@@ -175,7 +175,7 @@ Conclua as etapas a seguir, para listar os membros para um espaço específico:
 {: #managequota}
 
 Como um proprietário da conta ou gerenciador de organização do {{site.data.keyword.Bluemix_notm}}, é possível visualizar a cota usada e alocada para uma
-organização. A cota representa os limites de recurso para a organização, a qual é designada quando a organização é criada. Dependendo se você tem uma conta de avaliação
+organização. A cota representa os limites de recurso para a organização, a qual é designada quando a organização é criada. O limite não é um valor máximo aplicado com relação à organização. Em vez disso, é um acionador para notificações de gastos. Dependendo se você tem uma conta de avaliação
 ou uma conta faturável, os recursos que estão disponíveis para uma organização variam. Qualquer aplicativo ou serviço em um espaço dentro da organização contribui
 para o uso da cota alocada.
 

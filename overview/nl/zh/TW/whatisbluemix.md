@@ -165,7 +165,7 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 | 美國南部地區 | 美國達拉斯 | ng | api.ng.bluemix.net | console.ng.bluemix.net |
 | 英國地區 | 英國倫敦 | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
 | 雪梨地區 | 澳洲雪梨 | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
-{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} region list" caption-side="top"}
+{: caption="表 1. {{site.data.keyword.Bluemix_notm}} 地區清單" caption-side="top"}
 
 
 ### {{site.data.keyword.Bluemix_notm}} 備援
@@ -215,7 +215,7 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 
 然後，在 {{site.data.keyword.Bluemix_notm}} 使用者介面中利用 Cloud Integration 服務，透過安全連接器公開 API。整合開發人員會下載安全連接器，並以內部部署方式安裝它，以啟用其 API 與資料庫之間的安全通訊。建立資料庫端點之後，即可查看所有綱目，並擷取要以 API 形式向應用程式公開的表格。
 
-整合開發人員會新增 Push 服務，以將行動通知提供給感興趣的客戶。此外，他們還會新增事業夥伴服務，以在使用 Twitter API 建立新的客戶記錄後發佈推文。
+整合開發人員會新增 Push 服務，以將行動通知提供給感興趣的客戶。此外，他們還會新增事業合作夥伴服務，以在使用 Twitter API 建立新的客戶記錄後發佈推文。
 
 接著，身為應用程式開發人員，您可以登入 {{site.data.keyword.Bluemix_notm}}，下載 Android 開發工具箱，然後開發用於呼叫整合開發人員所建立 API 的程式碼。您可以開發一個行動應用程式，讓使用者可以在其行動裝置上輸入資訊。接著，行動應用程式會在客戶管理系統中建立客戶記錄。建立記錄後，該應用程式會向行動裝置推送通知，並開始一則關於新記錄的推文。
 

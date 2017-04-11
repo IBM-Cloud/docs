@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -98,7 +98,7 @@ lastupdated: "2017-01-17"
       <th> 説明 </th>
     </tr>
     <tr>
-      <td> <code>https://api.ng.bluemix.net/v2/service_keys</code> </td>
+      <td> ```https://api.ng.bluemix.net/v2/service_keys ``` </td>
       <td> サービス・キーのエンドポイント。</td>
     </tr>
     <tr>
@@ -118,8 +118,6 @@ lastupdated: "2017-01-17"
       <td> Keystone を使用してインスタンスを認証した時に受け取ったトークン。</td>
     </tr>
   </table>
-
-
 
 3. 以下のコマンドを実行して資格情報を検証します。
 

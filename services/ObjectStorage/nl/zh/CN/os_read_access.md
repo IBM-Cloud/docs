@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -48,7 +48,6 @@ lastupdated: "2017-01-17"
     <td> <code> &#42;:&#42; </code></td>
   </tr>
 </table>
-
 
 
 1. 对凭证进行认证。您可以使用在 UI 的“服务凭证”选项卡中找到的凭证，也可以生成新凭证。有关生成新凭证的更多信息，请参阅[生成服务凭证](/docs/services/ObjectStorage/os_credentials.html)。您会在输出中收到 {{site.data.keyword.objectstorageshort}} URL 和认证令牌。

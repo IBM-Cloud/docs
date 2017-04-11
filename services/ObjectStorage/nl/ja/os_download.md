@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -29,16 +29,16 @@ lastupdated: "2017-01-17"
 
 1.  {{site.data.keyword.Bluemix_notm}} にログインしていない場合は、{{site.data.keyword.objectstorageshort}} のインスタンスを含む組織およびスペースにログインします。
 
-```
-cf login -a api.ng.bluemix.net -u <userid> -p <password> -o <organization> -s <space>
-```
-{: pre}
+    ```
+  cf login -a api.ng.bluemix.net -u <userid> -p <password> -o <organization> -s <space>
+  ```
+    {: pre}
 
 2. 偶発的な上書きによってデータが消滅しないようにするために、[オブジェクト・バージョン管理のセットアップ](/docs/services/ObjectStorage/os_versioning.html)を行います。オブジェクトのバージョン管理を望まない場合は、ストア内の既存のファイルをリストし、ダウンロード前に、必要に応じてディレクトリーまたはファイルの名前を変更します。
 
 3. 以下のコマンドを実行して、ファイルをダウンロードします。
 
-```
+    ```
 swift download <container_name> <file_name>
 ```
-{: pre}
+    {: pre}

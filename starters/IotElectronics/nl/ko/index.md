@@ -1,14 +1,18 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-29"
+  years: 2016, 2017
+lastupdated: "2017-03-10"
 ---
 
-{:new_window: target="\_blank"}
-
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
+<!-- Note to writers - index.md and iot4egettingstarted.md are (almost) duplicates and a change to one should be made to both. index.md appears within the product app as the getting started page. iot4egettingstarted.md appears as the top level topic in the docs toc. -->
 
 # {{site.data.keyword.iotelectronics}} 스타터로 앱 작성
 
@@ -27,7 +31,8 @@ lastupdated: "2016-11-29"
 
 - [스타터 앱을 탐색](https://console.ng.bluemix.net/docs/starters/IotElectronics/iot4ecreatingappliances.html)하여 엔터프라이즈 제조업체에서 {{site.data.keyword.iot_short_notm}}에 연결된 어플라이언스를 어떻게 모니터할 수 있는지 경험하십시오. 
 - [샘플 모바일 앱을 탐색](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html)하여 어플라이언스 소유자가 어떻게 해당 어플라이언스를 등록하고 상호작용하는지 경험하십시오. 
-- [API를 탐색](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)하여 자신이 소유한 {{site.data.keyword.iotelectronics}} 앱을 어떻게 사용자 정의하고 확장하는지 확인하십시오. 
+- {{site.data.keyword.iot_short_notm}}에서 [데이터를 탐색하고 사용자 및 디바이스를 관리](iotelectronics_dashboard.html)하십시오.
+- [API를 탐색하여 ![외부 링크 아이콘](../../icons/launch-glyph.svg)](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html){: new_window} 고유 {{site.data.keyword.iotelectronics}} 앱을 사용자 정의하고 확장하는 방법을 확인하십시오.
 
 ## 컴포넌트에 대해 자세히 알아보기
 - [{{site.data.keyword.iotelectronics}} 문서](iotelectronics_overview.html)

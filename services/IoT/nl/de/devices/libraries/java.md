@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-18"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -15,13 +15,13 @@ lastupdated: "2016-10-18"
 # Java für Geräteentwickler
 {: #java}
 
-Sie können mithilfe von Java Geräte erstellen und anpassen, die in {{site.data.keyword.iot_full}} mit Ihrer Organisation interagieren. Es werden eine Java-Clientbibliothek für {{site.data.keyword.iot_short_notm}}, Dokumentation und Beispiele bereitgestellt, die Sie bei den ersten Schritten der Geräteentwicklung unterstützen.
+Sie können mithilfe von Java™ Geräte erstellen und anpassen, die in {{site.data.keyword.iot_full}} mit Ihrer Organisation interagieren. Es werden eine Java-Clientbibliothek für {{site.data.keyword.iot_short_notm}}, Dokumentation und Beispiele bereitgestellt, die Sie bei den ersten Schritten der Geräteentwicklung unterstützen.
 {:shortdesc}
 
 ## Java-Client und Ressourcen herunterladen
 {: #java_client_download}
 
-Wechseln Sie für den Zugriff auf die Java-Clientbibliotheken und Beispiele für {{site.data.keyword.iot_short_notm}} in GitHub in das Repository [iot-java](https://github.com/ibm-watson-iot/iot-java) und folgen Sie den Installationsanweisungen.
+Wechseln Sie für den Zugriff auf die Java-Clientbibliotheken und Beispiele für {{site.data.keyword.iot_short_notm}} in das Repository [iot-java ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-watson-iot/iot-java){: new_window} in GitHub und folgen Sie den Installationsanweisungen.
 
 ## Konstruktor
 {: #constructor}
@@ -40,6 +40,7 @@ Der Konstruktor erstellt die Clientinstanz und akzeptiert das `Properties`-Objek
 |`MaxInflightMessages`  |Legt die maximale Anzahl der gerade ausgeführten Nachrichten für die Verbindung fest. Der Standardwert ist 100.|
 |`Automatic-Reconnect`  |Der Wert 'true' oder 'false', der erforderlich ist, wenn Sie das Gerät automatisch erneut mit {{site.data.keyword.iot_short_notm}} verbinden möchten, während es sich im nicht verbundenen Status befindet. Der Standardwert ist 'false'.|
 |`Disconnected-Buffer-Size`|Die maximale Anzahl Nachrichten, die im Speicher gespeichert werden kann, während die Verbindung zum Client getrennt ist. Der Standardwert ist '5000'.|
+|`WebSocket`|Der Wert 'true' oder 'false', der erforderlich ist, wenn Sie WebSocket-Verbindungen mit {{site.data.keyword.iot_short_notm}} verwenden möchten. Der Standardwert ist 'false'.|
 
 **Hinweis:** Um das Gerät im Modus der permanenten Subskription zu verbinden, legen Sie für `clean-session` die Einstellung `false` fest. Weitere Informationen zur bereinigten Sitzung (clean session) finden Sie im Abschnitt 'Subskriptionspuffer und bereinigte Sitzung' der [MQTT-Dokumentation](../../reference/mqtt/index.html#subscription-buffers-and-clean-session).
 
@@ -405,4 +406,4 @@ public class RegisteredDeviceCommandSubscribe {
 ## Beispiele
 {: #samples}
 
-Im [GitHub-Repository 'iot-device-samples'](https://github.com/ibm-messaging/iot-device-samples/tree/master/java) finden Sie eine Liste der mit der {{site.data.keyword.iot_short_notm}}-Java-Clientbibliothek entwickelten Beispiele für Geräte und das Gerätemanagement.
+Eine Liste der mit der {{site.data.keyword.iot_short_notm}}-Java-Clientbibliothek entwickelten Beispiele für Geräte und für das Gerätemanagement finden Sie im [GitHub-Repository 'iot-device-samples' ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/iot-device-samples/tree/master/java){: new_window}.

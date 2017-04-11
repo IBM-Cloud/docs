@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-26"
+  years: 2016, 2017
+lastupdated: "2017-03-13"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2016-08-26"
 Node-RED を使用して、デバイス・シミュレーターを作成し、シミュレートしたデバイス・データを {{site.data.keyword.iot_full}} 組織に送信します。  
 {:shortdesc}
 
-Node-RED は、ハードウェア・デバイス、API、オンライン・サービスを、新しい興味深い方法で接続するツールです。詳しくは、[Node-RED](http://nodered.org/) の Web サイトを参照してください。  
+Node-RED は、ハードウェア・デバイス、API、オンライン・サービスを、新しい興味深い方法で接続するツールです。詳しくは、[Node-RED ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://nodered.org/){: new_window} Web サイトを参照してください。  
 
 Node-RED インスタンスは、独自の環境で実行することもできますし、{{site.data.keyword.Bluemix_notm}} アプリケーションとして使用することもできます。以下の処理には、{{site.data.keyword.Bluemix_notm}} のための手順が含まれています。
 
@@ -26,9 +26,10 @@ Node-RED デバイス・シミュレーターを作成して接続するには�
    デバイス・シミュレーターを使用して、MQTT デバイス・メッセージを {{site.data.keyword.iot_short_notm}} に送信します。デバイス・シミュレーターは、貨物輸送コンテナーのデータを {{site.data.keyword.iot_short_notm}} などの MQTT ブローカーに送信する処理をシミュレートしたものです。
     1. {{site.data.keyword.Bluemix_notm}} (https://console.ng.bluemix.net) にログインします。
     2. **「カタログ」**タブを選択します。
-    3. サービス・カタログの「ボイラープレート」セクションを見つけて、**「Node-RED Starter コミュニティー ベータ」**をクリックします。**ヒント:** [ここ](https://console.ng.bluemix.net/catalog/starters/node-red-starter/)をクリックすると、「Node-RED Starter」ページに直接移動できます。
+    3. サービス・カタログの「ボイラープレート」セクションを見つけて、**「Node-RED Starter コミュニティー ベータ」**をクリックします。**ヒント:** [こちら ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/catalog/starters/node-red-starter/){: new_window} をクリックすると、「Node-RED Starter」ページに直接移動できます。
     4. 「Node-RED Starter」ページで、Node-RED のデプロイ場所となるスペースを選択し、「アプリの作成」選択項目を確認し、**「作成」**をクリックして Node-RED を Bluemix 組織に追加します。
-    以下に例を示します。  
+      
+以下に例を示します。  
      - スペース: dev
      - 名前: myDevice
      - ホスト: myDevice
@@ -37,14 +38,15 @@ Node-RED デバイス・シミュレーターを作成して接続するには�
     **注:** ステージング・プロセスには数分かかることがあります。
 
     3. 「経路」リンクをクリックして、Node-RED を開きます。
-    例: `http://simulatedDevice.mybluemix.net`
+      
+例: `http://simulatedDevice.mybluemix.net`
     4. **「Go to your Node-RED flow editor」**をクリックして、エディターを開きます。
     5. この文書の [Node-RED ノード・フロー・データ](#flow_data)セクションにある Node-RED フロー・データをコピーします。
     5. Node-RED フロー・エディターの右上隅のメニューをクリックし、**「Import」>「Clipboard」**を選択します。  
     6. クリップボードをインポート・ノードの入力フィールドに貼り付けて、**「Ok」**をクリックします。
     デバイス・シミュレーター・フローがフロー・エディターにインポートされます。
 
-2. デバイスを {{site.data.keyword.iot_short_notm}} に登録します
+2. デバイスを {{site.data.keyword.iot_short_notm}}   に登録します
 Node-RED サンプル・デバイスを接続するには、以下の手順を実行します。
  1. {{site.data.keyword.Bluemix_notm}} でダッシュボードに移動します。
  2. {{site.data.keyword.iot_short_notm}} をデプロイしたスペースを選択します。
@@ -97,9 +99,11 @@ Node-RED サンプル・デバイスを接続するには、以下の手順を�
 4. デバイスの接続を検証します
  1. ブラウザーの別のタブまたはウィンドウで、{{site.data.keyword.iot_short_notm}} ダッシュボードを開きます。
  2. **「Devices」**を選択し、**Device001** (または追加したデバイスの名前がそれとは違う場合はその名前) をクリックします。
- デバイス情報のページが表示されます。このビューで、デバイスの接続状況を確認できます。この段階で、デバイスは切断されているものとして表示されているはずです。   
+   
+デバイス情報のページが表示されます。このビューで、デバイスの接続状況を確認できます。この段階で、デバイスは切断されているものとして表示されているはずです。   
  3. Node-RED フロー・エディターに戻り、「Inject」ノードのボタンをクリックして、アセット・ペイロードを生成します。
- ペイロードには、以下のデータ・ポイントが含まれています。  
+   
+ペイロードには、以下のデータ・ポイントが含まれています。  
  ```
  {"d":
   { "name":"My Device",

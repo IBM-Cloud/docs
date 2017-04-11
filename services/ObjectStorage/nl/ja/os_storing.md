@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -45,7 +45,7 @@ UI または CLI を使用してオブジェクトをストレージにアップ
   ```
   {: pre}
 
-**Note**: エラー・メッセージを受け取った場合は、[前提ソフトウェア](/docs/services/ObjectStorage/os_configuring.html#install-swift-client)がインストールされていることを確認してください。
+  **注**: エラー・メッセージを受け取った場合は、[前提ソフトウェア](/docs/services/ObjectStorage/os_configuring.html#install-swift-client)がインストールされていることを確認してください。
 
 3. オプション: コンテナーが作成されたことを確認するには、以下のコマンドを実行してコンテナーをリストします。
 

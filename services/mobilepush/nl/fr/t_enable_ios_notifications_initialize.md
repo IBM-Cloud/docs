@@ -1,7 +1,7 @@
 ---
 
-Copyright :
-  Années : 2015, 2016
+copyright:
+ years: 2015, 2016
 
 ---
 
@@ -17,7 +17,7 @@ de l'application et l'identificateur global unique.
 ###Objective-C
 
 ```
-// Initialisez le logiciel SDK pour Object-C avec la route et l'identificateur global unique IBM Bluemix
+// Initialize the SDK for Object-C with IBM Bluemix GUID and route
 IMFClient *imfClient = [IMFClient sharedInstance];
 [imfClient initializeWithBackendRoute:"add_your_applicationRoute_here" backendGUID:"add_your_appId_here"];
 ```
@@ -25,7 +25,7 @@ IMFClient *imfClient = [IMFClient sharedInstance];
 ###Swift
 
 ```
-// Initialisez le logiciel SDK de base pour Swift avec la route, l'identificateur global unique et la région IBM Bluemix
+// Initialize the Core SDK for Swift with IBM Bluemix GUID, route, and region
 let myBMSClient = BMSClient.sharedInstance
 
 myBMSClient.initializeWithBluemixAppRoute("BluemixAppRoute", bluemixAppGUID: "APPGUID", bluemixRegion:"Location where your app Hosted")
@@ -37,14 +37,14 @@ myBMSClient.defaultRequestTimeout = 10.0 // Timput in seconds
 ###Objective-C
 
 ```
-//Initialisez le logiciel SDK Push du client pour Objective-C
+//Initialize client Push SDK for Objective-C
 IMFPushClient _pushService = [IMFPushClient sharedInstance];
 ```
 
 ###Swift
 
 ```
-//Initialisez le logiciel SDK Push du client pour Swift
+//Initialize client Push SDK for Swift
 let push = BMSPushClient.sharedInstance
 ```
 
@@ -61,7 +61,7 @@ valeur est sensible à la casse.
 
 **bluemixRegionSuffix**
 
-Indique l'emplacement où l'appli est hébergée. Le paramètre ```bluemixRegion``` spécifie le déploiement Bluemix que vous utilisez. Vous pouvez définir cette valeur avec une propriété statique ```BMSClient.REGION`` et utiliser l'une des trois valeurs suivantes :
+Indique l'emplacement où l'appli est hébergée. Le paramètre `bluemixRegion` spécifie le déploiement Bluemix que vous utilisez. ous pouvez définir cette valeur avec une propriété statique `BMSClient.REGION` et utiliser l'une des trois valeurs suivantes :
 
 - BMSClient.REGION_US_SOUTH
 - BMSClient.REGION_UK

@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-30"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-25"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -55,9 +55,12 @@ Una aplicación puede publicar sucesos como si procedieran de cualquier disposit
 
 -  Publicar en tema iot-2/type/*device_type*/id/*device_id*/evt/*event_id*/fmt/*format_string*
 
-Para portar datos existentes de un dispositivo a {{site.data.keyword.iot_short_notm}}, puede crear una aplicación para procesar los datos y publicarlos en {{site.data.keyword.iot_short_notm}}.
+Para enviar datos existentes de un dispositivo a {{site.data.keyword.iot_short_notm}}, puede crear una aplicación para procesar los datos y publicarlos en {{site.data.keyword.iot_short_notm}}.
 
 **Importante:** La carga útil de mensajes está limitada a un máximo de 131072 bytes.  Los mensajes que superen el límite se rechazarán.
+
+### Mensajes retenidos
+Las organizaciones de {{site.data.keyword.iot_short_notm}} no tienen autorización para publicar mensajes MQTT retenidos. Si una aplicación, pasarela o dispositivo envía un mensaje retenido, el servicio {{site.data.keyword.iot_short_notm}} modifica el distintivo del mensaje retenido cuando tiene el valor true y procesa el mensaje como si el distintivo estuviera establecido en false.
 
 ## Publicación de mandatos de dispositivos
 {: #publishing_device_commands}
@@ -133,6 +136,11 @@ Al ajustar la forma en la que se conectan las aplicaciones, puede convertir sus 
 
 El número de clientes necesarios para un equilibrio de carga óptimo y escalabilidad varía según el despliegue. Para identificar el número óptimo de clientes, tiene que realizar pruebas de carga de su sistema.
 
+Las aplicaciones escalables están definidas como suscripciones no duraderas o suscripciones compartidas de duración mixta (Beta).
+
+### Suscripciones no duraderas
+{: #shared_sub_non_durable}
+
 Para habilitar el equilibrio de carga, asegúrese de que la suscripción de las aplicaciones no es duradera y de que el ID de cliente de la suscripción coincide con el formato siguiente:
 
 <pre class="pre">A:<var class="keyword varname">orgId</var>:<var class="keyword varname">appId</var></pre>
@@ -143,20 +151,38 @@ Donde:
 -  *orgId* es el ID de organización de seis caracteres exclusivo que se ha generado cuando se ha registrado el servicio.
 -  *appId* es un identificador de serie exclusivo definido por el usuario para el cliente. La serie puede contener sólo caracteres alfanuméricos (a-z, A-Z, 0-9) y los caracteres especiales guión (-), subrayado (_), y punto (.).
 
+
 **Importante:**
-- Solo se admiten suscripciones no duraderas con las aplicaciones escalables.
 - El ID de cliente debe empezar por el carácter en mayúscula **A** que debe designar correctamente como una aplicación escalable {{site.data.keyword.iot_short_notm}}.
 - Otros clientes que forman parte de la aplicación escalable deben utilizar el mismo ID de cliente.
+- El valor de la sesión limpia debe estar establecido en false (0) para las suscripciones no duraderas.
 
+### Suscripciones compartidas de duración mixta (Beta)
+{: #shared_sub_mixed}
 
-### Modo de funcionamiento
+El servicio de {{site.data.keyword.iot_short_notm}} amplía la especificación de protocolo de mensajería MQTT V3.1.1 para dar soporte a una versión beta de prueba de suscripciones compartidas de duración mixta. Las suscripciones compartidas proporcionan funciones de equilibrio de carga para aplicaciones. Es posible que una suscripción compartida sea necesaria si una aplicación de empresa de programa de fondo no puede procesar el volumen de mensajes que se van a publicar en un espacio de tema específico. Por ejemplo, cuando muchos dispositivos publican mensajes que está procesando una única aplicación, es posible que sea necesario utilizar la función de equilibrio de carga de una suscripción compartida.
 
-El servicio de {{site.data.keyword.iot_short_notm}} amplía la especificación de protocolo de mensajería MQTT V3.1.1 para dar soporte a suscripciones compartidas. Las suscripciones compartidas proporcionan funciones de equilibrio de carga para aplicaciones. Es posible que una suscripción compartida sea necesaria si una aplicación de empresa de programa de fondo no puede procesar el volumen de mensajes que se van a publicar en un espacio de tema específico. Por ejemplo, cuando muchos dispositivos publican mensajes que está procesando una única aplicación, es posible que sea necesario utilizar la función de equilibrio de carga de una suscripción compartida. El soporte de la suscripción compartida de {{site.data.keyword.iot_short_notm}} está limitado sólo a suscripciones no duraderas.
+Para las suscripciones compartidas de duración mixta, asegúrese de que el ID de cliente de la suscripción coincida con el formato siguiente:
 
+<pre class="pre">A:<var class="keyword varname">org</var>:<var class="keyword varname">appId</var>:<var class="keyword varname">instanceId</var></pre>
+{: codeblock}
 
-**Ejemplo**
+Donde:
+- El carácter **A**, *orgId* y *appId* en el ID de cliente se definen del mismo modo que para las [suscripciones no duraderas](#shared_sub_non_durable).
+- *instanceID* es una serie que no debe superar los 36 caracteres y que solo puede contener los siguientes caracteres:
+   - Caracteres alfanuméricos (a-z, A-Z, 0-9)
+   - Guiones ( - )
+   - Guiones bajos ( _ )
+   - Puntos ( . )
 
-El caso de ejemplo siguiente es un ejemplo de cómo funciona una aplicación escalable en {{site.data.keyword.iot_short_notm}}:
+**Importante:**
+- El soporte para suscripciones compartidas de duración mixta solo está disponible como característica beta. No implemente características beta en aplicaciones de producción.
+- El valor de sesión limpia se puede establecer en true (1) o false (0) en las suscripciones compartidas de duración mixta.
+- Los clientes que se conectan con instanceId utilizan diferentes suscripciones a las que se pueden conectar los clientes sin instanceId. Por lo tanto, si desea que varios clientes se conecten a una suscripción compartida de duración mixta, tiene que especificar instanceId en todas las suscripciones.
+
+**Caso de ejemplo**
+
+El caso de ejemplo siguiente es un ejemplo de cómo funciona una aplicación escalable no duradera en {{site.data.keyword.iot_short_notm}}:
 
 - El cliente uno se conecta como **A:abc123:myApplication** y se suscribe a todos los sucesos de dispositivo, lo que significa que el cliente uno recibe el 100 % de los sucesos de dispositivo que se publican.
 - El cliente dos se conecta como **A:abc123:myApplication** y también se suscribe a todos los sucesos de dispositivo, lo que significa que el cliente uno y el cliente dos comparten todos los sucesos que se publican. La carga de proceso se comparte entre el cliente uno y el cliente dos.

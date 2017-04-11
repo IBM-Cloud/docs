@@ -1,22 +1,22 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-11"
+  years: 2016, 2017
+lastupdated: "2017-02-28"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
 
 
-# Analytics
+# IoT-Datenanalyse in Echtzeit
 {: #analytics}  
 
-Verwenden Sie {{site.data.keyword.iot_full}} Analytics (Analyse), um aus den von Ihrem Gerät erzeugten Rohdaten die für Sie erforderlichen Analyseinformationen abzurufen.  
+Verwenden Sie {{site.data.keyword.iot_full}} Analytics (Analyse), um aus den von Ihrem Gerät erzeugten Rohdaten die für Sie erforderlichen Analyseinformationen in Echtzeit abzurufen.  
 {: shortdesc}
 
 Mithilfe von [Boards und Karten](data_visualization.html) können Sie Grafiken anzeigen, die die Datasetwerte eines oder mehrerer Geräte darstellen, sodass Sie eine schnelle Übersicht erhalten und Gerätedaten leicht verstehen können.

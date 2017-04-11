@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-05"
+  years: 2016, 2017
+lastupdated: "2017-03-13"
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -14,8 +14,10 @@ lastupdated: "2016-10-05"
 
 # {{site.data.keyword.ssoshort}} の構成と使用
 
-{{site.data.keyword.iot_full}} の代替ユーザー認証プロバイダーをサポートするよう {{site.data.keyword.ssofull}} サービスを構成することができます。{{site.data.keyword.ssoshort}} は、SAML 2.0、IBM Cloud Directory、ソーシャル・プロバイダー (Facebook、LinkedIn、Google+)、および Github をサポートします。
-{: .shortdesc}
+{{site.data.keyword.iot_full}} の代替ユーザー認証プロバイダーをサポートするよう {{site.data.keyword.ssofull}} サービスを構成することができます。{: .shortdesc}
+
+{{site.data.keyword.ssoshort}} は、SAML 2.0、IBM Cloud Directory、ソーシャル・プロバイダー (Facebook、LinkedIn、Google+)、および Github をサポートします。
+{{site.data.keyword.Bluemix_notm}} SSO サービスについて詳しくは、[Getting started with Single Sign On ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/services/SingleSignOn/index.html){:new_window} を参照してください。
 
 ## {{site.data.keyword.ssoshort}} のセットアップ
 
@@ -33,7 +35,7 @@ lastupdated: "2016-10-05"
 3. {{site.data.keyword.ssoshort}} サービスを選択し、**「追加」**をクリックします。
 4. ここで、{{site.data.keyword.sdk4nodefull}} アプリケーションを再ステージングする必要があります。
 5. {{site.data.keyword.Bluemix_notm}} ダッシュボードから、{{site.data.keyword.sdk4nodefull}} アプリケーションをクリックします。
-6. {{site.data.keyword.ssoshort}} サービスを選択し、**「統合 (Integrate)」**をクリックします。
+6. {{site.data.keyword.ssoshort}} サービスを選択し、**「インテグレーション (Integrate)」**をクリックします。
 7. 戻り先 URL: `https://<orgid>.internetofthings.ibmcloud.com/get-ibmsso-access-token` を入力します。`<orgid>` は {{site.data.keyword.iot_short_notm}} 組織 ID です。
 
 

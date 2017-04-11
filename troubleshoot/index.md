@@ -3,8 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-01-11"
-  
+lastupdated: "2017-4-10"  
 
 ---
 
@@ -512,38 +511,6 @@ Use one of the following methods to specify your disk quota. The maximum disk qu
 
 	
 	
-## Cannot add Git repository
-{: #ts_cannot_addgit}
-
-After you create an app on the Dashboard, you click ADD GIT to create a Git repository, but you cannot proceed.
-
-
-
-When you click **ADD GIT**, a window opens and one of these issues occur:
-{: tsSymptoms} 
-
-  * The window hangs with a blank screen.
-  * A message states that a problem exists with 3rd party cookies.
-
-
-
-Your browser might be configured to prevent a cookie from being set. That cookie must be set from the IBM® Bluemix DevOps Services site in the hub.jazz.net internet domain from within the context of the {{site.data.keyword.Bluemix_notm}} console.
-{: tsCauses}  
-
- 
-
-You can fix this problem in one of the following ways:
-{: tsResolve}
-
-  * Follow the instructions that are in the window that opens from the {{site.data.keyword.Bluemix_notm}} console. Click the button. Another browser window opens temporarily. In that window, DevOps Services sets the authentication cookie.
-  * In another browser tab, go to https://hub.jazz.net and log in. Return to the {{site.data.keyword.Bluemix_notm}} console and refresh the page. Click **ADD GIT** again.
-  * Change your browser settings to enable 3rd party cookies and click ADD GIT again. For details about configuring the settings, see the documentation for your browser:
-    * [Mozilla Firefox ![External link icon](../icons/launch-glyph.svg)](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences#w_how-do-i-change-cookie-settings){: new_window}
-	* [Google Chrome ![External link icon](../icons/launch-glyph.svg)](https://support.google.com/chrome/answer/95647){: new_window}
-	* [Apple Safari ![External link icon](../icons/launch-glyph.svg)](https://support.apple.com/kb/PH17191){: new_window}
-	* [Microsoft Internet Explorer ![External link icon](../icons/launch-glyph.svg)](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window}
-If those workarounds do not fix the problem, send an email to idslogin@jazz.net.
-
 
 
 ## Android apps can't receive push notifications
@@ -632,7 +599,7 @@ cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/n
 ## Org's memory limit is exceeded
 {: #ts_outofmemory}
 
-If you are a trial account user, you might be unable to deploy an app to {{site.data.keyword.Bluemix_notm}} if you have exceeded the memory limit of your organization. You can either reduce the memory that your apps use or increase the memory quota of your account. 
+If you are a trial account user, you might be unable to deploy an app to {{site.data.keyword.Bluemix_notm}} if you have exceeded the memory limit of your organization. You can either reduce the memory that your apps use or increase the memory quota of your account. The maximum memory quota for a trial account is 2 GB and can only be increased by moving to a paid account.
 
 
 
@@ -723,11 +690,11 @@ When you push an app to {{site.data.keyword.Bluemix_notm}} from IBM Eclipse Tool
 ## {{site.data.keyword.Bluemix_notm}} Live Sync icons are not shown
 {: #ts_llz_lkb_3r}
 
-You created an app in IBM Bluemix DevOps Services, but the IBM Bluemix Live Sync icons are not shown in the Web IDE.
+You created an app, but the IBM Bluemix Live Sync icons are not shown in the Web IDE.
 
  
 
-When you edit a Node.js app in the DevOps Services Web IDE, the {{site.data.keyword.Bluemix_notm}} live edit, quick restart, and debug icons are not shown.
+When you edit a Node.js app in the Web IDE, the {{site.data.keyword.Bluemix_notm}} live edit, quick restart, and debug icons are not shown.
 {: tsSymptoms}
 
  
@@ -749,8 +716,6 @@ Use one of the following methods to solve the problem:
    path: path_to_application
    ```
   * Create a `package.json` file that is in the same directory as your app.
-
-  
   
   
 
@@ -975,14 +940,14 @@ For more tips about Node.js apps, see [Tips for Node.js Applications ![External 
 
 
 
-## Configuration errors appear in the `server.xml` file after you import a {{site.data.keyword.Bluemix_notm}} Liberty app from Bluemix DevOps Services to Eclipse
+## Configuration errors appear in the `server.xml` file after you import a {{site.data.keyword.Bluemix_notm}} Liberty app into Eclipse
 {: #ts_eclipse}
 
-If you see configuration errors in the `server.xml` file after you import a {{site.data.keyword.Bluemix_notm}} Liberty app from IBM Bluemix DevOps Services to Eclipse, you might need to remove the `server.xml` file from the project. 
+If you see configuration errors in the `server.xml` file after you import a {{site.data.keyword.Bluemix_notm}} Liberty app into Eclipse, you might need to remove the `server.xml` file from the project. 
 
  
 
-After you import a {{site.data.keyword.Bluemix_notm}} Liberty app from {{site.data.keyword.Bluemix_notm}} DevOps Services into the Eclipse, you see configuration errors within the `server.xml` file from Eclipse Problems view. 
+After you import a {{site.data.keyword.Bluemix_notm}} Liberty app into the Eclipse, you see configuration errors within the `server.xml` file from Eclipse Problems view. 
 {: tsSymptoms}
 
  
@@ -992,7 +957,7 @@ Liberty buildpack uses the `server.xml` file to configure the app and generates 
 
  
 
-You can resolve this problem by removing the server.xml file from the project. The buildpack creates the `server.xml` file dynamically when you push the app as a WAR app. For more information, see [Liberty for Java](/docs/runtimes/liberty/index.html).
+You can resolve this problem by removing the server.xml file from the project. The buildpack creates the `server.xml` file dynamically when you push the app as a WAR app. For more information, see [Liberty for Java ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/runtimes/liberty/index.html){: new_window}.
 {: tsResolve}
 	
 	

@@ -313,12 +313,12 @@ Los informes de ![SSAE16 SOC1/2/3](images/icon_aicpa.png) **SOC (Service Organiz
   * Procesos de gobierno corporativo interno y de gestión de riesgos
   * Supervisión de la normativa
  
-{{site.data.keyword.Bluemix_notm}} proporciona informes SOC 1, SOC 2 y SOC 3. Para obtener más información, póngase en contacto con el equipo de ventas de [{{site.data.keyword.Bluemix_notm}} sales ![icono de enlace externo](../icons/launch-glyph.svg)](mailto:bmxcert1@us.ibm.com){:new_window}.  
+{{site.data.keyword.Bluemix_notm}} proporciona informes SOC 1, SOC 2 y SOC 3. Para obtener más información, póngase en contacto con el equipo de ventas de [{{site.data.keyword.Bluemix_notm}} sales ![icono de enlace externo](../icons/launch-glyph.svg)](mailto:bmxcert1@us.ibm.com){:new_window}. 
 
 
 ![HIPAA](images/icon_hipaa.png) La Ley de Transferencia y Responsabilidad de Seguro Médico (Health Insurance Portability and Accountability Act, HIPAA), decretada por el Congreso de Estados Unidos en 1996, protege la cobertura de los seguros médicos para los empleados tras perder sus trabajos. HIPAA está regulada e impuesta por la Oficina de derechos civiles (Office of Civil Rights) y el Ministerio de Salud Pública y Bienestar Social (Department of Health and Human Services) de Estados Unidos. HIPAA abarca regulaciones desde la ley de 1996, así como requisitos de privacidad de la ley HITECH (Health Information Technology for Economic and Clinical Health) de 2009. {{site.data.keyword.Bluemix_notm}} cumple todos los requisitos para HIPAA del lado del centro de datos o del proveedor de servicios.
 
-Para obtener más información o ayuda para conseguir, certificar y mantener la conformidad con HIPAA para el entorno Bluemix, póngase en contacto con el equipo de ventas de {{site.data.keyword.Bluemix_notm}} [![icono de enlace externo](../icons/launch-glyph.svg)](mailto:cloudplatform_compliance@us.ibm.com){:new_window}. 
+Para obtener más información o ayuda para conseguir, certificar y mantener la conformidad con HIPAA para el entorno Bluemix, póngase en contacto con el equipo de ventas de {{site.data.keyword.Bluemix_notm}} [![icono de enlace externo](../icons/launch-glyph.svg)](mailto:cloudplatform_compliance@us.ibm.com){:new_window}.
 
 
 ![ISO 27017](images/icon_ISO27017.png) ISO/IEC 27017:2015 proporciona las directrices para los controles de seguridad de la información aplicables al suministro y uso de los servicios de nube. Además, proporciona unas instrucciones de implementación para proveedores de servicio en la nube y clientes de servicio en la nube. ISO 27017 proporciona unas instrucciones de implementación para controles relevantes que se especifican en ISO/IEC 27002, así como controles e instrucciones adicionales que se relacionan específicamente con los servicios en la nube.

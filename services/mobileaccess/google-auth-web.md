@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -11,6 +11,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+The {{site.data.keyword.amafull}} service is replaced with the {{site.data.keyword.appid_full}} service.
 
 # Enabling Google authentication for Web applications
 {: #google-auth-web}
@@ -94,27 +96,22 @@ To start the process of authorization:
 		res.send("Hello from protected endpoint");
 	});
 
-	app.get("/protected", checkAuthentication, function(req, res, next) {
-		res.send("Hello from protected endpoint");
-		function checkAuthentication(req, res, next) {
-
-			// Check if user is authenticated
-			if (req.session.userIdentity) {
-				next()
-			} else {
-				// If not - redirect to authorization server
-				var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
-				var authorizationEndpoint = mcaCredentials.authorizationEndpoint;
-				var clientId = mcaCredentials.clientId;
-				var redirectUri = "http://some-server/oauth/callback"; // Your Web application redirect URI
-				var redirectUrl = authorizationEndpoint + "?response_type=code";
-				redirectUrl += "&client_id=" + clientId;
-				redirectUrl += "&redirect_uri=" + redirectUri;
-				res.redirect(redirectUrl);
-				}
-		 	}
-	   	}
-       }
+	function checkAuthentication(req, res, next) {
+		// Check if user is authenticated
+		if (req.session.userIdentity) {
+			next()
+		} else {
+			// If not - redirect to authorization server
+			var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
+			var authorizationEndpoint = mcaCredentials.authorizationEndpoint;
+			var clientId = mcaCredentials.clientId;
+			var redirectUri = "http://some-server/oauth/callback"; // Your Web application redirect URI
+			var redirectUrl = authorizationEndpoint + "?response_type=code";
+			redirectUrl += "&client_id=" + clientId;
+			redirectUrl += "&redirect_uri=" + redirectUri;
+			res.redirect(redirectUrl);
+		}
+	}
 	```
 	{: codeblock}
 

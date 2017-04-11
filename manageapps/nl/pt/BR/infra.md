@@ -13,7 +13,7 @@ lastupdated: "2016-03-15"
 
 {:shortdesc: .shortdesc}
 
-#  Camadas de infraestrutura do Bluemix
+# Camadas de infraestrutura do Bluemix
 
 
 

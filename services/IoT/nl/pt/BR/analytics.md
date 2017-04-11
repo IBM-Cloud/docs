@@ -1,22 +1,22 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-11"
+  years: 2016, 2017
+lastupdated: "2017-02-28"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
 
 
-# Analytics
+# IoT Data Analytics em tempo real
 {: #analytics}  
 
-Use o Watson {{site.data.keyword.iot_full}} Analytics para obter as informações analíticas necessárias dos dados brutos produzidos por seus dispositivos.  
+Use o Watson {{site.data.keyword.iot_full}} Analytics para obter as informações analíticas em tempo real necessárias dos dados brutos produzidos por seus dispositivos.  
 {: shortdesc}
 
 Usando [placas e cartões](data_visualization.html), é possível visualizar gráficos que representam valores do conjunto de dados de um ou mais dispositivos para se ter uma visão geral e um entendimento rápidos dos dados do dispositivo.

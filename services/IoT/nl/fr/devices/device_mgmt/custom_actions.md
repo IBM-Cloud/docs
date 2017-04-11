@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-05"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -64,6 +64,19 @@ L'exemple de code suivant présente le format standard d'un package d'extension 
 
 ```
 
+### Ajout d'un package de gestion des terminaux personnalisé
+
+Vous pouvez ajouter un package de gestion des terminaux personnalisé à l'aide du tableau de nord {{site.data.keyword.iot_short_notm}} ou de l'API.
+
+Pour ajouter un package de gestion des terminaux personnalisé à l'aide du tableau de bord {{site.data.keyword.iot_short_notm}} :
+
+1. Depuis votre tableau de bord {{site.data.keyword.iot_short_notm}}, cliquez sur **Paramètres** dans la barre de navigation.
+2. Cliquez sur **Packages de gestion des terminaux personnalisés**.
+3. Cliquez sur le bouton **Ajouter un package**.
+4. Sélectionnez votre fichier de package et cliquez sur **Ouvrir**.
+
+Pour ajouter un package de gestion des terminaux personnalisé à l'aide de l'API, voir la [documentation de l'API {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+
 ### Propriétés de package d'extension
 
 Un package d'extension de gestion des terminaux contient les propriétés suivantes :
@@ -115,7 +128,7 @@ Utilisez les commandes d'API REST {{site.data.keyword.iot_short_notm}} suivantes
 - Pour supprimer un package d'extension de gestion des terminaux :
   `DELETE https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
 
-Pour plus d'informations sur les API REST pour les packages d'extension de gestion des terminaux, voir la [documentation {{site.data.keyword.iot_short_notm}} API V2](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Pour plus d'informations sur les API REST pour les packages d'extension de gestion des terminaux, voir la documentation de l'[API V2 {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}. 
 
 
 ## Prise en charge des actions de gestion des terminaux personnalisées
@@ -150,7 +163,7 @@ Pour indiquer des actions personnalisées d'un package d'extension, le terminal 
 
 ```
 
-Pour plus d'informations sur les demandes de gestion des terminaux, voir [Protocole de gestion des terminaux](index.html){: new_window}.
+Pour plus d'informations sur les demandes de gestion des terminaux, voir [Protocole de gestion des terminaux](index.html).
 
 ## Lancement des actions de gestion des terminaux personnalisées
 {: #initiating_custom_dm_actions}
@@ -353,7 +366,7 @@ Le terminal reçoit la réponse suivante depuis {{site.data.keyword.iot_short_no
 	}
 
 ```
-A ce stade, vous pouvez lancer les actions de terminal que vous avez définies dans l'extension `exampleIoT-exampleDeviceType-v1`.
+A ce stade, vous pouvez lancer les actions sur les terminaux que vous avez définies dans l'extension `exampleIoT-exampleDeviceType-v1`.
 
 Le contenu suivant est utilisé pour lancer une action `installPlugin` :
 
@@ -450,3 +463,9 @@ Utilisez les demandes d'API suivantes pour gérer vos terminaux :
 - Pour afficher le statut d'une demande de gestion des terminaux spécifique :
 
 `curl -XGET -H "Content-Type: application/json" -u "<apiKey>:<apiToken>" https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/requests/<requestId>`
+
+## Recettes relatives aux extensions de gestion des terminaux
+
+Les recettes suivantes décrivent le flux requis pour gérer les extensions de gestion des terminaux :
+
+- La recette [Device Management Extension Packages in WIoT Platform ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/device-management-extension-packages-in-wiot-platform/){: new_window} explique comment enregistrer un terminal géré auprès de {{site.data.keyword.iot_short}} afin qu'il puisse recevoir et traiter des actions d'extension de gestion des terminaux. Les exemples de code décrits dans la recette sont écrits à l'aide de la bibliothèque client Python.

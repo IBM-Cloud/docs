@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-05"
+  years: 2016, 2017
+lastupdated: "2017-03-13"
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -14,8 +14,10 @@ lastupdated: "2016-10-05"
 
 # {{site.data.keyword.ssoshort}} konfigurieren und verwenden
 
-Der Service {{site.data.keyword.ssofull}} kann so konfiguriert werden, dass alternative Provider für die Benutzerauthentifizierung in {{site.data.keyword.iot_full}} unterstützt werden. {{site.data.keyword.ssoshort}} unterstützt SAML 2.0, IBM Cloud Directory, Provider sozialer Netzwerke (Facebook, LinkedIn, Google+) und Github.
+Der Service {{site.data.keyword.ssofull}} kann so konfiguriert werden, dass alternative Provider für die Benutzerauthentifizierung in {{site.data.keyword.iot_full}} unterstützt werden.
 {: .shortdesc}
+
+{{site.data.keyword.ssoshort}} unterstützt SAML 2.0, IBM Cloud Directory, Provider sozialer Netzwerke (Facebook, LinkedIn, Google+) und Github. Weitere Informationen zum {{site.data.keyword.Bluemix_notm}}-SSO-Service finden Sie in [Einführung in Single Sign On ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/services/SingleSignOn/index.html){:new_window}.
 
 ## {{site.data.keyword.ssoshort}} einrichten
 
@@ -33,7 +35,7 @@ Der {{site.data.keyword.ssoshort}}-Service kann nicht direkt an andere Services 
 3. Wählen Sie den {{site.data.keyword.ssoshort}}-Service aus und klicken Sie auf **Hinzufügen**.
 4. Für die Anwendung {{site.data.keyword.sdk4nodefull}} muss nun ein erneutes Staging ausgeführt werden.
 5. Klicken Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard auf die Anwendung {{site.data.keyword.sdk4nodefull}}.
-6. Wählen Sie den {{site.data.keyword.ssoshort}}-Service aus und klicken Sie auf **Integrate**.
+6. Wählen Sie den {{site.data.keyword.ssoshort}}-Service aus und klicken Sie auf **Integrieren**.
 7. Geben Sie die URL an, an die die Rückgabe erfolgen soll:
 `https://<Organisations-ID>.internetofthings.ibmcloud.com/get-ibmsso-access-token`, wobei `<Organisations-ID>` die ID Ihrer {{site.data.keyword.iot_short_notm}}-Organisation ist.
 

@@ -12,7 +12,7 @@ copyright:
 
 # Message d'erreur de service {{site.data.keyword.mobilepushshort}}
 {: #errors}
-Dernière mise à jour : 16 janvier 2017
+Dernière mise à jour : 13 février 2017
 {: .last-updated}
 
 
@@ -55,8 +55,7 @@ n'est pas disponible sur le serveur.
 de notifications Push Apple (APNS) avant qu'elles ne soient configurées.
 
 **Réponse de l'utilisateur **: vérifiez que le service {{site.data.keyword.mobilepushshort}} a été configuré avec des certificats de sécurité valides pour les APN. Pour
-plus d'informations, voir [Configuration des données d'identification pour les APN
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](t_push_provider_ios.html "Icône de lien externe"){: new_window}.
+plus d'informations, voir [Configuration des données d'identification pour le service APNS ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](t_push_provider_ios.html){: new_window}.
 
 
 ## FPWSE0004E
@@ -85,9 +84,7 @@ plus d'informations, voir [Configuration des données d'identification pour les 
 **Explication **: le corps JSON de la demande comporte des paramètres que ne comprend pas le serveur {{site.data.keyword.mobilepushshort}}.
 
 
-**Réponse de l'utilisateur **: vérifiez que le corps JSON dans la demande respecte le format de demande attendu par le serveur {{site.data.keyword.mobilepushshort}}. Pour
-plus d'informations, voir [API REST
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobile.{DomainName}/imfpush/ "Icône de lien externe"){: new_window}.
+**Réponse de l'utilisateur **: vérifiez que le corps JSON dans la demande respecte le format de demande attendu par le serveur {{site.data.keyword.mobilepushshort}}. Pour plus d'informations, voir [API REST ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobile.{DomainName}/imfpush/){: new_window}.
 
 
 
@@ -98,8 +95,7 @@ plus d'informations, voir [API REST
 
 
 **Réponse de l'utilisateur **: vérifiez que le corps JSON dans la demande respecte le format de demande attendu par le serveur {{site.data.keyword.mobilepushshort}}. 
-Pour plus d'informations, voir [API REST
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobile.{DomainName}/imfpush/ "Icône de lien externe"){: new_window}.
+Pour plus d'informations, voir [API REST ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobile.{DomainName}/imfpush/){: new_window}.
 
 
 
@@ -110,8 +106,7 @@ Pour plus d'informations, voir [API REST
 
 
 **Réponse de l'utilisateur **: vérifiez que le corps JSON dans la demande respecte le format de demande attendu par le serveur {{site.data.keyword.mobilepushshort}}. 
-Pour plus d'informations, voir [API REST
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobile.{DomainName}/imfpush/ "Icône de lien externe"){: new_window}.
+Pour plus d'informations, voir [API REST ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobile.{DomainName}/imfpush/){: new_window}.
 
 
 
@@ -167,6 +162,13 @@ survient lorsqu'une demande d'extraction ou de suppression d'un abonnement qui n
 
 **Réponse de l'utilisateur **: vérifiez que le contenu JSON est valide.
 
+
+## FPWSE0025E
+{: #error_fpwse0025e}
+
+**Explication** : Le serveur est actuellement incapable de traiter la demande.
+
+**Réponse de l'utilisateur** : Soumettez à nouveau la demande plus tard.
 
 
 ## FPWSE1007E 

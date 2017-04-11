@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-31"
+  years: 2016, 2017
+lastupdated: "2017-02-03"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2016-08-31"
 
 ## 開發 {{site.data.keyword.iot_short_notm}}
 {: #goals}
-您可以利用數種方法來設定裝置並將其連接至 {{site.data.keyword.iot_short_notm}}，以及擷取和分析感興趣的即時資料。我們提供了資訊以協助您執行下列作業：
+您可以開發程式碼來設定裝置並將其連接至 {{site.data.keyword.iot_short_notm}}，以及擷取和分析感興趣的即時資料。我們提供了資訊以協助您執行下列一般作業：
 
 -  建立及管理應用程式
 -  建立、連接及管理裝置
@@ -39,7 +39,7 @@ lastupdated: "2016-08-31"
 - MQTT 傳訊通訊協定
 - Python
 - Node.js
-- Java
+- Java™
 - C#
 
 ## 裝置開發
@@ -60,7 +60,7 @@ lastupdated: "2016-08-31"
 如果您的裝置無法直接連接至網際網路，請使用所提供的資訊來建置閘道裝置，以擷取資料並將它傳送至 {{site.data.keyword.iot_short_notm}} 組織中的應用程式。
 支援使用 MQTT 傳訊通訊協定在 {{site.data.keyword.iot_short_notm}} 中進行閘道開發。
 
-如需 {{site.data.keyword.iot_short_notm}} 可用的用戶端程式庫鏈結，請按一下**資源**。
+如需可用之用戶端程式庫的相關資訊和鏈結，請參閱[適用於 {{site.data.keyword.iot_short_notm}} 開發的用戶端程式庫](iot_platform_client_lib.html)。
 
 # 相關鏈結
 {: #rellinks}
@@ -68,10 +68,10 @@ lastupdated: "2016-08-31"
 ## 適用於 {{site.data.keyword.iot_short_notm}} 的用戶端程式庫
 {: #client_libraries}
 
-* [C++](https://github.com/ibm-watson-iot/iot-cpp){:new_window}
-* [C#](https://github.com/ibm-watson-iot/iot-csharp){:new_window}
-* [嵌入式 C](https://github.com/ibm-watson-iot/iot-embeddedc){:new_window}
-* [Java](https://github.com/ibm-watson-iot/iot-java){:new_window}
-* [mBed C++](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){:new_window}
-* [Node.js](https://github.com/ibm-watson-iot/iot-nodejs){:new_window}
-* [Python](https://github.com/ibm-watson-iot/iot-python){:new_window}
+* [C++ ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-cpp){:new_window}
+* [C# ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-csharp){:new_window}
+* [嵌入式 C ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-embeddedc){:new_window}
+* [Java ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-java){:new_window}
+* [mBed C++ ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){:new_window}
+* [Node.js ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-nodejs){:new_window}
+* [Python ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-python){:new_window}

@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-11"
+  years: 2015, 2017
 
+lastupdated: "2017-03-14"
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -15,17 +15,24 @@ lastupdated: "2016-10-11"
 # API REST HTTP pour les terminaux
 {: #api}
 
-**Important :** La fonction d'API REST HTTP {{site.data.keyword.iot_full}} pour les terminaux est disponible uniquement dans le cadre d'un programme bêta limité. Il est possible que des mises à jour ultérieures incluent des modifications incompatibles avec la version en cours de cette fonction. Essayez-la et [dites-nous ce que vous en pensez](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html).
+**Important :** La fonction d'API REST HTTP {{site.data.keyword.iot_full}} pour les terminaux est disponible uniquement dans le cadre d'un programme bêta limité. Il est possible que des mises à jour ultérieures incluent des modifications incompatibles avec la version en cours de cette fonction. Essayez-la et [dites-nous ce que vous en pensez ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html){: new_window}.
 
-## Accès à l'API REST HTTP
+## Accès à la documentation de l'API REST HTTP
 {: #api_link}
 
-Pour accéder à l'API REST HTTP {{site.data.keyword.iot_short_notm}} et obtenir davantage d'informations sur l'intégration de terminaux dans votre organisation, voir https://docs.internetofthings.ibmcloud.com/swagger/v0002.html.
+Pour accéder à la documentation de l'API REST HTTP {{site.data.keyword.iot_short_notm}} et obtenir davantage d'informations sur l'intégration de terminaux dans votre organisation, voir [API](../reference/api.html).
 
 La seule version de l'API REST HTTP {{site.data.keyword.iot_short_notm}} prise en charge est la version 2. Assurez-vous que vos solutions {{site.data.keyword.iot_short_notm}} utilisent bien la version 2.
 
+## Connexions client
+{: #client_connections}
+
+Pour plus d'informations sur la sécurité du client et pour savoir comment connecter des clients dans {{site.data.keyword.iot_short_notm}}, voir [Connexion d'applications, de terminaux et de passerelles à {{site.data.keyword.iot_short_notm}}](../reference/security/connect_devices_apps_gw.html).
+
 # API de messagerie REST HTTP pour les terminaux
 {: #rest_messaging_api}
+
+Pour accéder à la documentation de l'API de messagerie HTTP {{site.data.keyword.iot_short_notm}} et obtenir davantage d'informations sur l'intégration de terminaux dans votre organisation, voir [{{site.data.keyword.iot_short_notm}} HTTP Messaging API ![Icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}.
 
 ## Publication d'événements
 {: #event_publication}
@@ -35,26 +42,26 @@ Outre l'utilisation du protocole de messagerie MQTT, vous pouvez également conf
 Utilisez l'une des URL suivantes pour soumettre une demande `POST` à partir d'un terminal qui est connecté à {{site.data.keyword.iot_short_notm}} :
 
 ### Demande POST non sécurisée
-<pre class="pre">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
-{: codeblock}
+<pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
 ### Demande POST sécurisée
-<pre class="pre">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
-{: codeblock}
+
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
+
+**Remarque : **Le port 443, port SSL par défaut, peut également être spécifié pour les appels API HTTP sécurisés.
 
 Si vous connectez un terminal ou une application au service Quickstart, utilisez l'une des URL suivantes à la place :
 
 ### Demande POST non sécurisée sur Quickstart
-<pre class="pre">http://quickstart.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
-{: codeblock}
+<pre class="pre"><code class="hljs">http://quickstart.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
 ### Demande POST sécurisée sur Quickstart
-<pre class="pre">https://quickstart.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
-{: codeblock}
+<pre class="pre"><code class="hljs">https://quickstart.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
 **Remarques importantes :**
 - Dans la version de l'API REST HTTP en cours, vous ne pouvez soumettre des événements de terminal qu'en utilisant la messagerie HTTP. Utilisez le protocole de messagerie MQTT afin de soumettre des demandes pour d'autres fonctions de contrôle et de gestion des terminaux.
 - Les connexions HTTP peuvent être réutilisées afin de publier des événements pour le même terminal, mais l'en-tête HTTP d'autorisation ne peut pas être modifié.
+- Le port 443, port SSL par défaut, peut également être spécifié pour les appels API HTTP sécurisés.
 
 ### Authentification
 
@@ -83,9 +90,6 @@ Semblable au niveau 0 ("Une fois tout au plus") de la qualité de service MQTT p
 
 Pour plus d'informations sur le protocole MQTT et les niveaux de qualité de service pour {{site.data.keyword.iot_short_notm}}, voir [Messagerie MQTT](../reference/mqtt/index.html).
 
-
-<--!
-Déplacé de la rubrique de développement Fonctions obsolètes. Emplacement à déterminer avec le développement.
 ## Dernier cache d'événement
 {: #last-event-cache}
 
@@ -140,4 +144,3 @@ La réponse inclut tous les ID d'événement qui ont été envoyés par le termi
     }
 ]
 ```
--->

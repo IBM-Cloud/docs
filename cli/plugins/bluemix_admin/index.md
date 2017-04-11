@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2017-02-20"
 
 ---
 
@@ -41,12 +41,8 @@ Complete the following steps to add the repository and install the plug-in:
 <ol>
 <li>To add the {{site.data.keyword.Bluemix_notm}} admin plug-in repository, run the following command:<br/><br/>
 <code>
-cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli
+cf add-plugin-repo BluemixAdmin http://plugins.ng.bluemix.net
 </code><br/><br/>
-<dl class="parml">
-<dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">Subdomain of the URL for your {{site.data.keyword.Bluemix_notm}} instance. For example, <code>https://console.mycompany.bluemix.net/cli</code></dd>
-</dl>
 </li>
 <li>To install the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in, run the following command:<br/><br/>
 <code>
@@ -111,7 +107,7 @@ To add a user to your {{site.data.keyword.Bluemix_notm}} environment from the
 user registry for your environment, use the following command:
 
 ```
-cf ba add-user <user_name> <organization>
+cf ba add-user <user_name> <organization> <first_name> <last_name>
 ```
 {: codeblock}
 
@@ -122,6 +118,10 @@ cf ba add-user <user_name> <organization>
 <dd class="pd">The name of the user in the LDAP registry.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">The name or GUID of the {{site.data.keyword.Bluemix_notm}} org to add the user to.</dd>
+<dt class="pt dlterm">&lt;first_name&gt;</dt>
+<dd class="pd">The first name of the user to be added to the organization.</dd>
+<dt class="pt dlterm">&lt;last_name&gt;</dt>
+<dd class="pd">The last name of the user to be added to the organization.</dd>
 </dl>
 
 **Tip:** You can also use **ba au** as an alias for the longer
@@ -237,7 +237,7 @@ cf ba disable-managers-add-users
 To add an organization, use the following command:
 
 ```
-cf ba create-organization <organization> <manager>
+cf ba create-org <organization> <manager>
 ```
 {: codeblock}
 
@@ -249,7 +249,7 @@ cf ba create-organization <organization> <manager>
 </dl>
 
 **Tip:** You can also use **ba co** as an alias for the longer
-**ba create-organization** command name.
+**ba create-org** command name.
 
 ### Deleting an organization
 {: #admin_delete_org}
@@ -257,7 +257,7 @@ cf ba create-organization <organization> <manager>
 To delete an organization, use the following command:
 
 ```
-cf ba delete-organization <organization>
+cf ba delete-org <organization>
 ```
 {: codeblock}
 
@@ -267,7 +267,7 @@ cf ba delete-organization <organization>
 </dl>
 
 **Tip:** You can also use **ba do** as an alias for the longer
-**ba delete-organization** command name.
+**ba delete-org** command name.
 
 ### Assigning a user to an organization
 {: #admin_ass_user_org}
@@ -442,6 +442,105 @@ The JSON file should have the format shown in the following example:
 **Tip:** You can also use **ba scq** as an alias for the longer
 **bluemix-admin set-containers-quota** command name.
 
+## Administering spaces
+{: #admin_spaces}
+
+### Adding a space to the organization
+
+To add a space in the organization, use the following command:
+
+```
+cf bluemix-admin create-space <organization> <space_name>
+```
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">The name or GUID of the organization that the space is to be added to.</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">The name of the space that is to be created in the organization.</dd>
+</dl>
+
+**Tip:** You can also use **ba cs** as an alias for the longer
+**ba create-space** command name.
+
+### Deleting a space from the organization
+
+To remove a space from the organization, use the following command:
+
+```
+cf bluemix-admin delete-space <organization> <space_name>
+```
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">The name or GUID of the organization that the space is to be removed from.</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">The name of the space that is to be removed from the organization.</dd>
+</dl>
+
+**Tip:** You can also use **ba cs** as an alias for the longer
+**ba delete-space** command name.
+
+### Adding a user to a space with a role
+
+To create a user in a space with a specified role, use the following command:
+
+```
+cf bluemix-admin set-space <organization> <space_name> <user_name> <role>
+```
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">The name or GUID of the organization that the user is to be added to.</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">The name of the space that the user is to be added to.</dd>
+<dt class="pt dlterm">&lt;user_anme&gt;</dt>
+<dd class="pd">The name of the user that is to be added.</dd>
+<dt class="pt dlterm">&lt;role&gt;</dt>
+<dd class="pd">The role of the user that is to be assigned. The value can be Manager, Developer, or Auditor. See [Assigning roles](/docs/admin/users_roles.html) for
+{{site.data.keyword.Bluemix_notm}} user roles and
+descriptions in a space.</dd>
+</dl>
+
+**Tip:** You can also use **ba ss** as an alias for the longer
+**ba set-space** command name.
+
+
+### Removing the role of a user in a space 
+
+To remove the role of a user in a space, use the following command:
+
+```
+cf bluemix-admin unset-space <organization> <space_name> <user_name> <role>
+```
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">The name or GUID of the organization that the user is to be added to.</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">The name of the space that the user is to be added to.</dd>
+<dt class="pt dlterm">&lt;user_anme&gt;</dt>
+<dd class="pd">The name of the user that is to be added.</dd>
+<dt class="pt dlterm">&lt;role&gt;</dt>
+<dd class="pd">The role of the user that is to be assigned. The value can be Manager, Developer, or Auditor. See [Assigning roles](/docs/admin/users_roles.html) for
+{{site.data.keyword.Bluemix_notm}} user roles and
+descriptions in a space.</dd>
+</dl>
+
+**Tip:** You can also use **ba us** as an alias for the longer
+**ba unset-space** command name.
+
+## Administering catalog
+{: #admin_catalog}
+
 ### Enabling services for all organizations
 {: #admin_ena_service_org}
 
@@ -610,18 +709,14 @@ name.</dd>
 To retrieve a security report, use the following command:
 
 ```
-cf ba retrieve-report <category> <date> <name>
+cf ba retrieve-report <search>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;category&gt;</dt>
-<dd class="pd">The category for the report. If there is a space in the name, use quotation marks around the
+<dt class="pt dlterm">&lt;search&gt;</dt>
+<dd class="pd">The filename of the report. If there is a space in the name, use quotation marks around the
 name.</dd>
-<dt class="pt dlterm">&lt;date&gt;</dt>
-<dd class="pd">The report date in the format <samp class="ph codeph">YYYYMMDD</samp>.</dd>
-<dt class="pt dlterm">&lt;name&gt;</dt>
-<dd class="pd">The name of the report.</dd>
 </dl>
 
 **Tip:** You can also use **ba rr** as an alias for the longer **ba retrieve-report** command name.
@@ -629,7 +724,7 @@ name.</dd>
 ## Viewing resource metric information
 {: #cliresourceusage}
 
-You can view resource metric information, including memory, disk, and CPU usage. You can see a summary of the available physical and reserved resources as well as the usage of physical and reserved resources. You can also see droplet execution agents (DEAs) usage data and historical memory and disk usage. Historical data for memory and disk usage is displayed, by default, weekly and in descending order. To view the resource metric information, use the following command:
+You can view resource metric information, including memory, disk, and CPU usage. You can see a summary of the available physical and reserved resources as well as the usage of physical and reserved resources. You can also see droplet execution agents (DEAs) and cells (Diego architecture) usage data and historical memory and disk usage. Historical data for memory and disk usage is displayed, by default, weekly and in descending order. To view the resource metric information, use the following command:
 
 ```
 cf ba resource-metrics <monthly> <weekly>

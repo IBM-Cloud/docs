@@ -1,0 +1,8 @@
+[Getting started with Mobile Quality Assurance](/docs/services/mobilequalityassurance/md/index.html)
+    index.md
+    mqa_overview.md
+    mqa_inst.md
+        mqa_inst_app_android.md
+        mqa_inst_app_ios.md
+        mqa_inst_app_cord.md
+    ts_index.md

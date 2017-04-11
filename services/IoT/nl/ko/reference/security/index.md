@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-21"
+  years: 2016, 2017
+lastupdated: "2017-03-17"
 
 ---
 
@@ -15,8 +15,6 @@ lastupdated: "2016-10-21"
 
 # {{site.data.keyword.iot_short_notm}} 보안
 {: #sec-index}
-마지막 업데이트 날짜: 2016년 10월 21일
-{: .last-updated}
 
 클라우드에서 호스트되는 서비스로서 {{site.data.keyword.iot_full}}에는 아키텍처의 중요한 요소로 보안이 임베드되어 있습니다.
 {: shortdesc}
@@ -33,7 +31,7 @@ lastupdated: "2016-10-21"
 
 {{site.data.keyword.iot_short_notm}}은 {{site.data.keyword.Bluemix_notm}} 플랫폼 내에서 실행되므로 액세스 및 연결에 {{site.data.keyword.Bluemix_notm}} 및 {{site.data.keyword.BluSoftlayer_full}}를 둘 다 사용합니다. {{site.data.keyword.Bluemix_notm}} 및 {{site.data.keyword.BluSoftlayer}}를 사용하기 때문에 {{site.data.keyword.Bluemix_notm}} 및 {{site.data.keyword.BluSoftlayer}}의 보안과 신뢰성이 {{site.data.keyword.iot_short_notm}} 사용자에게 중요합니다.
 
-{{site.data.keyword.Bluemix_notm}}의 보안에 대한 세부사항은 [{{site.data.keyword.Bluemix_notm}} 플랫폼 보안](https://console.ng.bluemix.net/docs/security/index.html#platform-security)을 참조하십시오.
+{{site.data.keyword.Bluemix_notm}}의 보안에 대한 세부사항은 [{{site.data.keyword.Bluemix_notm}} 플랫폼 보안](index.html#platform-security)을 참조하십시오. 
 
 ## {{site.data.keyword.iot_short_notm}} 보안 준수
 {: #compliance}  
@@ -69,11 +67,13 @@ lastupdated: "2016-10-21"
 ## {{site.data.keyword.iot_short_notm}}에 디바이스를 안전하게 연결하는 방법
 {: #secure-device-connection}
 
-연결된 디바이스에서는 플랫폼에 디바이스를 추가할 때 생성된 클라이언트 ID와 인증 토큰의 조합을 사용합니다. MQTT v3.1.1은 여러 플랫폼과 언어 간에 단순 상호 운용성을 허용하는 데 사용합니다.{{site.data.keyword.iot_short_notm}}에서는 TLS v1.2를 통한 연결을 지원합니다. 
+디바이스가 플랫폼에 추가될 때 생성되는 인증 토큰이나 클라이언트 ID 또는 둘 다를 사용하여 디바이스가 연결됩니다. MQTT는 여러 플랫폼과 언어 간에 단순 상호 운용성을 지원하기 위해 사용됩니다. {{site.data.keyword.iot_short_notm}}에서는 TLS v1.2를 통한 연결을 지원합니다. 
 
 ![이미지](connectivity_platform.svg)
 
-TLS 및 암호 스위트 요구사항에 대한 자세한 정보는 `Watson IoT Platform에 애플리케이션, 디바이스 및 게이트웨이 연결` 문서의 [TLS 요구사항](https://console.ng.bluemix.net/docs/services/IoT/reference/security/connect_devices_apps_gw.html#tls_requirements) 절을 참조하십시오.
+TLS 및 암호 스위트 요구사항에 대한 자세한 정보는 `Watson IoT Platform에 애플리케이션, 디바이스 및 게이트웨이 연결` 문서의 [TLS 요구사항](connect_devices_apps_gw.html#tls_requirements) 섹션을 참조하십시오. 
+
+인증서 및 보안 정책을 사용하여 디바이스 연결 보안을 강화할 수 있습니다. 암호화되지 않은 연결을 허용하고 TLS(Transport Layer Security) 연결만 적용하며 디바이스가 클라이언트 측 인증서로 인증을 수행할 수 있도록 보안 정책을 설정할 수 있습니다. 블랙리스트는 연결이 허용되지 않는 디바이스를 지정하는 데 사용할 수 있으며, 화이트리스트는 특정 디바이스의 연결을 허용하는 데 사용할 수 있습니다. 보안 강화에 대한 자세한 정보는 [위험 및 보안 관리](RM_security.html)를 참조하십시오. 
 
 ## IoT 디바이스 간 데이터 누출 방지 방법
 {: #prevent-leak-devices}
@@ -106,8 +106,8 @@ TLS 및 암호 스위트 요구사항에 대한 자세한 정보는 `Watson IoT 
 ## 관련 링크
 {: #general}
 * [{{site.data.keyword.iot_short_notm}} 시작하기](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [{{site.data.keyword.Bluemix_notm}} 보안](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
-* [{{site.data.keyword.Bluemix_notm}} 플랫폼 보안](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
+* [{{site.data.keyword.Bluemix_notm}} 보안 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
+* [{{site.data.keyword.Bluemix_notm}} 플랫폼 보안 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} 규제 준수](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} 보안](http://www.softlayer.com/security){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} 규제 준수](http://www.softlayer.com/compliance){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} 보안 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.softlayer.com/security){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} 준수 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.softlayer.com/compliance){:new_window}

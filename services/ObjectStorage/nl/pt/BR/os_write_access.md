@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -18,7 +18,7 @@ Um usuário do {{site.data.keyword.objectstorageshort}} com uma [função admini
 {: shortdesc}
 
 <table>
-<caption> Tabela 1. Permissões de acesso de gravação por opção</caption>
+<caption> Tabela 1. Permissões de acesso de gravação por opção </caption>
   <tr>
     <th> Permissão </th>
     <th> Opções de ACL de gravação </th>

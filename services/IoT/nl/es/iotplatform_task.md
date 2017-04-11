@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-27"
+  years: 2016, 2017
+lastupdated: "2017-02-21"
 
 ---
 
@@ -23,8 +23,10 @@ Antes de empezar a recibir datos desde los dispositivos de IoT, debe conectarlos
 
 Antes de iniciar el proceso de conexión, debe asegurarse de que los dispositivos cumplan los siguientes requisitos para comunicarse con {{site.data.keyword.iot_short_notm}}:
 
-- El dispositivo debe poder comunicarse enviando mensajes de dispositivo en [formato MQTT](reference/mqtt/index.html).
-- Los mensajes del dispositivo deben ajustarse a los requisitos de [carga útil de mensaje](reference/mqtt/index.html#/message-payload) {{site.data.keyword.iot_short_notm}}.
+- El dispositivo debe poder comunicarse mediante protocolos HTTP o MQTT.
+- Los mensajes del dispositivo deben ajustarse a los requisitos de carga útil de mensajes de {{site.data.keyword.iot_short_notm}}.
+
+Para obtener más información, consulte [Desarrollo de dispositivos en Watson IoT Platform](https://console.ng.bluemix.net/docs/services/IoT/devices/device_dev_index.html).
 
 Complete los pasos siguientes para conectar el dispositivo a {{site.data.keyword.iot_short_notm}}.
 
@@ -33,7 +35,7 @@ Complete los pasos siguientes para conectar el dispositivo a {{site.data.keyword
 
 El registro de un dispositivo implica la clasificación del dispositivo como un tipo de dispositivo, lo que le da un nombre al dispositivo, y proporciona una información de dispositivo. A continuación, proporcione una señal de conexión o acepte una señal generada por {{site.data.keyword.iot_short_notm}}.
 
-Puede añadir dispositivos de uno en uno desde el panel de instrumentos de {{site.data.keyword.iot_short_notm}}, o puede utilizar la [API de {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/post_bulk_devices_add) para añadir uno o varios dispositivos a la vez.
+Puede añadir dispositivos de uno en uno desde el panel de instrumentos de {{site.data.keyword.iot_short_notm}} o puede utilizar la API de [ {{site.data.keyword.iot_short_notm}}![icono de enlace externo](../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/post_bulk_devices_add){: new_window} para añadir uno o varios dispositivos a la vez. 
 
 Para añadir un dispositivo desde el panel de instrumentos de {{site.data.keyword.iot_short_notm}}:
 
@@ -50,7 +52,8 @@ Para añadir un dispositivo desde el panel de instrumentos de {{site.data.keywor
 Cada dispositivo conectado al {{site.data.keyword.iot_short_notm}} debe estar asociado con un tipo de dispositivo. Los tipos de dispositivos son grupos de dispositivos que comparten características comunes.  
 Al añadir el primer dispositivo a la organización de {{site.data.keyword.iot_short_notm}}, no habrá disponibles tipos de dispositivos en el menú **Tipo de dispositivo**. Primero debe crear un tipo de dispositivo:
  1. Pulse **Crear tipo de dispositivo**.
- 2. Especifique un nombre de tipo de dispositivo como, por ejemplo, `my_device_type` y una descripción para el tipo de dispositivo.**Importante:** el nombre del tipo de dispositivo no debe tener más de 36 caracteres y sólo puede contener:
+ 2. Especifique un nombre de tipo de dispositivo como, por ejemplo, `my_device_type` y una descripción para el tipo de dispositivo.   
+ **Importante:** el nombre del tipo de dispositivo no debe tener más de 36 caracteres y sólo puede contener:
  <ul>
   <li>Caracteres alfanuméricos (a-z, A-Z, 0-9)</li>
   <li>Guiones (-)</li>
@@ -61,7 +64,8 @@ Al añadir el primer dispositivo a la organización de {{site.data.keyword.iot_s
  **Consejo:** Puede añadir y editar atributos y metadatos más tarde.
  4. Pulse **Crear** para añadir el nuevo tipo de dispositivo.
 10. Pulse **Siguiente** para empezar el proceso de adición de su dispositivo con el tipo de dispositivo seleccionado.
-11. Especifique un ID de dispositivo, como por ejemplo `my_first_device`.Este ID de dispositivo se utiliza para identificar el dispositivo en el panel de instrumentos de {{site.data.keyword.iot_short_notm}} y también un parámetro obligatorio para conectar el dispositivo a {{site.data.keyword.iot_short_notm}}.  
+11. Especifique un ID de dispositivo, como por ejemplo `my_first_device`.  
+Este ID de dispositivo se utiliza para identificar el dispositivo en el panel de instrumentos de {{site.data.keyword.iot_short_notm}} y también un parámetro obligatorio para conectar el dispositivo a {{site.data.keyword.iot_short_notm}}.  
 **Importante:** el ID de dispositivo no debe tener más de 36 caracteres y sólo puede contener:
  <ul>
  <li>Caracteres alfanuméricos (a-z, A-Z, 0-9)</li>
@@ -69,8 +73,7 @@ Al añadir el primer dispositivo a la organización de {{site.data.keyword.iot_s
  <li>Signos de subrayado (&lowbar;)</li>
  <li>Puntos (.)</li>  
  </ul>
- **Consejo:** para los dispositivos conectados a la red, el ID de dispositivo podría ser, por ejemplo, la dirección MAC del dispositivo sin dos puntos de separación.
-  
+ **Consejo:** para los dispositivos conectados a la red, el ID de dispositivo podría ser, por ejemplo, la dirección MAC del dispositivo sin dos puntos de separación.  
 12. Opcional: Pulse **Campos adicionales** para añadir información de dispositivo, como por ejemplo el número de serie, el fabricante, el modelo, etc.  
  **Consejo:** Puede añadir y editar esta información más tarde.
 12. Opcional: Especifique los metadatos JSON de dispositivo.  
@@ -78,16 +81,16 @@ Al añadir el primer dispositivo a la organización de {{site.data.keyword.iot_s
 13. Pulse **Siguiente** para completar la adición de su dispositivo.
 14. Verifique que la información de resumen sea correcta y, a continuación, pulse **Añadir** para añadir la conexión.  
 **Consejo:** Tiene la opción de aceptar una señal de autenticación generada automáticamente o de proporcionar una señal de autenticación usted mismo.  
-Si decide crear su propia señal, asegúrese de que tenga entre 8 y 36 caracteres de longitud y que solo contenga caracteres alfanuméricos y los siguientes caracteres especiales: 
+Si decide crear su propia señal, asegúrese de que tenga entre 8 y 36 caracteres de longitud y que solo contenga caracteres alfanuméricos y los siguientes caracteres especiales:
  - Guión (-)
  - Signo de subrayado (&lowbar;)
  - Signo de exclamación (!)
  - Carácter &
  - Signo de arroba (@)
- - Signo de interrogación (?) 
+ - Signo de interrogación (?)
  - Asterisco (\*)
  - Signo más (+)
- - Punto (.) 
+ - Punto (.)
  - Paréntesis derecho e izquierdo .  
 
  **Importante:** la señal no debe contener secuencias de caracteres repetidos, palabras de diccionario, nombres de usuario ni otras secuencias predefinidas.
@@ -96,8 +99,8 @@ Si decide crear su propia señal, asegúrese de que tenga entre 8 y 36 caractere
  - Tipo de dispositivo, como por ejemplo `my_device_type`
  - ID de dispositivo, como por ejemplo `my_first_device`
  - Método de autenticación, como por ejemplo `señal`
- - Señal de autenticación, como por ejemplo `PtBVriRqIg4uh)_-Kl`
-  **Consejo:** Necesitará ID de organización, Señal de autenticación, Tipo de dispositivo e ID de dispositivo para configurar el dispositivo para conectarse a {{site.data.keyword.iot_short_notm}}.  
+ - Señal de autenticación, como por ejemplo `PtBVriRqIg4uh)_- Kl`  
+  **Consejo:** necesitará los valores de ID de organización, Señal de autenticación, Tipo de dispositivo e ID de dispositivo para configurar el dispositivo para conectarse a {{site.data.keyword.iot_short_notm}}.  
 
 Enhorabuena, ha registrado el dispositivo. Ahora, puede configurar el dispositivo para conectarse a {{site.data.keyword.iot_short_notm}}
 
@@ -110,26 +113,40 @@ Después de registrar un dispositivo con {{site.data.keyword.iot_short_notm}}, p
 - Configure el dispositivo para la mensajería de MQTT y utilice ID de organización, Señal de autenticación, Tipo de dispositivo e ID de dispositivo para autenticarse.  
 - Envíe mensajes de dispositivo a la organización de {{site.data.keyword.iot_short_notm}} utilizando el protocolo de MQTT.
 
-**Consejo:** Muchas recetas de conexión están disponibles para los dispositivos utilizados de forma común. Para obtener una lista de recetas, consulte las
-[Recetas de conexión de dispositivos](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/) disponibles en IBM.com.
+**Consejo:** Muchas recetas de conexión están disponibles para los dispositivos utilizados de forma común. Para obtener una lista de recetas, consulte las [Recetas de conexión de dispositivos ![icono de enlace externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){: new_window} disponibles en IBM.com.
 
 Se necesita la siguiente información al conectar el dispositivo:
-- URL: *org_id*.messaging.internetofthings.ibmcloud.com
+- URL: *org_id*.messaging.internetofthings.ibmcloud.com  
 Donde *org_id* es el ID de la organización de {{site.data.keyword.iot_short_notm}}.
 - Puerto:
  - 1883
  - 8883 (cifrado)
  - 443 (websockets)
-- Identificador de dispositivo: d:*org_id*:*device_type*:*device_id*
+- Identificador de dispositivo: d:*org_id*:*device_type*:*device_id*  
 Esta combinación de parámetros identifica de forma exclusiva el dispositivo.
-- Nombre de usuario: use-token-auth
+- Nombre de usuario: use-token-auth  
 Este valor indica que está utilizando la autorización de señales.
-- Contraseña: *Señal de autenticación*
+- Contraseña: *Señal de autenticación*  
 Este valor es la señal exclusiva que ha definido o que se ha asignado al dispositivo al registrarlo.
-- Formato del tema del suceso: iot-2/evt/*event_id*/fmt/*format_string*
+- Formato del tema del suceso: iot-2/evt/*event_id*/fmt/*format_string*  
  Donde el *event_id* especifica el nombre del suceso que se muestra en {{site.data.keyword.iot_short_notm}}, y *format_string* es el formato del suceso, como por ejemplo JSON.
 - Formato de mensaje:
+   
  {{site.data.keyword.iot_short_notm}} JSON da soporte a varios formatos, como JSON y texto.
 
 Para obtener más información sobre cómo conectar su dispositivo, consulte [Conectividad de MQTT para dispositivos](devices/mqtt.html) en la documentación técnica.
-La sección [Conectividad](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Connectivity/post_device_types_deviceType_devices_deviceId_events_eventName) de la documentación de la API también contiene la información necesaria.
+La sección [Conectividad ![icono de enlace externo](../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Connectivity/post_device_types_deviceType_devices_deviceId_events_eventName){: new_window} de la documentación de la API también contiene la información necesaria.
+
+## Recetas sobre la conexión de dispositivos
+
+En las siguientes recetas se describe el flujo completo que se utiliza para registrar y conectar dispositivos a Watson IoT Platform.
+
+- [Cómo registrar dispositivos en IBM Watson IoT Platform ![icono de enlace externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/how-to-register-devices-in-ibm-iot-foundation/){: new_window}
+
+- [Conexión de Raspberry Pi como dispositivo a Watson IoT mediante Node-RED ![icono de enlace externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/deploy-watson-iot-node-on-raspberry-pi/){: new_window}
+
+- [Conexión de un dispositivo Arduino Uno a IBM Watson IoT Platform ![icono de enlace externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/connect-an-arduino-uno-device-to-the-ibm-internet-of-things-foundation/){: new_window}
+
+- [Conexión de Sense HAT a Watson IoT mediante Node-RED ![icono de enlace externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/connecting-a-sense-hat-to-watson-iot-using-node-red/){: new_window}
+
+- [Conexión de Raspberry Pi con Windows IoT Core como dispositivo a Watson IoT Platform ![icono de enlace externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-with-windows-iot-core-as-a-device-to-watson-iot-using-node-red/){: new_window}

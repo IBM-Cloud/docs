@@ -1,7 +1,8 @@
 ---
 
 copyright:
-years: 2016
+  years: 2016, 2017
+lastupdated: "2016-10-07"
 
 ---
 
@@ -14,8 +15,7 @@ years: 2016
 
 # Additional testing
 {: #etn_next}
-Last updated: 07 October 2016
-{: .last-updated}
+
 
 The following tests were run in the High Security Business Network environment (unless otherwise noted) to test chaincode function, ledger, long runs, concurrency and complex transactions.  The validators and membership services nodes were run as VM guests within the secure services container on the LinuxONE OS.  The values used below were chosen based on customer input and are not to be mistaken for maximum values. (Note: some of these tests are repeated in the [Node.js SDK](etn_txn.html) and [Testing consensus and availability](etn_pbft.html) sections.)
 

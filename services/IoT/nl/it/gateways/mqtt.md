@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-14"
+  years: 2015, 2017
+lastupdated: "2016-11-17"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -58,11 +58,16 @@ Un gateway può pubblicare gli eventi per se stesso o per conto di qualsiasi dis
 |Device 1 |mydevice |device1 |
 
 -   Il Gateway 1 può pubblicare i propri eventi di stato:
+      
     `iot-2/type/mygateway/id/gateway1/evt/status/fmt/json`
 -   Il Gateway 1 può pubblicare gli eventi di stato al posto del Device 1:
+      
     `iot-2/type/mydevice/id/device1/evt/status/fmt/json`
 
 **Importante:** il payload dei messaggi è limitato ad un massimo di 131072 byte. I messaggi che superano questo limite vengono rifiutati.
+
+### Messaggi conservati
+Le organizzazioni {{site.data.keyword.iot_short_notm}} non sono autorizzate a pubblicare i messaggi MQTT conservati. Se un gateway invia un messaggio conservato, il servizio {{site.data.keyword.iot_short_notm}} sovrascrive l'indicatore del messaggio conservato quando viene impostato su true ed elabora il messaggio come se l'indicatore fosse impostato su false.
 
 ## Sottoscrizione ai comandi
 {: #subscribing_cmds}
@@ -83,10 +88,13 @@ Il carattere jolly `+` MQTT può essere utilizzato per `typeId`, `deviceId`, `co
 
 
 -   Il Gateway 1 può sottoscriversi ai comandi diretti al gateway:
+      
     `iot-2/type/mygateway/id/gateway1/cmd/+/fmt/+`
 -   Il Gateway 1 può sottoscriversi ai comandi inviati al Device 1:
+      
     `iot-2/type/mydevice/id/device1/cmd/+/fmt/+`
 -   Il Gateway 1 può sottoscriversi a qualsiasi comando inviato ai dispositivi del tipo `mydevice`:
+       
      `iot-2/type/mydevice/id/+/cmd/+/fmt/+`
 
 **Importante:** le sessioni persistenti MQTT specificate come `cleansession=false`, non ricercano i dispositivi collegati ai gateway. Se un dispositivo si collega al gateway A e successivamente al gateway B, non riceve i messaggi che sono stati pubblicati nel gateway A per tale dispositivo mentre era scollegato. Un gateway gestisce la sottoscrizione e il client MQTT ma non i dispositivi collegati al gateway.
@@ -154,7 +162,7 @@ Il supporto per la gestione del ciclo di vita del dispositivo è facoltativo. Il
 ### Livelli di QOS (quality of service) e sessione di pulizia
 {: #quality_service}
 
-I gateway gestiti possono pubblicare i messaggi con un livello di QOS (quality of service) di 0 o 1. I messaggi dal gateway non devono essere messaggi conservati.
+I gateway gestiti possono pubblicare i messaggi con un livello di QOS (quality of service) di 0 o 1.
 
 I messaggi con QoS=0 possono essere scartati e non sono conservati dopo il riavvio del server di messaggistica. I messaggi con QoS=1 possono essere accodati e sono conservati dopo il riavvio del server di messaggistica. La durata della sottoscrizione determina se una richiesta viene accodata. Il parametro `cleansession` della connessione che effettua la sottoscrizione determina la durata della sottoscrizione.  
 

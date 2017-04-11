@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated:  "2017-01-17"
+lastupdated:  "2017-02-17"
 
 ---
 
@@ -11,7 +11,7 @@ lastupdated:  "2017-01-17"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Configuration d'un domaine personnalisé pour le serveur {{site.data.keyword.mobilefoundation_short}}
+# Configuration d'un domaine personnalisé pour le serveur Mobile Foundation
 {: #configcustomdomain}
 
 {{site.data.keyword.mobilefoundation_short}} met à disposition un serveur {{site.data.keyword.mfserver_short_notm}}, qui est<!--on {{site.data.keyword.containerlong}} as a container group. The container group will be mapped to--> accessible en utilisant une URL dont les noms de domaine reposent sur la **région** {{site.data.keyword.Bluemix_notm}} . Vous
@@ -49,4 +49,4 @@ personnalisé, transférez le certificat SSL de votre domaine dans {{site.data.k
 ce faire, accédez à **Gérer les organisations > Domaines**,
 sélectionnez le domaine personnalisé pour lequel le certificat SSL doit être
 configuré et cliquez sur **Télécharger le certificat** pour
-transférer le certificat SSL de votre domaine. Reportez-vous à la page [SSL Certificates and Bluemix Custom Domains ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/bluemix/2014/09/28/ssl-certificates-bluemix-custom-domains/ "Icône de lien externe"){: new_window} pour plus d'informations.
+transférer le certificat SSL de votre domaine. Pour plus d'informations, voir [SSL Certificates and Bluemix Custom Domains ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/bluemix/2014/09/28/ssl-certificates-bluemix-custom-domains/){: new_window}.

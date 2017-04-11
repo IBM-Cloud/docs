@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2016, 2017
 lastupdated: "2016-10-18"
 
 ---
@@ -15,7 +15,7 @@ lastupdated: "2016-10-18"
 # Java para desarrolladores de dispositivos
 {: #java}
 
-Puede crear y personalizar dispositivos que interactúan con su organización en {{site.data.keyword.iot_full}} utilizando Java. Se proporciona una biblioteca de cliente de Java para {{site.data.keyword.iot_short_notm}}, documentación y ejemplos para ayudarle a comenzar con el desarrollo de dispositivos.
+Puede crear y personalizar dispositivos que interactúan con su organización en {{site.data.keyword.iot_full}} utilizando Java™. Se proporciona una biblioteca de cliente de Java para {{site.data.keyword.iot_short_notm}}, documentación y ejemplos para ayudarle a comenzar con el desarrollo de dispositivos.
 {:shortdesc}
 
 ## Descarga del cliente y los recursos de Java
@@ -26,7 +26,7 @@ Para acceder a las bibliotecas y a los ejemplos de cliente Java para {{site.data
 ## Constructor
 {: #constructor}
 
-El constructor compila la instancia del cliente y acepta el objeto `Propiedades`, que contiene las siguientes definiciones:
+El constructor compila la instancia del cliente y acepta el objeto `Properties`, que contiene las siguientes definiciones:
 
 |Definición |Descripción |
 |:----|:----|
@@ -40,6 +40,7 @@ El constructor compila la instancia del cliente y acepta el objeto `Propiedades`
 |`MaxInflightMessages`  |Establece el número máximo de mensajes en vuelo para la conexión. El valor predeterminado es 100.|
 |`Automatic-Reconnect`  |Un valor true o false que es necesario cuando desea que el dispositivo se conecte automáticamente a {{site.data.keyword.iot_short_notm}} mientras se encuentra en un estado desconectado. El valor predeterminado es false.|
 |`Disconnected-Buffer-Size`|El número máximo de mensajes que se pueden almacenar en memoria mientras el cliente está desconectado. El valor predeterminado es 5000.|
+|`WebSocket`|Un valor true o false que es necesario si desea utilizar conexiones websockets con {{site.data.keyword.iot_short_notm}}. El valor predeterminado es false.|
 
 **Nota:** Para conectar el dispositivo en modalidad de suscripción duradera, establezca `clean-session` en `false`. Para obtener más información sobre la sesión limpia, consulte la sección 'Almacenamientos intermedios de suscripción y sesión limpia' de la [documentación de MQTT](../../reference/mqtt/index.html#subscription-buffers-and-clean-session).
 

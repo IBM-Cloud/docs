@@ -1,27 +1,36 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-26"
-
+  years: 2016, 2017
+lastupdated: "2017-03-27"
 ---
 
-
-
-{:new_window: target="\_blank"}
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 
-# Shield toolkit
+# Using the shield toolkit
 {: #iot4i_shield_toolkit}
-A shield is a set of rules and actions that can be triggered by specific conditions in the input, which is a payload, that is received from sensors. Shields are used to protect property and users by identifying hazards and creating the appropriate responses.  This example shows you how to set up your environment, define a shield, create a user, and then associate the shield with the user.  You can also optionally create promotions and simulated hazards.
+Use shields to protect property and users by identifying hazards and creating appropriate automated responses. Use or modify the shields that are included in the {{site.data.keyword.iotinsurance_short}} shields library or create and implement your own shields by using the instructions and examples that follow.
 {:shortdesc}
+
+## About shields.
+A shield is a set of rules and defined actions that can be triggered by specific conditions in the input that is received from a sensor. For example, you could create a shield with a rule that causes a text message to be sent whenever the sensor detects a water leak.
+
+## Using shields from the {{site.data.keyword.iotinsurance_short}} shields library
+
+You can find a wide assortment of predefined shields in the [{{site.data.keyword.iotinsurance_short}} shields library ![External link icon](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-shields){: new_window}. View the README file on that site for instructions to download and begin using the shields.
+
+## Creating your own shield
+This example shows you how to set up your environment, define a shield, create a user, and then associate the shield with the user.  You can also optionally create promotions and simulated hazards.  
 
 Code samples for creating a simple shield for water leaks are shown in the following sections. A full set of example code is available in the [iot4i-api-examples-nodejs GitHub repository](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/).
 
-## Prerequisites
+### Prerequisites
 Before you begin, ensure that the following prerequisites are in place:
 
 - [Node.js](https://nodejs.org/en/) installed on your computer.  
@@ -32,7 +41,7 @@ Before you begin, ensure that the following prerequisites are in place:
   1. Clone or download the [GitHub source code repository](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs) to your computer.
   2. Install the project's open source prerequisites by using a command line to go to the folder that contains the cloned source code files, and running `npm install` command.
 
-## Setting up your environment
+### Setting up your environment
 {: #environment}
 To configure your environment to send REST API calls, you must configure the URL for the API in the config.js file. The aggregator URL can be ignored in this context.
 
@@ -47,7 +56,7 @@ var config = module.exports = {
 };
 ```
 
-## Creating a shield definition
+### Creating a shield definition
 {: #create_shield_def}
 
 Method: POST  
@@ -79,7 +88,7 @@ where:
 - **UUID** - The universal unique identifier (UUID) of the shield.
 - **actions** - A list of actions that are triggered when a hazard is created. In this example, information about the hazard is sent to the user's app by using an iOS push notification.
 
-## Creating a shield code
+### Creating a shield code
 {: #create_shield_code}
 Create a shield code in the shieldCode.js file to define how the shield engine processes a payload.
 
@@ -146,7 +155,7 @@ Each shield code contains resources that are defined in resource/shield.js state
   registerShield(DEMO_SHIELD_UUID, DEMO_SHIELD_NAME, demoEntryCondition, undefined, demoSafelet, demoMessage, DEMO_SHIELD_DELAY);
   ```
 
-## Creating a user
+### Creating a user
 {: #create_user}
 
 Method: POST  
@@ -181,7 +190,7 @@ where:
   - 10 - dashboard
   - 1 - system administrator
 
-## Creating a shield association
+### Creating a shield association
 {: #create_shield_assoc}
 
 Method: POST  
@@ -203,7 +212,7 @@ var userShield = {
 
 
 
-## Creating a simulated hazard
+### Creating a simulated hazard
 {: #create_sim_hazard}
 
 Method: POST  
@@ -240,7 +249,7 @@ var parameters {
 ```
 
 
-## Creating a promotion
+### Creating a promotion
 {: #create_promotion}
 
 {{site.data.keyword.iotinsurance_short}} can send promotions to the homeowner by using the mobile app. Create promotions by using the createPromotion.js file.
@@ -260,16 +269,3 @@ var promotion = {
 ```
 
 You can optionally deploy your mobile app and use [the instructions in the ioti-mobile GitHub repository](https://github.com/ibm-watson-iot/ioti-mobile) to connect as the user that you created in the previous section.
-
-# Related Links
-{: #rellinks}
-
-## API Reference
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API Examples](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## Related Links
-{: #general}
-* [Developer support forum](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-* [Stack overflow support forum](http://stackoverflow.com/questions/tagged/ibm-bluemix)

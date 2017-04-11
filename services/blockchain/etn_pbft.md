@@ -1,7 +1,8 @@
 ---
 
 copyright:
-years: 2016
+  years: 2016, 2017
+lastupdated: "2016-10-13"
 
 ---
 
@@ -14,9 +15,6 @@ years: 2016
 
 # Testing consensus and availability
 {: #etn_pbft}
-
-Last updated: 13 October 2016
-{: .last-updated}
 
 Both the Starter Developer plan and the High Security Business Network plan enable you to test the Practical Byzantine Fault Tolerance (PBFT) consensus protocol on a four-node blockchain network. The following topics provide details about consensus in general, and PBFT in particular. Once you are ready to start testing, PBFT test cases are provided.  
 {:shortdesc}  

@@ -48,7 +48,7 @@ For [Liberty for Java](/docs/runtimes/liberty/index.html) and the [java_buildpac
 and restage your application.  Your application will then use the specified proxy settings at runtime. See [Java Networking and Proxies](https://docs.oracle.com/javase/8/docs/technotes/guides/net/proxies.html) for more information about the Java proxy options.
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
 {: #general}
 * [Liberty for Java](/docs/runtimes/liberty/index.html)

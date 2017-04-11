@@ -1,12 +1,17 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-29"
+  years: 2016, 2017
+lastupdated: "2017-03-10"
 ---
 
-{:new_window: target="\_blank"}
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # Sobre o {{site.data.keyword.iotelectronics}}
 {: #iotelectronics_about}
@@ -17,13 +22,13 @@ se comuniquem e consumam dados coletados por seus dispositivos, sensores e gatew
 
 O {{site.data.keyword.iotelectronics}} usa o serviço do {{site.data.keyword.iot_full}} para conectar os seus dispositivos eletrônicos inteligentes com os aplicativos que você desenvolver. Ele
 também usa o {{site.data.keyword.iot_short_notm}} para ajudar a analisar e entender os dados dos seus dispositivos. É possível estabelecer
-regras para identificar condições que precisem de atenção e definam respostas automatizadas, como enviar e-mail, executar um fluxo de trabalho Node-RED ou conectar a serviços da web.  
+regras para identificar condições que precisem de atenção e definam respostas automatizadas, como enviar e-mail, executar um fluxo de trabalho Node-RED ou conectar a serviços da web.
 
 ## Localizando o iniciador
 {: #iot4eFindingStarter}
 É possível localizar o iniciador {{site.data.keyword.iotelectronics}}
 na [Seção Modelos](https://console.{DomainName}/catalog/starters/iot-for-electronics-starter/)
-do catálogo {{site.data.keyword.Bluemix_notm}}.  
+do catálogo {{site.data.keyword.Bluemix_notm}}.
 
 ## O que é Possível Executar com o {{site.data.keyword.iotelectronics}}
 {: #Features_iote}
@@ -32,7 +37,7 @@ Explore rapidamente os recursos da solução {{site.data.keyword.iotelectronics}
 ### Conectar dispositivos simulados
 Crie dispositivos simulados e conecte-os à plataforma para ver os dados em transmissão em tempo real. Use um aplicativo baseado na web para
 simular como um dispositivo recebe comandos e executa operações. Simule falhas para gerar avisos e alertas. Para fins de demonstração, as arruelas são usadas como o dispositivo simulado dentro do iniciador do {{site.data.keyword.iotelectronics}}. O dispositivo
-que você optar por conectar poderia ser qualquer tipo de dispositivo eletrônico inteligente.  
+que você optar por conectar poderia ser qualquer tipo de dispositivo eletrônico inteligente.
 
 ### Tentar um aplicativo móvel do consumidor de amostra
 Use seu dispositivo móvel iOS ou Android para ver como um proprietário de dispositivo pode interagir com o dispositivo. Envie comandos para o dispositivo e
@@ -72,17 +77,3 @@ JavaScript&reg; do lado do servidor e fornece desempenho, segurança e capacidad
 
 O **App móvel de amostra** permite visualizar o status e se comunicar com um dispositivo simulado usando seu dispositivo móvel, como um telefone inteligente ou tablet. Descubra como conseguir o aplicativo móvel em
 [Usando o aplicativo móvel](iotelectronics_config_mobile.html).
-
-# Links Relacionados
-{: #rellinks}
-## Componentes
-{: #general}
-* [{{site.data.keyword.iot_short}} documentação](https://console.ng.bluemix.net/docs/services/IoT/index.html#gettingstartedtemplate)
-* [{{site.data.keyword.amafull}} documentação](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html)
-* [{{site.data.keyword.sdk4nodefull}} documentação](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
-
-
-## Documentação da API
-{: #api}
-*  [API do {{site.data.keyword.iotelectronics}}](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)  
-*  [API do {{site.data.keyword.iot_short}}](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)

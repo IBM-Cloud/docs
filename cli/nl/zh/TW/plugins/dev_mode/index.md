@@ -76,7 +76,7 @@ cf plugins
 使用下表中的索引來參照常用的 dev_mode CLI 指令：
 
 <table summary="dev_mode 指令索引">
- <caption>表格 1. dev_mode 指令</caption>
+ <caption>表 1. dev_mode 指令</caption>
  <thead>
  <th colspan="4">dev_mode 指令</th>
  </thead>

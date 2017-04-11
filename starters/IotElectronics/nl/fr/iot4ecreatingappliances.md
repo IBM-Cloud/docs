@@ -1,19 +1,19 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-29"
-
+  years: 2016, 2017
+lastupdated: "2017-03-10"
 ---
 
-{:new_window: target="\_blank"}
-
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Utilisation de l'application de démarrage
-Créez des appareils simulés dans l'application de démarrage {{site.data.keyword.iotelectronics_full}}. Découvrez comment un fabricant peut contrôler les appareils connectés à {{site.data.keyword.iot_short_notm}}. Interagissez manuellement avec l'appareil simulé
-pour déclencher des alertes, des notifications et des actions.
+Créez des appareils simulés dans l'application de démarrage {{site.data.keyword.iotelectronics_full}}. Découvrez comment un fabricant peut surveiller des appareils connectés à {{site.data.keyword.iot_short_notm}}. Interagissez manuellement avec l'appareil simulé pour déclencher des alertes, des notifications et des actions.
 {:shortdesc}
 
 
@@ -25,9 +25,7 @@ pour déclencher des alertes, des notifications et des actions.
 
     ![{{site.data.keyword.iotelectronics}} dans le tableau de bord.](images/IoT4E_bm_dashboard.svg "{{site.data.keyword.iotelectronics}} dans le tableau de bord")
 
-2. Patientez jusqu'à ce que le message de statut *Votre application est en cours d'exécution* s'affiche dans l'en-tête, puis cliquez
-sur
-**Afficher l'application** pour afficher l'application de démarrage.  
+2. Patientez jusqu'à ce que le message de statut *Votre application est en cours d'exécution* s'affiche dans l'en-tête, puis cliquez sur **Afficher l'application** pour afficher l'application de démarrage.
 
     ![{{site.data.keyword.iotelectronics}} - Afficher l'application.](images/IoT4E_view_app.svg "{{site.data.keyword.iotelectronics}} - Afficher l'application")
 
@@ -43,14 +41,13 @@ Dans l'application de démarrage, vous pouvez créer et contrôler des appareils
 
     ![Expérience de démarrage {{site.data.keyword.iotelectronics}}](images/IoT4E_remotely_option.svg "Expérience de démarrage {{site.data.keyword.iotelectronics}}")
 
-2. Faites défiler la page pour accéder à la section intitulée **Ensuite, choisissez ou ajoutez un nouveau lave-linge simulé**,
-puis cliquez sur l'icône +. Un lave-linge est créé.
+2. Faites défiler la page pour accéder à la section intitulée **Ensuite, choisissez ou ajoutez une machine à laver simulée**, puis cliquez sur l'icône +. Une machine à laver est créée.
 
-    ![Ajout d'un lave-linge.](images/IoT4E_add_washer.svg "Ajout d'un lave-linge")
+    ![Ajout d'une machine à laver.](images/IoT4E_add_washer.svg "Ajout d'une machine à laver")
 
-3. Pour afficher les détails de votre lave-linge, émettre des commandes et générer des pannes, cliquez sur un lave-linge.
+3. Pour afficher les détails de votre machine à laver, cliquez sur un modèle. Dans la commande et le panneau de commande, démarrez la machine à laver ou cliquez sur les différents types de panne pour afficher les changements de statut. Vous pouvez également afficher les changements de statut et contrôler la machine à laver depuis votre application mobile.
 
-  ![Détails du statut du lave-linge.](images/IoT4E_washer_control.svg "Détails du statut du lave-linge")
+  ![Détails statut de la machine à laver.](images/IoT4E_washer_control.svg "Détails du statut de la machine à laver")
 
 
 # Liens connexes

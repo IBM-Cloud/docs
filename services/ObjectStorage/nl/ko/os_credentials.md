@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -99,7 +99,7 @@ lastupdated: "2017-01-17"
       <th> 설명 </th>
     </tr>
     <tr>
-      <td> <code>https://api.ng.bluemix.net/v2/service_keys</code> </td>
+      <td> ```https://api.ng.bluemix.net/v2/service_keys``` </td>
       <td> 서비스 키 엔드포인트입니다. </td>
     </tr>
     <tr>
@@ -119,8 +119,6 @@ lastupdated: "2017-01-17"
       <td> Keystone으로 인스턴스를 인증할 때 수신한 토큰입니다. </td>
     </tr>
   </table>
-
-
 
 3. 다음 명령을 실행하여 신임 정보 유효성을 검증하십시오. 
 

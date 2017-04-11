@@ -204,7 +204,7 @@ CF_SPACE |	空間名稱
 CF_SPACE_ID |	空間 GUID
 CF_APP	| 應用程式名稱
 
-{: caption="Table 1. Environment variables" caption-side="top"}
+{: caption="表 1. 環境變數" caption-side="top"}
 
 **從管線產生 YAML 檔案** 
 

@@ -24,7 +24,7 @@ API キーは、{{site.data.keyword.mobilepushshort}} サービスによって�
 
 FCM をセットアップして、API キーおよび送信側 ID を生成するには、以下の手順を実行します。
 
-1. [Firebase Console ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.firebase.google.com/?pli=1 "外部リンク・アイコン"){: new_window}にアクセスしてください。
+1. [Firebase コンソール![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.firebase.google.com/?pli=1){: new_window}にアクセスします。
 2. **「新規プロジェクトを作成」**を選択します。 
 3. 「プロジェクトの作成」ウィンドウで、プロジェクト名を指定し、国/地域を選択して、**「プロジェクトを作成」**をクリックします。
 3. ナビゲーション・ペインで、「Settings」アイコンをクリックして、**「プロジェクトの設定」**を選択します。

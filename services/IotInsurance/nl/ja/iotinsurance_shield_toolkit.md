@@ -1,38 +1,49 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-26"
-
+  years: 2016, 2017
+lastupdated: "2017-03-01"
 ---
 
-
-
-{:new_window: target="\_blank"}
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 
 # シールド・ツールキット
 {: #iot4i_shield_toolkit}
-シールドは、センサーから受け取る入力 (ペイロード) の特定の条件によって起動する一連のルールやアクションです。シールドは、ハザードを特定して適切な応答を作成することにより、財産やユーザーを保護するために使用されます。この例では、環境をセットアップし、シールドを定義し、ユーザーを作成し、シールドをユーザーに関連付ける方法を示します。また、オプションとして、プロモーションとシミュレート・ハザードを作成することもできます。
+シールドは、危険を識別して適切な自動応答を作成することで、資産とユーザーを保護するために使用します。{{site.data.keyword.iotinsurance_short}} シールド・ライブラリーに含まれるシールドを使用または変更するか、あるいは以下の手順と例を利用して独自のシールドを作成して実装することができます。
 {:shortdesc}
+
+## シールドについて。
+シールドとは、センサーから受け取る入力での特定の条件によって起動できる、一連のルールと定義済みアクションです。例えば、センサーが水漏れを検出するとテキスト・メッセージを送信するルールを設定して、シールドを作成することができます。
+
+## {{site.data.keyword.iotinsurance_short}} シールド・ライブラリーにあるシールドの使用
+
+[{{site.data.keyword.iotinsurance_short}} シールド・ライブラリー ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-shields){: new_window} には、幅広い種類の定義済みシールドが用意されています。それらのシールドをダウンロードして使用を開始するための手順については、そのサイト上の README ファイルを参照してください。
+
+## 独自のシールドの作成
+この例では、環境をセットアップし、シールドを定義し、ユーザーを作成し、シールドをユーザーに関連付ける方法を示します。また、オプションとして、プロモーションとシミュレート・ハザードを作成することもできます。
+  
 
 以下のセクションでは、水漏れに関する簡単なシールドを作成するコード・サンプルが示されています。サンプル・コード・セット全体を確認する場合は、[iot4i-api-examples-nodejs GitHub リポジトリー](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/)を参照してください。
 
-## 前提条件
+### 前提条件
 始める前に、以下の前提条件が満たされていることを確認してください。
 
 - [Node.js](https://nodejs.org/en/) がコンピューターにインストールされている。  
 - Node.js に対応するランタイム環境 (Eclipse など)。
 - Git ソフトウェアおよび [API サンプルの GitHub ソース・コード・リポジトリー](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs)へのアクセス。あるいは、[ソース・コード・ファイルを含むアーカイブ](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/archive/master.zip)をダウンロードすることもできます。
 - 準備しておいたソース・コード。
+  
 ソース・コードを準備するには、以下のステップを実行します。
   1. [GitHub ソース・コードのリポジトリー](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs)をコンピューターに複製またはダウンロードします。
   2. コマンド・ラインを使用して、複製されたソース・コード・ファイルが含まれるフォルダーに移動し、`npm install` コマンドを実行して、プロジェクトのオープン・ソース前提条件をインストールします。
 
-## 環境の設定
+### 環境の設定
 {: #environment}
 REST API 呼び出しを送信するように環境を構成するには、API の URL を config.js ファイルの中に構成する必要があります。このコンテキストにおいて、統合サービスの URL は無視できます。
 
@@ -47,7 +58,7 @@ var config = module.exports = {
 };
 ```
 
-## シールド定義の作成
+### シールド定義の作成
 {: #create_shield_def}
 
 メソッド: POST  
@@ -79,7 +90,7 @@ var shield = {
 - **UUID** - シールドの汎用固有 ID (UUID)。
 - **actions** - あるハザードが作成されたときに起動するアクションのリスト。この例の場合、iOS プッシュ通知を使用することにより、ハザードに関する情報がユーザーのアプリに送信されます。
 
-## シールド・コードの作成
+### シールド・コードの作成
 {: #create_shield_code}
 シールド・エンジンでペイロードを処理する方法を定義するシールド・コードを、shieldCode.js ファイル内に作成します。
 
@@ -146,7 +157,7 @@ var shieldCode = {
   registerShield(DEMO_SHIELD_UUID, DEMO_SHIELD_NAME, demoEntryCondition, undefined, demoSafelet, demoMessage, DEMO_SHIELD_DELAY);
   ```
 
-## ユーザーの作成
+### ユーザーの作成
 {: #create_user}
 
 メソッド: POST  
@@ -181,7 +192,7 @@ var user = {
   - 10 - ダッシュボード
   - 1 - システム管理者
 
-## シールド関連付けの作成
+### シールド関連付けの作成
 {: #create_shield_assoc}
 
 メソッド: POST  
@@ -203,7 +214,7 @@ var userShield = {
 
 
 
-## ハザード・シミュレーションの作成
+### ハザード・シミュレーションの作成
 {: #create_sim_hazard}
 
 メソッド: POST  
@@ -240,7 +251,7 @@ var parameters {
 ```
 
 
-## プロモーションの作成
+### プロモーションの作成
 {: #create_promotion}
 
 {{site.data.keyword.iotinsurance_short}} は、モバイル・アプリを使用することにより、住宅所有者に対してプロモーションを送信することができます。プロモーションは、createPromotion.js ファイルを使用して作成します。

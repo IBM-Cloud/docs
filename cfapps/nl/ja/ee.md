@@ -199,11 +199,12 @@ var env = JSON.parse(process.env.VCAP_SERVICES);
   資格情報を使用してサービス・インスタンスと対話することができます。実行できるアクションには、読み取り、書き込み、更新などがあります。次の例は、{{site.data.keyword.cloudant}} サービス・インスタンスに JSON オブジェクトを挿入する方法を示しています。
   
   ```
-// create a new message
+  // create a new message
 var create_message = function(req, res) {
   require('cloudantdb').connect(cloudant.url, function(err, conn) {
-var collection = conn.collection('messages');
-// create message record
+    var collection = conn.collection('messages');
+
+    // create message record
     var parsedUrl = require('url').parse(req.url, true);
     var queryObject = parsedUrl.query;
     var name = (queryObject["name"] || 'Bluemix');

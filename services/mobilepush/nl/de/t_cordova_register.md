@@ -89,9 +89,9 @@ onDeviceReady: function() {
      var settings = {
          ios: {
              alert: true,
-             badge: true,
-             sound: true
-         }   
+	       badge: true,
+	       sound: true
+	   }   
      };
      MFPPush.registerDevice(settings, success, failure);
      var notification = function(notif){

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-08-02"
+  years: 2015, 2017
+lastupdated: "2016-11-22"
 
 ---
 
@@ -12,27 +12,24 @@ lastupdated: "2016-08-02"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Java 클라이언트 라이브러리 - 관리 디바이스
+# Java를 사용하여 관리 디바이스 개발
 {: #java_deviceManagement}
 
 ##소개
 {: #introduction}
 
-이 클라이언트 라이브러리는 Java 'ibmiotf' Client Library와 함께 디바이스를 사용하는 방법을 설명합니다. 이 모듈을 시작하는 데 관한 도움말은 [Java 클라이언트 라이브러리 - 소개](../java/javaintro.html)를 참조하십시오.
+{{site.data.keyword.iot_full}}에서 관리 디바이스는 디바이스 관리 오퍼레이션(예: 펌웨어, 위치 및 진단 업데이트)을 수행할 수 있는 디바이스입니다.
+{{site.data.keyword.iot_short}} Java™ 클라이언트 라이브러리 및 제공된 정보를 사용하여 사용자는 연결된 디바이스를 관리 디바이스로 전환하기 위한 Java 코드를 개발할 수 있습니다. 또한 디바이스 관리 서비스에 디바이스를 연결하고 디바이스 관리 오퍼레이션을 실행하기 위한 Java 코드를 개발하는 데 도움이 되도록 샘플이 제공됩니다. 
 
-이 섹션에는 Java를 사용하여 디바이스에서 {{site.data.keyword.iot_full}} 디바이스 관리 서비스를 수행하고 펌웨어 업데이트, 위치 업데이트 및 진단 업데이트와 같은 디바이스 관리 오퍼레이션을 수행하는 방법에 대한 정보가 있습니다.
-
-디바이스 섹션에는 디바이스가 Java ibmiotf Client Library를 사용하여 이벤트를 공개하고 명령을 처리하는 방법에 대한 정보가 있습니다.
-
-애플리케이션 섹션에는 애플리케이션이 Java ibmiotf Client Library를 사용하여 디바이스와 상호작용할 수 있는 방법에 대한 정보가 있습니다.
+애플리케이션이 Java 클라이언트 라이브러리를 사용하여 디바이스와 상호작용하는 방법에 대한 자세한 정보는 [애플리케이션 개발자용 Java](../../applications/libraries/java.html)를 참조하십시오. 
 
 ## 디바이스 관리
 {: #device_management}
 
 [디바이스 관리](../reference/device_mgmt.html) 기능은 디바이스를 관리하는 기능을 더 많이 추가하여 {{site.data.keyword.iot_short_notm}} 서비스를 개선합니다. 디바이스 관리에서는 다음과 같이 관리 디바이스와 비관리 디바이스를 명확하게 구분합니다.
 
--   **관리 디바이스**는 관리 에이전트가 설치된 디바이스로 정의됩니다. 관리 에이전트에서 디바이스 메타데이터를 보내고 받으며 {{site.data.keyword.iot_short_notm}}의 디바이스 관리 명령에 응답합니다.
--   **비관리 디바이스**는 디바이스 관리 에이전트가 없는 디바이스입니다. 모든 디바이스는 비관리 디바이스로 라이프사이클을 시작하고 디바이스 관리 에이전트에서 {{site.data.keyword.iot_short_notm}}으로 메시지를 보내 관리 디바이스로 상태를 전이할 수 있습니다.
+-   **관리 디바이스**는 관리 에이전트가 설치된 디바이스로 정의됩니다. 관리 에이전트는 디바이스 메타데이터를 전송하고 수신하며 {{site.data.keyword.iot_short_notm}}의 디바이스 관리 명령에 응답합니다. 
+-   **비관리 디바이스**는 디바이스 관리 에이전트가 없는 디바이스입니다. 모든 디바이스는 비관리 디바이스로서 자체 라이프사이클을 시작하며, 디바이스 관리 에이전트의 메시지를 {{site.data.keyword.iot_short_notm}}에 전송하여 관리 디바이스로 상태 전이할 수 있습니다. 
 
 ## {{site.data.keyword.iot_short_notm}} 디바이스 관리 서비스에 연결
 {: #connecting_dm_service}

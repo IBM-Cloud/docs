@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-10"
+lastupdated: "2017-03-02"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-01-10"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-<!-- Acrolinx: 2017-01-10 -->
+<!-- Acrolinx: 2017-03-02 -->
 
 # Databases
 
@@ -58,6 +58,8 @@ curl https://$USERNAME:$PASSWORD@$ACCOUNT.cloudant.com/$DATABASE -X PUT
 ```
 {:codeblock}
 
+<!--
+
 _Example of using JavaScript to create a database:_
 
 ```javascript
@@ -72,11 +74,13 @@ account.db.create($DATABASE, function (err, body, headers) {
 ```
 {:codeblock}
 
+-->
+
 <div id="response"></div>
 
 If creation succeeds, you get a [201 or 202 response](http.html#201).
-If there is an error,
-the HTTP status code indicates what went wrong.
+An error response uses 
+the HTTP status code to indicate what went wrong.
 
 Code | Description
 -----|------------
@@ -85,7 +89,7 @@ Code | Description
 403  | Invalid database name.
 412  | Database already exists.
 
-_Example response that is received after creating a database successfully:_
+_Example response that is received after a database is created successfully:_
 
 ```http
 HTTP/1.1 201 Created
@@ -98,7 +102,7 @@ HTTP/1.1 201 Created
 
 ### Database topology
 
-It is possible to modify the configuration of a database sharding topology of a
+It is possible to modify the configuration of a sharding topology for a
 database on dedicated database clusters.
 This modification can be done when the database is created.
 However,
@@ -134,6 +138,8 @@ curl https://$USERNAME.cloudant.com/$DATABASE \
 ```
 {:codeblock}
 
+<!--
+
 _Example of using JavaScript to get database details:_
 
 ```javascript
@@ -148,6 +154,8 @@ account.db.get($DATABASE, function (err, body, headers) {
 ```
 {:codeblock}
 
+-->
+
 The elements of the returned structure are shown in the following table:
 
 Field                 | Description
@@ -161,7 +169,7 @@ Field                 | Description
 `instance_start_time` | Always 0.
 `other`               | JSON object that contains a `data_size` field.
 `purge_seq`           | The number of purge operations on the database.
-`sizes`               | A JSON object, containing `file`, `external`, and `active` sizes. `active` is the size in bytes of data that is stored internally (excluding old revisions). `external` is the size in bytes of decompressed user data. This value is the billable data size. The `other/data_size` field is an alias for the `external` field. `file` is the size in bytes of data that is stored on the disk. Indexes are not included in the calculation. The `disk_size` field is an alias for the `file` field. Note that this size includes data waiting for compaction.
+`sizes`               | A JSON object, containing `file`, `external`, and `active` sizes. `active` is the size in bytes of data that are stored internally (excluding old revisions). `external` is the size in bytes of decompressed user data. This value is the billable data size. The `other/data_size` field is an alias for the `external` field. `file` is the size in bytes of data that are stored on the disk. Indexes are not included in the calculation. The `disk_size` field is an alias for the `file` field. This size includes data that are waiting for compaction.
 `update_seq`          | An opaque string that describes the state of the database. Do not rely on this string for counting the number of updates.
 
 _Example (abbreviated) response that contains database details:_
@@ -211,6 +219,8 @@ curl https://$USERNAME.cloudant.com/_all_dbs \
 ```
 {:codeblock}
 
+<!--
+
 _Example of using JavaScript to list all databases:_
 
 ```javascript
@@ -224,6 +234,8 @@ account.db.list(function (err, body, headers) {
 });
 ```
 {:codeblock}
+
+-->
 
 The response is a JSON array with all the database names.
 
@@ -247,24 +259,22 @@ send a `GET` request to `https://$USERNAME.cloudant.com/$DATABASE/_all_docs`.
 
 The `_all_docs` endpoint accepts the following query arguments:
 
-Argument            | Description                                                                                       | Optional | Type            | Default
---------------------|---------------------------------------------------------------------------------------------------|----------|-----------------|--------
-`conflicts`         | Can be set only if `include_docs` is `true`. Adds information about conflicts to each document.   | yes      | boolean         | false
-`deleted_conflicts` | Returns information about deleted conflicted revisions.                                           | yes      | boolean         | false
-`descending`        | Return the documents in descending key order.                                                     | yes      | boolean         | false
-`endkey`            | Stop returning records when the specified key is reached.                                         | yes      | string          |
-`include_docs`      | Include the full content of the documents in the return.                                          | yes      | boolean         | false
-`inclusive_end`     | Include rows whose key equals the '`endkey`' value.                                               | yes      | boolean         | true
-`key`               | Return only documents with IDs that match the specified key.                                      | yes      | string          |
-`keys`              | Return only documents with IDs that match one of the specified keys.                              | yes      | list of strings |
-`limit`             | Limit the number of returned documents to the specified number.                                   | yes      | numeric         |
+Argument            | Description                                                                                     | Optional | Type            | Default
+--------------------|-------------------------------------------------------------------------------------------------|----------|-----------------|--------
+`conflicts`         | Can be set only if `include_docs` is `true`. Adds information about conflicts to each document. | yes      | boolean         | false
+`deleted_conflicts` | Returns information about deleted conflicted revisions.                                         | yes      | boolean         | false
+`descending`        | Return the documents in descending key order.                                                   | yes      | boolean         | false
+`endkey`            | Stop returning records when the specified key is reached.                                       | yes      | string          |
+`include_docs`      | Include the full content of the documents in the return.                                        | yes      | boolean         | false
+`inclusive_end`     | Include rows whose key equals the '`endkey`' value.                                             | yes      | boolean         | true
+`key`               | Return only documents with IDs that match the specified key.                                    | yes      | string          |
+`keys`              | Return only documents with IDs that match one of the specified keys.                            | yes      | list of strings |
+`limit`             | Limit the number of returned documents to the specified number.                                 | yes      | numeric         |
 `meta`              | Short-hand combination of all three arguments: `conflicts`, `deleted_conflicts`, and `revs_info`. Using `meta=true` is the same as using `conflicts=true&deleted_conflicts=true&revs_info=true`. | yes | boolean | false
-`r`                 | Specify the [read quorum](document.html#quorum---writing-and-reading-data) value.                 | yes      | numeric         | 2
-`revs_info`         | Includes detailed information for all known document revisions.                                   | yes      | boolean         | false
-`skip`              | Skip this number of records before starting to return the results.                                | yes      | numeric         | 0
-`startkey`          | Return records, starting with the specified key.                                                  | yes      | string          |
-
-
+`r`                 | Specify the [read quorum](document.html#quorum---writing-and-reading-data) value.               | yes      | numeric         | 2
+`revs_info`         | Includes detailed information for all known document revisions.                                 | yes      | boolean         | false
+`skip`              | Skip this number of records before returning the results.                                       | yes      | numeric         | 0
+`startkey`          | Return records, starting with the specified key.                                                | yes      | string          |
 
 >	**Note**: Using `include_docs=true` might have [performance implications](using_views.html#include_docs_caveat).
 
@@ -282,9 +292,11 @@ GET /_all_docs HTTP/1.1
 _Example of using the command line to list all documents in a database,_
 
 ```sh
-curl https://%USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DATABASE/_all_docs
+curl https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DATABASE/_all_docs
 ```
 {:codeblock}
+
+<!--
 
 _Example of using JavaScript to list all documents in a database:_
 
@@ -301,6 +313,8 @@ db.list(function (err, body, headers) {
 ```
 {:codeblock}
 
+-->
+
 _Example of using HTTP to list all documents in a database that match at least one of the specified keys:_
 
 ```http
@@ -311,7 +325,7 @@ GET /_all_docs?keys=["somekey","someotherkey"] HTTP/1.1
 _Example of using the command line to list all documents in a database that match at least one of the specified keys:_
 
 ```sh
-curl https://%USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DATABASE/_all_docs?keys=["somekey","someotherkey"]
+curl https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DATABASE/_all_docs?keys=["somekey","someotherkey"]
 ```
 {:codeblock}
 
@@ -325,7 +339,7 @@ Field        | Description                                                      
 `total_rows` | Number of documents in the database or view that match the parameters of the query. | numeric
 `update_seq` | Current update sequence for the database.                                           | string
 
-_Example response after making a request for all documents in a database:_
+_Example response after a request for all documents in a database:_
 
 ```json
 {
@@ -379,12 +393,12 @@ Argument       | Description | Supported Values | Default
 `doc_ids`      | To be used only when `filter` is set to `_doc_ids`. Filters the feed so that only changes to the specified documents are sent. **Note**: The `doc_ids` parameter works only with versions of Cloudant that are compatible with CouchDB 2.0. See [API: GET / documentation](advanced.html#get-/) for more information. | A JSON array of document IDs | |
 `feed`         | Type of feed required. For details, see the [`feed` information](#the-feed-argument). | `"continuous"`, `"longpoll"`, `"normal"` | `"normal"`
 `filter`       | Name of [filter function](design_documents.html#filter-functions) to use to get updates. The filter is defined in a [design document](design_documents.html). | string | no filter
-`heartbeat`    | Time in milliseconds after which an empty line is sent if there were no changes during `feed=longpoll` or `feed=continuous`. | any positive number | no heartbeat | 
+`heartbeat`    | If there were no changes during `feed=longpoll` or `feed=continuous`, an empty line is sent after this time in milliseconds. | any positive number | no heartbeat | 
 `include_docs` | Include the document as part of the result. | boolean | false |
 `limit`        | Maximum number of rows to return. | any non-negative number | none |  
 `since`        | Start the results from changes _after_ the specified sequence identifier. For details, see the [`since` information](#the-since-argument). | sequence identifier or `now` | 0 | 
 `style`        | Specifies how many revisions are returned in the changes array. The `main_only` style returns only the current "winning" revision. The `all_docs` style returns all leaf revisions, including conflicts and deleted former conflicts. | `main_only`, `all_docs` | `main_only` | 
-`timeout`      | Number of milliseconds to wait for data before stopping the response. If the `heartbeat` setting is also supplied, it takes precedence over the `timeout` setting. | any positive number | |
+`timeout`      | Stop the response after waiting this number of milliseconds for data. If the `heartbeat` setting is also supplied, it takes precedence over the `timeout` setting. | any positive number | |
 
 >	**Note**: Using `include_docs=true` might have
 	[performance implications](using_views.html#include_docs_caveat).
@@ -404,6 +418,8 @@ curl https://$USERNAME.cloudant.com/$DATABASE/_changes \
 ```
 {:codeblock}
 
+<!--
+
 _Example of using JavaScript to get a list of changes made to documents in a database:_
 
 ```javascript
@@ -417,6 +433,8 @@ account.db.changes($DATABASE, function (err, body, headers) {
 });
 ```
 {:codeblock}
+
+-->
 
 ### Changes in a distributed database
 
@@ -434,10 +452,16 @@ along with the implications for applications,
 is explained in the
 [replication guide](../guides/replication_guide.html#how-does-replication-affect-the-list-of-changes?).
 
->	**Note**: Any application that uses the `_changes` request _must_ be able to process correctly a list of changes that might:
-	-	Have a different order for the changes listed in the response,
-		when compared with an earlier request for the same information.
-	-	Include changes that are considered to be before the change specified by the sequence identifier.
+<!-- Reset markdown parser -->
+
+<blockquote>
+<p><strong>Note</strong>: Any application that uses the <code>_changes</code> request <em>must</em> be able to process correctly a list of changes that might:
+<ul>
+<li>Have a different order for the changes that are listed in the response, when compared with an earlier request for the same information.</li>
+<li>Include changes that are considered to be before the change specified by the sequence identifier.</li>
+</ul>
+</p>
+</blockquote>
 
 ### The `feed` argument
 
@@ -459,8 +483,10 @@ This option means that the database connection stays open until explicitly close
 and that all changes are returned to the client as soon as possible after they occur.
 
 Each line in the continuous response is either empty or a JSON object that represents a single change.
-The option ensures that the format of the report entries reflects the continuous nature of the changes,
-while maintaining validity of the JSON output.
+The option ensures that:
+ 
+-   The format of the report entries reflects the continuous nature of the changes.
+-   Validity of the JSON output is maintained.
 
 _Example (abbreviated) responses from a continuous changes feed:_
 
@@ -515,9 +541,13 @@ several built-in filters available:
 
 *   `_design`: The `_design` filter accepts only changes to design documents.
 *   `_doc_ids`: This filter accepts only changes for documents whose ID is specified in the `doc_ids` parameter.
+    
+    >   **Note**: The `_docs_ids` parameter works only with versions of Cloudant that are compatible with CouchDB 2.0.
 *   `_selector`: Accepts only changes for documents that match a specified selector,
     which is defined by using the same [selector syntax](cloudant_query.html#selector-syntax) that is used
     for [`_find`](cloudant_query.html#finding-documents-using-an-index).
+    
+    >   **Note**: The `_selector` parameter works only with versions of Cloudant that are compatible with CouchDB 2.0.
 *   `_view`: Enables use of an existing [map function](creating_views.html#a-simple-view) as the filter.
 
 ### The `since` argument
@@ -686,6 +716,8 @@ curl https://$USERNAME.cloudant.com/$DATABASE \
 ```
 {:codeblock}
 
+<!--
+
 _Example of using JavaScript to delete a Cloudant database:_
 
 ```javascript
@@ -699,6 +731,8 @@ account.db.destroy($DATABASE, function (err, body, headers) {
 });
 ```
 {:codeblock}
+
+-->
 
 The response confirms successful deletion of the database or describes any errors that occurred,
 for example if you try to delete a database that does not exist.

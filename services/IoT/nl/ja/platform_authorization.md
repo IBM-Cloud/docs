@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-14"
+  years: 2016, 2017
+lastupdated: "2017-03-13"
 
 ---
 
@@ -21,11 +21,12 @@ lastupdated: "2016-09-14"
 {: #api-key}
 アプリケーションを {{site.data.keyword.iot_short_notm}} 組織に接続するときには、API キーが使用されます。アプリケーションでは、組織に接続するための API キー、そしてその API キーと共に使用する必要のある固有の認証トークンが必要です。  
 
-アプリケーション接続について詳しくは、開発者用資料の [MQTT Connectivity for Applications](https://docs.internetofthings.ibmcloud.com/applications/mqtt.html) を参照してください。
+アプリケーション接続について詳しくは、開発者用資料の [MQTT Connectivity for Applications ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/applications/mqtt.html){: new_window} を参照してください。
 
 新しい API キーと認証トークンのペアを作成するには、以下のようにします。  
 1.	{{site.data.keyword.iot_short_notm}} ダッシュボードで、**「アプリ」>「API キー」**に移動します。  
 2.	**「API キーの生成」**をクリックします。
+  
 **重要:** API キーのノートとトークンのペアをメモします。認証トークンは復元できません。このトークンを紛失したり忘れたりした場合、新しい認証トークンを生成するために API キーの再登録が必要になります。
  - API キーの 1 つの例は `a-organization_id-a84ps90Ajs` です  
  - トークンの 1 つの例は `MP$08VKz!8rXwnR-Q*` です  

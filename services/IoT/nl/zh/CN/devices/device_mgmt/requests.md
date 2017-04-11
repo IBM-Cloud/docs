@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-08"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2016-09-08"
 ## 使用仪表板发起设备管理请求
 {: #initiating-dm-dashboard}
 
-请求可以通过浏览至仪表板中“设备”页面的**操作**选项卡来发起。**启动操作**按钮会打开一个对话框，在其中可以选择操作，选取要对其执行操作的设备，以及指定所选操作支持的其他任何参数。
+请求可以通过使用仪表板中“设备”页面的**操作**选项卡来启动。单击**启动操作**可以选择操作、选择设备，以及指定所选操作支持的其他任何参数。
 
 ## 使用 REST API 发起设备管理请求
 {: #initiating-dm-api}
@@ -31,7 +31,7 @@ lastupdated: "2016-09-08"
 
 `POST https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
-有关设备管理请求主体的更多信息，请参阅 [API 文档](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html)。
+有关设备管理请求的主体的更多信息，请参阅 [ API 文档 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}。
 
 ## 设备操作
 {: #device-actions}
@@ -178,7 +178,7 @@ Topic: iotdevice-1/response
 ## 固件操作
 {: #firmware-actions}
 
-设备上当前已知的固件级别存储在 `deviceInfo.fwVersion` 属性中。`mgmt.firmware` 属性用于执行固件更新并观察其状态。
+设备上已知的固件级别存储在 `deviceInfo.fwVersion` 属性中。`mgmt.firmware` 属性用于执行固件更新并观察其状态。
 
 **重要信息：**受管设备必须支持观察 `mgmt.firmware` 属性，才能支持固件操作。
 
@@ -190,8 +190,8 @@ Topic: iotdevice-1/response
 
  |值 |状态  | 含义 |
  |:---|:---|:---|
- |0  | 空闲        | 设备当前未在下载固件。 |  
- |1  | 正在下载 | 设备当前正在下载固件。 |
+ |0  | 空闲        | 设备未在下载固件。 |  
+ |1  | 正在下载 | 设备正在下载固件。 |
  |2  | 已下载  | 设备已成功下载固件更新，随时可进行安装。 |
 
 
@@ -219,8 +219,8 @@ Topic: iotdevice-1/response
 提供了以下信息：
 
 - 操作 `firmware/download`
-- 固件映像的 URI
 - 用于接收映像的设备列表（最多包含 5000 台设备）
+- 固件映像的 URI（可选）
 - 用于验证映像的验证字符串（可选）
 - 固件名称（可选）
 - 固件版本（可选）
@@ -252,11 +252,14 @@ Topic: iotdevice-1/response
 }
 ```
 
+如果未指定任何可选参数，那么会跳过以下流程中的第一步。
+
 {{site.data.keyword.iot_short_notm}} 中的设备管理服务器使用设备管理协议向设备发送请求，以启动固件下载操作。下载过程由以下步骤组成：
 
 1. 在 `iotdm-1/device/update` 主题上发送固件详细信息更新请求。
 更新请求让设备验证请求的固件是否不同于当前安装的固件。如果有差异，那么将 `rc` 参数设置为 `204`，这会转换为状态“`已更改`”。
-以下示例显示了对于先前发送的示例固件下载请求应该会收到的消息，以及检测到差异时应该发送的响应：
+  
+以下示例显示了对于先前发送的示例固件下载请求应该会收到的消息，以及检测到差异时发送的响应：
 ```
    来自 {{site.data.keyword.iot_short_notm}} 的入局请求：
 
@@ -421,7 +424,7 @@ Message:
 - 如果固件下载尝试失败，那么将 `rc` 参数设置为 `500`，并可选择相应地设置 `message` 参数。
 - 如果不支持固件下载，那么将 `rc` 参数设置为 `500`，并可选择相应地设置 `message` 参数。
 - 设备收到执行请求后，将 `mgmt.firmware.state` 属性从 `0`（空闲）更改为 `1`（正在下载）。
-- 下载成功完成后，将 `mgmt.firmware.state` 属性设置为 `2`（已下载）。
+- 下载成功完成时，将 `mgmt.firmware.state` 属性设置为 `2`（已下载）。
 - 如果下载期间发生错误，那么将 `mgmt.firmware.state` 属性设置为 `0`（空闲），并将 `mgmt.firmware.updateStatus` 属性设置为以下某个错误状态值：
   - 2（内存耗尽）
   - 3（连接断开）
@@ -439,6 +442,10 @@ Message:
 
 - 操作 `firmware/update`
 - 用于接收映像的设备列表（所有设备都属于同一设备类型）。
+- 固件映像的 URI（可选）
+- 用于验证映像的验证字符串（可选）
+- 固件名称（可选）
+- 固件版本（可选）
 
 以下代码是示例请求：
 
@@ -453,6 +460,8 @@ Message:
    }
 
 ```
+
+如果指定了任何可选参数，那么设备接收的第一条消息是设备更新请求。此设备更新请求与固件下载请求的第一条消息类似。
 
 要监视固件更新的状态，{{site.data.keyword.iot_short_notm}} 会首先在 `iotdm-1/observe` 主题上触发观察器请求。设备准备好启动更新过程时，会发送一个响应，其中 `rc` 参数设置为 `200`，`mgmt.firmware.state` 属性设置为 `0`，并且 `mgmt.firmware.updateStatus` 属性设置为 `0`。
 
@@ -589,3 +598,17 @@ Message:
 
 
 **重要信息：**作为 `mgmt.firmware` 属性一部分列出的所有参数都必须同时进行设置，这样当存在 `mgmt.firmware` 的当前观察时，只会发送单个通知消息。
+
+## 关于设备操作和固件操作的诀窍
+
+以下诀窍演示了执行设备和固件操作所需的完整流程。
+
+- [DeviceManagement in WIoT Platform – Roll Back & Factory Reset ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/){: new_window}
+
+- [DeviceInitiated Firmware Update ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-device-initiated-firmware-upgrade/){: new_window}
+
+- [PlatformInitiated Firmware Update ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/){: new_window}
+
+- [Platform Initiated Firmware Update with Background Execution ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/){: new_window}
+
+- [Firmware Roll Back & Factory Reset ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/){: new_window}

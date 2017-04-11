@@ -97,7 +97,7 @@ lastupdated: "2016-05-09"
 |Eclipse	|在 Eclipse 中管理您的程式碼，並且使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 來推送應用程式。|
 |Git 整合	|在 GitHub 上管理您的程式碼，以及將 Git 整合至 {{site.data.keyword.Bluemix_notm}}。您可以與其他開發人員分工合作。確定程式碼中的變更時，會自動將您的應用程式部署至 {{site.data.keyword.Bluemix_notm}}。您不需要手動推送應用程式。|
 |{{site.data.keyword.Bluemix_notm}} DevOps Delivery Pipeline	|在 DevOps GitHub 儲存庫上管理您的程式碼，以及使用 DevOps Delivery Pipeline 將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。|
-{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} tools" caption-side="top"}
+{: caption="表 1. {{site.data.keyword.Bluemix_notm}} 工具" caption-side="top"}
 
 
 如果 Cloud Foundry 平台不支援您的應用程式需求，您可以使用容器或 VM，其中已利用其他自訂的選項來設定、配置及維護運行環境。

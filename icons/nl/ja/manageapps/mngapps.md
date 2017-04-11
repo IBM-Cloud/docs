@@ -10,7 +10,7 @@ lastupdated: "2015-03-17"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-#アプリケーションの管理
+# アプリケーションの管理
 {: #manageapps}
 
 {{site.data.keyword.Bluemix}} ユーザー・インターフェースのダッシュボードを使用して、アプリケーションおよびサービスの表示と管理、および割り当て量ゲージを使用したリソース使用量のモニターを行うことができます。

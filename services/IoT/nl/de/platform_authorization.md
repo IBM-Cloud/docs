@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-14"
+  years: 2016, 2017
+lastupdated: "2017-03-13"
 
 ---
 
@@ -21,7 +21,7 @@ Um eine Verbindung zwischen Ihrer Anwendung und {{site.data.keyword.iot_full}} h
 {: #api-key}
 Beim Herstellen einer Verbindung zwischen Anwendungen und Ihrer {{site.data.keyword.iot_short_notm}}-Organisation werden API-Schlüssel verwendet. Anwendungen benötigen einen API-Schlüssel, um mit einer Organisation verbunden zu werden, sowie ein eindeutiges Authentifizierungstoken, das mit diesem API-Schlüssel verwendet werden muss.  
 
-Weitere Informationen zu Anwendungsverbindungen finden Sie in der Entwicklerdokumentation in [MQTT-Konnektivität für Anwendungen](https://docs.internetofthings.ibmcloud.com/applications/mqtt.html).
+Weitere Informationen zu Anwendungsverbindungen finden Sie in der Entwicklerdokumentation in [MQTT-Konnektivität für Anwendungen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/applications/mqtt.html){: new_window}.
 
 Gehen Sie wie folgt vor, um eine neue Kombination aus API-Schlüssel und Authentifizierungstoken zu erstellen:  
 1.	Wechseln Sie im {{site.data.keyword.iot_short_notm}}-Dashboard zu **Apps > API-Schlüssel**.  

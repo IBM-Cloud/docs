@@ -480,11 +480,11 @@ Em vez de codificar permanentemente as credenciais no app, use parâmetros de co
 ```
 process.env.VCAP_SERVICES
 ```
-Para obter mais informações sobre os comandos que podem ser usados em outras linguagens de programa, veja [Java ![Ícone de link externo](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} e [Ruby ![Ícone de link externo](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}.
+Para obter mais informações sobre os comandos que podem ser usados em outras linguagens de programa, veja [Java ![Ícone de link externo](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} e [Ruby ![Ícone de link externo](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}. 
+ 
 
-
-
-
+ 
+ 
 
 
 
@@ -503,9 +503,7 @@ Quando uma máscara não suportada é aplicada ao projeto Eclipse, talvez você 
 
 O IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} mapeia projetos para tempos de execução do {{site.data.keyword.Bluemix_notm}} por máscaras de projeto. As máscaras definem os requisitos para
 projetos Java EE no Eclipse e são usadas como parte da configuração de tempo de execução
-para que diferentes tempos de execução sejam associados a diferentes projetos. Se a máscara aplicada ao projeto não for suportada pelo
-IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, você pode não conseguir implementar seu app usando o IBM Eclipse
-Tools for {{site.data.keyword.Bluemix_notm}}.
+para que diferentes tempos de execução sejam associados a diferentes projetos. Se a máscara aplicada ao projeto não for suportada pelo IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, você pode não conseguir implementar seu app usando o IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
 {: tsCauses}
 
 
@@ -533,10 +531,7 @@ Você recebe mensagens de erro que iniciam com 502 Gateway inválido. Por exempl
 
 Um
 erro de Gateway inválido geralmente acontece quando você visita um website que usa um servidor proxy para armazenar e
-retransmitir os dados do servidor principal que hospeda o site. O servidor principal e o servidor proxy não podem
-se conectar adequadamente; portanto, você verá o código de status 502 do
-HTTP em sua janela do navegador. Esse código de status indica que o servidor principal do site não recebeu a
-implementação HTTP esperada pelo servidor proxy.
+retransmitir os dados do servidor principal que hospeda o site. O servidor principal e o servidor proxy não podem se conectar adequadamente; portanto, você verá o código de status 502 do HTTP em sua janela do navegador. Esse código de status indica que o servidor principal do site não recebeu a implementação HTTP esperada pelo servidor proxy.
 {: tsCauses}
 
 Outras causas menos comuns de um erro de Gateway inválido são
@@ -544,15 +539,12 @@ os dropouts do provedor de serviços da Internet (ISP), configurações de firew
 
  
 
-Se você suspeitar que um serviço do {{site.data.keyword.Bluemix_notm}} está inativo, verifique primeiramente a página [Status do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window}. Talvez queira usar o serviço em outra região do {{site.data.keyword.Bluemix_notm}} como uma solução
-alternativa. As informações detalhadas estão disponíveis em
-[Usando serviços em outra região](/docs/services/reqnsi.html#cross_region_service). Se o status de serviço for normal,
+Se você suspeitar que um serviço do {{site.data.keyword.Bluemix_notm}} está inativo, verifique primeiramente a página [Status do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window}. Talvez queira usar o serviço em outra região do {{site.data.keyword.Bluemix_notm}} como uma solução alternativa. As informações detalhadas estão disponíveis em [Usando serviços em outra região](/docs/services/reqnsi.html#cross_region_service). Se o status de serviço for normal,
 tente as etapas a seguir para resolver o problema: 
 {: tsResolve}
 
   * Tente novamente a ação:
-    * Recarregar a página pressionando F5 em seu teclado ou clicando no botão de atualização. Se essa etapa não
-funcionar, limpe os cookies e o cache do seu navegador e, em seguida, recarregue novamente.
+    * Recarregar a página pressionando F5 em seu teclado ou clicando no botão de atualização. Se essa etapa não funcionar, limpe os cookies e o cache do seu navegador e, em seguida, recarregue novamente.
 	* Usar um navegador diferente.
 	* Reinicializar seu roteador, seu modem e seu computador. Reinicializar esses dispositivos pode limpar diversos erros
 que conduzem ao erro 502. 
@@ -606,8 +598,7 @@ Depois de criar um app no Painel, você clica em INCLUIR GIT para criar um repos
 
 
 
-Ao clicar em **INCLUIR GIT**, uma janela
-é aberta e ocorre um destes problemas:
+Ao clicar em **INCLUIR GIT**, uma janela é aberta e ocorre um destes problemas:
 {: tsSymptoms} 
 
   * A janela é interrompida com uma tela em branco.
@@ -615,8 +606,7 @@ Ao clicar em **INCLUIR GIT**, uma janela
 
 
 
-Seu navegador pode ser configurado para evitar que um cookie
-seja configurado. Esse cookie deve ser configurado a partir do site do IBM® Bluemix DevOps Services no domínio da Internet hub.jazz.net a partir do contexto do console do {{site.data.keyword.Bluemix_notm}}.
+Seu navegador pode ser configurado para evitar que um cookie seja configurado. Esse cookie deve ser configurado a partir do site do IBM® Bluemix DevOps Services no domínio da Internet hub.jazz.net a partir do contexto do console do {{site.data.keyword.Bluemix_notm}}.
 {: tsCauses}  
 
  
@@ -624,12 +614,9 @@ seja configurado. Esse cookie deve ser configurado a partir do site do IBM® Blu
 É possível corrigir esse problema de uma das seguintes formas:
 {: tsResolve}
 
-  * Siga as instruções da janela que é aberta
-no console do {{site.data.keyword.Bluemix_notm}}. Clique no botão. Outra janela do navegador é aberta temporariamente. Nessa janela, o DevOps Services configura o cookie de autenticação.
-  * Em outra guia do navegador, acesse https://hub.jazz.net e efetue login. Retorne para o console do {{site.data.keyword.Bluemix_notm}}
-e atualize a página. Clique em **INCLUIR GIT** novamente.
-  * Mude as configurações do navegador para ativar os cookies de terceiros e clique em INCLUIR GIT novamente. Para obter detalhes sobre como configurar as definições,
-consulte a documentação do navegador:
+  * Siga as instruções da janela que é aberta no console do {{site.data.keyword.Bluemix_notm}}. Clique no botão. Outra janela do navegador é aberta temporariamente. Nessa janela, o DevOps Services configura o cookie de autenticação.
+  * Em outra guia do navegador, acesse https://hub.jazz.net e efetue login. Retorne para o console do {{site.data.keyword.Bluemix_notm}} e atualize a página. Clique em **INCLUIR GIT** novamente.
+  * Mude as configurações do navegador para ativar os cookies de terceiros e clique em INCLUIR GIT novamente. Para obter detalhes sobre como configurar as definições, consulte a documentação do navegador:
     * [Mozilla Firefox ![Ícone de link externo](../icons/launch-glyph.svg)](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences#w_how-do-i-change-cookie-settings){: new_window}
 	* [Google Chrome ![Ícone de link externo](../icons/launch-glyph.svg)](https://support.google.com/chrome/answer/95647){: new_window}
 	* [Apple Safari ![Ícone de link externo](../icons/launch-glyph.svg)](https://support.apple.com/kb/PH17191){: new_window}
@@ -641,9 +628,7 @@ Se essas soluções alternativas não corrigirem o problema, envie um e-mail par
 ## Apps Android não podem receber notificações push
 {: #ts_push}
 
-Os apps Android em certas regiões em que o Google não está acessível, não podem receber as notificações
-que você envia através do serviço do IBM Push. Nesse caso, é possível usar os serviços de terceiro como solução
-alternativa.
+Os apps Android em certas regiões em que o Google não está acessível, não podem receber as notificações que você envia através do serviço do IBM Push. Nesse caso, é possível usar os serviços de terceiro como solução alternativa.
 
  
 
@@ -652,11 +637,8 @@ Android não podem receber suas notificações em certas regiões.
 {: tsSymptoms}
 
  
-O serviço IBM Push usa o serviço
-Google Cloud Messaging (GCM) para despachar as notificações para apps móveis que são desenvolvidos na plataforma
-Android. Para ativar o recebimento de notificações em apps Android, o serviço
-Google Cloud Messaging (GCM) deve estar acessível para apps móveis. Em regiões em que o serviço GCM não pode ser
-atingido pelos apps Android, os apps Android não conseguem receber notificações push.
+O serviço IBM Push usa o serviço Google Cloud Messaging (GCM) para despachar as notificações para apps móveis que são desenvolvidos na plataforma Android. Para ativar o recebimento de notificações em apps Android, o serviço
+Google Cloud Messaging (GCM) deve estar acessível para apps móveis. Em regiões em que o serviço GCM não pode ser atingido pelos apps Android, os apps Android não conseguem receber notificações push.
 {: tsCauses}
 
  
@@ -689,15 +671,12 @@ número máximo de instâncias de serviços para uma conta para teste é 10.
 
  
 
-Exclua todas as instâncias de serviços que não são necessárias, ou remova
-o limite no número de instâncias de serviços que você pode ter.
+Exclua todas as instâncias de serviços que não são necessárias, ou remova o limite no número de instâncias de serviços que você pode ter.
 {: tsResolve}
  
-  * Para excluir a instância de serviços, é possível usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}}
-ou a interface com o usuário.
+  * Para excluir a instância de serviços, é possível usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}} ou a interface com o usuário.
     Para usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}} para excluir uma instância de serviço, conclua as etapas a seguir:
-	  1. No Painel do {{site.data.keyword.Bluemix_notm}}, clique no serviço
-que você deseja acessar. O quadro do serviço é exibido. 
+	  1. No Painel do {{site.data.keyword.Bluemix_notm}}, clique no serviço que você deseja acessar. O quadro do serviço é exibido. 
 	  2. No quadro do serviço, clique no ícone **Menu**.
 	  3. Clique em **Excluir serviço**. Depois de excluir
 a instância de serviço, você será solicitado a refazer o estágio no aplicativo
@@ -721,8 +700,7 @@ eles forem desenvolvidos e construídos em um ambiente diferente.
 
  
 
-Você não pode executar executáveis no {{site.data.keyword.Bluemix_notm}} quando
-eles forem desenvolvidos e construídos em um ambiente diferente.
+Você não pode executar executáveis no {{site.data.keyword.Bluemix_notm}} quando eles forem desenvolvidos e construídos em um ambiente diferente.
 {: tsSymptoms}
 
  
@@ -848,8 +826,7 @@ as variáveis que você especificou no assistente são salvas para o arquivo man
 
 
 
-## Os ícones do {{site.data.keyword.Bluemix_notm}} Live
-Sync não são mostrados
+## Os ícones do {{site.data.keyword.Bluemix_notm}} Live Sync não são mostrados
 {: #ts_llz_lkb_3r}
 
 Você criou um app no IBM Bluemix DevOps Services, mas os ícones do IBM Bluemix Live Sync não são mostrados no IDE da web.
@@ -864,11 +841,8 @@ Ao editar um app Node.js no IDE da web do DevOps Services, os ícones de ediçã
 Os ícones não estão disponíveis nessas circunstâncias:
 {: tsCauses}
 
-  * O arquivo `manifest.yml` não é armazenado no
-nível superior de seu projeto.
-  * Seu app é armazenado em um subdiretório em vez do nível superior
-de seu projeto, mas o caminho para o subdiretório não é especificado
-no arquivo `manifest.yml`.
+  * O arquivo `manifest.yml` não é armazenado no nível superior de seu projeto.
+  * Seu app é armazenado em um subdiretório em vez do nível superior de seu projeto, mas o caminho para o subdiretório não é especificado no arquivo `manifest.yml`.
   * O app não contém um arquivo `package.json`.
 
 
@@ -1597,12 +1571,8 @@ evitar o carregamento de componentes obsoletos. Os buildpacks a seguir são dois
 exemplos: 
 {: tsResolve}
 
-  * [Buildpack Java do Cloud Foundry ![Ícone de link externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack){: new_window}. Esse buildpack tem um mecanismo integrado
-para assegurar que a versão mais recente do buildpack seja usada. Para obter mais informações sobre como esse mecanismo funciona, veja [extending-caches.md ![Ícone de link externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
-  * [Buildpack Node.js do Cloud Foundry ![Ícone de link externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}. Esse buildpack tem funcionalidade semelhante
-usando variáveis de ambiente. Para que o buildpack Node.js sempre possa
-fazer download de módulos do nó a partir da Internet, digite o comando
-a seguir na interface de linha de comandos cf: 	
+  * [Buildpack Java do Cloud Foundry ![Ícone de link externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack){: new_window}. Esse buildpack tem um mecanismo integrado para assegurar que a versão mais recente do buildpack seja usada. Para obter mais informações sobre como esse mecanismo funciona, veja [extending-caches.md ![Ícone de link externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
+  * [Buildpack Node.js do Cloud Foundry ![Ícone de link externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}. Esse buildpack tem funcionalidade semelhante usando variáveis de ambiente. Para que o buildpack Node.js sempre possa fazer download de módulos do nó a partir da Internet, digite o comando a seguir na interface de linha de comandos cf: 	
   ```
   set NODE_MODULES_CACHE=false
   ```

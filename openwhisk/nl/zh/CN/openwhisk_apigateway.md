@@ -1,31 +1,31 @@
 ---
 
- 
-
 copyright:
-
   years: 2016, 2017
-lastupdated: "2017-01-04"
- 
+lastupdated: "2017-03-16"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:screen: .screen}
 {:pre: .pre}
 
-# 通过 API 网关公开操作（试验性）
+# API 网关（试验性）
 {: #openwhisk_apigateway}
 
-在 {{site.data.keyword.openwhisk}} 中，可以仅通过 **POST** 方法使用采用 HTTP 请求的 [REST API](./openwhisk_reference.html#openwhisk_ref_restapi) 来调用操作。
-这需要 HTTP 客户机使用 OpenWhisk 授权 API 密钥来发起请求，该密钥是主密钥，除了允许调用操作外，还允许删除和创建更多操作。
-{: shortdesc}
+[Web 操作](openwhisk_webactions.html)已发布一般可用性版本。
 
-此试验性功能将允许您在没有操作的授权 API 密钥的情况下，通过 POST 之外的 HTTP 方法调用操作。
+Web 操作允许您在没有操作的授权 API 密钥的情况下，通过 POST 之外的 HTTP 方法调用操作。
 
-使用 CLI 通过 OpenWhisk API 网关公开 OpenWhisk 操作。 
+作为用户反馈的结果，Web 操作是选择用于构建能够处理 HTTP 事件的 OpenWhisk 操作的一种编程模型。
+
+大多数 API 网关功能已合并到 Web 操作中，因此 Web 操作允许您处理任何 HTTP 请求并返回 HTTP 响应，同时完全通过 Web 操作进行控制。
+
+修改后的 OpenWhisk API 网关集成将很快可用。它将配置为代理 Web 操作，为其提供 API 网关功能，例如速度限制、OAuth 令牌验证、API 密钥等等。
+
+**注：**使用 `wsk api-experimental` 创建的 API 将继续正常运行，但您应该开始将 API 迁移到 Web 操作。
 
 ## OpenWhisk CLI 配置
 {: #openwhisk_apigateway_cli}

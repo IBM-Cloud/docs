@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-26"
+  years: 2016, 2017
+lastupdated: "2017-03-08"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -17,6 +17,7 @@ lastupdated: "2016-10-26"
 
 
 # {{site.data.keyword.iotinsurance_short}} の概説
+{: #gettingstarted}
 
 {{site.data.keyword.iotinsurance_full}} は、接続された保険契約者からデータを収集、管理、および分析するために使用できる {{site.data.keyword.Bluemix_notm}} サービスです。{{site.data.keyword.iotinsurance_short}} により、パーソナライズされたリスク評価、リアルタイムの保護、および保険契約関連コストの削減が実現します。
 {:shortdesc}
@@ -36,39 +37,49 @@ lastupdated: "2016-10-26"
 
   各サービス・インスタンスは、デフォルトのサービス・プランを使用します。サービスのコンソールに移動して、後からサービス・プランをアップグレードすることができます。新規インスタンスを削除して既存のインスタンスを {{site.data.keyword.iotinsurance_short}} サービスに手動でバインドすることにより、サービスの既存のインスタンスを使用することもできます。アプリケーションについて詳しくは、[{{site.data.keyword.iotinsurance_short}} について](iotinsurance_overview.html)を参照してください。
 
+  **注**: {{site.data.keyword.iotinsurance_short}} は、{{site.data.keyword.amafull}} と {{site.data.keyword.mobilepushfull}} のいずれもデプロイしなくなりました。旧バージョンの {{site.data.keyword.iotinsurance_short}} は、{{site.data.keyword.amashort}} サービスを使用してモバイル・アプリからの応答を処理していました。このプロセスは、既存のすべての {{site.data.keyword.iotinsurance_short}} インスタンスで引き続き機能します。しかし、新規の {{site.data.keyword.iotinsurance_short}} インスタンスでモバイル・アプリを使用するには、カスタムの認証プロセスを作成する必要があります。
+またオプションで、[{{site.data.keyword.mobilepushshort}} のインスタンスを作成し](https://console.ng.bluemix.net/docs/services/mobilepush/index.html)、それを構成し、{{site.data.keyword.iotinsurance_short}} API にバインドすることができます。
+
 2. {{site.data.keyword.iotinsurance_short}} ダッシュボードが機能していること、また API にアクセスできることを確認します。
   1. **「開く (Open)」**をクリックして {{site.data.keyword.iotinsurance_short}} ダッシュボードを開きます。**「ログイン (Login)」**をクリックすることにより、事前に入力されている資格情報を受け入れます。
   2. {{site.data.keyword.iotinsurance_short}} サービス・コンソールに戻り、**「API (APIs)」**をクリックして API を表示します。
 
   **注:** デプロイメントの後は、ダッシュボードまたは API に対応する URL をブラウザーに入力することにより、それらに直接アクセスすることができます。この方法を使用する場合は、{{site.data.keyword.iotinsurance_short}} サービスの資格情報を入力する必要があります。資格情報を見つけるには、{{site.data.keyword.iotinsurance_short}} サービス・コンソールに戻ってください。**「サービス資格情報」**タブをクリックした後、**「資格情報の表示」**をクリックします。ユーザー ID とパスワードをメモしておいてください。
 
-## サービスの構成
+
+<!--
+## Configuring
 {: #iot4i_configservices}
-サービスを構成するには、以下のタスクを実行します。
 
-### {{site.data.keyword.amashort}} の構成
+
+
+### Configuring {{site.data.keyword.amashort}}
 {: #config_ama}
-1. Bluemix コンソールに戻ります。{{site.data.keyword.iotinsurance_short}} によってデプロイされたすべてのアプリとサービスが表示されます。
+1. Return to your Bluemix console. All apps and services that were deployed by {{site.data.keyword.iotinsurance_short}} are displayed.
 
-1. {{site.data.keyword.iotinsurance_short}} API アプリケーションの URL をコピーします。API アプリケーションを右クリックし、**「リンク・ロケーションのコピー (Copy Link Location)」**を選択します。
+2. Copy the URL of the {{site.data.keyword.iotinsurance_short}} API application. Right-click the API application and select **Copy Link Location**.
 
-2. {{site.data.keyword.amashort}} サービスを開きます。{{site.data.keyword.Bluemix_notm}} コンソールの「サービス」セクションで、そのサービスを利用できるようになります。
+3. Open the {{site.data.keyword.amashort}} service. The service is available in the Services section of your {{site.data.keyword.Bluemix_notm}} console.
 
-3. **「オン」**をクリックすることにより、認証を有効にします。
+4. Enable authentication by clicking **On**.
 
-4. **「カスタム」**セクションで、**「構成 (Configure)」**をクリックし、以下の認証資格情報を入力します。
+5. In the **Custom** section, enter the following authentication credentials:
 
-  - **レルム名 (Realm name)**: `IoT4I`
+  - **Realm name**: `IoT4I`
 
-  - **カスタム ID プロバイダー URL (Custom Identity Provider Url)**: 最初の手順でコピーした API アプリケーションの URL を貼り付けます。
+  - **Custom Identity Provider Url**: Paste the URL of the API application that you copied in a previous step.
 
-  - **Web アプリケーション・リダイレクト URI (Your Web Application Redirect URIs)**: このフィールドはブランクのままにします。
+  - **Your Web Application Redirect URIs**: Leave this field blank.
 
-5. 設定を保存します。これで、{{site.data.keyword.iotinsurance_short}} サービス・コンソール、または {{site.data.keyword.Bluemix_notm}} コンソールに戻ることができます。
+6. Save your settings. You can now return to the {{site.data.keyword.iotinsurance_short}} service console or your {{site.data.keyword.Bluemix_notm}} console.
+-->
 
-### {{site.data.keyword.mobilepushshort}} の構成
+
+## {{site.data.keyword.mobilepushshort}} の作成と構成
 {: #config_push}
-既存のモバイル・アプリのプッシュ通知を有効にするには、{{site.data.keyword.mobilepushshort}} サービスを構成し、Public Key Cryptography Standards (PKCS) 12 ファイルを追加する必要があります。モバイル・アプリについて詳しくは、[サンプル・モバイル・アプリのインストールと接続](iotinsurance_mobile_app.html)を参照してください。{{site.data.keyword.mobilepushshort}} について詳しくは、[プッシュ通知の概説](https://console.stage1.ng.bluemix.net/docs/services/mobilepush/index.html)を参照してください。
+既存のモバイル・アプリのプッシュ通知を有効にするには、オプションで {{site.data.keyword.mobilepushshort}} サービスのインスタンスを作成し、それを {{site.data.keyword.iotinsurance_short}} API にバインドし、Public Key Cryptography Standards (PKCS) 12 ファイルを追加することができます。モバイル・アプリについて詳しくは、[サンプル・モバイル・アプリのインストールと接続](iotinsurance_mobile_app.html)を参照してください。{{site.data.keyword.mobilepushshort}} について詳しくは、[プッシュ通知の概説](https://console.ng.bluemix.net/docs/services/mobilepush/index.html)を参照してください。
+
+このサービスを作成後に構成するには、以下の手順を実行します。
 
   1. {{site.data.keyword.mobilepushshort}} サービスを開きます。
   2. **「構成 (Configure)」**をクリックします。
@@ -80,24 +91,25 @@ lastupdated: "2016-10-26"
 {{site.data.keyword.iotinsurance_short}} で何ができるかについて学びます。
 
 - シールド・ツールキットに含まれている指示や API を使用して、[ユーザーとシールド関連付け](iotinsurance_shield_toolkit.html)を作成します。
-- [サンプル・モバイル・アプリ](iotinsurance_mobile_app.html)のインストールと接続
-- [GitHub サイトの API](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples) のすべてのダウンロードまたは表示
+<!-- - Install and connect the [sample mobile app](iotinsurance_mobile_app.html). -->
+- [GitHub サイトの API ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window} をすべてダウンロードまたは表示します。
 
 # 関連リンク
 {: #rellinks}
 
 ## チュートリアルとサンプル
 {: #samples}
-* [GitHub のサンプル・モバイル・アプリ・コード](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
+* [{{site.data.keyword.iotinsurance_short}} シールド・ライブラリー ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-shields){: new_window}
+* [GitHub のサンプル・モバイル・アプリ・コード ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
 
 ## API リファレンス
 {: #api}
-* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API サンプル](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
+* [{{site.data.keyword.iotinsurance_short}} API ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://iot4i-api-docs.mybluemix.net/){:new_window}
+* [{{site.data.keyword.iotinsurance_short}} API サンプル ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
 
 
 ## 関連リンク
 {: #general}
 * [{{site.data.keyword.iot_full}} 資料](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [開発者サポート・フォーラム](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-* [Stack overflow サポート・フォーラム](http://stackoverflow.com/questions/tagged/ibm-bluemix)
+* [開発者サポート・フォーラム ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix]){:new_window}
+* [Stack overflow サポート・フォーラム ![外部リンク・アイコン](../../icons/launch-glyph.svg)](http://stackoverflow.com/questions/tagged/ibm-bluemix){:new_window}

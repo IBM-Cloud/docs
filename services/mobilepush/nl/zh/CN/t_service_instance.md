@@ -24,7 +24,7 @@ copyright:
 4. 在**空间**下拉菜单中，选择组织空间。
 
 	![
-Select organization space](images/create_a_service3.jpg)
+选择组织空间](images/create_a_service3.jpg)
 1. 在**名称**中，输入应用程序的名称。在“主机”中，输入主机的名称。
 
 1. 在**所选套餐**下拉菜单中，选择套餐，然后单击**创建**按钮。等待应用程序编译打包。
@@ -41,6 +41,6 @@ Select organization space](images/create_a_service3.jpg)
 
 1. 单击**是**，以重新编译打包应用程序。
 
-	![IBM Push Notification Service](images/create_service_notification5.jpg)
+	![IBM Push Notification 服务](images/create_service_notification5.jpg)
 
 1. 单击**推送通知**，以显示“推送通知”仪表板。

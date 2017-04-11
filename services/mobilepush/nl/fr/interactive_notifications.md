@@ -1,4 +1,4 @@
-ka---
+---
 
 copyright:
  years: 2015, 2017
@@ -12,7 +12,7 @@ copyright:
 
 # Notifications interactives
 {: #interactive-notifications}
-Dernière mise à jour : 18 janvier 2017
+Dernière mise à jour : 23 janvier 2017
 {: .last-updated}
 
 Les notifications interactives permettent aux utilisateurs de répondre à une notification sans ouvrir l'application. Lorsqu'une notification interactive est reçue, l'appareil affiche
@@ -26,7 +26,7 @@ Une notification interactive peut être envoyée en utilisant le tableau de bord
 
 Depuis la console {{site.data.keyword.mobilepushshort}} : 
 
-1. Sous l'onglet de notification du tableau de bord Push, cliquez sur la commande relative à l'envoi de la notification. 
+1. Sous l'onglet de notification du tableau de bord Push, cliquez sur **Envoyer une notification**. 
 2. Choisissez les destinataires de votre notification et cliquez sur **Suivant**. 
 3. Dans la page de rédaction de la notification, une notification push interactive peut être envoyée en définissant Défaut ou Mixte comme type et en spécifiant la valeur Catégorie sous l'onglet Options avancées. Pour configurer la valeur de catégorie du client, lisez la section Traitement des notifications interactives de type {{site.data.keyword.mobilepushshort}} dans une application iOS native.
 

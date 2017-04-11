@@ -1,32 +1,31 @@
 ---
 
- 
-
 copyright:
-
   years: 2016, 2017
-lastupdated: "2017-01-04"
- 
+lastupdated: "2017-03-16"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:screen: .screen}
 {:pre: .pre}
 
-# Esposizione delle tue azioni tramite il gateway API (sperimentale)
+# API Gateway (sperimentale)
 {: #openwhisk_apigateway}
 
-In {{site.data.keyword.openwhisk}} puoi richiamare le tue azioni utilizzando l'[API REST](./openwhisk_reference.html#openwhisk_ref_restapi) utilizzando una richiesta HTTP solo tramite un metodo **POST**.
-Questo richiede che il client HTTP effettui la richiesta utilizzando la chiave API di autorizzazione OpenWhisk che è una chiave
-master che in aggiunta al consentire di richiamare un'azione, consente inoltre l'eliminazione e la creazione di ulteriori azioni.
-{: shortdesc}
+Le [azioni web](openwhisk_webactions.html) vengono rilasciate per la disponibilità generale.
 
-Questa funzione sperimentale ti consentirà di richiamare un'azione con metodi HTTP diversi da POST e senza la chiave API di autorizzazione dell'azione.
+Le azioni web ti consentono di richiamare un'azione con metodi HTTP diversi da POST e senza la chiave API di autorizzazione dell'azione.
 
-Utilizza la CLI per esporre le tue azioni OpenWhisk tramite il gateway API OpenWhisk. 
+In seguito al feedback degli utenti, le azioni Web rappresentano il modello di programmazione scelto per costruire le azioni OpenWhisk in grado di gestire gli eventi HTTP.
+
+La maggior parte delle funzionalità di API Gateway è stata unita nelle azioni web: le azioni web ti consentono di gestire ogni richiesta HTTP e di restituire risposte HTTP con il pieno controllo dalla tua azione web. 
+
+Un'integrazione rivisitata di OpenWhisk API Gateway sarà disponibile a breve. Sarà configurato come proxy per le tue azioni web, fornendo loro le funzioni di API Gateway come ad esempio il limite di frequenza, la convalida del token oauth, le chiavi API e altro.
+
+**Nota:** le API che crei utilizzando `wsk api-experimental` continueranno a funzionare, tuttavia dovresti iniziare a migrare le API alle azioni web.
 
 ## Configurazione della CLI OpenWhisk
 {: #openwhisk_apigateway_cli}

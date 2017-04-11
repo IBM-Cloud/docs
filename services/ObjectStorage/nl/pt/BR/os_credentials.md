@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -95,13 +95,13 @@ formatadas como uma carga útil de JSON.
   {: pre}
 
   <table>
-  <caption> Tabela 1. Variáveis de credenciais de serviço cURL explicadas</caption>
+  <caption> Tabela 1. Variáveis de credenciais de serviço cURL explicadas </caption>
     <tr>
       <th> Variável  </th>
       <th> Explicação </th>
     </tr>
     <tr>
-      <td> <code>https://api.ng.bluemix.net/v2/service_keys</code> </td>
+      <td> ```https://api.ng.bluemix.net/v2/service_keys``` </td>
       <td> O terminal de chave de serviço.  </td>
     </tr>
     <tr>
@@ -118,11 +118,9 @@ formatadas como uma carga útil de JSON.
     </tr>
     <tr>
       <td><i> bearer_token </i></td>
-      <td> O token que você recebeu quando autenticou sua instância com o Keystone.</td>
+      <td> O token que você recebeu quando autenticou sua instância com o Keystone. </td>
     </tr>
   </table>
-
-
 
 3. Valide suas credenciais executando o comando a seguir.
 

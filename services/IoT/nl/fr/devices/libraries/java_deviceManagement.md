@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-08-02"
+  years: 2015, 2017
+lastupdated: "2016-11-22"
 
 ---
 
@@ -12,19 +12,16 @@ lastupdated: "2016-08-02"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Bibliothèque client Java - Terminaux gérés
+# Développement de terminaux gérés à l'aide de Java
 {: #java_deviceManagement}
 
 ##Introduction
 {: #introduction}
 
-Cette bibliothèque client explique comment utiliser des terminaux avec la bibliothèque client Java 'ibmiotf'. Pour savoir comment démarrer avec ce module, voir [Bibliothèque client Java - Introduction](../java/javaintro.html).
+Dans {{site.data.keyword.iot_full}}, un terminal géré est un terminal qui peut effectuer des opérations de gestion des terminaux, telles que les mises à jour de microprogramme, d'emplacement et de diagnostic.
+Vous pouvez utiliser la bibliothèque client Java {{site.data.keyword.iot_short}} et les informations fournies pour développer du code Java et faire de vos terminaux connectés des terminaux gérés. Des exemples sont également fournis pour vous aider à développer du code Java dans le but de connecter un terminal au service de gestion des terminaux et d'exécuter des opérations de gestion des terminaux.
 
-Cette section contient des informations expliquant comment les terminaux peuvent se connecter au service de gestion des terminaux de {{site.data.keyword.iot_full}} à l'aide de Java et effectuer des opérations de gestion des terminaux, telles que la mise à jour de microprogramme, la mise à jour d'emplacement et la mise à jour de diagnostics.
-
-La section Terminal contient des informations expliquant comment les terminaux peuvent publier des événements et traiter des commandes à l'aide de la bibliothèque client Java ibmiotf.
-
-La section Applications contient des informations expliquant comment les applications peuvent utiliser la bibliothèque client Java ibmiotf pour interagir avec des terminaux.
+Pour plus d'informations sur la façon dont vos applications peuvent utiliser la bibliothèque client Java pour interagir avec des terminaux, voir [Java pour les développeurs d'applications](../../applications/libraries/java.html).
 
 ## Gestion des terminaux
 {: #device_management}
@@ -181,7 +178,7 @@ Pour plus d'informations sur l'opération `Unmanage`, voir la [documentation].
 
 ## Mise à jour d'emplacement
 {: #construct_location_update}
-Les terminaux qui peuvent déterminer leur emplacement peuvent choisir de prévenir {{site.data.keyword.iot_short_notm}} de tout changement d'emplacement. Pour mettre à jour l'emplacement, le terminal doit créer une instance `DeviceData` d'abord avec l'objet `DeviceLocation`.
+Les terminaux qui peuvent déterminer leur emplacement peuvent choisir d'avertir {{site.data.keyword.iot_short_notm}} que des modifications d'emplacement ont été apportées. Pour mettre à jour l'emplacement, le terminal doit créer une instance `DeviceData` d'abord avec l'objet `DeviceLocation`.
 
 ```
 // Construct the location object with latitude, longitude and elevation
@@ -544,7 +541,7 @@ Le terminal doit effectuer les opérations suivantes pour prendre en charge les 
 
 **1. Informer le serveur de la prise en charge des actions sur les terminaux**
 
-Pour effectuer les opérations Réamorcer et Réinitialiser avec les paramètres d'usine, le terminal doit d'abord prévenir {{site.data.keyword.iot_short_notm}} qu'il prend en charge ces opérations. Pour cela, il appelle la méthode suivante avec une valeur booléenne :
+Pour effectuer les opérations Réamorcer et Réinitialiser avec les paramètres d'usine, le terminal doit d'abord avertir {{site.data.keyword.iot_short_notm}} qu'il prend en charge ces opérations. Pour cela, il appelle la méthode suivante avec une valeur booléenne :
 
 ```
 managedDevice.supportsDeviceActions(true);

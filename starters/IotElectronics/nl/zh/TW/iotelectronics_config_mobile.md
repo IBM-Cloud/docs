@@ -1,17 +1,16 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-29"
-
+  years: 2016, 2017
+lastupdated: "2017-03-10"
 ---
 
-
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # 使用行動應用程式
 {: #iot4e_using_mobile}
@@ -39,7 +38,7 @@ lastupdated: "2016-11-29"
 
 若要將行動應用程式連接至環境，並登錄應用裝置，請執行下列作業：
 
-1. 開啟 {{site.data.keyword.itoelectronics}} 入門範本應用程式。如需指示，請參閱[開啟入門範本應用程式](iot4ecreatingappliances.html#iot4e_openAppMain)。
+1. 開啟 {{site.data.keyword.iotelectronics}} 入門範本應用程式。如需指示，請參閱[開啟入門範本應用程式](iot4ecreatingappliances.html#iot4e_openAppMain)。
 
 2. 選取**遠端控制您的已連接應用裝置**。
 

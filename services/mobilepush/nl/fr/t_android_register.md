@@ -1,37 +1,37 @@
 ---
 
-Copyright :
-  Années : 2015, 2016
+copyright:
+ years: 2015, 2016
 
 ---
 
-# Enregistrement de périphériques Android
+# Enregistrement d'appareils Android
 {: #android_register}
 
-Utilisez l'API ```IMFPush.register()``` pour enregistrer le périphérique auprès d'un service Notification push. Pour enregistrer des périphériques Android, vous devez entrer au préalable des informations GCM (Google Cloud Messaging) dans le tableau de bord de configuration du service Push Bluemix. Pour plus d'informations, voir [Configuration de données d'identification pour Google Cloud Messaging](t_push_provider_android.html).
+Utilisez l'API `IMFPush.register()` pour enregistrer l'appareil auprès d'un service de notifications push. Pour enregistrer des appareils Android, vous devez entrer au préalable des informations GCM (Google Cloud Messaging) dans le tableau de bord de configuration du service Push Bluemix. Pour plus d'informations, voir [Configuration de données d'identification pour Google Cloud Messaging](t_push_provider_android.html).
 
 Copiez et collez les fragments de code suivants dans votre application mobile Android :
 
 ```
-	//Enregistrez des périphériques Android
+	//Register Android devices
 	push.register(new MFPPushResponseListener<String>() {
 	    @Override
 	    public void onSuccess(String deviceId) {
-	           //Traitement de la réussite
+	           //handle success here
 	    }
 	    @Override
 	    public void onFailure(MFPPushException ex) {
-	    //Traitement de l'échec
+	    //handle failure here
 	    }
 	});
 ```
 
 ```
-	//Traitement de la notification lorsqu'elle arrive
+	//Handles the notification when it arrives
 	MFPPushNotificationListener notificationListener = new MFPPushNotificationListener() {
 	    @Override
 	    public void onReceive (final MFPSimplePushNotification message){
-	      // Traitement de la notification push
+	      // Handle Push Notification
 	    }
 	};
 ```

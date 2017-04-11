@@ -28,9 +28,9 @@ Instale y utilice el plug-in push del cliente para seguir desarrollando sus apli
 
 1. Descargue las versiones más recientes de Android Studio SDK y Xcode.
 1. Configure el emulador. Para Android Studio, utilice un emulador que dé soporte a la API de Google Play.
-1. Instale la herramienta de línea de mandatos de Git. Para Windows, asegúrese de que selecciona la opción **Ejecutar Git desde la ventana del indicador de mandatos**. Para obtener información sobre cómo descargar e instalar esta herramienta, consulte [Git ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://git-scm.com/downloads "icono de enlace externo"){: new_window}.
-1. Instale la herramienta Node.js y NPM (Node Package Manager). La herramienta de línea de mandatos NPM está empaquetada con Node.js. Para obtener información sobre cómo descargar e instalar Node.js, consulte [Node.js ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://nodejs.org/en/download/ "icono de enlace externo"){: new_window}.
-1. Desde la línea de mandatos, instale las herramientas de línea de mandatos de Cordova mediante el mandato **npm install -g cordova**. Esto es necesario para utilizar el plug-in push de Cordova. Para obtener información sobre cómo instalar Cordova y configurar la app Cordova, consulte [Cordova Apache ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://cordova.apache.org/#getstarted "icono de enlace externo"){: new_window}. Para obtener más información, consulte [archivo Readme ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push "icono de enlace externo"){: new_window} del plugin de push de Cordova.
+1. Instale la herramienta de línea de mandatos de Git. Para Windows, asegúrese de que selecciona la opción **Ejecutar Git desde la ventana del indicador de mandatos**. Para obtener información sobre cómo descargar e instalar esta herramienta, consulte [Git ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://git-scm.com/downloads){: new_window}.
+1. Instale la herramienta Node.js y NPM (Node Package Manager). La herramienta de línea de mandatos NPM está empaquetada con Node.js. Para obtener información sobre cómo descargar e instalar Node.js, consulte [Node.js ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://nodejs.org/en/download/){: new_window}.
+1. Desde la línea de mandatos, instale las herramientas de línea de mandatos de Cordova mediante el mandato **npm install -g cordova**. Esto es necesario para utilizar el plug-in push de Cordova. Para obtener información sobre cómo instalar Cordova y configurar la app de Cordova, consulte [Cordova Apache ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://cordova.apache.org/#getstarted){: new_window}. Para obtener más información, consulte [archivo Readme ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push){: new_window} del plug-in de push de Cordova.
 1. Vaya a la carpeta en la que desea crear la aplicación de Cordova y ejecute el mandato siguiente para crear una aplicación de Cordova. Si ya tiene una aplicación de Cordova, vaya al paso 3.
 ```cordova create your_app_name
 cd your_app_name
@@ -53,7 +53,7 @@ Asegúrese de que especifica el ID de paquete correcto. Los siguientes mensajes 
     	<preference name="android-minSdkVersion" value="15" />
     	<preference name="android-targetSdkVersion" value="23" />
     	<!-- add minimum and target Android API level declaration -->
-	</platform>
+	</platform> 
 	```
     	{: codeblock}
 
@@ -93,16 +93,17 @@ bms-push <version> "BMSPush"
 1. Descargue `google-services.json` de Firebase para android y colóquelos en la carpeta raíz del proyecto Cordova, en `[your-app-name]/platforms/android.
 	1. Vaya a `[your-app-name]/platforms/android`.
 	2. Abra el archivo `build.gradle` (Vía de acceso : plataforma > android > build.gradle).
-	3. Busque el texto `buildscript` en el archivo `build.gradle`. 
+	3. Busque el texto `buildscript` en el archivo `build.gradle`.
 	4. Después de la línea classpath, añada la línea classpath 'com.google.gms:google-services:3.0.0'
 	5. Busque "dependencies". Seleccione las dependencias que contengan el texto `compile` y el fin de dichas dependencias; después de las mismas, añada esta línea:apply plugin: 'com.google.gms.google-services'.
-	6. Prepare y compile el proyecto Cordova Android. 
+	6. Prepare y compile el proyecto Cordova Android.
 		```
 		cordova prepare android
 		cordova build android
 		```
 			{: codeblock}
 	**Nota**: Antes de abrir el proyecto en Android Studio, cree la aplicación de Cordova mediante la CLI de Cordova. De esta forma no se producirán errores de compilación.
+
 ## Inicialización del plug-in de Cordova
 {: #cordova_initialize}
 
@@ -114,7 +115,7 @@ SDK de cliente de iOS y Android para habilitar a una aplicación de Cordova a co
 
 ```
 onDeviceReady: function() {
-	    app.receivedEvent('deviceready');
+	app.receivedEvent('deviceready');
 	BMSClient.initialize("YOUR APP REGION");
 	var category =  {};
 	BMSPush.initialize(appGUID,clientSecret,category);
@@ -126,7 +127,7 @@ onDeviceReady: function() {
 	alert(JSON.stringify(notif));
 	};
 	BMSPush.registerNotificationsCallback(showNotification);
-    }
+    } 
 ```
 	{: codeblock}
 
@@ -187,7 +188,7 @@ func application(application: UIApplication,
   didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
    CDVBMSPush.sharedInstance().didRegisterForRemoteNotificationsWithDeviceToken(deviceToken)
 } 
-// Maneje el error cuando no haya podido registrar la señal del dispositivo con APN
+// Maneje el error cuando no haya podido registrar la señal del dispositivo con APNs
 func application(application: UIApplication,
     didFailToRegisterForRemoteNotificationsWithError error: NSErrorPointer) {
     CDVBMSPush.sharedInstance().didReceiveRemoteNotificationWithNotification(error)

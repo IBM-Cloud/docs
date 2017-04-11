@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-14"
+  years: 2016, 2017
+lastupdated: "2017-03-13"
 
 ---
 
@@ -21,8 +21,7 @@ Per collegare la tua applicazione a {{site.data.keyword.iot_full}}, devi collega
 {: #api-key}
 Le chiavi API sono utilizzate durante il collegamento delle applicazioni alla tua organizzazione {{site.data.keyword.iot_short_notm}}. Le applicazioni richiedono un chiave API per collegarsi all'organizzazione e un token di autenticazione univoco che deve essere utilizzato con tale chiave API.  
 
-Per ulteriori informazioni sulle connessioni dell'applicazione, consulta [Connettività MQTT per le applicazioni
-](https://docs.internetofthings.ibmcloud.com/applications/mqtt.html) nella documentazione dell sviluppatore.
+Per ulteriori informazioni sulle connessioni dell'applicazione, consulta [Connettività MQTT per le applicazioni ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/applications/mqtt.html){: new_window} nella documentazione dello sviluppatore.
 
 Per creare una nuova coppia di chiave API e token di autenticazione:  
 1.	Nel dashboard {{site.data.keyword.iot_short_notm}}, vai a **Apps > API Keys**.  

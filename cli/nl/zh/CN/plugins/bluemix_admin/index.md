@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2017-02-20"
 
 ---
 
@@ -36,12 +36,8 @@ lastupdated: "2017-01-12"
 <ol>
 <li>要添加 {{site.data.keyword.Bluemix_notm}} 管理插件存储库，请运行以下命令：<br/><br/>
 <code>
-cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli
+cf add-plugin-repo BluemixAdmin http://plugins.ng.bluemix.net
 </code><br/><br/>
-<dl class="parml">
-<dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">{{site.data.keyword.Bluemix_notm}} 实例的 URL 的子域。例如，<code>https://console.mycompany.bluemix.net/cli</code></dd>
-</dl>
 </li>
 <li>要安装 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件，请运行以下命令：<br/><br/>
 <code>
@@ -101,7 +97,7 @@ cf login
 要将用户从环境的用户注册表添加到 {{site.data.keyword.Bluemix_notm}} 环境，请使用以下命令：
 
 ```
-cf ba add-user <user_name> <organization>
+cf ba add-user <user_name> <organization> <first_name> <last_name>
 ```
 {: codeblock}
 
@@ -112,6 +108,10 @@ cf ba add-user <user_name> <organization>
 <dd class="pd">LDAP 注册表中用户的名称。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">要向其添加用户的 {{site.data.keyword.Bluemix_notm}} 组织的名称或 GUID。</dd>
+<dt class="pt dlterm">&lt;first_name&gt;</dt>
+<dd class="pd">要添加到组织的用户的名字。</dd>
+<dt class="pt dlterm">&lt;last_name&gt;</dt>
+<dd class="pd">要添加到组织的用户的姓氏。</dd>
 </dl>
 
 **提示：****ba add-user** 命令名较长，您还可以使用 **ba au** 作为其别名。
@@ -220,7 +220,7 @@ cf ba disable-managers-add-users
 要添加组织，请使用以下命令：
 
 ```
-cf ba create-organization <organization> <manager>
+cf ba create-org <organization> <manager>
 ```
 {: codeblock}
 
@@ -231,7 +231,7 @@ cf ba create-organization <organization> <manager>
 <dd class="pd">组织的管理员的用户名。</dd>
 </dl>
 
-**提示：****ba create-organization** 命令名较长，您还可以使用 **ba co** 作为其别名。
+**提示：****ba create-org** 命令名较长，您还可以使用 **ba co** 作为其别名。
 
 ### 删除组织
 {: #admin_delete_org}
@@ -239,7 +239,7 @@ cf ba create-organization <organization> <manager>
 要删除组织，请使用以下命令：
 
 ```
-cf ba delete-organization <organization>
+cf ba delete-org <organization>
 ```
 {: codeblock}
 
@@ -248,7 +248,7 @@ cf ba delete-organization <organization>
 <dd class="pd">要删除的 {{site.data.keyword.Bluemix_notm}} 组织的名称或 GUID。</dd>
 </dl>
 
-**提示：****ba delete-organization** 命令名较长，您还可以使用 **ba do** 作为其别名。
+**提示：****ba delete-org** 命令名较长，您还可以使用 **ba do** 作为其别名。
 
 ### 向组织分配用户
 {: #admin_ass_user_org}
@@ -407,6 +407,97 @@ JSON 文件的格式应该如以下示例中所示：
 
 **提示：****bluemix-admin set-containers-quota** 命令名较长，您还可以使用 **ba scq** 作为其别名。
 
+## 管理空间
+{: #admin_spaces}
+
+### 向组织添加空间
+
+要在组织中添加空间，请使用以下命令：
+
+```
+cf bluemix-admin create-space <organization> <space_name>
+```
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">要向其添加空间的组织的名称或 GUID。</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">要在组织中创建的空间的名称。</dd>
+</dl>
+
+**提示：****ba create-space** 命令名较长，您还可以使用 **ba cs** 作为其别名。
+
+### 从组织中删除空间
+
+要从组织中除去空间，请使用以下命令：
+
+```
+cf bluemix-admin delete-space <organization> <space_name>
+```
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">要从中除去空间的组织的名称或 GUID。</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">要从组织中除去的空间的名称。</dd>
+</dl>
+
+**提示：****ba delete-space** 命令名较长，您还可以使用 **ba cs** 作为其别名。
+
+### 向空间添加具有角色的用户
+
+要在空间中创建具有指定角色的用户，请使用以下命令：
+
+```
+cf bluemix-admin set-space <organization> <space_name> <user_name> <role>
+```
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">要向其添加用户的组织的名称或 GUID。</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">要向其添加用户的空间的名称。</dd>
+<dt class="pt dlterm">&lt;user_anme&gt;</dt>
+<dd class="pd">要添加的用户的名称。</dd>
+<dt class="pt dlterm">&lt;role&gt;</dt>
+<dd class="pd">要分配的用户角色。值可以为 Manager（管理员）、Developer（开发者）或 Auditor（审计员）。有关空间中的 {{site.data.keyword.Bluemix_notm}} 用户角色和描述的信息，请参阅[分配角色](/docs/admin/users_roles.html)。</dd>
+</dl>
+
+**提示：****ba set-space** 命令名较长，您还可以使用 **ba ss** 作为其别名。
+
+
+### 除去空间中用户的角色 
+
+要除去空间中用户的角色，请使用以下命令：
+
+```
+cf bluemix-admin unset-space <organization> <space_name> <user_name> <role>
+```
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">要向其添加用户的组织的名称或 GUID。</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">要向其添加用户的空间的名称。</dd>
+<dt class="pt dlterm">&lt;user_anme&gt;</dt>
+<dd class="pd">要添加的用户的名称。</dd>
+<dt class="pt dlterm">&lt;role&gt;</dt>
+<dd class="pd">要分配的用户角色。值可以为 Manager（管理员）、Developer（开发者）或 Auditor（审计员）。有关空间中的 {{site.data.keyword.Bluemix_notm}} 用户角色和描述的信息，请参阅[分配角色](/docs/admin/users_roles.html)。</dd>
+</dl>
+
+**提示：****ba unset-space** 命令名较长，您还可以使用 **ba us** 作为其别名。
+
+## 管理目录
+{: #admin_catalog}
+
 ### 对所有组织启用服务
 {: #admin_ena_service_org}
 
@@ -555,17 +646,13 @@ cf ba delete-report <category> <date> <name>
 要检索安全报告，请使用以下命令：
 
 ```
-cf ba retrieve-report <category> <date> <name>
+cf ba retrieve-report <search>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;category&gt;</dt>
-<dd class="pd">报告的类别。如果名称中有空格，请使用引号将名称括起。</dd>
-<dt class="pt dlterm">&lt;date&gt;</dt>
-<dd class="pd">报告日期，格式为 <samp class="ph codeph">YYYYMMDD</samp>。</dd>
-<dt class="pt dlterm">&lt;name&gt;</dt>
-<dd class="pd">报告的名称。</dd>
+<dt class="pt dlterm">&lt;search&gt;</dt>
+<dd class="pd">报告的文件名。如果名称中有空格，请使用引号将名称括起。</dd>
 </dl>
 
 **提示：****ba retrieve-report** 命令名较长，您还可以使用 **ba rr** 作为其别名。
@@ -573,7 +660,7 @@ cf ba retrieve-report <category> <date> <name>
 ## 查看资源度量值信息
 {: #cliresourceusage}
 
-您可以查看资源度量值信息，包括内存、磁盘和 CPU 使用情况。可以查看可用物理资源和保留资源的摘要，以及物理资源和保留资源使用情况的摘要。此外，还可以查看 Droplet Execution Agent (DEA) 使用情况数据以及内存和磁盘的历史使用情况。缺省情况下，将按降序显示每周内存和磁盘使用情况的历史数据。要查看资源度量值信息，请使用以下命令：
+您可以查看资源度量值信息，包括内存、磁盘和 CPU 使用情况。可以查看可用物理资源和保留资源的摘要，以及物理资源和保留资源使用情况的摘要。此外，还可以查看 Droplet Execution Agent (DEA) 和单元（Diego 体系结构）使用情况数据以及内存和磁盘的历史使用情况。缺省情况下，将按降序显示每周内存和磁盘使用情况的历史数据。要查看资源度量值信息，请使用以下命令：
 
 ```
 cf ba resource-metrics <monthly> <weekly>

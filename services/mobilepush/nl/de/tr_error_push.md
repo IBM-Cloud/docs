@@ -12,7 +12,7 @@ copyright:
 
 # Fehlernachrichten für den Service {{site.data.keyword.mobilepushshort}}
 {: #errors}
-Letzte Aktualisierung: 16. Januar 2017
+Letzte Aktualisierung: 13. Februar 2017
 {: .last-updated}
 
 
@@ -51,7 +51,7 @@ Weitere Informationen zu einem Fehler finden Sie in der Dokumentation zu dem jew
 
 **Erläuterung**: Die vorausgesetzte Konfiguration für den {{site.data.keyword.mobilepushshort}}-Service ist unvollständig. Sie versuchen möglicherweise, APNs-Berechtigungsnachweise abzurufen, bevor sie konfiguriert sind.
 
-**Benutzeraktion**: Stellen Sie sicher, dass der {{site.data.keyword.mobilepushshort}}-Service mit gültigen Sicherheitszertifikaten für APNs konfiguriert wurde. Weitere Informationen finden Sie im Abschnitt [Berechtigungsnachweise für APNs generieren ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](t_push_provider_ios.html "Symbol für externen Link"){: new_window}.
+**Benutzeraktion**: Stellen Sie sicher, dass der {{site.data.keyword.mobilepushshort}}-Service mit gültigen Sicherheitszertifikaten für APNs konfiguriert wurde. Weitere Informationen finden Sie im Abschnitt [Berechtigungsnachweise für APNs konfigurieren ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](t_push_provider_ios.html){: new_window}.
 
 
 ## FPWSE0004E
@@ -80,7 +80,7 @@ Weitere Informationen zu einem Fehler finden Sie in der Dokumentation zu dem jew
 **Erläuterung**: Der JSON-Hauptteil der Anforderung weist Parameter auf, die vom {{site.data.keyword.mobilepushshort}}-Server nicht interpretiert werden können.
 
 
-**Benutzeraktion**: Stellen Sie sicher, dass für den JSON-Hauptteil in der Anforderung das Format der Anforderung beachtet wird, das der {{site.data.keyword.mobilepushshort}}-Server erwartet. Weitere Informationen finden Sie im Abschnitt [REST-APIs ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://mobile.{DomainName}/imfpush/ "Symbol für externen Link"){: new_window}.
+**Benutzeraktion**: Stellen Sie sicher, dass für den JSON-Hauptteil in der Anforderung das Format der Anforderung beachtet wird, das der {{site.data.keyword.mobilepushshort}}-Server erwartet. Weitere Informationen finden Sie im Abschnitt [REST-APIs ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://mobile.{DomainName}/imfpush/){: new_window}.
 
 
 
@@ -90,7 +90,7 @@ Weitere Informationen zu einem Fehler finden Sie in der Dokumentation zu dem jew
 **Erläuterung**: Die Anforderungs-URL weist eine Abfragezeichenfolge mit nicht erkannten Parametern auf. Beispiel: Wenn die Anforderung zum Löschen der Subskription andere Parameter als deviceId und tagName aufweist, kann es zu diesem Fehler kommen.
 
 
-**Benutzeraktion**: Stellen Sie sicher, dass für den JSON-Hauptteil in der Anforderung das Format der Anforderung beachtet wird, das der {{site.data.keyword.mobilepushshort}}-Server erwartet. Weitere Informationen finden Sie im Abschnitt [REST-APIs ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://mobile.{DomainName}/imfpush/ "Symbol für externen Link"){: new_window}.
+**Benutzeraktion**: Stellen Sie sicher, dass für den JSON-Hauptteil in der Anforderung das Format der Anforderung beachtet wird, das der {{site.data.keyword.mobilepushshort}}-Server erwartet. Weitere Informationen finden Sie im Abschnitt [REST-APIs ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://mobile.{DomainName}/imfpush/){: new_window}.
 
 
 
@@ -100,7 +100,7 @@ Weitere Informationen zu einem Fehler finden Sie in der Dokumentation zu dem jew
 **Erläuterung**: Die Anforderungs-URL weist eine Abfragezeichenfolge mit fehlenden erforderlichen Parametern auf. Beispiel: Möglicherweise fehlen die Parameter deviceId und tagName in der Anforderung zum Löschen der Subskription.
 
 
-**Benutzeraktion**: Stellen Sie sicher, dass für den JSON-Hauptteil in der Anforderung das Format der Anforderung beachtet wird, das der {{site.data.keyword.mobilepushshort}}-Server erwartet. Weitere Informationen finden Sie im Abschnitt [REST-APIs ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://mobile.{DomainName}/imfpush/ "Symbol für externen Link"){: new_window}.
+**Benutzeraktion**: Stellen Sie sicher, dass für den JSON-Hauptteil in der Anforderung das Format der Anforderung beachtet wird, das der {{site.data.keyword.mobilepushshort}}-Server erwartet. Weitere Informationen finden Sie im Abschnitt [REST-APIs ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://mobile.{DomainName}/imfpush/){: new_window}.
 
 
 
@@ -153,6 +153,13 @@ Weitere Informationen zu einem Fehler finden Sie in der Dokumentation zu dem jew
 
 **Benutzeraktion**: Stellen Sie sicher, dass die JSON-Nutzdaten gültig sind.
 
+
+## FPWSE0025E
+{: #error_fpwse0025e}
+
+**Erläuterung**: Der Server kann die Anforderung momentan nicht verarbeiten.
+
+**Benutzeraktion**: Reichen Sie die Anforderung zu einem späteren Zeitpunkt erneut ein.
 
 
 ## FPWSE1007E 

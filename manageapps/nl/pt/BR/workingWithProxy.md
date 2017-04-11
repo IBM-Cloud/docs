@@ -60,7 +60,7 @@ especificadas no tempo de execução. Consulte
 e proxies Java](https://docs.oracle.com/javase/8/docs/technotes/guides/net/proxies.html) para obter mais informações sobre as opções de proxy Java.
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## gerais
 {: #general}
 * [Liberty for Java](/docs/runtimes/liberty/index.html)

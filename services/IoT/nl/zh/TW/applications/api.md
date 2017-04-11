@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-07"
+  years: 2015, 2017
+lastupdated: "2016-03-14"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -35,17 +35,17 @@ lastupdated: "2016-09-07"
 - 裝置事件發佈（測試版）
 - 服務狀態查詢（依組織擷取服務狀態）
 
-## 存取 HTTP REST API
+## 存取 HTTP REST API 文件
 {: #api_link}
 
-若要存取 {{site.data.keyword.iot_short_notm}} HTTP REST API，以及取得如何建置及自訂應用程式的相關資訊，請移至 https://docs.internetofthings.ibmcloud.com/swagger/v0002.html。
+若要存取 {{site.data.keyword.iot_short_notm}} HTTP REST API 文件，以及取得如何建置及自訂應用程式的相關資訊，請參閱 [API](../reference/api.html)。
 
 唯一支援的 {{site.data.keyword.iot_short_notm}} HTTP REST API 版本是第 2 版。請確定您的 {{site.data.keyword.iot_short_notm}} 解決方案使用的是第 2 版。
 
-
-
-# 應用程式的 HTTP REST 傳訊 API
+# 應用程式的 HTTP 傳訊 API
 {: #rest_messaging_api}
+
+若要存取「{{site.data.keyword.iot_short_notm}} HTTP 傳訊 API」文件，以及尋找使用 HTTP 來發佈事件及傳送指令的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP 傳訊 API ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}。
 
 ## 發佈事件及指令
 {: #event_command_publication}
@@ -53,31 +53,33 @@ lastupdated: "2016-09-07"
 除了使用 MQTT 傳訊通訊協定之外，您還可以使用下列其中一個 HTTP REST API 指令來配置應用程式，讓它透過 HTTP 將事件及指令發佈至 {{site.data.keyword.iot_short_notm}}。
 
 ### 未受保護的事件 POST 要求
-<pre class="pre">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
-{: codeblock}
+<pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
 ### 安全的事件 POST 要求
-<pre class="pre">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
-{: codeblock}
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
+
+**附註：**您也可以指定埠 443（預設 SSL 埠）來進行安全 HTTP API 呼叫。
 
 ### 未受保護的指令 POST 要求
-<pre class="pre">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">eventId</var></pre>
-{: codeblock}
+<pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">eventId</var></code></pre>
+
 
 ### 安全的指令 POST 要求
-<pre class="pre">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">eventId</var></pre>
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">eventId</var></code></pre>
 {: codeblock}
 
 如果您要將裝置或應用程式連接至 Quickstart 服務，請將 **orgId** 取代為字串 'quickstart'。
 
-附註：雖然應用程式可以重複使用 HTTP 連線，將事件或指令張貼至不同的裝置，但是授權 HTTP 標頭無法變更。
+**附註：**
+- 雖然應用程式可以重複使用 HTTP 連線，將事件或指令張貼至不同的裝置，但是無法變更授權 HTTP 標頭。
+- 您也可以指定埠 443（預設 SSL 埠）來進行安全 HTTP API 呼叫。
 
 ### 鑑別
 
 所有要求都必須包含授權標頭。基本鑑別是唯一支援的方法。應用程式是使用 API 金鑰進行鑑別。應用程式透過 {{site.data.keyword.iot_short_notm}} HTTP REST API 提出要求時，需要下列認證：
 
 ```
-username = API key (for example, a-orgId-a84ps90Ajs)
+username = API key (for example, a/orgId/a84ps90Ajs)
 password = Authentication token
 ```
 

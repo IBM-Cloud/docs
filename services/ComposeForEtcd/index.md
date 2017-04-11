@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-12-09"
+lastupdated: "2017-04-08"
 ---
 
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2016-12-09"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Getting started with {{site.data.keyword.composeForEtcd}}
+# Getting started with Compose for etcd
 {: #getting-started-with-compose-for-etcd}
 
 etcd is a key-value store that holds the always-correct data that you need to coordinate and manage your server cluster for distributed server configuration management. etcd uses the RAFT consensus algorithm to assure data consistency in your cluster. It  enforces the order in which operations take place on the data so that every node in the cluster arrives at the same result in the same way. {{site.data.keyword.composeForEtcd_full}} adds automatic backups of your configuration data that is stored in etcd. An intuitive administrative interface lets you monitor, scale, and administer your deployment with ease.
@@ -41,17 +41,3 @@ Field Name|Description
 `name`|The database deployment name.
 `uri`|The URI to be used when connecting to the service. `uri` includes the schema (`amqps:), admin user name and password, the host name of the server, the port number to connect to, and `vhost` name.
 {: caption="Table 1. {{site.data.keyword.composeForEtcd}} credentials" caption-side="top"}
-
-# Related Links
-{: #rellinks}
-
-* [Compose](https://www.compose.com){:new_window}
-* [Compose Articles](https://www.compose.com/articles/){:new_window}
-
-## Tutorials and Samples
-{: #samples}
-* [compose-etcd-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-etcd-helloworld-nodejs){:new_window}
-
-## Related Links
-{: #general}
-* [Compose Help](https://help.compose.com/docs){:new_window}

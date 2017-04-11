@@ -825,11 +825,11 @@
          id="tspan4890-1-9"
          sodipodi:role="line"
          x="21.968618"
-         y="667.65576">IoT for Insurance</tspan><tspan
+         y="667.65576">Motor de acción de</tspan><tspan
          id="tspan7488-1"
          sodipodi:role="line"
          x="21.968618"
-         y="681.40576">Action Engine</tspan></text>
+         y="681.40576">IoT for Insurance</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text44241-1-8-4"
@@ -840,7 +840,7 @@
          id="tspan4579-6-8"
          y="527.01099"
          x="3.278265"
-         sodipodi:role="line">Push Notifications</tspan></text>
+         sodipodi:role="line">Notificaciones push</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -862,11 +862,11 @@
          y="329.77579"
          x="-269.0285"
          sodipodi:role="line"
-         id="tspan7488-9-0">Smart home</tspan><tspan
+         id="tspan7488-9-0">Nube del proveedor</tspan><tspan
          y="343.52579"
          x="-269.0285"
          sodipodi:role="line"
-         id="tspan11838">vendor's cloud</tspan><tspan
+         id="tspan11838">de hogar inteligente</tspan><tspan
          y="357.27579"
          x="-269.0285"
          sodipodi:role="line"
@@ -926,7 +926,7 @@
          sodipodi:role="line"
          x="-248.14252"
          y="178.0415"
-         id="tspan8202-0">Devices</tspan><tspan
+         id="tspan8202-0">Dispositivos</tspan><tspan
          sodipodi:role="line"
          x="-248.14252"
          y="191.7915"
@@ -958,11 +958,11 @@
            y="270.62582"
            x="163.59987"
            sodipodi:role="line"
-           id="tspan38591">2. Periodic query </tspan><tspan
+           id="tspan38591">2. Consulta periódica</tspan><tspan
            y="284.68832"
            x="163.59987"
            sodipodi:role="line"
-           id="tspan42682">detects event </tspan></text>
+           id="tspan42682">detecta un suceso</tspan></text>
       <flowRoot
          xml:space="preserve"
          id="flowRoot38575"
@@ -996,11 +996,11 @@
            y="270.62582"
            x="147.59987"
            sodipodi:role="line"
-           id="tspan38587-1">1. Water leak detected,</tspan><tspan
+           id="tspan38587-1">1. Detectada fuga de</tspan><tspan
            y="284.68832"
            x="147.59987"
            sodipodi:role="line"
-           id="tspan38591-0">event created</tspan></text>
+           id="tspan38591-0">agua, suceso creado</tspan></text>
       <flowRoot
          xml:space="preserve"
          id="flowRoot38575-7"
@@ -1037,11 +1037,11 @@
          id="tspan41082-8"
          y="762.35596"
          x="-214.86469"
-         sodipodi:role="line">5. Generate</tspan><tspan
+         sodipodi:role="line">5. Generar</tspan><tspan
          id="tspan41219"
          y="776.41846"
          x="-214.86469"
-         sodipodi:role="line">alert</tspan></text>
+         sodipodi:role="line">alerta</tspan></text>
     <rect
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.61300004;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        id="rect42630-0-91"
@@ -1059,7 +1059,7 @@
          id="tspan41082-85"
          y="852.9234"
          x="-127.45844"
-         sodipodi:role="line">6. Store alert</tspan></text>
+         sodipodi:role="line">6. Almacenar alerta</tspan></text>
     <rect
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.61300004;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        id="rect42630-0-94"
@@ -1077,15 +1077,15 @@
          id="tspan41082-85-8"
          y="667.3858"
          x="-128.47919"
-         sodipodi:role="line">7. Send alert</tspan><tspan
+         sodipodi:role="line">7. Enviar</tspan><tspan
          id="tspan41662"
          y="681.4483"
          x="-128.47919"
-         sodipodi:role="line">for action </tspan><tspan
+         sodipodi:role="line">alerta para</tspan><tspan
          y="695.5108"
          x="-128.47919"
          sodipodi:role="line"
-         id="tspan42750">analysis</tspan></text>
+         id="tspan42750">análisis de acción</tspan></text>
     <rect
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.61300004;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        id="rect42630-0-1"
@@ -1103,7 +1103,7 @@
          id="tspan41219-6"
          y="599.17377"
          x="-9.8463612"
-         sodipodi:role="line">8. Send push notification</tspan></text>
+         sodipodi:role="line">8. Enviar notificación push</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1114,11 +1114,11 @@
          sodipodi:role="line"
          x="-254.50635"
          y="561.77521"
-         id="tspan40867">3. Event </tspan><tspan
+         id="tspan40867">3. Suceso</tspan><tspan
          sodipodi:role="line"
          x="-254.50635"
          y="575.83771"
-         id="tspan40871">published</tspan></text>
+         id="tspan40871">publicado</tspan></text>
     <rect
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.61300004;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        id="rect42630-0-9"
@@ -1136,11 +1136,11 @@
          sodipodi:role="line"
          x="-308.40277"
          y="762.35596"
-         id="tspan40871-0">4. Send for </tspan><tspan
+         id="tspan40871-0">4. Enviar para</tspan><tspan
          sodipodi:role="line"
          x="-308.40277"
          y="776.41846"
-         id="tspan41082">shield analysis</tspan></text>
+         id="tspan41082">análisis cobertura</tspan></text>
     <rect
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.61300004;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        id="rect42630-0-5"
@@ -1160,7 +1160,7 @@
          id="tspan41219-6-0"
          y="465.09875"
          x="7.2209015"
-         sodipodi:role="line">9. Notify end user</tspan></text>
+         sodipodi:role="line">9. Notificar usuario final</tspan></text>
     <text
        transform="translate(68.912032,-77.428456)"
        xml:space="preserve"
@@ -1173,12 +1173,12 @@
          id="tspan19274"
          x="-346.70932"
          y="181.01552"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.75000095px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;text-anchor:start">IBM® IoT for Insurance</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.75000095px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;text-anchor:start">Proceso de registro de suceso de dispositivo</tspan><tspan
          sodipodi:role="line"
          x="-346.70932"
          y="198.20302"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.75000095px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;text-anchor:start"
-         id="tspan19276">Device Event Registration Process</tspan></text>
+         id="tspan19276">de IBM® IoT for Insurance</tspan></text>
     <text
        transform="translate(68.912032,-77.428456)"
        xml:space="preserve"
@@ -1190,11 +1190,11 @@
          sodipodi:role="line"
          x="-53.52026"
          y="425.05612"
-         id="tspan6702-7">IoT for Insurance</tspan><tspan
+         id="tspan6702-7">App móvil personaliz.</tspan><tspan
          sodipodi:role="line"
          x="-53.52026"
          y="438.80612"
-         id="tspan28137">custom mobile app</tspan></text>
+         id="tspan28137">de IoT for Insurance</tspan></text>
     <text
        transform="translate(68.912032,-77.428456)"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1"
@@ -1218,11 +1218,11 @@
          sodipodi:role="line"
          x="-332.52295"
          y="762.61481"
-         id="tspan5792-1">Watson IoT Platform</tspan><tspan
+         id="tspan5792-1">Capa de conexión de</tspan><tspan
          sodipodi:role="line"
          x="-332.52295"
          y="776.36481"
-         id="tspan9810-4">Connect Layer</tspan></text>
+         id="tspan9810-4">Watson IoT Platform</tspan></text>
     <text
        transform="translate(68.912032,-77.428456)"
        sodipodi:linespacing="125%"
@@ -1234,10 +1234,10 @@
          y="922.06873"
          x="-330.73853"
          sodipodi:role="line"
-         id="tspan4890-1-96">IoT for Insurance</tspan><tspan
+         id="tspan4890-1-96">Motor de coberturas</tspan><tspan
          y="935.81873"
          x="-330.73853"
          sodipodi:role="line"
-         id="tspan7488-4">Shield Engine</tspan></text>
+         id="tspan7488-4">de IoT for Insurance</tspan></text>
   </g>
 </svg>

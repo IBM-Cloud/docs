@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated:  "2017-01-17"
+lastupdated:  "2017-02-17"
 
 ---
 
@@ -31,7 +31,7 @@ Tieni conto di quanto segue, prima di configurare l'istanza del servizio {{site.
 
 Dopo che hai creato l'istanza del servizio {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity, completa la seguente procedura per iniziare a utilizzarla.
 
-### Impostazione della connessione all'istanza del servizio {{site.data.keyword.dashdbshort_notm}}
+### Impostazione della connessione all'istanza del servizio dashDB
 {: #connect_dashdb_p4}
 
 Dopo che l'istanza del servizio {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity è stata creata, vedrai la pagina *Panoramica*
@@ -43,7 +43,7 @@ puoi configurarla per utilizzarla per il collegamento all'istanza del servizio {
 
 Puoi anche creare una nuova istanza del servizio {{site.data.keyword.dashdbshort_notm}}, se non ne hai una già esistente.
 
-Utilizza le seguenti istruzioni per creare una nuova istanza del servizio dashDB for Transactions:
+Utilizza la seguente procedura per creare una nuova istanza del servizio dashDB for Transactions:
 
 1. Nella pagina *Panoramica* seleziona la sezione **Crea nuovo servizio**.
 
@@ -53,10 +53,9 @@ se desideri l'alta disponibilità per l'istanza del servizio {{site.data.keyword
 + Controlla i dettagli del piano e fai clic su **Crea**.
 
 Viene creata una nuova istanza del servizio {{site.data.keyword.dashdbshort_notm}} for Transactions: EnterpriseForTransactions2.8.500,
-che fornisce un'istanza {{site.data.keyword.dashdbshort_notm}} dedicata con 8GB RAM e 2 vCPU e 500 GB di archiviazione.
+che fornisce un'istanza {{site.data.keyword.dashdbshort_notm}} dedicata con 8 GB RAM e 2 vCPU e 500 GB di archiviazione.
 
-Utilizza le seguenti istruzioni per collegare un'istanza del servizio {{site.data.keyword.dashdbshort_notm}} esistente o
-l'istanza del servizio {{site.data.keyword.dashdbshort_notm}} for Transactions che hai appena creato:
+Utilizza la seguente procedura per stabilire una connessione a un'istanza del servizio {{site.data.keyword.dashdbshort_notm}} esistente o all'istanza del servizio {{site.data.keyword.dashdbshort_notm}} for Transactions che hai appena creato:
 
 1. Seleziona l'`Organizzazione` {{site.data.keyword.Bluemix_notm}} dove è presente l'istanza del servizio {{site.data.keyword.dashdbshort_notm}}.
 
@@ -73,7 +72,7 @@ Dopo pochi secondi, puoi accedere alla pagina `Panoramica` che ti fornisce le es
 
 **Nota**: non puoi modificare l'istanza del servizio {{site.data.keyword.dashdbshort_notm}} configurata per essere utilizzata dalla tua istanza del servizio {{site.data.keyword.mobilefoundation_short}}. Tuttavia, puoi utilizzare la stessa istanza del servizio {{site.data.keyword.dashdbshort_notm}} tra più istanze del servizio {{site.data.keyword.mobilefoundation_short}}, poiché ogni istanza di {{site.data.keyword.mobilefoundation_short}} crea il proprio schema nell'istanza del servizio  {{site.data.keyword.dashdbshort_notm}} selezionata.
 
-## Avvio del server {{site.data.keyword.mobilefirst}}
+## Avvio del server MobileFirst
 {: #start_mobilefoundation_p4}
 
 * Per avviare {{site.data.keyword.mfserver_short_notm}}, con le impostazioni predefinite, fai clic su **Avvia server di base**.
@@ -107,7 +106,7 @@ dove puoi vedere:
 
  Gli utenti possono anche allegare i volumi ai contenitore per conservare i dati. Il volume selezionato non può essere modificato. 20 GB è lo spazio di condivisione file predefinito disponibile all'utente. Se l'utente necessita di ulteriore spazio di archiviazione per conservare i dati di analisi, deve acquistare ulteriore condivisione file e creare un volume utilizzando questa condivisione file. Può quindi selezionare questo nuovo volume mentre distribuisce il server di analisi.
 
- Per ulteriori informazioni sull'aggiunta di volumi a {{site.data.keyword.containerlong}}, fai riferimento a [Memorizzazione dei dati persistenti in un volume utilizzando il dashboard {{site.data.keyword.Bluemix_notm}} ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html "icona link esterno"){: new_window}.
+ Per ulteriori informazioni sull'aggiunta di volumi a {{site.data.keyword.containerlong}}, fai riferimento a [Memorizzazione dei dati persistenti in un volume utilizzando il dashboard {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}.
 
 * Fai clic su **Aggiungi Analytics** per aggiungere il server Mobile Analytics all'istanza del servizio {{site.data.keyword.mobilefoundation_short}}.
 
@@ -120,7 +119,7 @@ indica l'avanzamento di questa operazione.
 
 * SSO (single sign-on) è abilitato tra {{site.data.keyword.mfserver_short_notm}} e il server Mobile Analytics. Il server Mobile Analytics è configurato con le stesse credenziali utente e chiavi LTPA del server {{site.data.keyword.mfserver_short_notm}}. Puoi utilizzare gli stessi `nomeutente` e `password` per accedere alla console di Mobile Analytics utilizzati per accedere a {{site.data.keyword.mfp_oc_short_notm}}.
 
-Per informazioni su MobileFirst Analytics puoi fare riferimento a [MobileFirst Foundation Operational Analytics ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/ "icona link esterno"){: new_window}.
+Per ulteriori informazioni su MobileFirst Analytics, puoi fare riferimento a [MobileFirst Foundation Operational Analytics ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/){: new_window}.
 
 **Nota:** il server Mobile Analytics viene rimosso quando elimini l'istanza del servizio {{site.data.keyword.mobilefoundation_short}} o quando tenti di ricreare {{site.data.keyword.mfserver_short_notm}}.
 
@@ -128,13 +127,13 @@ Per informazioni su MobileFirst Analytics puoi fare riferimento a [MobileFirst F
 {: #deleting_analytics_server_p4}
 
 Puoi ora eliminare il server Mobile Analytics che è stato aggiunto all'istanza del servizio {{site.data.keyword.mobilefoundation_short}},
-dal dashboard del servizio {{site.data.keyword.mobilefoundation_short}}. 
+dal dashboard del servizio {{site.data.keyword.mobilefoundation_short}}.
 
-* Fai cli su **Elimina Analytics** per eliminare il server Mobile Analytics che è stato aggiunto all'istanza del servizio {{site.data.keyword.mobilefoundation_short}}.
+* Fai clic su **Elimina Analytics** per eliminare il server Mobile Analytics che è stato aggiunto all'istanza del servizio {{site.data.keyword.mobilefoundation_short}}.
 
  Questa operazione eliminerà il gruppo del contenitore di analisi. Il processo di eliminazione dei contenitori di analisi dura circa 10 minuti. Puoi aggiornare la schermata per visualizzare lo stato di aggiornamento. Una volta che i contenitori di analisi sono stati eliminati, viene riabilitato il pulsante **Aggiungi Analytics**, puoi utilizzarlo per aggiungere nuovamente il server Mobile Analytics se decidi di farlo.
 
-## Ricreazione del server {{site.data.keyword.mobilefirst}}
+## Ricreazione del server MobileFirst
 {: #recreate_mobilefoundation_p4}
 
 *	Fai clic su **Ricrea** per ricreare il server.
@@ -158,4 +157,4 @@ aggiornare le impostazioni del server per personalizzare la tua configurazione s
 
       - La {{site.data.keyword.mobilefirst}} Server Farm può essere creata configurando il numero di nodi qui. La configurazione supportata minima è 2 nodi con 1 GB di memoria ognuno e la configurazione massima supportata è 32 nodi con 16 GB di memoria ognuno.
 
-Consulta la [Documentazione {{site.data.keyword.mobilefoundation_long}} ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html "icona link esterno"){: new_window}, per ulteriori dettagli.
+Consulta la [documentazione {{site.data.keyword.mobilefoundation_long}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window} per ulteriori dettagli.

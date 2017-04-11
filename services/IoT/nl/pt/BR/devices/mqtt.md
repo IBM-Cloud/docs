@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-21"
+  years: 2015, 2017
+lastupdated: "2016-11-17"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -69,6 +69,9 @@ Em que
 
 **Importante:** a carga útil da mensagem limita-se a no máximo 131072 bytes. Mensagens maiores que esse limite são rejeitadas.
 
+### Mensagens retidas
+As organizações do {{site.data.keyword.iot_short_notm}} não estão autorizadas a publicar mensagens MQTT retidas. Se um dispositivo enviar uma mensagem retida, o serviço {{site.data.keyword.iot_short_notm}} substituirá a sinalização de mensagem retida quando ela estiver configurada como true e processará a mensagem como se a sinalização de mensagem retida estivesse configurada como false.
+
 
 ## Assinando comandos
 {: #subscribing_to_commands}
@@ -91,7 +94,7 @@ Suporte para gerenciamento de ciclo de vida de dispositivo é opcional. O Protoc
 
 ### Níveis de qualidade de serviço e sessão limpa
 
-Os dispositivos gerenciados podem publicar mensagens que têm um nível de qualidade de serviço (QoS) igual a 0 ou 1. As mensagens do dispositivo não devem ser mensagens retidas.
+Os dispositivos gerenciados podem publicar mensagens que tenham um nível de qualidade de serviço (QoS) 0 ou 1.
 
 As mensagens com QoS=0 podem ser descartadas e não persistem após a reinicialização do servidor de sistema de mensagens. As mensagens com QoS=1 podem ser enfileiradas e persistem após a reinicialização do servidor de sistema de mensagens. A durabilidade da assinatura determina se uma solicitação será enfileirada. O parâmetro `cleansession` da conexão que fez a assinatura determina a durabilidade da assinatura.  
 

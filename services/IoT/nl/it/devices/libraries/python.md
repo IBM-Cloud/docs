@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-27"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -24,7 +24,7 @@ Utilizza le informazioni e gli esempi forniti per iniziare a sviluppare i tuoi d
 ## Scaricamento delle risorse e del client Python
 {: #python_client_download}
 
-Per accedere al client Node.js per {{site.data.keyword.iot_short_notm}} e ad altre risorse disponibili, vai al repository [iot-python](https://github.com/ibm-watson-iot/iot-python) in GitHub e completa le istruzioni di installazione.
+Per accedere al client Python per {{site.data.keyword.iot_short_notm}} e ad altre risorse disponibili, vai al repository [iot-python ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/iot-python){: new_window} in GitHub e completa le istruzioni di installazione.
 
 ## Constructor
 {: #constructor}
@@ -34,8 +34,8 @@ Il dizionario delle opzioni crea le definizioni utilizzate per interagire con il
 |Definizione|Descrizione |
 |:---|:---|
 |`orgId`|Il tuo ID dell'organizzazione.|
-|`type`|Il tipo del dispositivo. Il tipo del dispositivo è un raggruppamento di dispositivi che esegue un'attività specifica, ad esempio "weatherballoon". |
-|`id`|Un ID univoco per identificare un dispositivo. Generalmente, per determinato tipo di dispositivo, l'ID del dispositivo è un identificativo univoco di tale dispositivo, ad esempio un numero seriale o un indirizzo MAC. |
+|`type`|Il tipo del dispositivo. Il tipo del dispositivo è un raggruppamento di dispositivi che esegue un'attività specifica, ad esempio "weatherballoon".|
+|`id`|Un ID univoco per identificare un dispositivo. Generalmente, per determinato tipo di dispositivo, l'ID del dispositivo è un identificativo univoco di tale dispositivo, ad esempio un numero seriale o un indirizzo MAC.|
 |`auth-method`|Il metodo di autenticazione. L'unico metodo supportato è `apikey`.|
 |`auth-token`|Un token chiave API, che è inoltre obbligatorio quando imposti il valore di auth-method su `apikey`.|
 |`clean-session`|Un valore true o false obbligatorio solo se desideri collegarti all'applicazione con il metodo di sottoscrizione durevole. Per impostazione predefinita, `clean-session` è impostato su true.|
@@ -151,7 +151,7 @@ client.commandCallback = myCommandCallback
 ## Supporto formato messaggio personalizzato
 {: #custom_message_format}
 
-Per impostazione predefinita, il formato del messaggio è impostato su `json`, che significa che la libreria supporta la codifica e la decodifica degli oggetti del dizionario Python nel formato JSON. Quando il formato del messaggio è impostato su `json-iotf`, il messaggio viene codificato in base alla specifica del payload JSON di {{site.data.keyword.iot_short_notm}}. Per aggiungere il supporto ai tuoi propri formati del messaggio personalizzati, consulta l'esempio [Custom Message Format](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat) in GitHub.
+Per impostazione predefinita, il formato del messaggio è impostato su `json`, che significa che la libreria supporta la codifica e la decodifica degli oggetti del dizionario Python nel formato JSON. Quando il formato del messaggio è impostato su `json-iotf`, il messaggio viene codificato in base alla specifica del payload JSON di {{site.data.keyword.iot_short_notm}}. Per aggiungere il supporto ai tuoi propri formati del messaggio personalizzati, consulta l'esempio [Custom Message Format ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat){: new_window} in GitHub.
 
 Quando crei un modulo di codifica personalizzato, devi registrarlo nel client del dispositivo come descritto nel seguente esempio:
 

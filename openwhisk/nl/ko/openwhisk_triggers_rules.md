@@ -1,22 +1,21 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-02-22"
+  years: 2016, 2017
+lastupdated: "2017-02-23"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:screen: .screen}
 {:pre: .pre}
 
 # 트리거 및 규칙 작성
 {: #openwhisk_triggers}
 
-
-{{site.data.keyword.openwhisk}} 트리거 및 규칙은 플랫폼에 이벤트 주도적인 기능을 제공합니다. 외부 및 내부 이벤트 소스의 이벤트는 트리거를 채널로 사용하며 규칙은 조치가 이러한 이벤트에 대해 반응하도록 허용합니다.
+{{site.data.keyword.openwhisk_short}} 트리거 및 규칙은 플랫폼에 이벤트 주도적인 기능을 제공합니다. 외부 및 내부 이벤트 소스의 이벤트는 트리거를 채널로 사용하며 규칙은 조치가 이러한 이벤트에 대해 반응하도록 허용합니다.
 {: shortdesc}
 
 ## 트리거 작성
@@ -71,11 +70,9 @@ lastupdated: "2016-02-22"
   wsk trigger create locationUpdate
   ```
   {: pre}
-
   ```
   ok: created trigger locationUpdate
   ```
-  {: screen}
 
 2. 트리거 세트를 나열하여 작성된 트리거를 확인하십시오.
 
@@ -83,12 +80,10 @@ lastupdated: "2016-02-22"
   wsk trigger list
   ```
   {: pre}
-
   ```
   triggers
   /someNamespace/locationUpdate                            private
   ```
-  {: screen}
 
   지금까지 이벤트가 실행될 수 있는 이름 지정된 "채널"을 작성했습니다.
 
@@ -98,11 +93,9 @@ lastupdated: "2016-02-22"
   wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
   ```
   {: pre}
-
   ```
   ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
   ```
-  {: screen}
 
 대조할 수반되는 규칙 없이 실행되는 트리거는 영향을 미치지 않습니다.
 트리거를 패키지 내부에 작성할 수 없으며 네임스페이스에 직접 작성해야 합니다. 
@@ -115,7 +108,7 @@ lastupdated: "2016-02-22"
 예를 들어, 위치 업데이트가 게시될 때마다 hello 조치를 호출하는 규칙을 작성하십시오.
 
 1. 사용할 조치 코드를 사용하여 'hello.js' 파일을 작성하십시오. 
-  ```
+  ```javascript
   function main(params) {
      return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
@@ -127,7 +120,6 @@ lastupdated: "2016-02-22"
   wsk trigger update locationUpdate
   ```
   {: pre}
-
   ```
   wsk action update hello hello.js
   ```
@@ -150,34 +142,28 @@ lastupdated: "2016-02-22"
   wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
   ```
   {: pre}
-
   ```
   ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
   ```
-  {: screen}
 
 5. 최신 활성화를 검사하여 조치가 호출되었는지 확인하십시오. 
   ```
   wsk activation list --limit 1 hello
   ```
   {: pre}
-
   ```
   activations
   9c98a083b924426d8b26b5f41c5ebc0d             hello
   ```
-  {: screen}
-
   ```
   wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   ```
   {: pre}
-  ```
+  ```json
   {
      "payload": "Hello, Donald from Washington, D.C."
   }
   ```
-  {: screen}
 
   hello 조치가 이벤트 페이로드를 수신하고 예상 문자열을 리턴한 것을 볼 수 있습니다.
 
@@ -193,7 +179,9 @@ lastupdated: "2016-02-22"
 시퀀스 `recordLocationAndHello`를 작성할 수 있습니다.
   ```
   wsk action create recordLocationAndHello --sequence /whisk.system/utils/echo,hello
+  ```
+  {: pre}
+  ```
   wsk rule create anotherRule locationUpdate recordLocationAndHello
   ```
   {: pre}
- 

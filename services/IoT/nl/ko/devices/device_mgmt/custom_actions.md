@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-05"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -64,6 +64,19 @@ lastupdated: "2016-09-05"
 
 ```
 
+### 사용자 정의 디바이스 관리 패키지 추가
+
+{{site.data.keyword.iot_short_notm}} 대시보드를 사용하거나 API를 사용하여 사용자 정의 디바이스 관리 패키지를 추가할 수 있습니다. 
+
+{{site.data.keyword.iot_short_notm}} 대시보드를 사용하여 사용자 정의 디바이스 관리 패키지를 추가하려면 다음을 수행하십시오. 
+
+1. {{site.data.keyword.iot_short_notm}} 대시보드의 탐색줄에서 **설정**을 클릭하십시오. 
+2. **사용자 정의 디바이스 관리 패키지**를 클릭하십시오. 
+3. **패키지 추가** 단추를 클릭하십시오. 
+4. 패키지 파일을 선택하고 **열기**를 클릭하십시오. 
+
+API를 사용하여 사용자 정의 디바이스 관리 패키지를 추가하려면 [{{site.data.keyword.iot_short_notm}} API 문서 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}를 참조하십시오. 
+
 ### 확장 패키지 특성
 
 디바이스 관리 확장 패키지에는 다음 특성이 포함되어 있습니다. 
@@ -115,7 +128,7 @@ lastupdated: "2016-09-05"
 - 디바이스 관리 확장 패키지 삭제:
   `DELETE https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
 
-디바이스 관리 확장 패키지의 REST API에 대한 자세한 정보는 [{{site.data.keyword.iot_short_notm}} API V2](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} 문서를 참조하십시오. 
+디바이스 관리 확장 패키지의 REST API에 대한 자세한 정보는 [{{site.data.keyword.iot_short_notm}} API V2 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} 문서를 참조하십시오. 
 
 
 ## 사용자 정의 디바이스 관리 조치 지원
@@ -150,7 +163,7 @@ lastupdated: "2016-09-05"
 
 ```
 
-디바이스 관리 요청에 대한 자세한 정보는 [디바이스 관리 프로토콜](index.html){: new_window}을 참조하십시오. 
+디바이스 관리 요청에 대한 자세한 정보는 [디바이스 관리 프로토콜](index.html)을 참조하십시오. 
 
 ## 사용자 정의 디바이스 관리 조치 시작
 {: #initiating_custom_dm_actions}
@@ -450,3 +463,9 @@ lastupdated: "2016-09-05"
 - 특정 디바이스 관리 요청의 상태 보기: 
 
 `curl -XGET -H "Content-Type: application/json" -u "<apiKey>:<apiToken>" https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/requests/<requestId>`
+
+## 디바이스 관리 확장에 대한 레시피
+
+다음 레시피는 디바이스 관리 확장을 처리하는 데 필요한 플로우를 예시합니다. 
+
+- [Device Management Extension Packages in WIoT Platform ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/device-management-extension-packages-in-wiot-platform/){: new_window} 레시피는 디바이스에서 디바이스 관리 확장 조치를 수신하고 처리할 수 있도록 관리 디바이스를 {{site.data.keyword.iot_short}}에 등록하기 위한 지시사항을 제공합니다. 레시피의 코드 샘플은 Python 클라이언트 라이브러리를 사용하여 작성되어 있습니다. 

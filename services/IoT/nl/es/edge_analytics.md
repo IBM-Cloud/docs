@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-27"
+  years: 2016, 2017
+lastupdated: "2017-02-17"
 
 ---
 
@@ -24,8 +24,6 @@ Los dispositivos envían sus datos a una pasarela habilitada para analíticas de
 El diagrama siguiente ilustra la arquitectura general de un entorno de análisis de extremo de {{site.data.keyword.iot_full}}.
 ![IBM Watson IoT Platform para la arquitectura de analíticas de extremo](images/architecture_platform_edge.svg "IBM Watson IoT Platform con la arquitectura de analíticas de extremo")
 
-**Importante:** Las características de análisis se fusionan desde el servicio de {{site.data.keyword.iotrtinsights_full}}. Si la organización de {{site.data.keyword.iot_short_notm}} se utiliza como un origen de datos para una instancia existente de {{site.data.keyword.iotrtinsights_short}}, Cloud y Edge Analytics no se habilitarán hasta que se hayan migrado las instancias existentes de {{site.data.keyword.iotrtinsights_short}}. Siga utilizando el panel de control de {{site.data.keyword.iotrtinsights_short}} para sus necesidades de análisis hasta que se haya completado la migración. Para obtener más información, consulte el [Blog de IBM Watson IoT Platform](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} en IBM developerWorks y los paneles de control de instancias existentes de {{site.data.keyword.iotrtinsights_short}}.  
-
 ## Antes de empezar
 {: #byb}
 
@@ -33,6 +31,10 @@ Para empezar a crear las acciones y las reglas de extremo:
 - Asegúrese de que la pasarela esté conectada a {{site.data.keyword.iot_short}} y de que los datos de dispositivos se estén transmitiendo. Consulte [Conexión de pasarelas](gateways/dashboard.html) para obtener más información.
 - Instale Edge Analytics Agent (EAA) en la pasarela. Para obtener información, consulte [Instalación de Edge Analytics Agent](gateways/dashboard.html#edge). </br> **Consejo:** Las pasarelas habilitadas por EAA proporcionan datos de diagnóstico de EAA en forma de mensajes de dispositivos de pasarela. Para obtener información, consulte [Métricas de diagnóstico de Edge Analytics Agent](#eaa_metrics).
 - Asegúrese de que las propiedades de dispositivos que desea utilizar como condiciones en las reglas estén correlacionadas con esquemas. Consulte [Conexión de dispositivos](iotplatform_task.html) y [Creación de esquemas](im_schemas.html) para obtener más información.
+- Revise las recetas de Edge Analytics  
+En nuestro portal de recetas, hay par de recetas que muestran los pasos a seguir para trabajar con IBM Edge Analytics. En las recetas se describe claramente cómo instalar y configurar IBM Edge Analytics Agent en un dispositivo instalado sobre Apache Edgent para ejecutar analíticas sobre un origen de datos IoT.
+ - La receta [Iniciación a Edge Analytics en IBM Watson IoT Platform ![icono de enlace externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/getting-started-with-edge-analytics-in-watson-iot-platform/){: new_window} es la primera de esta serie. En esta receta se describe cómo configurar Cisco DSA Platform en un sistema portátil y en un dispositivo Raspberry Pi 3, cómo instalar y configurar IBM Edge Analytics Agent para que se conecte a {{site.data.keyword.iot_short}}, cómo instalar System DS Link y cómo configurarlo para que se conecte a Edge Gateway en {{site.data.keyword.iot_short}} como dispositivo conectado, cómo definir y activar la regla de extremo en Edge Gateway y cómo gestionar la regla de extremo desde {{site.data.keyword.iot_short}}.
+ - Para ilustrar un caso de uso avanzado de Edge Analytics, la receta [Manejo de alertas y acciones de dispositivo con Edge Analytics en IBM Watson IoT Platform ![icono de enlace externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/handling-alerts-and-device-actions-with-edge-analytics-in-ibm-watson-iot-platform/){: new_window} muestra cómo crear su propio enlace DS para transferir datos desde un dispositivo Arduino Uno conectado a un dispositivo Raspberry Pi 3. La receta también muestra cómo filtrar datos y manejar acciones de dispositivos locales como parte de la alerta de regla de extremo.
 
 ## Gestión de reglas y acciones de extremo  
 {: #managing_rules}
@@ -62,18 +64,16 @@ Para crear una regla:
 1. En el panel de control de {{site.data.keyword.iot_short}}, vaya a **Reglas**.
 2. Pulse **Crear regla de extremo**, dé un nombre a la regla, proporcione una descripción, seleccione un tipo de dispositivo de extremo al que se aplique la regla y, a continuación, pulse **Siguiente**.  
 3. Configure la lógica de reglas.  
-Añada una o varias condiciones IF para utilizar como desencadenadores para la regla.  
+Añada una o varias condiciones IF para utilizar como desencadenantes para la regla.  
 Puede añadir condiciones en filas paralelas para aplicarlas como condiciones OR, o puede añadir condiciones en columnas secuenciales para aplicarlas como condiciones AND.  
 **Nota:** Para poder seleccionar una propiedad de dispositivo como entrada para una regla, la propiedad debe estar correlacionada con un esquema. Consulte [Creación de esquemas](im_schemas.html) para obtener más información.  
 
 **Importante:** Para desencadenar una condición que compara dos propiedades o para desencadenar dos o más condiciones de propiedades que se combinan secuencialmente utilizando AND, deben incluirse los puntos de datos desencadenantes en el mismo mensaje de dispositivos. Si los datos se reciben en más de un mensaje, la condición o las condiciones secuenciales no se desencadenarán.  
 
-**Ejemplos:**  
-Una regla sencilla puede desencadenar una alerta si un valor de parámetro es mayor que un valor especificado:
-  
+**Ejemplos:**   
+Una regla sencilla puede desencadenar una alerta si un valor de parámetro es mayor que un valor especificado:  
 `temp>80`  
-Una regla más compleja puede desencadenarse cuando se cumple una combinación de umbrales:
-  
+Una regla compleja puede desencadenar una alerta cuando se alcanzan una combinación de umbrales:  
 `temp>60 AND capacity>50`   
 
 4. Configure requisitos desencadenantes condicionales para la regla.  
@@ -195,24 +195,29 @@ Para ver información sobre el estado de la pasarela:
  `MsgInCount` |El número de mensajes que se han enviado Edge Analytics Agent (EAA).
  `MsgInRate` | El número estimado de mensajes por segundo que se han enviado al EAA durante el último minuto.  
  `LastHeartBeat` | La indicación de fecha y hora en milisegundos cuando se ha generado el último mensaje de latido. Se genera un mensaje de latido cada 10 segundos como mínimo.
-`CurrentTimestamp` | La indicación de fecha y hora en milisegundos cuando se ha generado el mensaje de supervisión actual.
-`IsAlive` | Esta propiedad es 0 si la diferencia entre `LastHeartBeat` y `CurrentTimestamp` es mayor que 20 segundos.
+ `CurrentTimestamp` | La indicación de fecha y hora en milisegundos cuando se ha generado el mensaje de supervisión actual.
+ `IsAlive` | Esta propiedad es 0 si la diferencia entre `LastHeartBeat` y `CurrentTimestamp` es mayor que 20 segundos.
  `BytesOutCount` | El número de bytes de mensajes que envía el EAA a {{site.data.keyword.iot_short}}.
  `BytesOutRate` | El número estimado de bytes de mensajes por segundo que envió el EAA a {{site.data.keyword.iot_short}} durante el último minuto.
-`BytesInCount` | El número de bytes de mensaje que ha enviado {{site.data.keyword.iot_short}} al EAA.
+ `BytesInCount` | El número de bytes de mensaje que ha enviado {{site.data.keyword.iot_short}} al EAA.
  `BytesInRate` | El número de bytes de mensajes estimados por segundo que ha enviado {{site.data.keyword.iot_short}} al EAA en el último minuto.
-`RuleBytesInCount` |El número de bytes de mensaje que se han enviado al núcleo de motor de reglas de EAA. </br> **Nota:** Si no se ha establecido una regla para un tipo de dispositivo, no se enviarán mensajes para dicho tipo de dispositivo al núcleo de motor de reglas.
+ `RuleBytesInCount` |El número de bytes de mensaje que se han enviado al núcleo de motor de reglas de EAA. </br> **Nota:** Si no se ha establecido una regla para un tipo de dispositivo, no se enviarán mensajes para dicho tipo de dispositivo al núcleo de motor de reglas.
  `RuleBytesInRate` | El número estimado de bytes de mensaje por segundo que se han enviado al núcleo del motor de reglas de EAA durante el último minuto.
-`MsgOutCount` | El número de mensajes que se enviado el EAA a {{site.data.keyword.iot_short}}.
+ `MsgOutCount` | El número de mensajes que se enviado el EAA a {{site.data.keyword.iot_short}}.
  `MsgOutRate` | El número estimado de bytes de mensajes por segundos que ha enviado el EAA a {{site.data.keyword.iot_short}} durante el último minuto.
-`MsgReducePercent` | La diferencia de porcentaje entre los mensajes entrantes y salientes. </br>La fórmula siguiente se utiliza para el cálculo: `(msgIn - msgOut) / msgIn`
+ `MsgReducePercent` | La diferencia de porcentaje entre los mensajes entrantes y salientes. </br>La fórmula siguiente se utiliza para el cálculo: `(msgIn - msgOut) / msgIn`
 `BytesReducePercent` | La diferencia de porcentaje entre los bytes entrantes y salientes. </br>La fórmula siguiente se utiliza para el cálculo: `(bytesIn - bytesOut) / bytesIn`
 `MsgRateReduce` | La diferencia de porcentaje entre el promedio de mensajes entrantes y salientes. </br>La fórmula siguiente se utiliza para el cálculo: `(msgInRate - msgOutRate) / msgInRate`
 `BytesRateReduce` | La diferencia de porcentaje entre los bytes de mensajes entrantes y salientes. </br>La fórmula siguiente se utiliza para el cálculo: `(bytesInRate - bytesOutRate) / bytesInRate`
 `SystemLoad` | La carga del sistema actual para el sistema donde se está ejecutando el EAA. **Nota:** La tasa de CPU que sólo se enviará si el mandato `mpstat` está disponible en el sistema donde se está ejecutando el EAA. De lo contrario, se enviará el promedio de carga del sistema para el último minuto. </br>“El promedio de carga del sistema es la suma del número de entidades ejecutables en cola para los procesadores disponibles y el número de entidades ejecutables que se ejecutan en el promedio de los procesadores disponibles durante un periodo de tiempo. El modo en que se calcula el promedio de carga es específico del sistema operativo, pero es normalmente un promedio amortiguado dependiente del tiempo. Si el promedio de carga no está disponible, se devolverá un valor negativo. ” - javadoc for *ManagementFactory.getOperatingSystemMXBean*.
- `FreeMemory` | El número de bytes de memoria libre para la máquina virtual Java (JVM) donde EAA se encuentra en ejecución.
-`MemoryUsed` | El número de bytes de memoria de JVM que utiliza EAA.
+ `FreeMemory` | El número de bytes de memoria libre para la máquina virtual Java™ (JVM) donde EAA se encuentra en ejecución.
+ `MemoryUsed` | El número de bytes de memoria de JVM que utiliza EAA.
  `InQueueSize` | El número de mensajes que se ponen en cola para el proceso de EAA.
  `RuleNumber` | El número de reglas definidas en el núcleo del motor de reglas.
  `ProcessorNumber` | Para uso de depuración. El número de procesadores definidos en el núcleo del motor de reglas. </br>**Nota:** Un procesador es la unidad de ejecución mínima en el núcleo del motor de reglas.
  `DataPointsInWindow` | El número total de puntos de datos que se colocan en almacenamiento intermedio en la ventana de tiempo. El tamaño de bytes de un punto de datos difiere en función de su tipo de datos. Por ejemplo, un tamaño de punto de datos float/int es 8 bytes, mientras que un tamaño de punto de datos de serie difiere en función de su longitud.  En la mayoría de los casos, puede estimar el uso de memoria de la ventana de tiempo utilizando la fórmula siguiente: `DataPointsInWindow * 8`.
+
+## Comunidad de Edge Analytics
+{: #eaa_community}
+
+Puede descargar el SDK de Edge Analytics desde la [página de comunidad de IBM Edge Analytics](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true). El SDK incluye el archivo JAR de SDK, javadoc, código de ejemplo, enlaces de recetas y archivos README. En la comunidad, también puede ver vídeos para ponerse en marcha con Edge Analytics y puede utilizar el foro de la comunidad para hacer preguntas. 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 
@@ -22,30 +22,30 @@ lastupdated: "2017-01-17"
 1. 다음 명령을 사용해서 계정 정보를 인쇄하여 인증 정보를 식별하십시오. 
 
   ```
-swift stat
-```
+  swift stat
+  ```
   {: pre}
   **참고**: *Account* 다음의 문자열을 `AUTH_`를 포함하여 모두 기록하십시오.
 
 2. 비밀 키를 설정하십시오. 추측하기 어려운 긴 임의의 문자열을 선택하십시오.  키를 설정하려면 다음 명령을 실행하십시오. 
 
   ```
-swift post -m "Temp-URL-Key:<key>"
-```
+  swift post -m "Temp-URL-Key:<key>"
+  ```
   {: pre}
 
 3. 다음 명령을 실행하여 `Temp-URL-Key`가 설정되었는지 확인하십시오. 
 
   ```
-swift stat
-```
+  swift stat
+  ```
   {: pre}
 
 4. 다음 명령을 실행하여 임시 URL을 작성하십시오. 
 
   ```
-swift tempurl GET <seconds> <path> <key>
-```
+  swift tempurl GET <seconds> <path> <key>
+  ```
   {: pre}
 
   다음 표에서는 Swift `tempurl` 명령에서 사용하는 위치 인수에 대해 설명합니다. 

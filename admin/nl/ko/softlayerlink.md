@@ -22,7 +22,7 @@ lastupdated: "2017-01-11"
 
 계정을 연결하여 기존 {{site.data.keyword.Bluemix_notm}} 및 SoftLayer 청구 계정을 통합할 수 있습니다. 계정을 연결하면, {{site.data.keyword.Bluemix_notm}} 및 SoftLayer 리소스 모두가 {{site.data.keyword.Bluemix_notm}}를 통해 청구됩니다. 
 
-**주의:** {{site.data.keyword.Bluemix_notm}} 구독 계정을 SoftLayer 계정과 연결할 수 없습니다. 인프라 대시보드에 액세스하려면 SoftLayer 계정과 자동으로 연결되는 두 번째 계정인 종량과금제 계정을 작성해야 합니다. {{site.data.keyword.Bluemix_notm}} 계정에 대해 한 개, 즉 두 개의 송장을 수신합니다. 인프라 리소스에 개별 종량과금제 계정에서 송장을 보내는 경우에도, 구독 계정의 앱과 서비스에 자원을 사용할 수 있습니다. 예를 들어, 구독 계정에서 Watson 서비스를 활성화하는 경우, 서비스 신임 정보를 복사하여 종량과금제 계정에서 제공되는 베어메탈 애플리케이션에 추가할 수 있습니다.
+**주의:** {{site.data.keyword.Bluemix_notm}} 구독 계정을 SoftLayer 계정과 연결할 수 없습니다. 인프라 대시보드에 액세스하려면 SoftLayer 계정과 자동으로 연결되는 두 번째 계정인 종량과금제 계정을 작성해야 합니다. {{site.data.keyword.Bluemix_notm}} 계정에 대해 한 개, 즉 두 개의 송장을 수신합니다. 인프라 리소스에 개별 종량과금제 계정에서 송장을 보내는 경우에도, 구독 계정의 앱과 서비스에 리소스를 사용할 수 있습니다. 예를 들어, 구독 계정에서 Watson 서비스를 활성화하는 경우, 서비스 신임 정보를 복사하여 종량과금제 계정에서 제공되는 베어메탈 애플리케이션에 추가할 수 있습니다.
 {:shortdesc}
 
 ## {{site.data.keyword.Bluemix_notm}} 종량과금제 계정으로 업그레이드
@@ -91,23 +91,37 @@ SoftLayer 계정을 보유 중이며 {{site.data.keyword.Bluemix_notm}} 계정�
 ## IBM ID로 전환
 {: #ibmid_switch}
 
-이제 SoftLayer의 인증은 IBM ID를 사용하여 모든 {{site.data.keyword.Bluemix_notm}}에 대해 단일 로그인을 제공합니다. 기존 SoftLayer 계정이 IBM ID 인증으로 전환하도록 지원되며 마이그레이션 마법사가 이 전환 과정을 안내합니다.
+이제 SoftLayer의 인증은 IBM ID를 사용하여 모든 {{site.data.keyword.Bluemix_notm}}에 대해 단일 로그인을 제공합니다. 기존 SoftLayer 계정을 IBM ID 인증으로 전환할 수 있습니다. 마이그레이션 마법사를 통해 이러한 전환을 수행할 수 있습니다.
 {:shortdesc}
 
-마스터 사용자이며 {{site.data.keyword.slportal}}에서 IBM ID로 전환하도록 프롬프트가 표시되지 않는 경우, [IBM 지원 센터에 문의](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)하여 기능을 사용하는 데 필요한 지원을 요청하십시오. 
+마스터 사용자이며 {{site.data.keyword.slportal}}에서 IBM ID로 전환하도록 프롬프트가 표시되지 않는 경우, [IBM 지원 센터에 문의](/docs/support/index.html#contacting-support)하여 기능을 사용하는 데 필요한 지원을 요청하십시오.
 
-IBM ID로 전환을 시작하는 경우 프로세스가 완료되기 전에 언제든지 이 전환을 취소할 수 있습니다. 그러나 다음 번에 로그인할 때 IBM ID로 전환하라는 프롬프트가 계속 표시됩니다. {{site.data.keyword.Bluemix_notm}} 계정에 연결하려는 각 계정은 고유 이메일 주소를 사용하는 고유 IBM ID에서 소유해야 합니다. 
+IBM ID로 전환을 시작하는 경우 프로세스가 완료되기 전에 언제든지 이 전환을 취소할 수 있습니다. 하지만 로그인할 때마다 IBM ID로 전환하도록 프롬프트가 표시됩니다. {{site.data.keyword.Bluemix_notm}} 계정에 연결하려는 각 SoftLayer 계정은 고유 이메일 주소를 사용하는 고유 IBM ID에서 소유해야 합니다.
 
-기존 SoftLayer 사용자 이름을 IBM ID로 전환하려면 다음 단계를 완료하십시오. 
+기존 SoftLayer 사용자 이름을 IBM ID로 전환하려면 다음 단계를 완료하십시오.
 
- 1. 로그인 후 초기 프롬프트에서 **나중에**를 선택했지만 현재 세션에서 IBM ID 인증으로 전환하도록 결정한 경우 사용자 프로파일 편집으로 이동하여 **IBM ID로 전환**을 클릭하십시오. 
- 2. 마법사 프롬프트를 따라 IBM ID를 작성하십시오. IBM ID은 고유 이메일 주소이며 작성된 후에 변경할 수 없습니다. 나중에 프로파일과 연관된 이메일을 업데이트할 수 있으며 IBM ID에 대해 정의한 이메일로 기본 이메일이 설정됩니다. 마이그레이션 마법사를 완료했음을 표시하는 등록 코드가 포함된 이메일을 수신합니다.  
- 3. 이메일을 수신하면 링크를 따르거나 URL을 브라우저로 복사하고 등록 코드를 입력하십시오. 코드는 7일 동안 유효하며 한 번만 사용할 수 있습니다. 
+ 1. SoftLayer 계정에 로그인하십시오. IBM ID로 전환하도록 프롬프트가 표시되면 **확인**을 클릭하십시오. 
  
+    이미 로그인했지만(IBM ID로 전환하는 프롬프트에서 **나중에**를 클릭함) 현재 세션에서 IBM ID 인증으로 전환하려면 사용자 프로파일 편집 페이지로 이동하고 **IBM ID로 전환**을 클릭하십시오.
+	
+ 2. 마법사 프롬프트를 따라 IBM ID를 작성하십시오.  
  
-IBM ID 인증으로 전환한 후에는 IBM ID로만 계정에 로그인할 수 있습니다. 로그인 프롬프트에서 SoftLayer 사용자 이름 및 비밀번호를 입력하는 대신 **IBM ID로 로그인**을 클릭하십시오. 
+    새 IBM ID를 작성하려면 현재 IBM ID에서 사용하지 않는 이메일 주소를 입력하십시오. 새 IBM ID는 이 이메일 주소를 사용자 이름과 이메일 주소로 사용합니다. IBM ID를 작성한 후 IBM ID와 연관된 이메일 주소를 업데이트할 수 있지만 사용자 이름을 변경할 수는 없습니다. 초대 이메일은 사용자가 제공한 이메일 주소로 이동합니다.
+    
+    마법사를 완료하면 등록 코드가 포함된 이메일을 수신합니다.
  
-신규 고객으로 주문을 체크아웃하는 경우 기존 IBM ID 계정에 대한 이메일 주소를 요청하거나 새 IBM ID 계정을 작성하도록 요청됩니다. 새 IBM ID를 작성하는 경우 새 IBM ID에 대한 이메일 주소를 입력하십시오. 이메일 주소는 초대 이메일이 발송되는 주소이며 새 IBM ID에 대한 사용자 이름이기도 합니다. 
+ 3. 이메일을 수신하면 링크를 따르거나 URL을 브라우저에 복사한 다음 등록 코드를 입력하십시오. 코드는 7일 동안 유효하며 한 번만 사용할 수 있습니다.
+ 
+    IBM ID 인증으로 전환한 후에는 IBM ID로만 계정에 로그인할 수 있습니다. 계정 로그인 프롬프트에서 **IBM ID 계정 로그인** 섹션으로 이동하고 **IBM ID로 로그인**을 클릭하십시오. 이전에 SoftLayer ID로 사용한 **사용자 이름** 및 **비밀번호** 필드를 사용하지 마십시오.
+ 
+신규 고객인 경우 주문을 체크아웃할 때 기존 IBM ID를 요청받거나 새 IBM ID의 생성을 요청받게 됩니다. 
+
+ * 기존 IBM ID를 사용하려면 고유한(즉, 여러 IBM ID 전체에서 공유되지 않음) 경우 IBM ID의 사용자 이름 또는 이메일 주소를 입력하십시오.
+ 
+ * 새 IBM ID를 작성하려면 현재 IBM ID에서 사용하지 않는 이메일 주소를 입력하십시오. 새 IBM ID는 이메일 주소를 사용자 이름과 이메일 주소로 사용합니다. IBM ID를 작성한 후 IBM ID와 연관된 이메일 주소를 업데이트할 수 있지만 사용자 이름을 변경할 수는 없습니다. 초대 이메일은 사용자가 제공한 이메일 주소로 이동합니다.
+
+IBM ID로 로그인할 때 발생하는 문제점을 해결하려면 [Bluemix 액세스에 대한 문제점 해결](/docs/troubleshoot/ts_accessing.html#accessing)을 참조하십시오.
+
 
 ### 사용자가 IBM ID로 전환 가능
 {: #link_accounts_resellers}
@@ -188,7 +202,7 @@ SoftLayer에서 사용자 앱의 Watson API를 호출하여 이를 보다 개인
 * {{site.data.keyword.mqa}}
 * {{site.data.keyword.mobileappbuilder_short}}
 * {{site.data.keyword.mql}}
-* {{site.data.keyword.nlclassifierlshort}}
+* {{site.data.keyword.nlclassifiershort}}
 * {{site.data.keyword.objectstorageshort}}
 * {{site.data.keyword.personalityinsightsshort}}
 * {{site.data.keyword.presenceinsightsshort}}

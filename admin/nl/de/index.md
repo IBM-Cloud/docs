@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-24"
+lastupdated: "2017-02-22"
 
 ---
 
@@ -57,7 +57,7 @@ Sie können Benachrichtigungen für Ihre lokale oder dedizierte Umgebung anzeige
 |-----------------|-------------------|
 | Wartungsaktualisierungen | Zum Anzeigen einer vollständigen Liste und des Verlaufs der anstehenden und abgeschlossenen Benachrichtigungen klicken Sie auf **Verwaltung &gt; Systeminformationen** &gt; *Anzahl* **Anstehend**. Sie werden auch über geplante Wartungsaktualisierungsereignisse mit Unterbrechungen auf der Seite 'Status' benachrichtigt. Klicken Sie auf **Support** &gt; **Status**. Sie können die Benachrichtigungsfunktion erweitern, indem Sie ein Abonnement einrichten, das eine E-Mail an die Empfänger Ihrer Wahl sendet. Sie können auch ein Abonnement einrichten, das die Benachrichtigungen auf der Seite 'Verwaltung' mithilfe von Web-Hooks in einen Web-Service Ihrer Wahl integriert.|
 | Kritische Vorfälle | Sie werden über kritische Vorfälle auf der Seite 'Status' benachrichtigt. Klicken Sie auf **Support** &gt; **Status**. Sie können die Benachrichtigungsfunktion erweitern, indem Sie ein Benachrichtigungsabonnement einrichten, das eine E-Mail an einen Empfänger Ihrer Wahl sendet. Sie können auch ein Abonnement einrichten, das die Benachrichtigungen auf der Seite 'Verwaltung' mithilfe von Web-Hooks in einen Web-Service Ihrer Wahl integriert.  |  
-| Schwellenwertereignisse | Sie können ein Benachrichtigungsabonnement einrichten, das eine E-Mail an einen Empfänger Ihrer Wahl sendet, wenn in Ihrer Umgebung Ressourcenschwellenwerte für physische Platte, physischen Speicher, reservierte Platte oder reservierten Speicher erreicht wurden. Alternativ können Sie ein Abonnement einrichten, das die Benachrichtigungen mithilfe von Web-Hooks in einen Web-Service Ihrer Wahl integriert.  |  
+| Schwellenwertereignisse | Sie können ein Benachrichtigungsabonnement einrichten, das eine E-Mail an einen Empfänger Ihrer Wahl sendet, wenn in Ihrer Umgebung Schwellenwerte für Organisationskontingent, physische Platte, physischen Speicher, reservierte Platte oder reservierten Speicher erreicht wurden. Alternativ können Sie ein Abonnement einrichten, das die Benachrichtigungen mithilfe von Web-Hooks in einen Web-Service Ihrer Wahl integriert.  |  
 | {{site.data.keyword.Bluemix_notm}}-Status | Sie können den neuesten Status für die Plattform, die Services und Ihre {{site.data.keyword.Bluemix_notm}}-Instanz immer auf der Seite 'Status' anzeigen. Klicken Sie auf **Support** &gt; **Status**.  |
 {: caption="Table 2. Event types and notifications methods" caption-side="top"}
 
@@ -109,7 +109,7 @@ Führen Sie folgende Schritte aus, um ein E-Mail- oder Web-Hook-Abonnement auf d
 | Aktiviert | Wählen Sie diese Option aus, um E-Mail-Benachrichtigungen zu aktivieren. Nehmen Sie die Auswahl zurück, um E-Mail-Benachrichtigungen zu inaktivieren. Abonnements sind standardmäßig aktiviert. |
 | Typ | Wählen Sie **E-Mail** aus. |
 | Ereignis | Wählen Sie **Schwellenwert** aus. |
-| Schwellenwert | Wählen Sie die Art der Schwellenwerte aus, über die Sie benachrichtigt werden wollen: physische Platte, physischer Speicher, reservierte Platte, oder reservierter Speicher. |
+| Schwellenwert | Wählen Sie die Art der Schwellenwerte aus, über die Sie benachrichtigt werden wollen: Organisationskontingent, physische Platte, physischer Speicher, reservierte Platte oder reservierter Speicher. |
 | Schwellenwertrichtung | Wählen Sie die Richtung aus, in der die Daten verschoben werden sollen (aufsteigend oder absteigend), wenn sie den von Ihnen festgelegten Wert für 'Benachrichtigung bei Überschreitung' überschreiten. Wenn der Wert für 'Benachrichtigung bei Überschreitung' beispielsweise bei 50% liegt und die Richtung 'absteigend' ist, werden Sie nur dann benachrichtigt, wenn der Nutzungs-Prozentsatz von mindestens 50% auf unter 50% fällt. Wenn die Richtung auf 'aufsteigend' festgelegt ist, werden Sie benachrichtigt, sobald der Nutzungs-Prozentsatz von unter 50 % auf über 50 % steigt.
 | Benachrichtigung bei Überschreitung (%) | Geben Sie den Schwellenwert-Prozentsatz ein, bei dem Sie benachrichtigt werden möchten. Wenn Sie im Feld 'Schwellenwertrichtung' die Eigenschaft 'aufsteigend' angegeben haben, werden die E-Mail-Benachrichtigungen gesendet, sobald der Schwellenwert diesen Prozentsatz übersteigt. |
 | Benachrichtigung bei Unterschreitung (%) | Geben Sie den Schwellenwert-Prozentsatz ein, bei dem Sie benachrichtigt werden möchten. Wenn Sie im Feld 'Schwellenwertrichtung' die Eigenschaft 'absteigend' angegeben haben, werden die E-Mail-Benachrichtigungen gesendet, sobald der Schwellenwert diesen Prozentsatz unterschreitet. |
@@ -119,10 +119,11 @@ Führen Sie folgende Schritte aus, um ein E-Mail- oder Web-Hook-Abonnement auf d
 | An | Geben Sie die E-Mail-Adresse(n) der Empfänger der E-Mail-Benachrichtigung in Form einer durch Kommas getrennte Liste ein. Erweitern Sie die Optionen "cc" bzw. "bcc", um andere Benutzer auf Kopie zu setzen. Dies ist ein erforderliches Feld. |
 {: caption="Table 4. Fields for email notification subscriptions about maintenance updates or incidents" caption-side="top"}
 
-Schwellenwertdaten werden alle 6 Stunden erfasst. Eine Benachrichtigung wird nur einmal gesendet, wenn der Wert den von Ihnen festgelegten Schwellenwert über- oder unterschreitet. Eine neue Benachrichtigung wird nur dann gesendet, wenn Sie 'absteigend' gewählt haben, der Wert den Schwellenwert unterschreitet und dann wieder überschreitet. Wenn Sie 'absteigend' gewählt haben, werden Sie entsprechend nur dann benachrichtigt, wenn der Wert den von Ihnen festgelegten Schwellenwert überschreitet und dann wieder unterschreitet. 
+Schwellenwertdaten werden alle 6 Stunden erfasst. Eine Benachrichtigung wird nur einmal gesendet, wenn der Wert den von Ihnen festgelegten Schwellenwert über- oder unterschreitet. Wenn Sie 'aufsteigend' gewählt haben, wird nur dann eine neue Benachrichtigung gesendet, wenn der Wert den Schwellenwert unterschreitet und dann wieder überschreitet. Wenn Sie 'absteigend' gewählt haben, werden Sie entsprechend nur dann benachrichtigt, wenn der Wert den von Ihnen festgelegten Schwellenwert überschreitet und dann wieder unterschreitet. 
 
-Wenn Sie nicht 6 Stunden warten möchten, bis die Benachrichtigung über das Erreichen des Schwellenwerts gesendet wird, können Sie nach dem Ausfüllen der Felder im Formular auf **Speichern und testen** klicken, um die Benachrichtigung mit Beispieldaten zu speichern und zu testen.
+Wenn Sie nicht 6 Stunden warten möchten, bis die Benachrichtigung über das Erreichen des Schwellenwerts gesendet wird, können Sie nach dem Ausfüllen der Felder im Formular auf **Speichern und testen** klicken, um eine Testbenachrichtigung mit Beispieldaten zu empfangen.  
 
+Eine Benachrichtigung über einen Organisationskontingentschwellenwert enthält nur die Organisationen, die den angegebenen Schwellenprozentwert in dem 6-Stunden-Zeitraum, der dieser Benachrichtigung entspricht, über- oder unterschritten haben. Organisationen, die einen Schwellenwert während vorheriger 6-Stunden-Zeiträume über- oder unterschritten haben, werden nicht eingeschlossen, auch wenn sie über bzw. unter dem Schwellenwert verbleiben.  Die drei Ressourcen, die ein Kontingent der Organisation bilden (reservierter Speicher, Services und Routen) werden bei der Ermittlung, ob eine Benachrichtigung über ein Organisationskontingent gesendet werden soll, unabhängig bewertet. Wenn zum Beispiel die Menge an reserviertem Speicher, die von einer Organisation genutzt wird, den Wert von 50 % des Kontingents der Organisation über- oder unterschreitet, hat ein Schwellenwert für das Organisationskontingent, der mit 50 % konfiguriert ist, zur Folge, dass eine Benachrichtigung gesendet wird.  Wenn die Anzahl der Services, die von derselben Organisation genutzt werden, den Wert von 50 % des Kontingents der Organisation zu einem späteren Zeitpunkt überschreitet, führt dies ebenfalls dazu, dass eine Benachrichtigung gesendet wird, selbst wenn die Menge an genutztem Speicher unverändert bleibt.
 
 {: #webhooknotsub}
 
@@ -156,7 +157,7 @@ Wenn Sie nicht 6 Stunden warten möchten, bis die Benachrichtigung über das Err
 | Aktiviert | Wählen Sie diese Option aus, um die Benachrichtigung zu aktivieren. Nehmen Sie die Auswahl zurück, um die Benachrichtigung zu inaktivieren. Abonnements sind standardmäßig aktiviert. |
 | Typ | Wählen Sie **Web-Hook** aus. |
 | Ereignis | Wählen Sie **Schwellenwert** aus. |
-| Schwellenwert | Wählen Sie die Art der Schwellenwerten aus, über die Sie benachrichtigt werden wollen: physische Platte, physischer Speicher, reservierte Platte oder reservierter Speicher. |
+| Schwellenwert | Wählen Sie die Art der Schwellenwerte aus, über die Sie benachrichtigt werden wollen: Organisationskontingent, physische Platte, physischer Speicher, reservierte Platte oder reservierter Speicher.|
 | Schwellenwertrichtung | Wählen Sie aus, ob die Schwellenwertdaten in aufsteigender oder in absteigender Reihenfolge angezeigt werden sollen.  |
 | Benachrichtigung bei Unterschreitung (%) | Wenn Sie **Schwellenwertrichtung** mit **Absteigend** angegeben haben, geben Sie den Schwellenwert-Prozentsatz ein, bei dem Sie benachrichtigt werden wollen. Fällt der Schwellenwert unterhalb dieses Prozentsatzes, wird die Web-Hook-Benachrichtigung gesendet. |
 | Benachrichtigung bei Überschreitung (%) | Wenn Sie **Schwellenwertrichtung** mit **Aufsteigend** angegeben haben, geben Sie den Schwellenwert-Prozentsatz ein, bei dem Sie benachrichtigt werden wollen. Überschreitet der Schwellenwert diesen Prozentsatz, wird die Web-Hook-Benachrichtigung gesendet. |
@@ -168,6 +169,11 @@ Wenn Sie nicht 6 Stunden warten möchten, bis die Benachrichtigung über das Err
 | URL | Geben Sie die URL für die Verbindung mit dem Web-Service ein. |
 {: caption="Table 6. Form fields for a webhook notification subscription about thresholds" caption-side="top"}
 
+Schwellenwertdaten werden alle 6 Stunden erfasst. Eine Benachrichtigung wird nur einmal gesendet, wenn der Wert den von Ihnen festgelegten Schwellenwert über- oder unterschreitet. Eine neue Benachrichtigung wird nur dann gesendet, wenn Sie 'absteigend' gewählt haben, der Wert den Schwellenwert unterschreitet und dann wieder überschreitet. Wenn Sie 'absteigend' gewählt haben, werden Sie entsprechend nur dann benachrichtigt, wenn der Wert den von Ihnen festgelegten Schwellenwert überschreitet und dann wieder unterschreitet. 
+
+Wenn Sie nicht 6 Stunden warten möchten, bis die Benachrichtigung über das Erreichen des Schwellenwerts gesendet wird, können Sie nach dem Ausfüllen der Felder im Formular auf **Speichern und testen** klicken, um die Benachrichtigung mit Beispieldaten zu speichern und zu testen.
+
+Eine Benachrichtigung über einen Organisationskontingentschwellenwert enthält nur die Organisationen, die den angegebenen Schwellenprozentwert in dem 6-Stunden-Zeitraum, der dieser Benachrichtigung entspricht, über- oder unterschritten haben. Organisationen, die einen Schwellenwert während vorheriger 6-Stunden-Zeiträume über- oder unterschritten haben, werden nicht eingeschlossen, auch wenn sie über bzw. unter dem Schwellenwert verbleiben.  Die drei Ressourcen, die ein Kontingent der Organisation bilden, nämlich reservierter Speicher, Services und Routen, werden bei der Ermittlung, ob eine Benachrichtigung über ein Organisationskontingent gesendet werden soll, unabhängig bewertet. Wenn zum Beispiel die Menge an reserviertem Speicher, die von einer Organisation genutzt wird, den Wert von 50 % des Kontingents der Organisation über- oder unterschreitet, hat ein Schwellenwert für das Organisationskontingent, der mit 50 % konfiguriert ist, zur Folge, dass eine Benachrichtigung gesendet wird.  Wenn die Anzahl der Services, die von derselben Organisation genutzt werden, den Wert von 50 % des Kontingents der Organisation zu einem späteren Zeitpunkt überschreitet, führt dies ebenfalls dazu, dass eine Benachrichtigung gesendet wird, selbst wenn die Menge an genutztem Speicher unverändert bleibt.
 
 {: #payload}
 
@@ -191,6 +197,7 @@ Wenn Sie nicht 6 Stunden warten möchten, bis die Benachrichtigung über das Err
 
 | **IBM Wert** | **Beschreibung** | **Ereignistyp** |
 |----------------|----------------|------------------------|
+| {{content.org_quota}} | Schwellenwert für Organisationskontingent | Schwellenwert |
 | {{content.physical_disk}} | Schwellenwert für physische Platte | Schwellenwert |
 | {{content.physical_memory}} | Schwellenwert für physischen Speicher | Schwellenwert |  
 | {{content.reserved_disk}} | Schwellenwert für reservierte Platte | Schwellenwert |
@@ -838,7 +845,7 @@ Ein Kontingent stellt die Ressourcengrenzen für die Organisationen in Ihrer Umg
 <dd>Die maximale Anzahl öffentlicher IP-Adressen, die Sie bereichsübergreifend in einer Organisation zuordnen können.</dd>
 </dl>
 <strong>Hinweis:</strong> Wenn in Ihrer Umgebung noch keine Container vorhanden oder konfiguriert sind, wird eine Fehlernachricht angezeigt.
-<p>Weitere Informationen zu Containern finden Sie in den [Informationen zu IBM Containern](https://console.ng.bluemix.net/docs/containers/container_ov.html). Weitere Informationen zu Containerkontingenten finden Sie unter [Kontingent und Bluemix-Konten]( https://console.ng.bluemix.net/docs/containers/container_planning_org_ov.html#container_planning_quota).</p>
+<p>Weitere Informationen zu Containern finden Sie in den [Informationen zu IBM Containern](/docs/containers/container_ov.html). Weitere Informationen zu Containerkontingenten finden Sie unter [Kontingent und Bluemix-Konten](/docs/containers/container_planning_org_ov.html#container_planning_quota).</p>
 <strong>Hinweis:</strong> In der {{site.data.keyword.Bluemix_notm}}-Region 'Sydney' stehen keine Container zur Verfügung.</li>
 </ul>
 <li>Speichern Sie Ihre Änderungen auf der Seite 'Organisation verwalten', indem Sie auf <strong>Speichern</strong> klicken.</li>
@@ -956,42 +963,39 @@ Den Benutzern können die folgenden Berechtigungen mit bestimmten Zugriffsebenen
 | Users | Benutzern mit der Berechtigung **Users** kann der Zugriff **Lesen** (Anzeigen) für die Liste der Benutzer oder **Schreiben** (Hinzufügen oder Entfernen) für Benutzer zugewiesen werden. Diese Berechtigung erlaubt es Ihnen nicht, Berechtigungen für andere Benutzer festzulegen. Benutzer mit Schreibzugriff können neue Benutzer zur Umgebung hinzufügen, Benutzer aus der Umgebung löschen und vorhandene Benutzer zu Organisationen hinzufügen, die in der Umgebung bereits vorhanden sind. Außerdem können Benutzer mit dem Zugriff **Schreiben** neue Organisationen hinzufügen, Organisationen löschen und die Benutzer in den Organisationen bearbeiten. |
 {: caption="Table 14. Permissions" caption-side="top"}
 
-## Benutzer mit der Admin-REST-API verwalten
-{: #usingadminapi}
+## REST-APIs verwenden 
+{: #auth_adminapi}
 
-Sie können die REST-API `Admin` verwenden, um Benutzer für Ihre {{site.data.keyword.Bluemix_notm}}-Instanz hinzuzufügen und zu entfernen.
-Die Endpunkte und JSON-Antworten der `Admin`-REST-API werden probeweise zu Verfügung gestellt, um Basisoperationen über eine Befehlszeile zu ermöglichen. Die in den vorliegenden Informationen zu den Beispielen enthaltenen Endpunkte und URLs können jederzeit geändert oder entfernt werden.
+Für die Verwendung der REST-API-Befehle müssen Sie sich zunächst authentifizieren. Zur Generierung und Unterstützung von Sitzungen können Sie cURL-Befehle für die folgenden Tasks verwenden:
 
-Sie können zwar auswählen, ob Sie andere Tools verwenden möchten, jedoch sind die folgenden Tools Voraussetzungen für die Verwendung der nachfolgenden Beispiele:
-* cURL für die Eingabe von REST-API-Anforderungen als Befehle. cURL ist ein Dienstprogramm zur freien Verwendung, mit dessen Hilfe Sie über eine Befehlszeilenschnittstelle HTTP-Anforderungen an einen Server senden und Antworten vom Server empfangen können. Sie können
-cURL von der [cURL-Download-Site ![Symbol für externen Link](../icons/launch-glyph.svg)](http://curl.haxx.se/download.html){: new_window} herunterladen.
-* Python für die Verwendung des Python-Tools für JSON-Schöndruck. Dieses optionale Tool akzeptiert JSON-Text als Eingabe und stellt eine übersichtliche Ausgabe zur Verfügung. Sie können Python von der [Python-Download-Site ![Symbol für externen Link](../icons/launch-glyph.svg)](https://www.python.org/downloads){: new_window} herunterladen.
+* [Bei der Administrationskonsole anmelden](#auth_loginapi) 
+* [Benutzer-ID und Kennwort speichern](#auth_setuidpw)
+* [Cookies speichern](#auth_apistorecook)
+* [Cookies wiederverwenden](#auth_apireusecook)
 
 ### Bei der Administrationskonsole anmelden
+{: #auth_loginapi}
 
-Vor dem Ausführen von `Admin`-API-Anforderungen müssen Sie sich bei der Administrationskonsole anmelden. Wenn Sie die Berechtigung **Superuser** oder die Berechtigung **Users** mit dem Zugriff **Schreiben** besitzen, können Sie Benutzer hinzufügen oder entfernen. Zum Bearbeiten der Berechtigungen anderer Benutzer benötigen Sie die Berechtigung **Superuser**.
+Vor dem Ausführen von `Admin`-API-Anforderungen müssen Sie sich bei der Administrationskonsole anmelden. 
 
-Zum Anmelden bei der Administrationskonsole können Sie die Basiszugriffsauthentifizierung am Endpunkt `https://<eigener Host>.ibm.com/login` verwenden. Der Server gibt ein Cookie mit Ihrer Sitzung zurück. Dieses Cookie verwenden Sie für alle Operationen mit der Administrationskonsole.
+Zum Anmelden bei der Administrationskonsole können Sie die Basiszugriffsauthentifizierung am Endpunkt `https://console.<region>.bluemix.net/login` verwenden. Der Server gibt ein Cookie mit Ihrer Sitzung zurück. Dieses Cookie verwenden Sie für alle Operationen mit der Administrationskonsole.
 
 **Anmerkung:** Die Sitzung wird ungültig, wenn Sie mehrere Stunden lang nicht genutzt wird.
 
 Führen Sie zum Anmelden bei der Administrationskonsole den folgenden Befehl aus:
 
-
-`curl --user <Benutzer-ID>:<Kennwort> -c ./cookies.txt --header "Accept: application/json" https://<eigener Host>.ibm.com/login | python -m json.tool`
+`curl --user <Benutzer-ID>:<Kennwort> -c ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/login | python -m json.tool`
 {: codeblock}
 
 <dl class="parml">
-
 <dt class="pt dlterm">--user <em>Benutzer-ID</em>:<em>Kennwort</em></dt>
 <dd class="pd">Akzeptiert die Benutzer-ID und das Kennwort und sendet einen Header für die Basisauthentifizierung.</dd>
-
 <dt class="pt dlterm">-c <em>Dateiname</em></dt>
 <dd class="pd">Speichert die angegebene Benutzer-ID und das angegebene Kennwort als Cookie in der angegebenen Datei.</dd>
-
+<dt class="pt dlterm">-b <em>Dateiname</em></dt>
+<dd class="pd">Ruft die angegebene Benutzer-ID und das angegebene Kennwort als Cookie in der angegebenen Datei ab.</dd>
 <dt class="pt dlterm">--header</dt>
 <dd class="pd">Sendet einen Akzeptanzheader.</dd>
-
 </dl>
 
 Das folgende Beispiel zeigt die Ausgabe dieses Befehls:
@@ -1005,6 +1009,66 @@ Das folgende Beispiel zeigt die Ausgabe dieses Befehls:
 }
 ```
 {: screen}
+
+### Benutzer-ID und Kennwort speichern
+{: #auth_setuidpw}
+
+Sie können Ihre Benutzer-ID und das zugehörige Kennwort auch speichern, sodass Sie es nicht bei jeder Anmeldung manuell eingeben müssen.  Verwenden Sie das folgende cURL-Beispiel, um Ihre Benutzer-ID und das Kennwort zur Wiederverwendung zu speichern:
+
+`curl -X GET -H "Authorization: Basic <redacted>" -H "Accept: application/json" "http://localhost:3000/login"`
+{: codeblock}
+
+Wenn Sie Ihre Anmeldeinformationen in einer separaten Datei speichern und dann die Datei aufrufen wollen, sodass Sie die Informationen nicht für jede Authentifizierungsanforderung erneut eingeben müssen, verwenden Sie die Option `--netrc`, die mit dem cURL-Befehl zur Verfügung steht.
+
+Wenn Sie die Option `--netrc` mit cURL verwenden wollen, erstellen Sie zunächst eine Datei im Ausgangsverzeichnis des Benutzers auf eine der folgenden Weisen:
+* UNIX-System: Erstellen Sie eine Datei mit dem Namen '.netrc'. 
+* Windows-System: Erstellen Sie eine Datei mit dem Namen '_netrc'. 
+
+Geben Sie in dieser Datei die folgenden Informationen an:
+
+`machine console.<Region>.bluemix.net
+login <ID>
+password <Kennwort>`
+{: codeblock}
+
+Fügen Sie im Aufruf eines cURL-Befehls das folgende Argument hinzu: `--netrc`.
+<p>Wenn Sie mit einer netrc-Datei arbeiten wollen, die sich in einem anderen Verzeichnis befindet, verwenden Sie die Option `--netrc-file [Datei]`. Dabei ist `[Datei]` die Speicherposition der netrc-Datei.</p>
+</li>
+</ol>
+
+
+### Cookies speichern
+{: #auth_apistorecook}
+
+Wenn Sie sich bei der Administratorkonsole anmelden, gibt der Server ein Cookie mit Ihrer Sitzung zurück. Dieses im Anmeldeprozess übergebene Cookie ist für zukünftige API-Aufrufe bei allen Operationen mit der Administrationskonsole erforderlich. Sie können Cookies zur späteren Verwendung speichern.
+
+Zum Speichern von Cookies nach der Anmeldung verwenden Sie die Option `-c` wie im folgenden CURL-Beispiel:
+
+`curl --user <Benutzer-ID>:<Kennwort> -c ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/login | python -m json.tool`
+{: codeblock}
+
+### Cookies wiederverwenden
+{: #auth_apireusecook}
+
+Zur Wiederverwendung von Cookies verwenden Sie die Option `-b` mit dem Dateinamen des Cookies, den Sie mit der Option `-c` zugewiesen haben, wie im folgenden CURL-Beispiel gezeigt:
+
+`curl --user <Benutzer-ID>:<Kennwort> -b ./cookies.txt`
+{: codeblock}
+
+## Benutzer mit der Admin-REST-API verwalten
+
+{: #usingadminapi}
+
+Sie können die REST-API `Admin` verwenden, um Benutzer für Ihre {{site.data.keyword.Bluemix_notm}}-Instanz hinzuzufügen und zu entfernen.
+Die Endpunkte und JSON-Antworten der `Admin`-REST-API werden probeweise zu Verfügung gestellt, um Basisoperationen über eine Befehlszeile zu ermöglichen. Die in den vorliegenden Informationen zu den Beispielen enthaltenen Endpunkte und URLs können jederzeit geändert oder entfernt werden.
+
+Wenn Sie die Berechtigung **Superuser** oder die Berechtigung **Users** mit dem Zugriff **Schreiben** besitzen, können Sie Benutzer hinzufügen oder entfernen. Zum Bearbeiten der Berechtigungen anderer Benutzer benötigen Sie die Berechtigung **Superuser**.
+
+Sie können zwar auswählen, ob Sie andere Tools verwenden möchten, jedoch sind die folgenden Tools Voraussetzungen für die Verwendung der nachfolgenden Beispiele:
+* cURL für die Eingabe von REST-API-Anforderungen als Befehle. cURL ist ein Dienstprogramm zur freien Verwendung, mit dessen Hilfe Sie über eine Befehlszeilenschnittstelle HTTP-Anforderungen an einen Server senden und Antworten vom Server empfangen können. Sie können
+cURL von der [cURL-Download-Site ![Symbol für externen Link](../icons/launch-glyph.svg)](http://curl.haxx.se/download.html){: new_window} herunterladen.
+* Python für die Verwendung des Python-Tools für JSON-Schöndruck. Dieses optionale Tool akzeptiert JSON-Text als Eingabe und stellt eine übersichtliche Ausgabe zur Verfügung. Sie können Python von der [Python-Download-Site ![Symbol für externen Link](../icons/launch-glyph.svg)](https://www.python.org/downloads){: new_window} herunterladen.
+
 
 ### Organisationen auflisten
 {: #listingorg}
@@ -1119,8 +1183,6 @@ Das folgende Beispiel zeigt die Ausgabe dieses Befehls:
 ```
 {: screen}
 
-
-
 ### Benutzer hinzufügen
 
 Sie können die REST-API `Admin` verwenden, um Benutzer zur {{site.data.keyword.Bluemix_notm}}-Instanz hinzuzufügen. Zum Hinzufügen von Benutzern müssen Sie die Berechtigung **Users** mit dem Zugriff **Schreiben** oder die Berechtigung **Superuser** (ops.admin) für die Administrationskonsole besitzen. Ferner können Sie als Administrator den Mitglieder der Organisation, die nicht die allgemeinen Berechtigungen `Users` oder `Superuser` für die Administrationskonsole besitzen, die Berechtigung zum Hinzufügen neuer Benutzer für ihre Organisation erteilen. Verwenden Sie den folgenden API-Befehl, um diese Funktion für Organisationsmanager einzurichten:
@@ -1169,7 +1231,10 @@ Diese Informationen werden in einer JSON-Datei angegeben.
 }
 </pre>
 </li>
-<li>Führen Sie den folgenden Befehl aus, um den Inhalt der JSON-Datei an den Endpunkt des Benutzers zu übergeben:<br/><br/> <code>curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.json https://<Ihr Host>.ibm.com/codi/v1/users</code>
+<li>Übergeben Sie mit dem folgenden Befehl den Inhalt der JSON-Datei an den Endpunkt des Benutzers:<br/><br/>
+<code>
+curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.json https://<eigener Host>.ibm.com/codi/v1/users
+</code>
 </li>
 </ol>
 
@@ -1248,33 +1313,37 @@ Das folgende Beispiel zeigt die Ausgabe dieses Befehls:
 ## API für Metriken (experimentell)
 {: #envappmetricsapi}
 
-Zur Erfassung von Metriken über Ihre Umgebung oder Anwendungen können Sie zwei experimentelle APIs verwenden. Diese APIs geben ein Array von Datenpunkten für die angeforderten Metriken und den von Ihnen angegebenen Zeitraum zurück.
+Zur Erfassung von Metriken über Ihre Umgebung oder Anwendungen können Sie drei experimentelle APIs verwenden. Diese APIs geben ein Array von Datenpunkten für die angeforderten Metriken und den von Ihnen angegebenen Zeitraum zurück.
 
 Auf die in den folgenden Abschnitten beschriebenen Metrik-APIs kann über den regionsspezifischen Endpunkt zugegriffen werden. Beispiel: 
 
- `https://console.<region>.bluemix.net/admin/metrics`
+`https://console.<region>.bluemix.net/admin/metrics`
 {: codeblock}
 
 **Hinweise**:
 
 1. Ein Benutzer kann pro Stunde bis zu 200 API-Anforderungen für Metriken absetzen.
 2. Jede API-Anforderung gibt bis zu 200 Datenpunkte pro Anforderung zurück. Falls mehr Daten verfügbar sind, wird in der Antwort eine URL bereitgestellt, mit deren Hilfe die nächste Gruppe von Daten geladen werden kann.
+3. Jede API-Anforderung erfordert mindestens Basiszugriff eines Benutzers auf die Administrationskonsole.  Weitere Berechtigungen können wie nachfolgend beschrieben erforderlich sein.
 
 ## Metriken über Ihre Umgebung erfassen 
 
 Mit der experimentellen Umgebungs-API können Sie allgemeine Information zur Umgebung für einen von Ihnen angegebenen Zeitraum erfassen. Zurückgegeben werden die verfügbaren Datenpunkte im angegebenen Zeitraum. Daten werden ungefähr ein Mal pro Stunde aufgezeichnet. Falls Sie beispielsweise sechs Stunden von CPU-Daten für die Umgebung angefordert haben, würde die Antwort CPU-Daten für jede der angeforderten sechs Stunden enthalten.
 
- ### Umgebungsendpunkte 
- 
+
+### Umgebungsendpunkte 
+
 Zum Aufrufen dieses API-Befehls können Sie den folgenden Endpunkt verwenden: `/api/v1/env`
+
+**Hinweis:**  Eine der folgenden Berechtigungen ist für den Zugriff auf diese Endpunkte erforderlich: **Basiszugriff**, **Benutzerlesezugriff**, **Benutzerschreibzugriff** oder **Superuser**.
 
 ### Abfrageparameter für Umgebungsmetriken
 
-Mit den folgenden Abfrageparametern können Sie Metriken für die CPU, die Platte, den Hauptspeicher, das Netz und Apps erfassen:
+Mit den folgenden Abfrageparametern können Sie Metriken für die CPU, die Platte, den Hauptspeicher, das Netz, das Kontingent und die Apps erfassen:
 
 <dl class="parml">
 <dt class="pt dlterm">metric</dt>
-<dd class="pd">Einer oder mehrere der folgenden Werte, durch Kommas getrennt: `memory`, `disk`, `cpu`, `network` und `apps`.</dd>
+<dd class="pd">Einer oder mehrere der folgenden Werte, durch Kommas getrennt: `memory`, `disk`, `cpu`, `network`, `quota` und `apps`.</dd>
 <dt class="pt dlterm">startTime</dt>
 <dd class="pd">Der früheste Zeitpunkt, für den Daten zurückgegeben werden. Falls der Parameter 'startTime' nicht angegeben ist, wird der früheste verfügbare Datenpunkt einbezogen. Um beispielsweise Daten für den Zeitraum zwischen 14.00 und 17.00 Uhr zu erfassen, geben Sie als Startzeit 14.00 Uhr an.</dd>
 <dt class="pt dlterm">endTime</dt>
@@ -1283,12 +1352,13 @@ Mit den folgenden Abfrageparametern können Sie Metriken für die CPU, die Platt
 <dd class="pd">Die Reihenfolge, in der die Daten zurückgegeben werden. Gültige Werte sind: `asc` (aufsteigend) und `desc` (absteigend). Standardeinstellung ist die absteigende Reihenfolge; hierbei werden zuerst die neuesten Daten zurückgegeben. </dd>
 </dl>
 
- Im folgenden Beispiel werden die Abfrageparameter zum Erfassen von Metriken für die Umgebung verwendet: 
- 
- ```
- curl -b ./cookies.txt --header "Accept: application/json" https://console.<Region>.bluemix.net/admin/metrics/api/v1/env?metric=cpu,network,disk,apps,memory
- ```
+Im folgenden Beispiel werden die Abfrageparameter zum Erfassen von Metriken für die Umgebung verwendet:
+
+```
+curl -b ./cookies.txt --header "Accept: application/json" https://console.<Region>.bluemix.net/admin/metrics/api/v1/env?metric=cpu,network,disk,apps,memory
+```
 {: codeblock}
+
 
 ### Datenformat für Umgebungsmetriken
 
@@ -1300,7 +1370,23 @@ Das Datenformat ist in den folgenden Abschnitten erläutert.
 {
   "sample_time": 1477494000000,
   "memory": {
-    "cell": {
+    "total": {
+      "physical": {
+        "total_gb": 1728,
+        "used": {
+          "value_gb": 673.68,
+          "percent": 38.99
+        }
+      },
+    "allocated": {
+        "reserved_gb": 3456,
+        "total_allocated": {
+          "value_gb": 2575.18,
+          "percent": 74.51
+        }
+      },
+    },
+  	"cell": {
       "physical": {
         "total_gb": 864,
       "used": {
@@ -1369,6 +1455,22 @@ Das Datenformat ist in den folgenden Abschnitten erläutert.
 {
   "sample_time": 1477494000000,
   "disk": {
+    "total": {
+      "physical": {
+        "total_gb": 16200,
+        "used": {
+          "value_gb": 1614,
+          "percent": 9.96
+        }
+      },
+    "allocated": {
+        "reserved_gb": 32400,
+        "total_allocated": {
+          "value_gb": 3979,
+          "percent": 12.28
+        }
+      },
+    },
     "cell": {
       "physical": {
         "total_gb": 8100,
@@ -1438,11 +1540,14 @@ Das Datenformat ist in den folgenden Abschnitten erläutert.
 {
   "sample_time": 1477494000000,
   "cpu": {
+    "total": {
+      "average_percent_cpu_used": 14.725
+    },
     "cell": {
-      "average_percent_cpu_used": 27.288461538461544
+      "average_percent_cpu_used": 19
     },
     "dea": {
-      "average_percent_cpu_used": 27.288461538461544
+      "average_percent_cpu_used": 10.45
     },
     "cpu_by_container": [
       {
@@ -1462,16 +1567,16 @@ Das Datenformat ist in den folgenden Abschnitten erläutert.
         "wait_percent": "0.0"
       },
       {
-        "name": "dea_next/2",
-        "type": "dea",
+        "name": "cell/1",
+        "type": "cell",
         "ip": "169.53.230.49",
         "sys_percent": "5.3",
         "user_percent": "1.9",
         "wait_percent": "0.0"
       },
       {
-        "name": "dea_next/3",
-        "type": "dea",
+        "name": "cell/2",
+        "type": "cell",
         "ip": "169.44.109.231",
         "sys_percent": "8.2",
         "user_percent": "22.6",
@@ -1527,16 +1632,36 @@ Das Datenformat ist in den folgenden Abschnitten erläutert.
       }
       ],
         "bandwidth": {
-        "in_mbps": 10855,
-        "out_mbps": 38090
+        "in_kbps": 10855,
+        "out_kbps": 38090
       }
   }
 }
 ```
 {: screen}
 
-* Um Datensätze über Ihre Anwendungen zu erfassen, verwenden Sie das folgende Datenformat:
+* Um Datensätze über die Kontingentnutzung zu erfassen, verwenden Sie das folgende Datenformat:
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "quota": {
+    "reserved_memory": {
+      "total_bytes": 33176474877952
+    },
+    "services": {
+      "total": 111650
+    },
+    "routes": {
+      "total": 1675000
+    }
+  }
+}
+```
+{: screen}
 
+* Um Datensätze über Ihre Anwendungen zu erfassen, verwenden Sie das folgende Datenformat:
+ 
 ```
 {
   "sample_time": 1477494000000,
@@ -1561,6 +1686,58 @@ Das Datenformat ist in den folgenden Abschnitten erläutert.
 ```
 {: screen}
 
+## Metriken über Ihre Organisationen
+
+Für alle Organisationen werden ungefähr ein Mal pro Stunde Daten aufgezeichnet. Eine Anforderung für eine bestimmte Metrik gibt Informationen zu allen Organisationen in jeder Datenstichprobe für den von Ihnen angeforderten Zeitraum zurück, die gemäß der angeforderten Metrik in absteigender Reihenfolge sortiert sind. Wenn Sie beispielsweise alle Organisationen nach Hauptspeicher für einen sechsstündigen Zeitraum in einer Umgebung anfordern, die 200 Apps enthält, werden 1200 Datensätze (jeweils 200 für jede Stunde) zurückgegeben.
+
+Um die Menge der Informationen zu verringern, die für jede Datenstichprobe im angeforderten Zeitraum zurückgegeben werden, können Sie eine Option für die Anzahl angeben. Wenn Sie beim vorherigen Beispiel eine Option für die Anzahl mit dem Wert 5 hinzufügen, werden 30 Datensätze zurückgegeben, die für jede Datenstichprobe die 5 Organisationen mit der höchsten Hauptspeichernutzung darstellen.
+
+### Organisationsendpunkte 
+
+Zum Aufrufen dieses API-Befehls können Sie die folgenden Endpunkte verwenden:
+* `/api/v1/org/memory/physical`
+* `/api/v1/org/memory/reserved`
+* `/api/v1/org/disk/physical`
+* `/api/v1/org/disk/reserved`
+
+**Hinweis:** Eine der folgenden Berechtigungen ist für den Zugriff auf diese Endpunkte erforderlich: **Benutzerlesezugriff**, **Benutzerschreibzugriff** oder **Superuser**.
+
+### Abfrageparameter für Organisationen
+ 
+Mit den folgenden Abfrageparametern können Sie Metriken für Ihre Organisationen erfassen:
+
+<dl class="parml">
+<dt class="pt dlterm">startTime</dt>
+<dd class="pd">Der früheste Zeitpunkt, für den Daten zurückgegeben werden. Falls der Parameter 'startTime' nicht angegeben ist, wird der früheste verfügbare Datenpunkt einbezogen. Um beispielsweise Daten für den Zeitraum zwischen 14.00 und 17.00 Uhr zu erfassen, geben Sie als Startzeit 14.00 Uhr an.</dd>
+<dt class="pt dlterm">endTime</dt>
+<dd class="pd">Der späteste Zeitpunkt, für den Daten zurückgegeben werden. Falls der Parameter 'endTime' nicht angegeben ist, wird der neueste Datenpunkt verwendet. Um beispielsweise Daten für den Zeitraum zwischen 14.00 und 17.00 Uhr zu erfassen, geben Sie als Endzeit 17.00 Uhr an.</dd>
+<dt class="pt dlterm">count</dt>
+<dd class="pd">Die Anzahl der Datensätze in jeder Datenstichprobe, die zurückgegeben werden sollen.
+</dd>
+<dt class="pt dlterm">minValue</dt>
+<dd class="pd">Der kleinste Wert, der für die angegebene Metrik zurückgegeben werden soll.  Wenn minValue nicht angegeben wird, werden alle Werte zurückgegeben.  Beispiel: Zum Erfassen von Organisationen, die mindestens 20000 Byte physischen Speicher belegen, geben Sie für minValue den Wert 20000 an.
+</dd>
+</dl>
+
+Mit dem folgenden Beispiel werden Metriken zu Ihren Organisationen erfasst:
+
+```
+curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/org/memory/physical?count=5&startTime=2016-12-02T16:54:09.467Z
+```
+{: codeblock}
+
+### Antwortformat für Organisationen
+
+```
+{
+   docs: [],
+   next_url:
+}
+```
+{: screen}
+
+Jedes zurückgegebene Dokument stellt die angeforderten Metriken für eine Organisation in jeder Datenstichprobe zum Zeitpunkt der Anforderung dar.
+
 ## Metriken über Ihre Anwendungen erfassen
 
 Für alle Anwendungen werden ungefähr ein Mal pro Stunde Daten aufgezeichnet. Eine Anforderung für eine bestimmte Metrik gibt Informationen zu allen Apps in jeder Datenstichprobe für den von Ihnen angeforderten Zeitraum zurück, die gemäß der angeforderten Metrik in absteigender Reihenfolge sortiert sind. Wenn Sie beispielsweise alle Apps nach CPU für einen sechsstündigen Zeitraum in einer Umgebung anfordern, die 200 Apps enthält, werden 1200 Datensätze (jeweils 200 für jede Stunde) zurückgegeben.
@@ -1576,6 +1753,7 @@ Zum Aufrufen dieses API-Befehls können Sie die folgenden Endpunkte verwenden:
 * `/api/v1/app/disk/physical`
 * `/api/v1/app/disk/reserved`
 
+**Hinweis:** Eine der folgenden Berechtigungen ist für den Zugriff auf diese Endpunkte erforderlich: **Benutzerlesezugriff**, **Benutzerschreibzugriff** oder **Superuser**.
 
 ### Abfrageparameter für Anwendungen
  
@@ -1594,12 +1772,13 @@ Mit den folgenden Abfrageparametern können Sie Metriken für Ihre Anwendungen e
 </dd>
 </dl>
 
-Mit dem folgenden Beispiel werden Metriken zur Anwendung erfasst:
+Mit dem folgenden Beispiel werden Metriken zu Ihren Anwendungen erfasst:
 
 ```
 curl -b ./cookies.txt --header "Accept: application/json" https://console.<Region>.bluemix.net/admin/metrics/api/v1/app/cpu/physical?count=5&startTime=2016-12-02T16:54:09.467Z
 ```
 {: codeblock}
+
 
 ### Antwortformat für Anwendungen
 
@@ -1839,13 +2018,19 @@ Nach der Installation der Befehlszeilenschnittstelle 'cf' können Sie das {{site
 Führen Sie die folgenden Schritte aus, um das Repository hinzuzufügen und das Plug-in zu installieren:
 
 <ol>
-<li>Führen Sie zum Hinzufügen des {{site.data.keyword.Bluemix_notm}}-Administrator-Plug-in-Repositorys den folgenden Befehl aus:<br/><br/> <code>cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli</code><br/><br/>
+<li>Führen Sie den folgenden Befehl aus, um das Repository für das {{site.data.keyword.Bluemix_notm}}-Admin-Plug-in hinzuzufügen:<br/><br/>
+<code>
+cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli
+</code><br/><br/>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
 <dd class="pd">Die Unterdomäne der URL für Ihre {{site.data.keyword.Bluemix_notm}}-Instanz.</dd>
 </dl>
 </li>
-<li>Führen Sie zum Installieren des {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-ins den folgenden Befehl aus:<br/><br/> <code>cf install-plugin bluemix-admin-cli -r BluemixAdmin</code>
+<li>Führen Sie den folgenden Befehl aus, um das Plug-in für die {{site.data.keyword.Bluemix_notm}}-Administrator-CLI zu installieren:<br/><br/>
+<code>
+cf install-plugin bluemix-admin-cli -r BluemixAdmin
+</code>
 </li>
 </ol>
 

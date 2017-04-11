@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-08-02"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -16,11 +16,10 @@ lastupdated: "2016-08-02"
 # 適用於裝置開發人員的 mBed C++
 {: #mbedcpp}
 
-使用 [mBed C++ 用戶端程式庫](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/)，可以輕鬆地將 [mBed 裝置](https://www.mbed.com/en/)（例如 [LPC1768](https://developer.mbed.org/platforms/mbed-LPC1768/) 或 [FRDM-K64F](https://developer.mbed.org/platforms/FRDM-K64F/)）連接至 {{site.data.keyword.iot_full}} 服務。
+使用 [mBed C++ 用戶端程式庫 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){: new_window} 可輕鬆將 [mBed 裝置 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.mbed.com/en/){: new_window}（例如 [LPC1768](https://developer.mbed.org/platforms/mbed-LPC1768/) 或 [FRDM-K64F ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.mbed.org/platforms/FRDM-K64F/){: new_window}）連接至 {{site.data.keyword.iot_full}} 服務。
 {:shortdesc}
 
-
-如需相關資訊，請參閱 [developer.mbed.org](https://developer.mbed.org/) 上的 [ibmiotf](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/)。
+如需相關資訊，請參閱 [developer.mbed.org ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.mbed.org/){: new_window} 上的 [ibmiotf ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){: new_window}。
 
 雖然程式庫使用 C++，但是它仍會避免動態記憶體配置及使用 STL 函數，因為 mBed 裝置有時具有讓移轉難以進行的特殊記憶體模型。在任何情況下，程式庫都可讓您使記憶體盡可能如預期般使用。
 
@@ -29,17 +28,17 @@ lastupdated: "2016-08-02"
 
 |相依關係 |說明|
 |:---|:---|
-|[Eclipse Paho MQTT 程式庫](https://developer.mbed.org/teams/mqtt/code/MQTT/)|提供 mBed 裝置的 MQTT 用戶端程式庫。如需相關資訊，請參閱 [Embedded MQTT C/C++ Client Libraries](http://www.eclipse.org/paho/clients/c/embedded/)。|
-|[EthernetInterface 程式庫](https://developer.mbed.org/users/mbed_official/code/EthernetInterface/)|透過乙太網路的 mBed IP 程式庫。|
+|[Eclipse Paho MQTT 程式庫 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.mbed.org/teams/mqtt/code/MQTT/){: new_window}|提供 mBed 裝置的 MQTT 用戶端程式庫。如需相關資訊，請參閱[嵌入式 MQTT C/C++ 用戶端程式庫 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window}|
+|[EthernetInterface 程式庫 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.mbed.org/users/mbed_official/code/EthernetInterface/){: new_window}|透過乙太網路的 mBed IP 程式庫。|
 
 ## 如何使用程式庫
 {: #library_use}
 
-當您使用 mBed C++ IBMIoTF 用戶端程式庫時，請使用 [mBed 編譯器](https://developer.mbed.org/compiler/)來建立您的應用程式。mBed 編譯器提供小型線上 C/C++ IDE，其配置適用於撰寫、編譯及下載要在 mBed 微型控制器上執行的程式。
+當您使用 mBed C++ IBMIoTF 用戶端程式庫時，請使用 [mBed 編譯器 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.mbed.org/compiler/){: new_window} 來建立您的應用程式。mBed 編譯器提供小型線上 C/C++ IDE，其配置適用於撰寫、編譯及下載要在 mBed 微型控制器上執行的程式。
 
 **附註：**您不必安裝或設定任何項目，即可開始執行 mBed。
 
-如需將 ARM mBed NXP LPC 1768 微型控制器連接至 {{site.data.keyword.iot_short_notm}} 的相關資訊，請參閱 [mBed C++ Client Library for IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/mbed-c-client-library-for-ibm-iot-foundation/) 秘訣。
+如需如何將 ARM mBed NXP LPC 1768 微型控制器連接至 {{site.data.keyword.iot_short_notm}} 的相關資訊，請參閱 [IBM Watson IoT Platform 的 mBed C++ 用戶端程式庫 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/tutorials/mbed-c-client-library-for-ibm-iot-foundation/){: new_window} 秘訣。
 
 ## 建構子
 {: #constructor}
@@ -163,8 +162,7 @@ lastupdated: "2016-08-02"
         status = client.publishEvent("blink", buf);
 	....
 ```
-如需完整範例，請參閱 [IBMIoTClientLibrarySample](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/file/e58533b6bc6b/src/Main.cpp)。
-
+如需完整的範例，請參閱 [ IBMIoTClientLibrarySample ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/file/e58533b6bc6b/src/Main.cpp){: new_window}。
 ### 提高事件的 QoS 水準
 
 您可以為發佈的事件提高 [QoS 水準](../../reference/mqtt/index.html#qos-levels)。QoS 水準大於 `0` 的事件可能需要較長的發佈時間，因為包含額外的確認接收資訊。
@@ -257,8 +255,7 @@ lastupdated: "2016-08-02"
     client.yield(1000);  // allow the MQTT client to receive messages
     ....
 ```
-如需完整範例，請參閱 [IBMIoTClientLibrarySample](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/file/e58533b6bc6b/src/Main.cpp)。
-
+如需完整的範例，請參閱 [ IBMIoTClientLibrarySample ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/file/e58533b6bc6b/src/Main.cpp){: new_window}。
 **附註：**必須定期呼叫 `client.yield()` 函數，才能接收指令。
 `client.yield()` 函數可讓裝置接收來自 Watson IoT Platform 的指令，並保持連線作用中。如果未在 keepAlive 間隔所指定的時間範圍內呼叫 `client.yield()` 函數，則裝置將不會收到從平台送出的任何指令。指派給 `client.yield()` 函數的值指定在將控制權還給應用程式之前，可從 Socket 讀取資料的時間長度（毫秒）。
 
@@ -275,4 +272,4 @@ lastupdated: "2016-08-02"
 ## 範例
 {: #samples}
 
-[IBMIoTClientLibrarySample](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/) 是程式碼範例，顯示如何使用 {{site.data.keyword.iot_short_notm}} 用戶端程式庫，將 mbed LPC1768 或 FRDM-K64F 裝置連接至服務實例。
+[IBMIoTClientLibrarySample ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/){: new_window} 是程式碼範例，顯示如何使用 {{site.data.keyword.iot_short_notm}} 用戶端程式庫，將 mbed LPC1768 或 FRDM-K64F 裝置連接至服務實例。

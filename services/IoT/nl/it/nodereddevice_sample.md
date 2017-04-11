@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-26"
+  years: 2016, 2017
+lastupdated: "2017-03-13"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2016-08-26"
 Utilizza Node-RED per creare un simulatore del dispositivo e per inviare i dati del dispositivo simulato alla tua organizzazione {{site.data.keyword.iot_full}}.  
 {:shortdesc}
 
-Node-RED è uno strumento per collegare dispositivi hardware, API o servizi online in modi nuovi e interessanti. Per ulteriori informazioni, consulta il sito web [Node-RED](http://nodered.org/).  
+Node-RED è uno strumento per collegare dispositivi hardware, API o servizi online in modi nuovi e interessanti. Per ulteriori informazioni, consulta il sito web [Node-RED ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://nodered.org/){: new_window}.  
 
 Puoi eseguire la tua istanza Node-RED nel tuo proprio ambiente o utilizzarla come un'applicazione {{site.data.keyword.Bluemix_notm}}. Il seguente processo include le istruzioni per {{site.data.keyword.Bluemix_notm}}.
 
@@ -26,7 +26,7 @@ Per creare e collegare il simulatore del dispositivo Node-RED:
    Utilizza il simulatore del dispositivo per inviare i messaggi del dispositivo MQTT a {{site.data.keyword.iot_short_notm}}. Il simulatore del dispositivo simula un invio di dati per un contenitore merci a un broker MQTT come {{site.data.keyword.iot_short_notm}}.
     1. Accedi a {{site.data.keyword.Bluemix_notm}} all'indirizzo: https://console.ng.bluemix.net
     2. Seleziona la scheda **Catalog**.
-    3. Individua la sezione dei contenitori tipo del catalogo del servizio e fai clic su **Node-RED Starter Community BETA**. **Suggerimento:** Fai clic [qui](https://console.ng.bluemix.net/catalog/starters/node-red-starter/) per andare direttamente alla pagina starter di Node-RED.
+    3. Individua la sezione dei contenitori tipo del catalogo del servizio e fai clic su **Node-RED Starter Community BETA**. **Suggerimento:** fai clic [qui ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.ng.bluemix.net/catalog/starters/node-red-starter/){: new_window} per andare direttamente alla pagina starter di Node-RED.
     4. Nella pagina starter di Node-RED, seleziona lo spazio dove desideri distribuire Node-RED, verifica le selezioni per la creazione di un'applicazione e fai clic su **Create** per aggiungere Node-RED alla tua organizzazione Bluemix.  
     Ad esempio:  
      - Spazio: dev
@@ -44,7 +44,7 @@ Per creare e collegare il simulatore del dispositivo Node-RED:
     6. Incolla gli appunti nel campo di input dei nodi di importazione e fai clic su **Ok**.
     Il flusso del simulatore del dispositivo viene importato nell'editor del flusso.
 
-2. Registra il tuo dispositivo con {{site.data.keyword.iot_short_notm}}
+2. Registra il tuo dispositivo con {{site.data.keyword.iot_short_notm}}  
 Segui queste istruzioni per collegare il dispositivo di esempio Node-RED:
  1. In {{site.data.keyword.Bluemix_notm}}, vai al dashboard
  2. Seleziona lo spazio nel quale hai distribuito {{site.data.keyword.iot_short_notm}}.

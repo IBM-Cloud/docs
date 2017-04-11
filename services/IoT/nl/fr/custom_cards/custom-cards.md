@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-10-13"
 
 ---
@@ -130,13 +130,13 @@ Bien ! Vous avez configuré un serveur de cartes et déployé votre premier exem
 Après avoir configuré et vérifié la carte HelloWorld, vous pouvez passer aux cartes personnalisées et créer vos propres cartes personnalisées.
 
 La référentiel d'exemples de carte personnalisée inclut les exemples de carte suivants :
-- HelloWorld
+- HelloWorld  
 Carte simple qui fournit un exemple Hello World de base.
-- Vide
+- Vide  
 Carte vide contenant l'infrastructure nécessaire pour une carte. Utilisez cette carte comme modèle lorsque vous générez une carte à partir de zéro.
-- Webcam
+- Webcam  
 Carte de caméra Web simple. Configurez la carte avec une URL webcam et définissez la fréquence de régénération.
-- iFrame
+- iFrame  
 Carte iFrame de base que vous pouvez utiliser pour intégrer n'importe quelle page Web HTTPS dans votre tableau.
 
 Le processus de création d'une nouvelle carte implique les étapes de haut niveau suivantes :

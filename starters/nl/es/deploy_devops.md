@@ -26,14 +26,15 @@ Git alojado que se desplegará automáticamente en {{site.data.keyword.Bluemix}}
 {{site.data.keyword.Bluemix_notm}} Classic Experience, pulse **ADD GIT**.
 2. En la ventana que se abre, asegúrese de que el recuadro de selección **Rellenar el repositorio con el paquete de apps del iniciador y habilitar el conducto (Build & Deploy)** está marcado. Se crea el repositorio Git. Si el código del iniciador está disponible,
 se carga en el repositorio. Además, el servicio de Delivery Pipeline que se ejecuta en {{site.data.keyword.jazzhub}} despliega la app.
-3. Para actualizar la app puede utilizar la línea de mandatos o Web IDE.  
+3. Para actualizar la app puede utilizar la línea de mandatos o Web IDE.
    **Si utiliza la línea de mandatos:**
    a. Clone el repositorio Git desde el URL de Git en la ventana Visión general de la app.
-   b. En su editor favorito, actualice el código.  
+   b. En su editor favorito, actualice el código.
    c. En la interfaz de línea de mandatos de Git, envíe los cambios.
 
    **Si utiliza el IDE Web:**
-   a. En la página Visión general de la app, pulse **Editar código**. El proyecto se abrirá en Web IDE.   b. Realice los cambios necesarios y, a continuación, envíelos con el soporte Git integrado.
+   a. En la página Visión general de la app, pulse **Editar código**. El proyecto se abrirá en Web IDE.
+   b. Realice los cambios necesarios y, a continuación, envíelos con el soporte Git integrado.
 
 La app actualizada se vuelve a desplegar para {{site.data.keyword.Bluemix_notm}}.
 
@@ -50,7 +51,7 @@ Antes de empezar, descargue e instale la línea de mandatos bl de {{site.data.ke
 **Importante:** La herramienta de línea de mandatos bl solo está disponible para Windows 7 y 8 y Mac OS X versión 10.9 o posterior.
 
 <p>
-<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="(se abre en un separador o ventana nueva)"><img class="image" src="images/bl_gs_icons_windows_b.svg" alt="Botón Descargar la línea de mandatos bl de Windows" /> </a> <a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/BluemixLive.pkg" target="_blank" title="(se abre en un separador o ventana nueva)"><img class="image" src="images/bl_gs_icons_mac-osx_b.svg" alt="Botón Descargar la línea de mandatos bl de Mac" /> </a>
+<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="(Se abre en un nuevo separador o ventana)"><img class="image" src="images/bl_gs_icons_windows_b.svg" alt="Botón Descargar la línea de mandatos bl de Windows" /> </a> <a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/BluemixLive.pkg" target="_blank" title="(Se abre en un nuevo separador o ventana)"><img class="image" src="images/bl_gs_icons_mac-osx_b.svg" alt="Botón Descargar la línea de mandatos bl de Mac" /> </a>
 </p>
 
 1. En una línea de mandatos, inicie sesión especificando el mandato siguiente:

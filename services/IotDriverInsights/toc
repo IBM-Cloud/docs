@@ -1,0 +1,26 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="driver-behavior" audience="service"}
+IBM IoT Driver Behavior
+
+    {: .navgroup id="learn"}
+    index.md
+    drb_index.md
+    tp_index.md
+    drb_iotdriverinsights_overview.md
+    tp_iotdriverinsights_overview.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    related_links.md
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    drb_iotdriverinsights_admin.md
+    tp_iotdriverinsights_admin.md
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    service_status.md
+    {: .navgroup-end}

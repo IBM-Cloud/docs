@@ -11,21 +11,21 @@ lastupdated: "2017-01-12"
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# Bluemix CLI의 사설 네트워크 피어 플러그인
+# Bluemix CLI의 사설 네트워크 피어링 플러그인
 {: #private_network_cli}
 
-사설 네트워크 피어 명령행 인터페이스(CLI)를 사용하여 두 {{site.data.keyword.Bluemix}} 영역 간의 사설 네트워크 피어를 구성하고 관리하십시오. 사설 네트워크 피어는 IBM Containers(Docker 컨테이너)에서 지원됩니다. Bluemix 영역은 동일한 지역의 서로 다른 가용성 구역에 위치할 수 있거나 다른 지역에 위치할 수 있습니다. 사설 네트워크 피어 CLI 플러그인은 Bluemix CLI 플러그인으로 사용할 수 있습니다. 
+사설 네트워크 피어링 명령행 인터페이스(CLI)를 사용하여 두 {{site.data.keyword.Bluemix}} 영역 간의 사설 네트워크 피어링을 구성하고 관리하십시오. 사설 네트워크 피어링은 IBM Containers(Docker 컨테이너)에서 지원됩니다. Bluemix 영역은 동일한 지역의 서로 다른 가용성 구역에 위치할 수 있거나 다른 지역에 위치할 수 있습니다. 사설 네트워크 피어링 CLI 플러그인은 Bluemix CLI 플러그인으로 사용할 수 있습니다. 
 
-사설 네트워크 피어 CLI 플러그인은 Windows, MAC 및 Linux 운영 체제에 사용 가능합니다. 사용자에게 적용 가능한 플러그인을 사용해야 합니다.
+사설 네트워크 피어링 CLI 플러그인은 Windows, MAC 및 Linux 운영 체제에 사용 가능합니다. 사용자에게 적용 가능한 플러그인을 사용해야 합니다.
 
 시작하기 전에 Bluemix 영역을 작성해야 합니다. 영역의 각 컨테이너에 다른 네트워크에서의 IP 주소가 있는지 확인하십시오. 세부사항은 [사용자 소유의 사설 IP 주소 사용](https://www.{DomainName}/docs/containers/container_security_network.html#container_cli_ips_byoip)을 참조하십시오.
 
-**참고:** Bluemix 영역으로 사설 네트워크 피어를 사용한 후 영역을 삭제해야 하는 경우, 먼저 해당 영역에서 사설 네트워크 피어 연결을 삭제하십시오. 
+**참고:** Bluemix 영역으로 사설 네트워크 피어링을 사용한 후 영역을 삭제해야 하는 경우, 먼저 해당 영역에서 사설 네트워크 피어링 연결을 삭제하십시오. 
 
 시작하려면 IBM Bluemix CLI를 설치하십시오. 세부사항은
 [Bluemix CLI](http://clis.ng.bluemix.net/ui/home.html)를 참조하십시오.
 
-## 사설 네트워크 피어 CLI 플러그인 설치
+## 사설 네트워크 피어링 CLI 플러그인 설치
 
 **참고**: 이전 버전의 플러그인이 설치되어 있는 경우 이를 삭제해야 합니다. 다음 명령을 사용하여 플러그인을 설치 제거하십시오.
 
@@ -33,9 +33,9 @@ lastupdated: "2017-01-12"
 bluemix plugin uninstall private-network-peering
 ```
 ### 로컬로 설치
-[IBM Bluemix CLI 플러그인 저장소](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins)에서 사용자의 플랫폼에 해당하는 사설 네트워크 피어 플러그인을 다운로드하십시오.
+[IBM Bluemix CLI 플러그인 저장소](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins)에서 사용자의 플랫폼에 해당하는 사설 네트워크 피어링 플러그인을 다운로드하십시오.
 
-다음 명령을 사용하여 사설 네트워크 피어 플러그인을 설치하십시오.
+다음 명령을 사용하여 사설 네트워크 피어링 플러그인을 설치하십시오.
 
 **참고**: 플러그인의 위치로 전환하거나 플러그인 위치에 대한 경로를 지정하십시오.
 
@@ -78,22 +78,22 @@ Bluemix 저장소에서 플러그인을 설치하려면 다음 단계를 따르�
 	bluemix plugin install private-network-peering -r bluemix-bx
 	```
 
-## 사설 네트워크 피어 명령의 목록
+## 사설 네트워크 피어링 명령의 목록
 다음 명령이 지원됩니다. 사용 가능한 명령의 목록을 나열하려면 `bluemix network` 명령을 사용하십시오.
 
 | 명령     | 설명                                    |
 |-------------|------------------------------------------------|
-| pnp-routers | 피어에 대해 사용 가능한 모든 라우터를 나열합니다.        |
-| pnp-create  | 사설 네트워크 피어 연결을 작성합니다.   |
-| pnp-delete  | 사설 네트워크 피어 연결을 삭제합니다.   |
-| pnp-show    | 모든 사설 네트워크 피어 연결을 나열합니다.  |
-{: caption="표 1. 사설 네트워크 피어 명령" caption-side="top"}
+| pnp-routers | 피어링에 대해 사용 가능한 모든 라우터를 나열합니다.        |
+| pnp-create  | 사설 네트워크 피어링 연결을 작성합니다.   |
+| pnp-delete  | 사설 네트워크 피어링 연결을 삭제합니다.   |
+| pnp-show    | 모든 사설 네트워크 피어링 연결을 나열합니다.  |
+{: caption="표 1. 사설 네트워크 피어링 명령" caption-side="top"}
 
 
 ### 명령 사용
 명령에 대한 도움말 정보를 보려면 `bluemix network [command] -h`를 실행하십시오.
 
-#### 피어에 대해 사용 가능한 모든 라우터 나열
+#### 피어링에 대해 사용 가능한 모든 라우터 나열
 ```
 bluemix network pnp-routers [--verbose (or -v)]
 ```
@@ -148,7 +148,7 @@ bluemix network pnp-routers [--verbose (or -v)]
 	...
 
 
-#### IP 주소를 사용하여 사설 네트워크 피어 연결 작성
+#### IP 주소를 사용하여 사설 네트워크 피어링 연결 작성
 ```
 bluemix network pnp-create <router_ip> <router_ip> <name>
 ```
@@ -157,7 +157,7 @@ bluemix network pnp-create <router_ip> <router_ip> <name>
 {: #p1}
 
 * **router_ip**: 연결하려는 두 개의 라우터의 IP 주소. `bluemix network pnp-routers` 명령을 사용하여 IP 주소를 찾을 수 있습니다.
-* **name**: 사설 네트워크 피어 연결의 이름
+* **name**: 사설 네트워크 피어링 연결의 이름
 
 ######명령 예제
 {: #ex2}
@@ -170,7 +170,7 @@ bluemix network pnp-create <router_ip> <router_ip> <name>
 	Private network peering connection 'demo' created.
 
 
-####연결 이름을 사용하여 사설 네트워크 피어 연결 작성
+####연결 이름을 사용하여 사설 네트워크 피어링 연결 작성
 
 ```
 bluemix network pnp-create -i <name>
@@ -180,7 +180,7 @@ bluemix network pnp-create -i <name>
 {: #p2}
 
 * **--interactive (-i)**(플래그): 라우터를 선택할 대화식 모드
-* **name**: 사설 네트워크 피어 연결의 이름
+* **name**: 사설 네트워크 피어링 연결의 이름
 
 ######명령 예제
 {: #ex3}
@@ -203,7 +203,7 @@ bluemix network pnp-create -i <name>
 	Private network peering connection 'demo' created.
 
 
-#### 모든 사설 네트워크 피어 연결 나열
+#### 모든 사설 네트워크 피어링 연결 나열
 ```
 bluemix network pnp-show [--verbose (or -v)]
 ```
@@ -243,7 +243,7 @@ bluemix network pnp-show [--verbose (or -v)]
 	Router2 Networks   172.25.0.0/16
 
 
-#### 사설 네트워크 피어 연결 삭제
+#### 사설 네트워크 피어링 연결 삭제
 ```
 bluemix network pnp-delete [--force (or -f)] <connection_id>
 ```

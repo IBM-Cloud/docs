@@ -1,16 +1,17 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-29"
+  years: 2016, 2017
+lastupdated: "2017-03-01"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
 
 
 <!-- {{site.data.keyword.iotinsurance_full}}  {{site.data.keyword.iotinsurance_short}}  -->
@@ -26,7 +27,7 @@ lastupdated: "2016-10-29"
 数据库名称| 更改频率| 更改原因 | 需要备份 | 注释
 ------------- | -------------| -------------| -------------| -------------
 favorites|管理|新管理员操作|是|-
-Devices|管理|添加或除去了新设备或用户|是| Transformer 通过设备提供者在内存中动态生成表。对于直接连接的网关，此表会存储设备用户。
+Devices|管理|添加或除去了新设备或用户|是| Transformer 通过设备提供者在内存中动态生成表并向其填入数据。对于直接连接的网关，此表会存储设备。
 hazardevents|随机|检测到新的保障事件|是|-
 Jscode|管理|部署了保障的新 JS 代码|是*| 管理员可以选择跳过备份并部署新版本的 JS 代码。
 Promotions|管理|添加了新升级|是|-
@@ -40,7 +41,7 @@ aggregationschedule|-|-| 否|可以重新构建。
 
 ## 创建副本 {{site.data.keyword.cloudant}} 实例
 {: #createinstance}
-使用 [{{site.data.keyword.cloudant}} 复制指示信息](https://docs.cloudant.com/replication.html)来创建副本 {{site.data.keyword.cloudant}} 实例。为了进行灾难恢复，请在非原始 {{site.data.keyword.iotinsurance_short}} 服务位置创建副本。例如，如果原始实例位于达拉斯，那么副本可位于伦敦。
+使用 [{{site.data.keyword.cloudant}} 复制指示信息 ![外部链接图标](../../icons/launch-glyph.svg)](https://docs.cloudant.com/replication.html)，创建副本 {{site.data.keyword.cloudant}} 实例。为了进行灾难恢复，请在非原始 {{site.data.keyword.iotinsurance_short}} 服务位置创建副本。例如，如果原始实例位于达拉斯，那么副本可位于伦敦。
 
 ## 找到凭证和 URL
 {: #locate_credentials}
@@ -70,7 +71,7 @@ aggregationschedule|-|-| 否|可以重新构建。
 
 8. 单击**复制数据**。  
 
-9. （可选）由于后续复制任务会覆盖先前的数据，因此请考虑将数据导出为 CSV 文件。有关指示信息，请参阅[将 Cloudant JSON 导出为 CSV、RSS 或 iCal](https://developer.ibm.com/clouddataservices/2015/09/22/export-cloudant-json-as-csv-rss-or-ical/)。
+9. （可选）由于后续复制任务会覆盖先前的数据，因此请考虑将数据导出为 CSV 文件。有关指示信息，请参阅[将 Cloudant JSON 导出为 CSV、RSS 或 iCal ![外部链接图标](../../icons/launch-glyph.svg)](https://developer.ibm.com/clouddataservices/2015/09/22/export-cloudant-json-as-csv-rss-or-ical/){: new_window}。
 
 10. 对每个数据库重复这些步骤。
 
@@ -92,26 +93,6 @@ aggregationschedule|-|-| 否|可以重新构建。
 3. 使用以下某种方法复原数据：
   - 直接将数据从 CSV 备份文件装入到主 Cloudant 实例
   - 创建复制任务，该任务将复制的数据库作为源，将原始数据库作为目标。此任务会将复制的数据移入到原始数据库。
-4. 运行以下脚本以重新创建设计文档并复原引用完整性。这些脚本位于 [GitHub 站点上的 {{site.data.keyword.iotinsurance_short}} API 示例](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/)中
+4. 运行以下脚本以重新创建设计文档并复原引用完整性。这些脚本位于 [GitHub 站点上的 {{site.data.keyword.iotinsurance_short}} API 示例 ![外部链接图标](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/){: new_window} 中。
   - iot4i-api/wearable-framework/auto-create/create.sh - 此脚本可在 {{site.data.keyword.cloudant}} 内重新创建设计文档。
   - iot4i-api/wearable-framework/health/check-relations - 此脚本可重新建立引用完整性。例如，如果发生删除了保障但仍存在用户关联的情况，那么此脚本可进行更正。
-
-
-# 相关链接
-{: #rellinks}
-
-## 教程和样本
-{: #samples}
-* [GitHub 上的样本移动应用程序代码](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## API 参考
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API 示例](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-
-## 相关链接
-{: #general}
-* [{{site.data.keyword.iot_full}}文档](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [开发人员支持论坛](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-* [堆栈溢出支持论坛](http://stackoverflow.com/questions/tagged/ibm-bluemix)

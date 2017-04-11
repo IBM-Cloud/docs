@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-08-02"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2016-08-02"
 ## 下載 C# 用戶端及資源
 {: #csharp_client_download}
 
-若要存取適用於 {{site.data.keyword.iot_short_notm}} 的 C# 用戶端及資源，請移至 GitHub 中的 [iot-csharp](https://github.com/ibm-watson-iot/iot-csharp) 儲存庫，並完成安裝指示。
+若要存取適用於 {{site.data.keyword.iot_short_notm}} 的 C# 用戶端及資源，請移至 GitHub 中的 [iot-csharp ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-csharp){: new_window} 儲存庫，並完成安裝指示。
 
 
 ## 建構子

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -14,10 +14,31 @@ lastupdated: "2017-01-17"
 
 # Configuración del mantenimiento de versiones de objetos {: #setting-up-versioning}
 
-Puede conservar versiones anteriores de los objetos automáticamente configurando el mantenimiento de versiones de objetos. Con el mantenimiento de versiones, puede ver un historial de cada objeto.
+Puede conservar versiones anteriores de los objetos automáticamente, configurando el mantenimiento de versiones de objetos. Con el mantenimiento de versiones, puede impedir sobrescrituras accidentales y recuperar versiones anteriores de los archivos.
 {: shortdesc}
 
-Al cargar una versión nueva del archivo en el contenedor principal, la versión anterior se moverá automáticamente al contenedor de copia de seguridad. Si suprime el archivo del contenedor principal, la versión más reciente se moverá automáticamente del contenedor de copia de seguridad al contenedor principal para sustituir al archivo suprimido.
+
+#### Cómo funciona el mantenimiento de versiones de objetos
+
+El mantenimiento de versiones de objetos es una forma en que el usuario almacena un objeto que puede cambiar. Con el mantenimiento de versiones, la versión actual del objeto estará siempre disponible en el contenedor de trabajo, y se realizará copia de seguridad de todas las versiones anteriores del contenedor de archivado.
+
+<dl>
+  <dt>Almacenar</dt>
+    <dd>Un objeto nuevo es un objeto que está almacenando por primera vez. Este objeto puede ser un objeto completamente nuevo, o un objeto editado que esté cargando por segunda vez.</dd>
+  <dt>Archivar</dt>
+    <dd>Con el mantenimiento de versiones, cuando se guarda en el contenedor de trabajo un objeto con el mismo nombre que un objeto existente, el objeto anterior se moverá al contenedor de archivado. Se añadirá una indicación de fecha y hora al nombre del objeto.</dd>
+  <dt>Restaurar</dt>
+    <dd>Si se suprime un objeto del contenedor de trabajo y existe una versión archivada de dicho objeto, se restaurará la versión archivada. Puede restaurar un objeto archivado, en cualquier momento.</dd>
+</dl>
+
+![Visión general del mantenimiento de versiones de objetos](images/os_versioning.png)
+
+Figura 1. Visión general del mantenimiento de versiones de objetos
+
+
+#### Guía de aprendizaje
+
+Para comprender el mantenimiento de versiones de objetos, realice la siguiente guía de aprendizaje.
 
 1. Cree un contenedor y póngale un nombre. Sustituya la variable *nombre_contenedor* por el nombre que desee dar al contenedor.
 
@@ -29,7 +50,7 @@ Al cargar una versión nueva del archivo en el contenedor principal, la versión
 2. Cree un segundo contenedor que actúe como el almacenamiento de copia de seguridad y dele un nombre.
 
     ```
-    swift post <nombre_contenedor_copia_de_seguridad>
+    swift post <nombre_contenedor_archivado>
     ```
     {: pre}
 
@@ -38,77 +59,76 @@ Al cargar una versión nueva del archivo en el contenedor principal, la versión
     Mandato Swift:
 
     ```
-    swift post <container_name> -H "X-Versions-Location:<backup_container_name>"
+    swift post <nombre_contenedor> -H "X-Versions-Location: <nombre_contenedor_archivado>"
     ```
     {: pre}
 
     Mandato cURL:
 
     ```
-    curl -i -X PUT -H "X-Auth-Token: <token>" -H "X-Versions-Location:<backup_container_name>" https://<object-storage_url>/<container_name>
+    curl -i -X PUT -H "X-Auth-Token: <token>" -H "X-Versions-Location:<nombre_contenedor_archivado>" https://<url_almacenamiento_objetos>/<nombre_contenedor>
     ```
     {: pre}
 
-4. Cargue un objeto en el contenedor principal por primera vez.
+4. Cargue un objeto en el contenedor de trabajo por primera vez.
 
     ```
     swift upload <nombre_contenedor> <object>
     ```
     {: pre}
 
-5. Realice un cambio en el objeto.
-
-6. Cargue la versión nueva del objeto en el contenedor principal.
+5. Edite el objeto y cargue la versión nueva en su contenedor de trabajo.
 
     ```
     swift upload <nombre_contenedor> <object>
     ```
     {: pre}
 
-7.  Los objetos del contenedor de copia de seguridad se cambian de nombre automáticamente con el siguiente formato: `<Length><Object_name>/<Timestamp>`.
-  <table>
-  <caption> Tabla 1. Denominación de atributos descritos</caption>
-    <tr>
-      <th> Atributo </th>
-      <th> Descripción </th>
-    </tr>
-    <tr>
-      <td> <i>Length</i> </td>
-      <td> La longitud del nombre del objeto. Es un número hexadecimal de 3 caracteres del teclado numeral. </td>
-    </tr>
-    <tr>
-      <td> <i>Object_name</i> </td>
-      <td> El nombre del objeto. </td>
-    </tr>
-    <tr>
-      <td> <i>Timestamp</i> </td>
-      <td> La indicación de fecha y hora de cuándo se cargó originalmente dicha versión del objeto. </td>
-    </tr>
-  </table>
+6.  El objeto del contenedor de archivado se cambia de nombre automáticamente con el siguiente formato: `<Length><Nombre_objeto>/<indicación de fecha y hora>`.
+    <table>
+    <caption> Tabla 1. Denominación de atributos descritos </caption>
+      <tr>
+        <th> Atributo </th>
+        <th> Descripción </th>
+      </tr>
+      <tr>
+        <td> <i>Length</i> </td>
+        <td> La longitud del nombre del objeto. Es un número hexadecimal de 3 caracteres del teclado numeral. </td>
+      </tr>
+      <tr>
+        <td> <i>Object_name</i> </td>
+        <td> El nombre del objeto. </td>
+      </tr>
+      <tr>
+        <td> <i> Indicación de fecha y hora </i> </td>
+        <td> La indicación de fecha y hora de cuándo se cargó originalmente dicha versión del objeto. </td>
+      </tr>
+    </table>
 
-
-6. Enumere los objetos del contenedor principal para ver la versión nueva del archivo.
+7. Enumere los objetos del contenedor de trabajo para ver la versión nueva del archivo.
 
     ```
     swift list --lh <nombre_contenedor>
     ```
     {: pre}
 
-7. Enumere los objetos del contenedor de copia de seguridad. Verá la versión anterior del archivo que se almacenará en este contenedor. Observe que se ha añadido una indicación de fecha y hora al archivo.
+8. Enumere los objetos del contenedor de archivado para ver la versión anterior del archivo con una indicación de fecha y hora añadida.
 
     ```
     swift list --lh <nombre_contenedor_copia_de_seguridad>
     ```
     {: pre}
 
-8. Suprima el objeto del contenedor principal. Cuando suprima el objeto, la versión más reciente del contenedor de copia de seguridad se volverá a mover automáticamente al contenedor principal.
+9. Suprima el objeto del contenedor de trabajo. La versión más reciente del contenedor de archivado se restaura automáticamente en su contenedor de trabajo.
+
+    **Nota**: Debe suprimir todas las versiones del archivo para que se suprima el objeto.
 
     ```
     swift delete <nombre_contenedor> <object>
     ```
     {: pre}
 
-9. Opcional: Inhabilitar el mantenimiento de versiones de objetos.
+10. Opcional: Inhabilitar el mantenimiento de versiones de objetos.
 
     Mandato Swift:
 

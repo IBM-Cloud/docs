@@ -1,10 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-10-20"
-
+lastupdated: "2016-03-08"
 
 ---
 
@@ -16,10 +15,14 @@ lastupdated: "2016-10-20"
 # Resolución de problemas
 {: #troubleshooting}
 
+Si tiene problemas con {{site.data.keyword.Bluemix}}, puede utilizar esta información de resolución de problemas para identificar y solucionar el problema.
 
-Si tiene problemas con {{site.data.keyword.Bluemix}}, puede llevar a cabo las tareas de resolución de problemas para determinar la acción de corrección que debe emprender.
+Inicie la sesión en la consola de {{site.data.keyword.Bluemix_notm}}:
+* Para ver el estado de los servicios en ejecución y tiempos de ejecución, pulse **Soporte > Estado** en la barra de menús.
+* Para ver notificaciones, pulse **Cuenta > Notificaciones** en la barra de menús. 
+* Para buscar documentación y foros Stack Overflow o developerWorks (dW) Answers en busca de respuestas, opara ponerse en contacto con el equipo de soporte, **Soporte > Buscar respuestas** en la barra de menús.
 
-Inicie sesión en la consola de {{site.data.keyword.Bluemix_notm}} y pulse el elemento de menú **Cuenta** desde la barra de menús. Puede ver el estado de los servicios y tiempos de ejecución y ver también las notificaciones. Además, puede seleccionar **Soporte** &gt; **Obtener ayuda**, donde realizar búsquedas en documentación y foros de respuestas de Stack Overflow o developerWorks (dW) para obtener respuestas, o póngase en contacto con el soporte.
-
-
-Si está utilizando una cuenta enlazada entre {{site.data.keyword.Bluemix_notm}} y {{site.data.keyword.BluSoftlayer}}, puede iniciar la sesión en la consola de Bluemix y pulsar el enlace **Estado** para ver el estado de los servicios en ejecución y los tiempos de ejecución. Además, puede pulsar el enlace **Soporte** desde la barra de menús para abrir el widget Soporte y, a continuación, seleccionar **Añadir incidencia** &gt; **Buscar respuestas**. También puede ir directamente a los foros de *Stack Overflow* o *developerWorks (dW) Answers* para buscar respuestas o enviar preguntas.
+Si la cuenta está enlazado entre {{site.data.keyword.Bluemix_notm}} y {{site.data.keyword.BluSoftlayer}}, inicie una sesión en la consola de Bluemix:
+* Para ver el estado de los servicios en ejecución y tiempos de ejecución, pulse el enlace **Estado**.
+* Para buscar respuestas, pulse el enlace **Soporte** en la barra de menús y luego pulse **Añadir incidencia > Buscar respuestas**.
+  También puede ir directamente a los foros de *Stack Overflow* o *developerWorks (dW) Answers* para buscar respuestas o enviar preguntas.

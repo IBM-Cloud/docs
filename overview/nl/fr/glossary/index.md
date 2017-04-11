@@ -3,8 +3,8 @@
  
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-31"
+  years: 2016, 2017
+lastupdated: "2017-03-15"
 
  
 
@@ -784,7 +784,7 @@ Voir [infrastructure sous forme de services (IaaS)](#x4585332).
 ### ID d'appli
 {: #x7909906}
 
-Identificateur global unique qui est affecté à une application mobile Bluemix. Voir aussi [identificateur global unique](#x2390455).
+Identificateur global unique qui est affecté à une application mobile Bluemix. Voir aussi [identificateur global unique](#x2390455). Voir aussi [{{site.data.keyword.appid_full}}](/docs/services/appid/index.html)
 
 ### IDE
 {: #x2115755}

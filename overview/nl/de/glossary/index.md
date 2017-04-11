@@ -3,8 +3,8 @@
  
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-31"
+  years: 2016, 2017
+lastupdated: "2017-03-15"
 
  
 
@@ -134,7 +134,7 @@ Eine Webanwendung oder Anwendung für mobile Geräte. Siehe auch [Mobile Anwendu
 ### App-ID
 {: #x7909906}
 
-Eine GUID, die einer mobilen Bluemix-Anwendung zugewiesen ist. Siehe auch [Global eindeutige ID](#x2390455).
+Eine GUID, die einer mobilen Bluemix-Anwendung zugewiesen ist. Siehe auch [Global eindeutige ID](#x2390455). Siehe auch [{{site.data.keyword.appid_full}}](/docs/services/appid/index.html)
 
 ### Anwendungsschlüssel
 {: #x7290111}
@@ -319,8 +319,7 @@ Siehe [Continuous Delivery](#x7233913).
 
 Eine anerkannte Drittorganisation oder ein anerkanntes Drittunternehmen, das die digitalen Zertifikate ausgibt. Die
 Zertifizierungsstelle überprüft standardmäßig die Identität der Einzelpersonen, denen das
-eindeutige Zertifikat gewährt wird. Siehe auch [Zwischenzertifikat](#x3753781), [Secure Sockets Layer](#x2038004), [Trusted
-Root](#x2042234).
+eindeutige Zertifikat gewährt wird. Siehe auch [Zwischenzertifikat](#x3753781), [Secure Sockets Layer](#x2038004), [Trusted Root](#x2042234).
 
 ### Zertifikatssignieranforderung (Certificate Signing Request, CSR)
 {: #x3530521}

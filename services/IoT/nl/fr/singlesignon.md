@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-05"
+  years: 2016, 2017
+lastupdated: "2017-03-13"
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -14,8 +14,10 @@ lastupdated: "2016-10-05"
 
 # Configuration et utilisation de {{site.data.keyword.ssoshort}}
 
-Le service {{site.data.keyword.ssofull}} peut être configuré afin de prendre en charge des fournisseurs d'authentification d'utilisateur alternatifs pour votre instance {{site.data.keyword.iot_full}}. {{site.data.keyword.ssoshort}} prend en charge SAML 2.0, IBM Cloud Directory, des fournisseurs sociaux (Facebook, LinkedIn, Google+) et Github.
+Le service {{site.data.keyword.ssofull}} peut être configuré afin de prendre en charge des fournisseurs d'authentification d'utilisateur alternatifs pour votre instance {{site.data.keyword.iot_full}}.
 {: .shortdesc}
+
+{{site.data.keyword.ssoshort}} prend en charge SAML 2.0, IBM Cloud Directory, des fournisseurs sociaux (Facebook, LinkedIn, Google+) et Github. Pour plus d'informations sur le service SSO dans {{site.data.keyword.Bluemix_notm}}, voir [Single Sign On - Mise en route ![ ](../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/services/SingleSignOn/index.html){:new_window}.
 
 ## Configuration de {{site.data.keyword.ssoshort}}
 

@@ -33,7 +33,7 @@ lastupdated: "2017-01-09"
 |现有 IBM 标识 | 如果您已经具有 IBM 标识，请使用您用于其他 IBM 产品和服务的现有凭证来注册 {{site.data.keyword.Bluemix_notm}}。注册时，您需要输入电话号码。 |
 |新 IBM 标识 | 如果您没有 IBM 标识，那么您可以选择创建一个。有了 IBM 标识，您就可以使用一个登录用户名登录您所使用的所有 IBM 产品和服务，包括 {{site.data.keyword.Bluemix_notm}}。您需要输入个人信息，包括姓和名、电话号码和新凭证的密码。使用其他 IBM 产品与服务时，您可以使用此 IBM 标识进行登录。  |
 |联合 ID | 如果您的公司已请求从您的公司域向 IBM 注册用户凭证，那么您可以使用已用于您公司登录的凭证，来注册 {{site.data.keyword.Bluemix_notm}}。注册时，您需要输入电话号码。 |
-{:caption="Table 1. Sign up methods" caption-side="top"}
+{:caption="表 1. 注册方法" caption-side="top"}
 
 ## 设置通知
 {: #notifications}

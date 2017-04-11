@@ -1,17 +1,16 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-29"
-
+  years: 2016, 2017
+lastupdated: "2017-03-10"
 ---
 
-
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Mobile App verwenden
 {: #iot4e_using_mobile}
@@ -39,7 +38,7 @@ Sie können die mobile App für iOS- oder Android-Mobilgeräte abrufen.
 
 Führen Sie die folgenden Tasks aus, um eine Verbindung zwischen der mobilen App und Ihrer Umgebung herzustellen und Ihre Appliances zu registrieren:
 
-1. Öffnen Sie Ihre {{site.data.keyword.itoelectronics}}-Starter-App. Anweisungen hierzu finden Sie im Thema zum [Öffnen der Starter-App](iot4ecreatingappliances.html#iot4e_openAppMain).
+1. Öffnen Sie Ihre {{site.data.keyword.iotelectronics}}-Starter-App. Anweisungen hierzu finden Sie im Thema zum [Öffnen der Starter-App](iot4ecreatingappliances.html#iot4e_openAppMain).
 
 2. Wählen Sie **Verbundene Appliances über Fernzugriff steuern** aus.
 

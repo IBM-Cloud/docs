@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-08"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2016-09-08"
 ## 대시보드를 사용하여 디바이스 관리 요청 시작
 {: #initiating-dm-dashboard}
 
-요청은 디바이스 페이지의 **조치** 탭으로 이동하여 대시보드를 통해 시작될 수 있습니다. **조치 시작** 단추를 누르면 조치를 선택하고 조치가 수행될 디바이스를 선정하며 선택된 조치에서 지원하는 추가 매개변수를 지정할 수 있는 대화 상자가 열립니다. 
+대시보드를 통해 요청을 시작할 수 있습니다. 디바이스 페이지의 **조치** 탭을 사용하십시오. **조치 시작**을 클릭하여 조치를 선택하고, 디바이스를 선택하고, 선택한 조치에서 지원하는 추가 매개변수를 지정하십시오. 
 
 ## REST API를 사용하여 디바이스 관리 요청 시작
 {: #initiating-dm-api}
@@ -31,7 +31,7 @@ lastupdated: "2016-09-08"
 
 `POST https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
-디바이스 관리 요청의 본문에 대한 자세한 정보는 [API 문서](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html)를 참조하십시오. 
+디바이스 관리 요청의 본문에 대한 자세한 정보는 [API 문서 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}를 참조하십시오. 
 
 ## 디바이스 조치
 {: #device-actions}
@@ -178,7 +178,7 @@ Topic: iotdevice-1/response
 ## 펌웨어 조치
 {: #firmware-actions}
 
-현재 디바이스에 있다고 알려진 펌웨어 레벨은 `deviceInfo.fwVersion` 속성에 저장되어 있습니다. `mgmt.firmware` 속성은 펌웨어 업데이트를 수행하고 해당 상태를 관찰하는 데 사용됩니다. 
+디바이스에 있다고 알려진 펌웨어 레벨이 `deviceInfo.fwVersion` 속성에 저장되어 있습니다. `mgmt.firmware` 속성은 펌웨어 업데이트를 수행하고 해당 상태를 관찰하는 데 사용됩니다. 
 
 **중요:** 관리 디바이스는 펌웨어 조치를 지원하기 위해 `mgmt.firmware` 속성의 관찰을 지원해야 합니다. 
 
@@ -190,8 +190,8 @@ Topic: iotdevice-1/response
 
  |값 |상태  | 의미 |
  |:---|:---|:---|
- |0  | 유휴        | 디바이스가 현재 펌웨어를 다운로드하고 있지 않습니다.  |  
- |1  | 다운로드 중 | 디바이스가 현재 펌웨어를 다운로드 중입니다.  |
+ |0  | 유휴        | 디바이스가 펌웨어를 다운로드하고 있지 않습니다.  |  
+ |1  | 다운로드 중 | 디바이스가 펌웨어를 다운로드 중입니다.  |
  |2  | 다운로드됨  | 디바이스가 펌웨어 업데이트를 성공적으로 다운로드했으며 이를 설치할 준비가 되었습니다.  |
 
 
@@ -219,8 +219,8 @@ REST API를 사용하여 펌웨어 다운로드를 시작하려면 다음에 POS
 다음 정보가 제공됩니다. 
 
 - 조치 `firmware/download`
-- 펌웨어 이미지의 URI
 - 이미지를 수신할 디바이스의 목록(최대 5000개 디바이스)
+- 펌웨어 이미지에 대한 URI(선택사항)
 - 이미지를 유효성 검증하기 위한 검증 문자열(선택사항)
 - 펌웨어 이름(선택사항)
 - 펌웨어 버전(선택사항)
@@ -252,10 +252,13 @@ REST API를 사용하여 펌웨어 다운로드를 시작하려면 다음에 POS
 }
 ```
 
+선택 매개변수가 지정되지 않은 경우 다음 프로세스의 첫 번째 단계는 건너뜁니다. 
+
 {{site.data.keyword.iot_short_notm}}의 디바이스 관리 서버는 디바이스 관리 프로토콜을 사용하여 디바이스에 요청을 전송하며, 디바이스는 펌웨어 다운로드를 시작합니다. 다운로드 프로세스는 다음 단계로 구성됩니다. 
 
 1. 펌웨어 세부사항 업데이트 요청은 `iotdm-1/device/update` 주제에서 전송됩니다. 업데이트 요청은 요청된 펌웨어가 현재 설치된 펌웨어와 다른지 여부를 디바이스가 유효성 검증할 수 있도록 합니다. 차이가 있으면 `rc` 매개변수를 `204`로 설정하십시오. 이는 `Changed` 상태로 변환됩니다.
-다음 예제는 이전에 전송된 예제 펌웨어 다운로드 요청에 대해 예상되는 메시지와 차이가 발견될 때 전송되어야 하는 응답을 표시합니다. 
+  
+다음 예에서는 이전에 전송된 예제 펌웨어 다운로드 요청에 대해 예상되는 메시지와 차이점이 발견되는 경우 어떤 응답이 전송되는지 표시합니다. 
 ```
    Incoming request from the {{site.data.keyword.iot_short_notm}}:
 
@@ -420,12 +423,12 @@ Message:
 - 펌웨어 다운로드 시도에 실패하면 `rc` 매개변수를 `500`으로 설정하고 선택사항으로 `message` 매개변수를 이에 맞게 설정하십시오. 
 - 펌웨어 다운로드가 지원되지 않으면 `rc` 매개변수를 `500`으로 설정하고 선택사항으로 `message` 매개변수를 이에 맞게 설정하십시오. 
 - 디바이스가 실행 요청을 수신하면 `mgmt.firmware.state` 속성을 `0`(유휴)에서 `1`(다운로드 중)로 변경하십시오. 
-- 다운로드가 성공적으로 완료되면 `mgmt.firmware.state` 속성을 `2`(다운로드됨)로 설정하십시오. 
+- 다운로드가 완료되면 `mgmt.firmware.state` 속성을 `2`(다운로드됨)로 설정하십시오. 
 - 다운로드 중에 오류가 발생하면 `mgmt.firmware.state` 속성을 `0`(유휴)으로 설정하고 `mgmt.firmware.updateStatus` 속성을 다음 오류 상태 값 중 하나로 설정하십시오. 
   - 2(메모리 부족)
   - 3(연결 끊김)
   - 6(올바르지 않은 URI)
-- 펌웨어 검증기가 설정된 경우, 디바이스는 펌웨어 이미지를 검증하려고 시도합니다. 이미지 검증에 실패하면 `mgmt.firmware.state` 속성을 `0`(유휴)로 설정하고 `mgmt.firmware.updateStatus` 속성을 오류 상태 값 `4`(검증 실패)로 설정하십시오. 
+- 펌웨어 검사기가 설정된 경우, 디바이스는 펌웨어 이미지를 검증하려고 시도합니다. 이미지 검증에 실패하면 `mgmt.firmware.state` 속성을 `0`(유휴)로 설정하고 `mgmt.firmware.updateStatus` 속성을 오류 상태 값 `4`(검증 실패)로 설정하십시오. 
 
 ## 펌웨어 조치 - 업데이트
 {: #firmware-actions-update}
@@ -438,6 +441,10 @@ Message:
 
 - 조치 `firmware/update`
 - 이미지를 수신하기 위한 디바이스의 목록(모두 동일한 디바이스 유형임). 
+- 펌웨어 이미지에 대한 URI(선택사항)
+- 이미지를 유효성 검증하기 위한 검증 문자열(선택사항)
+- 펌웨어 이름(선택사항)
+- 펌웨어 버전(선택사항)
 
 다음 코드는 예제 요청입니다. 
 
@@ -452,6 +459,8 @@ Message:
    }
 
 ```
+
+선택 매개변수가 지정되어 있는 경우 디바이스에서 수신하는 첫 번째 메시지는 디바이스 업데이트 요청입니다. 이 디바이스 업데이트 요청은 펌웨어 다운로드 요청의 첫 번째 메시지와 유사합니다. 
 
 펌웨어 업데이트의 상태를 모니터하기 위해 {{site.data.keyword.iot_short_notm}}은 우선 `iotdm-1/observe` 주제에서 관찰자 요청을 트리거합니다. 디바이스가 업데이트 프로세스를 시작할 준비가 된 경우, 이는 `rc` 매개변수가 `200`으로 설정되고 `mgmt.firmware.state` 속성이 `0`으로 설정되며 `mgmt.firmware.updateStatus` 속성이 `0`으로 설정된 응답을 전송합니다. 
 
@@ -521,7 +530,7 @@ Message:
 ```
 
 펌웨어 업데이트 요청을 완료하기 위해, 디바이스는 해당 `iotdevice-1/notify`-topic에서 공개된 상태 메시지를 사용하여 해당 업데이트 상태를 {{site.data.keyword.iot_short_notm}}에 보고합니다.
-펌웨어 업데이트가 완료되면 `mgmt.firmware.updateStatus` 속성이 `0`(성공)으로 설정되며 `mgmt.firmware.state` 속성이 `0`(유휴)으로 설정됩니다. 그리고 다운로드된 펌웨어 이미지는 디바이스에서 삭제될 수 있으며, `deviceInfo.fwVersion` 속성은 `mgmt.firmware.version` 속성의 값으로 설정됩니다. 
+펌웨어 업데이트가 완료되면 `mgmt.firmware.updateStatus` 속성이 `0`(성공)으로 설정되며 `mgmt.firmware.state` 속성이 `0`(유휴)으로 설정됩니다. 그리고 다운로드된 펌웨어 이미지를 디바이스에서 삭제할 수 있으며 `deviceInfo.fwVersion` 속성이 `mgmt.firmware.version` 속성 값으로 설정됩니다. 
 
 다음 코드는 알림 메시지의 예제를 제공합니다. 
 
@@ -589,3 +598,17 @@ Message:
 
 
 **중요:** `mgmt.firmware`에 대한 현재 관찰이 존재할 때 단일 알림 메시지만 전송될 수 있도록 `mgmt.firmware` 속성의 일부로서 나열된 모든 매개변수를 동시에 설정해야 합니다. 
+
+## 디바이스 조치 및 펌웨어 조치에 대한 레시피
+
+다음 레시피는 디바이스 및 펌웨어 조치를 수행하는 데 필요한 전체 플로우를 예시합니다. 
+
+- [WIoT Platform에서 디바이스 관리 – 롤백 및 팩토리 재설정 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/){: new_window}
+
+- [디바이스 시작 펌웨어 업데이트 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-device-initiated-firmware-upgrade/){: new_window}
+
+- [플랫폼 시작 펌웨어 업데이트 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/){: new_window}
+
+- [백그라운드 실행의 플랫폼 시작 펌웨어 업데이트 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/){: new_window}
+
+- [펌웨어 롤백 및 팩토리 재설정 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/){: new_window}

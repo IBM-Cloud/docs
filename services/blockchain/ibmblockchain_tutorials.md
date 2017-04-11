@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-11-08"
 ---
 
 {:new_window: target="_blank"}
@@ -13,8 +13,7 @@ copyright:
 
 # Sample apps and tutorials
 {: #1stanchor}
-Last updated: 08 November 2016
-{: .last-updated}
+
 
 The following samples demonstrate how applications and chaincode function on a test IBM Blockchain network. To learn more about the Hyperledger Fabric v0.6 code, which underpins IBM Blockchain networks, visit the [Fabric Docs](https://github.com/hyperledger/fabric/tree/v0.6/docs) for the Linux Foundation's Hyperledger  Project.  
 {:shortdesc}

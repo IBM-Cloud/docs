@@ -26,7 +26,7 @@ years: 2015, 2017
 
 若要在 Chrome Apps and Extensions 中安裝 Javascript SDK，請完成下列步驟：
 
-請從 [Bluemix Web Push SDK ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master "外部鏈結圖示"){: new_window}，下載 `BMSPushSDK.js` 及 `manifest_Chrome_Ext.json`（適用於 Chrome Extensions）或 `manifest_Chrome_App.json`（適用於 Chrome Apps）。
+請從 [Bluemix Web Push SDK ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master){: new_window}，下載 `BMSPushSDK.js` 及 `manifest_Chrome_Ext.json`（適用於 Chrome Extensions）或 `manifest_Chrome_App.json`（適用於 Chrome Apps）。
 
 
 

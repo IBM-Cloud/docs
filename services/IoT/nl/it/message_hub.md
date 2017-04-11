@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-29"
+  years: 2016, 2017
+lastupdated: "2017-02-17"
 
 ---
 
@@ -22,7 +22,7 @@ La connessione di {{site.data.keyword.messagehub_full}} a {{site.data.keyword.io
 
 Prima del collegamento di {{site.data.keyword.messagehub}} al tuo servizio {{site.data.keyword.iot_short}} , completa le seguenti attività:
 
-- Configura {{site.data.keyword.messagehub}} nello stesso spazio {{site.data.keyword.Bluemix_notm}} del tuo {{site.data.keyword.iot_short_notm}} utilizzando il catalogo {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni su {{site.data.keyword.messagehub}}, consulta [Getting started with {{site.data.keyword.messagehub}}](https://console.{DomainName}/docs/services/MessageHub/index.html){: new_window}.
+- Configura {{site.data.keyword.messagehub}} nello stesso spazio {{site.data.keyword.Bluemix_notm}} del tuo {{site.data.keyword.iot_short_notm}} utilizzando il catalogo {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni su {{site.data.keyword.messagehub}}, consulta [Getting started with {{site.data.keyword.messagehub}}](https://console.{DomainName}/docs/services/MessageHub/index.html).
 
 - Assicurati di disporre dei privilegi da sviluppatore nell'organizzazione {{site.data.keyword.Bluemix_notm}} e di essere registrato tramite {{site.data.keyword.Bluemix_notm}}. Se non sei registrato con {{site.data.keyword.Bluemix_notm}} o non disponi dei privilegi da sviluppatore in questa organizzazione {{site.data.keyword.Bluemix_notm}}, non sarai in grado di autorizzare il bind di {{site.data.keyword.messagehub}} e di {{site.data.keyword.iot_short_notm}}.
 

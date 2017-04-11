@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-18"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -15,13 +15,13 @@ lastupdated: "2016-10-18"
 # 適用於裝置開發人員的 Java
 {: #java}
 
-您可以使用 Java 來建置及自訂裝置，在 {{site.data.keyword.iot_full}} 上與組織互動。我們提供了 {{site.data.keyword.iot_short_notm}} 的 Java 用戶端程式庫、文件及範例，以協助您開始進行裝置開發。
+您可以使用 Java™ 來建置及自訂裝置，在 {{site.data.keyword.iot_full}} 上與組織互動。我們提供了 {{site.data.keyword.iot_short_notm}} 的 Java 用戶端程式庫、文件及範例，以協助您開始進行裝置開發。
 {:shortdesc}
 
 ## 下載 Java 用戶端及資源
 {: #java_client_download}
 
-若要存取適用於 {{site.data.keyword.iot_short_notm}} 的 Java 用戶端程式庫及範例，請移至 GitHub 中的 [iot-java](https://github.com/ibm-watson-iot/iot-java) 儲存庫，並完成安裝指示。
+若要存取適用於 {{site.data.keyword.iot_short_notm}} 的 Java 用戶端程式庫及範例，請移至 GitHub 中的 [iot-java ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/iot-java){: new_window} 儲存庫，並完成安裝指示。
 
 ## 建構子
 {: #constructor}
@@ -40,6 +40,7 @@ lastupdated: "2016-10-18"
 |`MaxInflightMessages`  |設定連線的進行中訊息數目上限。預設值為 100。|
 |`Automatic-Reconnect`  |true 或 false 值，要將處於斷線狀態的裝置自動重新連接至 {{site.data.keyword.iot_short_notm}} 時為必要項目。預設值為 false。|
 |`Disconnected-Buffer-Size`|用戶端斷線時，可以儲存在記憶體中的訊息數目上限。預設值為 5000。|
+|`WebSocket`|true 或 false 值，要使用與 {{site.data.keyword.iot_short_notm}} 的 Websocket 連線時為必要項目。預設值為 false。|
 
 **附註：**若要在可延續訂閱模式中連接裝置，請將 `clean-session` 設為 `false`。如需全新階段作業的相關資訊，請參閱 [MQTT 文件](../../reference/mqtt/index.html#subscription-buffers-and-clean-session)的「訂閱緩衝區及全新階段作業」一節。
 
@@ -271,7 +272,7 @@ status = myClient.publishEvent("load", data, "text", 2);
 **附註：**在前一個程式碼範例中，事件的有效負載必須為字串格式。
 
 
-任何 XML 資料都可以轉換成字串格式並進行發佈，如下所示：
+任何 XML 資料都可以轉換為字串格式並進行發佈，如下所示：
 
 ```
 status = myClient.publishEvent("load", xmlConvertedString, "xml", 2);
@@ -406,4 +407,4 @@ public class RegisteredDeviceCommandSubscribe {
 ## 範例
 {: #samples}
 
-如需使用「{{site.data.keyword.iot_short_notm}} Java 用戶端」程式庫開發之裝置及裝置管理範例的清單，請參閱 [iot-device-samples GitHub 儲存庫](https://github.com/ibm-messaging/iot-device-samples/tree/master/java)。
+如需使用 {{site.data.keyword.iot_short_notm}} Java 用戶端程式庫開發之裝置及裝置管理範例的清單，請參閱 [iot-device-samples GitHub 儲存庫 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/iot-device-samples/tree/master/java){: new_window}。

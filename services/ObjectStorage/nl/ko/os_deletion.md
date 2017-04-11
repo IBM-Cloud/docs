@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -40,14 +40,14 @@ lastupdated: "2017-01-17"
 
 3. 다음 명령을 실행하여 파일을 삭제하십시오. 
   ```
-swift delete <container_name> <file_name>
-```
+  swift delete <container_name> <file_name>
+  ```
   {: pre}
 
 4. 컨테이너를 삭제하려면 다음 명령을 실행하십시오. 
   ```
-    swift delete <container_name>
-    ```
+  swift delete <container_name>
+  ```
   {: pre}
 
 
@@ -60,7 +60,7 @@ swift delete <container_name> <file_name>
 
 `X-Delete-At` 헤더는 오브젝트를 삭제하는 epoch 시간을 나타내는 정수를 취합니다. `X-Delete_After` 헤더는 오브젝트가 삭제된 후의 시간(초)을 나타내는 정수를 취합니다 
 
-**참고:** 표시된 정확한 시간에 오브젝트가 실제로 삭제되지 않을 수 있습니다. 그러나 오브젝트는 사실상 지정된 시간에 만료됩니다. 해당 시간에는 오브젝트에 더 이상 접근할 수 없습니다. 실제 삭제는 Swift 클러스터에서 구성된 swift-object-expirer 디먼이 다음번에 실행될 때 발생합니다. 
+**참고:** 표시된 정확한 시간에 오브젝트가 실제로 삭제되지 않을 수 있습니다. 그러나 오브젝트는 지정된 시간에 만료됩니다. 해당 시간에는 오브젝트에 더 이상 접근할 수 없습니다. 실제 삭제는 Swift 클러스터에서 구성된 swift-object-expirer 디먼이 다음번에 실행될 때 발생합니다. 
 
 #### Swift 명령 사용 방법:
 

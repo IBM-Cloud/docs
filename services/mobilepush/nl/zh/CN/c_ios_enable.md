@@ -12,7 +12,7 @@ copyright:
 
 #让 iOS 应用程序具有发送 {{site.data.keyword.mobilepushshort}} 的能力
 {: #enable-push-ios-notifications}
-上次更新时间：2017 年 1 月 16 日
+上次更新时间：2017 年 2 月 14 日
 {: .last-updated}
 
 您可以让 iOS 应用程序具有对您的设备发送 {{site.data.keyword.mobilepushshort}} 的能力。
@@ -23,7 +23,7 @@ copyright:
 
 对于现有 Xcode 项目，可以使用 CocoaPods 依赖关系管理工具来设置 Bluemix Mobile 服务客户机 SDK。替代方法是手动安装该 SDK。
 
-要查看 Swift Push 自述文件，请转至[自述文件 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master "外部链接图标"){: new_window}。
+要查看 Swift Push 自述文件，请转至[自述文件 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master){: new_window}。
 
 
 
@@ -36,7 +36,7 @@ copyright:
 3. 在生成的 Podfile 中，添加所需的 SDK 依赖关系。复制以下 Podfile。
    
 	```
-	source 'https://github.com/CocoaPods/Specs.git'
+		source 'https://github.com/CocoaPods/Specs.git'
 	// Copy the following list as is and remove the dependencies you do not need.
 	use_frameworks!
 	target 'MyApp' do
@@ -63,7 +63,7 @@ $ open App.xcworkspace
 ##使用 Carthage 添加框架
 {: #carthage}
 
-使用 [Carthage ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos "外部链接图标"){: new_window}，向项目添加框架。请注意，Xcode8 中不支持 Carthage。
+使用 [Carthage ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos){: new_window}，向项目添加框架。请注意，Xcode8 中不支持 Carthage。
 
 1. 将 `BMSPush` 框架添加到 Cartfile 中：
 ```
@@ -71,7 +71,7 @@ github "github "ibm-bluemix-mobile-services/bms-clientsdk-swift-push" ~> 1.0"
 ```
 	{: codeblock}
 2. 运行 `carthage update` 命令。构建完成时，请将 `BMSPush.framework`、`BMSCore.framework` 和 `BMSAnalyticsAPI.framework` 拖动到 Xcode 项目中。
-3. 遵循 [Carthage ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos "外部链接图标"){: new_window} 站点上的指示，完成集成。
+3. 遵循 [Carthage ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos){: new_window} 站点上的指示，完成集成。
 
 ##设置 iOS SDK
 {: ios-sdk}
@@ -90,18 +90,19 @@ didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 {: using-imported-frameworks}
 
 在代码中引用 SDK。确保满足以下先决条件。
-	- iOS 8.0 或更高版本	
-	- Xcode 7
+
+- iOS 8.0 或更高版本	
+- Xcode 7
 
 针对相关头编写 `#import` 伪指令，例如：
-	```
-	//swift
-	import BMSCore
-	import BMSPush
-	```
+```
+//swift
+import BMSCore
+import BMSPush
+```
 		{: codeblock}
 
-要阅读 Swift Push 自述文件，请参阅[自述文件 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master "外部链接图标"){: new_window}。
+要阅读 Swift Push 自述文件，请参阅[自述文件 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master){: new_window}。
 
 **注**：使用 CocoaPods 命令 `pod install` 或 `pod update` 更新 Pods 项目可能覆盖 Bluemix Mobile 服务源文件夹。如果要保留原始文件的定制版本，请确保在发出其中某个命令之前已备份这些文件。
 
@@ -111,7 +112,7 @@ didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
 转至 **Xcode > 构建设置 > 构建选项**，然后将**启用位代码**设置为**否**。
 
-**注意**：自 iOS 9 起，对应用程序传输安全性 (ATS) 功能的更改可能会影响您处理认证过程的方式。以下博客帖子描述相关更改的更多信息：[iOS 9 中的 ATS 和 Bitcode ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/mobilefirstplatform/2015/09/09/ats-and-bitcode-in-ios9/ "外部链接图标"){: new_window} 和[立即将 iOS 9 应用程序连接到 Bluemix![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/ "外部链接图标"){: new_window}。
+**注意**：自 iOS 9 起，对应用程序传输安全性 (ATS) 功能的更改可能会影响您处理认证过程的方式。以下博客帖子描述相关更改的更多信息：[iOS 9 中的 ATS 和 Bitcode ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/mobilefirstplatform/2015/09/09/ats-and-bitcode-in-ios9/){: new_window} 和[立即将 iOS 9 应用程序连接到 Bluemix![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/){: new_window}。
 
 ## 为 iOS 应用程序初始化推送 SDK
 {: #enable-push-ios-notifications-initialize}
@@ -160,7 +161,7 @@ myBMSClient.initialize(bluemixRegion: "Location where your app is hosted.")
 {: initializing-the-client-Push-SDK}
 
 ```
-//Initialize client Push SDK for Swift
+	//Initialize client Push SDK for Swift
 let push = BMSPushClient.sharedInstance
 push.initializeWithAppGUID("appGUID", clientSecret:"clientSecret")
 ```
@@ -206,7 +207,7 @@ func application (_application: UIApplication, didRegisterForRemoteNotifications
             print( "Error during device registration \n  - status code: \(statusCode) \n Error :\(error) \n")
         }
     }
-}
+  }
 ```
 	{: codeblock}
 
@@ -230,7 +231,7 @@ func application(_ application: UIApplication, didReceiveRemoteNotification user
 要监视通知的当前状态，请将以下 Swift 方法添加到应用程序的应用程序代表中。
 
 ```
-// Send notification status when app is opened by clicking the notifications
+	// Send notification status when app is opened by clicking the notifications
 func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
  let push =  BMSPushClient.sharedInstance
  let respJson = (userInfo as NSDictionary).value(forKey: "payload") as! String
@@ -245,7 +246,7 @@ func application(_ application: UIApplication, didReceiveRemoteNotification user
 	{: codeblock}
 
 ```
-// Send notification status when the app is in background mode.
+	// Send notification status when the app is in background mode.
 func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
  let payLoad = ((((userInfo as NSDictionary).value(forKey: "aps") as! NSDictionary).value(forKey: "alert") as! NSDictionary).value(forKey: "body") as! NSString)
  self.showAlert(title: "Recieved Push notifications", message: payLoad)
@@ -297,18 +298,18 @@ func application(_ application: UIApplication, didReceiveRemoteNotification user
 要启用交互式通知，请使用以下代码：
 
 ```
-// This defines the button action.
+	// This defines the button action.
 let actionOne = BMSPushNotificationAction(identifierName: "ACCEPT", buttonTitle: "Accept", isAuthenticationRequired: false, defineActivationMode: UIUserNotificationActivationMode.background)
  let actionTwo = BMSPushNotificationAction(identifierName: "DECLINE", buttonTitle: "Decline", isAuthenticationRequired: false, defineActivationMode: UIUserNotificationActivationMode.background)
 ```
 	{: codeblock}
 ```
-// This defines category for the buttons
+	// This defines category for the buttons
 let category = BMSPushNotificationActionCategory(identifierName: "category", buttonActions: [actionOne, actionTwo])
 ```
 	{: codeblock}
 ```
-// This updates the registration to include the buttonsPass the defined category into iOS BMSPushClientOptions
+	// This updates the registration to include the buttonsPass the defined category into iOS BMSPushClientOptions
 let notificationOptions = BMSPushClientOptions(categoryName: [category])
 let push = BMSPushClient.sharedInstance
 push.initializeWithAppGUID(appGUID: "APP-GUID-HERE", clientSecret:"CLIENT-SECRET-HERE", options: notificationOptions)
@@ -330,4 +331,6 @@ push.initializeWithAppGUID(appGUID: "APP-GUID-HERE", clientSecret:"CLIENT-SECRET
 
 成功设置基本通知后，可以配置基于标记的通知和高级选项。
 
-将这些 Push Notifications 服务功能添加到应用程序中。要使用基于标记的通知，请参阅[基于标记的通知](c_tag_basednotifications.html)。要使用高级通知选项，请参阅[启用高级推送通知](t_advance_badge_sound_payload.html)。
+将这些 Push Notifications 服务功能添加到应用程序中。
+要使用基于标记的通知，请参阅[基于标记的通知](c_tag_basednotifications.html)。
+要使用高级通知选项，请参阅[启用高级推送通知](t_advance_badge_sound_payload.html)。

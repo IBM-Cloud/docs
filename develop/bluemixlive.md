@@ -3,8 +3,8 @@
 
 
 copyright:
-  years: 2015，2016
-lastupdated: "2016-10-19"
+  years: 2015，2017
+lastupdated: "2017-3-10"
 
 ---
 
@@ -17,31 +17,46 @@ lastupdated: "2016-10-19"
 {: #live-sync}
 
  
-If you are building a Node.js application, you can use {{site.data.keyword.Bluemix}} Live Sync to quickly update the application instance on {{site.data.keyword.Bluemix_notm}} and develop as you would on the desktop without redeploying.   
+If you are building a Node.js application, you can use {{site.data.keyword.Bluemix}} Live Sync to quickly update the application instance on {{site.data.keyword.Bluemix_notm}} and develop without manually redeploying.   
 {: shortdesc}
 
-When you make a change, you can see that change in your running {{site.data.keyword.Bluemix_notm}} application immediately. {{site.data.keyword.Bluemix_notm}} Live Sync works from both the command line and in the Web IDE. You can debug applications written in Node.js by using {{site.data.keyword.Bluemix_notm}} Live Sync.  
+When you make a change, you can see that change in your running {{site.data.keyword.Bluemix_notm}} application immediately. {{site.data.keyword.Bluemix_notm}} Live Sync works 
+<!--from both the command line and -->
+in the Eclipse Orion Web IDE (Web IDE). You can debug applications written in Node.js by using {{site.data.keyword.Bluemix_notm}} Live Sync.  
 
-{{site.data.keyword.Bluemix_notm}} Live Sync consists of three features.
+{{site.data.keyword.Bluemix_notm}} Live Sync consists of two features.
+<!--three -->
 
+<!--
 **Desktop Sync**  
-    You can synchronize any desktop directory tree with a cloud-based project workspace similar to the way Dropbox works. The Web IDE directly edits the same cloud-based workspace, so both stay in sync. Desktop Sync works for any kind of application. To use Desktop Sync, you need to download and install the BL command line interface.  
+
+You can synchronize any desktop directory tree with a cloud-based project workspace similar to the way Dropbox works. The Web IDE directly edits the same cloud-based workspace, so both stay in sync. Desktop Sync works for any kind of application. To use Desktop Sync, you need to download and install the BL command line interface.  
+-->
 
 **Live Edit**
-    You can make changes to a Node.js application running in {{site.data.keyword.Bluemix_notm}} and test them in your browser right away. Any changes that you make in a synchronized desktop directory or in the Web IDE are propagated to the application’s file system immediately.  
+
+You can make changes to a Node.js application running in {{site.data.keyword.Bluemix_notm}} and test them in your browser right away. Any changes that you make in the Web IDE are propagated to the application’s file system immediately.  
 
 **Debug**  
-    While a Node.js application is in Live Edit mode, you can shell into it and debug it. You can edit code dynamically, insert breakpoints, step through code, restart the runtime, and more using the Node Inspector debugger.  
 
-You can use Desktop Sync to keep your desktop workspace in sync with the cloud-based project workspace that you edit directly with the Web IDE. You can use Live Edit to propagate changes in your cloud-based project workspace to your running application. You can use one or both of these features. And if you use Desktop Sync or Live Edit to put your application into Live Edit mode, you can debug your running application.
+While a Node.js application is in Live Edit mode, you can shell into it and debug it. You can edit code dynamically, insert breakpoints, step through code, restart the runtime, and more using the Node Inspector debugger.  
 
-The Bluemix Live Sync process is illustrated in the following diagram.
+<!-- You can use Desktop Sync to keep your desktop workspace in sync with the cloud-based project workspace that you edit directly with the Web IDE. -->
 
-Figure 1. The Bluemix Live Sync process
+You can use Live Edit to propagate changes in your cloud-based project workspace to your running application. 
+<!-- You can use one or both of these features. And if you use Desktop Sync or -->
+If you use Live Edit to put your application into Live Edit mode, you can debug your running application.
+
+
+The Bluemix Live Sync process is illustrated in the following diagram.    
+
+Figure 1. The Bluemix Live Sync process    
+
 ![Image of the Bluemix Live Sync process](images/bluemix-live-sync.png)
 
 If you are developing a Java application that is running on Liberty, you can debug remotely by using the [Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools).
 
+<!--
 ##Desktop Sync {: #desktop-sync}
 
 You can use the Desktop Sync feature of Bluemix Live Sync to quickly update the application instance on {{site.data.keyword.Bluemix_notm}} and develop as you would on your desktop.
@@ -58,7 +73,7 @@ Desktop Sync has the following considerations:
 For more details on the commands, see [Bluemix Live Sync (bl) commands](bluemixlive.html#bl-commands).
 
 <ol>
-<li>Sign up for a free <a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services</a> account.</li>
+<li>Sign up for a free <a class="xref" href="https://hub.jazz.net/" target="_blank" title="(Opens in a new tab or window)">Bluemix DevOps Services account<img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a>.</li>
 <li>Download and install the {{site.data.keyword.Bluemix_notm}} Live Sync bl command line.   
 <p>
 <a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/bl_gs_icons_windows_b.svg" alt="Download the Windows bl command line button" /> </a>
@@ -70,7 +85,7 @@ For more details on the commands, see [Bluemix Live Sync (bl) commands](bluemixl
 <li>On a command line, log in using the following command. You will be prompted for your user ID and password.  
 <pre class="codeblock">bl login</pre>
 
-<strong>Note:</strong> Your user ID for DevOps Services can be either an IBMid or a federated ID (corporate ID). If you use federated authentication, to log in to your Bluemix Live Sync command-line client, you must use a personal access token instead of a password. If you don't use federated authentication, your IBMid and password work with all clients. For more information about creating a personal access token, see <a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services"> What's federated authentication and how does it affect me?</a>
+<strong>Note:</strong> Your user ID for DevOps Services can be either an IBMid or a federated ID (corporate ID). If you use federated authentication, to log in to your Bluemix Live Sync command-line client, you must use a personal access token instead of a password. If you don't use federated authentication, your IBMid and password work with all clients. For more information about creating a personal access token, see <a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" title="(Opens in a new tab or window)">What's federated authentication and how does it affect me?<img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a>.
 </li>
 
 <li>See the list of projects that are available for {{site.data.keyword.Bluemix_notm}} Live Sync synchronization by entering the following command:
@@ -78,8 +93,8 @@ For more details on the commands, see [Bluemix Live Sync (bl) commands](bluemixl
 <p>Find the project name in the list that matches your application. The project name has the format of your <i>alias</i> | <i>your application name</i>. </p>
 </li>
 <li>Synchronize your local environment with your project on {{site.data.keyword.Bluemix_notm}} by entering the following command. If you are the owner of the project, you only need to specify your-application-name for projectName.
-<pre class="codeblock">bl sync projectName -d localDirectory --verbose</pre>
-<p>This command continues to run (and synchronization continues) until you enter a "q". The --verbose option displays the logging and status information. If any of your arguments contain a space, you need to enclose the name in quotes. </p></li>
+<pre class="codeblock">bl sync projectName -d localDirectory &ndash&ndashverbose</pre>
+<p>This command continues to run (and synchronization continues) until you enter a "q". The &ndash&ndashverbose option displays the logging and status information. If any of your arguments contain a space, you need to enclose the name in quotes. </p></li>
 <li>In another command line window, in your local directory, deploy the application to {{site.data.keyword.Bluemix_notm}} in Live Edit mode by entering the following command:
 <pre class="codeblock">bl start</pre>
 </li>
@@ -87,8 +102,9 @@ For more details on the commands, see [Bluemix Live Sync (bl) commands](bluemixl
 
 When you change the files in your local directory, the changes are automatically propagated to both the application that is running on {{site.data.keyword.Bluemix_notm}} and the project cloud workspace. If you need to restart the Node application, then you can use the following command:
 ```
-bl start --restart
+bl start &ndash&ndashrestart
 ```
+-->
 
 ##Live Edit {: #live-edit}
 
@@ -96,13 +112,15 @@ If you are building a Node.js application, when you make changes to your project
 
 Live Edit is supported for Node.js applications only.
 
-In the Web IDE, in the run bar, click **Live Edit**.
+In the Eclipse Orion Web IDE (Web IDE), in the run bar, click **Live Edit**.
 
-![Image of Run bar with live edit](images/run-bar-live-edit.png)
+![Image of Run bar with live edit](images/bluemix-live-sync-light.png)
 
 Live Edit allows you to quickly preview changes to Node.js applications running on {{site.data.keyword.Bluemix_notm}}. When you update your code with Live Edit turned on, you can refresh your web application's browser window to see those changes reflected seconds after you make them.
 
-For a tutorial on using the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync, see the tutorial [Test and debug a Node.js app with Bluemix Live Sync](https://hub.jazz.net/tutorials/livesync).
+<!--
+For a tutorial on using the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync, see the tutorial [Test and debug a Node.js app with Bluemix Live Sync![External link icon](../icons/launch-glyph.svg "External link icon")](https://hub.jazz.net/tutorials/livesync){:new_window}.
+-->
 
 When you change the files in your Web IDE, they are automatically redeployed to your application running on {{site.data.keyword.Bluemix_notm}}. If you need to restart the Node application, then you can use the **Restart** button in the run bar.
 
@@ -117,7 +135,7 @@ With debug, you can dynamically edit code, insert breakpoints, step through code
 {{site.data.keyword.Bluemix_notm}} Live Debug includes the following features:
 
 * Application runtime control
-* Debug by using [node-inspector](https://github.com/node-inspector/node-inspector)
+* Debug by using [node-inspector![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/node-inspector/node-inspector){:new_window}
 * Shell access
 
 ###Application runtime control {: #app-runtime}
@@ -172,7 +190,9 @@ After the {{site.data.keyword.Bluemix_notm}} Live Debug is installed, you can us
 
 Push the app and then browse to `https://app-host.mybluemix.net/bluemix-debug/manage` to access the {{site.data.keyword.Bluemix_notm}} debug user interface. When you are prompted to authenticate, enter your user ID and personal access token or IBMid password.    
 
-   **Note**: Your user ID for DevOps Services can be either an IBMid or a federated ID (corporate ID). If you use federated authentication, to log in to your Bluemix Live Sync command-line client, you must use a personal access token instead of a password. If you don't use federated authentication, your IBMid and password work with all clients. For more information about creating a personal access token, see [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
+<!--
+   **Note**: Your user ID for DevOps Services can be either an IBMid or a federated ID (corporate ID). If you use federated authentication, to log in to your Bluemix Live Sync command-line client, you must use a personal access token instead of a password. If you don't use federated authentication, your IBMid and password work with all clients. For more information about creating a personal access token, see [What's federated authentication and how does it affect me?![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/){:new_window}
+   -->
 
 ###Restoring app configurations and disabling Bluemix Live Debug {: #restore_live_debug}
 
@@ -182,6 +202,7 @@ Push the app and then browse to `https://app-host.mybluemix.net/bluemix-debug/ma
 
 3. Push the app.
 
+<!--
 ## {{site.data.keyword.Bluemix_notm}} Live Sync (bl) commands  {: #bl-commands}
 
 If you are building a Node.js application, you can use {{site.data.keyword.Bluemix_live}} to quickly update the application instance running on {{site.data.keyword.Bluemix_notm}} and develop as you would on the desktop without redeploying. When you make a change, you can see that change in your running {{site.data.keyword.Bluemix_notm}} application immediately. The {{site.data.keyword.Bluemix_live}} command line interface is called *bl*.
@@ -203,7 +224,7 @@ For more information on downloading and using the bl command, see [Bluemix Live 
 The {{site.data.keyword.Bluemix_live}} command line, **bl**, has the following syntax:
 
 ```
-bl command [arguments] [options] [--help]
+bl command [arguments] [options] [&ndash&ndashhelp]
 ```
 {: pre}
 
@@ -237,9 +258,9 @@ Options for the command.
 
 **Global Options**
 
-*--help*: Display the help page for the specified command
+*&ndash&ndashhelp*: Display the help page for the specified command
 
-*--verbose*: Enable verbose logging.
+*&ndash&ndashverbose*: Enable verbose logging.
 
 **Note:** If any of your arguments or options contain a space, enclose the value in double quotation marks.
 
@@ -247,7 +268,7 @@ Options for the command.
 {: bl_help}
 
 ```
-bl [ command ] --help | --h
+bl [ command ] &ndash&ndashhelp | &ndash&ndashh
 ```
 {: pre}
 
@@ -260,14 +281,14 @@ Use this command to display help about a command or the command list.
 Display the list of commands:
 
 ```
-bl --help
+bl &ndash&ndashhelp
 ```
 {: pre}
 
 Display detailed information about the sync command:
 
 ```
-bl sync --help
+bl sync &ndash&ndashhelp
 ```
 {: pre}
 
@@ -285,7 +306,7 @@ Use this command to log in to {{site.data.keyword.Bluemix_notm}}. The log in nee
 
 **Warning:** Providing your password as a command line option is discouraged as it is visible to others and recorded as a part of your command history.
 
-**Note:** You must sign up for a free <a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services</a> account before logging in.
+**Note:** You must sign up for a free [Bluemix DevOps Services![External link icon](../icons/launch-glyph.svg "External link icon")](https://hub.jazz.net/){:new_window} account before logging in.
 
 **Options**
 
@@ -295,7 +316,7 @@ Use this command to log in to {{site.data.keyword.Bluemix_notm}}. The log in nee
 
 -s *server*: The server name or IP address of the {{site.data.keyword.jazzhub_short}} server.    
 
-   **Note**: Your user ID for DevOps Services can be either an IBMid or a federated ID (corporate ID). If you use federated authentication, to log in to your Bluemix Live Sync command-line client, you must use a personal access token instead of a password. If you don't use federated authentication, your IBMid and password work with all clients. For more information about creating a personal access token, see [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
+   **Note**: Your user ID for DevOps Services can be either an IBMid or a federated ID (corporate ID). If you use federated authentication, to log in to your Bluemix Live Sync command-line client, you must use a personal access token instead of a password. If you don't use federated authentication, your IBMid and password work with all clients. For more information about creating a personal access token, see [What's federated authentication and how does it affect me?![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/){:new_window}
 
 **Examples**
 
@@ -348,7 +369,7 @@ Use this command to list all the projects that are available for synchronization
 {: bl_sync}
 
 ```
-bl sync | s projectName -d localDirectory [ --overwritelocal ] [ --overwriteremote ] [ --verbose ]
+bl sync | s projectName -d localDirectory [ &ndash&ndashoverwritelocal ] [ &ndash&ndashoverwriteremote ] [ &ndash&ndashverbose ]
 ```
 {: pre}
 
@@ -364,11 +385,11 @@ Use this command to start the synchronization of the contents of a project with 
 
 -d *localDirectory*: Local directory path. Defaults to the current folder ".".
 
-*--overwritelocal*: Overwrite the local directory with contents of the project workspace.
+*&ndash&ndashoverwritelocal*: Overwrite the local directory with contents of the project workspace.
 
-*--overwriteremote*: Overwrite the project workspace with the contents of the local directory.
+*&ndash&ndashoverwriteremote*: Overwrite the project workspace with the contents of the local directory.
 
-*--verbose*: Display verbose logging.
+*&ndash&ndashverbose*: Display verbose logging.
 
 **Examples**
 
@@ -404,7 +425,7 @@ bl sync myproject –d  myfolder
 {: bl_create}
 
 ```
-bl create | c [ -n PROJECT_NAME ] [ -r REGION ] [ -o ORG ] [ -s SPACE ] [ -g GIT_REPO ] [-e GIT_EXE ] [ --creds ] [ --fork ] [ --public ] [ --prompt ]
+bl create | c [ -n PROJECT_NAME ] [ -r REGION ] [ -o ORG ] [ -s SPACE ] [ -g GIT_REPO ] [-e GIT_EXE ] [ &ndash&ndashcreds ] [ &ndash&ndashfork ] [ &ndash&ndashpublic ] [ &ndash&ndashprompt ]
 ```
 {: pre}
 
@@ -426,13 +447,13 @@ Use this command from a directory that contains code to create a private project
 
 -e *GIT_EXE*: Full path to a Git executable. Default: detected.
 
-*--creds*: Prompt for your Git credentials.
+*&ndash&ndashcreds*: Prompt for your Git credentials.
 
-*--fork*: Fork this directory and create a project and repo.
+*&ndash&ndashfork*: Fork this directory and create a project and repo.
 
-*--public*: Make the new project public.
+*&ndash&ndashpublic*: Make the new project public.
 
-*--prompt*: Prompt for all required options with available choices.
+*&ndash&ndashprompt*: Prompt for all required options with available choices.
 
 **Examples**
 
@@ -446,7 +467,7 @@ bl create
 This command creates a public project that is named `myNewProject`.
 
 ```
-bl create -n myNewProject --public
+bl create -n myNewProject &ndash&ndashpublic
 ```
 {: pre}
 
@@ -493,7 +514,7 @@ bl status “my pro ject”
 {: bl_start}
 
 ```
-bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit ] [--noliveedit ] [ --restart ]
+bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ &ndash&ndashliveedit ] [&ndash&ndashnoliveedit ] [ &ndash&ndashrestart ]
 ```
 {: pre}
 
@@ -511,13 +532,13 @@ Use this command to start the application instance that is described by the laun
 
 -m *manifestPath*: The project-relative path to the manifest file (for example, `manifest.yml`).
 
-*--liveedit*: Start the associated application in live edit mode or exits with an error if the buildpack does not support live edit mode.
+*&ndash&ndashliveedit*: Start the associated application in live edit mode or exits with an error if the buildpack does not support live edit mode.
 
-*--noliveedit*: Start the associated application in normal mode.
+*&ndash&ndashnoliveedit*: Start the associated application in normal mode.
 
-*--view*: Open a browser of the running application.
+*&ndash&ndashview*: Open a browser of the running application.
 
-*--restart*: Restart an application already running in live edit mode without redeploying it.
+*&ndash&ndashrestart*: Restart an application already running in live edit mode without redeploying it.
 
 **Examples**
 
@@ -591,13 +612,20 @@ This command stops the application if the current directory is a sync target of 
 bl stop –l “launchConfigurations/mylaunchconfig.launch”
 ```
 {: pre}
+-->
 
-># Related Links {:class="linklist"}
->## Tutorials and samples {:id="samples"}
->* [Test and debug a Node.js app with Bluemix Live Sync](https://hub.jazz.net/tutorials/livesync)
->
-># Related Links {:class="linklist"}
->## Related links {:id="general"}
->* [Eclipse tools for Bluemix](https://www.ng.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html)   
->
->{:elementKind="article" id="rellinks"}
+# Related Links
+{: #rellinks}
+
+<!--
+## Tutorials and Samples
+{: #samples}
+
+* [Test and debug a Node.js app with Bluemix Live Sync![External link icon](../icons/launch-glyph.svg "External link icon")](https://hub.jazz.net/tutorials/livesync){:new_window}
+-->
+
+
+## Related Links
+{: #general}
+
+* [Eclipse tools for Bluemix![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ng.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}

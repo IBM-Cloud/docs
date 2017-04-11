@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-01"
+  years: 2016, 2017
+lastupdated: "2017-03-13"
 
 ---
 
@@ -33,7 +33,7 @@ Das {{site.data.keyword.iot_full}}-Dashboard weist folgende Standardboards auf:
 |Nutzungsübersicht  | Zeigt Nutzungsstatistiken für Ihre Organisation an. Listet Gerätetypen und verarbeitete Daten auf.
 |Regelbasierte Analyse | Zeigt die für Ihre Organisation geltenden Regeln an. Zusätzliche Karten listen ausgelöste Alerts, zugeordnete Geräte, Geräteeigenschaften und Alertinformationen auf. |  
 |Gerätebezogene Analyse | Zeigt die mit Ihrer Organisation verbundenen Geräte an. Zusätzliche Karten zeigen Alerts für ausgewählte Geräte, Informationen zu einem ausgewählten Gerät, Geräteeigenschaften und Alertinformationen an. |
-|Risiko- und Sicherheitsmanagement | Zeigt Karten, die den allgemeinen Sicherheitsstatus zusammenfassen. Systembediener und Sicherheitsanalysten können Details zu Konformität, Verbindungsstatus für Geräte, Ursachen von Verbindungsfehlern und Geräten, die durch eine Blacklist oder Whitelist blockiert und zugelassen sind, anzeigen. Über die Karte für die Verbindungskonformität kann der Benutzer einen Drilldown auf einen detaillierten Bericht zu nicht konformen Geräten durchführen und den Bericht nach Excel exportieren. |
+|Risiko- und Sicherheitsmanagement | Zeigt Karten, die den allgemeinen Sicherheitsstatus zusammenfassen. Systembediener und Sicherheitsanalysten können Details zu Konformität, Verbindungsstatus für Geräte, Ursachen von Verbindungsfehlern und Geräten, die durch eine Blacklist oder Whitelist blockiert und zugelassen sind, anzeigen.  Über die Karte für die Verbindungskonformität kann der Benutzer einen Drilldown auf einen detaillierten Bericht zu nicht konformen Geräten durchführen und den Bericht nach Excel exportieren. |
 
 Sie können diese Boards aktualisieren, indem Sie Karten hinzufügen, aktualisieren und entfernen.
 
@@ -196,3 +196,5 @@ Bei bestimmten Kartentypen können Sie auf **Einstellungen** klicken, um zusätz
 7.	Positionieren Sie abschließend die neue Karte in Ihrem Board, indem Sie sie an eine gute Position ziehen.  
 
 Sehr gut! Sie können nun die Echtzeitdaten Ihres Geräts anzeigen.
+
+Eine Beschreibung der einzelnen Schritte zum Anzeigen von Echtzeitgerätedaten finden Sie in der Anleitung [Boards & Karten im neuen Watson IoT-Dashboard konfigurieren ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/recipes/tutorials/configuring-the-cards-in-the-new-watson-iot-dashboard/){: new_window}.

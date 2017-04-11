@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-01-24"
+lastupdated: "2017-02-16"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-01-24"
 # {{site.data.keyword.Bluemix_notm}} CLI 入门
 {: #getting-started}
 
-{{site.data.keyword.Bluemix_notm}} CLI 提供了一种统一的方式，供您通过命令行界面与 {{site.data.keyword.Bluemix_notm}} 中的应用程序、虚拟服务器、容器和其他服务进行交互。{{site.data.keyword.Bluemix_notm}} CLI 还集成了多个社区工具，例如 Cloud Foundry CLI、Docker CLI 和 OpenStack CLI，并初始化了环境设置，以使您能够与不同的计算类型进行交互。
+{{site.data.keyword.Bluemix_notm}} CLI 提供了一种统一的方式，供您通过命令行界面与应用程序、虚拟服务器、容器和其他服务进行交互。{{site.data.keyword.Bluemix_notm}} CLI 还集成了多个社区工具，例如 Cloud Foundry CLI、Docker CLI 和 OpenStack CLI，并初始化了环境设置，以使您能够与不同的计算类型进行交互。
 
 **限制**：Cygwin 不支持 {{site.data.keyword.Bluemix_notm}} CLI，因此请勿在 Cygwin 命令行窗口中使用 {{site.data.keyword.Bluemix_notm}} CLI。
 
@@ -25,7 +25,7 @@ lastupdated: "2017-01-24"
 ## 安装 {{site.data.keyword.Bluemix_notm}} CLI
 {: #install_bluemix_cli}
 
-安装 {{site.data.keyword.Bluemix_notm}} CLI 之前，请确保已在系统上安装 Cloud Foundry CLI。
+安装 {{site.data.keyword.Bluemix_notm}} CLI 之前，请先安装 [cf CLI ![外部链接图标](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}。
 
 对于 Mac OS 和 Windows，请下载 [{{site.data.keyword.Bluemix_notm}} CLI 包](/docs/cli/index.html#downloads)，并运行安装程序。
 
@@ -135,7 +135,7 @@ lastupdated: "2017-01-24"
   ~$
   ```
 
-  2. 然后，使用 `bluemix plugin install` 命令从 `Bluemix` 存储库安装插件。例如：
+  2. 使用 `bluemix plugin install` 命令从 `Bluemix` 存储库安装插件。例如：
 
   ```
   ~$ bluemix plugin install auto-scaling -r Bluemix
@@ -150,7 +150,7 @@ lastupdated: "2017-01-24"
 ## 登录到 {{site.data.keyword.Bluemix_notm}} CLI
 {: #log_bmcli}
 
-安装了 {{site.data.keyword.Bluemix_notm}} CLI 后，可以使用您的 {{site.data.keyword.Bluemix_notm}} 帐户和密码登录到 {{site.data.keyword.Bluemix_notm}}。例如：
+安装了 {{site.data.keyword.Bluemix_notm}} CLI 后，可以使用您的 IBM 标识和密码登录到 {{site.data.keyword.Bluemix_notm}}。例如：
 
 ```
 ~$ bluemix login -a https://api.ng.bluemix.net
@@ -1003,8 +1003,8 @@ bluemix iam account-user-invite Mary IBM OrgManager Cloud SpaceAuditor
 ```
  bluemix iam account-user-reinvite USER_EMAIL ORG_NAME
 ```
- 
- 
+
+
 ### bluemix iam org-users
 {: #bluemix_iam_org_users}
 
@@ -2231,7 +2231,7 @@ bluemix ic group-create [--publish,-p PORT] --name GROUP_NAME [--memory,-m MEMOR
 | CCS_BIND_APP=*&lt;appname&gt;*       | 将服务绑定到容器。使用 `CCS_BIND_APP` 环境变量将应用程序绑定到容器。应用程序绑定到目标服务并用作网桥，以允许 {{site.data.keyword.Bluemix_notm}} 将网桥应用程序的 `VCAP_SERVICES` 信息放入正在运行的容器实例。|
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 要在不使用网桥应用程序的情况下将 Bluemix 服务直接绑定到容器，请使用 CCS_BIND_SRV。此绑定允许 Bluemix 将 VCAP_SERVICES 信息插入正在运行的容器实例中。要列出多个 Bluemix 服务，请将这些服务包含在同一环境变量中。 |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | 添加要在容器中监视的日志文件。请包含 `LOG_LOCATIONS` 环境变量以及日志文件的路径。 |
-{: caption="Table 8. Commonly used environment variables" caption-side="top"}
+{: caption="表 8. 常用环境变量" caption-side="top"}
 
 
  <dl>
@@ -3064,7 +3064,7 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
 | CCS_BIND_APP=*&lt;appname&gt;*       | 将服务绑定到容器。使用 `CCS_BIND_APP` 环境变量将应用程序绑定到容器。应用程序绑定到目标服务并用作网桥，以允许 {{site.data.keyword.Bluemix_notm}} 将网桥应用程序的 `VCAP_SERVICES` 信息放入正在运行的容器实例。有关创建网桥应用程序的更多信息，请参阅[将服务绑定到容器](/docs/containers/container_integrations_binding.html){: new_window}。 |
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 要在不使用网桥应用程序的情况下将 Bluemix 服务直接绑定到容器，请使用 CCS_BIND_SRV。此绑定允许 Bluemix 将 VCAP_SERVICES 信息插入正在运行的容器实例中。要列出多个 Bluemix 服务，请将这些服务包含在同一环境变量中。 |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | 添加要在容器中监视的日志文件。请包含 `LOG_LOCATIONS` 环境变量以及日志文件的路径。 |
-{: caption="Table 9. Commonly used environment variables" caption-side="top"}
+{: caption="表 9. 常用环境变量" caption-side="top"}
 
 
    <dl>

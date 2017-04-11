@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-09"
+lastupdated: "2017-03-09"
 
 ---
 
-<!-- Attribute definitions --> 
+<!-- Attribute definitions -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -37,4 +37,3 @@ Your application subscribes to MQTT messages and controls {{site.data.keyword.ge
 * Retrieve information about the service status and the set of regions currently defined.
 * Stop the service.
 * Restart an already configured service.
-

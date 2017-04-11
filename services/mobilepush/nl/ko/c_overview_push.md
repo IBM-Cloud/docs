@@ -21,7 +21,7 @@ IBM {{site.data.keyword.mobilepushshort}}는 디바이스와 플랫폼에 알림
 
 - 카탈로그에서 MobileFirst Services Starter 표준 유형을 사용하여 Bluemix 애플리케이션을 작성하여 수행합니다. 그러면 Bluemix 백엔드 애플리케이션에 바인드된 푸시 알림 서비스가 작성됩니다.
 - 모바일 카탈로그에서 직접 바인드 해제된 푸시 알림 서비스를 작성하여 수행합니다. 나중에 애플리케이션에 바인드할 수 있습니다. 또는 바인드 해제하는 데 사용하도록 선택할 수도 있습니다. 
-- [모바일 대시보드 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.ng.bluemix.net/docs/mobile/services.html "외부 링크 아이콘"){: new_window}을 사용하여 수행합니다.
+- [모바일 대시보드 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.ng.bluemix.net/docs/mobile/services.html){: new_window}을 사용하여 수행합니다. 
 
 {{site.data.keyword.mobilepushshort}} 모니터링 탭에는 분석 데이터가 표시되지 않습니다. 
 
@@ -69,7 +69,7 @@ IBM {{site.data.keyword.mobilepushshort}} 서비스에서 모바일 애플리케
 - **appSecret**: 'appSecret'은 일반적으로 백엔드 애플리케이션에서 호출하는 API(예: {{site.data.keyword.mobilepushshort}}를 보내는 API와 설정을 구성하는 API)를 보호합니다. 
 - **clientSecret**: 'clientSecret'은 일반적으로 모바일 클라이언트 애플리케이션에서 호출하는 API를 보호합니다. 이 'clientSecret'이 필요한 연관된 사용자 ID를 사용한 디바이스의 등록과 관련된 API는 하나뿐입니다. 모바일 클라이언트에서 호출된 기타 API에는 clientSecret이 필요하지 않습니다.  
 
-'appSecret'과 'clientSecret'은 {{site.data.keyword.mobilepushshort}} 서비스와 애플리케이션을 바인드할 때 모든 서비스 인스턴스에 할당됩니다. 시크릿을 전달하는 방법과 시크릿 전달 대상인 API에 대한 자세한 정보는 [REST API ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://mobile.{DomainName}/imfpush/ "외부 링크 아이콘") 문서를 참조하십시오.
+'appSecret'과 'clientSecret'은 {{site.data.keyword.mobilepushshort}} 서비스와 애플리케이션을 바인드할 때 모든 서비스 인스턴스에 할당됩니다. 시크릿을 전달하는 방법과 전달 대상 API에 대한 정보는 [REST API ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://mobile.{DomainName}/imfpush/) 문서를 참조하십시오. 
 
 **참고**: 이전 애플리케이션에서는 사용자 ID 필드에서 디바이스를 등록하거나 업데이트하는 경우에만 clientSecret을 전달해야 했습니다. 모바일 클라이언트와 브라우저 클라이언트에서 호출한 기타 모든 API에는 clientSecret이 필요하지 않았습니다. 이와 같은 이전 애플리케이션에서 디바이스 등록 또는 호출 업데이트에 선택적으로 clientSecret을 계속 사용할 수 있습니다. 그러나 모든 클라이언트 API 호출에 clientSecret 검사를 적용하는 것이 좋습니다. 이를 기존 애플리케이션에 적용할 수 있도록 새 'verifyClientSecret' API가 공개되었습니다. 새 애플리케이션의 경우 모든 클라이언트 API 호출에 clientSecret 검사가 적용되며 'verfiyClientSecret' API로 이 동작을 변경할 수 없습니다. 
 

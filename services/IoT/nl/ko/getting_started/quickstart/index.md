@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-19"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -14,12 +14,12 @@ lastupdated: "2016-09-19"
 
 # Quickstart
 
-[Quickstart](https://quickstart.internetofthings.ibmcloud.com/#/)는 디바이스를 신속하게 {{site.data.keyword.iot_full}}에 연결하는 데 사용할 수 있는 개방형 샌드박스입니다. 디바이스에서 MQTT 메시징 프로토콜을 지원하는 경우 Quickstart에 쉽게 연결할 수 있습니다.
+[Quickstart ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://quickstart.internetofthings.ibmcloud.com/#/){: new_window}는 디바이스를 {{site.data.keyword.iot_full}}에 빠르게 연결하는 데 사용할 수 있는 개방형 샌드박스입니다. 디바이스에서 MQTT 메시징 프로토콜을 지원하는 경우 Quickstart에 쉽게 연결할 수 있습니다.
 
-예를 들어, 여러 다른 디바이스를 Quickstart 서비스에 연결하는 방법을 설명하는 레시피 및 튜토리얼을 보려면 [DeveloperWorks Recipes](https://developer.ibm.com/recipes/)로 이동하십시오. 예를 들어 다음과 같습니다.
+예를 들어, 다양한 디바이스를 Quickstart 서비스에 연결할 수 있는 방법을 설명하는 튜토리얼 및 레시피는 [DeveloperWorks 레시피 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/){: new_window}로 이동하십시오. 
 
-- [OpenBlocks IoT BX1G](https://developer.ibm.com/recipes/tutorials/openblocks-iot-bx1g-for-iot-foundation-quickstart/)
-- [Reactive Blocks](https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/)
+- [OpenBlocks IoT BX1G ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/openblocks-iot-bx1g-for-iot-foundation-quickstart/){: new_window}
+- [Reactive Blocks ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/){: new_window}
 
 
 **중요:** {{site.data.keyword.iot_short_notm}} 인스턴스에서 Quickstart 서비스를 사용하는 경우 확장 가능한 애플리케이션은 지원되지 않습니다.
@@ -54,7 +54,7 @@ http://quickstart.internetofthings.ibmcloud.com/iotsensor
 
 ## Mosquitto 데모
 
-[Mosquitto](http://mosquitto.org/)는 {{site.data.keyword.iot_short}} 서비스를 실험하는 데 사용할 수 있는 교차 플랫폼 개방형 소스 MQTT 클라이언트입니다. Mosquitto 클라이언트를 설치한 다음 고유한 애플리케이션 ID와 디바이스 ID를 선택하십시오. 애플리케이션과 디바이스 ID가 고유하지 않으면 테스트 연결이 동일한 Quickstart 테스트 프로시저를 완료 중인 다른 사용자와 충돌할 수 있습니다.
+[Mosquitto ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](http://mosquitto.org/){: new_window}는 {{site.data.keyword.iot_short}} 서비스를 실험하는 데 사용할 수 있는 교차 플랫폼 개방형 소스 MQTT 클라이언트입니다. Mosquitto 클라이언트를 설치한 다음 고유한 애플리케이션 ID와 디바이스 ID를 선택하십시오. 애플리케이션과 디바이스 ID가 고유하지 않으면 테스트 연결이 동일한 Quickstart 테스트 프로시저를 완료 중인 다른 사용자와 충돌할 수 있습니다.
 
 *appId*, *type_id*, *device_type* 및 *device_id* 값은 36자 이하여야 하며 다음 문자만 포함할 수 있습니다.
 - 영숫자 문자(a-z, A-Z, 0-9)
@@ -90,9 +90,9 @@ http://quickstart.internetofthings.ibmcloud.com/iotsensor
 
 ## 관련 링크
 
-- [Quickstart](https://quickstart.internetofthings.ibmcloud.com)
-- [DeveloperWorks Recipes](https://developer.ibm.com/recipes)
-- [OpenBlocks IoT BX1G](https://developer.ibm.com/recipes/tutorials/openblocks-iot-bx1g-for-iot-foundation-quickstart/)
-- [Reactive Blocks](https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/)
-- [Quickstart 애플리케이션](http://quickstart.internetofthings.ibmcloud.com)
-- [Mosquitto](http://mosquitto.org/)
+- [Quickstart ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://quickstart.internetofthings.ibmcloud.com){: new_window}
+- [DeveloperWorks 레시피 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes){: new_window}
+- [OpenBlocks IoT BX1G ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/openblocks-iot-bx1g-for-iot-foundation-quickstart/){: new_window}
+- [Reactive Blocks ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/){: new_window}
+- [Quickstart 애플리케이션 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](http://quickstart.internetofthings.ibmcloud.com){: new_window}
+- [Mosquitto ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](http://mosquitto.org/){: new_window}

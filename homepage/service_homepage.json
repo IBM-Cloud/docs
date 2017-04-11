@@ -1,44 +1,48 @@
 {
   "id": "docs_homepage_services",
-  "title": "How to use Bluemix services",
-  "subtitle": "Learn about service types and availability",
-  "subtitleHref": "services/index.html",
+  "title": "Compute & Services",
   "items": [{
     "id": "cfApp",
     "title": "Cloud Foundry Applications",
+    "img": "homepage/images/cloud-foundry.svg",
     "href": "cfapps/index.html",
     "category_id": "compute"
   }, {
-    "title": "Runtimes",
-    "href": "cfapps/runtimes.html",
-    "category_id": "compute"
-  }, {
     "title": "Boilerplates",
+    "img": "homepage/images/Bluemix-logo.svg",
     "href": "cfapps/boilerplates.html",
     "category_id": "compute"
   }, {
+    "id": "whisk-rt",
     "title": "IBM OpenWhisk",
+    "img": "homepage/images/whisk_icon.svg",
     "href": "openwhisk/index.html",
     "category_id": "compute"
   }, {
     "id": "container",
     "title": "IBM Bluemix Container Service",
+    "img": "homepage/images/containerServiceIcon.svg",
     "href": "containers/container_index.html",
     "category_id": "compute"
   }, {
     "type": "extra",
-    "title": "Try working with data",
+    "title": "Working with data",
     "href": "services/WorkWithData/index.html",
     "category_id": "data"
   }, {
     "type": "extra",
-    "title": "Try Dedicated GitHub Enterprise",
+    "title": "Dedicated GitHub Enterprise",
     "href": "services/ghededicated/index.html",
     "category_id": "devops"
   }, {
     "type": "extra",
-    "title": "Try building mobile projects",
-    "href": "mobile/index.html",
+    "title": "Building cloud native projects",
+    "href": "cloudnative/index.html",
+    "category_id": "mobile"
+  }, {
+    "type": "extra",
+    "title": "Working with Mobile Client Access",
+    "href": "services/mobileaccess/index.html",
     "category_id": "mobile"
   }]
 }
