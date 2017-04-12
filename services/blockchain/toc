@@ -1,23 +1,48 @@
-[IBM Blockchain service](/docs/services/blockchain/index.html)
-    [Getting started](index.html)
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="blockchain" audience="service"}
+Blockchain
+
+    {: .navgroup id="learn"}
+    
+    {: .topicgroup}
+    Getting started
+        index.md
         needtoknow.md
         ibmblockchain_whatsnew.md
         [Release testing](https://wiki.hyperledger.org/projects/fabric/alpha_release_testing)
         etn_ssc.md
-    [HSBN vNext Beta plan](v10_newplan.html)
+        
+    {: .topicgroup}
+    HSBN vNext Beta plan
+        v10_newplan.md
         v10_netoverview.md
         v10_dashboard.md
-            dashboard_resources.md
-            dashboard_channels.md
-            dashboard_chaincode.md
-            dashboard_support.md
         v10_application.md
-    [HSBN and Starter plans](ibmblozckchain_etn.html)
+        
+    {: .topicgroup}
+    HSBN and Starter plans
+        ibmblozckchain_etn.md
         etn_overview.md
         etn_hsn.md
         etn_sdk.md
         etn_txn.md
         ibmblockchainmonitor.md
         ibmblockchain_tutorial.md
-    [Getting support](ibmblockchain_support.html)
+        
+    {: .topicgroup}
+    Getting support
+        ibmblockchain_support.md
         knownissues.md
+    {: .navgroup-end} 
+         
+    {: .navgroup id="reference"}
+    
+    {: .topicgroup}
+	Related links
+		[HyperLedger Fabric](https://wiki.hyperledger.org)
+    {: .navgroup-end}
+
+
+   
