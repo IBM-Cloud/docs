@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-07"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -51,7 +51,7 @@ To connect the mobile app to your environment and register your appliances, perf
 
   ![Connection QR code.](images/iot4e_mobile_connect_QR.svg "{{site.data.keyword.iotelectronics}} Connection QR code")
 
-5. On your mobile device, enter login credentials. Your user ID and password can be any length. Remember your login credentials for future sessions. Your mobile device is now registered to your {{site.data.keyword.iotelectronics}} environment, and you are ready to register individual appliances.
+5. On your mobile device, optionally log in by using your Facebook or Google+ credentials. You can also skip the login process and try the app without logging in.
 
 6. On your computer, scroll to a simulated washer and click it to display its data and Appliance QR code.
 
