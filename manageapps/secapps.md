@@ -81,9 +81,11 @@ When you use a custom domain, to serve the SSL certificate, use the following re
 
 To upload a certificate for your application:
 
-1. Create a route or edit an existing route by selecting **Edit Routes and App Access** from the application menu.
+1. Go to your Dashboard.
 
-2. In the Edit Routes and App Access dialog, click **Manage Domains**.
+2. Select the name for your app to open the app details view.
+
+3. Select the **Routes** drop-down, and then select **Manage domains**.
 
 3. For your custom domain, click **Upload Certificate**.
 
@@ -134,4 +136,4 @@ To upload a certificate for your application:
 	  * DER (.der or .cer )
       * PKCS #7 (p7b, p7r, spc)
 
-To delete a certificate or replace an existing certificate with a new one, go to **Manage Organizations** > **Domains** > **View Certificate** to manage your certificates.
+To delete a certificate or replace an existing certificate with a new one, go to **Manage** > **Account** > **Organizations**. Then, click **View Details** > **Edit Org** > **Domains** to delete or replace a certificate for a custom domain.
