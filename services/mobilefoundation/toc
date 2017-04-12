@@ -26,6 +26,6 @@ Mobile Foundation
     {: .navgroup id="help"}
     [Stack Overflow](http://stackoverflow.com/search?q=ibm-mobilefirst+bluemix)
     [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/mobilefirst/?smartspace=bluemix)
-    [Getting help](/docs/support/index.html#getting-help)
-    [Contacting support](/docs/support/index.html#contacting-support)
+    [Getting help](../../support/index.html#getting-help)
+    [Contacting support](../../support/index.html#contacting-support)
     {: .navgroup-end}
