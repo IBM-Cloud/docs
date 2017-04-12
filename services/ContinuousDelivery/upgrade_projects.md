@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-21"
+lastupdated: "2017-4-11"
 
 ---
  
@@ -14,7 +14,7 @@ lastupdated: "2017-3-21"
 
 {{site.data.keyword.jazzhub}} is evolving into {{site.data.keyword.contdelivery_full}}. As part of that change, projects will be upgraded to toolchains. 
 
-You can upgrade your project or wait for it to be automatically upgraded. For the best experience, upgrade your project as soon as possible so that you can control what your toolchain's name is and which organization it is created in.  
+You can upgrade your project or wait for it to be automatically upgraded. For the best experience, make sure that you meet the [prerequisites](#upgrade_prereqs) and upgrade your project as soon as possible so that you can control what your toolchain's name is and which organization it is created in. 
 {: shortdesc}
 
 ## Toolchains
@@ -35,7 +35,9 @@ You can learn about toolchains on [YouTube![External link icon](../../icons/laun
 - To acess your upgraded project's toolchain, you need a Bluemix ID. Before you upgrade, you must verify that you have an active Bluemix ID. If you don't have one, [sign up](https://console.ng.bluemix.net/registration/).
 - Make sure that your DevOps Services project owner is correct. The toolchain that is created from your project will be part of that owner's Bluemix organization.
 
-**Important:** The Eclipse Orion {{site.data.keyword.webide}} in the toolchain is separate from the {{site.data.keyword.webide}} that is associated with your project. If you use the {{site.data.keyword.webide}} and you have uncommitted changes, commit them before you upgrade.  
+**Important:** 
+- If you're planning to start the upgrade, make sure that you're a member of every org and space that the pipeline deploys to. Any project admin can start the upgrade. However, if the admin who starts the upgrade is not a member of every org and space that the pipeline deploys to, the pipeline cannot be created.
+- The Eclipse Orion {{site.data.keyword.webide}} in the toolchain is separate from the {{site.data.keyword.webide}} that is associated with your project. If you use the {{site.data.keyword.webide}} and you have uncommitted changes, commit them before you upgrade.  
 
 
 ## Upgrading from a project to a toolchain
@@ -79,12 +81,16 @@ To upgrade your project to a toolchain, follow these steps:
 3. Click **Create**. The new toolchain is created, and its Overview page is displayed.
 
    ![Overview of the upgraded toolchain](images/new-toolchain-page.png)
-
+   
    - To access your GitHub repo or the associated issue tracker, click **GitHub** or **Issues**.
    
    - To access your pipeline, click **Delivery Pipeline**.  
    
    - To access the {{site.data.keyword.webide}}, which contains the contents of your repo that were checked out into the workspace, click **Eclipse Orion {{site.data.keyword.webide}}**. 
+   
+   If you return to your project during the upgrade, the banner message might state that the upgrade is in progress, especially if the upgrade process involves importing source code to a new repo or importing Track &amp; Plan work items as issues. 
+   
+   ![Message about project being upgraded to a toolchain](images/project-being-upgraded-banner.png)
 
 ## Revisiting your project
 {: #revisit_projects}
@@ -104,17 +110,23 @@ If you need to revert the upgrade, delete your toolchain. Then, when you return 
 ## Next steps
 {: #upgrade_next_steps}   
 
-1. Confirm that the upgrade is complete by checking for the message on the project Overview page:    
+1. Confirm that the upgrade is complete by refreshing your browser and checking for the message that your project was "upgraded to this toolchain" on the project Overview page:    
 
-   ![Upgraded project](images/banner-upgraded.png)    
+   ![Message in banner indicating the project was upgraded](images/banner-upgraded.png) 
+   
+   **Note:** If the message says "upgrade now," your upgrade failed. Click the **upgrade now** link to try again. 
+   
+   ![Message in banner indicating the project is ready to upgrade](images/banner-ready-to-upgrade.png)
 
 2. Give your team members access to the toolchain.    
     - Each team member must have a valid Bluemix account. Team members who don't have accounts must [sign up ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/registration){:new_window}.
-    - Add team members to the organization (org) that the toolchain belongs to.
+    - Grant organization (org) members access to the toolchain from the toolchain Manage page. For more information about access control for toolchains, see [Managing access ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window}.
+    - If a user is not a member of the org that the toolchain belongs to, add them to the org from the Manage Organizations page.
+      For more information about managing organizations, see [Managing organizations and spaces ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/admin/orgs_spaces.html#orgsspacesusers){:new_window}.
+    
 3. Use the tools from your toolchain instead of the tools from your {{site.data.keyword.jazzhub_short}} project. For example, to edit code from a browser, use the Web IDE from your toolchain.    
 
 ## Troubleshooting
 {: #upgrade_troubleshoot}    
 
 If you have questions or problems, send an email to [hub@jazz.net](mailto:hub@jazz.net). In your email, include the URLs to your {{site.data.keyword.jazzhub_short}} project and your {{site.data.keyword.contdelivery_short}} toolchain.
-
