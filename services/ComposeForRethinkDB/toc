@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="compose-for-rethinkdb" audience="service"}
+{: .toc subcollection="compose-for-rethinkdb" audience="service" href="/docs/services/ComposeForRethinkDB/index.html"}
 Compose For RethinkDB
 
 	{: .navgroup id="learn"}

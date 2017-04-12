@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="compose-for-elasticsearch" audience="service"}
+{: .toc subcollection="compose-for-elasticsearch" audience="service" href="/docs/services/ComposeForElasticsearch/index.html"}
 Compose For Elasticsearch
 
 	{: .navgroup id="learn"}
