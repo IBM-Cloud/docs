@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="iot-automotive" audience="service"}
+{: .toc subcollection="iot-automotive" audience="service" href="/docs/services/IoTAutomotive/index.html"}
 IoT for Automotive (Experimental)
 
     {: .navgroup id="learn"}
