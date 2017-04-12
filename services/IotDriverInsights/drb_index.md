@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-31"
+lastupdated: "2017-04-13"
 ---
 
 {:new_window: target="_blank"}
@@ -85,28 +85,3 @@ Finally, get the detailed driver behavior information for a specific analyzed tr
 ## Next steps
 {: #drb_post}
 When you complete the steps, a set of driver behavior data is generated in your organization.  Use your applications or your preferred analytics software to process the information further into more meaningful business data.
-
-# Related Links
-{: #rellinks notoc}
-
-## Tutorials and samples
-{: #samples}
-
-* [{{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdriverinsights_short}} Tutorial Part1 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/car-data-management){:new_window}
-* [{{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdriverinsights_short}} Tutorial Part2 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/map-driver-insights){:new_window}
-* [IoT for Automotive Starter Application ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://iot-for-automotive-starter-experience.mybluemix.net){:new_window}
-
-
-## API reference
-{: #api}
-
-* [API docs ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/IoTDriverBehavior_APIdoc){:new_window}
-
-## Other resources
-{: #general}
-
-* [Getting started with {{site.data.keyword.iotmapinsights_short}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](../IotMapInsights/index.html){:new_window}
-* [Getting started with {{site.data.keyword.iot_full}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
-* [dW Answers on IBM developerWorks ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/iot-driver-behavior){:new_window}
-* [Stack Overflow ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/questions/tagged/iot-driver-behavior){:new_window}
-* [What's new in Bluemix Services ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ng.bluemix.net/docs/whatsnew/index.html#services_category){:new_window}

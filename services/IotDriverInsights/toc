@@ -6,10 +6,12 @@ IoT Driver Behavior
 
     {: .navgroup id="learn"}
     index.md
+
     {: .topicgroup}
     Driving Behavior Analysis
         drb_iotdriverinsights_overview.md
         drb_index.md
+
     {: .topicgroup}
     Trajectory Pattern Analysis
         tp_iotdriverinsights_overview.md
