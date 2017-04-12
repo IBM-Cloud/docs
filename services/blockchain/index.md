@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-04-06"
+lastupdated: "2017-04-05"
 
 ---
 
@@ -52,6 +52,8 @@ Table 2: IBM Blockchain on Bluemix plan details
 | Dashboard Monitor: | [Yes](ibmblockchainmonitor.html) | [Yes](ibmblockchainmonitor.html) | [Yes](v10_dashboard.html) |
 | Environment:     | Shared multi-tenant | Isolated single tenant | multiple isolation levels |
 
+
+<!--
 # Related Links
 {: #rellinks}
 ## Tutorials and Samples
@@ -76,6 +78,6 @@ Table 2: IBM Blockchain on Bluemix plan details
 * [What's new in Bluemix Services](http://www.ng.bluemix.net/docs/whatsnew/index.html#services_category){:new_window}
 
 
-<!--
+
 [Bluemix Pricing Sheet](https://console.ng.bluemix.net/pricing/)
 [IBM Bluemix Prerequisites](https://developer.ibm.com/bluemix/support/#prereqs) -->
