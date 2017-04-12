@@ -1,0 +1,17 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="bluemix" audience="api"}
+API management
+
+	{: .navgroup id="learn"}
+	index.md
+	{: .navgroup-end}
+	
+	{: .navgroup id="howto"}
+	manage_cf_apis.md
+	manage_openwhisk_apis.md
+	manage_apis.md
+	managed_apis.md
+	upgrade.md
+	{: .navgroup-end}
