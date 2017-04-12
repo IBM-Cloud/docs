@@ -2,7 +2,7 @@
 
 copyright:
  years: 2015, 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-21"
 
 ---
 
@@ -41,13 +41,14 @@ To submit a ``POST`` request from a device that is connected to {{site.data.keyw
 <pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
 ### Secure POST request
-<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></class></pre>
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
 **Important notes:**
 - You can submit gateway device events only by using HTTP messaging. Use the MQTT messaging protocol to submit requests for other gateway device management and control features.
 - HTTP connections can be reused only to publish events for the same device because the authorization HTTP header cannot be changed.
 - Port 443, the default SSL port, can also be specified for secure HTTP API calls.
-- If a gateway is not assigned the *Standard Gateway* role, it can publish events on behalf of any devices in the organization. Assign the *Standard Gateway* role if you want to check device authorization levels and automatically register your device. **Note:** This behavior is subject to change.
+- If a gateway is not assigned the *Standard Gateway* role, it can publish events on behalf of any devices in the organization. If the device that is connected to the gateway is unregistered, the gateway automatically registers that device.
+- Assign the *Standard Gateway* role if you want to check device authorization levels.
 
 For more information about the role of gateways and resource groups, see [Gateway Access Control (Beta)](../gateways/gateway-access-control.html).
 
