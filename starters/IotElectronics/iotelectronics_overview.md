@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -50,5 +50,7 @@ The {{site.data.keyword.iotelectronics}} starter uses the {{site.data.keyword.io
 **{{site.data.keyword.iot_full}}** lets your apps communicate with and use data that is collected by your connected appliances, sensors, and gateways.
 
 **{{site.data.keyword.sdk4nodefull}}** enables you to develop, deploy, and scale server-side JavaScript&reg; apps and provides enhanced performance, security, and serviceability.
+
+**{{site.data.keyword.appid_full}}** adds authentication to your mobile and web apps and protects your back-end systems.
 
 **Sample mobile app** lets you view the status of and communicate with a simulated appliance by using your mobile device such as a smart phone or tablet. Find out how to get the mobile app in [Using the Mobile app](iotelectronics_config_mobile.html).

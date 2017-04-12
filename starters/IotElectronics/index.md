@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-12"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -21,8 +21,9 @@ lastupdated: "2017-03-15"
 
 To get started with {{site.data.keyword.iotelectronics}}, complete the following tasks:
 
-1. [Create simulated appliances](https://console.ng.bluemix.net/docs/starters/IotElectronics/iot4ecreatingappliances.html) by using the {{site.data.keyword.iotelectronics}} starter web application. For the purposes of demonstration, washers are used as the simulated appliance within the {{site.data.keyword.iotelectronics}} starter. The appliance you choose to connect could be any type of smart electronics device.
-2. [Download and connect](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html) the sample mobile app.
+1. [Create simulated appliances](https://console.ng.bluemix.net/docs/starters/IotElectronics/iot4ecreatingappliances.html) by using the {{site.data.keyword.iotelectronics}} starter web application. For the purposes of demonstration, washers are used as the simulated appliance within the {{site.data.keyword.iotelectronics}} starter. The appliance that you choose to connect could be any type of smart electronics device.
+2. (Optional) [Configure mobile login options with {{site.data.keyword.appid_full}}](https://console.ng.bluemix.net/docs/services/appid/index.html). You can customize the appearance of the login screen that is presented in the mobile app. You can also optionally enable or disable the use of social login credentials. By default, {{site.data.keyword.appid_short_notm}} enables authorization by Facebook and Google+, and mobile app users can use their own social credentials, or they can skip the login process and try the app without logging in.
+3. [Download and connect](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html) the sample mobile app.
 
 
 ## What's next
