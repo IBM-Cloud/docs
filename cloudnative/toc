@@ -6,7 +6,10 @@ Building cloud native projects
 
     {: .navgroup id="learn"}
     index.md
-    devex.md
+
+    {: .topicgroup}
+    Getting started
+        devex.md
         what_is_new.md
         compute.md
         get_code.md
@@ -27,14 +30,14 @@ Building cloud native projects
         tutorial_microservice.md
     {: .navgroup-end}
 
-    {: .navgroup id="help"}
-    troubleshoot.md
-    [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
-    [Contact support](/docs/support/index.html#contacting-support)
-    {: .navgroup-end}
-
     {: .navgroup id="reference"}
     sdk.md
         sdk_BMSClient.md
         sdk_network_request.md
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    troubleshoot.md
+    [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
+    [Contact support](/docs/support/index.html#contacting-support)
     {: .navgroup-end}
