@@ -5,7 +5,7 @@
 Blockchain
 
     {: .navgroup id="learn"}
-    
+
     {: .topicgroup}
     Getting started
         index.md
@@ -38,10 +38,20 @@ Blockchain
     {: .navgroup-end} 
          
     {: .navgroup id="reference"}
+    needtoknow.md
     
     {: .topicgroup}
 	Related links
-		[HyperLedger Fabric](https://wiki.hyperledger.org)
+		[Fabric Code](https://github.com/hyperledger/fabric)
+		[Fabric Composer](https://fabric-composer.github.io/)
+		[Fabric v1.0 Docs](http://hyperledger-fabric.readthedocs.io/en/latest/)
+		[Fabric v0.6 Docs](https://github.com/hyperledger/fabric/tree/v0.6/docs)
+		[StackOverflow](http://stackoverflow.com/questions/tagged/hyperledger)
+		[What's new in Bluemix Services](http://www.ng.bluemix.net/docs/whatsnew/index.html#services_category)
+		[IBM Marbles Demo (GitHub)](https://github.com/IBM-Blockchain/marbles) - v0.6 & v1.0
+		[IBM Commercial Paper Demo (GitHub)](https://github.com/IBM-Blockchain/cp-web#readme) - v0.6
+		[IBM Car Lease Demo (Github)](https://github.com/IBM-Blockchain/car-lease-demo/blob/master/README.md) - v0.6
+		[Art Auction Demo (Github)](https://github.com/ITPeople-Blockchain/auction) v0.6 - v1.0 (runs locally)
     {: .navgroup-end}
 
 
