@@ -16,6 +16,8 @@ Internet of Things Platform
     {: .topicgroup}
     Beta features
         information_management/im_index.md
+        information_management/im_index_scenario.md
+        information_management/im_index_scenario_thing.md
         gateways/gateway-access-control.md
         gateways/gw_intro_api.md
         [Mixed-durability shared subscriptions](/applications/mqtt.html#shared_sub_mixed)
