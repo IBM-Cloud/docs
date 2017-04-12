@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="context-mapping" audience="service"}
+{: .toc subcollection="context-mapping" audience="service" href="/docs/services/IotMapInsights/index.html"}
 Context Mapping
 
     {: .navgroup id="learn"}
