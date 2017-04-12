@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-7"
+lastupdated: "2017-4-12"
 
 ---
 
@@ -26,6 +26,7 @@ The tool integrations that are available to add and configure for your toolchain
 |{{site.data.keyword.alertnotificationshort}}		|Yes		|No		|
 |Artifactory		|Yes		|No		|
 |Availability Monitoring		|Yes		|No		|
+|Cloud Event Management		|Yes		|No		|
 |{{site.data.keyword.deliverypipeline}} 		|Yes	   	|Yes  		|
 |{{site.data.keyword.DRA_short}} 		|Yes		|No			|
 |Eclipse Orion {{site.data.keyword.webide}}		|Yes		|Yes			|
@@ -206,6 +207,31 @@ To test, monitor, and improve your app's health as you build it, add the {{site.
 To learn more, see [{{site.data.keyword.prf_hublong}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/manage/tool_bluemix_availability_monitoring/){: new_window}.
 
 
+## Adding Cloud Event Management (Experimental)
+{: #cloudeventmanagement}
+
+{{site.data.keyword.evtmgt_full}} provides a consolidated view of problems that occur with your services, applications, and infrastructure. You can set up real-time incident management to resolve the problems more efficiently.
+
+**Note:** This tool integration is preconfigured and does not require any configuration parameters. You cannot reconfigure it.
+
+To help your DevOps team achieve reliable operational health, service quality, and continuous improvement goals, add Cloud Event Management to your toolchain:
+
+1. On the DevOps dashboard, on the Toolchains page, click the toolchain that you want to add Cloud Event Management to. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain** and click **Overview**.
+ 
+ a. Click **Add a Tool**.
+ 
+ b. In the Tool Integrations section, click **Cloud Event Management**.
+ 
+1. Click **Create Integration**.
+1. From your toolchain, click any of the following tool cards:
+
+ * **Cloud Event Management** to get started with Cloud Event Management.
+ 
+ * **{{site.data.keyword.alertnotificationshort}}** to create policies that determine when users receive incident notifications.
+ 
+ * **Runbook Automation** to manage your catalog of runbooks in Cloud Event Management.
+
+
 ## Configuring Delivery Pipeline
 {: #deliverypipeline}
 
@@ -313,7 +339,7 @@ To complete source control tasks, add the Eclipse Orion {{site.data.keyword.webi
 To learn more, see [Editing code with the Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery/web_ide.html){: new_window} and [Eclipse Orion {{site.data.keyword.webide}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_eclipse_orion_web_ide/){: new_window}.
 
 
-## Configuring Git Repos and Issue Tracking (Experimental)
+## Configuring Git Repos and Issue Tracking (Beta)
 {: #gitbluemix}
 
 The Git Repos and Issue Tracking tool integration is based on GitLab Community Edition, which is a web-based hosting service for Git repos. You can have both local and remote copies of your repos. To learn more, see [Git Repos and Issue Tracking (Experimental) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/help){:new_window}.
@@ -761,7 +787,7 @@ Configure Slack to receive notifications about your toolchain from the tool inte
 To learn more, see [Slack ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window}.
 
 
-# Related Links
+<!-- # Related Links
 {: #rellinks}
 
 ## Tutorials and Samples
@@ -773,4 +799,4 @@ To learn more, see [Slack ![External link icon](../../icons/launch-glyph.svg "Ex
 {: #general}
 
 * [{{site.data.keyword.contdelivery_full}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_continuous_delivery/){:new_window}
-* [IBM Cloud Garage Method ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method){:new_window}
+* [IBM Cloud Garage Method ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method){:new_window} -->
