@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2017-04-11"
 
 
 ---
@@ -452,11 +452,11 @@ While there are requirements for the type and size of available hardware, you ca
 <dd>
 ESXi is a virtualization layer that runs on physical servers and that abstracts processor, memory, storage, and resources into multiple virtual machines. Choose any combination that meets the following resource totals, on the condition that minimum physical core count per ESXi is eight. The following specifications are for the {{site.data.keyword.Bluemix_notm}} core runtime only.
 <ul>
-<li>32 physical cores at 2.0 or more GHz each</li>
-<li>512 GB of physical RAM</li>
-<li>Total datastore size of 7.5 TB
+<li>40 physical cores at 2.0 or more GHz each</li>
+<li>768 GB of physical RAM</li>
+<li>Total datastore size of 10 TB
 <ul>
-<li>7 TB datastore to hold {{site.data.keyword.Bluemix_notm}}</li>
+<li>9.5 TB datastore to hold {{site.data.keyword.Bluemix_notm}}</li>
 <li>500 GB datastore to hold the inception virtual machine</li>
 </ul>
 </li>
@@ -465,8 +465,8 @@ ESXi is a virtualization layer that runs on physical servers and that abstracts 
 </dd>
 <dt>**High availability**</dt>
 <dd>
-To support a single node failure, you must have n+1 ESXi. For example, if the 32 core and 512 GB of memory is met using two 16x cores with 256 GB ESXi servers, you need three of these servers to support a complete failure of a single node.
-<p><strong>Note:</strong> The customer's VMware administrator can decide to enforce strict high availability failover in the cluster to guarantee resources. If you choose to proceed without high availability failover, you can meet the minimum 32 core and 512 GB resource requirement.</p>
+To support a single node failure, you must have n+1 ESXi. For example, if the 40 core and 768 GB of memory is met using two 16x cores with 256 GB ESXi servers, you need three of these servers to support a complete failure of a single node.
+<p><strong>Note:</strong> The customer's VMware administrator can decide to enforce strict high availability failover in the cluster to guarantee resources. If you choose to proceed without high availability failover, you can meet the minimum 40 core and 768 GB resource requirement.</p>
 </dd>
 <dt>**Network**</dt>
 <dd>

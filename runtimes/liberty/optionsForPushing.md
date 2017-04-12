@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-07"
+lastupdated: "2017-03-22"
 
 ---
 
@@ -186,7 +186,7 @@ Note: The web applications that are deployed as part of the server directory are
 
 You can also push a packaged server file to Bluemix. The packaged server file is created by using Liberty's server package command. In addition to the application and configuration files, the packaged server file can contain shared resources and Liberty user features needed by the application.
 
-To package a Liberty server, use the `./bin/server package` command from your Liberty installation directory. Specify your server name and include the `--include=usr` option. 
+To package a Liberty server, use the `./bin/server package` command from your Liberty installation directory. Specify your server name and include the `--include=usr` option.
 For example, if your Liberty server is defaultServer, run the command:
 
 ```
@@ -232,7 +232,7 @@ The following variables are defined in the `runtime-vars.xml` file, and referenc
 ### Accessing information of bound services
 {: #accessing_info_of_bound_services}
 
-When you want to bind a service to your application, information about the service, such as connection credentials, is included in the [VCAP_SERVICES environment variable](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) that Cloud Foundry sets for the application. For [automatically configured services](autoConfig.html), the Liberty buildpack generates or updates service binding entries in the server.xml file. The contents of the service binding entries can be in one of the following forms:
+When you want to bind a service to your application, information about the service, such as connection credentials, is included in the [VCAP_SERVICES environment variable ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) that Cloud Foundry sets for the application. For [automatically configured services](autoConfig.html), the Liberty buildpack generates or updates service binding entries in the server.xml file. The contents of the service binding entries can be in one of the following forms:
 
 * cloud.services.&lt;service-name&gt;.&lt;property&gt;, which describes the information such as the name, type, and plan of the service.
 * cloud.services.&lt;service-name&gt;.connection.&lt;property&gt;, which describes the connection information for the service.

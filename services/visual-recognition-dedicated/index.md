@@ -44,7 +44,7 @@ You create your free instance of the {{site.data.keyword.visualrecognitionshort}
 	- Replace the `https . . .` endpoint with your endpoint URL
 
 	```bash
-	curl -X POST -u "{username}:{password}" -F "images_file=@fruitbowl.jpg" "https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?version=2016-05-17"
+	curl -X POST -u "{username}:{password}" -F "images_file=@fruitbowl.jpg" "https://gateway.yourenvironment.watsonplatform.net/visual-recognition/api/v3/classify?version=2016-05-17"
 	```
     {: pre}
 
@@ -75,11 +75,11 @@ You create your free instance of the {{site.data.keyword.visualrecognitionshort}
                             "type_hierarchy": "/fruit/mango"
                         },
                         {
-                            "class": "olive color"
+                            "class": "olive color",
                             "score": 0.951
                         },
                         {
-                            "class": "olive green color"
+                            "class": "olive green color",
                             "score": 0.747
                         }
                     ],
@@ -102,9 +102,9 @@ You create your free instance of the {{site.data.keyword.visualrecognitionshort}
 
 * "[Fruit basket ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://flic.kr/p/JPHES "Fruit basket"){:new_window} by Flikr user [Ryan Edwards-Crewe ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.flickr.com/photos/ryanec/){:new_window} used under [Creative Commons Attribution 2.0 license ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://creativecommons.org/licenses/by/2.0/deed.en){:new_window}. No changes were made to this image.
 
-# Related Links
+### Related Links
 {: #rellinks notoc}
 
-## Tutorials and Samples
+### Tutorials and Samples
 {: #samples}
 * Learn more about how to [Build a custom classifier](tutorial-custom-classifier.html).

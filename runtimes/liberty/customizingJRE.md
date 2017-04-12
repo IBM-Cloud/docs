@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-07"
+lastupdated: "2017-03-23"
 
 ---
 
@@ -108,7 +108,7 @@ Applications can customize the JVM options with the specifications that are defi
 <tr>
 <td> OpenJDK </td>
 <td>is based on the HotSpot runtime that has the notation of -X for non-standard, -XX for developer options, and Boolean flags to enable or disable the option </td>
-<td>[HotSpot Runtime Overview](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
+<td>[HotSpot Runtime Overview  ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
 </tr>
 </table>
 
@@ -170,7 +170,7 @@ Note: Some options might not go into effect unless the option is triggered by an
 
 Except for application-defined options that are specified with the JVM_ARGS environment variable, the resulting options are persisted in the runtime environment either as command line options (stand-alone Java applications) or in a `jvm.options` file (non-standalone Java applications). The applied JVM options for the application can be viewed either from the IBM Bluemix console or the CF CLI.
 
-The JVM options for stand-alone Java application are persisted as command line options. They can be viewed from the `staging_info.yml` file. 
+The JVM options for stand-alone Java application are persisted as command line options. They can be viewed from the `staging_info.yml` file.
 
 To view the `staging_info.yml` file on an application running in a DEA node, run:
 
@@ -209,33 +209,33 @@ To view the `jvm.options` file on an application running in a Diego cell, run:
 Deploying an application with customized JVM options to enable IBM JRE verbose garbage collection logging:
 * The JVM options included in an application's `manifest.yml` file:
 
-  <pre>
+```
     env:
       JAVA_OPTS: "-verbose:gc -Xverbosegclog:./verbosegc.log,10,1000"
-  </pre>
-  {: codeblock}
+```
+{: codeblock}
 
 * To view the JVM generated verbose garbage collection log file on an application running in a DEA node, run:
 
-  <pre>
+```
     $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
-  </pre>
-  {: codeblock}
+```
+{: codeblock}
 
 * To view the JVM generated verbose garbage collection log file on an application running in a Diego cell, run:
 
-  <pre>
+```
     $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/verbosegc.log.001"
-  </pre>
-  {: codeblock}
+```
+{: codeblock}
 
 * To update a deployed application's IBM JRE option to trigger a heap, snap, and javacore on an OutOfMemory condition, set the application's environment variable with the JVM option and restart the application:
 
-  <pre>
+```
     $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
     $ cf restart myapp
-  </pre>
-  {: codeblock}
+```
+{: codeblock}
 
  See the [Logging and tracing](loggingAndTracing.html#download_dumps) documentation for details on viewing and downloading the generated dump files.
 

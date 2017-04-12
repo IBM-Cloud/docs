@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-03-23"
 
 ---
 
@@ -49,7 +49,7 @@ cd get-started-python
 ## 2. Run the app locally
 {: #run_locally}
 
-See [The Hitchhiker’s Guide to Python!](http://docs.python-guide.org/en/latest/) for help setting up Python on your system.
+See [The Hitchhiker’s Guide to Python! ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://docs.python-guide.org/en/latest/) for help setting up Python on your system.
 {: tip}
 
 Install the dependencies listed in the [requirements.txt ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://pip.readthedocs.io/en/stable/user_guide/#requirements-files) file to be able to run the app locally.

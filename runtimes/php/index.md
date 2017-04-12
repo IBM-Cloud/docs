@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-25"
+lastupdated: "2017-03-23"
 
 ---
 
@@ -42,7 +42,7 @@ You can specify the version of PHP to be used by your app in the composer.json f
 }
 ```
 {: codeblock}
-For more information, see [Composer Package links](https://getcomposer.org/doc/04-schema.md#package-links).
+For more information, see [Composer Package links  ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://getcomposer.org/doc/04-schema.md#package-links).
 
 When a version is not specified, version 5.5.34 is chosen by default.
 
