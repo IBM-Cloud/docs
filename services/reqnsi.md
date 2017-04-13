@@ -216,7 +216,7 @@ If a service that you bind to an application crashes, the application might stop
 
 You might have applications that were created and run outside of {{site.data.keyword.Bluemix_notm}}, or you might use third-party tools. If {{site.data.keyword.Bluemix_notm}} services provide service keys that are accessible from the internet, you can use those services with your local apps or third-party tools.
 
-The following servies provide service keys for you to use externally:
+The following services provide service keys for you to use externally:
 
 * {{site.data.keyword.amashort_old}} <!--Advanced Mobile Access-->
 * {{site.data.keyword.alchemyapishort}} <!--AlchemyAPI-->
