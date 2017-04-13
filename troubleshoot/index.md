@@ -14,9 +14,10 @@ lastupdated: "2017-4-10"
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock} 
 
+
+
 # Troubleshooting for accessing {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
-
 
 
 General problems with accessing {{site.data.keyword.Bluemix}} might include a user that is unable to log in to {{site.data.keyword.Bluemix_notm}}, an account that is stuck in a pending state, and so on. However, in many cases, you can recover from these problems by following a few easy steps. 
@@ -45,6 +46,35 @@ To get a valid IBMid and password, go to the My IBM profile page, and then compl
   
 **Note:** For IBM employees, the IBMid might be different from the intranet login ID. 
 
+
+
+<!-- begin STAGING ONLY --> 
+
+## Problem accessing external website
+{: #ts_bmlinkid}
+
+You cannot log in to {{site.data.keyword.Bluemix_notm}} by using your IBM intranet ID unless you link your intranet ID with your IBMid.
+
+
+After you select **Sign in with your intranet ID** from the {{site.data.keyword.Bluemix_notm}} Sign in page, you might see the following error message:
+{: tsSymptoms} 
+
+`Problem Accessing External Website`
+
+
+
+This problem occurs when you log in to {{site.data.keyword.Bluemix_notm}} by using an IBM intranet ID that is not linked to an IBMid. Your IBMid is the ID that you use to log in to www.ibm.com.
+{: tsCauses}
+
+
+As an IBM employee, before you are able to log in to {{site.data.keyword.Bluemix_notm}} by using your IBM intranet ID, you must link your intranet ID with your external IBMid. To link the two IDs, complete the following steps:
+{: tsResolve} 
+
+  1. On the [Central Sign-on ![External link icon](../icons/launch-glyph.svg "External link icon")](https://w3-03.sso.ibm.com/tools/cso/index.jsp){: new_window} page, click **My Sign-ons**.
+  2. On the My Sign-ons page, click **Link IDs**, and enter your IBMid and password on the {{site.data.keyword.Bluemix_notm}} Sign in page. After that, your intranet ID and IBMid will be automatically linked.
+  
+
+<!-- end STAGING ONLY -->
 
 
 
@@ -93,7 +123,7 @@ You can use a DNS provider that supports intelligent failover among multiple ID 
 
 When you configure your DNS settings, you must specify the public IP addresses of the {{site.data.keyword.Bluemix_notm}} regions that your apps are running in. To get the public IP address of a {{site.data.keyword.Bluemix_notm}} region, use the `nslookup` command. For example, you can type the following command in a command line window:
 ```
-nslookup mybluemix.net
+nslookup stage1.mybluemix.net
 ```
 
 
@@ -113,7 +143,7 @@ After you register for a {{site.data.keyword.Bluemix_notm}} trial account, you m
 After you register for a {{site.data.keyword.Bluemix_notm}} trial account, you receive a confirmation email. You must click the link that is in the confirmation email to complete the registration process.
 {: tsCauses} 
 
-The confirmation email is sent to the email address that you provided. Check your inbox and your junk mail folder. If you haven't received the confirmation email, contact [{{site.data.keyword.Bluemix_notm}} Support ![External link icon](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}.  
+The confirmation email is sent to the email address that you provided. Check your inbox and your junk mail folder. If you haven't received the confirmation email, contact [{{site.data.keyword.Bluemix_notm}} Support ![External link icon](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixsupport.com){: new_window}.  
 {: tsResolve}
 
 
@@ -157,7 +187,7 @@ If you are unable to invite users to your organization and need a different role
   
 If you are unable to invite users because you are a collaborator and not a member, you must delete your previous {{site.data.keyword.Bluemix_notm}} account and then be invited to join the account as a member of the organization. To delete your previous account and join the account as a member, complete the following steps: 
 
-  1. Contact [{{site.data.keyword.Bluemix_notm}} Support ![External link icon](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} to open a support ticket and request that your account be deleted. If you have data that is associated with your old account that you want to save and move to the new account, include this information in your email. 
+  1. Contact [{{site.data.keyword.Bluemix_notm}} Support ![External link icon](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixsupport){: new_window} to open a support ticket and request that your account be deleted. If you have data that is associated with your old account that you want to save and move to the new account, include this information in your email. 
   2. After your account is deleted, have a user with the organization manager role invite you to the organization as an organization manager. Then, sign up for {{site.data.keyword.Bluemix_notm}} from the invitation. 
 
 
@@ -208,11 +238,14 @@ You can complete one or more of the following actions as necessary:
   * Log out of {{site.data.keyword.Bluemix_notm}} and log in again.
   * Use the private browsing mode of your browser. 
   * Clear the cookies and the cache of the browser.
-  * Use a different browser. For information about the versions of the browsers that are supported by {{site.data.keyword.Bluemix_notm}}, see [{{site.data.keyword.Bluemix_notm}} Prerequisites ![External link icon](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}.
+  * Use a different browser. For information about the versions of the browsers that are supported by {{site.data.keyword.Bluemix_notm}}, see [{{site.data.keyword.Bluemix_notm}} Prerequisites ![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}.
   * If you have installed the cf command line interface, enter the `cf apps` command to see whether your application is running.
   
   
   
+  
+  
+
 
 
 
@@ -299,10 +332,9 @@ To check the version of Java that IBM Eclipse Tools for Bluemix runs, complete t
 
 If your workbench JVM is IBM JVM 7 or 8, or a previous version of Oracle JVM 8, complete the following steps to switch to Oracle JVM 8:
 
-  1. Download and then install Oracle JVM 8, see [Java SE Downloads ![External link icon](../icons/launch-glyph.svg)](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window} for details.
+  1. Download and then install Oracle JVM 8, see [Java SE Downloads ![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window} for details.
   2. Restart Eclipse.
   3. Check whether the `eclipse.vm` property points to your new installation of Oracle JVM 8.
-
 
   
 ## Unable to reuse names of deleted apps
@@ -338,16 +370,12 @@ Take the following steps to delete the unused route:
 	 cf delete-route mybluemix.net -n app001
 	 ```
 
-  
-  
-  
-  
-  
-  
-  
+
+	 
+	 
+
 ## Unable to retrieve spaces in the org
 {: #ts_retrieve_space}
-
 You can't create an app or a service if your current organization does not have a space associated with it.
 
 When you try to create an app in Bluemix, you see the following error message:
@@ -364,8 +392,7 @@ Ensure that you created a space in your current organization.  To create a space
   * Click the {{site.data.keyword.avatar}} icon ![Avatar icon](images/account_support.svg) to open the Account and Support widget, select the organization that you want to create the space in, and then click **Create a Space**.
   * In the cf command line interface, type `cf create-space <space_name> -o <organization_name>`.
 
-Try again. If you see this message again, go to the [Bluemix status ![External link icon](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window} page to check whether a service or component has an issue.
-
+Try again. If you see this message again, go to the [Bluemix status ![External link icon](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixstatus){: new_window} page to check whether a service or component has an issue.
 
 
 
@@ -390,14 +417,12 @@ You do not have the appropriate level of authority that is required to perform t
 {: tsCauses}
 
   
-
 To obtain the appropriate authority level, use one of the following methods: 
 {: tsResolve}
  * Select another organization and space for which you have the developer role. 
  * Ask the org manager to change your role to developer or to create a space and then assign you a developer role. See [Managing organizations and spaces](/docs/admin/orgs_spaces.html) for details.
  
 
- 
 
 
 ## Unable to access {{site.data.keyword.Bluemix_notm}} services because of authorization errors
@@ -418,7 +443,7 @@ Instead of hardcoding the credentials in your app, use connection parameters fro
 ```
 process.env.VCAP_SERVICES
 ```
-For more information about the commands that you can use in other program languages, see [Java ![External link icon](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} and [Ruby ![External link icon](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}. 
+For more information about the commands that you can use in other program languages, see [Java ![External link icon](../icons/launch-glyph.svg "External link icon")](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} and [Ruby ![External link icon](../icons/launch-glyph.svg "External link icon")](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}. 
  
 
  
@@ -469,7 +494,7 @@ Other less common causes of a Bad Gateway error are Internet service provider (I
 
  
 
-If you suspect that a {{site.data.keyword.Bluemix_notm}} service is down, first check the [{{site.data.keyword.Bluemix_notm}} status ![External link icon](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window} page. You might want to use the service in another {{site.data.keyword.Bluemix_notm}} region as a workaround. Detailed information is available in [Using services in another region](/docs/services/reqnsi.html#cross_region_service). If the service status is normal, try the following steps to solve the problem: 
+If you suspect that a {{site.data.keyword.Bluemix_notm}} service is down, first check the [{{site.data.keyword.Bluemix_notm}} status ![External link icon](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixstatus){: new_window} page. You might want to use the service in another {{site.data.keyword.Bluemix_notm}} region as a workaround. Detailed information is available in [Using services in another region](/docs/services/reqnsi.html#cross_region_service). If the service status is normal, try the following steps to solve the problem: 
 {: tsResolve}
 
   * Retry the action:
@@ -477,7 +502,7 @@ If you suspect that a {{site.data.keyword.Bluemix_notm}} service is down, first 
 	* Use a different browser.
 	* Reboot your router, your modem, and your computer. Rebooting these devices can clear up various errors that lead to the error 502. 
   * Wait and try again later. In some instances, temporary problems might occur with your Internet service provider or the {{site.data.keyword.Bluemix_notm}} services. You can wait until the temporary problems are solved.
-  * If the problem still exists, contact {{site.data.keyword.Bluemix_notm}} support. See [Contacting {{site.data.keyword.Bluemix_notm}} Support ![External link icon](../icons/launch-glyph.svg)](/docs/support/index.html#contacting-bluemix-support){: new_window} for more information. 
+  * If the problem still exists, contact {{site.data.keyword.Bluemix_notm}} support. See [Contacting {{site.data.keyword.Bluemix_notm}} Support](/docs/support/index.html#contacting-bluemix-support) for more information. 
 
 
 
@@ -508,27 +533,20 @@ Use one of the following methods to specify your disk quota. The maximum disk qu
     ```
 	cf push appname -p app_path -k <disk_quota>
 	```
-
 	
-	
-
-
-## Android apps can't receive push notifications
+## Android apps can't receive {{site.data.keyword.mobilepushshort}}
 {: #ts_push}
 
-Android apps in certain regions where Google is not accessible can't receive notifications that you send out through the IBM Push service. In this case, you can use third-party services as a workaround.
+Android apps in certain regions where Google is not accessible can't receive notifications that you send out through the IBM {{site.data.keyword.mobilepushshort}} service. In this case, you can use third-party services as a workaround.
 
- 
-
-You bind a Push service for your Bluemix app and send a message to the registered devices. However, apps that are developed on the Android platform can't receive your notifications in certain regions. 
+You bind a {{site.data.keyword.mobilepushshort}} service for your Bluemix app and send a message to the registered devices. However, apps that are developed on the Android platform can't receive your notifications in certain regions. 
 {: tsSymptoms}
 
- 
-IBM Push service uses the Google Cloud Messaging (GCM) service to dispatch notifications to mobile apps that are developed on the Android platform. To enable the Android apps to receive notifications, Google Cloud Messaging (GCM) service must be accessible by the mobile apps. In regions where the GCM service can't be reached by the Android apps, the Android apps are not able to receive push notifications.
+IBM {{site.data.keyword.mobilepushshort}} service uses the Google Cloud Messaging (GCM) service to dispatch notifications to mobile apps that are developed on the Android platform. To enable the Android apps to receive notifications, Google Cloud Messaging (GCM) service must be accessible by the mobile apps. In regions where the GCM service cannot be reached by the Android apps, the Android apps are not able to receive {{site.data.keyword.mobilepushshort}}.
 {: tsCauses}
 
  
-Use third-party services that do not rely on the GCM service as a workaround, for example, [Pushy ![External link icon](../icons/launch-glyph.svg)](https://pushy.me){: new_window}, [igetui ![External link icon](../icons/launch-glyph.svg)](http://www.getui.com/){: new_window}, and [jpush ![External link icon](../icons/launch-glyph.svg)](https://www.jpush.cn/){: new_window}.
+Use third-party services that do not rely on the GCM service as a workaround, for example, [Pushy ![External link icon](../icons/launch-glyph.svg "External link icon")](https://pushy.me){: new_window}, [igetui ![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.getui.com/){: new_window}, and [jpush ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.jpush.cn/){: new_window}.
 {: tsResolve}
 
 
@@ -556,7 +574,7 @@ Delete any services instances that are not needed, or remove the limit on the nu
  
   * To delete a services instance, you can use the {{site.data.keyword.Bluemix_notm}} user interface or the command line interface.
     To use the {{site.data.keyword.Bluemix_notm}} user interface to delete a service instance, complete the following steps:
-	  1. On the {{site.data.keyword.Bluemix_notm}} Dashboard, click the service that you want to delete. The service tile displays. 
+	  1. On the {{site.data.keyword.Bluemix_notm}} Dashboard, click the service that you want to delete.  The service tile displays.
 	  2. On the service tile, click the **Menu** icon.
 	  3. Click **Delete Service**. After you delete the service instance, you will be prompted to restage the application that the service instance was bound to. 
     To use the command line interface to delete a service instance, complete the following steps:
@@ -588,11 +606,11 @@ When you push the executable to {{site.data.keyword.Bluemix_notm}}, you must spe
 {: tsResolve}
 
 ```
-cf push appname -p <app_path> -c <start_command> -b <null-buildpack>
+cf push appname -p app_path -c <start_command> -b <null-buildpack>
 ```
 For example:
 ```
-cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
+cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
 
@@ -600,6 +618,8 @@ cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/n
 {: #ts_outofmemory}
 
 If you are a trial account user, you might be unable to deploy an app to {{site.data.keyword.Bluemix_notm}} if you have exceeded the memory limit of your organization. You can either reduce the memory that your apps use or increase the memory quota of your account. The maximum memory quota for a trial account is 2 GB and can only be increased by moving to a paid account.
+
+
 
 
 
@@ -623,7 +643,9 @@ You can either increase the memory quota of your account, or reduce the memory t
     If you use the {{site.data.keyword.Bluemix_notm}} user interface, complete the following steps:
 	  1. On the {{site.data.keyword.Bluemix_notm}} Dashboard, select your application. The app details page opens.
 	  2. In the runtime pane, you can reduce the maximum memory limit or the numbers of app instances, or both, for your app. 
+	  
 	If you use the cf command line interface, complete the following steps:
+	
 	  1. Check how much memory is being used for your apps:
 	  ```
 	  cf apps
@@ -631,7 +653,7 @@ You can either increase the memory quota of your account, or reduce the memory t
 	     The cf apps command lists all the apps that you deployed in your current space. The status of each app is also displayed.
       2. To reduce the amount of memory that is used by your app, reduce the number of app instances or the maximum memory limit, or both:
 	  ```
-	  cf push <appname> -p <app_path> -i <instance_number> -m <memory_limit>
+	  cf push appname -p app_path -i instance_number -m memory_limit
       ```
 	  3. Restart your app for the changes to take effect.
 
@@ -660,7 +682,7 @@ You can manually restart the app by typing the following command in the command 
 {: tsResolve}
 
 ```
-cf push <appname> -p <app_path>
+cf push appname -p app_path
 ```
 In addition, you can code the app to identify and recover from problems such as outages, exceptions, and connection failures. 
 
@@ -716,9 +738,40 @@ Use one of the following methods to solve the problem:
    path: path_to_application
    ```
   * Create a `package.json` file that is in the same directory as your app.
-  
-  
 
+  
+  
+  
+<!-- begin STAGING ONLY --> 
+
+## Bluemix Live Sync Debug does not start from the command line
+{: #ts_no_debug}
+
+You enabled the IBM Bluemix Live Sync Debug feature for your app by using the command line, but you cannot access the Debug interface.  
+  
+ 
+
+You enabled the Debug feature for your app by setting the **BLUEMIX_APP_MGMT_ENABLE** environment variable. However, you cannot access the Debug user interface at `app_url/bluemix-debug/manage`.
+{: tsSymptoms}
+
+
+
+The Debug feature cannot be enabled in these situations:
+{: tsCauses} 
+
+  * When the `manifest.yml` contains the command attribute
+  * When you use the **-c** option to push an app to {{site.data.keyword.Bluemix_notm}}
+
+ 
+  
+Use one of the following options to resolve the issue: 
+{: tsResolve}
+
+  * The recommended practice is to use the IBM Node.js buildpack to start the app. For more information, see the Startup command section of the [Deploying a Node.js application to {{site.data.keyword.Bluemix_notm}}](/docs/runtimes/nodejs/index.html#nodejs_runtime) topic. 
+  * Disable the command for your existing app either by revising the command attribute in your `manifest.yml` to command: null or by editing your push command to include `-c null`. 
+  * Remove the **command** attribute from the `manifest.yml`. Then delete the current app from {{site.data.keyword.Bluemix_notm}} and push the app again.
+  
+<!-- end STAGING ONLY -->  
   
   
 
@@ -787,11 +840,11 @@ The host name that you specify must be unique within the domain that you are usi
 
   * If you deploy your application by using the `manifest.yml` file, specify the host name in the host option.	 
     ```
-    host: <hostname>	
+    host: host_name	
 	```
   * If you deploy your application from the command prompt, use the `cf push` command with the **-n** option. 
     ```
-    cf push <appname> -p <app_path> -n <hostname>
+    cf push appname -p app_path -n host_name
     ```
 
 
@@ -897,7 +950,7 @@ Take the following actions based on the cause that leads to the problem:
         ```
 		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
-	  * Use the [package.json ![External link icon](../icons/launch-glyph.svg)](https://docs.npmjs.com/json){: new_window} file. For example:
+	  * Use the [package.json ![External link icon](../icons/launch-glyph.svg "External link icon")](https://docs.npmjs.com/json){: new_window} file. For example:
 	    ```
 		{
       ...
@@ -935,7 +988,7 @@ Take the following actions based on the cause that leads to the problem:
  }
     ```
 	
-For more tips about Node.js apps, see [Tips for Node.js Applications ![External link icon](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.	
+For more tips about Node.js apps, see [Tips for Node.js Applications ![External link icon](../icons/launch-glyph.svg "External link icon")](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.	
 
 
 
@@ -977,7 +1030,7 @@ This problem might happen if scripts, such as the detect script, the compile scr
 
  
 
-You can use the [git update ![External link icon](../icons/launch-glyph.svg)](http://git-scm.com/docs/git-update-index){: new_window} command to change the permission of each script to executable. For example, you can type `git update --chmod=+x script.sh`.
+You can use the [git update ![External link icon](../icons/launch-glyph.svg "External link icon")](http://git-scm.com/docs/git-update-index){: new_window} command to change the permission of each script to executable. For example, you can type `git update --chmod=+x script.sh`.
 {: tsResolve}
 	
 	
@@ -999,7 +1052,7 @@ This problem might happen because DevOps Services requires a `manifest.yml` file
 
  
 
-To resolve this problem, you must create a `manifest.yml` file. For more information about how to create a `manifest.yml` file, see [Application manifest](/docs/manageapps/depapps.html#appmanifest).
+To resolve this problem, you must create a `manifest.yml` file. For more information about how to create a `manifest.yml` file, see [Application manifest ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/manageapps/depapps.html#appmanifest){: new_window}.
 {: tsResolve}	
 	
 
@@ -1045,6 +1098,7 @@ If you click the Deploy to {{site.data.keyword.Bluemix_notm}} button and find th
   * [The Bluemix DevOps Services project cannot be created](#project-cannot-be-created)
   * [The Git repository is not found and cannot be cloned in DevOps Services](#repo-not-found)
   * [The Git repository is cloned in DevOps Services, but the app is not deployed to {{site.data.keyword.Bluemix_notm}}](#repo-cloned-app-not-deployed)
+
 For more information about how to create the button, see Creating a Deploy to {{site.data.keyword.Bluemix_notm}} button.
 
 ### The Bluemix DevOps Services project cannot be created
@@ -1152,7 +1206,7 @@ Use one of the following methods to fix the problem:
 	```
 	<appname> open
 	```
-
+	
 ## Deploying an app from the run bar fails
 {: #deployinganappfromtherunbarfails}
 
@@ -1197,7 +1251,7 @@ If you configured your GitHub project to create work-item links when you push co
 6. Verify that there are no errors by checking the status icon again.
    ![Status icon without errors](images/githubResolved_small.png)
 
-For more information, see [Setting up GitHub for Bluemix DevOps Services projects ![External link icon](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/githubhooks/){: new_window}.
+For more information, see [Setting up GitHub for Bluemix DevOps Services projects ![External link icon](../icons/launch-glyph.svg "External link icon")](https://hub.jazz.net/docs/githubhooks/){: new_window}.
 
 
 # Troubleshooting for managing accounts
@@ -1225,7 +1279,7 @@ The status of your {{site.data.keyword.Bluemix_notm}} account becomes inactive w
 
  
 
-To reactivate your account, contact [{{site.data.keyword.Bluemix_notm}} Support ![External link icon](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}. In the email, you must include the following information:
+To reactivate your account, contact [{{site.data.keyword.Bluemix_notm}} Support ![External link icon](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixsupport.com){: new_window}. In the email, you must include the following information:
 {: tsResolve}
 
   * The IBMid that you use to log in to {{site.data.keyword.Bluemix_notm}}.
@@ -1272,7 +1326,7 @@ You might notice that several applications share the same URL in {{site.data.key
 This problem might happen when you assign the same URL route for different applications within a space.
 {: tsCauses}
 
-For example, you push the myApp1 application to {{site.data.keyword.Bluemix_notm}} and set the domain to "mynewapp.mybluemix.net". Then, you push another myApp2 application to the same space and set one of its URL routes to "mynewapp.mybluemix.net". The route is now mapped to both applications.
+For example, you push the myApp1 application to {{site.data.keyword.Bluemix_notm}} and set the domain to "mynewapp.stage1.mybluemix.net". Then, you push another myApp2 application to the same space and set one of its URL routes to "mynewapp.stage1.mybluemix.net". The route is now mapped to both applications.
 
  
 
@@ -1281,7 +1335,30 @@ This is supported behavior of the {{site.data.keyword.Bluemix_notm}} and you can
   
 	
 	
+<!-- begin STAGING ONLY --> 
+	
+	
+## Administrators can't view all orgs by using the {{site.data.keyword.Bluemix_notm}} user interface
+{: #ts_ui_org}
 
+As an administrator, when you use the {{site.data.keyword.Bluemix_notm}} user interface, you can't display every organization to administer them. You can display and administer only those organizations to which you belong.
+
+ 
+
+As an administrator, you cannot see all the organizations by using the {{site.data.keyword.Bluemix_notm}} user interface.
+{: tsSymptoms}
+
+ 
+
+This is a limitation of the {{site.data.keyword.Bluemix_notm}} user interface.
+{: tsCauses}
+
+ 
+
+You can use the command such as `cf orgs`, `cf create-org`, and `cf delete-org` from the cf command line interface to manage all the organizations. For a full list of cf commands, enter `cf help`.
+{: tsResolve}
+	
+<!-- end STAGING ONLY -->
 
 
 
@@ -1342,14 +1419,14 @@ Some buildpacks are not configured to automatically download all updated compone
 You can use buildpacks that have built-in mechanisms to avoid loading obsolete components. The following buildpacks are two examples: 
 {: tsResolve}
 
-  * [Cloud Foundry Java buildpack ![External link icon](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack){: new_window}. This buildpack has a built-in mechanism to ensure that the latest version of the buildpack is used. For more information about how this mechanism works, see [extending-caches.md ![External link icon](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
-  * [Cloud Foundry Node.js buildpack ![External link icon](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}. This buildpack has similar functionality by using environment variables. To enable the Node.js buildpack to download node modules from the internet every time, type the following command in the cf command line interface: 	
+  * [Cloud Foundry Java buildpack ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/java-buildpack){: new_window}. This buildpack has a built-in mechanism to ensure that the latest version of the buildpack is used. For more information about how this mechanism works, see [extending-caches.md ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
+  * [Cloud Foundry Node.js buildpack ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}. This buildpack has similar functionality by using environment variables. To enable the Node.js buildpack to download node modules from the internet every time, type the following command in the cf command line interface: 	
   ```
   set NODE_MODULES_CACHE=false
   ```
 If the buildpack that you are using does not provide a mechanism to load the latest components automatically, you can manually delete the contents in the cache directory and push your app again by taking the following steps:
-  1. Check out a branch of a null buildpack, for example, https://github.com/ryandotsmith/null-buildpack. For information about how to check out a branch, see [Git Basics - Getting a Git Repository ![External link icon](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}.  
-  2. Add the following line to the `null-buildpack/bin/compile` file and commit the changes. For information about how to commit changes, see [Git Basics - Recording Changes to the Repository ![External link icon](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
+  1. Check out a branch of a null buildpack, for example, https://github.com/ryandotsmith/null-buildpack. For information about how to check out a branch, see [Git Basics - Getting a Git Repository ![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}.  
+  2. Add the following line to the `null-buildpack/bin/compile` file and commit the changes. For information about how to commit changes, see [Git Basics - Recording Changes to the Repository ![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
   ```
   rm -rfv $2/*
   ```
@@ -1384,7 +1461,7 @@ When you push an application to Bluemix by using a PHP buildpack, you might see 
 
 
 
-In the PHP buildpack, the error_log parameter is used to define the logging level. By default, the value of the `error_log` parameter is **stderr notice**. The following example shows the default logging level configuration in the `nginx-defaults.conf` file of the PHP buildpack that is provided by Cloud Foundry. For more information, see [cloudfoundry/php-buildpack ![External link icon](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}.
+In the PHP buildpack, the error_log parameter is used to define the logging level. By default, the value of the `error_log` parameter is **stderr notice**. The following example shows the default logging level configuration in the `nginx-defaults.conf` file of the PHP buildpack that is provided by Cloud Foundry. For more information, see [cloudfoundry/php-buildpack ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}.
 {: tsCauses} 
 
 ```
@@ -1403,7 +1480,7 @@ daemon off;
 error_log stderr error;
 pid @{HOME}/nginx/logs/nginx.pid;
 ```
-For more information about how to change the default logging configuration, see [error_log ![External link icon](../icons/launch-glyph.svg)](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}.
+For more information about how to change the default logging configuration, see [error_log ![External link icon](../icons/launch-glyph.svg "External link icon")](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}.
 	
 
 ## Unable to import a third-party Python library into {{site.data.keyword.Bluemix_notm}}
@@ -1588,5 +1665,54 @@ You can resolve this issue by using one of the following methods:
 	```
 	
 	
+<!-- begin STAGING ONLY --> 
 
+	
+## Log4js logger objects are not displayed in the Node.js Trace pop-up window
+{: #ts_logger}
+
+The log4js logger objects are not displayed in the Node.js Trace pop-up window when both the log4js and ibmbluemix modules are used in your app. 	
+
+ 
+The log4js logger objects are not displayed in the Node.js Trace pop-up window when both the log4js, winston, and ibmbluemix modules are used in your app.
+{: tsSymptoms}
+
+
+Because the ibmbluemix module provides a unified API for log operations that use the log4js and winston modules, only the ibmbluemix logger objects are displayed in the Node.js Trace pop-up window. This is to stop the log level settings for the ibmbluemix, log4js, and winston logger objects from overwriting each other.
+{: tsCauses}
+
+
+This behavior is expected.
+{: tsResolve}
+
+<!-- end STAGING ONLY -->
+
+
+
+
+<!-- begin STAGING ONLY -->
+
+
+## Apply trace setting to all instances of the application check box is disabled
+{: #ts_bunyan}
+
+The **Apply trace setting to all instances of the application** check box is unchecked and disabled in the Node.js Trace pop-up window when the Bunyan logger levels are modified.
+
+
+
+When you change the levels of the Bunyan logger objects, the **Apply trace setting to all instances of the application** check box is unchecked and disabled in the Node.js Trace pop-up window.
+{: tsSymptoms} 
+
+ 
+
+When Bunyan log levels are modified, the trace setting cannot be applied to all instances of an application. This is because the Bunyan library does not require the names or identifiers of Bunyan logger objects to be unique. More than one of the Bunyan logger objects that are used to specify levels in the log messages for your application can have the same name or identifier. Therefore, if the trace setting is enabled for an application, the log levels that are specified in the log messages of your application might be inaccurate.
+{: tsCauses}
+
+
+
+
+This behavior is expected.
+{: tsResolve} 
+
+<!-- end STAGING ONLY -->
 

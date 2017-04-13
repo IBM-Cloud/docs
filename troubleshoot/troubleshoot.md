@@ -12,8 +12,8 @@ lastupdated: "2017-03-08"
 
 
 
-# Troubleshooting
-{: #troubleshooting}
+# Overview
+{: #troubleshoot_overview}
 
 If you experience problems with {{site.data.keyword.Bluemix}}, you can use this troubleshooting information to identify and resolve the problem.
 
