@@ -31,7 +31,7 @@ To open a support ticket or find other help options, you can use the Support wid
 {: #using-avatar}
 The Support widget enables you to get help and provide feedback.
 
-To open the Support widget, log in to the {{site.data.keyword.Bluemix_notm}} console. From the menu bar, click the **Support** > **Find Answers** to locate answers to your questions. On the page that is displayed, type your question in the search field. Answers from across the {{site.data.keyword.Bluemix_notm}} documentation and Stack Overflow are displayed. The page also provides options to post your question to Stack Overflow, or to open a ticket by clicking **GET IN TOUCH**. Although the support widget is the preferred method for obtaining support, if you cannot log in to Bluemix, you can use the [Get Help](ibm.biz/bluemixsupport) page to submit a ticket as well.
+To open the Support widget, log in to the {{site.data.keyword.Bluemix_notm}} console. From the menu bar, click the **Support** > **Find Answers** to locate answers to your questions. On the page that is displayed, type your question in the search field. Answers from across the {{site.data.keyword.Bluemix_notm}} documentation and Stack Overflow are displayed. The page also provides options to post your question to Stack Overflow, or to open a ticket by clicking **GET IN TOUCH**. Although the support widget is the preferred method for obtaining support, if you cannot log in to Bluemix, you can use the [Get Help ![External link icon](../icons/launch-glyph.svg "External link icon")](ibm.biz/bluemixsupport){: new_window} page to submit a ticket as well.
 
 ### Using the Support widget for linked accounts
 {: #using-avatar-linked}
@@ -40,10 +40,10 @@ If you are using an account that is linked between {{site.data.keyword.Bluemix_n
 
 * You can search through the {{site.data.keyword.Bluemix_notm}} documentation, Stack Overflow, and DW Answers by setting a filter to change the search results to include only the selected items.
 * You can link directly to Stack Overflow **#IBMBluemix** or DW Answers to search or post.
-* You can submit a structured idea to the [IBM Cloud - Structured Ideas](https://ibmcloud.ideas.aha.io/) site.
-* You can contact sales by either calling or finding a sales representative. See the [Contact us](https://www.ibm.com/cloud-computing/bluemix/contact-us) page.
-* You can connect with [**@IBMBluemixHelp**](http://www.twitter.com/IBMBluemixHelp) on Twitter to enhance your {{site.data.keyword.Bluemix_notm}} experience.
-* Although the support widget is the preferred method for obtaining support, if you cannot log in to {{site.data.keyword.Bluemix_notm}}, you can use the [Get Help](ibm.biz/bluemixsupport) page to submit a ticket as well.
+* You can submit a structured idea to the [IBM Cloud - Structured Ideas ![External link icon](../icons/launch-glyph.svg "External link icon")](https://ibmcloud.ideas.aha.io/){: new_window} site.
+* You can contact sales by either calling or finding a sales representative. See the [Contact us ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud-computing/bluemix/contact-us){: new_window} page.
+* You can connect with [**@IBMBluemixHelp** ![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.twitter.com/IBMBluemixHelp){: new_window} on Twitter to enhance your {{site.data.keyword.Bluemix_notm}} experience.
+* Although the support widget is the preferred method for obtaining support, if you cannot log in to {{site.data.keyword.Bluemix_notm}}, you can use the [Get Help ![External link icon](../icons/launch-glyph.svg "External link icon")](ibm.biz/bluemixsupport){: new_window} page to submit a ticket as well.
 
 
 
