@@ -1,0 +1,9 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc}
+Bluemix Dedicated
+
+    {: .navgroup id="howto"}
+    index.md
+    {: .navgroup-end}
