@@ -1,30 +1,55 @@
-[CLI and Dev Tools](/docs/cli/index.html)
-    [Downloads](index.html)
-        [Getting started with CF CLI](https://github.com/cloudfoundry/cli#getting-started)
-        [Getting started with Bluemix CLI](./reference/bluemix_cli/index.html)
-    [CLI reference](clireference.html)
-        [Bluemix](./reference/bluemix_cli/index.html#bluemix_cli)
-        [Cloud Foundry](./reference/cfcommands/index.html)
-    [Bluemix CLI plug-ins](bxplug-in.html)
-        [Active Deploy](../services/ActiveDeploy/cli.html?pos=2#ad-cli-bx)
-        [Auto-Scaling](./plugins/auto-scaling/index.html)
-        [Container Registry](./plugins/registry/index.html)
-        [Container Service (Clusters)](../containers/cs_cli_devtools.html)
-        [Container Service (Single and scalable groups)](../containers/container_cli_cfic.html)
-        [Developer](../cloudnative/dev_cli.html)
-        [Private network peering](./plugins/pnp/index.html)
-        [IBM SDK Generator](../cloudnative/sdk_cli.html)
-        [IBM VPN](./plugins/bx_vpn/index.html)
-    [Cloud Foundry CLI plug-ins](cliplug-in.html)
-        [Bluemix admin](./plugins/bluemix_admin/index.html)
-        [Development mode](./plugins/dev_mode/index.html)
-        [IBM VPN](./plugins/vpn/index.html)
-    integrated_dev_tools.md
-        [API Connect developer toolkit](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
-        [Bluemix Live Sync](../develop/bluemixlive.html)
-        [Deploying apps with IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html)
-        [Managing Liberty and Node.js apps](../manageapps/app_mng.html#app_management)
-    start_coding.md
-        [Developing with Eclipse Tools](../starters/deploy_eclipsetools.html)
-        [Deploying your app with CLI](../starters/install_cli.html)
-        [Uploading your app](../starters/upload_app.html)
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="bluemix" audience="platform" href="/docs/cli/index.html"}
+CLI and Dev Tools
+
+	{: .navgroup id="learn"}
+	index.md
+	[Getting started with CF CLI](https://github.com/cloudfoundry/cli#getting-started)
+	reference/bluemix_cli/index.md
+	
+	{: .topicgroup}
+	Related links
+	    [bx tool](http://clis.ng.bluemix.net/ui/home.html)
+	{: .navgroup-end}
+	
+	{: .navgroup id="reference"}
+	reference/bluemix_cli/bx_cli.md
+	reference/cfcommands/index.md
+	reference/cloudcli/index.md
+	
+	{: .topicgroup}
+	Bluemix CLI plug-ins
+		[Active Deploy](../services/ActiveDeploy/cli.html?pos=2#ad-cli-bx)
+		[IBM Developer](../mobile/dev_cli.html)
+		plugins/auto-scaling/index.md
+		plugins/catalogmanager/index.md
+		plugins/registry/index.md
+		[Container Service (Clusters)](../containers/cs_cli_devtools.html)
+		[Container Service (Single and scalable groups)](../containers/container_cli_cfic.html)
+		plugins/openwsk/index.md
+		plugins/pnp/index.md
+		[IBM SDK Generator](../mobile/sdk_cli.html)
+		plugins/softlayer/index.md
+		plugins/bx_vpn/index.md
+	
+	{: .topicgroup}
+	Cloud Foundry CLI plug-ins
+		plugins/bluemix_admin/index.md
+		plugins/dev_mode/index.md
+		plugins/vpn/index.md
+	
+	{: .topicgroup}
+	Integrated development tools
+		[API Connect developer toolkit](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
+		[Bluemix Live Sync](../develop/bluemixlive.html)
+		[Deploying apps with IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html)
+		[Managing Liberty and Node.js apps](../manageapps/app_mng.html#app_management)
+	{: .navgroup-end}
+	
+	{: .navgroup id="howto"}
+	[Developing with Eclipse Tools](../starters/deploy_eclipsetools.html)
+	[Deploying your app with CLI](../starters/install_cli.html)
+	[Uploading your app](../starters/upload_app.html)
+	{: .navgroup-end}
