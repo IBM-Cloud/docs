@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-04-04"
+lastupdated: "2017-04-13"
 
 ---
 
@@ -16,9 +16,9 @@ lastupdated: "2017-04-04"
 # My APIs
 {: #manage_api}
 
-Use the **View Managed APIs** tab to see the overall status of the APIs that you manage and those you have previously managed but are currently unexposed. In the **Shared APIs** tab you can see all of the APIs that have been shared with your {{site.data.keyword.Bluemix_notm}} organization through API management or through the {{site.data.keyword.apiconnect_short}} service.
+Use the **View Managed APIs** tab to see the overall status of the APIs that you manage and those you have previously managed but are currently unexposed. In the **Shared APIs** tab, you can see all of the APIs that have been shared with your {{site.data.keyword.Bluemix_notm}} organization through API management or through the {{site.data.keyword.apiconnect_short}} service.
 
-You can view all of the APIs at once that you manage with API management by using the APIs dashboard. 
+You can view all of the APIs that you manage with API management together by using the APIs dashboard. 
 
 ## Viewing managed APIs
 {: #view_api}
@@ -43,7 +43,7 @@ This is the only place where you can add an API Proxy, or external API. An exter
 
 See [Manage APIs](manage_apis.html) for additional information about the required settings for creating APIs.
 
-## Sharing APIs
+## Working with shared APIs
 {: #share_api}
 
 In the **Explore Shared APIs** tab you can view APIs that have been created by others and shared with you. You can also create API keys for the APIs associated with {{site.data.keyword.openwhisk_short}} actions and the {{site.data.keyword.appconserviceshort}} service.
@@ -51,7 +51,7 @@ In the **Explore Shared APIs** tab you can view APIs that have been created by o
 1. From the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Menu** icon > **Services** > **APIs**.
 2. Select **Explore Shared APIs** in the navigation. All the APIs that you can consume are displayed here.
 3. To consume an API, select it to open its Developer Portal, where you can subscribe to a plan in order to use it. 
-4. After you select an API to manage, see [Manage APIs](manage_apis.html) for more information about how to  complete the following tasks: 
+4. After you select an API to manage, see [Manage APIs](manage_apis.html) for more information about how to complete the following tasks: 
     * View API usage
     * Create API keys
-    * Use the API explorer to view documentation and test the API.
+    * Use the API Explorer to view documentation and test the API.

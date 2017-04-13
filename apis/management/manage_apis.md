@@ -13,7 +13,7 @@ lastupdated: "2017-04-11"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Managing APIs
+# Manage APIs
 {: #manage_apis}
 
 After you integrate your API so it is managed and monitored by the API management system, you can view and modify the API settings. If you have not integrated your API, you must integrate one by completing the procedure in [Creating APIs from {{site.data.keyword.openwhisk_short}} actions](manage_openwhisk_apis.html). 
