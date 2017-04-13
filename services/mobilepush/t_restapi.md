@@ -12,7 +12,7 @@ copyright:
 
 # Using REST APIs
 {: #push-api-rest}
-Last updated: 16 January 2017
+Last updated: 28 February 2017
 {: .last-updated}
 
 You can use a REST (Representational State Transfer) API (application program interface) for {{site.data.keyword.mobilepushshort}}. You can also use the SDK and [Push API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://mobile.{DomainName}/imfpush/){: new_window} to further develop your client applications.
@@ -77,7 +77,7 @@ The **Show Credentials** screen shows information about the AppSecret:
 	{: codeblock} 
 
 
-##Push REST API filters
+## Push REST API filters
 {: #push-api-rest-filters}
 
 Filters define a search criteria that restrict data that is returned from a GET API of {{site.data.keyword.mobilepushshort}}. Apply the filters against the result of the Get operation that you want to filter. The filter restricts the number of entries included in the result. For example, you can use a filter to search for tags that start with "test". 
@@ -116,7 +116,7 @@ For the subscription GET API the following combinations are supported:
 - If == is used, the value must be an exact matching string.
 
 
-##{{site.data.keyword.mobilepushshort}} response codes
+## Push Notifications service response codes
 {: #push-api-response-codes}
 
 Status: 405 Method Not Allowed - Appropriate method expected.

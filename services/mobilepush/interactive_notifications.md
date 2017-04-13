@@ -10,15 +10,15 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Interactive notifications
+# Interactive and silent notifications  
 {: #interactive-notifications}
-Last updated: 23 January 2017
+Last updated: 03 March 2017
 {: .last-updated}
 
 Interactive notifications enable users to respond to a notification without opening the application. When an interactive notification arrives, the device shows the action buttons along with the notification message. Interactive notifications are supported on iOS devices with version 8 or later. For interactive notifications sent to iOS devices that are earlier than version 8, the notification actions are not displayed.
 
-##Sending interactive {{site.data.keyword.mobilepushshort}}
-
+## Sending interactive notifications
+{: #send_interactive_notifications}
 
 Interactive notification can be sent by using the Push dashboard or by using the [REST API documentation](t_restapi.html).
 
@@ -28,12 +28,13 @@ From the {{site.data.keyword.mobilepushshort}} console:
 2. Choose your notification recipients and click **Next**. 
 3. In the compose notification page, interactive push can be sent by setting the Type to either Default or Mixed and specifying the Category value under Advanced Options tab. To configure the category value on the client, check **Handling interactive {{site.data.keyword.mobilepushshort}}** in native iOS application section.
 
-## Handling interactive {{site.data.keyword.mobilepushshort}} in an iOS application
-
+## Handling interactive notifications on an iOS application
+{: #send_interactive_notifications_ios}
 
 ### Swift
+{: #send_interactive_notifications_ios_swift}
 
-Complete the steps to receive interactive notifications:
+Complete the following steps to receive interactive notifications:
 
 1. Enable the application capability to perform background tasks on receiving the remote notifications. 
 1. Initialize the `BMSPush` SDK with your action category.
@@ -70,6 +71,7 @@ Complete the steps to receive interactive notifications:
 
 
 ### Cordova
+{: #send_interactive_notifications_ios_cordova}
 
 To get actionable notification in an Cordova iOS application, complete the steps:
 
@@ -81,3 +83,29 @@ To get actionable notification in an Cordova iOS application, complete the steps
 	{: codeblock} 
 2. Implement the new callback method on AppDelegate.
 3. This new callback method is invoked when user clicks the action button. The implementation of this method must perform tasks associated with the specified identifier and execute the block in the completionHandler parameter.
+
+## Handling silent notifications for iOS
+{: #send_silent_notifications_for_ios}
+
+Silent notifications do not appear on the device screen. These notifications are received by the application in the background, which wakes up the application for up to 30 seconds to perform the specified background task. A user might not be aware of the notification arrival. To send silent notifications for iOS, use the [REST API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://mobile.{DomainName}/imfpush/){: new_window}.   
+
+1. To send silent push notifications, implement the following method in the `appDelegate.m` file in your project. In Swift, the `contentAvailable` value that is sent by the server for silent notifications is equal to 1.
+```
+//For Swift
+	 func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+       let contentAPS = userInfo["aps"] as [NSObject : AnyObject]
+       if let contentAvailable = contentAPS["content-available"] as? Int {
+           //silent or mixed push
+           if contentAvailable == 1 {
+               completionHandler(UIBackgroundFetchResult.NewData)
+           } else {
+               completionHandler(UIBackgroundFetchResult.NoData)
+           }
+       } else {
+    //Default notification 
+           completionHandler(UIBackgroundFetchResult.NoData)
+       }
+    }
+```
+	{: codeblock}
+
