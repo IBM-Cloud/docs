@@ -15,19 +15,19 @@ lastupdated: "2016-06-20"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.vpn_short}} plug-in for {{site.data.keyword.Bluemix_notm}} CLI
+# VPN plug-in for {{site.data.keyword.Bluemix_notm}} CLI
 
 *Version:* 1.4.0
 
-You can use the command line interface (CLI) to configure and manage your {{site.data.keyword.vpn_full}} service. The {{site.data.keyword.vpn_short}} CLI plug-in is available in two versions: one for use with the Cloud Foundry CLI plug-in and the other for use with the {{site.data.keyword.Bluemix}} CLI plug-in. Both versions of the plug-in provide the same functionality.
+You can use the command line interface (CLI) to configure and manage your {{site.data.keyword.vpn_full}} service. The VPN CLI plug-in is available in two versions: one for use with the Cloud Foundry CLI plug-in and the other for use with the {{site.data.keyword.Bluemix}} CLI plug-in. Both versions of the plug-in provide the same functionality.
 {:shortdesc}
 
-The {{site.data.keyword.vpn_short}} plug-in is available for Windows, MAC, and Linux operating systems. Ensure that you use the one that is applicable to you.
+The VPN plug-in is available for Windows, MAC, and Linux operating systems. Ensure that you use the one that is applicable to you.
 
-The instructions that follow are for working with the {{site.data.keyword.Bluemix_notm}} CLI plug-in. To use the plug-in with the Cloud Foundry (cf) CLI plug-in, see [{{site.data.keyword.vpn_short}} CLI plug-in for cf CLI](../vpn/index.html).
+The instructions that follow are for working with the {{site.data.keyword.Bluemix_notm}} CLI plug-in. To use the plug-in with the Cloud Foundry (cf) CLI plug-in, see [VPN CLI plug-in for cf CLI](../vpn/index.html).
 
 
-The information that follows lists all commands that are supported by {{site.data.keyword.vpn_short}} plug-in for Bluemix CLI and includes their names, options, usage, prerequisites, descriptions, and examples. See [Extend your Bluemix command line interface](../../index.html#cli_bluemix_ext) on how to install the vpn plug-in.
+The information that follows lists all commands that are supported by VPN plug-in for Bluemix CLI and includes their names, options, usage, prerequisites, descriptions, and examples. See [Extend your Bluemix command line interface](../../index.html#cli_bluemix_ext) on how to install the vpn plug-in.
 
 **Note:** *Prerequisites* list which actions are required before using the command. Prerequisites might include one or more of the following actions:
 <dl>
