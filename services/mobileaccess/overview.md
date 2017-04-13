@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,11 +12,10 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-The {{site.data.keyword.amafull}} service is replaced with the {{site.data.keyword.appid_full}} service.
+**Important: The {{site.data.keyword.amafull}} service is replaced with the {{site.data.keyword.appid_full}} service.**
 
 # About {{site.data.keyword.amashort}}
 {: #mca-overview}
-
 
 The {{site.data.keyword.amafull}} service provides authentication for mobile and Web applications that access cloud resources hosted on {{site.data.keyword.Bluemix_notm}}.
 
@@ -88,19 +87,3 @@ The following diagram describes how a request flows from the client SDK to your 
 * From this point on, all requests made with {{site.data.keyword.amashort}} client SDK have a newly obtained authorization header.
 * The {{site.data.keyword.amashort}} client SDK automatically resends the original request that triggered the authorization flow.
 * The {{site.data.keyword.amashort}} server SDK extracts the authorization header from request, validates the header with the  {{site.data.keyword.amashort}} service, and grants access to a back-end resource.
-
-
-## Getting help and support for {{site.data.keyword.amashort}}
-{: #gettinghelp}
-
-If you have problems or questions when using {{site.data.keyword.amashort}}, you can get help by searching for information or by asking questions through a forum. You can also open a support ticket.
-
-When using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.Bluemix_notm}} development teams.
-
-* If you have technical questions about developing or deploying an app with {{site.data.keyword.amashort}}, post your question on [Stack Overflow ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/search?q={{site.data.keyword.amashort}}+ibm-bluemix){: new_window} and tag your question with `ibm-bluemix` and `{{site.data.keyword.amashort}}`.
-* For questions about the service and getting started instructions, use the [IBM developerWorks ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=mobile+client+access%20%2B[bluemix]){: new_window}.
-
-
-See [Getting help](https://www.{DomainName}/docs/support/index.html#getting-help) for more details about using the forums.
-
-For information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support](https://www.{DomainName}/docs/support/index.html#contacting-support).

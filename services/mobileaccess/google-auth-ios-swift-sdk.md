@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-The {{site.data.keyword.amafull}} service is replaced with the {{site.data.keyword.appid_full}} service.
+**Important: The {{site.data.keyword.amafull}} service is replaced with the {{site.data.keyword.appid_full}} service.**
 
 # Enabling Google authentication for iOS apps (Swift SDK)
 {: #google-auth-ios}
@@ -69,7 +69,7 @@ The following steps give you a brief outline of the tasks necessary for preparin
 
 	For more information about updating the bridging header file,  see [Enable sign-in ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in){: new_window}.
 
-## Configuring {{site.data.keyword.amashort}} for Google authentication
+## Configuring Mobile Client Access for Google authentication
 {: #google-auth-ios-config}
 
 Now that you have an iOS client ID, you can enable Google authentication in the {{site.data.keyword.amashort}} service.
@@ -80,7 +80,7 @@ Now that you have an iOS client ID, you can enable Google authentication in the 
 1. In **Application ID for iOS**, specify the `CLIENT_ID` value you obtained from the `GoogleService-Info.plist` file.
 1. Click **Save**.
 
-## Configuring the {{site.data.keyword.amashort}} client SDK for iOS
+## Configuring the client SDK for iOS
 {: #google-auth-ios-sdk}
 
 ### Installing CocoaPods

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-The {{site.data.keyword.amafull}} service is replaced with the {{site.data.keyword.appid_full}} service.
+**Important: The {{site.data.keyword.amafull}} service is replaced with the {{site.data.keyword.appid_full}} service.**
 
 # Enabling Google authentication for Cordova apps
 {: #google-auth-cordova}
@@ -41,7 +41,7 @@ The steps required to configure Android platform of a Cordova application for Go
    * [Creating a project on the Google Developer Console](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html#create-google-project). This shows you how to set up the authentication service on the Google Developers website.
    * [Configuring MCA for Google authentication](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html#google-auth-android-config). This shows you how to set up your {{site.data.keyword.amashort}} to use Google authorization.
 
-### Configure the {{site.data.keyword.amashort}} client SDK for Android Cordova
+### Configure the client SDK for Android Cordova
 
 1. In your Android project folder, open the `build.gradle` file for the application module (**not** the  project `build.gradle` file).
 	Find the dependencies section and add a new compile dependency for client SDK:

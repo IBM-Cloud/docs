@@ -2,13 +2,13 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-07"
 
 ---
 
-The {{site.data.keyword.amafull}} service is replaced with the {{site.data.keyword.appid_full}} service.
+**Important: The {{site.data.keyword.amafull}} service is replaced with the {{site.data.keyword.appid_full}} service.**
 
-# Configuring {{site.data.keyword.amashort}} for custom authentication
+# Configuring Mobile Client Access for custom authentication
 {: #custom-dash}
 
 
@@ -20,8 +20,9 @@ You  must have:
 * An instance of an {{site.data.keyword.amafull}} service.
 * A custom identity provider application.
 
-## Configure custom authentication in the {{site.data.keyword.amafull}} dashboard
+## Configure custom authentication in the dashboard
 {: #custom-dash-config}
+
 Use the {{site.data.keyword.amafull}} dashboard to configure custom authentication.
 
 1. Open your service in the {{site.data.keyword.amafull}} dashboard.

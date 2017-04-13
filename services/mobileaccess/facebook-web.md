@@ -2,16 +2,16 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
-The {{site.data.keyword.amafull}} service is replaced with the {{site.data.keyword.appid_full}} service.
+**Important: The {{site.data.keyword.amafull}} service is replaced with the {{site.data.keyword.appid_full}} service.**
 
 # Enabling Facebook authentication for Web apps
 {: #facebook_web}
 
-Use  Facebook to authenticate users on your web app.
+Use Facebook to authenticate users on your web app.
 
 ## Before you begin
 {: #facebook-auth-android-before}

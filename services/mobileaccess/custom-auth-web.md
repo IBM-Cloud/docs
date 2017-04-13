@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,9 +11,9 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-The {{site.data.keyword.amafull}} service is replaced with the {{site.data.keyword.appid_full}} service.
+**Important: The {{site.data.keyword.amafull}} service is replaced with the {{site.data.keyword.appid_full}} service.**
 
-#Configuring custom authentication for {{site.data.keyword.amashort}} Web applications
+#Configuring custom authentication for Mobile Client Access Web applications
 {: #custom-web}
 
 Add custom authentication and {{site.data.keyword.amafull}} security functionality to your Web app.
@@ -105,7 +105,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 {: codeblock}
 
 
-##Configuring {{site.data.keyword.amashort}} for custom authentication
+##Configuring Mobile Client Access for custom authentication
 {: #custom-auth-config-mca}
 
 After you have your custom identity provider configured, you can enable custom authentication in the {{site.data.keyword.amashort}}  dashboard.
@@ -118,7 +118,7 @@ After you have your custom identity provider configured, you can enable custom a
 1. Click **Save**.
 
 
-##Implementing the {{site.data.keyword.amashort}} authorization flow using a custom identity provider
+##Implementing the Mobile Client Access authorization flow using a custom identity provider
 {: #custom-auth-flow}
 
 The `VCAP_SERVICES` environment variable is created automatically for each {{site.data.keyword.amashort}} service instance and contains properties that are necessary for the authorization process. It consists of a JSON object and you can view it in the  **Service Credentials** tab in the {{site.data.keyword.amashort}} dashboard.

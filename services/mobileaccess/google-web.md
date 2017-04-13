@@ -2,11 +2,11 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
-The {{site.data.keyword.amafull}} service is replaced with the {{site.data.keyword.appid_full}} service.
+**Important: The {{site.data.keyword.amafull}} service is replaced with the {{site.data.keyword.appid_full}} service.**
 
 # Enabling Google authentication for web apps
 {: #google-auth-web}
@@ -33,7 +33,7 @@ To start using Google as an identity provider, create a project in the [Google D
 1. Complete the credentials creation and take note of the Google Client ID and Secret.
 
 
-## Configuring {{site.data.keyword.amashort}} for Google authentication
+## Configuring Mobile Client Access for Google authentication
 After you have a Google Application ID and Secret, you can enable Google authentication in the {{site.data.keyword.amashort}}  dashboard.
 
 1. Open your app in the  {{site.data.keyword.Bluemix_notm}}  dashboard.
@@ -42,7 +42,7 @@ After you have a Google Application ID and Secret, you can enable Google authent
 1. Enter the Google Client ID and Secret, and save.
 
 
-## Using {{site.data.keyword.amashort}} for Google web authentication
+## Using Mobile Client Access for Google web authentication
 To start the process of authorization:
 
 1. Redirect from your web app to the following end-point of the authorization server:  

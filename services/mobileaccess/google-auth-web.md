@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-The {{site.data.keyword.amafull}} service is replaced with the {{site.data.keyword.appid_full}} service.
+**Important: The {{site.data.keyword.amafull}} service is replaced with the {{site.data.keyword.appid_full}} service.**
 
 # Enabling Google authentication for Web applications
 {: #google-auth-web}
@@ -41,7 +41,7 @@ To start using Google as an identity provider, create a project in the [Google D
 4. Save changes. Note the **Google Client ID** and **Application Secret**.
 
 
-## Configuring {{site.data.keyword.amashort}} for Google authentication
+## Configuring Mobile Client Access for Google authentication
 {: #google-auth-config-ama}
 
 After you have a Google Application ID and Secret, you can enable Google authentication in the {{site.data.keyword.amashort}}  dashboard.
@@ -57,7 +57,7 @@ After you have a Google Application ID and Secret, you can enable Google authent
 5. Click **Save**.
 
 
-## Implementing the {{site.data.keyword.amashort}} authorization flow using Google as identity provider
+## Implementing the Mobile Client Access authorization flow using Google as identity provider
 {: #google-auth-flow}
 
 The `VCAP_SERVICES` environment variable is created automatically for each {{site.data.keyword.amashort}} service instance and contains properties necessary for the authorization process. It consists of a JSON object and can be viewed by clicking  **Service Credentials**  tab in the {{site.data.keyword.amashort}} service dashboard.
@@ -186,7 +186,7 @@ The next step is to obtain access token and identity tokens using the previously
 	When you have received access, and identity tokens, you can flag Web session as authenticated and optionally persist these tokens.  
 
 
-##Using obtained access and identity token
+## Using obtained access and identity token
 {: #google-auth-using-token}
 
 The identity token contains information about user identity. For Google authentication, the token contains all of the information the user agreed to share, such as full name, URL of the profile photo, and so on.  
@@ -197,7 +197,7 @@ To make requests to protected resources, add an Authorization header to requests
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-####Tips:
+#### Tips:
 {: #tips}
 
 * The `accessToken` and `idToken` must be separated by a white space.
