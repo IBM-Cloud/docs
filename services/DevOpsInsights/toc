@@ -9,9 +9,9 @@ IBM Cloud DevOps Insights
     about_risk.md
     about_team.md
     about_dev.md
-    
-    {:topicgroup}
-      Delivery Insights
+
+  {:topicgroup}
+    Delivery Insights
         uc_insights_overview.md
         uc_insights_prereqs.md
         uc_insights_connect_ucd.md
