@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-06"
+lastupdated: "2017-03-16"
 
 ---
 
@@ -12,11 +12,13 @@ lastupdated: "2017-01-06"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+<!-- Acrolinx: 2017-03-16 -->
+
 # Cloudant Offerings
 
 ## Database as a Service
 
-Cloudant is a hosted and fully-managed database-as-a-service (DBaaS).
+Cloudant is a hosted and fully managed database-as-a-service (DBaaS).
 It is built from the ground up to scale globally,
 run non-stop,
 and handle a wide variety of data types like [JSON](../basics/index.html#json),
@@ -40,6 +42,8 @@ or an [Enterprise (Dedicated) Plan](#enterprise-plan).
 
 Cloudant is also available as an [IBM Bluemix service](bluemix.html).
 
+>	**Note:** The Cloudant [Shared Plan](#shared-plan) and [Enterprise (Dedicated) Plan](#enterprise-plan) offerings are not available on the [IBM Bluemix service](bluemix.html).
+
 ### Shared Plan
 
 With the Cloudant Shared Plan,
@@ -48,7 +52,7 @@ provided through a shared or 'multi-tenant' cluster.
 
 Pricing is metered,
 based on your monthly usage.
-There is no charge if your monthly usage is under $50.00 (as at August 2016).
+No charge applies if your monthly usage is under $50.00 (as at August 2016).
 
 For more information,
 see the [pricing details ![External link icon](../images/launch-glyph.svg "External link icon")](https://cloudant.com/product/pricing/){:new_window}.
@@ -59,8 +63,8 @@ With the Cloudant DBaaS Enterprise Plan,
 you have access to all the Cloudant DBaaS capabilities,
 provided through a dedicated, single-tenant cluster.
 
-This gives you assured database performance and up-time,
-using dedicated DBaaS clusters or hardware available at various hosting locations.
+This plan gives you assured database performance and up-time,
+by using dedicated DBaaS clusters or hardware available at various hosting locations.
 
 For more information,
 see the [pricing details ![External link icon](../images/launch-glyph.svg "External link icon")](https://cloudant.com/product/pricing/){:new_window}.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-01"
+lastupdated: "2017-03-16"
 
 ---
 
@@ -107,7 +107,7 @@ see the topic on [Consistency](../guides/cap_theorem.html#consistency).
 ## Create
 
 To create a document,
-send a `POST` request with the document's JSON content to `https://$USERNAME.cloudant.com/$DATABASE`.
+send a `POST` request with the document's JSON content to `https://$ACCOUNT.cloudant.com/$DATABASE`.
 
 _Creating a document by using HTTP:_
 
@@ -120,7 +120,7 @@ Content-Type: application/json
 _Creating a document by using the command line:_
 
 ```sh
-curl https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DATABASE \
+curl https://$USERNAME:$PASSWORD@$ACCOUNT.cloudant.com/$DATABASE \
 	-X POST \
 	-H "Content-Type: application/json" \
 	-d "$JSON"
@@ -133,7 +133,7 @@ _Creating a document, using Javascript:_
 
 ```javascript
 var nano = require('nano');
-var account = nano("https://"+$USERNAME+":"+$PASSWORD+"@"+$USERNAME+".cloudant.com");
+var account = nano("https://"+$USERNAME+":"+$PASSWORD+"@"+$ACCOUNT+".cloudant.com");
 var db = account.use($DATABASE);
 
 db.insert($JSON, function (err, body, headers) {
@@ -189,7 +189,7 @@ a [`202` response](http.html#202) is returned.
 ## Read
 
 To retrieve a document,
-send a GET request to `https://$USERNAME.cloudant.com/$DATABASE/$DOCUMENT_ID`.
+send a GET request to `https://$ACCOUNT.cloudant.com/$DATABASE/$DOCUMENT_ID`.
 
 If you do not know the `_id` for a particular document,
 you can [query the database](database.html#get-documents) for all documents.
@@ -218,7 +218,7 @@ GET /$DATABASE/$DOCUMENT_ID HTTP/1.1
 _Example of retrieving a document by using the command line:_
 
 ```sh
-curl https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DATABASE/$DOCUMENT_ID
+curl https://$USERNAME:$PASSWORD@$ACCOUNT.cloudant.com/$DATABASE/$DOCUMENT_ID
 ```
 {:codeblock}
 
@@ -228,7 +228,7 @@ _Example of retrieving a document, using Javascript:_
 
 ```javascript
 var nano = require('nano');
-var account = nano("https://"+$USERNAME+":"+$PASSWORD+"@"+$USERNAME+".cloudant.com");
+var account = nano("https://"+$USERNAME+":"+$PASSWORD+"@"+$ACCOUNT+".cloudant.com");
 var db = account.use($DATABASE);
 
 db.get($JSON._id, function (err, body, headers) {
@@ -292,7 +292,7 @@ by using the `include_docs` option.
 
 To update a document,
 send a `PUT` request with the updated JSON content *and* the most recent `_rev` value
-to `https://$USERNAME.cloudant.com/$DATABASE/$DOCUMENT_ID`.
+to `https://$ACCOUNT.cloudant.com/$DATABASE/$DOCUMENT_ID`.
 You can also use this `PUT` method to create a document,
 in which case you do not need to supply the most recent `_rev` value.
 
@@ -317,7 +317,7 @@ _Example of using the command line to update a document, :_
 
 ```sh
 # make sure $JSON contains the correct `_rev` value!
-curl https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DATABASE/$DOCUMENT_ID \
+curl https://$USERNAME:$PASSWORD@$ACCOUNT.cloudant.com/$DATABASE/$DOCUMENT_ID \
 	-X PUT \
 	-H "Content-Type: application/json" \
 	-d "$JSON"
@@ -330,7 +330,7 @@ _Example of updating a document, using Javascript:_
 
 ```javascript
 var nano = require('nano');
-var account = nano("https://"+$USERNAME+":"+$PASSWORD+"@"+$USERNAME+".cloudant.com");
+var account = nano("https://"+$USERNAME+":"+$PASSWORD+"@"+$ACCOUNT+".cloudant.com");
 var db = account.use($DATABASE);
 
 // make sure $JSON contains the correct `_rev` value!
@@ -383,7 +383,7 @@ _Example response after a successful update:_
 
 To delete a document,
 send a `DELETE` request with the document's most recent `_rev` in the query string,
-to `https://$USERNAME.cloudant.com/$DATABASE/$DOCUMENT_ID`.
+to `https://$ACCOUNT.cloudant.com/$DATABASE/$DOCUMENT_ID`.
 
 The response contains the ID and the new revision of the document,
 or an error message if the delete failed.
@@ -414,7 +414,7 @@ _Example of using the command line to delete a document:_
 
 ```sh
 # make sure $JSON contains the correct `_rev` value!
-curl https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DATABASE/$DOCUMENT_ID?rev=$REV -X DELETE
+curl https://$USERNAME:$PASSWORD@$ACCOUNT.cloudant.com/$DATABASE/$DOCUMENT_ID?rev=$REV -X DELETE
 ```
 {:codeblock}
 
@@ -424,7 +424,7 @@ _Example of a delete request, using Javascript:_
 
 ```javascript
 var nano = require('nano');
-var account = nano("https://"+$USERNAME+":"+$PASSWORD+"@"+$USERNAME+".cloudant.com");
+var account = nano("https://"+$USERNAME+":"+$PASSWORD+"@"+$ACCOUNT+".cloudant.com");
 var db = account.use($DATABASE);
 
 // make sure $JSON contains the correct `_rev` value!
@@ -640,6 +640,8 @@ you must provide the document ID,
 revision information,
 and new document values.
 
+>	**Note:** A special case of bulk operations is the [`_bulk_get`](#the-_bulk_get-endpoint) endpoint.
+
 <div id="request-body"></div>
 
 ### Bulk request structure
@@ -671,7 +673,7 @@ Content-Type: application/json
 _Example of using the command line to create, update, or delete multiple documents:_
 
 ```sh
-curl https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DATABASE/_bulk_docs \
+curl https://$USERNAME:$PASSWORD@$ACCOUNT.cloudant.com/$DATABASE/_bulk_docs \
 	-X POST \
 	-H "Content-Type: application/json" \
 	-d "$JSON"
@@ -684,7 +686,7 @@ _Example request to create, update, or delete multiple documents, using Javascri
 
 ```javascript
 var nano = require('nano');
-var account = nano("https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com");
+var account = nano("https://$USERNAME:$PASSWORD@$ACCOUNT.cloudant.com");
 var db = account.use($DATABASE);
 
 db.bulk($JSON, function (err, body) {
@@ -861,7 +863,7 @@ to each affected document ID and revision combination within the request JSON st
 _Example of using HTTP to do a bulk update:_
 
 ```http
-POST /test/_bulk_docs HTTP/1.1
+POST /$DATABASE/_bulk_docs HTTP/1.1
 Accept: application/json
 ```
 {:codeblock}
@@ -869,7 +871,7 @@ Accept: application/json
 _Example of using the command line to do a bulk update:_
 
 ```sh
-curl -X POST "https://$USERNAME.cloudant.com/$DATABASE/_bulk_docs" \
+curl -X POST "https://$ACCOUNT.cloudant.com/$DATABASE/_bulk_docs" \
 	-d @request.json
 ```
 {:codeblock}
@@ -1004,7 +1006,7 @@ When a document (or document revision) is not correctly committed to the databas
 you must check the `error` field to determine error type and course of action.
 The error is one of [`conflict`](#conflict) or [`forbidden`](#forbidden).
 
-### `conflict`
+#### `conflict`
 
 The document as submitted is in conflict.
 If you used the default bulk transaction mode,
@@ -1014,7 +1016,7 @@ You must resubmit the document to the database.
 Conflict resolution of documents added by using the bulk docs interface is identical
 to the resolution procedures used when you resolve conflict errors during replication.
 
-### `forbidden`
+#### `forbidden`
 
 Entries with this error type indicate that the validation routine that was applied
 to the document during submission returned an error.
@@ -1033,6 +1035,82 @@ _Example error message from a validation function:_
 	"id" : "7f7638c86173eb440b8890839ff35433",
 	"error" : "forbidden",
 	"reason" : "invalid recipe ingredient"
+}
+```
+{:codeblock}
+
+### The `_bulk_get` endpoint
+
+You might need to access all the available information about multiple documents.
+The `_bulk_get` endpoint is similar to the [`_all_docs`](database.html#get-documents) endpoint,
+but returns information about the requested documents only.
+
+Like the `_bulk_docs` endpoint,
+a JSON document supplied in the request includes an array that identifes all the documents of interest.
+
+_Example of using HTTP to do a bulk get of document information:_
+
+```http
+POST /$DATABASE/_bulk_get HTTP/1.1
+Accept: application/json
+```
+{:codeblock}
+
+_Example of using the command line to do a bulk update:_
+
+```sh
+curl -X POST "https://$ACCOUNT.cloudant.com/$DATABASE/_bulk_get" \
+	-H "Content-Type: application/json" \
+	-d @request.json
+```
+{:codeblock}
+
+_Example of a JSON object `POST`ed to the `_bulk_get` endpoint:_
+
+```json
+{
+	"docs": [
+		{
+			"id": "doc1"
+		},
+		{
+			"id": "doc3"
+		}
+	]
+}
+```
+{:codeblock}
+
+_Example JSON structure that is returned after bulk get:_
+
+```json
+{                                                         
+	"results": [                                                         
+		{                                                         
+			"id": "doc01",
+			"docs": [
+				{
+					"ok": {
+						"_id": "doc01",
+						"_rev": "1-f3751e2db1d92e13b0baa6bdeb874c8c",
+						"simplekey": "somedata"
+					}
+				}
+			]
+		},
+		{
+			"id": "doc03",
+			"docs": [
+				{
+					"ok": {
+						"_id": "doc03",
+						"_rev": "2-d4fc04ef748edf305a8c0ed347f269c4",
+						"simplekey": "somemoredata"
+					}
+				}
+			]
+		}
+	]
 }
 ```
 {:codeblock}
