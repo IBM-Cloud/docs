@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-04-13"
 
 ---
 
@@ -68,7 +68,7 @@ A certificate is issued by a certificate authority and is digitally signed by th
 
 You can apply a security protocol to provide communication privacy for your application to prevent eavesdropping, tampering, and message forgery.
 
-For every organization in {{site.data.keyword.Bluemix_notm}} with an account owner who has a Pay as you Go or Subscription plan in place, you are allowed four free certificate uploads. For every organization with an account owner who has a free trial account, you are allowed one free certificate upload.
+For every organization in {{site.data.keyword.Bluemix_notm}} with an account owner who has a Pay as you Go or Subscription plan in place, you are allowed four certificate uploads. For every organization with an account owner who has a free trial account, you must upgrade your account in order to upload a certificate.
 
 Before you can upload certificates, you must create a certificate signing request. See [Creating certificate signing requests](#ssl_csr).
 
