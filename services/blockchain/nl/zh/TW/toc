@@ -1,0 +1,23 @@
+[IBM Blockchain 服務](/docs/services/blockchain/index.html)
+    [開始使用](index.html)
+        needtoknow.md
+        ibmblockchain_whatsnew.md
+        [版本測試](https://wiki.hyperledger.org/projects/fabric/alpha_release_testing)
+        etn_ssc.md
+    [HSBN vNext 測試版方案](v10_newplan.html)
+        v10_netoverview.md
+        v10_dashboard.md
+            dashboard_resources.md
+            dashboard_channels.md
+            dashboard_chaincode.md
+            dashboard_support.md
+        v10_application.md
+    [HSBN 及入門範本方案](ibmblozckchain_etn.html)
+        etn_overview.md
+        etn_hsn.md
+        etn_sdk.md
+        etn_txn.md
+        ibmblockchainmonitor.md
+        ibmblockchain_tutorial.md
+    [取得支援](ibmblockchain_support.html)
+        knownissues.md
