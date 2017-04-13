@@ -1,0 +1,24 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="bluemix" audience="platform" href="/docs/overview/whatisbluemix.html"}
+What is Bluemix
+  
+    {: .navgroup id="learn"}
+    whatisbluemix.md
+    bluemixoverviewui.md
+    cf.md
+    prereqs.md
+    {: .navgroup-end}
+    
+    {: .navgroup id="reference"}
+    [Notices and Terms of Use](../navigation/notices.html)
+    glossary/index.md
+    [What's New?](../whatsnew/index.html)
+    
+    {: .topicgroup}
+    Related links
+        [What is Bluemix?](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){: new_window}
+        [Getting started](http://www.ibm.com/cloud-computing/bluemix/getting-started/){: new_window}
+        [Learn about the hybrid model](http://www.ibm.com/cloud-computing/bluemix/hybrid/){: new_window}
+    {: .navgroup-end}
