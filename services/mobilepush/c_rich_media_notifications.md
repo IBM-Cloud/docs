@@ -12,11 +12,11 @@ copyright:
 
 # Enabling Rich Media notifications
 {: #interactive-notifications}
-Last updated: 11 January 2017
+Last updated: 09 March 2017
 {: .last-updated}
 
 
-You can enable Rich Media {{site.data.keyword.mobilepushshort}} in iOS 10 and above. Push notifications can be sent with Audio, Video, GIFs and images. 
+You can enable Rich Media {{site.data.keyword.mobilepushshort}} in iOS 10 and later. Push notifications can be sent with Audio, Video, GIFs and images. 
 
 To set up your application to receive rich push on iOS 10, complete the steps:  
 

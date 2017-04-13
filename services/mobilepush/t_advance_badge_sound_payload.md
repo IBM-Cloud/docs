@@ -10,8 +10,8 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-#Enabling advanced {{site.data.keyword.mobilepushshort}}
-Last updated: 23 January 2017
+#Enabling advanced push notifications
+Last updated: 28 February 2017
 {: .last-updated}
 
 Configure an iOS badge, sound, additional JSON payload, actionable notifications, and holding notifications.
@@ -26,7 +26,8 @@ Configure an iOS badge, sound, and additional JSON payload.
 	- **Sound File** - Enter a string to point to the sound file in your mobile app. In the payload, specify the string name of the sound file to use.
 	- **iOS Badge** - For iOS devices, the number to display as the badge of the app icon. If this property is absent, the badge is not changed. To remove the badge, set the value of this property to 0.
 	
-###Android
+### Android
+{: #badge-sound-payload_android}
 
 Add your sound file in `res/raw` directory of your android application. While sending notification, add the sound file name in the sound field of {{site.data.keyword.mobilepushshort}}.
 
@@ -39,7 +40,8 @@ Add your sound file in `res/raw` directory of your android application. While se
 ```
     {: codeblock}	
 	
-###iOS
+### iOS
+{: #badge-sound-payload_ios}
 
 ```
 "settings": {
