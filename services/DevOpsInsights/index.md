@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-31"
+lastupdated: "2017-04-07"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-03-31"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Getting started with {{site.data.keyword.DRA_short}} (Beta)
+# Getting started with DevOps Insights (Beta)
 {: #gettingstarted}
 
 {{site.data.keyword.DRA_full}} applies developer, team, and deployment analytics to your busiest DevOps projects. Use it to learn how compliant your team is with DevOps and developer practices, to manage risk in your codebase, and to automatically enforce quality standards in continuous delivery projects.
@@ -32,7 +32,7 @@ lastupdated: "2017-03-31"
 
 To use {{site.data.keyword.DRA_short}}, you must add it to a toolchain. Many toolchain templates already include {{site.data.keyword.DRA_short}}. Be sure to also [add it to your {{site.data.keyword.Bluemix_notm}} org as a service](/docs/services/reqnsi.html) so that you can see information about {{site.data.keyword.DRA_short}} and access some of the toolchain templates that include it from your {{site.data.keyword.Bluemix_notm}} dashboard.  
 
-## Adding {{site.data.keyword.DRA_short}} to a toolchain
+## Adding DevOps Insights to a toolchain
 {: #catalog}
 
 {{site.data.keyword.DRA_short}} is part of {{site.data.keyword.contdelivery_short}}. You can add {{site.data.keyword.DRA_short}} to any toolchain by selecting it from the tool integration catalog.
@@ -45,15 +45,13 @@ To add {{site.data.keyword.DRA_short}} to a toolchain:
 
 2. Click **{{site.data.keyword.DRA_short}}**.
 
-3. To add all of the {{site.data.keyword.DRA_short}} capabilities to your toolchain, select **Advanced** and make sure that the **Enable Developer Insights** check box is selected. To add Deployment Risk only, select **Default**.
+3. To add all of the {{site.data.keyword.DRA_short}} capabilities to your toolchain, select **Advanced** and make sure that the **Enable Developer Insights** check box is selected. To add Deployment Risk only, select **Default**. 
 
 4. Click **Create Integration**.
 
 {{site.data.keyword.DRA_short}} is now available on your toolchain's Overview page.
 
-If you create a toolchain from a template that includes {{site.data.keyword.DRA_short}}, when you create the toolchain, ensure that **Advanced** is selected in the integration options.
-
-## Using {{site.data.keyword.DRA_short}}
+## Using DevOps Insights
 {: #using}
 
 If your toolchain includes GitHub, GitLab, or JIRA, {{site.data.keyword.DRA_short}} automatically provides you with information about your codebase and team after some initial data gathering and analysis. If your toolchain does not include any of those integrations, add one of them and then follow these steps:
@@ -75,18 +73,3 @@ By default, {{site.data.keyword.DRA_short}} does not include Developer Insights 
 5. Click **Save Integration**.
 
 After you save the configuration, Developer Insights and Team Dynamics automatically scan your repo and issue tracking systems.
-
-# Related Links
-{: #rellinks notoc}
-
-## Tutorials and Samples
-{: #samples notoc}
-
-* [Using analytics to advise on the likelihood of successful deployments](https://www.ibm.com/devops/method/content/deliver/tool_deployment_risk_analytics/){:new_window} ![External link icon, link opens in a new window](images/launch--glyph.svg)
-
-## Related Links
-{: #general notoc}
-
-* [Getting started with toolchains](https://new-console.ng.bluemix.net/docs/toolchains/toolchains_overview.html){:new_window} ![External link icon, link opens in a new window](images/launch--glyph.svg)
-* [Getting started with Delivery Pipeline](https://new-console.ng.bluemix.net/docs/services/DeliveryPipeline/index.html){:new_window} ![External link icon, link opens in a new window](images/launch--glyph.svg)
-* [IBM Bluemix Pricing Sheet](https://new-console.ng.bluemix.net/pricing/){:new_window} ![External link icon, link opens in a new window](images/launch--glyph.svg)
