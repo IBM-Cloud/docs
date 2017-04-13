@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -21,7 +21,7 @@ Create a custom Grafana dashboard to display metrics for all of the containers t
 
 Complete the following steps to create a Grafana dashboard:
 
-1. Launch Grafana from a web browser. For more information, see [Getting to the Grafana dashboard from a web browser](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_browser).
+1. Launch Grafana from a web browser. For more information, see [Navigating to the Grafana dashboard from a web browser](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_browser).
 
 2. Save the default dashboard.
 

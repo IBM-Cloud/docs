@@ -14,17 +14,14 @@ lastupdated: "2017-03-07"
 {:screen: .screen}
 
 
-# Frequent questions and answers
-{: #logging_qa}
+# Kibana FAQ
+{: #logging_qa_kibana}
 
 Here are the answers to common questions about using {{site.data.keyword.Bluemix}} logging capabilities. {:shortdesc}
 
-* [What can I do if I cannot see data in the Discover page in Kibana](logging_qa.html#logging_qa_no_data_discover_kibana)
+* [What can I do if I cannot see data in the Discover page in Kibana](logging_qa_kibana.html#logging_qa_no_data_discover_kibana)
 
-* [What can I do if I get an authentication exception](logging_qa.html#logging_qa_no_data_dashboard_kibana)
-
-
-
+* [What can I do if I get an authentication exception](logging_qa_kibana.html#logging_qa_no_data_dashboard_kibana)
 
 
 ## What can I do if I cannot see data in the Discover page in Kibana
@@ -41,7 +38,7 @@ To resolve this problem, complete the following steps:
 
     **Note**: By default, in {{site.data.keyword.Bluemix_notm}}, the *Time Picker* is set to show data for the last 15 minutes.
 
-    For more information on how to set the *Time Picker*, see [Setting a time filter](../kibana4/logging_kibana_set_time_filter.html#set_time_filter).
+    For more information on how to set the *Time Picker*, see [Setting a time filter](../kibana4/k4_filter_logs.html#set_time_filter).
        
 2. Click the magnifying glass that is located in the *Discover* page search bar. The page data is refreshed based on the default search query.
 

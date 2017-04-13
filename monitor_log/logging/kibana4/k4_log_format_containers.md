@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-01"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -37,6 +37,6 @@ You can configure Kibana to display in the *Discover* page the following fields 
 | stream | Specifies the type of log: stdout, stderr |
 | time | The date and time of the event when it happened. The timestamp is defined up to the millisecond.|
 | timestamp | The date and time of the logged event. The timestamp is defined up to the millisecond. |
-
+{: caption="Table 1. Fields for Docker containers" caption-side="top"}
 
 

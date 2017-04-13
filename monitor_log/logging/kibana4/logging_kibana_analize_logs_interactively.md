@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-16"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -28,6 +28,7 @@ The following table shows the default query per resource when you launch Kibana 
 | CF application   | `application_id:<app_GUID>`    |
 | Single Docker container | `instance:<instance_GUID>`    |
 | Container group with 2 instances | `instance:<instance_GUID> OR instance:<instance_GUID>` |
+{: caption="Table 1. Default query searches" caption-side="top"}
 
 **Note:** 
 * Every time you launch Kibana from the {{site.data.keyword.Bluemix_notm}} UI, the data that you can see corresponds to the query that is pre-defined by default and is based on the index pattern.
@@ -47,6 +48,7 @@ You can perform any of the following tasks to customize the table in the Discove
 | [Remove a field column](logging_kibana_analize_logs_interactively.html#kibana_discover_remove_fields_from_table) | Remove a field when it is not required in the view for analysis. |
 | [Order entries by value of an indexed field](logging_kibana_analize_logs_interactively.html#kibana_discover_sort_by_table) | Reorder the entries for easier analysis. |
 | [Automatically refresh the data](logging_kibana_analize_logs_interactively.html#kibana_discover_view_refresh_interval) | Refresh the data displayed in the table with the latest entries. By default, refresh is **OFF**. |
+{: caption="Table 2. Tasks to customize a table" caption-side="top"}
 
 <br>
 
@@ -60,7 +62,7 @@ To define a new search, use the default search query as your starting point, and
 
 * Apply field filters to refine the set of data that you can see. You can toggle each filter, pin it to the page, enable or disable it as needed, and configure it to include or exclude the value. For more information, see [Filtering logs in Kibana](logging_kibana_filtering_logs.html#kibana_filtering_logs).
 
-    **Tip:** If you cannot find a field in the *Fields list* that you expect to see, or some of the magnifying glasses by the listed fields are disabled in the Discover page, reload the list of fields by refreshing the index pattern in the Settings page. For more information, see [Reloading the Field List](logging_kibana_analize_logs_interactively.html#kibana_discover_add_reload_fields).
+    **Tip:** If you cannot find a field in the *Fields list* that you expect to see, or some of the magnifying glasses by the listed fields are disabled in the Discover page, reload the list of fields by refreshing the index pattern in the Settings page. For more information, see [Reloading the Field List](logging_kibana_analize_logs_interactively.html#kibana_discover_view_reload_fields).
 
     For example, if your CF app has multiple instances, you might want to analyze data for a specific instance. You can define a field filter for the specific intance ID value that you want to analyze. 
     
@@ -78,6 +80,7 @@ You can perform any of the following tasks with searches that you define in the 
 | [Reload a search](logging_kibana_filtering_logs.html#k4_reload_search)  | Upload an existing search to analyze a set of data again. |
 | [Refresh the data of a search](logging_kibana_filtering_logs.html#k4_refresh_search) | Configure automatic refresh of the data that is displayed through the search.  |
 | [Import a search](logging_kibana_filtering_logs.html#k4_import_search) | Import a search.  |
+{: caption="Table 3. Tasks to work with searches" caption-side="top"}
 
 <br>
 
@@ -88,6 +91,60 @@ You can also look at statistics in the Discover page:
 For more information, see [Viewing Field Data Statistics](logging_kibana_analize_logs_interactively.html#kibana_discover_view_fields_stats).
 
 **Note:** The data that is shown in the table and the histogram is static. To keep viewing the latest entries, you must set a refresh interval. 
+
+
+## Adding field columns to the table
+{: #kibana_discover_add_fields_to_table}
+
+The table that is available to analyze data in the Discover page includes the following fields by default:
+* **time:** This field indicates when the entry was captured and recorded in {{site.data.keyword.Bluemix_notm}}.
+* **_source:**  This field includes the original data of the entry.
+
+You can add a field column to the table by choosing any of the following options:
+
+* Add a field column from the Field list that is available on the page.
+
+    1. In the Discover page, identify the field in the section `Selected Fields`.
+    2. Hover over a field in the Fields list.
+    
+        ![Add field from table view](images/k4_add_field_column_hover.jpg "Add field from table view")
+    
+    3. To add a field, click **Add**.
+    
+ * Add a field column from the table view of an expanded entry.
+
+    1. Expand an entry in the table.
+    2. In the Table view, identify the field that you want to add.
+    
+        ![Add field from table view](images/k4_add_field_column.jpg "Add field from table view")
+    
+    3. Click the **Toggle Column in table** icon ![Toggle column in table](images/k4_toggle_field_icon.jpg).
+    
+
+**Note:** When you add one field column to the table for the first time, the *_source* field column that is displayed in the table is hidden. The *_source* field shows the value of each field for each log entry. To see other field values for a log entry in the table after you add a column to the table, see the table view tab or the JSON tab of each entry.
+
+For example, if you add the *application_id* field to the table, the table changes to look as follows:
+
+![Table view after adding a new field](images/k4_add_field_filter_new_table_look.jpg "Table view after adding a new field")
+
+
+## Automatically refreshing the data
+{: #kibana_discover_view_refresh_interval}
+
+By default, in {{site.data.keyword.Bluemix_notm}}, the *Auto refresh* period is set to **OFF** and the data that you can see in Kibana corresponds to the last 15 minutes since you launched Kibana. The 15 minutes correspond to the time filter that is pre-configured. You can change it by setting a different time period. For more information, see [Setting a time filter](logging_kibana_set_time_filter.html#set_time_filter).
+
+Complete the following steps to set an *Auto refresh* period:
+
+1. In the Discover page menu bar, click the Time Picker ![Time picker](images/k4_time_picker_icon.jpg "Time picker").
+
+2. Select the auto-refresh button ![Auto refresh button](images/k4_auto_refresh_icon.jpg "Auto refresh button").
+
+3. Choose a refresh interval.
+
+    ![Options to set an auto refresh time](images/k4_change_autorefresh.jpg "Options to set an auto refresh time")
+
+
+You can pause the refresh interval by clicking the pause button ![Pause button](images/k4_auto_refresh_pause_icon.jpg "Pause") 
 
 
 ## Identifying the data that is displayed in the Discover page
@@ -126,73 +183,6 @@ Consider the following information to identify the data that is available in the
     You can define 0 or more field filters to toggle entries based on the value of the field. For example, if a field filter is enabled, the entries that you can see correspond to entries where the value of that field matches.
     
 
-## Adding field columns to the table
-{: #kibana_discover_add_fields_to_table}
-
-The table that is available to analyze data in the Discover page includes the following fields by default:
-* **time:** This field indicates when the entry was captured and recorded in {{site.data.keyword.Bluemix_notm}}.
-* **_source:**  This field includes the original data of the entry.
-
-You can add a field column to the table by choosing any of the following options:
-
-* Add a field column from the Field list that is available on the page.
-
-    1. In the Discover page, identify the field in the section `Selected Fields`.
-    2. Hover over a field in the Fields list.
-    
-        ![Add field from table view](images/k4_add_field_column_hover.jpg "Add field from table view")
-    
-    3. To add a field, click **Add**.
-    
- * Add a field column from the table view of an expanded entry.
-
-    1. Expand an entry in the table.
-    2. In the Table view, identify the field that you want to add.
-    
-        ![Add field from table view](images/k4_add_field_column.jpg "Add field from table view")
-    
-    3. Click the **Toggle Column in table** icon ![Toggle column in table](images/k4_toggle_field_icon.jpg).
-    
-
-**Note:** When you add one field column to the table for the first time, the *_source* field column that is displayed in the table is hidden. The *_source* field shows the value of each field for each log entry. To see other field values for a log entry in the table after you add a column to the table, see the table view tab or the JSON tab of each entry.
-
-For example, if you add the *application_id* field to the table, the table changes to look as follows:
-
-![Table view after adding a new field](images/k4_add_field_filter_new_table_look.jpg "Table view after adding a new field")
-
-
-## Rearranging field columns in the table
-{: #kibana_discover_rearrange_fields_in_table}
-
-You can rearrange the field columns in the table. Mouse over the header of the column you want to move, and click the **Move column to the left** button or the **Move column to the right** button.
-<br>
-![Move field in the table](images/k4_add_field_filter_new_table_look.jpg "Move field in the table")
-
-
-## Removing field columns from the table
-{: #kibana_discover_remove_fields_from_table}
-
-To remove fields from the table, complete the following steps:
-
-1. In the table, identify the field that you want to remove from the table view.
-2. Click **Remove column**.
-    
-    ![Remove a field from table view](images/k4_remove_field_column.jpg)
-
-
-## Viewing an entry in the table
-{: #kibana_discover_view_entry_in_table}
-
-To see the data of an entry in the table, click the expand button ![expand button icon](images/k4_expand_icon.jpg "expand button icon") of the entry that you want to analyze. 
-
-![Table in the Discover page in Kibana](images/k4_table_discover.jpg "Table in the Discover page in Kibana") 	
-
-Then, choose one of the following options to see the data:
-
-* To see the data in a table format, click **Table**. You can see the value of each field that is available for analysis in a table format. For each field, you also have filter buttons and a toggle button.
-* To see the data in Json format, click **JSON**.
-
-
 ## Ordering entries by value of an indexed field 
 {: #kibana_discover_sort_by_table}
 
@@ -220,23 +210,14 @@ To sort the entries in a table by the values of an indexed field, complete the f
 
 **Note:** When you sort by a time field, by default the entries are sorted in reverse chronological order. The newest entries appear first.
 
-## Automatically refreshing the data
-{: #kibana_discover_view_refresh_interval}
 
-By default, in {{site.data.keyword.Bluemix_notm}}, the *Auto refresh* period is set to **OFF** and the data that you can see in Kibana corresponds to the last 15 minutes since you launched Kibana. The 15 minutes correspond to the time filter that is pre-configured. You can change it by setting a different time period. For more information, see [Setting a time filter](logging_kibana_set_time_filter.html#set_time_filter).
+## Rearranging field columns in the table
+{: #kibana_discover_rearrange_fields_in_table}
 
-Complete the following steps to set an *Auto refresh* period:
+You can rearrange the field columns in the table. Mouse over the header of the column you want to move, and click the **Move column to the left** button or the **Move column to the right** button.
+<br>
+![Move field in the table](images/k4_add_field_filter_new_table_look.jpg "Move field in the table")
 
-1. In the Discover page menu bar, click the Time Picker ![Time picker](images/k4_time_picker_icon.jpg "Time picker").
-
-2. Select the auto-refresh button ![Auto refresh button](images/k4_auto_refresh_icon.jpg "Auto refresh button").
-
-3. Choose a refresh interval.
-
-    ![Options to set an auto refresh time](images/k4_change_autorefresh.jpg "Options to set an auto refresh time")
-
-
-You can pause the refresh interval by clicking the pause button ![Pause button](images/k4_auto_refresh_pause_icon.jpg "Pause") 
 
 ## Reloading the list of fields
 {: #kibana_discover_view_reload_fields}
@@ -252,6 +233,30 @@ Complete the following steps to reload the list of fields that are displayed in 
 3. Click the *Reload field list* button ![Reload field list](images/k4_reload_field_list_icon.jpg "Reload field list") to reload the index pattern fields. 
 
 The list of fields is refreshed.
+
+
+## Removing field columns from the table
+{: #kibana_discover_remove_fields_from_table}
+
+To remove fields from the table, complete the following steps:
+
+1. In the table, identify the field that you want to remove from the table view.
+2. Click **Remove column**.
+    
+    ![Remove a field from table view](images/k4_remove_field_column.jpg "Remove a field from table view")
+
+
+## Viewing an entry in the table
+{: #kibana_discover_view_entry_in_table}
+
+To see the data of an entry in the table, click the expand button ![expand button icon](images/k4_expand_icon.jpg "expand button icon") of the entry that you want to analyze. 
+
+![Table in the Discover page in Kibana](images/k4_table_discover.jpg "Table in the Discover page in Kibana") 	
+
+Then, choose one of the following options to see the data:
+
+* To see the data in a table format, click **Table**. You can see the value of each field that is available for analysis in a table format. For each field, you also have filter buttons and a toggle button.
+* To see the data in Json format, click **JSON**.
 
 ## Viewing Field Data Statistics
 {: #kibana_discover_view_fields_stats}

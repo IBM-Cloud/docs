@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-08"
+lastupdated: "2017-03-27"
 
 ---
 
@@ -34,11 +34,11 @@ You can launch Grafana from the {{site.data.keyword.Bluemix_notm}} UI or directl
 
 Docker conventions and groups accounting information are used as the basic mechanism for the collection of monitoring data.
 
-**Metrics retention**
+## Metrics retention
 
 Up to one data point per minute is collected. Container metrics that have not been written to in 7 days are deleted.
     
-**Metrics sorting**
+## Metrics sorting
 
 The data is displayed and ordered by container ID. 
 

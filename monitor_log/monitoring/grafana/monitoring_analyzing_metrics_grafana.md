@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-01"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -25,18 +25,19 @@ You can launch Grafana in any of the following ways:
 
     You can launch to your specific Docker container metrics in Grafana, in context to that specific container. 
     
-    For more information, see [Getting to the Grafana dashboard from the {{site.data.keyword.Bluemix_notm}} 
+    For more information, see [Navigating to the Grafana dashboard from the {{site.data.keyword.Bluemix_notm}} 
     dashboard](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_bluemix).
 
 * From a direct browser link
 
     You can launch Grafana so the data that you see aggregates logs from services within a provided {{site.data.keyword.Bluemix_notm}} space.
     
-    For more information, see [Getting to the Kibana dashboard from a web browser](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_browser).
+    For more information, see [Navigating to the Kibana dashboard from a web browser](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_browser).
     
+For more information about Grafana, see the [Grafana User Guide ![External link icon](../../../icons/launch-glyph.svg "External link icon")](http://docs.grafana.org/guides/getting_started/){: new_window}.
 
 
-##  Getting to the Grafana dashboard from the Bluemix dashboard
+##  Navigating to the Grafana dashboard from the Bluemix dashboard
 {: #launch_grafana_from_bluemix}
 
 The query that is used to filter the data that is displayed in Grafana retrieves data for the {{site.data.keyword.Bluemix_notm}} container from where you launch Kibana. 
@@ -49,10 +50,8 @@ To see the metrics of a Docker container in Grafana, complete the following step
     
 3. Click **Advanced view**. The **Grafana** dashboard opens.
 
-For more information about Grafana, see the [Grafana User Guide ![External link icon](../../../icons/launch-glyph.svg "External link icon")](http://docs.grafana.org/){: new_window}.
 
-
-##  Getting to the Grafana dashboard from a web browser
+##  Navigating to the Grafana dashboard from a web browser
 {: #launch_grafana_from_browser}
 
 The query that is used to filter the data that is displayed in Grafana retrieves data for a space in the {{site.data.keyword.Bluemix_notm}} organization. The metrics information that Grafana displays includes records for all resources that are deployed within the space of the {{site.data.keyword.Bluemix_notm}} organization that you are logged in.
@@ -63,4 +62,4 @@ Complete the following steps to launch Grafana from a browser:
 
 2. Select **Grafana**.
      
-For more information about Grafana, see the [Grafana User Guide ![External link icon](../../../icons/launch-glyph.svg "External link icon")](http://docs.grafana.org/){: new_window}.
+

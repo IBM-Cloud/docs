@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-08"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -41,7 +41,6 @@ You can configure Kibana to display in the *Discover* page the following fields 
 | source_id | The component that produces logs. <br> The following list describes the logs from each component: <br> * **API**: Logged responses to API calls that request a change to your app state. <br> * **APP**: Logged responses from your app. <br> * **CELL**: Logged responses from the Diego cell that indicate when an app starts, stops, or crashes <br> * **LGR**: Logged responses from the loggregator that indicate problems with the logging process. <br> * **RTR**: Logged responses from the Router when it routes HTTP requests to your app. <br> * **SSH**: Logged responses from the Diego cell when a user accesses an app container by using the `cf ssh` command. <br> * **STG**: Logged responses from the Diego cell or the Droplet Execution Agent when your app is staged or restaged. |
 | space_name | The name of the {{site.data.keyword.Bluemix_notm}} space where where your app is staged. |
 | timestamp | The time of the logged event. The timestamp is defined up to the millisecond. |
-
-
+{: caption="Table 1. Fields for CF apps" caption-side="top"}
 
 
