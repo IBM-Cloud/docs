@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -14,11 +14,11 @@ lastupdated: "2017-03-30"
 # Configuring identity providers
 {: #setting-up-idp}
 
-You can configure Facebook, Google, or both to authenticate your applications and authorize access to protected back-end resources.
+You can configure Facebook, Google, or both to set up a single-sign on experience for your users. By using an identity provider, users are able to sign in with credentials they are already familiar with.
 {:shortdesc}
 
 
-## Facebook
+## Configuring Facebook authentication
 {: #facebook}
 
 Configure the {{site.data.keyword.appid_short}} service to use Facebook as an identity provider.
@@ -31,8 +31,8 @@ Configure the {{site.data.keyword.appid_short}} service to use Facebook as an id
 
 To use Facebook as an identity provider on your mobile or web apps, you must add and configure the website platform on your Facebook application.
 
-1. Log in to your account on the Facebook for Developers site. For information about creating a new Facebook app, see <a href="https://developers.facebook.com/docs/apps/register" target="_blank">Creating an application <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>.
-2. Make note of the Facebook app ID and secret. You need these values to configure your web project for authentication in your service dashboard.
+1. Log in to your account on the <a href="https://developers.facebook.com/docs/apps/register" target="_blank">Facebook for Developers site <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>.
+2. Make note of the Facebook app ID and secret. These values are needed to configure your web project for authentication in your service dashboard.
 3. Add the web platform and enter the site URL.
 4. From the products list, select **Facebook Login**.
 5. In the Valid OAuth redirect URLs field, enter the authorization server callback endpoint URL. You can add this value after you have configured your {{site.data.keyword.appid_short_notm}} service in the steps that follow.
@@ -47,10 +47,10 @@ When you have your Facebook app ID and secret, and your Facebook for Developers 
 2. Enter the Facebook app ID and secret that you obtained from the Facebook for Developers website.
 3. Copy the URI that is in the **Redirect URI for Facebook for Developers** field. Paste the URI in to the **Valid OAuth redirect URIs** field in the **Facebook Login** section of the Facebook Developers Portal.
 4. Click **Save**.
-5. Optional: To configure authentication for web apps, enter the redirect URI in the your Web Application Redirect URIs. This value is determined by the developer and used to access the redirect URI after the authorization process is completed.
+5. Optional: To configure authentication for web apps, enter the redirect URL in the your Web Application Redirect URLs. This value is determined by the developer and used to access the redirect URL after the authorization process is completed.
 
 
-## Google
+## Configuring Google authentication
 {: #google}
 
 Configure the {{site.data.keyword.appid_short_notm}} service to use Google as an identity provider.
@@ -63,11 +63,10 @@ Configure the {{site.data.keyword.appid_short_notm}} service to use Google as an
 
 To use Google as an identity provider, obtain a Google client ID and secret and create a project in the Google Developer Console.
 
-1. Open your Google application in the Google Developer Console.
+1. Open your Google application in the <a href="https://console.developers.google.com/apis/library" target="_blank">Google Developer Console <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>.
 2. Add the Google+ API.
 3. Create credentials by using OAuth. In the **Application Type** field, select **Web application**. In the **Authorized redirect URIs** field, enter the App ID redirect URI. You can obtain the App ID redirect authorization URI from the Google configuration screen of the service dashboard.
 4. Save your changes. Make note of the Google client ID and secret.
-
 
 
 

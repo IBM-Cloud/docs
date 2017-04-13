@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -45,8 +45,7 @@ You need the following information:
     </tr>
   </table>
 
-  * An Android Studio project, set up to work with Gradle.
-    * For more information about how to set up your Android development environment, see <a href="https://developers.google.com/web/tools/setup/" target="_blank">the Google Developer Tools docs <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>.
+  * An <a href="https://developers.google.com/web/tools/setup/" target="_blank">Android Studio project<img src="../../icons/launch-glyph.svg" alt="External link icon"></a>, set up to work with Gradle.
 
 ## Installing the client SDK
 {: #install-appid-sdk}
@@ -88,7 +87,7 @@ You need the following information:
 
 6. Synchronize your project with Gradle. Click **Tools** > **Android** > **Sync Project with Gradle Files**.
 
-## Initializing the Client SDK
+## Initializing the client SDK
 {: #initialize-client-sdk}
 
 Initialize the client SDK by passing the context, tenant ID, and region parameters to the initialize method. A common, though not mandatory, place to put the initialization code is in the onCreate method of the main activity in your Android application.
@@ -173,7 +172,7 @@ For example, you can invoke this code to set a new attribute, or override an exi
 ### Anonymous login
 {: #anonymous notoc}
 
-With {{site.data.keyword.appid_short_notm}} you can log in anonymously, see [anonymous user](/docs/services/appid/user-profile.html#anonymous).
+With {{site.data.keyword.appid_short_notm}} you can log in [anonymously](/docs/services/appid/user-profile.html#anonymous).
 
   ```java
   appId.loginAnonymously(getApplicationContext(), new AuthorizationListener() {

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -25,13 +25,6 @@ You can use the {{site.data.keyword.appid_short}} server SDK to protect resource
 
 **Note**: There are other frameworks that use `Express` frameworks, such as LoopBack. You can use the {{site.data.keyword.appid_short_notm}} server SDK with any of these frameworks.
 
-## About the server SDK
-{: #about}
-
-The {{site.data.keyword.appid_short_notm}} server SDK provides an ApiStrategy passport strategy that is used in back-end applications that are deployed on {{site.data.keyword.Bluemix_notm}}. To protect your app from unauthorized access, you must instrument your Node.js server with the ApiStrategy. The `appid-serversdk-nodejs npm module` provides the ApiStrategy passport strategy and the verification method to validate the access token and ID token that are issued by {{site.data.keyword.appid_short_notm}}.
-
-The {{site.data.keyword.appid_short_notm}} server SDK uses the Passport framework to enforce authorization, see <a href="http://passportjs.org/" target="_blank">Passport framework <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>.
-
 
 ## Installing the server SDK
 {: #protecting-resources-serversdk}
@@ -48,6 +41,10 @@ The {{site.data.keyword.appid_short_notm}} server SDK uses the Passport framewor
 
 ## Protecting resources in Node.js
 {: #protecting-resources-nodesdk}
+
+The {{site.data.keyword.appid_short_notm}} server SDK provides an ApiStrategy passport strategy that is used in back-end applications that are deployed on {{site.data.keyword.Bluemix_notm}}. To protect your app from unauthorized access, you must instrument your Node.js server with the ApiStrategy. The `appid-serversdk-nodejs npm module` provides the ApiStrategy passport strategy and the verification method to validate the access token and ID token that are issued by {{site.data.keyword.appid_short_notm}}.
+
+The {{site.data.keyword.appid_short_notm}} server SDK uses the <a href="http://passportjs.org/" target="_blank">Passport framework <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> to enforce authorization.
 
 The following snippet demonstrates how to use `APIStrategy` in a simple Express application to protect the `/protected` endpoint GET methods.
 

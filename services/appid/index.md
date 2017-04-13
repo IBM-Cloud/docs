@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-03-30"
 # Getting started with {{site.data.keyword.appid_short_notm}}
 {: #gettingstarted}
 
-Add security to your applications with the {{site.data.keyword.appid_full}} service. You can configure client authorization for accessing protected back-end resources that are running on {{site.data.keyword.Bluemix}}.
+{{site.data.keyword.appid_full}} helps you to add authentication to your mobile and web apps and protects your back-end systems.
 {:shortdesc}
 
 **Note:** The {{site.data.keyword.appid_short_notm}} service was formerly known as {{site.data.keyword.amafull}}.
@@ -22,22 +22,7 @@ Add security to your applications with the {{site.data.keyword.appid_full}} serv
 2. Give your service instance a name, or use the preset name.
 3. To bind your instance, select an app from the **Connect to** drop-down menu. If you select **Leave unbound**, you can bind the service instance later.
 4. Select your pricing plan and click **Create**.
-5. Use the instructions in the UI to download the sample apps. The samples help you to get up and running with {{site.data.keyword.appid_short_notm}}.
-
-
-
-# Related Links
-{: #rellinks notoc}
-
-## API Reference
-{: #api notoc}
-
-* [{{site.data.keyword.appid_short_notm}} oauth-flows](https://appid-oauth.ng.bluemix.net/swagger-ui/#!/Authorization_Server_V3/authorization)
-
-## SDK
-{: #sdk notoc}
-
-* [{{site.data.keyword.appid_short_notm}} Android Client SDK](https://github.com/ibm-cloud-security/appid-clientsdk-android){: new_window}
-* [{{site.data.keyword.appid_short_notm}} iOS-Swift Client SDK](https://github.com/ibm-cloud-security/appid-clientsdk-swift){: new_window}
-* [{{site.data.keyword.appid_short_notm}} Nodejs Server SDK](https://github.com/ibm-cloud-security/appid-serversdk-nodejs){: new_window}
-* [{{site.data.keyword.appid_short_notm}} Swift Server SDK](https://github.com/ibm-cloud-security/appid-serversdk-swift){: new_window}
+5. Optional: Use the instructions in the UI to download the sample apps. The samples help you to get up and running with {{site.data.keyword.appid_short_notm}}.
+6. Download and set up the [SDKs](/docs/services/appid/relatedlinks.html) needed to work with your particular application.
+7. Configure your [identity providers](/docs/services/appid/identity-providers.html) for authentication and authorization.
+8. If you have enabled more than one identity provider, customize your [login widget](/docs/services/appid/login-widget.html).

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2017-03-30"
 # Using {{site.data.keyword.appid_short_notm}} with a local development environment
 {: #protecting-local}
 
-You can configure your local environment to use the {{site.data.keyword.appid_short}} service. Specifically, you can develop code locally by using the {{site.data.keyword.appid_short_notm}} server SDK and send requests to the development server.
+You can configure your local environment to use the {{site.data.keyword.appid_short}} service. Specifically, you can develop code locally by using the {{site.data.keyword.appid_short_notm}} server SDK to send requests to the development server.
 {:shortdesc}
 
 

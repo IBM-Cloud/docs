@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -11,7 +11,8 @@ lastupdated: "2017-03-30"
 {:screen: .screen}
 {:pre: .pre}
 
-# Developing mobile and web apps
+# Setting up the sample app and SDKs
+{: #developing}
 
 After creating the {{site.data.keyword.appid_short}} service, you can download sample apps for Android, iOS, and Node.js by using the dashboard.
 
@@ -19,9 +20,8 @@ After creating the {{site.data.keyword.appid_short}} service, you can download s
 2. Follow the instructions on the dashboard to get started with a step-by-step sample.
 
 
-
 ## Web development
-{: #web-dev}
+{: #web-dev notoc}
 
 The {{site.data.keyword.appid_short_notm}} service protects your web app, and it requires no special SDK.<!--- You can use different identity providers in addition to the protection that is provided by the service.---> The {{site.data.keyword.appid_short_notm}} integration enables any web application, regardless of the technology it implements, to take advantage of the OAuth2 protocol.
 

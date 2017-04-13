@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -51,7 +51,7 @@ You need the following information:
   * CocoaPods (version 1.1.0 or higher).
 
 
-## Installing the {{site.data.keyword.appid_short_notm}} client SDK
+## Installing the client SDK
 {: #install-appid-sdk}
 
 The {{site.data.keyword.appid_short_notm}} client SDK is distributed with CocoaPods, a dependency manager for Swift and Objective-C Cocoa projects. CocoaPods downloads artifacts, and makes them available to your project.
@@ -81,7 +81,7 @@ The {{site.data.keyword.appid_short_notm}} client SDK is distributed with CocoaP
 7. Under **Project Settings** > **Info** > **URL Types**, add a URL Type. Fill both the **Identifier** text box and the **URL Scheme** text box with this value: $(PRODUCT_BUNDLE_IDENTIFIER)
 
 
-## Initializing the {{site.data.keyword.appid_short_notm}} client SDK
+## Initializing the client SDK
 {: #initialize-client-sdk}
 
 1. Add the following import to your `AppDelegate.swift` file:
@@ -184,7 +184,7 @@ For example, you can invoke this code to set a new attribute, or override an exi
 ### Anonymous login
 {: #anonymous notoc}
 
-With {{site.data.keyword.appid_short_notm}} you can log in anonymously, see [anonymous identity](/docs/services/appid/user-profile.html#anonymous).
+With {{site.data.keyword.appid_short_notm}} you can log in [anonymously](/docs/services/appid/user-profile.html#anonymous).
 
   ```swift
   class delegate : AuthorizationDelegate {
