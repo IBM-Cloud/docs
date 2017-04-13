@@ -9,7 +9,7 @@ lastupdated: "2017-4-7"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Working with toolchains
+# Creating toolchains
 {: #toolchains_getting_started}
 
 A *toolchain* is a set of tool integrations that support development, deployment, and operations tasks. The collective power of a toolchain is greater than the sum of its individual tool integrations.
@@ -74,18 +74,3 @@ After you configure the toolchain and its tool integrations, you can view a visu
 2. To access a tool integration that is in your toolchain, click the tool.
 
  **Tip**: If you have more than one GitHub, {{site.data.keyword.ghe_short}}, or Git repo, you might have multiple cards for the same tool integration because each repo is represented by its own card. If you have more than one pipeline, you might have multiple cards for the same tool integration because each pipeline is represented by its own card. For example, when you create a Microservices toolchain, each of the three microservices has its own GitHub, {{site.data.keyword.ghe_short}}, or Git repo and its own pipeline.
-
-
-# Related Links
-{: #rellinks}
-
-## Tutorials and Samples
-{: #samples}
-
-* [Learning Lab![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/category/courses){:new_window}
-
-## Related Links
-{: #general}
-
-* [{{site.data.keyword.contdelivery_full}}![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_continuous_delivery/){:new_window}
-* [IBM Cloud Garage Method![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method){:new_window}

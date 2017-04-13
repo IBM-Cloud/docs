@@ -107,18 +107,3 @@ You can delete a toolchain and specify which of the associated tool integrations
 1. Confirm the deletion by typing the name of the toolchain and clicking **Delete**.  
 
  **Tip**: When you delete a GitHub, {{site.data.keyword.ghe_short}}, or Git Repos and Issue Tracking tool integration, the associated repo is not deleted from GitHub, {{site.data.keyword.ghe_short}}, or Git Repos and Issue Tracking. You must manually remove the repo.
-
-
-# Related Links
-{: #rellinks}
-
-## Tutorials and Samples
-{: #samples}
-
-* [Learning Lab![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/category/courses){:new_window}
-
-## Related Links
-{: #general}
-
-* [{{site.data.keyword.contdelivery_full}}![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_continuous_delivery/){:new_window}
-* [IBM Cloud Garage Method![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method){:new_window}
