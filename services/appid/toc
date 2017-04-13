@@ -14,6 +14,14 @@ App ID
         access-identity.md
         authorization-resources.md
         user-profile.md
+
+    {: .topicgroup}
+    Videos
+        [Tell me about App ID](https://www.youtube.com/watch?v=cTn7l_J3tPg)
+
+    {: .topicgroup}
+    Blogs
+        [Introducing App ID](https://www.ibm.com/blogs/bluemix/2017/03/introducing-ibm-bluemix-app-id-authentication-profiles-service-app-developers/)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -25,14 +33,6 @@ App ID
         [iOS Swift client SDK](https://github.com/ibm-cloud-security/appid-clientsdk-swift)
         [Node.js server SDK](https://github.com/ibm-cloud-security/appid-serversdk-nodejs)
         [Swift server SDK](https://github.com/ibm-cloud-security/appid-serversdk-swift)
-
-    {: .topicgroup}
-    Videos
-        [Introducing App ID](https://www.youtube.com/watch?v=cTn7l_J3tPg)
-
-    {: .topicgroup}
-    Blogs
-        [Introducing App ID](https://www.ibm.com/blogs/bluemix/2017/03/introducing-ibm-bluemix-app-id-authentication-profiles-service-app-developers/)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
