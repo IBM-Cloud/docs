@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-22"
+lastupdated: "2017-04-13"
 
 ---
 
@@ -2043,14 +2043,13 @@ Content-Type: application/json
 ```
 {: screen}
 
-## Managing users with the cf CLI
+### Managing users with the cf CLI
 {: #usingadmincli}
 
 You can manage users for your
 {{site.data.keyword.Bluemix_notm}} environment by
 using the Cloud Foundry command line interface with the
-{{site.data.keyword.Bluemix_notm}} Admin CLI plug-in. For
-example, you can add users from an LDAP registry.
+{{site.data.keyword.Bluemix_notm}} Admin CLI plug-in. You must download this plug-in for your Cloud Foundry CLI.
 
 Before you begin, install the cf command line interface. The
 {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in
@@ -2060,7 +2059,7 @@ requires cf version 6.11.2 or later. [Download Cloud Foundry command line interf
 Cygwin. Use the Cloud Foundry command line interface in a command line window other than the Cygwin
 command line window.
 
-### Adding the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in
+#### Adding the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in
 
 After the cf command line interface is installed, you can add the
 {{site.data.keyword.Bluemix_notm}} admin CLI
@@ -2087,11 +2086,18 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 </li>
 </ol>
 
-To see a list of commands, run the following
+To see a list of the sub-commands available from the plug-ins that you have installed, run the following
 command:
 
 ```
 cf plugins
+```
+{: codeblock}
+
+To see a list of the available command groups for the {{site.data.keyword.Bluemix_notm}} Admin plug-in, run the following command:
+
+```
+cf ba
 ```
 {: codeblock}
 
