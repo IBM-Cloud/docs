@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-03-08"
+lastupdated: "2017-04-13"
 
 ---
 
@@ -42,6 +42,7 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
 **Note:** You can use the short format of bluemix commands; for example, `bx api` is short for `bluemix api`.
 
 
+
 <table summary="General bluemix commands.">
 <caption>Table 1. General bluemix commands</caption>
  <thead>
@@ -49,18 +50,18 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
  </thead>
  <tbody>
  <tr>
- <td>[bluemix help](index.html#bluemix_help)</td>
- <td>[bluemix api](index.html#bluemix_api)</td>
- <td>[bluemix login](index.html#bluemix_login)</td>
- <td>[bluemix logout](index.html#bluemix_logout)</td>
- <td>[bluemix target](index.html#bluemix_target)</td>
+ <td>[bluemix help](bx_cli.html#bluemix_help)</td>
+ <td>[bluemix api](bx_cli.html#bluemix_api)</td>
+ <td>[bluemix login](bx_cli.html#bluemix_login)</td>
+ <td>[bluemix logout](bx_cli.html#bluemix_logout)</td>
+ <td>[bluemix target](bx_cli.html#bluemix_target)</td>
  </tr>
  <tr>
- <td>[bluemix info](index.html#bluemix_info) </td>
- <td>[bluemix regions](index.html#bluemix_regions) </td>
- <td>[bluemix config](index.html#bluemix_config)</td>
- <td>[bluemix curl](index.html#bluemix_curl)</td>
- <td>[bluemix update](index.html#bluemix_update)</td>
+ <td>[bluemix info](bx_cli.html#bluemix_info) </td>
+ <td>[bluemix regions](bx_cli.html#bluemix_regions) </td>
+ <td>[bluemix config](bx_cli.html#bluemix_config)</td>
+ <td>[bluemix curl](bx_cli.html#bluemix_curl)</td>
+ <td>[bluemix update](bx_cli.html#bluemix_update)</td>
  </tr>
  </tbody>
  </table>
@@ -72,49 +73,49 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
  </thead>
  <tbody>
  <tr>
- <td>[bluemix iam orgs](index.html#bluemix_iam_orgs)</td>
- <td>[bluemix iam org](index.html#bluemix_iam_org)</td>
- <td>[bluemix iam org-create](index.html#bluemix_iam_org_create)</td>
- <td>[bluemix iam org-replicate](index.html#bluemix_iam_org_replicate)</td>
- <td>[bluemix iam org-rename](index.html#bluemix_iam_org_rename)</td>
+ <td>[bluemix iam orgs](bx_cli.html#bluemix_iam_orgs)</td>
+ <td>[bluemix iam org](bx_cli.html#bluemix_iam_org)</td>
+ <td>[bluemix iam org-create](bx_cli.html#bluemix_iam_org_create)</td>
+ <td>[bluemix iam org-replicate](bx_cli.html#bluemix_iam_org_replicate)</td>
+ <td>[bluemix iam org-rename](bx_cli.html#bluemix_iam_org_rename)</td>
  </tr>
  <tr>
- <td>[bluemix iam org-delete](index.html#bluemix_iam_org_delete)</td>
- <td>[bluemix iam spaces](index.html#bluemix_iam_spaces)</td>
- <td>[bluemix iam space](index.html#bluemix_iam_space)</td>
- <td>[bluemix iam space-create](index.html#bluemix_iam_space_create)</td>
- <td>[bluemix iam space-rename](index.html#bluemix_iam_space_rename)</td>
+ <td>[bluemix iam org-delete](bx_cli.html#bluemix_iam_org_delete)</td>
+ <td>[bluemix iam spaces](bx_cli.html#bluemix_iam_spaces)</td>
+ <td>[bluemix iam space](bx_cli.html#bluemix_iam_space)</td>
+ <td>[bluemix iam space-create](bx_cli.html#bluemix_iam_space_create)</td>
+ <td>[bluemix iam space-rename](bx_cli.html#bluemix_iam_space_rename)</td>
  </tr>
  <tr>
- <td>[bluemix iam space-delete](index.html#bluemix_iam_space_delete)</td>
- <td>[bluemix iam org-users](index.html#bluemix_iam_org_users)</td>
- <td>[bluemix iam org-user-add](index.html#bluemix_iam_org_user_add)</td>
- <td>[bluemix iam org-user-remove](index.html#bluemix_iam_org_user_remove)</td>
- <td>[bluemix iam org-roles](index.html#bluemix_iam_org_roles)</td>
+ <td>[bluemix iam space-delete](bx_cli.html#bluemix_iam_space_delete)</td>
+ <td>[bluemix iam org-users](bx_cli.html#bluemix_iam_org_users)</td>
+ <td>[bluemix iam org-user-add](bx_cli.html#bluemix_iam_org_user_add)</td>
+ <td>[bluemix iam org-user-remove](bx_cli.html#bluemix_iam_org_user_remove)</td>
+ <td>[bluemix iam org-roles](bx_cli.html#bluemix_iam_org_roles)</td>
  </tr>
  <tr>
- <td>[bluemix iam org-role-set](index.html#bluemix_iam_org_role_set)</td>
- <td>[bluemix iam org-role-unset](index.html#bluemix_iam_org_role_unset)</td>
- <td>[bluemix iam space-users](index.html#bluemix_iam_space_users)</td>
- <td>[bluemix iam space-roles](index.html#bluemix_iam_space_roles)</td>
- <td>[bluemix iam space-role-set](index.html#bluemix_iam_space_role_set)</td>
+ <td>[bluemix iam org-role-set](bx_cli.html#bluemix_iam_org_role_set)</td>
+ <td>[bluemix iam org-role-unset](bx_cli.html#bluemix_iam_org_role_unset)</td>
+ <td>[bluemix iam space-users](bx_cli.html#bluemix_iam_space_users)</td>
+ <td>[bluemix iam space-roles](bx_cli.html#bluemix_iam_space_roles)</td>
+ <td>[bluemix iam space-role-set](bx_cli.html#bluemix_iam_space_role_set)</td>
 </tr>
  <tr>
- <td>[bluemix iam space-role-unset](index.html#bluemix_iam_space_role_unset)</td>
- <td>[bluemix iam accounts](index.html#bluemix_iam_accounts)</td>
- <td>[bluemix iam org-account](index.html#bluemix_iam_org_account)</td>
- <td>[bluemix iam account-users](index.html#bluemix_iam_account_users)</td>
- <td>[bluemix iam account-users-delete](index.html#bluemix_iam_account_users_delete)</td>
+ <td>[bluemix iam space-role-unset](bx_cli.html#bluemix_iam_space_role_unset)</td>
+ <td>[bluemix iam accounts](bx_cli.html#bluemix_iam_accounts)</td>
+ <td>[bluemix iam org-account](bx_cli.html#bluemix_iam_org_account)</td>
+ <td>[bluemix iam account-users](bx_cli.html#bluemix_iam_account_users)</td>
+ <td>[bluemix iam account-users-delete](bx_cli.html#bluemix_iam_account_users_delete)</td>
  </tr>
  <tr>
-  <td>[bluemix iam account-user-invite](index.html#bluemix_iam_account_user_invite)</td>
-  <td>[bluemix iam account-user-reinvite](index.html#bluemix_iam_account_user_reinvite)</td>
-  <td>[bluemix iam api-keys](index.html#bluemix_iam_api_keys)</td>
-  <td>[bluemix iam api-key-create](index.html#bluemix_iam_api_key_create)</td>
-  <td>[bluemix iam api-key-delete](index.html#bluemix_iam_api_key_delete)</td>
+  <td>[bluemix iam account-user-invite](bx_cli.html#bluemix_iam_account_user_invite)</td>
+  <td>[bluemix iam account-user-reinvite](bx_cli.html#bluemix_iam_account_user_reinvite)</td>
+  <td>[bluemix iam api-keys](bx_cli.html#bluemix_iam_api_keys)</td>
+  <td>[bluemix iam api-key-create](bx_cli.html#bluemix_iam_api_key_create)</td>
+  <td>[bluemix iam api-key-delete](bx_cli.html#bluemix_iam_api_key_delete)</td>
  </tr>
  <tr>
-  <td>[bluemix iam api-key-update](index.html#bluemix_iam_api_key_update)</td>
+  <td>[bluemix iam api-key-update](bx_cli.html#bluemix_iam_api_key_update)</td>
   <td></td>
   <td></td>
   <td></td>
@@ -130,52 +131,52 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
  </thead>
  <tbody>
  <tr>
- <td>[bluemix app push](index.html#bluemix_app_push)</td>
- <td>[bluemix app list](index.html#bluemix_app_list)</td>
- <td>[bluemix app show](index.html#bluemix_app_show)</td>
- <td>[bluemix app delete](index.html#bluemix_app_delete)</td>
- <td>[bluemix app rename](index.html#bluemix_app_rename)</td>
+ <td>[bluemix app push](bx_cli.html#bluemix_app_push)</td>
+ <td>[bluemix app list](bx_cli.html#bluemix_app_list)</td>
+ <td>[bluemix app show](bx_cli.html#bluemix_app_show)</td>
+ <td>[bluemix app delete](bx_cli.html#bluemix_app_delete)</td>
+ <td>[bluemix app rename](bx_cli.html#bluemix_app_rename)</td>
  </tr>
  <tr>
- <td>[bluemix app start](index.html#bluemix_app_start)</td>
- <td>[bluemix app stop](index.html#bluemix_app_stop)</td>
- <td>[bluemix app restart](index.html#bluemix_app_restart)</td>
- <td>[bluemix app restage](index.html#bluemix_app_restage)</td>
- <td>[bluemix app instance-restart](index.html#bluemix_app_instance_restart)</td>
+ <td>[bluemix app start](bx_cli.html#bluemix_app_start)</td>
+ <td>[bluemix app stop](bx_cli.html#bluemix_app_stop)</td>
+ <td>[bluemix app restart](bx_cli.html#bluemix_app_restart)</td>
+ <td>[bluemix app restage](bx_cli.html#bluemix_app_restage)</td>
+ <td>[bluemix app instance-restart](bx_cli.html#bluemix_app_instance_restart)</td>
  </tr>
  <tr>
- <td>[bluemix app events](index.html#bluemix_app_events)</td>
- <td>[bluemix app files](index.html#bluemix_app_files)</td>
- <td>[bluemix app logs](index.html#bluemix_app_logs)</td>
- <td>[bluemix app env](index.html#bluemix_app_env)</td>
- <td>[bluemix app env-set](index.html#bluemix_app_env_set)</td>
+ <td>[bluemix app events](bx_cli.html#bluemix_app_events)</td>
+ <td>[bluemix app files](bx_cli.html#bluemix_app_files)</td>
+ <td>[bluemix app logs](bx_cli.html#bluemix_app_logs)</td>
+ <td>[bluemix app env](bx_cli.html#bluemix_app_env)</td>
+ <td>[bluemix app env-set](bx_cli.html#bluemix_app_env_set)</td>
  </tr>
  <tr>
- <td>[bluemix app env-unset](index.html#bluemix_app_env_unset)</td>
- <td>[bluemix app stacks](index.html#bluemix_app_stacks)</td>
- <td>[bluemix app stack-show](index.html#bluemix_app_stack_show)</td>
- <td>[bluemix app manifest-create](index.html#bluemix_app_manifest_create)</td>
- <td>[bluemix app domain-cert](index.html#bluemix_app_domain_cert)</td>
+ <td>[bluemix app env-unset](bx_cli.html#bluemix_app_env_unset)</td>
+ <td>[bluemix app stacks](bx_cli.html#bluemix_app_stacks)</td>
+ <td>[bluemix app stack-show](bx_cli.html#bluemix_app_stack_show)</td>
+ <td>[bluemix app manifest-create](bx_cli.html#bluemix_app_manifest_create)</td>
+ <td>[bluemix app domain-cert](bx_cli.html#bluemix_app_domain_cert)</td>
  </tr>
  <tr>
-  <td>[bluemix app domain-cert-add](index.html#bluemix_app_domain_cert_add)</td>
-  <td>[bluemix app domain-cert-remove](index.html#bluemix_app_domain_cert_remove)</td>
-  <td>[bluemix app domains](index.html#bluemix_app_domains)</td>
-  <td>[bluemix app domain-create](index.html#bluemix_app_domain_create)</td>
-  <td>[bluemix app domain-delete](index.html#bluemix_app_domain_delete)</td>
+  <td>[bluemix app domain-cert-add](bx_cli.html#bluemix_app_domain_cert_add)</td>
+  <td>[bluemix app domain-cert-remove](bx_cli.html#bluemix_app_domain_cert_remove)</td>
+  <td>[bluemix app domains](bx_cli.html#bluemix_app_domains)</td>
+  <td>[bluemix app domain-create](bx_cli.html#bluemix_app_domain_create)</td>
+  <td>[bluemix app domain-delete](bx_cli.html#bluemix_app_domain_delete)</td>
  </tr>
  <tr>
-  <td>[bluemix app shared-domain-create](index.html#bluemix_app_shared_domain_create)</td>
-  <td>[bluemix app shared-domain-delete](index.html#bluemix_app_shared_domain_delete)</td>
-  <td>[bluemix app routes](index.html#bluemix_app_routes)</td>
-  <td>[bluemix app route-check](index.html#bluemix_app_route_check)</td>
-  <td>[bluemix app route-map](index.html#bluemix_app_route_map)</td>
+  <td>[bluemix app shared-domain-create](bx_cli.html#bluemix_app_shared_domain_create)</td>
+  <td>[bluemix app shared-domain-delete](bx_cli.html#bluemix_app_shared_domain_delete)</td>
+  <td>[bluemix app routes](bx_cli.html#bluemix_app_routes)</td>
+  <td>[bluemix app route-check](bx_cli.html#bluemix_app_route_check)</td>
+  <td>[bluemix app route-map](bx_cli.html#bluemix_app_route_map)</td>
  </tr>
  <tr>
-  <td>[bluemix app route-unmap](index.html#bluemix_app_route_unmap)</td>
-  <td>[bluemix app route-create](index.html#bluemix_app_route_create)</td>
-  <td>[bluemix app route-delete](index.html#bluemix_app_route_delete)</td>
-  <td>[bluemix app orphaned-routes-delete](index.html#bluemix_app_orphaned_routes_delete)</td>
+  <td>[bluemix app route-unmap](bx_cli.html#bluemix_app_route_unmap)</td>
+  <td>[bluemix app route-create](bx_cli.html#bluemix_app_route_create)</td>
+  <td>[bluemix app route-delete](bx_cli.html#bluemix_app_route_delete)</td>
+  <td>[bluemix app orphaned-routes-delete](bx_cli.html#bluemix_app_orphaned_routes_delete)</td>
   <td></td>
  </tr>
   </tbody>
@@ -188,25 +189,25 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
  </thead>
  <tbody>
  <tr>
- <td>[bluemix service offerings](index.html#bluemix_service_offerings)</td>
- <td>[bluemix service list](index.html#bluemix_service_list)</td>
- <td>[bluemix service show](index.html#bluemix_service_show)</td>
- <td>[bluemix service create](index.html#bluemix_service_create)</td>
- <td>[bluemix service update](index.html#bluemix_service_update)</td>
+ <td>[bluemix service offerings](bx_cli.html#bluemix_service_offerings)</td>
+ <td>[bluemix service list](bx_cli.html#bluemix_service_list)</td>
+ <td>[bluemix service show](bx_cli.html#bluemix_service_show)</td>
+ <td>[bluemix service create](bx_cli.html#bluemix_service_create)</td>
+ <td>[bluemix service update](bx_cli.html#bluemix_service_update)</td>
  </tr>
  <tr>
- <td>[bluemix service delete](index.html#bluemix_service_delete)</td>
- <td>[bluemix service rename](index.html#bluemix_service_rename)</td>
- <td>[bluemix service bind](index.html#bluemix_service_bind)</td>
- <td>[bluemix service unbind](index.html#bluemix_service_unbind)</td>
- <td>[bluemix service key-create](index.html#bluemix_service_key_create)</td>
+ <td>[bluemix service delete](bx_cli.html#bluemix_service_delete)</td>
+ <td>[bluemix service rename](bx_cli.html#bluemix_service_rename)</td>
+ <td>[bluemix service bind](bx_cli.html#bluemix_service_bind)</td>
+ <td>[bluemix service unbind](bx_cli.html#bluemix_service_unbind)</td>
+ <td>[bluemix service key-create](bx_cli.html#bluemix_service_key_create)</td>
  </tr>
  <tr>
- <td>[bluemix service key-delete](index.html#bluemix_service_key_delete)</td>
- <td>[bluemix service keys](index.html#bluemix_service_keys)</td>
- <td>[bluemix service key-show](index.html#bluemix_service_key_show)</td>
- <td>[bluemix service user-provided-create](index.html#bluemix_service_user_provided_create)</td>
- <td>[bluemix service user-provided-update](index.html#bluemix_service_user_provided_update)</td>
+ <td>[bluemix service key-delete](bx_cli.html#bluemix_service_key_delete)</td>
+ <td>[bluemix service keys](bx_cli.html#bluemix_service_keys)</td>
+ <td>[bluemix service key-show](bx_cli.html#bluemix_service_key_show)</td>
+ <td>[bluemix service user-provided-create](bx_cli.html#bluemix_service_user_provided_create)</td>
+ <td>[bluemix service user-provided-update](bx_cli.html#bluemix_service_user_provided_update)</td>
  </tr>
   </tbody>
  </table>
@@ -218,29 +219,29 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
  </thead>
  <tbody>
  <tr>
- <td>[bluemix catalog templates](index.html#bluemix_catalog_templates)</td>
- <td>[bluemix catalog template](index.html#bluemix_catalog_template)</td>
- <td>[bluemix catalog template-run](index.html#bluemix_catalog_template_run)</td>
- <td>[bluemix plugin repos](index.html#bluemix_plugin_repos)</td>
- <td>[bluemix plugin repo-add](index.html#bluemix_plugin_repo_add)</td>
+ <td>[bluemix catalog templates](bx_cli.html#bluemix_catalog_templates)</td>
+ <td>[bluemix catalog template](bx_cli.html#bluemix_catalog_template)</td>
+ <td>[bluemix catalog template-run](bx_cli.html#bluemix_catalog_template_run)</td>
+ <td>[bluemix plugin repos](bx_cli.html#bluemix_plugin_repos)</td>
+ <td>[bluemix plugin repo-add](bx_cli.html#bluemix_plugin_repo_add)</td>
  </tr>
  <tr>
- <td>[bluemix plugin repo-remove](index.html#bluemix_plugin_repo_remove)</td>
- <td>[bluemix plugin repo-plugins](index.html#bluemix_plugin_repo_plugins)</td>
- <td>[bluemix plugin list](index.html#bluemix_plugin_list)</td>
- <td>[bluemix plugin install](index.html#bluemix_plugin_install)</td>
- <td>[bluemix plugin uninstall](index.html#bluemix_plugin_uninstall)</td>
+ <td>[bluemix plugin repo-remove](bx_cli.html#bluemix_plugin_repo_remove)</td>
+ <td>[bluemix plugin repo-plugins](bx_cli.html#bluemix_plugin_repo_plugins)</td>
+ <td>[bluemix plugin list](bx_cli.html#bluemix_plugin_list)</td>
+ <td>[bluemix plugin install](bx_cli.html#bluemix_plugin_install)</td>
+ <td>[bluemix plugin uninstall](bx_cli.html#bluemix_plugin_uninstall)</td>
  </tr>
  <tr>
- <td>[bluemix plugin update](index.html#bluemix_plugin_update)</td>
- <td>[bluemix billing account-usage](index.html#bluemix_billing_account_usage)</td>
- <td>[bluemix billing org-usage](index.html#bluemix_billing_org_usage)</td>
- <td>[bluemix billing orgs-usage-summary](index.html#bluemix_billing_orgs_usage_summary)</td>
+ <td>[bluemix plugin update](bx_cli.html#bluemix_plugin_update)</td>
+ <td>[bluemix billing account-usage](bx_cli.html#bluemix_billing_account_usage)</td>
+ <td>[bluemix billing org-usage](bx_cli.html#bluemix_billing_org_usage)</td>
+ <td>[bluemix billing orgs-usage-summary](bx_cli.html#bluemix_billing_orgs_usage_summary)</td>
  <td></td>
  </tr>
  </tbody>
  </table>
-
+ 
 ## bluemix help
 {: #bluemix_help}
 Display the general help for first-level built-in commands and supported namespaces of {{site.data.keyword.Bluemix_notm}} CLI, or the help for a specific built-in command or namespace.
