@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="bluemix" audience="platform" href="/docs/overview/whatisbluemix.html"}
+{: .toc subcollection="bluemix-overview" audience="platform" href="/docs/overview/whatisbluemix.html"}
 What is Bluemix
   
     {: .navgroup id="learn"}
