@@ -11,7 +11,7 @@ lastupdated: "2017-4-11"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Working with Git Repos and Issue Tracking (Experimental)
+# Working with Git Repos and Issue Tracking (Beta)
 {: #git_working}
 
 Collaborate with your team and manage your source code with a Git repository (repo) and issue tracker that is hosted by IBM and built on [GitLab Community Edition ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://about.gitlab.com/){:new_window}.
