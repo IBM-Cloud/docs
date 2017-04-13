@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-5"
+lastupdated: "2017-4-10"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2017-4-5"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Extending the {{site.data.keyword.deliverypipeline}} service
+# Extending the Delivery Pipeline service
 {: #deliverypipeline_extending}
 
 You can extend the capabilities of the {{site.data.keyword.deliverypipeline}} service by configuring your jobs to use supported services. For example, test jobs can run static code scans and build jobs can globalize strings.

@@ -87,18 +87,3 @@ To create and configure a continuous delivery toolchain from a [template ![Exter
  * If you configured PagerDuty, the toolchain is set up to send alert notifications to the PagerDuty service that you specified.
  * If you configured Slack, the toolchain is set up to send notifications about deployment status to the Slack channel that you specified.
  * If you configured a source code tool integration such as GitHub, the sample GitHub repo is cloned into your GitHub account.
-
-
-# Related Links
-{: #rellinks}
-
-## Tutorials and Samples
-{: #samples}
-
-* [Learning Lab ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/category/courses){:new_window}
-
-## Related Links
-{: #general}
-
-* [{{site.data.keyword.contdelivery_full}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_continuous_delivery/){:new_window}
-* [IBM Cloud Garage Method ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method){:new_window}

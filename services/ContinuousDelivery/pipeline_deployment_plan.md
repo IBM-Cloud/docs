@@ -30,7 +30,7 @@ Most tasks have a starting point, an ending point, and a measurable duration. A 
 
 <!-- You can add tasks to deployment plans by creating tasks or you can import tasks from CSV files that are created by IBM UrbanCode Release or another application. You can also copy tasks from other deployment plans. See [Importing tasks](/docs/services/UCCR/UCCR_deployPlan.html#plan_importTasks) for information about the format of the CSV file. -->
 
-# Creating tasks
+## Creating tasks
 {: #tasks_create}
 
 When you create a task, you select the deployment plan where you want to add the task. By default, new tasks are inserted at the end of the deployment plan. After a task is created, you can move it or copy it and paste it into another deployment plan. You can also create dependencies with other [tasks](/docs/services/ContinuousDelivery/pipeline_deployment_plan.html#tasks_dependencies).
