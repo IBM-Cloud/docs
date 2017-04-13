@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="bluemix" audience="platform" href="/docs/manageapps/mngapps.html"}
+{: .toc subcollection="bluemix-manage-apps" audience="platform" href="/docs/manageapps/mngapps.html"}
 Managing apps
 
 	{: .navgroup id="learn"}
