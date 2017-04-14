@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-12"
+lastupdated: "2017-4-14"
 
 ---
 
@@ -342,7 +342,7 @@ To learn more, see [Editing code with the Eclipse Orion {{site.data.keyword.webi
 ## Configuring Git Repos and Issue Tracking (Beta)
 {: #gitbluemix}
 
-The Git Repos and Issue Tracking tool integration is based on GitLab Community Edition, which is a web-based hosting service for Git repos. You can have both local and remote copies of your repos. To learn more, see [Git Repos and Issue Tracking (Experimental) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/help){:new_window}.
+The Git Repos and Issue Tracking tool integration is based on GitLab Community Edition, which is a web-based hosting service for Git repos. You can have both local and remote copies of your repos. To learn more, see [Git Repos and Issue Tracking ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/help){:new_window}.
 
 If you are configuring Git Repos and Issue Tracking as you are creating the toolchain, follow these steps:    
 
