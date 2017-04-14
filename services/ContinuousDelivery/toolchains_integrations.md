@@ -339,7 +339,7 @@ To complete source control tasks, add the Eclipse Orion {{site.data.keyword.webi
 To learn more, see [Editing code with the Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery/web_ide.html){: new_window} and [Eclipse Orion {{site.data.keyword.webide}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_eclipse_orion_web_ide/){: new_window}.
 
 
-## Configuring Git Repos and Issue Tracking (Experimental)
+## Configuring Git Repos and Issue Tracking (Beta)
 {: #gitbluemix}
 
 The Git Repos and Issue Tracking tool integration is based on GitLab Community Edition, which is a web-based hosting service for Git repos. You can have both local and remote copies of your repos. To learn more, see [Git Repos and Issue Tracking (Experimental) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/help){:new_window}.
