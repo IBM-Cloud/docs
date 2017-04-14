@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-23"
+lastupdated: "2017-04-14"
 
 ---
 
@@ -21,7 +21,7 @@ apps.
 The php_buildpack is used in the following conditions:
 * Your app contains a composer.json file, or
 * your app contains a *.php file, or
-* your app defines a ${WEBDIR} variable in its [options.json](https://github.com/cloudfoundry/php-buildpack/blob/master/docs/config.md) file, and that variable is set to an existing directory within your app.
+* your app defines a ${WEBDIR} variable in its [options.json](https://docs.cloudfoundry.org/buildpacks/php/gsg-php-config.html) file, and that variable is set to an existing directory within your app.
 
 ## Starter application
 {: #starter_application}
