@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-11"
+lastupdated: "2017-4-14"
 
 ---
  
@@ -64,7 +64,9 @@ To upgrade your project to a toolchain, follow these steps:
 
    ![Example of an upgrade page](images/project-upgrade-toolchain.png)
 
-   For an overview of the upgrade process, read the description on that page. In this case, because the project used a repository at GitHub.com, the toolchain will be connected to the same GitHub repo. The toolchain will include a new pipeline that contains the same stages and jobs as the project's pipeline. In addition, the toolchain will contain a pointer to the Eclipse Orion {{site.data.keyword.webide}} that runs in {{site.data.keyword.contdelivery_short}}.
+   For an overview of the upgrade process, read the description on that page. In this case, because the project used a repo at GitHub.com, the toolchain will be connected to the same GitHub repo. If your project used a Git repo that was hosted on JazzHub, the toolchain will not use that repo. Instead, use the Git Repos and Issue Tracking tool integration in your toolchain.
+   
+   The toolchain will include a new pipeline that contains the same stages and jobs as the project's pipeline. In addition, the toolchain will contain a pointer to the Eclipse Orion {{site.data.keyword.webide}} that runs in {{site.data.keyword.contdelivery_short}}.
 
 2. To customize the toolchain, you can configure a few settings:
 
@@ -77,15 +79,21 @@ To upgrade your project to a toolchain, follow these steps:
       ![Bluemix Organization chooser](images/bluemix-organization-chooser.png)
 
    Because toolchains are managed at the organization level, be sure to select an organization where the project members that need to access the toolchain already exist, or can be added. 
+
+3. If you used Track & Plan in your project, you can transfer your Track & Plan data to GitHub Issues.
+
+   ![Track and Plan options](images/upgrade-tutorial-track-and-plan.png)
+
+   - Indicate whether you want to migrate your Track & Plan data. 
+   - By default, all of your Track & Plan data is migrated. If you prefer to migrate only the work items that are part of a specific query, specify that query.
+   - Select any work item attributes that you want to map to labels in GitHub Issues.
   
-3. Click **Create**. The new toolchain is created, and its Overview page is displayed.
+4. Click **Create**. The new toolchain is created, and its Overview page is displayed.
 
    ![Overview of the upgraded toolchain](images/new-toolchain-page.png)
    
    - To access your GitHub repo or the associated issue tracker, click **GitHub** or **Issues**.
-   
    - To access your pipeline, click **Delivery Pipeline**.  
-   
    - To access the {{site.data.keyword.webide}}, which contains the contents of your repo that were checked out into the workspace, click **Eclipse Orion {{site.data.keyword.webide}}**. 
    
    If you return to your project during the upgrade, the banner message might state that the upgrade is in progress, especially if the upgrade process involves importing source code to a new repo or importing Track &amp; Plan work items as issues. 
