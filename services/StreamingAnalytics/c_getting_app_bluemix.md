@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-09"
+lastupdated: "2017-04-13"
 
 ---
 
@@ -41,6 +41,7 @@ GitHub</a><br></li>
         <li><a href="https://www.ibm.com/blogs/bluemix/2017/02/connecting-to-streams/" target="_blank">Connecting to Streams: What you need to know</a><br></li>
         <li><a href="/docs/services/StreamingAnalytics/index.html" target="_blank">Getting started with Streaming Analytics</a><br></li>
         <li><a href="https://developer.ibm.com/streamsdev/docs/getting-spl-application-ready-cloud" target="_blank">Getting your SPL application ready for the cloud</a><br></li>
+        <li><a href="/docs/services/StreamingAnalytics/t_develop_apps_python.html#t_develop_apps_python" target="_blank">Developing Python applications for Streaming Analytics</a><br></li>
       </ul>    
     </td>
   </tr>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-09"
+lastupdated: "2017-04-13"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-03-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#{{site.data.keyword.streaminganalyticsshort}} console
+# {{site.data.keyword.streaminganalyticsshort}} console
 {: #console}
 
 On the {{site.data.keyword.streaminganalyticsshort}} console, you can submit your {{site.data.keyword.streamsshort}} applications directly to the {{site.data.keyword.streaminganalyticsshort}} service instance.
@@ -28,3 +28,5 @@ Use the {{site.data.keyword.streaminganalyticsshort}} console to monitor your jo
 * View your instance logs based on the environment variables you define
 
 You can access the {{site.data.keyword.streaminganalyticsshort}} console from the service dashboard.
+
+<!--The {{site.data.keyword.streaminganalyticsshort}} console is translated into the following languages: Brazilian Portuguese, French, German, Italian, Japanese, Korean, Simplified Chinese, Spanish, Traditional Chinese. Change the language setting in your browser to view the console in your preferred language. -->
