@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="iot-platform" audience="service"}
+{: .toc subcollection="iot-platform" audience="service" href="/docs/services/IoT/index.html"}
 Internet of Things Platform
 
     {: .navgroup id="learn"}
@@ -16,6 +16,7 @@ Internet of Things Platform
     {: .topicgroup}
     Beta features
         information_management/im_index.md
+        information_management/im_index_split.md
         information_management/im_index_scenario.md
         information_management/im_index_scenario_thing.md
         gateways/gateway-access-control.md
@@ -137,6 +138,7 @@ Internet of Things Platform
     {: .topicgroup}
     Developing gateways
         gateways/gw_dev_index.md
+        gateways/gw_api.md
         reference/mqtt/index.md
         gateways/mqtt.md
         gateways/libraries/java_cli_gw.md
@@ -157,4 +159,5 @@ Internet of Things Platform
     {: .navgroup id="help"}
     ts_index.md
     service_status.md
+    glossary.md
     {: .navgroup-end}
