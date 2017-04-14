@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-31"
+lastupdated: "2017-04-13"
 ---
 
 {:new_window: target="_blank"}
@@ -73,20 +73,3 @@ Finally, get the list of GPS points of a specific route pattern.
 ## Next steps
 {: #tp_post}
 When you complete the steps, a set of analyzed trajectory pattern data is generated in your organization.  Use your applications or your preferred analytics software to process the information further into more meaningful business data.
-
-# Related Links
-{: #rellinks notoc}
-
-## API reference
-{: #api}
-
-* [API docs ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/IoTDriverBehavior_APIdoc){:new_window}
-
-## Other resources
-{: #general}
-
-* [Getting started with {{site.data.keyword.iotmapinsights_short}}](../IotMapInsights/index.html){:new_window}
-* [Getting started with {{site.data.keyword.iot_full}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
-* [dW Answers on IBM developerWorks ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/iot-driver-behavior){:new_window}
-* [Stack Overflow ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/questions/tagged/iot-driver-behavior){:new_window}
-* [What's new in Bluemix Services ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ng.bluemix.net/docs/whatsnew/index.html#services_category){:new_window}
