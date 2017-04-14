@@ -25,7 +25,7 @@ The instructions that follow are for working with the Cloud Foundry (cf) CLI plu
 ## Install the cf CLI plug-in
 Before you begin, install the cf CLI. See [Cloud Foundry command line interface](https://console.{DomainName}/docs/cli/downloads.html) for details.
 
-##Install the {{site.data.keyword.vpn_short}} CLI plug-in
+##Install the VPN CLI plug-in
 **Note:** If you have a previous version of the {{site.data.keyword.vpn_short}} CLI plug-in that is installed, you must first uninstall it. Use the command:
 
 ```
