@@ -4,26 +4,26 @@
 {: .toc subcollection="iot-electronics" audience="boilerplate" href="/docs/starters/IotElectronics/iot4egettingstarted.html"}
 IoT for Electronics
 
-  {: .navgroup id="learn"}
+    {: .navgroup id="learn"}
     iot4egettingstarted.md
     iotelectronics_overview.md
-  {: .navgroup-end}
+    {: .navgroup-end}
 
-  {: .navgroup id="reference"}
+    {: .navgroup id="reference"}
     {: .topicgroup}
     APIs
         [IoT for Electronics APIs](https://broker-uss-iot4e.electronics.internetofthings.ibmcloud.com/public/iot4eregistrationapi.html)
         [IoT for Electronics API examples](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)
 
     [Sample mobile app](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html)
-  {: .navgroup-end}
+    {: .navgroup-end}
 
-  {: .navgroup id="howto"}
+    {: .navgroup id="howto"}
     iotelectronics_dashboard.md
     iotelectronics_config_mobile.md
     iot4ecreatingappliances.md
-  {: .navgroup-end}
+    {: .navgroup-end}
 
-  {: .navgroup id="help"}
+    {: .navgroup id="help"}
     iotelectronics_service_status.md
-  {: .navgroup-end}
+    {: .navgroup-end}
