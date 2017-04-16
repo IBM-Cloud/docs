@@ -11,7 +11,7 @@ lastupdated: "2017-01-08"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-#针对 {{site.data.keyword.amashort}} Web 应用程序配置定制认证
+# 针对 {{site.data.keyword.amashort}} Web 应用程序配置定制认证
 {: #custom-web}
 
 将定制认证和 {{site.data.keyword.amafull}} 安全功能添加到 Web 应用程序。
@@ -37,7 +37,7 @@ lastupdated: "2017-01-08"
 * [配置 {{site.data.keyword.amashort}} 进行定制认证](custom-auth-config-mca.html)
 
 
-##配置定制身份提供者
+## 配置定制身份提供者
 {: #custom-auth-config}
 
 创建定制身份提供者时，必须使用以下结构中的路径，定义 POST 方法：
@@ -103,7 +103,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 {: codeblock}
 
 
-##配置 {{site.data.keyword.amashort}} 进行定制认证
+## 配置 {{site.data.keyword.amashort}} 进行定制认证
 {: #custom-auth-config-mca}
 
 配置定制身份提供者后，可以在 {{site.data.keyword.amashort}} 仪表板中启用定制认证。
@@ -116,7 +116,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 1. 单击**保存**。
 
 
-##使用定制身份提供者实施 {{site.data.keyword.amashort}} 授权流程
+## 使用定制身份提供者实施 {{site.data.keyword.amashort}} 授权流程
 {: #custom-auth-flow}
 
 针对每一个 {{site.data.keyword.amashort}} 服务实例会自动创建 `VCAP_SERVICES` 环境变量，该环境变量包含授权流程所需的属性。它包含 JSON 对象，通过单击 {{site.data.keyword.amashort}}“仪表板”中的**服务凭证**选项卡，可以查看该对象。
@@ -183,7 +183,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 
 	重定向之后，用户会获取登录表单。在定制身份提供者认证用户的凭证之后，{{site.data.keyword.amashort}} 服务将会调用 Web 应用程序重定向 URI，并提供授权代码作为查询参数。
 
-##获取令牌
+## 获取令牌
 {: custom-auth-tokens}
 
 下一步是使用之前收到的授权代码获取访问令牌和身份令牌。要这样做：
@@ -248,7 +248,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 	在您收到访问令牌和身份令牌之后，您可以将 Web 会话标记为已认证，并且可以选择持久存储这些令牌
 
 
-##使用获取的访问和身份令牌
+## 使用获取的访问和身份令牌
 {: #custom-auth-using-token}
 
 身份令牌包含有关用户身份的信息。如果是定制认证，那么该令牌将包含认证时定制身份提供者所返回的所有信息。在 `imf.user` 字段下，`displayName` 字段将包含定制身份提供者返回的 `displayName`，而 `id` 字段将包含 `userName`。定制身份提供者返回的所有其他值都会在 `imf.user` 下的 `attributes` 字段中返回。  
@@ -257,7 +257,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-####提示：
+#### 提示：
 {: #tips_token}
 
 * `<accessToken>` 和 `<idToken>` 必须以空格分隔。

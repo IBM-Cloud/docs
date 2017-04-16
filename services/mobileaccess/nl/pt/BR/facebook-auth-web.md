@@ -234,7 +234,7 @@ autorização. O código de concessão é válido por 10 minutos, após os quais
 
 	Assim que tiver obtido acesso e recebido os tokens de identidade, será possível sinalizar a sessão da web como autenticada e, opcionalmente, persistir esses tokens.  
 
-##Usando o acesso e o token de identidade obtidos
+## Usando o acesso e o token de identidade obtidos
 {: #facebook-auth-using-token}
 
 O token de identidade contém informações sobre a identidade do usuário. No caso de autenticação do Facebook, o token conterá todas as

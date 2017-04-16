@@ -10,11 +10,11 @@ Para registrar las aplicaciones y los dispositivos de iOS:
 2. Pase la señal a las Notificaciones Push
 
 
-##Cree una aplicación de fondo
+## Cree una aplicación de fondo
 
 Cree una aplicación de fondo en el catálogo Bluemix® de la sección de Contenedores modelo, que enlaza automáticamente el servicio Push a esta aplicación. Si ya ha creado una app de fondo, asegúrese de que enlace la app al Servicio de notificaciones Push.
 
-###Objective-C
+### Objective-C
 
 ```
 	//Para Objective-C
@@ -31,7 +31,7 @@ Cree una aplicación de fondo en el catálogo Bluemix® de la sección de Conten
 	}
 ```
 
-###Swift
+### Swift
 
 ```
 	//For Swift
@@ -43,11 +43,11 @@ Cree una aplicación de fondo en el catálogo Bluemix® de la sección de Conten
 	}
 ```
 
-##Pase la señal a las Notificaciones Push
+## Pase la señal a las Notificaciones Push
 
 Después de recibir la señal desde APNs, pase la señal a Notificaciones Push como parte del método `registerDevice:withDeviceToken`.
 
-###Objective-C
+### Objective-C
 
 ```
 //Para Objective-C
@@ -69,7 +69,7 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 }];
 ```
 
-###Swift
+### Swift
 
 Después de recibir la señal desde APNS, pase la señal a Notificaciones Push como parte del método `didRegisterForRemoteNotificationsWithDeviceToken`.
 

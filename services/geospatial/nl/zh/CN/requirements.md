@@ -13,11 +13,11 @@ lastupdated: "2017-01-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#服务需求
+# 服务需求
 {: #requirements}
 
 
-##MQTT 设备消息需求
+## MQTT 设备消息需求
 
 * MQTT 消息代理必须以 JSON 格式在一个或多个 MQTT 主题上提供设备消息。
 * 设备消息可以包含任意数量的属性，但是总是需要以下三个属性：
@@ -28,7 +28,7 @@ lastupdated: "2017-01-09"
 	* MQTT 消息可以包含具有单个设备的相关信息的 JSON 对象。
 	* MQTT 消息可以包含具有一组设备的信息的 JSON 数组对象。
 
-##MQTT 事件和配置服务
+## MQTT 事件和配置服务
 
 您的应用程序预订 MQTT 消息并通过其 [REST API](https://console.ng.bluemix.net/apidocs/246) 控制 {{site.data.keyword.geospatialshort_Geospatial}}。可以通过 REST API 调用执行以下操作：
 

@@ -11,7 +11,7 @@ lastupdated: "2016-12-21"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#Compartilhando pipelines baseados em texto em projetos de amostra do {{site.data.keyword.jazzhub_short}} {: #share-pipeline}
+# Compartilhando pipelines baseados em texto em projetos de amostra do {{site.data.keyword.jazzhub_short}} {: #share-pipeline}
 
 No caso dos projetos de amostra implementados no
 {{site.data.keyword.Bluemix_notm}} pelo botão
@@ -90,7 +90,7 @@ stages:
 ```
 {: codeblock} 
 
-##Sintaxe do arquivo YAML {: #yaml-syntax}
+## Sintaxe do arquivo YAML {: #yaml-syntax}
 
 É possível representar textualmente qualquer pipeline usando a sintaxe a
 seguir.
@@ -168,14 +168,14 @@ space: <space name>
 ```
 {: codeblock} 
 
-##Tarefas de extensão e definições de extensão {: #extension-jobs} 
+## Tarefas de extensão e definições de extensão {: #extension-jobs} 
 
 As definições de extensão determinam o conjunto de propriedades disponíveis para
 as tarefas de extensão. Uma tarefa é tratada como tarefa de extensão quando a propriedade
 `extension_id` está especificada. Para descobrir que propriedades estão
 disponíveis para uma extensão, consulte a respectiva documentação. 
 
-##Interagindo com pipelines usando um arquivo YAML {: #pipeline-yaml} 
+## Interagindo com pipelines usando um arquivo YAML {: #pipeline-yaml} 
 
 **VARIÁVEIS DE AMBIENTE E RESOLUÇÃO** 
 <!-- Formating for this? -->

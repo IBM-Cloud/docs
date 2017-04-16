@@ -552,7 +552,7 @@ l'application. Par exemple, vous pouvez associer la variable d'environnement NOD
 export NODE_ENV=production;
 ```
 
-###Empêcher le téléchargement de fichiers et de répertoires
+### Empêcher le téléchargement de fichiers et de répertoires
 
 Lorsque vous utilisez l'interface de ligne de commande cf pour déployer une application, vous pouvez réduire le temps de téléchargement en ignorant certains fichiers et répertoires que {{site.data.keyword.Bluemix_notm}} peut obtenir ailleurs. Pour empêcher le téléchargement de ces fichiers et répertoires dans {{site.data.keyword.Bluemix_notm}}, vous pouvez créer un fichier `.cfignore` dans le répertoire racine de votre application.
 

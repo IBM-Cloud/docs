@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Despliegue de aplicaciones de inicio en {{site.data.keyword.Bluemix_short}}
+# Despliegue de aplicaciones de inicio en {{site.data.keyword.Bluemix_short}}
 {: #starterapps_deploy}
 
 Puede enviar y desplegar una de las aplicaciones de inicio de {{site.data.keyword.streaminganalyticsshort}} en la nube de {{site.data.keyword.Bluemix_short}}.

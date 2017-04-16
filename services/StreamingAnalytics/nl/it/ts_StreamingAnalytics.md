@@ -16,13 +16,13 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Risoluzione dei problemi di {{site.data.keyword.streaminganalyticsshort}} 
+# Risoluzione dei problemi di {{site.data.keyword.streaminganalyticsshort}} 
 {: #ts_StreamingAnalytics}
 
 Puoi trovare le risposte a domande comuni sull'utilizzo di {{site.data.keyword.streaminganalyticsshort}} in {{site.data.keyword.Bluemix_short}}.
 {:shortdesc}
 
-##Quando avvio il servizio, mi vengono richieste le credenziali per accedere alla console
+## Quando avvio il servizio, mi vengono richieste le credenziali per accedere alla console
 {: #log_in_console}
 
 Quando avvii {{site.data.keyword.streaminganalyticsshort}}, ti vengono richieste le credenziali

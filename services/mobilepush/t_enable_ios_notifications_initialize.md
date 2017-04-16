@@ -11,9 +11,9 @@ copyright:
 A common place to put the initialization code is in the application delegate for the iOS application.
 Click the **Mobile Options** link in your Bluemix Application Dashboard to get the application route and GUID.
 
-##Initializing the Core SDK
+## Initializing the Core SDK
 
-###Objective-C
+### Objective-C
 
 ```
 // Initialize the SDK for Object-C with IBM Bluemix GUID and route
@@ -21,7 +21,7 @@ IMFClient *imfClient = [IMFClient sharedInstance];
 [imfClient initializeWithBackendRoute:"add_your_applicationRoute_here" backendGUID:"add_your_appId_here"];
 ```
 
-###Swift
+### Swift
 
 ```
 // Initialize the Core SDK for Swift with IBM Bluemix GUID, route, and region
@@ -31,16 +31,16 @@ myBMSClient.initializeWithBluemixAppRoute("BluemixAppRoute", bluemixAppGUID: "AP
 myBMSClient.defaultRequestTimeout = 10.0 // Timput in seconds
 ```
 
-##Initializing the client Push SDK
+## Initializing the client Push SDK
 
-###Objective-C
+### Objective-C
 
 ```
 //Initialize client Push SDK for Objective-C
 IMFPushClient _pushService = [IMFPushClient sharedInstance];
 ```
 
-###Swift
+### Swift
 
 ```
 //Initialize client Push SDK for Swift

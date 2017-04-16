@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#在 {{site.data.keyword.Bluemix_short}} 上部署 {{site.data.keyword.streamsshort}} 應用程式
+# 在 {{site.data.keyword.Bluemix_short}} 上部署 {{site.data.keyword.streamsshort}} 應用程式
 {: #c_getting_app_bluemix}
 
 

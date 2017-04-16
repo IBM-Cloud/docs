@@ -11,7 +11,7 @@ lastupdated: "2017-01-11"
 {:shortdesc: .shortdesc}
 
 
-#Servizi
+# Servizi
 {: #services}
 
 {{site.data.keyword.Bluemix_notm}} ti consente di implementare, ospitare o ridimensionare facilmente servizi e applicazioni. Potrai così concentrarti sulla logica e
@@ -35,7 +35,7 @@ renderli generalmente disponibili.	|Viene fornito supporto per i problemi consid
 laddove applicabile, al ticket del problema verrà assegnata una severità 3 o 4. Per informazioni sulla severità del ticket, vedi [Come contattare il supporto](/docs/support/index.html#contacting-bluemix-support).|
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} services support information" caption-side="top"}
 
-##Servizi sperimentali
+## Servizi sperimentali
 {: #experimental_services}
 
 {{site.data.keyword.Bluemix_notm}} offre anche dei servizi sperimentali che puoi provare. Per visualizzare tutti i servizi sperimentali, i contenitori tipo e i runtime disponibili, accedi alla console {{site.data.keyword.Bluemix_notm}}, fai clic su **Catalogo**, scorri fino alla parte inferiore del catalogo e fai quindi clic su **Servizi sperimentali {{site.data.keyword.Bluemix_notm}}**.
@@ -44,7 +44,7 @@ I servizi sperimentali potrebbero non essere stabili e possono cambiare secondo 
 e tale problema viene considerato come un difetto in un servizio sperimentale,
 IBM non è tenuto a fornire una correzione.
 
-##Servizi per regione
+## Servizi per regione
 {: #services_region}
 
 Non tutti i servizi sono disponibili per l'acquisto in ogni regione {{site.data.keyword.Bluemix_notm}}. E, anche se il servizio è disponibile per l'acquisto in una regione, tale servizio potrebbe essere ospitato in un luogo differente. La seguente tabella mostra i servizi forniti da IBM.

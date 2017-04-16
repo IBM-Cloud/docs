@@ -36,32 +36,32 @@ Los clientes de navegadores web y móviles y las aplicaciones y extensiones de G
 ![Visión general de push](images/overview.jpg)
 
 
-###Aplicaciones móviles y de navegador
+### Aplicaciones móviles y de navegador
 {: mobile-applications}
 
 Al arrancar, las aplicaciones cliente se registrarán y se suscribirán al servicio {{site.data.keyword.mobilepushshort}} para recibir notificaciones.
 
-###Aplicaciones de fondo
+### Aplicaciones de fondo
 {: backend-applications}
 
 Las aplicaciones de fondo pueden ser locales o pueden estar en una nube pública. Las aplicaciones de fondo utilizarán el servicio {{site.data.keyword.mobilepushshort}} para enviar notificaciones según el contexto a usuarios de aplicaciones móviles y de navegador. No es necesario que las aplicaciones de fondo mantengan ni gestionen dispositivos móviles, agentes de navegador ni información de usuarios para enviar notificaciones push. En lugar de ello, pueden utilizar el servicio {{site.data.keyword.mobilepushshort}}, que los gestionará y mantendrá.
 
-###Propietario de back-end de app
+### Propietario de back-end de app
 {: app-backend-owner}
 
 El propietario de back-end de app crea la aplicación móvil de fondo, que agrupa una instancia del servicio {{site.data.keyword.mobilepushshort}}. El propietario también configura el servicio {{site.data.keyword.mobilepushshort}} para adaptar las aplicaciones de fondo utilizando el servicio junto con las aplicaciones móviles y de navegador destinadas para {{site.data.keyword.mobilepushshort}}.
 
-###Servicio {{site.data.keyword.mobilepushshort}}
+### Servicio {{site.data.keyword.mobilepushshort}}
 {: push-notification-service}
 
 El servicio {{site.data.keyword.mobilepushshort}} gestiona toda la información relacionada con los dispositivos móviles y clientes de navegadores web registrados para las notificaciones. El servicio mantiene sus aplicaciones transparentes a los detalles tecnológicos del envío de notificaciones a plataformas móviles y navegadores web heterogéneas y lo maneja todo.
 
-###Pasarelas
+### Pasarelas
 {: gateways}
 
 Los servicios de nube específicos de plataformas para las notificaciones push, como FCM/GCM o Apple Push Notification Service (APNs), que utilizan el servicio IBM {{site.data.keyword.mobilepushshort}} para asignar notificaciones a las aplicaciones móviles y de navegador.
 
-###Seguridad push
+### Seguridad push
 {: push-security}
 
 Las API de {{site.data.keyword.mobilepushshort}} se protegen mediante dos tipos de secretos:
@@ -81,17 +81,17 @@ Asegúrese de que el 'clientSecret' no se muestre nunca ni lo codifique en la ap
 ## Tipos de {{site.data.keyword.mobilepushshort}}
 {: #overview-push-types}
 
-###Difusión
+### Difusión
 {: broadcast}
 
 Cuando una aplicación cliente se registra en el servicio {{site.data.keyword.mobilepushshort}}, puede comenzar a recibir difusiones. Las notificaciones de difusión son mensajes destinados a todas las instancias de una aplicación instalada en dispositivos móviles, navegadores o implementadas como instancias de aplicaciones o extensiones de Chrome y configuradas para el servicio {{site.data.keyword.mobilepushshort}}. Las notificaciones de difusión están habilitadas de forma predeterminada para cualquier aplicación habilitada para {{site.data.keyword.mobilepushshort}}. Las aplicaciones habilitadas para el servicio {{site.data.keyword.mobilepushshort}} tienen una suscripción predefinida en la etiqueta Push.ALL, que utiliza el servidor para transmitir mensajes de notificación a todos los dispositivos. Para enviar una notificación de difusión que utiliza la API Push REST, asegúrese de que el "destino" sea un archivo JSON vacío al publicar en recursos de mensajes.
 
-###Notificaciones basadas en etiquetas
+### Notificaciones basadas en etiquetas
 {: tag-based-notifications}
 
 Las notificaciones basadas en etiquetas son mensajes que están pensados para todos los dispositivos suscritos a una etiqueta determinada. Las notificaciones basadas en código permiten la segmentación de notificaciones en función de los temas o de las áreas de temas. Los destinatarios de la notificación pueden elegir recibir notificaciones sólo si es sobre un asunto o tema de su interés. Por lo tanto, la notificación basada en etiquetas proporciona un medio de segmentar destinatarios. Esta característica habilita la función de definir etiquetas y, a continuación, enviar y recibir mensajes por etiquetas. Un mensaje sólo se ha dirigido a las instancias de aplicación cliente (en móvil, navegador o como una aplicación o extensión) que están suscritas a la etiqueta. Primero debe crear las etiquetas para la aplicación, configurar las suscripciones de etiquetas y, a continuación, iniciar las notificaciones basadas en etiquetas. Para enviar una notificación basada en etiquetas que utiliza la API REST, asegúrese de que los "tagNames" se proporcionen al publicarse en el recurso de mensajes.
 
-###Notificaciones de difusión única
+### Notificaciones de difusión única
 {: unicast-notifications}
 
 Las notificaciones de difusión única son mensajes destinados a un dispositivo o usuario específico. Dichas notificaciones destinadas a dispositivos no necesitan ninguna configuración adicional y están habilitadas de forma predeterminada cuando se habilita la aplicación para {{site.data.keyword.mobilepushshort}}.
@@ -101,7 +101,7 @@ Sin embargo, las notificaciones de difusión única destinadas a usuarios necesi
 Normalmente, las aplicaciones cliente primero ejecutan un ciclo de autenticación en el que el usuario de la aplicación móvil se autentica en un servicio de autenticación, como por ejemplo [Mobile Client Access](docs/services/mobileaccess/index.html). Si la autenticación es correcta, el ID de usuario autenticado se pasa a la API de registro del dispositivo push. 
 Para enviar una notificación de difusión única mediante la API REST, asegúrese de que se proporcionan los deviceId o los userId al publicarse en un recurso de mensajes.
 
-###Notificaciones basadas en plataforma
+### Notificaciones basadas en plataforma
 {: platform-based-notifications}
 
 Las notificaciones se pueden definir para alcanzar una plataforma de dispositivo determinada. Por ejemplo, se puede enviar una notificación únicamente a todos los usuarios de Android o Google Chrome. Para enviar una notificación basada en plataforma que utilice la API REST, asegúrese de que se proporcionan plataformas de destino al publicar en un recurso de mensajes. Especifique las plataformas como una matriz. Las plataformas soportadas son las siguientes:
@@ -122,7 +122,7 @@ El tamaño de carga útil de los mensajes de {{site.data.keyword.mobilepushshort
 
 Para iOS 8 y posterior, el tamaño máximo permitido es de 2 kilobytes. El Servicio de notificaciones Push de Apple no envía notificaciones que superen este límite.
 
-###Android, navegador Firefox, navegador Chrome y aplicaciones y extensiones de Chrome
+### Android, navegador Firefox, navegador Chrome y aplicaciones y extensiones de Chrome
 {: android-message-size}
 
 Existe una limitación de 4 kilobytes en el tamaño máximo permitido de la carga útil de mensajes.  

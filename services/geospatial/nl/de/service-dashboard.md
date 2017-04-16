@@ -13,14 +13,14 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Dashboard für Serviceadministration
+# Dashboard für Serviceadministration
 {: #service-dashboard}
 
 
 Im Dashboard für Serviceadministration können Sie den Status einer {{site.data.keyword.geospatialshort_Geospatial}}-Serviceinstanz anzeigen und die Serviceinstanz stoppen bzw. erneut starten. Wenn Sie das Dashboard für Serviceadministration aufrufen möchten, klicken Sie auf die Kachel {{site.data.keyword.geospatialshort_Geospatial}} im {{site.data.keyword.geospatialshort_Geospatial}}-Dashboard. Wenn Sie die Beispielanwendung verwenden und die Serviceinstanz den Ereignisgrenzwert erreicht und stoppt wird, können Sie den Service erneut starten. Beim Stoppen des Service wird der Ereignisgrenzwert gelöscht. Das Empfangen der Ereignisse wird fortgesetzt, bis Sie den Service stoppen. Im Dashboard für Serviceadministration werden auch der Status der Serviceinstanz und ihre Statistikdaten angezeigt.
 {:shortdesc}
 
-##{{site.data.keyword.geospatialshort_Geospatial}} - Regionsüberprüfungen
+## {{site.data.keyword.geospatialshort_Geospatial}} - Regionsüberprüfungen
 
 Mit {{site.data.keyword.geospatialshort_Geospatial}} werden Geräte überwacht,
 während diese aktiv sind, und zwar mittels Internet of Things. Jedes überwachte Gerät sendet Gerätenachrichten mit einer eindeutigen ID

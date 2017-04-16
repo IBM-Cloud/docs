@@ -11,7 +11,7 @@ lastupdated: "2016-12-21"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#{{site.data.keyword.jazzhub_short}} サンプル・プロジェクトにおけるテキスト・ベースのパイプラインの共有 {: #share-pipeline}
+# {{site.data.keyword.jazzhub_short}} サンプル・プロジェクトにおけるテキスト・ベースのパイプラインの共有 {: #share-pipeline}
 
 「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンで {{site.data.keyword.Bluemix_notm}} にデプロイされたサンプル・プロジェクトに対して、{{site.data.keyword.jazzhub_short}} パイプライン構成を YAML ファイルとして定義できます。テキストとして定義されたパイプラインは共有することができ、それによりプロジェクトをフォークする人は独自のパイプラインを構成する必要がなくなります。この機能は現在開発中で、YAML フォーマットと実装は随時変更される可能性があります。現在この機能は、{{site.data.keyword.Bluemix_notm}} をターゲットとする Git リポジトリーおよび GitHub リポジトリーを持つプロジェクトでのみ使用可能です。
 {: shortdesc} 
@@ -76,7 +76,7 @@ stages:
 ```
 {: codeblock} 
 
-##YAML ファイルの構文 {: #yaml-syntax}
+## YAML ファイルの構文 {: #yaml-syntax}
 
 どのようなパイプラインも、以下の構文を使用してテキストで表現することができます。
 
@@ -154,11 +154,11 @@ space: <space name>
 ```
 {: codeblock} 
 
-##拡張ジョブおよび拡張定義 {: #extension-jobs} 
+## 拡張ジョブおよび拡張定義 {: #extension-jobs} 
 
 拡張定義は拡張ジョブで使用可能な一連のプロパティーを定義します。`extension_id ` プロパティーが指定されると、ジョブは拡張ジョブとして扱われます。拡張に使用可能なプロパティーを把握するには、その資料を参照してください。 
 
-##YAML ファイルを使用したパイプラインとの対話 {: #pipeline-yaml} 
+## YAML ファイルを使用したパイプラインとの対話 {: #pipeline-yaml} 
 
 **環境変数および解決** 
 <!-- Formating for this? -->

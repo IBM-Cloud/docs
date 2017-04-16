@@ -30,7 +30,7 @@ copyright:
 -->
 
 
-##注册应用程序标识
+## 注册应用程序标识
 {: #create-push-credentials-apns-register}
 
 
@@ -48,7 +48,7 @@ copyright:
 ![显式标识](images/appID_bundleID.jpg)
 4. 创建开发和分发 APNs SSL 证书。
 
-##创建开发和分发 APNs SSL 证书
+## 创建开发和分发 APNs SSL 证书
 {: #create-push-credentials-apns-ssl}
 
 在获取 APNs 证书之前，必须首先生成一个证书签名请求 (CSR)，然后将其提交给 Apple（认证中心 (CA)）。CSR 中包含您公司的标识信息，以及您用于签署 Apple 推送通知的公用密钥和专用密钥信息。然后，在 iOS 开发者门户网站上生成 SSL 证书。该证书与其公用密钥和专用密钥一起存储在“钥匙串访问”中。
@@ -97,7 +97,7 @@ copyright:
 19. **Key Access.app** 会提示您从**密钥串**屏幕导出密钥。输入 Mac 的管理员密码，以允许系统导出这些项，然后选择**总是允许**选项。这将在桌面上生成一个 `.p12` 证书。
 
 
-##创建开发供应概要文件
+## 创建开发供应概要文件
 {: #create-push-credentials-dev-profile}
 
 供应概要文件与应用程序标识一起来确定哪些设备可以安装并运行您的应用程序，以及您的应用程序可以访问哪些服务。对于每个应用程序标识，都可创建两个供应概要文件：一个用于开发，另一个用于分发。Xcode 使用开发供应概要文件来确定允许哪些开发者构建应用程序，以及允许哪些设备在应用程序上进行测试。
@@ -114,7 +114,7 @@ copyright:
 
 
 
-##创建应用商店分发供应概要文件
+## 创建应用商店分发供应概要文件
 {: #create-push-credentials-apns-distribute_profile}
 
 使用应用商店供应概要文件可提交应用程序以分发到 App Store。
@@ -122,7 +122,7 @@ copyright:
 1. 转至 [Apple Developer ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.apple.com){: new_window} 门户网站，单击 **Member Center**，然后选择 **Certificates, Identifiers & Profiles**。
 2. 双击所下载的供应概要文件，以将其安装到 Xcode 中。
 
-##在 {{site.data.keyword.mobilepushshort}} 仪表板上设置 APNs
+## 在 {{site.data.keyword.mobilepushshort}} 仪表板上设置 APNs
 {: #create-push-credentials-apns-dashboard}
 
 要使用 {{site.data.keyword.mobilepushshort}} 服务发送通知，请上传 Apple 推送通知服务 (APNs) 所需的 SSL 证书。此外，也可以使用 REST API 来上传 APNs 证书。

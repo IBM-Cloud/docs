@@ -47,7 +47,7 @@ alert: true,
 
 
 
-##JavaScript
+## JavaScript
 {: #cordova_register_js}
 
 ```
@@ -116,7 +116,7 @@ onDeviceReady: function() {
 	}
 ```
 
-##Swift
+## Swift
 {: #cordova_register_swift}
 將下列 Swift 程式碼 Snippet 新增至應用程式委派類別。
 
@@ -130,7 +130,7 @@ funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificati
 }
 ```
 
-##後續步驟
+## 後續步驟
 {: #cordova_register_next}
 
 1. 使用下列指令建置專案，然後執行專案：

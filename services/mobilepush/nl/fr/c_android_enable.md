@@ -135,7 +135,7 @@ Générez et exécutez votre application.
 
 Le code d'initialisation se trouve généralement dans la méthode onCreate de l'activité principale de votre application Android. Deux composants du logiciel SDK doivent être initialisés. Le premier est le logiciel SDK de base et l'autre, le logiciel SDK push qui repose sur le premier.
 
-###Initialisation du logiciel SDK de base
+### Initialisation du logiciel SDK de base
 
 ```
 // Initialisation du SDK pour Android
@@ -143,7 +143,7 @@ Le code d'initialisation se trouve généralement dans la méthode onCreate de l
 ```
     {: codeblock}
 
-####bluemixRegionSuffix
+#### bluemixRegionSuffix
 {: bluemixRegionSuffix}
 
 Indique l'emplacement où l'appli est hébergée. Vous pouvez utiliser l'une des trois valeurs suivantes :
@@ -152,7 +152,7 @@ Indique l'emplacement où l'appli est hébergée. Vous pouvez utiliser l'une des
 - BMSClient.REGION_UK
 - BMSClient.REGION_SYDNEY
 
-###Initialisation du logiciel SDK Push du client
+### Initialisation du logiciel SDK Push du client
 
 ```
 //Initialize client Push SDK for Java
@@ -161,7 +161,7 @@ push.initialize(getApplicationContext(), "appGUID", "clientSecret");
 ```
 	{: codeblock}
 
-####AppGUID
+#### AppGUID
 {: appguid_initialize_client_push_sdk}
 
 Il s'agit de la clé AppGUID du service {{site.data.keyword.mobilepushshort}}. Cette valeur est sensible à la casse. Ouvrez le tableau de bord de notification push et sélectionnez l'onglet de configuration. Vous pouvez obtenir cette valeur depuis Options pour application mobile, à partir de l'onglet de configuration du tableau de bord du service Push Notifications. 

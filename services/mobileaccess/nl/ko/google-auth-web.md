@@ -189,7 +189,7 @@ Google 애플리케이션 ID와 본인확인정보가 있으면 {{site.data.keyw
 	액세스 및 ID 토큰을 받은 후에는 웹 세션을 인증됨으로 플래그 지정할 수 있으며 선택적으로 이러한 토큰을 유지할 수 있습니다.   
 
 
-##확보한 액세스 권한 및 ID 토큰 사용
+## 확보한 액세스 권한 및 ID 토큰 사용
 {: #google-auth-using-token}
 
 ID 토큰에는 사용자 ID에 대한 정보가 포함되어 있습니다. Google 인증의 경우 토큰에는 사용자가 공유하도록 동의한 모든 정보가 포함됩니다(예: 전체 이름, 프로파일 사진의 URL 등).  
@@ -200,7 +200,7 @@ ID 토큰에는 사용자 ID에 대한 정보가 포함되어 있습니다. Goog
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-####팁:
+#### 팁:
 {: #tips}
 
 * `accessToken` 및 `idToken`은 공백으로 구분해야 합니다. 

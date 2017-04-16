@@ -23,7 +23,7 @@ Después de crear una instancia de {{site.data.keyword.contdelivery_short}} sele
  * Para crear y configurar una cadena de herramientas de entrega continua a partir de una plantilla, en la sección "Inicio desde una plantilla de cadena de herramientas" pulse **[Empezar aquí](#starting_from_a_toolchain_template)**. La cadena de herramientas integra herramientas para la planificación, despliegue de conductos y gestión de aplicaciones. Siempre puede añadir o eliminar herramientas de sus cadenas de herramientas.
  * Si ya tiene cadenas de herramientas, en la sección "Inicio desde una plantilla de cadena de herramientas" pulse **Ver sus cadenas de herramientas**. Para obtener más información sobre cómo trabajar con cadenas de herramientas, consulte el apartado sobre [Utilización de cadenas de herramientas en Bluemix público](/docs/services/ContinuousDelivery/toolchains_using.html){: new_window}.
 
-##Inicio con un conducto
+## Inicio con un conducto
 {: #starting_with_a_pipeline}
 
 Los conductos automatizan las compilaciones, despliegues y más. Para empezar con un conducto automatizado, seleccione una plantilla y especifique la ubicación del repositorio GitHub (repositorio).
@@ -60,7 +60,7 @@ Para crear un [conducto vacío (el enlace se abre en una ventana nueva)](https:/
 1. Seleccione la cadena de herramientas que desea utilizar o escriba un nombre para la nueva cadena de herramientas que desea crear.
 1. Pulse **Crear**. Se crea un conducto vacío y se representa como un mosaico en la página Visión general de la cadena de herramientas.
 
-##Inicio desde una plantilla de cadena de herramientas
+## Inicio desde una plantilla de cadena de herramientas
 {: #starting_from_a_toolchain_template}
 
 Para crear y configurar una cadena de herramientas de entrega continua desde una plantilla de [ (el enlace se abre en una nueva ventana)](https://console.ng.bluemix.net/devops/create){: new_window}:

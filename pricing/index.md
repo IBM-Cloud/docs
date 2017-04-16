@@ -79,13 +79,13 @@ Figure 1. Process flowchart of {{site.data.keyword.Bluemix_notm}} account manage
 If you convert your account during your free trial, your free allowances are limited to allowances normally provided by each service. The allowances are no longer unlimited use allowances that are offered by many of the IBM services during the free trial.
 
 
-##What it costs
+## What it costs
 {: #what_it_costs}
 
 Charges vary depending on the resources used by a particular service, runtime, container, or support option. The resources can be the number of API calls, the number of instances, memory, storage, and so on. {{site.data.keyword.Bluemix_notm}} also provides detailed cost estimators, and a down-to-the-penny cost calculator to help you plan for charges. You can check the actual cost after you build your apps by using the *Usage Dashboard* view. For more detailed information about charges, see [How you are charged](index.html#charges).
  
 
-##Promo code
+## Promo code
 {: #promo}
 
 Sometimes {{site.data.keyword.Bluemix_notm}} Sales or other {{site.data.keyword.Bluemix_notm}} representatives provide promo codes. By applying a promo code, you can get extra resources or capabilities that are provided by {{site.data.keyword.Bluemix_notm}} for your trial account.
@@ -101,7 +101,7 @@ The resources or capabilities vary depending on the particular code, but can inc
 **Note:** You can apply multiple promo codes to your account. Each promo code can be redeemed only once before the expiration date of the code.
 To use a promo code, click the **Profile Settings** icon, select **Account**, then click **Account Type** in the {{site.data.keyword.Bluemix_notm}} user interface.
 
-##How you are billed
+## How you are billed
 {: #pay-accounts}
 
 When you sign up for a {{site.data.keyword.Bluemix_notm}} billable plan, you can select from the following accounts:
@@ -120,7 +120,7 @@ If you encounter any problems with {{site.data.keyword.Bluemix_notm}} when you a
 
 **Note:** If you link your {{site.data.keyword.Bluemix_notm}} billing account with a SoftLayer account, starting on the first of the next month, your {{site.data.keyword.Bluemix_notm}} and SoftLayer charges will be on your {{site.data.keyword.Bluemix_notm}} invoice. For more details, see [Viewing credits](/docs/admin//softlayerlink.html#bill_usage).
 
-###Pay-As-You-Go account
+### Pay-As-You-Go account
 {: #pay-as-you-go}
 
 If you sign up for a Pay-As-You-Go account, you pay only for the {{site.data.keyword.Bluemix_notm}} resources that you use. You are also eligible for free runtime and service allowances.
@@ -129,14 +129,14 @@ In many countries and regions, you can sign up for a Pay-As-You-Go account from 
 
 You can convert your Pay-As-You-Go account to a Subscription account at any time. With a Subscription account, you commit to spending a minimum amount each month. If you want to convert to a Subscription account, contact {{site.data.keyword.Bluemix_notm}} Sales, by using the link listed on the [Bluemix Contact Us](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs) page.
 
-###Subscription account
+### Subscription account
 {: #subscription}
 
 If you sign up for a Subscription account, you commit to a minimum spending amount each month and receive a subscription discount that is applied to that minimum charge. You also pay for any usage that exceeds the minimum spending amount.
 
 To sign up for a Subscription account, and for more information about subscription rates and discounts, you must contact {{site.data.keyword.Bluemix_notm}} Sales, by using the link listed on the [Bluemix Contact Us](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs) page.
 
-###{{site.data.keyword.Bluemix_notm}} Dedicated account
+### {{site.data.keyword.Bluemix_notm}} Dedicated account
 {: #dedicated}
 
 {{site.data.keyword.Bluemix_notm}} requires a one year minimum term that includes:
@@ -152,7 +152,7 @@ You can also order optional items such as SoftLayer DirectLink or premium suppor
 With {{site.data.keyword.Bluemix_notm}} Dedicated, you must sign up for a one year minimum term. What you pay each month during that term is based on the dedicated services that you want, plus a subscription account that gives you access to all public services. Usage charges of the services in {{site.data.keyword.Bluemix_notm}} Public are calculated based on your subscription account agreement. You receive an invoice for any services that you use beyond that subscription agreement. Contact your IBM designated account representative or contact [Bluemix sales](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs) to get started on your agreement.
 
 
-###{{site.data.keyword.Bluemix_notm}} Local account
+### {{site.data.keyword.Bluemix_notm}} Local account
 {: #local}
 
 {{site.data.keyword.Bluemix_notm}} requires a one year minimum term that includes:
@@ -164,7 +164,7 @@ With {{site.data.keyword.Bluemix_notm}} Dedicated, you must sign up for a one ye
 
 With {{site.data.keyword.Bluemix_notm}} Local, you must sign up for a one year minimum term. What you pay each month during that term is based on the local services that you want, plus a subscription account that gives you access to all public services. Usage charges of the services in {{site.data.keyword.Bluemix_notm}} Public are calculated based on your subscription account agreement. You receive an invoice for any services that you use beyond that subscription agreement. Contact your IBM designated account representative or contact [{{site.data.keyword.Bluemix_notm}} sales](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs) to get started on your agreement.
 
-##How you are charged
+## How you are charged
 {: #charges}
 
 With a {{site.data.keyword.Bluemix_notm}} billable account, you are charged for the compute, containers, and services that are used in your organization. You might be invited by other {{site.data.keyword.Bluemix_notm}} users to participate in organizations under a different account. If you create applications or use services in the organizations that you are invited to, the usage incurred is charged to the account that contains those organizations. You can see more information about a specific charges on a resource details page from the {{site.data.keyword.Bluemix_notm}} Catalog, or on the price calculator from the {{site.data.keyword.Bluemix_notm}} Pricing page.
@@ -178,7 +178,7 @@ Different types of charges apply depending on the features of {{site.data.keywor
 |  Tiered   |  Some pricing plans are based on a tiered pricing model, so you can get a volume-based discount according to your actual usage. Services might offer simple, graduated, or block tier pricing plans. | Services | Tiered pricing is typically used for charge metrics that are expected to have very high quantities per month, such as API calls. |
 | Reserved | Reserved pricing is based on a long-term commitment for a service, so you can get a discounted price. With a reserved plan, you get a dedicated service instance that is easy to set up, deploy, and deliver in the public {{site.data.keyword.Bluemix_notm}} environment. | Services | DB2 on Cloud has reserved plans.|
 
-###Charges for compute resources
+### Charges for compute resources
 {: #compute}
 
 You are charged for the time that your applications run and the memory that is used, calculated as *GB-hours*. GB-hours is the calculation of the number of application instances, multiplied by the memory per instance, multiplied by the hours that the instances run. You can customize the number of instances and the amount of memory per instance based on your needs. You can also add memory or instances to scale for more users. The final charge is per GB-hour: your application instances, multiplied by memory per instance, multiplied by hours running.
@@ -190,7 +190,7 @@ For example, consider a runtime that costs $0.07 per GB-hour in two 512 MB insta
 (720 - 375) GB-hours x $0.07 per GB-hour = $24.15
 ```
 
-###Charges for services
+### Charges for services
 {: #services}
 
 Many services include monthly free allowances. Usage of services that is not included as part of the free allowance is charged in one of the following ways:
@@ -207,7 +207,7 @@ Many services include monthly free allowances. Usage of services that is not inc
 </dl>
 
 
-####Simple tier
+#### Simple tier
 {: #simple_tier}
 
 In the simple tier model, the unit price is determined by the tier that the quantity of your usage falls into. The total price is your quantity multiplied by the unit price in that tier. For example:
@@ -232,7 +232,7 @@ The following table illustrates how much you pay with a plan that is based on a 
 |5200 |	5200 × 0.40 = 2080 |$2080 USD|
 {:caption="Table 2. Charge calculation by using the simple tier pricing model" caption-side="top"}
 
-####Graduated tier
+#### Graduated tier
 {: #graduated_tier}
 
 In the graduated tier model, the unit price per tier decreases as your level of usage increases. The total price is the cumulative charges for each level of usage, consisting of your quantity multiplied by the unit price at that tier. For example:
@@ -257,7 +257,7 @@ The following table illustrates how much you pay with a plan that is based on a 
 |5200 |	(1000 × 1 (unit price for Tier 1)) + (1000 × 0.90 (unit price for Tier 2)) + (1000 × 0.75 (unit price for Tier 3)) + (1000 × 0.60 (unit price for Tier 4)) + (1200 × 0.40 (unit price for Tier 5)) = 3730 |	$3730 USD|
 {:caption="Table 4. Charge calculation by using the graduated tier pricing model" caption-side="top"}
 
-####Block tier
+#### Block tier
 {: #block_tier}
 
 In the block tier model, the price is a set charge for the quantity you use within a usage level. The total price is the charge for your level of usage, regardless of your actual usage. Each successive tier provides a lower price to quantity ratio. For example:
@@ -281,7 +281,7 @@ The following table illustrates how much you pay with a plan that is based on a 
 |5200 |	The number of items falls into Tier 5, so the total price is $5000 USD. |	$5000 USD|
 {:caption="Table 6. Charge calculation by using the block tier pricing model" caption-side="top"}
 
-##How to estimate your costs
+## How to estimate your costs
 {: #cost}
 
 You can use different methods to know how much you need to pay for using {{site.data.keyword.Bluemix_notm}} to build and host your app.
@@ -291,7 +291,7 @@ provides a rough estimation of the cost based on the size of your app.
 * The cost calculator on the {{site.data.keyword.Bluemix_notm}} Pricing page provides accurate app prices based on your input of runtime and service usages.
 * You can also calculate your cost manually.
 
-###Using the cost calculators
+### Using the cost calculators
 {: #calculator}
 
 You can quickly price your app by using the cost calculators that are provided by {{site.data.keyword.Bluemix_notm}}.
@@ -301,12 +301,12 @@ You can quickly price your app by using the cost calculators that are provided b
 
 To use the calculator, type your projected monthly usage of the listed resources; for example, number of instances or push notifications. Click inside the **Monthly Usage** field for hints about the units that are expected in the field. The calculator displays the price for your input immediately. You can also adjust the calculator to display yearly costs instead of monthly costs.
 
-###Calculating your costs manually
+### Calculating your costs manually
 {: #manual}
 
 You might want to estimate your {{site.data.keyword.Bluemix_notm}} costs yourself, or better understand how {{site.data.keyword.Bluemix_notm}} costs are calculated. You can calculate the total price of using {{site.data.keyword.Bluemix_notm}} to build and host your app by considering the prices of the runtime and the services it uses. The prices of runtimes and services sometimes change, so you must refer to the latest information on the {{site.data.keyword.Bluemix_notm}} pricing sheet when you calculate the total price.
 
-###Example: Pricing a sample app
+### Example: Pricing a sample app
 {: #sample}
 
 Assume that you have a Node.js web application with scalability capabilities, and that the application uses several services that are provided by {{site.data.keyword.Bluemix_notm}}. You can learn how the actual cost of your application is calculated in this example. The web application uses the following {{site.data.keyword.Bluemix_notm}} services and items:
@@ -317,7 +317,7 @@ Assume that you have a Node.js web application with scalability capabilities, an
 * 150 GB per month NoSQL database, 100,000 heavy API calls, and 500,000 light API calls
 * 20 GB inbound or outbound network traffic
 
-###Prices for {{site.data.keyword.Bluemix_notm}} resources
+### Prices for {{site.data.keyword.Bluemix_notm}} resources
 {: #sample_resources}
 
 To keep the example simple, assume that the prices in the following table do not fluctuate within or between a time frame, for example, a month. All pricing in this example is in US currency.
@@ -332,7 +332,7 @@ To keep the example simple, assume that the prices in the following table do not
 |IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2 GB of free data storage<br/>50,000 light API calls free per month<br/>10,000 heavy API calls free per month | $1.00 USD/GB<br/>$0.03 USD/1000 light API calls<br/>$0.15 USD/1000 heavy API calls |
 {:caption="Table 7. Pricing sheet" caption-side="top"}
 
-###Calculating the application price
+### Calculating the application price
 
 The price of the application can be calculated in the following way:
 
@@ -369,7 +369,7 @@ The total price is 148 + 13.5 + 13.5 = $175.</p></dd>
 
 When all the items are added, the total price of the application is $354.15.
 
-###Supported currencies
+### Supported currencies
 
 Although the United States dollar (USD) is used in the pricing examples, other currencies are also supported in {{site.data.keyword.Bluemix_notm}}. The following table lists the different currencies that are supported.
 
@@ -394,7 +394,7 @@ Although the United States dollar (USD) is used in the pricing examples, other c
 
 **Note:** If you have linked your {{site.data.keyword.Bluemix_notm}} and SoftLayer accounts, the single invoice you receive is in United States dollars (USD) only.  
 
-##Usage dashboard
+## Usage dashboard
 {: #usage}
 
 As an account owner or a billing manager, you can use the Usage Dashboard page to see the real-time charges for the runtimes and services that are used per month in your organizations. You can see the runtime GB-hours and service consumption in all regions, or you can select to see a particular region and space, for the past 12 months.
@@ -407,21 +407,21 @@ Account owners can filter the usage summary by region and organization. If you a
 
 If you select a specific organization for the **Organization**, you can see the total usage for that organization, including any usage as part of a free tier. The charges shown for the organization are not the charges that you are billed. The free tier usage is shown as free at the account level, but not at the organizational level. Therefore, when you view the organizational usage, you see the real usage for that organization including both free and charged usage. All organizational usage is rolled up to the account usage after the free tier is removed.
 
-##Viewing credits
+## Viewing credits
 {: #credits}
 
 As an account owner or a billing manager, you can use the **Usage Dashboard** page to see any credits for your account. 
 
 To open the **Usage Dashboard** page, click **Account** &gt; **Usage Dashboard**. The dashboard displays any credits, if they exist, and when they expire.
 
-##Notifications
+## Notifications
 {: #notifications}
 
 As an account manager of a Pay-As-You-Go account, you can set spending notifications against the total cost of your account, for your runtime, services, and for individual services, excluding third-party services. You receive notifications when you reach 80%, 90%, and 100% of the spending thresholds that you specify.
 
 To open the **Notifications** view, click **Account** &gt; *your_account_name* &gt; **Spending Notifications**. Enter a numeric value to set the spending threshold for triggering a notification for each type of spending notification as needed. You can also add and delete notifications for individual services.
 
-##How to change your plan
+## How to change your plan
 {: #changing}
 
 You can change your service plan in {{site.data.keyword.Bluemix_notm}} in the service Dashboard, if plan changes are enabled for that service.
@@ -436,7 +436,7 @@ Only certain services provide the ability for you to change the service plan. If
 |Presence Insights 	|If you have a Lite plan and exceed the free allowances, a 403 message displays or is logged to indicate that you are no longer authorized, and your service instance is disabled. In addition, POST REST API calls are rejected with a 403 response.<br/><br/>If your service is disabled because you exceed the free allowance, you can upgrade from a Lite plan to a Paid plan. Your service is re-enabled within 2 hours.<br/><br/>If you have a Paid plan, you can reduce your plan to the Lite plan, as long as your usage stays within the Lite plan allowance for events and total storage.<br/><br/>When you upgrade or reduce your plan, you do not need to restage or restart your apps.|
 {:caption="Table 9. Next steps for changing your plan" caption-side="top"}
 
-###How to change your plan through the command line interface
+### How to change your plan through the command line interface
 
 Optionally, you can change your service plan through the command line interface.
 To update the service plan, enter the following command:

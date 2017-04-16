@@ -17,7 +17,7 @@ copyright:
 {:shortdesc}
 
 {{site.data.keyword.vpn_short}} サービスには、以下のフィーチャーがあります。  
-##セキュリティー 
+## セキュリティー 
 IBM VPN サービスは、業界標準の Internet Protocol Security (IPSec) プロトコル・スイートを使用して、社内データ・センターと IBM Bluemix クラウド環境の間で IP 通信の認証と暗号化を行います。IPSec は、ネットワーク・レベルのピア認証、データ保全性、およびデータ機密性 (暗号化) を提供します。
 
 IBM VPN サービスは、以下の IPSec プロトコルと変換をサポートします。
@@ -43,8 +43,8 @@ IBM VPN サービスは、以下の IETF RFC に準拠しています。
 * IPv4 カプセル化セキュリティー・ペイロード (ESP) 用の RFC 4303  
 * 認証用の RFC 2104 HMAC と RFC 2404 HMAC-SHA-1-96  
 * 暗号化用の RFC 2451 3DES-CBC、RFC 3602 AES128-CBC、AES192-CBC、AES256-CBC
-##容易さ
+## 容易さ
 IBM VPN サービスは、シンプルで直観的なグラフィカル・インターフェースを使用して作成できます。ゲートウェイ IP アドレスとデータ・センターのサブネットを指定できます。デフォルトの IPSec と IKE ポリシーを使用するか、またはそれらのポリシーを必要に合わせてカスタマイズすることができます。  
-##管理
+## 管理
 IBM VPN サービスは、グラフィカル・インターフェース、[コマンド・ライン・インターフェース](../../cli/plugins/vpn/index.html)、または [API](https://new-console.ng.bluemix.net/apidocs/101) を使用して管理できます。
 

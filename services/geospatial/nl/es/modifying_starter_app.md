@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Modificación de la aplicación de inicio a {{site.data.keyword.Bluemix_short}}
+# Modificación de la aplicación de inicio a {{site.data.keyword.Bluemix_short}}
 {: #modifying_starter_app}
 
 Puede modificar la aplicación de inicio y luego volverla a desplegar en {{site.data.keyword.Bluemix_short}} para ver los resultados.{:shortdesc}

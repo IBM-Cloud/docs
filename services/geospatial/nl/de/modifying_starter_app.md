@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Starteranwendung in {{site.data.keyword.Bluemix_short}} ändern
+# Starteranwendung in {{site.data.keyword.Bluemix_short}} ändern
 {: #modifying_starter_app}
 
 Sie können die Starteranwendung ändern und anschließend erneut in {{site.data.keyword.Bluemix_short}} bereitstellen, um die Ergebnisse anzuzeigen.

@@ -36,32 +36,32 @@ IBM {{site.data.keyword.mobilepushshort}}는 디바이스와 플랫폼에 알림
 ![푸시 개요](images/overview.jpg)
 
 
-###모바일 및 브라우저 애플리케이션
+### 모바일 및 브라우저 애플리케이션
 {: mobile-applications}
 
 시작 시 클라이언트 애플리케이션은 알림을 수신하도록 {{site.data.keyword.mobilepushshort}} 서비스에 등록하고 구독을 신청합니다. 
 
-###백엔드 애플리케이션
+### 백엔드 애플리케이션
 {: backend-applications}
 
 백엔드 애플리케이션은 온프레미스 또는 퍼블릭 클라우드에 있습니다. 백엔드 애플리케이션은 {{site.data.keyword.mobilepushshort}} 서비스를 사용하여 컨텍스트 알림을 모바일 및 브라우저 애플리케이션 사용자에게 전송합니다. 백엔드 애플리케이션은 푸시 알림을 전송하기 위해 모바일 디바이스, 브라우저 에이전트 및 사용자 정보를 유지보수하고 관리할 필요가 없습니다. 대신 백엔드 애플리케이션에서는 이들을 관리하고 유지보수하는 {{site.data.keyword.mobilepushshort}} 서비스를 사용할 수 있습니다.
 
-###앱 백엔드 소유자
+### 앱 백엔드 소유자
 {: app-backend-owner}
 
 앱 백엔드 소유자는 {{site.data.keyword.mobilepushshort}} 서비스의 인스턴스를 번들로 제공하는 모바일 백엔드 애플리케이션을 작성합니다. 앱 백엔드 소유자는 또한 {{site.data.keyword.mobilepushshort}}의 대상인 모바일 및 브라우저 애플리케이션과 함께 {{site.data.keyword.mobilepushshort}} 서비스를 사용하는 백엔드 애플리케이션에 적합하도록 이 서비스를 구성하고 설정합니다.
 
-###{{site.data.keyword.mobilepushshort}} 서비스
+### {{site.data.keyword.mobilepushshort}} 서비스
 {: push-notification-service}
 
 {{site.data.keyword.mobilepushshort}} 서비스는 알림을 수신하기 위해 등록한 모바일 디바이스 및 웹 브라우저 클라이언트와 관련된 모든 정보를 관리합니다. 이 서비스는 이기종 모바일 및 웹 브라우저 플랫폼에 알림을 보내는 기술 세부사항을 애플리케이션에 적용할 수 있도록 알려주고 이 모든 사항을 내부에서 처리합니다. 
 
-###게이트웨이
+### 게이트웨이
 {: gateways}
 
 IBM {{site.data.keyword.mobilepushshort}} 서비스에서 모바일 애플리케이션과 브라우저 애플리케이션에 알림을 디스패치하는 데 사용하는 플랫폼별 푸시 알림 클라우드 서비스(예: FCM/GCM 또는 APNs(Apple Push Notification Service))입니다. 
 
-###푸시 보안
+### 푸시 보안
 {: push-security}
 
 {{site.data.keyword.mobilepushshort}} API는 다음 두 유형의 시크릿으로 보호됩니다.
@@ -81,17 +81,17 @@ IBM {{site.data.keyword.mobilepushshort}} 서비스에서 모바일 애플리케
 ## {{site.data.keyword.mobilepushshort}} 유형
 {: #overview-push-types}
 
-###브로드캐스트
+### 브로드캐스트
 {: broadcast}
 
 클라이언트 애플리케이션이 {{site.data.keyword.mobilepushshort}} 서비스에 등록되면 브로드캐스트를 수신할 수 있습니다. 브로드캐스트 알림은 모바일 디바이스, 브라우저에 설치되거나 Chrome 앱 또는 확장 프로그램 인스턴스로 구현되고 {{site.data.keyword.mobilepushshort}} 서비스를 사용할 수 있도록 구성된 애플리케이션의 모든 인스턴스를 대상으로 전송되는 메시지입니다. 브로드캐스트 알림은 {{site.data.keyword.mobilepushshort}}가 사용으로 설정된 애플리케이션에서 기본적으로 사용됩니다. {{site.data.keyword.mobilepushshort}} 서비스가 사용 가능하도록 설정된 애플리케이션에는 Push.ALL 태그에 대한 구독이 사전 정의되어 있으며 서버에서 이 태그를 사용하여 알림 메시지를 모든 디바이스에 브로드캐스트합니다. REST Push API를 사용하는 브로드캐스트 알림을 전송하려면 메시지 리소스에 게시할 때 "대상"은 빈 JSON 파일이어야 합니다. 
 
-###태그 기반 알림
+### 태그 기반 알림
 {: tag-based-notifications}
 
 태그 알림은 특정 태그를 구독하는 모든 디바이스를 대상으로 하는 메시지입니다. 태그 기반 알림을 사용하면 제목 영역 또는 주제를 기반으로 알림을 구분할 수 있습니다. 알림 수신인은 관심있는 제목 또는 주제에 대한 알림일 경우에만 알림을 수신하도록 선택할 수 있습니다. 따라서 태그 기반 알림은 수신인을 구분할 수 있는 수단을 제공합니다. 이 기능을 사용하면 태그를 정의한 다음 태그별로 메시지를 전송 및 수신할 수 있는 기능을 사용할 수 있습니다. 태그를 구독하는 클라이언트 애플리케이션 인스턴스(모바일, 브라우저에 있거나 앱 또는 확장 프로그램으로서의 인스턴스)만 메시지의 대상입니다. 먼저 애플리케이션의 태그를 작성하고 태그 구독을 설정한 후 태그 기반 알림을 시작해야 합니다. REST API를 사용하는 태그 기반 알림을 전송하려면 메시지 자원에 게시할 때 "tagNames"가 제공되는지 확인하십시오. 
 
-###유니캐스트 알림
+### 유니캐스트 알림
 {: unicast-notifications}
 
 유니캐스트 알림은 특정 디바이스 또는 사용자를 대상으로 하는 메시지입니다. 디바이스를 대상으로 하는 유니캐스트 알림에는 추가 설정이 필요하지 않으며 애플리케이션에서 {{site.data.keyword.mobilepushshort}}를 사용하는 경우 기본적으로 유니캐스트 알림이 사용됩니다. 
@@ -101,7 +101,7 @@ IBM {{site.data.keyword.mobilepushshort}} 서비스에서 모바일 애플리케
 일반적으로 클라이언트 애플리케이션은 제일 먼저 인증 주기를 실행하며 여기서 모바일 앱 사용자가 인증 서비스(예: [Mobile Client Access](docs/services/mobileaccess/index.html))에 대해 인증됩니다. 인증에 성공하면 인증된 사용자 ID가 푸시 디바이스 등록 API에 전달됩니다.
 REST API를 통해 유니캐스트 알림을 전송하려면 메시지 자원에 게시할 때 deviceIds 또는 userIds가 제공되는지 확인하십시오. 
 
-###플랫폼 기반 알림
+### 플랫폼 기반 알림
 {: platform-based-notifications}
 
 특정 디바이스 플랫폼에 도달하도록 알림의 대상을 설정할 수 있습니다. 예를 들어, 모든 Android 사용자 또는 Google Chrome 사용자에게만 알림을 전송할 수 있습니다. REST API를 사용하는 플랫폼 기반 알림을 전송하려면 메시지 리소스에 게시할 때 대상 플랫폼이 제공되는지 확인하십시오. 플랫폼을 어레이로 지정하십시오. 지원되는 플랫폼은 다음과 같습니다. 
@@ -122,7 +122,7 @@ REST API를 통해 유니캐스트 알림을 전송하려면 메시지 자원에
 
 iOS 8 이상의 경우 허용된 최대 크기는 2KB입니다. Apple 푸시 알림 서비스는 이 한계를 초과하는 알림을 전송하지 않습니다. 
 
-###Android, Firefox 브라우저, Chrome 브라우저, Chrome 앱 및 확장기능
+### Android, Firefox 브라우저, Chrome 브라우저, Chrome 앱 및 확장기능
 {: android-message-size}
 
 허용되는 최대 메시지 페이로드 크기는 4KB입니다.  

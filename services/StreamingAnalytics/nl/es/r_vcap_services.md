@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Credenciales de servicio y variable de entorno VCAP_SERVICES
+# Credenciales de servicio y variable de entorno VCAP_SERVICES
 {: #vcap_services}
 
 Las credenciales de servicio de {{site.data.keyword.streaminganalyticsshort}} y la variable de entorno VCAP_SERVICES incluye la información VCAP necesaria para utilizar la API REST de servicio de {{site.data.keyword.streaminganalyticsshort}}. La información VCAP proporciona el URL de REST, el ID de instancia de servicio, el ID de enlace y las credenciales de cada API REST de servicio de {{site.data.keyword.streaminganalyticsshort}}.  

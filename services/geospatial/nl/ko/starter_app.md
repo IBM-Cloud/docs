@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#{{site.data.keyword.geospatialshort_Geospatial}} 스타터 애플리케이션 사용
+# {{site.data.keyword.geospatialshort_Geospatial}} 스타터 애플리케이션 사용
 {: #starter_app}
 
 

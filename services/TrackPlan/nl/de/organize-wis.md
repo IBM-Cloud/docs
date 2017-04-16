@@ -15,7 +15,7 @@ copyright:
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#Arbeitselemente organisieren und filtern {: #tp-organize}  
+# Arbeitselemente organisieren und filtern {: #tp-organize}  
 
 *Letzte Aktualisierung: 29. April 2016*
 {: .last-updated}
@@ -23,7 +23,7 @@ copyright:
 Der Service '{{site.data.keyword.trackplan}}' umfasst mehrere Optionen für das Sortieren und Organisieren Ihrer Arbeitselemente.
 {: shortdesc}
 
-##Arbeitselemente filtern {: #tp-filteringwis}
+## Arbeitselemente filtern {: #tp-filteringwis}
 
 Sie können Arbeitselemente anhand von Wörtern oder von Werten für bestimmte Attribute filtern. 
 
@@ -54,7 +54,7 @@ Wenn Sie auf das Feld **Arbeitselemente nach Schlüsselwort filtern** klicken, w
 
 ![Mit automatisch vervollständigten Auswahlmöglichkeiten filtern](images/filterMenu2.png)
 
-##Angepasste Ansichten speichern {: #tp-customviews}
+## Angepasste Ansichten speichern {: #tp-customviews}
 Durch das Anwenden von Filtern können Sie angepasste Ansichten erstellen. Anschließend können Sie diese Ansichten mit Ihrem Team gemeinsam nutzen.    
 
 1. Geben Sie im Feld **Arbeitselemente filtern** die Kurzform eines Attributtyps und einen Wert für dieses Attribut ein, z. B. `$high`. Einige Auswahlmöglichkeiten für Attribute werden automatisch aufgelistet, sobald Sie die Kurzform eingeben, beispielsweise '*Type', '$Priority' und '!Severity'.
@@ -69,7 +69,7 @@ Durch das Anwenden von Filtern können Sie angepasste Ansichten erstellen. Ansch
 
 Angepasste Ansichten geben Ergebnisse nur für den aktuellen Sprint und Status zurück, den Sie anzeigen. Falls in der Ansicht Ergebnisse für mehrere Sprints oder Status zurückgegeben werden sollen, klicken Sie auf die Ansicht und ändern Sie sie wie benötigt.
 
-##Arbeitselemente anzeigen und organisieren {: #tp-organizingwis}
+## Arbeitselemente anzeigen und organisieren {: #tp-organizingwis}
 
 - Um Arbeitselemente anzuzeigen, deren Eigner Sie sind, verwenden Sie die Ansicht 'Eigene Arbeit'. 
 - Falls Sie bestimmte Arbeitselemente häufig verwenden, können Sie sie als Favoriten markieren, indem Sie auf deren Sternsymbole (<img class="inline"  src="./images/star.gif" alt="Sternsymbol">) klicken. Anschließend können Sie alle bevorzugten Arbeitselemente in der Ansicht 'Eigene Stern-Markierungen' anzeigen. Wenn Sie auf das Sternsymbol für ein Arbeitselement klicken, ist nur für Sie selbst erkennbar, dass Sie es als Favoriten markiert haben.  
@@ -77,7 +77,7 @@ Angepasste Ansichten geben Ergebnisse nur für den aktuellen Sprint und Status z
 - Um die Arbeitselemente nach Änderungsdatum sortiert anzuzeigen, verwenden Sie die Ansicht 'Eigene aktuelle Arbeit'.
 - Um Ihre Aktivität für Arbeitselemente anzuzeigen, verwenden Sie die Ansicht 'Meine Aktivitäten'. Im Abschnitt 'Meine Ereignisse' sind dort die Arbeitselemente aufgelistet, in denen Sie genannt sind. Der Abschnitt 'Meine Abonnements' enthält eine Liste aller Änderungen, die an den von Ihnen abonnierten Arbeitselementen vorgenommen wurden.
 
-##Arbeitselemente sichten {: #tp-triaging}
+## Arbeitselemente sichten {: #tp-triaging}
 
 Wenn ein Arbeitselement erstellt, jedoch keinem Sprint zugewiesen wurde, wird es in der Ansicht 'Eingehende Arbeit' angezeigt.
 Sobald ein Arbeitselement einem Sprint zugewiesen wurde, wird es aus der Ansicht 'Eingehende Arbeit' entfernt.

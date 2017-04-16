@@ -166,7 +166,7 @@ Objective-C:
 ``` Objective-C
 CustomAuthenticationDelegate.h
 -----------------------------------
-#import <Foundation/Foundation.h>
+# import <Foundation/Foundation.h>
 
 @import IMFCore;
 @interface CustomAuthenticationDelegate : NSObject <IMFAuthenticationDelegate>
@@ -175,7 +175,7 @@ CustomAuthenticationDelegate.h
 
 CustomAuthenticationDelegate.m
 -----------------------------------
-#import "CustomAuthenticationDelegate.h"
+# import "CustomAuthenticationDelegate.h"
 
 @implementation CustomAuthenticationDelegate
 

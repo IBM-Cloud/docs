@@ -17,7 +17,7 @@ copyright:
 
 Las notificaciones interactivas permiten a los usuarios responder a notificaciones sin tener que abrir la aplicación. Cuando llega una notificación interactiva, el dispositivo mostrará los botones de acción junto con el mensaje de notificación. Se admiten notificaciones interactivas en dispositivos iOS con versión 8 o posteriores. Para notificaciones interactivas enviadas a dispositivos iOS anteriores a la versión 8, no se mostrarán las acciones de notificación.
 
-##Envío de {{site.data.keyword.mobilepushshort}} interactivas
+## Envío de {{site.data.keyword.mobilepushshort}} interactivas
 
 
 La notificación interactiva puede enviarse utilizando el panel de control de push o utilizando la [Documentación de la API REST](t_restapi.html).

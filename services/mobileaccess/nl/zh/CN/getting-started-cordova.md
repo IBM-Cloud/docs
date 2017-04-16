@@ -146,7 +146,7 @@ BMSClient.initialize(<applicationBluemixRegion>);
 
 **注：**将 `<applicationBluemixRegion>` 替换为托管 {{site.data.keyword.Bluemix_notm}} 服务的区域；请参阅[开始之前](#before-you-begin)。
 
-##通过本机代码初始化 {{site.data.keyword.amashort}} 授权管理器
+## 通过本机代码初始化 {{site.data.keyword.amashort}} 授权管理器
 {: #initializing-auth-manager}
 
 为了使用 `BMSAuthorizationManager`，您将需要添加以下代码片段。以下本机代码使用 {{site.data.keyword.amashort}} 服务 `tenantId` 初始化 `BMSAuthorizationManager`（请参阅[开始之前](#before-you-begin)）。

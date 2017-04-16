@@ -30,7 +30,7 @@ Procurez-vous des données d'identification APNS et configurez-les. Les certific
 -->
 
 
-##Enregistrement d'un ID d'appli
+## Enregistrement d'un ID d'appli
 {: #create-push-credentials-apns-register}
 
 
@@ -48,7 +48,7 @@ Lorsque vous enregistrez un ID d'application, sélectionnez les options suivante
 ![ID explicite](images/appID_bundleID.jpg)
 4. Création d'un certificat SSL APNS pour le développement et la distribution
 
-##Création d'un certificat SSL APNS pour le développement et la distribution
+## Création d'un certificat SSL APNS pour le développement et la distribution
 {: #create-push-credentials-apns-ssl}
 
 Pour pouvoir obtenir un certificat APNS, vous devez d'abord générer une demande de signature de certificat et la soumettre à Apple, l'autorité de certification. La demande de signature de certificat contient des informations qui identifient votre société, ainsi que votre clé publique et votre clé privée que vous utilisez pour signer vos notifications push Apple. Ensuite, générez le certificat SSL dans le portail des développeurs iOS. Le certificat, avec sa clé publique et sa clé privée, est stocké dans Keychain Access.
@@ -96,7 +96,7 @@ Vous devez vous procurer des certificats distincts pour vos environnements de d�
 19. **Key Access.app** vous invite à exporter votre clé depuis l'écran **Keychain**. Entrez le mot de passe administrateur pour votre Mac afin de permettre au système d'exporter ces éléments puis sélectionnez l'option **Always Allow**. Un certificat `.p12` est généré sur votre bureau.
 
 
-##Création d'un profil de mise à disposition pour le développement
+## Création d'un profil de mise à disposition pour le développement
 {: #create-push-credentials-dev-profile}
 
 Le profil de mise à disposition est utilisé conjointement avec l'ID d'application pour déterminer quels sont les appareils qui peuvent installer et exécuter votre application et quels sont les services auxquels votre application peut accéder. Pour chaque ID d'application, vous créez deux profils de mise à disposition : un pour le développement et un pour la distribution. Xcode utilise le profil de mise à disposition pour le développement afin de déterminer quels sont les développeurs qui sont autorisés à construire l'application et quels sont les appareils qui peuvent être testés avec l'application.
@@ -113,7 +113,7 @@ Créez un profil de mise à disposition pour le développement, comme suit :
 
 
 
-##Création d'un profil de mise à disposition pour la distribution dans un magasin
+## Création d'un profil de mise à disposition pour la distribution dans un magasin
 {: #create-push-credentials-apns-distribute_profile}
 
 Utilisez le profil de mise à disposition dans un magasin afin de soumettre votre application pour la distribution dans l'App Store.
@@ -121,7 +121,7 @@ Utilisez le profil de mise à disposition dans un magasin afin de soumettre votr
 1. Accédez au portail [Apple Developer ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.apple.com){: new_window}, cliquez sur **Member Center**, puis sélectionnez **Certificates, Identifiers & Profiles**.
 2. Cliquez deux fois sur le profil de mise à disposition téléchargé afin de l'installer dans Xcode.
 
-##Configuration d'APNS dans le tableau de bord {{site.data.keyword.mobilepushshort}}
+## Configuration d'APNS dans le tableau de bord {{site.data.keyword.mobilepushshort}}
 {: #create-push-credentials-apns-dashboard}
 
 Afin d'utiliser le service {{site.data.keyword.mobilepushshort}} pour envoyer des notifications, téléchargez les certificats SSL requis pour Apple Push Notification Service (APNS). Vous pouvez également utiliser l'API REST pour télécharger un certificat APNS.

@@ -10,11 +10,11 @@ iOs 애플리케이션 및 디바이스를 등록하려면 다음을 수행하�
 2. 토큰을 푸시 알림에 전달
 
 
-##백엔드 애플리케이션 작성
+## 백엔드 애플리케이션 작성
 
 표준 유형 섹션 Bluemix® 카탈로그에서 푸시 서비스를 이 애플리케이션에 자동으로 바인드하는 백엔드 애플리케이션을 작성하십시오. 백엔드 앱을 이미 작성한 경우 앱을 푸시 알림 서비스에 바인드해야 합니다. 
 
-###Objective-C
+### Objective-C
 
 ```
 	//For Objective-C
@@ -31,7 +31,7 @@ iOs 애플리케이션 및 디바이스를 등록하려면 다음을 수행하�
 	}
 ```
 
-###Swift
+### Swift
 
 ```
 	//For Swift
@@ -43,11 +43,11 @@ iOs 애플리케이션 및 디바이스를 등록하려면 다음을 수행하�
 	}
 ```
 
-##토큰을 푸시 알림에 전달
+## 토큰을 푸시 알림에 전달
 
 APNs에서 토큰이 수신되면 이 토큰을 `registerDevice:withDeviceToken` 메소드의 일부로 푸시 알림에 전달하십시오. 
 
-###Objective-C
+### Objective-C
 
 ```
 //For Objective-C
@@ -66,7 +66,7 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 }];
 ```
 
-###Swift
+### Swift
 
 APNS에서 토큰이 수신되면 이 토큰을 `didRegisterForRemoteNotificationsWithDeviceToken` 메소드의 일부로 푸시 알림에 전달하십시오. 
 

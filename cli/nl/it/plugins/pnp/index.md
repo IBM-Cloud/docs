@@ -98,12 +98,12 @@ Per visualizzare le informazioni di guida per i comandi, esegui: `bluemix networ
 bluemix network pnp-routers [--verbose (or -v)]
 ```
 
-#####Parametri facoltativi
+##### Parametri facoltativi
 {: #op1}
 
 * **--verbose (or -v)** (indicatore): visualizza le informazioni di rete dettagliate relative a ciascun router.
 
-######Esempio di comando
+###### Esempio di comando
 {: #ex1}
 
 Per visualizzare le informazioni di rete per tutti i router:
@@ -153,13 +153,13 @@ Per visualizzare informazioni di rete dettagliate per tutti i router:
 bluemix network pnp-create <ip_router> <ip_router> <nome>
 ```
 
-#####Parametri
+##### Parametri
 {: #p1}
 
 * **ip_router**: gli indirizzi IP dei due router che vuoi connettere. Puoi trovare gli indirizzi IP utilizzando il seguente comando: `bluemix network pnp-routers`
 * **nome**: il nome della connessione peering della rete privata.
 
-######Esempio di comando
+###### Esempio di comando
 {: #ex2}
 
 	$ bluemix network pnp-create 129.41.234.246 129.41.237.172 demo
@@ -170,19 +170,19 @@ bluemix network pnp-create <ip_router> <ip_router> <nome>
 	Private network peering connection 'demo' created.
 
 
-####Crea una connessione peering della rete privata utilizzando il nome della connessione
+#### Crea una connessione peering della rete privata utilizzando il nome della connessione
 
 ```
 bluemix network pnp-create -i <nome>
 ```
 
-#####Parametri
+##### Parametri
 {: #p2}
 
 * **--interactive (-i)** (indicatore): modalità interattiva per selezionare i router.
 * **nome**: il nome della connessione peering della rete privata.
 
-######Esempio di comando
+###### Esempio di comando
 {: #ex3}
 
 	$ bluemix network pnp-create -i demo
@@ -208,12 +208,12 @@ bluemix network pnp-create -i <nome>
 bluemix network pnp-show [--verbose (or -v)]
 ```
 
-#####Parametri facoltativi
+##### Parametri facoltativi
 {: #op2}
 
 * **--verbose (or -v)** (indicatore): visualizza le informazioni di rete dettagliate relative a ciascun router.
 
-######Esempio di comando
+###### Esempio di comando
 {: #ex4}
 
 Visualizza informazioni di base:
@@ -247,16 +247,16 @@ Visualizza informazioni dettagliate:
 ```
 bluemix network pnp-delete [--force (or -f)] <id_connessione>
 ```
-#####Parametri
+##### Parametri
 {: #p3}
 * **id_connessione**: uno o più ID di connessione separati da una virgola.
 
-#####Parametri facoltativi
+##### Parametri facoltativi
 {: #op3}
 
 * **--force (or -f)** (indicatore): elimina la connessione senza richiedere una conferma.
 
-######Esempio di comando:
+###### Esempio di comando:
 {: #ex5}
 
 Elimina una connessione:

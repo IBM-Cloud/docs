@@ -11,7 +11,7 @@ lastupdated: "2017-01-11"
 {:shortdesc: .shortdesc}
 
 
-#Servicios
+# Servicios
 {: #services}
 
 {{site.data.keyword.Bluemix_notm}} le permite fácilmente implementar, alojar y escalar servicios y aplicaciones. Puede centrarse en la lógica de la aplicación y en el diseño de la aplicación.
@@ -27,14 +27,14 @@ Se proporcionan varios niveles de soporte para los servicios de {{site.data.keyw
 |Beta	|Servicio que no está listo para producción que está en una etapa de prueba de desarrollo. Un servicio beta puede ayudar a los equipos de desarrollo y marketing a evaluar el valor de los servicios antes de que el servició esté generalmente disponible.	|Se da soporte a los problemas que se determinen que son un defecto de un servicio beta proporcionado por IBM, aunque IBM no está obligado a proporcionar un arreglo. Además, se asignará una incidencia de problema con una gravedad de 3 o 4 cuando proceda. Para obtener información sobre la gravedad de las incidencias, consulte [Cómo obtener soporte](/docs/support/index.html#contacting-bluemix-support).|
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} información de soporte de los servicios" caption-side="top"}
 
-##Servicios experimentales
+## Servicios experimentales
 {: #experimental_services}
 
 {{site.data.keyword.Bluemix_notm}} también dispone de servicios experimentales que puede probar. Para ver todos los servicios experimentales, contenedores modelo y tiempos de ejecución disponibles, inicie una sesión en la consola de {{site.data.keyword.Bluemix_notm}}, pulse **Catálogo**, desplácese hasta el final del catálogo y pulse **{{site.data.keyword.Bluemix_notm}} Servicios experimentales**.
 
 Los servicios experimentales pueden no ser estables y es posible que cambien de modo que no sean compatibles con versiones anteriores. No se recomienda utilizar estos servicios en entornos de producción. El soporte para servicios experimentales se proporciona a través de la Comunidad de desarrolladores de {{site.data.keyword.Bluemix_notm}}. Si IBM investiga un problema y se determina que el problema es un defecto de servicio experimental, IBM no está obligado a proporcionar un arreglo.
 
-##Servicios por región
+## Servicios por región
 {: #services_region}
 
 No todos los servicios están disponibles para su adquisición en cada región de {{site.data.keyword.Bluemix_notm}}. E, incluso si el servicio está disponible para su adquisición en dicha región, el servicio puede estar alojado en una ubicación diferente. La siguiente tabla muestra los servicios proporcionados por IBM.

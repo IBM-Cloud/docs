@@ -10,7 +10,7 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-#让 iOS 应用程序具有发送 {{site.data.keyword.mobilepushshort}} 的能力
+# 让 iOS 应用程序具有发送 {{site.data.keyword.mobilepushshort}} 的能力
 {: #enable-push-ios-notifications}
 上次更新时间：2017 年 2 月 14 日
 {: .last-updated}
@@ -18,7 +18,7 @@ copyright:
 您可以让 iOS 应用程序具有对您的设备发送 {{site.data.keyword.mobilepushshort}} 的能力。
 
 
-##安装 CocoaPods 
+## 安装 CocoaPods 
 {: #enable-push-ios-notifications-install}
 
 对于现有 Xcode 项目，可以使用 CocoaPods 依赖关系管理工具来设置 Bluemix Mobile 服务客户机 SDK。替代方法是手动安装该 SDK。

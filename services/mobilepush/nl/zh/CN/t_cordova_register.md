@@ -45,7 +45,7 @@ Android 不使用 settings 参数。如果要仅构建 Android 应用程序，�
 
 
 
-##JavaScript
+## JavaScript
 {: #cordova_register_js}
 
 ```
@@ -112,7 +112,7 @@ alert: true,
 	}
 ```
 
-##Swift
+## Swift
 {: #cordova_register_swift}
 将以下 Swift 代码片段添加到应用程序代表类中。
 
@@ -126,7 +126,7 @@ funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificati
 }
 ```
 
-##后续步骤
+## 后续步骤
 {: #cordova_register_next}
 
 1. 使用以下命令构建项目，然后运行项目：

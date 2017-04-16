@@ -319,12 +319,12 @@ Cloud Foundry 및 {{site.data.keyword.Bluemix_notm}} 애플리케이션은 로�
 
 {{site.data.keyword.Bluemix_notm}} 인스턴스를 설정하고 나면 관리 페이지를 사용하여 {{site.data.keyword.Bluemix_notm}} 인스턴스를 모니터링하고 관리할 수 있습니다. 자세한 정보는 [{{site.data.keyword.Bluemix_local_notm}} 및 데디케이티드 관리](../admin/index.html#mng)를 참조하십시오. 업그레이드 및 유지보수에 대한 자세한 정보는 [로컬 인스턴스 유지보수](index.html#maintainlocal)를 참조하십시오.
 
-##역할 및 책임
+## 역할 및 책임
 {: #rolesresponsibilities}
 
 {{site.data.keyword.Bluemix_local_notm}} 계정을 설정하는 경우, 인스턴스를 시작하고 실행하기 위해 필요한 역할을 담당할 조직의 직원을 식별하십시오.
 
-###역할
+### 역할
 
 다음 목록은 사용자가 지정하는 고객 역할 및 책임을 보여줍니다.
 
@@ -360,7 +360,7 @@ Cloud Foundry 및 {{site.data.keyword.Bluemix_notm}} 애플리케이션은 로�
 <li>지원 티켓에 보고된 문제점 재연</li>
 </ul>
 
-###책임
+### 책임
 
 환경 설정에서부터 지속적 유지보수에 이르기까지 사용자와 IBM 모두 다양한 태스크를 완료해야 합니다. 다음 표에서는 도입/인식(Inception), 진행 및 완료 단계에서 태스크 완료를 위한 소유자와 필수 태스크를 보여줍니다.
 

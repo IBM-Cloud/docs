@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#服務儀表板
+# 服務儀表板
 {: #dashboard}
 
 您可以從 {{site.data.keyword.Bluemix_short}} 服務儀表板存取 {{site.data.keyword.streaminganalyticsshort}} 服務。

@@ -195,7 +195,7 @@ Il passo successivo è quello di ottenere i token di accesso e di identità util
 
 	Come hai ricevuto l'accesso e i token di identità, puoi indicare la sessione web come autenticata e facoltativamente conservare questi token.  
 
-##Utilizzo dell'accesso ottenuto e del token di identità
+## Utilizzo dell'accesso ottenuto e del token di identità
 {: #facebook-auth-using-token}
 
 Il token di identità contiene informazioni sull'identità dell'utente. Nel caso dell'autenticazione Facebook, il token conterrà tutte le informazioni che l'utente ha deciso di condividere, come il nome completo, la fascia di età, l'url della foto del profilo, ecc.  

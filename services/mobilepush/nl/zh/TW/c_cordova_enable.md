@@ -194,13 +194,13 @@ func application(application: UIApplication,
 ```
 	{: codeblock}
 
-##後續步驟
+## 後續步驟
 
 {: #cordova_register_next}
 
 使用下列指令建置專案，然後執行專案：
 
-####Android
+#### Android
 {: android-next-steps}
 
 ```
@@ -213,7 +213,7 @@ cordova run android
 ```
 	{: codeblock}
 
-####iOS
+#### iOS
 {: ios-next-steps}
 
 ```
@@ -231,7 +231,7 @@ cordova run ios
 
 複製下列程式碼 Snippet，以在裝置上接收推送通知。
 
-###JavaScript
+### JavaScript
 
 將下列 JavaScript 程式碼 Snippet 新增至 Cordova 應用程式的 Web 組件。
 ```
@@ -242,7 +242,7 @@ var showNotification = function(notif) {
 ```
 	{: codeblock}
 
-###Android 通知內容
+### Android 通知內容
 
 下節列出 Android 通知內容：
 
@@ -250,7 +250,7 @@ var showNotification = function(notif) {
 * **payload** - 包含通知有效負載的 JSON 物件
 
 
-###iOS 通知內容
+### iOS 通知內容
 
 下節列出 iOS 通知內容：
 

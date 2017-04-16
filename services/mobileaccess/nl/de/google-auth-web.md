@@ -192,7 +192,7 @@ Im nächsten Schritt werden Zugriffstoken und Identitätstokens mithilfe des zuv
 	Nachdem Sie das Zugriffstoken und das Identitätstoken empfangen haben, können Sie die Websitzung als authentifiziert markieren und optional diese Tokens speichern.  
 
 
-##Abgerufenes Zugriffs- und Identitätstoken verwenden
+## Abgerufenes Zugriffs- und Identitätstoken verwenden
 {: #google-auth-using-token}
 
 Das Identitätstoken enthält Informationen zu der Benutzeridentität. Bei der Google-Authentifizierung enthält das Token alle Informationen, bei denen der Benutzer eingewilligt hat, dass sie geteilt werden, wie zum Beispiel den vollständigen Namen, die URL des Profilfotos usw.  
@@ -203,7 +203,7 @@ Um Anforderungen an geschützte Ressourcen zu stellen, fügen Sie einen Berechti
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-####Tipps:
+#### Tipps:
 {: #tips}
 
 * `accessToken` und `idToken` müssen durch ein Leerzeichen getrennt werden.

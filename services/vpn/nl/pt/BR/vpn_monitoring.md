@@ -17,7 +17,7 @@ copyright:
 
 Use o recurso de monitoramento para visualizar o status da conexão e a taxa de fluxo de tráfego entre o gateway VPN no local ou do servidor SoftLayer e o gateway {{site.data.keyword.vpn_short}}. 
 {:shortdesc}  
-##Monitoramento no painel de serviço
+## Monitoramento no painel de serviço
 {: #dashboard}
 
 Selecione a guia **Monitoramento** para visualizar as estatísticas de conexão a seguir.
@@ -29,7 +29,7 @@ Selecione a guia **Monitoramento** para visualizar as estatísticas de conexão 
 As estatísticas de monitoramento são exibidas como gráficos com dados das últimas 48 horas. Os gráficos são atualizados automaticamente a cada 20 minutos. No entanto, é possível buscar os dados mais recentes a qualquer momento alternando da guia de monitoramento e retornando a ela.
 
 **Nota:** os gráficos usam o horário da Hora Universal Coordenada (UTC) e não o horário local.  
-##Monitoramento no Logmet
+## Monitoramento no Logmet
 {: #logmet}
 
 Use o [Logmet](https://logmet.{DomainName}) para visualizar estatísticas detalhadas de conexão. 

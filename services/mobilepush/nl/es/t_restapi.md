@@ -78,7 +78,7 @@ La pantalla **Mostrar credenciales** muestra información sobre el AppSecret:
 	{: codeblock} 
 
 
-##Filtros API REST de Push
+## Filtros API REST de Push
 {: #push-api-rest-filters}
 
 Los filtros definen los criterios de búsqueda que restringen los datos devueltos de una API GET de {{site.data.keyword.mobilepushshort}}. Aplique los filtros con el resultado de la operación Get que desee filtrar. El filtro restringe el número de entradas incluidas en el resultado. Por ejemplo, puede utilizar un filtro para buscar etiquetas que empiecen por "test". 
@@ -117,7 +117,7 @@ Para la API GET de suscripción, se da soporte a las siguientes combinaciones:
 - Si se utiliza ==, el valor debe ser una cadena de caracteres de coincidencia exacta.
 
 
-##Códigos de respuesta de {{site.data.keyword.mobilepushshort}}
+## Códigos de respuesta de {{site.data.keyword.mobilepushshort}}
 {: #push-api-response-codes}
 
 Estado: Método 405 no permitido - Se esperaba el método apropiado.

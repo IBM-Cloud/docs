@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Python での {{site.data.keyword.streamsshort}} アプリケーションの開発
+# Python での {{site.data.keyword.streamsshort}} アプリケーションの開発
 {: #t_develop_apps_python}
 
  

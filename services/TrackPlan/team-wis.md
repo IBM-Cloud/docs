@@ -14,12 +14,12 @@ lastupdated: "2017-4-5"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#Planning your team's work {: #tp-teamwork}  
+# Planning your team's work {: #tp-teamwork}  
 
 You can manage your team's project with an agile approach by using the {{site.data.keyword.trackplan}} service. The {{site.data.keyword.trackplan}} tools simplify project planning and speed your workflow.
 {: shortdesc}
 
-##Planning team sprints {: #planning}
+## Planning team sprints {: #planning}
 In the Sprint Planning view, you can plan sprints by dragging work items between sprint lanes. To reassign work items, drag them between the lanes.  
 
 **Tip:** If you keep the Backlog open, you can quickly move work items from it to a specific sprint. To keep the Backlog open, click the **Pin** icon <img  class="inline" src="./images/pin.gif" alt="Pin icon">.
@@ -29,10 +29,10 @@ You can also review statistics about the sprint's progress:
 - Work items completed versus total work items
 - Story points achieved versus total story points estimated
 
-###Ranking work items
+### Ranking work items
 While you plan a sprint, review the work items in the Backlog and Sprint Planning views to rank the work items. Rank work items and assign story points to them by dragging work items into position.
 
-##Reviewing the team's progress {: #progress}
+## Reviewing the team's progress {: #progress}
 You can review all of the work items that are assigned to the team in the Team's Work view.
 
 You can also review these statistics:

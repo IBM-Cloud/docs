@@ -315,12 +315,12 @@ IBM® 使用雲端作業作為服務來監視及維護您的環境，因此您�
 
 在設定 {{site.data.keyword.Bluemix_notm}} 實例之後，您可以使用「管理」頁面來監視和管理 {{site.data.keyword.Bluemix_notm}} 實例。如需相關資訊，請參閱[管理 {{site.data.keyword.Bluemix_local_notm}} 及專用](../admin/index.html#mng)。如需升級和維護的相關資訊，請參閱[維護本端實例](index.html#maintainlocal)。
 
-##角色及責任
+## 角色及責任
 {: #rolesresponsibilities}
 
 如果您設定 {{site.data.keyword.Bluemix_local_notm}} 帳戶，請識別組織中負責維持實例運作所需角色的人員。
 
-###角色
+### 角色
 
 下列清單顯示您可指派的客戶角色及責任：
 
@@ -356,7 +356,7 @@ IBM® 使用雲端作業作為服務來監視及維護您的環境，因此您�
 <li>嘗試重新產生支援問題單上所報告的問題</li>
 </ul>
 
-###責任
+### 責任
 
 從設定您的環境一直到持續維護，您和 IBM 必須完成各種作業。下列各表概述在初始、進度及完成階段的必要作業以及完成作業的擁有者。
 

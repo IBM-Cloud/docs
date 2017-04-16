@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#开发工具和环境
+# 开发工具和环境
 {: #c_beta_tooling}
 
 

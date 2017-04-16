@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Données d'identification de service et variable d'environnement VCAP_SERVICES
+# Données d'identification de service et variable d'environnement VCAP_SERVICES
 {: #vcap_services}
 
 Les données d'identification de service {{site.data.keyword.streaminganalyticsshort}} et la variable d'environnement VCAP_SERVICES incluent les informations VCAP qui sont requises pour utiliser l'API REST de service {{site.data.keyword.streaminganalyticsshort}}. Les informations VCAP fournissent l'URL REST, l'ID instance de service, l'ID liaison et les données d'identification pour chaque API REST de service {{site.data.keyword.streaminganalyticsshort}}.  

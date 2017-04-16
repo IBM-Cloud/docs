@@ -12,7 +12,7 @@ copyright:
 {:screen: .screen}
 {:pre: .pre}
 
-#Desenvolvendo aplicativos {{site.data.keyword.streamsshort}} no Python
+# Desenvolvendo aplicativos {{site.data.keyword.streamsshort}} no Python
 {: #t_develop_apps_python}
 
  

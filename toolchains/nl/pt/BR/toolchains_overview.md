@@ -18,7 +18,7 @@ Cadeias de ferramentas estão disponíveis nos ambientes Public e Dedicated no {
 ferramentas a partir de um app. No {{site.data.keyword.Bluemix_notm}} Public, cadeias de ferramentas estão disponíveis somente na região sul dos EUA.
 {: shortdesc}
 
-##Introdução às cadeias de ferramentas: Público
+## Introdução às cadeias de ferramentas: Público
 {: #getting_started_public}
 
 **Nota:** Certifique-se de estar trabalhando na experiência New Bluemix verificando o banner na parte superior.
@@ -29,7 +29,7 @@ ferramentas a partir de um app. No {{site.data.keyword.Bluemix_notm}} Public, ca
 Cada cadeia de ferramentas é associada com uma organização específica (org) e qualquer usuário que for um membro dessa organização poderá acessar as suas cadeias de ferramentas associadas. Antes de
 você criar uma cadeia de ferramentas, certifique-se de estar trabalhando na organização na qual deseja criar a cadeia de ferramentas. A organização na qual você está trabalhando atualmente está exibida na barra de menus. Para alternar para outra organização, clique na organização na barra de menus e, em seguida, selecione a organização para a qual você deseja alternar.
 
-###Criando uma cadeia de ferramentas com base em um modelo   
+### Criando uma cadeia de ferramentas com base em um modelo   
 {: #creating_a_toolchain_from_a_template}
 
 É possível usar um modelo como um ponto de início para criar uma cadeia de ferramentas que inclua um conjunto específico de integrações de ferramentas.
@@ -68,7 +68,7 @@ configurado no Slack. Essas notificações indicam o progresso da implementaçã
 GitHub, o repo GitHub de amostra é clonado na conta do GitHub.
 
 
-###Criando uma cadeia de ferramentas com base em um aplicativo
+### Criando uma cadeia de ferramentas com base em um aplicativo
 {: #creating_a_toolchain_from_an_app}
 
 É possível criar uma cadeia de ferramentas a partir de seu aplicativo. A cadeia de
@@ -109,7 +109,7 @@ configurado no Slack. Essas notificações indicam o progresso da implementaçã
 GitHub, o repo GitHub de amostra é clonado na conta do GitHub.
 
 
-##Introdução às cadeias de ferramentas: Dedicado
+## Introdução às cadeias de ferramentas: Dedicado
 {: #getting_started_dedicated}
 
 Cada cadeia de ferramentas é associada com uma organização específica (org) e qualquer usuário que for um membro dessa organização poderá acessar as suas cadeias de ferramentas associadas. Antes de
@@ -117,7 +117,7 @@ criar uma cadeia de ferramentas, clique no ícone **{{site.data.keyword.avatar}}
 abrir o widget de Conta e Suporte e visualizar a organização na qual você está trabalhando. Se essa organização não for a organização na qual você deseja criar a cadeia de ferramentas, alterne para outra
 organização.
 
-###Criando uma cadeia de ferramentas com base em um modelo   
+### Criando uma cadeia de ferramentas com base em um modelo   
 {: #creating_a_toolchain_from_a_template_dedicated}
 
 É possível usar um modelo como um ponto de início para criar uma cadeia de ferramentas que inclua um conjunto específico de integrações de ferramentas.
@@ -148,7 +148,7 @@ uma nova janela)](../toolchains/toolchains_integrations.html){: new_window}.
  * Se você tiver configurado a integração de ferramenta do GitHub Enterprise, o repositório GitHub Enterprise será clonado na sua conta do GitHub Enterprise.
 
 
-###Criando uma cadeia de ferramentas com base em um aplicativo
+### Criando uma cadeia de ferramentas com base em um aplicativo
 {: #creating_a_toolchain_from_an_app_dedicated}
 
 É possível criar uma cadeia de ferramentas a partir de seu aplicativo. A cadeia de
@@ -177,7 +177,7 @@ uma nova janela)](../toolchains/toolchains_integrations.html){: new_window}.
  * Se você tiver configurado a integração de ferramenta do GitHub Enterprise, o repositório GitHub Enterprise será clonado na sua conta do GitHub Enterprise.
 
 
-##Visualizando uma cadeia de ferramentas
+## Visualizando uma cadeia de ferramentas
 {: #viewing_a_toolchain}
 
 Após você configurar a cadeia de ferramentas e as suas integrações de ferramentas, será possível visualizar uma representação visual da cadeia de ferramentas na página Integrações de ferramentas.

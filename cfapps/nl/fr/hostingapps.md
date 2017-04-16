@@ -15,7 +15,7 @@ lastupdated: "2016-05-09"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Hébergement d'applications dans {{site.data.keyword.Bluemix_notm}}
+# Hébergement d'applications dans {{site.data.keyword.Bluemix_notm}}
 
 <!--The whole topic is staging only -->
 
@@ -24,7 +24,7 @@ applications existantes. Vous pouvez migrer vos applications dans {{site.data.ke
 qu'elles soient prêtes pour le cloud. {{site.data.keyword.Bluemix_notm}} vous propose plusieurs manières d'exécuter vos applications, par exemple avec Cloud Foundry, IBM Containers et
 Virtual Machines.
 
-##Rendre vos applications prêtes pour le cloud
+## Rendre vos applications prêtes pour le cloud
 {: #cloud-readyapps}
 
 Pour qu'une application soit prête pour le cloud, vous devez respecter les principes de la plateforme de cloud lors de la conception et de la
@@ -108,7 +108,7 @@ Pour plus d'informations sur les applications prêtes pour le cloud, voir
 [The 12-factor application
 ![icône de lien externe](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}.
 
-##Migration de vos applications
+## Migration de vos applications
 {: #ht_hostapp}
 
 Vous pouvez migrer vos applications dans {{site.data.keyword.Bluemix_notm}} de manière incrémentielle
@@ -138,7 +138,7 @@ Vous pouvez utiliser les outils et les services suivants mis à disposition par
 Si la plateforme Cloud Foundry ne prend pas en charge les exigences relatives à votre application, vous pouvez utiliser un conteneur ou une machine
 virtuelle où le contexte d'exécution est défini, configuré et géré avec des options personnalisées supplémentaires.
 
-##Téléchargement de votre applications avec cf cli
+## Téléchargement de votre applications avec cf cli
 {: #ht_cfcli}
 
 Vous pouvez gérer votre code sur le client local et utiliser l'interface de ligne de commande Cloud
@@ -204,7 +204,7 @@ travail dans {{site.data.keyword.Bluemix_notm}}. Assurez-vous que votre réperto
 mémoire de votre organisation, utilisez cf org nom_organisation.
 * Pour plus d'informations sur cf push, voir [Commandes cf](/docs/cli/reference/cfcommands/index.html).
 
-##Migration de vos données et utilisation des services
+## Migration de vos données et utilisation des services
 {: #ht_service}
 
 Après avoir téléchargé votre application dans

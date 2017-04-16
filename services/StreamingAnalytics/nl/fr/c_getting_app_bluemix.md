@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Déploiement de vos applications {{site.data.keyword.streamsshort}} sur {{site.data.keyword.Bluemix_short}}
+# Déploiement de vos applications {{site.data.keyword.streamsshort}} sur {{site.data.keyword.Bluemix_short}}
 {: #c_getting_app_bluemix}
 
 

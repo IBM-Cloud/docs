@@ -17,7 +17,7 @@ copyright:
 
 Firebase Cloud Messaging (FCM) 是用來將推送通知遞送至 Android 裝置及 Google Chrome 的閘道。FCM 是新版本的 Google Cloud Messaging (GCM)。若要在儀表板上設定 {{site.data.keyword.mobilepushshort}} 服務，您需要取得 FCM 認證。請確定將 FCM 配置用於新的應用程式。現有應用程式將繼續使用 GCM 配置運作。
 
-##取得傳送端 ID 及 API 金鑰
+## 取得傳送端 ID 及 API 金鑰
 {: #android-senderid-apikey}
 
 API 金鑰會安全地儲存並供 {{site.data.keyword.mobilepushshort}} Service 用來連接至 FCM 伺服器，而適用於 Google Chrome 及 Mozilla Firefox 的 Android SDK 及 JS SDK 在用戶端上使用「傳送端 ID」（專案號碼）。 
@@ -30,7 +30,7 @@ API 金鑰會安全地儲存並供 {{site.data.keyword.mobilepushshort}} Service
 3. 在導覽窗格中，按一下「設定」圖示，然後選取**專案設定**。
 4. 選擇 Cloud Messaging 標籤，以產生「伺服器 API 金鑰」及「傳送端 ID」。
 
-##設定適用於 Android 及 Chrome Apps and Extensions 的 {{site.data.keyword.mobilepushshort}} Service
+## 設定適用於 Android 及 Chrome Apps and Extensions 的 {{site.data.keyword.mobilepushshort}} Service
 {: #setup-push-android}
 
 **附註：**您將需要「FCM/GCM API 金鑰」及「傳送端 ID」（專案號碼）。

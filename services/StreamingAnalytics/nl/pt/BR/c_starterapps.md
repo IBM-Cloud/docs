@@ -12,7 +12,7 @@ copyright:
 {:screen: .screen}
 {:pre: .pre}
 
-#Usando os aplicativos iniciadores do {{site.data.keyword.streaminganalyticsshort}}
+# Usando os aplicativos iniciadores do {{site.data.keyword.streaminganalyticsshort}}
 {: #starterapps}
 
 Implemente e modifique os aplicativos iniciadores e aprenda rapidamente como usar o serviço {{site.data.keyword.streaminganalyticsshort}}:{:shortdesc}

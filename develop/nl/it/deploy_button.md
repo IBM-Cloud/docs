@@ -12,7 +12,7 @@ lastupdated: "2017-2-21"
 {:codeblock: .codeblock}
 
 
-#Creazione di un pulsante Distribuisci a {{site.data.keyword.Bluemix_notm}} {: #deploy-button} 
+# Creazione di un pulsante Distribuisci a {{site.data.keyword.Bluemix_notm}} {: #deploy-button} 
 
 Il pulsante Distribuisci a {{site.data.keyword.Bluemix}} è un modo efficiente per condividere la tua applicazione originata da Git pubblica in modo che altri utenti possano sperimentarne il codice ed eseguirne la distribuzione a IBM {{site.data.keyword.Bluemix_notm}}. Il pulsante
 richiede una configurazione minima e puoi inserirlo dovunque siano supportate le markup. Un utente che fa clic sul pulsante crea
@@ -42,7 +42,7 @@ al nome utente della persona e all'ora.
 
 7. L'applicazione viene distribuita all'organizzazione {{site.data.keyword.Bluemix_notm}} della persona. 
 
-##Esempi del pulsante {: #button-examples} 
+## Esempi del pulsante {: #button-examples} 
 
 Vedi un esempio di pulsante dell'applicazione per un repository {{site.data.keyword.jazzhub_short}} pubblico:
 
@@ -64,7 +64,7 @@ di pulsante per un'applicazione distribuita in un contenitore {{site.data.keywor
 <a class="xref" href="https://bluemix.net/deploy?repository=https://github.com/Puquios/hello-containers" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/deploy_buttonx2.png" alt="Distribuisci a Bluemix" /></a>
 </p> 
 
-##Creazione di un pulsante {: #create-button}
+## Creazione di un pulsante {: #create-button}
 
 Per creare un pulsante Distribuisci a {{site.data.keyword.Bluemix_notm}}: 
 
@@ -109,7 +109,7 @@ promuovere la tua applicazione.
 </li>
 </ol>
 
-##Considerazione sul frammento per il pulsante {: #button-snippet}
+## Considerazione sul frammento per il pulsante {: #button-snippet}
 
 Consulta queste considerazioni quando personalizzi il frammento per il pulsante Distribuisci a Bluemix. 
 
@@ -125,7 +125,7 @@ modificare il percorso dell'immagine pulsante esterna utilizzata nel frammento i
 	
 	* Se vuoi utilizzare una versione tradotta del pulsante, puoi fare riferimento a esso in remoto oppure scaricarlo da [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button![icona link esterno](../icons/launch-glyph.svg "External link icon")](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button){:new_window}. 
 	
-##Considerazione sul repository per il pulsante {: #button-repo} 
+## Considerazione sul repository per il pulsante {: #button-repo} 
 
 Consulta queste considerazioni per il repository del progetto che utilizzerai nel pulsante Distribuisci a Bluemix. 
 

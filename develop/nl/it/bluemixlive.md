@@ -13,7 +13,7 @@ lastupdated: "2017-3-10"
 {:new_window: target="_blank"}
 {:pre: .pre}
 
-#{{site.data.keyword.Bluemix_notm}} Live Sync
+# {{site.data.keyword.Bluemix_notm}} Live Sync
 {: #live-sync}
 
  
@@ -64,7 +64,7 @@ Figura 1. Processo Bluemix Live Sync
 Se stai sviluppando un'applicazione Java in esecuzione su Liberty, puoi eseguire il debug in remoto utilizzando [Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools).
 
 
-##Live Edit {: #live-edit}
+## Live Edit {: #live-edit}
 
 Se stai creando un'applicazione Node.js, quando apporti modifiche al tuo progetto utilizzando Web IDE, la funzione Live Edit di {{site.data.keyword.Bluemix_notm}} Live Sync può aggiornare rapidamente l'istanza dell'applicazione in esecuzione su {{site.data.keyword.Bluemix_notm}}. Live Edit ti consente di effettuare attività di sviluppo come faresti sul desktop senza eseguire nuovamente la distribuzione.
 
@@ -87,7 +87,7 @@ Quando modifichi i file nel tuo Web IDE, ne viene eseguita automaticamente la ri
 
 **NOTA:** per un'esperienza più congruente durante l'utilizzo della funzione Live Edit di {{site.data.keyword.Bluemix_notm}} Live Sync, sono richiesti 256MB di ulteriore memoria e saranno aggiunti.
 
-##Debug di {{site.data.keyword.Bluemix_notm}}
+## Debug di {{site.data.keyword.Bluemix_notm}}
 Live {: #live-debug}
 
 Puoi accedere alla funzione Debug di {{site.data.keyword.Bluemix_notm}} Live Sync se {{site.data.keyword.Bluemix_notm}} Live Sync è abilitato per la tua applicazione Node.js.
@@ -102,7 +102,7 @@ include le seguenti funzioni:
 * Debug utilizzando [node-inspector![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://github.com/node-inspector/node-inspector){:new_window}
 * Accesso shell
 
-###Controllo del runtime dell'applicazione {: #app-runtime}
+### Controllo del runtime dell'applicazione {: #app-runtime}
 
 Con il controllo del runtime dell'applicazione, puoi utilizzare Debug
 per ispezionare lo stato dell'applicazione in fase di avvio. Questa funzionalità è utile
@@ -114,7 +114,7 @@ azioni:
 * Eseguire un rapido riavvio dell'applicazione
 * Sospendere l'applicazione prima di eventuali esecuzioni di codice
 
-###Debug {: #debug}
+### Debug {: #debug}
 
 Debug include le seguenti funzionalità:
 
@@ -130,7 +130,7 @@ sono quando sono soddisfatti degli specifici criteri.
 * Utilizzare l'editor di codice sorgente integrato per apportare delle modifiche
 immediate, seppur temporanee, al codice applicativo in esecuzione.
 
-###Shell {: #shell}
+### Shell {: #shell}
 
 Questo strumento ti dà l'accesso shell al contenitore in cui
 è in esecuzione la tua applicazione. Usando questo terminale, puoi eseguire in remoto
@@ -138,7 +138,7 @@ dei comandi shell di diagnostica per amministrare la tua applicazione.
 
 Esegui il monitoraggio della memoria e dell'utilizzo della CPU all'interno dell'istanza che utilizza i comandi Linux standard, come **top**, **ps** e **kill**.
 
-###Configurazione di un'applicazione per abilitare Debug di {{site.data.keyword.Bluemix_notm}}
+### Configurazione di un'applicazione per abilitare Debug di {{site.data.keyword.Bluemix_notm}}
 Live {: #configure_app_debug}
 
 L'applicazione deve utilizzare il pacchetto di build IBM SDK for Node.js. I pacchetti di build personalizzati non sono supportati.
@@ -169,7 +169,7 @@ Distribuisci l'applicazione e vai quindi a `https://app-host.mybluemix.net/bluem
    **Note**: Your user ID for DevOps Services can be either an IBMid or a federated ID (corporate ID). If you use federated authentication, to log in to your Bluemix Live Sync command-line client, you must use a personal access token instead of a password. If you don't use federated authentication, your IBMid and password work with all clients. For more information about creating a personal access token, see [What's federated authentication and how does it affect me?![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/){:new_window}
    -->
 
-###Ripristino delle configurazioni dell'applicazione e disabilitazione di Debug di Bluemix Live {: #restore_live_debug}
+### Ripristino delle configurazioni dell'applicazione e disabilitazione di Debug di Bluemix Live {: #restore_live_debug}
 
 1. Rimuovi la variabile di ambiente ENABLE_BLUEMIX_DEV_MODE dal file `manifest.yml` dell'applicazione.
 

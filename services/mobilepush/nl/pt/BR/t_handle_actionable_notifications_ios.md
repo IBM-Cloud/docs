@@ -12,7 +12,7 @@ copyright:
 Quando uma notificação que permite ação é recebida, o controle é passado para o
 método a seguir com base no identificador escolhido.
 
-###Objective-C
+### Objective-C
 
 ```
 (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:
@@ -24,7 +24,7 @@ método a seguir com base no identificador escolhido.
 }
 ```
 
-###Swift
+### Swift
  
 ```
 func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {

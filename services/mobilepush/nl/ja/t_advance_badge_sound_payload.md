@@ -10,7 +10,7 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-#拡張 {{site.data.keyword.mobilepushshort}} の使用可能化
+# 拡張 {{site.data.keyword.mobilepushshort}} の使用可能化
 最終更新日: 2017 年 1 月 23 日
 {: .last-updated}
 
@@ -26,7 +26,7 @@ iOS のバッジ、音声、および追加の JSON ペイロードを構成し�
 	- **音声ファイル (Sound File)** - モバイル・アプリの音声ファイルを指定するストリングを入力します。ペイロードで、使用する音声ファイルのストリング名を指定します。
 	- **iOS バッジ (iOS Badge)** - iOS デバイスにアプリ・アイコンのバッジとして表示する数。このプロパティーがないと、バッジは変更されません。バッジを削除するには、このプロパティーの値を 0 に設定します。
 	
-###Android
+### Android
 
 Android アプリケーションの `res/raw` ディレクトリーに音声ファイルを追加します。通知の送信中に、{{site.data.keyword.mobilepushshort}}の音声フィールドに音声ファイル名を追加します。
 
@@ -39,7 +39,7 @@ Android アプリケーションの `res/raw` ディレクトリーに音声フ�
 ```
     {: codeblock}	
 	
-###iOS
+### iOS
 
 ```
 "settings": {

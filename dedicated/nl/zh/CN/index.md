@@ -260,12 +260,12 @@ IBM 为您提供了使用受密码保护的登录来访问 {{site.data.keyword.B
 
 {{site.data.keyword.Bluemix_notm}} 实例设置完成后，您可以使用“管理”页面来监视和管理 {{site.data.keyword.Bluemix_notm}} 实例。有关更多信息，请参阅[管理 {{site.data.keyword.Bluemix_notm}} Local 和 Dedicated](../admin/index.html#mng)。有关升级和维护的信息，请参阅[维护专用实例](index.html#maintaindedicated)。
 
-##角色和责任
+## 角色和责任
 {: #rolesresponsibilities}
 
 如果设置了 {{site.data.keyword.Bluemix_dedicated_notm}} 帐户，请为组织中需要启动并运行实例的人员分配必要的角色。
 
-###角色
+### 角色
 
 以下列表显示了分配的客户角色和责任：
 
@@ -377,7 +377,7 @@ IBM 为您提供了使用受密码保护的登录来访问 {{site.data.keyword.B
 |回收基础架构 | 您的环境将基于 {{site.data.keyword.BluSoftlayer}} 定义的流程进行回收。 | IBM |
 {: caption="表 7. 完成阶段任务" caption-side="top"}
 
-##维护专用实例
+## 维护专用实例
 {: #maintaindedicated}
 
 IBM 会在 IBM 认为适当的时候，为 {{site.data.keyword.Bluemix_notm}} 运行时和服务维护并安装更新与修订。在维护时段内，服务可能会不可用。此外，IBM 会与您合作安排对 {{site.data.keyword.Bluemix_notm}} 平台的维护更新。
@@ -482,7 +482,7 @@ IBM 会发送有关在“状态”页面上针对每个维护时段计划进行�
 <dd>元数据会使用 {{site.data.keyword.BluSoftlayer}} EVault Backup 来备份到至少 200 公里远的位置。</dd>
 </dl>
 
-##复原专用实例
+## 复原专用实例
 {: #restorededicated}
 
 系统会定期备份 {{site.data.keyword.Bluemix_dedicated_notm}} 设置、元数据和配置，以做好准备来应对环境中的任何意外中断。您负责备份的数据包括应用程序数据、云数据库服务数据和对象存储。

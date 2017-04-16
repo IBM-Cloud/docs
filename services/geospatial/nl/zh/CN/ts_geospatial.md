@@ -16,14 +16,14 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#{{site.data.keyword.geospatialshort_Geospatial}} 故障诊断 
+# {{site.data.keyword.geospatialshort_Geospatial}} 故障诊断 
 {: #ts_geospatial}
 
 
 获取在 {{site.data.keyword.Bluemix_short}} 上使用 {{site.data.keyword.geospatialshort_Geospatial}} 时遇到的几个常见问题的解决方法。
 {:shortdesc}
 
-##我停止应用程序时，服务仍在监视区域
+## 我停止应用程序时，服务仍在监视区域
 {: #stop-monitoring}
 
 
@@ -42,7 +42,7 @@ lastupdated: "2017-02-09"
 从服务管理仪表板上停止 {{site.data.keyword.geospatialshort_Geospatial}}。或者可以修改应用程序以使用 REST API 停止服务，然后将更改推送回 {{site.data.keyword.Bluemix_short}}。
 {: tsResolve}
 
-##服务正在监视我未在应用程序中指定的区域
+## 服务正在监视我未在应用程序中指定的区域
 {: #unspecified-region}
 
 
@@ -66,7 +66,7 @@ lastupdated: "2017-02-09"
 {: tsResolve}
 
 
-##从服务管理仪表板进行故障诊断
+## 从服务管理仪表板进行故障诊断
 {: #dashboard}
 
 当您对应用程序进行故障诊断时，可能想要转至服务管理仪表板来检查服务实例的状态。如果服务未在处理数据，那么您可能能够通过停止并重新启动服务来解决该问题。

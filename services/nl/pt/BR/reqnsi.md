@@ -11,7 +11,7 @@ lastupdated: "2017-01-11"
 {:shortdesc: .shortdesc}
 
 
-#Serviços
+# Serviços
 {: #services}
 
 É possível localizar serviços disponíveis no **Catálogo** em **Serviços** na interface com o usuário do {{site.data.keyword.Bluemix}}.
@@ -84,7 +84,7 @@ para usar a mesma instância de serviço, geralmente para compartilhamento de da
 3. Escreva seu próprio código no aplicativo para interagir com
 o serviço.
 
-##Serviços por região
+## Serviços por região
 
 Nem todos os serviços estão disponíveis em toda região do {{site.data.keyword.Bluemix_notm}}. A tabela a seguir mostra os serviços que são fornecidos pela IBM.
 

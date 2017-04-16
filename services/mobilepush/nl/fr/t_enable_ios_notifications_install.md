@@ -62,8 +62,8 @@ Ecrivez des directives #import pour les en-têtes pertinents, par exemple :
 
 ```
 //Objective-C
-#import <IMFCore/IMFCore.h>
-#import <IMFPush/IMFPush.h>
+# import <IMFCore/IMFCore.h>
+# import <IMFPush/IMFPush.h>
 ```
 
 **Remarque** : La mise à jour de votre projet Pods à l'aide des commandes CocoaPods `pod install` ou `pod update` peut remplacer les dossiers source Bluemix Mobile Services. Si

@@ -23,7 +23,7 @@ Chrome 及 Safari 瀏覽器需要其他配置才能進行 Web 推送。您將需
 
 
 
-##Chrome 及 Firefox Web 推送的配置 
+## Chrome 及 Firefox Web 推送的配置 
 {: #config-chrome-firefox}
 
 1. 在「Push 儀表板」畫面中，選取**配置**。

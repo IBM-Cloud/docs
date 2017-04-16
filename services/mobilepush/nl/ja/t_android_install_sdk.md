@@ -88,7 +88,7 @@ compile 'com.google.android.gms:play-services:7.8.0'
 Bluemix アプリケーション・ダッシュボード内の**「モバイル・オプション」**リンクをクリックして、アプリケーション経路とアプリケーション GUID を取得します。これらの値を、経路とアプリ GUID に使用します。コード・スニペットを変更して、Bluemix アプリの appRoute パラメーターと appGUID パラメーターを使用するようにします。
 
 
-##Core SDK を初期化します。
+## Core SDK を初期化します。
 
 ```
 // Initialize the SDK for Java (Android) with IBM Bluemix AppGUID and route
@@ -112,7 +112,7 @@ Bluemix で作成したアプリケーションに割り当てられた固有キ
 - BMSClient.REGION_UK
 - BMSClient.REGION_SYDNEY
 
-##クライアント Push SDK を初期化します。
+## クライアント Push SDK を初期化します。
 
 ```
 //Initialize client Push SDK for Java

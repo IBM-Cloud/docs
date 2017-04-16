@@ -19,12 +19,12 @@ Una *cadena de herramientas* es un conjunto de integraciones de herramientas que
 
 Las cadenas de herramientas están disponibles en los entornos Público y Dedicado en {{site.data.keyword.Bluemix}}. Una cadena de herramientas se puede crear de dos formas: mediante una plantilla o a partir de una app. En {{site.data.keyword.Bluemix_notm}} Público, las cadenas de herramientas solo están disponibles en la región EE.UU. Sur. 
 
-##Iniciación a las cadenas de herramientas: Público
+## Iniciación a las cadenas de herramientas: Público
 {: #getting_started_public}
 
 Cada cadena de herramientas está asociada con una organización (org) específica y cualquier usuario que sea miembro de la organización en cuestión puede acceder a las cadenas de herramientas asociadas correspondientes. Para poder crear una cadena de herramientas, asegúrese de que está trabajando en la organización donde desea crear la cadena de herramientas. La organización en la que está trabajando actualmente se muestra en la barra de menús. Para conmutar a otra organización, pulse la organización en la barra de menús y, a continuación, seleccione la organización a la que desea conmutar.
 
-###Creación de una cadena de herramientas a partir de una plantilla   
+### Creación de una cadena de herramientas a partir de una plantilla   
 {: #creating_a_toolchain_from_a_template}
 
 Puede utilizar una plantilla como punto de partida para [crear una cadena de herramientas (el enlace se abre en una nueva ventana)](https://console.ng.bluemix.net/devops/create){: new_window} que incluya un conjunto específico de integraciones de herramientas. Obtenga más información sobre cómo utilizar las plantillas desde el [Método IBM Bluemix Garage (el enlace se abre en una ventana nueva)](https://www.ibm.com/devops/method/category/tools){:new_window}.
@@ -48,7 +48,7 @@ Puede utilizar una plantilla como punto de partida para [crear una cadena de her
  * Si ha configurado la integración de la herramienta GitHub, el repositorio de ejemplo de GitHub se clona en su cuenta de GitHub.
 
 
-###Creación de una cadena de herramientas desde una app
+### Creación de una cadena de herramientas desde una app
 {: #creating_a_toolchain_from_an_app}
 
 Puede crear una cadena de herramientas desde una app. La cadena de herramientas puede admitir tareas continuadas de desarrollo, despliegue, supervisión, etc., y está asociada con su app. Cada app puede estar asociada a una cadena de herramientas. Cuando se envían los cambios al repositorio de GitHub de la cadena de herramientas, el conducto crea y despliega automáticamente la app.  
@@ -67,12 +67,12 @@ Puede crear una cadena de herramientas desde una app. La cadena de herramientas 
  * Si ha configurado la integración de la herramienta GitHub, el repositorio de ejemplo de GitHub se clona en su cuenta de GitHub.
 
 
-##Iniciación a las cadenas de herramientas: dedicado
+## Iniciación a las cadenas de herramientas: dedicado
 {: #getting_started_dedicated}
 
 Cada cadena de herramientas está asociada con una organización específica y cualquier usuario que sea miembro de la organización en cuestión puede acceder a las cadenas de herramientas asociadas. Para poder crear una cadena de herramientas, pulse el icono **{{site.data.keyword.avatar}}** en la barra de menús para abrir el widget de Cuenta y soporte y ver la organización en la que está trabajando. Si la organización no es la organización en la que desea crear la cadena de herramientas, cambie a otra.
 
-###Creación de una cadena de herramientas a partir de una plantilla   
+### Creación de una cadena de herramientas a partir de una plantilla   
 {: #creating_a_toolchain_from_a_template_dedicated}
 
 Puede utilizar una plantilla como punto de partida para crear una cadena de herramientas que incluya un conjunto específico de integraciones de herramientas.
@@ -93,7 +93,7 @@ Puede utilizar una plantilla como punto de partida para crear una cadena de herr
  * Si ha configurado la integración de herramientas de GitHub Enterprise, el repositorio de GitHub Enterprise de ejemplo se clona en su cuenta de GitHub Enterprise.
 
 
-###Creación de una cadena de herramientas desde una app
+### Creación de una cadena de herramientas desde una app
 {: #creating_a_toolchain_from_an_app_dedicated}
 
 Puede crear una cadena de herramientas desde una app. La cadena de herramientas puede admitir tareas continuadas de desarrollo, despliegue, supervisión, etc., y está asociada con su app. Cada app puede estar asociada a una cadena de herramientas. Cuando se envían los cambios al repositorio de GitHub Enterprise de la cadena de herramientas, el conducto crea y despliega automáticamente la app.  
@@ -111,7 +111,7 @@ Puede crear una cadena de herramientas desde una app. La cadena de herramientas 
  * Si ha configurado la integración de herramientas de GitHub Enterprise, el repositorio de GitHub Enterprise de ejemplo se clona en su cuenta de GitHub Enterprise.
 
 
-##Visualización de una cadena de herramientas
+## Visualización de una cadena de herramientas
 {: #viewing_a_toolchain}
 
 Una vez que se ha configurado la cadena de herramientas y sus integraciones de herramientas, es posible obtener una representación visual de la cadena de herramientas.

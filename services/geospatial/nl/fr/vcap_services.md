@@ -13,14 +13,14 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Information d'environnement VCAP_SERVICES
+# Information d'environnement VCAP_SERVICES
 {: #vcap_services}
 
 
 La variable d'environnement VCAP_SERVICES contient des informations requises pour l'utilisation de l'API REST {{site.data.keyword.geospatialshort_Geospatial}}.
 {:shortdesc}
 
-##Description
+## Description
 {: #vcap_description}
 
 La variable d'environnement VCAP_SERVICES contient des informations similaires à l'exemple
@@ -66,7 +66,7 @@ La variable d'environnement VCAP_SERVICES inclut les éléments suivants :
 * add_region_path: chemin utilisé par la méthode add_region de l'API REST.
 
 
-##Exemple : Extraction des informations de la variable d'environnement VCAP_SERVICES
+## Exemple : Extraction des informations de la variable d'environnement VCAP_SERVICES
 {: #vcap_example}
 
 Le code Node.js suivant extrait les informations d'environnement de service : 

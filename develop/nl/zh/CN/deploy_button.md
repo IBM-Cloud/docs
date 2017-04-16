@@ -12,7 +12,7 @@ lastupdated: "2017-2-21"
 {:codeblock: .codeblock}
 
 
-#创建“部署到 {{site.data.keyword.Bluemix_notm}}”按钮 {: #deploy-button} 
+# 创建“部署到 {{site.data.keyword.Bluemix_notm}}”按钮 {: #deploy-button} 
 
 使用“部署到 {{site.data.keyword.Bluemix}}”按钮，可以高效地将自己的公共 Git 源应用程序共享给其他人员，以便其他人员可以试验代码并将其部署到 IBM {{site.data.keyword.Bluemix_notm}}。此按钮不但需要的配置最少，而且可插入到支持标记的任何位置。无论是谁，只要单击该按钮，即可在新的 Git 存储库中创建代码的克隆副本，而您的原始应用程序将不受影响。
 {: shortdesc} 
@@ -37,7 +37,7 @@ lastupdated: "2017-2-21"
 
 7. 应用程序将部署到该人员的 {{site.data.keyword.Bluemix_notm}} 组织。 
 
-##按钮示例 {: #button-examples} 
+## 按钮示例 {: #button-examples} 
 
 请参阅公共 {{site.data.keyword.jazzhub_short}} 存储库的应用程序按钮示例：
 
@@ -54,7 +54,7 @@ lastupdated: "2017-2-21"
 <p>
 <a class="xref" href="https://bluemix.net/deploy?repository=https://github.com/Puquios/hello-containers" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/deploy_buttonx2.png" alt="部署到 Bluemix" /></a></p> 
 
-##创建按钮 {: #create-button}
+## 创建按钮 {: #create-button}
 
 要创建“部署到 {{site.data.keyword.Bluemix_notm}}”按钮，请执行以下操作： 
 
@@ -91,7 +91,7 @@ lastupdated: "2017-2-21"
 <li>将该片段插入博客、文章、Wiki、自述文件或您希望推广您应用程序的任何位置。</li>
 </ol>
 
-##按钮片段的注意事项 {: #button-snippet}
+## 按钮片段的注意事项 {: #button-snippet}
 
 如果您要定制“部署到 Bluemix”按钮片段，请查看以下注意事项。 
 
@@ -105,7 +105,7 @@ lastupdated: "2017-2-21"
 	
 	* 如果您希望使用此按钮的翻译版本，那么可远程进行引用或从 [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button){:new_window} 进行下载。 
 	
-##按钮的存储库注意事项 {: #button-repo} 
+## 按钮的存储库注意事项 {: #button-repo} 
 
 对于要在“部署到 Bluemix”按钮中使用的项目存储库，请查看以下注意事项。 
 

@@ -14,7 +14,7 @@ lastupdated: "2017-02-09"
 {:pre: .pre}
 
 
-#Einführung in {{site.data.keyword.streaminganalyticsshort}}
+# Einführung in {{site.data.keyword.streaminganalyticsshort}}
 {: #gettingstarted}
 
 {{site.data.keyword.streaminganalyticsshort}} basiert auf der Technologie von {{site.data.keyword.streamsshort}},

@@ -10,11 +10,11 @@ To register iOs applications and devices:
 2. Pass the token to Push Notifications
 
 
-##Create a backend application
+## Create a backend application
 
 Create a backend application in the Boilerplates section Bluemix® catalog, which automatically binds the Push service to this application. If you already created a backend app, make sure that you bind the app to the Push Notification Service.
 
-###Objective-C
+### Objective-C
 
 ```
 	//For Objective-C
@@ -31,7 +31,7 @@ Create a backend application in the Boilerplates section Bluemix® catalog, whic
 	}
 ```
 
-###Swift
+### Swift
 
 ```
 	//For Swift
@@ -43,11 +43,11 @@ Create a backend application in the Boilerplates section Bluemix® catalog, whic
 	}
 ```
 
-##Pass the token to Push Notifications
+## Pass the token to Push Notifications
 
 After the token is received from APNs, pass the token to Push Notifications as part of the ```registerDevice:withDeviceToken``` method.
 
-###Objective-C
+### Objective-C
 
 ```
 //For Objective-C
@@ -69,7 +69,7 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 }];
 ```
 
-###Swift
+### Swift
 
 After the token is received from APNS, pass the token to Push Notifications as part of the ```didRegisterForRemoteNotificationsWithDeviceToken``` method.
 

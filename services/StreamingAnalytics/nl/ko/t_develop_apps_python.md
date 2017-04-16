@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Python에서 {{site.data.keyword.streamsshort}} 애플리케이션 개발
+# Python에서 {{site.data.keyword.streamsshort}} 애플리케이션 개발
 {: #t_develop_apps_python}
 
  

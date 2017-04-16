@@ -193,7 +193,7 @@ applicationBluemixRegion>` pela região em que seu
 hospedado, consulte [Antes
 de iniciar](#before-you-begin).
 
-##Inicializando o {{site.data.keyword.amashort}}
+## Inicializando o {{site.data.keyword.amashort}}
 AuthorizationManager do seu código nativo
 {: #initializing-auth-manager}
 

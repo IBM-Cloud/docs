@@ -18,7 +18,7 @@ The {{site.data.keyword.vpn_full}} (VPN) service provides a secure communication
 {:shortdesc}
 
 The {{site.data.keyword.vpn_short}} service provides the following features:  
-##Security 
+## Security 
 The IBM VPN service uses the industry-standard Internet Protocol Security (IPsec) protocol suite to authenticate and encrypt IP communication between your corporate data center and the IBM Bluemix cloud environment. IPsec provides network-level peer authentication, data integrity, and data confidentiality (encryption).
 
 The IBM VPN service supports the following IPsec protocols and transforms:
@@ -45,9 +45,9 @@ The IBM VPN service is compliant with the following IETF RFCs:
 * RFC 4303 for IPv4 Encapsulating Security Payload (ESP)  
 * RFC 2104 HMAC and RFC 2404 HMAC-SHA-1-96 for authentication  
 * RFC 2451 3DES-CBC; RFC 3602 AES128-CBC, AES192-CBC, and AES256-CBC for encryption
-##Simplicity
+## Simplicity
 You can create the IBM VPN service by using a simple and intuitive graphical interface. You can specify your gateway IP address and your data center subnets. You can either use default IPsec and IKE policies, or customize the policies to suit your needs.  
-##Management
+## Management
 You can manage the IBM VPN service by using a graphical interface, a [command line interface](/docs/cli/plugins/vpn/index.html), or [APIs](https://new-console.ng.bluemix.net/apidocs/101).
 
 ## Getting help and support for {{site.data.keyword.vpn_short}} 

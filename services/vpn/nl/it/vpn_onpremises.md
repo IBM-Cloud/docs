@@ -23,7 +23,7 @@ Il tuo gateway VPN in loco si collega con il gateway {{site.data.keyword.vpn_sho
 * [Configurazione di IBM VPN con Gaas (SoftLayer Gateway Appliance Service)](vpn_onpremises.html#gaas)
 * [Configurazione di IBM VPN con Cisco ASA](vpn_onpremises.html#cisco)
 
-##Configurazione del servizio IBM VPN con strongSwan
+## Configurazione del servizio IBM VPN con strongSwan
 {: #strongswan} 
 
 La configurazione di IBM VPN utilizza la seguente configurazione di esempio:
@@ -37,7 +37,7 @@ La configurazione di strongSwan in loco utilizza la seguente configurazione di e
 * Indirizzo IP gateway VPN (IP gateway cliente): 169.55.254.166
 * Indirizzo di sottorete al quale sono collegati gli endpoint (sottorete cliente): 10.121.33.192/26 
 
-###Per utilizzare il servizio IBM VPN con strongSwa, esegui la configurazione nel seguente modo:
+### Per utilizzare il servizio IBM VPN con strongSwa, esegui la configurazione nel seguente modo:
 
 1. [Configura il gateway](index.html#gateway).  
 2. [Configura la connessione al sito](index.html#site).  
@@ -155,7 +155,7 @@ La configurazione di strongSwan in loco utilizza la seguente configurazione di e
 		```
 		{: screen}  
 
-##Configurazione del servizio IBM VPN con Vyatta
+## Configurazione del servizio IBM VPN con Vyatta
 {: #vyatta} 
 
 La configurazione di IBM VPN utilizza la seguente configurazione di esempio:
@@ -169,7 +169,7 @@ La configurazione di Vyatta in loco utilizza la seguente configurazione di esemp
 * Indirizzo IP gateway VPN (IP gateway cliente): 173.192.83.82
 * Indirizzo di sottorete al quale sono collegati gli endpoint (sottorete cliente): 192.168.201.0/24 
 
-###Per utilizzare il servizio IBM VPN con Vyatta, esegui la configurazione nel seguente modo:
+### Per utilizzare il servizio IBM VPN con Vyatta, esegui la configurazione nel seguente modo:
 
 1. [Configura il gateway](index.html#gateway).
 2. [Configura la connessione al sito](index.html#site). 
@@ -437,7 +437,7 @@ La configurazione di Vyatta in loco utilizza la seguente configurazione di esemp
 		```
 		{: screen}  
 
-##Configurazione del servizio IBM VPN con Gaas (SoftLayer Gateway Appliance Service)
+## Configurazione del servizio IBM VPN con Gaas (SoftLayer Gateway Appliance Service)
 {: #gaas} 
 
 La configurazione di IBM VPN utilizza la seguente configurazione di esempio:
@@ -452,7 +452,7 @@ La configurazione di SoftLayer GaaS in loco utilizza la seguente configurazione 
 * Indirizzo di sottorete al quale sono collegati gli endpoint (sottorete cliente): 10.86.88.128/26
 * Stringa chiave precondivisa: 567890 
 
-###Per utilizzare il servizio IBM VPN con SoftLayer GaaS, esegui la configurazione nel seguente modo:
+### Per utilizzare il servizio IBM VPN con SoftLayer GaaS, esegui la configurazione nel seguente modo:
 
 1. Configura SoftLayer GaaS:
 
@@ -652,7 +652,7 @@ La configurazione di SoftLayer GaaS in loco utilizza la seguente configurazione 
 	```
 	{: screen}
 
-##Configurazione del servizio IBM VPN con Cisco ASA
+## Configurazione del servizio IBM VPN con Cisco ASA
 {: #cisco}
 
 La configurazione di IBM VPN utilizza la seguente configurazione di esempio:
@@ -666,7 +666,7 @@ La configurazione in loco utilizza la seguente configurazione di esempio:
 * Indirizzo IP gateway VPN (IP gateway cliente): 62.95.35.53
 * Indirizzo di sottorete al quale sono collegati gli endpoint (sottorete cliente): 10.2.0.0/16
 
-###Per utilizzare il servizio IBM VPN con Cisco ASA, esegui la configurazione nel seguente modo:
+### Per utilizzare il servizio IBM VPN con Cisco ASA, esegui la configurazione nel seguente modo:
 
 1. [Configura il gateway](index.html#gateway).
 2. [Configura la connessione al sito](index.html#site).

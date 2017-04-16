@@ -10,7 +10,7 @@ copyright:
 
 Copy and paste the following code snippets to receive push notifications on devices.
 
-##JavaScript
+## JavaScript
 
 Add the following JavaScript code snippet to the web part of your Cordova application.
 
@@ -23,7 +23,7 @@ var notification = function(notification){
 MFPPush.registerNotificationsCallback(notification);
 ```
 
-##Android notification properties
+## Android notification properties
 
 The following section lists the Android notification properties:
 
@@ -31,7 +31,7 @@ The following section lists the Android notification properties:
 * payload - JSON object containing a notification payload
 
 
-##iOS notification properties
+## iOS notification properties
 
 The following section lists the iOS notification properties:
 
@@ -41,7 +41,7 @@ action-loc-key - The string is used as a key to get a localized string in the cu
 * badge - The number to display as the badge of the app icon. If this property is absent, the badge is not changed. To remove the badge, set the value of this property to 0.
 * sound - The name of a sound file in the app bundle or in the Library/Sounds folder of the app data container.
 
-##Objective-C
+## Objective-C
 
 Add the following Objective-C code snippets to your application delegate class.
 
@@ -61,7 +61,7 @@ Add the following Objective-C code snippets to your application delegate class.
 }
 ```
 
-##Swift
+## Swift
 
 Add the following Swift code snippets to your application delegate class.
 

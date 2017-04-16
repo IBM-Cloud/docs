@@ -23,7 +23,7 @@ Chrome and Safari browsers require additional configuration for web push. You wo
 
 
 
-##Configuring for Chrome and Firefox web push 
+## Configuring for Chrome and Firefox web push 
 {: #config-chrome-firefox}
 
 1. On the Push Dashboard panel, select **Configure**.

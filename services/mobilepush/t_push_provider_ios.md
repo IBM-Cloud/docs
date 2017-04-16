@@ -30,7 +30,7 @@ Obtain and configure your APNs credentials. The APNs certificates are securely m
 -->
 
 
-##Registering an App ID
+## Registering an App ID
 {: #create-push-credentials-apns-register}
 
 
@@ -48,7 +48,7 @@ When you register an App ID, select the following options:
 ![Explicit ID](images/appID_bundleID.jpg)
 4. Create a development and distribution APNs SSL certificate.
 
-##Create a development and distribution APNs SSL certificate
+## Create a development and distribution APNs SSL certificate
 {: #create-push-credentials-apns-ssl}
 
 Before you obtain an APNs certificate, you must first generate a certificate signing request (CSR) and submit it to Apple, the certificate authority (CA). The CSR contains information that identifies your company and your public and private key that you use to sign for your Apple push notifications. Then, generate the SSL certificate on the iOS Developer Portal. The certificate, along with its public and private key, is stored in Keychain Access.
@@ -96,7 +96,7 @@ You must obtain separate certificates for your development and distribution envi
 19. The **Key Access.app** prompts you to export your key from the **Keychain** screen. Enter your administrative password for your Mac to allow your system to export these items, and then select the **Always Allow** option. A `.p12` certificate is generated on your desktop.
 
 
-##Creating a development provisioning profile
+## Creating a development provisioning profile
 {: #create-push-credentials-dev-profile}
 
 The provisioning profile works with the App ID to determine which devices can install and run your app and which services your app can access. For each App ID, you create two provisioning profiles: one for development and the other for distribution. Xcode uses the development provisioning profile to determine which developers are allowed to build the application and which devices are allowed to be tested on the application.
@@ -113,7 +113,7 @@ Create a development provisioning profile, as follows:
 
 
 
-##Creating a store distribution provisioning profile
+## Creating a store distribution provisioning profile
 {: #create-push-credentials-apns-distribute_profile}
 
 Use the store provisioning profile to submit your app for distribution to the App Store.
@@ -121,7 +121,7 @@ Use the store provisioning profile to submit your app for distribution to the Ap
 1. Go to the [Apple Developer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.apple.com){: new_window} portal, click **Member Center**, and select **Certificates, Identifiers & Profiles**.
 2. Double-click the downloaded provisioning profile to install it into Xcode.
 
-##Setting up APNs on the {{site.data.keyword.mobilepushshort}} Dashboard
+## Setting up APNs on the {{site.data.keyword.mobilepushshort}} Dashboard
 {: #create-push-credentials-apns-dashboard}
 
 To use the {{site.data.keyword.mobilepushshort}} service to send notifications, upload the SSL certificates that are required for Apple Push Notification Service (APNs). You can also use the REST API to upload an APNs certificate.

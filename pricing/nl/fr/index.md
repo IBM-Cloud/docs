@@ -80,13 +80,13 @@ Si vous convertissez votre compte au cours de votre essai gratuit, les franchise
 ne sont plus illimitées comme celles proposées par de nombreux services IBM au cours de l'essai gratuit.
 
 
-##Coût
+## Coût
 {: #what_it_costs}
 
 Le prix varie selon les ressources utilisées par un service, un contexte d'exécution, un conteneur ou une option de support spécifique. Les ressources peuvent correspondre au nombre d'appels d'API, au nombre d'instances, à la mémoire, à l'espace de stockage, etc. {{site.data.keyword.Bluemix_notm}} met également à disposition des estimateurs de coût détaillé ainsi qu'une calculatrice de prix au centime près pour vous aider à planifier vos frais. Vous pouvez vérifier le coût réel une fois que vous avez construit vos applications dans la vue *Tableau de bord de l'utilisation*. Pour des informations plus détaillées sur les frais, voir [Paiement](index.html#charges).
  
 
-##Code promotionnel
+## Code promotionnel
 {: #promo}
 
 Parfois, le service commercial {{site.data.keyword.Bluemix_notm}} ou d'autres représentants de {{site.data.keyword.Bluemix_notm}}
@@ -106,7 +106,7 @@ promotionnel ne peut être utilisé qu'une fois avant sa date d'expiration.
 Pour utiliser un code promotionnel, cliquez sur l'icône **Paramètres de profil**, sélectionnez **Compte**, puis
 cliquez sur **Type de compte** dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}.
 
-##Facturation
+## Facturation
 {: #pay-accounts}
 
 Lorsque vous souscrivez à un plan de facturation {{site.data.keyword.Bluemix_notm}}, vous pouvez effectuer votre sélection parmi les comptes suivants :
@@ -133,7 +133,7 @@ compter du premier jour du mois suivant, vos frais {{site.data.keyword.Bluemix_n
 {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir
 [Affichage des crédits](/docs/admin//softlayerlink.html#bill_usage).
 
-###Compte Paiement à la carte
+### Compte Paiement à la carte
 {: #pay-as-you-go}
 
 Si vous créez un compte de type Paiement à la carte, vous ne payez que pour les ressources {{site.data.keyword.Bluemix_notm}} que vous utilisez. Vous bénéficiez également de franchises pour les services et les contextes d'exécution.
@@ -149,7 +149,7 @@ une somme minimale par mois. Pour passer à un compte Abonnement, prenez contact
 le lien apparaissant dans la page
 [Contactez-nous de Bluemix](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs).
 
-###Compte d'abonnement
+### Compte d'abonnement
 {: #subscription}
 
 Si vous créez un compte de type Abonnement, vous vous engagez à dépenser un montant minimal par mois et bénéficiez d'une remise sur votre abonnement
@@ -159,7 +159,7 @@ Pour créer un compte de type Abonnement et pour plus d'informations sur les tar
 devez contacter le service commercial {{site.data.keyword.Bluemix_notm}} via le lien apparaissant dans la page
 [Contactez-nous de Bluemix](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs).
 
-###Compte {{site.data.keyword.Bluemix_notm}} dédié
+### Compte {{site.data.keyword.Bluemix_notm}} dédié
 {: #dedicated}
 
 {{site.data.keyword.Bluemix_notm}} exige un engagement minimal d'un an qui
@@ -187,7 +187,7 @@ définie dans le contrat d'abonnement. Prenez contact avec votre représentant d
 des informations sur votre contrat.
 
 
-###Compte {{site.data.keyword.Bluemix_notm}} local
+### Compte {{site.data.keyword.Bluemix_notm}} local
 {: #local}
 
 {{site.data.keyword.Bluemix_notm}} exige un engagement minimal d'un an qui
@@ -209,7 +209,7 @@ définie dans le contrat d'abonnement. Prenez contact avec votre représentant d
 [service commercial {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs) pour
 des informations sur votre contrat.
 
-##Paiement
+## Paiement
 {: #charges}
 
 Avec un compte de facturation {{site.data.keyword.Bluemix_notm}}, vous êtes facturé pour les ressources de traitement, les conteneurs et les services que
@@ -228,7 +228,7 @@ propose une présentation générale :
 |  Différenciée   |  Certains plans de tarification s'appuient sur un modèle de tarification différenciée ; ainsi, vous pouvez obtenir une remise selon le volume en fonction de votre utilisation réelle. Les services peuvent proposer des plans de tarification par tranches simples, graduées ou fixes. | Services | En général, la tarification différenciée est utilisée pour les paramètres de calcul des frais pour lesquels des quantités élevées par mois sont prévues, comme les appels d'API. |
 | Réservé | La tarification réservée repose sur un engagement à long terme pour un service, qui permet d'obtenir une remise. Avec un plan réservé, vous obtenez une instance de service dédiée facile à configurer, à déployer et à distribuer dans l'environnement {{site.data.keyword.Bluemix_notm}} public. | Services | DB2 on Cloud propose des plans réservés.|
 
-###Prix des ressources de traitement
+### Prix des ressources de traitement
 {: #compute}
 
 Vous êtes facturé pour la durée pendant laquelle vos applications s'exécutent et
@@ -249,7 +249,7 @@ selon le calcul suivant :
 (720 - 375) Go/heure x 0,07 $ par Go/heure = 24,15 $
 ```
 
-###Prix des services
+### Prix des services
 {: #services}
 
 De nombreux services incluent des franchises mensuelles. L'utilisation des services qui dépasse la franchise est facturée de l'une des façons suivantes :
@@ -270,7 +270,7 @@ services. Toutefois, la tarification différenciée propose des tranches de tari
 </dl>
 
 
-####Tranche simple
+#### Tranche simple
 {: #simple_tier}
 
 Dans le modèle à tranches simples, le prix unitaire est déterminé par la tranche représentant la quantité que vous utilisez. Le prix total est la quantité que vous utilisez multipliée par le prix unitaire dans cette tranche. Par exemple :
@@ -296,7 +296,7 @@ sur un modèle de tarification à tranches simples :
 |5200 |	5200 × 0,40 = 2080 |2080 $|
 {:caption="Table 2. Charge calculation by using the simple tier pricing model" caption-side="top"}
 
-####Tranche graduée
+#### Tranche graduée
 {: #graduated_tier}
 
 Dans le modèle à tranches graduées, le prix unitaire par tranche diminue à mesure que votre niveau d'utilisation augmente. Le prix total
@@ -323,7 +323,7 @@ sur un modèle de tarification à tranches graduées :
 |5200 |	(1000 × 1 (prix unitaire pour la tranche 1)) + (1000 × 0.90 (prix unitaire pour la tranche 2)) + (1000 × 0.75 (prix unitaire pour la tranche 3)) + (1000 × 0.60 (prix unitaire pour la tranche 4)) + (1200 × 0.40 (prix unitaire pour la tranche 5)) = 3730 |	3730 $|
 {:caption="Table 4. Charge calculation by using the graduated tier pricing model" caption-side="top"}
 
-####Tranche fixe
+#### Tranche fixe
 {: #block_tier}
 
 Dans le modèle à tranches fixes, le prix est fixe pour la quantité que vous utilisez dans le cadre d'un niveau d'utilisation. Le prix total
@@ -349,7 +349,7 @@ sur un modèle de tarification à tranches fixes :
 |5200 |	Le nombre d'éléments correspond à la tranche 5 ; par conséquent, le prix total est 5000 $. |	5000 $|
 {:caption="Table 6. Charge calculation by using the block tier pricing model" caption-side="top"}
 
-##Estimation des coûts
+## Estimation des coûts
 {: #cost}
 
 Vous pouvez utiliser différentes méthodes pour estimer le prix de l'utilisation de
@@ -360,7 +360,7 @@ Vous pouvez utiliser différentes méthodes pour estimer le prix de l'utilisatio
 contextes d'exécution et des services que vous avez entrées.
 * Vous pouvez aussi calculer votre coût manuellement.
 
-###Utilisation des calculatrices de coût
+### Utilisation des calculatrices de coût
 {: #calculator}
 
 Vous pouvez évaluer rapidement la tarification de votre application en utilisant les calculatrices de coût fournies par
@@ -375,7 +375,7 @@ notifications push. Cliquez dans la zone **Utilisation mensuelle**
 pour des astuces sur les unités attendues dans la zone. La calculatrice affiche immédiatement le prix pour les données entrées. Vous pouvez aussi
 paramétrer la calculatrice pour qu'elle affiche les coûts annuels au lieu des coûts mensuels.
 
-###Calcul manuel de vos coûts
+### Calcul manuel de vos coûts
 {: #manual}
 
 Vous pouvez décider d'estimer le coût de {{site.data.keyword.Bluemix_notm}} vous-même ou vouloir
@@ -384,7 +384,7 @@ et l'hébergement de votre application, en tenant compte des prix du contexte d'
 services peuvent changer ; par conséquent, vous devez vous référer aux informations les plus récentes dans la feuille des prix
 {{site.data.keyword.Bluemix_notm}} lorsque vous calculez le prix total.
 
-###Exemple : Estimation du prix d'un modèle d'application
+### Exemple : Estimation du prix d'un modèle d'application
 {: #sample}
 
 Supposez que vous avez une application Web Node.js comportant des capacités d'évolutivité et que l'application utilise
@@ -398,7 +398,7 @@ coût réel de votre application est calculé. L'application Web utilise les ser
 * 150 Go par mois pour NoSQL Database, 100 000 appels API lourds et 500 000 appels API légers
 * 20 Go pour le trafic réseau entrant et sortant
 
-###Prix des ressources {{site.data.keyword.Bluemix_notm}}
+### Prix des ressources {{site.data.keyword.Bluemix_notm}}
 {: #sample_resources}
 
 Pour que cet exemple reste simple, supposez que les prix figurant dans le tableau suivant ne fluctuent pas sur une période de
@@ -414,7 +414,7 @@ temps, par exemple sur un mois. La tarification dans cet exemple est en dollar.
 |IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2 Go de stockage de données disponible<br/>50 000 appels API légers gratuits par mois<br/>10 000 appels API lourds gratuits par mois | $1.00 USD/GB<br/>$0.03 USD pour 1000 appels API légers<br/>$0.15 USD pour 1000 appels API lourds |
 {:caption="Table 7. Pricing sheet" caption-side="top"}
 
-###Calcul du prix de l'application
+### Calcul du prix de l'application
 
 Le prix de l'application peut être calculé comme suit :
 
@@ -462,7 +462,7 @@ Le prix total est de 148 + 13,5 + 13,5 = 175 $.</p></dd>
 
 Une fois tous les éléments ajoutés, le prix total de l'application est de 354,15 $.
 
-###Devises prises en charge
+### Devises prises en charge
 
 Bien que le dollar américain (USD) soit utilisé dans les exemples de prix, d'autres devises sont prises en charge dans {{site.data.keyword.Bluemix_notm}}. Le
 tableau ci-dessous répertorie les devises prises en charge.
@@ -489,7 +489,7 @@ tableau ci-dessous répertorie les devises prises en charge.
 **Remarque :** si vous avez lié vos comptes {{site.data.keyword.Bluemix_notm}} et SoftLayer, la facture unique que vous
 recevez est en dollars américains (USD) seulement.  
 
-##Tableau de bord de l'utilisation
+## Tableau de bord de l'utilisation
 {: #usage}
 
 En tant que propriétaire de compte ou responsable de la facturation, vous pouvez vous servir de la page Tableau de bord de l'utilisation afin
@@ -515,7 +515,7 @@ vous affichez l'utilisation au niveau de l'organisation, vous consultez l'utilis
 gratuite et l'utilisation facturée. L'utilisation au niveau de l'organisation correspond à l'utilisation au niveau de compte une fois la
 tranche gratuite retirée.
 
-##Affichage des crédits
+## Affichage des crédits
 {: #credits}
 
 En tant que propriétaire de compte ou responsable de la facturation, vous pouvez utiliser la page **Tableau de bord de l'utilisation** afin de
@@ -524,7 +524,7 @@ les crédits éventuels dont bénéficie votre compte.
 
 Pour ouvrir la page **Tableau de bord de l'utilisation**, cliquez sur **Compte** &gt; **Tableau de bord de l'utilisation**. Le tableau de bord affiche les crédits éventuels, ainsi que leur date d'expiration.
 
-##Notifications
+## Notifications
 {: #notifications}
 
 En tant que responsable d'un compte de type Paiement à la carte, vous pouvez définir des notifications relatives aux dépenses en fonction du coût
@@ -536,7 +536,7 @@ Pour ouvrir la vue **Notifications**, cliquez sur **Compte** &gt; *nom_de_votre_
 **Notifications relatives aux dépenses**. Entrez une valeur numérique afin de définir un
 seuil pour les dépenses, en fonction duquel une notification sera déclenchée, pour chaque type de notification relative aux dépenses, si nécessaire. Vous pouvez aussi ajouter et supprimer des notifications pour des services individuels.
 
-##Changement de plan
+## Changement de plan
 {: #changing}
 
 Vous pouvez changer de plan de service dans {{site.data.keyword.Bluemix_notm}} dans le tableau de bord du service, si le changement de plan est possible pour ce service.
@@ -555,7 +555,7 @@ exécuter.
 |Presence Insights 	|Si vous avez choisi un plan léger et que vous dépassez les franchises, un message 403 s'affiche ou est consigné afin d'indiquer que vous ne disposez plus des autorisations, et votre instance de service est désactivée. De plus, les appels API REST POST sont rejetés avec une réponse 403.<br/><br/>Si votre service est désactivé car vous avez dépassé les franchises, vous pouvez procéder à la mise à niveau du plan léger vers un plan payant. Votre service est réactivé dans un délai de 2 heures.<br/><br/>i vous disposez d'un plan payant, vous pouvez passer à un plan inférieur, c'est-à-dire au plan léger, tant que votre utilisation ne dépasse pas la franchise du plan léger pour les événements et l'espace de stockage total.<br/><br/>Lorsque vous mettez à niveau ou réduisez votre plan, vous n'avez pas à reconstituer ou à redémarrer applications.|
 {:caption="Table 9. Next steps for changing your plan" caption-side="top"}
 
-###Changement de plan via l'interface de ligne de commande
+### Changement de plan via l'interface de ligne de commande
 
 Si vous le souhaitez, vous pouvez changer de plan de service via l'interface de ligne de commande.
 Pour mettre à jour le plan du service, entrez la commande suivante :

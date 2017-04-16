@@ -13,14 +13,14 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#VCAP_SERVICES 環境情報
+# VCAP_SERVICES 環境情報
 {: #vcap_services}
 
 
 VCAP_SERVICES 環境変数には、{{site.data.keyword.geospatialshort_Geospatial}} REST API を使用するために必要な情報が含まれています。
 {:shortdesc}
 
-##説明
+## 説明
 {: #vcap_description}
 
 VCAP_SERVICES 環境変数には、以下の例のような情報が含まれています。 
@@ -65,7 +65,7 @@ VCAP_SERVICES 環境変数には、以下の項目が含まれています。
 * add_region_path: REST API の add_region メソッドで使用されるパス。
 
 
-##例: VCAP_SERVICES 環境変数情報を取得する
+## 例: VCAP_SERVICES 環境変数情報を取得する
 {: #vcap_example}
 
 次の Node.js コードは、サービス環境情報を取得します。 

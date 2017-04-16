@@ -77,7 +77,7 @@ Uma tarefa de implementação configurada adequadamente implementa um app no des
 sempre que é executada. Para executar manualmente uma tarefa de implementação, clique no
 ícone **Executar estágio** do estágio em que a tarefa está.
 
-###Revisões de entrada
+### Revisões de entrada
 Quando você executar um estágio manualmente ou se ele for executado porque o
 estágio antes dele foi concluído, o estágio em execução seleciona sua revisão de entrada. Normalmente,
 a revisão de entrada é um número de construção. Para selecionar a revisão de entrada, o
@@ -94,7 +94,7 @@ página que é aberta, clique para expandir o número da execução e, em seguid
 tarefa de construção. Clique em **ENVIAR PARA** e selecione um
 destino.
 
-###Incluindo serviços em apps
+### Incluindo serviços em apps
 É possível incluir serviços em seus apps e gerenciá-los no Painel do Bluemix ou na
 interface da linha de comandos (CLI) do Cloud Foundry. É possível também emitir
 comandos da CLI do Cloud Foundry em scripts para tarefas do pipeline de serviços DevOps. Por

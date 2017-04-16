@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Utilización de la aplicación de inicio {{site.data.keyword.geospatialshort_Geospatial}}
+# Utilización de la aplicación de inicio {{site.data.keyword.geospatialshort_Geospatial}}
 {: #starter_app}
 
 

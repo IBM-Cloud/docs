@@ -105,7 +105,7 @@ Enable `Keychain Sharing`. Go to the `Capabilities` tab and switch the `Keychain
 Initialize the {{site.data.keyword.amashort}} Authorization Manager in Objective-C in the `AppDelgate.m` file.
 
 ```
-#import "<your_module_name>-Swift.h"
+# import "<your_module_name>-Swift.h"
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 

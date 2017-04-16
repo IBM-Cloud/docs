@@ -13,7 +13,7 @@ lastupdated: "2017-3-10"
 {:new_window: target="_blank"}
 {:pre: .pre}
 
-#{{site.data.keyword.Bluemix_notm}} Live Sync
+# {{site.data.keyword.Bluemix_notm}} Live Sync
 {: #live-sync}
 
  
@@ -59,7 +59,7 @@ Si está desarrollando una app Java
 que se ejecuta en Liberty, puede depurarla de forma remota mediante [Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools).
 
 
-##Edición en directo {: #live-edit}
+## Edición en directo {: #live-edit}
 
 Si está creando una app Node.js, al efectuar cambios en el proyecto mediante Web IDE, la característica de edición en directo de {{site.data.keyword.Bluemix_notm}} Live Sync puede actualizar rápidamente la instancia de app que se ejecuta en {{site.data.keyword.Bluemix_notm}}. La edición en directo le permite desarrollar como lo haría en el escritorio sin tener que volver a desplegar.
 
@@ -84,7 +84,7 @@ de la barra de ejecución.
 
 **NOTA:** Para obtener una experiencia más coherente al utilizar la característica Edición en directo de {{site.data.keyword.Bluemix_notm}}, son necesarios 256 MB de memoria adicional y se añadirán.
 
-##{{site.data.keyword.Bluemix_notm}} Live
+## {{site.data.keyword.Bluemix_notm}} Live
 Debug {: #live-debug}
 
 Puede acceder a la característica de {{site.data.keyword.Bluemix_notm}} Live Sync Debug cuando {{site.data.keyword.Bluemix_notm}} Live Sync esté habilitado para la app Node.js.
@@ -99,7 +99,7 @@ Debug incluye las siguientes características:
 * Depurar utilizando [node-inspector![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/node-inspector/node-inspector){:new_window}
 * Acceso a shell
 
-###Control del tiempo de ejecución de la aplicación {: #app-runtime}
+### Control del tiempo de ejecución de la aplicación {: #app-runtime}
 
 Con el control del tiempo de ejecución de la app, puede utilizar Debug
 para inspeccionar el estado de la app en el momento inicial. Esta función resulta útil para solucionar los problemas de una app que falla al iniciarse.
@@ -109,7 +109,7 @@ Mientras esté desarrollando la app, puede elegir entre las siguientes acciones:
 * Realizar un reinicio rápido de la app
 * Suspender la app antes de que se ejecute ningún código de la app
 
-###Depurar {: #debug}
+### Depurar {: #debug}
 
 Debug incluye las siguientes funciones:
 
@@ -121,13 +121,13 @@ Debug incluye las siguientes funciones:
 * Visualizar la salida de la depuración de manera inmediata desde las llamadas `console.log()`. Esta opción es más rápida que la supervisión de registros cf.
 * Utilizar el editor de código fuente incorporado para introducir cambios inmediatos (aunque temporales) al código de la app en ejecución.
 
-###Shell {: #shell}
+### Shell {: #shell}
 
 Esta herramienta le da acceso de shell al contenedor en el que se ejecuta la app. Con el uso de este terminal puede ejecutar, de manera remota, mandatos de diagnóstico de shell para administrar la app.
 
 Supervise el uso de la memoria y de la CPU en la instancia que utiliza mandatos estándares de Linux, como por ejemplo **top**, **ps** y **kill**.
 
-###Configuración de una app para habilitar {{site.data.keyword.Bluemix_notm}} Live
+### Configuración de una app para habilitar {{site.data.keyword.Bluemix_notm}} Live
 Debug {: #configure_app_debug}
 
 La app debe usar el paquete de compilación IBM SDK for Node.js. No se da soporte a los paquetes de compilación personalizados.
@@ -159,7 +159,7 @@ Envíe la app y luego vaya a `https://app-host.mybluemix.net/bluemix-debug/manag
    **Note**: Your user ID for DevOps Services can be either an IBMid or a federated ID (corporate ID). If you use federated authentication, to log in to your Bluemix Live Sync command-line client, you must use a personal access token instead of a password. If you don't use federated authentication, your IBMid and password work with all clients. For more information about creating a personal access token, see [What's federated authentication and how does it affect me?![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/){:new_window}
    -->
 
-###Restauración de configuraciones de app e inhabilitación de Bluemix Live
+### Restauración de configuraciones de app e inhabilitación de Bluemix Live
 Debug {: #restore_live_debug}
 
 1. Elimine la variable de entorno ENABLE_BLUEMIX_DEV_MODE del archivo `manifest.yml` de la app.

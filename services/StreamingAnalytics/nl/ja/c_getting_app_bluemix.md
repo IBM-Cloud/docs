@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#{{site.data.keyword.Bluemix_short}} への {{site.data.keyword.streamsshort}} アプリケーションのデプロイ
+# {{site.data.keyword.Bluemix_short}} への {{site.data.keyword.streamsshort}} アプリケーションのデプロイ
 {: #c_getting_app_bluemix}
 
 

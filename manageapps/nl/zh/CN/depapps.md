@@ -508,7 +508,7 @@ console.log("My user defined = " + myEnv);
 export NODE_ENV=production;
 ```
 
-###防止上传文件和目录
+### 防止上传文件和目录
 
 在使用 cf 命令行界面来部署应用程序时，通过忽略 {{site.data.keyword.Bluemix_notm}} 可在其他位置获得的某些文件和目录来节省上传时间。要防止这些文件和目录上传到 {{site.data.keyword.Bluemix_notm}}，您可以在应用程序的根目录中创建 `.cfignore` 文件。
 

@@ -23,7 +23,7 @@ La pasarela VPN local se conecta con la pasarela {{site.data.keyword.vpn_short}}
 * [Configuración de IBM VPN con GaaS (SoftLayer Gateway Appliance Service)](vpn_onpremises.html#gaas)
 * [Configuración de IBM VPN con Cisco ASA](vpn_onpremises.html#cisco)
 
-##Configuración del servicio IBM VPN con strongSwan
+## Configuración del servicio IBM VPN con strongSwan
 {: #strongswan} 
 
 La configuración de IBM VPN utiliza la siguiente configuración de ejemplo:
@@ -37,7 +37,7 @@ La configuración de strongSwan local utiliza la siguiente configuración de eje
 * Dirección IP de pasarela VPN (IP de pasarela de cliente): 169.55.254.166
 * Dirección de subred a la que están conectados los puntos finales (subred de cliente): 10.121.33.192/26 
 
-###Para utilizar el servicio IBM VPN con strongSwan, configure lo siguiente:
+### Para utilizar el servicio IBM VPN con strongSwan, configure lo siguiente:
 
 1. [Configure la pasarela](index.html#gateway).  
 2. [Configure la conexión de sitio](index.html#site).  
@@ -155,7 +155,7 @@ La configuración de strongSwan local utiliza la siguiente configuración de eje
 		```
 		{: screen}  
 
-##Configuración del servicio IBM VPN con Vyatta
+## Configuración del servicio IBM VPN con Vyatta
 {: #vyatta} 
 
 La configuración de IBM VPN utiliza la siguiente configuración de ejemplo:
@@ -169,7 +169,7 @@ La configuración de Vyatta local utiliza la siguiente configuración de ejemplo
 * Dirección IP de pasarela VPN (IP de pasarela de cliente): 173.192.83.82
 * Dirección de subred a la que están conectados los puntos finales (subred de cliente): 192.168.201.0/24 
 
-###Para utilizar el servicio IBM VPN con Vyatta, configure lo siguiente:
+### Para utilizar el servicio IBM VPN con Vyatta, configure lo siguiente:
 
 1. [Configure la pasarela](index.html#gateway).
 2. [Configure la conexión de sitio](index.html#site). 
@@ -437,7 +437,7 @@ La configuración de Vyatta local utiliza la siguiente configuración de ejemplo
 		```
 		{: screen}  
 
-##Configuración del servicio IBM VPN con el servicio GaaS (SoftLayer Gateway Appliance Service)
+## Configuración del servicio IBM VPN con el servicio GaaS (SoftLayer Gateway Appliance Service)
 {: #gaas} 
 
 La configuración de IBM VPN utiliza la siguiente configuración de ejemplo:
@@ -452,7 +452,7 @@ La configuración de SoftLayer GaaS local utiliza la siguiente configuración de
 * Dirección de subred a la que están conectados los puntos finales (subred de cliente): 10.86.88.128/26
 * Serie de clave compartida previamente: 567890 
 
-###Para utilizar el servicio IBM VPN con SoftLayer GaaS, configure lo siguiente:
+### Para utilizar el servicio IBM VPN con SoftLayer GaaS, configure lo siguiente:
 
 1. Configure SoftLayer GaaS:
 
@@ -652,7 +652,7 @@ La configuración de SoftLayer GaaS local utiliza la siguiente configuración de
 	```
 	{: screen}
 
-##Configuración del servicio IBM VPN con Cisco ASA
+## Configuración del servicio IBM VPN con Cisco ASA
 {: #cisco}
 
 La configuración de IBM VPN utiliza la siguiente configuración de ejemplo:
@@ -666,7 +666,7 @@ La configuración local utiliza la siguiente configuración de ejemplo:
 * Dirección IP de pasarela VPN (IP de pasarela de cliente): 62.95.35.53
 * Dirección de subred a la que están conectados los puntos finales (subred de cliente): 10.2.0.0/16
 
-###Para utilizar el servicio IBM VPN con Cisco ASA, configure lo siguiente:
+### Para utilizar el servicio IBM VPN con Cisco ASA, configure lo siguiente:
 
 1. [Configure la pasarela](index.html#gateway).
 2. [Configure la conexión de sitio](index.html#site).

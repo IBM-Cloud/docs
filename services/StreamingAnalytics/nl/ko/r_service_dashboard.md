@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#서비스 대시보드
+# 서비스 대시보드
 {: #dashboard}
 
 {{site.data.keyword.Bluemix_short}} 서비스 대시보드에서 {{site.data.keyword.streaminganalyticsshort}} 서비스에 액세스할 수 있습니다.

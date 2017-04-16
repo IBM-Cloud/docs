@@ -15,7 +15,7 @@ lastupdated: "2016-11-22"
 # Verwaltete Geräte unter Verwendung von Java entwickeln
 {: #java_deviceManagement}
 
-##Einführung
+## Einführung
 {: #introduction}
 
 Ein verwaltetes Gerät ist in {{site.data.keyword.iot_full}} ein Gerät, das Gerätemanagementoperationen wie Firmware-, Positions- und Diagnoseaktualisierungen durchführen kann.
@@ -682,7 +682,7 @@ Weitere Informationen zur Aktualisierung der Geräteattribute finden Sie auf [di
 -   [DeviceAttributesUpdateListenerSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/DeviceAttributesUpdateListenerSample.java) - Beispielcode für den Listener, der zeigt, wie die Empfangsbereitschaft für verschiedene Geräteattributänderungen aussieht.
 -   [NonBlockingDiagnosticsErrorCodeUpdateSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/NonBlockingDiagnosticsErrorCodeUpdateSample.java) - Beispielcode, der zeigt, wie Fehlercode (ErrorCode) hinzugefügt wird, ohne auf eine Antwort vom Server zu warten.
 
-##Anleitungen
+## Anleitungen
 {: #Recipes}
 
 Lesen Sie [die Anleitung](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/), in der gezeigt wird, wie das Raspberry Pi-Gerät als verwaltetes Gerät mit {{site.data.keyword.iot_short_notm}} verbunden wird, um Schritt für Schritt verschiedene Gerätemanagementoperationen mithilfe dieser Clientbibliothek auszuführen.

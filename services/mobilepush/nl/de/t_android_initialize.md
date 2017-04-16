@@ -14,7 +14,7 @@ Klicken Sie auf den Link **Mobile Systemerweiterungen** in Ihrem Bluemix-Anwendu
 die Anwendungsroute und die Anwendungs-GUID abzurufen. Verwenden Sie diese Werte für Ihre Route und App-GUID. Ändern Sie das Code-Snippet so, dass die Parameter 'appRoute' und 'appGUID' der Bluemix-App verwendet werden.
 
 
-##Core-SDK initialisieren
+## Core-SDK initialisieren
 
 ```
 // Initialize the SDK for Java (Android) with IBM Bluemix AppGUID and route
@@ -38,7 +38,7 @@ Gibt den Standort an, an dem die App gehostet ist. Sie können einen von drei We
 - BMSClient.REGION_UK
 - BMSClient.REGION_SYDNEY
 
-##Client-Push-SDK initialisieren
+## Client-Push-SDK initialisieren
 
 ```
 //Initialize client Push SDK for Java

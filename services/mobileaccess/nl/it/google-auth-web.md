@@ -196,7 +196,7 @@ Il passo successivo è quello di ottenere il token di accesso e i token di ident
 	Quando hai ricevuto l'accesso e i token di identità, puoi indicare la sessione Web come autenticata e facoltativamente conservare questi token.  
 
 
-##Utilizzo dell'accesso ottenuto e del token di identità
+## Utilizzo dell'accesso ottenuto e del token di identità
 {: #google-auth-using-token}
 
 Il token di identità contiene informazioni sull'identità dell'utente. Per l'autenticazione Google, il token conterrà tutte le informazioni che l'utente ha deciso di condividere, come il nome completo, l'URL della foto del profilo, e così via.  
@@ -207,7 +207,7 @@ Per effettuare richieste che proteggano le risorse aggiungi un'intestazione dell
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-####Suggerimenti:
+#### Suggerimenti:
 {: #tips}
 
 * Il `accessToken` e il `idToken` devono essere separati da uno spazio vuoto.

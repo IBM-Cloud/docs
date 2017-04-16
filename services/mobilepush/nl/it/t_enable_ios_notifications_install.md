@@ -61,8 +61,8 @@ Scrivi le direttive #import per le intestazioni pertinenti, ad esempio:
 
 ```
 //Objective-C
-#import <IMFCore/IMFCore.h>
-#import <IMFPush/IMFPush.h>
+# import <IMFCore/IMFCore.h>
+# import <IMFPush/IMFPush.h>
 ```
 
 **Nota**: aggiornare il tuo progetto Pods utilizzando i comandi CocoaPods `pod install` o `pod update` potrebbe sovrascrivere le cartelle di origine Bluemix Mobile Services. Se vuoi conservare le tue versioni personalizzate dei file originali, assicurati che ne sia stato eseguito il backup prime di immettere uno di questi comandi.

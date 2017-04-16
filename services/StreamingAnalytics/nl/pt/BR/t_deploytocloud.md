@@ -12,7 +12,7 @@ copyright:
 {:screen: .screen}
 {:pre: .pre}
 
-#Implementando aplicativos {{site.data.keyword.streamsshort}} na nuvem
+# Implementando aplicativos {{site.data.keyword.streamsshort}} na nuvem
 {: #t_deploytocloud}
 
 É possível implementar os seus aplicativos {{site.data.keyword.streamsshort}} em uma instância do {{site.data.keyword.streaminganalyticsshort}}

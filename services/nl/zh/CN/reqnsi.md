@@ -11,7 +11,7 @@ lastupdated: "2017-01-11"
 {:shortdesc: .shortdesc}
 
 
-#服务
+# 服务
 {: #services}
 
 在 {{site.data.keyword.Bluemix}} 用户界面中，可以在**目录**的**服务**下找到可用的服务。
@@ -55,7 +55,7 @@ lastupdated: "2017-01-11"
 
 3. 在应用程序中编写自己的代码用于与服务进行交互。
 
-##按区域列出的服务
+## 按区域列出的服务
 
 不是所有的服务都可以在每个 {{site.data.keyword.Bluemix_notm}} 区域中使用。下表显示 IBM 提供的服务。
 

@@ -23,7 +23,7 @@ copyright:
 * [IBM VPN を SoftLayer Gateway Appliance Service (GaaS) と共に構成する](vpn_onpremises.html#gaas)
 * [IBM VPN を Cisco ASA と共に構成する](vpn_onpremises.html#cisco)
 
-##IBM VPN サービスを strongSwan と共に構成する
+## IBM VPN サービスを strongSwan と共に構成する
 {: #strongswan} 
 
 IBM VPN セットアップでは、以下のサンプル構成を使用します。
@@ -37,7 +37,7 @@ IBM VPN セットアップでは、以下のサンプル構成を使用します
 * VPN ゲートウェイの IP アドレス (Customer Gateway IP): 169.55.254.166
 * エンドポイントが接続されているサブネット・アドレス (Customer Subnet): 10.121.33.192/26 
 
-###IBM VPN サービスを strongSwan で使用するには、以下のように構成します。
+### IBM VPN サービスを strongSwan で使用するには、以下のように構成します。
 
 1. [ゲートウェイを構成します](index.html#gateway)。  
 2. [サイト接続を構成します](index.html#site)。  
@@ -155,7 +155,7 @@ IBM VPN セットアップでは、以下のサンプル構成を使用します
 		```
 		{: screen}  
 
-##IBM VPN サービスを Vyatta と共に構成する
+## IBM VPN サービスを Vyatta と共に構成する
 {: #vyatta} 
 
 IBM VPN セットアップでは、以下のサンプル構成を使用します。
@@ -169,7 +169,7 @@ IBM VPN セットアップでは、以下のサンプル構成を使用します
 * VPN ゲートウェイの IP アドレス (Customer Gateway IP): 173.192.83.82
 * エンドポイントが接続されているサブネット・アドレス (Customer Subnet): 192.168.201.0/24 
 
-###IBM VPN サービスを Vyatta で使用するには、以下のように構成します。
+### IBM VPN サービスを Vyatta で使用するには、以下のように構成します。
 
 1. [ゲートウェイを構成します](index.html#gateway)。
 2. [サイト接続を構成します](index.html#site)。 
@@ -437,7 +437,7 @@ IBM VPN セットアップでは、以下のサンプル構成を使用します
 		```
 		{: screen}  
 
-##IBM VPN サービスを SoftLayer Gateway Appliance Service (GaaS) と共に構成する
+## IBM VPN サービスを SoftLayer Gateway Appliance Service (GaaS) と共に構成する
 {: #gaas} 
 
 IBM VPN セットアップでは、以下のサンプル構成を使用します。
@@ -452,7 +452,7 @@ IBM VPN セットアップでは、以下のサンプル構成を使用します
 * エンドポイントが接続されているサブネット・アドレス (Customer Subnet): 10.86.88.128/26
 * 事前共有鍵ストリング: 567890 
 
-###IBM VPN サービスを SoftLayer GaaS で使用するには、以下のように構成します。
+### IBM VPN サービスを SoftLayer GaaS で使用するには、以下のように構成します。
 
 1. SoftLayer GaaS を構成します。
 
@@ -652,7 +652,7 @@ IBM VPN セットアップでは、以下のサンプル構成を使用します
 	```
 	{: screen}
 
-##IBM VPN サービスを Cisco ASA と共に構成する
+## IBM VPN サービスを Cisco ASA と共に構成する
 {: #cisco}
 
 IBM VPN セットアップでは、以下のサンプル構成を使用します。
@@ -666,7 +666,7 @@ IBM VPN セットアップでは、以下のサンプル構成を使用します
 * VPN ゲートウェイの IP アドレス (Customer Gateway IP): 62.95.35.53
 * エンドポイントが接続されているサブネット・アドレス (Customer Subnet): 10.2.0.0/16
 
-###IBM VPN サービスを Cisco ASA で使用するには、以下のように構成します。
+### IBM VPN サービスを Cisco ASA で使用するには、以下のように構成します。
 
 1. [ゲートウェイを構成します](index.html#gateway)。
 2. [サイト接続を構成します](index.html#site)。

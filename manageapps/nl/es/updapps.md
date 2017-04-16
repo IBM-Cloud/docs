@@ -114,7 +114,7 @@ cf delete-route dominio -n hostname -f
 *dominio* es el nombre del dominio y *nombre_host* es el nombre de host de la ruta de la aplicación. Para obtener más información sobre el mandato **cf delete-route**, escriba `cf
 delete-route -h`.
 
-##Despliegues Blue-Green
+## Despliegues Blue-Green
 {: #blue_green}
 
 {{site.data.keyword.Bluemix_notm}} da soporte a la técnica de despliegue Blue-Green para habilitar la entrega continua y para minimizar los sucesos de tiempo de inactividad.

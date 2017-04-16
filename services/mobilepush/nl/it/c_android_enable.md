@@ -137,7 +137,7 @@ Crea ed esegui la tua applicazione.
 
 Un posto comune dove inserire il codice di inizializzazione è nel metodo onCreate dell'attività principale nella tua applicazione Android. Esistono due componenti per la SDK che deve essere inizializzata. Uno è la SDK core e l'altro è la SDK push creata all'inizio della SDK core.
 
-###Inizializza il Core SDK
+### Inizializza il Core SDK
 
 ```
 // Inizializza l'SDK per Android
@@ -145,7 +145,7 @@ Un posto comune dove inserire il codice di inizializzazione è nel metodo onCrea
 ```
     {: codeblock}
 
-####bluemixRegionSuffix
+#### bluemixRegionSuffix
 {: bluemixRegionSuffix}
 
 Specifica l'ubicazione in cui è ospitata l'applicazione. Puoi utilizzare uno dei seguenti tre valori:
@@ -154,7 +154,7 @@ Specifica l'ubicazione in cui è ospitata l'applicazione. Puoi utilizzare uno de
 - BMSClient.REGION_UK
 - BMSClient.REGION_SYDNEY
 
-###Inizializza il Push SDK client
+### Inizializza il Push SDK client
 
 ```
 //Inizializza il Push SDK for Java client
@@ -163,7 +163,7 @@ push.initialize(getApplicationContext(), "appGUID", "clientSecret");
 ```
 	{: codeblock}
 
-####AppGUID
+#### AppGUID
 {: appguid_initialize_client_push_sdk}
 
 Questa è la chiave AppGUID del servizio {{site.data.keyword.mobilepushshort}}. Questo valore è

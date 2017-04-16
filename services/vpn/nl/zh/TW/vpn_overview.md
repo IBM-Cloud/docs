@@ -17,7 +17,7 @@ copyright:
 {:shortdesc}
 
 {{site.data.keyword.vpn_short}} 服務提供下列特性：  
-##安全 
+## 安全 
 IBM VPN 服務使用業界標準網際網路通訊協定安全 (IPSec) 通訊協定套組，對公司資料中心與 IBM Bluemix 雲端環境之間的 IP 通訊進行鑑別和加密。IPSec 提供網路層次對等節點鑑別、資料完整性和資料機密性（加密）。
 
 IBM VPN 服務支援下列 IPSec 通訊協定和轉換：
@@ -43,8 +43,8 @@ IBM VPN 服務符合下列 IETF RFC 標準：
 * 適用於 IPv4 封裝安全有效負載 (ESP) 的 RFC 4303  
 * 適用於鑑別的 RFC 2104 HMAC 和 RFC 2404 HMAC-SHA-1-96  
 * 適用於加密的 RFC 2451 3DES-CBC、RFC 3602 AES128-CBC、AES192-CBC 和 AES256-CBC
-##簡化
+## 簡化
 您可以使用簡單且直覺的圖形介面來建立 IBM VPN 服務。您可以指定閘道 IP 位址和資料中心子網路。您可以使用預設 IPSec 和 IKE 原則，也可以根據需要自訂原則。  
-##管理
+## 管理
 您可以使用圖形介面、[指令行介面](../../cli/plugins/vpn/index.html)或 [API](https://new-console.ng.bluemix.net/apidocs/101) 來管理 IBM VPN 服務。
 

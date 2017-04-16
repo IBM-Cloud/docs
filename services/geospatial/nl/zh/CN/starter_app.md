@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#使用 {{site.data.keyword.geospatialshort_Geospatial}} 入门模板应用程序
+# 使用 {{site.data.keyword.geospatialshort_Geospatial}} 入门模板应用程序
 {: #starter_app}
 
 

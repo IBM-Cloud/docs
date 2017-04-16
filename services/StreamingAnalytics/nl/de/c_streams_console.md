@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#{{site.data.keyword.streaminganalyticsshort}}-Konsole
+# {{site.data.keyword.streaminganalyticsshort}}-Konsole
 {: #console}
 
 Über die {{site.data.keyword.streaminganalyticsshort}}-Konsole können Sie Ihre {{site.data.keyword.streamsshort}}-Anwendungen direkt an die {{site.data.keyword.streaminganalyticsshort}}-Serviceinstanz übergeben.

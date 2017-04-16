@@ -12,7 +12,7 @@ copyright:
 {:screen: .screen}
 {:pre: .pre}
 
-#Painel de serviço
+# Painel de serviço
 {: #dashboard}
 
 É possível acessar o serviço {{site.data.keyword.streaminganalyticsshort}} por meio do painel de serviços do {{site.data.keyword.Bluemix_short}}. {:shortdesc}

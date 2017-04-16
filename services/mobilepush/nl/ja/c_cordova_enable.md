@@ -192,13 +192,13 @@ func application(application: UIApplication,
 ```
 	{: codeblock}
 
-##次のステップ
+## 次のステップ
 
 {: #cordova_register_next}
 
 プロジェクトをビルドし、以下のコマンドを使用してプロジェクトを実行します。
 
-####Android
+#### Android
 {: android-next-steps}
 
 ```
@@ -211,7 +211,7 @@ cordova run android
 ```
 	{: codeblock}
 
-####iOS
+#### iOS
 {: ios-next-steps}
 
 ```
@@ -229,7 +229,7 @@ cordova run ios
 
 デバイスでプッシュ通知を受け取るには、以下のコード・スニペットをコピーします。
 
-###JavaScript
+### JavaScript
 
 以下の JavaScript コード・スニペットを Cordova アプリケーションの Web パーツに追加します。
 ```
@@ -240,7 +240,7 @@ var showNotification = function(notif) {
 ```
 	{: codeblock}
 
-###Android 通知プロパティー
+### Android 通知プロパティー
 
 次のセクションに、Android の通知プロパティーをリストします。
 
@@ -248,7 +248,7 @@ var showNotification = function(notif) {
 * **payload** - 通知ペイロードを含む JSON オブジェクト
 
 
-###iOS 通知プロパティー
+### iOS 通知プロパティー
 
 次のセクションに、iOS の通知プロパティーをリストします。
 

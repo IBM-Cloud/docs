@@ -15,7 +15,7 @@ lastupdated: "2016-11-22"
 # Développement de terminaux gérés à l'aide de Java
 {: #java_deviceManagement}
 
-##Introduction
+## Introduction
 {: #introduction}
 
 Dans {{site.data.keyword.iot_full}}, un terminal géré est un terminal qui peut effectuer des opérations de gestion des terminaux, telles que les mises à jour de microprogramme, d'emplacement et de diagnostic.
@@ -682,7 +682,7 @@ Pour plus d'informations sur la mise à jour des attributs de terminal, voir [ce
 -   [DeviceAttributesUpdateListenerSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/DeviceAttributesUpdateListenerSample.java) - Exemple de code d'écoute indiquant comment détecter différentes modifications apportées à des attributs de terminal.
 -   [NonBlockingDiagnosticsErrorCodeUpdateSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/NonBlockingDiagnosticsErrorCodeUpdateSample.java) - Exemple indiquant comment ajouter un code d'erreur sans attendre la réponse du serveur.
 
-##Recettes
+## Recettes
 {: #Recipes}
 
 Voir [la recette](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/) qui montre comment connecter le terminal Raspberry Pi en tant que terminal géré à {{site.data.keyword.iot_short_notm}} pour effectuer différentes opérations de gestion des terminaux étape par étape à l'aide de cette bibliothèque client.

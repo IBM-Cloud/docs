@@ -45,7 +45,7 @@ Si desea personalizar la alerta, el identificador y las propiedades de sonido, a
 
 
 
-##JavaScript
+## JavaScript
 {: #cordova_register_js}
 
 ```
@@ -115,7 +115,7 @@ Añada el siguiente fragmento de código Objective-C a la clase de delegado de l
 	}
 ```
 
-##Swift
+## Swift
 {: #cordova_register_swift}
 Añada el siguiente fragmento de código de Swift a la clase de delegado de la aplicación.
 
@@ -129,7 +129,7 @@ funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificati
 }
 ```
 
-##Pasos siguientes
+## Pasos siguientes
 {: #cordova_register_next}
 
 1. Cree el proyecto y, a continuación, ejecute el proyecto utilizando los mandatos siguientes:

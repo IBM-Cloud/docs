@@ -13,7 +13,7 @@ lastupdated: "2017-04-13"
 {:screen: .screen}
 {:pre: .pre}
 
-#Service dashboard
+# Service dashboard
 {: #dashboard}
 
 You can access your {{site.data.keyword.streaminganalyticsshort}} service from the {{site.data.keyword.Bluemix_short}} service dashboard.

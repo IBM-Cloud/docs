@@ -173,7 +173,7 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 Registrieren Sie Authorization Manager gemäß Ihrer Version von Xcode hinzu.
 
 ```
-#import "<your_module_name>-Swift.h"
+# import "<your_module_name>-Swift.h"
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 

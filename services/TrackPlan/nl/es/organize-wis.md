@@ -15,7 +15,7 @@ copyright:
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#Organización y filtrado de elementos de trabajo{: #tp-organize}  
+# Organización y filtrado de elementos de trabajo{: #tp-organize}  
 
 *Última actualización: 29 de abril de 2016*
 {: .last-updated}
@@ -23,7 +23,7 @@ copyright:
 El servicio de {{site.data.keyword.trackplan}} incluye varias opciones para clasificar y organizar los elementos de trabajo.
 {: shortdesc}
 
-##Filtrado de elementos de trabajo{: #tp-filteringwis}
+## Filtrado de elementos de trabajo{: #tp-filteringwis}
 
 Puede filtrar elementos de trabajo basados en palabras o en valores para atributos específicos. 
 
@@ -54,7 +54,7 @@ Al pulsar el campo **Filtrar elementos de trabajo por palabra clave**, se mostra
 
 ![Filtrar con opciones de rellenado automático](images/filterMenu2.png)
 
-##Guardar vistas personalizadas{: #tp-customviews}
+## Guardar vistas personalizadas{: #tp-customviews}
 Puede crear vistas personalizadas aplicando filtros. A continuación, puede compartir las vistas con el equipo.    
 
 1. En el campo **Filtrar elementos de trabajo**, escriba la forma abreviada de un tipo de atributo y de un valor para dicho atributo, como por ejemplo `$high`. Algunas opciones de atributos se listarán automáticamente al escribir la forma abreviada, por ejemplo, *Tipo, $Prioridad y !Gravedad.
@@ -69,7 +69,7 @@ Puede crear vistas personalizadas aplicando filtros. A continuación, puede comp
 
 Las vistas personalizadas devuelven resultados para sólo el sprint y el estado actuales que está visualizando. Si desea que la vista devuelva resultados para más sprints o estados, pulse la vista y cámbiela según sea necesario.
 
-##Visualización y organización de elementos de trabajo{: #tp-organizingwis}
+## Visualización y organización de elementos de trabajo{: #tp-organizingwis}
 
 - Para ver elementos de trabajo de su propiedad, consulte la vista My Work. 
 - Si utiliza con frecuencia elementos de trabajo específicos, puede marcarlos como favoritos pulsando sus iconos de Estrella <img class="inline"  src="./images/star.gif" alt="icono de Estrella">. A continuación, podrá ver todos los elementos de trabajo favoritos en la vista My Starred. Al pulsar el icono de Estrella para un elemento de trabajo, sólo podrá ver que lo ha marcado como favorito.  
@@ -77,7 +77,7 @@ Las vistas personalizadas devuelven resultados para sólo el sprint y el estado 
 - Para ver los elementos de trabajo ordenados por sus fechas de modificación, consulte la vista My Recent Work.
 - Para ver la actividad del elemento de trabajo, consulte la vista My Activities. La sección My Events enumera los elementos de trabajo en los que está mencionado. La sección My Subscriptions enumera todos los cambios producidos en los elementos de trabajo a los que está suscrito.
 
-##Clasificación de elementos de trabajo{: #tp-triaging}
+## Clasificación de elementos de trabajo{: #tp-triaging}
 
 Cuando se crea un elemento de trabajo pero no se asigna a un sprint, el elemento de trabajo se mostrará en la vista Incoming Work.
 Tan pronto como se asigne un elemento de trabajo a un sprint, se eliminará de la vista Incoming Work.

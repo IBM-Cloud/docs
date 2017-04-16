@@ -78,7 +78,7 @@ L'écran **Afficher les données d'identification** affiche des informations sur
 	{: codeblock} 
 
 
-##Filtres des API REST Push
+## Filtres des API REST Push
 {: #push-api-rest-filters}
 
 Les filtres définissent un critère de recherche permettant de restreindre les données qui sont renvoyées depuis une API GET de {{site.data.keyword.mobilepushshort}}. Appliquez les filtres au résultat de l'opération Get à filtrer. Le filtre restreint le nombre d'entrées incluses dans le résultat. Ainsi, vous pouvez utiliser un filtre pour rechercher des balises commençant par "test". 
@@ -117,7 +117,7 @@ Pour l'API GET d'abonnement, les combinaisons suivantes sont prises en charge :
 - Si l'opérateur == est utilisé, la valeur doit être une chaîne qui correspond exactement.
 
 
-##Codes de réponse {{site.data.keyword.mobilepushshort}}
+## Codes de réponse {{site.data.keyword.mobilepushshort}}
 {: #push-api-response-codes}
 
 Status: 405 Method Not Allowed - Appropriate method expected.

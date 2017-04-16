@@ -15,7 +15,7 @@ lastupdated: "2016-11-22"
 # Java를 사용하여 관리 디바이스 개발
 {: #java_deviceManagement}
 
-##소개
+## 소개
 {: #introduction}
 
 {{site.data.keyword.iot_full}}에서 관리 디바이스는 디바이스 관리 오퍼레이션(예: 펌웨어, 위치 및 진단 업데이트)을 수행할 수 있는 디바이스입니다.
@@ -682,7 +682,7 @@ public void propertyChange(PropertyChangeEvent evt) {
 -   [DeviceAttributesUpdateListenerSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/DeviceAttributesUpdateListenerSample.java) - 다양한 디바이스 속성 변경을 청취하는 방법을 보여주는 샘플 리스너 코드입니다.
 -   [NonBlockingDiagnosticsErrorCodeUpdateSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/NonBlockingDiagnosticsErrorCodeUpdateSample.java) - 서버로부터의 응답을 기다리지 않고 ErrorCode를 추가하는 방법을 보여주는 샘플입니다.
 
-##지침서
+## 지침서
 {: #Recipes}
 
 이 클라이언트 라이브러리를 사용하여 단계별로 다양한 디바이스 관리 오퍼레이션을 수행하기 위해 Raspberry Pi 디바이스를 관리 디바이스로 {{site.data.keyword.iot_short_notm}}에 연결하는 방법을 보여주는 [지침서](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/)를 참조하십시오.

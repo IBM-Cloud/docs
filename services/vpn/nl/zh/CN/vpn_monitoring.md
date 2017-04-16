@@ -17,7 +17,7 @@ copyright:
 
 使用监视功能可查看内部部署或 SoftLayer 服务器 VPN 网关与 {{site.data.keyword.vpn_short}} 网关之间的连接状态和通讯流速率。
 {:shortdesc}  
-##在服务仪表板上监视
+## 在服务仪表板上监视
 {: #dashboard}
 
 选择**监视**选项卡可查看以下连接统计信息。
@@ -29,7 +29,7 @@ copyright:
 监视统计信息以图形显示，其中包含过去 48 小时的数据。这些图形每 20 分钟自动更新一次。不过，只要从监视选项卡切换出来再重新返回，即可随时访存最新数据。
 
 **注：**这些图形使用全球标准时间 (UTC) 而非本地时间。  
-##在 Logmet 上监视
+## 在 Logmet 上监视
 {: #logmet}
 
 使用 [Logmet](https://logmet.{DomainName}) 可查看详细的连接统计信息。 

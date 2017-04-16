@@ -15,13 +15,13 @@ lastupdated: "2016-05-09"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Hospedando apps no {{site.data.keyword.Bluemix_notm}}
+# Hospedando apps no {{site.data.keyword.Bluemix_notm}}
 
 <!--The whole topic is staging only -->
 
 Com o {{site.data.keyword.Bluemix}}, é possível criar aplicativos, assim como hospedar seus aplicativos existentes. É possível migrar seus apps para o {{site.data.keyword.Bluemix_notm}}, desde que ele esteja pronto para nuvem. O {{site.data.keyword.Bluemix_notm}} fornece várias maneiras de executar seus aplicativos, por exemplo, Cloud Foundry, IBM Containers e Virtual Machines.
 
-##Tornando seus apps prontos para nuvem
+## Tornando seus apps prontos para nuvem
 {: #cloud-readyapps}
 
 Um aplicativo pronto para nuvem segue os princípios da plataforma em nuvem, quando o aplicativo é designado e construído. Um aplicativo pronto para nuvem pode usar as capacidades fornecidas pela plataforma em nuvem.
@@ -78,7 +78,7 @@ Se todos os princípios a seguir forem observados em seu aplicativo, o aplicativ
 
 Para obter mais informações sobre aplicativos prontos para a nuvem, veja [O aplicativo de 12 fatores ![Ícone de link externo](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}.
 
-##Migrando seus apps
+## Migrando seus apps
 {: #ht_hostapp}
 
 É possível migrar seus aplicativos para o {{site.data.keyword.Bluemix_notm}} de uma maneira incremental, em vez de deslocar o aplicativo completamente para o ambiente de nuvem. É possível migrar uma parte de seu aplicativo primeiro e conectar aos dados existentes ou sistema de registros usando o serviço de Integração de nuvem.
@@ -100,7 +100,7 @@ Para implementar seu aplicativo no {{site.data.keyword.Bluemix_notm}} como um ap
 
 Se a plataforma Cloud Foundry não suportar os requisitos de seu aplicativo, será possível usar um contêiner ou máquina virtual em que o tempo de execução é instalado, configurado e mantido com mais opções customizadas.
 
-##Fazendo upload de apps usando cf cli
+## Fazendo upload de apps usando cf cli
 {: #ht_cfcli}
 
 É possível gerenciar seu código no cliente local e usar a interface da linha de comandos Cloud Foundry para fazer upload de seu aplicativo para o {{site.data.keyword.Bluemix_notm}} manualmente. Se você alterar o código, deverá enviar o aplicativo por push para o {{site.data.keyword.Bluemix_notm}} novamente, para executar o código atualizado.
@@ -155,7 +155,7 @@ Execute as etapas a seguir para migrar seu aplicativo.
 * Assegure-se de que sua organização tenha memória suficiente para todas as instâncias de seu aplicativo. Para visualizar a cota de memória de sua organização, use cf org org_name.
 * Para obter mais informações sobre cf push, consulte [comandos cf](/docs/cli/reference/cfcommands/index.html).
 
-##Migrando seus dados e usando serviços
+## Migrando seus dados e usando serviços
 {: #ht_service}
 
 Depois de fazer upload de seu aplicativo para o {{site.data.keyword.Bluemix_notm}}, selecione o serviço ao qual o aplicativo está conectado, no catálogo do {{site.data.keyword.Bluemix_notm}}, crie uma instância de serviço, vincule as instâncias ao seu aplicativo e depois reinicie o aplicativo.

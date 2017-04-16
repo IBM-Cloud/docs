@@ -13,14 +13,14 @@ lastupdated: "2017-03-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Service administration dashboard
+# Service administration dashboard
 {: #service-dashboard}
 
 
 You can see the status of your {{site.data.keyword.geospatialshort_Geospatial}} service instance and stop or restart it from the service administration dashboard. You can get to the service administration dashboard by clicking the {{site.data.keyword.geospatialshort_Geospatial}} tile on your {{site.data.keyword.geospatialshort_Geospatial}} dashboard. If you are using the sample application and your service instance hits the event limit and stops, you can restart the service. Stopping the service removes the event limit. It continues to receive events until you stop the service. The service administration dashboard also displays the status of your service instance and statistics.
 {:shortdesc}
 
-##{{site.data.keyword.geospatialshort_Geospatial}} Region Checks
+## {{site.data.keyword.geospatialshort_Geospatial}} Region Checks
 
 {{site.data.keyword.geospatialshort_Geospatial}} monitors devices on-the-move from the Internet of Things. Each monitored device sends device messages containing a unique identifier along with its current position, comprising latitude and longitude. The device position is checked against the coordinates of each defined geographical region. The service then produces events when devices enter, exit, or are "hanging out" in a specific region.
 

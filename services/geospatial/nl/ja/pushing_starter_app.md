@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#スターター・アプリケーションを {{site.data.keyword.Bluemix_short}} にプッシュする
+# スターター・アプリケーションを {{site.data.keyword.Bluemix_short}} にプッシュする
 {: #pushing_starter_app}
 
 
@@ -35,7 +35,7 @@ cf login
 cf push myapp
 </code></pre>
 
-##次に行うこと
+## 次に行うこと
 
 * アプリケーションが正常に開始したことを検証するため、{{site.data.keyword.Bluemix_short}} ダッシュボードからアクセス可能なアプリケーション概要ページに移動します。
 * アプリケーションを起動してブラウザーに表示します。アプリケーションの URL (または「経路」) は、アプリケーション概要ページにあります。サンプル・アプリケーションの Web ページには、

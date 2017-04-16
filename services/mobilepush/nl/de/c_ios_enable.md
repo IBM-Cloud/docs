@@ -10,7 +10,7 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-#iOS-Anwendungen für das Senden von Push-Benachrichtigungen aktivieren
+# iOS-Anwendungen für das Senden von Push-Benachrichtigungen aktivieren
 {: #enable-push-ios-notifications}
 Letzte Aktualisierung: 14. Februar 2017
 {: .last-updated}
@@ -18,7 +18,7 @@ Letzte Aktualisierung: 14. Februar 2017
 Sie können iOS-Anwendungen für das Senden von Push-Benachrichtigungen an Ihre Geräte aktivieren.
 
 
-##CocoaPods installieren
+## CocoaPods installieren
 {: #enable-push-ios-notifications-install}
 
 Für ein vorhandenes Xcode-Projekt können Sie das Bluemix Mobile Services-Client-SDK mithilfe des Abhängigkeitsmanagementtools CocoaPods einrichten. Als Alternative dazu können Sie das Software-Development-Kit (SDK) manuell installieren.
@@ -58,7 +58,7 @@ Mit diesem Befehl werden Ihre Abhängigkeiten installiert und es wird ein neuer 
 
 Der Arbeitsbereich enthält Ihr ursprüngliches Projekt und das Projekt 'Pods', das Ihre Abhängigkeiten enthält. Wenn Sie den Bluemix mobile Services-Quellenordner ändern möchten, finden Sie diesen in Ihrem Projekt 'Pods' unter `Pods/yourImportedSourceFolder`, zum Beispiel: `Pods/BMSPush`.
 
-##Frameworks mit Carthage hinzufügen
+## Frameworks mit Carthage hinzufügen
 {: #carthage}
 
 Fügen Sie mithilfe von [Carthage ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos){: new_window} Frameworks zu Ihrem Projekt hinzu. Beachten Sie, dass Carthage in Xcode8 nicht unterstützt wird.
@@ -71,7 +71,7 @@ Fügen Sie mithilfe von [Carthage ![Symbol für externen Link](../../icons/launc
 2. Führen Sie den Befehl `carthage update` aus. Wenn der Build abgeschlossen ist, ziehen Sie `BMSPush.framework`, `BMSCore.framework` und `BMSAnalyticsAPI.framework` in das Xcode-Projekt.
 3. Befolgen Sie die Anweisungen auf der [Carthage-Website ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos){: new_window}, um die Integration abzuschließen.
 
-##iOS-SDK einrichten
+## iOS-SDK einrichten
 {: ios-sdk}
 
 Richten Sie das iOS-SDK ein. Fügen Sie den folgenden Code der Datei **AppDelegate.swift** in Ihrer Anwendung hinzu. Beachten Sie, dass dies auch bei APNs registriert wird.  
@@ -83,7 +83,7 @@ didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 ```
     {: codeblock}
 
-##Importierte Frameworks und Quellenordner verwenden
+## Importierte Frameworks und Quellenordner verwenden
 {: using-imported-frameworks}
 
 Referenzieren Sie das SDK in Ihrem Code. Stellen Sie sicher, dass die folgenden Voraussetzungen erfüllt sind.
@@ -104,7 +104,7 @@ Die Push-Readme-Datei für Swift finden Sie in der [Readme-Datei ![Symbol für e
 **Hinweis**: Durch Aktualisieren Ihres Projekts 'Pods' mithilfe der CocoaPods-Befehle `pod install` oder `pod update` werden die Bluemix Mobile Services-Quellenorder möglicherweise überschrieben. Wenn Sie Ihre angepassten Versionen der ursprünglichen Dateien aufbewahren möchten, müssen Sie sicherstellen, dass für sie ein Backup durchgeführt wird, bevor Sie einen dieser Befehle absetzen.
 
 
-##Buildeinstellungen
+## Buildeinstellungen
 {: build-settings}
 
 Rufen Sie **Xcode > Build Settings > Build Options** auf und setzen Sie **Enable Bitcode** auf **No**.
@@ -116,7 +116,7 @@ Rufen Sie **Xcode > Build Settings > Build Options** auf und setzen Sie **Enable
 
 Das Anwendungs-Delegat für die iOS-Anwendung ist eine übliche Position für den Initialisierungscode. Klicken Sie in Ihrem Push-Dashboard auf den Link **Mobile Systemerweiterungen**, um die Anwendungsroute und die GUID abzurufen.
 
-###Core-SDK initialisieren
+### Core-SDK initialisieren
 {: Initializing-the-core-sdk}
 
 
@@ -130,17 +130,17 @@ myBMSClient.initialize(bluemixRegion: "Location where your app is hosted.")
 ### Route, GUID und Bluemix-Region
 {: route-guid-bluemix-region}
 
-####appRoute
+#### appRoute
 {: ios-approute}
 
 Gibt die Route an, die der Serveranwendung zugewiesen ist, die Sie in Bluemix erstellt haben.
 
-####GUID
+#### GUID
 {: ios-guid}
 
 Gibt den eindeutigen Schlüssel an, der der Anwendung zugewiesen wird, die Sie in Bluemix erstellt haben. Bei diesem Wert muss die Groß-/Kleinschreibung beachtet werden.
 
-####bluemixRegionSuffix
+#### bluemixRegionSuffix
 {: ios-bluemixRegionSuffix}
 
 Gibt den Standort an, an dem die App gehostet ist. Der Parameter `bluemixRegion` gibt an, welche Bluemix-Bereitstellung verwendet wird. Sie können diesen Wert mit der statischen Eigenschaft `BMSClient.REGION` angeben und einen von drei Werten verwenden:
@@ -149,12 +149,12 @@ Gibt den Standort an, an dem die App gehostet ist. Der Parameter `bluemixRegion`
 - BMSClient.Region.unitedKingdom
 - BMSClient.Region.sydney
 
-####AppGUID
+#### AppGUID
 {: ios-AppGUID}
 
 Gibt den eindeutigen 'AppGUID'-Schlüssel an, der dem von Ihnen in Bluemix erstellten {{site.data.keyword.mobilepushshort}}-Service zugewiesen wird.
 
-###Client-Push-SDK initialisieren
+### Client-Push-SDK initialisieren
 {: initializing-the-client-Push-SDK}
 
 ```
@@ -177,13 +177,13 @@ Führen Sie zum Registrieren von iOS-Anwendungen und -Geräten die folgenden Sch
 2. Übergeben Sie das Token an {{site.data.keyword.mobilepushshort}}.
 
 
-###Back-End-Anwendung erstellen
+### Back-End-Anwendung erstellen
 {: create-a-backend-app}
 
 Erstellen Sie im Bluemix®-Katalog im Abschnitt 'Boilerplates' eine Back-End-Anwendung, mit der der {{site.data.keyword.mobilepushshort}}-Service automatisch an diese Anwendung gebunden wird. Wenn Sie bereits eine Back-End-App erstellt haben, stellen Sie sicher, dass Sie diese App an den {{site.data.keyword.mobilepushshort}} Service binden.
 
 
-###Tokens an {{site.data.keyword.mobilepushshort}} übergeben
+### Tokens an {{site.data.keyword.mobilepushshort}} übergeben
 {: pass-token-push-notifications}
 
 Nachdem das Token von APNs empfangen worden ist, leiten Sie es als Teil der Methode `registerDevice:withDeviceToken` an {{site.data.keyword.mobilepushshort}} weiter.
@@ -287,7 +287,7 @@ Sie können die {{site.data.keyword.mobilepushshort}}-Einstellungen zum Senden v
 - **Sound** (Audio): Gibt einen Soundclip an, der beim Empfang einer Benachrichtigung abgespielt wird. Unterstützt den Standard oder den Namen einer Soundressource, die in der App gebündelt ist.
 - **Additional payload** (Zusätzliche Nutzdaten): Gibt die angepassten Werte für Nutzdaten für Ihre Benachrichtigungen an.
 
-##Interaktive Benachrichtigungen aktivieren
+## Interaktive Benachrichtigungen aktivieren
 
 Sie können jetzt Ihre iOS-Benachrichtigungen durch zusätzliche Details wie das Hinzufügen eines Bildes, einer Karte oder einer Antwortschaltfläche attraktiver gestalten, indem Sie interaktive Benachrichtigungen aktivieren. Dadurch wird den Kunden mehr Kontext geboten, verbunden mit der Möglichkeit sofortiger Maßnahmen ohne Verlassen des aktuellen Kontexts.  
 

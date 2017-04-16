@@ -97,12 +97,12 @@ chmod a+x ./private-network-peering-linux-amd64
 bluemix network pnp-routers [--verbose（或 -v）]
 ```
 
-#####可选参数
+##### 可选参数
 {: #op1}
 
 * **--verbose（或 -v）**（标志）：查看有关每个路由器的详细网络信息。
 
-######命令示例
+###### 命令示例
 {: #ex1}
 
 查看有关所有路由器的网络信息：
@@ -152,13 +152,13 @@ bluemix network pnp-routers [--verbose（或 -v）]
 bluemix network pnp-create <router_ip> <router_ip> <name>
 ```
 
-#####参数
+##### 参数
 {: #p1}
 
 * **router_ip**：要连接的两个路由器的 IP 地址。可以使用命令 `bluemix network pnp-routers` 来查找 IP 地址。
 * **name**：专用网络对等连接的名称。
 
-######命令示例
+###### 命令示例
 {: #ex2}
 
 	$ bluemix network pnp-create 129.41.234.246 129.41.237.172 demo
@@ -169,19 +169,19 @@ bluemix network pnp-create <router_ip> <router_ip> <name>
 	专用网络对等连接“demo”已创建。
 
 
-####使用连接名称来创建专用网络对等连接
+#### 使用连接名称来创建专用网络对等连接
 
 ```
 bluemix network pnp-create -i <name>
 ```
 
-#####参数
+##### 参数
 {: #p2}
 
 * **--interactive (-i)**（标志）：以交互方式选择路由器。
 * **name**：专用网络对等连接的名称。
 
-######命令示例
+###### 命令示例
 {: #ex3}
 
 	$ bluemix network pnp-create -i demo
@@ -207,12 +207,12 @@ bluemix network pnp-create -i <name>
 bluemix network pnp-show [--verbose（或 -v）]
 ```
 
-#####可选参数
+##### 可选参数
 {: #op2}
 
 * **--verbose（或 -v）**（标志）：查看有关每个路由器的详细网络信息。
 
-######命令示例
+###### 命令示例
 {: #ex4}
 
 查看基本信息：
@@ -246,16 +246,16 @@ bluemix network pnp-show [--verbose（或 -v）]
 ```
 bluemix network pnp-delete [--force（或 -f）] <connection_id>
 ```
-#####参数
+##### 参数
 {: #p3}
 * **connection_id**：一个或多个连接标识，用逗号分隔。
 
-#####可选参数
+##### 可选参数
 {: #op3}
 
 * **--force（或 -f）**（标志）：删除连接，而不提示确认。
 
-######命令示例：
+###### 命令示例：
 {: #ex5}
 
 删除连接：

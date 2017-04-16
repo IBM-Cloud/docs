@@ -10,7 +10,7 @@ copyright:
 
 Copia e incolla i seguenti dispositivi di codice per ricevere notifiche di push sui dispositivi.
 
-##JavaScript
+## JavaScript
 
 Aggiungi il seguente frammento di codice JavaScript alla parte web della tua applicazione Cordova.
 
@@ -23,7 +23,7 @@ var notification = function(notification){
 MFPPush.registerNotificationsCallback(notification);
 ```
 
-##Proprietà di notifica Android
+## Proprietà di notifica Android
 
 La seguente selezione elenca le proprietà di notifica Android:
 
@@ -31,7 +31,7 @@ La seguente selezione elenca le proprietà di notifica Android:
 * payload - oggetto JSON che contiene un payload di notifica
 
 
-##Proprietà di notifica iOS
+## Proprietà di notifica iOS
 
 La seguente sezione elenca le proprietà di notifica iOS:
 
@@ -44,7 +44,7 @@ action-loc-key - la stringa viene utilizzata come una chiave per ottenere una st
 * sound - il nome di un file audio nel bundle dell'applicazione o nella cartella
                             Library/Sounds dei contenitore di dati dell'applicazione.
 
-##Objective-C
+## Objective-C
 
 Aggiungi i seguenti frammenti di codice Objective-C alla classe delegato della tua applicazione.
 
@@ -64,7 +64,7 @@ Aggiungi i seguenti frammenti di codice Objective-C alla classe delegato della t
 }
 ```
 
-##Swift
+## Swift
 
 Aggiungi i seguenti frammenti di codice Swift alla classe delegato della tua applicazione.
 

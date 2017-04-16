@@ -13,11 +13,11 @@ lastupdated: "2017-01-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Servicevoraussetzungen
+# Servicevoraussetzungen
 {: #requirements}
 
 
-##Voraussetzungen für Nachrichten von MQTT-Geräten
+## Voraussetzungen für Nachrichten von MQTT-Geräten
 
 * Von einem MQTT-Nachrichtenbroker müssen Gerätenachrichten im JSON-Format zu mindestens einem MQTT-Abschnitt bereitgestellt werden.
 * Die Gerätenachrichten können eine beliebige Anzahl an Attributen enthalten, die folgenden drei Attribute müssen jedoch immer enthalten sein:
@@ -28,7 +28,7 @@ lastupdated: "2017-01-09"
 	* Eine MQTT-Nachricht kann ein JSON-Objekt mit Informationen zu einem einzigen Gerät enthalten.
 	* Eine MQTT-Nachricht kann ein JSON-Array mit Informationen zu mehreren Geräten enthalten.
 
-##MQTT-Ereignisse und Konfiguration des Service
+## MQTT-Ereignisse und Konfiguration des Service
 
 Von einer Anwendung werden MQTT-Nachrichten abonniert und {{site.data.keyword.geospatialshort_Geospatial}} über die [REST-API](https://console.ng.bluemix.net/apidocs/246) gesteuert. Über REST-API-Aufrufe stehen folgende Aktionen zur Verfügung:
 

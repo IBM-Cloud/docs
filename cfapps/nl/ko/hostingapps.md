@@ -15,13 +15,13 @@ lastupdated: "2016-05-09"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#{{site.data.keyword.Bluemix_notm}}에서 앱 호스팅
+# {{site.data.keyword.Bluemix_notm}}에서 앱 호스팅
 
 <!--The whole topic is staging only -->
 
 {{site.data.keyword.Bluemix}}에서는 애플리케이션을 작성할 수 있음은 물론 기존 애플리케이션을 호스팅할 수도 있습니다. 클라우드 준비 상태이면, 앱을 {{site.data.keyword.Bluemix_notm}}에 마이그레이션할 수 있습니다. {{site.data.keyword.Bluemix_notm}}에서는 애플리케이션을 실행할 수 있도록 다양한 방법을 제공합니다(예: Cloud Foundry, IBM Containers 및 Virtual Machines).
 
-##앱 클라우드 준비 상태 만들기
+## 앱 클라우드 준비 상태 만들기
 {: #cloud-readyapps}
 
 클라우드 준비 애플리케이션은 애플리케이션이 디자인되고 빌드될 때 클라우드 플랫폼 원칙을 따릅니다. 클라우드 준비 애플리케이션은 클라우드 플랫폼에서 제공하는 기능을 사용할 수 있습니다. 
@@ -78,7 +78,7 @@ lastupdated: "2016-05-09"
 
 클라우드 준비 애플리케이션에 대한 자세한 정보는 [The 12-factor application ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}을 참조하십시오. 
 
-##앱 마이그레이션
+## 앱 마이그레이션
 {: #ht_hostapp}
 
 애플리케이션을 클라우드 환경으로 완전히 이동하는 대신, 증분 방식으로 {{site.data.keyword.Bluemix_notm}}에 애플리케이션을 마이그레이션할 수 있습니다. 우선 애플리케이션의 일부를 마이그레이션한 후에, 클라우드 통합 서비스를 사용하여 기존 데이터 또는 SOR(System of Record)에 연결할 수 있습니다. 
@@ -100,7 +100,7 @@ lastupdated: "2016-05-09"
 
 Cloud Foundry 플랫폼이 애플리케이션 요구사항을 충족하지 않는 경우에는 보다 사용자 정의된 옵션으로 런타임이 설정, 구성되고 유지보수되는 VM 또는 컨테이너를 사용할 수 있습니다. 
 
-##cf cli를 사용하여 앱 업로드
+## cf cli를 사용하여 앱 업로드
 {: #ht_cfcli}
 
 로컬 클라이언트에서 코드를 관리하고 Cloud Foundry 명령행 인터페이스를 사용하여 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에 수동으로 업로드할 수 있습니다. 코드를 변경하는 경우에는 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에 다시 푸시하여 업데이트된 코드를 실행해야 합니다. 
@@ -155,7 +155,7 @@ Cloud Foundry 플랫폼이 애플리케이션 요구사항을 충족하지 않�
 * 애플리케이션의 모든 인스턴스에 대해 조직에 충분한 메모리가 있는지 확인하십시오. 사용자 조직의 메모리 할당량을 보려면 cf org org_name을 사용하십시오.
 * cf push에 대한 자세한 정보는 [cf 명령](/docs/cli/reference/cfcommands/index.html) 명령을 참조하십시오.
 
-##데이터 마이그레이션 및 서비스 사용
+## 데이터 마이그레이션 및 서비스 사용
 {: #ht_service}
 
 {{site.data.keyword.Bluemix_notm}}에 애플리케이션을 업로드한 후에는 {{site.data.keyword.Bluemix_notm}} 카탈로그에서 애플리케이션이 연결된 서비스를 선택하고 서비스 인스턴스를 작성하며 인스턴스를 애플리케이션에 바인드한 후에 애플리케이션을 다시 시작하십시오. 

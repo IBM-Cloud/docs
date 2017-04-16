@@ -112,13 +112,13 @@ Pour plus d'informations sur l'obtention des valeurs `applicationRoute` et `appl
 ## Initialisation du gestionnaire AuthorizationManager
 Initialisez le gestionnaire `AuthorizationManager` en transmettant le paramètre `tenantId` du service {{site.data.keyword.amashort}}. Pour des informations sur l'obtention de ces valeurs, voir [Avant de commencer](#before-you-begin). 
 
-####Objective-C
+#### Objective-C
 
 ```Objective-C
 [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"<tenantId>"];
 ```
 
-####Swift
+#### Swift
 
 ```Swift
 IMFAuthorizationManager.sharedInstance().initializeWithTenantId("<tenantId>")

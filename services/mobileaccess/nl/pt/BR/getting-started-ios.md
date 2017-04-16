@@ -125,13 +125,13 @@ Inicialize o `AuthorizationManager` passando o parâmetro
 `tenantId` do serviço {{site.data.keyword.amashort}}. Para obter informações sobre como obter esses valores, consulte
 [Antes de iniciar](#before-you-begin). 
 
-####Objective-C
+#### Objective-C
 
 ```Objective-C
 [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"<tenantId>"];
 ```
 
-####Swift
+#### Swift
 
 ```Swift
 IMFAuthorizationManager.sharedInstance().initializeWithTenantId("<tenantId>")

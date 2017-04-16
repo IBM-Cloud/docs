@@ -10,9 +10,9 @@ copyright:
 
 放置起始設定碼的一般位置位於 iOS 應用程式的應用程式委派中。按一下「Bluemix 應用程式儀表板」中的**行動選項**鏈結，以取得應用程式的路徑及應用程式 GUID。
 
-##起始設定 Core SDK
+## 起始設定 Core SDK
 
-###Objective-C
+### Objective-C
 
 ```
 // Initialize the SDK for Object-C with IBM Bluemix GUID and route
@@ -20,7 +20,7 @@ IMFClient *imfClient = [IMFClient sharedInstance];
 [imfClient initializeWithBackendRoute:"add_your_applicationRoute_here" backendGUID:"add_your_appId_here"];
 ```
 
-###Swift
+### Swift
 
 ```
 // Initialize the Core SDK for Swift with IBM Bluemix GUID, route, and region
@@ -28,16 +28,16 @@ let myBMSClient = BMSClient.sharedInstancemyBMSClient.initializeWithBluemixAppRo
 myBMSClient.defaultRequestTimeout = 10.0 // Timput in seconds
 ```
 
-##起始設定 Client Push SDK
+## 起始設定 Client Push SDK
 
-###Objective-C
+### Objective-C
 
 ```
 //Initialize client Push SDK for Objective-C
 IMFPushClient _pushService = [IMFPushClient sharedInstance];
 ```
 
-###Swift
+### Swift
 
 ```
 //Initialize client Push SDK for Swift

@@ -128,7 +128,7 @@ cf delete-route domaine -n nom_hôte -f
 *domaine* est le nom de votre domaine et *nom_hôte* le nom d'hôte de la route pour votre application. Pour plus d'informations sur la commande
 **cf delete-route**, entrez `cf delete-route -h`.
 
-##Déploiements Blue-Green
+## Déploiements Blue-Green
 {: #blue_green}
 
 {{site.data.keyword.Bluemix_notm}} prend en charge la technique de déploiement Blue-Green pour

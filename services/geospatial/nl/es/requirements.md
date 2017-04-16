@@ -13,11 +13,11 @@ lastupdated: "2017-01-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Requisitos del servicio
+# Requisitos del servicio
 {: #requirements}
 
 
-##Requisitos de mensajes de dispositivo MQTT
+## Requisitos de mensajes de dispositivo MQTT
 
 * El intermediario de mensajes MQTT debe proporcionar los mensajes de dispositivo en formato JSON en uno o varios temas MQTT.
 * Los mensajes de dispositivo pueden contener cualquier serie de atributos, pero los tres atributos siguientes son siempre obligatorios:
@@ -28,7 +28,7 @@ lastupdated: "2017-01-09"
 	* Un mensaje MQTT puede contener un objeto JSON con información sobre un único dispositivo.
 	* Un mensaje MQTT puede obtener una matriz de objetos JSON con información sobre un conjunto de dispositivos.
 
-##Sucesos MQTT y configuración del servicio
+## Sucesos MQTT y configuración del servicio
 
 La aplicación se suscribe a los mensajes MQTT y controla {{site.data.keyword.geospatialshort_Geospatial}} a través de su [API REST](https://console.ng.bluemix.net/apidocs/246). Las siguientes opciones están disponibles mediante las llamadas de API REST:
 

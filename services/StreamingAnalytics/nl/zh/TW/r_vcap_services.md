@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#服務認證和 VCAP_SERVICES 環境變數
+# 服務認證和 VCAP_SERVICES 環境變數
 {: #vcap_services}
 
 {{site.data.keyword.streaminganalyticsshort}} 服務認證和 VCAP_SERVICES 環境變數包括使用 {{site.data.keyword.streaminganalyticsshort}} 服務 REST API 所需的 VCAP 資訊。VCAP 資訊提供每一個 {{site.data.keyword.streaminganalyticsshort}} 服務 REST API 的 REST URL、服務實例 ID、連結 ID 和認證。  

@@ -11,7 +11,7 @@ lastupdated: "2017-01-08"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-#Configurazione dell'autenticazione personalizzata per le applicazioni Web {{site.data.keyword.amashort}}
+# Configurazione dell'autenticazione personalizzata per le applicazioni Web {{site.data.keyword.amashort}}
 {: #custom-web}
 
 Aggiungi l'autenticazione personalizzata e la funzionalità di sicurezza {{site.data.keyword.amafull}} alla tua applicazione Web.
@@ -37,7 +37,7 @@ Per ulteriori informazioni
 * [Configurazione di {{site.data.keyword.amashort}} per l'autenticazione personalizzata](custom-auth-config-mca.html)
 
 
-##Configurazione di un provider di identità personalizzato
+## Configurazione di un provider di identità personalizzato
 {: #custom-auth-config}
 
 Quando crei un provider di identità personalizzato devi definire un metodo POST con una rotta nella seguente struttura:
@@ -104,7 +104,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 {: codeblock}
 
 
-##Configurazione di {{site.data.keyword.amashort}} per l'autenticazione personalizzata
+## Configurazione di {{site.data.keyword.amashort}} per l'autenticazione personalizzata
 {: #custom-auth-config-mca}
 
 Dopo che hai configurato il tuo provider di identità personalizzato, puoi abilitare l'autenticazione personalizzata nel dashboard {{site.data.keyword.amashort}}.
@@ -117,7 +117,7 @@ Dopo che hai configurato il tuo provider di identità personalizzato, puoi abili
 1. Fai clic su **Save**.
 
 
-##Implementazione del flusso dell'autorizzazione {{site.data.keyword.amashort}} utilizzando un provider dell'identità personalizzato
+## Implementazione del flusso dell'autorizzazione {{site.data.keyword.amashort}} utilizzando un provider dell'identità personalizzato
 {: #custom-auth-flow}
 
 La variabile di ambiente `VCAP_SERVICES` viene creata automaticamente per ogni istanza del servizio {{site.data.keyword.amashort}} e contiene le proprietà necessarie per il processo di autorizzazione. È formato da un oggetto JSON e puoi visualizzarlo nella scheda **Credenziali del servizio** nel dashboard {{site.data.keyword.amashort}}.
@@ -187,7 +187,7 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 
 	Dopo il reindirizzamento, l'utente riceve un modulo di accesso. Dopo avere autenticato le credenziali dell'utente con il provider di identità personalizzato, il servizio {{site.data.keyword.amashort}} richiamerà il tuo URI di reindirizzamento dell'applicazione Web fornendo il codice concesso come un parametro di query.
 
-##Ottenimento dei token
+## Ottenimento dei token
 {: custom-auth-tokens}
 
 Il passo successivo è quello di ottenere il token di accesso e il token di identità utilizzando il codice concesso ricevuto precedentemente. A tal fine:
@@ -255,7 +255,7 @@ app.get("/oauth/callback", function(req, res, next){
 	Come hai ricevuto l'accesso e i token di identità, puoi indicare la sessione Web come autenticata e facoltativamente conservare questi token.
 
 
-##Utilizzo dell'accesso ottenuto e del token di identità
+## Utilizzo dell'accesso ottenuto e del token di identità
 {: #custom-auth-using-token}
 
 Il token di identità contiene informazioni sull'identità dell'utente. Nel caso di un'autenticazione personalizzata, il token conterrà tutte le informazioni restituite dal provider di identità personalizzato al momento dell'autenticazione. Nel campo `imf.user`, il campo `displayName` conterrà il `displayName` restituito dal provider di identità personalizzato e il campo `id` conterrà il `userName`.  Tutti gli altri valori restituiti dal provider di identità personalizzato vengono restituiti nel campo `attributes` in `imf.user`.  
@@ -264,7 +264,7 @@ Il token di accesso consente la comunicazione con le risorse protette dai filtri
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-####Suggerimenti:
+#### Suggerimenti:
 {: #tips_token}
 
 * Il `<accessToken>` e il `<idToken>` devono essere separati da uno spazio vuoto.

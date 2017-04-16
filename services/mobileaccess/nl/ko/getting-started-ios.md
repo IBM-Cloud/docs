@@ -107,13 +107,13 @@ sudo gem install cocoapods
 ## AuthorizationManager 초기화
 {{site.data.keyword.amashort}} 서비스 `tenantId` 매개변수를 전달하여 `AuthorizationManager`를 초기화하십시오. 이러한 값을 얻는 방법에 대한 정보는 [시작하기 전에](#before-you-begin)를 참조하십시오.  
 
-####Objective-C
+#### Objective-C
 
 ```Objective-C
 [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"<tenantId>"];
 ```
 
-####Swift
+#### Swift
 
 ```Swift
 IMFAuthorizationManager.sharedInstance().initializeWithTenantId("<tenantId>")

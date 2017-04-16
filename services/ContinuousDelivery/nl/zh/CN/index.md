@@ -23,7 +23,7 @@ copyright:
  * 要从模板创建并配置持续交付工具链，请单击**[从这里开始](#starting_from_a_toolchain_template)**。工具链将集成用于规划、开发、部署管道和管理应用程序的工具。您可以随时在工具链中添加或除去工具。
  * 如果已经具有工具链，请在“从工具链模板开始”部分中，单击**查看工具链**。有关使用工具链的更多信息，请参阅[在 Bluemix Public 上使用工具链](/docs/services/ContinuousDelivery/toolchains_using.html){: new_window}。
 
-##开始使用管道
+## 开始使用管道
 {: #starting_with_a_pipeline}
 
 管道可自动执行构建、部署等操作。要开始使用自动化管道，请选择模板，并提供 GitHub 存储库的位置。
@@ -61,7 +61,7 @@ copyright:
 1. 选择要使用的工具链，或输入要创建的新工具链的名称。
 1. 单击**创建**。这将创建空管道，并将其表示为工具链“概述”页面上的磁贴。
 
-##从工具链模板开始
+## 从工具链模板开始
 {: #starting_from_a_toolchain_template}
 
 要从[模板（在新窗口中打开链接）](https://console.ng.bluemix.net/devops/create){: new_window}创建并配置持续交付工具链，请执行以下操作：

@@ -15,7 +15,7 @@ copyright:
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#Arbeitselemente erstellen und anzeigen {: #tp-creatingwis}  
+# Arbeitselemente erstellen und anzeigen {: #tp-creatingwis}  
 
 *Letzte Aktualisierung: 29. April 2016*
 {: .last-updated}
@@ -36,21 +36,21 @@ Für Arbeitselemente gibt es drei grundlegende Zustände:
 - **In Bearbeitung**: Das Arbeitselement wurde gestartet. Sein Status lautet 'In Bearbeitung'.
 - **Aufgelöst**: Das Arbeitselement ist fertig gestellt. Sein Status lautet 'Abgeschlossen' oder 'Ungültig'.
 
-##Arbeitselemente anzeigen {: #tp-widisplay}  
+## Arbeitselemente anzeigen {: #tp-widisplay}  
 
 Zum Anzeigen von Arbeitselementen stehen Ihnen mehrere Möglichkeiten zur Verfügung.    
 
-###Liste 
+### Liste 
 Wenn Sie Arbeitselemente in einer Liste anzeigen, erstreckt sich jedes Arbeitselement über die gesamte Breite der Liste. Sie können weitere Informationen zu einem Arbeitselement anzeigen, indem Sie es erweitern. Attribute werden durch Symbole dargestellt.
 
 ![Listenanzeige](images/list_view.png)
 
-###Tabelle  
+### Tabelle  
 Wenn Sie Arbeitselemente in einer Tabelle anzeigen, ist jedes Arbeitselement in einem komprimierten Format dargestellt. Einige Attribute werden durch Symbole dargestellt und sind in Spalten angeordnet.
 
 ![Tabellenanzeige](images/table_view.png)
 
-###Bereiche
+### Bereiche
 Wenn Sie Arbeitselemente in Bereichen anzeigen, sind die Arbeitselemente nach Status gruppiert. Attribute werden durch Symbole dargestellt. Sie können gleichzeitig jeweils zwei Status anzeigen. Um den dritten Status anzuzeigen, müssen Sie einen horizontalen Bildlauf durchführen.
 
 ![Bereichsanzeige](images/lane_view.png)

@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Serviceberechtigungsnachweise und Umgebungsvariable VCAP_SERVICES
+# Serviceberechtigungsnachweise und Umgebungsvariable VCAP_SERVICES
 {: #vcap_services}
 
 Die {{site.data.keyword.streaminganalyticsshort}}-Serviceberechtigungsnachweise und die Umgebungsvariable

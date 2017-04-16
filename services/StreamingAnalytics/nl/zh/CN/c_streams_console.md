@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#{{site.data.keyword.streaminganalyticsshort}} 控制台
+# {{site.data.keyword.streaminganalyticsshort}} 控制台
 {: #console}
 
 在 {{site.data.keyword.streaminganalyticsshort}} 控制台上，您可以将 {{site.data.keyword.streamsshort}} 应用程序直接提交到 {{site.data.keyword.streaminganalyticsshort}} 服务实例。

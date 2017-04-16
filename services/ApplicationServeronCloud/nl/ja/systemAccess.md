@@ -9,7 +9,7 @@ copyright:
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#システム・アクセス
+# システム・アクセス
 {: #system_access}
 最終更新日: 2016 年 8 月 17 日
 {: .last-updated}

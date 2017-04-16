@@ -15,7 +15,7 @@ copyright:
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#Organisation et filtrage des éléments de travail {: #tp-organize}  
+# Organisation et filtrage des éléments de travail {: #tp-organize}  
 
 *Dernière mise à jour : 29 avril 2016*
 {: .last-updated}
@@ -23,7 +23,7 @@ copyright:
 Le service {{site.data.keyword.trackplan}} inclut plusieurs options pour trier et organiser vos éléments de travail.
 {: shortdesc}
 
-##Filtrage des éléments de travail {: #tp-filteringwis}
+## Filtrage des éléments de travail {: #tp-filteringwis}
 
 Vous pouvez filtrer les éléments de travail en fonction de mots ou de valeurs pour des attributs spécifiques. 
 
@@ -54,7 +54,7 @@ Quand vous cliquez sur la zone **Filtrer les éléments de travail par mot clé*
 
 ![Filtrage avec choix en saisie semi-automatique](images/filterMenu2.png)
 
-##Sauvegarde des vues personnalisées {: #tp-customviews}
+## Sauvegarde des vues personnalisées {: #tp-customviews}
 Vous pouvez créer des vues personnalisées en appliquant des filtres. Vous partagez ensuite ces vues avec votre équipe.    
 
 1. Dans la zone **Filtrer les éléments de travail par mot clé**, entrez le type d'attribut au format court et une valeur pour cet attribut, `$high`, par exemple. Certains attributs sont automatiquement répertoriés quand vous entrez le format court, *Type, $Priority, and !Severity, par exemple.
@@ -69,7 +69,7 @@ Vous pouvez créer des vues personnalisées en appliquant des filtres. Vous part
 
 Les vues personnalisées ne retournent des résultats que pour le sprint et le statut que vous affichez. Si vous voulez que la vue retourne des résultats pour d'autres sprints ou statuts, cliquez sur la vue et procédez aux changements nécessaires.
 
-##Affichage et organisation de vos éléments de travail {: #tp-organizingwis}
+## Affichage et organisation de vos éléments de travail {: #tp-organizingwis}
 
 - Pour afficher les éléments de travail que vous possédez, consultez la vue Mon travail. 
 - Si vous utilisez souvent des éléments de travail spécifiques, vous pouvez les marquer comme favoris en cliquant sur l'icône réservée à cet effet <img class="inline"  src="./images/star.gif" alt="icône des favoris">. Vous pouvez alors voir tous vos éléments de travail favoris dans la vue Mes éléments marqués d'un astérisque. Quand vous cliquez sur l'icône de favori associé à un élément de travail, vous êtes seul à savoir que vous avez l'avez marqué en tant que favori.  
@@ -77,7 +77,7 @@ Les vues personnalisées ne retournent des résultats que pour le sprint et le s
 - Pour afficher vos éléments de travail triés par dates de modification, consultez la vue Mon travail récent.
 - Pour afficher l'activité relative à vos éléments de travail, ouvrez la vue Mes activités. La section Mes événements répertorie les éléments de travail dans lesquels vous êtes mentionné. La section Mes abonnements dresse la liste de tous les changements qui se sont produits dans les éléments de travail auxquels vous êtes abonné.
 
-##Tri des éléments de travail {: #tp-triaging}
+## Tri des éléments de travail {: #tp-triaging}
 
 Quand un élément de travail est créé mais qu'il n'est pas affecté à un sprint, il s'affiche dans la vue Travail entrant.
 Dès qu'un sprint est attribué à cet élément de travail, ce dernier est retiré de la vue Travail entrant.

@@ -51,7 +51,7 @@ $ pod update
 	```
 작업공간에는 원래 프로젝트 및 종속 항목이 포함된 Pods 프로젝트가 있습니다. Bluemix Mobile Services 소스 폴더를 수정하려는 경우, `Pods/yourImportedSourceFolder` 아래의 Pods 프로젝트에서 폴더를 찾을 수 있습니다(예: `Pods/IMFGoogleAuthentication`).
 
-##가져온 프레임워크 및 소스 폴더 사용
+## 가져온 프레임워크 및 소스 폴더 사용
 
 코드에서 SDK를 참조하십시오. 
 
@@ -69,7 +69,7 @@ $ pod update
 **참고**: CocoaPods 명령 `pod install` 또는 `pod update`를 사용하여 Pods 프로젝트를 업데이트하면 Bluemix Mobile Services 소스 폴더를 대체할 수 있습니다. 원래 파일의 사용자 정의한 버전을 유지하려면, 이러한 명령을 실행하기 전에
 해당 버전을 백업해야 합니다. 
 
-###Swift
+### Swift
 
 **사전 전제조건**
 
@@ -86,7 +86,7 @@ import BMSPush
 ```
 
 
-##빌드 설정
+## 빌드 설정
 
 **Xcode > 빌드 설정 > 빌드 옵션 및 Bitcode 사용 설정**으로 이동하여 **No**로 설정하십시오.
 
@@ -101,9 +101,9 @@ import BMSPush
 초기화 코드를 배치하는 공통 위치는 iOS 애플리케이션에 대한 애플리케이션 위임자입니다.
 Bluemix 애플리케이션 대시보드의 **모바일 옵션** 링크를 클릭하여 애플리케이션 라우트와 GUID를 확보하십시오. 
 
-##Core SDK 초기화
+## Core SDK 초기화
 
-###Objective-C
+### Objective-C
 
 ```
 // Initialize the SDK for Object-C with IBM Bluemix GUID and route
@@ -111,7 +111,7 @@ IMFClient *imfClient = [IMFClient sharedInstance];
 [imfClient initializeWithBackendRoute:"add_your_applicationRoute_here" backendGUID:"add_your_appId_here"];
 ```
 
-###Swift
+### Swift
 
 ```
 // Initialize the Core SDK for Swift with IBM Bluemix GUID, route, and region
@@ -120,16 +120,16 @@ myBMSClient.defaultRequestTimeout = 10.0 // Timput in seconds
 ```
 
 
-##클라이언트 푸시 SDK 초기화
+## 클라이언트 푸시 SDK 초기화
 
-###Objective-C
+### Objective-C
 
 ```
 //Initialize client Push SDK for Objective-C
 IMFPushClient _pushService = [IMFPushClient sharedInstance];
 ```
 
-###Swift
+### Swift
 
 ```
 //Initialize client Push SDK for Swift
@@ -169,11 +169,11 @@ iOs 애플리케이션 및 디바이스를 등록하려면 다음을 수행하�
 2. 토큰을 푸시 알림에 전달
 
 
-##백엔드 애플리케이션 작성
+## 백엔드 애플리케이션 작성
 
 표준 유형 섹션 Bluemix® 카탈로그에서 푸시 서비스를 이 애플리케이션에 자동으로 바인드하는 백엔드 애플리케이션을 작성하십시오. 백엔드 앱을 이미 작성한 경우 앱을 푸시 알림 서비스에 바인드해야 합니다. 
 
-###Objective-C
+### Objective-C
 
 ```
 	//For Objective-C
@@ -190,7 +190,7 @@ iOs 애플리케이션 및 디바이스를 등록하려면 다음을 수행하�
 	}
 ```
 
-###Swift
+### Swift
 
 ```
 	//For Swift
@@ -202,11 +202,11 @@ iOs 애플리케이션 및 디바이스를 등록하려면 다음을 수행하�
 	}
 ```
 
-##토큰을 푸시 알림에 전달
+## 토큰을 푸시 알림에 전달
 
 APNs에서 토큰이 수신되면 이 토큰을 `registerDevice:withDeviceToken` 메소드의 일부로 푸시 알림에 전달하십시오. 
 
-###Objective-C
+### Objective-C
 
 ```
 //For Objective-C
@@ -225,7 +225,7 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 }];
 ```
 
-###Swift
+### Swift
 
 APNS에서 토큰이 수신되면 이 토큰을 `didRegisterForRemoteNotificationsWithDeviceToken` 메소드의 일부로 푸시 알림에 전달하십시오. 
 
@@ -253,7 +253,7 @@ func application (application: UIApplication, didRegisterForRemoteNotificationsW
 
 iOS 디바이스에서 푸시 알림을 수신합니다. 
 
-##Objective-C
+## Objective-C
 iOS 디바이스에서 푸시 알림을 수신하려면 애플리케이션의 위임자에 다음 Objective-C 메소드를 추가하십시오.
 
 ```
@@ -263,7 +263,7 @@ iOS 디바이스에서 푸시 알림을 수신하려면 애플리케이션의 �
 }
 ```
 
-##Swift
+## Swift
 iOS 디바이스에서 푸시 알림을 수신하려면 애플리케이션의 위임자에 다음 Swift 메소드를 추가하십시오.
 
 ```

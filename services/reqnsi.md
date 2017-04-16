@@ -11,7 +11,7 @@ lastupdated: "2017-01-11"
 {:shortdesc: .shortdesc}
 
 
-#Services
+# Services
 {: #services}
 
 You can find available services in the **Catalog** under **Services** in the {{site.data.keyword.Bluemix}} user interface.
@@ -60,7 +60,7 @@ To use a service in the {{site.data.keyword.Bluemix_notm}} user interface, cf co
 
 3. Write your own code in your application to interact with the service.
 
-##Services by region
+## Services by region
 
 Not all services are available in every {{site.data.keyword.Bluemix_notm}} region. The following table shows the services that are provided by IBM.
 

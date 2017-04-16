@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#クラウドへの {{site.data.keyword.streamsshort}} アプリケーションのデプロイ
+# クラウドへの {{site.data.keyword.streamsshort}} アプリケーションのデプロイ
 {: #t_deploytocloud}
 
 {{site.data.keyword.streamsshort}} アプリケーションを、{{site.data.keyword.Bluemix_short}} クラウドで稼働している {{site.data.keyword.streaminganalyticsshort}} インスタンスにデプロイすることができます。

@@ -70,7 +70,7 @@ Un magasin de clés contenant un certificat pour les environnements de développ
 
 1. Dans la boîte de dialogue des données d'identification Google Console, recherchez la ligne qui commence par `SHA1` sous la rubrique relative aux empreintes digitales de certificat. Copiez la valeur d'empreinte digitale qui a été obtenue en exécutant la commande **keytool** dans la zone de texte.
 
-###Nom du package
+### Nom du package
 
 1. Dans la boîte de dialogue des données d'identification, entrez le nom du package de votre application Android.
 
@@ -83,7 +83,7 @@ Un magasin de clés contenant un certificat pour les environnements de développ
 
 1. Quand vous avez terminé, cliquez sur **Créer**. Ceci finalise la création des données d'identification.
 
-###ID client Google
+### ID client Google
 {: #google-client-id}
 
 Une fois les données d'identification créées, la page relative à ces données affiche votre ID client Google. Notez cette valeur. Vous devez l'enregistrer dans l'application {{site.data.keyword.Bluemix}}.

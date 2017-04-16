@@ -22,12 +22,12 @@ Dopo aver definito le politiche da monitorare per {{site.data.keyword.DRA_full}}
 
 Puoi integrare {{site.data.keyword.DRA_short}} in un progetto Jenkins o tra più progetti correlati a Jenkins. Questo ti consente di configurare gate di qualità così come di ricevere i dati sulla qualità della build nel dashboard {{site.data.keyword.DRA_short}}.
 
-##Prerequisiti    
+## Prerequisiti    
 {: #DI_jenkins_prereqs}
 
 * Devi accedere a un progetto Jenkins locale o al server in esecuzione su un progetto Jenkins.
 
-##Installazione del plugin {{site.data.keyword.DRA_short}}
+## Installazione del plugin {{site.data.keyword.DRA_short}}
 {: #DI_jenkins_install}
 
 Per installare il plugin {{site.data.keyword.DRA_short}} nel tuo progetto Jenkins, segui queste istruzioni:
@@ -38,7 +38,7 @@ Per installare il plugin {{site.data.keyword.DRA_short}} nel tuo progetto Jenkin
   4. Fai clic su **Upload**.
   5. Riavvia Jenkins e verifica che il plugin sia stato installato.
 
-##Integrazione di {{site.data.keyword.DRA_short}} con Jenkins    
+## Integrazione di {{site.data.keyword.DRA_short}} con Jenkins    
 {: #DI_jenkins_integrate}
 
 Dopo aver installato il plugin, ma prima di integrare {{site.data.keyword.DRA_short}} nella tua installazione Jenkins, vai al [centro di controllo](https://control-center.stage1.ng.bluemix.net/) e crea almeno una politica.

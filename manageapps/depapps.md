@@ -506,7 +506,7 @@ To configure the startup environment for your application, you can add shell scr
 export NODE_ENV=production;
 ```
 
-###Preventing files and directories from being uploaded
+### Preventing files and directories from being uploaded
 
 When you use the cf command line interface to deploy an application, you can save upload time by skipping certain files and directories that {{site.data.keyword.Bluemix_notm}} can obtain elsewhere. To prevent these files and directories from being uploaded to {{site.data.keyword.Bluemix_notm}}, you can create a `.cfignore` file at the root directory of your application.
 

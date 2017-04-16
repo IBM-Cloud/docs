@@ -148,7 +148,7 @@ BMSClient.initialize(<applicationBluemixRegion>);
 
 **注:** `<applicationBluemixRegion>` を、{{site.data.keyword.Bluemix_notm}} サービスがホストされている地域 ([開始する前に](#before-you-begin)を参照) に置き換えます。
 
-##ネイティブ・コードからの {{site.data.keyword.amashort}} AuthorizationManager の初期化
+## ネイティブ・コードからの {{site.data.keyword.amashort}} AuthorizationManager の初期化
 {: #initializing-auth-manager}
 
 `BMSAuthorizationManager` を使用するためには、以下のコード・スニペットを追加する必要があります。以下のネイティブ・コードは、{{site.data.keyword.amashort}} サービス `tenantId` ([開始する前に](#before-you-begin)を参照) を使用して、`BMSAuthorizationManager` を初期化します。

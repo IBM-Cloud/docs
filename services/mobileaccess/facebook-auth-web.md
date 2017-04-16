@@ -191,7 +191,7 @@ The next step is to obtain the access and identity tokens using the previously r
 
 	Once you have gained access and received the identity tokens, you can flag web session as authenticated, and optionally persist these tokens.  
 
-##Using obtained access and identity token
+## Using obtained access and identity token
 {: #facebook-auth-using-token}
 
 The identity token contains information about user identity. In case of Facebook authentication, the token will contain all the information user agreed to share, such as full name, age group, url of the profile photo, etc.  

@@ -11,7 +11,7 @@ lastupdated: "2017-3-16"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#Sharing text-based pipelines in sample projects {: #share-pipeline}
+# Sharing text-based pipelines in sample projects {: #share-pipeline}
 
 For sample projects that are deployed to {{site.data.keyword.Bluemix_notm}} through the Deploy to {{site.data.keyword.Bluemix_notm}} button, you can define pipeline configurations as YAML files. Pipelines that are defined as text can be shared so that the people who fork your project don't have to configure their own pipelines. This feature is under development: the YAML format and implementation might change at any time. Currently, this feature is available only for projects with Git and GitHub repositories that target {{site.data.keyword.Bluemix_notm}}. 
 {: shortdesc} 
@@ -76,7 +76,7 @@ stages:
 ```
 {: codeblock} 
 
-##YAML file syntax {: #yaml-syntax}
+## YAML file syntax {: #yaml-syntax}
 
 Any pipeline can be represented textually by using the following syntax.
 
@@ -153,11 +153,11 @@ space: <space name>
 ```
 {: codeblock} 
 
-##Extension jobs and extension definitions {: #extension-jobs} 
+## Extension jobs and extension definitions {: #extension-jobs} 
 
 Extension definitions define the set of properties that are available to extension jobs. A job is treated as an extension job when the `extension_id` property is specified. To find out which properties are available for an extension, consult its documentation. 
 
-##Interacting with pipelines by using a YAML file {: #pipeline-yaml} 
+## Interacting with pipelines by using a YAML file {: #pipeline-yaml} 
 
 **ENVIRONMENT VARIABLES AND RESOLUTION** 
 <!-- Formating for this? -->

@@ -48,7 +48,7 @@ Se vuoi personalizzare le proprietà di avviso, badge e audio,
 
 
 
-##JavaScript
+## JavaScript
 {: #cordova_register_js}
 
 ```
@@ -118,7 +118,7 @@ Aggiungi il seguente frammento di codice Objective-C alla classe delegato della 
 	}
 ```
 
-##Swift
+## Swift
 {: #cordova_register_swift}
 Aggiungi il seguente frammento di codice Swift alla classe delegato della tua applicazione.
 
@@ -132,7 +132,7 @@ CDVMFPPush.sharedInstance().didFailToRegisterForRemoteNotifications(error)
 }
 ```
 
-##Passi successivi
+## Passi successivi
 {: #cordova_register_next}
 
 1. Crea il tuo progetto e quindi eseguilo utilizzando i seguenti comandi:

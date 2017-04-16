@@ -343,12 +343,12 @@ Vous pouvez vous attendre à obtenir un processus similaire à la liste suivante
 
 Une fois votre instance {{site.data.keyword.Bluemix_notm}} configurée, vous pouvez surveiller et gérer votre instance {{site.data.keyword.Bluemix_notm}} via la page Administration. Pour plus d'informations, voir [Gestion de l'environnement {{site.data.keyword.Bluemix_notm}} local et de l'environnement Bluemix dédié](../admin/index.html#mng). Pour plus d'informations sur les mises à niveau et la maintenance, voir [Gestion de votre instance dédiée](index.html#maintaindedicated).
 
-##Rôles et responsabilités
+## Rôles et responsabilités
 {: #rolesresponsibilities}
 
 Si vous configurez un compte {{site.data.keyword.Bluemix_dedicated_notm}}, vous identifiez les personnes de votre organisation à affecter aux rôles nécessaires à la configuration et à l'exécution de votre instance.
 
-###Rôles
+### Rôles
 
 La liste suivante répertorie les rôles et les responsabilités des clients que vous attribuez :
 
@@ -466,7 +466,7 @@ cette phase sont les suivantes :
 |Recycler l'infrastructure | Votre environnement est recyclé selon les processus définis par {{site.data.keyword.BluSoftlayer}}. | IBM |
 {: caption="Table 7. Completion phase tasks" caption-side="top"}
 
-##Gestion de votre instance dédiée
+## Gestion de votre instance dédiée
 {: #maintaindedicated}
 
 IBM gère et installe les mises à jour et les correctifs qu'elle juge nécessaires pour les contextes d'exécution et les services
@@ -611,7 +611,7 @@ stockage sont configurés avec des capacités de rétablissement automatique en 
 <dd>Les métadonnées sont sauvegardées avec {{site.data.keyword.BluSoftlayer}} EVault Backup dans une zone qui se trouve à au moins 200 kilomètres.</dd>
 </dl>
 
-##Restauration de votre instance dédiée
+## Restauration de votre instance dédiée
 {: #restorededicated}
 
 Les paramètres, les métadonnées et les configurations de l'environnement

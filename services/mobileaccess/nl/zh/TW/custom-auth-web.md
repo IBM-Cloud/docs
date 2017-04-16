@@ -11,7 +11,7 @@ lastupdated: "2017-01-08"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-#配置適用於 {{site.data.keyword.amashort}} Web 應用程式的自訂鑑別
+# 配置適用於 {{site.data.keyword.amashort}} Web 應用程式的自訂鑑別
 {: #custom-web}
 
 將自訂鑑別及 {{site.data.keyword.amafull}} 安全功能新增至 Web 應用程式。
@@ -37,7 +37,7 @@ lastupdated: "2017-01-08"
 * [配置 {{site.data.keyword.amashort}} 進行自訂鑑別](custom-auth-config-mca.html)
 
 
-##配置自訂身分提供者
+## 配置自訂身分提供者
 {: #custom-auth-config}
 
 建立自訂身分提供者時，您必須定義 POST 方法，其中包含結構如下的路徑：
@@ -104,7 +104,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 {: codeblock}
 
 
-##配置 {{site.data.keyword.amashort}} 進行自訂鑑別
+## 配置 {{site.data.keyword.amashort}} 進行自訂鑑別
 {: #custom-auth-config-mca}
 
 配置您的自訂身分提供者之後，您可以在 {{site.data.keyword.amashort}} 儀表板中啟用自訂鑑別。
@@ -117,7 +117,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 1. 按一下**儲存**。
 
 
-##使用自訂身分提供者實作 {{site.data.keyword.amashort}} 授權流程
+## 使用自訂身分提供者實作 {{site.data.keyword.amashort}} 授權流程
 {: #custom-auth-flow}
 
 `VCAP_SERVICES` 環境變數是針對每一個 {{site.data.keyword.amashort}} 服務實例自動建立的，並且包含授權處理程序所需的內容。其由 JSON 物件組成，您可以在 {{site.data.keyword.amashort}} 儀表板的**服務認證**標籤中進行檢視。
@@ -190,7 +190,7 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 
 	重新導向之後，使用者將取得登入表單。自訂身分提供者鑑別使用者的認證之後，{{site.data.keyword.amashort}} 服務會呼叫 Web 應用程式重新導向 URI，以提供授權碼作為查詢參數。
 
-##取得記號
+## 取得記號
 {: custom-auth-tokens}
 
 下一步是使用先前收到的授權碼，取得存取記號及身分記號。為了能夠這樣做，請執行下列動作：
@@ -255,7 +255,7 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 	收到存取權和身分記號之後，您可以將 Web 階段作業標示為已鑑別，並可選擇持續保存這些記號。
 
 
-##使用取得的存取及身分記號
+## 使用取得的存取及身分記號
 {: #custom-auth-using-token}
 
 身分記號包含使用者身分的相關資訊。若為自訂鑑別，記號將包含自訂身分提供者在鑑別時所傳回的所有資訊。在 `imf.user` 欄位下，欄位 `displayName` 將包含自訂身分提供者所傳回的 `displayName`，而欄位 `id` 將包含 `userName`。`imf.user` 下的欄位 `attributes` 內會傳回自訂身分提供者所傳回的所有其他值。  
@@ -264,7 +264,7 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-####提示：
+#### 提示：
 {: #tips_token}
 
 * `<accessToken>` 及 `<idToken>` 必須以空格區隔。

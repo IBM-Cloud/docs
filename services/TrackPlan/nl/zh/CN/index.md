@@ -15,7 +15,7 @@ copyright:
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#{{site.data.keyword.trackplan}} 入门 {: #track-plan}  
+# {{site.data.keyword.trackplan}} 入门 {: #track-plan}  
 
 *上次更新时间：2016 年 4 月 27 日*
 {: .last-updated}

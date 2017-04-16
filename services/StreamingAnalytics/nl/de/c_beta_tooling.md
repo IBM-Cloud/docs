@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Entwicklungstools und Entwicklungsumgebung
+# Entwicklungstools und Entwicklungsumgebung
 {: #c_beta_tooling}
 
 

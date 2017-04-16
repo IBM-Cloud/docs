@@ -11,7 +11,7 @@ lastupdated: "2017-01-11"
 {:shortdesc: .shortdesc}
 
 
-#Services
+# Services
 {: #services}
 
 {{site.data.keyword.Bluemix_notm}} simplifie l'implémentation, l'hébergement et la mise à l'échelle des services et des applications. Ainsi,
@@ -31,7 +31,7 @@ gravité que vous définissez. Pour plus d'informations sur la gravité des tick
 |Bêta	|Service qui n'est pas prêt pour la phase de production et qui se trouve au stade d'essai de développement. Un service bêta peut aider les équipes de développement et marketing à évaluer la valeur d'un service avant de le rendre généralement disponible.	|Les problèmes identifiés comme défauts dans un service bêta fourni par IBM sont pris en charge, mais IBM n'est pas obligée de fournir un correctif. De plus, le ticket de problème sera associé à une gravité de 3 ou 4 si applicable. Pour des informations sur la gravité des tickets, voir [Contacter le service de support](/docs/support/index.html#contacting-bluemix-support).|
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} information du service de support" caption-side="top"}
 
-##Services expérimentaux
+## Services expérimentaux
 {: #experimental_services}
 
 {{site.data.keyword.Bluemix_notm}}
@@ -45,7 +45,7 @@ Les services expérimentaux peuvent
 environnements de production n'est pas recommandée. Le support des services expérimentaux est assuré par la communauté des développeurs {{site.data.keyword.Bluemix_notm}}. Si IBM examine un problème et
 détermine qu'il s'agit d'un défaut d'un service expérimental, elle n'est pas obligée de fournir un correctif.
 
-##Services par région
+## Services par région
 {: #services_region}
 
 Les services ne sont pas tous disponibles à l'achat dans toutes les régions {{site.data.keyword.Bluemix_notm}}. De plus, même si le

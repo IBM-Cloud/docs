@@ -69,7 +69,7 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
 
 Un certificado lo emite una entidad emisora de certificados, que lo firma digitalmente. Después de crear la CSR, puede generar el certificado SSL en una entidad emisora de certificados pública.
 
-##Carga de certificados SSL
+## Carga de certificados SSL
 {: #ssl_certificate}
 
 Puede aplicar un protocolo de seguridad para proporcionar privacidad de comunicación a la aplicación a fin de impedir escuchas no autorizadas, manipulación indebida e interferencia de mensajes.

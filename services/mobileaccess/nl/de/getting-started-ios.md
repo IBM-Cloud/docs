@@ -107,13 +107,13 @@ Informationen zum Abrufen der Werte für `applicationRoute` und `applicationGUID
 ## AuthorizationManager initialisieren
 Initialisieren Sie den `AuthorizationManager` durch Übergeben des Parameters `tenantId` des {{site.data.keyword.amashort}}-Service. Informationen zum Abrufen dieser Werte finden Sie unter [Vorbereitungen](#before-you-begin). 
 
-####Objective-C
+#### Objective-C
 
 ```Objective-C
 [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"<tenantId>"];
 ```
 
-####Swift
+#### Swift
 
 ```Swift
 IMFAuthorizationManager.sharedInstance().initializeWithTenantId("<tenantId>")

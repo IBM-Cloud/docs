@@ -13,7 +13,7 @@ copyright:
 {:pre: .pre}
 
 
-#Introdução ao {{site.data.keyword.streaminganalyticsshort}}
+# Introdução ao {{site.data.keyword.streaminganalyticsshort}}
 {: #gettingstarted}
 
 O {{site.data.keyword.streaminganalyticsshort}} foi desenvolvido com o {{site.data.keyword.streamsshort}}, uma plataforma analítica avançada que

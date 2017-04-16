@@ -13,7 +13,7 @@ lastupdated: "2017-02-03"
 {:codeblock:.codeblock}
 
 
-#导出和共享 Kibana 仪表板
+# 导出和共享 Kibana 仪表板
 <!-- for example, Uploading your data -->
 {: #exporting_sharing_kibana_dash}
 <!-- Provide an appropriate ID above -->

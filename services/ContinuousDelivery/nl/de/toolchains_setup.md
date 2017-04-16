@@ -19,7 +19,7 @@ Sie können eine Toolchain auf zwei Arten erstellen: Entweder Sie verwenden eine
 
 **Wichtig**: Diese Funktionalität ist experimentell. Toolchains können instabil und Änderungen unterworfen sein, die nicht mit früheren Versionen kompatibel sind. Der Einsatz in Produktionsumgebungen wird nicht empfohlen. Zur Verwendung von Toolchains muss eine einmalige [Zugriffsanforderung](https://new-console.ng.bluemix.net/devops?cm_mmc=IBMBluemixGarageMethod-_-MethodSite-_-10-19-15::12-31-18-_-toolchains-welcome-page){: new_window} ausgeführt werden. Toolchains sind nur in den USA (Region Dallas) verfügbar.
 
-##Toolchain aus einer Vorlage erstellen   
+## Toolchain aus einer Vorlage erstellen   
 {: #creating_a_toolchain_from_a_template}
 
 Nachdem Ihre Anforderung für den Zugriff auf Toolchains genehmigt wurde, können Sie eine Vorlage als Ausgangspunkt zum Erstellen einer Toolchain verwenden, die eine bestimmte Gruppe von Toolintegrationen enthält.
@@ -33,7 +33,7 @@ Nachdem Ihre Anforderung für den Zugriff auf Toolchains genehmigt wurde, könne
 1. Wenn Sie die Toolchain vor der Konfiguration von Toolintegrationen erstellen möchten, klicken Sie auf **Erstellen** und bestätigen Sie, dass Sie die Toolchain ohne Toolintegrationen erstellen möchten. Fahren Sie mit dem Abschnitt zum [Erstellen einer Toolchain](#creating_a_toolchain) fort, in dem die Schritte zur automatischen Konfiguration der Toolchain beschrieben werden.  
 1. Wenn Sie die Toolintegrationen vor der Erstellung der Toolchain konfigurieren möchten, wählen Sie im Abschnitt mit den konfigurierbaren Integrationen die Toolintegrationen aus, die Sie konfigurieren möchten. Informationen zum Konfigurieren der Toolintegrationen finden Sie unter [Toolintegrationen konfigurieren](../toolchains/toolchains_integrations.html){: new_window}. 
 
-##Toolchain aus einer App erstellen
+## Toolchain aus einer App erstellen
 {: #creating_a_toolchain_from_an_app}
 
 Nachdem Ihre Anforderung für den Zugriff auf Toolchains genehmigt wurde, können Sie eine Toolchains aus Ihrer App erstellen. Die Toolchain kann kontinuierliche Entwicklung, Bereitstellung, Überwachung und mehr unterstützen und sie ist Ihrer App zugeordnet. Jede App kann einer Toolchain zugeordnet sein. Wenn Sie Änderungen per Push-Operation an das GitHub-Repository der Toolchain übertragen, erstellt die Pipeline automatisch Builds und stellt die App bereit.  
@@ -55,7 +55,7 @@ Wenn Sie Ihre Toolchain noch nicht erstellt haben, klicken Sie auf **Erstellen**
  * Falls Sie die Slack-Toolintegration konfiguriert haben, wird die Slack-Integration konfiguriert, um Benachrichtigungen an den in Slack konfigurierten Kanal zu senden. Diese Benachrichtigungen geben den Entwicklungsfortschritt an, z. B. `Verbunden mit Projekt XYZ`, `Pipeline konfiguriert` und `Stage 'Build' gestartet`.
  * Falls Sie die GitHub-Toolintegration konfiguriert haben, wird das GitHub-Beispielrepository in Ihr GitHub-Konto geklont.  
  
-##Toolchain anzeigen
+## Toolchain anzeigen
 {: #viewing_a_toolchain}
 
 Nach dem Konfigurieren der Toolchain und aller Toolintegrationen wird die Seite für Toolintegrationen geöffnet.

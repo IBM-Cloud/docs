@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Operatori toolkit compatibili
+# Operatori toolkit compatibili
 {: #c_beta_adapters}
 
 Gli operatori {{site.data.keyword.streamsshort}} nel toolkit standard {{site.data.keyword.streamsshort}} Processing Language (SPL) dovrebbero essere tutti compatibili con {{site.data.keyword.streaminganalyticsshort}}.

@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#将入门模板应用程序推送至 {{site.data.keyword.Bluemix_short}}
+# 将入门模板应用程序推送至 {{site.data.keyword.Bluemix_short}}
 {: #pushing_starter_app}
 
 
@@ -33,7 +33,7 @@ lastupdated: "2017-02-09"
 cf logincf push myapp
 </code></pre>
 
-##接下来执行的操作
+## 接下来执行的操作
 
 * 转至可从 {{site.data.keyword.Bluemix_short}} 仪表板访问的应用程序概述页面，以验证应用程序已成功启动。
 * 启动应用程序，以在浏览器中进行查看。可以在应用程序概述页面上找到应用程序的 URL（或“路径”）。样本应用程序的网页显示有关应用程序代码中 REST API 调用的状态和 {{site.data.keyword.geospatialshort_Geospatial}} 检测到的事件的信息。

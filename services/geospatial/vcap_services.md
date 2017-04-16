@@ -13,14 +13,14 @@ lastupdated: "2017-03-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#VCAP_SERVICES environment information
+# VCAP_SERVICES environment information
 {: #vcap_services}
 
 
 The VCAP_SERVICES environment variable includes information that is required to use the {{site.data.keyword.geospatialshort_Geospatial}} REST API.
 {:shortdesc}
 
-##Description
+## Description
 {: #vcap_description}
 
 The VCAP_SERVICES environment variable includes information similar to the following example:
@@ -65,7 +65,7 @@ The VCAP_SERVICES environment variable includes the following items:
 * add_region_path: The path that is used by the add_region method of the REST API.
 
 
-##Example: Retrieving VCAP_SERVICES environment variable information
+## Example: Retrieving VCAP_SERVICES environment variable information
 {: #vcap_example}
 
 The following Node.js code retrieves the service environment information:

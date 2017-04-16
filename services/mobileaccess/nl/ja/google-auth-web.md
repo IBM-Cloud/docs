@@ -193,7 +193,7 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 	アクセス・トークンおよび識別トークンを受け取ったら、Web セッションに認証済みのフラグを立てることができ、オプションでこれらのトークンを永続的に保持できます。  
 
 
-##取得したアクセス・トークンおよび識別トークンの使用
+## 取得したアクセス・トークンおよび識別トークンの使用
 {: #google-auth-using-token}
 
 識別トークンには、ユーザー ID に関する情報が含まれます。Google 認証の場合、このトークンには、ユーザーが共有することに同意したすべての情報 (氏名、プロファイル写真の URL など) が含まれます。  
@@ -204,7 +204,7 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-####ヒント:
+#### ヒント:
 {: #tips}
 
 * `accessToken` と `idToken` は空白で分離する必要があります。

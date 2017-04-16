@@ -10,7 +10,7 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-#Habilitación de {{site.data.keyword.mobilepushshort}} avanzado
+# Habilitación de {{site.data.keyword.mobilepushshort}} avanzado
 Última actualización: 23 de enero de 2017
 {: .last-updated}
 
@@ -26,7 +26,7 @@ Configure un identificador y un sonido de iOS, y carga útil adicional de JSON.
 	- **Archivo de sonido**: Escriba una serie que apunte al archivo de sonido de la app móvil. En la carga útil, especifique el nombre de serie del archivo de sonido a utilizar.
 	- **Identificador iOS**: Para dispositivos iOS, el número que se mostrará como el identificador del icono de app. Si falta esta propiedad, el identificador no se modificará. Para eliminar el identificador, establezca el valor de esta propiedad en 0.
 	
-###Android
+### Android
 
 Añada el archivo de sonido en el directorio `res/raw` de la aplicación android. Al enviar la notificación, añada el nombre del archivo de sonido en el campo de sonido de {{site.data.keyword.mobilepushshort}}.
 
@@ -39,7 +39,7 @@ Añada el archivo de sonido en el directorio `res/raw` de la aplicación android
 ```
     {: codeblock}	
 	
-###iOS
+### iOS
 
 ```
 "settings": {

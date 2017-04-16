@@ -104,7 +104,7 @@ GUID do App. Modifique o fragmento de código para usar os parâmetros appRoute 
 do app Bluemix.
 
 
-##Inicializar o SDK principal
+## Inicializar o SDK principal
 
 ```
 // Inicialize o SDK for Java (Android) com o GUID do app IBM Bluemix e roteie
@@ -129,7 +129,7 @@ Especifica o local em que o app está hospedado. Você pode usar um de três val
 - BMSClient.REGION_UK
 - BMSClient.REGION_SYDNEY
 
-##Inicializar o Push SDK do cliente
+## Inicializar o Push SDK do cliente
 
 ```
 //Inicialize o Push SDK for Java do cliente

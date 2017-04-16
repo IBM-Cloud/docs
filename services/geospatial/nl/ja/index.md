@@ -14,7 +14,7 @@ lastupdated: "2017-02-09"
 {:pre: .pre}
 
 
-#{{site.data.keyword.geospatialshort_Geospatial}} 概説
+# {{site.data.keyword.geospatialshort_Geospatial}} 概説
 {: #gettingstarted}
 
 {{site.data.keyword.geospatialfull}} を使用すると、 移動中のデバイスを

@@ -10,7 +10,7 @@ lastupdated: "2016-10-26"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#Accesso al sistema
+# Accesso al sistema
 {: #system_access}
 
 

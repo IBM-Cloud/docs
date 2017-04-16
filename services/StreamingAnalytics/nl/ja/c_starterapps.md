@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#{{site.data.keyword.streaminganalyticsshort}} スターター・アプリケーションの使用
+# {{site.data.keyword.streaminganalyticsshort}} スターター・アプリケーションの使用
 {: #starterapps}
 
 スターター・アプリケーションをデプロイして変更すると、{{site.data.keyword.streaminganalyticsshort}} サービスの使用法がすぐに分かります。

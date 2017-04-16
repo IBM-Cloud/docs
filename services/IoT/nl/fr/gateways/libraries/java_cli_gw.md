@@ -12,7 +12,7 @@ lastupdated: "2017-03-14"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-#Développement de passerelles sur {{site.data.keyword.iot_short_notm}} à l'aide de Java
+# Développement de passerelles sur {{site.data.keyword.iot_short_notm}} à l'aide de Java
 {: #java_cli_gw}
 
 Si vos terminaux ne peuvent pas se connecter directement à votre organisation sur {{site.data.keyword.iot_full}}, vous pouvez créer et personnaliser des passerelles à l'aide de Java. Une bibliothèque client Java pour {{site.data.keyword.iot_short_notm}}, de la documentation, ainsi que des exemples vous sont fournis pour vous permettre de vous initier au développement de passerelle.

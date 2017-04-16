@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Distribuzione delle applicazioni starter su {{site.data.keyword.Bluemix_short}}
+# Distribuzione delle applicazioni starter su {{site.data.keyword.Bluemix_short}}
 {: #starterapps_deploy}
 
 Puoi trasmettere e distribuire una delle applicazioni starter di {{site.data.keyword.streaminganalyticsshort}} al cloud

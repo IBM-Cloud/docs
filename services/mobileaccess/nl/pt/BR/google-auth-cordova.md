@@ -145,7 +145,7 @@ Authorization Manager no Objective-C no arquivo
 `AppDelgate.m`.
 
 ```
-#import "<your_module_name>-Swift.h"
+# import "<your_module_name>-Swift.h"
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 

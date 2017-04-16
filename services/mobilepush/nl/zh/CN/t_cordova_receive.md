@@ -10,7 +10,7 @@ copyright:
 
 复制并粘贴以下代码片段，以在设备上接收推送通知。
 
-##JavaScript
+## JavaScript
 
 将以下 JavaScript 代码片段添加到 Cordova 应用程序的 Web 部分中。
 
@@ -23,7 +23,7 @@ var notification = function(notification){
 MFPPush.registerNotificationsCallback(notification);
 ```
 
-##Android 通知属性
+## Android 通知属性
 
 以下部分列出了 Android 通知属性：
 
@@ -31,7 +31,7 @@ MFPPush.registerNotificationsCallback(notification);
 * payload - 包含通知有效内容的 JSON 对象
 
 
-##iOS 通知属性
+## iOS 通知属性
 
 以下部分列出了 iOS 通知属性：
 
@@ -41,7 +41,7 @@ MFPPush.registerNotificationsCallback(notification);
 * badge - 要显示为应用程序图标角标的数字。如果缺少此属性，那么角标不会改变。要除去角标，请将此属性的值设置为 0。
 * sound - 应用程序捆绑包中或应用程序数据容器的 Library/Sounds 文件夹中声音文件的名称。
 
-##Objective-C
+## Objective-C
 
 将以下 Objective-C 代码片段添加到应用程序代表类中。
 
@@ -61,7 +61,7 @@ MFPPush.registerNotificationsCallback(notification);
 }
 ```
 
-##Swift
+## Swift
 
 将以下 Swift 代码片段添加到应用程序代表类中。
 

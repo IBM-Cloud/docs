@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Panel de control del servicio
+# Panel de control del servicio
 {: #dashboard}
 
 Puede acceder al servicio {{site.data.keyword.streaminganalyticsshort}} desde el panel de control del servicio {{site.data.keyword.Bluemix_short}}. 

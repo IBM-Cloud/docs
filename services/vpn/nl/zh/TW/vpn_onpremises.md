@@ -23,7 +23,7 @@ copyright:
 * [使用 SoftLayer Gateway Appliance Service (GaaS) 配置 IBM VPN](vpn_onpremises.html#gaas)
 * [使用 Cisco ASA 配置 IBM VPN](vpn_onpremises.html#cisco)
 
-##使用 strongSwan 配置 IBM VPN 服務
+## 使用 strongSwan 配置 IBM VPN 服務
 {: #strongswan} 
 
 IBM VPN 設定使用下列範例配置：
@@ -37,7 +37,7 @@ IBM VPN 設定使用下列範例配置：
 * VPN 閘道 IP 位址（客戶閘道 IP）：169.55.254.166
 * 與端點連接的子網路位址（客戶子網路）：10.121.33.192/26 
 
-###若要搭配使用 IBM VPN 服務與 strongSwan，請如下進行配置：
+### 若要搭配使用 IBM VPN 服務與 strongSwan，請如下進行配置：
 
 1. [配置閘道](index.html#gateway)。  
 2. [配置網站連線](index.html#site)。  
@@ -155,7 +155,7 @@ IBM VPN 設定使用下列範例配置：
 		```
 		{: screen}  
 
-##使用 Vyatta 配置 IBM VPN 服務
+## 使用 Vyatta 配置 IBM VPN 服務
 {: #vyatta} 
 
 IBM VPN 設定使用下列範例配置：
@@ -169,7 +169,7 @@ IBM VPN 設定使用下列範例配置：
 * VPN 閘道 IP 位址（客戶閘道 IP）：173.192.83.82
 * 與端點連接的子網路位址（客戶子網路）：192.168.201.0/24 
 
-###若要搭配使用 IBM VPN 服務與 Vyatta，請如下進行配置：
+### 若要搭配使用 IBM VPN 服務與 Vyatta，請如下進行配置：
 
 1. [配置閘道](index.html#gateway)。
 2. [配置網站連線](index.html#site)。 
@@ -437,7 +437,7 @@ IBM VPN 設定使用下列範例配置：
 		```
 		{: screen}  
 
-##使用 SoftLayer Gateway Appliance Service (GaaS) 配置 IBM VPN 服務
+## 使用 SoftLayer Gateway Appliance Service (GaaS) 配置 IBM VPN 服務
 {: #gaas} 
 
 IBM VPN 設定使用下列範例配置：
@@ -452,7 +452,7 @@ IBM VPN 設定使用下列範例配置：
 * 與端點連接的子網路位址（客戶子網路）：10.86.88.128/26
 * 預先共用金鑰字串：567890 
 
-###若要搭配使用 IBM VPN 服務與 SoftLayer GaaS，請如下進行配置：
+### 若要搭配使用 IBM VPN 服務與 SoftLayer GaaS，請如下進行配置：
 
 1. 配置 SoftLayer GaaS：
 
@@ -652,7 +652,7 @@ IBM VPN 設定使用下列範例配置：
 	```
 	{: screen}
 
-##使用 Cisco ASA 配置 IBM VPN 服務
+## 使用 Cisco ASA 配置 IBM VPN 服務
 {: #cisco}
 
 IBM VPN 設定使用下列範例配置：
@@ -666,7 +666,7 @@ IBM VPN 設定使用下列範例配置：
 * VPN 閘道 IP 位址（客戶閘道 IP）：62.95.35.53
 * 與端點連接的子網路位址（客戶子網路）：10.2.0.0/16
 
-###若要搭配使用 IBM VPN 服務與 Cisco ASA，請如下進行配置：
+### 若要搭配使用 IBM VPN 服務與 Cisco ASA，請如下進行配置：
 
 1. [配置閘道](index.html#gateway)。
 2. [配置網站連線](index.html#site)。

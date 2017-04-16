@@ -50,7 +50,7 @@ web part de seu aplicativo Cordova.
 
 
 
-##JavaScript
+## JavaScript
 {: #cordova_register_js}
 
 ```
@@ -124,7 +124,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData
 	}
 ```
 
-##Swift
+## Swift
 {: #cordova_register_swift}
 Inclua o seguinte fragmento de código Swift em sua classe de
 delegação de aplicativo.
@@ -139,7 +139,7 @@ funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificati
 }
 ```
 
-##Próximas Etapas
+## Próximas Etapas
 {: #cordova_register_next}
 
 1. Compile seu projeto e, em seguida, execute-o usando os comandos a seguir:

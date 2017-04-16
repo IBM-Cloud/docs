@@ -27,7 +27,7 @@ FCM vu qu'un noeud final est utilisé pour distribuer des messages dans Chrome. 
 
 
 
-##Configuration pour notification push Web sur Chrome et Firefox 
+## Configuration pour notification push Web sur Chrome et Firefox 
 {: #config-chrome-firefox}
 
 1. Dans le panneau du tableau de bord Push, sélectionnez **Configurer**.

@@ -14,7 +14,7 @@ lastupdated: "2017-02-09"
 {:pre: .pre}
 
 
-#{{site.data.keyword.streaminganalyticsshort}} 시작하기
+# {{site.data.keyword.streaminganalyticsshort}} 시작하기
 {: #gettingstarted}
 
 {{site.data.keyword.streaminganalyticsshort}}는 실시간으로 다양한 유형의 데이터 소스에서 도착하는 정보를 삽입, 분석, 상관시키기 위해 사용할 수 있는 고급 분석 플랫폼인 {{site.data.keyword.streamsshort}}에서 제공합니다. {{site.data.keyword.streaminganalyticsshort}} 서비스의 인스턴스를 작성하면 {{site.data.keyword.streamsshort}} 애플리케이션을 실행할 준비가 된 {{site.data.keyword.Bluemix_short}} 클라우드에서 자체 {{site.data.keyword.streamsshort}} 인스턴스를 실행할 수 있습니다.

@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Modifica dell'applicazione starter per {{site.data.keyword.Bluemix_short}}
+# Modifica dell'applicazione starter per {{site.data.keyword.Bluemix_short}}
 {: #modifying_starter_app}
 
 Puoi modificare l'applicazione starter e quindi ridistribuirla a {{site.data.keyword.Bluemix_short}} per visualizzarne i risultati.

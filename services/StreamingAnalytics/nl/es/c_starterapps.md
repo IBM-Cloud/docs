@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Uso de las aplicaciones de inicio de {{site.data.keyword.streaminganalyticsshort}}
+# Uso de las aplicaciones de inicio de {{site.data.keyword.streaminganalyticsshort}}
 {: #starterapps}
 
 Despliegue y modifique las aplicaciones de inicio y aprenda rápidamente a utilizar el servicio de {{site.data.keyword.streaminganalyticsshort}}:
