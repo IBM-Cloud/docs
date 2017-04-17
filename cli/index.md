@@ -31,13 +31,13 @@ Download and install the command line tool to support your {{site.data.keyword.B
 
 Both CLI tools use 443 port by default. If you have HTTP proxy between the CLI tools and {{site.data.keyword.Bluemix_notm}} environment, you must configure the `HTTP_PROXY` environment variable with the actual HTTP proxy url and port if there is any. See [Using the CLI with an HTTP Proxy Server ![External link icon](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window} for more details.
 
-[Download {{site.data.keyword.Bluemix_notm}} CLI ![External link icon](../icons/launch-glyph.svg)](http://clis.stage1.ng.bluemix.net/){: new_window} <br> 
+[Download {{site.data.keyword.Bluemix_notm}} CLI ![External link icon](../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/){: new_window} <br> 
 [View Docs](/docs/cli/reference/bluemix_cli/index.html)
 
 ## ![](./images/CLI_Plugin.svg) Command line interface plug-ins
 {: #cliplugins notoc}
 
-Easily extend your {{site.data.keyword.Bluemix_notm}} command line interface with more commands. To access the {{site.data.keyword.Bluemix_notm}} command line interface plug-ins, see the [CLI Plug-in Repository ![External link icon](../icons/launch-glyph.svg)](https://plugins.stage1.ng.bluemix.net/){: new_window}.
+Easily extend your {{site.data.keyword.Bluemix_notm}} command line interface with more commands. To access the {{site.data.keyword.Bluemix_notm}} command line interface plug-ins, see the [CLI Plug-in Repository ![External link icon](../icons/launch-glyph.svg)](https://plugins.ng.bluemix.net/){: new_window}.
 
 ### Extend your {{site.data.keyword.Bluemix_notm}} command line interface: bx
 {: #cli_bluemix_ext notoc}
