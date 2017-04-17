@@ -18,10 +18,12 @@ Continuous Delivery
   {: .navgroup-end}
 
   {: .navgroup id="howto"}
+    upgrade_projects.md
+    
   {: .topicgroup}
     Delivery Pipeline
         pipeline_about.md
-	    pipeline_working.md
+        pipeline_working.md
         pipeline_build_deploy.md
         pipeline_composites.md
         pipeline_deploy_var.md
