@@ -56,15 +56,15 @@ When your project is ready to be upgraded, a message is displayed on the project
 ## Starting the upgrade process
 {: #start_upgrade}
 
-Before you start the upgrade process, you can watch it in action on [YouTube ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://youtu.be/CH7T5W7JAaw){: new_window}. 
-[![External link to YouTube](images/migration-video2.png)](https://youtu.be/CH7T5W7JAaw){: new_window}    
+Before you start the upgrade process, you can watch it in action on [YouTube ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://youtu.be/LSr2e3uvyLs){: new_window}. 
+[![External link to YouTube](images/migration-video2.png)](https://youtu.be/LSr2e3uvyLs){: new_window}    
 To upgrade your project to a toolchain, follow these steps:
 
 1. To start the upgrade process, on the banner message, click **upgrade now**. The "Project upgrade toolchain" page opens. 
 
    ![Example of an upgrade page](images/project-upgrade-toolchain.png)
 
-   For an overview of the upgrade process, read the description on that page. In this case, because the project used a repos at GitHub.com, the toolchain will be connected to the same GitHub repo. If your project used a Git repo that was hosted on JazzHub, the toolchain will not use that repo. Instead, use the Git Repos and Issue Tracking tool integration in your toolchain.
+   For an overview of the upgrade process, read the description on that page. In this case, because the project used a repo at GitHub.com, the toolchain will be connected to the same GitHub repo. If your project used a Git repo that was hosted on JazzHub, the toolchain will not use that repo. Instead, use the Git Repos and Issue Tracking tool integration in your toolchain.
    
    The toolchain will include a new pipeline that contains the same stages and jobs as the project's pipeline. In addition, the toolchain will contain a pointer to the Eclipse Orion {{site.data.keyword.webide}} that runs in {{site.data.keyword.contdelivery_short}}.
 
