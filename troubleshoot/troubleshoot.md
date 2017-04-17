@@ -19,7 +19,7 @@ If you experience problems with {{site.data.keyword.Bluemix}}, you can use this 
 
 Log in to the {{site.data.keyword.Bluemix_notm}} console:
 * To view the status of the running services and runtimes, click **Support > Status** in the menu bar.
-* To view notifications, click **Account > Notifications** in the menu bar. 
+* To view notifications, click **Manage > Account > Notifications** in the menu bar. 
 * To search documentation and Stack Overflow or developerWorks (dW) Answers forums for answers, or to contact Support, click **Suport > Find Answers** in the menu bar.
 
 If your account is linked between {{site.data.keyword.Bluemix_notm}} and {{site.data.keyword.BluSoftlayer}}, log in to the Bluemix console:
