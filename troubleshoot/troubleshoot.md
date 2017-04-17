@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-03-08"
+lastupdated: "2017-03-17"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2017-03-08"
 If you experience problems with {{site.data.keyword.Bluemix}}, you can use this troubleshooting information to identify and resolve the problem.
 
 Log in to the {{site.data.keyword.Bluemix_notm}} console:
-* To view the status of the running services and runtimes, click **Suport > Status** in the menu bar.
+* To view the status of the running services and runtimes, click **Support > Status** in the menu bar.
 * To view notifications, click **Account > Notifications** in the menu bar. 
 * To search documentation and Stack Overflow or developerWorks (dW) Answers forums for answers, or to contact Support, click **Suport > Find Answers** in the menu bar.
 
