@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-14"
+lastupdated: "2017-4-17"
 
 ---
  
@@ -26,7 +26,7 @@ Toolchains are like projects, with a few important differences:
 - Toolchains can include tools that aren't available in projects, such as Slack, Sauce Labs, PagerDuty, and {{site.data.keyword.DRA_full}}.
 - Access to toolchains is managed through standard Bluemix organizations. Membership is maintained at the organization level, unlike projects, where membership was maintained at the project level.
 
-You can learn about toolchains on [YouTube![External link icon](../../icons/launch-glyph.svg "External link icon")](https://youtu.be/2SIPE1e7NJ4){: new_window} or from [Getting started with {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery/index.html).
+You can learn about toolchains on [YouTube ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://youtu.be/2SIPE1e7NJ4){: new_window} or from [Getting started with {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery/index.html).
 [![External link to YouTube](images/CD_video.png)](https://youtu.be/2SIPE1e7NJ4){: new_window}    
 
 ## Prerequisites
@@ -56,15 +56,15 @@ When your project is ready to be upgraded, a message is displayed on the project
 ## Starting the upgrade process
 {: #start_upgrade}
 
-Before you start the upgrade process, you can watch it in action on [YouTube![External link icon](../../icons/launch-glyph.svg "External link icon")](https://youtu.be/oaZVGveVxBg){: new_window}. 
-[![External link to YouTube](images/migration-video2.png)](https://youtu.be/oaZVGveVxBg){: new_window}    
+Before you start the upgrade process, you can watch it in action on [YouTube ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://youtu.be/CH7T5W7JAaw){: new_window}. 
+[![External link to YouTube](images/migration-video2.png)](https://youtu.be/CH7T5W7JAaw){: new_window}    
 To upgrade your project to a toolchain, follow these steps:
 
 1. To start the upgrade process, on the banner message, click **upgrade now**. The "Project upgrade toolchain" page opens. 
 
    ![Example of an upgrade page](images/project-upgrade-toolchain.png)
 
-   For an overview of the upgrade process, read the description on that page. In this case, because the project used a repo at GitHub.com, the toolchain will be connected to the same GitHub repo. If your project used a Git repo that was hosted on JazzHub, the toolchain will not use that repo. Instead, use the Git Repos and Issue Tracking tool integration in your toolchain.
+   For an overview of the upgrade process, read the description on that page. In this case, because the project used a repos at GitHub.com, the toolchain will be connected to the same GitHub repo. If your project used a Git repo that was hosted on JazzHub, the toolchain will not use that repo. Instead, use the Git Repos and Issue Tracking tool integration in your toolchain.
    
    The toolchain will include a new pipeline that contains the same stages and jobs as the project's pipeline. In addition, the toolchain will contain a pointer to the Eclipse Orion {{site.data.keyword.webide}} that runs in {{site.data.keyword.contdelivery_short}}.
 
@@ -80,9 +80,7 @@ To upgrade your project to a toolchain, follow these steps:
 
    Because toolchains are managed at the organization level, be sure to select an organization where the project members that need to access the toolchain already exist, or can be added. 
 
-3. If you used Track & Plan in your project, you can transfer your Track & Plan data to GitHub Issues.
-
-   ![Track and Plan options](images/upgrade-tutorial-track-and-plan.png)
+3. If you used Track & Plan in your project, you can transfer your Track & Plan data to GitHub Issues. 
 
    - Indicate whether you want to migrate your Track & Plan data. 
    - By default, all of your Track & Plan data is migrated. If you prefer to migrate only the work items that are part of a specific query, specify that query.
