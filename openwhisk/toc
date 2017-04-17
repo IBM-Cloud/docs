@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="openwhisk" audience="compute"}
+{: .toc subcollection="openwhisk" audience="compute" href="/docs/openwhisk/index.html}
 IBM OpenWhisk
 
     {: .navgroup id="learn"}
@@ -13,6 +13,7 @@ IBM OpenWhisk
         [Discover: OpenWhisk](http://www.ibm.com/cloud-computing/bluemix/openwhisk/)
         [OpenWhisk on IBM developerWorks](https://developer.ibm.com/openwhisk/)
         [Apache OpenWhisk project website](http://openwhisk.org)
+        [Native API management in Bluemix](../apis/management/index.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
