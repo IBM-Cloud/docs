@@ -78,6 +78,9 @@
 		"img": "homepage/images/monitor_log.svg",
 		"href": "monitor_log/monitoringandlogging.html"
 	}, {
+		"title": "Managing APIs",
+		"href": "apis/management/index.html"
+	}, {
 		"title": "Bluemix Security",
 		"description": "Learn how Bluemix provides functional, infrastructure, operational, and physical security.",
 		"img": "homepage/images/platform_security.svg",
