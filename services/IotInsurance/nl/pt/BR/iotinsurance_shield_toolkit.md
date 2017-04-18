@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-01"
+lastupdated: "2017-03-27"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -13,10 +13,11 @@ lastupdated: "2017-03-01"
 {:pre: .pre}
 
 
-# Kit de ferramentas de blindagem
+# Usando o kit de ferramentas da blindagem
 {: #iot4i_shield_toolkit}
 Use blindagens para proteger a propriedade e os usuários por meio da identificação de riscos
-e da criação de respostas automatizadas apropriadas. Use ou modifique as blindagens que estão incluídas na biblioteca de blindagens do {{site.data.keyword.iotinsurance_short}} ou crie e implemente suas próprias blindagens usando as instruções e os exemplos a seguir.{:shortdesc}
+e da criação de respostas automatizadas apropriadas. Use ou modifique as blindagens que estão incluídas na biblioteca de blindagens do {{site.data.keyword.iotinsurance_short}} ou crie e implemente suas próprias blindagens usando as instruções e os exemplos a seguir.
+{:shortdesc}
 
 ## Sobre as blindagens.
 Uma blindagem é um conjunto de regras e ações definidas que podem ser acionadas por condições específicas na entrada que é recebida de um sensor. Por exemplo, é possível criar uma blindagem com uma regra para o envio de uma mensagem de texto sempre que o sensor detectar um vazamento de água.
@@ -290,16 +291,3 @@ var promotion = {
 ```
 
 É possível implementar seu app móvel e usar [as instruções no repositório do GitHub ioti-mobile](https://github.com/ibm-watson-iot/ioti-mobile) para conectar como o usuário criado na seção anterior.
-
-# Links Relacionados
-{: #rellinks}
-
-## Referência de API
-{: #api}
-* [API do {{site.data.keyword.iotinsurance_short}}](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [Exemplos de API do {{site.data.keyword.iotinsurance_short}}](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## Links Relacionados
-{: #general}
-* [Fórum de suporte do desenvolvedor](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-* [Fórum de suporte do Stack overflow](http://stackoverflow.com/questions/tagged/ibm-bluemix)

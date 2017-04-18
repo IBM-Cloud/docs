@@ -2,16 +2,15 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-
 
 # Acerca de {{site.data.keyword.iotelectronics}}
 {: #iotelectronics_about}
@@ -44,15 +43,11 @@ El contenedor modelo de iniciador despliega la solución de {{site.data.keyword.
 
 ![Arquitectura de {{site.data.keyword.iotelectronics}}. En este diagrama se describe el cuerpo principal del tema.](images/IoT4E_architecture.svg "Arquitectura de {{site.data.keyword.iotelectronics}}")
 
-El iniciador de {{site.data.keyword.iotelectronics}} utiliza el servicio de {{site.data.keyword.iotelectronics}} y las API para conectarse con {{site.data.keyword.iot_short_notm}}. La app de inicio y la app para móvil de ejemplo se comunican con el servicio de {{site.data.keyword.iotelectronics}} y se conectan entre ellas mediante {{site.data.keyword.amafull}}. Los siguientes componentes se incluyen en el iniciador:
+El iniciador de {{site.data.keyword.iotelectronics}} utiliza el servicio de {{site.data.keyword.iotelectronics}} y las API para conectarse con {{site.data.keyword.iot_short_notm}}. La app de inicio y la app para móvil de ejemplo se comunican con el servicio de {{site.data.keyword.iotelectronics}}. Los siguientes componentes se incluyen en el iniciador:
 
 **El servicio de {{site.data.keyword.iotelectronics}}** da soporte al registro y a las notificaciones de usuarios y dispositivos.
 
 **{{site.data.keyword.iot_full}}** permite que sus apps se comuniquen y utilicen datos recopilados por dispositivos conectados, sensores y pasarelas.
-
-<!-- **{{site.data.keyword.iotrtinsights_full}}** enables you to enrich and monitor data from your appliances, visualize what's happening now, and respond to emerging conditions by using automated actions. -->
-
-**{{site.data.keyword.amafull}}** permite a los usuarios de apps para móvil iniciar la sesión utilizando cuentas sociales existentes y garantiza que las comunicaciones con sistemas de fondo son seguras.
 
 **{{site.data.keyword.sdk4nodefull}}** le permite desarrollar, desplegar y escalar apps de JavaScript&reg; del lado del servidor y proporciona una mejora en el rendimiento, la seguridad y la capacidad de servicio.
 

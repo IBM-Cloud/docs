@@ -14,7 +14,7 @@ lastupdated: "2017-03-08"
 
 
 
-# 디바이스 툴킷
+# 디바이스 툴킷 사용
 {: #iot4i_connecting_devices}
 {{site.data.keyword.iotinsurance_full}} 디바이스 툴킷을 사용하여 디바이스 공급업체에서 만든 디바이스를 사용자의 {{site.data.keyword.iotinsurance_short}} 서비스에 연결할 수 있습니다.
 {:shortdesc}

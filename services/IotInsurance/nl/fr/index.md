@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-08"
+lastupdated: "2017-04-04"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -85,7 +85,7 @@ au service {{site.data.keyword.iotinsurance_short}}. Pour plus d'informations su
 Afin d'activer les notifications push pour une application mobile existante, vous pouvez, si vous le souhaitez, créer une instance du service {{site.data.keyword.mobilepushshort}}, la lier à l'API {{site.data.keyword.iotinsurance_short}} et ajouter un fichier Public Key Cryptography Standards (PKCS) 12. Pour des informations sur l'application mobile, voir [Installation et
 connexion du modèle d'application mobile](iotinsurance_mobile_app.html). Pour plus d'informations sur {{site.data.keyword.mobilepushshort}}, voir [Initiation à Push Notifications](https://console.ng.bluemix.net/docs/services/mobilepush/index.html).
 
-Pour configurer le service après sa création, procédez comme suit : 
+Pour configurer le service après sa création, procédez comme suit :
 
   1. Ouvrez le service {{site.data.keyword.mobilepushshort}}.
   2. Cliquez sur **Configurer**.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-01"
+lastupdated: "2017-03-22"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -39,7 +39,7 @@ aggregationschedule|-|-| NEIN|Kann erneut erstellt werden.
 
 Führen Sie die folgenden Schritte aus, um die {{site.data.keyword.iotinsurance_short}}-Daten zu sichern:
 
-## {{site.data.keyword.cloudant}}-Replikatinstanz erstellen
+## {{site.data.keyword.cloudant_short_notm}}-Replikatinstanz erstellen
 {: #createinstance}
 Erstellen Sie unter Verwendung der [Anweisungen zur {{site.data.keyword.cloudant}}-Replikation ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://docs.cloudant.com/replication.html) eine {{site.data.keyword.cloudant}}-Replikatsinstanz. Erstellen Sie zu Zwecken der Disaster-Recovery das Replikat an einer Position, die sich von der Position des ursprünglichen {{site.data.keyword.iotinsurance_short}}-Service unterscheidet. Wenn Ihre ursprüngliche Instanz in Dallas ansässig ist, kann sich das Replikat in London befinden.
 

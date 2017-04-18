@@ -2,15 +2,16 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
 
 # Utilización de la app para móvil
 {: #iot4e_using_mobile}
@@ -18,9 +19,7 @@ lastupdated: "2017-03-10"
 Empiece a utilizar la app para móvil de {{site.data.keyword.iotelectronics_full}} para ver cómo puede recibir alertas, enviar mandatos y comprobar el estado de los dispositivos conectados usando su dispositivo móvil, caso de un smartphone o una tablet.
 {:shortdesc}
 
-Antes de utilizar la app para móvil, debe completar las siguientes tareas:
-  - Despliegue una instancia del iniciador de {{site.data.keyword.iotelectronics}} en su organización de {{site.data.keyword.Bluemix_notm}}. Al desplegar una instancia del iniciador, se despliegan automáticamente las aplicaciones de componente y los servicios del iniciador.
-  - [Habilite las comunicaciones móviles y la seguridad](iotelectronics_config_mca.html) configurando {{site.data.keyword.amafull}}.
+Antes de poder utilizar la app móvil, debe desplegar una instancia del iniciador de {{site.data.keyword.iotelectronics}} en su organización {{site.data.keyword.Bluemix_notm}}. Al desplegar una instancia del iniciador, se despliegan automáticamente las aplicaciones de componente y los servicios del iniciador.
 
 Para empezar con la app para móvil, realice las tareas siguientes:
 1. [Descargue la app para móvil](#iot4e_downloadmobile) a su dispositivo móvil.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-01"
+lastupdated: "2017-03-27"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -13,7 +13,7 @@ lastupdated: "2017-03-01"
 {:pre: .pre}
 
 
-# Kit d'outils de bouclier
+# Utilisation du kit d'outils de bouclier
 {: #iot4i_shield_toolkit}
 Les boucliers permettent de protéger la propriété et les utilisateurs en identifiant les risques et en créant les réponses automatisées appropriées. Utilisez
 ou modifiez les boucliers inclus dans la bibliothèque de boucliers
@@ -22,7 +22,7 @@ boucliers à l'aide des instructions et des exemples suivants.
 {:shortdesc}
 
 ## A propos des boucliers
-Un bouclier est un ensemble de règles et d'actions définies qui peuvent être déclenchées par certaines conditions présentes dans les entrées reçues de la part d'un capteur. Vous pouvez ainsi créer un bouclier avec une règle qui génère un message texte à envoyer lorsqu'un capteur détecte une fuite d'eau. 
+Un bouclier est un ensemble de règles et d'actions définies qui peuvent être déclenchées par certaines conditions présentes dans les entrées reçues de la part d'un capteur. Vous pouvez ainsi créer un bouclier avec une règle qui génère un message texte à envoyer lorsqu'un capteur détecte une fuite d'eau.
 
 ## Utilisation des boucliers de la bibliothèque de boucliers {{site.data.keyword.iotinsurance_short}}
 
@@ -272,17 +272,3 @@ var promotion = {
 ```
 
 Vous pouvez éventuellement déployer votre application mobile et utiliser [les instructions contenues dans le référentiel GitHub ioti-mobile](https://github.com/ibm-watson-iot/ioti-mobile) pour vous connecter avec l'ID utilisateur que vous avez créé dans la section précédente.
-
-# Liens connexes
-{: #rellinks}
-
-## Référence d'API
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [Exemples d'API {{site.data.keyword.iotinsurance_short}}](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## Liens connexes
-{: #general}
-* [Forum de
-support des développeurs](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-* [Forum de support stackoverflow](http://stackoverflow.com/questions/tagged/ibm-bluemix)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-01"
+lastupdated: "2017-03-22"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -39,7 +39,7 @@ aggregationschedule|-|-| NON|Peut être régénérée.
 
 Pour sauvegarder les données {{site.data.keyword.iotinsurance_short}}, procédez comme suit :
 
-## Création d'une réplique d'instance {{site.data.keyword.cloudant}}
+## Création d'une réplique d'instance {{site.data.keyword.cloudant_short_notm}}
 {: #createinstance}
 Créez une réplique d'instance {{site.data.keyword.cloudant}} à l'aide des [instructions de réplication {{site.data.keyword.cloudant}} ![Icône de lien externe](../../icons/launch-glyph.svg)](https://docs.cloudant.com/replication.html). Pour la reprise après incident, créez la réplique à un autre emplacement que celui de votre service {{site.data.keyword.iotinsurance_short}} d'origine. Par exemple, si votre instance d'origine est à Dallas, la réplique peut se trouver à Londres.
 

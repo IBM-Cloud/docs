@@ -2,15 +2,16 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
 
 # 使用行動應用程式
 {: #iot4e_using_mobile}
@@ -18,9 +19,7 @@ lastupdated: "2017-03-10"
 開始使用 {{site.data.keyword.iotelectronics_full}} 行動應用程式，以瞭解您如何使用行動裝置（例如智慧型手機或平板電腦）來接收警示、傳送指令，以及檢查已連接應用裝置的狀態。
 {:shortdesc}
 
-您必須先完成下列作業，才能使用行動應用程式：
-  - 在 {{site.data.keyword.Bluemix_notm}} 組織中，部署 {{site.data.keyword.iotelectronics}} 入門範本實例。部署入門範本實例，會自動部署入門範本的元件應用程式及服務。
-  - 配置 {{site.data.keyword.amafull}}，以[啟用行動通訊及安全](iotelectronics_config_mca.html)。
+您必須在 {{site.data.keyword.Bluemix_notm}} 組織中部署 {{site.data.keyword.iotelectronics}} 入門範本實例，才能使用行動應用程式。部署入門範本實例，會自動部署入門範本的元件應用程式及服務。
 
 若要開始使用行動應用程式，請完成下列作業：
 1. [下載行動應用程式](#iot4e_downloadmobile)至行動裝置。

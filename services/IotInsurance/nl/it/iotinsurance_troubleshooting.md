@@ -45,7 +45,7 @@ Duranti i periodi di picco di attività, puoi riscontrare delle prestazioni lent
 I sistemi occupati che effettuano chiamate API frequenti possono riscontrare ritardi nei tempi di risposta.
 {: tsSymptoms}
 
-Per impostazione predefnita, {{site.data.keyword.iotinsurance_short}} distribuisce una versione di prova di {{site.data.keyword.cloudantfull}}. Questa versione limita il numero di chiamate API che possono essere effettuate al secondo.
+Per impostazione predefinita, {{site.data.keyword.iotinsurance_short}} distribuisce una versione di prova di {{site.data.keyword.cloudantfull}}. Questa versione limita il numero di chiamate API che possono essere effettuate al secondo.
 {: tsCauses}
 
 Aggiornamento alla versione standard di {{site.data.keyword.cloudant}}.

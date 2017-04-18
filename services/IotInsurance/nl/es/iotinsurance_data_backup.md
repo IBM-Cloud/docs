@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-01"
+lastupdated: "2017-03-22"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -39,7 +39,7 @@ aggregationschedule|-|-| NO|Se puede volver a crear.
 
 Para realizar la copia de seguridad de los datos de {{site.data.keyword.iotinsurance_short}}, lleve a cabo los siguientes pasos:
 
-## Creación de una instancia de {{site.data.keyword.cloudant}} de réplica
+## Creación de una instancia de {{site.data.keyword.cloudant_short_notm}} de réplica
 {: #createinstance}
 Cree una instancia de {{site.data.keyword.cloudant}} de réplica utilizando las instrucciones de réplica de [{{site.data.keyword.cloudant}} ![Icono de enlace externo](../../icons/launch-glyph.svg)](https://docs.cloudant.com/replication.html). Para fines de recuperación tras desastre, cree la réplica en una ubicación distinta del servicio de {{site.data.keyword.iotinsurance_short}} original. Por ejemplo, si la instancia original está en Dallas, la réplica podría estar en Londres.
 

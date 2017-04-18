@@ -14,7 +14,7 @@ lastupdated: "2017-03-08"
 
 
 
-# Kit d'outils de terminal
+# Utilisation du kit d'outils de terminal
 {: #iot4i_connecting_devices}
 Le kit d'outils de terminal d'{{site.data.keyword.iotinsurance_full}} vous permet de connecter des terminaux fabriqués par n'importe quel fournisseur de terminaux à votre service {{site.data.keyword.iotinsurance_short}}.
 {:shortdesc}

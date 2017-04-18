@@ -2,11 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -28,11 +28,9 @@ Avant de commencer, vous devez déployer une instance d'{{site.data.keyword.iote
 ## Initiation à {{site.data.keyword.iotelectronics}}
 Pour commencer, effectuez les tâches suivantes :
 
-1. [Activez la sécurité et les communications mobiles](iotelectronics_config_mca.html) en configurant
-{{site.data.keyword.amafull}}.
-2. [Créez des appareils simulés](iot4ecreatingappliances.html) à l'aide de l'application Web de démarrage
+1. [Créez des appareils simulés](iot4ecreatingappliances.html) à l'aide de l'application Web de démarrage
 {{site.data.keyword.iotelectronics}}. Comme exemple, des machines à laver sont utilisées en tant qu'appareils simulés dans le module de démarrage {{site.data.keyword.iotelectronics}}. Vous pouvez connecter comme appareil tout type de terminal électronique intelligent.
-3. [Téléchargez et connectez](iotelectronics_config_mobile.html) le modèle d'application mobile.
+2. [Téléchargez et connectez](iotelectronics_config_mobile.html) le modèle d'application mobile.
 
 
 ## Etapes suivantes
@@ -50,14 +48,13 @@ Découvrez ce que vous pouvez faire avec {{site.data.keyword.iotelectronics}}.
 {: #api}
 * [API {{site.data.keyword.iotelectronics}} ![Icône de lien externe](../../icons/launch-glyph.svg)](https://broker-uss-iot4e.electronics.internetofthings.ibmcloud.com/public/iot4eregistrationapi.html){:new_window}
 * [API {{site.data.keyword.iot_short}} ![Icône de lien externe](../../icons/launch-glyph.svg)](https://developer.ibm.com/iotfoundation/recipes/api-documentation/){:new_window}
-
+* [IBM Watson IoT Service Health Dashboard ![Icône de lien externe](../../icons/launch-glyph.svg)](https://status.internetofthings.ibmcloud.com){: new_window}
 
 ## Composants
 {: #general}
 
 * [Documentation d'{{site.data.keyword.iotelectronics}}](iotelectronics_overview.html){:new_window}
 * [Documentation d'{{site.data.keyword.iot_full}}](https://console.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
-*  [Documentation de {{site.data.keyword.amashort}}](https://console.ng.bluemix.net/docs/services/mobileaccess/overview.html){:new_window}
 * [Documentation d'{{site.data.keyword.sdk4nodefull}}](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime){:new_window}
 
 ## Exemples

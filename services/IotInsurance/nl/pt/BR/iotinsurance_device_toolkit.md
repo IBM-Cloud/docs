@@ -14,7 +14,7 @@ lastupdated: "2017-03-08"
 
 
 
-# Kit de ferramentas de dispositivo
+# Usando o kit de ferramentas do dispositivo
 {: #iot4i_connecting_devices}
 Usando o kit de ferramentas de dispositivo do {{site.data.keyword.iotinsurance_full}}, é possível conectar dispositivos fabricados por qualquer fornecedor de dispositivo ao serviço do {{site.data.keyword.iotinsurance_short}}.
 {:shortdesc}
@@ -127,6 +127,7 @@ Pseudo-função | Description (Descrição)
 `findDevicesToAdd(), findDevicesToDel(), findDevicesToUpdate()` | Localiza os dispositivos novos, excluídos e modificados, comparando dispositivos registrados com dispositivos que existem atualmente no provedor de dispositivo.
 ` syncData()` | Sincronize os dispositivos do usuário, excluindo dispositivos antigos, incluindo novos e atualizando os modificados.  
  `notifyIoTP()` | Notifique o {{site.data.keyword.iot_short_notm}} sobre as mudanças, tais como eventos MQTT.
+
 O transformador posta atualizações de status para o {{site.data.keyword.iot_short_notm}}, conforme mostrado no exemplo de código a seguir.
 ```
 // as specified in VCAP.services

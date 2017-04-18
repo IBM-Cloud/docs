@@ -2,16 +2,15 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-
 
 # Sobre o {{site.data.keyword.iotelectronics}}
 {: #iotelectronics_about}
@@ -58,19 +57,13 @@ dispositivos. Os serviços e aplicativos a seguir são incluídos na solução:
 ![Arquitetura do {{site.data.keyword.iotelectronics}}. Este diagrama é descrito no corpo
 principal do tópico.](images/IoT4E_architecture.svg "{{site.data.keyword.iotelectronics}} architecture")
 
-O iniciador do {{site.data.keyword.iotelectronics}} usa o serviço e APIs do {{site.data.keyword.iotelectronics}} para se conectar com o {{site.data.keyword.iot_short_notm}}. O
-aplicativo iniciador e o aplicativo móvel de amostra se comunicam com o serviço do {{site.data.keyword.iotelectronics}} e são conectados entre si por {{site.data.keyword.amafull}}. Os
+O iniciador do {{site.data.keyword.iotelectronics}} usa o serviço e APIs do {{site.data.keyword.iotelectronics}} para se conectar com o {{site.data.keyword.iot_short_notm}}. O aplicativo iniciador e o aplicativo móvel de amostra se comunicam com o serviço {{site.data.keyword.iotelectronics}}. Os
 componentes a seguir estão incluídos no iniciador:
 
 O serviço do **{{site.data.keyword.iotelectronics}}** suporta registro e notificações de usuário e de dispositivo.
 
 O **{{site.data.keyword.iot_full}}** permite que os seus aplicativos se comuniquem com e usem dados que são coletados por seus dispositivos, sensores e gateways
 conectados.
-
-<!-- **{{site.data.keyword.iotrtinsights_full}}** enables you to enrich and monitor data from your appliances, visualize what's happening now, and respond to emerging conditions by using automated actions. -->
-
-**{{site.data.keyword.amafull}}** permite que os usuários de aplicativos móveis efetuem login usando contas
-sociais existentes e assegura que as comunicações com os sistemas backend sejam seguras.
 
 **{{site.data.keyword.sdk4nodefull}}** permite desenvolver, implementar e ajustar a escala de aplicativos
 JavaScript&reg; do lado do servidor e fornece desempenho, segurança e capacidade de manutenção aprimorados.

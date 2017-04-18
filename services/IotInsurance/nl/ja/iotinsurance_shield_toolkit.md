@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-01"
+lastupdated: "2017-03-27"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -13,7 +13,7 @@ lastupdated: "2017-03-01"
 {:pre: .pre}
 
 
-# シールド・ツールキット
+# シールド・ツールキットの使用
 {: #iot4i_shield_toolkit}
 シールドは、危険を識別して適切な自動応答を作成することで、資産とユーザーを保護するために使用します。{{site.data.keyword.iotinsurance_short}} シールド・ライブラリーに含まれるシールドを使用または変更するか、あるいは以下の手順と例を利用して独自のシールドを作成して実装することができます。
 {:shortdesc}
@@ -271,16 +271,3 @@ var promotion = {
 ```
 
 オプションとして、モバイル・アプリをデプロイし、[ioti-mobile GitHub リポジトリーにある手順](https://github.com/ibm-watson-iot/ioti-mobile)を使用することにより、前のセクションで作成したユーザーとして接続することができます。
-
-# 関連リンク
-{: #rellinks}
-
-## API リファレンス
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API サンプル](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## 関連リンク
-{: #general}
-* [開発者サポート・フォーラム](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-* [Stack overflow サポート・フォーラム](http://stackoverflow.com/questions/tagged/ibm-bluemix)

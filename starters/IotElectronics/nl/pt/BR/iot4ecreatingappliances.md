@@ -2,15 +2,16 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
 
 # Usando o aplicativo iniciador
 Crie dispositivos simulados no app iniciador do {{site.data.keyword.iotelectronics_full}}. Experimente como um fabricante corporativo pode monitorar dispositivos conectados ao {{site.data.keyword.iot_short_notm}}. Interaja manualmente com o dispositivo simulado para acionar alertas, notificações e ações.
@@ -50,26 +51,3 @@ iniciador do {{site.data.keyword.iotelectronics}}](images/IoT4E_remotely_option.
 de falhas para visualizar mudanças de status. Também é possível visualizar as mudanças de status e controlar a arruela por meio do seu app móvel.
 
   ![Detalhes de status da arruela.](images/IoT4E_washer_control.svg "Washer status details")
-
-
-# Links Relacionados
-{: #rellinks}
-
-## Documentação da API
-{: #api}
-* [API do {{site.data.keyword.iotelectronics}}](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)
-* [API do {{site.data.keyword.iot_short}}](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)
-
-
-## Componentes
-{: #general}
-
-* [{{site.data.keyword.iotelectronics}} documentação](iotelectronics_overview.html)
-* [{{site.data.keyword.iot_full}} documentação](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-*  [{{site.data.keyword.amashort}} documentação](https://console.ng.bluemix.net/docs/services/mobileaccess/overview.html)
-* [{{site.data.keyword.sdk4nodefull}} documentação](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
-
-## Amostra
-{: #samples}
-* [Aplicativo móvel de
-amostra](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html)

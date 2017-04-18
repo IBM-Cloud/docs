@@ -14,7 +14,7 @@ lastupdated: "2017-03-08"
 
 
 
-# Gerätetoolkit
+# Verwendung des Gerätetoolkits
 {: #iot4i_connecting_devices}
 Mithilfe des {{site.data.keyword.iotinsurance_full}}-Gerätetoolkits können Sie Geräte, die von einem beliebigen Geräteanbieter hergestellt werden, mit Ihrem {{site.data.keyword.iotinsurance_short}}-Service verbinden.
 {:shortdesc}

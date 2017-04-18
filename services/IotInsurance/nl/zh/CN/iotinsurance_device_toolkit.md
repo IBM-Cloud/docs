@@ -14,7 +14,7 @@ lastupdated: "2017-03-08"
 
 
 
-# 设备工具包
+# 使用设备工具包
 {: #iot4i_connecting_devices}
 通过使用 {{site.data.keyword.iotinsurance_full}} 设备工具包，您可以将任何设备供应商生产的设备连接到 {{site.data.keyword.iotinsurance_short}} 服务。
 {:shortdesc}

@@ -2,11 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -21,9 +21,8 @@ lastupdated: "2017-03-10"
 
 Pour vous initier à {{site.data.keyword.iotelectronics}}, effectuez les tâches suivantes :
 
-1. [Activez la sécurité et les communications mobiles](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mca.html) en configurant {{site.data.keyword.amashort}}.
-2. [Créez des appareils simulés](https://console.ng.bluemix.net/docs/starters/IotElectronics/iot4ecreatingappliances.html) à l'aide de l'application Web de démarrage {{site.data.keyword.iotelectronics}}. Comme exemple, des machines à laver sont utilisées en tant qu'appareils simulés dans le module de démarrage {{site.data.keyword.iotelectronics}}. Vous pouvez connecter comme appareil tout type de terminal électronique intelligent.
-3. [Téléchargez et connectez](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html) le modèle d'application mobile.
+1. [Créez des appareils simulés](https://console.ng.bluemix.net/docs/starters/IotElectronics/iot4ecreatingappliances.html) à l'aide de l'application Web de démarrage {{site.data.keyword.iotelectronics}}. Comme exemple, des machines à laver sont utilisées en tant qu'appareils simulés dans le module de démarrage {{site.data.keyword.iotelectronics}}. Vous pouvez connecter comme appareil tout type de terminal électronique intelligent.
+2. [Téléchargez et connectez](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html) le modèle d'application mobile.
 
 
 ## Etapes suivantes
@@ -37,5 +36,4 @@ Découvrez ce que vous pouvez faire avec {{site.data.keyword.iotelectronics}}.
 ## En savoir plus sur les composants
 - [Documentation d'{{site.data.keyword.iotelectronics}}](iotelectronics_overview.html)
 - [Documentation d'{{site.data.keyword.iot_full}}](https://console.ng.bluemix.net/docs/services/IoT/index.html)
--  [Documentation de {{site.data.keyword.amashort}}](https://console.ng.bluemix.net/docs/services/mobileaccess/overview.html)
 - [Documentation d'{{site.data.keyword.sdk4nodefull}}](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
