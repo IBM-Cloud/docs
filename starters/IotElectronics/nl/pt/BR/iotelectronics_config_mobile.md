@@ -2,15 +2,16 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
 
 # Usando o aplicativo móvel
 {: #iot4e_using_mobile}
@@ -18,10 +19,8 @@ lastupdated: "2017-03-10"
 Introdução ao app móvel do {{site.data.keyword.iotelectronics_full}} para ver como é possível receber alertas, enviar comandos e verificar o status dos seus dispositivos conectados usando seu dispositivo móvel, como um telefone inteligente ou tablet.
 {:shortdesc}
 
-Antes de poder usar o aplicativo móvel, deve-se concluir as tarefas a seguir:
-  - Implemente uma instância do iniciador do {{site.data.keyword.iotelectronics}} em sua organização do {{site.data.keyword.Bluemix_notm}}. Implementar uma instância do iniciador
+Antes de poder usar o aplicativo móvel, deve-se implementar uma instância do iniciador do {{site.data.keyword.iotelectronics}} na sua organização do {{site.data.keyword.Bluemix_notm}}. Implementar uma instância do iniciador
 automaticamente implementa os aplicativos de componente e os serviços do iniciador.
-  - [Ative comunicações móveis e segurança](iotelectronics_config_mca.html) configurando {{site.data.keyword.amafull}}.
 
 Para iniciar o aplicativo móvel, conclua as tarefas a seguir:
 1. [Faça download do aplicativo móvel](#iot4e_downloadmobile) em seu dispositivo móvel.

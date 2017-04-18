@@ -60,7 +60,7 @@ Transformer solicita nueva información de la API de servidor de nube y la trans
 
 ## Weather Company Data Transformer
 {: #wcdtransformer}
-La aplicación Weather Company inyecta datos meteorológicos relevantes de Weather Company Data Service al flujo de datos de IoT4I. Estos datos se pueden utilizar posteriormente para crear coberturas habilitadas para Weather. 
+La aplicación Weather Company inyecta datos meteorológicos relevantes de Weather Company Data Service al flujo de datos de IoT4I. Estos datos se pueden utilizar posteriormente para crear coberturas habilitadas para Weather.
 
 **Nota**: The Weather Company Data Transformer solo está soportado como prueba de concepto o vista previa técnica y no está destinado para uso de producción.
 

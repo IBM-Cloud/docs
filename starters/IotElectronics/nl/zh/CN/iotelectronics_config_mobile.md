@@ -2,15 +2,16 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
 
 # 使用移动应用程序
 {: #iot4e_using_mobile}
@@ -18,9 +19,7 @@ lastupdated: "2017-03-10"
 开始使用 {{site.data.keyword.iotelectronics_full}} 移动应用程序，以了解如何使用移动设备（如智能手机或平板电脑）接收警报、发送命令并检查已连接设备的状态。
 {:shortdesc}
 
-开始使用移动应用程序之前，必须完成以下任务：
-  - 在 {{site.data.keyword.Bluemix_notm}} 组织中部署 {{site.data.keyword.iotelectronics}} Starter 的实例。部署入门模板的实例可自动部署入门模板的组件应用程序和服务。
-  - 通过配置 {{site.data.keyword.amafull}}，[启用移动通信和安全性](iotelectronics_config_mca.html)。
+开始使用移动应用程序之前，您必须在 {{site.data.keyword.Bluemix_notm}} 组织中部署 {{site.data.keyword.iotelectronics}} 入门模板的实例。部署入门模板的实例可自动部署入门模板的组件应用程序和服务。
 
 要开始使用移动应用程序，请完成以下任务：
 1. [下载移动应用程序](#iot4e_downloadmobile)至移动设备。

@@ -14,7 +14,7 @@ lastupdated: "2017-03-08"
 
 
 
-# Kit de herramientas del dispositivo
+# Utilización del kit de herramientas del dispositivo
 {: #iot4i_connecting_devices}
 Al utilizar el kit de herramientas del dispositivo {{site.data.keyword.iotinsurance_full}}, puede conectar dispositivos fabricados por cualquier proveedor de dispositivos a su servicio {{site.data.keyword.iotinsurance_short}}.
 {:shortdesc}

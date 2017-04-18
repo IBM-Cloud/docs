@@ -2,11 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -21,9 +21,8 @@ lastupdated: "2017-03-10"
 
 要开始使用 {{site.data.keyword.iotelectronics}}，请完成以下任务：
 
-1. 通过配置 {{site.data.keyword.amashort}}，[启用移动通信和安全性](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mca.html)。
-2. 使用 {{site.data.keyword.iotelectronics}} Starter Web 应用程序[创建模拟设备](https://console.ng.bluemix.net/docs/starters/IotElectronics/iot4ecreatingappliances.html)。出于演示目的，洗衣机将用作 {{site.data.keyword.iotelectronics}} Starter 内的模拟设备。选择连接的设备可以是任何类型的智能电子设备。
-3. [下载并连接](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html)样本移动应用程序。
+1. 使用 {{site.data.keyword.iotelectronics}} Starter Web 应用程序[创建模拟设备](https://console.ng.bluemix.net/docs/starters/IotElectronics/iot4ecreatingappliances.html)。出于演示目的，洗衣机将用作 {{site.data.keyword.iotelectronics}} Starter 内的模拟设备。选择连接的设备可以是任何类型的智能电子设备。
+2. [下载并连接](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html)样本移动应用程序。
 
 
 ## 后续工作
@@ -37,5 +36,4 @@ lastupdated: "2017-03-10"
 ## 了解有关组件的更多信息
 - [{{site.data.keyword.iotelectronics}} 文档](iotelectronics_overview.html)
 - [{{site.data.keyword.iot_full}} 文档](https://console.ng.bluemix.net/docs/services/IoT/index.html)
--  [{{site.data.keyword.amashort}} 文档](https://console.ng.bluemix.net/docs/services/mobileaccess/overview.html)
 - [{{site.data.keyword.sdk4nodefull}} 文档](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)

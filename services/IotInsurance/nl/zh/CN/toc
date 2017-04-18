@@ -1,0 +1,36 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="iot-insurance" audience="service"}
+IoT for Insurance
+
+  {: .navgroup id="learn"}
+    index.md
+    iotinsurance_overview.md
+    iotinsurance_how_service_works.md
+	{: .navgroup-end}
+
+  {: .navgroup id="reference"}
+    iotinsurance_supporteddevices.md
+
+    {: .topicgroup}
+    API
+        iotinsurance_extending_service.md
+        [IoT for Insurance API](https://iot4i-api-docs.mybluemix.net/)
+        [IoT for Insurance API 示例](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples)
+  {: .navgroup-end}
+
+  {: .navgroup id="howto"}
+    iotinsurance_shield_toolkit.md
+    iotinsurance_device_toolkit.md
+    iotinsurance_mobile_app.md
+    iotinsurance_optimizing_performance.md
+    iotinsurance_upgrading.md
+    iotinsurance_data_backup.md
+  {: .navgroup-end}
+
+  {: .navgroup id="help"}
+    iotinsurance_troubleshooting.md
+    [开发人员支持论坛](https://www.ibm.com/developerworks/connect/iot/)
+    [Stack Overflow 支持论坛](http://stackoverflow.com/questions/tagged/ibm-bluemix)
+  {: .navgroup-end}

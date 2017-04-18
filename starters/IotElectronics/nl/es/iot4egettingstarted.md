@@ -2,11 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -28,9 +28,8 @@ Antes de empezar, debe desplegar una instancia de {{site.data.keyword.Bluemix_no
 ## Iniciación a {{site.data.keyword.iotelectronics}}
 Para empezar, realice las tareas siguientes:
 
-1. [Habilite las comunicaciones móviles y la seguridad](iotelectronics_config_mca.html) configurando {{site.data.keyword.amafull}}.
-2. [Cree dispositivos simulados](iot4ecreatingappliances.html) mediante la aplicación web de inicio {{site.data.keyword.iotelectronics}}. Para fines de demostración, las lavadoras se utilizan como el dispositivo simulado dentro del iniciador de {{site.data.keyword.iotelectronics}}. El dispositivo que elija para conectarse puede ser cualquier tipo de dispositivo electrónico inteligente.
-3. [Descargue y conecte](iotelectronics_config_mobile.html) la app para móvil de ejemplo.
+1. [Cree dispositivos simulados](iot4ecreatingappliances.html) mediante la aplicación web de inicio {{site.data.keyword.iotelectronics}}. Para fines de demostración, las lavadoras se utilizan como el dispositivo simulado dentro del iniciador de {{site.data.keyword.iotelectronics}}. El dispositivo que elija para conectarse puede ser cualquier tipo de dispositivo electrónico inteligente.
+2. [Descargue y conecte](iotelectronics_config_mobile.html) la app para móvil de ejemplo.
 
 
 ## Qué hacer a continuación
@@ -48,14 +47,13 @@ Vea lo que puede hacer con {{site.data.keyword.iotelectronics}}.
 {: #api}
 * [API de {{site.data.keyword.iotelectronics}} ![icono de enlace externo](../../icons/launch-glyph.svg)](https://broker-uss-iot4e.electronics.internetofthings.ibmcloud.com/public/iot4eregistrationapi.html){:new_window}
 * [API de {{site.data.keyword.iot_short}} ![icono de enlace externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/iotfoundation/recipes/api-documentation/){:new_window}
-
+* [IBM Watson IoT Service Health Dashboard ![icono de enlace externo](../../icons/launch-glyph.svg)](https://status.internetofthings.ibmcloud.com){: new_window}
 
 ## Componentes
 {: #general}
 
 * [Documentación de {{site.data.keyword.iotelectronics}}](iotelectronics_overview.html){:new_window}
 * [Documentación de {{site.data.keyword.iot_full}}](https://console.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
-*  [Documentación de {{site.data.keyword.amashort}}](https://console.ng.bluemix.net/docs/services/mobileaccess/overview.html){:new_window}
 * [Documentación de {{site.data.keyword.sdk4nodefull}}](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime){:new_window}
 
 ## Ejemplos

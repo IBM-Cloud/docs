@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-01"
+lastupdated: "2017-03-22"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -28,7 +28,8 @@ A tabela a seguir mostra os bancos de dados do
 Nomes de Banco de Dados| Frequência de mudança| Motivo da Alteração | Requer Backup | Comentário
 ------------- | -------------| -------------| -------------| -------------
 favoritos|Administração|Nova ação do administrador|YES|-
-Dispositivos|Administração|Novos dispositivos ou usuários incluídos ou removidos|YES| O Transformer gera dinamicamente uma tabela na memória e a preenche com dados do provedor de dispositivo. Para gateways conectados diretamente, essa tabela armazena os dispositivos. hazardevents|Aleatório|Novo evento de blindagem detectado|YES|-
+Dispositivos|Administração|Novos dispositivos ou usuários incluídos ou removidos|YES| O Transformer gera dinamicamente uma tabela na memória e a preenche com dados do provedor de dispositivo. Para gateways conectados diretamente, essa tabela armazena os dispositivos.
+hazardevents|Aleatório|Novo evento de blindagem detectado|YES|-
 Jscode|Administração|Novo código JS para blindagens implementadas|YES*| O administrador pode opcionalmente ignorar o backup e implementar uma nova versão do código JS.
 Promoções|Administração|Nova promoção incluída|YES|-
 shieldassociations|Administração|Novo usuário ou blindagem incluída|YES|-
@@ -39,7 +40,7 @@ aggregationschedule|-|-| Não|Pode ser reconstruído.
 Para fazer backup dos dados do {{site.data.keyword.iotinsurance_short}},
 execute as etapas a seguir:
 
-## Criando uma instância do {{site.data.keyword.cloudant}} de réplica
+## Criando uma instância do {{site.data.keyword.cloudant_short_notm}} de réplica
 {: #createinstance}
 Crie uma instância do {{site.data.keyword.cloudant}} de réplica usando as instruções do [{{site.data.keyword.cloudant}}
 ![Ícone de link externo](../../icons/launch-glyph.svg)](https://docs.cloudant.com/replication.html). Para propósitos de recuperação de desastre, crie a réplica em um local diferente de seu serviço {{site.data.keyword.iotinsurance_short}} original. Por exemplo, se sua instância original estiver em Dallas, a réplica poderá estar em Londres.

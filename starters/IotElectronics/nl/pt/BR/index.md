@@ -2,11 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -23,10 +23,9 @@ controlar esses dispositivos a partir do seu dispositivo móvel.
 
 Para a introdução ao {{site.data.keyword.iotelectronics}}, conclua as tarefas a seguir:
 
-1. [Ative as comunicações móveis e a segurança](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mca.html) configurando o {{site.data.keyword.amashort}}.
-2. [Crie dispositivos simulados](https://console.ng.bluemix.net/docs/starters/IotElectronics/iot4ecreatingappliances.html) usando o aplicativo da web iniciador do {{site.data.keyword.iotelectronics}}. Para fins de demonstração, as arruelas são usadas como o dispositivo simulado dentro do iniciador do {{site.data.keyword.iotelectronics}}. O dispositivo
+1. [Crie dispositivos simulados](https://console.ng.bluemix.net/docs/starters/IotElectronics/iot4ecreatingappliances.html) usando o aplicativo da web iniciador do {{site.data.keyword.iotelectronics}}. Para fins de demonstração, as arruelas são usadas como o dispositivo simulado dentro do iniciador do {{site.data.keyword.iotelectronics}}. O dispositivo
 que você optar por conectar poderia ser qualquer tipo de dispositivo eletrônico inteligente.
-3. [Faça download e conecte](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html) o app móvel de amostra.
+2. [Faça download e conecte](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html) o app móvel de amostra.
 
 
 ## O que vem a seguir
@@ -40,5 +39,4 @@ Consulte o que é possível fazer com o {{site.data.keyword.iotelectronics}}.
 ## Descubra mais sobre os componentes
 - [{{site.data.keyword.iotelectronics}} documentação](iotelectronics_overview.html)
 - [{{site.data.keyword.iot_full}} documentação](https://console.ng.bluemix.net/docs/services/IoT/index.html)
--  [{{site.data.keyword.amashort}} documentação](https://console.ng.bluemix.net/docs/services/mobileaccess/overview.html)
 - [{{site.data.keyword.sdk4nodefull}} documentação](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)

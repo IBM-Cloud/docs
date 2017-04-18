@@ -2,15 +2,16 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
 
 # Mobile App verwenden
 {: #iot4e_using_mobile}
@@ -18,9 +19,7 @@ lastupdated: "2017-03-10"
 Anhand der ersten Schritte mit der mobilen {{site.data.keyword.iotelectronics_full}}-App erfahren Sie, wie über Ihr Mobilgerät wie Smartphone oder Tablet Alerts empfangen, Befehle gesendet und der Status Ihrer verbundenen Appliances angezeigt werden.
 {:shortdesc}
 
-Bevor Sie die mobile App verwenden können, müssen Sie die folgenden Tasks ausführen:
-  - Eine Instanz des {{site.data.keyword.iotelectronics}}-Starters in Ihrer {{site.data.keyword.Bluemix_notm}}-Organisation bereitstellen. Durch die Bereitstellung einer Instanz des Starters werden die Komponentenanwendungen und Services des Starters automatisch bereitgestellt.
-  - [Mobile Kommunikation und Sicherheit aktivieren](iotelectronics_config_mca.html) durch Konfigurieren von {{site.data.keyword.amafull}}.
+Bevor Sie die mobile App verwenden können, müssen Sie eine Instanz des {{site.data.keyword.iotelectronics}}-Starters in Ihrer {{site.data.keyword.Bluemix_notm}}-Organisation bereitstellen. Durch die Bereitstellung einer Instanz des Starters werden die Komponentenanwendungen und Services des Starters automatisch bereitgestellt.
 
 Führen Sie die folgenden Tasks aus, um mit der Nutzung der mobilen App zu beginnen:
 1. [Mobile App](#iot4e_downloadmobile) auf eigenes Mobilgerät herunterladen.

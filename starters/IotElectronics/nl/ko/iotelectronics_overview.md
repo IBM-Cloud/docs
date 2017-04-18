@@ -2,16 +2,15 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-
 
 # {{site.data.keyword.iotelectronics}} 정보
 {: #iotelectronics_about}
@@ -30,7 +29,7 @@ lastupdated: "2017-03-10"
 시뮬레이션된 어플라이언스 및 데이터를 사용하여 {{site.data.keyword.iotelectronics}} 솔루션의 기능을 빠르게 탐색할 수 있습니다. 
 
 ### 시뮬레이션된 어플라이언스 연결
-시뮬레이션된 어플라이언스를 작성하고 플랫폼에 연결하여 스트리밍 라이브 데이터를 확인합니다. 웹 기반 앱을 사용하여 어플라이언스가 어떻게 명령을 수신하고 오퍼레이션을 수행하는지 시뮬레이션합니다. 고장 원인을 참고하여 주의사항 및 경보를 생성하십시오. 시연을 위해서 세탁기는 {{site.data.keyword.iotelectronics}} 스타터의 시뮬레이션된 어플라이언스로 사용됩니다. 연결하려고 선택하는 어플라이언스는 스마트 전자식 디바이스인 경우 어느 유형이든 가능합니다. 
+시뮬레이션된 어플라이언스를 작성하고 플랫폼에 연결하여 스트리밍 라이브 데이터를 확인합니다. 웹 기반 앱을 사용하여 어플라이언스가 어떻게 명령을 수신하고 오퍼레이션을 수행하는지 시뮬레이션합니다. 고장 원인을 참고하여 주의사항 및 경보를 생성하십시오. 시연을 위해 {{site.data.keyword.iotelectronics}} 스타터에서는 세탁기를 시뮬레이션된 어플라이언스로 사용합니다. 사용자는 모든 유형의 스마트 전자 기기를 연결할 수 있습니다. 
 
 ### 샘플 소비자 모바일 앱 시도
 iOS 또는 Android 모바일 디바이스를 사용하여 어플라이언스 소유자가 어떻게 어플라이언스와 상호작용할 수 있는지 확인합니다. 어플라이언스에 명령을 전송하고 플랫폼 및 {{site.data.keyword.Bluemix_notm}}를 사용하여 어플라이언스에서 업데이트를 수신합니다. 고장 상황을 가정하여 모바일 앱에서 결과를 확인합니다.
@@ -44,15 +43,11 @@ iOS 또는 Android 모바일 디바이스를 사용하여 어플라이언스 소
 
 ![{{site.data.keyword.iotelectronics}} 아키텍처. 이 다이어그램에 대해서는 주제의 본문에 설명되어 있습니다. ](images/IoT4E_architecture.svg "{{site.data.keyword.iotelectronics}} 아키텍처")
 
-{{site.data.keyword.iotelectronics}} 스타터는 {{site.data.keyword.iotelectronics}} 서비스와 API를 사용하여 {{site.data.keyword.iot_short_notm}}에 연결합니다. 스타터 앱과 샘플 모바일 앱은 {{site.data.keyword.iotelectronics}} 서비스와 통신하고 {{site.data.keyword.amafull}}에 의해 서로 연결됩니다. 다음 컴포넌트가 스타터에 포함되어 있습니다. 
+{{site.data.keyword.iotelectronics}} 스타터는 {{site.data.keyword.iotelectronics}} 서비스와 API를 사용하여 {{site.data.keyword.iot_short_notm}}에 연결합니다. 스타터 앱 및 샘플 모바일 앱은 {{site.data.keyword.iotelectronics}} 서비스와 통신합니다. 다음 컴포넌트가 스타터에 포함되어 있습니다. 
 
 **{{site.data.keyword.iotelectronics}} 서비스**는 사용자 및 어플라이언스 등록과 알림을 지원합니다. 
 
 **{{site.data.keyword.iot_full}}**을 통해 앱은 연결된 어플라이언스, 센서 및 게이트웨이와 통신하고 여기서 수집한 데이터를 사용할 수 있습니다. 
-
-<!-- **{{site.data.keyword.iotrtinsights_full}}** enables you to enrich and monitor data from your appliances, visualize what's happening now, and respond to emerging conditions by using automated actions. -->
-
-**{{site.data.keyword.amafull}}**는 모바일 앱 사용자가 기존의 소셜 계정을 사용하여 로그인할 수 있도록 지원하고 백엔드 시스템과의 해당 통신을 안전하게 보호합니다. 
 
 **{{site.data.keyword.sdk4nodefull}}**를 통해 서버 측 JavaScript&reg; 앱을 개발, 배치 및 확장할 수 있으며 사용자에게 향상된 성능, 보안 및 서비스 가능성을 제공합니다. 
 

@@ -14,7 +14,7 @@ lastupdated: "2017-03-08"
 
 
 
-# デバイス・ツールキット
+# デバイス・ツールキットの使用
 {: #iot4i_connecting_devices}
 {{site.data.keyword.iotinsurance_full}} デバイス・ツールキットを使用することにより、任意のデバイス・ベンダー製のデバイスを {{site.data.keyword.iotinsurance_short}} サービスに接続することができます。
 {:shortdesc}

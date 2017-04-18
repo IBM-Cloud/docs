@@ -32,7 +32,7 @@ La seguente tabella elenca i fornitori e i dispositivi supportati da {{site.data
 <th>Nome fornitore</th>
 <th>Tipo integrazione</th>
 <th>Dispositivi verificati</th>
-<th>Informazioni sul fornitore</th>
+<th>Informazioni sul fornitore </th>
 </tr>
 </thead>
 <tbody>
@@ -48,8 +48,8 @@ La seguente tabella elenca i fornitori e i dispositivi supportati da {{site.data
 <td>{{site.data.keyword.iot_short_notm}}</td>
 <td>
 <ul>
-<li>Pulsante </li>
-<li>Contatto </li>
+<li>Pulsante</li>
+<li>Contatto</li>
 <li>Temperatura</li>
 </ul>
 </td>
@@ -60,8 +60,8 @@ La seguente tabella elenca i fornitori e i dispositivi supportati da {{site.data
 <td>{{site.data.keyword.iot_short_notm}}</td>
 <td>
 <ul>
-<li>Rilevatore di fumo </li>
-<li>Pulsante </li></td>
+<li>Rilevatore di fumo</li>
+<li>Pulsante</li></td>
 </ul>
 <td>[Sito web fornitore ![icona link esterno](../../icons/launch-glyph.svg)](https://www.wibutler.com/en_GB){: new_window}</td>
 </tr>
@@ -219,7 +219,7 @@ Integra utilizzando l'applicazione mobile (obsoleto). Questo metodo funziona con
 
 ### Dati Weather Company
 #### Procedura di integrazione
-L'integrazione con i dati di Weather Company è al momento supportata come una prova di utilizzo o un'anteprima tecnica soltanto e non è pensata per l'utilizzo di produzione. 
+L'integrazione con i dati di Weather Company è al momento supportata come una prova di utilizzo o un'anteprima tecnica soltanto e non è pensata per l'utilizzo di produzione.
 
 Fornisci un indirizzo per richiamare le condizioni meteo correnti (temperatura esterna) da Weather Company per un'ubicazione specifica.
 

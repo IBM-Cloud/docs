@@ -34,8 +34,7 @@ conectados por meio da nuvem, enviarão dados para o Transformer, que processar�
 enviará para o {{site.data.keyword.iot_short_notm}}. Os dados do {{site.data.keyword.weatherfull}} também podem ser puxados para o
 {{site.data.keyword.iotinsurance_short}} Weather Company Data Transformer e de lá para
 o {{site.data.keyword.iot_short_notm}}. Os dados são processados pelo mecanismo de
-blindagem, que gera um evento de blindagem e o envia, por meio de APIs, para o Mecanismo de ação. 
-Opcionalmente, o Mecanismo de ação pode usar o {{site.data.keyword.mobilepushfull}} para enviar notificações para o aplicativo móvel do usuário. O usuário também pode utilizar o aplicativo móvel para responder aos
+blindagem, que gera um evento de blindagem e o envia, por meio de APIs, para o Mecanismo de ação. Opcionalmente, o Mecanismo de ação pode usar o {{site.data.keyword.mobilepushfull}} para enviar notificações para o aplicativo móvel do usuário. O usuário também pode utilizar o aplicativo móvel para responder aos
 alertas e ofertas.
 
 **Nota**: versões anteriores do {{site.data.keyword.iotinsurance_short}} usavam o serviço

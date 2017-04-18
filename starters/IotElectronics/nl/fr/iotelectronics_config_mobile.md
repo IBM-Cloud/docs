@@ -2,15 +2,16 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
 
 # Utilisation de l'application mobile
 {: #iot4e_using_mobile}
@@ -18,9 +19,7 @@ lastupdated: "2017-03-10"
 Familiarisez-vous avec l'application mobile {{site.data.keyword.iotelectronics_full}} pour découvrir comment vous pouvez recevoir des alertes, envoyer des commandes et vérifier le statut de vos appareils connectés à l'aide de votre périphérique mobile, comme votre smartphone ou votre tablette.
 {:shortdesc}
 
-Pour pouvoir utiliser l'application mobile, vous devez d'abord effectuer les tâches suivantes :
-  - Déployez une instance du module de démarrage {{site.data.keyword.iotelectronics}} dans votre organisation {{site.data.keyword.Bluemix_notm}}. Cette opération entraîne le déploiement automatique des services et des applications de composant du module de démarrage.
-  - [Activez la sécurité et les communications mobiles](iotelectronics_config_mca.html) en configurant {{site.data.keyword.amafull}}.
+Pour pouvoir utiliser l'application mobile, vous devez déployer une instance du module de démarrage {{site.data.keyword.iotelectronics}} dans votre organisation {{site.data.keyword.Bluemix_notm}}. Cette opération entraîne le déploiement automatique des services et des applications de composant du module de démarrage.
 
 Pour vous initier à l'application mobile, effectuez les tâches suivantes :
 1. [Téléchargez l'application mobile](#iot4e_downloadmobile) sur votre périphérique mobile.

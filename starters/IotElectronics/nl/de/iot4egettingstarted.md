@@ -2,11 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -29,9 +29,8 @@ Bevor Sie starten, müssen Sie eine Instanz von {{site.data.keyword.iotelectroni
 ## Einführung in {{site.data.keyword.iotelectronics}}
 Führen Sie die folgenden Tasks aus, um mit der Nutzung zu beginnen:
 
-1. [Mobile Kommunikation und Sicherheit aktivieren](iotelectronics_config_mca.html) durch Konfigurieren von {{site.data.keyword.amafull}}.
-2. [Erstellen simulierter Appliances](iot4ecreatingappliances.html), und zwar mithilfe der {{site.data.keyword.iotelectronics}}-Starter-Webanwendung. Zu Demonstrationszwecken werden Waschmaschinen als simulierte Appliances für den {{site.data.keyword.iotelectronics}}-Starter verwendet. Die von Ihnen zur Herstellung einer Verbindung ausgewählte Appliance kann ein beliebiger Typ von intelligentem Elektronikgerät sein.
-3. [Herunterladen des Beispiels für die mobile App herunter und Verbindung zu dieser App herstellen](iotelectronics_config_mobile.html).
+1. [Erstellen simulierter Appliances](iot4ecreatingappliances.html), und zwar mithilfe der {{site.data.keyword.iotelectronics}}-Starter-Webanwendung. Zu Demonstrationszwecken werden Waschmaschinen als simulierte Appliances für den {{site.data.keyword.iotelectronics}}-Starter verwendet. Die von Ihnen zur Herstellung einer Verbindung ausgewählte Appliance kann ein beliebiger Typ von intelligentem Elektronikgerät sein.
+2. [Herunterladen des Beispiels für die mobile App herunter und Verbindung zu dieser App herstellen](iotelectronics_config_mobile.html).
 
 
 ## Weitere Schritte
@@ -49,14 +48,13 @@ Hier finden Sie Informationen dazu, wie Sie {{site.data.keyword.iotelectronics}}
 {: #api}
 * [{{site.data.keyword.iotelectronics}}-API ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://broker-uss-iot4e.electronics.internetofthings.ibmcloud.com/public/iot4eregistrationapi.html){:new_window}
 * [{{site.data.keyword.iot_short}}-API ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://developer.ibm.com/iotfoundation/recipes/api-documentation/){:new_window}
-
+* [IBM Watson IoT Service Health Dashboard ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://status.internetofthings.ibmcloud.com){: new_window}
 
 ## Komponenten
 {: #general}
 
 * [{{site.data.keyword.iotelectronics}}-Dokumentation](iotelectronics_overview.html){:new_window}
 * [{{site.data.keyword.iot_full}}-Dokumentation](https://console.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
-*  [{{site.data.keyword.amashort}}-Dokumentation](https://console.ng.bluemix.net/docs/services/mobileaccess/overview.html){:new_window}
 * [{{site.data.keyword.sdk4nodefull}}-Dokumentation](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime){:new_window}
 
 ## Beispiele

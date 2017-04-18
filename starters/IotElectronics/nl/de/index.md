@@ -2,11 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -21,9 +21,8 @@ Bei {{site.data.keyword.iotelectronics_full}} handelt es sich um eine integriert
 
 Führen Sie die folgenden Tasks aus, um mit der Nutzung von {{site.data.keyword.iotelectronics}} zu beginnen:
 
-1. [Mobile Kommunikation und Sicherheit aktivieren](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mca.html) durch Konfigurieren von {{site.data.keyword.amashort}}.
-2. [Erstellen simulierter Appliances](https://console.ng.bluemix.net/docs/starters/IotElectronics/iot4ecreatingappliances.html), und zwar mithilfe der {{site.data.keyword.iotelectronics}}-Starter-Webanwendung. Zu Demonstrationszwecken werden Waschmaschinen als simulierte Appliances für den {{site.data.keyword.iotelectronics}}-Starter verwendet. Die von Ihnen zur Herstellung einer Verbindung ausgewählte Appliance kann ein beliebiger Typ von intelligentem Elektronikgerät sein.
-3. [Herunterladen des Beispiels für die mobile App herunter und Verbindung zu dieser App herstellen](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html).
+1. [Erstellen simulierter Appliances](https://console.ng.bluemix.net/docs/starters/IotElectronics/iot4ecreatingappliances.html), und zwar mithilfe der {{site.data.keyword.iotelectronics}}-Starter-Webanwendung. Zu Demonstrationszwecken werden Waschmaschinen als simulierte Appliances für den {{site.data.keyword.iotelectronics}}-Starter verwendet. Die von Ihnen zur Herstellung einer Verbindung ausgewählte Appliance kann ein beliebiger Typ von intelligentem Elektronikgerät sein.
+2. [Herunterladen des Beispiels für die mobile App herunter und Verbindung zu dieser App herstellen](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html).
 
 
 ## Weitere Schritte
@@ -37,5 +36,4 @@ Hier finden Sie Informationen dazu, wie Sie {{site.data.keyword.iotelectronics}}
 ## Weitere Informationen zu den Komponenten
 - [{{site.data.keyword.iotelectronics}}-Dokumentation](iotelectronics_overview.html)
 - [{{site.data.keyword.iot_full}}-Dokumentation](https://console.ng.bluemix.net/docs/services/IoT/index.html)
--  [{{site.data.keyword.amashort}}-Dokumentation](https://console.ng.bluemix.net/docs/services/mobileaccess/overview.html)
 - [{{site.data.keyword.sdk4nodefull}}-Dokumentation](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)

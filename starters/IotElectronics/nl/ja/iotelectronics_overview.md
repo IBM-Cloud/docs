@@ -2,16 +2,15 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-
 
 # {{site.data.keyword.iotelectronics}} について
 {: #iotelectronics_about}
@@ -44,15 +43,11 @@ iOS または Android モバイル・デバイスを使用して、電気製品�
 
 ![{{site.data.keyword.iotelectronics}} のアーキテクチャー。この図については、トピックの本文で説明されています。](images/IoT4E_architecture.svg "{{site.data.keyword.iotelectronics}} のアーキテクチャー")
 
-{{site.data.keyword.iotelectronics}} Starter は、{{site.data.keyword.iotelectronics}} サービスと API を使用して {{site.data.keyword.iot_short_notm}} に接続します。スターター・アプリとサンプル・モバイル・アプリは、{{site.data.keyword.iotelectronics}} サービスと通信し、{{site.data.keyword.amafull}} によって相互に接続されています。以下のコンポーネントが Starter に含まれています。
+{{site.data.keyword.iotelectronics}} Starter は、{{site.data.keyword.iotelectronics}} サービスと API を使用して {{site.data.keyword.iot_short_notm}} に接続します。スターター・アプリとサンプル・モバイル・アプリは、{{site.data.keyword.iotelectronics}} サービスと通信します。以下のコンポーネントが Starter に含まれています。
 
 **{{site.data.keyword.iotelectronics}} サービス**は、ユーザーと電気製品の登録と通知をサポートします。
 
 **{{site.data.keyword.iot_full}}** は、接続された電気製品、センサー、ゲートウェイとの通信や、それらによって収集されたデータの利用をアプリで実行できるようにします。
-
-<!-- **{{site.data.keyword.iotrtinsights_full}}** enables you to enrich and monitor data from your appliances, visualize what's happening now, and respond to emerging conditions by using automated actions. -->
-
-**{{site.data.keyword.amafull}}** は、モバイル・アプリのユーザーが既存のソーシャル・アカウントを使用してログインできるようにし、バックエンド・システムとの通信をセキュアに保ちます。
 
 **{{site.data.keyword.sdk4nodefull}}** は、サーバー・サイド JavaScript&reg; アプリを開発、デプロイ、スケーリングできるようにし、強化されたパフォーマンス、セキュリティー、保守容易性を実現します。
 

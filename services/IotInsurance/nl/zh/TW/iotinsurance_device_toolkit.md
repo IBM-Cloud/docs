@@ -14,7 +14,7 @@ lastupdated: "2017-03-08"
 
 
 
-# 裝置工具箱
+# 使用裝置工具箱
 {: #iot4i_connecting_devices}
 使用「{{site.data.keyword.iotinsurance_full}} 裝置工具箱」，即可將任何裝置供應商所製造的裝置連接至 {{site.data.keyword.iotinsurance_short}} 服務。
 {:shortdesc}
