@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-04-13"
+lastupdated: "2017-04-18"
 
 ---
 
@@ -77,6 +77,7 @@ When you use a custom domain, to serve the SSL certificate, use the following re
   * US-South: secure.us-south.bluemix.net
   * EU-GB: secure.eu-gb.bluemix.net
   * AU-SYD: secure.au-syd.bluemix.net
+  * EU-DE: secure.eu-de.bluemix.net
 
 
 To upload a certificate for your application:
