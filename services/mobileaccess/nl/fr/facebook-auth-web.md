@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.
+**Important : Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.**
 
 # Activation de l'authentification Facebook pour les applications Web
 {: #facebook-auth-web}

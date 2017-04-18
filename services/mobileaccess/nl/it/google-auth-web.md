@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-Il servizio {{site.data.keyword.amafull}} è stato sostituito con il servizio {{site.data.keyword.appid_full}}.
+**Importante: il servizio {{site.data.keyword.amafull}} è stato sostituito con il servizio {{site.data.keyword.appid_full}}.**
 
 # Abilitazione dell'autenticazione Google per le applicazioni Web
 {: #google-auth-web}
@@ -42,7 +42,7 @@ URIs. Ottieni l'URI di autorizzazione di reindirizzamento {{site.data.keyword.am
 4. Salva le modifiche. Prendi nota del **Google Client ID** e del **Application Secret**.
 
 
-## Configurazione di {{site.data.keyword.amashort}} per l'autenticazione Google
+## Configurazione di Mobile Client Access per l'autenticazione Google
 {: #google-auth-config-ama}
 
 Dopo aver ottenuto il segreto e l'ID client Google, puoi abilitare l'autenticazione Google nel dashboard {{site.data.keyword.amashort}}.
@@ -58,7 +58,7 @@ Dopo aver ottenuto il segreto e l'ID client Google, puoi abilitare l'autenticazi
 5. Fai clic su **Save**.
 
 
-## Implementazione del flusso dell'autorizzazione {{site.data.keyword.amashort}} utilizzando Google come provider di identità
+## Implementazione del flusso dell'autorizzazione Mobile Client Access utilizzando Google come provider di identità
 {: #google-auth-flow}
 
 La variabile di ambiente `VCAP_SERVICES` viene creata automaticamente per ogni istanza del servizio {{site.data.keyword.amashort}} e contiene le proprietà necessarie per il processo di autorizzazione. È formata da un oggetto JSON e può essere visualizzata facendo clic nella scheda **Service Credentials** nel dashboard del servizio {{site.data.keyword.amashort}}.
@@ -193,7 +193,7 @@ Il passo successivo è quello di ottenere il token di accesso e i token di ident
 	Quando hai ricevuto l'accesso e i token di identità, puoi indicare la sessione Web come autenticata e facoltativamente conservare questi token.  
 
 
-##Utilizzo dell'accesso ottenuto e del token di identità
+## Utilizzo dell'accesso ottenuto e del token di identità
 {: #google-auth-using-token}
 
 Il token di identità contiene informazioni sull'identità dell'utente. Per l'autenticazione Google, il token conterrà tutte le informazioni che l'utente ha deciso di condividere, come il nome completo, l'URL della foto del profilo, e così via.  
@@ -204,7 +204,7 @@ Per effettuare richieste che proteggano le risorse aggiungi un'intestazione dell
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-####Suggerimenti:
+#### Suggerimenti:
 {: #tips}
 
 * Il `accessToken` e il `idToken` devono essere separati da uno spazio vuoto.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,11 +12,10 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-Der {{site.data.keyword.amafull}}-Service wird durch den {{site.data.keyword.appid_full}}-Service ersetzt.
+**Wichtig: Der Service {{site.data.keyword.amafull}} wird durch den Service {{site.data.keyword.appid_full}} ersetzt.**
 
 # Informationen zu {{site.data.keyword.amashort}}
 {: #mca-overview}
-
 
 Der {{site.data.keyword.amafull}}-Service stellt Authentifizierungsservices für mobile Anwendungen und Webanwendungen bereit, die auf Cloudressourcen zugreifen, die per Hosting in {{site.data.keyword.Bluemix_notm}} zur Verfügung gestellt werden.
 
@@ -88,19 +87,3 @@ Das folgende Diagramm zeigt, wie eine Anforderung aus dem Client-SDK an Ihre mob
 * Von diesem Punkt an haben alle Anforderungen, die mit dem {{site.data.keyword.amashort}}-Client-SDK gesendet werden, einen neu abgerufenen Berechtigungsheader.
 * Das {{site.data.keyword.amashort}}-Client-SDK wiederholt automatisch das Senden der ursprünglichen Anforderung, die den Berechtigungsablauf ausgelöst hat.
 * Das {{site.data.keyword.amashort}}-Server-SDK extrahiert den Berechtigungsheader aus der Anforderung, validiert den Header mit dem {{site.data.keyword.amashort}}-Service und erteilt den Zugriff auf eine Back-End-Ressource.
-
-
-## Hilfe und Unterstützung für {{site.data.keyword.amashort}} anfordern
-{: #gettinghelp}
-
-Wenn bei der Verwendung von {{site.data.keyword.amashort}} Probleme oder Fragen auftreten, finden Sie Hilfe, indem Sie in einem Forum nach Informationen suchen oder Fragen stellen. Sie können auch ein Support-Ticket öffnen.
-
-Wenn Sie eine Frage über die Foren stellen, kennzeichnen Sie Ihre Frage, so dass sie von den {{site.data.keyword.Bluemix_notm}}-Entwicklerteams gesehen wird.
-
-* Bei technischen Fragen zur Entwicklung und Bereitstellung einer App mit {{site.data.keyword.amashort}} posten Sie Ihre Frage unter [Stack Overflow ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://stackoverflow.com/search?q={{site.data.keyword.amashort}}+ibm-bluemix){: new_window} und versehen Sie sie mit den Tags `ibm-bluemix` und `{{site.data.keyword.amashort}}`.
-* Bei Fragen zum Service und zu den ersten Schritten verwenden Sie das Forum [IBM developerWorks ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=mobile+client+access%20%2B[bluemix]){: new_window}.
-
-
-Detailliertere Informationen zur Nutzung der Foren finden Sie unter [Hilfe anfordern](https://www.{DomainName}/docs/support/index.html#getting-help).
-
-Weitere Informationen zum Öffnen eines IBM Support-Tickets, zu Supportebenen oder der Dringlichkeit von Tickets finden Sie unter [Support kontaktieren](https://www.{DomainName}/docs/support/index.html#contacting-support).

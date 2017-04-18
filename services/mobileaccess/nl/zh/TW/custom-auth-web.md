@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,9 +11,9 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。
+**重要事項：{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。**
 
-#配置適用於 {{site.data.keyword.amashort}} Web 應用程式的自訂鑑別
+#配置適用於 Mobile Client Access Web 應用程式的自訂鑑別
 {: #custom-web}
 
 將自訂鑑別及 {{site.data.keyword.amafull}} 安全功能新增至 Web 應用程式。
@@ -106,7 +106,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 {: codeblock}
 
 
-##配置 {{site.data.keyword.amashort}} 進行自訂鑑別
+##配置 Mobile Client Access 進行自訂鑑別
 {: #custom-auth-config-mca}
 
 配置您的自訂身分提供者之後，您可以在 {{site.data.keyword.amashort}} 儀表板中啟用自訂鑑別。
@@ -119,7 +119,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 1. 按一下**儲存**。
 
 
-##使用自訂身分提供者實作 {{site.data.keyword.amashort}} 授權流程
+##使用自訂身分提供者實作 Mobile Client Access 授權流程
 {: #custom-auth-flow}
 
 `VCAP_SERVICES` 環境變數是針對每一個 {{site.data.keyword.amashort}} 服務實例自動建立的，並且包含授權處理程序所需的內容。其由 JSON 物件組成，您可以在 {{site.data.keyword.amashort}} 儀表板的**服務認證**標籤中進行檢視。

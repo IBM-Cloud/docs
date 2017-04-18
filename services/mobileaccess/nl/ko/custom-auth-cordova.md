@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,9 +12,9 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-{{site.data.keyword.amafull}} 서비스가 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다.
+**중요: {{site.data.keyword.amafull}} 서비스는 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다. **
 
-# {{site.data.keyword.amashort}} Cordova 앱용 사용자 정의 인증 구성
+# Mobile Client Access Cordova 앱의 사용자 정의 인증 구성
 {: #custom-cordova}
 
 사용자 정의 인증 및 {{site.data.keyword.amafull}} 클라이언트 SDK를 사용하여 보호 애플리케이션에 액세스하도록 Cordova 애플리케이션을 인스트루먼트합니다. 

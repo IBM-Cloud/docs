@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。
+**重要事項：{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。**
 
 # 啟用 iOS 應用程式的 Google 鑑別 (Swift SDK)
 {: #google-auth-ios}
@@ -73,7 +73,7 @@ lastupdated: "2017-03-15"
 
 	如需更新橋接標頭檔的相關資訊，請參閱[啟用登入 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in){: new_window}。
 
-## 配置 {{site.data.keyword.amashort}} 進行 Google 鑑別
+## 配置 Mobile Client Access 進行 Google 鑑別
 {: #google-auth-ios-config}
 
 現在您已經有 iOS 用戶端 ID，可以在 {{site.data.keyword.amashort}} 服務中啟用 Google 鑑別。
@@ -84,7 +84,7 @@ lastupdated: "2017-03-15"
 1. 在**適用於 iOS 的應用程式 ID** 中，指定您從 `GoogleService-Info.plist` 檔案取得的 `CLIENT_ID` 值。
 1. 按一下**儲存**。
 
-## 配置適用於 iOS 的 {{site.data.keyword.amashort}} 用戶端 SDK
+## 配置適用於 iOS 的用戶端 SDK
 {: #google-auth-ios-sdk}
 
 ### 安裝 CocoaPods
@@ -94,10 +94,9 @@ lastupdated: "2017-03-15"
 
 1. 如果您未安裝 CocoaPods，請執行：
 
-
 	```
 	sudo gem install cocoapods
-```
+	```
 	{: codeblock}
 
 如需相關資訊，請參閱 [CocoaPods 網站 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cocoapods.org/){: new_window}。

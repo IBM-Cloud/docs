@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,9 +12,9 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-Der {{site.data.keyword.amafull}}-Service wird durch den {{site.data.keyword.appid_full}}-Service ersetzt.
+**Wichtig: Der Service {{site.data.keyword.amafull}} wird durch den Service {{site.data.keyword.appid_full}} ersetzt.**
 
-# Angepasste Authentifizierung für {{site.data.keyword.amashort}}-Cordova-App konfigurieren
+# Angepasste Authentifizierung für die Mobile Client Access-Cordova-App konfigurieren
 {: #custom-cordova}
 
 Instrumentieren Sie die Cordova-Anwendung für die Verwendung der angepassten Authentifizierung und des {{site.data.keyword.amafull}}-Client-SDKs für den Zugriff auf die geschützte Anwendung.

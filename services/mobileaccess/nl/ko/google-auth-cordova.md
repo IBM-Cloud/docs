@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-{{site.data.keyword.amafull}} 서비스가 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다.
+**중요: {{site.data.keyword.amafull}} 서비스는 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다. **
 
 # Cordova 앱에서 Google 인증 사용
 {: #google-auth-cordova}
@@ -41,7 +41,7 @@ Google 인증을 위해 Cordova 애플리케이션의 Android 플랫폼을 구�
    * [Google 개발자 콘솔에서 프로젝트 작성](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html#create-google-project). 여기서는 Google 개발자 웹 사이트에서 인증 서비스를 설정하는 방법을 설명합니다. 
    * [Google 인증용 MCA 구성](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html#google-auth-android-config). 여기서는 Google 인증을 사용하도록 {{site.data.keyword.amashort}}를 설정하는 방법을 설명합니다. 
 
-### Android Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK 구성
+### Android Cordova용 클라이언트 SDK 구성
 
 1. Android 프로젝트 폴더에서 앱 모듈의 `build.gradle` 파일(프로젝트 `build.gradle` 파일이 **아님**)을 여십시오.
 종속 항목 섹션을 찾은 다음 클라이언트 SDK에 대한 새 컴파일 종속 항목을 추가하십시오. 

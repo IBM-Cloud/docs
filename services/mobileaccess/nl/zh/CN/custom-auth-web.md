@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,9 +11,9 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。
+**重要信息：{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。**
 
-#针对 {{site.data.keyword.amashort}} Web 应用程序配置定制认证
+#针对 Mobile Client Access Web 应用程序配置定制认证
 {: #custom-web}
 
 将定制认证和 {{site.data.keyword.amafull}} 安全功能添加到 Web 应用程序。
@@ -105,7 +105,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 {: codeblock}
 
 
-##配置 {{site.data.keyword.amashort}} 进行定制认证
+##配置 Mobile Client Access 进行定制认证
 {: #custom-auth-config-mca}
 
 配置定制身份提供者后，可以在 {{site.data.keyword.amashort}} 仪表板中启用定制认证。
@@ -118,7 +118,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 1. 单击**保存**。
 
 
-##使用定制身份提供者实施 {{site.data.keyword.amashort}} 授权流程
+##使用定制身份提供者实施 Mobile Client Access 授权流程
 {: #custom-auth-flow}
 
 针对每一个 {{site.data.keyword.amashort}} 服务实例会自动创建 `VCAP_SERVICES` 环境变量，该环境变量包含授权流程所需的属性。它包含 JSON 对象，通过单击 {{site.data.keyword.amashort}}“仪表板”中的**服务凭证**选项卡，可以查看该对象。

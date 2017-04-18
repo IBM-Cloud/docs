@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -10,7 +10,7 @@ lastupdated: "2017-03-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 
-{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。
+**重要信息：{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。**
 
 # 使用 Facebook 凭证认证用户
 {: #facebook-auth-overview}

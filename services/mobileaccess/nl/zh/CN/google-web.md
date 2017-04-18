@@ -2,11 +2,11 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
-{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。
+**重要信息：{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。**
 
 # 启用 Web 应用程序的 Google 认证
 {: #google-auth-web}
@@ -33,7 +33,7 @@ lastupdated: "2017-03-15"
 1. 完成凭证创建并记录 Google 客户端标识和私钥。
 
 
-## 配置 {{site.data.keyword.amashort}} 进行 Google 认证
+## 配置 Mobile Client Access 进行 Google 认证
 在您已经有 Google 应用程序标识和私钥之后，可以在 {{site.data.keyword.amashort}} 仪表板中启用 Google 认证。
 
 1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”中打开应用程序。
@@ -42,7 +42,7 @@ lastupdated: "2017-03-15"
 1. 输入 Google 客户端标识和私钥，并保存。
 
 
-## 使用 {{site.data.keyword.amashort}} 进行 Google Web 认证
+## 使用 Mobile Client Access 进行 Google Web 认证
 要启动授权过程：
 
 1. 从 Web 应用程序重定向到以下授权服务器端点：  

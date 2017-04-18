@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。
+**重要信息：{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。**
 
 # 启用 Cordova 应用程序的 Google 认证
 {: #google-auth-cordova}
@@ -41,7 +41,7 @@ lastupdated: "2017-03-15"
    * [在 Google 开发者控制台上创建项目](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html#create-google-project)。这将显示如何在 Google 开发者 Web 站点上设置认证服务。
    * [配置 MCA 进行 Google 认证](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html#google-auth-android-config)。这将显示如何设置 {{site.data.keyword.amashort}} 以使用 Google 授权。
 
-### 针对 Android Cordova 配置 {{site.data.keyword.amashort}} 客户端 SDK
+### 针对 Android Cordova 配置客户端 SDK
 
 1. 在 Android 项目文件夹，打开应用程序模块的 `build.gradle` 文件（**非**项目的 `build.gradle` 文件）。找到 dependencies 部分，并为客户端 SDK 添加新的编译依赖关系：
 

@@ -2,13 +2,13 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-07"
 
 ---
 
-{{site.data.keyword.amafull}} 서비스가 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다.
+**중요: {{site.data.keyword.amafull}} 서비스는 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다. **
 
-# 사용자 정의 인증용 {{site.data.keyword.amashort}} 구성
+# 사용자 정의 인증을 위한 Mobile Client Access 구성
 {: #custom-dash}
 
 
@@ -20,8 +20,9 @@ lastupdated: "2017-03-15"
 * {{site.data.keyword.amafull}} 서비스의 인스턴스
 * 사용자 정의 ID 제공자 애플리케이션
 
-## {{site.data.keyword.amafull}} 대시보드에서 사용자 정의 인증을 구성
+## 대시보드에서 사용자 정의 인증 구성
 {: #custom-dash-config}
+
 사용자 정의 인증을 구성하려면 {{site.data.keyword.amafull}} 대시보드를 사용하십시오. 
 
 1. {{site.data.keyword.amafull}} 대시보드에서 서비스를 여십시오. 

@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
-{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。
+**重要信息：{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。**
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -15,7 +15,7 @@ lastupdated: "2017-03-15"
 {:pre: .pre}
 
 
-# 针对 {{site.data.keyword.amashort}} Android 应用程序配置定制认证
+# 针对 Mobile Client Access Android 应用程序配置定制认证
 {: #custom-android}
 
 
@@ -40,7 +40,7 @@ lastupdated: "2017-03-15"
 
 
 
-## 初始化 {{site.data.keyword.amashort}} 客户端 SDK
+## 初始化客户端 SDK
 {: #custom-android-initialize}
 如果您的 Android 应用程序已经安装了 {{site.data.keyword.amashort}} Android SDK，那么可以跳过这部分。
 1. 在 Android Studio 中的 Android 项目中，打开应用程序模块的 `build.gradle` 文件（非项目的 `build.gradle`）。

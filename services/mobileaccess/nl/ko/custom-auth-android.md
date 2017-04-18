@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
-{{site.data.keyword.amafull}} 서비스가 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다.
+**중요: {{site.data.keyword.amafull}} 서비스는 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다. **
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -15,7 +15,7 @@ lastupdated: "2017-03-15"
 {:pre: .pre}
 
 
-# {{site.data.keyword.amashort}} Android 앱용 사용자 정의 인증 구성 
+# Mobile Client Access Android 앱의 사용자 정의 인증 구성
 {: #custom-android}
 
 
@@ -40,7 +40,7 @@ lastupdated: "2017-03-15"
 
 
 
-## {{site.data.keyword.amashort}} 클라이언트 SDK 초기화
+## 클라이언트 SDK 초기화
 {: #custom-android-initialize}
 {{site.data.keyword.amashort}} Android SDK로 인스트루먼트된 Android 앱이 있으면 이 절을 건너뛰어도 됩니다. 
 1. Android Studio의 Android 프로젝트에서, 앱 모듈의 `build.gradle` 파일을 여십시오(`build.gradle` 프로젝트가 아님). 

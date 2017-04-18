@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,9 +11,9 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-Il servizio {{site.data.keyword.amafull}} è stato sostituito con il servizio {{site.data.keyword.appid_full}}.
+**Importante: il servizio {{site.data.keyword.amafull}} è stato sostituito con il servizio {{site.data.keyword.appid_full}}.**
 
-#Configurazione dell'autenticazione personalizzata per le applicazioni Web {{site.data.keyword.amashort}}
+#Configurazione dell'autenticazione personalizzata per le applicazioni web Mobile Client Access
 {: #custom-web}
 
 Aggiungi l'autenticazione personalizzata e la funzionalità di sicurezza {{site.data.keyword.amafull}} alla tua applicazione Web.
@@ -106,7 +106,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 {: codeblock}
 
 
-##Configurazione di {{site.data.keyword.amashort}} per l'autenticazione personalizzata
+##Configurazione di Mobile Client Access per l'autenticazione personalizzata
 {: #custom-auth-config-mca}
 
 Dopo che hai configurato il tuo provider di identità personalizzato, puoi abilitare l'autenticazione personalizzata nel dashboard {{site.data.keyword.amashort}}.
@@ -119,7 +119,7 @@ Dopo che hai configurato il tuo provider di identità personalizzato, puoi abili
 1. Fai clic su **Save**.
 
 
-##Implementazione del flusso dell'autorizzazione {{site.data.keyword.amashort}} utilizzando un provider dell'identità personalizzato
+##Implementazione del flusso dell'autorizzazione Mobile Client Access utilizzando un provider dell'identità personalizzato
 {: #custom-auth-flow}
 
 La variabile di ambiente `VCAP_SERVICES` viene creata automaticamente per ogni istanza del servizio {{site.data.keyword.amashort}} e contiene le proprietà necessarie per il processo di autorizzazione. È formato da un oggetto JSON e puoi visualizzarlo nella scheda **Credenziali del servizio** nel dashboard {{site.data.keyword.amashort}}.

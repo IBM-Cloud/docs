@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。
+**重要事項：{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。**
 
 # 設定 iOS Swift SDK
 {: #getting-started-ios}
@@ -47,7 +47,6 @@ lastupdated: "2017-03-15"
 
 1. 如果您未安裝 CocoaPods，請執行：
 
-
 ```
 sudo gem install cocoapods
 ```
@@ -66,7 +65,7 @@ sudo gem install cocoapods
 1. 編輯 `Podfile` 檔案，並將下行新增至必要目標：
 
 	```
-use_frameworks!
+  use_frameworks!
   pod 'BMSSecurity'
 	```
 	{: codeblock}
@@ -110,10 +109,10 @@ use_frameworks!
 	 let mcaAuthManager = MCAAuthorizationManager.sharedInstance
     mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
       // possible values for regionName: BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom, BMSClient.Region.sydney
-	BMSClient.sharedInstance.authorizationManager = mcaAuthManager	
+	BMSClient.sharedInstance.authorizationManager = mcaAuthManager
 	return true
 	}
- ```
+  ```
   {: codeblock}
 
 * 將 `tenantId` 取代為從**行動選項**中取得的值。
@@ -129,12 +128,9 @@ use_frameworks!
 
 1. 嘗試在瀏覽器中將要求傳送給行動後端應用程式上的受保護端點。開啟下列 URL：`{applicationRoute}/protected`，並將 `{applicationRoute}` 取代為從**行動選項**中擷取的 **applicationRoute** 值（請參閱[起始設定 Mobile Client Access 用戶端 SDK](#init-mca-sdk-ios)）。例如：
 
-	`http://my-mobile-backend.mybluemix.net/protected
-	`
+	`http://my-mobile-backend.mybluemix.net/protected`
 
 	在瀏覽器中會傳回 `Unauthorized` 訊息，因為只有使用 {{site.data.keyword.amashort}} 用戶端 SDK 所檢測的行動應用程式才能存取這個端點。
-
-
 
 1. 使用 iOS 應用程式以對相同的端點提出要求。起始設定 `BMSClient` 之後，請新增下列程式碼：
 

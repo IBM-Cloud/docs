@@ -2,11 +2,11 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
-{{site.data.keyword.amafull}} 서비스가 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다.
+**중요: {{site.data.keyword.amafull}} 서비스는 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다. **
 
 # 웹 앱에서 Google 인증 사용
 {: #google-auth-web}
@@ -33,7 +33,7 @@ ID 제공자로 Google을 사용하기 시작하려면 [Google 개발자 콘솔]
 1. 신임 정보 작성을 완료하고 Google 클라이언트 ID 및 본인확인정보를 기록해 두십시오.
 
 
-## Google 인증용 {{site.data.keyword.amashort}} 구성
+## Google 인증을 위한 Mobile Client Access 구성
 Google 애플리케이션 ID와 본인확인정보가 있으면 {{site.data.keyword.amashort}} 대시보드에서 Google 인증을 사용할 수 있습니다.
 
 1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 앱을 여십시오. 
@@ -42,7 +42,7 @@ Google 애플리케이션 ID와 본인확인정보가 있으면 {{site.data.keyw
 1. Google 클라이언트 ID 및 본인확인정보를 입력하고 저장하십시오.
 
 
-## Google 웹 인증을 위해 {{site.data.keyword.amashort}} 사용
+## Google 웹 인증을 위한 Mobile Client Access 사용
 권한 부여 프로세스를 시작하려면 다음을 수행하십시오. 
 
 1. 웹 앱에서 권한 서버의 다음 엔드포인트로 경로를 재지정하십시오.  

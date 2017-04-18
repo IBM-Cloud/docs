@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。
+**重要事項：{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。**
 
 # 啟用 iOS 應用程式的 Facebook 鑑別 (Swift SDK)
 {: #facebook-auth-ios}
@@ -68,8 +68,8 @@ lastupdated: "2017-03-15"
 1. 如果您未安裝 CocoaPods，請執行：
 
    ```
-sudo gem install cocoapods
-```
+   sudo gem install cocoapods
+   ```
    {: codeblock}
 
 如需相關資訊，請參閱 [CocoaPods 網站 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cocoapods.org/){: new_window}。
@@ -82,9 +82,9 @@ sudo gem install cocoapods
 1. 編輯 `Podfile`，並新增下列幾行：
 
    ```
-use_frameworks!
-pod 'BMSFacebookAuthentication'
- ```
+   use_frameworks!
+   pod 'BMSFacebookAuthentication'
+   ```
    {: codeblock}
 
    **附註：**如果您在 Podfile 中有 `pod 'BMSSecurity'` 這一行，則必須先移除它。`BMSFacebookAuthentication` Pod 會安裝所有必要的架構。
@@ -178,22 +178,21 @@ pod 'BMSFacebookAuthentication'
 1. 新增下列標頭，在您要使用 {{site.data.keyword.amashort}} 用戶端 SDK 的類別中匯入必要架構：
 
    ```swift
- import UIKit
- import BMSCore
- import BMSSecurity
- ```
+   import UIKit
+   import BMSCore
+   import BMSSecurity
+   ```
    {: codeblock}
 
 1. 起始設定用戶端 SDK。
 
    ```Swift
-	let tenantId = "<serviceTenantID>"
-	let regionName = <applicationBluemixRegion>
+   let tenantId = "<serviceTenantID>"
+   let regionName = <applicationBluemixRegion>
 
-	func application(_ application: UIApplication, 
-	    didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
- let mcaAuthManager = MCAAuthorizationManager.sharedInstance
+   func application(_ application: UIApplication,
+      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+      let mcaAuthManager = MCAAuthorizationManager.sharedInstance
       mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
       //the regionName should be one of the following: BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom, or BMSClient.Region.sydney
       BMSClient.sharedInstance.authorizationManager = mcaAuthManager
@@ -212,8 +211,8 @@ pod 'BMSFacebookAuthentication'
 1. 將下列程式碼新增至應用程式委派中的 `application:didFinishLaunchingWithOptions` 方法，以通知 Facebook SDK 有關應用程式啟動的資訊，並登錄「Facebook 鑑別處理程式」。在起始設定 BMSClient 實例之後新增此程式碼，並將 Facebook 登錄為鑑別管理程式。
 
    ```Swift
-  return FacebookAuthenticationManager.sharedInstance.onFinishLaunching(application, withOptions: launchOptions)
- ```
+   return FacebookAuthenticationManager.sharedInstance.onFinishLaunching(application, withOptions: launchOptions)
+   ```
    {: codeblock}
 
 1. 將 `FacebookAuthenticationManager.swift` 檔案從 `BMSFacebookAuthentication` pod 原始檔複製到您的專案目錄。
@@ -278,8 +277,8 @@ response:Optional("Hello, this is a protected resouce of the mobile backend appl
 1. 您也可以新增下列程式碼，來新增登出功能：
 
    ```
-FacebookAuthenticationManager.sharedInstance.logout(callBack)
-```
+   FacebookAuthenticationManager.sharedInstance.logout(callBack)
+   ```
    {: codeblock}
 
    如果您在使用者使用 Facebook 登入之後呼叫此程式碼，而且使用者嘗試重新登入，則系統會提示他們授權 {{site.data.keyword.amashort}} 使用 Facebook 進行鑑別。

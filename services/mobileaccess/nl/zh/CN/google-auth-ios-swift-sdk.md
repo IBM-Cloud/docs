@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。
+**重要信息：{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。**
 
 # 启用 iOS 应用程序 (Swift SDK) 的 Google 认证
 {: #google-auth-ios}
@@ -69,7 +69,7 @@ lastupdated: "2017-03-15"
 
 	有关更新桥接头文件的更多信息，请参阅[启用登录 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in){: new_window}。
 
-## 配置 {{site.data.keyword.amashort}} 进行 Google 认证
+## 配置 Mobile Client Access 进行 Google 认证
 {: #google-auth-ios-config}
 
 现在，您已经有 iOS 客户端标识，可以在 {{site.data.keyword.amashort}} 服务中启用 Google 认证。
@@ -80,7 +80,7 @@ lastupdated: "2017-03-15"
 1. 在 **iOS 的应用程序标识**中，指定从 `GoogleService-Info.plist` 文件获取的 `CLIENT_ID` 值。
 1. 单击**保存**。
 
-## 针对 iOS 配置 {{site.data.keyword.amashort}} 客户端 SDK
+## 针对 iOS 配置客户端 SDK
 {: #google-auth-ios-sdk}
 
 ### 安装 CocoaPods

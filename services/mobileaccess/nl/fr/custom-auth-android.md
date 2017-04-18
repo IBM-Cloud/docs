@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
-Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.
+**Important : Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.**
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -15,7 +15,7 @@ Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.dat
 {:pre: .pre}
 
 
-# Configuration d'une authentification personnalisée pour votre application {{site.data.keyword.amashort}} Android
+# Configuration d'une authentification personnalisée pour votre application Mobile Client Access Android
 {: #custom-android}
 
 
@@ -40,7 +40,7 @@ Pour plus d'informations, voir les sujets suivants :
 
 
 
-## Initialisation du logiciel SDK client de {{site.data.keyword.amashort}}
+## Initialisation du logiciel SDK client
 {: #custom-android-initialize}
 Si vous disposez d'une application Android équipée du SDK Android {{site.data.keyword.amashort}}, vous pouvez ignorer cette section.
 1. Dans votre projet Android dans Android Studio, ouvrez le fichier `build.gradle` de votre module d'application (et non pas le fichier `build.gradle` du projet).

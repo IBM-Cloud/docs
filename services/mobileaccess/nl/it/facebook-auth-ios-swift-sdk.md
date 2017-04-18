@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-Il servizio {{site.data.keyword.amafull}} è stato sostituito con il servizio {{site.data.keyword.appid_full}}.
+**Importante: il servizio {{site.data.keyword.amafull}} è stato sostituito con il servizio {{site.data.keyword.appid_full}}.**
 
 # Abilitazione dell'autenticazione Facebook per le applicazioni iOS (SDK Swift)
 {: #facebook-auth-ios}
@@ -168,7 +168,7 @@ Abilita `Keychain Sharing`. Vai alla scheda `Funzionalità` e passa `Keychain Sh
 
    Aggiorna le proprietà `CFBundleURLSchemes` e `FacebookappID` con il tuo ID applicazione Facebook. Aggiorna `FacebookDisplayName` con il nome della tua applicazione Facebook.
 
-   **Importante**: assicurati di non sovrascrivere alcuna proprietà esistente nel file `info.plist`. Se hai delle proprietà che si sovrappongono, devi unirle manualmente. Per ulteriori informazioni, vedi [Configure Xcode Project ![Icona link esterno](../../icons/launch-glyph.svg "External link icon")](https://developers.facebook.com/docs/ios/getting-started/){: new_window} e [Preparing Your Apps for iOS9 ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developers.facebook.com/docs/ios/ios9){: new_window}.
+   **Importante**: assicurati di non sovrascrivere alcuna proprietà esistente nel file `info.plist`. Se hai delle proprietà che si sovrappongono, devi unirle manualmente. Per ulteriori informazioni, vedi [Configure Xcode Project ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developers.facebook.com/docs/ios/getting-started/){: new_window} e [Preparing Your Apps for iOS9 ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developers.facebook.com/docs/ios/ios9){: new_window}.
 
 ## Inizializzazione dell'SDK Swift client {{site.data.keyword.amashort}}
 {: #facebook-auth-ios-initalize-swift}

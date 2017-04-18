@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-Der {{site.data.keyword.amafull}}-Service wird durch den {{site.data.keyword.appid_full}}-Service ersetzt.
+**Wichtig: Der Service {{site.data.keyword.amafull}} wird durch den Service {{site.data.keyword.appid_full}} ersetzt.**
 
 # Google-Authentifizierung für Webanwendungen aktivieren
 {: #google-auth-web}
@@ -41,7 +41,7 @@ Erstellen Sie zur Verwendung von Google als Identitätsprovider ein Projekt in d
 4. Speichern Sie die Änderungen. Notieren Sie die **Google-Client-ID** und den **geheimen Schlüssel der Anwendung**.
 
 
-## {{site.data.keyword.amashort}} für die Google-Authentifizierung konfigurieren
+## Mobile Client Access für die Google-Authentifizierung konfigurieren
 {: #google-auth-config-ama}
 
 Wenn Sie eine Google-Anwendungs-ID und einen geheimen Schlüssel besitzen, können Sie die Google-Authentifizierung im {{site.data.keyword.amashort}}-Dashboard aktivieren.
@@ -57,7 +57,7 @@ Wenn Sie eine Google-Anwendungs-ID und einen geheimen Schlüssel besitzen, könn
 5. Klicken Sie auf **Speichern**.
 
 
-## {{site.data.keyword.amashort}}-Berechtigungsablauf mit Google als Identitätsprovider implementieren
+## Mobile Client Access-Berechtigungsablauf mit Google als Identitätsprovider implementieren
 {: #google-auth-flow}
 
 Die Umgebungsvariable `VCAP_SERVICES` wird automatisch für jede {{site.data.keyword.amashort}}-Serviceinstanz erstellt und enthält Eigenschaften, die für den Berechtigungsprozess erforderlich sind. Sie besteht aus einem JSON-Objekt und kann durch Klicken auf die Registerkarte **Service Credentials** im {{site.data.keyword.amashort}}-Service-Dashboard angezeigt werden.
@@ -189,7 +189,7 @@ Im nächsten Schritt werden Zugriffstoken und Identitätstokens mithilfe des zuv
 	Nachdem Sie das Zugriffstoken und das Identitätstoken empfangen haben, können Sie die Websitzung als authentifiziert markieren und optional diese Tokens speichern.  
 
 
-##Abgerufenes Zugriffs- und Identitätstoken verwenden
+## Abgerufenes Zugriffs- und Identitätstoken verwenden
 {: #google-auth-using-token}
 
 Das Identitätstoken enthält Informationen zu der Benutzeridentität. Bei der Google-Authentifizierung enthält das Token alle Informationen, bei denen der Benutzer eingewilligt hat, dass sie geteilt werden, wie zum Beispiel den vollständigen Namen, die URL des Profilfotos usw.  
@@ -200,7 +200,7 @@ Um Anforderungen an geschützte Ressourcen zu stellen, fügen Sie einen Berechti
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-####Tipps:
+#### Tipps:
 {: #tips}
 
 * `accessToken` und `idToken` müssen durch ein Leerzeichen getrennt werden.

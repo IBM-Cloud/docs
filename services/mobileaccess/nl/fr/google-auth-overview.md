@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.
+**Important : Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.**
 
 
 # Authentification des utilisateurs avec des données d'identification Google
@@ -45,7 +45,7 @@ Le diagramme suivant représente l'intégration entre {{site.data.keyword.amasho
 * Le SDK serveur de {{site.data.keyword.amashort}} extrait l'en-tête d'autorisation de la demande, la valide auprès du service {{site.data.keyword.amashort}}, et donne l'accès à la ressource de back end.
 
 
-### Flux de requête d'une application Web {{site.data.keyword.amashort}}
+### Flux de requête d'une application Web Mobile Client Access
 {: #mca-google-web-sequence}
 Le flux de requête d'une application Web {{site.data.keyword.amashort}} est similaire à celui d'un client d'une application mobile. Toutefois,
 {{site.data.keyword.amashort}} protège l'application et non pas une ressource de back end {{site.data.keyword.Bluemix_notm}}.

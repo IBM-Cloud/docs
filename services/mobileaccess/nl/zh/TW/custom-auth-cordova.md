@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,9 +12,9 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。
+**重要事項：{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。**
 
-# 配置適用於 {{site.data.keyword.amashort}} Cordova 應用程式的自訂鑑別
+# 配置適用於 Mobile Client Access Cordova 應用程式的自訂鑑別
 {: #custom-cordova}
 
 檢測 Cordova 應用程式，以使用自訂鑑別和 {{site.data.keyword.amafull}} 用戶端 SDK，存取受保護的應用程式。

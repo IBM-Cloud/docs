@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。
+**重要信息：{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。**
 
 # 启用 Web 应用程序的 Google 认证
 {: #google-auth-web}
@@ -42,7 +42,7 @@ lastupdated: "2017-03-15"
 4. 保存更改。记录 **Google 客户端标识**和**应用程序私钥**。
 
 
-## 配置 {{site.data.keyword.amashort}} 进行 Google 认证
+## 配置 Mobile Client Access 进行 Google 认证
 {: #google-auth-config-ama}
 
 在您已经有 Google 应用程序标识和私钥之后，可以在 {{site.data.keyword.amashort}} 仪表板中启用 Google 认证。
@@ -58,7 +58,7 @@ lastupdated: "2017-03-15"
 5. 单击**保存**。
 
 
-## 使用 Google 作为身份提供者实施 {{site.data.keyword.amashort}} 授权流程
+## 使用 Google 作为身份提供者实施 Mobile Client Access 授权流程
 {: #google-auth-flow}
 
 针对每一个 {{site.data.keyword.amashort}} 服务实例会自动创建 `VCAP_SERVICES` 环境变量，该环境变量包含授权流程所需的属性。它包含 JSON 对象，通过单击 {{site.data.keyword.amashort}} 服务仪表板中的**服务凭证**选项卡，可以查看该对象。
@@ -191,7 +191,7 @@ lastupdated: "2017-03-15"
 	在您收到访问令牌和身份令牌之后，您可以将 Web 会话标记为已认证，并且可以选择持久存储这些令牌。  
 
 
-##使用获取的访问和身份令牌
+## 使用获取的访问和身份令牌
 {: #google-auth-using-token}
 
 身份令牌包含有关用户身份的信息。对于 Google 认证，该令牌将包含用户同意共享的所有信息，如全名、个
@@ -204,7 +204,7 @@ lastupdated: "2017-03-15"
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-####提示：
+#### 提示：
 {: #tips}
 
 * `accessToken` 和 `idToken` 必须以空格分隔。

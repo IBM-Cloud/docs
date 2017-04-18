@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,9 +11,9 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-{{site.data.keyword.amafull}} 서비스가 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다.
+**중요: {{site.data.keyword.amafull}} 서비스는 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다. **
 
-#{{site.data.keyword.amashort}} 웹 애플리케이션용 사용자 정의 인증 구성
+#Mobile Client Access 웹 애플리케이션의 사용자 정의 인증 구성
 {: #custom-web}
 
 사용자 정의 인증 및 {{site.data.keyword.amafull}} 보안 기능을 웹 앱에 추가하십시오.
@@ -105,7 +105,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 {: codeblock}
 
 
-##사용자 정의 인증용 {{site.data.keyword.amashort}} 구성
+##사용자 정의 인증을 위한 Mobile Client Access 구성
 {: #custom-auth-config-mca}
 
 사용자 정의 ID 제공자를 구성하면 {{site.data.keyword.amashort}} 대시보드에서 사용자 정의 인증을 사용으로 설정할 수 있습니다. 
@@ -118,7 +118,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 1. **저장**을 클릭하십시오.
 
 
-##사용자 정의 ID 제공자를 사용하여 {{site.data.keyword.amashort}} 권한 부여 플로우 구현
+##사용자 정의 ID 제공자를 사용하여 Mobile Client Access 권한 부여 플로우 구현
 {: #custom-auth-flow}
 
 `VCAP_SERVICES` 환경 변수는 각 {{site.data.keyword.amashort}} 서비스 인스턴스에 대해 자동으로 작성되며 권한 부여 프로세스에 필요한 특성을 포함합니다. JSON 오브젝트로 구성되며 {{site.data.keyword.amashort}} 대시보드의 **서비스 신임 정보** 탭에 표시됩니다. 

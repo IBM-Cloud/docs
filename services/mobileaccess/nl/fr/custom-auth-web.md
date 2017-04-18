@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,9 +11,9 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.
+**Important : Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.**
 
-#Configuration d'une authentification personnalisée pour les applications Web {{site.data.keyword.amashort}}
+#Configuration d'une authentification personnalisée pour les applications Web Mobile Client Access
 {: #custom-web}
 
 Ajoutez une authentification personnalisée et une fonctionnalité de sécurité {{site.data.keyword.amafull}} à votre application Web.
@@ -106,7 +106,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 {: codeblock}
 
 
-##Configuration de {{site.data.keyword.amashort}} pour l'authentification personnalisée
+##Configuration de Mobile Client Access pour l'authentification personnalisée
 {: #custom-auth-config-mca}
 
 Une fois que vous avez configuré votre fournisseur d'identité personnalisé, vous pouvez activer l'authentification personnalisée dans le tableau de bord
@@ -120,7 +120,7 @@ Une fois que vous avez configuré votre fournisseur d'identité personnalisé, v
 1. Cliquez sur **Sauvegarder**.
 
 
-##Implémentation du flux d'autorisation {{site.data.keyword.amashort}} à l'aide d'un fournisseur d'identité personnalisé
+##Implémentation du flux d'autorisation Mobile Client Access à l'aide d'un fournisseur d'identité personnalisé
 {: #custom-auth-flow}
 
 La variable d'environnement `VCAP_SERVICES` est créée automatiquement pour chaque instance de service {{site.data.keyword.amashort}} et contient les propriétés requises pour le processus d'autorisation. Elle se compose d'un objet JSON et vous pouvez la visualiser dans l'onglet **Données d'identification pour le service** du tableau de bord de {{site.data.keyword.amashort}}.

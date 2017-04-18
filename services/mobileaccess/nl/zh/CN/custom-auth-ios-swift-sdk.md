@@ -2,15 +2,15 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
 {:codeblock:.codeblock}
 
-{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。
+**重要信息：{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。**
 
-# 针对 {{site.data.keyword.amashort}} iOS (Swift SDK) 应用程序配置定制认证
+# 针对 Mobile Client Access iOS (Swift SDK) 应用程序配置定制认证
 {: #custom-ios}
 
 将要使用定制认证的 iOS 应用程序配置为使用 {{site.data.keyword.amafull}} 客户端 SDK，并将该应用程序连接到 {{site.data.keyword.Bluemix}}。  

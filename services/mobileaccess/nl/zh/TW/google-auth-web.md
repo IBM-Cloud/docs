@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。
+**重要事項：{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。**
 
 # 啟用 Web 應用程式的 Google 鑑別
 {: #google-auth-web}
@@ -45,7 +45,7 @@ lastupdated: "2017-03-15"
 4. 儲存變更。請記下 **Google 用戶端 ID** 和**應用程式密碼**。
 
 
-## 配置 {{site.data.keyword.amashort}} 進行 Google 鑑別
+## 配置 Mobile Client Access 進行 Google 鑑別
 {: #google-auth-config-ama}
 
 有了「Google 應用程式 ID」和「密碼」之後，即可在 {{site.data.keyword.amashort}} 儀表板中啟用 Google 鑑別。
@@ -61,7 +61,7 @@ lastupdated: "2017-03-15"
 5. 按一下**儲存**。
 
 
-## 使用 Google 作為身分提供者來實作 {{site.data.keyword.amashort}} 授權流程
+## 使用 Google 作為身分提供者實作 Mobile Client Access 授權流程
 {: #google-auth-flow}
 
 `VCAP_SERVICES` 環境變數是針對每一個 {{site.data.keyword.amashort}} 服務實例自動建立的，並且包含授權處理程序所需的內容。其由 JSON 物件組成，按一下 {{site.data.keyword.amashort}} 服務儀表板中的**服務認證**標籤，即可進行檢視。
@@ -190,7 +190,7 @@ lastupdated: "2017-03-15"
 	收到存取權和身分記號之後，您可以將 Web 階段作業標示為已鑑別，並可選擇持續保存這些記號。  
 
 
-##使用取得的存取及身分記號
+## 使用取得的存取及身分記號
 {: #google-auth-using-token}
 
 身分記號包含使用者身分的相關資訊。若為 Google 鑑別，記號會包含使用者同意共用的所有資訊，例如完整名稱、人員資訊照片的 URL 等。  
@@ -201,7 +201,7 @@ lastupdated: "2017-03-15"
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-####提示：
+#### 提示：
 {: #tips}
 
 * `accessToken` 及 `idToken` 必須以空格區隔。

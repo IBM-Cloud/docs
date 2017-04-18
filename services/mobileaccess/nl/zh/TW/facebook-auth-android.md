@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。
+**重要事項：{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。**
 
 # 啟用 Android 應用程式的 Facebook 鑑別
 {: #facebook-auth-android}
@@ -107,19 +107,17 @@ lastupdated: "2017-03-15"
 
 	```Gradle
 	dependencies {
-		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
-        name:'facebookauthentication',
-        version: '2.+',
-        ext: 'aar',
-        transitive: true
-    	// other dependencies  
+		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',
+			name:'facebookauthentication',
+			version: '2.+',
+			ext: 'aar',
+			transitive: true
+			// other dependencies
 	}
-```
+	```
 	{: codeblock}
 
 	**附註：**您可以移除對 `com.ibm.mobilefirstplatform.clientsdk.android` 群組的 `core` 模組的相依關係（如果它在您的檔案中）。`facebookauthentication` 模組會自動下載 `core` 模組及 Facebook 自己的 SDK。
-
-  
 
 	儲存更新之後，`facebookauthentication` 模組會下載所有必要的 SDK，並將其安裝在 Android 專案中。
 

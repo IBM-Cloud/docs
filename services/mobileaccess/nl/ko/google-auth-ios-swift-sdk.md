@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-{{site.data.keyword.amafull}} 서비스가 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다.
+**중요: {{site.data.keyword.amafull}} 서비스는 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다. **
 
 # iOS 앱에서 Google 인증 사용(Swift SDK)
 {: #google-auth-ios}
@@ -69,7 +69,7 @@ Google 로그인을 사용하여 {{site.data.keyword.amafull}} iOS Swift 앱에�
 
 	브릿지 헤더 파일 업데이트에 대한 자세한 정보는 [로그인 사용 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in){: new_window}을 참조하십시오. 
 
-## Google 인증용 {{site.data.keyword.amashort}} 구성
+## Google 인증을 위한 Mobile Client Access 구성
 {: #google-auth-ios-config}
 
 이제 iOS 클라이언트 ID가 있으므로 {{site.data.keyword.amashort}} 서비스에서 Google 인증을 사용 가능하게 설정할 수 있습니다.
@@ -80,7 +80,7 @@ Google 로그인을 사용하여 {{site.data.keyword.amafull}} iOS Swift 앱에�
 1. **iOS용 애플리케이션 ID**에 `GoogleService-Info.plist` 파일에서 얻은 `CLIENT_ID` 값을 지정하십시오. 
 1. **저장**을 클릭하십시오.
 
-## iOS용 {{site.data.keyword.amashort}} 클라이언트 SDK 구성
+## iOS용 클라이언트 SDK 구성
 {: #google-auth-ios-sdk}
 
 ### CocoaPods 설치

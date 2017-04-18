@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.
+**Important : Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.**
 
 # Activation de l'authentification Google pour les applications Web
 {: #google-auth-web}
@@ -45,7 +45,7 @@ et sont requis pour la configuration du tableau de bord {{site.data.keyword.amas
 4. Enregistrez les changements. Notez l'**ID client Google** et la **Valeur confidentielle de l'application**.
 
 
-## Configuration de {{site.data.keyword.amashort}} pour l'authentification Google
+## Configuration de Mobile Client Access pour l'authentification Google
 {: #google-auth-config-ama}
 
 Maintenant que vous disposez d'un ID d'application et d'une valeur confidentielle Google, vous pouvez activer l'authentification Google dans le tableau de bord {{site.data.keyword.amashort}}.
@@ -62,7 +62,7 @@ laquelle accéder à l'aboutissement du processus d'autorisation et est détermi
 5. Cliquez sur **Sauvegarder**.
 
 
-## Implémentation du flux d'autorisation {{site.data.keyword.amashort}} en utilisant Google comme fournisseur d'identité
+## Implémentation du flux d'autorisation Mobile Client Access à l'aide de Google comme fournisseur d'identité
 {: #google-auth-flow}
 
 La variable d'environnement `VCAP_SERVICES` est créée automatiquement pour chaque instance de service
@@ -201,7 +201,7 @@ Google+ et doit correspondre à l'élément `redirect_uri` défini sur le tablea
 	Une fois que vous avez obtenu l'accès et reçu les jetons d'identité, vous pouvez marquer la session Web comme authentifiée et, si vous le souhaitez, rendre persistants ces jetons.  
 
 
-##Utilisation du jeton d'accès et du jeton d'identité obtenus
+## Utilisation du jeton d'accès et du jeton d'identité obtenus
 {: #google-auth-using-token}
 
 Le jeton d'identité contient des informations sur l'identité de l'utilisateur. Dans le cas d'une authentification Google, le jeton contient toutes les informations que
@@ -213,7 +213,7 @@ Pour soumettre des demandes à des ressources protégées, ajoutez aux demandes 
 
 `Authorization=Bearer <jeton_accès> <jeton_ID>`
 
-####Conseils :
+#### Conseils :
 {: #tips}
 
 * Les éléments `jeton_accès` et `jeton_ID`  doivent être séparés par un espace.

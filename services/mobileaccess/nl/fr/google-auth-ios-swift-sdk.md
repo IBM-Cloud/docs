@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.
+**Important : Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.**
 
 # Activation de l'authentification Google pour les applications iOS (SDK Swift)
 {: #google-auth-ios}
@@ -71,7 +71,7 @@ Les étapes suivantes offrent un bref aperçu des tâches nécessaires à la pr�
 
 	Pour plus d'informations sur la mise à jour du fichier d'en-tête de pontage, voir [Enable sign-in ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in){: new_window}.
 
-## Configuration de {{site.data.keyword.amashort}} pour l'authentification Google
+## Configuration de Mobile Client Access pour l'authentification Google
 {: #google-auth-ios-config}
 
 Maintenant que vous disposez d'un ID client iOS, vous pouvez activer l'authentification Google dans le service {{site.data.keyword.amashort}}.
@@ -83,7 +83,7 @@ Maintenant que vous disposez d'un ID client iOS, vous pouvez activer l'authentif
 `GoogleService-Info.plist`.
 1. Cliquez sur **Sauvegarder**.
 
-## Configuration du SDK client de {{site.data.keyword.amashort}} pour iOS
+## Configuration du SDK client pour iOS
 {: #google-auth-ios-sdk}
 
 ### Installation de CocoaPods
