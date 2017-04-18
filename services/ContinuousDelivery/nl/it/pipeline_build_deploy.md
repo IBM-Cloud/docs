@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-
+  years: 2016, 2017
+lastupdated: "2017-3-16"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -18,8 +18,6 @@ copyright:
 
 # Creazione e distribuzione
 {: #deliverypipeline_build_deploy}
-Ultimo aggiornamento: 17 novembre 2016
-{: .last-updated}
 
 Il servizio IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} ti consente di implementare un'integrazione continua ripetibile e un processo di distribuzione continua.
 {:shortdesc}
@@ -44,19 +42,19 @@ Completa le seguenti attività per creare e configurare una pipeline.
 4. Configura il lavoro.
 5. Fai clic su **SALVA**.
 
-![Aggiunta di un lavoro a una fase](./images/AddJob2.png)
+![Aggiunta di un lavoro a una fase](images/AddJob2.png)
 
 ## Esecuzione di una fase
 {: #deliverypipeline_run_stage}
 
 Puoi eseguire manualmente una fase facendo clic sull'icona **Esegui fase** nella pagina Pipeline.
 
-![Fare clic sull'icona Esegui fase su una fase](./images/RunStage.png)
+![Fare clic sull'icona Esegui fase su una fase](images/RunStage.png)
 
 Puoi anche richiedere distribuzioni e creazioni on-demand dalla pagina della cronologia di creazione in uno dei seguenti due modi:
 * Trascina una creazione nella casella nella fase configurata.
 * Accanto alla creazione, fai clic sull'icona **Invia a** e seleziona quindi uno spazio a cui eseguire la distribuzione.
-  ![La fase di esecuzione con questa icona di creazione](./images/deploy_to.png)
+  ![La fase di esecuzione con questa icona di creazione](images/deploy_to.png)
 
 Per annullare una fase in esecuzione, nella fase, fai clic su **Visualizza log e cronologia**. Nell'elenco dei lavori, fai clic sul numero di lavori in esecuzione e quindi fai clic su **ANNULLA**. Puoi anche annullare i lavori individualmente facendo clic su un lavoro e quindi su **ANNULLA** o facendo clic sull'icona **Arresta** accanto a un lavoro nella relativa fase.
 
@@ -75,7 +73,7 @@ Quando esegui una fase manualmente o se viene eseguita perché la fase precedent
 **Suggerimento:** puoi distribuire una creazione precedente. Nella fase che contiene la generazione, fai clic su **Visualizza log e cronologia**. Nella pagina che viene aperta, fai clic per espandere il numero di esecuzione e quindi fai clic sul lavoro di creazione. Fai clic su **INVIA A** e seleziona una destinazione.
 
 ###Aggiunta di servizi alle applicazioni
-Puoi aggiungere i servizi alle tue applicazioni e gestirli dal tuo dashboard Bluemix o dalla CLI (command line interface) Cloud Foundry. Puoi anche immettere i comandi della CLI Foundry negli script per i lavori della pipeline dei servizi DevOps. Ad esempio, puoi aggiungere un servizio a un'applicazione nello script di un lavoro di distribuzione. Per ulteriori informazioni sull'aggiunta dei servizi, consulta [Aggiunta di un servizio alla tua applicazione](https://www.ng.bluemix.net/docs/services/reqnsi.html#add_service).
+Puoi aggiungere i servizi alle tue applicazioni e gestirli dal tuo dashboard Bluemix o dalla CLI (command line interface) Cloud Foundry. Puoi anche immettere i comandi della CLI Foundry negli script per i lavori della pipeline. Ad esempio, puoi aggiungere un servizio a un'applicazione nello script di un lavoro di distribuzione. Per ulteriori informazioni sull'aggiunta dei servizi, consulta [Aggiunta di un servizio alla tua applicazione](/docs/services/reqnsi.html#add_service).
 
 ## Visualizzazione dei log
 {: #deliverypipeline_view_logs}
@@ -86,10 +84,8 @@ Per visualizzare un log del lavoro, fai clic sul lavoro. In alternativa, in una 
 
 Per visualizzare il log di runtime di un'applicazione distribuita, fai clic su **Visualizza log di runtime**.
 
-![Le aree in un tile della fase su cui puoi fare clic per aprire i log pertinenti](./images/view_logs_and_history.png)
+![Le aree in un tile della fase su cui puoi fare clic per aprire i log pertinenti](images/view_logs_and_history.png)
 
 In aggiunta ai log del lavoro, puoi visualizzare i risultati della verifica dell'unità, le risorse utente generate e le modifiche al codice per ogni lavoro di creazione.
 
 Puoi anche eseguire, annullare, o configurare una fase dalla pagina Cronologia fase. Fai clic su **ESEGUI** per eseguire una fase o su **CONFIGURA** per configurarla. Puoi annullare una fase in esecuzione facendo clic sul numero di esecuzione e quindi su **ANNULLA**.
-
-

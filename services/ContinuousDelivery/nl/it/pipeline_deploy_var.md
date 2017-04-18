@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-11-17"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -18,11 +18,18 @@ copyright:
 
 # Risorse e proprietà dell'ambiente
 {: #deliverypipeline_environment}
-Ultimo aggiornamento: 17 novembre 2016
-{: .last-updated}
 
-Puoi utilizzare le proprietà dell'ambiente e le risorse preinstallate per interagire con il servizio IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}}. Ad esempio, puoi utilizzarle in uno script del lavoro o in un comando di verifica.
+Puoi utilizzare le proprietà dell'ambiente e le risorse preinstallate per interagire con il servizio IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}}. Ad esempio, puoi incorporarle in uno script del lavoro o in un comando di verifica.
 {:shortdesc}
+
+Puoi aggiungere le tue proprie proprietà dell'ambiente a una fase dalla relativa scheda **PROPRIETÀ AMBIENTE**. Le proprietà dell'ambiente sono disponibili per ogni lavoro in una fase.
+
+Puoi aggiungere quattro tipi di proprietà dalla scheda Proprietà ambiente:
+* **Testo**: una chiave della proprietà con un valore a singola riga.
+* **Area di testo**: una chiave della proprietà con un valore a più righe.
+* **Sicurezza**: una chiave della proprietà con un valore a singola riga. Il valore viene visualizzato come degli asterischi.
+* **Proprietà**: un file nel repository del progetto. Questo file può contenere più proprietà. Ogni proprietà deve essere sulla propria riga. Per coppie di valore-chiave separate, utilizzare il segno uguale (=).
+
 
 Le seguenti proprietà e risorse sono disponibili per impostazione predefinita negli ambienti della pipeline.
 
@@ -40,7 +47,7 @@ Le seguenti proprietà e risorse sono disponibili per impostazione predefinita n
 
 ### Proprietà di ambito generale
 
-| Proprietà ambiente | Descrizione |
+| Proprietà ambiente | Description |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | ARCHIVE_DIR | La directory per archiviare o in cui scaricare gli archivi. |
 | BUILD_ID | L'ID univoco per l'esecuzione del lavoro corrente.  |
@@ -67,7 +74,7 @@ Le seguenti proprietà e risorse sono disponibili per impostazione predefinita n
 
 ### Proprietà di runtime e dello strumento
 
-| Proprietà ambiente | Descrizione |
+| Proprietà ambiente | Description |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | ANT_HOME | Il percorso a Apache Ant 1.9.2. |
 | GRADLE_HOME | Il percorso a Gradle 1.11. |
@@ -79,7 +86,7 @@ Le seguenti proprietà e risorse sono disponibili per impostazione predefinita n
 
 ### Proprietà di distribuzione
 
-| Proprietà ambiente | Descrizione |
+| Proprietà ambiente | Description |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | CF_APP | Per le distribuzioni, il nome dell'applicazione da distribuire. Questa proprietà è obbligatoria per la distribuzione e può essere specificata nello script stesso, nell'interfaccia di configurazione del lavoro di distribuzione o nel file `manifest.yml` del progetto. |
 | CF_ORG | Per le distribuzioni, il nome dell'organizzazione (org) a cui distribuire. |

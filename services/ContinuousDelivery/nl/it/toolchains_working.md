@@ -1,114 +1,68 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2015, 2017
+lastupdated: "2017-4-7"
 
 ---
- 
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Gestione delle toolchain
+# Creazione delle toolchain
 {: #toolchains_getting_started}
-
-Ultimo aggiornamento: 17 novembre 2016
-{: .last-updated}  
 
 Una *toolchain* è una serie di integrazioni dello strumento che supporta le attività di operazioni, sviluppo e distribuzione. La potenza collettiva di una toolchain è superiore alla somma delle relative integrazioni dello strumento.
 {: shortdesc}
 
-Le toolchain sono disponibili negli ambienti pubblico e dedicato in {{site.data.keyword.Bluemix}}. Puoi creare una toolchain in due modi: utilizzando un template per creare una toolchain o creando una toolchain da un'applicazione. In {{site.data.keyword.Bluemix_notm}} pubblico, le toolchain sono disponibili solo nella regione degli Stati Uniti Sud.
+Le toolchain aperte sono disponibili negli ambienti pubblico e dedicato in {{site.data.keyword.Bluemix}}. Puoi creare una toolchain in due modi: utilizzando un template per creare una toolchain o creando una toolchain da un'applicazione. In {{site.data.keyword.Bluemix_notm}} pubblico, le toolchain sono disponibili solo nella regione degli Stati Uniti Sud.
 
-##Introduzione alle toolchain: pubblico
-{: #getting_started_public}
+Ogni toolchain è associata a un'organizzazione (org) specifica e ogni utente che è membro di tale organizzazione può essere aggiunto per accedere alle proprie toolchain associate. Per ulteriori informazioni sul controllo dell'accesso alle toolchain, consulta [Gestione dell'accesso](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}. Prima di creare una toolchain, assicurati di lavorare nell'organizzazione in cui desideri creare la toolchain. L'organizzazione con cui stai lavorando è visualizzata nella barra dei menu. Per passare a un'altra organizzazione, fai clic sull'organizzazione nella barra dei menu e seleziona quella a cui vuoi passare. 
 
-Ogni toolchain è associata a un'organizzazione (org) specifica e ogni utente che è membro di tale organizzazione può accedere alle toolchain associate. Prima di creare una toolchain, assicurati di lavorare nell'organizzazione in cui desideri creare la toolchain. L'organizzazione in cui stai attualmente lavorando è visualizzata nella barra dei menu. Per passare a un'altra organizzazione, fai clic sull'organizzazione nella barra dei menu e seleziona quella a cui vuoi passare.
 
-###Creazione di una toolchain da un template   
+##Creazione di una toolchain da un template   
 {: #creating_a_toolchain_from_a_template}
 
-Puoi utilizzare un template come punto di partenza per [creare una toolchain (il link si apre in una nuova finestra)](https://console.ng.bluemix.net/devops/create){: new_window} che includa una serie specifica di integrazioni dello strumento. Scopri come utilizzare i template da [IBM Bluemix Garage Method (il link si apre in una nuova finestra)](https://www.ibm.com/devops/method/category/tools){:new_window}.
+Puoi utilizzare un template come punto di partenza nella [creazione di una toolchain ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.ng.bluemix.net/devops/create){: new_window} che includa una serie specifica di integrazioni dello strumento. Scopri come utilizzare i template da [IBM Cloud Garage Method ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/devops/method/category/tools){:new_window}.
 
-1. Accedi a [{{site.data.keyword.Bluemix_notm}} (il link si apre in una nuova finestra)](http://console.ng.bluemix.net){:new_window}. Si aprirà il Dashboard {{site.data.keyword.Bluemix_notm}} che mostra una panoramica dello spazio {{site.data.keyword.Bluemix_notm}} attivo per la tua organizzazione.
-1. Dal menu hamburger, fai clic su **Servizi** e quindi su **DevOps**.
+1. Se utilizzi {{site.data.keyword.Bluemix_notm}} Pubblico, accedi a [{{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://console.ng.bluemix.net){:new_window}.
+1. Se utilizzi {{site.data.keyword.Bluemix_notm}} Dedicato, accedi al tuo ambiente dedicato in {{site.data.keyword.Bluemix_notm}}.
+1. Dal menu hamburger, fai clic su **Servizi** e quindi su **DevOps**. 
 1. Nel dashboard DevOps, nella pagina **Toolchain**, fai clic su **Create a Toolchain**.
 1. Nella pagina **Create a Toolchain**, fai clic su un template di toolchain.
-1. Esamina il diagramma della toolchain che stai per creare. Il diagramma mostra ogni integrazione dello strumento nella fase del suo ciclo di vita nella toolchain. Il diagramma nella seguente immagine è un esempio. Quando crei una toolchain, il diagramma mostra ogni integrazione dello strumento che fa parte della toolchain.
+1. Esamina il diagramma della toolchain che stai per creare. Il diagramma mostra ogni integrazione dello strumento nella fase del suo ciclo di vita nella toolchain.
+
+ **Suggerimento**: alcuni modelli della toolchain dispongono di più istanze di un'integrazione dello strumento. Ad esempio, il modello della toolchain Microservizi su {{site.data.keyword.Bluemix_notm}} Pubblico contiene tre istanze di GitHub e tre di Delivery Pipeline, una per ognuno dei tre microservizi.
+
+ Il diagramma nella seguente immagine è un esempio. Quando crei una toolchain, il diagramma mostra ogni integrazione dello strumento che fa parte della toolchain.
 ![Diagramma della toolchain](images/toolchain_diagram.png)
 
 1. Rivedi le informazioni predefinite per la configurazione della toolchain. Il nome della toolchain la identifica in {{site.data.keyword.Bluemix_notm}}. Se vuoi utilizzare un nome diverso, modifica il nome della toolchain.  
-1. Nella sezione Integrazioni configurabili, seleziona ogni integrazione dello strumento che desideri configurare per la tua toolchain. Alcune delle integrazioni dello strumento non richiedono configurazione. Per informazioni sulla configurazione delle integrazioni dello strumento, consulta [Configurazione delle integrazioni dello strumento](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
-1. Fai clic su **Crea**.  Diversi passi vengono eseguiti automaticamente per configurare la tua toolchain:
+1. Nella sezione Integrazioni dello strumento, seleziona ogni integrazione dello strumento che desideri configurare per la tua toolchain. Alcune delle integrazioni dello strumento non richiedono configurazione. Per informazioni sulla configurazione delle integrazioni dello strumento, consulta [Configurazione delle integrazioni dello strumento](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
+1. Fai clic su **Crea**. Diversi passi vengono eseguiti automaticamente per configurare la tua toolchain. Le integrazioni dello strumento configurate a seconda della toolchain selezionata e se stai utilizzando {{site.data.keyword.Bluemix_notm}} Pubblico o {{site.data.keyword.Bluemix_notm}} Dedicato. Ad esempio, quando crei una toolchain Microservizi in {{site.data.keyword.Bluemix_notm}} Pubblico, deve essere eseguita questa procedura:
 
  * La toolchain viene creata.
- * Se hai configurato l'integrazione dello strumento Delivery Pipeline, le pipeline vengono create e attivate.
- * Se hai configurato l'integrazione dello strumento Sauce Labs, Sauce Labs viene impostato per aggiungere lavori alle pipeline ed eseguire i test.
- * Se hai configurato l'integrazione dello strumento PagerDuty, PagerDuty viene impostato per inviare notifiche di avviso al servizio che hai specificato.
- * Se hai configurato l'integrazione dello strumento Slack, Slack viene impostato per inviare notifiche sullo stato della distribuzione al canale che hai specificato.
- * Se hai configurato l'integrazione dello strumento GitHub, il repository GitHub di esempio viene clonato nel tuo account GitHub.
+ * Se hai configurato Delivery Pipeline, le pipeline vengono create e attivate. 
+ * Se hai configurato Sauce Labs, la toolchain viene configurata per aggiungere i lavori di verifica Sauce Labs alle pipeline.
+ * Se hai configurato PagerDuty, la toolchain viene configurata per inviare notifiche di avviso al servizio PagerDuty che hai specificato.
+ * Se hai configurato Slack, la toolchain viene configurata per inviare notifiche sullo stato della distribuzione al canale Slack che hai specificato.
+ * Se hai configurato un'integrazione dello strumento del codice di origine come GitHub, il repository GitHub di esempio viene clonato nel tuo account GitHub.
 
 
-###Creazione di una toolchain da un applicazione
+##Creazione di una toolchain da un applicazione
 {: #creating_a_toolchain_from_an_app}
 
-Puoi creare una toolchain dalla tua applicazione. La toolchain può supportare varie attività continue come lo sviluppo, la distribuzione e il monitoraggio ed è associata alla tua applicazione. Ogni applicazione può essere associata con una toolchain. Quando esegui il push delle modifiche a un repository GitHub della toolchain, la pipeline automaticamente crea e distribuisce l'applicazione.  
+Puoi creare una toolchain dalla tua applicazione. La toolchain può supportare varie attività continue come lo sviluppo, la distribuzione e il monitoraggio ed è associata alla tua applicazione. Ogni applicazione può essere associata con una toolchain. Quando esegui il push delle modifiche a un repository {{site.data.keyword.ghe_short}} o GitHub della toolchain, la pipeline automaticamente crea e distribuisce l'applicazione.  
 
-1. Nella pagina della panoramica dell'applicazione, nel tile di fornitura continua, fai clic su **Abilita**. La tua applicazione è configurata per la distribuzione continua da un nuovo repository GitHub che viene popolato con il codice starter dell'applicazione.
+1. Nella pagina della panoramica dell'applicazione, nella scheda di fornitura continua, fai clic su **Enable**. Se utilizzi {{site.data.keyword.Bluemix_notm}} Pubblico, la tua applicazione è configurata per la distribuzione continua da un nuovo repository GitHub che viene popolato con il codice starter dell'applicazione. Se utilizzi {{site.data.keyword.Bluemix_notm}} Dedicato, la tua applicazione è configurata per la distribuzione continua da un nuovo repository GitHub o {{site.data.keyword.ghe_short}} che viene popolato con il codice starter dell'applicazione.
 1. Nella pagina di creazione della toolchain, rivedi il diagramma della toolchain che stai per creare. Il diagramma mostra ogni integrazione dello strumento nella fase del suo ciclo di vita nella toolchain.
 1. Rivedi le informazioni predefinite per la configurazione della toolchain. Il nome della toolchain la identifica in {{site.data.keyword.Bluemix_notm}}. Se vuoi utilizzare un nome diverso, modifica il nome della toolchain.
-1. Nella sezione Integrazioni configurabili, seleziona ogni integrazione dello strumento che desideri configurare per la tua toolchain. Alcune delle integrazioni dello strumento non richiedono configurazione. Per informazioni sulla configurazione delle integrazioni dello strumento, consulta [Configurazione delle integrazioni dello strumento](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
-1. Fai clic su **Crea**.  Diversi passi vengono eseguiti automaticamente per configurare la tua toolchain:
+1. Nella sezione Integrazioni dello strumento, seleziona ogni integrazione dello strumento che desideri configurare per la tua toolchain. Alcune delle integrazioni dello strumento non richiedono configurazione. Per informazioni sulla configurazione delle integrazioni dello strumento, consulta [Configurazione delle integrazioni dello strumento](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
+1. Fai clic su **Crea**.  Diversi passi vengono eseguiti automaticamente per configurare la tua toolchain. Le integrazioni dello strumento configurate a seconda della toolchain selezionata e se stai utilizzando {{site.data.keyword.Bluemix_notm}} Pubblico o {{site.data.keyword.Bluemix_notm}} Dedicato. Ad esempio, quando crei una toolchain da un'applicazione su {{site.data.keyword.Bluemix_notm}} Pubblico, devono essere eseguiti questi passi:
 
  * La toolchain viene creata.
- * Se hai configurato l'integrazione dello strumento Delivery Pipeline, le pipeline vengono create e attivate.
- * Se hai configurato l'integrazione dello strumento Sauce Labs, Sauce Labs viene impostato per aggiungere lavori alle pipeline ed eseguire i test.
- * Se hai configurato l'integrazione dello strumento PagerDuty, PagerDuty viene impostato per inviare notifiche di avviso al servizio che hai specificato.
- * Se hai configurato l'integrazione dello strumento Slack, Slack viene impostato per inviare notifiche sullo stato della distribuzione al canale che hai specificato.
- * Se hai configurato l'integrazione dello strumento GitHub, il repository GitHub di esempio viene clonato nel tuo account GitHub.
-
-
-##Introduzione alle toolchain: dedicato
-{: #getting_started_dedicated}
-
-Ogni toolchain è associata a un'organizzazione specifica e ogni utente che è membro di tale organizzazione può accedere alle toolchain associate. Prima di creare una toolchain, fai clic sull'icona **{{site.data.keyword.avatar}}** nella barra dei menu per aprire il widget Account e supporto e visualizzare l'organizzazione in cui stai lavorando. Se tale organizzazione non è l'organizzazione dove desideri creare la toolchain, passa a un'altra organizzazione.
-
-###Creazione di una toolchain da un template   
-{: #creating_a_toolchain_from_a_template_dedicated}
-
-Puoi utilizzare un template come punto di partenza nella creazione di una toolchain che includa una serie specifica di integrazioni dello strumento.
-
-1. Nel dashboard {{site.data.keyword.Bluemix_notm}}, nella scheda **DEVOPS**, fai clic sul pulsante (+) per creare una toolchain.
-1. Nella pagina **Create a Toolchain**, fai clic su un template di toolchain. 
-1. Esamina il diagramma della toolchain che stai per creare. Il diagramma mostra ogni integrazione dello strumento nella fase del suo ciclo di vita nella toolchain. Il diagramma nella seguente immagine è un esempio. Quando crei una toolchain, il diagramma mostra ogni integrazione dello strumento che fa parte della toolchain.
-![Diagramma toolchain dedicato](images/toolchain_dedicated_diagram.png)
-
-1. Rivedi le informazioni predefinite per la configurazione della toolchain. Il nome della toolchain la identifica in {{site.data.keyword.Bluemix_notm}}. Se già hai una toolchain con lo stesso nome o se desideri utilizzare un nome differente, modifica il nome della toolchain.  
-1. Nella sezione Integrazioni configurabili, seleziona ogni integrazione dello strumento che desideri configurare per la tua toolchain. Alcune delle integrazioni dello strumento non richiedono configurazione. Per informazioni sulla configurazione delle integrazioni dello strumento, consulta [Configurazione delle integrazioni dello strumento](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
-1. Fai clic su **Crea**.  Diversi passi vengono eseguiti automaticamente per configurare la tua toolchain:
-
- * La toolchain viene creata.
- * Se hai configurato l'integrazione dello strumento Delivery Pipeline, le pipeline vengono create e attivate.
- * Se hai configurato l'integrazione dello strumento PagerDuty, PagerDuty viene impostato per inviare notifiche di avviso al servizio che hai specificato.
- * Se hai configurato l'integrazione dello strumento Slack, Slack viene impostato per inviare notifiche sullo stato della distribuzione al canale che hai specificato.
- * Se hai configurato l'integrazione dello strumento GitHub Enterprise, il repository GitHub Enterprise di esempio viene clonato nel tuo account GitHub.
-
-
-###Creazione di una toolchain da un applicazione
-{: #creating_a_toolchain_from_an_app_dedicated}
-
-Puoi creare una toolchain dalla tua applicazione. La toolchain può supportare varie attività continue come lo sviluppo, la distribuzione e il monitoraggio ed è associata alla tua applicazione. Ogni applicazione può essere associata con una toolchain. Quando esegui il push delle modifiche a un repository GitHub Enterprise della toolchain, la pipeline automaticamente crea e distribuisce l'applicazione.  
-
-1. Nell'angolo in alto a destra della pagina di panoramica della tua applicazione, fai clic su **Add Toolchain**. La tua applicazione è configurata per la distribuzione continua da un nuovo repository GitHub Enterprise che viene popolato con il codice starter dell'applicazione.
-1. Nella pagina di creazione della toolchain, rivedi il diagramma della toolchain che stai per creare. Il diagramma mostra ogni integrazione dello strumento nella fase del suo ciclo di vita nella toolchain.
-1. Rivedi le informazioni predefinite per la configurazione della toolchain. Il nome della toolchain la identifica in {{site.data.keyword.Bluemix_notm}}. Se già hai una toolchain con lo stesso nome o se desideri utilizzare un nome differente, modifica il nome della toolchain.
-1. Nella sezione Integrazioni configurabili, seleziona ogni integrazione dello strumento che desideri configurare per la tua toolchain. Alcune delle integrazioni dello strumento non richiedono configurazione. Per informazioni sulla configurazione delle integrazioni dello strumento, consulta [Configurazione delle integrazioni dello strumento](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
-1. Fai clic su **Crea**.  Diversi passi vengono eseguiti automaticamente per configurare la tua toolchain:
-
- * La toolchain viene creata.
- * Se hai configurato l'integrazione dello strumento Delivery Pipeline, le pipeline vengono create e attivate.
- * Se hai configurato l'integrazione dello strumento PagerDuty, PagerDuty viene impostato per inviare notifiche di avviso al servizio che hai specificato.
- * Se hai configurato l'integrazione dello strumento Slack, Slack viene impostato per inviare notifiche sullo stato della distribuzione al canale che hai specificato.
- * Se hai configurato l'integrazione dello strumento GitHub Enterprise, il repository GitHub Enterprise di esempio viene clonato nel tuo account GitHub.
+ * Se hai configurato Delivery Pipeline, le pipeline vengono create e attivate. 
+ * Se hai configurato GitHub, il repository GitHub di esempio viene clonato nel tuo account GitHub.
 
 
 ##Visualizzazione di una toolchain
@@ -116,30 +70,7 @@ Puoi creare una toolchain dalla tua applicazione. La toolchain può supportare v
 
 Dopo aver configurato la toolchain e le sue integrazioni dello strumento, puoi visualizzare una rappresentazione visiva della toolchain.
 
-* Se utilizzi {{site.data.keyword.Bluemix_notm}} pubblico, nella pagina **Toolchain** del dashboard DevOps, fai clic su una toolchain per aprirne la pagina Panoramica. In alternativa, nella pagina della panoramica dell'applicazione, nel tile di fornitura continua, fai clic su **View Toolchain**. Fai quindi clic su **Panoramica**.  
-   
-* Se utilizzi {{site.data.keyword.Bluemix_notm}} dedicato, nel dashboard, fai clic sulla scheda **DEVOPS** e fai clic sulla toolchain per aprirne la pagina Integrazioni dello strumento. In alternativa, nell'angolo in alto a destra della tua pagina di panoramica, fai clic su **View Toolchain**.
+1. Nel dashboard DevOps, nella pagina **Toolchain**, fai clic sulla toolchain per aprirne la pagina Panoramica. In alternativa, nella pagina della panoramica dell'applicazione, nella scheda di fornitura continua, fai clic su **View Toolchain**. Fai quindi clic su **Panoramica**.
+2. Per accedere all'integrazione dello strumento nella tua toolchain, fai clic sullo strumento. 
 
-* Per accedere all'integrazione dello strumento nella tua toolchain, fai clic sul tile dello strumento. 
- 
- **Suggerimento**: se disponi di più di un repository GitHub o GitHub Enterprise, puoi avere più tile per la stessa integrazione dello strumento perché ogni repository è rappresentato dal proprio tile.
-
-
-# Link correlati
-{: #rellinks}
-
-## Esercitazioni ed esempi
-{: #samples}
-
-* [Create and use your first toolchain (il link si apre in una nuova finestra)](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window}
-* [Create a custom toolchain (il link si apre in una nuova finestra)](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_custom){:new_window}
-* [Create an application with three microservices (il link si apre in una nuova finestra)](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window}
-* [Create a toolchain from a template on {{site.data.keyword.Bluemix_notm}} Dedicated (Beta) (il link si apre in una nuova finestra)](https://www.ibm.com/devops/method/tutorials/tutorial_dedicated_toolchain_template_flow){:new_window}
-* [Create a toolchain from an app on {{site.data.keyword.Bluemix_notm}} Dedicated (Beta) (il link si apre in una nuova finestra)](https://www.ibm.com/devops/method/tutorials/tutorial_dedicated_toolchain_app_flow){:new_window}
-
-## Link correlati
-{: #general}
-
-* [Microservices toolchain (il link si apre in una nuova finestra)](https://www.ibm.com/devops/method/toolchains/microservices_toolchain){:new_window}
-* [Simple toolchain (il link si apre in una nuova finestra)](https://www.ibm.com/devops/method/toolchains/simple_toolchain){:new_window}
-* [IBM Bluemix Garage Method (il link si apre in una nuova finestra)](https://www.ibm.com/devops/method){:new_window}
+ **Suggerimento**: se disponi di più di un repository GitHub, {{site.data.keyword.ghe_short}} o Git, puoi avere più schede per la stessa integrazione dello strumento perché ogni repository è rappresentato dalla propria scheda. Se hai più di una pipeline, potresti avere più schede per la stessa integrazione dello strumento perché ogni pipeline è rappresentata dalla propria scheda. Ad esempio, quando crei una toolchain Microservizi, ognuno dei tre microservizi ha il proprio repository GitHub, {{site.data.keyword.ghe_short}} o Git e la propria pipeline.
