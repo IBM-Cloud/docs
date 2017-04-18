@@ -49,9 +49,9 @@ After you install the {{site.data.keyword.Bluemix_notm}} cli tool, the [CLI Plug
 bluemix plugin install plugin_name -r Bluemix
 ```
 
-| *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *Catalog Manager* | *IBM Bluemix Container Service*  |
-|-----|-----|-----|-----|
-| Plug-in name: active-deploy <br> [View Docs](/docs/services/ActiveDeploy/cli.html#cli) | Plug-in name: auto-scaling <br> [View Docs](/docs/cli/plugins/auto-scaling/index.html) | Plug-in name: catalog-manager  <br> [View Docs](/docs/cli/plugins/catalogmanager/index.html) | Plug-in name: container-service  <br> [View Docs](/docs/containers/cs_cli_devtools.html) |
+| *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *IBM Bluemix Container Service*  |
+|-----|-----|-----|
+| Plug-in name: active-deploy <br> [View Docs](/docs/services/ActiveDeploy/cli.html#cli) | Plug-in name: auto-scaling <br> [View Docs](/docs/cli/plugins/auto-scaling/index.html) | Plug-in name: container-service  <br> [View Docs](/docs/containers/cs_cli_devtools.html) |
 {: caption="Table 2. Plug-ins" caption-side="top"}
 
 |  *Private network peering* | *VPN*  |
