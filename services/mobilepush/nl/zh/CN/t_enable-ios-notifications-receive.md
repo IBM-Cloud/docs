@@ -10,7 +10,7 @@ copyright:
 
 在 iOS 设备上接收推送通知
 
-##Objective-C
+## Objective-C
 要在 iOS 设备上接收推送通知，请将以下 Objective-C 方法添加到应用程序的应用程序代表中。
 
 ```
@@ -20,7 +20,7 @@ copyright:
 }
 ```
 
-##Swift
+## Swift
 要在 iOS 设备上接收推送通知，请将以下 Swift 方法添加到应用程序的应用程序代表中。
 
 ```

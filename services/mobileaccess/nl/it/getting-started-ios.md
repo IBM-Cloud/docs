@@ -107,13 +107,13 @@ Per informazioni su come ottenere `applicationRoute` e `applicationGUID`  consul
 ## Inizializzazione di AuthorizationManager
 Inizializza `AuthorizationManager` trasmettendo al servizio  {{site.data.keyword.amashort}} il parametro `tenantId`. Per informazioni su come ottenere questi valori, consulta [Prima di cominciare](#before-you-begin). 
 
-####Objective-C
+#### Objective-C
 
 ```Objective-C
 [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"<tenantId>"];
 ```
 
-####Swift
+#### Swift
 
 ```Swift
 IMFAuthorizationManager.sharedInstance().initializeWithTenantId("<tenantId>")

@@ -13,11 +13,11 @@ lastupdated: "2017-01-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Requisitos de Serviço
+# Requisitos de Serviço
 {: #requirements}
 
 
-##Requisitos de mensagens do dispositivo MQTT
+## Requisitos de mensagens do dispositivo MQTT
 
 * O message broker MQTT deve fornecer mensagens do dispositivo no formato JSON em um ou mais
 tópicos do MQTT.
@@ -29,7 +29,7 @@ tópicos do MQTT.
 	* Uma mensagem MQTT pode conter um objeto JSON com informações sobre um único dispositivo.
 	* Uma mensagem MQTT pode conter uma matriz de objetos JSON com informações sobre um conjunto de dispositivos.
 
-##Eventos MQTT e configurando o serviço
+## Eventos MQTT e configurando o serviço
 
 O seu aplicativo assina mensagens MQTT e controla o {{site.data.keyword.geospatialshort_Geospatial}} por meio de sua [API REST](https://console.ng.bluemix.net/apidocs/246). As
 ações a seguir estão disponíveis através de chamadas API REST:

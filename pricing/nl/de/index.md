@@ -80,13 +80,13 @@ Abbildung 1. Prozessablaufdiagramm für die {{site.data.keyword.Bluemix_notm}}-K
 Wenn Sie Ihr Konto während Ihres kostenlosen Testzeitraums konvertieren, werden Ihre kostenlosen Leistungen auf diejenigen begrenzt, die normalerweise von jedem Service bereitgestellt werden. Die kostenlosen Leistungen sind keine Leistungen mit unbegrenzter Nutzung mehr, die von vielen IBM Services während der kostenlosen Testperiode angeboten werden.
 
 
-##Kosten
+## Kosten
 {: #what_it_costs}
 
 Die Höhe der Gebühren hängt von den jeweiligen Ressourcen ab, die von einem bestimmten Service oder Container bzw. einer bestimmten Laufzeit oder einer Unterstützungsoption verwendet werden. Bei den Ressourcen kann es sich um die Anzahl der API-Aufrufe, die Anzahl der Instanzen, die Hauptspeichermenge, den Speicherplatz, usw. handeln. {{site.data.keyword.Bluemix_notm}} stellt auch eine detaillierte Kostenschätzungsfunktionen und eine Kostenberechnungsfunktion bis auf den letzten Cent bereit, die Ihnen beim Planen der Gebühren behilflich sein können. Sie können die tatsächlichen Kosten nach dem Erstellen der Apps in der Ansicht *Nutzungsdashboard* überprüfen. Genauere Informationen zu den Gebühren finden Sie unter [Berechnung der Gebühren](index.html#charges).
  
 
-##Werbecode
+## Werbecode
 {: #promo}
 
 Gelegentlich erhalten Sie vom {{site.data.keyword.Bluemix_notm}}-Vertrieb oder einem anderen {{site.data.keyword.Bluemix_notm}}-Ansprechpartner Werbecodes. Wenn Sie einen solchen Code anwenden, haben Sie die Möglichkeit, zusätzliche Ressourcen oder Funktionen zu erhalten, die durch {{site.data.keyword.Bluemix_notm}} für Ihr Testkonto bereitgestellt werden.
@@ -102,7 +102,7 @@ Die Ressourcen oder Funktionen variieren in Abhängigkeit vom jeweiligen Code, d
 **Hinweis:** Sie können mehrere Werbecodes auf Ihr Testkonto anwenden. Jeder Werbecode kann vor Ablauf seines Verfallsdatums nur ein einziges Mal eingelöst werden.
 Klicken Sie zum Verwenden eines Werbecodes auf das Symbol **Profileinstellungen**, wählen Sie **Konto** aus und klicken anschließend in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle auf **Kontotyp**.
 
-##Rechnungsabwicklung
+## Rechnungsabwicklung
 {: #pay-accounts}
 
 Wenn Sie sich für einen abrechnungsfähigen {{site.data.keyword.Bluemix_notm}}-Plan registrieren, können Sie eines der folgenden Konten auswählen:
@@ -121,7 +121,7 @@ Falls während der Verwendung eines Kontos vom Typ Nutzungsabhängige Zahlung od
 
 **Hinweis:** Wenn Sie Ihr {{site.data.keyword.Bluemix_notm}}-Abrechnungskonto mit einem SoftLayer-Konto verknüpfen, werden Ihre {{site.data.keyword.Bluemix_notm}}- und SoftLayer-Gebühren ab dem Ersten des folgenden Monats über die {{site.data.keyword.Bluemix_notm}}-Rechnung abgerechnet. Weitere Details hierzu finden Sie unter [Guthaben anzeigen](/docs/admin//softlayerlink.html#bill_usage).
 
-###Nutzungsabhängiges Konto
+### Nutzungsabhängiges Konto
 {: #pay-as-you-go}
 
 Wenn Sie sich für ein Konto für nutzungsabhängige Zahlung registrieren, bezahlen Sie nur für die {{site.data.keyword.Bluemix_notm}}-Ressourcen, die Sie nutzen. Sie haben außerdem die Möglichkeit, zusätzliche kostenlose Laufzeit- und Serviceleistungen zu nutzen.
@@ -130,14 +130,14 @@ In vielen Ländern und Regionen können Sie sich für ein Konto für nutzungsabh
 
 Sie können Ihr Konto für nutzungsabhängige Zahlung jederzeit in ein Abonnementkonto konvertieren. Mit einem Abonnementkonto verpflichten Sie sich zu einem monatlichen Mindestausgabebetrag. Wenn Sie Ihr Konto in ein Abonnementkonto konvertieren möchten, wenden Sie sich an den {{site.data.keyword.Bluemix_notm}}-Vertrieb, indem Sie den Link verwenden, der auf der Seite für die [Bluemix-Kontaktaufnahme](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs) aufgelistet ist.
 
-###Abonnementkonto
+### Abonnementkonto
 {: #subscription}
 
 Wenn Sie sich für ein Abonnementkonto registrieren, verpflichten Sie sich zu einem Mindestausgabebetrag pro Monat und erhalten einen Abonnementrabatt, der auf diese Mindestgebühr angewendet wird. Außerdem müssen Sie jede Nutzung bezahlen, die über den Mindestausgabebetrag hinausgeht.
 
 Um sich für ein Abonnementkonto anzumelden oder um weitere Informationen zu Abonnementgebühren und -nachlässen zu erhalten, wenden Sie sich an den {{site.data.keyword.Bluemix_notm}}-Vertrieb. Verwenden Sie dazu den Link, der auf der Seite für die [Bluemix-Kontaktaufnahme](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs) aufgelistet ist.
 
-###Zugeordnetes {{site.data.keyword.Bluemix_notm}}-Konto
+### Zugeordnetes {{site.data.keyword.Bluemix_notm}}-Konto
 {: #dedicated}
 
 {{site.data.keyword.Bluemix_notm}} erfordert eine Mindestlaufzeit von einem Jahr und umfasst Folgendes:
@@ -153,7 +153,7 @@ Es können auch optionale Elemente wie z. B. SoftLayer DirectLink oder Premium-S
 Bei {{site.data.keyword.Bluemix_notm}} Dedicated müssen Sie sich für eine Mindestlaufzeit von einem Jahr anmelden. Die monatlichen Kosten während dieser Laufzeit sind von den von Ihnen gewünschten dedizierten Services plus einem Abonnementkonto abhängig, mit dem Sie auf alle öffentlichen Services zugreifen können. Die Nutzungsgebühren der Services in {{site.data.keyword.Bluemix_notm}} Public werden auf der Grundlage Ihrer Abonnementkontovereinbarung berechnet. Sie erhalten für sämtliche Services, die Sie über die Abonnementvereinbarung hinaus nutzen, eine Rechnung. Für Informationen zu Ihrer Vereinbarung wenden Sie sich an Ihren zuständigen IBM Kundenbeauftragten bzw. an den [Bluemix-Vertrieb](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs).
 
 
-###{{site.data.keyword.Bluemix_notm}} Local-Konto
+### {{site.data.keyword.Bluemix_notm}} Local-Konto
 {: #local}
 
 {{site.data.keyword.Bluemix_notm}} erfordert eine Mindestlaufzeit von einem Jahr und umfasst Folgendes:
@@ -165,7 +165,7 @@ Bei {{site.data.keyword.Bluemix_notm}} Dedicated müssen Sie sich für eine Mind
 
 Bei {{site.data.keyword.Bluemix_notm}} Local müssen Sie sich für eine Mindestlaufzeit von einem Jahr anmelden. Die monatlichen Kosten während dieser Laufzeit sind von den von Ihnen gewünschten lokalen Services plus einem Abonnementkonto abhängig, mit dem Sie auf alle öffentlichen Services zugreifen können. Die Nutzungsgebühren der Services in {{site.data.keyword.Bluemix_notm}} Public werden auf der Grundlage Ihrer Abonnementkontovereinbarung berechnet. Sie erhalten für sämtliche Services, die Sie über die Abonnementvereinbarung hinaus nutzen, eine Rechnung. Für Informationen zu Ihrer Vereinbarung wenden Sie sich an Ihren zuständigen IBM Kundenbeauftragten bzw. an den [{{site.data.keyword.Bluemix_notm}}-Vertrieb](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs).
 
-##Berechnung der Gebühren
+## Berechnung der Gebühren
 {: #charges}
 
 Über ein belastbares {{site.data.keyword.Bluemix_notm}}-Konto werden die Gebühren für Berechnungen, Container und Services erhoben, die von Ihrer Organisation in Anspruch genommen werden. Es kann vorkommen, dass Sie von anderen {{site.data.keyword.Bluemix_notm}}-Benutzern eingeladen werden, unter einem anderen Konto an Organisationen teilzunehmen. Wenn Sie in den Organisationen, in die Sie eingeladen wurden, Anwendungen erstellen oder Services verwenden, werden die Gebühren, die für diese Nutzung anfallen, dem Konto in Rechnung gestellt, das die betreffenden Organisationen enthält. Weitere Informationen zu bestimmten Gebühren können Sie über die Detailseite einer Ressource im {{site.data.keyword.Bluemix_notm}}-Katalog oder über den Preisrechner auf der {{site.data.keyword.Bluemix_notm}}-Seite 'Preisstruktur' aufrufen.
@@ -179,7 +179,7 @@ Die Gebühren werden abhängig von den von Ihnen verwendeten Komponenten von {{s
 |  Preisstufen   |  Manche Pläne basieren auf einem Preisstufenmodell, das einen dem tatsächlichen Nutzungsvolumen entsprechenden Nachlass ermöglicht. Für Services können Preistarife für einfache, gestaffelte oder Blockpreisstufen angeboten werden. | Services | Die gestaffelte Preisstruktur wird in der Regel für Gebührenmetriken verwendet, wenn große Mengen pro Monat erwartet werden, zum Beispiel für API-Aufrufe. |
 | Reserviert | Die Preisgestaltung für Reservierungen basiert auf einer langfristigen Zusage für einen Service; dafür erhalten Sie einen reduzierten Preis. Bei einem Reservierungsplan erhalten Sie eine dedizierte Serviceinstanz, die sich in der öffentlichen {{site.data.keyword.Bluemix_notm}}-Umgebung leicht einrichten, implementieren und bereitstellen lässt. | Services | Für DB2 on Cloud werden Reservierungspläne bereitgestellt.|
 
-###Gebühren für Rechenressourcen
+### Gebühren für Rechenressourcen
 {: #compute}
 
 Ihnen werden die Zeit, die Ihre Anwendungen aktiv sind, und der Speicher, der verwendet wird, in Form von berechneten *GB-Stunden* in Rechnung gestellt. GB-Stunden berechnen sich aus der Anzahl der Anwendungsinstanzen multipliziert mit dem genutzten Speicher pro Instanz multipliziert mit den Stunden, die die Instanzen aktiv sind. Sie können die Anzahl der Instanzen und die Speicherkapazität pro Instanz nach Bedarf anpassen. Sie können darüber hinaus Speicher oder Instanzen hinzufügen, um eine Skalierung auf weitere Benutzer zu realisieren. Die endgültige Gebühr basiert auf GB-Stunden: Ihre Anwendungsinstanzen multipliziert mit der Speicherkapazität pro Instanz multipliziert mit den Stunden, die sie aktiv waren.
@@ -191,7 +191,7 @@ Beispiel: Nehmen Sie eine Laufzeit an, die pro GB-Stunde einen Preis von $0,07 i
 (720 - 375) GB-Stunden x $0,07 pro GB-Stunde = $24,15
 ```
 
-###Gebühren für Services
+### Gebühren für Services
 {: #services}
 
 Viele Services schließen monatliche kostenlose Leistungen ein. Die Nutzung von Services, die nicht von den kostenlosen Leistungen abgedeckt ist, wird auf eine der beiden folgenden Arten in Rechnung gestellt:
@@ -208,7 +208,7 @@ Viele Services schließen monatliche kostenlose Leistungen ein. Die Nutzung von 
 </dl>
 
 
-####Einfache Preisstufe
+#### Einfache Preisstufe
 {: #simple_tier}
 
 Im Modell mit einer einfachen Preisstufe wird der Einzelpreis durch die Preisstufe bestimmt, in die Ihr Nutzungsvolumen fällt. Der Gesamtpreis besteht aus der Menge multipliziert mit dem Einzelpreis in dieser Preisstufe. Beispiel:
@@ -233,7 +233,7 @@ In der folgenden Tabelle sind die Gebühren dargestellt, die im Rahmen eines Pla
 |5200 |	5200 × 0,40 = 2080 |$ 2080 USD|
 {:caption="Table 2. Charge calculation by using the simple tier pricing model" caption-side="top"}
 
-####Gestaffelte Preisstufe
+#### Gestaffelte Preisstufe
 {: #graduated_tier}
 
 Im Modell mit gestaffelter Preisstufe sinkt der Einzelpreis bei einer höheren Nutzungsrate. Der Gesamtpreis besteht aus den kumulativen Gebühren für die einzelnen Nutzungsstufen, bestehend aus der Menge multipliziert mit dem Einzelpreis für die jeweilige Preisstufe. Beispiel:
@@ -258,7 +258,7 @@ In der folgenden Tabelle sind die Gebühren dargestellt, die im Rahmen eines Pla
 |5200 |	(1000 × 1 (Einzelpreis für Preisstufe 1)) + (1000 × 0,90 (Einzelpreis für Preisstufe 2)) + (1000 × 0,75 (Einzelpreis für Preisstufe 3)) + (1000 × 0,60 (Einzelpreis für Preisstufe 4)) + (1200 × 0,40 (Einzelpreis für Preisstufe 5)) = 3730 |	$ 3730 USD|
 {:caption="Table 4. Charge calculation by using the graduated tier pricing model" caption-side="top"}
 
-####Blockpreisstufe
+#### Blockpreisstufe
 {: #block_tier}
 
 Im Preismodell mit Blockpreisstufen ist der Preis eine feste Gebühr für die genutzte Menge innerhalb einer Nutzungsstufe. Der Gesamtpreis besteht aus der Gebühr für die jeweilige Nutzungsstufe, unabhängig von der tatsächlichen Nutzung. Jede nachfolgende Preisstufe bietet ein niedrigeres Preis-Menge-Verhältnis. Beispiel:
@@ -282,7 +282,7 @@ In der folgenden Tabelle sind die Gebühren dargestellt, die im Rahmen eines Pla
 |5200 |	Die Anzahl der Posten fällt in die Preisstufe 5, d. h., der Gesamtpreis beträgt $ 5000 USD. |	$ 5000 USD|
 {:caption="Table 6. Charge calculation by using the block tier pricing model" caption-side="top"}
 
-##Vorgehensweise zum Schätzen der Kosten
+## Vorgehensweise zum Schätzen der Kosten
 {: #cost}
 
 Es gibt unterschiedliche Methoden zur Ermittlung der Kosten für die Nutzung von {{site.data.keyword.Bluemix_notm}}, um Ihre App zu erstellen und zu hosten.
@@ -291,7 +291,7 @@ Es gibt unterschiedliche Methoden zur Ermittlung der Kosten für die Nutzung von
 * Mit dem Kostenrechner auf der Seite für die Preisstruktur von {{site.data.keyword.Bluemix_notm}} werden auf der Grundlage Ihrer Eingabe zu Laufzeit und Servicenutzung genaue App-Preise ermittelt.
 * Sie können Ihre Kosten auch manuell berechnen.
 
-###Kostenrechner verwenden
+### Kostenrechner verwenden
 {: #calculator}
 
 Sie können den Preis für Ihre App mithilfe der von {{site.data.keyword.Bluemix_notm}} bereitgestellten Kostenrechner rasch ermitteln.
@@ -301,12 +301,12 @@ Sie können den Preis für Ihre App mithilfe der von {{site.data.keyword.Bluemix
 
 Zur Verwendung der Berechnungsfunktion geben Sie Ihre projizierte monatliche Nutzung der aufgelisteten Ressourcen ein, z. B. die Anzahl der Instanzen oder Push-Benachrichtigungen. Klicken Sie in das Feld **Monatliche Nutzung**, um Hinweise zu den Einheiten zu erhalten, die in dem Feld erwartet werden. Die Berechnungsfunktion zeigt die Kosten für Ihre Eingabe sofort an. Sie können die Berechnungsfunktion auch anpassen, um jährliche Kosten anstelle von monatlichen Kosten anzuzeigen.
 
-###Kosten manuell schätzen
+### Kosten manuell schätzen
 {: #manual}
 
 Sie wollen zum Beispiel Ihre {{site.data.keyword.Bluemix_notm}}-Kosten selbst schätzen oder besser verstehen, wie sich {{site.data.keyword.Bluemix_notm}}-Kosten errechnen. Sie können den Gesamtpreis für die Nutzung von {{site.data.keyword.Bluemix_notm}} für das Erstellen und Hosting Ihrer App berechnen, indem Sie die Preise der Laufzeit und der von der Laufzeit verwendeten Services betrachten. Die Preise der Laufzeiten und Services ändern sich manchmal, sodass Sie jeweils die neuesten Informationen auf der {{site.data.keyword.Bluemix_notm}}-Preisliste für die Berechnung des Gesamtpreises verwenden müssen.
 
-###Beispiel: Preis für eine Beispielanwendung ermitteln
+### Beispiel: Preis für eine Beispielanwendung ermitteln
 {: #sample}
 
 Nehmen Sie an, Sie haben eine Node.js-Webanwendung mit Skalierbarkeitsfunktionalität und die Anwendung nutzt verschiedene Services, die von {{site.data.keyword.Bluemix_notm}} bereitgestellt werden. Dieses Beispiel zeigt, wie die tatsächlichen Kosten Ihrer Anwendung berechnet werden. Die Webanwendung nutzt die folgenden {{site.data.keyword.Bluemix_notm}}-Services und -Elemente:
@@ -317,7 +317,7 @@ Nehmen Sie an, Sie haben eine Node.js-Webanwendung mit Skalierbarkeitsfunktional
 * 150 GB NoSQL-Datenbank pro Monat, 100.000 komplexe API-Aufrufe und 500.000 einfache API-Aufrufe
 * 20 GB Datenvolumen für ein- und ausgehenden Netzverkehr
 
-###Preise für {{site.data.keyword.Bluemix_notm}}-Ressourcen
+### Preise für {{site.data.keyword.Bluemix_notm}}-Ressourcen
 {: #sample_resources}
 
 Nehmen Sie an, um das Beispiel einfach zu halten, dass die Preise in der folgenden Tabelle innerhalb eines Zeitrahmens oder zwischen zwei Perioden zum Beispiel eines Monats nicht schwanken. Alle Preisangaben in diesem Beispiel erfolgen in US-Währung.
@@ -332,7 +332,7 @@ Nehmen Sie an, um das Beispiel einfach zu halten, dass die Preise in der folgend
 |IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2 GB Datenspeicher kostenlos<br/>50.000 einfache API-Aufrufe pro Monat kostenlos<br/>10.000 komplexe API-Aufrufe pro Monat kostenlos | $1,00 USD/GB<br/>$0,03 USD/1000 einfache API-Aufrufe<br/>$0,15 USD/1000 komplexe API-Aufrufe |
 {:caption="Table 7. Pricing sheet" caption-side="top"}
 
-###Berechnung des Anwendungspreises
+### Berechnung des Anwendungspreises
 
 Der Preis der Anwendung kann auf die folgende Weise berechnet werden:
 
@@ -369,7 +369,7 @@ Der Gesamtpreis beträgt 148 + 13,5 + 13,5 = $175.</p></dd>
 
 Wenn alle Positionen addiert werden, beträgt der Gesamtpreis der Anwendung $354.15.
 
-###Unterstützte Währungen
+### Unterstützte Währungen
 
 Obwohl in den Preisbeispielen US-Dollar (USD) verwendet werden, werden in {{site.data.keyword.Bluemix_notm}} auch andere Währungen unterstützt. In der folgenden Tabelle werden die unterstützten Währungen aufgelistet.
 
@@ -394,7 +394,7 @@ Obwohl in den Preisbeispielen US-Dollar (USD) verwendet werden, werden in {{site
 
 **Hinweis:** Wenn Sie Ihre {{site.data.keyword.Bluemix_notm}}- und SoftLayer-Konten verknüpft haben, ist die einzige Rechnung, die Sie erhalten, nur in USD ausgestellt.  
 
-##Nutzungsdashboard
+## Nutzungsdashboard
 {: #usage}
 
 Als Kontoeigner oder Abrechnungsmanager können Sie die Seite 'Nutzungsdashboard' verwenden, um die Gebühren für die Laufzeiten und Services, die monatlich in Ihrer Organisation genutzt werden, in Echtzeit anzuzeigen. Sie können die GB-Stunden für Laufzeiten und die Servicenutzung in allen Regionen anzeigen oder eine bestimmte Region und einen bestimmten Bereich für die Anzeige der vergangenen 12 Stunden auswählen.
@@ -407,21 +407,21 @@ Kontoeigner können die Nutzungszusammenfassung nach Region und Organisation fil
 
 Wenn Sie unter **Organisation** eine bestimmte Organisation auswählen, können Sie die gesamte Nutzung für diese Organisation, einschließlich der Nutzung als Teil eines gebührenfreien Nutzungskontingents anzeigen. Die für die Organisation angezeigten Gebühren sind nicht die Gebühren, die Ihnen in Rechnung gestellt werden. Die Nutzung des gebührenfreien Nutzungskontingents wird auf Kontoebene als kostenlos angezeigt, aber nicht auf Organisationsebene. Aus diesem Grund wird beim Anzeigen der Nutzung der Organisation die tatsächliche Nutzung für diese Organisation einschließlich der kostenlosen und der gebührenpflichtigen Nutzung angezeigt. Beim Anzeigen der Nutzung aller Organisationen wird die Nutzung für das Konto aufsummiert, nachdem das gebührenfreie Nutzungskontingent entfernt wurde.
 
-##Guthaben anzeigen
+## Guthaben anzeigen
 {: #credits}
 
 Als Kontoeigner oder Abrechnungsmanager können Sie auf der Seite **Nutzungsdashboard** vorhandenes Guthaben für Ihr Konto anzeigen. 
 
 Um die Ansicht **Nutzungsdashboard** zu öffnen, klicken Sie auf **Konto** &gt; **Nutzungsdashboard**. Im Dashboard werden gegebenenfalls die bestehenden Guthaben und die entsprechenden Ablaufdaten angezeigt.
 
-##Benachrichtigungen
+## Benachrichtigungen
 {: #notifications}
 
 Als Manager eines Kontos vom Typ Nutzungsabhängige Zahlung können Sie Benachrichtigungen über Ausgaben für die Gesamtkosten Ihres Kontos, für Laufzeit, Services und für individuelle Services einrichten, mit Ausnahme von Services anderer Anbieter. Sie erhalten Benachrichtigungen, wenn Sie 80 %, 90 % und 100 % des angegebenen Schwellenwerts für die Ausgaben erreicht haben.
 
 Um die Ansicht **Benachrichtigungen** zu öffnen, klicken Sie auf **Konto** &gt; *Name_des_eigenen_Kontos* &gt; **Benachrichtigungen über Ausgaben**. Geben Sie einen numerischen Wert ein, um bei Bedarf das Ausgabelimit für das Auslösen einer Benachrichtigung für jeden Typ der Benachrichtigung über Ausgaben festzulegen. Sie können auch Benachrichtigungen für einzelne Services hinzufügen und löschen.
 
-##Vorgehensweise zum Ändern des Plans
+## Vorgehensweise zum Ändern des Plans
 {: #changing}
 
 Sie können Ihren Serviceplan in {{site.data.keyword.Bluemix_notm}} im Dashboard für den Service ändern, falls diese Funktion für den betreffenden Service aktiviert ist.
@@ -436,7 +436,7 @@ Nur bestimmte Services ermöglichen Ihnen das Ändern des Serviceplans. Wenn Pla
 |Presence Insights 	|Wenn Sie einen Lite-Plan verwenden und das kostenfreie Kontingent überschreiten, wird die Nachricht 403 angezeigt oder protokolliert, um anzugeben, dass Sie nicht mehr über die entsprechende Berechtigung verfügen und dass Ihre Serviceinstanz inaktiviert ist. Außerdem werden POST-Aufrufe der REST-API mit der Antwort 403 zurückgewiesen.<br/><br/>Wenn der Service inaktiviert wurde, weil Sie das kostenfreie Kontingent überschritten haben, können Sie ein Upgrade von einem Lite-Plan auf einen Paid-Plan durchführen. Ihr Service wird innerhalb von zwei Stunden erneut aktiviert.<br/><br/>Wenn Sie einen Paid-Plan verwenden, können Sie eine Herabstufung auf einen Lite-Plan durchführen, vorausgesetzt, Ihre Nutzungsrate für Ereignisse und Gesamtspeicher bleibt innerhalb des Lite-Kontingents für diese Posten.<br/><br/>Wenn Sie ein Upgrade oder eine Herabstufung des Plans vornehmen, müssen Sie kein erneutes Staging und keinen Neustart für Ihre Apps durchführen.|
 {:caption="Table 9. Next steps for changing your plan" caption-side="top"}
 
-###Verwendungshinweise zum Ändern des Plans über die Befehlszeilenschnittstelle
+### Verwendungshinweise zum Ändern des Plans über die Befehlszeilenschnittstelle
 
 Optional können Sie den Serviceplan auch über die Befehlszeilenschnittstelle ändern.
 Geben Sie zum Aktualisieren des Serviceplans den folgenden Befehl ein:

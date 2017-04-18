@@ -13,7 +13,7 @@ copyright:
 Bluemix 애플리케이션 대시보드의 **모바일 옵션** 링크를 클릭하여 애플리케이션 라우트와 애플리케이션 GUID를 확보하십시오. 라우트 및 앱 GUID에 이러한 값을 사용하십시오. Bluemix 앱 appRoute 및 appGUID 매개변수를 사용하려면 코드 스니펫을 수정하십시오. 
 
 
-##Core SDK 초기화
+## Core SDK 초기화
 
 ```
 // Initialize the SDK for Java (Android) with IBM Bluemix AppGUID and route
@@ -37,7 +37,7 @@ Bluemix에서 생성한 애플리케이션에 지정된 고유 키를 지정합�
 - BMSClient.REGION_UK
 - BMSClient.REGION_SYDNEY
 
-##클라이언트 푸시 SDK 초기화
+## 클라이언트 푸시 SDK 초기화
 
 ```
 //Initialize client Push SDK for Java

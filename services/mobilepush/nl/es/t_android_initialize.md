@@ -13,7 +13,7 @@ Un lugar común para colocar el código de inicialización se encuentra en el m�
 Pulse el enlace **Opciones móviles** en el Panel de control de aplicaciones de Bluemix para obtener la ruta de la aplicación y el applicationGUID. Utilice estos valores para su ruta y GUID de la app. Modifique el fragmento de código para que utilice los parámetros appRoute y appGUID de la aplicación Bluemix.
 
 
-##Inicializar el SDK principal
+## Inicializar el SDK principal
 
 ```
 // Initialize the SDK for Java (Android) with IBM Bluemix AppGUID and route
@@ -37,7 +37,7 @@ Especifica la ubicación donde se ha alojado la app. Puede utilizar uno de estos
 - BMSClient.REGION_UK
 - BMSClient.REGION_SYDNEY
 
-##Inicializar el SDK push del cliente
+## Inicializar el SDK push del cliente
 
 ```
 //Initialize client Push SDK for Java

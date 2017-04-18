@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#{{site.data.keyword.Bluemix_short}}에 {{site.data.keyword.streamsshort}} 애플리케이션 배치
+# {{site.data.keyword.Bluemix_short}}에 {{site.data.keyword.streamsshort}} 애플리케이션 배치
 {: #c_getting_app_bluemix}
 
 

@@ -145,7 +145,7 @@ BMSClient.initialize(<applicationBluemixRegion>);
 
 **NB:** Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} service is hosted, see  [Before you begin](#before-you-begin).
 
-##Initializing the {{site.data.keyword.amashort}} AuthorizationManager from your native code
+## Initializing the {{site.data.keyword.amashort}} AuthorizationManager from your native code
 {: #initializing-auth-manager}
 
 In order to use `BMSAuthorizationManager` you will need to add the following code snippet. The following native code initializes the `BMSAuthorizationManager` with the {{site.data.keyword.amashort}} service `tenantId` (see [Before you begin](#before-you-begin)).

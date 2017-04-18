@@ -328,12 +328,12 @@ Puoi scegliere il numero di domini personalizzati desiderato per le tue applicaz
 
 Una volta configurata la tua istanza {{site.data.keyword.Bluemix_notm}}, puoi monitorare e gestire l'istanza {{site.data.keyword.Bluemix_notm}} utilizzando la pagina Amministrazione. Per ulteriori informazioni, vedi [Managing {{site.data.keyword.Bluemix_local_notm}} e dedicato](../admin/index.html#mng). Per informazioni su aggiornamenti e manutenzione, vedi [Manutenzione dell'istanza locale](index.html#maintainlocal).
 
-##Ruoli e responsabilità
+## Ruoli e responsabilità
 {: #rolesresponsibilities}
 
 Se hai configurato un account {{site.data.keyword.Bluemix_local_notm}}, devi identificare le persone all'interno della tua organizzazione a cui assegnare i ruoli necessari per rendere operativa la tua istanza.
 
-###Ruoli
+### Ruoli
 
 Il seguente elenco mostra i ruoli e le responsabilità dei clienti che puoi assegnare:
 
@@ -369,7 +369,7 @@ Il team operativo e di supporto {{site.data.keyword.Bluemix_notm}} che insieme a
 <li>Per tentare di riprodurre un problema riportato su un ticket di supporto</li>
 </ul>
 
-###Responsabilità
+### Responsabilità
 
 Dalla configurazione del tuo ambiente alla manutenzione continua, tu e IBM dovrete completare una serie di attività. Le seguenti tabelle illustrano le attività richieste e i proprietari per lo svolgimento delle attività attraverso le fasi di inizio, avanzamento e completamento.
 

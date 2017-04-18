@@ -15,7 +15,7 @@ copyright:
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#Iniciación a {{site.data.keyword.trackplan}} {: #track-plan}  
+# Iniciación a {{site.data.keyword.trackplan}} {: #track-plan}  
 
 *Última actualización: 27 de abril de 2016*
 {: .last-updated}

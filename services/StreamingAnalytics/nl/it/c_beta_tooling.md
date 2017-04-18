@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Ambiente e strumenti di sviluppo
+# Ambiente e strumenti di sviluppo
 {: #c_beta_tooling}
 
 

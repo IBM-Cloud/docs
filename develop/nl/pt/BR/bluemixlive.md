@@ -13,7 +13,7 @@ lastupdated: "2017-3-10"
 {:new_window: target="_blank"}
 {:pre: .pre}
 
-#{{site.data.keyword.Bluemix_notm}} Live Sync
+# {{site.data.keyword.Bluemix_notm}} Live Sync
 {: #live-sync}
 
  
@@ -62,7 +62,7 @@ Figura 1. O processo do Bluemix Live Sync
 Se você estiver desenvolvendo um aplicativo Java que esteja em execução no Liberty, será possível depurar remotamente usando o [Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools).
 
 
-##Live Edit {: #live-edit}
+## Live Edit {: #live-edit}
 
 Se você estiver construindo um aplicativo Node.js, ao fazer mudanças no projeto usando o Web IDE, o recurso Live Edit do {{site.data.keyword.Bluemix_notm}} Live Sync pode atualizar rapidamente a instância de aplicativo em execução no {{site.data.keyword.Bluemix_notm}}. O Live Edit permite desenvolver como faria no desktop sem reimplementação.
 
@@ -86,7 +86,7 @@ Ao mudar os arquivos no Web IDE, eles são automaticamente reimplementados para 
 **NOTA:** para uma experiência mais consistente ao usar o recurso Live Edit do {{site.data.keyword.Bluemix_notm}} Live Sync, memória adicional de 256 MB é necessária e
 será incluída.
 
-##{{site.data.keyword.Bluemix_notm}} Live
+## {{site.data.keyword.Bluemix_notm}} Live
 Debug {: #live-debug}
 
 É possível acessar o recurso Debug do {{site.data.keyword.Bluemix_notm}} Live Sync quando o {{site.data.keyword.Bluemix_notm}} Live Sync está ativado para o app Node.js.
@@ -101,7 +101,7 @@ Debug inclui os recursos a seguir:
 * Depuração usando o [node-inspector![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/node-inspector/node-inspector){:new_window}
 * Acesso ao shell
 
-###Controle de tempo de execução do aplicativo {: #app-runtime}
+### Controle de tempo de execução do aplicativo {: #app-runtime}
 
 Com o controle de tempo de execução do aplicativo, é possível usar o Debug
 para inspecionar o estado do app no horário de início. Esse recurso é útil
@@ -113,7 +113,7 @@ ações a seguir:
 * Executar uma reinicialização rápida do app
 * Suspender o app antes da execução de qualquer código de app
 
-###Depurar {: #debug}
+### Depurar {: #debug}
 
 O Debug inclui os recursos a seguir:
 
@@ -129,7 +129,7 @@ determinados critérios forem atendidos.
 * Use o editor de código-fonte integrado para fazer mudanças imediatas, ou mesmo
 temporárias, no código do app em execução.
 
-###Shell {: #shell}
+### Shell {: #shell}
 
 Essa ferramenta lhe concede acesso ao shell para o contêiner no qual
 seu app está em execução. Usando esse terminal, é possível executar remotamente
@@ -137,7 +137,7 @@ os comandos shell de diagnóstico para administrar seu app.
 
 Monitore o uso de memória e CPU na instância que usa comandos Linux padrão, como **top**, **ps** e **kill**.
 
-###Configurando um app para ativar o {{site.data.keyword.Bluemix_notm}} Live
+### Configurando um app para ativar o {{site.data.keyword.Bluemix_notm}} Live
 Debug {: #configure_app_debug}
 
 O app deve usar o buildpack do IBM SDK for Node.js. Não há suporte para buildpacks customizados.
@@ -169,7 +169,7 @@ Envie por push o aplicativo e, em seguida, navegue para `https://app-host.myblue
    **Note**: Your user ID for DevOps Services can be either an IBMid or a federated ID (corporate ID). If you use federated authentication, to log in to your Bluemix Live Sync command-line client, you must use a personal access token instead of a password. If you don't use federated authentication, your IBMid and password work with all clients. For more information about creating a personal access token, see [What's federated authentication and how does it affect me?![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/){:new_window}
    -->
 
-###Restaurando configurações do app e desativando o Bluemix Live Debug {: #restore_live_debug}
+### Restaurando configurações do app e desativando o Bluemix Live Debug {: #restore_live_debug}
 
 1. Remova a variável de ambiente ENABLE_BLUEMIX_DEV_MODE do arquivo `manifest.yml` do app.
 

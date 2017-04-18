@@ -16,7 +16,7 @@ copyright:
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-#アプリの開発 
+# アプリの開発 
 {: #develop-apps-IDS}
 
 *最終更新日: 2015 年 12 月 7 日*  
@@ -24,7 +24,7 @@ copyright:
 統合開発環境 (IDE) またはテキスト・エディターを使用するか、{{site.data.keyword.jazzhub}} を使用することによって、アプリケーションを開発できます。
 {: shortdesc}
 
-##Bluemix DevOps Services によるアプリケーションの開発
+## Bluemix DevOps Services によるアプリケーションの開発
 {: #dev_ops}
 
 {{site.data.keyword.jazzhub_short}} を使用して、クラウド内でアプリケーションの開発、トラッキング、プランを行い、その後、それを {{site.data.keyword.Bluemix_notm}} にデプロイすることができます。ソース・コードからアプリケーション実行までを数分で行うことができます。  

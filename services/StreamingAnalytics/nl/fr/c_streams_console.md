@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Console {{site.data.keyword.streaminganalyticsshort}}
+# Console {{site.data.keyword.streaminganalyticsshort}}
 {: #console}
 
 Sur la console {{site.data.keyword.streaminganalyticsshort}}, vous pouvez soumettre vos applications {{site.data.keyword.streamsshort}} directement dans l'instance de service {{site.data.keyword.streaminganalyticsshort}}.

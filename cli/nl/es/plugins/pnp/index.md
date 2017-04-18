@@ -98,12 +98,12 @@ Para ver la información de ayuda para los mandatos, ejecute: `bluemix network [
 bluemix network pnp-routers [--verbose (o -v)]
 ```
 
-#####Parámetros opcionales
+##### Parámetros opcionales
 {: #op1}
 
 * **--verbose (o -v)** (distintivo): Ver la información de red detallada sobre cada direccionador.
 
-######Ejemplo de mandato
+###### Ejemplo de mandato
 {: #ex1}
 
 Para ver la información de red sobre todos los direccionadores:
@@ -153,13 +153,13 @@ Para ver la información de red detallada sobre todos los direccionadores:
 bluemix network pnp-create <ip_direccionador> <ip_direccionador> <nombre>
 ```
 
-#####Parámetros
+##### Parámetros
 {: #p1}
 
 * **ip_direccionador**: direcciones IP de los dos direccionadores que desea conectar. Puede encontrar las direcciones IP utilizando el mandato: `bluemix network pnp-routers`
 * **nombre**: nombre de la conexión de igualdad de red privada.
 
-######Ejemplo de mandato
+###### Ejemplo de mandato
 {: #ex2}
 
 	$ bluemix network pnp-create 129.41.234.246 129.41.237.172 demo
@@ -170,19 +170,19 @@ bluemix network pnp-create <ip_direccionador> <ip_direccionador> <nombre>
 	Conexión de igualdad de red privada 'demo' creada.
 
 
-####Crear una conexión de igualdad de red privada utilizando el nombre de la conexión
+#### Crear una conexión de igualdad de red privada utilizando el nombre de la conexión
 
 ```
 bluemix network pnp-create -i <nombre>
 ```
 
-#####Parámetros
+##### Parámetros
 {: #p2}
 
 * **--interactive (-i)** (distintivo): Modalidad interactiva para seleccionar direccionadores.
 * **nombre**: nombre de la conexión de igualdad de red privada.
 
-######Ejemplo de mandato
+###### Ejemplo de mandato
 {: #ex3}
 
 	$ bluemix network pnp-create -i demo
@@ -208,12 +208,12 @@ bluemix network pnp-create -i <nombre>
 bluemix network pnp-show [--verbose (o -v)]
 ```
 
-#####Parámetros opcionales
+##### Parámetros opcionales
 {: #op2}
 
 * **--verbose (o -v)** (distintivo): Ver la información de red detallada sobre cada direccionador.
 
-######Ejemplo de mandato
+###### Ejemplo de mandato
 {: #ex4}
 
 Ver información básica:
@@ -247,16 +247,16 @@ Ver información detallada:
 ```
 bluemix network pnp-delete [--force (o -f)] <id_conexión>
 ```
-#####Parámetros
+##### Parámetros
 {: #p3}
 * **id_conexión**: Uno o varios ID de conexión separados por una coma.
 
-#####Parámetros opcionales
+##### Parámetros opcionales
 {: #op3}
 
 * **--force (o -f)** (distintivo): Suprime la conexión sin solicitar la confirmación.
 
-######Ejemplo de mandato:
+###### Ejemplo de mandato:
 {: #ex5}
 
 Suprimir una conexión:

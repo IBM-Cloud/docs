@@ -24,7 +24,7 @@ copyright:
  * 템플리트를 사용하여 Continuous Delivery 도구 체인을 작성하고 구성하려면 "도구 체인 템플리트에서 시작" 섹션에서 **[여기서 시작](#starting_from_a_toolchain_template)**을 클릭하십시오. 도구 체인은 파이프라인의 계획, 개발, 배치와 애플리케이션의 관리에 사용할 도구를 통합합니다. 언제나 도구 체인에서 도구를 추가하거나 제거할 수 있습니다.
  * 도구 체인이 이미 있는 경우에는 "도구 체인 템플리트에서 시작" 섹션에서 **도구 체인 보기**를 클릭하십시오. 도구 체인 관련 작업에 대한 자세한 정보는 [Bluemix 퍼블릭에서 도구 체인 사용](/docs/services/ContinuousDelivery/toolchains_using.html){: new_window}의 내용을 참조하십시오.
 
-##파이프라인을 사용하여 시작
+## 파이프라인을 사용하여 시작
 {: #starting_with_a_pipeline}
 
 파이프라인은 빌드와 배치 등을 자동화합니다. 자동화된 파이프라인을 사용하여 시작하려면 템플리트를 선택하고 GitHub 저장소(repo)의 위치를 제공하십시오.
@@ -62,7 +62,7 @@ Cloud Foundry 애플리케이션을 배치하도록 구성된 [파이프라인 �
 1. 사용할 도구 체인을 선택하거나 작성하려는 새 도구 체인의 이름을 입력하십시오.
 1. **작성**을 클릭하십시오. 도구 체인의 개요 페이지에 빈 파이프라인이 작성되고 타일로 표시됩니다.
 
-##도구 체인 템플리트에서 시작
+## 도구 체인 템플리트에서 시작
 {: #starting_from_a_toolchain_template}
 
 [템플리트(링크가 새 창에서 열림)](https://console.ng.bluemix.net/devops/create){: new_window}를 사용하여 Continuous Delivery 도구 체인을 작성하고 구성하려면 다음을 수행하십시오.

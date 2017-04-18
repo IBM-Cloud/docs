@@ -11,7 +11,7 @@ lastupdated: "2016-12-21"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#Partage de pipelines reposant sur du texte dans les exemples de projet {{site.data.keyword.jazzhub_short}} {: #share-pipeline}
+# Partage de pipelines reposant sur du texte dans les exemples de projet {{site.data.keyword.jazzhub_short}} {: #share-pipeline}
 
 Dans le cas d'exemples de projet déployés dans {{site.data.keyword.Bluemix_notm}} via le bouton Déployer dans {{site.data.keyword.Bluemix_notm}}, vous pouvez définir des configurations de pipeline {{site.data.keyword.jazzhub_short}} sous forme de fichiers YAML. Les pipelines définis sous forme de texte peuvent être partagés pour que les personnes qui dévient votre projet n'aient pas à configurer leurs propres pipelines. Cette fonction est en cours de développement : le format YAML et son implémentation peuvent changer à tout moment. Actuellement, cette fonction n'est disponible que pour les projets avec Git et les référentiels GitHub qui ciblent {{site.data.keyword.Bluemix_notm}}. 
 {: shortdesc} 
@@ -76,7 +76,7 @@ stages:
 ```
 {: codeblock} 
 
-##Syntaxe du fichier YAML {: #yaml-syntax}
+## Syntaxe du fichier YAML {: #yaml-syntax}
 
 N'importe quel pipeline peut être représenté textuellement avec la syntaxe ci-dessous.
 
@@ -153,13 +153,13 @@ space: <nom de l'espace>
 ```
 {: codeblock} 
 
-##Travaux d'extension et définitions d'extension {: #extension-jobs} 
+## Travaux d'extension et définitions d'extension {: #extension-jobs} 
 
 Les définitions d'extension définissent l'ensemble de propriétés disponibles pour les travaux d'extension. Un travail est traité comme un travail
 d'extension lorsque la propriété `extension_id` est spécifiée. Pour identifier les propriétés disponibles pour une extension,
 consultez la documentation associée à l'extension. 
 
-##Interaction avec des pipelines à l'aide d'un fichier YAML {: #pipeline-yaml} 
+## Interaction avec des pipelines à l'aide d'un fichier YAML {: #pipeline-yaml} 
 
 **VARIABLES D'ENVIRONNEMENT ET RESOLUTION** 
 <!-- Formating for this? -->

@@ -72,7 +72,7 @@ SHA-256.
 Un certificato viene emesso da un'autorità di
 certificazione e viene firmato in maniera digitale da tale autorità. Dopo aver creato il CSR, puoi generare il tuo certificato SSL su un'autorità di certificazione pubblica.
 
-##Caricamento di certificati SSL
+## Caricamento di certificati SSL
 {: #ssl_certificate}
 
 Puoi applicare un protocollo di sicurezza per garantire la riservatezza

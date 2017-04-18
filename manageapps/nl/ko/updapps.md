@@ -112,7 +112,7 @@ cf delete-route domain -n hostname -f
 
 *domain*은 도메인 이름이고, *hostname*은 애플리케이션에 대한 라우트의 호스트 이름입니다. **cf delete-route** 명령에 대한 자세한 정보를 보려면 `cf delete-route -h`를 입력하십시오.
 
-##Blue-Green 배치
+## Blue-Green 배치
 {: #blue_green}
 
 {{site.data.keyword.Bluemix_notm}}에서는 Blue-Green 배치 기술을 사용하여 지속적 딜리버리 및 중단 시간 최소화 이벤트를 사용하도록 설정합니다.

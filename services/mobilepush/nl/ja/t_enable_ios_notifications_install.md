@@ -5,7 +5,7 @@
 
 **注**: Swift の Push の readme ファイルを確認するには、 https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master にアクセスしてください。
 
-##CocoaPods のインストール
+## CocoaPods のインストール
 
 1. Mac ターミナルで以下のコマンドを使用して CocoaPods をインストールします。
 ```
@@ -65,7 +65,7 @@ $ pod update
 
 **注**: CocoaPods コマンド `pod install` または `pod update` を使用して Pods プロジェクトを更新すると、Bluemix Mobile Services のソース・フォルダーがオーバーライドされる可能性があります。元ファイルのカスタマイズしたバージョンを保持する場合は、これらのコマンドのいずれかを発行する前には、それらをバックアップしてください。
 
-###Swift
+### Swift
 
 **前提条件**
 
@@ -82,7 +82,7 @@ import BMSPush
 ```
 
 
-##ビルド設定
+## ビルド設定
 
 **「Xcode」>「ビルド設定」>「ビルド・オプション」に移動し、「Bitcode を使用可能に設定 (Set Enable Bitcode)」**を**「いいえ」**に設定します。
 
@@ -97,9 +97,9 @@ import BMSPush
 初期化コードを配置する一般的な場所は、iOS アプリケーションのアプリケーション代行内です。
 Bluemix アプリケーション・ダッシュボード内の**「モバイル・オプション」**リンクをクリックして、アプリケーション経路と GUID を取得します。
 
-##Core SDK の初期化
+## Core SDK の初期化
 
-###Objective-C
+### Objective-C
 
 ```
 // Initialize the SDK for Object-C with IBM Bluemix GUID and route
@@ -107,7 +107,7 @@ IMFClient *imfClient = [IMFClient sharedInstance];
 [imfClient initializeWithBackendRoute:"add_your_applicationRoute_here" backendGUID:"add_your_appId_here"];
 ```
 
-###Swift
+### Swift
 
 ```
 // Initialize the Core SDK for Swift with IBM Bluemix GUID, route, and region
@@ -118,16 +118,16 @@ myBMSClient.defaultRequestTimeout = 10.0 // Timput in seconds
 ```
 
 
-##クライアント Push SDK の初期化
+## クライアント Push SDK の初期化
 
-###Objective-C
+### Objective-C
 
 ```
 //Initialize client Push SDK for Objective-C
 IMFPushClient _pushService = [IMFPushClient sharedInstance];
 ```
 
-###Swift
+### Swift
 
 ```
 //Initialize client Push SDK for Swift
@@ -168,11 +168,11 @@ iOS のアプリケーションおよびデバイスを登録するには、以�
 2. プッシュ通知へのトークンの受け渡し
 
 
-##バックエンド・アプリケーションの作成
+## バックエンド・アプリケーションの作成
 
 Bluemix® カタログの Boilerplates セクションでバックエンド・アプリケーションを作成します。これにより、プッシュ・サービスはこのアプリケーションに自動的にバインドされます。バックエンド・アプリを既に作成済みの場合は、必ずアプリを Push Notification Service にバインドしてください。
 
-###Objective-C
+### Objective-C
 
 ```
 	//For Objective-C
@@ -189,7 +189,7 @@ Bluemix® カタログの Boilerplates セクションでバックエンド・�
 	}
 ```
 
-###Swift
+### Swift
 
 ```
 	//For Swift
@@ -201,11 +201,11 @@ Bluemix® カタログの Boilerplates セクションでバックエンド・�
 	}
 ```
 
-##プッシュ通知へのトークンの受け渡し
+## プッシュ通知へのトークンの受け渡し
 
 トークンを APNs から受け取った後で、`registerDevice:withDeviceToken` メソッドの一部として、そのトークンをプッシュ通知に渡します。
 
-###Objective-C
+### Objective-C
 
 ```
 //For Objective-C
@@ -227,7 +227,7 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 }];
 ```
 
-###Swift
+### Swift
 
 トークンを APNS から受け取った後で、`didRegisterForRemoteNotificationsWithDeviceToken` メソッドの一部として、そのトークンをプッシュ通知に渡します。
 
@@ -255,7 +255,7 @@ func application (application: UIApplication, didRegisterForRemoteNotificationsW
 
 iOS デバイスでプッシュ通知を受け取ります。
 
-##Objective-C
+## Objective-C
 iOS デバイスでプッシュ通知を受け取るには、アプリケーションのアプリケーション代行に以下の Objective-C メソッドを追加します。
 
 ```
@@ -265,7 +265,7 @@ iOS デバイスでプッシュ通知を受け取るには、アプリケーシ�
 }
 ```
 
-##Swift
+## Swift
 iOS デバイスでプッシュ通知を受け取るには、アプリケーションのアプリケーション代行に以下の Swift メソッドを追加します。
 
 ```

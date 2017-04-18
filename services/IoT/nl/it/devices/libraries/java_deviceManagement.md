@@ -15,7 +15,7 @@ lastupdated: "2016-11-22"
 # Sviluppo dei dispositivi gestiti utilizzando Java
 {: #java_deviceManagement}
 
-##Introduzione
+## Introduzione
 {: #introduction}
 
 In {{site.data.keyword.iot_full}}, un dispositivo gestito è un dispositivo che può eseguire operazioni di gestione dispositivo, come gli aggiornamenti del firmware, dell'ubicazione e della diagnostica.
@@ -682,7 +682,7 @@ Per ulteriori informazioni sull'aggiornamento degli attributi del dispositivo, c
 -   [DeviceAttributesUpdateListenerSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/DeviceAttributesUpdateListenerSample.java) - n codice listener che mostra come essere in ascolto per varie modifiche dell'attributo del dispositivo.
 -   [NonBlockingDiagnosticsErrorCodeUpdateSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/NonBlockingDiagnosticsErrorCodeUpdateSample.java) - Un esempio che mostra come aggiungere ErrorCode senza attendere la risposta dal server.
 
-##Ricette
+## Ricette
 {: #Recipes}
 
 Fai riferimento a [la ricetta](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/) che mostra come collegarti al dispositivo Raspberry Pi come un dispositivo gestito di {{site.data.keyword.iot_short_notm}} e ad eseguire varie operazioni di gestione del dispositivo passo dopo passo utilizzando la libreria client.

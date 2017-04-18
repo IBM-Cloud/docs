@@ -24,7 +24,7 @@ copyright:
  * テンプレートから継続的デリバリー・ツールチェーンを作成して構成するには、「ツールチェーン・テンプレートから開始 (Starting from a toolchain template)」セクションで、**[「ここから開始 (Start here)」](#starting_from_a_toolchain_template)**をクリックします。ツールチェーンは、パイプラインのプランニング、開発、デプロイと、アプリケーションの管理のためのツールを統合したものです。ツールチェーンに対していつでもツールを追加したり削除したりできます。
  * ツールチェーンが既にある場合は、「ツールチェーン・テンプレートから開始 (Starting from a toolchain template)」セクションで、**「ツールチェーンを表示 (View your toolchains)」**をクリックします。ツールチェーンの扱いについて詳しくは、[Bluemix Public でのツールチェーンの使用](/docs/services/ContinuousDelivery/toolchains_using.html){: new_window}を参照してください。
 
-##パイプラインで開始 (Starting with a pipeline)
+## パイプラインで開始 (Starting with a pipeline)
 {: #starting_with_a_pipeline}
 
 パイプラインは、ビルドやデプロイメントなどを自動化します。自動化パイプラインを開始するには、テンプレートを選択し、GitHub リポジトリーの場所を指定します。
@@ -62,7 +62,7 @@ Cloud Foundry アプリケーションをデプロイするように構成され
 1. 使用するツールチェーンを選択するか、作成する新しいツールチェーンの名前を入力します。
 1. **「作成」**をクリックします。空のパイプラインが作成され、ツールチェーンの「概要」ページにタイルとして表示されます。
 
-##ツールチェーン・テンプレートから開始 (Starting from a toolchain template)
+## ツールチェーン・テンプレートから開始 (Starting from a toolchain template)
 {: #starting_from_a_toolchain_template}
 
 [テンプレート (新しいウィンドウでリンクが開きます)](https://console.ng.bluemix.net/devops/create){: new_window} から継続的デリバリー・ツールチェーンを作成して構成するには、以下のようにします。

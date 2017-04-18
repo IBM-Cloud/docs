@@ -136,7 +136,7 @@ Bauen Sie Ihre Anwendung auf und führen Sie sie aus.
 
 Die Methode 'onCreate' der Hauptaktivität in Ihrer Android-Anwendung ist eine übliche Position für den Initialisierungscode. Zwei Komponenten des SDK müssen initialisiert werden. Eine ist das Core-SDK, die andere ist das Push-SDK, das auf dem Core-SDK aufgebaut ist.
 
-###Core-SDK initialisieren
+### Core-SDK initialisieren
 
 ```
 // SDK für Android initialisieren
@@ -144,7 +144,7 @@ Die Methode 'onCreate' der Hauptaktivität in Ihrer Android-Anwendung ist eine �
 ```
     {: codeblock}
 
-####bluemixRegionSuffix
+#### bluemixRegionSuffix
 {: bluemixRegionSuffix}
 
 Gibt den Standort an, an dem die App gehostet ist. Sie können einen der folgenden drei Werte verwendet:
@@ -153,7 +153,7 @@ Gibt den Standort an, an dem die App gehostet ist. Sie können einen der folgend
 - BMSClient.REGION_UK
 - BMSClient.REGION_SYDNEY
 
-###Client-Push-SDK initialisieren
+### Client-Push-SDK initialisieren
 
 ```
 //Initialize client Push SDK for Java
@@ -162,7 +162,7 @@ push.initialize(getApplicationContext(), "appGUID", "clientSecret");
 ```
 	{: codeblock}
 
-####AppGUID
+#### AppGUID
 {: appguid_initialize_client_push_sdk}
 
 Dies ist der 'AppGUID'-Schlüssel des {{site.data.keyword.mobilepushshort}}-Service. Bei diesem Wert muss die Groß-/Kleinschreibung beachtet werden. Öffnen Sie das Push Notification-Dashboard und wählen Sie die Registerkarte 'Konfigurieren' aus. Diesen Wert können Sie im Dashboard des Push Notification-Service in der Registerkarte 'Konfigurieren' über 'Mobile Systemerweiterungen' abrufen. 

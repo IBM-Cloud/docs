@@ -13,7 +13,7 @@ lastupdated: "2017-02-03"
 {:codeblock:.codeblock}
 
 
-#Kibana 대시보드 내보내기 및 공유
+# Kibana 대시보드 내보내기 및 공유
 <!-- for example, Uploading your data -->
 {: #exporting_sharing_kibana_dash}
 <!-- Provide an appropriate ID above -->

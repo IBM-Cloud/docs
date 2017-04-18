@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Kompatible Toolkits und Dienstprogramme für die Analyse
+# Kompatible Toolkits und Dienstprogramme für die Analyse
 {: #c_analytics_utilities}
 
 
@@ -21,7 +21,7 @@ lastupdated: "2017-02-09"
 Diese Toolkits und Dienstprogramme für die Analyse sind mit {{site.data.keyword.streaminganalyticsshort}} kompatibel.
 {:shortdesc}
 
-##SPSS Analytics Toolkit
+## SPSS Analytics Toolkit
 
 SPSS Analytics Toolkit enthält {{site.data.keyword.streamsshort}}-Operatoren, die mit den Produkten SPSS
 Modeler und SPSS Collaboration and Deployment Services integriert werden können, um verschiedene Aspekte
@@ -41,7 +41,7 @@ Die folgende Tabelle listet Operatoren auf, die vom SPSS Analytics Toolkit zur V
 *Tabelle 1. Operatoren, die mit dem SPSS Analytics Toolkit kompatibel sind*
 
 
-##Complex Event Processing Toolkit
+## Complex Event Processing Toolkit
 
 Das Complex Event Processing Toolkit (com.ibm.streams.cep) stellt den Operator 'MatchRegex' zur Verfügung, der das Complex Event Processing ermöglicht.
 
@@ -54,7 +54,7 @@ in Streams von Tupeln. Beispielsweise kann CEP verwendet werden, um Muster bei A
 Routenmuster in Verkehrsanwendungen oder Verhaltensmuster bei Kunden in Web-Commerce-Einstellungen
 zu erkennen. 
 
-##TimeSeries Toolkit
+## TimeSeries Toolkit
 
 Mit den Operatoren und Funktionen im TimeSeries Toolkit (com.ibm.streams.timeseries) können Zeitreihendaten aufbereitet, analysiert und modelliert werden. 
 
@@ -92,7 +92,7 @@ Eine detaillierte Aufstellung und die mit dem TimeSeries Toolkit kompatiblen Ope
 
 Weitere Informationen zu den Toolkiteinschränkungen finden Sie unter [Restrictions for the {{site.data.keyword.streamsshort}} specialized toolkits](http://www.ibm.com/support/knowledgecenter/SSCRJU_4.2.0/com.ibm.streams.install.doc/doc/ibminfospherestreams-install-toolkit-restrictions.html){:new_window}.
 
-##Geospatial Toolkit
+## Geospatial Toolkit
 
 Das Geospatial Toolkit (com.ibm.streams.geospatial) enthält Operatoren und Funktionen, die die effiziente Verarbeitung und Indexierung von Positionsdaten vereinfachen. Beispielsweise können Sie mit GPS-Positionsdaten
 (GPS = Global Positioning System) den jeweiligen Aufenthaltsort von Entitäten in einem bestimmten
@@ -116,7 +116,7 @@ Weitere Informationen finden Sie unter
 [Operators: com.ibm.streams.geospatial](http://www.ibm.com/support/knowledgecenter/SSCRJU_4.2.0/com.ibm.streams.toolkits.doc/spldoc/dita/tk$com.ibm.streams.geospatial/ix$Operator.html?lang=en){:new_window} in der
 Produktdokumentation zu {{site.data.keyword.streamsshort}}.
 
-##HDFS for {{site.data.keyword.Bluemix_short}} Toolkit
+## HDFS for {{site.data.keyword.Bluemix_short}} Toolkit
 
 Das HDFS for {{site.data.keyword.Bluemix_short}} Toolkit (com.ibm.streamsx.hdfs.bluemix) ist eine spezielle Version des HDFS Toolkit. Diese Version bietet zusätzlich die Möglichkeit zur Anbindung an IBM BigInsights for Apache Hadoop for {{site.data.keyword.Bluemix_short}}.
 
@@ -133,7 +133,7 @@ Die folgende Tabelle listet Operatoren auf, die vom HDFS Toolkit zur Verfügung 
 
 Weitere Informationen zur Verwendung dieses Toolkits finden Sie unter [Get started with {{site.data.keyword.streaminganalyticsshort}} and BigInsights on {{site.data.keyword.Bluemix_short}} using HDFS](https://developer.ibm.com/bluemix/2016/02/26/streaming-analytics-and-biginsights-using-hdfs/){:new_window}.
 
-##JSON Toolkit
+## JSON Toolkit
 
 Das JSON Toolkit (com.ibm.streamsx.json) bietet JSON-Unterstützung für SPL und Standardumsetzungen zwischen SPL-Werten und JSON-Objekten.  
 
@@ -152,13 +152,13 @@ Weitere Informationen finden Sie unter
 [com.ibm.streamsx.json](http://www.ibm.com/support/knowledgecenter/en/SSCRJU_4.2.0/com.ibm.streams.toolkits.doc/spldoc/dita/tk$com.ibm.streamsx.json/tk$com.ibm.streamsx.json.html){:new_window} in der
 Produktdokumentation zu {{site.data.keyword.streamsshort}}.
 
-##JDBC Toolkit
+## JDBC Toolkit
 
 Das JDBC Toolkit (com.ibm.streams.jdbc) gibt {{site.data.keyword.streaminganalyticsshort}} die Möglichkeit, mit mehr {{site.data.keyword.Bluemix_short}}-Datenbankservices zu kommunizieren, wie z. B. SQL Database, dashDB usw.
 
 Das Toolkit enthält den Operator 'JDBCRun'. Weitere Informationen finden Sie unter [Using {{site.data.keyword.streaminganalyticsshort}} with JDBC-enabled {{site.data.keyword.Bluemix_short}}](https://developer.ibm.com/bluemix/2016/01/26/streaming-analytics-with-jdbc-enabled-databases/){:new_window} and [com.ibm.streamsx.jdbc](http://www.ibm.com/support/knowledgecenter/en/SSCRJU_4.2.0/com.ibm.streams.toolkits.doc/spldoc/dita/tk$com.ibm.streamsx.jdbc/tk$com.ibm.streamsx.jdbc.html){:new_window} in der Produktdokumentation zu {{site.data.keyword.streamsshort}}.
 
-##R-project Toolkit
+## R-project Toolkit
 
 Das R-project Toolkit enthält den Operator 'RScript', den Sie verwenden können, um R-Befehle auszuführen und um komplexe Data-Mining-Algorithmen zur Erkennung relevanter Muster in Datenstreams anzuwenden.
 
@@ -167,7 +167,7 @@ Weitere Informationen finden Sie unter
 Produktdokumentation zu {{site.data.keyword.streamsshort}}.
 
 
-##Rules Compiler
+## Rules Compiler
 
 Das Rules Compiler Toolkit (com.ibm.streams.rulescompiler) unterstützt die Konvertierung von in ODM geschriebenen Geschäftsregeln in SPL, die dann in {{site.data.keyword.streamsshort}}-Anwendungen verwendet werden können.
 
@@ -175,7 +175,7 @@ Weitere Informationen finden Sie unter
 [Operators: com.ibm.streams.rulescompiler](http://www.ibm.com/support/knowledgecenter/SSCRJU_4.2.0/com.ibm.streams.toolkits.doc/spldoc/dita/tk$com.ibm.streams.rulescompiler/ix$Operator.html){:new_window} in der
 Produktdokumentation zu {{site.data.keyword.streamsshort}}.
 
-##Text Toolkit
+## Text Toolkit
 
 Das Text Toolkit (com.ibm.streams.text) enthält die Operatoren `TextExtract` und `SentimentExtractoroperator`, die Informationen aus Textdaten extrahieren.
 
@@ -185,7 +185,7 @@ Produktdokumentation zu {{site.data.keyword.streamsshort}}.
 
 Weitere Informationen zu den Toolkiteinschränkungen finden Sie unter [Restrictions for the {{site.data.keyword.streamsshort}} specialized toolkits](http://www.ibm.com/support/knowledgecenter/SSCRJU_4.2.0/com.ibm.streams.install.doc/doc/ibminfospherestreams-install-toolkit-restrictions.html){:new_window}.
 
-##Mining Toolkit
+## Mining Toolkit
 
 Das Mining Toolkit (com.ibm.streams.mining) enthält Operatoren, mit denen Sie ein Mining für Datenstreams durch Anwendung von Modellen durchführen können. Das Mining von Datenstreams zur Extraktion relevanter Informationen oder zur Gewinnung bestimmter Erkenntnisse
 ist von größter Bedeutung für die meisten Anwendungsfälle bei der Verarbeitung von Streams -
@@ -210,7 +210,7 @@ Produktdokumentation zu {{site.data.keyword.streamsshort}}.
 
 Weitere Informationen zu den Toolkiteinschränkungen finden Sie unter [Restrictions for the {{site.data.keyword.streamsshort}} specialized toolkits](http://www.ibm.com/support/knowledgecenter/SSCRJU_4.2.0/com.ibm.streams.install.doc/doc/ibminfospherestreams-install-toolkit-restrictions.html){:new_window}.
 
-##Telecommunications Event Data Analytics (TEDA) Toolkit
+## Telecommunications Event Data Analytics (TEDA) Toolkit
 
 Das Telecommunications Event Data Analytics (TEDA) Toolkit (com.ibm.streams.teda) bietet eine Reihe von generischen Operatoren, die in Telekommunikationsanwendungen genutzt werden, und es stellt ein Anwendungsframework zur Verfügung, um neue File-to-File-Anwendungen einzurichten. Diese Anwendungen basieren auf Codevorlagen
 und unterstützen die individuelle Anpassung, konfigurierbare Parallelverarbeitung, eine ordnungsgemäße Beendigung
@@ -235,7 +235,7 @@ Weitere Informationen finden Sie unter
 Produktdokumentation zu {{site.data.keyword.streamsshort}}.
 
 
-##Topology Toolkit
+## Topology Toolkit
 
 Das Topology Toolkit bietet Unterstützung für die Erstellung von {{site.data.keyword.streamsshort}}-Anwendungen in den folgenden Programmiersprachen:
 

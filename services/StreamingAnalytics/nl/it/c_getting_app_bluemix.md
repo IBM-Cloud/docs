@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Distribuzione delle tue applicazioni {{site.data.keyword.streamsshort}}
+# Distribuzione delle tue applicazioni {{site.data.keyword.streamsshort}}
 su {{site.data.keyword.Bluemix_short}}
 {: #c_getting_app_bluemix}
 

@@ -14,7 +14,7 @@ lastupdated: "2017-02-09"
 {:pre: .pre}
 
 
-#Introduzione a {{site.data.keyword.streaminganalyticsshort}}
+# Introduzione a {{site.data.keyword.streaminganalyticsshort}}
 {: #gettingstarted}
 
 {{site.data.keyword.streaminganalyticsshort}} è fornito da

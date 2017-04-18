@@ -205,7 +205,7 @@ Google+ et doit correspondre à l'élément `redirect_uri` défini sur le tablea
 	Une fois que vous avez obtenu l'accès et reçu les jetons d'identité, vous pouvez marquer la session Web comme authentifiée et, si vous le souhaitez, rendre persistants ces jetons.  
 
 
-##Utilisation du jeton d'accès et du jeton d'identité obtenus
+## Utilisation du jeton d'accès et du jeton d'identité obtenus
 {: #google-auth-using-token}
 
 Le jeton d'identité contient des informations sur l'identité de l'utilisateur. Dans le cas d'une authentification Google, le jeton contient toutes les informations que
@@ -217,7 +217,7 @@ Pour soumettre des demandes à des ressources protégées, ajoutez aux demandes 
 
 `Authorization=Bearer <jeton_accès> <jeton_ID>`
 
-####Conseils :
+#### Conseils :
 {: #tips}
 
 * Les éléments `jeton_accès` et `jeton_ID`  doivent être séparés par un espace.

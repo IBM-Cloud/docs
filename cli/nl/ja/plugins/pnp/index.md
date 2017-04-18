@@ -97,12 +97,12 @@ chmod a+x ./private-network-peering-linux-amd64
 bluemix network pnp-routers [--verbose (または -v)]
 ```
 
-#####オプション・パラメーター
+##### オプション・パラメーター
 {: #op1}
 
 * **--verbose (または -v)** (フラグ): 各ルーターに関する詳細ネットワーク情報を表示します。
 
-######コマンドの例
+###### コマンドの例
 {: #ex1}
 
 すべてのルーターに関するネットワーク情報を表示するには、以下のようにします。
@@ -152,13 +152,13 @@ bluemix network pnp-routers [--verbose (または -v)]
 bluemix network pnp-create <router_ip> <router_ip> <name>
 ```
 
-#####パラメーター
+##### パラメーター
 {: #p1}
 
 * **router_ip**: 接続する 2 つのルーターの IP アドレス。IP アドレスを確認するには、`bluemix network pnp-routers` コマンドを使用します。
 * **name**: プライベート・ネットワーク・ピアリング接続の名前。
 
-######コマンドの例
+###### コマンドの例
 {: #ex2}
 
 	$ bluemix network pnp-create 129.41.234.246 129.41.237.172 demo
@@ -169,19 +169,19 @@ bluemix network pnp-create <router_ip> <router_ip> <name>
 	Private network peering connection 'demo' created.
 
 
-####接続名を使用したプライベート・ネットワーク・ピアリング接続の作成
+#### 接続名を使用したプライベート・ネットワーク・ピアリング接続の作成
 
 ```
 bluemix network pnp-create -i <name>
 ```
 
-#####パラメーター
+##### パラメーター
 {: #p2}
 
 * **--interactive (-i)** (フラグ): ルーターを選択する対話モード。
 * **name**: プライベート・ネットワーク・ピアリング接続の名前。
 
-######コマンドの例
+###### コマンドの例
 {: #ex3}
 
 	$ bluemix network pnp-create -i demo
@@ -207,12 +207,12 @@ bluemix network pnp-create -i <name>
 bluemix network pnp-show [--verbose (または -v)]
 ```
 
-#####オプション・パラメーター
+##### オプション・パラメーター
 {: #op2}
 
 * **--verbose (または -v)** (フラグ): 各ルーターに関する詳細ネットワーク情報を表示します。
 
-######コマンドの例
+###### コマンドの例
 {: #ex4}
 
 基本情報を表示するには、以下のようにします。
@@ -246,16 +246,16 @@ bluemix network pnp-show [--verbose (または -v)]
 ```
 bluemix network pnp-delete [--force (または -f)] <connection_id>
 ```
-#####パラメーター
+##### パラメーター
 {: #p3}
 * **connection_id**: コンマで区切った、1 つ以上の接続 ID。
 
-#####オプション・パラメーター
+##### オプション・パラメーター
 {: #op3}
 
 * **--force (または -f)** (フラグ): 確認を求めるプロンプトを出さずに接続を削除します。
 
-######コマンドの例:
+###### コマンドの例:
 {: #ex5}
 
 接続を削除するには、以下のようにします。

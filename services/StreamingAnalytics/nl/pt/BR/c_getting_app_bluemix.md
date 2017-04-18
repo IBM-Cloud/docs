@@ -12,7 +12,7 @@ copyright:
 {:screen: .screen}
 {:pre: .pre}
 
-#Implementando aplicativos {{site.data.keyword.streamsshort}} no {{site.data.keyword.Bluemix_short}}
+# Implementando aplicativos {{site.data.keyword.streamsshort}} no {{site.data.keyword.Bluemix_short}}
 {: #c_getting_app_bluemix}
 
 

@@ -112,7 +112,7 @@ cf delete-route domain -n hostname -f
 
 *domain* is the name of your domain, and *hostname* is the host name of the route for your application. For more information about the **cf delete-route** command, type `cf delete-route -h`.
 
-##Blue-green deployments
+## Blue-green deployments
 {: #blue_green}
 
 {{site.data.keyword.Bluemix_notm}} supports the blue-green deployment technique to enable continuous delivery and minimize downtime events.

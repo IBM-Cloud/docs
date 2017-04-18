@@ -17,7 +17,7 @@ copyright:
 
 Mit der Überwachungsfunktion können Sie den Verbindungsstatus und die Geschwindigkeit des Datenflusses zwischen Ihrem lokal oder auf dem SoftLayer-Server vorhandenen VPN-Gateway und Ihrem {{site.data.keyword.vpn_short}}-Gateway anzeigen. 
 {:shortdesc}  
-##Im Service-Dashboard überwachen
+## Im Service-Dashboard überwachen
 {: #dashboard}
 
 Wählen Sie die Registerkarte **Überwachung** aus, um die folgende Verbindungsstatistik anzuzeigen.
@@ -29,7 +29,7 @@ Wählen Sie die Registerkarte **Überwachung** aus, um die folgende Verbindungss
 Die Überwachungsstatistik wird als Diagramme mit Daten aus den letzten 48 Stunden angezeigt. Die Diagramme werden alle 20 Minuten automatisch aktualisiert. Sie können jedoch die neuesten Daten jederzeit abrufen, indem Sie die Registerkarte 'Überwachung' verlassen und wieder zu ihr zurückkehren.
 
 **Hinweis:** In den Diagrammen wird die koordinierte Weltzeit und nicht die Ortszeit verwendet.  
-##Mit Logmet überwachen
+## Mit Logmet überwachen
 {: #logmet}
 
 Verwenden Sie [Logmet](https://logmet.{DomainName}), um eine detaillierte Verbindungsstatistik anzuzeigen. 

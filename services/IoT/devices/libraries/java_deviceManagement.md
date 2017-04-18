@@ -15,7 +15,7 @@ lastupdated: "2016-11-22"
 # Developing managed devices by using Java
 {: #java_deviceManagement}
 
-##Introduction
+## Introduction
 {: #introduction}
 
 In {{site.data.keyword.iot_full}}, a managed device is a device that can do device management operations, such as firmware, location, and diagnostic updates.
@@ -682,7 +682,7 @@ For more information about updating the device attributes, see [this page](../de
 -   [DeviceAttributesUpdateListenerSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/DeviceAttributesUpdateListenerSample.java) - A sample listener code that shows how to listen for a various device attribute changes .
 -   [NonBlockingDiagnosticsErrorCodeUpdateSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/NonBlockingDiagnosticsErrorCodeUpdateSample.java) - A sample that shows how to add ErrorCode without waiting for response from the server.
 
-##s Recipes
+## s Recipes
 {: #Recipes}
 
 Refer to [the recipe](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/) that shows how to connect the Raspberry Pi device as managed device to {{site.data.keyword.iot_short_notm}} to perform various device management operations in step by step using this client library.

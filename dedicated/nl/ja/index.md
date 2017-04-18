@@ -260,12 +260,12 @@ IBM は、お客様がパスワードで保護されたログインを使用し�
 {{site.data.keyword.Bluemix_notm}} インスタンスがセットアップされた後は、「管理」ページを使用して {{site.data.keyword.Bluemix_notm}} インスタンスをモニターおよび管理することができます。詳しくは、[
 『{{site.data.keyword.Bluemix_notm}} Local および Dedicated の管理』](../admin/index.html#mng)を参照してください。アップグレードおよび保守については、『[専用インスタンスの保守](index.html#maintaindedicated)』を参照してください。
 
-##役割および責任
+## 役割および責任
 {: #rolesresponsibilities}
 
 {{site.data.keyword.Bluemix_dedicated_notm}} アカウントをセットアップした場合、インスタンスを稼働するために必要な役割の組織内のユーザーを特定します。
 
-###役割
+### 役割
 
 以下のリストでは、割り当てる顧客の役割および責任を示します。
 
@@ -380,7 +380,7 @@ Success Manager (CSM) と連携できます。異なるサポート層につい�
 |インフラストラクチャーのリサイクル | お客様の環境は {{site.data.keyword.BluSoftlayer}} 定義のプロセスに基づいてリサイクルされます。 | IBM |
 {: caption="Table 7. Completion phase tasks" caption-side="top"}
 
-##専用インスタンスの保守
+## 専用インスタンスの保守
 {: #maintaindedicated}
 
 IBM は、{{site.data.keyword.Bluemix_notm}} ランタ
@@ -505,7 +505,7 @@ Akamai や Dyn などのグローバル・ロード・バランサーを選択�
 <dd>{{site.data.keyword.BluSoftlayer}} EVault Backup を使用して、メタデータは最低でも 200 km 離れた場所にバックアップされます。</dd>
 </dl>
 
-##専用インスタンスのリストア
+## 専用インスタンスのリストア
 {: #restorededicated}
 
 {{site.data.keyword.Bluemix_dedicated_notm}} の設定、メタデータ、および構成は、環境における計画外停止に備えるために定期的にバックアップされます。お客様の責任でバックアップする必要があるデータには、アプリケーション・データ、クラウド・データベース・サービス・データ、およびオブジェクト・ストアがあります。

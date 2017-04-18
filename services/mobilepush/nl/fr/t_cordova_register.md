@@ -46,7 +46,7 @@ Pour personnaliser les propriétés d'alerte, de badge et de son, ajoutez le fra
 
 
 
-##JavaScript
+## JavaScript
 {: #cordova_register_js}
 
 ```
@@ -115,7 +115,7 @@ Ajoutez le fragment de code Objective-C suivant à la classe de votre délégué
 	}
 ```
 
-##Swift
+## Swift
 {: #cordova_register_swift}
 Ajoutez le fragment de code Swift suivant à la classe de votre délégué d'application :
 
@@ -129,7 +129,7 @@ funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificati
 }
 ```
 
-##Etapes suivantes
+## Etapes suivantes
 {: #cordova_register_next}
 
 1. Générez votre projet, puis exécutez-le à l'aide des commandes suivantes :

@@ -20,7 +20,7 @@ Open toolchains are available in the Public and Dedicated environments on {{site
 Each toolchain is associated with a specific organization (org), and any user that is a member of that org can be added to the access control list for any of its associated toolchains. For more information about access control for toolchains, see [Managing access](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}. Before you create a toolchain, make sure that you are working in the org where you want to create the toolchain. The org that you are working in is displayed on the menu bar. To switch to another org, click the org in the menu bar and select the org that you want to switch to.
 
 
-##Creating a toolchain from a template   
+## Creating a toolchain from a template   
 {: #creating_a_toolchain_from_a_template}
 
 You can use a template as a starting point to [create a toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/devops/create){: new_window} that includes a specific set of tool integrations. Learn more about how to use the templates from the [IBM Cloud Garage Method ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/category/tools){:new_window}.
@@ -49,7 +49,7 @@ You can use a template as a starting point to [create a toolchain ![External lin
  * If you configured a source code tool integration such as  GitHub, the sample GitHub repo is cloned into your GitHub account.
 
 
-##Creating a toolchain from an app
+## Creating a toolchain from an app
 {: #creating_a_toolchain_from_an_app}
 
 You can create a toolchain from your app. The toolchain can support continuous development, deployment, monitoring, and more, and it is associated with your app. Each app can be associated with a toolchain. When you push changes to the toolchain's GitHub or {{site.data.keyword.ghe_short}} repo, the pipeline automatically builds and deploys the app.  
@@ -65,7 +65,7 @@ You can create a toolchain from your app. The toolchain can support continuous d
  * If you configured GitHub, the sample GitHub repo is cloned into your GitHub account.
 
 
-##Viewing a toolchain
+## Viewing a toolchain
 {: #viewing_a_toolchain}
 
 After you configure the toolchain and its tool integrations, you can view a visual representation of the toolchain.

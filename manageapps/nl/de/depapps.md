@@ -539,7 +539,7 @@ Zur Konfiguration der Startumgebung für Ihre Anwendung können Sie Shell-Script
 export NODE_ENV=production;
 ```
 
-###Hochladen von Dateien und Verzeichnissen verhindern
+### Hochladen von Dateien und Verzeichnissen verhindern
 
 Bei der Verwendung der Befehlszeilenschnittstelle 'cf' für die Bereitstellung einer Anwendung können Sie Zeit für das Hochladen sparen, wenn Sie bestimmte Dateien und Verzeichnisse auslassen, die {{site.data.keyword.Bluemix_notm}} an anderer Stelle abrufen kann. Damit diese Dateien und Verzeichnisse nicht nach {{site.data.keyword.Bluemix_notm}} hochgeladen werden, können Sie im Stammverzeichnis Ihrer Anwendung eine Datei vom Typ `.cfignore` erstellen.
 

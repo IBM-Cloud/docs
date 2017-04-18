@@ -13,7 +13,7 @@ lastupdated: "2017-02-03"
 {:codeblock:.codeblock}
 
 
-#Kibana ダッシュボードのエクスポートと共有
+# Kibana ダッシュボードのエクスポートと共有
 <!-- for example, Uploading your data -->
 {: #exporting_sharing_kibana_dash}
 <!-- Provide an appropriate ID above -->

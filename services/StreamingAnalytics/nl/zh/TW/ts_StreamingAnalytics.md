@@ -16,13 +16,13 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#{{site.data.keyword.streaminganalyticsshort}} 疑難排解 
+# {{site.data.keyword.streaminganalyticsshort}} 疑難排解 
 {: #ts_StreamingAnalytics}
 
 您可以找到如何在 {{site.data.keyword.Bluemix_short}} 上使用 {{site.data.keyword.streaminganalyticsshort}} 之常見問題的答案。
 {:shortdesc}
 
-##啟動這項服務時，系統提示我輸入認證以登入主控台
+## 啟動這項服務時，系統提示我輸入認證以登入主控台
 {: #log_in_console}
 
 啟動 {{site.data.keyword.streaminganalyticsshort}} 時，系統會提示您輸入認證以登入服務主控台。

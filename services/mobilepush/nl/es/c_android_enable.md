@@ -136,7 +136,7 @@ Cree y ejecute la aplicación.
 
 Un lugar común para colocar el código de inicialización se encuentra en el método onCreate de la actividad principal en su aplicación Android. Hay dos componentes del SDK que deben inicializarse. Uno es el SDK principal y el otro es el SDK push creado en la parte superior del SDK principal.
 
-###Inicializar el SDK principal
+### Inicializar el SDK principal
 
 ```
 // Inicializar el SDK para Android
@@ -144,7 +144,7 @@ Un lugar común para colocar el código de inicialización se encuentra en el m�
 ```
     {: codeblock}
 
-####bluemixRegionSuffix
+#### bluemixRegionSuffix
 {: bluemixRegionSuffix}
 
 Especifica la ubicación en la que se aloja la aplicación. Puede utilizar uno de estos tres valores:
@@ -153,7 +153,7 @@ Especifica la ubicación en la que se aloja la aplicación. Puede utilizar uno d
 - BMSClient.REGION_UK
 - BMSClient.REGION_SYDNEY
 
-###Inicializar el SDK push del cliente
+### Inicializar el SDK push del cliente
 
 ```
 //Inicializar SDK de cliente Push para Java
@@ -162,7 +162,7 @@ push.initialize(getApplicationContext(), "appGUID", "clientSecret");
 ```
 	{: codeblock}
 
-####AppGUID
+#### AppGUID
 {: appguid_initialize_client_push_sdk}
 
 Esta es la clave AppGUID del servicio {{site.data.keyword.mobilepushshort}}. Este valor distingue entre mayúsculas y minúsculas. Abra el panel de control Notificación Push y seleccione el separador Configurar. Puede obtener este valor en Opciones móviles, en el separador Configurar del panel de control Servicio de notificaciones Push. 

@@ -19,7 +19,7 @@ copyright:
 
 **重要事項**：這是實驗性功能。工具鏈可能不穩定，與舊版本不相容的部分也可能會變更。建議不要將它們用於正式作業環境。若要使用工具鏈，您必須進行一次性的[存取要求](https://new-console.ng.bluemix.net/devops?cm_mmc=IBMBluemixGarageMethod-_-MethodSite-_-10-19-15::12-31-18-_-toolchains-welcome-page){: new_window}。工具鏈只適用於達拉斯地區。
 
-##從範本建立工具鏈   
+## 從範本建立工具鏈   
 {: #creating_a_toolchain_from_a_template}
 
 核准工具鏈存取要求之後，即可使用範本作為起點來建立包含一組特定工具整合的工具鏈。
@@ -33,7 +33,7 @@ copyright:
 1. 如果您要在配置工具整合之前建立工具鏈，請按一下**建立**，然後確認您要建立沒有工具整合的工具鏈。繼續[建立工具鏈](#creating_a_toolchain)區段，其中說明自動執行以設定工具鏈的步驟。  
 1. 如果您要在建立工具鏈之前配置工具整合，請在「可配置的整合」區段中選取您要配置的每一個工具整合。如需配置工具整合的相關資訊，請參閱[配置工具整合](../toolchains/toolchains_integrations.html){: new_window}。 
 
-##從應用程式建立工具鏈
+## 從應用程式建立工具鏈
 {: #creating_a_toolchain_from_an_app}
 
 核准工具鏈存取要求之後，即可從應用程式建立工具鏈。工具鏈可支援持續開發、部署、監視及其他作業，且其與應用程式相關聯。每一個應用程式都可能與工具鏈相關聯。將變更推送至工具鏈的 GitHub 儲存庫時，管線會自動建置及部署應用程式。  
@@ -55,7 +55,7 @@ copyright:
  * 如果您已配置 Slack 工具整合，則 Slack 整合會配置成將通知傳送給您在 Slack 中所配置的通道。這些通知會指出部署進度；例如，`Connected with Project XYZ`、`Pipeline Configured` 及 `Stage 'build' started`。
  * 如果您已配置 GitHub 工具整合，則會將範例 GitHub 儲存庫複製到 GitHub 帳戶。  
  
-##檢視工具鏈
+## 檢視工具鏈
 {: #viewing_a_toolchain}
 
 配置工具鏈及所有工具整合之後，即會開啟「工具整合」頁面。

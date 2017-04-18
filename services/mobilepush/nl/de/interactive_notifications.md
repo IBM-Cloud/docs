@@ -17,7 +17,7 @@ Letzte Aktualisierung: 23. Januar 2017
 
 Interaktive Benachrichtigungen ermöglichen den Benutzern das Beantworten einer Benachrichtigung, ohne die Anwendung zu öffnen. Wenn eine interaktive Benachrichtigung eingeht, zeigt das Gerät die Aktionsschaltflächen zusammen mit der Benachrichtigung an. Interaktive Benachrichtigungen werden für iOS-Geräte mit Version 8 oder einer neueren Version unterstützt. Wenn interaktive Benachrichtigungen an iOS-Geräte gesendet werden, die mit einer älteren Version als Version 8 ausgeführt werden, werden die Benachrichtigungsaktionen nicht angezeigt.
 
-##Interaktive Push-Benachrichtigungen senden
+## Interaktive Push-Benachrichtigungen senden
 
 
 Interaktive Benachrichtigungen können über das Push-Dashboard oder mithilfe der REST-API (siehe [REST-API-Dokumentation](t_restapi.html)) gesendet werden.

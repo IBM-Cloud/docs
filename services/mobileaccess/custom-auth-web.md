@@ -13,7 +13,7 @@ lastupdated: "2017-04-06"
 
 **Important: The {{site.data.keyword.amafull}} service is replaced with the {{site.data.keyword.appid_full}} service.**
 
-#Configuring custom authentication for Mobile Client Access Web applications
+# Configuring custom authentication for Mobile Client Access Web applications
 {: #custom-web}
 
 Add custom authentication and {{site.data.keyword.amafull}} security functionality to your Web app.
@@ -39,7 +39,7 @@ For more information:
 * [Configuring {{site.data.keyword.amashort}} for custom authentication](custom-auth-config-mca.html)
 
 
-##Configuring a custom identity provider
+## Configuring a custom identity provider
 {: #custom-auth-config}
 
 When creating a custom identity provider you must define a POST method  with a route  in the following structure:
@@ -105,7 +105,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 {: codeblock}
 
 
-##Configuring Mobile Client Access for custom authentication
+## Configuring Mobile Client Access for custom authentication
 {: #custom-auth-config-mca}
 
 After you have your custom identity provider configured, you can enable custom authentication in the {{site.data.keyword.amashort}}  dashboard.
@@ -118,7 +118,7 @@ After you have your custom identity provider configured, you can enable custom a
 1. Click **Save**.
 
 
-##Implementing the Mobile Client Access authorization flow using a custom identity provider
+## Implementing the Mobile Client Access authorization flow using a custom identity provider
 {: #custom-auth-flow}
 
 The `VCAP_SERVICES` environment variable is created automatically for each {{site.data.keyword.amashort}} service instance and contains properties that are necessary for the authorization process. It consists of a JSON object and you can view it in the  **Service Credentials** tab in the {{site.data.keyword.amashort}} dashboard.
@@ -185,7 +185,7 @@ To request user authorization, redirect the browser to the authorization server 
 
 	After redirecting, the user gets a login form. After the user's credentials are authenticated by the custom identity provider, the {{site.data.keyword.amashort}} service will calls the Web application redirect URI, supplying the grant code as a query parameter.
 
-##Obtaining the tokens
+## Obtaining the tokens
 {: custom-auth-tokens}
 
 The next step is to obtain the access token and identity token using the previously received grant code. In order to do so:
@@ -250,7 +250,7 @@ The next step is to obtain the access token and identity token using the previou
 	Once you have received access, and identity the tokens, you can flag Web session as authenticated and optionally persist these tokens
 
 
-##Using obtained access and identity token
+## Using obtained access and identity token
 {: #custom-auth-using-token}
 
 The identity token contains information about user identity. In case of a custom authentication, the token will contain all the information returned by the custom identity provider upon authentication. Under the `imf.user` field, the field `displayName` will contain the `displayName` returned by the custom identity provider, and the field `id` will contain the `userName`.  All other values returned by the custom identity provider are returned within the field `attributes` under `imf.user`.  
@@ -259,7 +259,7 @@ The access token allows communication with resources protected by {{site.data.ke
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-####Tips:
+#### Tips:
 {: #tips_token}
 
 * The `<accessToken>` and the `<idToken>` must be separated with a white space.

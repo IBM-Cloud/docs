@@ -15,7 +15,7 @@ copyright:
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#Planejando o trabalho de sua equipe {: #tp-teamwork}  
+# Planejando o trabalho de sua equipe {: #tp-teamwork}  
 
 *Última atualização: 28 de abril de 2016*
 {: .last-updated}
@@ -24,7 +24,7 @@ copyright:
 {{site.data.keyword.trackplan}} simplificam o planejamento do projeto e aceleram o seu fluxo de trabalho.
 {: shortdesc}
 
-##Planejando os sprints de equipe {: #planning}
+## Planejando os sprints de equipe {: #planning}
 Na visualização Planejamento de sprint, é possível planejar sprints arrastando itens de trabalho entre as linhas de sprint. Para redesignar itens de trabalho,
 arraste-os entre as linhas.  
 
@@ -36,11 +36,11 @@ Também é possível revisar estatísticas sobre o progresso do sprint:
 - Itens de trabalho concluídos versus total de itens de trabalho
 - Pontos de história alcançados versus total de pontos de história estimados
 
-###Classificando Itens de Trabalho
+### Classificando Itens de Trabalho
 Enquanto você planeja um sprint, revise os itens de trabalho nas visualizações Lista não processada e Planejamento de sprint para classificar os itens de
 trabalho. Classifique os itens de trabalho e designe pontos de história para eles arrastando itens de trabalho para o ranqueamento.
 
-##Revisando o progresso da equipe {: #progress}
+## Revisando o progresso da equipe {: #progress}
 É possível revisar todos os itens de trabalho que estão designados para a equipe na visualização Trabalho da equipe.
 
 Também é possível revisar estas estatísticas:

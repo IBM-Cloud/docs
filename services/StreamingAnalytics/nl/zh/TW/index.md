@@ -14,7 +14,7 @@ lastupdated: "2017-02-09"
 {:pre: .pre}
 
 
-#開始使用 {{site.data.keyword.streaminganalyticsshort}}
+# 開始使用 {{site.data.keyword.streaminganalyticsshort}}
 {: #gettingstarted}
 
 {{site.data.keyword.streaminganalyticsshort}} 採用 {{site.data.keyword.streamsshort}} 技術，這是一種進階分析平台，可用來即時吸收及分析來自不同資料來源類型的資訊，並與之產生關聯。當您建立 {{site.data.keyword.streaminganalyticsshort}} 服務的實例時，即可獲得在 {{site.data.keyword.Bluemix_short}} 雲端中執行的專屬 {{site.data.keyword.streamsshort}} 實例，以執行 {{site.data.keyword.streamsshort}} 應用程式。

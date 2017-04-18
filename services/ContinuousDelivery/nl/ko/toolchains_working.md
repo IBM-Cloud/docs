@@ -19,12 +19,12 @@ copyright:
 
 도구 체인은 {{site.data.keyword.Bluemix}}의 퍼블릭 및 데디케이티드 환경에서 사용 가능합니다. 두 가지 방법으로 도구 체인을 작성할 수 있습니다. 즉, 템플리트를 사용하여 도구 체인을 작성하거나 앱에서 도구 체인을 작성할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 퍼블릭에서는 미국 남부 지역에서만 도구 체인을 사용할 수 있습니다. 
 
-##도구 체인 시작하기: 퍼블릭
+## 도구 체인 시작하기: 퍼블릭
 {: #getting_started_public}
 
 각 도구 체인은 특정 조직(org)과 연관되어 있으며 해당 조직의 구성원인 사용자는 누구나 조직과 연관된 도구 체인에 액세스할 수 있습니다. 도구 체인을 작성하기 전에 도구 체인을 작성하려는 조직에서 작업 중인지 확인하십시오. 현재 작업 중인 조직이 메뉴 표시줄에 표시됩니다. 다른 조직으로 전환하려면 메뉴 표시줄에서 조직을 클릭하고 전환하려는 조직을 선택하십시오.
 
-###템플리트에서 도구 체인 작성   
+### 템플리트에서 도구 체인 작성   
 {: #creating_a_toolchain_from_a_template}
 
 템플리트를 시작점으로 사용하여 특정 도구 통합 세트를 포함하는 [도구 체인을 작성(링크가 새 창에서 열림)](https://console.ng.bluemix.net/devops/create){: new_window}할 수 있습니다. [IBM Bluemix Garage Method(링크가 새 창에서 열림)](https://www.ibm.com/devops/method/category/tools){:new_window}에서 템플리트 사용 방법을 자세히 알아보십시오. 
@@ -48,7 +48,7 @@ copyright:
  * GitHub 도구 통합을 구성한 경우, 사용하는 GitHub 계정에 샘플 GitHub 저장소가 복제됩니다. 
 
 
-###앱에서 도구 체인 작성
+### 앱에서 도구 체인 작성
 {: #creating_a_toolchain_from_an_app}
 
 앱에서 도구 체인을 작성할 수 있습니다. 도구 체인은 지속적인 개발, 배치, 모니터링 등을 지원할 수 있으며 앱과 연관됩니다. 각 앱을 도구 체인과 연관시킬 수 있습니다. 도구 체인의 GitHub 저장소에 변경사항을 푸시하면 파이프라인이 자동으로 앱을 빌드하고 배치합니다.  
@@ -67,12 +67,12 @@ copyright:
  * GitHub 도구 통합을 구성한 경우, 사용하는 GitHub 계정에 샘플 GitHub 저장소가 복제됩니다. 
 
 
-##도구 체인 시작하기: 데디케이티드
+## 도구 체인 시작하기: 데디케이티드
 {: #getting_started_dedicated}
 
 각 도구 체인은 특정 조직과 연관되어 있으며 해당 조직의 구성원인 사용자는 누구나 연관된 도구 체인에 액세스할 수 있습니다. 도구 체인을 작성하기 전에 메뉴 표시줄에서 **{{site.data.keyword.avatar}}** 아이콘을 클릭하여 계정 및 지원 위젯을 열고 작업 중인 조직을 보십시오. 해당 조직이 도구 체인을 작성하려는 조직이 아닌 경우 다른 조직으로 전환하십시오. 
 
-###템플리트에서 도구 체인 작성   
+### 템플리트에서 도구 체인 작성   
 {: #creating_a_toolchain_from_a_template_dedicated}
 
 템플리트를 시작점으로 사용하여 특정 도구 통합 세트를 포함하는 도구 체인을 작성할 수 있습니다. 
@@ -93,7 +93,7 @@ copyright:
  * GitHub Enterprise 도구 통합을 구성한 경우, 사용하는 GitHub Enterprise 계정에 샘플 GitHub Enterprise 저장소가 복제됩니다. 
 
 
-###앱에서 도구 체인 작성
+### 앱에서 도구 체인 작성
 {: #creating_a_toolchain_from_an_app_dedicated}
 
 앱에서 도구 체인을 작성할 수 있습니다. 도구 체인은 지속적인 개발, 배치, 모니터링 등을 지원할 수 있으며 앱과 연관됩니다. 각 앱을 도구 체인과 연관시킬 수 있습니다. 도구 체인의 GitHub Enterprise 저장소에 변경사항을 푸시하면 파이프라인이 자동으로 앱을 빌드하고 배치합니다.  
@@ -111,7 +111,7 @@ copyright:
  * GitHub Enterprise 도구 통합을 구성한 경우, 사용하는 GitHub Enterprise 계정에 샘플 GitHub Enterprise 저장소가 복제됩니다. 
 
 
-##도구 체인 보기
+## 도구 체인 보기
 {: #viewing_a_toolchain}
 
 도구 체인과 해당 도구 통합을 구성한 후에는 도구 체인의 시각적 표시를 볼 수 있습니다. 

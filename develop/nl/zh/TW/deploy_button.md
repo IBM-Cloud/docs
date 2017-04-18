@@ -12,7 +12,7 @@ lastupdated: "2017-2-21"
 {:codeblock: .codeblock}
 
 
-#建立「部署至 {{site.data.keyword.Bluemix_notm}}」按鈕 {: #deploy-button} 
+# 建立「部署至 {{site.data.keyword.Bluemix_notm}}」按鈕 {: #deploy-button} 
 
 「部署至 {{site.data.keyword.Bluemix}}」按鈕可讓您有效率地共用您的公用 Git 來源應用程式，讓其他人能夠試用程式碼，並將其部署至 IBM {{site.data.keyword.Bluemix_notm}}。此按鈕需要的配置最少，而且您可以將其插入到任何支援標記的地方。任何人按一下此按鈕，就可以在新的 Git 儲存庫中建立複製的程式碼副本，所以您的原始應用程式會保持原狀，不受任何影響。
 {: shortdesc} 
@@ -37,7 +37,7 @@ lastupdated: "2017-2-21"
 
 7. 應用程式會部署至那個人的 {{site.data.keyword.Bluemix_notm}} 組織。 
 
-##按鈕的範例 {: #button-examples} 
+## 按鈕的範例 {: #button-examples} 
 
 請參閱公用 {{site.data.keyword.jazzhub_short}} 儲存庫的應用程式按鈕範例：
 
@@ -57,7 +57,7 @@ lastupdated: "2017-2-21"
 <a class="xref" href="https://bluemix.net/deploy?repository=https://github.com/Puquios/hello-containers" target="_blank" title="（在新分頁或視窗中開啟）"><img class="image" src="images/deploy_buttonx2.png" alt="部署至 Bluemix" /></a>
 </p> 
 
-##建立按鈕 {: #create-button}
+## 建立按鈕 {: #create-button}
 
 若要建立「部署至 {{site.data.keyword.Bluemix_notm}}」按鈕，請執行下列動作： 
 
@@ -98,7 +98,7 @@ lastupdated: "2017-2-21"
 <li>將 Snippet 插入部落格、文章、Wiki、Readme 檔中，或是您要推銷應用程式的任何地方。</li>
 </ol>
 
-##按鈕的 Snippet 考量 {: #button-snippet}
+## 按鈕的 Snippet 考量 {: #button-snippet}
 
 當您自訂「部署至 Bluemix」按鈕的 Snippet 時，請檢閱下列考量事項。 
 
@@ -112,7 +112,7 @@ lastupdated: "2017-2-21"
 	
 	* 如果您想要使用翻譯版本按鈕，可以從遠端參照，或是從 [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button){:new_window} 下載。 
 	
-##按鈕的儲存庫考量 {: #button-repo} 
+## 按鈕的儲存庫考量 {: #button-repo} 
 
 針對您將用於「部署至 Bluemix」按鈕中的專案儲存庫，請檢閱下列考量事項。 
 

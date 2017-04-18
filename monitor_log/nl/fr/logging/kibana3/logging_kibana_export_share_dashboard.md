@@ -13,7 +13,7 @@ lastupdated: "2017-02-03"
 {:codeblock:.codeblock}
 
 
-#Exportation et partage de vos tableaux de bord Kibana
+# Exportation et partage de vos tableaux de bord Kibana
 <!-- for example, Uploading your data -->
 {: #exporting_sharing_kibana_dash}
 <!-- Provide an appropriate ID above -->

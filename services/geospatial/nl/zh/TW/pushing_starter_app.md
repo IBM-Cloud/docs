@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#將入門範本應用程式推送至 {{site.data.keyword.Bluemix_short}}
+# 將入門範本應用程式推送至 {{site.data.keyword.Bluemix_short}}
 {: #pushing_starter_app}
 
 
@@ -34,7 +34,7 @@ cf login
 cf push myapp
 </code></pre>
 
-##下一步
+## 下一步
 
 * 移至您的應用程式概觀頁面（可從 {{site.data.keyword.Bluemix_short}} 儀表板存取），以驗證您的應用程式已順利啟動。
 

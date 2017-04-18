@@ -261,12 +261,12 @@ IBM 讓您能使用受到密碼保護的登入方式來存取 {{site.data.keywor
 
 在設定 {{site.data.keyword.Bluemix_notm}} 實例之後，您可以使用「管理」頁面來監視和管理 {{site.data.keyword.Bluemix_notm}} 實例。如需相關資訊，請參閱[管理 {{site.data.keyword.Bluemix_notm}} 本端及專用](../admin/index.html#mng)。如需升級和維護的相關資訊，請參閱[維護專用實例](index.html#maintaindedicated)。
 
-##角色及責任
+## 角色及責任
 {: #rolesresponsibilities}
 
 如果您設定 {{site.data.keyword.Bluemix_dedicated_notm}} 帳戶，請識別組織中負責維持實例運作所需角色的人員。
 
-###角色
+### 角色
 
 下列清單顯示您可指派的客戶角色及責任：
 
@@ -377,7 +377,7 @@ IBM 讓您能使用受到密碼保護的登入方式來存取 {{site.data.keywor
 |回收基礎架構 | 根據 {{site.data.keyword.BluSoftlayer}} 定義的處理程序，回收您的環境。 | IBM |
 {: caption="表 7. 完成階段作業" caption-side="top"}
 
-##維護您的專用實例
+## 維護您的專用實例
 {: #maintaindedicated}
 
 當 IBM 認為適當時，即會維護並安裝 {{site.data.keyword.Bluemix_notm}} 運行環境和服務的更新及修正程式。在維護時間範圍期間，可能無法使用服務。此外，IBM 會與您一起合作來排定 {{site.data.keyword.Bluemix_notm}} 平台的維護更新。
@@ -484,7 +484,7 @@ IBM 會針對「狀態」頁面上每一個維護時間範圍所計劃的變更�
 <dd>使用 {{site.data.keyword.BluSoftlayer}} EVault Backup，將 meta 資料備份至最少距離 200 公里的位置。</dd>
 </dl>
 
-##還原您的專用實例
+## 還原您的專用實例
 {: #restorededicated}
 
 {{site.data.keyword.Bluemix_dedicated_notm}} 設定、meta 資料及配置會定期備份，以為環境中發生的任何非計劃性的運作中斷作好準備。您負責備份的資料包括應用程式資料、雲端資料庫服務資料及物件儲存庫。

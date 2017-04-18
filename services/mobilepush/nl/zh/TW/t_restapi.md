@@ -78,7 +78,7 @@ copyright:
 	{: codeblock} 
 
 
-##Push REST API 過濾器
+## Push REST API 過濾器
 {: #push-api-rest-filters}
 
 過濾器會定義一個搜尋準則，以限制從 {{site.data.keyword.mobilepushshort}} 的 GET API 傳回的資料。請將過濾器套用至您要過濾的 Get 作業結果。過濾器會限制結果中包含的項目數。例如，您可以使用過濾器來搜尋開頭為 "test" 的標籤。 
@@ -117,7 +117,7 @@ copyright:
 - 如果使用 ==，則值必須是完全相符的字串。
 
 
-##{{site.data.keyword.mobilepushshort}} 回應碼
+## {{site.data.keyword.mobilepushshort}} 回應碼
 {: #push-api-response-codes}
 
 狀態：405 不接受方法 - 預期適當的方法。

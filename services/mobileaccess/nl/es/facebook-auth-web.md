@@ -198,7 +198,7 @@ El siguiente paso consiste en obtener las señales de acceso y de identidad util
 
 	Una vez que tenga acceso y que haya recibido las señales de identidad, puede señalar la sesión web como se indica y, opcionalmente, persistir estas señales.  
 
-##Utilización de la señal de identidad y del acceso obtenido
+## Utilización de la señal de identidad y del acceso obtenido
 {: #facebook-auth-using-token}
 
 La señal de identidad contiene información sobre la identidad del usuario. En caso de la autenticación de Facebook, la señal contendrá toda la información que el usuario esté de acuerdo en compartir, como el nombre completo, el grupo de edad, el URL de la foto de perfil, etc.  

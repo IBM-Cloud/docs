@@ -16,7 +16,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#{{site.data.keyword.geospatialshort_Geospatial}} のトラブルシューティング 
+# {{site.data.keyword.geospatialshort_Geospatial}} のトラブルシューティング 
 {: #ts_geospatial}
 
 
@@ -24,7 +24,7 @@ lastupdated: "2017-02-09"
 {{site.data.keyword.geospatialshort_Geospatial}} の使用に関するいくつかの一般的な疑問に対する回答を得ましょう。
 {:shortdesc}
 
-##アプリケーションを停止してもサービスが地域のモニターを続けている
+## アプリケーションを停止してもサービスが地域のモニターを続けている
 {: #stop-monitoring}
 
 
@@ -45,7 +45,7 @@ lastupdated: "2017-02-09"
 サービス管理ダッシュボードから {{site.data.keyword.geospatialshort_Geospatial}} を停止します。または、REST API を使用してサービスを停止するようにアプリケーションを変更し、その変更を {{site.data.keyword.Bluemix_short}} にプッシュします。
 {: tsResolve}
 
-##アプリケーション内に指定しなかった地域をサービスがモニターしている
+## アプリケーション内に指定しなかった地域をサービスがモニターしている
 {: #unspecified-region}
 
 
@@ -69,7 +69,7 @@ lastupdated: "2017-02-09"
 {: tsResolve}
 
 
-##サービス管理ダッシュボードからのトラブルシューティング
+## サービス管理ダッシュボードからのトラブルシューティング
 {: #dashboard}
 
 アプリケーションのトラブルシューティングを行う際、サービス・インスタンスの状況を確認するためにサービス管理ダッシュボードに移動すると便利です。サービスで処理中のデータがない場合、サービスを停止してから再始動することによって問題を修正できることがあります。

@@ -11,7 +11,7 @@ copyright:
 
 アクション可能通知を受け取ると、選択した ID に基づいて制御が以下のメソッドに渡されます。
 
-###Objective-C
+### Objective-C
 
 ```
 (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:
@@ -23,7 +23,7 @@ copyright:
 }
 ```
 
-###Swift
+### Swift
  
 ```
 func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {

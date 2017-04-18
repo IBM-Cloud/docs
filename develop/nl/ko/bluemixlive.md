@@ -13,7 +13,7 @@ lastupdated: "2017-3-10"
 {:new_window: target="_blank"}
 {:pre: .pre}
 
-#{{site.data.keyword.Bluemix_notm}} Live Sync 
+# {{site.data.keyword.Bluemix_notm}} Live Sync 
 {: #live-sync}
 
  
@@ -58,7 +58,7 @@ Bluemix Live Sync 프로세스는 다음 그림에 표시되어 있습니다.
 Liberty에서 실행되는 Java 애플리케이션을 개발하는 경우, [Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools)를 사용하여 원격으로 디버그할 수 있습니다.
 
 
-##Live Edit {: #live-edit}
+## Live Edit {: #live-edit}
 
 Node.js 애플리케이션을 빌드하고 있는 경우, Web IDE를 사용하여 프로젝트를 변경할 때 {{site.data.keyword.Bluemix_notm}} Live Sync의 Live Edit 기능을 사용하면 {{site.data.keyword.Bluemix_notm}}에서 실행 중인 애플리케이션 인스턴스를 신속하게 업데이트할 수 있습니다. Live Edit를 사용하면 재배치 없이 데스크탑에서처럼 개발할 수 있습니다.
 
@@ -78,7 +78,7 @@ Web IDE에서 변경한 파일은 {{site.data.keyword.Bluemix_notm}}에서 실�
 
 **참고:** {{site.data.keyword.Bluemix_notm}} Live Sync의 Live Edit 기능을 사용할 때 보다 일관된 경험을 얻으려면 256MB의 추가 메모리가 필요하며 추가될 예정입니다.
 
-##{{site.data.keyword.Bluemix_notm}} Live Debug {: #live-debug}
+## {{site.data.keyword.Bluemix_notm}} Live Debug {: #live-debug}
 
 {{site.data.keyword.Bluemix_notm}} Live Sync가 Node.js 앱에서 사용으로 설정된 경우, {{site.data.keyword.Bluemix_notm}} Live Sync Debug 기능에 액세스할 수 있습니다.
 
@@ -90,7 +90,7 @@ debug 기능을 사용할 경우, {{site.data.keyword.Bluemix_notm}}에서 앱�
 * [node-inspector ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/node-inspector/node-inspector){:new_window}를 사용하여 디버깅
 * 쉘 액세스
 
-###애플리케이션 런타임 제어 {: #app-runtime}
+### 애플리케이션 런타임 제어 {: #app-runtime}
 
 애플리케이션 런타임 제어를 사용하면 Debug 기능을 통해 시작 시 앱의 상태를 검사할 수 있습니다. 이 기능은 시작 시 충돌하는 앱의 문제점을 해결할 때 유용합니다.
 
@@ -99,7 +99,7 @@ debug 기능을 사용할 경우, {{site.data.keyword.Bluemix_notm}}에서 앱�
 * 앱을 신속하게 다시 시작합니다.
 * 앱 코드를 실행하기 전에 앱을 일시중단합니다.
 
-###Debug {: #debug}
+### Debug {: #debug}
 
 Debug에는 다음과 같은 기능이 포함되어 있습니다.
 
@@ -111,13 +111,13 @@ Debug에는 다음과 같은 기능이 포함되어 있습니다.
 * `console.log()` 호출의 디버그 출력 즉시 표시. 이 조치는 cf 로그를 모니터링하는 것보다 빠릅니다.
 * 기본 제공 소스 코드 편집기를 사용하여 실행 중인 앱 코드를 임시로 즉시 변경
 
-###쉘 {: #shell}
+### 쉘 {: #shell}
 
 이 도구는 앱이 실행 중인 컨테이너에 대한 쉘 액세스를 제공합니다. 이 터미널을 사용하면 진단 쉘 명령을 원격으로 실행하여 앱을 관리할 수 있습니다.
 
 표준 Linux 명령(예: **top**, **ps** 및 **kill**)을 사용하여 인스턴스 내에서 메모리 및 CPU 사용량을 모니터링하십시오.
 
-###{{site.data.keyword.Bluemix_notm}} Live Debug를 사용으로 설정하도록 앱 구성 {: #configure_app_debug}
+### {{site.data.keyword.Bluemix_notm}} Live Debug를 사용으로 설정하도록 앱 구성 {: #configure_app_debug}
 
 앱은 IBM SDK for Node.js 빌드팩을 사용해야 합니다. 사용자 정의 빌드팩은 지원되지 않습니다.
 
@@ -146,7 +146,7 @@ Debug에는 다음과 같은 기능이 포함되어 있습니다.
    **Note**: Your user ID for DevOps Services can be either an IBMid or a federated ID (corporate ID). If you use federated authentication, to log in to your Bluemix Live Sync command-line client, you must use a personal access token instead of a password. If you don't use federated authentication, your IBMid and password work with all clients. For more information about creating a personal access token, see [What's federated authentication and how does it affect me?![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/){:new_window}
    -->
 
-###앱 구성 복원 및 Bluemix Live Debug 사용 안함 {: #restore_live_debug}
+### 앱 구성 복원 및 Bluemix Live Debug 사용 안함 {: #restore_live_debug}
 
 1. 앱의 `manifest.yml` 파일에서 ENABLE_BLUEMIX_DEV_MODE 환경 변수를 제거하십시오.
 

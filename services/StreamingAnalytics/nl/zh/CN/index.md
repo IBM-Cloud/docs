@@ -14,7 +14,7 @@ lastupdated: "2017-02-09"
 {:pre: .pre}
 
 
-#{{site.data.keyword.streaminganalyticsshort}} 入门
+# {{site.data.keyword.streaminganalyticsshort}} 入门
 {: #gettingstarted}
 
 {{site.data.keyword.streaminganalyticsshort}} 由 {{site.data.keyword.streamsshort}} 提供支持，该产品是一款高级分析平台，可用于在信息从不同类型的数据源到达时，实时摄入、分析和关联信息。

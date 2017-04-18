@@ -11,7 +11,7 @@ lastupdated: "2017-01-08"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-#Configuración de la autenticación personalizada para las aplicaciones web de {{site.data.keyword.amashort}}
+# Configuración de la autenticación personalizada para las aplicaciones web de {{site.data.keyword.amashort}}
 {: #custom-web}
 
 Añadir autenticación personalizada y funcionalidad de seguridad de {{site.data.keyword.amafull}} a su app web.
@@ -37,7 +37,7 @@ Para obtener más información:
 * [Configuración de {{site.data.keyword.amashort}} para la autenticación personalizada](custom-auth-config-mca.html)
 
 
-##Creación de un proveedor de identidad personalizado
+## Creación de un proveedor de identidad personalizado
 {: #custom-auth-config}
 
 Al crear un proveedor de identidad personalizado, debe definir un método POST con una ruta en la estructura siguiente:
@@ -104,7 +104,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 {: codeblock}
 
 
-##Configuración de {{site.data.keyword.amashort}} para la autenticación personalizada
+## Configuración de {{site.data.keyword.amashort}} para la autenticación personalizada
 {: #custom-auth-config-mca}
 
 Una vez que haya configurado el proveedor de identidad personalizado, puede habilitar la autenticación personalizada en el panel de control {{site.data.keyword.amashort}}.
@@ -117,7 +117,7 @@ Una vez que haya configurado el proveedor de identidad personalizado, puede habi
 1. Pulse **Guardar**.
 
 
-##Implementación del flujo de autorización de {{site.data.keyword.amashort}} utilizando un proveedor de identidad personalizado
+## Implementación del flujo de autorización de {{site.data.keyword.amashort}} utilizando un proveedor de identidad personalizado
 {: #custom-auth-flow}
 
 La variable de entorno `VCAP_SERVICES` se crea automáticamente para cada instancia de servicio de {{site.data.keyword.amashort}} y contiene propiedades que son necesarias para el proceso de autorización. Consta de un objeto JSON y se puede ver en el separador **Credenciales de servicio** del panel de control de {{site.data.keyword.amashort}}.
@@ -187,7 +187,7 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 
 	Tras el redireccionamiento, el usuario obtendrá un formulario de inicio de sesión. Una vez que el proveedor de identidad personalizado autentique las credenciales del usuario, el servicio de {{site.data.keyword.amashort}} llamará al URI de redirección de la aplicación web, facilitando el código de concesión como un parámetro de consulta.
 
-##Obtención de las señales
+## Obtención de las señales
 {: custom-auth-tokens}
 
 El siguiente paso consiste en obtener la señal de acceso y la señal de identidad utilizando el código de concesión recibido anteriormente. Para ello:
@@ -255,7 +255,7 @@ app.get("/oauth/callback", function(req, res, next){
 	Una vez que haya recibido acceso, y la identidad de las señales, puede señalar la sesión web como autenticada y, opcionalmente, persistir estas señales
 
 
-##Utilización de la señal de identidad y del acceso obtenido
+## Utilización de la señal de identidad y del acceso obtenido
 {: #custom-auth-using-token}
 
 La señal de identidad contiene información sobre la identidad del usuario. En caso de una autenticación personalizada, la señal contendrá toda la información devuelta por el proveedor de identidad personalizado al autenticar. En el campo `imf.user`, el campo `displayName` contendrá el `displayName` devuelto por el proveedor de identidad personalizado, y el campo `id` contendrá el `userName`.  Todos los demás valores devueltos por el proveedor de identidad personalizado se devuelven en el campo `attributes` en `imf.user`.  
@@ -264,7 +264,7 @@ La señal de acceso permite la comunicación con los recursos protegidos por los
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-####Sugerencias:
+#### Sugerencias:
 {: #tips_token}
 
 * El `<accessToken>` y el `<idToken>` deben estar separados por un espacio en blanco.

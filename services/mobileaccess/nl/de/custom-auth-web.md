@@ -11,7 +11,7 @@ lastupdated: "2017-01-08"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-#Angepasste Authentifizierung für {{site.data.keyword.amashort}}-Webanwendungen konfigurieren
+# Angepasste Authentifizierung für {{site.data.keyword.amashort}}-Webanwendungen konfigurieren
 {: #custom-web}
 
 Sie können Ihrer Web-App eine angepasste Authentifizierung und die Sicherheitsfunktionalität von {{site.data.keyword.amafull}} hinzufügen.
@@ -37,7 +37,7 @@ Weitere Informationen finden Sie über die folgenden Links:
 * [{{site.data.keyword.amashort}} für die angepasste Authentifizierung konfigurieren](custom-auth-config-mca.html)
 
 
-##Angepassten Identitätsprovider konfigurieren
+## Angepassten Identitätsprovider konfigurieren
 {: #custom-auth-config}
 
 Beim Erstellen eines angepassten Identitätsproviders müssen Sie eine POST-Methode mit einer Route mit folgender Struktur definieren:
@@ -104,7 +104,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 {: codeblock}
 
 
-##{{site.data.keyword.amashort}} für eine angepasste Authentifizierung konfigurieren
+## {{site.data.keyword.amashort}} für eine angepasste Authentifizierung konfigurieren
 {: #custom-auth-config-mca}
 
 Nach der Konfiguration des angepassten Identitätsproviders können Sie die angepasste Authentifizierung im {{site.data.keyword.amashort}}-Dashboard aktivieren.
@@ -117,7 +117,7 @@ Nach der Konfiguration des angepassten Identitätsproviders können Sie die ange
 1. Klicken Sie auf **Speichern**.
 
 
-##{{site.data.keyword.amashort}}-Berechtigungsablauf mit einem angepassten Identitätsprovider implementieren
+## {{site.data.keyword.amashort}}-Berechtigungsablauf mit einem angepassten Identitätsprovider implementieren
 {: #custom-auth-flow}
 
 Die Umgebungsvariable `VCAP_SERVICES` wird automatisch für jede {{site.data.keyword.amashort}}-Serviceinstanz erstellt und enthält Eigenschaften, die für den Berechtigungsprozess erforderlich sind. Sie besteht aus einem JSON-Objekt und kann auf die Registerkarte mit den Serviceberechtigungsnachweisen im {{site.data.keyword.amashort}}-Dashboard angezeigt werden.
@@ -184,7 +184,7 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 
 	Nach der Weiterleitung wird ein Anmeldeformular angezeigt. Nachdem die Berechtigungsnachweise des Benutzers vom angepassten Identitätsprovider authentifiziert wurden, ruft der {{site.data.keyword.amashort}}-Service den Weiterleitungs-URI der Webanwendung auf und gibt den Autorisierungscode als Abfrageparameter an.
 
-##Tokens abrufen
+## Tokens abrufen
 {: custom-auth-tokens}
 
 Im nächsten Schritt werden das Zugriffstoken und das Identitätstoken mithilfe des zuvor empfangenen Autorisierungscodes abgerufen. Gehen Sie dazu wie folgt vor:
@@ -252,7 +252,7 @@ app.get("/oauth/callback", function(req, res, next){
 	Nachdem Sie das Zugriffstoken und das Identitätstoken empfangen haben, können Sie die Websitzung als authentifiziert markieren und optional diese Tokens speichern.
 
 
-##Abgerufenes Zugriffs- und Identitätstoken verwenden
+## Abgerufenes Zugriffs- und Identitätstoken verwenden
 {: #custom-auth-using-token}
 
 Das Identitätstoken enthält Informationen zu der Benutzeridentität. Bei einer angepassten Authentifizierung enthält das Token alle Informationen, die vom angepassten Identitätsprovider bei der Authentifizierung zurückgegeben werden. Das Feld `displayName` unter `imf.user` enthält den `Anzeigenamen`, der vom angepassten Identitätsprovider zurückgegeben wurde, und das Feld `id` enthält den `Benutzernamen`.  Alle anderen vom angepassten Identitätsprovider zurückgegebenen Werte werden im Feld `attributes` unter `imf.user` zurückgegeben.  
@@ -261,7 +261,7 @@ Das Zugriffstoken ermöglicht die Kommunikation mit Ressourcen, die von den {{si
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-####Tipps:
+#### Tipps:
 {: #tips_token}
 
 * `<accessToken>` und `<idToken>` müssen durch ein Leerzeichen getrennt werden.

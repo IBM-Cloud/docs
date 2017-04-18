@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#服務管理儀表板
+# 服務管理儀表板
 {: #service-dashboard}
 
 
@@ -23,7 +23,7 @@ lastupdated: "2017-02-09"
 停止服務會移除事件限制。它會繼續接收事件，直到您停止服務為止。服務管理儀表板也會顯示服務實例的狀態和統計資料。
 {:shortdesc}
 
-##{{site.data.keyword.geospatialshort_Geospatial}} 地區檢查
+## {{site.data.keyword.geospatialshort_Geospatial}} 地區檢查
 
 {{site.data.keyword.geospatialshort_Geospatial}} 會從物聯網監視移動中的裝置。
 每台受監視的裝置都會傳送裝置訊息，其中包含唯一 ID 及其現行位置（包含緯度和經度）。會針對每個已定義的地理區域座標來檢查裝置位置。

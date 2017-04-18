@@ -103,7 +103,7 @@ Habilite `Keychain Sharing`. Vaya al separador `Capacidades` y `active` `Keychai
 Inicialice el gestor de autorización de {{site.data.keyword.amashort}} en Objective-C en el archivo `AppDelgate.m`.
 
 ```
-#import "<your_module_name>-Swift.h" 
+# import "<your_module_name>-Swift.h" 
  
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 

@@ -12,7 +12,7 @@ lastupdated: "2017-4-7"
 {:codeblock: .codeblock}
 
 
-#Creating a Deploy to {{site.data.keyword.Bluemix_notm}} button {: #deploy-button} 
+# Creating a Deploy to {{site.data.keyword.Bluemix_notm}} button {: #deploy-button} 
 
 The Deploy to {{site.data.keyword.Bluemix}} button is an efficient way to share your public Git-sourced app so that other people can experiment with the code and deploy it to IBM {{site.data.keyword.Bluemix_notm}}. The button requires minimal configuration and you can insert it anywhere that supports markup. Anyone who clicks the button creates a cloned copy of the code in a new Git repository so that your original app remains unaffected. 
 {: shortdesc} 
@@ -37,7 +37,7 @@ When someone clicks your button, these actions occur:
 
 7. The app is deployed to the person's {{site.data.keyword.Bluemix_notm}} organization. 
 
-##Examples of the button {: #button-examples} 
+## Examples of the button {: #button-examples} 
 
 See an app button example for a public {{site.data.keyword.jazzhub_short}} repository:
 
@@ -57,7 +57,7 @@ See a button example for an app that is deployed in a {{site.data.keyword.Bluemi
 <a class="xref" href="https://bluemix.net/deploy?repository=https://github.com/Puquios/hello-containers" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/deploy_buttonx2.png" alt="Deploy to Bluemix" /></a>
 </p> 
 
-##Creating a button {: #create-button}
+## Creating a button {: #create-button}
 
 To create a Deploy to {{site.data.keyword.Bluemix_notm}} button: 
 
@@ -101,7 +101,7 @@ Default master branch:
 </li>
 </ol>
 
-##Snippet considerations for the button {: #button-snippet}
+## Snippet considerations for the button {: #button-snippet}
 
 Review these considerations when you are customizing the snippet for your Deploy to Bluemix button. 
 
@@ -115,7 +115,7 @@ Review these considerations when you are customizing the snippet for your Deploy
 	
 	* If you want to use a translated version of the button, you can reference it remotely or download it from [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button ![External link icon](../icons/launch-glyph.svg "External link icon")](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button){:new_window}. 
 	
-##Repository considerations for the button {: #button-repo} 
+## Repository considerations for the button {: #button-repo} 
 
 Review these considerations for the project repository that you will use in your Deploy to Bluemix button. 
 

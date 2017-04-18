@@ -17,7 +17,7 @@ copyright:
 
 Utilizza la funzione di monitoraggio per visualizzare lo stato della connessione e la frequenza del flusso del traffico tra il tuo gateway VPN server SoftLayer o in loco e il gateway {{site.data.keyword.vpn_short}}. 
 {:shortdesc}  
-##Monitoraggio del dashboard del servizio
+## Monitoraggio del dashboard del servizio
 {: #dashboard}
 
 Seleziona la scheda **Monitoraggio** per visualizzare le seguenti statistiche della connessione.
@@ -29,7 +29,7 @@ Seleziona la scheda **Monitoraggio** per visualizzare le seguenti statistiche de
 Le statistiche del monitoraggio vengono visualizzate come grafici con i dati delle ultime 48 ore. I grafici vengono automaticamente aggiornati ogni 20 minuti. Tuttavia, puoi recuperare gli ultimi dati in ogni momento uscendo dalla scheda di monitoraggio e ritornandoci.
 
 **Nota:** i grafici utilizzano l'ora UTC (Coordinated Universal Time) e non l'ora locale.  
-##Monitoraggio di Logmet
+## Monitoraggio di Logmet
 {: #logmet}
 
 Utilizza [Logmet](https://logmet.{DomainName}) per visualizzare le statistiche di connessione dettagliate. 

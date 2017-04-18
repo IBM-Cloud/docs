@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#서비스 신임 정보 및 VCAP_SERVICES 환경 변수
+# 서비스 신임 정보 및 VCAP_SERVICES 환경 변수
 {: #vcap_services}
 
 {{site.data.keyword.streaminganalyticsshort}}

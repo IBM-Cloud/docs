@@ -166,7 +166,7 @@ Pour personnaliser les propriétés d'alerte, de badge et de son, ajoutez le fra
 
 
 
-##JavaScript
+## JavaScript
 {: #cordova_register_js}
 
 ```
@@ -235,7 +235,7 @@ Ajoutez le fragment de code Objective-C suivant à la classe de votre délégué
 	}
 ```
 
-##Swift
+## Swift
 {: #cordova_register_swift}
 Ajoutez le fragment de code Swift suivant à la classe de votre délégué d'application :
 
@@ -249,7 +249,7 @@ funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificati
 }
 ```
 
-##Etapes suivantes
+## Etapes suivantes
 
 {: #cordova_register_next}
 
@@ -266,7 +266,7 @@ funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificati
 
 Copiez et collez les fragments de code ci-après pour recevoir des notifications push sur les appareils.
 
-##JavaScript
+## JavaScript
 
 Ajoutez le fragment de code JavaScript suivant à la partie Web de votre application Cordova :
 
@@ -279,7 +279,7 @@ var notification = function(notification){
 MFPPush.registerNotificationsCallback(notification);
 ```
 
-##Propriétés de notification Android
+## Propriétés de notification Android
 
 La section suivante répertorie les propriétés de notification Android :
 
@@ -287,7 +287,7 @@ La section suivante répertorie les propriétés de notification Android :
 * payload - Objet JSON comportant un contenu de notification
 
 
-##Propriétés de notification iOS
+## Propriétés de notification iOS
 
 La section suivante répertorie les propriétés de notification iOS :
 
@@ -297,7 +297,7 @@ action-loc-key - Chaîne utilisée comme clé pour obtenir une chaîne localisé
 * badge - Numéro à afficher comme badge de l'icône d'application. Si cette propriété manque, le badge n'est pas changé. Pour supprimer le badge, associez cette propriété à la valeur 0.
 * sound - Nom d'un fichier son dans le regroupement d'applications ou dans le dossier Library/Sounds du conteneur des données d'application.
 
-##Objective-C
+## Objective-C
 
 Ajoutez les fragments de code Objective-C suivants à la classe de votre délégué d'application :
 
@@ -317,7 +317,7 @@ Ajoutez les fragments de code Objective-C suivants à la classe de votre délég
 }
 ```
 
-##Swift
+## Swift
 
 Ajoutez les fragments de code Swift suivants à la classe de votre délégué d'application :
 

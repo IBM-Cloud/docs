@@ -13,14 +13,14 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#服务管理仪表板
+# 服务管理仪表板
 {: #service-dashboard}
 
 
 您可以查看 {{site.data.keyword.geospatialshort_Geospatial}} 服务实例的状态，并从服务管理仪表板停止或重新启动它。可以通过单击 {{site.data.keyword.geospatialshort_Geospatial}} 仪表板上的 {{site.data.keyword.geospatialshort_Geospatial}} 磁贴进入服务管理仪表板。如果使用的是样本应用程序，并且服务实例达到事件限制且停止，您可以重新启动该服务。停止服务将除去事件限制。将继续接收事件，直到停止服务为止。服务管理仪表板还显示服务实例和统计信息的状态。
 {:shortdesc}
 
-##{{site.data.keyword.geospatialshort_Geospatial}} 区域检查
+## {{site.data.keyword.geospatialshort_Geospatial}} 区域检查
 
 {{site.data.keyword.geospatialshort_Geospatial}} 会监视物联网中的移动设备。每个受监视设备都会发送设备消息，其中包含唯一标识以及设备的当前位置（经度和纬度）。首先，根据每个定义的地理区域的坐标来检查设备位置。然后，该服务在设备进入、退出或“聚集”在某个特定区域时生成事件。
 

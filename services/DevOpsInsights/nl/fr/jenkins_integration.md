@@ -22,12 +22,12 @@ Une fois que vous avez défini les stratégies que {{site.data.keyword.DRA_full}
 
 Vous pouvez intégrer {{site.data.keyword.DRA_short}} dans un projet Jenkins ou dans plusieurs projets Jenkins connexes. Cette intégration vous permet de définir des seuils de qualité et de recevoir des données sur la qualité de génération dans le tableau de bord {{site.data.keyword.DRA_short}}.
 
-##Prérequis    
+## Prérequis    
 {: #DI_jenkins_prereqs}
 
 * Vous devez avoir accès à un projet Jenkins local ou au serveur qui exécute un projet Jenkins.
 
-##Installation du plug-in {{site.data.keyword.DRA_short}}
+## Installation du plug-in {{site.data.keyword.DRA_short}}
 {: #DI_jenkins_install}
 
 Pour installer le plug-in {{site.data.keyword.DRA_short}} dans votre projet Jenkins, procédez comme suit :
@@ -38,7 +38,7 @@ Pour installer le plug-in {{site.data.keyword.DRA_short}} dans votre projet Jenk
   4. Cliquez sur **Upload**.
   5. Redémarrez Jenkins et vérifiez que le plug-in a été installé.
 
-##Intégration de {{site.data.keyword.DRA_short}} à Jenkins    
+## Intégration de {{site.data.keyword.DRA_short}} à Jenkins    
 {: #DI_jenkins_integrate}
 
 Une fois que vous avez installé le plug-in mais avant d'intégrer {{site.data.keyword.DRA_short}} à votre installation Jenkins, accédez au [centre de contrôle](https://control-center.stage1.ng.bluemix.net/) et créez au moins une stratégie.

@@ -12,7 +12,7 @@ lastupdated: "2017-03-14"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-#在 {{site.data.keyword.iot_short_notm}} 上使用 Java 开发网关
+# 在 {{site.data.keyword.iot_short_notm}} 上使用 Java 开发网关
 {: #java_cli_gw}
 
 如果设备无法直接连接到 {{site.data.keyword.iot_full}} 上的组织，那么可以使用 Java™ 来构建并定制网关。提供的 {{site.data.keyword.iot_short_notm}} Java 客户机库、文档和示例可帮助您开始进行网关开发。

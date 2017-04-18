@@ -13,7 +13,7 @@ A common place to put the initialization code is in the onCreate method of the m
 Click the **Mobile Options** link in your Bluemix Application Dashboard to get the application route and applicationGUID. Use these values for your route and App GUID. Modify the code snippet to use your Bluemix app appRoute and appGUID parameters.
 
 
-##Initialize the Core SDK
+## Initialize the Core SDK
 
 ```
 // Initialize the SDK for Java (Android) with IBM Bluemix AppGUID and route
@@ -37,7 +37,7 @@ Specifies the location where the app hosted. You can use one of three values:
 - BMSClient.REGION_UK
 - BMSClient.REGION_SYDNEY
 
-##Initialize the client Push SDK
+## Initialize the client Push SDK
 
 ```
 //Initialize client Push SDK for Java

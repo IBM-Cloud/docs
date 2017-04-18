@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#{{site.data.keyword.streaminganalyticsshort}}-Starteranwendungen verwenden
+# {{site.data.keyword.streaminganalyticsshort}}-Starteranwendungen verwenden
 {: #starterapps}
 
 Sie können Starteranwendungen bereitstellen und modifizieren und Sie können in kürzester Zeit lernen, wie der {{site.data.keyword.streaminganalyticsshort}}-Service verwendet wird:

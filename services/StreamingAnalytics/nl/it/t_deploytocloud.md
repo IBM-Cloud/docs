@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Distribuzione delle applicazioni {{site.data.keyword.streamsshort}} al
+# Distribuzione delle applicazioni {{site.data.keyword.streamsshort}} al
 cloud
 {: #t_deploytocloud}
 

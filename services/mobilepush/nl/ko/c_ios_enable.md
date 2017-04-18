@@ -57,7 +57,7 @@ $ open App.xcworkspace
 
 작업공간에는 원래 프로젝트 및 종속 항목이 포함된 Pods 프로젝트가 있습니다. Bluemix Mobile Services 소스 폴더를 수정하려는 경우 Pods 프로젝트의 `Pods/yourImportedSourceFolder`에서 이 폴더를 찾을 수 있습니다(예: `Pods/BMSPush`).
 
-##Carthage를 사용하여 프레임워크 추가
+## Carthage를 사용하여 프레임워크 추가
 {: #carthage}
 
 [Carthage ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos){: new_window}을 사용하여 프로젝트에 프레임워크를 추가하십시오. Xcode8의 Carthage는 지원되지 않습니다. 
@@ -70,7 +70,7 @@ github "github "ibm-bluemix-mobile-services/bms-clientsdk-swift-push" ~> 1.0"
 2. `carthage update` 명령을 실행하십시오. 빌드가 완료되면 `BMSPush.framework`, `BMSCore.framework`, `BMSAnalyticsAPI.framework`를 Xcode 프로젝트로 끌어오십시오. 
 3. [Carthage ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos){: new_window} 사이트의 지시사항에 따라 통합을 완료하십시오. 
 
-##iOS SDK 설정
+## iOS SDK 설정
 {: ios-sdk}
 
 iOS SDK를 설치하고 다음 코드를 애플리케이션의 **AppDelegate.swift** 파일에 추가하십시오. 이 코드도 APNs에 등록됩니다.  
@@ -83,7 +83,7 @@ didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
 ```
     {: codeblock}
 
-##가져온 프레임워크 및 소스 폴더 사용
+## 가져온 프레임워크 및 소스 폴더 사용
 {: using-imported-frameworks}
 
 코드에서 SDK를 참조하십시오. 다음 전제조건이 충족되는지 확인하십시오.
@@ -104,7 +104,7 @@ Swift 푸시 Readme 파일을 읽어보려면 [Readme ![외부 링크 아이콘]
 **참고**: CocoaPods 명령 `pod install` 또는 `pod update`를 사용하여 Pods 프로젝트를 업데이트하면 Bluemix Mobile Services 소스 폴더를 대체할 수 있습니다. 원래 파일의 사용자 정의한 버전을 유지하려면, 이러한 명령을 실행하기 전에 해당 버전을 백업해야 합니다. 
 
 
-##빌드 설정
+## 빌드 설정
 {: build-settings}
 
 **Xcode > 빌드 설정 > 빌드 옵션 및 Bitcode 사용 설정**으로 이동하여 **No**로 설정하십시오.
@@ -116,7 +116,7 @@ Swift 푸시 Readme 파일을 읽어보려면 [Readme ![외부 링크 아이콘]
 
 초기화 코드를 배치하는 공통 위치는 iOS 애플리케이션에 대한 애플리케이션 위임자입니다. 푸시 대시보드의 **모바일 옵션** 링크를 클릭하여 애플리케이션 라우트와 GUID를 가져오십시오. 
 
-###Core SDK 초기화
+### Core SDK 초기화
 {: Initializing-the-core-sdk}
 
 
@@ -130,17 +130,17 @@ myBMSClient.initialize(bluemixRegion: "Location where your app is hosted.")
 ### 라우트, GUID 및 Bluemix 지역
 {: route-guid-bluemix-region}
 
-####appRoute
+#### appRoute
 {: ios-approute}
 
 Bluemix에서 생성한 서버 애플리케이션에 지정된 라우트를 지정합니다.
 
-####GUID
+#### GUID
 {: ios-guid}
 
 Bluemix에서 생성한 애플리케이션에 지정된 고유 키를 지정합니다. 이 값은 대소문자를 구분합니다. 
 
-####bluemixRegionSuffix
+#### bluemixRegionSuffix
 {: ios-bluemixRegionSuffix}
 
 앱이 호스트된 위치를 지정합니다. `bluemixRegion` 매개변수는 사용 중인 Bluemix 배치를 지정합니다. 이 값을 `BMSClient.REGION` 정적 특성으로 설정하고 세 값 중 하나를 사용할 수 있습니다. 
@@ -149,12 +149,12 @@ Bluemix에서 생성한 애플리케이션에 지정된 고유 키를 지정합�
 - BMSClient.Region.unitedKingdom
 - BMSClient.Region.sydney
 
-####AppGUID
+#### AppGUID
 {: ios-AppGUID}
 
 Bluemix에서 작성한 {{site.data.keyword.mobilepushshort}} 서비스에 지정되는 고유 AppGUID 키를 지정합니다.
 
-###클라이언트 푸시 SDK 초기화
+### 클라이언트 푸시 SDK 초기화
 {: initializing-the-client-Push-SDK}
 
 ```
@@ -177,13 +177,13 @@ iOS 애플리케이션과 디바이스를 등록하려면 다음을 수행해야
 2. 토큰을 {{site.data.keyword.mobilepushshort}}에 전달하십시오. 
 
 
-###백엔드 애플리케이션 작성
+### 백엔드 애플리케이션 작성
 {: create-a-backend-app}
 
 표준 유형 섹션 Bluemix® 카탈로그에서 {{site.data.keyword.mobilepushshort}} 서비스를 이 애플리케이션에 자동으로 바인드하는 백엔드 애플리케이션을 작성하십시오. 백엔드 앱을 이미 작성한 경우에는 앱을 {{site.data.keyword.mobilepushshort}} 서비스에 바인드했는지 확인하십시오. 
 
 
-###{{site.data.keyword.mobilepushshort}}에 토큰 전달
+### {{site.data.keyword.mobilepushshort}}에 토큰 전달
 {: pass-token-push-notifications}
 
 APNs에서 토큰이 수신되면 `registerWithDeviceToken` 메소드의 일부로 {{site.data.keyword.mobilepushshort}}에 토큰을 전달하십시오. 
@@ -288,7 +288,7 @@ iOS 디바이스에 알림을 전송하기 위해 {{site.data.keyword.mobilepush
 - **사운드**: 알림을 수신할 때 재생되는 사운드 클립을 표시합니다. 기본값 또는 앱에 번들링된 사운드 리소스의 이름을 지원합니다.
 - **추가 페이로드**: 알림에 대한 사용자 정의 페이로드 값을 지정합니다.
 
-##대화식 알림 사용
+## 대화식 알림 사용
 
 대화식 알림을 설정하여 이미지, 맵 또는 응답 단추 추가와 같은 추가 세부사항으로 iOS 알림을 보강할 수 있습니다. 이를 통해 현재 컨텍스트를 종료하지 않고도 즉시 조치를 수행할 수 있는 기능과 추가 컨텍스트를 제공할 수 있습니다.   
 

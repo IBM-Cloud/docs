@@ -11,7 +11,7 @@ lastupdated: "2017-2-21"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#「{{site.data.keyword.Bluemix_notm}} にデプロイ」iFrame フローの埋め込み 
+# 「{{site.data.keyword.Bluemix_notm}} にデプロイ」iFrame フローの埋め込み 
 {: #embed-d2bm-iframe}
 
 
@@ -21,7 +21,7 @@ lastupdated: "2017-2-21"
 
 この iFrame フローは、企業ブランディングを保持したい場合に有用です。埋め込まれた iFrame をクリックしたユーザーは bluemix.net Web サイトにリダイレクトされる代わりに、そのコンテンツ内にとどまります。企業ブランディングに関心がない場合は、iFrame の代わりに普通の[「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタン](/docs/develop/deploy_button.html)をコンテンツに挿入できます。
 
-##iFrame フローのステップ {: #iframe-steps}
+## iFrame フローのステップ {: #iframe-steps}
 
 1. アクティブな {{site.data.keyword.Bluemix_notm}} アカウントを持っていない場合はトライアル・アカウントを作成します。
 
@@ -33,7 +33,7 @@ lastupdated: "2017-2-21"
 
 5. {{site.data.keyword.Bluemix_notm}} 組織にアプリがデプロイされます。
 
-##iFrame フローの例 {: #iframe-example}
+## iFrame フローの例 {: #iframe-example}
 
 <p>
 <a class="xref" href="http://d2bm-iframe-sample.ng.bluemix.net/" target="_blank" title="(新しいタブまたはウィンドウで開きます)">IBM
@@ -44,7 +44,7 @@ Bluemix D2BM iFrame サンプル <img class="image" src="../icons/launch-glyph.s
 このサンプルのソースを表示するには、<a class="xref" href="https://hub.jazz.net/project/idsorg/d2bm-iframe-sample/overview" target="_blank" title="(新しいタブまたはウィンドウで開きます)">ソース <img class="image" src="../icons/launch-glyph.svg" alt="「外部リンク」アイコン"/></a> をクリックしてください。
 </p>
 
-##iFrame フローの埋め込み {: #embed-iframe}  
+## iFrame フローの埋め込み {: #embed-iframe}  
 
 <ol>
 <li><a class="xref" href="https://bluemix.net/deploy/embed.js" target="_blank" title="(新しいタブまたはウィンドウで開きます)">https://bluemix.net/deploy/embed.js<img class="image" src="../icons/launch-glyph.svg" alt="「外部リンク」アイコン"/></a> から JavaScript ユーティリティーをロードします。このユーティリティーは jQuery に依存しており、文書に以下のスクリプト・タグを追加するとロードされます。

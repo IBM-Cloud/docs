@@ -12,7 +12,7 @@ lastupdated: "2017-03-14"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-#Desenvolvendo gateways no {{site.data.keyword.iot_short_notm}} usando Java
+# Desenvolvendo gateways no {{site.data.keyword.iot_short_notm}} usando Java
 {: #java_cli_gw}
 
 Se os seus dispositivos não puderem se conectar diretamente à sua organização no {{site.data.keyword.iot_full}}, será possível construir e customizar gateways usando Java™. Uma biblioteca do cliente Java para {{site.data.keyword.iot_short_notm}}, documentação e exemplos são fornecidos para ajudá-lo na introdução ao desenvolvimento do gateway.

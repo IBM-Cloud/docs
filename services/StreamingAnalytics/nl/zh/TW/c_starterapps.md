@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#使用 {{site.data.keyword.streaminganalyticsshort}} 入門範本應用程式
+# 使用 {{site.data.keyword.streaminganalyticsshort}} 入門範本應用程式
 {: #starterapps}
 
 部署並修改入門範本應用程式，以及快速瞭解如何使用 {{site.data.keyword.streaminganalyticsshort}} 服務：

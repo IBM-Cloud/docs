@@ -16,14 +16,14 @@ lastupdated: "2017-03-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#{{site.data.keyword.geospatialshort_Geospatial}} troubleshooting
+# {{site.data.keyword.geospatialshort_Geospatial}} troubleshooting
 {: #ts_geospatial}
 
 
 Get the answers to several common questions about using {{site.data.keyword.geospatialshort_Geospatial}} on {{site.data.keyword.Bluemix_short}}.
 {:shortdesc}
 
-##When I stop my app, the service is still monitoring regions
+## When I stop my app, the service is still monitoring regions
 {: #stop-monitoring}
 
 
@@ -42,7 +42,7 @@ If you stop your application, your {{site.data.keyword.geospatialshort_Geospatia
 Stop {{site.data.keyword.geospatialshort_Geospatial}} from the service administration dashboard. Or you can modify your app to stop the service using the REST API and then push your changes back to {{site.data.keyword.Bluemix_short}}.
 {: tsResolve}
 
-##The service is monitoring regions I didn't specify in my app
+## The service is monitoring regions I didn't specify in my app
 {: #unspecified-region}
 
 
@@ -66,7 +66,7 @@ To stop {{site.data.keyword.geospatialshort_Geospatial}} from monitoring certain
 {: tsResolve}
 
 
-##Troubleshooting from the service administration dashboard
+## Troubleshooting from the service administration dashboard
 {: #dashboard}
 
 As you troubleshoot your application, you'll want to go to the service administration dashboard to check the status of your service instance. If it is not processing data, you might be able to fix the problem by stopping and restarting the service.

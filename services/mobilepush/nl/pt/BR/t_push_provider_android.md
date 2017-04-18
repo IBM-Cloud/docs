@@ -17,7 +17,7 @@ copyright:
 
 Firebase Cloud Messaging (FCM) é o gateway usado para entregar notificações push para dispositivos Android e para o Google Chrome. FCM é a nova versão do Google Cloud Messaging (GCM). Para configurar o serviço {{site.data.keyword.mobilepushshort}} no painel, é necessário obter suas credenciais do FCM. Assegure-se de usar configurações do FCM para novos apps. Apps existentes continuarão a funcionar com configurações do GCM.
 
-##Obtendo seu ID de emissor e chave de API
+## Obtendo seu ID de emissor e chave de API
 {: #android-senderid-apikey}
 
 A chave API é armazenada com segurança e usada pelo serviço {{site.data.keyword.mobilepushshort}} para se conectar ao servidor FCM e o ID do emissor
@@ -31,7 +31,7 @@ Para configurar o FCM, gerar a chave API e o ID do emissor, conclua as etapas:
 3. Na área de janela de navegação, clique no ícone Configurações e selecione **Configurações do projeto**.
 4. Escolha a guia Cloud Messaging para gerar uma Chave API Server e um ID do emissor.
 
-##Configurando o serviço {{site.data.keyword.mobilepushshort}} para Android e Apps Chrome e Extensões
+## Configurando o serviço {{site.data.keyword.mobilepushshort}} para Android e Apps Chrome e Extensões
 {: #setup-push-android}
 
 **Nota:** você precisará da sua Chave API e do ID do emissor do FCM/GCM (número do projeto).

@@ -10,7 +10,7 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-#Ativando o {{site.data.keyword.mobilepushshort}} avançado
+# Ativando o {{site.data.keyword.mobilepushshort}} avançado
 Última atualização: 23 de janeiro de 2017
 {: .last-updated}
 
@@ -30,7 +30,7 @@ número a ser exibido como o badge do ícone do aplicativo. Se essa propriedade
 estiver ausente, o badge não será mudado. Para remover o badge,
 configure o valor dessa propriedade para 0.
 	
-###Android
+### Android
 
 Inclua seu arquivo de som no diretório `res/raw` do aplicativo Android. Ao enviar a notificação, inclua o nome do arquivo de som no campo de som do {{site.data.keyword.mobilepushshort}}.
 
@@ -43,7 +43,7 @@ Inclua seu arquivo de som no diretório `res/raw` do aplicativo Android. Ao envi
 ```
     {: codeblock}	
 	
-###iOS
+### iOS
 
 ```
 "settings": {

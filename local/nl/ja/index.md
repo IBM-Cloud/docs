@@ -318,12 +318,12 @@ Cloud Foundry アプリケーションおよび {{site.data.keyword.Bluemix_notm
 {{site.data.keyword.Bluemix_notm}} インスタンスがセットアップされた後は、「管理」ページを使用して {{site.data.keyword.Bluemix_notm}} インスタンスをモニターおよび管理することができます。詳しくは、[
 『{{site.data.keyword.Bluemix_local_notm}} および Dedicated の管理』](../admin/index.html#mng)を参照してください。アップグレードおよび保守については、『[ローカル・インスタンスの保守](index.html#maintainlocal)』を参照してください。
 
-##役割および責任
+## 役割および責任
 {: #rolesresponsibilities}
 
 {{site.data.keyword.Bluemix_local_notm}} アカウントをセットアップした場合、インスタンスを稼働するために必要な役割の組織内のユーザーを特定します。
 
-###役割
+### 役割
 
 以下のリストでは、割り当てる顧客の役割および責任を示します。
 
@@ -363,7 +363,7 @@ Success Manager (CSM) と連携できます。異なるサポート層につい�
 <li>サポート・チケットで報告された問題の再現を試みるため</li>
 </ul>
 
-###責任
+### 責任
 
 環境のセットアップから継続的保守に至るまで、さまざまなタスクをお客様と IBM の両方で行う必要があります。以下の表に、開始フェーズ、進行フェーズ、および完了フェーズにわたって必要なタスクおよびタスクを完了する責任を持つ側の概要を示します。
 

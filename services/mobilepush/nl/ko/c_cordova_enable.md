@@ -194,13 +194,13 @@ func application(application: UIApplication,
 ```
 	{: codeblock}
 
-##다음 단계
+## 다음 단계
 
 {: #cordova_register_next}
 
 프로젝트를 빌드하고 다음 명령을 사용하여 프로젝트를 실행하십시오. 
 
-####Android
+#### Android
 {: android-next-steps}
 
 ```
@@ -213,7 +213,7 @@ cordova run android
 ```
 	{: codeblock}
 
-####iOS
+#### iOS
 {: ios-next-steps}
 
 ```
@@ -231,7 +231,7 @@ cordova run ios
 
 디바이스에서 푸시 알림을 받으려면 다음 코드 스니펫을 복사하십시오. 
 
-###JavaScript
+### JavaScript
 
 다음의 JavaScript 코드 스니펫을 Cordova 애플리케이션의 웹 파트에 추가하십시오. 
 ```
@@ -242,7 +242,7 @@ var showNotification = function(notif) {
 ```
 	{: codeblock}
 
-###Android 알림 특성
+### Android 알림 특성
 
 다음 섹션에는 Android 알림 특성이 나열되어 있습니다. 
 
@@ -250,7 +250,7 @@ var showNotification = function(notif) {
 * **페이로드** - 알림 페이로드를 포함하는 JSON 오브젝트
 
 
-###iOS 알림 특성
+### iOS 알림 특성
 
 다음 섹션에는 iOS 알림 특성이 나열되어 있습니다. 
 

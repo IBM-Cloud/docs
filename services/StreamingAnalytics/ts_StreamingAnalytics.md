@@ -16,13 +16,13 @@ lastupdated: "2017-04-13"
 {:screen: .screen}
 {:pre: .pre}
 
-#{{site.data.keyword.streaminganalyticsshort}} troubleshooting
+# {{site.data.keyword.streaminganalyticsshort}} troubleshooting
 {: #ts_StreamingAnalytics}
 
 You can find the answers to common questions about how to use {{site.data.keyword.streaminganalyticsshort}} on {{site.data.keyword.Bluemix_short}}.
 {:shortdesc}
 
-##When I launch the service, I am prompted for credentials to log into the console
+## When I launch the service, I am prompted for credentials to log into the console
 {: #log_in_console}
 
 When you launch {{site.data.keyword.streaminganalyticsshort}}, you are prompted for credentials to log into the service console.
@@ -37,7 +37,7 @@ The service infrastructure has been updated and your browser cache is preventing
 Clear your browser cache to make sure you get the latest version of the service console.
 {: tsResolve}
 
-##My application is unhealthy
+## My application is unhealthy
 {: #app_unhealthy}
 
 You can't run your application correctly and the health status is `unhealthy`.

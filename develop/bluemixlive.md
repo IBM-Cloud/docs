@@ -13,7 +13,7 @@ lastupdated: "2017-4-7"
 {:new_window: target="_blank"}
 {:pre: .pre}
 
-#{{site.data.keyword.Bluemix_notm}} Live Sync
+# {{site.data.keyword.Bluemix_notm}} Live Sync
 {: #live-sync}
 
  
@@ -57,7 +57,7 @@ Figure 1. The Bluemix Live Sync process
 If you are developing a Java application that is running on Liberty, you can debug remotely by using the [Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools).
 
 <!--
-##Desktop Sync {: #desktop-sync}
+## Desktop Sync {: #desktop-sync}
 
 You can use the Desktop Sync feature of Bluemix Live Sync to quickly update the application instance on {{site.data.keyword.Bluemix_notm}} and develop as you would on your desktop.
 
@@ -106,7 +106,7 @@ bl start &ndash&ndashrestart
 ```
 -->
 
-##Live Edit {: #live-edit}
+## Live Edit {: #live-edit}
 
 If you are building a Node.js application, when you make changes to your project using the Web IDE, the Live Edit feature of the {{site.data.keyword.Bluemix_notm}} Live Sync can quickly update the application instance running on {{site.data.keyword.Bluemix_notm}}. Live Edit allows you to develop as you would on the desktop without redeploying.
 
@@ -126,7 +126,7 @@ When you change the files in your Web IDE, they are automatically redeployed to 
 
 **NOTE:** For a more consistent experience when using the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync, 256MB of additional memory is required and will be added.
 
-##{{site.data.keyword.Bluemix_notm}} Live Debug {: #live-debug}
+## {{site.data.keyword.Bluemix_notm}} Live Debug {: #live-debug}
 
 You can access {{site.data.keyword.Bluemix_notm}} Live Sync Debug feature when {{site.data.keyword.Bluemix_notm}} Live Sync is enabled for your Node.js app.
 
@@ -138,7 +138,7 @@ With debug, you can dynamically edit code, insert breakpoints, step through code
 * Debug by using [node-inspector ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/node-inspector/node-inspector){:new_window}
 * Shell access
 
-###Application runtime control {: #app-runtime}
+### Application runtime control {: #app-runtime}
 
 With the application runtime control, you can use Debug to inspect the app's state at start time. This capability is useful when you are troubleshooting an app that crashes on start.
 
@@ -147,7 +147,7 @@ While you are developing your app, you can select from the following actions:
 * Perform a quick restart of the app
 * Suspend the app before any app code runs
 
-###Debug {: #debug}
+### Debug {: #debug}
 
 Debug includes the following capabilities:
 
@@ -159,13 +159,13 @@ Debug includes the following capabilities:
 * View debug output from `console.log()` calls immediately. This action is faster than monitoring cf logs.
 * Use the built-in source code editor to make immediate, yet temporary, changes to the running app code.
 
-###Shell {: #shell}
+### Shell {: #shell}
 
 This tool gives you shell access to the container in which your app is running. By using this terminal, you can remotely run diagnostic shell commands to administer your app.
 
 Monitor memory and CPU usage within the instance that uses standard Linux commands, such as **top**, **ps**, and **kill**.
 
-###Configuring an app to enable {{site.data.keyword.Bluemix_notm}} Live Debug {: #configure_app_debug}
+### Configuring an app to enable {{site.data.keyword.Bluemix_notm}} Live Debug {: #configure_app_debug}
 
 The app must use the IBM SDK for Node.js buildpack. Custom buildpacks are not supported.
 
@@ -194,7 +194,7 @@ Push the app and then browse to `https://app-host.mybluemix.net/bluemix-debug/ma
    **Note**: Your user ID for DevOps Services can be either an IBMid or a federated ID (corporate ID). If you use federated authentication, to log in to your Bluemix Live Sync command-line client, you must use a personal access token instead of a password. If you don't use federated authentication, your IBMid and password work with all clients. For more information about creating a personal access token, see [What's federated authentication and how does it affect me?![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/){:new_window}
    -->
 
-###Restoring app configurations and disabling Bluemix Live Debug {: #restore_live_debug}
+### Restoring app configurations and disabling Bluemix Live Debug {: #restore_live_debug}
 
 1. Remove the ENABLE_BLUEMIX_DEV_MODE environment variable from the app `manifest.yml` file.
 

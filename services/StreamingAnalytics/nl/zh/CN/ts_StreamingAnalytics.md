@@ -16,13 +16,13 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#{{site.data.keyword.streaminganalyticsshort}} 故障诊断 
+# {{site.data.keyword.streaminganalyticsshort}} 故障诊断 
 {: #ts_StreamingAnalytics}
 
 您可以找到有关如何在 {{site.data.keyword.Bluemix_short}} 上使用 {{site.data.keyword.streaminganalyticsshort}} 的常见问题的答案。
 {:shortdesc}
 
-##启动服务时，系统提示需要凭证才能登录控制台
+## 启动服务时，系统提示需要凭证才能登录控制台
 {: #log_in_console}
 
 启动 {{site.data.keyword.streaminganalyticsshort}} 时，系统提示需要凭证才能登录服务控制台。

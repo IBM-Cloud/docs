@@ -16,7 +16,7 @@ copyright:
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-#開發應用程式 
+# 開發應用程式 
 {: #develop-apps-IDS}
 
 *前次更新：2015 年 12 月 7 日*  
@@ -24,7 +24,7 @@ copyright:
 您可以使用整合開發環境 (IDE) 或文字編輯器來開發應用程式，或是使用 {{site.data.keyword.jazzhub}}。
 {: shortdesc}
 
-##使用 Bluemix DevOps Services 開發應用程式
+## 使用 Bluemix DevOps Services 開發應用程式
 {: #dev_ops}
 
 您可以使用 {{site.data.keyword.jazzhub_short}} 在雲端中開發、追蹤和計劃應用程式，然後將其部署至 {{site.data.keyword.Bluemix_notm}}。只要幾分鐘，就可以從原始碼變成執行中的應用程式。  

@@ -10,7 +10,7 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-#Enabling advanced push notifications
+# Enabling advanced push notifications
 Last updated: 28 February 2017
 {: .last-updated}
 

@@ -12,7 +12,7 @@ lastupdated: "2017-2-21"
 {:codeblock: .codeblock}
 
 
-#Criando um botão Implementar no {{site.data.keyword.Bluemix_notm}} {: #deploy-button} 
+# Criando um botão Implementar no {{site.data.keyword.Bluemix_notm}} {: #deploy-button} 
 
 O botão Implementar no {{site.data.keyword.Bluemix}} é uma maneira eficiente de compartilhar seu app público de origem Git para que outras pessoas possam experimentar com o código e implementá-lo no IBM {{site.data.keyword.Bluemix_notm}}. O botão requer configuração mínima e é possível inseri-lo em qualquer lugar que suporte marcação. Qualquer pessoa que clicar no botão cria uma cópia clonada do código em um novo repositório Git de modo que seu app original permaneça não afetado. 
 {: shortdesc} 
@@ -39,7 +39,7 @@ Quando alguém clica em seu botão, ocorrem estas ações:
 
 7. O app é implementado na organização do {{site.data.keyword.Bluemix_notm}} da pessoa. 
 
-##Exemplos do botão {: #button-examples} 
+## Exemplos do botão {: #button-examples} 
 
 Veja um exemplo do botão de app para um repositório {{site.data.keyword.jazzhub_short}} público:
 
@@ -59,7 +59,7 @@ Veja um exemplo de botão para um app que é implementado em um contêiner do {{
 <a class="xref" href="https://bluemix.net/deploy?repository=https://github.com/Puquios/hello-containers" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/deploy_buttonx2.png" alt="Implementar no Bluemix" /></a>
 </p> 
 
-##Criando um botão {: #create-button}
+## Criando um botão {: #create-button}
 
 Para criar um botão Implementar no {{site.data.keyword.Bluemix_notm}}: 
 
@@ -103,7 +103,7 @@ Ramificação principal padrão:
 </li>
 </ol>
 
-##Considerações de fragmento para o botão {: #button-snippet}
+## Considerações de fragmento para o botão {: #button-snippet}
 
 Revise estas considerações quando estiver customizando o fragmento para o botão Implementar no Bluemix. 
 
@@ -117,7 +117,7 @@ Revise estas considerações quando estiver customizando o fragmento para o bot�
 	
 	* Se você desejar usar uma versão traduzida do botão, será possível referenciá-la remotamente ou fazer download em [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button){:new_window}. 
 	
-##Considerações de repositório para o botão {: #button-repo} 
+## Considerações de repositório para o botão {: #button-repo} 
 
 Revise estas considerações para o repositório do projeto que você usará no botão Implementar no Bluemix. 
 

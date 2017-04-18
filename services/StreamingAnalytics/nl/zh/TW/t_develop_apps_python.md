@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#使用 Python 開發 {{site.data.keyword.streamsshort}} 應用程式
+# 使用 Python 開發 {{site.data.keyword.streamsshort}} 應用程式
 {: #t_develop_apps_python}
 
  

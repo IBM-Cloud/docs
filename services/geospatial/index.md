@@ -14,7 +14,7 @@ lastupdated: "2017-03-09"
 {:pre: .pre}
 
 
-#Getting started with {{site.data.keyword.geospatialshort_Geospatial}}
+# Getting started with {{site.data.keyword.geospatialshort_Geospatial}}
 {: #gettingstarted}
 
 {{site.data.keyword.geospatialfull}}  monitors moving devices from your {{site.data.keyword.Bluemix_notm}} application.

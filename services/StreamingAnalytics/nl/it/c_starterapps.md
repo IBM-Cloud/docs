@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Utilizzo delle applicazioni starter {{site.data.keyword.streaminganalyticsshort}}
+# Utilizzo delle applicazioni starter {{site.data.keyword.streaminganalyticsshort}}
 {: #starterapps}
 
 Distribuisci e modifica le applicazioni starter e impara velocemente come utilizzare il servizio {{site.data.keyword.streaminganalyticsshort}}:

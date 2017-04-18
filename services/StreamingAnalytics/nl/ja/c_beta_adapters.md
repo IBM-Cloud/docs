@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#互換性のあるツールキット演算子
+# 互換性のあるツールキット演算子
 {: #c_beta_adapters}
 
 {{site.data.keyword.streamsshort}} Processing Language (SPL) 標準ツールキットに含まれる {{site.data.keyword.streamsshort}} 演算子は、すべて {{site.data.keyword.streaminganalyticsshort}} と互換性があります。

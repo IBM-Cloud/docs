@@ -24,7 +24,7 @@ After you create an instance of {{site.data.keyword.contdelivery_short}} by sele
 
 **Tip**: Pipelines are managed by toolchains. You can add a pipeline to an existing toolchain. If you create a pipeline and don't have any existing toolchains, a toolchain with a default name will be created for you. With the toolchain, you can expand the capabilities of your pipeline by integrating with other tools and services.
 
-##Starting with a pipeline
+## Starting with a pipeline
 {: #starting_with_a_pipeline}
 
 Pipelines automate builds, deployments, and more. To get started with an automated pipeline, select a template and provide the location of your GitHub repository (repo).
@@ -65,7 +65,7 @@ To create an [empty pipeline ![External link icon](../../icons/launch-glyph.svg 
 1. Either select the toolchain that you want to use or type a name for the new toolchain that you want to create.
 1. Click **Create**. An empty pipeline is created and represented as a card on the toolchain's Overview page.
 
-##Starting from a toolchain template
+## Starting from a toolchain template
 {: #starting_from_a_toolchain_template}
 
 To create and configure a continuous delivery toolchain from a [template ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/devops/create){: new_window}:

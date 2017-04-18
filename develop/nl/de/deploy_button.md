@@ -12,7 +12,7 @@ lastupdated: "2017-2-21"
 {:codeblock: .codeblock}
 
 
-#Schaltfläche für die Bereitstellung in {{site.data.keyword.Bluemix_notm}} erstellen {: #deploy-button} 
+# Schaltfläche für die Bereitstellung in {{site.data.keyword.Bluemix_notm}} erstellen {: #deploy-button} 
 
 Die Schaltfläche für die Bereitstellung in {{site.data.keyword.Bluemix}} bietet eine effiziente Möglichkeit, die auf Git basierende öffentliche App zu teilen, sodass andere Personen mit dem Code experimentieren und diesen in IBM {{site.data.keyword.Bluemix_notm}} bereitstellen können. Die Schaltfläche erfordert nur minimalen Konfigurationsaufwand und kann überall dort eingefügt werden, wo Markupunterstützung bereitsteht. Jeder, der auf diese Schaltfläche klickt, erstellt eine geklonte Kopie des Codes in einem neuen Git-Repository, sodass die ursprüngliche App unverändert bleibt. 
 {: shortdesc} 
@@ -37,7 +37,7 @@ Wenn eine Person auf die Schaltfläche klickt, werden folgende Aktionen ausgefü
 
 7. Die App wird in der {{site.data.keyword.Bluemix_notm}}-Organisation der Person bereitgestellt. 
 
-##Beispiele für die Schaltfläche {: #button-examples} 
+## Beispiele für die Schaltfläche {: #button-examples} 
 
 Beispiel für eine App-Schaltfläche für ein öffentliches {{site.data.keyword.jazzhub_short}}-Repository:
 
@@ -57,7 +57,7 @@ Im Folgenden sehen Sie ein Beispiel für eine Schaltfläche für eine in einem {
 <a class="xref" href="https://bluemix.net/deploy?repository=https://github.com/Puquios/hello-containers" target="_blank" title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)"><img class="image" src="images/deploy_buttonx2.png" alt="In Bluemix bereitstellen" /></a>
 </p> 
 
-##Schaltfläche erstellen {: #create-button}
+## Schaltfläche erstellen {: #create-button}
 
 Gehen Sie wie folgt vor, um eine Schaltfläche für die Bereitstellung in {{site.data.keyword.Bluemix_notm}} zu erstellen: 
 
@@ -101,7 +101,7 @@ Standard-Master-Zweig:
 </li>
 </ol>
 
-##Aspekte zu Snippets für die Schaltfläche {: #button-snippet}
+## Aspekte zu Snippets für die Schaltfläche {: #button-snippet}
 
 Ziehen Sie diese Aspekte bei der Anpassung des Snippets für Ihre Schaltfläche 'In Bluemix bereitstellen' zurate. 
 
@@ -115,7 +115,7 @@ Ziehen Sie diese Aspekte bei der Anpassung des Snippets für Ihre Schaltfläche 
 	
 	* Wenn Sie eine übersetzte Version der Schaltfläche verwenden möchten, können Sie sie über [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button){:new_window} fern referenzieren oder von dort herunterladen. 
 	
-##Aspekte zu Repositorys für die Schaltfläche {: #button-repo} 
+## Aspekte zu Repositorys für die Schaltfläche {: #button-repo} 
 
 Ziehen Sie diese Aspekte für das Projektrepository zurate, das Sie für Ihre Schaltfläche 'In Bluemix bereitstellen' verwenden. 
 

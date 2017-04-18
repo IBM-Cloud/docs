@@ -13,7 +13,7 @@ lastupdated: "2017-03-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Modifying the starter application to {{site.data.keyword.Bluemix_short}}
+# Modifying the starter application to {{site.data.keyword.Bluemix_short}}
 {: #modifying_starter_app}
 
 You can modify the starter application and then redeploy it to {{site.data.keyword.Bluemix_short}} to see the results.

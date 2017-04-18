@@ -10,9 +10,9 @@ copyright:
 
 在 iOS 应用程序中，通常会将初始化代码放置在应用程序代表中。单击 Bluemix 应用程序仪表板中的**移动选项**链接，以获取应用程序路径和 GUID。
 
-##初始化核心 SDK
+## 初始化核心 SDK
 
-###Objective-C
+### Objective-C
 
 ```
 // Initialize the SDK for Object-C with IBM Bluemix GUID and route
@@ -20,7 +20,7 @@ IMFClient *imfClient = [IMFClient sharedInstance];
 [imfClient initializeWithBackendRoute:"add_your_applicationRoute_here" backendGUID:"add_your_appId_here"];
 ```
 
-###Swift
+### Swift
 
 ```
 // Initialize the Core SDK for Swift with IBM Bluemix GUID, route, and region
@@ -28,16 +28,16 @@ let myBMSClient = BMSClient.sharedInstancemyBMSClient.initializeWithBluemixAppRo
 myBMSClient.defaultRequestTimeout = 10.0 // Timput in seconds
 ```
 
-##初始化客户机推送 SDK
+## 初始化客户机推送 SDK
 
-###Objective-C
+### Objective-C
 
 ```
 //Initialize client Push SDK for Objective-C
 IMFPushClient _pushService = [IMFPushClient sharedInstance];
 ```
 
-###Swift
+### Swift
 
 ```
 //Initialize client Push SDK for Swift

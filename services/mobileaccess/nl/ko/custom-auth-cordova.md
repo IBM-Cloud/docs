@@ -173,7 +173,7 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 Xcode의 버전에 따라 권한 관리자를 등록하십시오. 
 
 ```
-#import "<your_module_name>-Swift.h"
+# import "<your_module_name>-Swift.h"
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 

@@ -5,7 +5,7 @@
 
 **注**：要查看 Swift Push 自述文件，请转至 https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master
 
-##安装 CocoaPods 
+## 安装 CocoaPods 
 
 1. 在 Mac 终端中，使用以下命令安装 CocoaPods：
 
@@ -62,8 +62,8 @@ $ pod update
 
 ```
 //Objective-C
-#import <IMFCore/IMFCore.h>
-#import <IMFPush/IMFPush.h>
+# import <IMFCore/IMFCore.h>
+# import <IMFPush/IMFPush.h>
 ```
 
 **注**：使用 CocoaPods 命令 `pod install` 或 `pod update` 更新 Pods 项目可能会覆盖 Bluemix Mobile Services 源文件夹。如果要保留原始文件的定制版本，请确保在发出其中某个命令之前已备份这些文件。

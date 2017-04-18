@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Credenziali del servizio e variabile di ambiente VCAP_SERVICES
+# Credenziali del servizio e variabile di ambiente VCAP_SERVICES
 {: #vcap_services}
 
 Le credenziali del servizio {{site.data.keyword.streaminganalyticsshort}}

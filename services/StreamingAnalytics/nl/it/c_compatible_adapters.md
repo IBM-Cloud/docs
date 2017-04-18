@@ -12,7 +12,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Adattatori compatibili
+# Adattatori compatibili
 {: #c_compatible_adapters}
 
 
@@ -20,7 +20,7 @@ Un toolkit è una serie di risorse utente organizzate in un pacchetto. I toolkit
 le funzioni e gli operatori compositi o primitivi riutilizzabili per diverse applicazioni.
 {:shortdesc}
 
-##Internet Toolkit
+## Internet Toolkit
 
 Internet Toolkit (com.ibm.streamsx.inet) fornisce supporto per i protocolli Internet comuni. Questo toolkit è integrato in {{site.data.keyword.streamsshort}} ed è disponibile nel tuo ambiente di sviluppo {{site.data.keyword.streamsshort}}.
 
@@ -48,7 +48,7 @@ Puoi scaricare le nuove versioni del toolkit, con miglioramenti e ulteriori oper
 da [IBMStreams on GitHub](https://github.com/IBMStreams){:new_window}. In seguito scarica il toolkit, integralo (se necessario) e installalo
 sul tuo ambiente di sviluppo {{site.data.keyword.streamsshort}}.
 
-##IoT Integration Toolkit
+## IoT Integration Toolkit
 
 IoT Integration Toolkit (com.ibm.streamsx.iot) fornisce connettività con {{site.data.keyword.iot_full}}. Le applicazioni {{site.data.keyword.streamsshort}} possono utilizzare questo toolkit per
 fornire l'analisi in tempo reale su tutti gli eventi da centinaia di dispositivi, incluso
@@ -74,7 +74,7 @@ La seguente tabella elenca gli operatori forniti da IoT Integration Toolkit.
 
 Per ulteriori informazioni sugli operatori compatibili di IoT Integration Toolkit, vedi [Operators: com.ibm.streamsx.iot Toolkit](http://www.ibm.com/support/knowledgecenter/SSCRJU_4.2.0/com.ibm.streams.toolkits.doc/spldoc/dita/tk$com.ibm.streamsx.iot/ix$Operator.html?lang=en){:new_window} nella documentazione del prodotto {{site.data.keyword.streamsshort}}.
 
-##Messaging Toolkit
+## Messaging Toolkit
 
 Il progetto Messaging Toolkit (com.ibm.streamsx.messaging) è un progetto toolkit  {{site.data.keyword.streamsshort}} open source. È incentrato sullo sviluppo degli operatori e delle funzioni che ti aiutano nell'utilizzo di {{site.data.keyword.streamsshort}} per interagire con i sistemi di messaggistica come
 Kafka, JMS, XMS e MQTT. 

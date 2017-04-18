@@ -15,7 +15,7 @@ copyright:
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#Erste Schritte mit {{site.data.keyword.trackplan}} {: #track-plan}  
+# Erste Schritte mit {{site.data.keyword.trackplan}} {: #track-plan}  
 
 *Letzte Aktualisierung: 27. April 2016*
 {: .last-updated}

@@ -123,7 +123,7 @@ cf delete-route domain -n hostname -f
 **cf delete-route**, digite `cf
 delete-route -h`.
 
-##Implementações azul/verde
+## Implementações azul/verde
 {: #blue_green}
 
 O {{site.data.keyword.Bluemix_notm}}

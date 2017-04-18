@@ -16,7 +16,7 @@ copyright:
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-#Sviluppo di applicazioni 
+# Sviluppo di applicazioni 
 {: #develop-apps-IDS}
 
 *Ultimo aggiornamento: 07 dicembre 2015*  
@@ -25,7 +25,7 @@ Puoi sviluppare applicazioni utilizzando un ambiente di sviluppo integrato (o ID
 environment) o un editor di testo oppure puoi utilizzare {{site.data.keyword.jazzhub}}. 
 {: shortdesc}
 
-##Sviluppo di applicazioni con Bluemix DevOps Services
+## Sviluppo di applicazioni con Bluemix DevOps Services
 {: #dev_ops}
 
 Puoi utilizzare {{site.data.keyword.jazzhub_short}} per

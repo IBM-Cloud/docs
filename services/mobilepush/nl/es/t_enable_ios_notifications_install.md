@@ -62,8 +62,8 @@ ejemplo:
 
 ```
 //Objective-C
-#import <IMFCore/IMFCore.h>
-#import <IMFPush/IMFPush.h>
+# import <IMFCore/IMFCore.h>
+# import <IMFPush/IMFPush.h>
 ```
 
 **Nota**: La actualización del proyecto Pods utilizando los mandatos CocoaPods `pod install` o `pod update` puede alterar temporalmente las carpetas fuente de Bluemix Mobile Services. Si desea conservar las versiones personalizadas

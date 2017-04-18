@@ -10,7 +10,7 @@ copyright:
 
 複製並貼上下列程式碼 Snippet，以在裝置上接收推送通知。
 
-##JavaScript
+## JavaScript
 
 將下列 JavaScript 程式碼 Snippet 新增至 Cordova 應用程式的 Web 組件。
 
@@ -23,7 +23,7 @@ var notification = function(notification){
 MFPPush.registerNotificationsCallback(notification);
 ```
 
-##Android 通知內容
+## Android 通知內容
 
 下節列出 Android 通知內容：
 
@@ -31,7 +31,7 @@ MFPPush.registerNotificationsCallback(notification);
 * payload - 包含通知有效負載的 JSON 物件
 
 
-##iOS 通知內容
+## iOS 通知內容
 
 下節列出 iOS 通知內容：
 
@@ -41,7 +41,7 @@ MFPPush.registerNotificationsCallback(notification);
 * badge - 顯示為應用程式圖示徽章的號碼。如果沒有此內容，則不會變更徽章。若要移除徽章，請將此內容的值設為 0。
 * sound - 應用程式組合或者應用程式資料容器之 Library/Sounds 資料夾中的音效檔名稱。
 
-##Objective-C
+## Objective-C
 
 將下列 Objective-C 程式碼 Snippet 新增至應用程式委派類別。
 
@@ -62,7 +62,7 @@ MFPPush.registerNotificationsCallback(notification);
 }
 ```
 
-##Swift
+## Swift
 
 將下列 Swift 程式碼 Snippet 新增至應用程式委派類別。
 

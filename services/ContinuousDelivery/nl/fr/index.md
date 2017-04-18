@@ -28,7 +28,7 @@ Après avoir créé une instance de {{site.data.keyword.contdelivery_short}} en 
  * Si vous disposez déjà de chaînes d'outils, dans la section "Démarrage depuis un modèle de chaîne d'outils", cliquez sur **Afficher vos chaînes
 d'outils**. Pour plus d'informations sur l'utilisation des chaînes d'outils, voir [Utilisation de chaînes d'outils sur Bluemix Public](/docs/services/ContinuousDelivery/toolchains_using.html){: new_window}.
 
-##Démarrage avec un pipeline
+## Démarrage avec un pipeline
 {: #starting_with_a_pipeline}
 
 Les pipelines automatisent les générations, les déploiements, etc. Pour commencer avec un pipeline automatisé, sélectionnez un modèle et indiquez l'emplacement de votre référentiel GitHub (repo).
@@ -65,7 +65,7 @@ Pour créer un [pipeline vide (ce lien ouvre une nouvelle fenêtre)](https://con
 1. Sélectionnez la chaîne d'outils que vous désirez utiliser ou entrez le nom de la nouvelle chaîne d'outils à créer.
 1. Cliquez sur **Créer**. Un pipeline vide est créé et représenté sous forme de vignette de la page Présentation de la chaîne d'outils.
 
-##Démarrage depuis un modèle de chaîne d'outils
+## Démarrage depuis un modèle de chaîne d'outils
 {: #starting_from_a_toolchain_template}
 
 Pour créer et configurer une chaîne d'outils de distribution continue depuis un [modèle (ce lien ouvre une nouvelle fenêtre)](https://console.ng.bluemix.net/devops/create){: new_window} :

@@ -12,12 +12,12 @@ Pour enregistrer les applications et les appareils iOs :
 2. Transmettez le jeton au service de notifications push
 
 
-##Créez une application de back end
+## Créez une application de back end
 
 Créez une application de back end dans la section Conteneurs boilerplate du catalogue Bluemix, qui lie automatiquement le service Push à cette application. Si vous avez déjà créé une application de
 back end, veillez à lier l'application au service de notifications push.
 
-###Objective-C
+### Objective-C
 
 ```
 	//Pour Objective-C
@@ -34,7 +34,7 @@ back end, veillez à lier l'application au service de notifications push.
 	}
 ```
 
-###Swift
+### Swift
 
 ```
 	//For Swift
@@ -46,11 +46,11 @@ back end, veillez à lier l'application au service de notifications push.
 	}
 ```
 
-##Transmettez le jeton au service de notifications push
+## Transmettez le jeton au service de notifications push
 
 Une fois reçu le jeton envoyé par le service APNS, transmettez-le au service de notifications push par le biais de la méthode `registerDevice:withDeviceToken`.
 
-###Objective-C
+### Objective-C
 
 ```
 //Pour Objective-C
@@ -72,7 +72,7 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 }];
 ```
 
-###Swift
+### Swift
 
 Une fois reçu le jeton envoyé par le service APNS, transmettez-le au service de notifications push par le biais de la méthode `didRegisterForRemoteNotificationsWithDeviceToken`.
 

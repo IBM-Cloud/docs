@@ -11,7 +11,7 @@ lastupdated: "2017-2-21"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#Incluir un Desplegar en flujo {{site.data.keyword.Bluemix_notm}} iFrame
+# Incluir un Desplegar en flujo {{site.data.keyword.Bluemix_notm}} iFrame
 {: #embed-d2bm-iframe}
 
 
@@ -25,7 +25,7 @@ El flujo iFrame es útil cuando quiere mantener
 la estrategia de marca de la empresa. Si los usuarios pulsan el iFrame incluido, se quedan
 en el contenido en lugar de redirigirse al sitio web de bluemix.net. Si no le preocupa la estrategia de marca de la empresa, puede insertar un botón estándar [Desplegar en {{site.data.keyword.Bluemix_notm}}](/docs/develop/deploy_button.html) en el contenido en lugar del iFrame.
 
-##Pasos en el flujo de iFrame {: #iframe-steps}
+## Pasos en el flujo de iFrame {: #iframe-steps}
 
 1. Si no dispone de una cuenta activa de {{site.data.keyword.Bluemix_notm}},
 cree una cuenta de prueba.
@@ -40,7 +40,7 @@ con un repositorio Git nuevo.
 
 5. Se desplegará la app en su organización de {{site.data.keyword.Bluemix_notm}}.
 
-##Ejemplo de flujo de iFrame {: #iframe-example}
+## Ejemplo de flujo de iFrame {: #iframe-example}
 
 <p>
 El <a class="xref" href="http://d2bm-iframe-sample.ng.bluemix.net/" target="_blank" title="(Se abre en un nuevo separador o ventana)">ejemplo de IBM
@@ -51,7 +51,7 @@ Bluemix D2BM iFrame<img class="image" src="../icons/launch-glyph.svg" alt="icono
 Para ver el origen de este ejemplo, pulse <a class="xref" href="https://hub.jazz.net/project/idsorg/d2bm-iframe-sample/overview" target="_blank" title="(Se abre en un nuevo separador o ventana)">origen<img class="image" src="../icons/launch-glyph.svg" alt="icono de enlace externo"/></a>.
 </p>
 
-##Incluir el flujo de iFrame {: #embed-iframe}  
+## Incluir el flujo de iFrame {: #embed-iframe}  
 
 <ol>
 <li>Cargue el programa de utilidad de JavaScript desde <a class="xref" href="https://bluemix.net/deploy/embed.js" target="_blank" title="(Se abre en un nuevo separador o ventana)">https://bluemix.net/deploy/embed.js<img class="image" src="../icons/launch-glyph.svg" alt="icono de enlace externo"/></a>. Este

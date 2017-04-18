@@ -15,13 +15,13 @@ lastupdated: "2016-05-09"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Host delle applicazioni in {{site.data.keyword.Bluemix_notm}}
+# Host delle applicazioni in {{site.data.keyword.Bluemix_notm}}
 
 <!--The whole topic is staging only -->
 
 Con {{site.data.keyword.Bluemix}}, puoi creare applicazioni e fornire un host per le applicazioni esistenti. Purché pronte per il cloud, le tue applicazioni possono essere migrate in {{site.data.keyword.Bluemix_notm}}. {{site.data.keyword.Bluemix_notm}} fornisce diversi modi per eseguire le tue applicazioni, ad esempio Cloud Foundry, IBM Containers e Virtual Machines.
 
-##Come far sì che le tue applicazioni siano pronte per il cloud
+## Come far sì che le tue applicazioni siano pronte per il cloud
 {: #cloud-readyapps}
 
 Quando un'applicazione pronta per il cloud viene progettata e creata, segue i principi della piattaforma cloud. Un'applicazione pronta per il cloud può utilizzare le capacità fornite dalla piattaforma cloud.
@@ -78,7 +78,7 @@ Se la tua applicazione osserva tutti i seguenti principi, essa è pronta per il 
 
 Per ulteriori informazioni sulle applicazioni pronte per il cloud, vedi [The 12-factor application ![icona link esterno](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}.
 
-##Migrazione delle tue applicazioni
+## Migrazione delle tue applicazioni
 {: #ht_hostapp}
 
 Invece di spostare completamente le applicazioni nell'ambiente cloud, puoi migrarle in {{site.data.keyword.Bluemix_notm}} in modo incrementale. Puoi migrare prima una parte della tua applicazione e connetterla al system of record o ai dati esistenti, attraverso il servizio Cloud Integration.
@@ -100,7 +100,7 @@ Puoi usare i seguenti servizi e strumenti forniti da {{site.data.keyword.Bluemix
 
 Se la piattaforma Cloud Foundry non risponde ai requisiti della tua applicazione, puoi utilizzare un contenitore o una VM in cui il runtime venga configurato e aggiornato con più opzioni personalizzate.
 
-##Caricamento delle tue applicazioni attraverso la CLI cf
+## Caricamento delle tue applicazioni attraverso la CLI cf
 {: #ht_cfcli}
 
 Puoi gestire il tuo codice su un client locale e utilizzare l'interfaccia riga di comando Cloud Foundry per caricare manualmente la tua applicazione su {{site.data.keyword.Bluemix_notm}}. Se modifichi il codice, per eseguire il codice aggiornato è necessario che riesegua il push dell'applicazione su {{site.data.keyword.Bluemix_notm}}.
@@ -155,7 +155,7 @@ Per effettuare la migrazione della tua applicazione, attieniti alla seguente pro
 * Accertati che la memoria della tua organizzazione sia sufficiente per tutte le istanze della tua applicazione. Per visualizzare la quota di memoria per la tua organizzazione, utilizza cf org org_name.
 * Per ulteriori informazioni su cf push, vedi [comandi cf](/docs/cli/reference/cfcommands/index.html).
 
-##Migrazione dei tuoi dati e utilizzo dei servizi
+## Migrazione dei tuoi dati e utilizzo dei servizi
 {: #ht_service}
 
 Una volta caricata la tua applicazione su {{site.data.keyword.Bluemix_notm}}, seleziona il servizio a cui è collegata l'applicazione dal Catalogo {{site.data.keyword.Bluemix_notm}}, crea un'istanza di servizio, esegui il bind dell'istanza all'applicazione e riavvia l'applicazione.

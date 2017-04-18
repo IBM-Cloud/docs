@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Altri operatori
+# Altri operatori
 {: #c_other_operators}
 
 Gli altri operatori, inclusi gli operatori toolkit che hai sviluppato per i tuoi bisogni,

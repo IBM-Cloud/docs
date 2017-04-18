@@ -65,7 +65,7 @@ Para cancelar una etapa de ejecución, en la etapa, pulse **Ver registros e hist
 
 Un trabajo de despliegue configurado correctamente despliega la app al destino siempre que se ejecute el trabajo. Para ejecutar manualmente un trabajo de despliegue, pulse el icono **Etapa de ejecución** de la etapa en la que se encuentra el trabajo.
 
-###Revisiones de entrada
+### Revisiones de entrada
 Al ejecutar una etapa manualmente, o si la ejecuta porque la etapa anterior se ha completado, la etapa de ejecución selecciona su revisión de entrada. Normalmente, la revisión de entrada es un número de compilación. Para seleccionar la revisión de entrada, la etapa seguirá este proceso:
 
 1. Si se selecciona una revisión específica, utilícela.
@@ -74,7 +74,7 @@ Al ejecutar una etapa manualmente, o si la ejecuta porque la etapa anterior se h
 
 **Consejo:** Puede desplegar una compilación anterior. En la etapa que contiene la compilación, pulse **Ver registros e historial**. En la página que se abre, pulse para expandir el número de ejecución y, a continuación, pulse el trabajo de compilación. Pulse **ENVIAR A**, y seleccione un destino.
 
-###Adición de servicios para aplicaciones
+### Adición de servicios para aplicaciones
 Puede añadir servicios a las aplicaciones y gestionar los servicios desde el panel de control de Bluemix o la interfaz de línea de mandatos (CLI) de Cloud Foundry. También puede emitir mandatos de CLI de Cloud Foundry en scripts para trabajos de conductos de DevOps Services. Por ejemplo, puede añadir un servicio a una app en el script de un trabajo de despliegue. Para obtener más información sobre cómo añadir servicios, consulte [Adición de un servicio para la aplicación](https://www.ng.bluemix.net/docs/services/reqnsi.html#add_service).
 
 ## Visualización de registros

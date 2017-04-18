@@ -17,7 +17,7 @@ Der Service {{site.data.keyword.vpn_full}} (VPN) bietet einen sicheren Kanal fü
 {:shortdesc}
 
 Der Service {{site.data.keyword.vpn_short}} bietet folgende Produktmerkmale:  
-##Sicherheit 
+## Sicherheit 
 Der Service IBM VPN verwendet für die Authentifizierung und die Verschlüsselung der IP-Kommunikation zwischen dem Rechenzentrum Ihres Unternehmens und der IBM Bluemix-Cloudumgebung die standardisierte Protokollsuite Internet Protocol Security (IPSec). IPSec bietet auf Netzwerkebene Peerauthentifizierung, Datenintegrität und Datenschutz (Verschlüsselung).
 
 Der Service IBM VPN unterstützt folgende IPSec-Protokolle und Umsetzungen:
@@ -43,8 +43,8 @@ Der Service IBM VPN ist konform zu den folgenden IETF-RFCs:
 * RFC 4303 für IPv4-Encapsulated Security Payload (ESP)  
 * RFC 2104 HMAC und RFC 2404 HMAC-SHA-1-96 für Authentifizierung  
 * RFC 2451 3DES-CBC; RFC 3602 AES128-CBC, AES192-CBC und AES256-CBC für Verschlüsselung
-##Einfachheit
+## Einfachheit
 Sie können den Service IBM VPN mithilfe einer einfachen und intuitiv zu bedienenden grafischen Schnittstelle erstellen. Sie können Ihre Gateway-IP-Adresse und die Teilnetze Ihres Rechenzentrums angeben. Sie können entweder IPSec- und IKE-Standardrichtlinien verwenden oder die Richtlinien entsprechend Ihren Bedürfnissen anpassen.  
-##Management
+## Management
 Sie können den Service IBM VPN mithilfe einer grafischen Benutzerschnittstelle, einer [Befehlszeilenschnittstelle](../../cli/plugins/vpn/index.html) oder mithilfe von [APIs](https://new-console.ng.bluemix.net/apidocs/101) verwalten.
 

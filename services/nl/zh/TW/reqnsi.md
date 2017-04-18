@@ -11,7 +11,7 @@ lastupdated: "2017-01-11"
 {:shortdesc: .shortdesc}
 
 
-#服務
+# 服務
 {: #services}
 
 您可以在 {{site.data.keyword.Bluemix}} 使用者介面的**型錄**中，在**服務**下找到可用的服務。
@@ -58,7 +58,7 @@ lastupdated: "2017-01-11"
 
 3. 在應用程式中撰寫自己的程式碼，以便與服務互動。
 
-##各地區的服務
+## 各地區的服務
 
 並非所有服務都能在每個 {{site.data.keyword.Bluemix_notm}} 地區使用。下表顯示 IBM 所提供的服務。
 

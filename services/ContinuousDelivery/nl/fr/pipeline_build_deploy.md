@@ -65,7 +65,7 @@ Pour annuler une étape d'exécution, sur l'étape, cliquez sur **Afficher les j
 
 Un travail de déploiement correctement configuré déploie votre application sur votre cible chaque fois que le travail est exécuté. Pour exécuter manuellement un travail de déploiement, cliquez sur l'icône **Exécuter une étape** de l'étape dans laquelle se trouve le travail.
 
-###Révisions d'entrée
+### Révisions d'entrée
 Lorsque vous exécutez une étape manuellement, ou si elle s'exécute car l'étape qui la précède est terminée, l'étape en cours d'exécution sélectionne sa révision d'entrée. Généralement, la révision d'entrée est un numéro de version. Pour
 sélectionner la révision d'entrée, l'étape suit les conditions ci-après :
 
@@ -75,7 +75,7 @@ sélectionner la révision d'entrée, l'étape suit les conditions ci-après :
 
 **Astuce :** Vous pouvez déployer une version précédente. A l'étape qui contient la version, cliquez sur **Afficher les journaux et l'historique**. Sur la page qui s'ouvre, cliquez pour développer le numéro d'exécution, puis cliquez sur le travail de génération. Cliquez sur **ENVOYER A** et sélectionnez une cible.
 
-###Ajout de services à des applications
+### Ajout de services à des applications
 Vous pouvez ajouter des services à vos applications et gérer ces services à partir de votre tableau de bord Bluemix ou de l'interface de ligne de commande Cloud Foundry. Vous pouvez également exécuter des commandes d'interface de ligne de commande Cloud Foundry dans des scripts pour les travaux de pipeline des services DevOps. Par exemple, vous pouvez ajouter un service à une application dans le script d'un travail de déploiement. Pour plus d'informations sur l'ajout de services, voir [Ajout d'un service à votre application](https://www.ng.bluemix.net/docs/services/reqnsi.html#add_service).
 
 ## Affichage des journaux

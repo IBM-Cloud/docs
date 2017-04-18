@@ -12,14 +12,14 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#호환 가능 어댑터
+# 호환 가능 어댑터
 {: #c_compatible_adapters}
 
 
 툴킷은 패키지로 구성되는 아티팩트 세트입니다. 툴킷은 다양한 애플리케이션에서 함수 및 기본 또는 복합 연산자를 다시 사용할 수 있게 합니다.
 {:shortdesc}
 
-##인터넷 툴킷
+## 인터넷 툴킷
 
 인터넷 툴킷(com.ibm.streamsx.inet)은 일반 인터넷 프로토콜에 대한 지원을 제공합니다. 이 툴킷은 {{site.data.keyword.streamsshort}}에 임베드되고 {{site.data.keyword.streamsshort}} 개발 환경에서 사용 가능합니다.
 
@@ -45,7 +45,7 @@ lastupdated: "2017-02-09"
 
 개선사항과 추가 연산자를 포함하는 툴킷의 신규 버전은 [IBMStreams on GitHub](https://github.com/IBMStreams){:new_window}에서 다운로드할 수 있습니다. 툴킷을 다운로드한 후 (필요하면) 빌드하고 {{site.data.keyword.streamsshort}} 개발 환경에 설치하십시오. 
 
-##IoT Integration Toolkit
+## IoT Integration Toolkit
 
 IoT Integration Toolkit(com.ibm.streamsx.iot)은 {{site.data.keyword.iot_full}}과의 연결성을 제공합니다. {{site.data.keyword.streamsshort}} 애플리케이션은 이 툴킷을 사용하여 잠재적으로 수천 개의 디바이스에서 오는 모든 이벤트에 대해 실시간 분석을 제공할 수 있으며, 분석을 기초로 특정 디바이스에 명령을 전송할 수 있습니다. 
 
@@ -69,7 +69,7 @@ IoT Integration Toolkit(com.ibm.streamsx.iot)은 {{site.data.keyword.iot_full}}�
 
 IoT Integration Toolkit 호환 가능 연산자에 대한 자세한 정보는 {{site.data.keyword.streamsshort}} 제품 문서의 [Operators: com.ibm.streamsx.iot Toolkit](http://www.ibm.com/support/knowledgecenter/SSCRJU_4.2.0/com.ibm.streams.toolkits.doc/spldoc/dita/tk$com.ibm.streamsx.iot/ix$Operator.html?lang=en){:new_window}을 참조하십시오. 
 
-##메시징 툴킷
+## 메시징 툴킷
 
 메시징 툴킷(com.ibm.streamsx.messaging) 프로젝트는 오픈 소스 {{site.data.keyword.streamsshort}} 툴킷 프로젝트입니다. 이는 Kafka, JMS, XMS 및 MQTT와 같은 메시징 시스템과 상호작용하도록 {{site.data.keyword.streamsshort}}를 사용하게 도와주는 연산자 및 함수의 개발에 중점을 둡니다.  
 

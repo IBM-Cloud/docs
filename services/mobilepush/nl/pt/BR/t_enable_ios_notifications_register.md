@@ -14,14 +14,14 @@ Para registrar aplicativos e dispositivos iOs:
 2. Passe o token para as Notificações push
 
 
-##Crie um aplicativo backend
+## Crie um aplicativo backend
 
 Crie um aplicativo backend no catálogo do Bluemix® da seção Modelos que ligará
 automaticamente o serviço de Push a esse aplicativo. Se também
 já tiver criado um app backend, certifique-se de ligar o app ao Push
                         Notification Service.
 
-###Objective-C
+### Objective-C
 
 ```
 	//For Objective-C 	
@@ -38,7 +38,7 @@ já tiver criado um app backend, certifique-se de ligar o app ao Push
 	}
 ```
 
-###Swift
+### Swift
 
 ```
 	//For Swift
@@ -50,11 +50,11 @@ já tiver criado um app backend, certifique-se de ligar o app ao Push
 	}
 ```
 
-##Passe o token para as Notificações push
+## Passe o token para as Notificações push
 
 Após o token ser recebido dos APNs, passe o token para as notificações push como parte do método `registerDevice:withDeviceToken`.
 
-###Objective-C
+### Objective-C
 
 ```
 //For Objective-C
@@ -76,7 +76,7 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 }];
 ```
 
-###Swift
+### Swift
 
 Após o token ser recebido do APNS, transmita o token para Notificações push como parte do método `didRegisterForRemoteNotificationsWithDeviceToken`.
 

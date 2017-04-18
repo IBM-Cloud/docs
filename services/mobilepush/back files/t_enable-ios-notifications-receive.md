@@ -10,7 +10,7 @@ copyright:
 
 Receive push notifications on iOS devices.
 
-##Objective-C
+## Objective-C
 To receive push notifications on iOS devices, add the following Objective-C method to the application delegate of your application.
 
 ```
@@ -20,7 +20,7 @@ To receive push notifications on iOS devices, add the following Objective-C meth
 }
 ```
 
-##Swift
+## Swift
 To receive push notifications on iOS devices, add the following Swift method to the application delegate of your application.
 
 ```

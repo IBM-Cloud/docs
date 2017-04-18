@@ -16,14 +16,14 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#{{site.data.keyword.geospatialshort_Geospatial}} 문제점 해결 
+# {{site.data.keyword.geospatialshort_Geospatial}} 문제점 해결 
 {: #ts_geospatial}
 
 
 {{site.data.keyword.Bluemix_short}}의 {{site.data.keyword.geospatialshort_Geospatial}} 사용과 관련된 몇 가지 일반적인 질문에 대한 답변입니다.
 {:shortdesc}
 
-##내 앱을 중지해도 서비스가 계속 지역을 모니터링함
+## 내 앱을 중지해도 서비스가 계속 지역을 모니터링함
 {: #stop-monitoring}
 
 
@@ -42,7 +42,7 @@ lastupdated: "2017-02-09"
 서비스 관리 대시보드에서 {{site.data.keyword.geospatialshort_Geospatial}}를 중지하십시오. 또는 REST API를 사용하여 서비스를 중지하도록 앱을 수정한 다음 변경사항을 {{site.data.keyword.Bluemix_short}}에 다시 푸시할 수 있습니다.
 {: tsResolve}
 
-##서비스가 내 앱에서 지정하지 않은 지역을 모니터링함
+## 서비스가 내 앱에서 지정하지 않은 지역을 모니터링함
 {: #unspecified-region}
 
 
@@ -66,7 +66,7 @@ lastupdated: "2017-02-09"
 {: tsResolve}
 
 
-##서비스 관리 대시보드에서 문제점 해결
+## 서비스 관리 대시보드에서 문제점 해결
 {: #dashboard}
 
 애플리케이션의 문제점을 해결할 때 서비스 관리 대시보드로 이동하여 서비스 인스턴스의 상태를 확인할 수 있습니다. 데이터를 처리하지 않는 경우 서비스를 중지 후 다시 시작하여 문제점을 해결할 수도 있습니다.

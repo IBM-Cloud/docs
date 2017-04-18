@@ -13,13 +13,13 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Panel de control de administración de servicios
+# Panel de control de administración de servicios
 {: #service-dashboard}
 
 
 Puede ver el estado de la instancia del servicio {{site.data.keyword.geospatialshort_Geospatial}} y detenerla o reiniciarla desde el panel de control de administración de servicios. Para acceder al panel de control de administración de servicios, pulse el mosaico {{site.data.keyword.geospatialshort_Geospatial}} en el panel de control de {{site.data.keyword.geospatialshort_Geospatial}}. Si utiliza la aplicación de ejemplo y la instancia de servicio alcanza el límite de sucesos y se detiene, puede reiniciar el servicio. Al detener el servicio se elimina el límite de sucesos. Continúa recibiendo sucesos hasta que detenga el servicio. El panel de control de administración de servicios también muestra el estado y estadísticas de la instancia de servicio.{:shortdesc}
 
-##Comprobaciones de región de {{site.data.keyword.geospatialshort_Geospatial}}
+## Comprobaciones de región de {{site.data.keyword.geospatialshort_Geospatial}}
 
 {{site.data.keyword.geospatialshort_Geospatial}} supervisa los dispositivos móviles desde el Internet de las cosas. Cada dispositivo supervisado envía mensajes de dispositivo que contienen un identificador único junto con su posición actual, que comprende latitud y longitud. La posición del dispositivo se contrasta con las coordenadas de cada región geográfica definida. A continuación, el servicio genera sucesos cuando los dispositivos entran, salen o están "bloqueados" en una región específica.
 

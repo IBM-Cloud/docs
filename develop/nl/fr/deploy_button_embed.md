@@ -11,7 +11,7 @@ lastupdated: "2017-2-21"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#Incorporation d'un flux de trame d'information Déployer dans {{site.data.keyword.Bluemix_notm}}
+# Incorporation d'un flux de trame d'information Déployer dans {{site.data.keyword.Bluemix_notm}}
 {: #embed-d2bm-iframe}
 
 
@@ -26,7 +26,7 @@ pouvez insérer un bouton [Déployer
 dans {{site.data.keyword.Bluemix_notm}}](/docs/develop/deploy_button.html) standard dans votre
 contenu à la place de la trame d'information.
 
-##Etapes du flux de trame d'information {: #iframe-steps}
+## Etapes du flux de trame d'information {: #iframe-steps}
 
 1. Si vous ne disposez pas d'un compte {{site.data.keyword.Bluemix_notm}} actif,
 créez un compte d'essai.
@@ -41,7 +41,7 @@ nom d'application précédent, de votre nom d'utilisateur et de l'heure.
 
 5. L'application est déployée dans votre organisation {{site.data.keyword.Bluemix_notm}}.
 
-##Exemple de flux de trame d'information {: #iframe-example}
+## Exemple de flux de trame d'information {: #iframe-example}
 
 <p>
 L'<a class="xref" href="http://d2bm-iframe-sample.ng.bluemix.net/" target="_blank" title="(s'ouvre dans un nouvel onglet ou une nouvelle fenêtre)">exemple IBM Bluemix D2BM iFrame<img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a> fournit un exemple de flux de trame d'information pour un référentiel Git public.<div class="image"><img class="image" src="images/d2bm_iframe_sample2.png" alt="Exemple de flux de trame d'information Déployer dans Bluemix" /></div>
@@ -51,7 +51,7 @@ L'<a class="xref" href="http://d2bm-iframe-sample.ng.bluemix.net/" target="_blan
 Pour afficher la source de cet exempke, cliquez sur <a class="xref" href="https://hub.jazz.net/project/idsorg/d2bm-iframe-sample/overview" target="_blank" title="(s'ouvre dans un nouvel onglet ou une nouvelle fenêtre)">source<img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a>.
 </p>
 
-##Incorporation du flux de trame d'information {: #embed-iframe}  
+## Incorporation du flux de trame d'information {: #embed-iframe}  
 
 <ol>
 <li>Chargez l'utilitaire JavaScript depuis <a class="xref" href="https://bluemix.net/deploy/embed.js" target="_blank" title="(s'ouvre dans un nouvel onglet ou une nouvelle fenêtre)">https://bluemix.net/deploy/embed.js<img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a>. Cet utilitaire dépend de jQuery. Pour le charger, ajoutez la balise de script suivante à votre document :

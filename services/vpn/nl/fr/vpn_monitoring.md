@@ -18,7 +18,7 @@ copyright :
 Utilisez la fonction de surveillance pour afficher l'état de connexion et le débit du flux de trafic entre votre passerelle VPN de serveur SoftLayer ou sur site et la passerelle
 {{site.data.keyword.vpn_short}}. 
 {:shortdesc}  
-##Surveillance sur le tableau de bord du service
+## Surveillance sur le tableau de bord du service
 {: #dashboard}
 
 Sélectionnez l'onglet **Monitoring** pour afficher les statistiques de connexion suivantes.
@@ -31,7 +31,7 @@ Les statistiques de surveillance s'affichent sous forme de graphique et contienn
 vous pouvez extraire les données les plus récentes à tout moment en sortant de l'onglet Monitoring et en y accédant à nouveau.
 
 **Remarque :** Les graphiques utilisent l'heure UTC et non l'heure locale.  
-##Surveillance sur Logmet
+## Surveillance sur Logmet
 {: #logmet}
 
 Utilisez [Logmet](https://logmet.{DomainName}) pour afficher des statistiques de connexion détaillées. 

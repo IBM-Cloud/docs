@@ -31,7 +31,7 @@ APNs の証明書は、{{site.data.keyword.mobilepushshort}}サービスによ�
 -->
 
 
-##アプリ ID の登録
+## アプリ ID の登録
 {: #create-push-credentials-apns-register}
 
 
@@ -47,7 +47,7 @@ APNs の証明書は、{{site.data.keyword.mobilepushshort}}サービスによ�
 * Explicit ID Suffix (明示的 ID サフィックス) ![「Explicit ID (明示的 ID)」](images/appID_bundleID.jpg)
 4. 開発および配布用 APNs SSL 証明書の作成。
 
-##開発および配布用 APNs SSL 証明書の作成
+## 開発および配布用 APNs SSL 証明書の作成
 {: #create-push-credentials-apns-ssl}
 
 APNs 証明書を取得する前に、最初に証明書署名要求 (CSR) を生成し、それを Apple の認証局 (CA) にサブミットしておく必要があります。CSR には、ユーザーの会社を識別する情報および Apple プッシュ通知に署名するために使用する公開鍵と秘密鍵が含まれます。次に、iOS 開発者ポータル (iOS Developer Portal) で SSL 証明書を生成します。証明書は、公開鍵および秘密鍵と共に「キーチェーンアクセス」に保管されます。
@@ -96,7 +96,7 @@ APNs は、以下の 2 つのモードで使用できます。
 19. **「Key Access.app」**は、**「Keychain」**画面から、キーをエクスポートするように求めるプロンプトを出します。ご使用の Mac の管理パスワードを入力して、システムによるそれらの項目のエクスポートを許可し、**「常に許可」**オプションを選択します。`.p12` 証明書がデスクトップ上に生成されます。
 
 
-##開発プロビジョニング・プロファイルの作成
+## 開発プロビジョニング・プロファイルの作成
 {: #create-push-credentials-dev-profile}
 
 プロビジョニング・プロファイルは、アプリ ID を使用して機能し、アプリをインストールして実行できるデバイス、およびアプリからアクセスできるサービスを判別します。各アプリ ID ごとに、2 つのプロビジョニング・プロファイル、すなわち、開発用に 1 つ、配布用にもう 1 つを作成します。Xcode は、開発プロビジョニング・プロファイルを使用して、アプリケーションのビルドを許可されている開発者と、アプリケーションのテストが許可されているデバイスを判別します。
@@ -113,7 +113,7 @@ APNs は、以下の 2 つのモードで使用できます。
 
 
 
-##ストア配布プロビジョニング・プロファイルの作成
+## ストア配布プロビジョニング・プロファイルの作成
 {: #create-push-credentials-apns-distribute_profile}
 
 ストア・プロビジョニング・プロファイルを使用して、ご使用のアプリを配布用にアプリ・ストアにサブミットします。
@@ -122,7 +122,7 @@ APNs は、以下の 2 つのモードで使用できます。
 2. ダウンロードしたプロビジョニング・プロファイルをダブルクリックして、Xcode にインストールします。
                     
 
-##{{site.data.keyword.mobilepushshort}}ダッシュボードでの APNs のセットアップ
+## {{site.data.keyword.mobilepushshort}}ダッシュボードでの APNs のセットアップ
 {: #create-push-credentials-apns-dashboard}
 
 {{site.data.keyword.mobilepushshort}}サービスを使用して通知を送信するには、Apple Push Notification Service (APNs) で必要とされる SSL 証明書をアップロードします。REST API を使用して APNs 証明書をアップロードすることもできます。

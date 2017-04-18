@@ -65,7 +65,7 @@ Per annullare una fase in esecuzione, nella fase, fai clic su **Visualizza log e
 
 Un lavoro di distribuzione configurato correttamente distribuisce la tua applicazione alla tua destinazione quando il lavoro è in esecuzione. Per eseguire manualmente un lavoro di distribuzione, fai clic sull'icona **Esegui fase** della fase in cui si trova il lavoro.
 
-###Revisioni input
+### Revisioni input
 Quando esegui una fase manualmente o se viene eseguita perché la fase precedente è stata completata, la fase in esecuzione seleziona la propria revisione dell'input. Generalmente, la revisione dell'input è un numero di build. Per selezionare la revisione dell'input, la fase segue queste condizioni:
 
 * Se viene selezionata una revisione specifica, la utilizza.
@@ -74,7 +74,7 @@ Quando esegui una fase manualmente o se viene eseguita perché la fase precedent
 
 **Suggerimento:** puoi distribuire una creazione precedente. Nella fase che contiene la generazione, fai clic su **Visualizza log e cronologia**. Nella pagina che viene aperta, fai clic per espandere il numero di esecuzione e quindi fai clic sul lavoro di creazione. Fai clic su **INVIA A** e seleziona una destinazione.
 
-###Aggiunta di servizi alle applicazioni
+### Aggiunta di servizi alle applicazioni
 Puoi aggiungere i servizi alle tue applicazioni e gestirli dal tuo dashboard Bluemix o dalla CLI (command line interface) Cloud Foundry. Puoi anche immettere i comandi della CLI Foundry negli script per i lavori della pipeline dei servizi DevOps. Ad esempio, puoi aggiungere un servizio a un'applicazione nello script di un lavoro di distribuzione. Per ulteriori informazioni sull'aggiunta dei servizi, consulta [Aggiunta di un servizio alla tua applicazione](https://www.ng.bluemix.net/docs/services/reqnsi.html#add_service).
 
 ## Visualizzazione dei log

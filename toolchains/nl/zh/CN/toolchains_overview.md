@@ -17,7 +17,7 @@ copyright:
 {{site.data.keyword.Bluemix}} 的 Public 和 Dedicated 环境中可使用工具链。您可以使用两种方法来创建工具链：使用模板创建工具链，或者通过应用程序创建工具链。在 {{site.data.keyword.Bluemix_notm}} Public 中，工具链仅在美国南部区域可用。
 {: shortdesc}
 
-##开始使用工具链：Public
+## 开始使用工具链：Public
 {: #getting_started_public}
 
 **注：**请查看顶部条幅，以确保是在“新 Bluemix 体验”中执行操作。
@@ -27,7 +27,7 @@ copyright:
 
 每一个工具链都与特定组织相关联，且作为该组织成员的任何用户都可以访问其关联的工具链。创建工具链之前，请确保您在想要创建工具链的组织中工作。您当前正在哪个组织中工作会显示在菜单栏中。要切换到其他组织，请单击菜单栏中的该组织，然后选择您要切换到的组织。
 
-###通过模板创建工具链   
+### 通过模板创建工具链   
 {: #creating_a_toolchain_from_a_template}
 
 您可以使用模板作为起始点，来创建包含一组特定工具集成的工具链。
@@ -53,7 +53,7 @@ copyright:
  * 如果已配置 GitHub 工具集成，那么样本 GitHub 存储库会克隆到 GitHub 帐户。
 
 
-###通过应用程序创建工具链
+### 通过应用程序创建工具链
 {: #creating_a_toolchain_from_an_app}
 
 您可以从应用程序创建工具链。工具链可以支持持续开发、部署、监视等操作，且与应用程序相关联。每一个应用程序都可以与工具链相关联。当您将更改推送到工具链的 GitHub 存储库时，管道会自动构建和部署应用程序。  
@@ -76,12 +76,12 @@ copyright:
  * 如果已配置 GitHub 工具集成，那么样本 GitHub 存储库会克隆到 GitHub 帐户。
 
 
-##开始使用工具链：Dedicated
+## 开始使用工具链：Dedicated
 {: #getting_started_dedicated}
 
 每一个工具链都与特定组织相关联，且作为该组织成员的任何用户都可以访问其关联的工具链。创建工具链之前，请单击菜单栏中的 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg)，以打开“帐户和支持”窗口小部件，并查看您正在其中工作的组织。如果该组织不是您要创建工具链的组织，请切换为其他组织。
 
-###通过模板创建工具链   
+### 通过模板创建工具链   
 {: #creating_a_toolchain_from_a_template_dedicated}
 
 您可以使用模板作为起始点，来创建包含一组特定工具集成的工具链。
@@ -104,7 +104,7 @@ copyright:
  * 如果已配置 GitHub Enterprise 工具集成，那么样本 GitHub Enterprise 存储库会克隆到 GitHub Enterprise 帐户。
 
 
-###通过应用程序创建工具链
+### 通过应用程序创建工具链
 {: #creating_a_toolchain_from_an_app_dedicated}
 
 您可以从应用程序创建工具链。工具链可以支持持续开发、部署、监视等操作，且与应用程序相关联。每一个应用程序都可以与工具链相关联。当您将更改推送到工具链的 GitHub Enterprise 存储库时，管道会自动构建和部署应用程序。  
@@ -124,7 +124,7 @@ copyright:
  * 如果已配置 GitHub Enterprise 工具集成，那么样本 GitHub Enterprise 存储库会克隆到 GitHub Enterprise 帐户。
 
 
-##查看工具链
+## 查看工具链
 {: #viewing_a_toolchain}
 
 配置工具链及其工具集成之后，您可以在“工具集成”页面中，查看工具链的可视化表示。

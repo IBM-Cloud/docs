@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Consola de {{site.data.keyword.streaminganalyticsshort}}
+# Consola de {{site.data.keyword.streaminganalyticsshort}}
 {: #console}
 
 En la consola de {{site.data.keyword.streaminganalyticsshort}}, puede enviar las aplicaciones de {{site.data.keyword.streamsshort}} directamente a la instancia de servicio de {{site.data.keyword.streaminganalyticsshort}}.

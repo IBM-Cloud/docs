@@ -11,7 +11,7 @@ copyright:
 
 Al recibir una notificación que necesita reacciones, el control se pasa al siguiente método según el identificador seleccionado.
 
-###Objective-C
+### Objective-C
 
 ```
 (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:
@@ -23,7 +23,7 @@ Al recibir una notificación que necesita reacciones, el control se pasa al sigu
 }
 ```
 
-###Swift
+### Swift
  
 ```
 func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {

@@ -15,7 +15,7 @@ copyright:
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#Arbeit des Teams planen {: #tp-teamwork}  
+# Arbeit des Teams planen {: #tp-teamwork}  
 
 *Letzte Aktualisierung: 28. April 2016*
 {: .last-updated}
@@ -23,7 +23,7 @@ copyright:
 Der Service '{{site.data.keyword.trackplan}}' bietet Ihnen eine flexible Methode für die Verwaltung des Projekts Ihres Teams. Die Tools von '{{site.data.keyword.trackplan}}' vereinfachen die Projektplanung und beschleunigen Ihren Arbeitsablauf.
 {: shortdesc}
 
-##Team-Sprints planen {: #planning}
+## Team-Sprints planen {: #planning}
 In der Ansicht 'Sprintplanung' können Sie Sprints planen, indem Sie Arbeitselemente zwischen Sprintbereichen verschieben. Indem Sie Arbeitselemente zwischen den Bereichen ziehen, können Sie sie neu zuweisen.  
 
 **Tipp:** Falls hierbei die Ansicht 'Rückstand' geöffnet bleibt, können Sie Arbeitselemente aus einem bestimmten Sprint ganz schnell verschieben. Klicken Sie auf das Symbol **Fixieren** <img  class="inline" src="./images/pin.gif" alt="Symbol 'Fixieren'">, damit die Ansicht 'Rückstand' geöffnet bleibt.
@@ -33,10 +33,10 @@ Außerdem können Sie Statistikdaten über den Verarbeitungsfortschritt eines Sp
 - Erledigte Arbeitselemente verglichen mit gesamten Arbeitselementen
 - Erreichte Story-Points verglichen mit geschätzten Story-Points ingesamt
 
-###Arbeitselemente einstufen
+### Arbeitselemente einstufen
 Prüfen Sie bei der Planung eines Sprints die Arbeitselemente in den Ansichten 'Rückstand' und 'Sprintplanung', um die Arbeitselemente einzustufen. Zum Einstufen von Arbeitselementen und zum Zuweisen von Story-Points zu Arbeitselementen ziehen Sie die Arbeitselemente an die gewünschte Position.
 
-##Fortschritt des Teams prüfen {: #progress}
+## Fortschritt des Teams prüfen {: #progress}
 In der Ansicht 'Arbeit des Teams' können Sie alle Arbeitselemente prüfen, die dem Team zugewiesen sind. 
 
 Außerdem können Sie die folgenden Statistikdaten prüfen:

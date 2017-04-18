@@ -14,7 +14,7 @@ lastupdated: "2017-02-09"
 {:pre: .pre}
 
 
-#Introduzione a {{site.data.keyword.geospatialshort_Geospatial}}
+# Introduzione a {{site.data.keyword.geospatialshort_Geospatial}}
 {: #gettingstarted}
 
 {{site.data.keyword.geospatialfull}} monitora

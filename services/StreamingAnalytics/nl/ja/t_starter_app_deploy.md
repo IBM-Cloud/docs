@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#{{site.data.keyword.Bluemix_short}} へのスターター・アプリケーションのデプロイ
+# {{site.data.keyword.Bluemix_short}} へのスターター・アプリケーションのデプロイ
 {: #starterapps_deploy}
 
 いずれかの {{site.data.keyword.streaminganalyticsshort}} スターター・アプリケーションを {{site.data.keyword.Bluemix_short}} クラウドにプッシュしてデプロイすることができます。

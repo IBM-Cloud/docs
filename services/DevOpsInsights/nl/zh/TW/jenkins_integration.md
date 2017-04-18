@@ -22,12 +22,12 @@ lastupdated: "2016-11-11"
 
 您可以將 {{site.data.keyword.DRA_short}} 整合成一個 Jenkins 專案或跨數個相關的 Jenkins 專案。這可讓您在 {{site.data.keyword.DRA_short}} 儀表板上設定品質閘道，以及接收建置品質資料。
 
-##必要條件    
+## 必要條件    
 {: #DI_jenkins_prereqs}
 
 * 您必須存取本端 Jenkins 專案，或正在執行 Jenkins 專案的伺服器。
 
-##安裝 {{site.data.keyword.DRA_short}} 外掛程式
+## 安裝 {{site.data.keyword.DRA_short}} 外掛程式
 {: #DI_jenkins_install}
 
 若要在 Jenkins 專案中安裝 {{site.data.keyword.DRA_short}} 外掛程式，請遵循下列步驟：
@@ -38,7 +38,7 @@ lastupdated: "2016-11-11"
   4. 按一下**上傳**。
   5. 重新啟動 Jenkins，並驗證已安裝外掛程式。
 
-##整合 {{site.data.keyword.DRA_short}} 與 Jenkins    
+## 整合 {{site.data.keyword.DRA_short}} 與 Jenkins    
 {: #DI_jenkins_integrate}
 
 在安裝外掛程式之後，但將 {{site.data.keyword.DRA_short}} 整合至 Jenkins 安裝之前，請移至[控制中心](https://control-center.stage1.ng.bluemix.net/)，然後至少建立一個原則。

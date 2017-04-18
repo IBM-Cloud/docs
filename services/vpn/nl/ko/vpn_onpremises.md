@@ -23,7 +23,7 @@ copyright:
 * [SoftLayer GaaS(Gateway Appliance Service)와 함께 IBM VPN 구성](vpn_onpremises.html#gaas)
 * [Cisco ASA와 함께 IBM VPN 구성](vpn_onpremises.html#cisco)
 
-##strongSwan과 함께 IBM VPN 서비스 구성
+## strongSwan과 함께 IBM VPN 서비스 구성
 {: #strongswan} 
 
 IBM VPN 설정에서는 다음과 같은 예의 구성을 사용합니다.
@@ -37,7 +37,7 @@ IBM VPN 설정에서는 다음과 같은 예의 구성을 사용합니다.
 * VPN 게이트웨이 IP 주소(고객 게이트웨이 IP): 169.55.254.166
 * 엔드포인트가 연결되는 서브넷 주소(고객 서브넷): 10.121.33.192/26 
 
-###strongSwan과 함께 IBM VPN 서비스를 사용하려면 다음과 같이 구성하십시오.
+### strongSwan과 함께 IBM VPN 서비스를 사용하려면 다음과 같이 구성하십시오.
 
 1. [게이트웨이를 구성하십시오](index.html#gateway).  
 2. [사이트 연결을 구성하십시오](index.html#site).  
@@ -155,7 +155,7 @@ IBM VPN 설정에서는 다음과 같은 예의 구성을 사용합니다.
 		```
 		{: screen}  
 
-##Vyatta와 함께 IBM VPN 서비스 구성
+## Vyatta와 함께 IBM VPN 서비스 구성
 {: #vyatta} 
 
 IBM VPN 설정에서는 다음과 같은 예의 구성을 사용합니다.
@@ -169,7 +169,7 @@ IBM VPN 설정에서는 다음과 같은 예의 구성을 사용합니다.
 * VPN 게이트웨이 IP 주소(고객 게이트웨이 IP): 173.192.83.82
 * 엔드포인트가 연결되는 서브넷 주소(고객 서브넷): 192.168.201.0/24 
 
-###Vyatta와 함께 IBM VPN 서비스를 사용하려면 다음과 같이 구성하십시오.
+### Vyatta와 함께 IBM VPN 서비스를 사용하려면 다음과 같이 구성하십시오.
 
 1. [게이트웨이를 구성하십시오](index.html#gateway).
 2. [사이트 연결을 구성하십시오](index.html#site). 
@@ -437,7 +437,7 @@ IBM VPN 설정에서는 다음과 같은 예의 구성을 사용합니다.
 		```
 		{: screen}  
 
-##SoftLayer GaaS(Gateway Appliance Service)와 함께 IBM VPN 서비스 구성
+## SoftLayer GaaS(Gateway Appliance Service)와 함께 IBM VPN 서비스 구성
 {: #gaas} 
 
 IBM VPN 설정에서는 다음과 같은 예의 구성을 사용합니다.
@@ -452,7 +452,7 @@ IBM VPN 설정에서는 다음과 같은 예의 구성을 사용합니다.
 * 엔드포인트가 연결되는 서브넷 주소(고객 서브넷): 10.86.88.128/26
 * 사전공유 키 문자열: 567890 
 
-###SoftLayer GaaS와 함께 IBM VPN 서비스를 사용하려면 다음과 같이 구성하십시오.
+### SoftLayer GaaS와 함께 IBM VPN 서비스를 사용하려면 다음과 같이 구성하십시오.
 
 1. SoftLayer GaaS를 구성하십시오.
 
@@ -652,7 +652,7 @@ IBM VPN 설정에서는 다음과 같은 예의 구성을 사용합니다.
 	```
 	{: screen}
 
-##Cisco ASA와 함께 IBM VPN 서비스 구성
+## Cisco ASA와 함께 IBM VPN 서비스 구성
 {: #cisco}
 
 IBM VPN 설정에서는 다음과 같은 예의 구성을 사용합니다.
@@ -666,7 +666,7 @@ IBM VPN 설정에서는 다음과 같은 예의 구성을 사용합니다.
 * VPN 게이트웨이 IP 주소(고객 게이트웨이 IP): 62.95.35.53
 * 엔드포인트가 연결되는 서브넷 주소(고객 서브넷): 10.2.0.0/16
 
-###Cisco ASA와 함께 IBM VPN 서비스를 사용하려면 다음과 같이 구성하십시오.
+### Cisco ASA와 함께 IBM VPN 서비스를 사용하려면 다음과 같이 구성하십시오.
 
 1. [게이트웨이를 구성하십시오](index.html#gateway).
 2. [사이트 연결을 구성하십시오](index.html#site).

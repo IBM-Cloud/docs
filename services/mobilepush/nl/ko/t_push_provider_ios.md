@@ -30,7 +30,7 @@ APNs 신임 정보를 획득하여 구성합니다. {{site.data.keyword.mobilepu
 -->
 
 
-##앱 ID 등록
+## 앱 ID 등록
 {: #create-push-credentials-apns-register}
 
 
@@ -48,7 +48,7 @@ APNs 신임 정보를 획득하여 구성합니다. {{site.data.keyword.mobilepu
 ![명시적 ID](images/appID_bundleID.jpg)
 4. 개발 및 배포 APNs SSL 인증서를 작성하십시오. 
 
-##개발 및 배포 APNs SSL 인증서 작성
+## 개발 및 배포 APNs SSL 인증서 작성
 {: #create-push-credentials-apns-ssl}
 
 APNs 인증서를 획득하려면 먼저 인증서 서명 요청(CSR)을 작성하여 이를 Apple 인증 기관(CA)에 제출해야 합니다. CSR에는 사용자의 회사, Apple 푸시 알림을 신청할 때 사용하는 공용 키와 개인 키를 식별하는 정보가 포함됩니다. 그런 다음 iOS 개발자 포털에서 SSL 인증서를 생성하십시오. 인증서와 이의 공개 및 개인 키는 Keychain Access에 저장됩니다. 
@@ -96,7 +96,7 @@ APNs 인증서를 획득하려면 먼저 인증서 서명 요청(CSR)을 작성�
 19. **Key Access.app**이 **키 체인** 화면에서 키를 내보내도록 프롬프트를 표시합니다. 시스템이 해당 항목을 내보낼 수 있도록 Mac의 관리 비밀번호를 입력한 다음 **항상 허용** 옵션을 선택하십시오. 데스크탑에 `.p12` 인증서가 생성됩니다. 
 
 
-##개발 프로비저닝 프로파일 작성
+## 개발 프로비저닝 프로파일 작성
 {: #create-push-credentials-dev-profile}
 
 프로비저닝 프로파일은 APP ID와 함께 작동하여 사용자 앱을 설치하고 실행할 수 있는 디바이스 및 사용자 앱에서 액세스할 수 있는 서비스를 판별합니다. 각 앱 ID에 대해 개발 및 배포용으로 두 개의 프로비저닝 프로파일을 작성하십시오. Xcode는 개발 프로비저닝 프로파일을 사용하여 애플리케이션을 빌드할 수 있는 개발자와 애플리케이션을 테스트할 수 있는 디바이스를 판별합니다.
@@ -113,7 +113,7 @@ APNs 인증서를 획득하려면 먼저 인증서 서명 요청(CSR)을 작성�
 
 
 
-##저장소 배포 프로비저닝 프로파일 작성
+## 저장소 배포 프로비저닝 프로파일 작성
 {: #create-push-credentials-apns-distribute_profile}
 
 저장소 프로비저닝 프로파일을 사용하여 배포용 앱을 앱 저장소에 제출하십시오. 
@@ -121,7 +121,7 @@ APNs 인증서를 획득하려면 먼저 인증서 서명 요청(CSR)을 작성�
 1. [Apple Developer ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.apple.com){: new_window} 포털로 이동하여 **멤버 센터**를 클릭하고 **인증서, ID 및 프로파일**을 선택하십시오. 
 2. 다운로드한 프로비저닝 프로파일을 두 번 클릭하여 이를 Xcode에 설치하십시오. 
 
-##{{site.data.keyword.mobilepushshort}} 대시보드에서 APNs 설정
+## {{site.data.keyword.mobilepushshort}} 대시보드에서 APNs 설정
 {: #create-push-credentials-apns-dashboard}
 
 {{site.data.keyword.mobilepushshort}} 서비스를 사용하여 알림을 전송하려면 APNs(Apple Push Notification Service)에 필요한 SSL 인증서를 업로드하십시오. REST API를 사용하여 APNs 인증서를 업로드할 수도 있습니다. 

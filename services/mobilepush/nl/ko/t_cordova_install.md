@@ -163,7 +163,7 @@ alert: true,
 
 
 
-##JavaScript
+## JavaScript
 {: #cordova_register_js}
 
 ```
@@ -231,7 +231,7 @@ alert: true,
 	}
 ```
 
-##Swift
+## Swift
 {: #cordova_register_swift}
 다음의 Swift 코드 스니펫을 애플리케이션 위임 클래스에 추가하십시오. 
 
@@ -245,7 +245,7 @@ funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificati
 }
 ```
 
-##다음 단계
+## 다음 단계
 
 {: #cordova_register_next}
 
@@ -262,7 +262,7 @@ funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificati
 
 디바이스에서 푸시 알림을 수신하려면 다음 코드 스니펫을 복사하여 붙여넣으십시오. 
 
-##JavaScript
+## JavaScript
 
 다음의 JavaScript 코드 스니펫을 Cordova 애플리케이션의 웹 파트에 추가하십시오. 
 
@@ -275,7 +275,7 @@ var notification = function(notification){
 MFPPush.registerNotificationsCallback(notification);
 ```
 
-##Android 알림 특성
+## Android 알림 특성
 
 다음 섹션에는 Android 알림 특성이 나열되어 있습니다. 
 
@@ -283,7 +283,7 @@ MFPPush.registerNotificationsCallback(notification);
 * 페이로드 - 알림 페이로드를 포함하는 JSON 오브젝트
 
 
-##iOS 알림 특성
+## iOS 알림 특성
 
 다음 섹션에는 iOS 알림 특성이 나열되어 있습니다. 
 
@@ -293,7 +293,7 @@ action-loc-key - 문자열은 "보기" 대신 오른쪽 단추의 제목에 사�
 * 배지 - 앱 아이콘의 배지로 표시할 숫자입니다. 이 특성을 비워두면 배지가 변경되지 않습니다. 배지를 제거하려면 이 특성의 값을 0으로 설정하십시오. 
 * 사운드 - 앱 번들 또는 앱 데이터 컨테이너의 라이브러리/사운드 폴더에 있는 사운드 파일의 이름입니다. 
 
-##Objective-C
+## Objective-C
 
 다음의 Objective-C 코드 스니펫을 애플리케이션 위임 클래스에 추가하십시오. 
 
@@ -313,7 +313,7 @@ action-loc-key - 문자열은 "보기" 대신 오른쪽 단추의 제목에 사�
 }
 ```
 
-##Swift
+## Swift
 
 다음의 Swift 코드 스니펫을 애플리케이션 위임 클래스에 추가하십시오. 
 

@@ -135,7 +135,7 @@ android:theme="@android:style/Theme.NoDisplay"/>
 
 放置起始設定碼的一般位置位於 Android 應用程式之主要活動的 onCreate 方法中。SDK 有兩個需要起始設定的元件。一個是核心 SDK，另一個是根據核心 SDK 所建置的 Push SDK。
 
-###起始設定 Core SDK
+### 起始設定 Core SDK
 
 ```
 // Initialize the SDK for Android
@@ -143,7 +143,7 @@ android:theme="@android:style/Theme.NoDisplay"/>
 ```
     {: codeblock}
 
-####bluemixRegionSuffix
+#### bluemixRegionSuffix
 {: bluemixRegionSuffix}
 
 指定管理應用程式的位置。您可以使用下列三個值的其中一個：
@@ -152,7 +152,7 @@ android:theme="@android:style/Theme.NoDisplay"/>
 - BMSClient.REGION_UK
 - BMSClient.REGION_SYDNEY
 
-###起始設定 Client Push SDK
+### 起始設定 Client Push SDK
 
 ```
 //Initialize client Push SDK for Java
@@ -161,7 +161,7 @@ push.initialize(getApplicationContext(), "appGUID", "clientSecret");
 ```
 	{: codeblock}
 
-####AppGUID
+#### AppGUID
 {: appguid_initialize_client_push_sdk}
 
 這是 {{site.data.keyword.mobilepushshort}} Service 的 AppGUID 金鑰。此值區分大小寫。開啟 Push Notification 儀表板，然後選取「配置」標籤。您可以從 Push Notification Service 儀表板上「配置」標籤的「行動選項」中取得此值。 

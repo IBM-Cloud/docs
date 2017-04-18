@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Starteranwendung mit Push-Operation an {{site.data.keyword.Bluemix_short}} übertragen
+# Starteranwendung mit Push-Operation an {{site.data.keyword.Bluemix_short}} übertragen
 {: #pushing_starter_app}
 
 
@@ -37,7 +37,7 @@ cf login
 cf push myapp
 </code></pre>
 
-##Nächste Schritte
+## Nächste Schritte
 
 * Wechseln Sie zur Übersichtsseite für die Anwendung, die über das {{site.data.keyword.Bluemix_short}}-Dashboard verfügbar ist, um zu überprüfen, ob die Anwendung erfolgreich gestartet wurde.
 * Starten Sie die Anwendung, damit sie im Browser angezeigt wird. Sie finden die URL (oder "Route") der Anwendung auf der Übersichtsseite der Anwendung. Auf der Webseite für die Beispielanwendung werden Informationen zum Status der REST-API-Aufrufe im Anwendungscode und die Ereignisse angezeigt, die von {{site.data.keyword.geospatialshort_Geospatial}} erkannt wurden.

@@ -16,7 +16,7 @@ copyright:
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-#Développement d'applications 
+# Développement d'applications 
 {: #develop-apps-IDS}
 
 *Dernière mise à jour : 07 décembre 2015*  
@@ -24,7 +24,7 @@ copyright:
 Vous pouvez développer des applications dans un environnement de développement intégré (IDE) ou un éditeur de texte, ou avec {{site.data.keyword.jazzhub}}. 
 {: shortdesc}
 
-##Développement d'applications avec Bluemix DevOps Services
+## Développement d'applications avec Bluemix DevOps Services
 {: #dev_ops}
 
 Vous pouvez utiliser {{site.data.keyword.jazzhub_short}} pour développer une application, en effectuer le suivi et la planifier dans le cloud, puis la déployer dans {{site.data.keyword.Bluemix_notm}}. Vous pouvez passer du code source à une application opérationnelle en quelques minutes.  

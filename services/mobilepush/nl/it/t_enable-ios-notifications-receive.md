@@ -10,7 +10,7 @@ copyright:
 
 Ricezione di notifiche di push su dispositivi iOS.
 
-##Objective-C
+## Objective-C
 Per ricevere notifiche di push sui dispositivi ioS, aggiungi il seguente metodo Objective-C al delegato applicazione della tua applicazione.
 
 ```
@@ -20,7 +20,7 @@ Per ricevere notifiche di push sui dispositivi ioS, aggiungi il seguente metodo 
 }
 ```
 
-##Swift
+## Swift
 Per ricevere notifiche di push sui dispositivi ioS, aggiungi il seguente metodo Swift al delegato applicazione della tua applicazione.
 
 ```

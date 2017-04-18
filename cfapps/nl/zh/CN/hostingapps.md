@@ -15,13 +15,13 @@ lastupdated: "2016-05-09"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#在 {{site.data.keyword.Bluemix_notm}} 中托管应用程序
+# 在 {{site.data.keyword.Bluemix_notm}} 中托管应用程序
 
 <!--The whole topic is staging only -->
 
 通过 {{site.data.keyword.Bluemix}}，您可以创建应用程序以及托管现有应用程序。只要您的应用程序是云就绪型应用程序，就可以将其迁移到 {{site.data.keyword.Bluemix_notm}} 中。{{site.data.keyword.Bluemix_notm}} 为您提供了各种运行应用程序的方法，例如 Cloud Foundry、IBM Containers 和虚拟机。
 
-##使应用程序成为云就绪型应用程序
+## 使应用程序成为云就绪型应用程序
 {: #cloud-readyapps}
 
 云就绪型应用程序的设计和构建遵循云平台原则。云就绪型应用程序可以使用云平台提供的各项功能。
@@ -78,7 +78,7 @@ lastupdated: "2016-05-09"
 
 有关云就绪型应用程序的更多信息，请参阅 [The 12-factor application ![外部链接图标](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}。
 
-##迁移应用程序
+## 迁移应用程序
 {: #ht_hostapp}
 
 您可以将应用程序以递增方式迁移到 {{site.data.keyword.Bluemix_notm}} 中，而不是一下子将应用程序完全转移到云环境中。您可以先迁移应用程序的一部分，然后使用 Cloud Integration 服务来连接到现有数据或记录系统。
@@ -100,7 +100,7 @@ lastupdated: "2016-05-09"
 
 如果 Cloud Foundry 平台不支持应用程序需求，那么可以使用可通过更多定制选项来设置、配置和维护运行时的容器或 VM。
 
-##使用 cf cli 上传应用程序
+## 使用 cf cli 上传应用程序
 {: #ht_cfcli}
 
 可以在本地客户机上管理代码，并使用 Cloud Foundry 命令行界面将应用程序手动上传到 {{site.data.keyword.Bluemix_notm}}。如果更改了代码，必须将应用程序重新推送到 {{site.data.keyword.Bluemix_notm}} 才能运行更新后的代码。
@@ -146,7 +146,7 @@ lastupdated: "2016-05-09"
 * 确保组织的内存足够供应用程序的所有实例使用。要查看组织的内存配额，请使用 cf org org_name。
 * 有关 cf push 的更多信息，请参阅 [cf 命令](/docs/cli/reference/cfcommands/index.html)。
 
-##迁移数据和使用服务
+## 迁移数据和使用服务
 {: #ht_service}
 
 将应用程序上传到 {{site.data.keyword.Bluemix_notm}} 后，从 {{site.data.keyword.Bluemix_notm}}“目录”中选择与该应用程序连接的服务，创建服务实例，将实例绑定到该应用程序，然后重新启动该应用程序。

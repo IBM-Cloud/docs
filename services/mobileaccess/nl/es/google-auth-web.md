@@ -196,7 +196,7 @@ El siguiente paso consiste en obtener la señal de acceso y las señales de iden
 	Una vez que haya recibido el acceso, y la identidad de las señales, puede señalar la sesión web como autenticada y, opcionalmente, persistir estas señales.  
 
 
-##Utilización de la señal de identidad y del acceso obtenido
+## Utilización de la señal de identidad y del acceso obtenido
 {: #google-auth-using-token}
 
 La señal de identidad contiene información sobre la identidad del usuario. En el caso de la autenticación de Google, la señal contiene toda la información que el usuario esté de acuerdo en compartir, como el nombre completo, el URL de la foto de perfil, etc.  
@@ -207,7 +207,7 @@ Para realizar solicitudes a los recursos protegidos, añada una cabecera de auto
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-####Sugerencias:
+#### Sugerencias:
 {: #tips}
 
 * El `accessToken` e `idToken` deben estar separados por un espacio en blanco.

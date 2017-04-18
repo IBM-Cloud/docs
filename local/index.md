@@ -319,12 +319,12 @@ You can choose as many custom domains for your applications as you want, as long
 
 After your {{site.data.keyword.Bluemix_notm}} instance is set up, you can monitor and manage your {{site.data.keyword.Bluemix_notm}} instance by using the Administration page. For more information, see [Managing {{site.data.keyword.Bluemix_local_notm}} and Dedicated](../admin/index.html#mng). For information about upgrades and maintenance, see [Maintaining your local instance](index.html#maintainlocal).
 
-##Roles and responsibilities
+## Roles and responsibilities
 {: #rolesresponsibilities}
 
 If you set up a {{site.data.keyword.Bluemix_local_notm}} account, you identify the people in your organization for the roles that are needed to get your instance up and running.
 
-###Roles
+### Roles
 
 The following list shows the customer roles and responsibilities that you assign:
 
@@ -360,7 +360,7 @@ The {{site.data.keyword.Bluemix_notm}} support and operations team that works wi
 <li>To attempt to reproduce a problem that is reported on a support ticket</li>
 </ul>
 
-###Responsibilities
+### Responsibilities
 
 From setting up your environment to continued maintenance, a variety of tasks must be completed by both you and IBM. The following tables outline the required tasks and the owners for completing the task throughout the inception, progression, and completion phases.
 

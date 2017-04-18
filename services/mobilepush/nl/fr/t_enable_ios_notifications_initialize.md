@@ -12,9 +12,9 @@ Le code d'initialisation se trouve généralement dans le délégué d'applicati
 Cliquez sur le lien **Options pour application mobile** dans le tableau de bord de votre application Bluemix pour obtenir la route
 de l'application et l'identificateur global unique.
 
-##Initialisation du logiciel SDK de base
+## Initialisation du logiciel SDK de base
 
-###Objective-C
+### Objective-C
 
 ```
 // Initialize the SDK for Object-C with IBM Bluemix GUID and route
@@ -22,7 +22,7 @@ IMFClient *imfClient = [IMFClient sharedInstance];
 [imfClient initializeWithBackendRoute:"add_your_applicationRoute_here" backendGUID:"add_your_appId_here"];
 ```
 
-###Swift
+### Swift
 
 ```
 // Initialize the Core SDK for Swift with IBM Bluemix GUID, route, and region
@@ -32,16 +32,16 @@ myBMSClient.initializeWithBluemixAppRoute("BluemixAppRoute", bluemixAppGUID: "AP
 myBMSClient.defaultRequestTimeout = 10.0 // Timput in seconds
 ```
 
-##Initialisation du logiciel SDK Push du client
+## Initialisation du logiciel SDK Push du client
 
-###Objective-C
+### Objective-C
 
 ```
 //Initialize client Push SDK for Objective-C
 IMFPushClient _pushService = [IMFPushClient sharedInstance];
 ```
 
-###Swift
+### Swift
 
 ```
 //Initialize client Push SDK for Swift

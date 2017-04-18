@@ -11,7 +11,7 @@ copyright:
 
 When an actionable notification is received, the control is passed onto the following method based on the identifier chosen.
 
-###Objective-C
+### Objective-C
 
 ```
 (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:
@@ -23,7 +23,7 @@ When an actionable notification is received, the control is passed onto the foll
 }
 ```
 
-###Swift
+### Swift
  
 ```
 func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {

@@ -36,32 +36,32 @@ I client browser web, mobili e le estensioni e le applicazioni Google Chrome pos
 ![Panoramica Push](images/overview.jpg)
 
 
-###Applicazioni mobili e browser
+### Applicazioni mobili e browser
 {: mobile-applications}
 
 All'avvio, le applicazioni client si registrano al servizio {{site.data.keyword.mobilepushshort}} e lo sottoscrivono per ricevere notifiche.
 
-###Applicazioni di backend
+### Applicazioni di backend
 {: backend-applications}
 
 Le applicazioni di backend possono essere in loco o in un cloud pubblico. Le applicazioni di backend utilizzeranno il servizio {{site.data.keyword.mobilepushshort}} per inviare notifiche sensibili al contesto agli utenti mobili o browser. Le applicazioni di backend non devono necessariamente conservare e gestire informazioni sugli utenti, sugli agent browser e sui dispositivi mobili per inviare notifiche di push. Invece, le applicazioni di backend possono utilizzare il servizio {{site.data.keyword.mobilepushshort}} che le gestisce e mantiene.
 
-###Proprietario backend applicazione
+### Proprietario backend applicazione
 {: app-backend-owner}
 
 Il proprietario del backend dell'applicazione crea l'applicazione di backend mobile che aggrega un'istanza al servizio {{site.data.keyword.mobilepushshort}}. Il proprietario del backend dell'applicazione configurare inoltre il servizio {{site.data.keyword.mobilepushshort}} in modo che le applicazioni di backend utilizzino il servizio con le applicazioni mobili e browser destinate a {{site.data.keyword.mobilepushshort}}.
 
-###Servizio {{site.data.keyword.mobilepushshort}}
+### Servizio {{site.data.keyword.mobilepushshort}}
 {: push-notification-service}
 
 Il servizio {{site.data.keyword.mobilepushshort}} gestisce tutte le informazioni relative ai dispositivi mobili e ai client browser web registrati per le notifiche. Il servizio fornisce alle tue applicazioni la trasparenza dei dettagli di tecnologia relativi all'invio di notifiche a queste eterogenee piattaforme mobili e browser web, gestendo tutto questo internamente.
 
-###Gateway
+### Gateway
 {: gateways}
 
 Servizi cloud specifici per piattaforme quali FCM/GCM o APNS (Apple Push Notification Service) utilizzati dal servizio {{site.data.keyword.mobilepushshort}} IBM per inviare notifiche alle applicazioni mobili e browser.
 
-###Sicurezza push
+### Sicurezza push
 {: push-security}
 
 Le API {{site.data.keyword.mobilepushshort}} sono protette da due tipi di segreti:
@@ -81,14 +81,14 @@ Assicurati che il 'clientSecret' sia mantenuto confidenziale e non inserirlo mai
 ## Tipi di {{site.data.keyword.mobilepushshort}}
 {: #overview-push-types}
 
-###Broadcast
+### Broadcast
 {: broadcast}
 
 Quando un'applicazione client si registra al servizio {{site.data.keyword.mobilepushshort}}, può iniziare a ricevere i broadcast. Le notifiche broadcast sono messaggi destinati a tutte le istanze di un'applicazione installate nei dispositivi mobili, nei browser o implementate come applicazioni Chrome o istanze dell'estensione e configurate per il servizio {{site.data.keyword.mobilepushshort}}. Le notifiche broadcast sono abilitate per impostazione predefinita con qualsiasi applicazione abilitata per {{site.data.keyword.mobilepushshort}}. Le applicazioni abilitate per il servizio {{site.data.keyword.mobilepushshort}} hanno una sottoscrizione predefinita alla tag Push.ALL, che viene utilizzata dal server per eseguire il broadcast dei messaggi di notifica a tutti i dispositivi. Per inviare una notifica broadcast che utilizza la API Push
                         REST, assicurati che la destinazione ("target") sia un JSON vuoto all'inserimento nella
                         risorsa messaggi.
 
-###Notifiche basate sulle tag
+### Notifiche basate sulle tag
 {: tag-based-notifications}
 
 Le notifiche basate sulle tag sono messaggi destinati a tutti i dispositivi sottoscritti a una particolare tag. Le notifiche basate sulle tag
@@ -99,7 +99,7 @@ Le notifiche basate sulle tag sono messaggi destinati a tutti i dispositivi sott
                         consente di definire delle tag e quindi di inviare e ricevere messaggi in
                         base alle tag. Un messaggio viene indirizzato solo alle istanze dell'applicazione client (mobili, browser o come un'applicazione o estensioni) sottoscritte a una tag. Devi prima creare le tag per l'applicazione, impostare le sottoscrizioni di tag e iniziare quindi le notifiche basate sulle tag. Per inviare una notifica basata sulle tag che utilizza la API REST, assicurati che i "tagName" siano forniti all'inserimento nella risorsa messaggi.
 
-###Notifiche Unicast
+### Notifiche Unicast
 {: unicast-notifications}
 
 Le notifiche Unicast sono messaggi destinati a un dispositivo o un utente particolare. Le notifiche Unicast destinate ai dispositivi non richiedono alcuna impostazione aggiuntiva e sono abilitate per impostazione predefinita quando l'applicazione è abilitata per {{site.data.keyword.mobilepushshort}}.
@@ -109,7 +109,7 @@ Tuttavia, le notifiche Unicast indirizzate agli utenti richiedono l'associazione
 Normalmente, un'applicazione client prima eseguirà un ciclo di autenticazione in cui l'utente dell'applicazione mobile viene autenticato in un servizio di autenticazione come [Mobile Client Access](docs/services/mobileaccess/index.html). Dopo la corretta autenticazione, l'ID dell'utente autenticato viene trasmesso all'API Push Device Registration. 
 Per inviare notifiche Unicast tramite l'API REST, assicurati che gli ID del dispositivo o dell'utente siano forniti durante l'inserimento in una risorsa messaggi.
 
-###Notifiche basate sulla piattaforma
+### Notifiche basate sulla piattaforma
 {: platform-based-notifications}
 
 Il recapito delle notifiche può essere destinato a una specifica piattaforma di dispositivo. Ad esempio, una notifica può essere inviata solo a tutti gli utenti Android o solo agli utenti Google Chrome. Per inviare una notifica basata sulla
@@ -133,7 +133,7 @@ La dimensione del payload del messaggio di {{site.data.keyword.mobilepushshort}}
 
 Per iOS 8 e successivi, la dimensione massima consentita è 2 kilobyte. Il Push Notification service per Apple non invia notifiche che superano questo limite.
 
-###Estensioni Android, browser Firefox, browser Chrome e applicazioni Chrome &
+### Estensioni Android, browser Firefox, browser Chrome e applicazioni Chrome &
 {: android-message-size}
 
 Esiste una limitazione di 4 kilobyte come massimo consentito per la dimensione del payload del messaggio.  

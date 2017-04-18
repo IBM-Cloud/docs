@@ -11,7 +11,7 @@ lastupdated: "2016-12-21"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#{{site.data.keyword.jazzhub_short}} 샘플 프로젝트에서 텍스트 기반 파이프라인 공유 {: #share-pipeline}
+# {{site.data.keyword.jazzhub_short}} 샘플 프로젝트에서 텍스트 기반 파이프라인 공유 {: #share-pipeline}
 
 {{site.data.keyword.Bluemix_notm}}에 배치 단추를 통해 {{site.data.keyword.Bluemix_notm}}에 배치된 샘플 프로젝트의 경우 {{site.data.keyword.jazzhub_short}} 파이프라인 구성을 YAML 파일로 정의할 수 있습니다. 프로젝트를 분기 실행하는 사용자가 고유 파이프라인을 구성할 필요가 없도록 텍스트로 정의된 파이프라인을 공유할 수 있습니다. 이 기능은 개발 중입니다. YAML 형식과 구현은 언제든 변경될 수 있습니다. 현재 이 기능은 {{site.data.keyword.Bluemix_notm}}를 대상으로 하는 Git 및 GitHub 저장소가 있는 프로젝트에서만 사용할 수 있습니다.
 {: shortdesc} 
@@ -76,7 +76,7 @@ stages:
 ```
 {: codeblock} 
 
-##YAML 파일 구문 {: #yaml-syntax}
+## YAML 파일 구문 {: #yaml-syntax}
 
 파이프라인은 다음 구문을 사용하여 텍스트로 표시할 수 있습니다.
 
@@ -153,11 +153,11 @@ space: <space name>
 ```
 {: codeblock} 
 
-##확장 작업 및 확장 정의 {: #extension-jobs} 
+## 확장 작업 및 확장 정의 {: #extension-jobs} 
 
 확장 정의는 확장 작업에 사용 가능한 특성 세트를 정의합니다. `extension_id ` 특성이 지정된 경우 작업이 확장 작업으로 처리됩니다. 확장에 사용 가능한 특성을 찾으려면 해당 문서를 참조하십시오. 
 
-##YAML 파일을 사용하여 파이프라인과 상호작용 {: #pipeline-yaml} 
+## YAML 파일을 사용하여 파이프라인과 상호작용 {: #pipeline-yaml} 
 
 **환경 변수 및 해상도** 
 <!-- Formating for this? -->

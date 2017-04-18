@@ -12,14 +12,14 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#相容的配接器
+# 相容的配接器
 {: #c_compatible_adapters}
 
 
 工具箱是一組組織成套件的構件。工具箱可讓函數和基本或複合運算子能夠在不同應用程式中重複使用。
 {:shortdesc}
 
-##Internet Toolkit
+## Internet Toolkit
 
 Internet Toolkit (com.ibm.streamsx.inet) 支援一般網際網路通訊協定。此工具箱內嵌在 {{site.data.keyword.streamsshort}} 中，也提供於 {{site.data.keyword.streamsshort}} 開發環境中。
 
@@ -45,7 +45,7 @@ Internet Toolkit (com.ibm.streamsx.inet) 支援一般網際網路通訊協定。
 
 您可以從 [GitHub 上的 IBM Streams](https://github.com/IBMStreams){:new_window} 下載工具箱的新版本（含加強功能和其他運算子）。下載工具箱之後，請建置它（必要的話），並在 {{site.data.keyword.streamsshort}} 開發環境上安裝它。
 
-##IoT Integration Toolkit
+## IoT Integration Toolkit
 
 IoT Integration Toolkit (com.ibm.streamsx.iot) 提供與 {{site.data.keyword.iot_full}} 的連線功能。{{site.data.keyword.streamsshort}} 應用程式可以使用此工具箱，針對可能來自數千個裝置的所有事件（包括根據分析將指令傳送至特定裝置）提供即時分析。
 
@@ -69,7 +69,7 @@ IoT Integration Toolkit (com.ibm.streamsx.iot) 提供與 {{site.data.keyword.iot
 
 如需 IoT Integration Toolkit 相容運算子的相關資訊，請參閱 {{site.data.keyword.streamsshort}} 產品文件中的 [Operators: com.ibm.streamsx.iot Toolkit](http://www.ibm.com/support/knowledgecenter/SSCRJU_4.2.0/com.ibm.streams.toolkits.doc/spldoc/dita/tk$com.ibm.streamsx.iot/ix$Operator.html?lang=en){:new_window}。
 
-##Messaging Toolkit
+## Messaging Toolkit
 
 Messaging Toolkit (com.ibm.streamsx.messaging) 專案是開放程式碼 {{site.data.keyword.streamsshort}} 工具箱專案。著重在開發運算子和函數，以協助您使用 {{site.data.keyword.streamsshort}} 與傳訊系統（例如 Kafka、JMS、XMS 和 MQTT）互動。 
 

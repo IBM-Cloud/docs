@@ -177,7 +177,7 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 Xcode のバージョンに応じて、許可マネージャーを登録します。
 
 ```
-#import "<your_module_name>-Swift.h"
+# import "<your_module_name>-Swift.h"
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 

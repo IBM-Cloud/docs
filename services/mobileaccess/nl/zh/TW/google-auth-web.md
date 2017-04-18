@@ -193,7 +193,7 @@ lastupdated: "2017-01-15"
 	收到存取權和身分記號之後，您可以將 Web 階段作業標示為已鑑別，並可選擇持續保存這些記號。  
 
 
-##使用取得的存取及身分記號
+## 使用取得的存取及身分記號
 {: #google-auth-using-token}
 
 身分記號包含使用者身分的相關資訊。若為 Google 鑑別，記號會包含使用者同意共用的所有資訊，例如完整名稱、人員資訊照片的 URL 等。  
@@ -204,7 +204,7 @@ lastupdated: "2017-01-15"
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-####提示：
+#### 提示：
 {: #tips}
 
 * `accessToken` 及 `idToken` 必須以空格區隔。

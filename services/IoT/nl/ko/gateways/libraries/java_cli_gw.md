@@ -12,7 +12,7 @@ lastupdated: "2017-03-14"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-#Java를 사용하여 {{site.data.keyword.iot_short_notm}}에서 게이트웨이 개발
+# Java를 사용하여 {{site.data.keyword.iot_short_notm}}에서 게이트웨이 개발
 {: #java_cli_gw}
 
 디바이스가 {{site.data.keyword.iot_full}}에서 조직에 직접 연결할 수 없는 경우에는 Java™을 사용하여 게이트웨이를 빌드하고 사용자 정의할 수 있습니다. 게이트웨이 개발을 시작하는 데 도움이 되도록 {{site.data.keyword.iot_short_notm}}용 Java 클라이언트 라이브러리, 문서 및 예제가 제공됩니다.

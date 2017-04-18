@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#{{site.data.keyword.streaminganalyticsshort}} 高可用性
+# {{site.data.keyword.streaminganalyticsshort}} 高可用性
 {: #c_ha}
 
 {{site.data.keyword.streaminganalyticsshort}} 使得您的应用程序具有高可用性。

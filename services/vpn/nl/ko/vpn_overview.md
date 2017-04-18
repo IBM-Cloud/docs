@@ -17,7 +17,7 @@ copyright:
 {:shortdesc}
 
 {{site.data.keyword.vpn_short}} 서비스는 다음과 같은 기능을 제공합니다.  
-##보안 
+## 보안 
 IBM VPN 서비스는 산업 표준 IPSec(Internet Protocol Security) 프로토콜 스위트를 사용하여 회사 데이터 센터와 IBM Bluemix 클라우드 환경 간의 IP 통신을 인증하고 암호화합니다. IPSec은 네트워크 레벨의 피어 인증, 데이터 무결성 및 데이터 기밀성(암호화)을 제공합니다.
 
 IBM VPN 서비스는 다음과 같은 IPSec 프로토콜을 지원 및 변환합니다.
@@ -43,8 +43,8 @@ IBM VPN 서비스는 다음 IETF RFC를 준수합니다.
 * IPv4 ESP(Encapsulating Security Payload)에 대해 RFC 4303  
 * 인증에 대해 RFC 2104 HMAC 및 RFC 2404 HMAC-SHA-1-96  
 * 암호화에 대해 RFC 2451 3DES-CBC, RFC 3602 AES128-CBC, AES192-CBC, AES256-CBC
-##간편성
+## 간편성
 간편하고 직관적인 그래픽 인터페이스를 사용하여 IBM VPN 서비스를 작성할 수 있습니다. 사용 중인 게이트웨이 IP 주소와 데이터 센터 서브넷을 지정할 수 있습니다. 기본 IPSec 및 IKE 정책을 사용하거나 필요에 알맞도록 정책을 사용자 정의할 수 있습니다.  
-##관리
+## 관리
 그래픽 인터페이스, [명령행 인터페이스](../../cli/plugins/vpn/index.html) 또는 [API](https://new-console.ng.bluemix.net/apidocs/101)를 사용하여 IBM VPN 서비스를 관리할 수 있습니다.
 

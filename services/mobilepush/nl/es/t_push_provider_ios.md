@@ -31,7 +31,7 @@ Obtenga y configure las credenciales de APNs. Los certificados de APNs se gestio
 -->
 
 
-##Registrar un ID de App
+## Registrar un ID de App
 {: #create-push-credentials-apns-register}
 
 
@@ -49,7 +49,7 @@ Al registrar un ID de App, seleccione las opciones siguientes:
 ![ID explícito](images/appID_bundleID.jpg)
 4. Crear un certificado SSL de APNs de desarrollo y distribución.
 
-##Crear un certificado SSL de APNs de desarrollo y distribución
+## Crear un certificado SSL de APNs de desarrollo y distribución
 {: #create-push-credentials-apns-ssl}
 
 Para poder obtener un certificado de APNs, debe generar en primer lugar una solicitud de firma de certificado (CSR) y enviarla a Apple, la entidad emisora de certificados (CA). La CSR contiene información que identifica a la empresa y a la clave pública y privada que utilice para firmar las notificaciones push de Apple. A continuación, genere el certificado SSL en el Portal de desarrollador de iOS. El certificado, junto con su clave pública y privada, se almacena en el Acceso de cadena de claves.
@@ -97,7 +97,7 @@ Debe obtener certificados independientes para los entornos de desarrollo y de di
 19. **Key Access.app** le solicita que exporte su clave desde la pantalla **Cadena de claves**. Especifique la contraseña de administración para Mac para permitir al sistema exportar estos elementos y, a continuación, seleccione la opción **Permitir siempre**. Se generará un certificado `.p12` en el escritorio.
 
 
-##Creación de un perfil de suministro de desarrollo
+## Creación de un perfil de suministro de desarrollo
 {: #create-push-credentials-dev-profile}
 
 El perfil de suministro funciona con el ID de App para determinar qué dispositivos pueden instalar y ejecutar la app y a qué servicios puede acceder la app. Para cada ID de App, cree dos perfiles de suministro: uno para desarrollo y otro para distribución. Xcode utiliza el perfil de suministro de desarrollo para determinar qué desarrolladores están permitidos para crear la aplicación y qué dispositivos están permitidos para probarse en la aplicación.
@@ -114,7 +114,7 @@ Cree un perfil de suministro de desarrollo, como se indica a continuación:
 
 
 
-##Creación de un perfil de suministro de distribución del almacén
+## Creación de un perfil de suministro de distribución del almacén
 {: #create-push-credentials-apns-distribute_profile}
 
 Utilice el perfil de suministro del almacén para enviar la app para su distribución a la App Store.
@@ -122,7 +122,7 @@ Utilice el perfil de suministro del almacén para enviar la app para su distribu
 1. Vaya al portal de [desarrolladores de Apple ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://developer.apple.com){: new_window}, pulse **Centro de miembros** y seleccione **Certificados, identificadores y perfiles**.
 2. Efectúe una doble pulsación en el perfil de suministro descargado para instalarlo en Xcode.
 
-##Configuración de APNs en el panel de control de {{site.data.keyword.mobilepushshort}}
+## Configuración de APNs en el panel de control de {{site.data.keyword.mobilepushshort}}
 {: #create-push-credentials-apns-dashboard}
 
 Para utilizar el servicio {{site.data.keyword.mobilepushshort}} para enviar notificaciones, cargue los certificados SSL necesarios para el servicio de Notificaciones Push de Apple (APNs). También se puede utilizar la API REST para subir un certificado de APNs.

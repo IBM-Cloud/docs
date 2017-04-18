@@ -196,7 +196,7 @@ lastupdated: "2017-01-15"
 	在您收到访问令牌和身份令牌之后，您可以将 Web 会话标记为已认证，并且可以选择持久存储这些令牌。  
 
 
-##使用获取的访问和身份令牌
+## 使用获取的访问和身份令牌
 {: #google-auth-using-token}
 
 身份令牌包含有关用户身份的信息。对于 Google 认证，该令牌将包含用户同意共享的所有信息，如全名、个
@@ -209,7 +209,7 @@ lastupdated: "2017-01-15"
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-####提示：
+#### 提示：
 {: #tips}
 
 * `accessToken` 和 `idToken` 必须以空格分隔。

@@ -164,7 +164,7 @@ Android では、settings パラメーターを使用しません。Android ア�
 
 
 
-##JavaScript
+## JavaScript
 {: #cordova_register_js}
 
 ```
@@ -234,7 +234,7 @@ onDeviceReady: function() {
 	}
 ```
 
-##Swift
+## Swift
 {: #cordova_register_swift}
 アプリケーション代行クラスに次の Swift コード・スニペットを追加します。
 
@@ -248,7 +248,7 @@ funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificati
 }
 ```
 
-##次のステップ
+## 次のステップ
 
 {: #cordova_register_next}
 
@@ -265,7 +265,7 @@ funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificati
 
 デバイスでプッシュ通知を受け取るには、以下のコード・スニペットをコピーして貼り付けます。
 
-##JavaScript
+## JavaScript
 
 以下の JavaScript コード・スニペットを Cordova アプリケーションの Web パーツに追加します。
 
@@ -278,7 +278,7 @@ var notification = function(notification){
 MFPPush.registerNotificationsCallback(notification);
 ```
 
-##Android 通知プロパティー
+## Android 通知プロパティー
 
 次のセクションに、Android の通知プロパティーをリストします。
 
@@ -286,7 +286,7 @@ MFPPush.registerNotificationsCallback(notification);
 * payload - 通知ペイロードを含む JSON オブジェクト
 
 
-##iOS 通知プロパティー
+## iOS 通知プロパティー
 
 次のセクションに、iOS の通知プロパティーをリストします。
 
@@ -296,7 +296,7 @@ action-loc-key - このストリングは、現行ローカリゼーションに
 * badge - アプリ・アイコンのバッジとして表示する数。このプロパティーがないと、バッジは変更されません。バッジを削除するには、このプロパティーの値を 0 に設定します。
 * sound - アプリ・バンドル内、またはアプリ・データ・コンテナーの Library/Sounds フォルダー内にある音声ファイルの名前。
 
-##Objective-C
+## Objective-C
 
 アプリケーション代行クラスに次の Objective-C コード・スニペットを追加します。
 
@@ -316,7 +316,7 @@ action-loc-key - このストリングは、現行ローカリゼーションに
 }
 ```
 
-##Swift
+## Swift
 
 アプリケーション代行クラスに次の Swift コード・スニペットを追加します。
 

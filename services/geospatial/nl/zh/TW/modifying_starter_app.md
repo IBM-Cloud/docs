@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#將入門範本應用程式修改至 {{site.data.keyword.Bluemix_short}}
+# 將入門範本應用程式修改至 {{site.data.keyword.Bluemix_short}}
 {: #modifying_starter_app}
 
 您可以修改入門範本應用程式，然後將它重新部署到 {{site.data.keyword.Bluemix_short}} 以查看結果。

@@ -10,7 +10,7 @@ copyright:
 
 Receba notificações push em dispositivos iOS
 
-##Objective-C
+## Objective-C
 Para receber notificações push em dispositivos iOS, inclua o método
 Objective-C a seguir na delegação de seu aplicativo.
 
@@ -21,7 +21,7 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
 }
 ```
 
-##Swift
+## Swift
 Para receber notificações push em dispositivos iOS, inclua o método Swift a seguir
 na delegação de seu aplicativo.
 

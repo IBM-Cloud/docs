@@ -12,7 +12,7 @@ lastupdated: "2017-03-14"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-#Java を使用した {{site.data.keyword.iot_short_notm}} でのゲートウェイの開発
+# Java を使用した {{site.data.keyword.iot_short_notm}} でのゲートウェイの開発
 {: #java_cli_gw}
 
 デバイスを {{site.data.keyword.iot_full}} 上の組織に直接接続できない場合、Java™ を使用してゲートウェイを構築してカスタマイズできます。ゲートウェイ開発を簡単に始められるように、{{site.data.keyword.iot_short_notm}} に対応した Java クライアント・ライブラリー、資料、サンプルが用意されています。

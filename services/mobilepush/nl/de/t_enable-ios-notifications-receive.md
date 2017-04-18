@@ -10,7 +10,7 @@ copyright:
 
 Empfangen Sie Push-Benachrichtigungen in iOS-Geräten.
 
-##Objective-C
+## Objective-C
 Um Push-Benachrichtigungen in iOS-Geräten zu empfangen, fügen Sie die folgende Objective-C-Methode zum Anwendungs-Delegat Ihrer Anwendung hinzu.
 
 ```
@@ -20,7 +20,7 @@ Um Push-Benachrichtigungen in iOS-Geräten zu empfangen, fügen Sie die folgende
 }
 ```
 
-##Swift
+## Swift
 Um Push-Benachrichtigungen in iOS-Geräten zu empfangen, fügen Sie die folgende Swift-Methode zum Anwendungs-Delegat Ihrer Anwendung hinzu.
 
 ```

@@ -10,7 +10,7 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-#Ativando aplicativos iOS para enviar {{site.data.keyword.mobilepushshort}}
+# Ativando aplicativos iOS para enviar {{site.data.keyword.mobilepushshort}}
 {: #enable-push-ios-notifications}
 Última atualização: 14 de fevereiro de 2017
 {: .last-updated}
@@ -19,7 +19,7 @@ copyright:
 para os seus dispositivos.
 
 
-##Instalando o CocoaPods
+## Instalando o CocoaPods
 {: #enable-push-ios-notifications-install}
 
 Para obter um projeto Xcode existente, é possível configurar o SDK do cliente de serviços móveis do Bluemix usando a ferramenta de gerenciamento de dependência CocoaPods. Uma alternativa é instalar o SDK manualmente.
@@ -65,7 +65,7 @@ modificar a pasta de origem de serviços móveis do Bluemix, é possível locali
 projeto Pods, em `Pods/yourImportedSourceFolder`, por exemplo:
 `Pods/BMSPush`.
 
-##Incluindo estruturas usando Carthage
+## Incluindo estruturas usando Carthage
 {: #carthage}
 
 Inclua estruturas em seu projeto usando o [Carthage ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos){: new_window}. Observe que
@@ -79,7 +79,7 @@ Carthage em Xcode8 não é suportado.
 2. Execute o comando `carthage update`. Quando a construção for concluída, arraste `BMSPush.framework`, `BMSCore.framework` e `BMSAnalyticsAPI.framework` até seu projeto Xcode.
 3. Siga as instruções no site [Carthage ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos){: new_window} para concluir a integração.
 
-##Configurando o SDK do iOS
+## Configurando o SDK do iOS
 {: ios-sdk}
 
 Configure o SDK iOS, inclua o código a seguir no arquivo **AppDelegate.swift**
@@ -92,7 +92,7 @@ didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 ```
     {: codeblock}
 
-##Usando estruturas importadas e pastas de origem
+## Usando estruturas importadas e pastas de origem
 {: using-imported-frameworks}
 
 Referencie o SDK no código. Assegure-se de que os pré-requisitos a seguir sejam atendidos.
@@ -115,7 +115,7 @@ customizadas dos arquivos originais, assegure-se de que sejam submetidas a backu
 comandos.
 
 
-##Configurações de Compilação
+## Configurações de Compilação
 {: build-settings}
 
 Acesse **Xcode > Configurações de compilação > Opções de compilação e
@@ -129,7 +129,7 @@ Security (ATS) podem afetar a maneira de manipular o processo de autenticação.
 
 Um local comum para colocar o código de inicialização é no aplicativo delegado do aplicativo iOS. Clique no link **Opções móveis** no Painel Push para obter a rota e o GUID do aplicativo.
 
-###Inicializando o SDK principal
+### Inicializando o SDK principal
 {: Initializing-the-core-sdk}
 
 
@@ -143,18 +143,18 @@ myBMSClient.initialize(bluemixRegion: "Location where your app is hosted.")
 ### Rota, GUID e região do Bluemix
 {: route-guid-bluemix-region}
 
-####appRoute
+#### appRoute
 {: ios-approute}
 
 Especifica a rota que é designada ao aplicativo do servidor que você criou no Bluemix.
 
-####GUID
+#### GUID
 {: ios-guid}
 
 Especifica a chave exclusiva que é designada ao aplicativo que você criou no Bluemix. Esse valor faz
 distinção entre maiúsculas e minúsculas.
 
-####bluemixRegionSuffix
+#### bluemixRegionSuffix
 {: ios-bluemixRegionSuffix}
 
 Especifica o local em que o app está hospedado. O parâmetro `bluemixRegion` especifica qual implementação do Bluemix você está usando. É possível configurar esse valor com uma propriedade estática `BMSClient.REGION` e use um dos três valores:
@@ -163,12 +163,12 @@ Especifica o local em que o app está hospedado. O parâmetro `bluemixRegion` es
 - BMSClient.Region.unitedKingdom
 - BMSClient.Region.sydney
 
-####AppGUID
+#### AppGUID
 {: ios-AppGUID}
 
 Especifica a chave AppGUID exclusiva que é designada ao serviço {{site.data.keyword.mobilepushshort}} que você criou no Bluemix.
 
-###Inicializando o SDK de Push do cliente
+### Inicializando o SDK de Push do cliente
 {: initializing-the-client-Push-SDK}
 
 ```
@@ -191,14 +191,14 @@ Para registrar aplicativos e dispositivos iOS, será necessário:
 2. Passar o token para o {{site.data.keyword.mobilepushshort}}.
 
 
-###Criar um aplicativo backend
+### Criar um aplicativo backend
 {: create-a-backend-app}
 
 Crie um aplicativo backend no catálogo do Bluemix® da seção Modelos, que ligará automaticamente o
 serviço {{site.data.keyword.mobilepushshort}} a esse aplicativo. Se você já tiver criado um app backend, assegure-se de ligar o app ao serviço {{site.data.keyword.mobilepushshort}}.
 
 
-###Passando tokens para {{site.data.keyword.mobilepushshort}}
+### Passando tokens para {{site.data.keyword.mobilepushshort}}
 {: pass-token-push-notifications}
 
 Depois que o token for recebido do APNs, passe-o para {{site.data.keyword.mobilepushshort}} como parte do método `registerWithDeviceToken`.
@@ -312,7 +312,7 @@ iOS. As opções de customização opcionais a seguir são suportadas.
 - **Som**: indica que um clique de som seja reproduzido no recebimento de uma notificação. Suporta o padrão ou o nome de um recurso de som empacotado no app.
 - **Carga útil adicional**: especifica os valores de carga útil customizados para suas notificações.
 
-##Ativando notificações interativas
+## Ativando notificações interativas
 
 Agora, é possível enriquecer suas notificações de iOS com mais detalhes, como incluir uma imagem, um mapa
 ou um botão de resposta ativando notificações interativas. Isso fornece mais contexto aos clientes,

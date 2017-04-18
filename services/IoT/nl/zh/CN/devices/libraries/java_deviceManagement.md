@@ -15,7 +15,7 @@ lastupdated: "2016-11-22"
 # 使用 Java 开发受管设备
 {: #java_deviceManagement}
 
-##简介
+## 简介
 {: #introduction}
 
 在 {{site.data.keyword.iot_full}} 中，受管设备是指可以执行设备管理操作（例如，固件、位置和诊断更新）的设备。使用提供的 {{site.data.keyword.iot_short}} Java™ 客户机库和信息可以开发 Java 代码，以用于将连接的设备转换为受管设备。此外，还提供了样本来帮助您开发 Java 代码，以用于将设备连接到“设备管理”服务以及运行设备管理操作。
@@ -681,7 +681,7 @@ public void propertyChange(PropertyChangeEvent evt) {
 -   [DeviceAttributesUpdateListenerSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/DeviceAttributesUpdateListenerSample.java) - 显示如何侦听各种设备属性更改的样本侦听器代码。
 -   [NonBlockingDiagnosticsErrorCodeUpdateSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/NonBlockingDiagnosticsErrorCodeUpdateSample.java) - 显示如何添加 ErrorCode 而不等待来自服务器的响应的样本。
 
-##诀窍
+## 诀窍
 {: #Recipes}
 
 请参阅[诀窍](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/)，其中显示了如何将 Raspberry Pi 设备作为受管设备连接到 {{site.data.keyword.iot_short_notm}}，以通过此客户机库逐步执行各种设备管理操作。

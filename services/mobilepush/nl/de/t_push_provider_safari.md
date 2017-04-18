@@ -23,7 +23,7 @@ In Chrome- und Safari-Browsern sind zusätzliche Konfigurationsschritte für Web
 
 
 
-##Web-Push für Chrome und Firefox konfigurieren 
+## Web-Push für Chrome und Firefox konfigurieren 
 {: #config-chrome-firefox}
 
 1. Wählen Sie in der Push-Dashboardanzeige **Konfigurieren** aus.

@@ -5,7 +5,7 @@
 
 **附註**：若要檢視 Swift Push Readme 檔，請移至 https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master
 
-##安裝 CocoaPods
+## 安裝 CocoaPods
 
 1. 在 Mac 終端機中，使用下列指令來安裝 CocoaPods。
 ```
@@ -50,7 +50,7 @@ $ pod update
 	```
 工作區會包含原始專案以及包含相依關係的 Pods 專案。如果您想要修改 Bluemix Mobile Services 來源資料夾，則可以在 Pods 專案的 `Pods/yourImportedSourceFolder` 下找到它，例如：`Pods/IMFGoogleAuthentication`。
 
-##使用匯入的架構和來源資料夾
+## 使用匯入的架構和來源資料夾
 
 在您的程式碼中參照 SDK。
 
@@ -67,7 +67,7 @@ $ pod update
 
 **附註**：使用 CocoaPods 指令 `pod install` 或 `pod update` 更新 Pods 專案時，可能會置換 Bluemix Mobile Services 來源資料夾。如果您要保留原始檔案的自訂版本，請確保先進行備份，然後再發出下列其中一個指令。
 
-###Swift
+### Swift
 
 **先決條件**
 
@@ -84,7 +84,7 @@ import BMSPush
 ```
 
 
-##建置設定
+## 建置設定
 
 移至 **Xcode > 建置設定 > 建置選項，然後將啟用位元碼**設為**否**。
 
@@ -98,9 +98,9 @@ import BMSPush
 
 放置起始設定碼的一般位置位於 iOS 應用程式的應用程式委派中。按一下「Bluemix 應用程式儀表板」中的**行動選項**鏈結，以取得應用程式的路徑及應用程式 GUID。
 
-##起始設定 Core SDK
+## 起始設定 Core SDK
 
-###Objective-C
+### Objective-C
 
 ```
 // Initialize the SDK for Object-C with IBM Bluemix GUID and route
@@ -108,7 +108,7 @@ IMFClient *imfClient = [IMFClient sharedInstance];
 [imfClient initializeWithBackendRoute:"add_your_applicationRoute_here" backendGUID:"add_your_appId_here"];
 ```
 
-###Swift
+### Swift
 
 ```
 // Initialize the Core SDK for Swift with IBM Bluemix GUID, route, and region
@@ -119,16 +119,16 @@ myBMSClient.defaultRequestTimeout = 10.0 // Timput in seconds
 ```
 
 
-##起始設定 Client Push SDK
+## 起始設定 Client Push SDK
 
-###Objective-C
+### Objective-C
 
 ```
 //Initialize client Push SDK for Objective-C
 IMFPushClient _pushService = [IMFPushClient sharedInstance];
 ```
 
-###Swift
+### Swift
 
 ```
 //Initialize client Push SDK for Swift
@@ -168,11 +168,11 @@ let push = BMSPushClient.sharedInstance
 2. 將記號傳遞至 Push Notifications
 
 
-##建立後端應用程式
+## 建立後端應用程式
 
 在 Bluemix® 型錄的「樣板」區段中建立後端應用程式，以自動將 Push 服務連結至此應用程式。如果您已建立後端應用程式，請確定將應用程式連結至 Push Notification Service。
 
-###Objective-C
+### Objective-C
 
 ```
 	//For Objective-C
@@ -189,7 +189,7 @@ let push = BMSPushClient.sharedInstance
 	}
 ```
 
-###Swift
+### Swift
 
 ```
 	//For Swift
@@ -201,11 +201,11 @@ let push = BMSPushClient.sharedInstance
 	}
 ```
 
-##將記號傳遞至 Push Notifications
+## 將記號傳遞至 Push Notifications
 
 從 APNs 接收到記號之後，將記號傳遞至 Push Notifications，這是 `registerDevice:withDeviceToken` 方法的一部分。
 
-###Objective-C
+### Objective-C
 
 ```
 //For Objective-C
@@ -227,7 +227,7 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 }];
 ```
 
-###Swift
+### Swift
 
 從 APNS 接收到記號之後，將記號傳遞至 Push Notifications，這是 `didRegisterForRemoteNotificationsWithDeviceToken` 方法的一部分。
 
@@ -255,7 +255,7 @@ func application (application: UIApplication, didRegisterForRemoteNotificationsW
 
 在 iOS 裝置上接收推送通知。
 
-##Objective-C
+## Objective-C
 若要在 iOS 裝置上接收推送通知，請將下列 Objective-C 方法新增至應用程式的應用程式委派。
 
 ```
@@ -265,7 +265,7 @@ func application (application: UIApplication, didRegisterForRemoteNotificationsW
 }
 ```
 
-##Swift
+## Swift
 若要在 iOS 裝置上接收推送通知，請將下列 Swift 方法新增至應用程式的應用程式委派。
 
 ```

@@ -13,7 +13,7 @@ copyright:
 单击 Bluemix 应用程序仪表板中的**移动选项**链接，以获取应用程序路径和应用程序 GUID。将这些值用于您的路径和应用程序 GUID。修改代码片段以使用 Bluemix 应用程序的 appRoute 和 appGUID 参数。
 
 
-##初始化核心 SDK
+## 初始化核心 SDK
 
 ```
 // Initialize the SDK for Java (Android) with IBM Bluemix AppGUID and route
@@ -37,7 +37,7 @@ BMSClient.getInstance().initialize(getApplicationContext(), "applicationRoute","
 - BMSClient.REGION_UK
 - BMSClient.REGION_SYDNEY
 
-##初始化客户机推送 SDK
+## 初始化客户机推送 SDK
 
 ```
 //Initialize client Push SDK for Java

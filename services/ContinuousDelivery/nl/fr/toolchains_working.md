@@ -19,12 +19,12 @@ Une *chaîne d'outils* est un ensemble d'intégrations d'outils prenant en charg
 
 Les chaînes d'outils sont disponibles dans les environnements {{site.data.keyword.Bluemix}} public et dédié. Vous pouvez créer une chaîne d'outils de deux façons : à l'aide d'un modèle ou à partir d'une application. Sur {{site.data.keyword.Bluemix_notm}} Public, les chaînes d'outils ne sont disponibles que dans la région Su des Etats-Unis.
 
-##Initiation aux chaînes d'outils : public
+## Initiation aux chaînes d'outils : public
 {: #getting_started_public}
 
 Chaque chaîne d'outils est associée à une organisation spécifique (org) et tout membre de cette organisation peut accéder aux chaînes d'outils associées. Avant de créer une chaîne d'outils, assurez-vous de travailler dans l'organisation dans laquelle vous voulez créer la chaîne d'outils. L'organisation au sein de laquelle vous travaillez actuellement s'affiche dans la barre de menus. Pour passer à une autre organisation, cliquez sur l'organisation dans la barre de menus, puis sélectionnez l'organisation souhaitée.
 
-###Création d'une chaîne d'outils à partir d'un modèle   
+### Création d'une chaîne d'outils à partir d'un modèle   
 {: #creating_a_toolchain_from_a_template}
 
 Vous pouvez utiliser un modèle comme point de départ pour [créer une chaîne d'outils
@@ -51,7 +51,7 @@ nouvelle fenêtre)](https://www.ibm.com/devops/method/category/tools){:new_windo
  * Si vous avez configuré l'intégration d'outil GitHub, le référentiel exemple GitHub est cloné dans votre compte GitHub.
 
 
-###Création d'une chaîne d'outils à partir d'une application
+### Création d'une chaîne d'outils à partir d'une application
 {: #creating_a_toolchain_from_an_app}
 
 Vous pouvez créer une chaîne d'outils depuis votre application. La chaîne d'outils peut prendre en charge en continu le développement, le déploiement, la surveillance, etc. et elle est associée à votre application. Chaque application peut être associée à une chaîne d'outils. Lorsque vous envoyez des modifications au référentiel GitHub de la chaîne d'outils, le pipeline génère et déploie automatiquement l'application.  
@@ -70,13 +70,13 @@ Vous pouvez créer une chaîne d'outils depuis votre application. La chaîne d'o
  * Si vous avez configuré l'intégration d'outil GitHub, le référentiel exemple GitHub est cloné dans votre compte GitHub.
 
 
-##Initiation aux chaînes d'outils : dédié
+## Initiation aux chaînes d'outils : dédié
 {: #getting_started_dedicated}
 
 Chaque chaîne d'outils est associée à une organisation spécifique, et tout utilisateur membre de cette organisation peut accéder aux chaînes d'outils associées. Avant
 de créer une chaîne d'outils, cliques sur l'icône **{{site.data.keyword.avatar}}** dans la barre de menu pour ouvrir le widget Compte et support et afficher l'organisation dans laquelle vous opérez. Si cette organisation n'est pas celle dans laquelle vous voulez créer la chaîne d'outils, passez à une autre organisation.
 
-###Création d'une chaîne d'outils à partir d'un modèle   
+### Création d'une chaîne d'outils à partir d'un modèle   
 {: #creating_a_toolchain_from_a_template_dedicated}
 
 Vous pouvez utiliser un modèle comme point de départ pour créer une chaîne d'outils incluant un ensemble spécifique d'intégrations d'outils.
@@ -97,7 +97,7 @@ Vous pouvez utiliser un modèle comme point de départ pour créer une chaîne d
  * Si vous avez configuré l'intégration d'outil GitHub Enterprise, le référentiel exemple GitHub Enterprise est cloné dans votre compte GitHub Enterprise.
 
 
-###Création d'une chaîne d'outils à partir d'une application
+### Création d'une chaîne d'outils à partir d'une application
 {: #creating_a_toolchain_from_an_app_dedicated}
 
 Vous pouvez créer une chaîne d'outils depuis votre application. La chaîne d'outils peut prendre en charge en continu le développement, le déploiement, la surveillance, etc. et elle est associée à votre application. Chaque application peut être associée à une chaîne d'outils. Lorsque vous envoyez des modifications au référentiel GitHub Enterprise de la chaîne d'outils, le pipeline génère et déploie automatiquement l'application.  
@@ -115,7 +115,7 @@ Vous pouvez créer une chaîne d'outils depuis votre application. La chaîne d'o
  * Si vous avez configuré l'intégration d'outil GitHub Enterprise, le référentiel exemple GitHub Enterprise est cloné dans votre compte GitHub Enterprise.
 
 
-##Affichage d'une chaîne d'outils
+## Affichage d'une chaîne d'outils
 {: #viewing_a_toolchain}
 
 Une fois que vous avez configuré la chaîne d'outils et ses intégrations d'outils, vous pouvez afficher une représentation visuelle de la

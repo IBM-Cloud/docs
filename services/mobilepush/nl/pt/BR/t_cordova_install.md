@@ -210,7 +210,7 @@ web part de seu aplicativo Cordova.
 
 
 
-##JavaScript
+## JavaScript
 {: #cordova_register_js}
 
 ```
@@ -284,7 +284,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData
 	}
 ```
 
-##Swift
+## Swift
 {: #cordova_register_swift}
 Inclua o seguinte fragmento de código Swift em sua classe de
 delegação de aplicativo.
@@ -299,7 +299,7 @@ funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificati
 }
 ```
 
-##Próximas Etapas
+## Próximas Etapas
 
 {: #cordova_register_next}
 
@@ -317,7 +317,7 @@ funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificati
 Copie e cole os fragmentos de código a seguir para receber
 notificações push em dispositivos.
 
-##JavaScript
+## JavaScript
 
 Inclua o seguinte fragmento de código JavaScript
 na web part do seu aplicativo Cordova.
@@ -331,7 +331,7 @@ var notification = function(notification){
 MFPPush.registerNotificationsCallback(notification);
 ```
 
-##Propriedades de notificação do Android
+## Propriedades de notificação do Android
 
 A seção a seguir lista as propriedades de notificação de Android:
 
@@ -339,7 +339,7 @@ A seção a seguir lista as propriedades de notificação de Android:
 * payload - objeto JSON contendo uma carga útil de notificação
 
 
-##Propriedades de notificação do iOS
+## Propriedades de notificação do iOS
 
 A seguinte seção lista as propriedades de notificação iOS:
 
@@ -352,7 +352,7 @@ estiver ausente, o badge não será mudado. Para remover o badge,
 configure o valor dessa propriedade para 0.
 * sound - O nome de um arquivo de som no pacote configurável de app ou na pasta Biblioteca/sons do contêiner de dados de app.
 
-##Objective-C
+## Objective-C
 
 Inclua os fragmentos de código Objective-C a seguir em sua classe de delegação de
 aplicativo.
@@ -376,7 +376,7 @@ fetchCompletionHandler:(void
 }
 ```
 
-##Swift
+## Swift
 
 Inclua os fragmentos de código Swift a seguir em sua classe de delegação de
 aplicativo.

@@ -16,13 +16,13 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#{{site.data.keyword.streaminganalyticsshort}} traitement des incidents 
+# {{site.data.keyword.streaminganalyticsshort}} traitement des incidents 
 {: #ts_StreamingAnalytics}
 
 Vous pouvez trouver des réponses aux questions courantes sur la façon d'utiliser {{site.data.keyword.streaminganalyticsshort}} sur {{site.data.keyword.Bluemix_short}}.
 {:shortdesc}
 
-##Quand je lance le service, il m'est demandé d'entrer des données d'identification pour me connecter à la console
+## Quand je lance le service, il m'est demandé d'entrer des données d'identification pour me connecter à la console
 {: #log_in_console}
 
 Lorsque vous lancez {{site.data.keyword.streaminganalyticsshort}}, vous êtes invité à indiquer vos donnée d'identification pour la connexion à la console de service.

@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#{{site.data.keyword.streamsshort}}-Anwendungen für die Cloud bereitstellen
+# {{site.data.keyword.streamsshort}}-Anwendungen für die Cloud bereitstellen
 {: #t_deploytocloud}
 
 Sie können Ihre {{site.data.keyword.streamsshort}}-Anwendungen

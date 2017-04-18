@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Dashboard di gestione del servizio
+# Dashboard di gestione del servizio
 {: #service-dashboard}
 
 
@@ -27,7 +27,7 @@ non arresti il servizio. Il dashboard di gestione del servizio visualizza inoltr
 e le statistiche.
 {:shortdesc}
 
-##Controlli regione {{site.data.keyword.geospatialshort_Geospatial}}
+## Controlli regione {{site.data.keyword.geospatialshort_Geospatial}}
 
 {{site.data.keyword.geospatialshort_Geospatial}} monitora i dispositivi
 in movimento da Internet of Things. Ogni dispositivo monitorato invia messaggi dispositivo contenenti un identificativo univoco

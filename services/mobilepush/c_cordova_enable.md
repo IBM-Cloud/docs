@@ -194,13 +194,13 @@ func application(application: UIApplication,
 ```
 	{: codeblock}
 
-##Next steps
+## Next steps
 
 {: #cordova_register_next}
 
 Build your project and then run your project by using the following commands:
 
-####Android
+#### Android
 {: android-next-steps}
 
 ```
@@ -213,7 +213,7 @@ cordova run android
 ```
 	{: codeblock}
 
-####iOS
+#### iOS
 {: ios-next-steps}
 
 ```
@@ -231,7 +231,7 @@ cordova run ios
 
 Copy the following code snippet to receive push notifications on devices.
 
-###JavaScript
+### JavaScript
 
 Add the following JavaScript code snippet to the web part of your Cordova application.
 ```
@@ -242,7 +242,7 @@ var showNotification = function(notif) {
 ```
 	{: codeblock}
 
-###Android notification properties
+### Android notification properties
 
 The following section lists the Android notification properties:
 
@@ -250,7 +250,7 @@ The following section lists the Android notification properties:
 * **payload** - JSON object containing a notification payload
 
 
-###iOS notification properties
+### iOS notification properties
 
 The following section lists the iOS notification properties:
 

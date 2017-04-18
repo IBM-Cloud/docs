@@ -136,7 +136,7 @@ FCM プロジェクトのセットアップおよび資格情報の取得につ�
 
 初期化コードを配置する一般的な場所は、Android アプリケーション内のメインアクティビティーの onCreate メソッド内です。初期化を必要とする SDK のコンポーネントが 2 つあります。1 つは Core SDK であり、もう 1 つは Core SDK の上にビルドされた Push SDK です。
 
-###Core SDK を初期化します。
+### Core SDK を初期化します。
 
 ```
 // Initialize the SDK for Android
@@ -144,7 +144,7 @@ FCM プロジェクトのセットアップおよび資格情報の取得につ�
 ```
     {: codeblock}
 
-####bluemixRegionSuffix
+#### bluemixRegionSuffix
 {: bluemixRegionSuffix}
 
 アプリがホストされている場所を指定します。次の 3 つの値のいずれかを使用できます。
@@ -153,7 +153,7 @@ FCM プロジェクトのセットアップおよび資格情報の取得につ�
 - BMSClient.REGION_UK
 - BMSClient.REGION_SYDNEY
 
-###クライアント Push SDK を初期化します。
+### クライアント Push SDK を初期化します。
 
 ```
 //Initialize client Push SDK for Java
@@ -162,7 +162,7 @@ push.initialize(getApplicationContext(), "appGUID", "clientSecret");
 ```
 	{: codeblock}
 
-####AppGUID
+#### AppGUID
 {: appguid_initialize_client_push_sdk}
 
 これは、{{site.data.keyword.mobilepushshort}}サービスの AppGUID キーです。この値では、大/小文字が区別されます。「Push Notification」ダッシュボードを開き、「構成」タブを選択します。「Push Notification」サービス・ダッシュボード上の「構成」タブの「モバイル・オプション」から、この値を取得できます。 

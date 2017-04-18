@@ -63,7 +63,7 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
 
 证书由认证中心发放并由该认证中心进行数字签名。创建 CSR 后，可以在公共认证中心生成 SSL 证书。
 
-##上传 SSL 证书
+## 上传 SSL 证书
 {: #ssl_certificate}
 
 您可以应用安全协议来为应用程序提供通信隐私，以防止窃听、篡改和消息伪造。

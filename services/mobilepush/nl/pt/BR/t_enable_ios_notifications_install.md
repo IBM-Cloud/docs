@@ -68,8 +68,8 @@ Escreva diretivas #import para os cabeçalhos relevantes, por exemplo:
 
 ```
 //Objective-C
-#import <IMFCore/IMFCore.h>
-#import <IMFPush/IMFPush.h>
+# import <IMFCore/IMFCore.h>
+# import <IMFPush/IMFPush.h>
 ```
 
 **Nota**: A atualização de seu projeto Pods usando os comandos

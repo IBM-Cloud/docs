@@ -98,12 +98,12 @@ To view help information for the commands, run: `bluemix network [command] -h`.
 bluemix network pnp-routers [--verbose (or -v)]
 ```
 
-#####Optional parameters
+##### Optional parameters
 {: #op1}
 
 * **--verbose (or -v)** (flag): View detailed network information about each router.
 
-######Command example
+###### Command example
 {: #ex1}
 
 To view network information about all routers:
@@ -153,13 +153,13 @@ To view detailed network information about all routers:
 bluemix network pnp-create <router_ip> <router_ip> <name>
 ```
 
-#####Parameters
+##### Parameters
 {: #p1}
 
 * **router_ip**: IP addresses of the two routers that you want to connect. You can find the IP addresses by using the command: `bluemix network pnp-routers`
 * **name**: Name of the private network peering connection.
 
-######Command example
+###### Command example
 {: #ex2}
 
 	$ bluemix network pnp-create 129.41.234.246 129.41.237.172 demo
@@ -170,19 +170,19 @@ bluemix network pnp-create <router_ip> <router_ip> <name>
 	Private network peering connection 'demo' created.
 
 
-####Create a private network peering connection by using the connection name
+#### Create a private network peering connection by using the connection name
 
 ```
 bluemix network pnp-create -i <name>
 ```
 
-#####Parameters
+##### Parameters
 {: #p2}
 
 * **--interactive (-i)** (flag): Interactive mode to select routers.
 * **name**: Name of the private network peering connection.
 
-######Command example
+###### Command example
 {: #ex3}
 
 	$ bluemix network pnp-create -i demo
@@ -208,12 +208,12 @@ bluemix network pnp-create -i <name>
 bluemix network pnp-show [--verbose (or -v)]
 ```
 
-#####Optional parameters
+##### Optional parameters
 {: #op2}
 
 * **--verbose (or -v)** (flag): View detailed network information about each router.
 
-######Command example
+###### Command example
 {: #ex4}
 
 View basic information:
@@ -247,16 +247,16 @@ View detailed information:
 ```
 bluemix network pnp-delete [--force (or -f)] <connection_id>
 ```
-#####Parameters
+##### Parameters
 {: #p3}
 * **connection_id**: One or more connection IDs separated by a comma.
 
-#####Optional parameters
+##### Optional parameters
 {: #op3}
 
 * **--force (or -f)** (flag): Deletes the connection without prompting for a confirmation.
 
-######Command example:
+###### Command example:
 {: #ex5}
 
 Delete a connection:

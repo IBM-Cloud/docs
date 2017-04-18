@@ -282,12 +282,12 @@ Per la distribuzione e configurazione iniziale del tuo ambiente puoi prevedere u
 
 Una volta configurata la tua istanza {{site.data.keyword.Bluemix_notm}}, puoi monitorare e gestire l'istanza {{site.data.keyword.Bluemix_notm}} utilizzando la pagina Amministrazione. Per ulteriori informazioni, vedi [Gestione di {{site.data.keyword.Bluemix_notm}} locale e dedicato](../admin/index.html#mng). Per informazioni su aggiornamenti e manutenzione, vedi [Manutenzione dell'istanza dedicata](index.html#maintaindedicated).
 
-##Ruoli e responsabilità
+## Ruoli e responsabilità
 {: #rolesresponsibilities}
 
 Se hai configurato un account {{site.data.keyword.Bluemix_dedicated_notm}}, devi identificare le persone all'interno della tua organizzazione a cui assegnare i ruoli necessari per rendere operativa la tua istanza.
 
-###Ruoli
+### Ruoli
 
 Il seguente elenco mostra i ruoli e le responsabilità dei clienti che puoi assegnare:
 
@@ -399,7 +399,7 @@ La fase finale di completamento rappresenta la fine del rapporto tra te e IBM {{
 |Riciclare l'infrastruttura | Il tuo ambiente viene riciclato in base ai processi definiti da {{site.data.keyword.BluSoftlayer}}. | IBM |
 {: caption="Table 7. Completion phase tasks" caption-side="top"}
 
-##Gestione della tua istanza dedicata
+## Gestione della tua istanza dedicata
 {: #maintaindedicated}
 
 IBM effettua la manutenzione e l'installazione di aggiornamenti e correzioni ogni qualvolta lo ritenta appropriato per i runtime e i servizi {{site.data.keyword.Bluemix_notm}}. I servizi potrebbero non essere disponibili durante le finestre di manutenzione. Inoltre, IBM collabora con te per pianificare gli aggiornamenti di manutenzione per la piattaforma {{site.data.keyword.Bluemix_notm}}.
@@ -506,7 +506,7 @@ Queste tecnologie includono:
 <dd>I metadati vengono sottoposti a backup mediante il sistema {{site.data.keyword.BluSoftlayer}} EVault Backup in una posizione che si trova ad almeno 200 km di distanza.</dd>
 </dl>
 
-##Ripristino della tua istanza dedicata
+## Ripristino della tua istanza dedicata
 {: #restorededicated}
 
 Il backup di impostazioni, metadati e configurazioni di {{site.data.keyword.Bluemix_dedicated_notm}} viene eseguito periodicamente come tutela in caso di eventuali interruzioni non pianificate nell'ambiente. I dati per i quali sei responsabile del backup includono i dati dell'applicazione, i dati dei servizi del database cloud e gli archivi oggetti.

@@ -15,7 +15,7 @@ copyright:
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#Création et affichage des éléments de travail {: #tp-creatingwis}  
+# Création et affichage des éléments de travail {: #tp-creatingwis}  
 
 *Dernière mise à jour : 29 avril 2016*
 {: .last-updated}
@@ -36,21 +36,21 @@ Les éléments de travail disposent de trois états de base :
 - **En cours** : l'élément de travail est démarré. Son statut est En cours.
 - **Résolu** : l'élément de travail est terminé. Son statut est Terminé ou Non valide.
 
-##Affichage des éléments de travail {: #tp-widisplay}  
+## Affichage des éléments de travail {: #tp-widisplay}  
 
 Vous pouvez afficher vos éléments de travail de différentes façons.    
 
-###Liste 
+### Liste 
 Quand vous affichez des éléments de travail dans une liste, chaque élément s'étend sur la largeur de la liste. Vous pouvez voir plus d'informations sur un élément de travail en le développant. Les attributs apparaissent sous forme d'icônes. 
 
 ![Affichage sous forme de liste](images/list_view.png)
 
-###Tableau  
+### Tableau  
 Quand vous affichez des éléments de travail dans un tableau, chaque élément apparaît en mode condensé. Certains attributs s'affichent sous forme d'icônes et de texte et sont disposés en colonnes.
 
 ![Affichage sous forme de tableau](images/table_view.png)
 
-###Lignes
+### Lignes
 Quand vous affichez des éléments de travail en ligne, les éléments sont regroupés par états. Les attributs apparaissent sous forme d'icônes. Vous pouvez afficher deux états à la fois. Pour afficher le troisième état, faites défiler les données horizontalement.
 
 ![Affichage sous forme de lignes](images/lane_view.png)

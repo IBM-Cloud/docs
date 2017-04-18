@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#與其他 {{site.data.keyword.Bluemix_short}} 服務整合的指導教學
+# 與其他 {{site.data.keyword.Bluemix_short}} 服務整合的指導教學
 {: #tutorials}
 
 

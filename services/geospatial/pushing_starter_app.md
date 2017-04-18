@@ -13,7 +13,7 @@ lastupdated: "2017-03-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#Pushing the starter application to {{site.data.keyword.Bluemix_short}}
+# Pushing the starter application to {{site.data.keyword.Bluemix_short}}
 {: #pushing_starter_app}
 
 
@@ -34,7 +34,7 @@ cf login
 cf push myapp
 </code></pre>
 
-##What to do next
+## What to do next
 {: #next notoc}
 
 * Go to your application overview page, accessible from the {{site.data.keyword.Bluemix_short}} dashboard, to verify that your application started successfully.

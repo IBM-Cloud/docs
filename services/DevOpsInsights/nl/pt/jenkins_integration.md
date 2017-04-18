@@ -23,12 +23,12 @@ Após definir as políticas para o {{site.data.keyword.DRA_full}} monitorar, a p
 É possível integrar o {{site.data.keyword.DRA_short}} em um projeto Jenkins ou ao longo de diversos projetos Jenkins relacionados. Isso permite que você
 configure portas de qualidade, bem como receba dados de qualidade de construção no painel do {{site.data.keyword.DRA_short}}.
 
-##Pré-Requisitos    
+## Pré-Requisitos    
 {: #DI_jenkins_prereqs}
 
 * Deve-se ter acesso a um projeto Jenkins local ou ao servidor que estiver executando um projeto Jenkins.
 
-##Instalando o plug-in do {{site.data.keyword.DRA_short}}
+## Instalando o plug-in do {{site.data.keyword.DRA_short}}
 {: #DI_jenkins_install}
 
 Para instalar o plug-in do {{site.data.keyword.DRA_short}} em seu projeto Jenkins, siga estas etapas:
@@ -41,7 +41,7 @@ Plugin (.hpi)](https://github.ibm.com/oneibmcloud/DRA-Jenkins/blob/hpi-release/t
   4. Clique em **Carregar**.
   5. Reinicie o Jenkins e verifique se o plug-in foi instalado.
 
-##Integrando o {{site.data.keyword.DRA_short}} com o Jenkins    
+## Integrando o {{site.data.keyword.DRA_short}} com o Jenkins    
 {: #DI_jenkins_integrate}
 
 Após o plug-in ser instalado, mas antes de integrar o {{site.data.keyword.DRA_short}} em sua instalação do Jenkins, acesse o [centro de controle](https://control-center.stage1.ng.bluemix.net/)

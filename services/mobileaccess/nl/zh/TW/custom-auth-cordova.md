@@ -174,7 +174,7 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 根據您的 Xcode 版本來登錄「授權管理程式」。
 
 ```
-#import "<your_module_name>-Swift.h"
+# import "<your_module_name>-Swift.h"
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 

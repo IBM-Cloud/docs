@@ -13,7 +13,7 @@ lastupdated: "2017-02-09"
 {:screen: .screen}
 {:pre: .pre}
 
-#将 {{site.data.keyword.streamsshort}} 应用程序部署到云
+# 将 {{site.data.keyword.streamsshort}} 应用程序部署到云
 {: #t_deploytocloud}
 
 您可以将 {{site.data.keyword.streamsshort}} 应用程序部署到在 {{site.data.keyword.Bluemix_short}} 云中运行的 {{site.data.keyword.streaminganalyticsshort}} 实例。

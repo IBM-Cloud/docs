@@ -22,12 +22,12 @@ lastupdated: "2016-11-11"
 
 您可以将 {{site.data.keyword.DRA_short}} 集成到一个 Jenkins 项目中或几个相关 Jenkins 项目中。这允许您设置质量检测点，以及在 {{site.data.keyword.DRA_short}} 仪表板上接收构建质量数据。
 
-##先决条件    
+## 先决条件    
 {: #DI_jenkins_prereqs}
 
 * 您必须具有本地 Jenkins 项目的访问权，或者具有正在运行 Jenkins 项目的服务器的访问权。
 
-##安装 {{site.data.keyword.DRA_short}} 插件
+## 安装 {{site.data.keyword.DRA_short}} 插件
 {: #DI_jenkins_install}
 
 要在 Jenkins 项目中安装 {{site.data.keyword.DRA_short}} 插件，请遵循以下步骤：
@@ -38,7 +38,7 @@ lastupdated: "2016-11-11"
   4. 单击**上传**。
   5. 重新启动 Jenkins 并验证已安装插件。
 
-##集成 {{site.data.keyword.DRA_short}} 与 Jenkins    
+## 集成 {{site.data.keyword.DRA_short}} 与 Jenkins    
 {: #DI_jenkins_integrate}
 
 安装插件之后，将 {{site.data.keyword.DRA_short}} 集成到 Jenkins 安装之前，先转至[控制中心](https://control-center.stage1.ng.bluemix.net/)并至少创建一个策略。

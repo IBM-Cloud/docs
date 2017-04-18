@@ -24,7 +24,7 @@ Your on-premises VPN gateway connects with the {{site.data.keyword.vpn_short}} g
 * [Configuring IBM VPN with IBM Bluemix Gateway Appliance Service](vpn_onpremises.html#gaas)
 * [Configuring IBM VPN with Cisco ASA](vpn_onpremises.html#cisco)
 
-##Configuring the IBM VPN service with strongSwan
+## Configuring the IBM VPN service with strongSwan
 {: #strongswan} 
 
 The IBM VPN setup uses the following example configuration:
@@ -37,7 +37,7 @@ Your on-premises strongSwan setup uses the following example configuration:
 * VPN gateway IP address (Customer Gateway IP): 169.55.254.166
 * Subnet address to which endpoints are connected (Customer Subnet): 10.121.33.192/26 
 
-###To use the IBM VPN service with strongSwan, configure as follows:
+### To use the IBM VPN service with strongSwan, configure as follows:
 
 1. [Configure the gateway](index.html#gateway).  
 2. [Configure site connection](index.html#site).  
@@ -154,7 +154,7 @@ Your on-premises strongSwan setup uses the following example configuration:
 		```
 		{: screen}  
 
-##Configuring the IBM VPN service with Vyatta
+## Configuring the IBM VPN service with Vyatta
 {: #vyatta} 
 
 The IBM VPN setup uses the following example configuration:
@@ -167,7 +167,7 @@ Your on-premises Vyatta setup uses the following example configuration:
 * VPN gateway IP address (Customer Gateway IP): 173.192.83.82
 * Subnet address to which endpoints are connected (Customer Subnet): 192.168.201.0/24 
 
-###To use the IBM VPN service with Vyatta, configure as follows:
+### To use the IBM VPN service with Vyatta, configure as follows:
 
 1. [Configure the gateway](index.html#gateway).
 2. [Configure site connection](index.html#site). 
@@ -435,7 +435,7 @@ Your on-premises Vyatta setup uses the following example configuration:
 		```
 		{: screen}  
 
-##Configuring the IBM VPN service with the IBM Bluemix Gateway Appliance Service 
+## Configuring the IBM VPN service with the IBM Bluemix Gateway Appliance Service 
 {: #gaas} 
 
 The IBM VPN setup uses the following example configuration:
@@ -449,7 +449,7 @@ Your on-premises IBM Bluemix Gateway Appliance Service setup uses the following 
 * Subnet address to which endpoints are connected (Customer Subnet): 10.86.88.128/26
 * Preshared key string: 567890 
 
-###To use the IBM VPN service with the IBM Bluemix Gateway Appliance Service, configure as follows:
+### To use the IBM VPN service with the IBM Bluemix Gateway Appliance Service, configure as follows:
 
 1. Configure IBM Bluemix Gateway Appliance Service:
 
@@ -649,7 +649,7 @@ Your on-premises IBM Bluemix Gateway Appliance Service setup uses the following 
 	```
 	{: screen}
 
-##Configuring the IBM VPN service with Cisco ASA
+## Configuring the IBM VPN service with Cisco ASA
 {: #cisco}
 
 The IBM VPN setup uses the following example configuration:
@@ -662,7 +662,7 @@ Your on-premises setup uses the following example configuration:
 * VPN gateway IP address (Customer Gateway IP): 62.95.35.53
 * Subnet address to which endpoints are connected (Customer Subnet): 10.2.0.0/16
 
-###To use the IBM VPN service with Cisco ASA, configure as follows:
+### To use the IBM VPN service with Cisco ASA, configure as follows:
 
 1. [Configure the gateway](index.html#gateway).
 2. [Configure site connection](index.html#site).
