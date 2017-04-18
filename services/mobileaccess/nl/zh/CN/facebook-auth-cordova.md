@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。
 
 # 启用 Cordova 应用程序的 Facebook 认证
 {: #facebook-auth-cordova}
@@ -32,7 +33,7 @@ lastupdated: "2017-01-15"
 * 应用程序路径。这是后端应用程序的 URL。
 * `tenantId` 值。打开 {{site.data.keyword.amashort}} 服务仪表板。单击**移动选项**。`tenantId`（也称为 `appGUID`）值会显示在**应用程序 GUID/TenantId** 字段中。您将需要这些值来初始化 SDK，并将请求发送到后端服务。
 *  找到托管 {{site.data.keyword.Bluemix_notm}} 服务的区域。您可以在菜单栏中的**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的头中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。区域值应为以下某个值：**美国南部**、**悉尼**或**英国**。对应于这些名称的准确 SDK 常量值如代码示例中所示。
-* Facebook 应用程序和应用程序标识。有关更多信息，请参阅[从 Facebook 开发者门户网站获取 Facebook 应用程序标识](facebook-auth-overview.html#facebook-appID)。
+* Facebook 应用程序和应用程序标识。有关更多信息，请参阅[在 Facebook for Developers Web 站点上创建应用程序](facebook-auth-overview.html#facebook-appID)。
 
 
 

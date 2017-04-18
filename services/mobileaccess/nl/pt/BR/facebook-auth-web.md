@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+O serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.
 
 # Ativando a autenticação do Facebook para aplicativos da
 web
@@ -230,7 +231,8 @@ parâmetros de formulário. Envie
 de autorização anterior. O valor de parâmetro `code` deve ser o código de concessão recebido na resposta da solicitação de
 autorização. O código de concessão é válido por 10 minutos, após os quais um novo código deve ser recuperado.
 
-	O corpo de resposta conterá o código de acesso e o ID de token no formato JWT (veja o[website do JWT![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://jwt.io/ "Ícone de link externo"){: new_window}.
+	O corpo de resposta conterá o código de acesso e o ID de token no formato JWT (veja o
+[website JWT ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://jwt.io/){: new_window}.
 
 	Assim que tiver obtido acesso e recebido os tokens de identidade, será possível sinalizar a sessão da web como autenticada e, opcionalmente, persistir esses tokens.  
 

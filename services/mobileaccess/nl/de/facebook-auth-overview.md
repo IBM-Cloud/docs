@@ -2,13 +2,15 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
+
+Der {{site.data.keyword.amafull}}-Service wird durch den {{site.data.keyword.appid_full}}-Service ersetzt.
 
 # Benutzer mit Facebook-Berechtigungsnachweisen authentifizieren
 {: #facebook-auth-overview}
@@ -57,7 +59,7 @@ Zur Verwendung von Facebook als Identitätsprovider müssen Sie eine Anwendung a
 
 Diesen Wert benötigen Sie, um die Facebook-Authentifizierung für Ihre mobile App oder Web-App zu konfigurieren.
 
-1. Rufen Sie die [Facebook for Developers-Website ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developers.facebook.com "Symbol für externen Link"){: new_window} auf.
+1. Rufen Sie die [Facebook for Developers-Website ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developers.facebook.com){: new_window} auf.
 
 1. Öffnen Sie die Pulldown-Liste **Meine Apps** und wählen Sie **Neue App hinzufügen** aus.
 

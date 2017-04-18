@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -11,6 +11,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.
 
 # Acerca de {{site.data.keyword.amashort}}
 {: #mca-overview}
@@ -91,16 +93,14 @@ En el diagrama siguiente se describe el flujo de una solicitud, desde el SDK del
 ## Obtener ayuda y soporte para {{site.data.keyword.amashort}}
 {: #gettinghelp}
 
-Si tiene problemas o preguntas a la hora de utilizar {{site.data.keyword.amashort}}, obtendrá ayuda en la información que encuentre o planteando preguntas en el foro. También puede abrir una incidencia de soporte. 
+Si tiene problemas o preguntas a la hora de utilizar {{site.data.keyword.amashort}}, obtendrá ayuda en la información que encuentre o planteando preguntas en el foro. También puede abrir una incidencia de soporte.
 
 Si utiliza el foro para hacer preguntas, etiquete su pregunta para que los equipos de desarrolladores de {{site.data.keyword.Bluemix_notm}} la puedan ver.
 
-* Si tiene preguntas técnicas sobre el desarrollo o despliegue de una app con {{site.data.keyword.amashort}}, publique la pregunta en [Stack Overflow ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://stackoverflow.com/search?q={{site.data.keyword.amashort}}+ibm-bluemix "Icono de enlace externo"){: new_window} y etiquete la pregunta con "ibm-bluemix" y "{{site.data.keyword.amashort}}".
-* Para preguntas referidas al servicio e instrucciones de cómo empezar, utilice el foro de [IBM developerWorks ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=mobile+client+access%20%2B[bluemix] "Icono de enlace externo"){: new_window}.
+* Si tiene preguntas técnicas sobre el desarrollo o despliegue de una app con {{site.data.keyword.amashort}}, publique la pregunta en [Stack Overflow ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](http://stackoverflow.com/search?q={{site.data.keyword.amashort}}+ibm-bluemix){: new_window} y etiquete la pregunta con `ibm-bluemix` y `{{site.data.keyword.amashort}}`.
+* Para preguntas referidas al servicio e instrucciones de cómo empezar, utilice el foro de [IBM developerWorks ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=mobile+client+access%20%2B[bluemix]){: new_window}.
 
-. 
 
 Consulte [Obtención de ayuda](https://www.{DomainName}/docs/support/index.html#getting-help) para obtener más detalles sobre el uso de los foros.
 
 Para obtener información sobre cómo abrir una incidencia de soporte de IBM o sobre los niveles de soporte y la gravedad de las incidencias, consulte [Cómo obtener soporte](https://www.{DomainName}/docs/support/index.html#contacting-support).
-

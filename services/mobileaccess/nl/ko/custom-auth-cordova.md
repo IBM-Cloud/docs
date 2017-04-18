@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -11,6 +11,8 @@ lastupdated: "2017-01-08"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+{{site.data.keyword.amafull}} 서비스가 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다.
 
 # {{site.data.keyword.amashort}} Cordova 앱용 사용자 정의 인증 구성
 {: #custom-cordova}
@@ -107,7 +109,7 @@ authenticationContext.submitAuthenticationFailure(info);
 ## 사용자 정의 인증 리스너 워크플로우의 샘플 구현
 {: #custom-cordova-authlisten-sample}
 
-이 인증 리스너 샘플은 사용자 정의 ID 제공자와 함께 작동하도록 설계되었습니다. [이 Github 저장소 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "외부 링크 아이콘"){: new_window}에서 사용자 정의 ID 제공자를 다운로드할 수 있습니다. 
+이 인증 리스너 샘플은 사용자 정의 ID 제공자와 함께 작동하도록 설계되었습니다. 사용자 정의 ID 제공자는 [이 Github 저장소 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}에서 다운로드할 수 있습니다. 
 
 ```JavaScript
 var customAuthenticationListener = {

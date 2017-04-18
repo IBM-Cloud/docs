@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -11,6 +11,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。
 
 # 关于 {{site.data.keyword.amashort}}
 {: #mca-overview}
@@ -93,18 +95,16 @@ lastupdated: "2017-01-15"
 {: #gettinghelp}
 
 如果在使用 {{site.data.keyword.amashort}} 时遇到任何问题或者有任何疑问，都可以
-通过搜索信息或通过论坛提问来获得帮助。您还可以开具支持凭单。 
+通过搜索信息或通过论坛提问来获得帮助。您还可以开具支持凭单。
 
 在使用论坛提问时，请给问题做标记，以便 {{site.data.keyword.Bluemix_notm}} 开发
 团队能看到您的问题。
 
-* 如果是关于使用 {{site.data.keyword.amashort}} 开发或者部署应用程序方面的问题，请在 [Stack Overflow ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://stackoverflow.com/search?q={{site.data.keyword.amashort}}+ibm-bluemix "外部链接图标"){: new_window} 上发帖，并将问题标记为“ibm-bluemix”和“{{site.data.keyword.amashort}}”。
-* 有关服务和入门指示信息的问题，请使用 [IBM developerWorks ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=mobile+client+access%20%2B[bluemix] "外部链接图标"){: new_window} 
+* 如果在使用 {{site.data.keyword.amashort}} 开发或部署应用程序时遇到技术问题，请在 [Stack Overflow ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://stackoverflow.com/search?q={{site.data.keyword.amashort}}+ibm-bluemix){: new_window} 上发帖，并使用 `ibm-bluemix` 和 `{{site.data.keyword.amashort}}` 标记您的问题。
+* 有关服务和入门指示信息的问题，请使用 [IBM developerWorks ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=mobile+client+access%20%2B[bluemix]){: new_window}。
 
-论坛。 
 
 请参阅[获取
 帮助](https://www.{DomainName}/docs/support/index.html#getting-help)了解有关如何使用论坛的更多详细信息。
 
 有关开具 IBM 支持凭单的信息，或有关支持级别和凭单严重性的信息，请参阅[联系支持人员](https://www.{DomainName}/docs/support/index.html#contacting-support)。
-

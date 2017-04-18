@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。
 
 # 启用 iOS 应用程序 (Swift SDK) 的 Google 认证
 {: #google-auth-ios}
@@ -32,7 +34,7 @@ lastupdated: "2017-01-15"
 ## 准备应用程序以进行 Google 登录
 {: #google-sign-in-ios}
 
-遵循 Google 在[针对 iOS 的 Google 登录 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developers.google.com/identity/sign-in/ios/start-integrating "外部链接图标"){: new_window} 中提供的指示信息，准备应用程序以进行 Google 登录。
+按照 Google 在[针对 iOS 的 Google 登录 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developers.google.com/identity/sign-in/ios/start-integrating){: new_window} 中提供的指示信息，做好应用程序进行 Google 登录的准备。
 
 此过程会：
 
@@ -46,7 +48,7 @@ lastupdated: "2017-01-15"
 
 1. 记录 Xcode 项目中来自主要目标**常规**选项卡**身份**部分的**捆绑软件标识**。您需要它创建 Google 登录项目。
 
-1. 在 [Google 开发者站点 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developers.google.com/mobile/add?platform=ios "外部链接图标"){: new_window} 上创建项目，以为 iOS 进行 Google 登录。
+1. 在 [Google Developer 站点 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developers.google.com/mobile/add?platform=ios){: new_window} 上，为针对 iOS 的 Google 登录创建项目。
 
 1. 向您的项目添加 Google 登录 API。
 
@@ -54,9 +56,9 @@ lastupdated: "2017-01-15"
 
    **重要信息：**获取 `GoogleService-Info.plist` 文件时，请打开该文件，并记录 `CLIENT_ID` 值。您稍后配置 {{site.data.keyword.amashort}} 后端应用程序时需要此值。
 
-1. 将 `GoogleService-Info.plist` 文件添加到 Xcode 项目。有关更多信息，请参阅[添加配置文件到项目 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config "外部链接图标"){: new_window}。
+1. 将 `GoogleService-Info.plist` 文件添加到 Xcode 项目。有关更多信息，请参阅[为项目添加配置文件 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config){: new_window}。
 
-1. 在 Xcode 项目中，使用 `REVERSE_CLIENT_ID` 和捆绑软件标识更新 URL 方案。有关更多信息，请参阅[添加 URL 方案到项目 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project "外部链接图标"){: new_window}。
+1. 在 Xcode 项目中，使用 `REVERSE_CLIENT_ID` 和捆绑软件标识更新 URL 方案。有关更多信息，请参阅[为项目添加 URL 方案 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project){: new_window}。
 
 1. 使用以下代码更新应用程序的 `project-Bridging-Header.h` 文件：
 
@@ -65,7 +67,7 @@ lastupdated: "2017-01-15"
 	```
 	{: codeblock}
 
-	有关更新桥接头文件的更多信息，请参阅[启用登录 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in "外部链接图标"){: new_window}。
+	有关更新桥接头文件的更多信息，请参阅[启用登录 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in){: new_window}。
 
 ## 配置 {{site.data.keyword.amashort}} 进行 Google 认证
 {: #google-auth-ios-config}
@@ -93,7 +95,7 @@ lastupdated: "2017-01-15"
 ```
 	{: codeblock}
 
-有关更多信息，请参阅 [CocoaPods Web 站点![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cocoapods.org/ "外部链接图标"){: new_window}。
+有关更多信息，请参阅 [CocoaPods Web 站点 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cocoapods.org/){: new_window}。
 
 ### 使用 CocoaPods 安装 {{site.data.keyword.amashort}} 客户端 Swift SDK
 {: #facebook-auth-install-swift-cocoapods}

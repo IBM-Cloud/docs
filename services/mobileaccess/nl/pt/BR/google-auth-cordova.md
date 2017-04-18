@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+O serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.
 
 # Ativando a autenticação do Google para apps Cordova
 {: #google-auth-cordova}
@@ -168,7 +170,9 @@ Authorization Manager no Objective-C no arquivo
 ```
 {: codeblock}
 
-**Nota:**
+
+####Nota:
+{: #note notoc}
 
 * Substitua `<your_module_name>`
 pelo nome do módulo do seu projeto. Por exemplo, se o nome do

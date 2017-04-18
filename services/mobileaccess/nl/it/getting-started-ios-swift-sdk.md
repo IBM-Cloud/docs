@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+Il servizio {{site.data.keyword.amafull}} è stato sostituito con il servizio {{site.data.keyword.appid_full}}.
 
 # Configurazione dell'SDK Swift iOS
 {: #getting-started-ios}
@@ -30,7 +31,7 @@ Strumenta la tua applicazione Swift iOS con l'SDK {{site.data.keyword.amashort}}
 * Il tuo **TenantID**. Apri il tuo servizio nel dashboard {{site.data.keyword.amashort}}. Fai clic su **Opzioni mobili**. I valori `tenantId` (noti anche come `appGUID`)  vengono visualizzati nel campo **GUID applicazione / TenantId**. Avrai bisogno di questo valore per inizializzare il gestore autorizzazione {{site.data.keyword.amashort}}.
 * La tua **Rotta applicazione**. Questa è l'URL della tua applicazione di back-end. Hai bisogno di questo valore per inviare le richieste agli endpoint protetti correlati.
 * La tua **Regione** {{site.data.keyword.Bluemix_notm}}.  Puoi trovare la tua regione {{site.data.keyword.Bluemix_notm}} corrente nell'intestazione, accanto all'icona **Avatar** ![Icona Avatar](images/face.jpg "Icona Avatar"). Il valore della regione visualizzato deve essere uno dei seguenti: `Stati Uniti Sud`,  `Sydney` o  `Regno Unito` e corrisponde ai valori delle SDK richiesti nel codice: `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` o `BMSClient.Region.sydney`.  Avrai bisogno di questo valore per inizializzare l'SDK {{site.data.keyword.amashort}}.
-* Un progetto Xcode. Per ulteriori informazioni su come configurare il tuo ambiente di sviluppo iOS, consulta il [sito Web Apple Developer![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.apple.com/support/xcode/ "Icona link esterno"){: new_window}.
+* Un progetto Xcode. Per ulteriori informazioni su come configurare il tuo ambiente di sviluppo iOS, visita il [sito Web Apple Developer ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.apple.com/support/xcode/){: new_window}.
 
 
 ## Installazione dell'SDK client {{site.data.keyword.amashort}}
@@ -50,7 +51,7 @@ sudo gem install cocoapods
 ```
 {: codeblock}
 
-Per ulteriori informazioni, visita il [sito Web CocoaPods![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cocoapods.org/ "Icona link esterno"){: new_window}.
+Per ulteriori informazioni, visita il [sito Web CocoaPods ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cocoapods.org/){: new_window}.
 
 ### Installa l'SDK client {{site.data.keyword.amashort}} con CocoaPods
 {: #install-sdk-cocoapods}
@@ -70,7 +71,7 @@ Per ulteriori informazioni, visita il [sito Web CocoaPods![Icona link esterno](.
 
   **Suggerimento:** puoi aggiungere `use_frameworks!` alla tua destinazione Xcode invece di averlo nel Podfile.
 
-1. Salva il file `Podfile` ed esegui `pod install` dalla riga di comando. Cocoapods installa le dipendenze rilevanti e visualizza i pod e le dipendenze aggiunte.<br/>
+1. Salva il file `Podfile` ed esegui `pod install` dalla riga di comando. CocoaPods  installa le dipendenze rilevanti e visualizza i pod e le dipendenze aggiunte.<br/>
 
    **Importante**: CocoaPods genera un file `xcworkspace`.  In futuro, dovrai aprire questo file per lavorare sul tuo progetto.
 

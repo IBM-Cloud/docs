@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+O serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.
 
 # Ativando a autenticação do Facebook para apps iOS (Swift SDK)
 {: #facebook-auth-ios}
@@ -48,7 +50,7 @@ valor para inicializar o cliente
 * Um projeto do iOS configurado para funcionar com o CocoaPods.  Para obter mais informações,
 veja **Instalar o CocoaPods** em [Configurando o iOS Swift SDK](getting-started-ios-swift-sdk.html).  
    **Nota:** não é necessário instalar o {{site.data.keyword.amashort}} client SDK principal antes de continuar.
-* Um aplicativo Facebook no website [Facebook for Developers ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developers.facebook.com "Ícone de link externo"){: new_window}.
+* Um aplicativo Facebook no website [Facebook for Developers ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://developers.facebook.com){: new_window}.
 
 **Importante:** não é necessário instalar separadamente o Facebook SDK (`com.facebook.FacebookSdk`). O Facebook SDK é instalado automaticamente com o pod {{site.data.keyword.amashort}} `BMSFacebookAuthentication`. É possível ignorar a etapa **Incluir o Facebook SDK em seu projeto do Xcode** ao incluir ou configurar seu app no website Facebook for Developers.
 
@@ -57,7 +59,7 @@ veja **Instalar o CocoaPods** em [Configurando o iOS Swift SDK](getting-started-
 
 No site Facebook for Developers:
 
-1. Efetue login em sua conta no  [Facebook for Developers ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developers.facebook.com "Ícone de link externo"){: new_window}.
+1. Efetue login em sua conta no [Facebook for Developers ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://developers.facebook.com){: new_window}.
 
 1. Assegure-se de que a plataforma iOS tenha sido incluída em seu app. Ao incluir ou
 configurar a plataforma iOS, será necessário fornecer o **bundleId** do
@@ -101,7 +103,7 @@ autenticação do Facebook no seu serviço
    ```
    {: codeblock}
 
-Para obter mais informações, veja o [website CocoaPods ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cocoapods.org/ "Ícone de link externo"){: new_window}.
+Para obter mais informações, veja o [website CocoaPods ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://cocoapods.org/){: new_window}.
 
 ### Instalando o {{site.data.keyword.amashort}} client Swift SDK com o CocoaPods
 {: #facebook-auth-install-swift-cocoapods}
@@ -201,7 +203,7 @@ a guia `Recursos` e mude
 `FacebookappID` com seu ID do aplicativo Facebook. Atualize o
 `FacebookDisplayName` com o nome do seu aplicativo Facebook.
 
-   **Importante**: assegure-se de não substituir quaisquer propriedades existentes no arquivo `info.plist`. Se você tiver propriedades de sobreposição, deverá mesclá-las manualmente. Para obter mais informações, veja [Configurar o Projeto Xcode![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developers.facebook.com/docs/ios/getting-started/ "Ícone de link externo"){: new_window} e [Preparando seus apps para o iOS9 ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developers.facebook.com/docs/ios/ios9 "Ícone de link externo"){: new_window}.
+   **Importante**: assegure-se de não substituir quaisquer propriedades existentes no arquivo `info.plist`. Se você tiver propriedades de sobreposição, deverá mesclá-las manualmente. Para obter mais informações, veja [Configurar o Projeto Xcode ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://developers.facebook.com/docs/ios/getting-started/){: new_window} e [Preparando seus apps para iOS9 ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://developers.facebook.com/docs/ios/ios9){: new_window}.
 
 ## Inicializando o {{site.data.keyword.amashort}} client Swift SDK
 {: #facebook-auth-ios-initalize-swift}
@@ -284,8 +286,7 @@ Deve-se estar usando o modelo do {{site.data.keyword.mobilefirstbp}} e já ter u
 **Opções de dispositivo móvel** (veja [Configurando o Mobile Client Access para autenticação do
 Facebook](#facebook-auth-ios-configmca)).
 Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`
-<br/>O terminal `/protected` de um aplicativo backend móvel que foi criado com o modelo MobileFirst Services Starter é
-protegido com {{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada no navegador. Essa mensagem é retornada porque esse terminal só pode ser acessado somente por aplicativos móveis instrumentados com o {{site.data.keyword.amashort}} client SDK.
+<br/>O terminal `/protected` de um aplicativo backend móvel que foi criado com o modelo MobileFirst Services Starter é protegido com {{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada no navegador. Essa mensagem é retornada porque esse terminal só pode ser acessado somente por aplicativos móveis instrumentados com o {{site.data.keyword.amashort}} client SDK.
 
 1. Use seu aplicativo iOS para fazer uma solicitação ao mesmo terminal.
 

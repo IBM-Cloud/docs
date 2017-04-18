@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。
 
 # 啟用 Cordova 應用程式的 Facebook 鑑別
 {: #facebook-auth-cordova}
@@ -32,7 +33,7 @@ lastupdated: "2017-01-15"
 * 應用程式路徑。這是後端應用程式的 URL。
 * `tenantId` 值。開啟 {{site.data.keyword.amashort}} 服務儀表板。按一下**行動選項**。`tenantId`（也稱為 `appGUID`）值會顯示在**應用程式 GUID/承租戶 ID** 欄位中。在起始設定 SDK 以及傳送要求至後端服務時，將需要這些值。
 *  尋找管理 {{site.data.keyword.Bluemix_notm}} 服務的地區。您可以在標頭中找到您目前的 {{site.data.keyword.Bluemix_notm}} 地區，就在功能表列**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示") 的旁邊。地區值應該是下列其中一項：**美國南部**、**雪梨**或**英國**。程式碼範例中會指出對應至這些名稱的確切 SDK 常數值。
-* Facebook 應用程式及應用程式 ID。如需相關資訊，請參閱[從 Facebook 開發人員入口網站取得 Facebook 應用程式 ID](facebook-auth-overview.html#facebook-appID)。
+* Facebook 應用程式及應用程式 ID。如需相關資訊，請參閱[在 Facebook for Developers 網站上建立應用程式](facebook-auth-overview.html#facebook-appID)。
 
 
 

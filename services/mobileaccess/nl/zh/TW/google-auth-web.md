@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -11,6 +11,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。
 
 # 啟用 Web 應用程式的 Google 鑑別
 {: #google-auth-web}
@@ -35,7 +37,7 @@ lastupdated: "2017-01-15"
 ## 配置網站的 Google 應用程式
 {: #google-auth-config}
 
-若要開始使用 Google 作為身分提供者，請在 [Google Developer Console ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.developers.google.com "外部鏈結圖示"){: new_window} 中建立專案。建立專案的一部分是取得 **Google 用戶端 ID** 及**密碼**。「Google 用戶端 ID」和「密碼」是 Google 鑑別所使用之您的應用程式的唯一 ID，並且是設定 {{site.data.keyword.amashort}} 儀表板的必要項目。
+若要開始使用 Google 作為身分提供者，請在 [Google Developer Console ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.developers.google.com){: new_window} 中建立專案。建立專案的一部分是取得 **Google 用戶端 ID** 及**密碼**。「Google 用戶端 ID」和「密碼」是 Google 鑑別所使用之您的應用程式的唯一 ID，並且是設定 {{site.data.keyword.amashort}} 儀表板的必要項目。
 
 1. 在 Google Developer Console 中，開啟 Google 應用程式。
 3. 新增 **Google+** API。
@@ -98,27 +100,22 @@ lastupdated: "2017-01-15"
 		res.send("Hello from protected endpoint");
 	});
 
-	app.get("/protected", checkAuthentication, function(req, res, next) {
-		res.send("Hello from protected endpoint");
-		function checkAuthentication(req, res, next) {
-
-			// Check if user is authenticated
+	function checkAuthentication(req, res, next) {
+		// Check if user is authenticated
 			if (req.session.userIdentity) {
 				next()
-			} else {
-				// If not - redirect to authorization server
-				var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
-				var authorizationEndpoint = mcaCredentials.authorizationEndpoint;
-				var clientId = mcaCredentials.clientId;
-				var redirectUri = "http://some-server/oauth/callback"; // Your Web application redirect URI
-				var redirectUrl = authorizationEndpoint + "?response_type=code";
-				redirectUrl += "&client_id=" + clientId;
-				redirectUrl += "&redirect_uri=" + redirectUri;
-				res.redirect(redirectUrl);
-				}
-		 	}
-	   	}
-       }
+		} else {
+			// If not - redirect to authorization server
+			var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
+			var authorizationEndpoint = mcaCredentials.authorizationEndpoint;
+			var clientId = mcaCredentials.clientId;
+			var redirectUri = "http://some-server/oauth/callback"; // Your Web application redirect URI
+			var redirectUrl = authorizationEndpoint + "?response_type=code";
+			redirectUrl += "&client_id=" + clientId;
+			redirectUrl += "&redirect_uri=" + redirectUri;
+			res.redirect(redirectUrl);
+		}
+	}
 	```
 	{: codeblock}
 

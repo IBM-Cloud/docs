@@ -2,10 +2,12 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2016-12-04"
+lastupdated: "2017-03-15"
 
 ---
 {:codeblock:.codeblock}
+
+El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.
 
 # Protección de los recursos Liberty for Java con {{site.data.keyword.amashort}}
 {: #protecting-liberty}
@@ -28,7 +30,7 @@ Debe estar familiarizado con el desarrollo de aplicaciones Liberty for Java en {
 1. Copie el directorio `OAuthTai-1.0.mf` en el directorio `$<wlp.user.dir>/extension/lib/features`.
 
 
-## Configuración del servidor de Liberty for Java para que utilice el SDK del servidor de {{site.data.keyword.amashort}}.
+## Configuración del servidor de Liberty for Java para que utilice el SDK del servidor de {{site.data.keyword.amashort}}
 {: #configuring-liberty}
 
 1. Edite el archivo `server.xml` y añada las funciones necesarias.

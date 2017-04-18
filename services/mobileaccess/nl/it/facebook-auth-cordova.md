@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+Il servizio {{site.data.keyword.amafull}} è stato sostituito con il servizio {{site.data.keyword.appid_full}}.
 
 # Abilitazione dell'autenticazione Facebook per le applicazioni Cordova
 {: #facebook-auth-cordova}
@@ -32,7 +33,7 @@ Utilizza l'ambiente di sviluppo nativo per apportare modifiche nel codice nativo
 * La tua rotta dell'applicazione. Questa è l'URL della tua applicazione di back-end.
 * Il tuo valore `tenantId`. Apri il tuo dashboard del servizio {{site.data.keyword.amashort}}. Fai clic su **Opzioni mobili**. Il valore `tenantId` (noto anche come `appGUID`)  viene visualizzato nel campo **GUID applicazione / TenantId**. Avrai bisogno di questi valori per inizializzare l'SDK e per inviare le richieste al servizio di backend.
 *  Trova la regione in cui è ospitato il tuo servizio {{site.data.keyword.Bluemix_notm}}. Puoi trovare la tua regione {{site.data.keyword.Bluemix_notm}} corrente nell'intestazione, accanto all'icona **Avatar** ![Icona Avatar](images/face.jpg "Icona Avatar")  nella barra del menu. Il valore della regione deve essere uno dei seguenti: **Stati Uniti Sud**, **Sydney** o **UK**. I valori costanti della SDK esatti che corrispondono a tali nomi sono indicati negli esempi di codice.
-* Un'applicazione Facebook e l'ID applicazione. Per ulteriori informazioni, vedi [Ottenimento di un ID applicazione Facebook dal portale sviluppatori Facebook](facebook-auth-overview.html#facebook-appID).
+* Un'applicazione Facebook e l'ID applicazione. Per ulteriori informazioni, vedi [Creazione di un'applicazione nel sito web Facebook for Developers](facebook-auth-overview.html#facebook-appID).
 
 
 

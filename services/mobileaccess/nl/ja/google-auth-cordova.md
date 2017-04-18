@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+{{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービスに置き換えられます。
 
 # Cordova アプリ用の Google 認証の使用可能化
 {: #google-auth-cordova}
@@ -129,7 +131,9 @@ Cordova アプリケーションの iOS プラットフォームを Google 認�
 ```
 {: codeblock}
 
-**注:**
+
+####注:
+{: #note notoc}
 
 * `<your_module_name>` をプロジェクトのモジュール名に置き換えます。例えば、モジュール名が `Cordova` の場合、インポート行は `#import "Cordova-Swift.h"` になります。モジュール名を見つけるには、`「ビルド設定 (Build Settings)」`タブ、`「パッケージ化 (Packaging)」` > `「製品モジュール名 (Product Module Name)」`に移動します。
 * `<tenantId>` をご使用のテナント ID ([開始する前に](#before-you-begin)を参照) に置き換えます。

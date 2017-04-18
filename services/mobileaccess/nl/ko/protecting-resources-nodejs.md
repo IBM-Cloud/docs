@@ -2,12 +2,14 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2016-10-27"
+lastupdated: "2017-03-15"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 {:codeblock:.codeblock}
+
+{{site.data.keyword.amafull}} 서비스가 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다.
 
 # {{site.data.keyword.amashort}}를 사용하여 Node.js 리소스 보호
 {: #protecting-resources-nodejs}
@@ -19,14 +21,14 @@ lastupdated: "2016-10-27"
 {: #before-you-begin}
 
 * {{site.data.keyword.Bluemix_notm}}에서 Node.js 애플리케이션을 개발하는 데 익숙해야 합니다. 자세한 정보는 [Node.js용 SDK를 사용하여 앱 작성](https://console.{DomainName}/docs/runtimes/nodejs/index.html#nodejs_runtime)을 참조하십시오. 
-* {{site.data.keyword.amashort}} 서버 SDK를 사용하려면 Node.js 서버를 `Express` 프레임워크로 구현해야 합니다. LoopBack과 같은 `Express` 프레임워크를 사용하는 다른 프레임워크가 있습니다. 이러한 프레임워크와 함께 {{site.data.keyword.amashort}} 서버 SDK를 사용할 수 있습니다. Express 프레임워크에 대한 자세한 정보는 [Expressjs.com ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://expressjs.com/ "외부 링크 아이콘"){: new_window}을 참조하십시오. 
+* {{site.data.keyword.amashort}} 서버 SDK를 사용하려면 Node.js 서버를 `Express` 프레임워크로 구현해야 합니다. LoopBack과 같은 `Express` 프레임워크를 사용하는 다른 프레임워크가 있습니다. 이러한 프레임워크와 함께 {{site.data.keyword.amashort}} 서버 SDK를 사용할 수 있습니다. Express 프레임워크에 대한 자세한 정보는 [Expressjs.com ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://expressjs.com/){: new_window}을 참조하십시오. 
 
 ## 서버 SDK 정보
 {: #about}
 
 {{site.data.keyword.amashort}} 서버 SDK는 IBM {{site.data.keyword.Bluemix_notm}}에 배치된 백엔드 애플리케이션에 사용할 `MCABackendStrategy` 패스포트 전략을 제공합니다. 권한이 없는 액세스에서 사용자 앱을 보호하고 모니터링 정보를 가져오려면, `MCABackendStrategy`로 Node.js 서버를 계측해야 합니다. `bms-mca-token-validation-strategy` npm 모듈은 {{site.data.keyword.amashort}}에서 발행한 액세스 토큰 및 ID 토큰의 유효성을 검증하도록 `MCABackendStrategy` 패스포트 전략 및 검증 방법을 제공합니다. 또한 이 모듈은 보안 이벤트에 대한 모니터링 정보를 자동으로 제공합니다. 
 
-{{site.data.keyword.amashort}} 서버 SDK는 `Passport` 프레임워크를 사용하여 권한을 적용합니다. 자세한 정보는 [Passportjs.org ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://passportjs.org/ "외부 링크 아이콘"){: new_window}를 참조하십시오. 
+{{site.data.keyword.amashort}} 서버 SDK는 `Passport` 프레임워크를 사용하여 권한을 적용합니다. 자세한 정보는 [Passportjs.org ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://passportjs.org/){: new_window}를 참조하십시오. 
 
 ## 서버 SDK 설치
 {: #protecting-resources-serversdk}

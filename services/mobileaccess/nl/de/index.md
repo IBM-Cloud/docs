@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-22"
 
 ---
 {:new_window: target="_blank"}
@@ -11,70 +11,79 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Einführung in {{site.data.keyword.amashort}}
+
+# {{site.data.keyword.amashort}} wird durch {{site.data.keyword.appid_short_notm}} ersetzt
 {: #gettingstarted}
 
-Fügen Sie mit dem {{site.data.keyword.amafull}}-Service Sicherheit zu Ihrer mobilen App hinzu. Sie können die Clientberechtigung für den Zugriff auf geschützte Back-End-Ressourcen konfigurieren, die auf {{site.data.keyword.Bluemix}} ausgeführt werden. Verwenden Sie Identitätsprovider (Google und Facebook) oder angepasste Identitäten, um Benutzer zu authentifizieren und Zugriff auf geschützte Back-End-Ressourcen und Web-Apps zu gewähren.
+
+**Der {{site.data.keyword.amafull}}-Service wird durch den [{{site.data.keyword.appid_full}}-Service ersetzt](/docs/services/appid/index.html).** Falls Sie vor dem Wechsel zu {{site.data.keyword.appid_short_notm}} Informationen zu {{site.data.keyword.amashort}} benötigen, ziehen Sie die folgenden Seiten zurate.
 {:shortdesc}
+
+{{site.data.keyword.amashort}} versorgte Ihre mobile App mit Sicherheit: Clientberechtigung für den Zugriff auf geschützte Back-End--Ressourcen aus Identitätsprovidern (Google und Facebook) oder angepasste Identitäten, um Benutzer zu authentifizieren und Zugriff auf geschützte Back-End-Ressourcen und Web-Apps zu gewähren.
 
 **Anmerkung:** Der {{site.data.keyword.amashort}}-Service wurde früher als Advanced Mobile Access bezeichnet.
 
+<!-- Commenting out all getting started content because new users should start with App ID, not this old service.
 
-Führen Sie die folgenden Schritte aus, um den {{site.data.keyword.amashort}}-Service betriebsbereit zu machen:
+Add security to your mobile app with the {{site.data.keyword.amafull}} service. You can configure client authorization for accessing protected back-end resources running on {{site.data.keyword.Bluemix}}. Use identity providers (Google and Facebook), or custom identities to authenticate users and grant access to protected back-end resources and Web apps.
+{:shortdesc}
 
-1. Verwenden Sie zum Erstellen eines gebundenen oder nicht gebundenen Service eine der folgenden Optionen:
- * Erstellen Sie eine {{site.data.keyword.Bluemix_notm}}-Anwendung mithilfe der **MobileFirst Services Starter**-Boilerplate aus dem Katalog. Dadurch wird ein {{site.data.keyword.amashort}}-Service erstellt, der an eine {{site.data.keyword.Bluemix_notm}}-Back-End-Anwendung gebunden ist.
- * Erstellen Sie einen {{site.data.keyword.amashort}}-Service mithilfe der {{site.data.keyword.amashort}}-Konsole. Sie können den Service an eine vorhandene Back-End-Anwendung binden und ihn in der {{site.data.keyword.amashort}}-Konsole konfigurieren.
+**Note:** The {{site.data.keyword.amashort}} service was previously known as Advanced Mobile Access.
 
-   Wenn Sie den Starter 'MobileFirst Services' verwenden, erhalten Sie eine Instanz einer Node.js-Laufzeit, die auf IBM {{site.data.keyword.Bluemix_notm}} aktiv ist, um Ihre angepasste Back-End-Logik zu implementieren. Ein Satz von mobilen Kernservices, die Sicherheits-, Daten-, Push- und Überwachungsfunktionen bereitstellen, wird an diese Node.js-App gebunden. Nach dem Erstellen der Node.js-App in {{site.data.keyword.Bluemix_notm}} können Sie Ihre Entwicklungsumgebung einrichten und mit der Verwendung der {{site.data.keyword.Bluemix_notm}} Mobile Services-SDKs beginnen. Sie können die SDKs verwenden, um mit einfachen API-Aufrufen auf die Services zuzugreifen, die an Ihre Cloud-App gebunden sind.
 
-	Weitere Informationen zum Erstellen von und Arbeiten mit Projekten, Anwendungen und Services finden Sie in [IBM Bluemix Mobile-Dashboard](https://console.{DomainName}/docs/mobile/index.html).
+To get up and running with the {{site.data.keyword.amashort}} service:
 
-2. Schützen Sie serverseitige Ressourcen.
+1. Use one of the following options to create a bound or unbound service:
+ * Create a {{site.data.keyword.Bluemix_notm}} application using the **MobileFirst Services Starter** boilerplate from the catalog. This creates a {{site.data.keyword.amashort}} service bound to a {{site.data.keyword.Bluemix_notm}} back-end application.
+ * Create a {{site.data.keyword.amashort}} service using the  {{site.data.keyword.amashort}} console.  You can  bind the service to an existing back-end application and configure it in the {{site.data.keyword.amashort}} console.
 
-   Schützen Sie Ihre mobilen Back-End-Ressourcen, die in Node.js- oder Liberty for Java&trade;-Laufzeiten aktiv sind, mit für Mobilgeräte konfigurierter OAuth-Sicherheit. Weitere Informationen finden Sie in [Ressourcen schützen](protecting-resources.html).
-   Weitere Informationen zur mobilen Back-End-Anwendung finden Sie in der Beispielanwendung [bms-hellotodo-strongloop ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-hellotodo-strongloop "Symbol für externen Link"){: new_window}.
+   When you use the MobileFirst Services Starter, you get an instance of a Node.js runtime that runs on IBM {{site.data.keyword.Bluemix_notm}} to implement your custom back-end logic. A set of core mobile services that provide security, data, push, and monitoring functions are bound to that Node.js app. After the {{site.data.keyword.Bluemix_notm}} Node.js app is created, you can set up your development environment and start to use the {{site.data.keyword.Bluemix_notm}} Mobile Services SDKs. You can use the SDKs to access the services that are bound to your cloud app with simple API calls.
 
-3. Richten Sie Ihre {{site.data.keyword.amashort}}-Kernentwicklungsumgebung ein.
+	For more information on how to create and work with projects, applications, and services see [IBM Bluemix Mobile dashboard](https://console.{DomainName}/docs/mobile/index.html).
 
-  ####Cliententwicklung
+2. Secure server-side resources.
+
+   Protect your mobile back-end resources that are running on Node.js or Liberty for Java&trade; runtimes with mobile-enabled OAuth security. For more information, see [Protecting resources](protecting-resources.html).
+   To learn more about the default mobile back-end application, see the [bms-hellotodo-strongloop ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-hellotodo-strongloop){: new_window}  sample application.
+
+3. Set up your core {{site.data.keyword.amashort}} development environment.
+
+  ####Client development
   {: #client-development}
 
-	Sie können das {{site.data.keyword.amashort}}-SDK folgendermaßen zu Ihrer vorhandenen Android-, iOS- oder Cordova-App hinzufügen:
-   * Android: ([Android-SDK einrichten](getting-started-android.html)) ([Beispiel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication "Symbol für externen Link"){: new_window})
-    * iOS (Swift-SDK): ([iOS-Swift-SDK einrichten](getting-started-ios-swift-sdk.html)) ([Beispiel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication "Symbol für externen Link"){: new_window})    
-   * Cordova: ([Cordova-Plug-in einrichten](getting-started-cordova.html)) ([Beispiel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloauthentication "Symbol für externen Link"){: new_window})
+	You can add the {{site.data.keyword.amashort}} SDK to your existing Android, iOS, or Cordova app, as follows:
+   * Android: ([Setting up the Android SDK](getting-started-android.html)) [Sample ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication){: new_window}
+    * iOS (Swift SDK): ([Setting up the iOS Swift SDK](getting-started-ios-swift-sdk.html)) [Sample ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication){: new_window}    
+   * Cordova: ([Setting up the Cordova plug-in](getting-started-cordova.html)) [Sample ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloauthentication){: new_window}
 
 
- ####Webentwicklung
+ ####Web development
  {: #web-development}
 
-   Der {{site.data.keyword.amashort}}-Service kann Ihre Webanwendung ohne spezielles SDK schützen. Zusätzlich zu dem durch den {{site.data.keyword.amashort}}-Service zur Verfügung gestellten Schutz können Sie unterschiedliche Identitätsprovider nutzen. Durch die {{site.data.keyword.amashort}}-Integration können alle Webanwendungen unabhängig von der implementierten Technologie die Vorteile des OAuth2-Protokolls nutzen. Die folgenden Abschnitte enthalten Informationen darüber, wie Sie Ihre {{site.data.keyword.amashort}}-Web-App für den Zugriff auf den {{site.data.keyword.amashort}}-Service über unterschiedliche Identitätsprovider einrichten:
+   The {{site.data.keyword.amashort}} service can protect your Web application, requiring no special SDK. You can leverage different identity providers, in addition to protection provided by the {{site.data.keyword.amashort}} service. The {{site.data.keyword.amashort}} integration enables any web application, regardless of the technology it implements, to take advantage of the OAuth2 protocol. For information on setting up your {{site.data.keyword.amashort}} Web app to access the {{site.data.keyword.amashort}} service using different identity providers, see:
 
-   * [Facebook-Authentifizierung für Webanwendungen aktivieren](facebook-auth-web.html)
-   * [Google-Authentifizierung für Webanwendungen aktivieren](google-auth-web.html)
-   * [Angepasste Authentifizierung für Webanwendungen aktivieren](custom-auth-web.html)
+   * [Enabling Facebook authentication for Web applications](facebook-auth-web.html)
+   * [Enabling Google authentication for Web applications](google-auth-web.html)
+   * [Enabling custom authentication for Web applications](custom-auth-web.html)
 
-**Optional:** Konfigurieren Sie einen Identitätsprovider für Ihre Anwendung. Pro Anwendung können Sie einen Identitätsprovider konfigurieren. Mithilfe eines konfigurierten Identitätsproviders können sich die Benutzer Ihrer mobilen App mit ihrem vorhandenen Facebook- oder Google+-Account anmelden. Alternativ können Sie eine angepasste Authentifizierung erstellen, um zu definieren, wie sich Benutzer anmelden können.
-   * [Benutzer mit Facebook-Berechtigungsnachweisen authentifizieren](facebook-auth-overview.html)
-   * [Benutzer mit Google-Berechtigungsnachweisen authentifizieren](google-auth-overview.html)
-   * [Benutzer mit einem angepassten Identitätsprovider authentifizieren](custom-auth.html)
+**Optional:** Configure an identity provider for your application. You can configure one identity provider per application. Configuring an identity provider enables the users of your mobile app to log in with their existing Facebook or Google+ account. Or, you can define how users log in by creating a custom authentication.
+   * [Authenticating users with Facebook credentials](facebook-auth-overview.html)
+   * [Authenticating users with Google credentials](google-auth-overview.html)
+   * [Authenticating users with a custom identity provider](custom-auth.html)
 
-## Lernprogramme und Beispiele
+## Tutorials and Samples
 {: #samples}
 
-* [Beispiel 'android-helloauthentication' ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication "Symbol für externen Link"){: new_window}
-* [Beispiel 'ios-helloauthentication' (Swift-SDK) ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication "Symbol für externen Link"){: new_window}
+* [android-helloauthentication sample ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication){: new_window}
+* [ios-helloauthentication sample (Swift SDK) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication){: new_window}
 
 ## SDK
 {: #sdk}
 
-* [Core-SDK (Android) ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core "Symbol für externen Link"){: new_window}
+* [Core SDK (Android) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
 
-* [Beispiel 'ios-helloauthentication' (Swift SDK) ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication "Symbol für externen Link"){: new_window}
+* [ios-helloauthentication sample (Swift SDK) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication){: new_window}
 
-* [Angepasste Authentifizierung - einfaches Beispiel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "Symbol für externen Link"){: new_window}
+* [Custom authentication - simple sample ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}
 
-* [Angepasste Authentifizierung - erweitertes Beispiel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management "Symbol für externen Link"){: new_window}
-
-
+* [Custom authentication - advanced sample ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management){: new_window} --->

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+{{site.data.keyword.amafull}} 서비스가 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다.
 
 # Android 앱에서 Google 인증 사용
 {: #google-auth-android}
@@ -35,7 +37,7 @@ Google을 사용하여 {{site.data.keyword.amafull}} Android 애플리케이션�
 ## Google 개발자 콘솔에서 프로젝트 작성
 {: #create-google-project}
 
-ID 제공자로서 Google 사용을 시작하려면 [Google 개발자 콘솔 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.developers.google.com "외부 링크 아이콘"){: new_window}에서 프로젝트를 작성하십시오.
+ID 제공자로 Google 사용을 시작하려면 [Google 개발자 콘솔 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.developers.google.com){: new_window}에서 프로젝트를 작성하십시오.
 프로젝트 작성의 일부로 Google 클라이언트 ID를 확보해야 합니다. Google 클라이언트 ID는 Google 인증에서 사용하는 애플리케이션의 고유 ID이며 {{site.data.keyword.amashort}} 서비스를 설정하는 데 필요합니다. 
 
 콘솔에서 다음을 수행하십시오.
@@ -53,7 +55,7 @@ ID 제공자로서 Google 사용을 시작하려면 [Google 개발자 콘솔 ![�
 
 Google의 경우 애플리케이션 신뢰성을 확인하려면 서명 인증 지문을 지정해야 합니다. 
 
-Android OS에서는 Android 디바이스에 설치된 모든 애플리케이션을 개발자 인증서로 서명해야 합니다. Android 애플리케이션은 디버그 모드 및 릴리스 모드로 빌드할 수 있습니다. 일반적으로 디버그 및 릴리스 모드에 대해 각기 다른 인증서를 포함하는 것이 좋습니다. 디버그 모드로 Android 애플리케이션을 서명하는 데 사용되는 인증서는 Android SDK와 함께 번들로 포함됩니다. Android SDK는 보통 Android Studio에서 자동으로 설치합니다. 애플리케이션을 Google Play에 릴리스하려는 경우 일반적으로 직접 생성하는 다른 인증서로 앱에 서명해야 합니다. 자세한 정보는 [Android 애플리케이션 서명 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://developer.android.com/tools/publishing/app-signing.html "외부 링크 아이콘"){: new_window}을 참조하십시오. 
+Android OS에서는 Android 디바이스에 설치된 모든 애플리케이션을 개발자 인증서로 서명해야 합니다. Android 애플리케이션은 디버그 모드 및 릴리스 모드로 빌드할 수 있습니다. 일반적으로 디버그 및 릴리스 모드에 대해 각기 다른 인증서를 포함하는 것이 좋습니다. 디버그 모드로 Android 애플리케이션을 서명하는 데 사용되는 인증서는 Android SDK와 함께 번들로 포함됩니다. Android SDK는 보통 Android Studio에서 자동으로 설치합니다. 애플리케이션을 Google Play에 릴리스하려는 경우 일반적으로 직접 생성하는 다른 인증서로 앱에 서명해야 합니다. 자세한 정보는 [Android 애플리케이션 서명 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://developer.android.com/tools/publishing/app-signing.html){: new_window}을 참조하십시오. 
 
 개발 환경에 대한 인증서를 포함하는 키 저장소는 `~/.android/debug.keystore` 파일에 저장됩니다. 기본 키 저장소 비밀번호는 `android`입니다. 이 인증서는 디버그 모드로 애플리케이션을 빌드하는 데 사용됩니다. 
 
@@ -156,7 +158,7 @@ Android Studio 프로젝트에서 다음을 수행하십시오.
 
 	이러한 값을 얻는 방법에 대한 자세한 정보는 [시작하기 전에](##before-you-begin)를 참조하십시오. 
 
-	**참고:** Android 애플리케이션이 Android 버전 6.0(API 레벨 23) 이상을 대상으로 하는 경우, `register`를 호출하기 전에 애플리케이션에 `android.permission.GET_ACCOUNTS` 호출이 있는지 확인해야 합니다. 자세한 정보는 [Android에서 권한 요청 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.android.com/training/permissions/requesting.html "외부 링크 아이콘"){: new_window}을 참조하십시오. 
+	**참고:** Android 애플리케이션이 Android 버전 6.0(API 레벨 23) 이상을 대상으로 하는 경우, `register`를 호출하기 전에 애플리케이션에 `android.permission.GET_ACCOUNTS` 호출이 있는지 확인해야 합니다. 자세한 정보는 [Android에서 권한 요청 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.android.com/training/permissions/requesting.html){: new_window}을 참조하십시오. 
 
 1. 다음 코드를 활동에 추가하십시오. 
 

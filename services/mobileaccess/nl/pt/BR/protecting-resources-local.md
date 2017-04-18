@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -11,6 +11,7 @@ lastupdated: "2017-01-08"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+O serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.
 
 # Usando o {{site.data.keyword.amashort}} com um ambiente de desenvolvimento local
 {: #protecting-local}
@@ -43,7 +44,8 @@ ou `United Kingdom`. Para a sintaxe exata requerida pelo SDK, veja os comentári
 nas amostras de código. Você precisará desse
 valor para inicializar o cliente
 {{site.data.keyword.amashort}}.
-* Um projeto Android Studio, configure para trabalhar com Gradle. Para obter mais informações sobre como configurar seu ambiente de desenvolvimento Android, veja [Google Developer Tools ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://developer.android.com/sdk/index.html "Ícone de link externo"){: new_window}.
+* Um projeto Android Studio, configure para trabalhar com Gradle. Para obter mais informações
+sobre como configurar seu ambiente de desenvolvimento Android, veja [Google Developer Tools ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](http://developer.android.com/sdk/index.html){: new_window}.
 
 ## Configurando o SDK do servidor
 {: #serversetup}

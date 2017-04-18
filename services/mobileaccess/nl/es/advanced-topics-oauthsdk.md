@@ -2,11 +2,13 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-03-15"
 
 ---
 
 {:codeblock:.codeblock}
+
+El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.
 
 # Comunicación entre servicios y aplicaciones de fondo
 {: #backend-comm}
@@ -36,7 +38,8 @@ var oauthSDK = require('bms-mca-oauth-sdk');
 
 var options = {
 
-	// Puede almacenar las señales en memoria caché para evitar recorridos de ida y vuelta adicionales en cada solicitud. 	// Esta propiedad define el número de señales que se van a almacenar en la memoria caché.
+	// Puede almacenar las señales en memoria caché para evitar recorridos de ida y vuelta adicionales en cada solicitud
+	// Esta propiedad define el número de señales que se van a almacenar en la memoria caché
 
 	cacheSize: 100,
 

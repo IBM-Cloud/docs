@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。
 
 # 啟用 Android 應用程式的 Google 鑑別
 {: #google-auth-android}
@@ -35,8 +37,7 @@ lastupdated: "2017-01-15"
 ## 在 Google Developer Console 中建立專案
 {: #create-google-project}
 
-若要開始使用 Google 作為身分提供者，請在 [Google Developer Console ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.developers.google.com "外部鏈結圖示"){: new_window} 中建立專案。
-建立專案的一部分是取得「Google 用戶端 ID」。「Google 用戶端 ID」是 Google 鑑別所使用之您的應用程式的唯一 ID，並且是設定 {{site.data.keyword.amashort}} 服務的必要項目。
+若要開始使用 Google 作為身分提供者，請在 [Google Developer Console ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.developers.google.com){: new_window} 中建立專案。建立專案的一部分是取得「Google 用戶端 ID」。「Google 用戶端 ID」是 Google 鑑別所使用之您的應用程式的唯一 ID，並且是設定 {{site.data.keyword.amashort}} 服務的必要項目。
 
 從主控台中：
 
@@ -53,7 +54,7 @@ lastupdated: "2017-01-15"
 
 為了讓 Google 驗證應用程式確實性，您必須指定簽署憑證指紋。
 
-Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所有應用程式。Android 應用程式可以使用兩種模式建置：除錯及發行。通常建議針對除錯及發行模式使用不同的憑證。用於以除錯模式簽署 Android 應用程式的憑證會與 Android SDK 組合。Android Studio 通常會自動安裝 Android SDK。當您要將應用程式發行到 Google Play 時，必須使用另一個憑證來簽署應用程式（您通常會自行產生另一個憑證）。如需相關資訊，請參閱[簽署您的 Android 應用程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://developer.android.com/tools/publishing/app-signing.html "外部鏈結圖示"){: new_window}。
+Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所有應用程式。Android 應用程式可以使用兩種模式建置：除錯及發行。通常建議針對除錯及發行模式使用不同的憑證。用於以除錯模式簽署 Android 應用程式的憑證會與 Android SDK 組合。Android Studio 通常會自動安裝 Android SDK。當您要將應用程式發行到 Google Play 時，必須使用另一個憑證來簽署應用程式（您通常會自行產生另一個憑證）。如需相關資訊，請參閱[簽署您的 Android 應用程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://developer.android.com/tools/publishing/app-signing.html){: new_window}。
 
 包含開發環境憑證的金鑰儲存庫儲存在 `~/.android/debug.keystore` 檔案中。預設金鑰儲存庫密碼為 `android`。此憑證用來以除錯模式建置應用程式。
 
@@ -132,7 +133,7 @@ Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
 	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
-```
+	```
 	{: codeblock}
 
 1. 若要使用 {{site.data.keyword.amashort}} 用戶端 SDK，您必須傳遞 **context** 及 **region** 參數來起始設定 SDK。
@@ -145,8 +146,8 @@ Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所
 	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 
 	BMSClient.getInstance().setAuthorizationManager(
-					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
-						
+		MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
+
 	GoogleAuthenticationManager.getInstance().register(this);
 	```
 	{: codeblock}
@@ -156,7 +157,7 @@ Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所
 
 	如需取得這些值的相關資訊，請參閱[開始之前](##before-you-begin)。
 
-	**附註：**如果您的 Android 應用程式是以 Android 6.0 版（API 層次 23）或以上版本為目標，則必須確定應用程式先進行 `android.permission.GET_ACCOUNTS` 呼叫，再呼叫 `register`。如需相關資訊，請參閱[在 Android 上要求許可權 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.android.com/training/permissions/requesting.html "外部鏈結圖示"){: new_window}。
+	**附註：**如果您的 Android 應用程式是以 Android 6.0 版（API 層次 23）或以上版本為目標，則必須確定應用程式先進行 `android.permission.GET_ACCOUNTS` 呼叫，再呼叫 `register`。如需相關資訊，請參閱[在 Android 上要求許可權 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.android.com/training/permissions/requesting.html){: new_window}。
 
 1. 將下列程式碼新增至您的活動中：
 
@@ -177,8 +178,7 @@ Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所
 
 開始測試之前，您必須具有使用 **MobileFirst Services Starter** 樣板所建立的行動後端應用程式，並且已具有 {{site.data.keyword.amashort}} `/protected` 端點所保護的資源。如需相關資訊，請參閱[保護資源](protecting-resources.html)。
 
-1. 開啟 `{applicationRoute}/protected`（例如：`http://my-mobile-backend.mybluemix.net/protected`），嘗試在桌面瀏覽器中將要求傳送給行動後端應用程式的受保護端點。
- 如需取得 `{applicationRoute}` 值的相關資訊，請參閱[開始之前](#before-you-begin)。
+1. 開啟 `{applicationRoute}/protected`（例如：`http://my-mobile-backend.mybluemix.net/protected`），嘗試在桌面瀏覽器中將要求傳送給行動後端應用程式的受保護端點。如需取得 `{applicationRoute}` 值的相關資訊，請參閱[開始之前](#before-you-begin)。
 
 	使用「MobileFirst Services 樣板」所建立之行動後端應用程式的 `/protected` 端點是透過 {{site.data.keyword.amashort}} 進行保護。因此，只有使用 {{site.data.keyword.amashort}} 用戶端 SDK 所檢測的行動應用程式才能存取它。因此，您會在桌面瀏覽器中看到 `Unauthorized`。
 
@@ -221,8 +221,8 @@ Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所
 	您也可以新增下列程式碼，來新增登出功能：
 
 	```Java
- GoogleAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
- ```
+	GoogleAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
+	```
 	{: codeblock}
 
 	如果您在使用者使用 Google 登入之後呼叫此程式碼，則會將使用者登出 Google。使用者嘗試再次登入時，他們必須選取 Google 帳戶才能再次登入。他們嘗試使用先前登入的 Google ID 進行登入時，不會提示使用者再次輸入其認證。若要讓系統再次提示輸入登入認證，使用者必須從 Android 裝置中移除其 Google 帳戶。

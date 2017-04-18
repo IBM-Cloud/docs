@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+Der {{site.data.keyword.amafull}}-Service wird durch den {{site.data.keyword.appid_full}}-Service ersetzt.
 
 # Facebook-Authentifizierung für Cordova-Apps aktivieren
 {: #facebook-auth-cordova}
@@ -32,7 +33,7 @@ Voraussetzungen:
 * Anwendungsroute. Dies ist die URL Ihrer Back-End-Anwendung.
 * Wert für `tenantId`. Öffnen Sie das {{site.data.keyword.amashort}}-Service-Dashboard. Klicken Sie auf **Mobile Systemerweiterungen**. Im Feld **App-GUID/TenantId** wird der Wert `tenantId` (auch als `appGUID` bezeichnet) angezeigt. Diese Werte benötigen Sie für die Initialisierung des SDK und zum Senden von Anforderungen an den Back-End-Service.
 *  Suchen Sie die Region, in der der {{site.data.keyword.Bluemix_notm}}-Service gehostet wird. Ihre aktuelle {{site.data.keyword.Bluemix_notm}}-Region finden Sie im Header neben dem Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol") in der Menüleiste. Der Regionswert muss einer der folgenden sein: **USA (Süden)**, **Sydney** oder **Vereinigtes Königreich**. Die genauen konstanten Werte des SDK, die diesen Namen entsprechen, sind in den Codebeispielen angegeben.
-* Facebook-Anwendungs- und App-ID. Weitere Informationen finden Sie in [Facebook-App-ID über das Facebook-Entwicklerportal anfordern](facebook-auth-overview.html#facebook-appID).
+* Facebook-Anwendungs- und App-ID. Weitere Informationen finden Sie im Abschnitt zur [Erstellung einer Anwendung auf der Website 'Facebook for Developers'](facebook-auth-overview.html#facebook-appID).
 
 
 

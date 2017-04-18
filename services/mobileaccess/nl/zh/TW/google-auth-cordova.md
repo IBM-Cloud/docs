@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。
 
 # 啟用 Cordova 應用程式的 Google 鑑別
 {: #google-auth-cordova}
@@ -129,7 +131,9 @@ lastupdated: "2017-01-15"
 ```
 {: codeblock}
 
-**附註：**
+
+####附註：
+{: #note notoc}
 
 * 將 `<your_module_name>` 取代為您專案的模組名稱。例如，如果模組名稱為 `Cordova`，則匯入指令行應為 `#import "Cordova-Swift.h"`。若要尋找模組名稱，請移至 `Build Settings` 標籤、`Packaging` > `Product Module Name`。
 * 將 `<tenantId>` 取代為您的承租戶 ID（請參閱[開始之前](#before-you-begin)）。

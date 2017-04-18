@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -11,6 +11,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。
 
 # 启用 Web 应用程序的 Google 认证
 {: #google-auth-web}
@@ -31,7 +33,7 @@ lastupdated: "2017-01-15"
 ## 针对 Web 站点配置 Google 应用程序
 {: #google-auth-config}
 
-要开始将 Google 用作身份提供者，请在 [Google 开发者控制台 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.developers.google.com "外部链接图标"){: new_window} 中创建项目。创建项目的步骤之一是获取 **Google 客户端标识**和**私钥**。Google 客户端标识和私钥是 Google 认证针对您的应用程序使用的唯一标识，设置 {{site.data.keyword.amashort}} 仪表板时需要这些标识。
+要开始将 Google 用作身份提供者，请在 [Google 开发者控制台 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.developers.google.com){: new_window} 中创建项目。创建项目的步骤之一是获取 **Google 客户端标识**和**私钥**。Google 客户端标识和私钥是 Google 认证针对您的应用程序使用的唯一标识，设置 {{site.data.keyword.amashort}} 仪表板时需要这些标识。
 
 1. 在 Google 开发者控制台中打开 Google 应用程序。
 3. 添加 **Google+** API。
@@ -52,8 +54,7 @@ lastupdated: "2017-01-15"
 4. 在**针对 Web 配置**部分中：   
     * 记录 **Google 开发者控制台的 Mobile Client Access 重定向 URI** 文本框中的值。您需要将此值添加到 **Google 开发者门户网站**的 **Web 应用程序客户端标识的限制**下的**授权重定向 URI** 框中。
     * 输入**客户端标识**和**客户端私钥**。
-    * 在 **Web 应用程序重定向 URI**中输入重定向 URI。
-此值是为了在完成授权流程之后可访问该重定向 URI，由开发者确定。
+    * 在 **Web 应用程序重定向 URI** 中输入重定向 URI。此值是为了在完成授权流程之后可访问该重定向 URI，由开发者确定。
 5. 单击**保存**。
 
 
@@ -74,8 +75,7 @@ lastupdated: "2017-01-15"
 
 	美国南部：
 
-	`  https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization
-   `
+	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization`
 
 	伦敦：
 
@@ -92,20 +92,17 @@ lastupdated: "2017-01-15"
 	以下示例从 `VCAP_SERVICES` 变量检索参数，构建 URL，并发送重定向请求。
 
 	```Java
- var cfEnv = require("cfenv"); 
- app.get("/protected", checkAuthentication, function(req, res, next){ 
- 	res.send("Hello from protected endpoint"); 
+	var cfEnv = require("cfenv");
+	app.get("/protected", checkAuthentication, function(req, res, next) {
+		res.send("Hello from protected endpoint"); 
  }); 
 
- app.get("/protected", checkAuthentication, function(req, res, next){ 
- 	res.send("Hello from protected endpoint"); 
- 	function checkAuthentication(req, res, next){ 
-
-	// Check if user is authenticated 
- 	if (req.session.userIdentity){ 
-		next()
-			} else {
-				// If not - redirect to authorization server 
+ function checkAuthentication(req, res, next) {
+		// Check if user is authenticated
+		if (req.session.userIdentity) {
+			next()
+		} else {
+			// If not - redirect to authorization server 
 				var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
 				var authorizationEndpoint = mcaCredentials.authorizationEndpoint; 
 				var clientId = mcaCredentials.clientId; 
@@ -116,8 +113,6 @@ lastupdated: "2017-01-15"
 				res.redirect(redirectUrl); 
 			} 
 		}
-	   	}
-       }
 	```
 	{: codeblock}
 
@@ -157,8 +152,8 @@ lastupdated: "2017-01-15"
   var base64url = require("base64url ");
   var request = require('request');
 
-   app.get("/oauth/callback", function(req, res, next){ 
-	var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
+   app.get("/oauth/callback", function(req, res, next) {
+		var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
 		var tokenEndpoint = mcaCredentials.tokenEndpoint;
 		var formData = {
 			grant_type: "authorization_code",

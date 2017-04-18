@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。
 
 # 启用 Web 应用程序的 Facebook 认证
 {: #facebook-auth-web}
@@ -32,7 +33,8 @@ lastupdated: "2017-01-15"
 
 要在 Web 站点上将 Facebook 用作身份提供者，必须在 Facebook 应用程序上添加并配置 Web 站点平台。
 
-1. 在 [Facebook for Developers](https://developers.facebook.com) 站点上登录到您的帐户。有关创建新应用程序的信息，请参阅[在 Facebook for Developers Web 站点上创建应用程序](facebook-auth-overview.html#facebook-appID)。
+1. 在 [Facebook for Developers](https://developers.facebook.com) 站点上登录到您的帐户。
+有关创建新应用程序的信息，请参阅[在 Facebook for Developers Web 站点上创建应用程序](facebook-auth-overview.html#facebook-appID)。
 1. 记录**应用程序标识**和**应用程序私钥**。在 Mobile Client Access 仪表板中配置 Web 项目进行 Facebook 认证时，将需要这些值。
 1. 从**产品列表**中，选择 **Facebook 登录**。
 4. 如果不存在该 **Web** 平台，请进行添加。
@@ -51,7 +53,7 @@ lastupdated: "2017-01-15"
 1. 选中**向 Web 应用程序添加 Facebook**。
 5. 记录 **Facebook for Developers 的 Mobile Client Access 重定向 URI** 文本框中的值。您需要将此值添加到 Facebook 开发者门户网站的 **Facebook 登录**中的**有效的 OAuth 重定向 URI** 框中。
 6. 输入从 Facebook for Developers Web 站点中获取的 Facebook **应用程序标识**和**应用程序私钥**。
-7. 在 **Web 应用程序重定向 URI**中输入重定向 URI。此值是为了在完成授权流程之后可访问该重定向 URI，由开发者确定。
+7. 在 **Web 应用程序重定向 URI** 中输入重定向 URI。此值是为了在完成授权流程之后可访问该重定向 URI，由开发者确定。
 8. 单击**保存**。
 
 
@@ -185,7 +187,7 @@ lastupdated: "2017-01-15"
 
 	请注意，`redirect_uri` 参数必须与之前授权请求中使用的 `redirect_uri` 相匹配。`code` 参数值应该是从授权请求的响应中收到的授权代码。授权代码的有效时间仅为 10 分钟，之后必须检索新代码。
 
-	响应主体将包含访问代码和令牌标识，格式为 JWT（请参阅 [JWT Web 站点![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://jwt.io/ "外部链接图标"){: new_window}）。
+	响应主体将包含访问代码和令牌标识，格式为 JWT（请参阅 [JWT Web 站点 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://jwt.io/){: new_window}）。
 
 	在您获得访问令牌并收到身份令牌之后，您可以将 Web 会话标记为已认证，并可选择性地持久存储这些令牌。  
 

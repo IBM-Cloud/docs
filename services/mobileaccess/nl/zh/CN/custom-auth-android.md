@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 
+{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -141,7 +142,7 @@ void submitAuthenticationFailure (JSONObject info);
 ## 定制 AuthenticationListener 的样本实现
 {: #custom-android-samplecustom}
 
-此 AuthenticationListener 样本设计用于处理定制身份提供者。您可以从 [Github 存储库 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "外部链接图标"){: new_window} 下载此样本。
+此 AuthenticationListener 样本设计用于处理定制身份提供者。您可以从 [Github 存储库 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window} 下载此样本。
 
 ```Java
 package com.ibm.helloworld;

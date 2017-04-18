@@ -2,12 +2,14 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2016-10-27"
+lastupdated: "2017-03-15"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 {:codeblock:.codeblock}
+
+El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.
 
 # Protección de recursos Node.js con {{site.data.keyword.amashort}}
 {: #protecting-resources-nodejs}
@@ -19,14 +21,14 @@ Puede utilizar el SDK del servidor de {{site.data.keyword.amashort}} para proteg
 {: #before-you-begin}
 
 * Debe estar familiarizado con el desarrollo de aplicaciones Node.js en {{site.data.keyword.Bluemix_notm}}. Para obtener más información, consulte [Creación de apps con SDK for Node.js](https://console.{DomainName}/docs/runtimes/nodejs/index.html#nodejs_runtime).
-* El SDK del servidor de {{site.data.keyword.amashort}} necesita que se implemente el servidor de Node.js con la infraestructura `Express`. Tenga en cuenta que hay otras infraestructuras que utilizan infraestructuras `Express`, como LoopBack. Puede utilizar el SDK del servidor de {{site.data.keyword.amashort}} con cualquiera de estas infraestructuras. Para obtener más información sobre la infraestructura de Express, consulte [Expressjs.com ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://expressjs.com/ "Icono de enlace externo"){: new_window}.
+* El SDK del servidor de {{site.data.keyword.amashort}} necesita que se implemente el servidor de Node.js con la infraestructura `Express`. Tenga en cuenta que hay otras infraestructuras que utilizan infraestructuras `Express`, como LoopBack. Puede utilizar el SDK del servidor de {{site.data.keyword.amashort}} con cualquiera de estas infraestructuras. Para obtener más información sobre la infraestructura de Express, consulte [Expressjs.com ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](http://expressjs.com/){: new_window}.
 
 ## Acerca del SDK del servidor
 {: #about}
 
 El SDK del servidor de {{site.data.keyword.amashort}} proporciona la estrategia de pasaporte `MCABackendStrategy` para su uso en las aplicaciones de fondo desplegadas en IBM {{site.data.keyword.Bluemix_notm}}. Para proteger la app de accesos no autorizados y obtener información de supervisión, debe instrumentar el servidor Node.js con `MCABackendStrategy`. El módulo npm `bms-mca-token-validation-strategy` proporciona la estrategia de pasaporte `MCABackendStrategy` y el método de verificación para validar la señal de acceso y la señal de ID que ha emitido {{site.data.keyword.amashort}}. Este módulo también suministra automáticamente información de supervisión sobre sucesos de seguridad.
 
-El SDK del servidor de {{site.data.keyword.amashort}} utiliza la infraestructura `Passport` para imponer la autorización. Para obtener más información, consulte [Passportjs.org ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://passportjs.org/ "Icono de enlace externo"){: new_window}.
+El SDK del servidor de {{site.data.keyword.amashort}} utiliza la infraestructura `Passport` para imponer la autorización.  Para obtener más información, consulte [Passportjs.org ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](http://passportjs.org/){: new_window}.
 
 ## Instalación del SDK del servidor
 {: #protecting-resources-serversdk}

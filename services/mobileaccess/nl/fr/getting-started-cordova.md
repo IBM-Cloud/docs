@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.
 
 # Configuration du plug-in Cordova
 {: #getting-started-cordova}
@@ -30,7 +31,7 @@ Vous devez disposer des éléments suivants :
 * L'URL de votre application back-end (**Route de l'application**). Vous aurez besoin de ces valeurs pour envoyer des requêtes aux noeuds finaux protégés de votre application back end.
 * Valeur de votre **TenantID**. Ouvrez votre service dans le tableau de bord de {{site.data.keyword.amashort}}. Cliquez sur le bouton **Options pour application mobile**. La valeur `tenantId` (qui porte également le nom d'`appGUID`) est affichée dans la zone **App GUID / TenantId**. Vous aurez besoin de cette valeur pour initialiser le Gestionnaire des autorisations.
 * Votre **région** {{site.data.keyword.Bluemix_notm}}. Vous pouvez trouver votre région {{site.data.keyword.Bluemix_notm}} actuelle dans l'en-tête, en regard de l'icône **Avatar**![icône Avatar](images/face.jpg "icône Avatar"). La valeur de la région qui apparaît doit être l'une des suivantes : `US South`, `United Kingdom` ou `Sydney`, et correspondre aux valeurs requises dans le code Javascript de WebView : `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` ou `BMSClient.REGION_UK`. Vous aurez besoin de cette valeur pour initialiser le client {{site.data.keyword.amashort}}.
-* Une application Cordova ou un projet existant. Pour plus d'informations sur la configuration de votre application Cordova , reportez-vous au [site Web Cordova ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cordova.apache.org/ "Icône de lien externe"){: new_window}.
+* Une application Cordova ou un projet existant. Pour plus d'informations sur la configuration de votre application Cordova, voir le [site Web Cordova ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cordova.apache.org/){: new_window}.
 
 ## Installation du plug-in {{site.data.keyword.amashort}} Cordova
 {: #getting-started-cordova-plugin}
@@ -70,7 +71,7 @@ name="android">` :
 	```
 	{: codeblock}
 
-	La valeur de *minSdkVersion* doit être supérieure ou égale à `15`. Reportez-vous au manuel [Android Platform Guide ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cordova.apache.org/docs/en/latest/guide/platforms/android/ "Icône de lien externe"){: new_window} pour connaître la version *targetSdkVersion* actuelle prise en charge pour le SDK Android.
+	La valeur de *minSdkVersion* doit être supérieure ou égale à `15`. Reportez-vous au manuel [Android Platform Guide ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cordova.apache.org/docs/en/latest/guide/platforms/android/){: new_window} pour être tenu informé de la version *targetSdkVersion* prise en charge pour le SDK Android.
 
 3. Si vous avez ajouté le système d'exploitation iOS, déclarez une cible dans l'élément `<platform name="ios">` :
 
@@ -114,7 +115,7 @@ de génération.
 
 	2. Générez et exécutez votre application avec Xcode.
 
-	**Remarque **: vous risquez de recevoir l'erreur suivante lors de l'exécution de `cordova build ios`. Ce problème est dû à un bogue (suivi dans [Issue 12 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/blakgeek/cordova-plugin-cocoapods-support/issues/12 "Icône de lien externe"){: new_window}) affectant un plug-in de dépendance. Vous pouvez toujours exécuter le projet iOS dans XCode via un simulateur ou un appareil.
+	**Remarque **: vous risquez de recevoir l'erreur suivante lors de l'exécution de `cordova build ios`. Ce problème est dû à un bogue dans un plug-in de dépendance (suivi dans [Issue 12 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/blakgeek/cordova-plugin-cocoapods-support/issues/12){: new_window}. Vous pouvez toujours exécuter le projet iOS dans XCode via un simulateur ou un appareil.
 
 	```
 	xcodebuild: error: Unable to find a destination matching the provided destination specifier:

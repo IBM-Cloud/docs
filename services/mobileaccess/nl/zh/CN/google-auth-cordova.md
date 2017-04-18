@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。
 
 # 启用 Cordova 应用程序的 Google 认证
 {: #google-auth-cordova}
@@ -129,7 +131,9 @@ lastupdated: "2017-01-15"
 ```
 {: codeblock}
 
-**注：**
+
+####注：
+{: #note notoc}
 
 * 将 `<your_module_name>` 替换为项目的模块名称。例如，如果模块名称为 `Cordova`，那么 import 行应该为 `#import "Cordova-Swift.h"`。要查找模块名称，请转至`构建设置`选项卡，再转至`打包` > `产品模块名称`。
 * 将 `<tenantId>` 替换为租户标识（请参阅[开始之前](#before-you-begin)）。

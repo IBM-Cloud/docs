@@ -2,13 +2,15 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
+
+{{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービスに置き換えられます。
 
 # Facebook 資格情報を使用したユーザーの認証
 {: #facebook-auth-overview}
@@ -58,7 +60,7 @@ Facebook を ID プロバイダーとして使用し始めるには、Facebook f
 
 モバイル・アプリまたは Web アプリ用に Facebook 認証を構成する際にこの値が必要になります。
 
-1. [Facebook for Developers ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.facebook.com "外部リンク・アイコン"){: new_window} サイトにアクセスします。
+1. [Facebook for Developers ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.facebook.com){: new_window}サイトにアクセスします。
 
 1. **「My Apps」**プルダウン・リストを開き、**「Add a New App」**を選択します。
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -11,6 +11,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+{{site.data.keyword.amafull}} 서비스가 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다.
 
 # {{site.data.keyword.amashort}} 정보
 {: #mca-overview}
@@ -91,16 +93,14 @@ lastupdated: "2017-01-15"
 ## {{site.data.keyword.amashort}}에 대한 도움말 및 지원 가져오기
 {: #gettinghelp}
 
-{{site.data.keyword.amashort}} 사용 시 문제점 또는 질문이 있는 경우, 정보를 검색하거나 포럼을 통해 질문하여 도움말을 가져올 수 있습니다. 지원 티켓을 열 수도 있습니다. 
+{{site.data.keyword.amashort}} 사용 시 문제점 또는 질문이 있는 경우, 정보를 검색하거나 포럼을 통해 질문하여 도움말을 가져올 수 있습니다. 지원 티켓을 열 수도 있습니다.
 
 포럼을 통해 질문하는 경우 {{site.data.keyword.Bluemix_notm}} 개발 팀에 표시되도록 해당 질문에 태그를 지정하십시오.
 
-* {{site.data.keyword.amashort}}에서 앱 개발 또는 배치에 대한 기술적 질문이 있으면 [스택 오버플로우 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://stackoverflow.com/search?q={{site.data.keyword.amashort}}+ibm-bluemix "외부 링크 아이콘"){: new_window}에 질문을 게시하고 질문에 "ibm-bluemix" 및 "{{site.data.keyword.amashort}}" 태그를 지정하십시오. 
-* 서비스 및 시작하기 지시사항에 대한 질문인 경우에는 [IBM developerWorks ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=mobile+client+access%20%2B[bluemix] "외부 링크 아이콘"){: new_window}를 참조하십시오. 
+* {{site.data.keyword.amashort}}를 사용하여 앱 개발 또는 배치에 대한 기술적인 질문이 있는 경우 [스택 오버플로우 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://stackoverflow.com/search?q={{site.data.keyword.amashort}}+ibm-bluemix){: new_window}에 질문을 게시하고 `ibm-bluemix` 및 `{{site.data.keyword.amashort}}`를 사용하여 질문에 태그를 지정하십시오. 
+* 서비스 및 시작하기 지시사항에 대한 질문은 [IBM developerWorks ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=mobile+client+access%20%2B[bluemix]){: new_window}를 사용하십시오. 
 
-포럼.  
 
 포럼 사용에 대한 세부사항은 [도움말 가져오기](https://www.{DomainName}/docs/support/index.html#getting-help)를 참조하십시오.
 
 IBM 지원 티켓 열기 또는 지원 레벨과 티켓 심각도에 대한 정보는 [지원 문의](https://www.{DomainName}/docs/support/index.html#contacting-support)를 참조하십시오.
-

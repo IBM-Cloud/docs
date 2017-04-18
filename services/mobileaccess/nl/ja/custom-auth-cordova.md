@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -11,6 +11,8 @@ lastupdated: "2017-01-08"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+{{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービスに置き換えられます。
 
 # {{site.data.keyword.amashort}} Cordova アプリ用のカスタム認証の構成
 {: #custom-cordova}
@@ -110,7 +112,7 @@ authenticationContext.submitAuthenticationFailure(info);
 ## カスタム認証リスナーのワークフローの実装例
 {: #custom-cordova-authlisten-sample}
 
-認証リスナーのこのサンプルは、カスタム ID プロバイダーと連携するよう設計されています。カスタム ID プロバイダーは、[この GitHub リポジトリー![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "外部リンク・アイコン"){: new_window}からダウンロードできます。
+認証リスナーのこのサンプルは、カスタム ID プロバイダーと連携するよう設計されています。カスタム ID プロバイダーは、[この GitHub リポジトリー![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}からダウンロードできます。
 
 ```JavaScript
 var customAuthenticationListener = {

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -11,6 +11,8 @@ lastupdated: "2017-01-08"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+Il servizio {{site.data.keyword.amafull}} è stato sostituito con il servizio {{site.data.keyword.appid_full}}.
 
 # Configurazione dell'autenticazione personalizzata per la tua applicazione Cordova {{site.data.keyword.amashort}}
 {: #custom-cordova}
@@ -108,7 +110,7 @@ Il seguente codice illustra come un listener di autenticazione del cliente può 
 ## Implementazione di esempio di un flusso di lavoro del listener di autorizzazione personalizzato.
 {: #custom-cordova-authlisten-sample}
 
-Questo esempio di listener di autenticazione è progettato per funzionare con un provider di identità personalizzato. Puoi scaricare il provider di identità personalizzato da [questo repository Github![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "Icona link esterno"){: new_window}.
+Questo esempio di listener di autenticazione è progettato per funzionare con un provider di identità personalizzato. Puoi scaricare il provider di identità personalizzato da [questo repository Github ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}.
 
 ```JavaScript
 var customAuthenticationListener = {

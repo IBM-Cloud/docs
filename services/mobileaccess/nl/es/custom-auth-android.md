@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 
+El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -69,7 +70,6 @@ Añada el permiso de acceso a Internet al elemento `<manifest>`:
 	{: codeblock}
 
 1. Inicialice el SDK.  
-	  
 	Un lugar habitual, pero no obligatorio, donde poner el código de inicialización es en el método `onCreate` de la actividad principal de la aplicación de Android.
 
 	```Java
@@ -138,7 +138,7 @@ void submitAuthenticationFailure (JSONObject info);
 ## Implementación de ejemplo de una AuthenticationListener personalizada
 {: #custom-android-samplecustom}
 
-Este ejemplo de AuthenticationListener está diseñado para que funcione con un proveedor de identidad personalizado. Puede descargar este ejemplo del [Repositorio de Github ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "Icono de enlace externo"){: new_window}.
+Este ejemplo de AuthenticationListener está diseñado para que funcione con un proveedor de identidad personalizado. Puede descargar este ejemplo del [Repositorio de Github ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}.
 
 ```Java
 package com.ibm.helloworld;

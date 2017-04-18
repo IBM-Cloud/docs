@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 
+O serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -171,7 +172,7 @@ void submitAuthenticationFailure (JSONObject info);
 ## Implementação de amostra de um AuthenticationListener customizado
 {: #custom-android-samplecustom}
 
-Essa amostra de AuthenticationListener foi projetada para funcionar com um provedor de identidade customizado. É possível fazer download dessa amostra no [Repositório Github ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "Ícone de link externo"){: new_window}.
+Essa amostra de AuthenticationListener foi projetada para funcionar com um provedor de identidade customizado. Também é possível fazer download dessa amostra no [repositório Github ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}.
 
 ```Java
 package com.ibm.helloworld;

@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.
 
 # Habilitación de la autenticación de Facebook para aplicaciones web
 {: #facebook-auth-web}
@@ -33,7 +34,7 @@ Debe tener lo siguiente:
 
 Para utilizar Facebook como proveedor de identidad en su sitio web, debe añadir y configurar la plataforma de sitio web en su aplicación de Facebook.
 
-1. Inicie la sesión en su cuenta en el sitio [Facebook for Developers](https://developers.facebook.com). 
+1. Inicie la sesión en su cuenta en el sitio [Facebook for Developers](https://developers.facebook.com).
 	Para obtener información sobre cómo crear una nueva app, consulte [Creación de una aplicación en el sitio web de Facebook for Developers](facebook-auth-overview.html#facebook-appID).
 1. Anote el **ID de aplicación** y el **Secreto de la aplicación**. Necesitará estos valores al configurar el proyecto web para la autenticación de Facebook en el panel de control de Mobile Client Access.
 1. En la **Lista de productos**, seleccione **Inicio de sesión de Facebook**.
@@ -92,7 +93,7 @@ Para iniciar el proceso de autorización:
 	En el ejemplo siguiente se recuperan los parámetros de la variable `VCAP_SERVICES`, creando el URL y enviando la solicitud de redireccionamiento.
 
 	```Java
-  var cfEnv = require("cfenv"); 
+  var cfEnv = require("cfenv");
 
 	app.get("/protected", checkAuthentication, function(req, res, next){  
 		res.send("Hello from protected endpoint"); 
@@ -100,8 +101,8 @@ Para iniciar el proceso de autorización:
 	);
 
 	function checkAuthentication(req, res, next){
-		// Compruebe si el usuario está autenticado 
-  
+		// Compruebe si el usuario está autenticado
+
 		if (req.session.userIdentity){   
 			next()  
      } else {
@@ -115,10 +116,10 @@ Para iniciar el proceso de autorización:
 			var redirectUrl = authorizationEndpoint + "?response_type=code";
         redirectUrl += "&client_id=" + clientId;   
         redirectUrl += "&redirect_uri=" + redirectUri;   
-  
+
 			res.redirect(redirectUrl);  
   
-      } 
+      }
 	}
 	```
 	{: codeblock}
@@ -157,44 +158,44 @@ El siguiente paso consiste en obtener las señales de acceso y de identidad util
 
 	El código siguiente recupera los valores necesarios, y los envía con una solicitud POST.
 
-	```Java    
-  var cfEnv = require("cfenv");
-  var base64url = require("base64url ");
-  var request = require('request');
-  
-	app.get("/oauth/callback", function(req, res, next){ 
-		var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
-    var tokenEndpoint = mcaCredentials.tokenEndpoint; 
-    var formData = { 
-			grant_type: "authorization_code",
-      client_id: mcaCredentials.clientId,
-      redirect_uri: "http://some-server/oauth/callback",   // El URI de redirección de la aplicación web
-      code: req.query.code
-    }
+	```Java
+	var cfEnv = require("cfenv");
+	var base64url = require("base64url");
+	var request = require('request');
 
-  request.post({ 
-			url: tokenEndpoint, 
-    formData: formData 
-    }, function (err, response, body){ 
-			var parsedBody = JSON.parse(body); 
-			req.session.accessToken = parsedBody.access_token; 
-			req.session.idToken = parsedBody.id_token; 
-			var idTokenComponents = parsedBody.id_token.split("."); 
-			// [header, payload, signature] 
+	app.get("/oauth/callback", function(req, res, next) {
+		var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
+		var tokenEndpoint = mcaCredentials.tokenEndpoint;
+		var formData = {
+			grant_type: "authorization_code",
+			client_id: mcaCredentials.clientId,
+			redirect_uri: "http://some-server/oauth/callback",
+			// El URI de redirección de la aplicación web
+			code: req.query.code
+		}
+
+		request.post( {
+			url: tokenEndpoint,
+			formData: formData
+		}, function (err, response, body) {
+			var parsedBody = JSON.parse(body);
+			req.session.accessToken = parsedBody.access_token;
+			req.session.idToken = parsedBody.id_token;
+			var idTokenComponents = parsedBody.id_token.split(".");
+			// [header, payload, signature]
 			var decodedIdentity= base64url.decode(idTokenComponents[1]);
-			req.session.userIdentity = JSON.parse(decodedIdentity)["imf.user"]; 
+			req.session.userIdentity = JSON.parse(decodedIdentity)["imf.user"];
 			res.redirect("/");
 		}
-		).auth(mcaCredentials.clientId, mcaCredentials.secret); 
-
-   }
+		).auth(mcaCredentials.clientId, mcaCredentials.secret);
+		}
 	);
 	```
 	{: codeblock}
 
 	Tenga en cuenta que el parámetro `redirect_uri` debe coincidir con el `redirect_uri` utilizado para la solicitud de autorización anterior. El valor de parámetro `code` debe ser el código de concesión recibido en la respuesta desde la solicitud de autorización. El código de concesión es válido para 10 minutos, tras los cuales se debe recuperar un código nuevo.
 
-	El cuerpo de respuesta contendrá el código de acceso y el ID de token en formato JWT (consulte el [sitio web de JWT ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://jwt.io/ "Icono de enlace externo"){: new_window}.
+	El cuerpo de respuesta contendrá el código de acceso y el ID de token en formato JWT (consulte el [sitio web de JWT ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://jwt.io/){: new_window}.
 
 	Una vez que tenga acceso y que haya recibido las señales de identidad, puede señalar la sesión web como se indica y, opcionalmente, persistir estas señales.  
 

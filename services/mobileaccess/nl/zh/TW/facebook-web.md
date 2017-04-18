@@ -2,9 +2,11 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-03-15"
 
 ---
+
+{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。
 
 # 啟用 Web 應用程式的 Facebook 鑑別
 {: #facebook_web}
@@ -26,7 +28,7 @@ lastupdated: "2017-01-08"
 1. 記下您應用程式的「應用程式 ID」和「應用程式密碼」。當您配置 Web 專案進行 Facebook 鑑別時，需要此值。
 1. 從**設定**頁面中，按一下**新增平台**，然後選擇**網站**。
 1. 儲存變更。
-1. 按一下左資訊看板中的 **Facebook 登入**。
+1. 按一下資訊看板中的 **Facebook 登入**。
 1. 在**有效 OAuth 重新導向 URI** 方框中，輸入授權伺服器回呼端點：`https://imf-newauthserver.bluemix.net/oauth/{bluemix_app_guid}/callback`。儲存變更。
 
 
@@ -71,7 +73,7 @@ lastupdated: "2017-01-08"
 
   使用下列查詢參數：
   ```
-grant_type='authorization_code'
+  grant_type='authorization_code'
   client_id= <bluemix_app_guid>
   code= <authorization code>
   ```

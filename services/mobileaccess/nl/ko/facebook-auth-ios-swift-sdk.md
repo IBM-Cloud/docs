@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+{{site.data.keyword.amafull}} 서비스가 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다.
 
 # iOS 앱에서 Facebook 인증 사용(Swift SDK)
 {: #facebook-auth-ios}
@@ -28,7 +30,7 @@ lastupdated: "2017-01-15"
 * {{site.data.keyword.Bluemix_notm}} **지역**. 헤더에서 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘") 옆에 현재 {{site.data.keyword.Bluemix_notm}} 지역이 표시됩니다. 표시되는 지역 값은 `US South`, `United Kingdom` 및 `Sydney` 중 하나여야 하며 Swift SDK `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` 또는 `BMSClient.Region.sydney`에 필요한 SDK 값에 해당해야 합니다. 이 값은 {{site.data.keyword.amashort}} 클라이언트를 초기화하는 데 필요합니다. 
 * CocoaPods와 작동하도록 설정된 iOS 프로젝트가 있어야 합니다. 자세한 정보는 [iOS Swift SDK 설정](getting-started-ios-swift-sdk.html)의 **CocoaPods 설치**를 참조하십시오.  
    **참고:** 계속하기 전에 코어 {{site.data.keyword.amashort}} 클라이언트 SDK를 설치하지 않아도 됩니다.
-* [개발자용 Facebook ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developers.facebook.com "외부 링크 아이콘"){: new_window} 웹 사이트의 Facebook 애플리케이션. 
+* [개발자용 Facebook ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developers.facebook.com){: new_window} 웹 사이트의 Facebook 애플리케이션. 
 
 **중요:** Facebook SDK(`com.facebook.FacebookSdk`)를 별도로 설치하지 않아도 됩니다. Facebook SDK는 {{site.data.keyword.amashort}} `BMSFacebookAuthentication` Pod와 함께 자동으로 설치합니다. 개발자용 Facebook 웹 사이트에서 앱을 추가하거나 구성하는 경우 **Xcode 프로젝트에 Facebook SDK 추가** 설정을 건너뛸 수 있습니다.
 
@@ -37,7 +39,7 @@ lastupdated: "2017-01-15"
 
 개발자용 Facebook 사이트에서: 
 
-1. [개발자용 Facebook ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developers.facebook.com "외부 링크 아이콘"){: new_window}에서 사용자 계정으로 로그인하십시오. 
+1. [개발자용 Facebook ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developers.facebook.com){: new_window}에서 사용자 계정에 로그인하십시오. 
 
 1. iOS 플랫폼이 앱에 추가되었는지 확인하십시오. iOS 플랫폼을 추가하거나 구성하는 경우 iOS 애플리케이션의 **bundleId**를 제공해야 합니다. iOS 애플리케이션의 **번들 ID**를 찾으려면, `info.plist` 파일 또는 Xcode 프로젝트 **일반** 탭에서 **번들 ID**를 검색하십시오.
 
@@ -70,7 +72,7 @@ iOS 클라이언트에 서비스를 제공하도록 Facebook 앱 ID와 Facebook 
    ```
    {: codeblock}
 
-자세한 정보는 [CocoaPods 웹 사이트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cocoapods.org/ "외부 링크 아이콘"){: new_window}를 참조하십시오. 
+자세한 정보는 [CocoaPods 웹 사이트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cocoapods.org/){: new_window}를 참조하십시오. 
 
 ### CocoaPods를 사용하여 {{site.data.keyword.amashort}} 클라이언트 Swift SDK 설치
 {: #facebook-auth-install-swift-cocoapods}
@@ -238,7 +240,7 @@ iOS 클라이언트에 서비스를 제공하도록 Facebook 앱 ID와 Facebook 
 
 1. 브라우저에서 새로 작성된 모바일 백엔드 애플리케이션의 보호 엔드포인트로 요청을 전송해 보십시오. `{applicationRoute}`를 **모바일 옵션**에서 검색한 값으로 바꿔 URL `{applicationRoute}/protected`를 여십시오([Facebook 인증에 사용할 Mobile Client Access 구성](#facebook-auth-ios-configmca) 참조).
 (예: `http://my-mobile-backend.mybluemix.net/protected`)
-<br/>MobileFirst Services Starter 표준 유형으로 작성된 모바일 백엔드 애플리케이션의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}로 보호됩니다. 브라우저에 `Unauthorized` 메시지가 리턴됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스될 수 있으므로 이 메시지가 리턴됩니다.
+<br/>MobileFirst Services Starter 표준 유형으로 작성된 모바일 백엔드의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}로 보호됩니다. 브라우저에 `Unauthorized` 메시지가 리턴됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스될 수 있으므로 이 메시지가 리턴됩니다.
 
 1. iOS 애플리케이션을 사용하여 동일한 엔드포인트에 대해 요청을 작성하십시오. 
 
