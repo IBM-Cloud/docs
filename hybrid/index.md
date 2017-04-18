@@ -2097,5 +2097,3 @@ cf plugins
 {: codeblock}
 
 For more information about how to work with the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in, see [{{site.data.keyword.Bluemix_notm}} admin](../cli/plugins/bluemix_admin/index.html).
-* [What's new in {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)
-* [{{site.data.keyword.Bluemix_notm}} glossary](/docs/overview/glossary/index.html)
