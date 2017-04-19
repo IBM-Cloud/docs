@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2015, 2017
+lastupdated: "2017-4-11"
 
 ---
 
@@ -14,18 +15,34 @@ copyright:
 # Obtener ayuda y soporte para {{site.data.keyword.contdelivery_short}}    
 {: #cd_support}  
 
-Última actualización: 18 de noviembre de 2016
-{: .last-updated}
+El equipo de {{site.data.keyword.contdelivery_full}} supervisa activamente los foros Stack Overflow y developerWorks para ver si hay preguntas sobre el servicio {{site.data.keyword.contdelivery_short}} y DevOps Insights.   
 
-Si tiene problemas o preguntas al utilizar {{site.data.keyword.contdelivery_full}}, puede obtener ayuda buscando información o formulando preguntas en un foro. También puede [abrir una incidencia de soporte (en enlace se abre en una nueva ventana)](https://www.{DomainName}/docs/support/index.html#open-ticket).    
-{:shortdesc}
+<table>
+ <td align="center">
+ <strong>Stack Overflow</strong>
+  <p>
+   <a class="xref" href="http://stackoverflow.com/questions/ask?tags=ibm-bluemix,http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="(Se abre en un nuevo separador o ventana)"><img class="image" src="images/ask-a-question.png" alt="Formular una pregunta"/></a></p>
+   <p>
+    <a class="xref" href="http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="(Se abre en un nuevo separador o ventana)">Mostrar preguntas recientes sobre <img class="image" src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services en Stack Overflow.</p></td>
+  <td align="center">
+  <strong>dW Answers</strong>
+   <p>
+   <a class="xref" href="https://developer.ibm.com/answers/questions/ask/?topics=devops-services,bluemix" target="_blank" title="(Se abre en un nuevo separador o ventana)"><img class="image" src="images/ask-a-question.png" alt="Formular una pregunta"/></a></p>
+   <p>
+    <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="(Se abre en un nuevo separador o ventana)">Mostrar preguntas recientes sobre <img class="image" src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services en dW Answers.</p></td>
+  </table>  
 
-Los equipos de desarrollo y soporte de {{site.data.keyword.Bluemix_notm}} supervisan activamente Stack Overflow y dW Answers, y realizan un seguimiento de las preguntas que tienen la etiqueta ibm-bluemix, continuous-delivery y bluemix-continuous-delivery. Cuando formule una pregunta en cualquiera de los foros, añada a la misma una etiqueta para que la vean los equipos de desarrollo y soporte de {{site.data.keyword.Bluemix_notm}}. 
 
-* Si tiene preguntas técnicas sobre la entrega continua, publique la pregunta en [Desbordamiento de pila (el enlace se abre en una ventana nueva)](http://stackoverflow.com/search?q=ibm-bluemix+continuous-delivery){:new_window} y etiquete la pregunta con "ibm-bluemix" y "continuous-delivery".
+## Incidencias de soporte
 
-* Si tiene preguntas sobre el servicio {{site.data.keyword.contdelivery_short}}, utilice el foro [IBM developerWorks dW Answers (el enlace se abre en una nueva ventana)](https://developer.ibm.com/answers/topics/bluemix-continuous-delivery/?smartspace=bluemix){:new_window}. Incluya la etiqueta "bluemix-continuous-delivery".
+Si tiene un problema más serio o encuentra problemas con el servicio {{site.data.keyword.contdelivery_short}}, abra una incidencia de soporte.     
 
-Para obtener más información sobre cómo utilizar los foros, consulte el apartado [Obtención de ayuda (el enlace se abre en una nueva ventana)](https://www.{DomainName}/docs/support/index.html#getting-help).
+1. Inicie una sesión en {{site.data.keyword.Bluemix_notm}}.
+1. En el menú de la barra de menús, pulse **Soporte** y luego pulse **Añadir incidencia**.
+1. Rellene el formulario para indicar el tipo de soporte técnico que necesita. 
 
-Para obtener información sobre cómo abrir una incidencia de soporte de IBM, o sobre los niveles de soporte y las gravedades de las incidencias, consulte [Cómo contactar con el servicio de soporte (el enlace se abre en una nueva ventana)](https://www.{DomainName}/docs/support/index.html#contacting-support).
+Para obtener información sobre cómo abrir una incidencia de soporte de IBM {{site.data.keyword.Bluemix_notm}}, o sobre los niveles de soporte y las gravedades de las incidencias, consulte [Cómo contactar con el servicio de soporte](https://console.ng.bluemix.net/docs/support/index.html#contacting-support).
+
+
+## Soporte para Bluemix
+Para otros problemas o preguntas acerca del servicio {{site.data.keyword.Bluemix_notm}}, consulte [Obtención el soporte al cliente](https://www.{DomainName}/docs/support/index.html#getting-customer-support).
