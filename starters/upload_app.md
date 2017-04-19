@@ -16,8 +16,6 @@ lastupdated: "2017-04-19"
 {:shortdesc: .shortdesc}
 
 # Uploading your application
-Last updated: 17 February 2016
-{: .last-updated}
 
 After you are logged in to {{site.data.keyword.Bluemix}}, you can upload your application with the `bluemix app push` command.
 {:shortdesc}
