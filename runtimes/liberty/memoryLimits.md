@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-07"
+lastupdated: "2017-04-18"
 
 ---
 
@@ -39,9 +39,27 @@ When you deploy an application, the memory usage of the entire process is monito
 * If the Memory Limit is exceeded during application deployment, you receive a message that a failure occurred. You might see that the application is flapping. You might see that the application attempted to start multiple times, always unsuccessfully. Or, you might receive a message that indicates the application deployment failed.
 * If the Memory Limit is exceeded while the application is in service, the process is stopped. Cloud Foundry attempts to restart the application. The application might restart, but it is unavailable for some amount of time.
 
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Liberty runtime](index.html)
-* [Liberty Profile Overview](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+## Specifying Heap Memory
+{: #specifying_heap_memory}
+
+You can customize the maximum amount of heap memory your application is allocated in various ways.
+
+*  Use the JVM_ARGS environment variable and the -Xmx argument. For example to set the maximum heap size to 512M 
+use the command that follows, then restage your app.
+
+```
+    $ cf set-env myapp JVM_ARGS -Xmx512m
+```
+{: codeblock}
+
+* If your application is a [server directory](optionsForPushing.html#server_directory) or a [packaged server](optionsForPushing.html#packaged_server)
+you can specify the -Xmx argument in the jvm.options file.
+
+* You can specify the heap size ratio using the JBP_CONFIG_IBMJDK environment variable.  The heap_size_ratio is a 
+floating point value which specifies how much of available memory to allocate to the heap.  For example, to 
+allocate half of the available memory to the heap issue the command that follows and restage your app.
+
+```
+    $ cf set-env myapp JBP_CONFIG_IBMJDK "heap_size_ratio: 0.50"
+```
+{: codeblock}
