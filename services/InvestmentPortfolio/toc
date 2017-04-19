@@ -1,2 +1,9 @@
-[Getting Started](index.html)
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="InvestmentPortfolio" audience="service" href="/docs/services/InvestmentPortfolio/index.html"}
+Investment Portfolio
+
+    {: .navgroup id="learn"}
     index.md
+    {: .navgroup-end}
