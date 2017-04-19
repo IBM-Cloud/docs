@@ -57,4 +57,4 @@ When a **bluemix app push** command is issued, the command line interface provid
 {{site.data.keyword.Bluemix}} CLI bundled a cf cli in its installation. `bluemix app push` command acutually invokes `cf push` to upload and deploy your application to {{site.data.keyword.Bluemix_notm}}. See [cf commands](/docs/cli/reference/cfcommands/index.html) for more information about cf push. See [Using community buildpacks](/docs/cfapps/byob.html) for information about buildpacks.
 
 
-**Tip:** You can also upload or deploy an application from DevOps Services. See [Developing a {{site.data.keyword.Bluemix_notm}} application in Node.js with the Web IDE ![External link icon](../icons/launch-glyph.svg "External link icon")](https://hub.jazz.net/tutorials/devopsweb/){: new_window}.
+**Tip:** You can also upload or deploy an application from DevOps Services. See [Developing a {{site.data.keyword.Bluemix_notm}} application in Node.js with the Web IDE](https://hub.jazz.net/tutorials/devopsweb/){: new_window}.
