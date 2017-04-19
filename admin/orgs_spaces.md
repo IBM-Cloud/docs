@@ -160,7 +160,7 @@ To view the used and allocated quota for an organization, complete the following
 
 **Note:** Containers are not available in the {{site.data.keyword.Bluemix_notm}} Sydney region. 
 
-For more information about containers, see [Quota](/docs/containers/container_planning_org_ov.html#container_planning_quota) in the Containers documentation.
+For more information about containers, see [Quota](/docs/containers/container_planning.html#container_planning_quota) in the Containers documentation.
 To change the quota that is allocated to an organization, you must open a support ticket. For more information about opening a support ticket, see [Getting customer support](/docs/support/index.html#contacting-support). 
 
 ## Managing domains
