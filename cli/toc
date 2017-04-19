@@ -27,7 +27,6 @@ CLI and Dev Tools
 		[Container Service (Clusters)](../containers/cs_cli_devtools.html)
 		[Container Service (Single and scalable groups)](../containers/container_cli_cfic.html)
 		[IBM Developer](../cloudnative/dev_cli.html)
-		plugins/openwisk/index.md
 		plugins/pnp/index.md
 		[IBM SDK Generator](../cloudnative/sdk_cli.html)
 		plugins/softlayer/index.md
