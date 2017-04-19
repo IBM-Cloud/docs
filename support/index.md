@@ -144,7 +144,7 @@ For {{site.data.keyword.Bluemix_notm}} Public, you can sign up for platform noti
 
   * Check for current maintenance windows or an incident in progress
 
-	If you suspect that {{site.data.keyword.Bluemix_notm}} is not functioning as expected, check the status page for current maintenance windows or an incident in progress. To report an incident that is not already listed on the status page, open a Support ticket by clicking **Support** and selecting **Add Ticket** on the menu bar or by accessing the [IBM Bluemix Support ![External link icon](../icons/launch-glyph.svg "External link icon")](ibm.biz/bluemixsupport){: new_window} help page.
+	If you suspect that {{site.data.keyword.Bluemix_notm}} is not functioning as expected, check the status page for current maintenance windows or an incident in progress. To report an incident that is not already listed on the status page, open a Support ticket by clicking **Support** and selecting **Add Ticket** on the menu bar or by accessing the [IBM Bluemix Support ![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.ibm.biz/bluemixsupport){: new_window} help page.
 
   * Take advantage of multiple {{site.data.keyword.Bluemix_notm}} regions
 
@@ -224,7 +224,7 @@ If you are a {{site.data.keyword.Bluemix_notm}} Dedicated customer, support is p
 
 <ul>
 <li>Contact support by opening a new ticket using the
-<a href="ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support</a> help page. You can use an email address or your {{site.data.keyword.ibmid}} for this form. Select the **{{site.data.keyword.Bluemix_notm}} Dedicated** option for the Region field.
+<a href="http://www.ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support</a> help page. You can use an email address or your {{site.data.keyword.ibmid}} for this form. Select the **{{site.data.keyword.Bluemix_notm}} Dedicated** option for the Region field.
 <p>Form submissions are monitored from Sunday at 21:30 UTC to Friday at 23:59 UTC. For assistance in converting these support hours to your local time zone, see [Timeanddate.com ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.timeanddate.com).</p>
 </li>
 <li>If you have an {{site.data.keyword.ibmid}} and have access to the {{site.data.keyword.Bluemix_notm}} Public environment, in the menu bar click **Support** and select **Add Ticket**. Select the topic area for your issue and follow the prompts to submit your ticket.</li>
@@ -241,7 +241,7 @@ If you are a {{site.data.keyword.Bluemix_notm}} Local customer, support is provi
 
 <ul>
 <li>Contact support by opening a new ticket using the
-<a href="ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support <img src="../icons/launch-glyph.svg" alt="External link icon"></a> help page. You can use an email address or your {{site.data.keyword.ibmid}} for this form. Select the **{{site.data.keyword.Bluemix_notm}} Local** option for the Region field.
+<a href="http://www.ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support <img src="../icons/launch-glyph.svg" alt="External link icon"></a> help page. You can use an email address or your {{site.data.keyword.ibmid}} for this form. Select the **{{site.data.keyword.Bluemix_notm}} Local** option for the Region field.
 <p>Form submissions are monitored from Sunday at 21:30 UTC to Friday at 23:59 UTC. For assistance in converting these support hours to your local time zone, see [Timeanddate.com ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.timeanddate.com).</p>
 </li>
 <li>If you have an {{site.data.keyword.ibmid}} and have access to the {{site.data.keyword.Bluemix_notm}} Public environment, in the menu bar click **Support** and select **Add Ticket**. Select the topic area for your issue and follow the prompts to submit your ticket.</li>
