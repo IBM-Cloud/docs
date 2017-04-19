@@ -32,7 +32,7 @@ Complete the following steps to collect non-default data through the console:
 
     The list of images that are displayed include images that are provided by {{site.data.keyword.IBM}} and images that are stored in your private {{site.data.keyword.Bluemix_notm}} registry. 
 
-2. Define your container. Choose the type, enter a name for the container, select its size, and define other attributes such as IP address details and ports. For more information, see [Create and deploy a single container through the {{site.data.keyword.Bluemix_notm}} UI](/docs/containers/container_single_ui.html). 
+2. Define your container. Choose the type, enter a name for the container, select its size, and define other attributes such as IP address details and ports. For more information, see [Create and deploy a single container through the {{site.data.keyword.Bluemix_notm}} UI](/docs/containers/container_single_ui.html#gui). 
 
 3. Expand the **Advanced Options** section and select **Add a new environment variable**.
 
