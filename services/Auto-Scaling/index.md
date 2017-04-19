@@ -441,7 +441,7 @@ Contact the Cloud Administrator for more information.
 ## general
 {: #general}
 
-* [Scaling containers](https://www.{DomainName}/docs/containers/container_creating_ov.html#container_group_ov){:new_window}
+* [Scaling containers](https://www.{DomainName}/docs/containers/container_ha.html#container_ha){:new_window}
 * [Scaling virtual servers](https://www.{DomainName}/docs/virtualmachines/vm_index.html#vm_manage_instances){:new_window}
 * [{{site.data.keyword.autoscaling}} CLI](../../cli/plugins/auto-scaling/index.html){:new_window}
 * [{{site.data.keyword.autoscaling}} agent for Node.js](https://www.npmjs.com/package/bluemix-autoscaling-agent){:new_window}
