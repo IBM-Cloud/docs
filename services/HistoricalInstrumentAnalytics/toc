@@ -1,2 +1,9 @@
-[Getting Started with Historical Instrument Analytics](index.html)
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="HistoricalInstrumentAnalytics" audience="service" href="/docs/services/HistoricalInstrumentAnalytics/index.html"}
+Historical Instrument Analytics
+
+    {: .navgroup id="learn"}
     index.md
+    {: .navgroup-end}
