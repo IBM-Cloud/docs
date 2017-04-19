@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-19"
 
 ---
 
@@ -46,7 +46,7 @@ cd get-started-ruby
   {: pre}
 
 
-## 3. Run the app locally (optional)
+## 2. Run the app locally (optional)
 {: #run_locally}
 
 
