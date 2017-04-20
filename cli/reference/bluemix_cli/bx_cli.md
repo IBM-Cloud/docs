@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-04-13"
+lastupdated: "2017-04-20"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-04-13"
 # {{site.data.keyword.Bluemix_notm}} (bx) commands
 {: #bluemix_cli}
 
-Version: 0.5.1
+Version: 0.5.2
 
 The {{site.data.keyword.Bluemix_notm}} command line interface (CLI) provides a set of commands that are grouped by namespace for users to interact with {{site.data.keyword.Bluemix_notm}}. Some {{site.data.keyword.Bluemix_notm}} commands are wrappers of existing cf commands, while others provide extended capabilities for {{site.data.keyword.Bluemix_notm}} users. The following information lists commands that are supported by {{site.data.keyword.Bluemix_notm}} CLI, and includes their names, options, usage, prerequisites, descriptions, and examples.
 {:shortdesc}
@@ -332,8 +332,6 @@ bluemix login [OPTIONS...]
 
 <strong>Prerequisites</strong>:  None
 
-<!-- staging comment for Atlas 45: might need prereq for federated ID/SSO option unless we expect them to just view the details from the cf login command -->
-
 <strong>Command options</strong>:
 <dl>
   <dt>-a <i>API_ENDPOINT</i> (optional)</dt>
@@ -352,6 +350,8 @@ bluemix login [OPTIONS...]
   <dd> Name of the target organization </dd>
   <dt> -s <i>SPACE_NAME</i> (optional) </dt>
   <dd> Name of the target space</dd>
+  <dt> --skip-ssl-validation (optional) </dt>
+  <dd> Bypass SSL validation of HTTP requests. This option is not recommended.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -1333,7 +1333,7 @@ bluemix app domain-cert ibmcxo-eventconnect.com
 Add a certificate to the specified domain in the current org.
 
 ```
-bluemix app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [--verify-client]
+bluemix app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [-t TRUST_STORE_FILE]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login, Target
@@ -1350,8 +1350,8 @@ bluemix app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD
    <dd>The password for the certificate.</dd>
    <dt>-i <i>INTERMEDIATE_CERT_FILE</i> (optional)</dt>
    <dd>The intermediate certificate file path.</dd>
-   <dt>--verify-client (optional)</dt>
-   <dd>Whether to enable the client certificate verification.</dd>
+   <dt>-t <i>TRUST_STORE_FILE</i> (optional)</dt>
+   <dd>The trust store file.</dd>
    </dl>
 
 
