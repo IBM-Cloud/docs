@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,14 +12,14 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-O serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.
+**Importante: o serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.**
 
-# Configurando a autenticação customizada para seu aplicativo {{site.data.keyword.amashort}} Cordova
+# Configurando a autenticação customizada para o seu app Cordova Mobile Client Access
 {: #custom-cordova}
 
 Instrua seu aplicativo Cordova para usar autenticação personalizada e o cliente SDK {{site.data.keyword.amafull}} para acessar seu aplicativo protegido.
 
-## Antes de Começar
+## Antes de iniciar
 {: #before-you-begin}
 * Um recurso que seja protegido por uma instância do
 serviço {{site.data.keyword.amashort}} que está
@@ -216,7 +216,7 @@ Ative o `Compartilhamento Keychain` acessando a guia `Recursos` e colocando o `C
 {: #custom-cordova-test}
 Depois que o client SDK é inicializado e um `AuthenticationListener` customizado é registrado, é possível iniciar as solicitações para seu aplicativo backend móvel.
 
-### Antes de Começar
+### Antes de iniciar
 {: #custom-cordova-testing-before}
 Deve-se ter um aplicativo que foi criado com o modelo do {{site.data.keyword.mobilefirstbp}} e ter um recurso que esteja protegido por {{site.data.keyword.amashort}} no terminal `/protected`.
 

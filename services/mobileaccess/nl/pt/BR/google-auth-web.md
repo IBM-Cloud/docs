@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-O serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.
+**Importante: o serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.**
 
 # Ativando a autenticação do Google para aplicativos da web
 {: #google-auth-web}
@@ -51,7 +51,7 @@ do Google** e o **Segredo do
 aplicativo**.
 
 
-## Configurando o {{site.data.keyword.amashort}} para autenticação do Google
+## Configurando o Mobile Client Access para autenticação do Google
 {: #google-auth-config-ama}
 
 Depois de ter um ID de aplicativo e um segredo do Google, é possível ativar a autenticação do Google no painel do {{site.data.keyword.amashort}}.
@@ -75,7 +75,7 @@ redirecionamento seja acessado após o processo de autorização ser concluído 
 5. Clique em **Salvar**.
 
 
-## Implementando o fluxo de autorização {{site.data.keyword.amashort}} usando o Google como provedor de identidade
+## Implementando o fluxo de autorização do Mobile Client Access usando o Google como provedor de identidade
 {: #google-auth-flow}
 
 A variável de ambiente `VCAP_SERVICES` é criada automaticamente para cada instância de serviço do
@@ -224,7 +224,7 @@ será possível sinalizar a sessão da web como autenticada e,
 opcionalmente, persistir esses tokens.  
 
 
-##Usando o acesso e o token de identidade obtidos
+## Usando o acesso e o token de identidade obtidos
 {: #google-auth-using-token}
 
 O token de identidade contém informações sobre a identidade do usuário. Para autenticação do Google, o token contém todas as informações que o usuário concordou em compartilhar, como nome completo, URL da foto de perfil, etc.  
@@ -235,7 +235,7 @@ Para fazer solicitações para recursos protegidos, inclua um cabeçalho de auto
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-####Dicas:
+#### Dicas:
 {: #tips}
 
 * O `accessToken` e o `idToken` devem ser separados por um espaço em branco.

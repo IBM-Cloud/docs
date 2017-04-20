@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-O serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.
+**Importante: o serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.**
 
 # Configurando o plug-in do Cordova
 {: #getting-started-cordova}
@@ -25,7 +25,7 @@ e desprotegidos da WebView.
 
 {:shortdesc}
 
-## Antes de Começar
+## Antes de iniciar
 {: #before-you-begin}
 Você deve ter:
 
@@ -275,7 +275,7 @@ exemplo: `http://my-mobile-backend.mybluemix.net/protected`).
 
 	![Mensagem de êxito](images/getting-started-android-success.png)
 
-	## Próximas Etapas
+	## Próximas etapas
 	{: #next-steps}
 
 	Quando você se conectou ao terminal protegido, nenhuma credencial foi necessária. Para requerer que os usuários efetuem login em seu aplicativo, deve-se configurar a autenticação do Facebook, do Google ou customizada.

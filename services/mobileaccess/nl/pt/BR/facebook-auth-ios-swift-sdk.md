@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-O serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.
+**Importante: o serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.**
 
 # Ativando a autenticação do Facebook para apps iOS (Swift SDK)
 {: #facebook-auth-ios}
@@ -61,9 +61,8 @@ No site Facebook for Developers:
 
 1. Efetue login em sua conta no [Facebook for Developers ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://developers.facebook.com){: new_window}.
 
-1. Assegure-se de que a plataforma iOS tenha sido incluída em seu app. Ao incluir ou
-configurar a plataforma iOS, será necessário fornecer o **bundleId** do
-seu aplicativo iOS. Para
+1. Assegure-se de que a plataforma iOS tenha sido incluída em seu aplicativo. Ao incluir ou configurar a plataforma iOS, é necessário fornecer
+o **bundleId** de seu aplicativo iOS. Para
 localizar o **bundleId** de seu aplicativo
 iOS, procure o **Identificador de pacote
 configurável** no arquivo
@@ -279,7 +278,7 @@ aplicativo backend móvel.
 ### Antes de iniciar
 {: #facebook-auth-ios-testing-before}
 
-Deve-se estar usando o modelo do {{site.data.keyword.mobilefirstbp}} e já ter um recurso protegido pelo {{site.data.keyword.amashort}} no terminal `/protected`. Se for necessário configurar um terminal `/protected`, consulte [Protegendo recursos](protecting-resources.html).
+Deve-se usar o modelo do {{site.data.keyword.mobilefirstbp}} e já ter um recurso protegido pelo {{site.data.keyword.amashort}} no terminal `/protected`. Se for necessário configurar um terminal `/protected`, consulte [Protegendo recursos](protecting-resources.html).
 
 1. Tente enviar uma solicitação para o terminal protegido do seu aplicativo backend móvel recém-criado em seu navegador. Abra a URL a seguir:
 `{applicationRoute}/protected`, substituindo o `{applicationRoute}` pelo valor que você recuperou a partir das

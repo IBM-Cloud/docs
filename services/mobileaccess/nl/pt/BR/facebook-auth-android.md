@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-O serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.
+**Importante: o serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.**
 
 # Ativando a autenticação do Facebook para apps Android
 {: #facebook-auth-android}
@@ -22,7 +22,7 @@ Android, inclua e configure o cliente Android para acessar seu
 aplicativo Facebook no site Facebook for Developers.
 {:shortdesc}
 
-## Antes de Começar
+## Antes de iniciar
 {: #before-you-begin}
 
 Você deve ter:
@@ -173,7 +173,7 @@ arquivos Gradle**.
 	{: codeblock}
 
 1. No arquivo `AndroidManifest.xml` do projeto do Android:
-	* Inclua a permissão de acesso à Internet sob o elemento `<manifest>`:
+	* Inclua a permissão de acesso à Internet no elemento `<manifest>`:
 
 		```XML
 	<uses-permission android:name="android.permission.INTERNET" />

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-O serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.
+**Importante: o serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.**
 
 
 # Autenticando usuários com as credenciais do Google
@@ -47,7 +47,7 @@ um cabeçalho de autorização.
 * O {{site.data.keyword.amashort}} server SDK extrai o cabeçalho de autorização da solicitação, valida-o com o serviço {{site.data.keyword.amashort}} e concede acesso a um recurso de backend.
 
 
-### Fluxo de solicitação de aplicativo da web {{site.data.keyword.amashort}}
+### Fluxo de solicitação do aplicativo da web Mobile Client Access
 {: #mca-google-web-sequence}
 O fluxo de solicitação de aplicativo da web {{site.data.keyword.amashort}} é semelhante ao fluxo do cliente móvel. Entretanto, o {{site.data.keyword.amashort}} protege o aplicativo da web, em vez de um recurso de backend do {{site.data.keyword.Bluemix_notm}}.
 
@@ -56,7 +56,7 @@ O fluxo de solicitação de aplicativo da web {{site.data.keyword.amashort}} é 
 
 
 
-## Próximas Etapas
+## Próximas etapas
 {: #google-auth-nextsteps}
 
 * [Ativando a autenticação do Google para apps Android](google-auth-android.html)

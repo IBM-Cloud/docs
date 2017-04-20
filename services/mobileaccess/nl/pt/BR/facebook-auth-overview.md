@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -10,7 +10,7 @@ lastupdated: "2017-03-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 
-O serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.
+**Importante: o serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.**
 
 # Autenticando usuários com as credenciais do Facebook
 {: #facebook-auth-overview}
@@ -80,7 +80,7 @@ Você precisa desse valor para configurar a autenticação do Facebook para o se
 
 1. A página **Configuração do produto** aparece. Copie o **ID do app** exibido.
 
-## Próximas Etapas
+## Próximas etapas
 {: #next-steps}
 
 * [Ativando a autenticação do Facebook para apps Android](facebook-auth-android.html)

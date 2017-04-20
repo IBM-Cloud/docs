@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,11 +11,9 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-O serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.
+**Importante: o serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.**
 
-#Configurando a autenticação customizada para aplicativos
-da web
-{{site.data.keyword.amashort}}
+#Configurando a autenticação customizada para os aplicativos da web Mobile Client Access
 {: #custom-web}
 
 Inclua a autenticação customizada e a funcionalidade de
@@ -140,7 +138,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 {: codeblock}
 
 
-##Configurando o {{site.data.keyword.amashort}} para autenticação customizada
+##Configurando o Mobile Client Access para autenticação customizada
 {: #custom-auth-config-mca}
 
 Após ter seu provedor de identidade customizado configurado, será possível ativar a autenticação customizada no painel {{site.data.keyword.amashort}}.
@@ -157,7 +155,7 @@ final após autorização bem-sucedida.
 1. Clique em **Salvar**.
 
 
-##Implementando o fluxo de autorização {{site.data.keyword.amashort}} usando um provedor de identidade customizado
+##Implementando o fluxo de autorização do Mobile Client Access usando um provedor de identidade customizado
 {: #custom-auth-flow}
 
 A variável de ambiente `VCAP_SERVICES` é criada automaticamente para cada instância de serviço do {{site.data.keyword.amashort}} e contém propriedades necessárias para o processo de autorização. Ele consiste em um objeto JSON e pode ser visualizado na guia

@@ -2,27 +2,28 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-07"
 
 ---
 
-O serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.
+**Importante: o serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.**
 
-# Configurando o {{site.data.keyword.amashort}} para autenticação customizada
+# Configurando o Mobile Client Access para autenticação customizada
 {: #custom-dash}
 
 
 Para usar autenticação customizada com seu app móvel, deve-se registrar uma região de autenticação customizada e a URL base de seu provedor de identidade customizado no painel do serviço {{site.data.keyword.amashort}}.
 
-## Antes de Começar
+## Antes de iniciar
 {: #custom-dash-begin}
 Você deve ter:
 * Uma instância de um serviço
 {{site.data.keyword.amafull}}.
 * Um aplicativo do provedor de identidade customizado.
 
-## Configure a autenticação customizada no painel do {{site.data.keyword.amafull}}
+## Configure a autenticação customizada no painel
 {: #custom-dash-config}
+
 Use o painel do {{site.data.keyword.amafull}} para configurar a autenticação customizada.
 
 1. Abra o seu serviço no painel do {{site.data.keyword.amafull}}.

@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:codeblock:.codeblock}
 
-O serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.
+**Importante: o serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.**
 
 # Protegendo recursos Node.js com o {{site.data.keyword.amashort}}
 {: #protecting-resources-nodejs}

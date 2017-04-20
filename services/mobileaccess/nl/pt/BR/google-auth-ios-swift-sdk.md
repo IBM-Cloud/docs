@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-O serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.
+**Importante: o serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.**
 
 # Ativando a autenticação do Google para apps iOS (Swift SDK)
 {: #google-auth-ios}
@@ -92,7 +92,7 @@ código a seguir:
 	Para obter mais informações sobre a atualização do arquivo de cabeçalho de ponte, veja
 [Ativar conexão ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in){: new_window}.
 
-## Configurando o {{site.data.keyword.amashort}} para autenticação do Google
+## Configurando o Mobile Client Access para autenticação do Google
 {: #google-auth-ios-config}
 
 Agora que você tem um ID de cliente iOS, será possível
@@ -108,7 +108,7 @@ especifique o valor `CLIENT_ID` que você obteve
 do arquivo `GoogleService-Info.plist`.
 1. Clique em **Salvar**.
 
-## Configurando o {{site.data.keyword.amashort}} client SDK para iOS
+## Configurando o SDK cliente para iOS
 {: #google-auth-ios-sdk}
 
 ### Instalando o CocoaPods
@@ -226,7 +226,7 @@ Após o SDK do cliente ser inicializado e o Google Authentication Manager ser re
 ### Antes de iniciar
 {: #google-auth-ios-testing-before}
 
-Deve-se usar o modelo do {{site.data.keyword.mobilefirstbp}} e já ter um recurso protegido por {{site.data.keyword.amashort}} no terminal `/protected`. Se for necessário configurar um terminal `/protected`, consulte [Protegendo recursos](protecting-resources.html).
+Deve-se usar o modelo do {{site.data.keyword.mobilefirstbp}} e já ter um recurso protegido pelo {{site.data.keyword.amashort}} no terminal `/protected`. Se for necessário configurar um terminal `/protected`, consulte [Protegendo recursos](protecting-resources.html).
 
 1. Tente enviar uma solicitação para um terminal protegido de seu aplicativo backend móvel em seu navegador da área de trabalho, abrindo `{applicationRoute}/protected`.  Por exemplo,
 `http://my-mobile-backend.mybluemix.net/protected`.

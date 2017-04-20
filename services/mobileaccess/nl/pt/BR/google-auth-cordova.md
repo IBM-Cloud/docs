@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-O serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.
+**Importante: o serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.**
 
 # Ativando a autenticação do Google para apps Cordova
 {: #google-auth-cordova}
@@ -21,7 +21,7 @@ para autenticação do Google, deve-se fazer
 mudanças no código da plataforma nativa do aplicativo Cordova (Java
 ou Objective-C), bem como no Cordova WebView (Javascript). Cada plataforma deve ser configurada separadamente. Use o ambiente de desenvolvimento nativo para fazer mudanças no código nativo, por exemplo, no Android Studio ou no Xcode.
 
-## Antes de Começar
+## Antes de iniciar
 {: #before-you-begin}
 
 Você deve ter:
@@ -63,7 +63,7 @@ MCA para autenticação do Google](https://console.{DomainName}/docs/services/mo
 configurar o {{site.data.keyword.amashort}} para usar a
 autorização do Google.
 
-### Configure o SDK do cliente {{site.data.keyword.amashort}} para Android Cordova.
+### Configure o SDK cliente para o Android Cordova
 
 1. Na pasta do projeto Android, abra o arquivo `build.gradle`
 para o módulo do aplicativo (**não** o arquivo
@@ -207,7 +207,7 @@ Substitua `<applicationBluemixRegion>` pela sua região (consulte [Antes de inic
 
 Após o SDK do cliente ser inicializado, será possível começar a fazer solicitações ao seu aplicativo backend móvel.
 
-### Antes de Começar
+### Antes de iniciar
 {: #google-auth-cordova-testing-before}
 
 Deve-se ter um aplicativo backend protegido pelo {{site.data.keyword.amashort}} no terminal `/protected`. Se for necessário configurar um terminal `/protected`, consulte [Protegendo recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
@@ -218,7 +218,7 @@ Deve-se ter um aplicativo backend protegido pelo {{site.data.keyword.amashort}} 
 
 1. Use seu aplicativo Cordova para fazer uma solicitação
 para o mesmo terminal, usando a URL completa (por exemplo,
-`http://my-mobile-backend.mybluemix.net/protected`). Inclua o código a seguir após inicializar `BMSClient`.
+`http://my-mobile-backend.mybluemix.net/protected`). Inclua o código a seguir depois de inicializar `BMSClient`.
 
 	```JavaScript
 	var success = function(data){
@@ -238,7 +238,7 @@ para o mesmo terminal, usando a URL completa (por exemplo,
 
 	![Tela de login do Google](images/ios-google-login.png)
 
-	Essa tela pode parecer ligeiramente diferente se você não tiver o app Facebook instalado em seu dispositivo ou se não estiver com login efetuado atualmente no Facebook.
+	Essa tela poderá parecer um pouco diferente se o app Facebook não estiver instalado em seu dispositivo, ou se você não estiver atualmente conectado ao Facebook.
 
 1. Ao clicar em **OK**, você estará autorizando o {{site.data.keyword.amashort}} a usar sua identidade do usuário do Google para fins de autenticação.
 

@@ -2,15 +2,15 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
 {:codeblock:.codeblock}
 
-O serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.
+**Importante: o serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.**
 
-# Configurando a autenticação customizada para seu aplicativo {{site.data.keyword.amashort}} iOS (Swift SDK)
+# Configurando a autenticação customizada para seu app iOS (SDK Swift) Mobile Client Access
 {: #custom-ios}
 
 Configure seu aplicativo iOS que está usando autenticação customizada para utilizar
@@ -160,7 +160,7 @@ pelo valor recuperado a partir das **Opções de dispositivo móvel** (veja
 
  O terminal `/protected` de um aplicativo backend móvel criado com o modelo {{site.data.keyword.mobilefirstbp}} está protegido com o {{site.data.keyword.amashort}}. O terminal pode ser acessado somente por aplicativos móveis que sejam instrumentados com o {{site.data.keyword.amashort}} client SDK. Como resultado, uma mensagem `Unauthorized` é exibida em seu navegador.
 
-1. Use seu aplicativo iOS para fazer solicitação ao mesmo terminal. Inclua o
+1. Use seu aplicativo iOS para fazer solicitação para o mesmo terminal. Inclua o
 código a seguir depois de inicializar `BMSClient` e registrar a
 delegação de autenticação customizada:
 

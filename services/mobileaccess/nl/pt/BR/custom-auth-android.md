@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
-O serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.
+**Importante: o serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.**
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -15,14 +15,14 @@ O serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.d
 {:pre: .pre}
 
 
-# Configurando a autenticação customizada para seu aplicativo {{site.data.keyword.amashort}} Android
+# Configurando a autenticação customizada para o seu app Android Mobile Client Access
 {: #custom-android}
 
 
 Configure seu aplicativo Android com a autenticação customizada para usar o SDK do cliente {{site.data.keyword.amashort}} e
 conecte seu aplicativo ao {{site.data.keyword.Bluemix}}.
 
-## Antes de Começar
+## Antes de iniciar
 {: #before-you-begin}
 Antes de começar, deve-se ter:
 
@@ -66,7 +66,7 @@ ao {{site.data.keyword.amashort}}](getting-started.html)
 
 
 
-## Inicializando o {{site.data.keyword.amashort}} client SDK
+## Inicializando o client SDK
 {: #custom-android-initialize}
 Se você tiver um app Android instrumentado com o
 {{site.data.keyword.amashort}} Android SDK, será possível
@@ -232,7 +232,7 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 ## Registrando um AuthenticationListener customizado
 {: #custom-android-register}
 
-Depois de criar um AuthenticationListener customizado, registre-o com `BMSClient` antes de começar a usar o listener. Inclua o código a seguir em seu aplicativo. Esse código deve ser chamado antes de enviar quaisquer solicitações aos seus recursos protegidos.
+Depois de criar um AuthenticationListener customizado, registre-o com `BMSClient` antes de começar a usar o listener. Inclua o código a seguir no aplicativo. Esse código deve ser chamado antes de enviar quaisquer solicitações aos seus recursos protegidos.
 
 ```Java
 MCAAuthorizationManager mcaAuthorizationManager = 
@@ -270,7 +270,7 @@ navegador, por exemplo, `http://my-mobile-backend.mybluemix.net/protected`. Para
 
 1. O terminal `/protected` de um aplicativo backend móvel criado com o modelo {{site.data.keyword.mobilefirstbp}} está protegido com o {{site.data.keyword.amashort}}. O terminal pode ser acessado somente por aplicativos móveis que sejam instrumentados com o {{site.data.keyword.amashort}} client SDK. Como resultado, uma mensagem `Unauthorized` é exibida em seu navegador.
 
-1. Use o seu aplicativo Android para fazer uma solicitação para o mesmo terminal protegido que inclui o `{applicationRoute}`. Inclua o código a seguir depois de inicializar `BMSClient` e registrar seu AuthenticationListener customizado.
+1. Use o seu aplicativo Android para fazer uma solicitação para o mesmo terminal protegido que inclui o `{applicationRoute}`. Inclua o código a seguir depois de inicializar `BMSClient` e registrar o AuthenticationListener customizado.
 
 	```Java
 	Request request = new Request("{applicationRoute}/protected", Request.GET);

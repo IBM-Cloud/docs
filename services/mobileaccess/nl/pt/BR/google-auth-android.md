@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-O serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.
+**Importante: o serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.**
 
 # Ativando a autenticação do Google para apps Android
 {: #google-auth-android}
@@ -19,7 +19,7 @@ O serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.d
 Use o Google para autenticar usuários em seu aplicativo
 {{site.data.keyword.amafull}} Android. Inclua a funcionalidade de segurança do {{site.data.keyword.amashort}}.
 
-## Antes de Começar
+## Antes de iniciar
 {: #before-you-begin}
 
 Você deve ter:
@@ -156,9 +156,9 @@ No seu projeto Android Studio.
 
 1. Sincronize seu projeto com o Gradle clicando em **Ferramentas > Android > Sincronizar projeto com arquivos Gradle**.
 
-1. Abra o arquivo `AndroidManifest.xml` de seu projeto do Android.
+1. Abra o arquivo `AndroidManifest.xml` de seu projeto Android.
 
-1. Inclua a permissão de acesso à Internet sob o elemento `<manifest>`:
+1. Inclua a permissão de acesso à Internet no elemento `<manifest>`:
 
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-O serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.
+**Importante: o serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.**
 
 # Autenticando usuários com um provedor de identidade customizado
 {: #custom-id}
@@ -145,7 +145,7 @@ Por padrão, o provedor de identidade customizado é considerado um aplicativo s
 
 Um provedor de identidade customizado suporta um domínio de autenticação customizado. Para manipular desafios de autenticação recebidos, crie e registre uma instância do `AuthenticationDelegate`/ `AuthenticationListener` em seu aplicativo cliente. Defina o nome do domínio de autenticação customizado ao configurar um provedor de identidade customizado no painel do {{site.data.keyword.amashort}}. A região identifica a instância de serviço específica {{site.data.keyword.amashort}} de uma solicitação recebida.
 
-## Próximas Etapas
+## Próximas etapas
 {: #next-steps}
 
 * [Criando um provedor de identidade customizado](custom-auth-identity-provider.html)
