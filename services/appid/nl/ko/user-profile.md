@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -10,19 +10,17 @@ lastupdated: "2017-03-30"
 {:shortdesc: .shortdesc}
 
 
-# 사용자 프로파일에 대한 이해
+# 사용자 프로파일 개요
 {: #user-profile}
 
 사용자 프로파일은 {{site.data.keyword.appid_short}}에서 저장하고 유지보수하는 엔티티입니다. 프로파일에는 사용자의 속성과 ID가 있으며 익명이거나 ID 제공자가 관리하는 ID에 링크할 수 있습니다.
 {:shortdesc}
 
-{{site.data.keyword.appid_short_notm}}에서는 익명으로 또는 OIDC(OpenId Connect) IdP로 인증하여 로그인을 위한 API를 제공합니다. [ID 제공자 구성](/docs/services/appid/identity-providers.html#setting-up-idp)을 참조하십시오. 사용자 프로파일 속성 API 엔드포인트는 로그인 및 권한 부여 프로세스 중에 {{site.data.keyword.appid_short_notm}}에서 생성된 액세스 토큰이 보호하는 리소스입니다.
+{{site.data.keyword.appid_short_notm}}는 익명으로 또는 OIDC(OpenId Connect) [ID 제공자](/docs/services/appid/identity-providers.html#setting-up-idp)로 인증하여 로그인을 위한 API를 제공합니다. 사용자 프로파일 속성 API 엔드포인트는 로그인 및 권한 부여 프로세스 중에 {{site.data.keyword.appid_short_notm}}에서 생성된 액세스 토큰이 보호하는 리소스입니다.
 
 
 ## 사용자 속성 저장, 읽기 및 삭제
 {: #storing-data}
-
-
 
 {{site.data.keyword.appid_short_notm}}는 <a href="https://github.com/ibm-cloud-security/appid-clientsdk-android" target="_blank">Android
 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a> 및 <a href="https://github.com/ibm-cloud-security/appid-clientsdk-swift" target="_blank">Swift

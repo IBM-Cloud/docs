@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2017 lastupdated: "2017-03-16"
+  years: 2017 lastupdated: "2017-04-17"
 
 ---
 
@@ -13,11 +13,12 @@ copyright:
 # Configurando provedores de identidade
 {: #setting-up-idp}
 
-É possível configurar o Facebook, o Google ou ambos para autenticar os seus aplicativos e autorizar o acesso aos recursos de backend protegidos.
+É possível configurar o Facebook, o Google ou ambos para configurar uma experiência de conexão única para os seus usuários. Usando um provedor de identidade,
+os usuários podem se conectar com credenciais com as quais já estejam familiarizados.
 {:shortdesc}
 
 
-## Facebook
+## Configurando a autenticação do Facebook
 {: #facebook}
 
 Configure o serviço do {{site.data.keyword.appid_short}} para usar o Facebook como um provedor de identidade.
@@ -31,8 +32,9 @@ Configure o serviço do {{site.data.keyword.appid_short}} para usar o Facebook c
 Para usar o Facebook como um provedor de identidade em seus apps móveis ou da web, deve-se incluir e configurar a plataforma do website em seu aplicativo
 Facebook.
 
-1. Efetue login em sua conta no site Facebook for Developers. Para obter informações sobre como criar um novo app Facebook, veja <a href="https://developers.facebook.com/docs/apps/register" target="_blank">Criando um aplicativo <img src="../../icons/launch-glyph.svg" alt="ícone de Link externo"></a>.
-2. Tome nota do ID e do segredo do app Facebook. Você precisa desses valores para configurar o seu projeto da web para autenticação em seu painel de serviço.
+1. Efetue login em sua conta no <a href="https://developers.facebook.com/docs/apps/register" target="_blank">Site do Facebook for
+Developers<img src="../../icons/launch-glyph.svg" alt="ícone de Link externo"></a>.
+2. Tome nota do ID e do segredo do app Facebook. Esses valores são necessários para configurar o seu projeto da web para autenticação em seu painel de serviço.
 3. Inclua a plataforma da web e insira a URL do site.
 4. Na lista de produtos, selecione **Login do Facebook**.
 5. No campo URLs válidas de redirecionamento de OAuth, insira a URL de terminal de retorno de chamada de servidor de autorizações. É possível incluir este valor depois de ter configurado seu serviço
@@ -50,11 +52,11 @@ a autenticação do Facebook em seu painel de serviço.
 3. Copie o URI que estiver no campo **URI de redirecionamento para o Facebook for Developers**. Cole o URI no campo **URIs válidos de
 redirecionamento de OAuth** na seção **Login do Facebook** do Facebook Developers Portal.
 4. Clique em **Salvar**.
-5. Opcional: para configurar a autenticação para apps da web, insira o URI de redirecionamento nos seus URIs de redirecionamento de aplicativo da web. Esse
-valor é determinado pelo desenvolvedor e usado para acessar o URI de redirecionamento após o processo de autorização ser concluído.
+5. Opcional: para configurar a autenticação para apps da web, insira a URL de redirecionamento em suas URLs de redirecionamento de aplicativo da web. Esse
+valor é determinado pelo desenvolvedor e usado para acessar a URL de redirecionamento após o processo de autorização ser concluído.
 
 
-## Google
+## Configurando a autenticação no Google
 {: #google}
 
 Configure o serviço do {{site.data.keyword.appid_short_notm}} para usar o Google como um provedor de identidade.
@@ -67,13 +69,13 @@ Configure o serviço do {{site.data.keyword.appid_short_notm}} para usar o Googl
 
 Para usar o Google como um provedor de identidade, obtenha um identificador de cliente e segredo do Google e crie um projeto no Google Developer Console.
 
-1. Abra seu aplicativo Google no Google Developer Console.
+1. Abra o seu aplicativo Google no <a href="https://console.developers.google.com/apis/library" target="_blank">Google Developer Console
+<img src="../../icons/launch-glyph.svg" alt="ícone de Link externo"></a>.
 2. Inclua a API do Google+.
 3. Crie credenciais usando o OAuth. No campo **Tipo de aplicativo**, selecione **Aplicativo da web**. No campo
 **URIs de redirecionamento autorizados**, insira o URI de redirecionamento de ID do App. É possível obter o URI de autorização de redirecionamento
 de ID do App por meio da tela de configuração do Google do painel de serviço.
 4. Salve as suas mudanças. Tome nota do identificador de cliente e segredo do Google.
-
 
 
 

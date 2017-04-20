@@ -2,7 +2,7 @@
 
 copyright:
   years:  2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2017-03-30"
 # {{site.data.keyword.appid_short_notm}} mit einer lokalen Entwicklungsumgebung verwenden
 {: #protecting-local}
 
-Sie können Ihre lokale Umgebung so konfigurieren, dass sie den {{site.data.keyword.appid_short}}-Service verwendet. Insbesondere können Sie Code mit dem {{site.data.keyword.appid_short_notm}}-Server-SDK lokal entwickeln und Anforderungen an den Entwicklungsserver senden.
+Sie können Ihre lokale Umgebung so konfigurieren, dass sie den {{site.data.keyword.appid_short}}-Service verwendet. Insbesondere können Sie Code lokal entwickeln, indem Sie das {{site.data.keyword.appid_short_notm}}-Server-SDK verwenden, um Anforderungen an den Entwicklungsserver senden.
 {:shortdesc}
 
 
@@ -48,7 +48,7 @@ Um Ihre Apps so zu konfigurieren, dass sie mit einem lokalen Entwicklungsserver 
 <table> <caption> Tabelle 1. {{site.data.keyword.Bluemix_notm}}-Regionen und entsprechende {{site.data.keyword.appid_short_notm}}-Regionen für Android und iOS </caption>
 <tr>
   <th> Bluemix-Region </th>
-  <th> Android </th>
+  <th> Android und iOS </th>
 </tr>
 <tr>
   <td> Vereinigte Staaten (Süden) </td>

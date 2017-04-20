@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -10,19 +10,17 @@ lastupdated: "2017-03-30"
 {:shortdesc: .shortdesc}
 
 
-# 瞭解使用者設定檔
+# 使用者設定檔概觀
 {: #user-profile}
 
 使用者設定檔是 {{site.data.keyword.appid_short}} 所儲存及維護的實體。設定檔會保留使用者的屬性及身分，而且可以匿名或鏈結至身分提供者所管理的身分。
 {:shortdesc}
 
-{{site.data.keyword.appid_short_notm}} 提供 API，以透過匿名方式或使用 OpenId Connect (OIDC) IdP 進行鑑別來登入，請參閱[配置身分提供者](/docs/services/appid/identity-providers.html#setting-up-idp)。使用者設定檔屬性 API 端點是 {{site.data.keyword.appid_short_notm}} 所產生的存取記號在登入及授權處理程序期間所保護的資源。
+{{site.data.keyword.appid_short_notm}} 提供 API，以透過匿名方式或使用 OpenId Connect (OIDC) [身分提供者](/docs/services/appid/identity-providers.html#setting-up-idp)進行鑑別來登入。使用者設定檔屬性 API 端點是 {{site.data.keyword.appid_short_notm}} 所產生的存取記號在登入及授權處理程序期間所保護的資源。
 
 
 ## 儲存、讀取及刪除使用者屬性
 {: #storing-data}
-
-
 
 {{site.data.keyword.appid_short_notm}} 提供 <a href="https://appid-profiles.ng.bluemix.net/swagger-ui/index.html#/" target="_blank">REST API <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示"></a> 以便對使用者的屬性執行 CRUD 作業，還有適用於 <a href="https://github.com/ibm-cloud-security/appid-clientsdk-android" target="_blank">Android <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示"></a> 和 <a href="https://github.com/ibm-cloud-security/appid-clientsdk-swift" target="_blank">Swift <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示"></a> 行動用戶端的 SDK。
 

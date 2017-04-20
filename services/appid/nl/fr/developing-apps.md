@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -11,7 +11,8 @@ lastupdated: "2017-03-30"
 {:screen: .screen}
 {:pre: .pre}
 
-# Développement d'applications mobiles et Web
+# Configuration du modèle d'application et des SDK
+{: #developing}
 
 Après avoir créé le service {{site.data.keyword.appid_short}}, vous pouvez télécharger des exemples d'application pour Android, iOS, et Node.js en utilisant le tableau de bord.
 
@@ -19,9 +20,8 @@ Après avoir créé le service {{site.data.keyword.appid_short}}, vous pouvez t�
 2. Suivez les instructions du tableau de bord pour débuter avec un exemple de procédure étape par étape.
 
 
-
 ## Développement Web
-{: #web-dev}
+{: #web-dev notoc}
 
 Le service {{site.data.keyword.appid_short_notm}} protège votre application Web et ne nécessite aucun SDK spécial. <!--- You can use different identity providers in addition to the protection that is provided by the service.---> L'intégration {{site.data.keyword.appid_short_notm}} permet à toute application Web, quelle que soit la technologie qu'elle implémente, de tirer parti du protocole OAuth2.
 

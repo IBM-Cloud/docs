@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -35,7 +35,7 @@ Sie können das {{site.data.keyword.appid_short}}-Server-SDK verwenden, um Resso
   ```swift
   import PackageDescription
 
-  let package = Package(
+let package = Package(
       dependencies: [
           .Package(url: "https://github.com/ibm-cloud-security/appid-serversdk-swift.git", majorVersion: 1)
       ]
@@ -65,21 +65,17 @@ Der folgende Code demonstriert, wie WebAppKituraCredentialsPlugin in einer Kitur
   import SwiftyJSON
   import BluemixAppID
 
-  // Folgende URLs werden für AppID OAuth-Abläufe genutzt
+// Folgende URLs werden für AppID OAuth-Abläufe genutzt
   var LOGIN_URL = "/ibm/bluemix/appid/login"
   var CALLBACK_URL = "/ibm/bluemix/appid/callback"
   var LOGOUT_URL = "/ibm/bluemix/appid/logout"
-  var LANDING_PAGE_URL = "/index.html"
-
-  // Setup von Kitura zur Nutzung von Sitzungs-Middleware
+  var LANDING_PAGE_URL = "/index.html"// Setup von Kitura zur Nutzung von Sitzungs-Middleware
   // Muss mit korrektem Sitzungsspeicher für Produktionsumgebungen
   // konfiguriert werden. Siehe https://github.com/IBM-Swift/Kitura-Session für
   // weitere Dokumentationen
   let router = Router()
   let session = Session(secret: "Some secret")
-  router.all(middleware: session)
-
-  let options = [
+  router.all(middleware: session)let options = [
   	"clientId": "{client-id}",
   	"secret": "{secret}",
   	"tenantId": "{tenant-id}",
@@ -88,23 +84,17 @@ Der folgende Code demonstriert, wie WebAppKituraCredentialsPlugin in einer Kitur
   ]
   let webappKituraCredentialsPlugin = WebAppKituraCredentialsPlugin(options: options)
   let kituraCredentials = Credentials()
-  kituraCredentials.register(plugin: webappKituraCredentialsPlugin)
-
-  // Expliziter Anmelde-Endpunkt
+  kituraCredentials.register(plugin: webappKituraCredentialsPlugin)// Expliziter Anmelde-Endpunkt
   router.get(LOGIN_URL,
   		   handler: kituraCredentials.authenticate(credentialsType: webappKituraCredentialsPlugin.name,
   												   successRedirect: LANDING_PAGE_URL,
   												   failureRedirect: LANDING_PAGE_URL
-  ))
-
-  // Callback zum Beenden des Berechtigungsprozesses. Ruft Zugriffs- und Identitätstokens von AppID ab
+  ))// Callback zum Beenden des Berechtigungsprozesses. Ruft Zugriffs- und Identitätstokens von AppID ab
   router.get(CALLBACK_URL,
   		   handler: kituraCredentials.authenticate(credentialsType: webappKituraCredentialsPlugin.name,
   												   successRedirect: LANDING_PAGE_URL,
   												   failureRedirect: LANDING_PAGE_URL
-  ))
-
-  // Abmelde-Endpunkt. Löscht Authentifizierungsinformationen aus Sitzung
+  ))// Abmelde-Endpunkt. Löscht Authentifizierungsinformationen aus Sitzung
   router.get(LOGOUT_URL, handler:  { (request, response, next) in
   	kituraCredentials.logOut(request: request)
   	webappKituraCredentialsPlugin.logout(request: request)
@@ -116,12 +106,10 @@ Der folgende Code demonstriert, wie WebAppKituraCredentialsPlugin in einer Kitur
       let appIdAuthContext:JSON? = request.session?[WebAppKituraCredentialsPlugin.AuthContext]
       let identityTokenPayload:JSON? = appIdAuthContext?["identityTokenPayload"]
 
-      guard appIdAuthContext?.dictionary != nil, identityTokenPayload?.dictionary != nil else {
+guard appIdAuthContext?.dictionary != nil, identityTokenPayload?.dictionary != nil else {
           response.status(.unauthorized)
           return next()
-      }
-
-      response.send(json: identityTokenPayload!)
+      }      response.send(json: identityTokenPayload!)
       next()
   })
   var port = 3000
@@ -130,10 +118,8 @@ Der folgende Code demonstriert, wie WebAppKituraCredentialsPlugin in einer Kitur
   }
   print("Starting on \(port)")
 
-  //HTTP-Server hinzufügen und mit Router verbinden
-  Kitura.addHTTPServer(onPort: port, with: router)
-
-  // Start des Kitura-Runloops (Aufruf wird nie zurückgegeben)
+//HTTP-Server hinzufügen und mit Router verbinden
+  Kitura.addHTTPServer(onPort: port, with: router)// Start des Kitura-Runloops (Aufruf wird nie zurückgegeben)
   Kitura.run()
   ```
   {:pre}

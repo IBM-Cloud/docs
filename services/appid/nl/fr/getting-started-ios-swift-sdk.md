@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -51,7 +51,7 @@ Vous devez disposer des éléments suivants :
   * CocoaPods (version 1.1.0 ou ultérieure).
 
 
-## Installation du SDK client d'{{site.data.keyword.appid_short_notm}}
+## Installation du SDK client
 {: #install-appid-sdk}
 
 Le SDK client d'{{site.data.keyword.appid_short_notm}} est distribué avec CocoaPods, un gestionnaire de dépendances pour les projets Swift et Cocoa Objective-C . CocoaPods télécharge des artefacts et les rend disponibles dans votre projet.
@@ -81,7 +81,7 @@ Le SDK client d'{{site.data.keyword.appid_short_notm}} est distribué avec Cocoa
 7. Sous **Paramètres du projet** > **Information** > **Types d'URL**, ajoutez un type d'URL. Renseignez les deux zones de texte **Identificateur** et **Schéma d'URL** avec cette valeur : $(PRODUCT_BUNDLE_IDENTIFIER)
 
 
-## Initialisation du SDK client d'{{site.data.keyword.appid_short_notm}}
+## Initialisation du SDK client 
 {: #initialize-client-sdk}
 
 1. Ajoutez l'importation suivante à votre fichier `AppDelegate.swift` :
@@ -184,7 +184,7 @@ Vous pouvez, par exemple utiliser le code ci-dessous pour définir un nouvel att
 ### Connexion anonyme
 {: #anonymous notoc}
 
-{{site.data.keyword.appid_short_notm}} vous permet d'effectuer une connexion anonyme. Voir [Identité anonyme](/docs/services/appid/user-profile.html#anonymous).
+Avec {{site.data.keyword.appid_short_notm}}, vous pouvez vous connecter de manière [anonyme](/docs/services/appid/user-profile.html#anonymous).
 
   ```swift
   class delegate : AuthorizationDelegate {

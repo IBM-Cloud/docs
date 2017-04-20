@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -45,8 +45,7 @@ Sie benötigen die folgenden Informationen:
     </tr>
   </table>
 
-  * Android Studio-Projekt, das für das Arbeiten mit Gradle eingerichtet ist.
-    * Weitere Informationen zur Einrichtung Ihrer Android-Entwicklungsumgebung finden Sie unter <a href="https://developers.google.com/web/tools/setup/" target="_blank">Google Developer Tools-Dokumente <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a>.
+  * <a href="https://developers.google.com/web/tools/setup/" target="_blank">Android Studio-Projekt<img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a>, das für das Arbeiten mit Gradle eingerichtet ist. 
 
 ## Client-SDK installieren
 {: #install-appid-sdk}
@@ -173,7 +172,7 @@ Sie können beispielsweise diesen Code aufrufen, um ein neues Attribut festzuleg
 ### Anonyme Anmeldung
 {: #anonymous notoc}
 
-Sie können sich mit {{site.data.keyword.appid_short_notm}} anonym anmelden; siehe [anonymer Benutzer](/docs/services/appid/user-profile.html#anonymous).
+Mit {{site.data.keyword.appid_short_notm}} können Sie sich [anonym](/docs/services/appid/user-profile.html#anonymous) anmelden.
 
   ```java
   appId.loginAnonymously(getApplicationContext(), new AuthorizationListener() {

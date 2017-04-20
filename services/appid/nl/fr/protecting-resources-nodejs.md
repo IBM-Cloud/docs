@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2017-03-30"
 # Protection des ressources Node.js
 {: #protecting-resources-nodejs}
 
-Vous pouvez utiliser le SDK serveur de {{site.data.keyword.appid_short}} pour protéger les ressources dans votre appli Node.js.
+Vous pouvez utiliser le SDK serveur d'{{site.data.keyword.appid_short}} pour protéger les ressources dans votre appli Node.js.
 {:shortdesc}
 
 ## Avant de commencer
@@ -25,13 +25,6 @@ Vous pouvez utiliser le SDK serveur de {{site.data.keyword.appid_short}} pour pr
 
 **Remarque** : d'autres infrastructure, notamment LoopBack, utilisent également `Express`. Vous pouvez utiliser le SDK serveur de
 {{site.data.keyword.appid_short_notm}} avec toutes ces infrastructures.
-
-## A propos du SDK serveur
-{: #about}
-
-Le SDK serveur d'{{site.data.keyword.appid_short_notm}} fournit une stratégie de passeport ApiStrategy qui est utilisée dans les applications de back-end déployées sur {{site.data.keyword.Bluemix_notm}}. Pour protéger votre application contre des accès non autorisés, vous devez instrumenter votre serveur Node.js avec la stratégie ApiStrategy. Le module `appid-serversdk-nodejs npm module` fournit la stratégie de passeport ApiStrategy et la méthode de vérification servant à valider le jeton d'accès et le jeton d'identité émis par {{site.data.keyword.appid_short_notm}}.
-
-Le SDK serveur d'{{site.data.keyword.appid_short_notm}} utilise l'infrastructure Passport pour mettre en oeuvre l'autorisation. Voir <a href="http://passportjs.org/" target="_blank">Passport framework <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a>.
 
 
 ## Installation du SDK serveur
@@ -49,6 +42,10 @@ Le SDK serveur d'{{site.data.keyword.appid_short_notm}} utilise l'infrastructure
 
 ## Protection des ressources dans Node.js
 {: #protecting-resources-nodesdk}
+
+Le SDK serveur d'{{site.data.keyword.appid_short_notm}} fournit une stratégie de passeport ApiStrategy qui est utilisée dans les applications de back-end déployées sur {{site.data.keyword.Bluemix_notm}}. Pour protéger votre application contre des accès non autorisés, vous devez instrumenter votre serveur Node.js avec la stratégie ApiStrategy. Le module `appid-serversdk-nodejs npm module` fournit la stratégie de passeport ApiStrategy et la méthode de vérification servant à valider le jeton d'accès et le jeton d'identité émis par {{site.data.keyword.appid_short_notm}}.
+
+Le SDK serveur d'{{site.data.keyword.appid_short_notm}} utilise <a href="http://passportjs.org/" target="_blank">l'infrastructure Passport<img src="../../icons/launch-glyph.svg" alt="icône de lien externe"></a> pour contrôler l'autorisation.
 
 Le fragment de code suivant illustre comment utiliser la stratégie `APIStrategy` dans une application Express simple pour protéger les méthodes GET de noeud final `/protected`.
 
@@ -83,4 +80,4 @@ Vous pouvez utiliser la stratégie `WebAppStrategy` pour protéger vos ressource
   ```
   {:pre}
 
-Pour plus d'informations, reportez-vous à la section <a href="https://github.com/ibm-cloud-security/appid-serversdk-nodejs" target="_blank">{{site.data.keyword.appid_short_notm}} Node.js dans le référentiel GitHub<img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a>.
+Pour plus d'informations, reportez-vous à la section <a href="https://github.com/ibm-cloud-security/appid-serversdk-nodejs" target="_blank">Node.js {{site.data.keyword.appid_short_notm}} dans le référentiel GitHub <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a>.

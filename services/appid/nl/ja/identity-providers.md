@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -14,11 +14,11 @@ lastupdated: "2017-03-30"
 # ID プロバイダーの構成
 {: #setting-up-idp}
 
-Facebook、Google、またはその両方を構成して、アプリケーションを認証し、保護されたバックエンド・リソースへのアクセスを許可することができます。
+ユーザーのシングル・サインオンをセットアップするために、Facebook と Google のいずれかまたは両方を構成できます。ID プロバイダーを使用すると、ユーザーは使い慣れた資格情報でサインインできるようになります。
 {:shortdesc}
 
 
-## Facebook
+## Facebook 認証の構成
 {: #facebook}
 
 Facebook を ID プロバイダーとして使用するように {{site.data.keyword.appid_short}} サービスを構成します。
@@ -31,7 +31,7 @@ Facebook を ID プロバイダーとして使用するように {{site.data.key
 
 モバイル・アプリや Web アプリで Facebook を ID プロバイダーとして使用するには、Facebook アプリケーションで Web サイトのプラットフォームを追加して構成する必要があります。
 
-1. Facebook for Developers サイトで自分のアカウントにログインします。新しい Facebook アプリの作成方法について詳しくは、<a href="https://developers.facebook.com/docs/apps/register" target="_blank">アプリケーションの作成<img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a>を参照してください。
+1. <a href="https://developers.facebook.com/docs/apps/register" target="_blank">Facebook for Developers サイト<img src="../../icons/launch-glyph.svg" alt="アイコン・アイコン"></a>で自分のアカウントにログインします。
 2. Facebook のアプリ ID とアプリ・シークレットをメモします。サービスのダッシュボードで Web プロジェクトの認証を構成するときに、これらの値が必要になります。
 3. Web プラットフォームを追加して、サイト URL を入力します。
 4. 製品リストから、**「Facebook ログイン」**を選択します。
@@ -47,10 +47,10 @@ Facebook のアプリ ID とアプリ・シークレットを取得し、Web ク
 2. Facebook for Developers Web サイトから取得した Facebook のアプリ ID とアプリ・シークレットを入力します。
 3. **「Facebook for Developers のリダイレクト URI (Redirect URI for Facebook for Developers)」**フィールドにある URI をコピーします。この URI を Facebook Developers ポータルの**「Facebook ログイン」**セクションの**「有効な OAuth リダイレクト URI」**フィールドに貼り付けます。
 4. **「保存」**をクリックします。
-5. オプション: Web アプリの認証を構成する場合は、リダイレクト URI を「Web アプリケーションのリダイレクト URI (your Web Application Redirect URIs)」に入力します。この値は、開発者が決定する値であり、許可プロセスの完了後にリダイレクト URI にアクセスするために使用されます。
+5. オプション: Web アプリの認証を構成する場合は、リダイレクト URL を「Web アプリケーションのリダイレクト URL (Web Application Redirect URLs)」に入力します。この値は、開発者が決定する値であり、許可プロセスの完了後にリダイレクト URL にアクセスするために使用されます。
 
 
-## Google
+## Google 認証の構成
 {: #google}
 
 Google を ID プロバイダーとして使用するように {{site.data.keyword.appid_short_notm}} サービスを構成します。
@@ -63,11 +63,10 @@ Google を ID プロバイダーとして使用するように {{site.data.keywo
 
 Google を ID プロバイダーとして使用するには、Google のクライアント ID とシークレットを取得して Google Developer Console でプロジェクトを作成します。
 
-1. Google Developer Console で Google アプリケーションを開きます。
+1. <a href="https://console.developers.google.com/apis/library" target="_blank">Google Developer Console<img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a> で Google アプリケーションを開きます。
 2. Google+ API を追加します。
 3. OAuth を使用して資格情報を作成します。**「アプリケーションの種類」**フィールドで、**「ウェブ アプリケーション」**を選択します。**「承認済みのリダイレクト URI」**フィールドにこのアプリ ID のリダイレクト URI を入力します。App ID のリダイレクト許可 URI は、サービスのダッシュボードの Google 構成画面から取得できます。
 4. 変更内容を保存します。Google のクライアント ID とシークレットをメモします。
-
 
 
 

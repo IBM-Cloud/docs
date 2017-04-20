@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -44,8 +44,7 @@ lastupdated: "2017-03-30"
     </tr>
   </table>
 
-  * Gradle と連動して機能するようにセットアップされた Android Studio プロジェクト。
-    * Android 開発環境のセットアップ方法について詳しくは、<a href="https://developers.google.com/web/tools/setup/" target="_blank">Google 開発者ツールの資料<img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a>を参照してください。
+  * Gradle と連動して機能するようにセットアップされた <a href="https://developers.google.com/web/tools/setup/" target="_blank">Android Studio プロジェクト<img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a>。
 
 ## Client SDK のインストール
 {: #install-appid-sdk}
@@ -172,7 +171,7 @@ context、tenant ID、region パラメーターを initialize メソッドに渡
 ### 匿名ログイン
 {: #anonymous notoc}
 
-With {{site.data.keyword.appid_short_notm}} you can log in anonymously, see [anonymous user](/docs/services/appid/user-profile.html#anonymous).
+{{site.data.keyword.appid_short_notm}} では、[匿名](/docs/services/appid/user-profile.html#anonymous)ログインが可能です。
 
   ```java
   appId.loginAnonymously(getApplicationContext(), new AuthorizationListener() {

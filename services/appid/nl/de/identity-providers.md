@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -14,11 +14,11 @@ lastupdated: "2017-03-30"
 # Identitätsprovider konfigurieren
 {: #setting-up-idp}
 
-Sie können Facebook, Google oder beides konfigurieren, um Ihre Anwendungen zu authentifizieren und Zugriff auf geschützte Back-End-Ressourcen zu autorisieren.
+Sie können Facebook, Google oder beide so konfigurieren, dass den Benutzern Single Sign-on-Funktionalität zur Verfügung steht. Mithilfe eines Identitätsproviders können Benutzer für die Anmeldung Berechtigungsnachweise verwenden, die ihnen bereits bekannt sind.
 {:shortdesc}
 
 
-## Facebook
+## Facebook-Authentifizierung konfigurieren
 {: #facebook}
 
 Konfigurieren Sie den {{site.data.keyword.appid_short}}-Service so, dass Facebook als Identitätsprovider verwendet wird.
@@ -31,8 +31,8 @@ Konfigurieren Sie den {{site.data.keyword.appid_short}}-Service so, dass Faceboo
 
 Zur Verwendung von Facebook als Identitätsprovider in Ihren mobilen und Web-Apps müssen Sie die Website-Plattform Ihrer Facebook-Anwendung hinzufügen und sie konfigurieren.
 
-1. Melden Sie sich auf der Site 'Facebook for Developers' bei Ihrem Konto an. Informationen zum Erstellen einer neuen Facebook-App finden Sie unter <a href="https://developers.facebook.com/docs/apps/register" target="_blank">Anwendung erstellen <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a>.
-2. Notieren Sie sich die Facebook-App-ID und den geheimen Schlüssel. Sie benötigen diese Werte, um Ihr Webprojekt für die Authentifizierung in Ihrem Service-Dashboard zu konfigurieren.
+1. Melden Sie sich bei Ihrem Konto auf der Site <a href="https://developers.facebook.com/docs/apps/register" target="_blank">Facebook for Developers<img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a> an.
+2. Notieren Sie sich die Facebook-App-ID und den geheimen Schlüssel. Diese Werte werden benötigt, um Ihr Webprojekt für die Authentifizierung in Ihrem Service-Dashboard zu konfigurieren. 
 3. Fügen Sie die Webplattform hinzu und geben Sie die Site-URL ein.
 4. Wählen Sie aus der Produktliste den Option **Facebook-Anmeldung** aus.
 5. Geben Sie im Feld für gültige OAuth-Weiterleitungs-URLs die Endpunkt-URL für den Autorisierungsserver-Callback ein. Sie können diesen Wert nach der Konfiguration des {{site.data.keyword.appid_short_notm}}-Service anhand der nachfolgenden Schritte konfigurieren.
@@ -47,10 +47,10 @@ Nachdem Sie Ihre Facebook-App-ID und den geheimen Schlüssel erhalten haben und 
 2. Geben Sie die Facebook-App-ID und den geheimen Schlüssel ein, den Sie von der Facebook for Developers-Website erhalten haben.
 3. Kopieren Sie den URI in das Feld zum **Weiterleitungs-URI für Facebook for Developers**. Kopieren Sie den URI in das Feld für **Gültige OAuth-Weiterleitungs-URIs** im Abschnitt **Facebook-Anmeldung** des Facebook Developers-Portals.
 4. Klicken Sie auf **Speichern**.
-5. Optional: Um die Authentifizierung für Web-Apps zu konfigurieren, geben Sie den Weiterleitungs-URI in Ihre Weiterleitungs-URIs Ihrer Webanwendung ein. Dieser Wert wird vom Entwickler festgelegt und wird verwendet, um auf die Weiterleitungs-URI zuzugreifen, wenn der Berechtigungsprozess beendet ist.
+5. Optional: Um die Authentifizierung für Web-Apps zu konfigurieren, geben Sie die Weiterleitungs-URL in die Weiterleitungs-URLs Ihrer Webanwendung ein. Dieser Wert wird vom Entwickler festgelegt und wird verwendet, um auf die Weiterleitungs-URL zuzugreifen, wenn der Berechtigungsprozess beendet ist.
 
 
-## Google
+## Google-Authentifizierung konfigurieren
 {: #google}
 
 Konfigurieren Sie den {{site.data.keyword.appid_short_notm}}-Service so, dass Google als Identitätsprovider verwendet wird.
@@ -63,11 +63,10 @@ Konfigurieren Sie den {{site.data.keyword.appid_short_notm}}-Service so, dass Go
 
 Um Google als Identitätsprovider zu verwenden, fordern Sie eine Google-Client-ID und einen geheimen Schlüssel an und erstellen Sie in Google Developer Console ein Projekt.
 
-1. Öffnen Sie Ihre Google-Anwendung in der Google Developer Console.
+1. Öffnen Sie Ihre Google-Anwendung in der <a href="https://console.developers.google.com/apis/library" target="_blank">Google Developer Console <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a>.
 2. Fügen Sie die Google+-API hinzu.
 3. Erstellen Sie Berechtigungsnachweise unter Verwendung von 'OAuth'. Wählen Sie im Feld **Anwendungstyp** die Option **Webanwendung** aus. Geben Sie im Feld **Autorisierte Weiterleitungs-URIs** die Weiterleitungs-URI der App-ID ein. Sie können den autorisierten Weiterleitungs-URI der App-ID für die Google-Konfigurationsanzeige im Service-Dashboard anfordern.
 4. Speichern Sie Ihre Änderungen. Notieren Sie sich die Google-Client-ID und den geheimen Schlüssel.
-
 
 
 

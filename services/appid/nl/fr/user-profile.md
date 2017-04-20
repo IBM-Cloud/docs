@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -10,19 +10,17 @@ lastupdated: "2017-03-30"
 {:shortdesc: .shortdesc}
 
 
-# Présentation des profils utilisateur
+# Présentation des profils utilisateurs
 {: #user-profile}
 
 Un profil utilisateur est une entité stockée et gérée par {{site.data.keyword.appid_short}}. Le profil contient les attributs et l'identité d'un utilisateur et peut être anonyme ou lié à une identité gérée par un fournisseur d'identité.
 {:shortdesc}
 
-{{site.data.keyword.appid_short_notm}} fournit une API pour la connexion, anonyme ou bien avec authentification, via un fournisseur d'identité OpenId Connect (OIDC), Voir [Configuration des fournisseurs d'identité](/docs/services/appid/identity-providers.html#setting-up-idp). Le noeud final d'API d'attribut de profil utilisateur est une ressource protégée par le jeton d'accès généré par {{site.data.keyword.appid_short_notm}} au cours du processus de connexion et d'authentification.
+{{site.data.keyword.appid_short_notm}} fournit une API pour la connexion, anonyme ou bien avec authentification, via un [fournisseur d'identité](/docs/services/appid/identity-providers.html#setting-up-idp) OpenId Connect (OIDC). Le noeud final d'API d'attribut de profil utilisateur est une ressource protégée par le jeton d'accès généré par {{site.data.keyword.appid_short_notm}} au cours du processus de connexion et d'authentification.
 
 
 ## Stockage, lecture et suppression d'attributs utilisateur
 {: #storing-data}
-
-
 
 {{site.data.keyword.appid_short_notm}} fournit une <a href="https://appid-profiles.ng.bluemix.net/swagger-ui/index.html#/" target="_blank">API REST API <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a> pour réaliser des opérations CRUD sur les attributs d'un utilisateur, ainsi qu'un SDK pour les clients mobiles sous <a href="https://github.com/ibm-cloud-security/appid-clientsdk-android" target="_blank">Android <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a> et <a href="https://github.com/ibm-cloud-security/appid-clientsdk-swift" target="_blank">Swift <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a>.
 
@@ -30,7 +28,7 @@ Un profil utilisateur est une entité stockée et gérée par {{site.data.keywor
 ## Identité OAuth
 {: #oauth}
 
-Lors de l'appel de l'API de connexion OAuth, {{site.data.keyword.appid_short_notm}} utilise les protocoles OAuth 2.0 et OIDC pour autoriser et authentifier l'appelant avec le fournisseur d'identité sélectionné. Une fois identifiée, l'identité est associée à un enregistrement utilisateur {{site.data.keyword.appid_short_notm}}. {{site.data.keyword.appid_short_notm}} renvoie un  jeton d'accès qui peut être utilisé pour accéder aux attributs de l'utilisateur, et un jeton d'accès contenant les informations d'identité fournies par le fournisseur d'identité. Le même enregistrement utilisateur et ses attributs sont accessibles à nouveau par n'importe quel client qui s'authentifie avec cette même identité.
+Lors de l'appel de l'API de connexion OAuth, {{site.data.keyword.appid_short_notm}} utilise les protocoles OAuth 2.0 et OIDC pour autoriser et authentifier l'appelant avec le fournisseur d'identité sélectionné. Une fois identifiée, l'identité est associée à un enregistrement utilisateur {{site.data.keyword.appid_short_notm}}. {{site.data.keyword.appid_short_notm}} renvoie un jeton d'accès qui peut être utilisé pour accéder aux attributs de l'utilisateur, et un jeton d'accès contenant les informations d'identité fournies par le fournisseur d'identité. Le même enregistrement utilisateur et ses attributs sont accessibles à nouveau par n'importe quel client qui s'authentifie avec cette même identité.
 
 
 ## Utilisateur anonyme

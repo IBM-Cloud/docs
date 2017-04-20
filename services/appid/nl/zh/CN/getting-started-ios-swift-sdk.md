@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -50,7 +50,7 @@ lastupdated: "2017-03-30"
   * CocoaPods（V1.1.0 或更高版本）。
 
 
-## 安装 {{site.data.keyword.appid_short_notm}} 客户端 SDK
+## 安装客户端 SDK
 {: #install-appid-sdk}
 
 {{site.data.keyword.appid_short_notm}} 客户端 SDK 通过 CocoaPods 进行分发；CocoaPods 是用于 Swift 和 Objective-C Cocoa 项目的依赖项管理器。CocoaPods 会下载工件，并将其提供给项目使用。
@@ -81,7 +81,7 @@ lastupdated: "2017-03-30"
 7. 在**项目设置** > **信息** > **URL 类型**下，添加 URL 类型。使用以下值填充**标识**文本框和 **URL 方案**文本框：$(PRODUCT_BUNDLE_IDENTIFIER)
 
 
-## 初始化 {{site.data.keyword.appid_short_notm}} 客户端 SDK
+## 初始化客户端 SDK
 {: #initialize-client-sdk}
 
 1. 将以下 import 语句添加到 `AppDelegate.swift` 文件中：
@@ -181,7 +181,7 @@ lastupdated: "2017-03-30"
 ### 匿名登录
 {: #anonymous notoc}
 
-通过 {{site.data.keyword.appid_short_notm}}，您可以匿名登录；请参阅[匿名身份](/docs/services/appid/user-profile.html#anonymous)。
+通过 {{site.data.keyword.appid_short_notm}}，您可以[匿名](/docs/services/appid/user-profile.html#anonymous)登录。
 
   ```swift
   class delegate : AuthorizationDelegate {

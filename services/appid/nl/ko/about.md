@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -12,10 +12,10 @@ lastupdated: "2017-03-30"
 {:pre: .pre}
 
 
-# {{site.data.keyword.appid_short_notm}} 정보
+# 작동 방식
 {: #about}
 
-{{site.data.keyword.appid_full}}를 사용하여 개발자는 몇 행의 코드로 자신의 {{site.data.keyword.Bluemix}} 앱에 인증을 추가하고 보호할 수 있습니다. 개발자는 개인화된 앱 인터페이스를 구축하기 위해 사용자 특정 데이터를 관리할 수도 있습니다.
+{{site.data.keyword.appid_short_notm}}에서 사용하는 컴포넌트, 아키텍처 및 요청 플로우에 대해 알아볼 수 있습니다.
 {:shortdesc}
 
 
@@ -42,19 +42,24 @@ lastupdated: "2017-03-30"
     * 지원되는 런타임 - Node.js 및 Swift
 
 ## 아키텍처 개요
+{: #architecture}
 
-![{{site.data.keyword.appid_short_notm}} 아키텍처 다이어그램](/images/appid_architecture.png)
+{{site.data.keyword.appid_short_notm}}에서 사용자에게 사인인하도록 요구하여 애플리케이션에 보안 레벨을 추가할 수 있습니다. 서버 SDK를 사용하여 백엔드 리소스를 보호할 수도 있습니다. 
+
+다음 다이어그램은 {{site.data.keyword.appid_short_notm}} 서비스가 작동하는 방식에 대한 개요를 보여줍니다. 
+
+![{{site.data.keyword.appid_short_notm}} 아키텍처 다이어그램](/images/appid_architecture2.png)
 
 그림 1. {{site.data.keyword.appid_short_notm}} 아키텍처 다이어그램
 
-{{site.data.keyword.appid_short_notm}} 서버 SDK로 클라우드 리소스를 보호할 수 있습니다. 보호된 클라우스 리소스와 통신하려면 {{site.data.keyword.appid_short_notm}} 클라이언트 SDK에서 제공되는 요청 클래스를 사용하십시오. 
-
-* 서버 SDK가 권한이 없는 요청을 발견하고 HTTP 401 권한 인증 확인을 리턴합니다.
-* 클라이언트 SDK가 HTTP 401 권한 인증 확인을 발견하고 ID 제공자의 구성을 기반으로 인증 프로세스를 자동으로 시작합니다.
-* 현재 구성된 ID 제공자에 따라서 인증이 시도됩니다.
-* 인증에 성공하면 서비스가 권한 및 ID 토큰을 리턴합니다.
-* 클라이언트 SDK는 인증 토큰을 원래 요청에 자동 추가하고, 해당 요청을 클라우드 리소스에 재전송합니다.
-* 서버 SDK는 요청에서 액세스 토큰을 추출하고 {{site.data.keyword.appid_short_notm}}로 해당 토큰의 유효성을 검증합니다. 액세스 권한이 부여되고 응답이 애플리케이션에 리턴됩니다. 
+<dl>
+  <dt> 클라이언트 SDK</dt>
+    <dd> 클라이언트 SDK는 클라우드 리소스와 통신하기 위한 요청 클래스를 제공합니다. 권한 부여 인증 확인을 발견하는 경우, 클라이언트 SDK는 자동으로 인증 프로세스를 시작합니다. </dd>
+  <dt> Bluemix</dt>
+    <dd>  서버 SDK는 요청에서 액세스 토큰을 추출하고 {{site.data.keyword.appid_short_notm}}로 해당 토큰의 유효성을 검증합니다. 인증에 성공하면 {{site.data.keyword.appid_short_notm}}에서 권한 및 ID 토큰을 애플리케이션에 리턴합니다. </dd>
+  <dt> ID 제공자</dt>
+    <dd> 앱을 인증하도록 Facebook, Google 또는 둘 모두를 구성할 수 있습니다.</dd>
+</dl>
 
 
 ## 요청 플로우
@@ -74,136 +79,3 @@ lastupdated: "2017-03-30"
 * 동일한 승인 코드로 인증이 종료되는 경우 토큰 엔드포인트에 코드가 전송됩니다. 엔드포인트는 두 가지 토큰(액세스 토큰과 ID 토큰)을 리턴합니다. 이 시점부터, 클라이언트 SDK로 작성된 모든 요청에는 새로 얻은 권한 헤더가 포함됩니다. 
 * 클라이언트 SDK가 권한 플로우를 트리거한 원래 요청을 자동으로 재전송합니다. 
 * 서버 SDK는 요청에서 권한 헤더를 추출하고 서비스를 사용하여 해당 헤더의 유효성을 검증하고 백엔드 리소스에 액세스를 부여합니다. 
-
-## 액세스 및 ID 토큰
-{: #access-and-identity}
-
-{{site.data.keyword.appid_short}}에서는 두 가지 유형의 토큰(액세스 및 ID)을 사용합니다. 토큰은 <a href="https://jwt.io/introduction/" target="_blank">JSON Web Tokens <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a>으로 형식화됩니다.
-
-
-### 액세스 토큰
-{: #access-tokens notoc}
-
-액세스 토큰은 {{site.data.keyword.appid_short_notm}} 권한 필터에서 보호하는 리소스와의 통신을 가능하게 합니다.
-[백엔드 리소스 보호](/docs/services/appid/protecting-resources.html)를 참조하십시오. 토큰은 JOSE(JavaScript Object Signing and Encryption) 스펙을 준수하며 다음과 같은 형식입니다. 
-
-```
-Header: {
-
-    "typ": "JOSE", // header type, according to spec
-
-    "alg": "RS256", // algorithm, according to spec
-
-}
-Payload: {
-
-    "iss": "", // issuer, the AppID server that issued this token. StringOrURL
-
-    "sub": "", // subject, who this token was issued to. Most probably userId
-
-    "aud": "", // audience, who is this token intended for. OAuth2 client_id.
-
-    "exp: "", // expiration timestamp, epoch time
-
-    "iat": "", // issued at timestamp, epoch time
-
-    "tenant": "xxx", the AppID tenantId the token was issued for
-
-    "auth_by": "appid_anon / appid_facebook / appid_google",
-
-    "scope": "", // the scope[s] this token was issued for
-
-}
-```
-{:screen}
-
-### ID 토큰
-{: #identity-tokens notoc}
-
-ID 토큰에는 이름, 이메일, 성별, 사진 및 위치를 포함하는 사용자에 대한 정보가 포함됩니다. 
-
-```
-Header: {
-
-    "typ": "JOSE", // header type, according to spec
-
-    "alg": "RS256", // algorithm, according to spec
-
-}
-Payload: {
-
-    "iss": "", // issuer, the AppID server that issued this token. StringOrURL
-
-    "sub": "", // subject, who this token was issued to. AppID userid.
-
-    "aud": "", // audience, who is this token intended for. OAuth2 client_id.
-
-    "exp: "", // expiration timestamp, epoch time
-
-    "iat": "", // issued at timestamp, epoch time
-
-    "tenant": "xxx", // the AppID tenantId the token was issued for
-
-    "name": "John Smith", // user's full name as reported by IDP, mandatory,
-
-    "email": "js@mail.com", // user's email as reported by IDP, only if available,
-
-    "gender", "male", // user's gender as reported by IDP, only if available,
-
-    "locale": "en", // user's locale as reported by IDP, only if available
-
-    "picture": "https://url.to.photo", // URL to user's picture, only if available
-
-    "auth_by": "appid_facebook/appid_google", // the name of IDP used for authentication, mandatory
-
-    "identities": [
-
-        "provider: "appid_facebook/appid_google", // mandatory
-
-        "id": "unique user id as reported by IDP", // mandatory
-
-        "profile": { ... } // JSON object returned by IDP,  mandatory
-
-      },
-
-      {...}, {...} // more linked identities
-
-    ],
-
-    "oauth_client":{
-
-      "type": "serverapp/mobileapp from client registration", // mandatory
-
-      "name": "client_name as reported during client registration", // mandatory
-
-      "software_id": "software_id as reported during client registration", // mandatory
-
-      "software_version": "software_version as reported during client registration", // mandatory
-
-      "device_id": "device_id from client registration", //mobile only
-
-      "device_model": "device_model from client registration", //mobile only
-
-      "device_os": "device_os from client registration", //mobile only
-
-    }
-
-}
-```
-{:screen}
-
-
-## ID 제공자 개요
-{: #identity-providers-overview}
-
-모바일 및 웹 애플리케이션에서 다음과 같은 ID 제공자를 사용할 수 있습니다. 
-
-* **Facebook** - 사용자는 자신의 Facebook 신임 정보로 모바일 또는 웹 앱에 로그인합니다.
-* **Google** - 사용자는 자신의 Google+ 신임 정보로 모바일 또는 웹 앱에 로그인합니다.
-<!--* **Custom** - Bring your own identity provider. The identity providers should be compliant with OIDC. -->
-
-## 기본 구성 사용
-{: #default-configuration}
-
-{{site.data.keyword.appid_short_notm}}는 ID 제공자를 처음 설정할 때 기본 구성을 제공합니다. 개발 모드에서만 기본 구성을 사용할 수 있습니다. 각 ID 제공자의 경우, 이러한 신임 정보는 하루에 {{site.data.keyword.appid_short_notm}} 인스턴스당 100회의 사용으로 제한됩니다. 애플리케이션을 공개하기 전에 기본 구성을 사용자 자신의 신임 정보에 업데이트하십시오. 구성을 업데이트하려면,
-[ID 제공자 구성](/docs/services/appid/identity-providers.html)을 참조하십시오. 

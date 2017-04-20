@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2017
-lastupdated: "2017-03-30"
+  years: 2017
+lastupdated: "2017-04-17"
 
 ---
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2017-03-30"
 # 로컬 개발 환경에서 {{site.data.keyword.appid_short_notm}} 사용
 {: #protecting-local}
 
-{{site.data.keyword.appid_short}} 서비스를 사용하도록 로컬 환경을 구성할 수 있습니다. 특히, {{site.data.keyword.appid_short_notm}} 서버 SDK를 사용하여 로컬로 코드를 개발하고 요청을 개발 서버에 전송할 수 있습니다.
+{{site.data.keyword.appid_short}} 서비스를 사용하도록 로컬 환경을 구성할 수 있습니다. 특히, {{site.data.keyword.appid_short_notm}} 서버 SDK를 사용하여 로컬로 코드를 개발함으로써 요청을 개발 서버에 전송할 수 있습니다.
 {:shortdesc}
 
 
@@ -34,7 +34,7 @@ lastupdated: "2017-03-30"
 1. {{site.data.keyword.Bluemix_notm}} 대시보드를 열고 **서비스 신임 정보** 탭을 클릭하십시오.
 2. **신임 정보 표시**를 클릭하십시오. 액세스 신임 정보가 JSON 오브젝트로 표시됩니다.
 
-샘플 및 자세한 정보는 <a href="https://github.com/ibm-cloud-security/appid-serversdk-nodejs" target="_blank">server SDK GitHub repository <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a>을 참조하십시오.
+샘플 및 자세한 정보는 <a href="https://github.com/ibm-cloud-security/appid-serversdk-nodejs" target="_blank">서버 SDK GitHub 저장소 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a>을 참조하십시오.
 
 
 ## 로컬 개발 서버에 대해 작업할 수 있도록 {{site.data.keyword.appid_short_notm}} 애플리케이션 구성
@@ -48,7 +48,7 @@ lastupdated: "2017-03-30"
 <table> <caption> 표 1. {{site.data.keyword.Bluemix_notm}} 지역 및 해당하는 Android 및 iOS용 {{site.data.keyword.appid_short_notm}} 지역</caption>
 <tr>
   <th> Bluemix 지역 </th>
-  <th> Android</th>
+  <th> Android 및 iOS </th>
 </tr>
 <tr>
   <td> 미국 남부</td>

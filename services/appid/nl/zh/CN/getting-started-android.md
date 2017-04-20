@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2017-03-30"
 您需要以下信息：
   * {{site.data.keyword.appid_short_notm}} 服务的实例。
   * 您的租户标识。
-    * 在服务仪表板的**服务凭证**选项卡中，单击**查看凭证**。您的租户标识会显示在**租户标识**字段中。此值用于初始化应用程序。
+    * 在服务仪表板的**服务凭证**选项卡中，单击**查看凭证**。您的租户标识会显示在 **TenantID** 字段中。此值用于初始化应用程序。
   * 您所在的 {{site.data.keyword.Bluemix}} 区域。您可以通过查看 UI 来找到您所在的区域。此值用于初始化应用程序。
     <table> <caption> 表 1. {{site.data.keyword.Bluemix_notm}} 区域及对应的 SDK 值</caption>
     <tr>
@@ -45,8 +45,7 @@ lastupdated: "2017-03-30"
     </tr>
   </table>
 
-  * Android Studio 项目，设置为使用 Gradle。
-    * 有关如何设置 Android 开发环境的更多信息，请参阅 <a href="https://developers.google.com/web/tools/setup/" target="_blank">Google Developer Tools 文档 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a>。
+  * <a href="https://developers.google.com/web/tools/setup/" target="_blank">Android Studio 项目 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a>，设置为使用 Gradle。
 
 ## 安装客户端 SDK
 {: #install-appid-sdk}
@@ -173,7 +172,7 @@ lastupdated: "2017-03-30"
 ### 匿名登录
 {: #anonymous notoc}
 
-通过 {{site.data.keyword.appid_short_notm}}，您可以匿名登录；请参阅[匿名用户](/docs/services/appid/user-profile.html#anonymous)。
+通过 {{site.data.keyword.appid_short_notm}}，您可以[匿名](/docs/services/appid/user-profile.html#anonymous)登录。
 
   ```java
   appId.loginAnonymously(getApplicationContext(), new AuthorizationListener() {

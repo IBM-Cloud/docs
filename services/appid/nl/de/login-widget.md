@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 {:new_window: target="_blank"}
@@ -10,12 +10,13 @@ lastupdated: "2017-03-30"
 {:screen: .screen}
 {:pre: .pre}
 
-# Das Anmelde-Widget anpassen
+# Anmelde-Widget anpassen
 {: #login-widget}
 
-Wenn der {{site.data.keyword.appid_short}}-Service mit zwei oder mehreren Identitätsprovidern konfiguriert wird, kann der Benutzer einen Identitätsprovider im Anmelde-Widget auswählen.
+Sie können das Anmelde-Widget so konfigurieren, dass das jeweilige Logo in den gewünschten Farben angezeigt wird.
 {:shortdesc}
 
+Wenn der {{site.data.keyword.appid_short}}-Service mit zwei oder mehreren Identitätsprovidern konfiguriert wird, kann der Benutzer einen Identitätsprovider im Anmelde-Widget auswählen.
 Führen Sie die folgenden Schritte aus, um Ihr Anmelde-Widget anzupassen:
 
 1. Öffnen Sie das {{site.data.keyword.appid_short_notm}}-Service-Dashboard.
@@ -24,4 +25,4 @@ Führen Sie die folgenden Schritte aus, um Ihr Anmelde-Widget anzupassen:
 4. Wählen Sie eine Headerfarbe für das Widget aus der Farbauswahl aus oder geben Sie den hexadezimalen Code für eine andere Farbe ein.
 5. Prüfen Sie das Aussehen im Vorschaubereich rechts und klicken Sie auf **Änderungen speichern**, wenn Sie mit den Anpassungen zufrieden sind. Eine Bestätigungsnachricht wird angezeigt.
 
-Sie müssen Ihre Anwendung nicht neu erstellen. Die Grafik wird in der App-ID-Datenbank gespeichert und bei der nächsten Anmeldung angezeigt.
+Sie müssen Ihre Anwendung nicht neu erstellen. Das Bild wird in der {{site.data.keyword.appid_short}}-Datenbank gespeichert und bei der nächsten Anmeldung angezeigt. 
