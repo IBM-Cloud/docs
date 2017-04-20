@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-18"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -13,7 +13,7 @@ lastupdated: "2017-03-18"
 # Get Code
 {: #Get_Code}
 
-When you have completed the configuration and setup of your project with your selected capabilities, you can download the code that enables you to run the code. Your downloaded project is pre-configured with the required SDK dependencies and credentials for each capability that you configured.
+When you have completed the configuration and setup of your project with your selected capabilities, you can download the code that enables you to run the application. Your downloaded project is pre-configured with the required SDK dependencies and credentials for each capability that you configured.
 
 You will need to complete credentials for services that are not configurable in your downloaded project. The `README.md` file for the starter project contains instructions. View the `README.md` file in a Markdown viewer to complete the setup.
 

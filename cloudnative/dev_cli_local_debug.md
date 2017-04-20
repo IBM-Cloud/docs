@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-31"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -19,7 +19,7 @@ Local application debugging instructions are provided for the following language
 * [Java](#java)
 * [Node.js](#node)
 
-**Note**: Swift application debugging is currently not supported.
+**Note**: Swift application debugging is not supported.
 
 ## Java application debugging
 {: #java}

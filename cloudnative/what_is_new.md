@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -22,10 +22,10 @@ lastupdated: "2017-03-17"
 The March 2017 update of the {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} introduced the following changes:
 
    * The {{site.data.keyword.Bluemix_notm}} Mobile dashboard is now the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}.
-   * Project creation has been redesigned to include Web App, BFF, and Microservice server pattern types with support for Node.js, Java, and Swift.
+   * Project creation is redesigned to include Web App, BFF, and Microservice server pattern types with support for Node.js, Java, and Swift.
    * Integration with the new and improved {{site.data.keyword.appid_full}} service gives authenentication for Mobile and Web projects.
-   * You can now additionally generate SDKs for your projects using the [SDK Generator plug-in](sdk_cli.html). SDK generation in the {{site.data.keyword.dev_console}} is available only for Mobile projects.
-   * You can now additionally create projects using the [{{site.data.keyword.dev_cli_short}}](dev_cli.html).
+   * You can now generate SDKs for your projects by using the [SDK Generator plug-in](sdk_cli.html). SDK generation in the {{site.data.keyword.dev_console}} is available only for Mobile projects.
+   * You can now create projects using the [{{site.data.keyword.dev_cli_short}}](dev_cli.html).
 
 
 ## New as of January 2017
@@ -85,13 +85,13 @@ The October 2016 update of the {{site.data.keyword.Bluemix_notm}} Mobile dashboa
 {: #ui_builder notoc}
 
    * The **{{site.data.keyword.mobilepushshort}}** capability is now accessed from the project.
-   * The **Project Settings** tab has been renamed to the **Settings** tab.
-   * The **Authentication** tab has been renamed to **User Access** tab.
+   * The **Project Settings** tab is renamed to **Settings**.
+   * The **Authentication** tab is renamed to **User Access**.
 
 
 ### Code
 {: #code notoc}
 
-   * The generated Objective-C and Swift code for iOS now uses CocoaPods to manage dependencies. This means that you need to install CocoaPods. To install it, run `sudo gem install cocoapods`. After CocoaPods is installed, run `pod setup` to configure it (if not configured already). Finally, run `pod install` to download and install the required project dependencies prior to opening your `.xcworkspace` file in Xcode. Additional details are available in the `README.md` file in the downloaded code archive. Read about [Prerequisite Developer Tools](get_code.html#prereq-dev-tools) for more information.
+   * The generated Objective-C and Swift code for iOS now uses CocoaPods to manage dependencies. This means that you need to install CocoaPods. To install it, run `sudo gem install cocoapods`. After CocoaPods is installed, run `pod setup` to configure it (if not configured already). Finally, run `pod install` to download and install the project dependencies prior to opening your `.xcworkspace` file in Xcode. Further details are available in the `README.md` file in the downloaded code archive. Read about [Prerequisite Developer Tools](get_code.html#prereq-dev-tools) for more information.
 
 Check back often to stay current with new updates.

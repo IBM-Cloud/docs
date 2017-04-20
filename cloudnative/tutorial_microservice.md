@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-04"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -14,17 +14,17 @@ lastupdated: "2017-04-04"
 # End-to-end tutorial of the Microservice Basic Starter
 {: #tutorial}
 
-The following end-to-end tutorial walks through the steps to create a project from the Microservice Basic Starter, including the tools that you must have installed, and subsequently, the steps to run the project code.
+The following end-to-end tutorial walks you through the steps to create a project from the Microservice Basic Starter. This includes installing prerequisite tools and the steps to run the project code.
 
-You have the option to create a project using either the web-based [{{site.data.keyword.dev_console}}](#create-devex) or through the command-driven [{{site.data.keyword.dev_cli_notm}}](#create-cli).
+You can create a project by using either the web-based [{{site.data.keyword.dev_console}}](#create-devex) or through the command-driven [{{site.data.keyword.dev_cli_notm}}](#create-cli).
 
 ## Installing developer tools
 {: #dev_tools}
 
-Ensure that you have installed the [prerequisite developer tools ![External link icon](../icons/launch-glyph.svg "External link icon")](get_code.html#prereq-dev-tools){: new_window}.
+Ensure that you install the [prerequisite developer tools ![External link icon](../icons/launch-glyph.svg "External link icon")](get_code.html#prereq-dev-tools){: new_window}.
 
 
-## Creating a project using the {{site.data.keyword.dev_console}}
+## Creating a project by using the {{site.data.keyword.dev_console}}
 {: #create-devex}
 
 1. Create a project in the {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}}.
@@ -72,10 +72,10 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 5. Optional: [Update your project](project_overview_page.html#update_language) to generate a new language.
 
 
-## Creating a project using the {{site.data.keyword.dev_cli_notm}}
+## Creating a project by using the {{site.data.keyword.dev_cli_notm}}
 {: #create-cli}
 
-1. Ensure that you have installed the [{{site.data.keyword.dev_cli_short}}](dev_cli.html).
+1. Ensure that you install the [{{site.data.keyword.dev_cli_short}}](dev_cli.html).
 
 2. In your Terminal prompt, navigate to a local directory of your choice and run the following command.
   
@@ -93,29 +93,29 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 
 4. If you want to add services to your project, type `y` at the question prompt and answer the remaining questions.
 
-5. When your `MicroserviceProjectCLI` has been successfully saved, navigate to the `MicroserviceProjectCLI` folder.
+5. When your `MicroserviceProjectCLI` is successfully saved, navigate to the `MicroserviceProjectCLI` folder.
 
-6. At this point you may add your own code, build or run the project.
+6. Now you may add your own code, build, or run the project.
  
  
-## Running the project using the {{site.data.keyword.dev_cli_notm}}
+## Running the project by using the {{site.data.keyword.dev_cli_notm}}
 {: #running-dev-plugin}
 
-1. To build the project in your current project directory enter the following command:
+1. To build the project in your current project directory, enter the following command:
 
 	```
 	bx dev build
 	```     
 	{: codeblock}
 
-2. To build and run the project in your current project directory enter the following command:
+2. To build and run the project in your current project directory, enter the following command:
 
 	```
 	bx dev run
 	```
 	{: codeblock}	
 
-3. You can access the application using curl on your server:
+3. You can access the application by using `curl` on your server:
 
 	```
 	curl http://localhost:8080	
