@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-04-11"
+lastupdated: "2017-04-18"
 
 ---
 
@@ -34,7 +34,7 @@ To use a different IoT device or to simulate a device without using a mobile pho
 
 Use the Cloud Foundry CLI to deploy services to {{site.data.keyword.Bluemix_notm}}.
 
-1. Set your API endpoint by running the following command. Replace the `<API-endpoint>` value with the API endpoint for your region.
+1. Set your API endpoint by running the api command. Replace the `<API-endpoint>` value with the API endpoint for your region.
    ```
 cf api <API-endpoint>
    ```
@@ -108,11 +108,14 @@ You can troubleshoot errors in the deployment process by using the `cf logs <You
 ## Step 4 - Run the web app on your desktop
 {: #run_app_desktop}
 
-  1. Open the URL to see your app by using the following format. Although the app is not running, this step verifies that it deployed correctly.
+  1. Open the URL to see your app by using the following format:
 ```
   https://*app-name*.mybluemix.net
 ```
   For example, `https://my-iot-phone-app.mybluemix.net`.
+
+Although the app is not running, this step verifies that the app deployed correctly.
+{: tip}
 
   2. Send the phone app URL to your phone by using a QR code or the email link from your desktop browser.
   The URL uses the following format:
