@@ -20,7 +20,6 @@ Building cloud native projects
         dev_cli.md
             dev_cli_local_debug.md
         sdk_cli.md
-            sdk_cli_contribute.md
 
     {: .topicgroup}
     Tutorials

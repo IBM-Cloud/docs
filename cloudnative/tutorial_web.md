@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-04"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -14,18 +14,18 @@ lastupdated: "2017-04-04"
 # End-to-end tutorial of the Web Basic Starter
 {: #tutorial}
 
-The following end-to-end tutorial walks through the steps to create a project from the Web Basic Starter, including the tools that you must have installed, and subsequently, the steps to run the project code.
+The following end-to-end tutorial walks you through the steps to create a project from the Web Basic Starter. This includes installing prerequisite tools and the steps to run the project code.
 
-You have the option to create a project using either the web-based [{{site.data.keyword.dev_console}}](#create-devex) or through the command-driven [{{site.data.keyword.dev_cli_notm}}](#create-cli).
+You can create a project by using either the web-based [{{site.data.keyword.dev_console}}](#create-devex) or through the command-driven [{{site.data.keyword.dev_cli_notm}}](#create-cli).
 
 
 ## Installing developer tools
 {: #dev_tools}
 
-Ensure that you have installed the [prerequisite developer tools ![External link icon](../icons/launch-glyph.svg "External link icon")](get_code.html#prereq-dev-tools){: new_window}.
+Ensure that you install the [prerequisite developer tools ![External link icon](../icons/launch-glyph.svg "External link icon")](get_code.html#prereq-dev-tools){: new_window}.
 
 
-## Creating a project using the {{site.data.keyword.dev_console}}
+## Creating a project by using the {{site.data.keyword.dev_console}}
 {: #create-devex}
 
 1. Create a project in the {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}}:
@@ -75,10 +75,10 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 5. Optional: [Update your project](project_overview_page.html#update_language) to generate a new language.
 
 
-## Creating a project using the {{site.data.keyword.dev_cli_notm}}
+## Creating a project by using the {{site.data.keyword.dev_cli_notm}}
 {: #create-cli}
 
-1. Ensure that you have installed the [{{site.data.keyword.dev_cli_short}}](dev_cli.html).
+1. Ensure that you install the [{{site.data.keyword.dev_cli_short}}](dev_cli.html).
 
 2. In your Terminal prompt, navigate to a local directory of your choice and run the following command.
   
@@ -98,7 +98,7 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 
 4. If you want to add services to your project, type `y` at the question prompt and answer the remaining questions.
 
-5. When your `WebBasicProjectCLI` project has been successfully saved, navigate to the `WebBasicProjectCLI` folder.
+5. When your `WebBasicProjectCLI` project is successfully saved, navigate to the `WebBasicProjectCLI` folder.
 
 6. Add your own code, and run the project.
  
@@ -188,7 +188,7 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 
 2. Change your active target to the executable:
 
-	Next, open your project in Xcode and make sure your active target is the executable. You can hold down the option key while clicking on the drop down menu to select the desired active executable.
+	Next, open your project in Xcode and make sure that your active target is the executable. You can hold down the option key while clicking the drop down menu to select the desired active executable.
 
 3. Press **run**.
 
