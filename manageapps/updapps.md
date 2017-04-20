@@ -97,6 +97,7 @@ After you configure the custom domain in {{site.data.keyword.Bluemix_notm}}, you
     * US-SOUTH: `secure.us-south.bluemix.net`
     * EU-GB: `secure.eu-gb.bluemix.net`
     * AU-SYD: `secure.au-syd.bluemix.net`
+    * EU-DE: `secure.eu-de.bluemix.net`
 
 In a browser or command line interface, enter the following URL to access the myapp application:
 
