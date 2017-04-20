@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-11-17"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -18,10 +18,17 @@ copyright:
 
 # 環境プロパティーとリソース
 {: #deliverypipeline_environment}
-最終更新日: 2016 年 11 月 17 日
-{: .last-updated}
 
-環境プロパティーとあらかじめインストールされたリソースを使用して、IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} サービスと対話できます。たとえば、ジョブ・スクリプトやテスト・コマンドで使用することができます。{:shortdesc}
+環境プロパティーとあらかじめインストールされたリソースを使用して、IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} サービスと対話できます。たとえば、ジョブ・スクリプトやテスト・コマンドを取り込むことができます。{:shortdesc}
+
+独自の環境プロパティーを、ステージの**「環境プロパティー (ENVIRONMENT PROPERTIES)」**タブからステージに追加します。環境プロパティーは、ステージのすべてのジョブに使用可能です。
+
+「環境プロパティー (Environment Properties)」タブから、次の 4 つのタイプのプロパティーを追加できます。
+* **「テキスト」**: 単一行の値を持つプロパティー・キー。
+* **「テキスト域 (Text Area)」**: 複数行の値を持つプロパティー・キー。
+* **「セキュア (Secure)」**: 単一行の値を持つプロパティー・キー。値はアスタリスクとして表示されます。
+* **「プロパティー (Properties)」**: プロジェクトのリポジトリーにあるファイル。このファイルには、複数のプロパティーを含めることができます。プロパティーはそれぞれ独自の行で指定されている必要があります。キー値のペアを区切るには、等号 (=) を使用します。
+
 
 パイプライン環境では、デフォルトで次のプロパティーとリソースを利用できます。
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-
+  years: 2016, 2017
+lastupdated: "2017-4-4"
 ---
 
 {:new_window: target="_blank"}
@@ -11,10 +11,8 @@ copyright:
 {:codeblock:.codeblock}
 
 
-# {{site.data.keyword.deliverypipeline}} について
+# Delivery Pipeline について
 {: #deliverypipeline_about}
-最終更新日: 2016 年 11 月 18 日
-{: .last-updated}
 
 IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} サービス (パイプライン) は、Bluemix プロジェクトの継続的なデプロイメントを自動化します。パイプラインでは、一連のステージにより入力内容を取得して、
 ビルド、テスト、およびデプロイメントなどのジョブを実行します。
@@ -37,14 +35,14 @@ IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} サービス (パ�
 
 特定のステージの制御を厳しくすることができます。入力時に変更が発生するたびにステージが実行されないようにするには、機能を無効にすることができます。**「入力」**タブの「ステージ・トリガー」セクションで、**「このステージが手動で実行されたときにのみジョブを実行」**をクリックします。
 
-![「入力」タブ](./images/input_tab_only_execute.png)
+![「入力」タブ](images/input_tab_only_execute.png)
 
 ## ジョブ
 {: #deliverypipeline_jobs}
 
 ジョブは、ステージ内の実行単位です。ステージには複数のジョブを含めることができ、ステージ内のジョブは順次実行されます。デフォルトでは、ジョブが失敗すると、ステージ内の以降のジョブは実行されません。
 
-![ステージ内のビルド・ジョブとテスト・ジョブ](./images/jobs.png)
+![ステージ内のビルド・ジョブとテスト・ジョブ](images/jobs.png)
 
 ジョブは、各パイプラインの実行用に作成された Docker コンテナー内にある、個別の作業ディレクトリーで実行されます。ジョブが実行される前に、ステージ・レベルで定義された入力データがその作業ディレクトリーに取り込まれます。例えば、テスト・ジョブとデプロイ・ジョブを含むステージがあるとします。1 つのジョブで依存関係をインストールすると、その依存関係はもう一方のジョブ
 では使用できません。ただし、ステージの入力で依存関係を使用可能にすると、どちらのジョブでも使用可能となります。
@@ -52,12 +50,25 @@ IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} サービス (パ�
 単純タイプのビルド・ジョブを除き、ジョブを構成する際は、ビルド・コマンド、テスト・コマンド、またはデプロイメントの各コマンドを含む UNIX シェル・スクリプトを含めることができます。ジョブは暫定のコンテナーで実行されるため、複数のジョブが同じステージ
 の一部である場合でも、1 つのジョブのアクションが他のジョブの実行環境に影響を与えることはできません。
 
+さらに、パイプライン・ジョブは、`sudo` として次のコマンドのみを実行できます。
+  * `/usr/sbin/service`
+  * `/usr/bin/apt-get`
+  * `/usr/bin/apt-key`
+  * `/usr/bin/dpkg`
+  * `/usr/bin/add-apt-repository`
+  * `/opt/IBM/node-v0.10.40-linux-x64/npm`
+  * `/opt/IBM/node-v0.12.7-linux-x64/npm`
+  * `/opt/IBM/node-v4.2.2-linux-x64/npm`
+  * `/usr/bin/Xvfb`
+  * `/usr/bin/pip`
+
+
 ジョブの実行後、そのジョブ用に作成されたコンテナーは破棄されます。ジョブの実行結果は永続できますが、実行環境は永続しません。
 
 **注**: ジョブは最大で 60 分実行することができます。その限界を超えると、ジョブは失敗します。ジョブが限界を超える場合は、複数の
 ジョブに分割してください。例えば、1 つのジョブが 3 つのタスクを実行する場合、1 つのタスクが 1 つのジョブとなるように、そのジョブを 3 つのジョブに分割することができます。
 
-ジョブをステージに追加する方法については、[ジョブのステージへの追加](./build_deploy.html#deliverypipeline_add_job)を参照してください。
+ジョブをステージに追加する方法については、[ジョブのステージへの追加](/docs/services/ContinuousDelivery/pipeline_build_deploy.html#deliverypipeline_add_job){: new_window}を参照してください。
 
 ### ビルド・ジョブ
 
@@ -71,20 +82,20 @@ IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} サービス (パ�
 
 #### ビルド・スクリプトの環境プロパティー
 ビルド・ジョブのビルド・シェル・コマンド内に環境プロパティーを含めることができます。このプロパティーは、ジョブの実行環境に関する情報へのアクセスを
-提供します。詳しくは、[{{site.data.keyword.deliverypipeline}} サービスの環境プロパティーとリソース](./deploy_var.html)を参照してください。
+提供します。 [{{site.data.keyword.deliverypipeline}} サービスの環境プロパティーとリソース](/docs/services/ContinuousDelivery/pipeline_deploy_var.html)を参照してください。
 
 ### デプロイ・ジョブ
 
-デプロイ・ジョブは、プロジェクトをアプリとして Bluemix にアップロードし、URL からアクセス可能です。プロジェクトのデプロイ後は、デプロイされたアプリを Bluemix ダッシュボードで検索することができます。 
+デプロイ・ジョブは、プロジェクトをアプリとして Bluemix にアップロードし、URL からアクセス可能です。プロジェクトのデプロイ後は、デプロイされたアプリを Bluemix ダッシュボードで検索することができます。
 
 デプロイ・ジョブは、新規アプリをデプロイすることも、既存アプリを更新することもできます。Cloud Foundry コマンド・ライン・インターフェースや Web IDE の実行バーなどの別の方法で最初にアプリをデプロイしていても、デプロイ・ジョブを使用してアプリを更新することができます。デプロイ・ジョブでアプリを更新するには、アプリの名前を使用します。
 
-1 つ以上の地域やサービスにデプロイできます。例えば、1 つ以上のサービスを使用して、1 つの地域でテストし、複数の地域で実動にデプロイするよう {{site.data.keyword.deliverypipeline}} をセットアップできます。詳しくは、[地域](../../overview/index.html#ov_intro__reg)を参照してください。
+1 つ以上の地域やサービスにデプロイできます。例えば、1 つ以上のサービスを使用して、1 つの地域でテストし、複数の地域で実動にデプロイするよう {{site.data.keyword.deliverypipeline}} をセットアップできます。詳しくは、[地域](/docs/overview/whatisbluemix.html#ov_intro_reg){: new_window}を参照してください。
 
 #### デプロイメント・スクリプトの環境プロパティー
 
 デプロイ・ジョブのデプロイメント・スクリプト内に環境プロパティーを含めることができます。これらのプロパティーは、ジョブの実行環境に関する情報へのアク
-セスを提供します。詳しくは、[{{site.data.keyword.deliverypipeline}} サービスの環境プロパティーとリソース](./deploy_var.html)を参照してください。
+セスを提供します。 [{{site.data.keyword.deliverypipeline}} サービスの環境プロパティーとリソース](/docs/services/ContinuousDelivery/pipeline_deploy_var.html)を参照してください。
 
 ### テスト・ジョブ
 条件を満たすことが必要な場合は、ビルド・ジョブおよびデプロイ・ジョブの前または後にテスト・ジョブを組み込みます。必要に応じて、テスト・ジョブを単純タイプまた
@@ -94,19 +105,19 @@ IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} サービス (パ�
 
 #### テスト・スクリプトの環境プロパティー
 
-テスト・ジョブのスクリプトに環境プロパティーを含めることができます。このプロパティーは、ジョブの実行環境に関する情報へのアクセスを提供します。詳しくは、[{{site.data.keyword.deliverypipeline}} サービスの環境プロパティーとリソース](./deploy_var.html)を参照してください。
+テスト・ジョブのスクリプトに環境プロパティーを含めることができます。このプロパティーは、ジョブの実行環境に関する情報へのアクセスを提供します。 [{{site.data.keyword.deliverypipeline}} サービスの環境プロパティーとリソース](/docs/services/ContinuousDelivery/pipeline_deploy_var.html)を参照してください。
 
 ## マニフェスト・ファイル
 {: #deliverypipeline_manifest}
 
-マニフェスト・ファイルは、`manifest.yml` という名前でプロジェクトのルート・ディレクトリーに格納されます。このファイルは、プロジェクトの Bluemix へのデプロイ方法を制御します。プロジェクト用のマニフェスト・ファイルの作成について詳しくは、[アプリケーション・マニフェストに関する Bluemix の資料](https://www.ng.bluemix.net/docs/manageapps/deployingapps.html#appmanifest)を参照してください。プロジェクトを Bluemix と統合するには、そのプロジェクトのルート
+マニフェスト・ファイルは、`manifest.yml` という名前でプロジェクトのルート・ディレクトリーに格納されます。このファイルは、プロジェクトの Bluemix へのデプロイ方法を制御します。プロジェクト用のマニフェスト・ファイルの作成について詳しくは、[アプリケーション・マニフェストに関する Bluemix の資料](/docs/manageapps/depapps.html#appmanifest)を参照してください。プロジェクトを Bluemix と統合するには、そのプロジェクトのルート
 ・ディレクトリーにマニフェスト・ファイルが必要です。ただし、そのファイルの情報に基づいてデプロイする必要はありません。
 
 パイプラインでは、`cf push` コマンド引数を使用して、マニフェスト・ファイルで指定可能なすべての設定を指定できます。`cf push` コマンド引数は、複数のデプロイメント・ターゲットがあるプロジェクトで有用です。複数のデプロイ・ジョブがすべてプロジェクト・マニフェスト・ファイルで指定されるルートを使用しようとすると、競合が発生します。
 
 競合を避けるには、`cf push`、続けてホスト名引数、`-n`、およびルート名を使用して、ルートを指定することができます。個々のステージでデプロイメント・スクリプトを変更することにより、複数のターゲットにデプロイする際のルートの競合を回避できます。
 
-`cf push` コマンド引数を使用するには、デプロイ・ジョブの構成設定を開き、**「デプロイ・スクリプト」**フィールドを変更します。詳しくは、[Cloud Foundry Push の資料](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push)を参照してください。
+`cf push` コマンド引数を使用するには、デプロイ・ジョブの構成設定を開き、**「デプロイ・スクリプト」**フィールドを変更します。詳しくは、[Cloud Foundry Push 資料![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push){: new_window}を参照してください。
 
 ## サンプル・パイプライン
 {: #deliverypipeline_example}
@@ -119,9 +130,8 @@ IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} サービス (パ�
 
 次の概念図に、このパイプラインを示しています。
 
-![パイプラインのステージとジョブの概念図](./images/diagram.jpg)
+![パイプラインのステージとジョブの概念図](images/diagram.jpg)
 
 *3 ステージのパイプラインの概念モデル*
 
 各ステージは、その入力データをリポジトリーとビルド・ジョブから取り出し、ステージ内のジョブは、互いに独立して順次実行されます。サンプル・パイプラインでは、テスト・ステージと実動ステージの両方がその入力データとしてビルド・ステージの出力を使用する場合でも、ステージは順次実行されます。
-
