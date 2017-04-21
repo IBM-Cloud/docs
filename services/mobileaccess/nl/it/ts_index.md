@@ -22,7 +22,7 @@ Quando hai problemi nell'utilizzo di {{site.data.keyword.amashort}}, considera q
 {: shortdesc}
 
 
-## Come ottenere aiuto e supporto
+## Come ottenere aiuto e supporto 
 {: #gettinghelp}
 
 Se hai dei problemi o delle domande quando utilizzi {{site.data.keyword.amashort}}, puoi ottenere aiuto ricercando le informazioni o facendo delle domande in un forum. Inoltre puoi aprire un ticket di supporto.

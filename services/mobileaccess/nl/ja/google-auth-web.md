@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-{{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービスに置き換えられます。
+**重要: {{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービス**に置き換えられます。
 
 # Web アプリケーション用の Google 認証の使用可能化
 {: #google-auth-web}
@@ -45,7 +45,7 @@ Google を ID プロバイダーとして使用し始めるには、[Google Deve
 4. 変更を保存します。**Google Client ID** および **Application Secret** をメモします。
 
 
-## Google 認証用の {{site.data.keyword.amashort}} の構成
+## Google 認証用の Mobile Client Access の構成
 {: #google-auth-config-ama}
 
 Google Application ID および Secret を作成した後、{{site.data.keyword.amashort}} ダッシュボードで Google 認証を使用可能にすることができます。
@@ -61,7 +61,7 @@ Google Application ID および Secret を作成した後、{{site.data.keyword.
 5. **「保存」**をクリックします。
 
 
-## ID プロバイダーとして Google を使用した {{site.data.keyword.amashort}} 許可フローの実装
+## Google を ID プロバイダーとして使用した Mobile Client Access 許可フローの実装
 {: #google-auth-flow}
 
 `VCAP_SERVICES` 環境変数が {{site.data.keyword.amashort}} サービス・インスタンスごとに自動的に作成され、許可プロセスに必要なプロパティーが含まれます。この環境変数は 1 つの JSON オブジェクトから成り、{{site.data.keyword.amashort}} サービス・ダッシュボードの **「サービス資格情報」**タブをクリックすることによって表示できます。
@@ -190,7 +190,7 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 	アクセス・トークンおよび識別トークンを受け取ったら、Web セッションに認証済みのフラグを立てることができ、オプションでこれらのトークンを永続的に保持できます。  
 
 
-##取得したアクセス・トークンおよび識別トークンの使用
+## 取得したアクセス・トークンおよび識別トークンの使用
 {: #google-auth-using-token}
 
 識別トークンには、ユーザー ID に関する情報が含まれます。Google 認証の場合、このトークンには、ユーザーが共有することに同意したすべての情報 (氏名、プロファイル写真の URL など) が含まれます。  
@@ -201,7 +201,7 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-####ヒント:
+#### ヒント:
 {: #tips}
 
 * `accessToken` と `idToken` は空白で分離する必要があります。

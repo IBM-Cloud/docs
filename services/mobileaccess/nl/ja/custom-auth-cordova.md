@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,9 +12,9 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-{{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービスに置き換えられます。
+**重要: {{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービス**に置き換えられます。
 
-# {{site.data.keyword.amashort}} Cordova アプリ用のカスタム認証の構成
+# Mobile Client Access Cordova アプリ用のカスタム認証の構成
 {: #custom-cordova}
 
 保護されたアプリケーションにアクセスするためにカスタム認証および {{site.data.keyword.amafull}}Client SDK を使用するように、Cordova アプリケーションを装備します。

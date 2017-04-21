@@ -2,15 +2,15 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
 {:codeblock:.codeblock}
 
-El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.
+**Importante: El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.**
 
-# Configuración de la autenticación personalizada para la app {{site.data.keyword.amashort}} iOS (Swift SDK)
+# Configuración de la autenticación personalizada para la app de iOS (Swift SDK) Mobile Client Access
 {: #custom-ios}
 
 Configure su aplicación de iOS con autenticación personalizada para que utilice el SDK del cliente de {{site.data.keyword.amafull}} y conecte la aplicación a {{site.data.keyword.Bluemix}}.  

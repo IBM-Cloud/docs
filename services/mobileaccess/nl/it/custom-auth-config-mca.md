@@ -20,7 +20,7 @@ Per utilizzare l'autenticazione personalizzata con la tua applicazione mobile, d
 * Un'istanza di un servizio {{site.data.keyword.amafull}}.
 * Un'applicazione provider di identità personalizzata.
 
-## Configura l'autenticazione personalizzata nel dashboard
+## Configura l'autenticazione personalizzata nel dashboard  
 {: #custom-dash-config}
 
 Utilizza il dashboard {{site.data.keyword.amafull}} per configurare l'autenticazione personalizzata.

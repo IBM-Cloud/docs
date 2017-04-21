@@ -2,13 +2,13 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-07"
 
 ---
 
-{{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービスに置き換えられます。
+**重要: {{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービス**に置き換えられます。
 
-# カスタム認証用の {{site.data.keyword.amashort}} の構成
+# カスタム認証用の Mobile Client Access の構成
 {: #custom-dash}
 
 
@@ -20,8 +20,9 @@ lastupdated: "2017-03-15"
 * {{site.data.keyword.amafull}} サービスのインスタンス。
 * カスタム ID プロバイダー・アプリケーション。
 
-## {{site.data.keyword.amafull}} ダッシュボードでのカスタム認証の構成
+## ダッシュボードでのカスタム認証の構成
 {: #custom-dash-config}
+
 {{site.data.keyword.amafull}} ダッシュボードを使用してカスタム認証を構成します。
 
 1. {{site.data.keyword.amafull}} ダッシュボードでサービスを開きます。

@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
-{{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービスに置き換えられます。
+**重要: {{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービス**に置き換えられます。
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -15,7 +15,7 @@ lastupdated: "2017-03-15"
 {:pre: .pre}
 
 
-# {{site.data.keyword.amashort}} Android アプリ用のカスタム認証の構成
+# Mobile Client Access Android アプリ用のカスタム認証の構成
 {: #custom-android}
 
 
@@ -41,7 +41,7 @@ lastupdated: "2017-03-15"
 
 
 
-## {{site.data.keyword.amashort}} Client SDK の初期化
+## Client SDK の初期化
 {: #custom-android-initialize}
 {{site.data.keyword.amashort}} Android SDK が装備された Android アプリケーションがある場合は、このセクションをスキップできます。
 1. Android Studio にある Android プロジェクトで、アプリケーション・モジュールの `build.gradle` ファイルを開きます (プロジェクト `build.gradle` ではありません)。

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-{{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービスに置き換えられます。
+**重要: {{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービス**に置き換えられます。
 
 # iOS アプリ用の Google 認証の使用可能化 (Swift SDK)
 {: #google-auth-ios}
@@ -73,7 +73,7 @@ Google の [Google Sign-In for iOS ![外部リンク・アイコン](../../icons
 
 	ブリッジング・ヘッダー・ファイルの更新について詳しくは、[Enable sign-in ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in){: new_window}を参照してください。
 
-## Google 認証用の {{site.data.keyword.amashort}} の構成
+## Google 認証用の Mobile Client Access の構成
 {: #google-auth-ios-config}
 
 これで iOS のクライアント ID を取得したので、{{site.data.keyword.amashort}} サービスで Google 認証を使用可能にすることができます。
@@ -84,7 +84,7 @@ Google の [Google Sign-In for iOS ![外部リンク・アイコン](../../icons
 1. **「iOS のアプリケーション ID (Application ID for iOS)」**で、`GoogleService-Info.plist` ファイルから取得した `CLIENT_ID` 値を指定します。
 1. **「保存」**をクリックします。
 
-## iOS 用の {{site.data.keyword.amashort}} Client SDK の構成
+## iOS 用の Client SDK の構成
 {: #google-auth-ios-sdk}
 
 ### CocoaPods のインストール

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,9 +11,9 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-{{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービスに置き換えられます。
+**重要: {{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービス**に置き換えられます。
 
-#{{site.data.keyword.amashort}} Web アプリケーション用のカスタム認証の構成
+#Mobile Client Access Web アプリケーション用のカスタム認証の構成
 {: #custom-web}
 
 カスタム認証と {{site.data.keyword.amafull}} セキュリティー機能を Web アプリに追加します。
@@ -105,7 +105,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 {: codeblock}
 
 
-##カスタム認証用の {{site.data.keyword.amashort}} の構成
+##カスタム認証用の Mobile Client Access の構成
 {: #custom-auth-config-mca}
 
 カスタム ID プロバイダーを構成した後、{{site.data.keyword.amashort}} ダッシュボードでカスタム認証を使用可能にすることができます。
@@ -118,7 +118,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 1. **「保存」**をクリックします。
 
 
-##カスタム ID プロバイダーを使用した {{site.data.keyword.amashort}} 許可フローの実装
+##カスタム ID プロバイダーを使用した Mobile Client Access 許可フローの実装
 {: #custom-auth-flow}
 
 `VCAP_SERVICES` 環境変数が {{site.data.keyword.amashort}} サービス・インスタンスごとに自動的に作成され、許可プロセスに必要なプロパティーが含まれます。この環境変数は 1 つの JSON オブジェクトから成り、{{site.data.keyword.amashort}} ダッシュボード内の **「サービス資格情報」**タブに表示できます。

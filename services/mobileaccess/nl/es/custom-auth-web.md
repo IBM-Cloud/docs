@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,9 +11,9 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.
+**Importante: El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.**
 
-#Configuración de la autenticación personalizada para las aplicaciones web de {{site.data.keyword.amashort}}
+#Configuración de la autenticación personalizada para las aplicaciones web de Mobile Client Access
 {: #custom-web}
 
 Añadir autenticación personalizada y funcionalidad de seguridad de {{site.data.keyword.amafull}} a su app web.
@@ -106,7 +106,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 {: codeblock}
 
 
-##Configuración de {{site.data.keyword.amashort}} para la autenticación personalizada
+##Configuración de Mobile Client Access para la autenticación personalizada
 {: #custom-auth-config-mca}
 
 Una vez que haya configurado el proveedor de identidad personalizado, puede habilitar la autenticación personalizada en el panel de control {{site.data.keyword.amashort}}.
@@ -119,7 +119,7 @@ Una vez que haya configurado el proveedor de identidad personalizado, puede habi
 1. Pulse **Guardar**.
 
 
-##Implementación del flujo de autorización de {{site.data.keyword.amashort}} utilizando un proveedor de identidad personalizado
+##Implementación del flujo de autorización de Mobile Client Access utilizando un proveedor de identidad personalizado
 {: #custom-auth-flow}
 
 La variable de entorno `VCAP_SERVICES` se crea automáticamente para cada instancia de servicio de {{site.data.keyword.amashort}} y contiene propiedades que son necesarias para el proceso de autorización. Consta de un objeto JSON y se puede ver en el separador **Credenciales de servicio** del panel de control de {{site.data.keyword.amashort}}.

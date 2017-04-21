@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.
+**Importante: El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.**
 
 # Habilitación de la autenticación de Google para aplicaciones web
 {: #google-auth-web}
@@ -41,7 +41,7 @@ Para empezar a utilizar Google como proveedor de identidad, cree un proyecto en 
 4. Guarde los cambios realizados. Anote el **ID de cliente de Google** y el **Secreto de la aplicación**.
 
 
-## Configuración de {{site.data.keyword.amashort}} para la autenticación de Google
+## Configuración de Mobile Client Access para la autenticación de Google
 {: #google-auth-config-ama}
 
 Una vez que ya tenga el ID de aplicación y el secreto de Google puede habilitar la autenticación de Google en el panel de control de {{site.data.keyword.amashort}}.
@@ -57,7 +57,7 @@ Una vez que ya tenga el ID de aplicación y el secreto de Google puede habilitar
 5. Pulse **Guardar**.
 
 
-## Implementación del flujo de autorización de {{site.data.keyword.amashort}} utilizando Google como proveedor de identidad
+## Implementación del flujo de autorización de Mobile Client Access utilizando Google como proveedor de identidad
 {: #google-auth-flow}
 
 La variable de entorno `VCAP_SERVICES` se crea automáticamente para cada instancia de servicio de {{site.data.keyword.amashort}} y contiene propiedades necesarias para el proceso de autorización. Consta de un objeto JSON y se puede ver pulsando en el separador **Credenciales de servicio** del panel de control del servicio de {{site.data.keyword.amashort}}.
@@ -193,7 +193,7 @@ El siguiente paso consiste en obtener la señal de acceso y las señales de iden
 	Una vez que haya recibido el acceso, y la identidad de las señales, puede señalar la sesión web como autenticada y, opcionalmente, persistir estas señales.  
 
 
-##Utilización de la señal de identidad y del acceso obtenido
+## Utilización de la señal de identidad y del acceso obtenido
 {: #google-auth-using-token}
 
 La señal de identidad contiene información sobre la identidad del usuario. En el caso de la autenticación de Google, la señal contiene toda la información que el usuario esté de acuerdo en compartir, como el nombre completo, el URL de la foto de perfil, etc.  
@@ -204,7 +204,7 @@ Para realizar solicitudes a los recursos protegidos, añada una cabecera de auto
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-####Sugerencias:
+#### Sugerencias:
 {: #tips}
 
 * El `accessToken` e `idToken` deben estar separados por un espacio en blanco.

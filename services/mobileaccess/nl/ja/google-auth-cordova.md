@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-{{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービスに置き換えられます。
+**重要: {{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービス**に置き換えられます。
 
 # Cordova アプリ用の Google 認証の使用可能化
 {: #google-auth-cordova}
@@ -41,7 +41,7 @@ Cordova アプリケーションの Android プラットフォームを Google �
    * [Google Developer Console でのプロジェクトの作成](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html#create-google-project)。これは、Google Developers Web サイトで認証サービスをセットアップする方法を示します。
    * [Google 認証用の MCA の構成](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html#google-auth-android-config)。これは、Google 許可を使用するように {{site.data.keyword.amashort}} をセットアップする方法を示します。
 
-### Android Cordova 用の {{site.data.keyword.amashort}} Client SDK の構成
+### Android Cordova 用の Client SDK の構成
 
 1. Android プロジェクト・フォルダーで、アプリケーション・モジュールの `build.gradle` ファイルを開きます (プロジェクト `build.gradle` ファイル**ではありません**)。以下のように、依存関係セクションを見つけ、Client SDK の新しいコンパイル依存関係を追加します。
 

@@ -2,15 +2,15 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
 {:codeblock:.codeblock}
 
-{{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービスに置き換えられます。
+**重要: {{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービス**に置き換えられます。
 
-# {{site.data.keyword.amashort}} iOS (Swift SDK) アプリ用のカスタム認証の構成
+# Mobile Client Access iOS (Swift SDK) アプリ用のカスタム認証の構成
 {: #custom-ios}
 
 {{site.data.keyword.amafull}} Client SDK の使用および {{site.data.keyword.Bluemix}} へのアプリケーションの接続のためにカスタム認証を使用する iOS アプリケーションを構成します。  

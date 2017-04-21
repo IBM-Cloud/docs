@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,11 +12,10 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-{{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービスに置き換えられます。
+**重要: {{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービス**に置き換えられます。
 
 # {{site.data.keyword.amashort}} の概要
 {: #mca-overview}
-
 
 {{site.data.keyword.amafull}} サービスは、{{site.data.keyword.Bluemix_notm}} 上でホストされているクラウド・リソースにアクセスするモバイル・アプリケーションおよび Web アプリケーションに対する認証を提供します。
 
@@ -88,20 +87,3 @@ lastupdated: "2017-03-15"
 * この時点以降、{{site.data.keyword.amashort}} Client SDK で行われたすべての要求は、新しく入手した許可ヘッダーを含むようになります。
 * {{site.data.keyword.amashort}} Client SDK は、認証フローをトリガーしたオリジナルの要求を自動的に再送します。
 * {{site.data.keyword.amashort}} Server SDK は、要求から許可ヘッダーを抽出し、{{site.data.keyword.amashort}} サービスを使用してそのヘッダーを検証し、バックエンド・リソースへのアクセスを認可します。
-
-
-## {{site.data.keyword.amashort}} のヘルプおよびサポートの利用
-{: #gettinghelp}
-
-{{site.data.keyword.amashort}} を使用しているときに問題や質問がある場合は、情報を検索したり、フォーラムで質問したりして、支援を得ることができます。
-また、サポート・チケットを開くことができます。
-
-フォーラムを使用して質問する場合は、{{site.data.keyword.Bluemix_notm}} の開発チームの目に触れるように、質問にタグを付けます。
-
-* {{site.data.keyword.amashort}} を使用したアプリの開発やデプロイについて技術的な質問がある場合は、[Stack Overflow ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://stackoverflow.com/search?q={{site.data.keyword.amashort}}+ibm-bluemix){: new_window}に質問を投稿し、質問に `ibm-bluemix` と `{{site.data.keyword.amashort}}` のタグを付けてください。
-* サービスおよび開始手順に関する質問については、[IBM developerWorks ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=mobile+client+access%20%2B[bluemix]){: new_window}を使用してください。
-
-
-フォーラムの使用について詳しくは、[ヘルプの利用](https://www.{DomainName}/docs/support/index.html#getting-help)を参照してください。
-
-IBM サポート・チケットのオープン、またはサポート・レベルとチケットの重大度については、[サポートへのお問い合わせ](https://www.{DomainName}/docs/support/index.html#contacting-support)を参照してください。

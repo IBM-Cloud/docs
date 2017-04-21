@@ -14,7 +14,7 @@ lastupdated: "2017-04-06"
 
 **Importante: il servizio {{site.data.keyword.amafull}} è stato sostituito con il servizio {{site.data.keyword.appid_full}}.**
 
-# Configurazione dell'autenticazione personalizzata per la tua applicazione Cordova Mobile Client Access
+# Configurazione dell'autenticazione personalizzata per la tua applicazione Cordova Mobile Client Access 
 {: #custom-cordova}
 
 Strumentazione della tua applicazione Cordova per utilizzare l'autenticazione personalizzata e l'SDK client {{site.data.keyword.amafull}} per accedere alla tua applicazione protetta.

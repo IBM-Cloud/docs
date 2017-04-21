@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.
+**Importante: El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.**
 
 # Habilitación de la autenticación de Google para apps de Cordova
 {: #google-auth-cordova}
@@ -41,7 +41,7 @@ Los pasos necesarios para configurar la plataforma Android de una aplicación de
    * [Creación de un proyecto en Google Developer Console](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html#create-google-project). Muestra cómo configurar el servicio de autenticación en el sitio web de Google Developers.
    * [Configuración de MCA para la autenticación de Google](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html#google-auth-android-config). Muestra cómo configurar {{site.data.keyword.amashort}} para utilizar la autorización de Google.
 
-### Configure el SDK de cliente {{site.data.keyword.amashort}} para Android Cordova
+### Configure el SDK de cliente para Android Cordova
 
 1. En la carpeta del proyecto de Android, abra el archivo `build.gradle` para el módulo de aplicación (**no** el archivo `build.gradle` del proyecto).
 	Busque la sección de dependencias y añada una nueva dependencia de compilación para el SDK del cliente:

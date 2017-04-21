@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.
+**Importante: El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.**
 
 # {{site.data.keyword.amashort}} SDK, ejemplos y referencia de API
 Para añadir SDK de {{site.data.keyword.amafull}} a la app de cliente, escoja los SDK que desea utilizar. A continuación, configure el gestor de dependencia para extraer los SDK en la aplicación.

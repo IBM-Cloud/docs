@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,9 +12,9 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.
+**Importante: El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.**
 
-# Configuración de la autenticación personalizada para la app {{site.data.keyword.amashort}} Cordova
+# Configuración de la autenticación personalizada para la app de Cordova Mobile Client Access
 {: #custom-cordova}
 
 Prepare la aplicación Cordova para que utilice la autenticación personalizada y el SDK del cliente de {{site.data.keyword.amafull}} para acceder a la aplicación protegida.

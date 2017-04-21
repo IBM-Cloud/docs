@@ -6,7 +6,7 @@ lastupdated: "2017-04-06"
 
 ---
 
-**Importante: il servizio {{site.data.keyword.amafull}} è stato sostituito con il servizio {{site.data.keyword.appid_full}}.**
+**Importante: il servizio {{site.data.keyword.amafull}} è stato sostituito con il servizio {{site.data.keyword.appid_full}}.** 
 
 # Funzioni avanzate {{site.data.keyword.amashort}}
 {: #before-you-begin}
