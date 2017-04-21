@@ -80,7 +80,9 @@ To upgrade your project to a toolchain, follow these steps:
 
    Because toolchains are managed at the organization level, be sure to select an organization where the project members that need to access the toolchain already exist, or can be added. 
 
-3. If you used Track & Plan in your project, you can transfer your Track & Plan data to GitHub Issues. 
+3. If you used Track & Plan in your project, you can transfer your Track & Plan data to GitHub Issues.
+
+   ![Track and Plan options](images/upgrade-tutorial-track-and-plan.png)
 
    - Indicate whether you want to migrate your Track & Plan data. 
    - By default, all of your Track & Plan data is migrated. If you prefer to migrate only the work items that are part of a specific query, specify that query.
