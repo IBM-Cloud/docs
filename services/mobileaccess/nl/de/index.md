@@ -27,17 +27,17 @@ lastupdated: "2017-04-06"
 
 ## Migration auf {{site.data.keyword.appid_short_notm}}
 
-Mit {{site.data.keyword.appid_short_notm}} können Sie mobile Anwendungen schützen, indem Sie Identitätsprovider (Google und Facebook) einsetzen. Es ist ebenfalls möglich, Back-End-Ressourcen mit Clientberechtigung zu schützen. 
+Mit {{site.data.keyword.appid_short_notm}} können Sie mobile Anwendungen schützen, indem Sie Identitätsprovider (Google und Facebook) einsetzen. Es ist ebenfalls möglich, Back-End-Ressourcen mit Clientberechtigung zu schützen.
 
-1. Stellen Sie die Serviceinstanz aus dem {{site.data.keyword.Bluemix_notm}}-Katalog bereit. Konfigurieren Sie die Instanz und klicken Sie auf **Erstellen**. 
-2. Verwenden Sie die Beispiele im Dashboard der Serviceinstanz, in denen die Einführung in {{site.data.keyword.appid_short_notm}} Schritt für Schritt beschrieben wird. 
+1. Stellen Sie die Serviceinstanz aus dem {{site.data.keyword.Bluemix_notm}}-Katalog bereit. Konfigurieren Sie die Instanz und klicken Sie auf **Erstellen**.
+2. Verwenden Sie die Beispiele im Dashboard der Serviceinstanz, in denen die Einführung in {{site.data.keyword.appid_short_notm}} Schritt für Schritt beschrieben wird.
 3. Laden Sie die {{site.data.keyword.appid_short_notm}}-SDKs herunter und richten Sie die Anwendung ein. Verwenden Sie hierzu entweder das [Android-SDK](/docs/services/appid/getting-started-android.html#android-sdk) oder das [iOS-Swift-SDK](/docs/services/appid/getting-started-ios-swift-sdk.html#getting-started-ios).
 4. Konfigurieren Sie die [Identitätsprovider](/docs/services/appid/identity-providers.html).
 5. Passen Sie das [Anmelde-Widget](/docs/services/appid/login-widget.html) an.
 6. Stellen Sie sicher, dass die App korrekt funktioniert.
     * Überprüfen Sie das Service-Dashboard, um sicherzustellen, dass die App aktiv ist.
-    * Rufen Sie im Service-Dashboard **Kürzliche Aktivität** auf, um laufende Authentifizierungen zu überwachen. 
-7. Heben Sie die Bereitstellung der Instanzen von {{site.data.keyword.amashort}} auf und entfernen Sie sie. 
+    * Rufen Sie im Service-Dashboard **Kürzliche Aktivität** auf, um laufende Authentifizierungen zu überwachen.
+7. Heben Sie die Bereitstellung der Instanzen von {{site.data.keyword.amashort}} auf und entfernen Sie sie.
 
 
 

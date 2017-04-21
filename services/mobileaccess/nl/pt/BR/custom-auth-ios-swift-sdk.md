@@ -10,7 +10,7 @@ lastupdated: "2017-04-06"
 
 **Importante: o serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.**
 
-# Configurando a autenticação customizada para seu app iOS (SDK Swift) Mobile Client Access 
+# Configurando a autenticação customizada para seu app iOS (SDK Swift) Mobile Client Access
 {: #custom-ios}
 
 Configure seu aplicativo iOS que está usando autenticação customizada para utilizar

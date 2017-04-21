@@ -29,7 +29,7 @@ Seguridad proporcionada por {{site.data.keyword.amashort}} a su app móvil: auto
 
 Con {{site.data.keyword.appid_short_notm}}, puede proteger sus aplicaciones móviles utilizando proveedores de identidad (Google y Facebook). También puede proteger los recursos de fondo con autorización del cliente.
 
-1. Suministre la instancia de servicio desde el catálogo de {{site.data.keyword.Bluemix_notm}}. Configure su instancia y pulse **Crear**. 
+1. Suministre la instancia de servicio desde el catálogo de {{site.data.keyword.Bluemix_notm}}. Configure su instancia y pulse **Crear**.
 2. En el panel de control de la instancia de servicio, utilice los ejemplos paso a paso para empezar a trabajar con {{site.data.keyword.appid_short_notm}}.
 3. Descargue los SDK de {{site.data.keyword.appid_short_notm}} y configure su aplicación utilizando el [SDK de Android](/docs/services/appid/getting-started-android.html#android-sdk) o el [SDK de Swift de iOS](/docs/services/appid/getting-started-ios-swift-sdk.html#getting-started-ios).
 4. Configure los [proveedores de identidad](/docs/services/appid/identity-providers.html).

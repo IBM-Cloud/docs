@@ -60,7 +60,8 @@ lastupdated: "2017-04-06"
     state= <state>
     ```
 
-  `state` 參數目前未在使用中，可以保留為空白。`redirect_uri` 參數是使用 Facebook 進行成功或失敗鑑別之後用於重新導向的 URI。
+  `state` 參數目前未在使用中，可以保留為空白。
+  `redirect_uri` 參數是使用 Facebook 進行成功或失敗鑑別之後用於重新導向的 URI。
 
 1. 在重新導向至授權端點之後，您將從 Facebook 取得登入表單。輸入使用者名稱和密碼來重新導向至 `redirect_uri`。重新導向之後所取得的回應包含要求查詢參數中的授權碼。
 

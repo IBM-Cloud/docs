@@ -23,7 +23,7 @@ lastupdated: "2017-04-06"
 
 O {{site.data.keyword.amashort}} fornecia segurança para seu aplicativo móvel: autorização do cliente para acessar recursos de backend protegidos por meio de provedores de identidade (Google e Facebook) ou identidades customizadas para autenticar usuários e conceder acesso a aplicativos da web e recursos de backend protegidos.
 
-**Nota:** o serviço {{site.data.keyword.amashort}} era conhecido anteriormente como Advanced Mobile Access. 
+**Nota:** o serviço {{site.data.keyword.amashort}} era conhecido anteriormente como Advanced Mobile Access.
 
 
 ## Migrando para {{site.data.keyword.appid_short_notm}}
