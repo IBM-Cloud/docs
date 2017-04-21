@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -16,15 +16,13 @@ lastupdated: "2017-03-30"
 Un perfil de usuario es una entidad que {{site.data.keyword.appid_short}} almacena y mantiene. El perfil contiene los atributos y la identidad de un usuario y puede ser anónimo o bien estar vinculado a una identidad gestionada por un proveedor de identidad.
 {:shortdesc}
 
-{{site.data.keyword.appid_short_notm}} proporciona una API para iniciar sesión, ya sea de forma anónima o autenticándose con un IdP OpenId Connect (OIDC), consulte [Configuración de los proveedores de identidad](/docs/services/appid/identity-providers.html#setting-up-idp). El punto final de API de atributos de perfil de usuario es un recurso protegido por una señal de acceso generada por {{site.data.keyword.appid_short_notm}} durante el proceso de inicio de sesión y autorización.
+{{site.data.keyword.appid_short_notm}} proporciona una API para iniciar sesión, ya sea de forma anónima o autenticándose con [proveedores de identidad](/docs/services/appid/identity-providers.html#setting-up-idp) OpenId Connect (OIDC). El punto final de API de atributos de perfil de usuario es un recurso protegido por una señal de acceso generada por {{site.data.keyword.appid_short_notm}} durante el proceso de inicio de sesión y autorización.
 
 
 ## Cómo almacenar, leer y suprimir atributos de usuario
 {: #storing-data}
 
-
-
-{{site.data.keyword.appid_short_notm}} proporciona una <a href="https://appid-profiles.ng.bluemix.net/swagger-ui/index.html#/" target="_blank">API REST <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a> para realizar operaciones CRUD sobre atributos de usuario, así como un SDK para clientes de dispositivos móviles <a href="https://github.com/ibm-cloud-security/appid-clientsdk-android" target="_blank">Android <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a> y <a href="https://github.com/ibm-cloud-security/appid-clientsdk-swift" target="_blank">Swift <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a>. 
+{{site.data.keyword.appid_short_notm}} proporciona una <a href="https://appid-profiles.ng.bluemix.net/swagger-ui/index.html#/" target="_blank">API REST <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a> para realizar operaciones CRUD sobre atributos de usuario, así como un SDK para clientes de dispositivos móviles <a href="https://github.com/ibm-cloud-security/appid-clientsdk-android" target="_blank">Android <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a> y <a href="https://github.com/ibm-cloud-security/appid-clientsdk-swift" target="_blank">Swift <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a>.
 
 
 ## Identidad OAuth
@@ -42,7 +40,7 @@ Al iniciar sesión de forma anónima, {{site.data.keyword.appid_short_notm}} cre
 ## Usuario identificado
 {: #identified}
 
-Un usuario anónimo con una identidad proporcionada por un proveedor de identidad puede convertirse en un usuario identificado. El flujo para pasar de un usuario anónimo a un usuario identificado se describe en los siguientes pasos: 
+Un usuario anónimo con una identidad proporcionada por un proveedor de identidad puede convertirse en un usuario identificado. El flujo para pasar de un usuario anónimo a un usuario identificado se describe en los siguientes pasos:
 
 * El desarrollador pasa la señal de acceso anónimo a la API de inicio de sesión.
 * {{site.data.keyword.appid_short_notm}} autentica al interlocutor con un proveedor de identidad.

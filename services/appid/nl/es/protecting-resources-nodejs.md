@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -25,13 +25,6 @@ Puede utilizar el SDK del servidor de {{site.data.keyword.appid_short}} para pro
 
 **Nota**: hay otras infraestructuras que utilizan infraestructuras `Express`, como LoopBack. Puede utilizar el SDK del servidor de {{site.data.keyword.appid_short_notm}} con cualquiera de estas infraestructuras.
 
-## Acerca del SDK del servidor
-{: #about}
-
-El SDK del servidor de {{site.data.keyword.appid_short_notm}} proporciona una estrategia de pasaporte de ApiStrategy que se utiliza en aplicaciones de fondo que se despliegan en {{site.data.keyword.Bluemix_notm}}. Para proteger la app de accesos no autorizados, debe instrumentar el servidor Node.js con ApiStrategy. El `módulo appid-serversdk-nodejs npm` proporciona la estrategia de pasaporte ApiStrategy y el método de verificación para validar la señal de acceso y la señal de identidad que emite {{site.data.keyword.appid_short_notm}}.
-
-El SDK del servidor de {{site.data.keyword.appid_short_notm}} utiliza la infraestructura Passport para imponer la autorización, consulte <a href="http://passportjs.org/" target="_blank">Infraestructura Passport <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a>.
-
 
 ## Instalación del SDK del servidor
 {: #protecting-resources-serversdk}
@@ -48,6 +41,10 @@ El SDK del servidor de {{site.data.keyword.appid_short_notm}} utiliza la infraes
 
 ## Protección de recursos en Node.js
 {: #protecting-resources-nodesdk}
+
+El SDK del servidor de {{site.data.keyword.appid_short_notm}} proporciona una estrategia de pasaporte de ApiStrategy que se utiliza en aplicaciones de fondo que se despliegan en {{site.data.keyword.Bluemix_notm}}. Para proteger la app de accesos no autorizados, debe instrumentar el servidor Node.js con ApiStrategy. El `módulo appid-serversdk-nodejs npm` proporciona la estrategia de pasaporte ApiStrategy y el método de verificación para validar la señal de acceso y la señal de identidad que emite {{site.data.keyword.appid_short_notm}}.
+
+El SDK del servidor de {{site.data.keyword.appid_short_notm}} utiliza la <a href="http://passportjs.org/" target="_blank">infraestructura Passport <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a> para imponer la autorización.
 
 El siguiente fragmento de código muestra cómo utilizar `APIStrategy` en una aplicación Express sencilla para proteger los métodos GET del punto final `/protected`.
 

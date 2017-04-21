@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -45,8 +45,7 @@ Necesita la siguiente información:
     </tr>
   </table>
 
-  * Un proyecto de Android Studio, configurado para funcionar con Gradle.
-    * Para obtener más información sobre la configuración del entorno de desarrollo de Android, consulte los <a href="https://developers.google.com/web/tools/setup/" target="_blank">documentos de las Herramientas del desarrollador de Google <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a>.
+  * Un <a href="https://developers.google.com/web/tools/setup/" target="_blank">proyecto de Android Studio <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a>, configurado para funcionar con Gradle.
 
 ## Instalación del SDK del cliente
 {: #install-appid-sdk}
@@ -173,7 +172,7 @@ Por ejemplo, puede invocar este código para establecer un atributo nuevo, o par
 ### Inicio de sesión anónimo
 {: #anonymous notoc}
 
-Con {{site.data.keyword.appid_short_notm}} puede iniciar sesión de forma anónima, consulte [usuario anónimo](/docs/services/appid/user-profile.html#anonymous).
+Con {{site.data.keyword.appid_short_notm}} puede iniciar sesión [de forma anónima](/docs/services/appid/user-profile.html#anonymous).
 
   ```java
   appId.loginAnonymously(getApplicationContext(), new AuthorizationListener() {
