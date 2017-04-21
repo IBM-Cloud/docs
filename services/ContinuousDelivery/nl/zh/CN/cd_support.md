@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2015, 2017
+lastupdated: "2017-4-11"
 
 ---
 
@@ -14,18 +15,34 @@ copyright:
 # 获取 {{site.data.keyword.contdelivery_short}} 的帮助和支持    
 {: #cd_support}  
 
-上次更新时间：2016 年 11 月 18 日
-{: .last-updated}
+{{site.data.keyword.contdelivery_full}} 团队积极监视 Stack Overflow 和 developerWorks 论坛，以获取有关 {{site.data.keyword.contdelivery_short}} 服务和 DevOps Insights 的问题。   
 
-有关使用 {{site.data.keyword.contdelivery_full}} 时遇到的问题或疑问，您可以在论坛中搜索相关信息或进行提问来获取帮助。您还可以[打开支持凭单（在新窗口中打开链接）](https://www.{DomainName}/docs/support/index.html#open-ticket).    
-{:shortdesc}
+<table>
+ <td align="center">
+ <strong>Stack Overflow</strong>
+  <p>
+   <a class="xref" href="http://stackoverflow.com/questions/ask?tags=ibm-bluemix,http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/ask-a-question.png" alt="提出问题"/></a></p>
+   <p>
+    <a class="xref" href="http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="（在新选项卡或窗口中打开）">显示 Stack Overflow 上最近的 <img class="image" src="../../icons/launch-glyph.svg" alt="外部链接图标"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services 问题。</p></td>
+  <td align="center">
+  <strong>dW Answers</strong>
+   <p>
+   <a class="xref" href="https://developer.ibm.com/answers/questions/ask/?topics=devops-services,bluemix" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/ask-a-question.png" alt="提出问题"/></a></p>
+   <p>
+    <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="（在新选项卡或窗口中打开）">显示 dW Answers 上最近的 <img class="image" src="../../icons/launch-glyph.svg" alt="外部链接图标"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services 问题。</p></td>
+  </table>  
 
-{{site.data.keyword.Bluemix_notm}} 开发和支持团队会主动监视 Stack Overflow 和 dW Answers，并关注使用 ibm-bluemix、continuous-delivery 和 bluemix-continuous-delivery 标记的问题。在任一论坛中创建问题时，都请标记问题，以便 {{site.data.keyword.Bluemix_notm}} 开发和支持团队可以看到该问题。
 
-* 有关持续交付的技术问题，请将您的问题发布到 [Stack Overflow（在新窗口中打开链接）](http://stackoverflow.com/search?q=ibm-bluemix+continuous-delivery){:new_window}上，并使用“ibm-bluemix”和“continuous-delivery”标记您的问题。
+## 支持凭单
 
-* 有关 {{site.data.keyword.contdelivery_short}} 服务的问题，请使用 [IBM developerWorks dW Answers（在新窗口中打开链接）](https://developer.ibm.com/answers/topics/bluemix-continuous-delivery/?smartspace=bluemix){:new_window}论坛。另请加上“bluemix-continuous-delivery”标记。
+如果您在使用 {{site.data.keyword.contdelivery_short}} 服务时遇到更严重的问题或有疑问，请开具支持凭单。    
 
-有关使用论坛的更多详细信息，请参阅[获取帮助（在新窗口中打开链接）](https://www.{DomainName}/docs/support/index.html#getting-help)。
+1. 登录到 {{site.data.keyword.Bluemix_notm}}。
+1. 从菜单栏中单击**支持**，然后单击**添加凭单**。
+1. 完成表单以指出您所需要的技术支持。
 
-有关提交 IBM 支持凭单或支持级别和凭单严重性的信息，请参阅[联系支持人员（在新窗口中打开链接）](https://www.{DomainName}/docs/support/index.html#contacting-support)。
+有关开具 IBM {{site.data.keyword.Bluemix_notm}} 支持凭单或有关支持级别和凭单严重性的更多信息，请参阅[联系支持人员](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)。
+
+
+## Bluemix 的支持
+有关 {{site.data.keyword.Bluemix_notm}} 服务的其他问题或疑问，请参阅[获取客户支持](https://www.{DomainName}/docs/support/index.html#getting-customer-support)。
