@@ -37,7 +37,7 @@ Configure your OpenWhisk with the apihost `wsk property set --apihost openwhisk.
 To be able to use the `wsk api` the CLI configuration file `~/.wskprops` needs to contain the Bluemix Access Token.
 To get the access token use the CLI command `wsk bluemix login`, for more information about the command run `wsk bluemix login -h`
 
-**Note:** If the command errors requiring single sign on (sso), this is not currently supported. As a workaround login with the Bluemix CLI using `bluemix login`, then copy the Access Token from the HOME directory configuration file `~/.bluemix/config.json` into the `~/.wskprops` file as the property `APIGW_ACCESS_TOKEN="value of IAMToken`. Remove the prefix `Bearer ` when copying the access token string.
+**Note:** If the command errors requiring single sign on (sso), this is not currently supported. As a workaround login with the CloudFoundry CLI using `cf login`, then copy the Access Token from the HOME directory configuration file `~/.cf/config.json` into the `~/.wskprops` file as the property `APIGW_ACCESS_TOKEN="value of AccessToken`. Remove the prefix `Bearer ` when copying the access token string.
 
 **Note:** The APIs you created using the `wsk api-experimental` will continue to work for a short period, however you should begin migrating your APIs to web actions and reconfigure your existing apis using the new CLI command `wsk api`.
 
