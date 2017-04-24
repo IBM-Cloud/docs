@@ -753,9 +753,9 @@ Akamai や Dyn などのグローバル・ロード・バランサーを選択�
 <li>リストアが必要な場合には、{{site.data.keyword.IBM_notm}} 管理者にバックアップ・ファイルを提供する。</li>
 </ul>
 
-# 関連リンク
+# rellinks
 {: rellinks}
-## 一般
+## general
 {: general}
 * [{{site.data.keyword.Bluemix_local_notm}} ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/hybrid/local/){: new_window}
 * [{{site.data.keyword.Bluemix_notm}} の新機能](/docs/whatsnew/index.html)

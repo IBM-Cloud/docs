@@ -67,8 +67,7 @@ Puoi anche porre una domanda in Stack Overflow direttamente dalle voci di menu S
   2. Nel pannello visualizzato, immetti la tua domanda nel campo di ricerca e fai clic sull'icona Ricerca per cercare le risposte. 
   3. Se non viene restituita la risposta prevista, fai clic su **PUBBLICA in STACK OVERFLOW** per pubblicare la tua domanda.
 
-I team di sviluppo e supporto di {{site.data.keyword.Bluemix_notm}} monitorano attivamente Stack Overflow e dW Answers e seguono le domande
-che hanno la tag **bluemix**. Quando crei una domanda nell'uno o nell'altro forum, aggiungi una tag **bluemix** alla tua domanda per accertarti che venga vista dai team di sviluppo e supporto di {{site.data.keyword.Bluemix_notm}}.
+I team di sviluppo e supporto di {{site.data.keyword.Bluemix_notm}} monitorano attivamente Stack Overflow e dW Answers e seguono le domande che hanno la tag **bluemix**. Quando crei una domanda nell'uno o nell'altro forum, aggiungi una tag **bluemix** alla tua domanda per accertarti che venga vista dai team di sviluppo e supporto di {{site.data.keyword.Bluemix_notm}}.
  
 
 
@@ -80,14 +79,9 @@ La pagina Stato di {{site.data.keyword.Bluemix_notm}} è la posizione centrale p
 Nella pagina Stato, puoi trovare le seguenti informazioni:
 
   * Lo stato corrente di servizi e componenti in tutte le regioni {{site.data.keyword.Bluemix_notm}}.
-  * Un elenco di annunci, in ordine cronologico, per la manutenzione
-e gli eventi imprevisti. Puoi filtrare l'elenco o aprire un singolo annuncio
-per ulteriori dettagli.
-  * Finestre di manutenzione pianificata, che vengono pubblicate con almeno 24 ore
-di anticipo, tranne che in casi estremi.
-  * Interruzioni o eventi imprevisti non pianificati, che vengono pubblicati non appena il team di {{site.data.keyword.Bluemix_notm}} ne
-viene a conoscenza. Le notifiche sugli eventi imprevisti vengono regolarmente aggiornati finché non
-vengono risolti.
+  * Un elenco di annunci, in ordine cronologico, per la manutenzione e gli eventi imprevisti. Puoi filtrare l'elenco o aprire un singolo annuncio per ulteriori dettagli.
+  * Finestre di manutenzione pianificata, che vengono pubblicate con almeno 24 ore di anticipo, tranne che in casi estremi.
+  * Interruzioni o eventi imprevisti non pianificati, che vengono pubblicati non appena il team di {{site.data.keyword.Bluemix_notm}} ne viene a conoscenza. Le notifiche sugli eventi imprevisti vengono regolarmente aggiornati finché non vengono risolti.
   * Riferimenti a bollettini di sicurezza che incidono sulla piattaforma e sui vari servizi {{site.data.keyword.Bluemix_notm}}.
   * Altri annunci a livello di piattaforma di interesse generale per te.
   * Un feed RSS a cui puoi sottoscrivere.
@@ -106,14 +100,11 @@ Puoi ricevere avvisi di eventuali notifiche sottoscrivendo il feed RSS per la pa
 Per eseguire la sottoscrizione, completa la seguente procedura:
 
   1. Scarica e installa un lettore RSS.
-  2. Utilizza il tuo lettore per sottoscrivere il feed con uno dei seguenti
-metodi:
+  2. Utilizza il tuo lettore per sottoscrivere il feed con uno dei seguenti metodi:
        * Trascina l'icona RSS ![RSS](images/rss.svg) nel tuo lettore RSS.
-       * Fai clic con il tasto destro del mouse sull'icona RSS, seleziona **Copia indirizzo link** e incolla l'URL
-nel tuo lettore RSS.
+       * Fai clic con il tasto destro del mouse sull'icona RSS, seleziona **Copia indirizzo link** e incolla l'URL nel tuo lettore RSS.
 
-	Per ulteriori informazioni, vedi la sezione **Guida** del
-tuo lettore. 	   
+	Per ulteriori informazioni, vedi la sezione **Guida** del tuo lettore. 	   
 
 Altri metodi di lettura dei feed RSS sono disponibili tramite plug-in del browser Web come: 
   * [RSS Feed ![icona link esterno](../icons/launch-glyph.svg "External link icon")](http://feeder.co/){: new_window} Reader for Chrome
@@ -123,9 +114,7 @@ Fonti di notizie, come i seguenti siti, forniscono anche dei metodi per la lettu
   * [Feedly ![icona link esterno](../icons/launch-glyph.svg "External link icon")](http://www.feedly.com/){: new_window}
   * [G2reader ![icona link esterno](../icons/launch-glyph.svg "External link icon")](http://www.g2reader.com/en/){: new_window}
 
-Puoi inoltre
-utilizzare un servizio di terze parti per inviare automaticamente un'e-mail
-per ogni aggiornamento RSS. Il seguente elenco riporta alcuni esempi di servizi di terze parti:
+Puoi inoltre utilizzare un servizio di terze parti per inviare automaticamente un'e-mail per ogni aggiornamento RSS. Il seguente elenco riporta alcuni esempi di servizi di terze parti:
 
   * www.feedmyinbox.com
   * www.rssforward.com
@@ -134,8 +123,7 @@ per ogni aggiornamento RSS. Il seguente elenco riporta alcuni esempi di servizi 
   * www.feedmailer.com
   * www.iftt.com
 
-{{site.data.keyword.Bluemix_notm}} solitamente
-ha circa 50 aggiornamenti al mese.
+{{site.data.keyword.Bluemix_notm}} solitamente ha circa 50 aggiornamenti al mese.
 
 
 
@@ -150,16 +138,13 @@ Per {{site.data.keyword.Bluemix_notm}} pubblico, puoi registrarti per ricevere l
 
   * Controlla le prossime finestre di manutenzione
 
-	Controlla le prossime finestre di manutenzione pubblicate nella pagina dello stato,
-almeno una volta ogni 24 ore, utilizzando una delle seguenti opzioni::
+	Controlla le prossime finestre di manutenzione pubblicate nella pagina dello stato, almeno una volta ogni 24 ore, utilizzando una delle seguenti opzioni::
 	  * Andando direttamente alla pagina [Stato ![icona link esterno](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixstatus){: new_window}
 	  * Utilizzando il feed RSS o un'utilità di inoltro da RSS a email
 
   * Controlla le finestre di manutenzione correnti o un evento imprevisto in corso
 
-	Se hai il sospetto che {{site.data.keyword.Bluemix_notm}} non
-funzioni nel modo previsto, consulta la pagina dello stato per controllare le finestre di manutenzione correnti o
-un evento imprevisto in corso. Per segnalare un evento imprevisto non ancora elencato nella pagina dello stato, apri un ticket di supporto tramite la voce di **Supporto** nella barra dei menu o la pagina di assistenza [IBM Bluemix Support ![icona link esterno](../icons/launch-glyph.svg "External link icon")](ibm.biz/bluemixsupport){: new_window}.
+	Se hai il sospetto che {{site.data.keyword.Bluemix_notm}} non funzioni nel modo previsto, consulta la pagina dello stato per controllare le finestre di manutenzione correnti o un evento imprevisto in corso. Per segnalare un evento imprevisto non ancora elencato nella pagina dello stato, apri un ticket di supporto tramite la voce di **Supporto** nella barra dei menu o la pagina di assistenza [IBM Bluemix Support ![icona link esterno](../icons/launch-glyph.svg "External link icon")](ibm.biz/bluemixsupport){: new_window}.
 
   * Usufruisci di più regioni {{site.data.keyword.Bluemix_notm}}
 
@@ -174,12 +159,7 @@ un evento imprevisto in corso. Per segnalare un evento imprevisto non ancora ele
 
   * Prepararsi a piccole interruzioni
 
-    Nella maggior parte dei casi, si può continuare a utilizzare {{site.data.keyword.Bluemix_notm}}
-normalmente, anche durante la finestra di manutenzione. Tuttavia, non è sempre possibile evitare delle brevi interruzioni di servizio. In genere, le applicazioni in esecuzione rimangono disponibili anche se le funzioni
-di gestione applicazione di {{site.data.keyword.Bluemix_notm}},
-come l'avvio o l'arresto di applicazioni, vengono temporaneamente interrotte. Per
-massimizzare la disponibilità delle tue applicazioni in esecuzione, esegui almeno
-tre istanze di ciascuna applicazione.
+    Nella maggior parte dei casi, si può continuare a utilizzare {{site.data.keyword.Bluemix_notm}} normalmente, anche durante la finestra di manutenzione. Tuttavia, non è sempre possibile evitare delle brevi interruzioni di servizio. In genere, le applicazioni in esecuzione rimangono disponibili anche se le funzioni di gestione applicazione di {{site.data.keyword.Bluemix_notm}}, come l'avvio o l'arresto di applicazioni, vengono temporaneamente interrotte. Per massimizzare la disponibilità delle tue applicazioni in esecuzione, esegui almeno tre istanze di ciascuna applicazione.
 
 
 
@@ -198,9 +178,9 @@ A tutti i clienti di {{site.data.keyword.Bluemix_notm}} viene fornito supporto t
 Livelli | Gratuito |  Di base | Standard | Premium
 --- | --- | --- | --- | --- |
 Descrizione | Supporto per tutti i clienti in prova di {{site.data.keyword.Bluemix_notm}}.  |  Supporto per gli ambienti di non produzione o per i carichi di lavoro per cui le severità e i tempi di risposta tradizionali non sono necessari. | Supporto per gli ambienti con un numero limitato di applicazioni critiche di business. I clienti {{site.data.keyword.Bluemix_notm}} dedicato e {{site.data.keyword.Bluemix_notm}} locale ricevono il supporto standard. | Supporto per gli ambienti di importanza critica che hanno una dipendenza strategica da {{site.data.keyword.Bluemix_notm}}. 
-Supporto severità 1-4 |  N/D | N/D | Incluso | Include
-il supporto lingua | Inglese | Inglese | Inglese, Giapponese | CSM (client success manager)
-assegnato Inglese, Giapponese | Non incluso | Non incluso | Non incluso | Incluso per<br> 8 ore a settimana
+Supporto severità 1-4 |  N/D | N/D | Incluso | Incluso 
+Include il supporto lingua | Inglese | Inglese | Inglese, Giapponese | Inglese, Giapponese 
+CSM (client success manager) assegnato Inglese, Giapponese | Non incluso | Non incluso | Non incluso | Incluso per<br> 8 ore a settimana
 {: caption="Table 1. Support levels" caption-side="top"}
 
 **Importante:** il supporto in lingua giapponese è disponibile per i ticket con severità 2-4 dal lunedì al venerdì dalle ore 9:00 a.m. alle ore 5:00 p.m. JST, escluse le festività nazionali o ufficiali. I servizi della community e di terze parti sono esclusi. I ticket con severità 1 sono trattati solo in inglese.
@@ -243,8 +223,7 @@ Tutti i problemi di supporto per il client vengono documentati in un ticket di s
 Se sei un cliente di {{site.data.keyword.Bluemix_notm}} dedicato, il supporto viene fornito dal team di IBM {{site.data.keyword.Bluemix_notm}} Support. A seconda che tu disponga di un {{site.data.keyword.ibmid}} puoi scegliere tra diverse opzioni per ottenere assistenza.
 
 <ul>
-<li>Contatta il supporto aprendo un nuovo ticket mediante la pagina
-di assistenza <a href="ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support</a>. Per questo modulo puoi utilizzare un indirizzo e-mail o il tuo {{site.data.keyword.ibmid}}. Seleziona l'opzione **{{site.data.keyword.Bluemix_notm}} dedicato** per il campo regione.
+<li>Contatta il supporto aprendo un nuovo ticket mediante la pagina di assistenza <a href="ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support</a>. Per questo modulo puoi utilizzare un indirizzo e-mail o il tuo {{site.data.keyword.ibmid}}. Seleziona l'opzione **{{site.data.keyword.Bluemix_notm}} dedicato** per il campo regione. 
 <p>Gli invii dei moduli vengono monitorati dalla domenica alle ore 21:30 UTC fino al venerdì alle ore 23:59 UTC. Per assistenza nella conversione di queste ore di supporto al tuo fuso orario locale, vedi [Timeanddate.com ![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://www.timeanddate.com).</p>
 </li>
 <li>Se disponi di un {{site.data.keyword.ibmid}} e dell'accesso all'ambiente {{site.data.keyword.Bluemix_notm}} pubblico, nella barra dei menu fai clic su **Supporto** > **Aggiungi ticket**. Seleziona l'area tematica per il tuo problema e segui le indicazioni per inviare il ticket.</li>
@@ -260,8 +239,7 @@ di assistenza <a href="ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.k
 Se sei un cliente di {{site.data.keyword.Bluemix_notm}} locale, l'assistenza viene fornita dal team di supporto {{site.data.keyword.Bluemix_notm}} IBM. Tuttavia, poiché potresti non disporre di un {{site.data.keyword.ibmid}}, hai alcune opzioni diverse per ottenere assistenza.
 
 <ul>
-<li>Contatta il supporto aprendo un nuovo ticket mediante la pagina
-di assistenza <a href="ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support <img src="../icons/launch-glyph.svg" alt="icona link eserno"></a>. Per questo modulo puoi utilizzare un indirizzo e-mail o il tuo {{site.data.keyword.ibmid}}. Seleziona l'opzione **{{site.data.keyword.Bluemix_notm}} locale** per il campo regione.
+<li>Contatta il supporto aprendo un nuovo ticket mediante la pagina di assistenza <a href="ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support <img src="../icons/launch-glyph.svg" alt="icona link eserno"></a>. Per questo modulo puoi utilizzare un indirizzo e-mail o il tuo {{site.data.keyword.ibmid}}. Seleziona l'opzione **{{site.data.keyword.Bluemix_notm}} locale** per il campo regione.
 <p>Gli invii dei moduli vengono monitorati dalla domenica alle ore 21:30 UTC fino al venerdì alle ore 23:59 UTC. Per assistenza nella conversione di queste ore di supporto al tuo fuso orario locale, vedi [Timeanddate.com ![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://www.timeanddate.com).</p>
 </li>
 <li>Se disponi di un {{site.data.keyword.ibmid}} e dell'accesso all'ambiente {{site.data.keyword.Bluemix_notm}} pubblico, nella barra dei menu fai clic su **Supporto** > **Aggiungi ticket**. Seleziona l'area tematica per il tuo problema e segui le indicazioni per inviare il ticket.</li>
@@ -331,20 +309,15 @@ Per inoltrare una richiesta di escalation, completa la seguente procedura:
 
 ## Raccolta delle informazioni di diagnostica
 {: #collecting-diagnostic-information}
-Per diagnosticare e risolvere i problemi con le applicazioni e i servizi {{site.data.keyword.Bluemix_notm}},
-il team di supporto {{site.data.keyword.Bluemix_notm}}
-potrebbe chiederti di raccogliere informazioni di diagnostica.
+Per diagnosticare e risolvere i problemi con le applicazioni e i servizi {{site.data.keyword.Bluemix_notm}}, il team di supporto {{site.data.keyword.Bluemix_notm}} potrebbe chiederti di raccogliere informazioni di diagnostica.
 
-Prima di raccogliere le informazioni di diagnostica, completa la
-seguente procedura:
+Prima di raccogliere le informazioni di diagnostica, completa la seguente procedura:
 
-  1. Assicurati di aver installato l'interfaccia riga di comando cf più recente. Per ulteriori informazioni, vedi [Installing the cf
-command line interface](/docs/starters/install_cli.html).
+  1. Assicurati di aver installato l'interfaccia riga di comando cf più recente. Per ulteriori informazioni, vedi [Installing the cf command line interface](/docs/starters/install_cli.html).
 
      **Nota:** se non hai installato l'interfaccia riga di comando cf più recente, dopo aver connesso la riga di comando cf a {{site.data.keyword.Bluemix_notm}}, il comando `cf logs` potrebbe non restituire alcun input.
 
-  2. Assicurati di aver connesso l'interfaccia riga di comando cf alla posizione in cui {{site.data.keyword.Bluemix_notm}} è
-in esecuzione utilizzando il comando `cf api`.
+  2. Assicurati di aver connesso l'interfaccia riga di comando cf alla posizione in cui {{site.data.keyword.Bluemix_notm}} è in esecuzione utilizzando il comando `cf api`.
 
   3. Assicurati di soddisfare tutti i prerequisiti in [Prerequisiti di {{site.data.keyword.Bluemix_notm}} ![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}.
 
@@ -353,8 +326,7 @@ Utilizza i seguenti script per raccogliere le informazioni di diagnostica:
   * Per i sistemi operativi Windows, scarica il file [bmdiag-general.bat ![icona link esterno](../icons/launch-glyph.svg "External link icon")](http://bluemix-mustgather.mybluemix.net/mustgather/general/bmdiag-general.bat){: new_window} ed eseguilo.
   * Per i sistemi operativi Linux e Mac, scarica il file [bmdiag-general.sh ![icona link esterno](../icons/launch-glyph.svg "External link icon")](http://bluemix-mustgather.mybluemix.net/mustgather/general/bmdiag-general.sh){: new_window} ed eseguilo.
 
-Gli script utilizzano l'interfaccia riga di comando cf per estrarre
-le seguenti informazioni dal tuo ambiente applicativo:
+Gli script utilizzano l'interfaccia riga di comando cf per estrarre le seguenti informazioni dal tuo ambiente applicativo:
 
   * Log dell'applicazione
   * Metadati dell'applicazione
@@ -366,9 +338,7 @@ le seguenti informazioni dal tuo ambiente applicativo:
 ## Supporto di lingua nazionale per {{site.data.keyword.Bluemix_notm}}
 {: #lang}
 
-{{site.data.keyword.Bluemix_notm}} supporta
-lingue nazionali diverse dall'inglese. Tuttavia, non tutto il contenuto fornito con {{site.data.keyword.Bluemix_notm}}
-è tradotto.
+{{site.data.keyword.Bluemix_notm}} supporta lingue nazionali diverse dall'inglese. Tuttavia, non tutto il contenuto fornito con {{site.data.keyword.Bluemix_notm}} è tradotto.
 La seguente tabella elenca le lingue nazionali supportate e i codici lingua per {{site.data.keyword.Bluemix_notm}}.
 
 | **Lingua nazionale** | **Codice lingua** |
