@@ -12,7 +12,7 @@ lastupdated: "2017-04-24"
 {:screen: .screen}
 {:pre: .pre}
 
-# API Gateway (Experimental)
+# API Gateway
 {: #openwhisk_apigateway}
 
 API Gateway are out from experimental phase.
