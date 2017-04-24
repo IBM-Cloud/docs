@@ -16,7 +16,7 @@ lastupdated: "2017-02-16"
 # Registrazione in Bluemix
 {: #logging_bmx_ov}
 
-Le funzionalità di registrazione {{site.data.keyword.Bluemix_notm}} sono integrate nella piattaforma e la raccolta dei dati è abilitata automaticamente per le risorse cloud. Per impostazione predefinita, {{site.data.keyword.Bluemix_notm}}, raccoglie e visualizza i log per le tue applicazioni, i runtime delle applicazioni e i runtime di calcolo in cui queste applicazioni vengono eseguite. 
+Le funzionalità di registrazione {{site.data.keyword.Bluemix}} sono integrate nella piattaforma e la raccolta dei dati è abilitata automaticamente per le risorse cloud. Per impostazione predefinita, {{site.data.keyword.Bluemix_notm}}, raccoglie e visualizza i log per le tue applicazioni, i runtime delle applicazioni e i runtime di calcolo in cui queste applicazioni vengono eseguite. 
 {:shortdesc}
 
 Puoi utilizzare le funzionalità di registrazione in {{site.data.keyword.Bluemix_notm}} per comprendere il funzionamento della piattaforma cloud e delle risorse eseguite al suo interno. Non è richiesta alcuna strumentazione speciale per raccogliere i log di output standard e di errore standard. Ad esempio, puoi utilizzare i log per fornire un audit trail per un'applicazione, rilevare problemi nel tuo servizio, identificare vulnerabilità, risolvere problemi relativi alle distribuzioni delle applicazioni e al funzionamento del runtime, rilevare problemi nell'infrastruttura in cui è in esecuzione l'applicazione, tracciare la tua applicazione tra i componenti della piattaforma cloud e individuare dei modelli da utilizzare per prevenire azioni che potrebbero compromettere il tuo servizio SLA.
@@ -25,7 +25,7 @@ Quando esegui le tue applicazioni nel cloud, potresti non riuscire a stabilire u
 
 {{site.data.keyword.Bluemix_notm}} registra i dati di log generati dalla piattaforma Cloud Foundry e dalle applicazioni Cloud Foundry. Nei log, puoi visualizzare gli errori, le avvertenze e i messaggi informativi che vengono generati per la tua applicazione. Per ulteriori informazioni sulla registrazione in Cloud Foundry, vedi [Registrazione per le applicazioni Cloud Foundry in Bluemix](logging_cf_apps.html#logging_bluemix_cf_apps).
 
-{{site.data.keyword.Bluemix_notm}} registra i dati di log generati da {{site.data.keyword.containershort}}. Per ulteriori informazioni sulla registrazione in {{site.data.keyword.containershort}}, vedi [Registrazione in {{site.data.keyword.containershort}}](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_logs).   
+{{site.data.keyword.Bluemix_notm}} registra i dati di log generati da {{site.data.keyword.containershort}}. Per ulteriori informazioni sulla registrazione in {{site.data.keyword.containershort}}, vedi [Registrazione del servizio IBM Bluemix Container](containers/logging_containers_ov.html#logging_containers_ov).   
 
 
 Mediante la funzionalità di registrazione offerta da {{site.data.keyword.Bluemix_notm}}, puoi:

@@ -130,13 +130,13 @@ Sie können Anzeigen (Panels) zur Visualisierung der Daten konfigurieren. Kibana
 
 Führen Sie die folgenden Schritte aus, um ein Kibana-Dashboard nach einer Anpassung zu speichern:
 
-1. Klicken Sie in der Symbolleiste auf das Symbol **Speichern**.
+1. Klicken Sie in der Symbolleiste auf das Symbol **Save** (Speichern). 
 
 2. Geben Sie einen Namen für das Dashboard ein.
 
     **Hinweis:** Wenn Sie versuchen, ein Dashboard unter einem Namen zu speichern, der Leerzeichen enthält, wird es nicht gespeichert.
 
-3. Klicken Sie neben dem Namensfeld auf das Symbol **Speichern**.
+3. Klicken Sie neben dem Namensfeld auf das Symbol **Save** (Speichern). 
 
 
 
@@ -302,7 +302,7 @@ Sie können ein Kibana-Dashboard so konfigurieren, dass es die folgenden Felder 
 
 <dt><strong>space_name</strong></dt>
 <dd>
-<p>Der Name des {{site.data.keyword.Bluemix_notm}}-Bereichs, in das Staging für Ihre App erfolgt.</p>
+<p>Der Name des {{site.data.keyword.Bluemix_notm}}-Bereichs, in dem das Staging für Ihre App erfolgt.</p>
 </dd>
 
 <dt><strong>timestamp</strong></dt>

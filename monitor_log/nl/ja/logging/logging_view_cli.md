@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-16"
+lastupdated: "2017-03-01"
 
 ---
 
@@ -13,11 +13,21 @@ lastupdated: "2017-02-16"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# CLI からの CF アプリ・ログの分析
+# CLI からのログの分析
 {: #analyzing_logs_cli}
 
-{{site.data.keyword.Bluemix}} では、**cf logs** コマンドを使用することによって、ログの表示、フィルター操作、および分析をコマンド・ライン・インターフェースを介して行うことができます。ログをプログラマチックに管理するには、コマンド・ラインを使用してください。
+{{site.data.keyword.Bluemix}} では、ログの表示、フィルター操作、および分析をコマンド・ライン・インターフェースを介して行うことができます。ログをプログラマチックに管理するには、コマンド・ラインを使用してください。
 {:shortdesc}
+
+Cloud Foundry (CF) アプリケーション・ログを分析するには、コマンド `cf logs` を使用します。
+詳しくは、『[CLI からの CF アプリ・ログの分析](logging_view_cli.html#analyzing_cf_logs_cli)』を参照してください。
+
+Docker コンテナー・ログを分析するには、コマンド `cf ic logs` を使用します。
+詳しくは、『[CLI からの Docker コンテナー・ログの分析](logging_view_cli.html#analyzing_container_logs_cli)』を参照してください。
+
+
+## CLI からの CF アプリ・ログの分析
+{: #analyzing_cf_logs_cli}
 
 **cf logs** コマンドを使用して、Cloud Foundry アプリからのログ、および、そのアプリを {{site.data.keyword.Bluemix_notm}} にデプロイする場合はそのアプリと対話するシステム・コンポーネントからのログを表示します。**cf logs** コマンドは、Cloud Foundry アプリケーションの STDOUT および STDERR ログ・ストリームを表示します。
 
@@ -27,6 +37,16 @@ lastupdated: "2017-02-16"
 * Cloud Foundry アプリの最新ログ・レコードを表示する場合は、『[Cloud Foundry アプリの最新ログ項目の表示](logging_view_cli.html#tailing_log_cli)』を参照してください。
 * 特定の時刻範囲の Cloud Foundry アプリのログ・レコードを表示する場合は、『[ログの一部の表示](logging_view_cli.html#partial_log_cli)』を参照してください。
 * 特定のキーワードを含む Cloud Foundry アプリのログ項目を表示する場合は、『[特定のキーワードを含むログ項目の表示](logging_view_cli.html#partial_by_keyword_log_cli)』を参照してください。
+
+
+## CLI からの Docker コンテナー・ログの分析
+{: #analyzing_container_logs_cli}
+
+`cf ic logs` コマンドを使用して、{{site.data.keyword.Bluemix_notm}} 内のコンテナーからのログを表示します。例えば、ログを使用して、コンテナーが停止した理由を分析したり、コンテナー出力を確認したりすることができます。 
+
+`cf ic logs` コマンドによって、コンテナーで実行されるアプリのアプリケーション・エラーを表示するには、アプリケーションでログを標準出力 (STDOUT) および標準エラー(STDERR) 出力ストリームに書き込む必要があります。これらの標準出力ストリームに書き込むようにアプリケーションを設計した場合、コンテナーがシャットダウンまたは異常終了した場合でも、コマンド・ラインでログを参照できます。
+
+`cf ic logs` コマンドについて詳しくは、[cf ic logs コマンド](/docs/containers/container_cli_reference_cfic.html#container_cli_reference_cfic__logs)を参照してください。
 
 
 ## Cloud Foundry アプリのログの表示
@@ -95,28 +115,23 @@ lastupdated: "2017-02-16"
 
 {{site.data.keyword.Bluemix}} にデプロイした後の Cloud Foundry アプリケーションには、以下のログがあります。
 
-<dl><dt><strong>buildpack.log</strong></dt>
-<dd>
-<p>このログ・ファイルは、デバッグ用の詳細な通知イベントを記録します。このログを使用して、ビルドパック実行の問題をトラブルシューティングすることができます。</p>
+**buildpack.log**
 
-<p>データを <span class="ph filepath">buildpack.log</span> ファイルに生成するには、以下のコマンドを使用してビルドパックのトレースを有効にする必要があります。</p>
+このログ・ファイルは、デバッグ用の詳細な通知イベントを記録します。このログを使用して、ビルドパック実行の問題をトラブルシューティングすることができます。
 
-   <pre class="pre">cf set-env <var class="keyword varname">appname</var> JBP_LOG_LEVEL DEBUG</pre>
+*buildpack.log* ファイルにデータを生成するには、コマンド `cf set-env appname JBP_LOG_LEVEL DEBUG` を使用して、ビルドパックのトレースを有効にする必要があります。
    
-<p>このログを表示するには、以下のコマンドを入力します。</p>
+このログを表示するには、コマンド `cf files appname app/.buildpack-diagnostics/buildpack.log` を入力します。
 
-    <pre class="pre">cf files <var class="keyword varname">appname</var> app/.buildpack-diagnostics/buildpack.log</pre>
 
-</dd>
+**staging_task.log**
 
-<dt><strong>staging_task.log</strong></dt>
-<dd><p>このログ・ファイルは、ステージング・タスクの重要なステップ後のメッセージを記録します。このログを使用して、ステージングの問題をトラブルシューティングすることができます。</p>
+このログ・ファイルは、ステージング・タスクの重要なステップ後のメッセージを記録します。このログを使用して、ステージングの問題をトラブルシューティングすることができます。
 
-<p>このログを表示するには、以下のコマンドを入力します。</p>
+このログを表示するには、コマンド `cf files appname logs/staging_task.log` を入力します。
 
-    <pre class="pre">cf files <var class="keyword varname">appname</var> logs/staging_task.log</pre>
-</dd>
-</dl>
 
 **注:** アプリケーションのロギングを有効にする方法については、『[ランタイム・エラーのデバッグ](/docs/debug/index.html#debugging-runtime-errors)』を参照してください。
+
+
 

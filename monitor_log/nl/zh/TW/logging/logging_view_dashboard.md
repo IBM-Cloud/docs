@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-06"
+lastupdated: "2017-03-16"
 
 ---
 
@@ -13,99 +13,77 @@ lastupdated: "2017-02-06"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# 從 Bluemix 儀表板分析 CF 應用程式日誌
+# 從 Bluemix 主控台分析日誌
 {: #analyzing_logs_bmx_ui}
 
-在 {{site.data.keyword.Bluemix}} 中，您可以透過每一個 Cloud Foundry 應用程式都有的**日誌**標籤，來檢視、過濾及分析日誌。使用 {{site.data.keyword.Bluemix}} 儀表板，以檢視應用程式的最新活動。
+在 {{site.data.keyword.Bluemix}} 中，您可以透過每一個 Cloud Foundry 應用程式或 Docker 容器都有的日誌標籤，來檢視、過濾及分析日誌。
 {:shortdesc}
 
-「{{site.data.keyword.Bluemix_notm}} 公用」提供整合式記載服務。在 Cloud Foundry 中執行應用程式時，記載服務會擷取與應用程式互動之系統元件的日誌資料、關於應用程式的日誌資料，甚至是當您使用 stdout 和 stderr 時應用程式內所產生的日誌資料。
+「{{site.data.keyword.Bluemix_notm}} 公用」提供整合式記載功能。例如，在 Cloud Foundry (CF) 中執行應用程式時，會擷取與應用程式互動之系統元件的日誌資料、關於應用程式的日誌資料，甚至是當您使用 stdout 和 stderr 時應用程式內所產生的日誌資料。
 
-{{site.data.keyword.Bluemix_notm}} 應用程式的日誌會以固定格式顯示，與下列型樣類似：
+請考慮分析及日誌保留的日誌資料可用性的下列資訊：
 
-<code><var class="keyword varname">Component</var>/<var class="keyword varname">instanceID</var>     <var class="keyword varname">message</var>     <var class="keyword varname">timestamp</var></code>
-   
-如需日誌格式的相關資訊，請參閱 [Cloud Foundry 應用程式日誌的日誌格式](logging_view_dashboard.html#log_format_cf)。
+* 在「{{site.data.keyword.Bluemix_notm}} 公用」中，日誌資料預設會儲存 7 天。 
+* 您每天最多可以儲存 1 GB 的資料。 
+* 根據預設值，來自 {{site.data.keyword.Bluemix_notm}} 主控台可供分析的日誌包含過去 24 小時的資料。
 
-**附註：**在「{{site.data.keyword.Bluemix_notm}} 公用」中，日誌資料預設會儲存 7 天。您每天最多可以搜尋 1 GB 的資料。
+**提示：**若要分析超過過去 24 小時之自訂期間的資料，請參閱[使用 Kibana 進行進階日誌分析](logging_analyzing_logs_Kibana.html#analyzing_logs_Kibana)。 
 
-
-
-##  進入 Bluemix 日誌標籤
-{: #launch_logs_tab_bmx_ui}
+##  取得 Cloud Foundry 應用程式的日誌
+{: #launch_logs_tab_bmx_ui_cf}
 
 若要查看 Cloud Foundry 應用程式的部署或運行環境日誌，請完成下列步驟：
 
-1. 登入 {{site.data.keyword.Bluemix_notm}}，然後在 {{site.data.keyword.Bluemix_notm}} **應用程式**儀表板上按一下應用程式名稱。 
-
-    即會顯示「應用程式詳細資料」頁面。
+1. 從「應用程式」儀表板，按一下 Cloud Foundry 應用程式的名稱。 
     
-2. 在導覽列中，按一下**日誌**。
-
-    即會開啟「日誌」標籤。 
+2. 從應用程式詳細資料頁面，按一下**日誌**。
     
-    在**日誌**標籤中，您可以檢視應用程式的最新日誌，或即時讀取日誌尾端的內容。此外，您還可以依元件（日誌類型）、依應用程式實例 ID 以及依錯誤來過濾日誌。
+    從**日誌**標籤，您可以檢視應用程式的最新日誌，或即時讀取日誌尾端的內容。此外，您還可以依元件（日誌類型）、依應用程式實例 ID 以及依錯誤來過濾日誌。
+    
 
+##  取得 Docker 容器的日誌
+{: #launch_logs_tab_bmx_ui_containers}
 
+若要查看 Docker 容器的部署或運行環境日誌，請完成下列步驟：
 
-## Cloud Foundry 應用程式日誌的日誌格式
+1. 從「應用程式」儀表板，按一下單一容器或容器群組。 
+    
+2. 從應用程式詳細資料頁面，按一下**監視及記載**。
+
+3. 選取**記載**標籤。
+    
+    從**記載**標籤，您可以檢視容器的最新日誌，或即時讀取日誌尾端的內容。 
+
+## CF 應用程式日誌的日誌格式
 {: #log_format_cf}
+
+{{site.data.keyword.Bluemix_notm}} 應用程式的日誌會以固定格式顯示，與下列型樣類似：
+
+<code><var class="keyword varname">Component</var>/<var class="keyword varname">instanceID</var>/<var class="keyword varname">message</var>/<var class="keyword varname">timestamp</var></code>
 
 每個日誌項目都包含下列欄位：
 
-<dl>
-<dt><strong>時間戳記</strong></dt>
-<dd>
-<p>日誌陳述文字的時間。時間戳記最多定義到毫秒。</p>
-</dd>
+| 欄位 | 說明 |
+|-------|-------------|
+| 時間戳記 | 日誌陳述文字的時間。時間戳記最多定義到毫秒。 |
+| 元件 | 產生日誌的元件。如需不同元件的清單，請參閱 [CF 應用程式的日誌來源](logging_cf_apps.html#logging_bluemix_cf_apps_log_sources)。<br> 每一個元件類型後面都接著一個斜線和一個數字，用來指出應用程式實例。0 是配置給第一個實例的數字，1 是配置給第二個實例的數字，依此類推。 |
+| 訊息 | 元件所發出的訊息。訊息根據環境定義而不同。 |
 
-<dt><strong>元件</strong></dt>
-<dd>
-<pre class="pre screen"><code>[App/0]</code></pre>
-<p>產生日誌的元件。</p>
-<p>每一個元件類型後面都接著一個斜線和一個數字，用來指出應用程式實例。0 是配置給第一個實例的數字，1 是配置給第二個實例的數字，依此類推。請注意，您可以過濾為只查看儀表板中的某個應用程式實例。</p>
-<p>下列清單概述不同類型的元件：</p>
 
-<dl>
-<dt><strong>LGR</strong></dt>
-<dd>日誌聚集器：LGR 元件提供 Cloud Foundry 日誌聚集器的相關資訊，它可轉遞 Cloud Foundry 中的日誌。</dd>
 
-<dt><strong>RTR</strong></dt>
-<dd>路由器：RTR 元件會將 HTTP 要求的相關資訊提供給應用程式。</dd>
+## 容器日誌的日誌格式
+{: #log_format_containers}
 
-<dt><strong>STG</strong></dt>
-<dd>編譯打包：STG 元件提供應用程式如何編譯打包或重新編譯打包的相關資訊。</dd>
+容器的日誌會以固定格式顯示，與下列型樣類似：
 
-<dt><strong>APP</strong></dt>
-<dd>應用程式：APP 元件提供來自應用程式的日誌。這是您的程式碼中會出現 stderr 和 stdout 的地方。</dd>
+<code><var class="keyword varname">timestamp</var>/<var class="keyword varname">machine</var>/<var class="keyword varname">message</var>  </code>
 
-<dt><strong>API</strong></dt>
-<dd>Cloud Foundry API：API 元件提供使用者要求變更應用程式狀態後，所產生之內部動作的相關資訊。</dd>
+每個日誌項目都包含下列欄位：
 
-<dt><strong>DEA</strong></dt>
-<dd>Droplet Execution Agent：DEA 元件提供應用程式開始、停止或當機的相關資訊。
-<p>只有在應用程式部署在以 DEA 為基礎的 Cloud Foundry 架構中時，此元件才可供使用。</p></dd>
-
-<dt><strong>CELL</strong></dt>
-<dd>Diego Cell：CELL 元件提供應用程式開始、停止或當機的相關資訊。
-<p>只有在應用程式部署在以 Diego 為基礎的 Cloud Foundry 架構中時，此元件才可供使用。</p></dd>
-
-<dt><strong>SSH</strong></dt>
-<dd>SSH：SSH 元件會在使用者每次使用 **cf ssh** 指令來存取應用程式時，提供資訊。
-<p>只有在應用程式部署在以 Diego 為基礎的 Cloud Foundry 架構中時，此元件才可供使用。</p></dd>
-
-</dl>
-</dd>
-
-<dt><strong>訊息</strong></dt>
-<dd>
-<pre class="pre screen"><code>&lt;<var class="keyword varname">Message</var>&gt;</code></pre>
-<p>元件所發出的訊息。訊息根據環境定義而不同。</p>
-</dd>
-</dl>
-
-下圖顯示以 Droplet Execution Agent (DEA) 為基礎之 Cloud Foundry 架構中的不同元件（日誌類型）：
-![DEA 架構中的日誌類型。](images/logging_F1.png "以 Droplet Execution Agent 為基礎之 Cloud Foundry 架構中的元件。")
-
+| 欄位 | 說明 |
+|-------|-------------|
+| 日期/時間 | 日誌陳述文字的時間。時間戳記最多定義到毫秒。 |
+| 機器 | 容器執行所在的主機名稱。 |
+| 訊息 | 發出的訊息。訊息根據環境定義而不同。 |
 
 

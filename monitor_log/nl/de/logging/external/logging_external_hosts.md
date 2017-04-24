@@ -17,10 +17,10 @@ lastupdated: "2017-02-16"
 # Externe Protokollhosts konfigurieren
 {: #thirdparty_logging}
 
-{{site.data.keyword.Bluemix_notm}} bewahrt eine begrenzte Menge an Protokolldaten im Speicher. Bei der Protokollierung von Daten werden die alten Informationen durch die neueren Daten ersetzt. Zur Aufbewahrung aller Protokolldaten können Sie Ihre Protokolle auf einem externen Protokollhost, wie zum Beispiel einem Protokoll-Management-Service eines anderen Anbieters, oder auf einem anderen Host speichern.
+{{site.data.keyword.Bluemix_notm}} bewahrt eine begrenzte Menge an Protokolldaten im Speicher. Bei der Protokollierung von Daten werden die alten Informationen durch die neueren Daten ersetzt. Zur Aufbewahrung aller Protokolldaten können Sie Ihre Cloud Foundry-Anwendungsprotokolle auf einem externen Protokollhost, wie zum Beispiel einem Protokoll-Management-Service eines anderen Anbieters, oder auf einem anderen Host speichern.
 {:shortdesc}
 
-Führen Sie die folgenden Schritte aus, um Protokolle aus Ihrer App und dem System an einen externen Protokollhost zu übermitteln:
+Führen Sie die folgenden Schritte aus, um Protokolle aus Ihrer CF-App und dem System an einen externen Protokollhost zu übermitteln: 
 
   1. Bestimmen Sie den Protokollierungsendpunkt.
 

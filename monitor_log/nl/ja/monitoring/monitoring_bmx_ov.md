@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-16"
+lastupdated: "2017-03-06"
 
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2017-02-16"
 
 さらに多くのパフォーマンス・メトリックを構成してモニターすることができます。これらのメトリックの視覚化と分析を {{site.data.keyword.Bluemix_notm}} の外側で行うことができます。例えば、{{site.data.keyword.containershort}} 内でアプリを実行している場合、Grafana を使用して、さらに多くのメトリックをモニターすることができます。パフォーマンス・データの視覚化と分析を行うコンテナー・インスタンスまたはスペースごとに、ダッシュボードをカスタマイズできます。
 
-![{{site.data.keyword.Bluemix_notm}} で実行しているコンテナーの Grafana モニター・ビュー](images/monitoring_default_container_grafana_view.jpg)
+![{{site.data.keyword.Bluemix_notm}} で実行しているコンテナーの Grafana モニター・ビュー](images/monitoring_default_container_grafana_view.jpg "Bluemix で実行しているコンテナーの Grafana モニター・ビュー")
 
 {{site.data.keyword.Bluemix_notm}} プラットフォームのモニターを使用して、以下を行うことができます。
 
@@ -33,5 +33,4 @@ lastupdated: "2017-02-16"
 
 Cloud Foundry で実行しているアプリのモニターについて詳しくは、『[Cloud Foundry で実行されているアプリのモニター](monitoring_cf_apps.html#monitoring_bluemix_apps)』を参照してください。
 
-{{site.data.keyword.containershort}} でのモニターについて詳しくは、『[{{site.data.keyword.containershort}} でのモニター](/docs/containers/monitoringandlogging/container_ml_monitor.html#container_ml_monitor)』を参照してください。   
-
+{{site.data.keyword.containershort}} でのモニターについて詳しくは、『[{{site.data.keyword.containershort}} でのモニター](containers/monitoring_containers_ov.html#monitoring_bmx_containers_ov)』を参照してください。

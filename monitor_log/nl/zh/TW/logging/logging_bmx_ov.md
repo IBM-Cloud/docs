@@ -16,7 +16,7 @@ lastupdated: "2017-02-16"
 # Bluemix 中的記載功能
 {: #logging_bmx_ov}
 
-{{site.data.keyword.Bluemix_notm}} 記載功能已整合在平台中，並且自動啟用雲端資源的資料收集。依預設，{{site.data.keyword.Bluemix_notm}} 會收集及顯示應用程式、應用程式運行環境以及這些應用程式執行所在運算運行環境的日誌。
+{{site.data.keyword.Bluemix}} 記載功能已整合在平台中，並且自動啟用雲端資源的資料收集。依預設，{{site.data.keyword.Bluemix_notm}} 會收集及顯示應用程式、應用程式運行環境以及這些應用程式執行所在運算運行環境的日誌。
 {:shortdesc}
 
 您可以使用 {{site.data.keyword.Bluemix_notm}} 中的記載功能來瞭解雲端平台的行為，以及在其中執行的資源。不需要特殊設備，即可收集標準輸出和標準錯誤日誌。例如，您可以使用日誌來提供應用程式的審核追蹤、在服務中偵測問題、識別漏洞、疑難排解應用程式部署和運行環境行為、在應用程式執行所在的基礎架構中偵測問題、在雲端平台中的各元件之間追蹤應用程式，以及偵測可用來搶先處理可能影響服務 SLA 之動作的型樣。
@@ -25,7 +25,7 @@ lastupdated: "2017-02-16"
 
 {{site.data.keyword.Bluemix_notm}} 會記錄 Cloud Foundry 平台和 Cloud Foundry 應用程式所產生的日誌資料。在日誌中，您可以檢視針對應用程式所產生的錯誤、警告及參考訊息。如需在 Cloud Foundry 中記載的相關資訊，請參閱 [Bluemix 中 Cloud Foundry 應用程式的記載功能](logging_cf_apps.html#logging_bluemix_cf_apps)。
 
-{{site.data.keyword.Bluemix_notm}} 會記錄 {{site.data.keyword.containershort}} 所產生的日誌資料。如需在 {{site.data.keyword.containershort}} 中記載的相關資訊，請參閱 [{{site.data.keyword.containershort}} 中的記載功能](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_logs)。   
+{{site.data.keyword.Bluemix_notm}} 會記錄 {{site.data.keyword.containershort}} 所產生的日誌資料。如需在 {{site.data.keyword.containershort}} 中記載的相關資訊，請參閱 [IBM Bluemix Container Service的記載功能](containers/logging_containers_ov.html#logging_containers_ov)。   
 
 
 使用 {{site.data.keyword.Bluemix_notm}} 所提供的記載功能，您可以：

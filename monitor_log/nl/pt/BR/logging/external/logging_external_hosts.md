@@ -19,10 +19,11 @@ lastupdated: "2017-02-16"
 
 O {{site.data.keyword.Bluemix_notm}} mantém
 uma quantia limitada de informação de log na memória. Quando as informações são
-registradas, as informações antigas são substituídas pelas informações mais novas. Para manter todas as informações de log, é possível salvar seus logs em um host de log externo, como um serviço de gerenciamento de log de terceiro ou outro host.
-{:shortdesc}
+registradas, as informações antigas são substituídas pelas informações mais novas. Para manter todas as
+informações de log, é possível salvar seus logs do aplicativo Cloud Foundry em um host de log externo, como um
+serviço de gerenciamento de log de terceiro ou outro host.{:shortdesc}
 
-Para mover logs de seu app e do sistema para um host de log externo, conclua as etapas a seguir:
+Para mover logs de seu app CF e do sistema para um host de log externo, conclua as etapas a seguir:
 
   1. Determine o terminal de criação de log.
 

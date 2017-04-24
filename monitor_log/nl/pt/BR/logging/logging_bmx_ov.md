@@ -16,7 +16,7 @@ lastupdated: "2017-02-16"
 # Efetuando login no Bluemix
 {: #logging_bmx_ov}
 
-Os recursos de criação de log do {{site.data.keyword.Bluemix_notm}} são integrados na plataforma e a coleção de dados é ativada automaticamente para recursos em nuvem. O {{site.data.keyword.Bluemix_notm}}, por padrão, coleta e exibe os logs para seus apps, tempos de execução de apps e tempos de execução de cálculo nos quais esses apps são executados. 
+Os recursos de criação de log do {{site.data.keyword.Bluemix}} são integrados na plataforma e a coleção de dados é ativada automaticamente para recursos em nuvem. O {{site.data.keyword.Bluemix_notm}}, por padrão, coleta e exibe os logs para seus apps, tempos de execução de apps e tempos de execução de cálculo nos quais esses apps são executados. 
 {:shortdesc}
 
 É possível usar os recursos de criação de log no {{site.data.keyword.Bluemix_notm}} para entender o comportamento da plataforma de nuvem e os recursos que estão em execução nela. Nenhuma instrumentação especial é necessária para coletar os logs de saída padrão e erro padrão. Por exemplo, é possível usar logs para fornecer uma trilha de auditoria para um aplicativo, detectar problemas no serviço, identificar vulnerabilidades, solucionar problemas de implementações de app e de comportamento de tempo de execução, detectar problemas na infraestrutura na qual o app está em execução, rastrear o app entre os componentes na plataforma de nuvem e detectar padrões que podem ser usados para priorizar ações que possam afetar o SLA de serviço.
@@ -25,7 +25,10 @@ Ao executar os apps na nuvem, pode não ser possível usar SSH ou FTP na infraes
 
 O {{site.data.keyword.Bluemix_notm}} registra os dados do log que são gerados pela plataforma Cloud Foundry e por aplicativos Cloud Foundry. Nos logs, é possível visualizar os erros, os avisos e as mensagens informativas produzidas para o app. Para obter mais informações sobre a criação de log no Cloud Foundry, veja [Criação de log para apps Cloud Foundry no Bluemix](logging_cf_apps.html#logging_bluemix_cf_apps).
 
-O {{site.data.keyword.Bluemix_notm}} registra os dados do log que são gerados pelo {{site.data.keyword.containershort}}. Para obter mais informações sobre a criação de log no {{site.data.keyword.containershort}}, veja [Criação de log no {{site.data.keyword.containershort}}](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_logs).   
+O {{site.data.keyword.Bluemix_notm}} registra os dados do log que são gerados pelo {{site.data.keyword.containershort}}. 
+Para obter mais informações sobre a criação de log no {{site.data.keyword.containershort}}, consulte
+[Criação de log para o IBM Bluemix
+Container Service](containers/logging_containers_ov.html#logging_containers_ov). 
 
 
 Usando a funcionalidade de criação de log que o {{site.data.keyword.Bluemix_notm}} oferece, é possível:

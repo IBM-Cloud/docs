@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-16"
+lastupdated: "2017-03-06"
 
 ---
 
@@ -24,7 +24,7 @@ Puoi utilizzare le funzionalità di monitoraggio in {{site.data.keyword.Bluemix_
 
 Puoi anche configurare e monitorare altre metriche delle prestazioni. Puoi visualizzare e analizzare queste metriche esternamente a {{site.data.keyword.Bluemix_notm}}. Ad esempio, puoi utilizzare Grafana per monitorare altre metriche quando esegui la tua applicazione in {{site.data.keyword.containershort}}. Puoi personalizzare i dashboard per ogni istanza di contenitore o per ogni spazio in cui visualizzi e analizzi i dati delle prestazioni.
 
-![Visualizzazione del monitoraggio Grafana di un contenitore in esecuzione in {{site.data.keyword.Bluemix_notm}}](images/monitoring_default_container_grafana_view.jpg)
+![Visualizzazione del monitoraggio Grafana di un contenitore in esecuzione in {{site.data.keyword.Bluemix_notm}}](images/monitoring_default_container_grafana_view.jpg "Visualizzazione del monitoraggio Grafana di un contenitore in esecuzione in Bluemix")
 
 Puoi utilizzare il monitoraggio della piattaforma {{site.data.keyword.Bluemix_notm}} per:
 
@@ -33,5 +33,4 @@ Puoi utilizzare il monitoraggio della piattaforma {{site.data.keyword.Bluemix_no
 
 Per ulteriori informazioni sul monitoraggio delle applicazioni eseguite in Cloud Foundry, vedi [Monitoraggio delle applicazioni eseguite in Cloud Foundry](monitoring_cf_apps.html#monitoring_bluemix_apps).
 
-Per ulteriori informazioni sul monitoraggio in {{site.data.keyword.containershort}}, vedi [Monitoraggio in {{site.data.keyword.containershort}}](/docs/containers/monitoringandlogging/container_ml_monitor.html#container_ml_monitor).   
-
+Per ulteriori informazioni sul monitoraggio in {{site.data.keyword.containershort}}, vedi [Monitoraggio in {{site.data.keyword.containershort}}](containers/monitoring_containers_ov.html#monitoring_bmx_containers_ov).

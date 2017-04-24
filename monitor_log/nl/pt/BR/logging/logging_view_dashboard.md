@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-06"
+lastupdated: "2017-03-16"
 
 ---
 
@@ -13,102 +13,92 @@ lastupdated: "2017-02-06"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Analisando logs de apps CF no painel do Bluemix
+# Analisando logs no console do Bluemix
 {: #analyzing_logs_bmx_ui}
 
-No {{site.data.keyword.Bluemix}}, é possível visualizar, filtrar e analisar logs por meio do painel da guia **Log** que está disponível para cada aplicativo Cloud Foundry. Use o painel do {{site.data.keyword.Bluemix}} para visualizar a atividade mais recente do aplicativo.
-{:shortdesc}
+No {{site.data.keyword.Bluemix}}, é possível visualizar, filtrar e analisar logs por meio da
+guia de log que está disponível para cada app Cloud Foundry ou contêiner do Docker. {:shortdesc}
 
-O {{site.data.keyword.Bluemix_notm}} Public oferece um serviço de Criação de log integrado. Quando você executa seus aplicativos no Cloud Foundry,
-o serviço de Criação de log captura dados do log de componentes do sistema que interagem com seu aplicativo, sobre seu aplicativo e até mesmo dados do log de dentro de seu aplicativo ao usar stdout e stderr.
+O {{site.data.keyword.Bluemix_notm}} Public oferece recursos de criação de log integrados. 
+Por exemplo, quando você executa seus aplicativos no Cloud Foundry (CF), os dados do log são capturados dos
+componentes do sistema que interagem com seu aplicativo, sobre seu aplicativo e até mesmo dados do log de
+dentro de seu aplicativo ao usar stdout e stderr.
 
-Os logs para aplicativos {{site.data.keyword.Bluemix_notm}} são exibidos em um formato fixo, semelhante ao padrão a seguir:
+Considere as seguintes informações sobre a disponibilidade de dados do log para análise e retenção de
+log:
 
-<code><var class="keyword varname">Component</var>/<var class="keyword varname">instanceID</var>     <var class="keyword varname">message</var>     <var class="keyword varname">timestamp</var></code>
-   
-Para obter mais informações sobre o formato de log, veja [Formato de log para logs do app Cloud Foundry](logging_view_dashboard.html#log_format_cf).
+* No {{site.data.keyword.Bluemix_notm}} Public, os dados do log são armazenados por 7 dias por
+padrão.  
+* É possível armazenar até 1 GB de dados por dia. 
+* Por padrão, os logs que estão disponíveis para análise no
+console do {{site.data.keyword.Bluemix_notm}}
+incluem dados das últimas 24 horas.
 
-**Nota:** no {{site.data.keyword.Bluemix_notm}} Public, os dados do log são armazenados durante 7 dias por padrão. É possível procurar até 1 GB de dados por dia.
+**Dica:** para analisar dados para um período customizado que precede as últimas 24
+horas, consulte [Análise de log avançada com
+o Kibana](logging_analyzing_logs_Kibana.html#analyzing_logs_Kibana). 
 
+##  Acessando os logs de um app Cloud Foundry
+{: #launch_logs_tab_bmx_ui_cf}
 
+Para ver os logs de implementação ou de tempo de execução de um app Cloud Foundry, conclua as
+etapas a seguir:
 
-##  Acessando a guia de log do Bluemix
-{: #launch_logs_tab_bmx_ui}
-
-Para ver os logs de implementação ou de tempo de execução de um aplicativo Cloud Foundry, conclua as etapas a seguir:
-
-1. Efetue login no {{site.data.keyword.Bluemix_notm}} e, em seguida, clique no nome do app no painel **Apps** do {{site.data.keyword.Bluemix_notm}}. 
-
-    A página de detalhes do app é exibida.
+1. No painel Apps, clique no nome do seu app Cloud Foundry. 
     
-2. Na barra de navegação, clique em **Logs**.
-
-    A guia de logs é aberta. 
+2. Na página de detalhes do app, clique em **Logs**. 
     
-    Na guia **Logs**, é possível visualizar os logs recentes para seu app ou acompanhar os logs em tempo real. Além disso, é possível filtrar logs por componente (tipo de log), por ID da instância do app e por erro.
+    Na guia **Logs**, é possível visualizar os logs recentes para seu app ou
+acompanhar os logs em tempo real. Além disso, é possível filtrar logs por componente (tipo de log), por ID da instância do app e por erro.
+    
 
+##  Acessando os logs de um contêiner do Docker
+{: #launch_logs_tab_bmx_ui_containers}
 
+Para ver os logs de implementação ou de tempo de execução de um contêiner do Docker, conclua as
+etapas a seguir:
 
-## Formato de log para logs do app Cloud Foundry
+1. No painel Apps, clique no contêiner único ou no grupo de contêiner. 
+    
+2. Na página de detalhes do app, clique em **Monitoramento e Logs**.
+
+3. Selecione a guia **Criação de log**.
+    
+    Na guia **Criação de log**, é possível visualizar os logs recentes para
+seu contêiner ou acompanhar os logs em tempo real.  
+
+## Formato de log para logs do app CF
 {: #log_format_cf}
 
-Toda entrada de log contém os campos a seguir:
+Os logs para apps Cloud Foundry do {{site.data.keyword.Bluemix_notm}} são exibidos em um formato
+fixo, semelhante ao padrão a seguir:
 
-<dl>
-<dt><strong>Registro de data e hora</strong></dt>
-<dd>
-<p>O tempo da instrução de log. O registro de data e hora é definido até o milissegundo.</p>
-</dd>
+<code><var class="keyword varname">Component</var>/<var class="keyword varname">instanceID</var>/<var class="keyword varname">message</var>/<var class="keyword varname">timestamp</var></code>
 
-<dt><strong>Componente</strong></dt>
-<dd>
-<pre class="pre screen"><code>[App/0]</code></pre>
-<p>O componente que produz o log. </p>
-<p>Cada tipo de componente é seguido por uma barra e um dígito que indica a instância do aplicativo. 0 é o dígito alocado para a primeira instância, 1 é o dígito alocado para a segunda e assim por diante. Observe que é possível filtrar para ver somente uma instância do App no painel.</p>
-<p>A lista a seguir descreve os diferentes tipos de componentes:</p>
+Cada entrada de log contém os campos a seguir:
 
-<dl>
-<dt><strong>LGR</strong></dt>
-<dd>Loggregator: o componente LGR fornece informações sobre o Cloud Foundry Loggregator, que encaminha os logs de dentro do Cloud Foundry.</dd>
+| Campo | Descrição |
+|-------|-------------|
+| Registro de data e hora | O tempo da instrução de log. O registro de data e hora é definido até o milissegundo. |
+| Componente | O componente que produz o log. Para obter a lista dos componentes diferentes, consulte
+[Origens para apps CF](logging_cf_apps.html#logging_bluemix_cf_apps_log_sources).<br> Cada tipo de componente é seguido por uma barra e um dígito que indica a instância do aplicativo. 0 é o dígito alocado para a primeira instância, 1 é o dígito alocado para a segunda e assim por diante. |
+| Mensagem | A mensagem que é emitida pelo componente. A mensagem varia, dependendo do contexto. |
 
-<dt><strong>RTR</strong></dt>
-<dd>Roteador: o componente RTR fornece informações sobre solicitações de HTTP para um aplicativo.</dd>
 
-<dt><strong>STG</strong></dt>
-<dd>Preparação: o componente STG fornece informações sobre como um aplicativo é montado ou remontado.</dd>
 
-<dt><strong>AP
-</strong></dt>
-<dd>Aplicativo: o componente APP fornece logs do aplicativo. É neste local que o stderr e o stdout aparecerão em seu código.
-</dd>
+## Formato de log para logs do contêiner
+{: #log_format_containers}
 
-<dt><strong>API</strong></dt>
-<dd>Cloud Foundry API: o componente API fornece informações sobre as ações internas que resultam da solicitação de um usuário para mudar o estado de um aplicativo.</dd>
+Os logs para contêineres são exibidos em um formato fixo, semelhante ao padrão a seguir:
 
-<dt><strong>DEA</strong></dt>
-<dd>Droplet Execution Agent: o componente DEA fornece informações sobre o início, a parada ou o travamento de um aplicativo. 
-<p>Esse componente estará disponível somente se seu aplicativo for implementado na arquitetura Cloud Foundry que é baseada no DEA.</p></dd>
+<code><var class="keyword varname">timestamp</var>/<var class="keyword varname">machine</var>/<var class="keyword varname">message</var>  </code>
 
-<dt><strong>CELL</strong></dt>
-<dd>Célula Diego: o componente CELL fornece informações sobre o início, a parada ou o travamento de um aplicativo. 
-<p>Esse componente estará disponível somente se seu aplicativo for implementado na arquitetura Cloud Foundry que é baseada no Diego.</p></dd>
+Cada entrada de log contém os campos a seguir:
 
-<dt><strong>SSH</strong></dt>
-<dd>SSH: o componente SSH fornece informações cada vez que um usuário acessa um aplicativo usando o comando **cf ssh**. 
-<p>Esse componente estará disponível somente se seu aplicativo for implementado na arquitetura Cloud Foundry que é baseada no Diego.</p></dd>
-
-</dl>
-</dd>
-
-<dt><strong>Mensagem</strong></dt>
-<dd>
-<pre class="pre screen"><code>&lt;<var class="keyword varname">Mensagem</var>&gt;</code></pre>
-<p>A mensagem que é emitida pelo componente. A mensagem varia, dependendo do contexto.</p>
-</dd>
-</dl>
-
-A figura a seguir mostra os diferentes componentes (tipos de log) em uma arquitetura Cloud Foundry que se baseia no Droplet Execution Agent (DEA):
-![Tipos de log em uma arquitetura DEA.](images/logging_F1.png "Componentes em uma arquitetura Cloud Foundry que se baseia no Droplet Execution Agent.")
-
+| Campo | Descrição |
+|-------|-------------|
+| Data/Hora | O tempo da instrução de log. O registro de data e hora é definido até o milissegundo. |
+| Máquina | O nome do host no qual o contêiner está em execução. |
+| Mensagem | A mensagem que é emitida. A mensagem varia, dependendo do contexto. |
 
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-06"
+lastupdated: "2017-03-16"
 
 ---
 
@@ -13,100 +13,77 @@ lastupdated: "2017-02-06"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# CF-App-Protokolle über das Bluemix-Dashboard analysieren
+# Protokoll über die Bluemix-Konsole analysieren
 {: #analyzing_logs_bmx_ui}
 
-In {{site.data.keyword.Bluemix}} können Sie Protokolle über die Registerkarte **Protokolle** anzeigen, filtern und analysieren, die für jede Cloud Foundry-Anwendung verfügbar ist. Im {{site.data.keyword.Bluemix}}-Dashboard können Sie die letzte Aktivität der Anwendung analysieren.
+In {{site.data.keyword.Bluemix}} können Sie Protokolle über die Registerkarte für Protokolle, die für jede Cloud Foundry-App bzw. jeden Docker-Container verfügbar ist, anzeigen, filtern und analysieren.
 {:shortdesc}
 
-{{site.data.keyword.Bluemix_notm}} Public bietet einen integrierten Protokollierungsserivce an. Wenn Sie Ihre Anwendungen in Cloud Foundry ausführen, erfasst der Protokollierungsservice (Logging) aus Systemkomponenten, die mit Ihrer Anwendung interagieren, Protokolldaten zu Ihrer Anwendung und sogar Protokolldaten aus Ihrer Anwendung, wenn Sie die Standardausgabe (STDOUT) und die Standard-Fehlerausgabe (STDERR) verwenden.
+{{site.data.keyword.Bluemix_notm}} Public bietet integrierte Protokollierungsfunktionen an. Wenn Sie Ihre Anwendungen zum Beispiel in Cloud Foundry (CF) ausführen, werden Protokolldaten aus Systemkomponenten, die mit Ihrer Anwendung interagieren, zu Ihrer Anwendung und sogar Protokolldaten aus Ihrer Anwendung erfasst, wenn Sie die Standardausgabe (STDOUT) und die Standard-Fehlerausgabe (STDERR) verwenden. 
 
-Protokolle für {{site.data.keyword.Bluemix_notm}}-Anwendungen werden in einem festen Format angezeigt, ähnlich dem folgenden Muster:
+Beachten Sie die folgenden Informationen zur Verfügbarkeit von Protokolldaten für die Analyse und Protokollspeicherung: 
 
-<code><var class="keyword varname">Komponente</var>/<var class="keyword varname">Instanz-ID</var>     <var class="keyword varname">Nachricht</var>     <var class="keyword varname">Zeitmarke</var></code>
-   
-Weitere Informationen zum Protokollformat finden Sie unter [Protokollformat für Cloud Foundry-App-Protokolle](logging_view_dashboard.html#log_format_cf).
+* In {{site.data.keyword.Bluemix_notm}} Public werden Protokolldaten standardmäßig sieben Tage lang gespeichert.  
+* Sie können bis zu 1 GB an Daten pro Tag speichern.  
+* Die Protokolle, die für die Analyse über die {{site.data.keyword.Bluemix_notm}}-Konsole verfügbar sind, umfassen standardmäßig Daten für den Zeitraum der letzten 24 Stunden. 
 
-**Hinweis:** In {{site.data.keyword.Bluemix_notm}} Public werden Protokolldaten standardmäßig sieben 7 Tage lang gespeichert. Sie können bis zu 1 GB an Daten pro Tag durchsuchen.
+**Tipp:** Wenn Sie Daten für einen angepassten Zeitraum analysieren wollen, der vor den letzten 24 Stunden liegt, finden Sie weitere Informationen unter [Erweiterte Protokollanalyse mit Kibana](logging_analyzing_logs_Kibana.html#analyzing_logs_Kibana).  
 
+##  Protokolle einer Cloud Foundry-App aufrufen
+{: #launch_logs_tab_bmx_ui_cf}
 
+Führen Sie die folgenden Schritte aus, um die Bereitstellungs- und Laufzeitprotokolle einer Cloud Foundry-App anzuzeigen: 
 
-##  Bluemix-Protokollregisterkarte öffnen
-{: #launch_logs_tab_bmx_ui}
-
-Führen Sie die folgenden Schritte aus, um Bereitstellungs- oder Laufzeitprotokolle einer Cloud Foundry-Anwendung anzuzeigen:
-
-1. Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an und klicken Sie auf den App-Namen im {{site.data.keyword.Bluemix_notm}}-Dashboard **Apps**. 
-
-    Die Detailseite für die App wird angezeigt.
+1. Klicken Sie im Dashboard 'Apps' auf den Namen Ihrer Cloud Foundry-App.  
     
-2. Klicken Sie in der Navigationsleiste auf **Protokolle**.
-
-    Die Registerkarte für Protokolle wird geöffnet. 
+2. Klicken Sie auf der App-Detailseite auf **Protokolle**. 
     
-    Auf der Registerkarte **Protokolle** können Sie die zuletzt generierten Protokolle für Ihre App oder Protokollendabschnitte in Echtzeit anzeigen. Darüber hinaus können Sie Protokolle nach Komponente (Protokolltyp), App-Instanz-ID und nach Fehler filtern.
+    Auf der Registerkarte **Protokolle** können Sie die letzten Protokolle für Ihre App oder Protokollendabschnitte in Echtzeit anzeigen. Darüber hinaus können Sie Protokolle nach Komponente (Protokolltyp), App-Instanz-ID und nach Fehler filtern.
+    
 
+##  Protokolle eines Docker-Containers aufrufen
+{: #launch_logs_tab_bmx_ui_containers}
 
+Führen Sie die folgenden Schritte aus, um Bereitstellungs- oder Laufzeitprotokolle eines Docker-Containers anzuzeigen: 
 
-## Protokollformat für Cloud Foundry-App-Protokolle
+1. Klicken Sie im Dashboard 'Apps' auf einen einzelnen Container oder eine Containergruppe.  
+    
+2. Klicken Sie auf der App-Detailseite auf **Überwachung und Protokolle**. 
+
+3. Wählen Sie **Protokollierung** aus. 
+    
+    Auf der Registerkarte **Protokollierung** können Sie die letzten Protokolle für Ihren Container oder Protokollendabschnitte in Echtzeit anzeigen.  
+
+## Protokollformat für CF-App-Protokolle
 {: #log_format_cf}
 
-Jeder Protokolleintrag enthält die folgenden Felder:
+Protokolle für {{site.data.keyword.Bluemix_notm}}-Cloud Foundry-Apps werden in einem festen Format ähnlich dem folgenden Muster angezeigt: 
 
-<dl>
-<dt><strong>Zeitmarke</strong></dt>
-<dd>
-<p>Die Zeit der Protokollanweisung. Die Zeitmarke ist bis auf die Millisekunde definiert.</p>
-</dd>
+<code><var class="keyword varname">Komponente</var>/<var class="keyword varname">Instanz-ID</var>/<var class="keyword varname">Nachricht</var>/<var class="keyword varname">Zeitmarke</var></code>
 
-<dt><strong>Komponente</strong></dt>
-<dd>
-<pre class="pre screen"><code>[App/0]</code></pre>
-<p>Die Komponente, die das Protokoll generiert. </p>
-<p>Auf jeden Komponententyp folgt ein Schrägstrich und eine Ziffer, die die Anwendungsinstanz angibt. 0 ist die Ziffer, die der ersten Instanz zugeordnet ist, 1 die der zweiten usw. Beachten Sie, dass Sie filtern können, um nur eine App-Instanz im Dashboard anzuzeigen.</p>
-<p>In der folgenden Liste werden die verschiedenen Typen von Komponenten kurz beschrieben:</p>
+Jeder Protokolleintrag enthält die folgenden Felder: 
 
-<dl>
-<dt><strong>LGR</strong></dt>
-<dd>Loggregator: Die LGR-Komponente stellt Informationen über den Cloud Foundry Loggregator bereit, der Protokolle aus Cloud Foundry heraus weiterleitet.</dd>
+| Feld | Beschreibung |
+|-------|-------------|
+| Zeitmarke | Die Zeit der Protokollanweisung. Die Zeitmarke ist bis auf die Millisekunde definiert. |
+| Komponente | Die Komponente, die das Protokoll generiert. Eine Liste der verschiedenen Komponenten finden Sie unter [Protokollquellen für CF-Apps](logging_cf_apps.html#logging_bluemix_cf_apps_log_sources). <br> Auf jeden Komponententyp folgt ein Schrägstrich und eine Ziffer, die die Anwendungsinstanz angibt. 0 ist die Ziffer, die der ersten Instanz zugeordnet ist, 1 die der zweiten usw. |
+| Nachricht | Die Nachricht, die von der Komponente ausgegeben wird. Die Nachricht variiert abhängig vom Kontext. |
 
-<dt><strong>RTR</strong></dt>
-<dd>Router: Die RTR-Komponente stellt Informationen zu HTTP-Anforderungen an eine Anwendung bereit.</dd>
 
-<dt><strong>STG</strong></dt>
-<dd>Staging: Die STG-Komponente stellt Informationen zum Staging und erneuten Staging einer Anwendung bereit.</dd>
 
-<dt><strong>APP</strong></dt>
-<dd>Anwendung: Die APP-Komponente stellt Protokolle aus der Anwendung bereit. Hier wird die Standard-Fehlerausgabe (STDERR) und die Standardausgabe (STDOUT) in Ihrem Code angezeigt.
-</dd>
+## Protokollformat für Containerprotokolle
+{: #log_format_containers}
 
-<dt><strong>API</strong></dt>
-<dd>Cloud Foundry-API: Die API-Komponente stellt Informationen zu den internen Aktionen bereit, die aus der Anforderung eines Benutzers zum Ändern des Status einer Anwendung resultieren.</dd>
+Protokolle für Container werden in einem festen Format ähnlich dem folgenden Muster angezeigt: 
 
-<dt><strong>DEA</strong></dt>
-<dd>Droplet Execution Agent: Die DEA-Komponente stellt Informationen zum Start, Stopp oder Absturz einer Anwendung bereit. 
-<p>Diese Komponente ist nur verfügbar, wenn Ihre Anwendung in der Cloud Foundry-Architektur bereitgestellt wurde, die auf DEA basiert.</p></dd>
+<code><var class="keyword varname">Zeitmarke</var>/<var class="keyword varname">Maschine</var>/<var class="keyword varname">Nachricht</var>  </code>
 
-<dt><strong>CELL</strong></dt>
-<dd>Diego-Zelle: Die CELL-Komponente stellt Informationen zum Start, Stopp oder Absturz einer Anwendung bereit. 
-<p>Diese Komponente ist nur verfügbar, wenn Ihre Anwendung in der Cloud Foundry-Architektur bereitgestellt wurde, die auf Diego basiert.</p></dd>
+Jeder Protokolleintrag enthält die folgenden Felder: 
 
-<dt><strong>SSH</strong></dt>
-<dd>SSH: Die SSH-Komponente stellt jedes Mal Informationen bereit, wenn ein Benutzer auf eine Anwendung mit dem Befehl **cf ssh** zugreift. 
-<p>Diese Komponente ist nur verfügbar, wenn Ihre Anwendung in der Cloud Foundry-Architektur bereitgestellt wurde, die auf Diego basiert.</p></dd>
-
-</dl>
-</dd>
-
-<dt><strong>Nachricht</strong></dt>
-<dd>
-<pre class="pre screen"><code>&lt;<var class="keyword varname">Nachricht</var>&gt;</code></pre>
-<p>Die Nachricht, die von der Komponente ausgegeben wird. Die Nachricht variiert abhängig vom Kontext.</p>
-</dd>
-</dl>
-
-Die folgende Abbildung zeigt die verschiedenen Komponenten (Protokolltypen) in einer Cloud Foundry-Architektur, die auf dem Droplet Execution Agent (DEA) basiert:
-![Protokolltypen in einer DEA-Architektur.](images/logging_F1.png "Komponenten in einer Cloud Foundry-Architektur, die auf Droplet Execution Agent basiert.")
-
+| Feld | Beschreibung |
+|-------|-------------|
+| Zeitmarke | Die Zeit der Protokollanweisung. Die Zeitmarke ist bis auf die Millisekunde definiert. |
+| Maschine | Der Name des Hosts, auf dem der Container ausgeführt wird. |
+| Nachricht | Die Nachricht, die ausgegeben wurde. Die Nachricht variiert abhängig vom Kontext. |
 
 

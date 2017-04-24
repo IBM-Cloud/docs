@@ -24,14 +24,14 @@ lastupdated: "2017-02-06"
 * STDOUT（標準輸出）提供一般資訊。  
 * STDERR（標準錯誤）提供包括錯誤訊息和其他診斷警告的資訊。 
 
-日誌聚集器會自動挑選標準輸出和標準錯誤資料。日誌聚集器是一種元件，可轉遞 Cloud Foundry 中的日誌。 
+日誌聚集器會自動拾取標準輸出和標準錯誤資料。日誌聚集器是一種元件，可轉遞 Cloud Foundry 中的日誌。 
 
 例如， 
 
-對於 **Liberty Cloud Foundry 應用程式**，日誌聚集器會自動挑選 Liberty 伺服器的預設 console.log。 
+對於 **Liberty Cloud Foundry 應用程式**，日誌聚集器會自動拾取 Liberty 伺服器的預設 console.log。 
 
 * console.log 包含來自 JVM 程序的重新導向 STDOUT 和 STDERR。如果您使用預設的 consoleLogLevel 配置，主控台輸出會包含主要事件和錯誤。如果您使用預設的 copySystemStreams 配置，主控台輸出也會包含寫入 system.out 和 system.err 串流的任何訊息。主控台輸出一律包含 JVM 程序直接寫入的訊息，例如 -verbose:gc 輸出。您可以透過 server.xml 來調整 Liberty 的記載層次。
-* consoleLogLevel 可設定 console.log 處理程式的過濾層次。當您將 consoleLogLevel 設為 INFO 時，就是將所有 INFO、AUDIT、WARNING 和 ERROR 訊息配置為寫入 console.log 檔案。**附註：** FINE、FINER、FINEST 日誌項目只會寫入 trace.log 檔案。
+* consoleLogLevel 可設定 console.log 處理程式的過濾層次。當您將 consoleLogLevel 設為 INFO 時，就是將所有 INFO、AUDIT、WARNING 和 ERROR 訊息配置為寫入 console.log 檔案。**附註：**FINE、FINER、FINEST 日誌項目只會寫入 trace.log 檔案。
 
 如需 Liberty for Java™ 應用程式的相關資訊，請參閱 [Liberty Profile: Logging and Trace](http://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html)。
 
@@ -45,12 +45,12 @@ lastupdated: "2017-02-06"
 
 如需 **Ruby on Rails 應用程式** 的相關資訊，請參閱 [The Logger](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger)。
 
-下表列出部分應用程式運行環境日誌與日誌聚集器自動挑選之日誌的對映：
+下表列出部分應用程式運行環境日誌與日誌聚集器自動拾取之日誌的對映：
 
 | **運行環境** |    **STDOUT**     | **STDERR** |
 |-----------------|-------------------|-------------------|
 | Liberty | system.out | system.err |
 | Node.js | console.log、console.info | console.error、console.warn |
 | Ruby | stdout| stderr |
-{: caption="表 1. 部分應用程式運行環境日誌及日誌聚集器自動挑選的日誌之間的對映" caption-side="top"}
+{: caption="表 1. 部分應用程式運行環境日誌及日誌聚集器自動拾取的日誌之間的對映" caption-side="top"}
 

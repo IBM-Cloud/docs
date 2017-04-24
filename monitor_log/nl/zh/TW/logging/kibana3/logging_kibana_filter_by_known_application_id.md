@@ -41,7 +41,7 @@ lastupdated: "2017-02-06"
 
     ![儀表板清單](images/logging_list_of_dashboards.jpg)
 
-4. 選取名稱中包含已知應用程式 ID 的儀表板。 
+4. 選取名稱中包含已知 application_id 的儀表板。 
 
     儀表板會載入並顯示針對 application_id 過濾的資訊。
 

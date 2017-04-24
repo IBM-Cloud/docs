@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="11px" height="10px" viewBox="0 0 11 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" fill="#3D70B2">
+            <g id="launch--glyph">
+                <path d="M0,0.923076923 L0,10 L11,10 L11,0.923076923 L11,0 L0,0 L0,0.923076923 Z M1,2 L10,2 L10,9 L1,9 L1,2 Z" id="Shape"></path>
+                <g id="Group" transform="translate(4.000000, 3.000000)">
+                    <rect id="Rectangle" x="1" y="0" width="4" height="1"></rect>
+                    <rect id="Rectangle" transform="translate(4.500000, 2.000000) rotate(90.000000) translate(-4.500000, -2.000000) " x="2.5" y="1.5" width="4" height="1"></rect>
+                    <rect id="Rectangle" transform="translate(2.538451, 2.461549) rotate(135.000000) translate(-2.538451, -2.461549) " x="-0.44270382" y="1.96154852" width="5.9623106" height="1"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

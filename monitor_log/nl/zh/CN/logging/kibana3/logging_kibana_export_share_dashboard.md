@@ -24,7 +24,7 @@ lastupdated: "2017-02-03"
 {:shortdesc}
 
 <!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->
-使用 Kibana，可以通过将仪表板导出为 JSON 文件或者共享仪表板的 URL，从而与其他项目干系人协作。
+使用 Kibana，可以通过将仪表板导出为 JSON 文件或者共享仪表板的 URL，实现与其他项目干系人的协作。
 
 要将 Kibana 仪表板导出为 JSON 文件，请完成以下任务：
 

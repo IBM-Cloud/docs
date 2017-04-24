@@ -16,7 +16,7 @@ lastupdated: "2017-02-14"
 # 监视和日志记录
 {: #monitoringandlogging}
 
-{{site.data.keyword.Bluemix}} 提供了跨不同服务（例如，Cloud Foundry 和 {{site.data.keyword.containershort}}）的日志记录和监视功能。您可以在任何运行时中开发、运行和管理应用程序，而不会有通常与开发和启动应用程序关联的基础架构构建和维护的复杂性。
+{{site.data.keyword.Bluemix}} 提供了跨不同服务（例如，Cloud Foundry 和 {{site.data.keyword.containershort}}）的日志记录和监视功能。您可以在任何运行时中开发、运行和管理应用程序，而不必涉及通常与开发和启动应用程序关联的复杂的基础架构构建和维护事项。
 {:shortdesc}
 
 缺省情况下，{{site.data.keyword.Bluemix_notm}} 会收集并显示 CPU 使用率、内存利用率和网络 I/O 的性能度量值。这些度量值提供了有关各个云资源的性能的信息。您可以通过 {{site.data.keyword.Bluemix_notm}} UI 在云环境中监视这些资源的性能。还可以查看近实时数据和历史数据。有关更多信息，请参阅[监视](monitoring/monitoring_bmx_ov.html#monitoring_bmx_ov)。
