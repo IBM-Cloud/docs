@@ -1,0 +1,57 @@
+{
+	"id": "docs_homepage_platform",
+	"title": "Bluemix プラットフォームの使用法",
+	"items": [{
+		"title": "Bluemix とは",
+		"description": "インフラストラクチャー、アプリケーション、およびサービスを組み合わせた、クラウドを利用する新しい方法",
+		"img": "homepage/images/WhatIsBluemix-icon.svg",
+		"href": "overview/whatisbluemix.html"
+	}, {
+		"title": "アカウントのセットアップ",
+		"description": "プロファイルの更新、アカウントと消費量の通知の設定、チーム・メンバーの招待、または組織とスペースの管理を行います。",
+		"img": "homepage/images/admin.svg",
+		"href": "admin/adminpublic.html"
+	}, {
+		"title": "CLI と開発ツール",
+		"description": "統合コマンド・ライン・インターフェースおよび CLI プラグインなどのツールにアクセスできます。",
+		"img": "homepage/images/cli.svg",
+		"href": "cli/index.html"
+	}, {
+		"title": "アプリの管理",
+		"description": "Bluemix ユーザー・インターフェースのダッシュボードを使用して、アプリケーションおよびサービスの表示と管理を行うことができます。",
+		"img": "homepage/images/manage_apps.svg",
+		"href": "manageapps/mngapps.html"
+	}, {
+		"title": "モニターとロギング",
+		"description": "アプリケーション使用およびデータ・フローをたどって、デプロイメントの理解を深めることができます。",
+		"img": "homepage/images/monitor_log.svg",
+		"href": "monitor_log/monitoringandlogging.html"
+	}, {
+		"title": "トラブルシューティング",
+		"description": "プラットフォームに関する問題が発生した場合は、トラブルシューティング・タスクを実行して、行うべき処置を決定することができます。",
+		"img": "homepage/images/troubleshoot.svg",
+		"href": "troubleshoot/troubleshoot.html"
+	}, {
+		"title": "Bluemix のセキュリティー",
+		"description": "機能、インフラストラクチャー、運用のセキュリティーと、物理的セキュリティーを Bluemix がどのように提供するのかを理解できます。",
+		"img": "homepage/images/platform_security.svg",
+		"href": "security/index.html"
+	}, {
+		"title": "ハイブリッド",
+		"description": "専用およびオンプレミスのデプロイメント・モデルでサービスとして配信されます。",
+		"img": "homepage/images/hybrid.svg",
+		"href": "hybrid/index.html"
+	}, {
+		"title": "料金",
+		"description": "計算器を使用してコストを見積もることができ、使用量詳細ビューで実際のコストを確認することができます。",
+		"img": "homepage/images/pricing.svg",
+		"href": "pricing/index.html"
+	}, {
+		"title": "Architecture Center",
+		"description": "アーキテクチャーを参照して、ご使用のクラウド・アプリに最適のものを決定するのに役立てることができます。",
+		"img": "homepage/images/architectures.svg",
+		"href": "https://developer.ibm.com/architecture/"
+	}]
+
+}
+
