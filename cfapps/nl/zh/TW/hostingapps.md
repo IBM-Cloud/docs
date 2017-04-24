@@ -28,7 +28,7 @@ lastupdated: "2016-05-09"
 具有雲端功能的應用程式，在設計及建置應用程式時便已遵循雲端平台原則。具有雲端功能的應用程式可以使用雲端平台所提供的功能。
 
 如果在應用程式中觀察到下列所有原則，則應用程式具有雲端功能，而且可以移轉至 {{site.data.keyword.Bluemix_notm}}。
-如果應用程式中違反原則，則通常可以修改應用程式以遵守原則。
+如果應用程式違反原則，則通常可以修改應用程式以遵守原則。
 
 * 不要直接將應用程式撰寫為特定拓蹼。
 
@@ -64,7 +64,7 @@ lastupdated: "2016-05-09"
 
   請不要使用需要額外配置的模糊通訊協定進行備援。
 
-  根據標準通訊協定的應用程式將配置項目委派給平台時會較具復原力。標準通訊協定包括 HTTP、SSL、標準資料庫、佇列作業及 Web 服務連線。
+  根據標準通訊協定的應用程式在配置項目委派給平台時會較具復原力。標準通訊協定包括 HTTP、SSL、標準資料庫、佇列作業及 Web 服務連線。
 
 * 不要依賴 OS 特有特性
 
@@ -78,7 +78,7 @@ lastupdated: "2016-05-09"
 
   最起碼要將應用程式安裝擷取為一組統一且與作業系統無關的 Script。請將應用程式安裝保持到最小並為可攜式，以適合不同的自動化技術。此外，也請將應用程式安裝所需的相依關係降到最少。
 
-如需具有雲端功能的應用程式的相關資訊，請參閱 [The 12-factor application ![外部鏈結圖示](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}。
+如需具有雲端功能的應用程式的相關資訊，請參閱 [The Twelve-Factor App ![外部鏈結圖示](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}。
 
 ##移轉應用程式
 {: #ht_hostapp}
@@ -186,5 +186,5 @@ services = JSON.parse(ENV['VCAP_SERVICES'], :symbolize_names => true)
 * [Virtual Machines](/docs/virtualmachines/vm_index.html)
 * [開始使用 Delivery Pipeline](/docs/services/DeliveryPipeline/index.html)
 * [使用 IBM Eclipse Tools for Bluemix 來部署應用程式](/docs/manageapps/eclipsetools/eclipsetools.html)
-* [The twelve-factor app ![外部鏈結圖示](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}
+* [The Twelve-Factor App ![外部鏈結圖示](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}
 * [Reaching enterprise backend with Bluemix Secure Gateway via console ![外部鏈結圖示](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}
