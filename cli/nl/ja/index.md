@@ -60,9 +60,9 @@ bluemix plugin install plugin_name -r bluemix-bx
 {: codeblock}
 
 
-| *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *IBM Containers*  |
+| *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *IBM Bluemix Container Service*  |
 |-----|-----|-----|
-| プラグイン名: active-deploy<br> [資料の表示](/docs/services/ActiveDeploy/cli.html#cli) | プラグイン名: auto-scaling <br> [資料の表示](/docs/cli/plugins/auto-scaling/index.html) |  プラグイン名: IBM-Containers  <br> [資料の表示](/docs/cli/plugins/containers/index.html) |
+| プラグイン名: active-deploy<br> [資料の表示](/docs/services/ActiveDeploy/cli.html#cli) | プラグイン名: auto-scaling <br> [資料の表示](/docs/cli/plugins/auto-scaling/index.html) |  プラグイン名: container-service  <br> [資料の表示](/docs/containers/cs_cli_devtools.html) |
 {: caption="Table 2. Plug-ins" caption-side="top"}
 
 |  *プライベート・ネットワーク・ピアリング* | *VPN*  |
