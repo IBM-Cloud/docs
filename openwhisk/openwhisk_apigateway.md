@@ -15,19 +15,17 @@ lastupdated: "2017-04-24"
 # API Gateway
 {: #openwhisk_apigateway}
 
-API Gateway are out from experimental phase.
+OpenWhisk actions can benefit from being managed by API management.
 
-[Web Actions](openwhisk_webactions.html) allows you to invoke an action with HTTP methods other than POST and without the action's authorization API key.
+The API Gateway acts as a proxy to [Web Actions](openwhisk_webactions.html) and providing them with additional features features including HTTP method routing, security and rate limiting policies, view API usage and response logs, and define API sharing policies.
 
-As a result of user feedback, Web Actions are the programming model chosen to build OpenWhisk actions capable of handling HTTP events.
-
-The API Gateway acts as a proxy to Web Actions and providing them with additional features features including HTTP method routing, rate limiting, oauth token validation, API keys, and more.
+Web Actions allows you to invoke an action with HTTP methods other than POST and in a public way without the action's authorization API key.
 
 For more information on API Gateway feature you can read the [api management documentation](/docs/apis/management/manage_openwhisk_apis.html#manage_openwhisk_apis)
 
 ## Create APIs from OpenWhisk web actions using your Browser.
 
-With API management, you can expose an OpenWhisk action as an API. After you define the API, you can apply security and rate limiting policies, view API usage and response logs, and define API sharing policies.
+With API Gateway, you can expose an OpenWhisk action as an API. After you define the API, you can apply security and rate limiting policies, view API usage and response logs, and define API sharing policies.
 In the OpenWhisk Dashboard, click the [APIs tab](https://console.ng.bluemix.net/openwhisk/apimanagement).
 
 
@@ -248,5 +246,3 @@ postBooks                 post         Book Club       https://service.us.apicon
 putBooks                   put         Book Club       https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/21ef035/club/books
 deleteBooks             delete         Book Club       https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/21ef035/club/books
 ```
-
-- **Note**: The `wsk api-experimental` CLI command will be available for a short period of time to allow you to migrate and delete your existing APIs.
