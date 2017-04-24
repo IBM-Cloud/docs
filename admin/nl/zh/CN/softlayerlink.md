@@ -23,7 +23,7 @@ lastupdated: "2017-01-11"
 您可以通过将现有 {{site.data.keyword.Bluemix_notm}} 和 SoftLayer 缴费账户链接在一起，以联合这两个帐户。链接帐户时，您将通过 {{site.data.keyword.Bluemix_notm}} 同时对 {{site.data.keyword.Bluemix_notm}} 和 SoftLayer 资源进行记帐。
 
 
-**注意：**{{site.data.keyword.Bluemix_notm}} 预订帐户无法与 SoftLayer 帐户链接。要访问“基础架构”仪表板，您必须创建“现买现付”帐户，即自动与 SoftLayer 帐户链接的第二个帐户。然后，您将收到两个发票，每个 {{site.data.keyword.Bluemix_notm}} 帐户一个。虽然将在不同的“现买现付”帐户中对基础架构资源开具发票，但是资源可与预订帐户中的应用程序和服务一起使用。例如，如果您在预订帐户中激活 Watson 服务，那么您可以复制服务凭证，然后将凭证添加到源自“现买现付”帐户的裸机应用程序。
+**注意：**{{site.data.keyword.Bluemix_notm}} 预订帐户和在自动帐户链接之前创建的旧 {{site.data.keyword.Bluemix_notm}}“现买现付”帐户无法与 SoftLayer 帐户链接。要访问“基础架构”仪表板，您必须创建“现买现付”帐户，即自动与 SoftLayer 帐户链接的第二个帐户。然后，您将收到两个发票，每个 {{site.data.keyword.Bluemix_notm}} 帐户一个。虽然将在不同的“现买现付”帐户中对基础架构资源开具发票，但是资源可与预订帐户中的应用程序和服务一起使用。例如，如果您在预订帐户中激活 Watson 服务，那么您可以复制服务凭证，然后将凭证添加到源自“现买现付”帐户的裸机应用程序。
 {:shortdesc}
 
 ## 升级到 {{site.data.keyword.Bluemix_notm}}“现买现付”帐户

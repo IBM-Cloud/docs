@@ -1,12 +1,9 @@
 ---
 
-
-
 copyright:
 
   years: 2015, 2016
-lastupdated: "2016-12-05"
-
+lastupdated: "2017-03-01"
 
 ---
 
@@ -15,20 +12,24 @@ lastupdated: "2016-12-05"
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-
-# Gerenciando membros da equipe e funções
+# Gerenciando usuários e funções de acesso a serviços do Cloud Foundry no Diretório da equipe
 {: #userroles}
 
-A partir da página de **Diretório da equipe** para a sua conta, é possível gerenciar membros da equipe existentes e suas funções em sua organização e espaços, bem como convidar novos
-membros da equipe. Para acessar o diretório da equipe de sua conta, clique em **Conta** > **Diretório de equipe**. 
-{:shortdesc}
+É possível gerenciar o acesso a serviços do Cloud Foundry designado aos usuários da plataforma
+na página Diretório da equipe para sua conta. É possível gerenciar membros da equipe existentes e suas funções
+em sua organização e espaços.{:shortdesc}
 
-Proprietários da conta executam todas as operações nas organizações e espaços, incluindo o gerenciamento de membros da equipe e de suas funções designadas. Gerenciadores de organização têm acesso para
-convidar membros da equipe e gerenciar funções. Gerenciadores de
+É possível acessar o Diretório da equipe para sua conta de um link na parte superior da nova página
+Usuários. Para acessar a página Usuários, no menu do {{site.data.keyword.Bluemix_notm}}, clique
+em **Gerenciar** &gt; **Conta** &gt; **Usuários**.
+
+Os proprietários da conta executam todas as operações nas organizações e espaços, incluindo o
+gerenciamento de membros da equipe e de suas funções designadas. Os gerenciadores de organização têm acesso
+para gerenciar funções. Gerenciadores de
 espaço podem usar a página **Gerenciar organizações** para incluir membros da conta existente no espaço e ajustar as suas
 funções. Verifique as informações a seguir, para saber mais sobre funções.
 
-## Funções
+## Funções de usuário
 {: #userrolesinfo}
 
 No nível de conta, há duas funções que permitem o acesso a diferentes recursos de gerenciamento de conta:
@@ -42,10 +43,11 @@ serviço e gerenciar organizações e espaços. |
 diretório da equipe, um membro pode apenas visualizar os membros da equipe dentro da conta. |
 {:caption="Table 1. Account roles and permissions" caption-side="top"}
 
- Todos os novos membros da equipe são incluídos como um membro da conta. É possível designar funções de organização e espaço para convidados, a fim de ativar visualizações e permissões específicas no
+Todos os novos membros da equipe são incluídos como um membro da conta. É possível designar funções de organização e espaço para convidados, a fim de ativar visualizações e permissões específicas no
 {{site.data.keyword.Bluemix_notm}}. Novos membros da equipe incluídos em uma organização, exceto em um ambiente local ou dedicado, são designados à função de organização de auditor por padrão. Para um espaço específico, é possível optar por
-designar a função de desenvolvedor ou auditor para convidados. Logo que os seus convidados aceitarem o convite e se associarem ao {{site.data.keyword.Bluemix_notm}}, será possível editar as suas
-funções na página **Diretório da equipe**.
+designar a função de desenvolvedor ou auditor para convidados. Quando os seus convidados aceitam o
+convite e se associam ao {{site.data.keyword.Bluemix_notm}}, é possível editar suas funções na página
+Diretório da equipe.
 
 As funções a seguir podem ser designadas no nível de organização:
 
@@ -74,90 +76,51 @@ espaço. |
 **Nota**: membros da equipe que são designados com a função de espaço de gerenciador ou desenvolvedor podem acessar a variável de ambiente VCAP_SERVICES. No entanto, um membro da
 equipe designado com a função de auditor não pode acessar VCAP_SERVICES.
 
-## Ajustando a visibilidade do diretório da equipe
-{: #teamdirectoryvisibility}
+## Editando Funções
+{: #editinguserroles}
 
-Dependendo de como você tem as suas contas e organizações do {{site.data.keyword.Bluemix_notm}} configuradas, talvez você queira mudar a visibilidade da página de diretório da equipe. Por
-padrão, todos os membros da equipe em sua conta podem ver a lista completa de membros da equipe de conta, incluindo todos os membros de todas as organizações dentro da conta. Talvez você tenha preocupações de
-privacidade ou razões de segurança que o avisem para ajustar a visibilidade da página de diretório da equipe. Você tem duas opções para configurar a visibilidade da página de diretório da equipe: todos os
-membros da equipe ou só você como o proprietário da conta.
+Os proprietários da conta e os gerenciadores de organização podem editar funções de organização e de espaço
+para membros da equipe existentes na página Diretório da equipe.
 
-Para mudar a visibilidade da página de diretório da equipe conclua as etapas a seguir:
+1. Localize e selecione o membro da equipe cujas funções deseja editar. 
+2. Clique em **Visualizar funções**.
+3. Selecione ou limpe as seleções de função de espaço, para modificar o acesso ao espaço para o membro da equipe.
+4. Clique **Salvar.**
 
-1. Clique em **Conta** &gt; **Diretório de equipe**.
-2. Para a opção **Visibilidade para**, clique na seleção atual para visualizar as opções.
-3. Em seguida, selecione **Todos** ou **Somente eu** com base nas necessidades atuais para a sua conta.
-4. Então clique em **Salvar**.
+Os gerenciadores de espaço podem editar funções para os membros da equipe em seu espaço.
+
+1. Localize e selecione o membro da equipe cujas funções deseja editar. 
+2. Clique em **Visualizar funções**.
+3. Clique em **Visualizar espaços**.
+4. Selecione ou limpe a opção de função de espaço para a função que você deseja incluir ou remover para o membro da equipe.
+5. Então clique em **Salvar**.
 
 ## Convidando membros da equipe
 {: #inviteteammembers}
 
-Proprietários da conta e gerenciadores de organização podem convidar membros da equipe para as organizações a partir da página Convidar Membros da Equipe. Quando você inclui novos membros da equipe, exceto em um ambiente local ou dedicado, eles são designados às funções de auditor automaticamente. É possível mudar as funções posteriormente, na página Diretório da Equipe. Para convidar um membro da equipe, conclua estas etapas:
+Será possível incluir um usuário usando a janela Diretório da equipe se o ID do usuário não for uma conta
+vinculada e se você for um proprietário da conta ou um gerenciador de organização. Quando você inclui novos membros da equipe, exceto em um ambiente local ou dedicado, eles são designados às funções de auditor automaticamente. É possível mudar as funções posteriormente, na página Diretório da equipe. Para convidar um membro da equipe, conclua estas etapas:
 
 <ol>
-<li>Clique em **Conta** &gt; **Convidar membros da equipe**.</li>
-<li>Selecione a organização para a qual deseja convidar membros da equipe.</li>
-<li>Clique em **Avançar**.</li>
-<li>Selecione os espaços para os quais deseja permitir acesso aos seus membros da equipe.</li>
-<li>Selecione a função a ser designada para os espaços selecionados na organização.</li>
+<li>Clique em **Convidar um usuário**.</li>
+<li>Insira o endereço de e-mail do usuário que deseja convidar.</li>
+<li>Selecione a função a ser designada para a organização.</li>
+<li>Selecione a função a ser designada para um ou mais espaços selecionados na organização.</li>
 <li>Selecione a opção para confirmar que você assume a responsabilidade financeira por todos os encargos incorridos na conta.</li>
-<li>Insira o endereço de e-mail para um membro da equipe individual ou endereços de e-mail para múltiplos membros da equipe:
-<ul>
-<li>Para incluir um membro da equipe único, insira o endereço de e-mail e clique em **Enviar**.</li>
-<li>Para incluir mais de um membro da equipe, clique em **Convidar todos eles de uma vez**. Insira os endereços de e-mail usando uma lista separada por vírgula, espaços ou quebras de linha. Em seguida, clique em **Avançar**, para verificar os endereços de e-mail ao quais o convite deve ser enviado e clique em **Enviar**.</li>
-</ul>
-</li>
+<li>Clique em **Convidar**.</li>
 </ol>
 
-Clique em **Visualizar pendente**, para verificar se os convites estão pendentes ou aceitos. É possível optar por reenviar o e-mail de convite ou cancelar o convite para um convite
-pendente a qualquer momento.
-
-
-### Incluindo membros da equipe do SoftLayer
-
-Se você tiver uma conta do SoftLayer vinculada à sua conta do Bluemix, será possível incluir
-os membros da sua equipe do SoftLayer.
-
-1. Acesse **Conta** > **Convidar membros da equipe**.  
-2. Clique em **Incluir** na seção **Incluir membros da equipe do SoftLayer** para autenticar em sua conta do SoftLayer e visualizar uma lista de membros da equipe a partir de sua conta do SoftLayer.
-
-Incluir membros da equipe em sua conta do Bluemix não concede a eles acesso à infraestrutura do Bluemix. Para fornecer aos usuários acesso ao painel Infraestrutura, acesse **Infraestrutura** > **Conta** > **Usuários** e clique no link **Incluir usuário**. Deve-se ter permissão para incluir usuários.
-
-Para obter mais informações sobre a inclusão de membros da equipe da sua conta do SoftLayer,
-veja [Convidando membros da equipe do SoftLayer para o Bluemix](https://console.ng.bluemix.net/docs/admin/softlayerlink.html#invite_users).
-
-
-## Editando Funções
-{: #editinguserroles}
-
-Proprietários da conta e gerenciadores de organização podem editar funções de organização e espaço para membros da equipe existentes na página **Diretório da equipe**.
-
-1. Clique em **Conta** &gt; **Diretório de equipe**.
-2. Localize o membro da equipe cujas funções você deseja editar.
-3. Clique em **Visualizar funções**.
-4. Selecione ou limpe as seleções de função de organização, para modificar o acesso à organização para o membro da equipe.
-5. Clique em **Visualizar espaços**, para incluir ou remover funções de espaço.
-6. Selecione ou limpe as seleções de função de espaço, para modificar o acesso ao espaço para o membro da equipe.
-7. Clique em **Fechar espaços**.
-8. Clique em **Salvar** no final da página.
-
-Gerenciadores de espaço podem editar funções para os membros da equipe em seu espaço na página **Gerenciar organizações**.
-
-1. Clique em **Conta** &gt; **Gerenciar organizações**.
-2. Localize a organização na qual o seu espaço está.
-3. Clique em **Visualizar Detalhes**.
-4. Localize o seu espaço e clique em **Editar espaço**.
-5. Selecione a guia **Usuários**.
-6. Selecione ou limpe a opção de função de espaço para a função que você deseja incluir ou remover para o membro da equipe.
-7. Então clique em **Salvar**.
+O usuário é incluído na lista de membros da equipe exibida para a conta.
 
 ## Removendo membros da equipe
 {: #removingteammembers}
 
-Proprietários de conta e gerenciadores de organização podem remover membros da equipe de uma conta usando a página **Diretório**. Para remover um membro da equipe, conclua as etapas a seguir:
+Se o usuário foi incluído no Diretório da equipe e não for uma conta vinculada, os proprietários
+da conta e os gerenciadores de organização poderão remover membros da equipe de uma conta na página Diretório da equipe. Para remover um membro da equipe, conclua as etapas a seguir:
 
-1. Clique em **Conta** &gt; **Diretório de equipe**.
-3. Localize o usuário que você deseja remover da conta e clique no ícone **Remover** ![ícone Remover](../icons/icon_remove_teamuser.svg).
-4. Na janela **Remover usuário**, clique em **Remover** para confirmar que você deseja remover o usuário especificado da conta.
+1. Localize o usuário que deseja remover e clique no ícone **Remover usuário**
+![ícone Remover](../icons/icon_remove_teamuser.svg).
+2. Clique em **Remover** para
+confirmar que você deseja remover o usuário especificado da conta.
 
 O usuário é removido da lista de membros da equipe exibida para a conta.

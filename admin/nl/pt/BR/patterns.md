@@ -210,7 +210,7 @@ Ao adotar uma arquitetura de organização única, o nível de segregação e ab
   espaços para aplicativos que estão em produção.
 * Se o limite do ciclo de vida de entrega não for suficiente, será possível alcançar mais segregação definindo um ou mais espaços por LOB e fase de entrega.
 * Identifique se será necessário aplicar limites para diferentes grupos de usuários.
-Por exemplo, seus desenvolvedores não podem desenvolver o aplicativo e testá-lo. Você requer um conjunto diferente de usuários para testar o aplicativo. Neste cenário, você cria dois espaços, um para os
+  Por exemplo, seus desenvolvedores não podem desenvolver o aplicativo e testá-lo. Você requer um conjunto diferente de usuários para testar o aplicativo. Neste cenário, você cria dois espaços, um para os
   desenvolvedores do aplicativo e um para os testadores do aplicativo. Em seguida, concede a cada conjunto de usuários o acesso ao espaço correto.
 
 Ao implementar uma arquitetura de organização múltipla, é possível segregar cada organização pelo LOB, o ciclo de vida de entrega ou ambos. É possível, então, definir

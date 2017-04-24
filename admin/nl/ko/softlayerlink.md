@@ -22,7 +22,7 @@ lastupdated: "2017-01-11"
 
 계정을 연결하여 기존 {{site.data.keyword.Bluemix_notm}} 및 SoftLayer 청구 계정을 통합할 수 있습니다. 계정을 연결하면, {{site.data.keyword.Bluemix_notm}} 및 SoftLayer 리소스 모두가 {{site.data.keyword.Bluemix_notm}}를 통해 청구됩니다. 
 
-**주의:** {{site.data.keyword.Bluemix_notm}} 구독 계정을 SoftLayer 계정과 연결할 수 없습니다. 인프라 대시보드에 액세스하려면 SoftLayer 계정과 자동으로 연결되는 두 번째 계정인 종량과금제 계정을 작성해야 합니다. {{site.data.keyword.Bluemix_notm}} 계정에 대해 한 개, 즉 두 개의 송장을 수신합니다. 인프라 리소스에 개별 종량과금제 계정에서 송장을 보내는 경우에도, 구독 계정의 앱과 서비스에 리소스를 사용할 수 있습니다. 예를 들어, 구독 계정에서 Watson 서비스를 활성화하는 경우, 서비스 신임 정보를 복사하여 종량과금제 계정에서 제공되는 베어메탈 애플리케이션에 추가할 수 있습니다.
+**주의:** 자동 계정 연결 전에 작성된 {{site.data.keyword.Bluemix_notm}} 구독 계정 및 이전 {{site.data.keyword.Bluemix_notm}} 종량과금제 계정은 SoftLayer 계정과 연결할 수 없습니다. 인프라 대시보드에 액세스하려면 SoftLayer 계정과 자동으로 연결되는 두 번째 계정인 종량과금제 계정을 작성해야 합니다. {{site.data.keyword.Bluemix_notm}} 계정에 대해 한 개, 즉 두 개의 송장을 수신합니다. 인프라 리소스에 개별 종량과금제 계정에서 송장을 보내는 경우에도, 구독 계정의 앱과 서비스에 리소스를 사용할 수 있습니다. 예를 들어, 구독 계정에서 Watson 서비스를 활성화하는 경우, 서비스 신임 정보를 복사하여 종량과금제 계정에서 제공되는 베어메탈 애플리케이션에 추가할 수 있습니다.
 {:shortdesc}
 
 ## {{site.data.keyword.Bluemix_notm}} 종량과금제 계정으로 업그레이드
