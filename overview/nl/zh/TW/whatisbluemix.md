@@ -3,7 +3,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-03-21"
 ---
 
 {:shortdesc: .shortdesc}
@@ -75,10 +75,12 @@ lastupdated: "2017-01-11"
 
 當您存取 {{site.data.keyword.Bluemix_notm}} 主控台時，功能表列會顯示用來註冊、登入、存取文件及存取型錄的鏈結或按鈕。登入之後，功能表列會包含漢堡式功能表 ![「漢堡式」圖示](../icons/icon_hamburger.svg) 及其他鏈結（視帳戶類型而定）：
 
-* 如果您是不熟悉 {{site.data.keyword.Bluemix_notm}} 的使用者，則可以使用漢堡式功能表 ![「漢堡式」圖示](../icons/icon_hamburger.svg) 來切換「應用程式」、「服務」或「基礎架構」儀表板。會顯示支援及帳戶選項的鏈結，而且您可以使用**型錄**鏈結來存取 {{site.data.keyword.Bluemix_notm}}、運算及基礎架構服務。 
-* 如果您是現有使用者，並且已鏈結 {{site.data.keyword.Bluemix_notm}} 及 {{site.data.keyword.BluSoftlayer}} 帳戶，則可以使用漢堡式功能表 ![「漢堡式」圖示](../icons/icon_hamburger.svg) 來切換「應用程式」、「服務」或「基礎架構」儀表板。會顯示支援及帳戶選項的鏈結，而且您可以使用**型錄**鏈結來存取 {{site.data.keyword.Bluemix_notm}}、運算及基礎架構服務。 
-* 如果您是具有 {{site.data.keyword.Bluemix_notm}} 帳戶的現有使用者，則可以使用漢堡式功能表 ![「漢堡式」圖示](../icons/icon_hamburger.svg) 來切換「應用程式」與「服務」儀表板。會顯示支援及帳戶選項的鏈結，而且您可以使用**型錄**鏈結來存取 {{site.data.keyword.Bluemix_notm}} 及運算服務。 
-* 如果您是具有 {{site.data.keyword.BluSoftlayer}} 帳戶的現有使用者，但尚未將帳戶鏈結至 {{site.data.keyword.Bluemix_notm}}，則功能表列會顯示先前已在 {{site.data.keyword.BluSoftlayer}} 中提供的鏈結（例如 KnowledgeLayer 說明的存取、聯絡選項、通知、未解決問題單及登入）。此外，還會顯示「基礎架構」儀表板的鏈結，以及支援及帳戶選項的鏈結。 
+* 如果您是 {{site.data.keyword.Bluemix_notm}} 新手使用者，則可以使用漢堡式功能表 ![「漢堡式」圖示](../icons/icon_hamburger.svg) 來切換「應用程式」、「服務」與「基礎架構」儀表板。您可以使用**型錄**鏈結，來存取平台及基礎架構服務。同時會顯示支援和帳戶、計費和使用情形，以及安全管理選項的鏈結。
+* 如果您是具有 {{site.data.keyword.Bluemix_notm}} 帳戶的現有使用者，則可以使用漢堡式功能表 ![「漢堡式」圖示](../icons/icon_hamburger.svg) 來切換「應用程式」與「服務」儀表板。您可以使用**型錄**來存取平台及基礎架構服務，而且會顯示平台層次支援和帳戶、計費和使用情形，以及安全管理選項的鏈結。
+* 如果您是現有使用者，並且已鏈結 {{site.data.keyword.Bluemix_notm}} 及 {{site.data.keyword.BluSoftlayer}} 帳戶，則可以使用漢堡式功能表 ![「漢堡式」圖示](../icons/icon_hamburger.svg) 來切換「應用程式」、「服務」與「基礎架構」儀表板。您也可以使用**型錄**鏈結，來存取平台及基礎架構服務。
+  * 當您位在「應用程式」及「服務」儀表板時，功能表列會包括平台層次資源的鏈結，例如 {{site.data.keyword.Bluemix_notm}} 文件、支援和帳戶，以及安全管理選項。您也可以存取基礎架構層次計費選項的鏈結。 
+  * 當您位在「基礎架構」儀表板時，功能表列會顯示基礎架構層次資源的鏈結，例如 KnowledgeLayer 說明、聯絡選項、通知、未解決問題單，以及支援和帳戶管理選項。
+* 如果您是具有未鏈結至 {{site.data.keyword.Bluemix_notm}} 的 {{site.data.keyword.BluSoftlayer}} 帳戶的現有使用者，則可以使用漢堡式功能表 ![「漢堡式」圖示](../icons/icon_hamburger.svg) 來存取「基礎架構」儀表板及**型錄**鏈結，以存取基礎架構服務。功能表列也包括 KnowledgeLayer 說明、聯絡選項、通知、未解決問題單，以及支援和帳戶選項的鏈結。
 
 ## {{site.data.keyword.Bluemix_notm}} Cloud Foundry 架構
 {: #architecture}
@@ -165,13 +167,14 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 | 美國南部地區 | 美國達拉斯 | ng | api.ng.bluemix.net | console.ng.bluemix.net |
 | 英國地區 | 英國倫敦 | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
 | 雪梨地區 | 澳洲雪梨 | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
+| 德國地區 | 德國法蘭克福 | eu-de | api.eu-de.bluemix.net | console.eu-de.bluemix.net |
 {: caption="表 1. {{site.data.keyword.Bluemix_notm}} 地區清單" caption-side="top"}
 
 
 ### {{site.data.keyword.Bluemix_notm}} 備援
 {: #resiliency}
 
-{{site.data.keyword.Bluemix_notm}} 的設計旨在於管理可擴充且具復原力的應用程式及應用程式構件，這些應用程式與應用程式構件可擴充以符合您的需要、維持高度可用性，而且可以快速從問題中回復。{{site.data.keyword.Bluemix_notm}} 會隔開追蹤互動狀態的元件（有狀態）與不追蹤互動狀態的元件（無狀態）。這項分隔容許 {{site.data.keyword.Bluemix_notm}} 視需要彈性地移動應用程式，以達到可擴充性與備援。
+{{site.data.keyword.Bluemix_notm}} 的設計旨在於管理可擴充且具復原力的應用程式及應用程式構件，這些應用程式與應用程式構件可擴充以符合您的需要、維持高度可用性，而且可以快速從問題回復。{{site.data.keyword.Bluemix_notm}} 會隔開追蹤互動狀態的元件（有狀態）與不追蹤互動狀態的元件（無狀態）。這項分隔容許 {{site.data.keyword.Bluemix_notm}} 視需要彈性地移動應用程式，以達到可擴充性與備援。
 
 您的應用程式可以有一個以上的實例處於執行中狀態。如果單一應用程式有多個實例，則該應用程式只會上傳一次。不過，{{site.data.keyword.Bluemix_notm}} 會部署所要求的應用程式實例數，並將它們盡可能地分散至眾多虛擬伺服器。
 

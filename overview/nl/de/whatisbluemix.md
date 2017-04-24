@@ -3,7 +3,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-03-21"
 ---
 
 {:shortdesc: .shortdesc}
@@ -82,10 +82,12 @@ werden. Infrastrukturangebote, z. B. Bare-Metal-Server, virtuelle Server und Clo
 
 Wenn Sie auf die {{site.data.keyword.Bluemix_notm}}-Konsole zugreifen, werden in der Menüleiste Links oder Schaltflächen für die Registrierung, Anmeldung, Zugriffsdokumentation und den Zugriff auf den Katalog angezeigt. Nach der Anmeldung enthält die Menüleiste ein Hamburger-Menü ![Symbol 'Hamburger'](../icons/icon_hamburger.svg) und zusätzliche Links, abhängig vom Kontotyp:
 
-* Wenn Sie ein neuer {{site.data.keyword.Bluemix_notm}}-Benutzer sind, können Sie das Hamburger-Menü ![Symbol 'Hamburger'](../icons/icon_hamburger.svg) zum Wechseln zwischen den Dashboards für Apps, Services oder die Infrastruktur verwenden. Es werden Links zu Support- und Kontooptionen angezeigt und Sie können den Link **Katalog** für den Zugriff auf {{site.data.keyword.Bluemix_notm}}-, Rechen- und Infrastrukturservices verwenden. 
-* Wenn Sie ein bereits bestehender Benutzer sind und Links zu Ihrem {{site.data.keyword.Bluemix_notm}}- und Ihrem {{site.data.keyword.BluSoftlayer}}-Konto erstellt haben, können Sie mithilfe des Hamburger-Menüs ![Symbol 'Hamburger'](../icons/icon_hamburger.svg) zwischen den Dashboards für Apps, Services oder die Infrastruktur wechseln. Es werden Links zu Support- und Kontooptionen angezeigt und Sie können den Link **Katalog** für den Zugriff auf {{site.data.keyword.Bluemix_notm}}-, Rechen- und Infrastrukturservices verwenden. 
-* Wenn Sie ein bereits bestehender Benutzer mit einem {{site.data.keyword.Bluemix_notm}}-Konto sind, können Sie das Hamburger-Menü ![Symbol 'Hamburger'](../icons/icon_hamburger.svg) zum Wechseln zwischen den Dashboards für Apps und für Services verwenden. Es werden Links zu Support- und Kontooptionen angezeigt und Sie können den Link **Katalog** für den Zugriff auf {{site.data.keyword.Bluemix_notm}}- und Rechenservices verwenden. 
-* Wenn Sie ein bereits bestehender Benutzer mit einem {{site.data.keyword.BluSoftlayer}}-Konto sind und Sie Ihr Konto nicht mit {{site.data.keyword.Bluemix_notm}} verlinkt haben, werden in der Menüleiste Links angezeigt, die zuvor in {{site.data.keyword.BluSoftlayer}} verfügbar waren, z. B. für den Zugriff auf die KnowledgeLayer-Hilfe, Kontaktoptionen, Benachrichtigungen, offene Tickets und die Anmeldung. Zusätzlich werden ein Link zum Infrastruktur-Dashboard und Links zu den Support- und Kontooptionen angezeigt. 
+* Wenn Sie ein neuer {{site.data.keyword.Bluemix_notm}}-Benutzer sind, können Sie das Hamburger-Menü ![Symbol 'Hamburger'](../icons/icon_hamburger.svg) zum Wechseln zwischen den Dashboards für Apps, Services und die Infrastruktur verwenden. Über den Link **Katalog** können Sie auf Plattform- und Infrastrukturservices zugreifen. Darüber hinaus werden Links zu Support und Konto, Abrechnung und Nutzung sowie zu Optionen des Sicherheitsmanagements angezeigt. 
+* Wenn Sie ein bereits bestehender Benutzer mit einem {{site.data.keyword.Bluemix_notm}}-Konto sind, können Sie das Hamburger-Menü ![Symbol 'Hamburger'](../icons/icon_hamburger.svg) zum Wechseln zwischen den Dashboards für Apps und für Services verwenden. Über den Link **Katalog** können Sie auf Plattform- und Infrastrukturservices zugreifen, und darüber hinaus werden Links zu Support und Konto auf Plattformebene, Abrechnung und Nutzung sowie zu Optionen des Sicherheitsmanagements angezeigt. 
+* Wenn Sie ein bereits bestehender Benutzer sind und Links zu Ihrem {{site.data.keyword.Bluemix_notm}}-Konto und Ihrem Konto für {{site.data.keyword.BluSoftlayer}} erstellt haben, können Sie mithilfe des Hamburger-Menüs ![Symbol 'Hamburger'](../icons/icon_hamburger.svg) zwischen den Dashboards für Apps, Services und die Infrastruktur wechseln. Über den Link **Katalog** können Sie außerdem auf Plattform- und Infrastrukturservices zugreifen. 
+  * In den Dashboards 'Apps' und 'Services' enthält die Menüleiste Links zu den Ressourcen der Plattformebene, wie zum Beispiel zur {{site.data.keyword.Bluemix_notm}}-Dokumentation, zum Support sowie zu den Konto- und Sicherheitsmanagementoptionen. Sie haben darüber hinaus Zugriff auf Links zu den Abrechnungsoptionen auf Infrastrukturebene.  
+  * Im Dashboard 'Infrastruktur' zeigt die Menüleiste Links zu Ressourcen auf Infrastrukturebene an, wie zum Beispiel die KnowledgeLayer-Hilfe, Kontaktoptionen, Benachrichtigungen, offene Tickets sowie Support- und Kontenmanagementoptionen. 
+* Wenn Sie ein bestehender Benutzer mit einem Konto für {{site.data.keyword.BluSoftlayer}} sind, das nicht mit {{site.data.keyword.Bluemix_notm}} verlinkt ist, können Sie über das Hamburger-Menü ![Symbol 'Hamburger'](../icons/icon_hamburger.svg) auf das Dashboard 'Infrastruktur' sowie auf den Link **Katalog** zugreifen, um auf Infrastrukturservices zuzugreifen. Die Menüleiste enthält außerdem Links zur KnowledgeLayer-Hilfe, zu Kontaktoptionen, Benachrichtigungen, offenen Tickets sowie zu Support- und Kontooptionen. 
 
 ## {{site.data.keyword.Bluemix_notm}} Cloud Foundry-Architektur
 {: #architecture}
@@ -197,7 +199,8 @@ stehen die folgenden Regionen und Regionspräfixe zur Verfügung.
 | Region 'Vereinigte Staaten (Süden)' | Dallas, US | ng | api.ng.bluemix.net | console.ng.bluemix.net |
 | Region 'United Kingdom' | London, England | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
 | Region 'Sydney' | Sydney, Australia | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
-{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} region list" caption-side="top"}
+| Region 'Deutschland' | Frankfurt, Deutschland | eu-de | api.eu-de.bluemix.net | console.eu-de.bluemix.net |
+{: caption="Tabelle 1. {{site.data.keyword.Bluemix_notm}}-Regionsliste" caption-side="top"}
 
 
 ### Ausfallsicherheit von {{site.data.keyword.Bluemix_notm}}
@@ -311,9 +314,9 @@ Die folgende Liste enthält die für {{site.data.keyword.Bluemix_notm}} mindeste
 
 Cloud Foundry-Befehlszeilenschnittstelle, Version 6.5.1 oder höher 
 
-# Zugehörige Links
+# rellinks
 {: #rellinks}
-## Allgemein
+## general
 {: #general}
 * [Was ist {{site.data.keyword.Bluemix_notm}} ![Symbol für externen Link](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
 * [Einführung ![Symbol für externen Link](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/getting-started/){:new_window}

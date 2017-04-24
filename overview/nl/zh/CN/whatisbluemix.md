@@ -3,7 +3,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-03-21"
 ---
 
 {:shortdesc: .shortdesc}
@@ -75,10 +75,12 @@ lastupdated: "2017-01-11"
 
 访问 {{site.data.keyword.Bluemix_notm}} 控制台时，菜单栏会显示多个链接或按钮，可用于注册、登录、访问文档和访问目录。登录后，根据您的帐户类型，菜单栏会包含“汉堡包”菜单 ![“汉堡包”图标](../icons/icon_hamburger.svg) 和其他链接：
 
-* 如果您是新 {{site.data.keyword.Bluemix_notm}} 用户，那么可以使用“汉堡包”菜单 ![“汉堡包”图标](../icons/icon_hamburger.svg) 来切换“应用程序”、“服务”或“基础架构”仪表板。将显示支持和帐户选项的链接，并且您可以使用**目录**链接来访问 {{site.data.keyword.Bluemix_notm}}、计算和基础架构服务。 
-* 如果您是现有用户并且已链接 {{site.data.keyword.Bluemix_notm}} 和 {{site.data.keyword.BluSoftlayer}} 帐户，那么可以使用“汉堡包”菜单 ![“汉堡包”图标](../icons/icon_hamburger.svg) 来切换“应用程序”、“服务”或“基础架构”仪表板。将显示支持和帐户选项的链接，并且您可以使用**目录**链接来访问 {{site.data.keyword.Bluemix_notm}}、计算和基础架构服务。 
-* 如果您是具有 {{site.data.keyword.Bluemix_notm}} 帐户的现有用户，那么可以使用“汉堡包”菜单 ![“汉堡包”图标](../icons/icon_hamburger.svg) 来切换“应用程序”和“服务”仪表板。将显示支持和帐户选项的链接，并且您可以使用**目录**链接来访问 {{site.data.keyword.Bluemix_notm}} 和计算服务。 
-* 如果您是具有 {{site.data.keyword.BluSoftlayer}} 帐户的现有用户，并且未将帐户链接到 {{site.data.keyword.Bluemix_notm}}，那么菜单栏会显示 {{site.data.keyword.BluSoftlayer}} 中先前可用的链接，如用于访问 KnowledgeLayer 帮助、联系人选项、通知、开具凭单和登录的链接。此外，还将显示“基础架构”仪表板的链接以及支持和帐户选项的链接。 
+* 如果您是新 {{site.data.keyword.Bluemix_notm}} 用户，那么可以使用“汉堡包”菜单 ![“汉堡包”图标](../icons/icon_hamburger.svg) 来切换“应用程序”、“服务”和“基础架构”仪表板。可以使用**目录**链接来访问平台和基础架构服务。此外，还将显示指向支持与帐户、记帐和使用情况以及安全管理选项的链接。
+* 如果您是具有 {{site.data.keyword.Bluemix_notm}} 帐户的现有用户，那么可以使用“汉堡包”菜单 ![“汉堡包”图标](../icons/icon_hamburger.svg) 来切换“应用程序”和“服务”仪表板。可以使用**目录**来访问平台和基础架构服务，并且会显示指向平台级别支持与帐户、记帐和使用情况以及安全管理选项的链接。
+* 如果您是现有用户并且已链接 {{site.data.keyword.Bluemix_notm}} 和 {{site.data.keyword.BluSoftlayer}} 帐户，那么可以使用“汉堡包”菜单 ![“汉堡包”图标](../icons/icon_hamburger.svg) 来切换“应用程序”、“服务”和“基础架构”仪表板。还可以使用**目录**链接来访问平台和基础架构服务。
+  * 当您位于“应用程序”和“服务”仪表板中时，菜单栏会包含指向平台级别资源的链接，例如 {{site.data.keyword.Bluemix_notm}} 文档、支持与帐户以及安全管理选项。您还可以访问指向基础架构级别记帐选项的链接。 
+  * 如果您位于“基础架构”仪表板中，那么菜单栏中会显示指向基础架构级别资源的链接，例如 KnowledgeLayer 帮助、联系人选项、通知、开具的凭单以及支持与帐户管理选项。
+* 如果您是具有未链接到 {{site.data.keyword.Bluemix_notm}} 的 {{site.data.keyword.BluSoftlayer}} 帐户的现有用户，那么可以使用“汉堡包”菜单 ![“汉堡包”图标](../icons/icon_hamburger.svg) 来访问“基础架构”仪表板以及用于访问基础架构服务的**目录**链接。菜单栏还包含指向 KnowledgeLayer 帮助、联系人选项、通知、开具的凭单以及支持与帐户选项。
 
 ## {{site.data.keyword.Bluemix_notm}} Cloud Foundry 体系结构
 {: #architecture}
@@ -164,6 +166,7 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 | 美国南部区域 | 美国达拉斯 | ng | api.ng.bluemix.net | console.ng.bluemix.net |
 | 英国区域 | 英国伦敦 | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
 | 悉尼区域 | 澳大利亚悉尼 | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
+| 德国区域 | 德国法兰克福 | eu-de | api.eu-de.bluemix.net | console.eu-de.bluemix.net |
 {: caption="表 1. {{site.data.keyword.Bluemix_notm}} 区域列表" caption-side="top"}
 
 
