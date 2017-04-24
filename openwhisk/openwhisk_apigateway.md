@@ -17,12 +17,13 @@ lastupdated: "2017-04-24"
 
 API Gateway are out from experimental phase.
 
-[Web Actions](webactions.md) allows you to invoke an action with HTTP methods other than POST and without the action's authorization API key.
+[Web Actions](openwhisk_webactions.html) allows you to invoke an action with HTTP methods other than POST and without the action's authorization API key.
 
 As a result of user feedback, Web Actions are the programming model chosen to build OpenWhisk actions capable of handling HTTP events.
 
-The API Gateway can be configured to proxy your Web Actions providing them with API Gateway features such as rate limiting, oauth token validation, API keys, and more. See [Create APIs from OpenWhisk actions](/docs/apis/management/manage_openwhisk_apis.html#manage_openwhisk_apis)
+The API Gateway acts as a proxy to Web Actions and providing them with additional features features including HTTP method routing, rate limiting, oauth token validation, API keys, and more.
 
+For more information on API Gateway feature you can read the [api management documentation](https://github.com/openwhisk/openwhisk-apigateway/blob/master/doc/management_interface.md)
 
 **Note:** The APIs you created using the `wsk api-experimental` will continue to work for a short period, however you should begin migrating your APIs to web actions and reconfigure your existing apis using the new CLI command `wsk api`.
 
@@ -69,7 +70,7 @@ Note: If the command errors requiring single sign on (sso), this is not currentl
 4. Let's give it a try by sending a HTTP request to the URL.
   
   ```
-  $ curl https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/21ef035/hello/world?name=OpenWhisk
+  curl https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/21ef035/hello/world?name=OpenWhisk
   ```
   {: pre}
   ```json
@@ -79,11 +80,13 @@ Note: If the command errors requiring single sign on (sso), this is not currentl
   ```
   The action `hello` got invoked, returning back a JSON string including the parameter `name` sent via query parameter. You can pass parameters to the action via simple query parameters, or via request body.
   
-5. Full controll over the the http response
+## Full control over the HTTP response
   
-  Notice that the full result of the action is returned in the body of the response, and the content is assume to be `application/json` this is because the API was created with `--response-type json` using `json` for the response-type allows you to easily get started with existing actions, but once you have something working you want to have full control over the http response like `statusCode`, `headers` and return different content types in the `body`.
+  The `--response-type` flag controls the target url of the web action to be proxy the API Gateway. Using `--response-type json` as above returns the full result of the action in JSON format and automatically sets the Content-Type header to `application/json` which enables you to easily get started. 
   
-  You can choose to change the code of the action to comply with the return of web actions with http extension or include the action in a sequence passing it's result to a new action that transform the result to be properly formatted for an http response. You can read more about response types and web actions extensions in the [Web Actions](webactions.md) documentation.
+  Once you get started you want to have full control over the http response properties like `statusCode`, `headers` and return different content types in the `body`. You can do this by using `--response-type http`, this will configure the target url of the web action with the `http` extension.
+
+  You can choose to change the code of the action to comply with the return of web actions with `http` extension or include the action in a sequence passing it's result to a new action that transform the result to be properly formatted for an http response. You can read more about response types and web actions extensions in the [Web Actions](openwhisk_webactions.html) documentation.
 
   Change the code for the `hello.js` returning the JSON properties `body`, `statusCode` and `headers`
   ```javascript
@@ -95,6 +98,7 @@ Note: If the command errors requiring single sign on (sso), this is not currentl
       };
   }
   ```
+  {: codeblock}
   Notice that the body needs to be return encoded in `base64` and not a string.
   
   Update the action with the modified result
