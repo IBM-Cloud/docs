@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-17"
+lastupdated: "2017-4-24"
 
 ---
  
@@ -64,7 +64,7 @@ To upgrade your project to a toolchain, follow these steps:
 
    ![Example of an upgrade page](images/project-upgrade-toolchain.png)
 
-   For an overview of the upgrade process, read the description on that page. In this case, because the project used a repo at GitHub.com, the toolchain will be connected to the same GitHub repo. If your project used a Git repo that was hosted on JazzHub, the toolchain will not use that repo. Instead, use the Git Repos and Issue Tracking tool integration in your toolchain.
+   For an overview of the upgrade process, read the description on that page. In this case, because the project used a repo at GitHub.com, the toolchain will be connected to the same GitHub repo. If your project used a Git repo that was hosted on JazzHub, the toolchain will clone its contents to a new repo in Git Repos and Issue Tracking, which is part of {{site.data.keyword.contdelivery_short}}. If your project used a private Git repo that was hosted on JazzHub, the new repo in Git Repos and Issue Tracking will be private.
    
    The toolchain will include a new pipeline that contains the same stages and jobs as the project's pipeline. In addition, the toolchain will contain a pointer to the Eclipse Orion {{site.data.keyword.webide}} that runs in {{site.data.keyword.contdelivery_short}}.
 
