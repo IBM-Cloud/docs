@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-21"
+  years: 2015, 2017
+lastupdated: "2017-3-16"
 
 ---
 
@@ -11,18 +11,14 @@ lastupdated: "2016-12-21"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#Textbasierte Pipelines in Beispielprojekten von {{site.data.keyword.jazzhub_short}} gemeinsam nutzen {: #share-pipeline}
+#Textbasierte Pipelines in Beispielprojekten gemeinsam nutzen {: #share-pipeline}
 
-Für Beispielprojekte, die in {{site.data.keyword.Bluemix_notm}} über die Schaltfläche 'In {{site.data.keyword.Bluemix_notm}} bereitstellen' bereitgestellt werden, können Sie {{site.data.keyword.jazzhub_short}}-Pipelinekonfigurationen
-als YAML-Dateien definieren. Pipelines, die als Text definiert sind, können gemeinsam genutzt werden,
-sodass Personen, die über Verzweigungen mit Ihrem Projekt arbeiten, keine eigenen Pipelines konfigurieren müssen. Dieses Feature befindet sich im Entwicklungsstadium: Das YAML-Format und dessen Implementierung
-können sich zu jedem beliebigen Zeitpunkt ändern. Zurzeit steht dieses Feature nur für Projekte mit Git- und GitHub-Repositorys zur Verfügung,
-die {{site.data.keyword.Bluemix_notm}} als Ziel verwenden. 
+Für Beispielprojekte, die in {{site.data.keyword.Bluemix_notm}} über die Schaltfläche 'In {{site.data.keyword.Bluemix_notm}} bereitstellen' bereitgestellt werden, können Sie Pipelinekonfigurationen als YAML-Dateien definieren. Pipelines, die als Text definiert sind, können gemeinsam genutzt werden, sodass Personen, die über Verzweigungen mit Ihrem Projekt arbeiten, keine eigenen Pipelines konfigurieren müssen. Dieses Feature befindet sich im Entwicklungsstadium: Das YAML-Format und dessen Implementierung können sich zu jedem beliebigen Zeitpunkt ändern. Zurzeit steht dieses Feature nur für Projekte mit Git- und GitHub-Repositorys zur Verfügung, die {{site.data.keyword.Bluemix_notm}} als Ziel verwenden.
 {: shortdesc} 
 
 Im Stammverzeichnis des Beispielprojekts muss sich ein Ordner mit dem Namen `.bluemix` befinden, der die Datei `pipeline.yml` enthält.
 
-Wenn ein Projekt über die Schaltfläche 'In {{site.data.keyword.Bluemix_notm}} bereitstellen' geklont wird, erstellt {{site.data.keyword.jazzhub_short}} eine Pipeline auf der Basis der Datei `pipeline.yml`. 
+Wenn ein Projekt über die Schaltfläche 'In {{site.data.keyword.Bluemix_notm}} bereitstellen' geklont wird, wird eine Pipeline auf der Basis der Datei `pipeline.yml` erstellt.  
 
 Beispiel: 
 ``` 
@@ -33,8 +29,7 @@ Beispiel:
 ```
 {: codeblock} 
 
-Das YAML-Dateiformat besteht aus einem einzelnen YAML-Dokument, das eine Pipelinespezifikation enthält. Mit der folgenden {{site.data.keyword.jazzhub_short}}-Beispielpipeline
-wird eine Java-App mit Ant in einer Stage erstellt. In einer weiteren Stage stellt dann die Pipeline die App in {{site.data.keyword.Bluemix_notm}} bereit. 
+Das YAML-Dateiformat besteht aus einem einzelnen YAML-Dokument, das eine Pipelinespezifikation enthält. Mit der folgenden Beispielpipeline wird eine Java-App mit Ant in einer Stage erstellt. In einer weiteren Stage stellt dann die Pipeline die App in {{site.data.keyword.Bluemix_notm}} bereit. 
 
 ``` 
 ---
@@ -211,15 +206,13 @@ CF_APP	| App-Name
 
 Sie können eine YAML-Datei aus einer Pipeline generieren. 
 
-Generieren Sie die Datei aus einer vorhandenen
-Pipeline mit einer URL im folgenden Format:
+Generieren Sie die Datei aus einer vorhandenen Pipeline mit einer URL im folgenden Format:
 
 ```
-<DevOps Services-Domäne>/pipeline/user/project/yaml
+<Domäne>/pipeline/user/project/yaml
 ```
 {: codeblock} 
 
 Dieser Aufruf erfordert keinen Header 'Accept'. Sie können diesen Aufruf in einem Browser verwenden. 
 
-**Hinweis:** Aus Sicherheitsgründen sind die Umgebungseigenschaftswerte für die Stage 'secure'
-nicht in den generierten Pipeline-YAML-Dateien enthalten. 
+**Hinweis:** Aus Sicherheitsgründen sind die Umgebungseigenschaftswerte für die Stage 'secure' nicht in den generierten Pipeline-YAML-Dateien enthalten. 

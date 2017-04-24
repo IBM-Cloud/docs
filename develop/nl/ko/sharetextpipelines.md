@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-21"
+  years: 2015, 2017
+lastupdated: "2017-3-16"
 
 ---
 
@@ -11,14 +11,14 @@ lastupdated: "2016-12-21"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#{{site.data.keyword.jazzhub_short}} 샘플 프로젝트에서 텍스트 기반 파이프라인 공유 {: #share-pipeline}
+#샘플 프로젝트에서 텍스트 기반 파이프라인 공유 {: #share-pipeline}
 
-{{site.data.keyword.Bluemix_notm}}에 배치 단추를 통해 {{site.data.keyword.Bluemix_notm}}에 배치된 샘플 프로젝트의 경우 {{site.data.keyword.jazzhub_short}} 파이프라인 구성을 YAML 파일로 정의할 수 있습니다. 프로젝트를 분기 실행하는 사용자가 고유 파이프라인을 구성할 필요가 없도록 텍스트로 정의된 파이프라인을 공유할 수 있습니다. 이 기능은 개발 중입니다. YAML 형식과 구현은 언제든 변경될 수 있습니다. 현재 이 기능은 {{site.data.keyword.Bluemix_notm}}를 대상으로 하는 Git 및 GitHub 저장소가 있는 프로젝트에서만 사용할 수 있습니다.
+{{site.data.keyword.Bluemix_notm}}에 배치 단추를 통해 {{site.data.keyword.Bluemix_notm}}에 배치된 샘플 프로젝트의 경우 파이프라인 구성을 YAML 파일로 정의할 수 있습니다. 프로젝트를 분기 실행하는 사용자가 고유 파이프라인을 구성할 필요가 없도록 텍스트로 정의된 파이프라인을 공유할 수 있습니다. 이 기능은 개발 중입니다. YAML 형식과 구현은 언제든 변경될 수 있습니다. 현재 이 기능은 {{site.data.keyword.Bluemix_notm}}를 대상으로 하는 Git 및 GitHub 저장소가 있는 프로젝트에서만 사용할 수 있습니다.
 {: shortdesc} 
 
 샘플 프로젝트의 루트 디렉토리에는 `pipeline.yml` 파일이 포함된 `.bluemix`라는 폴더가 있습니다.
 
-{{site.data.keyword.Bluemix_notm}}에 배치 단추를 사용하여 프로젝트를 복제하는 경우, {{site.data.keyword.jazzhub_short}}에서 `pipeline.yml` 파일을 기반으로 하는 파이프라인을 작성합니다. 
+{{site.data.keyword.Bluemix_notm}}에 배치 단추를 사용하여 프로젝트를 복제하면 `pipeline.yml` 파일을 기반으로 하는 파이프라인이 작성됩니다. 
 
 예:  
 ``` 
@@ -29,7 +29,7 @@ lastupdated: "2016-12-21"
 ```
 {: codeblock} 
 
-YAML 파일 형식은 파이프라인 사양을 포함하는 단일 YAML 문서입니다. 다음 샘플 {{site.data.keyword.jazzhub_short}} 파이프라인은 한 단계에서 Ant 포함 Java 앱을 빌드합니다. 그런 다음 다른 단계에서 파이프라인이 앱을 {{site.data.keyword.Bluemix_notm}}에 배치합니다. 
+YAML 파일 형식은 파이프라인 사양을 포함하는 단일 YAML 문서입니다. 다음 샘플 파이프라인은 한 단계로 Ant 포함 Java 앱을 빌드합니다. 그런 다음 다른 단계에서 파이프라인이 앱을 {{site.data.keyword.Bluemix_notm}}에 배치합니다. 
 
 ``` 
 ---
@@ -206,7 +206,7 @@ CF_APP	| 앱 이름
 다음 형식의 URL을 사용하여 기존 파이프라인에서 파일을 생성하십시오.
 
 ```
-<DevOps Services domain>/pipeline/user/project/yaml
+<domain>/pipeline/user/project/yaml
 ```
 {: codeblock} 
 

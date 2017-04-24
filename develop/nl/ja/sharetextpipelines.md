@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-21"
+  years: 2015, 2017
+lastupdated: "2017-3-16"
 
 ---
 
@@ -11,14 +11,14 @@ lastupdated: "2016-12-21"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#{{site.data.keyword.jazzhub_short}} サンプル・プロジェクトにおけるテキスト・ベースのパイプラインの共有 {: #share-pipeline}
+#サンプル・プロジェクトにおけるテキスト・ベースのパイプラインの共有{: #share-pipeline}
 
-「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンで {{site.data.keyword.Bluemix_notm}} にデプロイされたサンプル・プロジェクトに対して、{{site.data.keyword.jazzhub_short}} パイプライン構成を YAML ファイルとして定義できます。テキストとして定義されたパイプラインは共有することができ、それによりプロジェクトをフォークする人は独自のパイプラインを構成する必要がなくなります。この機能は現在開発中で、YAML フォーマットと実装は随時変更される可能性があります。現在この機能は、{{site.data.keyword.Bluemix_notm}} をターゲットとする Git リポジトリーおよび GitHub リポジトリーを持つプロジェクトでのみ使用可能です。
+「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンで {{site.data.keyword.Bluemix_notm}} にデプロイされたサンプル・プロジェクトに対して、パイプライン構成を YAML ファイルとして定義できます。テキストとして定義されたパイプラインは共有することができ、それによりプロジェクトをフォークする人は独自のパイプラインを構成する必要がなくなります。この機能は現在開発中で、YAML フォーマットと実装は随時変更される可能性があります。現在この機能は、{{site.data.keyword.Bluemix_notm}} をターゲットとする Git リポジトリーおよび GitHub リポジトリーを持つプロジェクトでのみ使用可能です。
 {: shortdesc} 
 
 サンプル・プロジェクトのルート・ディレクトリー内に、`pipeline.yml` ファイルを含む `.bluemix` という名前のフォルダーが存在する必要があります。
 
-「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンを使用してプロジェクトが複製されると、{{site.data.keyword.jazzhub_short}} は `pipeline.yml` ファイルに基づいたパイプラインを作成します。 
+「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンを使用してプロジェクトを複製すると、`pipeline.yml` ファイルに基づいたパイプラインが作成されます。 
 
 例: 
 ``` 
@@ -29,7 +29,7 @@ lastupdated: "2016-12-21"
 ```
 {: codeblock} 
 
-YAML ファイル・フォーマットはパイプラインの仕様を含む単一の YAML 文書です。以下のサンプル {{site.data.keyword.jazzhub_short}} パイプラインは、Ant を使用して Java アプリを 1 つのステージでビルドします。その後、別のステージで、パイプラインがそのアプリを {{site.data.keyword.Bluemix_notm}} にデプロイします。 
+YAML ファイル・フォーマットはパイプラインの仕様を含む単一の YAML 文書です。以下のサンプル  パイプラインは、Ant を使用して Java アプリを単一のステージでビルドします。その後、別のステージで、パイプラインがそのアプリを {{site.data.keyword.Bluemix_notm}} にデプロイします。 
 
 ``` 
 ---
@@ -208,7 +208,7 @@ CF_APP	| アプリ名
 以下の形式の URL を使用して、既存のパイプラインからファイルを生成します。
 
 ```
-<DevOps Services domain>/pipeline/user/project/yaml
+<domain>/pipeline/user/project/yaml
 ```
 {: codeblock} 
 

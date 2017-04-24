@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-21"
+  years: 2015, 2017
+lastupdated: "2017-3-16"
 
 ---
 
@@ -11,15 +11,11 @@ lastupdated: "2016-12-21"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#Compartilhando pipelines baseados em texto em projetos de amostra do {{site.data.keyword.jazzhub_short}} {: #share-pipeline}
+#Compartilhando pipelines baseados em texto em projetos de amostra {: #share-pipeline}
 
-No caso dos projetos de amostra implementados no
-{{site.data.keyword.Bluemix_notm}} pelo botão
-Implementar no
-{{site.data.keyword.Bluemix_notm}}, é possível
-definir as configurações do pipeline
-{{site.data.keyword.jazzhub_short}} como
-arquivos YAML. Pipelines definidas como texto podem ser compartilhadas de modo que não
+No caso dos projetos de amostra implementados no {{site.data.keyword.Bluemix_notm}} pelo botão
+Implementar no {{site.data.keyword.Bluemix_notm}}, é possível definir as configurações do pipeline
+como arquivos YAML. Pipelines definidas como texto podem ser compartilhadas de modo que não
 seja necessário para aqueles que trabalham em seu projeto configurar suas próprias
 pipelines. Esse recurso está em desenvolvimento: o formato YAML e a implementação podem
 mudar a qualquer momento. Atualmente, esse recurso está disponível apenas para projetos
@@ -30,7 +26,8 @@ com repositórios Git e GitHub que se destinam ao
 No diretório raiz do projeto de amostra, você deve ter uma pasta denominada
 `.bluemix` com um arquivo `pipeline.yml`.
 
-Quando um projeto é clonado usando o botão Implementar no {{site.data.keyword.Bluemix_notm}}, o {{site.data.keyword.jazzhub_short}} cria um pipeline que se baseia no arquivo `pipeline.yml`. 
+Quando um projeto é clonado usando o botão Implementar no {{site.data.keyword.Bluemix_notm}}, um
+pipeline que se baseia no arquivo `pipeline.yml` é criado. 
 
 Exemplo: 
 ``` 
@@ -42,7 +39,8 @@ Exemplo:
 {: codeblock} 
 
 O formato de arquivo YAML é um documento YAML único que contém uma
-especificação de pipeline. O pipeline de amostra do {{site.data.keyword.jazzhub_short}} a seguir constrói um app Java com Ant em um estágio. Em seguida, em outro estágio, o pipeline implementa o
+especificação de pipeline. O pipeline de amostra a seguir
+constrói um app Java com Ant em um estágio. Em seguida, em outro estágio, o pipeline implementa o
 app no {{site.data.keyword.Bluemix_notm}}. 
 
 ``` 
@@ -231,7 +229,7 @@ Gere
 o arquivo a partir de um pipeline existente com uma URL neste formato:
 
 ```
-<DevOps Services domain>/pipeline/user/project/yaml
+<domain>/pipeline/user/project/yaml
 ```
 {: codeblock} 
 
