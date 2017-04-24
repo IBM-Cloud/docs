@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-03-01"
+lastupdated: "2017-03-21"
 
 ---
 
@@ -150,10 +150,11 @@ Stack Overflow 和 dW Answers 这两个论坛都针对 {{site.data.keyword.Bluem
 
   * 利用多个 {{site.data.keyword.Bluemix_notm}} 区域
 
-    {{site.data.keyword.Bluemix_notm}} Public 的所有用户自动有权访问 US-SOUTH、EU-GB 和 AU-SYD 区域：
+    {{site.data.keyword.Bluemix_notm}} Public 的所有用户自动有权访问 US-SOUTH、EU-GB、EU-DE 和 AU-SYD 区域：
 
 	  * US-SOUTH：https://console.ng.bluemix.net
 	  * EU-GB：https://console.eu-gb.bluemix.net
+	  * EU-DE：https://console.eu-de.bluemix.net
 	  * AU-SYD：https://console.au-syd.bluemix.net
 
 	{{site.data.keyword.Bluemix_notm}} 全球运营团队会管理所有区域，以避免维护影响，同时最大限度地降低影响所有区域的事件的风险。

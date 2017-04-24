@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-03-01"
+lastupdated: "2017-03-21"
 
 ---
 
@@ -163,10 +163,11 @@ un evento imprevisto in corso. Per segnalare un evento imprevisto non ancora ele
 
   * Usufruisci di più regioni {{site.data.keyword.Bluemix_notm}}
 
-    Tutti gli utenti di {{site.data.keyword.Bluemix_notm}} pubblico hanno automaticamente accesso alle regioni US-SOUTH, EU-GB e AU-SYD:
+    Tutti gli utenti di {{site.data.keyword.Bluemix_notm}} pubblico hanno automaticamente accesso alle regioni US-SOUTH, EU-GB, EU-DE e AU-SYD:
 
 	  * US-SOUTH: https://console.ng.bluemix.net
 	  * EU-GB: https://console.eu-gb.bluemix.net
+	  * EU-DE: https://console.eu-de.bluemix.net
 	  * AU-SYD: https://console.au-syd.bluemix.net
 
 	Il team di {{site.data.keyword.Bluemix_notm}} Global Operations gestisce tutte le regioni per evitare impatti sulla manutenzione e ridurre al minimo il rischio di eventi imprevisti che influiscano contemporaneamente su tutte le regioni.

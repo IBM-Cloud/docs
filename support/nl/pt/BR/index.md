@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-03-01"
+lastupdated: "2017-03-21"
 
 ---
 
@@ -22,9 +22,7 @@ Se você tiver problemas com o {{site.data.keyword.Bluemix}}, há várias opçõ
 
 ## Obtendo Ajuda
 {: #getting-help}
-Para abrir um chamado de suporte ou encontrar outras opções de ajuda, é possível usar o widget de Suporte. Também é possível acessar diretamente os fóruns de Stack Overflow ou developerWorks (dW) Answers,
-para procurar informações ou postar perguntas. Se você estiver usando uma conta que está vinculada entre o {{site.data.keyword.Bluemix_notm}} e o {{site.data.keyword.BluSoftlayer}}, consulte [Usando o widget de Suporte para contas
-vinculadas](#using-avatar-linked) e [Abrindo um chamado de suporte para contas vinculadas](#open-ticket-linked).
+Para abrir um chamado de suporte ou encontrar outras opções de ajuda, é possível usar o widget de Suporte. Também é possível acessar diretamente os fóruns de Stack Overflow ou developerWorks (dW) Answers, para procurar informações ou postar perguntas. Se você estiver usando uma conta que está vinculada entre o {{site.data.keyword.Bluemix_notm}} e o {{site.data.keyword.BluSoftlayer}}, consulte [Usando o widget de Suporte para contas vinculadas](#using-avatar-linked) e [Abrindo um chamado de suporte para contas vinculadas](#open-ticket-linked).
 
 {:shortdesc}
 
@@ -33,9 +31,7 @@ vinculadas](#using-avatar-linked) e [Abrindo um chamado de suporte para contas v
 {: #using-avatar}
 O widget de Suporte permite obter ajuda e fornecer feedback.
 
-Para abrir o widget de Suporte, efetue login no console do {{site.data.keyword.Bluemix_notm}}. Na barra de menus, clique em **Suporte** > **Localizar respostas** para localizar respostas para as suas perguntas. Na página exibida, digite sua pergunta no
-campo de procura. Respostas da documentação do
-{{site.data.keyword.Bluemix_notm}} e do Stack Overflow são exibidas. A página também fornece opções para postar sua pergunta no Stack Overflow ou para abrir um chamado clicando em **ENTRAR EM CONTATO**. Embora o widget de suporte seja o método preferencial para obter suporte, se não for possível efetuar login no Bluemix, também será possível usar a página [Obter ajuda](ibm.biz/bluemixsupport) para enviar um chamado.
+Para abrir o widget de Suporte, efetue login no console do {{site.data.keyword.Bluemix_notm}}. Na barra de menus, clique em **Suporte** > **Localizar respostas** para localizar respostas para as suas perguntas. Na página exibida, digite sua pergunta no campo de procura. Respostas da documentação do {{site.data.keyword.Bluemix_notm}} e do Stack Overflow são exibidas. A página também fornece opções para postar sua pergunta no Stack Overflow ou para abrir um chamado clicando em **ENTRAR EM CONTATO**. Embora o widget de suporte seja o método preferencial para obter suporte, se não for possível efetuar login no Bluemix, também será possível usar a página [Obter ajuda](ibm.biz/bluemixsupport) para enviar um chamado.
 
 ### Usando o widget de Suporte para contas vinculadas
 {: #using-avatar-linked}
@@ -60,8 +56,7 @@ Use os itens de menu da Conta para manter-se atualizado com as notificações da
 ### Fazendo uma pergunta
 {: #asking-a-question}
 
-Os fóruns de Stack Overflow e dW Answers fornecem, ambos, uma ampla variedade de respostas pesquisáveis para as suas perguntas do {{site.data.keyword.Bluemix_notm}}. Se você não encontrar uma
-resposta existente, faça uma nova pergunta. 
+Os fóruns de Stack Overflow e dW Answers fornecem, ambos, uma ampla variedade de respostas pesquisáveis para as suas perguntas do {{site.data.keyword.Bluemix_notm}}. Se você não encontrar uma resposta existente, faça uma nova pergunta. 
 
   * Acesse [Stack Overflow ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window} para fazer perguntas técnicas sobre o desenvolvimento de apps com a plataforma e serviços do {{site.data.keyword.Bluemix_notm}}.
   * Acesse [dW Answers ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} para fazer perguntas sobre a oferta {{site.data.keyword.Bluemix_notm}} e sobre as instruções de introdução.
@@ -72,9 +67,7 @@ Também é possível fazer uma pergunta no Stack Overflow diretamente dos itens 
   2. No painel exibido, digite sua pergunta no campo de procura e clique no ícone de procura para localizar respostas. 
   3. Se a resposta esperada não for retornada, clique em **POSTAR NO STACK OVERFLOW** para postar a sua pergunta.
 
-As equipes de desenvolvimento e suporte do {{site.data.keyword.Bluemix_notm}} monitoram ativamente o Stack Overflow e dW Answers e seguem as perguntas que são identificadas com
-**bluemix**. Ao criar uma pergunta em qualquer dos fóruns, inclua uma identificação **bluemix** em sua pergunta, para assegurar que ela seja vista pelas equipes de
-desenvolvimento e suporte do {{site.data.keyword.Bluemix_notm}}.
+As equipes de desenvolvimento e suporte do {{site.data.keyword.Bluemix_notm}} monitoram ativamente o Stack Overflow e dW Answers e seguem as perguntas que são identificadas com **bluemix**. Ao criar uma pergunta em qualquer dos fóruns, inclua uma identificação **bluemix** em sua pergunta, para assegurar que ela seja vista pelas equipes de desenvolvimento e suporte do {{site.data.keyword.Bluemix_notm}}.
  
 
 
@@ -86,20 +79,16 @@ A página Status do {{site.data.keyword.Bluemix_notm}} é o local central para l
 Na página Status, é possível localizar as informações a seguir:
 
   * O status atual de serviços e componentes em todas as regiões do {{site.data.keyword.Bluemix_notm}}.
-  * Uma lista de anúncios, em ordem cronológica, para manutenção e incidentes. É possível filtrar a lista ou abrir
-um anúncio individual para obter detalhes adicionais.
+  * Uma lista de anúncios, em ordem cronológica, para manutenção e incidentes. É possível filtrar a lista ou abrir um anúncio individual para obter detalhes adicionais.
   * Janelas de manutenção planejada, que são postadas pelo menos 24 horas antes, exceto em circunstâncias extremas.
-  * Incidentes ou indisponibilidades não planejados, que são postados assim que a equipe
-do {{site.data.keyword.Bluemix_notm}} toma conhecimento deles. As notificações do incidente são atualizadas regularmente até que
-sejam resolvidas.
+  * Incidentes ou indisponibilidades não planejados, que são postados assim que a equipe do {{site.data.keyword.Bluemix_notm}} toma conhecimento deles. As notificações do incidente são atualizadas regularmente até que sejam resolvidas.
   * Referências a boletins de segurança afetam os vários serviços do {{site.data.keyword.Bluemix_notm}} ou a plataforma.
   * Outros anúncios de toda a plataforma de interesse geral para você.
   * Um feed RSS para o qual é possível assinar.
 
 É possível localizar a página Status, escolhendo uma das opções a seguir:
 
-  * Efetue login no console do
-{{site.data.keyword.Bluemix_notm}}. Na barra de menus, clique em **Suporte** e, em seguida, clique em **Status**. Verifique os recursos listados para o ícone ![alguns problemas](images/some_issues.svg). Esse ícone pode indicar uma indisponibilidade.
+  * Efetue login no console do {{site.data.keyword.Bluemix_notm}}. Na barra de menus, clique em **Suporte** e, em seguida, clique em **Status**. Verifique os recursos listados para o ícone ![alguns problemas](images/some_issues.svg). Esse ícone pode indicar uma indisponibilidade.
   * Acesse-o indiretamente em [IBM {{site.data.keyword.Bluemix_notm}} - Status do sistema ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://ibm.biz/bluemixstatus){: new_window}.
 
 
@@ -108,17 +97,14 @@ sejam resolvidas.
 
 Também é possível ser alertado sobre quaisquer notificações, assinando o feed RSS para a página Status do {{site.data.keyword.Bluemix_notm}}. Essa abordagem fornece uma maneira para obter atualizações sem precisar consultar regularmente a página de status.
 
-Para
-assinar, siga estas etapas:
+Para assinar, siga estas etapas:
 
   1. Faça download e instale um leitor RSS.
   2. Use seu leitor para assinar o feed por um dos métodos a seguir:
        * Arraste o ícone RSS ![RSS](images/rss.svg) para seu leitor RSS.
-       * Clique com o botão direito no ícone RSS, selecione **Copiar endereço de link** e cole a URL
-em seu leitor RSS.
+       * Clique com o botão direito no ícone RSS, selecione **Copiar endereço de link** e cole a URL em seu leitor RSS.
 
-	Consulte a seção **Ajuda** do seu leitor para obter
-informações adicionais. 	   
+	Consulte a seção **Ajuda** do seu leitor para obter informações adicionais. 	   
 
 Outros métodos de leitura de feeds RSS estão disponíveis por meio de plug-ins do navegador da web, tais como: 
   * [Leitor de feed RSS ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://feeder.co/){: new_window} para Chrome
@@ -128,9 +114,7 @@ Novas fontes, como os sites a seguir, também fornecem métodos para ler feeds R
   * [Feedly ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://www.feedly.com/){: new_window}
   * [G2reader ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://www.g2reader.com/en/){: new_window}
 
-Também
-é possível usar um serviço de terceiro para enviar automaticamente um e-mail para cada atualização de
-RSS. A lista a seguir fornece alguns serviços de terceiros de exemplo:
+Também é possível usar um serviço de terceiro para enviar automaticamente um e-mail para cada atualização de RSS. A lista a seguir fornece alguns serviços de terceiros de exemplo:
 
   * www.feedmyinbox.com
   * www.rssforward.com
@@ -146,12 +130,7 @@ O {{site.data.keyword.Bluemix_notm}} geralmente tem cerca de 50 atualizações p
 ### Configurando notificações de incidentes e manutenção por e-mail
 {: #setting-up-notifications}
 
-Para {{site.data.keyword.Bluemix_notm}} Public, é possível se inscrever
-para notificações de plataforma. As notificações de plataforma são alertas de e-mail
-opcionais para eventos de incidente e manutenção da plataforma
-{{site.data.keyword.Bluemix_notm}}. É possível escolher receber essas notificações por e-mail, clicando no item de menu **Conta** &gt; **Notificações** &gt; **Plataforma**. Para obter
-mais informações sobre como configurar notificações de conta, acesse
-[Configurando notificações](/docs/admin/account.html#notifications).
+Para {{site.data.keyword.Bluemix_notm}} Public, é possível se inscrever para notificações de plataforma. As notificações de plataforma são alertas de e-mail opcionais para eventos de incidente e manutenção da plataforma {{site.data.keyword.Bluemix_notm}}. É possível escolher receber essas notificações por e-mail, clicando no item de menu **Conta** &gt; **Notificações** &gt; **Plataforma**. Para obter mais informações sobre como configurar notificações de conta, acesse [Configurando notificações](/docs/admin/account.html#notifications).
 
 
 ### Melhores práticas para monitorar o status
@@ -159,34 +138,28 @@ mais informações sobre como configurar notificações de conta, acesse
 
   * Verifique as próximas janelas de manutenção
 
-	Verifique as próximas janelas de manutenção postadas na página de status, pelo menos uma vez a cada 24 horas,
-usando uma das opções a seguir:
+	Verifique as próximas janelas de manutenção postadas na página de status, pelo menos uma vez a cada 24 horas, usando uma das opções a seguir:
 	  * Navegando diretamente para a página [Status ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://ibm.biz/bluemixstatus){: new_window}
 	  * Usando o feed RSS ou um encaminhador de RSS para e-mail
 
   * Verifique as janelas atualmente em manutenção ou um incidente em andamento
 
-	Se você suspeitar que o {{site.data.keyword.Bluemix_notm}} não está
-funcionando conforme o esperado, verifique a página de status para janelas atualmente em manutenção ou para um incidente em
-andamento. Para relatar um incidente que ainda não está listado na página de status, abra um chamado de suporte por meio do item de menu **Suporte** na barra de menus ou da página de ajuda [Suporte do IBM Bluemix ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](ibm.biz/bluemixsupport){: new_window}.
+	Se você suspeitar que o {{site.data.keyword.Bluemix_notm}} não está funcionando conforme o esperado, verifique a página de status para janelas atualmente em manutenção ou para um incidente em andamento. Para relatar um incidente que ainda não está listado na página de status, abra um chamado de suporte por meio do item de menu **Suporte** na barra de menus ou da página de ajuda [Suporte do IBM Bluemix ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](ibm.biz/bluemixsupport){: new_window}.
 
   * Aproveite as diversas regiões do {{site.data.keyword.Bluemix_notm}}
 
-    Todos os usuários do {{site.data.keyword.Bluemix_notm}} Public têm automaticamente acesso às regiões US-SOUTH, EU-GB e AU-SYD:
+    Todos os usuários do {{site.data.keyword.Bluemix_notm}} Public têm automaticamente acesso às regiões US-SOUTH, EU-GB, EU_DE e AU-SYD:
 
 	  * US-SOUTH: https://console.ng.bluemix.net
 	  * EU-GB: https://console.eu-gb.bluemix.net
+	  * EU-DE: https://console.eu-de.bluemix.net
 	  * AU-SYD: https://console.au-syd.bluemix.net
 
 	A equipe de Operações Globais do {{site.data.keyword.Bluemix_notm}} gerencia todas as regiões para evitar impactos de manutenção e minimizar o risco de incidentes que afetem todas as regiões ao mesmo tempo.
 
   * Prepare-se para interrupções menores
 
-    Na maioria dos casos, o {{site.data.keyword.Bluemix_notm}} pode
-continuar sendo usado normalmente, mesmo durante a janela de manutenção. No entanto, as interrupções menores de um serviço nem sempre podem ser evitadas. Os aplicativos em execução geralmente permanecem disponíveis mesmo se as funções de gerenciamento do aplicativo do
-{{site.data.keyword.Bluemix_notm}}, como
-apps de início e de parada, estiverem temporariamente interrompidas. Para maximizar a disponibilidade de seus
-aplicativos em execução, execute pelo menos três instâncias de cada aplicativo.
+    Na maioria dos casos, o {{site.data.keyword.Bluemix_notm}} pode continuar sendo usado normalmente, mesmo durante a janela de manutenção. No entanto, as interrupções menores de um serviço nem sempre podem ser evitadas. Os aplicativos em execução geralmente permanecem disponíveis mesmo se as funções de gerenciamento do aplicativo do {{site.data.keyword.Bluemix_notm}}, como apps de início e de parada, estiverem temporariamente interrompidas. Para maximizar a disponibilidade de seus aplicativos em execução, execute pelo menos três instâncias de cada aplicativo.
 
 
 
@@ -195,8 +168,7 @@ aplicativos em execução, execute pelo menos três instâncias de cada aplicati
 
 Será possível abrir chamados de suporte se você tiver uma conta válida do {{site.data.keyword.Bluemix_notm}} usando uma variedade de opções. [Abrindo um chamado de suporte](#open-ticket). 
 
-Se você tiver uma conta do {{site.data.keyword.Bluemix_notm}} vinculada com uma conta do {{site.data.keyword.BluSoftlayer_full}}, será possível abrir chamados de suporte para o {{site.data.keyword.Bluemix_notm}} a partir do Portal do cliente do {{site.data.keyword.BluSoftlayer}} ou
-do console do {{site.data.keyword.Bluemix_notm}} usando o widget de Suporte. Consulte [Abrindo um chamado de suporte para contas vinculadas](#open-ticket-linked).
+Se você tiver uma conta do {{site.data.keyword.Bluemix_notm}} vinculada com uma conta do {{site.data.keyword.BluSoftlayer_full}}, será possível abrir chamados de suporte para o {{site.data.keyword.Bluemix_notm}} a partir do Portal do cliente do {{site.data.keyword.BluSoftlayer}} ou do console do {{site.data.keyword.Bluemix_notm}} usando o widget de Suporte. Consulte [Abrindo um chamado de suporte para contas vinculadas](#open-ticket-linked).
 
 ### Entrando em contato com o suporte para o {{site.data.keyword.Bluemix_notm}} Public
 {: #contacting-bluemix-support}
@@ -238,7 +210,7 @@ Para abrir um chamado de suporte do {{site.data.keyword.Bluemix_notm}} para uma 
 ### Verificando o status do chamado de suporte
 {: #check-ticket-status}
 
-Todos os problemas de suporte a clientes são documentados em um chamado de suporte. Cada chamado de suporte é designado a um número de chamado exclusivo para referência e um nível de severidade baseado nos detalhes na descrição do chamado. possível usar o número de chamado para revisar o progresso do chamado de suporte e atualizar o chamado de suporte. No Menu de Suporte, selecione **Visualizar chamados**. As atualizações e respostas são enviadas a você por e-mail e registradas nas notas do chamado.  
+Todos os problemas de suporte a clientes são documentados em um chamado de suporte. Cada chamado de suporte é designado a um número de chamado exclusivo para referência e um nível de severidade baseado nos detalhes na descrição do chamado. É possível usar o número de chamado para revisar o progresso do chamado de suporte e atualizar o chamado de suporte. No Menu de Suporte, selecione **Visualizar chamados**. As atualizações e respostas são enviadas a você por e-mail e registradas nas notas do chamado.  
 
 
 
@@ -251,7 +223,8 @@ Todos os problemas de suporte a clientes são documentados em um chamado de supo
 Se você for um cliente do {{site.data.keyword.Bluemix_notm}} Dedicated, o suporte será fornecido pela equipe de Suporte do IBM {{site.data.keyword.Bluemix_notm}}. É possível escolher entre algumas opções diferentes para obter suporte, dependendo se você tiver um {{site.data.keyword.ibmid}}.
 
 <ul>
-<li>Entre em contato com o suporte abrindo um novo chamado usando a página de ajuda <a href="ibm.biz/bluemixsupport" target="_blank">Suporte do IBM {{site.data.keyword.Bluemix_notm}}</a>. É possível usar um endereço de e-mail ou seu {{site.data.keyword.ibmid}} para esse formulário. Selecione a opção **{{site.data.keyword.Bluemix_notm}} Dedicated** para o campo Região.
+<li>Entre em contato com o suporte abrindo um novo chamado usando a
+página de ajuda <a href="ibm.biz/bluemixsupport" target="_blank">Suporte do IBM {{site.data.keyword.Bluemix_notm}}</a>. É possível usar um endereço de e-mail ou seu {{site.data.keyword.ibmid}} para esse formulário. Selecione a opção **{{site.data.keyword.Bluemix_notm}} Dedicated** para o campo Região.
 <p>Os envios de formulário são monitorados de domingo às 21h30 UTC a sexta-feira às 23h59 UTC. Para obter assistência na conversão dessas horas de suporte para o seu fuso horário local, veja [Timeanddate.com ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://www.timeanddate.com).</p>
 </li>
 <li>Se você tiver um {{site.data.keyword.ibmid}} e tiver acesso ao ambiente do {{site.data.keyword.Bluemix_notm}} Public, na barra de menus, clique em **Suporte** > **Incluir chamado**. Selecione a área de tópico para seu problema e siga os prompts para enviar seu chamado.</li>
@@ -267,13 +240,13 @@ Se você for um cliente do {{site.data.keyword.Bluemix_notm}} Dedicated, o supor
 Se você for um cliente do {{site.data.keyword.Bluemix_notm}} Local, o suporte será fornecido pela equipe de suporte do IBM {{site.data.keyword.Bluemix_notm}}. No entanto, como você pode não ter um {{site.data.keyword.ibmid}}, existem algumas opções diferentes para obter suporte.
 
 <ul>
-<li>Entre em contato com o suporte abrindo um novo chamado usando a página de ajuda do <a href="ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support <img src="../icons/launch-glyph.svg" alt="Ícone de link externo"></a>. É possível usar um endereço de e-mail ou seu {{site.data.keyword.ibmid}} para esse formulário. Selecione a opção **{{site.data.keyword.Bluemix_notm}} Local** para o campo Região.
+<li>Entre em contato com o suporte abrindo um novo chamado usando a
+página de ajuda do <a href="ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support <img src="../icons/launch-glyph.svg" alt="Ícone de link externo"></a>. É possível usar um endereço de e-mail ou seu {{site.data.keyword.ibmid}} para esse formulário. Selecione a opção **{{site.data.keyword.Bluemix_notm}} Local** para o campo Região.
 <p>Os envios de formulário são monitorados de domingo às 21h30 UTC a sexta-feira às 23h59 UTC. Para obter assistência na conversão dessas horas de suporte para o seu fuso horário local, veja [Timeanddate.com ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://www.timeanddate.com).</p>
 </li>
 <li>Se você tiver um {{site.data.keyword.ibmid}} e tiver acesso ao ambiente do {{site.data.keyword.Bluemix_notm}} Public, na barra de menus, clique em **Suporte** > **Incluir chamado**. Selecione a área de tópico para seu problema e siga os prompts para enviar seu chamado.</li>
 <li>Se você não tiver um {{site.data.keyword.ibmid}}, será possível entrar em contato com alguém de sua organização que tenha um ou trabalhar com seu representante IBM.
-<p>**Observação**: em sua solicitação, pode ser exibida uma lista de usuários em sua organização que podem servir como contatos para chamados de suporte na página de **Suporte** no console do {{site.data.keyword.Bluemix_notm}} em seu ambiente
-local.</p></li>
+<p>**Observação**: em sua solicitação, pode ser exibida uma lista de usuários em sua organização que podem servir como contatos para chamados de suporte na página de **Suporte** no console do {{site.data.keyword.Bluemix_notm}} em seu ambiente local.</p></li>
 </ul>
 
 ### Severidade e tempo de resposta do chamado de suporte
@@ -338,9 +311,7 @@ Para enviar uma solicitação de escalada, execute as etapas a seguir:
 
 ## Coletando informações sobre diagnóstico
 {: #collecting-diagnostic-information}
-Para diagnosticar e resolver problemas com aplicativos e serviços {{site.data.keyword.Bluemix_notm}},
-a equipe de Suporte {{site.data.keyword.Bluemix_notm}}
-pode solicitar que você colete informações de diagnóstico.
+Para diagnosticar e resolver problemas com aplicativos e serviços {{site.data.keyword.Bluemix_notm}}, a equipe de Suporte {{site.data.keyword.Bluemix_notm}} pode solicitar que você colete informações de diagnóstico.
 
 Antes de coletar informações de diagnóstico, conclua as etapas a seguir:
 
@@ -348,19 +319,16 @@ Antes de coletar informações de diagnóstico, conclua as etapas a seguir:
 
      **Nota:** Se você não tiver a interface de linha de comandos cf mais recente instalada, após a linha de comandos cf ser conectada ao {{site.data.keyword.Bluemix_notm}}, o comando `cf logs` pode não retornar saída.
 
-  2. Assegure-se de que esteja conectado à interface da linha de comandos cf para onde o {{site.data.keyword.Bluemix_notm}} será
-executado usando o comando `cf api`.
+  2. Assegure-se de que esteja conectado à interface da linha de comandos cf para onde o {{site.data.keyword.Bluemix_notm}} será executado usando o comando `cf api`.
 
   3. Assegure-se de atender a todos os pré-requisitos em [Pré-requisitos do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}.
 
-Use
-os scripts a seguir para coletar informações de diagnóstico:
+Use os scripts a seguir para coletar informações de diagnóstico:
 
   * Para sistemas operacionais Windows, faça download do arquivo [bmdiag-general.bat ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://bluemix-mustgather.mybluemix.net/mustgather/general/bmdiag-general.bat){: new_window} e execute-o.
   * Para sistemas operacionais Linux e Mac, faça download do arquivo [bmdiag-general.sh ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://bluemix-mustgather.mybluemix.net/mustgather/general/bmdiag-general.sh){: new_window} e execute-o.
 
-Os scripts usam a interface de linha de comandos cf para extrair
-as informações a seguir do ambiente de aplicativo:
+Os scripts usam a interface de linha de comandos cf para extrair as informações a seguir do ambiente de aplicativo:
 
   * Logs do aplicativo
   * Metadados do aplicativo
@@ -372,10 +340,8 @@ as informações a seguir do ambiente de aplicativo:
 ## Suporte ao idioma nacional para o {{site.data.keyword.Bluemix_notm}}
 {: #lang}
 
-O {{site.data.keyword.Bluemix_notm}} suporta idiomas nacionais que não o inglês. Entretanto, nem todo o conteúdo que é fornecido com o
-{{site.data.keyword.Bluemix_notm}} é traduzido.
-A tabela a seguir lista os idiomas nacionais suportados e os códigos de idioma para o
-{{site.data.keyword.Bluemix_notm}}.
+O {{site.data.keyword.Bluemix_notm}} suporta idiomas nacionais que não o inglês. Entretanto, nem todo o conteúdo que é fornecido com o {{site.data.keyword.Bluemix_notm}} é traduzido.
+A tabela a seguir lista os idiomas nacionais suportados e os códigos de idioma para o {{site.data.keyword.Bluemix_notm}}.
 
 | **Idioma nacional** | **Código de idioma** |
 |-------------------|---------------|
