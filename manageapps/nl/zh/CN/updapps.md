@@ -32,7 +32,7 @@ lastupdated: "2016-08-25"
 
   1. 为组织创建定制域。
 
-	1. 转至 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg) &gt; **管理组织** &gt; **查看组织详细信息** &gt; **编辑组织** &gt; **域**.
+	1. 转至 **{{site.data.keyword.avatar}}** 图标 ![“头像”图标](../icons/i-avatar-icon.svg) &gt; **管理组织** &gt; **查看组织详细信息** &gt; **编辑组织** &gt; **域**.
 
 	2. 在**域**选项卡上，单击**添加域**，输入定制域名，然后单击**保存**。
 

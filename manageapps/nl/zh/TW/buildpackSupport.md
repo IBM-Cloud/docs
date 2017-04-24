@@ -41,4 +41,4 @@ lastupdated: "2016-10-10"
 {: #external_buildpacks}
 
 
-對於外部建置套件，IBM 不提供支援。您可能需要聯絡「Cloud Foundry 社群」以獲得支援。
+對於外部建置套件，IBM 不提供支援。您可能需要與 Cloud Foundry 社群聯絡，以獲得支援。
