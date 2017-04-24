@@ -347,7 +347,7 @@ Die folgende Tabelle zeigt, welche Services in {{site.data.keyword.Bluemix_notm}
 |{{site.data.keyword.mql}}				|J	|J	|J	|	 		|
 |{{site.data.keyword.SecureGateway}}			|J	|J |	|	 		|
 |{{site.data.keyword.sescashort}}     |J |J |J	|  |
-{: caption="Table 1. Platform and service compliance" caption-side="top"}
+{: caption="Tabelle 1. Plattform- und Servicekonformität" caption-side="top"}
 
 # Zugehörige Links
 {: #rellinks}

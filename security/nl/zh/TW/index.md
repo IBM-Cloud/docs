@@ -190,7 +190,7 @@ Single Sign On 服務支援數個儲存使用者認證的身分來源：
 <dd>透過交換 SAML 記號而完成鑑別的使用者登錄。</dd>
 
 <dt>雲端目錄</dt>
-<dd>「IBM 雲端」中所管理的使用者登錄。</dd>
+<dd>IBM Cloud 中所管理的使用者登錄。</dd>
 
 <dt>社交身分來源</dt>
 <dd> 由 Google、Facebook 及 LinkedIn 所維護的使用者登錄。</dd>
