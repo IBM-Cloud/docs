@@ -15,7 +15,7 @@ lastupdated: "2017-01-10"
 {:codeblock: .codeblock} 
 
 
-# Resolução de problemas para gerenciamento de contas 
+# Resolução de problemas para gerenciamento de contas
 {: #managingaccounts}
 
 Os problemas gerais ao gerenciar sua conta podem incluir apps diferentes que compartilham o mesmo nome de domínio ou administradores que não podem visualizar todas as organizações. Em muitos casos, é possível recuperar-se desses problemas seguindo algumas etapas simples.

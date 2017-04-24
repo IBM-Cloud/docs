@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-01-10"
+lastupdated: "2017-3-16"
 
 ---
 
@@ -223,7 +223,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 通过项目构面将�
 
 其他导致“无效网关”错误的不太常见的原因包括：因特网服务提供商 (ISP) 信息遗失、防火墙配置错误以及浏览器高速缓存错误。 
 
-如果您怀疑 {{site.data.keyword.Bluemix_notm}} 服务已关闭，请先检查 [{{site.data.keyword.Bluemix_notm}} 状态 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://ibm.biz/bluemixstatus){: new_window} 页面。变通方法可能是在其他 {{site.data.keyword.Bluemix_notm}} 区域中使用该服务。有关详细信息，请参阅[在另一个区域中使用服务 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/services/reqnsi.html#cross_region_service){: new_window}。如果服务状态正常，请尝试执行以下步骤来解决问题： 
+如果您怀疑 {{site.data.keyword.Bluemix_notm}} 服务已关闭，请先检查 [{{site.data.keyword.Bluemix_notm}} 状态 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://ibm.biz/bluemixstatus){: new_window} 页面。变通方法可能是在其他 {{site.data.keyword.Bluemix_notm}} 区域中使用该服务。有关详细信息，请参阅[在其他区域使用服务 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/services/reqnsi.html#cross_region_service){: new_window}。如果服务状态正常，请尝试执行以下步骤来解决问题： 
 {: tsResolve}
 
   * 重试操作：
@@ -405,9 +405,9 @@ cf push appname -p app_path
 ## {{site.data.keyword.Bluemix_notm}} Live Sync 图标不显示
 {: #ts_llz_lkb_3r}
 
-您在 IBM Bluemix DevOps Services 中创建了应用程序，但 Web IDE 中不显示 IBM Bluemix Live Sync 图标。
+您创建了应用程序，但 Web IDE 中不显示 IBM Bluemix Live Sync 图标。
 
-在 DevOps Services Web IDE 中编辑 Node.js 应用程序时，不显示 {{site.data.keyword.Bluemix_notm}} 的“实时编辑”、“快速重新启动”和“调试”图标。
+在 Web IDE 中编辑 Node.js 应用程序时，不显示 {{site.data.keyword.Bluemix_notm}} 的“实时编辑”、“快速重新启动”和“调试”图标。
 {: tsSymptoms}
 
 在以下情况下，这些图标不可用：
@@ -425,7 +425,7 @@ cf push appname -p app_path
   ```
    path: path_to_application
    ```
-  * 在应用程序所在的目录中创建 `package.json` 文件。
+  * 在应用程序所在的目录中创建 `package.json` 文件。   
   
   
 ## 在 {{site.data.keyword.Bluemix_notm}} 上找不到组织
@@ -602,12 +602,12 @@ cf push MyUniqueAppName02 -p "./app.war"
 有关 Node.js 应用程序的更多提示，请参阅 [Tips for Node.js Applications](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html ![External link icon](../icons/launch-glyph.svg "外部链接图标"){: new_window}。	
 
 
-## 将 {{site.data.keyword.Bluemix_notm}} Liberty 应用程序从 Bluemix DevOps Services 导入到 Eclipse 之后 `server.xml` 文件中出现配置错误
+## 将 {{site.data.keyword.Bluemix_notm}} Liberty 应用程序导入到 Eclipse 之后，`server.xml` 文件中出现配置错误
 {: #ts_eclipse}
 
-在将 {{site.data.keyword.Bluemix_notm}} Liberty 应用程序从 IBM Bluemix DevOps Services 导入到 Eclipse 之后，如果在 `server.xml` 文件中看到配置错误，那么可能需要从项目中除去 `server.xml` 文件。 
+在将 {{site.data.keyword.Bluemix_notm}} Liberty 应用程序导入到 Eclipse 之后，如果在 `server.xml` 文件中看到配置错误，那么可能需要从项目中除去 `server.xml` 文件。 
 
-在将 {{site.data.keyword.Bluemix_notm}} Liberty 应用程序从 {{site.data.keyword.Bluemix_notm}} DevOps Services 导入 Eclipse 之后，您会在 Eclipse 问题视图中看到 `server.xml` 文件内的配置错误。
+在将 {{site.data.keyword.Bluemix_notm}} Liberty 应用程序导入到 Eclipse 之后，在 Eclipse“问题”视图中看到 `server.xml` 文件内的配置错误。
 {: tsSymptoms}
 
 将 Liberty 应用程序推送到 {{site.data.keyword.Bluemix_notm}} 时，Liberty buildpack 会使用 `server.xml` 文件来配置应用程序，并生成 `runtime-vars.xml` 文件。将应用程序导入到 Eclipse 时，本地环境中不存在 `runtime-vars.xml` 文件。

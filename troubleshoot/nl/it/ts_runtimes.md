@@ -27,13 +27,13 @@ Potresti riscontrare dei problemi quando utilizzi i runtime {{site.data.keyword.
 
 Potresti non essere in grado di utilizzare i componenti di pacchetti di build più recenti quando esegui il push di un'applicazione. Puoi utilizzare i pacchetti di build che hanno dei meccanismi integrati per impedire il caricamento di componenti obsoleti oppure puoi eliminare il contenuto nella directory cache della tua applicazione prima di eseguire il push o di preparare di nuovo l'applicazione. 
 
-Quando esegui il push o prepari di nuovo un'applicazione dopo l'aggiornamento del pacchetto di build, i componenti del pacchetto di build più recenti non vengono caricati automaticamente. Di conseguenza, la tua applicazione utilizza i componenti del pacchetto di build obsoleti dalla cache. Gli aggiornamenti che sono stati applicati al pacchetto di build dall'ultima volta che hai eseguito il push dell'applicazione non vengono implementati.
+Quando esegui il push o prepari di nuovo un'applicazione dopo l'aggiornamento del pacchetto di build, i componenti del pacchetto di build più recenti non vengono caricati automaticamente. Di conseguenza, la tua applicazione utilizza i componenti del pacchetto di build obsoleti dalla cache. Gli aggiornamenti che sono stati applicati al pacchetto di build dall'ultima volta che hai eseguito il push dell'applicazione non vengono implementati. 
 {: tsSymptoms}
 
 Alcuni pacchetti di build non sono configurati per scaricare automaticamente tutti i componenti aggiornati da Internet per garantirti di utilizzare sempre la versione più recente.
 {: tsCauses} 
 
-Puoi utilizzare dei pacchetti di build che hanno dei meccanismi integrati per evitare il caricamento di componenti obsoleti, come ad esempio i seguenti:
+Puoi utilizzare dei pacchetti di build che hanno dei meccanismi integrati per evitare il caricamento di componenti obsoleti, come ad esempio i seguenti: 
 {: tsResolve}
 
   * [Pacchetto di build Java Cloud Foundry  ![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/java-buildpack){: new_window}. Questo pacchetto di build ha un meccanismo integrato per garantire che venga utilizzata la versione più recente del pacchetto di build. Per ulteriori informazioni sulla modalità di funzionamento di questo meccanismo, consulta [extending-caches.md ![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
@@ -117,7 +117,7 @@ Aggiungi un file `requirements.txt` e un file `Procfile` alla directory root del
 
  1. Aggiungi un file `requirements.txt` alla directory root della tua applicazione Python.
  
- Il file `requirements.txt` specifica i pacchetti di libreria richiesti per l'applicazione Python e la versione dei pacchetti.  Il seguente esempio mostra il contenuto del file `requirements.txt`, dove `web.py==0.37` indica
+ Il file `requirements.txt` specifica i pacchetti di libreria richiesti per l'applicazione Python e la versione dei pacchetti. Il seguente esempio mostra il contenuto del file `requirements.txt`, dove `web.py==0.37` indica
 che la versione della libreria `web.py` che verrà scaricata è la 0.37 e `wsgiref==0.1.2` indica che la versione dell'interfaccia gateway del server Web richiesta dalla libreria web.py è la 0.1.2.
 	 ```
 	 web.py==0.37
@@ -127,7 +127,7 @@ che la versione della libreria `web.py` che verrà scaricata è la 0.37 e `wsgir
 il file `requirements.txt`, vedi [Requirements files](https://pip.readthedocs.org/en/1.1/requirements.html). 
 	 
  2. Aggiungi un file `Procfile` alla directory root della tua applicazione Python.
- Il file `Procfile` deve contenere il comando di avvio per la tua applicazione Python. Nel seguente comando, *ilnomedellatuaapplicazione* è il nome della tua applicazione Python e *PORT* è il numero di porta che l'applicazione Python dovrà utilizzare per ricevere le richieste dagli utenti dell'applicazione. *$PORT* è facoltativo. Se non specifichi una PORTA nel comando di avvio, verrà utilizzato il numero di porta indicato nella variabile di ambiente `VCAP_APP_PORT` che si trova all'interno dell'applicazione.  
+ Il file `Procfile` deve contenere il comando di avvio per la tua applicazione Python. Nel seguente comando, *ilnomedellatuaapplicazione* è il nome della tua applicazione Python e *PORT* è il numero di porta che l'applicazione Python dovrà utilizzare per ricevere le richieste dagli utenti dell'applicazione. *$PORT* è facoltativo. Se non specifichi una PORTA nel comando di avvio, verrà utilizzato il numero di porta indicato nella variabile di ambiente `VCAP_APP_PORT` che si trova all'interno dell'applicazione. 
 	```
 	web: python <ilnomedellatuaapplicazione>.py $PORT
 	```
@@ -175,7 +175,7 @@ Immetti di nuovo il nome utente e la password.
 {: #ts_target}
 
 Viene visualizzato un messaggio di errore mentre le operazioni di
-traccia o di dump sono in esecuzione. Il messaggio indica che un'istanza di destinazione per un'applicazione non si trova nello stato di In esecuzione:
+traccia o di dump sono in esecuzione. Il messaggio indica che un'istanza di destinazione per un'applicazione non si trova nello stato di In esecuzione:	
 {: tsSymptoms}
 
 ```
@@ -221,7 +221,7 @@ Nel log dell'applicazione, potresti notare che la quota del disco è stata super
 Nel log della tua applicazione vedi il messaggio di errore `Disk quota exceeded`.
 {: tsSymptoms}
 
-Questo problema si verifica per uno dei seguenti motivi:
+Questo problema si verifica per uno dei seguenti motivi: 
 {: tsCauses} 
 
   * I file di dump vengono generati con le istanze dell'applicazione in esecuzione e i file utilizzano la quota di disco assegnata. Per impostazione predefinita, la quota del disco per un'istanza dell'applicazione è di 1 GB. Puoi controllare l'utilizzo del

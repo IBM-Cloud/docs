@@ -20,7 +20,7 @@ lastupdated: "2017-03-02"
 {: #accessing}
 
 
-I problemi generali con l'accesso a {{site.data.keyword.Bluemix}} potrebbero includere le difficoltà ad accedere a {{site.data.keyword.Bluemix_notm}} o un account che si trova in uno stato di sospensione. In molti casi, puoi risolvere questi problemi seguendo pochi semplici passi.
+I problemi generali con l'accesso a {{site.data.keyword.Bluemix}} potrebbero includere le difficoltà ad accedere a {{site.data.keyword.Bluemix_notm}} o un account che si trova in uno stato di sospensione. In molti casi, puoi risolvere questi problemi seguendo pochi semplici passi. 
 {:shortdesc}
 
 ## Impossibile accedere a {{site.data.keyword.Bluemix_notm}}: password errata
@@ -30,7 +30,7 @@ Per accedere alla console {{site.data.keyword.Bluemix_notm}}, devi disporre di u
 
 Per eseguire l'accesso tramite il [Portale del cliente](https://control.softlayer.com), devi disporre di una password valida associata al tuo ID IBM o ID SoftLayer.
 
-Quando tenti di accedere a {{site.data.keyword.Bluemix_notm}}, viene visualizzato il seguente messaggio di errore:
+Quando tenti di accedere a {{site.data.keyword.Bluemix_notm}}, viene visualizzato il seguente messaggio di errore: 
 {: tsSymptoms} 
 
 `La password immessa non è corretta.`
@@ -40,7 +40,7 @@ L'ID IBM e la password che hai utilizzato per accedere a {{site.data.keyword.Blu
  
 Utilizza una delle seguenti soluzioni:
 {: tsResolve}
- * Immetti la password corretta. Per controllare se il tuo ID IBM e la tua password sono validi, puoi andare alla pagina Il mio profilo IBM, fare clic su **Accedi** e immettere il tuo ID IBM e la relativa password nella pagina di accesso.  
+ * Immetti la password corretta. Per controllare se il tuo ID IBM e la tua password sono validi, puoi andare alla pagina Il mio profilo IBM, fare clic su **Accedi** e immettere il tuo ID IBM e la relativa password nella pagina di accesso. 
  * Se hai dimenticato la password, fai clic su **Password dimenticata** per reimpostarla. Torna quindi alla [console Bluemix](https://console.{DomainName}) o al [Portale del cliente](https://control.softlayer.com) e accedi di nuovo.
  * Se hai dimenticato il tuo ID IBM o continui ad avere problemi con la tua password, contatta l'Help Desk Worldwide IBM Registration per ottenere assistenza. 
  * Per ottenere un ID IBM e password validi, vai alla pagina Il mio profilo IBM e fai clic su **Registrati**.
@@ -56,7 +56,7 @@ Quando accedi utilizzando il tuo ID IBM, viene visualizzato il seguente messaggi
 
 `Invalid login credentials provided. If you have an IBMid associated with your account, please log in here` 
 
-* Sei passato a un ID IBM, ma hai tentato di effettuare l'accesso tramite il [Portale del cliente](https://control.softlayer.com) utilizzando il tuo nome utente e password SoftLayer precedenti.
+* Sei passato a un ID IBM, ma hai tentato di effettuare l'accesso tramite il [Portale del cliente](https://control.softlayer.com) utilizzando il tuo nome utente e password SoftLayer precedenti. 
 {: tsCauses}
 
 * Hai tentato di accedere tramite il [Portale del cliente](https://control.softlayer.com), ma hai immesso il tuo ID IBM e la password nei campi Nome utente e Password. 
@@ -70,7 +70,7 @@ Non utilizzare i campi **Nome utente** e **Password** che utilizzavi con il tuo 
 ## Impossibile accedere a {{site.data.keyword.Bluemix_notm}}: ID IBM o e-mail non riconosciuti
 {: #ts_softlayer_username}
 
-Quando accedi alla console {{site.data.keyword.Bluemix_notm}}, viene visualizzato il seguente messaggio:
+Quando accedi alla console {{site.data.keyword.Bluemix_notm}}, viene visualizzato il seguente messaggio: 
 {: tsSymptoms} 
 
 `ID IBM o indirizzo e-mail non riconosciuto.`
@@ -82,7 +82,7 @@ Per accedere a {{site.data.keyword.Bluemix_notm}}, devi disporre di un ID IBM e 
 
  * Assicurati di immettere un indirizzo e-mail completo per l'ID IBM.
  {: tsResolve}
- * Se sei un utente SoftLayer con un ID SoftLayer, devi passare all'autenticazione ID IBM nel Portale del cliente per ogni account a cui hai accesso prima di poter accedere con l'autenticazione ID IBM.
+ * Se sei un utente SoftLayer con un ID SoftLayer, devi passare all'autenticazione ID IBM nel Portale del cliente per ogni account a cui hai accesso prima di poter accedere con l'autenticazione ID IBM. 
  Per ulteriori informazioni, vedi [Switching to IBMid](/docs/admin/softlayerlink.html#ibmid_switch).
 
 
@@ -113,15 +113,15 @@ A seconda di come è configurato il tuo account, potrebbero essere applicabili a
 ## Impossibile accedere a {{site.data.keyword.Bluemix_notm}}: l'ID IBM non è associato ad alcun account {{site.data.keyword.Bluemix_notm}}
 {: #ts_unabletologin}
 
-Quando accedi a {{site.data.keyword.Bluemix_notm}}, viene visualizzato il seguente messaggio:
+Quando accedi a {{site.data.keyword.Bluemix_notm}}, viene visualizzato il seguente messaggio: 
 {: tsSymptoms} 
  
 `Hai raggiunto questa pagina perché l'autenticazione ha avuto esito positivo, tuttavia questo ID IBM non è associato ad alcun account  {{site.data.keyword.Bluemix_notm}}.`
 
-Hai effettuato l'accesso dalla [console Bluemix](https://console.{DomainName}) con un ID IBM valido, ma non hai ancora creato un account {{site.data.keyword.Bluemix_notm}}.
+Hai effettuato l'accesso dalla [console Bluemix](https://console.{DomainName}) con un ID IBM valido, ma non hai ancora creato un account {{site.data.keyword.Bluemix_notm}}. 
 {: tsCauses} 
 
-Per creare un account {{site.data.keyword.Bluemix_notm}}, segui il processo di registrazione.
+Per creare un account {{site.data.keyword.Bluemix_notm}}, segui il processo di registrazione. 
 {: tsResolve}
 
 A seconda di come è configurato il tuo account, potrebbero essere applicabili alcune di queste opzioni di accesso: 
@@ -222,7 +222,7 @@ nslookup stage1.mybluemix.net
 Puoi invitare più di un utente a lavorare nella stessa organizzazione. Puoi invitare utenti nella tua organizzazione solo
 se sei il proprietario dell'account o se sei allo stesso tempo un gestore e un membro dell'organizzazione.
  
-Non riesci a visualizzare il link **Invita un nuovo utente** nella sezione **Gestisci organizzazioni**.
+Non riesci a visualizzare il link **Invita un nuovo utente** nella sezione **Gestisci organizzazioni**. 
 {: tsSymptoms}
 
 Solo i seguenti utenti {{site.data.keyword.Bluemix_notm}}

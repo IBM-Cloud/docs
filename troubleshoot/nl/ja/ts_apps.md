@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-01-10"
+lastupdated: "2017-3-16"
 
 ---
 
@@ -403,9 +403,9 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} からアプリを {{si
 ## {{site.data.keyword.Bluemix_notm}} Live Sync アイコンが表示されない
 {: #ts_llz_lkb_3r}
 
-IBM Bluemix DevOps Services でアプリを作成したが、Web IDE に IBM Bluemix Live Sync アイコンが表示されません。
+アプリを作成しても、Web IDE に IBM Bluemix Live Sync アイコンが表示されません。
 
-DevOps Services Web IDE で Node.js アプリを編集するときは、{{site.data.keyword.Bluemix_notm}} ライブ編集、即時再始動、およびデバッグの各アイコンは表示されません。
+Web IDE で Node.js アプリを編集するときは、{{site.data.keyword.Bluemix_notm}} ライブ編集、即時再始動、およびデバッグの各アイコンは表示されません。
 {: tsSymptoms}
 
 以下の場合にはアイコンは使用できません。
@@ -424,7 +424,7 @@ DevOps Services Web IDE で Node.js アプリを編集するときは、{{site.d
   ```
    path: path_to_application
    ```
-  * アプリと同じディレクトリーに `package.json` ファイルを作成します。
+  * アプリと同じディレクトリーに `package.json` ファイルを作成します。   
   
   
 ## 組織が {{site.data.keyword.Bluemix_notm}} で見つからない
@@ -602,12 +602,12 @@ Node.js アプリを更新する際、または Node.js アプリを {{site.data
 Node.js アプリについてさらにヒントを見るには、[Node.js アプリケーションに関するヒント (Tips for Node.js Applications) ](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html ![External link icon](../icons/launch-glyph.svg "「外部リンク」アイコン"){: new_window}を参照してください。	
 
 
-## Bluemix DevOps Services から Eclipse に {{site.data.keyword.Bluemix_notm}} Liberty アプリをインポートした後、`server.xml` ファイル内に構成エラーが現れる
+## Eclipse に {{site.data.keyword.Bluemix_notm}} Liberty アプリをインポートした後、`server.xml` ファイル内に構成エラーが現れる
 {: #ts_eclipse}
 
-{{site.data.keyword.Bluemix_notm}} Liberty アプリを IBM Bluemix DevOps Services から Eclipse にインポートした後、`server.xml` ファイル内に構成エラーを認めた場合は、プロジェクトから `server.xml` ファイルを削除しなければならないことがあります。 
+{{site.data.keyword.Bluemix_notm}} Liberty アプリを Eclipse にインポートした後、`server.xml` ファイル内に構成エラーを認めた場合は、プロジェクトから `server.xml` ファイルを削除しなければならないことがあります。 
 
-{{site.data.keyword.Bluemix_notm}} Liberty アプリを {{site.data.keyword.Bluemix_notm}} DevOps Services から Eclipse にインポートした後、Eclipse の「問題」ビューから `server.xml` ファイル内の構成エラーを確認できます。
+{{site.data.keyword.Bluemix_notm}} Liberty アプリを Eclipse にインポートした後、Eclipse の「問題」ビューから `server.xml` ファイル内の構成エラーを確認できます。
 {: tsSymptoms}
 
 Liberty アプリが {{site.data.keyword.Bluemix_notm}} にプッシュされると、Liberty ビルドパックは `server.xml` ファイルを使用してアプリを構成し、`runtime-vars.xml` ファイルを生成します。アプリを Eclipse にインポートする際、`runtime-vars.xml` ファイルはご使用のローカル環境に存在しません。

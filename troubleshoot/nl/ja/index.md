@@ -3,8 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-01-11"
-  
+lastupdated: "2017-3-16"  
 
 ---
 
@@ -516,38 +515,6 @@ Bad Gateway エラーは通常、Web サイトをホストするメイン・サ�
 
 	
 	
-## Git リポジトリーを追加できない
-{: #ts_cannot_addgit}
-
-ダッシュボード上にアプリを作成し、その後 Git リポジトリーを作成するために「Git の追加」をクリックしたが、続行できません。
-
-
-
-**「Git の追加」**をクリックすると、ウィンドウが開き、次のいずれかの問題が発生します。
-{: tsSymptoms} 
-
-  * ウィンドウが空白画面で停止する。
-  * サード・パーティーの Cookie に問題があるというメッセージが表示される。
-
-
-
-ご使用のブラウザーが、Cookie を設定しないように構成されている可能性があります。その Cookie は、{{site.data.keyword.Bluemix_notm}} コンソールのコンテキスト内から hub.jazz.net インターネット・ドメイン内の IBM® Bluemix DevOps Services サイトから設定する必要があります。
-{: tsCauses}  
-
- 
-
-この問題は、次の方法のいずれかで修正することができます。
-{: tsResolve}
-
-  * {{site.data.keyword.Bluemix_notm}} コンソールから開くウィンドウに示されている指示に従います。ボタンをクリックします。別のブラウザー・ウィンドウが一時的に開きます。そのウィンドウで、DevOps Services が認証 Cookie を設定します。
-  * 別のブラウザー・タブで、https://hub.jazz.net にアクセスし、ログインします。{{site.data.keyword.Bluemix_notm}} コンソールに戻り、ページを更新します。**「Git の追加」**を再度クリックします。
-  * サード・パーティーの Cookie を使用可能にするようにブラウザー設定を変更し、「Git の追加」を再度クリックします。設定の構成について詳しくは、以下のご使用ブラウザーの資料を参照してください。
-    * [Mozilla Firefox ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences#w_how-do-i-change-cookie-settings){: new_window}
-	* [Google Chrome ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://support.google.com/chrome/answer/95647){: new_window}
-	* [Apple Safari ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://support.apple.com/kb/PH17191){: new_window}
-	* [Microsoft Internet Explorer ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window}
-これらの回避策で問題が解決されない場合は、idslogin@jazz.net に E メールをお送りください。
-
 
 
 ## Android アプリがプッシュ通知を受信できない
@@ -725,11 +692,11 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} からアプリを {{si
 ## {{site.data.keyword.Bluemix_notm}} Live Sync アイコンが表示されない
 {: #ts_llz_lkb_3r}
 
-IBM Bluemix DevOps Services でアプリを作成したが、Web IDE に IBM Bluemix Live Sync アイコンが表示されません。
+アプリを作成しても、Web IDE に IBM Bluemix Live Sync アイコンが表示されません。
 
  
 
-DevOps Services Web IDE で Node.js アプリを編集するときは、{{site.data.keyword.Bluemix_notm}} ライブ編集、即時再始動、およびデバッグの各アイコンは表示されません。
+Web IDE で Node.js アプリを編集するときは、{{site.data.keyword.Bluemix_notm}} ライブ編集、即時再始動、およびデバッグの各アイコンは表示されません。
 {: tsSymptoms}
 
  
@@ -752,8 +719,6 @@ DevOps Services Web IDE で Node.js アプリを編集するときは、{{site.d
 path: path_to_application
    ```
   * アプリと同じディレクトリーに `package.json` ファイルを作成します。
-
-  
   
   
 
@@ -979,14 +944,14 @@ Node.js アプリについてさらにヒントを見るには、[Node.js アプ
 
 
 
-## Bluemix DevOps Services から Eclipse に {{site.data.keyword.Bluemix_notm}} Liberty アプリをインポートした後、`server.xml` ファイル内に構成エラーが現れる
+## Eclipse に {{site.data.keyword.Bluemix_notm}} Liberty アプリをインポートした後、`server.xml` ファイル内に構成エラーが現れる
 {: #ts_eclipse}
 
-{{site.data.keyword.Bluemix_notm}} Liberty アプリを IBM Bluemix DevOps Services から Eclipse にインポートした後、`server.xml` ファイル内に構成エラーを認めた場合は、プロジェクトから `server.xml` ファイルを削除しなければならないことがあります。 
+{{site.data.keyword.Bluemix_notm}} Liberty アプリを Eclipse にインポートした後、`server.xml` ファイル内に構成エラーを認めた場合は、プロジェクトから `server.xml` ファイルを削除しなければならないことがあります。 
 
  
 
-{{site.data.keyword.Bluemix_notm}} Liberty アプリを {{site.data.keyword.Bluemix_notm}} DevOps Services から Eclipse にインポートした後、Eclipse の「問題」ビューから `server.xml` ファイル内の構成エラーを確認できます。
+{{site.data.keyword.Bluemix_notm}} Liberty アプリを Eclipse にインポートした後、Eclipse の「問題」ビューから `server.xml` ファイル内の構成エラーを確認できます。
 {: tsSymptoms}
 
  
@@ -996,8 +961,7 @@ Liberty アプリが {{site.data.keyword.Bluemix_notm}} にプッシュされる
 
  
 
-server.xml ファイルをプロジェクトから削除することで、この問題を解決できます。アプリを WAR アプリとしてプッシュすると、ビルドパックは `server.xml` ファイルを動的に作成します。詳しくは、[『Liberty for
-Java』](/docs/runtimes/liberty/index.html)を参照してください。
+server.xml ファイルをプロジェクトから削除することで、この問題を解決できます。アプリを WAR アプリとしてプッシュすると、ビルドパックは `server.xml` ファイルを動的に作成します。詳しくは、[Liberty for Java ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/runtimes/liberty/index.html){: new_window} を参照してください。
 {: tsResolve}
 	
 	

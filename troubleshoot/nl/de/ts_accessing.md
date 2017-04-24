@@ -20,7 +20,7 @@ lastupdated: "2017-03-02"
 {: #accessing}
 
 
-Allgemeine Probleme beim Zugriff auf {{site.data.keyword.Bluemix}} können sein, dass es Schwierigkeiten bei der Anmeldung bei {{site.data.keyword.Bluemix_notm}} gibt oder sich ein Konto dauerhaft im Wartestatus befindet. In vielen Fällen können Sie diese Probleme durch Ausführen weniger einfacher Schritte beheben.
+Allgemeine Probleme beim Zugriff auf {{site.data.keyword.Bluemix}} können sein, dass es Schwierigkeiten bei der Anmeldung bei {{site.data.keyword.Bluemix_notm}} gibt oder sich ein Konto dauerhaft im Wartestatus befindet. In vielen Fällen können Sie diese Probleme durch Ausführen weniger einfacher Schritte beheben. 
 {:shortdesc}
 
 ## Anmeldung bei {{site.data.keyword.Bluemix_notm}} nicht möglich: Falsches Kennwort
@@ -30,10 +30,10 @@ Sie müssen über ein gültiges Kennwort verfügen, das Ihrer IBMid zugeordnet i
 
 Sie müssen über ein gültiges Kennwort verfügen, das Ihrer IBMid oder SoftLayer-ID zugeordnet ist, um sich über das [Kundenportal](https://control.softlayer.com) anzumelden.
 
-Wenn Sie versuchen, sich bei {{site.data.keyword.Bluemix_notm}} anzumelden, wird die folgende Fehlernachricht angezeigt:
+Wenn Sie versuchen, sich bei {{site.data.keyword.Bluemix_notm}} anzumelden, wird die folgende Fehlernachricht angezeigt: 
 {: tsSymptoms} 
 
-`Das eingegebene Kennwort ist nicht korrekt.` 
+`Das eingegebene Kennwort ist nicht korrekt.`
 
 Die IBMid und das Kennwort für die Anmeldung bei {{site.data.keyword.Bluemix_notm}} sind ungültig.
 {: tsCauses} 
@@ -45,7 +45,7 @@ Verwenden Sie eine der folgenden Lösungen:
  * Wenn Sie Ihre IBMid vergessen haben oder weiterhin Probleme mit dem Kennwort vorliegen, suchen Sie auf der Site 'Worldwide IBM Registration Helpdesk' nach Hilfe. 
  * Um eine gültige IBMid und ein gültiges Kennwort anzufordern, rufen Sie die Seite 'Mein IBM Profil' auf und klicken Sie dann auf **Registrieren**.
   
-**Hinweis:** Falls Sie sich auf der Seite für die Anmeldung bei IBM befinden und der Anmeldeprozess aus irgendeinem Grund unterbrochen wird (beispielsweise beim Zurücksetzen Ihres Kennworts), rufen Sie erneut die [Bluemix-Konsole](https://console.{DomainName}) oder das [Kundenportal](https://control.softlayer.com) auf und beginnen Sie den Anmeldeprozess erneut. 
+**Hinweis:** Falls Sie sich auf der Seite für die Anmeldung bei IBM befinden und der Anmeldeprozess aus irgendeinem Grund unterbrochen wird (beispielsweise beim Zurücksetzen Ihres Kennworts), rufen Sie erneut die [Bluemix-Konsole](https://console.{DomainName}) oder das [Kundenportal](https://control.softlayer.com) auf und beginnen Sie den Anmeldeprozess erneut.
  
 
 ## Anmeldung bei {{site.data.keyword.Bluemix_notm}} nicht möglich: Falsche Anmeldeberechtigungsnachweise
@@ -56,7 +56,7 @@ Wenn Sie sich mit Ihrer IBMid anmelden, wird die folgende Nachricht angezeigt:
 
 `Es wurden falsche Anmeldeberechtigungsnachweise angegeben. Falls Ihrem Konto eine IBM ID zugeordnet ist, melden Sie sich bitte hier an.` 
 
-* Sie haben zur Verwendung einer IBMid gewechselt, aber versucht, sich über das [Kundenportal](https://control.softlayer.com) mit Ihrem vorherigen SoftLayer-Benutzernamen und -Kennwort anzumelden.
+* Sie haben zur Verwendung einer IBMid gewechselt, aber versucht, sich über das [Kundenportal](https://control.softlayer.com) mit Ihrem vorherigen SoftLayer-Benutzernamen und -Kennwort anzumelden. 
 {: tsCauses}
 
 * Sie haben versucht, sich über das [Kundenportal](https://control.softlayer.com) anzumelden, aber Ihre IBMid und das zugehörige Kennwort in den Feldern für den Benutzernamen und das Kennwort eingegeben. 
@@ -70,7 +70,7 @@ Verwenden Sie nicht die Felder **Benutzername** und **Kennwort**, die Sie für I
 ## Anmeldung bei {{site.data.keyword.Bluemix_notm}} nicht möglich: Nicht erkannte IBMid oder E-Mail-Adresse
 {: #ts_softlayer_username}
 
-Wenn Sie sich bei der {{site.data.keyword.Bluemix_notm}}-Konsole anmelden, wird die folgende Nachricht angezeigt:
+Wenn Sie sich bei der {{site.data.keyword.Bluemix_notm}}-Konsole anmelden, wird die folgende Nachricht angezeigt: 
 {: tsSymptoms} 
 
 `Diese IBMid oder E-Mail wurde nicht erkannt.`
@@ -82,7 +82,8 @@ Sie müssen über eine gültige IBMid und ein Kennwort verfügen, um sich bei {{
 
  * Stellen Sie sicher, dass Sie eine vollständig qualifizierte E-Mail-Adresse für die IBMid eingeben.
  {: tsResolve}
- * Falls Sie einen SoftLayer-.Benutzer mit einer SoftLayer-ID verwenden, müssen Sie für jedes Konto, auf das Sie zugreifen können, im Kundenportal zur Authentifizierung mit IBMid wechseln, bevor Sie sich mit der Authentifizierung über IBMid amelden können. Weitere Informationen finden Sie unter [Zur IBMid wechseln](/docs/admin/softlayerlink.html#ibmid_switch).
+ * Falls Sie einen SoftLayer-.Benutzer mit einer SoftLayer-ID verwenden, müssen Sie für jedes Konto, auf das Sie zugreifen können, im Kundenportal zur Authentifizierung mit IBMid wechseln, bevor Sie sich mit der Authentifizierung über IBMid amelden können. 
+ Weitere Informationen finden Sie unter [Zur IBMid wechseln](/docs/admin/softlayerlink.html#ibmid_switch).
 
 
 ## Anmeldung bei {{site.data.keyword.Bluemix_notm}} nicht möglich: IBMid ist keinem IBM Cloud-Konto zugeordnet
@@ -98,11 +99,11 @@ Sie haben sich über das [Kundenportal](https://control.softlayer.com) mit einer
  
 Führen Sie die folgenen Prüfungen durch:
 {: tsResolve}
- * Lassen Sie von Ihrem Masterbenutzer oder Kontoadministrator überprüfen, ob Sie zur Authentifizierung mit IBMid wechseln können. 
+ * Lassen Sie von Ihrem Masterbenutzer oder Kontoadministrator überprüfen, ob Sie zur Authentifizierung mit IBMid wechseln können.
  * Stellen Sie sicher, dass Sie den Schritt für den Wechsel zur IBMid in Ihrem SoftLayer-Konto ausgeführt haben. Weitere Informationen finden Sie unter [Zur IBMid wechseln](/docs/admin/softlayerlink.html#ibmid_switch).
  * Stellen Sie sicher, dass Sie die Aktionen ausgeführt haben, die in der E-Mail für die **Zuordnung des SoftLayer-Benutzers zu einer IBMid** beschrieben sind. Prüfen Sie, ob die E-Mail in Ihrem Posteingang oder im Spamordner vorhanden ist. Um die E-Mail erneut abzurufen, weil sie beispielsweise abgelaufen ist, wechseln Sie im Steuerungsportal auf die Seite für die Bearbeitung des Benutzerprofils und klicken Sie auf **E-Mail erneut senden**. Setzen Sie sich alternativ mit dem [{{site.data.keyword.Bluemix_notm}}-Support ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://ibm.biz/bluemixsupport.com){: new_window} in Verbindung.
 
-**Hinweis:** Falls Sie Ihre IBMid direkt über IBMid erstellt haben, empfangen Sie zwei E-Mails, die Sie verarbeiten müssen. Eine E-Mail stammt von der IBMid-Registrierung, die andere von Softlayer. Stellen Sie sicher, dass Sie die Aktionen ausführen, die in beiden E-Mails aufgeführt sind. 
+**Hinweis:** Falls Sie Ihre IBMid direkt über IBMid erstellt haben, empfangen Sie zwei E-Mails, die Sie verarbeiten müssen. Eine E-Mail stammt von der IBMid-Registrierung, die andere von Softlayer. Stellen Sie sicher, dass Sie die Aktionen ausführen, die in beiden E-Mails aufgeführt sind.
 
 Je nachdem, wie Ihr Konto eingerichtet wurde, können einige dieser Anmeldeoptionen auf Sie zutreffen: 
  * SoftLayer-Benutzer mit SoftLayer-IDs müssen sich über das [Kundenportal](https://control.softlayer.com) anmelden.
@@ -112,15 +113,15 @@ Je nachdem, wie Ihr Konto eingerichtet wurde, können einige dieser Anmeldeoptio
 ## Anmeldung bei {{site.data.keyword.Bluemix_notm}} nicht möglich: IBMid ist keinem {{site.data.keyword.Bluemix_notm}}-Konto zugeordnet
 {: #ts_unabletologin}
 
-Wenn Sie sich bei {{site.data.keyword.Bluemix_notm}} anmelden, wird die folgende Nachricht angezeigt:
+Wenn Sie sich bei {{site.data.keyword.Bluemix_notm}} anmelden, wird die folgende Nachricht angezeigt: 
 {: tsSymptoms} 
  
 `Sie sind auf diese Seite gelangt, weil Ihre Authentifizierung erfolgreich war; allerdings ist diese IBMid keinem {{site.data.keyword.Bluemix_notm}}-Konto zugeordnet.`
 
-Sie haben sich über die [Bluemix-Konsole](https://console.{DomainName}) mit einer gültigen IBM ID angemeldet, aber es wurde noch kein {{site.data.keyword.Bluemix_notm}}-Konto erstellt.
+Sie haben sich über die [Bluemix-Konsole](https://console.{DomainName}) mit einer gültigen IBM ID angemeldet, aber es wurde noch kein {{site.data.keyword.Bluemix_notm}}-Konto erstellt. 
 {: tsCauses} 
 
-Führen Sie den Anmeldeprozess durch, um ein {{site.data.keyword.Bluemix_notm}}-Konto zu erstellen.
+Führen Sie den Anmeldeprozess durch, um ein {{site.data.keyword.Bluemix_notm}}-Konto zu erstellen. 
 {: tsResolve}
 
 Je nachdem, wie Ihr Konto eingerichtet wurde, können einige dieser Anmeldeoptionen auf Sie zutreffen: 
@@ -136,8 +137,8 @@ Wenn Sie sich mit Ihrer IBMid anmelden, wird eine Nachricht über die erfolgreic
 
 Verwenden Sie eine der folgenden Lösungen:
 {: tsResolve}
- * Schließen Sie Ihren Browser, löschen Sie Cookies sowie den Inhalt des Cache und versuchen Sie erneut, sich anzumelden. 
- * Stellen Sie sicher, dass Sie zur Anmeldung die [Bluemix-Konsole](https://console.{DomainName}) oder das [Kundenportal](https://control.softlayer.com) und nicht direkt den Service für die Authentifizierung mit IBMid verwenden. 
+ * Schließen Sie Ihren Browser, löschen Sie Cookies sowie den Inhalt des Cache und versuchen Sie erneut, sich anzumelden.
+ * Stellen Sie sicher, dass Sie zur Anmeldung die [Bluemix-Konsole](https://console.{DomainName}) oder das [Kundenportal](https://control.softlayer.com) und nicht direkt den Service für die Authentifizierung mit IBMid verwenden.
  
  
 ## Anmeldung bei {{site.data.keyword.Bluemix_notm}} nicht möglich: Anmeldung mit IBMid wird nicht vollständig ausgeführt
@@ -220,7 +221,7 @@ nslookup stage1.mybluemix.net
 
 Zur Arbeit für eine Organisation können mehrere Benutzer eingeladen werden. Sie können nur Benutzer in Ihre Organisation einladen, wenn Sie der Kontoeigner sind oder wenn Sie sowohl Manager als auch Mitglied der Organisation sind.
  
-Sie können den Link **Neuen Benutzer einladen** im Abschnitt **Organisation verwalten** nicht anzeigen.
+Sie können den Link **Neuen Benutzer einladen** im Abschnitt **Organisation verwalten** nicht anzeigen. 
 {: tsSymptoms}
 
 Nur die folgenden {{site.data.keyword.Bluemix_notm}}-Benutzer können Benutzer zu einer Organisation einladen:
@@ -284,8 +285,8 @@ Während der Verwendung der {{site.data.keyword.Bluemix_notm}}-Konsole kann eine
 Führen Sie nach Bedarf eine oder mehrere der folgenden Aktionen aus:
 {: tsResolve}
 
-  * Aktualisieren Sie den Browser oder starten Sie ihn erneut. 
-  * Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} ab und anschließend wieder an. 
+  * Aktualisieren Sie den Browser oder starten Sie ihn erneut.
+  * Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} ab und anschließend wieder an.
   * Verwenden Sie den persönlichen Browsingmodus des Browsers. 
   * Löschen Sie Cookies und den Inhalt des Browser-Cache.
   * Verwenden Sie einen anderen Browser. Informationen zu den Versionen der Browser, die von {{site.data.keyword.Bluemix_notm}} unterstützt werden, finden Sie in den [Voraussetzungen für Bluemix](/docs/overview/whatisbluemix.html#prereqs).

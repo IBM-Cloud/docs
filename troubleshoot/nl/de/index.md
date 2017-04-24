@@ -3,8 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-01-11"
-  
+lastupdated: "2017-3-16"  
 
 ---
 
@@ -551,40 +550,6 @@ wenn Sie Ihre App mit Push-Operation an {{site.data.keyword.Bluemix_notm}} über
 
 	
 	
-## Git-Repository kann nicht hinzugefügt werden
-{: #ts_cannot_addgit}
-
-Nach der Erstellung einer App im Dashboard haben Sie auf 'Git hinzufügen' geklickt, um ein Git-Repository zu erstellen; Sie können allerdings nicht fortfahren.
-
-
-
-Wenn Sie auf
-**Git hinzufügen** klicken, wird ein Fenster geöffnet
-und es kommt zu einem dieser Fehler:
-{: tsSymptoms} 
-
-  * Das Fenster bleibt mit einer leeren Anzeige hängen.
-  * In einer Nachricht werden Sie darauf hingewiesen, dass es ein Problem mit Cookies von Drittanbietern gibt.
-
-
-
-Möglicherweise ist Ihr Browser so konfiguriert,
-dass kein Cookie definiert werden kann. Dieses Cookie muss über die IBM® Bluemix DevOps Services-Site in der Internetdomäne hub.jazz.net festgelegt werden, und zwar im Kontext der {{site.data.keyword.Bluemix_notm}}-Konsole.
-{: tsCauses}  
-
- 
-
-Zur Lösung dieses Problems stehen Ihnen die folgenden Möglichkeiten zur Verfügung:
-{: tsResolve}
-
-  * Befolgen Sie die Anweisungen in dem Fenster, das in der {{site.data.keyword.Bluemix_notm}}-Konsole geöffnet wird. Klicken Sie auf die Schaltfläche. Vorübergehend wird ein weiteres Browserfenster geöffnet. In diesem Fenster legt DevOps Services das Authentifizierungscookie fest.
-  * Rufen Sie auf einer weiteren Browserregisterkarte https://hub.jazz.net auf und melden Sie sich an. Kehren Sie zur {{site.data.keyword.Bluemix_notm}}-Konsole zurück und aktualisieren Sie die Seite. Klicken Sie erneut auf **Git hinzufügen**.
-  * Ändern Sie Ihre Browsereinstellungen so, dass Cookies von Drittanbietern möglich sind, und klicken Sie erneut auf 'Git hinzufügen'. Details zur Konfiguration dieser Einstellungen finden Sie in der Dokumentation Ihres Browsers:
-    * [Mozilla Firefox ![Symbol für externen Link](../icons/launch-glyph.svg)](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences#w_how-do-i-change-cookie-settings){: new_window}
-	* [Google Chrome ![Symbol für externen Link](../icons/launch-glyph.svg)](https://support.google.com/chrome/answer/95647){: new_window}
-	* [Apple Safari ![Symbol für externen Link](../icons/launch-glyph.svg)](https://support.apple.com/kb/PH17191){: new_window}
-	* [Microsoft Internet Explorer ![Symbol für externen Link](../icons/launch-glyph.svg)](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window} Falls das Problem durch diese Ausweichlösungen nicht behoben wird, senden Sie eine E-Mail an idslogin@jazz.net.
-
 
 
 ## Android-Apps empfangen keine Push-Benachrichtigungen
@@ -594,7 +559,7 @@ In bestimmten Regionen, in denen nicht auf Google zugegriffen werden kann, empfa
 
  
 
-Sie binden einen Push-Service für Ihre Bluemix-App und senden eine Nachricht an die registrierten Geräte. Jedoch können Apps, die auf der Android-Plattform entwickelt wurden, Ihre Benachrichtigungen in bestimmten Regionen nicht empfangen.
+Sie binden einen Push-Service für Ihre Bluemix-App und senden eine Nachricht an die registrierten Geräte. Jedoch können Apps, die auf der Android-Plattform entwickelt wurden, Ihre Benachrichtigungen in bestimmten Regionen nicht empfangen. 
 {: tsSymptoms}
 
  
@@ -763,11 +728,11 @@ Wenn Sie eine App aus IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} m
 ## Symbole für {{site.data.keyword.Bluemix_notm}} Live Sync werden nicht angezeigt
 {: #ts_llz_lkb_3r}
 
-Sie haben in IBM Bluemix DevOps Services eine App erstellt, aber die Symbole für IBM Bluemix Live Sync werden in der Web-IDE nicht angezeigt.
+Sie haben eine App erstellt, aber die Symbole für IBM Bluemix Live Sync werden in der Web-IDE nicht angezeigt. 
 
  
 
-Wenn Sie eine Node.js-App in der Web-IDE von DevOps Services bearbeiten, werden die Symbole für {{site.data.keyword.Bluemix_notm}} Live Edit, für den schnellen Neustart und für das Debugging nicht angezeigt.
+Wenn Sie eine Node.js-App in der Web-IDE bearbeiten, werden die Symbole für {{site.data.keyword.Bluemix_notm}} Live Edit, für den schnellen Neustart und für das Debugging nicht angezeigt.
 {: tsSymptoms}
 
  
@@ -789,8 +754,6 @@ Verwenden Sie eine der folgenden Methoden, um das Problem zu lösen:
    path: path_to_application
    ```
   * Erstellen Sie die Datei `package.json` im selben Verzeichnis wie Ihre App.
-
-  
   
   
 
@@ -1020,14 +983,14 @@ Weitere Tipps zu Node.js-Apps finden Sie in den [Tipps zu Node.js-Anwendungen ![
 
 
 
-## Konfigurationsfehler in Datei `server.xml` nach Import einer {{site.data.keyword.Bluemix_notm}} Liberty-Anwendung von Bluemix DevOps Services in Eclipse
+## Konfigurationsfehler in Datei `server.xml` nach Import einer {{site.data.keyword.Bluemix_notm}} Liberty-App in Eclipse
 {: #ts_eclipse}
 
-Wenn in der Datei `server.xml` nach dem Import einer {{site.data.keyword.Bluemix_notm}} Liberty-Anwendung aus IBM Bluemix DevOps Services in Eclipse Konfigurationsfehler angezeigt werden, kann es erforderlich sein, die Datei `server.xml` aus dem Projekt zu entfernen. 
+Wenn in der Datei `server.xml` nach dem Import einer {{site.data.keyword.Bluemix_notm}} Liberty-App in Eclipse Konfigurationsfehler angezeigt werden, kann es erforderlich sein, die Datei `server.xml` aus dem Projekt zu entfernen.  
 
  
 
-Nach dem Import einer {{site.data.keyword.Bluemix_notm}} Liberty-Anwendung aus {{site.data.keyword.Bluemix_notm}} DevOps Services in Eclipse werden in der Eclipse-Ansicht 'Fehler' Konfigurationsfehler in der Datei `server.xml` angezeigt. 
+Nach dem Import einer {{site.data.keyword.Bluemix_notm}} Liberty-App in Eclipse werden in der Eclipse-Ansicht 'Fehler' Konfigurationsfehler in der Datei `server.xml` angezeigt.
 {: tsSymptoms}
 
  
@@ -1037,7 +1000,7 @@ Das Liberty-Buildpack verwendet die Datei `server.xml` zum Konfigurieren der App
 
  
 
-Sie können dieses Problem durch Entfernen der Datei server.xml aus dem Projekt beheben. Vom Buildpack wird die Datei `server.xml` dynamisch erstellt, wenn Sie die App mit einer Push-Operation als WAR-App übertragen. Weitere Informationen finden Sie unter [Liberty for Java](/docs/runtimes/liberty/index.html).
+Sie können dieses Problem durch Entfernen der Datei server.xml aus dem Projekt beheben. Vom Buildpack wird die Datei `server.xml` dynamisch erstellt, wenn Sie die App mit einer Push-Operation als WAR-App übertragen. Weitere Informationen finden Sie unter [Liberty for Java ![Link für externen Link](../icons/launch-glyph.svg "Link für externen Link")](/docs/runtimes/liberty/index.html){: new_window}.
 {: tsResolve}
 	
 	

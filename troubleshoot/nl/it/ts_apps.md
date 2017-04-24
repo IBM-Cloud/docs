@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-01-10"
+lastupdated: "2017-3-16"
 
 ---
 
@@ -112,7 +112,7 @@ Quando tenti di riutilizzare il nome applicazione, ricevi il seguente messaggio:
 Quando si elimina un'applicazione, la sua rotta, ossia l'URL dell'applicazione, non viene eliminata automaticamente. Pertanto, non è disponibile per il riutilizzo. Per poterlo riutilizzare, devi accedere allo spazio in cui è stata creata l'applicazione per eliminare la rotta.
 {: tsCauses}
 
-Per eliminare la rotta non utilizzata, completa la seguente procedura:
+Per eliminare la rotta non utilizzata, completa la seguente procedura: 
 {: tsResolve}
 
   1. Controlla se la rotta appartiene allo spazio corrente immettendo il seguente comando: 
@@ -143,7 +143,7 @@ Quando tenti di creare un'applicazione in Bluemix, viene visualizzato il seguent
 
 `BXNUI0515E: Gli spazi nell'organizzazione non sono stati recuperati. Si è verificato un problema di rete oppure la tua organizzazione corrente non dispone di uno spazio associato ad essa.`
 
-Questo errore si verifica spesso la prima volta che si tenta di creare un'applicazione o un servizio dal Catalogo quando ancora non è stato creato uno spazio.
+Questo errore si verifica spesso la prima volta che si tenta di creare un'applicazione o un servizio dal Catalogo quando ancora non è stato creato uno spazio. 
 {: tsCauses}
 
 Assicurati di aver creato uno spazio nella tua organizzazione corrente. Per creare uno spazio, utilizza uno dei seguenti metodi:
@@ -168,7 +168,7 @@ Quando tenti di eseguire azioni per un'istanza del servizio o un'istanza dell'ap
 
 `Server error, status code: 403, error code: 10003, message: You are not authorized to perform the requested action.`
 
-Non disponi del livello di autorità adeguato per eseguire le azioni.
+Non disponi del livello di autorità adeguato per eseguire le azioni. 
 {: tsCauses}
 
 Per ottenere il livello di autorità appropriato, utilizza uno dei seguenti metodi: 
@@ -193,8 +193,8 @@ Invece di impostare come hardcoded le credenziali nella tua applicazione, utiliz
 ```
 process.env.VCAP_SERVICES
 ```
-Per ulteriori informazioni sui comandi che puoi utilizzare in altri linguaggi di programmazione, vedi [Java ![icona link esterno](../icons/launch-glyph.svg "External link icon")](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} e [Ruby ![icona link esterno](../icons/launch-glyph.svg "External link icon")](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}.
-
+Per ulteriori informazioni sui comandi che puoi utilizzare in altri linguaggi di programmazione, vedi [Java ![icona link esterno](../icons/launch-glyph.svg "External link icon")](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} e [Ruby ![icona link esterno](../icons/launch-glyph.svg "External link icon")](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}. 
+ 
 
 ## Impossibile distribuire le applicazioni utilizzando IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}
 {: #ts_bm_tools_facet}
@@ -432,8 +432,7 @@ accounts](/docs/pricing/index.html#pay-accounts).
 
 Un'applicazione non si riavvia automaticamente se un servizio che associ mediante bind all'applicazione smette di funzionare.	  
 
-Se un servizio che associ mediante bind a un'applicazione si arresta in modo anomalo, nell'applicazione potrebbero verificarsi dei problemi come interruzioni, eccezioni ed errori di connessione. {{site.data.keyword.Bluemix_notm}} non riavvia automaticamente l'applicazione per risolvere questi problemi.
-{: tsSymptoms}
+Quando un servizio che associ mediante bind a un'applicazione viene arrestato in modo anomalo, nell'applicazione potrebbero verificarsi dei problemi come interruzioni, eccezioni ed errori di connessione. {{site.data.keyword.Bluemix_notm}} non riavvia automaticamente l'applicazione per eseguire un ripristino da tali problemi. {: tsSymptoms}
 
 Questo è il funzionamento progettato da Cloud Foundry.
 {: tsCauses} 
@@ -469,9 +468,9 @@ salvate nel file manifest della tua applicazione. La prossima volta che apri la 
 ## Le icone di {{site.data.keyword.Bluemix_notm}} Live Sync non vengono visualizzate
 {: #ts_llz_lkb_3r}
 
-Hai creato un'applicazione in IBM Bluemix DevOps Services, ma le icone di IBM Bluemix Live Sync non sono visualizzate nel Web IDE.
+Hai creato un'applicazione ma le icone IBM Bluemix Live Sync non sono visualizzate nel Web IDE. 
 
-Quando modifichi un'applicazione Node.js nel Web IDE di DevOps Services, le icone di live edit, riavvio rapido e debug di {{site.data.keyword.Bluemix_notm}} non vengono visualizzate.
+Quando modifichi un'applicazione Node.js iin Web IDE, le icone di le icone di live edit, riavvio rapido e debug di {{site.data.keyword.Bluemix_notm}} non vengono visualizzate.
 {: tsSymptoms}
 
 Le icone non sono disponibili nei seguenti casi:
@@ -481,7 +480,7 @@ Le icone non sono disponibili nei seguenti casi:
   * La tua applicazione è memorizzata in una sottodirectory anziché al livello superiore del tuo progetto, ma il percorso della sottodirectory non è specificato nel file `manifest.yml`.
   * L'applicazione non contiene un file `package.json`.
 
-Utilizza uno dei seguenti metodi:
+Utilizza uno dei seguenti metodi: 
 {: tsResolve} 
 
   * Se il file `manifest.yml` non è memorizzato al livello superiore del tuo progetto, memorizzalo lì.
@@ -491,7 +490,7 @@ di tale sottodirectory nel file `manifest.yml`.
    path: percorso_alla_applicazione
    ```
   * Crea un file `package.json` che si trovi nella stessa
-directory della tua applicazione.
+directory della tua applicazione.   
   
   
 ## Impossibile trovare le organizzazioni in {{site.data.keyword.Bluemix_notm}}
@@ -572,7 +571,7 @@ Quando carichi un'applicazione WAR in {{site.data.keyword.Bluemix_notm}} utilizz
 {: tsSymptoms} 
 `Staging error: cannot get instances since staging failed.`
  
-Questo problema potrebbe verificarsi se non si specifica il file WAR o il percorso del file WAR.
+Questo problema potrebbe verificarsi se non si specifica il file WAR o il percorso del file WAR. 
 {: tsCauses}
 	
 Utilizza l'opzione **-p** per specificare
@@ -661,7 +660,7 @@ Utilizza uno dei seguenti metodi in base alla causa del problema:
   ...
         ```
 
-  * Assicurati che nella tua applicazione Node.js sia presente un file  `package.json` in modo che il pacchetto di build Node.js possa riconoscere l'applicazione. Assicurati inoltre che questo file si trovi nella directory root della tua applicazione.
+  * Assicurati che nella tua applicazione Node.js sia presente un file  `package.json` in modo che il pacchetto di build Node.js possa riconoscere l'applicazione. Assicurati inoltre che questo file si trovi nella directory root della tua applicazione.	
     Il seguente
                                                   esempio mostra un semplice file
                                                   `package.json`:  
@@ -686,18 +685,19 @@ Utilizza uno dei seguenti metodi in base alla causa del problema:
 Per ulteriori suggerimenti relativi alle applicazioni Node.js, vedi [Tips for Node.js Applications](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html ![External link icon](../icons/launch-glyph.svg "icona link esterno"){: new_window}.	
 
 
-## Sono presenti degli errori di configurazione nel file `server.xml` dopo che importi un'applicazione {{site.data.keyword.Bluemix_notm}} Liberty da Bluemix DevOps Services a Eclipse
+## Sono presenti degli errori di configurazione nel file `server.xml` dopo che importi un'applicazione {{site.data.keyword.Bluemix_notm}} Liberty in Eclipse
 {: #ts_eclipse}
 
-Se vedi degli errori di configurazione nel file `server.xml` dopo aver importato un'applicazione {{site.data.keyword.Bluemix_notm}} Liberty da IBM Bluemix DevOps Services a Eclipse, potresti dover rimuovere il file `server.xml` dal progetto. 
+Se vedi degli errori di configurazione nel file `server.xml` dopo aver importato un'applicazione {{site.data.keyword.Bluemix_notm}} Liberty in Eclipse, potresti dover rimuovere il file `server.xml` dal progetto. 
 
-Dopo aver importato un'applicazione {{site.data.keyword.Bluemix_notm}} Liberty da {{site.data.keyword.Bluemix_notm}} DevOps Services in Eclipse, vedi degli errori di configurazione nel file `server.xml` dalla vista Problemi di Eclipse.
+Dopo aver importato un'applicazione {{site.data.keyword.Bluemix_notm}} Liberty in Eclipse, vedi degli errori di configurazione nel file `server.xml` dalla vista Problemi di Eclipse.
 {: tsSymptoms}
 
 Il pacchetto di build Liberty utilizza il file `server.xml` per configurare l'applicazione e genera un file `runtime-vars.xml` quando viene eseguito il push dell'applicazione Liberty a {{site.data.keyword.Bluemix_notm}}. Quando importi l'applicazione in Eclipse, il file `runtime-vars.xml` non esiste nel tuo ambiente locale.
 {: tsCauses}
 
-Puoi risolvere questo problema rimuovendo il file server.xml dal progetto. Il pacchetto di build crea il file `server.xml` dinamicamente quando esegui il push dell'applicazione come un'applicazione WAR. Per ulteriori informazioni, consulta [Liberty for Java](/docs/runtimes/liberty/index.html).
+Puoi risolvere questo problema rimuovendo il file server.xml dal progetto. Il pacchetto di build crea il file `server.xml` dinamicamente quando
+esegui il push dell'applicazione come un'applicazione WAR. Per ulteriori informazioni, vedi [Liberty for Java](/docs/runtimes/liberty/index.html).
 {: tsResolve}
 	
 	
@@ -794,7 +794,7 @@ aggiorna le informazioni del tuo account.
 
 Se noti che il repository Git non viene clonato, potrebbe esistere un problema con il repository o con il frammento di pulsante.
 
-Fai clic sul pulsante **Distribuisci a Bluemix**, ma il repository Git non viene trovato e non può essere clonato in DevOps Services. Il passo "Clonazione del repository" non viene completato correttamente. Di conseguenza, l'applicazione non può essere distribuita a {{site.data.keyword.Bluemix_notm}}.
+Fai clic sul pulsante **Distribuisci a Bluemix**, ma il repository Git non viene trovato e non può essere clonato in DevOps Services. Il passo "Clonazione del repository" non viene completato correttamente. Di conseguenza, l'applicazione non può essere distribuita a {{site.data.keyword.Bluemix_notm}}. 
 {: tsSymptoms} 
 
 Questo problema si verifica per i seguenti motivi:
@@ -880,7 +880,7 @@ dell'applicazione. Per verificare che il codice non contenga alcun problema, cre
 ## Impossibile distribuire un'applicazione dalla barra di esecuzione
 {: #ts_runbar}
 
-La distribuzione non riesce indicando uno stato "non sincronizzato" di colore giallo.
+La distribuzione non riesce indicando uno stato "non sincronizzato" di colore giallo. 
 {: tsSymptoms} 
 
 L'applicazione che stai distribuendo ha la stessa rotta di un'altra applicazione in esecuzione. 

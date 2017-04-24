@@ -3,8 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-01-11"
-  
+lastupdated: "2017-3-16"  
 
 ---
 
@@ -20,7 +19,7 @@ lastupdated: "2017-01-11"
 
 
 
-一般在存取 {{site.data.keyword.Bluemix}} 時發生的問題，可能包括使用者無法登入 {{site.data.keyword.Bluemix_notm}}、帳戶陷入擱置狀態，等等。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題中回復。
+在存取 {{site.data.keyword.Bluemix}} 時發生的一般問題，可能包括使用者無法登入 {{site.data.keyword.Bluemix_notm}}、帳戶陷入擱置狀態，等等。然而，在許多情況下，您可以遵照一些簡單的步驟，從這些問題回復。
 {:shortdesc}
 
 ## 無法登入 {{site.data.keyword.Bluemix_notm}}
@@ -223,7 +222,7 @@ nslookup mybluemix.net
 # 管理應用程式疑難排解
 {: #managingapps}
 
-管理應用程式的一般問題可能包括無法更新應用程式、未顯示雙位元組字元等問題。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題中回復。
+管理應用程式的一般問題可能包括無法更新應用程式、未顯示雙位元組字元等問題。然而，在許多情況下，您可以遵照一些簡單的步驟，從這些問題回復。
 {:shortdesc}
 
 
@@ -301,7 +300,7 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 
 如果您的工作台 JVM 是 IBM JVM 7 或 8，或舊版 Oracle JVM 8，請完成下列步驟來切換至 Oracle JVM 8：
 
-  1. 下載並安裝 Oracle JVM 8，如需詳細資料，請參閱 [Java SE 下載 ![外部鏈結圖示](../icons/launch-glyph.svg)](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window}。
+  1. 下載並安裝 Oracle JVM 8，如需詳細資料，請參閱 [Java SE Downloads ![外部鏈結圖示](../icons/launch-glyph.svg)](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window}。
   2. 重新啟動 Eclipse。
   3. 檢查 `eclipse.vm` 內容是否指向新的 Oracle JVM 8 安裝。
 
@@ -436,7 +435,7 @@ process.env.VCAP_SERVICES
 
  
 
-您可以使用 Cloud Foundry CLI，順利地將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。然而，您無法使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 將應用程式部署至 {{site.data.keyword.Bluemix_notm}}，並且看到此錯誤訊息：`不支援專案資料類型 <facet_name>。`例如，`不支援專案資料類型 Cloud Foundry 獨立式應用程式 1.0 版。`
+您可以使用 Cloud Foundry CLI，順利地將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。然而，您無法使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 將應用程式部署至 {{site.data.keyword.Bluemix_notm}}，並且看到此錯誤訊息：`Project facet <facet_name> is not supported`。例如，`Project facet Cloud Foundry Standalone Application version 1.0 is not supported`。
 {: tsSymptoms}
 
  
@@ -515,38 +514,6 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 會依專案資料類�
 
 	
 	
-## 無法新增 Git 儲存庫
-{: #ts_cannot_addgit}
-
-在「儀表板」上建立應用程式之後，您按一下「新增 GIT」以建立 Git 儲存庫，但無法繼續。
-
-
-
-當您按一下**新增 GIT** 時，會開啟視窗，並發生下列其中一個問題：
-{: tsSymptoms} 
-
-  * 視窗會停滯並顯示空白畫面。
-  * 訊息指出協力廠商 Cookie 有問題存在。
-
-
-
-您的瀏覽器可能配置為避免設定 Cookie。該 Cookie 必須從 {{site.data.keyword.Bluemix_notm}} 主控台的環境定義內，從 hub.jazz.net 網際網路網域中的 IBM® Bluemix DevOps Services 網站設定。
-{: tsCauses}  
-
- 
-
-您可以使用下列其中一種方法來修正此問題：
-{: tsResolve}
-
-  * 遵循從 {{site.data.keyword.Bluemix_notm}} 主控台開啟之視窗中的指示。按一下按鈕。隨即暫時性地開啟另一個瀏覽器視窗。在該視窗中，DevOps Services 會設定鑑別 Cookie。
-  * 在另一個瀏覽器分頁中，前往 https://hub.jazz.net 並登入。回到 {{site.data.keyword.Bluemix_notm}} 主控台，然後重新整理頁面。再按一下**新增 GIT**。
-  * 變更瀏覽器設定，以啟用協力廠商 Cookie，然後再按一下「新增 GIT」。如需關於配置設定的詳細資料，請參閱瀏覽器的文件：
-    * [Mozilla Firefox ![外部鏈結圖示](../icons/launch-glyph.svg)](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences#w_how-do-i-change-cookie-settings){: new_window}
-	* [Google Chrome ![外部鏈結圖示](../icons/launch-glyph.svg)](https://support.google.com/chrome/answer/95647){: new_window}
-	* [Apple Safari ![外部鏈結圖示](../icons/launch-glyph.svg)](https://support.apple.com/kb/PH17191){: new_window}
-	* [Microsoft Internet Explorer ![外部鏈結圖示](../icons/launch-glyph.svg)](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window}
-如果那些暫行解決方法無法修正問題，請將電子郵件傳送至 idslogin@jazz.net。
-
 
 
 ## Android 應用程式收不到推送通知
@@ -678,7 +645,7 @@ cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/n
 	  
  
 
-當連結至應用程式的服務損毀時，應用程式可能會發生運作中斷、異常狀況和連線失敗之類的問題。{{site.data.keyword.Bluemix_notm}} 不會自動重新啟動應用程式，以從這些問題中回復。
+當連結至應用程式的服務損毀時，應用程式可能會發生運作中斷、異常狀況和連線失敗之類的問題。{{site.data.keyword.Bluemix_notm}} 不會自動重新啟動應用程式，以從這些問題回復。
 {: tsSymptoms}
 
 
@@ -720,11 +687,11 @@ cf push <appname> -p <app_path>
 ## {{site.data.keyword.Bluemix_notm}} Live Sync 圖示未顯示
 {: #ts_llz_lkb_3r}
 
-您已在 IBM Bluemix DevOps Services 中建立應用程式，但是 IBM Bluemix Live Sync 圖示未顯示在 Web IDE 中。
+您已建立應用程式，但是 IBM Bluemix Live Sync 圖示未顯示在 Web IDE 中。
 
  
 
-當您在 DevOps Services Web IDE 中編輯 Node.js 應用程式時，未顯示 {{site.data.keyword.Bluemix_notm}} 即時編輯、快速重新啟動和除錯圖示。
+當您在 Web IDE 中編輯 Node.js 應用程式時，未顯示 {{site.data.keyword.Bluemix_notm}} 即時編輯、快速重新啟動和除錯圖示。
 {: tsSymptoms}
 
  
@@ -733,7 +700,7 @@ cf push <appname> -p <app_path>
 {: tsCauses}
 
   * `manifest.yml` 檔案未儲存在專案的最上層。
-  * 您的應用程式儲存在子目錄中，而不是專案的最上層，但卻未於 `manifest.yml` 檔案中指定該子目錄的路徑。
+  * 您的應用程式儲存在子目錄中，而不是專案的最上層，但未於 `manifest.yml` 檔案中指定該子目錄的路徑。
   * 應用程式未包含 `package.json` 檔案。
 
 
@@ -746,8 +713,6 @@ cf push <appname> -p <app_path>
    path: path_to_application
    ```
   * 在與應用程式相同的目錄中，建立 `package.json` 檔案。
-
-  
   
   
 
@@ -834,7 +799,7 @@ cf api https://api.eu-gb.bluemix.net
 	
 
 
-使用 `cf push` 指令將 WAR 應用程式上傳至 {{site.data.keyword.Bluemix_notm}} 時，您看到此錯誤訊息：`編譯打包錯誤：無法取得實例，因為編譯打包失敗。`
+使用 `cf push` 指令將 WAR 應用程式上傳至 {{site.data.keyword.Bluemix_notm}} 時，您看到此錯誤訊息：`Staging error: cannot get instances since staging failed`。
 {: tsSymptoms} 
 
  
@@ -971,14 +936,14 @@ cf push MyUniqueAppName02 -p "./app.war"
 
 
 
-## 將 {{site.data.keyword.Bluemix_notm}} Liberty 應用程式從 Bluemix DevOps Services 匯入至 Eclipse 之後，`server.xml` 檔案中出現配置錯誤
+## 將 {{site.data.keyword.Bluemix_notm}} Liberty 應用程式匯入至 Eclipse 之後，`server.xml` 檔案中出現配置錯誤
 {: #ts_eclipse}
 
-如果您在將 {{site.data.keyword.Bluemix_notm}} Liberty 應用程式從 IBM Bluemix DevOps Services 匯入至 Eclipse 之後，於 `server.xml` 檔案中看到配置錯誤，則可能需要移除專案中的 `server.xml` 檔案。 
+如果您在將 {{site.data.keyword.Bluemix_notm}} Liberty 應用程式匯入至 Eclipse 之後，於 `server.xml` 檔案中看到配置錯誤，則可能需要移除專案中的 `server.xml` 檔案。 
 
  
 
-將 {{site.data.keyword.Bluemix_notm}} Liberty 應用程式從 {{site.data.keyword.Bluemix_notm}} DevOps Services 匯入至 Eclipse 之後，從「Eclipse 問題」視圖中，在 `server.xml` 檔案內看到配置錯誤。
+將 {{site.data.keyword.Bluemix_notm}} Liberty 應用程式匯入至 Eclipse 之後，您會從「Eclipse 問題」視圖中，看到 `server.xml` 檔案內的配置錯誤。
 {: tsSymptoms}
 
  
@@ -988,7 +953,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 
  
 
-您可以移除專案中的 server.xml 檔案，來解決此問題。將應用程式推送為 WAR 應用程式時，此建置套件會動態建立 `server.xml` 檔案。如需相關資訊，請參閱 [Liberty for Java](/docs/runtimes/liberty/index.html)。
+您可以移除專案中的 server.xml 檔案，來解決此問題。將應用程式推送為 WAR 應用程式時，此建置套件會動態建立 `server.xml` 檔案。如需相關資訊，請參閱 [Liberty for Java ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/runtimes/liberty/index.html){: new_window}。
 {: tsResolve}
 	
 	
@@ -1106,7 +1071,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 
 
 
-您按一下**部署至 Bluemix** 按鈕，但是在 DevOps Services 中找不到且無法複製 Git 儲存庫。「複製儲存庫」步驟未順利完成。因此，無法將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。
+您按一下**部署至 Bluemix** 按鈕，但是找不到 Git 儲存庫且無法在 DevOps Services 中複製。「複製儲存庫」步驟未順利完成。因此，無法將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。
 {: tsSymptoms} 
 
 此問題的可能發生原因如下：
@@ -1233,7 +1198,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 # 管理帳戶疑難排解
 {: #managingaccounts}
 
-您可能會在管理帳戶時遇到問題，例如不同的應用程式共用相同的網域名稱、管理者無法檢視所有組織等等。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題中回復。
+您可能會在管理帳戶時遇到問題，例如不同的應用程式共用相同的網域名稱、管理者無法檢視所有組織等等。然而，在許多情況下，您可以遵照一些簡單的步驟，從這些問題回復。
 {:shortdesc}
 
 
@@ -1347,7 +1312,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 # 運行環境疑難排解
 {: #runtimes}
 
-您在使用 IBM® Bluemix™ 運行環境時可能會遇到問題。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題中回復。
+您在使用 IBM® Bluemix™ 運行環境時可能會遇到問題。然而，在許多情況下，您可以遵照一些簡單的步驟，從這些問題回復。
 {:shortdesc}
 
 
@@ -1566,7 +1531,7 @@ pid @{HOME}/nginx/logs/nginx.pid;
 此問題的發生原因如下：
 {: tsCauses}
 
-  * 您先前可能已變更一個以上實例的配置。如果您變更某個實例的 traceSpecification 配置，則它不會套用至相同應用程式的其他實例。例如，您的應用程式使用 log4j，而且您具有這個應用程式的兩個實例。您可以將實例 0 的記載層次從 info 變更為 debug，但實例 1 的記載層次仍為 info。 
+  * 您先前可能已變更一個以上實例的配置。如果您變更某個實例的 traceSpecification 配置，它並不適用於相同應用程式的其他實例。例如，您的應用程式使用 log4j，而且您具有這個應用程式的兩個實例。您可以將實例 0 的記載層次從 info 變更為 debug，但實例 1 的記載層次仍為 info。 
   * 應用程式橫向擴充，並具有新的實例。RMU 不會將現有實例的 traceSpecification 配置套用至新的橫向擴充實例。新的實例會使用預設配置。例如，您的應用程式使用 log4j，而且它有一個實例。您可以將此實例的記載層次從 info 變更為 debug。進行這項變更之後，如果您將應用程式橫向擴充至兩個實例，則新實例的記載層次是 info，而非 debug。
   
 

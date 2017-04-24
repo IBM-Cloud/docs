@@ -27,25 +27,25 @@ Es können Probleme bei der Verwendung von {{site.data.keyword.Bluemix}}-Laufzei
 
 Bei einer Push-Operation für eine App können möglicherweise nicht die neuesten Buildpack-Komponenten verwendet werden. Sie können Buildpacks mit integrierten Mechanismen verwenden, die das Laden veralteter Komponenten verhindern, oder Sie können den Inhalt des Cacheverzeichnisses der App löschen, bevor Sie eine Push-Operation oder ein erneutes Staging für die App durchführen. 
 
-Wenn Sie eine Push-Operation oder erneutes Staging für eine App durchführen, nachdem das Buildpack aktualisiert wurde, werden die neuesten Buildpack-Komponenten nicht automatisch geladen. Dies führt dazu, dass die App die veralteten Buildpack-Komponenten aus dem Cache verwendet. Aktualisierungen, die für das Buildpack angewendet wurden, seit die letzte Push-Operation für die App ausgeführt wurde, werden nicht implementiert.
+Wenn Sie eine Push-Operation oder erneutes Staging für eine App durchführen, nachdem das Buildpack aktualisiert wurde, werden die neuesten Buildpack-Komponenten nicht automatisch geladen. Dies führt dazu, dass die App die veralteten Buildpack-Komponenten aus dem Cache verwendet. Aktualisierungen, die für das Buildpack angewendet wurden, seit die letzte Push-Operation für die App ausgeführt wurde, werden nicht implementiert. 
 {: tsSymptoms}
 
 Einige Buildpacks sind nicht so konfiguriert, dass sie alle aktualisierten Komponenten automatisch aus dem Internet herunterladen, um sicherzustellen, dass stets die neueste Version verwendet wird.
 {: tsCauses} 
 
-Sie können Buildpacks verwenden, die über integrierte Mechanismen verfügen, mit denen das Laden veralteter Komponenten vermieden wird, beispielsweise die folgenden Buildpacks:
+Sie können Buildpacks verwenden, die über integrierte Mechanismen verfügen, mit denen das Laden veralteter Komponenten vermieden wird, beispielsweise die folgenden Buildpacks: 
 {: tsResolve}
 
-  * [Cloud Foundry Java buildpack ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/java-buildpack){: new_window}. Dieses Buildpack verfügt über einen integrierten Mechanismus, der sicherstellt, dass die neueste Version des Buildpacks verwendet wird. Weitere Informationen zur Funktionsweise dieses Mechanismus finden Sie unter [extending-caches.md ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
-  * [Cloud Foundry Node.js buildpack ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}. Dieses Buildpack bietet eine ähnliche Funktionalität, die Umgebungsvariablen nutzt. Damit das Node.js-Buildpack jedes mal Knotenmodule aus dem Internet herunterladen kann, geben Sie in der cf-Befehlszeilenschnittstelle den folgenden Befehl ein: 	
+  * [Cloud Foundry Java Buildpack ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/cloudfoundry/java-buildpack){: new_window}. Dieses Buildpack verfügt über einen integrierten Mechanismus, der sicherstellt, dass die neueste Version des Buildpacks verwendet wird. Weitere Informationen zur Funktionsweise dieses Mechanismus finden Sie unter [extending-caches.md ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
+  * [Cloud Foundry Node.js buildpack ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}. Dieses Buildpack bietet eine ähnliche Funktionalität, die Umgebungsvariablen nutzt. Damit das Node.js-Buildpack jedes mal Knotenmodule aus dem Internet herunterladen kann, geben Sie in der cf-Befehlszeilenschnittstelle den folgenden Befehl ein: 	
   ```
   set NODE_MODULES_CACHE=false
   ```
 
 Wenn das verwendete Buildpack keinen Mechanismus zum automatischen Laden der neuesten Komponenten bereitstellt, können Sie den Inhalt des Cacheverzeichnisses manuell löschen und eine Push-Operation für Ihre App durchführen. Führen Sie die folgenden Schritte aus:
 
- 1. Checken Sie eine Verzweigung eines Null-Buildpacks aus, z. B. https://github.com/ryandotsmith/null-buildpack. Informationen zum Auschecken einer Verzweigung finden Sie unter [Git Basics - Getting a Git Repository ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}.  
- 2. Fügen Sie die folgende Zeile zur Datei `null-buildpack/bin/compile` hinzu und schreiben Sie die Änderungen fest. Informationen zum Festschreiben von Änderungen finden Sie unter [Git Basics - Recording Changes to the Repository ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
+ 1. Checken Sie eine Verzweigung eines Null-Buildpacks aus, z. B. https://github.com/ryandotsmith/null-buildpack. Informationen zum Auschecken einer Verzweigung finden Sie unter [Git Basics - Getting a Git Repository ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}.  
+ 2. Fügen Sie die folgende Zeile zur Datei `null-buildpack/bin/compile` hinzu und schreiben Sie die Änderungen fest. Informationen zum Festschreiben von Änderungen finden Sie unter [Git Basics - Recording Changes to the Repository ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
   ```
   rm -rfv $2/*
   ```
@@ -72,7 +72,7 @@ Wenn Sie eine App per Push-Operation an {{site.data.keyword.Bluemix_notm}} über
 • 2015-01-26T15:01:00.63+0100 [App/0] ERR [26-Jan-2015 14:00:59] NOTICE: fpm is running, pid 93
 • 2015-01-26T15:01:00.63+0100 [App/0] ERR [26-Jan-2015 14:00:59] NOTICE: ready to handle connections
 ```
-Im PHP-Buildpack definiert der Parameter 'error_log' die Protokollstufe. Der Wert des Parameters `error_log` lautet standardmäßig **stderr notice**. Das folgende Beispiel zeigt die Standardkonfiguration für die Protokollstufe in der Datei `nginx-defaults.conf` des von Cloud Foundry bereitgestellten PHP-Buildpacks. Weitere Informationen finden Sie unter [cloudfoundry/php-buildpack ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}.
+Im PHP-Buildpack definiert der Parameter 'error_log' die Protokollstufe. Der Wert des Parameters `error_log` lautet standardmäßig **stderr notice**. Das folgende Beispiel zeigt die Standardkonfiguration für die Protokollstufe in der Datei `nginx-defaults.conf` des von Cloud Foundry bereitgestellten PHP-Buildpacks. Weitere Informationen finden Sie unter [cloudfoundry/php-buildpack ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}.
 {: tsCauses} 
 
 ```
@@ -89,13 +89,13 @@ daemon off;
 error_log stderr error;
 pid @{HOME}/nginx/logs/nginx.pid;
 ```
-Weitere Informationen dazu, wie die Standardkonfiguration für die Protokollierung geändert wird, finden Sie unter [error_log ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}.
+Weitere Informationen dazu, wie die Standardkonfiguration für die Protokollierung geändert wird, finden Sie unter [error_log ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}.
 	
 
 ## Importieren der Python-Bibliothek eines Drittanbieters in {{site.data.keyword.Bluemix_notm}} nicht möglich
 {: #ts_importpylib}
 
-Möglicherweise können Sie die Python-Bibliothek eines Drittanbieters nicht in {{site.data.keyword.Bluemix_notm}} importieren. Fügen Sie zur Lösung des Problems Konfigurationsdateien zum Stammverzeichnis Ihrer Python-App hinzu. 
+Möglicherweise können Sie die Python-Bibliothek eines Drittanbieters nicht in {{site.data.keyword.Bluemix_notm}} importieren. Fügen Sie zur Lösung des Problems Konfigurationsdateien zum Stammverzeichnis Ihrer Python-App hinzu.
 
 Beim Versuch, die Python-Bibliothek eines Drittanbieters (beispielsweise die Bibliothek `web.py`) zu importieren, schlägt der Befehl `cf push` fehl.
 {: tsSymptoms}
@@ -122,10 +122,6 @@ Die Datei `Procfile` muss den Starbefehl für Ihre Python-App enthalten. Im folg
 	```
 
 Sie können nun die Python-Bibliothek eines Drittanbieters in {{site.data.keyword.Bluemix_notm}} importieren.	
-
-
-
-	
 
 
 ## Schaltfläche 'Aktionen' auf Seite 'Instanzdetails' ist inaktiviert
@@ -195,7 +191,7 @@ Für unterschiedliche Instanzen einer App können unterschiedliche Konfiguration
 Dieses Verhalten tritt aufgrund folgender Ursachen auf:
 {: tsCauses}
 
-  * Sie haben die Konfiguration zuvor für mindestens eine Instanz geändert. Falls Sie die Konfiguration für die Tracespezifikation für eine Instanz ändern, gilt die Änderung nicht für andere Instanzen derselben App. Beispiel: Ihre App verwendet 'log4j' und Sie haben 2 Instanzen für diese App. Sie können die Protokollebene für Instanz 0 von 'info' in 'debug' ändern, aber die Protokollebene von Instanz 1 verbleibt bei 'info'. 
+  * Sie haben die Konfiguration zuvor für mindestens eine Instanz geändert. Falls Sie die Konfiguration für die Tracespezifikation für eine Instanz ändern, gilt die Änderung nicht für andere Instanzen derselben App. Beispiel: Ihre App verwendet 'log4j' und Sie haben 2 Instanzen für diese App. Sie können die Protokollebene für Instanz 0 von 'info' in 'debug' ändern, aber die Protokollebene von Instanz 1 verbleibt bei 'info'.
   
   * Für die App wird ein Scale-out durchgeführt und sie verfügt über neue Instanzen. Von Runtime Management Utilities (RMU) wird die Konfiguration der Tracespezifikation auf die neue Instanz angewendet, für die das Scale-out durchgeführt wird. Von der neuen Instanz wird die Standardkonfiguration verwendet. Beispiel: Von der App wird 'log4j' verwendet und sie verfügt über eine Instanz. Sie können die Protokollebene dieser Instanz 0 von 'info' in 'debug' ändern. Wenn Sie diese Änderung durchgeführt und für die App ein Scale-out in zwei Instanzen durchgeführt haben, lautet die Protokollebene der neuen Instanz 'info' und nicht 'debug'.
 
@@ -211,7 +207,7 @@ Es kann vorkommen, dass im Anwendungsprotokoll angezeigt wird, dass das Datentr�
 Die Fehlernachricht `Disk quota exceeded` (Datenträgerkontingent überschritten) wird im Protokoll der App angezeigt.
 {: tsSymptoms}
 
-Dieses Problem wird durch einen der folgenden Gründe verursacht:
+Dieses Problem wird durch einen der folgenden Gründe verursacht: 
 {: tsCauses} 
 
   * Die Speicherauszugsdateien werden mit aktiven Appinstanzen generiert und die Dateien belegen das zugeordnete Datenträgerkontingent. Das Datenträgerkontingent für eine Appinstanz beträgt standardmäßig 1 GB. Wenn Sie die Plattenbelegung überprüfen möchten, klicken Sie auf **Dashboard>Anwendung>Anwendungslaufzeit**. Im folgenden Beispiel werden die Laufzeitinformationen inklusive der Plattenbelegung für zwei Instanzen einer App aufgeführt:

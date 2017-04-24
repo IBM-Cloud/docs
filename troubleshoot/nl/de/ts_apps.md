@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-01-10"
+lastupdated: "2017-3-16"
 
 ---
 
@@ -94,7 +94,7 @@ Führen Sie die folgenden Schritte aus, um zu überprüfen, welche Java-Version 
 
 Wenn Ihre Workbench IBM JVM 7 oder 8 verwendet bzw. eine frühere Version als Oracle JVM 8, führen Sie die folgenden Schritte aus, um zu Oracle JVM 8 zu wechseln:
 
-  1. Laden Sie Oracle JVM 8 herunter und installieren Sie es (Details hierzu finden Sie unter [Java SE Downloads ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window}.
+  1. Laden Sie Oracle JVM 8 herunter und installieren Sie es (Details hierzu finden Sie unter [Java SE Downloads ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window}.
   2. Starten Sie Eclipse erneut.
   3. Überprüfen Sie, ob die Eigenschaft `eclipse.vm` auf Ihre neue Oracle JVM 8-Installation verweist.
 
@@ -112,7 +112,7 @@ Bei der Wiederverwendung des App-Namens wird die folgende Nachricht angezeigt:
 Beim Löschen einer App wird die zugehörige Route (URL für die App) nicht automatisch gelöscht. Deshalb kann sie nicht wiederverwendet werden. Sie müssen den Bereich aufrufen, in dem die App erstellt wurde, um die Route zu löschen.
 {: tsCauses}
 
-Führen Sie die folgenden Schritte aus, um die nicht verwendete Route zu löschen:
+Führen Sie die folgenden Schritte aus, um die nicht verwendete Route zu löschen: 
 {: tsResolve}
 
   1. Stellen Sie fest, ob die Route zum aktuellen Bereich gehört. Geben Sie dazu den folgenden Befehl ein: 
@@ -142,7 +142,7 @@ Bei dem Versuch, in Bluemix eine App zu erstellen, wird die folgende Fehlernachr
 
 `BXNUI0515E: Die Bereiche in der Organisation wurden nicht abgerufen. Es ist entweder ein Netzverbindungsproblem aufgetreten oder Ihrer aktuellen Organisation ist kein Bereich zugeordnet.`
 
-Dieser Fehler tritt oft auf, wenn Sie zum ersten Mal versuchen, im Katalog eine App oder einen Service zu erstellen, wenn noch kein Bereich erstellt wurde.
+Dieser Fehler tritt oft auf, wenn Sie zum ersten Mal versuchen, im Katalog eine App oder einen Service zu erstellen, wenn noch kein Bereich erstellt wurde. 
 {: tsCauses}
 
 Stellen Sie sicher, dass Sie in der derzeitigen Organisation einen Bereich erstellt haben. Wenden Sie eine der folgenden Methoden an,
@@ -152,7 +152,7 @@ um einen Bereich zu erstellen:
   * Klicken Sie in der Menüleiste auf **Konto** &gt; **Organisationen verwalten**. Wählen Sie die Organisation aus, in der der Bereich erstellt werden soll, und klicken Sie anschließend auf **Bereich erstellen**.
   * Geben Sie in der Befehlszeilenschnittstelle 'cf' Folgendes ein: `cf create-space <Name des Bereichs> -o <Name der Organisation>`.
 
-Wiederholen Sie den Vorgang. Tritt diese Nachricht erneut auf, rufen Sie die Seite [Bluemix-Status ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixstatus){: new_window} auf und prüfen Sie, ob für einen Service oder eine Komponente ein Problem vorliegt. 
+Wiederholen Sie den Vorgang. Tritt diese Nachricht erneut auf, rufen Sie die Seite [Bluemix-Status ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://ibm.biz/bluemixstatus){: new_window} auf und prüfen Sie, ob für einen Service oder eine Komponente ein Problem vorliegt.
 
 
 ## Angeforderte Aktionen konnten nicht ausgeführt werden
@@ -167,7 +167,7 @@ Wenn Sie versuchen, Aktionen für eine Serviceinstanz oder eine App-Instanz ausz
 
 `Serverfehler, Statuscode: 403, Fehlercode: 10003, Nachricht: Sie sind nicht berechtigt, die angeforderte Aktion auszuführen.`
 
-Sie verfügen nicht über die entsprechende Berechtigungsebene zum Ausführen der Aktionen.
+Sie verfügen nicht über die entsprechende Berechtigungsebene zum Ausführen der Aktionen. 
 {: tsCauses}
 
 Verwenden Sie zum Abrufen der erforderlichen Berechtigungsebene eine der folgenden Methoden: 
@@ -192,7 +192,7 @@ Statt die Berechtigungsnachweise in Ihrer App fest zu codieren, verwenden Sie Ve
 ```
 process.env.VCAP_SERVICES
 ```
-Weitere Informationen zu den Befehlen, die Sie in anderen Programmsprachen verwenden können, finden Sie unter [Java ![External link icon](../icons/launch-glyph.svg "External link icon")](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} und [Ruby ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}.
+Weitere Informationen zu den Befehlen, die Sie in anderen Programmsprachen verwenden können, finden Sie unter [Java ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} und [Ruby ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}.
 
 
 ## Bereitstellung von Apps mit IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} nicht möglich
@@ -208,7 +208,6 @@ der Cloud Foundry-Befehlszeilenschnittstelle können Sie Ihre App erfolgreich in
 bereitstellen. Allerdings ist es nicht möglich, die App mit IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} in {{site.data.keyword.Bluemix_notm}} bereitzustellen, und es wird die folgende Fehlernachricht angezeigt: `Project facet <facet_name> is not supported. (Projektfacette 'facettenname' wird nicht unterstützt.)` Beispiel:
 {: tsSymptoms}
 `Project facet Cloud Foundry Standalone Application version 1.0 is not supported. (Projektfacette Cloud Foundry Standalone Application Version 1 wird nicht unterstützt.)`
-
 
 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}
 ordnet Projekte zu {{site.data.keyword.Bluemix_notm}}-Laufzeiten zu, und zwar mittels Projektfacetten. Facetten definieren
@@ -252,7 +251,7 @@ Andere, weniger häufige Ursachen eines Fehlers vom Typ 'Bad Gateway'
 sind Ausfälle des Internet-Service-Providers, falsche Firewallkonfigurationen und
 Fehler des Browser-Cache. 
 
-Wenn Sie vermuten, dass ein {{site.data.keyword.Bluemix_notm}}-Service inaktiv ist, überprüfen Sie zunächst die [{{site.data.keyword.Bluemix_notm}}-Statusseite ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixstatus){: new_window}. Als Ausweichlösung können Sie den Service in einer anderen {{site.data.keyword.Bluemix_notm}}-Region verwenden. Ausführliche Informationen finden Sie unter [Services in einer anderen Region verwenden ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](/docs/services/reqnsi.html#cross_region_service){: new_window}. Wenn der Status des Service normal ist,
+Wenn Sie vermuten, dass ein {{site.data.keyword.Bluemix_notm}}-Service inaktiv ist, überprüfen Sie zunächst die [{{site.data.keyword.Bluemix_notm}}-Statusseite ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://ibm.biz/bluemixstatus){: new_window}. Als Ausweichlösung können Sie den Service in einer anderen {{site.data.keyword.Bluemix_notm}}-Region verwenden. Ausführliche Informationen finden Sie unter [Services in einer anderen Region verwenden ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/reqnsi.html#cross_region_service){: new_window}. Wenn der Status des Service normal ist,
 führen Sie die folgenden Schritte aus, um das Problem zu lösen: 
 {: tsResolve}
 
@@ -265,7 +264,7 @@ und laden Sie die Seite anschließend erneut.
 können verschiedene Fehler bereinigt werden, die zu dem Fehler 502 führen. 
   * Warten Sie und wiederholen Sie den Vorgang zu einem späteren Zeitpunkt. Bei einigen Instanzen kann es in Verbindung mit
 Ihrem Internet-Service-Provider oder den {{site.data.keyword.Bluemix_notm}}-Services zu vorübergehenden Problemen kommen. Warten Sie, bis die vorübergehenden Probleme gelöst wurden.
-  * Wenn das Problem dennoch bestehen bleibt, wenden Sie sich an den {{site.data.keyword.Bluemix_notm}}-Support. Weitere Informationen finden Sie unter [Kontaktaufnahme mit dem {{site.data.keyword.Bluemix_notm}}-Support ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](/docs/support/index.html#contacting-bluemix-support){: new_window}. 
+  * Wenn das Problem dennoch bestehen bleibt, wenden Sie sich an den {{site.data.keyword.Bluemix_notm}}-Support. Weitere Informationen finden Sie unter [Kontaktaufnahme mit dem {{site.data.keyword.Bluemix_notm}}-Support ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/support/index.html#contacting-bluemix-support){: new_window}. 
 
 ## Überschrittenes Plattenkontingent
 {: #ts_disk_quota}
@@ -311,7 +310,7 @@ Ihre Benachrichtigungen in bestimmten Regionen nicht empfangen.
 Der IBM {{site.data.keyword.mobilepushshort}}-Service nutzt den GCM-Service (Google Cloud Messaging), um Benachrichtigungen an mobile Apps zu versenden, die auf der Android-Plattform entwickelt wurden. Zur Aktivierung der Android-Apps für den Empfang von Benachrichtigungen muss der GCM-Service für die mobilen Apps zugänglich sein. In Regionen, in denen der GCM-Service nicht von den Android-Apps erreicht werden kann, können die Android-Apps keine {{site.data.keyword.mobilepushshort}} empfangen.
 {: tsCauses}
 
-Verwenden Sie Services von Drittanbietern, die nicht vom GCM-Service als Ausweichlösung abhängig sind, z. B. [Pushy ![External link icon](../icons/launch-glyph.svg "External link icon")](https://pushy.me){: new_window}, [igetui ![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.getui.com/){: new_window}, and [jpush ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](https://www.jpush.cn/){: new_window}.
+Verwenden Sie Services von Drittanbietern, die nicht vom GCM-Service als Ausweichlösung abhängig sind, z. B. [Pushy ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://pushy.me){: new_window}, [igetui ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://www.getui.com/){: new_window} und [jpush ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.jpush.cn/){: new_window}.
 {: tsResolve}
 
 
@@ -333,7 +332,7 @@ Löschen Sie alle nicht benötigten Serviceinstanzen oder entfernen Sie den Gren
  
   * Zum Löschen einer Serviceinstanz können Sie die {{site.data.keyword.Bluemix_notm}}-Konsole oder die Befehlszeilenschnittstelle verwenden.
     Führen Sie die folgenden Schritte aus, um die {{site.data.keyword.Bluemix_notm}}-Konsole zum Löschen einer Serviceinstanz zu verwenden:
-	  1. Klicken Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard auf den Service, den Sie löschen möchten.  Der Servce wird angezeigt. 
+	  1. Klicken Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard auf den Service, den Sie löschen möchten.  Der Servce wird angezeigt.
 	  2. Klicken Sie in der Servicekarte auf das Symbol **Menü**.
 	  3. Klicken Sie auf **Service löschen**. Nach dem Löschen der Serviceinstanz werden Sie aufgefordert, die Anwendung erneut bereitzustellen, an die die Serviceinstanz gebunden war. 
     Führen Sie folgende Schritte aus, wenn Sie die Befehlszeilenschnittstelle zum Löschen einer Serviceinstanz verwenden:
@@ -445,9 +444,9 @@ Wenn Sie eine App aus IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} m
 ## Symbole für {{site.data.keyword.Bluemix_notm}} Live Sync werden nicht angezeigt
 {: #ts_llz_lkb_3r}
 
-Sie haben in IBM Bluemix DevOps Services eine App erstellt, aber die Symbole für IBM Bluemix Live Sync werden in der Web-IDE nicht angezeigt.
+Sie haben eine App erstellt, aber die Symbole für IBM Bluemix Live Sync werden in der Web-IDE nicht angezeigt. 
 
-Wenn Sie eine Node.js-App in der Web-IDE von DevOps Services bearbeiten, werden die Symbole für {{site.data.keyword.Bluemix_notm}} Live Edit, für den schnellen Neustart und für das Debugging nicht angezeigt.
+Wenn Sie eine Node.js-App in der Web-IDE bearbeiten, werden die Symbole für {{site.data.keyword.Bluemix_notm}} Live Edit, für den schnellen Neustart und für das Debugging nicht angezeigt.
 {: tsSymptoms}
 
 Die Symbole stehen unter folgenden Umständen nicht zur Verfügung:
@@ -457,7 +456,7 @@ Die Symbole stehen unter folgenden Umständen nicht zur Verfügung:
   * Ihre App ist in einem Unterverzeichnis und nicht auf der höchsten Ebene Ihres Projekts gespeichert; der Pfad zum Unterverzeichnis jedoch wird in der Datei `manifest.yml` nicht angegeben.
   * Die App enthält nicht die Datei `package.json`.
 
-Verwenden Sie eines der folgenden Verfahren:
+Verwenden Sie eines der folgenden Verfahren: 
 {: tsResolve} 
 
   * Ist die Datei `manifest.yml` nicht auf der höchsten Ebene Ihres Projekts gespeichert, speichern Sie sie dort.
@@ -465,7 +464,7 @@ Verwenden Sie eines der folgenden Verfahren:
   ```
    path: path_to_application
    ```
-  * Erstellen Sie die Datei `package.json` im selben Verzeichnis wie Ihre App.
+  * Erstellen Sie die Datei `package.json` im selben Verzeichnis wie Ihre App.   
   
   
 ## Suchen von Organisationen in {{site.data.keyword.Bluemix_notm}} nicht möglich
@@ -535,7 +534,7 @@ Wenn Sie eine WAR-App in {{site.data.keyword.Bluemix_notm}} mit dem Befehl `cf p
 {: tsSymptoms} 
 `Staging error: Cannot get instances since staging failed.` (Abrufen der Instanzen wegen fehlgeschlagenem Staging nicht möglich.)
  
-Dieses Problem kann auftreten, wenn die WAR-Datei nicht angegeben ist oder wenn der Pfad zur WAR Datei nicht angegeben ist.
+Dieses Problem kann auftreten, wenn die WAR-Datei nicht angegeben ist oder wenn der Pfad zur WAR Datei nicht angegeben ist. 
 {: tsCauses}
 	
 Verwenden Sie die Option **-p** zum Angeben einer WAR-Datei oder fügen Sie den Pfad zur WAR-Datei hinzu. Beispiel:
@@ -603,7 +602,7 @@ Verwenden Sie abhängig von der Ursache des Problems eine der folgenden Methoden
         ```
 		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
-    * Verwenden Sie die Datei [package.json ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](https://docs.npmjs.com/json){: new_window}. Beispiel:
+    * Verwenden Sie die Datei [package.json ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.npmjs.com/json){: new_window}. Beispiel:
 	    ```
 		{
       ...
@@ -621,7 +620,8 @@ Verwenden Sie abhängig von der Ursache des Problems eine der folgenden Methoden
   ...
         ```
 
-  * Stellen Sie sicher, dass in Ihrer Node.js-App eine Datei des Typs `package.json` existiert, damit das Node.js-Buildpack für die Erkennung der App aktiviert werden kann. Stellen Sie sicher, dass sich diese Datei im Stammverzeichnis Ihrer App befindet. Das folgende Beispiel zeigt eine einfache `package.json`-Datei:  
+  * Stellen Sie sicher, dass in Ihrer Node.js-App eine Datei des Typs `package.json` existiert, damit das Node.js-Buildpack für die Erkennung der App aktiviert werden kann. Stellen Sie sicher, dass sich diese Datei im Stammverzeichnis Ihrer App befindet.	
+    Das folgende Beispiel zeigt eine einfache `package.json`-Datei:  
 	```
 	{
         "name": "MyUniqueNodejs01",
@@ -643,12 +643,12 @@ Verwenden Sie abhängig von der Ursache des Problems eine der folgenden Methoden
 Weitere Tipps zu Node.js-Apps finden Sie unter [Tipps für Node.js-Anwendungen](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html ![External link icon](../icons/launch-glyph.svg "Symbol für externen Link"){: new_window}.	
 
 
-## Konfigurationsfehler in Datei `server.xml` nach Import einer {{site.data.keyword.Bluemix_notm}} Liberty-Anwendung von Bluemix DevOps Services in Eclipse
+## Konfigurationsfehler in Datei `server.xml` nach Import einer {{site.data.keyword.Bluemix_notm}} Liberty-App in Eclipse
 {: #ts_eclipse}
 
-Wenn in der Datei `server.xml` nach dem Import einer {{site.data.keyword.Bluemix_notm}} Liberty-Anwendung aus IBM Bluemix DevOps Services in Eclipse Konfigurationsfehler angezeigt werden, kann es erforderlich sein, die Datei `server.xml` aus dem Projekt zu entfernen. 
+Wenn in der Datei `server.xml` nach dem Import einer {{site.data.keyword.Bluemix_notm}} Liberty-App in Eclipse Konfigurationsfehler angezeigt werden, kann es erforderlich sein, die Datei `server.xml` aus dem Projekt zu entfernen.  
 
-Nach dem Import einer {{site.data.keyword.Bluemix_notm}} Liberty-Anwendung aus {{site.data.keyword.Bluemix_notm}} DevOps Services in Eclipse werden in der Eclipse-Ansicht 'Fehler' Konfigurationsfehler in der Datei `server.xml` angezeigt.
+Nach dem Import einer {{site.data.keyword.Bluemix_notm}} Liberty-App in Eclipse werden in der Eclipse-Ansicht 'Fehler' Konfigurationsfehler in der Datei `server.xml` angezeigt.
 {: tsSymptoms}
 
 Das Liberty-Buildpack verwendet die Datei `server.xml` zum Konfigurieren der App und generiert die Datei `runtime-vars.xml`, wenn die Liberty-App per Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen wird. Wenn Sie die App in Eclipse importieren, ist die Datei `runtime-vars.xml` in der lokalen Umgebung nicht vorhanden.
@@ -669,7 +669,7 @@ Wenn Sie eine App unter {{site.data.keyword.Bluemix_notm}} unter Verwendung eine
 Dieses Problem kann auftreten, wenn Scripts, wie zum Beispiel die Scripts zum Identifizieren, Kompilieren und Freigeben, nicht ausgeführt werden können.
 {: tsCauses}
 
-Mit dem Befehl [git update ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](http://git-scm.com/docs/git-update-index){: new_window} können Sie die Berechtigung für jedes einzelne Script in 'ausführbar' ändern. Sie können zum Beispiel `git update --chmod=+x script.sh` eingeben.
+Mit dem Befehl [git update ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://git-scm.com/docs/git-update-index){: new_window} können Sie die Berechtigung für jedes einzelne Script in 'ausführbar' ändern. Sie können zum Beispiel `git update --chmod=+x script.sh` eingeben.
 {: tsResolve}
 	
 	
@@ -744,7 +744,7 @@ Verwenden Sie eines der folgenden Verfahren:
 
 Wenn Sie feststellen, dass das Git-Repository nicht geklont wurde, besteht möglicherweise ein Problem mit dem Repository oder mit dem Schaltflächen-Snippet.
 
-Sie klicken auf die Schaltfläche **In Bluemix bereitstellen**, aber das Git-Repository wird nicht gefunden und kann in DevOps Services nicht geklont werden. Der Schritt zum Klonen eines Repositorys wird nicht erfolgreich abgeschlossen. Die App kann daher nicht in {{site.data.keyword.Bluemix_notm}} bereitgestellt werden.
+Sie klicken auf die Schaltfläche **In Bluemix bereitstellen**, aber das Git-Repository wird nicht gefunden und kann in DevOps Services nicht geklont werden. Der Schritt zum Klonen eines Repositorys wird nicht erfolgreich abgeschlossen. Die App kann daher nicht in {{site.data.keyword.Bluemix_notm}} bereitgestellt werden. 
 {: tsSymptoms} 
 
 Dieses Problem kann aufgrund folgender Ursachen auftreten:
@@ -821,7 +821,7 @@ Verwenden Sie eines der folgenden Verfahren:
 ## Bereitstellung einer App über die Ausführungsleiste schlägt fehl
 {: #ts_runbar}
 
-Die Bereitstellung schlägt mit dem Status 'Nicht synchronisiert' (gelb) fehl.
+Die Bereitstellung schlägt mit dem Status 'Nicht synchronisiert' (gelb) fehl. 
 {: tsSymptoms} 
 
 Die betreffende App verfügt über dieselbe Route wie eine andere App, die aktiv ist. 
@@ -844,9 +844,9 @@ Verwenden Sie je nach Bedarf eines der folgenden Verfahren:
 {: tsResolve}  
 
 * Falls {{site.data.keyword.jazzhub}} Ihr Projekt nicht als Projekt erkennt, erstellen Sie eine Datei `project.json` im Stammverzeichnis Ihres Projekts.
-* Falls {{site.data.keyword.jazzhub_short}} nicht feststellen konnte, in welchem Ordner sich Ihre App befindet, und Ihre App nicht im Stammverzeichnis des Projekts gespeichert ist, verwenden Sie einen der folgenden Schritte: 
+* Falls {{site.data.keyword.jazzhub_short}} nicht feststellen konnte, in welchem Ordner sich Ihre App befindet, und Ihre App nicht im Stammverzeichnis des Projekts gespeichert ist, verwenden Sie einen der folgenden Schritte:
   * Erstellen Sie eine Datei `manifest.yml` im Stammverzeichnis Ihres Projekts und bearbeiten Sie die Datei so, dass sie auf die Position Ihrer App verweist. Beispiel: `path: pfad_ihrer_app`.
-  * Verschieben Sie Ihre App in das Stammverzeichnis Ihres Projekts. 
+  * Verschieben Sie Ihre App in das Stammverzeichnis Ihres Projekts.
 * Falls {{site.data.keyword.jazzhub_short}} nicht erkennt, dass Ihre App eine Node.js-App ist, erstellen Sie eine Datei `package.json` im App-Ordner Ihres Projekts.
   
 ## GitHub-Hook funktioniert nicht
@@ -875,4 +875,4 @@ Führen Sie die folgenden Schritte durch, um das Problem zu ermitteln:
 6. Stellen Sie sicher, dass keine Fehler vorliegen, indem Sie das Statussymbol erneut überprüfen.
    ![Statussymbol ohne Fehler](images/githubResolved_small.png)
 
-Weitere Informationen finden Sie unter [Setting up GitHub for Bluemix DevOps Services projects ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](https://hub.jazz.net/docs/githubhooks/){: new_window}.
+Weitere Informationen finden Sie unter [Setting up GitHub for Bluemix DevOps Services projects ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://hub.jazz.net/docs/githubhooks/){: new_window}.

@@ -3,8 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-01-11"
-  
+lastupdated: "2017-3-16"  
 
 ---
 
@@ -154,7 +153,7 @@ nslookup mybluemix.net
 如果您无法邀请用户加入组织，并需要其他角色来完成此操作，请联系组织管理员来更改您的角色。要识别组织管理员，请完成以下步骤：
 {: tsResolve}
 
-  1. 转至 {{site.data.keyword.Bluemix_notm}}“仪表板”，单击菜单栏中的 {{site.data.keyword.avatar}} 图标 ![Avatar 图标](images/account_support.svg) ，然后选择**管理组织**。
+  1. 转至 {{site.data.keyword.Bluemix_notm}}“仪表板”，单击菜单栏中的 {{site.data.keyword.avatar}} 图标 ![“头像”图标](images/account_support.svg)，然后选择**管理组织**。
   2. 转至您的组织，并查看**用户**选项卡上的组织管理员信息。  
   
 如果由于您是合作者（并非成员）而无法邀请用户，那么您必须删除您先前的 {{site.data.keyword.Bluemix_notm}} 帐户，然后被邀请以组织成员身份加入帐户。要删除您先前的帐户并以成员身份加入帐户，请完成以下步骤： 
@@ -363,7 +362,7 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 请确保在当前组织中已创建空间。要创建空间，请使用以下某种方法： 
 {: tsResolve}
 
-  * 单击 {{site.data.keyword.avatar}} 图标 ![Avatar 图标](images/account_support.svg)，以打开“帐户和支持”窗口小部件，选择要在其中创建空间的组织，然后单击**创建空间**。
+  * 单击 {{site.data.keyword.avatar}} 图标 ![“头像”图标](images/account_support.svg)，以打开“帐户和支持”窗口小部件，选择要在其中创建空间的组织，然后单击**创建空间**。
   * 在 cf 命令行界面中，键入 `cf create-space <space_name> -o <organization_name>`。
 
 请重试。如果再次看到此消息，请转至 [Bluemix 状态 ![外部链接图标](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window} 页面，查看服务或组件是否存在问题。
@@ -471,7 +470,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 通过项目构面将�
 
  
 
-如果您怀疑 {{site.data.keyword.Bluemix_notm}} 服务已关闭，请先检查 [{{site.data.keyword.Bluemix_notm}} 状态 ![外部链接图标](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window} 页面。您可能想要在其他 {{site.data.keyword.Bluemix_notm}} 区域使用该服务来作为一种变通方法。有关详细信息，请参阅[在另一个区域使用服务](/docs/services/reqnsi.html#cross_region_service)。如果服务状态正常，请尝试执行以下步骤来解决问题： 
+如果您怀疑 {{site.data.keyword.Bluemix_notm}} 服务已关闭，请先检查 [{{site.data.keyword.Bluemix_notm}} 状态 ![外部链接图标](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window} 页面。您可能想要在其他 {{site.data.keyword.Bluemix_notm}} 区域使用该服务来作为一种变通方法。有关详细信息，请参阅[在其他区域使用服务](/docs/services/reqnsi.html#cross_region_service)。如果服务状态正常，请尝试执行以下步骤来解决问题： 
 {: tsResolve}
 
   * 重试操作：
@@ -513,38 +512,6 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 通过项目构面将�
 
 	
 	
-## 无法添加 Git 存储库
-{: #ts_cannot_addgit}
-
-在“仪表板”上创建应用程序后，单击“添加 GIT”来创建 Git 存储库，但无法继续。
-
-
-
-单击**添加 GIT** 后，有一个窗口打开，但发生以下某个问题：
-{: tsSymptoms} 
-
-  * 窗口挂起且屏幕空白。
-  * 显示一条消息，指示第三方 cookie 存在问题。
-
-
-
-您的浏览器可能配置为阻止设置 cookie。必须在 {{site.data.keyword.Bluemix_notm}} 控制台的上下文内从 hub.jazz.net 因特网域中的 IBM® Bluemix DevOps Services 站点设置该 cookie。
-{: tsCauses}  
-
- 
-
-您可以使用以下其中一种方法来解决此问题：
-{: tsResolve}
-
-  * 按照从 {{site.data.keyword.Bluemix_notm}} 控制台打开的窗口中的指示信息执行操作。单击按钮。另一个浏览器窗口会暂时打开。在该窗口中，DevOps Services 会设置认证 cookie。
-  * 在另一个浏览器选项卡中，转至 https://hub.jazz.net，然后登录。返回到 {{site.data.keyword.Bluemix_notm}} 控制台，然后刷新页面。再次单击**添加 GIT**。
-  * 更改浏览器设置以启用第三方 cookie，然后再次单击“添加 GIT”。有关配置设置的详细信息，请参阅适用于您的浏览器的文档：
-    * [Mozilla Firefox ![外部链接图标](../icons/launch-glyph.svg)](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences#w_how-do-i-change-cookie-settings){: new_window}
-	* [Google Chrome ![外部链接图标](../icons/launch-glyph.svg)](https://support.google.com/chrome/answer/95647){: new_window}
-	* [Apple Safari ![外部链接图标](../icons/launch-glyph.svg)](https://support.apple.com/kb/PH17191){: new_window}
-	* [Microsoft Internet Explorer ![外部链接图标](../icons/launch-glyph.svg)](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window}
-如果这些变通方法无法解决该问题，请向 idslogin@jazz.net 发送电子邮件。
-
 
 
 ## Android 应用程序收不到推送通知
@@ -724,11 +691,11 @@ cf push <appname> -p <app_path>
 ## {{site.data.keyword.Bluemix_notm}} Live Sync 图标不显示
 {: #ts_llz_lkb_3r}
 
-您在 IBM Bluemix DevOps Services 中创建了应用程序，但 Web IDE 中不显示 IBM Bluemix Live Sync 图标。
+您创建了应用程序，但 Web IDE 中不显示 IBM Bluemix Live Sync 图标。
 
  
 
-在 DevOps Services Web IDE 中编辑 Node.js 应用程序时，不显示 {{site.data.keyword.Bluemix_notm}} 的“实时编辑”、“快速重新启动”和“调试”图标。
+在 Web IDE 中编辑 Node.js 应用程序时，不显示 {{site.data.keyword.Bluemix_notm}} 的“实时编辑”、“快速重新启动”和“调试”图标。
 {: tsSymptoms}
 
  
@@ -750,8 +717,6 @@ cf push <appname> -p <app_path>
    path: path_to_application
    ```
   * 在应用程序所在的目录中创建 `package.json` 文件。
-
-  
   
   
 
@@ -974,14 +939,14 @@ cf push MyUniqueAppName02 -p "./app.war"
 
 
 
-## 将 {{site.data.keyword.Bluemix_notm}} Liberty 应用程序从 Bluemix DevOps Services 导入到 Eclipse 之后 `server.xml` 文件中出现配置错误
+## 将 {{site.data.keyword.Bluemix_notm}} Liberty 应用程序导入到 Eclipse 之后，`server.xml` 文件中出现配置错误
 {: #ts_eclipse}
 
-在将 {{site.data.keyword.Bluemix_notm}} Liberty 应用程序从 IBM Bluemix DevOps Services 导入到 Eclipse 之后，如果在 `server.xml` 文件中看到配置错误，那么可能需要从项目中除去 `server.xml` 文件。 
+在将 {{site.data.keyword.Bluemix_notm}} Liberty 应用程序导入到 Eclipse 之后，如果在 `server.xml` 文件中看到配置错误，那么可能需要从项目中除去 `server.xml` 文件。 
 
  
 
-在将 {{site.data.keyword.Bluemix_notm}} Liberty 应用程序从 {{site.data.keyword.Bluemix_notm}} DevOps Services 导入到 Eclipse 之后，您会在 Eclipse 问题视图中看到 `server.xml` 文件内的配置错误。
+在将 {{site.data.keyword.Bluemix_notm}} Liberty 应用程序导入到 Eclipse 之后，在 Eclipse“问题”视图中看到 `server.xml` 文件内的配置错误。
 {: tsSymptoms}
 
  
@@ -991,7 +956,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 
  
 
-您可以通过从项目中除去 server.xml 文件来解决此问题。将应用程序作为 WAR 应用程序进行推送时，buildpack 会动态创建 `server.xml` 文件。有关更多信息，请参阅 [Liberty for Java](/docs/runtimes/liberty/index.html)。
+您可以通过从项目中除去 server.xml 文件来解决此问题。将应用程序作为 WAR 应用程序进行推送时，buildpack 会动态创建 `server.xml` 文件。有关更多信息，请参阅 [Liberty for Java ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/runtimes/liberty/index.html){: new_window}。
 {: tsResolve}
 	
 	
@@ -1472,7 +1437,7 @@ pid @{HOME}/nginx/logs/nginx.pid;
 	有关如何配置 `requirements.txt` 文件的更多信息，请参阅 [Requirements files](https://pip.readthedocs.org/en/1.1/requirements.html)。
 
   2. 将 `Procfile` 文件添加到 Python 应用程序的根目录中。
-`Procfile` 文件中必须包含 Python 应用程序的启动命令。在以下命令中，*yourappname* 是 Python 应用程序的名称，*PORT* 是 Python 应用程序在接收应用程序用户请求时必须使用的端口号。*$PORT* 为可选项。如果不在 start 命令中指定 PORT，那么会改用应用程序中 `VCAP_APP_PORT` 环境变量下的端口号。 
+`Procfile` 文件中必须包含 Python 应用程序的启动命令。在以下命令中，*yourappname* 是 Python 应用程序的名称，*PORT* 是 Python 应用程序在接收应用程序用户请求时必须使用的端口号。*$PORT* 为可选项。如果在启动命令中未指定 PORT，那么会改用应用程序中 `VCAP_APP_PORT` 环境变量下的端口号。 
 	```
 	web: python <yourappname>.py $PORT
 	```
