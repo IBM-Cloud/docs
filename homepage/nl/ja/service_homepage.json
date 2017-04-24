@@ -6,29 +6,29 @@
     "title": "Cloud Foundry アプリケーション",
     "img": "homepage/images/cloud-foundry.svg",
     "href": "cfapps/index.html",
-    "category_id": "コンピュート (compute)"
+    "category_id": "compute"
   }, {
     "title": "ボイラープレート",
     "img": "homepage/images/Bluemix-logo.svg",
     "href": "cfapps/boilerplates.html",
-    "category_id": "コンピュート (compute)"
+    "category_id": "compute"
   }, {
     "id": "whisk-rt",
     "title": "IBM OpenWhisk",
     "img": "homepage/images/whisk_icon.svg",
     "href": "openwhisk/index.html",
-    "category_id": "コンピュート (compute)"
+    "category_id": "compute"
   }, {
-    "id": "コンテナー (container)",
+    "id": "container",
     "title": "IBM Bluemix Container Service",
     "img": "homepage/images/containerServiceIcon.svg",
     "href": "containers/container_index.html",
-    "category_id": "コンピュート (compute)"
+    "category_id": "compute"
   }, {
     "type": "extra",
     "title": "データの処理",
     "href": "services/WorkWithData/index.html",
-    "category_id": "データ"
+    "category_id": "data"
   }, {
     "type": "extra",
     "title": "Dedicated GitHub Enterprise",
@@ -38,12 +38,12 @@
     "type": "extra",
     "title": "クラウド・ネイティブ・プロジェクトの構築",
     "href": "cloudnative/index.html",
-    "category_id": "モバイル"
+    "category_id": "mobile"
   }, {
     "type": "extra",
     "title": "モバイル・クライアント・アクセスの処理",
     "href": "services/mobileaccess/index.html",
-    "category_id": "モバイル"
+    "category_id": "mobile"
   }]
 }
 
