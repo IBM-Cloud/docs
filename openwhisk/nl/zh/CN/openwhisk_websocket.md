@@ -1,4 +1,4 @@
-## 使用 WebSocket 包
+# 使用 WebSocket 包
 {: #openwhisk_catalog_websocket}
 
 通过 `/whisk.system/websocket` 包，可方便地将消息发布到 WebSocket。
@@ -12,7 +12,7 @@
 
 如果计划将许多消息发送到同一 WebSocket URI，建议使用 `uri` 值创建包绑定。通过绑定，就无需在每次使用 `send` 操作时指定此值。
 
-### 向 WebSocket 发送消息
+## 向 WebSocket 发送消息
 
 `/whisk.system/websocket/send` 操作会将有效内容发送到 WebSocket URI。参数如下所示：
 

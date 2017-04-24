@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-04-04"
 
 ---
 
@@ -30,21 +30,21 @@ function main({name}) {
   return {body: `<html><body><h3>${msg}</h3></body></html>`}
 }
 ```
-{: codeblock}
+{: codeblock}  
 
-您可以使用註釋 `web-export`，在名稱空間 `guest` 的套件 `demo` 中建立 *web action* `hello`：
+您可以搭配使用 CLI 的 `--web` 旗標與 `true` 或 `yes` 值，在名稱空間 `guest` 的套件 `demo` 中建立 *Web 動作* `hello`：
 ```
 wsk package create demo
 ```
 {: pre}
 ```
-wsk action create /guest/demo/hello hello.js -a web-export true
+wsk action create /guest/demo/hello hello.js --web true
 ```
 {: pre}
 
-`web-export` 註釋容許透過新的 REST 介面，將動作作為 Web 動作進行存取。URL 的結構如下：`https://openwhisk.ng.bluemix.net/api/v1/web/{QUALIFIED ACTION NAME}.{EXT}`。動作的完整名稱包含三個部分：名稱空間、套件名稱及動作名稱。
+搭配使用 `--web` 旗標與 `true` 或 `yes` 值，容許透過 REST 介面存取動作，而不需要使用認證。您可以使用結構如下的 URL 來呼叫 Web 動作：`https://{APIHOST}/api/v1/web/{QUALIFIED ACTION NAME}.{EXT}`。動作的完整名稱包含三個部分：名稱空間、套件名稱及動作名稱。
 
-*動作的完整名稱必須包括其套件名稱，如果動作不在具名套件中，則為 'default'。*
+*動作的完整名稱必須包括其套件名稱，如果動作不在具名套件中，則為 `default`。*
 
 範例為 `guest/demo/hello`。雖然如後面所述允許其他值，但是 URI 的最後一個部分稱為 `extension`（一般為 `.http`）。Web 動作 API 路徑可以與 `curl` 或 `wget` 搭配使用，而不需要 API 金鑰。它甚至可以直接輸入瀏覽器中。
 
@@ -64,7 +64,7 @@ function main() {
   }
 }
 ```
-{: codeblock}  
+{: codeblock}    
 
 或者，設定 Cookie：
 ```javascript
@@ -78,7 +78,7 @@ function main() {
     body: '<html><body><h3>hello</h3></body></html>' }
 }
 ```
-{: codeblock}
+{: codeblock}  
 
 或者，傳回 `image/png`：
 ```javascript
@@ -89,7 +89,7 @@ function main() {
              body: png };
 }
 ```
-{: codeblock}
+{: codeblock}  
 
 或者，傳回 `application/json`：
 ```javascript
@@ -101,14 +101,14 @@ function main(params) {
     };
 }
 ```
-{: codeblock}
+{: codeblock}  
 
 請務必注意動作的[回應大小限制](./openwhisk_reference.html)，因為如果回應超出預先定義的系統限制將會失敗。例如，不應該透過 OpenWhisk 在行內傳送大型物件，而是延遲到物件儲存庫。
 
 ## 使用動作處理 HTTP 要求
 {: #openwhisk_webactions_http}
 
-不是 Web 動作的 OpenWhisk 動作需要鑑別，而且必須回應 JSON 物件。相對地，Web 動作可能是在未鑑別的情況下呼叫，而且可能用來實作回應不同類型的 *headers*、*statusCode* 及 *body* 內容的 HTTP 處理程式。Web 動作仍然必須傳回 JSON 物件，但是，如果 Web 動作的結果併入下列一個以上的項目作為最上層 JSON 內容，則 OpenWhisk 系統（即 `controller`）會以不同的方式處理 Web 動作：
+不是 Web 動作的 OpenWhisk 動作需要鑑別，而且必須回應 JSON 物件。相反地，Web 動作可能是在未鑑別的情況下呼叫，而且可能用來實作回應不同類型的 *headers*、*statusCode* 及 *body* 內容的 HTTP 處理程式。Web 動作仍然必須傳回 JSON 物件，但是，如果 Web 動作的結果併入下列一個以上的項目作為最上層 JSON 內容，則 OpenWhisk 系統（即 `controller`）會以不同的方式處理 Web 動作：
 
 - `headers`：索引鍵為標頭名稱且值為這些標頭的字串值的 JSON 物件（預設是無標頭）。
 - `statusCode`：有效的 HTTP 狀態碼（預設值為 200 OK）。
@@ -120,7 +120,7 @@ function main(params) {
 
 ## HTTP 環境定義
 
-所有 Web 動作在呼叫後都會接收其他 HTTP 要求明細，以作為動作輸入引數的參數。它們包含：
+所有 Web 動作在呼叫後都會以動作輸入引數參數的方式，接收其他 HTTP 要求明細。它們包含：
 
 - `__ow_method`（類型：字串）：要求的 HTTP 方法。
 - `__ow_headers`（類型：將字串對映至字串）：要求標頭。
@@ -131,13 +131,13 @@ function main(params) {
 
 要求可能不會置換上述任何具名 `__ow_` 參數；這麼做會導致要求失敗，其狀態等於「400 不正確的要求」。
 
-是有在 Web 動作[標註為需要鑑別](./openwhisk_annotations.html#openwhisk_annotations_webactions)，並允許 Web 動作實作自己的授權原則時，`__ow_user` 才會存在。只有在 Web 動作選擇要處理[「原始」HTTP 要求](#raw-http-handling)時，才能使用 `__ow_query`。這是一個字串，其中包含從 URI 剖析的查詢參數（以 `&` 區隔）。在處理「原始」HTTP 要求時，或是當 HTTP 要求實體不是 JSON 物件或來自資料時，會出現 `__ow_body` 內容。否則，Web 動作會接收查詢和內文參數，以作為動作引數的第一級內容，內文參數優先於查詢參數，而查詢參數優先於動作和套件參數。
+只有在 Web 動作[標註為需要鑑別](./openwhisk_annotations.html#openwhisk_annotations_webactions)，並允許 Web 動作實作自己的授權原則時，`__ow_user` 才會存在。只有在 Web 動作選擇要處理[「原始」HTTP 要求](#raw-http-handling)時，才能使用 `__ow_query`。這是一個字串，其中包含從 URI 剖析的查詢參數（以 `&` 區隔）。在處理「原始」HTTP 要求時，或是當 HTTP 要求實體不是 JSON 物件或表單資料時，`__ow_body` 內容會存在。否則，Web 動作會接收查詢和內文參數，以作為動作引數的第一級內容，內文參數優先於查詢參數，而查詢參數優先於動作和套件參數。
 
 ## 其他特性
 
 Web 動作具備一些其他特性，包括：
 
-- `內容延伸`：要求必須將其所需的內容類型指定為下列其中一項：`.json`、`.html`、`.http`、`.svg` 或 `.text`。作法是將延伸新增至 URI 中的動作名稱，因此動作 `/guest/demo/hello` 參照為 `/guest/demo/hello.http`（舉例來說），以接收傳回的 HTTP 回應。為了方便起見，如果未偵測到延伸，則假設為 `.http` 延伸。
+- `內容副檔名`：要求必須將其所需的內容類型指定為下列其中一項：`.json`、`.html`、`.http`、`.svg` 或 `.text`。作法是將副檔名新增至 URI 中的動作名稱，因此動作 `/guest/demo/hello` 參照為 `/guest/demo/hello.http`（舉例來說），以接收傳回的 HTTP 回應。為了方便起見，如果未偵測到副檔名，則假設為 `.http` 副檔名。
 - `投射結果中的欄位`：接在動作名稱後面的路徑是用來投射回應的一個以上層次。例如，`/guest/demo/hello.html/body`。這可讓傳回字典 `{body: "..." }` 的動作投射 `body` 內容，並且改為直接傳回其字串值。投射路徑遵循絕對路徑模型（如 XPath）。
 - `作為輸入的查詢及內文參數`：動作會接收查詢參數，以及要求內文中的參數。參數的合併優先順序是：套件參數、動作參數、查詢參數、內文參數，而且所有這些項目都會在重疊時覆寫任何先前的值。舉例來說，`/guest/demo/hello.http?name=Jane` 會將引數 `{name: "Jane"}` 傳遞給動作。
 - `表單資料`：除了標準 `application/json` 之外，Web 動作還可能會將透過資料 `application/x-www-form-urlencoded data` 編碼的 URL 接收作為輸入。
@@ -151,7 +151,7 @@ function main(params) {
 }
 ```
 
-將此動作當作 Web 動作呼叫時，您可以從結果投射不同的路徑，以變更 Web 動作的回應。例如，若要傳回整個物件，並查看物件接收哪些引數：
+將此動作當作 Web 動作呼叫時，您可以從結果投射不同的路徑，以變更 Web 動作的回應。例如，若要傳回整個物件，並查看動作收到哪些引數：
 
 ```
 curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json
@@ -274,41 +274,42 @@ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json -H 'Conte
 ```
 
 
-## 內容延伸
+## 內容副檔名
 {: #openwhisk_webactions_extensions}
 
-在呼叫 Web 動作時，通常會需要內容延伸；若沒有延伸，則會假設 `.http` 為預設值。`.json` 及 `.http` 延伸不需要投射路徑。`.html`、`.svg` 及 `.text` 延伸則需要，不過，為方便起見，會假設預設路徑符合延伸名稱。因此，若要呼叫 Web 動作並接收 `.html` 回應，動作必須回應包含稱為 `html` 的最上層內容的 JSON 物件（或者回應必須位於明確給定路徑中）。換言之，`/guest/demo/hello.html` 相當於明確地投射 `html` 內容，如 `/guest/demo/hello.html/html`。動作的完整名稱必須包括其套件名稱，如果動作不在具名套件中，其為 `default`。
+在呼叫 Web 動作時，通常會需要內容副檔名；若沒有副檔名，則會假設 `.http` 為預設值。`.json` 及 `.http` 副檔名不需要投射路徑。`.html`、`.svg` 及 `.text` 副檔名則需要，不過，為方便起見，會假設預設路徑符合副檔名。因此，若要呼叫 Web 動作並接收 `.html` 回應，動作必須回應包含稱為 `html` 的最上層內容的 JSON 物件（或者回應必須位於明確給定路徑中）。換言之，`/guest/demo/hello.html` 相當於明確地投射 `html` 內容，如 `/guest/demo/hello.html/html`。動作的完整名稱必須包括其套件名稱，如果動作不在具名套件中，其為 `default`。
 
 
 ## 受保護的參數
 {: #openwhisk_webactions_protected}
 
-動作參數也可能受到保護並視為不可變。若要終結參數，以及將動作 Web 設為可存取，則必須將兩個[註釋](openwhisk_annotations.html)附加至動作：必須將 `final` 和 `web-export` 其中一個設為 `true` 才會作用。透過先前重新造訪動作部署，我們如下新增註釋：
+在呼叫 Web 動作時，通常會需要內容副檔名；若沒有副檔名，則會假設 `.http` 為預設值。`.json` 及 `.http` 副檔名不需要投射路徑。`.html`、`.svg` 及 `.text` 副檔名則需要，不過，為方便起見，會假設預設路徑符合副檔名。因此，若要呼叫 Web 動作並接收 `.html` 回應，動作必須回應包含稱為 `html` 的最上層內容的 JSON 物件（或者回應必須位於明確給定路徑中）。換言之，`/guest/demo/hello.html` 相當於明確地投射 `html` 內容，如 `/guest/demo/hello.html/html`。動作的完整名稱必須包括其套件名稱，如果動作不在具名套件中，其為 `default`。
+
+
+## 受保護的參數
+
+動作參數也會受到保護並視為不可變。啟用 Web 動作時，會自動完成參數。
 
 ```
-wsk action create /guest/demo/hello hello.js \
+ wsk action create /guest/demo/hello hello.js \
       --parameter name Jane \
-      --annotation final true \
-      --annotation web-export true
+      --web true
 ```
-{: pre}
 
 這些變更的結果為 `name` 已連結至 `Jane`，而且可能不會因 final 註釋而置換為查詢或內文參數。這樣可保護對意外或有意嘗試變更此值的查詢或內文參數所執行的動作。 
 
 ## 停用 Web 動作
-{: #openwhisk_webactions_disable}
 
-若要停用透過新 API 呼叫 Web 動作 (`https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/web/`)，只要移除註釋或將它設為 `false` 即可。
+若要停用透過 Web API (`https://openwhisk.ng.bluemix.net/api/v1/web/`) 呼叫 Web 動作，請在使用 CLI 更新動作時，將 `false` 或 `no` 值傳遞給 `--web` 旗標。
 
 ```
-wsk action update /guest/demo/hello hello.js \
-      --annotation web-export false
+ wsk action update /guest/demo/hello hello.js --web false
 ```
+{: pre}
 
 ## 原始 HTTP 處理
-{: #raw-http-handling}
 
-Web 動作可以選擇直接解譯及處理送入的 HTTP 內文，而不需將 JSON 物件提升至可用於動作輸入的第一級內容（例如，`args.name` 與剖析 `args.__ow_query`）。透過 `raw-http` [註釋](openwhisk_annotations.html)即可完成此作業。使用與前面相同的範例，但現在是作為「原始」HTTP Web 動作，接收 `name` 同時作為查詢參數以及 HTTP 要求內文中的 JSON 值：
+Web 動作可以選擇直接解譯及處理送入的 HTTP 內文，而不需將 JSON 物件提升至可用於動作輸入的第一級內容（例如，`args.name` 與剖析 `args.__ow_query`）。透過 `raw-http` [註釋](annotations.md)即可完成此作業。使用與前面相同的範例，但現在是作為「原始」HTTP Web 動作，接收 `name` 同時作為查詢參數以及 HTTP 要求內文中的 JSON 值：
 ```
 curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json?name=Jane -X POST -H "Content-Type: application/json" -d '{"name":"Jane"}'
 ```
@@ -337,31 +338,89 @@ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json?name=Jane
 
 ### 啟用原始 HTTP 處理
 
-若要啟用原始 HTTP Web 動作，可以使用 annotation `raw-http` [註釋](openwhisk_annotations.html)搭配 `true` 值。
+若要啟用原始 HTTP Web 動作，可以搭配使用 `--web` 旗標與 `raw` 值。
 
 ```
-wsk action create /guest/demo/hello hello.js \
-      --annotation web-export true
-      --annotation raw-http true
+ wsk action create /guest/demo/hello hello.js --web raw
 ```
-{: pre}
-
-**附註：**由於 `raw-http` 意指 `web-export`，因此我們計劃未來會改進 CLI，以提供更方便的方式來新增（及移除）這些註釋。
-
 
 ### 停用原始 HTTP 處理
 
-若要停用原始 HTTP，可以將 `raw-http` [註釋](openwhisk_annotations.html)值設定為 `false`。
+將 `false` 或 `no` 值傳遞給 `--web` 旗標，即可停用原始 HTTP。
 
 ```
-wsk update create /guest/demo/hello hello.js \
-      --annotation web-export true
-      --annotation raw-http false
+ wsk update create /guest/demo/hello hello.js --web false
+```
+
+### 從 Base64 解碼二進位主體內容
+
+使用原始 HTTP 處理時，若要求 content-type 是二進位，將會以 Base64 編碼 `__ow_body` 內容。
+下面函數示範如何解碼 Node、Python 及 Swift 中的主體內容。只需要將下面所顯示的方法儲存至檔案、建立利用所儲存構件的原始 HTTP Web 動作，然後呼叫 Web 動作即可。
+
+#### Node
+
+```javascript
+  function main(args) {
+       decoded = new Buffer(args.__ow_body, 'base64').toString('utf-8')
+    return {body: decoded}
+}
+```
+{: codeblock}
+
+#### Python
+
+```python
+def main(args):
+    try:
+        decoded = args['__ow_body'].decode('base64').strip()
+        return {"body": decoded}
+    except:
+        return {"body": "Could not decode body from Base64."}
+```
+{: codeblock}
+
+#### Swift
+
+```swift
+extension String {
+    func base64Decode() -> String? {
+        guard let data = Data(base64Encoded: self) else {
+            return nil
+        }
+
+        return String(data: data, encoding: .utf8)
+    }
+}
+
+func main(args: [String:Any]) -> [String:Any] {
+    if let body = args["__ow_body"] as? String {
+        if let decoded = body.base64Decode() {
+            return [ "body" : decoded ]
+        }
+    }
+
+    return ["body": "Could not decode body from Base64."]
+}
+```
+{: codeblock}
+
+例如，將 Node 函數儲存為 `decode.js`，然後執行下列指令：
+```
+ wsk action create decode decode.js --web raw
 ```
 {: pre}
-
-**附註：**單一動作的所有註釋必須同時設定，在建立或更新動作時皆可。這是因為 API 和 CLI 目前有所限制。如果不這麼做，將會移除先前附加的任何註釋。
-
+```
+ok: created action decode
+```
+```
+curl -k -H "content-type: application" -X POST -d "Decoded body" https:// openwhisk.ng.bluemix.net/api/v1/web/guest/default/decodeNode.json
+```
+{: pre}
+```json
+{
+  "body": "Decoded body"
+}
+```
 
 ## 錯誤處理
 {: #openwhisk_webactions_errors}
@@ -369,7 +428,7 @@ wsk update create /guest/demo/hello hello.js \
 OpenWhisk 動作失敗時，有兩種不同的失敗模式。第一個稱為*應用程式錯誤*，類似於捕捉的異常狀況：此動作會傳回包含最上層 `error` 內容的 JSON 物件。第二個是動作災難性地失敗並且未產生回應時所發生的*開發人員錯誤*（這類似於未捕捉的異常狀況）。對於 Web 動作，控制器會如下處理應用程式錯誤：
 
 - 忽略所有指定的路徑投射，控制器會改為投射 `error` 內容。
-- 控制器會將依動作延伸所示的內容處理套用至 `error` 內容的值。
+- 控制器會將依動作副檔名所暗示的內容處理套用至 `error` 內容的值。
 
-開發人員應該注意 Web 動作的使用方式，以及如何相應地產生錯誤回應。例如，與 `.http` 延伸搭配使用的 Web 動作應該會傳回 HTTP 回應，例如：`{error: { statusCode: 400 }`。無法這麼做時，將會導致延伸中所示的 content-type 與錯誤回應中的動作 content-type 不符。必須對具有序列的 Web 動作進行特殊考量，因此構成序列的元件可以在必要時產生足夠的錯誤。
+開發人員應該注意 Web 動作的使用方式，以及如何相應地產生錯誤回應。例如，與 `.http` 副檔名搭配使用的 Web 動作應該會傳回 HTTP 回應，例如：`{error: { statusCode: 400 }`。無法這麼做時，將會導致副檔名中所暗示的 content-type 與錯誤回應中的動作 content-type 不符。必須對具有序列的 Web 動作進行特殊考量，因此構成序列的元件可以在必要時產生足夠的錯誤。
 

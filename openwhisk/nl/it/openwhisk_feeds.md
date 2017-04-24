@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-21"
+  lastupdated: "2017-04-04"
 
 ---
 
@@ -82,9 +82,9 @@ Un protocollo di azione di feed simile si verifica per `wsk trigger delete`.
 
 È facile configurare un feed mediante un hook se il produttore eventi supporta una funzione webhook/callback.
 
-Con questo metodo, *non è necessario* impostare un servizio permanente al di fuori di OpenWhisk.  Tutta la gestione dei feed avviene naturalmente tramite le *azioni di feed* {{site.data.keyword.openwhisk_short}} senza stato, che interagiscono direttamente con un'API webhook di terze parti.
+Con questo metodo, *non è necessario* impostare un servizio permanente al di fuori di {{site.data.keyword.openwhisk_short}}.  Tutta la gestione dei feed avviene naturalmente tramite le *azioni di feed* {{site.data.keyword.openwhisk_short}} senza stato, che interagiscono direttamente con un'API webhook di terze parti.
 
-Quando richiamata con `CREATE`, l'azione di feed installa semplicemente un webhook per qualche altro servizio, chiedendo al servizio remoto di pubblicare le notifiche all'ULR `fireTrigger` appropriato in OpenWhisk.
+Quando richiamata con `CREATE`, l'azione di feed installa semplicemente un webhook per qualche altro servizio, chiedendo al servizio remoto di pubblicare le notifiche all'ULR `fireTrigger` appropriato in {{site.data.keyword.openwhisk_short}}.
 
 Il webhook deve essere indirizzato per l'invio di notifiche a un URL come nel seguente esempio:
 
@@ -94,7 +94,7 @@ Il modulo con la richiesta POST verrà interpretato come documento JSON che defi
 
 ## Implementazione di feed con il polling
 
-È possibile configurare un'*azione* {{site.data.keyword.openwhisk_short}} per eseguire il polling di un'origine di feed interamente all'interno di OpenWhisk, senza la necessità di impostare connessioni permanenti o servizi esterni.
+È possibile configurare un'*azione* {{site.data.keyword.openwhisk_short}} per eseguire il polling di un'origine di feed interamente all'interno di {{site.data.keyword.openwhisk_short}}, senza la necessità di impostare connessioni permanenti o servizi esterni.
 
 Per i feed in cui non è disponibile un webhook, ma non sono necessari tempi di risposta a bassa latenza o di grandi volumi, il polling risulta essere un'opzione interessante.
 
@@ -111,7 +111,7 @@ Questa procedura implementa un trigger basato sul polling utilizzando esclusivam
 Le due precedenti scelte architetturali sono semplici e facili da implementare. Tuttavia, se vuoi ottenere un feed ad alte prestazioni, non esiste alternativa alle connessioni permanenti e polling lungo o tecniche simili.
 
 Poiché le azioni {{site.data.keyword.openwhisk_short}} devono essere di breve esecuzione, un'azione non può mantenere una connessione permanente a una terza parte. Dobbiamo invece
-impostare un servizio separato (esterno a OpenWhisk) che sia sempre in esecuzione.   Questi sono chiamati *servizi provider*.  Un servizio provider può mantenere connessioni a origini eventi di terze parti che supportano il polling lungo o altre notifiche basate sulla connessione.
+impostare un servizio separato (esterno a {{site.data.keyword.openwhisk_short}}) che sia sempre in esecuzione.   Questi sono chiamati *servizi provider*.  Un servizio provider può mantenere connessioni a origini eventi di terze parti che supportano il polling lungo o altre notifiche basate sulla connessione.
 
 Il servizio provider deve fornire un'API REST che consenta all'*azione di feed* {{site.data.keyword.openwhisk_short}} di controllare il feed.   Il servizio provider funge da proxy tra il provider di eventi e {{site.data.keyword.openwhisk_short}}: quando riceve gli eventi dalla terza parte, li invia a {{site.data.keyword.openwhisk_short}} attivando un trigger.
 

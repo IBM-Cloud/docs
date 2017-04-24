@@ -42,7 +42,7 @@ wsk property set --auth <authorization_key>
 ```
 {: pre}
 
-**Suggerimento:** per impostazione predefinita, la CLI OpenWhisk memorizza le proprietà impostate in `~/.wskprops`. È possibile modificare la posizione di questo file impostando la variabile di ambiente `WSK_CONFIG_FILE`.  
+**Suggerimento:** per impostazione predefinita, la CLI OpenWhisk memorizza le proprietà impostate in `~/.wskprops`. È possibile modificare la posizione di questo file impostando la variabile di ambiente `WSK_CONFIG_FILE`. 
 
 Per verificare la configurazione della tua CLI, prova a [creare ed eseguire un'azione](./index.html#openwhisk_start_hello_world).
 

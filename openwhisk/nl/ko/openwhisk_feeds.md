@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-21"
+lastupdated: "2017-04-04"
 
 ---
 
@@ -82,9 +82,9 @@ Cloudant *changes* 피드 조치는 연결 기반 아키텍처로 구현한 *clo
 
 이벤트 생성자가 웹훅/콜백 기능을 지원하면 훅을 통해 피드를 설정하기가 쉽습니다. 
 
-이 방법을 사용하면 OpenWhisk 외부에 지속적 서비스를 준비할 *필요가 없습니다*. 써드파티 웹훅 API와 직접 협상하는 Stateless {{site.data.keyword.openwhisk_short}} *피드 조치*를 통해 모든 피드 관리가 자연적으로 수행됩니다.
+이 방법을 사용하면 {{site.data.keyword.openwhisk_short}} 외부에 지속적 서비스를 준비할 *필요가 없습니다*. 써드파티 웹훅 API와 직접 협상하는 Stateless {{site.data.keyword.openwhisk_short}} *피드 조치*를 통해 모든 피드 관리가 자연적으로 수행됩니다.
 
-`CREATE`를 사용하여 호출하면 피드 조치는 단순히 다른 특정 서비스에 대한 웹훅을 설치하여 해당 원격 서비스에 OpenWhisk의 적절한 `fireTrigger` URL로 알림을 게시하도록 요청합니다. 
+`CREATE`를 사용하여 호출하면 피드 조치는 단순히 다른 특정 서비스에 대한 웹훅을 설치하여 해당 원격 서비스에 {{site.data.keyword.openwhisk_short}}의 적절한 `fireTrigger` URL로 알림을 게시하도록 요청합니다. 
 
 웹훅에 다음과 같은 URL로 알림을 전송하도록 지시해야 합니다. 
 
@@ -95,7 +95,7 @@ POST 요청을 포함하는 양식은 트리거 이벤트에서 매개변수를 
 
 ## 폴링을 사용하여 피드 구현
 
-지속적 연결 또는 외부 서비스를 준비할 필요 없이, 전적으로 OpenWhisk 내에서 피드 소스를 폴링하는 {{site.data.keyword.openwhisk_short}} *조치*를 설정할 수 있습니다.
+지속적 연결 또는 외부 서비스를 준비할 필요 없이, 전적으로 {{site.data.keyword.openwhisk_short}} 내에서 피드 소스를 폴링하는 {{site.data.keyword.openwhisk_short}} *조치*를 설정할 수 있습니다.
 
 웹훅을 사용할 수 없지만 고볼륨 또는 저지연 응답 시간이 필요하지 않는 피드의 경우, 폴링은 매력적인 옵션입니다. 
 
@@ -112,7 +112,7 @@ POST 요청을 포함하는 양식은 트리거 이벤트에서 매개변수를 
 아키텍처와 관련된 앞의 두 선택사항은 단순하고 구현하기가 쉽습니다. 그러나 고성능 피드를 원하는 경우, 지속적 연결 및 장기 폴링을 대체할 기술이나 이와 유사한 기술이 없습니다. 
 
 {{site.data.keyword.openwhisk_short}} 조치는 단기간 실행되어야 하므로 조치가 써드파티와의 지속적 연결을 유지보수할 수 없습니다. 대신 항상 실행되는
-별도의 서비스(OpenWhisk 외부의)를 준비해야 합니다. 이를 *제공자 서비스*라고 합니다. 제공자 서비스는 장기 폴링 또는 다른 연결 기반 알림을 지원하는 써드파티 이벤트 소스와의 연결을 유지보수할 수 있습니다. 
+별도의 서비스({{site.data.keyword.openwhisk_short}} 외부)를 준비해야 합니다. 이를 *제공자 서비스*라고 합니다. 제공자 서비스는 장기 폴링 또는 다른 연결 기반 알림을 지원하는 써드파티 이벤트 소스와의 연결을 유지보수할 수 있습니다. 
 
 제공자 서비스는 {{site.data.keyword.openwhisk_short}} *피드 조치*가 피드를 제어하는 데 필요한 REST API를 제공해야 합니다. 제공자 서비스는 이벤트 제공자와 {{site.data.keyword.openwhisk_short}} 사이의 프록시 역할을 합니다. 써드파티에서 이벤트를 수신하면 트리거를 실행하여 이 이벤트를 {{site.data.keyword.openwhisk_short}}에 전송합니다.
 

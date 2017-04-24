@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+  lastupdated: "2017-04-04"
 
 ---
 
@@ -53,13 +53,16 @@ lastupdated: "2017-03-13"
       return {payload: 'Hello world'};
   }
   ```
-  {: codeblock}
-この JavaScript ファイルにさらに関数を含めることもできます。ただし、規約により、アクションのエントリー・ポイントを提供するために `main` という名前の関数が存在している必要があります。2. 以下の JavaScript 関数からアクションを作成します。この例では、アクションは「hello」という名前です。
+    {: codeblock}
+
+  この JavaScript ファイルにさらに関数を含めることもできます。ただし、規約により、アクションのエントリー・ポイントを提供するために `main` という名前の関数が存在している必要があります。
+
+2. 以下の JavaScript 関数からアクションを作成します。この例では、アクションは「hello」という名前です。
 
   ```
   wsk action create hello hello.js
   ```
-    {: pre}
+      {: pre}
   ```
   ok: created action hello
   ```
@@ -90,8 +93,8 @@ lastupdated: "2017-03-13"
   ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
   ```
   ```json
-{
-  "result": {
+  {
+      "result": {
           "payload": "Hello world"
       },
       "status": "success",
@@ -106,7 +109,7 @@ lastupdated: "2017-03-13"
   この例の結果は、JavaScript 関数によって返されたストリング `Hello world` です。アクティベーション ID は、後でログまたは起動結果を取り出すときに使用できます。  
 
 5. アクションの結果をすぐに必要としない場合は、`--blocking` フラグを省略して非ブロッキング起動を行うことができます。結果は後でアクティベーション ID を使用して取得できます。次の例を参照してください。
-  
+
   ```
   wsk action invoke hello
   ```
@@ -114,6 +117,7 @@ lastupdated: "2017-03-13"
   ```
   ok: invoked hello with id 6bf1f670ee614a7eb5af3c9fde813043
   ```
+
   ```
   wsk activation result 6bf1f670ee614a7eb5af3c9fde813043
   ```
@@ -135,10 +139,8 @@ lastupdated: "2017-03-13"
   44794bd6aab74415b4e42a308d880e5b         hello
   6bf1f670ee614a7eb5af3c9fde813043         hello
   ```
-  
 
 ### アクションへのパラメーターの引き渡し
-{: #openwhisk_adding_parameters_js}
 
 アクションが起動されるときにパラメーターを渡すことができます。
 
@@ -185,11 +187,14 @@ lastupdated: "2017-03-13"
   {: pre}
 
   ```json
-{
-  "payload": "Hello, Bernie from Vermont"
+  {
+      "payload": "Hello, Bernie from Vermont"
   }
   ```
-呼び出しの結果のみを表示する `--result` オプションの使用に注意してください。### デフォルト・パラメーターの設定
+
+  呼び出しの結果のみを表示する `--result` オプションの使用に注意してください。
+
+### デフォルト・パラメーターの設定
 {: #openwhisk_binding_actions}
 
 複数の名前付きパラメーターを指定してアクションを起動できます。前の例では `hello` アクションは、個人を表す *name* パラメーターと出身地を表す *place* の 2 つのパラメーターを予期していました。
@@ -231,26 +236,33 @@ lastupdated: "2017-03-13"
       "payload": "Hello, Bernie from Vermont"
   }
   ```
-アクションを起動するときに place パラメーターを指定する必要がなかったことに注意してください。パラメーターをバインドしても、起動時にそのパラメーターの値を指定すれば上書きできます。3. `name` 値と `place` 値の両方を渡してアクションを起動します。後者は、アクションにバインドされた値を上書きします。
+
+  アクションを起動するときに place パラメーターを指定する必要がなかったことに注意してください。パラメーターをバインドしても、起動時にそのパラメーターの値を指定すれば上書きできます。
+
+3. `name` 値と `place` 値の両方を渡してアクションを起動します。後者は、アクションにバインドされた値を上書きします。
 
   `--param` フラグを使用した場合
+
   ```
   wsk action invoke --blocking --result hello --param name Bernie --param place "Washington, DC"
   ```
   {: pre}
+
   `--param-file` フラグを使用した場合
-  ファイル parameters.json:
+
+  parameters.json ファイルを使用した場合
   ```json
   {
-    "name": "Bernie",
+      "name": "Bernie",
     "place": "Vermont"
   }
   ```
-  {: codeblock}  
+  {: codeblock}
   ```
   wsk action invoke --blocking --result hello --param-file parameters.json
   ```
   {: pre}
+  
   ```json
   {
       "payload": "Hello, Bernie from Washington, DC"
@@ -298,7 +310,10 @@ lastupdated: "2017-03-13"
       "done": true
   }
   ```
-実行したのは非同期アクションのブロッキング起動であることに注意してください。3. アクティベーション・ログを取り出して、アクティベーションの完了にかかった時間を確認します。
+
+  実行したのは非同期アクションのブロッキング起動であることに注意してください。
+
+3. アクティベーション・ログを取り出して、アクティベーションの完了にかかった時間を確認します。
 
   ```
   wsk activation list --limit 1 asyncAction
@@ -309,17 +324,21 @@ lastupdated: "2017-03-13"
   b066ca51e68c4d3382df2d8033265db0             asyncAction
   ```
 
+
   ```
   wsk activation get b066ca51e68c4d3382df2d8033265db0
   ```
   {: pre}
-  ```json
+ ```json
   {
       "start": 1455881628103,
       "end":   1455881648126
   }
   ```
-アクティベーション・レコード中の `start` と `end` のタイム・スタンプを比較することで、このアクティベーションの完了に 2 秒と少しかかったことが分かります。### 外部 API を呼び出すためのアクションの使用
+
+  アクティベーション・レコード中の `start` と `end` のタイム・スタンプを比較することで、このアクティベーションの完了に 2 秒と少しかかったことが分かります。
+
+### 外部 API を呼び出すためのアクションの使用
 {: #openwhisk_apicall_action}
 
 ここまでの例では、JavaScript 関数はすべて自己完結型でした。外部 API を呼び出すアクションを作成することもできます。
@@ -373,7 +392,6 @@ lastupdated: "2017-03-13"
       "msg": "It is 28 degrees in Brooklyn, NY and Cloudy"
   }
   ```
-
 
 ### Node.js モジュールとしてのアクションのパッケージ化
 {: #openwhisk_js_packaged_action}
@@ -523,18 +541,18 @@ Python アクションの作成プロセスは、JavaScript アクションの�
 ### アクションの作成と起動
 {: #openwhisk_actions_python_invoke}
 
-アクションは、単に最上位の Python 関数です。つまり、`main` という名前のメソッドが必要です。例えば、以下の内容で `hello.py` という名前のファイルを作成します。
+アクションは、単にトップレベルの Python 関数です。例えば、以下のソース・コードで `hello.py` という名前のファイルを作成します。
 
 ```python
-def main(dict):
-    name = dict.get("name", "stranger")
+def main(args):
+    name = args.get("name", "stranger")
     greeting = "Hello " + name + "!"
     print(greeting)
     return {"greeting": greeting}
 ```
 {: codeblock}
 
-Python アクションは常にディクショナリーを取り込み、ディクショナリーを生成します。
+Python アクションは常にディクショナリーを取り込み、ディクショナリーを生成します。アクションの入り口メソッドはデフォルトで `main` ですが、他のアクション・タイプと同様に、`wsk` CLI でアクションを作成する際に `--main` を使用して明示的に指定することもできます。
 
 次のように、この関数から `helloPython` という名前の OpenWhisk アクションを作成できます。
 
@@ -542,8 +560,7 @@ Python アクションは常にディクショナリーを取り込み、ディ�
 wsk action create helloPython hello.py
 ```
 {: pre}
-
-コマンド・ラインおよび `.py` ソース・ファイルを使用する場合、(JavaScript アクションとは対照的に) Python アクションを作成していることを指定する必要はありません。そのことはツールがファイル拡張子から判定します。
+CLI は、ソース・ファイルの拡張子からアクションのタイプを自動的に推定します。`.py` のソース・ファイルには、Python 2.7 ランタイムを使用してアクションが実行されます。また、パラメーター `--kind python:3` を明示的に指定することで、Python 3.6 で実行されるアクションを作成することも可能です。Python 2.7 と 3.6 の比較について詳しくは、Python の[リファレンス](./openwhisk_reference.html#openwhisk_ref_python_environments)を参照してください。
 
 アクション起動は、Python アクションの場合と JavaScript アクションの場合で同じです。
 
@@ -559,16 +576,13 @@ wsk action invoke --blocking --result helloPython --param name World
 ```
 
 
-
 ## Swift アクションの作成
-{: #openwhisk_actions_swift}
 
 Swift アクションの作成プロセスは、JavaScript アクションの場合と似ています。以下のセクションでは、単一 Swift アクションの作成と起動、および、そのアクションへのパラメーターの追加について説明します。
 
 オンラインの [Swift Sandbox](https://swiftlang.ng.bluemix.net) を使用して、Xcode をマシンにインストールする必要なく Swift コードをテストすることもできます。
 
 ### アクションの作成と起動
-{: #openwhisk_actions_invoke_swift}
 
 アクションは、単にトップレベルの Swift 関数です。例えば、以下の内容で `hello.swift` という名前のファイルを作成します。
 
@@ -607,23 +621,25 @@ wsk action invoke --blocking --result helloSwift --param name World
   }
 ```
 
-
 **重要:** Swift アクションは Linux 環境で実行されます。Linux 上の Swift はまだ発展途上であり、
 {{site.data.keyword.openwhisk_short}} は通常は使用可能な最新リリースを使用しますが、それは必ずしも安定しているとは限りません。それに加えて、{{site.data.keyword.openwhisk_short}} で使用される Swift のバージョンは、安定したリリースの MacOS 用 XCode からの Swift のバージョンと不整合である可能性があります。
 
 ### Swift 実行可能ファイルとしてのアクションのパッケージ化
 {: #openwhisk_actions_swift_zip}
-Swift ソース・ファイルを使用して OpenWhisk Swift アクションを作成した場合、アクションを実行する前に、バイナリーにコンパイルしておく必要があります。これを行った後は、アクションを保持しているコンテナーがパージされるまで、そのアクションに対する後続の呼び出しが大幅に高速になります。
 
-コンパイル・ステップによる遅延を避けるために、Swift ファイルをバイナリーにコンパイルしてから、それを zip ファイルとして OpenWhisk にアップロードすることができます。OpenWhisk スキャフォールドが必要になるため、バイナリーを作成する最も簡単な方法は、実行する環境と同じ環境内でビルドすることです。手順は次のとおりです。
+Swift ソース・ファイルを使用して OpenWhisk Swift アクションを作成した場合、アクションを実行する前に、バイナリーにコンパイルしておく必要があります。これを行った後は、アクションを保持しているコンテナーがパージされるまで、そのアクションに対する後続の呼び出しが大幅に高速になります。この遅延は、コールド・スタートの遅延と呼ばれます。
+
+コールド・スタートの遅延を避けるために、Swift ファイルをバイナリーにコンパイルしてから、zip ファイルとして OpenWhisk にアップロードすることができます。OpenWhisk スキャフォールドが必要になるため、バイナリーを作成する最も簡単な方法は、実行する環境と同じ環境内でビルドすることです。手順は次のとおりです。
 
 - 対話式 Swift アクション・コンテナーを稼働する。
-  ```
-  docker run -it -v "$(pwd):/owexec" openwhisk/swift3action bash
-  ```
-  {: pre}
-これにより、Docker コンテナー内の bash シェルに移動します。その中で、以下のコマンドを実行します。
-  
+```
+docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
+```
+{: pre}
+
+    これにより、Docker コンテナー内の bash シェルに移動します。その中で、以下のコマンドを実行します。
+
+
 - バイナリーをパッケージ化するために、便宜上、zip ファイルをインストールする
   ```
   apt-get install -y zip
@@ -672,6 +688,7 @@ Swift ソース・ファイルを使用して OpenWhisk Swift アクションを
   ``` 
   {: pre}
 
+アクションの実行にかかった時間は「duration」プロパティーにあります。hello アクションでコンパイル・ステップを含む実行にかかる時間と比較してください。
 
 ## Java アクションの作成
 {: #openwhisk_actions_java}
@@ -723,7 +740,6 @@ jar cvf hello.jar Hello.class
 ```
 wsk action create helloJava hello.jar --main Hello
 ```
-{: pre}
 
 コマンド・ラインと `.jar` ソース・ファイルを使用する場合、Java アクションを作成していることを指定する必要はありません。ツールは、ファイル拡張子からそのことを判別します。
 
@@ -743,7 +759,6 @@ wsk action invoke --blocking --result helloJava --param name World
 ```
 
 ## Docker アクションの作成
-{: #openwhisk_actions_docker}
 
 {{site.data.keyword.openwhisk_short}} Docker アクションでは、任意の言語で独自のアクションを作成できます。
 
@@ -758,10 +773,12 @@ wsk action invoke --blocking --result helloJava --param name World
   ```
   wsk sdk install docker
   ```
+  ```
   {: pre}
   ```
 Docker スケルトンが現在のディレクトリーにインストールされました。
   ```
+
   ```
   ls dockerSkeleton/
   ```
@@ -769,16 +786,16 @@ Docker スケルトンが現在のディレクトリーにインストールさ�
   ```
   Dockerfile      README.md       buildAndPush.sh example.c
   ```
-このスケルトンは、Docker コンテナー・テンプレートであり、そこにカスタム・バイナリーの形でコードを注入できます。2. ブラック・ボックス・スケルトン内にカスタム・バイナリーをセットアップします。スケルトンには既に C プログラムが含まれているので、それを使用できます。
 
-  ```
+このスケルトンは、Docker コンテナー・テンプレートであり、そこにカスタム・バイナリーの形でコードを注入できます。2. ブラック・ボックス・スケルトン内にカスタム・バイナリーをセットアップします。スケルトンには既に C プログラムが含まれているので、それを使用できます。```
   cat dockerSkeleton/example.c
   ```
   {: pre}
   ```c
   #include <stdio.h>
   int main(int argc, char *argv[]) {
-      printf("This is an example log message from an arbitrary C program!\n");
+      
+printf("This is an example log message from an arbitrary C program!\n");
       printf("{ \"msg\": \"Hello from arbitrary C program!\", \"args\": %s }",
              (argc == 1) ? "undefined" : argv[1]);
   }
@@ -790,7 +807,7 @@ Docker スケルトンが現在のディレクトリーにインストールさ�
   そのバイナリーはコンテナー内部の `/action/exec` に置く必要があります。
 
   実行可能バイナリーはコマンド・ラインから単一の引数を受け取ります。それは、アクションへの引数を表す JSON オブジェクトのストリング・シリアライゼーションです。プログラムは `stdout` または `stderr` にログを記録することがあります。
-  規約により、出力の最終行は、アクションの結果を表す、stringify によって文字列化された JSON オブジェクト*でなければなりません*。
+  規約により、出力の最終行は、アクションの結果を表す、stringify によって文字列化された JSON オブジェクト_でなければなりません_。
 
 3. Docker イメージをビルドし、提供されているスクリプトを使用してアップロードします。最初に `docker login` を実行して認証し、次に、選択したイメージ名でスクリプトを実行する必要があります。
 
@@ -807,16 +824,15 @@ Docker スケルトンが現在のディレクトリーにインストールさ�
   ```
   {: pre}
 
-  example.c ファイルの部分は Docker イメージのビルド・プロセスの一環としてコンパイルされるので、ご使用のマシン上で C をコンパイルする必要はないことに注意してください。実際、このバイナリーは、互換ホスト・マシン上でコンパイルしないと、フォーマットが一致しないためにコンテナー内では稼働しない可能性があります。
-
-  これで、Docker コンテナーを {{site.data.keyword.openwhisk_short}} アクションとして使用できます。
+  example.c ファイルの部分は Docker イメージのビルド・プロセスの一環としてコンパイルされるので、ご使用のマシン上で C をコンパイルする必要はないことに注意してください。
+  実際、このバイナリーは、互換ホスト・マシン上でコンパイルしないと、フォーマットが一致しないためにコンテナー内では稼働しない可能性があります。これで、Docker コンテナーを {{site.data.keyword.openwhisk_short}} アクションとして使用できます。
 
   ```
   wsk action create --docker example janesmith/blackboxdemo
   ```
   {: pre}
 
-  アクションを作成するときには、`--docker` の使用に注意してください。現在は、すべての Docker イメージが Docker Hub でホストされると想定されています。
+  アクションを作成するときには、`--docker`  の使用に注意してください。現在は、すべての Docker イメージが Docker Hub でホストされると想定されています。
   このアクションは他の任意の {{site.data.keyword.openwhisk_short}} アクションとして起動される可能性があります。
 
   ```
@@ -832,30 +848,24 @@ Docker スケルトンが現在のディレクトリーにインストールさ�
   }
   ```
 
-  Docker アクションを更新するには、buildAndPush.sh を実行して、最新イメージを Docker Hub にアップロードします。これにより、システムは、アクション用のコードの次回実行時に新規 Docker イメージをプルできるようになります。ウォーム・コンテナーがない場合、すべての新しい起動は新規 Docker イメージを使用します。
-  ただし、前のバージョンの Docker イメージを使用しているウォーム・コンテナーがある場合は、`wsk action update` を実行しない限り、新しい起動はそのイメージを使用し続けます。これは、新しい起動には Docker プルを実行して新規 Docker イメージを取得する必要があることをシステムに指示します。
-
-  ```
+Docker アクションを更新するには、buildAndPush.sh を実行して、最新イメージを Docker Hub にアップロードします。これにより、システムは、アクション用のコードの次回実行時に新規 Docker イメージをプルできるようになります。ウォーム・コンテナーがない場合、すべての新しい起動は新規 Docker イメージを使用します。
+  ただし、前のバージョンの Docker イメージを使用しているウォーム・コンテナーがある場合は、`wsk action update` を実行しない限り、新しい起動はそのイメージを使用し続けます。これは、新しい起動には Docker プルを実行して新規 Docker イメージを取得する必要があることをシステムに指示します。```
   ./buildAndPush.sh janesmith/blackboxdemo
   ```
   {: pre}
-
   ```
   wsk action update --docker example janesmith/blackboxdemo
   ```
   {: pre}
 
-  『[リファレンス](./openwhisk_reference.html#openwhisk_ref_docker)』セクションに、Docker アクションの作成に関するさらに詳しい説明が記載されています。
+  [『リファレンス』](./openwhisk_reference.html#openwhisk_ref_docker)セクションに、Docker アクションの作成に関する詳細があります。
 
 ## アクション出力の監視
 {: #openwhisk_actions_polling}
 
-{{site.data.keyword.openwhisk_short}} アクションは、さまざまなイベントに応じて他のユーザーによって起動されたり、アクション・シーケンスの一部として起動されたりする可能性があります。そのような場合には、起動をモニターすることが役立ちます。
-
-{{site.data.keyword.openwhisk_short}} CLI を使用して、アクションが起動されたときの出力を監視できます。
+{{site.data.keyword.openwhisk_short}} アクションは、さまざまなイベントに応じて他のユーザーによって起動されたり、アクション・シーケンスの一部として起動されたりする可能性があります。そのような場合には、起動をモニターすることが役立ちます。{{site.data.keyword.openwhisk_short}} CLI を使用して、アクションが起動されたときの出力を監視できます。
 
 1. シェルから次のコマンドを実行します。
-  
   ```
   wsk activation poll
   ```
@@ -873,17 +883,14 @@ Docker スケルトンが現在のディレクトリーにインストールさ�
   ok: invoked /whisk.system/samples/helloWorld with id 7331f9b9e2044d85afd219b12c0f1491
   ```
 
-3. ポーリング・ウィンドウでアクティベーション・ログを監視します。
+3. Oポーリング・ウィンドウでアクティベーション・ログを監視します。
 
   ```
   Activation: helloWorld (7331f9b9e2044d85afd219b12c0f1491)
     2016-02-11T16:46:56.842065025Z stdout: hello bob!
   ```
 
-  同様に、ポーリング・ユーティリティーを実行すると、OpenWhisk で実行されているアクションのログをリアルタイムで確認できます。
-
-
-## アクションのリスト
+同様に、ポーリング・ユーティリティーを実行すると、OpenWhisk で実行されているアクションのログをリアルタイムで確認できます。## アクションのリスト
 {: #openwhisk_listing_actions}
 
 以下を使用して、作成したすべてのアクションをリストすることができます。
@@ -893,21 +900,16 @@ Docker スケルトンが現在のディレクトリーにインストールさ�
   ```
 {: pre}
 
-追加のアクションを作成するにつれて、このリストは長くなるので、関連するアクションをグループ化して[パッケージ](./packages.md)に入れると便利です。アクションのリストをフィルターに掛けて、特定のパッケージ内のアクションだけをリストするには、次のコマンドを使用します。 
-
-```
+追加のアクションを作成するにつれて、このリストは長くなるので、関連するアクションをグループ化して[パッケージ](./openwhisk_packages.html)に入れると便利です。アクションのリストをフィルターに掛けて、特定のパッケージ内のアクションだけをリストするには、次のコマンドを使用します。```
 wsk action list [PACKAGE NAME]
 ```
-{: pre}
-
-
-## アクションの削除
+  {: pre}
+  ## アクションの削除
 {: #openwhisk_delete_action}
 
 使用しないアクションを削除してクリーンアップすることができます。
 
 1. アクションを削除するには、次のコマンドを実行します。
-  
   ```
   wsk action delete hello
   ```
@@ -917,7 +919,6 @@ wsk action list [PACKAGE NAME]
   ```
 
 2. 対象のアクションが、もうアクションのリストに含まれていないことを確認します。
-  
   ```
   wsk action list
   ```
@@ -926,18 +927,15 @@ wsk action list [PACKAGE NAME]
   actions
   ```
   {: pre}
-
-## アクション・ボディー内のアクション・メタデータへのアクセス
+  ## アクション・ボディー内のアクション・メタデータへのアクセス
 {: #openwhisk_action_metadata}
 
 アクション環境は、実行中のアクションに固有のいくつかのプロパティーを含んでいます。
 これらによって、アクションは REST API を介して OpenWhisk アセットをプログラマチックに処理したり、
 アクションに割り当てられた時間を使い切ってしまいそうなときに内部アラームを設定したりできます。
-OpenWhisk Docker スケルトンを使用している場合、すべてのサポートされるランタイム (Node.js、Python、Swift、Java、および Docker アクション) で、以下のシステム環境変数を介してこれらのプロパティーにアクセスできます。
-
-* `__OW_API_HOST` このアクションを実行している OpenWhisk デプロイメントの API ホスト
+OpenWhisk Docker スケルトンを使用している場合、すべてのサポートされるランタイム (Node.js、Python、Swift、Java、および Docker アクション) で、以下のシステム環境変数を介してこれらのプロパティーにアクセスできます。* `__OW_API_HOST` このアクションを実行している OpenWhisk デプロイメントの API ホスト
 * `__OW_API_KEY` アクションを起動するサブジェクトの API キー (制限付き API キーである場合もあります)
-* `__OW_NAMESPACE` *アクティベーション* の名前空間 (アクションの名前空間と同じでないこともあります)
+* `__OW_NAMESPACE` _アクティベーション_ の名前空間 (アクションの名前空間と同じでないこともあります)
 * `__OW_ACTION_NAME` 実行しているアクションの完全修飾名
 * `__OW_ACTIVATION_ID` 実行しているアクション・インスタンスのアクティベーション ID
 * `__OW_DEADLINE` このアクションに割り当てられた期間全体をアクションが使い切ると推定されるおよその時刻 (エポック・ミリ秒で測定されます)

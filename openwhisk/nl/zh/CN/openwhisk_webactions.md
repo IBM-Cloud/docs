@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-04-04"
 
 ---
 
@@ -20,7 +20,7 @@ Web 操作是经过注释的 OpenWhisk 操作，可快速支持您构建基于 W
 
 Web 操作激活将与创建操作的用户相关联。此操作会将操作激活的成本从调用者转移到操作所有者。
 
-我们来执行以下 JavaScript 操作 `hello.js`：
+执行以下 JavaScript 操作 `hello.js`：
 ```javascript
 function main({name}) {
   var msg = 'you did not tell me who you are.';
@@ -30,19 +30,19 @@ function main({name}) {
   return {body: `<html><body><h3>${msg}</h3></body></html>`}
 }
 ```
-{: codeblock}
+{: codeblock}  
 
-您可使用注释 `web-export` 在包 `demo` 中为名称空间 `guest` 创建 *Web 操作* `hello`：
+您可在 CLI 中使用值为 `true` 或 `yes` 的 `--web` 标志在包 `demo` 中为名称空间 `guest` 创建 *Web 操作* `hello`：
 ```
 wsk package create demo
 ```
 {: pre}
 ```
-wsk action create /guest/demo/hello hello.js -a web-export true
+wsk action create /guest/demo/hello hello.js --web true
 ```
 {: pre}
 
-`web-export` 注释允许通过新的 REST 接口将该操作作为 Web 操作进行访问。构造的 URL 如下所示：`https://openwhisk.ng.bluemix.net/api/v1/web/{QUALIFIED ACTION NAME}.{EXT}`。操作的标准名称由三个部分构成：名称空间、包名和操作名称。
+使用值为 `true` 或 `yes` 的 `--web` 标志时，将允许通过 REST 接口访问操作，而无需凭证。可以使用如下所示构造的 URL 来调用 Web 操作：`https://{APIHOST}/api/v1/web/{QUALIFIED ACTION NAME}.{EXT}`。操作的标准名称由三个部分构成：名称空间、包名和操作名称。
 
 *操作的标准名称必须包含其包名，如果操作不在指定的包中，那么包名为“default”。*
 
@@ -63,7 +63,7 @@ function main() {
   }
 }
 ```
-{: codeblock}  
+{: codeblock}    
 
 或者，设置 cookie：
 ```javascript
@@ -77,7 +77,7 @@ function main() {
     body: '<html><body><h3>hello</h3></body></html>' }
 }
 ```
-{: codeblock}
+{: codeblock}  
 
 或者，返回 `image/png`：
 ```javascript
@@ -88,11 +88,11 @@ function main() {
              body: png };
 }
 ```
-{: codeblock}
+{: codeblock}  
 
-Or returns `application/json`:
+或者，返回 `application/json`:
 ```javascript
-function main(params) { 
+function main(params) {
     return {
         statusCode: 200,
         headers: { 'Content-Type': 'application/json' },
@@ -100,9 +100,9 @@ function main(params) {
     };
 }
 ```
-{: codeblock}
+{: codeblock}  
 
-It is important to be aware of the [响应大小限制](./openwhisk_reference.html)很重要，因为超过预定义系统限制的响应将失败。例如，大对象不应通过 OpenWhisk 内嵌发送，而是应转移到对象存储。
+知道操作的[响应大小限制](./openwhisk_reference.html)很重要，因为超过预定义系统限制的响应将失败。例如，大对象不应通过 OpenWhisk 内嵌发送，而是应转移到对象存储。
 
 ## 使用操作处理 HTTP 请求
 {: #openwhisk_webactions_http}
@@ -137,8 +137,7 @@ It is important to be aware of the [响应大小限制](./openwhisk_reference.ht
 Web 操作额外提供了一些功能，包括：
 
 - `内容扩展名`：请求必须将其所需的内容类型指定为 `.json`、`.html`、`.http`、`.svg` 或 `.text` 中的一种。为此，请在 URI 中添加操作名称的扩展名，以便将操作 `/guest/demo/hello` 引用为 `/guest/demo/hello.http`（举例而言）来接收返回的 HTTP 响应。为了方便起见，检测不到扩展名时将采用 `.http` 扩展名。
-- `从结果预测字段`：操作名称后跟的路径用于预测响应的一个或多个级别。例如，
-`/guest/demo/hello.html/body`。这允许返回字典 `{body: "..." }` 的操作预测 `body` 属性，并直接返回其字符串值。预测的路径将采用绝对路径模式（如在 XPath 中一样）。
+- `从结果预测字段`：操作名称后跟的路径用于预测响应的一个或多个级别。例如，`/guest/demo/hello.html/body`。这允许返回字典 `{body: "..." }` 的操作预测 `body` 属性，并直接返回其字符串值。预测的路径将采用绝对路径模式（如在 XPath 中一样）。
 - `查询和主体参数作为输入`：操作会接收查询参数以及请求主体中的参数。合并参数的优先顺序如下：包参数、操作参数、查询参数、主体参数；若发生重叠，这些参数都会覆盖先前的值。例如，`/guest/demo/hello.http?name=Jane` 会将自变量 `{name: "Jane"}` 传递到操作。
 - `表单数据`：除了标准 `application/json` 外，Web 操作还可以从数据 `application/x-www-form-urlencoded data` 接收 URL 编码的数据作为输入。
 - `通过多个 HTTP 动词激活`：Web 操作可通过 HTTP 方法 `GET`、`POST`、`PUT`、`PATCH` 和 `DELETE` 中的任一种方法以及 `HEAD` 和 `OPTIONS` 进行调用。
@@ -284,32 +283,33 @@ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json -H 'Conte
 ## 受保护的参数
 {: #openwhisk_webactions_protected}
 
-操作参数也可能受到保护并且被视为不可改变。要最终完成参数并使操作可通过 Web 访问，必须将 `final` 和 `web-export` 这两个[注释](openwhisk_annotations.html)附加到操作，这两个注释都必须设置为 `true` 才能生效。重新访问早先的操作部署，我们将按如下所示添加注释：
+调有 Web 操作时，内容扩展名通常是必需的；缺少扩展名时将采用 `.http` 为缺省值。`.json` 和 `.http` 扩展名无需投影路径。`.html`、`.svg` 和 `.text` 扩展名则需要投影路径，但是为了方便起见，将采用缺省路径来与扩展名相匹配。所以，要调用 Web 操作并接收 `.html` 响应，该操作必须使用包含顶级属性 `html` 的 JSON 对象进行响应（或者响应必须为显式提供的路径）。换言之，`/guest/demo/hello.html` 相当于显式预测 `html` 属性，如 `/guest/demo/hello.html/html` 中所示。操作的标准名称必须包含其包名，如果操作不在指定的包中，那么包名为 `default`。
+
+
+## 受保护的参数
+
+操作参数受到保护并且被视为不可改变。启用 Web 操作时，会自动最终完成参数。
 
 ```
-wsk action create /guest/demo/hello hello.js \
+ wsk action create /guest/demo/hello hello.js \
       --parameter name Jane \
-      --annotation final true \
-      --annotation web-export true
+      --web true
 ```
-{: pre}
 
 这些更改的结果是 `name` 绑定到 `Jane`，并且因为是最终注释，所以查询或主体参数都无法将其覆盖。这将保护操作不被意外或有意尝试更改此值的查询或主体参数覆盖。 
 
 ## 禁用 Web 操作
-{: #openwhisk_webactions_disable}
 
-要禁止通过新的 API (`https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/web/`) 调用 Web 操作，只需除去该注释或将其设置为 `false` 即可。
+要禁止通过 Web API (`https://openwhisk.ng.bluemix.net/api/v1/web/`) 调用 Web 操作，请在使用 CLI 更新操作时，将值 `false` 或 `no` 传递给 `--web` 标志。
 
 ```
-wsk action update /guest/demo/hello hello.js \
-      --annotation web-export false
+ wsk action update /guest/demo/hello hello.js --web false
 ```
+{: pre}
 
 ## 原始 HTTP 处理
-{: #raw-http-handling}
 
-Web 操作可选择直接解释和处理入局 HTTP 主体，而不将 JSON 对象提升为操作输入可用的第一类属性（例如，`args.name`，而不是解析 `args.__ow_query`）。通过 `raw-http` [注释](openwhisk_annotations.html)可执行此操作。使用上文所示的相同示例，但现在作为将 `name` 同时接收为查询参数和 HTTP 请求主体中 JSON 值的“原始”HTTP Web 操作：
+Web 操作可选择直接解释和处理入局 HTTP 主体，而不将 JSON 对象提升为操作输入可用的第一类属性（例如，`args.name`，而不是解析 `args.__ow_query`）。通过 `raw-http` [注释](annotations.md)可执行此操作。使用上文所示的相同示例，但现在作为将 `name` 同时接收为查询参数和 HTTP 请求主体中 JSON 值的“原始”HTTP Web 操作：
 ```
 curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json?name=Jane -X POST -H "Content-Type: application/json" -d '{"name":"Jane"}'
 ```
@@ -338,31 +338,89 @@ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json?name=Jane
 
 ### 启用原始 HTTP 处理
 
-原始 HTTP Web 操作可通过值为 `true` 的 `raw-http` [注释](openwhisk_annotations.html)来启用。
+原始 HTTP Web 操作可通过值为 `raw` 的 `--web` 标志来启用。
 
 ```
-wsk action create /guest/demo/hello hello.js \
-      --annotation web-export true
-      --annotation raw-http true
+ wsk action create /guest/demo/hello hello.js --web raw
 ```
-{: pre}
-
-**注：**由于 `raw-http` 隐含了 `web-export`，因此我们计划改进 CLI，以便未来更方便地添加（和除去）这些注释。
-
 
 ### 禁用原始 HTTP 处理
 
-禁用原始 HTTP 可通过将 `raw-http` [注释](openwhisk_annotations.html)值设置为 `false` 来完成。
+禁用原始 HTTP 可以通过将值 `false` 或 `no` 传递给 `--web` 标志来完成。
 
 ```
-wsk update create /guest/demo/hello hello.js \
-      --annotation web-export true
-      --annotation raw-http false
+ wsk update create /guest/demo/hello hello.js --web false
+```
+
+### 对基本 64 位编码的二进制主体内容解码
+
+使用原始 HTTP 处理时，如果请求的内容类型为二进制，那么会对 `__ow_body` 内容进行基本 64 位编码。
+下面的函数演示了如何对使用 Node、Python 和 Swift 编写的主体内容解码。只需将下面显示的方法保存到文件，利用已保存的工件创建原始 HTTP Web 操作，然后调用该 Web 操作。
+
+#### Node
+
+```javascript
+  function main(args) {
+       decoded = new Buffer(args.__ow_body, 'base64').toString('utf-8')
+    return {body: decoded}
+}
+```
+{: codeblock}
+
+#### Python
+
+```python
+def main(args):
+    try:
+        decoded = args['__ow_body'].decode('base64').strip()
+        return {"body": decoded}
+    except:
+        return {"body": "Could not decode body from Base64."}
+```
+{: codeblock}
+
+#### Swift
+
+```swift
+extension String {
+    func base64Decode() -> String? {
+        guard let data = Data(base64Encoded: self) else {
+            return nil
+        }
+
+        return String(data: data, encoding: .utf8)
+    }
+}
+
+func main(args: [String:Any]) -> [String:Any] {
+    if let body = args["__ow_body"] as? String {
+          if let decoded = body.base64Decode() {
+            return [ "body" : decoded ]
+        }
+    }
+
+    return ["body": "Could not decode body from Base64."]
+}
+```
+{: codeblock}
+
+例如，将 Node 函数保存为 `decode.js`，然后执行以下命令：
+```
+ wsk action create decode decode.js --web raw
 ```
 {: pre}
-
-**注：**单个操作的所有注释必须同时进行设置，可在创建操作时设置，也可在更新操作时设置。这是由于对 API 和 CLI 的当前限制造成的。如果不这样做，将导致除去先前附加的任何注释。
-
+```
+ok: created action decode
+```
+```
+curl -k -H "content-type: application" -X POST -d "Decoded body" https:// openwhisk.ng.bluemix.net/api/v1/web/guest/default/decodeNode.json
+```
+{: pre}
+```json
+{
+  "body": "Decoded body"
+}
+```
 
 ## 错误处理
 {: #openwhisk_webactions_errors}

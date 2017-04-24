@@ -153,7 +153,7 @@ wsk activation poll
   
   - `id`：文档标识。
   - `seq`：Cloudant 生成的序列标识。
-  - `changes`：对象数组，每个对象都具有 `rev` 字段，用于包含文档的修订版标识。
+  - `changes`：一组对象，其中每个对象都有 `rev` 字段，用于包含文档的修订版标识。
   
   触发器事件的 JSON 表示如下所示：
   

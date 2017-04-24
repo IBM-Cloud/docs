@@ -22,7 +22,7 @@ lastupdated: "2017-02-23"
 | 實體 | 類型 | 參數 | 說明 |
 | --- | --- | --- | --- |
 | `/whisk.system/slack` | 套件 | url、channel、username | 與 Slack API 互動 |
-| `/whisk.system/slack/post` | 動作 (action) | text、url、channel、username | 將訊息張貼至 Slack 通道 |
+| `/whisk.system/slack/post` | 動作 | text、url、channel、username | 將訊息張貼至 Slack 通道 |
 
 建議使用 `username`、`url` 及 `channel` 值來建立套件連結。使用連結，您就不需要每次在呼叫套件中的動作時都指定值。
 

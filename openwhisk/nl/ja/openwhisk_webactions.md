@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-16"
+  lastupdated: "2017-04-04"
 
 ---
 
@@ -30,19 +30,21 @@ function main({name}) {
   return {body: `<html><body><h3>${msg}</h3></body></html>`}
 }
 ```
-{: codeblock}
+{: codeblock}  
 
-以下のように、アノテーション `web-export` を使用して、*Web アクション* `hello` を、名前空間 `guest` のパッケージ `demo` 内に作成できます。 
+以下のように、CLI の `--web` フラグを値 `true` または `yes` で指定し、*Web アクション* `hello` を、名前空間 `guest` のパッケージ `demo` 内に作成できます。
 ```
 wsk package create demo
 ```
 {: pre}
 ```
-wsk action create /guest/demo/hello hello.js -a web-export true
+wsk action create /guest/demo/hello hello.js --web true
 ```
 {: pre}
 
-`web-export` アノテーションにより、アクションは新規 REST インターフェースを介して Web アクションとしてアクセス可能になります。構造化された URL は、`https://openwhisk.ng.bluemix.net/api/v1/web/{QUALIFIED ACTION NAME}.{EXT}` です。アクションの完全修飾名は、名前空間、パッケージ名、およびアクション名の 3 つの部分からなります。
+`--web` フラグを値 `true` または `yes` で指定することで、資格情報がなくても REST インターフェースでアクションにアクセス可能になります。
+Web アクションは、`https://{APIHOST}/api/v1/web/{QUALIFIED ACTION NAME}.{EXT}` と構造化された URL を使用して呼び出すことができます。
+アクションの完全修飾名は、名前空間、パッケージ名、およびアクション名の 3 つの部分からなります。
 
 *アクションの完全修飾名には、そのアクションのパッケージ名が含まれている必要があり、指定されたパッケージ内にアクションがない場合は「default」になります。*
 
@@ -64,7 +66,7 @@ function main() {
   }
 }
 ```
-{: codeblock}  
+{: codeblock}    
 
 以下は、Cookie を設定する例です。
 ```javascript
@@ -78,7 +80,7 @@ function main() {
     body: '<html><body><h3>hello</h3></body></html>' }
 }
 ```
-{: codeblock}
+{: codeblock}  
 
 `image/png` を返す例は、次のようになります。
 ```javascript
@@ -89,11 +91,11 @@ function main() {
              body: png };
 }
 ```
-{: codeblock}
+{: codeblock}  
 
-`application/json` を返す例は次のようになります。
+Or returns `application/json`:
 ```javascript
-function main(params) {
+function main(params) { 
     return {
         statusCode: 200,
         headers: { 'Content-Type': 'application/json' },
@@ -101,9 +103,9 @@ function main(params) {
     };
 }
 ```
-{: codeblock}
+{: codeblock}  
 
-アクションの[応答サイズ制限](./openwhisk_reference.html)を知っておくことが重要です。事前定義されたシステムしきい値を超える応答は失敗するからです。例えば、ラージ・オブジェクトは OpenWhisk を通してインラインで送信するのではなく、オブジェクト・ストアに置くようにする必要があります。
+It is important to be aware of the [応答サイズ制限](./openwhisk_reference.html)を知っておくことが重要です。事前定義されたシステムしきい値を超える応答は失敗するからです。例えば、ラージ・オブジェクトは OpenWhisk を通してインラインで送信するのではなく、オブジェクト・ストアに置くようにする必要があります。
 
 ## アクションを使用した HTTP 要求の処理
 {: #openwhisk_webactions_http}
@@ -285,32 +287,34 @@ Web アクションを起動する際には、通常、コンテンツ拡張子�
 ## 保護されたパラメーター
 {: #openwhisk_webactions_protected}
 
-アクション・パラメーターを保護して、変更不可能として処理することもできます。パラメーターを最終決定するため、および、アクションを Web でアクセス可能にするためには、2 つの [アノテーション](openwhisk_annotations.html) をアクションに付加する必要があります。それは `final` と `web-export` であり、有効にするためにはどちらも `true` に設定する必要があります。前に説明したアクション・デプロイメントをもう一度使用して、これらのアノテーションを次のように追加できます。
+Web アクションを起動する際には、通常、コンテンツ拡張子が必要です。拡張子がない場合は、デフォルトとして `.http` が想定されます。拡張子 `.json` および `.http` は、射影パスを必要としません。拡張子 `.html`、`.svg` および `.text` では必要ですが、簡便にするため、デフォルト・パスが拡張子名に一致すると想定されます。したがって、Web アクションを起動して、`.html` 応答を受け取るには、アクションは、`html` という名前の最上位プロパティーを含む JSON オブジェクトを用いて応答する必要があります (または、応答は明示的に指定されるパスに存在する必要があります)。 言い換えると、`/guest/demo/hello.html` は、`/guest/demo/hello.html/html` のように、`html` プロパティーを明示的に射影することと等価です。
+アクションの完全修飾名にはそのアクションのパッケージ名が組み込まれている必要があり、指定されたパッケージ内にアクションがない場合は `default` になります。
+
+
+## 保護されたパラメーター
+
+アクション・パラメーターは保護され、変更不可能として処理されます。Web アクションを有効にしたとき、パラメーターは自動的にファイナライズされます。
 
 ```
-wsk action create /guest/demo/hello hello.js \
+ wsk action create /guest/demo/hello hello.js \
       --parameter name Jane \
-      --annotation final true \
-      --annotation web-export true
+      --web true
 ```
-{: pre}
 
 これらの変更の結果は、`name` が `Jane` にバインドされ、final アノテーションがあるため照会パラメーターまたは本体パラメーターでオーバーライドされないことです。これは、意図的または偶発的にこの値を変更しようとする照会パラメーターまたは本体パラメーターからアクションを保護します。 
 
 ## Web アクションの無効化
-{: #openwhisk_webactions_disable}
 
-新規 API (`https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/web/`) を介した Web アクションの起動を無効にするには、アノテーションを削除するか、`false` に設定すればいいだけです。
+Web API (`https://openwhisk.ng.bluemix.net/api/v1/web/`) を介した Web アクションの起動を無効にするには、CLI でアクションを更新するときに `--web` フラグに値 `false` または `no` を渡します。
 
 ```
-wsk action update /guest/demo/hello hello.js \
-      --annotation web-export false
+ wsk action update /guest/demo/hello hello.js --web false
 ```
+{: pre}
 
 ## 未加工 HTTP 処理
-{: #raw-http-handling}
 
-Web アクションは、アクション入力に使用できる第 1 クラス・プロパティーに JSON オブジェクトをプロモーションせずに、着信 HTTP 本体を直接解釈して処理することを選択できます (例: `args.name` 対 `args.__ow_query` の構文解析)。これは、`raw-http` [アノテーション](openwhisk_annotations.html)を介して行います。前述と同じ例を使用しますが、今度は「未加工」HTTP Web アクションとして使用し、以下のように、照会パラメーターと HTTP 要求本体内の JSON 値の両方として `name` を受け取ります。
+Web アクションは、アクション入力に使用できる第 1 クラス・プロパティーに JSON オブジェクトをプロモーションせずに、着信 HTTP 本体を直接解釈して処理することを選択できます (例: `args.name` 対 `args.__ow_query` の構文解析)。これは、`raw-http` [アノテーション](annotations.md)を介して行います。前述と同じ例を使用しますが、今度は「未加工」HTTP Web アクションとして使用し、以下のように、照会パラメーターと HTTP 要求本体内の JSON 値の両方として `name` を受け取ります。
 ```
 curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json?name=Jane -X POST -H "Content-Type: application/json" -d '{"name":"Jane"}'
 ```
@@ -339,31 +343,90 @@ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json?name=Jane
 
 ### 未加工 HTTP 処理の有効化
 
-未加工 HTTP Web アクションは、`true` の値を持つ `raw-http` [アノテーション](openwhisk_annotations.html)を介して有効化します。
+未加工 HTTP Web アクションは、`--web` フラグに値 `raw` を指定して有効化します。
 
 ```
-wsk action create /guest/demo/hello hello.js \
-      --annotation web-export true
-      --annotation raw-http true
+ wsk action create /guest/demo/hello hello.js --web raw
 ```
-{: pre}
-
-**注:** `raw-http` は `web-export` を暗黙指定するので、今後、これらのアノテーションを追加 (および削除) するためのより便利な方法を提供するように CLI を改善する計画です。
-
 
 ### 未加工 HTTP 処理の無効化
 
-未加工 HTTP の無効化は、`raw-http` [アノテーション](openwhisk_annotations.html)の値を `false` に設定することで行います。
+未加工 HTTP を無効にするには、`--web` フラグに値 `false` または `no` を渡します。
 
 ```
-wsk update create /guest/demo/hello hello.js \
-      --annotation web-export true
-      --annotation raw-http false
+ wsk update create /guest/demo/hello hello.js --web false
+```
+
+### バイナリーのボディー・コンテンツを Base64 からデコード
+
+未加工 HTTP 処理を使用する場合、要求の content-type がバイナリーのとき、`__ow_body` コンテンツは Base64 でエンコードされます。
+以下は、Node、Python、および Swift でボディー・コンテンツをデコードする方法を示した関数です。以下に示したメソッドをファイルにただ保存し、
+保存された成果物を利用して未加工 HTTP Web アクションを作成し、Web アクションを起動してください。
+
+#### Node
+
+```javascript
+  function main(args) {
+       decoded = new Buffer(args.__ow_body, 'base64').toString('utf-8')
+    return {body: decoded}
+}
+```
+{: codeblock}
+
+#### Python
+
+```python
+def main(args):
+    try:
+        decoded = args['__ow_body'].decode('base64').strip()
+        return {"body": decoded}
+    except:
+        return {"body": "Could not decode body from Base64."}
+```
+{: codeblock}
+
+#### Swift
+
+```swift
+extension String {
+    func base64Decode() -> String? {
+        guard let data = Data(base64Encoded: self) else {
+            return nil
+        }
+
+        return String(data: data, encoding: .utf8)
+    }
+}
+
+func main(args: [String:Any]) -> [String:Any] {
+    if let body = args["__ow_body"] as? String {
+        if let decoded = body.base64Decode() {
+            return [ "body" : decoded ]
+        }
+    }
+
+    return ["body": "Could not decode body from Base64."]
+}
+```
+{: codeblock}
+
+例として、この Node 関数を `decode.js` として保存し、以下のコマンドを実行します。
+```
+ wsk action create decode decode.js --web raw
 ```
 {: pre}
-
-**注:**  アクションの作成時または更新時には、1 つのアクションを対象にしたすべてのアノテーションを同時に設定する必要があります。これは、API と CLI にある現在の制限によるものです。このようにしないと、前に付けられたアノテーションはすべて削除されてしまいます。
-
+```
+ok: created action decode
+```
+```
+curl -k -H "content-type: application" -X POST -d "Decoded body" https:// openwhisk.ng.bluemix.net/api/v1/web/guest/default/decodeNode.json
+```
+{: pre}
+```json
+{
+  "body": "Decoded body"
+}
+```
 
 ## エラー処理
 {: #openwhisk_webactions_errors}

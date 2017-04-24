@@ -14,7 +14,7 @@ lastupdated: "2017-02-21"
 
 # {{site.data.keyword.openwhisk_short}} 정보
 
-{{site.data.keyword.openwhisk}}는 이벤트 구동 컴퓨팅 플랫폼으로 Serverless 컴퓨팅 또는 FaaS(Function as a Service)라고도 하며 이벤트 또는 직접 호출에 대한 응답으로 코드를 실행합니다. 다음 그림에서는 상위 레벨 {{site.data.keyword.openwhisk}} 아키텍처를 보여줍니다.
+{{site.data.keyword.openwhisk}}는 이벤트 구동 컴퓨팅 플랫폼으로 서버리스(serverless) 컴퓨팅 또는 FaaS(Function as a Service)라고도 하며 이벤트 또는 직접 호출에 대한 응답으로 코드를 실행합니다. 다음 그림은 상위 레벨 {{site.data.keyword.openwhisk}} 아키텍처를 보여줍니다.
 {: shortdesc}
 
 ![{{site.data.keyword.openwhisk_short}} 아키텍처](./images/OpenWhisk.png)

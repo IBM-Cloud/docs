@@ -100,7 +100,7 @@ Il payload di questo trigger conterrà un campo `messages` che è un array di me
 - key
 - value
 
-In termini Kafka, questi campi devono essere evidenti. Tuttavia, `key` ha una funzione facoltativa `isBinaryKey` che consente alla `key` di trasmettere i dati binari. Inoltre, `value` richiede una considerazione speciale. I campi facoltativi `isJSONData` e `isBinaryValue` sono disponibili per gestire i messaggi JSON e binari. Questi campi, `isJSONData` e `isBinaryValue`, non possono essere utilizzati in combinazione tra loro. 
+In termini Kafka, questi campi devono essere evidenti. Tuttavia, `key` ha una funzione facoltativa `isBinaryKey` che consente alla `key` di trasmettere i dati binari. Inoltre, `value` richiede una considerazione speciale. I campi facoltativi `isJSONData` e `isBinaryValue` sono disponibili per gestire i messaggi JSON e binari. Questi campi, `isJSONData` e `isBinaryValue`, non possono essere utilizzati in combinazione tra loro.
 
 Ad esempio, se `isBinaryKey` è stato impostato su `true` quando è stato creato il trigger, `key` verrà codificato come stringa Base64 quando restituito dal payload di un trigger attivato.
 

@@ -21,9 +21,9 @@ Le azioni web ti consentono di richiamare un'azione con metodi HTTP diversi da P
 
 In seguito al feedback degli utenti, le azioni Web rappresentano il modello di programmazione scelto per costruire le azioni OpenWhisk in grado di gestire gli eventi HTTP.
 
-La maggior parte delle funzionalità di API Gateway è stata unita nelle azioni web: le azioni web ti consentono di gestire ogni richiesta HTTP e di restituire risposte HTTP con il pieno controllo dalla tua azione web. 
+La maggior parte delle funzionalità di API Gateway è stata unita nelle azioni web: le azioni web ti consentono di gestire ogni richiesta HTTP e di restituire risposte HTTP con il pieno controllo dalla tua azione web.
 
-Un'integrazione rivisitata di OpenWhisk API Gateway sarà disponibile a breve. Sarà configurato come proxy per le tue azioni web, fornendo loro le funzioni di API Gateway come ad esempio il limite di frequenza, la convalida del token oauth, le chiavi API e altro.
+Un'integrazione rivisitata di OpenWhisk API Gateway sarà disponibile a breve. Sarà configurato come proxy per le tue azioni web, fornendo loro le funzioni di API Gateway come ad esempio il limite di frequenza, la convalida del token oauth, le chiavi API e altro. Consulta il video [Create and Control APIs](https://youtu.be/XT9KwWTnnzo)
 
 **Nota:** le API che crei utilizzando `wsk api-experimental` continueranno a funzionare, tuttavia dovresti iniziare a migrare le API alle azioni web.
 

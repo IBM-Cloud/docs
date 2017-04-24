@@ -88,8 +88,7 @@ A entrada e a saída de uma ação é um dicionário de pares de valores de chav
 ### Ordenação de chamada de ações
 {: #openwhisk_ordering}
 
-Chamadas de uma ação não são ordenadas. Se o usuário chamar uma ação duas vezes a
-partir da linha de comandos ou a API REST, a segunda chamada poderá ser executada antes
+Chamadas de uma ação não são ordenadas. Se o usuário chamar uma ação duas vezes por meio da linha de comandos ou a API REST, a segunda chamada poderá ser executada antes
 da primeira. Se
 as ações tiverem efeitos colaterais, elas poderão ser observadas em
 qualquer ordem.
@@ -256,10 +255,12 @@ function main(args) {
 Observe que, independentemente de uma ativação ser síncrona ou assíncrona, a
 chamada da ação pode bloqueio ou não bloqueio.
 
-### Objeto whisk global JavaScript descontinuado
+### Objeto whisk global JavaScript global removido
 
-O objeto global `whisk` está descontinuado atualmente; migre suas ações nodejs para usar métodos alternativos.
-Para as funções `whisk.invoke()` e `whisk.trigger()`, é possível usar a biblioteca de cliente [openwhisk](https://www.npmjs.com/package/openwhisk).
+O objeto global `whisk` foi removido; migre suas ações de nodejs para
+usar métodos alternativos.
+Para as funções `whisk.invoke()` e `whisk.trigger()`, use a
+biblioteca do cliente [openwhisk](https://www.npmjs.com/package/openwhisk) já instalada.
 Para `whisk.getAuthKey()`, é possível obter o valor da chave API da variável de ambiente `__OW_API_KEY`.
 Para `whisk.error()`, é possível retornar uma Promessa rejeitada (ou seja, Promise.reject).
 
@@ -294,7 +295,7 @@ Os pacotes a seguir estão disponíveis para serem usados no ambiente do Node.js
 - node-uuid v1.4.7
 - nodemailer v2.6.4
 - oauth2-server v2.4.1
-- openwhisk v3.0.0
+- openwhisk v3.3.2
 - pkgcloud v1.4.0
 - process v0.11.9
 - pug v2.0.0-beta6
@@ -322,88 +323,110 @@ Os pacotes a seguir estão disponíveis para serem usados no ambiente do Node.js
 - xmlhttprequest v1.8.0
 - yauzl v2.7.0
 
-O ambiente do Node.js versão 0.12.17 será usado para uma ação se a sinalização `--kind` for explicitamente especificada com um valor 'nodejs' ao
-criar/atualizar a ação.
-Os pacotes a seguir estão disponíveis para serem usados no ambiente do Node.js 0.12.17:
 
-**Nota**: O Node.js versão 0.12.x está descontinuado; migre toda a sua ação do Node.js para usar o Node.js versão 6.x.
+## Ambientes de tempo de execução do Python
+{: #openwhisk_ref_python_environments}
 
-- apn v1.7.4
-- async v1.5.2
-- btoa v1.1.2
-- cheerio v0.20.0
-- cloudant v1.4.1
-- commander v2.7.0
-- consul v0.18.1
-- cookie-parser v1.3.4
-- cradle v0.6.7
-- errorhandler v1.3.5
-- gm v1.20.0
-- jade v1.9.2
-- log4js v0.6.38
-- merge v1.2.0
-- moment v2.8.1
-- mustache v2.1.3
-- nano v5.10.0
-- node-uuid v1.4.2
-- oauth2-server v2.4.0
-- openwhisk v3.0.0
-- process v0.11.0
-- request v2.79.0
-- rimraf v2.5.1
-- semver v4.3.6
-- serve-favicon v2.2.0
-- socket.io v1.3.5
-- socket.io-client v1.3.5
-- superagent v1.3.0
-- swagger-tools v0.8.7
-- tmp v0.0.28
-- watson-developer-cloud v1.4.1
-- when v3.7.3
-- ws v1.1.0
-- xml2js v0.4.15
-- xmlhttprequest v1.7.0
-- yauzl v2.3.1
+O OpenWhisk suporta a execução de ações Python usando duas versões de tempo de execução diferentes.
 
-## Ações do Python
+### Ações do Python 3
 
-As ações do Python são executadas por padrão usando o Python 2.7.12.
-Além da biblioteca padrão do Python, os pacotes a seguir também estão disponíveis para uso por ações do Python.
+As ações do Python 3 são executadas usando o Python 3.6.1.
+Para usar esse tempo de execução, especifique o parâmetro da CLI `wsk`,
+`--kind python:3` ao criar ou atualizar uma ação. Os pacotes a seguir estão disponíveis para
+uso por ações do Python, além das bibliotecas padrão do Python 3.6.
 
-- attrs v16.1.0
+- aiohttp v1.3.3
+- appdirs v1.4.3
+- asn1crypto v0.21.1
+- async-timeout v1.2.0
+- attrs v16.3.0
 - beautifulsoup4 v4.5.1
-- cffi v1.7.0
-- click v6.6
-- cryptography v1.5
-- cssselect v0.9.2
-- enum34 v1.1.6
-- flask v0.11.1
-- gevent v1.1.2
-- greenlet v0.4.10
+- cffi v1.9.1
+- chardet v2.3.0
+- click v6.7
+- cryptography v1.8.1
+- cssselect v1.0.1
+- Flask v0.12
+- gevent v1.2.1
+- greenlet v0.4.12
 - httplib2 v0.9.2
-- idna v2.1
-- ipaddress v1.0.16
+- idna v2.5
 - itsdangerous v0.24
-- jinja2 v2.8
+- Jinja2 v2.9.5
+- kafka-python v1.3.1
 - lxml v3.6.4
-- markupsafe v0.23
-- parsel v1.0.3
-- pyasn1 v0.1.9
+- MarkupSafe v1.0
+- multidict v2.1.4
+- packaging v16.8
+- parsel v1.1.0
+- pyasn1 v0.2.3
 - pyasn1-modules v0.0.8
-- pycparser v2.14
-- pydispatcher v2.0.5
-- pyopenssl v16.1.0
+- pycparser v2.17
+- PyDispatcher v2.0.5
+- pyOpenSSL v16.2.0
+- pyparsing v2.2.0
 - python-dateutil v2.5.3
 - queuelib v1.4.2
 - requests v2.11.1
-- scrapy v1.1.2
+- Scrapy v1.1.2
 - service-identity v16.0.0
 - simplejson v3.8.2
 - six v1.10.0
-- twisted v16.4.0
-- w3lib v1.15.0
-- werkzeug v0.11.10
-- zope.interface v4.3.1
+- Twisted v16.4.0
+- w3lib v1.17.0
+- Werkzeug v0.12
+- yarl v0.9.8
+- zope.interface v4.3.3
+
+### Ações do Python 2
+
+As ações do Python 2 são executadas usando o Python 2.7.12.
+Esse é o tempo de execução padrão para ações do Python, a menos que você especifique a sinalização
+`--kind` ao criar ou atualizar uma ação. Para selecionar explicitamente esse tempo de
+execução, use `--kind python:2`. Os pacotes a seguir estão disponíveis para uso por ações do
+Python 2, além da biblioteca padrão do Python 2.7.
+
+- appdirs v1.4.3
+- asn1crypto v0.21.1
+- attrs v16.3.0
+- beautifulsoup4 v4.5.1
+- cffi v1.9.1
+- click v6.7
+- cryptography v1.8.1
+- cssselect v1.0.1
+- enum34 v1.1.6
+- Flask v0.11.1
+- gevent v1.1.2
+- greenlet v0.4.12
+- httplib2 v0.9.2
+- idna v2.5
+- ipaddress v1.0.18
+- itsdangerous v0.24
+- Jinja2 v2.9.5
+- kafka-python v1.3.1
+- lxml v3.6.4
+- MarkupSafe v1.0
+- packaging v16.8
+- parsel v1.1.0
+- pyasn1 v0.2.3
+- pyasn1-modules v0.0.8
+- pycparser v2.17
+- PyDispatcher v2.0.5
+- pyOpenSSL v16.2.0
+- pyparsing v2.2.0
+- python-dateutil v2.5.3
+- queuelib v1.4.2
+- requests v2.11.1
+- Scrapy v1.1.2
+- service-identity v16.0.0
+- simplejson v3.8.2
+- six v1.10.0
+- Twisted v16.4.0
+- virtualenv v15.1.0
+- w3lib v1.17.0
+- Werkzeug v0.12
+- zope.interface v4.3.3
 
 ## Ações do Docker
 {: #openwhisk_ref_docker}
@@ -501,7 +524,7 @@ com cuidado.
 {: #openwhisk_syslimits}
 
 ### Ações
-O {{site.data.keyword.openwhisk_short}} possui alguns limites do sistema, incluindo o quanto de memória uma ação pode usar e quantas chamadas de ação são permitidas por minuto. 
+O {{site.data.keyword.openwhisk_short}} possui alguns limites do sistema, incluindo o quanto de memória uma ação pode usar e quantas chamadas de ação são permitidas por minuto.
 
 A tabela a seguir lista os
 limites padrão para ações.
@@ -511,8 +534,8 @@ limites padrão para ações.
 | tempo limite | um contêiner não tem permissão para executar por mais de N milissegundos | por ação |  milliseconds | 60000 |
 | memória | um contêiner não tem permissão para alocar mais de N MB de memória | por ação | MB | 256 |
 | Registros do | um contêiner não tem permissão para gravar mais de N MB na saída padrão | por ação | MB | 10 |
-| simultâneo | não mais que N ativações são permitidas por namespace em execução ou enfileirado para execução | por namespace | number | 1000 |
-| minuteRate | um usuário não pode chamar mais do que este número de ações por minuto | por usuário | number | 5000 |
+| simultâneo | não mais que N ativações são permitidas por namespace em execução ou enfileiradas para execução | por namespace | number | 1000 |
+| minuteRate | não mais que N ativações podem ser enviadas por namespace por minuto | por usuário | number | 5000 |
 | codeSize | o tamanho máximo do código de ação | não configurável, limite por ação | MB | 48 |
 | parâmetros | o tamanho máximo dos parâmetros que podem ser anexados | não configurável, limite por ação/pacote/acionador | MB | 1 |
 
@@ -584,10 +607,9 @@ Os acionadores estão sujeitos a uma taxa de disparo por minuto, conforme docume
 
 | limite | Descrição | configuráveis | unit | Padrão |
 | ----- | ----------- | ------------ | -----| ------- |
-| minuteRate | um usuário não pode disparar mais do que essa quantia de acionadores por minuto | por usuário | number | 5000 |
+| minuteRate | não mais que N acionadores podem ser disparados por namespace por minuto | por usuário | number | 5000 |
 
 ### Acionadores por minuto (fixo: 5.000)
-{: #openwhisk_syslimits_triggerratelimit}
 * O limite de taxa N é configurado para 5.000 e limita o número de acionadores que podem ser disparados em janelas de um minuto.
 * Um usuário não pode mudar esse limite ao criar o acionador.
 * Uma CLI ou chamada API que exceder esse limite receberá um código de erro correspondente ao código de status de HTTP `429: TOO MANY REQUESTS`.

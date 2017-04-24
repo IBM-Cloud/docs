@@ -46,6 +46,9 @@ OpenWhisk ユーザー・インターフェースのクイック・ツアーに�
 - [サーバーレス・アプリケーションの一般的なユース・ケース](./openwhisk_use_cases.html)
 - [OpenWhisk CLI のセットアップと使用](./openwhisk_cli.html)
 - [iOS アプリからの OpenWhisk の使用](./openwhisk_mobile_sdk.html)
+- [記事、サンプル、およびチュートリアル](https://github.com/openwhisk/openwhisk-external-resources)
+- [Apache OpenWhisk の FAQ](http://openwhisk.org/faq)
+- [料金](https://console.ng.bluemix.net/openwhisk/learn/pricing)
 
 ## プログラミング・モデル
 {: #openwhisk_start_programming}
@@ -118,6 +121,7 @@ function main(params) {
 
 {{site.data.keyword.openwhisk_short}} のイベント・ドリブン機能を使用して、イベントに応えてこのアクションを起動することもできます。[アラーム・サービス例](./openwhisk_packages.html#openwhisk_packages_trigger)に従って、周期的イベントが生成されるたびに `hello` アクションを起動するイベント・ソースを構成します。
 
+[OpenWhisk のチュートリアルおよびサンプルの全リストがここにあります](https://github.com/openwhisk/openwhisk-external-resources#sample-applications)。サンプルのほかに、記事、プレゼンテーション、ポッドキャスト、ビデオ、その他の {{site.data.keyword.openwhisk_short}} 関連リソースへのリンクが、このリポジトリーに含まれます。
 
 ## API リファレンス
 {: #openwhisk_start_api notoc}

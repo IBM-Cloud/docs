@@ -81,9 +81,9 @@ IoT(Internet of Things) 시나리오는 주로 거의 센서 구동입니다. �
 ## 코그너티브
 {: #openwhisk_common_use_cases_cognitive}
 
-코그너티브 기술은 {{site.data.keyword.openwhisk_short}}와 효율적으로 결합하여 강력한 애플리케이션을 작성할 수 있습니다. 예를 들어, IBM Alchemy API 및 Watson Visual Recognition을 {{site.data.keyword.openwhisk_short}}에 사용하여 실제로 보지 않고도 비디오에서 유용한 정보를 자동으로 추출할 수 있습니다. 이는 단순히 이전에 논의한 [데이터 처리](#data-processing) 유스 케이스에 대한 “코그너티브” 확장입니다. {{site.data.keyword.openwhisk_short}}에 대한 다른 좋은 활용법은 코그너티브 서비스와 결합된 Bot 기능을 구현하는 것입니다. 
+코그너티브 기술은 {{site.data.keyword.openwhisk_short}}와 효율적으로 결합하여 강력한 애플리케이션을 작성할 수 있습니다. 예를 들어, IBM Alchemy API 및 Watson Visual Recognition을 {{site.data.keyword.openwhisk_short}}에 사용하여 실제로 보지 않고도 동영상에서 유용한 정보를 자동으로 추출할 수 있습니다. 이는 단순히 이전에 논의한 [데이터 처리](#data-processing) 유스 케이스에 대한 “코그너티브” 확장입니다. {{site.data.keyword.openwhisk_short}}에 대한 다른 좋은 활용법은 코그너티브 서비스와 결합된 Bot 기능을 구현하는 것입니다. 
 
-다음은 바로 그런 샘플 애플리케이션 [Dark vision](https://github.com/IBM-Bluemix/openwhisk-darkvisionapp)입니다. 이 애플리케이션에서 사용자는 Dark Vision 웹 애플리케이션을 사용하여 비디오 또는 이미지를 업로드하며, Cloudant DB에 저장합니다. 비디오를 업로드하면 {{site.data.keyword.openwhisk_short}}가 Cloudant 변경(트리거)을 청취하여 새 비디오를 발견합니다. 그런 다음 {{site.data.keyword.openwhisk_short}}는 비디오 추출기 조치를 트리거합니다. 실행 중에 추출기는 프레임(이미지)을 생성하고 Cloudant에 저장합니다. 그런 다음 프레임은 Watson Visual Recognition을 사용하여 처리되고 결과는 동일한 Cloudant DB에 저장됩니다. 결과는 Dark Vision 웹 애플리케이션 또는 iOS 애플리케이션을 사용하여 볼 수 있습니다. Cloudant 외에 오브젝트 스토리지를 사용할 수 있습니다. 이렇게 하면 비디오와 이미지 메타데이터는 Cloudant에 저장되며 미디어 파일은 오브젝트 저장소에 저장됩니다.
+다음은 바로 그런 샘플 애플리케이션 [Dark vision](https://github.com/IBM-Bluemix/openwhisk-darkvisionapp)입니다. 이 애플리케이션에서 사용자는 Dark Vision 웹 애플리케이션을 사용하여 동영상 또는 이미지를 업로드하며, Cloudant DB에 저장합니다. 동영상을 업로드하면 {{site.data.keyword.openwhisk_short}}가 Cloudant 변경(트리거)을 청취하여 새 동영상을 발견합니다. 그런 다음 {{site.data.keyword.openwhisk_short}}는 동영상 추출기 조치를 트리거합니다. 실행 중에 추출기는 프레임(이미지)을 생성하고 Cloudant에 저장합니다. 그런 다음 프레임은 Watson Visual Recognition을 사용하여 처리되고 결과는 동일한 Cloudant DB에 저장됩니다. 결과는 Dark Vision 웹 애플리케이션 또는 iOS 애플리케이션을 사용하여 볼 수 있습니다. Cloudant 외에 오브젝트 스토리지를 사용할 수 있습니다. 이렇게 하면 동영상과 이미지 메타데이터는 Cloudant에 저장되며 미디어 파일은 오브젝트 저장소에 저장됩니다.
 
 다음은 어조를 분석하고 Slack 채널에 게시하는 {{site.data.keyword.openwhisk_short}}, IBM Mobile Analytics, Watson을 표시하는 [iOS Swift 애플리케이션 예](https://github.com/gconan/BluemixMobileServicesDemoApp)입니다.
 

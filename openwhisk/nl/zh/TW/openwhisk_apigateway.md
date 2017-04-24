@@ -23,7 +23,7 @@ Web 動作可讓您使用 POST 以外的 HTTP 方法來呼叫動作，而不需�
 
 大部分「API 閘道」功能都已合併至「Web 動作」中，「Web 動作」可讓您處理任何 HTTP 要求，以及從「Web 動作」傳回具有完整控制權的 HTTP 回應。
 
-修訂版 OpenWhisk API 閘道整合即將推出。其配置將可代理您的「Web 動作」，提供比率限制、OAuth 記號驗證、API 金鑰等「API 閘道」特性。
+修訂版 OpenWhisk API 閘道整合即將推出。其配置將可代理您的「Web 動作」，提供比率限制、OAuth 記號驗證、API 金鑰等「API 閘道」特性。請參閱視訊 [Create and Control APIs](https://youtu.be/XT9KwWTnnzo)
 
 **附註：**您使用 `wsk api-experimental` 來建立的 API 將會繼續運作，但您應該要開始將 API 移轉至 Web 動作。
 
@@ -69,7 +69,7 @@ curl https://21ef035.api-gw.mybluemix.net/hello/echo?marco=polo
 假設您要公開好友讀書會的一組動作。
 您有一系列的動作，以實作您的讀書會後端：
 
-| 動作 (action) | HTTP 方法 | 說明 |
+| 動作 | HTTP 方法 | 說明 |
 | ----------- | ----------- | ------------ |
 | getBooks    | GET | 取得書籍詳細資料  |
 | postBooks   | POST | 新增書籍 |

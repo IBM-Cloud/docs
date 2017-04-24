@@ -52,6 +52,10 @@ Acesse [Configurar CLI](https://new-console.{DomainName}/openwhisk/cli){: new_wi
 - [Casos de uso comuns para aplicativos Serverless](./openwhisk_use_cases.html)
 - [Configurando e usando a CLI do OpenWhisk](./openwhisk_cli.html)
 - [Usando o OpenWhisk por meio de um app iOS](./openwhisk_mobile_sdk.html)
+- [Artigos, amostras e
+tutoriais](https://github.com/openwhisk/openwhisk-external-resources)
+- [FAQ do Apache OpenWhisk](http://openwhisk.org/faq)
+- [Venda](https://console.ng.bluemix.net/openwhisk/learn/pricing)
 
 ## Gabarito de Programação
 {: #openwhisk_start_programming}
@@ -127,6 +131,11 @@ saídas de comando:
 
 Também é possível usar os recursos acionados por eventos no {{site.data.keyword.openwhisk_short}} para chamar essa ação em resposta a eventos. Siga o [exemplo de serviço de alarme](./openwhisk_packages.html#openwhisk_packages_trigger) para configurar uma origem de eventos para chamar a ação `hello` toda vez que um evento periódico for gerado.
 
+Uma lista completa de
+[Tutoriais
+e Amostras do OpenWhisk pode ser localizada aqui](https://github.com/openwhisk/openwhisk-external-resources#sample-applications). Além das amostras, esse repositório contém links para
+artigos, apresentações, podcasts, vídeos e outros recursos relacionados
+ao {{site.data.keyword.openwhisk_short}}.
 
 ## Referência de API
 {: #openwhisk_start_api notoc}

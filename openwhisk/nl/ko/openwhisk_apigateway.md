@@ -23,7 +23,7 @@ lastupdated: "2017-03-16"
 
 대부분의 API Gateway 기능은 웹 조치에 병합되며, 웹 조치에서는 웹 조치의 전체적인 제어 권한을 사용하여 HTTP 요청을 처리하고 HTTP 응답을 리턴할 수 있습니다.
 
-개정된 OpenWhisk API Gateway 통합이 곧 사용 가능합니다. 이 통합은 비율 한계, OAuth 토큰 유효성 검증, API 키 등과 같은 API Gateway 기능을 제공하는 웹 조치를 프록시하도록 구성됩니다.
+개정된 OpenWhisk API Gateway 통합이 곧 사용 가능합니다. 이 통합은 비율 한계, OAuth 토큰 유효성 검증, API 키 등과 같은 API Gateway 기능을 제공하는 웹 조치를 프록시하도록 구성됩니다. [API 작성 및 제어](https://youtu.be/XT9KwWTnnzo) 동영상을 참조하십시오.
 
 **참고:** `wsk api-experimental`을 사용하여 작성한 API는 계속 작동하지만 API를 웹 조치로 마이그레이션해야 합니다.
 

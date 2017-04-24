@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-04-04"
 
 ---
 
@@ -30,19 +30,21 @@ function main({name}) {
   return {body: `<html><body><h3>${msg}</h3></body></html>`}
 }
 ```
-{: codeblock}
+{: codeblock}  
 
-Sie können nun eine *Webaktion* `hello` im Paket `demo` für den Namensbereich `guest` mithilfe der Annotation `web-export` erstellen:
+Sie können nun eine *Webaktion* `hello` im Paket `demo` für den Namensbereich `guest` mithilfe des CLI-Flags `--web` mit dem Wert `true` oder `yes` erstellen: 
 ```
 wsk package create demo
 ```
 {: pre}
 ```
-wsk action create /guest/demo/hello hello.js -a web-export true
+wsk action create /guest/demo/hello hello.js --web true
 ```
 {: pre}
 
-Die Annotation `web-export` bietet die Möglichkeit, die Aktion als Webaktion über eine neue REST-Schnittstelle verfügbar zu machen. Die URL ist wie folgt strukturiert: `https://openwhisk.ng.bluemix.net/api/v1/web/{QUALIFIZIERTER_AKTIONSNAME}.{EXT}`. Der vollständig qualifizierte Name einer Aktion besteht aus drei Teilen: Namensbereich, Paketname und Aktionsname.
+Durch das Flag `--web` mit dem Wert `true` oder `yes` kann eine Aktion über die REST-Schnittstelle zugänglich gemacht werden, ohne dass der Zugriff
+Berechtigungsnachweise erfordert. Eine Webaktion kann mit einer URL aufgerufen werden, die wie folgt strukturiert ist:
+`https://{APIHOST}/api/v1/web/{QUALIFIED ACTION NAME}.{EXT}`. Der vollständig qualifizierte Name einer Aktion besteht aus drei Teilen: Namensbereich, Paketname und Aktionsname.
 
 *Der vollständig qualifizierte Name der Aktion muss den entsprechenden Paketnamen enthalten, der 'default' lautet, wenn die Aktion nicht in einem benannten Paket enthalten ist.*
 
@@ -63,7 +65,7 @@ function main() {
   }
 }
 ```
-{: codeblock}  
+{: codeblock}    
 
 Ein Cookie könnte wie folgt festgelegt werden:
 ```javascript
@@ -77,7 +79,7 @@ function main() {
     body: '<html><body><h3>hello</h3></body></html>' }
 }
 ```
-{: codeblock}
+{: codeblock}  
 
 Oder es könnte `image/png` zurückgegeben werden:
 ```javascript
@@ -88,11 +90,11 @@ function main() {
              body: png };
 }
 ```
-{: codeblock}
+{: codeblock}  
 
-Or returns `application/json`:
+Oder `application/json`:
 ```javascript
-function main(params) { 
+function main(params) {
     return {
         statusCode: 200,
         headers: { 'Content-Type': 'application/json' },
@@ -100,7 +102,7 @@ function main(params) {
     };
 }
 ```
-{: codeblock}
+{: codeblock}  
 
 Es ist wichtig, die [Antwortgrößenbegrenzung](./openwhisk_reference.html) für Aktionen zu beachten, da eine Antwort, die die vordefinierten Systembegrenzungen überschreitet, fehlschlägt. Große Objekte sollten nicht inline über OpenWhisk gesendet werden, sondern zum Beispiel in einen Objektspeicher verlagert werden.
 
@@ -121,12 +123,12 @@ Der Controller gibt die durch die Aktion angegebenen Header, sofern vorhanden, a
 
 Alle Webaktionen empfangen beim Aufruf zusätzliche HTTP-Anforderungsinformationen als Parameter für das Aktionseingabeargument. Dabei handelt es sich um folgende Informationen:
 
-- `__ow_method` (Typ: Zeichenfolge): Die HTTP-Methode der Anforderung. 
-- `__ow_headers` (Typ: Zuordnung von Zeichenfolge zu Zeichenfolge): Die Anforderungsheader. 
-- `__ow_path` (Typ: Zeichenfolge): Der unabgeglichene Pfad der Anforderung (der Abgleich wird nach Verarbeitung der Aktionserweiterung beendet). 
-- `__ow_user` (Typ: Zeichenfolge): Der Namensbereich, der das für OpenWhisk authentifizierte Subjekt kennzeichnet. 
+- `__ow_method` (Typ: Zeichenfolge): Die HTTP-Methode der Anforderung.
+- `__ow_headers` (Typ: Zuordnung von Zeichenfolge zu Zeichenfolge): Die Anforderungsheader.
+- `__ow_path` (Typ: Zeichenfolge): Der unabgeglichene Pfad der Anforderung (der Abgleich wird nach Verarbeitung der Aktionserweiterung beendet).
+- `__ow_user` (Typ: Zeichenfolge): Der Namensbereich, der das für OpenWhisk authentifizierte Subjekt kennzeichnet.
 - `__ow_body` (Typ: Zeichenfolge): Die Anforderungshauptteilentität als Zeichenfolge in Base64-Codierung, wenn der Inhalt binär ist, oder andernfalls als normale Zeichenfolge.
-- `__ow_query` (Typ: Zeichenfolge): Die Abfrageparameter aus der Anforderung als nicht analysierte Zeichenfolge. 
+- `__ow_query` (Typ: Zeichenfolge): Die Abfrageparameter aus der Anforderung als nicht analysierte Zeichenfolge.
 
 Eine Anforderung darf keinen der oben aufgeführten, mit `__ow_` benannten Parameter überschreiben. Falls dies doch geschieht, schlägt die Anforderung mit dem Status 400 "Bad Request" fehl.
 
@@ -136,12 +138,12 @@ Die Eigenschaft `__ow_user` ist nur vorhanden, wenn die Webaktion eine [Annotati
 
 Webaktionen bieten einige zusätzlichen Features wie zum Beispiel:
 
-- `Inhaltserweiterungen:` Die Anforderung muss den gewünschten Inhaltstyp durch einen der folgenden Werte angeben: `.json`, `.html`, `.http`, `.svg` oder `.text`. Dies geschieht dadurch, dass dem Aktionsnamen im URI eine Erweiterung hinzugefügt wird, sodass eine Aktion `/guest/demo/hello` zum Beispiel durch `/guest/demo/hello.http` angegeben wird, um eine HTTP-Antwort zu empfangen. Wenn keine Erweiterung erkannt wird, wird der Einfachheit halber die Erweiterung `.http` angenommen. 
+- `Inhaltserweiterungen:` Die Anforderung muss den gewünschten Inhaltstyp durch einen der folgenden Werte angeben: `.json`, `.html`, `.http`, `.svg` oder `.text`. Dies geschieht dadurch, dass dem Aktionsnamen im URI eine Erweiterung hinzugefügt wird, sodass eine Aktion `/guest/demo/hello` zum Beispiel durch `/guest/demo/hello.http` angegeben wird, um eine HTTP-Antwort zu empfangen. Wenn keine Erweiterung erkannt wird, wird der Einfachheit halber die Erweiterung `.http` angenommen.
 - `Felder aus dem Ergebnis projizieren:` Der Pfad, der auf den Aktionsnamen folgt, wird dazu verwendet, eine oder mehrere Ebenen der Antwort herauszuprojizieren. Beispiel: `/guest/demo/hello.html/body`. Dadurch kann eine Aktion, die ein Wörterverzeichnis `{body: "..." }` zurückgibt, die Eigenschaft `body` projizieren und direkt den entsprechenden Zeichenfolgewert zurückgeben. Der projizierte Pfad folgt einem absoluten Pfadmodell (wie in XPath).
 - `Abfrage- und Hauptteilparameter als Eingabe:` Die Aktion empfängt Abfrageparameter und Parameter im Anforderungshauptteil. Die Rangordnung für das Zusammenfügen von Parametern sieht wie folgt aus: Paketparameter, Aktionsparameter, Abfrageparameter und Hauptteilparameter, wobei jeder dieser Parameter vorherige Werte überschreibt, wenn diese sich überschneiden. Beispiel: Der Parameter `/guest/demo/hello.http?name=Jane` übergibt das Argument `{name: "Jane"}` an die Aktion.
 - `Formulardaten:` Neben den Standarddaten vom Typ `application/json` können Webaktionen als Eingabe URL-codierte Daten vom Typ `application/x-www-form-urlencoded data` empfangen.
 - `Aktivierung durch mehrere HTTP-Verben:` Eine Webaktion kann durch eine der folgenden HTTP-Methoden aufgerufen werden: `GET`, `POST`, `PUT` `PATCH` und `DELETE` sowie `HEAD` und `OPTIONS`.
-- `Verarbeitung von Nicht-JSON-Hauptteil und unaufbereiteter HTTP-Entität`: Eine Webaktion kann einen HTTP-Anforderungshauptteil akzeptieren, der kein JSON-Objekt ist, und auswählen, dass derartige Werte immer als nicht transparente Werte zu empfangen sind (einfacher Text, falls nicht binär, oder andernfalls Zeichenfolge in Base64-Codierung). 
+- `Verarbeitung von Nicht-JSON-Hauptteil und unaufbereiteter HTTP-Entität`: Eine Webaktion kann einen HTTP-Anforderungshauptteil akzeptieren, der kein JSON-Objekt ist, und auswählen, dass derartige Werte immer als nicht transparente Werte zu empfangen sind (einfacher Text, falls nicht binär, oder andernfalls Zeichenfolge in Base64-Codierung).
 
 Im nachfolgenden Beispiel wird skizziert, wie Sie diese Features in einer Webaktion nutzen könnten. Gegeben sei eine Aktion `/guest/demo/hello` mit dem folgenden Hauptteil:
 ```javascript
@@ -151,11 +153,11 @@ function main(params) {
 ```
 
 Wenn diese Aktion als Webaktion aufgerufen wird, können Sie die Antwort der Webaktion ändern, indem Sie unterschiedliche Pfade aus dem Ergebnis projizieren.
-Im Folgenden wird beispielsweise das gesamte Objekt zurückgegeben und es kann festgestellt werden, welche Argumente die Aktion empfängt: 
+Im Folgenden wird beispielsweise das gesamte Objekt zurückgegeben und es kann festgestellt werden, welche Argumente die Aktion empfängt:
 
 ```
-curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json
-```
+ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json
+ ```
 {: pre}
 ```json
 {
@@ -172,10 +174,10 @@ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json
 }
 ```
 
-Mit einem Abfrageparameter: 
+Mit einem Abfrageparameter:
 ```
-curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json?name=Jane
-```
+ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json?name=Jane
+ ```
 {: pre}
 ```json
 {
@@ -193,10 +195,10 @@ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json?name=Jane
 }
 ```
 
-Oder Formulardaten: 
+Oder Formulardaten:
 ```
-curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json -d "name":"Jane"
-```
+ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json -d "name":"Jane"
+ ```
 {: pre}
 ```json
 {
@@ -218,7 +220,7 @@ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json -d "name"
 
 Oder einem JSON-Objekt:
 ```
-curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json -H 'Content-Type: application/json' -d '{"name":"Jane"}'
+ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json -H 'Content-Type: application/json' -d '{"name":"Jane"}'
 ```
 {: pre}
 ```json
@@ -239,7 +241,7 @@ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json -H 'Conte
 }
 ```
 
-Ausschließlich zur Projektion des Namens (als Text): 
+Ausschließlich zur Projektion des Namens (als Text):
 ```
 curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.text/response/name?name=Jane
 ```
@@ -248,9 +250,9 @@ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.text/response/
 Jane
 ```
 
-Aus den obigen Beispielen geht hervor, dass Abfrageparameter, Formulardaten und JSON-Objekthauptteilentitäten der Einfachheit halber als Wörterverzeichnisse behandelt werden und ihre Werte direkt als Aktionseingabeeigenschaften zugänglich sind. Dies gilt nicht für Webaktionen, die stattdessen eine direktere Verarbeitung von HTTP-Anforderungsentitäten wählen, oder wenn die Webaktion eine Entität empfängt, die kein JSON-Objekt ist. 
+Aus den obigen Beispielen geht hervor, dass Abfrageparameter, Formulardaten und JSON-Objekthauptteilentitäten der Einfachheit halber als Wörterverzeichnisse behandelt werden und ihre Werte direkt als Aktionseingabeeigenschaften zugänglich sind. Dies gilt nicht für Webaktionen, die stattdessen eine direktere Verarbeitung von HTTP-Anforderungsentitäten wählen, oder wenn die Webaktion eine Entität empfängt, die kein JSON-Objekt ist.
 
-Das folgende Beispiel zeigt die Verwendung des Inhaltstyps 'text' im Kontext des obigen Beispiels: 
+Das folgende Beispiel zeigt die Verwendung des Inhaltstyps 'text' im Kontext des obigen Beispiels:
 ```
 curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json -H 'Content-Type: text/plain' -d "Jane"
 ```
@@ -283,34 +285,35 @@ Für den Aufruf einer Webaktion ist generell eine Inhaltserweiterung erforderlic
 ## Geschützte Parameter
 {: #openwhisk_webactions_protected}
 
-Aktionsparameter können auch geschützt und als unveränderlich behandelt werden. Um Parameter endgültig festzulegen und eine Aktion über das Web zugänglich zu machen, müssen zwei [Annotationen](openwhisk_annotations.html) an die Aktion angehängt werden: `final` und `web-export`. Beide Annotationen müssen mit dem Wert `true` angegeben werden, damit sie wirksam sind. Bei Verwendung der vorherigen Aktionsbereitstellung werden die Annotationen wie folgt hinzugefügt:
+Für den Aufruf einer Webaktion ist generell eine Inhaltserweiterung erforderlich; ist keine Erweiterung vorhanden, wird standardmäßig `.http` angenommen. Die Erweiterungen `.json` und `.http` erfordern keinen Projektionspfad. Für die Erweiterungen `.html`, `.svg` und `.text` ist dies der Fall, jedoch wird aus Benutzerkomfortgründen standardmäßig angenommen, dass der Pfad dem Erweiterungsnamen entspricht. Um also eine Webaktion aufzurufen und eine `.html`-Antwort zu empfangen, muss die Aktion mit einem JSON-Objekt antworten, das eine Eigenschaft auf höchster Ebene mit dem Namen `html` enthält (oder der Antworttyp muss im explizit angegebenen Pfad enthalten sein). Dies heißt mit anderen Worten, dass die Angabe `/guest/demo/hello.html` zum Beispiel zur Angabe `/guest/demo/hello.html/html`, in der die Eigenschaft `html` explizit projiziert wird, äquivalent ist. Der vollständig qualifizierte Name der Aktion muss den entsprechenden Paketnamen enthalten, der `default` lautet, wenn die Aktion nicht in einem benannten Paket enthalten ist.
+
+
+## Geschützte Parameter
+
+Aktionsparameter werden geschützt und als unveränderlich behandelt. Parameter werden automatisch als endgültig festgelegt, wenn Webaktionen aktiviert werden. 
 
 ```
-wsk action create /guest/demo/hello hello.js \
+ wsk action create /guest/demo/hello hello.js \
       --parameter name Jane \
-      --annotation final true \
-      --annotation web-export true
+      --web true
 ```
-{: pre}
 
 Das Ergebnis dieser Änderungen besteht darin, dass das Element `name` an `Jane` gebunden wird und wegen der Annotation 'final' nicht durch Abfrage- oder Hauptteilparameter überschrieben werden kann. Dies schützt die Aktion gegen Abfrage- oder Hauptteilparameter, die versehentlich oder absichtlich versuchen, diesen Wert zu ändern. 
 
 ## Webaktionen inaktivieren
-{: #openwhisk_webactions_disable}
 
-Zum Inaktivieren einer Webaktion, sodass sie nicht mehr über die neue API (`https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/web/`) aufgerufen wird, genügt es, die Annotation zu entfernen oder auf `false` zu setzen.
+Zum Inaktivieren einer Webaktion, sodass sie nicht mehr über die Web-API (`https://openwhisk.ng.bluemix.net/api/v1/web/`) aufgerufen werden kann, übergeben Sie den Wert `false` oder `no` an das Flag `--web`, wenn Sie eine Aktion über die Befehlszeilenschnittstelle aktualisieren. 
 
 ```
-wsk action update /guest/demo/hello hello.js \
-      --annotation web-export false
+ wsk action update /guest/demo/hello hello.js --web false
 ```
+{: pre}
 
 ## Unaufbereitete HTTP-Anforderungen verarbeiten
-{: #raw-http-handling}
 
-Eine Webaktion kann vorgeben, dass ein ankommender HTTP-Hauptteil direkt interpretiert und verarbeitet wird, ohne Weiterleitung eines JSON-Objekts an Eigenschaften der ersten Klasse, die für die Aktionseingabe verfügbar sind (z. B. `args.name` statt Parsing von `args.__ow_query`). Dies erfolgt über eine [Annotation](openwhisk_annotations.html) des Typs `raw-http`. Beim obigen Beispiel wird nun eine 'unaufbereitete' HTTP-Webaktion verwendet, die `name` sowohl als Abfrageparameter als auch als JSON-Wert im HTTP-Anforderungshauptteil empfängt: 
+Eine Webaktion kann vorgeben, dass ein ankommender HTTP-Hauptteil direkt interpretiert und verarbeitet wird, ohne Weiterleitung eines JSON-Objekts an Eigenschaften der ersten Klasse, die für die Aktionseingabe verfügbar sind (z. B. `args.name` statt Parsing von `args.__ow_query`). Dies erfolgt über eine [Annotation](annotations.md) `raw-http`. Beim obigen Beispiel wird nun eine 'unaufbereitete' HTTP-Webaktion verwendet, die `name` sowohl als Abfrageparameter als auch als JSON-Wert im HTTP-Anforderungshauptteil empfängt:
 ```
-curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json?name=Jane -X POST -H "Content-Type: application/json" -d '{"name":"Jane"}'
+ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json?name=Jane -X POST -H "Content-Type: application/json" -d '{"name":"Jane"}' 
 ```
 {: pre}
 ```json
@@ -332,36 +335,95 @@ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json?name=Jane
 }
 ```
 
-In diesem Fall ist zu beachten, dass der JSON-Inhalt mit Base64 codiert ist, weil er als Binärwert behandelt wird. Die Aktion muss eine Base64-Decodierung und JSON-Analyse für diesen Wert ausführen, um das JSON-Objekt wiederherzustellen. OpenWhisk verwendet das [Spray](https://github.com/spray/spray)-Framework, um [festzustellen](https://github.com/spray/spray/blob/master/spray-http/src/main/scala/spray/http/MediaType.scala#L282), welche Inhaltstypen binär und welche Typen einfacher Text sind. 
+In diesem Fall ist zu beachten, dass der JSON-Inhalt mit Base64 codiert ist, weil er als Binärwert behandelt wird. Die Aktion muss eine Base64-Decodierung und JSON-Analyse für diesen Wert ausführen, um das JSON-Objekt wiederherzustellen. OpenWhisk verwendet das [Spray](https://github.com/spray/spray)-Framework, um [festzustellen](https://github.com/spray/spray/blob/master/spray-http/src/main/scala/spray/http/MediaType.scala#L282), welche Inhaltstypen binär und welche Typen einfacher Text sind.
 
 
 ### Verarbeitung von unaufbereiteten HTTP-Anforderungen aktivieren
 
-Webaktionen für unaufbereitete HTTP-Anforderungen werden über die [Annotation](openwhisk_annotations.html) `raw-http` mit dem Wert `true` aktiviert.
+Webaktionen für unaufbereitete HTTP-Anforderungen werden über das Flag `--web` mit dem Wert `raw` aktiviert. 
 
 ```
-wsk action create /guest/demo/hello hello.js \
-      --annotation web-export true
-      --annotation raw-http true
+ wsk action create /guest/demo/hello hello.js --web raw
 ```
-{: pre}
-
-**Hinweis:** Da `raw-http` `web-export` impliziert, ist eine Verbesserung der CLI geplant, damit diese Annotationen künftig einfacher hinzugefügt (und entfernt) werden können. 
-
 
 ### Verarbeitung von unaufbereiteten HTTP-Anforderungen inaktivieren
 
-Die Verarbeitung von unaufbereiteten HTTP-Anforderungen wird durch das Festlegen des Wertes `false` für die [Annotation](openwhisk_annotations.html) `raw-http` inaktiviert. 
+Die Verarbeitung von unaufbereiteten HTTP-Anforderungen kann inaktiviert werden, indem der Wert `false` oder `no` an das Flag `--web` übergeben wird. 
 
 ```
-wsk update create /guest/demo/hello hello.js \
-      --annotation web-export true
-      --annotation raw-http false
+ wsk update create /guest/demo/hello hello.js --web false
+```
+
+### Binären Hauptteilinhalt aus der Base64-Codierung decodieren
+
+Wenn die Verarbeitung von unaufbereiteten HTTP-Anforderungen verwendet wird, wird Hauptteilinhalt von `__ow_body` in Base64-Codierung codiert, wenn die Inhaltstyp der Anforderung binär ist.
+Die nachfolgenden Beispiele für Funktionen demonstrieren, wie der Hauptteilteilinhalt in Node, Python und Swift decodiert werden kann. Speichern Sie einfach die unten gezeigte
+Methode in einer Datei, erstellen Sie eine Webaktion mit Verarbeitung von unaufbereiteten HTTP-Anforderungen unter Verwendung des gespeicherten Artefakts und rufen Sie die Webaktion auf. 
+
+#### Node
+
+```javascript
+  function main(args) {
+    decoded = new Buffer(args.__ow_body, 'base64').toString('utf-8')
+    return {body: decoded}
+}
+```
+{: codeblock}
+
+#### Python
+
+```python
+def main(args):
+    try:
+        decoded = args['__ow_body'].decode('base64').strip()
+        return {"body": decoded}
+    except:
+        return {"body": "Could not decode body from Base64."}
+```
+{: codeblock}
+
+#### Swift
+
+```swift
+extension String {
+    func base64Decode() -> String? {
+        guard let data = Data(base64Encoded: self) else {
+            return nil
+        }
+
+        return String(data: data, encoding: .utf8)
+    }
+}
+
+func main(args: [String:Any]) -> [String:Any] {
+    if let body = args["__ow_body"] as? String {
+        if let decoded = body.base64Decode() {
+            return [ "body" : decoded ]
+        }
+    }
+
+    return ["body": "Could not decode body from Base64."]
+}
+```
+{: codeblock}
+
+Beispiel: Speichern Sie die Node-Funktion in einer Datei mit dem Namen `decode.js` und führen Sie die folgenden Befehle aus: 
+```
+ wsk action create decode decode.js --web raw
 ```
 {: pre}
-
-**Hinweis:** Alle Annotationen für eine einzelne Aktion müssen gleichzeitig festgelegt werden, entweder bei der Erstellung oder bei der Aktualisierung der Aktion. Grund hierfür ist eine aktuelle Einschränkung für die API und die CLI. Wird dies nicht berücksichtigt, führt dies dazu, dass alle zuvor angehängten Annotationen entfernt werden. 
-
+```
+ok: created action decode
+```
+```
+curl -k -H "content-type: application" -X POST -d "Decoded body" https:// openwhisk.ng.bluemix.net/api/v1/web/guest/default/decodeNode.json
+```
+{: pre}
+```json
+{
+  "body": "Decoded body"
+}
+```
 
 ## Fehlerbehandlung
 {: #openwhisk_webactions_errors}

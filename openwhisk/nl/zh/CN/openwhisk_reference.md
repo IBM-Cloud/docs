@@ -116,7 +116,7 @@ lastupdated: "2017-01-04"
 - *activationId*：激活标识。
 - *start* 和 *end*：记录激活开始时间和结束时间的时间戳记。值为 [UNIX 时间格式](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_15)。
 - *namespace* 和 `name`：实体的名称空间和名称。
-- *logs*：字符串数组，其中包含在操作激活期间由操作生成的日志。每个数组元素对应于操作向 `stdout` 或 `stderr` 生成的一行输出，并且包含日志输出的时间和流。结构如下：`TIMESTAMP STREAM: LOG_OUTPUT`。
+- *logs*：一组字符串，其中包含在操作激活期间由操作生成的日志。每组元素对应于操作向 `stdout` 或 `stderr` 生成的一行输出，并且包含日志输出的时间和流。结构如下：`TIMESTAMP STREAM: LOG_OUTPUT`。
 - *response*：用于定义 `success`、`status` 和 `result` 键的字典：
   - *status*：激活结果，可能为以下某个值：“success”、“application error”、“action developer error”和“whisk internal error”。
   - *success*：当且仅当 status 为“`success`”时，此项为 `true`
@@ -223,9 +223,9 @@ function main(args) {
 
 请注意，不管激活是同步还是异步的，操作的调用都可以是阻塞或非阻塞调用。
 
-### 不推荐使用 JavaScript 全局 whisk 对象
+### JavaScript 全局 whisk 对象已除去
 
-目前，不推荐使用全局对象 `whisk`；请迁移 nodejs 操作以使用替代方法。对于函数 `whisk.invoke()` 和 `whisk.trigger()`，可以使用客户机库 [openwhisk](https://www.npmjs.com/package/openwhisk)。对于 `whisk.getAuthKey()`，可以从环境变量 `__OW_API_KEY` 中获取 API 密钥值。对于 `whisk.error()`，可以返回拒绝的 Promise（即 Promise.reject）。
+全局对象 `whisk` 已除去；请迁移 nodejs 操作以使用替代方法。对于函数 `whisk.invoke()` 和 `whisk.trigger()`，请使用已经安装的客户机库 [openwhisk](https://www.npmjs.com/package/openwhisk)。对于 `whisk.getAuthKey()`，可以从环境变量 `__OW_API_KEY` 中获取 API 密钥值。对于 `whisk.error()`，可以返回拒绝的 Promise（即 Promise.reject）。
 
 ### JavaScript 运行时环境
 {: #openwhisk_ref_javascript_environments}
@@ -257,7 +257,7 @@ JavaScript 操作缺省情况下在 Node.js V6.9.1 环境中执行。如果在�
 - node-uuid v1.4.7
 - nodemailer v2.6.4
 - oauth2-server v2.4.1
-- openwhisk v3.0.0
+- openwhisk v3.3.2
 - pkgcloud v1.4.0
 - process v0.11.9
 - pug v2.0.0-beta6
@@ -285,86 +285,104 @@ JavaScript 操作缺省情况下在 Node.js V6.9.1 环境中执行。如果在�
 - xmlhttprequest v1.8.0
 - yauzl v2.7.0
 
-如果在创建/更新操作时使用“nodejs”值明确指定 `--kind` 标记，那么 Node.js V0.12.17 环境将用于操作。
-以下包可在 Node.js 0.12.17 环境中使用：
 
-**注**：不推荐使用 Node.js V0.12.x，请迁移所有 Node.js 操作以使用 Node.js V6.x。
+## Python 运行时环境
+{: #openwhisk_ref_python_environments}
 
-- apn v1.7.4
-- async v1.5.2
-- btoa v1.1.2
-- cheerio v0.20.0
-- cloudant v1.4.1
-- commander v2.7.0
-- consul v0.18.1
-- cookie-parser v1.3.4
-- cradle v0.6.7
-- errorhandler v1.3.5
-- gm v1.20.0
-- jade v1.9.2
-- log4js v0.6.38
-- merge v1.2.0
-- moment v2.8.1
-- mustache v2.1.3
-- nano v5.10.0
-- node-uuid v1.4.2
-- oauth2-server v2.4.0
-- openwhisk v3.0.0
-- process v0.11.0
-- request v2.79.0
-- rimraf v2.5.1
-- semver v4.3.6
-- serve-favicon v2.2.0
-- socket.io v1.3.5
-- socket.io-client v1.3.5
-- superagent v1.3.0
-- swagger-tools v0.8.7
-- tmp v0.0.28
-- watson-developer-cloud v1.4.1
-- when v3.7.3
-- ws v1.1.0
-- xml2js v0.4.15
-- xmlhttprequest v1.7.0
-- yauzl v2.3.1
+OpenWhisk 支持使用两种不同的运行时版本来运行 Python 操作。
 
-## Python 操作
+### Python 3 操作
 
-缺省情况下，Python 操作使用 Python 2.7.12 执行。除了标准 Python 库外，以下包也可供 Python 操作使用。
+Python 3 操作是使用 Python 3.6.1 执行的。要使用此运行时，请在创建或更新操作时，指定 `wsk` CLI 参数 `--kind python:3`。
+除了 Python 3.6 标准库外，以下包也可供 Python 操作使用。
 
-- attrs v16.1.0
+- aiohttp v1.3.3
+- appdirs v1.4.3
+- asn1crypto v0.21.1
+- async-timeout v1.2.0
+- attrs v16.3.0
 - beautifulsoup4 v4.5.1
-- cffi v1.7.0
-- click v6.6
-- cryptography v1.5
-- cssselect v0.9.2
-- enum34 v1.1.6
-- flask v0.11.1
-- gevent v1.1.2
-- greenlet v0.4.10
+- cffi v1.9.1
+- chardet v2.3.0
+- click v6.7
+- cryptography v1.8.1
+- cssselect v1.0.1
+- Flask v0.12
+- gevent v1.2.1
+- greenlet v0.4.12
 - httplib2 v0.9.2
-- idna v2.1
-- ipaddress v1.0.16
+- idna v2.5
 - itsdangerous v0.24
-- jinja2 v2.8
+- Jinja2 v2.9.5
+- kafka-python v1.3.1
 - lxml v3.6.4
-- markupsafe v0.23
-- parsel v1.0.3
-- pyasn1 v0.1.9
+- MarkupSafe v1.0
+- multidict v2.1.4
+- packaging v16.8
+- parsel v1.1.0
+- pyasn1 v0.2.3
 - pyasn1-modules v0.0.8
-- pycparser v2.14
-- pydispatcher v2.0.5
-- pyopenssl v16.1.0
+- pycparser v2.17
+- PyDispatcher v2.0.5
+- pyOpenSSL v16.2.0
+- pyparsing v2.2.0
 - python-dateutil v2.5.3
 - queuelib v1.4.2
 - requests v2.11.1
-- scrapy v1.1.2
+- Scrapy v1.1.2
 - service-identity v16.0.0
 - simplejson v3.8.2
 - six v1.10.0
-- twisted v16.4.0
-- w3lib v1.15.0
-- werkzeug v0.11.10
-- zope.interface v4.3.1
+- Twisted v16.4.0
+- w3lib v1.17.0
+- Werkzeug v0.12
+- yarl v0.9.8
+- zope.interface v4.3.3
+
+### Python 2 操作
+
+Python 2 操作是使用 Python 2.7.12 执行的。除非在创建或更新操作时指定 `--kind` 标志，否则这是 Python 操作的缺省运行时。要显式选择此运行时，请使用 `--kind python:2`。除了 Python 2.7 标准库外，以下包也可供 Python 2 操作使用。
+
+- appdirs v1.4.3
+- asn1crypto v0.21.1
+- attrs v16.3.0
+- beautifulsoup4 v4.5.1
+- cffi v1.9.1
+- click v6.7
+- cryptography v1.8.1
+- cssselect v1.0.1
+- enum34 v1.1.6
+- Flask v0.11.1
+- gevent v1.1.2
+- greenlet v0.4.12
+- httplib2 v0.9.2
+- idna v2.5
+- ipaddress v1.0.18
+- itsdangerous v0.24
+- Jinja2 v2.9.5
+- kafka-python v1.3.1
+- lxml v3.6.4
+- MarkupSafe v1.0
+- packaging v16.8
+- parsel v1.1.0
+- pyasn1 v0.2.3
+- pyasn1-modules v0.0.8
+- pycparser v2.17
+- PyDispatcher v2.0.5
+- pyOpenSSL v16.2.0
+- pyparsing v2.2.0
+- python-dateutil v2.5.3
+- queuelib v1.4.2
+- requests v2.11.1
+- Scrapy v1.1.2
+- service-identity v16.0.0
+- simplejson v3.8.2
+- six v1.10.0
+- Twisted v16.4.0
+- virtualenv v15.1.0
+- w3lib v1.17.0
+- Werkzeug v0.12
+- zope.interface v4.3.3
 
 ## Docker 操作
 {: #openwhisk_ref_docker}
@@ -445,7 +463,7 @@ OpenWhisk API 支持 Web 客户端的请求-响应调用。OpenWhisk 使用 Cros
 {: #openwhisk_syslimits}
 
 ### 操作
-{{site.data.keyword.openwhisk_short}} 存在一些系统限制，包括一个操作可以使用的内存量和每分钟允许的操作调用数。 
+{{site.data.keyword.openwhisk_short}} 存在一些系统限制，包括一个操作可以使用的内存量和每分钟允许的操作调用数。
 
 下表列出了操作的缺省限制。
 
@@ -454,8 +472,8 @@ OpenWhisk API 支持 Web 客户端的请求-响应调用。OpenWhisk 使用 Cros
 | timeout | 不允许容器运行时间超过 N 毫秒 | 每个操作 |  毫秒 | 60000 |
 | memory | 不允许容器分配的内存超过 N MB | 每个操作 | MB | 256 |
 | logs | 不允许容器向标准输出写入超过 N MB | 每个操作 | MB | 10 |
-| concurrent | 每个名称空间中允许的正在执行或排队等待执行的激活数不超过 N | 每个名称空间 | 个 | 1000 |
-| minuteRate | 用户每分钟调用的操作数不能超过此值 | 每个用户 | 个 | 5000 |
+| concurrent | 每个名称空间中提交的正在执行或排队等待执行的激活数不得超过 N | 每个名称空间 | 个 | 1000 |
+| minuteRate | 每个名称空间中每分钟提交的激活数不得超过 N | 每个用户 | 个 | 5000 |
 | codeSize | 操作码的最大大小 | 无法配置，每个操作的限制 | MB | 48 |
 | parameters | 可以附加的参数的最大大小 | 无法配置，每个操作/包/触发器的限制 | MB | 1 |
 
@@ -522,10 +540,9 @@ OpenWhisk API 支持 Web 客户端的请求-响应调用。OpenWhisk 使用 Cros
 
 | 限制 | 描述 | 可配置 | 单位 | 缺省值 |
 | ----- | ----------- | ------------ | -----| ------- |
-| minuteRate | 用户每分钟触发的触发器数不能超过此值 | 每个用户 | 个 | 5000 |
+| minuteRate | 每个名称空间中每分钟触发的触发器数不得超过 N | 每个用户 | 个 | 5000 |
 
 ### 每分钟的触发数（固定值：5000）
-{: #openwhisk_syslimits_triggerratelimit}
 * 速率限制 N 设置为 5000，用于限制 1 分钟时段中可能触发的触发器数。
 * 用户在创建触发器时不能更改此限制。
 * 超过此限制的 CLI 或 API 调用将收到与 HTTP 状态码“`429：请求过多`”对应的错误代码。
