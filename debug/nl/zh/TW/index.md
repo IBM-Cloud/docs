@@ -28,7 +28,7 @@ lastupdated: "2017-01-11"
 
 ## 針對編譯打包錯誤進行除錯
 {: #debugging-staging-errors}
-您在 {{site.data.keyword.Bluemix_notm}} 上編譯打包應用程式時可能會遇到問題。如果無法編譯打包應用程式，您可以搜尋及檢閱編譯打包 (STG) 日誌來判斷在應用程式部署期間發生什麼問題，並從問題中回復。如需如何檢視 Bluemix 應用程式日誌的相關資訊，請參閱[檢視日誌](/docs/monitor_log/monitoringandlogging.html#viewing_logs)。  
+您在 {{site.data.keyword.Bluemix_notm}} 上編譯打包應用程式時可能會遇到問題。如果無法編譯打包應用程式，您可以搜尋及檢閱編譯打包 (STG) 日誌來判斷在應用程式部署期間發生什麼問題，並從問題回復。如需如何檢視 Bluemix 應用程式日誌的相關資訊，請參閱[檢視日誌](/docs/monitor_log/monitoringandlogging.html#viewing_logs)。  
 
 若要瞭解應用程式在 {{site.data.keyword.Bluemix_notm}} 上失敗的原因，您需要知道如何將應用程式部署至 {{site.data.keyword.Bluemix_notm}}，並在其上執行。如需詳細資訊，請參閱[應用程式部署](/docs/manageapps/depapps.html#appdeploy)。
 
@@ -108,7 +108,7 @@ Analytics 服務來收集日誌詳細資料。此外，Monitoring and Analytics 
 
 ## 針對運行環境錯誤進行除錯
 {: #debugging-runtime-errors}
-如果您的應用程式在執行時遇到問題，應用程式日誌可以協助您精確找出發生此錯誤的原因，並從該問題中回復。
+如果您的應用程式在執行時遇到問題，應用程式日誌可以協助您精確找出發生此錯誤的原因，並從該問題回復。
 
 具體而言，您可以啟用記載至 stdout 及 stderr。如需如何針對使用 {{site.data.keyword.Bluemix_notm}} 內建建置套件部署的應用程式，配置其日誌檔的相關資訊，請參閱下列清單：
 
