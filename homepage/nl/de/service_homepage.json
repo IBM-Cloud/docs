@@ -36,8 +36,13 @@
     "category_id": "devops"
   }, {
     "type": "extra",
-    "title": "Mobilprojekte erstellen",
-    "href": "mobile/index.html",
+    "title": "Native Cloud-Projekte erstellen",
+    "href": "cloudnative/index.html",
+    "category_id": "mobile"
+  }, {
+    "type": "extra",
+    "title": "Mit Mobile Client Access arbeiten",
+    "href": "services/mobileaccess/index.html",
     "category_id": "mobile"
   }]
 }

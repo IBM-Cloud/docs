@@ -36,8 +36,13 @@
     "category_id": "devops"
   }, {
     "type": "extra",
-    "title": "建置行動專案",
-    "href": "mobile/index.html",
+    "title": "Building 雲端原生專案",
+    "href": "cloudnative/index.html",
+    "category_id": "mobile"
+  }, {
+    "type": "extra",
+    "title": "使用 Mobile Client Access",
+    "href": "services/mobileaccess/index.html",
     "category_id": "mobile"
   }]
 }

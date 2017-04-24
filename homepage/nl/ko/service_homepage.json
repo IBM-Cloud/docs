@@ -36,8 +36,13 @@
     "category_id": "devops"
   }, {
     "type": "extra",
-    "title": "모바일 프로젝트 빌드",
-    "href": "mobile/index.html",
+    "title": "클라우드 네이티브 프로젝트 빌드",
+    "href": "cloudnative/index.html",
+    "category_id": "mobile"
+  }, {
+    "type": "extra",
+    "title": "Mobile Client Access 작업",
+    "href": "services/mobileaccess/index.html",
     "category_id": "mobile"
   }]
 }

@@ -36,8 +36,13 @@
     "category_id": "devops"
   }, {
     "type": "extra",
-    "title": "Construindo projetos móveis",
-    "href": "mobile/index.html",
+    "title": "Construindo projetos nativos de nuvem",
+    "href": "cloudnative/index.html",
+    "category_id": "mobile"
+  }, {
+    "type": "extra",
+    "title": "Trabalhando com o Mobile Client Access",
+    "href": "services/mobileaccess/index.html",
     "category_id": "mobile"
   }]
 }
