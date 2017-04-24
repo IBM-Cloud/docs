@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2017-3-16"
 
 ---
 
@@ -17,10 +18,8 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Extension du {{site.data.keyword.deliverypipeline}} 
+# Extension du {{site.data.keyword.deliverypipeline}}
 {: #deliverypipeline_extending}
-Dernière mise à jour : 16 novembre 2016
-{: .last-updated}
 
 Vous pouvez étendre les capacités du {{site.data.keyword.deliverypipeline}} en configurant vos travaux afin d'utiliser les services pris en charge. Par exemple, les travaux de test peuvent exécuter des analyses de code statique et les travaux de génération peuvent globaliser des chaînes.
 {:shortdesc}
@@ -47,7 +46,7 @@ Un pipeline qui utilise le service Static Analyzer inclut généralement les ét
 ### Création d'une analyse de code statique
 
 Avant de commencer, [consultez les
-conditions d'utilisation du service](http://www-03.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01).
+conditions d'utilisation du service ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01){: new_window}.
 
 <!-- Use ordered list markup for the step section. Include code examples as needed. -->
 
@@ -76,7 +75,7 @@ conditions d'utilisation du service](http://www-03.ibm.com/software/sla/sladb.ns
     * Si vous souhaitez que le pipeline vérifie dans votre espace Bluemix l'existence du service et d'une application qui établit une liaison entre le service et le conteneur, sélectionnez la case à cocher. Si le service ou l'application liée n'existe pas, il est créé par le pipeline pour ajouter le forfait gratuit du service à votre espace. L'application liée est créée avec le nom `pipeline_bridge_app`. Ensuite, le pipeline utilise les données d'identification de pipeline_bridge_app pour accéder aux services liés.
 
     * Si vous avez déjà configuré le service et lié l'application dans votre espace Bluemix, ou si vous désirez
-[configurer manuellement ces exigences](https://www.ng.bluemix.net/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline),
+[configurer manuellement ces exigences](/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline){: new_window},
 ne cochez pas cette case.
 
   f. Dans la zone **Minutes to wait for analysis to complete**, tapez une valeur comprise entre 0 et 59 minutes. La valeur par défaut est 5 minutes. Une URL vers le tableau de bord Static Analyzer figure dans les journaux de console à la fin du travail.
@@ -112,7 +111,7 @@ Exemples de sortie dans la console :
 **Examen en attente**
 ![Exemple d'examen en attente](images/analyzer_pending.png)
 
-Pour plus d'informations sur l'utilisation du service Static Analyzer, [voir les documents sur le service Static Analyzer](https://console.ng.bluemix.net/docs/services/ApplicationSecurityonCloud/index.html).
+Pour plus d'informations sur l'utilisation du service Static Analyzer, voir les [documents sur le service Static Analyzer](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}.
 
 <!--
 
@@ -192,7 +191,7 @@ Avant de commencer, créez une URL webhook Slack ou copiez-en une qui existe :
 3. Sélectionnez un canal et cliquez sur **Add Incoming WebHooks Integration**.
 4. Ajoutez une **URL webhook** ou copiez-en une qui existe.
 
-Pour plus d'informations, [voir la rubrique Incoming WebHooks dans la documentation Slack](https://api.slack.com/incoming-webhooks).
+Pour plus d'informations, voir la rubrique [Incoming WebHooks dans la documentation Slack ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://api.slack.com/incoming-webhooks){: new_window}.
 
 Pour créer des notifications Slack :
 
@@ -244,7 +243,7 @@ sont envoyés, mais pas les messages d'information.
 
 6. Répétez ces étapes afin d'envoyer des notifications Slack pour d'autres étapes incluant des travaux IBM Container Service, IBM Security Analyzer et IBM Globalization.
 
-La notification de génération affichée dans Slack inclut un lien vers le projet des services DevOps et parfois vers le tableau de bord du projet. Pour qu'un utilisateur Slack puisse ouvrir ces liens, il doit être enregistré auprès des services DevOps et être membre du projet dans lequel le pipeline est configuré.
+La notification de génération affichée dans Slack inclut un lien vers le projet et parfois vers le tableau de bord du projet. Pour qu'un utilisateur Slack puisse ouvrir ces liens, il doit être enregistré auprès de Bluemix et être membre du projet dans lequel le pipeline est configuré.
 
 ## Création de notifications HipChat pour les générations dans le pipeline
 {: #deliverypipeline_hipchat}
@@ -336,13 +335,13 @@ les paramètres suivants sont remplis :
 ## Utilisation d'Active Deploy pour un déploiement sans durée d'immobilisation dans le pipeline
 {: #deliverypipeline_activedeploy}
 
-Vous pouvez automatiser le déploiement en continu de vos applications ou de vos groupes de conteneurs à l'aide du service IBM Active Deploy dans le service Bluemix DevOps Services Delivery Pipeline. Pour plus d'informations sur la mise en route, [voir la documentation Active Deploy](https://new-console.ng.bluemix.net/docs/services/ActiveDeploy/updatingapps.html#adpipeline).
+Vous pouvez automatiser le déploiement en continu de vos applications ou de vos groupes de conteneurs à l'aide du service IBM Active Deploy dans Delivery Pipeline. Pour plus d'informations sur la mise en route, voir la [documentation Active Deploy](/docs/services/ActiveDeploy/updatingapps.html#adpipeline){: new_window}.
 
 ## Génération et déploiement d'images de conteneur à l'aide du pipeline
 {: #deliverypipeline_containers}
 
-Vous pouvez automatiser vos générations d'application et vos déploiements de conteneur dans Bluemix à l'aide du service IBM Continuous Delivery Pipeline for Bluemix. Le service Delivery Pipeline dans DevOps prend en charge :
+Vous pouvez automatiser vos générations d'application et vos déploiements de conteneur dans Bluemix à l'aide du service IBM Continuous Delivery Pipeline for Bluemix. Le service Delivery Pipeline prend en charge :
   - La génération d'images Docker
   - Le déploiement d'images de conteneurs sur Bluemix
 
-Pour plus d'informations sur la mise en route, voir [la présentation de Delivery Pipeline et des conteneurs](https://new-console.ng.bluemix.net/docs/containers/container_pipeline_ov.html#container_pipeline_ov).
+Pour plus d'informations sur la mise en route, voir la [présentation de Delivery Pipeline et des conteneurs](/docs/containers/container_pipeline_ov.html#container_pipeline_ov){: new_window}.
