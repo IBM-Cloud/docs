@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-24"
 
 ---
 {:new_window: target="_blank"}
@@ -39,6 +39,7 @@ You can also use the `BMSCore` SDK to make network requests to any resource.
 	}
 	```
 	{: codeblock}
+
 
 ## iOS
 {: #request-ios}
@@ -87,7 +88,9 @@ You can also use the `BMSCore` SDK to make network requests to any resource.
 
 The `Request` class is a simple way to make an HTTP request and get the response after the request is completed. If you want more flexibility and control than what you can get from the `Request` class, you can use the `BMSURLSession` class. Some features of the `BMSURLSession` class include monitoring progress of uploads, and pausing or canceling requests. To get the responses, you have the option to choose either completion handlers or delegates.
 
-The `BMSURLSession` class is available for iOS only. For more information about `BMSURLSession`, see the `BMSCore` SDK [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core).
+The `BMSURLSession` class is available for iOS only.
+
+For complete usage examples, see the `BMSCore` GitHub [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core).
 
 
 ## Cordova
@@ -109,13 +112,3 @@ The `BMSURLSession` class is available for iOS only. For more information about 
 	```
 	{: codeblock}
 
-
-# Related Links
-{: #rellinks notoc}
-
-## Related Links
-{: #general notoc}
-
-* [BMSCore Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
-* [BMSCore iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
-* [BMSCore Cordova Plugin](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}
