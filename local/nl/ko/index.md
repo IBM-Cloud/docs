@@ -647,7 +647,7 @@ DEA 풀을 늘리기 위해 각 DEA가 다음으로 구성됩니다.
 
 1. 새 로컬 환경이 애플리케이션의 추가 인스턴스를 호스팅할 수 있게 하십시오. 새 환경을 작성하려면 {{site.data.keyword.IBM_notm}} 영업 팀에 문의하여 프로세스를 시작하십시오. 로컬 인스턴스 설정에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_local_notm}} 설정](../local/index.html#setuplocal)을 참조하십시오. 각 환경에 액세스하려면 별도로 로그인해야 합니다. 가용성을 보장하려면 호스팅되는 각 환경의 실제 위치가 1차 위치와 200km 이상 떨어져 있어야 합니다.
 2. 배치된 새 앱이 호스팅되는 고유 도메인 이름을 확보하십시오. 예를 들어, 원래 도메인이 *mycompany.caeast.bluemix.net*이면 새 도메인(예: *mycompany.cawest.bluemix.net*)을 사용하여 새 로컬 환경을 작성하고 새 도메인에 배치할 수 있습니다.
-3. 원본 앱을 배치할 때마다 새 위치에도 배치하십시오. 배치에 대한 자세한 정보는 [앱 업로드](/docs/starters/upload_app.html)를 참조하십시오.
+3. 원본 앱을 배치할 때마다 새 위치에 배치하십시오. 배치에 대한 자세한 정보는 [앱 업로드](/docs/starters/upload_app.html)를 참조하십시오.
 
 
 #### {{site.data.keyword.Bluemix_local_notm}}에 대한 글로벌 로드 밸런서 사용
