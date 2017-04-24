@@ -23,19 +23,27 @@ As a result of user feedback, Web Actions are the programming model chosen to bu
 
 The API Gateway acts as a proxy to Web Actions and providing them with additional features features including HTTP method routing, rate limiting, oauth token validation, API keys, and more.
 
-For more information on API Gateway feature you can read the [api management documentation](https://github.com/openwhisk/openwhisk-apigateway/blob/master/doc/management_interface.md)
+For more information on API Gateway feature you can read the [api management documentation](/docs/apis/management/manage_openwhisk_apis.html#manage_openwhisk_apis)
 
-**Note:** The APIs you created using the `wsk api-experimental` will continue to work for a short period, however you should begin migrating your APIs to web actions and reconfigure your existing apis using the new CLI command `wsk api`.
+## Create APIs from OpenWhisk web actions using your Browser.
 
-## OpenWhisk CLI configuration
+With API management, you can expose an OpenWhisk action as an API. After you define the API, you can apply security and rate limiting policies, view API usage and response logs, and define API sharing policies.
+In the OpenWhisk Dashboard, click the [APIs tab](https://console.ng.bluemix.net/openwhisk/apimanagement).
+
+
+## Create APIs from OpenWhisk web actions using the CLI
+
+### OpenWhisk CLI configuration
 
 Configure your OpenWhisk with the apihost `wsk property set --apihost openwhisk.ng.bluemix.net`
 To be able to use the `wsk api` the CLI configuration file `~/.wskprops` needs to contain the Bluemix Access Token.
 To get the access token use the CLI command `wsk bluemix login`, for more information about the command run `wsk bluemix login -h`
 
-Note: If the command errors requiring single sign on (sso), this is not currently supported. As a workaround login with the Bluemix CLI using `bluemix login`, then copy the Access Token from the HOME directory configuration file `~/.bluemix/config.json` into the `~/.wskprops` file as the property `APIGW_ACCESS_TOKEN="value of IAMToken`. Remove the prefix `Bearer ` when copying the access token string.
+**Note:** If the command errors requiring single sign on (sso), this is not currently supported. As a workaround login with the Bluemix CLI using `bluemix login`, then copy the Access Token from the HOME directory configuration file `~/.bluemix/config.json` into the `~/.wskprops` file as the property `APIGW_ACCESS_TOKEN="value of IAMToken`. Remove the prefix `Bearer ` when copying the access token string.
 
-## Expose an OpenWhisk web action
+**Note:** The APIs you created using the `wsk api-experimental` will continue to work for a short period, however you should begin migrating your APIs to web actions and reconfigure your existing apis using the new CLI command `wsk api`.
+
+### Create your first API usign the CLI
 
 1. Create a JavaScript file with the following content. For this example, the file name is 'hello.js'.
   ```javascript
@@ -80,7 +88,7 @@ Note: If the command errors requiring single sign on (sso), this is not currentl
   ```
   The action `hello` got invoked, returning back a JSON string including the parameter `name` sent via query parameter. You can pass parameters to the action via simple query parameters, or via request body.
   
-## Full control over the HTTP response
+### Full control over the HTTP response
   
   The `--response-type` flag controls the target url of the web action to be proxy the API Gateway. Using `--response-type json` as above returns the full result of the action in JSON format and automatically sets the Content-Type header to `application/json` which enables you to easily get started. 
   
