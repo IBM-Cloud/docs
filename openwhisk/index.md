@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-21"
+lastupdated: "2017-04-25"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -33,14 +32,14 @@ Both have similar capabilities for developing applications; the CLI provides mor
 ## Develop in your Browser
 {: #openwhisk_start_editor}
 
-Try out {{site.data.keyword.openwhisk_short}} in your [Browser](https://console.{DomainName}/openwhisk/editor){: new_window} to create actions, automate actions using triggers, and explore public packages. 
-Visit the [learn more](https://console.{DomainName}/openwhisk/learn){: new_window} page for a quick tour of the OpenWhisk User Interface.
+Try out {{site.data.keyword.openwhisk_short}} in your [Browser](https://console.{DomainName}/openwhisk/editor) to create actions, automate actions using triggers, and explore public packages. 
+Visit the [learn more](https://console.{DomainName}/openwhisk/learn) page for a quick tour of the OpenWhisk User Interface.
 
 ## Develop using the CLI
 {: #openwhisk_start_configure_cli}
 
 You can use the {{site.data.keyword.openwhisk_short}} command line interface (CLI) to set up your namespace and authorization key.
-Go to [Configure CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window} and follow the instructions to install it.
+Go to [Configure CLI](https://console.{DomainName}/openwhisk/cli) and follow the instructions to install it.
 
 ## Overview
 {: #openwhisk_start_overview}
@@ -128,10 +127,10 @@ A complete list of [OpenWhisk Tutorials and Samples can be found here](https://g
 ## API Reference
 {: #openwhisk_start_api notoc}
 * [REST API Documentation](./openwhisk_reference.html#openwhisk_ref_restapi)
-* [REST API](https://new-console.{DomainName}/apidocs/98){:new_window}
+* [REST API](https://console.{DomainName}/apidocs/98)
 
 ## Related Links
 {: #general notoc}
-* [Discover: {{site.data.keyword.openwhisk_short}}](http://www.ibm.com/cloud-computing/bluemix/openwhisk/){:new_window}
-* [{{site.data.keyword.openwhisk_short}} on IBM developerWorks](https://developer.ibm.com/openwhisk/){:new_window}
-* [Apache {{site.data.keyword.openwhisk_short}} project website](http://openwhisk.org){:new_window}
+* [Discover: {{site.data.keyword.openwhisk_short}}](http://www.ibm.com/cloud-computing/bluemix/openwhisk/)
+* [{{site.data.keyword.openwhisk_short}} on IBM developerWorks](https://developer.ibm.com/openwhisk/)
+* [Apache {{site.data.keyword.openwhisk_short}} project website](http://openwhisk.org)
