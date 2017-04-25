@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-04-13"
+lastupdated: "2017-04-24"
 
 ---
 
@@ -107,7 +107,7 @@ Complete the following steps to rename your organization:
 ## Deleting an existing org or space
 {: #deleteorgs}
 
-As the account owner, you can contact [{{site.data.keyword.Bluemix_notm}} Support ![External link icon](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} to delete an organization.
+As the account owner, you can delete an org by using the {{site.data.keyword.Bluemix_notm}} CLI. Use the CLI [`iam delete-org`](/docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_iam_org_delete) command to delete organizations. When you delete an organization, all the spaces, applications, and services within the organization are deleted. 
 
 **Note**: Deleting operations cannot be reversed. You lose all your applications and services that are associated with the organization.
 
