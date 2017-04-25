@@ -78,7 +78,7 @@ You can create and use a custom domain in {{site.data.keyword.Bluemix_notm}} by 
 
     *mydomain*
 
-    	The name of your custom domain.
+    	The name of your custom domain, for example `www.mydomain.mybluemix.net`.
 
     *host_name*
 
