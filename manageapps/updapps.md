@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-08-25"
+lastupdated: "2017-04-25"
 
 ---
 
@@ -32,17 +32,17 @@ You can create and use a custom domain in {{site.data.keyword.Bluemix_notm}} by 
 
   1. Create a custom domain for your organization.
 
-	1. Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Manage Organizations** &gt; **View details** for your org &gt; **Edit Org** &gt; **Domains**.
+	1. Go to **Manage** &gt; **Account** &gt; **Organizations** &gt; **View details** for your org. Then, click **Edit Org** &gt; **Domains**.
 
-	2. On the **DOMAINS** tab, click **ADD DOMAIN**, enter your custom domain name, and click **SAVE**.
+	2. On the **DOMAINS** tab, click **ADD DOMAIN**, and enter your custom domain name, and click **SAVE**.
 
 	**Note**: For example, you can use `mycompany.com` to associate the route `www.mycompany.com` to your app. You can also use `example.mycompany.com`to associate the route `www.example.mycompany.com` to your app.
 
   2. Add the route with the custom domain to an application.
 
-    1. On the menu bar, select **Console** from the drop-down menu, then click the row for the application that you want to add the route to. The **Overview** page is displayed.
+    1. Click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) &gt; **Dashboard**, then click the row for the application that you want to add the route to. The **Overview** page is displayed.
 
-	2. From the **View App** menu, select **Edit Routes and Access**.
+	2. From the **Routes** menu, select **Edit Routes**.
 
 	3. Click **Add route**, and specify the route that you want to use for the application.
 	4. Click **Save**.
