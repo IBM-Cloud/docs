@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-20"
+lastupdated: "2017-4-24"
 
 ---
 
@@ -184,7 +184,7 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Maven Build job:
 
 1. Click **SAVE**. Whenever your pipeline runs, this build job uses the configuration information from the Artifactory tool integration to connect to your Maven repo.
 
-To learn more, see [Artifactory ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_artifactory/){: new_window}.
+To learn more, see [Artifactory ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_artifactory/){: new_window}.
 
 
 ## Adding Availability Monitoring
@@ -683,7 +683,7 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Maven Build job:
 
 1. Click **SAVE**. Whenever your pipeline runs, this build job uses the configuration information from the Nexus tool integration to connect to your Maven repo.
 
-For more information, see [Nexus ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_nexus/){: new_window}.
+For more information, see [Nexus ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_nexus/){: new_window}.
 
 
 ## Configuring a custom tool (Other Tool)
@@ -759,7 +759,7 @@ Configure Sauce Labs to run automated functional tests on multiple operating sys
 
  **Tip:** If you added a Sauce Labs test job to the {{site.data.keyword.deliverypipeline}}, you can select the service instance.
 
-To learn more, see [Sauce Labs ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_sauce_labs/){: new_window}.
+To learn more, see [Sauce Labs ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_sauce_labs/){: new_window}.
 
 
 ## Configuring Slack
@@ -815,3 +815,5 @@ Configure SonarQube to continuously analyze and measure the quality of your sour
 1. Type the password or authentication token that you use to connect to the SonarQube server.
 1. Click **Create Integration**.
 1. From your toolchain, click **SonarQube** to view the dashboard for the SonarQube instance that you connected to.
+
+To learn more, see [SonarQube ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/learn/tool_sonarqube/){: new_window}.
