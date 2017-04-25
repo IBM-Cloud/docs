@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2017-3-16"
 
 ---
 
@@ -17,10 +18,8 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Ampliando o {{site.data.keyword.deliverypipeline}} 
+# Ampliando o {{site.data.keyword.deliverypipeline}}
 {: #deliverypipeline_extending}
-Última atualização: 16 de novembro de 2016
-{: .last-updated}
 
 É possível ampliar os recursos do {{site.data.keyword.deliverypipeline}}
 configurando suas tarefas para usar serviços suportados. Por exemplo, as tarefas de teste executam varreduras de código
@@ -53,9 +52,7 @@ contêiner
 
 ### Criando uma varredura de código estático
 
-Antes de começar,
-[revise os Termos
-de uso do serviço](http://www-03.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01).
+Antes de iniciar, [revise os Termos de uso do serviço ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://www.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01){: new_window}
 
 <!-- Use ordered list markup for the step section. Include code examples as needed. -->
 
@@ -92,7 +89,7 @@ vinculados.
     * Se você já tiver configurado o serviço e ligado o app em seu espaço do
 Bluemix ou se desejar
 [configurar
-esses requisitos manualmente](https://www.ng.bluemix.net/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline), deixe a caixa de seleção desmarcada.
+esses requisitos manualmente](/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline){: new_window}, deixe a caixa de seleção desmarcada.
 
   f. No campo **Minutos para aguardar a análise ser concluída**,
 digite um valor de 0 a 59 minutos. O valor padrão é de 5 minutos. Uma URL para o painel
@@ -152,7 +149,7 @@ console:
 **Varredura pendente**
 ![Exemplo de varredura pendente](images/analyzer_pending.png)
 
-Para obter mais informações sobre como usar o serviço Analisador estático, [consulte as documentações do serviço Analisador estático](https://console.ng.bluemix.net/docs/services/ApplicationSecurityonCloud/index.html).
+Para obter mais informações sobre como usar o serviço Static Analyzer, veja as [as documentações do serviço Static Analyzer](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}.
 
 <!--
 
@@ -236,9 +233,7 @@ clique em **Incluir**.
 recebidos**.
 4. Inclua uma **URL de WebHook** ou copie uma existente.
 
-Para obter mais informações,
-[consulte WebHooks recebidos na
-documentação do Slack](https://api.slack.com/incoming-webhooks).
+Para obter mais informações, veja [WebHooks recebidos na documentação do Slack ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://api.slack.com/incoming-webhooks){: new_window}.
 
 Para criar notificações do Slack:
 
@@ -296,10 +291,7 @@ padrão, mensagens válidas e inválidas são enviadas, mas mensagens informativ
 6. Repita estas etapas para enviar notificações do Slack para outros estágios que
 incluam tarefas do IBM Container Service, IBM Security Analyzer e IBM Globalization.
 
-A notificação de construção que é exibida no Slack inclui um link para o projeto de
-serviços DevOps e às vezes para o painel do projeto. Para que um usuário do Slack abra
-esses links, o usuário deve estar registrado nos serviços DevOps e ser membro do projeto
-no qual o pipeline está configurado.
+A notificação de construção exibida no Slack inclui um link para o projeto e, às vezes, para o painel do projeto. Para que um usuário do Slack abra esses links, o usuário deve estar registrado no Bluemix e ser membro do projeto no qual o pipeline está configurado.
 
 ## Criando notificações do HipChat para construções no pipeline
 {: #deliverypipeline_hipchat}
@@ -316,8 +308,7 @@ Antes de iniciar, crie ou copie um token do HipChat existente:
 Para criar notificações do HipChat:
 
 1. No pipeline, abra a configuração para um estágio.
-2. Na guia **PROPRIEDADES DO AMBIENTE**, clique em
-**INCLUIR PROPRIEDADE**.
+2. Na guia **PROPRIEDADES DO AMBIENTE**, clique em **INCLUIR PROPRIEDADE**.
 3. Selecione **Propriedade de texto**.
 4. Insira o nome e um valor para a propriedade do ambiente. Repita para criar várias propriedades
 de ambiente.
@@ -406,20 +397,13 @@ Globalization.
 ## Usando o Active Deploy para implementação com tempo de inatividade zero no pipeline
 {: #deliverypipeline_activedeploy}
 
-É possível automatizar a implementação contínua dos seus apps ou grupos de
-contêiner usando o serviço IBM® Active Deploy no Pipeline de entrega se serviços do Bluemix®
-DevOps. Para obter mais informações sobre introdução,
-[consulte
-a documentação do Active Deploy](https://new-console.ng.bluemix.net/docs/services/ActiveDeploy/updatingapps.html#adpipeline).
+É possível automatizar a implementação contínua dos apps ou grupos de contêiner usando o serviço IBM® Active Deploy no Delivery Pipeline. Para obter mais informações sobre introdução, veja a [documentação do Active Deploy](/docs/services/ActiveDeploy/updatingapps.html#adpipeline){: new_window}.
 
 ## Construindo e implementando imagens de contêiner com o pipeline
 {: #deliverypipeline_containers}
 
-É possível automatizar construções de apps e implementações de contêiner no
-Bluemix® usando o IBM® Continuous Delivery Pipeline for Bluemix. O serviço Pipeline de entrega nos serviços DevOps suporta:
+É possível automatizar construções de apps e implementações de contêiner no Bluemix usando o IBM Continuous Delivery Pipeline for Bluemix. O serviço Delivery Pipeline suporta:
   - Compilando imagens do Docker
   - Implementando imagens em contêineres no Bluemix
 
-Para obter mais informações sobre introdução, consulte
-[a
-visão geral de Pipeline de entrega e contêineres](https://new-console.ng.bluemix.net/docs/containers/container_pipeline_ov.html#container_pipeline_ov).
+Para obter mais informações sobre introdução, veja a [visão geral do Delivery Pipeline e de contêineres](/docs/containers/container_pipeline_ov.html#container_pipeline_ov){: new_window}.

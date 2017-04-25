@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-11-17"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -18,11 +18,22 @@ copyright:
 
 # Propriedades e recursos do ambiente
 {: #deliverypipeline_environment}
-Última atualização: 17 de novembro de 2016
-{: .last-updated}
 
-É possível usar as propriedades e os recursos pré-instalados do ambiente para interagir com o serviço IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}}. Por exemplo, será possível usá-los em um script de tarefa ou comando de teste.
+É possível usar as propriedades e os recursos pré-instalados do ambiente para interagir com o serviço IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}}. Por exemplo, você poderá incorporá-los em um script de tarefa ou comando de teste.
 {:shortdesc}
+
+É possível incluir suas próprias propriedades do ambiente em um estágio a partir
+de sua guia **PROPRIEDADES DO AMBIENTE**. As propriedades do ambiente
+estão disponíveis a cada tarefa de um estágio.
+
+É possível incluir quatro tipos de propriedades na guia Propriedades do ambiente:
+* **Texto**: uma chave de propriedade com um valor de linha única.
+* **Área de texto**: uma chave de propriedade com um valor multilinhas.
+* **Seguro**: uma chave de propriedade com um valor de linha única. O valor é exibido como asteriscos.
+* **Propriedades**: um arquivo no repositório do projeto. Esse
+arquivo pode conter diversas propriedades. Cada propriedade deve estar em sua própria
+linha. Para separar os pares de chave/valor, use o sinal de igual (=).
+
 
 As propriedades e recursos a seguir estão disponíveis, por padrão, em ambientes de pipeline.
 
