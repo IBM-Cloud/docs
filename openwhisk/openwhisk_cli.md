@@ -19,7 +19,7 @@ lastupdated: "2017-03-13"
 ## Setting up the {{site.data.keyword.openwhisk_short}} CLI 
 
 You can use the {{site.data.keyword.openwhisk_short}} command line interface (CLI) to set up your namespace and authorization key.
-Go to [Configure CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window} and follow the instructions to install it.
+Go to [Configure CLI](https://console.{DomainName}/openwhisk/cli){: new_window} and follow the instructions to install it.
 
 There are two required properties to configure in order to use the CLI:
 
