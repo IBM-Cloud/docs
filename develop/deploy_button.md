@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-7"
+lastupdated: "2017-4-24"
 
 ---
 
@@ -65,7 +65,7 @@ To create a Deploy to {{site.data.keyword.Bluemix_notm}} button:
 <li> Copy and modify one of the following snippet templates and include a public Git repository.
 <p></p>
 <p>
-<strong>Tip</strong>: If you want to specify the build input for a DevOps Services project, add a branch parameter to the Git URL. When you add a branch parameter, the original public Git repository, including all of its branches, is cloned into a new, private DevOps Services project with a new Git repository. The specified Git branch is set as the input for the build job. If you don't specify a branch, the input for the build job is set to the master branch by default.
+<strong>Tip</strong>: You can specify which branch to use by adding a branch parameter to the Git URL. If you don't specify a branch, the the master branch is used by default.
 </p>
 <ul>
 <li>HTML:
@@ -73,13 +73,17 @@ To create a Deploy to {{site.data.keyword.Bluemix_notm}} button:
 Default master branch:
 </p>
 <pre class="codeblock">
+<code class="hljs">
 &lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
+</code>
 </pre>
 <p>
 Specified Git branch:
 </p>
 <pre class="codeblock">
+<code class="hljs">
 &lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;&branch=&lt;git_branch>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
+</code>
 </pre>
 </li>
 <li>Markdown:
@@ -87,12 +91,16 @@ Specified Git branch:
 Default master branch:
 </p>
 <pre class="codeblock">
+<code class="hljs">
 [&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&rpar;
+</code>
 </pre>
 <p>Specified Git branch:
 </p>
 <pre class="codeblock">
+<code class="hljs"
 [&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&rpar;
+</code>
 </pre>
 </li>
 </ul>
