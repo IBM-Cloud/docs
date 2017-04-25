@@ -18,7 +18,7 @@ IBM OpenWhisk
 
     {: .navgroup id="reference"}
     [REST API Documentation](./openwhisk_reference.html#openwhisk_ref_restapi)
-    [REST API Reference](https://new-console.{DomainName}/apidocs/98)
+    [REST API Reference](https://console.ng/apidocs/98)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
