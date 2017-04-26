@@ -23,7 +23,7 @@ Suite aux commentaires en retour des utilisateurs, les Actions Web sont le modè
 
 La plupart des fonctionnalités de la passerelle d'API ont été fusionnées dans les Actions Web, lesquelles vous permettent de gérer n'importe quelle demande HTTP et de renvoyer des réponses HTTP avec contrôle total depuis votre action Web.
 
-Une intégration révisée de la passerelle d'API avec OpenWhisk sera bientôt disponible. Elle sera configurée afin d'utiliser un proxy pour vos actions Web en leur permettant d'utiliser des fonctions de la passerelle d'API telles que le plafonnement de débit, la validation de jeton oauth, des clés d'API, et d'autres.
+Une intégration révisée de la passerelle d'API avec OpenWhisk sera bientôt disponible. Elle sera configurée afin d'utiliser un proxy pour vos actions Web en leur permettant d'utiliser des fonctions de la passerelle d'API telles que le plafonnement de débit, la validation de jeton oauth, des clés d'API, et d'autres. Suivez la vidéo [Create and Control APIs](https://youtu.be/XT9KwWTnnzo) (Création et contrôle d'API)
 
 **Remarque :** les API que vous avez créées à l'aide de `wsk api-experimental` continueront à fonctionner. Toutefois, vous devriez commencer à les migrer vers les actions Web.
 
