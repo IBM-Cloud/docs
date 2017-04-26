@@ -41,7 +41,7 @@ Complete the following steps to add the repository and install the plug-in:
 <ol>
 <li>To add the {{site.data.keyword.Bluemix_notm}} admin plug-in repository, run the following command:<br/><br/>
 <code>
-cf add-plugin-repo BluemixAdmin http://plugins.ng.bluemix.net
+cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli
 </code><br/><br/>
 </li>
 <li>To install the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in, run the following command:<br/><br/>
