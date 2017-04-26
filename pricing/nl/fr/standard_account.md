@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016, 2017
-lastupdated: "2017-02-02"
+lastupdated: "2017-02-09"
 
 
 ---
@@ -21,34 +21,32 @@ lastupdated: "2017-02-02"
 Le compte standard bêta {{site.data.keyword.Bluemix}} introduit
 un nouveau compte gratuit, qui permet de travailler d'une nouvelle façon dans le
 cloud {{site.data.keyword.Bluemix_notm}} public. Le compte standard
-n'expire jamais, contrairement au compte d'essai
-{{site.data.keyword.Bluemix_notm}} de 30 jours. Vous pouvez continuer à
+n'expire jamais, contrairement au compte d'évaluation {{site.data.keyword.Bluemix_notm}} limité à 30 jours. Vous pouvez continuer à
 utiliser vos applications {{site.data.keyword.Bluemix_notm}}
 sans vous soucier des restrictions de temps. 
 {:shortdesc}
 
 La participation au compte standard bêta s'effectue uniquement sur
-invitation. Une fois que vous avez accepté l'invitation et que vous avez créé
-votre compte standard, vous pouvez inviter des amis et des collègues à
+invitation. Une fois que vous avez accepté l'invitation et que vous avez créé votre compte standard, vous pouvez inviter des amis et des collègues à
 rejoindre ce compte bêta.  
 
-## Présentation du compte standard {{site.data.keyword.Bluemix_notm}}
+## Présentation du compte {{site.data.keyword.Bluemix_notm}} standard
 {: #standardaccount}
 
 Vous vous demandez sans doute en quoi le compte standard diffère du
-compte d'essai. Les tableaux suivants récapitulent les informations
+compte d'évaluation. Les tableaux suivants récapitulent les informations
 essentielles liées au compte standard {{site.data.keyword.Bluemix_notm}}. 
 
-|Quelles sont les nouveautés d'un compte standard ? |    
+|Quelles sont les nouveautés du compte standard ? |    
 |-----------------|
 | Le compte n'expire jamais. |
 | Les applications Cloud Foundry peuvent accéder à 256 Mo de mémoire d'exécution instantanée et gratuite. |
 | Vous pouvez accéder aux plans Lite gratuits pour Cloudant NoSQL DB et Internet of Things Platform, avec davantage de services à venir. |
 | Vos applications passent en veille au bout de dix jours d'inactivité en termes de développement. |
 | Vos instances de service sont supprimées au bout de 30 jours d'inactivité. |
-{:caption="Table 1. What's new in a Standard Account" caption-side="top"}
+{:caption="Table 1. What's new in a Standard account" caption-side="top"}
 
-|Qu'est-ce qui ne change pas quand un compte d'essai est converti ? | 
+|Qu'est-ce qui ne change pas quand un compte d'évaluation est converti ? | 
 |-----------------|
 |Le compte est gratuit ; vous n'avez pas besoin de carte de crédit. |
 |Les instances Lite de Cloudant NoSQL DB et d'Internet of Things Platform. Il est possible de transférer une instance Lite pour chacun de ces services vers votre nouveau compte. |
@@ -56,9 +54,7 @@ essentielles liées au compte standard {{site.data.keyword.Bluemix_notm}}.
 |Le niveau de support {{site.data.keyword.Bluemix_notm}} reste le même. |
 {:caption="Table 2. What's not changing" caption-side="top"}
 
-**Remarque** Si votre compte d'essai n'est pas
-converti, un message d'explication s'affiche. Votre compte d'essai comporte
-peut-être plusieurs organisations ou des applications qui ne peuvent pas être
+**Remarque :** si votre compte d'évaluation n'est pas converti, un message d'explication s'affiche. Votre compte d'évaluation comporte peut-être plusieurs organisations ou des applications qui ne peuvent pas être
 transférées. Effectuez l'action appropriée, puis faites une nouvelle tentative
 de conversion.
 
@@ -67,15 +63,14 @@ d'équipe à collaborer dans votre organisation et vos espaces, afficher votre
 utilisation, créer des espaces, mettre à jour votre profil de compte et gérer
 votre organisation. Pour plus d'informations, voir [Configuration de votre compte](/docs/admin/adminpublic.html#account).
 
-### Plans Lite
+## Plans Lite
 {: #liteplans}
    
 Les plans Lite, également disponibles dans un compte de type Paiement à
-la carte, sont organisés sous forme de quota gratuit. Vous pouvez utiliser
+la carte, sont structurés sous forme de quota gratuit. Vous pouvez utiliser
 vos projets gratuitement, sans risque de générer une facture par accident.
 Le quota peut fonctionner pour une période spécifique, par exemple, un mois,
-ou sur la base d'une utilisation unique. Voici quelques exemples de quotas de
-plans Lite :
+ou sur la base d'une utilisation unique. Voici quelques exemples de quotas de plans Lite :
 
 <ul>
 <li>Nombre maximal de périphériques enregistrés</li>
@@ -87,19 +82,16 @@ plans Lite :
 Un compte standard vous permet d'utiliser n'importe quel élément du
 catalogue {{site.data.keyword.Bluemix_notm}} doté d'un plan Lite. Les
 plans Lite sont faciles à trouver. Par défaut, lorsque vous ouvrez le
-catalogue, tous les services dotés d'un plan Lite s'affichent ; ils sont
-identifiés avec une balise Lite ![balise Lite](../icons/Lite.svg). Sélectionnez
-un service pour afficher les détails du quota du plan Lite associé.
+catalogue, tous les services dotés d'un plan Lite sont affichés et identifiés par une balise Lite ![balise Lite](../icons/Lite.svg). Sélectionnez un service pour afficher les détails du quota du plan Lite associé.
 
-### Qu'est-ce qui est disponible dans le compte standard ?
+## Qu'est-ce qui est disponible dans le compte standard ?
 {: #whatsavailable}
 
-Dans un compte standard, les applications Cloud Foundry peuvent
-accéder à 256 Mo de mémoire d'exécution instantanée, au maximum. Si vous
+Dans un compte standard, les applications Cloud Foundry peuvent accéder, au maximum, à 256 Mo de mémoire d'exécution instantanée. Si vous
 dépassez votre quota alloué, vous pouvez arrêter certaines applications afin de
 libérer de la mémoire d'exécution. 
 
-Dans un compte standard bêta, les services suivants offrent un plan Lite :
+Dans le compte standard bêta, les services suivants offrent un plan Lite :
 
 <ul>
 <li>Cloudant NoSQL DB</li>
@@ -116,19 +108,16 @@ vous approchez ou atteignez une limite de quota, vous recevez un courrier élect
 
 Vous pouvez mettre à disposition 1 instance par plan Lite. 
 
-**Remarque** : Ces limitations s'appliquent uniquement
-au compte standard. Vous pouvez à tout moment procéder à une mise à niveau
+**Remarque :** Ces limitations s'appliquent uniquement au compte standard. Vous pouvez à tout moment procéder à une mise à niveau
 vers un compte de facturation d'abonnement ou de type Paiement à la carte. Vous
 ne payez que ce que vous utilisez au-delà des franchises. Pour plus d'informations sur les comptes de type Paiement à la carte et les comptes d'abonnement,
 voir
 [Facturation](/docs/pricing/index.html#pay-accounts).
 
-### Activité de développement
+## Activité de développement
 {: #devactivity}
 
-Pour aider les utilisateurs de compte standard à mieux gérer leurs
-ressources, nous avons créé deux fonctionnalités permettant d'améliorer
-l'efficacité qui reposent sur l'utilisation et l'activité de développement :
+Pour aider les utilisateurs de compte standard à mieux gérer leurs ressources, nous avons intégré diverses fonctionnalités efficaces basées sur l'activité de développement et l'utilisation :
 
  * Vos applications passent en veille après 10 jours d'inactivité en
 termes de développement. Cela facilite l'utilisation d'une nouvelle
@@ -156,8 +145,7 @@ application :
 pour SSH, les commandes `cf enable-ssh` et `cf
 disable-sh` ne permettent pas d'activer l'application. 
 
- * Vos services de plan Lite sont supprimés en l'absence d'activité
-pendant 30 jours. Il n'est ensuite plus nécessaire de supprimer les instances
+ * Vos services de plan Lite sont supprimés en l'absence d'activité pendant 30 jours. Il n'est ensuite plus nécessaire de supprimer les instances
 inactives lorsque vous souhaitez créer une nouvelle instance. Actuellement,
 seul le service Internet of Things Platform utilise cette fonctionnalité. 
  
@@ -165,15 +153,14 @@ seul le service Internet of Things Platform utilise cette fonctionnalité.
 connectant au tableau de bord de l'instance du service Internet of Things
 Platform.
  
-### Participation au compte standard bêta
+## Participation au compte standard bêta
 {: #betainvitation}
 
 Si vous êtes sélectionné pour participer au compte standard bêta, une
 invitation est envoyée à l'adresse électronique associée à votre
-compte d'essai {{site.data.keyword.Bluemix_notm}}. Lorsque vous
+compte d'évaluation {{site.data.keyword.Bluemix_notm}}. Lorsque vous
 recevez l'invitation, suivez les instructions indiquées dans le courrier
-électronique pour vous enregistrer auprès du compte standard. 
+électronique pour vous enregistrer dans le compte standard. 
 
 Vous souhaitez participer à l'offre du compte standard bêta ? Parlez-en à
-vos amis et collègues. S'ils ont été invités à rejoindre ce compte bêta et
-qu'ils ont créé leur compte standard, ils peuvent vous inviter à leur tour. 
+vos amis et collègues. S'ils ont été invités à rejoindre ce compte bêta et qu'ils ont créé leur compte standard, ils peuvent vous inviter à leur tour. 
