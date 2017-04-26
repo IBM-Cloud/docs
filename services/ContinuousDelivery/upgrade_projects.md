@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-24"
+lastupdated: "2017-4-26"
 
 ---
  
@@ -37,8 +37,8 @@ You can learn about toolchains on [YouTube ![External link icon](../../icons/lau
 
 **Important:** 
 - If you're planning to start the upgrade, make sure that you're a member of every org and space that the pipeline deploys to. Any project admin can start the upgrade. However, if the admin who starts the upgrade is not a member of every org and space that the pipeline deploys to, the pipeline cannot be created.
-- The Eclipse Orion {{site.data.keyword.webide}} in the toolchain is separate from the {{site.data.keyword.webide}} that is associated with your project. If you use the {{site.data.keyword.webide}} and you have uncommitted changes, commit them before you upgrade.  
-
+- The Eclipse Orion {{site.data.keyword.webide}} in the toolchain is separate from the {{site.data.keyword.webide}} that is associated with your project. If you use the {{site.data.keyword.webide}} and you have uncommitted changes, commit them before you upgrade.
+- Your project will be upgraded to a toolchain that is in the US South region. If your project was configured to deploy apps to a different region, it will still deploy apps to that region after it is upgraded to a toolchain.
 
 ## Upgrading from a project to a toolchain
 {: #project_to_toolchain}
@@ -80,7 +80,7 @@ To upgrade your project to a toolchain, follow these steps:
 
    Because toolchains are managed at the organization level, be sure to select an organization where the project members that need to access the toolchain already exist, or can be added. 
 
-3. If you used Track & Plan in your project, you can transfer your Track & Plan data to GitHub Issues.
+3. If you used Track & Plan in your project, you can transfer your Track & Plan data to GitHub Issues. 
 
    ![Track and Plan options](images/upgrade-tutorial-track-and-plan.png)
 
@@ -137,4 +137,4 @@ If you need to revert the upgrade, delete your toolchain. Then, when you return 
 ## Troubleshooting
 {: #upgrade_troubleshoot}    
 
-If you have questions or problems, send an email to [hub@jazz.net](mailto:hub@jazz.net). In your email, include the URLs to your {{site.data.keyword.jazzhub_short}} project and your {{site.data.keyword.contdelivery_short}} toolchain.
+If you have questions or problems, go to the [support forum](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services). In your forum post, include the URLs to your {{site.data.keyword.jazzhub_short}} project and your {{site.data.keyword.contdelivery_short}} toolchain, and tag your post with the `devops-services` tag.
