@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-21"
+  years: 2015, 2017
+lastupdated: "2017-3-16"
 
 ---
 
@@ -11,14 +11,14 @@ lastupdated: "2016-12-21"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#Partage de pipelines reposant sur du texte dans les exemples de projet {{site.data.keyword.jazzhub_short}} {: #share-pipeline}
+#Partage de pipelines reposant sur du texte dans les exemples de projet{: #share-pipeline}
 
-Dans le cas d'exemples de projet déployés dans {{site.data.keyword.Bluemix_notm}} via le bouton Déployer dans {{site.data.keyword.Bluemix_notm}}, vous pouvez définir des configurations de pipeline {{site.data.keyword.jazzhub_short}} sous forme de fichiers YAML. Les pipelines définis sous forme de texte peuvent être partagés pour que les personnes qui dévient votre projet n'aient pas à configurer leurs propres pipelines. Cette fonction est en cours de développement : le format YAML et son implémentation peuvent changer à tout moment. Actuellement, cette fonction n'est disponible que pour les projets avec Git et les référentiels GitHub qui ciblent {{site.data.keyword.Bluemix_notm}}. 
+Dans le cas d'exemples de projet déployés dans {{site.data.keyword.Bluemix_notm}} via le bouton Déployer dans {{site.data.keyword.Bluemix_notm}}, vous pouvez définir des configurations de pipeline sous forme de fichiers YAML. Les pipelines définis sous forme de texte peuvent être partagés pour que les personnes qui dévient votre projet n'aient pas à configurer leurs propres pipelines. Cette fonction est en cours de développement : le format YAML et son implémentation peuvent changer à tout moment. Actuellement, cette fonction n'est disponible que pour les projets avec Git et les référentiels GitHub qui ciblent {{site.data.keyword.Bluemix_notm}}. 
 {: shortdesc} 
 
 Le répertoire racine de l'exemple de projet doit contenir un dossier appelé `.bluemix` dans lequel se trouve un fichier `pipeline.yml`.
 
-Lorsqu'un projet est cloné avec le bouton Déployer dans {{site.data.keyword.Bluemix_notm}}, {{site.data.keyword.jazzhub_short}} crée un pipeline qui s'appuie sur le fichier `pipeline.yml`. 
+Lorsqu'un projet est cloné à l'aide du bouton Déployer dans {{site.data.keyword.Bluemix_notm}}, un pipeline basé sur le fichier `pipeline.yml` est créé. 
 
 Exemple : 
 ``` 
@@ -29,7 +29,7 @@ Exemple :
 ```
 {: codeblock} 
 
-Le format de fichier YAML correspond à un document YAML unique qui contient une spécification de pipeline. L'exemple de pipeline {{site.data.keyword.jazzhub_short}} suivant génère une application Java avec Ant en une seule étape. Ensuite, dans une autre étape, le pipeline déploie l'application dans {{site.data.keyword.Bluemix_notm}}. 
+Le format de fichier YAML correspond à un document YAML unique qui contient une spécification de pipeline. L'exemple de pipeline suivant génère une application Java avec Ant en une seule étape. Ensuite, dans une autre étape, le pipeline déploie l'application dans {{site.data.keyword.Bluemix_notm}}. 
 
 ``` 
 ---
@@ -214,7 +214,7 @@ Générez le fichier à partir d'un pipeline existant avec une adresse URL au
 format suivant :
 
 ```
-<domaine DevOps Services>/pipeline/user/project/yaml
+<domain>/pipeline/user/project/yaml
 ```
 {: codeblock} 
 
