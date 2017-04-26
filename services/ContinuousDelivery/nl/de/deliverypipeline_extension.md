@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2017-3-16"
 
 ---
 
@@ -17,10 +18,8 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# {{site.data.keyword.deliverypipeline}} erweitern 
+# {{site.data.keyword.deliverypipeline}} erweitern
 {: #deliverypipeline_extending}
-Letzte Aktualisierung: 16. November 2016
-{: .last-updated}
 
 Sie können die Funktionalität der {{site.data.keyword.deliverypipeline}} erweitern, indem Sie Ihre Jobs für die Verwendung unterstützter Services konfigurieren. Testjobs können zum Beispiel statische Codescans ausführen und Buildjobs können Zeichenfolgen globalisieren.
 {:shortdesc}
@@ -35,32 +34,32 @@ Die folgenden Tasks beschreiben, wie ausgewählte Tools in eine Delivery Pipelin
 
 Sie möchten Sicherheitsprobleme in Ihrem Code finden, bevor Sie diesen bereitstellen? Wenn Sie IBM® Static Analyzer for Bluemix™ als Teil Ihrer Pipeline verwenden, können Sie automatisierte Abgleiche mit den statischen Binärdateien für den Build Ihrer Java™ App mit den Endungen `.war`, `.ear`, `.jar` oder `.class` durchführen.
 
-Eine Pipeline, die den Service Static Analyzer verwendet, umfasst die folgenden Phasen:
+Eine Pipeline, die den Service Static Analyzer verwendet, umfasst die folgenden Stages:
 
-+ Eine Phase für den Build der Quellendateien
-+ Eine Phase für die Verarbeitung mit den folgenden Jobs:
++ Eine Stage für den Build der Quellendateien
++ Eine Stage für die Verarbeitung mit den folgenden Jobs:
   + Ein Buildjob für die Ausführung des Service Static Analyzer
   + Ein Buildjob für die Ausführung eines Containerbuilds
-+ Eine Phase für die Bereitstellung des Containers
++ Eine Stage für die Bereitstellung des Containers
 
 
 ### Einen statischen Codescan erstellen
 
-Lesen Sie zunächst die [Nutzungsbedingungen für den Service](http://www-03.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01), bevor Sie mit den nächsten Schritten beginnen.
+Bevor Sie mit den nachfolgenden Schritten beginnen, lesen Sie zunächst die [Nutzungsbedingungen für den Service ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://www.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01){: new_window}.
 
 <!-- Use ordered list markup for the step section. Include code examples as needed. -->
 
-1. Erstellen Sie eine Phase für die Verarbeitung.
+1. Erstellen Sie eine Stage für die Verarbeitung.
 
-  a. Klicken Sie auf **Phase hinzufügen**.
+  a. Klicken Sie auf **Stage hinzufügen**.
 
-  b. Benennen Sie die Phase. Zum Beispiel: `Verarbeitung`.
+  b. Benennen Sie die Stage. Zum Beispiel: `Verarbeitung`.
 
   c. Wählen Sie für den Eingabetyp **Buildartefakte** aus.
 
-  d. Überprüfen Sie die Werte für die Phase und den Job und aktualisieren Sie diese bei Bedarf.
+  d. Überprüfen Sie die Werte für die Stage und den Job und aktualisieren Sie diese bei Bedarf.
 
-2. Fügen Sie in der Phase für die Verarbeitung einen Buildjob hinzu, um den Codescan auszuführen.
+2. Fügen Sie in der Stage für die Verarbeitung einen Buildjob hinzu, um den Codescan auszuführen.
 
   a. Klicken Sie auf der Registerkarte **Jobs** auf **Job hinzufügen**.
 
@@ -74,30 +73,30 @@ Lesen Sie zunächst die [Nutzungsbedingungen für den Service](http://www-03.ibm
 
     * Wenn Sie möchten, dass die Pipeline Ihren Bluemix-Bereich auf den Service und eine App überprüft, die den Service an den Container bindet, wählen Sie das Kontrollkästchen aus. Wenn der Service oder die gebundene App nicht vorhanden sind, fügt die Pipeline den freien Plan des Service zu Ihrem Bereich hinzu. Die gebundene App, die erstellt wird, hat den Namen `pipeline_bridge_app`. Anschließend verwendet die Pipeline die Berechtigungsnachweise von der Datei 'pipeline_bridge_app', um auf die gebundenen Services zuzugreifen.
 
-    * Wenn Sie den Service und die gebundene App in Ihrem Bluemix-Bereich konfiguriert haben, oder wenn Sie [diese Anforderungen manuell konfigurieren](https://www.ng.bluemix.net/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline) möchten, heben Sie die Markierung für das Kontrollkästchen auf.
+    * Wenn Sie den Service und die gebundene App in Ihrem Bluemix-Bereich konfiguriert haben, oder wenn Sie [diese Anforderungen manuell konfigurieren](/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline){: new_window} möchten, heben Sie die Markierung für das Kontrollkästchen auf.
 
   f. Geben Sie im Feld **Anzahl der Minuten für die Durchführung der Analyse** einen Wert zwischen 0 und 59 Minuten ein. Der Standardwert beträgt 5 Minuten. Eine URL zu dem Dashboard von Static Analyzer befindet sich in den Konsolenprotokollen am Ende des Jobs.
 
      Wenn der Static Analyzer-Scan nicht vor dem von Ihnen angegebenen Zeitpunkt vollständig ist, schlägt der Job fehl. Der Scananalyse wird jedoch weiter ausgeführt und Sie können sie im Dashboard von Static Analyzer anzeigen. Nachdem der Static Analyzer-Scan abgeschlossen ist, wird die Scananforderung nicht wiederholt, wenn Sie den Job erneut ausführen, und der Pipelinejob kann abgeschlossen werden. Sie können die Pipeline stattdessen auch so konfigurieren, dass sie bei einem erfolgreichen Scan nicht blockiert wird. Erläuterungen hierzu folgen beim nächsten Schritt.
 
-  g. Wählen Sie das Kontrollkästchen **Ausführen dieser Phase beenden, wenn dieser Job fehlschlägt** abhängig davon aus bzw. ab, was passieren soll, wenn dieser Job fehlschlägt oder das Zeitlimit überschreitet. Jobs können fehlschlagen, wenn die Anfälligkeit hoch ist.
+  g. Wählen Sie das Kontrollkästchen **Ausführen dieser Stage beenden, wenn dieser Job fehlschlägt** abhängig davon aus bzw. ab, was passieren soll, wenn dieser Job fehlschlägt oder das Zeitlimit überschreitet. Jobs können fehlschlagen, wenn die Anfälligkeit hoch ist.
 
-    * Wenn Sie dieses Kontrollkästchen auswählen und der Job fehlschlägt, werden nachfolgende Jobs in dieser Phase und in folgenden Phasen nicht ausgeführt.
+    * Wenn Sie dieses Kontrollkästchen auswählen und der Job fehlschlägt, werden nachfolgende Jobs in dieser Stage und in folgenden Stages nicht ausgeführt.
 
-    * Wenn Sie das Kontrollkästchen abwählen und der Job fehlschlägt, wird die Phase fortgesetzt ohne nachfolgende Jobs oder Phasen zu blockieren. Wenn Sie zum Beispiel wissen, dass der Bericht viele Sicherheitsprobleme enthält, die bearbeitet werden müssen, empfiehlt es sich, die Phase für eine Fortsetzung zu konfigurieren, da der Scan sehr zeitaufwändig sein kann. Bei diesem Szenario ist es möglicherweise ungünstig, wenn die übrigen Jobs und Phasen nur beendet werden, weil der Scan zu viel Zeit beansprucht.
+    * Wenn Sie das Kontrollkästchen abwählen und der Job fehlschlägt, wird die Stage fortgesetzt ohne nachfolgende Jobs oder Stages zu blockieren. Wenn Sie zum Beispiel wissen, dass der Bericht viele Sicherheitsprobleme enthält, die bearbeitet werden müssen, empfiehlt es sich, die Stage für eine Fortsetzung zu konfigurieren, da der Scan sehr zeitaufwändig sein kann. Bei diesem Szenario ist es möglicherweise ungünstig, wenn die übrigen Jobs und Stages nur beendet werden, weil der Scan zu viel Zeit beansprucht.
 
   h. Klicken Sie auf **Speichern**.
 
 3. Wenn der Job fertig gestellt ist, überprüfen Sie die Ergebnisse, indem Sie auf **Protokolle und Verlauf anzeigen** klicken. Wenn die Analyse erfolgreich war oder das Zeitlimit überschreitet, wird in den Scanergebnissen eine URL angezeigt. Wenn der Scanstatus anstehend ist, warten Sie, bis der Scan abgeschlossen ist, um die vollständigen Ergebnisse anzuzeigen.
 
-4. Wenn Sie die Phase für die Verarbeitung erneut ausführen müssen, bevor die Analyse abgeschlossen ist, können Sie das tun. In den folgenden Situationen wird eine neue Analyse jedoch nicht erneut übergeben und die vorherigen Ergebnisse werden verwendet:
-  * Die Phase für die Verarbeitung wird noch immer ausgeführt, wenn Sie eine neue Analyse gestartet haben.
+4. Wenn Sie die Stage für die Verarbeitung erneut ausführen müssen, bevor die Analyse abgeschlossen ist, können Sie das tun. In den folgenden Situationen wird eine neue Analyse jedoch nicht erneut übergeben und die vorherigen Ergebnisse werden verwendet:
+  * Die Stage für die Verarbeitung wird noch immer ausgeführt, wenn Sie eine neue Analyse gestartet haben.
   * Ein Scan wurde bereits für den Build übergeben.
   * Ein neuer Quellenbuild wurde noch nicht ausgeführt.
 
 5. Führen Sie einen der folgenden Schritte aus, um eine neue Analyse zu starten:
-  * Führen Sie die Phase für den Build aus, die Eingaben für die verarbeitende Phase liefert, und führen Sie dann die Phase für die Verarbeitung erneut aus.
-  * Öffnen Sie die URL für die Scanergebnisse und klicken Sie auf das Symbol **Papierkorb**. Führen Sie anschließend die Phase für die Verarbeitung erneut aus.
+  * Führen Sie die Stage für den Build aus, die Eingaben für die verarbeitende Stage liefert, und führen Sie dann die Stage für die Verarbeitung erneut aus.
+  * Öffnen Sie die URL für die Scanergebnisse und klicken Sie auf das Symbol **Papierkorb**. Führen Sie anschließend die Stage für die Verarbeitung erneut aus.
 
 Beispiele für die Konsolenausgabe:
 
@@ -107,7 +106,7 @@ Beispiele für die Konsolenausgabe:
 **Anstehender Scan**
 ![Beispiel für anstehenden Scan](images/analyzer_pending.png)
 
-Weitere Informationen zur Verwendung des Service Static Analyzer finden Sie in der [Dokumentation zum Service Static Analyzer](https://console.ng.bluemix.net/docs/services/ApplicationSecurityonCloud/index.html).
+Weitere Informationen zur Verwendung des Service Static Analyzer enthält die [Dokumentation zum Service Static Analyzer](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}.
 
 <!--
 
@@ -175,28 +174,28 @@ For more information about using the Globalization Pipeline service from the Blu
 
 -->
 
-## Pufferbenachrichtigungen für Builds in der Pipeline erstellen
+## Slack-Benachrichtigungen für Builds in der Pipeline erstellen
 {: #deliverypipeline_slack}
 
-Sie können Benachrichtigungen über Buildergebnisse von IBM Container Service, IBM Security Static Analyzer und IBM Globalization von Ihrer Delivery Pipeline an Ihre Pufferkanäle senden.
+Sie können Benachrichtigungen über Buildergebnisse von IBM Container Service, IBM Security Static Analyzer und IBM Globalization von Ihrer Delivery Pipeline an Ihre Slack-Kanäle senden.
 
-Bevor Sie damit beginnen, erstellen oder kopieren Sie eine Puffer-WebHook-URL:
+Bevor Sie damit beginnen, erstellen oder kopieren Sie eine Slack-WebHook-URL:
 
-1. Öffnen Sie die Seite für die Pufferintegration für Ihr Team: `https://_project_name_.slack.com/services`
-2. Suchen Sie in der Liste der Integrationen **Eingehende WebHooks** und klicken Sie auf **Hinzufügen**.
+1. Öffnen Sie die Seite für die Slack-Integration für Ihr Team: `https://_project_name_.slack.com/services`
+2. Suchen Sie in der Liste der Integrationen den Eintrag **Eingehende WebHooks** und klicken Sie auf **Hinzufügen**.
 3. Wählen Sie einen Kanal aus und klicken Sie auf **Integration eingehender WebHooks hinzufügen**.
 4. Fügen Sie eine **WebHook-URL** hinzu oder kopieren Sie eine vorhandene.
 
-Weitere Informationen finden Sie in der [Pufferdokumentation zu eingehenden WebHooks](https://api.slack.com/incoming-webhooks).
+Weitere Informationen enthält die [Dokumentation von Slack zu eingehenden Webhooks ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://api.slack.com/incoming-webhooks){: new_window}. 
 
-Gehen Sie wie folgt vor, um Pufferbenachrichtigungen zu erstellen:
+Gehen Sie wie folgt vor, um Slack-Benachrichtigungen zu erstellen:
 
-1. Öffnen Sie in der Pipeline die Konfiguration für eine Phase.
+1. Öffnen Sie in der Pipeline die Konfiguration für eine Stage.
 2. Klicken Sie auf der Registerkarte **UMGEBUNGSEIGENSCHAFTEN** auf **EIGENSCHAFT HINZUFÜGEN**.
-3. Wählen Sie den Eintrag **Texteigenschaft** aus.
+3. Wählen Sie **Texteigenschaft** aus.
 4. Geben Sie den Namen und einen Wert für die Umgebungseigenschaft ein. Wiederholen Sie dies, um mehrere Umgebungseigenschaften zu erstellen.
 
-  *Tabelle 1. Umgebungseigenschaften für die Konfiguration von Pufferbenachrichtigungen*
+  *Tabelle 1. Umgebungseigenschaften für die Konfiguration von Slack-Benachrichtigungen*
 
   <table>
   <tr>
@@ -207,7 +206,7 @@ Gehen Sie wie folgt vor, um Pufferbenachrichtigungen zu erstellen:
   <tr>
     <td><code>SLACK_WEBHOOK_PATH</code></td>
     <td>Eine URL</td>
-    <td>Erforderlich. Die WebHook-URL, die in den Einstellungen für Ihr Pufferprojekt gespeichert ist.</td>
+    <td>Erforderlich. Die WebHook-URL, die in den Einstellungen für Ihr Slack-Projekt gespeichert ist.</td>
   </tr>
   <tr>
     <td><code>SLACK_COLOR</code></td>
@@ -216,7 +215,7 @@ Gehen Sie wie folgt vor, um Pufferbenachrichtigungen zu erstellen:
       <li><code>warning</code></li>
       <li><code>danger</code></li>
       <li>Jede hexadezimale Farbe wie zum Beispiel #439FEO</li></ul></td>
-    <td>Optional. Die Farbe der Begrenzung, die an der Seite der Nachricht im Puffer angezeigt wird. Die Standardfarben sind grün für gute Nachrichten, rot für schlechte Nachrichten und grau für Informationsnachrichten.</td>
+    <td>Optional. Die Farbe der Begrenzung, die an der Seite der Nachricht in Slack angezeigt wird. Die Standardfarben sind grün für gute Nachrichten, rot für schlechte Nachrichten und grau für Informationsnachrichten.</td>
   </tr>
   <tr>
     <td><code>NOTIFY_FILTER</code></td>
@@ -226,7 +225,7 @@ Gehen Sie wie folgt vor, um Pufferbenachrichtigungen zu erstellen:
       <li><code>bad</code>: Alle Nachrichten abrufen.</li>
       <li><code>info</code>: Nur Informationsnachrichten abrufen. Gute, schlechte und unbekannte Nachrichten werden nicht gesendet.</li>
       <li><code>unknown</code>: Alle Nachrichten abrufen.</li></ul>
-      Beispiel: Wenn Sie <code>NOTIFY_FILTER = bad</code> festlegen, werden Fehlerbenachrichtigung nur im Pufferkanal (Slack Channel) angezeigt.</td>
+      Beispiel: Wenn Sie <code>NOTIFY_FILTER = bad</code> festlegen, werden Fehlerbenachrichtigung nur im Slack-Kanal (Slack Channel) angezeigt.</td>
     <td>Optional. Entscheiden Sie, für welchen Nachrichtentyp Benachrichtigungen gesendet werden sollen. Standardmäßig werden gute und schlechte Nachrichten, jedoch keine Informationsnachrichten gesendet.
       <ul><li><code>good</code>: Erfolgreiche Buildergebnisse.</li>
       <li><code>bad</code>: Nicht erfolgreiche Buildergebnisse.</li>
@@ -236,9 +235,9 @@ Gehen Sie wie folgt vor, um Pufferbenachrichtigungen zu erstellen:
 
 5. Klicken Sie auf **Speichern**.
 
-6. Wiederholen Sie diese Schritte und senden Sie Pufferbenachrichtigungen für andere Phasen, die Jobs von IBM Container Service, IBM Security Analyzer und IBM Globalization umfassen.
+6. Wiederholen Sie diese Schritte und senden Sie Slack-Benachrichtigungen für andere Stages, die Jobs von IBM Container Service, IBM Security Analyzer und IBM Globalization umfassen.
 
-Die Buildbenachrichtigung, die im Puffer angezeigt wird, enthält einen Link zum Projekt der DevOps Services und gelegentlich einen Link zum Dashboard des Projekts. Damit Pufferbenutzer diesen Link öffnen können, müssen Sie bei DevOps Services registriert und Mitglied des Projekts sein, in dem die Pipeline konfiguriert ist.
+Die Buildbenachrichtigung, die in Slack angezeigt wird, enthält einen Link zum Projekt und gelegentlich einen Link zum Dashboard des Projekts. Damit Slack-Benutzer diese Links öffnen können, müssen sie bei Bluemix registriert und Mitglied des Projekts sein, in dem die Pipeline konfiguriert ist. 
 
 ## HipChat-Benachrichtigungen für Builds in der Pipeline erstellen
 {: #deliverypipeline_hipchat}
@@ -252,7 +251,7 @@ Bevor Sie damit beginnen, erstellen oder kopieren Sie ein vorhandenes HipChat-To
 
 Gehen Sie wie folgt vor, um HipChat-Benachrichtigungen zu erstellen:
 
-1. Öffnen Sie in der Pipeline die Konfiguration für eine Phase.
+1. Öffnen Sie in der Pipeline die Konfiguration für eine Stage.
 2. Klicken Sie auf der Registerkarte **UMGEBUNGSEIGENSCHAFTEN** auf **EIGENSCHAFT HINZUFÜGEN**.
 3. Wählen Sie **Texteigenschaft** aus.
 4. Geben Sie den Namen und einen Wert für die Umgebungseigenschaft ein. Wiederholen Sie dies, um mehrere Umgebungseigenschaften zu erstellen.
@@ -294,8 +293,8 @@ Gehen Sie wie folgt vor, um HipChat-Benachrichtigungen zu erstellen:
       <ul><li><code>good</code></li>
       <li><code>danger</code></li>
       <li><code>info</code></li></ul>
-    Diese Variable gilt sowohl für HipChat- als auch für Pufferhinweisfarben. Wenn Sie <code>NOTIFICATION_COLOR</code> angeben, müssen Sie weder <code>HIP_CHAT_COLOR</code> noch <code>SLACK_COLOR</code> angeben.</td>
-    <td>Optional: Geben Sie die Hintergrundfarbe und die Umrandungsfarbe sowohl für HipChat- als auch für Pufferbenachrichtigungen an. Wenn Sie <code>NOTIFICATION_COLOR</code> festlegen, müssen Sie die Farbe nicht angeben, wenn Sie das Script aufrufen.
+    Diese Variable gilt sowohl für HipChat- als auch für Slack-Hinweisfarben. Wenn Sie <code>NOTIFICATION_COLOR</code> angeben, müssen Sie weder <code>HIP_CHAT_COLOR</code> noch <code>SLACK_COLOR</code> angeben.</td>
+    <td>Optional: Geben Sie die Hintergrundfarbe und die Umrandungsfarbe sowohl für HipChat- als auch für Slack-Benachrichtigungen an. Wenn Sie <code>NOTIFICATION_COLOR</code> festlegen, müssen Sie die Farbe nicht angeben, wenn Sie das Script aufrufen.
      <p><code>-l notification_level</code></p> </td>
   </tr>
   <tr>
@@ -322,18 +321,18 @@ Gehen Sie wie folgt vor, um HipChat-Benachrichtigungen zu erstellen:
 
 5. Klicken Sie auf **Speichern**.
 
-6. Wiederholen Sie diese Schritte, um HipChat-Benachrichtigungen für andere Phasen zu senden, die Jobs von IBM Container Service, IBM Security Static Analyzer und IBM Globalization enthalten.
+6. Wiederholen Sie diese Schritte, um HipChat-Benachrichtigungen für andere Stages zu senden, die Jobs von IBM Container Service, IBM Security Static Analyzer und IBM Globalization enthalten.
 
 ## Active Deploy für Bereitstellungen ohne Ausfallzeit in der Pipeline verwenden
 {: #deliverypipeline_activedeploy}
 
-Sie können die kontinuierliche Bereitstellung von Ihren Apps oder Containergruppen durch die Verwendung des Service IBM® Active Deploy in der Bluemix® DevOps Services Delivery-Pipeline automatisieren. Weitere Informationen zu ersten Schritten finden Sie in der [Dokumentation zu Active Deploy](https://new-console.ng.bluemix.net/docs/services/ActiveDeploy/updatingapps.html#adpipeline).
+Sie können die kontinuierliche Bereitstellung von Ihren Apps oder Containergruppen durch die Verwendung des Service IBM® Active Deploy in Delivery Pipeline automatisieren. Weitere Informationen zu ersten Schritten enthält die [Dokumentation zu Active Deploy](/docs/services/ActiveDeploy/updatingapps.html#adpipeline){: new_window}.
 
 ## Containerimages mit der Pipeline erstellen und bereitstellen
 {: #deliverypipeline_containers}
 
-Sie können Ihre App-Builds und Containerbereitstellungen in Bluemix® mithilfe der IBM® Continuous Delivery Pipeline for Bluemix automatisieren. Der Service Delivery Pipeline in den DevOps-Srvices unterstützt:
+Sie können Ihre App-Builds und Containerbereitstellungen in Bluemix mithilfe von IBM Continuous Delivery Pipeline for Bluemix automatisieren. Der Service Delivery Pipeline unterstützt Folgendes: 
   - Erstellen von Docker-Images
   - Bereitstellen von Images in Containern für Bluemix
 
-Weitere Informationen zu den ersten Schritten finden Sie in der [Übersicht über Delivery Pipeline und Container](https://new-console.ng.bluemix.net/docs/containers/container_pipeline_ov.html#container_pipeline_ov).
+Weitere Informationen zu den ersten Schritten enthält die [Übersicht über Delivery Pipeline und Container](/docs/containers/container_pipeline_ov.html#container_pipeline_ov){: new_window}.
