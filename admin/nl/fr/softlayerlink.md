@@ -25,7 +25,7 @@ Vous pouvez unifier vos comptes de facturation {{site.data.keyword.Bluemix_notm}
 comptes, vous êtes facturé via {{site.data.keyword.Bluemix_notm}} pour l'utilisation de ressources {{site.data.keyword.Bluemix_notm}} et
 SoftLayer.
 
-**Attention :** Un compte d'abonnement {{site.data.keyword.Bluemix_notm}} ne peut pas être lié à un compte SoftLayer. Pour
+**Attention :** Les comptes d'abonnement {{site.data.keyword.Bluemix_notm}} et les anciens comptes {{site.data.keyword.Bluemix_notm}} de type Paiement à la carte créés avant la liaison automatique de compte ne peuvent pas être liés à un compte SoftLayer. Pour
 accéder au tableau de bord Infrastructure, vous devez créer un compte Paiement
 à la carte, un second compte qui est automatiquement lié à un
 compte SoftLayer. Vous recevez ensuite deux factures, une pour chaque compte {{site.data.keyword.Bluemix_notm}}. Même
@@ -124,8 +124,7 @@ Pour plus d'informations sur l'invitation de membres d'équipe via l'interface u
 ## Passage à l'IBMid
 {: #ibmid_switch}
 
-Désormais, l'authentification dans SoftLayer utilise un IBMid afin de fournir une connexion unique pour {{site.data.keyword.Bluemix_notm}} dans son intégralité. Les comptes SoftLayer existants sont activés pour passer à l'authentification par IBMid.
-Un assistant de migration vous aide à effectuer cette opération.
+Désormais, l'authentification dans SoftLayer utilise un IBMid afin de fournir une connexion unique pour {{site.data.keyword.Bluemix_notm}} dans son intégralité. Les comptes SoftLayer existants sont activés pour passer à l'authentification par IBMid. Un assistant de migration vous aide à effectuer cette opération. 
 {:shortdesc}
 
 Si vous êtes un utilisateur principal et qu'une invite indiquant de passer à un IBMid n'apparaît pas dans {{site.data.keyword.slportal}}, [contactez le support IBM](/docs/support/index.html#contacting-support) pour obtenir de l'aide sur l'activation de cette fonction.
@@ -140,19 +139,19 @@ Pour passer de votre nom d'utilisateur SoftLayer existant à un IBMid, procédez
 	
  2. Suivez les invites de l'assistant pour créer votre IBMid. 
  
-    Pour créer un nouvel IBMid, entrez une adresse électronique qui n'est utilisée par aucun IBMid. Le nouvel IBMid utilisera cette adresse électronique comme nom d'utilisateur et comme adresse électronique. Une fois l'IBMid créé, vous pouvez mettre à jour l'adresse électronique qui lui est associée, mais vous ne pouvez pas modifier le nom d'utilisateur. Le courrier électronique d'invitation sera envoyé à l'adresse électronique que vous avez indiquée. 
+    Pour créer un nouvel IBMid, entrez une adresse électronique qui n'est utilisée par aucun IBMid. Le nouvel IBMid utilisera cette adresse électronique comme nom d'utilisateur et comme adresse électronique. Une fois l'IBMid créé, vous pouvez mettre à jour l'adresse électronique qui lui est associée, mais vous ne pouvez pas modifier le nom d'utilisateur. Le courrier électronique d'invitation sera envoyé à l'adresse électronique que vous avez indiquée.
     
-    Après que vous avez exécuté l'assistant, vous recevez un courrier électronique contenant votre code d'enregistrement. 
+    Après que vous avez exécuté l'assistant, vous recevez un courrier électronique contenant votre code d'enregistrement.
  
  3. Lorsque vous recevez le courrier électronique, suivez le lien ou copiez l'adresse URL dans un navigateur, puis entrez votre code d'enregistrement. Le code est valide pendant 7 jours et ne peut être utilisé qu'une seule fois.
  
-    Après avoir opté pour l'authentification par IBMid, vous ne pouvez vous connecter à votre compte qu'avec votre IBMid. A l'invite de connexion au compte, accédez à la section **IBMid Account Login** et cliquez sur **Log in with IBMid**. N'utilisez pas les zones **Username** et **Password** que vous avez précédemment utilisées avec votre ID SoftLayer. 
+    Après avoir opté pour l'authentification par IBMid, vous ne pouvez vous connecter à votre compte qu'avec votre IBMid. A l'invite de connexion au compte, accédez à la section **IBMid Account Login** et cliquez sur **Log in with IBMid**. N'utilisez pas les zones **Username** et **Password** que vous avez précédemment utilisées avec votre ID SoftLayer.
  
-Si vous êtes un nouveau client, lorsque vous vérifiez votre commande, vous êtes invité à indiquer votre IBMid existant ou à créer un nouvel IBMid.  
+Si vous êtes un nouveau client, lorsque vous vérifiez votre commande, vous êtes invité à indiquer votre IBMid existant ou à créer un nouvel IBMid. 
 
  * Pour utiliser un IBMid existant, entrez le nom d'utilisateur ou l'adresse électronique de l'IBMid si elle est unique (autrement dit, elle n'est pas partagée par plusieurs IBMid).
  
- * Pour créer un nouvel IBMid, entrez une adresse électronique qui n'est utilisée par aucun IBMid. Le nouvel IBMid utilisera cette adresse électronique comme nom d'utilisateur et comme adresse électronique. Une fois l'IBMid créé, vous pouvez mettre à jour l'adresse électronique qui lui est associée, mais vous ne pouvez pas modifier le nom d'utilisateur. Le courrier électronique d'invitation sera envoyé à l'adresse électronique que vous avez indiquée. 
+ * Pour créer un nouvel IBMid, entrez une adresse électronique qui n'est utilisée par aucun IBMid.  Le nouvel IBMid utilisera cette adresse électronique comme nom d'utilisateur et comme adresse électronique.  Une fois l'IBMid créé, vous pouvez mettre à jour l'adresse électronique qui lui est associée, mais vous ne pouvez pas modifier le nom d'utilisateur. Le courrier électronique d'invitation sera envoyé à l'adresse électronique que vous avez indiquée.
 
 Pour résoudre les problèles liés à la connexion à l'aide de votre IBMid, voir [Traitement des incidents liés à l'accès à Bluemix](/docs/troubleshoot/ts_accessing.html#accessing).
 
