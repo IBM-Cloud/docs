@@ -32,7 +32,7 @@ The second container is the run container. This container is of a form suitable 
 
 There are a few prerequisites that allow you to fully explore and properly utilize the {{site.data.keyword.dev_cli_short}}, as it is highly extensible and allows you to leverage more complementary technologies.
 
-1. Install the [Cloud Foundry CLI ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/cli#getting-started).
+<!--1. Install the [Cloud Foundry CLI ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/cli#getting-started).-->
 
 2. Install the [{{site.data.keyword.Bluemix}} CLI ![External link icon](../icons/launch-glyph.svg "External link icon")](http://clis.ng.bluemix.net/ui/home.html).
 
