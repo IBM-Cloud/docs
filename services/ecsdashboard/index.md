@@ -1,5 +1,15 @@
+---
+
+copyright:
+  years: 2015, 2016
+lastupdated: "2016-04-18"
+---
+
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+
 # Getting started with Automated Accessibility Tester (Experimental)
-*Last Updated: 18 April 2016*
 
 IBM® Automated Accessibility Tester for Bluemix™ provides development teams
 with the ability to add accessibility-compliance checking into their

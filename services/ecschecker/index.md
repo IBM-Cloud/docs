@@ -1,5 +1,16 @@
+---
+
+copyright:
+  years: 2015, 2016
+lastupdated: "2016-04-18"
+---
+
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+
 # Getting started with Digital Content Checker (Experimental)
-*Last Updated: 18 April 2016*
+
 
 IBM® Digital Content Checker for Bluemix™ provides the ability to automatically
 check EPUB and HTML content for accessibility-compliance issues. You can scan

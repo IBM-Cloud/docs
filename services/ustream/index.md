@@ -1,3 +1,14 @@
+---
+
+copyright:
+  years: 2015, 2016
+lastupdated: "2016-04-18"
+---
+
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+
 # Getting started with Ustream for IBM Cloud
 
 Ustream's powerful API lets you host, embed, upload and manage videos right from your Bluemix app. Let Ustream's robust platform do the work under the hood, so you can focus on building great apps.

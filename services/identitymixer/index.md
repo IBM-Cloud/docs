@@ -1,3 +1,14 @@
+---
+
+copyright:
+  years: 2015, 2016
+lastupdated: "2016-04-18"
+---
+
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+
 # Getting started with Identity Mixer (Experimental)
 
 IBM Identity Mixer for Bluemix is a protocol suite for privacy-preserving authentication and transfer of certified attributes.
