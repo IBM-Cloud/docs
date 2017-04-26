@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2017-3-16"
 
 ---
 
@@ -17,10 +18,8 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# {{site.data.keyword.deliverypipeline}} 확장 
+# {{site.data.keyword.deliverypipeline}} 확장
 {: #deliverypipeline_extending}
-마지막 업데이트 날짜: 2016년 11월 16일
-{: .last-updated}
 
 지원되는 서비스를 사용하도록 작업을 구성하여 {{site.data.keyword.deliverypipeline}} 기능을 확장할 수 있습니다. 예를 들어, 테스트 작업은 정적 코드 스캔을 실행할 수 있고 빌드 작업은 문자열을 글로벌화할 수 있습니다.
 {:shortdesc}
@@ -46,7 +45,7 @@ Static Analyzer 서비스를 사용하는 파이프라인은 일반적으로 다
 
 ### 정적 코드 스캔 작성
 
-시작하기 전에 [서비스의 이용 약관을 검토하십시오](http://www-03.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01).
+시작하기 전에 [서비스 이용 약관을 검토 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01){: new_window}하십시오. 
 
 <!-- Use ordered list markup for the step section. Include code examples as needed. -->
 
@@ -74,7 +73,7 @@ Static Analyzer 서비스를 사용하는 파이프라인은 일반적으로 다
 
     * 파이프라인이 Bluemix 영역에서 서비스와 이 서비스를 컨테이너에 바인드하는 앱이 있는지 확인하도록 하려면 이 선택란을 선택하십시오. 서비스 또는 바인드된 앱이 없는 경우 파이프라인은 서비스의 무료 사용제를 영역에 추가합니다. 작성되는 바인드된 앱은 `pipeline_bridge_app`이라는 이름이 지정됩니다. 파이프라인은 pipeline_bridge_app의 신임 정보를 사용하여 바인드된 서비스에 액세스합니다.
 
-    * Bluemix 영역에서 서비스와 바인드된 앱을 이미 구성했거나 [해당 요구사항을 수동으로 구성](https://www.ng.bluemix.net/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline)하려는 경우 선택란을 선택 취소된 상태로 두십시오.
+    * Bluemix 영역에서 서비스와 바인드된 앱을 이미 구성했거나 [해당 요구사항을 수동으로 구성](/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline){: new_window}하려는 경우 선택란을 선택 취소된 상태로 두십시오.
 
   f. **분석이 완료될 때까지의 대기 시간(분)** 필드에 0 - 59분 값을 입력하십시오. 기본값은 5분입니다. 작업 마지막에 Static Analyzer 대시보드로의 URL이 콘솔 로그에 표시됩니다.
 
@@ -107,7 +106,7 @@ Static Analyzer 서비스를 사용하는 파이프라인은 일반적으로 다
 **보류 중 스캔**
 ![보류 중 스캔 예](images/analyzer_pending.png)
 
-Static Analyzer 서비스 사용에 대한 자세한 정보는 [Static Analyzer 서비스 문서를 참조하십시오](https://console.ng.bluemix.net/docs/services/ApplicationSecurityonCloud/index.html).
+Static Analyzer 서비스의 사용에 대한 자세한 정보는 [Static Analyzer 서비스 문서](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}를 참조하십시오. 
 
 <!--
 
@@ -180,14 +179,14 @@ For more information about using the Globalization Pipeline service from the Blu
 
 Delivery Pipeline에서 Slack 채널로 IBM Container Service, IBM Security Static Analyzer 및 IBM Globalization 빌드 결과에 대한 알림을 전송할 수 있습니다.
 
-시작하기 전에 Slack WebHook URL을 작성하거나 복사하십시오.
+시작하기 전에 Slack 웹훅 URL을 작성하거나 복사하십시오.
 
 1. 팀의 Slack 통합 페이지를 여십시오(`https://_project_name_.slack.com/services`).
-2. 통합 목록에서 **수신 WebHook**를 찾아 **추가**를 클릭하십시오.
-3. 채널을 선택하고 **수신 WebHook 통합 추가**를 클릭하십시오.
-4. **WebHook URL**을 추가하거나 기존 URL을 복사하십시오.
+2. 통합 목록에서 **수신 웹훅**을 찾아 **추가**를 클릭하십시오.
+3. 채널을 선택하고 **수신 웹훅 통합 추가**를 클릭하십시오.
+4. **웹훅 URL**을 추가하거나 기존 URL을 복사하십시오.
 
-자세한 정보는 [Slack 문서에서 수신 WebHook를 참조하십시오](https://api.slack.com/incoming-webhooks).
+자세한 정보는 [Slack의 수신 웹훅 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://api.slack.com/incoming-webhooks){: new_window}을 참조하십시오. 
 
 Slack 알림을 작성하려면 다음을 수행하십시오.
 
@@ -207,7 +206,7 @@ Slack 알림을 작성하려면 다음을 수행하십시오.
   <tr>
     <td><code>SLACK_WEBHOOK_PATH</code></td>
     <td>URL</td>
-    <td>필수. Slack 프로젝트의 설정에 저장되는 WebHook URL입니다.</td>
+    <td>필수. Slack 프로젝트의 설정에 저장되는 웹훅 URL입니다.</td>
   </tr>
   <tr>
     <td><code>SLACK_COLOR</code></td>
@@ -238,7 +237,7 @@ Slack 알림을 작성하려면 다음을 수행하십시오.
 
 6. IBM Container Service, IBM Security Analyzer 및 IBM Globalization 작업을 포함하는 다른 단계에 대한 Slack 알림을 전송하려면 이 단계를 반복하십시오. 
 
-Slack에 표시되는 빌드 알림에는 DevOps Services 프로젝트에 대한 링크와 가끔 이 프로젝트의 대시보드에 대한 링크가 포함됩니다. Slack 사용자가 이러한 링크를 열려면 사용자가 DevOps Services에 등록되어 있고 파이프라인이 구성된 프로젝트의 멤버여야 합니다. 
+Slack에서 표시되는 빌드 알림에는 프로젝트에 대한 링크와 함께 종종 프로젝트의 대시보드에 대한 링크가 포함됩니다. Slack 사용자가 이러한 링크를 열 수 있으려면 해당 사용자가 Bluemix에 등록되어 있어야 하며 파이프라인이 구성된 프로젝트의 구성원이어야 합니다. 
 
 ## 파이프라인에서 빌드에 대한 HipChat 알림 작성
 {: #deliverypipeline_hipchat}
@@ -327,13 +326,13 @@ HipChat 알림을 작성하려면 다음을 수행하십시오.
 ## 파이프라인에서 작동 중단 없는 배치를 위해 Active Deploy 사용
 {: #deliverypipeline_activedeploy}
 
-Bluemix® DevOps Services Delivery Pipeline에서 IBM® Active Deploy 서비스를 사용하여 앱 또는 컨테이너 그룹의 연속 배치를 자동화할 수 있습니다. 시작하기에 대한 자세한 정보는 [Active Deploy 문서를 참조하십시오](https://new-console.ng.bluemix.net/docs/services/ActiveDeploy/updatingapps.html#adpipeline).
+Delivery Pipeline에서 IBM® Active Deploy 서비스를 사용하여 앱 또는 컨테이너 그룹의 지속적 배치를 자동화할 수 있습니다. 시작하기에 대한 자세한 정보는 [Active Deploy 문서](/docs/services/ActiveDeploy/updatingapps.html#adpipeline){: new_window}를 참조하십시오. 
 
 ## 파이프라인을 사용하여 컨테이너 이미지 빌드 및 배치
 {: #deliverypipeline_containers}
 
-IBM® Continuous Delivery Pipeline for Bluemix를 사용하여 앱 빌드와 Bluemix®로의 컨테이너 배치를 자동화할 수 있습니다. DevOps Services의 Delivery Pipeline 서비스는 다음을 지원합니다. 
+IBM Continuous Delivery Pipeline for Bluemix를 사용하여 앱 빌드 및 Bluemix에 대한 컨테이너 배치를 자동화할 수 있습니다. Delivery Pipeline 서비스는 다음을 지원합니다. 
   - Docker 이미지 빌드
   - Bluemix에 컨테이너의 이미지 배치
 
-시작하기에 대한 자세한 정보는 [Delivery Pipeline 및 컨테이너 개요](https://new-console.ng.bluemix.net/docs/containers/container_pipeline_ov.html#container_pipeline_ov)를 참조하십시오. 
+시작하기에 대한 자세한 정보는 [Delivery Pipeline 및 컨테이너 개요](/docs/containers/container_pipeline_ov.html#container_pipeline_ov){: new_window}를 참조하십시오. 

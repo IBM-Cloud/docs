@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-11-17"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -18,11 +18,18 @@ copyright:
 
 # 환경 특성 및 리소스
 {: #deliverypipeline_environment}
-마지막 업데이트 날짜: 2016년 11월 17일
-{: .last-updated}
 
-환경 특성 및 사전 설치된 리소스를 사용하여 IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} 서비스와 상호작용할 수 있습니다. 예를 들어, 작업 스크립트 또는 테스트 명령에서 이러한 서비스를 사용할 수 있습니다.
+환경 특성 및 사전 설치된 리소스를 사용하여 IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} 서비스와 상호작용할 수 있습니다. 예를 들어, 이들을 작업 스크립트 또는 테스트 명령에 통합할 수 있습니다.
 {:shortdesc}
+
+해당 **환경 특성** 탭에서 단계에 고유의 환경 특성을 추가할 수 있습니다. 단계의 모든 작업에서 환경 특성을 사용할 수 있습니다. 
+
+환경 특성 탭에서 다음 네 가지 유형의 특성을 추가할 수 있습니다. 
+* **텍스트**: 단일 행 값을 갖는 특성 키입니다. 
+* **텍스트 영역**: 다중 행 값을 갖는 특성 키입니다. 
+* **소스**: 단일 행 값을 갖는 특성 키입니다. 이 값은 별표로 표시됩니다. 
+* **특성**: 프로젝트의 저장소에 있는 파일입니다. 이 파일에는 여러 특성이 포함될 수 있습니다. 각 특성은 자체 고유의 행에 위치해야 합니다. 키-값 쌍을 구분하려면 등호 부호(=)를 사용하십시오. 
+
 
 다음 특성과 리소스는 기본적으로 파이프라인 환경에서 사용할 수 있습니다. 
 
@@ -109,7 +116,7 @@ copyright:
 |IBM Java 8 x86_64-80|java8 |/opt/IBM/java8 |
 |Apache Maven 3.2.1 |maven |/opt/IBM/maven |
 |IBM Node |node |/opt/IBM/node |
-|IBM Rational Team Concert&trade; SCM 도구 |RTC-SCM-Tools |/opt/IBM/RTC-SCM-Tools |
+|IBM Rational Team Concert&trade; SCM Tools |RTC-SCM-Tools |/opt/IBM/RTC-SCM-Tools |
 
 파이프라인 환경에서 IBM Node 0.10, 0.10.48, 0.12, 0.12.17, 4.2, 4.4.5, 4.6.0, 6.2.2, 6.7.0의 64비트 버전을 사용할 수 있습니다. 버전을 선택하려면 내보내기 명령을 사용하십시오. 
 
