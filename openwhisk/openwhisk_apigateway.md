@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-24"
+lastupdated: "2017-04-26"
 
 ---
 
@@ -16,10 +16,7 @@ lastupdated: "2017-04-24"
 
 OpenWhisk actions can benefit from being managed by API management.
 
-The API Gateway acts as a proxy to [Web Actions](openwhisk_webactions.html) and providing them with additional features features including HTTP method routing, security and rate limiting policies, view API usage and response logs, and define API sharing policies.
-
-Web Actions allows you to invoke an action with HTTP methods other than POST and in a public way without the action's authorization API key.
-
+The API Gateway acts as a proxy to [Web Actions](webactions.md) and provides them with additional features including HTTP method routing , client id/secrets, rate limiting, CORS, view API usage and response logs, and define API sharing policies.
 For more information on API Gateway feature you can read the [api management documentation](/docs/apis/management/manage_openwhisk_apis.html#manage_openwhisk_apis)
 
 ## Create APIs from OpenWhisk web actions using your Browser.
@@ -32,7 +29,7 @@ In the OpenWhisk Dashboard, click the [APIs tab](https://console.ng.bluemix.net/
 
 ### OpenWhisk CLI configuration
 
-Configure your OpenWhisk with the apihost `wsk property set --apihost openwhisk.ng.bluemix.net`
+Configure the OpenWhisk CLI with the apihost `wsk property set --apihost openwhisk.ng.bluemix.net`
 To be able to use the `wsk api` the CLI configuration file `~/.wskprops` needs to contain the Bluemix Access Token.
 To get the access token use the CLI command `wsk bluemix login`, for more information about the command run `wsk bluemix login -h`
 
@@ -40,7 +37,7 @@ To get the access token use the CLI command `wsk bluemix login`, for more inform
 
 **Note:** The APIs you created using the `wsk api-experimental` will continue to work for a short period, however you should begin migrating your APIs to web actions and reconfigure your existing apis using the new CLI command `wsk api`.
 
-### Create your first API usign the CLI
+### Create your first API using the CLI
 
 1. Create a JavaScript file with the following content. For this example, the file name is 'hello.js'.
   ```javascript
@@ -65,33 +62,31 @@ To get the access token use the CLI command `wsk bluemix login`, for more inform
   ```
   wsk api create /hello /world get hello --response-type json
   ```
-  {: pre}
   ```
   ok: created API /hello/world GET for action /_/hello
-  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/21ef035/hello/world
+  https://${APIHOST}:9001/api/21ef035/hello/world
   ```
   A new URL is generated exposing the `hello` action via a __GET__ HTTP method.
   
 4. Let's give it a try by sending a HTTP request to the URL.
   
   ```
-  curl https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/21ef035/hello/world?name=OpenWhisk
+  $ curl https://${APIHOST}:9001/api/21ef035/hello/world?name=OpenWhisk
   ```
-  {: pre}
   ```json
   {
   "payload": "Hello world OpenWhisk"
   }
   ```
-  The action `hello` got invoked, returning back a JSON string including the parameter `name` sent via query parameter. You can pass parameters to the action via simple query parameters, or via request body.
+  The web action `hello` was invoked, returning back a JSON object including the parameter `name` sent via query parameter. You can pass parameters to the action via simple query parameters, or via the request body. Web actions allow you to invoke an action in a public way without the OpenWhisk authorization API key.
   
 ### Full control over the HTTP response
   
-  The `--response-type` flag controls the target url of the web action to be proxied by the API Gateway. Using `--response-type json` as above returns the full result of the action in JSON format and automatically sets the Content-Type header to `application/json` which enables you to easily get started. 
+  The `--response-type` flag controls the target URL of the web action to be proxied by the API Gateway. Using `--response-type json` as above returns the full result of the action in JSON format and automatically sets the Content-Type header to `application/json` which enables you to easily get started. 
   
-  Once you get started you want to have full control over the http response properties like `statusCode`, `headers` and return different content types in the `body`. You can do this by using `--response-type http`, this will configure the target url of the web action with the `http` extension.
+  Once you get started you want to have full control over the HTTP response properties like `statusCode`, `headers` and return different content types in the `body`. You can do this by using `--response-type http`, this will configure the target URL of the web action with the `http` extension.
 
-  You can choose to change the code of the action to comply with the return of web actions with `http` extension or include the action in a sequence passing it's result to a new action that transform the result to be properly formatted for an http response. You can read more about response types and web actions extensions in the [Web Actions](openwhisk_webactions.html) documentation.
+  You can choose to change the code of the action to comply with the return of web actions with `http` extension or include the action in a sequence passing its result to a new action that transforms the result to be properly formatted for an HTTP response. You can read more about response types and web actions extensions in the [Web Actions](webactions.md) documentation.
 
   Change the code for the `hello.js` returning the JSON properties `body`, `statusCode` and `headers`
   ```javascript
@@ -126,14 +121,14 @@ To get the access token use the CLI command `wsk bluemix login`, for more inform
   "payload": "Hello world Serverless API"
   }
   ```
-  Now you are in full control of your APIs, can control the content like returning html, or set the status code for things like Not Found (404), or Unauthorized (401), or even Internal Error (500).
+  Now you are in full control of your APIs, can control the content like returning HTML, or set the status code for things like Not Found (404), or Unauthorized (401), or even Internal Error (500).
 
 ### Exposing multiple web actions
 
 Let's say you want to expose a set of actions for a book club for your friends.
 You have a series of actions to implement your backend for the book club:
 
-| action | http method | description |
+| action | HTTP method | description |
 | ----------- | ----------- | ------------ |
 | getBooks    | GET | get book details  |
 | postBooks   | POST | adds a book |
@@ -217,6 +212,11 @@ wsk api delete /club
 ```
 ok: deleted API /club
 ```
+### Changing the configuration
+
+You can edit the configuration in the OpenWhisk Dashboard, click the [APIs tab](https://console.ng.bluemix.net/openwhisk/apimanagement) to setup security, rate limiting and other features.
+
+### Importing the configuration
 
 Now let's restore the API named `Book Club` by using the file `club-swagger.json`
 ```
