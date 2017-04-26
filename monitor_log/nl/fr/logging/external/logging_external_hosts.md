@@ -17,10 +17,10 @@ lastupdated: "2017-02-16"
 # Configuration d'hôtes de journaux externes
 {: #thirdparty_logging}
 
-{{site.data.keyword.Bluemix_notm}} conserve une quantité limitée d'informations de journal en mémoire. Lorsque des informations sont journalisées, les anciennes informations sont remplacées par les informations plus récentes. Pour conserver toutes les informations de journal, vous pouvez sauvegarder vos journaux sur un hôte de journaux externe, par exemple dans un service de gestion des journaux tiers ou sur un autre hôte.
+{{site.data.keyword.Bluemix_notm}} conserve une quantité limitée d'informations de journal en mémoire. Lorsque des informations sont journalisées, les anciennes informations sont remplacées par les informations plus récentes. Pour conserver toutes les informations de journal, vous pouvez sauvegarder vos journaux d'application Cloud Foundry sur un hôte de journaux externe (par exemple, un service de gestion de journaux tiers ou un autre hôte).
 {:shortdesc}
 
-Pour transférer les journaux de votre application et du système vers un hôte de journaux externe, procédez comme suit :
+Pour acheminer vos journaux d'application CF et vos journaux système vers un hôte de journaux externe, procédez comme suit :
 
   1. Déterminez le noeud final de journalisation.
 

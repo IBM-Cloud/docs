@@ -16,7 +16,7 @@ lastupdated: "2017-02-16"
 # Analyse des journaux dans Kibana
 {: #analyzing_logs_Kibana3}
 
-Dans {{site.data.keyword.Bluemix}}, vous pouvez utiliser Kibana, plateforme de visualisation et d'analyse open source, pour surveiller, rechercher, analyser et visualiser des données dans différents graphiques, par exemple, des diagrammes et des tableaux. Utilisez Kibana pour effectuer des tâches analytiques avancées.
+Dans {{site.data.keyword.Bluemix}}, vous pouvez utiliser la plateforme de visualisation et d'analyse open source Kibana pour surveiller, rechercher, analyser et visualiser des données dans différents graphiques, par exemple, des diagrammes et des tableaux. Utilisez Kibana pour effectuer des tâches analytiques avancées.
 {:shortdesc}
 
 Vous pouvez lancer Kibana en procédant de l'une des manières suivantes :
@@ -58,7 +58,7 @@ Après avoir personnalisé un tableau de bord, vous pouvez choisir l'une des act
 
 Pour plus d'informations, voir la documentation [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html).
 
-**Remarque :** Kibana 3 et Kibana 4 sont pris en charge. Kibana 3 est obsolète.
+**Remarque :** Kibana 3 et Kibana 4 sont pris en charge. La version Kibana 3 est obsolète.
 
 
 ##  Accès au tableau de bord Kibana depuis le tableau de bord Bluemix

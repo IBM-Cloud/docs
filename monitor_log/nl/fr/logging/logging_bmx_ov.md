@@ -16,7 +16,7 @@ lastupdated: "2017-02-16"
 # Journalisation dans Bluemix
 {: #logging_bmx_ov}
 
-Les fonctions de journalisation de {{site.data.keyword.Bluemix_notm}} sont intégrées à la plateforme et la collecte des données est activée automatiquement pour les ressources de cloud. Par défaut, {{site.data.keyword.Bluemix_notm}} collecte et affiche des journaux pour vos applications, vos contextes d'exécution d'application et vos contexte d'exécution de traitement dans lesquels ces applications s'exécutent. 
+Les fonctions de journalisation de {{site.data.keyword.Bluemix}} sont intégrées à la plateforme et la collecte des données est activée automatiquement pour les ressources de cloud. Par défaut, {{site.data.keyword.Bluemix_notm}} collecte et affiche des journaux pour vos applications, vos contextes d'exécution d'application et vos contexte d'exécution de traitement dans lesquels ces applications s'exécutent. 
 {:shortdesc}
 
 Vous pouvez utiliser les fonctions de journalisation de {{site.data.keyword.Bluemix_notm}} pour comprendre le comportement de la plateforme cloud et les ressources qui s'exécutent sur cette dernière. Aucune instrumentation spéciale n'est requise pour collecter les journaux de sortie standard et d'erreur standard. Par exemple, vous pouvez utiliser des journaux pour fournir une analyse rétrospective relative à une application, détecter des problèmes dans votre service, identifier des vulnérabilités, dépanner vos déploiements d'application et le comportement d'exécution, détecter des problèmes dans l'infrastructure où vos applications s'exécutent, suivre votre application parmi les composants de la plateforme cloud et détecter des modèles que vous pouvez utiliser pour préempter des actions qui pourraient affecter votre accord sur les niveaux de service.
@@ -25,7 +25,7 @@ Lorsque vous exécutez vos applications dans le cloud, il se peut que vous ne pu
 
 {{site.data.keyword.Bluemix_notm}} enregistre les données de journal générées par la plateforme Cloud Foundry et par les applications Cloud Foundry. Ces journaux comportent les erreurs, les avertissements et les messages d'information qui sont générés pour votre application. Pour plus d'informations sur la journalisation dans Cloud Foundry, voir [Journalisation des applications Cloud Foundry dans Bluemix](logging_cf_apps.html#logging_bluemix_cf_apps).
 
-{{site.data.keyword.Bluemix_notm}} enregistre les données de journal générées par {{site.data.keyword.containershort}}. Pour plus d'informations sur la journalisation dans {{site.data.keyword.containershort}}, voir [Journalisation dans {{site.data.keyword.containershort}}](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_logs).   
+{{site.data.keyword.Bluemix_notm}} enregistre les données de journal générées par {{site.data.keyword.containershort}}. Pour plus d'informations sur la journalisation dans {{site.data.keyword.containershort}}, voir [Journalisation pour IBM Bluemix Container Service](containers/logging_containers_ov.html#logging_containers_ov).   
 
 
 Grâce à la fonctionnalité de journalisation offerte par {{site.data.keyword.Bluemix_notm}}, vous pouvez :
