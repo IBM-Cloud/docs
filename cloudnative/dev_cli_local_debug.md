@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-04-26"
 
 ---
 {:new_window: target="_blank"}
@@ -33,8 +33,8 @@ Steps to enable debug for a Java application:
 2. Connecting the debugger to your application:
 
 	* Eclipse
-      1. Import the “Existing maven project” project into Eclipse.
-      2. Create a [Java remote application ![External link icon](../icons/launch-glyph.svg "External link icon")](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm)” debug configuration.
+      1. Import the **Existing maven project** project into Eclipse.
+      2. Create a [Java remote application ![External link icon](../icons/launch-glyph.svg "External link icon")](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Ftasks%2Ftask-remotejava_launch_config.htm) debug configuration.
       		1. Enter the IP address or `localhost:<port>`  
       		2. Enter `7777` for port number.
       		3. Specify the name of the java project that you imported.
