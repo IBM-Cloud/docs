@@ -47,7 +47,7 @@ In {{site.data.keyword.Bluemix_notm}}, you can use organizations to enable colla
 
 When you create an organization, the organization name must be unique in {{site.data.keyword.Bluemix_notm}}. If the organization name is already in use by another {{site.data.keyword.Bluemix_notm}} Public, Dedicated, or Local user, then you must specify a new name. After you create the organization, you will be automatically assigned the *Organization Manager* permission, which enables you to edit the organization name, add team members, and create or delete spaces in the organization.
 
-You can use the CLI [`iam delete-org`](/docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_iam_org_delete) command to delete organizations. When you delete an organization, all the spaces, applications, and services within the organization are deleted. 
+You can use the [`bx iam org-delete`](/docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_iam_org_delete) command to delete organizations. When you delete an organization, all the spaces, applications, and services within the organization are deleted.  
 
 The following [user roles](/docs/admin/users_roles.html#userrolesinfo) can be assigned to team members in an organization:
 
@@ -107,7 +107,7 @@ Complete the following steps to rename your organization:
 ## Deleting an existing org or space
 {: #deleteorgs}
 
-As the account owner, you can delete an org by using the {{site.data.keyword.Bluemix_notm}} Bluemix CLI. Use the [`bx iam org-delete`](/docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_iam_org_delete) command to delete organizations. When you delete an organization, all the spaces, applications, and services within the organization are deleted. 
+As the account owner, you can delete an org by using the {{site.data.keyword.Bluemix_notm}} CLI. Use the [`bx iam org-delete`](/docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_iam_org_delete) command to delete organizations. When you delete an organization, all the spaces, applications, and services within the organization are deleted. 
 
 **Note**: Deleting operations cannot be reversed. You lose all your applications and services that are associated with the organization.
 
