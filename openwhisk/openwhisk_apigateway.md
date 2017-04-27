@@ -33,7 +33,7 @@ Configure the OpenWhisk CLI with the apihost `wsk property set --apihost openwhi
 To be able to use the `wsk api` the CLI configuration file `~/.wskprops` needs to contain the Bluemix Access Token.
 To get the access token use the CLI command `wsk bluemix login`, for more information about the command run `wsk bluemix login -h`
 
-**Note:** If the command errors requiring single sign on (sso), this is not currently supported. As a workaround login with the CloudFoundry CLI using `cf login`, then copy the Access Token from the HOME directory configuration file `~/.cf/config.json` into the `~/.wskprops` file as the property `APIGW_ACCESS_TOKEN="value of AccessToken`. Remove the prefix `Bearer ` when copying the access token string.
+**Note:** If the command errors requiring single sign on (sso), this is not currently supported. As a workaround login with the Bluemix CLI using `bluemix login`, then copy the Access Token from the HOME directory configuration file `~/.bluemix/.cf/config.json` into the `~/.wskprops` file as the property `APIGW_ACCESS_TOKEN="value of AccessToken`. Remove the prefix `Bearer ` when copying the access token string.
 
 **Note:** The APIs you created using the `wsk api-experimental` will continue to work for a short period, however you should begin migrating your APIs to web actions and reconfigure your existing apis using the new CLI command `wsk api`.
 
@@ -64,14 +64,14 @@ To get the access token use the CLI command `wsk bluemix login`, for more inform
   ```
   ```
   ok: created API /hello/world GET for action /_/hello
-  https://${APIHOST}:9001/api/21ef035/hello/world
+  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/21ef035/hello/world
   ```
   A new URL is generated exposing the `hello` action via a __GET__ HTTP method.
   
 4. Let's give it a try by sending a HTTP request to the URL.
   
   ```
-  $ curl https://${APIHOST}:9001/api/21ef035/hello/world?name=OpenWhisk
+  $ curl https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/21ef035/hello/world?name=OpenWhisk
   ```
   ```json
   {
