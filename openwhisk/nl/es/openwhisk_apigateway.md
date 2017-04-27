@@ -15,17 +15,17 @@ lastupdated: "2017-03-16"
 # API Gateway (Experimental)
 {: #openwhisk_apigateway}
 
-La aplicación [Web Actions](openwhisk_webactions.html) está disponible a nivel general. 
+[Web Actions](openwhisk_webactions.html) está disponible a nivel general.
 
-Web Actions le permite invocar una acción con métodos HTTP que no sean POST sin la clave de API de autorización de la acción. 
+Web Actions le permite invocar una acción con métodos HTTP que no sean POST sin la clave de API de autorización de la acción.
 
-Como resultado de los comentarios de los usuarios, Web Actions constituye el modelo de programación elegido para crear acciones de OpenWhisk capaces de manejar sucesos HTTP. 
+Como resultado de los comentarios de los usuarios, Web Actions constituye el modelo de programación elegido para crear acciones de OpenWhisk capaces de manejar sucesos HTTP.
 
-La mayoría de las funciones de API Gateway se han fusionado en Web Actions; Web Actions le permite manejar cualquier solicitud HTTP y devolver respuestas HTTP con control completo por parte de la acción de la web. 
+La mayoría de las funciones de API Gateway se han fusionado en Web Actions; Web Actions le permite manejar cualquier solicitud HTTP y devolver respuestas HTTP con control completo por parte de la acción de la web.
 
-Pronto estará disponible una integración revisada de OpenWhisk API Gateway. Se configurará para que sirva como proxy de Web Actions, ofreciendo las funciones de API Gateway como limitación de velocidad, validación de señales oauth, claves API, etc. 
+Pronto estará disponible una integración revisada de OpenWhisk API Gateway. Se configurará para que sirva como proxy de Web Actions, ofreciendo las funciones de API Gateway como limitación de velocidad, validación de señales oauth, claves API, etc. Consulte el vídeo [Crear y controlar API](https://youtu.be/XT9KwWTnnzo)
 
-**Nota:** las API que haya creado con `wsk api-experimental` seguirán funcionando, aunque debe empezar a migrar sus API a acciones de la web. 
+**Nota:** las API que haya creado con `wsk api-experimental` seguirán funcionando, aunque debe empezar a migrar sus API a acciones de la web.
 
 ## Configuración de CLI de OpenWhisk
 {: #openwhisk_apigateway_cli}
