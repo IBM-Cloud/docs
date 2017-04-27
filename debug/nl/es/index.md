@@ -28,7 +28,7 @@ Los registros tienen un formato fijo. En registros detallados, puede filtrar reg
 
 ## Depuración de errores de transferencia
 {: #debugging-staging-errors}
-Es posible que tenga algún problema al transferir sus apps en {{site.data.keyword.Bluemix_notm}}. Si la app no se puede transferir, puede buscar y revisar los registros de transferencia (STG) para determinar qué ha ocurrido durante el despliegue de la aplicación y solucionar el problema. Para obtener más información sobre los métodos para visualizar registros para las apps Bluemix, consulte [Visualización de registros](/docs/monitor_log/monitoringandlogging.html#viewing_logs).  
+Es posible que tenga algún problema al transferir sus apps en {{site.data.keyword.Bluemix_notm}}. Si la app no se puede transferir, puede buscar y revisar los registros de transferencia (STG) para determinar qué ha ocurrido durante el despliegue de la app y solucionar el problema. Para obtener más información sobre los métodos para visualizar registros para las apps Bluemix, consulte [Visualización de registros](/docs/monitor_log/monitoringandlogging.html#viewing_logs).  
 
 Para obtener información explicativa sobre el motivo por el cual su app podría fallar en {{site.data.keyword.Bluemix_notm}}, debe saber cómo se despliega una app en {{site.data.keyword.Bluemix_notm}} y cómo se ejecuta. Para obtener información detallada, consulte [despliegue de apps](/docs/manageapps/depapps.html#appdeploy).
 
