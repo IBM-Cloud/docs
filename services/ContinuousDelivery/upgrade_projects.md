@@ -32,7 +32,7 @@ You can learn about toolchains on [YouTube ![External link icon](../../icons/lau
 ## Prerequisites
 {: #upgrade_prereqs}    
 
-- To acess your upgraded project's toolchain, you need a Bluemix ID. Before you upgrade, you must verify that you have an active Bluemix ID. If you don't have one, [sign up](https://console.ng.bluemix.net/registration/).
+- To access your upgraded project's toolchain, you need a Bluemix ID. Before you upgrade, you must verify that you have an active Bluemix ID. If you don't have one, [sign up](https://console.ng.bluemix.net/registration/).
 - Make sure that your DevOps Services project owner is correct. The toolchain that is created from your project will be part of that owner's Bluemix organization.
 
 **Important:** 
