@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-10"
+lastupdated: "2017-04-26"
 
 ---
 
@@ -14,8 +14,12 @@ lastupdated: "2017-4-10"
 
 # Getting started with Delivery Pipeline Classic {: #delivery-pipeline}  
 
-To automate your builds and deployments to {{site.data.keyword.Bluemix}}, use the IBM {{site.data.keyword.deliverypipeline}} Classic service for {{site.data.keyword.Bluemix_notm}}.
+
+If you’re an existing {{site.data.keyword.deliverypipeline}} Classic service user, you can continue to use the service until it is no longer supported on 5 July 2017.
 {: shortdesc}
+
+
+**This service is being deprecated:**  All instances of this service are being deprecated. Existing instances can be used until 5 July 2017. For more information, see the [deprecation announcement blog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/04/delivery-pipeline-retirement/){: new_window}. To get the latest tools for app delivery, use the {{site.data.keyword.contdelivery_full}} service. For upgrade instructions, see [Upgrade your DevOps Services project to a toolchain](/docs/services/ContinuousDelivery/upgrade_projects.html){: new_window}.
 
 With the {{site.data.keyword.deliverypipeline}} Classic service, you can choose from several build types. You provide the build script, and {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.jazzhub_short}} runs it; you don't need to set up build systems. Then, with one click, you can automatically deploy your app to one or many {{site.data.keyword.Bluemix_notm}} spaces, public Cloud Foundry servers, or Docker containers on IBM Containers for {{site.data.keyword.Bluemix_notm}}.  
 
