@@ -2,7 +2,7 @@
 
 copyright:
  years: 2017
-lastupdated: "2017-2-21"
+lastupdated: "2017-4-10"
 
 ---
 
@@ -25,7 +25,7 @@ The tasks in a group with a parallel execution pattern become eligible simultane
 
 You can modify a deployment plan after you start a deployment. You can add, delete, and modify tasks.
 
-After all tasks are resolved, the deployment is complete. A task is resolved if it has a status of `Complete`, `Failed`, or `Skipped`.
+After all tasks are resolved, the deployment is complete. A task is resolved if it has a status of `Complete`, `Failed`, or `Skipped`. If you reopen a task or add a task after the deployment is compllete, the deployment's status changes to `In Progress`.
 
 ## Starting deployments manually
 {: #deployment_start}
