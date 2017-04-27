@@ -38,11 +38,11 @@ Almacenamiento local | 2,98 TB | 8,94 TB |
 
 ## Instalación
 
-En {{site.data.keyword.Bluemix}} Dedicado y {{site.data.keyword.Bluemix}} Local, los registros estarán activos para todas las apps de forma predeterminada. Para ver información sobre la lectura de registros estándares, consulte Registro para apps que se ejecutan en Cloud Foundry. Además, el registro avanzado se puede habilitar en los entornos {{site.data.keyword.Bluemix}} Dedicado y {{site.data.keyword.Bluemix}} Local.
+En {{site.data.keyword.Bluemix}} Dedicado y {{site.data.keyword.Bluemix}} Local, los registros estarán activos para todas las apps de forma predeterminada. Para obtener más información sobre cómo leer los registros estándares, consulte Registro de apps que se ejecutan en Cloud Foundry. Además, el registro avanzado se puede habilitar en los entornos {{site.data.keyword.Bluemix}} Dedicado y {{site.data.keyword.Bluemix}} Local.
 
 ## Retención de registros
 
-En las aplicaciones de Cloud Foundry {{site.data.keyword.Bluemix}} Dedicado y {{site.data.keyword.Bluemix}} Local, los datos de registro se almacenan durante 30 días de forma predeterminada.
+En las apps de Cloud Foundry {{site.data.keyword.Bluemix}} Dedicado y {{site.data.keyword.Bluemix}} Local, los datos de registro se almacenan durante 30 días de forma predeterminada.
 
 ## Visualización de registros para apps Cloud Foundry en {{site.data.keyword.Bluemix}} Dedicado y {{site.data.keyword.Bluemix}} Local
 {: #dedicated_apps_ml_logs_dash}
