@@ -57,12 +57,9 @@ CLI de IBM Containers es un plug-in de CLI de {{site.data.keyword.Bluemix_notm}}
  </tr>
  <tr>
   <td>[bluemix ic groups](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_groups)</td>
-  <td>[bluemix ic info
-](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_info)</td>
-  <td>[bluemix ic init
-](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_init)</td>
-  <td>[bluemix ic images
-](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_images)</td>
+  <td>[bluemix ic info](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_info)</td>
+  <td>[bluemix ic init](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_init)</td>
+  <td>[bluemix ic images](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_images)</td>
   <td>[bluemix ic inspect](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_inspect)</td>
  </tr>
  <tr>
@@ -75,8 +72,7 @@ CLI de IBM Containers es un plug-in de CLI de {{site.data.keyword.Bluemix_notm}}
  <tr>
  <td>[bluemix ic kill](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_kill)</td>
  <td>[bluemix ic logs](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_logs)</td>
- <td>[bluemix ic namespace-get
-](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_namespace_get)</td>
+ <td>[bluemix ic namespace-get](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_namespace_get)</td>
  <td>[bluemix ic namespace-set](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_namespace_set)</td>
  <td>[bluemix ic pause](/docs/cli/reference/bluemix_cli/index.html#pause)</td>
  </tr>
@@ -109,22 +105,18 @@ CLI de IBM Containers es un plug-in de CLI de {{site.data.keyword.Bluemix_notm}}
  <td>[bluemix ic volume-create](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volume_create)</td>
  </tr>
  <tr>
- <td>[bluemix ic volume-fs
-](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volume_fs)</td>
+ <td>[bluemix ic volume-fs](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volume_fs)</td>
  <td>[bluemix ic volume-fs-create](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volume_fs_create)</td>
  <td>[bluemix ic volume-fs-remove](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volume_fs_remove)</td>
  <td>[bluemix ic volume-fs-inspect](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volume_fs_inspect)</td>
- <td>[bluemix ic volume-fs-flavors
-](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volume_fs_flavors)</td>
+ <td>[bluemix ic volume-fs-flavors](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volume_fs_flavors)</td>
  </tr>
  <tr>
  <td>[bluemix ic volume-remove](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volume_remove)</td>
- <td>[bluemix ic volumes
-](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volumes)</td>
+ <td>[bluemix ic volumes](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volumes)</td>
  <td>[bluemix ic wait](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_wait)</td>
  <td>[bluemix ic wait-status](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_wait_status)</td>
- <td>[bluemix ic version
-](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_version)</td>
+ <td>[bluemix ic version](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_version)</td>
  </tr>
   </tbody>
  </table>
