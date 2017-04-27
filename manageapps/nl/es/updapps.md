@@ -63,7 +63,7 @@ Para crear y utilizar un dominio personalizado en {{site.data.keyword.Bluemix_no
 
         El nombre del dominio personalizado que desea utilizar.
 
-  2. Añada la ruta con el dominio personalizado a una aplicación. Para aplicaciones CF, escriba el siguiente mandato:
+  2. Añada la ruta con el dominio personalizado a una aplicación. Para apps CF, escriba el siguiente mandato:
 
     ```
     cf map-route myapp mydomain -n nombre_host
