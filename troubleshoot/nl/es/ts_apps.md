@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-01-10"
+lastupdated: "2017-3-16"
 
 ---
 
@@ -383,7 +383,7 @@ Puede aumentar la cuota de memoria de su cuenta o reducir la memoria que utiliza
 
 Una app no se reinicia automáticamente si el servicio que ha enlazado a la app deja de funcionar.	  
 
-Si se bloquea un servicio enlazado con una app, se pueden producir problemas como paradas, excepciones o intentos de reconexión. {{site.data.keyword.Bluemix_notm}} no reinicia automáticamente la aplicación para solucionar los problemas.
+Si se bloquea un servicio enlazado con una app, se pueden producir problemas como paradas, excepciones o intentos de reconexión. {{site.data.keyword.Bluemix_notm}} no reinicia automáticamente la app para solucionar los problemas.
 {: tsSymptoms}
 
 Este comportamiento se debe al diseño de Cloud Foundry.
@@ -420,9 +420,9 @@ se guardan en el archivo de manifiesto de su app. La próxima vez que abra el as
 ## No se muestran los iconos de {{site.data.keyword.Bluemix_notm}} Live Sync
 {: #ts_llz_lkb_3r}
 
-Ha creado una app en IBM Bluemix DevOps Services, pero los iconos de IBM Bluemix Live Sync no se muestran en el IDE de web.
+Ha creado una app, pero los iconos de IBM Bluemix Live Sync no se muestran en el IDE de web.
 
-Al editar una app Node.js en DevOps Services Web IDE, los iconos de {{site.data.keyword.Bluemix_notm}} Live de editar, reinicio rápido y depurar no se muestran.
+Al editar una app Node.js en Web IDE, los iconos de {{site.data.keyword.Bluemix_notm}} Live de editar, reinicio rápido y depurar no se muestran.
 {: tsSymptoms}
 
 Los iconos no están disponibles en estas circunstancias:
@@ -432,7 +432,7 @@ Los iconos no están disponibles en estas circunstancias:
   * La app está almacenada en un subdirectorio en lugar de en el nivel superior del proyecto, pero la vía de acceso al subdirectorio no está especificada en el archivo `manifest.yml`.
   * La app no contiene un archivo `package.json`.
 
-Utilice uno de los siguiente métodos: 
+Utilice uno de los siguientes métodos:
 {: tsResolve} 
 
   * Si el archivo `manifest.yml` no está almacenado en el nivel superior del proyecto, guárdelo ahí.
@@ -440,7 +440,7 @@ Utilice uno de los siguiente métodos:
   ```
    path: vía_acceso_a_app
    ```
-  * Cree un archivo `package.json` que esté en el directorio de la app.
+  * Cree un archivo `package.json` que esté en el directorio de la app.   
   
   
 ## No se pueden encontrar organizaciones en {{site.data.keyword.Bluemix_notm}}
@@ -626,18 +626,18 @@ Utilice uno de los métodos siguientes en función de la causa del problema:
 Para ver más sugerencias sobre las apps Node.js, consulte [Consejos para las aplicaciones Node.js](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html ![External link icon](../icons/launch-glyph.svg "icono de enlace externo"){: new_window}.	
 
 
-## Aparecen errores de configuración en el archivo `server.xml` después de importar una app {{site.data.keyword.Bluemix_notm}} Liberty de Bluemix DevOps Services en Eclipse
+## Aparecen errores de configuración en el archivo `server.xml` después de importar una app {{site.data.keyword.Bluemix_notm}} Liberty en Eclipse
 {: #ts_eclipse}
 
-Si ve errores de configuración en el archivo `server.xml` después de importar una app {{site.data.keyword.Bluemix_notm}} Liberty de IBM Bluemix DevOps Services en Eclipse, es posible que tenga que eliminar el archivo `server.xml` del proyecto. 
+Si ve errores de configuración en el archivo `server.xml` después de importar una app {{site.data.keyword.Bluemix_notm}} Liberty en Eclipse, es posible que tenga que eliminar el archivo `server.xml` del proyecto. 
 
-Después de importar una app {{site.data.keyword.Bluemix_notm}} Liberty de {{site.data.keyword.Bluemix_notm}} DevOps Services en Eclipse, verá errores de configuración en el archivo `server.xml` en la vista Problemas de Eclipse. 
+Después de importar una app {{site.data.keyword.Bluemix_notm}} Liberty en Eclipse, verá errores de configuración en el archivo `server.xml` en la vista Problemas de Eclipse.
 {: tsSymptoms}
 
 El paquete de compilación de Liberty utiliza el archivo `server.xml` para configurar la app y genera un archivo `runtime-vars.xml` cuando la app Liberty se envía a {{site.data.keyword.Bluemix_notm}}. Cuando importa la app en Eclipse, el archivo `runtime-vars.xml` no existe en el entorno local.
 {: tsCauses}
 
-Puede resolver este problema eliminando el archivo server.xml del proyecto. El paquete de compilación crea el archivo `server.xml` de forma dinámica cuando se envía la app como una aplicación WAR. Para obtener más información, consulte [Liberty for Java](/docs/runtimes/liberty/index.html).
+Puede resolver este problema eliminando el archivo server.xml del proyecto. El paquete de compilación crea el archivo `server.xml` de forma dinámica cuando se envía la app como una app WAR. Para obtener más información, consulte [Liberty for Java](/docs/runtimes/liberty/index.html).
 {: tsResolve}
 	
 	
@@ -717,7 +717,7 @@ Pulsa el botón **Desplegar en Bluemix**, pero el paso "Creando proyecto" no se 
 Es posible que su cuenta de {{site.data.keyword.Bluemix_notm}} haya caducado.
 {: tsCauses} 
 
-Utilice uno de los siguiente métodos:
+Utilice uno de los siguientes métodos:
 {: tsResolve}
 
   * Inicie sesión en {{site.data.keyword.Bluemix_notm}} y actualice la información de cuenta.
@@ -738,7 +738,7 @@ Este problema se podría producir por las siguientes razones:
   * Es posible que haya un problema en el HTML o el markdown del fragmento de código del botón.
   * Es posible que haya un problema y que los caracteres especiales, los parámetros de consulta o fragmentos del URL impidan que se pueda acceder al repositorio Git.
 
-Utilice uno de los siguiente métodos:
+Utilice uno de los siguientes métodos:
 {: tsResolve}
 
   * Compruebe que el repositorio Git exista, se pueda acceder públicamente y que el URL sea correcto.
@@ -767,7 +767,7 @@ Para diagnosticar el problema, revise los registros de compilación y despliegue
   3. En la etapa anómala, pulse **Ver registros e historial**.
   4. Localice el mensaje de error.
    
-Utilice uno de los siguiente métodos:
+Utilice uno de los siguientes métodos:
 {: tsResolve}
 
   * Si el mensaje de error indica que no hay suficiente espacio en el espacio de {{site.data.keyword.Bluemix_notm}} para desplegar la app, seleccione otro espacio.
@@ -830,7 +830,7 @@ métodos siguientes, el adecuado:
 
 * Si {{site.data.keyword.jazzhub}} no identifica el proyecto como un proyecto, cree un archivo `project.json` en el directorio raíz del proyecto.
 * Si {{site.data.keyword.jazzhub_short}} no ha podido determinar en qué carpeta está su app, y su app no está en el directorio raíz del proyecto, siga uno de los pasos siguientes:
-  * Cree un archivo `manifest.yml` en el directorio raíz del proyecto y edite el archivo para que apunte a la ubicación del app. Por ejemplo, `path: vía_acceso_app`.
+  * Cree un archivo `manifest.yml` en el directorio raíz del proyecto y edite el archivo para que apunte a la ubicación de la app. Por ejemplo, `path: vía_acceso_app`.
   * Mueva la app al directorio raíz del proyecto.
 * Si {{site.data.keyword.jazzhub_short}} no detecta que la app es una app Node.js, cree un archivo `package.json` en la carpeta de app del proyecto.
   

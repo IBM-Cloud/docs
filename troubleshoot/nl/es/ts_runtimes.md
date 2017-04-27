@@ -45,7 +45,7 @@ Puede utilizar paquetes de compilación que tengan mecanismos incorporados para 
 Si el paquete de compilación que utiliza no ofrece un mecanismo para cargar los últimos componentes automáticamente, puede suprimir manualmente el contenido del directorio de memoria caché y volver a enviar por push la app. Siga los siguientes pasos:
 
  1. Extraiga una rama de un paquete de compilación nulo como, por ejemplo, https://github.com/ryandotsmith/null-buildpack. Para obtener información sobre cómo extraer una rama, consulte [Conceptos básicos de Git - Obtención de un repositorio Git![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}.  
- 2. Añada la siguiente línea al archivo `null-buildpack/bin/compile` y confirme los cambios. Para obtener información sobre cómo confirmar cambios, consulte [Conceptos básicos sobre - Grabación de cambios en el repositorio![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
+ 2. Añada la siguiente línea al archivo `null-buildpack/bin/compile` y confirme los cambios. Para obtener información sobre cómo confirmar cambios, consulte [Conceptos básicos de Git - Grabación de cambios en el repositorio![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
   ```
   rm -rfv $2/*
   ```
@@ -63,7 +63,7 @@ Si el paquete de compilación que utiliza no ofrece un mecanismo para cargar los
 
 Puede que vea mensajes que contengan AVISOS procedentes de los registros. Puede detener el registro de estos mensajes cambiando el nivel de registro.	
 
-Al envía por push una app a {{site.data.keyword.Bluemix_notm}} utilizando un paquete de compilación PHP, es posible que vea mensajes que contengan `AVISOS`:
+Al enviar por push una app a {{site.data.keyword.Bluemix_notm}} utilizando un paquete de compilación PHP, es posible que vea mensajes que contengan `AVISOS`:
 {: tsSymptoms}
 
 ```
@@ -81,7 +81,7 @@ error_log stderr notice;
 pid @{HOME}/nginx/logs/nginx.pid;
 ```
 	
-Los mensajes de `AVISO` son informativos y pueden no indicar un problema. Puede detener el registro de estos mensajes cambiando el nivel de registro de `stderr notice` por `stderr error`
+Los mensajes de `AVISO` son informativos y pueden no indicar un problema. Puede detener el registro de estos mensajes cambiando el nivel de registro de `stderr notice` a `stderr error`
 en el archivo nginx-defaults.conf del paquete de compilación. Por ejemplo: 	
 {: tsResolve}
 
@@ -90,7 +90,7 @@ daemon off;
 error_log stderr error;
 pid @{HOME}/nginx/logs/nginx.pid;
 ```
-Para obtener más información sobre cómo cambiar la configuración de registro, consulte [error_log![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}.
+Para obtener más información sobre cómo cambiar la configuración de registro, consulte [error_log ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}.
 	
 
 ## No se puede importar una biblioteca Python de terceros en {{site.data.keyword.Bluemix_notm}}
@@ -223,7 +223,7 @@ incluido el uso de disco, para dos instancias de una app:
     ```
   * La cuota de disco está limitada por la cuota actual de la organización.
 
-Utilice uno de los siguiente métodos:
+Utilice uno de los siguientes métodos:
 {: tsResolve} 
 
   * Suprima los archivos de volcado después de descargarlos.

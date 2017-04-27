@@ -55,7 +55,7 @@ Cuando intenta crear una app en {{site.data.keyword.Bluemix_notm}}, ve el siguie
 
 `BXNUI0097E: Para poder añadir una app, al menos un espacio debe estar asociado con la organización y la región. En el Panel de control, pulse Crear un espacio. Cuando se cree el espacio, vuélvalo a intentar.`
 
-Las aplicaciones de {{site.data.keyword.Bluemix_notm}} se deben crear en un espacio de la organización.
+Las apps de {{site.data.keyword.Bluemix_notm}} se deben crear en un espacio de la organización.
 {: tsCauses} 
 
 Para crear un espacio, utilice uno de estos métodos: 
