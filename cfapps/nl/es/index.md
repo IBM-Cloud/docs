@@ -35,7 +35,7 @@ VISIÓN GENERAL DE LA APP**. Se visualiza la Visión general de su app en el pan
   6. En la Visión general de la app, pulse Añadir Git para guardar el origen de la aplicación en un
 repositorio Git y crear un proyecto alojado en Git. También puede desplegar la aplicación desde {{site.data.keyword.jazzhub_title}}.
 
-**Nota:** Si se bloquea un servicio enlazado con una app, esta puede dejar de ejecutarse o contener errores. {{site.data.keyword.Bluemix_notm}} no reinicia automáticamente la aplicación para solucionar los problemas. Considere la posibilidad de codificar su app para identificar y recuperarse de paradas, excepciones y
+**Nota:** Si se bloquea un servicio enlazado con una app, esta puede dejar de ejecutarse o contener errores. {{site.data.keyword.Bluemix_notm}} no reinicia automáticamente la app para solucionar los problemas. Considere la posibilidad de codificar su app para identificar y recuperarse de paradas, excepciones y
 fallos de conexión. Para obtener más información, consulte el tema de resolución de problemas Las apps no se reinician automáticamente.
 
 ## Opciones para trabajar con apps
