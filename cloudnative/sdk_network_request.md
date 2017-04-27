@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-24"
+lastupdated: "2017-04-27"
 
 ---
 {:new_window: target="_blank"}
@@ -22,23 +22,29 @@ You can also use the `BMSCore` SDK to make network requests to any resource.
 	
 2. Make a network request.
 
-	```
-	public void makeGetCall() {
-		Thread thread = new Thread(new Runnable() {
-			@Override
-			public void run() {
-				try  {
-					Request request = new Request("http://httpbin.org/get", "GET");
-					request.send(null, null);
-				} catch (Exception e) {
-					// Handle failure here.
-				}
-			}
-		});
-		thread.start();
-	}
+	```Java
+	String customResourceURL = "<your resource URL>";
+	Request request = new Request(customResourceURL, "GET");
+
+	ResponseListener listener = new ResponseListener() {
+		@Override
+		public void onSuccess(Response response) {
+			Log.i("MyApp", "Response: " + response.getResponseText());
+		}
+
+		@Override
+		public void onFailure(Response response, Throwable t, JSONObject extendedInfo) {
+			Log.i("MyApp", "Request failed. Response: " + response.getResponseText() + ". Error: " + t.getLocalizedMessage());
+		}
+	};
+        
+	request.send(getApplicationContext(), listener);
 	```
 	{: codeblock}
+
+The `Request` class is a simple way to make an HTTP request and get the response after the request is completed. If you are downloading or uploading large files or large bodies of data, you can use the `Request` `download` or `upload` methods. To monitor the progress of the download or upload, create a custom `ProgressListener` and pass it to the `download` or `upload` methods.
+
+<!--For complete usage examples, see the `BMSCore` GitHub [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core).-->
 
 
 ## iOS
@@ -52,18 +58,17 @@ You can also use the `BMSCore` SDK to make network requests to any resource.
 	{: #ios-swift3 notoc}
 	
 	```Swift
-	 	// Make a network request
-		let customResourceURL = "<your resource URL>"
-		let request = Request(url: customResourceURL, method: HttpMethod.GET)
+	let customResourceURL = "<your resource URL>"
+	let request = Request(url: customResourceURL, method: HttpMethod.GET)
 	
-		let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
-	   	if error == nil {
-	       	    print ("response:\(response?.responseText), no error")
-	    	  } else {
-	       	    print ("error: \(error)")
-	    	}
+	let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
+		if error == nil {
+			print ("Response: \(response?.responseText), no error")
+		} else {
+			print ("Error: \(error)")
 		}
-		request.send(completionHandler: callBack)
+	}
+	request.send(completionHandler: callBack)
 	```
 	{: codeblock}
  
@@ -71,18 +76,17 @@ You can also use the `BMSCore` SDK to make network requests to any resource.
 	{: #ios-swift22 notoc}
 	
 	```Swift
-	 	// Make a network request
-		let customResourceURL = "<your resource URL>"
-		let request = Request(url: customResourceURL, method: HttpMethod.GET)
+	let customResourceURL = "<your resource URL>"
+	let request = Request(url: customResourceURL, method: HttpMethod.GET)
 	
-		let callBack:BMSCompletionHandler = {(response: Response?, error: NSError?) in
-	   	if error == nil {
-	       	    print ("response:\(response?.responseText), no error")
-	    	  } else {
-	       	    print ("error: \(error)")
-	    	}
+	let callBack:BMSCompletionHandler = {(response: Response?, error: NSError?) in
+		if error == nil {
+			print ("Response: \(response?.responseText), no error")
+		} else {
+			print ("Error: \(error)")
 		}
-		request.send(completionHandler: callBack)
+	}
+	request.send(completionHandler: callBack)
 	```
 	{: codeblock}
 
@@ -100,7 +104,7 @@ For complete usage examples, see the `BMSCore` GitHub [README](https://github.co
 
 2. Create a network request.
 
-	```
+	```Javascript
 	var success = function(data) {
 		console.log("success", data);
 	}
