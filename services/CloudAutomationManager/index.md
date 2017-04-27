@@ -64,7 +64,7 @@ After you add the Cloud Automation Manager service from the Bluemix catalog, to 
 
 <!-- Note that before you can use the Cloud Automation Manager service to deploy templates to the IBM Cloud infrastructure (SoftLayer), you may need to upgrade and unify your Bluemix and SoftLayer accounts. For more information, see [Upgrading and unifying Bluemix and SoftLayer billing accounts](https://console.{DomainName}/docs/admin/softlayerlink.html){:new_window}. -->
 
-Note that you can deploy templates to IBM Cloud infrastructures only within the region, organization, and space to which you are logged in.
+<!-- Note that you can deploy templates to IBM Cloud infrastructures only within the region, organization, and space to which you are logged in. -->
 
 Complete the following steps:
 
