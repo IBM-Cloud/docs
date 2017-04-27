@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-21"
+  years: 2015, 2017
+lastupdated: "2017-3-16"
 
 ---
 
@@ -11,14 +11,14 @@ lastupdated: "2016-12-21"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#Compartición de conductos en proyectos de ejemplo de {{site.data.keyword.jazzhub_short}} {: #share-pipeline}
+#Compartición de conductos basados en texto en proyectos de ejemplo{: #share-pipeline}
 
-Para proyectos de ejemplo desplegados en {{site.data.keyword.Bluemix_notm}} por medio del botón Desplegar en {{site.data.keyword.Bluemix_notm}}, puede definir las configuraciones de interconexión (conductos) de {{site.data.keyword.jazzhub_short}} como archivos YAML. Los conductos definidos como texto se pueden compartir, de forma que las personas que bifurcan (fork) su proyecto no tengan que configurar sus propios conductos. Esta característica está en desarrollo: el formato de YAML y la implementación podrían cambiar en cualquier momento. Actualmente, esta característica solo está disponible para proyectos con repositorios Git y GitHub cuyo objetivo sea {{site.data.keyword.Bluemix_notm}}. 
+Para proyectos de ejemplo desplegados en {{site.data.keyword.Bluemix_notm}} por medio del botón Desplegar en {{site.data.keyword.Bluemix_notm}}, puede definir las configuraciones de interconexión (conductos) como archivos YAML. Los conductos definidos como texto se pueden compartir, de forma que las personas que bifurcan (fork) su proyecto no tengan que configurar sus propios conductos. Esta característica está en desarrollo: el formato de YAML y la implementación podrían cambiar en cualquier momento. Actualmente, esta característica solo está disponible para proyectos con repositorios Git y GitHub cuyo objetivo sea {{site.data.keyword.Bluemix_notm}}. 
 {: shortdesc} 
 
 En el directorio raíz de proyecto del ejemplo, debe tener una carpeta con el nombre `.bluemix` que contenga un archivo `pipeline.yml`.
 
-Cuando se clona un proyecto utilizando el botón Desplegar en {{site.data.keyword.Bluemix_notm}}, {{site.data.keyword.jazzhub_short}} crea un conducto basado en el archivo `pipeline.yml`. 
+Cuando se clona un proyecto utilizando el botón Desplegar en {{site.data.keyword.Bluemix_notm}}, se crea un conducto basado en el archivo `pipeline.yml`. 
 
 Ejemplo: 
 ``` 
@@ -29,7 +29,7 @@ Ejemplo:
 ```
 {: codeblock} 
 
-El formato del archivo YAML es un único documento YAML que contiene una especificación de conducto. En el ejemplo siguiente de conducto de {{site.data.keyword.jazzhub_short}} se crea una app Java con Ant en una fase. A continuación, en otra fase, el conducto despliega la app en {{site.data.keyword.Bluemix_notm}}. 
+El formato del archivo YAML es un único documento YAML que contiene una especificación de conducto. En el ejemplo siguiente de conducto se crea una app Java con Ant en una etapa. A continuación, en otra etapa, el conducto despliega la app en {{site.data.keyword.Bluemix_notm}}. 
 
 ``` 
 ---
@@ -206,7 +206,7 @@ Puede generar un archivo YAML desde un conducto.
 Genere el archivo a partir de un conducto existente con URL con el siguiente formato:
 
 ```
-<DevOps Services domain>/pipeline/user/project/yaml
+<domain>/pipeline/user/project/yaml
 ```
 {: codeblock} 
 
