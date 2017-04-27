@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-04-29"
+lastupdated: "2017-04-26"
 
 ---
 <!-- Copyright info at top of file: REQUIRED
@@ -20,8 +20,12 @@ lastupdated: "2016-04-29"
 # Environment properties and resources
 {: #deliverypipeline_environment}
 
+
 You can use environment properties and pre-installed resources to interact with the IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} service. For example, you might use them in a job script or test command.
 {:shortdesc}
+
+
+**This service is being deprecated:**  All instances of this service are being deprecated. Existing instances can be used until 5 July 2017. For more information, see the [deprecation announcement blog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/04/delivery-pipeline-retirement/){: new_window}. To get the latest tools for app delivery, use the {{site.data.keyword.contdelivery_full}} service. For upgrade instructions, see [Upgrade your DevOps Services project to a toolchain](/docs/services/ContinuousDelivery/upgrade_projects.html){: new_window}.
 
 The following properties and resources are available by default in pipeline environments.
 
