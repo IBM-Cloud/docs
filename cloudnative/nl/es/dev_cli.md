@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}  
@@ -14,13 +14,13 @@ lastupdated: "2017-03-17"
 # {{site.data.keyword.dev_cli_short}}
 {: #developercli}	
 
-El {{site.data.keyword.dev_cli_long}} proporciona un enfoque basado en mandatos extensibles para crear, desarrollar y desplegar un proyecto web con el plugin `dev`. Ideal para desarrolladores que prefieren utilizar el control de línea de mandatos para desarrollar aplicaciones de microservicios completas. 
+El {{site.data.keyword.dev_cli_long}} proporciona un enfoque basado en mandatos extensibles para crear, desarrollar y desplegar un proyecto web con el plugin `dev`. Ideal para desarrolladores que prefieren utilizar el control de línea de mandatos al desarrollar aplicaciones de microservicios completas. 
 
 {: shortdesc}
 
 El {{site.data.keyword.dev_cli_notm}} utiliza dos contenedores para facilitar la creación y la realización de pruebas de su aplicación. El primero es el contenedor de herramientas que contiene las utilidades necesarias para crear y probar la aplicación. El Dockerfile para este contenedor está definido por el parámetro [dockerfile-tools](#command-parameters). Puede considerarlo como un contenedor de desarrollo, ya que contiene las herramientas que suelen utilizarse para el desarrollo de un tiempo de ejecución determinado.
 
-El segundo contenedor es el contenedor de ejecución. El formato de este contenedor es adecuado para desplegarlo y utilizarlo en, por ejemplo, {{site.data.keyword.Bluemix}}. Como resultado, este contenedor normalmente tendrá un punto de entrada definido que inicia su aplicación. Al seleccionar ejecutar la aplicación a través de {{site.data.keyword.dev_cli_short}}, utiliza este contenedor. El Dockerfile para este contenedor está definido por el parámetro [dockerfile-run](#run-parameters). 
+El segundo contenedor es el contenedor de ejecución. El formato de este contenedor es adecuado para desplegarlo y utilizarlo en, por ejemplo, {{site.data.keyword.Bluemix}}. Como resultado, este contenedor normalmente tiene un punto de entrada definido que inicia su aplicación. Al seleccionar ejecutar la aplicación a través de {{site.data.keyword.dev_cli_short}}, utiliza este contenedor. El Dockerfile para este contenedor está definido por el parámetro [dockerfile-run](#run-parameters).
 
 
 ## Adición de {{site.data.keyword.dev_cli_notm}}
@@ -30,7 +30,7 @@ El segundo contenedor es el contenedor de ejecución. El formato de este contene
 ### Requisitos previos
 {: #prereq}
 
-Se exigen algunos requisitos previos para explorar completamente y utilizar correctamente el {{site.data.keyword.dev_cli_short}}, ya que es muy ampliable y le permite utilizar tecnologías complementarias adicionales.
+Se exigen algunos requisitos previos para poder explorar completamente y utilizar correctamente el {{site.data.keyword.dev_cli_short}}, ya que es muy ampliable y le permite utilizar más tecnologías complementarias. 
 
 1. Instale [Cloud Foundry CLI ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/cloudfoundry/cli#getting-started).
 
@@ -38,31 +38,20 @@ Se exigen algunos requisitos previos para explorar completamente y utilizar corr
 
 3. Obtenga un [ID de {{site.data.keyword.Bluemix_notm}}](https://www.bluemix.net).
 
-4. Opcional: Si planea ejecutar y depurar aplicaciones a nivel local, deberá instalar también [Docker ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://www.docker.com/get-docker). Esto solo es necesario para proyectos que no sean móviles.
+4. Si tiene intención de ejecutar y depurar aplicaciones a nivel local, deberá instalar también [Docker ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://www.docker.com/get-docker). La instalación de Docker solo es necesaria para proyectos que no sean móviles. 
 
-
-### Instalación
-{: #installation}
-
-1. Instale el [{{site.data.keyword.dev_cli_short}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in){: new_window} ejecutando el siguiente mandato:
- 
-	```
-	bx plugin install dev -r Bluemix
-	```
-	{: codeblock}
-
-2. 	Valide la correcta instalación ejecutando el siguiente mandato:  
- 
-	```
-	bx dev
-	```
-	{: codeblock}
-	
 
 ### Antes de empezar
 {: #before-install}
+
+1. Conecte con un punto final de API de la región de [{{site.data.keyword.Bluemix_notm}}](/docs/overview/whatisbluemix.html#ov_intro_reg). Por ejemplo, escriba el siguiente mandato para conectar con la región de {{site.data.keyword.Bluemix_notm}} EE.UU. Sur: 
+
+	```
+	bx api https://api.ng.bluemix.net
+	```
+	{: codeblock}
 	
-1. Inicie sesión en {{site.data.keyword.Bluemix_notm}}.
+2. Inicie sesión en {{site.data.keyword.Bluemix_notm}} especificando su ID de IBM y contraseña:
 
 	```
 	bx login
@@ -89,6 +78,24 @@ Se exigen algunos requisitos previos para explorar completamente y utilizar corr
 		{: codeblock}
 
 
+### Instalación
+{: #installation}
+
+1. Instale el [{{site.data.keyword.dev_cli_short}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in){: new_window} ejecutando el siguiente mandato:
+ 
+	```
+	bx plugin install dev -r Bluemix
+	```
+	{: codeblock}
+
+2. 	Valide la correcta instalación ejecutando el siguiente mandato:  
+ 
+	```
+	bx dev
+	```
+	{: codeblock}
+
+
 ## Mandatos
 {: #commands}
 
@@ -97,7 +104,7 @@ Utilice los siguientes mandatos para crear un proyecto, desplegarlo, depurarlo y
 ### Build
 {: #build}
 
-Puede crear su aplicación mediante el mandato `build`. El elemento de configuración `build-cmd-run` se utiliza para crear la aplicación. Los mandatos `test`, `debug` y `run` ejecutan una compilación del mismo modo que este mandato como parte de su funcionamiento normal, por lo que no es necesario ejecutar este mandato antes que estos.
+Puede crear su aplicación mediante el mandato `build`. El elemento de configuración `build-cmd-run` se utiliza para crear la aplicación. Los mandatos `test`, `debug` y `run` ejecutan una compilación automáticamente, de modo que no siempre es necesario ejecutar el mandato build anticipadamente de forma explícita. 
 
 Ejecute el siguiente mandato en el directorio del proyecto actual para crear la aplicación:  
 
@@ -113,7 +120,7 @@ bx dev build
 ### Code
 {: #code}
 
-El mandato `code` le permite descargar el código de aplicación después del despliegue, para que pueda revisar de forma local o realizar cambios adicionales.
+Utilice el mandato `code` para descargar el código de aplicación después del despliegue, para que pueda revisarlo de forma local o realizar cambios. 
 
 Ejecute el siguiente mandato para descargar el código de un proyecto específico.
 
@@ -126,7 +133,7 @@ bx dev code <projectName>
 ### Create
 {: #create}
 
-Cree un proyecto nuevo, solicitando toda la información necesaria, incluyendo el idioma, el nombre del proyecto y el tipo de patrón de aplicación. El proyecto se creará en el directorio actual.  
+Cree un proyecto nuevo, solicitando toda la información, incluido idioma, nombre del proyecto y tipo de patrón de app. El proyecto se crea en el directorio actual.  
 
 Para crear un proyecto nuevo en el directorio del proyecto actual y asociarle servicios, ejecute el siguiente mandato:
 
@@ -139,9 +146,9 @@ bx dev create
 ### Debug
 {: #debug}
 
-Puede depurar la aplicación a través del mandato `debug`. Primero se completa una compilación contra el proyecto utilizando el elemento de configuración `build-cmd-debug` como la instrucción de compilación. A continuación, se inicia un contenedor que expone un puerto o puertos de depuración tal y como se define en `container-port-map-debug`. Conecte su herramienta de depuración preferida al puerto o puertos y podrá depurar su aplicación de modo normal.
+Puede depurar la aplicación a través del mandato `debug`. Primero se completa una compilación sobre el proyecto utilizando el elemento de configuración `build-cmd-debug` como instrucción de compilación. A continuación, se inicia un contenedor que proporciona un puerto o puertos de depuración tal y como se define en `container-port-map-debug`. Conecte su herramienta de depuración preferida al puerto o puertos y podrá depurar su aplicación de modo normal.
 
-**Limitación**: actualmente los proyectos Swift no están disponibles para depuración.
+**Limitación**: los proyectos Swift no están disponibles para depuración.
 
 Ejecute el siguiente mandato en el directorio del proyecto actual para depurar la aplicación:
 
@@ -156,14 +163,14 @@ Para salir de la sesión de depuración, utilice `CTRL-C`.
 #### Parámetros del mandato de depuración
 {: #debug-parameters}
 
-Los siguientes parámetros son exclusivos del mandato `debug` y ayudan a depurar una aplicación. 
+Los siguientes parámetros son exclusivos del mandato `debug` y ayudan a depurar una aplicación.
 
 ##### `container-port-map-debug`
 {: #port-map-debug}
 
-* Correlaciones de puertos para el puerto de depuración. El primer valor es el puerto que se utilizará en el sistema operativo del host, el segundo es el puerto del contenedor (host:container).
+* Correlaciones de puertos para el puerto de depuración. El primer valor es el puerto que se utilizará en el sistema operativo del host, el segundo es el puerto del contenedor [host-port:container-port].
 * Uso: `bx dev debug container-port-map-debug [7777:7777]`
- 
+
 ##### `build-cmd-debug`
 {: #build-cmd-debug}
 
@@ -173,7 +180,7 @@ Los siguientes parámetros son exclusivos del mandato `debug` y ayudan a depurar
 ##### `debug-cmd`
 {: #debug-cmd}
 
-* Utilizado para depurar código en el contenedor de herramientas. Esto es opcional si su `build-cmd-debug` iniciará la aplicación en depuración. 
+* Utilizado para depurar código en el contenedor de herramientas. Este parámetro es opcional si su `build-cmd-debug` inicia la aplicación en depuración. 
 * Uso: `bx dev debug debug-cmd /the/debug/command`
 
 #### Depuración de aplicaciones locales:
@@ -185,7 +192,7 @@ Para obtener más información sobre la depuración de aplicaciones locales, con
 ### Delete
 {: #delete}
 
-Este mandato le permite eliminar proyectos de su espacio {{site.data.keyword.Bluemix}}.
+Utilice el mandato `delete` para eliminar proyectos de su espacio {{site.data.keyword.Bluemix}}. Puede ejecutar el mandato sin parámetros para ver una lista de los proyectos que se pueden suprimir. El código y los directorios del proyecto no se eliminan del espacio de disco local. 
 
 Ejecute el siguiente mandato para suprimir su proyecto de {{site.data.keyword.Bluemix}}:
 
@@ -195,13 +202,13 @@ bx dev delete <projectName>
 {: codeblock}
  
 
-**Nota** los servicios {{site.data.keyword.Bluemix}} **no** se eliminan.
+**Nota:** los servicios de {{site.data.keyword.Bluemix}} **no** se eliminan.
 
 
 ### Help
 {: #help}
 
-De forma predeterminada, si no se pasa ninguna acción ni argumento, o si se proporciona la acción 'help', este mandato mostrará un texto "Help" general. La ayuda general mostrada incluye una descripción de los argumentos base, así como una lista de las acciones disponibles.  
+De forma predeterminada, si no se pasa ninguna acción ni argumento, o si se proporciona la acción 'help', este mandato muestra un texto "Help" general. La ayuda general mostrada incluye una descripción de los argumentos base, así como una lista de las acciones disponibles.  
 
 Ejecute el siguiente mandato para visualizar la información de ayuda general:
 
@@ -214,7 +221,7 @@ bx dev help
 ### List
 {: #list}
 
-Puede listar todos sus proyectos {{site.data.keyword.Bluemix_notm}} en un espacio. 
+Puede listar todos sus proyectos {{site.data.keyword.Bluemix_notm}} en un espacio.
 
 Ejecute el siguiente mandato para listar sus proyectos:
 
@@ -240,7 +247,7 @@ bx dev edit
 ### Run
 {: #run}
 
-Puede ejecutar la aplicación mediante el mandato `run`. Primero se completa una compilación contra el proyecto utilizando el elemento de configuración `build-cmd-run` como la instrucción de compilación. A continuación, se inicia el contenedor de ejecución y expone los puertos tal y como se define en `container-port-map`. `run-cmd` se puede utilizar para invocar la aplicación si el contenedor de ejecución no contiene un punto de entrada para completar este paso. 
+Puede ejecutar la aplicación mediante el mandato `run`. Primero se completa una compilación sobre el proyecto utilizando el elemento de configuración `build-cmd-run` como instrucción de compilación. A continuación, se inicia el contenedor de ejecución y expone los puertos tal y como se define en `container-port-map`. `run-cmd` se puede utilizar para invocar la aplicación si el contenedor de ejecución no contiene un punto de entrada para completar este paso. 
 
 Ejecute el siguiente mandato en el directorio del proyecto actual para iniciar la aplicación:
 
@@ -290,13 +297,13 @@ Los siguientes parámetros son exclusivos del mandato `run` y ayudan a gestionar
 ##### `run-cmd`
 {: #run-cmd}
 
-* Parámetro opcional utilizado para ejecutar código en el contenedor de ejecución. Este es opcional si su imagen iniciará la aplicación. 
+* Parámetro utilizado para ejecutar código en el contenedor de ejecución. Este parámetro es opcional si su imagen inicia la aplicación. 
 * Uso: `bx dev run run-cmd [/the/run/command]`
 	
 ### Status
 {: #status}
 
-Puede consultar el estado de los contenedores utilizados por {{site.data.keyword.dev_cli_short}} tal y como se definen en `container-name-run` y `container-name-tools`. 
+Puede consultar el estado de los contenedores que utiliza {{site.data.keyword.dev_cli_short}} tal y como se definen en `container-name-run` y `container-name-tools`. 
 
 Ejecute el siguiente mandato en el directorio del proyecto actual para comprobar el estado de los contenedores:
 
@@ -312,7 +319,7 @@ bx dev status
 ### Stop
 {: #stop}
 
-Puede detener un contenedor mediante el mandato `stop`. El parámetro `container-name` le permite especificar el contenedor que se debe detener. Si no se especifica, el mandato stop detiene el contenedor de ejecución definido por `container-name-run`. 
+Puede detener un contenedor mediante el mandato `stop`. Utilice el parámetro `container-name` para especificar el contenedor que desea detener. Si no se especifica este parámetro, el mandato stop detiene el contenedor de ejecución definido por el parámetro `container-name-run`. 
 
 Ejecute el siguiente mandato en el directorio del proyecto actual para detener un contenedor:
 
@@ -334,7 +341,7 @@ bx dev stop
 ### Test
 {: #test}
 
-Puede probar la aplicación a través del mandato `test`. Primero se completa una compilación contra el proyecto utilizando el elemento de configuración `build-cmd-run` como la instrucción de compilación. A continuación, el contenedor de herramientas se utiliza para invocar `test-cmd` para la aplicación.
+Puede probar la aplicación a través del mandato `test`. Primero se completa una compilación sobre el proyecto utilizando el elemento de configuración `build-cmd-run` como instrucción de compilación. A continuación, el contenedor de herramientas se utiliza para invocar `test-cmd` para la aplicación.
 
 Ejecute el siguiente mandato para probar la aplicación: 
 
@@ -350,53 +357,53 @@ bx dev test
 ## Parámetros para crear, depurar, ejecutar y probar
 {: #command-parameters}
 
-Los siguientes parámetros se pueden utilizar junto con los mandatos `build|debug|run|test` y se pueden especificar a través de línea de mandatos y/o actualizando directamente el archivo `cli-config.yml` del proyecto. Hay disponibles parámetros adicionales para los mandatos [`debug`](#debug-parameters) y [`run`](#run-parameters), y están documentados en sus respectivos apartados. 
+Los siguientes parámetros se pueden utilizar con los mandatos `build|debug|run|test` o se puede actualizar directamente el archivo `cli-config.yml` del proyecto. Dispone de parámetros adicionales para los mandatos [`debug`](#debug-parameters) y [`run`](#run-parameters). 
 
-**Nota**: los parámetros de mandato especificados en la línea de mandatos tienen prioridad sobre la configuración `cli-config.yml`.
+**Nota**: los parámetros de mandatos especificados en la línea de mandatos tienen prioridad sobre la configuración `cli-config.yml`.
 
-##### `container-name-tools`  
+### `container-name-tools`  
 {: #container-name-tools}
 
 * Nombre del contenedor para el contenedor de herramientas.
 * Uso: `bx dev <build|debug|run|test> container-name-tools [<demo-tools>]`
- 
-##### `host-path-tools`
+
+### `host-path-tools`
 {: #host-path-tools}
 
 * Ubicación en el host para compartir para la compilación, depuración, pruebas.
 * Uso: `bx dev <build|debug|run|test> host-path-tools [/path/to/build/tools]`
 
-##### `container-path-tools`
+### `container-path-tools`
 {: #container-path-tools}
 
 * Ubicación en el contenedor para compartir para la compilación, depuración, pruebas.
 * Uso: `bx dev <build|debug|run|test> container-path-tools [/path/for/build]`
 
-##### `container-port-map`
+### `container-port-map`
 {: #container-port-map}
 
-* Correlaciones de puertos para el contenedor. El primer valor es el puerto que se utilizará en el sistema operativo del host, el segundo es el puerto del contenedor (host:container).
+* Correlaciones de puertos para el contenedor. El primer valor es el puerto que se utilizará en el sistema operativo del host, el segundo es el puerto del contenedor [host-port:container-port].
 * Uso: `bx dev <build|debug|run|test> container-port-map [8090:8090,9090,9090]`
 
-##### `dockerfile-tools`
+### `dockerfile-tools`
 {: #dockerfile-tools}
 
 * Archivo Docker para el contenedor de herramientas.
 * Uso: `bx dev <build|debug|run|test> dockerfile-tools [path/to/dockerfile]`
 
-##### `image-name-tools`
+### `image-name-tools`
 {: #image-name-tools}
 
 * Imagen para crear desde dockerfile-tools.
 * Uso: `bx dev <build|debug|run|test> image-name-tools [path/to/image-name]`
 
-##### `build-cmd-run`
+### `build-cmd-run`
 {: #build-cmd-run}
 
 * Mandato para generar código para todos los usos menos DEBUG.
 * Uso: `bx dev <build|debug|run|test> build-cmd-run [some.build.command]`
 
-##### `test-cmd`
+### `test-cmd`
 {: #test-cmd}
 
 * Mandato para probar código en el contenedor de herramientas.

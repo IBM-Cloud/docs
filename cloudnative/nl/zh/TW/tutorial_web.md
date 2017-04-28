@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -14,7 +14,10 @@ lastupdated: "2017-03-17"
 # Web Basic Starter 的完整指導教學
 {: #tutorial}
 
-下列完整指導教學逐步執行從 Web Basic Starter 建立專案的步驟，包括您必須安裝的工具，以及執行專案程式碼的步驟。
+下列完整指導教學逐步執行從 Web Basic Starter 建立專案的步驟。這包括安裝必備工具，以及執行專案程式碼的步驟。
+
+您可以使用 Web 型 [{{site.data.keyword.dev_console}}](#create-devex) 或透過指令驅動的 [{{site.data.keyword.dev_cli_notm}}](#create-cli) 來建立專案。
+
 
 ## 安裝開發人員工具
 {: #dev_tools}
@@ -25,9 +28,9 @@ lastupdated: "2017-03-17"
 ## 使用 {{site.data.keyword.dev_console}} 建立專案
 {: #create-devex}
 
-1. 在 {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} 中建立專案。
+1. 在 {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} 中建立專案：
 
-	1. 從 {{site.data.keyword.dev_console}} 的**開始使用**頁面中，按一下**建立專案**。
+	1. 從 {{site.data.keyword.dev_console}} 的[**開始使用** ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/developer/getting-started/) 頁面中，按一下**建立專案**。
 
 		您也可以按一下**專案**頁面中的**建立專案**。
 
@@ -37,13 +40,13 @@ lastupdated: "2017-03-17"
 
 	4. 輸入專案名稱。對於此指導教學，使用 `WebBasicProject`。   
 
-	5. 輸入主機名稱。對於此指導教學，使用 `devhost`。 
+	5. 輸入唯一的主機名稱。對於此指導教學，使用 `devhost`。 
 
 	6. 選取語言平台。對於此指導教學，使用 `Swift`。
    
 	7. 按一下**建立**。
 
-2. 選用項目：新增「資料」功能。
+2. 選用項目：新增資料功能：
 
 	1. 在**專案概觀**頁面上，針對**資料**按一下**檢視**。
 
@@ -51,8 +54,7 @@ lastupdated: "2017-03-17"
 
    2. 輸入服務名稱，然後按一下**建立**。
 
-
-3. 產生專案程式碼。
+3. 產生專案程式碼：
 
 	1. 按一下**專案概觀**頁面上的**取得程式碼**，以選取您的語言。
    
@@ -62,7 +64,15 @@ lastupdated: "2017-03-17"
    
 	3. 當專案程式碼生成完成時，請按一下**下載程式碼**來下載專案保存檔。
 
-4. 選用項目：[更新專案](project_overview_page.html#update_language)以產生新語言。
+4. 開始使用已下載的專案：
+
+	1. 展開保存檔。
+	
+	2. 導覽至新的專案目錄。
+	
+	3. 使用 {{site.data.keyword.dev_cli_notm}} 繼續進行。
+
+5. 選用項目：[更新專案](project_overview_page.html#update_language)以產生新語言。
 
 
 ## 使用 {{site.data.keyword.dev_cli_notm}} 建立專案
@@ -90,16 +100,9 @@ lastupdated: "2017-03-17"
 
 5. 順利儲存 `WebBasicProjectCLI` 專案後，請導覽至 `WebBasicProjectCLI` 資料夾。
 
-6. 新增自己的程式碼、建置專案，或執行專案。
+6. 新增自己的程式碼，並執行專案。
  
-	1. 使用下列指令來建置專案：
-   
-		```
- 		bx dev build
- 		```     
-		{: codeblock}
-
-	2. 使用下列指令來執行專案：
+	1. 使用下列指令來執行專案：
  
 		```
 		bx dev run

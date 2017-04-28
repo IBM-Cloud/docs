@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -24,8 +24,8 @@ lastupdated: "2017-03-17"
    * 「{{site.data.keyword.Bluemix_notm}} 行動」儀表板現在是 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}。
    * 專案建立已經過重新設計，併入了支援 Node.js、Java 及 Swift 的「Web 應用程式」、BFF 及 Microservice 伺服器型樣類型。
    * 與新增及改良的 {{site.data.keyword.appid_full}} 服務的整合，可鑑別行動及 Web 專案。
-   * 您現在可以使用 [SDK 產生器外掛程式](sdk_cli.html)，額外產生專案的 SDK。只有針對 Mobile 專案，才能在 {{site.data.keyword.dev_console}} 中產生 SDK。
-   * 您現在可以使用 [{{site.data.keyword.dev_cli_short}}](dev_cli.html)，額外建立專案。
+   * 您現在可以使用 [SDK 產生器外掛程式](sdk_cli.html)來產生專案的 SDK。只有針對 Mobile 專案，才能在 {{site.data.keyword.dev_console}} 中產生 SDK。
+   * 您現在可以使用 [{{site.data.keyword.dev_cli_short}}](dev_cli.html) 來建立專案。
 
 
 ## 文件日期：2017 年 1 月
@@ -85,13 +85,13 @@ lastupdated: "2017-03-17"
 {: #ui_builder notoc}
 
    * 現在可以從專案存取 **{{site.data.keyword.mobilepushshort}}** 功能。
-   * **專案設定**標籤已重新命名為**設定**標籤。
-   * **鑑別**標籤已重新命名為**使用者存取**標籤。
+   * **專案設定**標籤已重新命名為**設定**。
+   * **鑑別**標籤已重新命名為**使用者存取**。
 
 
 ### 程式碼
 {: #code notoc}
 
-   * 針對 iOS 產生的 Objective-C 及 Swift 程式碼現在使用 CocoaPods 來管理相依關係。這表示您需要安裝 CocoaPods。若要安裝它，請執行 `sudo gem install cocoapods`。安裝 CocoaPods 之後，請執行 `pod setup` 來進行配置（如果尚未配置）。最後，執行 `pod install` 來下載及安裝必要的專案相依關係，之後再於 Xcode 中開啟 `.xcworkspace` 檔案。在所下載程式碼保存檔的 `README.md` 檔案中提供其他詳細資料。如需相關資訊，請閱讀[必備開發人員工具](get_code.html#prereq-dev-tools)。
+   * 針對 iOS 產生的 Objective-C 及 Swift 程式碼現在使用 CocoaPods 來管理相依關係。這表示您需要安裝 CocoaPods。若要安裝它，請執行 `sudo gem install cocoapods`。安裝 CocoaPods 之後，請執行 `pod setup` 來進行配置（如果尚未配置）。最後，執行 `pod install` 來下載及安裝專案相依關係，之後再於 Xcode 中開啟 `.xcworkspace` 檔案。在所下載程式碼保存檔的 `README.md` 檔案中提供進一步的詳細資料。如需相關資訊，請閱讀[必備開發人員工具](get_code.html#prereq-dev-tools)。
 
 請經常檢查，以保有最新的更新項目。

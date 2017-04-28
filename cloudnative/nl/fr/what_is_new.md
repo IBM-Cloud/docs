@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -22,7 +22,7 @@ lastupdated: "2017-03-17"
 La mise à jour de mars 2017 de la console {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} comprend les modifications suivantes :
 
    * Le tableau de bord {{site.data.keyword.Bluemix_notm}} Mobile est devenu la console {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}.
-   * La procédure de création de projets a été modifiée pour inclure les types de modèle de serveur Application Web, BFF et Microservice avec prise en charge de Node.js, Java et Swift.
+   * La procédure de création de projets est modifiée pour inclure les types de modèle de serveur Application Web, BFF et Microservice avec prise en charge de Node.js, Java et Swift.
    * L'intégration au nouveau service optimisé {{site.data.keyword.appid_full}} fournit une authentification pour les projets Web et mobiles.
    * Vous pouvez maintenant générer des SDK pour vos projets en utilisant le [plug-in de générateur SDK](sdk_cli.html). La génération de SDK dans la console {{site.data.keyword.dev_console}} n'est disponible que pour les projets mobiles.
    * Il vous est désormais possible de créer des projets en utilisant le plug-in [{{site.data.keyword.dev_cli_short}}](dev_cli.html).
@@ -88,9 +88,8 @@ l'analyse après l'exécution de votre application.
 {: #ui_builder notoc}
 
    * La fonctionnalité **{{site.data.keyword.mobilepushshort}}** est désormais accessible depuis le projet.
-   * L'onglet **Paramètres du projet** a été renommé
-en **Paramètres**.
-   * L'onglet **Authentification** a été renommé en **Accès utilisateur**.
+   * L'onglet **Paramètres du projet** est renommé en **Paramètres**.
+   * L'onglet **Authentification** est renommé en **Accès utilisateur**.
 
 
 ### Code
@@ -100,11 +99,7 @@ en **Paramètres**.
 CocoaPods pour la gestion des dépendances. Cela signifie que vous devez
 installer CocoaPods. Pour ce faire, exécutez `sudo gem install cocoapods`. Une
 fois CocoaPods installé, exécutez `pod setup` pour le
-configurer (si ne l'est pas déjà). Exécutez ensuite `pod
-install` pour télécharger et installer les dépendances de projet
-requises avant d'ouvrir votre fichier `.xcworkspace` dans Xcode. Vous
-trouverez plus de détails dans le fichier `README.md`, dans
-l'archive du code téléchargé. Pour plus d'informations, voir
+configurer (si ne l'est pas déjà). Exécutez ensuite `pod install` pour télécharger et installer les dépendances de projet avant d'ouvrir votre fichier `.xcworkspace` dans Xcode. D'autres détails sont disponibles dans le fichier `README.md` de l'archive du code téléchargé. Pour plus d'informations, voir
 [Outils prérequis pour le développeur](get_code.html#prereq-dev-tools).
 
 Revenez vérifier fréquemment pour être tenu au courant des nouvelles mises à jour.

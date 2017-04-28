@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-18"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -13,7 +13,7 @@ lastupdated: "2017-03-18"
 # Obtention du code
 {: #Get_Code}
 
-Une fois que vous avez terminé la configuration et l'installation de votre projet avec les fonctionnalités sélectionnées, vous pouvez télécharger le code permettant l'exécution. Le
+Une fois que vous avez terminé la configuration et l'installation de votre projet avec les fonctionnalités sélectionnées, vous pouvez télécharger le code qui vous permet d'exécuter l'application. Le
 projet téléchargé est préconfiguré avec les dépendances aux logiciels SDK
 requises et les données d'identification de chaque fonction configurée.
 

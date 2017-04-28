@@ -23,7 +23,7 @@ Para uma introdução ao [{{site.data.keyword.Bluemix_notm}} {{site.data.keyword
 
 Crie um projeto na página **Introdução** clicando em **Criar projeto**. Serão apresentadas as opções [padrão](patterns.html), [iniciador](starters.html) e [idioma](patterns.html#languages) que permitem criar rapidamente seu app.
 
-É possível visualizar e gerenciar todos os seus projetos em um local selecionando a página [Projetos ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://console.{DomainName}/developer/projects). O projeto mantém as informações de todos os recursos que estão (e podem ser) integrados ao app. Se ele estiver disponível, será possível integrar e gerenciar facilmente os serviços Push, Analytics, Authentication e Data no projeto, com mais recursos para seguir no futuro próximo.
+É possível visualizar e gerenciar todos os seus projetos em um local selecionando a página [Projetos ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://console.{DomainName}/developer/projects). O projeto mantém as informações para todos os recursos que estão (e podem ser) integrados ao seu app. Se estiver disponível, será possível integrar e gerenciar facilmente os serviços Push, Analytics, Autenticação e Dados no projeto, com mais recursos para seguir no futuro próximo.
 
 A página [Serviços](services.html) mostra uma visão operacional das instâncias de serviço existentes. O {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} suporta um desenvolvedor nativo de nuvem e um usuário de gerenciamento de app nativo de nuvem.
 

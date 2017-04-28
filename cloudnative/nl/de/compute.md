@@ -14,7 +14,7 @@ lastupdated: "2017-03-17"
 # Compute
 {: #compute}
 
-Wenn Sie eine cloudorientierte native Anwendung für digitale Vertriebskanäle für das Web und Mobilgeräte erstellen, dann hat es sich bewährt, mit einem BFF (Backend for Frontend) zu arbeiten, das entweder Ihrem digitalen Vertriebskanal zugeordnet ist oder die gleichen Daten und die gleiche Unterstützung für die logische Integration für Web-Client-Apps und mobile Client-Apps bietet. Weitere Informationen zu dieser Architektur finden Sie im Artikel zu den [Mikroservices für das Web und mobile Einheiten ![Symbol für externen Link](../icons/launch-glyph.svg)](https://www.ibm.com/devops/method/content/architecture/omnichannelArchitecture).
+Wenn Sie eine cloudorientierte native Anwendung für digitale Vertriebskanäle für das Web und Mobilgeräte erstellen, dann hat es sich bewährt, mit einem BFF (Backend for Frontend) zu arbeiten, das entweder Ihrem digitalen Vertriebskanal zugeordnet ist oder die gleichen Daten und die gleiche Unterstützung für die logische Integration für Web-Client-Apps und mobile Client-Apps bietet. Weitere Informationen zu dieser Architektur finden Sie im Artikel zu den [Microservices für das Web und mobile Einheiten ![Symbol für externen Link](../icons/launch-glyph.svg)](https://www.ibm.com/devops/method/content/architecture/omnichannelArchitecture).
 
 Im folgenden Diagramm wird eine Übersicht zur BFF-Architektur dargestellt.
 
@@ -22,11 +22,11 @@ Im folgenden Diagramm wird eine Übersicht zur BFF-Architektur dargestellt.
 
 Abbildung 1: BFF-Architektur
 
-Das BFF-Konzept basiert auf der Entfernung allgemeiner Geschäfts- und Integrationslogik aus den Mikroservices oder hochwertigen {{site.data.keyword.Bluemix}}-Cloud-Services. 
+Das BFF-Konzept basiert auf der Entfernung allgemeiner Geschäfts- und Integrationslogik aus den Microservices oder hochwertigen {{site.data.keyword.Bluemix}}-Cloud-Services.
 
 Mit dieser Architektur können Sie Updates für Ihre mobilen Anwendung oder Webanwendungen bereitstellen und freigeben und neue Versionen Ihres BFF bereitstellen, indem Sie kontinuierliche Delivery Pipelines für den DevOps-Service verwenden.
 
-Wenn Sie über eine BFF für iOS und eine separate BFF für Android verfügen, dann sind die Entwicklungsteams, die die Funktion für diese Apps liefern, bei der Freigabe von Features nicht durch einen zentralisierten API-Freigabeplan eingeschränkt. Dies stellt ein gemeinsames Ziel für Mikroservice-Architekturen und Architekturen für digitale Vertriebskanäle dar, um den Teams die häufige Freigabe von Funktionen und Features zu ermöglichen, ohne dass eine enge Abhängigkeit zum Freigabeplan eines anderen Teams besteht.
+Wenn Sie über eine BFF für iOS und eine separate BFF für Android verfügen, dann sind die Entwicklungsteams, die die Funktion für diese Apps liefern, bei der Freigabe von Features nicht durch einen zentralisierten API-Freigabeplan eingeschränkt. Dies stellt ein gemeinsames Ziel für Microservice-Architekturen und Architekturen für digitale Vertriebskanäle dar, um den Teams die häufige Freigabe von Funktionen und Features zu ermöglichen, ohne dass eine enge Abhängigkeit zum Freigabeplan eines anderen Teams besteht.
 
 <!--
 ## Backend for Frontends (BFF)

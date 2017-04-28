@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-10"
 
 ---
 
@@ -44,10 +44,10 @@ El nombre de host <myHostname> ya se ha utilizado.
 Este error se debe a una señal de inicio de sesión caducada.
 
 
-#### Resolución 
+#### Resolución
 {: #hostname-resolution}
 
-Vuelva a iniciar la sesión. 
+Vuelva a iniciar la sesión.
 
 ```
 bx login
@@ -67,15 +67,15 @@ No se ha podido <command> el proyecto.
 
 
 #### Motivo
-{: #hostname-cause}
+{: #general-cause}
    
 Este error se debe a una señal de inicio de sesión caducada.
 
 
-#### Resolución 
-{: #hostname-resolution}
+#### Resolución
+{: #general-resolution}
 
-Vuelva a iniciar la sesión. 
+Vuelva a iniciar la sesión.
 
 ```
 bx login
@@ -98,10 +98,10 @@ Error de intermediario de servicio: {"description"=>"No puede crear esta instanc
 #### Motivo
 {: #os-cause}
    
-Este error se debe al servicio de {{site.data.keyword.objectstorageshort}} que permite solo una instancia del plan de {{site.data.keyword.objectstorageshort}} gratuito.
+Este error se debe al servicio de {{site.data.keyword.objectstorageshort}} que solo proporciona una instancia del plan de {{site.data.keyword.objectstorageshort}} gratuito.
 
 
-#### Resolución 
+#### Resolución
 {: #os-resolution}
 
 Se le solicitará que elija otro plan para evitar este error.
@@ -123,22 +123,22 @@ https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbe
 #### Motivo
 {: #code-cause}
 
-Este error se debe a un tiempo de espera interno excedido. 
+Este error se debe a un tiempo de espera interno excedido.
 	
 
-#### Resolución 
+#### Resolución
 {: #code-resolution}
 
 Puede obtener el código de una de las siguientes formas:
 
 * Ejecute el siguiente mandato utilizando la CLI:
 
-	```
-	bx dev code <your-project-name>
-	```
-	{: codeblock}
-	
-	`<your-project-name>` debe sustituirse por el nombre de proyecto que ha utilizado durante la creación del proyecto.
+   ```
+   bx dev code <your-project-name>
+   ```
+   {: codeblock}
+
+   Sustituya `<your-project-name>` por el nombre del proyecto que ha especificado durante la creación del proyecto. 
 
 * Utilice la {{site.data.keyword.dev_console}}.
 
@@ -149,7 +149,7 @@ Puede obtener el código de una de las siguientes formas:
 	3. Después de generar el código, pulse **Descargar código**.
 
 
-### Error al ejecutar `bx dev run` para proyectos de Node.js 
+### Error al ejecutar `bx dev run` para proyectos de Node.js
 {: #node}
 
 Es posible que le aparezca el siguiente error si ejecuta `bx dev run` con {{site.data.keyword.dev_cli_short}} para proyectos web o BFF de Node.js:
@@ -178,10 +178,10 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 #### Motivo
 {: #node-cause}
    
-Este error se debe a que el módulo `appmetrics` se ha instalado en otra arquitectura. Los módulos npm nativos instalados en una arquitectura no funcionarán en otra. Las imágenes de Docker incluidas se basan en el kernel de Linux.
+Este error se debe a que el módulo `appmetrics` se ha instalado en otra arquitectura. Los módulos npm nativos instalados en una arquitectura no funcionan en otra. Las imágenes de Docker incluidas se basan en el kernel de Linux.
 
 
-#### Resolución 
+#### Resolución
 {: #node-resolution}
 
 Suprima la carpeta `node_modules` y vuelva a ejecutar `bx dev run`.
@@ -198,13 +198,13 @@ Suprima la carpeta `node_modules` y vuelva a ejecutar `bx dev run`.
 ## Obtención de ayuda y soporte
 {: #gettinghelp}
 
-Si tiene problemas o preguntas sobre el uso de la {{site.data.keyword.dev_console}} de {{site.data.keyword.Bluemix_notm}} o {{site.data.keyword.dev_cli_notm}}, puede obtener ayuda buscando información o formulando preguntas a través de un foro. También puede abrir una incidencia de soporte.
+Si tiene problemas o preguntas sobre la {{site.data.keyword.dev_console}} de {{site.data.keyword.Bluemix_notm}} o {{site.data.keyword.dev_cli_notm}}, puede obtener ayuda buscando información o formulando preguntas a través de un foro. También puede abrir una incidencia de soporte.
 
-Cuando utilice los foros para formular preguntas, etiquete la pregunta de modo que los equipos de desarrollo de {{site.data.keyword.Bluemix_notm}} la vean. 
+Cuando formule una pregunta en los foros, etiquete la pregunta de modo que los equipos de desarrollo de {{site.data.keyword.Bluemix_notm}} la vean. 
 
 <!--Insert the appropriate Stack Overflow tag for your service for <service_keyword> in URL and text below:  -->
 
-Si tiene preguntas técnicas sobre el desarrollo o el despliegue de una aplicación con la {{site.data.keyword.dev_console}} o {{site.data.keyword.dev_cli_notm}}:
+Si tiene preguntas técnicas sobre el desarrollo o el despliegue de una app con la {{site.data.keyword.dev_console}} o {{site.data.keyword.dev_cli_notm}}:
 
 * Publique la pregunta en [Stack Overflow ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix) y etiquete la pregunta con `bluemix-dev-services` e `ibm-bluemix`.
 * Publique la pregunta en [Slack ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://ibm-cloud-tech.slack.com/) en el canal `bluemix-dev-services`. [Inicie sesión en ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://ibm.biz/IBMCloudNativeSlack) hoy mismo.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}  
@@ -30,7 +30,7 @@ lastupdated: "2017-03-17"
 ### 必要條件
 {: #prereq}
 
-需要有一些必要條件才能完整地探索及適當地利用 {{site.data.keyword.dev_cli_short}}，因為它可高度延伸，並可讓您運用其他增補技術。
+有一些必要條件可讓您完整地探索及適當地利用 {{site.data.keyword.dev_cli_short}}，因為它可高度延伸，並可讓您運用其他增補技術。
 
 1. 安裝 [Cloud Foundry CLI ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/cloudfoundry/cli#getting-started)。
 
@@ -38,31 +38,20 @@ lastupdated: "2017-03-17"
 
 3. 取得 [{{site.data.keyword.Bluemix_notm}}](https://www.bluemix.net) ID。
 
-4. 選用項目：如果您打算在本端執行及除錯應用程式，則也必須安裝 [Docker ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://www.docker.com/get-docker)。 只有針對非行動專案，這才是必要項目。
+4. 如果您打算在本端執行及除錯應用程式，則也必須安裝 [Docker ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://www.docker.com/get-docker)。只有非行動專案才需要 Docker 安裝。
 
-
-### 安裝
-{: #installation}
-
-1. 執行下列指令，以安裝 [{{site.data.keyword.dev_cli_short}} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in){: new_window}：
- 
-	```
-	bx plugin install dev -r Bluemix
-	```
-	{: codeblock}
-
-2. 	執行下列指令，以驗證安裝成功：  
- 
-	```
-	bx dev
-	```
-	{: codeblock}
-	
 
 ### 開始之前
 {: #before-install}
+
+1. 連接至 [{{site.data.keyword.Bluemix_notm}} 地區](/docs/overview/whatisbluemix.html#ov_intro_reg)中的 API 端點。例如，輸入下列指令以連接至 {{site.data.keyword.Bluemix_notm}} 美國南部地區：
+
+	```
+	bx api https://api.ng.bluemix.net
+	```
+	{: codeblock}
 	
-1. 登入 {{site.data.keyword.Bluemix_notm}}。
+2. 提供 IBM ID 及密碼，以登入 {{site.data.keyword.Bluemix_notm}}：
 
 	```
 	bx login
@@ -89,6 +78,24 @@ lastupdated: "2017-03-17"
 		{: codeblock}
 
 
+### 安裝
+{: #installation}
+
+1. 執行下列指令，以安裝 [{{site.data.keyword.dev_cli_short}} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in){: new_window}：
+ 
+	```
+	bx plugin install dev -r Bluemix
+	```
+	{: codeblock}
+
+2. 	執行下列指令，以驗證安裝成功：  
+ 
+	```
+	bx dev
+	```
+	{: codeblock}
+
+
 ## 指令
 {: #commands}
 
@@ -97,7 +104,7 @@ lastupdated: "2017-03-17"
 ### Build
 {: #build}
 
-您可以使用 `build` 指令來建置應用程式。`build-cmd-run` 配置元素是用來建置應用程式。在正常作業期間，`test`、`debug` 及 `run` 指令都會使用與此指令相同的方式來執行建置，因此不需要在這些指令之前執行該指令。
+您可以使用 `build` 指令來建置應用程式。`build-cmd-run` 配置元素是用來建置應用程式。`test`、`debug` 及 `run` 指令都會自動執行建置，因此不一定需要事先明確地執行 build 指令。
 
 在現行專案目錄中執行下列指令，以建置您的應用程式：  
 
@@ -113,7 +120,7 @@ bx dev build
 ### Code
 {: #code}
 
-`code` 指令可讓您在部署之後下載應用程式碼，因此，您可以在本端進行檢閱或進行其他變更。
+使用 `code` 指令，以在部署之後下載應用程式碼，因此，您可以在本端進行檢閱或進行變更。
 
 執行下列指令，以從指定的專案下載程式碼。
 
@@ -126,7 +133,7 @@ bx dev code <projectName>
 ### Create
 {: #create}
 
-提示輸入所有必要資訊（包括語言、專案名稱及應用程式型樣類型），以建立新的專案。將會在現行目錄中建立專案。 
+提示輸入所有資訊（包括語言、專案名稱及應用程式型樣類型），以建立新的專案。會在現行目錄中建立專案。 
 
 若要在現行專案目錄中建立新專案，並建立服務與它的關聯，請執行下列指令：
 
@@ -139,9 +146,9 @@ bx dev create
 ### Debug
 {: #debug}
 
-您可以透過 `debug` 指令來除錯應用程式。會先使用與建置指示相同的 `build-cmd-debug` 配置元素，來完成專案的建置。接著會啟動容器，公開 `container-port-map-debug` 中所定義的除錯埠。請將最愛的除錯工具連接至埠，以如常除錯應用程式。
+您可以透過 `debug` 指令來除錯應用程式。會先使用與建置指示相同的 `build-cmd-debug` 配置元素，來完成專案的建置。接著會啟動容器，以提供 `container-port-map-debug` 中所定義的除錯埠。請將最愛的除錯工具連接至埠，以如常除錯應用程式。
 
-**限制**：目前無法對 Swift 專案進行除錯。
+**限制**：無法對 Swift 專案進行除錯。
 
 在現行專案目錄中執行下列指令，以除錯您的應用程式：
 
@@ -161,9 +168,9 @@ bx dev debug
 ##### `container-port-map-debug`
 {: #port-map-debug}
 
-* 除錯埠的埠對映。第一個值是在主機 OS 中使用的埠，第二個則是容器 (host:container) 中的埠。
+* 除錯埠的埠對映。第一個值是在主機 OS 中使用的埠，第二個則是容器 [host-port:container-port] 中的埠。
 * 用法：`bx dev debug container-port-map-debug [7777:7777]`
- 
+
 ##### `build-cmd-debug`
 {: #build-cmd-debug}
 
@@ -173,7 +180,7 @@ bx dev debug
 ##### `debug-cmd`
 {: #debug-cmd}
 
-* 用來除錯 tools 容器中的程式碼。如果您的 `build-cmd-debug` 將以除錯模式啟動應用程式，則這是選用項目。
+* 用來除錯 tools 容器中的程式碼。如果您的 `build-cmd-debug` 以除錯模式啟動應用程式，則這是選用參數。
 * 用法：`bx dev debug debug-cmd /the/debug/command`
 
 #### 本端應用程式除錯：
@@ -185,7 +192,7 @@ bx dev debug
 ### Delete
 {: #delete}
 
-此指令可讓您移除 {{site.data.keyword.Bluemix}} 空間中的專案。
+使用 `delete` 指令以移除 {{site.data.keyword.Bluemix}} 空間中的專案。您可以執行不含參數的指令，來列出要刪除的可用專案。專案程式碼及目錄不會從本端磁碟空間中予以移除。
 
 執行下列指令，以刪除 {{site.data.keyword.Bluemix}} 中的專案：
 
@@ -195,13 +202,13 @@ bx dev delete <projectName>
 {: codeblock}
  
 
-**附註**：**不會**移除 {{site.data.keyword.Bluemix}} 服務。
+**附註：****不會**移除 {{site.data.keyword.Bluemix}} 服務。
 
 
 ### Help
 {: #help}
 
-依預設，如果未傳入動作或引數，或是提供 'help' 動作，則此指令將會顯示一般「說明」文字。所顯示的一般說明會包括基礎引數的說明，以及可用動作清單。  
+依預設，如果未傳入動作或引數，或是提供 'help' 動作，則此指令會顯示一般「說明」文字。所顯示的一般說明會包括基礎引數的說明，以及可用動作清單。  
 
 執行下列指令，以顯示一般說明資訊：
 
@@ -290,7 +297,7 @@ bx dev run
 ##### `run-cmd`
 {: #run-cmd}
 
-* 用來在 run 容器中執行程式碼的選用參數。如果您的映像檔將會啟動應用程式，則這是選用項目。
+* 用來在 run 容器中執行程式碼的參數。如果您的映像檔啟動應用程式，則這是選用參數。
 * 用法：`bx dev run run-cmd [/the/run/command]`
 	
 ### Status
@@ -312,7 +319,7 @@ bx dev status
 ### Stop
 {: #stop}
 
-您可以透過 `stop` 指令來停止容器。`container-name` 參數可讓您指定要停止的容器。如果未指定這個項目，則 stop 指令會停止 `container-name-run` 所定義的 run 容器。 
+您可以透過 `stop` 指令來停止容器。使用 `container-name` 參數，可指定要停止的容器。如果未指定此參數，則 stop 指令會停止 `container-name-run` 參數所定義的 run 容器。 
 
 在現行專案目錄中執行下列指令，以停止容器：
 
@@ -350,53 +357,53 @@ bx dev test
 ## build、debug、run 及 test 的參數
 {: #command-parameters}
 
-下列參數可以與 `build|debug|run|test` 指令搭配使用，並且可以透過指令行以及（或）直接更新專案的 `cli-config.yml` 檔案來指定。其他參數適用於 [`debug`](#debug-parameters) 及 [`run`](#run-parameters) 指令，並且記載於其個別小節中。
+下列參數可以與 `build|debug|run|test` 指令搭配使用，或直接更新專案的 `cli-config.yml` 檔案。其他參數適用於 [`debug`](#debug-parameters) 及 [`run`](#run-parameters) 指令。
 
 **附註**：在指令行上輸入的指令參數，其優先順序高於 `cli-config.yml` 配置。
 
-##### `container-name-tools`  
+### `container-name-tools`  
 {: #container-name-tools}
 
 * tools 容器的容器名稱。
 * 用法：`bx dev <build|debug|run|test> container-name-tools [<demo-tools>]`
- 
-##### `host-path-tools`
+
+### `host-path-tools`
 {: #host-path-tools}
 
 * 主機上基於建置、除錯、測試而共用的位置。
 * 用法：`bx dev <build|debug|run|test> host-path-tools [/path/to/build/tools]`
 
-##### `container-path-tools`
+### `container-path-tools`
 {: #container-path-tools}
 
 * 容器中基於建置、除錯、測試而共用的位置。
 * 用法：`bx dev <build|debug|run|test> container-path-tools [/path/for/build]`
 
-##### `container-port-map`
+### `container-port-map`
 {: #container-port-map}
 
-* 容器的埠對映。第一個值是在主機 OS 中使用的埠，第二個則是容器 (host:container) 中的埠。
+* 容器的埠對映。第一個值是在主機 OS 中使用的埠，第二個則是容器 [host-port:container-port] 中的埠。
 * 用法：`bx dev <build|debug|run|test> container-port-map [8090:8090,9090,9090]`
 
-##### `dockerfile-tools`
+### `dockerfile-tools`
 {: #dockerfile-tools}
 
 * tools 容器的 Docker 檔案。
 * 用法：`bx dev <build|debug|run|test> dockerfile-tools [path/to/dockerfile]`
 
-##### `image-name-tools`
+### `image-name-tools`
 {: #image-name-tools}
 
 * 要從 dockerfile-tools 建立的映像檔。
 * 用法：`bx dev <build|debug|run|test> image-name-tools [path/to/image-name]`
 
-##### `build-cmd-run`
+### `build-cmd-run`
 {: #build-cmd-run}
 
 * 基於所有使用而建置程式碼的指令，但「除錯」除外。
 * 用法：`bx dev <build|debug|run|test> build-cmd-run [some.build.command]`
 
-##### `test-cmd`
+### `test-cmd`
 {: #test-cmd}
 
 * 測試 tools 容器中程式碼的指令。

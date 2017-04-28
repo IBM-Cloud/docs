@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -14,13 +14,14 @@ lastupdated: "2017-03-17"
 # モバイル・ベーシック・スターターのエンドツーエンド・チュートリアル
 {: #tutorial}
 
-以下のエンドツーエンド・チュートリアルでは、インストールしておく必要があるツールを含め、モバイル・ベーシック・スターターからプロジェクトを作成するための手順を段階的に説明し、その後に、Xcode および Android Studio でのプロジェクトの実行手順を説明します。
+以下のエンドツーエンド・チュートリアルでは、モバイル・ベーシック・スターターからプロジェクトを作成するための手順を段階的に説明します。これには、前提条件ツールのインストールと、Xcode および Android Studio でのプロジェクトの実行手順が含まれます。
 
+Web ベースの [{{site.data.keyword.dev_console}}](#create-devex) を使用するか、またはコマンド駆動型 [{{site.data.keyword.dev_cli_notm}}](#create-cli) を使用して、プロジェクトを作成することができます。
 
 ## 開発者ツールのインストール
 {: #dev_tools}
 
-[前提条件の開発者ツール ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](get_code.html#prereq-dev-tools){: new_window} をインストール済みであることを確認します。
+[前提条件の開発者ツール![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](get_code.html#prereq-dev-tools){: new_window} を必ずインストールしてください。
 
 
 ## {{site.data.keyword.dev_console}} を使用したプロジェクトの作成
@@ -28,7 +29,7 @@ lastupdated: "2017-03-17"
 
 1. {{site.data.keyword.Bluemix}} で {{site.data.keyword.dev_console}} プロジェクトを作成します。
 
-   1. {{site.data.keyword.dev_console}} の**「開始」**ページで**「プロジェクトの作成」**をクリックします。
+   1. {{site.data.keyword.dev_console}} 内の [**「開始」** ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/developer/getting-started/) ページから**「プロジェクトの作成」**をクリックします。
 
       代替方法として、**「プロジェクト」**ページから**「プロジェクトの作成」**をクリックすることもできます。
 
@@ -52,7 +53,7 @@ lastupdated: "2017-03-17"
    
    3. **「Authentication (認証)」**をオンに切り替えます。
    
-   4. ID プロバイダーを選択し、必要な情報を入力して構成します。ID プロバイダーは 1 つだけ有効にすることができます。
+   4. ID プロバイダーを選択し、それを構成するための情報を入力します。ID プロバイダーは 1 つだけ有効にすることができます。
    
    5. Authentication (認証) の構成について詳しくは、[ID プロバイダーの構成 (Configuring identity providers) ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/appid/identity-providers.html){: new_window} を参照してください。
 
@@ -104,13 +105,21 @@ lastupdated: "2017-03-17"
    
    3. プロジェクト・コードの生成が完了したら、**「Swift のダウンロード (Download Swift)」**をクリックして、プロジェクトのアーカイブをダウンロードします。
 
-7. オプション: 新しい言語を生成するために[プロジェクトを更新します](project_overview_page.html#update_language)。
+7. ダウンロードされたプロジェクトの処理を開始します。
+
+	1. アーカイブされたファイルを解凍します。
+	
+	2. 新規プロジェクト・ディレクトリーにナビゲートします。
+	
+	3. {{site.data.keyword.dev_cli_notm}} を使用して処理を続行します。
+
+8. オプション: 新しい言語を生成するために[プロジェクトを更新します](project_overview_page.html#update_language)。
 
 
 ## {{site.data.keyword.dev_cli_notm}} を使用したプロジェクトの作成
 {: #create-cli}
 
-1. [{{site.data.keyword.dev_cli_short}}](dev_cli.html) がインストールされていることを確認します。
+1. [{{site.data.keyword.dev_cli_short}}](dev_cli.html) を必ずインストールしてください。
 
 2. 端末のプロンプトで、使用するローカル・ディレクトリーにナビゲートし、以下のコマンドを実行します。
 

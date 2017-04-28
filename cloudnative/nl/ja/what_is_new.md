@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -24,8 +24,8 @@ lastupdated: "2017-03-17"
    * {{site.data.keyword.Bluemix_notm}} モバイル・ダッシュボードが {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} になりました。
    * プロジェクト作成の設計が変更され、Node.js、Java、および Swift のサポートとともに、Web アプリ、BFF、およびマイクロサービスのサーバー・パターン・タイプが組み込まれました。
    * 新規および改良された {{site.data.keyword.appid_full}} サービスとの統合により、モバイルおよび Web プロジェクトの認証が行われます。
-   * [SDK Generator プラグイン](sdk_cli.html)を使用して、プロジェクトに SDK を追加で生成できるようになりました。{{site.data.keyword.dev_console}} での SDK の生成は、モバイル・プロジェクトにのみ可能です。
-   * [{{site.data.keyword.dev_cli_short}}](dev_cli.html) を使用してプロジェクトを追加で作成できるようになりました。
+   * [SDK Generator プラグイン](sdk_cli.html)を使用して、自分のプロジェクト用の SDK を生成できるようになりました。{{site.data.keyword.dev_console}} での SDK の生成は、モバイル・プロジェクトにのみ可能です。
+   * [{{site.data.keyword.dev_cli_short}}](dev_cli.html) を使用してプロジェクトを作成できるようになりました。
 
 
 ## 最新情報: 2017 年 1 月
@@ -85,13 +85,13 @@ lastupdated: "2017-03-17"
 {: #ui_builder notoc}
 
    * **{{site.data.keyword.mobilepushshort}}** 機能には、プロジェクトからアクセスするようになりました。
-   * **「プロジェクト設定」**タブは**「設定」**タブに名前変更されました。
-   * **「認証」**タブは**「ユーザー・アクセス (User Access)」**タブに名前変更されました。
+   * **「プロジェクト設定」**タブは**「設定」**に名前変更されました。
+   * **「認証」**タブは**「ユーザー・アクセス (User Access)」**に名前変更されました。
 
 
 ### コード
 {: #code notoc}
 
-   * iOS 向けの生成された Objective-C コードおよび Swift コードは、依存関係を管理するために CocoaPods を使用するようになりました。これは、CocoaPods をインストールする必要があることを意味します。インストールするには、`sudo gem install cocoapods` を実行します。CocoaPods がインストールされた後、`pod setup` を実行して構成します (まだ構成されていない場合)。最後に、`.xcworkspace` ファイルを Xcode で開く前に、`pod install` を実行して、必要なプロジェクト依存関係のダウンロードとインストールを行います。詳しい追加情報は、ダウンロードされたコード・アーカイブ内の `README.md` ファイルに入っています。詳しくは、[前提条件開発者ツール](get_code.html#prereq-dev-tools)をお読みください。
+   * iOS 向けの生成された Objective-C コードおよび Swift コードは、依存関係を管理するために CocoaPods を使用するようになりました。これは、CocoaPods をインストールする必要があることを意味します。インストールするには、`sudo gem install cocoapods` を実行します。CocoaPods がインストールされた後、`pod setup` を実行して構成します (まだ構成されていない場合)。最後に、`.xcworkspace` ファイルを Xcode で開く前に、`pod install` を実行して、プロジェクト依存関係をダウンロードしてインストールします。詳しい追加情報は、ダウンロードされたコード・アーカイブ内の `README.md` ファイルに入っています。詳しくは、[前提条件開発者ツール](get_code.html#prereq-dev-tools)をお読みください。
 
 絶えず新しい更新を適用できるように、たびたび確認し直してください。
