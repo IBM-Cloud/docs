@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}  
@@ -30,7 +30,7 @@ lastupdated: "2017-03-17"
 ### 先决条件
 {: #prereq}
 
-因为 {{site.data.keyword.dev_cli_short}} 不但可扩展性高，而且支持利用其他补充技术，所以必须满足一些先决条件，才能充分开发并正确利用其功能。
+因为 {{site.data.keyword.dev_cli_short}} 不但可扩展性高，而且支持利用更多补充技术，所以只要满足一些先决条件，即可充分开发并正确利用其功能。
 
 1. 安装 [Cloud Foundry CLI ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/cloudfoundry/cli#getting-started)。
 
@@ -38,38 +38,27 @@ lastupdated: "2017-03-17"
 
 3. 获取 [{{site.data.keyword.Bluemix_notm}}](https://www.bluemix.net) 标识。
 
-4. 可选：如果计划在本地运行和调试应用程序，那么还必须安装 [Docker ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.docker.com/get-docker)。只有非移动项目需要执行此操作。
+4. 如果计划在本地运行和调试应用程序，那么还必须安装 [Docker ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.docker.com/get-docker)。只有非移动项目才需要执行 Docker 安装。
 
-
-### 安装
-{: #installation}
-
-1. 通过运行以下命令安装 [{{site.data.keyword.dev_cli_short}} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in){: new_window}：
- 
-	```
-	bx plugin install dev -r Bluemix
-	```
-	{: codeblock}
-
-2. 	通过运行以下命令验证安装是否成功：  
- 
-	```
-	bx dev
-	```
-	{: codeblock}
-	
 
 ### 开始之前
 {: #before-install}
+
+1. 连接到您 [{{site.data.keyword.Bluemix_notm}} 区域](/docs/overview/whatisbluemix.html#ov_intro_reg)中的 API 端点。例如，输入以下命令以连接到 {{site.data.keyword.Bluemix_notm}} 美国南部区域：
+
+	```
+	bx api https://api.ng.bluemix.net
+	```
+	{: codeblock}
 	
-1. 登录到 {{site.data.keyword.Bluemix_notm}}。
+2. 通过提供 IBM 标识和密码来登录到 {{site.data.keyword.Bluemix_notm}}：
 
 	```
 	bx login
 	```
 	{: codeblock}
 	
-	**注：**如果凭证被拒绝，那么使用的可能是联合标识。执行下列步骤以使用联合标识进行认证。
+	**注：**如果凭证被拒绝，那么使用的可能是联合标识。执行以下步骤以使用联合标识进行认证。
 	
 	<!-- 
 	POINT TO BLUEMIX CLI LOG IN DOCUMENTATION !!!
@@ -89,6 +78,24 @@ lastupdated: "2017-03-17"
 		{: codeblock}
 
 
+### 安装
+{: #installation}
+
+1. 通过运行以下命令安装 [{{site.data.keyword.dev_cli_short}} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in){: new_window}：
+ 
+	```
+	bx plugin install dev -r Bluemix
+	```
+	{: codeblock}
+
+2. 	通过运行以下命令验证安装是否成功：  
+ 
+	```
+	bx dev
+	```
+	{: codeblock}
+
+
 ## 命令
 {: #commands}
 
@@ -97,7 +104,7 @@ lastupdated: "2017-03-17"
 ### Build
 {: #build}
 
-您可以使用 `build` 命令构建应用程序。`build-cmd-run` 配置元素用于构建应用程序。`test`、`debug` 和 `run` 命令都会将构建作为正常操作的一部分来运行，其运行方式与 build 命令相同，因此不需要在执行这些命令之前执行 build 命令。
+您可以使用 `build` 命令构建应用程序。`build-cmd-run` 配置元素用于构建应用程序。`test`、`debug` 和 `run` 命令都会自动运行构建，因此并不一定需要提前明确运行 build 命令。
 
 在当前项目目录中运行以下命令以构建应用程序：  
 
@@ -113,7 +120,7 @@ bx dev build
 ### Code
 {: #code}
 
-`code` 命令用于在部署后下载应用程序代码，以便可在本地查看或执行其他更改。
+使用 `code` 命令可在部署后下载应用程序代码，以便可在本地查看或执行更改。
 
 运行以下命令以从指定项目下载代码。
 
@@ -126,7 +133,7 @@ bx dev code <projectName>
 ### Create
 {: #create}
 
-创建新项目，提示所有必需信息，包括语言、项目名称和应用程序模式类型。将在当前目录中创建项目。 
+创建新项目，系统会提示输入所有信息，包括语言、项目名称和应用程序模式类型。将在当前目录中创建项目。 
 
 要在当前项目目录中创建新项目并将服务与其关联，请运行以下命令：
 
@@ -139,9 +146,9 @@ bx dev create
 ### Debug
 {: #debug}
 
-您可以通过 `debug` 命令调试应用程序。通过将 `build-cmd-debug` 配置元素用作构建指令，先针对项目完成构建。然后，容器开始公开 `container-port-map-debug` 中定义的调试端口。将偏好的调试工具连接到端口，可照常调试应用程序。
+您可以通过 `debug` 命令调试应用程序。通过将 `build-cmd-debug` 配置元素用作构建指令，先针对项目完成构建。然后启动容器，以提供 `container-port-map-debug` 中定义的调试端口。将偏好的调试工具连接到端口，可照常调试应用程序。
 
-**限制：**：目前 Swift 项目不可用于调试。
+**限制**：Swift 项目不可用于调试。
 
 在当前项目目录中运行以下命令以调试应用程序：
 
@@ -161,9 +168,9 @@ bx dev debug
 ##### `container-port-map-debug`
 {: #port-map-debug}
 
-* 调试端口的端口映射。第一个值为要在主机操作系统中使用的端口，第二个值为容器中的端口 (host:container)。
+* 调试端口的端口映射。第一个值为要在主机操作系统中使用的端口，第二个值为容器中的端口 [host-port:container-port]。
 * 用法：`bx dev debug container-port-map-debug [7777:7777]`
- 
+
 ##### `build-cmd-debug`
 {: #build-cmd-debug}
 
@@ -173,7 +180,7 @@ bx dev debug
 ##### `debug-cmd`
 {: #debug-cmd}
 
-* 用于在工具容器中调试代码。如果 `build-cmd-debug` 将以调试方式启动应用程序，那么这是可选的。
+* 用于在工具容器中调试代码。如果 `build-cmd-debug` 以调试方式启动应用程序，那么此参数是可选的。
 * 用法：`bx dev debug debug-cmd /the/debug/command`
 
 #### 本地应用程序调试：
@@ -185,7 +192,7 @@ bx dev debug
 ### Delete
 {: #delete}
 
-此命令用于从 {{site.data.keyword.Bluemix}} 空间除去项目。
+使用 `delete` 命令可从 {{site.data.keyword.Bluemix}} 空间中除去项目。您可以运行不含参数的该命令，以列出可用项目进行删除。项目代码和目录不会从本地磁盘空间中除去。
 
 运行以下命令可从 {{site.data.keyword.Bluemix}} 删除项目：
 
@@ -195,7 +202,7 @@ bx dev delete <projectName>
 {: codeblock}
  
 
-**注** **不会**除去 {{site.data.keyword.Bluemix}} 服务。
+**注：****不会**除去 {{site.data.keyword.Bluemix}} 服务。
 
 
 ### Help
@@ -290,7 +297,7 @@ bx dev run
 ##### `run-cmd`
 {: #run-cmd}
 
-* 用于在运行容器中运行代码的可选参数。如果您的映像将启动应用程序，那么这是可选的。
+* 用于在运行容器中运行代码的参数。如果映像将启动应用程序，那么此参数是可选的。
 * 用法：`bx dev run run-cmd [/the/run/command]`
 	
 ### Status
@@ -312,7 +319,7 @@ bx dev status
 ### Stop
 {: #stop}
 
-您可以通过 `stop` 命令停止容器。使用 `container-name` 参数可指定要停止的容器。如果未指定此参数，那么 stop 命令将停止 `container-name-run` 所定义的运行容器。 
+您可以通过 `stop` 命令停止容器。使用 `container-name` 参数可指定要停止的容器。如果未指定此参数，那么 stop 命令将停止 `container-name-run` 参数所定义的运行容器。 
 
 在当前项目目录中运行以下命令以停止容器：
 
@@ -350,53 +357,53 @@ bx dev test
 ## Build、debug、run 和 test 的参数
 {: #command-parameters}
 
-既可以将以下参数与 `build|debug|run|test` 命令配合使用，也可以通过命令行和/或直接更新项目的 `cli-config.yml` 文件来指定这些参数。其他参数可用于 [`debug`](#debug-parameters) 和 [`run`](#run-parameters) 命令，并且会记录在其各自的部分中。
+既可以将以下参数与 `build|debug|run|test` 命令配合使用，也可以通过直接更新项目的 `cli-config.yml` 文件来使用这些参数。[`debug`](#debug-parameters) 和 [`run`](#run-parameters) 命令还有其他参数可用。
 
 **注**：在命令行上输入的命令参数优先于 `cli-config.yml` 配置。
 
-##### `container-name-tools`  
+### `container-name-tools`  
 {: #container-name-tools}
 
 * 工具容器的容器名称。
 * 用法：`bx dev <build|debug|run|test> container-name-tools [<demo-tools>]`
- 
-##### `host-path-tools`
+
+### `host-path-tools`
 {: #host-path-tools}
 
 * 主机上要针对 build、debug 和 test 共享的位置。
 * 用法：`bx dev <build|debug|run|test> host-path-tools [/path/to/build/tools]`
 
-##### `container-path-tools`
+### `container-path-tools`
 {: #container-path-tools}
 
 * 容器中要针对 build、debug 和 test 共享的位置。
 * 用法：`bx dev <build|debug|run|test> container-path-tools [/path/for/build]`
 
-##### `container-port-map`
+### `container-port-map`
 {: #container-port-map}
 
-* 容器的端口映射。第一个值为要在主机操作系统中使用的端口，第二个值为容器中的端口 (host:container)。
+* 容器的端口映射。第一个值为要在主机操作系统中使用的端口，第二个值为容器中的端口 [host-port:container-port]。
 * 用法：`bx dev <build|debug|run|test> container-port-map [8090:8090,9090,9090]`
 
-##### `dockerfile-tools`
+### `dockerfile-tools`
 {: #dockerfile-tools}
 
 * 工具容器的 Docker 文件。
 * 用法：`bx dev <build|debug|run|test> dockerfile-tools [path/to/dockerfile]`
 
-##### `image-name-tools`
+### `image-name-tools`
 {: #image-name-tools}
 
 * 要从 dockerfile-tools 创建的映像。
 * 用法：`bx dev <build|debug|run|test> image-name-tools [path/to/image-name]`
 
-##### `build-cmd-run`
+### `build-cmd-run`
 {: #build-cmd-run}
 
 * 用于针对除 DEBUG 之外的所有用法构建代码的命令。
 * 用法：`bx dev <build|debug|run|test> build-cmd-run [some.build.command]`
 
-##### `test-cmd`
+### `test-cmd`
 {: #test-cmd}
 
 * 用于在工具容器中测试代码的命令。

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -11,16 +11,17 @@ lastupdated: "2017-03-17"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Esercitazione end-to-end dello starter di base mobile 
+# Esercitazione end-to-end dello starter di base mobile
 {: #tutorial}
 
-La seguente esercitazione end-to-end spiega i passi per creare un progetto da uno starter di base mobile, inclusi gli strumenti che devi avere installato e, successivamente, i passi per eseguire il progetto in Xcode e Android Studio.
+La seguente esercitazione end-to-end ti guida attraverso i passaggi per creare un progetto dallo starter di base mobile. Questa include l'installazione degli strumenti prerequisiti e la procedura per eseguire il progetto in Xcode e Android Studio.
 
+Puoi creare un progetto utilizzando la [{{site.data.keyword.dev_console}}](#create-devex) basata su web o la [{{site.data.keyword.dev_cli_notm}}](#create-cli) controllata dai comandi.
 
 ## Installazione degli strumenti per sviluppatori
 {: #dev_tools}
 
-Assicurati di aver installato gli [strumenti per sviluppatori prerequisiti ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](get_code.html#prereq-dev-tools){: new_window}.
+Assicurati di installare gli [strumenti per sviluppatori prerequisiti ![icona link esterno](../icons/launch-glyph.svg "External link icon")](get_code.html#prereq-dev-tools){: new_window}.
 
 
 ## Creazione di un progetto utilizzando la {{site.data.keyword.dev_console}}
@@ -28,11 +29,11 @@ Assicurati di aver installato gli [strumenti per sviluppatori prerequisiti ![Ico
 
 1. Crea un progetto {{site.data.keyword.dev_console}} in {{site.data.keyword.Bluemix}}.
 
-   1. Dalla pagina **Introduzione** nella {{site.data.keyword.dev_console}}, fai clic su **Crea progetto**.
+   1. Dalla pagina [**Introduzione** ![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/developer/getting-started/) della {{site.data.keyword.dev_console}}, fai clic su **Crea progetto**.
 
       In alternativa puoi fare clic su **Crea progetto** dalla pagina **Progetti**.
 
-   2. Seleziona **Applicazione mobile** e fai clic su **Avanti**. 
+   2. Seleziona **Applicazione mobile** e fai clic su **Avanti**.
 
    3. Seleziona **Di base** e fai clic su **Avanti**.
 
@@ -52,7 +53,7 @@ Assicurati di aver installato gli [strumenti per sviluppatori prerequisiti ![Ico
    
    3. Attiva **Authentication**.
    
-   4. Seleziona il tuo provider di identità ed immetti le informazioni richieste per configurarlo. Puoi abilitare solo un provider di identità.
+   4. Seleziona il tuo provider di identità ed immetti le informazioni per configurarlo. Puoi abilitare solo un provider di identità.
    
    5. Consulta [Configurazione dei provider di identità} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/appid/identity-providers.html){: new_window} per ulteriori informazioni sulla configurazione di Authentication.
 
@@ -94,7 +95,7 @@ Assicurati di aver installato gli [strumenti per sviluppatori prerequisiti ![Ico
 
    5. Vedi [Introduzione a {{site.data.keyword.objectstorageshort}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/ObjectStorage/index.html){: new_window} per ulteriori informazioni sulla configurazione di {{site.data.keyword.objectstorageshort}}.
 
-6. Genera il tuo codice del progetto.
+6. Genera il tuo codice del progetto:
 
    1. Fai clic su **Richiama codice** nella pagina **Panoramica progetto** per selezionare il tuo linguaggio.
    
@@ -102,15 +103,23 @@ Assicurati di aver installato gli [strumenti per sviluppatori prerequisiti ![Ico
       
    2. Fai clic su **Genera Swift**.
    
-   3. Quando il codice del progetto ha terminato la generazione, fai clic su **Scarica Swift** per scaricare il tuo archivio del progetto. 
+   3. Quando il codice del progetto ha terminato la generazione, fai clic su **Scarica Swift** per scaricare il tuo archivio del progetto.
 
-7. Facoltativo: [Aggiorna il tuo progetto](project_overview_page.html#update_language) per generare un nuovo linguaggio.
+7. Inizia a lavorare con il tuo progetto scaricato:
+
+	1. Espandi il file archiviato.
+	
+	2. Passa alla nuova directory del progetto.
+	
+	3. Utilizza la {{site.data.keyword.dev_cli_notm}} per continuare.
+
+8. Facoltativo: [Aggiorna il tuo progetto](project_overview_page.html#update_language) per generare un nuovo linguaggio.
 
 
 ## Creazione di un progetto utilizzando la {{site.data.keyword.dev_cli_notm}}
 {: #create-cli}
 
-1. Assicurati di aver installato la [{{site.data.keyword.dev_cli_short}}](dev_cli.html).
+1. Assicurati di installare la [{{site.data.keyword.dev_cli_short}}](dev_cli.html).
 
 2. Nella tua finestra del terminale, passa a una directory locale di tua scelta ed esegui il seguente comando.
 
@@ -128,7 +137,7 @@ Assicurati di aver installato gli [strumenti per sviluppatori prerequisiti ![Ico
 
 4. Se desideri aggiungere servizi al tuo progetto, immetti `y` quando ti viene domandato e rispondi alle rimanenti domande.
 
-5. Quando `MobileBasicProjectCLI` è stato correttamente salvato, passa alla cartella `MobileBasicProjectCLI/MobileBasicProjectCLI-Swift`.
+5. Dopo aver salvato `MobileBasicProjectCLI`, passa alla cartella `MobileBasicProjectCLI/MobileBasicProjectCLI-Swift`.
 
 
 ## Esecuzione del tuo progetto Swift in Xcode

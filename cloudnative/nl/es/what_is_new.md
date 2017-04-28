@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -22,10 +22,10 @@ lastupdated: "2017-03-17"
 La actualización de marzo de 2017 de la {{site.data.keyword.dev_console}} de {{site.data.keyword.Bluemix}} ha introducido los siguientes cambios:
 
    * El panel de control de Mobile en {{site.data.keyword.Bluemix_notm}} ahora es la {{site.data.keyword.dev_console}} de {{site.data.keyword.Bluemix_notm}}.
-   * Se ha rediseñado la creación de proyectos para incluir los tipos de patrón de servidor de aplicación web, BFF y microservicio con soporte para Node.js, Java y Swift.
+   * Se ha rediseñado la creación de proyectos para incluir los tipos de patrón de servidor de app web, BFF y microservicio con soporte para Node.js, Java y Swift.
    * La integración con el nuevo y mejorado servicio de {{site.data.keyword.appid_full}} proporciona autenticación para proyectos web y móvil.
-   * Ahora puede generar SDK adicionales para sus proyectos utilizando el [plugin del generador de SDK](sdk_cli.html). La generación de SDK en la {{site.data.keyword.dev_console}} solo está disponible para proyectos móviles.
-   * Ahora puede crear proyectos adicionales mediante [{{site.data.keyword.dev_cli_short}}](dev_cli.html).
+   * Ahora puede generar los SDK para sus proyectos utilizando el [plugin del generador de SDK](sdk_cli.html). La generación de SDK en la {{site.data.keyword.dev_console}} solo está disponible para proyectos móviles.
+   * Ahora puede crear proyectos mediante [{{site.data.keyword.dev_cli_short}}](dev_cli.html).
 
 
 ## Novedades de enero de 2017
@@ -78,20 +78,20 @@ La actualización de octubre de 2016 del panel de control de {{site.data.keyword
 ### Analítica
 {: #analytics notoc}
 
-   * La modalidad de demostración está habilitada de forma predeterminada al añadir la prestación Analytics. Puede desactivar la modalidad de demostración para ver las analíticas tras ejecutar la aplicación.
+   * La modalidad de demostración está habilitada de forma predeterminada al añadir la prestación Analytics. Puede desactivar la modalidad de demostración para ver las analíticas tras ejecutar la app.
 
 
 ### Creador de IU
 {: #ui_builder notoc}
 
    * Ahora se accede a la prestación **{{site.data.keyword.mobilepushshort}}** desde el proyecto.
-   * El separador **Valores del proyecto** se ha redenominado al separador **Valores**.
-   * El separador **Autenticación** se ha redenominado al separador **Acceso de usuarios**.
+   * Se ha cambiado el nombre del separador **Valores del proyecto** por **Valores**.
+   * Se ha cambiado el nombre del separador **Autenticación** por **Acceso de usuarios**.
 
 
 ### Código
 {: #code notoc}
 
-   * El código generado de Objective-C y Swift para iOS utiliza ahora CocoaPods para gestionar las dependencias. Esto significa que tiene que instalar CocoaPods. Para instalarlo, ejecute `sudo gem install cocoapods`. Una vez que CocoaPods se haya instalado, ejecute `pod setup` para configurarlo (si aún no se ha configurado). Finalmente, ejecute `pod install` para descargar e instalar las dependencias del proyecto necesarias antes de abrir el archivo `.xcworkspace` en Xcode. Hay detalles adicionales disponibles en el archivo `README.md` en el archivado de código descargado. Consulte sobre las [Herramientas necesarias del desarrollador](get_code.html#prereq-dev-tools) para obtener más información.
+   * El código generado de Objective-C y Swift para iOS utiliza ahora CocoaPods para gestionar las dependencias. Esto significa que tiene que instalar CocoaPods. Para instalarlo, ejecute `sudo gem install cocoapods`. Una vez que CocoaPods se haya instalado, ejecute `pod setup` para configurarlo (si aún no se ha configurado). Finalmente, ejecute `pod install` para descargar e instalar las dependencias del proyecto antes de abrir el archivo `.xcworkspace` en Xcode. Hay más detalles disponibles en el archivo `README.md` en el archivador de código descargado. Consulte sobre las [Herramientas necesarias del desarrollador](get_code.html#prereq-dev-tools) para obtener más información.
 
 Consulte con frecuencia para estar al corriente de las nuevas actualizaciones.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -14,13 +14,14 @@ lastupdated: "2017-03-17"
 # 移动基本入门模板端到端教程
 {: #tutorial}
 
-以下端到端教程将引导您完成通过“移动基本入门模板”创建项目的步骤（包括必须安装的工具）以及接下来在 Xcode 和 Android Studio 中运行项目的步骤。
+以下端到端教程将引导您完成通过“移动基本入门模板”创建项目的步骤。这包括安装必备工具以及在 Xcode 和 Android Studio 中运行项目的步骤。
 
+您可以使用基于 Web 的 [{{site.data.keyword.dev_console}}](#create-devex) 或通过命令驱动的 [{{site.data.keyword.dev_cli_notm}}](#create-cli) 来创建项目。
 
 ## 安装开发者工具
 {: #dev_tools}
 
-请确保您已安装[必备开发者工具 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](get_code.html#prereq-dev-tools){: new_window}。
+确保安装[必备开发者工具 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](get_code.html#prereq-dev-tools){: new_window}。
 
 
 ## 使用 {{site.data.keyword.dev_console}} 创建项目
@@ -28,7 +29,7 @@ lastupdated: "2017-03-17"
 
 1. 在 {{site.data.keyword.Bluemix}} 中创建 {{site.data.keyword.dev_console}} 项目。
 
-   1. 从 {{site.data.keyword.dev_console}} 中的**入门**页面，单击**创建项目**。
+   1. 在 {{site.data.keyword.dev_console}} 中的[**入门** ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://console.ng.bluemix.net/developer/getting-started/) 页面中，单击**创建项目**。
 
       或者，您可以从**项目**页面单击**创建项目**。
 
@@ -52,7 +53,7 @@ lastupdated: "2017-03-17"
    
    3. 打开 **Authentication**。
    
-   4. 选择身份提供者，并输入必需的信息以对其进行配置。只能启用一个身份提供者。
+   4. 选择身份提供者，并输入信息以对其进行配置。只能启用一个身份提供者。
    
    5. 请参阅[配置身份提供者} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/services/appid/identity-providers.html){: new_window}，以获取有关配置认证的更多信息。
 
@@ -92,9 +93,9 @@ lastupdated: "2017-03-17"
 
    4. 请参阅 [{{site.data.keyword.cloudant_short_notm}} 入门 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/services/Cloudant/index.html){: new_window}，以获取配置 {{site.data.keyword.cloudant_short_notm}} 的更多信息。
 
-   5. 请参阅 [{{site.data.keyword.objectstorageshort}} 入门 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/services/ObjectStorage/index.html){: new_window}，以获取配置 {{site.data.keyword.objectstorageshort}} 的更多信息。
+   5. 请参阅 [{{site.data.keyword.objectstorageshort}} 入门 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/services/ObjectStorage/index.html){: new_window}，以获取有关配置 {{site.data.keyword.objectstorageshort}} 的更多信息。
 
-6. 生成项目代码。
+6. 生成项目代码：
 
    1. 单击**项目概述**页面上的**获取代码**，以选择语言。
    
@@ -104,13 +105,21 @@ lastupdated: "2017-03-17"
    
    3. 生成项目代码完成后，单击**下载 Swift** 以下载项目归档。
 
-7. 可选：[更新项目](project_overview_page.html#update_language)以生成新语言。
+7. 开始使用下载的项目：
+
+	1. 解压缩归档文件。
+	
+	2. 浏览到新项目目录。
+	
+	3. 使用 {{site.data.keyword.dev_cli_notm}} 以继续。
+
+8. 可选：[更新项目](project_overview_page.html#update_language)以生成新语言。
 
 
 ## 使用 {{site.data.keyword.dev_cli_notm}} 创建项目
 {: #create-cli}
 
-1. 确保您已安装 [{{site.data.keyword.dev_cli_short}}](dev_cli.html)。
+1. 确保安装 [{{site.data.keyword.dev_cli_short}}](dev_cli.html)。
 
 2. 在“终端”提示符处，浏览到所选的本地目录并运行以下命令。
 

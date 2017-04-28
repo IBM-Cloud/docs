@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}  
@@ -14,7 +14,7 @@ lastupdated: "2017-03-17"
 # {{site.data.keyword.dev_cli_short}}
 {: #developercli}	
 
-{{site.data.keyword.dev_cli_long}} では、`dev` プラグインで Web プロジェクトを作成、開発、デプロイするための拡張可能なコマンド駆動型アプローチを提供します。エンドツーエンドのマイクロサービス・アプリケーションを開発しながらコマンド・ライン制御を使用したい開発者に理想的です。
+{{site.data.keyword.dev_cli_long}} では、`dev` プラグインで Web プロジェクトを作成、開発、デプロイするための拡張可能なコマンド駆動型アプローチを提供します。エンドツーエンドのマイクロサービス・アプリケーションを開発する際にコマンド・ライン制御を使用したい開発者に理想的です。
 
 {: shortdesc}
 
@@ -30,7 +30,7 @@ lastupdated: "2017-03-17"
 ### 前提条件
 {: #prereq}
 
-{{site.data.keyword.dev_cli_short}} は高度に拡張可能であり、追加の無料テクノロジーを活用できるようにするものであるため、これをフルに探索して適切に使用するにはいくつかの必要な前提条件があります。
+{{site.data.keyword.dev_cli_short}} は高度に拡張可能であり、追加の無料テクノロジーを活用できるようにするものであるため、これをフルに探索して適切に利用するにはいくつかの前提条件があります。
 
 1. [Cloud Foundry CLI ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/cloudfoundry/cli#getting-started) をインストールします。
 
@@ -38,31 +38,20 @@ lastupdated: "2017-03-17"
 
 3. [{{site.data.keyword.Bluemix_notm}}](https://www.bluemix.net) ID を入手します。
 
-4. オプション: ローカルでのアプリケーションの実行およびデバッグを予定している場合は、[Docker ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.docker.com/get-docker) のインストールも必要です。これは、非モバイル・プロジェクトにのみ必要です。
+4. ローカルでのアプリケーションの実行およびデバッグを予定している場合は、[Docker ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.docker.com/get-docker) のインストールも必要です。Docker のインストールは、非モバイル・プロジェクトにのみ必要です。
 
-
-### インストール
-{: #installation}
-
-1. 以下のコマンドを実行して、[{{site.data.keyword.dev_cli_short}} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in){: new_window} をインストールします。
- 
-	```
-	bx plugin install dev -r Bluemix
-	```
-	{: codeblock}
-
-2. 	以下のコマンドを実行して、インストールが成功したことを確認します。  
- 
-	```
-	bx dev
-	```
-	{: codeblock}
-	
 
 ### 始めに
 {: #before-install}
+
+1. 自分の [{{site.data.keyword.Bluemix_notm}} 地域](/docs/overview/whatisbluemix.html#ov_intro_reg)内の API エンドポイントに接続します。例えば、{{site.data.keyword.Bluemix_notm}} 米国南部地域に接続するには、次のコマンドを入力します。
+
+	```
+	bx api https://api.ng.bluemix.net
+	```
+	{: codeblock}
 	
-1. {{site.data.keyword.Bluemix_notm}} にログインします。
+2. IBM ID とパスワードを入力して {{site.data.keyword.Bluemix_notm}} にログインします。
 
 	```
 	bx login
@@ -89,6 +78,24 @@ lastupdated: "2017-03-17"
 		{: codeblock}
 
 
+### インストール
+{: #installation}
+
+1. 以下のコマンドを実行して、[{{site.data.keyword.dev_cli_short}} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in){: new_window} をインストールします。
+ 
+	```
+	bx plugin install dev -r Bluemix
+	```
+	{: codeblock}
+
+2. 	以下のコマンドを実行して、インストールが成功したことを確認します。  
+ 
+	```
+	bx dev
+	```
+	{: codeblock}
+
+
 ## コマンド
 {: #commands}
 
@@ -97,7 +104,7 @@ lastupdated: "2017-03-17"
 ### build
 {: #build}
 
-`build` コマンドを使用してアプリケーションをビルドすることができます。アプリケーションのビルドには、`build-cmd-run` 構成エレメントが使用されます。`test`、`debug`、および `run` の各コマンドもすべて、通常操作の中でこのコマンドと同様にビルドを実行します。そのため、これらの前に build コマンドを実行する必要はありません。
+`build` コマンドを使用してアプリケーションをビルドすることができます。アプリケーションのビルドには、`build-cmd-run` 構成エレメントが使用されます。`test`、`debug`、および `run` の各コマンドはすべて、ビルドを自動的に実行するため、事前に build コマンドを明示的に実行することが常に必要となるわけではありません。
 
 アプリケーションをビルドするには、現行プロジェクト・ディレクトリーで以下のコマンドを実行します。  
 
@@ -110,10 +117,10 @@ bx dev build
 [build コマンドのパラメーター](#command-parameters)
 
 
-### code
+### コード
 {: #code}
 
-`code` コマンドを使用して、デプロイ後にアプリケーション・コードをダウンロードできます。これにより、ローカルで確認したり、追加の変更を行ったりすることができます。
+`code` コマンドを使用して、デプロイ後にアプリケーション・コードをダウンロードします。これにより、ローカルで確認したり、変更を行ったりすることができます。
 
 指定されたプロジェクトからコードをダウンロードするには、以下のコマンドを実行します。
 
@@ -126,7 +133,7 @@ bx dev code <projectName>
 ### create
 {: #create}
 
-新規プロジェクトを作成します。言語、プロジェクト名、アプリ・パターン・タイプなど、必要な情報がすべて求められます。プロジェクトは現行ディレクトリーに作成されます。 
+新規プロジェクトを作成します。言語、プロジェクト名、アプリ・パターン・タイプなど、すべての情報の入力を求められます。プロジェクトが現行ディレクトリーに作成されます。 
 
 現行プロジェクト・ディレクトリーに新規プロジェクトを作成して、それにサービスを関連付けるには、以下のコマンドを実行します。
 
@@ -139,9 +146,9 @@ bx dev create
 ### debug
 {: #debug}
 
-`debug` コマンドを使用してアプリケーションをデバッグすることができます。まず、ビルド命令として `build-cmd-debug` 構成エレメントを使用してプロジェクトに対してビルドが実行されます。その後、`container-port-map-debug` で定義されたデバッグ・ポート (複数可) を公開してコンテナーが開始されます。任意のデバッグ・ツールをポートに接続して、アプリケーションを通常どおりデバッグできます。
+`debug` コマンドを使用してアプリケーションをデバッグすることができます。まず、ビルド命令として `build-cmd-debug` 構成エレメントを使用して、プロジェクトに対してビルドが実行されます。その後、`container-port-map-debug` で定義されたデバッグ・ポート (複数可) を提供するコンテナーが開始されます。任意のデバッグ・ツールをポートに接続して、アプリケーションを通常どおりデバッグできます。
 
-**制限事項**: 現在、Swift プロジェクトはデバッグに使用できません。
+**制限事項**: Swift プロジェクトをデバッグに使用できません。
 
 アプリケーションをデバッグするには、現行プロジェクト・ディレクトリーで以下のコマンドを実行します。
 
@@ -161,9 +168,9 @@ bx dev debug
 ##### `container-port-map-debug`
 {: #port-map-debug}
 
-* デバッグ・ポートのポート・マッピング。最初の値は、ホスト OS で使用するポートで、2 つ目の値はコンテナー内のポートです (host:container)。
+* デバッグ・ポートのポート・マッピング。最初の値は、ホスト OS で使用するポートで、2 つ目の値はコンテナー内のポートです [host-port:container-port]。
 * 使用法: `bx dev debug container-port-map-debug [7777:7777]`
- 
+
 ##### `build-cmd-debug`
 {: #build-cmd-debug}
 
@@ -173,7 +180,7 @@ bx dev debug
 ##### `debug-cmd`
 {: #debug-cmd}
 
-* ツール・コンテナーでコードをデバッグするのに使用されます。`build-cmd-debug` がデバッグでアプリケーションを開始する場合、これはオプションです。
+* ツール・コンテナーでコードをデバッグするのに使用されます。`build-cmd-debug` がデバッグでアプリケーションを開始する場合、このパラメーターはオプションです。
 * 使用法: `bx dev debug debug-cmd /the/debug/command`
 
 #### ローカル・アプリケーション・デバッグ:
@@ -185,7 +192,7 @@ bx dev debug
 ### delete
 {: #delete}
 
-このコマンドを使用して、{{site.data.keyword.Bluemix}} スペースからプロジェクトを削除することができます。
+`delete` コマンドを使用して、{{site.data.keyword.Bluemix}} スペースからプロジェクトを削除します。パラメーターを指定せずにこのコマンドを実行すると、削除可能なプロジェクトをリストすることができます。プロジェクト・コードおよびディレクトリーは、ローカル・ディスク・スペースから削除されません。
 
 {{site.data.keyword.Bluemix}} からプロジェクトを削除するには、以下のコマンドを実行します。
 
@@ -195,13 +202,13 @@ bx dev delete <projectName>
 {: codeblock}
  
 
-**注** {{site.data.keyword.Bluemix}} サービスは**削除されません**。
+**注:** {{site.data.keyword.Bluemix}} サービスは**削除されません**。
 
 
 ### help
 {: #help}
 
-デフォルトでは、アクションも引数も渡されない場合や、「help」アクションが指定された場合、このコマンドでは一般の「ヘルプ」テキストが表示されます。表示される一般ヘルプには、基本引数の説明と、使用可能なアクションのリストが含まれます。  
+デフォルトでは、アクションも引数も渡されない場合や、「help」アクションが指定された場合、このコマンドでは一般的な「ヘルプ」テキストが表示されます。表示される一般ヘルプには、基本引数の説明と、使用可能なアクションのリストが含まれます。  
 
 一般ヘルプ情報を表示するには、以下のコマンドを実行します。
 
@@ -211,7 +218,7 @@ bx dev help
 {: codeblock}
 
 
-### list
+### リスト
 {: #list}
 
 スペース内のすべての {{site.data.keyword.Bluemix_notm}} プロジェクトをリストできます。
@@ -240,7 +247,7 @@ bx dev edit
 ### run
 {: #run}
 
-`run` コマンドを使用してアプリケーションを実行することができます。まず、ビルド命令として `build-cmd-run` 構成エレメントを使用してプロジェクトに対してビルドが実行されます。その後、実行コンテナーが開始され、`container-port-map` で定義されたポートを公開します。このステップを完了するためのエントリー・ポイントが実行コンテナーに含まれない場合は、`run-cmd` を使用してアプリケーションを呼び出すことができます。 
+`run` コマンドを使用してアプリケーションを実行することができます。まず、ビルド命令として `build-cmd-run` 構成エレメントを使用して、プロジェクトに対してビルドが実行されます。その後、実行コンテナーが開始され、`container-port-map` で定義されたポートを公開します。このステップを完了するためのエントリー・ポイントが実行コンテナーに含まれない場合は、`run-cmd` を使用してアプリケーションを呼び出すことができます。 
 
 アプリケーションを開始するには、現行プロジェクト・ディレクトリーで以下のコマンドを実行します。
 
@@ -290,7 +297,7 @@ bx dev run
 ##### `run-cmd`
 {: #run-cmd}
 
-* 実行コンテナーでコードを実行するのに使用されるオプション・パラメーター。イメージによってアプリケーションが開始される場合、これはオプションです。
+* 実行コンテナーでコードを実行するのに使用されるパラメーター。イメージによってアプリケーションが開始される場合、このパラメーターはオプションです。
 * 使用法: `bx dev run run-cmd [/the/run/command]`
 	
 ### status
@@ -312,7 +319,7 @@ bx dev status
 ### stop
 {: #stop}
 
-`stop` コマンドを使用してコンテナーを停止することができます。`container-name` パラメーターにより、停止するコンテナーを指定できます。これを指定しないと、stop コマンドは `container-name-run` で定義された実行コンテナーを停止します。 
+`stop` コマンドを使用してコンテナーを停止することができます。`container-name` パラメーターを使用して、停止するコンテナーを指定します。このパラメーターを指定しないと、stop コマンドは `container-name-run` パラメーターで定義された実行コンテナーを停止します。 
 
 コンテナーを停止するには、現行プロジェクト・ディレクトリーで以下のコマンドを実行します。
 
@@ -334,7 +341,7 @@ bx dev stop
 ### test
 {: #test}
 
-`test` コマンドを使用してアプリケーションをテストすることができます。まず、ビルド命令として `build-cmd-run` 構成エレメントを使用してプロジェクトに対してビルドが実行されます。その後、ツール・コンテナーを使用して、アプリケーションの `test-cmd` を呼び出します。
+`test` コマンドを使用してアプリケーションをテストすることができます。まず、ビルド命令として `build-cmd-run` 構成エレメントを使用して、プロジェクトに対してビルドが実行されます。その後、ツール・コンテナーを使用して、アプリケーションの `test-cmd` を呼び出します。
 
 アプリケーションをテストするには、以下のコマンドを実行します。 
 
@@ -350,53 +357,53 @@ bx dev test
 ## build、debug、run、および test のパラメーター
 {: #command-parameters}
 
-`build|debug|run|test` コマンドと一緒に、以下のパラメーターを使用できます。これらは、コマンド・ライン、またはプロジェクトの `cli-config.yml` ファイルの直接更新、あるいはその両方で指定可能です。[`debug`](#debug-parameters) コマンドと [`run`](#run-parameters) コマンドには追加のパラメーターが使用可能です。それらについては、個々のセクションに文書化されています。
+以下のパラメーターは、`build|debug|run|test` コマンドと一緒に、またはプロジェクトの `cli-config.yml` ファイルを直接更新することによって使用できます。[`debug`](#debug-parameters) コマンドと [`run`](#run-parameters) コマンドには追加のパラメーターが使用可能です。
 
 **注**: コマンド・ラインで入力されたコマンド・パラメーターのほうが、`cli-config.yml` の構成より優先されます。
 
-##### `container-name-tools`  
+### `container-name-tools`  
 {: #container-name-tools}
 
 * ツール・コンテナーのコンテナー名。
 * 使用法: `bx dev <build|debug|run|test> container-name-tools [<demo-tools>]`
- 
-##### `host-path-tools`
+
+### `host-path-tools`
 {: #host-path-tools}
 
 * build、debug、test の場合に共有するホスト上の場所。
 * 使用法: `bx dev <build|debug|run|test> host-path-tools [/path/to/build/tools]`
 
-##### `container-path-tools`
+### `container-path-tools`
 {: #container-path-tools}
 
 * build、debug、test の場合に共有するコンテナー内の場所。
 * 使用法: `bx dev <build|debug|run|test> container-path-tools [/path/for/build]`
 
-##### `container-port-map`
+### `container-port-map`
 {: #container-port-map}
 
-* コンテナーのポート・マッピング。最初の値は、ホスト OS で使用するポートで、2 つ目の値はコンテナー内のポートです (host:container)。
+* コンテナーのポート・マッピング。最初の値は、ホスト OS で使用するポートで、2 つ目の値はコンテナー内のポートです [host-port:container-port]。
 * 使用法: `bx dev <build|debug|run|test> container-port-map [8090:8090,9090,9090]`
 
-##### `dockerfile-tools`
+### `dockerfile-tools`
 {: #dockerfile-tools}
 
 * ツール・コンテナーの Docker ファイル。
 * 使用法: `bx dev <build|debug|run|test> dockerfile-tools [path/to/dockerfile]`
 
-##### `image-name-tools`
+### `image-name-tools`
 {: #image-name-tools}
 
 * dockerfile-tools から作成するイメージ。
 * 使用法: `bx dev <build|debug|run|test> image-name-tools [path/to/image-name]`
 
-##### `build-cmd-run`
+### `build-cmd-run`
 {: #build-cmd-run}
 
 * デバッグ以外のすべての使用で、コードをビルドするコマンド。
 * 使用法: `bx dev <build|debug|run|test> build-cmd-run [some.build.command]`
 
-##### `test-cmd`
+### `test-cmd`
 {: #test-cmd}
 
 * ツール・コンテナーでコードをテストするコマンド。

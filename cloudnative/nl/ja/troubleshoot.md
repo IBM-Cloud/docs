@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-10"
 
 ---
 
@@ -67,13 +67,13 @@ Failed to <command> project.
 
 
 #### 原因
-{: #hostname-cause}
+{: #general-cause}
    
 このエラーは、期限切れのログイン・トークンが原因です。
 
 
 #### 解決策
-{: #hostname-resolution}
+{: #general-resolution}
 
 もう一度ログインしてください。
 
@@ -98,7 +98,7 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 #### 原因
 {: #os-cause}
    
-このエラーは、{{site.data.keyword.objectstorageshort}} サービスが、無料 {{site.data.keyword.objectstorageshort}} プランのインスタンスを 1 つしか許可しないことが原因です。
+このエラーは、{{site.data.keyword.objectstorageshort}} サービスが、無料 {{site.data.keyword.objectstorageshort}} プランのインスタンスを 1 つしか提供しないことが原因です。
 
 
 #### 解決策
@@ -131,14 +131,14 @@ https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbe
 
 コードは、以下のいずれかの方法で取得できます。
 
-* CLI で次のコマンドを実行します。
+* CLI を使用して次のコマンドを実行します。
 
+   ```
+bx dev code <your-project-name>
 	```
-	bx dev code <your-project-name>
-	```
-	{: codeblock}
-	
-	`<your-project-name>` は、プロジェクト作成中に使用したプロジェクト名に置き換えてください。
+   {: codeblock}
+
+   `<your-project-name>` は、プロジェクト作成中に指定したプロジェクト名に置き換えてください。
 
 * {{site.data.keyword.dev_console}} を使用します。
 
@@ -178,7 +178,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 #### 原因
 {: #node-cause}
    
-このエラーは、`appmetrics` モジュールが別のアーキテクチャーでインストールされていることが原因です。1 つのアーキテクチャーでインストールされたネイティブ npm モジュールは、別のアーキテクチャーで動作しません。組み込まれた Docker イメージは、Linux カーネルをベースとしています。
+このエラーは、`appmetrics` モジュールが別のアーキテクチャーでインストールされていることが原因です。あるアーキテクチャーでインストールされたネイティブ npm モジュールは、別のアーキテクチャーで動作しません。組み込まれた Docker イメージは、Linux カーネルをベースとしています。
 
 
 #### 解決策
@@ -198,9 +198,9 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 ## ヘルプおよびサポートの利用
 {: #gettinghelp}
 
-{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} または {{site.data.keyword.dev_cli_notm}} の使用時に問題または質問がある場合、情報を検索するか、フォーラムを通して質問することによって、ヘルプを利用できます。また、サポート・チケットをオープンすることも可能です。
+{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} または {{site.data.keyword.dev_cli_notm}} に関する問題または質問がある場合、情報を検索するか、フォーラムを通して質問することによって、ヘルプを利用できます。また、サポート・チケットをオープンすることも可能です。
 
-フォーラムを使用して質問するときは、{{site.data.keyword.Bluemix_notm}} 開発チームの目に止まるように、質問にタグを付けてください。
+フォーラムで質問するときは、{{site.data.keyword.Bluemix_notm}} 開発チームの目に止まるように、質問にタグを付けてください。
 
 <!--Insert the appropriate Stack Overflow tag for your service for <service_keyword> in URL and text below:  -->
 

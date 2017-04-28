@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-10"
 
 ---
 
@@ -67,13 +67,13 @@ Failed to <command> project.
 
 
 #### 原因
-{: #hostname-cause}
+{: #general-cause}
    
 此錯誤是由於登入記號過期所造成。
 
 
 #### 解決方法
-{: #hostname-resolution}
+{: #general-resolution}
 
 請重新登入。
 
@@ -98,7 +98,7 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 #### 原因
 {: #os-cause}
    
-此錯誤是由於 {{site.data.keyword.objectstorageshort}} 服務只容許一個「免費 {{site.data.keyword.objectstorageshort}}」方案實例所造成。
+此錯誤是 {{site.data.keyword.objectstorageshort}} 服務只提供一個「免費 {{site.data.keyword.objectstorageshort}}」方案實例所造成。
 
 
 #### 解決方法
@@ -131,14 +131,14 @@ https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbe
 
 您可以使用下列一種方式來取得程式碼：
 
-* 使用 CLI 執行下列指令:
+* 使用 CLI 來執行下列指令：
 
+   ```
+bx dev code <your-project-name>
 	```
-	bx dev code <your-project-name>
-	```
-	{: codeblock}
-	
-	`<your-project-name>` 應該取代為建立專案期間所使用的專案名稱。
+   {: codeblock}
+
+   請將 `<your-project-name>` 取代為建立專案期間所指定的專案名稱。
 
 * 使用 {{site.data.keyword.dev_console}}。
 
@@ -178,7 +178,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 #### 原因
 {: #node-cause}
    
-此錯誤是由於將 `appmetrics` 模組安裝在不同架構中所造成。安裝在某個架構上的原生 npm 模組，不能在另一個架構上運作。包括的 Docker 映像檔是以 Linux Kernel 為依據。
+此錯誤是將 `appmetrics` 模組安裝在不同的架構上所造成。安裝在某個架構上的原生 npm 模組，無法在另一個架構上運作。包括的 Docker 映像檔是以 Linux Kernel 為依據。
 
 
 #### 解決方法
@@ -198,9 +198,9 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 ## 取得協助及支援
 {: #gettinghelp}
 
-如果您在使用 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} 或 {{site.data.keyword.dev_cli_notm}} 時發生問題或有疑問，可以搜尋資訊或透過討論區提問來取得協助。您也可以開啟支援問題單。
+如果您有 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} 或 {{site.data.keyword.dev_cli_notm}} 的問題或疑問，可以搜尋資訊或透過討論區提問來取得協助。您也可以開啟支援問題單。
 
-使用討論區提問時，請標記您的問題，讓 {{site.data.keyword.Bluemix_notm}} 開發團隊可以看到它。
+在討論區提問時，請標記您的問題，讓 {{site.data.keyword.Bluemix_notm}} 開發團隊可以看到它。
 
 <!--Insert the appropriate Stack Overflow tag for your service for <service_keyword> in URL and text below:  -->
 

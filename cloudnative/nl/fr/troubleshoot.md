@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-10"
 
 ---
 
@@ -58,7 +58,7 @@ bx login
 ### Défaillances générales au niveau du plug-in {{site.data.keyword.dev_cli_short}}
 {: #general}
 
-L'erreur suivante peut s'afficher si vous utilisez les commandes create, delete, list ou code de {{site.data.keyword.dev_cli_short}} : 
+L'erreur suivante peut s'afficher si vous utilisez les commandes create, delete, list ou code de {{site.data.keyword.dev_cli_short}} :
 
 ```
 Failed to <command> project.
@@ -67,13 +67,13 @@ Failed to <command> project.
 
 
 #### Cause
-{: #hostname-cause}
+{: #general-cause}
    
 Cette erreur est due à un jeton de connexion expiré.
 
 
 #### Résolution
-{: #hostname-resolution}
+{: #general-resolution}
 
 Connectez-vous à nouveau.
 
@@ -98,7 +98,7 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 #### Cause
 {: #os-cause}
    
-Cette erreur est due au fait que le service {{site.data.keyword.objectstorageshort}} n'autorise qu'une instance du plan {{site.data.keyword.objectstorageshort}} gratuit.
+Cette erreur est due au fait que le service {{site.data.keyword.objectstorageshort}} ne fournit qu'une instance du plan {{site.data.keyword.objectstorageshort}} gratuit.
 
 
 #### Résolution
@@ -133,12 +133,12 @@ Vous pouvez obtenir le code de l'une des façons suivantes :
 
 * Exécutez la commande ci-après en utilisant l'interface de ligne de commande :
 
-	```
-	bx dev code <votre-nom-projet>
-	```
-	{: codeblock}
-	
-	`<votre-nom-projet>` doit être remplacé par le nom du projet que vous avez utilisé durant la création du projet.
+   ```
+   bx dev code <votre-nom-projet>
+   ```
+   {: codeblock}
+
+   Remplacez `<votre-nom-projet>` par le nom du projet que vous avez spécifié durant la création du projet.
 
 * Utilisez la console {{site.data.keyword.dev_console}}.
 
@@ -178,7 +178,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 #### Cause
 {: #node-cause}
    
-Cette erreur est due au fait que le module `appmetrics` est installé dans une architecture différente. Les modules npm natifs installés sur une architecture ne fonctionneront pas sur une autre architecture. Les images Docker incluses sont basées sur le noyau Linux.
+Cette erreur est due au fait que le module `appmetrics` est installé dans une architecture différente. Les modules npm natifs qui sont installés sur une architecture ne fonctionnent pas sur une autre architecture. Les images Docker incluses sont basées sur le noyau Linux.
 
 
 #### Résolution
@@ -198,9 +198,9 @@ Supprimez le dossier `node_modules` et exécutez à nouveau `bx dev run`.
 ## Aide et support
 {: #gettinghelp}
 
-Si vous avez des problèmes ou des questions quand vous utilisez la console {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} ou le plug-in {{site.data.keyword.dev_cli_notm}}, vous pouvez obtenir de l'aide en recherchant des informations précises ou en posant des questions via un forum. Vous pouvez aussi ouvrir un ticket de demande de service.
+Si vous avez des problèmes ou des questions au sujet de la console {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} ou du plug-in {{site.data.keyword.dev_cli_notm}}, vous pouvez obtenir de l'aide en recherchant des informations précises ou en posant des questions via un forum. Vous pouvez aussi ouvrir un ticket de demande de service.
 
-Quand vous utilisez les forums pour poser une question, prenez soin d'étiqueter cette dernière de façon à ce qu'elle soit vue par les équipes de développement {{site.data.keyword.Bluemix_notm}}.
+Quand vous posez une question sur les forums, prenez soin d'étiqueter cette dernière de façon à ce qu'elle soit vue par les équipes de développement {{site.data.keyword.Bluemix_notm}}.
 
 <!--Insert the appropriate Stack Overflow tag for your service for <service_keyword> in URL and text below:  -->
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-10"
 
 ---
 
@@ -67,13 +67,13 @@ Failed to <command> project.
 
 
 #### 原因
-{: #hostname-cause}
+{: #general-cause}
    
 此错误是由于登录令牌到期导致的。
 
 
 #### 解决方案
-{: #hostname-resolution}
+{: #general-resolution}
 
 重新登录。
 
@@ -98,7 +98,7 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 #### 原因
 {: #os-cause}
    
-此错误是由于 {{site.data.keyword.objectstorageshort}} 服务仅允许免费 {{site.data.keyword.objectstorageshort}} 套餐的一个实例导致的。
+此错误是由于 {{site.data.keyword.objectstorageshort}} 服务仅提供免费 {{site.data.keyword.objectstorageshort}} 套餐的一个实例导致的。
 
 
 #### 解决方案
@@ -133,12 +133,12 @@ https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbe
 
 * 使用 CLI 运行以下命令：
 
+   ```
+bx dev code <your-project-name>
 	```
-	bx dev code <your-project-name>
-	```
-	{: codeblock}
-	
-	应该将 `<your-project-name>` 替换为创建项目期间使用的项目名称。
+   {: codeblock}
+
+   将 `<your-project-name>` 替换为创建项目期间指定的项目名称。
 
 * 使用 {{site.data.keyword.dev_console}}。
 
@@ -198,9 +198,9 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 ## 获取帮助与支持
 {: #gettinghelp}
 
-如果使用 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} 或 {{site.data.keyword.dev_cli_notm}} 时遇到问题或者有任何疑问，可通过搜索信息或在论坛中提问获取帮助。您还可以提交支持凭单。
+如果您对 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} 或 {{site.data.keyword.dev_cli_notm}} 有任何问题或疑问，可通过搜索信息或在论坛中提问获取帮助。您还可以提交支持凭单。
 
-使用论坛进行提问时，请对问题进行标记，以便 {{site.data.keyword.Bluemix_notm}} 开发团队能看到您的问题。
+在论坛中提问时，请对问题进行标记，以便 {{site.data.keyword.Bluemix_notm}} 开发团队能看到您的问题。
 
 <!--Insert the appropriate Stack Overflow tag for your service for <service_keyword> in URL and text below:  -->
 

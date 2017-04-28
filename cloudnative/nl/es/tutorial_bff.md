@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -11,10 +11,12 @@ lastupdated: "2017-03-17"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Guía de aprendizaje del iniciador BFF Basic 
+# Guía de aprendizaje del iniciador BFF Basic
 {: #tutorial}
 
 En la siguiente guía de aprendizaje encontrará los pasos a seguir para crear un proyecto desde el iniciador BFF Basic Starter, incluidas las herramientas que debe tener instaladas y, por lo tanto, los pasos para ejecutar el código del proyecto.
+
+Tiene la opción de crear un proyecto utilizando la [{{site.data.keyword.dev_console}}](#create-devex) basada en la web o la [{{site.data.keyword.dev_cli_notm}}](#create-cli) de mandatos.
 
 ## Instalación de herramientas del desarrollador
 {: #dev_tools}
@@ -27,7 +29,7 @@ Asegúrese de haber instalado las [herramientas de desarrollador necesarias ![ic
 
 1. Cree un proyecto en la {{site.data.keyword.dev_console}} de {{site.data.keyword.Bluemix}}.
 
-	1. Desde la página **Cómo empezar** en la {{site.data.keyword.dev_console}}, pulse **Crear proyecto**.
+	1. En la página [**Iniciación** ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://console.ng.bluemix.net/developer/getting-started/) de la {{site.data.keyword.dev_console}}, pulse **Crear proyecto**.
 
 		De forma alternativa, puede pulsar **Crear proyecto** desde la página **Proyectos**.
 
@@ -37,7 +39,7 @@ Asegúrese de haber instalado las [herramientas de desarrollador necesarias ![ic
 
 	4. Especifique el nombre del proyecto. En esta guía de aprendizaje, utilizaremos `BFFProject`.   
 
-	5. Especifique un nombre de host. En esta guía de aprendizaje, utilizaremos `devhost` 
+	5. Especifique un nombre de host exclusivo. En esta guía de aprendizaje, utilizaremos `devhost` 
 
 	6. Seleccione el lenguaje de la plataforma. En esta guía de aprendizaje, utilizaremos `Node`.
    
@@ -51,8 +53,7 @@ Asegúrese de haber instalado las [herramientas de desarrollador necesarias ![ic
 
    2. Especifique el nombre del servicio y pulse **Crear**.
 
-
-3. Genere el código del proyecto.
+3. Genere el código del proyecto:
 
 	1. Pulse **Obtener el código** en la página **Visión general del proyecto** para seleccionar el lenguaje.
    
@@ -62,7 +63,15 @@ Asegúrese de haber instalado las [herramientas de desarrollador necesarias ![ic
    
 	3. Cuando se haya generado el código, pulse **Descargar código** para descargar el archivo del proyecto.
 
-4. Opcional: [Actualización del proyecto](project_overview_page.html#update_language) para generar un nuevo lenguaje.
+4. Empiece a trabajar con el proyecto descargado: 
+
+	1. Expanda el archivo archivado. 
+	
+	2. Vaya al directorio del nuevo proyecto. 
+	
+	3. Utilice {{site.data.keyword.dev_cli_notm}} para continuar. 
+
+5. Opcional: [Actualización del proyecto](project_overview_page.html#update_language) para generar un nuevo lenguaje.
 
 
 ## Creación de un proyecto mediante {{site.data.keyword.dev_cli_notm}}
@@ -89,16 +98,9 @@ Asegúrese de haber instalado las [herramientas de desarrollador necesarias ![ic
 
 5. Cuando `BFFProjectCLI` se haya guardado correctamente, vaya a la carpeta `BFFProjectCLI`.
 
-6. En este punto, puede añadir su propio código, crear o ejecutar el proyecto.
+6. Añada su propio código y ejecute el proyecto.
  
-	1. Cree el proyecto con el siguiente mandato:
-   
-		```
-		bx dev build
-		```     
-		{: codeblock}
-  
-	2. Ejecute el proyecto con el siguiente mandato:
+	1. Ejecute el proyecto con el siguiente mandato:
 
  		```
 		bx dev run
@@ -126,20 +128,20 @@ Asegúrese de haber instalado las [herramientas de desarrollador necesarias ![ic
   ```
   {: codeblock}
 
-3. Puede ejecutar curl en el servidor con `curl http://localhost:8080`
+3. Puede ejecutar curl en el servidor con `curl http://localhost:8080`.
 
 
 ### Utilización del plugin de Bluemix
 {: #using-blumix}
 
-1. Ejecute la compilación
+1. Ejecute la compilación:
 
 	```
 	bx dev run
 	```
 	{: codeblock}
 
-2. Puede ejecutar curl en el servidor con  
+2. Puede ejecutar curl en el servidor con: 
   
 	```
 	curl http://localhost:8080

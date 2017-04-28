@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -22,10 +22,10 @@ lastupdated: "2017-03-17"
 {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}}의 2017년 3월 업데이트에서 다음 변경사항이 도입되었습니다. 
 
    * {{site.data.keyword.Bluemix_notm}} 모바일 대시보드가 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}로 변경되었습니다. 
-   * 프로젝트 작성이 웹 앱, BFF 및 마이크로서비스 서버 패턴 유형을 포함하고 Node.js, Java 및 Swift를 지원하도록 다시 디자인되었습니다. 
+   * Node.js, Java, Swift를 지원하고 웹 앱, BFF, 마이크로서비스 서버 패턴 유형을 포함하도록 프로젝트 작성이 재설계되었습니다. 
    * 개선된 새 {{site.data.keyword.appid_full}} 서비스와의 통합을 통해 모바일 및 웹 프로젝트에 대한 인증을 제공합니다. 
-   * 이제 [SDK Generator 플러그인](sdk_cli.html)을 사용하여 프로젝트에 대한 SDK를 추가로 생성할 수 있습니다. {{site.data.keyword.dev_console}}에서의 SDK 생성은 모바일 프로젝트의 경우에만 사용 가능합니다. 
-   * 이제 [{{site.data.keyword.dev_cli_short}}](dev_cli.html)을 사용하여 프로젝트를 추가로 작성할 수 있습니다. 
+   * 이제 [SDK Generator 플러그인](sdk_cli.html)을 사용하여 프로젝트의 SDK를 생성할 수 있습니다. {{site.data.keyword.dev_console}}에서의 SDK 생성은 모바일 프로젝트의 경우에만 사용 가능합니다. 
+   * 이제 [{{site.data.keyword.dev_cli_short}}](dev_cli.html)을 사용하여 프로젝트를 작성할 수 있습니다. 
 
 
 ## 새로운 기능: 2017년 1월
@@ -85,13 +85,13 @@ lastupdated: "2017-03-17"
 {: #ui_builder notoc}
 
    * 이제 프로젝트에서 **{{site.data.keyword.mobilepushshort}}** 기능에 액세스할 수 있습니다. 
-   * **프로젝트 설정** 탭의 이름이 **설정** 탭으로 바뀌었습니다. 
-   * **인증** 탭의 이름이 **사용자 액세스** 탭으로 바뀌었습니다. 
+   * **프로젝트 설정** 탭의 이름이 **설정**으로 변경되었습니다. 
+   * **인증** 탭의 이름이 **사용자 액세스**로 변경되었습니다. 
 
 
 ### 코드
 {: #code notoc}
 
-   * 생성된 iOS용 Objective-C 코드와 Swift 코드에서 CocoaPods를 사용하여 종속 항목을 관리합니다. 이는 CocoaPods를 설치해야 함을 의미합니다. 이를 설치하려면 `sudo gem install cocoapods`를 실행하십시오. CocoaPods 설치 후 `pod setup`을 실행하여 구성하십시오(아직 구성되지 않은 경우). 마지막으로 Xcode에서 `.xcworkspace` 파일을 열기 전에 `pod install`을 실행하여 필수 프로젝트 종속 항목을 다운로드하고 설치하십시오. 추가 세부사항은 다운로드된 코드 아카이브의 `README.md` 파일에 있습니다. 자세한 정보는 [전제조건 개발자 도구](get_code.html#prereq-dev-tools)를 살펴보십시오. 
+   * 생성된 iOS용 Objective-C 코드와 Swift 코드에서 CocoaPods를 사용하여 종속 항목을 관리합니다. 이는 CocoaPods를 설치해야 함을 의미합니다. 이를 설치하려면 `sudo gem install cocoapods`를 실행하십시오. CocoaPods 설치 후 `pod setup`을 실행하여 구성하십시오(아직 구성되지 않은 경우). 마지막으로 Xcode에서 `.xcworkspace` 파일을 열기 전에 `pod install`을 실행하여 프로젝트 종속 항목을 다운로드하고 설치하십시오. 추가 세부사항은 다운로드된 코드 아카이브의 `README.md` 파일에서 사용 가능합니다. 자세한 정보는 [전제조건 개발자 도구](get_code.html#prereq-dev-tools)를 살펴보십시오. 
 
 자주 방문하여 추가되는 새 업데이트를 확인하십시오. 

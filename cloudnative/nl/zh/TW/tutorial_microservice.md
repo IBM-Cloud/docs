@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -14,7 +14,9 @@ lastupdated: "2017-03-17"
 # Microservice Basic Starter 的完整指導教學
 {: #tutorial}
 
-下列完整指導教學逐步執行從 Microservice Basic Starter 建立專案的步驟，包括您必須安裝的工具，以及執行專案程式碼的步驟。
+下列完整指導教學逐步執行從 Microservice Basic Starter 建立專案的步驟。這包括安裝必備工具，以及執行專案程式碼的步驟。
+
+您可以使用 Web 型 [{{site.data.keyword.dev_console}}](#create-devex) 或透過指令驅動的 [{{site.data.keyword.dev_cli_notm}}](#create-cli) 來建立專案。
 
 ## 安裝開發人員工具
 {: #dev_tools}
@@ -27,7 +29,7 @@ lastupdated: "2017-03-17"
 
 1. 在 {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} 中建立專案。
 
-	1. 從 {{site.data.keyword.dev_console}} 的**開始使用**頁面中，按一下**建立專案**。
+	1. 從 {{site.data.keyword.dev_console}} 的[**開始使用** ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/developer/getting-started/) 頁面中，按一下**建立專案**。
 
 		您也可以按一下**專案**頁面中的**建立專案**。
 
@@ -37,7 +39,7 @@ lastupdated: "2017-03-17"
 
 	4. 輸入專案名稱。對於此指導教學，使用 `MicroserviceProject`。   
 
-	5. 輸入主機名稱。對於此指導教學，使用 `devhost`。 
+	5. 輸入唯一的主機名稱。對於此指導教學，使用 `devhost`。 
    
 	6. 按一下**建立**。
 
@@ -49,7 +51,7 @@ lastupdated: "2017-03-17"
 
    2. 輸入服務名稱，然後按一下**建立**。
 
-3. 產生專案程式碼。
+3. 產生專案程式碼：
 
 	1. 按一下**專案概觀**頁面上的**取得程式碼**，以選取您的語言。
    
@@ -59,7 +61,15 @@ lastupdated: "2017-03-17"
    
 	3. 當專案程式碼生成完成時，請按一下**下載程式碼**來下載專案保存檔。
 
-4. 選用項目：[更新專案](project_overview_page.html#update_language)以產生新語言。
+4. 開始使用已下載的專案：
+
+	1. 展開保存檔。
+	
+	2. 導覽至新的專案目錄。
+	
+	3. 使用 {{site.data.keyword.dev_cli_notm}} 繼續進行。
+
+5. 選用項目：[更新專案](project_overview_page.html#update_language)以產生新語言。
 
 
 ## 使用 {{site.data.keyword.dev_cli_notm}} 建立專案
@@ -85,7 +95,7 @@ lastupdated: "2017-03-17"
 
 5. 順利儲存 `MicroserviceProjectCLI` 後，請導覽至 `MicroserviceProjectCLI` 資料夾。
 
-6. 此時，您可能會新增自己的程式碼、建置或執行專案。
+6. 現在，您可以新增自己的程式碼、建置或執行專案。
  
  
 ## 使用 {{site.data.keyword.dev_cli_notm}} 執行專案
@@ -105,7 +115,7 @@ lastupdated: "2017-03-17"
 	```
 	{: codeblock}	
 
-3. 您可以在伺服器上使用 curl 來存取應用程式：
+3. 您可以在伺服器上使用 `curl` 來存取應用程式：
 
 	```
 	curl http://localhost:8080	

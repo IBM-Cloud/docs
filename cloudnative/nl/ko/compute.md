@@ -80,7 +80,7 @@ To add the `OPENAPI_SPEC` environment variable locally and push your changes to 
 4. Run `cf push` to deploy the changes to {{site.data.keyword.Bluemix_notm}}.
 -->
 
-예를 들어, 
+예:
 
 ```
 OPENAPI_SPEC='/explorer/swagger.json'
