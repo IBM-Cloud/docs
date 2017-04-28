@@ -206,7 +206,7 @@ bmsPush.retrieveAvailableTags(function(response)
 ```
 	{: codeblock}
 
-고객이 구독한 태그 목록을 가져오려면 다음 코드 스니펫을 Google Chrome 앱과 확장 프로그램에 복사하십시오. 
+고객이 구독한 태그 목록을 가져오려면 다음 코드 스니펫을 Google Chrome 앱 및 확장 프로그램에 복사하십시오. 
 
 ```
 var bmsPush = new BMSPush();
@@ -339,7 +339,7 @@ var tagsArray = ["tag1", "Tag2"]
 
 **태그** 화면에서 태그를 작성하십시오. 태그 작성 방법에 대한 정보는 [태그 작성](t_manage_tags.html)을 참조하십시오. 
 
-1. **푸시 알림** 대시보드에서 **알림 전송**을 클릭하십시오. 
+1. **Push Notification** 대시보드에서 **알림 전송**을 클릭하십시오. 
 1. **받는 사람** 드롭 다운 목록에서 **태그별 디바이스** 옵션을 선택하십시오. 
 1. 사용할 태그를 검색하여 선택하십시오.
 ![알림 화면](images/tag_notification.jpg)

@@ -12,10 +12,10 @@ copyright:
 
 # Utilizzo delle API REST
 {: #push-api-rest}
-Ultimo aggiornamento: 16 gennaio 2017
+Ultimo aggiornamento: 28 febbraio 2017
 {: .last-updated}
 
-Puoi utilizzare una API (application program interface) REST (Representational State Transfer) per {{site.data.keyword.mobilepushshort}}. Puoi anche utilizzare l'SDK e l'[API Push ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://mobile.{DomainName}/imfpush/ "Icona link esterno"){: new_window} per sviluppare ulteriormente le tue applicazioni client.
+Puoi utilizzare una API (application program interface) REST (Representational State Transfer) per {{site.data.keyword.mobilepushshort}}. Puoi anche utilizzare l'SDK e l'[API Push ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://mobile.{DomainName}/imfpush/){: new_window} per sviluppare ulteriormente le tue applicazioni client.
 
 Con la API REST Push, i client e le applicazioni server di backend possono accedere alle funzioni {{site.data.keyword.mobilepushshort}}.
 
@@ -30,7 +30,7 @@ Per ottenere l'URL di base per la API REST, completa seguente procedura:
 
 1. Crea un'applicazione di backend nella sezione Contenitori tipo del catalogo Bluemix® scegliendo MobileFirst Services Starter. In questo modo viene eseguito il bind del servizio {{site.data.keyword.mobilepushshort}} all'applicazione. Puoi anche creare un'istanza del servizio di push e lasciarla senza binding. 
 1. Nella pagina principale del dashboard Bluemix, vai nell'area **Applicazioni** e quindi seleziona la tua applicazione.
-3. Fai clic su **OPZIONI MOBILI**. I valori di rotta e GUID applicazione sono visualizzati nella parte superiore della pagina dei dettagli della tua applicazione. La schermata Visualizza credenziali mostra informazioni relative all'AppSecret. Puoi ottenere il segreto applicazione dalle opzioni mobili e anche il segreto client per alcune API.
+3. Fai clic su **OPZIONI MOBILI**. I valori GUID di applicazione e instradamento sono visualizzati nella parte superiore della pagina dei dettagli per la tua applicazione. La schermata Visualizza credenziali mostra le informazioni sull'AppSecret. Puoi ottenere il segreto applicazione dalle opzioni mobili e anche il segreto client per alcune API.
 
 Puoi inoltre utilizzare la riga di comando per ottenere le credenziali del servizio:
 
@@ -44,14 +44,14 @@ Puoi inoltre utilizzare la riga di comando per ottenere le credenziali del servi
 ## Intestazione Accept-Language
 {: #push-api-rest-accept}
 
-L'intestazione "Accept-Language" specifica quale lingua utilizzare per i messaggi di errore generati in output dalla [API REST Push ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://mobile.{DomainName}/imfpush/ "Icona link esterno"){: new_window}. Per i messaggi di errore sono supportate le
+L'intestazione "Accept-Language" specifica quale lingua utilizzare per i messaggi di errore generati in output dalla [API REST Push ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://mobile.{DomainName}/imfpush/){: new_window}. Per i messaggi di errore sono supportate le
                 seguenti lingue: cinese (semplificato), cinese, (tradizionale), inglese (US), tedesco, francese,
                 italiano, giapponese, coreano, portoghese e spagnolo.
 
 ## appSecret 
 {: #push-api-rest-secret}
 
-Quando un'applicazione esegue il bind a {{site.data.keyword.mobilepushshort}}, il servizio genera una appSecret (una chiave univoca) e la passa nell'intestazione di risposta. Se stai utilizzando IBM {{site.data.keyword.mobilepushshort}} per la API Rest Bluemix, utilizza la guida di riferimento alle API REST per ottenere informazioni su quali API devi proteggere. Per informazioni, vedi [API REST Push![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://mobile.{DomainName}/imfpush/ "Icona link esterno"){: new_window}.
+Quando un'applicazione esegue il bind a {{site.data.keyword.mobilepushshort}}, il servizio genera una appSecret (una chiave univoca) e la passa nell'intestazione di risposta. Se stai utilizzando IBM {{site.data.keyword.mobilepushshort}} per la API Rest Bluemix, utilizza la guida di riferimento alle API REST per ottenere informazioni su quali API devi proteggere. Per informazioni, vedi [API REST Push ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://mobile.{DomainName}/imfpush/){: new_window}.
 
 L'intestazione di richiesta deve contenere l'appSecret. In caso contrario, il server restituisce un codice di errore
                 401 Non autorizzato. Quando {{site.data.keyword.mobilepushshort}} viene aggiunto a un'applicazione, viene creato uno specifico AppID. Come parte della risposta, ottieni un'intestazione denominata appSecret che viene utilizzata per la creazione di tag o l'invio di messaggi. L'operazione viene eseguita tramite i servizi nel catalogo o
@@ -83,7 +83,7 @@ La schermata **Visualizza credenziali** mostra le informazioni sull'AppSecret:
 	{: codeblock} 
 
 
-##Filtri API REST di Push
+## Filtri API REST di Push
 {: #push-api-rest-filters}
 
 I filtri definiscono un criterio di ricerca che limita i dati restituiti da una API GET di {{site.data.keyword.mobilepushshort}}. Applica i filtri sul risultato dell'operazione Get che desideri filtrare. Il filtro limita il numero di voci incluse nel risultato. d esempio, puoi utilizzare un filtro per cercare tag il cui nome inizia con "test". 
@@ -124,7 +124,7 @@ Per la API GET di sottoscrizione, sono supportate le seguenti combinazioni:
 - Se viene utilizzato ==, il valore deve essere una stringa di corrispondenza esatta.
 
 
-##Codici di risposta {{site.data.keyword.mobilepushshort}}
+## Codici di risposta del servizio Push Notifications
 {: #push-api-response-codes}
 
 Stato: 405 Metodo non consentito - È previsto un metodo appropriato

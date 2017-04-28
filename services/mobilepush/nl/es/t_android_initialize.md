@@ -5,12 +5,12 @@ copyright:
 
 ---
 
-# Inicialización del SDK push para aplicaciones Android
+# Inicialización del SDK push para apps Android
 {: #android_initialize}
 
 Un lugar común para colocar el código de inicialización se encuentra en el método onCreate de la actividad principal en su aplicación Android.
 
-Pulse el enlace **Opciones móviles** en el Panel de control de aplicaciones de Bluemix para obtener la ruta de la aplicación y el applicationGUID. Utilice estos valores para su ruta y GUID de la app. Modifique el fragmento de código para que utilice los parámetros appRoute y appGUID de la aplicación Bluemix.
+Pulse el enlace **Opciones móviles** en el Panel de control de aplicaciones de Bluemix para obtener la ruta de la aplicación y el applicationGUID. Utilice estos valores para su ruta y GUID de la app. Modifique el fragmento de código para que utilice los parámetros appRoute y appGUID de la app Bluemix.
 
 
 ##Inicializar el SDK principal

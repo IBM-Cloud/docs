@@ -43,7 +43,7 @@ push.registerDeviceWithUserId("userId",new MFPPushResponseListener<String>() {
 		@Override
 		public void onFailure(MFPPushException ex) {
 		  Log.d("Error registering with Push Service...\n"
-        + "Push notifications will not be received.");
+   		  + "Push notifications will not be received.");
 		}
 		});
 ```
@@ -61,7 +61,7 @@ push.registerDeviceWithUserId("userId",new MFPPushResponseListener<String>() {
 ```
 // Register device for Push Notification with UserId
 var options = {"userId": "Your User Id value"};
-BMSPush.registerDevice(options,success, failure); 
+BMSPush.registerDevice(options,success, failure);
 ```
 	{: codeblock}
 
@@ -74,8 +74,8 @@ BMSPush.registerDevice(options,success, failure);
 
 ```
 // Initialize the BMSPushClient
-	let push =  BMSPushClient.sharedInstance
-	push.initializeWithAppGUID("appGUID", clientSecret:"clientSecret")
+let push =  BMSPushClient.sharedInstance
+push.initializeWithAppGUID("appGUID", clientSecret:"clientSecret")
 ```
 	{: codeblock}
 
@@ -90,11 +90,11 @@ BMSPush.registerDevice(options,success, failure);
 push.registerWithDeviceToken("deviceToken", WithUserId: "userId")  { (response, statusCode, error) -> Void in
 if error.isEmpty {
   print( "Response during device registration : \(response)")
-        print( "status code during device registration : \(statusCode)")
-    } else {
-        print( "Error during device registration \(error) ")
-    }
-    }
+  print( "status code during device registration : \(statusCode)")
+  } else {
+  print( "Error during device registration \(error) ")
+  }
+  }
 ```
 	{: codeblock}
 
@@ -113,16 +113,16 @@ var params = {
     "clientSecret":"Push Client Secret"
     }
   bmsPush.initialize(params, function(response){
-          alert(response.response)
-      })
+    alert(response.response)
+    })
 ```
 	{: codeblock}
   
 初期化が正常に完了したら、userId を指定して Web アプリケーションを登録します。
 
 ```
-    bmsPush.registerWithUserId("UserId", function(response) {
-      alert(response.response)
+bmsPush.registerWithUserId("UserId", function(response) {
+ alert(response.response)
   })
 ```
 	{: codeblock}
@@ -140,8 +140,8 @@ var params = {
     "clientSecret":"Push Client Secret"
     }
   bmsPush.initialize(params, function(response){
-          alert(response.response)
-      })
+    alert(response.response)
+    })
 ```
 	{: codeblock}
   

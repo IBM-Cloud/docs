@@ -10,19 +10,20 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# 让 Chrome Apps and Extensions 能够接收 {{site.data.keyword.mobilepushshort}} 
+# 使 Chrome Apps and Extensions 能够接收推送通知
 {: #web_notifications}
-上次更新时间：2017 年 1 月 18 日
+上次更新时间：2017 年 4 月 12 日
 {: .last-updated}
 
 您可以支持 Chrome Apps and Extensions 接收 {{site.data.keyword.mobilepushshort}}。请确保您已经完成[配置通知提供程序的凭证](t__main_push_config_provider.html)，然后再继续相关步骤。
 
-## 安装客户机 SDK 以支持 {{site.data.keyword.mobilepushshort}}
+## 安装客户机 SDK 以支持 Push Notifications
 {: #web_install}
 
 本主题描述如何安装和使用客户机 JavaScript 推送 SDK 来进一步开发 Chrome Apps and Extensions。
 
 ### Google Chrome Apps and Extensions 中的初始化
+{: #initialize_google_extn_app}
 
 要在 Chrome Apps and Extensions 中安装 JavaScript SDK，请完成以下步骤：
 
@@ -50,7 +51,7 @@ chrome.notifications.onButtonClicked.addListener(BMSPushBackground.notifiation_b
 
 
 
-## 初始化 推送 SDK 
+### 初始化 推送 SDK 
 {: #web_initialize}
 
 通过 Bluemix {{site.data.keyword.mobilepushshort}} 服务 `app GUID` 和 `app Region` 初始化推送 SDK。  
@@ -77,10 +78,10 @@ chrome.notifications.onButtonClicked.addListener(BMSPushBackground.notifiation_b
 ```
 	{: codeblock}
 
-## 注册 Chrome Apps and Extensions
+### 注册 Chrome Apps and Extensions
 {: #web_register}
 
-使用 `register()` API 向 {{site.data.keyword.mobilepushshort}} 服务注册设备。对于从 Google Chrome 注册，请在 Bluemix {{site.data.keyword.mobilepushshort}} 服务 Web 配置仪表板中添加 Firebase 云消息传递 (FCM) 和 Google 云消息传递 (GCM) API 密钥和 Web 站点 URL。有关更多信息，请参阅 Chrome 设置下的[为 Google 云消息传递配置凭证](t_push_provider_android.html)。
+使用 `register()` API 向 {{site.data.keyword.mobilepushshort}} 服务注册设备。要从 Google Chrome 注册，请在 Bluemix {{site.data.keyword.mobilepushshort}} 服务 Web 配置仪表板中添加 Firebase 云消息传递 (FCM) API 密钥和 Web 站点 URL。有关更多信息，请参阅[配置通知提供程序的凭证](t__main_push_config_provider.html)。 
 
 对于从 Mozilla Firefox 注册，在 Firefox 设置下的 Bluemix {{site.data.keyword.mobilepushshort}} 服务 Web 配置仪表板中添加 Web 站点 URL。
 
@@ -102,6 +103,32 @@ chrome.notifications.onButtonClicked.addListener(BMSPushBackground.notifiation_b
 ```
     {: codeblock}
 
+
+## 向 Chrome Apps and Extensions 发送基本通知 
+{: #web_extensions_notifications}
+
+开发应用程序后，可以发送推送通知。 
+
+1. 选择**发送通知**，并通过选择 **Web 通知**作为**发送至**选项来编辑消息。 
+2. 键入需要在**消息**字段中传递的消息。
+3. 您可以选择提供可选设置：
+  - **通知标题**：这是作为消息警报标题显示的文本。
+  - **通知图标 URL**：如果您的消息需要与应用程序通知图标一起传递，请在字段中提供图标的链接。
+  - **折叠键**：折叠键附加在通知上。如果设备脱机时多个通知使用相同的折叠键按顺序抵达，那么将折叠通知。在设备联机时，将从 FCM/GCM 服务器接收通知，并只显示带有相同折叠键的最新通知。如果没有设置折叠键，将存储新和旧的消息，以在以后传递。
+  - **生存时间**：此值以秒为单位进行设置。如果未指定此参数，FCM/GCM 服务器将把消息存储 4 周时间并将尝试传递。4 周后有效性到期。值可以为 0 至 2,419,200 秒之间的值。
+  - **空闲时延迟**：将此值设置为 `true` 将指示 FCM/GCM 服务器在设备空闲时不要传递通知。将此值设置为 `false`，以确保在设备空闲时传递通知。
+  - **其他有效内容**：为您的通知指定定制的有效内容值。
+
+下面的图像显示仪表板中的 Chrome Apps and Extensions 通知选项。
+
+  ![“通知”屏幕](images/push_chrome_extns.jpg)
+  
+### 后续步骤
+{: #next_steps_tags}
+
+成功设置基本通知后，可以选择配置基于标记的通知和高级选项。
+
+将这些 {{site.data.keyword.mobilepushshort}} 服务功能添加到应用程序中。要使用基于标记的通知，请参阅[基于标记的通知](c_tag_basednotifications.html)。要使用高级通知选项，请参阅[高级通知](t_advance_badge_sound_payload.html)。
 
 
 

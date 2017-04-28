@@ -12,7 +12,7 @@ copyright:
 
 # Rich Media-Benachrichtigungen aktivieren
 {: #interactive-notifications}
-Letzte Aktualisierung: 11. Januar 2017
+Letzte Aktualisierung: 09. März 2017
 {: .last-updated}
 
 

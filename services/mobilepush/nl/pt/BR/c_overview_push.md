@@ -10,9 +10,9 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Sobre {{site.data.keyword.mobilepushshort}}
+# Serviço de Notificação push
 {: #overview-push}
-Última atualização: 18 de janeiro de 2017
+Última atualização: 31 de março de 2017
 {: .last-updated}
 
 O IBM {{site.data.keyword.mobilepushshort}} é um serviço que pode ser usado para enviar notificações para dispositivos e plataformas. É possível direcionar notificações para todos os usuários
@@ -29,7 +29,7 @@ Observe que a guia de monitoramento {{site.data.keyword.mobilepushshort}} não m
 O serviço {{site.data.keyword.mobilepushshort}} agora está ativado para OpenWhisk. Para obter mais informações, consulte [OpenWhisk](/docs/openwhisk/index.html).
 
 
-## Processo do serviço {{site.data.keyword.mobilepushshort}}
+## Processo do serviço de Notificação push
 {: #overview_push_process}
 
 Dispositivos móveis, clientes do navegador da web, Apps Google Chrome e Extensões podem assinar e se registrar no serviço
@@ -41,13 +41,13 @@ clientes farão seus próprios registros e assinaturas no serviço
 ![Visão geral de push](images/overview.jpg)
 
 
-###Aplicativos móveis e do navegador
-{: mobile-applications}
+### Aplicativos móveis e do navegador
+{: #mobile-applications}
 
 Na inicialização, os aplicativos clientes se registram e assinam o serviço {{site.data.keyword.mobilepushshort}} para receber notificações.
 
-###Aplicativos backend
-{: backend-applications}
+### Aplicativos backend
+{: #backend-applications}
 
 Os aplicativos backend podem ser locais ou estarem em uma nuvem pública. Os
 aplicativos backend usarão o serviço
@@ -58,16 +58,16 @@ informações sobre o usuário para enviar notificações push. Em vez disso, os
 podem usar o serviço {{site.data.keyword.mobilepushshort}} que os gerenciará
 e os manterá.
 
-###Proprietário backend do app
-{: app-backend-owner}
+### Proprietário backend do app
+{: #app-backend-owner}
 
 O proprietário backend do App cria o aplicativo backend móvel que empacota uma instância do serviço {{site.data.keyword.mobilepushshort}}. O
 proprietário backend do App também configura e instala o serviço
 {{site.data.keyword.mobilepushshort}} para adequar os aplicativos backend usando
 o serviço com os aplicativos móveis e do navegador que se destinam a {{site.data.keyword.mobilepushshort}}.
 
-###Serviço {{site.data.keyword.mobilepushshort}}
-{: push-notification-service}
+### Serviço de Notificação push
+{: #push-notification-service}
 
 O serviço {{site.data.keyword.mobilepushshort}} gerencia todas as
 informações relacionadas a dispositivos móveis e clientes do navegador da web que são
@@ -75,46 +75,41 @@ registrados para notificações. O serviço mantém seus aplicativos transparent
 detalhes de tecnologia de envio de notificações a plataformas móveis e de navegador da
 web heterogêneas, manipulando todos esses dentro.
 
-###Gateways
-{: gateways}
+### Gateways
+{: #gateways}
 
 Serviços de nuvem de Notificações push específicos da plataforma, como FCM/GCM ou Apple Push Notification Service (APNs), que são usados pelo serviço IBM
 {{site.data.keyword.mobilepushshort}} para despachar notificações aos aplicativos móveis e do navegador.
 
-###Segurança de Push
-{: push-security}
+### Segurança de Push
+{: #push-security}
 
 As APIs de {{site.data.keyword.mobilepushshort}} são protegidas por dois tipos de segredos:
 
-- **appSecret**: O 'appSecret' protege as APIs que são normalmente chamadas por aplicativos backend - como a API para enviar o {{site.data.keyword.mobilepushshort}} e a API para configurar definições.
-- **clientSecret**: O 'clientSecret' protege as APIs que são normalmente chamadas por aplicativos cliente móveis. Existe
-somente uma API relacionada para registro de um dispositivo com um ID do usuário associado que requer este 'clientSecret'. Nenhuma das outras APIs chamadas a partir
-de clientes móveis requer o clientSecret. 
+- **appSecret**: o `appSecret` protege as APIs que são geralmente chamadas por aplicativos backend - como a API para enviar o {{site.data.keyword.mobilepushshort}} e a API para configurar definições.
+- **clientSecret**: o `clientSecret` protege as APIs que são geralmente chamadas por aplicativos cliente móveis. Existe somente uma API relacionada para registro de um dispositivo com um ID de usuário associado que requer este `clientSecret`. Nenhuma das outras APIs chamadas de clientes móveis requer o `clientSecret`. 
 
-O 'appSecret' e o 'clientSecret' são alocados para todas as instâncias de serviço no momento da ligação de um aplicativo ao serviço {{site.data.keyword.mobilepushshort}}. Consulte a documentação das [APIs de REST ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://mobile.{DomainName}/imfpush/) para obter informações sobre como os segredos devem ser passados e para quais APIs.
+O `appSecret` e o `clientSecret` são alocados para todas as instâncias de serviço no momento da ligação de um aplicativo ao serviço {{site.data.keyword.mobilepushshort}}. Consulte a documentação das [APIs de REST ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://mobile.{DomainName}/imfpush/) para obter informações sobre como os segredos devem ser passados e para quais APIs.
 
 **Nota**: os aplicativos anteriores eram necessários para passar o clientSecret somente ao registrar ou atualizar dispositivos com o campo userId. Todas
 as outras APIs chamadas por clientes móveis e do navegador não requerem o clientSecret. Esses aplicativos antigos podem continuar a usar o clientSecret opcionalmente
 para registros de dispositivo ou chamadas de atualização. Entretanto, é
 expressamente recomendado que a verificação do clientSecret seja imposta para todas as
-chamadas de API do cliente. Para impingir isso em aplicativos existentes, há uma nova API 'verifyClientSecret' que está publicada.  Para novos aplicativos, a verificação do clientSecret será impingida em todas as chamadas de API do cliente e esse comportamento não poderá ser mudado mesmo com a API
-'verfiyClientSecret'.
+chamadas de API do cliente. Para usar isso em aplicativos existentes, há uma nova API `verifyClientSecret` publicada. Para novos aplicativos, a verificação do clientSecret será usada em todas as chamadas API do cliente e esse comportamento não poderá ser mudado com a API `verfiyClientSecret`.
 
 Por padrão, a verificação do segredo do cliente é impingida apenas em novos apps. Os apps existentes e novos têm permissão para ativar ou desativar a verificação do segredo do cliente
 usando a API de REST verifyClientSecret. Recomenda-se que você impinja a verificação do segredo do cliente para evitar
 expor dispositivos para usuários que possam conhecer o ID do aplicativo e o ID do dispositivo.
 
-Assegure-se de que 'clientSecret' seja mantido confidencial e que nunca seja codificado permanentemente
-no app móvel. Há vários padrões de inicialização de aplicativo que podem ser usados para puxar o
-'clientSecret' dinamicamente durante o tempo de execução dos aplicativos. O diagrama de sequência é descrito nesse
+Assegure-se de que o `clientSecret` seja mantido confidencial e nunca seja codificado permanentemente no app móvel. Há vários padrões de inicialização de aplicativo que podem ser usados para puxar o `clientSecret` dinamicamente durante o tempo de execução dos aplicativos. O diagrama de sequência é descrito nesse
 possível padrão.
 ![Enable_Push](images/init_client_secret.jpg) 
 
-## Tipos de {{site.data.keyword.mobilepushshort}}
+## Tipos de Notificação push
 {: #overview-push-types}
 
-###Difusão
-{: broadcast}
+### Difusão
+{: #broadcast}
 
 Quando um aplicativo cliente se registra no serviço {{site.data.keyword.mobilepushshort}}, ele pode começar a receber transmissões. Notificações de
 transmissão são mensagens destinadas a todas as instâncias de um aplicativo instalado em dispositivos móveis, navegadores ou implementadas como apps Chrome ou
@@ -122,8 +117,8 @@ instâncias de extensão e configuradas para o serviço {{site.data.keyword.mobi
 notificação de transmissão usando a API Push REST, assegure-se de que
 o "destino" seja um JSON vazio ao postar no recurso de mensagens.
 
-###Notificações baseadas em tag
-{: tag-based-notifications}
+### Notificações baseadas em tag
+{: #tag-based-notifications}
 
 Notificações de tag são mensagens destinadas a todos os dispositivos inscritos em uma tag específica. As notificações baseadas em identificação
 permitem a segmentação de notificações com base em áreas ou tópicos de assunto. Os destinatários da notificação podem optar por receber notificações somente se for
@@ -132,8 +127,8 @@ identificação fornece um meio de segmentar destinatários. Esse recurso ativa
 a capacidade de definir identificações e, em seguida, de enviar e receber mensagens por identificações. Uma mensagem é destinada somente para instâncias do aplicativo
 cliente (no dispositivo móvel, navegador ou como um app ou extensões) que estão inscritas para a identificação. Deve-se primeiramente criar tags para o aplicativo, configurar as assinaturas da tag e, em seguida, iniciar as notificações baseadas em tag. Para enviar uma notificação baseada em tag que usa a API REST, assegure-se de que os "tagNames" sejam fornecidos ao postar no recurso de mensagem.
 
-###Notificações unicast
-{: unicast-notifications}
+### Notificações unicast
+{: #unicast-notifications}
 
 Notificações unicast são mensagens destinadas a um dispositivo ou usuário específico. As notificações unicast destinadas a dispositivos não requerem configuração adicional e são ativadas por padrão quando o aplicativo está ativado para {{site.data.keyword.mobilepushshort}}.
 
@@ -146,8 +141,8 @@ autenticação bem-sucedida, o ID de usuário autenticado então é passado para
 registro de dispositivo push. 
 Para enviar notificações Unicast por meio da API REST, assegure-se de que os deviceIds ou userIds sejam fornecidos ao postar em um recurso de mensagem.
 
-###Notificações com base em plataforma
-{: platform-based-notifications}
+### Notificações com base em plataforma
+{: #platform-based-notifications}
 
 Notificações podem ser
 destinada a atingir uma plataforma de dispositivo
@@ -163,21 +158,21 @@ suportadas são como a seguir:
 * WEB_SAFARI (Safari Browser Web Push)
 * APPEXT_CHROME (Apps Google Chrome e Extensões)
 
-## Tamanho da mensagem de {{site.data.keyword.mobilepushshort}}
+## Tamanho de mensagem da notificação push
 {: #push-message-size}
 
 O tamanho da carga útil da mensagem de {{site.data.keyword.mobilepushshort}} depende das restrições estabelecidas pelos Gateways (FCM/GCM, APNs) e
 pelas plataformas do cliente. 
 
 ### iOS e Safari
-{: ios-message-size}
+{: #ios-message-size}
 
 Para o iOS 8 e posterior, o tamanho máximo permitido é 2 kilobytes. O serviço de Notificação push Apple não envia notificações que excedem
 esse limite.
 
-###Android, navegador Firefox, navegador Chrome e Apps e
+### Android, navegador Firefox, navegador Chrome e Apps e
 extensões Chrome
-{: android-message-size}
+{: #android-message-size}
 
 Há uma limitação de 4 kilobytes como o tamanho da carga útil de
 mensagem máximo permitido.  

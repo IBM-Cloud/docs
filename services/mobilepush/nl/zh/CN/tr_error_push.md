@@ -52,7 +52,7 @@ copyright:
 
 **说明**：{{site.data.keyword.mobilepushshort}} 服务的必备配置不完整。可能是您在尝试获取 Apple 推送通知服务 (APNs) 凭证，但凭证尚未配置。
 
-**用户响应**：请确保已使用有效的 APNs 安全证书配置 {{site.data.keyword.mobilepushshort}}服务。有关的更多信息，请参阅[配置 APN 的凭证 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](t_push_provider_ios.html){: new_window}。
+**用户响应**：请确保已使用有效的 APNs 安全证书配置 {{site.data.keyword.mobilepushshort}}服务。有关的更多信息，请参阅[配置 APNs 的凭证 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](t_push_provider_ios.html){: new_window}。
 
 
 ## FPWSE0004E

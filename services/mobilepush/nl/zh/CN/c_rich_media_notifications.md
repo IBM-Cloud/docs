@@ -12,11 +12,11 @@ copyright:
 
 # 启用富媒体通知
 {: #interactive-notifications}
-上次更新时间：2017 年 1 月 11 日
+上次更新时间：2017 年 3 月 9 日
 {: .last-updated}
 
 
-您可以在 iOS 10 和以上版本中启用富媒体 {{site.data.keyword.mobilepushshort}}。推送通知可随音频、视频、GIF 和图像一起发送。 
+您可以在 iOS 10 及更高版本中启用富媒体 {{site.data.keyword.mobilepushshort}}。推送通知可随音频、视频、GIF 和图像一起发送。 
 
 要设置应用程序在 iOS 10 上接收富媒体推送，请完成以下步骤：  
 

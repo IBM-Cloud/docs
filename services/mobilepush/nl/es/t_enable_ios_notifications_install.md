@@ -1,4 +1,4 @@
-# Inicialización de SDK Push para aplicaciones iOS
+# Inicialización de SDK Push para apps iOS
 {: #enable-push-ios-notifications-install}
 
 Para un proyecto Xcode existente, puede configurar el SDK del cliente de Bluemix Mobile Services mediante la herramienta de gestión de dependencias de CocoaPods. Una alternativa es instalar el SDK manualmente.
@@ -97,7 +97,7 @@ Vaya a **Xcode > Crear configuración > Opciones de creación y Establecer la ha
 
 
 
-# Inicialización de SDK Push para aplicaciones iOS
+# Inicialización de SDK Push para apps iOS
 {: #enable-push-ios-notifications-initialize}
 
 Un lugar común para colocar el código de inicialización se encuentra en el delegado de aplicación para la aplicación iOS.
@@ -152,7 +152,7 @@ Especifica la clave exclusiva asignada a la aplicación que ha creado en Bluemix
 
 **bluemixRegionSuffix**
 
-Especifica la ubicación en la que se aloja la aplicación. El parámetro `bluemixRegion` especifica qué despliegue de Bluemix está utilizando. Puede establecer este valor con una propiedad estática `BMSClient.REGION` y utilizar uno de estos tres valores:
+Especifica la ubicación en la que se aloja la app. El parámetro `bluemixRegion` especifica qué despliegue de Bluemix está utilizando. Puede establecer este valor con una propiedad estática `BMSClient.REGION` y utilizar uno de estos tres valores:
 
 - BMSClient.REGION_US_SOUTH
 - BMSClient.REGION_UK
@@ -320,5 +320,6 @@ en el primer plano en un dispositivo Android e iOS.
 
 Una vez que haya configurado correctamente las notificaciones básicas, puede configurar las notificaciones basadas en código y las opciones avanzadas.
 
-Añada estas características de servicio de notificaciones push a la app. Para utilizar notificaciones basadas en código, consulte [Notificaciones basadas en código](c_tag_basednotifications.html).
+Añada estas características del servicio de notificaciones push a su app.
+Para utilizar notificaciones basadas en código, consulte [Notificaciones basadas en código](c_tag_basednotifications.html).
 Para utilizar opciones de notificaciones avanzadas, consulte [Notificaciones push avanzadas](t_advance_notifications.html).

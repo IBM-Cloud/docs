@@ -20,4 +20,4 @@ I messaggi di notifica basata su tag sono destinati a tutti i dispositivi che ha
 
 Devi prima creare le tag per l'applicazione, impostare
                         le sottoscrizioni di tag e iniziare quindi le notifiche basate sulle
-                        tag. Per inviare una notifica basata sulle tag che utilizza l'[API REST ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://mobile.{DomainName}/imfpush/ "Icona link esterno"){: new_window}, assicurati che i "tagName" siano forniti all'inserimento nella risorsa messaggi. 
+                        tag. Per inviare una notifica basata sulle tag utilizzando l'[API REST ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://mobile.{DomainName}/imfpush/){: new_window}, assicurati di specificare i "tagName" all'inserimento in una risorsa messaggi. 

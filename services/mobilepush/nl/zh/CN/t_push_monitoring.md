@@ -12,7 +12,7 @@ copyright:
 
 # 监视推送通知 
 {: #monitor-notifications}
-上次更新时间：2017 年 1 月 16 日
+上次更新时间：2017 年 4 月 12 日
 {: .last-updated}
 
 
@@ -27,7 +27,7 @@ IBM {{site.data.keyword.mobilepushshort}} 服务现已扩展了功能，可以�
 
 ![已注册的设备报告](images/monitoring_devices.jpg)
 
-有关如何更新 Android SDK 以监视通知信息的更多信息，请参阅[在 Android 设备上监视推送通知](c_android_enable.html#android_monitor)。
+有关如何更新 Android SDK 以监视通知信息的信息，请参阅[为移动设备启用通知](c_enable_push.html)中的“在 Android 设备上监视推送通知”主题。
 
 
  

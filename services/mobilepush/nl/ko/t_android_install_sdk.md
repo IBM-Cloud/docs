@@ -45,7 +45,7 @@ compile 'com.google.android.gms:play-services:7.8.0'
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 ```
 
-	여기에서 [Android 권한](http://developer.android.com/guide/topics/security/permissions.html)에 대한 정보를 볼 수 있습니다. 
+	여기서 [Android 권한](http://developer.android.com/guide/topics/security/permissions.html)에 대한 정보를 볼 수 있습니다. 
 
 1. 활동에 대한 알림 의도 설정을 추가하십시오. 사용자가 알림 영역에서 수신한 알림을 클릭할 경우 이 설정을 통해 애플리케이션이 시작됩니다. 
 
@@ -125,7 +125,7 @@ push.initialize(getApplicationContext());
 # Android 디바이스 등록
 {: #android_register}
 
-`IMFPush.register()` API를 사용하여 디바이스를 푸시 알림 서비스에 등록할 수 있습니다. Android 디바이스의 등록인 경우, 우선 Bluemix 푸시 서비스 구성 대시보드에서 GCM(Google Cloud Messaging) 정보를 추가하십시오. 자세한 정보는 [GCM(Google Cloud Messaging)의 신임 정보 구성](t_push_provider_android.html)을 참조하십시오. 
+`IMFPush.register()` API를 사용하여 디바이스를 Push Notification 서비스에 등록할 수 있습니다. Android 디바이스의 등록인 경우, 우선 Bluemix 푸시 서비스 구성 대시보드에서 GCM(Google Cloud Messaging) 정보를 추가하십시오. 자세한 정보는 [GCM(Google Cloud Messaging)의 신임 정보 구성](t_push_provider_android.html)을 참조하십시오. 
 
 다음 코드 스니펫을 복사하여 Android 모바일 애플리케이션에 붙여넣으십시오. 
 
@@ -171,7 +171,7 @@ notificationListener 오브젝트를 푸시에 등록하려면 **MFPPush.listen(
 	   }
 	}
 	```
-2. 프로젝트를 빌드하고 디바이스 또는 에뮬레이터에서 이를 실행하십시오. register() 메소드의 응답 리스너에 대해 onSuccess() 메소드가 호출되면 디바이스가 푸시 알림 서비스에 정상적으로 푸시에 등록된 것입니다. 이 때 기본 푸시 알림 전송에 설명된 대로 메시지를 보낼 수 있습니다. 
+2. 프로젝트를 빌드하고 디바이스 또는 에뮬레이터에서 이를 실행하십시오. register() 메소드의 응답 리스너에 대해 onSuccess() 메소드가 호출되면 디바이스가 Push Notification 서비스에 정상적으로 푸시에 등록된 것입니다. 이 때 기본 푸시 알림 전송에 설명된 대로 메시지를 보낼 수 있습니다. 
 3. 디바이스가 알림을 수신했는지 확인하십시오. 애플리케이션이 포그라운드에 있는 경우 **MFPPushNotificationListener**에 의해 알림이 처리됩니다. 애플리케이션이 백그라운드에 있는 경우 알림 막대에 메시지가 표시됩니다. 
 
 
@@ -211,6 +211,6 @@ notificationListener 오브젝트를 푸시에 등록하려면 **MFPPush.listen(
 
 정상적으로 기본 알림을 설정한 후 태그 기반 알림 및 고급 옵션을 구성할 수 있습니다. 
 
-이러한 푸시 알림 서비스 기능을 앱에 추가하십시오.
+다음의 Push Notifications 서비스 기능을 사용자의 앱에 추가하십시오.
 태그 기반 알림을 사용하려면 [태그 기반 알림](c_tag_basednotifications.html)을 참조하십시오.
 고급 알림 옵션을 사용하려면 [고급 푸시 알림](t_advance_notifications.html)을 참조하십시오. 

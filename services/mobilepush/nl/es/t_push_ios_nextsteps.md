@@ -13,7 +13,8 @@ copyright:
 
 Una vez que haya configurado correctamente las notificaciones básicas, puede configurar las notificaciones basadas en código y las opciones avanzadas.
 
-Añada estas características de Servicio de notificaciones push a la aplicación.
+Añada estas características del servicio de notificaciones push a su app.
+
 
 
 

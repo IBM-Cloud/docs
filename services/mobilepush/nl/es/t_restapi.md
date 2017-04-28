@@ -12,7 +12,7 @@ copyright:
 
 # Utilización de API REST
 {: #push-api-rest}
-Última actualización: 16 de enero de 2017
+Última actualización: 28 de febrero de 2017
 {: .last-updated}
 
 Puede utilizar una API (application program interface, interfaz de programa de aplicaciones) REST (Representational State Transfer) para {{site.data.keyword.mobilepushshort}}. También puede utilizar el SDK y la [API Push ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://mobile.{DomainName}/imfpush/){: new_window} para seguir desarrollando aplicaciones cliente.
@@ -78,7 +78,7 @@ La pantalla **Mostrar credenciales** muestra información sobre el AppSecret:
 	{: codeblock} 
 
 
-##Filtros API REST de Push
+## Filtros API REST de Push
 {: #push-api-rest-filters}
 
 Los filtros definen los criterios de búsqueda que restringen los datos devueltos de una API GET de {{site.data.keyword.mobilepushshort}}. Aplique los filtros con el resultado de la operación Get que desee filtrar. El filtro restringe el número de entradas incluidas en el resultado. Por ejemplo, puede utilizar un filtro para buscar etiquetas que empiecen por "test". 
@@ -117,7 +117,7 @@ Para la API GET de suscripción, se da soporte a las siguientes combinaciones:
 - Si se utiliza ==, el valor debe ser una cadena de caracteres de coincidencia exacta.
 
 
-##Códigos de respuesta de {{site.data.keyword.mobilepushshort}}
+## Códigos de respuesta del servicio de notificaciones push
 {: #push-api-response-codes}
 
 Estado: Método 405 no permitido - Se esperaba el método apropiado.

@@ -19,7 +19,6 @@ copyright:
 	```
 1. 修改程式碼 Snippet，以使用您的 Bluemix「路徑」及「應用程式 GUID」參數。按一下「Bluemix 應用程式儀表板」中的**行動選項**鏈結，以取得應用程式的「路徑」及「應用程式 GUID」。請使用「路徑」及「應用程式 GUID」的值，作為 `BMSClient.initialize` 程式碼 Snippet 中的參數。
 
-
 	**附註**：如果您已使用 Cordova CLI（例如，Cordova create app-name 指令）建立 Cordova 應用程式，請將此 Javascript 程式碼放置在 **index.js** 檔案中 `onDeviceReady: function()` 函數內的 `app.receivedEvent` 函數後面，以起始設定 BMS 用戶端。
 
 	```

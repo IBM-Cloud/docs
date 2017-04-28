@@ -12,7 +12,7 @@ copyright:
 
 # Activation de webhooks 
 {: #tag_based_notifications}
-Dernière mise à jour : 23 janvier 2017
+Dernière mise à jour : 1er mars 2017
 {: .last-updated}
 
 
@@ -34,3 +34,108 @@ le service {{site.data.keyword.mobilepushshort}}, vous pouvez vous enregistrer p
 Les événements webhook porteraient le même messageID que le message transmis. 
 
 Pour plus d'informations sur les webhooks, reportez-vous au document [API REST IBM de notifications Push ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobile.{DomainName}/imfpush/#/webhooks){: new_window}.
+
+## Réception d'alertes sur les événements webhook
+{: #webhook_alert_event}
+
+Les abonnés peuvent choisir de recevoir des alertes sur les événements webhook sous forme de fichiers JSON. La structure d'événement et le contenu exemple sous les suivants :
+
+- Enregistrement d'un appareil
+	```
+		{ type: 'onDeviceRegister',
+		entity:
+		{ id: 1,
+		deviceId: 'device1',
+		applicationId: 'app1',
+		userId: 'user1',
+		token: 'token1',
+		platform: 'G' },
+		applicationId: 'app1',
+		eventTimeStamp: 1487523766958 }
+	```
+		{: codeblock}
+
+- Désenregistrement d'un appareil
+	```
+		{ type: 'onDeviceUnregister',
+		entity:
+		{ id: 1,
+		deviceId: 'device1',
+		applicationId: 'app1',
+		userId: 'user1',
+		token: 'token1',
+		platform: 'G' },
+		applicationId: 'app1',
+		eventTimeStamp: 1487523841874 }
+	```
+		{: codeblock}
+
+- Abonnement à une balise
+	```
+		{ type: 'onSubscribe',
+		entity:
+		{ device:
+		{ id: 18,
+		deviceId: 'device1',
+		applicationId: 'app1',
+		userId: 'user1',
+		token: 'token1',
+		platform: 'G' },
+		tagName: 'tag1',
+		deviceId: 'device1',
+		subscriptionId: 'b0246677bfa655385fbc2b5532f6443f' },
+		applicationId: 'app1',
+		eventTimeStamp: 1487755527470 }
+	```
+		{: codeblock}
+
+- Désabonnement à une balise
+	```
+		{ type: 'onUnsubscribe',
+		entity:
+		{ device:
+		{ id: 18,
+		deviceId: 'device1',
+		applicationId: 'app1',
+		userId: 'user1',
+		token: 'token1',
+		platform: 'G' },
+		tagName: 'tag1',
+		deviceId: 'device1',
+		subscriptionId: 'b0246677bfa655385fbc2b5532f6443f' },
+		applicationId: 'app1',
+		eventTimeStamp: 1487755581059 }
+	```
+		{: codeblock}
+
+- Envoi d'une notification
+	```
+		{ type: 'onNotificationSent',
+		entity:
+		{ applicationId: 'app1',
+		deviceIds:
+		[ 'device1',
+		'device2'],
+		platform: 'A',
+		msgStatus: 'dispatched',
+		messageId: '55cb688' },
+		applicationId: 'app1',
+		eventTimeStamp: 1487524517353 }
+	```
+		{: codeblock}
+
+- Echec de notification
+	```
+		{ type: 'onNotificationFailure',
+		entity:
+		{ applicationId: 'app1',
+		deviceIds: [ 'device1' ],
+		platform: 'G',
+		msgStatus: 'failure',
+		failureReason: 'InvalidRegistration',
+		messageId: '55cb688' },
+		applicationId: 'app1',
+		eventTimeStamp: 1487524519453 }
+	```
+		{: codeblock}
+

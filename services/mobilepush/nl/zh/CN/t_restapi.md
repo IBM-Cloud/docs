@@ -12,7 +12,7 @@ copyright:
 
 # 使用 REST API
 {: #push-api-rest}
-上次更新时间：2017 年 1 月 16 日
+上次更新时间：2017 年 2 月 28 日
 {: .last-updated}
 
 您可以将 REST（具象状态传输）API（应用程序编程接口）用于 {{site.data.keyword.mobilepushshort}}。您还可以使用 SDK 和 [Push API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://mobile.{DomainName}/imfpush/){: new_window} 来进一步开发您的客户机应用程序。
@@ -78,7 +78,7 @@ copyright:
 	{: codeblock} 
 
 
-##Push REST API 过滤器
+## Push REST API 过滤器
 {: #push-api-rest-filters}
 
 过滤器定义搜索条件，该条件用于限制从 {{site.data.keyword.mobilepushshort}} 的 GET API 返回的数据。针对要过滤的 GET 操作结果应用过滤器。过滤器会限制结果中包含的条目数。例如，可以使用过滤器来搜索以“test”开头的标记。 
@@ -117,7 +117,7 @@ copyright:
 - 如果使用 ==，那么值必须为完全匹配的字符串。
 
 
-##{{site.data.keyword.mobilepushshort}} 响应代码
+## Push Notifications 服务响应代码
 {: #push-api-response-codes}
 
 状态：405 不允许的方法 - 应使用适当的方法。

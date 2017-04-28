@@ -12,7 +12,7 @@ copyright:
 
 # 監視 Push Notifications 
 {: #monitor-notifications}
-前次更新：2017 年 1 月 16 日
+前次更新：2017 年 4 月 12 日
 {: .last-updated}
 
 
@@ -27,7 +27,7 @@ IBM {{site.data.keyword.mobilepushshort}} 服務現在已擴充功能，可藉�
 
 ![已登錄裝置報告](images/monitoring_devices.jpg)
 
-如需如何更新 Android SDK 以監視通知資訊的相關資訊，請參閱[在 Android 裝置上監視推送通知](c_android_enable.html#android_monitor)。
+如需如何更新 Android SDK 以監視通知資訊的相關資訊，請參閱[啟用行動裝置的通知](c_enable_push.html)中的「在 Android 裝置上監視推送通知」主題。
 
 
  

@@ -12,7 +12,7 @@ copyright:
 
 # REST API 사용
 {: #push-api-rest}
-마지막 업데이트 날짜: 2017년 1월 16일
+마지막 업데이트 날짜: 2017년 2월 28일
 {: .last-updated}
 
 {{site.data.keyword.mobilepushshort}}에 REST(Representational State Transfer) API(Application Program Interface)를 사용할 수 있습니다. 또한 SDK 및 [Push API ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://mobile.{DomainName}/imfpush/){: new_window}을 사용하여 클라이언트 애플리케이션을 추가 개발할 수 있습니다. 
@@ -77,7 +77,7 @@ appSecret 값을 가져오려면 다음을 수행하십시오.
 	{: codeblock} 
 
 
-##Push REST API 필터
+## Push REST API 필터
 {: #push-api-rest-filters}
 
 필터는 {{site.data.keyword.mobilepushshort}}의 GET API에서 리턴되는 데이터를 제한하는 검색 기준을 정의합니다. 필터링할 Get 오퍼레이션의 결과에 대해 필터를 적용하십시오. 필터가 결과에 포함되는 항목의 수를 제한합니다. 예를 들면, 필터를 사용하여 "test"로 시작하는 태그를 검색할 수 있습니다.  
@@ -116,7 +116,7 @@ appSecret 값을 가져오려면 다음을 수행하십시오.
 - ==를 사용할 경우 값이 정확히 일치하는 문자열이어야 합니다. 
 
 
-##{{site.data.keyword.mobilepushshort}} 응답 코드
+## Push Notifications 서비스 응답 코드
 {: #push-api-response-codes}
 
 상태: 405 허용되지 않은 메소드 - 적절한 메소드를 예상했습니다. 

@@ -23,7 +23,8 @@ Push Notification Service の Cordova プラグインを使用するには、事
 	**注**: Cordova CLI (例えば、Cordova の create app-name コマンド) を使用して Cordova アプリを作成した場合、この Javascript コードを **index.js** ファイルの `onDeviceReady: function()` 関数内の `app.receivedEvent` 関数の後に置いて BMS クライアントを初期化します。
 
 	```
-	onDeviceReady: function() {app.receivedEvent('deviceready');
+	onDeviceReady: function() {
+	    app.receivedEvent('deviceready');
 	    BMSClient.initialize("https://myapp.mybluemix.net","abcd1234-abcd-1234-abcd-abcd1234abcd");
 	    },
 	```
