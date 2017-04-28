@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-26"
+lastupdated: "2017-4-28"
 
 ---
 
@@ -46,7 +46,7 @@ For source-code management and issue tracking, {{site.data.keyword.Bluemix_notm}
 
 {{site.data.keyword.contdelivery_short}} is available on {{site.data.keyword.Bluemix_notm}} Public and {{site.data.keyword.Bluemix_notm}} Dedicated. Toolchains differ depending on whether you use {{site.data.keyword.contdelivery_short}} on {{site.data.keyword.Bluemix_notm}} Public or {{site.data.keyword.Bluemix_notm}} Dedicated.
 
-**Tip**: When you create a toolchain on {{site.data.keyword.Bluemix_notm}} Public, it will be in the US South region. If your toolchain is configured to deploy apps to a different region, it will still deploy apps to that region.
+**Tip**: Toolchains are hosted in the US South region. If your toolchain is configured to deploy apps to a different region, it will still deploy apps to that region.
 
 |Toolchains |{{site.data.keyword.Bluemix_notm}} Public	|{{site.data.keyword.Bluemix_notm}} Dedicated |
 |:----------|:------------------------------|:------------------|
