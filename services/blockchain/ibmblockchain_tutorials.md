@@ -20,9 +20,9 @@ The following samples demonstrate how applications and chaincode function on a t
 
 To experience chaincode applications in action, you can immediately deploy the Marbles, Commercial Paper or Car Lease demo below (click a Deploy to Bluemix button). Or continue reading to explore the Hello Chaincode tutorial.
 
-- [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm-blockchain/marbles.git)  **Marbles**
-- [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/cp-web.git)  **Commercial Paper**
-- [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/car-lease-demo.git)  **Car Lease**  
+- [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm-blockchain/marbles&branch=v3.0)  **Marbles**
+- [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/cp-web)  **Commercial Paper**
+- [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/car-lease-demo)  **Car Lease**  
 
 <br>
 ## Learn chaincode tutorial
@@ -457,7 +457,7 @@ The demos also require proficiency with Node.js and the express module. You must
 The Marbles application demonstrates a simple asset transfer between two parties. The application is designed to test the JavaScript SDK, guide its development, and help developers become familiar with the SDK and chaincode.
 
 Explore the [Marbles Tutorials](https://github.com/IBM-Blockchain/marbles/blob/master/tutorial_part1.md) to learn how the web application, SDK and chaincode work together. If you arealready familiar with chaincode and IBM Blockchain, you can [manually deploy](https://github.com/IBM-Blockchain/marbles/blob/master/tutorial_part1.md#) the demo to Bluemix, or  click the Deploy to Bluemix button to use the web application:  
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm-blockchain/marbles.git)  
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm-blockchain/marbles&branch=v3.0)  
 
 <br>
 ## Commercial Paper demo
