@@ -137,9 +137,9 @@ Die für APNs erforderlichen Zertifikate sind `.p12`-Zertifikate. Diese Zertifik
 
 Weitere Informationen zur Verwendung der APNs finden Sie in der Veröffentlichung [iOS Developer Library: Local and Push Notification Programming Guide ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4){: new_window}.
 
-Führen Sie die folgenden Schritte aus, um APNs im Push Notification-Services-Dashboard einzurichten:
+Führen Sie die folgenden Schritte aus, um APNs im Push Notifications-Services-Dashboard einzurichten:
 
-1. Wählen Sie im Push Notification-Services-Dashboard die Option **Konfigurieren** aus.
+1. Wählen Sie im Push Notifications-Services-Dashboard die Option **Konfigurieren** aus.
 2. Wählen Sie die Option **Mobile** aus, um die Informationen im Formular mit den APNs-Push-Berechtigungsnachweisen zu aktualisieren.
 3. Wählen Sie je nach Bedarf **Sandbox** (Entwicklung) oder **Produktion** (Verteilung) aus und laden Sie dann das `p.12`-Zertifikat hoch, das Sie im vorherigen [Schritt](#step18) erstellt haben.
   ![Dashboard zum Festlegen von Push-Benachrichtigungen](images/wizard.jpg)

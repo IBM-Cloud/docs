@@ -67,7 +67,7 @@ dependencies {
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 ```
 	{: codeblock}
-Weitere Informationen zu [Android-Berechtigungen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://developer.android.com/guide/topics/security/permissions.html){: new_window} finden Sie hier.
+ Weitere Informationen zu [Android-Berechtigungen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://developer.android.com/guide/topics/security/permissions.html){: new_window} finden Sie hier.
 
 4. Fügen Sie die Einstellungen für die Benachrichtigungsabsicht für die Aktivität hinzu. Mit dieser Einstellung wird die Anwendung gestartet, wenn der Benutzer im Benachrichtigungsbereich auf die empfangene Benachrichtigung klickt.
 ```
@@ -165,7 +165,7 @@ push.initialize(getApplicationContext(), "appGUID", "clientSecret");
 ####AppGUID
 {: appguid_initialize_client_push_sdk}
 
-Dies ist der 'AppGUID'-Schlüssel des {{site.data.keyword.mobilepushshort}}-Service. Bei diesem Wert muss die Groß-/Kleinschreibung beachtet werden. Öffnen Sie das Push Notification-Dashboard und wählen Sie die Registerkarte 'Konfigurieren' aus. Diesen Wert können Sie im Dashboard des Push Notification-Service in der Registerkarte 'Konfigurieren' über 'Mobile Systemerweiterungen' abrufen. 
+Dies ist der 'AppGUID'-Schlüssel des {{site.data.keyword.mobilepushshort}}-Service. Bei diesem Wert muss die Groß-/Kleinschreibung beachtet werden. Öffnen Sie das Push Notification-Dashboard und wählen Sie die Registerkarte 'Konfigurieren' aus. Diesen Wert können Sie im Dashboard des Push Notifications-Service in der Registerkarte 'Konfigurieren' über 'Mobile Systemerweiterungen' abrufen. 
 
 ## Android-Geräte registrieren
 {: #android_register}
@@ -357,6 +357,6 @@ Sie können die {{site.data.keyword.mobilepushshort}}-Einstellungen zum Senden v
 Nachdem Sie einfache Benachrichtigungen erfolgreich eingerichtet haben, können Sie tagbasierte
 Benachrichtigungen und erweiterte Optionen konfigurieren.
 
-Fügen Sie diese Funktionen des Push Notifications-Service Ihrer App hinzu.
+Fügen Sie diese Push Notifications-Service-Features zur App hinzu.
 Informationen zur Verwendung tagbasierter Benachrichtigungen finden Sie in [Tagbasierte Benachrichtigungen](c_tag_basednotifications.html).
 Informationen zur Verwendung erweiterter Benachrichtigungsoptionen finden Sie in [Erweiterte Push-Benachrichtigungen aktivieren](t_advance_badge_sound_payload.html).

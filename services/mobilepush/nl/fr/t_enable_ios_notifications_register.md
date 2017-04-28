@@ -1,4 +1,4 @@
-# Enregistrements d'applications et d'appareils iOS
+# Enregistrement d'applications et d'appareils iOS
 {: #enable-push-ios-notifications-register}
 
 

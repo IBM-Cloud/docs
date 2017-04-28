@@ -67,7 +67,7 @@ dependencies {
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 ```
 	{: codeblock}
-Aquí encontrará más información sobre [permisos de Android ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](http://developer.android.com/guide/topics/security/permissions.html){: new_window}.
+ Aquí encontrará más información sobre [permisos de Android ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](http://developer.android.com/guide/topics/security/permissions.html){: new_window}.
 
 4. Añade los valores de intención de notificación para la actividad. Este valor inicia la aplicación cuando el usuario pulsa la notificación recibida desde el área de notificación.
 ```
@@ -131,7 +131,7 @@ Para configura el proyecto FCM y obtener las credenciales, consulte [Cómo obten
 
 Cree y ejecute la aplicación.
 
-## Inicialización del SDK push para aplicaciones Android
+## Inicialización del SDK push para apps Android
 {: #android_initialize}
 
 Un lugar común para colocar el código de inicialización se encuentra en el método onCreate de la actividad principal en su aplicación Android. Hay dos componentes del SDK que deben inicializarse. Uno es el SDK principal y el otro es el SDK push creado en la parte superior del SDK principal.
@@ -147,7 +147,7 @@ Un lugar común para colocar el código de inicialización se encuentra en el m�
 ####bluemixRegionSuffix
 {: bluemixRegionSuffix}
 
-Especifica la ubicación en la que se aloja la aplicación. Puede utilizar uno de estos tres valores:
+Especifica la ubicación en la que se aloja la app. Puede utilizar uno de estos tres valores:
 
 - BMSClient.REGION_US_SOUTH
 - BMSClient.REGION_UK
@@ -341,7 +341,7 @@ Puede personalizar aún más los valores de {{site.data.keyword.mobilepushshort}
 ![Valores personalizados de Android](images/android_custom_settings.jpg)
 
 - **Contraer clave**: las claves contraídas se adjuntan a las notificaciones. Si llegan varias notificaciones de forma secuencias con la misma clave contraída cuando el dispositivo está desconectado, estas se contraerán. Cuando el dispositivo vuelva a conectarse, recibirá las notificaciones del servidor FCM/GCM y mostrará solo la última notificación transportada con la misma clave contraída. Si no se establece esta clave contraída, se almacenarán los mensajes nuevos y antiguos para entregarlos más adelante.
-- **Sonido**: indica un fragmento de sonido que se reproducirá al recibir una notificación. Da soporte a la opción predeterminada o al nombre de un recurso de sonido incorporado en la aplicación.
+- **Sonido**: indica un fragmento de sonido que se reproducirá al recibir una notificación. Da soporte a la opción predeterminada o al nombre de un recurso de sonido incorporado en la app.
 - **Icono**: Especifique el nombre del icono que se mostrará para la notificación. Asegúrese de que haya empaquetado el icono en la carpeta res/drawable, con la aplicación cliente.
 - **Prioridad**: especifica las opciones para asignar la prioridad de entrega a los mensajes. Una prioridad `high` o `max` dará como resultado una notificación de aviso, mientras que los mensajes con prioridad `low` o `default` no establecerán conexiones de red en un dispositivo en modo suspendido. Para los mensajes con la opción definida en `min`, se enviará una notificación silenciosa.
 - **Visibilidad**: puede optar por definir la opción de visibilidad de notificación en `public` o `private`. La opción `private` limita la visualización pública y puede habilitarla si el dispositivo está protegido mediante pin o un patrón y si el valor de notificación está definido para ocultar contenido privado de las notificaciones. Cuando la visibilidad se establece como `private`, debe mencionarse algún campo de "redacción". Solo se mostrará el contenido especificado en el campo de redacción en la pantalla bloqueada del dispositivo. Si se elige `public` se entregarán notificaciones que se pueden leer libremente.
@@ -356,5 +356,6 @@ Puede personalizar aún más los valores de {{site.data.keyword.mobilepushshort}
 
 Una vez que haya configurado correctamente las notificaciones básicas, puede configurar las notificaciones basadas en código y las opciones avanzadas.
 
-Añada estas características de servicio de notificaciones push a la app. Para utilizar notificaciones basadas en código, consulte [Notificaciones basadas en código](c_tag_basednotifications.html).
+Añada estas características del servicio de notificaciones push a su app.
+Para utilizar notificaciones basadas en código, consulte [Notificaciones basadas en código](c_tag_basednotifications.html).
 Para utilizar opciones de notificaciones avanzadas, consulte [Habilitación de notificaciones push avanzadas](t_advance_badge_sound_payload.html).

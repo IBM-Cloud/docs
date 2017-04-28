@@ -28,9 +28,9 @@ Installa e utilizza il plugin di Push client per sviluppare ulteriormente le tue
 
 1. Scarica le ultime versioni dell'SDK Android Studio e Xcode.
 1. Configura il tuo emulatore. Per Android Studio, utilizza un emulatore che supporti l'API Google Play.
-1. Installa lo strumento della riga di comando Git. Per Windows, assicurati di selezionare l'opzione **Esegui Git dal prompt dei comandi della finestra**. Per informazioni su come scaricare e installare questo strumento, consulta [Git ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://git-scm.com/downloads "Icona link esterno"){: new_window}.
-1. Installa lo strumento Node.js e il gestore pacchetti di nodi (NPM). Lo strumento della riga comandi NPM è integrato con Node.js. Per informazioni su come scaricare e installare Node.js, consulta [Node.js ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://nodejs.org/en/download/ "Icona link esterno"){: new_window}.
-1. Dalla riga comandi, installa gli strumenti della riga di comando Cordova utilizzando il comando **npm install -g cordova**. È necessario per utilizzare il plugin Push Cordova. Per informazioni su come installare Cordova e configurare la tua applicazione Cordova, consulta [Cordova Apache ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cordova.apache.org/#getstarted "Icona link esterno"){: new_window}. Per ulteriori informazioni, vedi il [file readme ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push "Icona link esterno"){: new_window} del plug-in Cordova push.
+1. Installa lo strumento della riga di comando Git. Per Windows, assicurati di selezionare l'opzione **Esegui Git dal prompt dei comandi della finestra**. Per informazioni su come scaricare e installare questo strumento, vedi [Git ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://git-scm.com/downloads){: new_window}.
+1. Installa lo strumento Node.js e il gestore pacchetti di nodi (NPM). Lo strumento della riga comandi NPM è integrato con Node.js. Per informazioni su come scaricare e installare Node.js, vedi [Node.js ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://nodejs.org/en/download/){: new_window}.
+1. Dalla riga comandi, installa gli strumenti della riga di comando Cordova utilizzando il comando **npm install -g cordova**. È necessario per utilizzare il plugin Push Cordova. Per informazioni su come installare Cordova e configurare la tua applicazione Cordova, vedi [Cordova Apache ![Icona link esterno](../../icons/launch-glyph.svg "External link icon")](https://cordova.apache.org/#getstarted){: new_window}. Per ulteriori informazioni, vedi il [file Readme ![Icona link esterno](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push){: new_window} del plug-in push Cordova.
 1. Passa alla cartella in cui vuoi creare la tua applicazione Cordova ed esegui il seguente comando per
            creare un'applicazione Cordova. Se hai un'applicazione Cordova esistente, vai al passo 3.
 ```cordova create your_app_name
@@ -47,7 +47,7 @@ Assicurati di specificare l'ID bundle corretto. Il seguente messaggio di errore 
 1. Aggiungi la API supportata minima o la dichiarazione di destinazione della distribuzione al file config.xml per la tua applicazione Cordova. Il valore minSdkVersion deve essere maggiore di 15. Il valore targetSdkVersion deve sempre riflettere l'SDK Android più recente disponibile da Google.
 	
 	* Android - Con il tuo editor, apri il file **config.xml** e aggiorna l'elemento
-`<platform name="android">` con le versioni SDK minima e di destinazione: 
+`<platform name="android">` con le versioni SDK minima e di destinazione:
 
 	```
 	<platform name="android">

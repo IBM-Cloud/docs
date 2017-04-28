@@ -78,7 +78,7 @@ Configure el SDK de iOS, añada el código siguiente al archivo **AppDelegate.sw
 ```
   func application(_ application: UIApplication,
   didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
-   {
+   {  
    BMSPushClient.sharedInstance.initializeWithAppGUID(appGUID: "APP-GUID-HERE", clientSecret:"CLIENT-SECRET-HERE")
   }
 ```
@@ -115,7 +115,7 @@ Vaya a **Xcode > Crear configuración > Opciones de creación y Establecer la ha
 
 **Atención**: A partir de iOS 9, los cambios a la característica de App Transport Security (ATS) pueden afectar a la forma de manejar el proceso de autenticación. En las siguientes publicaciones del blog se ofrece más información sobre los cambios: [ATS y Bitcode en iOS 9 ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://developer.ibm.com/mobilefirstplatform/2015/09/09/ats-and-bitcode-in-ios9/){: new_window} y [Conecte su app iOS 9 a Bluemix hoy mismo ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/){: new_window}.
 
-## Inicialización de SDK Push para aplicaciones iOS
+## Inicialización de SDK Push para apps iOS
 {: #enable-push-ios-notifications-initialize}
 
 Un lugar común para colocar el código de inicialización se encuentra en el delegado de aplicación para la aplicación iOS. Pulse el enlace **Opciones móviles** en el panel de control Push para obtener la ruta y el GUID de la aplicación.
@@ -147,7 +147,7 @@ Especifica la clave exclusiva asignada a la aplicación que ha creado en Bluemix
 ####bluemixRegionSuffix
 {: ios-bluemixRegionSuffix}
 
-Especifica la ubicación en la que se aloja la aplicación. El parámetro `bluemixRegion` especifica qué despliegue de Bluemix está utilizando. Puede establecer este valor con una propiedad estática `BMSClient.REGION` y utilizar uno de estos tres valores:
+Especifica la ubicación en la que se aloja la app. El parámetro `bluemixRegion` especifica qué despliegue de Bluemix está utilizando. Puede establecer este valor con una propiedad estática `BMSClient.REGION` y utilizar uno de estos tres valores:
 
 - BMSClient.Region.usSouth 
 - BMSClient.Region.unitedKingdom
@@ -173,7 +173,7 @@ push.initializeWithAppGUID("appGUID", clientSecret:"clientSecret")
 {: #enable-push-ios-notifications-register}
 
 
-Se debe registrar una aplicación en APNs para recibir notificaciones remotas, después de instalarse en un dispositivo. Después de que la aplicación reciba la señal de dispositivo que APNs ha generado, debe volver a pasarse al servicio {{site.data.keyword.mobilepushshort}}.
+Se debe registrar una aplicación en APNs para recibir notificaciones remotas, después de instalarse en un dispositivo. Después de que la app reciba la señal de dispositivo que APNs ha generado, debe volver a pasarse al servicio {{site.data.keyword.mobilepushshort}}.
 
 Para registrar las aplicaciones y los dispositivos de iOS, tiene que:
 
@@ -184,7 +184,7 @@ Para registrar las aplicaciones y los dispositivos de iOS, tiene que:
 ###Crear una aplicación de fondo
 {: create-a-backend-app}
 
-Cree una aplicación de fondo en el catálogo Bluemix® de la sección de Contenedores modelo, que enlaza automáticamente el servicio {{site.data.keyword.mobilepushshort}} a esta aplicación. Si ya ha creado una aplicación de fondo, asegúrese de enlazarla al servicio {{site.data.keyword.mobilepushshort}}.
+Cree una aplicación de fondo en el catálogo Bluemix® de la sección de Contenedores modelo, que enlaza automáticamente el servicio {{site.data.keyword.mobilepushshort}} a esta aplicación. Si ya ha creado una app de fondo, asegúrese de enlazarla al servicio {{site.data.keyword.mobilepushshort}}.
 
 
 ###Cómo pasar señales a {{site.data.keyword.mobilepushshort}}
@@ -288,7 +288,7 @@ En la captura de pantalla siguiente se muestra un recuadro de alerta en el que s
 Puede personalizar aún más los valores de {{site.data.keyword.mobilepushshort}} para el envío de notificaciones a dispositivos iOS. Se admiten las siguientes opciones de personalización.
 
 - **Identificador**: Indica el número que se muestra en el identificador de la aplicación. El valor predeterminado es cero (0), que no mostraría un identificador. 
-- **Sonido**: indica un fragmento de sonido que se reproducirá al recibir una notificación. Da soporte a la opción predeterminada o al nombre de un recurso de sonido incorporado en la aplicación.
+- **Sonido**: indica un fragmento de sonido que se reproducirá al recibir una notificación. Da soporte a la opción predeterminada o al nombre de un recurso de sonido incorporado en la app.
 - **Carga útil adicional**: permite especificar valores personalizados de carga útil para las notificaciones.
 
 ##Habilitación de notificaciones interactivas
@@ -331,5 +331,6 @@ Para enviar una notificación interactiva, realice estos pasos:
 
 Una vez que haya configurado correctamente las notificaciones básicas, puede configurar las notificaciones basadas en código y las opciones avanzadas.
 
-Añada estas características de servicio de notificaciones push a la app. Para utilizar notificaciones basadas en código, consulte [Notificaciones basadas en código](c_tag_basednotifications.html).
+Añada estas características del servicio de notificaciones push a su app.
+Para utilizar notificaciones basadas en código, consulte [Notificaciones basadas en código](c_tag_basednotifications.html).
 Para utilizar opciones de notificaciones avanzadas, consulte [Habilitación de notificaciones push avanzadas](t_advance_badge_sound_payload.html).

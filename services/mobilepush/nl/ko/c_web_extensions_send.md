@@ -10,7 +10,7 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Chrome 앱 및 확장기능에 기본 알림 전송 
+# Chrome 앱 및 확장 프로그램에 기본 알림 전송 
 {: #web_extensions_notifications}
 마지막 업데이트 날짜: 2017년 1월 11일
 {: .last-updated}
@@ -27,7 +27,7 @@ copyright:
   - **유휴 시 지연**: 이 값을 `true`로 설정하면 디바이스가 유휴 상태인 경우 FCM/GCM 서버가 알림을 전달하지 않습니다. 디바이스가 유휴 상태인 경우에도 알림이 전달되도록 하려면 이 값을 `false`로 설정하십시오.
   - **추가 페이로드**: 알림에 대한 사용자 정의 페이로드 값을 지정합니다.
 
-다음 이미지는 대시보드의 Chrome 앱 및 확장기능 알림 옵션을 표시합니다.
+다음 이미지는 대시보드의 Chrome 앱 및 확장 프로그램 알림 옵션을 표시합니다.
 
   ![알림 화면](images/push_chrome_extns.jpg)
   
@@ -36,4 +36,5 @@ copyright:
 
 정상적으로 기본 알림을 설정한 후에는 태그 기반 알림 및 고급 옵션을 구성할 수 있습니다. 
 
-이러한 {{site.data.keyword.mobilepushshort}} 서비스 기능을 앱에 추가하십시오. 태그 기반 알림을 사용하려면 [태그 기반 알림](c_tag_basednotifications.html)을 참조하십시오. 고급 알림 옵션을 사용하려면 [고급 알림](t_advance_badge_sound_payload.html)을 참조하십시오. 
+이러한 {{site.data.keyword.mobilepushshort}} 서비스 기능을 사용자의 앱에 추가하십시오.
+태그 기반 알림을 사용하려면 [태그 기반 알림](c_tag_basednotifications.html)을 참조하십시오. 고급 알림 옵션을 사용하려면 [고급 알림](t_advance_badge_sound_payload.html)을 참조하십시오. 

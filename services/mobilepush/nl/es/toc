@@ -1,28 +1,51 @@
-[Getting started with Push Notifications](index.html)
+{: navgroup: .navgroup}
+{: topicgroup: .topicgroup}
+
+{: .toc subcollection="mobile-pushnotification" audience="service" href="/docs/services/mobilepush/index.html"}
+Notificaciones push
+
+    {: .navgroup id="learn"}
     index.md
     c_overview_push.md
+
+
+    {: .topicgroup}
+    Aplicaciones de ejemplo
+        [Android](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/)
+        [Cordova](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hellopush)
+        [iOS (Swift)](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellopush)
+
+    {: .topicgroup}
+    SDK
+        [SDK de Android](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-push)
+        [SDK de Cordova](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)
+        [SDK de iOS (Swift)](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/zip/master)	
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    {: .topicgroup}
+    Consulta de API
+        [Consulta de API Push Android)](https://classicdocs.ng.bluemix.net/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html)
+        [Consulta de API Push iOS (Swift)](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/blob/development/Apple%20Docs/index.html)
+        [Consulta de API REST](https://mobile.ng.bluemix.net/imfpush/)   
+    {: .navgroup-end}
+
+        
+    {: .navgroup id="howto"}
     t__main_push_config_provider.md
-        t_push_provider_ios.md
-        t_push_provider_android.md
-        t_push_provider_safari.md
     c_enable_push.md
-        c_android_enable.md
-        c_cordova_enable.md
-        c_ios_enable.md
     c_chrome_firefox_enable.md
-        c_chrome_firefox_enable_send.md
-        c_web_extensions.md
-        c_web_extensions_send.md
+    c_web_extensions.md
     c_tag_basednotifications.md
-        t_manage_tags.md
     c_user_basednotifications.md
-        t_manage_user.md
-    c_enable_push_webhook
+    c_enable_push_webhook.md
     interactive_notifications.md
     c_rich_media_notifications.md
     t_advance_badge_sound_payload.md
     t_push_monitoring.md	
     t_restapi.md
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
     troubleshooting.md
-        troubleshooting_config_errors.md
-        tr_error_push.md
+    {: .navgroup-end}

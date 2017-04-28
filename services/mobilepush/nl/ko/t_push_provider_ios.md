@@ -30,19 +30,19 @@ APNs 신임 정보를 획득하여 구성합니다. {{site.data.keyword.mobilepu
 -->
 
 
-##앱 ID 등록
+##App ID 등록
 {: #create-push-credentials-apns-register}
 
 
-앱 ID(번들 ID)는 특정 애플리케이션을 식별하는 고유 ID입니다. 각 애플리케이션에 앱 ID가 필요합니다. {{site.data.keyword.mobilepushshort}} 서비스와 같은 서비스는 앱 ID에 따라 구성됩니다. 
+App ID(번들 ID)는 특정 애플리케이션을 식별하는 고유 ID입니다. 각 애플리케이션에 App ID가 필요합니다. {{site.data.keyword.mobilepushshort}} 서비스와 같은 서비스는 App ID에 따라 구성됩니다. 
 
 1. [Apple Developer ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.apple.com/){: new_window} 계정이 있는지 확인하십시오. 
 2. [Apple Developer ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.apple.com){: new_window} 포털로 이동하여 **멤버 센터**를 클릭하고 **인증서, ID 및 프로파일**을 선택하십시오. 
-3. [Apple Developer Library ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW991){: new_window}의 **Registering App IDs** 섹션으로 이동하고 지시사항에 따라 앱 ID를 등록하십시오. 
+3. [Apple Developer Library ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW991){: new_window}의 **Registering App IDs** 섹션으로 이동하고 지시사항에 따라 App ID를 등록하십시오. 
 
-앱 ID를 등록할 때 다음 옵션을 선택하십시오. 
+App ID를 등록할 때 다음 옵션을 선택하십시오. 
 
-* 푸시 알림
+* Push Notifications
 ![앱 서비스](images/appID_appservices_enablepush.jpg)
 * 명시적 ID 접미부
 ![명시적 ID](images/appID_bundleID.jpg)
@@ -63,16 +63,16 @@ APNs 인증서를 획득하려면 먼저 인증서 서명 요청(CSR)을 작성�
 * 개발 및 테스트를 위한 샌드박스 모드에서
 * 앱 저장소(또는 다른 엔터프라이즈 배포 메커니즘)를 통해 애플리케이션을 배포할 때 프로덕션 모드에서
 
-개발 및 배포 환경을 위한 별도의 인증서를 획득해야 합니다. 인증서는 원격 알림의 수신인인 앱의 앱 ID와 연관되어 있습니다. 프로덕션의 경우 최대 2개의 인증서를 작성할 수 있습니다. Bluemix는 인증서를 사용하여 APNs와의 SSL 연결을 설정합니다. 
+개발 및 배포 환경을 위한 별도의 인증서를 획득해야 합니다. 인증서는 원격 알림의 수신인인 앱의 App ID와 연관되어 있습니다. 프로덕션의 경우 최대 2개의 인증서를 작성할 수 있습니다. Bluemix는 인증서를 사용하여 APNs와의 SSL 연결을 설정합니다. 
 
 <!-- Create a development and distribution SSL certificate. -->
 
 1. [Apple Developer ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.apple.com){: new_window} 웹 사이트로 이동하여 **멤버 센터**를 클릭하고 **인증서, ID 및 프로파일**을 선택하십시오. 
-2. **ID** 영역에서 **앱 ID**를 클릭하십시오. 
-3. 앱 ID 목록에서 <!--newly created--> 앱 ID를 선택한 다음 **설정**을 선택하십시오. 
-4. **푸시 알림** 영역에서 개발 SSL 인증서를 작성한 다음 프로덕션 SSL 인증서를 작성하십시오.
+2. **ID** 영역에서 **App ID**를 클릭하십시오. 
+3. App ID 목록에서 <!--newly created--> App ID를 선택한 다음 **설정**을 선택하십시오. 
+4. **Push Notifications** 영역에서 개발 SSL 인증서를 작성한 다음 프로덕션 SSL 인증서를 작성하십시오.
 
-	![푸시 알림 SSL 인증서](images/certificate_createssl.jpg)
+	![Push Notification SSL 인증서](images/certificate_createssl.jpg)
 
 5. **인증서 서명 요청(CSR) 작성 정보 화면**이 표시되면 Mac에서 **Keychain Access** 애플리케이션을 시작하여 인증서 서명 요청(CSR)을 작성하십시오.
 6. 메뉴에서 **Keychain Access > 인증서 지원 > 인증 기관에 인증서 요청…**을 선택하십시오. 
@@ -84,7 +84,7 @@ APNs 인증서를 획득하려면 먼저 인증서 서명 요청(CSR)을 작성�
 12. **생성** 화면에서 **파일 선택... **을 클릭하고 데스크탑에 저장한 CSR 파일을 선택하십시오. 그런 다음 **생성**을 클릭하십시오.
 ![인증서 생성](images/generate_certificate.jpg)
 13. 인증서가 준비되면 **완료**를 클릭하십시오. 
-14. **푸시 알림** 화면에서 **다운로드**를 클릭하여 인증서를 다운로드하고 **완료**를 클릭하십시오.
+14. **Push Notifications** 화면에서 **다운로드**를 클릭하여 인증서를 다운로드하고 **완료**를 클릭하십시오.
  ![인증서 다운로드](images/certificate_download.jpg)
 15. Mac의 경우 **Keychain Access > 내 인증서**로 이동하여 새로 설치된 인증서를 찾아보십시오. 인증서를 두 번 클릭하여 Keychain Access에 인증서를 설치하십시오. 
 16. 인증서와 개인 키를 선택한 다음 **내보내기**를 선택하여 인증서를 개인 정보 변환 형식(`.p12` 형식)으로 변환하십시오.
@@ -99,9 +99,9 @@ APNs 인증서를 획득하려면 먼저 인증서 서명 요청(CSR)을 작성�
 ##개발 프로비저닝 프로파일 작성
 {: #create-push-credentials-dev-profile}
 
-프로비저닝 프로파일은 APP ID와 함께 작동하여 사용자 앱을 설치하고 실행할 수 있는 디바이스 및 사용자 앱에서 액세스할 수 있는 서비스를 판별합니다. 각 앱 ID에 대해 개발 및 배포용으로 두 개의 프로비저닝 프로파일을 작성하십시오. Xcode는 개발 프로비저닝 프로파일을 사용하여 애플리케이션을 빌드할 수 있는 개발자와 애플리케이션을 테스트할 수 있는 디바이스를 판별합니다.
+프로비저닝 프로파일은 App ID와 함께 작동하여 사용자 앱을 설치하고 실행할 수 있는 디바이스 및 사용자 앱에서 액세스할 수 있는 서비스를 판별합니다. 각 App ID에 대해 개발 및 배포용으로 두 개의 프로비저닝 프로파일을 작성하십시오. Xcode는 개발 프로비저닝 프로파일을 사용하여 애플리케이션을 빌드할 수 있는 개발자와 애플리케이션을 테스트할 수 있는 디바이스를 판별합니다.
 
-앱 ID를 등록하고 이를 {{site.data.keyword.mobilepushshort}} 서비스에 사용할 수 있도록 설정하였으며 개발 및 프로덕션 APNs SSL 인증서를 사용하도록 구성했는지 확인하십시오.
+App ID를 등록하고 이를 {{site.data.keyword.mobilepushshort}} 서비스에 사용할 수 있도록 설정하였으며 개발 및 프로덕션 APNs SSL 인증서를 사용하도록 구성했는지 확인하십시오.
 
 개발 프로비저닝 프로파일을 다음과 같이 작성하십시오.
 
@@ -134,9 +134,9 @@ APNs에 필요한 인증서는 `.p12` 인증서입니다. 이러한 인증서에
 
 APNs 사용에 대한 자세한 정보는 [iOS Developer Library: Local and Push Notification Programming Guide ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4){: new_window}을 참조하십시오. 
 
-푸시 알림 서비스 대시보드에서 APNs를 설정하려면 다음을 수행하십시오. 
+Push Notification 서비스 대시보드에서 APNs를 설정하려면 다음을 수행하십시오. 
 
-1. 푸시 알림 서비스 대시보드에서 **구성**을 선택하십시오.
+1. Push Notification 서비스 대시보드에서 **구성**을 선택하십시오.
 2. **모바일** 옵션을 선택하여 **APNs 알림 신임 정보** 양식의 정보를 업데이트하십시오. 
 3. **샌드박스**(개발) 또는 **프로덕션**(배포)을 선택한 후 이전 [단계](#step18)에서 작성한 `p.12` 인증서를 업로드하십시오.
   ![푸시 알림 설정 대시보드](images/wizard.jpg)

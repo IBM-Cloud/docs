@@ -38,7 +38,7 @@ En la sección siguiente se listan las propiedades de notificación de iOS:
 * message - mensaje de notificación de Push
 * payload - objeto de JSON que contiene una action-loc-key de carga útil de notificación - La serie se utiliza como una clave para obtener una serie localizada en la localización actual para que la utilice el título del botón derecho en lugar de “Vista".
 * badge - El número que se mostrará como el identificador del icono de app. Si falta esta propiedad, el identificador no se modificará. Para eliminar el identificador, establezca el valor de esta propiedad en 0.
-* sound - El nombre de un archivo de sonido del paquete de la app de la carpeta Biblioteca/Sonidos del contenedor de datos de la aplicación.
+* sound - El nombre de un archivo de sonido del paquete de la app de la carpeta Biblioteca/Sonidos del contenedor de datos de la app.
 
 ##Objective-C
 

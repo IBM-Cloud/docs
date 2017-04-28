@@ -24,7 +24,6 @@ copyright:
 
 ## 安裝 Cordova Push 外掛程式
 1. 切換至您要在其中建立 Cordova 應用程式的資料夾，並執行下列指令來建立 Cordova 應用程式。如果您有現存的 Cordova 應用程式，請移至步驟 3。
-
 ```
 cordova create your_app_name
 cd your_app_name

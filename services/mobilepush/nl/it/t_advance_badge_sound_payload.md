@@ -10,8 +10,8 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-#Abilitazione delle {{site.data.keyword.mobilepushshort}} avanzate
-Ultimo aggiornamento: 23 gennaio 2017
+#Abilitazione delle notifiche di push avanzate
+Ultimo aggiornamento: 28 febbraio 2017
 {: .last-updated}
 
 Configura un badge iOS, audio, payload JSON aggiuntivo, notifiche operative e notifiche messe in pausa.
@@ -23,13 +23,15 @@ Configura un badge, l'audio e del payload JSON aggiuntivo iOS.
 
 1. Nel dashboard {{site.data.keyword.mobilepushshort}}, vai alla scheda **Notifications**.
 2. Vai alla sezione **Optional Fields** per configurare le funzioni di {{site.data.keyword.mobilepushshort}}. 
-	- **Sound File** - immetti una stringa per puntare al file audio nella tua applicazione mobile. Nel payload, specifica il nome stringa del file audio da utilizzare.
+	- **Sound File** - immetti una stringa per puntare al file audio nella tua applicazione mobile. Nel payload, specifica
+                            il nome stringa del file audio da utilizzare.
 	- **iOS Badge** - per i dispositivi iOS, il numero da visualizzare come badge dell'icona
                             applicazione. Se questa proprietà
                             non è presente, il badge non viene modificato. Per rimuovere il badge, imposta
                             il valore di questa proprietà su 0.
 	
-###Android
+### Android
+{: #badge-sound-payload_android}
 
 Aggiungi il file audio nella directory `res/raw` della tua applicazione android. Mentre invii le notifiche aggiungi il nome del file audio nel campo audio di {{site.data.keyword.mobilepushshort}}.
 
@@ -42,7 +44,8 @@ Aggiungi il file audio nella directory `res/raw` della tua applicazione android.
 ```
     {: codeblock}	
 	
-###iOS
+### iOS
+{: #badge-sound-payload_ios}
 
 ```
 "settings": {

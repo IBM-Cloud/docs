@@ -17,5 +17,6 @@ copyright:
 
 Una vez que haya configurado correctamente las notificaciones básicas, puede configurar las notificaciones basadas en código y las opciones avanzadas.
 
-Añada las características de servicio de {{site.data.keyword.mobilepushshort}} a la app. Para utilizar notificaciones basadas en código, consulte [Notificaciones basadas en código](c_tag_basednotifications.html).
+Añada estas características del servicio {{site.data.keyword.mobilepushshort}} a su app.
+Para utilizar notificaciones basadas en código, consulte [Notificaciones basadas en código](c_tag_basednotifications.html).
 Para utilizar opciones de notificaciones avanzadas, consulte [Notificaciones push avanzadas](t_advance_badge_sound_payload.html).

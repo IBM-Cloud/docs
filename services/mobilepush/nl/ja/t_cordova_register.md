@@ -36,10 +36,11 @@ Android では、settings パラメーターを使用しません。Android ア�
 ```
 	var settings = {
 	   ios: {
-             alert: true,
-             badge: true,
-             sound: true
-         }}
+	       alert: true,
+	       badge: true,
+	       sound: true
+	   }
+	}
 	MFPPush.registerDevice(settings, success, failure);
 ```
 
@@ -70,9 +71,9 @@ funcapplication(application: UIApplication, didRegisterForRemoteNotificationsWit
 ```
 
 ```
-// Handle error when failed to register device token with APNs
+//Handle error when failed to register device token with APNs
 funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSErrorPointer){
-   CDVMFPPush.sharedInstance().didFailToRegisterForRemoteNotifications(error)
+CDVMFPPush.sharedInstance().didFailToRegisterForRemoteNotifications(error)
 }
 ```
 
@@ -111,7 +112,7 @@ onDeviceReady: function() {
 	}
 	// Handle error when failed to register device token with APNs
 	- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error {
-   [[CDVMFPPush sharedInstance] didFailToRegisterForRemoteNotificationsWithError:error];
+	   [[CDVMFPPush sharedInstance] didFailToRegisterForRemoteNotificationsWithError:error];
 	}
 ```
 

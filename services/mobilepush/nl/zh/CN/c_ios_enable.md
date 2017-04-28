@@ -76,7 +76,7 @@ github "github "ibm-bluemix-mobile-services/bms-clientsdk-swift-push" ~> 1.0"
 ##设置 iOS SDK
 {: ios-sdk}
 
-设置 iOS SDK，将以下代码添加到应用程序的 **AppDelegate.swift** 文件中。请注意，这也会向 APN 进行注册。  
+设置 iOS SDK，将以下代码添加到应用程序的 **AppDelegate.swift** 文件中。请注意，这也会向 APNs 进行注册。  
 ```
 func application(_ application: UIApplication,
 didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {

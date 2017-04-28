@@ -13,7 +13,7 @@ copyright:
 # Usando
 APIs REST
 {: #push-api-rest}
-Última atualização: 16 de janeiro de 2017
+Última atualização: 28 de fevereiro de 2017
 {: .last-updated}
 
 É possível usar uma API (interface de programação de aplicativos) REST (Representational State Transfer) para {{site.data.keyword.mobilepushshort}}. Também é possível usar o SDK e a [API de Push ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://mobile.{DomainName}/imfpush/){: new_window} para desenvolver adicionalmente seus aplicativos clientes.
@@ -31,9 +31,7 @@ Para obter a URL base para a API REST, conclua as etapas:
 
 1. Crie um aplicativo backend no catálogo do Bluemix® da seção Modelos escolhendo o MobileFirst Services Starter. Isso liga o serviço {{site.data.keyword.mobilepushshort}} ao aplicativo. Também é possível criar uma instância de serviço de Push e deixá-la sem limites. 
 1. Na página principal do painel Bluemix, acesse a área **Aplicativos** e, em seguida, selecione seu app.
-3. Clique em **OPÇÕES MÓVEIS**. Os valores de GUID (Identificador Exclusivo Global)
-de rota e de app são exibidos no início da página de detalhes do seu app. A tela Mostrar credenciais mostra
-informações sobre o AppSecret. É possível obter o segredo do aplicativo em Opções móveis e também o segredo do cliente para algumas das APIs.
+3. Clique em **OPÇÕES MÓVEIS**. Os valores de rota e GUID do app são exibidos no início da página de detalhes do app. A tela Mostrar credenciais mostra informações sobre o AppSecret. É possível obter o segredo do aplicativo em Opções móveis e também o segredo do cliente para algumas das APIs.
 
 Também é possível usar a linha de comandos para obter as credenciais de serviço:
 
@@ -84,7 +82,7 @@ A tela **Mostrar credenciais** mostra informações sobre o AppSecret:
 	{: codeblock} 
 
 
-##Filtros de API REST de Push
+## Filtros de API REST de Push
 {: #push-api-rest-filters}
 
 Filtros definem um critério de procura que restringe os dados retornados de uma API GET de {{site.data.keyword.mobilepushshort}}. Aplique os filtros no resultado da operação Get que deseja filtrar. O filtro restringe o número de entradas incluídas no resultado. Por exemplo, é possível usar um filtro para procurar tags iniciadas com "test". 
@@ -123,7 +121,7 @@ Para a API GET da assinatura, as combinações a seguir são suportadas:
 - Se == for usado, o valor deverá ser uma sequência correspondente exata.
 
 
-##Códigos de resposta do {{site.data.keyword.mobilepushshort}}
+## Códigos de resposta do serviço Push Notifications
 {: #push-api-response-codes}
 
 Status: 405 Método não permitido - Método apropriado esperado.

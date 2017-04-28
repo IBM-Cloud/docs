@@ -12,7 +12,7 @@ copyright:
 
 # REST-APIs verwenden
 {: #push-api-rest}
-Letzte Aktualisierung: 16. Januar 2017
+Letzte Aktualisierung: 28. Februar 2017
 {: .last-updated}
 
 Sie können eine REST-API (REST = Representational State Transfer; API = Application Program Interface) für Push-Benachrichtigungen verwenden. Sie können auch das SDK und die [Push-API ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://mobile.{DomainName}/imfpush/){: new_window} verwenden, um Ihre Clientanwendungen weiter zu entwickeln.
@@ -78,7 +78,7 @@ In der Anzeige **Berechtigungsnachweise anzeigen** werden Informationen zu 'appS
 	{: codeblock} 
 
 
-##Filter für Push-REST-APIs
+## Filter für Push-REST-APIs
 {: #push-api-rest-filters}
 
 Anhand von Filtern wird ein Suchkriterium definiert, mit dem der Umfang der Daten beschränkt wird, die von einer GET-API von {{site.data.keyword.mobilepushshort}} zurückgegeben werden. Wenden Sie die Filter auf das Ergebnis der Abrufoperation (Get) an, die Sie filtern möchten. Der Filter beschränkt die Anzahl der Einträge im Ergebnis. Sie können beispielsweise einen Filter verwenden, um Tags zu suchen, deren Name mit 'test' beginnt. 
@@ -117,7 +117,7 @@ Für die GET-API der Subskription werden folgende Kombinationen unterstützt:
 - Wenn == verwendet wird, muss es sich bei dem Wert um eine Zeichenfolge handeln, die genau übereinstimmt.
 
 
-##{{site.data.keyword.mobilepushshort}} - Antwortcodes
+## Antwortcodes des Push Notifications-Service
 {: #push-api-response-codes}
 
 Status: 405 Method Not Allowed - Es wird die passende Methode erwartet.

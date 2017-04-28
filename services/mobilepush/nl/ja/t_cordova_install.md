@@ -90,8 +90,7 @@ cd your_app_name
 	@executable_path/Frameworks
 	```
 	d. ブリッジング・ヘッダーの以下の Push インポート・ステートメントをアンコメントします。*your-project-name***/Plugins/ibm-mfp-core/Bridging-Header.h** に移動します。
-	
- ```
+	```
 	//#import <IMFPush/IMFPush.h>
 	//#import <IMFPush/IMFPushClient.h>
 	//#import <IMFPush/IMFResponse+IMFPushCategory.h>
@@ -112,7 +111,7 @@ Push Notification Service の Cordova プラグインを使用するには、事
 
 	```
 	BMSClient.initialize("https://myapp.mybluemix.net","abcd1234-abcd-1234-abcd-abcd1234abcd");
- ```
+```
 1. Bluemix の Route パラメーターと appGUID パラメーターを使用するように、コード・スニペットを変更します。Bluemix アプリケーション・ダッシュボード内の**「モバイル・オプション」**リンクをクリックして、アプリケーション経路とアプリ GUID を取得します。この経路とアプリ GUID の値を `BMSClient.initialize` コード・スニペットのパラメーターとして使用します。
 
 	**注**: Cordova CLI (例えば、Cordova の create app-name コマンド) を使用して Cordova アプリを作成した場合、この Javascript コードを **index.js** ファイルの `onDeviceReady: function()` 関数内の `app.receivedEvent` 関数の後に置いて BMS クライアントを初期化します。
@@ -120,9 +119,9 @@ Push Notification Service の Cordova プラグインを使用するには、事
 ```
 onDeviceReady: function() {
     app.receivedEvent('deviceready');
-	    BMSClient.initialize("https://myapp.mybluemix.net","abcd1234-abcd-1234-abcd-abcd1234abcd");
-	    },
-	```
+    BMSClient.initialize("https://myapp.mybluemix.net","abcd1234-abcd-1234-abcd-abcd1234abcd");
+    },
+```
 
 # デバイスの登録
 

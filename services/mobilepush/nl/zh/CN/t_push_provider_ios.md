@@ -91,7 +91,7 @@ copyright:
 ![导出证书和密钥](images/keychain_export_key.jpg)
 17. 在**存储为**字段中，为证书提供有意义的名称。例如，`sandbox_apns.p12_certifcate` 或 `production_apns.p12`，然后单击**保存**。
 ![导出证书和密钥](images/certificate_p12v2.jpg)
-18. 在**输入密码**字段中，输入用于保护导出项的密码，然后单击**确定**。您可以使用此密码，在“推送”仪表板上配置 APNs 设置。
+18. 在**输入密码**字段中，输入用于保护导出项的密码，然后单击**确定**。您可以使 用此密码，在“推送”仪表板上配置 APNs 设置。
 {: #step18}
 	![导出证书和密钥](images/export_p12.jpg)
 19. **Key Access.app** 会提示您从**密钥串**屏幕导出密钥。输入 Mac 的管理员密码，以允许系统导出这些项，然后选择**总是允许**选项。这将在桌面上生成一个 `.p12` 证书。
@@ -133,7 +133,7 @@ APNs 所需的证书为 `.p12` 证书。这些证书包含构建和发布应用�
 
 **注**：当 `.cer` 文件出现在钥匙串访问中之后，请将其导出到您的计算机，以创建 `.p12` 证书。
 
-有关使用 APN 的更多信息，请参阅 [iOS Developer Library: Local and Push Notification Programming Guide ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4){: new_window}。
+有关使用 APNs 的更多信息，请参阅 [iOS Developer Library: Local and Push Notification Programming Guide ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4){: new_window}。
 
 要在“推送通知”服务仪表板上设置 APNs，请完成以下步骤：
 

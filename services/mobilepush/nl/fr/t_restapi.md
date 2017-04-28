@@ -12,7 +12,7 @@ copyright:
 
 # Utilisation des API REST
 {: #push-api-rest}
-Dernière mise à jour : 16 janvier 2017
+Dernière mise à jour : 28 février 2017
 {: .last-updated}
 
 Vous pouvez utiliser une interface de programmation d'application REST (Representational State Transfer) pour {{site.data.keyword.mobilepushshort}}. Vous pouvez également utiliser le SDK et l'[API Push ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobile.{DomainName}/imfpush/){: new_window} pour affiner plus encore le développement de vos applications client.
@@ -78,7 +78,7 @@ L'écran **Afficher les données d'identification** affiche des informations sur
 	{: codeblock} 
 
 
-##Filtres des API REST Push
+## Filtres des API REST Push
 {: #push-api-rest-filters}
 
 Les filtres définissent un critère de recherche permettant de restreindre les données qui sont renvoyées depuis une API GET de {{site.data.keyword.mobilepushshort}}. Appliquez les filtres au résultat de l'opération Get à filtrer. Le filtre restreint le nombre d'entrées incluses dans le résultat. Ainsi, vous pouvez utiliser un filtre pour rechercher des balises commençant par "test". 
@@ -117,7 +117,7 @@ Pour l'API GET d'abonnement, les combinaisons suivantes sont prises en charge :
 - Si l'opérateur == est utilisé, la valeur doit être une chaîne qui correspond exactement.
 
 
-##Codes de réponse {{site.data.keyword.mobilepushshort}}
+## Codes de réponse du service Push Notifications
 {: #push-api-response-codes}
 
 Status: 405 Method Not Allowed - Appropriate method expected.

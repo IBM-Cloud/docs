@@ -10,9 +10,9 @@ years: 2015, 2017
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Abilitazione delle applicazioni web alla ricezione di {{site.data.keyword.mobilepushshort}}
+# Abilitazione delle applicazioni web alla ricezione di notifiche di push
 {: #web_notifications}
-Ultimo aggiornamento: 16 febbraio 2017
+Ultimo aggiornamento: 12 aprile 2017
 {: .last-updated}
 
 Puoi abilitare le applicazioni web Google Chrome, Mozilla Firefox e Safari a ricevere {{site.data.keyword.mobilepushshort}}. Assicurati di aver consultato [Configurazione delle credenziali per un provider di notifica](t__main_push_config_provider.html) prima di continuare con la procedura.
@@ -23,13 +23,14 @@ Puoi abilitare le applicazioni web Google Chrome, Mozilla Firefox e Safari a ric
 Questo argomento descrive come installare e utilizzare il JavaScript Push SDK client per sviluppare ulteriormente le tue applicazioni Web.
 
 ### Inizializzazione nell'applicazione web
+{: #web_initialise_web_app}
 
 Per l'installazione dell'SDK Javascript nell'applicazione web Google Chrome completa la seguente procedura:
 
 Scarica i file `BMSPushSDK.js`, `BMSPushServiceWorker.js` e `manifest_Website.json` dalla [SDK di push web di Bluemix](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master){: new_window}.
 
 1. Modifica il file `manifest_Website.json`.
-	- Per il browser Google Chrome, modifica `name` con il nome del tuo sito. Ad esempio, `www.dailynewsupdates.com`. Modifica `gcm_sender_id` con il tuo sender_ID FCM (Firebase Cloud Messaging) o GCM (Google Cloud Messaging). Per ulteriori informazioni, consulta [Come ottenere il tuo ID mittente e la chiave API](t_push_provider_android.html). Il valore gcm_sender_id contiene solo numeri.
+	- Per il browser Google Chrome, modifica `name` con il nome del tuo sito. Ad esempio, `www.dailynewsupdates.com`. Modifica `gcm_sender_id` con il tuo sender_ID FCM (Firebase Cloud Messaging) o GCM (Google Cloud Messaging). Per ulteriori informazioni, vedi [Configurazione delle credenziali per un provider di notifica](t__main_push_config_provider.html).Il valore gcm_sender_id contiene solo numeri.
 
 		```
 			{
@@ -93,14 +94,14 @@ Per ottenere il tuo GUID dell'applicazione, seleziona l'opzione **Configurazione
 
 **Nota**: se le tue credenziali FCM sono state modificate per l'SDK push Web, la ricezione dei messaggi potrebbe non riuscire per il browser Chrome. Assicurati di richiamare `bmsPush.unRegisterDevice` per evitare errori.
 
-Se fornisci un parametro errato potresti visualizzare degli errori di configurazione. Per ulteriori informazioni, vedi [Risoluzione degli errori di configurazione push web](troubleshooting_config_errors.html).
+Se fornisci un parametro errato potresti visualizzare degli errori di configurazione. Per ulteriori informazioni, vedi [Risoluzione dei problemi](troubleshooting.html).
 
 ## Registrazione dell'applicazione web
 {: #web_register}
 
 Utilizza l'API **register()** per registrare il dispositivo con il servizio {{site.data.keyword.mobilepushshort}}. Utilizza una delle seguenti opzioni, in base al tuo browser.
 
-- Per la registrazione da Google Chrome, aggiungi l'URL del sito web e la chiave API di FCM (Firebase Cloud Messaging) o GCM (Google Cloud Messaging) nel dashboard di configurazione web del servizio {{site.data.keyword.mobilepushshort}} di Bluemix. Per ulteriori informazioni, consulta [Configurazione delle credenziali per GCM (Google Cloud Messaging)](t_push_provider_android.html) nelle impostazioni di Chrome.
+- Per la registrazione da Google Chrome, aggiungi l'URL del sito web e la chiave API di FCM (Firebase Cloud Messaging) o GCM (Google Cloud Messaging) nel dashboard di configurazione web del servizio {{site.data.keyword.mobilepushshort}} di Bluemix. Per ulteriori informazioni, vedi [Configurazione delle credenziali per un provider di notifica](t__main_push_config_provider.html) nelle impostazioni di Chrome.
 
 - Per la registrazione da Mozilla Firefox, aggiungi l'URL del sito web nel dashboard di configurazione web del servizio {{site.data.keyword.mobilepushshort}} di Bluemix nelle impostazioni di Firefox.
 
@@ -123,6 +124,34 @@ Utilizza il seguente frammento di codice per registrare il servizio {{site.data.
   })
 ```
     {: codeblock}
+
+
+## Invio di notifiche di base ai browser web
+{: #web_browsers}
+
+Dopo che hai sviluppato le tue applicazioni, puoi inviare una notifica push. 
+
+1. Seleziona **Send Notifications** e componi un messaggio scegliendo **Web Notifications** come l'opzione **Send To**. 
+2. Immetti il messaggio che deve essere consegnato nel campo **Message**.
+3. Puoi scegliere di fornire delle impostazioni facoltative:
+  - **Titolo della notifica**: questo è il testo che deve essere visualizzato nell'intestazione dell'avviso del messaggio.
+  - **URL dell'icona di notifica**: se il tuo messaggio deve essere consegnato con un'icona di notifica dell'applicazione, fornisci il link alla tua icona nel campo.
+  - **TTL (Time to live)**: notifica al server in merito alla validità dei messaggi.
+4. Per le notifiche web inviate al browser Safari, sono richieste delle informazioni aggiuntive:
+  - **Azione**: si tratta dell'etichetta del pulsante di azione.
+  - **Argomenti URL**: gli argomenti URL che devono essere utilizzati con questa notifica. Assicurati che vengano forniti in forma di array JSON. 
+ 
+La seguente immagine mostra l'opzione delle notifiche web nel dashboard.
+
+  ![Schermata notifiche](images/DashboardWebpush.jpg)
+
+
+### Fasi successive
+{: #next_steps_tags}
+
+Dopo che hai correttamente configurato le notifiche di base, puoi scegliere di configurare le notifiche basate sulle tag e le opzioni avanzate.
+
+Aggiungi queste funzioni del servizio {{site.data.keyword.mobilepushshort}} alla tua applicazione. Per utilizzare le notifiche basate sulle tag, vedi [Notifiche basate sulle tag](c_tag_basednotifications.html). Per utilizzare le opzioni di notifica avanzate, vedi [Notifiche avanzate](t_advance_badge_sound_payload.html).
 
 
 

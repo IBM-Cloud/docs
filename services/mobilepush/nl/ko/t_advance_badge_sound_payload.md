@@ -10,8 +10,8 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-#고급 {{site.data.keyword.mobilepushshort}} 사용
-마지막 업데이트 날짜: 2017년 1월 23일
+#고급 푸시 알림 사용
+마지막 업데이트 날짜: 2017년 2월 28일
 {: .last-updated}
 
 iOS 배지, 사운드, 추가 JSON 페이로드, 조치 가능 알림, 보류 알림을 구성합니다. 
@@ -26,7 +26,8 @@ iOS 배지, 사운드 및 추가적인 JSON 페이로드를 구성합니다.
 	- **사운드 파일** - 모바일 앱의 사운드 파일을 가리키는 문자열을 입력하십시오. 페이로드에서 사용할 사운드 파일의 문자열 이름을 지정하십시오. 
 	- **iOS 배지** - iOS 디바이스의 경우 앱 아이콘의 배지로 표시할 숫자입니다. 이 특성을 비워두면 배지가 변경되지 않습니다. 배지를 제거하려면 이 특성의 값을 0으로 설정하십시오. 
 	
-###Android
+### Android
+{: #badge-sound-payload_android}
 
 Android 애플리케이션의 `res/raw` 디렉토리에 사운드 파일을 추가하십시오. 알림을 전송하는 동안 {{site.data.keyword.mobilepushshort}}의 사운드 필드에 사운드 파일 이름을 추가하십시오. 
 
@@ -39,7 +40,8 @@ Android 애플리케이션의 `res/raw` 디렉토리에 사운드 파일을 추�
 ```
     {: codeblock}	
 	
-###iOS
+### iOS
+{: #badge-sound-payload_ios}
 
 ```
 "settings": {

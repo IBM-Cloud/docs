@@ -12,7 +12,7 @@ copyright:
 
 # Monitoraggio di Push Notifications 
 {: #monitor-notifications}
-Ultimo aggiornamento: 16 gennaio 2017
+Ultimo aggiornamento: 12 aprile 2017
 {: .last-updated}
 
 
@@ -27,7 +27,7 @@ Per generare dei report per tutti i tuoi dispositivi registrati, utilizza il met
 
 ![Report Dispositivi registrati](images/monitoring_devices.jpg)
 
-Per informazioni su come aggiornare il tuo SDK Android SDK per monitorare le informazioni sulle notifiche, vedi [Monitoraggio di notifiche di push su dispositivi Android](c_android_enable.html#android_monitor).
+Per informazioni su come aggiornare il tuo SDK Android per monitorare le informazioni sulle notifiche, vedi l'argomento 'Monitoraggio di notifiche di push su dispositivi Android' in [Abilitazione delle notifiche per i dispositivi mobili](c_enable_push.html).
 
 
  

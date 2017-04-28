@@ -44,6 +44,7 @@ $ pod init
 $ pod update
 ```
 Cette commande installe vos dépendances et crée un espace de travail Xcode.  **Remarque** : Prenez soin de toujours ouvrir le nouvel espace de travail Xcode au lieu du fichier de projet Xcode d'origine :
+
 	```
 	$ open App.xcworkspace
 	```
@@ -305,6 +306,7 @@ Envoi de notifications push de base.
 3. Vérifiez que vos appareils ont reçu votre notification.
 
 	La capture d'écran suivante présente une boîte d'alerte relative à une notification push s'exécutant au premier plan sur un appareil Android et iOS.
+
 	![Notification push qui s'exécute au premier plan sur un appareil Android](images/Android_Screenshot.jpg)
 
 	![Notification push qui s'exécute au premier plan sur un appareil iOS](images/iOS_Screenshot.jpg)

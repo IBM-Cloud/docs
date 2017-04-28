@@ -184,7 +184,7 @@ var bmsPush = new BMSPush();
 	{: codeblock}
 
 
-## Aplicaciones y extensiones de Google Chrome
+## Apps y extensiones de Google Chrome
 {: web-get-tags}
 
 Para obtener la lista de etiquetas disponibles, a las que se pueden suscribir los clientes, utilice el código siguiente.
@@ -205,7 +205,7 @@ var bmsPush = new BMSPush();
 ```
 	{: codeblock}
 
-Copie los siguientes fragmentos de código en las aplicaciones y extensiones de Google Chrome para obtener una lista de etiquetas a las que están suscritos los clientes.
+Copie los siguientes fragmentos de código en las apps y extensiones de Google Chrome para obtener una lista de etiquetas a las que están suscritos los clientes.
 
 ```
 var bmsPush = new BMSPush();

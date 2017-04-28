@@ -53,7 +53,7 @@ finden Sie in [Android helloPush Sample Application](https://github.com/ibm-blue
 
 	```
 	<intent-filter>
-		<action android:name="<Name Ihres Android-Pakets.IBMPushNotification"/>
+		<action android:name="<Name Ihres Android-Pakets.IBMPushNotification"/>   
 		<category  android:name="android.intent.category.DEFAULT"/>
 	</intent-filter>
 	```
@@ -218,6 +218,6 @@ im Vordergrund auf einem Android- und auf einem iOS-Gerät.
 
 Nachdem Sie einfache Benachrichtigungen erfolgreich eingerichtet haben, können Sie tagbasierte Benachrichtigungen und erweiterte Optionen konfigurieren.
 
-Fügen Sie diese Funktionen des Push Notifications-Service Ihrer App hinzu.
+Fügen Sie die folgenden Funktionen von Push Notifications Service zu Ihrer App hinzu.
 Informationen zur Verwendung tagbasierter Benachrichtigungen finden Sie in [Tagbasierte Benachrichtigungen](c_tag_basednotifications.html).
 Informationen zur Verwendung erweiterter Benachrichtigungen finden Sie in [Erweiterte Push-Benachrichtigungen](t_advance_notifications.html).

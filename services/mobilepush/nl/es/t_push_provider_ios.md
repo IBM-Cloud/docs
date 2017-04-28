@@ -44,7 +44,7 @@ El ID de app (el identificador de paquete) es un identificador exclusivo que ide
 Al registrar un ID de App, seleccione las opciones siguientes:
 
 * Notificaciones push
-![Servicios de aplicaciones](images/appID_appservices_enablepush.jpg)
+![Servicios de apps](images/appID_appservices_enablepush.jpg)
 * Sufijo de ID explícito
 ![ID explícito](images/appID_bundleID.jpg)
 4. Crear un certificado SSL de APNs de desarrollo y distribución.
@@ -110,7 +110,7 @@ Cree un perfil de suministro de desarrollo, como se indica a continuación:
 2. Vaya a la [Biblioteca de desarrolladores de Mac ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW62site){: new_window}, desplácese hasta la sección **Creación de perfiles de suministro de desarrollo** y siga las instrucciones para crear un perfil de desarrollo.
 **Nota**: Al configurar un perfil de suministro de desarrollo, seleccione las opciones siguientes:
 	* **Desarrollo de apps de iOS**
-	* **Para aplicaciones iOS y watchOS**
+	* **Para apps iOS y watchOS**
 
 
 

@@ -22,7 +22,7 @@ Android 애플리케이션에서 사용자 디바이스에 푸시 알림을 수�
 
 이 섹션에서는 클라이언트 푸시 SDK를 설치하고 이를 사용하여 추가적으로 Android 애플리케이션을 개발하는 방법에 대해 설명합니다.
 
-Gradle을 사용하여 Bluemix® 모바일 서비스 푸시 SDK를 추가할 수 있습니다. Gradle은 저장소에서 아티팩트를 자동으로 다운로드하여 Android 애플리케이션에 제공합니다. Android Studio 및 Android Studio SDK를 올바로 설정해야 합니다. 시스템을 설정하는 방법에 대한 자세한 정보는 [Android Studio 개요 ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](https://developer.android.com/tools/studio/index.html){: new_window}을 참조하십시오. Gradle에 대한 정보는 [Gradle 빌드 구성 ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](http://developer.android.com/tools/building/configuring-gradle.html){: new_window}을 참조하십시오. 
+Gradle을 사용하여 Bluemix® 모바일 서비스 푸시 SDK를 추가할 수 있습니다. Gradle은 저장소에서 아티팩트를 자동으로 다운로드하여 Android 애플리케이션에 제공합니다. Android Studio 및 Android Studio SDK를 올바로 설정해야 합니다. 시스템을 설정하는 방법에 대한 자세한 정보는 [Android Studio 개요 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.android.com/tools/studio/index.html){: new_window}을 참조하십시오. Gradle에 대한 정보는 [Gradle 빌드 구성 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://developer.android.com/tools/building/configuring-gradle.html){: new_window}을 참조하십시오. 
 
 모바일 애플리케이션을 작성하고 연 후 Android Studio를 사용하여 다음 단계를 완료하십시오. 
 
@@ -53,21 +53,21 @@ Gradle을 사용하여 Bluemix® 모바일 서비스 푸시 SDK를 추가할 수
 3. 프로젝트 레벨 **build.gradle** 파일에 다음 종속 항목을 추가하십시오. 
 ```
 dependencies {
-classpath 'com.android.tools.build:gradle:2.2.3'
+    classpath 'com.android.tools.build:gradle:2.2.3'
     classpath 'com.google.gms:google-services:3.0.0'
 }
 ``` 
     {: codeblock}
-5. **AndroidManifest.xml** 파일에서 다음 권한을 추가하십시오. 샘플 Manifest을 보려면 [Android helloPush 샘플 애플리케이션 ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml){: new_window}을 참조하십시오. 샘플 Gradle 파일을 보려면 [샘플 빌드 Gradle 파일 ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle){: new_window}을 참조하십시오. 
+5. **AndroidManifest.xml** 파일에서 다음 권한을 추가하십시오. 샘플 Manifest을 보려면 [Android helloPush 샘플 애플리케이션 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml){: new_window}을 참조하십시오. 샘플 Gradle 파일을 보려면 [샘플 빌드 Gradle 파일 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle){: new_window}을 참조하십시오. 
 ```
 	<uses-permission android:name="android.permission.INTERNET"/>
 	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
 	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 ```
 	{: codeblock}
- 여기에서 [Android 권한 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://developer.android.com/guide/topics/security/permissions.html){: new_window}에 대해 자세히 살펴보십시오.
+ 여기서 [Android 권한 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://developer.android.com/guide/topics/security/permissions.html){: new_window}에 대해 자세히 살펴보십시오.
 
 4. 활동에 대한 알림 의도 설정을 추가하십시오. 사용자가 알림 영역에서 수신한 알림을 클릭할 경우 이 설정을 통해 애플리케이션이 시작됩니다. 
 ```
@@ -82,12 +82,12 @@ classpath 'com.android.tools.build:gradle:2.2.3'
 5. RECEIVE 및 REGISTRATION 이벤트 통지용으로 FCM(Firebase Cloud Messaging) 또는 GCM(Google Cloud Messaging) 의도 서비스 및 의도 필터를 추가하십시오. 
 ```
 	<service android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushIntentService"
-    android:exported="true" >
-    <intent-filter>
-        <action android:name="com.google.firebase.MESSAGING_EVENT" />
+    	android:exported="true" >
+    	<intent-filter>
+    	    <action android:name="com.google.firebase.MESSAGING_EVENT" />
     </intent-filter>
 	</service>
-<service
+	<service
     android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPush"
     android:exported="true" >
     <intent-filter>
@@ -101,8 +101,8 @@ classpath 'com.android.tools.build:gradle:2.2.3'
 
 ```
 	<activity android:name="
-com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationHandler"
-android:theme="@android:style/Theme.NoDisplay"/>
+	com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationHandler"
+	android:theme="@android:style/Theme.NoDisplay"/>
 ```
     {: codeblock}
 
@@ -165,7 +165,7 @@ push.initialize(getApplicationContext(), "appGUID", "clientSecret");
 ####AppGUID
 {: appguid_initialize_client_push_sdk}
 
-{{site.data.keyword.mobilepushshort}} 서비스의 AppGUID 키입니다. 이 값은 대소문자를 구분합니다. 푸시 알림 대시보드를 열고 구성 탭을 선택하십시오. 푸시 알림 서비스 대시보드에 있는 구성 탭의 모바일 옵션에서 이 값을 가져올 수 있습니다.  
+{{site.data.keyword.mobilepushshort}} 서비스의 AppGUID 키입니다. 이 값은 대소문자를 구분합니다. Push Notification 대시보드를 열고 구성 탭을 선택하십시오. Push Notification 서비스 대시보드에 있는 구성 탭의 모바일 옵션에서 이 값을 가져올 수 있습니다.  
 
 ## Android 디바이스 등록
 {: #android_register}
@@ -177,13 +177,13 @@ push.initialize(getApplicationContext(), "appGUID", "clientSecret");
 ```
 	//Register Android devices
 	push.registerDevice(new MFPPushResponseListener<String>() {
-	    @Override
-		public void onSuccess(String response) {
-		//handle success here
-	    }
-	    @Override
-    public void onFailure(MFPPushException ex) {
-         //handle failure here
+    	@Override
+    	public void onSuccess(String response) {
+    		//handle success here
+    	}
+		@Override
+    	public void onFailure(MFPPushException ex) {
+    		//handle failure here
 		}
 		});
 ```
@@ -252,11 +252,11 @@ notificationListener 오브젝트를 푸시에 등록하려면 **MFPPush.listen(
 
 ```
 	push.setNotificationStatusListener(new MFPPushNotificationStatusListener() {
-@Override
-public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
-// Handle status change
-}
-});
+	@Override
+	public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
+		// Handle status change
+	}
+	});
 ```
     {: codeblock}
 
@@ -271,9 +271,9 @@ public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
 
 ```
 	<receiver android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationDismissHandler">
-<intent-filter>
-<action android:name="Your_Android_Package_Name.Cancel_IBMPushNotification"/>
-</intent-filter>
+	<intent-filter>
+	<action android:name="Your_Android_Package_Name.Cancel_IBMPushNotification"/>
+	</intent-filter>
 	</receiver>
 ```
 	{: codeblock}
@@ -285,16 +285,16 @@ public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
 ```
 	public class MyDismissHandler extends MFPPushNotificationDismissHandler {
 @Override
-public void onReceive(Context context, Intent intent) {
-MFPPush.getInstance().setNotificationStatusListener(new MFPPushNotificationStatusListener() {
+	public void onReceive(Context context, Intent intent) {
+	MFPPush.getInstance().setNotificationStatusListener(new MFPPushNotificationStatusListener() {
 @Override
-public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
-// Handle status change
-}
-});
-super.onReceive(context, intent);
-}
-}
+	public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
+	// Handle status change
+	}
+	});
+	super.onReceive(context, intent);
+	}
+	}
 ```
     {: codeblock}
 
@@ -303,9 +303,9 @@ super.onReceive(context, intent);
 
 ```
 	<receiver android:name="Your_Android_Package_Name.Your_Handler">
-<intent-filter>
-<action android:name="Your_Android_Package_Name.Cancel_IBMPushNotification"/>
-</intent-filter>
+	<intent-filter>
+	<action android:name="Your_Android_Package_Name.Cancel_IBMPushNotification"/>
+	</intent-filter>
 	</receiver>
 ```
     {: codeblock}
@@ -356,6 +356,6 @@ Android 디바이스에 알림을 전송하기 위해 {{site.data.keyword.mobile
 
 정상적으로 기본 알림을 설정한 후 태그 기반 알림 및 고급 옵션을 구성할 수 있습니다. 
 
-이러한 푸시 알림 서비스 기능을 앱에 추가하십시오.
+이러한 푸시 알림 서비스 기능을 사용자의 앱에 추가하십시오.
 태그 기반 알림을 사용하려면 [태그 기반 알림](c_tag_basednotifications.html)을 참조하십시오.
 고급 알림 옵션을 사용하려면 [고급 푸시 알림 사용](t_advance_badge_sound_payload.html)을 참조하십시오. 

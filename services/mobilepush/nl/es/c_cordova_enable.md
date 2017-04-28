@@ -31,7 +31,7 @@ Instale y utilice el plug-in push del cliente para seguir desarrollando sus apli
 1. Instale la herramienta de línea de mandatos de Git. Para Windows, asegúrese de que selecciona la opción **Ejecutar Git desde la ventana del indicador de mandatos**. Para obtener información sobre cómo descargar e instalar esta herramienta, consulte [Git ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://git-scm.com/downloads){: new_window}.
 1. Instale la herramienta Node.js y NPM (Node Package Manager). La herramienta de línea de mandatos NPM está empaquetada con Node.js. Para obtener información sobre cómo descargar e instalar Node.js, consulte [Node.js ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://nodejs.org/en/download/){: new_window}.
 1. Desde la línea de mandatos, instale las herramientas de línea de mandatos de Cordova mediante el mandato **npm install -g cordova**. Esto es necesario para utilizar el plug-in push de Cordova. Para obtener información sobre cómo instalar Cordova y configurar la app de Cordova, consulte [Cordova Apache ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://cordova.apache.org/#getstarted){: new_window}. Para obtener más información, consulte [archivo Readme ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push){: new_window} del plug-in de push de Cordova.
-1. Vaya a la carpeta en la que desea crear la aplicación de Cordova y ejecute el mandato siguiente para crear una aplicación de Cordova. Si ya tiene una aplicación de Cordova, vaya al paso 3.
+1. Vaya a la carpeta en la que desea crear la app de Cordova y ejecute el mandato siguiente para crear una aplicación de Cordova. Si ya tiene una app de Cordova, vaya al paso 3.
 ```cordova create your_app_name
 cd your_app_name
 ```
@@ -41,7 +41,7 @@ cd your_app_name
 Asegúrese de que especifica el ID de paquete correcto. Los siguientes mensajes de error se pueden dar en Xcode, si se especifica un ID de paquete incorrecto.
 
 * El ejecutable se ha firmado con titularidades no válidas.
-* Las titularidades especificadas en el archivo Titularidades de firmado de código de la aplicación no coinciden con las especificadas en el perfil de suministro. Para solucionar este problema, especifique el ID de paquete correcto en Xcode o en el archivo **config.xml** de la aplicación de Cordova.
+* Las titularidades especificadas en el archivo Titularidades de firmado de código de la aplicación no coinciden con las especificadas en el perfil de suministro. Para solucionar este problema, especifique el ID de paquete correcto en Xcode o en el archivo **config.xml** de la app de Cordova.
 
 1. Añada la API soportada mínima o la declaración de destino del despliegue al archivo config.xml para la aplicación de Cordova. El valor de minSdkVersion debe ser superior a 15. El valor targetSdkVersion siempre debe reflejar el SDK de Android más reciente disponible desde Google.
 	
@@ -108,8 +108,8 @@ bms-push <version> "BMSPush"
 {: #cordova_initialize}
 
 Para poder utilizar el plug-in de Cordova del servicio {{site.data.keyword.mobilepushshort}}, debe inicializarlo
-pasando la ruta de la aplicación y el GUID de aplicaciones. Tras inicializar el plug-in, puede conectarse a la aplicación del servidor que ha creado en el panel de control de Bluemix. El plug-in de Cordova es el continente para los
-SDK de cliente de iOS y Android para habilitar a una aplicación de Cordova a comunicarse con los servicios de Bluemix.
+pasando la ruta de la aplicación y el GUID de aplicaciones. Tras inicializar el plug-in, puede conectarse a la app del servidor que ha creado en el panel de control de Bluemix. El plug-in de Cordova es el continente para los
+SDK de cliente de iOS y Android para habilitar a una app de Cordova a comunicarse con los servicios de Bluemix.
 
 1. Inicialice el BMSClient copiando y pegando el siguiente fragmento de código en el archivo JavaScript principal (normalmente ubicado en el directorio **www/js**).
 
@@ -260,7 +260,7 @@ En la sección siguiente se listan las propiedades de notificación de iOS:
 * **payload** - objeto JSON que contiene una carga útil de notificación
 action-loc-key - la serie se utiliza como clave para obtener una serie localizada en la localización actual para que la utilice el título del botón adecuado, en lugar de `Vista`.
 * **badge** - El número que se mostrará como el identificador del icono de app. Si falta esta propiedad, el identificador no se modificará. Para eliminar el identificador, establezca el valor de esta propiedad en 0.
-* **sound** - El nombre de un archivo de sonido del paquete de la app de la carpeta Biblioteca/Sonidos del contenedor de datos de la aplicación.
+* **sound** - El nombre de un archivo de sonido del paquete de la app de la carpeta Biblioteca/Sonidos del contenedor de datos de la app.
 
 
 Añada los siguientes fragmentos de código de Swift a la clase de delegado de la aplicación.
@@ -314,5 +314,6 @@ en el primer plano en un dispositivo Android e iOS.
 
 Una vez que haya configurado correctamente las notificaciones básicas, puede configurar las notificaciones basadas en código y las opciones avanzadas.
 
-Añada las características de servicio de {{site.data.keyword.mobilepushshort}} a la app. Para utilizar notificaciones basadas en código, consulte [Notificaciones basadas en código](c_tag_basednotifications.html).
+Añada las características del servicio {{site.data.keyword.mobilepushshort}} a su app.
+Para utilizar notificaciones basadas en código, consulte [Notificaciones basadas en código](c_tag_basednotifications.html).
 Para utilizar opciones de notificaciones avanzadas, consulte [Habilitación de notificaciones push avanzadas](t_advance_badge_sound_payload.html).

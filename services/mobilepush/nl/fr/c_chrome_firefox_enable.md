@@ -10,9 +10,9 @@ years: 2015, 2017
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Activation des applications pour recevoir {{site.data.keyword.mobilepushshort}}
+# Activation des applications Web pour recevoir des notifications push
 {: #web_notifications}
-Dernière mise à jour : 16 février 2017
+Dernière mise à jour : 12 avril 2017
 {: .last-updated}
 
 Vous pouvez permettre aux applications Web Google Chrome, Mozilla Firefox et Safari de recevoir des {{site.data.keyword.mobilepushshort}}. Vérifiez que
@@ -25,6 +25,7 @@ avant de poursuivre.
 Cette rubrique décrit comment installer et utiliser le logiciel SDK Push JavaScript du client afin de développer davantage vos applications Web.
 
 ### Initialisation dans l'application Web
+{: #web_initialise_web_app}
 
 Pour installer le logiciel SDK Javascript dans l'application Google Chrome Web, procédez comme suit :
 
@@ -32,7 +33,7 @@ Téléchargez les fichiers `BMSPushSDK.js`, `BMSPushServiceWorker.js` et `manife
 [logiciel SDK Push Web Bluemix](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master){: new_window}.
 
 1. Editez le fichier `manifest_Website.json`.
-	- Pour le navigateur Google Chrome, remplacez la valeur de `name` par le nom de votre site Web. Par exemple, `www.dailynewsupdates.com`. Changez la  valeur de `gcm_sender_id` en la remplaçant par la valeur sender_ID de votre élément FCM (Firebase Cloud Messaging) ou GCM (Google Cloud Messaging). Pour plus d'informations, voir [Obtention de votre ID d'émetteur et de la clé d'API](t_push_provider_android.html). La valeur gcm_sender_id ne contient que des chiffres.
+	- Pour le navigateur Google Chrome, remplacez la valeur de `name` par le nom de votre site Web. Par exemple, `www.dailynewsupdates.com`. Changez la  valeur de `gcm_sender_id` en la remplaçant par la valeur sender_ID de votre élément FCM (Firebase Cloud Messaging) ou GCM (Google Cloud Messaging). Pour plus d'informations, voir [Configuration des données d'identification pour un fournisseur de notification](t__main_push_config_provider.html). La valeur gcm_sender_id ne contient que des chiffres.
 
 		```
 			{
@@ -97,14 +98,14 @@ La valeur de `AppRegion` spécifie l'emplacement où est hébergé le service {{
 **Remarque **: si vos données d'identification pour le SDK Web push ont été modifiées, la remise du message risque d'échouer pour le
 navigateur Chrome. Prenez soin d'appeler `bmsPush.unRegisterDevice` pour éviter un échec.
 
-Si vous soumettez des paramètres erronés, vous pouvez rencontrer des erreurs liées à la configuration. Pour plus d'informations, voir [Résolution des erreurs de configuration push Web](troubleshooting_config_errors.html).
+Si vous soumettez des paramètres erronés, vous pouvez rencontrer des erreurs liées à la configuration. Pour plus d'informations, voir [Traitement des incidents](troubleshooting.html).
 
 ## Enregistrement de l'application Web
 {: #web_register}
 
 Utilisez l'API **register()** pour enregistrer l'appareil auprès du service {{site.data.keyword.mobilepushshort}}. Utilisez l'une des options suivantes, selon votre navigateur.
 
-- Pour procéder à un enregistrement depuis Google Chrome, ajoutez la clé d'API FCM (Firebase Cloud Messaging) ou GCM (Google Cloud Messaging) et l'URL de site Web dans le tableau de bord de configuration Web du service {{site.data.keyword.mobilepushshort}} Bluemix. Pour plus d'informations, voir [Configuration de données d'identification pour Google Cloud Messaging (GCM)](t_push_provider_android.html), dans la rubrique relative à la configuration de Chrome.
+- Pour procéder à un enregistrement depuis Google Chrome, ajoutez la clé d'API FCM (Firebase Cloud Messaging) ou GCM (Google Cloud Messaging) et l'URL de site Web dans le tableau de bord de configuration Web du service {{site.data.keyword.mobilepushshort}} Bluemix. Pour plus d'informations, voir [Configuration des données d'identification pour un fournisseur de notification](t__main_push_config_provider.html) dans la rubrique relative à la configuration de Chrome.
 
 - Pour l'enregistrement depuis Mozilla Firefox, ajoutez l'URL de site Web dans le tableau de bord de configuration Web du service {{site.data.keyword.mobilepushshort}} Bluemix, dans la configuration Firefox.
 
@@ -126,6 +127,35 @@ Utilisez les fragments de code ci-après pour procéder à l'enregistrement aupr
   })
 ```
     {: codeblock}
+
+
+## Envoi de notifications de base aux navigateurs Web
+{: #web_browsers}
+
+Une fois que vous avez développé vos applications, vous pouvez envoyer une notification push. 
+
+1. Sélectionnez **Envoyer des notifications** et rédigez un message en choisissant **Notifications Web** comme option **Envoyer à**. 
+2. Entrez le message qui doit être distribué dans la zone **Message**.
+3. Vous pouvez choisir de fournir des paramètres facultatifs :
+  - **Titre de la notification** : il s'agit du texte qui s'affichera comme en-tête de l'alerte du message.
+  - **URL de l'icône de notification** : si votre message doit être distribué avec une icône de notification d'application, fournissez dans cette zone le lien à l'icône.
+  - **Time to live** : avise le serveur de la validité des messages.
+4. Pour les notifications Web envoyées au navigateur Safari, certaines informations supplémentaires sont requises :
+  - **Action** : libellé du bouton d'action.
+  - **URL Arguments** : arguments d'URL à utiliser avec cette notification. Doivent être soumis sous forme de tableau JSON. 
+ 
+L'image suivante montre l'option Notifications Web du tableau de bord.
+
+  ![Ecran Notifications](images/DashboardWebpush.jpg)
+
+
+### Etapes suivantes
+{: #next_steps_tags}
+
+Une fois que vous avez configuré les notifications de base, vous pouvez choisir de configurer des notifications basées sur des balises et des options
+avancées.
+
+Ajoutez ces fonctions de service {{site.data.keyword.mobilepushshort}} à votre application. Pour utiliser des notifications basées sur les balises, voir [Notifications basées sur les balises](c_tag_basednotifications.html). Pour utiliser des options de notification avancées, voir [Activation des notifications push avancées](t_advance_badge_sound_payload.html).
 
 
 

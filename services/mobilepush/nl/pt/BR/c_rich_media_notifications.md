@@ -12,11 +12,11 @@ copyright:
 
 # Ativando notificações do rich media
 {: #interactive-notifications}
-Última atualização: 11 de janeiro de 2017
+Última atualização: 09 de março de 2017
 {: .last-updated}
 
 
-É possível ativar o Rich Media {{site.data.keyword.mobilepushshort}} no iOS 10 e superior. As notificações push podem ser enviadas com Áudio, Vídeo, GIFs e imagens. 
+É possível ativar o Rich Media {{site.data.keyword.mobilepushshort}} no iOS 10 e mais recente. As notificações push podem ser enviadas com Áudio, Vídeo, GIFs e imagens. 
 
 Para configurar o aplicativo para receber rich push no iOS 10, conclua as etapas:  
 
