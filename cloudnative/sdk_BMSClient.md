@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-28"
 
 ---
 {:new_window: target="_blank"}
@@ -13,7 +13,7 @@ lastupdated: "2017-03-17"
 # Initializing BMSClient
 {: #sdk_BMSClient}
 
-`BMSCore` provides the HTTP infrastructure that the other {{site.data.keyword.Bluemix}} Mobile services client SDKs use to communicate with their corresponding {{site.data.keyword.Bluemix_notm}} services.
+`BMSCore` provides the HTTP infrastructure that the other {{site.data.keyword.Bluemix}} Web and Mobile services client SDKs use to communicate with their corresponding {{site.data.keyword.Bluemix_notm}} services.
 
 
 ## Initializing your Android application
