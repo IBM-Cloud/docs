@@ -20,7 +20,7 @@ You can invite users across {{site.data.keyword.Bluemix_notm}} services, applica
 
 ## Inviting users
 
-To invite users and manage outstanding invitations, you must be either an account owner, an organization manager, or you must have infrastructure permissions to add users.  You can invite users, cancel invitations, and resend a pending invitation to an invited user. You can invite a single user or, if you are providing the same access for all members in a group of users, you can invite multiple users at once.
+To invite users and manage outstanding invitations, you must be either an account owner, an organization manager, or you must have infrastructure permissions to add users. You can invite users, cancel invitations, and resend a pending invitation to an invited user. You can invite a single user or, if you are providing the same access for all members in a group of users, you can invite multiple users at once.
 
 To invite users or manage user invitations in your account, complete the following steps:
 
@@ -29,7 +29,7 @@ To invite users or manage user invitations in your account, complete the followi
 3. Specify the email address or IBMid of the user. If you are providing multiple users the same access, you can select **Invite multiple users** to enter a list of users to invite. Separate the user ID entries with commas. 
 4. Add one or more of the access options that you manage. You must assign at least one access option and configure the settings for the user in each access option that you assign. For any additional access options that you don't add and configure, the default value of *no access* is assigned. You might see one or all of the following access options, depending on the options that you are authorized to manage: **Identity and access enabled services**, **Cloud Foundry access**, **Infrastructure access**.
 
-If you determine that a user does not need access, you can also cancel an invitation for any users that are shown in a **Processing** or **Pending** state in the **Status** column. If an invited user did not receive an invitation, you can also resend the invitation to any user in a **Pending** state.  These options are available for users in the appropriate state from the **Actions** menu on the Users window.
+If you determine that a user does not need access, you can cancel an invitation for any users that are shown in a **Processing** or **Pending** state in the **Status** column. If an invited user did not receive an invitation, you can resend the invitation to any user in a **Pending** state.
 
 ## Assigning access
 
@@ -37,15 +37,15 @@ If you determine that a user does not need access, you can also cancel an invita
 
 Select to assign the services, regions, service instances, and roles for the users you invite.
 
-**Note**:  If you select the **Automatically grant access when new services are added** option, you are not notified to deselect each new {{site.data.keyword.Bluemix_notm}}  service for that user when services are added later.
+**Note**:  If you select the **Automatically grant access when new services are added** option, you are not notified to deselect each new {{site.data.keyword.Bluemix_notm}} service for that user when services are added later.
 
 ### Cloud Foundry access
 
-Select to assign the services, regions, spaces, and space roles for the users you invite. See [User roles](/docs/admin/users_roles.html#userrolesinfo) for more specific information about these settings. You can add multiple roles, one at a time.
+Select to assign the organization, regions, spaces, and space roles for the users you invite. See [User roles](/docs/admin/users_roles.html#userrolesinfo) for more specific information about these settings. You can add multiple space roles, one at a time. All users granted the auditor organization role by default. You can update this role to billing manager or organization manager after the user accepts the invitation.
 
 ### Infrastructure access
 
-Assign the following infrastructure permission to the user: 
+You can assign the following infrastructure permissions to the user: 
 
 <dl>
 <dt>View Only</dt>
@@ -58,4 +58,4 @@ Assign the following infrastructure permission to the user:
 
 **Note**: The actual permissions assigned are automatically limited to the subset of permissions that you have.
 
-For specific information about configuring access for users, including roles and policies, see [Managing user accounts and access](/docs/admin/iamusermanage.html).
+For information about configuring access for users after they have been added to your account, see [Managing user accounts and access](/docs/admin/iamusermanage.html).
