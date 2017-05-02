@@ -14,7 +14,7 @@ lastupdated: "2017-01-13"
 {: #mobileanalytics_sdk}
 
 目前，Android、iOS、WatchOS 和 Cordova 可以使用 {{site.data.keyword.mobileanalytics_short}} 客户端 SDK。
-{: #shortdesc}
+{: shortdesc}
 
 ## 安装 Android 客户端 SDK
 {: #install-sdk-android}
@@ -23,7 +23,7 @@ lastupdated: "2017-01-13"
 
 {{site.data.keyword.mobileanalytics_short}} 客户端 SDK 通过 Gradle 进行分发；Gradle 是用于 Android 项目的依赖关系管理器。Gradle 会自动从存储库下载工件，并将其提供给 Android 应用程序。
 
-1. 创建 [Android Studio ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://developer.android.com/sdk/index.html){: new_window} 项目或打开现有项目。
+1. 创建一个 [Android Studio ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://developer.android.com/sdk/index.html){: new_window} 项目或者打开现有的项目。
 
 2. 打开**应用程序模块**中的 `build.gradle` 文件。
 
@@ -58,23 +58,23 @@ lastupdated: "2017-01-13"
 使用 {{site.data.keyword.mobileanalytics_full}} SDK，您可以检测移动应用程序。iOS 和 watchOS 可以使用 Swift SDK。
 
 ### 开始之前
-{: #before-you-begin-ios}
+{: #before-you-begin-ios notoc}
 
-确保正确设置 Xcode。要了解如何设置 iOS 开发环境，请参阅 [Apple Developer Web 站点 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.apple.com/support/xcode/){: new_window}。阅读客户端 SDK Swift Analytics 的 [Xcode 需求 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#requirements){: new_window}。
+确保正确设置 Xcode。要了解如何设置 iOS 开发环境，请参阅 [Apple Developer Web 站点 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.apple.com/support/xcode/){: new_window}。请阅读有关客户端 SDK Swift Analytics 的 [Xcode 要求 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#requirements){: new_window}。
 
-{{site.data.keyword.mobileanalytics_short}} SDK 通过 [CocoaPods ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cocoapods.org/){: new_window} 和 [Carthage ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/Carthage/Carthage#getting-started){: new_window} 进行分发，其为 Cocoa 项目的依赖关系管理器。CocoaPods 和 Carthage 会自动从存储库下载工件，并将其提供给您的应用程序。选择 CocoaPods 或 Carthage：
+{{site.data.keyword.mobileanalytics_short}} SDK 通过 [CocoaPods ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cocoapods.org/){: new_window} 和 [Carthage ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/Carthage/Carthage#getting-started){: new_window} 进行分发，它们是 Cocoa 项目的依赖关系管理器。CocoaPods 和 Carthage 会自动从存储库下载工件，并将其提供给您的应用程序。选择 CocoaPods 或 Carthage：
 
 #### CocoaPods
-{: #cocoapods}
+{: #cocoapods notoc}
 
-1. 遵循 GitHub 上的 [{{site.data.keyword.Bluemix_notm}} Mobile Services Swift SDK 指示信息 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#cocoapods){: new_window} 以使用 Cocoapods 安装 `BMSAnalytics` 并将其添加到您的 Podfile。 
+1. 遵循 GitHub 上的 [{{site.data.keyword.Bluemix_notm}} Mobile Services Swift SDK 指示信息 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#cocoapods){: new_window} 以使用 Cocoapods 安装 `BMSAnalytics` 并将其添加到 pod 文件。 
 	
 2. 在已安装 iOS 客户端 SDK 之后，[导入并初始化](sdk.html#initalize-ma-sdk) Analytics 客户端 SDK。   
 
 #### Carthage
-{: #carthage}
+{: #carthage notoc}
 
-如果您没有使用 CocoaPods，您可以使用 [Carthage ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos ){: new_window} 将框架添加到项目。
+如果您不使用 CocoaPods，那么可以使用 [Carthage ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos){: new_window} 将框架添加到项目。
 
 1. 遵循 GitHub 上的 [Carthage 安装指示信息 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#carthage){: new_window} 以安装 `BMSAnalytics`。
 
@@ -85,7 +85,7 @@ lastupdated: "2017-01-13"
 
 使用 {{site.data.keyword.mobileanalytics_full}} Cordova 插件，您可以检测移动应用程序。 
 
-1. 创建 [Cordova ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://cordova.apache.org/#getstarted){: new_window} 项目或打开现有项目。
+1. 创建一个 [Cordova ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://cordova.apache.org/#getstarted){: new_window} 项目或者打开现有的项目。
 
 2. 将 Android 和 iOS 平台添加到您的 Cordova 应用程序。从命令行运行以下一个或全部两个命令。当前支持 Cordova-CLI V6.3.0 或更低版本：
    
@@ -114,7 +114,7 @@ lastupdated: "2017-01-13"
 	```
    {: codeblock}
 
- *minSdkVersion* 值必须为 V`15` 或更高版本。请参阅 [Android 平台指南 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cordova.apache.org/docs/en/latest/guide/platforms/android/){: new_window} 以了解 Android SDK 的最新受支持 *targetSdkVersion*。
+ *minSdkVersion* 值必须为 V`15` 或更高版本。请参阅 [Android 平台指南 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cordova.apache.org/docs/en/latest/guide/platforms/android/){: new_window} 以了解有关 Android SDK 受支持的 *targetSdkVersion* 的最新信息。
 
 4. 如果已添加了 iOS 操作系统，使用目标声明更新 `<platform name="ios">` 元素：
 
@@ -145,12 +145,14 @@ lastupdated: "2017-01-13"
 8. 您现在已安装 Cordova 插件并已配置环境。接下来，[导入并初始化](sdk.html#initalize-ma-sdk) Analytics 客户端 SDK。
 
 # 相关链接
+{: #rellinks notoc}
 
 ## SDK
-* [Android SDK ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics ){: new_window}  
-* [iOS SDK ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics ){: new_window}
+{: #sdk notoc}
+* [Android SDK ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window}  
+* [iOS SDK ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics){: new_window}
 * [Cordova 插件核心 SDK ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.npmjs.com/package/bms-core){: new_window}
 
 ## API 参考
-{: #api}
-* [REST API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://mobile-analytics-dashboard.{DomainName}/analytics-service/ ){:new_window}
+{: #api notoc}
+* [REST API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

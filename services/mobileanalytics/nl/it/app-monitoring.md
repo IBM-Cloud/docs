@@ -10,7 +10,7 @@ lastupdated: "2017-01-10"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Monitoraggio delle applicazioni con {{site.data.keyword.mobileanalytics_short}} 
+# Monitoraggio delle applicazioni con {{site.data.keyword.mobileanalytics_short}}
 {: #monitoringapps}
 
 {{site.data.keyword.mobileanalytics_full}} fornisce il monitoraggio e l'analisi per le tue applicazioni mobili. Puoi registrare i log applicazione e monitorare i dati con l'SDK client {{site.data.keyword.mobileanalytics_short}}. Gli sviluppatori possono controllare quando inviare questi dati al
@@ -20,13 +20,13 @@ servizio {{site.data.keyword.mobileanalytics_short}}. Quando i dati vengono dist
 <!--
 
 ## Visualizing data with custom charts
-{: #custom-charts}
+{: #custom-charts notoc}
 
 You can visualize the collected analytics data in your analytics repository. This visualization is a powerful way to inspect data for specific use cases. You can create charts with data that is already collected by Operational Analytics, in addition to custom data that you report.
 
 
 ### Creating custom charts for app logs
-{: #custom-charts-client-logs}
+{: #custom-charts-client-logs notoc}
 
 You can create a custom chart for app logs that contain log information that is sent with the Logger API for the platform. The log information also includes contextual information about the device, including environment, app name, and app version.
 
@@ -59,7 +59,7 @@ In this example, you use app log data to create a flow chart. The final graph sh
 7. Click **Save**
 
 ### Exporting custom data
-{: #export-custom-data}
+{: #export-custom-data notoc}
 
 You can export the data from each custom chart into JSON, XML, or CSV format.
 
@@ -68,7 +68,7 @@ The structure of the exported data depends on the chart that is being exported. 
 
 
 ### Exporting and importing custom chart definitions
-{: #export-import-custom}
+{: #export-import-custom notoc}
 
 You can import and export custom chart definitions programmatically or manually in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
 
@@ -93,30 +93,30 @@ You can also export and import custom chart definitions programmatically by usin
 ## Impostazione di avvisi
 {: #alerts}
 
-Puoi impostare delle soglie nelle definizioni di avviso nella console {{site.data.keyword.mobileanalytics_short}} per monitorare meglio le tue attività. 
+Puoi impostare delle soglie nelle definizioni di avviso nella console {{site.data.keyword.mobileanalytics_short}} per monitorare meglio le tue attività.
 
 Puoi configurare delle soglie che, se vengono superate, attivano degli avvisi di segnalazione al monitoraggio della console {{site.data.keyword.mobileanalytics_short}}. Gli avvisi attivati possono essere visualizzati sulla console oppure gli avvisi possono essere gestiti da webhook personalizzato. <!-- This feature provides a proactive means of detecting app log errors, server log errors, extended periods of network latency, and authentication failures.--> Questa funzione fornisce un modo proattivo per rilevare gli errori log applicazione, gli arresti anomali dell'applicazione e gli errori di log server. Delle soglie e degli avvisi reattivi ti evitano di dover esaminare accuratamente i tuoi dati e impostare delle soglie a un ampio spettro di granularità.
 
-### Creazione di una definizione di avviso per i log applicazione 
-{: #alert-def-client-logs}
+### Creazione di una definizione di avviso per i log applicazione
+{: #alert-def-client-logs notoc}
 
-Puoi creare una definizione di avviso basata sui log applicazione. 
+Puoi creare una definizione di avviso basata sui log applicazione.
 
-In questo esempio, utilizzi i dati di log applicazione per creare una definizione di avviso. L'avviso monitora tutti i log applicazione ricevuti negli ultimi 5 minuti e continua a controllare ogni 5 minuti, finché la definizione di avviso non viene disabilitata o eliminata. Un avviso viene attivato per ciascun dispositivo che ha inviato 3 o più log di errori applicazione con gli stessi nome applicazione e versione. 
+In questo esempio, utilizzi i dati di log applicazione per creare una definizione di avviso. L'avviso monitora tutti i log applicazione ricevuti negli ultimi 5 minuti e continua a controllare ogni 5 minuti, finché la definizione di avviso non viene disabilitata o eliminata. Un avviso viene attivato per ciascun dispositivo che ha inviato 3 o più log di errori applicazione con gli stessi nome applicazione e versione.
 
-1. Nella console {{site.data.keyword.mobileanalytics_short}}, fai clic su **Definizioni** per andare alla pagina delle definizioni di avviso. 
+1. Nella console {{site.data.keyword.mobileanalytics_short}}, fai clic su **Definizioni** per andare alla pagina delle definizioni di avviso.
 2. Fai clic su **Crea avviso** per creare un avviso.
 3. Fornisci i seguenti valori:
 	* Nome avviso: Avviso per i log applicazione
 	* messaggio: Avviso di messaggio di errore
 	* Frequenza query: 5 minuti
-	* Tipo di evento: Log applicazione 
+	* Tipo di evento: Log applicazione
 		* Proprietà: Livello di log
 			* Valore: Errore
 			* Soglia
 				* Tipo di soglia: Totale per l'istanza dell'applicazione
 
-					**Nota**: se scegli l'opzione Media per applicazione, per i log applicazione viene calcolata la media in base al numero di dispositivi. Ad esempio, se hai due dispositivi, e un dispositivo invia sei log applicazione mentre l'altro ne invia tre, la media è 4,5 log applicazione. 
+					**Nota**: se scegli l'opzione Media per applicazione, per i log applicazione viene calcolata la media in base al numero di dispositivi. Ad esempio, se hai due dispositivi, e un dispositivo invia sei log applicazione mentre l'altro ne invia tre, la media è 4,5 log applicazione.
 				* Operatore: è maggiore di o uguale a 3
 	<!-- insert alert definition tab image? -->
 
@@ -131,17 +131,17 @@ In questo esempio, utilizzi i dati di log applicazione per creare una definizion
 
 Hai creato una definizione di avviso per attivare un avviso alla fine di ogni intervallo di 5 minuti se il numero di log applicazione ha raggiunto la tua soglia di 3 o più log di errori.
 
-### Creazione di una definizione di avviso per gli arresti anomali delle applicazioni 
-{: #alert-def-app-crash}
+### Creazione di una definizione di avviso per gli arresti anomali delle applicazioni
+{: #alert-def-app-crash notoc}
 
-Puoi creare una definizione di avviso basata sugli arresti anomali delle applicazioni. 
+Puoi creare una definizione di avviso basata sugli arresti anomali delle applicazioni.
 
-In questo esempio, utilizzi i dati relativi agli arresti anomali delle applicazioni per creare una definizione di avviso. L'avviso monitora tutti gli arresti anomali di applicazioni negli ultimi 2 minuti e continua a controllare ogni 2 minuti finché la definizione di avviso non viene disabilitata o eliminata. Un avviso viene attivato per ogni applicazione per cui si è verificato un arresto anomalo 5 o più volte. Per ulteriori informazioni sugli arresti anomali delle applicazioni, vedi [Arresti anomali delle applicazioni](#app_crash). 
+In questo esempio, utilizzi i dati relativi agli arresti anomali delle applicazioni per creare una definizione di avviso. L'avviso monitora tutti gli arresti anomali di applicazioni negli ultimi 2 minuti e continua a controllare ogni 2 minuti finché la definizione di avviso non viene disabilitata o eliminata. Un avviso viene attivato per ogni applicazione per cui si è verificato un arresto anomalo 5 o più volte. Per ulteriori informazioni sugli arresti anomali delle applicazioni, vedi [Arresti anomali delle applicazioni](#app_crash).
 
-1. Nella console {{site.data.keyword.mobileanalytics_short}}, fai clic su **Definizioni** per visualizzare la pagina delle definizioni dell'avviso. 
+1. Nella console {{site.data.keyword.mobileanalytics_short}}, fai clic su **Definizioni** per visualizzare la pagina delle definizioni dell'avviso.
 2. Fai clic su **Crea avviso**.
 3. Fornisci i seguenti valori:
-	* Nome avviso: Avviso per arresti anomali delle applicazioni 
+	* Nome avviso: Avviso per arresti anomali delle applicazioni
 	* Messaggio: Avviso di arresto anomalo dell'applicazione
 	* Frequenza query: Arresti anomali dell'applicazione
 		* Frequenza query: 2 minuti
@@ -161,7 +161,7 @@ In questo esempio, utilizzi i dati relativi agli arresti anomali delle applicazi
 5. Fai clic su **Salva**.
 
 ### Gestione delle definizioni di avviso
-{: #managing-alert-definitions}
+{: #managing-alert-definitions notoc}
 
 In questo esempio, gestisci le definizioni di avviso dalla pagina Gestione avvisi.
 
@@ -172,7 +172,7 @@ In questo esempio, gestisci le definizioni di avviso dalla pagina Gestione avvis
 5. Facoltativo: fai clic sull'icona che rappresenta un **cestino** se vuoi eliminare una definizione di avviso.
 
 ### Visualizzazione di dettagli dell'avviso
-{: #viewing-alert-details}
+{: #viewing-alert-details notoc}
 
 In questo esempio, visualizzi i dettagli dei tuoi avvisi attivati dalla pagina Log avvisi.
 
@@ -186,13 +186,13 @@ facendo clic su **Modifica avviso**. Altrimenti, il pulsante **Modifica avviso**
 
 3. Facoltativo: seleziona un avviso e fai clic sull'icona che rappresenta un **cestino** per eliminare l'avviso.
 
-## Monitoraggio degli arresti anomali delle applicazioni 
+## Monitoraggio degli arresti anomali delle applicazioni
 {: #monitor-app-crash}
 
-Puoi visualizzare le informazioni sugli arresti anomali delle tue applicazioni nella console {{site.data.keyword.mobileanalytics_short}} per monitorare meglio e risolvere più facilmente i problemi delle tue applicazioni. 
+Puoi visualizzare le informazioni sugli arresti anomali delle tue applicazioni nella console {{site.data.keyword.mobileanalytics_short}} per monitorare meglio e risolvere più facilmente i problemi delle tue applicazioni.
 
-### Monitoraggio degli arresti anomali delle applicazioni 
-{: #app-crash}
+### Monitoraggio degli arresti anomali delle applicazioni
+{: #app-crash notoc}
 
 Nella pagina **Arresti anomali**, la tabella **Panoramica arresti anomali** mostra le seguenti colonne di dati:
 
@@ -203,13 +203,13 @@ Nella pagina **Arresti anomali**, la tabella **Panoramica arresti anomali** most
 
 Puoi visualizzare rapidamente le informazioni sugli arresti anomali delle tue applicazioni nella tabella **Arresti anomali**. <!--In the **Overview** page of the **Dashboard** section,--> Il grafico a barre **Arresti anomali** visualizza un istogramma degli arresti anomali nel tempo.
 
-Puoi visualizzare i dati relativi agli arresti anomali in due modi: 
+Puoi visualizzare i dati relativi agli arresti anomali in due modi:
 
 1. Visualizza frequenza arresti anomali: frequenza degli arresti anomali nel tempo
 2. Visualizza totale arresti anomali: totale arresti anomali nel tempo
 
 ### Risoluzione dei problemi di arresto anomalo delle applicazioni
-{: #app-crash-troubleshooting}
+{: #app-crash-troubleshooting notoc}
 
 La pagina **Risoluzione dei problemi** nella console <!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}} offre una vista granulare degli arresti anomali della tua applicazione, utilizzando la tabella **Riepilogo arresti anomali**.
 
@@ -222,24 +222,24 @@ La tabella **Riepilogo arresti anomali** è ordinabile e include le seguenti col
 * Sistema operativo
 * Messaggio
 
-Fai clic sull'icona + accanto a qualsiasi voce per visualizzare la tabella **Dettagli dell'arresto anomalo**, che include le seguenti colonne: 
+Fai clic sull'icona + accanto a qualsiasi voce per visualizzare la tabella **Dettagli dell'arresto anomalo**, che include le seguenti colonne:
 
 * Data/ora arresto anomalo
-* Versione applicazione 
+* Versione applicazione
 * Versione sistema operativo
 * Modello dispositivo
 * ID dispositivo
 * Download: link per scaricare i log che portavano all'arresto anomalo
 
-Espandi qualsiasi voce nella tabella **Dettagli dell'arresto anomalo** per ottenere ulteriori dettagli, compresa una traccia di stack. 
+Espandi qualsiasi voce nella tabella **Dettagli dell'arresto anomalo** per ottenere ulteriori dettagli, compresa una traccia di stack.
 
-**Nota:**: i dati per la tabella **Riepilogo dell'arresto anomalo** viene compilata eseguendo delle query dei log applicazione a livello di errore irreversibile. Se la tua applicazione non raccoglie i log applicazione a livello di errore irreversibile, non è disponibile alcun dato. 
+**Nota:**: i dati per la tabella **Riepilogo dell'arresto anomalo** viene compilata eseguendo delle query dei log applicazione a livello di errore irreversibile. Se la tua applicazione non raccoglie i log applicazione a livello di errore irreversibile, non è disponibile alcun dato.
 
 ## Monitoraggio delle richieste di rete
 {: #monitor-network-requests}
 
 
-Visualizza i dati della richiesta di rete per le tue applicazioni nella console {{site.data.keyword.mobileanalytics_short}}.  
+Visualizza i dati della richiesta di rete per le tue applicazioni nella console {{site.data.keyword.mobileanalytics_short}}. 
 
 I dati sono disponibili per le seguenti misurazioni:
 	

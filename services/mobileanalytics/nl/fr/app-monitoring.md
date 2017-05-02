@@ -23,13 +23,13 @@ de l'application.
 <!--
 
 ## Visualizing data with custom charts
-{: #custom-charts}
+{: #custom-charts notoc}
 
 You can visualize the collected analytics data in your analytics repository. This visualization is a powerful way to inspect data for specific use cases. You can create charts with data that is already collected by Operational Analytics, in addition to custom data that you report.
 
 
 ### Creating custom charts for app logs
-{: #custom-charts-client-logs}
+{: #custom-charts-client-logs notoc}
 
 You can create a custom chart for app logs that contain log information that is sent with the Logger API for the platform. The log information also includes contextual information about the device, including environment, app name, and app version.
 
@@ -62,7 +62,7 @@ In this example, you use app log data to create a flow chart. The final graph sh
 7. Click **Save**
 
 ### Exporting custom data
-{: #export-custom-data}
+{: #export-custom-data notoc}
 
 You can export the data from each custom chart into JSON, XML, or CSV format.
 
@@ -71,7 +71,7 @@ The structure of the exported data depends on the chart that is being exported. 
 
 
 ### Exporting and importing custom chart definitions
-{: #export-import-custom}
+{: #export-import-custom notoc}
 
 You can import and export custom chart definitions programmatically or manually in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
 
@@ -105,7 +105,7 @@ personnalisé. <!-- This feature provides a proactive means of detecting app log
 des pannes d'application. La mise en place d'alertes et de seuils réactifs vous évite d'avoir à parcourir vos données et à définir des seuils avec un niveau de granularité élevé.
 
 ### Création d'une définition d'alerte pour les journaux d'application
-{: #alert-def-client-logs}
+{: #alert-def-client-logs notoc}
 
 Vous pouvez créer une définition d'alerte qui repose sur des journaux d'application.
 
@@ -151,7 +151,7 @@ Vous avez créé une définition d'alerte qui déclenche une alerte toutes les 5
 à 3.
 
 ### Création d'une définition d'alerte pour les pannes d'application
-{: #alert-def-app-crash}
+{: #alert-def-app-crash notoc}
 
 Vous pouvez créer une définition d'alerte basée sur les pannes d'application.
 
@@ -181,7 +181,7 @@ Définitions d'alertes.
 5. Cliquez sur **Sauvegarder**.
 
 ### Gestion des définitions d'alerte
-{: #managing-alert-definitions}
+{: #managing-alert-definitions notoc}
 
 Dans cet exemple, vous gérez vos définitions d'alerte à partir de la page Gestion des alertes.
 
@@ -193,7 +193,7 @@ Journaux des alertes.
 5. Facultatif : Cliquez sur l'icône **Corbeille** si vous souhaitez supprimer une définition d'alerte.
 
 ### Affichage des détails d'alerte
-{: #viewing-alert-details}
+{: #viewing-alert-details notoc}
 
 Dans cet exemple, vous affichez les détails de vos alertes déclenchées à partir de la page Journal des alertes.
 
@@ -213,7 +213,7 @@ Vous pouvez consulter des informations sur les pannes de votre application dans 
 {{site.data.keyword.mobileanalytics_short}} pour mieux surveiller vos applications et résoudre leurs incidents.
 
 ### Surveillance des pannes d'application
-{: #app-crash}
+{: #app-crash notoc}
 
 Sur la page **Pannes**, le tableau **Présentation des pannes** affiche les colonnes de données suivantes :
 
@@ -231,10 +231,10 @@ Vous pouvez afficher les données de panne de deux façons :
 2. Afficher le nombre total de pannes : nombre total de pannes au fil du temps
 
 ### Traitement des incidents liés aux pannes d'application
-{: #app-crash-troubleshooting}
+{: #app-crash-troubleshooting notoc}
 
 La page **Traitement des incidents** dans la console <!-- **Applications** section of the -->
-{{site.data.keyword.mobileanalytics_short}} offre une vue granulaire des pannes de votre application grâce au tableau **Récapitulatif des pannes**. 
+{{site.data.keyword.mobileanalytics_short}} offre une vue granulaire des pannes de votre application grâce au tableau **Récapitulatif des pannes**.
 
 Le tableau **Récapitulatif des pannes** inclut les colonnes de données suivantes et peut être trié :
 

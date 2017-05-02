@@ -73,7 +73,7 @@ lastupdated: "2017-01-13"
 클라이언트 측 로그 및 사용법 데이터는 자동으로 수집되며 Mobile Analytics 서비스에 On-Demand로 전송됩니다. 개발자 및 관리자는 클라이언트 SDK에 의해 수집된 데이터를 보기 위해 {{site.data.keyword.mobileanalytics_short}} 서비스 대시보드를 사용할 수 있습니다.
 
 ## 데이터 시각화
-{: data-visualization}
+{: data-visualization notoc}
 
 분석 서비스에 의해 수집된 모든 데이터는 IBM {{site.data.keyword.mobileanalytics_short}} 서비스 타일 인스턴스를 클릭하여 {{site.data.keyword.Bluemix_notm}} 대시보드로부터 액세스 가능한 {{site.data.keyword.mobileanalytics_short}} 대시보드를 통해 시각화될 수 있습니다. <!--You can also create custom charts, based on data that is collected by the analytics service in the dashboard.--> 모바일 분석 둘러보기 외에도 분석 기능에는 클라이언트 로그, 캡처된 클라이언트 충돌 데이터 및 {{site.data.keyword.mobileanalytics_short}} 서비스에 피드하는 클라이언트 API 기능 호출을 통해 명시적으로 제공하는 추가 데이터에 대한 원시 검색을 수행하는 기능이 포함됩니다. 
 
@@ -93,7 +93,7 @@ lastupdated: "2017-01-13"
 		<dd>{{site.data.keyword.mobileanalytics_short}}에서 사용자 정의 조회를 할 수 없지만 향후 이 기능을 사용할 수 있도록 검토 중입니다. </dd>
 	<dt>내 애플리케이션을 어떻게 {{site.data.keyword.mobileanalytics_short}}에 연결합니까?</dt>
 		<dd>[iOS 또는 Android용 오픈 소스 SDK를 다운로드하거나](install-client-sdk.html) 기타 플랫폼용 {{site.data.keyword.mobileanalytics_short}} [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/)를 사용하십시오. </dd>
-	<dt>어느 Bluemix 리젼에서 {{site.data.keyword.mobileanalytics_short}}를 사용할 수 있습니까?</dt>
+	<dt>어느 Bluemix 지역에서 {{site.data.keyword.mobileanalytics_short}}를 사용할 수 있습니까?</dt>
 		<dd>현재 Mobile Analytics는 미국 남부와 영국에서 사용할 수 있습니다. 다른 지역에서도 제공할 계획이지만 아직 시기가 정해지지 않았습니다. </dd>
 	<dt>이 서비스의 요금은 얼마입니까?</dt>
 		<dd>매달 수집되는 처음 1억 개의 이벤트는 무료이므로 이벤트 가격은 1억 개당 $1입니다.</dd>
@@ -118,19 +118,18 @@ lastupdated: "2017-01-13"
 	<dt>MobileFirst Platform Foundation에서 발견된 Mobile Analytics와 {{site.data.keyword.mobileanalytics_full}} 사이의 차이점은 무엇입니까?</dt>
 		<dd>두 콘솔에서 사용자 및 세션은 매우 유사하지만 MobileFirst Platform Foundation에서 제공하는 분석은 클라이언트가 자체 분석 클러스터 온프레미스를 관리할 수 있는 추가 메트릭 및 설정을 포함합니다. 또한 MobileFirst Platform Foundation 분석 콘솔에서는 어댑터와 어댑터 프로시저에 대한 메트릭을 세분화할 수 있는 반면, {{site.data.keyword.mobileanalytics_short}} 서비스에서는 이러한 메트릭이 네트워크 요청 차트와 테이블로 통합됩니다. </dd>
 	<dt>MobileFirst Platform Foundation 온프레미스를 앱 개발에 사용 중이지만 자체 분석 클러스터를 호스트할 의향이 없습니다. 대신 {{site.data.keyword.mobileanalytics_full}}를 사용해도 됩니까?</dt>
-		<dd>예. 다음과 같은 몇 개의 옵션이 있습니다. MobileFirst Platform Foundation 7.x 또는 8.0을 사용하고 앱이 MobileFirst Platform SDK로 인스트루먼트된 경우에는 {{site.data.keyword.mobileanalytics_short}} for {{site.data.keyword.Bluemix_notm}}에 분석 데이터를 보고하도록 MobileFirst 서버를 구성할 수 있습니다. [Mobile Analytics 및 Mobile Foundation Bluemix 서비스 구성 ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](https://mobilefirstplatform.ibmcloud.com/blog/2016/07/11/analytics-bm-service/){: new_window} 블로그 포스트에서 세부사항을 읽으십시오. 또는, {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.mobileanalytics_short}} SDK를 사용하여 앱을 인스트루먼트하고 보고서를 {{site.data.keyword.mobileanalytics_short}} 서비스에 직접 보고할 수 있습니다. </dd>
+		<dd>예. 다음과 같은 몇 개의 옵션이 있습니다. MobileFirst Platform Foundation 7.x 또는 8.0을 사용하고 앱이 MobileFirst Platform SDK로 인스트루먼트된 경우에는 {{site.data.keyword.mobileanalytics_short}} for {{site.data.keyword.Bluemix_notm}}에 분석 데이터를 보고하도록 MobileFirst 서버를 구성할 수 있습니다. 세부사항은 [Configuring Mobile Analytics and Mobile Foundation Bluemix services ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://mobilefirstplatform.ibmcloud.com/blog/2016/07/11/analytics-bm-service/){: new_window} 블로그 게시글을 읽어보십시오. 또는, {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.mobileanalytics_short}} SDK를 사용하여 앱을 인스트루먼트하고 보고서를 {{site.data.keyword.mobileanalytics_short}} 서비스에 직접 보고할 수 있습니다. </dd>
 	<!-- <dt>My instance of  {{site.data.keyword.mobileanalytics_short}} does not look like the screen shots in the catalog. What's going on?</dt> -->
 		<!-- <dd>Most likely you are using the Classic view interface for {{site.data.keyword.Bluemix_notm}}. Classic view is deprecated, so {{site.data.keyword.mobileanalytics_short}} runs best in the new {{site.data.keyword.Bluemix_notm}} interface. If you are in Classic view, you will see a link in the {{site.data.keyword.Bluemix_notm}} header that says <strong>Try the new {{site.data.keyword.Bluemix_notm}}</strong>. Click that link to use the new interface.</dd> -->
 </dl>
 
 
 # 관련 링크
- {:class="linklist"}
+{: #rellinks notoc}
 
 ## SDK
-{: rellink-sdk}
+{: #sdk notoc}
 <!-- Links to SDK download and SDK Developer Guide -->
-* [Android SDK ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window} 
-* [iOS SDK ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
+* [Android SDK ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window} 
+* [iOS SDK ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
 
-<!-- {:elementKind="article" id="rellinks"} -->
