@@ -47,18 +47,14 @@ New as of: 03 February 2017
 ## {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicatedandlocal}
 
-<!--
-
 ### April updates for the administration console
 {: #apriladminconsole}
-*New as of: 30 April 2017*
+*New as of: 2 May 2017*
 
 With the latest updates and improvements from April, you can use the following new features:
 
- * Newly designed status app for {{site.data.keyword.Bluemix_notm}} Dedicated and Local environments. You can quickly search by component name or date of posting. You can also switch between the component status posts view and the notifications specific to your environment.
+ * Newly designed status app for {{site.data.keyword.Bluemix_notm}} Dedicated and Local environments. You can quickly search by component name or date of posting. You can also switch between the component status posts view and the notifications specific to your environment. See the [New {{site.data.keyword.Bluemix_notm}} Status Page](https://www.ibm.com/blogs/bluemix/2017/05/new-bluemix-status-page/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") blog post for more information.
  * Service usage data for select services from the Resource Usage tile. See [Service usage details](/docs/hybrid/index.html#servicesresourceusage) for more information about what services are supported and what you can expect from the new view.
- 
- -->
 
 ### March updates for the administration console
 {: #mar17adminconsole}
