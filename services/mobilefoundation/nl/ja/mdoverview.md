@@ -39,7 +39,7 @@ lastupdated:  "2017-02-17"
 
 <!--{{site.data.keyword.mobilefoundation_short}} service provisions a container in your space in {{site.data.keyword.Bluemix_notm}}. You can see the details of the container that is created, view the container performance, and access the server logs from your {{site.data.keyword.Bluemix_notm}} dashboard.-->
 
-## Mobile Foundation のヘルプおよびサポートの入手
+## Mobile Foundation のヘルプおよびサポートの利用
 {: #getting_help_mobilefoundation}
 
 {{site.data.keyword.mobilefoundation_short}} をご使用中に問題が発生した場合、または質問がある場合は、情報を検索するか、フォーラムで質問してヘルプを得ることができます。また、サポート・チケットをオープンすることも可能です。

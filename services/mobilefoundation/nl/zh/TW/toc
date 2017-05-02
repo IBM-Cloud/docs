@@ -1,9 +1,31 @@
-[Getting started with Mobile Foundation](index.html)
+{: navgroup: .navgroup}
+{: topicgroup: .topicgroup}
+
+{: .toc subcollection="mobile-foundation" audience="service" href="/docs/services/mobilefoundation/index.html"}
+Mobile Foundation
+
+    {: .navgroup id="learn"}
     index.md
     mdoverview.md
+
+    {: .topicgroup}
+    相關鏈結
+        [IBM MobileFirst Platform Foundation 8.0.0 版產品文件](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html)
+        [IBM MobileFirst Platform Developer Center](https://mobilefirstplatform.ibmcloud.com)
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
     c_using_mfs_p1.md
     c_using_mfs_p2.md
     c_using_mfs_p3.md
     c_using_mfs_p4.md
     customdomainconfig.md
     maint_updates.md
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    [Stack Overflow](http://stackoverflow.com/search?q=ibm-mobilefirst+bluemix)
+    [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/mobilefirst/?smartspace=bluemix)
+    [取得協助](../../support/index.html#getting-help)
+    [與支援中心聯絡](../../support/index.html#contacting-support)
+    {: .navgroup-end}

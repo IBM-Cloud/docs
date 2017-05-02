@@ -24,9 +24,9 @@ lastupdated:  "2017-02-17"
   |`mybluemix.net` | 美國南部 |    
   |`eu-gb.mybluemix.net` | 英國  |
   |`au-syd.mybluemix.net` | 雪梨  |      
-  {: caption="Table 1. Application domain names based on Region in {{site.data.keyword.Bluemix_notm}}" caption-side="top"}
+  {: caption="表 1. {{site.data.keyword.Bluemix_notm}} 中以地區為基礎的應用程式網域名稱" caption-side="top"}
 
-您需要執行下列步驟配置自訂網域，才能使用自己的網域：
+
 
 1.	藉由選擇其中一個支援的方案，建立 {{site.data.keyword.mobilefoundation_short}} 服務實例來建立 {{site.data.keyword.mfserver_short_notm}} 實例。
 

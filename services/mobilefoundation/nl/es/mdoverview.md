@@ -24,19 +24,19 @@ El servicio {{site.data.keyword.mobilefoundation_short}} ofrece un modo de confi
 
 Con {{site.data.keyword.mobilefoundation_short}}, puede realizar las funciones siguientes:
 
-*	Crear aplicaciones para cualquier entorno operativo y dispositivo móvil con el enfoque de desarrollo preferido: nativo o híbrido.
+*	Crear apps para cualquier entorno operativo y dispositivo móvil con el enfoque de desarrollo preferido: nativo o híbrido.
 
-*	Conectar y sincronizar aplicaciones móviles con datos empresariales, aplicaciones y servicios de nube, incluidos los servicios de {{site.data.keyword.Bluemix_notm}}.
+*	Conectar y sincronizar apps móviles con datos empresariales, aplicaciones y servicios de nube, incluidos los servicios de {{site.data.keyword.Bluemix_notm}}.
 
 *	Proteger el dispositivo, la aplicación, los datos y la capa de red.
 
-*	Gestionar la cartera de aplicaciones móviles desde una interfaz centralizada y desarrollar aplicaciones móviles utilizando los IDE y las bibliotecas favoritas.
+*	Gestionar la cartera de apps móviles desde una interfaz centralizada y desarrollar apps móviles utilizando los IDE y las bibliotecas favoritas.
 
 *	Utilizar servicios de datos escalables para la sincronización de datos en línea y fuera de línea.
 
 *	Configurar notificaciones push unificadas para todos los sistemas operativos de dispositivos móviles admitidos.
 
-Puede utilizar la {{site.data.keyword.mfp_cli_long_notm}} (CLI) con {{site.data.keyword.mobilefoundation_short}} para crear y gestionar aplicaciones con facilidad.
+Puede utilizar la {{site.data.keyword.mfp_cli_long_notm}} (CLI) con {{site.data.keyword.mobilefoundation_short}} para crear y gestionar apps con facilidad.
 
 <!--{{site.data.keyword.mobilefoundation_short}} service provisions a container in your space in {{site.data.keyword.Bluemix_notm}}. You can see the details of the container that is created, view the container performance, and access the server logs from your {{site.data.keyword.Bluemix_notm}} dashboard.-->
 
@@ -47,7 +47,7 @@ Si tiene problemas o preguntas sobre el uso de {{site.data.keyword.mobilefoundat
 
 Al utilizar los foros para formular una pregunta, etiquete la pregunta de forma que la puedan ver los equipos de desarrollo de IBM {{site.data.keyword.Bluemix_notm}}.
 
-Si tiene preguntas técnicas sobre el desarrollo o el despliegue de una app con {{site.data.keyword.mobilefoundation_short}}, publíquelas en [Desbordamiento de pila ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](http://stackoverflow.com/search?q=ibm-mobilefirst+bluemix){:new_window} y etiquete las preguntas con `bluemix` e `ibm-mobilefirst`.
+Si tiene preguntas técnicas sobre el desarrollo o el despliegue de una app con {{site.data.keyword.mobilefoundation_short}}, publíquelas en [Stack Overflow ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](http://stackoverflow.com/search?q=ibm-mobilefirst+bluemix){:new_window} y etiquete las preguntas con `bluemix` e `ibm-mobilefirst`.
 
 Para formular preguntas sobre el servicio y obtener instrucciones de iniciación, utilice el foro [IBM developerWorks dW Answers ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://developer.ibm.com/answers/topics/mobilefirst/?smartspace=bluemix){:new_window}. Incluya las etiquetas `bluemix` y `mobilefirst`.
 
