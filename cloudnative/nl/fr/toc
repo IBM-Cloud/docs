@@ -1,23 +1,43 @@
-[Building cloud native projects](index.html)
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="cloudnative" audience="platform" href="/docs/cloudnative/index.html"}
+Génération de projets de cloud natifs
+
+    {: .navgroup id="learn"}
     index.md
-        projects.md
-        patterns.md
-        starters.md
-    devex.md
+
+    {: .topicgroup}
+    Initiation
+        devex.md
         what_is_new.md
         compute.md
         get_code.md
         services.md
-    cli.md
+
+    {: .topicgroup}
+    Plug-ins pour l'interface de ligne de commande Bluemix
         dev_cli.md
-            dev_cli_local_debug.md
+        dev_cli_local_debug.md
         sdk_cli.md
-    tutorials.md
+
+    {: .topicgroup}
+    Tutoriels
         tutorial_web.md
         tutorial_mobile.md
         tutorial_bff.md
         tutorial_microservice.md
-    troubleshoot.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
     sdk.md
         sdk_BMSClient.md
         sdk_network_request.md
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    troubleshoot.md
+    [stackoverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
+    [Obtenir de l'aide](../support/index.html#getting-help)
+    [Contacter le support](../support/index.html#contacting-support)
+    {: .navgroup-end}

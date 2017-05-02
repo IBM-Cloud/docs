@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+  lastupdated: "2017-04-04"
 
 ---
 
@@ -58,7 +58,8 @@ Revise los pasos y ejemplos siguientes para crear su primera acción JavaScript.
       return {payload: 'Hello world'};
   }
   ```
-  {: codeblock}
+    {: codeblock}
+
   El archivo JavaScript podría tener funciones adicionales. No obstante, por convenio, debe existir una función
 llamada `main` para proporcionar un punto de entrada para la acción.
 
@@ -67,7 +68,7 @@ llamada `main` para proporcionar un punto de entrada para la acción.
   ```
   wsk action create hello hello.js
   ```
-    {: pre}
+      {: pre}
   ```
   ok: created action hello
   ```
@@ -96,7 +97,7 @@ invocar acciones con una invocación *blocking* (es decir, estilo solicitud/resp
   {: pre}
   ```
   ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
-    ```
+  ```
   ```json
   {
       "result": {
@@ -116,7 +117,7 @@ utilizar para recuperar los registros o el resultado de la invocación a posteri
 
 5. Si no necesita el resultado de la acción inmediatamente, puede omitir el distintivo `--blocking`
 para hacer una invocación sin bloqueo. Puede obtener el resultado posteriormente, usando el ID de activación. Observe el ejemplo siguiente:
-  
+
   ```
   wsk action invoke hello
   ```
@@ -124,6 +125,7 @@ para hacer una invocación sin bloqueo. Puede obtener el resultado posteriorment
   ```
   ok: invoked hello with id 6bf1f670ee614a7eb5af3c9fde813043
   ```
+
   ```
   wsk activation result 6bf1f670ee614a7eb5af3c9fde813043
   ```
@@ -145,10 +147,8 @@ para hacer una invocación sin bloqueo. Puede obtener el resultado posteriorment
   44794bd6aab74415b4e42a308d880e5b         hello
   6bf1f670ee614a7eb5af3c9fde813043         hello
   ```
-  
 
 ### Paso de parámetros a una acción
-{: #openwhisk_adding_parameters_js}
 
 Los parámetros se pueden pasar a la acción cuando se invoca.
 
@@ -200,6 +200,7 @@ cómo los parámetros `name` y `place` se recuperan del objeto `params` en este 
       "payload": "Hello, Bernie from Vermont"
   }
   ```
+
   Fíjese en el uso de la opción
 `--result` para mostrar solo el resultado de la invocación.
 
@@ -248,6 +249,7 @@ el parámetro *place* para que el valor predeterminado de la acción sea el luga
       "payload": "Hello, Bernie from Vermont"
   }
   ```
+
   Observe que no ha necesitado especificar el parámetro place al invocar la acción. Los parámetros enlazados aún se pueden
 sobrescribir especificando el valor de parámetro en el momento de la invocación.
 
@@ -255,23 +257,27 @@ sobrescribir especificando el valor de parámetro en el momento de la invocació
 valor enlazado a la acción.
 
   Utilización del distintivo `--param`:
+
   ```
   wsk action invoke --blocking --result hello --param name Bernie --param place "Washington, DC"
   ```
   {: pre}
-  Utilización del distintivo `--param-file`:
-Archivo parameters.json:
+
+  Utilización del distintivo `--param-file`: 
+
+  Archivo parameters.json:
   ```json
   {
     "name": "Bernie",
       "place": "Vermont"
   }
   ```
-  {: codeblock}  
+  {: codeblock}
   ```
   wsk action invoke --blocking --result hello --param-file parameters.json
   ```
   {: pre}
+  
   ```json
   {  
       "payload": "Hello, Bernie from Washington, DC"
@@ -319,6 +325,7 @@ Las funciones de JavaScript que se ejecutan de forma asíncrona podrían necesit
       "done": true
   }
   ```
+
   Tenga en cuenta que ha realizado una invocación de bloqueo de una acción asíncrona.
 
 3. Recupere el registro de activación para ver cuánto tiempo ha tardado la activación en completarse:
@@ -332,19 +339,20 @@ Las funciones de JavaScript que se ejecutan de forma asíncrona podrían necesit
   b066ca51e68c4d3382df2d8033265db0             asyncAction
   ```
 
+
   ```
   wsk activation get b066ca51e68c4d3382df2d8033265db0
   ```
   {: pre}
-  ```json
+ ```json
   {
       "start": 1455881628103,
       "end":   1455881648126
   }
   ```
+
   Si se comparan los registros de fecha y hora de `start` y `end` en el registro de activación,
 puede ver que esta activación ha tardado poco más de 2 segundos en completarse.
-
 
 ### Uso de acciones para invocar una API externa
 {: #openwhisk_apicall_action}
@@ -406,7 +414,6 @@ argumento a la función `resolve()`.
   }
   ```
 
-
 ### Empaquetado de una acción como un módulo Node.js
 {: #openwhisk_js_packaged_action}
 
@@ -457,6 +464,7 @@ Para crear una acción OpenWhisk desde este paquete:
   {: pre}
 
     > Tenga en cuenta que el uso de la acción de Windows Explorer para crear el archivo zip da lugar a una estructura incorrecta. Las acciones zip de OpenWhisk deben tener `package.json` como raíz del zip, mientras que Windows Explorer las coloca dentro de una carpeta anidada. La opción más segura consiste en utilizar el mandato `zip` desde la línea de mandatos tal como se ha mostrado anteriormente.
+
 
 3. Cree la acción:
 
@@ -557,12 +565,11 @@ El proceso de creación de acciones Python es parecido al de las acciones JavaSc
 ### Creación e invocación de una acción
 {: #openwhisk_actions_python_invoke}
 
-Una acción es simplemente una función Python de nivel superior, que implica que es necesario disponer de un método denominado
-`main`. Por ejemplo, cree un archivo denominado `hello.py` con el contenido siguiente:
+Una acción es sencillamente una función Python de nivel superior. Por ejemplo, cree un archivo denominado `hello.py` con el siguiente código fuente:
 
 ```python
-def main(dict):
-    name = dict.get("name", "stranger")
+def main(args):
+    name = args.get("name", "stranger")
     greeting = "Hello " + name + "!"
     print(greeting)
         return {"greeting": greeting}
@@ -570,7 +577,7 @@ def main(dict):
 {: codeblock}
 
 Las acciones Python siempre consumen un
-diccionario y generan un diccionario.
+diccionario y generan un diccionario. El método de entrada para la acción es `main` de forma predeterminada, pero se puede especificar de forma explícita al crear la acción con la CLI `wsk` utilizando `--main`, como con cualquier otro tipo de acción.
 
 Puede crear una acción OpenWhisk denominada `helloPython` a partir de esta función de la siguiente manera:
 
@@ -578,10 +585,7 @@ Puede crear una acción OpenWhisk denominada `helloPython` a partir de esta func
 wsk action create helloPython hello.py
 ```
 {: pre}
-
-Cuando se utiliza la línea de mandatos y un archivo de origen `.py`, no es necesario especificar que
-está creando una acción Python (al contrario de lo que sucede con una acción JavaScript); la herramienta lo determina
-a partir de la extensión de archivo.
+La CLI deduce automáticamente el tipo de acción a partir de la extensión del archivo de origen. Para archivos de origen `.py`, la acción se ejecuta utilizando el tiempo de ejecución Python 2.7. También puede crear una acción que se ejecute con Python 3.6 especificando de forma explícita el parámetro `--kind python:3`. Consulte la documentación de [referencia](./openwhisk_reference.html#openwhisk_ref_python_environments) de Python para obtener más información sobre Python 2.7 frente a 3.6.
 
 La invocación de la acción es la misma para acciones Python que para acciones JavaScript:
 
@@ -597,9 +601,7 @@ wsk action invoke --blocking --result helloPython --param name World
 ```
 
 
-
 ## Creación de acciones Swift
-{: #openwhisk_actions_swift}
 
 El proceso de creación de acciones Swift es parecido al de las acciones JavaScript. En las secciones siguientes se proporciona una guía para la creación e invocación de una única acción Swift, y se añaden parámetros a dicha acción.
 
@@ -607,7 +609,6 @@ También puede usar el recinto de pruebas [Swift Sandbox](https://swiftlang.ng.b
 el código Swift sin tener que instalar Xcode en su máquina.
 
 ### Creación e invocación de una acción
-{: #openwhisk_actions_invoke_swift}
 
 Una acción es sencillamente una función Swift de nivel superior. Por ejemplo, cree un archivo llamado
 `hello.swift` con el contenido siguiente:
@@ -650,7 +651,6 @@ wsk action invoke --blocking --result helloSwift --param name World
   }
 ```
 
-
 **Atención:** Acciones Swift se ejecutan en un entorno Linux. Swift en Linux aún está en desarrollo, y
 {{site.data.keyword.openwhisk_short}} suele utilizar el release disponible más reciente, que no es necesariamente estable. Además, la versión
 de Swift que se utiliza con {{site.data.keyword.openwhisk_short}} podría no ser coherente con versiones de Swift de releases estables
@@ -658,17 +658,19 @@ de XCode en MacOS.
 
 ### Empaquetado de una acción como un ejecutable Swift
 {: #openwhisk_actions_swift_zip}
-Cuando cree una acción Swift de OpenWhisk con un archivo de origen Swift, se tiene que compilar en un binario antes de ejecutar la acción. Una vez hecho esto, las siguientes llamadas a la acción serán mucho más rápidas hasta que se depure el contenedor que alberga la acción. 
 
-Para evitar retrasos del paso de compilación, puede compilar el archivo Swift en un binario y luego cargarlo en OpenWhisk en un archivo zip. Como necesita la protección deOpenWhisk, la forma más sencilla de crear el binario consiste en crearlo en el mismo entorno en el que se va a ejecutar. Estos son los pasos a seguir: 
+Cuando cree una acción Swift de OpenWhisk con un archivo de origen Swift, se tiene que compilar en un binario antes de ejecutar la acción. Una vez hecho esto, las siguientes llamadas a la acción serán mucho más rápidas hasta que se depure el contenedor que alberga la acción. Este retraso se conoce como retraso de inicio en frío. 
 
-- Ejecute un contenedor interactivo de acciones Swift. 
-  ```
-  docker run -it -v "$(pwd):/owexec" openwhisk/swift3action bash
-  ```
-  {: pre}
-Esto le coloca en un shell bash dentro del contenedor Docker. Ejecute los siguientes mandatos:
-  
+Para evitar el retraso de inicio en frío, puede compilar el archivo Swift en un binario y luego cargarlo en OpenWhisk en un archivo zip. Como necesita la protección deOpenWhisk, la forma más sencilla de crear el binario consiste en crearlo en el mismo entorno en el que se va a ejecutar. Estos son los pasos a seguir:
+
+- Ejecute un contenedor interactivo de acciones Swift.
+```
+docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
+```
+{: pre}
+
+    Esto le coloca en un shell bash dentro del contenedor Docker. Ejecute los siguientes mandatos:
+
 - Instale zip para empaquetar el binario
   ```
   apt-get install -y zip
@@ -676,7 +678,7 @@ Esto le coloca en un shell bash dentro del contenedor Docker. Ejecute los siguie
   {: pre}
 - Copie el código fuente y prepárese para compilarlo
   ```
-  cp /owexec/hello.swift /swift3Action/spm-build/main.swift
+  cp /owexec/hello.swift /swift3Action/spm-build/main.swift 
   ```
   {: pre}
   ```
@@ -705,7 +707,7 @@ Esto le coloca en un shell bash dentro del contenedor Docker. Ejecute los siguie
   exit
   ```
   {: pre}
-Se ha creado el archivo hello.zip en el mismo directorio que hello.swift.
+Se ha creado el archivo hello.zip en el mismo directorio que hello.swift. 
 -Cárguelo en OpenWhisk con el nombre de acción helloSwifty:
   ```
   wsk action update helloSwiftly hello.zip --kind swift:3
@@ -717,6 +719,7 @@ Se ha creado el archivo hello.zip en el mismo directorio que hello.swift.
   ``` 
   {: pre}
 
+El tiempo que se ha tardado en ejecutar la acción está en la propiedad "duration" y se compara con el tiempo que se tarda en ejecutar con un paso de compilación en la acción hello. 
 
 ## Creación de acciones de Java
 {: #openwhisk_actions_java}
@@ -768,7 +771,6 @@ Puede crear una acción OpenWhisk denominada `helloJava` a partir de este archiv
 ```
 wsk action create helloJava hello.jar --main Hello
 ```
-{: pre}
 
 Cuando se utiliza la línea de mandatos y un archivo de origen `.jar`, no es necesario especificar que
 está creando una acción Java; la herramienta lo determina
@@ -790,7 +792,6 @@ wsk action invoke --blocking --result helloJava --param name World
 ```
 
 ## Creación de acciones Docker
-{: #openwhisk_actions_docker}
 
 Con acciones Docker de {{site.data.keyword.openwhisk_short}}, puede escribir sus acciones en cualquier lenguaje.
 
@@ -809,10 +810,12 @@ la CLI ya se ha configurado, son necesarios tres pasos para configurar un binari
   ```
   wsk sdk install docker
   ```
+  ```
   {: pre}
   ```
   El esqueleto Docker estará ahora instalado en el directorio actual.
   ```
+
   ```
   ls dockerSkeleton/
   ```
@@ -820,6 +823,7 @@ la CLI ya se ha configurado, son necesarios tres pasos para configurar un binari
   ```
   Dockerfile      README.md       buildAndPush.sh example.c
   ```
+
   El esqueleto es una plantilla de contenedor de Docker en la que puede inyectar código en forma de binarios personalizados.
 
 2. Configure su binario personalizado en el esqueleto blackbox. El esqueleto ya incluye un programa en C que puede usar.
@@ -839,14 +843,10 @@ la CLI ya se ha configurado, son necesarios tres pasos para configurar un binari
   {: codeblock}
 
   Puede modificar este valor cuando sea necesario o añadir código y dependencias adicionales a la imagen de docker.
-  En el último caso, es posible que sea necesario modificar el `archivo Docker` según convenga para crear el ejecutable.
-  El binario debe estar en el contenedor en `/action/exec`.
-
-  El ejecutable recibe un único argumento de la línea de mandatos. Es la serialización de una cadena del objeto JSON que representa los argumentos para la acción. El programa puede registrarse en `stdout` o `stderr`.
-  Por convenio, la última línea de la salida *debe* ser un objeto JSON en forma de cadena que represente el resultado de la acción.
-
-3. Construya la imagen de Docker y súbala mediante un script proporcionado. Antes debe ejecutar `docker login` para
-la autenticación y, a continuación, ejecute el script con el nombre de imagen elegido.
+  En el último caso, es posible que sea necesario modificar el archivo Docker según convenga para crear el ejecutable.
+  El binario debe estar en el contenedor en /action/exec. El ejecutable recibe un único argumento de la línea de mandatos. Es la serialización de una cadena del objeto JSON que representa los argumentos para la acción. El programa puede registrarse en 'stdout' o 'stderr'.
+Por convenio, la última línea de la salida _debe_ ser un objeto JSON en forma de cadena que represente el resultado de la acción.
+ 3. Construya la imagen de Docker y súbala mediante un script proporcionado. Antes debe ejecutar 'docker login' para la autenticación y, a continuación, ejecute el script con el nombre de imagen elegido.
 
   ```
   docker login -u janesmith -p janes_password
@@ -862,11 +862,10 @@ la autenticación y, a continuación, ejecute el script con el nombre de imagen 
   {: pre}
 
   Tenga en cuenta que parte del archivo example.c está compilado como parte del proceso de compilación de imagen de Docker,
-por lo que no necesita C compilado en su máquina.
+  por lo que no necesita C compilado en su máquina.
   De hecho, salvo cuando compile el binario en una máquina de host compatible, es posible que no se ejecute dentro del contenedor porque los formatos no coinciden.
 
   El contenedor de Docker ahora se puede utilizar como acción de {{site.data.keyword.openwhisk_short}}.
-
   ```
   wsk action create --docker example janesmith/blackboxdemo
   ```
@@ -874,7 +873,6 @@ por lo que no necesita C compilado en su máquina.
 
   Observe el uso de `--docker` al crear una acción. Actualmente se presupone que todas las imágenes de Docker se alojan en Docker Hub.
   La acción se puede invocar como cualquier otra acción de {{site.data.keyword.openwhisk_short}}.
-
   ```
   wsk action invoke --blocking --result example --param payload Rey
   ```
@@ -890,7 +888,7 @@ por lo que no necesita C compilado en su máquina.
 
   Para actualizar la acción de Docker, ejecute buildAndPush.sh para cargar la imagen más reciente en Docker Hub. Esto permitirá al sistema extraer la nueva imagen de Docker la próxima vez que ejecute el código para la acción.
   Si no hay contenedores recientes, cualquier invocación nueva utilizará la imagen de Docker nueva.
-  Sin embargo, si hay un contenedor reciente que utiliza una versión anterior de la imagen de Docker, las nuevas invocaciones seguirán utilizando esta imagen a no ser que se ejecute `wsk action update`. Esto indicará al sistema que para las nuevas invocaciones debe ejecutar una extracción de Docker para obtener su nueva imagen de Docker.
+  Sin embargo, si hay un contenedor reciente que utiliza una versión anterior de la imagen de Docker, las nuevas invocaciones seguirán utilizando esta imagen a no ser que se ejecute 'wsk action update'. Esto indicará al sistema que para las nuevas invocaciones debe ejecutar una extracción de Docker para obtener su nueva imagen de Docker.
 
   ```
   ./buildAndPush.sh janesmith/blackboxdemo
@@ -902,17 +900,14 @@ por lo que no necesita C compilado en su máquina.
   ```
   {: pre}
 
-  Podrá obtener más información sobre la creación de acciones de Docker en la sección
-[Referencias](./openwhisk_reference.html#openwhisk_ref_docker).
-
-## Supervisión de salida de acción
+  Encontrará más información sobre cómo crear acciones Docker en la sección [References](./openwhisk_reference.html#openwhisk_ref_docker).
+## Watching action output
 {: #openwhisk_actions_polling}
 
 Las acciones de {{site.data.keyword.openwhisk_short}} se podrían invocar por otros usuarios, en respuesta a varios sucesos,
 o como parte de una secuencia de acciones. En tales casos, puede ser útil supervisar las invocaciones.
 
 Puede utilizar la CLI de {{site.data.keyword.openwhisk_short}} para ver el resultado de la salida de las acciones a medida que se invocan.
-
 1. Emita el siguiente mandato desde un shell:
   ```
   wsk activation poll
@@ -920,9 +915,7 @@ Puede utilizar la CLI de {{site.data.keyword.openwhisk_short}} para ver el resul
   {: pre}
 
   Este mandato inicia un bucle de sondeo que comprueba continuamente los registros de las activaciones.
-
-2. Cambie a otra ventana e invoque la acción:
-
+  2. Cambie a otra ventana e invoque la acción:
   ```
   wsk action invoke /whisk.system/samples/helloWorld --param payload Bob
   ```
@@ -939,10 +932,10 @@ Puede utilizar la CLI de {{site.data.keyword.openwhisk_short}} para ver el resul
   ```
 
   De la misma forma, cuando ejecute el programa de utilidad de sondeo, verá en tiempo real los registros de las acciones que
-ejecute en nombre de OpenWhisk. 
+ejecute en nombre de OpenWhisk.
 
 
-## Listado de acciones
+## Listing actions
 {: #openwhisk_listing_actions}
 
 Puede elaborar una lista de todas las acciones que ha creado con el siguiente mandato:
@@ -952,7 +945,7 @@ wsk action list
 ```
 {: pre}
 
-A medida que escriba más acciones, esta lista crece y puede resultar útil agrupar las acciones relacionadas en [paquetes](./packages.md). Para filtrar la lista de acciones y limitarla a las contenidas en un determinado paquete puede utilizar el mandato:  
+A medida que escriba más acciones, esta lista crece y puede resultar útil agrupar las acciones relacionadas en [packages](./openwhisk_packages.html). Para filtrar la lista de acciones y limitarla a las contenidas en un determinado paquete puede utilizar el mandato: 
 
 ```
 wsk action list [NOMBRE PAQUETE]
@@ -966,7 +959,7 @@ wsk action list [NOMBRE PAQUETE]
 Puede realizar una limpieza mediante la supresión de acciones que no quiera usar.
 
 1. Ejecute el mandato siguiente para suprimir una acción:
-  ```
+```
   wsk action delete hello
   ```
   {: pre}
@@ -984,16 +977,16 @@ Puede realizar una limpieza mediante la supresión de acciones que no quiera usa
   ```
   {: pre}
 
-## Acceso a metadatos de acción dentro del cuerpo de la acción
+## Acceso a los metadatos de la acción dentro del cuerpo de la acción
 {: #openwhisk_action_metadata}
 
 El entorno de acción contiene varias propiedades que son específicas de la acción que se está ejecutando.
 Esto permite que la acción funcione según programa con activos de OpenWhisk mediante la API REST o permite establecer una alarma interna cuando la acción está a punto de alcanzar su presupuesto de tiempo permitido.
 Se accede a las propiedades mediante el entorno del sistema para todos los tiempos de ejecución admitidos: Node.js, Python, Swift, Java y acciones Docker cuando se utiliza el esqueleto OpenWhisk Docker.
 
-* `__OW_API_HOST` el host de API correspondiente al despliegue OpenWhisk que ejecuta esta acción
+* `__OW_API_HOST` el host de la API del despliegue de OpenWhisk que ejecuta esta acción
 * `__OW_API_KEY` la clave de API del asunto que invoca la acción; esta clave puede ser una clave de API restringida
-* `__OW_NAMESPACE` el espacio de nombres de *activation* (puede diferir del espacio de nombres de la acción)
-* `__OW_ACTION_NAME` el nombre completo de la acción que se está ejecutando
+* `__OW_NAMESPACE` el espacio de nombres de _activation_ (puede no coincidir con el espacio de nombres de la acción)
+* `__OW_ACTION_NAME` el nombre completo de la acción en ejecución
 * `__OW_ACTIVATION_ID` el ID de activación de esta instancia de la acción en ejecución
-* `__OW_DEADLINE` el tiempo aproximado en que esta acción habrá consumido toda su cuota de duración (medida en milisegundos epoch)
+* `__OW_DEADLINE` el tiempo aproximado que habrá consumido de su cuota de duración entera (medido en milisegundos de epoch)

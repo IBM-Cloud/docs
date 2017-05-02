@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-16"
+lastupdated: "2017-03-01"
 
 ---
 
@@ -13,11 +13,19 @@ lastupdated: "2017-02-16"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Análisis de registros de app de CF desde la CLI
+# Análisis de registros desde la CLI
 {: #analyzing_logs_cli}
 
-En {{site.data.keyword.Bluemix}}, puede ver, filtrar y analizar registros mediante la interfaz de línea de mandatos con el mandato **cf logs**. Utilice la línea de mandatos para gestionar los registros mediante programa. 
+En {{site.data.keyword.Bluemix}}, puede ver, filtrar y analizar registros mediante la interfaz de línea de mandatos. Utilice la línea de mandatos para gestionar los registros mediante programa. 
 {:shortdesc}
+
+Para analizar los registros de la aplicación Cloud Foundry (CF), utilice el mandato siguiente: `cf logs` Para obtener más información, consulte [Análisis de registros de app CF desde la CLI](logging_view_cli.html#analyzing_cf_logs_cli).
+
+Para analizar los registros del contenedor Docker, utilice el mandato siguiente: `cf ic logs` Para obtener más información, consulte [Análisis de registros del contenedor Docker desde la CLI](logging_view_cli.html#analyzing_container_logs_cli).
+
+
+## Análisis de registros de app de CF desde la CLI
+{: #analyzing_cf_logs_cli}
 
 Utilice el mandato **cf logs** para visualizar registros de una app Cloud Foundry y de componentes del sistema que interactúan con la misma cuando se despliega la app en {{site.data.keyword.Bluemix_notm}}. El mandato **cf logs** muestra las secuencias de registro STDOUT y STDERR de una aplicación Cloud Foundry.
 
@@ -27,6 +35,16 @@ Para ver los registros en los que está interesado o para excluir el contenido q
 * Para ver los registros más recientes de una app Cloud Foundry, consulte [Visualización de las últimas entradas de registro de una app Cloud Foundry](logging_view_cli.html#tailing_log_cli).
 * Para ver los registros de una app Cloud Foundry correspondientes a un determinado periodo de tiempo, consulte [Visualización de una sección de los registros](logging_view_cli.html#partial_log_cli).
 * Para ver las entradas de los registros de una app Cloud Foundry que contienen palabras clave específicas, consulte [Visualización de entradas de registro que contienen determinadas palabras clave](logging_view_cli.html#partial_by_keyword_log_cli).
+
+
+## Análisis de registros del contenedor Docker desde la CLI
+{: #analyzing_container_logs_cli}
+
+Utilice el mandato `cf ic logs` para visualizar los registros de un contenedor en {{site.data.keyword.Bluemix_notm}}. Por ejemplo, puede utilizar los registros para analizar por qué un contenedor se ha detenido o para revisar la salida del contenedor.  
+
+Para ver errores de aplicación correspondientes a la app que se ejecuta en un contenedor mediante el mandato `cf ic logs`, la aplicación debe grabar sus registros en las secuencias de salida estándar (STDOUT) y de error estándar (STDERR). Si diseña la aplicación para que grabe en estas secuencias de salida estándar, podrá ver los registros a través de la línea de mandatos aunque el contenedor se haya concluido o se haya colgado. 
+
+Para obtener más información sobre el mandato `cf ic logs`, consulte [Mandato cf ic logs](/docs/containers/container_cli_reference_cfic.html#container_cli_reference_cfic__logs).
 
 
 ## Visualización del registro de una app Cloud Foundry
@@ -97,28 +115,26 @@ Para obtener más información sobre la opción **grep**, escriba **grep --help*
 
 Dispone de los siguientes registros de una aplicación Cloud Foundry después de desplegarla en {{site.data.keyword.Bluemix}}:
 
-<dl><dt><strong>buildpack.log</strong></dt>
-<dd>
-<p>Este archivo de registro registra sucesos informativos detallados para la depuración. Puede utilizar este registro para resolver problemas de ejecución del paquete de compilación.</p>
+**buildpack.log**
 
-<p>Para generar datos en el archivo <span class="ph filepath">buildpack.log</span> debe habilitar el rastreo del paquete de compilación mediante el mandato siguiente:</p>
+Este archivo de registro registra sucesos informativos detallados para la depuración. Puede utilizar este registro para resolver problemas de ejecución del paquete de compilación.
 
-   <pre class="pre">cf set-env <var class="keyword varname">nombre_app</var> JBP_LOG_LEVEL DEBUG</pre>
+Para generar datos en el archivo *buildpack.log* debe habilitar el rastreo del paquete de compilación mediante el mandato siguiente: `cf set-env appname JBP_LOG_LEVEL DEBUG`
    
-<p>Para ver este registro, ejecute el siguiente mandato:</p>
+   
+Para ver este registro, ejecute el siguiente mandato: `cf files appname app/.buildpack-diagnostics/buildpack.log`
 
-    <pre class="pre">cf files <var class="keyword varname">nombre_app</var> app/.buildpack-diagnostics/buildpack.log</pre>
 
-</dd>
 
-<dt><strong>staging_task.log</strong></dt>
-<dd><p>Este archivo de registro registra mensajes después de los principales pasos de la tarea de transferencia. Puede utilizar este registro para resolver problemas de transferencia.</p>
+**staging_task.log**
 
-<p>Para ver este registro, ejecute el siguiente mandato:</p>
+Este archivo de registro registra mensajes después de los principales pasos de la tarea de transferencia. Puede utilizar este registro para resolver problemas de transferencia.
 
-    <pre class="pre">cf files <var class="keyword varname">nombre_app</var> logs/staging_task.log</pre>
-</dd>
-</dl>
+Para ver este registro, ejecute el siguiente mandato: `cf files appname logs/staging_task.log`
+
+
 
 **Nota:** Para obtener información sobre cómo habilitar el registro de aplicación, consulte [Depuración de errores de tiempo de ejecución](/docs/debug/index.html#debugging-runtime-errors).
+
+
 

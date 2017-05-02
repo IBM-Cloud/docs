@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -14,12 +14,14 @@ lastupdated: "2017-03-17"
 # マイクロサービス・ベーシック・スターターのエンドツーエンド・チュートリアル
 {: #tutorial}
 
-以下のエンドツーエンド・チュートリアルでは、インストールしておく必要があるツールを含め、マイクロサービス・ベーシック・スターターからプロジェクトを作成するための手順を段階的に説明し、その後に、プロジェクト・コードの実行手順を説明します。
+以下のエンドツーエンド・チュートリアルでは、マイクロサービス・ベーシック・スターターからプロジェクトを作成するための手順を段階的に説明します。これには、前提条件ツールのインストールと、プロジェクト・コードの実行手順が含まれます。
+
+Web ベースの [{{site.data.keyword.dev_console}}](#create-devex) を使用するか、またはコマンド駆動型 [{{site.data.keyword.dev_cli_notm}}](#create-cli) を使用して、プロジェクトを作成することができます。
 
 ## 開発者ツールのインストール
 {: #dev_tools}
 
-[前提条件の開発者ツール ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](get_code.html#prereq-dev-tools){: new_window} をインストール済みであることを確認します。
+[前提条件の開発者ツール![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](get_code.html#prereq-dev-tools){: new_window} を必ずインストールしてください。
 
 
 ## {{site.data.keyword.dev_console}} を使用したプロジェクトの作成
@@ -27,7 +29,7 @@ lastupdated: "2017-03-17"
 
 1. {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} でプロジェクトを作成します。
 
-	1. {{site.data.keyword.dev_console}} の**「開始」**ページで**「プロジェクトの作成」**をクリックします。
+	1. {{site.data.keyword.dev_console}} 内の [**「開始」** ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/developer/getting-started/) ページから**「プロジェクトの作成」**をクリックします。
 
 		代替方法として、**「プロジェクト」**ページから**「プロジェクトの作成」**をクリックすることもできます。
 
@@ -37,7 +39,7 @@ lastupdated: "2017-03-17"
 
 	4. プロジェクト名を入力します。このチュートリアルでは、`MicroserviceProject` を使用します。   
 
-	5. ホスト名を入力します。このチュートリアルでは、`devhost` を使用します。 
+	5. 固有のホスト名を入力してください。このチュートリアルでは、`devhost` を使用します。 
    
 	6. **「作成」**をクリックします。
 
@@ -59,13 +61,21 @@ lastupdated: "2017-03-17"
    
 	3. プロジェクト・コードの生成が完了したら、**「コードのダウンロード」**をクリックして、プロジェクトのアーカイブをダウンロードします。
 
-4. オプション: 新しい言語を生成するために[プロジェクトを更新します](project_overview_page.html#update_language)。
+4. ダウンロードされたプロジェクトの処理を開始します。
+
+	1. アーカイブされたファイルを解凍します。
+	
+	2. 新規プロジェクト・ディレクトリーにナビゲートします。
+	
+	3. {{site.data.keyword.dev_cli_notm}} を使用して処理を続行します。
+
+5. オプション: 新しい言語を生成するために[プロジェクトを更新します](project_overview_page.html#update_language)。
 
 
 ## {{site.data.keyword.dev_cli_notm}} を使用したプロジェクトの作成
 {: #create-cli}
 
-1. [{{site.data.keyword.dev_cli_short}}](dev_cli.html) がインストールされていることを確認します。
+1. [{{site.data.keyword.dev_cli_short}}](dev_cli.html) を必ずインストールしてください。
 
 2. 端末のプロンプトで、使用するローカル・ディレクトリーにナビゲートし、以下のコマンドを実行します。
   
@@ -85,7 +95,7 @@ lastupdated: "2017-03-17"
 
 5. `MicroserviceProjectCLI` が正常に保存されたら、`MicroserviceProjectCLI` フォルダーにナビゲートします。
 
-6. この時点で、独自コードを追加することや、プロジェクトをビルドまたは実行することができます。
+6. この時点で、独自コードを追加するか、プロジェクトをビルドするか、またはプロジェクトを実行することができます。
  
  
 ## {{site.data.keyword.dev_cli_notm}} を使用したプロジェクトの実行
@@ -105,7 +115,7 @@ lastupdated: "2017-03-17"
 	```
 	{: codeblock}	
 
-3. 以下のようにして、サーバーで curl を使用してアプリケーションにアクセスすることができます。
+3. 以下のようにして、サーバーで `curl` を使用してアプリケーションにアクセスすることができます。
 
 	```
 	curl http://localhost:8080	

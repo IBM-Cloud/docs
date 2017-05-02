@@ -20,7 +20,7 @@ Se elimini dei servizi dalla vista **Servizi**, scollegherai il servizio dal pro
 ## Panoramica dei servizi mobili e web {{site.data.keyword.Bluemix_notm}}
 {: #mobile_services_overview}
 
-La seguente tabella contiene descrizioni dei servizi mobili e web {{site.data.keyword.Bluemix_notm}}. Puoi utilizzare i servizi individuali dal catalogo {{site.data.keyword.Bluemix_notm}} o puoi integrarli nel tuo progetto. 
+La seguente tabella contiene descrizioni dei servizi mobili e web {{site.data.keyword.Bluemix_notm}}. Puoi utilizzare i servizi individuali dal catalogo {{site.data.keyword.Bluemix_notm}} o puoi integrarli nel tuo progetto.
 
 <table summary="Questa tabella illustra i servizi web e mobili {{site.data.keyword.Bluemix_notm}} e fornisce i link alla documentazione del servizio">
 <caption>Tabella 1. Servizi mobili e web {{site.data.keyword.Bluemix_notm}}</caption>

@@ -8,12 +8,12 @@ copyright:
 # Criando uma instância de serviço de push
 {: #create-push-instance}
 
-Para uma introdução ao {{site.data.keyword.IBM}} {{site.data.keyword.mobilepushshort}}, primeiro, deve-se criar um aplicativo {{site.data.keyword.Bluemix}}; por exemplo, um app Node.js. Em seguida, deve-se criar uma instância de um serviço Push, {{site.data.keyword.mobilepushfull}}, que precisa ser vinculado a este aplicativo Bluemix. É possível também fazer isso acessando a seção Modelo do catálogo do Bluemix e clicando no Iniciador de serviços MobileFirst.
+Para uma introdução ao {{site.data.keyword.IBM}} {{site.data.keyword.mobilepushshort}}, você primeiro cria um aplicativo {{site.data.keyword.Bluemix}}; por exemplo, um app Node.js. Em seguida, cria uma instância de um serviço de push, {{site.data.keyword.mobilepushfull}}, que precisa ser ligada a este aplicativo Bluemix. É possível também fazer isso acessando a seção Modelo do catálogo do Bluemix e clicando no Iniciador de serviços MobileFirst.
 
 **Nota**: Se você configurou organizações para gerenciar seu ambiente, selecione a organização na qual deseja criar o tempo de execução e os serviços para seu app móvel.
 
 
-1. Se você não tiver um aplicativo Bluemix, será necessário criar um; por exemplo, o app Node.js. Para criar um aplicativo Bluemix, acesse o painel do Bluemix e clique em **Criar app**.
+1. Se você não tiver um aplicativo Bluemix, precisará criar um; por exemplo, app Node.js. Para criar um aplicativo Bluemix, acesse o Painel do Bluemix e clique em **Criar App**.
 	
 	**Nota**: Se você tiver um aplicativo, acesse a etapa 7 para incluir um serviço.![Criar uma instância de serviço](images/create_service_instance1.jpg "Criar uma instância de serviço")
 

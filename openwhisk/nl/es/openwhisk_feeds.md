@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-21"
+lastupdated: "2017-04-04"
 
 ---
 
@@ -78,9 +78,9 @@ Se produce un protocolo de acción de canal de información similar para `wsk tr
 
 Es fácil configurar un canal de información mediante un gancho si el productor del suceso admite un recurso webhook/callback.
 
-Con este método *no es necesario* configurar ningún servicio persistente fuera de OpenWhisk.  Toda la gestión de canales de información se genera de forma natural a través de las *acciones de canal de información* de {{site.data.keyword.openwhisk_short}}, que negocian directamente con una API webhook de terceros.
+Con este método *no es necesario* configurar ningún servicio persistente fuera de {{site.data.keyword.openwhisk_short}}. Toda la gestión de canales de información se genera de forma natural a través de las *acciones de canal de información* de {{site.data.keyword.openwhisk_short}}, que negocian directamente con una API webhook de terceros.
 
-Al invocarse con el mandato `CREATE`, la acción del canal de información simplemente instala un webhook para otro servicio, solicitando al servicio remoto que PUBLIQUE notificaciones en el URL de `fireTrigger` pertinente en OpenWhisk.
+Al invocarse con el mandato `CREATE`, la acción del canal de información simplemente instala un webhook para otro servicio, solicitando al servicio remoto que PUBLIQUE notificaciones en el URL de `fireTrigger` pertinente en {{site.data.keyword.openwhisk_short}}. 
 
 El webhook debería dirigirse para enviar notificaciones a un URL como:
 
@@ -90,7 +90,7 @@ El formulario con la solicitud POST se interpretará como un documento JSON que 
 
 ## Implementación de canales de información con sondeo
 
-Se puede configurar una *acción* de {{site.data.keyword.openwhisk_short}} para sondear un origen de canal de información completamente dentro de OpenWhisk, sin necesidad de configurar conexiones persistentes o servicios externos.
+Se puede configurar una *acción* de {{site.data.keyword.openwhisk_short}} para sondear un origen de canal de información completamente dentro de {{site.data.keyword.openwhisk_short}}, sin necesidad de configurar conexiones persistentes o servicios externos.
 
 Para los canales de información que no disponen de webhook, pero no necesitan un volumen elevado ni tiempos de respuesta de latencia bajos, el sondeo es una opción atractiva.
 
@@ -106,7 +106,7 @@ Este procedimiento implementa un desencadenante basado en sondeo utilizando úni
 
 Las 2 opciones de arquitectura anteriores son fáciles y rápidas de implementar. Sin embargo, si desea un canal de información de alto rendimiento, no existe ningún sustituto para conexiones persistentes, sondeo largo o técnicas similares.
 
-Puesto que las acciones de {{site.data.keyword.openwhisk_short}} deben ser de ejecución corta, una acción no puede mantener una conexión persistente con un tercero. En lugar de eso, se debe configurar un servicio independiente (fuera de OpenWhisk) que se ejecute continuamente.   Este servicio se denomina *servicio de proveedor*.  Un servicio de proveedor puede mantener conexiones con orígenes de sucesos de terceros que soporten el sondeo largo u otras notificaciones basadas en conexiones.
+Puesto que las acciones de {{site.data.keyword.openwhisk_short}} deben ser de ejecución corta, una acción no puede mantener una conexión persistente con un tercero. En lugar de eso, se debe configurar un servicio independiente (fuera de {{site.data.keyword.openwhisk_short}}) que se ejecute continuamente.   Este servicio se denomina *servicio de proveedor*.  Un servicio de proveedor puede mantener conexiones con orígenes de sucesos de terceros que soporten el sondeo largo u otras notificaciones basadas en conexiones.
 
 El servicio de proveedor debe proporcionar una API REST que permita a la *acción de canal de información* de {{site.data.keyword.openwhisk_short}} controlar el canal de información.   El servicio de proveedor actúa como un proxy entre el proveedor de suceso y {{site.data.keyword.openwhisk_short}} (cuando recibe sucesos de un tercero, los envía a {{site.data.keyword.openwhisk_short}} activando un desencadenante).
 

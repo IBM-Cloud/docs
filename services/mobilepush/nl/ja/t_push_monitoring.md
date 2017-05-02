@@ -12,7 +12,7 @@ copyright:
 
 # プッシュ通知のモニター 
 {: #monitor-notifications}
-最終更新日: 2017 年 1 月 16 日
+最終更新日: 2017 年 4 月 12 日
 {: .last-updated}
 
 
@@ -27,7 +27,7 @@ IBM {{site.data.keyword.mobilepushshort}} サービスの機能が拡張され�
 
 ![登録デバイス・レポート](images/monitoring_devices.jpg)
 
-Android SDK を更新して通知情報をモニターする方法については、[Android デバイスでのプッシュ通知のモニター](c_android_enable.html#android_monitor)を参照してください。
+Android SDK を更新して通知情報をモニターする方法については、[モバイル・デバイス用の通知の使用可能化](c_enable_push.html)にある『Android デバイスでのプッシュ通知のモニター』トピックを参照してください。
 
 
  

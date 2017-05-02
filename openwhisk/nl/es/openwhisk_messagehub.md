@@ -31,8 +31,8 @@ Para crear un desencadenante que reaccione cuando se publican mensajes en una in
 |topic|Serie|El tema que desea que escuche el desencadenante|
 |kafka_admin_url|Serie de URL|El URL de la interfaz REST de administración de Message Hub|
 |isJSONData|Booleano (Opcional - default=false)|Si tiene el valor `true`, el proveedor intentará analizar el valor del mensaje como JSON antes de pasarlo como carga útil del desencadenante.|
-|isBinaryKey|Booleano (Opcional - default=false)|Si tiene el valor `true`, el proveedor codificará el valor de la clave como Base64 antes de pasarlo como carga útil del desencadenante. |
-|isBinaryValue|Booleano (Opcional - default=false)|Si tiene el valor `true`, el proveedor codificará el valor del mensaje como Base64 antes de pasarlo como carga útil del desencadenante. |
+|isBinaryKey|Booleano (Opcional - default=false)|Si tiene el valor `true`, el proveedor codificará el valor de la clave como Base64 antes de pasarlo como carga útil del desencadenante.|
+|isBinaryValue|Booleano (Opcional - default=false)|Si tiene el valor `true`, el proveedor codificará el valor del mensaje como Base64 antes de pasarlo como carga útil del desencadenante.|
 
 Aunque esta lista de parámetros puede parecer larga, se pueden establecer automáticamente mediante el mandato de CLI package refresh:
 
@@ -100,11 +100,11 @@ La carga útil del desencadenante contendrá un campo `messages`, que es una mat
 - key
 - value
 
-En términos de Kafka, estos campos deberían resultar evidentes. Sin embargo, `key` tiene una función opcional `isBinaryKey` que permite que `key` transmita datos binarios. Además, el campo `value` requiere una especial consideración. Dispone de los campos opcionales `isJSONData` e `isBinaryValue` para gestionar los mensajes binarios y JSON. Estos campos, `isJSONData` e `isBinaryValue`, no se pueden utilizar juntos. 
+En términos de Kafka, estos campos deberían resultar evidentes. Sin embargo, `key` tiene una función opcional `isBinaryKey` que permite que `key` transmita datos binarios. Además, el campo `value` requiere una especial consideración. Dispone de los campos opcionales `isJSONData` e `isBinaryValue` para gestionar los mensajes binarios y JSON. Estos campos, `isJSONData` e `isBinaryValue`, no se pueden utilizar juntos.
 
-Por ejemplo, si `isBinaryKey` se ha establecido en `true` al crear el desencadenante, `key` se codificará como una serie Base64 cuando se devuelva de su carga útil de un desencadenante activado. 
+Por ejemplo, si `isBinaryKey` se ha establecido en `true` al crear el desencadenante, `key` se codificará como una serie Base64 cuando se devuelva de su carga útil de un desencadenante activado.
 
-Por ejemplo, su se publica el valor de `key` `Some key` con `isBinaryKey` establecido en `true`, la carga útil del desencadenante será como la siguiente: 
+Por ejemplo, su se publica el valor de `key` `Some key` con `isBinaryKey` establecido en `true`, la carga útil del desencadenante será como la siguiente:
 
 ```json
 {
@@ -158,9 +158,9 @@ Sin embargo, si se publica el mismo contenido de mensaje con `isJSONData` establ
 }
 ```
 
-Al igual que sucede con `isJSONData`, si `isBinaryValue` se ha establecido en `true` durante la creación del desencadenante, el `value` resultante en la carga útil del desencadenante se codificará como una serie Base64. 
+Al igual que sucede con `isJSONData`, si `isBinaryValue` se ha establecido en `true` durante la creación del desencadenante, el `value` resultante en la carga útil del desencadenante se codificará como una serie Base64.
 
-Por ejemplo, su se publica el valor de `value` `Some data` con `isBinaryValue` establecido en `true`, la carga útil del desencadenante se parecerá a la siguiente: 
+Por ejemplo, su se publica el valor de `value` `Some data` con `isBinaryValue` establecido en `true`, la carga útil del desencadenante se parecerá a la siguiente:
 
 ```json
 {
@@ -176,7 +176,7 @@ Por ejemplo, su se publica el valor de `value` `Some data` con `isBinaryValue` e
 }
 ```
 
-Si se publica el mismo mensaje sin `isBinaryData` establecido en `true`, la carga útil del desencadenante se parecerá a la del siguiente ejemplo: 
+Si se publica el mismo mensaje sin `isBinaryData` establecido en `true`, la carga útil del desencadenante se parecerá a la del siguiente ejemplo:
 
 ```json
 {
@@ -232,7 +232,7 @@ Tenga en cuenta que, si el desencadenante activa acciones de codificación, el n
  ```
 
 ## Generación de mensajes en Message Hub
-Si desea utilizar una acción de OpenWhisk para generar un mensaje en Message Hub, puede utilizar la acción `/messaging/messageHubProduce`. Esta acción toma los siguientes parámetros: 
+Si desea utilizar una acción de OpenWhisk para generar un mensaje en Message Hub, puede utilizar la acción `/messaging/messageHubProduce`. Esta acción toma los siguientes parámetros:
 
 |Nombre|Tipo|Descripción|
 |---|---|---|

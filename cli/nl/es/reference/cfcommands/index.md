@@ -20,7 +20,7 @@ lastupdated: "2017-01-12"
 # Mandatos de Cloud Foundry (cf)
 {: #cf}
 
-La interfaz de línea de mandatos (CLI) de Cloud Foundry (cf) proporciona un conjunto de mandatos para gestionar las apps. En la siguiente información se indican los mandatos cf más comúnmente utilizados para gestionar aplicaciones e incluye sus nombres, opciones, uso, requisitos previos, descripciones y ejemplos. Para ver una lista de todos los mandatos cf y su información de ayuda asociada, utilice `cf help`. Utilice `cf nombre_mandato -h` para ver información de ayuda detallada sobre un determinado mandato.
+La interfaz de línea de mandatos (CLI) de Cloud Foundry (cf) proporciona un conjunto de mandatos para gestionar las apps. En la siguiente información se indican los mandatos cf más comúnmente utilizados para gestionar apps e incluye sus nombres, opciones, uso, requisitos previos, descripciones y ejemplos. Para ver una lista de todos los mandatos cf y su información de ayuda asociada, utilice `cf help`. Utilice `cf nombre_mandato -h` para ver información de ayuda detallada sobre un determinado mandato.
 {: shortdesc}
 
 **Nota**: Si la red contiene un servidor proxy HTTP entre el host que ejecuta los mandatos cf y el punto final de la API de Cloud Foundry, debe especificar el nombre de host o la dirección IP del servidor proxy mediante la variable de entorno `HTTP_PROXY`. Para obtener detalles, consulte [Utilización de la CLI cf con un servidor proxy HTTP ![icono de enlace externo](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}.
@@ -43,7 +43,7 @@ Utilice el índice de la siguiente tabla para hacer referencia a los mandatos de
  <td>[login](/docs/cli/reference/cfcommands/index.html#cf_login)</td>
  <td>[stacks](/docs/cli/reference/cfcommands/index.html#cf_stacks)</td>
  <td>[target](/docs/cli/reference/cfcommands/index.html#cf_target)</td>
- <td>[-v ](/docs/cli/reference/cfcommands/index.html#cf_v)</td>
+ <td>[-v](/docs/cli/reference/cfcommands/index.html#cf_v)</td>
  </tr>
    </tbody>
  </table>

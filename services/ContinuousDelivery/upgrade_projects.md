@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-26"
+lastupdated: "2017-4-27"
 
 ---
  
@@ -24,7 +24,7 @@ Toolchains are like projects, with a few important differences:
 
 - Projects can have only one repository (repo) and pipeline. Toolchains can have as many repos and pipelines as you need.
 - Toolchains can include tools that aren't available in projects, such as Slack, Sauce Labs, PagerDuty, and {{site.data.keyword.DRA_full}}.
-- Access to toolchains is managed through standard Bluemix organizations. Membership is maintained at the organization level, unlike projects, where membership was maintained at the project level.
+- Access to toolchains is managed through standard {{site.data.keyword.Bluemix_notm}} organizations. Membership is maintained at the organization level, unlike projects, where membership was maintained at the project level.
 
 You can learn about toolchains on [YouTube ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://youtu.be/2SIPE1e7NJ4){: new_window} or from [Getting started with {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery/index.html).
 [![External link to YouTube](images/CD_video.png)](https://youtu.be/2SIPE1e7NJ4){: new_window}    
@@ -32,13 +32,11 @@ You can learn about toolchains on [YouTube ![External link icon](../../icons/lau
 ## Prerequisites
 {: #upgrade_prereqs}    
 
-- To acess your upgraded project's toolchain, you need a Bluemix ID. Before you upgrade, you must verify that you have an active Bluemix ID. If you don't have one, [sign up](https://console.ng.bluemix.net/registration/).
-- Make sure that your DevOps Services project owner is correct. The toolchain that is created from your project will be part of that owner's Bluemix organization.
-
-**Important:** 
-- If you're planning to start the upgrade, make sure that you're a member of every org and space that the pipeline deploys to. Any project admin can start the upgrade. However, if the admin who starts the upgrade is not a member of every org and space that the pipeline deploys to, the pipeline cannot be created.
+- To access your upgraded project's toolchain, you need a {{site.data.keyword.Bluemix_notm}} ID. Before you upgrade, you must verify that you have an active {{site.data.keyword.Bluemix_notm}} ID. If you don't have one, [sign up](https://console.ng.bluemix.net/registration/).
+- Make sure that your {{site.data.keyword.jazzhub_short}} project owner is correct. The toolchain that is created from your project will be part of that owner's {{site.data.keyword.Bluemix_notm}} organization. 
+- If you're planning to start the upgrade, make sure that you're a member of every org and space that the pipeline deploys to. Any project admin can start the upgrade. However, if the admin who starts the upgrade is not a member of every org and space that the pipeline deploys to, the pipeline cannot be created. The person who starts the upgrade becomes the owner of the repo in the toolchain.
 - The Eclipse Orion {{site.data.keyword.webide}} in the toolchain is separate from the {{site.data.keyword.webide}} that is associated with your project. If you use the {{site.data.keyword.webide}} and you have uncommitted changes, commit them before you upgrade.
-- Your project will be upgraded to a toolchain that is in the US South region. If your project was configured to deploy apps to a different region, it will still deploy apps to that region after it is upgraded to a toolchain.
+- Projects at hub.jazz.net and toolchains are both hosted in the US South region. If your project was configured to deploy apps to a different region, it will still deploy apps to that region after it is upgraded to a toolchain.
 
 ## Upgrading from a project to a toolchain
 {: #project_to_toolchain}
@@ -64,7 +62,7 @@ To upgrade your project to a toolchain, follow these steps:
 
    ![Example of an upgrade page](images/project-upgrade-toolchain.png)
 
-   For an overview of the upgrade process, read the description on that page. In this case, because the project used a repo at GitHub.com, the toolchain will be connected to the same GitHub repo. If your project used a Git repo that was hosted on JazzHub, the toolchain will clone its contents to a new repo in Git Repos and Issue Tracking, which is part of {{site.data.keyword.contdelivery_short}}. If your project used a private Git repo that was hosted on JazzHub, the new repo in Git Repos and Issue Tracking will be private.
+   For an overview of the upgrade process, read the description on that page. In this case, because the project used a public repo on GitHub.com, the toolchain will be connected to the same GitHub repo. If your project used a Git repo that was hosted on JazzHub, the toolchain will clone its contents to a new repo in Git Repos and Issue Tracking, which is part of {{site.data.keyword.contdelivery_short}}. If your project used a private Git repo that was hosted on JazzHub, the new repo in Git Repos and Issue Tracking will be private.
    
    The toolchain will include a new pipeline that contains the same stages and jobs as the project's pipeline. In addition, the toolchain will contain a pointer to the Eclipse Orion {{site.data.keyword.webide}} that runs in {{site.data.keyword.contdelivery_short}}.
 
@@ -127,7 +125,7 @@ If you need to revert the upgrade, delete your toolchain. Then, when you return 
    ![Message in banner indicating the project is ready to upgrade](images/banner-ready-to-upgrade.png)
 
 2. Give your team members access to the toolchain.    
-    - Each team member must have a valid Bluemix account. Team members who don't have accounts must [sign up ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/registration){:new_window}.
+    - Each team member must have a valid {{site.data.keyword.Bluemix_notm}} account. Team members who don't have accounts must [sign up ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/registration){:new_window}.
     - Grant organization (org) members access to the toolchain from the toolchain Manage page. For more information about access control for toolchains, see [Managing access ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window}.
     - If a user is not a member of the org that the toolchain belongs to, add them to the org from the Manage Organizations page.
       For more information about managing organizations, see [Managing organizations and spaces ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/admin/orgs_spaces.html#orgsspacesusers){:new_window}.

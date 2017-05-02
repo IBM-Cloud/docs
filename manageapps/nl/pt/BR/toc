@@ -1,0 +1,15 @@
+[Managing Apps](/docs/manageapps/mngapps.html)
+    mngapps.md
+    [Adding a service to your app](../services/reqnsi.html)
+        [Requesting a new service instance](../services/reqnsi.html#req_instance)
+        [Configuring your application to interact with a service](../services/reqnsi.html#config)
+        [Enabling external apps to use Bluemix services](../services/reqnsi.html#accser_external)
+        [Creating a user-provided service instance](../services/reqnsi.html#user_provide_services)
+        [Using services in another region](../services/reqnsi.html#cross_region_service)
+        [Using services in another service](../services/reqnsi.html#s2s_binding)
+    depapps.md
+    [Creating a button](../develop/deploy_button.html)
+        [Sharing Deploy to Bluemix project pipelines](../develop/sharetextpipelines.html)
+        [Embedding a Deploy to Bluemix iFrame flow](../develop/deploy_button_embed.html)
+    updapps.md
+    secapps.md

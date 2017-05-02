@@ -54,7 +54,7 @@
 		"img": "homepage/images/WhatIsBluemix-icon.svg",
 		"href": "overview/whatisbluemix.html"
     }, {
-		"title": "Setting Up Your Account",
+		"title": "Managing Your Account",
 		"description": "Update your profile, set account and spending notifications, invite team members, or manage orgs and spaces.",
 		"img": "homepage/images/admin.svg",
 		"href": "admin/adminpublic.html"
@@ -91,7 +91,7 @@
 		"img": "homepage/images/hybrid.svg",
 		"href": "hybrid/index.html"
 	}, {
-		"title": "Pricing",
+		"title": "Managing Billing and Usage",
 		"description": "Estimate costs with the calculator and see actual costs with the usage details view.",
 		"img": "homepage/images/pricing.svg",
 		"href": "pricing/index.html"

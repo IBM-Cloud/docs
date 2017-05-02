@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -14,20 +14,23 @@ lastupdated: "2017-03-17"
 # Web 基本入门模板端到端教程
 {: #tutorial}
 
-以下端到端教程将引导您完成通过“Web 基本入门模板”创建项目的步骤（包括必须安装的工具）以及接下来运行项目代码的步骤。
+以下端到端教程将引导您完成通过“Web 基本入门模板”创建项目的步骤。这包括安装必备工具以及运行项目代码的步骤。
+
+您可以使用基于 Web 的 [{{site.data.keyword.dev_console}}](#create-devex) 或通过命令驱动的 [{{site.data.keyword.dev_cli_notm}}](#create-cli) 来创建项目。
+
 
 ## 安装开发者工具
 {: #dev_tools}
 
-请确保您已安装[必备开发者工具 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](get_code.html#prereq-dev-tools){: new_window}。
+确保安装[必备开发者工具 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](get_code.html#prereq-dev-tools){: new_window}。
 
 
 ## 使用 {{site.data.keyword.dev_console}} 创建项目
 {: #create-devex}
 
-1. 在 {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} 中创建项目。
+1. 在 {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} 中创建项目：
 
-	1. 从 {{site.data.keyword.dev_console}} 中的**入门**页面，单击**创建项目**。
+	1. 在 {{site.data.keyword.dev_console}} 中的[**入门** ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://console.ng.bluemix.net/developer/getting-started/) 页面中，单击**创建项目**。
 
 		或者，您可以从**项目**页面单击**创建项目**。
 
@@ -37,13 +40,13 @@ lastupdated: "2017-03-17"
 
 	4. 输入项目名称。对于本教程，请使用 `WebBasicProject`。   
 
-	5. 输入主机名。对于本教程，请使用 `devhost` 
+	5. 输入唯一主机名。对于本教程，请使用 `devhost` 
 
 	6. 选择语言平台。对于本教程，请使用 `Swift`。
    
 	7. 单击**创建**。
 
-2. 可选：添加数据功能。
+2. 可选：添加数据功能：
 
 	1. 在**项目概述**页面上，针对**数据**单击**查看**。
 
@@ -51,8 +54,7 @@ lastupdated: "2017-03-17"
 
    2. 输入服务名称并单击**创建**。
 
-
-3. 生成项目代码。
+3. 生成项目代码：
 
 	1. 单击**项目概述**页面上的**获取代码**，以选择语言。
    
@@ -62,13 +64,21 @@ lastupdated: "2017-03-17"
    
 	3. 项目代码完成生成后，单击**下载代码**以下载项目归档。
 
-4. 可选：[更新项目](project_overview_page.html#update_language)以生成新语言。
+4. 开始使用下载的项目：
+
+	1. 解压缩归档文件。
+	
+	2. 浏览到新项目目录。
+	
+	3. 使用 {{site.data.keyword.dev_cli_notm}} 以继续。
+
+5. 可选：[更新项目](project_overview_page.html#update_language)以生成新语言。
 
 
 ## 使用 {{site.data.keyword.dev_cli_notm}} 创建项目
 {: #create-cli}
 
-1. 确保您已安装 [{{site.data.keyword.dev_cli_short}}](dev_cli.html)。
+1. 确保安装 [{{site.data.keyword.dev_cli_short}}](dev_cli.html)。
 
 2. 在“终端”提示符处，浏览到所选的本地目录并运行以下命令。
   
@@ -90,16 +100,9 @@ lastupdated: "2017-03-17"
 
 5. 成功保存 `WebBasicProjectCLI` 项目后，浏览到 `WebBasicProjectCLI` 文件夹。
 
-6. 添加您自己的代码，构建项目或运行项目。
+6. 添加您自己的代码，然后运行项目。
  
-	1. 使用以下命令构建项目：
-   
-		```
- 		bx dev build
- 		```     
-		{: codeblock}
-
-	2. 使用以下命令运行项目：
+	1. 使用以下命令运行项目：
  
 		```
 		bx dev run
@@ -185,7 +188,7 @@ lastupdated: "2017-03-17"
 
 2. 将活动目标更改为可执行对象：
 
-	然后，在 Xcode 中打开项目，确保活动目标可执行。您可以在单击下拉菜单时按住选项键，以选择所需的活动可执行对象。
+	然后，在 Xcode 中打开项目，确保活动目标可执行。您可以在单击下拉菜单时按住 option 键，以选择所需的活动可执行对象。
 
 3. 按**运行**。
 

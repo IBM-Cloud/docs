@@ -114,7 +114,7 @@ bx as policy-enable|policy-disable <APP_NAME>
 
 ## Visualización del historial de escalado automático de una app
 
-Puede mostrar el historial de la actividad de escalado automático de una app específica. Ejecute el mandato siguiente:
+Puede mostrar el historial de la actividad de escalado automático de una app específica. Se muestra una tabla de historial de registros de escalado automático en la interfaz de línea de mandatos.
 
 ```
 bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]

@@ -84,7 +84,6 @@ cd your_app_name
 	b. 브릿지 헤더를 추가하십시오. **빌드 설정 > Swift 컴파일러 - 코드 생성 > Objective-C 브릿지 헤더**로 이동하여 다음 경로를 추가하십시오. *your-project-name***/Plugins/ibm-mfp-core/Bridging-Header.h**
 
 	c. 프레임워크 매개변수를 추가하십시오. **빌드 설정 > 링크 > Runpath 검색 경로**로 이동하여 다음 매개변수를 추가하십시오.
-	
 	```
 	@executable_path/Frameworks
 	```
@@ -105,7 +104,7 @@ cd your_app_name
 # Cordova 플러그인 초기화
 {: #cordova_initialize}
 
-푸시 알림 서비스 Cordova 플러그인을 사용할 수 있으려면 애플리케이션 라우트와 애플리케이션 GUID를 전달하여 플러그인을 초기화해야 합니다. 플러그인을 초기화한 후 Bluemix 대시보드에서 작성한 서버 앱에 연결할 수 있습니다. Cordova 플러그인은 Cordova 앱이 Bluemix 서비스와 통신할 수 있도록 해주는 Android 및 iOS 클라이언트 SDK용 랩퍼입니다. 
+Push Notification 서비스 Cordova 플러그인을 사용할 수 있으려면 애플리케이션 라우트와 애플리케이션 GUID를 전달하여 플러그인을 초기화해야 합니다. 플러그인을 초기화한 후 Bluemix 대시보드에서 작성한 서버 앱에 연결할 수 있습니다. Cordova 플러그인은 Cordova 앱이 Bluemix 서비스와 통신할 수 있도록 해주는 Android 및 iOS 클라이언트 SDK용 랩퍼입니다. 
 
 1. 다음 코드 스니펫을 복사하여 기본 JavaScript 파일(일반적으로 **www/js** 디렉토리 아래에 있음)에 붙여넣어 BMSClient를 초기화하십시오. 
 
@@ -117,17 +116,17 @@ cd your_app_name
 	**참고**: Cordova CLI(예: Cordova create app-name 명령)를 사용하여 Cordova 앱을 작성한 경우 이 Javascript 코드를 **index.js** 파일에서 `onDeviceReady: function()` 함수의 `app.receivedEvent` 함수 뒤에 넣어서 BMS 클라이언트를 초기화하십시오. 
 
 ```
-  onDeviceReady: function() {
-	 app.receivedEvent('deviceready');
-	    BMSClient.initialize("https://myapp.mybluemix.net","abcd1234-abcd-1234-abcd-abcd1234abcd");
-	    },
-	```
+onDeviceReady: function() {
+    app.receivedEvent('deviceready');
+    BMSClient.initialize("https://myapp.mybluemix.net","abcd1234-abcd-1234-abcd-abcd1234abcd");
+    },
+```
 
 # 디바이스 등록
 
 {: #cordova_register}
 
-디바이스를 푸시 알림 서비스에 등록하려면 등록 메소드를 호출하십시오.
+디바이스를 Push Notification 서비스에 등록하려면 등록 메소드를 호출하십시오.
 
 디바이스를 등록하려면 다음 코드 스니펫을 복사하여 Cordova 애플리케이션에 붙여넣으십시오. 
 
@@ -152,8 +151,8 @@ Android에서는 이 설정 매개변수를 사용하지 않습니다. Android �
 
 ```
 	var settings = {
-ios: {
-alert: true,
+	   ios: {
+	       alert: true,
 	       badge: true,
 	       sound: true
 	   }
@@ -176,7 +175,7 @@ JSON.parse를 사용하여 Javascript에서 성공 응답 매개변수의 컨텐
 
 사용 가능한 키는 다음과 같습니다. `token`, `userId`, `deviceId`.
 
-다음 JavaScript 코드 스니펫은 Bluemix Mobile Services 클라이언트 SDK를 초기화하고, 푸시 알림 서비스를 사용하여 디바이스를 등록하고, 푸시 알림을 청취하는 방법을 보여줍니다. 이 코드를 Javascript 파일에 넣으십시오. 
+다음 JavaScript 코드 스니펫은 Bluemix Mobile Services 클라이언트 SDK를 초기화하고, Push Notification 서비스를 사용하여 디바이스를 등록하고, Push Notification을 청취하는 방법을 보여줍니다. 이 코드를 Javascript 파일에 넣으십시오. 
 
 
 
@@ -197,23 +196,25 @@ CDVMFPPush.sharedInstance().didFailToRegisterForRemoteNotifications(error)
 **onDeviceReady: function()**에서 다음을 수행하십시오. 
 
 ```
-  onDeviceReady: function() {
-	 app.receivedEvent('deviceready');
+onDeviceReady: function() {
+     app.receivedEvent('deviceready');
      BMSClient.initialize("https://http://myroute_mybluemix.net","my_appGuid");
      var success = function(message) { console.log("Success: " + message); };
      var failure = function(message) { console.log("Error: " + message); };
      var settings = {
          ios: {
-alert: true,
-	       badge: true,
-	       sound: true
-	   }
-	     };
+             alert: true,
+             badge: true,
+             sound: true
+         }
+     };
      MFPPush.registerDevice(settings, success, failure);
      var notification = function(notif){
          alert (notif.message);
      };
-     MFPPush.registerNotificationsCallback(notification);}
+     MFPPush.registerNotificationsCallback(notification);
+
+ }
 ```
 
 ## Objective-C
@@ -289,7 +290,7 @@ MFPPush.registerNotificationsCallback(notification);
 
 * 메시지 - 푸시 알림 메시지
 * 페이로드 - 알림 페이로드를 포함한 JSON 오브젝트
-action-loc-key - 문자열은 "보기" 대신 오른쪽 단추의 제목에 사용할 현재 로컬라이제이션의 현지화된 문자열을 가져오기 위한 키로 사용됩니다. 
+action-loc-key - 문자열은 "보기" 대신 현재 번역에서 자국어로 지원된 문자열을 가져와 오른쪽 단추 제목에 사용하는 키로 사용됩니다. 
 * 배지 - 앱 아이콘의 배지로 표시할 숫자입니다. 이 특성을 비워두면 배지가 변경되지 않습니다. 배지를 제거하려면 이 특성의 값을 0으로 설정하십시오. 
 * 사운드 - 앱 번들 또는 앱 데이터 컨테이너의 라이브러리/사운드 폴더에 있는 사운드 파일의 이름입니다. 
 
@@ -369,6 +370,6 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 
 정상적으로 기본 알림을 설정한 후 태그 기반 알림 및 고급 옵션을 구성할 수 있습니다. 
 
-이러한 푸시 알림 서비스 기능을 앱에 추가하십시오.
+다음의 Push Notifications 서비스 기능을 사용자의 앱에 추가하십시오.
 태그 기반 알림을 사용하려면 [태그 기반 알림](c_tag_basednotifications.html)을 참조하십시오.
 고급 알림 옵션을 사용하려면 [고급 푸시 알림](t_advance_notifications.html)을 참조하십시오. 

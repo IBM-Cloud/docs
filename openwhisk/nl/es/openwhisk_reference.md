@@ -250,10 +250,10 @@ Es posible que una acción sea síncrona en varias entradas y asíncrona en otra
 
 Observe que, independientemente de si la activación es síncrona o asíncrona, la invocación de la acción puede ser o no de bloqueo (blocking o non-blocking).
 
-### Objeto whisk global de JavaScript en desuso
+### Objeto whisk global de JavaScript eliminado
 
-El objeto `whisk` global ha quedado en desuso; migre sus acciones nodejs para que utilicen métodos alternativos.
-Para las funciones `whisk.invoke()` y `whisk.trigger()`, puede utilizar [openwhisk](https://www.npmjs.com/package/openwhisk) de la biblioteca del cliente.
+El objeto `whisk` se ha eliminado; migre sus acciones nodejs para que utilicen métodos alternativos.
+Para las funciones `whisk.invoke()` y `whisk.trigger()`, utilice [openwhisk](https://www.npmjs.com/package/openwhisk) instalado de la biblioteca del cliente.
 Para `whisk.getAuthKey()`, puede obtener el valor de la clave de API de la variable de entorno `__OW_API_KEY`.
 Para `whisk.error()`, puede devolver un objeto Promise rechazado (es decir, Promise.reject).
 
@@ -287,7 +287,7 @@ Los paquetes siguientes están disponibles para su uso en el entorno de Node.js 
 - node-uuid v1.4.7
 - nodemailer v2.6.4
 - oauth2-server v2.4.1
-- openwhisk v3.0.0
+- openwhisk v3.3.2
 - pkgcloud v1.4.0
 - process v0.11.9
 - pug v2.0.0-beta6
@@ -315,87 +315,104 @@ Los paquetes siguientes están disponibles para su uso en el entorno de Node.js 
 - xmlhttprequest v1.8.0
 - yauzl v2.7.0
 
-El entorno Node.js versión 0.12.17 se utilizará para una acción si se especifica de forma explícita el distintivo `--kind` con un valor de 'nodejs' al crear/actualizar la acción.
-Los paquetes siguientes están disponibles para su uso en el entorno de Node.js 0.12.17:
 
-**Nota**: Node.js versión 0.12.x está en desuso. Migre todas las acciones de Node.js para que utilicen Node.js versión 6.x.
+## Entornos de tiempo de ejecución Python
+{: #openwhisk_ref_python_environments}
 
-- apn v1.7.4
-- async v1.5.2
-- btoa v1.1.2
-- cheerio v0.20.0
-- cloudant v1.4.1
-- commander v2.7.0
-- consul v0.18.1
-- cookie-parser v1.3.4
-- cradle v0.6.7
-- errorhandler v1.3.5
-- gm v1.20.0
-- jade v1.9.2
-- log4js v0.6.38
-- merge v1.2.0
-- moment v2.8.1
-- mustache v2.1.3
-- nano v5.10.0
-- node-uuid v1.4.2
-- oauth2-server v2.4.0
-- openwhisk v3.0.0
-- process v0.11.0
-- request v2.79.0
-- rimraf v2.5.1
-- semver v4.3.6
-- serve-favicon v2.2.0
-- socket.io v1.3.5
-- socket.io-client v1.3.5
-- superagent v1.3.0
-- swagger-tools v0.8.7
-- tmp v0.0.28
-- watson-developer-cloud v1.4.1
-- when v3.7.3
-- ws v1.1.0
-- xml2js v0.4.15
-- xmlhttprequest v1.7.0
-- yauzl v2.3.1
+OpenWhisk da soporte a la ejecución de acciones de Python utilizando dos versiones diferentes de tiempo de ejecución. 
 
-## Acciones Python
+### Acciones de Python 3
 
-Las acciones Python se ejecutan de forma predeterminada utilizando Python 2.7.12.
-Además de la biblioteca estándar Python, las acciones Python también pueden utilizar los siguientes paquetes.
+Las acciones de Python 3 se ejecutan utilizando Python 3.6.1. Para utilizar este tiempo de ejecución, especifique el parámetro de la CLI de `wsk` `--kind python:3` cuando cree o actualice una acción.
+Las acciones de Python pueden utilizar los paquetes siguientes, además de las bibliotecas estándares de Python 3.6. 
 
-- attrs v16.1.0
+- aiohttp v1.3.3
+- appdirs v1.4.3
+- asn1crypto v0.21.1
+- async-timeout v1.2.0
+- attrs v16.3.0
 - beautifulsoup4 v4.5.1
-- cffi v1.7.0
-- click v6.6
-- cryptography v1.5
-- cssselect v0.9.2
-- enum34 v1.1.6
-- flask v0.11.1
-- gevent v1.1.2
-- greenlet v0.4.10
+- cffi v1.9.1
+- chardet v2.3.0
+- click v6.7
+- cryptography v1.8.1
+- cssselect v1.0.1
+- Flask v0.12
+- gevent v1.2.1
+- greenlet v0.4.12
 - httplib2 v0.9.2
-- idna v2.1
-- ipaddress v1.0.16
+- idna v2.5
 - itsdangerous v0.24
-- jinja2 v2.8
+- Jinja2 v2.9.5
+- kafka-python v1.3.1
 - lxml v3.6.4
-- markupsafe v0.23
-- parsel v1.0.3
-- pyasn1 v0.1.9
+- MarkupSafe v1.0
+- multidict v2.1.4
+- packaging v16.8
+- parsel v1.1.0
+- pyasn1 v0.2.3
 - pyasn1-modules v0.0.8
-- pycparser v2.14
-- pydispatcher v2.0.5
-- pyopenssl v16.1.0
+- pycparser v2.17
+- PyDispatcher v2.0.5
+- pyOpenSSL v16.2.0
+- pyparsing v2.2.0
 - python-dateutil v2.5.3
 - queuelib v1.4.2
 - requests v2.11.1
-- scrapy v1.1.2
+- Scrapy v1.1.2
 - service-identity v16.0.0
 - simplejson v3.8.2
 - six v1.10.0
-- twisted v16.4.0
-- w3lib v1.15.0
-- werkzeug v0.11.10
-- zope.interface v4.3.1
+- Twisted v16.4.0
+- w3lib v1.17.0
+- Werkzeug v0.12
+- yarl v0.9.8
+- zope.interface v4.3.3
+
+### Acciones de Python 2
+
+Las acciones de Python 2 se ejecutan utilizando Python 2.7.12. Este es el tiempo de ejecución predeterminado para las acciones de Python, a menos que especifique el distintivo `--kind` cuando cree o actualice una acción. Para seleccionar este tiempo de ejecución de forma explícita, utilice `--kind python:2`. Las acciones de Python 2 pueden utilizar los paquetes siguientes, además de las bibliotecas estándares de Python 2.7. 
+
+- appdirs v1.4.3
+- asn1crypto v0.21.1
+- attrs v16.3.0
+- beautifulsoup4 v4.5.1
+- cffi v1.9.1
+- click v6.7
+- cryptography v1.8.1
+- cssselect v1.0.1
+- enum34 v1.1.6
+- Flask v0.11.1
+- gevent v1.1.2
+- greenlet v0.4.12
+- httplib2 v0.9.2
+- idna v2.5
+- ipaddress v1.0.18
+- itsdangerous v0.24
+- Jinja2 v2.9.5
+- kafka-python v1.3.1
+- lxml v3.6.4
+- MarkupSafe v1.0
+- packaging v16.8
+- parsel v1.1.0
+- pyasn1 v0.2.3
+- pyasn1-modules v0.0.8
+- pycparser v2.17
+- PyDispatcher v2.0.5
+- pyOpenSSL v16.2.0
+- pyparsing v2.2.0
+- python-dateutil v2.5.3
+- queuelib v1.4.2
+- requests v2.11.1
+- Scrapy v1.1.2
+- service-identity v16.0.0
+- simplejson v3.8.2
+- six v1.10.0
+- Twisted v16.4.0
+- virtualenv v15.1.0
+- w3lib v1.17.0
+- Werkzeug v0.12
+- zope.interface v4.3.3
 
 ## Acciones de Docker
 {: #openwhisk_ref_docker}
@@ -477,7 +494,7 @@ La API de OpenWhisk admite llamadas solicitud-respuesta de clientes web. OpenWhi
 
 ### Acciones
 {{site.data.keyword.openwhisk_short}} tiene algunos límites del sistema, incluyendo la cantidad de memoria que puede utilizar una acción y
-cuántas invocaciones de acción se permiten por minuto. 
+cuántas invocaciones de acción se permiten por minuto.
 
 En la tabla siguiente se proporciona una lista con los límites predeterminados de las acciones.
 
@@ -486,8 +503,8 @@ En la tabla siguiente se proporciona una lista con los límites predeterminados 
 | timeout | un contenedor no tiene permiso para ejecutarse más de N milisegundos | por acción |  milisegundos | 60000 |
 | memory | un contenedor no tiene permiso para asignar más de n MB de memoria | por acción | MB | 256 |
 | logs | un contenedor no tiene permiso para escribir más de N MB en stdout | por acción | MB | 10 |
-| concurrent | no se permiten más de N activaciones por espacio de nombres ya sea ejecutándose o en cola para la ejecución | por espacio de nombres | número | 1000 |
-| minuteRate | un usuario no puede invocar más de este número de acciones por minuto | por usuario | número | 5000 |
+| concurrent | no se pueden enviar más de N activaciones por espacio de nombres ya sea ejecutándose o en cola para la ejecución | por espacio de nombres | número | 1000 |
+| minuteRate | no se pueden enviar más de N activaciones por espacio de nombres por minuto | por usuario | número | 5000 |
 | codeSize | tamaño máximo de actioncode | no configurable, límite por acción | MB | 48 |
 | parameters | tamaño máximo de los parámetros que se pueden adjuntar | no configurable, límite por acción/paquete/desencadenante | MB | 1 |
 
@@ -556,10 +573,9 @@ Los desencadenantes están sujetos a una tasa de activación por minuto tal como
 
 | límite | descripción | configurable | unidad | predeterminado |
 | ----- | ----------- | ------------ | -----| ------- |
-| minuteRate | un usuario no puede activar más de este número de desencadenantes por minuto | por usuario | número | 5000 |
+| minuteRate | no se pueden activar más de N activaciones por espacio de nombres por minuto | por usuario | número | 5000 |
 
 ### Desencadenantes por minuto (Fijo: 5000)
-{: #openwhisk_syslimits_triggerratelimit}
 * El límite de tasa N se establece en 5000 y limita el número de desencadenantes que se pueden activar en intervalos de un minuto.
 * Un usuario no puede cambiar este límite cuando crea el desencadenante.
 * Una llamada de la CLI o API que sobrepase este límite recibe un código de error correspondiente al código de estado de HTTP `429: DEMASIADAS SOLICITUDES`.

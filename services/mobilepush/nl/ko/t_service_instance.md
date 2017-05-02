@@ -32,15 +32,15 @@ copyright:
 1. **개요** 링크를 클릭하십시오. ![서비스 추가](images/create_service_add4.jpg)
 1. **서비스 추가**를 클릭하십시오. CATALOG 화면이 표시됩니다. 
 
-1. **IBM 푸시 알림:**을 선택하고 **영역** 풀다운 메뉴에서 조직을 선택하십시오. 
+1. **IBM Push Notifications:**를 선택하고 **영역** 풀다운 메뉴에서 조직을 선택하십시오. 
 
 	![조직 영역 풀다운 메뉴](images/create_service_org.jpg)
-1. **서비스** 이름에 푸시 알림 서비스 이름을 입력하십시오. 
+1. **서비스** 이름에 Push Notification 서비스 이름을 입력하십시오. 
 
 1. **선택된 계획**에서 계획을 선택하고 **작성** 단추를 클릭하십시오. 
 
 1. **예**를 클릭하여 애플리케이션을 다시 스테이징하십시오. 
 
-	![IBM 푸시 알림 서비스](images/create_service_notification5.jpg)
+	![IBM Push Notification 서비스](images/create_service_notification5.jpg)
 
-1. **푸시 알림**을 클릭하여 푸시 알림 대시보드를 표시하십시오. 
+1. **Push Notifications**를 클릭하여 Push Notification 대시보드를 표시하십시오. 

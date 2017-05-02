@@ -12,11 +12,11 @@ years: 2015, 2017
 
 # 啟用複合式多媒體通知
 {: #interactive-notifications}
-前次更新：2017 年 1 月 11 日
+前次更新：2017 年 3 月 9 日
 {: .last-updated}
 
 
-您可以在 iOS 10 及更新版本啟用「複合式多媒體」{{site.data.keyword.mobilepushshort}}。可以使用「音訊」、「視訊」、GIF 及影像傳送「推送」通知。 
+您可以在 iOS 10 及更新版本啟用「複合式多媒體 {{site.data.keyword.mobilepushshort}}」。可以使用「音訊」、「視訊」、GIF 及影像傳送「推送」通知。 
 
 如果要設定應用程式，以在 iOS 10 上接收複合式推送，請完成下列步驟：  
 

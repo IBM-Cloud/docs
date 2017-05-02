@@ -80,12 +80,12 @@ El SDK push de servicios móviles de Bluemix® se puede añadir mediante Gradle.
 
 
 
-# Inicialización del SDK push para aplicaciones Android
+# Inicialización del SDK push para apps Android
 {: #android_initialize}
 
 Un lugar común para colocar el código de inicialización se encuentra en el método onCreate de la actividad principal en su aplicación Android.
 
-Pulse el enlace **Opciones móviles** en el Panel de control de aplicaciones de Bluemix para obtener la ruta de la aplicación y el applicationGUID. Utilice estos valores para su ruta y GUID de la app. Modifique el fragmento de código para que utilice los parámetros appRoute y appGUID de la aplicación Bluemix.
+Pulse el enlace **Opciones móviles** en el Panel de control de aplicaciones de Bluemix para obtener la ruta de la aplicación y el applicationGUID. Utilice estos valores para su ruta y GUID de la app. Modifique el fragmento de código para que utilice los parámetros appRoute y appGUID de la app Bluemix.
 
 
 ##Inicializar el SDK principal
@@ -214,5 +214,6 @@ en el primer plano en un dispositivo Android e iOS.
 
 Una vez que haya configurado correctamente las notificaciones básicas, puede configurar las notificaciones basadas en código y las opciones avanzadas.
 
-Añada estas características de servicio de notificaciones push a la app. Para utilizar notificaciones basadas en código, consulte [Notificaciones basadas en código](c_tag_basednotifications.html).
+Añada estas características del servicio de notificaciones push a su app.
+Para utilizar notificaciones basadas en código, consulte [Notificaciones basadas en código](c_tag_basednotifications.html).
 Para utilizar opciones de notificaciones avanzadas, consulte [Notificaciones push avanzadas](t_advance_notifications.html).

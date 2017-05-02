@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-16"
+lastupdated: "2017-03-06"
 
 ---
 
@@ -24,7 +24,7 @@ Puede utilizar las funciones de supervisión de {{site.data.keyword.Bluemix_notm
 
 También puede configurar y supervisar más medidas de rendimiento. Puede visualizar y analizar estas medidas fuera de {{site.data.keyword.Bluemix_notm}}. Por ejemplo, puede utilizar Grafana para supervisar más medidas al ejecutar una app en {{site.data.keyword.containershort}}. Puede personalizar paneles de control por instancia de contenedor o por espacio donde visualiza a y analiza los datos de rendimiento.
 
-![Vista de supervisión de Grafana de un contenedor que se ejecuta en {{site.data.keyword.Bluemix_notm}}](images/monitoring_default_container_grafana_view.jpg)
+![Vista de supervisión de Grafana de un contenedor que se ejecuta en {{site.data.keyword.Bluemix_notm}}](images/monitoring_default_container_grafana_view.jpg "Vista de supervisión de Grafana de un contenedor que se ejecuta en Bluemix")
 
 Puede utilizar las funciones de supervisión de la plataforma {{site.data.keyword.Bluemix_notm}} para:
 
@@ -33,5 +33,4 @@ Puede utilizar las funciones de supervisión de la plataforma {{site.data.keywor
 
 Para obtener más información sobre la supervisión de apps que se ejecutan en Cloud Foundry, consulte [Supervisión de apps que se ejecutan en Cloud Foundry](monitoring_cf_apps.html#monitoring_bluemix_apps).
 
-Para obtener más información sobre la supervisión en {{site.data.keyword.containershort}}, consulte [Supervisión en {{site.data.keyword.containershort}}](/docs/containers/monitoringandlogging/container_ml_monitor.html#container_ml_monitor).   
-
+Para obtener más información sobre la supervisión en {{site.data.keyword.containershort}}, consulte [Supervisión en {{site.data.keyword.containershort}}](containers/monitoring_containers_ov.html#monitoring_bmx_containers_ov).

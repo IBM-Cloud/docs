@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-10"
 
 ---
 
@@ -67,13 +67,13 @@ Failed to <command> project.
 
 
 #### Causa
-{: #hostname-cause}
+{: #general-cause}
    
 Esse erro deve-se a um token de login expirado.
 
 
 #### Resolução
-{: #hostname-resolution}
+{: #general-resolution}
 
 Efetue login novamente.
 
@@ -98,13 +98,13 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 #### Causa
 {: #os-cause}
    
-Esse erro deve-se ao serviço {{site.data.keyword.objectstorageshort}}, que permite apenas uma instância do plano grátis do {{site.data.keyword.objectstorageshort}}.
+Esse erro ocorre porque o serviço {{site.data.keyword.objectstorageshort}} fornece somente uma instância do plano Free {{site.data.keyword.objectstorageshort}}.
 
 
 #### Resolução
 {: #os-resolution}
 
-Você será solicitado a escolher um plano diferente para evitar esse erro.
+É solicitado que você escolha um plano diferente para evitar esse erro.
 
 
 ### Falha ao obter o código durante a criação do projeto
@@ -133,12 +133,12 @@ Esse erro deve-se a um tempo limite interno.
 
 * Execute o comando a seguir usando a CLI:
 
-	```
-	bx dev code <your-project-name>
-	```
-	{: codeblock}
-	
-	`<your-project-name>` deve ser substituído pelo nome do projeto usado durante a criação do projeto.
+   ```
+   bx dev code <your-project-name>
+   ```
+   {: codeblock}
+
+   Substitua `<your-project-name>` pelo nome do projeto que você especificou durante a criação do projeto.
 
 * Use o {{site.data.keyword.dev_console}}.
 
@@ -178,7 +178,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 #### Causa
 {: #node-cause}
    
-Esse erro deve-se ao módulo `appmetrics` que está sendo instalado em uma arquitetura diferente. Os módulos npm nativos instalados em uma arquitetura não funcionarão em outra. As imagens incluídas do Docker baseiam-se no kernel Linux.
+Esse erro é causado pelo módulo `appmetrics` estar instalado em uma arquitetura diferente. Módulos npm nativos que estão instalados em uma arquitetura não funcionam em outra. As imagens incluídas do Docker baseiam-se no kernel Linux.
 
 
 #### Resolução
@@ -198,9 +198,9 @@ Exclua a pasta `node_modules` e execute `bx dev run` novamente.
 ## Obtendo Ajuda e Suporte
 {: #gettinghelp}
 
-Se você tiver problemas ou perguntas ao usar o {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} ou a {{site.data.keyword.dev_cli_notm}}, poderá obter ajuda procurando informações ou fazendo perguntas por meio de um fórum. Também é possível abrir um chamado de suporte.
+Se você tiver problemas ou perguntas sobre o {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} ou o {{site.data.keyword.dev_cli_notm}}, será possível obter ajuda procurando informações ou fazendo perguntas por meio de um fórum. Também é possível abrir um chamado de suporte.
 
-Ao usar os fóruns para fazer uma pergunta, marque a sua pergunta para que ela possa ser vista pelas equipes de desenvolvimento do {{site.data.keyword.Bluemix_notm}}.
+Ao fazer uma pergunta nos fóruns, identifique sua pergunta para que ela seja vista pelas equipes de desenvolvimento do {{site.data.keyword.Bluemix_notm}}.
 
 <!--Insert the appropriate Stack Overflow tag for your service for <service_keyword> in URL and text below:  -->
 

@@ -3,8 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-01-11"
-  
+lastupdated: "2017-3-16"  
 
 ---
 
@@ -55,7 +54,7 @@ Para obtener un ID de IBM y una contraseña válidos, vaya a la página Mi perfi
 {: #ts_unsaved_changes}
 
 
-Al navegar en la página de detalles de aplicaciones, es posible que no pueda realizar las acciones y es posible que se le solicite que guarde los cambios para poder continuar. 
+Al navegar en la página de detalles de apps, es posible que no pueda realizar las acciones y es posible que se le solicite que guarde los cambios para poder continuar. 
 
 
 Cuando intente comprobar la app o los servicios en la página de detalles de la app, seguirá recibiendo el siguiente mensaje de error:
@@ -535,38 +534,6 @@ Utilice uno de estos métodos para especificar la cuota de disco. La cuota de di
 
 	
 	
-## No se puede añadir el repositorio Git
-{: #ts_cannot_addgit}
-
-Después de crear una app en el Panel de control. pulsa AÑADIR GIT para crear un repositorio Git, pero no puede continuar.
-
-
-
-Cuando pulsa **AÑADIR GIT**, se abre una ventana y se produce uno de los siguientes problemas:
-{: tsSymptoms} 
-
-  * La ventana se cuelga con una pantalla en blanco.
-  * Un mensaje indica que existe un problema con cookies de terceros.
-
-
-
-Es posible que el navegador se haya configurado de modo que impida que se establezca una cookie. Dicha cookie se debe establecer desde el sitio de IBM® Bluemix DevOps Services en el dominio de Internet hub.jazz.net desde dentro del contexto de la consola de {{site.data.keyword.Bluemix_notm}}.
-{: tsCauses}  
-
- 
-
-Puede solucionar el problema de una de las siguientes formas:
-{: tsResolve}
-
-  * Siga las instrucciones de la ventana que se abre en la consola de {{site.data.keyword.Bluemix_notm}}. Pulse el botón. Se abre otra ventana del navegador temporalmente. En dicha ventana, DevOps Services establece la cookie de autenticación.
-  * En otro separador del navegador, vaya a https://hub.jazz.net e inicie una sesión. Vuelva a la consola de {{site.data.keyword.Bluemix_notm}} y renueve la página. Vuelva a pulsar **AÑADIR GIT**.
-  * Cambie la configuración del navegador para habilitar cookies de terceros y pulse AÑADIR GIT. Para obtener detalles sobre cómo configurar los valores, consulte la documentación del navegador:
-    * [Mozilla Firefox ![icono de enlace externo](../icons/launch-glyph.svg)](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences#w_how-do-i-change-cookie-settings){: new_window}
-	* [Google Chrome ![icono de enlace externo](../icons/launch-glyph.svg)](https://support.google.com/chrome/answer/95647){: new_window}
-	* [Apple Safari ![icono de enlace externo](../icons/launch-glyph.svg)](https://support.apple.com/kb/PH17191){: new_window}
-	* [Microsoft Internet Explorer ![icono de enlace externo](../icons/launch-glyph.svg)](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window}
-Si estos métodos alternativos no solucionan el problema, envíe un correo electrónico a idslogin@jazz.net.
-
 
 
 ## Las apps de Android no pueden recibir notificaciones push
@@ -682,7 +649,8 @@ Puede aumentar la cuota de memoria de su cuenta o reducir la memoria que utiliza
   * Para reducir la memoria que utilizan las apps, utilice la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} o la interfaz de línea de mandatos cf.
     Si utiliza la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, siga estos pasos:
 	  1. En el Panel de control de {{site.data.keyword.Bluemix_notm}}, seleccione la app. Se abre la página de detalles de la app.
-	  2. En el panel tiempo de ejecución, puede reducir el límite máximo de memoria o el número de instancias de la app, o ambos, para la app que desee. Si utiliza la interfaz de línea de mandatos cf, siga estos pasos:
+	  2. En el panel tiempo de ejecución, puede reducir el límite máximo de memoria o el número de instancias de la app, o ambos, para la app que desee. 
+	Si utiliza la interfaz de línea de mandatos cf, siga estos pasos:
 	  1. Compruebe cuánta memoria están utilizando las apps:
 	  ```
 	  cf apps
@@ -705,7 +673,8 @@ Una app no se reinicia automáticamente si el servicio que ha enlazado a la app 
 	  
  
 
-Si se bloquea un servicio enlazado con una app, se pueden producir problemas como paradas, excepciones o intentos de reconexión. {{site.data.keyword.Bluemix_notm}} no reinicia automáticamente la aplicación para solucionar los problemas.
+Si se bloquea un servicio enlazado con una app, se pueden producir problemas en la app como paradas, excepciones o intentos de reconexión.
+{{site.data.keyword.Bluemix_notm}} no reinicia automáticamente la app para solucionar los problemas.
 {: tsSymptoms}
 
 
@@ -754,11 +723,11 @@ se guardan en el archivo de manifiesto de su app. La próxima vez que abra el as
 ## {{site.data.keyword.Bluemix_notm}} Los iconos de Live Sync no se muestran
 {: #ts_llz_lkb_3r}
 
-Ha creado una app en IBM Bluemix DevOps Services, pero los iconos de IBM Bluemix Live Sync no se muestran en la Web IDE.
+Ha creado una app, pero los iconos de IBM Bluemix Live Sync no se muestran en el IDE de web.
 
  
 
-Al editar una app Node.js en DevOps Services Web IDE, los iconos de {{site.data.keyword.Bluemix_notm}} Live de editar, reinicio rápido y depurar no se muestran.
+Al editar una app Node.js en Web IDE, los iconos de {{site.data.keyword.Bluemix_notm}} Live de editar, reinicio rápido y depurar no se muestran.
 {: tsSymptoms}
 
  
@@ -780,8 +749,6 @@ Utilice uno de los métodos siguientes para resolver el problema:
    path: vía_acceso_a_app
    ```
   * Cree un archivo `package.json` que esté en el directorio de la app.
-
-  
   
   
 
@@ -1026,14 +993,14 @@ Para ver más sugerencias sobre las apps Node.js, consulte [Consejos para las ap
 
 
 
-## Aparecen errores de configuración en el archivo `server.xml` después de importar una app {{site.data.keyword.Bluemix_notm}} Liberty de Bluemix DevOps Services en Eclipse
+## Aparecen errores de configuración en el archivo `server.xml` después de importar una app {{site.data.keyword.Bluemix_notm}} Liberty en Eclipse
 {: #ts_eclipse}
 
-Si ve errores de configuración en el archivo `server.xml` después de importar una app {{site.data.keyword.Bluemix_notm}} Liberty de IBM Bluemix DevOps Services en Eclipse, es posible que tenga que eliminar el archivo `server.xml` del proyecto. 
+Si ve errores de configuración en el archivo `server.xml` después de importar una app {{site.data.keyword.Bluemix_notm}} Liberty en Eclipse, es posible que tenga que eliminar el archivo `server.xml` del proyecto. 
 
  
 
-Después de importar una app {{site.data.keyword.Bluemix_notm}} Liberty de {{site.data.keyword.Bluemix_notm}} DevOps Services en Eclipse, verá errores de configuración en el archivo `server.xml` en la vista Problemas de Eclipse. 
+Después de importar una app {{site.data.keyword.Bluemix_notm}} Liberty en Eclipse, verá errores de configuración en el archivo `server.xml` en la vista Problemas de Eclipse.
 {: tsSymptoms}
 
  
@@ -1043,7 +1010,7 @@ El paquete de compilación de Liberty utiliza el archivo `server.xml` para confi
 
  
 
-Puede resolver este problema eliminando el archivo server.xml del proyecto. El paquete de compilación crea el archivo `server.xml` de forma dinámica cuando se envía la app como una aplicación WAR. Para obtener más información, consulte [Liberty for Java](/docs/runtimes/liberty/index.html).
+Puede resolver este problema eliminando el archivo server.xml del proyecto. El paquete de compilación crea el archivo `server.xml` de forma dinámica cuando se envía la app como una app WAR. Para obtener más información, consulte [Liberty for Java ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](/docs/runtimes/liberty/index.html){: new_window}.
 {: tsResolve}
 	
 	
@@ -1340,7 +1307,7 @@ Cuando intenta crear una app en {{site.data.keyword.Bluemix_notm}}, ve el siguie
 
 
 
-Las aplicaciones de {{site.data.keyword.Bluemix_notm}} se deben crear dentro de un espacio de la organización.
+Las apps de {{site.data.keyword.Bluemix_notm}} se deben crear dentro de un espacio de la organización.
 {: tsCauses} 
 
  
@@ -1385,7 +1352,7 @@ No puede enviar información de su tarjeta de crédito para convertir la cuenta 
 
  
 
-El botón Enviar en la página Añadir tarjeta de crédito está inhabilitado.
+El botón Enviar de la página Añadir tarjeta de crédito está inhabilitado.
 {: tsSymptoms}
 
  
@@ -1441,7 +1408,7 @@ Puede utilizar paquetes de compilación que tengan mecanismos incorporados para 
   ```
 Si el paquete de compilación que utiliza no ofrece un mecanismo para cargar los últimos componentes automáticamente, puede suprimir manualmente el contenido del directorio de memoria caché y volver a enviar por push la app efectuando los siguientes pasos:
   1. Extraiga una rama de un paquete de compilación nulo como, por ejemplo, https://github.com/ryandotsmith/null-buildpack. Para obtener información sobre cómo extraer una rama, consulte [Conceptos básicos de Git - Obtención de un repositorio Git ![icono de enlace externo](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}.  
-  2. Añada la siguiente línea al archivo `null-buildpack/bin/compile` y confirme los cambios. Para obtener información sobre cómo confirmar cambios, consulte [Conceptos básicos sobre Git - Grabación de cambios en el repositorio ![icono de enlace externo](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
+  2. Añada la siguiente línea al archivo `null-buildpack/bin/compile` y confirme los cambios. Para obtener información sobre cómo confirmar cambios, consulte [Conceptos básicos de Git - Grabación de cambios en el repositorio ![icono de enlace externo](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
   ```
   rm -rfv $2/*
   ```

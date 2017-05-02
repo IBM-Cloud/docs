@@ -33,7 +33,7 @@ function showStatus(response) {
    		}   		
    	}
    	else {
-   		document.getElementById("status").innerHTML = "Response is " + response.response + " with the error " 
+   		document.getElementById("status").innerHTML = "Response is " + response.response + " with the error "
 		+ response.error + " and the status code " + response.statusCode;
    	}
  	}

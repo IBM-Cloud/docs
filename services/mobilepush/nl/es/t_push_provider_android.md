@@ -15,7 +15,7 @@ copyright:
 Última actualización: 16 de enero de 2017
 {: .last-updated}
 
-Firebase Cloud Messaging (FCM) es la pasarela utilizada para entregar notificaciones push a dispositivos Android y Google Chrome. FCM es la nueva versión de Google Cloud Messaging (GCM). Para configurar el servicio {{site.data.keyword.mobilepushshort}} en el panel de control, debe obtener credenciales de FCM. Asegúrese de que utiliza las configuraciones de FCM para nuevas aplicaciones. Las aplicaciones existentes seguirán funcionando con las configuraciones de GCM.
+Firebase Cloud Messaging (FCM) es la pasarela utilizada para entregar notificaciones push a dispositivos Android y Google Chrome. FCM es la nueva versión de Google Cloud Messaging (GCM). Para configurar el servicio {{site.data.keyword.mobilepushshort}} en el panel de control, debe obtener credenciales de FCM. Asegúrese de que utiliza las configuraciones de FCM para nuevas apps. Las apps existentes seguirán funcionando con las configuraciones de GCM.
 
 ##Cómo obtener el ID de remitente y la clave de la API
 {: #android-senderid-apikey}
@@ -30,7 +30,7 @@ Para configurar el FCM, genere la clave de API y el ID de remitente y siga estos
 3. En el panel de navegación, pulse el icono Valores y seleccione **Valores del proyecto**.
 4. Seleccione el separador Cloud Messaging para generar una Clave de API de servidor y un ID de remitente.
 
-##Configuración del servicio {{site.data.keyword.mobilepushshort}} para Android y las aplicaciones y extensiones de Chrome
+##Configuración del servicio {{site.data.keyword.mobilepushshort}} para Android y las apps y extensiones de Chrome
 {: #setup-push-android}
 
 **Nota:** Necesitará la Clave de la API de FCM/GCM y el ID del remitente (número de proyecto).
@@ -39,9 +39,9 @@ Para configurar el FCM, genere la clave de API y el ID de remitente y siga estos
 
 ![Panel de control de Push](images/push_unbound.jpg)
 
-2. Pulse el botón **Configurar Push** para configurar las credenciales de FCM/GCM para aplicaciones de Android y aplicaciones y extensiones de Google Chrome.
-3. En la página **Configuración**, para Android, vaya al separador **Mobile** y configure el ID del remitente (número de proyecto de GCM) y la Clave de la API. Para las aplicaciones y extensiones de Google Chrome, vaya al separador **Web** y configure el ID del remitente (número de proyecto de FCM/GCM) y la Clave de la API adecuadamente.
+2. Pulse el botón **Configurar Push** para configurar las credenciales de FCM/GCM para aplicaciones de Android y apps y extensiones de Google Chrome.
+3. En la página **Configuración**, para Android, vaya al separador **Mobile** y configure el ID del remitente (número de proyecto de GCM) y la Clave de la API. Para las apps y extensiones de Google Chrome, vaya al separador **Web** y configure el ID del remitente (número de proyecto de FCM/GCM) y la Clave de la API adecuadamente.
 4. Pulse **Guardar**.
-5. Pasos siguientes. [Habilitación de notificaciones para Android](c_enable_push.html) o [Habilitación de notificaciones para aplicaciones y extensiones de Google Chrome](c_enable_push.html).
+5. Pasos siguientes. [Habilitación de notificaciones para Android](c_enable_push.html) o [Habilitación de notificaciones para apps y extensiones de Google Chrome](c_enable_push.html).
 
 

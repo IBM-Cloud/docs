@@ -23,9 +23,9 @@ REST API 요청에 대한 응답으로 리턴됩니다.
 ```
 	{
 		"message": "Missing APNs credentials",
-  "docUrl": "https://www.ng.bluemix.net/docs/troubleshoot/errors/mobilepush/index.html#FPWSE0003E",
-  "code":   "FPWSE0003E"
- }
+		"docUrl": "https://www.ng.bluemix.net/docs/troubleshoot/errors/mobilepush/index.html#FPWSE0003E",
+		"code":   "FPWSE0003E"
+	}
 ```
 		    {: codeblock}
 
@@ -50,7 +50,7 @@ REST API 요청에 대한 응답으로 리턴됩니다.
 ## FPWSE0003E
 {: #error_fpwse0003e}
 
-**설명**: {{site.data.keyword.mobilepushshort}} 서비스에 대한 전제조건 구성이 완료되지 않았습니다. Apple 푸시 알림 서비스(APNs) 신임 정보가 구성되기 전에 해당 신임 정보를 가져오려고 했을 수 있습니다. 
+**설명**: {{site.data.keyword.mobilepushshort}} 서비스에 대한 전제조건 구성이 완료되지 않았습니다. Apple Push Notification 서비스(APNs) 신임 정보가 구성되기 전에 해당 신임 정보를 가져오려고 했을 수 있습니다. 
 
 **사용자 응답**: {{site.data.keyword.mobilepushshort}} 서비스가 APNs에 대한 올바른 보안 인증서를 사용하여 구성되었는지 확인하십시오. 자세한 정보는 [APNs에 대한 신임 정보 구성 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](t_push_provider_ios.html){: new_window}을 참조하십시오. 
 
@@ -166,7 +166,7 @@ REST API 요청에 대한 응답으로 리턴됩니다.
 ## FPWSE1007E 
 {: #error_fpwse1007e}
 
-**설명**: {{site.data.keyword.mobilepushshort}} 서비스가 이 애플리케이션에 대해 사용하지 않도록 설정되었습니다. 요금 청구 관련 문제이거나 관리자가 앱을 사용하지 않도록 설정했을 수 있습니다. 
+**설명**: {{site.data.keyword.mobilepushshort}} 서비스가 이 애플리케이션에 대해 사용되지 않도록 설정되었습니다. 요금 청구 관련 문제이거나 관리자가 앱을 사용하지 않음으로 설정했을 수 있습니다. 
 
 
 **사용자 응답**: Bluemix 문서의 문제점 해결 주제에서 서비스 상태를 확인하고 문제점 해결 정보 또는 지원을 받는 방법에 대한 정보를 검토하십시오. 

@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-04-24"
+lastupdated: "2017-04-19"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-04-24"
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# Managing organizations and spaces
+# Creating organizations and spaces
 {: #orgsspacesusers}
 
 As an account owner, you can manage your organizations and spaces using the Manage Organizations page. Organization managers can also use the Manage Organizations page to manage any organizations where they are set as the manager.
@@ -22,8 +22,8 @@ To manage organizations and spaces, from the {{site.data.keyword.Bluemix_notm}} 
 
 **Note**: You must be the account owner of a Pay-As-You-Go account to create an organization.
 
-## Managing Organizations
-{: #orginfo}
+## Creating organizations
+{: #createorg}
 
 Organizations can span multiple regions, and they are defined by the following items:
 
@@ -31,10 +31,10 @@ Organizations can span multiple regions, and they are defined by the following i
 <dt>Team members</dt>
 <dd>The role with basic permission in organizations and spaces. You must be assigned to an organization before you can be granted other permissions to the spaces within the organization. For detailed information, see [Users and roles](/docs/admin/users_roles.html#userrolesinfo).</dd>
 <dt>Domains</dt>
-<dd>Provide the route on the internet that is allocated to the organization. A route has a sub-domain and a domain. A sub-domain is typically the application name. A domain might be a system domain, or a custom domain that you registered for your application. See [Managing custom domains](/docs/admin/orgs_spaces.html#managedomains).<br/>
+<dd>Provide the route on the internet that is allocated to the organization. A route has a sub-domain and a domain. A sub-domain is typically the application name. A domain might be a system domain, or a custom domain that you registered for your application. See [Managing custom domains](/docs/admin/manageorg.html#managedomains).<br/>
 <p>**Note:** If you add a custom domain, you must configure your DNS server to resolve your custom domain to point to the {{site.data.keyword.Bluemix_notm}} system domain. In this way, when {{site.data.keyword.Bluemix_notm}} receives a request for your custom domain, it can properly route it to your application.</p></dd>
 <dt>Quota</dt>
-<dd>Represents the resources that are available to an organization, including the number of services and the amount of memory that can be allocated for use by the organization. Quotas are assigned when organizations are created. Any application or service in a space within an organization contributes to the usage of the quota. With the Pay-As-You-Go or Subscription plans, you can adjust your quota for Cloud Foundry applications and containers as the needs of your organization change. See [Managing quota](/docs/admin/orgs_spaces.html#managequota). 
+<dd>Represents the resources that are available to an organization, including the number of services and the amount of memory that can be allocated for use by the organization. Quotas are assigned when organizations are created. Any application or service in a space within an  organization contributes to the usage of the quota. With the Pay-As-You-Go or Subscription plans, you can adjust your quota for Cloud Foundry applications and containers as the needs of your organization change. See [Managing quota](/docs/admin/manageorg.html#managequota).
 <p>**Note:** In a Subscription account, quota is a user defined limit that triggers spending notifications.</p></dd>
 </dl>
 
@@ -47,7 +47,7 @@ In {{site.data.keyword.Bluemix_notm}}, you can use organizations to enable colla
 
 When you create an organization, the organization name must be unique in {{site.data.keyword.Bluemix_notm}}. If the organization name is already in use by another {{site.data.keyword.Bluemix_notm}} Public, Dedicated, or Local user, then you must specify a new name. After you create the organization, you will be automatically assigned the *Organization Manager* permission, which enables you to edit the organization name, add team members, and create or delete spaces in the organization.
 
-You can use the [`bx iam org-delete`](/docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_iam_org_delete) command to delete organizations. When you delete an organization, all the spaces, applications, and services within the organization are deleted.  
+You can use the [`bx iam org-delete`](/docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_iam_org_delete) command to delete organizations. When you delete an organization, all the spaces, applications, and services within the organization are deleted.
 
 The following [user roles](/docs/admin/users_roles.html#userrolesinfo) can be assigned to team members in an organization:
 
@@ -57,9 +57,16 @@ The following [user roles](/docs/admin/users_roles.html#userrolesinfo) can be as
 <li>Organization auditor</li>
 </ul>
 
+Only account owners with Pay-As-You-Go accounts can create an organization. You can create an organization by completing the following steps:
+
+1. Click **Manage** &gt; **Account** &gt; **Organizations**.
+2. Click **Add a New Org**.
+3. Enter the org name.
+4. Click **Add**.
+
 <!-- Add info on Manage infrastructure option under a space -->
 
-## Using spaces
+## Creating spaces
 {: #spaceinfo}
 
 Within an organization, you can use spaces to group a set of applications, services, and team members. Spaces are tied to a specific region in {{site.data.keyword.Bluemix_notm}}.
@@ -74,16 +81,6 @@ After you add team members to an organization, you can grant them permissions to
 
 **Note**: A team member must be assigned at least one of the permissions in the space.
 
-## Creating orgs and spaces
-{: #createorg}
-
-Only account owners with Pay-As-You-Go accounts can create an organization. You can create an organization by completing the following steps:
-
-1. Click **Manage** &gt; **Account** &gt; **Organizations**.
-2. Click **Add a New Org**.
-3. Enter the org name.
-4. Click **Add**.
-
 You can create spaces in your organization; for example, a *dev* space as a development environment, a *test* space as a testing environment, and a *production* space as a production environment. Then, you can associate your apps with spaces. Complete the following steps to create a space:
 
 1. Click **Manage** &gt; **Account** &gt; **Organizations**.
@@ -91,87 +88,3 @@ You can create spaces in your organization; for example, a *dev* space as a deve
 4. Click **Add a Space**.
 5. Enter the space name.
 6. Click **Add**.
-
-## Renaming an organization
-{: #orgrename}
-
-Complete the following steps to rename your organization:
-
-1. Click **Manage** &gt; **Account** &gt; **Organizations**.
-2. Identify the organization that you want to edit, and select **View Details**.
-3. Select **Edit Org**.
-4. Select **Edit** for the title of the org.
-5. Type the new org name.
-6. Click **SAVE**.
-
-## Deleting an existing org or space
-{: #deleteorgs}
-
-As the account owner, you can delete an org by using the {{site.data.keyword.Bluemix_notm}} CLI. Use the [`bx iam org-delete`](/docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_iam_org_delete) command to delete organizations. When you delete an organization, all the spaces, applications, and services within the organization are deleted. 
-
-**Note**: Deleting operations cannot be reversed. You lose all your applications and services that are associated with the organization.
-
-You can delete a space from the **Manage Organizations** page:
-
-1. Click **Manage** &gt; **Account** &gt; **Organizations**.
-2. Identify organization that you want to edit, and select **View Details**.
-3. Identify the space that you want to delete, and select **Edit Space**.
-4. Click **Delete Space**.
-
-## Listing members
-{: #listmembers}
-
-Complete the following steps to list the members for a specific organization:
-
-1. Click **Manage** &gt; **Account** &gt; **Organizations**.
-2. Identify the organization that you want to view the members for, and click **View Details**.
-3. Click **Edit Org**.
-4. You can see the members of your organization and their roles in the **USERS** tab.
-
-Complete the following steps to list the members for a specific space:
-
-1. Click **Manage** &gt; **Account** &gt; **Organizations**.
-2. Identify the organization that you want to view the members for, and click **View Details**.
-3. Identify the space that you want to view the members for, and click **Edit Space**.
-4. You can see the members of your space and their roles in the **USERS** tab.
-
-## Managing quota
-{: #managequota}
-
-As a {{site.data.keyword.Bluemix_notm}} account owner or organization manager, you can view the used and allocated quota for an organization. The quota represents the resource limits for the organization, which is assigned when the organization is created. Depending on whether you have a trial account or a billable account, the resources that are available to an organization vary. Any application or service in a space within the organization contributes to the usage of the allocated quota.
-
-To view the used and allocated quota for an organization, complete the following steps:
-
-1. Click **Manage** &gt; **Account** &gt; **Organizations**.
-2. Identify the organization that you want to view the quota for, and click **View Details**.
-3. Click **Edit Org**.
-4. If you have spaces defined in more than one region, select the specific region that you want to view.
-5. Click **QUOTA**. 
-6. By default, the **Cloud Foundry** quota page opens. You can view the quota details for the following resources:
- * MEMORY
- * SERVICES
- * PLAN
- * PRICE
-7. Click **Containers** to view the used and available container quota allocation. The container allocation varies depending on your pricing plan. You can view the quota details for the following resources:
- * MEMORY
- * PUBLIC IP
- * FILE SHARES
-8. Click **Virtual Servers** to view the virtual machines.
-
-**Note:** Containers are not available in the {{site.data.keyword.Bluemix_notm}} Sydney region. 
-
-For more information about containers, see [Quota](/docs/containers/container_planning.html#container_planning_quota) in the Containers documentation.
-To change the quota that is allocated to an organization, you must open a support ticket. For more information about opening a support ticket, see [Getting customer support](/docs/support/index.html#contacting-support). 
-
-## Managing domains
-{: #managedomains}
-
-As an account owner or organization manager, you can view the system domain and add custom domains for applications that are built within an organization and its spaces. As a space manager, the **Domains** tab for a space is a read-only list of the domains that are assigned to the space.
-
-1. Click **Manage** &gt; **Account** &gt; **Organizations**.
-2. Identify the organization that you want to view or edits domains for.
-3. Select **View Details** for that org.
-4. Click **Edit Org**.
-5. Click **DOMAINS**.
-
-If you add a custom domain, you must configure your DNS server to resolve your custom domain to point to the {{site.data.keyword.Bluemix_notm}} system domain. In this way, when {{site.data.keyword.Bluemix_notm}} receives a request for your custom domain, it can properly route it to your application. The system domain is always available to a space, and custom domains might also be allocated to a space. Applications created in a space might use any of domains listed for that space. For more information about creating and using custom domains, see [Using a custom domain](/docs/manageapps/updapps.html#domain).

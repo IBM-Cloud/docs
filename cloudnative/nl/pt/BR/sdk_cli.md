@@ -72,7 +72,7 @@ Use `bluemix sdk generate [arguments...][command options]`.
 
 * `PLATFORM` (necessário)
    * `--android` - gerar um SDK do Android
-   * `--ios` - gerar um SDK do iOS Swift 
+   * `--ios` - gerar um SDK do iOS Swift
    * `--swift` - gerar um SDK do servidor Swift
 * `--output "YOUR_RELATIVE_PATH"` (opcional) - coloca o SDK gerado no diretório especificado por `YOUR_RELATIVE_PATH` (será sobrescrito se o SDK existente estiver presente)
 * `--unzip` (opcional) - extrai o SDK gerado (será sobrescrito se artefatos SDK existentes estiverem presentes)

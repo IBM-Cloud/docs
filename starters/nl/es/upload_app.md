@@ -35,8 +35,7 @@ Antes de empezar, debe:
 
 Cuando se emite un mandato **cf push**, la interfaz de línea de mandatos **cf** proporciona el directorio de trabajo al entorno {{site.data.keyword.Bluemix_notm}}, que utiliza un paquete de compilación para compilar y ejecutar la aplicación.
 
-  1. En el directorio de la aplicación, escriba el mandato **cf
-push** con el nombre de la aplicación. El nombre de la app debe ser exclusivo en el entorno {{site.data.keyword.Bluemix_notm}}.
+  1. En el directorio de la app, escriba el mandato **cf push** con el nombre de la app. El nombre de la app debe ser exclusivo en el entorno {{site.data.keyword.Bluemix_notm}}.
 
   <pre class="pre">cf push <var class="keyword varname" data-hd-keyref="app_name">nombre_app</var> -m 512m</pre>
 

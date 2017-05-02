@@ -116,7 +116,7 @@ BMSPush.retrieveAvailableTags(function(tags) {
 	{: codeblock}
 
 ```
-//Extraction d'une liste de balises disponibles auxquelles l'appareil est abonné.
+//Get a list of available tags to which the device is subscribed.
 BMSPush.retrieveSubscriptions(function(tags) {
    alert(tags); 
 }, failure); 

@@ -12,7 +12,7 @@ copyright:
 
 # Monitorando notificações push 
 {: #monitor-notifications}
-Última atualização: 16 de janeiro de 2017
+Última atualização: 12 de abril de 2017
 {: .last-updated}
 
 
@@ -29,9 +29,7 @@ Para gerar relatórios para todos os dispositivos registrados, utilize o método
 
 ![Relatório de dispositivos registrados](images/monitoring_devices.jpg)
 
-Para obter informações sobre como atualizar seu SDK (kit de desenvolvimento de software) Android para
-monitorar suas informações de notificação, consulte [Monitorando notificações push em
-dispositivos Android](c_android_enable.html#android_monitor).
+Para obter informações sobre como atualizar seu Android SDK para monitorar informações de notificação, veja o tópico 'Monitorando notificações push em dispositivos Android' em [Ativando notificações para dispositivos móveis](c_enable_push.html).
 
 
  

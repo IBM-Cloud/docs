@@ -2,7 +2,7 @@
 
 copyright:
  years: 2017
-lastupdated: "2017-2-21"
+lastupdated: "2017-4-11"
 
 ---
 
@@ -89,15 +89,12 @@ You can define several types of tasks.
 </li>
 </ul>
 
-
+**Release**:
+A release is a container for deployment plans. Generally, a release contains several deployment plans although there is no requirement that a release contain more than one plan. Again, speaking generally, each plan in a release represents a stage in the development lifecycle, such as QA or Production. The stages, or deployment plans, are collectively referred to as the release lifecycle. 
 
 <!--
 
 **Event**: Events are trackable items that are associated with a deployment. Events are not defined by tasks. Events include holidays, blackouts, or any other activity that might affect a deployment.
-
-**Release**:
-The term release refers to the activities that you complete to deliver a software project. Typically, a release is done in stages. In the early stages, the software is delivered to development and testing environments. Later, after the software passes certain quality milestones, the software is delivered to production. The stages are collectively referred to as the release. The stages are also called the release lifecycle. Deployments deliver software to the lifecycle stages.
-
 
 ## Getting help and support for <service_short_name>
 {: #gettinghelp}

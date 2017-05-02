@@ -12,11 +12,11 @@ copyright:
 
 # リッチ・メディア通知の使用可能化
 {: #interactive-notifications}
-最終更新日: 2017 年 1 月 11 日
+最終更新日: 2017 年 3 月 9 日
 {: .last-updated}
 
 
-iOS 10 以上でリッチ・メディアの{{site.data.keyword.mobilepushshort}}を有効にすることができます。プッシュ通知は、音声、ビデオ、GIF、およびイメージとともに送信できます。 
+iOS 10 以降でリッチ・メディアの {{site.data.keyword.mobilepushshort}} を有効にできます。プッシュ通知は、音声、ビデオ、GIF、およびイメージとともに送信できます。 
 
 iOS 10 でリッチ・プッシュを受信するようにアプリケーションをセットアップするには、以下を実行します。  
 

@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2016
-lastupdated: "2017-03-01"
+lastupdated: "2017-04-26"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-03-01"
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# Managing Cloud Foundry services access users and roles in Team Directory
+# Managing Cloud Foundry access in Team Directory
 {: #userroles}
 
 You can manage platform users assigned Cloud Foundry services access from the Team Directory page for your account. You can manage existing team members and their roles in your organization and spaces. 

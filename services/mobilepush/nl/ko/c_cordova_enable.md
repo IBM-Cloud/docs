@@ -30,7 +30,7 @@ Cordova 애플리케이션에서 사용자 디바이스에 푸시 알림을 수�
 1. 에뮬레이터를 설정하십시오. Android Studio의 경우 Google Play API를 지원하는 에뮬레이터를 사용하십시오.
 1. Git 명령행 도구를 설치하십시오. Windows의 경우 **Window 명령 프롬프트에서 Git 실행** 옵션을 선택하십시오. 이 도구를 다운로드하고 설치하는 방법에 대한 정보는 [Git ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git-scm.com/downloads){: new_window}을 참조하십시오. 
 1. Node.js 및 NPM(Node Package Manager) 도구를 설치하십시오. NPM 명령행 도구는 Node.js와 함께 번들로 제공됩니다. Node.js를 다운로드하고 설치하는 방법에 대한 정보는 [Node.js ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://nodejs.org/en/download/){: new_window}을 참조하십시오. 
-1. 명령행에서 **npm install -g cordova** 명령을 사용하여 Cordova 명령행 도구를 설치하십시오. Cordova 푸시 플러그인을 사용하려면 필요합니다. Cordova를 설치하고 Cordova 앱을 설정하는 방법에 대한 정보는 [Cordova Apache ![외부 링크 아콘](../../icons/launch-glyph.svg "External link icon")](https://cordova.apache.org/#getstarted){: new_window}을 참조하십시오. 자세한 정보는 Cordova 푸시 플러그인 [Readme 파일 ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push){: new_window}을 참조하십시오. 
+1. 명령행에서 **npm install -g cordova** 명령을 사용하여 Cordova 명령행 도구를 설치하십시오. Cordova 푸시 플러그인을 사용하려면 필요합니다. Cordova를 설치하고 Cordova 앱을 설정하는 방법에 대한 정보는 [Cordova Apache ![외부 링크 아콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cordova.apache.org/#getstarted){: new_window}을 참조하십시오. 자세한 정보는 Cordova 푸시 플러그인 [Readme 파일 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push){: new_window}을 참조하십시오. 
 1. Cordova 앱을 작성하려는 폴더로 변경하고 다음 명령을 실행하여 Cordova 애플리케이션을 작성하십시오. 기존의 Cordova 앱이 있을 경우 3단계로 가십시오. 
 ```cordova create your_app_name
 cd your_app_name
@@ -113,7 +113,7 @@ bms-push <version> "BMSPush"
 
 ```
 onDeviceReady: function() {
-	    app.receivedEvent('deviceready');
+	app.receivedEvent('deviceready');
 	BMSClient.initialize("YOUR APP REGION");
 	var category =  {};
 	BMSPush.initialize(appGUID,clientSecret,category);
@@ -125,7 +125,7 @@ onDeviceReady: function() {
 	alert(JSON.stringify(notif));
 	};
 	BMSPush.registerNotificationsCallback(showNotification);
-    } 
+    }
 ```
 	{: codeblock}
 
@@ -164,17 +164,17 @@ BMSPush.registerDevice({}, success, failure);
 **onDeviceReady: function()**에서 다음을 수행하십시오. 
 
 ```
-  onDeviceReady: function() {
-	 app.receivedEvent('deviceready');
+onDeviceReady: function() {
+app.receivedEvent('deviceready');
 BMSClient.initialize("YOUR APP REGION");
 var success = function(message) { console.log("Success: " + message); };
 var failure = function(message) { console.log("Error: " + message); };
-BMSPush.registerDevice({}, success, failure); 
+BMSPush.registerDevice({}, success, failure);
  var showNotification = function(notif)
  {
  alert(JSON.stringify(notif));
  };
-BMSPush.registerNotificationsCallback(showNotification); 
+BMSPush.registerNotificationsCallback(showNotification);
 ```
 	{: codeblock}
 
@@ -256,7 +256,7 @@ var showNotification = function(notif) {
 
 * **메시지** - 푸시 알림 메시지
 * **페이로드** - 알림 페이로드를 포함한 JSON 오브젝트
-action-loc-key - 이 문자열은 `View` 대신 해당 단추 제목에 사용할 현재 로컬라이제이션의 현지화된 문자열을 가져올 키로 사용됩니다. 
+action-loc-key - 이 문자열은 `View` 대신 현재 번역에서 자국어로 지원된 문자열을 가져와 해당 단추 제목에 사용하는 키로 사용됩니다. 
 * **배지** - 앱 아이콘의 배지로 표시할 숫자입니다. 이 특성을 비워두면 배지가 변경되지 않습니다. 배지를 제거하려면 이 특성의 값을 0으로 설정하십시오. 
 * **사운드** - 앱 번들 또는 앱 데이터 컨테이너의 라이브러리/사운드 폴더에 있는 사운드 파일의 이름입니다. 
 
@@ -311,6 +311,6 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 
 정상적으로 기본 알림을 설정한 후 태그 기반 알림 및 고급 옵션을 구성할 수 있습니다. 
 
-이러한 {{site.data.keyword.mobilepushshort}} 서비스 기능을 앱에 추가하십시오.
+{{site.data.keyword.mobilepushshort}} 서비스 기능을 사용자의 앱에 추가하십시오.
 태그 기반 알림을 사용하려면 [태그 기반 알림](c_tag_basednotifications.html)을 참조하십시오.
 고급 알림 옵션을 사용하려면 [고급 푸시 알림 사용](t_advance_badge_sound_payload.html)을 참조하십시오. 

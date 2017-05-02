@@ -10,15 +10,15 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# 互動式通知
+# 互動式及無聲自動通知  
 {: #interactive-notifications}
-前次更新：2017 年 1 月 23 日
+前次更新：2017 年 3 月 3 日
 {: .last-updated}
 
 互動式通知可讓使用者在不開啟應用程式的情況下，就可以回應通知。當互動式通知到達時，裝置會顯示動作按鈕以及通知訊息。第 8 版或更新版本的 iOS 裝置上都支援互動式通知。若將互動式通知傳送至第 8 版之前的 iOS 裝置，則不會顯示通知動作。
 
-##傳送互動式 {{site.data.keyword.mobilepushshort}}
-
+## 傳送中互動式通知
+{: #send_interactive_notifications}
 
 您可以使用 Push 儀表板或使用 [REST API 文件](t_restapi.html)來傳送互動式通知。
 
@@ -28,10 +28,11 @@ copyright:
 2. 選擇您的通知收件者，然後按**下一步**。 
 3. 在「編寫通知」頁面中，將「類型」設為「預設值」或「混合」，並在「進階選項」標籤下指定「種類」值，即可傳送互動式推送。若要配置用戶端上的種類值，請檢查**處理原生 iOS 應用程式中的互動式 {{site.data.keyword.mobilepushshort}}** 區段。
 
-## 處理 iOS 應用程式中的互動式 {{site.data.keyword.mobilepushshort}}
-
+## 處理 iOS 應用程式中的互動式通知
+{: #send_interactive_notifications_ios}
 
 ### Swift
+{: #send_interactive_notifications_ios_swift}
 
 請完成下列步驟，以接收互動式通知：
 
@@ -70,6 +71,7 @@ copyright:
 
 
 ### Cordova
+{: #send_interactive_notifications_ios_cordova}
 
 若要在 Cordova iOS 應用程式中取得可採取動作的通知，請完成下列步驟：
 
@@ -81,3 +83,29 @@ copyright:
 	{: codeblock} 
 2. 在 AppDelegate 上實作新的回呼方法。
 3. 當使用者按一下動作按鈕時，即會呼叫這個新的回呼方法。實作此方法必須執行與指定 ID 相關聯的作業，並執行 completionHandler 參數中的區塊。
+
+## 處理 iOS 的無聲自動通知
+{: #send_silent_notifications_for_ios}
+
+無聲自動通知不會出現在裝置畫面上。這些通知由應用程式在背景接收，此情況會喚醒應用程式最多達 30 秒，以執行指定的背景作業。使用者可能不知道有通知送達。若要傳送 iOS 的無聲自動通知，請使用 [REST API ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mobile.{DomainName}/imfpush/){: new_window}。   
+
+1. 在專案中，若要傳送無聲自動推送通知，請在 `appDelegate.m` 檔案中實作下列方法。在 Swift 中，伺服器針對無聲自動通知而傳送的 `contentAvailable` 值等於 1。
+```
+//For Swift
+	 func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+       let contentAPS = userInfo["aps"] as [NSObject : AnyObject]
+       if let contentAvailable = contentAPS["content-available"] as? Int {
+           //silent or mixed push
+           if contentAvailable == 1 {
+               completionHandler(UIBackgroundFetchResult.NewData)
+           } else {
+               completionHandler(UIBackgroundFetchResult.NoData)
+           }
+       } else {
+//Default notification 
+           completionHandler(UIBackgroundFetchResult.NoData)
+       }
+    }
+```
+	{: codeblock}
+

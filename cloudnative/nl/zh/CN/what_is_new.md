@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -24,8 +24,8 @@ lastupdated: "2017-03-17"
    * {{site.data.keyword.Bluemix_notm}} 移动仪表板现在为 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}。
    * 已重新设计项目创建，以便包含支持 Node.js、Java 和 Swift 的 Web 应用程序、BFF 和微服务服务器模式类型。
    * 与新的和改进的 {{site.data.keyword.appid_full}} 服务集成，为移动和 Web 项目提供认证。
-   * 目前，还可以使用 [SDK Generator 插件](sdk_cli.html)生成项目的 SDK。仅可针对移动项目在 {{site.data.keyword.dev_console}} 中生成 SDK。
-   * 现在，还可以使用 [{{site.data.keyword.dev_cli_short}}](dev_cli.html) 创建项目。
+   * 现在，可以使用 [SDK Generator 插件](sdk_cli.html)生成项目的 SDK。仅可针对移动项目在 {{site.data.keyword.dev_console}} 中生成 SDK。
+   * 现在，可以使用 [{{site.data.keyword.dev_cli_short}}](dev_cli.html) 创建项目。
 
 
 ## 最新更新时间：2017 年 1 月
@@ -85,13 +85,13 @@ lastupdated: "2017-03-17"
 {: #ui_builder notoc}
 
    * 现在，从项目可以访问 **{{site.data.keyword.mobilepushshort}}** 功能。
-   * **项目设置**选项卡已重命名为**设置**选项卡。
-   * **认证**选项卡已重命名为**用户访问权**选项卡。
+   * **项目设置**选项卡已重命名为**设置**。
+   * **认证**选项卡已重命名为**用户访问权**。
 
 
 ### 代码
 {: #code notoc}
 
-   * 生成的适用于 iOS 的 Objective-C 和 Swift 代码现在使用 CocoaPods 来管理依赖关系。这表示您需要安装 CocoaPods。要安装它，请运行 `sudo gem install cocoapods`。安装 CocoaPods 之后，请运行 `pod setup` 以对其进行配置（如果尚未配置的话）。最后，运行 `pod install` 以下载并安装所需的项目依赖关系，然后在 Xcode 中打开 `.xcworkspace` 文件。在已下载代码归档的 `README.md` 文件中，可以找到其他详细信息。有关更多信息，请阅读[必备开发者工具](get_code.html#prereq-dev-tools)。
+   * 生成的适用于 iOS 的 Objective-C 和 Swift 代码现在使用 CocoaPods 来管理依赖关系。这表示您需要安装 CocoaPods。要安装它，请运行 `sudo gem install cocoapods`。安装 CocoaPods 之后，请运行 `pod setup` 以对其进行配置（如果尚未配置的话）。最后，运行 `pod install` 以下载并安装项目依赖关系，然后在 Xcode 中打开 `.xcworkspace` 文件。在已下载代码归档的 `README.md` 文件中，可以找到进一步的详细信息。有关更多信息，请阅读[必备开发者工具](get_code.html#prereq-dev-tools)。
 
 经常回顾以及时了解新更新。

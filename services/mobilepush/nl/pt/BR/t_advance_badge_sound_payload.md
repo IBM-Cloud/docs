@@ -10,8 +10,8 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-#Ativando o {{site.data.keyword.mobilepushshort}} avançado
-Última atualização: 23 de janeiro de 2017
+#Ativando notificações push avançadas
+Última atualização: 28 de fevereiro de 2017
 {: .last-updated}
 
 Configure um badge iOS, som, carga útil JSON adicional, notificações acionáveis e notificações de participação.
@@ -23,14 +23,16 @@ Configure um badge iOS, som e carga útil JSON adicional.
 
 1. No painel {{site.data.keyword.mobilepushshort}}, acesse a guia **Notificações**.
 2. Acesse a seção **Campos opcionais** para configurar os recursos do {{site.data.keyword.mobilepushshort}}. 
-	- **Arquivo de som** - insira uma sequência para apontar para o arquivo de som em
-seu app móvel. Na carga útil, especifique o nome da sequência do arquivo de som a ser usado.
+	- **Arquivo de som** - insira uma sequência para apontar para o arquivo
+de som em seu app móvel. Na carga útil, especifique o nome da sequência do
+arquivo de som a ser usado.
 	- **Badge iOS** - para dispositivos iOS, o
 número a ser exibido como o badge do ícone do aplicativo. Se essa propriedade
 estiver ausente, o badge não será mudado. Para remover o badge,
 configure o valor dessa propriedade para 0.
 	
-###Android
+### Android
+{: #badge-sound-payload_android}
 
 Inclua seu arquivo de som no diretório `res/raw` do aplicativo Android. Ao enviar a notificação, inclua o nome do arquivo de som no campo de som do {{site.data.keyword.mobilepushshort}}.
 
@@ -43,7 +45,8 @@ Inclua seu arquivo de som no diretório `res/raw` do aplicativo Android. Ao envi
 ```
     {: codeblock}	
 	
-###iOS
+### iOS
+{: #badge-sound-payload_ios}
 
 ```
 "settings": {

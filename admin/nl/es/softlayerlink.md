@@ -22,13 +22,13 @@ Si tiene una cuenta de prueba de {{site.data.keyword.Bluemix_notm}} y desea acce
 
 Puede unificar las cuentas de facturación existentes de {{site.data.keyword.Bluemix_notm}} y SoftLayer enlazando las cuentas. Cuando enlace las cuentas, se le facturará mediante {{site.data.keyword.Bluemix_notm}} para ambos recursos de {{site.data.keyword.Bluemix_notm}} y SoftLayer.
 
-**Atención:** Una cuenta de suscripción de {{site.data.keyword.Bluemix_notm}} no se puede enlazar con una cuenta de SoftLayer. Para acceder al panel de control Infraestructura, debe crear una cuenta Pago según uso, una segunda cuenta, que se enlaza automáticamente con una cuenta SoftLayer. A continuación, recibirá dos facturas, una para cada cuenta de {{site.data.keyword.Bluemix_notm}}. Aunque los recursos de la infraestructura se facturarán en una cuenta Pago según uso independiente, los recursos se pueden utilizar con aplicaciones y servicios en su cuenta de suscripción. Por ejemplo, si activa un servicio de Watson en su cuenta de suscripción, puede copiar las credenciales de servicio y, a continuación, añadir las credenciales a la aplicación nativa que se obtiene de la cuenta Pago según uso. 
+**Atención:** Las cuentas de suscripción de {{site.data.keyword.Bluemix_notm}} y las cuentas antiguas de tipo Pago según uso de {{site.data.keyword.Bluemix_notm}} creadas antes del enlace automático de cuentas no se pueden enlazar a una cuenta de SoftLayer. Para acceder al panel de control Infraestructura, debe crear una cuenta Pago según uso, una segunda cuenta, que se enlaza automáticamente con una cuenta SoftLayer. A continuación, recibirá dos facturas, una para cada cuenta de {{site.data.keyword.Bluemix_notm}}. Aunque los recursos de la infraestructura se facturarán en una cuenta Pago según uso independiente, los recursos se pueden utilizar con apps y servicios en su cuenta de suscripción. Por ejemplo, si activa un servicio de Watson en su cuenta de suscripción, puede copiar las credenciales de servicio y, a continuación, añadir las credenciales a la aplicación nativa que se obtiene de la cuenta Pago según uso. 
 {:shortdesc}
 
 ## Actualización a una cuenta de Pago según uso de {{site.data.keyword.Bluemix_notm}}
 {: #upgradetopayg}
 
-Cuando inicia una sesión en {{site.data.keyword.Bluemix_notm}} utilizando una cuenta de prueba, no podrá acceder al panel de control de Infraestructura de {{site.data.keyword.Bluemix_notm}}. Si desea que sus aplicaciones utilicen los recursos de infraestructura, debe actualizar a una cuenta de Pago según uso.
+Cuando inicia una sesión en {{site.data.keyword.Bluemix_notm}} utilizando una cuenta de prueba, no podrá acceder al panel de control de Infraestructura de {{site.data.keyword.Bluemix_notm}}. Si desea que sus apps utilicen los recursos de infraestructura, debe actualizar a una cuenta de Pago según uso.
 
 Para actualizar su cuenta de prueba a una cuenta de Pago según uso de {{site.data.keyword.Bluemix_notm}}, siga estos pasos:
 
@@ -92,8 +92,7 @@ Para obtener más información sobre cómo invitar a miembros a través de la in
 ## Cambiar al ID de IBM
 {: #ibmid_switch}
 
-Ahora la autenticación en SoftLayer utiliza el ID de IBM para proporcionar un inicio de sesión único para todo {{site.data.keyword.Bluemix_notm}}. Las cuentas existentes de SoftLayer se están habilitando para poder cambiar a la autenticación mediante ID de IBM.
-Un asistente de migración le guiará por este cambio.
+Ahora la autenticación en SoftLayer utiliza el ID de IBM para proporcionar un inicio de sesión único para todo {{site.data.keyword.Bluemix_notm}}. Las cuentas existentes de SoftLayer se están habilitando para poder cambiar a la autenticación mediante ID de IBM. Un asistente de migración le guiará por este cambio. 
 {:shortdesc}
 
 Si es un usuario maestro y no ve el indicador para cambiar a un ID de IBM en el {{site.data.keyword.slportal}}, [póngase en contacto con el equipo de soporte de IBM](/docs/support/index.html#contacting-support) para obtener ayuda para habilitar esta característica.
@@ -108,7 +107,7 @@ Para pasar de un nombre de usuario de SoftLayer existente a un ID de IBM, siga e
 	
  2. Siga las indicaciones del asistente para crear el ID de IBM. 
  
-    Para crear un nuevo ID de IBM, escriba una dirección de correo electrónico que no utilice actualmente ningún otro ID de IBM. El nuevo ID de IBM utilizará la dirección de correo electrónico como nombre de usuario y la dirección de correo electrónico. Una vez creado el ID de IBM, puede actualizar la dirección de correo electrónico asociada al ID de IBM, pero no puede cambiar el nombre de usuario. El correo electrónico de invitación irá a la dirección de correo electrónico especificada. 
+    Para crear un nuevo ID de IBM, escriba una dirección de correo electrónico que no utilice actualmente ningún otro ID de IBM. El nuevo ID de IBM utilizará la dirección de correo electrónico como nombre de usuario y la dirección de correo electrónico. Una vez creado el ID de IBM, puede actualizar la dirección de correo electrónico asociada al ID de IBM, pero no puede cambiar el nombre de usuario. El correo electrónico de invitación irá a la dirección de correo electrónico especificada.
     
     Una vez completado el asistente, recibirá un correo electrónico con su código de registro.
  
@@ -116,11 +115,11 @@ Para pasar de un nombre de usuario de SoftLayer existente a un ID de IBM, siga e
  
     Después de cambiar a autenticación con ID de IBM, solo podrá iniciar la sesión en su cuenta con su ID de IBM. En el indicador de inicio de sesión de la cuenta, vaya a la sección **Inicio de sesión de cuenta de ID de IBM** y pulse **Iniciar sesión con ID de IBM**. No utilice los campos el **Nombre de usuario** y **Contraseña** que ha utilizado previamente con su ID de SoftLayer.
  
-Si consulta su pedido como cliente nuevo, se le solicitará su ID de IBM o se le pedirá que cree un nuevo ID de IBM.  
+Si consulta su pedido como cliente nuevo, se le solicitará su ID de IBM o se le pedirá que cree un nuevo ID de IBM. 
 
- * Para utilizar un ID de IBM existente, escriba la dirección de correo electrónico del ID de IBM si es exclusivo (es decir, no compartido entre varios ID de IBM). 
+ * Para utilizar un ID de IBM existente, escriba la dirección de correo electrónico del ID de IBM si es exclusivo (es decir, no compartido entre varios ID de IBM).
  
- * Para crear un nuevo ID de IBM, escriba una dirección de correo electrónico que no utilice actualmente ningún otro ID de IBM. El nuevo ID de IBM utilizará la dirección de correo electrónico como nombre de usuario y la dirección de correo electrónico. Una vez creado el ID de IBM, puede actualizar la dirección de correo electrónico asociada al ID de IBM, pero no puede cambiar el nombre de usuario. El correo electrónico de invitación irá a la dirección de correo electrónico especificada. 
+ * Para crear un nuevo ID de IBM, escriba una dirección de correo electrónico que no utilice actualmente ningún otro ID de IBM.  El nuevo ID de IBM utilizará la dirección de correo electrónico como nombre de usuario y la dirección de correo electrónico.  Una vez creado el ID de IBM, puede actualizar la dirección de correo electrónico asociada al ID de IBM, pero no puede cambiar el nombre de usuario. El correo electrónico de invitación irá a la dirección de correo electrónico especificada.
 
 Para resolver problemas de inicio de sesión en con el ID de IBM, consulte [Resolución de problemas para acceder a Bluemix](/docs/troubleshoot/ts_accessing.html#accessing).
 
@@ -169,14 +168,14 @@ For a user with IBMid access to multiple accounts with two-factor authentication
 Puede utilizar servicios de {{site.data.keyword.Bluemix_notm}} públicos basados en API con sus activos de SoftLayer. Todas las API son seguras y están cifradas para proteger sus datos.
 {:shortdesc}
 
-Por ejemplo, ¿ha querido alguna vez añadir capacidades cognitivas de Watson a sus aplicaciones que se ejecutan en servidores nativos desde SoftLayer? Puede añadir un servicio como {{site.data.keyword.personalityinsightsshort}} para entender el usuario de la aplicación en cuatro pasos sencillos:
+Por ejemplo, ¿ha querido alguna vez añadir capacidades cognitivas de Watson a sus apps que se ejecutan en servidores nativos desde SoftLayer? Puede añadir un servicio como {{site.data.keyword.personalityinsightsshort}} para entender el usuario de la app en cuatro pasos sencillos:
 
 1. Busque el servicio en el catálogo de {{site.data.keyword.Bluemix_notm}}.
 2. Especifique una instancia del servicio con tan solo unas pulsaciones.
 3. Configure el servicio para que se ejecute con el código existente copiando las credenciales del servicio y añadiéndolas a la aplicación.
-4. Después de actualizar la aplicación, despliegue la nueva versión en la infraestructura de SoftLayer.
+4. Después de actualizar la app, despliegue la nueva versión en la infraestructura de SoftLayer.
 
-Puede obtener conocimientos sobre *Insights and Cognitive* invocando las API de Watson desde sus aplicaciones en SoftLayer para personalizarlas. O bien puede utilizar servicios de *Datos y análisis* para realizar un análisis más profundo del rendimiento para sus aplicaciones. Asimismo, puede seleccionar una base de datos como servicio cuando deje la gestión en manos de {{site.data.keyword.Bluemix_notm}}.
+Puede obtener conocimientos sobre *Insights and Cognitive* invocando las API de Watson desde sus apps en SoftLayer para personalizarlas. O bien puede utilizar servicios de *Datos y análisis* para realizar un análisis más profundo del rendimiento para sus apps. Asimismo, puede seleccionar una base de datos como servicio cuando deje la gestión en manos de {{site.data.keyword.Bluemix_notm}}.
 
 Modernice el desarrollo de sus aplicaciones utilizando contenedores con servicios como {{site.data.keyword.activedeployshort}} y {{site.data.keyword.deliverypipeline}}. Luego puede utilizar el servicio {{site.data.keyword.vpn_short}} para comunicarse con SoftLayer para conectar el contenedor de una red privada a la red privada de SoftLayer. Todos los cargos por uso de los recursos y servicios de cálculo se reflejan en la factura de {{site.data.keyword.Bluemix_notm}}. 
 

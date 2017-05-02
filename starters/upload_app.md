@@ -23,7 +23,7 @@ After you are logged in to {{site.data.keyword.Bluemix}}, you can upload your ap
 Before you begin, you must:
   1. Install the {{site.data.keyword.Bluemix}} command line interface.
 
-  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/btn_bx_commandline.svg" alt="Download {{site.data.keyword.Bluemix}} command line interface" /> </a> 
+  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/btn_bx_commandline.svg" alt="Download {{site.data.keyword.Bluemix}} command line interface" /> </a>
 
   2. Connect to {{site.data.keyword.Bluemix}}.
 
@@ -51,10 +51,7 @@ When a **bluemix app push** command is issued, the command line interface provid
 
   **Tip:** When you use the **bluemix app push** command, the command copies all of the files and directories from your current directory to Bluemix. Ensure that you have only the required files in your application directory.
 
-  
+
   2. If you change your application, you can upload those changes by entering the `bluemix app push` command again. The command uses your previous options and your responses to the prompts to update any running instances of your application with the new bits of code.
 
 {{site.data.keyword.Bluemix}} CLI bundled a cf cli in its installation. `bluemix app push` command acutually invokes `cf push` to upload and deploy your application to {{site.data.keyword.Bluemix_notm}}. See [cf commands](/docs/cli/reference/cfcommands/index.html) for more information about cf push. See [Using community buildpacks](/docs/cfapps/byob.html) for information about buildpacks.
-
-
-**Tip:** You can also upload or deploy an application from DevOps Services. See [Developing a {{site.data.keyword.Bluemix_notm}} application in Node.js with the Web IDE](https://hub.jazz.net/tutorials/devopsweb/){: new_window}.

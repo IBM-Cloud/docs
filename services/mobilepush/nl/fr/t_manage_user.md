@@ -61,7 +61,7 @@ Utilisez les API suivantes pour l'enregistrement des notifications de type {{sit
 ```
 // Enregistrement de l'appareil pour notification push avec l'ID utilisateur
 var options = {"userId": "Your User Id value"};
-BMSPush.registerDevice(options,success, failure);
+BMSPush.registerDevice(options,success, failure); 
 ```
 	{: codeblock}
 

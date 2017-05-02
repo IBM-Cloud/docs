@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-04-13"
 
 
 ---
@@ -45,10 +45,10 @@ You might be wondering what is different in the Standard account as compared to 
 |The level of {{site.data.keyword.Bluemix_notm}} Support stays the same. |
 {:caption="Table 2. What's not changing" caption-side="top"}
 
-**Note:** If your Trial account doesn't convert, you will see a message that explains why. You might have more than one organization in your existing Trial account or apps that cannot be transferred. You can take the appropriate action and then try to convert the account again.
+**Note**: If your Trial account doesn't convert, you will see a message that explains why. You might have more than one organization in your existing Trial account or apps that cannot be transferred. You can take the appropriate action and then try to convert the account again.
 
 When you are signed up for a Standard account, you can invite team members to collaborate in your organization and spaces, view your usage, create spaces, update your account profile, and manage your organization. For more 
-information, see [Setting up your account](/docs/admin/adminpublic.html#account).
+information, see [Managing your account](/docs/admin/adminpublic.html#account).
 
 ## Lite plans
 {: #liteplans}
@@ -82,8 +82,8 @@ When quota limits are reached, your application is stopped or your service is di
 
 You can provision 1 instance per Lite plan. 
 
-**Note:** These limitations apply to the Standard account only. At any time, you can upgrade to a Pay-As-You-Go or a Subscription billing account. You pay only for what you use beyond the free allowances. For more information about Pay-As-You-Go and Subscription 
-accounts, see [How you are billed](/docs/pricing/index.html#pay-accounts).
+**Note**: These limitations apply to the Standard account only. At any time, you can upgrade to a Pay-As-You-Go or a Subscription billing account. You pay only for what you use beyond the free allowances. For more information about Pay-As-You-Go and Subscription 
+accounts, see [Account types](/docs/pricing/index.html#pay-accounts).
 
 ## Development activity
 {: #devactivity}
@@ -107,7 +107,7 @@ To help Standard account users best manage their resources, we have built a coup
   * cf enable-ssh
   * cf disable-ssh
 
- **Note** If your app is already ssh enabled, the `cf enable-ssh` and `cf disable-sh` commands will not wake up your app. 
+ **Note**: If your app is already ssh enabled, the `cf enable-ssh` and `cf disable-sh` commands will not wake up your app. 
 
  * Your Lite plan services will be deleted if there isn’t any activity on them for 30 days. Then, you don’t have to delete inactive instances when you want to create a new instance. Right now only the Internet of Things Platform service is using this feature. 
  

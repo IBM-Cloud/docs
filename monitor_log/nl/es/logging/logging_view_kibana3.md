@@ -100,7 +100,7 @@ Para obtener más información sobre cómo personalizar un panel de control de K
 
 En {{site.data.keyword.Bluemix}}, puede analizar datos utilizando el panel de control predeterminado de Kibana que se proporciona por recurso o por espacio de {{site.data.keyword.Bluemix}}. De forma predeterminada, estos paneles de control muestran todos los datos disponibles correspondientes a las últimas 24 horas. Sin embargo, puede restringir la información mostrada a través del panel de control. Puede añadir consultas y filtros a un panel de control predeterminado y luego guardarlo para volverlo a utilizar en el futuro.
 
-En un panel de control, puede añadir varias consultas y filtros. Una consulta defina un subconjunto de las entradas de registro.  Un filtro ajusta la selección de datos mediante la inclusión o exclusión de información. 
+En un panel de control, puede añadir varias consultas y filtros. Una consulta define un subconjunto de las entradas de registro.  Un filtro ajusta la selección de datos mediante la inclusión o exclusión de información. 
 
 Para las apps Cloud Foundry, la lista siguiente muestra ejemplos de cómo filtrar datos:
 * Si está buscando información en los registros que incluya términos clave, puede crear consultas para filtrar por esos términos. Con Kibana, puede comparar consultas visualmente en el panel de control. Para obtener más información, consulte [Filtrado de registros de la app Cloud Foundry con consultas en Kibana](kibana3/logging_kibana_query.html#logging_kibana_query).
@@ -296,7 +296,7 @@ Puede configurar un panel de control de Kibana para que muestre los campos sigui
 <dd>Respuestas registradas procedentes de la célula de Diego cuando un usuario accede a un contenedor de app mediante el mandato **cf ssh**.</dd>
 
 <dt><strong>STG</strong></dt>
-<dd>Respuestas registradas procedentes de la célula de Diego o de Droplet Execution Agent cuando el app se transfiere o se vuelve a transferir.</dd>
+<dd>Respuestas registradas procedentes de la célula de Diego o de Droplet Execution Agent cuando la app se transfiere o se vuelve a transferir.</dd>
 </dl>
 </dd>
 

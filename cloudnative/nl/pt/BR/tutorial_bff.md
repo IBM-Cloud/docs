@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -16,6 +16,8 @@ lastupdated: "2017-03-17"
 
 O tutorial de ponta a ponta a seguir percorre as etapas para criar um projeto por meio do Iniciador BFF Basic, incluindo as ferramentas que devem ser instaladas e, subsequentemente, as etapas para executar o código do projeto.
 
+Você tem a opção de criar um projeto usando o [{{site.data.keyword.dev_console}}](#create-devex) baseado na web ou por meio do [{{site.data.keyword.dev_cli_notm}}](#create-cli) orientado por comando.
+
 ## Instalando ferramentas do desenvolvedor
 {: #dev_tools}
 
@@ -27,7 +29,7 @@ Assegure-se de que você tenha instalado as [ferramentas do desenvolvedor de pr�
 
 1. Crie um projeto no {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}}.
 
-	1. Na página **Introdução** no {{site.data.keyword.dev_console}}, clique em **Criar projeto**.
+	1. Na página [**Introdução** ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/developer/getting-started/) no {{site.data.keyword.dev_console}}, clique em **Criar projeto**.
 
 		Como alternativa, clique em **Criar projeto** na página **Projetos**.
 
@@ -37,7 +39,7 @@ Assegure-se de que você tenha instalado as [ferramentas do desenvolvedor de pr�
 
 	4. Insira o nome do projeto. Para este tutorial, use `BFFProject`.   
 
-	5. Insira um nome do host. Para este tutorial, use `devhost`. 
+	5. Insira um nome do host exclusivo. Para este tutorial, use `devhost`. 
 
 	6. Selecione a plataforma da linguagem. Para este tutorial, use `Node`.
    
@@ -51,8 +53,7 @@ Assegure-se de que você tenha instalado as [ferramentas do desenvolvedor de pr�
 
    2. Insira o nome do serviço e clique em **Criar**.
 
-
-3. Gere seu código do projeto.
+3. Gere seu código do projeto:
 
 	1. Clique em **Obter o código** na página **Visão geral do projeto** para selecionar sua linguagem.
    
@@ -64,7 +65,15 @@ Assegure-se de que você tenha instalado as [ferramentas do desenvolvedor de pr�
 em **Fazer download do código** para fazer
 download do seu archive de projeto.
 
-4. Opcional: [atualize seu projeto](project_overview_page.html#update_language) para gerar uma nova linguagem.
+4. Comece a trabalhar com seu projeto transferido por download:
+
+	1. Expanda o arquivo arquivado.
+	
+	2. Navegue até o novo diretório de projeto.
+	
+	3. Use o {{site.data.keyword.dev_cli_notm}} para continuar.
+
+5. Opcional: [atualize seu projeto](project_overview_page.html#update_language) para gerar uma nova linguagem.
 
 
 ## Criando um projeto usando a {{site.data.keyword.dev_cli_notm}}
@@ -91,16 +100,9 @@ download do seu archive de projeto.
 
 5. Quando o `BFFProjectCLI` tiver sido salvo com sucesso, navegue para a pasta `BFFProjectCLI`.
 
-6. Nesse ponto será possível incluir seu próprio código, construir ou executar o projeto.
+6. Inclua seu próprio código e execute o projeto.
  
-	1. Construa seu projeto com o comando a seguir:
-   
-		```
-		bx dev build
-		```     
-		{: codeblock}
-  
-	2. Execute seu projeto com o comando a seguir:
+	1. Execute seu projeto com o comando a seguir:
 
  		```
 		bx dev run
@@ -128,20 +130,20 @@ download do seu archive de projeto.
   ```
   {: codeblock}
 
-3. É possível executar curl no servidor com `curl http://localhost:8080`
+3. É possível executar curl em seu servidor com `curl http://localhost:8080`.
 
 
 ### Usando o plug-in do Bluemix
 {: #using-blumix}
 
-1. Execute a compilação
+1. Execute a compilação:
 
 	```
 	bx dev run
 	```
 	{: codeblock}
 
-2. É possível executar curl no servidor com 
+2. É possível executar curl em seu servidor com:
   
 	```
 	curl http://localhost:8080

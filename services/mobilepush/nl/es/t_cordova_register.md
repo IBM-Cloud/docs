@@ -21,7 +21,7 @@ Copie y pegue el siguiente fragmento de código en la aplicación de Cordova par
 
 ## Android
 {: #cordova_register_android}
-Android no utiliza el parámetro settings. Si solo está creando una aplicación Android, pase un objeto vacío; por ejemplo:
+Android no utiliza el parámetro settings. Si solo está creando una app Android, pase un objeto vacío; por ejemplo:
 
 ```
 	MFPPush.registerDevice({}, success, failure);

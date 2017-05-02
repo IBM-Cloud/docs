@@ -11,9 +11,11 @@ lastupdated: "2017-03-17"
 {:codeblock:.codeblock}
 
 # Inicializando BMSClient
+
 {: #sdk_BMSClient}
 
 O `BMSCore` fornece a infraestrutura HTTP que os outros SDKs do cliente de serviços móveis do {{site.data.keyword.Bluemix}} usam para se comunicarem com os seus serviços do {{site.data.keyword.Bluemix_notm}} correspondentes.
+
 
 
 ## Inicializando seu aplicativo Android
@@ -38,7 +40,8 @@ para seu projeto.
   ```
   {: codeblock}
 
-  Deve-se inicializar o `BMSClient` com o parâmetro **bluemixRegion**. No inicializador, o valor **bluemixRegion** especifica qual implementação do {{site.data.keyword.Bluemix_notm}} está sendo usada, por exemplo, `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` ou `BMSClient.REGION_SYDNEY`.
+  Deve-se inicializar o `BMSClient` com o
+parâmetro **bluemixRegion**. No inicializador, o valor **bluemixRegion** especifica qual implementação do {{site.data.keyword.Bluemix_notm}} está sendo usada, por exemplo, `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` ou `BMSClient.REGION_SYDNEY`.
 
 
 ## Inicializando seu aplicativo iOS
@@ -46,9 +49,7 @@ para seu projeto.
 
 É possível usar o [CocoaPods](https://cocoapods.org){: new_window} ou o [Carthage](https://github.com/Carthage/Carthage){: new_window} para obter o pacote `BMSCore`.
 
-1. Para instalar o `BMSCore` usando o
-CocoaPods, inclua as linhas a seguir em seu Podfile. Se seu projeto
-ainda não tiver um Podfile, use o comando `pod init`.
+1. Para instalar o `BMSCore` usando o CocoaPods, inclua as linhas a seguir em seu Podfile. Se seu projeto ainda não tiver um Podfile, use o comando `pod init`.
 
   ```Swift
   use_frameworks!

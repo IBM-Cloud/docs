@@ -10,9 +10,9 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# 푸시 알림 모니터링 
+# Push Notifications 모니터링 
 {: #monitor-notifications}
-마지막 업데이트 날짜: 2017년 1월 16일
+마지막 업데이트 날짜: 2017년 4월 12일
 {: .last-updated}
 
 
@@ -27,7 +27,7 @@ IBM {{site.data.keyword.mobilepushshort}} 서비스가 확장되어 이제 사�
 
 ![등록된 디바이스 보고서](images/monitoring_devices.jpg)
 
-Android SDK를 업데이트하여 알림 정보를 모니터하는 방법은 [Android 디바이스에서 푸시 알림 모니터링](c_android_enable.html#android_monitor)을 참조하십시오. 
+알림 정보를 모니터하기 위한 Android SDK 업데이트 방법에 대한 정보는 [모바일 디바이스의 알림 사용](c_enable_push.html)에서 'Android 디바이스의 푸시 알림 모니터링' 주제를 참조하십시오. 
 
 
  

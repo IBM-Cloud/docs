@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-24"
+lastupdated: "2017-4-26"
 
 ---
 
@@ -16,8 +16,6 @@ lastupdated: "2017-4-24"
 
 You can configure tool integrations that support development, deployment, and operations tasks while you create an open toolchain, or you can add and configure tool integrations to customize an existing toolchain.  
 {:shortdesc}
-
-**Important:** On {{site.data.keyword.Bluemix_notm}} Public, toolchains are available in the US South region only.
 
 The tool integrations that are available to add and configure for your toolchain are different depending on whether you are using toolchains on {{site.data.keyword.Bluemix_notm}} Public or {{site.data.keyword.Bluemix_notm}} Dedicated. If you are using toolchains on {{site.data.keyword.Bluemix_notm}} Dedicated, the tool integrations that are available to you depend on how {{site.data.keyword.contdelivery_full}} was set up on your specific environment.
 

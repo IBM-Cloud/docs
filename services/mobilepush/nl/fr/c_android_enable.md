@@ -67,7 +67,8 @@ dependencies {
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 ```
 	{: codeblock}
-Pour plus d'informations sur les autorisations Android, visitez le site [Android permissions ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](http://developer.android.com/guide/topics/security/permissions.html){: new_window}.
+ Pour plus d'informations sur les autorisations Android, visitez le site [Android permissions ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](http://developer.android.com/guide/topics/security/permissions.html){: new_window}.
+
 4. Ajoutez les paramètres d'intention de notification pour l'activité. Ce paramètre démarre l'application lorsque l'utilisateur clique sur la notification reçue dans la zone de notification.
 ```
 	<intent-filter>
@@ -113,7 +114,7 @@ Pour configurer le projet FCM et obtenir vos données d'identification, consulte
 3. Sélectionnez l'icône **ADD APP** ou **Add Firebase to your Android app** dans l'onglet General du volet Your apps.
     ![Ajout de Firebase à Android](images/FCM_5.jpg)
 
-4. Dans la fenêtre Add Firebase to your Android app, ajoutez **com.ibm.mobilefirstplatform.clientsdk.android.push** en tant que nom du package. La zone App nickname est facultative. Cliquez sur **Ajouter une application**.
+4. Dans la fenêtre Add Firebase to your Android app, ajoutez **com.ibm.mobilefirstplatform.clientsdk.android.push** en tant que nom du package. La zone App nickname est facultative. Cliquez sur **Ajouter une application**. 
     ![Ajout de Firebase à votre fenêtre Android](images/FCM_1.jpg)
 
 5. Incluez le nom de package de votre application en l'entrant dans la fenêtre Add Firebase to your Android app. La zone App nickname est facultative. Cliquez sur **Ajouter une application**. 
@@ -235,7 +236,7 @@ protected void onPause() {
 2. Générez le projet et exécutez-le sur l'appareil ou l'émulateur. Quand la méthode onSuccess() pour le programme d'écoute des réponses dans la méthode register() est appelée, cela signifie que l'appareil a été enregistré auprès du service {{site.data.keyword.mobilepushshort}}. A ce stade, vous pouvez envoyer un message comme décrit dans la rubrique Envoi de notifications push de base.
 3. Vérifiez que vos appareils ont reçu votre notification. Si l'application se trouve au premier-plan, la notification est traitée par **MFPPushNotificationListener**. Si elle se trouve en arrière-plan, un message est affiché dans la barre de notification.
 
-## Suivi des notifications push sur les appareils Android 
+## Suivi des notifications push sur les appareils Android
 {: #android_monitor}
 
 Pour surveillance du statut actuel de la notification dans l'application, vous pouvez implémenter l'interface `com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationStatusListener` et définir la méthode onStatusChange(String messageId, MFPPushNotificationStatus status). 
@@ -338,14 +339,14 @@ La capture d'écran suivante présente une notification push qui s'exécute en a
 Vous pouvez personnaliser les paramètres de type {{site.data.keyword.mobilepushshort}} pour l'envoi de notifications vers des appareils Android. Les options de personnalisation facultative suivantes sont prises en charge.
 ![Paramètres Android personnalisés](images/android_custom_settings.jpg)
 
-- **Touche de réduction** : des touches de réduction sont attachées aux notifications. Si plusieurs notifications arrivent séquentiellement avec la même touche de réduction quand l'appareil est hors ligne, elles sont réduites. Quand un appareil passe en ligne, il reçoit des notifications du serveur FCM/GCM et n'affiche que la dernière notification portant la même touche de réduction. Si aucune touche de réduction n'est définie, les nouveaux et les anciens messages sont stockés pour une distribution future.
+- **Clé de réduction** : des clés de réduction sont attachées aux notifications. Si plusieurs notifications arrivent séquentiellement avec la même clé de réduction quand l'appareil est hors ligne, elles sont réduites. Quand un appareil passe en ligne, il reçoit des notifications du serveur FCM/GCM et n'affiche que la dernière notification portant la même clé de réduction. Si aucune clé de réduction n'est définie, les nouveaux et les anciens messages sont stockés pour une distribution future.
 - **Son** : indique le clip audio à exécuter à réception d'une notification. Prend en charge le fichier par défaut ou utilise le nom de la ressource audio intégré dans l'application.
 - **Icône** : spécifie le nom de l'icône à afficher pour la notification. Assurez-vous de bien avoir placé l'icône dans le dossier res/drawable, avec l'application client.
 - **Priorité** : spécifie les options d'affectation de la priorité de distribution aux messages. Une priorité `élevée` ou `max` générera des notifications d'alerte, tandis que des messages dont la priorité est à `faible` ou `par défaut` n'ouvriront pas les connexions réseau sur un appareil en veille. Pour les messages dont l'option a été définie à `min`, une notification silencieuse sera émise.
 - **Visibilité** : vous pouvez choisir de définir l'option de visibilité de notification sur `public` ou `privé`. L'option `privé` limite l'affichage public ; vous pouvez choisir de l'activer si votre appareil est sécurisé avec un code ou un numéro confidentiel et que le paramètre de notification est défini sur "Masquer le contenu sensible de la notification". Quand la visibilité est configurée sur `privé`, une zone "occulter" doit être mentionnée. Seul le contenu spécifié dans la zone "occulter" s'affichera sur l'écran verrouillé et sécurisé de l'appareil. L'option `public` permet une lecture libre des notifications.
 - **Durée de vie** : cette valeur est définie en secondes. Si ce paramètre n'est pas spécifié, le serveur FCM/GCM stocke le message pendant quatre semaines et tente de le distribuer. La validité expire après quatre semaines. La plage des valeurs possibles va de 0 à 2419200 secondes.
 - ****Retarder si inactif : en définissant cette valeur à `true`, vous demandez au serveur FCM/GCM de ne pas distribuer de notification si le serveur est inactif. Définissez cette valeur à `false` pour garantir la distribution de la notification même si l'appareil est en veille.
-- **Sync**: quand cette option est définie à `true`, les notifications figurant sur tous vos appareils enregistrés sont synchronisés. Si l'utilisateur identifié par un nom d'utilisateur qui lui est propre dispose de plusieurs appareils avec la même application installée, la lecture de la notification sur un appareil garantit une suppression des notifications sur les autres appareils. Vous devez vérifier que vous êtes enregistré auprès du service {{site.data.keyword.mobilepushshort}} avec le bon ID utilisateur pour que cette option fonctionne.
+- **Sync**: quand cette option est définie à `true`, les notifications figurant sur tous vos appareils enregistrés sont synchronisées. Si l'utilisateur identifié par un nom d'utilisateur qui lui est propre dispose de plusieurs appareils avec la même application installée, la lecture de la notification sur un appareil garantit une suppression des notifications sur les autres appareils. Vous devez vérifier que vous êtes enregistré auprès du service {{site.data.keyword.mobilepushshort}} avec le bon ID utilisateur pour que cette option fonctionne.
 - **Contenu supplémentaire** : spécifie les valeurs de contenu personnalisées pour vos notifications.
 
 

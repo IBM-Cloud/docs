@@ -226,6 +226,6 @@ in primo piano su un dispositivo Android e iOS.
 Dopo che hai correttamente configurato le notifiche di base, puoi configurare le notifiche
         basate sulle tag e le opzioni avanzate.
 
-Aggiungi queste funzioni del servizio Push Notifications alla tua applicazione.
+Aggiungi queste funzioni del Servizio Push Notifications alla tua applicazione.
 Per utilizzare le notifiche basate sulle tag, vedi [Notifiche basate sulle tag](c_tag_basednotifications.html).
 Per utilizzare le opzioni di notifica avanzate, vedi [Notifiche di push avanzate](t_advance_notifications.html).

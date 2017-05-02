@@ -71,7 +71,7 @@ The {{site.data.keyword.Bluemix_notm}} development and support teams actively mo
  
 
 
-## Viewing {{site.data.keyword.Bluemix_notm}} status
+## Viewing Bluemix status
 {: #viewing-bluemix-status}
 
 The {{site.data.keyword.Bluemix_notm}} Status page is the central place to find notifications and announcements about key events that are affecting the {{site.data.keyword.Bluemix_notm}} platform and the major services in {{site.data.keyword.Bluemix_notm}}.
@@ -170,7 +170,7 @@ You can open support tickets if you have a valid {{site.data.keyword.Bluemix_not
 
 If you have a {{site.data.keyword.Bluemix_notm}} account linked with a {{site.data.keyword.BluSoftlayer_full}} account, you can open support tickets for {{site.data.keyword.Bluemix_notm}} from the {{site.data.keyword.BluSoftlayer}} Customer Portal or from the {{site.data.keyword.Bluemix_notm}} console by using the Support widget. See [Opening a support ticket for linked accounts](#open-ticket-linked).
 
-### Contacting support for {{site.data.keyword.Bluemix_notm}} Public
+### Contacting support for Bluemix Public
 {: #contacting-bluemix-support}
 
 All customers of {{site.data.keyword.Bluemix_notm}} are provided with free technical support through the {{site.data.keyword.Bluemix_notm}} community or Stack Overflow.  In addition, different levels of support are provided to meet different customer needs. Refer to the following table to choose between the free, basic, standard, and premium support levels. 
@@ -215,7 +215,7 @@ All client support issues are documented in a support ticket. Each support ticke
 
 
 
-### Contacting support for {{site.data.keyword.Bluemix_notm}} Dedicated
+### Contacting support for Bluemix Dedicated
 {: #contacting-bluemix-support-dedicated}
 
 <!-- Michelle links to this anchor  -->
@@ -232,7 +232,7 @@ If you are a {{site.data.keyword.Bluemix_notm}} Dedicated customer, support is p
 <p>**Note**: At your request, a list of users in your org who can serve as contacts for support tickets can be displayed on the **Support** page in the {{site.data.keyword.Bluemix_notm}} console for your Dedicated environment.</p></li>
 </ul>
 
-### Contacting support for {{site.data.keyword.Bluemix_notm}} Local
+### Contacting support for Bluemix Local
 {: #contacting-bluemix-support-local}
 
 <!-- Michelle links to this anchor  -->
@@ -337,7 +337,7 @@ The scripts use the cf command line interface to extract the following informati
   * Provisioned services
 
 
-## National language support for {{site.data.keyword.Bluemix_notm}}
+## National language support for Bluemix
 {: #lang}
 
 {{site.data.keyword.Bluemix_notm}} supports national languages other than English. However, not all of the content that is provided with {{site.data.keyword.Bluemix_notm}} is translated.
@@ -359,7 +359,7 @@ The following table lists the supported national languages and language codes fo
 
 
 
-## Satisfaction surveys for {{site.data.keyword.Bluemix_notm}} support  
+## Satisfaction surveys for Bluemix support  
 {: #survey}
 
 IBM periodically sends surveys to {{site.data.keyword.Bluemix_notm}} customers to obtain their feedback on recent experiences with the customer support. The survey focuses on the support quality and the overall experience. IBM management reviews the survey results to improve the support experience. 

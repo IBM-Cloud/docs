@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -14,12 +14,15 @@ lastupdated: "2017-03-17"
 # 웹 기본 스타터의 엔드-투-엔드 튜토리얼
 {: #tutorial}
 
-다음 엔드-투-엔드 튜토리얼은 설치해야 하는 도구를 포함하여 웹 기본 스타터에서 프로젝트를 작성하는 단계를 안내하고, 이어서 프로젝트 코드를 실행하는 단계를 안내합니다. 
+다음의 엔드-투-엔드 튜토리얼에서는 웹 기본 스타터에서 프로젝트를 작성하는 단계를 안내합니다. 여기에는 전제조건 도구의 설치와 프로젝트 코드를 실행하는 단계가 포함됩니다. 
+
+웹 기반 [{{site.data.keyword.dev_console}}](#create-devex)을 사용하거나 명령어 방식 [{{site.data.keyword.dev_cli_notm}}](#create-cli)을 통해 프로젝트를 작성할 수 있습니다. 
+
 
 ## 개발자 도구 설치
 {: #dev_tools}
 
-[전제 조건 개발자 도구 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](get_code.html#prereq-dev-tools){: new_window}를 설치했는지 확인하십시오. 
+[전제조건 개발자 도구 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](get_code.html#prereq-dev-tools){: new_window}를 설치했는지 확인하십시오. 
 
 
 ## {{site.data.keyword.dev_console}}을 사용하여 프로젝트 작성
@@ -27,7 +30,7 @@ lastupdated: "2017-03-17"
 
 1. {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}}에서 프로젝트를 작성하십시오. 
 
-	1. {{site.data.keyword.dev_console}}의 **시작하기** 페이지에서 **프로젝트 작성**을 클릭하십시오. 
+	1. {{site.data.keyword.dev_console}}의 [**시작하기** ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.ng.bluemix.net/developer/getting-started/) 페이지에서 **프로젝트 작성**을 클릭하십시오. 
 
 		또는 **프로젝트** 페이지에서 **프로젝트 작성**을 클릭할 수 있습니다. 
 
@@ -37,7 +40,7 @@ lastupdated: "2017-03-17"
 
 	4. 프로젝트 이름을 입력하십시오. 이 튜토리얼의 경우 `WebBasicProject`를 사용하십시오.    
 
-	5. 호스트 이름을 입력하십시오. 이 튜토리얼의 경우 `devhost`를 사용하십시오.  
+	5. 고유 호스트 이름을 입력하십시오. 이 튜토리얼의 경우 `devhost`를 사용하십시오.  
 
 	6. 언어 플랫폼을 선택하십시오. 이 튜토리얼의 경우 `Swift`를 사용하십시오. 
    
@@ -51,7 +54,6 @@ lastupdated: "2017-03-17"
 
    2. 서비스 이름을 입력하고 **작성**을 클릭하십시오. 
 
-
 3. 프로젝트 코드를 생성하십시오. 
 
 	1. **프로젝트 개요** 페이지에서 **코드 가져오기**를 클릭하여 언어를 선택하십시오. 
@@ -62,13 +64,21 @@ lastupdated: "2017-03-17"
    
 	3. 프로젝트 코드 생성이 완료되면 **코드 다운로드**를 클릭하여 프로젝트 아카이브를 다운로드하십시오.
 
-4. 선택사항: 새 언어를 생성하도록 [프로젝트를 업데이트하십시오](project_overview_page.html#update_language). 
+4. 다운로드된 프로젝트 관련 작업을 시작하십시오. 
+
+	1. 아카이브된 파일을 펼치십시오. 
+	
+	2. 새 프로젝트 디렉토리로 이동하십시오. 
+	
+	3. {{site.data.keyword.dev_cli_notm}}을 사용하여 계속 진행하십시오. 
+
+5. 선택사항: 새 언어를 생성하도록 [프로젝트를 업데이트하십시오](project_overview_page.html#update_language). 
 
 
 ## {{site.data.keyword.dev_cli_notm}}을 사용하여 프로젝트 작성
 {: #create-cli}
 
-1. [{{site.data.keyword.dev_cli_short}}](dev_cli.html)을 설치했는지 확인하십시오. 
+1. [{{site.data.keyword.dev_cli_short}}](dev_cli.html)을 설치해야 합니다. 
 
 2. 터미널 프롬프트에서 원하는 로컬 디렉토리로 이동하여 다음 명령을 실행하십시오. 
   
@@ -88,18 +98,11 @@ lastupdated: "2017-03-17"
 
 4. 프로젝트에 서비스를 추가하려면 질문 프롬프트에서 `y`를 입력하고 나머지 질문에 응답하십시오. 
 
-5. `WebBasicProjectCLI` 프로젝트가 저장되면 `WebBasicProjectCLI` 폴더로 이동하십시오. 
+5. `WebBasicProjectCLI` 프로젝트가 정상적으로 저장되면 `WebBasicProjectCLI` 폴더로 이동하십시오. 
 
-6. 고유 코드를 추가하거나, 프로젝트를 빌드하거나, 프로젝트를 실행하십시오. 
+6. 자체 코드를 추가하고 프로젝트를 실행하십시오. 
  
-	1. 다음 명령을 사용하여 프로젝트를 빌드하십시오. 
-   
-		```
- 		bx dev build
- 		```     
-		{: codeblock}
-
-	2. 다음 명령을 사용하여 프로젝트를 실행하십시오. 
+	1. 다음 명령을 사용하여 프로젝트를 실행하십시오. 
  
 		```
 		bx dev run
@@ -185,7 +188,7 @@ lastupdated: "2017-03-17"
 
 2. 활성 대상을 실행 파일로 변경하십시오. 
 
-	다음, 프로젝트를 Xcode로 열고 활성 대상이 실행 파일인지 확인하십시오. 옵션 키를 누른 상태로 드롭 다운 메뉴를 클릭하여 원하는 활성 실행 파일을 선택할 수 있습니다. 
+	그 다음에는 Xcode에서 프로젝트를 열고 활성 대상이 실행 파일인지 확인하십시오. 옵션 키를 누른 채로 드롭 다운 메뉴를 클릭하여 원하는 활성 실행 파일을 선택할 수 있습니다. 
 
 3. **실행**을 누르십시오. 
 

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2017
-lastupdated: "2017-3-7"
+lastupdated: "2017-4-6"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-3-7"
 {:pre: .pre}
 
 
-# Getting started with {{site.data.keyword.uccr_short}} (Experimental)
+# Getting started with Continuous Release (Experimental)
 
 {: #gettingstartedtemplate}
 

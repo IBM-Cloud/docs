@@ -12,7 +12,7 @@ copyright:
 
 # Push-Benachrichtigungen überwachen 
 {: #monitor-notifications}
-Letzte Aktualisierung: 16. Januar 2017
+Letzte Aktualisierung: 12. April 2017
 {: .last-updated}
 
 
@@ -27,7 +27,7 @@ Verwenden Sie zum Generieren von Berichten für alle Ihre registrierten Geräte 
 
 ![Bericht über registrierte Geräte](images/monitoring_devices.jpg)
 
-Informationen zum Aktualisieren Ihres Android-SDK für die Überwachung Ihrer Benachrichtigungsinformationen finden Sie in [Push-Benachrichtigungen in Android-Geräten überwachen](c_android_enable.html#android_monitor).
+Informationen zum Aktualisieren Ihres Android-SDK für die Überwachung Ihrer Benachrichtigungsinformationen finden Sie im Abschnitt 'Push-Benachrichtigungen in Android-Geräten überwachen' in [Benachrichtigungen für mobile Geräte aktivieren](c_enable_push.html).
 
 
  

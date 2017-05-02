@@ -61,19 +61,19 @@ copyright:
 
 ```
 // Get a list of available tags to which the device can subscribe
-	push.getTags(new MFPPushResponseListener<List<String>>(){
-    @Override
-    public void onSuccess(List<String> tags){
-    updateTextView("Retrieved available tags: " + tags);
-    System.out.println("Available tags are: "+tags);
-    availableTags = tags;
-    subscribeToTag();
-     }
-    @Override
-    public void onFailure(MFPPushException ex){
-     updateTextView("Error getting available tags.. " + ex.getMessage());
+push.getTags(new MFPPushResponseListener<List<String>>(){
+  @Override
+  public void onSuccess(List<String> tags){
+  updateTextView("Retrieved available tags: " + tags);
+  System.out.println("Available tags are: "+tags);
+  availableTags = tags;
+  subscribeToTag();
+   }
+  @Override
+  public void onFailure(MFPPushException ex){
+   updateTextView("Error getting available tags.. " + ex.getMessage());
   }
-})  
+   })  
 ```
 	{: codeblock}
 
@@ -82,16 +82,16 @@ copyright:
 ```
 // Get a list of tags that to which the device is subscribed.
 push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
-    @Override
-    public void onSuccess(List<String> tags) {
-    updateTextView("Retrieved subscriptions : " + tags);
-    System.out.println("Subscribed tags are: "+tags);
-    subscribedTags = tags;
-    subscribeToTag();
-    }
-    @Override
-    public void onFailure(MFPPushException ex) {
-         updateTextView("Error getting subscriptions.. " + ex.getMessage());
+  @Override
+  public void onSuccess(List<String> tags) {
+  updateTextView("Retrieved subscriptions : " + tags);
+  System.out.println("Subscribed tags are: "+tags);
+  subscribedTags = tags;
+  subscribeToTag();
+  }
+  @Override
+  public void onFailure(MFPPushException ex) {
+       updateTextView("Error getting subscriptions.. " + ex.getMessage());
   }
 })
 	```
@@ -131,18 +131,18 @@ BMSPush.retrieveSubscriptions(function(tags) {
 デバイスがサブスクライブする使用可能なタグのリストを取得し、デバイスをサブスクライブできる対象として使用可能なタグのリストを取得するには、Swift モバイル・アプリケーションに以下のコード・スニペットをコピーします。
 ```
 //Get a list of available tags to which the device can subscribe
-	push.retrieveAvailableTagsWithCompletionHandler({ (response, statusCode, error) -> Void in
-    if error.isEmpty 
-		{
-        print( "Response during retrieve tags : \(response)")
+push.retrieveAvailableTagsWithCompletionHandler({ (response, statusCode, error) -> Void in
+  if error.isEmpty
+	{
+     print( "Response during retrieve tags : \(response)")
      print( "status code during retrieve tags : \(statusCode)")
       }
     else
 	{
     print( "Error during retrieve tags \(error) ")
     Print( "Error during retrieve tags \n  - status code: \(statusCode) \n Error :\(error) \n")
-    	}
-		}
+    }
+	}
 ```
 		{: codeblock}
 
@@ -326,8 +326,8 @@ bmsPush.subscribe(tagsArray,function(response) {
 
 ```
 var tagsArray = ["tag1", "Tag2"]
-  bmsPush.unSubscribe(tagsArray,function(response) {
-  alert(response.response)
+ bmsPush.unSubscribe(tagsArray,function(response) {
+ alert(response.response)
 })
 ```
 	{: codeblock}

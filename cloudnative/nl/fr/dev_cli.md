@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}  
@@ -14,13 +14,13 @@ lastupdated: "2017-03-17"
 # {{site.data.keyword.dev_cli_short}}
 {: #developercli}	
 
-Le plug-in {{site.data.keyword.dev_cli_long}} fournit une approche pilotée par commande extensible pour créer, développer et déployer un projet Web avec le plug-in `dev`. Il est idéal pour les développeurs qui souhaitent utiliser un contrôle par ligne de commande tout en développant des applications de microservice de bout en bout.
+Le plug-in {{site.data.keyword.dev_cli_long}} fournit une approche pilotée par commande extensible pour créer, développer et déployer un projet Web avec le plug-in `dev`. Il est idéal pour les développeurs qui souhaitent utiliser un contrôle par ligne de commande lors du développement d'applications de microservice de bout en bout.
 
 {: shortdesc}
 
-Le plug-in {{site.data.keyword.dev_cli_notm}} utilise deux conteneurs pour faciliter la génération et le test de votre application. Le premier est le conteneur tools qui contient les utilitaires nécessaires pour générer et tester votre application. Le fichier Dockerfile pour ce conteneur est défini par le paramètre [dockerfile-tools](#command-parameters). Considérez-le comme un conteneur de développement puisqu'il contient les outils normalement utilisés pour le développement d'un environnement d'exécution particulier.
+Le plug-in {{site.data.keyword.dev_cli_notm}} utilise deux conteneurs pour faciliter la génération et le test de votre application. Le premier est le conteneur tools, qui contient les utilitaires nécessaires pour générer et tester votre application. Le fichier Dockerfile pour ce conteneur est défini par le paramètre [dockerfile-tools](#command-parameters). Considérez-le comme un conteneur de développement puisqu'il contient les outils normalement utilisés pour le développement d'un environnement d'exécution particulier.
 
-Le second conteneur est le conteneur run. La forme de ce conteneur permet un déploiement pour utilisation, dans {{site.data.keyword.Bluemix}}, par exemple. En conséquence, ce conteneur dispose généralement d'un point d'entrée défini qui démarre votre application. Quand vous choisissez d'exécuter votre application via le plug-in {{site.data.keyword.dev_cli_short}}, ce conteneur est utilisé.Le fichier Dockerfile pour ce conteneur est défini par le paramètre [dockerfile-run](#run-parameters).
+Le second conteneur est le conteneur run. La forme de ce conteneur permet un déploiement pour utilisation, dans {{site.data.keyword.Bluemix}}, par exemple. En conséquence, ce conteneur dispose généralement d'un point d'entrée défini qui démarre votre application. Quand vous choisissez d'exécuter votre application via le plug-in {{site.data.keyword.dev_cli_short}}, ce conteneur est utilisé. Le fichier Dockerfile pour ce conteneur est défini par le paramètre [dockerfile-run](#run-parameters).
 
 
 ## Ajout du plug-in {{site.data.keyword.dev_cli_notm}}
@@ -30,7 +30,7 @@ Le second conteneur est le conteneur run. La forme de ce conteneur permet un dé
 ### Prérequis
 {: #prereq}
 
-Quelques prérequis sont nécessaires pour explorer complètement et utiliser correctement le plug-in {{site.data.keyword.dev_cli_short}}, puisqu'il est hautement extensible et vous permet de tirer parti de technologies complémentaires gratuites.
+Quelques prérequis vous permettent d'explorer complètement et d'utiliser correctement le plug-in {{site.data.keyword.dev_cli_short}}, puisqu'il est hautement extensible et vous permet de tirer parti d'un plus grand nombre de technologies complémentaires gratuites.
 
 1. Installez l'[interface de ligne de commande Cloud Foundry![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/cloudfoundry/cli#getting-started).
 
@@ -38,38 +38,27 @@ Quelques prérequis sont nécessaires pour explorer complètement et utiliser co
 
 3. Obtenez un ID [{{site.data.keyword.Bluemix_notm}}](https://www.bluemix.net).
 
-4. Facultatif : si vous prévoyez d'exécuter et de déboguer des applications localement, vous devez aussi installer [Docker ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://www.docker.com/get-docker) (requis uniquement pour les projets non mobiles).
+4. Si vous prévoyez d'exécuter et de déboguer des applications localement, vous devez aussi installer [Docker ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://www.docker.com/get-docker). L'installation de Docker est requise uniquement pour les projets non mobiles.
 
-
-### Installation
-{: #installation}
-
-1. Installez le plug-in [{{site.data.keyword.dev_cli_short}} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in){: new_window} en exécutant la commande suivante :
- 
-	```
-	bx plugin install dev -r Bluemix
-	```
-	{: codeblock}
-
-2. 	Validez l'aboutissement de l'installation en exécutant la commande suivante :  
- 
-	```
-	bx dev
-	```
-	{: codeblock}
-	
 
 ### Avant de commencer
 {: #before-install}
+
+1. Connectez-vous à un noeud final d'API dans votre région [{{site.data.keyword.Bluemix_notm}}](/docs/overview/whatisbluemix.html#ov_intro_reg). Entrez, par exemple, la commande suivante pour vous connecter à la région {{site.data.keyword.Bluemix_notm}} Sud des Etats-Unis :
+
+	```
+	bx api https://api.ng.bluemix.net
+	```
+	{: codeblock}
 	
-1. Connectez-vous à {{site.data.keyword.Bluemix_notm}}.
+2. Connectez-vous à {{site.data.keyword.Bluemix_notm}} en fournissant votre ID et votre mot de passe IBM :
 
 	```
 	bx login
 	```
 	{: codeblock}
 	
-	**Remarque :** si vos données d'identification sont rejetées, vous utilisez peut-être un ID fédéré. Procédez comme suit pour vous authentifier via un ID fédéré.
+	**Remarque :** si vos données d'identification sont rejetées, vous utilisez peut-être un ID fédéré. Procédez comme suit pour vous authentifier en utilisant un ID fédéré.
 	
 	<!-- 
 	POINT TO BLUEMIX CLI LOG IN DOCUMENTATION !!!
@@ -89,6 +78,24 @@ Quelques prérequis sont nécessaires pour explorer complètement et utiliser co
 		{: codeblock}
 
 
+### Installation
+{: #installation}
+
+1. Installez le plug-in [{{site.data.keyword.dev_cli_short}} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in){: new_window} en exécutant la commande suivante :
+ 
+	```
+	bx plugin install dev -r Bluemix
+	```
+	{: codeblock}
+
+2. 	Validez l'aboutissement de l'installation en exécutant la commande suivante :  
+ 
+	```
+	bx dev
+	```
+	{: codeblock}
+
+
 ## Commandes
 {: #commands}
 
@@ -97,7 +104,7 @@ Utilisez les commandes décrites ci-après pour créer un projet, le déployer, 
 ### Commande build
 {: #build}
 
-Vous pouvez générer votre application en utilisant la commande `build`. L'élément de configuration `build-cmd-run` est utilisé pour générer l'application. Les commandes `test`, `debug` et `run` s'exécutent toutes de la même façon que cette commande dans leur fonctionnement normal, l'exécution de cette dernière avant ces commandes n'est pas donc pas nécessaire.
+Vous pouvez générer votre application en utilisant la commande `build`. L'élément de configuration `build-cmd-run` est utilisé pour générer l'application. Les commandes `test`, `debug` et `run` procédant toutes automatiquement à une génération, l'exécution explicite, au préalable, de la commande build n'est pas toujours nécessaire.
 
 Exécutez la commande suivante dans votre répertoire de projet actuel pour générer votre application :  
 
@@ -113,7 +120,7 @@ bx dev build
 ### Commande code
 {: #code}
 
-La commande `code` vous permet de télécharger le code d'application après le déploiement, afin de vous permettre de le réviser localement ou d'y apporter des modifications supplémentaires.
+Utilisez la commande `code` pour télécharger le code d'application après le déploiement, afin de pouvoir le réviser localement ou y apporter des modifications.
 
 Exécutez la commande suivante pour télécharger le code à partir du projet spécifié.
 
@@ -126,7 +133,7 @@ bx dev code <nomProjet>
 ### Commande create
 {: #create}
 
-La commande create crée un nouveau projet, vous invitant à entrer toutes les informations requises, dont la langue, le nom du projet et le type de modèle d'application. Le projet sera créé dans le répertoire actuel. 
+Cette commande crée un nouveau projet, vous invitant à entrer diverses informations, dont la langue, le nom du projet et le type de modèle d'application. Le projet est créé dans le répertoire actuel. 
 
 Pour créer un projet dans le répertoire de projet actuel et y associer des services, exécutez la commande suivante :
 
@@ -139,7 +146,7 @@ bx dev create
 ### Commande debug
 {: #debug}
 
-Vous pouvez déboguer votre application via la commande `debug`. Une génération est d'abord effectuée à partir du projet en utilisant l'élément de configuration `build-cmd-debug` comme instruction de génération. Un conteneur est ensuite démarré en exposant un ou plusieurs ports de débogage comme défini dans `container-port-map-debug`. Connectez votre outil de débogage favori au(x) port(s) puis déboguez votre application comme vous le faites normalement.
+Vous pouvez déboguer votre application via la commande `debug`. Une génération est d'abord effectuée à partir du projet en utilisant l'élément de configuration `build-cmd-debug` comme instruction de génération. Un conteneur est ensuite démarré qui fournit un ou plusieurs ports de débogage comme défini dans `container-port-map-debug`. Connectez votre outil de débogage favori au(x) port(s) puis déboguez votre application comme vous le faites normalement.
 
 **Limite** : les projets Swift ne sont pas actuellement disponibles pour le débogage.
 
@@ -161,9 +168,9 @@ Les paramètres suivants, qui sont réservés à la commande `debug`, facilitent
 ##### `container-port-map-debug`
 {: #port-map-debug}
 
-* Mappages de port pour le port de débogage. La première valeur est le port à utiliser dans le système d'exploitation hôte, la seconde est le port dans le conteneur (host:container).
+* Mappages de port pour le port de débogage. La première valeur est le port à utiliser dans le système d'exploitation hôte, la seconde est le port dans le conteneur [host-port:container-port].
 * Syntaxe : `bx dev debug container-port-map-debug [7777:7777]`
- 
+
 ##### `build-cmd-debug`
 {: #build-cmd-debug}
 
@@ -185,7 +192,7 @@ Pour plus d'informations sur le débogage d'une application locale, voir [Débog
 ### Commande delete
 {: #delete}
 
-Cette commande vous permet de supprimer des projets de votre espace {{site.data.keyword.Bluemix}}.
+Utilisez la commande `delete` pour supprimer des projets de votre espace {{site.data.keyword.Bluemix}}. Vous pouvez exécuter la commande sans paramètres pour répertorier les projets disponibles à supprimer. Le code de projet et les répertoires ne sont pas retirés de votre espace disque local.
 
 Exécutez la commande suivante pour supprimer votre projet depuis {{site.data.keyword.Bluemix}} :
 
@@ -195,7 +202,7 @@ bx dev delete <nomProjet>
 {: codeblock}
  
 
-**Remarque** : les services {{site.data.keyword.Bluemix}} ne sont **pas** retirés.
+**Remarque : **les services {{site.data.keyword.Bluemix}} ne sont **pas** retirés.
 
 
 ### Commande help
@@ -290,13 +297,13 @@ Les paramètres suivants, qui sont réservés à la commande `run`, facilitent l
 ##### `run-cmd`
 {: #run-cmd}
 
-* Paramètre facultatif utilisé pour exécuter le code dans le conteneur run. L'utilisation de ce paramètre est facultative si votre image démarre votre application.
+* Paramètre utilisé pour exécuter le code dans le conteneur run. Ce paramètre est facultatif si votre image démarre votre application.
 * Syntaxe : `bx dev run run-cmd [/the/run/command]`
 	
 ### Commande status
 {: #status}
 
-Vous pouvez effectuer une requête relative au statut des conteneurs utilisés par {{site.data.keyword.dev_cli_short}}, comme défini par `container-name-run` et `container-name-tools`. 
+Vous pouvez effectuer une requête relative au statut des conteneurs qui sont utilisés par {{site.data.keyword.dev_cli_short}}, comme défini par `container-name-run` et `container-name-tools`. 
 
 Exécutez la commande suivante dans votre répertoire de projet actuel pour vérifier le statut du conteneur :
 
@@ -312,7 +319,7 @@ bx dev status
 ### Commande stop
 {: #stop}
 
-Vous pouvez arrêter un conteneur via la commande `stop`. Le paramètre `container-name` vous permet de spécifier le conteneur à arrêter. Si rien n'est spécifié, la commande stop arrête le conteneur run comme défini par `container-name-run`. 
+Vous pouvez arrêter un conteneur via la commande `stop`. Utilisez le paramètre `container-name` pour spécifier le conteneur à arrêter. Si ce paramètre n'est pas spécifié, la commande stop arrête le conteneur run comme défini par le paramètre `container-name-run`. 
 
 Exécutez la commande suivante dans votre répertoire de projet actuel pour arrêter un conteneur :
 
@@ -350,53 +357,53 @@ bx dev test
 ## Paramètres pour les commandes build, debug, run et test
 {: #command-parameters}
 
-Les paramètres suivants, qui peuvent être associés aux commandes `build|debug|run|test`, sont spécifiables via une ligne de commande et/ou en mettant à jour directement le fichier `cli-config.yml` du projet. Des paramètres supplémentaires, disponibles pour les commandes [`debug`](#debug-parameters) et [`run`](#run-parameters), sont documentés dans  leurs sections respectives.
+Les paramètres suivants peuvent être utilisés avec les commandes `build|debug|run|test` ou en mettant à jour directement le fichier `cli-config.yml` du projet. Des paramètres supplémentaires sont disponibles pour les commandes [`debug`](#debug-parameters) et [`run`](#run-parameters).
 
-**Remarque** : les paramètres de commande entrés dans la ligne de commande sont prioritaires sur ceux du fichier de configuration `cli-config.yml`.
+**Remarque** : les paramètres de commande qui sont entrés dans la ligne de commande sont prioritaires sur ceux du fichier de configuration `cli-config.yml`.
 
-##### `container-name-tools`  
+### `container-name-tools`  
 {: #container-name-tools}
 
 * Nom de conteneur pour le conteneur tools.
 * Syntaxe : `bx dev <build|debug|run|test> container-name-tools [<demo-tools>]`
- 
-##### `host-path-tools`
+
+### `host-path-tools`
 {: #host-path-tools}
 
 * Emplacement sur l'hôte à partager pour les commandes build, debug, test.
 * Syntaxe : `bx dev <build|debug|run|test> host-path-tools [/path/to/build/tools]`
 
-##### `container-path-tools`
+### `container-path-tools`
 {: #container-path-tools}
 
 * Emplacement sur le conteneur pour les commandes build, debug, test.
 * Syntaxe : `bx dev <build|debug|run|test> container-path-tools [/path/for/build]`
 
-##### `container-port-map`
+### `container-port-map`
 {: #container-port-map}
 
-* Mappages de port pour le conteneur. La première valeur est le port à utiliser dans le système d'exploitation hôte, la seconde est le port dans le conteneur (host:container).
+* Mappages de port pour le conteneur. La première valeur est le port à utiliser dans le système d'exploitation hôte, la seconde est le port dans le conteneur [host-port:container-port].
 * Syntaxe : `bx dev <build|debug|run|test> container-port-map [8090:8090,9090,9090]`
 
-##### `dockerfile-tools`
+### `dockerfile-tools`
 {: #dockerfile-tools}
 
 * Fichier Docker pour le conteneur tools.
 * Syntaxe : `bx dev <build|debug|run|test> dockerfile-tools [path/to/dockerfile]`
 
-##### `image-name-tools`
+### `image-name-tools`
 {: #image-name-tools}
 
 * Image à créer depuis dockerfile-tools.
 * Syntaxe : `bx dev <build|debug|run|test> image-name-tools [path/to/image-name]`
 
-##### `build-cmd-run`
+### `build-cmd-run`
 {: #build-cmd-run}
 
 * Commande pour générer du code pour toute utilisation sauf DEBUG.
 * Syntaxe : `bx dev <build|debug|run|test> build-cmd-run [some.build.command]`
 
-##### `test-cmd`
+### `test-cmd`
 {: #test-cmd}
 
 * Commande pour tester le code du conteneur tools.

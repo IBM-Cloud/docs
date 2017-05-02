@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-01-09"
+lastupdated: "2017-03-29"
 
 
 ---
@@ -15,38 +15,18 @@ lastupdated: "2017-01-09"
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-<!-- staging only content beginning -->
+# Signing up for Bluemix
 
-# Setting up your account
-{: #account}
-
-Now that you've signed up for {{site.data.keyword.Bluemix_notm}}, you need to set up your account so that you can quickly move on to provisioning infrastructure or building applications.
+You can sign up for a {{site.data.keyword.Bluemix}} account by using an existing IBMid, by creating a new IBMid, or by using a federated ID. A federated ID is an ID within a company's domain that has been registered with IBM so that the domain and user credentials can be used to access IBM web applications.
 {:shortdesc}
 
-When you are first getting started with {{site.data.keyword.Bluemix_notm}}, you will want to set up your account profile, which includes uploading a profile image. You can also set up the organizations and spaces for your account, and invite team members to each of the orgs and spaces. 
+You can sign up for a {{site.data.keyword.Bluemix_notm}} account by using an existing IBMid, by creating a new IBMid, or by using a federated ID. A federated ID is an ID within a company's domain that has been registered with IBM so that the domain and user credentials can be used to access IBM web applications.  
 
-You can view details for each account that you own by clicking the **Account** link in the menu bar. These details include the associated billing information, usage information, a team directory of members, and all organizations that you own or manage for each account, 
+A federated ID can be used to sign up for {{site.data.keyword.Bluemix_notm}} only if your company has already worked with IBM to register.  Registering a company's domain with IBM enables users to log in to IBM products and services by using their existing company user credentials. Authentication is then handled by your company's identity provider. When you log in to {{site.data.keyword.Bluemix_notm}} with a federated ID, you are prompted to log in through your company's login page. For information about requesting to register your company or organization's domain with IBM, or for more information about the process, see [IBMid Enterprise Federation Adoption Guide ![External link icon](../icons/launch-glyph.svg)](https://ibm.box.com/v/IBMid-Federation-Guide){: new_window}. An IBM sponsor, such as an offering advocate or client advocate, is required when you request to register federated IDs.
 
-If you are an administrator for {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, see [Managing {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated](/docs/admin/index.html#mng) for details about managing your account by using the Administration page.
-
-You might also want to sign up for notifications, check out your support options so that you know where to get help, or even provide feedback to IBM.  
-
-- **Notifications** 
-  
-  Sign up to get notified for maintenance updates to the Public regions of the {{site.data.keyword.Bluemix_notm}} platform, and associated services, as well as incidents, security notifications, and other announcements. You can point your RSS feed reader at the RSS link on the [Bluemix status page ![External link icon](../icons/launch-glyph.svg)](http://ibm.biz/Bluemixstatus){: new_window} to be kept up to date on changes to {{site.data.keyword.Bluemix_notm}} Public.  For more details on setting notifications, see [Viewing Bluemix status](/docs/support/index.html#viewing-bluemix-status).
-
-- **Support options** 
-  
-  Check out your support options available so you'll know exactly where to go and what to do if you run into any problems. For more details on your support choices, see [Getting  customer support](/docs/support/index.html#getting-customer-support).
-
-- **Start coding** 
-  
-  Create your first application. Go out to the **Catalog** to review the variety of compute and services available to develop with and check out the boilerplates and sample applications that are available to give you a jump start in coding.
-
-- **Provide feedback on {{site.data.keyword.Bluemix_notm}}** 
-  
-  You can provide feedback on the product or the documentation. 
-  
-  To submit ideas for {{site.data.keyword.Bluemix_notm}} and services improvements, go to [IBM Cloud Ideas ![External link icon](../icons/launch-glyph.svg)](https://ibmcloud.ideas.aha.io){: new_window}. For more information on how to use the new idea portal, see [Think, write, submit: New ideas portal for IBM Cloud ![External link icon](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2016/10/05/think-write-submit/){: new_window}. 
-  
-  To provide feedback on the documentation, click the **Feedback** link on each page, or collaborate with us by clicking the **Edit in GitHub** link after the title. For more information on contributing to the docs, see [When it comes to docs, everyone can contribute in Bluemix ![External link icon](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2016/01/13/bluemix-docs-now-open-source-on-github/){: new_window}.
+| Sign up methods | Details |    
+|-----------------|---------|
+|Existing IBMid | If you already have an IBMid, sign up for {{site.data.keyword.Bluemix_notm}} with your existing credentials that you use for other IBM products and services. You are required to enter a phone number when signing up. |
+|New IBMid | If you don't yet have an IBMid, you can select to create one. The IBMid enables you to use one login user name for all IBM products and services that you use, including {{site.data.keyword.Bluemix_notm}}. You are required to enter your personal information including first and last name, phone number, and password for the new credentials. You can use this IBMid to log in when using other IBM products and services.  |
+|Federated ID | If your company has requested to register the user credentials from your company's domain with IBM, you can sign up for {{site.data.keyword.Bluemix_notm}} by using the credentials that you already use for your company's login. You are required to enter a phone number when signing up. |
+{:caption="Table 1. Sign up methods" caption-side="top"}

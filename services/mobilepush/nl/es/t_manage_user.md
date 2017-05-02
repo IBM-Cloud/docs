@@ -61,7 +61,7 @@ Utilice las siguientes API para registrarse para las {{site.data.keyword.mobilep
 ```
 // Registre el dispositivo para la Notificación Push con UserId
 var options = {"userId": "Your User Id value"};
-BMSPush.registerDevice(options,success, failure);
+BMSPush.registerDevice(options,success, failure); 
 ```
 	{: codeblock}
 
@@ -127,7 +127,7 @@ bmsPush.registerWithUserId("UserId", function(response) {
 ```
 	{: codeblock}
 
-## Aplicaciones y extensiones de Google Chrome
+## Apps y extensiones de Google Chrome
 {: web-register-new}
 
 Utilice las API siguientes para registrarse para las notificaciones basadas en userID. Inicialice el SDK con `app GUID`, `app Region` y `Client Secret`.

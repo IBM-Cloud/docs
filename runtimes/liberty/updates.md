@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-23"
+lastupdated: "2017-04-26"
 
 ---
 
@@ -14,8 +14,13 @@ lastupdated: "2017-03-23"
 
 ## A list of the latest updates in the Liberty buildpack.
 
-### March 14, 2017: Updated Liberty buildpack v3.8-20170308-1507
+### April 27, 2017: Updated Liberty buildpack v3.9-20170419-1403
+* The default Liberty runtime version `17.0.0.1` was updated to include [PI77770](http://www-01.ibm.com/support/docview.wss?uid=swg24043596), [PI77605](http://www-01.ibm.com/support/docview.wss?uid=swg1PI77605), [PI79275](http://www-01.ibm.com/support/docview.wss?uid=swg1PI79275), and PI77438 iFixes.
+* The monthly Liberty runtime version was updated to the [2017.3.0.0](https://developer.ibm.com/wasdev/blog/2017/03/14/beta-websphere-liberty-tools-march-2017/) release.
+* Memory Calculation was moved from staging to the start process, allowing for easier heap memory changes with the restart of an application.
+* The buildpack also provides updated versions of the agent for the [Auto-Scaling service](/docs/services/Auto-Scaling/index.html), and Extreme Scale Client. 
 
+### March 14, 2017: Updated Liberty buildpack v3.8-20170308-1507
 * The default Liberty runtime version was updated to the 17.0.0.1 release.
 * The default Liberty runtime also includes the PI75512 WebSockets iFix.
 * The monthly Liberty runtime version was updated to the [2017.2.0.0](https://developer.ibm.com/wasdev/blog/2017/02/17/beta-websphere-liberty-tools-february-2017/) release.

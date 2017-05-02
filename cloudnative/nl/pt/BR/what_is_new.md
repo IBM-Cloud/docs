@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -22,10 +22,10 @@ lastupdated: "2017-03-17"
 A atualização de março de 2017 do {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} introduziu as mudanças a seguir:
 
    * O painel do {{site.data.keyword.Bluemix_notm}} Mobile é agora o {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}.
-   * A criação do projeto foi projetada novamente para incluir tipos padrão de servidor de Web App, BFF e Microservice com suporte para Node.js, Java e Swift.
+   * A criação do projeto é reprojetada para incluir os tipos de padrão de servidor Web App, BFF e Microservice com suporte para Node.js, Java e Swift.
    * A integração com o serviço {{site.data.keyword.appid_full}} novo e melhorado fornece autenticação para projetos Móveis e da Web.
-   * Agora também é possível gerar SDKs para seus projetos usando o [plug-in do SDK Generator](sdk_cli.html). A geração de SDK no {{site.data.keyword.dev_console}} está disponível apenas para projetos móveis.
-   * Agora também é possível criar projetos usando a [{{site.data.keyword.dev_cli_short}}](dev_cli.html).
+   * Agora é possível gerar SDKs para seus projetos usando o [plug-in Gerador de SDK](sdk_cli.html). A geração de SDK no {{site.data.keyword.dev_console}} está disponível apenas para projetos móveis.
+   * Agora é possível criar projetos usando o [{{site.data.keyword.dev_cli_short}}](dev_cli.html).
 
 
 ## Novo a partir de janeiro de 2017
@@ -86,13 +86,14 @@ A atualização de outubro de 2016 do painel do {{site.data.keyword.Bluemix_notm
 {: #ui_builder notoc}
 
    * O recurso **{{site.data.keyword.mobilepushshort}}** é agora acessado a partir do projeto.
-   * A guia **Configurações do projeto** foi renomeada para a guia **Configurações**.
-   * A guia **Autenticação** foi renomeada para a guia **Acesso do usuário**.
+   * A guia **Configurações de projeto** é renomeada para **Configurações**.
+   * A guia **Autenticação** é renomeada para **Acesso do usuário**.
 
 
 ### Código
 {: #code notoc}
 
-   * O código gerado Objective-C e Swift para iOS agora usa CocoaPods para gerenciar dependências. Isso significa que você precisa instalar o CocoaPods. Para instalá-lo, execute `sudo gem install cocoapods`. Após a instalação do CocoaPods, execute `pod setup` para configurá-lo (se não estiver ainda). Por último, execute `pod install` para fazer download e instalar as dependências necessárias do projeto antes de abrir o arquivo `.xcworkspace` no Xcode. Detalhes adicionais estão disponíveis no arquivo `README.md` no archive de código transferido por download. Leia sobre [Ferramentas de pré-requisito do desenvolvedor](get_code.html#prereq-dev-tools) para obter mais informações.
+   * O código gerado Objective-C e Swift para iOS agora usa CocoaPods para gerenciar dependências. Isso significa que você precisa instalar o CocoaPods. Para instalá-lo, execute `sudo gem install cocoapods`. Após a instalação do CocoaPods, execute `pod setup` para configurá-lo (se não estiver ainda). Finalmente,
+execute `pod install` para fazer download e instalar as dependências do projeto antes de abrir seu arquivo `.xcworkspace` no Xcode. Detalhes adicionais estão disponíveis no arquivo `README.md` no archive de código transferido por download. Leia sobre [Ferramentas de pré-requisito do desenvolvedor](get_code.html#prereq-dev-tools) para obter mais informações.
 
 Verifique novamente várias vezes para se manter em dia com novas atualizações.

@@ -12,7 +12,7 @@ copyright:
 
 # Suivi des notifications Push 
 {: #monitor-notifications}
-Dernière mise à jour : 16 janvier 2017
+Dernière mise à jour : 12 avril 2017
 {: .last-updated}
 
 
@@ -29,7 +29,7 @@ Pour générer des rapports pour tous les appareils enregistrés, utilisez la m�
 
 ![Rapport Périphériques enregistrés](images/monitoring_devices.jpg)
 
-Pour plus d'informations sur la mise à jour de votre SDK Android pour surveillance des informations de notification, voir [Suivi des notifications push sur les appareils Android](c_android_enable.html#android_monitor).
+Pour plus d'informations sur la mise à jour de votre SDK Android pour surveillance des informations de notification, voir la rubrique "Suivi des notifications push" sur les appareils Android dans [Activation des notifications pour les appareils mobiles](c_enable_push.html).
 
 
  

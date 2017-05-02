@@ -91,6 +91,7 @@ commande suivante : **cordova plugin list**.
 	@executable_path/Frameworks
 	```
 	d. Supprimez la mise en commentaire des instructions d'importation Push suivantes dans votre en-tête de pontage. Accédez à *nom_votre_projet***/Plugins/ibm-mfp-core/Bridging-Header.h**
+
 	```
 	//#import <IMFPush/IMFPush.h>
 	//#import <IMFPush/IMFPushClient.h>
@@ -360,6 +361,7 @@ Envoi de notifications push de base.
 3. Vérifiez que vos appareils ont reçu votre notification.
 
 	La capture d'écran suivante présente une boîte d'alerte relative à une notification push s'exécutant au premier plan sur un appareil Android et iOS.
+
 	![Notification push qui s'exécute au premier plan sur un appareil Android](images/Android_Screenshot.jpg)
 
 	![Notification push qui s'exécute au premier plan sur un appareil iOS](images/iOS_Screenshot.jpg)

@@ -12,11 +12,11 @@ copyright:
 
 # 리치 미디어 알림 사용
 {: #interactive-notifications}
-마지막 업데이트 날짜: 2017년 1월 11일
+마지막 업데이트 날짜: 2017년 3월 9일
 {: .last-updated}
 
 
-iOS 10 이상에서 리치 미디어 {{site.data.keyword.mobilepushshort}}를 사용할 수 있습니다. 오디오, 동영상, GIF 및 이미지가 포함된 푸시 알림을 보낼 수 있습니다. 
+iOS 10 이상에서는 리치 미디어 {{site.data.keyword.mobilepushshort}}를 사용할 수 있습니다. 오디오, 동영상, GIF 및 이미지가 포함된 푸시 알림을 보낼 수 있습니다. 
 
 iOS 10에서 리치 푸시를 받을 애플리케이션을 설정하려면 다음 단계를 완료하십시오.  
 

@@ -37,4 +37,4 @@ cómo explorar el catálogo usando la herramienta de línea de mandatos.
 | [/whisk.system/watson-speechToText](./openwhisk_watson_speechtotext.html) | Paquete para convertir [habla en texto](https://www.ibm.com/watson/developercloud/speech-to-text.html) |
 | [/whisk.system/watson-textToSpeech](./openwhisk_watson_texttospeech.html) | Paquete para convertir [texto en habla](https://www.ibm.com/watson/developercloud/text-to-speech.html) |
 | [/whisk.system/weather](./openwhisk_weather.html) | Paquete para trabajar con el servicio [Weather Company Data](https://console.ng.bluemix.net/docs/services/Weather/index.html) |
-| [/whisk.system/websocket](./openwhisk_websocket.html) | Paquete para trabar con un servidor [Web Socket](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) |
+| [/whisk.system/websocket](./openwhisk_websocket.html) | Paquete para trabajar con un servidor [Web Socket](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) |
