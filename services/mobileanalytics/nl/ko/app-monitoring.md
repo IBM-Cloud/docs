@@ -19,13 +19,13 @@ lastupdated: "2017-01-10"
 <!--
 
 ## Visualizing data with custom charts
-{: #custom-charts}
+{: #custom-charts notoc}
 
 You can visualize the collected analytics data in your analytics repository. This visualization is a powerful way to inspect data for specific use cases. You can create charts with data that is already collected by Operational Analytics, in addition to custom data that you report.
 
 
 ### Creating custom charts for app logs
-{: #custom-charts-client-logs}
+{: #custom-charts-client-logs notoc}
 
 You can create a custom chart for app logs that contain log information that is sent with the Logger API for the platform. The log information also includes contextual information about the device, including environment, app name, and app version.
 
@@ -58,7 +58,7 @@ In this example, you use app log data to create a flow chart. The final graph sh
 7. Click **Save**
 
 ### Exporting custom data
-{: #export-custom-data}
+{: #export-custom-data notoc}
 
 You can export the data from each custom chart into JSON, XML, or CSV format.
 
@@ -67,7 +67,7 @@ The structure of the exported data depends on the chart that is being exported. 
 
 
 ### Exporting and importing custom chart definitions
-{: #export-import-custom}
+{: #export-import-custom notoc}
 
 You can import and export custom chart definitions programmatically or manually in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
 
@@ -94,10 +94,10 @@ You can also export and import custom chart definitions programmatically by usin
 
 활동을 보다 잘 모니터하기 위해 {{site.data.keyword.mobileanalytics_short}} 콘솔에서 경보 정의에 임계값을 설정할 수 있습니다. 
 
-임계값이 초과되는 경우 {{site.data.keyword.mobileanalytics_short}} 콘솔 모니터에 알리도록 경보를 트리거하는 임계값을 구성할 수 있습니다. 트리거되는 경보가 콘솔에서 시각화되거나 경보가 사용자 정의 Webhook에 의해 처리될 수 있습니다. <!-- This feature provides a proactive means of detecting app log errors, server log errors, extended periods of network latency, and authentication failures.-->이 기능은 애플리케이션 로그 오류와 애플리케이션 충돌 서버 로그 오류를 발견하는 사전 예방 수단을 제공합니다. 반응성 임계값 및 경보를 사용하면 사용자가 데이터를 이동하고 넓은 범위의 세분성 임계값을 설정할 필요가 없습니다.
+임계값이 초과되는 경우 {{site.data.keyword.mobileanalytics_short}} 콘솔 모니터에 알리도록 경보를 트리거하는 임계값을 구성할 수 있습니다. 트리거되는 경보가 콘솔에서 시각화되거나 경보가 사용자 정의 웹훅에 의해 처리될 수 있습니다. <!-- This feature provides a proactive means of detecting app log errors, server log errors, extended periods of network latency, and authentication failures.-->이 기능은 애플리케이션 로그 오류와 애플리케이션 충돌 서버 로그 오류를 발견하는 사전 예방 수단을 제공합니다. 반응성 임계값 및 경보를 사용하면 사용자가 데이터를 이동하고 넓은 범위의 세분성 임계값을 설정할 필요가 없습니다.
 
 ### 애플리케이션 로그에 대한 경보 정의 작성
-{: #alert-def-client-logs}
+{: #alert-def-client-logs notoc}
 
 애플리케이션 로그를 기반으로 하는 경보 정의를 작성할 수 있습니다. 
 
@@ -131,7 +131,7 @@ You can also export and import custom chart definitions programmatically by usin
 오류 로그의 수가 세 개 이상의 오류 로그인 임계값에 도달한 경우, 각 5분 간격의 끝에 경보를 트리거하도록 경보 정의를 작성했습니다.
 
 ### 애플리케이션 충돌에 대한 경보 정의 작성
-{: #alert-def-app-crash}
+{: #alert-def-app-crash notoc}
 
 애플리케이션 충돌을 기반으로 하는 경보 정의를 작성할 수 있습니다. 
 
@@ -160,7 +160,7 @@ You can also export and import custom chart definitions programmatically by usin
 5. **저장**을 클릭하십시오. 
 
 ### 경보 정의 관리
-{: #managing-alert-definitions}
+{: #managing-alert-definitions notoc}
 
 이 예에서는 경보 관리 페이지에서 경보 정의를 관리합니다.
 
@@ -171,7 +171,7 @@ You can also export and import custom chart definitions programmatically by usin
 5. 선택사항: 경보 정의를 삭제하려면 **휴지통** 아이콘을 클릭하십시오.
 
 ### 경보 세부사항 보기
-{: #viewing-alert-details}
+{: #viewing-alert-details notoc}
 
 이 예에서는 경보 로그 페이지에서 트리거된 경보의 세부사항을 볼 수 있습니다.
 
@@ -190,7 +190,7 @@ You can also export and import custom chart definitions programmatically by usin
 애플리케이션을 보다 잘 모니터하고 문제점을 해결할 수 있도록 {{site.data.keyword.mobileanalytics_short}} 콘솔에서 애플리케이션 충돌에 대한 정보를 볼 수 있습니다. 
 
 ### 애플리케이션 충돌 모니터링
-{: #app-crash}
+{: #app-crash notoc}
 
 **충돌** 페이지에서 **충돌 개요** 테이블에 다음 데이터 열이 표시됩니다.
 
@@ -207,7 +207,7 @@ You can also export and import custom chart definitions programmatically by usin
 2. 충돌 총계 표시: 시간 경과에 따른 충돌 총계
 
 ### 앱 충돌 문제점 해결
-{: #app-crash-troubleshooting}
+{: #app-crash-troubleshooting notoc}
 
 **문제점 해결** 페이지(<!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}} 콘솔의)에는 **충돌 요약** 테이블을 통해 앱 충돌의 세부 보기가 제공됩니다.
 

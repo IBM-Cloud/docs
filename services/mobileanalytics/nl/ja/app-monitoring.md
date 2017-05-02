@@ -19,13 +19,13 @@ lastupdated: "2017-01-10"
 <!--
 
 ## Visualizing data with custom charts
-{: #custom-charts}
+{: #custom-charts notoc}
 
 You can visualize the collected analytics data in your analytics repository. This visualization is a powerful way to inspect data for specific use cases. You can create charts with data that is already collected by Operational Analytics, in addition to custom data that you report.
 
 
 ### Creating custom charts for app logs
-{: #custom-charts-client-logs}
+{: #custom-charts-client-logs notoc}
 
 You can create a custom chart for app logs that contain log information that is sent with the Logger API for the platform. The log information also includes contextual information about the device, including environment, app name, and app version.
 
@@ -58,7 +58,7 @@ In this example, you use app log data to create a flow chart. The final graph sh
 7. Click **Save**
 
 ### Exporting custom data
-{: #export-custom-data}
+{: #export-custom-data notoc}
 
 You can export the data from each custom chart into JSON, XML, or CSV format.
 
@@ -67,7 +67,7 @@ The structure of the exported data depends on the chart that is being exported. 
 
 
 ### Exporting and importing custom chart definitions
-{: #export-import-custom}
+{: #export-import-custom notoc}
 
 You can import and export custom chart definitions programmatically or manually in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
 
@@ -97,7 +97,7 @@ You can also export and import custom chart definitions programmatically by usin
 しきい値を構成して、そのしきい値を超過した場合にアラートをトリガーして {{site.data.keyword.mobileanalytics_short}} コンソール・モニターに通知するようにすることができます。トリガーされたアラートは、コンソールで視覚化したり、カスタム Webhook で処理したりできます。<!-- This feature provides a proactive means of detecting app log errors, server log errors, extended periods of network latency, and authentication failures.-->この機能は、アプリケーション・ログ・エラー、アプリケーションの異常終了、サーバー・ログ・エラーを検出するプロアクティブな手段になります。リアクティブのしきい値やアラートにより、データをふるいにかけたり、しきい値を細分して設定したりする必要がなくなります。
 
 ### アプリケーション・ログのアラート定義の作成
-{: #alert-def-client-logs}
+{: #alert-def-client-logs notoc}
 
 アプリケーション・ログに基づくアラート定義を作成できます。
 
@@ -131,7 +131,7 @@ You can also export and import custom chart definitions programmatically by usin
 5 分間隔の最後にしきい値 (エラー・ログが 3 個以上) にアプリ・ログ数が達していればアラートをトリガーする、というアラート定義が作成されました。
 
 ### アプリケーション異常終了のアラート定義の作成
-{: #alert-def-app-crash}
+{: #alert-def-app-crash notoc}
 
 アプリケーション異常終了に基づくアラート定義を作成できます。
 
@@ -160,7 +160,7 @@ You can also export and import custom chart definitions programmatically by usin
 5. **「保存」**をクリックします。
 
 ### アラート定義の管理
-{: #managing-alert-definitions}
+{: #managing-alert-definitions notoc}
 
 この例では、「アラート管理 (Alert Management)」ページからアラート定義を管理します。
 
@@ -171,7 +171,7 @@ You can also export and import custom chart definitions programmatically by usin
 5. オプション: アラート定義を削除する場合は、**「ごみ箱」**アイコンをクリックします。
 
 ### アラート詳細の表示
-{: #viewing-alert-details}
+{: #viewing-alert-details notoc}
 
 この例では、トリガーされたアラートの詳細を「アラート・ログ」ページから表示します。
 
@@ -190,7 +190,7 @@ You can also export and import custom chart definitions programmatically by usin
 {{site.data.keyword.mobileanalytics_short}} コンソールでアプリケーションの異常終了に関する情報を参照すると、アプリケーションのモニターやトラブルシューティングに役立ちます。
 
 ### アプリケーション異常終了のモニター
-{: #app-crash}
+{: #app-crash notoc}
 
 **「異常終了」**ページの**「異常終了の概要」**表に、次のデータ列が表示されます。
 
@@ -207,7 +207,7 @@ You can also export and import custom chart definitions programmatically by usin
 2. 合計異常終了回数の表示: 時間別の合計異常終了回数
 
 ### アプリ異常終了のトラブルシューティング
-{: #app-crash-troubleshooting}
+{: #app-crash-troubleshooting notoc}
 
 <!-- **Applications** section of the -->{{site.data.keyword.mobileanalytics_short}} コンソールの**「トラブルシューティング」**ページでは、**「異常終了の要約 (Crash Summary)」**表を使用して、アプリ異常終了の詳細が表示されます。
 

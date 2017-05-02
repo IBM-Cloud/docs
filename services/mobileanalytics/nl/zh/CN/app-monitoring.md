@@ -19,13 +19,13 @@ lastupdated: "2017-01-10"
 <!--
 
 ## Visualizing data with custom charts
-{: #custom-charts}
+{: #custom-charts notoc}
 
 You can visualize the collected analytics data in your analytics repository. This visualization is a powerful way to inspect data for specific use cases. You can create charts with data that is already collected by Operational Analytics, in addition to custom data that you report.
 
 
 ### Creating custom charts for app logs
-{: #custom-charts-client-logs}
+{: #custom-charts-client-logs notoc}
 
 You can create a custom chart for app logs that contain log information that is sent with the Logger API for the platform. The log information also includes contextual information about the device, including environment, app name, and app version.
 
@@ -58,7 +58,7 @@ In this example, you use app log data to create a flow chart. The final graph sh
 7. Click **Save**
 
 ### Exporting custom data
-{: #export-custom-data}
+{: #export-custom-data notoc}
 
 You can export the data from each custom chart into JSON, XML, or CSV format.
 
@@ -67,7 +67,7 @@ The structure of the exported data depends on the chart that is being exported. 
 
 
 ### Exporting and importing custom chart definitions
-{: #export-import-custom}
+{: #export-import-custom notoc}
 
 You can import and export custom chart definitions programmatically or manually in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
 
@@ -97,7 +97,7 @@ You can also export and import custom chart definitions programmatically by usin
 您可以配置阈值，当超过阈值时，触发器便会触发警报以向 {{site.data.keyword.mobileanalytics_short}} 控制台监视器通知此情况。已触发的警报可以显示在控制台中，也可以由定制 webhook 进行处理。<!-- This feature provides a proactive means of detecting app log errors, server log errors, extended periods of network latency, and authentication failures.--> 此功能能够主动检测应用程序日志错误和应用程序崩溃服务器日志错误。响应式阈值和警报使您不必筛查数据，或者设置大范围的阈值。
 
 ### 为应用程序日志创建警报定义
-{: #alert-def-client-logs}
+{: #alert-def-client-logs notoc}
 
 您可以基于应用程序日志创建警报定义。
 
@@ -132,7 +132,7 @@ You can also export and import custom chart definitions programmatically by usin
 您已创建警报定义，在应用程序日志数达到您的阈值，即 3 个或更多错误日志时，每 5 分钟触发一次警报。
 
 ### 为应用程序崩溃创建警报定义
-{: #alert-def-app-crash}
+{: #alert-def-app-crash notoc}
 
 您可以基于应用程序崩溃来创建警报定义。
 
@@ -162,7 +162,7 @@ You can also export and import custom chart definitions programmatically by usin
 5. 单击**保存**。
 
 ### 管理警报定义
-{: #managing-alert-definitions}
+{: #managing-alert-definitions notoc}
 
 在此示例中，您将通过“警报管理”页面来管理警报定义。
 
@@ -173,7 +173,7 @@ You can also export and import custom chart definitions programmatically by usin
 5. 可选：如果您想要删除警报定义，请单击**废纸篓**图标。
 
 ### 查看警报详细信息
-{: #viewing-alert-details}
+{: #viewing-alert-details notoc}
 
 在此示例中，您将在“警报日志”页面中查看已触发警报的详细信息。
 
@@ -192,7 +192,7 @@ You can also export and import custom chart definitions programmatically by usin
 您可以在 {{site.data.keyword.mobileanalytics_short}} 控制台中查看应用程序崩溃的相关信息，以更好地监视应用程序和进行故障诊断。
 
 ### 应用程序崩溃监视
-{: #app-crash}
+{: #app-crash notoc}
 
 在**崩溃**页面上，**崩溃概述**表显示以下数据列：
 
@@ -209,7 +209,7 @@ You can also export and import custom chart definitions programmatically by usin
 2. 显示总崩溃次数：随时间变化的总崩溃次数
 
 ### 应用程序崩溃故障诊断
-{: #app-crash-troubleshooting}
+{: #app-crash-troubleshooting notoc}
 
 {{site.data.keyword.mobileanalytics_short}} 控制台中的**故障诊断**页面<!-- **Applications** section of the -->使用**崩溃摘要**表提供应用程序崩溃的详细视图。
 
