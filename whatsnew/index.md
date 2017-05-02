@@ -49,7 +49,7 @@ New as of: 03 February 2017
 
 ### April updates for the administration console
 {: #apriladminconsole}
-*New as of: 2 May 2017*
+New as of: 2 May 2017
 
 With the latest updates and improvements from April, you can use the following new features:
 
@@ -58,7 +58,7 @@ With the latest updates and improvements from April, you can use the following n
 
 ### March updates for the administration console
 {: #mar17adminconsole}
-*New as of: 31 March 2017*
+New as of: 31 March 2017
 
 With the latest updates and improvements from March, you can use the following new features:
 
@@ -74,7 +74,7 @@ We welcome your comments and feedback on the redesigned status page. To preview 
 
 ### February updates for the administration console
 {: #feb17adminconsole}
-*New as of: 24 February 2017*
+New as of: 24 February 2017
 
 With the latest updates and improvements from February, you can use the following new feature:
 
@@ -82,7 +82,7 @@ With the latest updates and improvements from February, you can use the followin
 
 ### January updates for the administration console
 {: #jan17adminconsole}
-*New as of: 27 January 2017*
+New as of: 27 January 2017
 
 With the latest updates and improvements from January, you can use the following new features:
 
