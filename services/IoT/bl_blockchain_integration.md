@@ -97,11 +97,11 @@ To connect to a blockchain fabric:
 </tr>
 <tr>
 <td>Host</td>
-<td>The `api_host` address for the Validating Peer 1 server</td>
+<td>The `api_host` address for the Validating Peer 1 server.</td>
 </tr>
 <tr>
 <td>Port</td>
-<td>The `api_port` number<ul><li>Use port 80 if your implementation does not use TLS.</li><li>Use port 443 if your implementation uses TLS.</li></ul></td>
+<td>The `api_port_tls` number.</td>
 </tr>
 <tr>
 <td>User ID</td>
@@ -113,7 +113,7 @@ To connect to a blockchain fabric:
 </tr>
 <tr>
 <td>Use TLS</td>
-<td>On or Off</br>Use Transport Layer Security to encrypt the communication between {{site.data.keyword.iot_short_notm}} and the contract in the fabric. The default port numbers are set by the deployed {{site.data.keyword.iot_short_notm}} instance that you are connecting to.</td>
+<td>On or Off</br>Use Transport Layer Security to encrypt the communication between {{site.data.keyword.iot_short_notm}} and the contract in the fabric. TLS must be enabled when connecting to an {{site.data.keyword.blockchainfull_notm}} fabric.</td>
 </tr></tbody>
 </table>  
  3. Click **Finish**.
@@ -186,7 +186,7 @@ If you are connected to the IBM-provided fabric and mapped your device data to t
 <tbody>
 <tr>
 <td>API Host and Port</td>
-<td>The host and port for the {{site.data.keyword.iot_short_notm}} REST API that is prepended with `http://`. Use the  `api_host` address and `api_port` number. </td>
+<td>The host and port for the {{site.data.keyword.iot_short_notm}} REST API that is prepended with `https://`. Use the  `api_host` address and `api_port_tls` number. </td>
 </tr>
 <tr>
 <td>Chaincode ID</td>
