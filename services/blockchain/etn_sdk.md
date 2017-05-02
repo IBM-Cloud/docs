@@ -28,6 +28,8 @@ The HFC SDK provides APIs, through which applications interact with a Hyperledge
 1. Pluggable key value store, which is used to retrieve and store keys associated with a member. The `chain.setKeyValStore()` method overrides the default file-based key value store implementation. The chain key value store is used to warehouse sensitive private keys, so access must be appropriately protected.
 2. Pluggable member service, which is used to register and enroll members. The `chain.setMemberServices()` method  overrides the default implementation in `MemberServices`. Member services implements the Hyperledger fabric as a  permissioned blockchain network, which provides anonymity, unlinkability of transactions, and confidentiality.
 
+The following link is no longer available on GitHub. Drilling down, it looks as though the SDK has been been migrated to gerrit, at the following link:  https://gerrit.hyperledger.org/r/#/admin/projects/fabric. I recommend you verify this with a Blockchain/Hyperledger developer before making the change. 
+
 You can include the HFC SDK in your Node.js app by using the offline method or the npm method:
 *  offline method: first copy the files from the Hyperledger Fabric source tree  (https://github.com/hyperledger/fabric/tree/v0.6/sdk/node/lib) into your Node.js app `/lib` directory. Then include the HFC SDK in your application by adding the following code snippet:
 
