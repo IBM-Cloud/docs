@@ -89,7 +89,7 @@ Se inicia el proceso de suministro del servidor. Este proceso dura unos 10 minut
 *	Pulse **Iniciar consola** para abrir la {{site.data.keyword.mfp_oc_short_notm}}.
 
 
-<!--This console runs inside the container.--> Con la consola, puede gestionar sus aplicaciones móviles, adaptadores y dispositivos móviles, utilizar su servidor como programa de fondo móvil, enviar notificaciones push, etc.
+<!--This console runs inside the container.--> Con la consola, puede gestionar sus apps móviles, adaptadores y dispositivos móviles, utilizar su servidor como programa de fondo móvil, enviar notificaciones push, etc.
 
 ##  Adición de servidor de Mobile Analytics
 {: #adding_analytics_server_p3}
@@ -100,7 +100,7 @@ Se inicia el proceso de suministro del servidor. Este proceso dura unos 10 minut
 
  Los usuarios también pueden adjuntar volúmenes a los contenedores para persistir datos. El volumen seleccionado no se puede cambiar. 20 GB es el espacio de compartición de archivos predeterminado disponible para el usuario. Si el usuario necesita espacio de almacenamiento adicional para persistir datos analíticos, necesitará adquirir compartición de archivos adicional y crear un volumen utilizando esta compartición de archivos. Puede seleccionar este nuevo volumen al desplegar el servidor de análisis.
 
- Para obtener más información sobre cómo añadir volúmenes a {{site.data.keyword.containerlong}}, consulte [Almacenamiento de datos permanentes en un volumen mediante el Panel de control de {{site.data.keyword.Bluemix_notm}} ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}.
+ Para obtener más información sobre cómo añadir volúmenes a {{site.data.keyword.containerlong}}, consulte [Almacenamiento de datos permanentes en un volumen mediante el Panel de control de {{site.data.keyword.Bluemix_notm}} ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://console.ng.bluemix.net/docs/containers/container_volumes_ov.html#container_volumes_ui){: new_window}.
 
 * Pulse **Añadir analíticas** para añadir el servidor de Mobile Analytics a la instancia de servicio de {{site.data.keyword.mobilefoundation_short}}.
 
@@ -132,7 +132,7 @@ Ahora puede suprimir el servidor de Mobile Analytics que se ha añadido a la ins
 
 * Esta acción detiene el servidor existente y suprime los datos. Se crea una nueva instancia con una versión actualizada, si está disponible. Esta acción tarda unos minutos en completarse.
 
-**Nota**: todos los datos de su instancia de servidor anterior, incluyendo la información sobre aplicaciones y adaptadores, se conserva en la instancia del servicio {{site.data.keyword.dashdbshort_notm}} configurada; estos datos se utilizan para volver a crear el servidor.
+**Nota**: todos los datos de su instancia de servidor anterior, incluyendo la información sobre apps y adaptadores, se conserva en la instancia del servicio {{site.data.keyword.dashdbshort_notm}} configurada; estos datos se utilizan para volver a crear el servidor.
 
 ##	Ajuste de la configuración avanzada
 {: #using_mfs_advanced_p3}

@@ -119,7 +119,8 @@ no ícone **Mostrar senha** para visualizá-lo.
 usuário. Se o usuário precisar de espaço de armazenamento adicional para persistir dados de analítica, ele precisará comprar compartilhamento de arquivo adicional e criar um volume usando esse
 compartilhamento de arquivo. Ele poderá, então, selecionar esse novo volume enquanto implementa o servidor analítico.
 
- Para obter mais informações sobre incluir volumes no {{site.data.keyword.containerlong}}, consulte [Armazenando dados persistentes em um volume usando o {{site.data.keyword.Bluemix_notm}} Dashboard ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}.
+ Para obter mais informação sobre a inclusão de volume no {{site.data.keyword.containerlong}}, consulte [Armazenamento de dados persistentes
+em um volume usando o painel {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/docs/containers/container_volumes_ov.html#container_volumes_ui.html){: new_window}.
 
 * Clique em **Incluir Analytics** para incluir o servidor Mobile Analytics na instância de serviço do {{site.data.keyword.mobilefoundation_short}}.
 

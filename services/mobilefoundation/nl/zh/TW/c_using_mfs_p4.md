@@ -99,7 +99,7 @@ lastupdated:  "2017-02-17"
 
  使用者也可以附加容器的磁區來持續保存資料。一旦磁區選定後就無法變更。20 GB 是使用者可用的預設檔案共用空間。如果使用者需要額外的儲存空間來持續保存分析資料，則需要購買額外的檔案共用，並且使用該檔案共用來建立磁區。然後，在部署分析伺服器時，便可以選取這個新的磁區。
 
- 如需將磁區新增至 {{site.data.keyword.containerlong}} 的相關資訊，請參閱[使用 {{site.data.keyword.Bluemix_notm}} 儀表板將持續資料儲存在磁區中 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}。
+ 如需將磁區新增至 {{site.data.keyword.containerlong}} 的相關資訊，請參閱[使用 {{site.data.keyword.Bluemix_notm}} 儀表板將持續資料儲存在磁區中 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/docs/containers/container_volumes_ov.html#container_volumes_ui.html){: new_window}。
 
 * 按一下**新增分析**將 Mobile Analytics 伺服器新增至 {{site.data.keyword.mobilefoundation_short}} 服務實例。
 

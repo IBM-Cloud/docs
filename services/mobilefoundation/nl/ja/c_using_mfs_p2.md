@@ -103,7 +103,7 @@ lastupdated:  "2017-02-17"
  ユーザーはまた、ボリュームをコンテナーに接続して、データを永続化できます。一度選択されたボリュームは変更できません。20 GB は、ユーザーに使用可能なデフォルトのファイル共有スペースです。分析データを保持するためにユーザーが追加のストレージ・スペースを必要とする場合、
 ユーザーは、追加ファイル共有を購入し、このファイル共有を使用してボリュームを作成する必要があります。これでユーザーは、分析サーバーをデプロイ中に、この新規ボリュームを選択できます。
 
- {{site.data.keyword.containerlong}} へのボリュームの追加について詳しくは、[{{site.data.keyword.Bluemix_notm}} ダッシュボードを使用したボリュームへの永続データの保管に関する資料![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}を参照してください。
+ {{site.data.keyword.containerlong}} へのボリュームの追加について詳しくは、[{{site.data.keyword.Bluemix_notm}}ダッシュボード![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")を使用したボリュームへの永続データの保管](https://console.ng.bluemix.net/docs/containers/container_volumes_ov.html#container_volumes_ui){: new_window}を参照してください。
 
 * **「Analytics の追加 (Add Analytics)」**をクリックして、Mobile Analytics サーバーを {{site.data.keyword.mobilefoundation_short}} サービス・インスタンスに追加します。
 

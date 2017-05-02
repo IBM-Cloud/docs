@@ -24,9 +24,9 @@ Bei der Erstellung der <!--container group is created with a--> URL oder Route b
   |`mybluemix.net` | US - Süden |    
   |`eu-gb.mybluemix.net` | Vereinigtes Königreich  |
   |`au-syd.mybluemix.net` | Sydney  |      
-  {: caption="Table 1. Application domain names based on Region in {{site.data.keyword.Bluemix_notm}}" caption-side="top"}
+  {: caption="Tabelle 1. Anwendungsdomänennamen auf der Basis von Regionen in {{site.data.keyword.Bluemix_notm}}" caption-side="top"}
 
-Zur Verwendung einer eigenen Domäne müssen Sie eine benutzerdefinierte Domäne konfigurieren, indem Sie die folgenden Schritte ausführen:
+To be able to use your own domain you will need to configure custom domain by performing the following steps:
 
 1.	Erstellen Sie eine {{site.data.keyword.mfserver_short_notm}}-Instanz, indem Sie die {{site.data.keyword.mobilefoundation_short}}-Serviceinstanz durch die Auswahl eines unterstützten Plans erstellen.
 

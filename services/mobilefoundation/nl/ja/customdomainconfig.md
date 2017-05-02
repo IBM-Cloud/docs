@@ -24,9 +24,9 @@ lastupdated:  "2017-02-17"
   |`mybluemix.net` | 米国南部 |    
   |`eu-gb.mybluemix.net` | 英国  |
   |`au-syd.mybluemix.net` | シドニー  |      
-  {: caption="Table 1. Application domain names based on Region in {{site.data.keyword.Bluemix_notm}}" caption-side="top"}
+  {: caption="表 1. {{site.data.keyword.Bluemix_notm}} 内の地域に基づいたアプリケーションのドメイン名" caption-side="top"}
 
-独自ドメインを使用できるようにするには、以下のステップを実行してカスタム・ドメインを構成する必要があります。
+To be able to use your own domain you will need to configure custom domain by performing the following steps:
 
 1.	いずれかのサポートされるプランを選択して、{{site.data.keyword.mobilefoundation_short}} サービス・インスタンスを作成することで、{{site.data.keyword.mfserver_short_notm}} インスタンスを作成します。
 

@@ -25,10 +25,9 @@ L'<!--container group is created with a-->URL ou la route est créée avec les n
   |`mybluemix.net` | Sud des Etats-Unis |    
   |`eu-gb.mybluemix.net` | Royaume-Uni  |
   |`au-syd.mybluemix.net` | Sydney  |      
-  {: caption="Table 1. Application domain names based on Region in {{site.data.keyword.Bluemix_notm}}" caption-side="top"}
+  {: caption="Tableau 1. Noms de domaine de l'application basés sur la région dans {{site.data.keyword.Bluemix_notm}}" caption-side="top"}
 
-Pour pouvoir utiliser votre propre domaine, vous devez configurer un
-domaine personnalisé en procédant comme suit :
+To be able to use your own domain you will need to configure custom domain by performing the following steps:
 
 1.	Créez une instance {{site.data.keyword.mfserver_short_notm}}
 en créant l'instance de service

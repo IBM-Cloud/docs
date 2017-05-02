@@ -24,9 +24,9 @@ L'<!--container group is created with a-->URL o la rotta creati con i nomi del d
   |`mybluemix.net` | Stati Uniti Sud |    
   |`eu-gb.mybluemix.net` | Regno Unito  |
   |`au-syd.mybluemix.net` | Sydney  |      
-  {: caption="Table 1. Application domain names based on Region in {{site.data.keyword.Bluemix_notm}}" caption-side="top"}
+  {: caption="Tabella 1. Nomi dei domini dell'applicazione basati sulla Regione in {{site.data.keyword.Bluemix_notm}}" caption-side="top"}
 
-Per poter utilizzare il tuo dominio, dovrai configurare il dominio personalizzato completando la seguente procedura:
+To be able to use your own domain you will need to configure custom domain by performing the following steps:
 
 1.	Crea un'istanza {{site.data.keyword.mfserver_short_notm}} creando l'istanza del servizio {{site.data.keyword.mobilefoundation_short}} scegliendo uno dei piani supportati.
 

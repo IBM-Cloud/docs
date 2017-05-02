@@ -132,7 +132,7 @@ le groupe de conteneurs.
 
  Les utilisateurs peuvent aussi connecter des volumes aux conteneurs pour conserver les données. Le volume une fois sélectionné ne peut être changé. L'espace de partage de fichiers par défaut disponible pour l'utilisateur est de 20 Go. Si l'utilisateur a besoin d'un espace de stockage supplémentaire pour conserver des données d'analyse, il est invité à acheter un partage de fichiers supplémentaire et à créer un volume en utilisant ce partage de fichier. Il peut ensuite sélectionner ce nouveau volume lors du déploiement du serveur d'analyse.
 
- Pour plus d'informations sur l'ajout de volumes dans {{site.data.keyword.containerlong}}, voir[Stockage de données persistantes dans un volume à l'aide du tableau de bord {{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}.
+ Pour plus d'informations sur l'ajout de volumes dans {{site.data.keyword.containerlong}}, voir [Stockage de données persistantes dans un volume à l'aide du tableau de bord {{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/docs/containers/container_volumes_ov.html#container_volumes_ui.html){: new_window}.
 
 * Cliquez sur commande d'ajout d'analyse pour ajouter le serveur Mobile Analytics à l'instance de service {{site.data.keyword.mobilefoundation_short}}.
 

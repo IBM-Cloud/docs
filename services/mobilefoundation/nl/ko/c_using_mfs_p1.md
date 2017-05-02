@@ -9,7 +9,7 @@ lastupdated:  "2017-02-17"
 #	Developer 플랜 사용
 {: #using_mobilefoundation_p1}
 
-{{site.data.keyword.mobilefoundation_short}}: Developer 서비스 인스턴스를 작성하고 잠시 후 {{site.data.keyword.Bluemix_notm}}의 `개요` 페이지에 액세스할 수 있습니다. 이 페이지에서는 {{site.data.keyword.mobilefoundation_short}} 서비스를 시작하는 데 유용한 튜토리얼과 동영상을 제공합니다. 
+{{site.data.keyword.mobilefoundation_short}}: Developer 서비스 인스턴스를 작성하고 잠시 후 {{site.data.keyword.Bluemix_notm}}의 `Overview` 페이지에 액세스할 수 있습니다. 이 페이지에서는 {{site.data.keyword.mobilefoundation_short}} 서비스를 시작하는 데 유용한 튜토리얼과 동영상을 제공합니다. 
 
 ## MobileFirst 서버 시작
 {: #start_mobilefoundation_p1}
