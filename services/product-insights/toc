@@ -1,3 +1,15 @@
-[Getting started with Product Insights](/index.html)
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="Product Insights" audience="service" href="docs/services/product-insights/index.html"}
+Product Insights
+
+    {: .navgroup id="learn"}
     index.md
     product-insights_overview.md
+    
+    {. topicgroup}
+    Related links
+        [Product Insights Technical Community](https://developer.ibm.com/product-insights/)
+        [Overview](https://developer.ibm.com/product-insights/docs/overview/)
+    {: .navgroup-end}
