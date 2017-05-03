@@ -54,10 +54,15 @@
 		"img": "homepage/images/WhatIsBluemix-icon.svg",
 		"href": "overview/whatisbluemix.html"
     }, {
-		"title": "Managing Your Account",
-		"description": "Update your profile, set account and spending notifications, invite team members, or manage orgs and spaces.",
+		"title": " Managing Your Account",
+		"description": "Update your profile, set account and spending notifications, or manage orgs and spaces.",
 		"img": "homepage/images/admin.svg",
 		"href": "admin/adminpublic.html"
+	}, {
+		"title": " Managing Identity and Access",
+		"description": "Manage user access or invite team members.",
+		"img": "homepage/images/admin.svg",
+		"href": "iam/iamusermanage.html"
 	}, {
 		"title": "CLI and Dev Tools",
 		"description": "Access tools, such as a unified command line interface and CLI plug-ins.",
