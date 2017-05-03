@@ -9,25 +9,20 @@ Managing your account
     Account setup
         adminpublic.md
         profile.md
-        notifications.md
-
-    {: .topicgroup}
-    Users
-        users_roles.md
-        iamuserinv.md
-        iamusermanage.md
-        softlayerlink.md
+    
+    softlayerlink.md
 
     {: .topicgroup}
     Orgs
         orgs_spaces.md
         manageorg.md
-    
-    apikeys.md
+        
+    notifications.md
     {: .navgroup-end}
 
     {: .navgroup id="learn"}
-    {: .topicgroup}
+    {: .topicgroup}  
     Best practices
         patterns.md
+        
     {: .navgroup-end}
