@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-05-02" 
+lastupdated: "2017-05-03" 
 
 ---
 
@@ -95,6 +95,15 @@ With the latest updates and improvements from January, you can use the following
 
 ## Compute
 {: #compute_category}
+
+### Latest updates for buildpacks
+
+Visit the following pages for a cumulative list of the latest updates:
+
+* [Latest Updates to the SDK for Nodejs buildpack](/docs/runtimes/nodejs/updates.html#latest_updates)
+* [Latest Updates to the Liberty buildpack](/docs/runtimes/liberty/updates.html#latest_updates)
+* [Latest Updates to the ASP.NET Core buildpack](/docs/runtimes/dotnet/updates.html#latest_updates)
+* [Latest updates to the IBM XPages for {{site.data.keyword.Bluemix_notm}} buildpack](/docs/starters/xpages/index.html#updates)
 
 ### New Liberty for Java buildpack v3.9
 New as of: 27 April 2017
