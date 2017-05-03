@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-25"
+lastupdated: "2017-04-10"
 
 ---
 
@@ -157,10 +157,10 @@ Where:
 - Other clients that are part of the scalable application must use the same client ID.
 - The clean session value must be set to false (0) for non-durable subscriptions.
 
-### Mixed-durability shared subscriptions (Beta)
+### Mixed-durability shared subscriptions
 {: #shared_sub_mixed}
 
-The {{site.data.keyword.iot_short_notm}} service extends the MQTT V3.1.1 messaging protocol specification to support a beta trial of mixed-durability shared subscriptions. Shared subscriptions provide load balancing capabilities for applications. A shared subscription might be needed if a back-end enterprise application cannot process the volume of messages that are being published to a specific topic space. For example, when many devices publish messages that are being processed by a single application, it might be necessary to use the load balancing capability of a shared subscription.
+The {{site.data.keyword.iot_short_notm}} service extends the MQTT V3.1.1 messaging protocol specification to support mixed-durability shared subscriptions. Shared subscriptions provide load balancing capabilities for applications. A shared subscription might be needed if a back-end enterprise application cannot process the volume of messages that are being published to a specific topic space. For example, when many devices publish messages that are being processed by a single application, it might be necessary to use the load balancing capability of a shared subscription.
 
 For mixed-durability shared subscriptions, ensure that the client ID in the subscription matches the following format:
 
@@ -176,7 +176,6 @@ Where:
    - Dots ( . )
 
 **Important:**
-- Support for mixed-durability shared subscriptions is available as a beta feature only. Do not implement beta features in production applications.
 - The clean session value can be set to either true (1) or false (0) in mixed-durability shared subscriptions.
 - Clients that connect with the instanceId use different subscriptions than clients that connect without the instanceId. Therefore, if you would like multiple clients to connect on a mixed-durability shared subscription, you need to specify the instanceID in all subscriptions.
 
