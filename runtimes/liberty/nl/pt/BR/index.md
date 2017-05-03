@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-02-07"
 
 ---
 
@@ -32,10 +32,10 @@ EAR](optionsForPushing.html#stand_alone_apps)
 O {{site.data.keyword.Bluemix}} fornece vários aplicativos iniciadores Liberty.  Os aplicativos iniciadores Liberty são apps Liberty simples que fornecem um modelo que pode ser usado. É possível experimentar os apps iniciadores e fazer e enviar por push as mudanças para o ambiente Bluemix.  Veja [Usando os aplicativos iniciadores](/docs/cfapps/starter_app_usage.html) para obter ajuda sobre o uso dos aplicativos iniciadores.
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## geral
-{: #general}
-* [Visão geral do perfil do Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+{: #general notoc}
+* [Visão geral do perfil Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
 * [Gerenciando apps Liberty](/docs/manageapps/app_mng.html#Utilities)
 * [Implementando apps com IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools)
 * [Introdução ao IBM Monitoring and Analytics

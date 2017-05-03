@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-02-07"
 
 ---
 
@@ -31,9 +31,9 @@ Liberty ビルドパックは、以下のような種類のアプリケーショ
 {{site.data.keyword.Bluemix}} には、いくつかの Liberty スターター・アプリケーションが用意されています。Liberty スターター・アプリケーションは、使用可能なテンプレートを提供する、シンプルな Liberty アプリケーションです。スターター・アプリケーションを試し、Bluemix 環境に対して変更を行い、プッシュすることができます。スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](/docs/cfapps/starter_app_usage.html)を参照してください。
 
 # 関連リンク
-{: #rellinks}
+{: #rellinks notoc}
 ## 一般
-{: #general}
+{: #general notoc}
 * [Liberty プロファイル概要](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
 * [Liberty アプリケーションの管理](/docs/manageapps/app_mng.html#Utilities)
 * [IBM Eclipse Tools for Bluemix を使用したアプリのデプロイ](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools)

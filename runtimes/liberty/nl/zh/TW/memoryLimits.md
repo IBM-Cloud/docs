@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-06-10"
+  years: 2015, 2017
+lastupdated: "2017-04-18"
 
 ---
 
@@ -43,9 +43,23 @@ Liberty 建置套件部署應用程式時，會提示您輸入「記憶體限制
 * 如果在應用程式部署期間超出記憶體限制，您會收到發生失敗的訊息。您可能會看到應用程式在飄動。您可能會看到應用程式試圖多次啟動，但一直不成功。或者，您可能會收到訊息，指出應用程式部署失敗。
 * 如果應用程式在服務中時超出記憶體限制，則會停止該處理程序。Cloud Foundry 會試圖重新啟動應用程式。應用程式可能會重新啟動，但它有某段時間無法使用。
 
-# 相關鏈結
-{: #rellinks}
-## 一般
-{: #general}
-* [Liberty 運行環境](index.html)
-* [Liberty 設定檔概觀](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+## 指定資料堆記憶體
+{: #specifying_heap_memory}
+
+您可以使用各種方式來自訂配置給應用程式的資料堆記憶體數量上限。
+
+*  使用 JVM_ARGS 環境變數及 -Xmx 引數。例如，若要將資料堆大小上限設為 512M，請使用下列指令，並重新編譯打包應用程式。
+
+```
+    $ cf set-env myapp JVM_ARGS -Xmx512m
+```
+{: codeblock}
+
+* 如果您的應用程式是[伺服器目錄](optionsForPushing.html#server_directory)或[包裝伺服器](optionsForPushing.html#packaged_server)，則可以在 jvm.options 檔案中指定 -Xmx 引數。
+
+* 您可以使用 JBP_CONFIG_IBMJDK 環境變數來指定資料堆大小比例。heap_size_ratio 是浮點數值，可指定要配置給資料堆的可用記憶體數量。例如，若要將一半的可用記憶體配置給資料堆，請發出下列指令，並重新編譯打包應用程式。
+
+```
+    $ cf set-env myapp JBP_CONFIG_IBMJDK "heap_size_ratio: 0.50"
+```
+{: codeblock}

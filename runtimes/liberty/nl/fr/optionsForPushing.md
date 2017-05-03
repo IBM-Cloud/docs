@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-11"
+  years: 2015, 2017
+lastupdated: "2017-03-22"
 
 ---
 
@@ -57,7 +57,7 @@ les fonctions Liberty suivantes :
 * servlet-3.1
 * websocket-1.1
 * icap:managementConnector-1.0
-* appstate-1.0
+* appstate-2.0
 
 Ces fonctions correspondent aux fonctions du profil Web Java EE 7. Vous pouvez spécifier un autre jeu de fonctions Liberty en définissant la variable d'environnement
 JBP_CONFIG_LIBERTY. Par exemple, pour n'activer que les fonctions jsp-2.3 et websocket-1.1, exécutez la commande suivante et
@@ -68,11 +68,7 @@ reconstituez l'application :
 ```
 {: codeblock}
 
-Remarque : Pour optimiser vos résultats, définissez les fonctions Liberty avec la variable d'environnement JBP_CONFIG_LIBERTY ou déployez votre application en tant que [répertoire de serveur](optionsForPushing.html#server_directory) ou [package de serveur](optionsForPushing.html#packaged_server) avec un fichier server.xml personnalisé. La définition de cette variable d'environnement garantit que votre application n'utilisera que la fonction dont elle a besoin et qu'elle ne sera pas
-affectée par les modifications apportées
-au jeu de fonctions Liberty par défaut du pack de construction. Si vous devez fournir une configuration Liberty supplémentaire en plus du jeu de fonctions,
-utilisez l'option de [répertoire de serveur](optionsForPushing.html#server_directory) ou de
-[package de serveur](optionsForPushing.html#packaged_server) pour déployer votre application.
+Remarque : Pour optimiser vos résultats, définissez les fonctions Liberty avec la variable d'environnement JBP_CONFIG_LIBERTY ou déployez votre application en tant que [répertoire de serveur](optionsForPushing.html#server_directory) ou [package de serveur](optionsForPushing.html#packaged_server) avec un fichier server.xml personnalisé. La définition de cette variable d'environnement garantit que votre application n'utilisera que la fonction dont elle a besoin et qu'elle ne sera pas affectée par les modifications apportées au jeu de fonctions Liberty par défaut du pack de construction. Si vous devez fournir une configuration Liberty supplémentaire en plus du jeu de fonctions, utilisez l'option de [répertoire de serveur](optionsForPushing.html#server_directory) ou de [package de serveur](optionsForPushing.html#packaged_server) pour déployer votre application.
 
 Si vous avez déployé un fichier WAR, l'application Web est accessible sous la racine de contexte, telle que définie dans le fichier ibm-web-ext.xml imbriqué. Si le fichier ibm-web-ext.xml n'existe pas ou ne spécifie pas de racine de contexte, l'application est accessible sous le contexte racine. Exemple :
 
@@ -110,7 +106,7 @@ server.xml complet est le suivant :
           <feature>servlet-3.1</feature>
           <feature>websocket-1.1</feature>
           <feature>icap:managementConnector-1.0</feature>
-          <feature>appstate-1.0</feature>
+          <feature>appstate-2.0</feature>
        </featureManager>
 
        <application name='myapp' location='myapp.war' type='war' context-root='/'/>
@@ -122,7 +118,7 @@ server.xml complet est le suivant :
        <applicationMonitor dropinsEnabled='false' updateTrigger='mbean'/>
        <config updateTrigger='mbean'/>
        <cdi12 enableImplicitBeanArchives='false'/>
-       <appstate appName='myapp' markerPath='${home}/../.liberty.state'/>
+       <appstate2 appName='myapp'/>
     </server>
 ```
 {: codeblock}
@@ -211,7 +207,7 @@ fonctions utilisateur Liberty requises par l'application.
 
 Pour
 conditionner un serveur Liberty, utilisez la commande `./bin/server
-package` à partir du répertoire d'installation de Liberty. Spécifiez le nom de votre serveur et incluez l'option `--include=usr`. 
+package` à partir du répertoire d'installation de Liberty. Spécifiez le nom de votre serveur et incluez l'option `--include=usr`.
 Par exemple, si le serveur Liberty se nomme defaultServer, exécutez la commande suivante :
 
 ```
@@ -255,19 +251,14 @@ depuis un fichier `server.xml` envoyé par commande push. Toutes les variables s
 * ${vcap_app_port} : identique à ${port}. Non définie lors de l'exécution sur Diego.
 * ${application_name} : nom de l'application, tel que défini via les options de la commande cf push.
 * ${application_version} : version de cette instance de l'application, représentée par un identificateur unique universel (UUID), tel que `b687ea75-49f0-456e-b69d-e36e8a854caa`. Cette variable est actualisée avec chaque envoi par commande push successif de l'application contenant du nouveau code ou des modifications des artefacts de l'application.
-* ${host} : adresse IP de l'instance de l'application. 
-* ${application_uris} : matrice JSON des noeuds finaux pouvant être utilisés pour accéder à cette application, par exemple : myapp.mydomain.com.
+* ${host} : adresse IP de l'instance de l'application.
+* ${application_uris} : tableau JSON de points d'extrémité utilisables pour accéder à cette application, par exemple : myapp.mydomain.com.
 * ${start} : date et heure de démarrage de l'application, dans un format similaire à `2013-08-22 10:10:18 -0400`. Non définie lors de l'exécution sur Diego.
 
 ### Accès aux informations des services liés
 {: #accessing_info_of_bound_services}
 
-Si vous voulez lier un service à votre application, des informations sur le service, notamment les données d'identification de connexion,
-sont incluses dans
-la [variable
-d'environnement VCAP_SERVICES](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) que Cloud Foundry définit pour l'application. Pour les [services configurés
-automatiquement](autoConfig.html), le pack de construction Liberty génère ou met à jour des entrées de liaison de service dans le fichier server.xml. Le contenu des
-entrées de liaison de service peuvent être dans l'un des formats suivants :
+Si vous voulez lier un service à votre application, des informations sur le service, notamment les données d'identification de connexion, sont incluses dans la [variable d'environnement VCAP_SERVICES ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) que Cloud Foundry définit pour l'application. Pour les [services configurés automatiquement](autoConfig.html), le pack de construction Liberty génère ou met à jour des entrées de liaison de service dans le fichier server.xml. Le contenu des entrées de liaison de service peuvent être dans l'un des formats suivants :
 
 * cloud.services.&lt;service-name&gt;.&lt;property&gt;, qui décrit les informations telles que le nom, le type et le plan du service.
 * cloud.services.&lt;service-name&gt;.connection.&lt;property&gt;, qui décrit les informations de connexion du service.
@@ -288,8 +279,8 @@ Pour les services liés qui ne sont pas configurés automatiquement par le pack 
 Liberty, l'application doit gérer elle-même l'accès à la ressource back end.
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
-{: #general}
+{: #general notoc}
 * [Environnement d'exécution Liberty](index.html)
 * [Présentation de Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

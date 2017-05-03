@@ -1,0 +1,20 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="PHP" audience="runtime"}
+PHP
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    index.md
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    [Using the starter applications](../../cfapps/starter_app_usage.html)
+    [Working with a proxy](../../manageapps/workingWithProxy.html)
+    [Using community buildpacks](../../cfapps/byob.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    [Buildpack support statement](../../manageapps/buildpackSupport.html)
+    {: .navgroup-end}

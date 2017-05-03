@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-01-25"
 
 ---
 
@@ -22,7 +22,7 @@ Le pack python_buildpack sera utilisé si le répertoire racine de votre appli c
 ## Application de démarrage
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} propose une application de démarrage Python.  L'application de démarrage Python est une appli Python simple qui fournit un modèle que vous pouvez utiliser pour votre appli. Vous pouvez expérimenter cette application et effectuer des modifications, puis les envoyer par commande push vers l'environnement {{site.data.keyword.Bluemix}}. Voir [Utilisation des applications de démarrage](/docs/cfapps/starter_app_usage.html) pour obtenir de l'aide.
+{{site.data.keyword.Bluemix}} propose une application de démarrage Python.  L'application de démarrage Python est une appli Python simple qui peut servir de modèle pour votre appli. Vous pouvez expérimenter cette application et effectuer des modifications puis les envoyer par commande push vers l'environnement {{site.data.keyword.Bluemix}}.  Voir [Utilisation des applications de démarrage](/docs/cfapps/starter_app_usage.html) pour obtenir de l'aide.
 
 ## Versions d'environnement d'exécution
 {: #runtime_versions}
@@ -55,5 +55,7 @@ utiliser le [pack de construction Python](https://github.com/cloudfoundry/python
 la déployer.
 
 # rellinks
+{: #rellinks notoc}
 ## general
+{: #general notoc}
 * [Cloud Foundry buildpack for Python](https://github.com/cloudfoundry/python-buildpack)

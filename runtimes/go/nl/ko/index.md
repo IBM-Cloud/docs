@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-01-25"
 
 ---
 
@@ -15,7 +15,8 @@ lastupdated: "2016-11-14"
 {: #go_runtime}
 
 {{site.data.keyword.Bluemix}}의 Go 런타임은 go_buildpack을 통해 제공됩니다.
-go_buildpack은 Go 앱을 위한 완전한 런타임 환경을 제공합니다.
+go_buildpack은 Go 앱을 위한 완전한 런타임 환경을
+제공합니다.
 {: shortdesc}
 
 go_buildpack은 애플리케이션에 *.go 파일이 포함된 경우에 사용됩니다.
@@ -43,8 +44,9 @@ go_buildpack은 애플리케이션에 *.go 파일이 포함된 경우에 사용�
 ### 사용 가능한 버전: 
 {: #available_versions}
 
-다음 Go 버전은 현재 {{site.data.keyword.Bluemix}}에 설치된 [Go 빌드팩](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.7.5){: new_window}에서 사용 가능합니다.
-
+다음 Go 버전은 현재 {{site.data.keyword.Bluemix}}에 설치된
+[Go 빌드팩](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.7.5){: new_window}에서
+사용 가능합니다.
 
 * 1.4.2
 * 1.4.3
@@ -53,14 +55,15 @@ go_buildpack은 애플리케이션에 *.go 파일이 포함된 경우에 사용�
 * 1.6
 * 1.6.1
 
-나열되지 않은 Go 버전이 애플리케이션에 필요한 경우
-외부 [Go 빌드팩](https://github.com/cloudfoundry/go-buildpack.git){: new_window}을 사용하여 애플리케이션을 배치할 수 있습니다.
+나열되지 않은 Go 버전이
+애플리케이션에 필요한 경우
+외부 [Go 빌드팩](https://github.com/cloudfoundry/go-buildpack.git){: new_window}을
+사용하여 애플리케이션을 배치할 수 있습니다.
 
-
-# 관련 링크
-{: #rellinks}
-## 일반
-{: #general}
+# rellinks
+{: #rellinks notoc}
+## general
+{: #general notoc}
 
 * [GoLang](http://golang.org/){: new_window}
 * [Go에 대한 Cloud Foundry 빌드팩](https://github.com/cloudfoundry/go-buildpack){: new_window}

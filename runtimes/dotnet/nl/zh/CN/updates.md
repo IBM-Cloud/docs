@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-06"
+  years: 2015, 2017
+lastupdated: "2017-03-30"
 
 ---
 
@@ -14,6 +14,28 @@ lastupdated: "2016-10-06"
 
 
 aspnet buildpack 中最新更新的列表。
+
+## 2017 年 3 月 29 日：更新了 ASP.NET 核心 buildpack V1.0.13-20170330-1023
+
+* 添加对 .NET 核心运行时 1.0.4 的支持
+* 添加对 .NET 核心运行时 1.1.1 的支持
+* 添加对 .NET 核心 SDK 1.0.1 的支持
+* 将 Node 版本更新为 6.10.0
+* 除去对 .NET 核心 SDK 1.0.0-preview2-003131 的支持
+* 除去对 .NET 核心 SDK 1.0.0-preview3-004056 的支持
+
+## 2017 年 1 月 31 日：更新了 ASP.NET 核心 buildpack V1.0.10-20170124-1145
+
+* 添加对 .NET 核心 1.0.3 的支持
+* 添加对 .NET 核心 MSBuild 工具的支持
+* 添加对 F# 项目的支持
+* 除去对 .NET 核心 SDK 1.0.0-preview2-003121 的支持
+
+## 2016 年 12 月 9 日：更新了 ASP.NET 核心 buildpack V1.0.6-20161205-0912
+
+* 添加对 .NET 核心 1.1.0 的支持
+* 除去对 .NET 核心 1.0.0 RC2 的支持
+* 添加用于清除 NuGet 数据包高速缓存的选项
 
 ## 2016 年 10 月 10 日：更新了 ASP.NET 核心 buildpack V1.0.1-20161005-1225
 
@@ -59,7 +81,7 @@ dnx src/dotnetstarter kestrel --server.urls http://${VCAP_APP_HOST}:${PORT}
 * 此 buildpack 中不再使用 Nowin Web 服务器，而改为使用 [Kestrel]{https://github.com/aspnet/KestrelHttpServer} Web 服务器。
 
 # 相关链接
-{: #rellinks}
+{: #rellinks notoc}
 ## 常规
-{: #general}
+{: #general notoc}
 * [Dotnet 核心运行时](index.html)

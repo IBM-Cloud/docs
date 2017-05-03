@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-01-25"
 
 ---
 
@@ -58,6 +58,8 @@ python-3.5.0
 [Python 빌드팩](https://github.com/cloudfoundry/python-buildpack)을 사용하여 애플리케이션을 배치할 수
 있습니다. 
 
-# 관련 링크
-## 일반
+# rellinks
+{: #rellinks notoc}
+## general
+{: #general notoc}
 * [Python에 대한 Cloud Foundry 빌드팩](https://github.com/cloudfoundry/python-buildpack)

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-14"
+  years: 2016, 2017
+lastupdated: "2017-04-11"
 
 ---
 
@@ -19,8 +19,10 @@ node.js 애플리케이션이 {{site.data.keyword.Bluemix}}에 푸시될 때 SDK
 상황(예: [Bluemix 데디케이티드](/docs/dedicated/index.html#dedicated) 및
 [Bluemix 로컬](/docs/local/index.html#local) 포함)에서,
 Bluemix의 외부에 있는 액세스 사이트를 신뢰하지 않거나 이를 더 명시적으로 제어할 수도 있습니다.  
+{: shortdesc}
 
-다음은 node.js 빌드팩이 액세스할 수 있는 외부 사이트입니다. [Bluemix 데디케이티드](/docs/dedicated/index.html#dedicated) 및 [Bluemix 로컬](/docs/local/index.html#local) Bluemix 환경에서 이러한 사이트는 *화이트리스트에 나열*되어 있어야 할 수 있습니다.
+다음은 node.js 빌드팩이 액세스할 수 있는 외부 사이트입니다. [Bluemix 데디케이티드](/docs/dedicated/index.html#dedicated) 및
+[Bluemix 로컬](/docs/local/index.html#local) Bluemix 환경에서 이러한 사이트는 *화이트리스트에 나열*되어 있어야 할 수 있습니다.
 
 * 다음은 사용 가능한 노드 엔진 버전을 확인하는 데 사용될 수 있습니다. http://nodejs.org/
 * 다음은 빌드팩에 포함되지 않은 노드 엔진 버전을 검색하는 데 사용됩니다. https://s3pository.heroku.com
@@ -34,7 +36,7 @@ Bluemix의 외부에 있는 액세스 사이트를 신뢰하지 않거나 이를
 최신 버전으로 전진합니다. 이러한 경우 사용자는 최신 노드 엔진 버전을 지정하도록 노드 앱을 다시 구성해야 할 수 있습니다.
 
 
-### 오프라인 애플리케이션
+## 오프라인 애플리케이션
 {: #offline_applications}
 
 https://registry.npmjs.org 여기에 액세스할 필요성을 제거하기 위해 사용자의 애플리케이션에 필요한 모든 노드 모듈을 사용자의 애플리케이션 내에 포함할 수 있습니다. 이를 수행하려면 애플리케이션에 필요한 모든 모듈에 대해 **npm install**을 실행하고 결과 *node_modules* 디렉토리를 푸시된 애플리케이션과 함께 포함하십시오.
@@ -51,11 +53,6 @@ https://registry.npmjs.org 여기에 액세스할 필요성을 제거하기 위�
 ## 프록시 작업
 {: #working_with_proxy}
 
-[Bluemix 데디케이티드](/docs/dedicated/index.html#dedicated) 및 [Bluemix 로컬](/docs/local/index.html#local) 등의 일부 환경에서 프록시를 구성할 수 있습니다. 자세한 내용은 [프록시 작업](/docs/manageapps/workingWithProxy.html)을 참조하십시오.
-
-# 관련 링크
-{: #rellinks}
-## 일반
-{: #general}
-* [Node.js 빌드팩의 최신 업데이트](/docs/runtimes/nodejs/updates.html)
-* [Node.js](https://nodejs.org)
+[Bluemix 데디케이티드](/docs/dedicated/index.html#dedicated) 및
+[Bluemix 로컬](/docs/local/index.html#local) 등의 일부 환경에서 프록시를 구성할 수 있습니다. 자세한 내용은
+[프록시 작업](/docs/manageapps/workingWithProxy.html)을 참조하십시오.

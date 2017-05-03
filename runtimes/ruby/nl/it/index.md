@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-03-23"
 
 ---
 
@@ -22,8 +22,8 @@ Il ruby_buildpack viene utilizzato se la tua applicazione ha un Gemfile nella di
 ## Applicazione starter
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} Fornisce un'applicazione starter Ruby.  L'applicazione starter Ruby è una semplice applicazione PHP che fornisce un template che puoi utilizzare per la tua applicazione.
-Puoi sperimentare l'applicazione starter ed effettuare e inviare modifiche all'ambiente {{site.data.keyword.Bluemix}}. Consulta [Utilizzo di applicazioni starter](/docs/cfapps/starter_app_usage.html) per informazioni sull'utilizzo dell'applicazione starter.
+{{site.data.keyword.Bluemix}} Fornisce un'applicazione starter Ruby.  L'applicazione starter Ruby è una semplice applicazione Ruby che fornisce un template che puoi utilizzare per la tua applicazione. Puoi fare delle prove con l'applicazione di avvio, apportare modifiche ed eseguirne il push
+all'ambiente {{site.data.keyword.Bluemix}}.  Consulta [Utilizzo di applicazioni starter](/docs/cfapps/starter_app_usage.html) per informazioni sull'utilizzo dell'applicazione starter.
 
 ## Versioni di runtime
 {: #runtime_versions}
@@ -60,8 +60,8 @@ puoi utilizzare il [pacchetto
 di build Ruby](https://github.com/cloudfoundry/ruby-buildpack) esterno per distribuire l'applicazione.
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
-{: #general}
+{: #general notoc}
 * [Pacchetto di build Cloud Foundry per Ruby](https://github.com/cloudfoundry/cf-buildpack-ruby)
-* [Documentazione di Ruby on Rails](http://api.rubyonrails.org/)
+* [Ruby on Rails documentation ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://api.rubyonrails.org/)

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-11"
+  years: 2015, 2017
+lastupdated: "2017-03-22"
 
 ---
 
@@ -32,7 +32,7 @@ Bluemix에서 WAR 또는 EAR 파일과 같은 독립형 애플리케이션을 Li
 예: 
 
 ```
-$ cf push <yourappname> -p myapp.war
+    $ cf push <yourappname> -p myapp.war
 ```
 {: codeblock}
 
@@ -53,12 +53,12 @@ $ cf push <yourappname> -p myapp.war
 * servlet-3.1
 * websocket-1.1
 * icap:managementConnector-1.0
-* appstate-1.0
+* appstate-2.0
 
 이 기능은 Java EE 7 Web Profile 기능에 해당합니다. JBP_CONFIG_LIBERTY 환경 변수를 설정하여 Liberty 기능의 다른 설정을 지정할 수 있습니다. 예를 들어, jsp-2.3 및 websocket-1.1 기능만 사용하려면 명령을 실행하고 애플리케이션을 다시 스테이징하십시오. 
 
 ```
-$ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
+    $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
 ```
 {: codeblock}
 
@@ -67,14 +67,14 @@ $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websock
 WAR 파일을 배치한 경우, 웹 애플리케이션은 임베디드 ibm-web-ext.xml 파일에 설정된 대로 컨텍스트 루트에서 액세스 가능합니다. ibm-web-ext.xml 파일이 존재하지 않거나 컨텍스트 루트를 지정하지 않는 경우에는 애플리케이션이 루트 컨텍스트에서 액세스 가능합니다. 예를 들어, 다음과 같습니다. 
 
 ```
-http://<yourappname>.mybluemix.net/
+    http://<yourappname>.mybluemix.net/
 ```
 {: codeblock}
 
 EAR 파일을 배치했으면 EAR 배치 디스크립터에 정의된 컨텍스트 루트에서 임베디드 웹 애플리케이션에 액세스할 수 있습니다. 예를 들어, 다음과 같습니다. 
 
 ```
-http://<yourappname>.mybluemix.net/acme/
+    http://<yourappname>.mybluemix.net/acme/
 ```
 {: codeblock}
 
@@ -97,7 +97,7 @@ http://<yourappname>.mybluemix.net/acme/
           <feature>servlet-3.1</feature>
           <feature>websocket-1.1</feature>
           <feature>icap:managementConnector-1.0</feature>
-          <feature>appstate-1.0</feature>
+          <feature>appstate-2.0</feature>
        </featureManager>
 
        <application name='myapp' location='myapp.war' type='war' context-root='/'/>
@@ -109,7 +109,7 @@ http://<yourappname>.mybluemix.net/acme/
        <applicationMonitor dropinsEnabled='false' updateTrigger='mbean'/>
        <config updateTrigger='mbean'/>
        <cdi12 enableImplicitBeanArchives='false'/>
-       <appstate appName='myapp' markerPath='${home}/../.liberty.state'/>
+       <appstate2 appName='myapp'/>
     </server>
 ```
 {: codeblock}
@@ -232,7 +232,7 @@ Liberty 서버를 패키징하려면 Liberty 설치 디렉토리에서 `./bin/se
 ### 바인드된 서비스 정보 액세스
 {: #accessing_info_of_bound_services}
 
-서비스를 애플리케이션에 바인드하려는 경우, Cloud Foundry가 애플리케이션에 대해 설정하는 [VCAP_SERVICES 환경 변수](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES)에 연결 신임 정보와 같은 서비스 관련 정보가 포함됩니다. [자동으로 구성되는 서비스](autoConfig.html)의 경우, Liberty 빌드팩이 server.xml 파일에 서비스 바인딩 항목을 생성하거나 업데이트합니다. 서비스 바인딩 항목의 컨텐츠는 다음 형식 중 하나입니다.
+애플리케이션에 서비스를 바인드하려는 경우 서비스에 대한 정보(예: 연결 신임 정보)는 Cloud Foundry가 애플리케이션에 대해 설정하는 [VCAP_SERVICES 환경 변수 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES)에 포함됩니다. [자동으로 구성되는 서비스](autoConfig.html)의 경우, Liberty 빌드팩이 server.xml 파일에 서비스 바인딩 항목을 생성하거나 업데이트합니다. 서비스 바인딩 항목의 컨텐츠는 다음 형식 중 하나입니다.
 
 * cloud.services.&lt;service-name&gt;.&lt;property&gt; 서비스의 이름, 유형, 플랜과 같은 정보를 설명합니다. 
 * cloud.services.&lt;service-name&gt;.connection.&lt;property&gt; 서비스의 연결 정보를 설명합니다.
@@ -251,9 +251,9 @@ Liberty 서버를 패키징하려면 Liberty 설치 디렉토리에서 `./bin/se
 
 Liberty 빌드팩을 통해 자동으로 구성되지 않는 바인드된 서비스의 경우, 애플리케이션에서 자체적으로 백엔드 리소스의 액세스를 관리해야 합니다.
 
-# 관련 링크
-{: #rellinks}
-## 일반
-{: #general}
+# rellinks
+{: #rellinks notoc}
+## general
+{: #general notoc}
 * [Liberty 런타임](index.html)
 * [Liberty 프로파일 개요](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

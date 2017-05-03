@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-02-07"
 
 ---
 
@@ -31,9 +31,9 @@ lastupdated: "2016-11-14"
 {{site.data.keyword.Bluemix}} 提供了几种 Liberty 入门模板应用程序。Liberty 入门模板应用程序是为您提供可使用模板的简单 Liberty 应用程序。您可以体验该入门模板应用程序，对其进行更改并将更改推送到 Bluemix 环境。有关使用入门模板应用程序的帮助，请参阅[使用入门模板应用程序](/docs/cfapps/starter_app_usage.html)。
 
 # 相关链接
-{: #rellinks}
+{: #rellinks notoc}
 ## 常规
-{: #general}
+{: #general notoc}
 * [Liberty 概要文件概述](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
 * [管理 Liberty 应用程序](/docs/manageapps/app_mng.html#Utilities)
 * [使用 IBM Eclipse Tools for Bluemix 部署应用程序](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools)

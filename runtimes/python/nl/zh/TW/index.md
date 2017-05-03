@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-01-25"
 
 ---
 
@@ -50,8 +50,10 @@ python-3.5.0
 * 3.5.0
 * 3.5.1
 
-如果您的應用程式需要未列出的 Python 版本，您可以使用外部 [Python 建置套件](https://github.com/cloudfoundry/python-buildpack)來部署該應用程式。
+如果您的應用程式需要未列出的 Python 版本，可以使用外部 [Python 建置套件](https://github.com/cloudfoundry/python-buildpack)來部署該應用程式。
 
 # 相關鏈結
+{: #rellinks notoc}
 ## 一般
+{: #general notoc}
 * [Cloud Foundry buildpack for the Python Language](https://github.com/cloudfoundry/python-buildpack)

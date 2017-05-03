@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-06-10"
+  years: 2015, 2017
+lastupdated: "2017-04-18"
 
 ---
 
@@ -39,9 +39,23 @@ lastupdated: "2016-06-10"
 * 如果应用程序部署期间超出“内存限制”，您会收到发生故障的消息。您可能会看到应用程序不太稳定。还可能会看到应用程序多次尝试启动，但始终不成功。或者，可能会收到一条消息，指示应用程序部署失败。
 * 如果应用程序正在运行时超出“内存限制”，那么进程会停止。Cloud Foundry 会尝试重新启动应用程序。应用程序可能会重新启动，但在一段时间内不可用。
 
-# 相关链接
-{: #rellinks}
-## 常规
-{: #general}
-* [Liberty 运行时](index.html)
-* [Liberty 概要文件概述](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+## 指定堆内存
+{: #specifying_heap_memory}
+
+可以通过各种方式定制分配给应用程序的最大堆内存量。
+
+*  使用 JVM_ARGS 环境变量和 -Xmx 自变量。例如，要将最大堆大小设置为 512M，请使用以下命令，然后重新编译打包应用程序。
+
+```
+    $ cf set-env myapp JVM_ARGS -Xmx512m
+```
+{: codeblock}
+
+* 如果应用程序为[服务目录](optionsForPushing.html#server_directory)或[打包服务器](optionsForPushing.html#packaged_server)，那么可以在 jvm.options 文件中指定 -Xmx 自变量。
+
+* 可以使用 JBP_CONFIG_IBMJDK 环境变量来指定堆大小比率。heap_size_ratio 是浮点值，指定可分配给堆的可用内存量。例如，要将一半可用内存分配给堆，请发出以下命令，然后重新编译打包应用程序。
+
+```
+    $ cf set-env myapp JBP_CONFIG_IBMJDK "heap_size_ratio: 0.50"
+```
+{: codeblock}

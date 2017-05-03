@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-06"
+  years: 2015, 2017
+lastupdated: "2017-03-30"
 
 ---
 
@@ -14,6 +14,28 @@ lastupdated: "2016-10-06"
 
 
 aspnet ビルドパックの最新更新のリスト。
+
+## 2017 年 3 月 29 日: ASP.NET Core ビルドパック v1.0.13-20170330-1023 の更新
+
+* .NET Core ランタイム 1.0.4 のサポートを追加
+* .NET Core ランタイム 1.1.1 のサポートを追加
+* .NET Core SDK 1.0.1 のサポートを追加
+* Node バージョンを 6.10.0 に更新
+* .NET Core SDK 1.0.0-preview2-003131 のサポートを削除
+* .NET Core SDK 1.0.0-preview3-004056 のサポートを削除
+
+## 2017 年 1 月 31 日: ASP.NET Core ビルドパック v1.0.10-20170124-1145 の更新
+
+* .NET Core 1.0.3 のサポートを追加
+* .NET Core MSBuild ツールのサポートを追加
+* F# プロジェクトのサポートを追加
+* .NET Core SDK 1.0.0-preview2-003121 のサポートを削除
+
+## 2016 年 12 月 9 日: ASP.NET Core ビルドパック v1.0.6-20161205-0912 の更新
+
+* .NET Core 1.1.0 のサポートを追加
+* .NET Core 1.0.0 RC2 のサポートを削除
+* NuGet パッケージのキャッシュをクリアするオプションを追加
 
 ## 2016 年 10 月 10 日: ASP.NET Core ビルドパック v1.0.1-20161005-1225 の更新
 
@@ -59,7 +81,7 @@ aspnet ビルドパックの最新更新のリスト。
 * Nowin Web サーバーの使用はこのビルドパックから削除され、代わりに [Kestrel]{https://github.com/aspnet/KestrelHttpServer} Web サーバーが使用されます。
 
 # 関連リンク
-{: #rellinks}
+{: #rellinks notoc}
 ## 一般
-{: #general}
+{: #general notoc}
 * [Dotnet Core ランタイム](index.html)

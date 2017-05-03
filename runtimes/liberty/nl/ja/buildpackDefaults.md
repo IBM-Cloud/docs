@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
 lastupdated: "2016-06-10"
 
 ---
@@ -58,8 +58,8 @@ Liberty フィーチャーのデフォルトの変更に影響されません。
 
 
 # 関連リンク
-{: #rellinks}
+{: #rellinks notoc}
 ## 一般
-{: #general}
+{: #general notoc}
 * [Liberty ランタイム](index.html)
 * [Liberty プロファイル概要](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-03-23"
 
 ---
 
@@ -50,17 +50,17 @@ Pour plus d'informations, voir les informations sur les [éditions java-buildpac
 L'environnement d'exécution Tomcat peut être configuré pour faire confiance aux proxys internes Bluemix et autoriser la redirection du trafic HTTP vers HTTPS (SSL).
 Pour ce faire, modifiez le fichier server.xml et définissez l'élément RemoteIpValve Valve avec les options internalProxies et protocolHeader.
 
-Le fichier [server.xml](https://github.com/cloudfoundry/java-buildpack/blob/master/resources/tomcat/conf/server.xml) de l'environnement d'exécution Tomcat inclus dans le pack de construction ne définit par défaut que l'option protocolHeader pour l'élément RemoteIpValve Valve. Pour rediriger le trafic HTTP vers HTTPS dans Bluemix, configurez l'élément RemoteIpValve dans le fichier server.xml personnalisé comme suit :
+Le fichier [server.xml](https://github.com/cloudfoundry/java-buildpack/blob/master/resources/tomcat/conf/server.xml) de l'environnement d'exécution Tomcat inclus dans le pack de construction ne définit par défaut que l'option protocolHeader pour l'élément RemoteIpValve Valve.  Pour rediriger le trafic HTTP vers HTTPS dans Bluemix, configurez l'élément RemoteIpValve dans le fichier server.xml personnalisé comme suit :
 
 ```
  <Valve className='org.apache.catalina.valves.RemoteIpValve' protocolHeader='x-forwarded-proto' internalProxies='.*' />
 ```
 {: codeblock}
 
-Vous trouverez davantage d'options de configuration de RemoteIpValve dans la [documentation Tomcat](https://tomcat.apache.org/tomcat-8.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html).
+Vous trouverez davantage d'options de configuration de RemoteIpValve dans la [documentation Tomcat![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://tomcat.apache.org/tomcat-8.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html).
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
-{: #general}
+{: #general notoc}
 * [java-buildpack](https://github.com/cloudfoundry/java-buildpack)

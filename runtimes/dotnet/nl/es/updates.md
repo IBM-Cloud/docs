@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-06"
+  years: 2015, 2017
+lastupdated: "2017-03-30"
 
 ---
 
@@ -14,6 +14,28 @@ lastupdated: "2016-10-06"
 
 
 Una lista de las últimas actualizaciones del paquete de compilación de aspnet.
+
+## 29 de marzo de 2017: Actualización del paquete de compilación ASP.NET Core v1.0.13-20170330-1023
+
+* Adición de soporte para .NET Core runtime 1.0.4
+* Adición de soporte para .NET Core runtime 1.1.1
+* Adición de soporte para .NET Core SDK 1.0.1
+* Actualizar de la versión de Node a 6.10.0
+* Retirada del soporte para .NET Core SDK 1.0.0-preview2-003131
+* Retirada del soporte para .NET Core SDK 1.0.0-preview3-004056
+
+## 31 de enero de 2017: Se ha actualizado el paquete de compilación de ASP.NET Core v1.0.10-20170124-1145
+
+* Adición de soporte para .NET Core 1.0.3
+* Adición de soporte para las herramientas .NET Core MSBuild
+* Adición de soporte para proyectos F#
+* Retirada del soporte para .NET Core SDK 1.0.0-preview2-003121
+
+## 9 de diciembre de 2016: Se ha actualizado el paquete de compilación de ASP.NET Core v1.0.6-20161205-0912
+
+* Adición de soporte para .NET Core 1.1.0
+* Retirada de soporte para .NET Core 1.0.0 RC2
+* Adición de una opción para eliminar la memoria caché de paquetes NuGet
 
 ## 10 de octubre de 2016: Se ha actualizado el paquete de compilación de ASP.NET Core v1.0.1-20161005-1225
 
@@ -59,7 +81,7 @@ Esta versión del paquete de compilación incluye los siguientes cambios:
 * El uso del servidor web Nowin se ha eliminado del paquete de compilación y en su lugar se utiliza el servidor web [Kestrel]{https://github.com/aspnet/KestrelHttpServer}.
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
-{: #general}
+{: #general notoc}
 * [Tiempo de ejecución de núcleo de Dotnet](index.html)

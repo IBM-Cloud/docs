@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-03-23"
 
 ---
 
@@ -57,10 +57,10 @@ Tomcat 运行时可以配置为信任 Bluemix 内部代理，并允许将 HTTP �
 ```
 {: codeblock}
 
-在 [Tomcat 文档](https://tomcat.apache.org/tomcat-8.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html)中可以找到 RemoteIpValve 的更多配置选项。
+在 [Tomcat 文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://tomcat.apache.org/tomcat-8.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html) 中可以找到 RemoteIpValve 的更多配置选项。
 
 # 相关链接
-{: #rellinks}
+{: #rellinks notoc}
 ## 常规
-{: #general}
+{: #general notoc}
 * [java-buildpack](https://github.com/cloudfoundry/java-buildpack)

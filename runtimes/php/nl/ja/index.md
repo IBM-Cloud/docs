@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-04-14"
 
 ---
 
@@ -20,12 +20,12 @@ php_buildpack は、PHP アプリケーションのための完全なランタ�
 php_buildpack は、以下のいずれかの条件下で使用されます。
 * アプリケーションに composer.json ファイルが含まれている。
 * アプリケーションに *.php ファイルが含まれている。
-* アプリケーションの [options.json](https://github.com/cloudfoundry/php-buildpack/blob/master/docs/config.md) ファイルで ${WEBDIR} 変数が定義され、その変数がアプリケーション内の既存ディレクトリーに設定されている。
+* アプリケーションの [options.json](https://docs.cloudfoundry.org/buildpacks/php/gsg-php-config.html) ファイルで ${WEBDIR} 変数が定義され、その変数がアプリケーション内の既存ディレクトリーに設定されている。
 
 ## スターター・アプリケーション
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} には、PHP スターター・アプリケーションが用意されています。PHP スターター・アプリケーションは、アプリケーションで使用可能なテンプレートを提供する、シンプルな PHP アプリケーションです。スターター・アプリケーションを試し、 {site.data.keyword.Bluemix}} 環境に対して変更を行い、プッシュすることができます。スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](/docs/cfapps/starter_app_usage.html)を参照してください。
+{{site.data.keyword.Bluemix}} には、PHP スターター・アプリケーションが用意されています。PHP スターター・アプリケーションは、アプリケーションで使用可能なテンプレートを提供する、シンプルな PHP アプリケーションです。スターター・アプリケーションを試し、{{site.data.keyword.Bluemix}} 環境に対して変更を行い、プッシュすることができます。スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](/docs/cfapps/starter_app_usage.html)を参照してください。
 
 ## ランタイム・バージョン
 {: #runtime_versions}
@@ -40,7 +40,8 @@ php_buildpack は、以下のいずれかの条件下で使用されます。
 }
 ```
 {: codeblock}
-詳しくは、[『Composer Package links』](https://getcomposer.org/doc/04-schema.md#package-links)を参照してください。バージョンを指定しない場合は、デフォルトでバージョン 5.5.34 が選択されます。
+詳しくは、[『Composer Package links』![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://getcomposer.org/doc/04-schema.md#package-links)を参照してください。
+バージョンを指定しない場合は、デフォルトでバージョン 5.5.34 が選択されます。
 
 ### 使用可能なバージョン:
 {: #available_versions}
@@ -57,10 +58,11 @@ php_buildpack は、以下のいずれかの条件下で使用されます。
 アプリケーションが、リストされていないバージョンの PHP を必要とする場合は、外部の [PHP ビルドパック](https://github.com/cloudfoundry/php-buildpack.git)を使用してアプリケーションをデプロイできます。
 
 # 関連リンク
-{: #rellinks}
+{: #rellinks notoc}
 ## チュートリアルおよびサンプル
-{: #samples}
+{: #samples notoc}
 * [Build and deploy a REST API on IBM Bluemix with PHP and MySQL](http://www.ibm.com/developerworks/library/wa-deployrest-app/)
 * [Build and deploy a mobile-friendly calorie counter on IBM Bluemix with PHP, MySQL, AngularJS, and the Nutritionix API](http://www.ibm.com/developerworks/library/mo-bluemix-php-nutritionix-angularjs/)
 ## 一般
+{: #general notoc}
 * [A Cloud Foundry Buildpack for PHP](https://github.com/cloudfoundry/php-buildpack.git)

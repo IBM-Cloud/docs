@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-01-25"
 
 ---
 
@@ -59,9 +59,9 @@ il [pacchetto di build Go](https://github.com/cloudfoundry/go-buildpack.git){: n
 esterno per distribuire l'applicazione.
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
-{: #general}
+{: #general notoc}
 
 * [GoLang](http://golang.org/){: new_window}
 * [Pacchetto di build Cloud Foundry per Go](https://github.com/cloudfoundry/go-buildpack){: new_window}

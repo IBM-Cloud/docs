@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-06-10"
+  years: 2015, 2017
+lastupdated: "2017-04-18"
 
 ---
 
@@ -39,9 +39,27 @@ JVM 메모리 사용에 대한 자세한 정보는 developerWorks 문서 [Thanks
 * 애플리케이션을 배치하는 동안 메모리 제한을 초과하면 오류가 발생했다는 메시지가 표시됩니다. 애플리케이션이 불안정하게 작동하는 것을 느낄 수 있습니다. 애플리케이션에서 여러 차례 시작하려고 시도했지만 항상 실패하는 경우도 있습니다. 또는, 애플리케이션 배치에 실패했다는 메시지가 표시되기도 합니다.
 * 애플리케이션이 제공되고 있는 동안 메모리 제한을 초과하면 프로세스가 중지됩니다. Cloud Foundry에서 애플리케이션을 다시 시작하려고 시도합니다. 애플리케이션이 다시 시작될 수 있지만 일정 시간 동안 사용 불가능합니다.
 
-# 관련 링크
-{: #rellinks}
-## 일반
-{: #general}
-* [Liberty 런타임](index.html)
-* [Liberty 프로파일 개요](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+## 힙 메모리 지정
+{: #specifying_heap_memory}
+
+다양한 방법으로 애플리케이션에 할당된 최대 힙 메모리 양을 사용자 정의할 수 있습니다.
+
+*  JVM_ARGS 환경 변수 및 -Xmx 인수를 사용하십시오. 예를 들어, 최대 힙 크기를 512M으로 설정하려면
+다음 명령을 사용한 다음 앱을 다시 스테이징하십시오.
+
+```
+    $ cf set-env myapp JVM_ARGS -Xmx512m
+```
+{: codeblock}
+
+* 애플리케이션이 [서버 디렉토리](optionsForPushing.html#server_directory) 또는 [패키지된 서버](optionsForPushing.html#packaged_server)인 경우
+jvm.options 파일에서 -Xmx 인수를 지정할 수 있습니다.
+
+* JBP_CONFIG_IBMJDK 환경 변수를 사용하여 힙 크기 비율을 지정할 수 있습니다. heap_size_ratio는
+힙에 할당할 사용 가능한 메모리 양을 지정하는 부동 소수점 값입니다. 예를 들어, 힙에 사용 가능한
+메모리의 반을 할당하려면 다음 명령을 실행하고 앱을 다시 스테이징하십시오.
+
+```
+    $ cf set-env myapp JBP_CONFIG_IBMJDK "heap_size_ratio: 0.50"
+```
+{: codeblock}

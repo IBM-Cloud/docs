@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-06-10"
+  years: 2015, 2017
+lastupdated: "2017-04-18"
 
 ---
 
@@ -47,9 +47,23 @@ JVM メモリー使用について詳しくは、developerWorks の記事[『Tha
 * アプリケーションがサービス中にメモリー限度を超えた場合、プロセスは停止されます。Cloud Foundry はアプリケーションの再始動を試みます。
 アプリケーションは再始動する可能性がありますが、一定期間は使用不可になります。
 
-# 関連リンク
-{: #rellinks}
-## 一般
-{: #general}
-* [Liberty ランタイム](index.html)
-* [Liberty プロファイル概要](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+## ヒープ・メモリーの指定
+{: #specifying_heap_memory}
+
+アプリケーションに割り振られるヒープ・メモリーの最大量をさまざまな方法でカスタマイズできます。
+
+*  JVM_ARGS 環境変数および -Xmx 引数を使用します。例えば、最大ヒープ・サイズを 512 M に設定するには、以下のコマンドを使用し、その後でアプリケーションの再ステージングを行います。
+
+```
+    $ cf set-env myapp JVM_ARGS -Xmx512m
+```
+{: codeblock}
+
+* アプリケーションが[サーバー・ディレクトリー](optionsForPushing.html#server_directory)または[パッケージされたサーバー](optionsForPushing.html#packaged_server)である場合、jvm.options ファイル内に -Xmx 引数を指定できます。
+
+* JBP_CONFIG_IBMJDK 環境変数を使用して、ヒープ・サイズ率を指定できます。heap_size_ratio は、使用可能メモリーのうちどれだけの量をヒープに割り振るのかを指定する浮動小数点値です。例えば、使用可能メモリーの半分をヒープに割り振るには、以下のコマンドを実行し、その後でアプリケーションの再ステージングを行います。
+
+```
+    $ cf set-env myapp JBP_CONFIG_IBMJDK "heap_size_ratio: 0.50"
+```
+{: codeblock}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-11"
+  years: 2015, 2017
+lastupdated: "2017-03-22"
 
 ---
 
@@ -54,7 +54,7 @@ WAR または EAR ファイルなどのスタンドアロン・アプリケー�
 * servlet-3.1
 * websocket-1.1
 * icap:managementConnector-1.0
-* appstate-1.0
+* appstate-2.0
 
 これらのフィーチャーは、Java EE 7 Web Profile フィーチャーに対応します。JBP_CONFIG_LIBERTY 環境変数を設定することによって、異なる Liberty フィーチャー・セットを指定できます。例えば、
 jsp-2.3 フィーチャーと websocket-1.1 フィーチャーのみを使用可能にするには、次のコマンドを実行し、アプリケーションの再ステージングを行います。
@@ -104,7 +104,7 @@ EAR ファイルをデプロイした場合、組み込み Web アプリケー�
           <feature>servlet-3.1</feature>
           <feature>websocket-1.1</feature>
           <feature>icap:managementConnector-1.0</feature>
-          <feature>appstate-1.0</feature>
+          <feature>appstate-2.0</feature>
        </featureManager>
 
        <application name='myapp' location='myapp.war' type='war' context-root='/'/>
@@ -116,7 +116,7 @@ EAR ファイルをデプロイした場合、組み込み Web アプリケー�
        <applicationMonitor dropinsEnabled='false' updateTrigger='mbean'/>
        <config updateTrigger='mbean'/>
        <cdi12 enableImplicitBeanArchives='false'/>
-       <appstate appName='myapp' markerPath='${home}/../.liberty.state'/>
+       <appstate2 appName='myapp'/>
     </server>
 ```
 {: codeblock}
@@ -239,8 +239,7 @@ Liberty サーバーをパッケージするには、Liberty インストール�
 ### バインドされたサービスのアクセス情報
 {: #accessing_info_of_bound_services}
 
-アプリケーションにサービスをバインドしたい場合、そのサービスについての情報 (接続資格情報など) は [VCAP_SERVICES 環境変数](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES)に含まれ、
-それを Cloud Foundry がアプリケーション用に設定します。[自動構成されるサービス](autoConfig.html)の場合、
+アプリケーションにサービスをバインドしたい場合、そのサービスについての情報 (接続資格情報など) は、Cloud Foundry がアプリケーション用に設定する [VCAP_SERVICES 環境変数 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) に含まれます。[自動構成されるサービス](autoConfig.html)の場合、
 Liberty ビルドパックが server.xml ファイル内のサービス・バインディングのエントリーを生成または更新します。サービス・バインディングのエントリーの内容は、以下のいずれかの形式です。
 
 * cloud.services.&lt;service-name&gt;.&lt;property&gt; は、サービスの名前、タイプ、プランなどの情報を記述します。
@@ -261,8 +260,8 @@ Liberty ビルドパックが server.xml ファイル内のサービス・バイ
 バインドされたサービスが Liberty ビルドパックによって自動構成されないサービスの場合、アプリケーション自体がバックエンド・リソースのアクセスを管理する必要があります。
 
 # 関連リンク
-{: #rellinks}
+{: #rellinks notoc}
 ## 一般
-{: #general}
+{: #general notoc}
 * [Liberty ランタイム](index.html)
 * [Liberty プロファイル概要](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

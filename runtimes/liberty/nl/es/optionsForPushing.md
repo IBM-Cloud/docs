@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-11"
+  years: 2015, 2017
+lastupdated: "2017-03-22"
 
 ---
 
@@ -53,7 +53,7 @@ Cuando se despliega una aplicación autónoma, se proporciona una configuración
 * servlet-3.1
 * websocket-1.1
 * icap:managementConnector-1.0
-* appstate-1.0
+* appstate-2.0
 
 Estas características corresponden a las características de Java EE 7 Web Profile. Puede especificar un conjunto distinto de características de Liberty estableciendo la variable de entorno JBP_CONFIG_LIBERTY. Por ejemplo, para habilitar solo características de jsp-2.3 y websocket-1.1, ejecute el mandato y vuelva a transferir la aplicación:
 
@@ -97,7 +97,7 @@ A continuación se muestra el archivo predeterminado de configuración de Libert
           <feature>servlet-3.1</feature>
           <feature>websocket-1.1</feature>
           <feature>icap:managementConnector-1.0</feature>
-          <feature>appstate-1.0</feature>
+          <feature>appstate-2.0</feature>
        </featureManager>
 
        <application name='myapp' location='myapp.war' type='war' context-root='/'/>
@@ -109,7 +109,7 @@ A continuación se muestra el archivo predeterminado de configuración de Libert
        <applicationMonitor dropinsEnabled='false' updateTrigger='mbean'/>
        <config updateTrigger='mbean'/>
        <cdi12 enableImplicitBeanArchives='false'/>
-       <appstate appName='myapp' markerPath='${home}/../.liberty.state'/>
+       <appstate2 appName='myapp'/>
     </server>
 ```
 {: codeblock}
@@ -186,7 +186,7 @@ Nota: Se puede acceder a las aplicaciones web desplegadas como parte del directo
 
 Puede enviar por push un archivo del servidor empaquetado a Bluemix. El archivo del servidor empaquetado se crea mediante el mandato server package de Liberty. Además de los archivos de la aplicación y de configuración, el archivo del servidor empaquetado puede contener recursos compartidos y las características de usuario de Liberty que necesita la aplicación.
 
-Para empaquetar un servidor Liberty, utilice el mandato `./bin/server package` desde el directorio de instalación de Liberty. Especifique el nombre del servidor e incluya la opción `--include=usr`. 
+Para empaquetar un servidor Liberty, utilice el mandato `./bin/server package` desde el directorio de instalación de Liberty. Especifique el nombre del servidor e incluya la opción `--include=usr`.
 Por ejemplo, si el servidor Liberty es defaultServer, ejecute el mandato:
 
 ```
@@ -194,7 +194,7 @@ Por ejemplo, si el servidor Liberty es defaultServer, ejecute el mandato:
 ```
 {: codeblock}
 
-Este mandato genera un archivo serverName.zip en el directorio del servidor. Si ha utilizado la opción ``--archive`` para especificar un archivo de archivado distinto, asegúrese de que tenga la extensión ``.zip` en lugar de ``.jar`. **El paquete de compilación no da soporte a los archivos del servidor empaquetados creados con la extensión `.jar`**.
+Este mandato genera un archivo serverName.zip en el directorio del servidor. Si ha utilizado la opción `--archive` para especificar un archivo de archivado distinto, asegúrese de que tenga la extensión `.zip` en lugar de `.jar`. **El paquete de compilación no da soporte a los archivos del servidor empaquetados creados con la extensión `.jar`**.
 
 Luego puede enviar por push el archivo `.zip` generado a Bluemix con el mandato `cf push`.
 Por ejemplo:
@@ -225,14 +225,14 @@ Las siguientes variables están definidas en el archivo `runtime-vars.xml` y se 
 * ${vcap_app_port}: Same as ${port}. No se establece si se ejecuta en Diego.
 * ${application_name}: el nombre de la aplicación, que se define mediante las opciones del mandato cf push.
 * ${application_version}: la versión de esta instancia de la aplicación, que tiene el formato de un UUID, como por ejemplo `b687ea75-49f0-456e-b69d-e36e8a854caa`. Esta variable cambia con cada envío sucesivo de la aplicación que contiene código nuevo o cambios en los artefactos de la aplicación.
-* ${host}: la dirección IP de la instancia de la aplicación. 
+* ${host}: la dirección IP de la instancia de la aplicación.
 * ${application_uris}: una matriz de tipo JSON de puntos finales que se puede utilizar para acceder a esta aplicación; por ejemplo: myapp.mydomain.com.
 * ${start}: la fecha y hora en que se ha iniciado la aplicación, con un formato parecido al siguiente:`2013-08-22 10:10:18 -0400`. No se establece si se ejecuta en Diego.
 
 ### Acceso a la información de los servicios enlazados
 {: #accessing_info_of_bound_services}
 
-Cuando desee enlazar un servicio con la aplicación, se incluirá información acerca del servicio, como por ejemplo las credenciales de conexión, en la [variable de entorno VCAP_SERVICES](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) que
+Cuando desee enlazar un servicio con la aplicación, se incluirá información acerca del servicio, como por ejemplo las credenciales de conexión, en la [variable de entorno VCAP_SERVICES![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) que
 				Cloud Foundry establece para la aplicación. Para [servicios configurados automáticamente](autoConfig.html), el paquete de compilación de Liberty generará o
 				actualizará entradas de enlace de servicios en el archivo server.xml. El contenido de las entradas de enlace de servicio
 				puede estar en una de las formas siguientes:
@@ -243,20 +243,20 @@ Cuando desee enlazar un servicio con la aplicación, se incluirá información a
 El conjunto de información típico es el siguiente:
 * name: el nombre del servicio, por ejemplo mysql-e3abd.
 * label: el tipo del servicio creado, por ejemplo mysql-5.5.
-* plan: el plan del servicio, indicado por el identificador exclusivo del plan, por ejemplo 100. 
-* connection.name: identificador exclusivo de la conexión, que adopta el formato de UUID, por ejemplo d01af3a5fabeb4d45bb321fe114d652ee. 
-* connection.hostname: nombre de host del servidor que ejecuta el servicio, por ejemplo mysql-server.mydomain.com. 
-* connection.host: la dirección IP del servidor que ejecuta el servicio, por ejemplo 9.37.193.2. 
-* connection.port: el puerto en el que el servicio está a la escucha de conexiones entrantes, por ejemplo 3306,3307. 
-* connection.user: el nombre de usuario que se utiliza para autenticar esta aplicación ante el servicio. Cloud Foundry genera automáticamente el nombre de usuario, por ejemplo unHwANpjAG5wT. 
+* plan: el plan del servicio, indicado por el identificador exclusivo del plan, por ejemplo 100.
+* connection.name: identificador exclusivo de la conexión, que adopta el formato de UUID, por ejemplo d01af3a5fabeb4d45bb321fe114d652ee.
+* connection.hostname: nombre de host del servidor que ejecuta el servicio, por ejemplo mysql-server.mydomain.com.
+* connection.host: la dirección IP del servidor que ejecuta el servicio, por ejemplo 9.37.193.2.
+* connection.port: el puerto en el que el servicio está a la escucha de conexiones entrantes, por ejemplo 3306,3307.
+* connection.user: el nombre de usuario que se utiliza para autenticar esta aplicación ante el servicio. Cloud Foundry genera automáticamente el nombre de usuario, por ejemplo unHwANpjAG5wT.
 * connection.username: alias de connection.user.
-* connection.password: la contraseña que se utiliza para autenticar esta aplicación ante el servicio. Cloud Foundry genera automáticamente la contraseña, por ejemplo pvyCY0YzX9pu5. 
+* connection.password: la contraseña que se utiliza para autenticar esta aplicación ante el servicio. Cloud Foundry genera automáticamente la contraseña, por ejemplo pvyCY0YzX9pu5.
 
 Para los servicios enlazados que el paquete de compilación de Liberty no configura automáticamente, la aplicación tiene que gestionar por su cuenta el acceso del recurso de fondo.
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
-{: #general}
+{: #general notoc}
 * [Tiempo de ejecución de Liberty](index.html)
 * [Visión general del perfil de Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

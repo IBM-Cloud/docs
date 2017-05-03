@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-11"
+  years: 2015, 2017
+lastupdated: "2017-03-22"
 
 ---
 
@@ -55,7 +55,7 @@ $ cf push <yourappname> -p myapp.war
 * servlet-3.1
 * websocket-1.1
 * icap:managementConnector-1.0
-* appstate-1.0
+* appstate-2.0
 
 這些特性對應於 Java EE 7 Web 設定檔特性。您可以透過設定 JBP_CONFIG_LIBERTY 環境變數來指定另一組 Liberty 特性。例如，若只要啟用 jsp-2.3 及 websocket-1.1 特性，請執行指令並重新編譯打包應用程式：
 
@@ -100,7 +100,7 @@ http://<yourappname>.mybluemix.net/acme/
           <feature>servlet-3.1</feature>
           <feature>websocket-1.1</feature>
           <feature>icap:managementConnector-1.0</feature>
-          <feature>appstate-1.0</feature>
+          <feature>appstate-2.0</feature>
        </featureManager>
 
        <application name='myapp' location='myapp.war' type='war' context-root='/'/>
@@ -112,7 +112,7 @@ http://<yourappname>.mybluemix.net/acme/
        <applicationMonitor dropinsEnabled='false' updateTrigger='mbean'/>
        <config updateTrigger='mbean'/>
        <cdi12 enableImplicitBeanArchives='false'/>
-       <appstate appName='myapp' markerPath='${home}/../.liberty.state'/>
+       <appstate2 appName='myapp'/>
     </server>
 ```
 {: codeblock}
@@ -153,7 +153,7 @@ $ cf push <yourappname> -p wlp/usr/servers/defaultServer
 3. 將您的 WAR 檔或 EAR 檔複製到 defaultServer/apps 目錄中。
 4. 在 defaultServer 目錄中，建立含有下列範例內容的 server.xml 檔案。此外：
   * 請務必更新 application 元素的 location 或 type 屬性，以符合您應用程式的檔名和類型。
-  * 此圖中的 server.xml 檔案顯示最小特性集。依據應用程式的需求，您可能必須調整特性集。
+  * 此圖中的 server.xml 檔案顯示最小特性集。視應用程式的需求而定，您可能必須調整特性集。
 
 ```
     <server>
@@ -232,7 +232,7 @@ $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 ### 存取已連結服務的資訊
 {: #accessing_info_of_bound_services}
 
-當您想要將服務連結至應用程式時，在 Cloud Foundry 為應用程式設定的 [VCAP_SERVICES 環境變數](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES)中會包含服務的相關資訊，例如連線認證。對於[自動配置的服務](autoConfig.html)，Liberty 建置套件會在 server.xml 檔案中產生或更新服務連結項目。服務連結項目的內容可能為下列其中一種格式：
+當您想要將服務連結至應用程式時，在 Cloud Foundry 為應用程式設定的 [VCAP_SERVICES 環境變數 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) 中會包括服務的相關資訊，例如連線認證。對於[自動配置的服務](autoConfig.html)，Liberty 建置套件會在 server.xml 檔案中產生或更新服務連結項目。服務連結項目的內容可能為下列其中一種格式：
 
 * cloud.services.&lt;service-name&gt;.&lt;property&gt;，其說明服務的資訊，例如名稱、類型及方案。
 * cloud.services.&lt;service-name&gt;.connection.&lt;property&gt;，其說明服務的連線資訊。
@@ -252,8 +252,8 @@ $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 對於 Liberty 建置套件未自動配置的連結服務，應用程式需要自行管理後端資源的存取。
 
 # 相關鏈結
-{: #rellinks}
+{: #rellinks notoc}
 ## 一般
-{: #general}
+{: #general notoc}
 * [Liberty 運行環境](index.html)
 * [Liberty 設定檔概觀](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

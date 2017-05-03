@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-08-15"
+  years: 2015, 2017
+lastupdated: "2017-03-23"
 
 ---
 
@@ -92,7 +92,8 @@ aplicativo está esgotada.
 no momento da falha para o Loggregator.
   * se um aplicativo estiver configurado para ativar os dumps de memória da JVM, o encerramento de processos Java será desativado e os dumps de memória da JVM serão roteados para um diretório "dumps" de aplicativo comum. Esses dumps podem ser visualizados a partir do painel do Bluemix ou da CLI do CF.
 
-A seguir está uma configuração da JVM padrão de exemplo que é gerada pelo buildpack para um aplicativo que é implementado com um Limite de memória de 512 M:   
+A seguir está uma configuração da JVM padrão de exemplo que é gerada pelo buildpack para um aplicativo que é implementado com um Limite de memória de 512 M:
+
 ```
     -Xtune:virtualized
     -Xmx384M
@@ -134,7 +135,7 @@ que as opções variam de acordo com o JRE.
 <td>é baseado no tempo de execução do HotSpot que possui a notação de
 -X para não padrão, -XX para opções do desenvolvedor e sinalizações Booleanas
 para ativar ou desativar a opção </td>
-<td>[Visão tempo de execução de execução do HotSpot](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
+<td>[Visão geral do tempo de execução do HotSpot ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
 </tr>
 </table>
 
@@ -200,70 +201,77 @@ Liberty</td>
 ### Determinando as opções da JVM aplicadas de um aplicativo em execução
 {: #determining_applied_jvm_options}
 
-Exceto para opções definidas pelo aplicativo que são especificadas com a variável de ambiente JVM_ARGS, as opções resultantes são persistidas no ambiente de tempo de execução como opções da linha de comandos (aplicativos Java independentes) ou em um arquivo	jvm.options (aplicativos Java não independentes). As opções da JVM aplicadas para o aplicativo podem ser visualizadas a partir do Painel do Bluemix ou da	CLI do CF.
+Exceto para opções definidas pelo aplicativo que são especificadas com a variável de ambiente JVM_ARGS, as opções resultantes são persistidas no ambiente de tempo de execução como opções da linha de comandos (aplicativos Java independentes) ou em um arquivo	`jvm.options` (aplicativos Java não independentes). As opções da JVM aplicadas do aplicativo podem ser visualizadas por meio do console do IBM Bluemix ou do CF CLI.
 
 As opções da JVM para aplicativo Java independente
-são persistidas como opções da linha de comandos. Elas podem ser visualizadas a partir do arquivo staging_info.yml.
+são persistidas como opções da linha de comandos. Elas podem ser visualizadas por meio do arquivo `staging_info.yml`.
+
+Para visualizar o arquivo `staging_info.yml` em um aplicativo em execução em um nó DEA, execute:
+
 ```
     $ cf files myapp staging_info.yml
 ```
 {: codeblock}
 
-As opções da JVM para WAR, EAR, diretório do servidor e implementação do servidor em pacote são persistidas em um arquivo jvm.options.
+Para visualizar o arquivo `staging_info.yml` em um aplicativo em execução em uma célula do Diego, execute:
 
-Para visualizar o arquivo jvm.options para WAR, EAR e diretório do servidor, execute o comando:
+```
+    $ cf ssh myapp -c "cat staging_info.yml"
+```
+{: codeblock}
+
+As opções da JVM para WAR, EAR, diretório do servidor e implementação do servidor em pacote são persistidas em um arquivo `jvm.options`. O arquivo `jvm.options` pode ser localizado no diretório `app/wlp/usr/servers/<serverName>/`. Na maioria dos casos o ```<serverName>``` é configurado como `defaultServer`, a menos que um servidor em pacote tenha sido implementado com um nome de servidor diferente. Por exemplo:
+
+Para visualizar o arquivo `jvm.options` em um aplicativo em execução em um nó DEA, execute:
+
 ```
     $ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
 ```
 {: codeblock}
 
-Para visualizar o arquivo jvm.options para um servidor em pacote, substitua <serverName> pelo nome do servidor e execute o comando:
+Para visualizar o arquivo `jvm.options` em um aplicativo em execução em uma célula do Diego, execute:
+
 ```
-    $ cf files myapp app/wlp/usr/servers/<serverName>jvm.options
+    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/jvm.options"
 ```
 {: codeblock}
+
 
 #### Exemplo de uso
 {: #example_usage}
 
-Implementando um aplicativo com opções customizadas da JVM para ativar a criação de log de coleta de lixo detalhada da JVM do IBM JRE:
-* As opções da JVM inclusas no arquivo	manifest.yml de um aplicativo:
+Implementando um aplicativo com opções customizadas da JVM para ativar a criação de log de coleta de lixo detalhada do IBM JRE:
+* As opções da JVM incluídas no arquivo `manifest.yml` de um aplicativo:
 
-  <pre>
+```
     env:
       JAVA_OPTS: "-verbose:gc -Xverbosegclog:./verbosegc.log,10,1000"
-  </pre>
-  {: codeblock}
+```
+{: codeblock}
 
-* Para visualizar a criação de log de coleta de lixo detalhada da JVM gerada:
+* Para visualizar o arquivo de log de coleta de lixo detalhada gerado pela JVM em um aplicativo em execução em um nó DEA, execute:
 
-  <pre>
+```
     $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
-  </pre>
-  {: codeblock}    
+```
+{: codeblock}
 
-* Para atualizar a opção JVM do IBM JRE de um aplicativo implementado para acionar um heap, snap e javacore em uma condição OutOfMemory, configure a variável de ambiente do aplicativo com a opção JVM e reinicie o aplicativo:
+* Para visualizar o arquivo de log de coleta de lixo detalhada gerado pela JVM em um aplicativo em execução em uma célula do Diego, execute:
 
-  <pre>
+```
+    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/verbosegc.log.001"
+```
+{: codeblock}
+
+* Para atualizar a opção IBM JRE de um aplicativo implementado para acionar um heap, snap e javacore em uma condição OutOfMemory, configure a variável de ambiente do aplicativo com a opção JVM e reinicie o aplicativo:
+
+```
     $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
     $ cf restart myapp
-  </pre>
-  {: codeblock}
+```
+{: codeblock}
 
-* Para visualizar os dumps da JVM gerados quando a condição sem memória
-é acionada:
-
-  <pre>
-    $ cf files myapp dumps
-
-    Obtendo arquivos para o app myapp na organização myemail@email.com / space dev como myemail@email.com...
-    OK
-
-    Snap.20141106.100252.81.0003.trc           307.3K
-    heapdump.20141106.100252.81.0001.phd       3.9M
-    javacore.20141106.100252.81.0002.txt     870.5K
-  </pre>
-  {: codeblock}
+ Veja a documentação de [Criação de log e rastreio](loggingAndTracing.html#download_dumps) para obter detalhes sobre como visualizar e fazer download de arquivos de dump gerados.
 
 ### Sobrepondo o JRE
 {: #overlaying_jre}
@@ -308,6 +316,7 @@ do aplicativo em uma pasta de recursos na raiz do archive. Para um servidor (arq
 O diretório .java-overlay contém arquivos específicos na mesma hierarquia de arquivo que o Java JRE que está sendo sobreposto iniciando com .java/jre.
 
 Por exemplo, se você desejar usar a criptografia AES de 256 bits, será necessário sobrepor estes arquivos de políticas Java:
+
 ```
     .java\jre\lib\security\US_export_policy.jar
     .java\jre\lib\security\local_policy.jar
@@ -315,6 +324,7 @@ Por exemplo, se você desejar usar a criptografia AES de 256 bits, será necess�
 {: codeblock}
 
 Faça o download dos arquivos de políticas sem restrições apropriados e inclua-os em seu aplicativo como:
+
 ```
     resources\.java-overlay\.java\jre\lib\security\US_export_policy.jar
     resources\.java-overlay\.java\jre\lib\security\local_policy.jar
@@ -324,8 +334,8 @@ Faça o download dos arquivos de políticas sem restrições apropriados e inclu
 Ao enviar seu aplicativo por push, esses jars sobrepõem os jars de política padrão no tempo de execução do Java. Esse processo ativa a criptografia AES de 256 bits.
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## geral
-{: #general}
+{: #general notoc}
 * [Tempo de execução do Liberty](index.html)
-* [Visão geral do perfil do Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Visão geral do perfil Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

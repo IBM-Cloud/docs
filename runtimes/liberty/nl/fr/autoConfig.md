@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-03-22"
 
 ---
 
@@ -26,13 +26,11 @@ Un service géré par le conteneur désigne un service qui est géré par l'envi
 Ce processus est dénommé configuration automatique.
 Le pack de construction Liberty se charge de la configuration automatique des types de service suivants :
 
-* [SQL Database](/docs/services/SQLDB/index.html#SQLDB)
-* Base de données ClearDB MySQL
+* [Base de données ClearDB MySQL ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://www.cleardb.com/developers)
 * [MySQL](/docs/services/MySQL/index.html#MySQL)
-* ElephantSQL
+* [ElephantSQL](docs/services/ElephantSQL/index.html)
 * [PostgreSQL](/docs/services/PostgreSQL/index.html#PostgreSQL)
 * [Cloudant NoSQL Database](/docs/services/Cloudant/index.html#Cloudant)
-* MongoLab
 * [dashDB](/docs/services/dashDB/index.html#dashDB)
 * [Data Cache](/docs/services/DataCache/index.html#data_cache)
 * [Session Cache](/docs/services/SessionCache/index.html#session_cache)
@@ -42,6 +40,8 @@ Le pack de construction Liberty se charge de la configuration automatique des ty
 * [Single Sign On](/docs/services/SingleSignOn/index.html#sso_gettingstarted)
 * [New Relic](newRelic.html)
 * [Dynatrace](dynatrace.html)
+* [Compose for PostgreSQL](/docs/services/ComposeForPostgreSQL/index.html)
+* [Compose for MongoDB](/docs/services/ComposeForMongoDB/index.html) (actuellement seulement disponible avec l'exécution Liberty mensuelle).
 
 Comme mentionné, certains services peuvent être soit gérés par l'application, soit gérés par le conteneur. Mongo et SQLDB sont des exemples de tels services. Par défaut, le pack de construction Liberty suppose que ces services sont gérés par le conteneur et les configure automatiquement. Si vous souhaitez que le service soit géré par l'application, vous pouvez résilier la configuration automatique du service en configurant la variable d'environnement services_autoconfig_excludes. Pour plus d'informations, voir [Résiliation de la configuration automatique des services](autoConfig.html#opting_out).
 
@@ -56,7 +56,7 @@ Pour plus d'informations, voir la documentation relative au type de service lié
 ## Génération ou mise à jour des sections de configuration dans le fichier server.xml
 {: #generating_or_updating_serverxml}
 
-Lorsque vous envoyez une application autonome par commande push, le pack de construction Liberty génère la section server.xml comme décrit dans la rubrique [Options pour l'envoi par commande push d'applications Liberty](optionsForPushing.html#options_for_pushing) vers Bluemix. Lorsque vous envoyez une application autonome par commande push et que vous la liez à des services gérés par conteneur, le pack de construction Liberty génère les sections server.xml requises pour les services liés.
+Lorsque vous poussez une application autonome, le pack de construction Liberty génère la section de fichier server.xml, comme décrit dans la rubrique [Options pour l'envoi par commande push d'applications Liberty](optionsForPushing.html#options_for_pushing), sur Bluemix. Lorsque vous envoyez une application autonome par commande push et que vous la liez à des services gérés par conteneur, le pack de construction Liberty génère les sections server.xml requises pour les services liés.
 
 Lorsque vous fournissez un fichier server.xml et que vous créez une liaison avec des services gérés par conteneur, le pack de construction Liberty effectue les opérations suivantes :
 
@@ -95,7 +95,7 @@ Plus formellement, la syntaxe de la chaîne est la suivante :
 {: codeblock}
 
 **Important** : Le type de service que vous indiquez doit correspondre au libellé des services tel qu'il figure dans la variable d'environnement VCAP_SERVICES. Le caractère espace n'est pas admis.
-**Important** : Aucun espace n'est autorisé dans une entrée <spécification_type_service>. L'unique utilisation admise d'un espace est pour la séparation de plusieurs instances de <spécification_type_service>.
+**Important** : Aucun espace n'est autorisé dans une entrée ```<spécification_type_service>```. L'unique utilisation admise d'un espace est pour la séparation de plusieurs instances de ```<spécification_type_service>```.
 
 Utilisez l'option "all" pour résilier toutes les actions de configuration automatique de services, comme dans le scénario Mongo ci-dessus. Utilisez l'option "config" pour ne résilier que les actions de mise à jour de configuration, comme dans le scénario SQLDB ci-dessus.
 
@@ -124,14 +124,15 @@ Ci-dessous figurent des exemples de définition de la variable d'environnement s
 ## Remplacement de la configuration du service
 {: #override_service_config}
 
-Dans certains cas, il peut être souhaitable de remplacer la configuration par défaut d'un service généré par la configuration automatique. Cette opération peut être effectuée à l'aide de la variable d'environnement **LBP_SERVICE_CONFIG_xxxx**, où "xxxx" est le nom du service en majuscules. Par exemple, pour remplacer la version par défaut du service *mysql* et la définir sur la version 1.4.+, émettez une commande semblable à la suivante :
+Dans certains cas, il peut être souhaitable de remplacer la configuration par défaut d'un service généré par la configuration automatique.
+Cette opération peut être effectuée à l'aide de la variable d'environnement **LBP_SERVICE_CONFIG_xxxx**, où "xxxx" est le nom du service en majuscules.  Par exemple, pour remplacer la version par défaut du service *mysql* et la définir sur la version 1.4.+, émettez une commande semblable à la suivante :
 
 ```
     $ cf set-env myapp LBP_SERVICE_CONFIG_MYSQL "{driver: { version: 1.4.+ }}"
 ```
 {: codeblock}
 
-Le tableau suivant indique la syntaxe permettant de remplacer certaines options de configuration de service : 
+Le tableau suivant indique la syntaxe permettant de remplacer certaines options de configuration de service :
 
 <table>
 <tr>
@@ -153,8 +154,8 @@ Le tableau suivant indique la syntaxe permettant de remplacer certaines options 
 
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
-{: #general}
+{: #general notoc}
 * [Environnement d'exécution Liberty](index.html)
 * [Présentation de Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

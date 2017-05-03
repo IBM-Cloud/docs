@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
 lastupdated: "2016-06-10"
 
 ---
@@ -38,12 +38,10 @@ Le pack de construction fournit deux versions de l'environnement d'exécution Li
 ## Fonctions Liberty
 {: #liberty_features}
 
-Lorsque vous déployez des fichiers WAR ou EAR, le pack de construction fournit une configuration pour l'application avec le jeu par défaut de fonctions Liberty. Ce jeu par défaut de fonctions Liberty peut changer d'une édition de pack de construction à l'autre, mais cela reste rare. La modification du jeu de fonctions par défaut peut avoir un impact négatif sur l'application. Certaines options permettent de garantir que l'application
-ne soit pas affectée par la modification des valeurs par défaut des fonctions.
+Lorsque vous déployez des fichiers WAR ou EAR, le pack de construction fournit une configuration pour l'application avec le jeu par défaut de fonctions Liberty. Ce jeu par défaut de fonctions Liberty peut changer d'une édition de pack de construction à l'autre, mais cela reste rare. La modification du jeu de fonctions par défaut peut avoir un impact négatif sur l'application. Certaines options permettent de garantir que l'application ne soit pas affectée par la modification des valeurs par défaut des fonctions.
 
 * Définissez la variable d'environnement JBP_CONFIG_LIBERTY afin de spécifier explicitement la liste des fonctions activées pour l'application. Pour plus d'informations, voir [Applications autonomes](optionsForPushing.html#stand_alone_apps).
-* Déployez votre application en tant que [répertoire de serveur](optionsForPushing.html#server_directory)
-ou [package de serveur](optionsForPushing.html#packaged_server). Fournissez un fichier server.xml personnalisé qui spécifie le jeu exact de fonctions requises par votre application.
+* Déployez votre application en tant que [répertoire de serveur](optionsForPushing.html#server_directory) ou [package de serveur](optionsForPushing.html#packaged_server). Fournissez un fichier server.xml personnalisé qui spécifie le jeu exact de fonctions requises par votre application.
 
 Les applications
 qui sont déployées en tant que répertoire de serveur ou package de serveur ne sont pas affectées par la modification des valeurs par défaut des
@@ -62,8 +60,8 @@ résultats, adoptez Java 8 pour vos applications.
 
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
-{: #general}
+{: #general notoc}
 * [Environnement d'exécution Liberty](index.html)
 * [Présentation de Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

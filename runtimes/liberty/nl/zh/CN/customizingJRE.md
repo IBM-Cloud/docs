@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-08-15"
+  years: 2015, 2017
+lastupdated: "2017-03-23"
 
 ---
 
@@ -30,7 +30,7 @@ version 属性可以设置为版本范围。支持两种版本范围：1.7.+ 和
 ## OpenJDK
 {: #openjdk}
 
-（可选）应用程序可以配置为以 OpenJDK 作为 JRE 来运行。要支持应用程序使用 OpenJDK 运行，请将 JVM 环境变量设置为“openjdk”。例如，使用 cf 命令行工具运行以下命令：
+（可选）应用程序可以配置为以 OpenJDK 作为 JRE 来运行。要启用应用程序运行 OpenJDK，请将 JVM 环境变量设置为“openjdk”。例如，使用 cf 命令行工具运行以下命令：
 
 ```
 $ cf set-env myapp JVM 'openjdk'
@@ -74,7 +74,8 @@ Liberty buildpack 在配置缺省 JVM 选项时会考虑以下内容：
   * 将发生故障时应用程序的可用内存资源相关信息路由到 Loggregator。
   * 如果应用程序已配置为启用 JVM 内存转储，那么会禁用 Java 进程终止功能，并会将 JVM 内存转储路由到通用应用程序“dumps”目录。然后，可以从 Bluemix 仪表板或 CF CLI 来查看这些转储。
 
-下面是缺省 JVM 配置的示例，它是由 buildpack 为具有 512 M 内存限制的已部署应用程序生成的：   
+下面是缺省 JVM 配置的示例，它是由 buildpack 为使用 512M 内存限制部署的应用程序生成的：
+
 ```
 -Xtune:virtualized
     -Xmx384M
@@ -110,7 +111,7 @@ Liberty buildpack 在配置缺省 JVM 选项时会考虑以下内容：
 <tr>
 <td> OpenJDK</td>
 <td>基于 HotSpot 运行时，其中包含 -X（表示非标准）、-XX（表示开发者选项）符号表示法，以及用于启用或禁用该选项的布尔标志</td>
-<td>[HotSpot 运行时概述](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html)</td>
+<td>[HotSpot Runtime Overview ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
 </tr>
 </table>
 
@@ -170,74 +171,76 @@ Liberty buildpack 在配置缺省 JVM 选项时会考虑以下内容：
 ### 确定运行中应用程序的已应用 JVM 选项
 {: #determining_applied_jvm_options}
 
-除了使用 JVM_ARGS 环境变量指定的应用程序定义选项之外，生成的选项还会以下列形式持久存储在运行时环境中：作为命令行选项（独立 Java 应用程序）或位于 jvm.options 文件中（非独立 Java 应用程序）。针对应用程序应用的 JVM 选项可以从 Bluemix 仪表板或 CF CLI 进行查看。
+除了使用 JVM_ARGS 环境变量指定的应用程序定义选项之外，生成的选项会作为命令行选项（独立 Java 应用程序）或在 `jvm.options` 文件中（非独立 Java 应用程序）持久存储在运行时环境中。针对应用程序应用的 JVM 选项可以通过 IBM Bluemix 仪表板或 CF CLI 进行查看。
 
-独立 Java 应用程序的 JVM 选项会持久存储为命令行选项。可在 staging_info.yml 文件中查看这些选项。
+独立 Java 应用程序的 JVM 选项会持久存储为命令行选项。这些选项可在 `staging_info.yml` 文件中进行查看。
+
+要查看在 DEA 节点中运行的应用程序上的 `staging_info.yml` 文件，请运行：
 
 ```
 $ cf files myapp staging_info.yml
 ```
 {: codeblock}
 
-用于 WAR、EAR、服务器目录和打包服务器部署的 JVM 选项会持久存储在 jvm.options 文件中。
+要查看在 Diego 单元中运行的应用程序上的 `staging_info.yml` 文件，请运行：
 
-要查看 jvm.options 文件中的 WAR、EAR 和服务器目录，请运行以下命令：
+```
+    $ cf ssh myapp -c "cat staging_info.yml"
+```
+{: codeblock}
+
+用于 WAR、EAR、服务器目录和打包服务器部署的 JVM 选项会持久存储在 `jvm.options` 文件中。`jvm.options` 文件位于 `app/wlp/usr/servers/<serverName>/` 目录中。在大多数情况下，```<serverName>``` 设置为 `defaultServer`，除非打包服务器是使用其他服务器名称部署的。例如：
+
+要查看在 DEA 节点中运行的应用程序上的 `jvm.options` 文件，请运行：
 
 ```
 $ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
 ```
 {: codeblock}
 
-要查看 jvm.options 文件中的打包服务器，请将 &lt;serverName> 替换为您服务器的名称，并运行以下命令：
+要查看在 Diego 单元中运行的应用程序上的 `jvm.options` 文件，请运行：
 
 ```
-$ cf files myapp app/wlp/usr/servers/<serverName>jvm.options
+    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/jvm.options"
 ```
 {: codeblock}
+
 
 #### 用法示例
 {: #example_usage}
 
-使用定制 JVM 选项部署应用程序以启用 IBM JRE JVM 详细垃圾回收日志记录：
-* 应用程序的 manifest.yml 文件中包含的 JVM 选项：
+使用定制 JVM 选项部署应用程序以启用 IBM JRE 详细垃圾回收日志记录：
+* 应用程序的 `manifest.yml` 文件中包含的 JVM 选项：
 
-
-  <pre>
+```
 env:
       JAVA_OPTS: "-verbose:gc -Xverbosegclog:./verbosegc.log,10,1000"
-  </pre>
-  {: codeblock}
+```
+{: codeblock}
 
-* 查看所生成的 JVM 详细垃圾回收日志记录：
+* 要查看在 DEA 节点中运行的应用程序上 JVM 生成的详细垃圾回收日志文件，请运行：
 
-
-  <pre>
+```
 $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
-  </pre>
-  {: codeblock}    
+```
+{: codeblock}
 
-* 要更新已部署应用程序的 IBM JRE JVM 选项以在发生 OutOfMemory（内存不足）状况时触发 heap、snap 和 javacore，请使用 JVM 选项设置应用程序的环境变量，然后重新启动应用程序：
+* 要查看在 Diego 单元中运行的应用程序上 JVM 生成的详细垃圾回收日志文件，请运行：
 
-  <pre>
+```
+    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/verbosegc.log.001"
+```
+{: codeblock}
+
+* 要更新已部署应用程序的 IBM JRE 选项以在发生 OutOfMemory（内存不足）状况时触发 heap、snap 和 javacore，请使用 JVM 选项设置应用程序的环境变量，然后重新启动应用程序：
+
+```
 $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
     $ cf restart myapp
-  </pre>
-  {: codeblock}
+```
+{: codeblock}
 
-* 查看触发内存不足状况时所生成的 JVM 转储：
-
-
-  <pre>
-    $ cf files myapp dumps
-
-    Getting files for app myapp in org myemail@email.com / space dev as myemail@email.com...
-    OK
-
-Snap.20141106.100252.81.0003.trc           307.3K
-    heapdump.20141106.100252.81.0001.phd       3.9M
-    javacore.20141106.100252.81.0002.txt     870.5K
-</pre>
-  {: codeblock}
+ 有关查看和下载生成的转储文件的详细信息，请参阅[日志记录和跟踪](loggingAndTracing.html#download_dumps)文档。
 
 ### 覆盖 JRE
 {: #overlaying_jre}
@@ -279,6 +282,7 @@ Snap.20141106.100252.81.0003.trc           307.3K
 
 例如，如果要使用 AES 256 位加密，那么需要覆盖以下 Java 策略文件：
 
+
 ```
 .java\jre\lib\security\US_export_policy.jar
     .java\jre\lib\security\local_policy.jar
@@ -286,6 +290,7 @@ Snap.20141106.100252.81.0003.trc           307.3K
 {: codeblock}
 
 下载相应的不受限制的策略文件，并将其添加到应用程序，如下所示：
+
 
 ```
 resources\.java-overlay\.java\jre\lib\security\US_export_policy.jar
@@ -296,8 +301,8 @@ resources\.java-overlay\.java\jre\lib\security\US_export_policy.jar
 推送应用程序时，这些 jar 会覆盖 Java 运行时中的缺省策略 jar。此过程会启用 AES 256 位加密。
 
 # 相关链接
-{: #rellinks}
+{: #rellinks notoc}
 ## 常规
-{: #general}
+{: #general notoc}
 * [Liberty 运行时](index.html)
 * [Liberty 概要文件概述](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

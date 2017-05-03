@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-11"
+  years: 2015, 2017
+lastupdated: "2017-03-22"
 
 ---
 
@@ -54,7 +54,7 @@ $ cf push <yourappname> -p myapp.war
 * servlet-3.1
 * websocket-1.1
 * icap:managementConnector-1.0
-* appstate-1.0
+* appstate-2.0
 
 这些功能与 Java EE 7 Web 概要文件功能对应。可以通过设置 JBP_CONFIG_LIBERTY 环境变量来指定其他 Liberty 功能集。例如，要仅启用 jsp-2.3 和 websocket-1.1 功能，请运行以下命令并对应用程序重新编译打包：
 
@@ -99,7 +99,7 @@ http://<yourappname>.mybluemix.net/acme/
           <feature>servlet-3.1</feature>
           <feature>websocket-1.1</feature>
           <feature>icap:managementConnector-1.0</feature>
-          <feature>appstate-1.0</feature>
+          <feature>appstate-2.0</feature>
        </featureManager>
 
        <application name='myapp' location='myapp.war' type='war' context-root='/'/>
@@ -111,7 +111,7 @@ http://<yourappname>.mybluemix.net/acme/
        <applicationMonitor dropinsEnabled='false' updateTrigger='mbean'/>
        <config updateTrigger='mbean'/>
        <cdi12 enableImplicitBeanArchives='false'/>
-       <appstate appName='myapp' markerPath='${home}/../.liberty.state'/>
+       <appstate2 appName='myapp'/>
     </server>
 ```
 {: codeblock}
@@ -231,7 +231,7 @@ $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 ### 访问绑定服务的信息
 {: #accessing_info_of_bound_services}
 
-要将服务绑定到应用程序时，有关该服务的信息（例如，连接凭证）会包含在 Cloud Foundry 为应用程序设置的 [VCAP_SERVICES 环境变量](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES)中。对于[自动配置的服务](autoConfig.html)，Liberty buildpack 会在 server.xml 文件中生成或更新服务绑定条目。服务绑定条目的内容可以使用下列其中一种格式：
+要将服务绑定到应用程序时，有关该服务的信息（例如，连接凭证）会包含在 Cloud Foundry 为应用程序设置的 [VCAP_SERVICES 环境变量 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) 中。对于[自动配置的服务](autoConfig.html)，Liberty buildpack 会在 server.xml 文件中生成或更新服务绑定条目。服务绑定条目的内容可以使用下列其中一种格式：
 
 * cloud.services.&lt;service-name&gt;.&lt;property&gt;，描述诸如服务的名称、类型和计划之类的信息。
 * cloud.services.&lt;service-name&gt;.connection.&lt;property&gt;，描述服务的连接信息。
@@ -239,7 +239,7 @@ $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 典型的信息集如下所示：
 * name：服务的名称，例如 mysql-e3abd。
 * label：所创建服务的类型，例如 mysql-5.5。
-* plan：服务套餐，由该套餐的唯一标识来指示，例如 100。
+* plan：服务计划，由该计划的唯一标识来指示，例如 100。
 * connection.name：连接的唯一标识，采用 UUID 格式，例如 d01af3a5fabeb4d45bb321fe114d652ee。
 * connection.hostname：正在运行服务的服务器的主机名，例如 mysql-server.mydomain.com。
 * connection.host：正在运行服务的服务器的 IP 地址，例如 9.37.193.2。
@@ -251,8 +251,8 @@ $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 对于 Liberty buildpack 未自动配置的绑定服务，应用程序需要自己管理后端资源的访问。
 
 # 相关链接
-{: #rellinks}
+{: #rellinks notoc}
 ## 常规
-{: #general}
+{: #general notoc}
 * [Liberty 运行时](index.html)
 * [Liberty 概要文件概述](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-03-23"
 
 ---
 
@@ -55,10 +55,10 @@ Tomcat 運行環境可以配置成信任 Bluemix 內部 Proxy，並容許將 HTT
 ```
 {: codeblock}
 
-您可以在 [Tomcat 文件](https://tomcat.apache.org/tomcat-8.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html)中找到 RemoteIpValve 的其他配置選項。
+您可以在 [Tomcat 文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://tomcat.apache.org/tomcat-8.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html) 中找到 RemoteIpValve 的其他配置選項。
 
 # 相關鏈結
-{: #rellinks}
+{: #rellinks notoc}
 ## 一般
-{: #general}
+{: #general notoc}
 * [java-buildpack](https://github.com/cloudfoundry/java-buildpack)

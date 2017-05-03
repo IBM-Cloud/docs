@@ -1,22 +1,40 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-03-23"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# sdk-for-nodejs ビルドパックに対する最新の更新
+# SDK for Nodejs ビルドパックに対する最新の更新
 {: #latest_updates}
 
 sdk-for-nodejs ビルドパックの最新更新のリスト。
+
+## 2017 年 3 月 10 日: 更新された Node.js ビルドパック v3.11
+このリリースのビルドパックは、IBM SDK for Node.js ランタイムのバージョン 0.10.47、0.10.48、0.12.17、0.12.18、4.7.3、4.8.0、6.9.5、および 6.10.0 をサポートします。現在のデフォルトのバージョンは 4.8.0 です。
+
+新規ランタイムに加えて、このリリースには、devconsole UI を使用してシェル・アプリケーション管理ハンドラーを有効化したときに起こるバグの修正も含まれています。このビルドパックでは、Monitoring and Analytics サービスに対する自動構成の処理も変更されました。無料プランを使用するアプリケーションにはログ機能が追加されなくなり、この機能は logmet で置き換えられます。
+
+## 2017 年 1 月 20 日: 更新された Node.js ビルドパック v3.10
+このリリースのビルドパックは、IBM SDK for Node.js ランタイムのバージョン 0.10.47、0.10.48、0.12.17、0.12.18、4.7.0、4.7.2、6.9.2、および 6.9.4 をサポートします。現在のデフォルトは 4.7.2 です。
+
+アプリケーションの開始のために必ずしも「npm start」が呼び出されるとは限らないというバグの修正が含まれています。
+
+## 2016 年 11 月 17 日: 更新された Node.js ビルドパック v3.9
+このリリースのビルドパックは、IBM SDK for Node.js ランタイムのバージョン 0.10.47、0.10.48、0.12.16、0.12.17、4.6.1、4.6.2、6.7.0、および 6.9.1 をサポートします。現在のデフォルトは 4.6.2 です。
+
+Node.js v6 は 2016 年 10 月 18 日に LTS ステータスにプロモートされ、まもなくビルドパックのデフォルトのランタイムになることに注意してください。Node.js v0.10 の存続期間は 2016 年 10 月 31 日に終わりに達したため、まもなくビルドパックに含まれなくなります。詳しくは、[Node.js version long-term support and the SDK for Node.js buildpack](https://www.ibm.com/blogs/bluemix/2016/11/node-version-support-and-sdk-buildpack/) を参照してください。
+
+Node.js v6 と組み合わせて使用されたときにアプリケーション管理ハンドラーのトレースおよびインスペクターに影響するバグがこのリリースで対処されました。Node.js v6 がインスペクター機能を統合したことをインスペクター・ハンドラーがどのように変更するのかについて詳しくは、『[Liberty および Node.js アプリケーションの管理](/docs/manageapps/app_mng.html#inspector)』を参照してください。
+
 ## 2016 年 10 月 7 日: Node.js ビルドパック v3.8-20161006-1211 の更新
 このリリースのビルドパックは、IBM SDK for Node.js ランタイムのバージョン 0.10.46、0.10.47、0.12.15、0.12.16、4.5.0、4.6.0、6.6.0、および 6.7.0 をサポートします。現在のデフォルトは 4.6.0 です。
 
-新規ランタイムに加えて、このリリースにはビルドパックのバグ修正も含まれています。v3.7-20160826-1101 リリース更新で言及された Node.js 6.x と開発モードの使用時の既知の問題の修正がその 1 つです。このリリースは、[Cloud Foundry Node.js ビルドパック v1.5.20](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.20) とも同期しています。 
+新規ランタイムに加えて、このリリースにはビルドパックのバグ修正も含まれています。v3.7-20160826-1101 リリース更新で言及された Node.js 6.x と開発モードの使用時の既知の問題の修正がその 1 つです。このリリースは、[Cloud Foundry Node.js ビルドパック v1.5.20](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.20) とも同期しています。
 
 ## 2016 年 8 月 26 日: 更新された Node.js ビルドパック v3.7-20160826-1101
 このリリースのビルドパックは、IBM SDK for Node.js ランタイムのバージョン 0.10.45、0.10.46、0.12.14、0.12.15、4.4.7、4.5.0、6.2.2、および 6.4.0 をサポートします。現在のデフォルトは 4.5.0 です。
@@ -49,7 +67,7 @@ Node.js 6.x および[開発モード](/docs/manageapps/app_mng.html#devmode)の
 
 以下のセキュリティー脆弱性に関する修正が組み込まれました。
 * [CVE-2015-8855](http://www-01.ibm.com/support/docview.wss?uid=swg21982852)
-* [CVE-2016-2108 CVE-2016-2107 CVE-2016-2105 CVE-2016-2106 CVE-2016-2109 CVE-2016-2176](https://www.openssl.org/news/secadv/20160503.txt)
+* [CVE-2016-2108 CVE-2016-2107 CVE-2016-2105 CVE-2016-2106 CVE-2016-2109 CVE-2016-2176 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.openssl.org/news/secadv/20160503.txt)
 
 npm v3 およびアプリケーション管理インスペクター・ユーティリティーに関する既知の問題があります。npm 3.8.6 は、6.0.0 ランタイムおよび 6.1.0 ランタイムでのデフォルトです。いずれかの 6.x ランタイムおよびインスペクター・ユーティリティーを使用する場合、一時的な回避策として、package.json に 2.x npm バージョンを指定する必要があります。
 
@@ -127,7 +145,9 @@ v3.0beta でアプリケーションをプッシュするには、以下を行�
 ```
 {: codeblock}
 
-アプリケーションの package.json で特定バージョンの Node.js を構成した場合、デフォルト・ランタイムに対するこの変更はアプリケーションには影響しません。**注:** [『使用可能なバージョン』](index.html#available_versions)で説明されているように、package.json の engines.node 項目を使用して、アプリケーションを実行する Node.js のバージョンをいつでも指定できます。
+アプリケーションの package.json で特定バージョンの Node.js を構成した場合、デフォルト・ランタイムに対するこの変更はアプリケーションには影響しません。
+
+**注:** [『使用可能なバージョン』](index.html#available_versions)で説明されているように、package.json の engines.node 項目を使用して、アプリケーションを実行する Node.js のバージョンをいつでも指定できます。
 
 ## 2015 年 11 月 23 日: 更新された Node.js ビルドパック v2.7-20151118-1003
 
@@ -139,7 +159,7 @@ Node.js v2.6.1 では、[StrongPM アプリケーション管理ハンドラー]
 
 ## 2015 年 10 月 15 日: 更新された Node.js ビルドパック v2.6-20151006-1309
 
-このバージョンの Node.js ビルドパックの特長は、[StrongLoop プロセス・マネージャー](https://strong-pm.io)のアプリケーション管理フィーチャーへの統合です。詳しくは、ブログ投稿[『StrongLoop DevOps for Node.js Applications on Bluemix』](https://developer.ibm.com/bluemix/2015/10/15/strongloop-devops-on-bluemix/)を参照してください。
+このリリースの Node.js ビルドパックの特徴は、アプリケーション管理フィーチャーへの [StrongLoop Process Manager ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://strong-pm.io) の統合です。詳しくは、ブログ投稿[『StrongLoop DevOps for Node.js Applications on Bluemix』](https://developer.ibm.com/bluemix/2015/10/15/strongloop-devops-on-bluemix/)を参照してください。
 
 ## 2015 年 6 月 15 日: 更新された Node.js ビルドパック v2.0-20150608-1503
 
@@ -199,15 +219,15 @@ Node.js v2.6.1 では、[StrongPM アプリケーション管理ハンドラー]
 
 ## 2014 年 8 月 28 日: 更新された Node.js ビルドパック v1.3-20140821-1143
 
-* この最新の Node.js ビルドパックには IBM SDK for Node.js v1.1.0.6 が付属するようになりました。この更新により、アプリケーション v0.10.30 に最新の安定した Node.js ランタイムを指定すると、完全にサポートされる IBM Node.js ランタイムが提供されるようになります。このランタイムは、[V8 メモリー破壊脆弱性](http://blog.nodejs.org/2014/07/31/v8-memory-corruption-stack-overflow)を修正します。
+* この最新の Node.js ビルドパックには IBM SDK for Node.js v1.1.0.6 が付属するようになりました。この更新により、アプリケーション v0.10.30 に最新の安定した Node.js ランタイムを指定すると、完全にサポートされる IBM Node.js ランタイムが提供されるようになります。このランタイムは、[V8 メモリー破壊脆弱性 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://blog.nodejs.org/2014/07/31/v8-memory-corruption-stack-overflow) を修正します。
 * また、このビルドパックには Monitoring and Analytics サービス拡張機能に対する改善およびバグ修正が含まれ、これによりサービス全体を通してパフォーマンスおよびエラー状態を診断することができます。
 
 ## 2014 年 7 月 29 日: 更新された Node.js ビルドパック v1.1-20140717-1447
 
-この Node.js ビルドパックには IBM SDK for Node.js v1.1.0.5 が付属するようになりました。この更新により、アプリケーション v0.10.29 に最新の安定した Node.js ランタイムを指定すると、完全にサポートされる IBM Node.js ランタイムが提供されるようになります。IBM Node.js SDK について詳しくは、[ここ](https://developer.ibm.com/node/sdk/)を参照してください。
+この Node.js ビルドパックには IBM SDK for Node.js v1.1.0.5 が付属するようになりました。この更新により、アプリケーション v0.10.29 に最新の安定した Node.js ランタイムを指定すると、完全にサポートされる IBM Node.js ランタイムが提供されるようになります。詳細については [IBM Node.js SDK](https://developer.ibm.com/node/sdk/) を参照してください。
 
 # 関連リンク
-{: #rellinks}
+{: #rellinks notoc}
 ## 一般
-{: #general}
+{: #general notoc}
 * [node.js ランタイム](index.html)

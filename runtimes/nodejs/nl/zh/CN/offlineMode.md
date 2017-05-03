@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-14"
+  years: 2016, 2017
+lastupdated: "2017-04-11"
 
 ---
 
@@ -14,9 +14,14 @@ lastupdated: "2016-11-14"
 # node.js 的脱机方式
 {: #offline_mode}
 
-将 node.js 应用程序推送到 {{site.data.keyword.Bluemix}} 时，SDK for Node.js buildpack 通常会从外部资源下载工件，例如从 NPM 下载节点模块。在某些情况下（例如，在 [Bluemix Dedicated](/docs/dedicated/index.html#dedicated) 和 [Bluemix Local](/docs/local/index.html#local) 中），您可能并不想对访问 Bluemix 外部站点有任何依赖，或者您希望能够对访问这些外部站点有更明确的控制。  
+将 node.js 应用程序推送到 {{site.data.keyword.Bluemix}} 时，SDK for Node.js buildpack 通常会从外部资源下载工件，
+例如从 NPM 下载节点模块。在某些情况下（例如，在 [Bluemix Dedicated](/docs/dedicated/index.html#dedicated)
+和 [Bluemix Local](/docs/local/index.html#local) 中），您可能并不想对访问 Bluemix 外部站点有任何依赖，
+或者您希望能够对访问这些外部站点有更明确的控制。  
+{: shortdesc}
 
-下面是 node.js buildpack 可以访问的外部站点。在 [Bluemix Dedicated](/docs/dedicated/index.html#dedicated) 和 [Bluemix Local](/docs/local/index.html#local) 等 Bluemix 环境中，可能需要将这些站点*列入白名单*。
+下面是 node.js buildpack 可以访问的外部站点。在 [Bluemix Dedicated](/docs/dedicated/index.html#dedicated)
+和 [Bluemix Local](/docs/local/index.html#local) 等 Bluemix 环境中，可能需要将这些站点*列入白名单*。
 
 * http://nodejs.org/，可用于查明可用的节点引擎版本。
 * https://s3pository.heroku.com，用于检索该 buildpack 中未包含的节点引擎版本。
@@ -29,7 +34,7 @@ lastupdated: "2016-11-14"
 请注意，安装了新版本的 SDK for Node.js buildpack 后，可用节点引擎版本集通常会升至更新的版本。这可能需要您重新配置节点应用程序，以指定更新的节点引擎版本。
 
 
-### 脱机应用程序
+## 脱机应用程序
 {: #offline_applications}
 
 为了消除访问 https://registry.npmjs.org 的需要，可以在应用程序中包含应用程序所需的所有节点模块。为此，请对应用程序所需的所有模块运行 **npm install**，并将生成的 *node_modules* 目录包含在推送的应用程序中。
@@ -39,16 +44,12 @@ lastupdated: "2016-11-14"
 1. npm dedupe
 2. npm shrinkwrap
 
-这可能会更改您的 *package.json*，并将 *npm-shrinkwrap.json* 添加到您的根目录中。每次对 *package.json* 文件中的依赖项进行更改后，都请重复 *dedupe* 和 *shringwrap* 步骤。
+这可能会更改您的 *package.json*，并将 *npm-shrinkwrap.json* 添加到您的根目录中。
+每次对 *package.json* 文件中的依赖项进行更改后，都应重复 *dedupe* 和 *shringwrap* 步骤。
 
 ## 使用代理
 {: #working_with_proxy}
 
-在某些环境（如 [Bluemix Dedicated](/docs/dedicated/index.html#dedicated) 和 [Bluemix Local](/docs/local/index.html#local)）中，可以配置代理。有关更多详细信息，请参阅[使用代理](/docs/manageapps/workingWithProxy.html)。
-
-# 相关链接
-{: #rellinks}
-## 常规
-{: #general}
-* [Node.js buildpack 的最新更新](/docs/runtimes/nodejs/updates.html)
-* [Node.js](https://nodejs.org)
+在某些环境（如 [Bluemix Dedicated](/docs/dedicated/index.html#dedicated)
+和 [Bluemix Local](/docs/local/index.html#local)）中，可以配置代理。
+有关更多详细信息，请参阅[使用代理](/docs/manageapps/workingWithProxy.html)。

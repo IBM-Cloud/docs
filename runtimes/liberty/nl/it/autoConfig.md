@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-03-22"
 
 ---
 
@@ -32,13 +32,11 @@ informazioni sui servizi di cui è stato eseguito il bind. Per ogni servizio ges
 Questo processo viene indicato come configurazione automatica,
 Il pacchetto di build Liberty fornisce la configurazione automatica per i seguenti tipi di servizio:
 
-* [ SQL Database](/docs/services/SQLDB/index.html#SQLDB)
-* ClearDB MySQL Database
+* [ClearDB MySQL Database ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://www.cleardb.com/developers)
 * [ MySQL](/docs/services/MySQL/index.html#MySQL)
-* ElephantSQL
+* [ElephantSQL](docs/services/ElephantSQL/index.html)
 * [ PostgreSQL](/docs/services/PostgreSQL/index.html#PostgreSQL)
 * [Cloudant NoSQL Database](/docs/services/Cloudant/index.html#Cloudant)
-* MongoLab
 * [dashDB](/docs/services/dashDB/index.html#dashDB)
 * [ Data Cache](/docs/services/DataCache/index.html#data_cache)
 * [ Session Cache](/docs/services/SessionCache/index.html#session_cache)
@@ -48,6 +46,8 @@ Il pacchetto di build Liberty fornisce la configurazione automatica per i seguen
 * [Single Sign On](/docs/services/SingleSignOn/index.html#sso_gettingstarted)
 * [New Relic](newRelic.html)
 * [Dynatrace](dynatrace.html)
+* [Compose for PostgreSQL](/docs/services/ComposeForPostgreSQL/index.html)
+* [Compose for MongoDB](/docs/services/ComposeForMongoDB/index.html) (Al momento disponibile solo con il runtime Liberty mensile).
 
 Come indicato, alcuni servizi possono essere gestiti dall'applicazione oppure gestiti dal
 contenitore. Mongo e SQLDB sono degli esempi di tali servizi. Per impostazione predefinita,
@@ -117,8 +117,8 @@ In modo più formale, la grammatica della stringa è la seguente.
 {: codeblock}
 
 **Importante**: il tipo di servizio da te specificato deve corrispondere all'etichetta services come si presenta nella variabile di ambiente VCAP_SERVICES. Lo spazio vuoto non è consentito.
-**Importante**: non è consentito alcuno spazio vuoto in una <specifica_tipo_di_servizio>. Il solo
-utilizzo consentito dello spazio vuoto è per separare più istanze <specifica_di_tipo_servizio>.
+**Importante**: non è consentito alcuno spazio vuoto in una ```<specifica_tipo_di_servizio>```. Il solo
+utilizzo consentito dello spazio vuoto è per separare più istanze ```<specifica_di_tipo_servizio>```.
 
 Utilizza l'opzione "all" per optare per l'esclusione da tutte le azioni di configurazione automatica per un servizio, come nello scenario Mongo sopra riportato. Utilizza l'opzione "config" per optare per l'esclusione solo dalle azioni di aggiornamento della configurazione come nello scenario SQLDB sopra riportato.
 
@@ -146,7 +146,7 @@ myapp utilizzando l'interfaccia riga di comando.
 ```
 {: codeblock}
 
-## Sovrascrittura configurazione del servizio 
+## Sovrascrittura configurazione del servizio
 {: #override_service_config}
 
 In alcuni casi può essere opportuno sovrascrivere la configurazione predefinita per un servizio generato dalla configurazione automatica.
@@ -163,7 +163,7 @@ La seguente tabella mostra la sintassi per la sovrascrittura di alcune opzioni d
 <table>
 <tr>
 <th align="left">Nome variabile di ambiente</th>
-<th align="left">Sintassi di configurazione </th>
+<th align="left">Sintassi di configurazione</th>
 </tr>
 
 <tr>
@@ -180,8 +180,8 @@ La seguente tabella mostra la sintassi per la sovrascrittura di alcune opzioni d
 
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
-{: #general}
+{: #general notoc}
 * [Runtime Liberty](index.html)
 * [Panoramica di Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
