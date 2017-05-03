@@ -42,13 +42,13 @@ If the user is assigned access to an **Identity and access enabled service**, yo
 
 You can assign policies from the Assign policies page by clicking **Assign service policies**. The **Assign service policies** option is enabled only if you are authorized to create policies. You can manage existing policies by clicking the policy in the list or by clicking **Edit policy** from the **Actions** column for the row of the policy you want to edit.
 
-For more information about service policies and roles, see [Identity and access management policies and roles](/docs/admin/users_roles.html#iamusermanpol).
+For more information about service policies and roles, see [Identity and access management policies and roles](/docs/iam/users_roles.html#iamusermanpol).
 
 ## Infrastructure services
 
 If you have access to assign infrastructure permissions, you can set the following roles for the user: View Only, Basic User, or Super User. Click the **Assign Infrastructure Access** link to update or assign new permissions.
 
-For more information about the permissions, see [Infrastructure permissions](/docs/admin/users_roles.html#infrapermissions).
+For more information about the permissions, see [Infrastructure permissions](/docs/iam/users_roles.html#infrapermissions).
 
 ## Managing Cloud Foundry roles in the Team Directory
 {: #editinguserroles}
