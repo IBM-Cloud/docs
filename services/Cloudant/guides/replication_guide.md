@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-06"
+lastupdated: "2017-04-20"
 
 ---
 
@@ -12,69 +12,77 @@ lastupdated: "2017-01-06"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+<!-- Acrolinx: 2017-04-20 -->
+
 # Replication
 
 Data can be copied from one database to another in the same Cloudant account,
 across accounts and across data centers.
 {:shortdesc}
 
-Data can even be replicated to and from a Cloudant account and a mobile device
+Data can even be replicated to and from a Cloudant account and a mobile device by
 using [Cloudant Sync ![External link icon](../images/launch-glyph.svg "External link icon")](https://cloudant.com/product/cloudant-features/sync/){:new_window}
 or [PouchDB ![External link icon](../images/launch-glyph.svg "External link icon")](http://pouchdb.com/){:new_window}.
 Replication can run in one direction or in both directions,
 as a 'single shot' or continuous operation,
-and can be finely tuned with optional parameters.
+and can be finely tuned by using parameters.
 
 Cloudant’s replication protocol is compatible with a range of other databases and libraries,
 making it a great fit for Internet of Things (IoT) and mobile applications.
 
-This guide introduces Cloudant’s replication functionality,
+This guide introduces Cloudant’s replication functions,
 discusses common use-cases,
 and shows how to make your application replicate successfully.
 
 ## What is Replication?
 
-Cloudant is a distributed JSON data store with an HTTP API which is run as a service on multiple clouds,
+Cloudant is a distributed JSON data store with an HTTP API.
+Cloudant can be run as a service on multiple clouds,
 or in your server rack.
 Documents are stored in databases and can grow to any size as Cloudant shards its data across many nodes.
 Replication is the copying of data from a source database to a target database.
-The source and target databases need not be on the same Cloudant account,
+The source and target databases do not need to be on the same Cloudant account,
 or even in the same data center.
 
 ![replication](../images/replication_guide_1.png)
 
-Replication is complete when the latest version of each document in the source has made it to the destination database;
-this includes new documents,
-updates to existing documents and deletions.
-Only the latest version of a document remains after replication;
+Replication is complete when the most recent version of each document in the source transfers to the destination database.
+Transfers include new documents,
+updates to existing documents,
+and deletions.
+Only the most recent version of a document remains after replication;
 older versions are omitted.
 
 The source database remains unaltered by replication,
-apart from checkpoint data being written to it to allow partial replications to resume from the last known position.
+apart from checkpoint data that is written to it to allow partial replications to resume from the last known position.
 Any pre-existing data in the destination database remains.
 
-## How do I initiate replication via the Dashboard?
+<div id="how-do-i-initiate-replication-via-the-dashboard-"></div>
+
+## How to start replication by using the Dashboard
 
 The Cloudant Dashboard provides a convenient user-interface to trigger replication.
-Open the Replication tab of your Cloudant Dashboard and click on the New Replication button.
+Open the Replication tab of your Cloudant Dashboard and click the `New Replication` action button.
 Complete the simple form:
 
 ![replication2](../images/replication_guide_2.png)
 
 Using the form,
 define the source and target databases,
-then click "Replicate".
+then click "`Replicate`".
 
 ![replication3](../images/replication_guide_3.png)
 
-The status of each replication task can be seen in the "All Replications" section of the Dashboard,
-with each job changing state from "Triggered" to "Complete" as it progresses.
+The status of each replication task can be seen in the "`All Replications`" section of the Dashboard.
+Each job changes state from "`Triggered`" to "`Complete`" as it progresses.
 
 ![replication4](../images/replication_guide_4.png)
 
-## How do I run replication across different Cloudant accounts?
+<div id="how-do-i-run-replication-across-different-cloudant-accounts-"></div>
 
-The source and target of a replication are simply URLs of Cloudant databases,
+## How to run replication across different Cloudant accounts
+
+The source and target of a replication are URLs of Cloudant databases,
 as shown in the following example.
 
 _Example of defining source and target URLs for replication:_
@@ -87,38 +95,42 @@ _Example of defining source and target URLs for replication:_
 ```
 {:codeblock}
 
-The source and target need not be on the same account.
+The source and target do not need to be on the same account.
 The source and target database names do not need to match.
 You must be authorized to access both the source and target,
 and you must be authorized to write to the target.
 
-## Do I run replication on the source or the destination?
+<div id="do-i-run-replication-on-the-source-or-the-destination-"></div>
 
-Replication can be initiated at either the source or the destination end.
-This means that you can decide whether account A is pushing data to account B,
+## Is replication run on the source or the destination?
+
+Replication can be started at either the source or the destination end.
+This choice means that you can decide whether account A is pushing data to account B,
 or account B is pulling data from account A.
 In some cases,
 it might not be possible to run replication in either configuration,
 for example when one account is behind a firewall.
 Replication happens over HTTP or HTTPS and so no non-standard ports need be opened.
-The decision as to which device initiates replication is yours.
+The decision as to which device starts replication is yours.
 
-## How do I initiate replication via the Cloudant API?
+<div id="how-do-i-initiate-replication-via-the-cloudant-api-"></div>
 
-Every Cloudant account has a special database called `_replicator`,
+## How to start replication by using the Cloudant API
+
+Every Cloudant account has a special database that is called `_replicator`,
 into which replication jobs can be inserted.
-Simply add a document into the `_replicator` database to initiate replication.
-The document describes the required replication,
+Add a document into the `_replicator` database to start replication.
+The document describes the wanted replication,
 and contains the following fields:
 
 Field           | Purpose
 ----------------|--------
-`_id`           | Supplying an `_id` field is optional, but can be useful in order to identify replication tasks. Cloudant generates a value for you if you do not supply one.
+`_id`           | Supplying an `_id` field is optional, but can be useful to identify replication tasks. Cloudant generates a value for you if you do not supply one.
 `source`        | The URL of the source Cloudant database, including login credentials.
 `target`        | The URL of the destination Cloudant database, including login credentials.
 `create_target` | (Optional) Determine whether to create the destination database if it doesn't exist yet.
 
-_Example of starting a replication job, using HTTP:_
+_Example of using HTTP to start a replication job:_
 
 ```http
 POST /_replicator HTTP/1.1
@@ -128,7 +140,7 @@ Authorization: ...
 ```
 {:codeblock}
 
-_Example of starting a replication job, using the command line:_
+_Example of using the command line to start a replication job:_
 
 ```sh
 curl -X POST \
@@ -138,7 +150,7 @@ curl -X POST \
 ```
 {:codeblock}
 
-_Example JSON document describing the required replication:_
+_Example JSON document that describes the wanted replication:_
 
 ```json
 {
@@ -152,50 +164,48 @@ _Example JSON document describing the required replication:_
 
 ## How does replication affect the list of changes?
 
-You can get a list of changes made to a document using
+You can get a list of changes made to a document by using
 the [`_changes` endpoint](../api/database.html#get-changes).
 However,
 the distributed nature of Cloudant databases
-means that the response provided by the `_changes` feed
-cannot simply be a list of changes that occurred after a particular date and time.
+means that the response that is provided by the `_changes` feed
+cannot be a simple list of changes that occurred after a particular date and time.
 
 The [CAP Theorem](cap_theorem.html) discussion makes it clear that
 Cloudant uses an 'eventually consistent' model.
-This means that if you were to ask two different replicas of a database for a document,
+This model means that if you asked two different replicas of a database for a document,
 at the same time,
-you might get different results if one of the database copies has not yet replicated
-and therefore received an update to the document.
+you might get different results if one of the database copies is still waiting to finish replication.
 _Eventually_,
 the database copies complete their replication,
 so that all the changes to a document are present in each copy.
 
 This 'eventual consistency' model has two characteristics that affect a list of changes:
 
-1.  A change affecting a document almost certainly takes place at different times in different copies of the database.
+1.  A change that affects a document almost certainly takes place at different times in different copies of the database.
 2.  The order in which changes affect documents might differ between different copies of the database,
     depending on when and from where the replication took place.
 
 A consequence of the first characteristic is that,
 when you ask for a list of changes,
-it is meaningless to ask for a list of changes after a given point in time.
+it is meaningless to ask for a list of changes after a specific point in time.
 The reason is that the list of changes might be supplied by a different database copy,
 which resulted in document updates at different times.
 However,
 it _is_ meaningful to ask for a list of changes after a specific change,
-specified using a sequence identifier.
+which is specified by using a sequence identifier.
 
-An additional consequence of the first characteristic is that,
-in order to agree on the list of changes,
-it might be necessary to 'look back' at preceding changes.
+An extra consequence of the first characteristic is that
+it might be necessary to 'look back' at preceding changes to agree on the list of changes.
 In other words,
 to get a list of changes,
-you start from the most recent change which the database copies agree on.
+you start from the most recent change that the database copies agree on.
 The point of agreement between database copies is identified within
-Cloudant using the [checkpoint](#checkpoints) mechanism
+Cloudant by using the [checkpoint](#checkpoints) mechanism
 that enables replication between database copies to be synchronized.
 
 Finally,
-a consequence of the second characteristic is that the individual changes appearing in the
+a consequence of the second characteristic is that the individual changes that appear in the
 list of changes might be presented in a different order
 in subsequent requests that are answered by a different database copy.
 In other words,
@@ -207,53 +217,57 @@ But a subsequent list of changes might report changes `C`,
 then `B` in that order.
 All the changes are listed,
 but in a different order.
-This is because the sequence of changes received during replication
+This difference is because the sequence of changes that are received during replication
 might vary between two different copies of the database.
 
-### What this means for the list of changes
+<div id="what-this-means-for-the-list-of-changes"></div>
+
+### What 'eventual consistency' means for the list of changes
 
 When you request a list of changes,
 the response you get might vary depending on which database copy supplies the list.
 
-If you use the `since` option to obtain a list of changes after a given update sequence identifier,
-you always get the list of changes after that update _and_ you might also get some changes prior to that update.
-The reason is that the database copy responding to the list request must ensure that it
+If you use the `since` option to obtain a list of changes after a specific update sequence identifier,
+you always get the list of changes after that update _and_ you might also get some changes from before that update.
+The reason is that the database copy that responds to the list request must ensure that it
 lists the changes,
 consistent with all the replicas.
-In order to do this,
+To achieve that consistency,
 the database copy might have to start the list of changes from the point
-when all the copies were in agreement.
-This point is identified using checkpoints.
+when all the copies agreed.
+This point is identified by using checkpoints.
 
 Therefore,
-an application making use of the `_changes` feed should
+an application that uses the `_changes` feed must
 be ['idempotent' ![External link icon](../images/launch-glyph.svg "External link icon")](http://www.eaipatterns.com/IdempotentReceiver.html){:new_window}.
-This means that the application must be able safely to receive the same data multiple times,
+Idempotency means that the application must be able safely to receive the same data multiple times,
 and potentially if a different order for repeated requests.
 
 ## Checkpoints
 
-Internally, the replication process writes its state in "checkpoint" documents stored
+Internally,
+the replication process writes its state in "checkpoint" documents that are stored
 in both the source and destination databases.
-This allows a replication task to be resumed from where it stopped,
+Checkpoints allow a replication task to be resumed from where it stopped,
 without having to start from the beginning.
-This feature can be switched off by supplying
-[`"use_checkpoints": false`](../api/replication.html#checkpoints) when starting replication,
-but it is helpful to leave the feature on if your replication is to resume efficiently from its last known position.
+Checkpoint creation can be prevented by supplying the
+[`"use_checkpoints": false`](../api/replication.html#checkpoints) option when you request replication.
+It is helpful to leave the feature on if your replication is to resume efficiently from its last known position.
 
 ## Permissions
 
-Admin access is required to insert a document into the `_replicator` database.
-The login credentials supplied in the source and target parameters do not require full admin rights.
+Admin access is necessary to insert a document into the `_replicator` database.
+The login credentials that are supplied in the source and target parameters do not require full admin rights.
 It is sufficient if the credentials are able to:
 
 -   Write documents at the destination end.
 -   Write checkpoint documents at both ends.
 
 Cloudant has a special `_replicator` user permission.
-This allows checkpoint documents to be created,
+This permission allows checkpoint documents to be created,
 but does not allow the creation of ordinary documents in a database.
-It is recommended that you [create API keys](../api/authorization.html#creating-api-keys) that have:
+In general,
+[create API keys](../api/authorization.html#creating-api-keys) that have:
 
 -   `_reader` and `_replicator` access at the source side.
 -   `_reader` and `_writer` access at the destination side.
@@ -263,35 +277,36 @@ on a per-database basis.
 
 ![replication](../images/replication_guide_5.png)
 
-They can also be created [programmatically](../api/authorization.html#creating-api-keys) using the Cloudant API.
+They can also be created [programmatically](../api/authorization.html#creating-api-keys) by using the Cloudant API.
 
 ## Two-way replication
 
-Data can be copied in both directions in a process known as two-way replication or synchronization.
-You enable this by setting up two separate replication processes,
+Data can be copied in both directions in a process that is known as two-way replication or synchronization.
+You enable this synchronization by setting up two separate replication processes,
 one taking the data from A to B,
 the other taking data from B to A.
 Both replication processes work independently,
-with data moving seamlessly in both directions.
+with data moved seamlessly in both directions.
 
 ![replication6](../images/replication_guide_6.png)
 
 ## Continuous replication
 
-So far we have only dealt with one-shot replication,
-which finishes when all of the source data has been written to the target database.
+So far,
+the discussion deals only with one-shot replication,
+which finishes when all of the source data is written to the target database.
 With continuous replication,
 data flows continuously.
-All subsequent changes to the source database are transmitted to the target database in real-time.
+All subsequent changes to the source database are transmitted to the target database in real time.
 
 Continuous replication is triggered by clicking the
-"Make this replication continuous" tick box when defining a replication task in the Cloudant Dashboard,
-or by setting the [`"continuous"`](../api/replication.html#checkpoints) flag in the Cloudant API.
+"`Make this replication continuous`" check box when you define a replication task in the Cloudant Dashboard,
+or by setting the ["`continuous`"](../api/replication.html#checkpoints) flag in the Cloudant API.
 
-Two-way replication can be continuous in one or both of the directions,
-by setting the continuous flag accordingly.
+Two-way replication can be made continuous in one or both of the directions,
+by setting the "`continuous`" flag.
 
-_Example of starting a continuous replication, using HTTP:_
+_Example of using HTTP to start a continuous replication:_
 
 ```http
 POST /_replicator HTTP/1.1
@@ -301,7 +316,7 @@ Authorization: ...
 ```
 {:codeblock}
 
-_Example of starting a continuous replication, using the command line:_
+_Example of using the command line to start a continuous replication:_
 
 ```sh
 curl -X POST \
@@ -311,7 +326,7 @@ curl -X POST \
 ```
 {:codeblock}
 
-_Example of a JSON document defining a continuous replication:_
+_Example of a JSON document that defines a continuous replication:_
 
 ```json
 {
@@ -328,14 +343,14 @@ _Example of a JSON document defining a continuous replication:_
 You can check the status of Cloudant’s `_replicator` database at any time,
 by using the Dashboard or the API.
 
-If replication has failed,
+If replication failed,
 for example if the authentication credentials were invalid,
 then the error state is recorded in the `_replicator` document.
 In addition,
 the Cloudant account's `/_active_tasks` endpoint can be used to see replication work as it progresses.
 More details are available [here](../api/active_tasks.html).
 
-_Example of monitoring a replication process, using HTTP:_
+_Example of using HTTP to monitor a replication process:_
 
 ```http
 GET /_replicator/weekly_backup HTTP/1.1
@@ -344,7 +359,7 @@ Authorization: ...
 ```
 {:codeblock}
 
-_Example of monitoring a replication process, using the command line:_
+_Example of using the command line to monitor a replication process:_
 
 ```sh
 curl 'https://myaccount.cloudant.com/_replicator/weekly_backup'
@@ -368,13 +383,13 @@ _Example response to requesting the status of a replication:_
 ```
 {:codeblock}
 
-## Cancelling replication
+## Canceling replication
 
 To stop an ongoing replication job,
 delete the replication document from the `_replicator` database,
-using either the Dashboard or the API.
+by using either the Dashboard or the API.
 
-_Example of cancelling a replication, using HTTP:_
+_Example of using HTTP to cancel a replication:_
 
 ```http
 DELETE /_replicator/weekly_backup?rev=22-c57c18f7e761f1a76fa977caa03cd098 HTTP/1.1
@@ -383,7 +398,7 @@ Authorization:
 ```
 {:codeblock}
 
-_Example of cancelling a replication, using the command line:_
+_Example of using the command line to cancel a replication:_
 
 ```sh
 curl -X DELETE 'https://myaccount.cloudant.com/_replicator/weekly_backup?rev=22-c57c18f7e761f1a76fa977caa03cd098'
@@ -393,12 +408,13 @@ curl -X DELETE 'https://myaccount.cloudant.com/_replicator/weekly_backup?rev=22-
 ## Other replication use-cases
 
 Replication isn’t just for Cloudant-to-Cloudant data transfer.
-Cloudant’s replication protocol is compatible with other databases and libraries for a variety of real-world applications.
+Cloudant’s replication protocol is compatible with other databases and libraries for various real-world applications.
 
 ### Apache CouchDB
 
-[Apache CouchDB ![External link icon](../images/launch-glyph.svg "External link icon")](http://couchdb.apache.org/){:new_window} is an open-source database
-that can communicate with Cloudant 'out-of-the-box'.
+[Apache CouchDB ![External link icon](../images/launch-glyph.svg "External link icon")](http://couchdb.apache.org/){:new_window} is an open source database
+that can communicate with Cloudant,
+and that requires minimal setup.
 Applications include:
 
 -   Backup: Replicate your data from Cloudant to your own CouchDB databases
@@ -412,15 +428,14 @@ Applications include:
 
 ### PouchDB
 
-[PouchDB ![External link icon](../images/launch-glyph.svg "External link icon")](http://pouchdb.com/){:new_window} is an open-source,
-in-browser database that allows data to be replicated between the browser and Cloudant,
-and vice-versa.
-Having the data stored in a web browser on the client side allows web applications to function
+[PouchDB ![External link icon](../images/launch-glyph.svg "External link icon")](http://pouchdb.com/){:new_window} is an open source,
+in-browser database that allows data to be replicated in both directions between the browser and Cloudant.
+Storing the data in a web browser on the client side allows web applications to function
 even without an internet connection.
-PouchDB can sync any changed data to and from Cloudant when a internet connection is present.
-Setting up replication from the client side requires a few lines of Javascript.
+PouchDB can sync any changed data to and from Cloudant when an internet connection is present.
+Setting up replication from the client side requires a few lines of JavaScript.
 
-_Example Javascript to enable replication using PouchDB:_
+_Example JavaScript that uses PouchDB to enable replication:_
 
 ```javascript
 var db = new PouchDB("myfirstdatabase");
@@ -431,13 +446,13 @@ db.sync(URL, { live: true });
 
 ### CloudantSync
 
-[CloudantSync ![External link icon](../images/launch-glyph.svg "External link icon")](https://cloudant.com/cloudant-sync-resources/){:new_window} is a set of native libraries
+[CloudantSync ![External link icon](../images/launch-glyph.svg "External link icon")](https://cloudant.com/cloudant-sync-resources/){:new_window} is a set of libraries
 for iOS and Android that allows data to be stored locally in a mobile device
 and synced with Cloudant when mobile connectivity permits.
 As with [PouchDB](#pouchdb),
 setting up replication requires a few lines of code.
 
-_Example Javascript to enable replication using CloudantSync:_
+_Example JavaScript that uses CloudantSync to enable replication:_
 
 ```javascript
 URI uri = new URI("https://u:p@username.cloudant.com/my_database");
@@ -456,7 +471,8 @@ but the data is also available on the device for offline use.
 
 ## Filtered Replication
 
-It is useful to be able to remove some data when replicating one database to another during the replication process.
+It is useful to be able to remove some data during the replication process,
+when you replicate one database to another.
 Examples include:
 
 -   Removing all traces of deleted documents,
@@ -468,12 +484,12 @@ Examples include:
 
 ### Replication filter functions
 
-Cloudant’s filtered replication allows you to define a Javascript function which uses the return value
+Cloudant’s filtered replication allows the definition of a JavaScript function that uses the return value
 to determine whether each document in a database is to be filtered or not.
 [Filter functions](../api/design_documents.html#filter-functions) are stored
 in [design documents](../api/design_documents.html).
 
-The following example is a filter function that only allows non-deleted documents to be replicated.
+The following example is a filter function that allows only non-deleted documents to be replicated.
 
 _Example filter function for replicating non-deleted documents:_
 
@@ -487,14 +503,14 @@ function(doc, req) {
 ```
 {:codeblock}
 
-When starting a replication job,
-a filter function’s name can be specified in terms of the design document it resides in,
+When a replication job starts,
+a filter function’s name is specified as a combination of the design document where it is stored,
 and the filter function’s name.
-You can also specify `query_params`,
-an object containing properties that are passed to the
-filter function in the `query` field of its second (`req`)argument.
+You can also specify a `query_params` value.
+This value is an object that contains properties that are passed to the
+filter function in the `query` field of its second (`req`) argument.
 
-_Example of starting a filtered replication, using HTTP:_
+_Example of using HTTP to start a filtered replication:_
 
 ```http
 POST /_replicator HTTP/1.1
@@ -504,7 +520,7 @@ Authorization: ...
 ```
 {:codeblock}
 
-_Example of starting a filtered replication, using the command line:_
+_Example of using the command line to start a filtered replication:_
 
 ```sh
 curl -X POST \
@@ -514,14 +530,14 @@ curl -X POST \
 ```
 {:codeblock}
 
-_Example of a JSON document defining a filtered replication:_
+_Example of a JSON document that defines a filtered replication:_
 
 ```json
 {
     "_id": "weekly_backup",
     "source": "https://username:password@myaccount1.cloudant.com/source",
     "target": "https://username:password@myaccount2.cloudant.com/destination",
-    "filter": "mydesigndoc/myfilter",
+    "filters": "mydesigndoc/myfilter",
     "query_params": {
         "foo": "bar",
         "baz": 5
@@ -536,13 +552,13 @@ Cloudant publishes the adds,
 edits,
 and deletes affecting a database through a single HTTP feed from
 the [`_changes` endpoint](../api/database.html#get-changes).
-This feed can be consumed by your application to trigger events.
-You can access the feed using HTTP or `curl`,
+This feed can be used by your application to trigger events.
+You can access the feed by using HTTP or `curl`,
 as shown in the examples.
 Using the `feed=continuous` option means that the stream provides you with
-every change that is required to get the latest version of every document in the database.
+every change that is necessary to get the most recent version of every document in the database.
 
-_Example of querying the changes feed, using HTTP:_
+_Example of using HTTP to query the changes feed:_
 
 ```http
 GET /$db/_changes?feed=continuous HTTP/1.1
@@ -551,24 +567,24 @@ Authorization: ...
 ```
 {:codeblock}
 
-_Example of querying the changes feed, using the command line:_
+_Example of using the command line to query the changes feed:_
 
 ```sh
 curl "https://myaccount.cloudant.com/$db/_changes?feed=continuous"
 ```
 {:codeblock}
 
-The changes are described using one line per change.
+The changes are described by using one line per change.
 Each change consists of:
 
-1.  A string containing a sequence number (`seq`).
-2.  A string containing the `id` of the document that has changed.
+1.  A string that contains a sequence number (`seq`).
+2.  A string that contains the ID of the document that was changed.
 3.  An array of changes.
 
 To see the document body itself,
 append `&include_docs=true` to the curl command.
 
-Each change has the format shown in the following (abbreviated) example.
+Each change is described by using the format that is shown in the following (abbreviated) example.
 
 _Example `_changes` feed:_
 
@@ -588,9 +604,9 @@ _Example `_changes` feed:_
 <div id="changes-feed-since"></div>
 
 To join the changes feed from a known position,
-simply pass a [`since` argument](../api/database.html#the-since-argument) with the sequence number you want to start from.
+pass a [`since` argument](../api/database.html#the-since-argument) with the sequence number you want to start from.
 
-_Example (abbreviated) of supplying the `since` to join a `_changes` feed at a known position, using HTTP:_
+_Example (abbreviated) of using HTTP to supply the `since` option to join a `_changes` feed at a known position:_
 
 ```http
 GET /$db/_changes?feed=continuous&include_docs=true&since=11-g1A...c1Q HTTP/1.1
@@ -599,7 +615,7 @@ Authorization: ...
 ```
 {:codeblock}
 
-_Example (abbreviated) of supplying the `since` to join a `_changes` feed at a known position, using the command line:_
+_Example (abbreviated) of using the command line to supply the `since` option to join a `_changes` feed at a known position,:_
 
 ```sh
 curl "https://myaccount.cloudant.com/$db/_changes?feed=continuous&include_docs=true&since=11-g1A...c1Q"
@@ -611,7 +627,7 @@ curl "https://myaccount.cloudant.com/$db/_changes?feed=continuous&include_docs=t
 To rejoin the changes feed from the current moment in time,
 set `since=now`.
 
-_Example of supplying `since=now` to join a `_changes` feed at the current moment in time, using HTTP:_
+_Example of using HTTP to supply `since=now` to join a `_changes` feed at the current moment in time:_
 
 ```http
 GET /$db/_changes?feed=continuous&include_docs=true&since=now HTTP/1.1
@@ -620,14 +636,14 @@ Authorization: ...
 ```
 {:codeblock}
 
-_Example of supplying `since=now` to join a `_changes` feed at the current moment in time, using the command line:_
+_Example of using the command line to supply `since=now` to join a `_changes` feed at the current moment in time:_
 
 ```sh
 curl "https://myaccount.cloudant.com/$db/_changes?feed=continuous&include_docs=true&since=now"
 ```
 {:codeblock}
 
-_Example of supplying `since=now` to join a `_changes` feed at the current moment in time, using Javascript:_
+_Example of using JavaScript to supply `since=now` to join a `_changes` feed at the current moment in time:_
 
 ```javascript
 var feed = db.follow({since: "now", include_docs: true})
@@ -640,22 +656,22 @@ feed.follow();
 
 Accessing the `_changes` data programmatically is straightforward.
 For example,
-the [Cloudant Node.js library](../libraries/supported.html#node-js)
-enables you to follow changes with a few lines of code.
+use the [Cloudant Node.js library](../libraries/supported.html#node-js)
+to follow changes with a few lines of code.
 
 Example use cases might be:
 
 -   Adding items to a message queue to trigger actions within your application,
     such as sending a customer email.
 -   Update an in-memory database to record live counts of activity.
--   Writing data to a text file in order to push data into an SQL database.
+-   Writing data to a text file to push data into an SQL database.
 
 <div id="changes-feed-filtering"></div>
 
 The changes feed can be filtered with a filter function,
 by using a similar technique to [filtering during replication](#filtered-replication).
 
-_Example of filtering the changes feed, using HTTP:_
+_Example of using HTTP to filter the changes feed:_
 
 ```http
 GET /$db/_changes?feed=continuous&include_docs=true&since=now&filter=mydesigndoc/myfilter HTTP/1.1
@@ -664,38 +680,38 @@ Authorization: ...
 ```
 {:codeblock}
 
-_Example of filtering the changes feed, using the command line:_
+_Example of using the command line to filter the changes feed:_
 
 ```sh
-curl "https://myaccount.cloudant.com/$db/_changes?feed=continuous&include_docs=true&since=now&filter=mydesigndoc/myfilter"
+curl "https://myaccount.cloudant.com/$db/_changes?feed=continuous&include_docs=true&since=now&filters=mydesigndoc/myfilter"
 ```
 {:codeblock}
 
->   **Note**: The ordering of documents within the `_changes` feed is not guaranteed.
-    This means changes might not appear in strict time order.
+>   **Note**: The ordering of documents within the `_changes` feed is not always the same.
+    In other words, changes might not appear in strict time order.
     The reason is that data is returned from multiple Cloudant nodes,
     and eventual consistency rules apply.
 
 ## Replication Pitfalls
 
-There are several considerations to be aware of when using replication.
+Several considerations apply when you use replication.
 
 ### Incorrect user permissions
 
-In order for replication to proceed optimally when replicating from database "a" to database "b",
-the credentials supplied must have:
+For replication to proceed optimally when you replicate from database "a" to database "b",
+the credentials that are supplied must have:
 
 *   `_reader` and `_replicator` rights on database "a".
 *   `_writer` rights on database "b".
 
 API keys are generated in the Cloudant Dashboard or [through the API](../api/authorization.html#creating-api-keys).
-Each key can be given individual rights relating to a specific Cloudant database.
+Each key can be given individual rights that relate to a specific Cloudant database.
 Cloudant must be able to write its checkpoint documents at the "read" end of replication,
 otherwise no state is saved and replication cannot resume from where it stopped.
 If the state is not saved,
-it can lead to performance problems when resuming replications of large data sets.
+it can lead to performance problems when replication of large data sets resumes.
 The reason is that without checkpoints,
-the replication process restarts from the beginning each time it is resumed.
+the replication process restarts from the beginning each time that it is resumed.
 
 ### Replication document is conflicted
 
@@ -703,7 +719,7 @@ Another consequence of setting user permissions incorrectly is that the `_replic
 The `_replicator` document records the current state of the replication process.
 In an extreme case,
 the document can become huge because it contains many unresolved conflicts.
-Such a large document uses a lot of the available space and causes extra server load.
+Such a large document uses much of the available space and causes extra server load.
 
 You can check the size of your `_replicator` database by sending a `GET` request to the `/_replicator` endpoint:
 
@@ -729,9 +745,9 @@ GET https://myaccount.cloudant.com/_replicator/<<docid>>?conflicts=true
 
 If you want to cancel all replications and start with a new,
 clean `_replicator` database,
-simply delete then recreate the `replicator` database.
+delete then re-create the `replicator` database.
 
-_Example of removing and recreating the `_replicator` database, using HTTP:_
+_Example of using HTTP to remove and re-create the `_replicator` database:_
 
 ```http
 DELETE /_replicator HTTP/1.1
@@ -744,7 +760,7 @@ Authorization: ...
 ```
 {:codeblock}
 
-_Example of removing and recreating the `_replicator` database, using the command line:_
+_Example of using the command line to remove and re-create the `_replicator` database:_
 
 ```sh
 curl -X DELETE 'https://myaccount.cloudant.com/_replicator'
@@ -754,10 +770,10 @@ curl -X PUT 'https://myaccount.cloudant.com/_replicator'
 
 ### Many simultaneous replications
 
-It is easy to forget that you have previously set up replication between two databases,
-and so create additional replication processes in error.
+It is easy to forget that you previously set-up replication between two databases,
+and so create extra replication processes in error.
 Each replication job is independent of the other,
-so Cloudant does not prevent you from doing this.
+so Cloudant does not prevent you from doing creating extra replication processes.
 However, each replication task uses up system resources.
 
 You can check your "active replications" in the Cloudant Dashboard
@@ -769,14 +785,14 @@ Delete any `_replicator` documents that are no longer needed.
 By default,
 Cloudant replication runs at an appropriate rate to get the data from the source to the target
 without adversely affecting performance.
-There is a trade-off between replication rate and cluster performance for other tasks;
-your use-case might require faster replication at the expense of other Cloudant services.
+Choosing between replication rate and cluster performance for other tasks is a tradeoff.
+Your use-case might require faster replication at the expense of other Cloudant services.
 Alternatively,
 you might require cluster performance to take priority,
-with replication being treated as a background process.
+with replication treated as a background process.
 
-There are advanced replication API options [available](../api/advanced_replication.html)
-which enable you to increase or decrease the amount of computing power used during replication.
+Advanced replication API options are [available](../api/advanced_replication.html),
+which enable an increase or decrease in the amount of computing power that is used during replication.
 For example:
 
 *   If your documents contain attachments,
