@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-04-28"
+lastupdated: "2017-05-03"
 
 ---
 
@@ -27,7 +27,9 @@ The {{site.data.keyword.Bluemix_notm}} command line interface (CLI) provides a s
 <dt>Endpoint</dt>
 <dd>An API endpoint must be set through the <code>bluemix api</code> before using the command.</dd>
 <dt>Login</dt>
-<dd>Login by using the <code>bluemix login</code> command is required before using this command.</dd>
+<dd>Login by using the <code>bluemix login</code> command is required before using this command.
+If logging in with federated ID, use '--sso' option to authenticate with one time passcode, or use '--apikey' to authenticate with API key. Go to {{site.data.keyword.Bluemix_notm}} console “Manage” -> “Security” -> “Bluemix API keys” to create API keys.
+</dd>
 <dt>Target</dt>
 <dd>The <code>bluemix target</code> command must be used to set an org and space before using this command.</dd>
 <dt>Docker</dt>
