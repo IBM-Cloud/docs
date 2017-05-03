@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-28"
+lastupdated: "2017-02-24"
 
 ---
 
@@ -13,23 +13,23 @@ lastupdated: "2016-10-28"
 # Environnement réseau
 {: #networkEnvironment}
 
-Une fois mise à disposition votre instance de service WebSphere Application Server pour {{site.data.keyword.Bluemix_notm}}, vous pouvez accéder à votre machine virtuelle de plusieurs façons. Vous pouvez vous connecter via un VPN (réseau privé virtuel) sécurisé pour obtenir le SSH, la console d'administration WebSphere traditionnelle et l'accès aux applications sur votre machine virtuelle. Vous pouvez également connecter votre machine virtuelle à Internet avec une adresse IP publique.
+Une fois votre instance de service WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} mise à disposition, vous pouvez accéder à votre machine virtuelle de plusieurs façons. Vous pouvez vous connecter via un VPN (réseau privé virtuel) sécurisé pour obtenir le SSH, la console d'administration WebSphere traditionnelle et l'accès aux applications sur votre machine virtuelle. Vous pouvez également connecter votre machine virtuelle à Internet avec une adresse IP publique.
 
 Le diagramme suivant montre ces chemins réseau :
 
-Figure 1. Vue du client de la mise en réseau multilocation avec IP publique 
+Figure 1. Vue du client de la mise en réseau multilocation avec IP publique
 
-![Figure 1. Vue du client de la mise en réseau multilocation avec IP publique](images/wasaas_multi_tenantPublicIP.gif) 
+![Figure 1. Vue du client de la mise en réseau multilocation avec IP publique](images/wasaas_multi_tenantPublicIP.gif)
 
-## Accès au VPN (réseau privé virtuel) 
+## Accès au VPN (réseau privé virtuel)
 {: #vpnAccess}
 
-Après avoir configuré une instance de service WebSphere Application Server pour {{site.data.keyword.Bluemix_notm}} à partir du Tableau de bord du service dans l'interface graphique {{site.data.keyword.Bluemix_notm}}, vous pouvez télécharger vos données d'identification VPN et établir une connexion OpenVPN. Vous pouvez ensuite accéder à votre machine virtuelle via SSH. Vous pouvez également accéder à votre centre d'administration Liberty, à la console d'administration WebSphere traditionnelle et aux applications.
+Après avoir configuré une instance de service WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} à partir du Tableau de bord du service de l'interface graphique {{site.data.keyword.Bluemix_notm}}, vous pouvez télécharger vos données d'identification VPN et établir une connexion OpenVPN. Vous pouvez ensuite accéder à votre machine virtuelle via SSH. Vous pouvez également accéder à votre centre d'administration Liberty, à la console d'administration WebSphere traditionnelle et aux applications.
 
 ## Accès public à Internet
 {: #publicInternetAccess}
 
-En option, vous pouvez demander une adresse IP publique pour votre machine virtuelle du serveur WebSphere en cliquant sur **Manage Public IP** sur le Tableau de bord du service dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}} et en demandant une IP publique. Ce processus réserve l'adresse IP pour ce serveur. Ensuite, cliquez sur **Open IP** pour ouvrir la connexion depuis Internet vers votre instance de service WebSphere Application Server pour {{site.data.keyword.Bluemix_notm}}.
+En option, vous pouvez demander une adresse IP publique pour votre machine virtuelle du serveur WebSphere en cliquant sur **Manage Public IP** sur le Tableau de bord du service dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}} et en demandant une IP publique. Ce processus réserve l'adresse IP pour ce serveur. Ensuite, cliquez sur **Open IP** pour ouvrir la connexion depuis Internet vers votre instance de service WebSphere Application Server in {{site.data.keyword.Bluemix_notm}}.
 
 ## Ports d'adresses IP publiques
 {: #publicIPports}
@@ -52,7 +52,7 @@ Vous devez configurer Liberty Core pour écouter le trafic d'application sur le 
 
 Par défaut, Liberty est configuré avec le centre d'administration Liberty et les applications disponibles sur l'hôte virtuel **default_host**qui est associé au **defaultHttpEndpoint** sur les ports 9080 et 9443. Reconfigurez votre serveur pour séparer le centre d'administration Liberty de l'hôte virtuel d'application et du noeud final et pour les rendre disponibles sur des ports distincts.
 
-Le fragment de code suivant est un exemple de réglages de configuration de server.xml : 
+Le fragment de code suivant est un exemple de réglages de configuration de server.xml :
 
 ```    
     <!-- open port 9080/9443 for incoming http connections -->
