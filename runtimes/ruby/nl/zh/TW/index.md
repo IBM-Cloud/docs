@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-03-23"
 
 ---
 
@@ -52,11 +52,11 @@ ruby_buildpack 為 Ruby 應用程式提供完整的運行環境。
 * 2.2.4
 * 2.3.0
 
-如果您的應用程式需要未列出的 Ruby 版本，您可以使用外部 [Ruby 建置套件](https://github.com/cloudfoundry/ruby-buildpack)來部署該應用程式。
+如果您的應用程式需要未列出的 Ruby 版本，可以使用外部 [Ruby 建置套件](https://github.com/cloudfoundry/ruby-buildpack)來部署該應用程式。
 
 # 相關鏈結
-{: #rellinks}
+{: #rellinks notoc}
 ## 一般
-{: #general}
+{: #general notoc}
 * [Cloud Foundry buildpack for Ruby, Sinatra and Rails](https://github.com/cloudfoundry/cf-buildpack-ruby)
-* [Ruby on Rails 文件](http://api.rubyonrails.org/)
+* [Ruby on Rails 文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://api.rubyonrails.org/)

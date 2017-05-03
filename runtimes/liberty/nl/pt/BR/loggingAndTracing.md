@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-09"
+  years: 2015, 2017
+lastupdated: "2017-03-23"
 
 ---
 
@@ -16,75 +16,103 @@ lastupdated: "2016-11-09"
 ## Arquivos de log
 {: #log_files}
 
-Os logs padrão do Liberty, tais como messages.log ou o diretório ffdc, estão disponíveis no IBM Bluemix no diretório de logs de cada instância do aplicativo. Esses logs podem ser acessados a partir do console do IBM Bluemix ou usando os comandos cf logs e cf files.
-Por exemplo, para ver o arquivo messages.log, execute o comando:
-```
-    $ cf files <yourappname> logs/messages.log
-```
-{: codeblock}
+Os logs padrão do Liberty, como `messages.log` ou o diretório `ffdc`, estão disponíveis no IBM Bluemix no diretório `logs` de cada instância do aplicativo. Esses logs podem ser acessados por meio do console do IBM Bluemix ou usando o CF CLI. Por exemplo:
+
+* Para acessar os logs recentes de um app, execute o comando a seguir:
+
+  ```
+  $ cf logs --recent <appname>
+  ```
+  {: codeblock}
+
+* Para ver o arquivo `messages.log` de um app em execução em um nó DEA, execute o comando a seguir:
+
+  ```
+  $ cf files <appname> logs/messages.log
+  ```
+  {: codeblock}
+
+* Para ver o arquivo `messages.log` de um app em execução em uma célula do Diego, execute o comando a seguir:
+
+  ```
+  $ cf ssh <appname> -c "cat logs/messages.log"
+  ```
+  {: codeblock}
 
 O nível de
-log e outras opções de rastreio podem ser configurados por meio do arquivo de configuração do Liberty. Para obter mais informações, consulte [Perfil do Liberty: rastreio e criação de log](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html?cp=SSAW57_8.5.5%2F3-17-0-0). O rastreio também pode ser ajustado em uma instância do aplicativo em execução usando o console do IBM Bluemix.
+log e outras opções de rastreio podem ser configurados por meio do arquivo de configuração do Liberty. Para obter mais informações, consulte [Perfil do Liberty: rastreio e criação de log](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html). O rastreio também pode ser ajustado em uma instância do aplicativo em execução usando o console do IBM Bluemix.
 
 ## Usando os recursos de rastreio e de dump
 {: #using_trace_and_dump}
 
-Na interface com o usuário do IBM Bluemix, existem recursos de rastreio e de dump.
-* Use o Rastreio para visualizar e atualizar o traceSpecification de criação de log do Liberty em instâncias do aplicativo em execução.
-* Use o Dump para criar dumps de encadeamento e de heap em instâncias do aplicativo em execução.
+A configuração de rastreio do Liberty pode ser ajustada para um aplicativo em execução diretamente do console do IBM Bluemix. O console também fornece capacidade para solicitar e fazer download de dumps de encadeamento e de heap. Para ajustar a configuração de rastreio ou solicitar um dump, selecione um aplicativo Liberty no console do Bluemix e escolha o menu `Tempo de execução` na navegação. Na visualização `Tempo de execução`, selecione uma instância e pressione o botão *RASTREIO* ou *DUMP*. Se estiver ajustando o nível de rastreio, veja [Perfil do Liberty: rastreio e criação de log](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html) para obter os detalhes da sintaxe da especificação de rastreio.
 
-Para executar essa ação, selecione um aplicativo Liberty na interface com o usuário. Na categoria Tempo de execução na navegação, é possível abrir os detalhes da instância. Selecione uma instância ou diversas instâncias. No menu Ações, é possível escolher TRACE ou DUMP.
+### Diego: acionando dumps por meio de SSH
 
-## Download de arquivos de dump
+Para um aplicativo em execução em uma célula do Diego, também é possível acionar um dump de encadeamento e de heap por meio do CF CLI usando o recurso SSH. Por exemplo:
+
+```
+$ cf ssh <appname> -c "pkill -3 java"
+```
+{: codeblock}
+
+Veja a documentação abaixo para obter detalhes sobre o download dos arquivos de dump gerados.
+
+## Fazer download de arquivos de dump
 {: #download_dumps}
 
-<strong>Pré-requisito:  </strong>
-* [Instalar CLI do CF](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html)
-* [Instale o plug-in Diego
-Enabler](https://github.com/cloudfoundry-incubator/Diego-Enabler) se seu aplicativo for executado no Diego
+Por padrão, os vários arquivos de dump são colocados no diretório `dumps` do contêiner de aplicativo.
 
-<strong>Se seu aplicativo for executado no DEA, use as seguintes etapas:</strong>
-  
-1. get app_guid
-```
-$ cf app <app_name> --guid
-```
+### Aplicativo DEA
 
-2. Download do arquivo de dump
-```
-$ cf curl /v2/apps/<app_guid>/instances/<instance_id>/files/dumps/<dump_file_name> --output <local_dump_file_name>
-```
+Para um aplicativo em execução em um nó DEA, use a funcionalidade "cf files" para visualizar e fazer download dos arquivos de dump.
 
-<strong>Se seu aplicativo for executado no Diego, use as seguintes etapas:</strong>
-  
-1. get app_guid
-```
-$ cf app <app_name> --guid
-```
+* Para ver os dumps gerados, execute o comando a seguir:
 
-2. get app_ssh_endpoint(host and port) and app_ssh_host_key_fingerprint
-```
-$ cf curl /v2/info
-```
+  ```
+  $ cf files <appname> dumps
+  ```
+  {: codeblock}
 
-3. get ssh-code for scp command
-```
-$ cf ssh-code
-```
+* Para fazer download de um arquivo de dump, execute os comandos a seguir:
 
-4. arquivo de dump remoto scp para local, use código ssh quando uma senha for solicitada
-```
-$ scp -P <app_ssh_endpoint_port> -o User=cf:<app_guid>/<instance_id> <app_ssh_endpoint_host>:/home/vcap/dumps/<dump_file_name> <local_dump_file_name>
-```
+    1. Obter o GUID do aplicativo
 
-Consulte [Acessando
-aplicativos com SSH](https://docs.cloudfoundry.org/devguide/deploy-apps/ssh-apps.html) para obter mais detalhes
+      ```
+      $ cf app <appname> --guid
+      ```
+      {: codeblock}
 
+    2. Fazer download do arquivo de dump
+
+      ```
+      $ cf curl /v2/apps/<app_guid>/instances/<instance_id>/files/dumps/<dump_file_name> --output <local_dump_file_name>
+      ```
+      {: codeblock}
+
+### Aplicativo Diego
+
+Para um aplicativo em execução em uma célula do Diego, use a funcionalidade "cf ssh" para visualizar e fazer download dos arquivos de dump.
+
+* Para ver os dumps gerados, execute o comando a seguir:
+
+  ```
+  $ cf ssh <appname> -c "ls -l dumps"
+  ```
+  {: codeblock}
+
+* Para fazer download de um arquivo de dump, execute o comando a seguir:
+
+  ```
+  $ cf ssh <appname> -i <instance_id> -c "cat dumps/<dump_file_name>" > <local_dump_file_name>
+  ```
+  {: codeblock}
+
+Também é possível usar `scp` e outras ferramentas semelhantes para visualizar e fazer download dos arquivos de dump. Consulte [Acessando apps com SSH ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.cloudfoundry.org/devguide/deploy-apps/ssh-apps.html) para obter mais informações.
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## geral
-{: #general}
+{: #general notoc}
 * [Tempo de execução do Liberty](index.html)
-* [Visão geral do perfil do Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
-
+* [Visão geral do perfil Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

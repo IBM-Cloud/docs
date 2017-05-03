@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-03-22"
 
 ---
 
@@ -26,13 +26,11 @@ Un servicio gestionado por contenedor es un servicio que gestionan por completo 
 Este proceso se conoce como configuración automática.
 El paquete de compilación de Liberty proporciona configuración automática para los siguientes tipos de servicio:
 
-* [ SQL Database](/docs/services/SQLDB/index.html#SQLDB)
-* ClearDB MySQL Database
+* [ClearDB MySQL Database ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://www.cleardb.com/developers)
 * [ MySQL](/docs/services/MySQL/index.html#MySQL)
-* ElephantSQL
+* [ElephantSQL](docs/services/ElephantSQL/index.html)
 * [ PostgreSQL](/docs/services/PostgreSQL/index.html#PostgreSQL)
 * [Base de datos Cloudant NoSQL](/docs/services/Cloudant/index.html#Cloudant)
-* MongoLab
 * [dashDB](/docs/services/dashDB/index.html#dashDB)
 * [ Data
 Cache](/docs/services/DataCache/index.html#data_cache)
@@ -44,6 +42,8 @@ Light](/docs/services/MQLight/index.html#mqlight010)
 * [Single Sign On](/docs/services/SingleSignOn/index.html#sso_gettingstarted)
 * [New Relic](newRelic.html)
 * [Dynatrace](dynatrace.html)
+* [Compose for PostgreSQL](/docs/services/ComposeForPostgreSQL/index.html)
+* [Compose for MongoDB](/docs/services/ComposeForMongoDB/index.html) (Actualmente solo está disponible con el tiempo de ejecución Liberty mensual).
 
 Tal como se ha indicado, algunos servicios se pueden gestionar mediante aplicación o mediante contenedor. Mongo y SQLDB son ejemplos de dichos servicios. De forma predeterminada, el paquete de compilación de Liberty da por supuesto que estos servicios se gestionan mediante contenedor y los configura de forma automática. Si desea que la aplicación gestione el servicio, puede renunciar a la configuración automática del servicio estableciendo la variable de entorno services_autoconfig_excludes. Para obtener más información, consulte [Renuncia a la configuración automática del servicio](autoConfig.html#opting_out).
 
@@ -99,7 +99,7 @@ Es decir, la gramática de la serie es la siguiente:
 {: codeblock}
 
 **Importante**: El tipo de servicio que especifique debe coincidir con la etiqueta de servicio que aparece en la variable de entorno VCAP_SERVICES. No se permiten espacios en blanco.
-**Importante**: No se permiten espacios en blanco en <service_type_specification>. Sólo se permiten espacios en blanco para separar varias instancias de <service_type_specification>.
+**Importante**: No se permiten espacios en blanco en ```<service_type_specification>```. Sólo se permiten espacios en blanco para separar varias instancias de ```<service_type_specification>``` .
 
 Utilice la opción "all" para renunciar a todas las acciones de configuración automática para un servicio, como en el caso de ejemplo de Mongo anterior. Utilice la opción "config" para renunciar únicamente a las acciones de actualización de la configuración, como en el caso de ejemplo de SQLDB anterior.
 
@@ -131,7 +131,7 @@ myapp mediante la interfaz de línea de mandatos.
 {: #override_service_config}
 
 En algunos casos puede resultar recomendable sustituir la configuración predeterminada para un servicio generado por la configuración automática.
-Esto se puede hacer mediante la variable de entorno **LBP_SERVICE_CONFIG_xxxx**, donde "xxxx" es el nombre del servicio en mayúsculas. Por ejemplo, para sustituir la versión predeterminada del servicio *mysql* y establecerla en la versión 1.4.+, emita un mandato parecido al siguiente: 
+Esto se puede hacer mediante la variable de entorno **LBP_SERVICE_CONFIG_xxxx**, donde "xxxx" es el nombre del servicio en mayúsculas.  Por ejemplo, para sustituir la versión predeterminada del servicio *mysql* y establecerla en la versión 1.4.+, emita un mandato parecido al siguiente:
 
 ```
     $ cf set-env myapp LBP_SERVICE_CONFIG_MYSQL "{driver: { version: 1.4.+ }}"
@@ -160,8 +160,8 @@ En la tabla siguiente se muestra la sintaxis para sustituir algunas opciones de 
 
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
-{: #general}
+{: #general notoc}
 * [Tiempo de ejecución de Liberty](index.html)
 * [Visión general del perfil de Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

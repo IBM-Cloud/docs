@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-03-22"
 
 ---
 
@@ -31,13 +31,11 @@ acessar o serviço ligado.
 Este processo é referido como uma configuração automática.
 O buildpack Liberty fornece configuração automática para os tipos de serviço a seguir:
 
-* [SQL Database](/docs/services/SQLDB/index.html#SQLDB)
-* ClearDB MySQL Database
+* [ClearDB MySQL Database ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://www.cleardb.com/developers)
 * [MySQL](/docs/services/MySQL/index.html#MySQL)
-* ElephantSQL
+* [ElephantSQL](docs/services/ElephantSQL/index.html)
 * [PostgreSQL](/docs/services/PostgreSQL/index.html#PostgreSQL)
 * [Cloudant NoSQL Database](/docs/services/Cloudant/index.html#Cloudant)
-* MongoLab
 * [dashDB](/docs/services/dashDB/index.html#dashDB)
 * [Data Cache](/docs/services/DataCache/index.html#data_cache)
 * [Session Cache](/docs/services/SessionCache/index.html#session_cache)
@@ -47,6 +45,8 @@ O buildpack Liberty fornece configuração automática para os tipos de serviço
 * [Single Sign On](/docs/services/SingleSignOn/index.html#sso_gettingstarted)
 * [New Relic](newRelic.html)
 * [Dynatrace](dynatrace.html)
+* [Compose for PostgreSQL](/docs/services/ComposeForPostgreSQL/index.html)
+* [Compose for MongoDB](/docs/services/ComposeForMongoDB/index.html) (Atualmente disponível apenas com o tempo de execução mensal do Liberty).
 
 Conforme observado, alguns serviços podem ser gerenciados por aplicativo ou por contêiner. Mongo
 e SQLDB são exemplos desses serviços. Por padrão, o buildpack do Liberty assume que esses serviços são gerenciados por
@@ -64,7 +64,7 @@ detalhes adicionais.
 ## Gerando ou atualizando sub-rotinas de configuração do server.xml
 {: #generating_or_updating_serverxml}
 
-Ao enviar por push um aplicativo independente, o buildpack do Liberty gera a sub-rotina server.xml conforme descrito em [Opções para enviar por push os aplicativos do Liberty](optionsForPushing.html#options_for_pushing) para Bluemix. Ao enviar por push um aplicativo independente e ligar aos serviços gerenciados por contêiner, o buildpack do Liberty gera as sub-rotinas necessárias do server.xml para os serviços ligados.
+Ao enviar por push um aplicativo independente, o buildpack do Liberty gera a sub-rotina server.xml, conforme descrito em [Opções para enviar por push os aplicativos do Liberty](optionsForPushing.html#options_for_pushing), para Bluemix. Ao enviar por push um aplicativo independente e ligar aos serviços gerenciados por contêiner, o buildpack do Liberty gera as sub-rotinas necessárias do server.xml para os serviços ligados.
 
 Ao fornecer um arquivo server.xml e ligar aos serviços gerenciados por contêiner, o buildpack do Liberty:
 
@@ -111,8 +111,8 @@ Mais formalmente, a gramática da Sequência é conforme a seguir.
 {: codeblock}
 
 **Importante**: O tipo de serviço que você especifica deve corresponder ao rótulo de serviços como ele aparece na variável de ambiente VCAP_SERVICES. O espaço em branco não é permitido.
-**Importante**: Nenhum espaço em branco é permitido em um <service_type_specification>. O único uso permitido de espaço em branco é
-separar diversas instâncias de <service_type_specification>.
+**Importante**: Nenhum espaço em branco é permitido em um ```<service_type_specification>```. O único uso permitido de espaço em branco é
+separar diversas instâncias de ```<service_type_specification>```.
 
 Use a opção "all" para fazer opt-out de todas as ações de configuração automática para um serviço, como no cenário Mongo acima. Use a opção "config" para fazer opt-out somente das ações de atualização da configuração como no cenário SQLDB acima.
 
@@ -143,9 +143,9 @@ configurar a variável de ambiente services_autoconfig_excludes para o aplicativ
 {: #override_service_config}
 
 Em alguns casos, pode ser desejável substituir a configuração padrão para um serviço gerado pela
-configuração automática. Isso pode ser feito usando a variável de ambiente
-**LBP_SERVICE_CONFIG_xxxx**, em que "xxxx" é o nome do serviço em letras maiúsculas.
-Por exemplo, para substituir a versão padrão do serviço *mysql* e configurá-la como
+configuração automática.
+Isso pode ser feito usando a variável de ambiente
+**LBP_SERVICE_CONFIG_xxxx**, em que "xxxx" é o nome do serviço em letras maiúsculas.  Por exemplo, para substituir a versão padrão do serviço *mysql* e configurá-la como
 a versão 1.4.+, emita um comando semelhante a:
 
 ```
@@ -175,8 +175,8 @@ A tabela a seguir mostra a sintaxe para substituir algumas opções de configura
 
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## geral
-{: #general}
+{: #general notoc}
 * [Tempo de execução do Liberty](index.html)
-* [Visão geral do perfil do Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Visão geral do perfil Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

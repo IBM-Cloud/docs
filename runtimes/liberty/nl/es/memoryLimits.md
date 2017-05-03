@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-06-10"
+  years: 2015, 2017
+lastupdated: "2017-04-18"
 
 ---
 
@@ -42,9 +42,23 @@ Cuando despliega una aplicación, se supervisa el uso de memoria de todo el proc
 * Si el límite memoria se excede durante el despliegue de la aplicación, recibirá un mensaje que indica que se ha producido un error. Es posible que vea que la aplicación se comporta de forma inestable. Puede que vea que la aplicación ha intentado iniciarse varias veces, siempre sin éxito. O también es posible que reciba un mensaje que indique que la aplicación no se ha podido desplegar.
 * Si el límite memoria se excede mientras la aplicación está en funcionamiento, el proceso se detiene. Cloud Foundry intenta reiniciar la aplicación. Es posible que la aplicación se reinicie, pero no estará disponible durante algún tiempo.
 
-# rellinks
-{: #rellinks}
-## general
-{: #general}
-* [Tiempo de ejecución de Liberty](index.html)
-* [Visión general del perfil de Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+## Especificación de la memoria de almacenamiento dinámico
+{: #specifying_heap_memory}
+
+Puede personalizar la cantidad máxima de memoria de almacenamiento dinámico que tiene asignada la aplicación de varias formas.
+
+*  Utilice la variable de entorno JVM_ARGS y el argumento -Xmx. Por ejemplo, para establecer el tamaño máximo de memoria de almacenamiento dinámico en 512 M utilice el mandato siguiente y luego vuelva a transferir la app.
+
+```
+    $ cf set-env myapp JVM_ARGS -Xmx512m
+```
+{: codeblock}
+
+* Si la aplicación es un [directorio de servidor](optionsForPushing.html#server_directory) o un [servidor empaquetado](optionsForPushing.html#packaged_server), puede especificar el argumento -Xmx en el archivo jvm.options.
+
+* Puede especificar la proporción del tamaño de almacenamiento dinámico utilizando la variable de entorno JBP_CONFIG_IBMJDK.  La proporción heap_size_ratio es un valor de coma flotante que especifica la cantidad de memoria disponible que se asignará al almacenamiento dinámico.  Por ejemplo, para asignar la mitad de la memoria disponible al almacenamiento dinámico, emita el mandato siguiente y vuelva a transferir la app.
+
+```
+    $ cf set-env myapp JBP_CONFIG_IBMJDK "heap_size_ratio: 0.50"
+```
+{: codeblock}

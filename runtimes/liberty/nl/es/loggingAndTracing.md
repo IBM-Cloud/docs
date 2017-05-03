@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-09"
+  years: 2015, 2017
+lastupdated: "2017-03-23"
 
 ---
 
@@ -16,73 +16,102 @@ lastupdated: "2016-11-09"
 ## Archivos de registro
 {: #log_files}
 
-Los registros estándares de Liberty, como messages.log o el directorio ffdc, están disponibles en IBM Bluemix en el directorio de registros de cada instancia de aplicación. Se puede acceder a estos registros desde la consola de IBM Bluemix o mediante los mandatos cf logs y cf files.
-Por ejemplo, para ver el archivo messages.log, ejecute el mandato:
-```
-    $ cf files <yourappname> logs/messages.log
-```
-{: codeblock}
+Los registros estándares de Liberty, como `messages.log` o el directorio `ffdc`, están disponibles en IBM Bluemix en el directorio `logs` de cada instancia de aplicación. Se puede acceder a estos registros desde la consola de IBM Bluemix o mediante la CLI CF. Por ejemplo:
 
-El nivel de registro y otras opciones de rastreo se pueden establecer mediante el archivo de configuración de Liberty. Para obtener más información, consulte el tema sobre [Perfil de Liberty: rastreo y registro](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html?cp=SSAW57_8.5.5%2F3-17-0-0). El rastreo también se puede ajustar en una instancia de aplicación en ejecución mediante la consola de IBM Bluemix.
+* Para acceder a registros recientes para una app, ejecute el mandato siguiente:
+
+  ```
+  $ cf logs --recent <appname>
+  ```
+  {: codeblock}
+
+* Para ver el archivo `messages.log` de una app que se ejecuta en un nodo DEA, ejecute el mandato siguiente:
+
+  ```
+  $ cf files <appname> logs/messages.log
+  ```
+  {: codeblock}
+
+* Para ver el archivo `messages.log` de una app que se ejecuta en una célula de Diego, ejecute el mandato siguiente:
+
+  ```
+  $ cf ssh <appname> -c "cat logs/messages.log"
+  ```
+  {: codeblock}
+
+El nivel de registro y otras opciones de rastreo se pueden establecer mediante el archivo de configuración de Liberty. Para obtener más información, consulte el tema sobre [Perfil de Liberty: rastreo y registro](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html). El rastreo también se puede ajustar en una instancia de aplicación en ejecución mediante la consola de IBM Bluemix.
 
 ## Utilización de las funciones de rastreo y volcado
 {: #using_trace_and_dump}
 
-En la interfaz de usuario de IBM Bluemix, dispone de funciones de rastreo y volcado.
-* Utilice Trace para ver y actualizar el registro de Liberty
-traceSpecification en instancias de la aplicación en ejecución.
-* Utilice Dump para crear volcados de hebras y de almacenamiento dinámico en instancias de la aplicación en ejecución.
+La configuración de rastreo de Liberty se puede ajustar para una aplicación en ejecución directamente desde la consola de IBM Bluemix. La consola también proporciona la posibilidad de solicitar y descargar vuelcos de hebras y de almacenamiento dinámico. Para ajustar la configuración de rastreo o solicitar un vuelco, seleccione una aplicación Liberty en la consola de Bluemix y elija el menú `Tiempo de ejecución` en la navegación En la vista `Tiempo de ejecución`, seleccione una instancia y pulse el botón *RASTREO* o *VOLCADO*. Si el ajuste se realiza a nivel de rastreo, consulte [Perfil de Liberty: Rastreo y registro](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html) para ver la sintaxis de la especificación de rastreo.
 
-Para realizar esta acción, seleccione una aplicación de Liberty en la interfaz de usuario. En la categoría Tiempo de ejecución en la navegación, puede abrir los detalles de la instancia. Seleccione una o varias instancias. En el menú Acciones, puede elegir TRACE o DUMP.
+### Diego: activación de vuelcos mediante SSH
+
+Para una aplicación que se ejecuta en un célula de Diego, también se puede activar un vuelco de hebras y de almacenamiento dinámico mediante la CLI CF utilizando la característica SSH. Por ejemplo:
+
+```
+$ cf ssh <appname> -c "pkill -3 java"
+```
+{: codeblock}
+
+Consulte la documentación siguiente para obtener detalles sobre cómo descargar los archivos de vuelco generados.
 
 ## Descargue archivos de volcado
 {: #download_dumps}
 
-<strong>Requisito previo:</strong>
-* [Instale la CLI de CF](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html)
-* [Instale el plugin Diego-Enabler](https://github.com/cloudfoundry-incubator/Diego-Enabler) si la aplicación se ejecuta en Diego
+De forma predeterminada, los diversos archivos de vuelco se colocan en el directorio `dumps` del contenedor de la aplicación.
 
-<strong>Si la aplicación se ejecuta en DEA, siga los pasos siguientes:</strong>
-  
-1. obtenga app_guid
-```
-$ cf app <app_name> --guid
-```
+### Aplicación DEA
 
-2. descargue el archivo de volcado
-```
-$ cf curl /v2/apps/<app_guid>/instances/<instance_id>/files/dumps/<dump_file_name> --output <local_dump_file_name>
-```
+Para una aplicación que se ejecuta en un nodo DEA, utilice la función "cf files" para ver y descargar los archivos de vuelco.
 
-<strong>Si la aplicación se ejecuta en Diego, siga los pasos siguientes:</strong>
-  
-1. obtenga app_guid
-```
-$ cf app <app_name> --guid
-```
+* Para ver los vuelcos generados, ejecute el siguiente mandato:
 
-2. obtenga app_ssh_endpoint(host and port) and app_ssh_host_key_fingerprint
-```
-$ cf curl /v2/info
-```
+  ```
+  $ cf files <appname> dumps
+  ```
+  {: codeblock}
 
-3. obtenga ssh-code para mandato scp
-```
-$ cf ssh-code
-```
+* Para descargar un archivo de vuelco, ejecute los mandatos siguientes:
 
-4. archivo de volcado remoto scp en local, utilice ssh-code cuando se le solicite una contraseña
-```
-$ scp -P <app_ssh_endpoint_port> -o User=cf:<app_guid>/<instance_id> <app_ssh_endpoint_host>:/home/vcap/dumps/<dump_file_name> <local_dump_file_name>
-```
+    1. Obtenga el GUID de la aplicación
 
-Consulte [Cómo acceder a apps con SSH](https://docs.cloudfoundry.org/devguide/deploy-apps/ssh-apps.html) para obtener más información
+      ```
+      $ cf app <appname> --guid
+      ```
+      {: codeblock}
 
+    2. Descargue el archivo de vuelco
+
+      ```
+      $ cf curl /v2/apps/<app_guid>/instances/<instance_id>/files/dumps/<dump_file_name> --output <local_dump_file_name>
+      ```
+      {: codeblock}
+
+### Aplicación Diego
+
+Para una aplicación que se ejecuta en una célula de Diego, utilice la función "cf ssh" para ver y descargar los archivos de vuelco.
+
+* Para ver los vuelcos generados, ejecute el siguiente mandato:
+
+  ```
+  $ cf ssh <appname> -c "ls -l dumps"
+  ```
+  {: codeblock}
+
+* Para descargar un archivo de vuelco, ejecute el mandato siguiente:
+
+  ```
+  $ cf ssh <appname> -i <instance_id> -c "cat dumps/<dump_file_name>" > <local_dump_file_name>
+  ```
+  {: codeblock}
+
+También se puede utilizar `scp` y otras herramientas similares para ver y descargar los archivos de vuelco. Consulte el apartado sobre [Acceso a apps con SSH  ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.cloudfoundry.org/devguide/deploy-apps/ssh-apps.html) para obtener más información.
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
-{: #general}
+{: #general notoc}
 * [Tiempo de ejecución de Liberty](index.html)
 * [Visión general del perfil de Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
-

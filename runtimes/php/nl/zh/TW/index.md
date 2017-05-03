@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-04-14"
 
 ---
 
@@ -20,7 +20,7 @@ php_buildpack 為 PHP 應用程式提供完整的運行環境。
 在下列狀況下將使用 php_buildpack：
 * 應用程式包含 composer.json 檔案，或是
 * 應用程式包含 *.php 檔案，或是
-* 應用程式在其 [options.json](https://github.com/cloudfoundry/php-buildpack/blob/master/docs/config.md) 檔案中定義了 ${WEBDIR} 變數，且該變數是設為應用程式內的現有目錄。
+* 應用程式在其 [options.json](https://docs.cloudfoundry.org/buildpacks/php/gsg-php-config.html) 檔案中定義了 ${WEBDIR} 變數，且該變數是設為應用程式內的現有目錄。
 
 ## 入門範本應用程式
 {: #starter_application}
@@ -40,7 +40,7 @@ php_buildpack 為 PHP 應用程式提供完整的運行環境。
 }
 ```
 {: codeblock}
-如需相關資訊，請參閱 [Composer 套件鏈結](https://getcomposer.org/doc/04-schema.md#package-links)。
+如需相關資訊，請參閱 [Composer 套件鏈結 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://getcomposer.org/doc/04-schema.md#package-links)。
 
 如果未指定版本，依預設會選擇 5.5.34 版。
 
@@ -56,13 +56,14 @@ php_buildpack 為 PHP 應用程式提供完整的運行環境。
 * 7.0.4
 * 7.0.5
 
-如果您的應用程式需要未列出的 PHP 版本，您可以使用外部 [PHP 建置套件](https://github.com/cloudfoundry/php-buildpack.git)來部署該應用程式。
+如果您的應用程式需要未列出的 PHP 版本，可以使用外部 [PHP 建置套件](https://github.com/cloudfoundry/php-buildpack.git)來部署該應用程式。
 
 # 相關鏈結
-{: #rellinks}
+{: #rellinks notoc}
 ## 指導教學及範例
-{: #samples}
+{: #samples notoc}
 * [Build and deploy a REST API on IBM Bluemix with PHP and MySQL](http://www.ibm.com/developerworks/library/wa-deployrest-app/)
 * [Build and deploy a mobile-friendly calorie counter on IBM Bluemix with PHP, MySQL, AngularJS, and the Nutritionix API](http://www.ibm.com/developerworks/library/mo-bluemix-php-nutritionix-angularjs/)
 ## 一般
+{: #general notoc}
 * [A Cloud Foundry Buildpack for PHP](https://github.com/cloudfoundry/php-buildpack.git)

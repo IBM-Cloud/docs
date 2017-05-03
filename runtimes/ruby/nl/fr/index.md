@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-03-23"
 
 ---
 
@@ -22,9 +22,7 @@ Le pack ruby_buildpack est utilisé si votre appli comporte un fichier Gemfile d
 ## Application de démarrage
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} propose une application de démarrage Ruby.  L'application de démarrage Ruby est une appli Ruby simple qui fournit un modèle que vous pouvez utiliser pour votre appli.
-Vous pouvez expérimenter cette application et effectuer des modifications, puis les
-envoyer par commande push vers l'environnement {{site.data.keyword.Bluemix}}. Voir [Utilisation des applications de démarrage](/docs/cfapps/starter_app_usage.html) pour obtenir de l'aide.
+{{site.data.keyword.Bluemix}} propose une application de démarrage Ruby.  L'application de démarrage Ruby est une appli Ruby simple qui fournit un modèle que vous pouvez utiliser pour votre appli. Vous pouvez expérimenter cette application et effectuer des modifications puis les envoyer par commande push vers l'environnement {{site.data.keyword.Bluemix}}.  Voir [Utilisation des applications de démarrage](/docs/cfapps/starter_app_usage.html) pour obtenir de l'aide.
 
 ## Versions d'environnement d'exécution
 {: #runtime_versions}
@@ -58,8 +56,8 @@ Si votre application requiert une version de Ruby qui n'est pas répertoriée, v
 utiliser le [pack de construction Ruby](https://github.com/cloudfoundry/ruby-buildpack) externe pour la déployer.
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
-{: #general}
+{: #general notoc}
 * [Cloud Foundry buildpack for Ruby](https://github.com/cloudfoundry/cf-buildpack-ruby)
-* Documentation [Ruby on Rails](http://api.rubyonrails.org/)
+* [Documentation de Ruby on Rails ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://api.rubyonrails.org/)

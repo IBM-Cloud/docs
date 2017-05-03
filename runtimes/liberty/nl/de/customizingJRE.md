@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-08-15"
+  years: 2015, 2017
+lastupdated: "2017-03-23"
 
 ---
 
@@ -84,7 +84,8 @@ JVM-Speicherauszugsoptionen und Beenden der Prozesse bei erschöpfter Speicherka
   * Weiterleitung von Informationen zu den verfügbaren Speicherressourcen der Anwendung im Fehlerfall an Loggregator.
   * Wenn eine Anwendung für die Aktivierung von JVM-Hauptspeicherauszügen konfiguriert ist, wird das Beenden von Java-Prozessen inaktiviert und die JVM-Hauptspeicherauszüge werden an das gemeinsame Anwendungsverzeichnis 'dumps' weitergeleitet. Diese Speicherauszüge können dann über das Bluemix-Dashboard oder die CF-CLI angezeigt werden.
 
-Im Folgenden finden Sie ein Beispiel für eine JVM-Standardkonfiguration, die vom Buildpack für eine Anwendung generiert wird, die mit einer Speicherbegrenzung von 512 MB bereitgestellt wird:   
+Es folgt eine Beispielkonfiguration einer Standard-JVM, die vom Buildpack für eine Anwendung generiert wurde, die mit einer Speicherbegrenzung von 512M bereitgestellt wurde:
+
 ```
     -Xtune:virtualized
     -Xmx384M
@@ -124,7 +125,7 @@ aus der JRE-Dokumentation, da die Optionen je nach JRE variieren.
 <td> OpenJDK </td>
 <td>Basiert auf der HotSpot-Laufzeit; Schreibweise: -X für Nicht-Standardoptionen, -XX für Entwickleroptionen
 und boolesche Flags zum Aktivieren oder Inaktivieren von Optionen. </td>
-<td>[HotSpot Runtime Overview](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
+<td>[HotSpot Runtime Overview ![Symbol 'Externer Link'](../../icons/launch-glyph.svg "Symbol 'Externer Link'")](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
 </tr>
 </table>
 
@@ -187,69 +188,76 @@ Hinweis: Einige Optionen werden nur wirksam, wenn die Option durch einen Agenten
 ### Angewendete JVM-Optionen einer aktiven Anwendung bestimmen
 {: #determining_applied_jvm_options}
 
-Mit Ausnahme der anwendungsdefinierten Optionen, die mit der Umgebungsvariablen JVM_ARGS angegeben sind, werden die resultierenden Optionen entweder als Befehlszeilenoptionen (eigenständige Java-Anwendungen) oder in einer jvm.options-Datei (keine eigenständigen Java-Anwendungen) in der Laufzeitumgebung gespeichert. Die angewendeten JVM-Optionen für die Anwendung können entweder über das Bluemix-Dashboard oder die CF-CLI angezeigt werden.
+Mit Ausnahme von anwendungsdefinierten Optionen, die mit der Umgebungsvariable JVM_ARGS angegeben sind, bleiben die Ergebnisoptionen in der Laufzeitumgebung entweder als Befehlszeilenoption (eigenständige Java-Anwendungen) oder in der Datei `jvm.options` (keine eigenständige Java-Anwendungen) erhalten. Die angewendeten JVM-Optionen für die Anwendung können entweder über die Konsole von IBM Bluemix oder die CF-CLI angezeigt werden.
 
-Die JVM-Optionen für eigenständige Java-Anwendungen werden als Befehlszeilenoptionen gespeichert. Sie können über die Datei 'staging_info.yml' angezeigt werden.
+Die JVM-Optionen für eigenständige Java-Anwendungen werden als Befehlszeilenoptionen gespeichert. Sie können über die Datei `staging_info.yml` angezeigt werden. 
+
+Um die Datei `staging_info.yml` in einer Anwendung anzusehen, die im DEA-Modus ausgeführt wird, geben Sie folgenden Befehl ein: 
+
 ```
     $ cf files myapp staging_info.yml
 ```
 {: codeblock}
 
-Die JVM-Optionen für WAR-, EAR- und Serververzeichnisbereitstellungen sowie Bereitstellungen für paketierte Server sind in einer jvm.options-Datei gespeichert.
+Um die Datei `staging_info.yml` in einer Anwendung anzusehen, die in einer Diego-Zelle ausgeführt wird, geben Sie den folgenden Befehl ein: 
 
-Führen Sie den folgenden Befehl aus, um die Datei 'jvm.options' für WAR- und EAR-Dateien sowie Serververzeichnisse anzuzeigen:
+```
+    $ cf ssh myapp -c "cat staging_info.yml"
+```
+{: codeblock}
+
+Die JVM-Optionen für WAR-, EAR- und Serververzeichnisbereitstellungen sowie Bereitstellungen für paketierte Server sind in der Datei `jvm.options` gespeichert. Die Datei `jvm.options` befindet sich im Verzeichnis `app/wlp/usr/servers/<serverName>/`. In den meisten Fällen wird für ```<serverName>``` die Einstellung `defaultServer` festgelegt. Es sei denn, ein paketierter Server wurde mit einem anderen Servernamen implementiert. Beispiel:
+
+Um die Datei `jvm.options` in einer Anwendung anzusehen, die im DEA-Modus ausgeführt wird, geben Sie folgenden Befehl ein: 
+
 ```
     $ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
 ```
 {: codeblock}
 
-Zeigen Sie die Datei 'jvm.options' für einen paketierten Server an, indem Sie <serverName> durch den Namen Ihres Servers ersetzen und den folgenden Befehl ausführen:
+Um die Datei `jvm.options` in einer Anwendung anzusehen, die in einer Diego-Zelle ausgeführt wird, geben Sie den folgenden Befehl ein: 
+
 ```
-    $ cf files myapp app/wlp/usr/servers/<serverName>jvm.options
+    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/jvm.options"
 ```
 {: codeblock}
+
 
 #### Beispielsyntax
 {: #example_usage}
 
-Implementieren einer Anwendung mit angepassten JVM-Optionen, um die ausführliche JVM-Garbage-Collection-Protokollierung der IBM JRE zu aktivieren:
-* In der Datei 'manifest.yml' einer Anwendung enthaltene JVM-Optionen:
+Anwendung mit angepassten JVM-Optionen bereitstellen, um ausführliche IBM JVM-Garbage-Collection-Protokollierung zu aktivieren: 
+* Die in der Datei `manifest.yml` einer Anwendung enthaltenen JVM-Optionen: 
 
-  <pre>
+```
     env:
       JAVA_OPTS: "-verbose:gc -Xverbosegclog:./verbosegc.log,10,1000"
-  </pre>
-  {: codeblock}
+```
+{: codeblock}
 
-* Gehen Sie wie folgt vor, um die generierte ausführliche JVM-Garbage-Collection-Protokollierung anzuzeigen:
+* Um die ausführliche JVM-Garbage-Collection-Protokolldatei in einer Anwendung anzusehen, die im DEA-Modus ausgeführt wird, geben Sie folgenden Befehl ein: 
 
-  <pre>
+```
     $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
-  </pre>
-  {: codeblock}    
+```
+{: codeblock}
 
-* Wenn Sie die IBM JRE-JVM-Option einer bereitgestellten Anwendung aktualisieren möchten, um 'heap', 'snap' und 'javacore' für eine OutOfMemory-Bedingung auszulösen, definieren Sie die Umgebungsvariable der Anwendung mit der JVM-Option und führen Sie einen Neustart der Anwendung durch:
+* Um die ausführliche JVM-Garbage-Collection-Protokolldatei in einer Anwendung anzusehen, die in einer Diego-Zelle ausgeführt wird, geben Sie folgenden Befehl ein: 
 
-  <pre>
+```
+    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/verbosegc.log.001"
+```
+{: codeblock}
+
+* Wenn Sie die IBM JRE-Option einer bereitgestellten Anwendung aktualisieren möchten, um 'heap', 'snap' und 'javacore' für eine OutOfMemory-Bedingung auszulösen, definieren Sie die Umgebungsvariable der Anwendung mit der JVM-Option und führen Sie einen Neustart der Anwendung durch:
+
+```
     $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
     $ cf restart myapp
-  </pre>
-  {: codeblock}
+```
+{: codeblock}
 
-* Gehen Sie wie folgt vor, um die generierten JVM-Speicherauszüge anzuzeigen, wenn die OutOfMemory-Bedingung
-ausgelöst wird:
-
-  <pre>
-    $ cf files myapp dumps
-
-    Getting files for app myapp in org myemail@email.com / space dev as myemail@email.com...
-    OK
-
-    Snap.20141106.100252.81.0003.trc           307.3K
-    heapdump.20141106.100252.81.0001.phd       3.9M
-    javacore.20141106.100252.81.0002.txt     870.5K
-  </pre>
-  {: codeblock}
+ Details zum Anzeigen und Herunterladen der generierten Speicherauszugsdateien finden Sie in der Dokumentation über [Protokollierung und Tracing](loggingAndTracing.html#download_dumps). 
 
 ### JRE überschreiben
 {: #overlaying_jre}
@@ -293,6 +301,7 @@ einem Ressourcenordner im Stammverzeichnis des Archivs gepackt werden. Für eine
 Das Verzeichnis '.java-overlay' enthält in derselben Dateihierarchie wie die zu überschreibende JRE bestimmte Dateien, die mit '.java/jre' beginnen.
 
 Wenn Sie beispielsweise die 256-Bit-AES-Verschlüsselung verwenden möchten, müssen die folgenden Java-Richtliniendateien überschrieben werden:
+
 ```
     .java\jre\lib\security\US_export_policy.jar
     .java\jre\lib\security\local_policy.jar
@@ -301,6 +310,7 @@ Wenn Sie beispielsweise die 256-Bit-AES-Verschlüsselung verwenden möchten, mü
 
 Laden Sie die entsprechenden uneingeschränkten Richtliniendateien
 herunter und fügen Sie sie Ihrer Anwendung wie folgt hinzu:
+
 ```
     resources\.java-overlay\.java\jre\lib\security\US_export_policy.jar
     resources\.java-overlay\.java\jre\lib\security\local_policy.jar
@@ -310,8 +320,8 @@ herunter und fügen Sie sie Ihrer Anwendung wie folgt hinzu:
 Bei Durchführung einer Push-Operation für Ihre Anwendung überschreiben diese JAR-Dateien die JAR-Standardrichtliniendateien in der Java-Laufzeit. Dieser Prozess aktiviert die 256-Bit-AES-Verschlüsselung.
 
 # Zugehörige Links
-{: #rellinks}
+{: #rellinks notoc}
 ## Allgemein
-{: #general}
+{: #general notoc}
 * [Liberty-Laufzeit](index.html)
 * [Übersicht über das Liberty-Profil](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

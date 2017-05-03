@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-06-10"
+  years: 2015, 2017
+lastupdated: "2017-04-18"
 
 ---
 
@@ -51,9 +51,27 @@ pode receber uma mensagem indicando que a implementação do aplicativo falhou.
 * Se o Limite de memória for excedido enquanto o aplicativo estiver em serviço, o processo será interrompido. O
 Cloud Foundry tentará reiniciar o aplicativo. É possível que o aplicativo seja reiniciado, mas ficará indisponível por algum tempo.
 
-# rellinks
-{: #rellinks}
-## geral
-{: #general}
-* [Tempo de execução do Liberty](index.html)
-* [Visão geral do perfil do Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+## Especificando memória heap
+{: #specifying_heap_memory}
+
+É possível customizar a quantia máxima de memória heap de alocação de seu aplicativo de várias maneiras.
+
+*  Use a variável de ambiente JVM_ARGS e o argumento -Xmx. Por exemplo, para configurar o tamanho máximo de heap como 512 M,
+use o comando a seguir e, em seguida, remonte seu app.
+
+```
+    $ cf set-env myapp JVM_ARGS -Xmx512m
+```
+{: codeblock}
+
+* Se o seu aplicativo for um [diretório do servidor](optionsForPushing.html#server_directory) ou um [servidor em pacote](optionsForPushing.html#packaged_server),
+será possível especificar o argumento -Xmx no arquivo jvm.options.
+
+* É possível especificar a razão de tamanho de heap usando a variável de ambiente JBP_CONFIG_IBMJDK. O heap_size_ratio é um
+valor de vírgula flutuante que especifica quanta memória disponível alocar para o heap. Por exemplo, para
+alocar metade da memória disponível para o heap, emita o comando que segue e remonte seu app.
+
+```
+    $ cf set-env myapp JBP_CONFIG_IBMJDK "heap_size_ratio: 0.50"
+```
+{: codeblock}

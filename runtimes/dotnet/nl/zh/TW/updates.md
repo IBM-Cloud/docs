@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-06"
+  years: 2015, 2017
+lastupdated: "2017-03-30"
 
 ---
 
@@ -14,6 +14,28 @@ lastupdated: "2016-10-06"
 
 
 aspnet 建置套件中的最新更新項目清單。
+
+## 2017 年 3 月 29 日：已更新 ASP.NET Core 建置套件 v1.0.13-20170330-1023
+
+* 新增 .NET Core 運行環境 1.0.4 支援
+* 新增 .NET Core 運行環境 1.1.1 支援
+* 新增 .NET Core SDK 1.0.1 支援
+* 將 Node 版本更新為 6.10.0
+* 移除 .NET Core SDK 1.0.0-preview2-003131 支援
+* 移除 .NET Core SDK 1.0.0-preview3-004056 支援
+
+## 2017 年 1 月 31 日：已更新 ASP.NET Core 建置套件 v1.0.10-20170124-1145
+
+* 新增 .NET Core 1.0.3 支援
+* 新增 .NET Core MSBuild 工具支援
+* 新增 F# 專案支援
+* 移除 .NET Core SDK 1.0.0-preview2-003121 支援
+
+## 2016 年 12 月 9 日：已更新 ASP.NET Core 建置套件 v1.0.6-20161205-0912
+
+* 新增 .NET Core 1.1.0 支援
+* 移除 .NET Core 1.0.0 RC2 支援
+* 新增可清除 NuGet 套件快取的選項
 
 ## 2016 年 10 月 10 日：已更新 ASP.NET Core 建置套件 v1.0.1-20161005-1225
 
@@ -59,7 +81,7 @@ dnx src/dotnetstarter kestrel --server.urls http://${VCAP_APP_HOST}:${PORT}
 * 這個建置套件已經不再使用 Nowin Web 伺服器，改為使用 [Kestrel]{https://github.com/aspnet/KestrelHttpServer} Web 伺服器。
 
 # 相關鏈結
-{: #rellinks}
+{: #rellinks notoc}
 ## 一般
-{: #general}
+{: #general notoc}
 * [Dotnet 核心運行環境](index.html)

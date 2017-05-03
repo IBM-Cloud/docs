@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-04-06"
 ---
 
 {:shortdesc: .shortdesc}
@@ -10,7 +10,7 @@ lastupdated: "2016-11-14"
 {:codeblock: .codeblock}
 
 
-# ASP.NET Core 
+# ASP.NET Core
 {: #dotnet_core}
 
 Die Laufzeit von ASP.NET Core in {{site.data.keyword.Bluemix}} basiert auf dem Buildpack 'ASP.NET Core'. ASP.NET Core
@@ -18,14 +18,6 @@ ist ein modulares Open-Source-Framework zum Erstellen von .NET-Webanwendungen.
 .Net Core ist eine kleine, plattformübergreifende Laufzeit, die von ASP.NET Core-Anwendungen als Ziel verwendet werden kann. 
 Gemeinsam ermöglichen sie moderne, cloudbasierte Webanwendungen.
 {: shortdesc}
-
-# Unterstützte Versionen
-{: #supported_versions}
-Dieses Buildpack unterstützt die folgenden Versionen. Versionen, die als veraltet markiert sind, werden in einem künftigen Release des Buildpacks entfernt. 
-
-1. .NET Core 1.0.0-rc2-final (Betaversion) (veraltet)
-2. .NET Core 1.0.0
-3. .NET Core 1.0.1
 
 ## Erkennung
 {: #detection}
@@ -39,22 +31,52 @@ Das Bluemix-Buildpack 'ASP.NET Core' wird verwendet, wenn mindestens ein Ordner 
 ## Laufzeitversionen
 {: #runtime_versions}
 
-### .NET-CLI-Version angeben
+### Unterstützte Versionen
+{: #supported_versions}
+Dieses Buildpack unterstützt die folgenden Versionen. Versionen, die als veraltet markiert sind, werden in einem künftigen Release des Buildpacks entfernt. Siehe [Microsoft Support Statement für LTS- und Current-Releases](https://www.microsoft.com/net/core/support).
 
-Steuern Sie die .NET-CLI-Version mit einer optionalen Datei 'global.json' im Stammverzeichnis der Anwendung. Beispiel:
+#### project.json-Tools (nicht mehr verwendet)
+
+| .NET SDK-Version        | Standard  |
+|-------------------------|-----------|
+| 1.0.0-preview2-003156   |   Nein    |
+| 1.0.0-preview2-1-003177 |   Nein    |
+
+#### MSBuild SDK-Tools
+
+| .NET SDK-Version        | Standard  |
+|-------------------------|-----------|
+| 1.0.0-preview4-004233   |   Nein    |
+| 1.0.1                   |   Ja      |
+
+#### .NET Core-Laufzeitversionen
+
+| .NET Core-Laufzeitversion | Releasetyp   | Standard  |
+|---------------------------|--------------|-----------|
+| 1.0.0                     | LTS          |   Nein    |
+| 1.0.1                     | LTS          |   Nein    |
+| 1.0.3                     | LTS          |   Nein    |
+| 1.0.4                     | LTS          |   Ja      |
+| 1.1.0                     | Current      |   Nein    |
+| 1.1.1                     | Current      |   Nein    |
+
+### .NET SDK-Version angeben
+
+Steuern Sie die .NET SDK-Version mit der optionalen Datei 'global.json' im Stammverzeichnis der Anwendung. Beispiel:
 ```
    {
       "projects": [ "src" ],
       "sdk": {
-        "version": "1.0.0-preview2-003121"
+        "version": "1.0.1"
       }
    }
 ```
 {: codeblock}
 
-Eine Liste unterstützter CLI-Versionen finden Sie unter [Neueste Aktualisierungen für das Buildpack 'ASP.NET Core'](/docs/runtimes/dotnet/updates.html). Wenn keine Angabe erfolgt, wird die aktuellste stabile Vor-Releaseversion verwendet.
+Falls nicht anders angegeben, wird das MSBuild-Tool für die letzte LTS-Laufzeit (LTS, Long-term-support) verwendet. Um das Tool 'project.json' zu verwenden, können Sie eine der oben aufgelisteten Versionen von 'project.json' angeben. Sie sollten dabei jedoch beachten, dass diese Versionen in Zukunft entfernt werden. 
 
-### NuGet-Paketquellen anpassen
+## NuGet-Paketquellen anpassen
+{: #customizing_nuget_package_sources}
 
 Steuern Sie, von wo die Abhängigkeiten Ihrer Anwendung heruntergeladen werden, in der Datei NuGet.Config im Stammverzeichnis der Anwendung. Beispiel:
 ```
@@ -91,12 +113,19 @@ Geben Sie zum Veröffentlichen einer Anwendung einen Befehl wie den folgenden ei
   dotnet publish -r ubuntu.14.04-x64 
 ```
 {: codeblock}
-  
-Die App kann dann mit einer Push-Operation aus dem Verzeichnis
+
+Bei eigenständigen Anwendungen kann die App mit einer Push-Operation aus dem Verzeichnis 
 ```
   bin/<Debug|Release>/<framework>/<runtime>/publish
 ```
 {: codeblock}
+übertragen werden.
+
+Bei portierbaren Anwendungen kann die App mit einer Push-Operation aus dem Verzeichnis 
+```
+  bin/<Debug|Release>/<framework>/publish
+```
+{:codeblock}
 übertragen werden.
 
 Beachten Sie auch, dass Sie, wenn Sie in Ihrer Anwendung eine Datei manifest.yml verwenden, den Pfad des Ausgabeordners 'publish' in Ihrer Datei manifest.yml angeben können.  In diesem Fall müssen Sie sich nicht in diesem Ordner befinden, wenn Sie die Anwendung mit einer Push-Operation übertragen.
@@ -109,17 +138,16 @@ Wenn Sie eine App bereitstellen, die mehrere Projekte enthält, müssen Sie ange
 Wenn beispielsweise eine Lösung die drei Projekte *MyApp.DAL*, *MyApp.Services* und *MyApp.Web* im Ordner *src* enthält und *MyApp.Web* das Hauptprojekt ist, würde das Format der .deployment-Datei wie folgt aussehen:
 ```
   [config]
-  project = src/MyApp.Web
+  project = src/MyApp.Web/MyApp.Web.csproj
 ```
 {: codeblock}
 
-In diesem Beispiel würde das Buildpack automatisch die Projekte *MyApp.DAL* und *MyApp.Services* kompilieren, wenn sie in der Datei 'project.json' für *MyApp.Web* als Abhängigkeiten aufgelistet sind, aber das Buildpack würde nur versuchen, das Hauptprojekt, *MyApp.Web*, mit dotnet run -p src/MyApp.Web auszuführen. Der Pfad für *MyApp.Web* könnte, falls es sich bei diesem Projekt um ein xproj-Projekt handelt, auch wie folgt angegeben werden: 
-```
-  project = src/MyApp.Web/MyApp.Web.xproj 
-```
-{: codeblock}
+In diesem Beispiel würde das Buildpack automatisch die Projekte *MyApp.DAL* und *MyApp.Services* kompilieren, wenn sie in der Datei 'project.json' für *MyApp.Web* als Abhängigkeiten aufgelistet sind, aber das Buildpack würde nur versuchen, das Hauptprojekt, *MyApp.Web*, mit dotnet run -p src/MyApp.Web auszuführen. 
 
-## Ihre Anwendung für die Überwachung des richtigen Ports konfigurieren
+## Anwendungskonfiguration
+{: #application_configuration}
+
+### Ihre Anwendung für die Überwachung des richtigen Ports konfigurieren
 {: #configuring_listen_proper_port}
 
 Das Buildpack führt Ihre Anwendung mit dem Befehl *dotnet run* aus und übergibt das folgende Befehlszeilenargument:
@@ -152,11 +180,28 @@ und die von Visual Studio bereitgestellten Vorlagen vor der Bereitstellung für 
 </pre>
 {: codeblock}
 
-Fügen Sie die folgende Abhängigkeit der Datei 'project.json' hinzu: 
+Fügen Sie die folgende Zeile für das Tool 'project.json' in Ihrer Datei 'project.json' hinzu: 
 ```
-  "Microsoft.Extensions.Configuration.CommandLine": "1.0.0",
+  "Microsoft.Extensions.Configuration.CommandLine": "1.0.1",
 ```
 {: codeblock}
+
+Fügen Sie die folgende Zeile für das Tool 'MSBuild' in Ihrer '.csproj'-Datei hinzu: 
+```
+  <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="1.0.1" />
+```
+{:codeblock}
+
+Fügen Sie der Datei, die Ihre Methode 'Main' enthält, eine Anweisung *using* hinzu:
+```
+  using Microsoft.Extensions.Configuration;
+```
+{: codeblock}
+
+### Stellen Sie sicher, dass Ihre Anwendung im Buildausgabeordner über alle erforderlichen Dateien verfügt. 
+{: #configure_output_files}
+
+#### Tool project.json verwenden
 
 Fügen Sie die folgende Eigenschaft zum Abschnitt `buildOptions` in der Datei 'project.json' hinzu:
 ```
@@ -168,12 +213,6 @@ Fügen Sie die folgende Eigenschaft zum Abschnitt `buildOptions` in der Datei 'p
       "appsettings.json"
     ]
   }
-```
-{: codeblock}
-
-Fügen Sie der Datei, die Ihre Methode 'Main' enthält, eine Anweisung *using* hinzu: 
-```
-  using Microsoft.Extensions.Configuration;
 ```
 {: codeblock}
 
@@ -189,7 +228,85 @@ Entfernen Sie folgende Zeile in der `Main`-Methode Program.cs:
 ```
 {: codeblock}
 
-Diese Änderungen sollte der .NET-CLI ermöglichen, die `Sichten` Ihrer Anwendung zu finden, da diese jetzt in die Buildausgabe kopiert werden, wenn der Befehl `dotnet run` ausgeführt wird.  Wenn Ihre Anwendung über andere Dateien wie beispielsweise json-Konfigurationsdateien verfügt, die zur Laufzeit erforderlich sind, dann sollten Sie auch diese zum Abschnitt `include` von `copyToOutput` in der Datei 'project.json' hinzufügen.
+Diese Änderungen sollte der .NET-CLI ermöglichen, die `Sichten` Ihrer Anwendung zu finden, da diese jetzt in die Buildausgabe kopiert werden, wenn der Befehl `dotnet run` ausgeführt wird.  Wenn Ihre Anwendung über andere Dateien wie beispielsweise json-Konfigurationsdateien verfügt, die zur Laufzeit erforderlich sind, dann sollten Sie auch diese zum Abschnitt `include` von `copyToOutput` in der Datei 'project.json' für Ihr Projekt hinzufügen.
+
+#### Tool MSBuild verwenden
+
+Fügen Sie ein Element `<Content>` zum Element `<ItemGroup>` Ihrer .csproj-Datei hinzu: 
+```
+  <ItemGroup>
+    <Content Include="wwwroot/**/*;Areas/**/Views/*;Views/*;appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+```
+{: codeblock}
+
+Entfernen Sie folgende Zeile in der `Startup`-Methode Startup.cs:
+```
+  .SetBasePath(env.ContentRootPath)
+```
+{: codeblock}
+
+Entfernen Sie folgende Zeile in der `Main`-Methode Program.cs:
+```
+  .UseContentRoot(Directory.GetCurrentDirectory())
+```
+{: codeblock}
+
+Diese Änderungen sollte der .NET-CLI ermöglichen, die `Sichten` Ihrer Anwendung zu finden, da diese jetzt in die Buildausgabe kopiert werden, wenn der Befehl `dotnet publish` ausgeführt wird. Wenn Ihre Anwendung über andere Dateien wie beispielsweise json-Konfigurationsdateien verfügt, die zur Laufzeit erforderlich sind, dann sollten Sie auch diese durch Semikolons getrennt zur Eigenschaft `Include` des Elements `Content` in der .csproj-Datei Ihres Projekts hinzufügen.
+
+## Anwendung in der Releasekonfiguration kompilieren (nur MSBuild)
+{: #compiling_in_release_configuration}
+
+Auf MSBuild basierende Projekte werden jetzt während des Stagings mithilfe des Befehls `dotnet publish` veröffentlicht. Standardmäßig veröffentlicht das Buildpack Ihre Anwendung in der `Debug`-Konfiguration.
+Um Ihre Anwendung in der `Release`-Konfiguration zu veröffentlichen, legen Sie für die Umgebungsvariable `PUBLISH_RELEASE_CONFIG` den Wert `true` fest.
+
+Sie können dies über die CloudFoundry-CLI mit folgendem Befehl tun: 
+
+```shell
+  cf set-env <app_name> PUBLISH_RELEASE_CONFIG true
+```
+
+Alternativ können Sie die Variable in der Datei 'manifest.yml' Ihrer Anwendung festlegen: 
+
+```yml
+---
+applications:
+- name: sample-aspnetcore-app
+  memory: 512M
+  env:
+    PUBLISH_RELEASE_CONFIG: true
+```
+
+## NuGet-Paketcache inaktivieren
+{: #disabling_the_nuget_package_cache}
+
+In einigen Situationen ist es möglicherweise erforderlich, den NuGet-Paketcache für Ihre Anwendung zu bereinigen. Bei diesem Vorgang werden alle vorhandenen NuGet-Pakete, die im Cache gespeichert sind, bereinigt und es wird verhindert, dass das Buildpack neue Pakete im Cache speichert. 
+
+Sie können dies durch die Angabe des Wertes `false` für die Umgebungsvariable `CACHE_NUGET_PACKAGES` erreichen. Dazu verwenden Sie die CloudFoundry-CLI:
+
+```shell
+  cf set-env <app_name> CACHE_NUGET_PACKAGES false
+```
+
+Alternativ können Sie für die Umgebungsvariable `CACHE_NUGET_PACKAGES` in der Datei 'manifest.yml' Ihrer Anwendung den Wert `false` festlegen: 
+
+```yml
+---
+applications:
+- name: sample-aspnetcore-app
+  memory: 512M
+  env:
+    CACHE_NUGET_PACKAGES: false
+```
+
+## Angepasste native Bibliotheken verwenden
+{: #using_custom_native_libraries}
+
+Einige Bibliotheken erfordern möglicherweise die Verwendung eines NuGet-Pakets und einiger nativer Bibliotheksdateien (.so-Dateien). Um diese Bibliotheken mit dem Buildpack zu verwenden, sollten Sie diese in einen Ordner mit dem Namen "ld_library_path" in den Stammordner Ihrer Anwendung stellen.
+Das Buildpack fügt diesen Pfad automatisch während des Stagings zur Umgebungsvariablen `LD_LIBRARY_PATH` hinzu. Alternativ können Sie die Umgebungsvariable `LD_LIBRARY_PATH` in der Datei `manifest.yml` Ihrer Anwendung angeben oder den Befehl `cf set-env` verwenden, um einen anderen Ordnernamen als "ld_library_path" anzugeben. In diesem Fall hängt das Buildpack diesen angepassten Pfad an den vom Buildpack generierten `LD_LIBRARY_PATH` an. 
 
 ## Fehlerbehebung - Häufig gestellte Fragen (FAQ)
 {: #troubleshooting_faq}
@@ -198,10 +315,13 @@ Diese Änderungen sollte der .NET-CLI ermöglichen, die `Sichten` Ihrer Anwendun
 
 **A**: Falls Sie eine ähnliche Nachricht erhalten, wenn Sie eine Push-Operation für Ihre Anwendung durchführen, wird dies vermutlich dadurch verursacht, dass Ihre Anwendung entweder den Grenzwert für den Speicher oder für das Datenträgerkontingent überschreitet. Dieses Problem kann durch Erhöhung der Größenbeschränkung für Ihre Anwendung behoben werden. 
 
+**F**: Meine Anwendung schlägt bei der Bereitstellung mit folgender Nachricht fehl: `Failed to compress droplet: signal: broken pipe` oder `No space left on device`. Wie kann ich den Fehler beheben? 
+
+**A**: Projekte, die mit einer Push-Operation von einem Quellcode mit einer großen Anzahl an NuGet-Paketabhängigkeiten übertragen wurden, können diesen Fehler verursachen, wenn der NuGet-Paketcache aktiviert ist. Legen Sie für die Umgebungsvariable `CACHE_NUGET_PACKAGES` den Wert `false` fest, um das Zwischenspeichern im Cache zu inaktivieren. 
+
 # Zugehörige Links
-{: #rellinks}
+{: #rellinks notoc}
 ## Allgemein
-{: #general}
-* [Neueste Aktualisierungen für das Buildpack 'ASP.NET Core'](updates.html)
+{: #general notoc}
 * [NuGet](https://docs.nuget.org/Consume/Overview){: new_window}
 * [Übersicht über ASP.NET Core](http://docs.asp.net/en/latest/conceptual-overview/aspnet.html){: new_window}

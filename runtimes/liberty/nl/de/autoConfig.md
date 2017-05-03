@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-03-22"
 
 ---
 
@@ -26,13 +26,11 @@ Ein containerverwalteter Service ist ein Service, der von der Liberty-Laufzeit v
 Dieser Prozess wird als automatische Konfiguration bezeichnet.
 Das Liberty-Buildpack bietet automatische Konfiguration für die folgenden Servicetypen:
 
-* [SQL Database](/docs/services/SQLDB/index.html#SQLDB)
-* ClearDB MySQL Database
+* [ClearDB MySQL Database ![Symbol 'Externer Link'](../../icons/launch-glyph.svg "Symbol 'Externer Link'")](http://www.cleardb.com/developers)
 * [MySQL](/docs/services/MySQL/index.html#MySQL)
-* ElephantSQL
+* [ElephantSQL](docs/services/ElephantSQL/index.html)
 * [PostgreSQL](/docs/services/PostgreSQL/index.html#PostgreSQL)
 * [Cloudant NoSQL Database](/docs/services/Cloudant/index.html#Cloudant)
-* MongoLab
 * [dashDB](/docs/services/dashDB/index.html#dashDB)
 * [Data Cache](/docs/services/DataCache/index.html#data_cache)
 * [Session Cache](/docs/services/SessionCache/index.html#session_cache)
@@ -42,6 +40,8 @@ Das Liberty-Buildpack bietet automatische Konfiguration für die folgenden Servi
 * [Single Sign On](/docs/services/SingleSignOn/index.html#sso_gettingstarted)
 * [New Relic](newRelic.html)
 * [Dynatrace](dynatrace.html)
+* [Compose for PostgreSQL](/docs/services/ComposeForPostgreSQL/index.html)
+* [Compose for MongoDB](/docs/services/ComposeForMongoDB/index.html) (Aktuell nur über die monatliche Liberty-Laufzeit verfügbar).
 
 Wie bereits erwähnt können manche Services anwendungsverwaltet oder containerverwaltet sein. Mongo und SQLDB sind Beispiele für solche Services. Das Liberty-Buildpack geht standardmäßig davon aus, dass diese Services containerverwaltet sind und konfiguriert sie automatisch. Wenn die Anwendung den Service verwalten soll, können Sie die automatische Konfiguration für den Service ausschließen (Opt-out), indem Sie die Umgebungsvariable 'services_autoconfig_excludes' definieren. Weitere Informationen finden Sie in [Automatische Konfiguration von Services ausschließen](autoConfig.html#opting_out).
 
@@ -55,7 +55,7 @@ Weitere Einzelheiten finden Sie in der Dokumentation zum gebundenen Servicetyp.
 ## Konfigurationszeilengruppen der Datei 'server.xml' generieren oder aktualisieren
 {: #generating_or_updating_serverxml}
 
-Wenn Sie eine eigenständige Anwendung mit einer Push-Operation übertragen, generiert das Liberty-Buildpack die Zeilengruppe der Datei 'server.xml' für Bluemix, wie in [Optionen zur Durchführung von Push-Operationen für Liberty-Anwendungen](optionsForPushing.html#options_for_pushing) beschrieben. Wenn Sie eine eigenständige Anwendung mit einer Push-Operation übertragen und an containerverwaltete Services binden, generiert das Liberty-Buildpack die erforderlichen Zeilengruppen der Datei 'server.xml' für die gebundenen Services.
+Wenn Sie eine eigenständige Anwendung mit einer Push-Operation übertragen, generiert das Liberty-Buildpack die Stanza 'server.xml' für Bluemix wie in [Options for Pushing Liberty Applications](optionsForPushing.html#options_for_pushing) beschrieben. Wenn Sie eine eigenständige Anwendung mit einer Push-Operation übertragen und an containerverwaltete Services binden, generiert das Liberty-Buildpack die erforderlichen Zeilengruppen der Datei 'server.xml' für die gebundenen Services.
 
 Bei Angabe einer Datei 'server.xml' und der Bindung an containerverwaltete Services führt das Liberty-Buildpack die folgenden Aktionen aus:
 
@@ -94,7 +94,7 @@ Formal sieht die Syntax der Zeichenfolge wie folgt aus.
 {: codeblock}
 
 **Wichtig**: Der angegebene Servicetyp muss mit der in der Umgebungsvariablen VCAP_SERVICES enthaltenen Servicebezeichnung übereinstimmen. Leerzeichen sind nicht zulässig.
-**Wichtig**: Innerhalb von <Spezifikation_des_Servicetyps> ist kein Leerzeichen zulässig. Leerzeichen dürfen nur verwendet werden, um mehrere Vorkommen von <Spezifikation_des_Servicetyps> voneinander zu trennen.
+**Wichtig**: Innerhalb von ```<Spezifikation_des_Servicetyps>``` ist kein Leerzeichen zulässig. Leerzeichen dürfen nur verwendet werden, um mehrere Vorkommen von ```<Spezifikation_des_Servicetyps>``` voneinander zu trennen.
 
 Über die Option "all" können alle automatischen Konfigurationsaktionen für einen Service ausgeschlossen werden (siehe Mongo-Szenario oben). Über die Option "config" können Sie angeben, dass nur die Konfigurationsaktualisierungsaktionen ausgeschlossen werden sollen (siehe SQLDB-Szenario oben).
 
@@ -153,8 +153,8 @@ Die folgende Tabelle zeigt die Syntax für das Überschreiben einiger Servicekon
 
 
 # Zugehörige Links
-{: #rellinks}
+{: #rellinks notoc}
 ## Allgemein
-{: #general}
+{: #general notoc}
 * [Liberty-Laufzeit](index.html)
 * [Übersicht über das Liberty-Profil](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

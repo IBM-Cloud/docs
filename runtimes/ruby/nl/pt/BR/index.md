@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-03-23"
 
 ---
 
@@ -59,8 +59,8 @@ Se seu app requer uma versão do Ruby não listada, é possível usar o
 [buildpack Ruby](https://github.com/cloudfoundry/ruby-buildpack) externo para implementar o app.
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## geral
-{: #general}
+{: #general notoc}
 * [Buildpack Cloud Foundry para Ruby](https://github.com/cloudfoundry/cf-buildpack-ruby)
-* [Documentação do Ruby on Rails](http://api.rubyonrails.org/)
+* [Documentação do Ruby on Rails ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://api.rubyonrails.org/)

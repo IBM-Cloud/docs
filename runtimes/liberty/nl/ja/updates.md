@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-03-23"
 
 ---
 
@@ -14,24 +14,62 @@ lastupdated: "2016-11-14"
 
 ## Liberty ビルドパックの最新更新のリスト。
 
+### 2017 年 3 月 14 日: 更新された Liberty ビルドパック v3.8-20170308-1507
+
+* デフォルトの Liberty ランタイム・バージョンが 17.0.0.1 リリースに更新されました。
+* デフォルトの Liberty ランタイムには PI75512 WebSockets iFix も含まれます。
+* 月次 Liberty ランタイム・バージョンが [2017.2.0.0](https://developer.ibm.com/wasdev/blog/2017/02/17/beta-websphere-liberty-tools-february-2017/) リリースに更新されました。
+* IBM JRE バージョン 8 および 7.1 が SR4 FP1 に更新されました。
+* 自動構成サポートも [ibm-websphere-extreme-scale IBM Container](https://console.ng.bluemix.net/docs/images/docker_image_extreme_scale/ibm-websphere-extreme-scale_starter.html) を処理できるように拡張されました。
+* [Cloudant NoSQL データベース](https://console.ng.bluemix.net/docs/services/Cloudant/index.html)の自動構成サポートが更新され、org.ektorp の代わりに Cloudant Java Library を使用するオプションが提供されるようになりました。Cloudant Java Library の使用を有効にするには、次の環境変数を設定する必要があります。    
+```
+cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudant'
+```
+* このビルドパックでは、[Auto-Scaling サービス](/docs/services/Auto-Scaling/index.html)用の更新版のエージェントが提供され、多数のアプリケーション管理の機能が強化されました。
+* このビルドパックでは、[Monitoring and Analytics サービス](/docs/services/monana/index.html)に対する自動構成の処理も変更されました。無料プランを使用するアプリケーションにはログ機能が追加されなくなりました。この機能は logmet で置き換えられます。  
+
+
+### 2017 年 1 月 23 日: 更新された Liberty ビルドパック v3.7-20170118-2046
+* 月次 Liberty ランタイム・バージョンが [2017.1.0.0](https://developer.ibm.com/wasdev/blog/2017/01/20/beta-websphere-liberty-tools-january-2017/) リリースに更新されました。
+* IBM JRE バージョン 8 が SR3 FP22 バージョンに更新されました。
+* [自動構成](autoConfig.html)サポートも [Compose for MongoDB service](https://console.ng.bluemix.net/docs/services/ComposeForMongoDB/index.html) (現在は月次 Liberty ランタイムでのみ使用可能) を処理できるように拡張されました。
+
+### 2016 年 12 月 13 日: 更新された Liberty ビルドパック v3.6-20161209-1351
+* デフォルトの Liberty ランタイム・バージョンが [16.0.0.4](http://www-01.ibm.com/support/docview.wss?uid=swg27009661) リリースに更新されました。
+* IBM JRE バージョン 8 が SR3 FP21 バージョンに更新されました。
+* [自動構成](autoConfig.html)サポートも [Compose for PostgreSQL サービス](https://console.ng.bluemix.net/docs/services/ComposeForPostgreSQL/index.html)を処理できるように拡張されました。
+* このビルドパックでは、[Auto-Scaling サービス](/docs/services/Auto-Scaling/index.html)用の更新版のエージェントも提供されます。
+* このビルドパックは、`server.xml` ファイル内のインクルード・ロケーションの一部として環境変数をサポートするように更新されました。
+
+### 2016 年 11 月 29 日: 更新された Liberty ビルドパック v3.5-20161114-1152
+* デフォルトの Liberty ランタイム・バージョン `16.0.0.3` が、[PI62375](https://www-01.ibm.com/support/docview.wss?uid=swg24042712) iFix を含み、`microProfile-1.0` 便利フィーチャーを提供するように更新されました。
+* 月次 Liberty ランタイム・バージョンが `2016.11.0.0` リリースに更新されました。
+* このビルドパックには、更新された IBM JRE (バージョン 8 SR3 FP20 およびバージョン 7.1 SR3 FP60) も含まれています。
+* DB2 JDBC ドライバーが `4.21.29` バージョンに更新されました。
+* Monitoring and Analytics サービス統合が [Diego ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.cloudfoundry.org/concepts/diego/diego-architecture.html) を処理できるように修正されました。
+* [Dynatrace](dynatrace.html) サービス統合が更新され、Dynatrace サービス・オファリングの処理が改善されました。
+* PostgreSQL および MySQL タイプのサービス用の[自動構成](autoConfig.html)サポートが、サーバー・ディレクトリーまたはパッケージされたサーバーのデプロイ時により良く機能するように改善されました。
+* [アプリケーション管理ユーティリティー devconsole および shell](/docs/manageapps/app_mng.html#app_management) によって使用される Node.js ランタイムは最新の `0.12.17` バージョンに更新されました。
+* Liberty ランタイムの[セキュリティー修正](http://www.ibm.com/support/docview.wss?uid=swg21994945)が含まれています。
+
 ### 2016 年 11 月 1 日: Liberty ビルドパック v3.4.1-20161030-2241 の更新
 * このビルドパックには、特定のタイプのアプリケーションの開始に関する問題の修正が含まれています。具体的には、アプリケーションがサーバー・ディレクトリーまたはパッケージされたサーバーとしてデプロイされ、アプリケーション・ファイルが `dropins` ディレクトリーにある場合です。
 
 ### 2016 年 10 月 21 日: Liberty ビルドパック v3.4-20161018-2004 の更新
-* デフォルトの Liberty ランタイム・バージョン `16.0.0.3` が、[PI68805](http://www-01.ibm.com/support/docview.wss?uid=swg1PI68805) および [PI69141](http://www-01.ibm.com/support/docview.wss?uid=swg1PI69141) の iFix を含むように更新されました。 
-* 月次 Liberty ランタイム・バージョンが [2016.9.0.1](https://developer.ibm.com/wasdev/blog/2016/09/23/beta-websphere-liberty-and-tools-october-2016/) リリースに更新されました。 
+* デフォルトの Liberty ランタイム・バージョン `16.0.0.3` が、[PI68805](http://www-01.ibm.com/support/docview.wss?uid=swg1PI68805) および [PI69141](http://www-01.ibm.com/support/docview.wss?uid=swg1PI69141) の iFix を含むように更新されました。
+* 月次 Liberty ランタイム・バージョンが [2016.9.0.1](https://developer.ibm.com/wasdev/blog/2016/09/23/beta-websphere-liberty-and-tools-october-2016/) リリースに更新されました。
 * このビルドパックには、更新されたバージョンの IBM JRE 8.0: SR3 FP12 も含まれています。
 * IBM JRE 8.0 および 7.1 は、Oracle の JRE の動作に一致させるために、[`SSLContext.getContext("TLS")` の呼び出し時にすべての TLS プロトコル](https://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.security.component.80.doc/security-component/jsse2Docs/matchsslcontext_tls.html)を有効に構成するようになりました。また、IBM JRE 7.1 は、IBM の JRE 8.0 動作に一致させるために、[`SSLContext.getDefault()` の呼び出し時にすべての TLS プロトコル](https://www.ibm.com/support/knowledgecenter/SSYKE2_7.1.0/com.ibm.java.security.component.71.doc/security-component/jsse2Docs/overrideSSLprotocol.html)も有効に構成されます。
 * このビルドパックでは、[Monitoring and Analytics サービス](/docs/services/monana/index.html#monana_oview)用の更新されたデータ・コレクターが提供されます。
-* このビルドパックでは、[MySQL タイプのサービスの自動構成](autoConfig.html)の実行時に、最新の 1.5.x [MariaDB Connector/J JDBC ドライバー](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/)をダウンロードするように変更して元に戻されました。
-* このビルドパックでは、`LBP_SERVICE_CONFIG_<serviceType>` 環境変数により、サービスの自動構成の動作のカスタマイズに対するサポートが導入されました。例えば、この環境変数を使用して、MySQL サービス用にダウンロードする JDBC ドライバーのロケーションやバージョンを変更できます。詳しくは、[自動構成をサポートするサービス](autoConfig.html)の資料を参照してください。 
-* このビルドパックには、アプリケーションのヘルス・チェックおよび[アプリケーション管理 ](/docs/manageapps/app_mng.html)機能に関連した多数の [Diego](https://docs.cloudfoundry.org/concepts/diego/diego-architecture.html) の改善も含まれています。
+* このビルドパックでは、[MySQL タイプのサービスの自動構成](autoConfig.html)の実行時に、最新の 1.5.x [MariaDB Connector/J JDBC ドライバー ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/) をダウンロードするように変更されました。
+* このビルドパックでは、`LBP_SERVICE_CONFIG_<serviceType>` 環境変数により、サービスの自動構成の動作のカスタマイズに対するサポートが導入されました。例えば、この環境変数を使用して、MySQL サービス用にダウンロードする JDBC ドライバーのロケーションやバージョンを変更できます。詳しくは、[自動構成をサポートするサービス](autoConfig.html)の資料を参照してください。
+* このビルドパックには、アプリケーションのヘルス・チェックおよび[アプリケーション管理](/docs/manageapps/app_mng.html)機能に関連した多数の [Diego ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.cloudfoundry.org/concepts/diego/diego-architecture.html) の改善も含まれています。
 
 ### 2016 年 9 月 16 日: 更新された Liberty ビルドパック v3.3-20160912-1729
 * デフォルトの Liberty ランタイム・バージョンが [16.0.0.3](http://www-01.ibm.com/support/docview.wss?uid=swg27009661) リリースに更新されました。月次 Liberty ランタイム・バージョンが [2016.9.0.0](https://developer.ibm.com/wasdev/blog/2016/08/26/beta-websphere-liberty-and-tools-september-2016/) リリースに更新されました。これらの更新によって、前にベータ・フィーチャーとして使用可能だった `cloudant-1.0` Liberty フィーチャーと `passwordUtilities-1.0` Liberty フィーチャーが、実動で使用可能なフィーチャーになりました。
 * Liberty ランタイムの[セキュリティー修正](http://www-01.ibm.com/support/docview.wss?uid=swg21990527)が含まれています。
 * このビルドパックには、更新されたバージョンの IBM JRE 8.0: SR3 FP11 も含まれています。
-* このビルドパックは、最新の 1.5.x ドライバーの問題が原因で、[MySQL タイプのサービスの自動構成](autoConfig.html)を実行したときに最新の 1.4.x [MariaDB Connector/J JDBC ドライバー](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/)をダウンロードするように調整されました。
+* このビルドパックは、最新の 1.5.x ドライバーの問題が原因で、[MySQL タイプのサービスの自動構成](autoConfig.html)の実行時に最新の 1.4.x [MariaDB Connector/J JDBC ドライバー ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/) をダウンロードするように調整されました。
 
 ### 2016 年 8 月 26 日: 更新された Liberty ビルドパック v3.2-20160822-2200
 * このビルドパックには、IBM JRE: 8 SR3 FP10 および 7.1 SR3 FP50 の更新版が含まれています。
@@ -39,14 +77,14 @@ lastupdated: "2016-11-14"
 * [SQL Database](/docs/services/SQLDB/index.html#SQLDB) サービス用の[自動構成サポート](autoConfig.html)を提供するサービス・プラグインは、TLS を介したサービスへの接続時に常に JVM のトラステッド証明書を使用するように更新されました。
 
 ### 2016 年 7 月 22 日: 更新された Liberty ビルドパック v3.1-20160717-2254
-* [アプリケーション管理](/docs/manageapps/app_mng.html)機能が更新され、フェデレーテッド認証をサポートするようになりました。また、`devconsole` ユーティリティーと `shell` ユーティリティーによって使用される Node.js ランタイムが、最新バージョンの `0.12.15` に更新されました。 
-* このビルドパックは、[Dynatrace Ruxit](http://www.dynatrace.com/en/ruxit/) アプリケーション・モニター・エージェントに対するサポートを追加します。
+* [アプリケーション管理](/docs/manageapps/app_mng.html)機能が更新され、フェデレーテッド認証をサポートするようになりました。また、`devconsole` ユーティリティーと `shell` ユーティリティーによって使用される Node.js ランタイムが、最新バージョンの `0.12.15` に更新されました。
+* このビルドパックでは、[Dynatrace Ruxit ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.dynatrace.com/en/ruxit/) アプリケーション・モニター・エージェントのサポートが追加されました。
 * このビルドパックでは、[Monitoring and Analytics サービス](/docs/services/monana/index.html#monana_oview)用の更新されたデータ・コレクターが提供されます。
-* このビルドパックでは、[Auto-Scaling サービス](/docs/services/Auto-Scaling/index.html)用の更新版のエージェントも提供されます。 
+* このビルドパックでは、[Auto-Scaling サービス](/docs/services/Auto-Scaling/index.html)用の更新版のエージェントも提供されます。
 * 月次 Liberty ランタイム・バージョンが [2016.7.0.0](https://developer.ibm.com/wasdev/blog/2016/06/30/beta-websphere-liberty-and-tools-july-2016/) リリースに更新されました。
 
 ### 2016 年 6 月 17 日: 更新された Liberty ビルドパック v3.0-20160608-1450
-* ビルドパックには、WebSphere Liberty の 2 つのバージョン (最新の安定リリースと最新の月次リリース) が含まれるようになりました。具体的には、[16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) 安定リリースと [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/) 月次リリースが提供されます。デフォルトでは、安定リリースが使用されます。詳しくは、[『Liberty のバージョン』](buildpackDefaults.html#liberty_versions)を参照してください。 
+* ビルドパックには、WebSphere Liberty の 2 つのバージョン (最新の安定リリースと最新の月次リリース) が含まれるようになりました。具体的には、[16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) 安定リリースと [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/) 月次リリースが提供されます。デフォルトでは、安定リリースが使用されます。詳しくは、[『Liberty のバージョン』](buildpackDefaults.html#liberty_versions)を参照してください。
 * このビルドパックには、[Apache Standard Taglibs の脆弱性](http://www-01.ibm.com/support/docview.wss?uid=swg21985531)に対するセキュリティー・フィックスも含まれています。
 
 ### 2016 年 5 月 25 日: 更新された Liberty ビルドパック v2.9-20160519-1249
@@ -54,8 +92,8 @@ lastupdated: "2016-11-14"
 
 ### 2016 年 5 月 5 日: 更新された Liberty ビルドパック v2.8-20160430-1011
 * このビルドパックには、[April beta](https://developer.ibm.com/wasdev/blog/2016/04/08/beta-websphere-liberty-and-tools-april-2016/) に基づく更新版の WebSphere Liberty が含まれています。この更新版の Liberty により、*logstashCollector-1.0* GA フィーチャーおよび *logmetCollector-1.0* ベータ・フィーチャーが Bluemix で使用可能になります。
-* このビルドパックには、IBM JRE: 8 SR3 および 7.1 SR3 FP40 の更新版も含まれています。 
-* このビルドパックは、[AppDynamics](https://www.appdynamics.com/) アプリケーション・モニター・エージェントに対する初期サポートを追加します。
+* このビルドパックには、IBM JRE: 8 SR3 および 7.1 SR3 FP40 の更新版も含まれています。
+* このビルドパックでは、[AppDynamics ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.appdynamics.com/) アプリケーション・モニター・エージェントの初期サポートが追加されました。
 * [Dynatrace](dynatrace.html) サポートは、エージェントのインストールを簡素化するように改善されました。
 * このビルドパックでは、[Monitoring and Analytics サービス](/docs/services/monana/index.html#monana_oview)用の更新されたデータ・コレクターが提供されます。これには、最大ヒープ・データの収集に関する問題の修正が含まれています。
 * [アプリケーション管理ユーティリティー devconsole および shell](/docs/manageapps/app_mng.html#app_management) によって使用される Node.js ランタイムは、最新の 0.12.13 バージョンに更新されました。
@@ -63,10 +101,10 @@ lastupdated: "2016-11-14"
 ### 2016 年 3 月 25 日: 更新された Liberty ビルドパック v2.7-20160321-1358
 * このビルドパックには、[March beta](https://developer.ibm.com/wasdev/blog/2016/03/18/new-websphere-liberty-features-march-2016/) に基づく更新版 WebSphere Liberty が含まれています。
 Liberty の更新版により、cloudant-1.0 ベータ・フィーチャーが Bluemix で使用可能になります。
-* このビルドパックには、IBM JRE: 8 SR2 FP12 および 7.1 SR3 FP32 の更新版も含まれています。 
-* このビルドパックは、[Auto-Scaling サービス](/docs/services/Auto-Scaling/index.html)用のエージェントの更新版を提供します。 
+* このビルドパックには、IBM JRE: 8 SR2 FP12 および 7.1 SR3 FP32 の更新版も含まれています。
+* このビルドパックは、[Auto-Scaling サービス](/docs/services/Auto-Scaling/index.html)用のエージェントの更新版を提供します。
 * このビルドパックには、[Monitoring and Analytics サービス](/docs/services/monana/index.html#monana_oview)用の新しいデータ収集機能が付属しています。新しいコレクターにより、モニタリングしきい値の構成が可能になります。このコレクターにはいくつかのバグ修正が含まれています。
-* このビルドパックは、更新された DB2® JDBC ドライバー・バージョン 4.19.49 を提供します。 
+* このビルドパックは、更新された DB2® JDBC ドライバー・バージョン 4.19.49 を提供します。
 * [アプリケーション管理ユーティリティー devconsole および shell](/docs/manageapps/app_mng.html#app_management) によって使用される Node.js ランタイムは最新の 0.12.12 バージョンに更新されました。
 
 ### 2016 年 3 月 7 日: 更新された Liberty ビルドパック v2.6-20160225-1649
@@ -79,16 +117,16 @@ Liberty の更新版により、cloudant-1.0 ベータ・フィーチャーが B
 ### 2016 年 2 月 4 日: 更新された Liberty ビルドパック v2.4-20160127-1437
 * このビルドパックには、January beta に基づく更新版 WebSphere Liberty が含まれています。この更新により、以前にベータ・フィーチャーとして使用可能だった scim-1.0 Liberty フィーチャーが、実動対応フィーチャーとして使用可能になりました。また、Liberty の更新版により、passwordUtilities-1.0 ベータ・フィーチャーが Bluemix で使用可能になります。
 * このビルドパックには、更新された IBM JRE 7.1 SF3 FP20 および IBM JRE 8 SR2 FP10 も含まれています。
-* このビルドパックは、[MySQL タイプのサービスの自動構成](autoConfig.html)を実行したときに最新の 1.x [MariaDB Connector/J JDBC ドライバー](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/)をダウンロードするように更新されました。
+* このビルドパックは、[MySQL タイプのサービスの自動構成](autoConfig.html)の実行時に、最新の 1.x [MariaDB Connector/J JDBC ドライバー ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/) をダウンロードするように更新されました。
 
 ### 2015 年 12 月 16 日: 更新された Liberty ビルドパック v2.3-20151208-1311
 * このビルドパックには、[December beta](https://developer.ibm.com/wasdev/blog/2015/11/20/beta-was-liberty-beta-with-tools-december-2015/) に基づく更新版 Liberty プロファイルが含まれています。この更新版 Liberty プロファイルは、Bluemix で spnego-1.0 および wsSecuritySaml-1.1 の GA フィーチャーおよび scim-1.0 ベータ・フィーチャーを使用可能にします。
 * このビルドパックには、更新された IBM JRE 8 SR2 も含まれています。
-* このビルドパックはまた、PostgreSQL または MySQL タイプのサービスの[自動構成](autoConfig.html)を実行したときに最新の [9.4.x PostgreSQL JDBC ドライバー](https://jdbc.postgresql.org/)および 1.2.x [MariaDB Connector/J JDBC ドライバー](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/)をダウンロードするように更新されました。
+* このビルドパックは、PostgreSQL または MySQL タイプのサービスの[自動構成](autoConfig.html)の実行時に、最新の [9.4.x PostgreSQL JDBC ドライバー ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://jdbc.postgresql.org/) および 1.2.x [MariaDB Connector/J JDBC ドライバー ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/) をダウンロードするように更新されました。
 
 ### 2015 年 11 月 23 日: 更新された Liberty ビルドパック v2.2-20151119-1720
 * このビルドパックには、[Apache Commons Collection の脆弱性](http://www-01.ibm.com/support/docview.wss?uid=swg21971426)に対するセキュリティー修正の適用された、Liberty プロファイル・ランタイムおよび WebSphere eXtreme Scale Client の更新版が含まれています。
-* このビルドパックには、[Java MongoDB Driver](https://docs.mongodb.org/ecosystem/drivers/java/) の更新版、v2.13.3 も含まれています。この新しいドライバーは、MongoDB バージョン 2.4、2.6、および 3.0 と互換性があります。
+* このビルドパックには、[Java MongoDB Driver ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.mongodb.org/ecosystem/drivers/java/) の更新版、v2.13.3 も含まれています。この新しいドライバーは、MongoDB バージョン 2.4、2.6、および 3.0 と互換性があります。
 * このビルドパックでは、[Monitoring and Analytics サービス](/docs/services/monana/index.html)用のデータ・コレクターの更新版も提供されています。更新されたデータ・コレクターには、改善されたメソッド・トレース機能があります。
 
 ### 2015 年 10 月 16 日: 更新された Liberty ビルドパック v2.1-20151006-0912
@@ -118,7 +156,7 @@ Liberty の更新版により、cloudant-1.0 ベータ・フィーチャーが B
 
 ### 2015 年 7 月 21 日: 更新された Liberty ビルドパック v1.20-20150713-1450
 * このビルドパックには、[8.5.5.6 リリース](https://developer.ibm.com/wasdev/blog/2015/06/25/java-ee-7-has-landed-in-was-liberty/)に基づく更新版 Liberty プロファイルが含まれています。このリリースでは、前にベータ・フィーチャーとして使用可能だったすべての Java EE 7 Liberty フィーチャーが、実動で使用可能なフィーチャーになりました。Bluemix でのポートに関する制限およびその他の制限のため、例えばリモート EJB など一部のフィーチャーは、プラットフォームで完全にはサポートされません。
-* このビルドパックは、[distZip スタイル](https://docs.gradle.org/current/userguide/application_plugin.html)でパッケージされたアプリケーションを認識し、実行します。
+* このビルドパックは、[distZip スタイル ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.gradle.org/current/userguide/application_plugin.html) でパッケージされたアプリケーションを認識し、実行します。
 * このビルドパックでは、新しい Liberty ランタイム・バージョンをサポートする [Monitoring and Analytics サービス](/docs/services/monana/index.html)および WebSphere eXtreme Scale Client 用にデータ・コレクターが更新されました。
 
 ### 2015 年 6 月 30 日: 更新された Liberty ビルドパック v1.19.1-20150622-1509
@@ -157,7 +195,7 @@ Liberty の更新版により、cloudant-1.0 ベータ・フィーチャーが B
 * このビルドパックには、[Apache HttpComponents および Java オーバーレイ機能の脆弱性](https://www-304.ibm.com/connections/blogs/PSIRT/entry/ibm_security_bulletin_multiple_vulnerabilities_fixed_in_liberty_for_java_for_ibm_bluemix_cve_2012_6153_cve_2014_3577_cve_2015_0178?lang=en_us)に対するセキュリティー・フィックスが含まれています。
 * このビルドパックには、[February beta](https://developer.ibm.com/wasdev/blog/2015/02/13/announcing-liberty-beta-tools-february-2015/) に基づく更新版 Liberty プロファイルが含まれています。この更新版 Liberty プロファイルは、更新版の WebSocket GA フィーチャー websocket-1.1 を提供します。また、以下の Java EE 7 ベータ・フィーチャーが Bluemix で使用可能になりました。
   * cdi-1.2、el-3.0、jsp-2.3、jca-1.7、jacc-1.5、および jaspic-1.1 
-* このビルドパックにより、[ZeroTrunaround の JRebel ツール](http://zeroturnaround.com/software/jrebel/)と統合されます。この統合によって、Bluemix アプリケーションでの JRebel の使用、およびアプリケーションの再デプロイまたは再ステージングなしでのアプリケーションの即時更新が簡単に実行できるようになります。スタンドアロン Web アプリケーションのみがサポートされます。
+* このビルドパックは、[ZeroTrunaround の JRebel ツール ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://zeroturnaround.com/software/jrebel/) との統合を提供します。この統合によって、Bluemix アプリケーションでの JRebel の使用、およびアプリケーションの再デプロイまたは再ステージングなしでのアプリケーションの即時更新が簡単に実行できるようになります。スタンドアロン Web アプリケーションのみがサポートされます。
 
 ### 2015 年 2 月 6 日: 更新された Liberty ビルドパック v1.12-20150130-1016
 * このビルドパックには、[January beta](https://developer.ibm.com/wasdev/blog/2015/01/16/announcing-liberty-beta-tools-january-2015/) に基づく更新版 Liberty プロファイルが含まれています。
@@ -207,7 +245,7 @@ beta](https://developer.ibm.com/wasdev/blog/2014/11/07/announcing-liberty-profil
 * このビルドパックには、[Monitoring and Analytics](/docs/services/monana/index.html) 用の新しいデータ収集機能が付属しています。この新規データ収集機能は、
 診断用の詳細情報を収集し、サービスの診断プランのユーザーがユーザーのアプリケーションでの問題を特定行のコードまで探って診断することを可能にします。
 * ビルドパックに含まれる管理および自動スケーリングのエージェントが更新され、バグ修正とマイナーな機能強化が行われました。
-また、更新版の [Liberty プロファイル](https://developer.ibm.com/wasdev/)および [Java MongoDB Driver](https://docs.mongodb.org/ecosystem/drivers/java/) (v2.12.3) が含まれています。
+また、更新版の [Liberty プロファイル](https://developer.ibm.com/wasdev/)および [Java MongoDB Driver ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.mongodb.org/ecosystem/drivers/java/) (v2.12.3) が含まれています。
 * cloudAutowiring フィーチャーで、一部のアプリケーションでリソース・インジェクションのエラーの原因になっていたバグが修正されました。
 
 ### 2014 年 10 月 3 日: 更新された Liberty ビルドパック v1.5-20140923-1143
@@ -233,8 +271,8 @@ beta](https://developer.ibm.com/wasdev/blog/2014/11/07/announcing-liberty-profil
   * アプリケーションは、再プッシュされると IBM SDK for Java バージョン 7.1-1.0 を使用します。これに伴って性能が大幅に向上します。アプリケーションのスループットが改善され、メモリー使用量は減少します。IBM Java SDK について詳しくは、[ここ](http://www-01.ibm.com/support/docview.wss?uid=swg21671466)を参照してください。
 
 # 関連リンク
-{: #rellinks}
+{: #rellinks notoc}
 ## 一般
-{: #general}
+{: #general notoc}
   * [Liberty ランタイム](index.html)
   * [Liberty プロファイル概要](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

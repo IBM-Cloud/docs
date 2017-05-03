@@ -1,0 +1,30 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="Nodejs" audience="runtime"}
+SDK for Node.js
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    index.md
+    startup.md
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    runningLocally.md
+    offlineMode.md
+    configurationOptions.md
+    fipsMode.md
+    [管理 Liberty 和 Node.js 应用程序](../../manageapps/app_mng.html)
+    [使用入门模板应用程序](../../cfapps/starter_app_usage.html)
+    [使用代理](../../manageapps/workingWithProxy.html)
+    [使用社区 buildpack](../../cfapps/byob.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    updates.md
+    availableVersions.md
+    nodejsBuildpacks.md
+    ts_index.md
+    [Buildpack 支持语句](../../manageapps/buildpackSupport.html)
+    {: .navgroup-end}

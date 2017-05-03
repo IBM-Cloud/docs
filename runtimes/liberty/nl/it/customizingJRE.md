@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-08-15"
+  years: 2015, 2017
+lastupdated: "2017-03-23"
 
 ---
 
@@ -86,7 +86,8 @@ le opzioni di dump JVM e terminando i processi quando la memoria di un'applicazi
 l'errore al Loggregator.
   * se un'applicazione è configurata per abilitare i dump di memoria JVM, l'interruzione dei processi Java è disabilitata e i dump di memoria JVM vengono instradati a una directory "dumps" dell'applicazione	comune. Questi dump possono essere quindi visualizzati dal dashboard Bluemix o dalla CLI CF.
 
-Il seguente è un esempio della configurazione JVM predefinita di esempio generata dal pacchetto di build per un'applicazione distribuita con un limite di memoria di 512 M:   
+Il seguente è un esempio della configurazione JVM predefinita di esempio generata dal pacchetto di build per un'applicazione distribuita con un limite di memoria 512M: 
+
 ```
     -Xtune:virtualized
     -Xmx384M
@@ -124,7 +125,7 @@ Le applicazioni possono personalizzare le opzioni JVM con le specifiche definite
 <td>è basato sul runtime HotSpot che ha la notazione di
 -X per non standard, -XX per le opzioni sviluppatore e i flag booleani
 per abilitare o disabilitare l'opzione </td>
-<td>[Panoramica di runtime di HotSpot](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
+<td>[HotSpot Runtime Overview  ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
 </tr>
 </table>
 
@@ -186,68 +187,76 @@ Nota: alcune opzioni potrebbero non diventare effettive se non vengono attivate 
 ### Determinare le opzioni JVM applicate di un'applicazione in esecuzione
 {: #determining_applied_jvm_options}
 
-Fatta eccezione per le opzioni definite dall'applicazione che sono specificate con la variabile di ambiente JVM_ARGS, le opzioni risultanti sono rese persistenti nella variabile di ambiente come opzioni della riga di comando (applicazioni Java autonome) oppure in un file jvm.options (applicazioni Java non autonome). Le opzioni JVM applicate per l'applicazione possono essere visualizzate dal dashboard Bluemix o dalla CLI CF.
+Fatta eccezione per le opzioni definite dall'applicazione che sono specificate con la variabile di ambiente JVM_ARGS, le opzioni risultanti sono rese persistenti nella variabile di ambiente come opzioni della riga di comando (applicazioni Java autonome) oppure in un file`jvm.options` (applicazioni Java non autonome). Le opzioni JVM applicate per l'applicazione possono essere visualizzate dalla console IBM Bluemix o dalla CLI CF.
 
-Le opzioni JVM per l'applicazione JAVA autonoma sono mantenute come opzioni della riga di comando. Possono essere visualizzate dal file staging_info.yml.
+Le opzioni JVM per l'applicazione JAVA autonoma sono mantenute come opzioni della riga di comando. Possono essere visualizzate dal file `staging_info.yml`.
+
+Per visualizzare il file `staging_info.yml` in un'applicazione in esecuzione in un nodo DEA, esegui:
+
 ```
     $ cf files myapp staging_info.yml
 ```
 {: codeblock}
 
-Le opzioni JVM per la distribuzione di WAR, EAR, directory server e server in pacchetto sono memorizzate in un file jvm.options.
+Per visualizzare il file `staging_info.yml` in un'applicazione in esecuzione in una cella Diego, esegui:
 
-Per visualizzare il file jvm.options per WAR, EAR e directory server, esegui il comando:
+```
+    $ cf ssh myapp -c "cat staging_info.yml"
+```
+{: codeblock}
+
+Le opzioni JVM per la distribuzione di WAR, EAR, directory server e server in pacchetto sono memorizzate in un file `jvm.options`. Il file `jvm.options` può essere trovato nella directory `app/wlp/usr/servers/<serverName>/`. In molti casi ```<serverName>``` è impostato su `defaultServer` a meno che un server compresso non era stato distribuito con un nome server diverso. Ad esempio:
+
+Per visualizzare il file `jvm.options` in un'applicazione in esecuzione in un nodo DEA, esegui:
+
 ```
     $ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
 ```
 {: codeblock}
 
-Per visualizzare il file jvm.options per un server in pacchetto, sostituisci <nomeServer> con il nome del tuo server ed esegui il comando:
+Per visualizzare il file `jvm.options` in un'applicazione in esecuzione in una cella Diego, esegui:
+
 ```
-    $ cf files myapp app/wlp/usr/servers/<nomeServer>jvm.options
+    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/jvm.options"
 ```
 {: codeblock}
+
 
 #### Utilizzo di esempio
 {: #example_usage}
 
-Distribuzione di un'applicazione con le opzioni JVM personalizzate per abilitare la registrazione della raccolta di dati inutilizzati dettagliata della JVM di IBM JRE:
-* Le opzioni JVM incluse nel file manifest.yml di un'applicazione:
+Distribuzione di un'applicazione con le opzioni JVM personalizzate per abilitare la registrazione della raccolta di dati inutilizzati dettagliata di IBM JRE: 
+* Le opzioni JVM incluse nel file `manifest.yml` di un'applicazione:
 
-  <pre>
+```
     env:
       JAVA_OPTS: "-verbose:gc -Xverbosegclog:./verbosegc.log,10,1000"
-  </pre>
-  {: codeblock}
+```
+{: codeblock}
 
-* Per visualizzare la registrazione della raccolta di dati inutilizzati dettagliata della JVM:
+* Per visualizzare il file della registrazione della raccolta di dati inutilizzati dettagliata generata da JVM su un'applicazione in esecuzione su un dono DEA, esegui:
 
-  <pre>
+```
     $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
-  </pre>
-  {: codeblock}    
+```
+{: codeblock}
 
-* Per aggiornare l'opzione JVM di IBM JRE dell'applicazione distribuita per attivare un heap, uno snap e un javacore oppure una condizione di memoria esaurita (OutOfMemory), impostare la variabile di ambiente dell'applicazione con l'opzione JVM e riavviare l'applicazione:
+* Per visualizzare il file della registrazione della raccolta di dati inutilizzati dettagliata generata da JVM su un'applicazione in esecuzione su una cella Diego, esegui: 
 
-  <pre>
+```
+    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/verbosegc.log.001"
+```
+{: codeblock}
+
+* Per aggiornare l'opzione di IBM JRE dell'applicazione distribuita per attivare un heap, uno snap e un javacore oppure una condizione di memoria esaurita (OutOfMemory), impostare la variabile di ambiente dell'applicazione con l'opzione JVM e riavviare l'applicazione:
+
+```
     $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
     $ cf restart myapp
-  </pre>
-  {: codeblock}
+```
+{: codeblock}
 
-* Per visualizzare i dump JVM generati quando viene attivata la condizione di memoria esaurita:
-
-  <pre>
-    $ cf files myapp dumps
-
-    Getting files for app myapp in org myemail@email.com / space dev as myemail@email.com...
-    OK
-
-    Snap.20141106.100252.81.0003.trc           307.3K
-    heapdump.20141106.100252.81.0001.phd       3.9M
-    javacore.20141106.100252.81.0002.txt     870.5K
-  </pre>
-  {: codeblock}
+ Consulta la documentazione [Registrazione e traccia](loggingAndTracing.html#download_dumps) per i dettagli sulla visualizzazione e lo scaricamento dei file di dump generati.
 
 ### Sovrapposizione del JRE
 {: #overlaying_jre}
@@ -291,6 +300,7 @@ o JAR dell'applicazione in una cartella resources alla root dell'archivio. Per u
 La directory .java-overlay contiene dei file specifici nella stessa gerarchia di file di Java JRE di cui si sta eseguendo la sovrapposizione a partire da	.java/jre.
 
 Ad esempio, se desideri utilizzare la crittografia AES a 256 bit, devi soprapporre questi file di politica Java:
+
 ```
     .java\jre\lib\security\US_export_policy.jar
     .java\jre\lib\security\local_policy.jar
@@ -298,6 +308,7 @@ Ad esempio, se desideri utilizzare la crittografia AES a 256 bit, devi soprappor
 {: codeblock}
 
 Scarica i file di politica senza limitazioni appropriati e aggiungili all'applicazione come:
+
 ```
     resources\.java-overlay\.java\jre\lib\security\US_export_policy.jar
     resources\.java-overlay\.java\jre\lib\security\local_policy.jar
@@ -307,8 +318,8 @@ Scarica i file di politica senza limitazioni appropriati e aggiungili all'applic
 Quando esegui il push dell'applicazione, questi jar si sovrappongono ai jar di politica predefiniti nel runtime Java. Questi processo abilita la crittografia AES a 256 bit.
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
-{: #general}
+{: #general notoc}
 * [Runtime Liberty](index.html)
 * [Panoramica di Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

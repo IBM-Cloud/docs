@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-06-10"
+  years: 2015, 2017
+lastupdated: "2017-04-18"
 
 ---
 
@@ -50,9 +50,27 @@ Quando distribuisci un'applicazione, viene monitorato l'utilizzo della memoria d
 che si è verificato un errore. Potresti notare che l'applicazione è instabile. Potresti vedere che l'applicazione ha provato l'avvio più volte, sempre con esito negativo. Potresti invece ricevere un messaggio che indica che la distribuzione dell'applicazione non è riuscita.
 * Se il limite di memoria viene superato mentre l'applicazione è in funzione, il processo viene arrestato. Cloud Foundry prova a riavviare l'applicazione. È possibile che l'applicazione venga riavviata, ma non sarà disponibile per un certo lasso di tempo.
 
-# rellinks
-{: #rellinks}
-## general
-{: #general}
-* [Runtime Liberty](index.html)
-* [Panoramica di Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+## Specifica della memoria heap
+{: #specifying_heap_memory}
+
+Puoi personalizzare la quantità massima di memoria heap assegnata alla tua applicazione in vari modi. 
+
+*  Utilizza la variabile di ambiente JVM_ARGS e l'argomento -Xmx. Ad esempio per impostare la dimensione heap massima di 512M
+utilizza il seguente comando, quindi riprepara la tua applicazione.
+
+```
+    $ cf set-env myapp JVM_ARGS -Xmx512m
+```
+{: codeblock}
+
+* Se la tua applicazione è una [directory server](optionsForPushing.html#server_directory) o un [server in pacchetto](optionsForPushing.html#packaged_server)
+puoi specificare l'argomento -Xmx nel file jvm.options.
+
+* Puoi specificare il rapporto della dimensione heap utilizzando la variabile di ambiente JBP_CONFIG_IBMJDK. heap_size_ratio è un
+valore a punto mobile che specifica quanta memoria disponibile assegnare all'heap.  Ad esempio, per assegnare
+metà della memoria disponibile all'heap immetti il seguente comando e riprepara la tua applicazione.
+
+```
+    $ cf set-env myapp JBP_CONFIG_IBMJDK "heap_size_ratio: 0.50"
+```
+{: codeblock}

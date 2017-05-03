@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
 lastupdated: "2016-06-10"
 
 ---
@@ -46,11 +46,8 @@ liberações de buildpack. A mudança no conjunto de recursos padrão pode afeta
 adverso o aplicativo. Existem opções para assegurar que o aplicativo
 não seja afetado pela mudança nos padrões de recursos.
 
-* Configure a variável de ambiente JBP_CONFIG_LIBERTY para especificar explicitamente
-uma lista de recursos ativados para o aplicativo. Para obter mais informações, veja [Aplicativos independentes](optionsForPushing.html#stand_alone_apps).
-* Implemente seu aplicativo como um [diretório do
-servidor](optionsForPushing.html#server_directory) ou um [servidor
-em pacote](optionsForPushing.html#packaged_server). Forneça um arquivo server.xml customizado que especifique o conjunto exato dos recursos necessários para seu aplicativo.
+* Configure a variável de ambiente JBP_CONFIG_LIBERTY para especificar explicitamente uma lista de recursos ativados para o aplicativo. Para obter mais informações, veja [Aplicativos independentes](optionsForPushing.html#stand_alone_apps).
+* Implemente seu aplicativo como um [diretório do servidor](optionsForPushing.html#server_directory) ou um [servidor em pacote](optionsForPushing.html#packaged_server). Forneça um arquivo server.xml customizado que especifique o conjunto exato dos recursos necessários para seu aplicativo.
 
 Os aplicativos que são implementados como um diretório do servidor ou
 um servidor em pacote não são afetados pela mudança no padrão de recursos do
@@ -71,8 +68,8 @@ adote o Java 8 para seus aplicativos.
 
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## geral
-{: #general}
+{: #general notoc}
 * [Tempo de execução do Liberty](index.html)
-* [Visão geral do perfil do Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Visão geral do perfil Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

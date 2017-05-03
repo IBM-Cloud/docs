@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-06"
+  years: 2015, 2017
+lastupdated: "2017-03-30"
 
 ---
 
@@ -15,7 +15,29 @@ lastupdated: "2016-10-06"
 
 Un elenco degli aggiornamenti più recenti nel pacchetto di build aspnet.
 
-## 10 ottobre, 2016: aggiornamento del pacchetto di build ASP.NET Core v1.0.1-20161005-1225 
+## 29 marzo, 2017: aggiornamento del pacchetto di build ASP.NET Core v1.0.13-20170330-1023
+
+* Aggiunto il supporto per il runtime .NET Core 1.0.4
+* Aggiunto il supporto per il runtime .NET Core 1.1.1
+* Aggiunto il supporto per l'SDK .NET Core 1.0.1
+* Aggiornamento di Node alla versione 6.10.0
+* Rimosso il supporto per l'SDK .NET Core 1.0.0-preview2-003131
+* Rimosso il supporto per l'SDK .NET Core 1.0.0-preview3-004056
+
+## 31 gennaio, 2017: aggiornamento del pacchetto di build ASP.NET Core v1.0.10-20170124-1145
+
+* Aggiunto il supporto per .NET Core 1.0.3
+* Aggiunto il supporto per lo strumento .NET Core MSBuild
+* Aggiunto il supporto per i progetti F#
+* Rimosso il supporto per l'SDK .NET Core 1.0.0-preview2-003121
+
+## 9 dicembre, 2016: aggiornamento del pacchetto di build ASP.NET Core v1.0.6-20161205-0912
+
+* Aggiunto il supporto per .NET Core 1.1.0
+* Rimosso il supporto per .NET Core 1.0.0 RC2
+* Aggiunta un'opzione per cancellare la cache dei pacchetti NuGet
+
+## 10 ottobre, 2016: aggiornamento del pacchetto di build ASP.NET Core v1.0.1-20161005-1225
 
 * Aggiunto il supporto per .NET Core 1.0.1
 * Risolto un problema intermittente che causava un malfunzionamento della distribuzione durante la memorizzazione nella cache dei pacchetti NuGet
@@ -59,7 +81,7 @@ Questa versione del pacchetto di build include le seguenti modifiche:
 * L'utilizzo del server web Nowin è stato rimosso da questo pacchetto di build e viene invece utilizzato il server [Kestrel]{https://github.com/aspnet/KestrelHttpServer}.
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
-{: #general}
+{: #general notoc}
 * [Runtime Dotnet core](index.html)

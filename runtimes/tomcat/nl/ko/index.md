@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-03-23"
 
 ---
 
@@ -19,7 +19,8 @@ lastupdated: "2016-11-14"
 
 {{site.data.keyword.Bluemix}}에서 Tomcat 런타임을 사용하려면 java_buildpack을 -b 옵션으로 지정해야 합니다. 예: 
 <pre>
-cf push &lt;myApp&gt; -p &lt;pathToMyApp&gt; -b java_buildpack</pre>
+    cf push &lt;myApp&gt; -p &lt;pathToMyApp&gt; -b java_buildpack
+</pre>
 
 Tomcat 런타임에 대한 자세한 정보는
 [java-buildpack readme](https://github.com/cloudfoundry/java-buildpack/blob/master/README.md)를 참조하십시오.
@@ -57,11 +58,11 @@ Bluemix 내부 프록시를 신뢰하고 HTTP 트래픽을 HTTPS(SSL)로 경로�
 ```
 {: codeblock}
 
-RemoteIpValve와 관련된 추가 구성 옵션은
-[Tomcat 문서](https://tomcat.apache.org/tomcat-8.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html)에 있습니다. 
+RemoteIpValve에 대한 추가 구성 옵션은
+[Tomcat 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://tomcat.apache.org/tomcat-8.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html)를 참조하십시오.
 
-# 관련 링크
-{: #rellinks}
-## 일반
-{: #general}
+# rellinks
+{: #rellinks notoc}
+## general
+{: #general notoc}
 * [java-buildpack](https://github.com/cloudfoundry/java-buildpack)

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-14"
+  years: 2016, 2017
+lastupdated: "2017-04-11"
 
 ---
 
@@ -15,6 +15,7 @@ lastupdated: "2016-11-14"
 {: #offline_mode}
 
 node.js アプリケーションが {{site.data.keyword.Bluemix}} にプッシュされると、SDK for Node.js ビルドパックは通常、NPM からのノード・モジュールなど、外部リソースから成果物をダウンロードします。[Bluemix Dedicated](/docs/dedicated/index.html#dedicated) および [Bluemix Local](/docs/local/index.html#local) を使用するなど一部の環境では、Bluemix の外部のサイトへのアクセスに依存しないこと、あるいは外部サイトへのアクセスをより明示的に制御することが必要な場合があります。  
+{: shortdesc}
 
 node.js ビルドパックによるアクセスが可能な外部サイトを以下に示します。[Bluemix Dedicated](/docs/dedicated/index.html#dedicated) および [Bluemix Local](/docs/local/index.html#local) の Bluemix 環境では、これらのサイトは*ホワイトリスト*に登録されていることが必要な場合があります。
 
@@ -29,7 +30,7 @@ node.js ビルドパックによるアクセスが可能な外部サイトを以
 新しいバージョンの SDK for Node.js ビルドパックをインストールすると、多くの場合、使用可能な一連のノード・エンジン・バージョンが新しいバージョンに移行することに注意してください。その結果、ノード・アプリケーションを再構成して、新しいノード・エンジン・バージョンを指定することが必要になる場合があります。
 
 
-### オフライン・アプリケーション
+## オフライン・アプリケーション
 {: #offline_applications}
 
 https://registry.npmjs.org にアクセスする必要がないようにするために、アプリケーションに必要なノード・モジュールのすべてをアプリケーション内に組み込むことができます。これを行うには、プッシュされたアプリケーションを使用して、アプリケーションに必要なすべてのモジュールを対象に **npm install** を実行し、結果として生じる *node_modules* ディレクトリーを組み込みます。
@@ -46,10 +47,3 @@ https://registry.npmjs.org にアクセスする必要がないようにする�
 {: #working_with_proxy}
 
 [Bluemix Dedicated](/docs/dedicated/index.html#dedicated) および [Bluemix Local](/docs/local/index.html#local) などの一部の環境では、プロキシーの構成が可能です。詳しくは、[『プロキシーの処理』](/docs/manageapps/workingWithProxy.html)を参照してください。
-
-# 関連リンク
-{: #rellinks}
-## 一般
-{: #general}
-* [Node.js ビルドパックに対する最新の更新](/docs/runtimes/nodejs/updates.html)
-* [Node.js](https://nodejs.org)

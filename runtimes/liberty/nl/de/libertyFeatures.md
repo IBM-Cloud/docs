@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-07-28"
+  years: 2015, 2017
+lastupdated: "2017-02-07"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2016-07-28"
 Die Ad-hoc-Laufzeit (Instant Runtime) von Liberty for Java umfasst eine Untergruppe von Liberty-Profilfunktionen.  Einige Features, die das Liberty-Profil anbietet, stehen in der Ad-hoc-Laufzeit (Instant Runtime) von Liberty for Java nicht zur Verfügung, weil sie nicht in der Cloudumgebung angewendet werden können.
 
 Die folgenden Funktionen, die für Bluemix spezifisch sind, sind enthalten:
-* appState-1.0
+* appstate-2.0
 * cloudAutowiring-1.0
 * logAnalysis-1.0
 
@@ -34,7 +34,7 @@ Die folgende Tabelle zeigt die in Bluemix unterstützten Liberty-Features.
 <td>apiDiscovery-1.0</td>
 <td>appSecurity-1.0</td>
 <td>appSecurity-2.0</td>
-<td>appState-1.0</td>
+<td>appstate-2.0</td>
 </tr>
 
 <tr>
@@ -132,77 +132,77 @@ Die folgende Tabelle zeigt die in Bluemix unterstützten Liberty-Features.
 <td>logAnalysis-1.0</td>
 <td>logstashCollector-1.0</td>
 <td>managedBeans-1.0</td>
-<td>mdb-3.1</td>
+<td>microProfile-1.0</td>
 </tr>
 
 <tr>
+<td>mdb-3.1</td>
 <td>mdb-3.2</td>
 <td>mediaServerControl-1.0</td>
 <td>mongodb-2.0</td>
-<td>monitor-1.0</td>
 </tr>
 
 <tr>
+<td>monitor-1.0</td>
 <td>oauth-2.0</td>
 <td>openid-2.0</td>
 <td>openidConnectClient-1.0</td>
-<td>openidConnectServer-1.0</td>
 </tr>
 
 <tr>
+<td>openidConnectServer-1.0</td>
 <td>osgiAppIntegration-1.0</td>
 <td>osgiConsole-1.0</td>
 <td>osgi.jpa-1.0</td>
-<td>passwordUtilities-1.0</td>
 </tr>
 
 <tr>
+<td>passwordUtilities-1.0</td>
 <td>restConnector-1.0</td>
 <td>requestTiming-1.0</td>
 <td>rtcomm-1.0</td>
-<td>rtcommGateway-1.0</td>
 </tr>
 
 <tr>
+<td>rtcommGateway-1.0</td>
 <td>samlWeb-2.0</td>
 <td>scim-1.0</td>
 <td>servlet-3.0</td>
-<td>servlet-3.1</td>
 </tr>
 
 <tr>
+<td>servlet-3.1</td>
 <td>sessionDatabase-1.0</td>
 <td>sipServlet-1.1</td>
 <td>spnego-1.0</td>
-<td>ssl-1.0</td>
 </tr>
 
 <tr>
+<td>ssl-1.0</td>
 <td>timedOperations-1.0</td>
 <td>wab-1.0</td>
 <td>wasJmsClient-1.1</td>
-<td>wasJmsClient-2.0</td>
 </tr>
 
 <tr>
+<td>wasJmsClient-2.0</td>
 <td>wasJmsSecurity-1.0</td>
 <td>wasJmsServer-1.0</td>
 <td>webCache-1.0</td>
-<td>webProfile-6.0</td>
 </tr>
 
 <tr>
+<td>webProfile-6.0</td>
 <td>webProfile-7.0</td>
 <td>websocket-1.0</td>
 <td>websocket-1.1</td>
-<td>wmqJmsClient-1.1</td>
 </tr>
 
 <tr>
+<td>wmqJmsClient-1.1</td>
 <td>wmqJmsClient-2.0</td>
 <td>wsSecurity-1.1</td>
 <td>wsSecuritySaml-1.1</td>
-<td></td>
 </tr>
 </table>
 
@@ -219,8 +219,8 @@ im IBM Knowledge Center.
 Anwendungen, die ferne EJBs verwenden, können in Bluemix bereitgestellt werden. Es kann jedoch aufgrund von Porteinschränkungen in der Bluemix-Umgebung nicht mit dem CORBA/IIOP-Protokoll auf die fernen EJBs zugegriffen werden.
 
 # Zugehörige Links
-{: #rellinks}
+{: #rellinks notoc}
 ## Allgemein
-{: #general}
+{: #general notoc}
 * [Liberty-Laufzeit](index.html)
 * [Übersicht über das Liberty-Profil](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

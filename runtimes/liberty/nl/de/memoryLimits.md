@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-06-10"
+  years: 2015, 2017
+lastupdated: "2017-04-18"
 
 ---
 
@@ -59,9 +59,24 @@ fehlgeschlagen ist.
 * Wenn die Speicherbegrenzung überschritten wird, während die Anwendung aktiv ist, wird der Prozess
 gestoppt. Cloud Foundry versucht einen Neustart der Anwendung. Der Neustart der Anwendung kann erfolgen, die Anwendung ist aber für eine gewisse Zeit nicht verfügbar.
 
-# Zugehörige Links
-{: #rellinks}
-## Allgemein
-{: #general}
-* [Liberty-Laufzeit](index.html)
-* [Übersicht über das Liberty-Profil](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+## Heapspeicher angeben
+{: #specifying_heap_memory}
+
+Sie können auf unterschiedliche Weise den Maximalwert für den Heapspeicher anpassen, der Ihrer Anwendung zugeordnet wird. 
+
+*  Umgebungsvariable JVM_ARGS und das Argument -Xmx verwenden. Um beispielsweise die maximale Größe des Heapspeichers auf 512M zu setzen, geben Sie den folgenden Befehl ein und
+führen anschließend ein erneutes Staging Ihrer App durch. 
+
+```
+    $ cf set-env myapp JVM_ARGS -Xmx512m
+```
+{: codeblock}
+
+* Wenn Ihre Anwendung ein [Serververzeichnis](optionsForPushing.html#server_directory) oder ein [paketierter Server](optionsForPushing.html#packaged_server) ist, geben Sie das Argument -Xmx in der Datei 'jvm.options' an. 
+
+* Sie können den Faktor für die Größe des Heapspeichers mithilfe der Umgebungsvariablen JBP_CONFIG_IBMJDK angeben. Der Gleitkommawert heap_size_ratio gibt an, wie viel des verfügbaren Speichers dem Heapspeicher zugeordnet wird. Um beispielsweise die Hälfte des verfügbaren Speichers dem Heapspeicher zuzuordnen, geben Sie den folgenden Befehl aus und führen anschließend ein erneutes Staging Ihrer App durch. 
+
+```
+    $ cf set-env myapp JBP_CONFIG_IBMJDK "heap_size_ratio: 0.50"
+```
+{: codeblock}

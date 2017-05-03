@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-08-15"
+  years: 2015, 2017
+lastupdated: "2017-03-23"
 
 ---
 
@@ -73,7 +73,8 @@ Liberty ビルドパックにより、以下を考慮して、デフォルト JV
   * 障害発生時のアプリケーションの使用可能メモリー・リソースに関する情報を Loggregator にルーティングします。
   * JVM メモリー・ダンプを有効にするようにアプリケーションが構成されている場合、Java プロセスの kill は無効にされ、JVM メモリー・ダンプは共通のアプリケーション「dumps」ディレクトリーにルーティングされます。これらのダンプは、その後、Bluemix ダッシュボードまたは CF CLI で表示できます。
 
-以下に、512 M のメモリー制限を指定してデプロイされたアプリケーションに対してビルドパックが生成した、デフォルト JVM 構成例を示します。   
+以下に、512 M のメモリー制限を指定してデプロイされたアプリケーションに対してビルドパックが生成したデフォルト JVM 構成例を示します。
+
 ```
     -Xtune:virtualized
     -Xmx384M
@@ -108,7 +109,7 @@ Liberty ビルドパックにより、以下を考慮して、デフォルト JV
 <tr>
 <td> OpenJDK</td>
 <td>HotSpot ランタイムに基づきます。このランタイムの表記には、非標準の -X、開発者オプションの -XX、およびオプションを有効または無効にするブール・フラグがあります</td>
-<td>[HotSpot ランタイムの概要](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html)</td>
+<td>[HotSpot ランタイムの概要  ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
 </tr>
 </table>
 
@@ -168,72 +169,78 @@ JVM オプションが JRE に適用される際に、Liberty ビルドパック
 ### 実行中のアプリケーションに適用されている JVM オプションの判別
 {: #determining_applied_jvm_options}
 
-JVM_ARGS 環境変数で指定されたアプリケーション定義オプションを除いて、結果のオプションは、ランタイム環境で、コマンド・ライン・オプションとして (スタンドアロン Java アプリケーション)、または jvm.options ファイル内に (非スタンドアロン Java アプリケーション) 保持されます。アプリケーションに適用されている JVM オプションは、Bluemix ダッシュボードまたは CF CLI で表示できます。
+JVM_ARGS 環境変数を使用して指定されたアプリケーション定義オプションを除いて、結果のオプションは、ランタイム環境で、コマンド・ライン・オプションとして (スタンドアロン Java アプリケーション)、または `jvm.options` ファイル内に (非スタンドアロン Java アプリケーション) 保持されます。アプリケーションに適用されている JVM オプションは、IBM Bluemix コンソールまたは CF CLI で表示できます。
 
 スタンドアロン Java アプリケーションの JVM オプションは、
-コマンド・ライン・オプションとして保持されます。staging_info.yml ファイルから表示できます。
+コマンド・ライン・オプションとして保持されます。`staging_info.yml` ファイルから表示できます。
+
+DEA ノードで実行されているアプリケーションの `staging_info.yml` ファイルを表示するには、以下を実行します。
 
 ```
     $ cf files myapp staging_info.yml
 ```
 {: codeblock}
 
-WAR、EAR、サーバー・ディレクトリー、およびパッケージされたサーバーのデプロイメントの場合、JVM オプションは jvm.options ファイルで保持されます。
+Diego セルで実行されているアプリケーションの `staging_info.yml` ファイルを表示するには、以下を実行します。
 
-WAR、EAR、およびサーバー・ディレクトリーの jvm.options ファイルを表示するには、次のコマンドを実行します。
+```
+    $ cf ssh myapp -c "cat staging_info.yml"
+```
+{: codeblock}
+
+WAR、
+EAR、サーバー・ディレクトリー、およびパッケージされたサーバーのデプロイメントの場合、JVM オプションは `jvm.options` ファイルで保持されます。`jvm.options` ファイルは `app/wlp/usr/servers/<serverName>/` ディレクトリーにあります。パッケージされたサーバーが別のサーバー名でデプロイされた場合を除いて、```<serverName>``` は `defaultServer` に設定されるのが一般的です。例えば、次のとおりです。
+
+DEA ノードで実行されているアプリケーションの `jvm.options` ファイルを表示するには、以下を実行します。
 
 ```
     $ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
 ```
 {: codeblock}
 
-パッケージされたサーバーの jvm.options ファイルを表示するには、<serverName> を実際のサーバー名に置き換えて次のコマンドを実行します。
+Diego セルで実行されているアプリケーションの `jvm.options` ファイルを表示するには、以下を実行します。
 
 ```
-    $ cf files myapp app/wlp/usr/servers/<serverName>jvm.options
+    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/jvm.options"
 ```
 {: codeblock}
+
 
 #### 使用例
 {: #example_usage}
 
-IBM JRE の JVM 冗長ガーベッジ・コレクション・ロギングを有効にするためにカスタマイズした JVM オプションを指定してアプリケーションをデプロイする場合:
-* アプリケーションの manifest.yml ファイルに含まれる JVM オプション:
+IBM JRE 冗長ガーベッジ・コレクション・ロギングを有効にするためにカスタマイズした JVM オプションを指定してアプリケーションをデプロイする場合:
+* アプリケーションの `manifest.yml` ファイルに含まれる JVM オプション:
 
-  <pre>
+```
     env:
       JAVA_OPTS: "-verbose:gc -Xverbosegclog:./verbosegc.log,10,1000"
-  </pre>
-  {: codeblock}
+```
+{: codeblock}
 
-* 生成された JVM 冗長ガーベッジ・コレクション・ロギングを表示するには、以下のようにします。
+* DEA ノードで実行されているアプリケーションの、JVM が生成した冗長ガーベッジ・コレクション・ログ・ファイルを表示するには、以下を実行します。
 
-  <pre>
+```
     $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
-  </pre>
-  {: codeblock}    
+```
+{: codeblock}
 
-* OutOfMemory 条件に基づいて heap、snap、および javacore をトリガーするように、デプロイ済みアプリケーションの IBM JRE JVM オプションを更新するには、 以下のように JVM オプションを指定してアプリケーションの環境変数を設定し、アプリケーションを再始動します。
+* Diego セルで実行されているアプリケーションの、JVM が生成した冗長ガーベッジ・コレクション・ログ・ファイルを表示するには、以下を実行します。
 
-  <pre>
+```
+    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/verbosegc.log.001"
+```
+{: codeblock}
+
+* OutOfMemory 条件に基づいて heap、snap、および javacore をトリガーするように、デプロイ済みアプリケーションの IBM JRE オプションを更新するには、 以下のように JVM オプションを指定してアプリケーションの環境変数を設定し、アプリケーションを再始動します。
+
+```
     $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
     $ cf restart myapp
-  </pre>
-  {: codeblock}
+```
+{: codeblock}
 
-* メモリー不足条件がトリガーされたときに生成された JVM ダンプを表示するには、以下のようにします。
-
-  <pre>
-    $ cf files myapp dumps
-
-    Getting files for app myapp in org myemail@email.com / space dev as myemail@email.com...
-    OK
-
-    Snap.20141106.100252.81.0003.trc           307.3K
-    heapdump.20141106.100252.81.0001.phd       3.9M
-    javacore.20141106.100252.81.0002.txt     870.5K
-  </pre>
-  {: codeblock}
+ 生成されたダンプ・ファイルの表示およびダウンロードについて詳しくは、[ロギングおよびトレース](loggingAndTracing.html#download_dumps)の説明を参照してください。
 
 ### JRE のオーバーレイ
 {: #overlaying_jre}
@@ -275,6 +282,7 @@ IBM JRE の JVM 冗長ガーベッジ・コレクション・ロギングを有�
 
 例えば、AES 256 ビット暗号化を使用する場合、以下の Java ポリシー・ファイルをオーバーレイする必要があります。
 
+
 ```
     .java\jre\lib\security\US_export_policy.jar
     .java\jre\lib\security\local_policy.jar
@@ -282,6 +290,7 @@ IBM JRE の JVM 冗長ガーベッジ・コレクション・ロギングを有�
 {: codeblock}
 
 適切な非制限ポリシー・ファイルをダウンロードし、それらを次のファイルとしてアプリケーションに追加します。
+
 ```
     resources\.java-overlay\.java\jre\lib\security\US_export_policy.jar
     resources\.java-overlay\.java\jre\lib\security\local_policy.jar
@@ -291,8 +300,8 @@ IBM JRE の JVM 冗長ガーベッジ・コレクション・ロギングを有�
 アプリケーションをプッシュすると、これらの jar が Java ランタイムのデフォルトのポリシー jar をオーバーレイします。このプロセスにより、AES 256 ビット暗号化が有効になります。
 
 # 関連リンク
-{: #rellinks}
+{: #rellinks notoc}
 ## 一般
-{: #general}
+{: #general notoc}
 * [Liberty ランタイム](index.html)
 * [Liberty プロファイル概要](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
