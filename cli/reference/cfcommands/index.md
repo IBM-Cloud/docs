@@ -388,11 +388,9 @@ cf help events
 ## cf login
 {: #cf_login}
 
-Logs you in to {{site.data.keyword.Bluemix_notm}}.
+Logs you in to {{site.data.keyword.Bluemix_notm}}. If you are logging in with a [federated ID](/docs/admin/account.html#signup), you must use the single sign-on (SSO) parameter to log in. 
 
-If you are logging in with a [federated ID](/docs/admin/account.html#signup), you must use the single sign-on (SSO) parameter to log in. 
-
-**Note**: You can also use an {{site.data.keyword.Bluemix_notm}} Platform API key to log in. Use the user name "apikey" and your api key value as password.
+**Note**: You can also use a {{site.data.keyword.Bluemix_notm}} Platform API key to log in. Use the user name `apikey` and your API key value as the password.
 
 ```
 cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s space_name] [--skip-ssl-validation]
