@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-01-11"
+lastupdated: "2017-05-03"
 
 ---
 
@@ -73,7 +73,7 @@ There are optional components that are available for you to purchase to scale an
 |IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.dashdbshort}} Enterprise for Transactions High Availability 12.128.1400 | Dedicated instance supporting Online Transaction Processing (OLTP) workloads with 128GB RAM and 1.4 TB SSD storage for data and logs, and it includes an additional Standby server for high availability. |
 |{{site.data.keyword.Bluemix_dedicated_notm}} community services  | An environment that permits deploying and running  community services up to a total of 50 instances for each community service.  |
 |{{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.cloudant}} Cluster Instance | This optional component includes a 3-node cluster for which you are responsible for providing the infrastructure, and the storage and compute capacity can be determined based on your specific needs. {{site.data.keyword.cloudant}} provides access to a fully managed NoSQL JSON data layer that's always on. This service is compatible with CouchDB, and accessible through a simple to use HTTP interface for mobile and web application models. |
-|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.messagehub}} | An environment that provides publish and subscribe messaging of up to 10 GB per partition. Messages are retained and available for consumption for a maximum of 24 hours. |
+|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.messagehub}} | An environment that provides publish/subscribe messaging of up to 10 GB per partition, limited to 100 partitions. |
 |IBM Bluemix Dedicated {{site.data.keyword.mobilepushshort}} | An environment that permits deployment and execution of {{site.data.keyword.mobilepushshort}} instances with ability to accept 300 requests per second. |
 |{{site.data.keyword.iot_short}} Dedicated incremental increase | An environment increase that permits running a private version of the {{site.data.keyword.iot_short}} within the dedicated environment with a capacity of 100,000 concurrently connected devices or applications and 0.5 TB of data exchange. |
 |IBM {{site.data.keyword.appserver_short}} for {{site.data.keyword.Bluemix_notm}} - Dedicated Small| A pre-configured {{site.data.keyword.appserver_short}} Liberty, Traditional Network Deployment, or Traditional WebSphere Java EE instance in a hosted cloud environment on {{site.data.keyword.Bluemix_notm}} with 64 vCores, 128GB RAM and 1TB HDD per month. |
