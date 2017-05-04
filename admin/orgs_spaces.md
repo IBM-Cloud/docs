@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-04-19"
+lastupdated: "2017-05-03"
 
 ---
 
@@ -29,7 +29,7 @@ Organizations can span multiple regions, and they are defined by the following i
 
 <dl>
 <dt>Team members</dt>
-<dd>The role with basic permission in organizations and spaces. You must be assigned to an organization before you can be granted other permissions to the spaces within the organization. For detailed information, see [Users and roles](/docs/admin/users_roles.html#userrolesinfo).</dd>
+<dd>The role with basic permission in organizations and spaces. You must be assigned to an organization before you can be granted other permissions to the spaces within the organization. For detailed information, see [Users and roles](/docs/iam/users_roles.html#userrolesinfo).</dd>
 <dt>Domains</dt>
 <dd>Provide the route on the internet that is allocated to the organization. A route has a sub-domain and a domain. A sub-domain is typically the application name. A domain might be a system domain, or a custom domain that you registered for your application. See [Managing custom domains](/docs/admin/manageorg.html#managedomains).<br/>
 <p>**Note:** If you add a custom domain, you must configure your DNS server to resolve your custom domain to point to the {{site.data.keyword.Bluemix_notm}} system domain. In this way, when {{site.data.keyword.Bluemix_notm}} receives a request for your custom domain, it can properly route it to your application.</p></dd>
@@ -49,7 +49,7 @@ When you create an organization, the organization name must be unique in {{site.
 
 You can use the [`bx iam org-delete`](/docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_iam_org_delete) command to delete organizations. When you delete an organization, all the spaces, applications, and services within the organization are deleted.
 
-The following [user roles](/docs/admin/users_roles.html#userrolesinfo) can be assigned to team members in an organization:
+The following [user roles](/docs/iam/users_roles.html#userrolesinfo) can be assigned to team members in an organization:
 
 <ul>
 <li>Organization manager</li>
@@ -71,7 +71,7 @@ Only account owners with Pay-As-You-Go accounts can create an organization. You 
 
 Within an organization, you can use spaces to group a set of applications, services, and team members. Spaces are tied to a specific region in {{site.data.keyword.Bluemix_notm}}.
 
-After you add team members to an organization, you can grant them permissions to the spaces. Similar to organizations, spaces also have a set of [user roles](/docs/admin/users_roles.html#userrolesinfo) with specific permissions that are assigned to team members:
+After you add team members to an organization, you can grant them permissions to the spaces. Similar to organizations, spaces also have a set of [user roles](/docs/iam/users_roles.html#userrolesinfo) with specific permissions that are assigned to team members:
 
 <ul>
 <li>Space manager</li>
