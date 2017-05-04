@@ -397,10 +397,10 @@ Führen Sie die folgenden Schritte aus, um eine Serviceinstanz von einem anderen
 2. Klicken Sie im Navigationsbereich auf **Verwalten von**, um das Binden von anderen Serviceinstanzen unter Verwendung der Konsole der Serviceinstanz zu autorisieren.
 3. Wenn Sie den Zugriff weiterer Services auf die Serviceinstanz verhindern möchten, klicken Sie im Navigationsbereich auf **Berechtigung für Servicezugriff** und entfernen Sie die Servicebindung anschließend mithilfe von **Widerrufen**.
 
-# Zugehörige Links
+# rellinks
 {: #rellinks}
 
-## Allgemein
+## general
 {: #general}
 
 * [Service mithilfe der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle binden](/docs/cfapps/ee.html#ee_bindui)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-6"
+lastupdated: "2017-4-28"
 
 ---
 
@@ -32,7 +32,7 @@ There are several ways to create a pipeline, including adding a pipeline to an e
 Complete these steps to set up a {{site.data.keyword.deliverypipeline}} for an existing application:
 
 1. On the {{site.data.keyword.Bluemix_notm}} app Dashboard, click your app.
-1. From the hamburger menu on the {{site.data.keyword.Bluemix_notm}} menu bar, click **Services**, and then click **DevOps**.
+1. From the menu on the {{site.data.keyword.Bluemix_notm}} menu bar, click **Services**, and then click **DevOps**.
 1. Click **Pipelines**, and then click **Create a Pipeline**.
 
 To [create a pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} that is configured to deploy a Cloud Foundry application, follow these steps:

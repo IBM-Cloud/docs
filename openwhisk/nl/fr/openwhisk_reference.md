@@ -63,7 +63,7 @@ Vous utiliserez ce schéma de dénomination dans l'interface de ligne de command
 Les noms de toutes les entités, notamment les actions, les déclencheurs, les règles, les packages et les espaces de noms sont une séquence de
 caractères au format suivant :
 
-* Le premier caractère doit être un caractère alphanumérique ou un trait de soulignement.
+* Le premier caractère doit être alphanumérique ou un trait de soulignement.
 * Les caractères qui suivent doivent être des caractères
 alphanumériques, des espaces ou l'un des caractères suivants :
 `_`, `@`, `.`,
@@ -258,13 +258,10 @@ Une action peut être synchrone pour certaines entrées et asynchrone pour d'aut
 
 Remarque : que l'activation soit synchrone ou asynchrone, l'appel de l'action peut être bloquant ou non bloquant.
 
-### Objet global whisk JavaScript déprécié
+### Suppression de l'objet global whisk JavaScript
 
-L'objet global `whisk` est actuellement déprécié ;
-vous devez migrer vos actions nodejs pour qu'elles utilisent d'autres
-méthodes.
-Pour les fonctions `whisk.invoke()` et
-`whisk.trigger()`, vous pouvez utiliser la bibliothèque client [openwhisk](https://www.npmjs.com/package/openwhisk).
+L'objet global `whisk` a été retiré. Migrez vos actions nodejs de sorte à utiliser des méthodes alternatives.
+Pour les fonctions `whisk.invoke()` et `whisk.trigger()`, utilisez la bibliothèque client [openwhisk](https://www.npmjs.com/package/openwhisk) déjà installée.
 Pour `whisk.getAuthKey()`, vous pouvez extraire la valeur de
 la clé d'API à partir de la variable d'environnement `__OW_API_KEY`.
 Pour `whisk.error()`, vous pouvez renvoyer une promesse rejetée (Promise.reject).
@@ -303,7 +300,7 @@ Node.js 6.9.1 :
 - node-uuid v1.4.7
 - nodemailer v2.6.4
 - oauth2-server v2.4.1
-- openwhisk v3.0.0
+- openwhisk v3.3.2
 - pkgcloud v1.4.0
 - process v0.11.9
 - pug v2.0.0-beta6
@@ -331,92 +328,104 @@ Node.js 6.9.1 :
 - xmlhttprequest v1.8.0
 - yauzl v2.7.0
 
-L'environnement Node.js version 0.12.17 est utilisé pour une action si
-l'option `--kind` est explicitement spécifiée avec la valeur
-'nodejs' lors de la création/mise à jour de l'action.
-Les packages suivants sont disponibles pour être utilisés dans l'environnement
-Node.js 0.12.17 :
 
-**Remarque** : Node.js version 0.12.x est obsolète,
-migrez toutes vos actions Node.js de telle sorte qu'elles utilisent Node.js version
-6.x.
+## Environnements d'exécution Python
+{: #openwhisk_ref_python_environments}
 
-- apn v1.7.4
-- async v1.5.2
-- btoa v1.1.2
-- cheerio v0.20.0
-- cloudant v1.4.1
-- commander v2.7.0
-- consul v0.18.1
-- cookie-parser v1.3.4
-- cradle v0.6.7
-- errorhandler v1.3.5
-- gm v1.20.0
-- jade v1.9.2
-- log4js v0.6.38
-- merge v1.2.0
-- moment v2.8.1
-- mustache v2.1.3
-- nano v5.10.0
-- node-uuid v1.4.2
-- oauth2-server v2.4.0
-- openwhisk v3.0.0
-- process v0.11.0
-- request v2.79.0
-- rimraf v2.5.1
-- semver v4.3.6
-- serve-favicon v2.2.0
-- socket.io v1.3.5
-- socket.io-client v1.3.5
-- superagent v1.3.0
-- swagger-tools v0.8.7
-- tmp v0.0.28
-- watson-developer-cloud v1.4.1
-- when v3.7.3
-- ws v1.1.0
-- xml2js v0.4.15
-- xmlhttprequest v1.7.0
-- yauzl v2.3.1
+OpenWhisk prend en charge les actions Python sous deux versions d'environnement d'exécution différentes.
 
-## Actions Python
+### Actions Python 3
 
-Les actions Python sont exécutées par défaut avec Python 2.7.12.
-En plus de la bibliothèque Python standard, les packages suivants peuvent également être utilisés par les actions Python :
+Les actions Python 3 sont exécutées sous Python 3.6.1. Pour utiliser cet environnement d'exécution, spécifiez le paramètre `--kind Poupython:3` `wsk` dans l'interface CLI lors de la création ou de la mise à jour d'une action.
+Les packages suivants sont disponibles pour leur utilisation dans des actions Python, en supplément des bibliothèques Python 3.6 standard.
 
-- attrs v16.1.0
+- aiohttp v1.3.3
+- appdirs v1.4.3
+- asn1crypto v0.21.1
+- async-timeout v1.2.0
+- attrs v16.3.0
 - beautifulsoup4 v4.5.1
-- cffi v1.7.0
-- click v6.6
-- cryptography v1.5
-- cssselect v0.9.2
-- enum34 v1.1.6
-- flask v0.11.1
-- gevent v1.1.2
-- greenlet v0.4.10
+- cffi v1.9.1
+- chardet v2.3.0
+- click v6.7
+- cryptography v1.8.1
+- cssselect v1.0.1
+- Flask v0.12
+- gevent v1.2.1
+- greenlet v0.4.12
 - httplib2 v0.9.2
-- idna v2.1
-- ipaddress v1.0.16
+- idna v2.5
 - itsdangerous v0.24
-- jinja2 v2.8
+- Jinja2 v2.9.5
+- kafka-python v1.3.1
 - lxml v3.6.4
-- markupsafe v0.23
-- parsel v1.0.3
-- pyasn1 v0.1.9
+- MarkupSafe v1.0
+- multidict v2.1.4
+- packaging v16.8
+- parsel v1.1.0
+- pyasn1 v0.2.3
 - pyasn1-modules v0.0.8
-- pycparser v2.14
-- pydispatcher v2.0.5
-- pyopenssl v16.1.0
+- pycparser v2.17
+- PyDispatcher v2.0.5
+- pyOpenSSL v16.2.0
+- pyparsing v2.2.0
 - python-dateutil v2.5.3
 - queuelib v1.4.2
 - requests v2.11.1
-- scrapy v1.1.2
+- Scrapy v1.1.2
 - service-identity v16.0.0
 - simplejson v3.8.2
 - six v1.10.0
-- twisted v16.4.0
-- w3lib v1.15.0
-- werkzeug v0.11.10
-- zope.interface v4.3.1
+- Twisted v16.4.0
+- w3lib v1.17.0
+- Werkzeug v0.12
+- yarl v0.9.8
+- zope.interface v4.3.3
+
+### Actions Python 2
+
+Les actions Python 2 sont exécutées sous Python 2.7.12. Il s'agit de l'environnement d'exécution par défaut des activités Python si vous ne spécifiez pas l'indicateur `--kind` lorsque vous créez ou mettez à jour une action. Pour sélectionner explicitement cet environnement, utilisez l'instruction `--kind python:2`. Les packages suivants sont disponibles pour leur utilisation dans des actions Python 2, en supplément de la bibliothèque Python 2.7 standard.
+
+- appdirs v1.4.3
+- asn1crypto v0.21.1
+- attrs v16.3.0
+- beautifulsoup4 v4.5.1
+- cffi v1.9.1
+- click v6.7
+- cryptography v1.8.1
+- cssselect v1.0.1
+- enum34 v1.1.6
+- Flask v0.11.1
+- gevent v1.1.2
+- greenlet v0.4.12
+- httplib2 v0.9.2
+- idna v2.5
+- ipaddress v1.0.18
+- itsdangerous v0.24
+- Jinja2 v2.9.5
+- kafka-python v1.3.1
+- lxml v3.6.4
+- MarkupSafe v1.0
+- packaging v16.8
+- parsel v1.1.0
+- pyasn1 v0.2.3
+- pyasn1-modules v0.0.8
+- pycparser v2.17
+- PyDispatcher v2.0.5
+- pyOpenSSL v16.2.0
+- pyparsing v2.2.0
+- python-dateutil v2.5.3
+- queuelib v1.4.2
+- requests v2.11.1
+- Scrapy v1.1.2
+- service-identity v16.0.0
+- simplejson v3.8.2
+- six v1.10.0
+- Twisted v16.4.0
+- virtualenv v15.1.0
+- w3lib v1.17.0
+- Werkzeug v0.12
+- zope.interface v4.3.3
 
 ## Actions Docker
 {: #openwhisk_ref_docker}
@@ -512,7 +521,7 @@ avec précaution.
 ### Actions
 {{site.data.keyword.openwhisk_short}} présente quelques limites
 relatives au système, notamment la quantité de mémoire qu'une action
-peut utiliser et le nombre d'appels d'action autorisés par minute. 
+peut utiliser et le nombre d'appels d'action autorisés par minute.
 
 Le tableau ci-dessous répertorie les limites par défaut pour les actions.
 
@@ -521,8 +530,8 @@ Le tableau ci-dessous répertorie les limites par défaut pour les actions.
 | timeout | un conteneur ne peut pas s'exécuter plus de N millisecondes | par action |  millisecondes | 60000 |
 | memory | un conteneur ne peut pas allouer plus de N Mo de mémoire | par action | Mo | 256 |
 | logs | un conteneur ne peut pas écrire plus de N Mo de données dans la sortie standard | par action | Mo | 10 |
-| concurrent | N activation maximum sont autorisées par espace de nom en cours d'exécution ou en file d'attente pour l'exécution | par espace de nom | nombre | 1000 |
-| minuteRate | un utilisateur ne peut pas appeler plus de tant d'actions par minute | par utilisateur | nombre | 5000 |
+| concurrent | N activations au maximum peuvent être soumises par espace de nom ou placées en file d'attente pour leur exécution.  | par espace de nom | nombre | 1000 |
+| minuteRate | N activations au maximum peuvent être soumises par minute par espace de nom.  | par utilisateur | nombre | 5000 |
 | codeSize | taille maximale du code d'action | non configurable, limite par action | Mo | 48 |
 | parameters | taille maximale des paramètres pouvant être associés | non configurable, limite par action/package/déclencheur | Mo | 1 |
 
@@ -590,10 +599,9 @@ Les déclencheurs sont soumis à un débit de déclenchements par minute, comme 
 
 | limite | description | configurable | unité | défaut |
 | ----- | ----------- | ------------ | -----| ------- |
-| minuteRate | un utilisateur ne peut pas déclencher plus que ce nombre de déclencheurs par minute | par utilisateur | nombre | 5000 |
+| minuteRate | N déclencheurs au maximum peuvent être lancés par minute par espace de nom.  | par utilisateur | nombre | 5000 |
 
 ### Déclencheurs par minute (valeur fixe : 5000)
-{: #openwhisk_syslimits_triggerratelimit}
 * La limite de débit N est 5000 et limite le nombre de déclencheurs dans des fenêtres d'une minute.
 * Un utilisateur ne peut pas changer cette limite lorsqu'il crée le déclencheur.
 * Un appel d'interface de ligne de commande ou API dépassant cette limite reçoit un code d'erreur correspondant au code de statut HTTP `429:

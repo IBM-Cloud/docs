@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -51,7 +51,7 @@ Hai bisogno delle seguenti informazioni:
   * CocoaPods (versione 1.1.0 o superiore).
 
 
-## Installazione dell'SDK client {{site.data.keyword.appid_short_notm}}
+## Installazione dell'SDK client
 {: #install-appid-sdk}
 
 L'SDK client {{site.data.keyword.appid_short_notm}} è distribuito con CocoaPods, un gestore dipendenze per i progetti Swift e Objective-C Cocoa. CocoaPods scarica le risorse utente e le rende disponibili al tuo progetto.
@@ -81,7 +81,7 @@ L'SDK client {{site.data.keyword.appid_short_notm}} è distribuito con CocoaPods
 7. In **Project Settings** > **Info** > **URL Types** aggiungi un tipo di URL. Riempi le caselle di testo **Identifier** e **URL Scheme** con questo valore: $(PRODUCT_BUNDLE_IDENTIFIER)
 
 
-## Inizializzazione dell'SDK client {{site.data.keyword.appid_short_notm}}
+## Inizializzazione dell'SDK client
 {: #initialize-client-sdk}
 
 1. Aggiungi la seguente importazione al tuo file `AppDelegate.swift`:
@@ -99,7 +99,7 @@ L'SDK client {{site.data.keyword.appid_short_notm}} è distribuito con CocoaPods
   {:pre}
 
   * Sostituisci ״tenantId״ con l'ID tenant per il tuo servizio ID applicazione.
-  * Sostituisci AppID.REGION_UK con la tua regione {{site.data.keyword.appid_short_notm}}. 
+  * Sostituisci AppID.REGION_UK con la tua regione {{site.data.keyword.appid_short_notm}}.
 
 3. Aggiungi il seguente codice al tuo file AppDelegate.
 
@@ -184,7 +184,7 @@ Ad esempio, puoi richiamare questo codice per impostare un nuovo attributo o sov
 ### Accesso anonimo
 {: #anonymous notoc}
 
-Con {{site.data.keyword.appid_short_notm}} puoi accedere in modo anonimo, consulta [identità anonima](/docs/services/appid/user-profile.html#anonymous).
+Con {{site.data.keyword.appid_short_notm}} puoi accedere a [in modo anonimo](/docs/services/appid/user-profile.html#anonymous).
 
   ```swift
   class delegate : AuthorizationDelegate {

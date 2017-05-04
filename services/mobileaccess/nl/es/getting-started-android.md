@@ -2,13 +2,15 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+**Importante: El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.**
 
 # Configuración del SDK de Android
 {: #getting-started-android}
@@ -26,7 +28,7 @@ Debe tener lo siguiente:
 * Su **TenantID**. Abra el servicio en el panel de control de {{site.data.keyword.amafull}}. Pulse el botón **Opciones móviles**. Los valores `tenantId` (también conocidos como `appGUID`) se muestran en el campo **GUID de app / TenantId**. Necesitará este valor para inicializar el gestor de autorización.
 * Su **Ruta de aplicación**. Es el URL de la aplicación de programa de fondo. Necesita este valor para enviar solicitudes a sus puntos finales protegidos.
 * Su {{site.data.keyword.Bluemix_notm}} **Región**.  Encontrará su región de {{site.data.keyword.Bluemix_notm}} actual en la cabecera, junto al icono **Avatar** ![icono Avatar](images/face.jpg "icono Avatar"). El valor de región que aparece debe ser uno de los siguientes: `EE.UU. Sur`,  `Sidney` o `Reino Unido` y corresponde  lo valores de SDK requeridos en el código: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` o `BMSClient.REGION_UK`. Necesitará este valor para inicializar el cliente {{site.data.keyword.amashort}}.
-* Un proyecto de Android Studio, configurado para funcionar con Gradle. Para obtener más información sobre la configuración del entorno de desarrollo de Android, consulte las [Herramientas del desarrollador de Google ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://developer.android.com/sdk/index.html "Icono de enlace externo"){: new_window}.
+* Un proyecto de Android Studio, configurado para funcionar con Gradle. Para obtener más información sobre la configuración del entorno de desarrollo de Android, consulte las [Herramientas del desarrollador de Google ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](http://developer.android.com/sdk/index.html){: new_window}.
 
 ## Instalación del SDK del cliente de {{site.data.keyword.amashort}}
 {: #install-mca-sdk}

@@ -19,13 +19,13 @@ Von {{site.data.keyword.mobileanalytics_full}} werden Überwachungs- und Analyse
 <!--
 
 ## Visualizing data with custom charts
-{: #custom-charts}
+{: #custom-charts notoc}
 
 You can visualize the collected analytics data in your analytics repository. This visualization is a powerful way to inspect data for specific use cases. You can create charts with data that is already collected by Operational Analytics, in addition to custom data that you report.
 
 
 ### Creating custom charts for app logs
-{: #custom-charts-client-logs}
+{: #custom-charts-client-logs notoc}
 
 You can create a custom chart for app logs that contain log information that is sent with the Logger API for the platform. The log information also includes contextual information about the device, including environment, app name, and app version.
 
@@ -58,7 +58,7 @@ In this example, you use app log data to create a flow chart. The final graph sh
 7. Click **Save**
 
 ### Exporting custom data
-{: #export-custom-data}
+{: #export-custom-data notoc}
 
 You can export the data from each custom chart into JSON, XML, or CSV format.
 
@@ -67,7 +67,7 @@ The structure of the exported data depends on the chart that is being exported. 
 
 
 ### Exporting and importing custom chart definitions
-{: #export-import-custom}
+{: #export-import-custom notoc}
 
 You can import and export custom chart definitions programmatically or manually in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
 
@@ -97,7 +97,7 @@ Sie können Schwellenwerte in Alertdefinitionen in der {{site.data.keyword.mobil
 Sie können Schwellenwerte so konfigurieren, dass bei ihrem Überschreiten Alerts ausgelöst werden, über die die {{site.data.keyword.mobileanalytics_short}}-Konsolenüberwachung benachrichtigt wird. Die ausgelösten Alerts können in der Konsole dargestellt oder von einem angepassten Web-Hook verarbeitet werden.<!-- This feature provides a proactive means of detecting app log errors, server log errors, extended periods of network latency, and authentication failures.--> Diese Funktion ist eine proaktive Möglichkeit, um Anwendungsprotokollfehler und Serverprotokollfehler zu Anwendungsabstürzen zu erkennen. Bei Verwendung von reaktiven Schwellenwerten und Alerts ist es nicht erforderlich, Daten zu untersuchen und für ein breites Spektrum an Granularität Schwellenwerte festzulegen.
 
 ### Alertdefinition für Anwendungsprotokolle erstellen
-{: #alert-def-client-logs}
+{: #alert-def-client-logs notoc}
 
 Sie können eine Alertdefinition erstellen, die auf Anwendungsprotokollen basiert.
 
@@ -131,7 +131,7 @@ Im folgenden Beispiel wird aus den Daten eines Anwendungsprotokolls eine Alertde
 Sie haben eine Alertdefinition für einen Alert erstellt, der nach Ablauf eines Intervalls von fünf Minuten ausgelöst wird, wenn die Anzahl der App-Protokolle den Schwellenwert von 3 Fehlerprotokollen erreicht oder überschreitet.
 
 ### Alertdefinition für Anwendungsabstürze erstellen
-{: #alert-def-app-crash}
+{: #alert-def-app-crash notoc}
 
 Sie können eine Alertdefinition erstellen, die auf Anwendungsabstürzen basiert.
 
@@ -160,7 +160,7 @@ Im folgenden Beispiel wird aus den Daten eines Anwendungsabsturzes eine Alertdef
 5. Klicken Sie auf **Speichern**.
 
 ### Alertdefinitionen verwalten
-{: #managing-alert-definitions}
+{: #managing-alert-definitions notoc}
 
 Im folgenden Beispiel verwalten Sie Alertdefinitionen auf der Seite 'Alert-Management'.
 
@@ -171,7 +171,7 @@ Im folgenden Beispiel verwalten Sie Alertdefinitionen auf der Seite 'Alert-Manag
 5. Optional: Klicken Sie auf das Papierkorbsymbol, wenn Sie eine Alertdefinition löschen möchten.
 
 ### Alertdetails anzeigen
-{: #viewing-alert-details}
+{: #viewing-alert-details notoc}
 
 Im folgenden Beispiel zeigen Sie die Details ausgelöster Alerts auf der Seite für Alertprotokolle an.
 
@@ -190,7 +190,7 @@ Im folgenden Beispiel zeigen Sie die Details ausgelöster Alerts auf der Seite f
 Sie können Informationen zu Anwendungsabstürzen in der {{site.data.keyword.mobileanalytics_short}}-Konsole anzeigen, um Ihre Anwendungen besser überwachen und entsprechende Fehler beheben zu können.
 
 ### Überwachung von Anwendungsabstürzen
-{: #app-crash}
+{: #app-crash notoc}
 
 Auf der Seite mit den Abstürzen sehen Sie in der Tabelle mit der Absturzübersicht die folgenden Datenspalten:
 
@@ -207,7 +207,7 @@ Sie können Absturzdaten auf zwei Arten anzeigen:
 2. Gesamtsumme der Abstürze anzeigen: Gesamte Abstürze im zeitlichen Verlauf
 
 ### Fehlerbehebung für App-Abstürze
-{: #app-crash-troubleshooting}
+{: #app-crash-troubleshooting notoc}
 
 Die Seite Zur Fehlerbehebung in der <!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}}-Konsole bietet eine differenzierte Ansicht der App-Abstürze; hierfür wird die Tabelle mit der Zusammenfassung der Abstürze verwendet.
 

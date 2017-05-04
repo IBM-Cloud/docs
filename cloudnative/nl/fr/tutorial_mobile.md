@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -14,13 +14,14 @@ lastupdated: "2017-03-17"
 # Tutoriel de bout en bout du module de démarrage Mobile Basic
 {: #tutorial}
 
-Le tutoriel de bout en bout suivant couvre les étapes de création d'un projet depuis le module de démarrage Mobile Basic, y compris les outils que vous devez avoir installés et, par la suite, les étapes pour exécuter le projet sous Xcode et Android Studio.
+Le tutoriel de bout en bout suivant couvre les étapes de création d'un projet depuis le module de démarrage Mobile Basic, ce qui inclut l'installation des outils prérequis et la procédure d'exécution du projet dans Xcode et Android Studio.
 
+Vous pouvez créer un projet en utilisant la console [{{site.data.keyword.dev_console}}](#create-devex) reposant sur le Web ou le plug-in [{{site.data.keyword.dev_cli_notm}}](#create-cli) géré par commande.
 
 ## Installation des outils de développement
 {: #dev_tools}
 
-Vérifiez que vous avez installé les [outils prérequis pour le développeur![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](get_code.html#prereq-dev-tools){: new_window}.
+Prenez soin d'installer les [outils prérequis pour le développeur![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](get_code.html#prereq-dev-tools){: new_window}.
 
 
 ## Création d'un projet en utilisant la console {{site.data.keyword.dev_console}}
@@ -28,7 +29,7 @@ Vérifiez que vous avez installé les [outils prérequis pour le développeur![I
 
 1. Créez un projet {{site.data.keyword.dev_console}} dans {{site.data.keyword.Bluemix}}.
 
-   1. Dans la page de mise en route de la console {{site.data.keyword.dev_console}}, cliquez sur la commande de création de projet.
+   1. Dans la page de [**mise en route** ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://console.ng.bluemix.net/developer/getting-started/) de la console {{site.data.keyword.dev_console}},  cliquez sur la commande de création de projet..
 
       Vous pouvez également cliquer sur la commande de création de projet dans la page des projets.
 
@@ -53,7 +54,7 @@ Vérifiez que vous avez installé les [outils prérequis pour le développeur![I
    
    3. Activez **Authentification**.
    
-   4. Sélectionnez votre fournisseur d'identité et saisissez les informations requises pour le configurer. Vous pouvez activer un seul fournisseur d'identité.
+   4. Sélectionnez votre fournisseur d'identité et entrez les informations pour le configurer. Vous pouvez activer un seul fournisseur d'identité.
    
    5. Voir la rubrique relative à la [configuration des fournisseurs d'identité} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/appid/identity-providers.html){: new_window} pour plus d'informations sur la configuration de l'authentification.
 
@@ -99,7 +100,7 @@ Vérifiez que vous avez installé les [outils prérequis pour le développeur![I
 
    5. Voir [Initiation à {{site.data.keyword.objectstorageshort}} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/ObjectStorage/index.html){: new_window} pour plus d'informations sur la configuration d'{{site.data.keyword.objectstorageshort}}.
 
-6. Générez votre code de projet.
+6. Générez votre code de projet :
 
    1. Cliquez sur  la commande relative à l'obtention du code sur la page de présentation du projet pour sélectionner votre langue.
    
@@ -109,13 +110,21 @@ Vérifiez que vous avez installé les [outils prérequis pour le développeur![I
    
    3. Quand la génération du code du projet est terminée, cliquez sur la commande de téléchargement Swift pour télécharger l'archive du projet.
 
-7. Facultatif : [mettez à jour votre projet](project_overview_page.html#update_language) pour générer un nouveau langage.
+7. Commencez à utiliser le projet que vous avez téléchargé :
+
+	1. Développez le fichier archivé.
+	
+	2. Accédez au nouveau répertoire de projet.
+	
+	3. Utilisez la console {{site.data.keyword.dev_cli_notm}} pour poursuivre.
+
+8. Facultatif : [mettez à jour votre projet](project_overview_page.html#update_language) pour générer un nouveau langage.
 
 
 ## Création d'un projet en utilisant le plug-in {{site.data.keyword.dev_cli_notm}}
 {: #create-cli}
 
-1. Assurez-vous que vous avez bien installé le plug-in [{{site.data.keyword.dev_cli_short}}](dev_cli.html).
+1. Prenez soin d'installer le plug-in [{{site.data.keyword.dev_cli_short}}](dev_cli.html).
 
 2. Dans votre invite de terminal, accédez au répertoire local de votre choix et exécutez la commande suivante.
 

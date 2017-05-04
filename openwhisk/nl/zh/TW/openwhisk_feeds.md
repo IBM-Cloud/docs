@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-21"
+lastupdated: "2017-04-04"
 
 ---
 
@@ -78,9 +78,9 @@ an open repo -->
 
 如果事件生產者支援 Webhook/回呼機能，則透過連結鉤可以輕鬆地設定資訊來源。
 
-運用此方法，*不需要* 在 OpenWhisk 外部使用任何持續性服務。所有資訊來源管理都會透過 Stateless {{site.data.keyword.openwhisk_short}} *資訊來源動作* 自然進行，而這些資訊來源動作會直接與協力廠商的 Webhook API 進行協議。
+運用此方法，*不需要* 在 {{site.data.keyword.openwhisk_short}} 外部使用任何持續性服務。所有資訊來源管理都會透過 Stateless {{site.data.keyword.openwhisk_short}} *資訊來源動作* 自然進行，而這些資訊來源動作會直接與協力廠商的 Webhook API 進行協議。
 
-使用 `CREATE` 呼叫時，資訊來源動作只會安裝某個其他服務的 Webhook，並要求遠端服務將通知 POST 至 OpenWhisk中的適當 `fireTrigger` URL。
+使用 `CREATE` 呼叫時，資訊來源動作只會安裝某個其他服務的 Webhook，並要求遠端服務將通知 POST 至 {{site.data.keyword.openwhisk_short}} 中的適當 `fireTrigger` URL。
 
 應該指示 Webhook 將通知傳送至 URL，例如：
 
@@ -91,7 +91,7 @@ an open repo -->
 
 ## 使用輪詢實作資訊來源
 
-可以在 OpenWhisk 內設定 {{site.data.keyword.openwhisk_short}} *動作* 來完整輪詢資訊來源，而不需要使用任何持續性連線或外部服務。
+可以在 {{site.data.keyword.openwhisk_short}} 內設定 {{site.data.keyword.openwhisk_short}} *動作* 來完整輪詢資訊來源，而不需要使用任何持續性連線或外部服務。
 
 針對無法使用 Webhook 但不需要高容量或低延遲回應時間的資訊來源，輪詢是具吸引力的選項。
 
@@ -107,7 +107,7 @@ an open repo -->
 
 前兩個架構選項十分簡單且容易實作。不過，如果您想要有高效能資訊來源，則最好的選擇是持續性連線及長期輪詢或類似技術。
 
-因為 {{site.data.keyword.openwhisk_short}} 動作必須是短時間執行的，所以動作無法維護與協力廠商的持續性連線。相反地，我們必須使用隨時都執行的個別服務（在 OpenWhisk 外部）。我們將這些服務稱為*提供者服務*。提供者服務可以維護支援長期輪詢或其他連線型通知的協力廠商事件來源連線。
+因為 {{site.data.keyword.openwhisk_short}} 動作必須是短時間執行的，所以動作無法維護與協力廠商的持續性連線。相反地，我們必須使用隨時都執行的個別服務（在 {{site.data.keyword.openwhisk_short}} 外）。我們將這些服務稱為*提供者服務*。提供者服務可以維護支援長期輪詢或其他連線型通知的協力廠商事件來源連線。
 
 提供者服務應該提供容許 {{site.data.keyword.openwhisk_short}} *資訊來源動作* 控制資訊來源的 REST API。提供者服務會作為事件提供者與 {{site.data.keyword.openwhisk_short}} 之間的 Proxy -- 當它接收到來自協力廠商的事件時，會透過發動觸發程式將它們傳送至 {{site.data.keyword.openwhisk_short}}。
 

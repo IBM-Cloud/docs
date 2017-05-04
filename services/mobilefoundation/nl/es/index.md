@@ -14,7 +14,7 @@ lastupdated:  "2017-02-17"
 # Iniciación a Mobile Foundation
 {: #gettingstartedtemplate}
 
-{{site.data.keyword.mobilefoundation_long}} acelera la configuración de un entorno de {{site.data.keyword.mfp_full}} desde el cual puede desarrollar, probar y operar aplicaciones móviles de empresa. {{site.data.keyword.mobilefoundation_short}} está disponible bajo dos de servicio distintos: Developer y Professional 1 Application.
+{{site.data.keyword.mobilefoundation_long}} acelera la configuración de un entorno de {{site.data.keyword.mfp_full}} desde el cual puede desarrollar, probar y operar apps móviles de empresa. {{site.data.keyword.mobilefoundation_short}} está disponible bajo dos de servicio distintos: Developer y Professional 1 Application.
 {:shortdesc}
 
 <!-- The Professional 1 Application plan allows the {{site.data.keyword.mobilefoundation_short}} server to be deployed on a scalable container group.--> Utilizando el plan Professional 1 Application se puede gestionar una sola aplicación incorporada en una o todas las plataformas operativas soportadas como Android, iOS, Windows o Mobile Web. El plan Developer <!-- does not support {{site.data.keyword.mobilefoundation_short}} deployment on a container group with more than 1 node. This plan --> está pensado para entornos de desarrollo y pruebas.

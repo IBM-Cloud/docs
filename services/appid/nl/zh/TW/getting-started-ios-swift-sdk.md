@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -51,7 +51,7 @@ lastupdated: "2017-03-30"
   * CocoaPods（1.1.0 版或更新版本）。
 
 
-## 安裝 {{site.data.keyword.appid_short_notm}} 用戶端 SDK
+## 安裝用戶端 SDK
 {: #install-appid-sdk}
 
 {{site.data.keyword.appid_short_notm}} 用戶端 SDK 是使用 CocoaPods（Swift 及 Objective-C Cocoa 專案的相依關係管理程式）進行配送。CocoaPods 會下載構件，並讓它們可供您的專案使用。
@@ -82,7 +82,7 @@ lastupdated: "2017-03-30"
 7. 在**專案設定** > **資訊** > **URL 類型**下，新增「URL 類型」。請將下列值填入 **ID** 文字框及 **URL 架構**文字框：$(PRODUCT_BUNDLE_IDENTIFIER)
 
 
-## 起始設定 {{site.data.keyword.appid_short_notm}} 用戶端 SDK
+## 起始設定用戶端 SDK
 {: #initialize-client-sdk}
 
 1. 將下列 import 新增至 `AppDelegate.swift` 檔案：
@@ -182,7 +182,7 @@ lastupdated: "2017-03-30"
 ### 匿名登入
 {: #anonymous notoc}
 
-使用 {{site.data.keyword.appid_short_notm}}，您可以匿名登入，請參閱[匿名身分](/docs/services/appid/user-profile.html#anonymous)。
+使用 {{site.data.keyword.appid_short_notm}}，您可以[匿名](/docs/services/appid/user-profile.html#anonymous)登入。
 
   ```swift
   class delegate : AuthorizationDelegate {

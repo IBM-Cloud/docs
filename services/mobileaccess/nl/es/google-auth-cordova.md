@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+**Importante: El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.**
 
 # Habilitación de la autenticación de Google para apps de Cordova
 {: #google-auth-cordova}
@@ -39,7 +41,7 @@ Los pasos necesarios para configurar la plataforma Android de una aplicación de
    * [Creación de un proyecto en Google Developer Console](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html#create-google-project). Muestra cómo configurar el servicio de autenticación en el sitio web de Google Developers.
    * [Configuración de MCA para la autenticación de Google](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html#google-auth-android-config). Muestra cómo configurar {{site.data.keyword.amashort}} para utilizar la autorización de Google.
 
-### Configure el SDK de cliente {{site.data.keyword.amashort}} para Android Cordova
+### Configure el SDK de cliente para Android Cordova
 
 1. En la carpeta del proyecto de Android, abra el archivo `build.gradle` para el módulo de aplicación (**no** el archivo `build.gradle` del proyecto).
 	Busque la sección de dependencias y añada una nueva dependencia de compilación para el SDK del cliente:
@@ -103,8 +105,8 @@ Habilite `Keychain Sharing`. Vaya al separador `Capacidades` y `active` `Keychai
 Inicialice el gestor de autorización de {{site.data.keyword.amashort}} en Objective-C en el archivo `AppDelgate.m`.
 
 ```
-#import "<your_module_name>-Swift.h" 
- 
+#import "<your_module_name>-Swift.h"
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 
 {
@@ -121,14 +123,15 @@ Inicialice el gestor de autorización de {{site.data.keyword.amashort}} en Objec
 
 - (BOOL)application: (UIApplication *)application openURL: (NSURL *)url
 					sourceApplication: (NSString *)sourceApplication annotation: (id)annotation {
-	  
-	   return [[GoogleAuthenticationManager sharedInstance] onOpenURLWithApplication:application url:url 
+	return [[GoogleAuthenticationManager sharedInstance] onOpenURLWithApplication:application url:url 
 	sourceApplication:sourceApplication annotation:annotation];
 }
 ```
 {: codeblock}
 
-**Nota:**
+
+####Nota:
+{: #note notoc}
 
 * Sustituya `<your_module_name>` por el nombre de módulo del proyecto. Por ejemplo, si el nombre del módulo es `Cordova`, la línea de importación debe ser `#import "Cordova-Swift.h"` Para encontrar el nombre del módulo vaya al separador `Crear configuración`, `Paquete` > `Nombre del módulo del producto`.
 * Sustituya `<tenantId>` por su id de arrendatario (consulte [Antes de empezar](#before-you-begin)).

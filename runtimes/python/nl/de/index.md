@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-01-25"
 
 ---
 
@@ -53,5 +53,7 @@ Folgende Python-Versionen stehen im [Python-Buildpack](https://github.com/cloudf
 Wenn für Ihre Anwendung eine Python-Version erforderlich ist, die nicht aufgelistet ist, können Sie die App mit dem externen [Python-Buildpack](https://github.com/cloudfoundry/python-buildpack) implementieren.
 
 # Zugehörige Links
+{: #rellinks notoc}
 ## Allgemein
+{: #general notoc}
 * [Cloud Foundry-Buildpack für Python](https://github.com/cloudfoundry/python-buildpack)

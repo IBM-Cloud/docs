@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -11,11 +11,12 @@ lastupdated: "2017-03-17"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Umfassendes Lernprogramm zum mobilen Basis-Starter (Mobile Basic Starter)
+# Umfassendes Lernprogramm zum Mobile Basic Starter
 {: #tutorial}
 
-Das folgende umfassende Lernprogramm führt Sie durch die Schritte zur Erstellung eines Projekts aus dem mobilen Basis-Starter (Mobile Basic Starter), inklusive der Tools, die Sie installiert haben müssen, sowie durch die Schritte zum Ausführen des Projekts in Xcode und Android Studio.
+Das folgende umfassende Lernprogramm führt Sie durch die Schritte zur Erstellung eines Projekts mit dem Mobile Basic Starter. Dies schließt das Installieren erforderlicher Tools ein sowie die Schritte zum Ausführen des Projekts in Xcode und Android Studio.
 
+Sie können ein Projekt entweder mithilfe der webbasierten [{{site.data.keyword.dev_console}}](#create-devex) oder über das befehlsgesteuerte [{{site.data.keyword.dev_cli_notm}}](#create-cli) erstellen.
 
 ## Entwicklertools installieren
 {: #dev_tools}
@@ -26,17 +27,17 @@ Stellen Sie sicher, dass die [vorausgesetzten Entwicklertools ![Symbol für exte
 ## Projekt mit der {{site.data.keyword.dev_console}} erstellen
 {: #create-devex}
 
-1. Erstellen Sie ein {{site.data.keyword.dev_console}}-Projekt in {{site.data.keyword.Bluemix}}. 
+1. Erstellen Sie ein {{site.data.keyword.dev_console}}-Projekt in {{site.data.keyword.Bluemix}}.
 
-   1. Klicken Sie auf der Seite **Einführung** in der {{site.data.keyword.dev_console}} auf **Projekt erstellen**.
+   1. Klicken Sie auf der Seite [**Einführung** ![Symbol für externen Link](../icons/launch-glyph.svg " Symbol für externen Link")](https://console.ng.bluemix.net/developer/getting-started/) in der {{site.data.keyword.dev_console}} auf **Projekt erstellen**.
 
       Alternativ können Sie auf der Seite **Projekte** auf **Projekt erstellen** klicken.
 
-   2. Wählen Sie **Mobile App** aus und klicken Sie auf **Weiter**. 
+   2. Wählen Sie **Mobile App** aus und klicken Sie auf **Weiter**.
 
-   3. Wählen Sie **Basis** aus und klicken Sie auf **Weiter**. 
+   3. Wählen Sie **Basis** aus und klicken Sie auf **Weiter**.
 
-   4. Geben Sie Ihren Projektnamen ein. Verwenden Sie für dieses Lernprogramm `MobileBasicProject`. 
+   4. Geben Sie Ihren Projektnamen ein. Verwenden Sie für dieses Lernprogramm `MobileBasicProject`.
 
    5. Wählen Sie Ihre Plattform aus. Verwenden Sie für dieses Lernprogramm `Swift`.
    
@@ -46,7 +47,7 @@ Stellen Sie sicher, dass die [vorausgesetzten Entwicklertools ![Symbol für exte
 
    1. Klicken Sie auf der Seite **Projektübersicht** für **Authentication** auf **Hinzufügen**.
 
-      Alternativ können Sie **Erstellen** oder **Vorhandenen hinzufügen** auf der Seite **Funktionen > Authentication** aus. 
+      Alternativ können Sie **Erstellen** oder **Vorhandenen hinzufügen** auf der Seite **Funktionen > Authentication** aus.
 
    2. Geben Sie Ihren Servicenamen ein und klicken Sie auf **Erstellen**.
    
@@ -54,13 +55,13 @@ Stellen Sie sicher, dass die [vorausgesetzten Entwicklertools ![Symbol für exte
    
    4. Wählen Sie Ihren Identitätsprovider aus und geben Sie für dessen Konfiguration die erforderlichen Informationen ein. Sie können nur einen einzigen Identitätsprovider aktivieren.
    
-   5. Weitere Informationen zum Konfigurieren von Authentication finden Sie unter [Identitätsprovider konfigurieren} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/appid/identity-providers.html){: new_window}. 
+   5. Weitere Informationen zum Konfigurieren von Authentication finden Sie unter [Identitätsprovider konfigurieren} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/appid/identity-providers.html){: new_window}.
 
 3. Optional: Fügen Sie die Analytics-Funktion hinzu.
 
    1. Klicken Sie auf der Seite **Projektübersicht** für **Analytics** auf **Hinzufügen**.
 
-      Alternativ können Sie auf der Seite **Funktionen > Analytics** auf **Erstellen** oder **Vorhandenen hinzufügen** klicken. 
+      Alternativ können Sie auf der Seite **Funktionen > Analytics** auf **Erstellen** oder **Vorhandenen hinzufügen** klicken.
 
    2. Geben Sie Ihren Servicenamen ein und klicken Sie auf **Erstellen**.
    
@@ -72,7 +73,7 @@ Stellen Sie sicher, dass die [vorausgesetzten Entwicklertools ![Symbol für exte
 
    1. Klicken Sie auf der Seite **Projektübersicht** für **{{site.data.keyword.mobilepushshort}}** auf **Hinzufügen**.
 
-      Alternativ können Sie auf der Seite **Funktionen > {{site.data.keyword.mobilepushshort}}** auf **Erstellen** oder **Vorhandenen hinzufügen** klicken. 
+      Alternativ können Sie auf der Seite **Funktionen > {{site.data.keyword.mobilepushshort}}** auf **Erstellen** oder **Vorhandenen hinzufügen** klicken.
 
    2. Geben Sie Ihren Servicenamen ein und klicken Sie auf **Erstellen**.
 
@@ -94,47 +95,55 @@ Stellen Sie sicher, dass die [vorausgesetzten Entwicklertools ![Symbol für exte
 
    5. Weitere Informationen zum Konfigurieren von {{site.data.keyword.objectstorageshort}} finden Sie unter [Einführung in {{site.data.keyword.objectstorageshort}} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/ObjectStorage/index.html){: new_window}.
 
-6. Generieren Sie den Projektcode.
+6. Generieren Sie den Projektcode:
 
-   1. Klicken Sie auf der Seite **Projektübersicht** auf **Code abrufen**, um Ihre Sprache auszuwählen. 
+   1. Klicken Sie auf der Seite **Projektübersicht** auf **Code abrufen**, um Ihre Sprache auszuwählen.
    
       Alternativ können Sie auf die Seite **Code** klicken.
       
-   2. Klicken Sie auf **Swift generieren**. 
+   2. Klicken Sie auf **Swift generieren**.
    
-   3. Wenn die Projektcodegenerierung fertig ist, klicken Sie auf **Swift herunterladen**, um Ihr Projektarchiv herunterzuladen. 
+   3. Wenn die Projektcodegenerierung fertig ist, klicken Sie auf **Swift herunterladen**, um Ihr Projektarchiv herunterzuladen.
 
-7. Optional: [Aktualisieren Sie das Projekt](project_overview_page.html#update_language), um eine neue Sprache zu generieren. 
+7. Beginnen Sie mit Ihrem heruntergeladenen Projekt zu arbeiten:
+
+	1. Dekomprimieren Sie die archivierte Datei.
+	
+	2. Navigieren Sie zum neuen Projektverzeichnis.
+	
+	3. Verwenden Sie das {{site.data.keyword.dev_cli_notm}}, um fortzufahren.
+
+8. Optional: [Aktualisieren Sie das Projekt](project_overview_page.html#update_language), um eine neue Sprache zu generieren.
 
 
 ## Projekt mit dem {{site.data.keyword.dev_cli_notm}} erstellen
 {: #create-cli}
 
-1. Stellen Sie sicher, dass das [{{site.data.keyword.dev_cli_short}}](dev_cli.html) installiert ist. 
+1. Stellen Sie sicher, dass das [{{site.data.keyword.dev_cli_short}}](dev_cli.html) installiert ist.
 
-2. Navigieren Sie in der Eingabeaufforderung des Terminals zu einem lokalen Verzeichnis Ihrer Wahl und führen Sie den folgenden Befehl aus. 
+2. Navigieren Sie in der Eingabeaufforderung des Terminals zu einem lokalen Verzeichnis Ihrer Wahl und führen Sie den folgenden Befehl aus.
 
 	```
 	bx dev create
 	```
 	{: codeblock}
 	
-3. Geben Sie bei Aufforderung die folgenden Werte an: 
+3. Geben Sie bei Aufforderung die folgenden Werte an:
 
 	* Wählen Sie ein Muster aus: 2 (für Mobil)
 	* Wählen Sie einen Starter aus: 1 (für Basis)
 	* Wählen Sie eine Plattform aus: 3 (für iOS Swift)
 	* Geben Sie einen Namen für Ihr Projekt ein: `MobileBasicProjectCLI`
 
-4. Wenn Sie Services zu Ihrem Projekt hinzufügen möchten, geben Sie `y` ein, wenn Sie in der Eingabeaufforderung danach gefragt werden, und beantworten Sie die restlichen Fragen. 
+4. Wenn Sie Services zu Ihrem Projekt hinzufügen möchten, geben Sie `y` ein, wenn Sie in der Eingabeaufforderung danach gefragt werden, und beantworten Sie die restlichen Fragen.
 
-5. Navigieren Sie nach dem erfolgreichen Speichern des Projekts `MobileBasicProjectCLI` zum Ordner `MobileBasicProjectCLI/MobileBasicProjectCLI-Swift`. 
+5. Navigieren Sie nach dem erfolgreichen Speichern des Projekts `MobileBasicProjectCLI` zum Ordner `MobileBasicProjectCLI/MobileBasicProjectCLI-Swift`.
 
 
 ## Swift-Projekt in Xcode ausführen
 {: #run_swift}
 
-1. Extrahieren Sie die Datei `MobileBasicProject-Swift.zip`. 
+1. Extrahieren Sie die Datei `MobileBasicProject-Swift.zip`.
 
 2. Öffnen Sie die Datei `README.md` in einem Markdown-Viewer, um die Schritte zur Konfiguration Ihres Projekts zu überprüfen.
 
@@ -154,7 +163,7 @@ Stellen Sie sicher, dass die [vorausgesetzten Entwicklertools ![Symbol für exte
 ## Cordova-Projekt in Xcode ausführen
 {: #run_cordova_xcode}
 
-1. Extrahieren Sie die Datei `MobileBasicProject-Cordova.zip`. 
+1. Extrahieren Sie die Datei `MobileBasicProject-Cordova.zip`.
 
 2. Öffnen Sie die Datei `README.md` in einem Markdown-Viewer, um Ihr Projekt zu konfigurieren.
 
@@ -178,7 +187,7 @@ Stellen Sie sicher, dass die [vorausgesetzten Entwicklertools ![Symbol für exte
 ## Android-Projekt in Android Studio ausführen
 {: #run_android}
 
-1. Extrahieren Sie die Datei `MobileBasicProject-Android.zip`. 
+1. Extrahieren Sie die Datei `MobileBasicProject-Android.zip`.
 
 2. Öffnen Sie die Datei `README.md` in einem Markdown-Viewer, um Ihr Projekt zu konfigurieren.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+**重要信息：{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。**
 
 # 设置 Cordova 插件
 {: #getting-started-cordova}
@@ -30,7 +31,7 @@ lastupdated: "2017-01-15"
 * 后端应用程序的 URL（**应用程序路径**）。您将需要此值来向后端应用程序的受保护端点发送请求。
 * **TenantID** 值。在 {{site.data.keyword.amashort}}“仪表板”中打开服务。单击**移动选项**按钮。`tenantId`（也称为 `appGUID`）值会显示在**应用程序 GUID/TenantId** 字段中。您将需要此值来初始化授权管理器。
 * {{site.data.keyword.Bluemix_notm}} **区域**。您可以在**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的头中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。显示的区域值应为以下某个值：`US South`、`United Kingdom` 或 `Sydney`，并对应于 WebView Javascript 代码中需要的 SDK 值：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`。您将需要此值来初始化 {{site.data.keyword.amashort}} 客户端。
-* Cordova 应用程序或现有项目。有关如何设置 Cordova 应用程序的更多信息，请参阅 [Cordova Web 站点![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cordova.apache.org/ " 外部链接图标"){: new_window}。
+* Cordova 应用程序或现有项目。有关如何设置 Cordova 应用程序的更多信息，请参阅 [Cordova Web 站点 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cordova.apache.org/){: new_window}。
 
 ## 安装 {{site.data.keyword.amashort}} Cordova 插件
 {: #getting-started-cordova-plugin}
@@ -66,7 +67,7 @@ lastupdated: "2017-01-15"
 	```
 	{: codeblock}
 
-	*minSdkVersion* 值必须不低于 `15`。请参阅 [Android 平台指南 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cordova.apache.org/docs/en/latest/guide/platforms/android/ "外部链接图标"){: new_window} 以及时了解 Android SDK 受支援的 *targetSdkVersion*。
+	*minSdkVersion* 值必须不低于 `15`。请参阅 [Android 平台指南 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cordova.apache.org/docs/en/latest/guide/platforms/android/){: new_window} 以了解有关 Android SDK 受支持的 *targetSdkVersion* 的最新信息。
 
 3. 如果添加的是 iOS 操作系统，请针对目标声明更新 `<platform name="ios">` 元素：
 
@@ -108,7 +109,7 @@ lastupdated: "2017-01-15"
 
 	2. 使用 Xcode 构建并运行应用程序。
 
-	**注**：运行 `cordova build ios` 时您可能会收到以下错误。导致此问题的原因是依赖关系插件中存在错误，此问题在[问题 12 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/blakgeek/cordova-plugin-cocoapods-support/issues/12 "外部链接图标"){: new_window} 中进行跟踪。您仍可以通过模拟器或设备在 Xcode 中运行 iOS 项目。
+	**注**：运行 `cordova build ios` 时您可能会收到以下错误。导致此问题的原因是依赖关系插件中存在错误，此问题在[问题 12 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/blakgeek/cordova-plugin-cocoapods-support/issues/12){: new_window} 中进行跟踪。您仍可以通过模拟器或设备在 Xcode 中运行 iOS 项目。
 
 	```
 	xcodebuild: error: Unable to find a destination matching the provided destination specifier:

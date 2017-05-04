@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -11,6 +11,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+**Important : Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.**
 
 # Authentification d'utilisateurs à l'aide d'un fournisseur d'identité personnalisé
 {: #custom-id}
@@ -79,7 +81,7 @@ personnaliser les flux d'authentification.
 	{: codeblock}
 
 1. Implémentez éventuellement des flux de collecte de données d'identification personnalisés sur le client, notamment l'authentification
-multi-étapes et multi-forme. De la même manière que pour la demande d'authentification personnalisée, vous devez créer la structure de la réponse personnalisée.
+multiétape et multiforme. De la même manière que pour la demande d'authentification personnalisée, vous devez créer la structure de la réponse personnalisée.
 
   Exemple de réponse personnalisée à une demande d'authentification envoyée par le client :
 
@@ -117,8 +119,8 @@ Vous pouvez utiliser comme référence l'un des exemples d'implémentation Node.
 fournisseur d'identité personnalisé. Téléchargez le code d'application complet depuis les référentiels
 GitHub.
 
- * [Exemple simple ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "Icône de lien externe "){: new_window}
- * [Exemple avancé ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management "Icône de lien externe"){: new_window}
+ * [Exemple simple ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}
+ * [Exemple avancé ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management){: new_window}
 
 ## Communications standard entre le serveur {{site.data.keyword.amashort}} et un fournisseur d'identité personnalisé
 {: #custom-id-comm}

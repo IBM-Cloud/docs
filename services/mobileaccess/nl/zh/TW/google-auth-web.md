@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -11,6 +11,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+**重要事項：{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。**
 
 # 啟用 Web 應用程式的 Google 鑑別
 {: #google-auth-web}
@@ -35,7 +37,7 @@ lastupdated: "2017-01-15"
 ## 配置網站的 Google 應用程式
 {: #google-auth-config}
 
-若要開始使用 Google 作為身分提供者，請在 [Google Developer Console ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.developers.google.com "外部鏈結圖示"){: new_window} 中建立專案。建立專案的一部分是取得 **Google 用戶端 ID** 及**密碼**。「Google 用戶端 ID」和「密碼」是 Google 鑑別所使用之您的應用程式的唯一 ID，並且是設定 {{site.data.keyword.amashort}} 儀表板的必要項目。
+若要開始使用 Google 作為身分提供者，請在 [Google Developer Console ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.developers.google.com){: new_window} 中建立專案。建立專案的一部分是取得 **Google 用戶端 ID** 及**密碼**。「Google 用戶端 ID」和「密碼」是 Google 鑑別所使用之您的應用程式的唯一 ID，並且是設定 {{site.data.keyword.amashort}} 儀表板的必要項目。
 
 1. 在 Google Developer Console 中，開啟 Google 應用程式。
 3. 新增 **Google+** API。
@@ -43,7 +45,7 @@ lastupdated: "2017-01-15"
 4. 儲存變更。請記下 **Google 用戶端 ID** 和**應用程式密碼**。
 
 
-## 配置 {{site.data.keyword.amashort}} 進行 Google 鑑別
+## 配置 Mobile Client Access 進行 Google 鑑別
 {: #google-auth-config-ama}
 
 有了「Google 應用程式 ID」和「密碼」之後，即可在 {{site.data.keyword.amashort}} 儀表板中啟用 Google 鑑別。
@@ -59,7 +61,7 @@ lastupdated: "2017-01-15"
 5. 按一下**儲存**。
 
 
-## 使用 Google 作為身分提供者來實作 {{site.data.keyword.amashort}} 授權流程
+## 使用 Google 作為身分提供者實作 Mobile Client Access 授權流程
 {: #google-auth-flow}
 
 `VCAP_SERVICES` 環境變數是針對每一個 {{site.data.keyword.amashort}} 服務實例自動建立的，並且包含授權處理程序所需的內容。其由 JSON 物件組成，按一下 {{site.data.keyword.amashort}} 服務儀表板中的**服務認證**標籤，即可進行檢視。
@@ -98,27 +100,22 @@ lastupdated: "2017-01-15"
 		res.send("Hello from protected endpoint");
 	});
 
-	app.get("/protected", checkAuthentication, function(req, res, next) {
-		res.send("Hello from protected endpoint");
-		function checkAuthentication(req, res, next) {
-
-			// Check if user is authenticated
+	function checkAuthentication(req, res, next) {
+		// Check if user is authenticated
 			if (req.session.userIdentity) {
 				next()
-			} else {
-				// If not - redirect to authorization server
-				var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
-				var authorizationEndpoint = mcaCredentials.authorizationEndpoint;
-				var clientId = mcaCredentials.clientId;
-				var redirectUri = "http://some-server/oauth/callback"; // Your Web application redirect URI
-				var redirectUrl = authorizationEndpoint + "?response_type=code";
-				redirectUrl += "&client_id=" + clientId;
-				redirectUrl += "&redirect_uri=" + redirectUri;
-				res.redirect(redirectUrl);
-				}
-		 	}
-	   	}
-       }
+		} else {
+			// If not - redirect to authorization server
+			var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
+			var authorizationEndpoint = mcaCredentials.authorizationEndpoint;
+			var clientId = mcaCredentials.clientId;
+			var redirectUri = "http://some-server/oauth/callback"; // Your Web application redirect URI
+			var redirectUrl = authorizationEndpoint + "?response_type=code";
+			redirectUrl += "&client_id=" + clientId;
+			redirectUrl += "&redirect_uri=" + redirectUri;
+			res.redirect(redirectUrl);
+		}
+	}
 	```
 	{: codeblock}
 
@@ -193,7 +190,7 @@ lastupdated: "2017-01-15"
 	收到存取權和身分記號之後，您可以將 Web 階段作業標示為已鑑別，並可選擇持續保存這些記號。  
 
 
-##使用取得的存取及身分記號
+## 使用取得的存取及身分記號
 {: #google-auth-using-token}
 
 身分記號包含使用者身分的相關資訊。若為 Google 鑑別，記號會包含使用者同意共用的所有資訊，例如完整名稱、人員資訊照片的 URL 等。  
@@ -204,7 +201,7 @@ lastupdated: "2017-01-15"
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-####提示：
+#### 提示：
 {: #tips}
 
 * `accessToken` 及 `idToken` 必須以空格區隔。

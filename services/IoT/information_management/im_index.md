@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-04-10"
+lastupdated: "2017-04-25"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-04-10"
 {: #im_index}
 
 Application interfaces extend the [device type](#resources) concept to better control the data that flows through {{site.data.keyword.iot_short_notm}} and to provide a device-agnostic view of IoT data.
-{:shortdesc}.
+{:shortdesc}
 
 **Important:** The interface mapping feature is a beta feature. Ongoing beta updates as well as the final release might include changes that are incompatible with the current version. It is strongly recommended that beta features are not used in production applications until the final release. To receive additional information and provide feedback on this beta, you can [register for the Information Management Beta program ![External link icon](../../../icons/launch-glyph.svg)](https://www.ibm.com/software/support/trial/cst/forms/nomination.wss?id=7050){:new_window}.
 
@@ -106,7 +106,7 @@ Thing                         | A programmatic construct that logically represen
 
 Supporting resources                        | Description       
 ------------- | ------------- | -------------  
-Physical interface                         | A programmatic construct that defines the event types and associated device properties that are associated with a single device type and that is associated with one or more event types. The physical interface is defined by event schemas.   
+Physical interface                         | A programmatic construct that defines the event types and associated device properties that are associated with a single device type. The physical interface is defined by event schemas.   
 Mappings                         | A programmatic construct that defines how properties that are associated with inbound events are mapped to properties that are defined on an application interface. </br>**Important:** At least one application interface must be associated with a device type before any mappings can be defined.
 
 ## High-level workflow

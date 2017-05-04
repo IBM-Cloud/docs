@@ -44,7 +44,7 @@ Kibana 是一种基于浏览器的界面，在其中可以定制仪表板，随�
 
 Kibana 仪表板显示的数据由该查询进行控制。要修改仪表板中显示的信息，可以更改该查询，添加多个查询，然后保存仪表板。您可以同时定制、保存和共享多个仪表板。例如，这是 Kibana 显示空间中单个应用程序相关信息的方式。
 
-您还可以通过日志字段（例如，message_type 和 instance_ID）来配置过滤器。有关更多信息，请参阅 [Kibana 日志格式](logging_view_kibana3.html#kibana_log_format_cf)。您可以动态启用或禁用此这些过滤器。仪表板将显示满足所启用的查询和过滤条件的日志条目。有关更多信息，请参阅[在 Kibana 仪表板中过滤数据](logging_view_kibana3.html#filter_data_kibana_dashboard)。
+您还可以通过日志字段（例如，message_type 和 instance_ID）来配置过滤器。有关更多信息，请参阅 [Kibana 日志格式](logging_view_kibana3.html#kibana_log_format_cf)。您可以动态启用或禁用这些过滤器。仪表板将显示满足所启用的查询和过滤条件的日志条目。有关更多信息，请参阅[在 Kibana 仪表板中过滤数据](logging_view_kibana3.html#filter_data_kibana_dashboard)。
 
 要可视化数据，可以配置面板。Kibana 包含可用于分析信息的不同面板，如表、趋势和直方图。可以在仪表板中添加、除去和重新排列面板。每个面板的用途各不相同。一些面板组织成行，用于提供一个或多个查询的结果。另一些面板则显示文档或定制信息。有关更多信息，请参阅[定制 Kibana 仪表板](logging_view_kibana3.html#customize_kibana_dashboard)。
 
@@ -157,7 +157,7 @@ Kibana 仪表板显示的数据由该查询进行控制。要修改仪表板中�
 
 仪表板中的图形和图表将显示数据。可以使用仪表板中的图形和图表来监视数据。 
 
-例如，单 CF 仪表板中包含有关一个 Cloud Foundry 应用程序的信息。可以进行可视化和分析的数据仅限于该应用程序。您可以使用此仪表板来分析该应用程序的所有实例的数据。可以比较实例。也可以按实例标识来过滤信息。 
+例如，单 CF 应用程序仪表板中包含有关一个 Cloud Foundry 应用程序的信息。可以进行可视化和分析的数据仅限于该应用程序。您可以使用此仪表板来分析该应用程序的所有实例的数据。可以比较实例。也可以按实例标识来过滤信息。 
 
 可以定义每个实例标识的查询并在仪表板中将其置顶。 
 
@@ -278,25 +278,25 @@ Kibana 仪表板显示的数据由该查询进行控制。要修改仪表板中�
 
 <dl>
 <dt><strong>API</strong></dt>
-<dd>记录的对请求更改应用程序状态的 API 调用的响应。</dd>
+<dd>记录对请求更改应用程序状态的 API 调用的响应。</dd>
 
 <dt><strong>APP</strong></dt>
-<dd>记录的来自应用程序的响应。</dd>
+<dd>记录来自应用程序的响应。</dd>
 
 <dt><strong>CELL</strong></dt>
-<dd>记录的来自 Diego 单元的响应，用于指示应用程序启动、停止或崩溃情况。</dd>
+<dd>记录来自 Diego 单元的响应，用于指示应用程序启动、停止或崩溃情况。</dd>
 
 <dt><strong>LGR</strong></dt>
-<dd>记录的来自 Loggregator 的响应，用于指示日志记录进程发生的问题。</dd>
+<dd>记录来自 Loggregator 的响应，用于指示日志记录进程发生的问题。</dd>
 
 <dt><strong>RTR</strong></dt>
-<dd>路由器将 HTTP 请求路由到应用程序时记录的来自路由器的响应。</dd>
+<dd>记录路由器将 HTTP 请求路由到应用程序时的响应。</dd>
 
 <dt><strong>SSH</strong></dt>
-<dd>用户使用 **cf ssh** 命令访问应用程序容器时记录的来自 Diego 单元的响应。</dd>
+<dd>记录在用户使用 **cf ssh** 命令访问应用程序容器时 Diego 单元的响应。</dd>
 
 <dt><strong>STG</strong></dt>
-<dd>对应用程序编译打包或重新编译打包时记录的来自 Diego 单元或 Droplet Execution Agent 的响应。</dd>
+<dd>记录对应用程序编译打包或重新编译打包时 Diego 单元或 Droplet Execution Agent 的响应。</dd>
 </dl>
 </dd>
 

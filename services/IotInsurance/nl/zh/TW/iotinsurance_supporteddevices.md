@@ -38,7 +38,7 @@ lastupdated: "2017-03-07"
 <tbody>
 <tr>
 <td>Bosch E-Call</td>
-<td>{{site.data.keyword.iot_short_notm}}。  
+<td>{{site.data.keyword.iot_short_notm}}.  
 已撰寫閘道應用程式來測試整合。</td>
 <td>Bosch Retrofit E-Call</td>
 <td>[供應商網站 ![外部鏈結圖示](../../icons/launch-glyph.svg)](http://www.bosch-connectivity.com/en/what_we_offer/products_and_solutions_1/retrofit_ecall/connected_devices_3){: new_window}</td>
@@ -217,9 +217,9 @@ lastupdated: "2017-03-07"
 }
 ```
 
-### Weather Company 資料
+### Weather Company Data
 #### 整合程序
-與 Weather Company 資料的整合目前僅以概念證明或技術預覽的形式受到支援，不作為正式作業之用。
+與 Weather Company Data 的整合目前僅以概念證明或技術預覽的形式受到支援，不作為正式作業之用。
 
 請提供地址以從 The Weather Company 擷取特定位置的目前天氣（室外溫度）狀況。
 

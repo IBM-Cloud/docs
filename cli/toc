@@ -22,15 +22,13 @@ CLI and Dev Tools
 	{: .topicgroup}
 	Bluemix CLI plug-ins
 		[Active Deploy](../services/ActiveDeploy/cli.html?pos=2#ad-cli-bx)
-		[IBM Developer](../mobile/dev_cli.html)
 		plugins/auto-scaling/index.md
-		plugins/catalogmanager/index.md
 		plugins/registry/index.md
 		[Container Service (Clusters)](../containers/cs_cli_devtools.html)
 		[Container Service (Single and scalable groups)](../containers/container_cli_cfic.html)
-		plugins/openwsk/index.md
+		[IBM Developer](../cloudnative/dev_cli.html)
 		plugins/pnp/index.md
-		[IBM SDK Generator](../mobile/sdk_cli.html)
+		[IBM SDK Generator](../cloudnative/sdk_cli.html)
 		plugins/softlayer/index.md
 		plugins/bx_vpn/index.md
 	

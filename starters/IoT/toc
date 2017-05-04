@@ -1,0 +1,31 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="internet-of-things-platform-starter" audience="boilerplate" href="/docs/starters/IoT/iot500.html"}
+IoT Starter
+
+  {: .navgroup id="learn"}
+    iot500.md
+  {: .navgroup-end}
+
+  {: .navgroup id="reference"}
+    [Watson IoT Platform API Documentation](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#/)
+
+    {: .topicgroup}
+    Tutorials and samples
+        [Recipes for connecting your devices](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/)
+        [Watson IoT Platform Play organization](https://play.internetofthings.ibmcloud.com/)
+        [Connecting an Intel Galileo to Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/connect-an-intel-galileo-to-the-internet-of-things-foundation-connect/)
+        [Connecting an ARM mbed IoT Starter Kit](https://developer.ibm.com/recipes/tutorials/arm-mbed-iot-starter-kit-part-1/)
+        [Connecting a Raspberry Pi to Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/raspberry-pi-4/)
+
+    {: .topicgroup}
+    Related documentation
+        [Watson IoT Platform documentation](https://www.bluemix.net/docs/services/IoT/iotplatform_overview.html)
+        [Node-RED starter documentation](https://console.ng.bluemix.net/docs/starters/Node-RED/nodered.html)
+  {: .navgroup-end}
+
+  {: .navgroup id="help"}
+    [Developer support forum](https://www.ibm.com/developerworks/connect/iot/)
+    [Stack overflow support forum](http://stackoverflow.com/questions/tagged/ibm-bluemix)
+  {: .navgroup-end}

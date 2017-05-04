@@ -23,7 +23,7 @@ Web 操作允许您在没有操作的授权 API 密钥的情况下，通过 POST
 
 大多数 API 网关功能已合并到 Web 操作中，因此 Web 操作允许您处理任何 HTTP 请求并返回 HTTP 响应，同时完全通过 Web 操作进行控制。
 
-修改后的 OpenWhisk API 网关集成将很快可用。它将配置为代理 Web 操作，为其提供 API 网关功能，例如速度限制、OAuth 令牌验证、API 密钥等等。
+修改后的 OpenWhisk API 网关集成将很快可用。它将配置为代理 Web 操作，为其提供 API 网关功能，例如速度限制、OAuth 令牌验证、API 密钥等等。请观看视频 [Create and Control APIs](https://youtu.be/XT9KwWTnnzo)
 
 **注：**使用 `wsk api-experimental` 创建的 API 将继续正常运行，但您应该开始将 API 迁移到 Web 操作。
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-03-30"
 # Initiation à {{site.data.keyword.appid_short_notm}}
 {: #gettingstarted}
 
-Ajoutez une fonctionnalité de sécurité à vos applications à l'aide du service {{site.data.keyword.appid_full}}. Vous pouvez configurer une autorisation client pour accéder à des ressources de back-end protégées s'exécutant sur {{site.data.keyword.Bluemix}}.
+{{site.data.keyword.appid_full}} vous aide à ajouter une authentification à vos applications mobiles et Web et protège vos systèmes de back-end.
 {:shortdesc}
 
 **Remarque** : le service {{site.data.keyword.appid_short_notm}} était dénommé auparavant {{site.data.keyword.amafull}}.
@@ -22,22 +22,7 @@ Ajoutez une fonctionnalité de sécurité à vos applications à l'aide du servi
 2. Attribuez un nom à votre instance de service ou utilisez le nom prédéfini.
 3. Pour lier votre instance, sélectionnez une application dans le menu déroulant **Se connecter à**. Si vous sélectionnez **Laisser non lié**, vous pourrez néanmoins lier l'instance de servie plus tard.
 4. Sélectionnez votre plan de tarification, puis cliquez sur **Créer**.
-5. Suivez les instructions de l'interface utilisateur pour télécharger les exemples d'application. Ces exemples peuvent vous aider à maîtriser rapidement {{site.data.keyword.appid_short_notm}}.
-
-
-
-# Liens connexes
-{: #rellinks notoc}
-
-## Référence d'API
-{: #api notoc}
-
-* [{{site.data.keyword.appid_short_notm}} oauth-flows](https://appid-oauth.ng.bluemix.net/swagger-ui/#!/Authorization_Server_V3/authorization)
-
-## Logiciel SDK
-{: #sdk notoc}
-
-* [SDK Client Android d'{{site.data.keyword.appid_short_notm}}](https://github.com/ibm-cloud-security/appid-clientsdk-android){: new_window}
-* [SDK Client iO-Swift d'{{site.data.keyword.appid_short_notm}}](https://github.com/ibm-cloud-security/appid-clientsdk-swift){: new_window}
-* [SDK serveur Nodejs d'{{site.data.keyword.appid_short_notm}}](https://github.com/ibm-cloud-security/appid-serversdk-nodejs){: new_window}
-* [SDK serveur Swift d'{{site.data.keyword.appid_short_notm}}](https://github.com/ibm-cloud-security/appid-serversdk-swift){: new_window}
+5. Facultatif : utilisez les instructions de l'interface utilisateur pour télécharger les exemples d'applications. Ces exemples peuvent vous aider à maîtriser rapidement {{site.data.keyword.appid_short_notm}}.
+6. Téléchargez et configurez les [SDK](/docs/services/appid/relatedlinks.html) requis pour travailler avec votre application spécifique.
+7. Configurez vos [fournisseurs d'identité](/docs/services/appid/identity-providers.html) pour l'authentification et l'autorisation.
+8. Si vous avez activé plusieurs fournisseurs d'identité, personnalisez votre [widget de connexion](/docs/services/appid/login-widget.html).

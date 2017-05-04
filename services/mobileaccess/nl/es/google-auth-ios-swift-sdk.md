@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+**Importante: El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.**
 
 # Habilitación de la autenticación de Google en apps para iOS (SDK de Swift)
 {: #google-auth-ios}
@@ -32,7 +34,7 @@ Debe tener lo siguiente:
 ## Preparación de la app para el inicio de sesión de Google
 {: #google-sign-in-ios}
 
-Prepare su app para el inicio de sesión de Google siguiendo las instrucciones que proporciona Google en [Inicio de sesión de Google para iOS ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developers.google.com/identity/sign-in/ios/start-integrating "Icono de enlace externo"){: new_window}.
+Prepare su app para el inicio de sesión de Google siguiendo las instrucciones que proporciona Google en [Inicio de sesión de Google para iOS ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://developers.google.com/identity/sign-in/ios/start-integrating){: new_window}.
 
 Este proceso:
 
@@ -46,7 +48,7 @@ En los pasos siguientes se ofrece una breve descripción de las tareas necesaria
 
 1. Anote el **identificador del paquete** en su proyecto Xcode de la sección **Identity** del separador **General** del destino principal. Lo necesita para crear el proyecto de inicio de sesión de Google.
 
-1. Cree un proyecto para el Inicio de sesión de Google para iOS en el [Sitio de Google Developer ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developers.google.com/mobile/add?platform=ios "Icono de enlace externo"){: new_window}.
+1. Cree un proyecto para el Inicio de sesión de Google para iOS en el [Sitio de Google Developer ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://developers.google.com/mobile/add?platform=ios){: new_window}.
 
 1. Añada la API de inicio de sesión de Google al proyecto.
 
@@ -54,9 +56,9 @@ En los pasos siguientes se ofrece una breve descripción de las tareas necesaria
 
    **Importante:** cuando obtenga el archivo `GoogleService-Info.plist`, ábralo y anote el valor de `CLIENT_ID`. Necesitará este valor más adelante para configurar la aplicación de fondo {{site.data.keyword.amashort}}.
 
-1. Añada el archivo `GoogleService-Info.plist` al proyecto de Xcode. Para obtener más información, consulte [Añadir el archivo de configuración al proyecto ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config "Icono de enlace externo"){: new_window}.
+1. Añada el archivo `GoogleService-Info.plist` al proyecto de Xcode. Para obtener más información, consulte [Añadir el archivo de configuración al proyecto ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config){: new_window}.
 
-1. Actualice los esquemas de URL del proyecto de Xcode con el valor de `REVERSE_CLIENT_ID` y el identificador del paquete. Para obtener más información, consulte [Añadir esquemas de URL al proyecto ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project "Icono de enlace externo"){: new_window}.
+1. Actualice los esquemas de URL del proyecto de Xcode con el valor de `REVERSE_CLIENT_ID` y el identificador del paquete. Para obtener más información, consulte [Añadir esquemas de URL al proyecto ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project){: new_window}.
 
 1. Actualice el archivo `project-Bridging-Header.h` de la app con el siguiente código:
 
@@ -65,9 +67,9 @@ En los pasos siguientes se ofrece una breve descripción de las tareas necesaria
 	```
 	{: codeblock}
 
-	Para obtener más información sobre la actualización del archivo de cabecera de puente, consulte [Habilitar el inicio de sesión ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in "Icono de enlace externo"){: new_window}.
+	Para obtener más información sobre la actualización del archivo de cabecera de puente, consulte [Habilitar el inicio de sesión ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in){: new_window}.
 
-## Configuración de {{site.data.keyword.amashort}} para la autenticación de Google
+## Configuración de Mobile Client Access para la autenticación de Google
 {: #google-auth-ios-config}
 
 Ahora que ya dispone de un ID de cliente de iOS, puede activar la autenticación de Google en el servicio de {{site.data.keyword.amashort}}.
@@ -78,7 +80,7 @@ Ahora que ya dispone de un ID de cliente de iOS, puede activar la autenticación
 1. En **ID de aplicación para iOS**, especifique el valor de `CLIENT_ID` que ha obtenido del archivo `GoogleService-Info.plist`.
 1. Pulse **Guardar**.
 
-## Configuración del SDK del cliente de {{site.data.keyword.amashort}} para iOS
+## Configuración del SDK del cliente para iOS
 {: #google-auth-ios-sdk}
 
 ### Instalación de CocoaPods
@@ -93,7 +95,7 @@ Ahora que ya dispone de un ID de cliente de iOS, puede activar la autenticación
 	```
 	{: codeblock}
 
-Para obtener más información, consulte el [sitio web de CocoaPods ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cocoapods.org/ "Icono de enlace externo"){: new_window}.
+Para obtener más información, consulte el [sitio web de CocoaPods ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://cocoapods.org/){: new_window}.
 
 ### Instalación del SDK de Swift de cliente de {{site.data.keyword.amashort}} con CocoaPods
 {: #facebook-auth-install-swift-cocoapods}

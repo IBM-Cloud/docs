@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+**Important : Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.**
 
 # Activation de l'authentification Google pour les applications iOS (SDK Swift)
 {: #google-auth-ios}
@@ -33,7 +35,7 @@ Vous devez disposer des éléments suivants :
 ## Préparation de votre application pour Google Sign-In
 {: #google-sign-in-ios}
 
-Préparez votre application pour le mécanisme de connexion unique Google en suivant les instructions de Google sur le site [Google Sign-In for iOS ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developers.google.com/identity/sign-in/ios/start-integrating "Icône de lien externe"){: new_window}.
+Préparez votre application pour le mécanisme de connexion unique Google en suivant les instructions fournies par Google dans la rubrique [Start integrating Google Sign-In into your iOS app ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developers.google.com/identity/sign-in/ios/start-integrating){: new_window}.
 
 Ce processus :
 
@@ -47,7 +49,7 @@ Les étapes suivantes offrent un bref aperçu des tâches nécessaires à la pr�
 
 1. Notez l'identificateur de bundle de votre projet Xcode depuis la section relative à l'identité de l'onglet traitant des dispositions générales de la cible principale. Vous en aurez besoin pour créer votre projet Google Sign-In.
 
-1. Créez un projet pour Google Sign-In for sur le [site Google Developer![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developers.google.com/mobile/add?platform=ios "Icône de lien externe"){: new_window}.
+1. Créez un projet pour le mécanisme de connexion unique Google sur le [site Google Developer ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developers.google.com/mobile/add?platform=ios){: new_window}.
 
 1. Ajoutez l'API Google Sign-In à votre projet.
 
@@ -56,9 +58,9 @@ Les étapes suivantes offrent un bref aperçu des tâches nécessaires à la pr�
    **Important :** Lorsque vous vous êtes procuré le fichier `GoogleService-Info.plist`, ouvrez-le et notez la valeur de
 `CLIENT_ID`. Vous en aurez besoin par la suite pour configurer l'application de back end {{site.data.keyword.amashort}}.
 
-1. Ajoutez le fichier `GoogleService-Info.plist` à votre projet Xcode. Pour plus d'informations, voir [Add the configuration file to your project ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config "Icône de lien externe"){: new_window}.
+1. Ajoutez le fichier `GoogleService-Info.plist` à votre projet Xcode. Pour plus d'informations, voir [Add the configuration file to your project ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config){: new_window}.
 
-1. Mettez à jour les schémas d'URL dans votre projet Xcode en indiquant votre `REVERSE_CLIENT_ID` et votre identificateur de bundle. Pour plus d'informations, voir [Add URL schemes to your project ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project "Icône de lien externe"){: new_window}.
+1. Mettez à jour les schémas d'URL dans votre projet Xcode en indiquant votre `REVERSE_CLIENT_ID` et votre identificateur de bundle. Pour plus d'informations, voir [Add a URL scheme to your project ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project){: new_window}.
 
 1. Mettez à jour le fichier `project-Bridging-Header.h` de votre application avec le code suivant :
 
@@ -67,9 +69,9 @@ Les étapes suivantes offrent un bref aperçu des tâches nécessaires à la pr�
 	```
 	{: codeblock}
 
-	Pour plus d'informations sur la mise à jour du fichier d'en-tête de pontage, voir [Enable sign-in ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in "Icône de lien externe"){: new_window}.
+	Pour plus d'informations sur la mise à jour du fichier d'en-tête de pontage, voir [Enable sign-in ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in){: new_window}.
 
-## Configuration de {{site.data.keyword.amashort}} pour l'authentification Google
+## Configuration de Mobile Client Access pour l'authentification Google
 {: #google-auth-ios-config}
 
 Maintenant que vous disposez d'un ID client iOS, vous pouvez activer l'authentification Google dans le service {{site.data.keyword.amashort}}.
@@ -81,7 +83,7 @@ Maintenant que vous disposez d'un ID client iOS, vous pouvez activer l'authentif
 `GoogleService-Info.plist`.
 1. Cliquez sur **Sauvegarder**.
 
-## Configuration du SDK client de {{site.data.keyword.amashort}} pour iOS
+## Configuration du SDK client pour iOS
 {: #google-auth-ios-sdk}
 
 ### Installation de CocoaPods
@@ -96,7 +98,7 @@ Maintenant que vous disposez d'un ID client iOS, vous pouvez activer l'authentif
 	```
 	{: codeblock}
 
-Pour plus d'informations, reportez-vous au [site Web CocoaPods ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cocoapods.org/ "Icône de lien externe"){: new_window}.
+Pour plus d'informations, voir le [site Web CocoaPods![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cocoapods.org/){: new_window}.
 
 ### Installation du SDK Swift client de {{site.data.keyword.amashort}} avec CocoaPods
 {: #facebook-auth-install-swift-cocoapods}

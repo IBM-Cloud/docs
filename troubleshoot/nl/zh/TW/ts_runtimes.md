@@ -18,7 +18,7 @@ lastupdated: "2017-01-10"
 # 運行環境疑難排解
 {: #runtimes}
 
-您在使用 {{site.data.keyword.Bluemix}} 運行環境時可能會遇到問題。在許多情況下，您都可以依照下列一些簡單的步驟，從這些問題中回復。
+您在使用 {{site.data.keyword.Bluemix}} 運行環境時可能會遇到問題。在許多情況下，您可以遵照一些簡單的步驟，從這些問題回復。
 {:shortdesc}
 
 
@@ -81,7 +81,7 @@ error_log stderr notice;
 pid @{HOME}/nginx/logs/nginx.pid;
 ```
 	
-`NOTICE` 訊息僅提供資訊，不一定會指出問題。若要停止記載這些訊息，您可以在建置套件的 nginx-defaults.conf 檔案中，將記載層次從 `stderr notice` 變更為 `stderr error`。例如：
+`NOTICE` 訊息僅提供資訊，不一定表示有問題。若要停止記載這些訊息，您可以在建置套件的 nginx-defaults.conf 檔案中，將記載層次從 `stderr notice` 變更為 `stderr error`。例如：
 {: tsResolve}
 
 ```
@@ -189,7 +189,7 @@ Python 應用程式的配置資訊遺失。
 發生此行為的原因如下：
 {: tsCauses}
 
-  * 您先前已變更一個以上實例的配置。如果您變更某個實例的 traceSpecification 配置，該變更並不會套用至相同應用程式的其他實例。例如，您的應用程式使用 log4j，而您有這個應用程式的兩個實例。您可以將實例 0 的記載層次從 info 變更為 debug，但實例 1 的記載層次仍為 info。
+  * 您先前已變更一個以上實例的配置。如果您變更某個實例的 traceSpecification 配置，該變更並不適用於相同應用程式的其他實例。例如，您的應用程式使用 log4j，而這個應用程式有兩個實例。您可以將實例 0 的記載層次從 info 變更為 debug，但實例 1 的記載層次仍為 info。
   
   * 應用程式橫向擴充，並且有新的實例。RMU 不會將現有實例的 traceSpecification 配置套用至新的橫向擴充實例。新的實例會使用預設配置。例如，您的應用程式使用 log4j，而其具有一個實例。您可以將此實例的記載層次從 info 變更為 debug。進行這項變更之後，如果您將應用程式橫向擴充為兩個實例，則新實例的記載層次是 info，而非 debug。
 
@@ -208,10 +208,11 @@ Python 應用程式的配置資訊遺失。
 發生此問題的原因為下列其中一項：
 {: tsCauses} 
 
-  * 傾出檔案是隨執行中的應用程式實例所產生，而這些檔案會耗盡配置的磁碟限額。依預設，一個應用程式實例的磁碟限額為 1 GB。您可以按一下**儀表板 > 應用程式 > 應用程式運行環境**，來檢查您的磁碟用量。下列範例顯示一個應用程式的兩個實例的運行環境資訊，包括磁碟用量：
+  * 傾出檔案是由執行中的應用程式實例所產生，而這些檔案耗盡配置的磁碟限額。依預設，一個應用程式實例的磁碟限額為 1 GB。您可以按一下**儀表板 > 應用程式 > 應用程式運行環境**，來檢查您的磁碟用量。下列範例顯示一個應用程式的兩個實例的運行環境資訊，包括磁碟用量：
     ```
-Instance	State	CPU	Memory Usage	Disk Usage
-0		Running	1.0%	344.8MB/512MB	236.8MB/1GB
+    Instance	State	CPU	Memory Usage	Disk Usage
+
+	0		Running	1.0%	344.8MB/512MB	236.8MB/1GB
 	2		Running	2.3%	361.2MB/512MB	235.7MB/1GB
     ```
   * 磁碟限額受限於現行組織配額。
@@ -220,8 +221,8 @@ Instance	State	CPU	Memory Usage	Disk Usage
 {: tsResolve} 
 
   * 在下載傾出檔案之後刪除它們。
-  * 在部署資訊清單中併入下列項目，以較大的磁碟限額來重新部署應用程式：
+  * 在部署資訊清單中包含下列項目，以較大的磁碟限額來重新部署應用程式：
     ```
 	disk_quota: 2048
-```
+	```
 	

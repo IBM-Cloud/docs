@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-03-30"
+  years:  2017
+lastupdated: "2017-04-17"
 
 ---
 {:new_window: target="_blank"}
@@ -15,7 +15,8 @@ lastupdated: "2017-03-30"
 # Utilisation de {{site.data.keyword.appid_short_notm}} avec un environnement de développement local
 {: #protecting-local}
 
-Vous pouvez configurer votre environnement local afin d'utiliser le service {{site.data.keyword.appid_short}}. Plus précisément, vous pouvez développer le code en local à l'aide du SDK serveur d'{{site.data.keyword.appid_short_notm}} et envoyer des demandes au serveur de développement.
+Vous pouvez configurer votre environnement local afin d'utiliser le service {{site.data.keyword.appid_short}}. Plus précisément, vous pouvez développer le code en local à
+l'aide du SDK serveur d'{{site.data.keyword.appid_short_notm}} pour envoyer des demandes au serveur de développement.
 {:shortdesc}
 
 
@@ -48,7 +49,7 @@ Pour configurer vos applications afin d'utiliser un serveur de développement lo
 <table> <caption> Tableau 1. Régions {{site.data.keyword.Bluemix_notm}} et régions {{site.data.keyword.appid_short_notm}} correspondantes pour Android et iOS </caption>
 <tr>
   <th> Région Bluemix </th>
-  <th> Android </th>
+  <th> Android et iOS </th>
 </tr>
 <tr>
   <td> Sud des Etats-Unis </td>

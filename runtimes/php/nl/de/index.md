@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-04-14"
 
 ---
 
@@ -20,12 +20,12 @@ Das Buildpack 'php_buildpack' stellt eine vollständige Laufzeitumgebung für PH
 Das Buildpack 'php_buildpack' wird unter folgenden Bedingungen verwendet:
 * Ihre App enthält die Datei 'composer.json' oder
 * Ihre App enthält eine '*.php'-Datei oder
-* Ihre App definiert die Variable ${WEBDIR} in ihrer Datei [options.json](https://github.com/cloudfoundry/php-buildpack/blob/master/docs/config.md) und als Einstellung für diese Variable ist ein in Ihrer App vorhandenes Verzeichnis festgelegt.
+* Ihre App definiert die Variable ${WEBDIR} in ihrer Datei [options.json](https://docs.cloudfoundry.org/buildpacks/php/gsg-php-config.html) und als Einstellung für diese Variable ist ein in Ihrer App vorhandenes Verzeichnis festgelegt.
 
 ## Starteranwendung
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} stellt eine PHP-Starter-App zur Verfügung.  Die PHP-Starteranwendung ist eine einfache PHP-App, die Sie als Schablone für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der Bluemix-Umgebung vornehmen und diese mit einer Push-Operation übertragen.  Hilfe zur Verwendung der Starter-App finden Sie in [Starteranwendungen verwenden](/docs/cfapps/starter_app_usage.html).
+{{site.data.keyword.Bluemix}} stellt eine PHP-Starter-App zur Verfügung.  Die PHP-Starteranwendung ist eine einfache PHP-App, die Sie als Schablone für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der {{site.data.keyword.Bluemix}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen.  Hilfe zur Verwendung der Starter-App finden Sie in [Starteranwendungen verwenden](/docs/cfapps/starter_app_usage.html).
 
 ## Laufzeitversionen
 {: #runtime_versions}
@@ -40,7 +40,7 @@ Sie können die Version von PHP, die von Ihrer App verwendet werden soll, in der
 }
 ```
 {: codeblock}
-Weitere Informationen finden Sie in [Composer-Paketlinks](https://getcomposer.org/doc/04-schema.md#package-links).
+Weitere Informationen finden Sie unter [Composer-Paktlinks ![Symbol 'Externer Link'](../../icons/launch-glyph.svg "Symbol 'Externer Link'")](https://getcomposer.org/doc/04-schema.md#package-links).
 
 Wenn keine Version angegeben ist, wird standardmäßig Version 5.5.34 ausgewählt.
 
@@ -59,10 +59,11 @@ Folgende PHP-Versionen stehen im [PHP-Buildpack](https://github.com/cloudfoundry
 Wenn für Ihre App eine PHP-Version erforderlich ist, die nicht aufgelistet ist, können Sie die App mit dem externen [PHP-Buildpack](https://github.com/cloudfoundry/php-buildpack.git) implementieren.
 
 # Zugehörige Links
-{: #rellinks}
+{: #rellinks notoc}
 ## Lernprogramme und Beispiele
-{: #samples}
+{: #samples notoc}
 * [REST-API erstellen und implementieren](http://www.ibm.com/developerworks/library/wa-deployrest-app/)
 * [Mobil einsetzbaren Kalorienzähler erstellen und implementieren](http://www.ibm.com/developerworks/library/mo-bluemix-php-nutritionix-angularjs/)
 ## Allgemein
+{: #general notoc}
 * [Cloud Foundry-Buildpack für PHP](https://github.com/cloudfoundry/php-buildpack.git)

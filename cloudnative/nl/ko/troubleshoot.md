@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-10"
 
 ---
 
@@ -67,13 +67,13 @@ Failed to <command> project.
 
 
 #### 원인
-{: #hostname-cause}
+{: #general-cause}
    
 이 오류는 만료된 로그인 토큰으로 인해 발생합니다. 
 
 
 #### 해결
-{: #hostname-resolution}
+{: #general-resolution}
 
 다시 로그인하십시오. 
 
@@ -98,13 +98,13 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 #### 원인
 {: #os-cause}
    
-이 오류는 하나의 {{site.data.keyword.objectstorageshort}} 무료 플랜 인스턴스만을 허용하는 {{site.data.keyword.objectstorageshort}} 서비스로 인해 발생합니다. 
+이 오류는 무료 {{site.data.keyword.objectstorageshort}} 플랜에서는 하나의 인스턴스만 제공하는 {{site.data.keyword.objectstorageshort}} 서비스로 인해 발생합니다. 
 
 
 #### 해결
 {: #os-resolution}
 
-이 오류를 방지하기 위해 다른 플랜을 선택하라는 프롬프트가 표시됩니다. 
+프롬프트에 따라 다른 플랜을 선택하여 이 오류를 더 이상 보지 않을 수 있습니다. 
 
 
 ### 프로젝트 작성 중 코드 가져오기 실패
@@ -133,12 +133,12 @@ https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbe
 
 * CLI를 사용하여 다음 명령을 실행합니다. 
 
-	```
-	bx dev code <your-project-name>
-	```
-	{: codeblock}
-	
-	`<your-project-name>`은 프로젝트 작성 중에 사용한 프로젝트 이름으로 대체해야 합니다. 
+   ```
+   bx dev code <your-project-name>
+   ```
+   {: codeblock}
+
+   `<your-project-name>`을 프로젝트 작성 중에 지정한 프로젝트 이름으로 대체하십시오. 
 
 * {{site.data.keyword.dev_console}}을 사용합니다. 
 
@@ -178,7 +178,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 #### 원인
 {: #node-cause}
    
-이 오류는 `appmetrics` 모듈이 다른 아키텍처에 설치되어 발생합니다. 한 아키텍처에 설치된 네이티브 npm 모듈은 다른 아키텍처에서 작동하지 않습니다. 포함된 Docker 이미지는 Linux 커널을 기반으로 합니다. 
+이 오류는 다른 아키텍처에 설치된 `appmetrics` 모듈로 인해 발생합니다. 한 아키텍처에 설치된 고유 npm 모듈은 다른 아키텍처에서는 작동하지 않습니다. 포함된 Docker 이미지는 Linux 커널을 기반으로 합니다. 
 
 
 #### 해결
@@ -198,9 +198,9 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 ## 도움 및 지원 받기
 {: #gettinghelp}
 
-{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} 또는 {{site.data.keyword.dev_cli_notm}} 사용 중에 문제점이 있거나 질문이 있는 경우에는 정보를 검색하거나 포럼에 질문하여 도움을 받을 수 있습니다. 또는 지원 티켓을 열 수도 있습니다. 
+{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} 또는 {{site.data.keyword.dev_cli_notm}}에 대한 문제점이나 질문이 있으면 정보를 검색하거나 포럼을 통해 질문하여 도움을 받을 수 있습니다. 또는 지원 티켓을 열 수도 있습니다. 
 
-포럼을 통해 질문하는 경우 {{site.data.keyword.Bluemix_notm}} 개발 팀이 볼 수 있도록 질문에 태그를 지정하십시오. 
+포럼에서 질문하는 경우에는 {{site.data.keyword.Bluemix_notm}} 개발 팀이 볼 수 있도록 질문에 태그를 지정하십시오. 
 
 <!--Insert the appropriate Stack Overflow tag for your service for <service_keyword> in URL and text below:  -->
 

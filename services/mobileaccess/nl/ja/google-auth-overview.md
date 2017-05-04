@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+**重要: {{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービス**に置き換えられます。
 
 
 # Google 資格情報を使用したユーザーの認証
@@ -43,7 +45,7 @@ Google を ID プロバイダーとして使用してリソースを保護する
 * {{site.data.keyword.amashort}} Server SDK は、要求から許可ヘッダーを抽出し、{{site.data.keyword.amashort}} サービスを使用してそれを検証し、バックエンド・リソースへのアクセスを認可します。
 
 
-### {{site.data.keyword.amashort}} Web アプリケーション要求フロー
+### Mobile Client Access Web アプリケーション要求フロー
 {: #mca-google-web-sequence}
 {{site.data.keyword.amashort}} Web アプリケーション要求フローは、モバイル・クライアントのフローに似ています。ただし、{{site.data.keyword.amashort}} は、{{site.data.keyword.Bluemix_notm}} バックエンド・リソースではなくて Web アプリケーションを保護します。
 

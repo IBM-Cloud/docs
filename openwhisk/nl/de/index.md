@@ -48,6 +48,9 @@ Navigieren Sie zu [CLI konfigurieren](https://new-console.{DomainName}/openwhisk
 - [Häufige Anwendungsfälle für serverunabhängige Anwendungen](./openwhisk_use_cases.html)
 - [OpenWhisk-CLI einrichten und verwenden](./openwhisk_cli.html)
 - [OpenWhisk über eine iOS-App verwenden](./openwhisk_mobile_sdk.html)
+- [Artikel, Beispiele und Lernprogramme](https://github.com/openwhisk/openwhisk-external-resources)
+- [Apache OpenWhisk - FAQ](http://openwhisk.org/faq)
+- [Preisstruktur](https://console.ng.bluemix.net/openwhisk/learn/pricing)
 
 ## Programmiermodell
 {: #openwhisk_start_programming}
@@ -120,6 +123,7 @@ Führen Sie die folgenden Schritte aus, um dieses Beispiel zu verwenden:
 
 Sie können darüber hinaus die ereignisgesteuerten Funktionen in {{site.data.keyword.openwhisk_short}} verwenden, um diese Aktion als Reaktion auf Ereignisse aufzurufen. Gehen Sie wie im [Beispiel für den Service Alarm](./openwhisk_packages.html#openwhisk_packages_trigger) beschrieben vor, um eine Ereignisquelle zu konfigurieren, sodass die Aktion `hello` jedes Mal aufgerufen wird, wenn ein regelmäßiges Ereignis generiert wird.
 
+Eine vollständige Liste von [OpenWhisk-Lernprogrammen und -Beispielen finden Sie hier](https://github.com/openwhisk/openwhisk-external-resources#sample-applications). Neben Beispielen enthält dieses Repository auch Links zu Artikeln, Präsentationen, Podcasts, Videos und anderen Ressourcen zu {{site.data.keyword.openwhisk_short}}. 
 
 ## API-Referenz
 {: #openwhisk_start_api notoc}

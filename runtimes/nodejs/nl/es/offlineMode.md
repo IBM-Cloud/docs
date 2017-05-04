@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-14"
+  years: 2016, 2017
+lastupdated: "2017-04-11"
 
 ---
 
@@ -19,6 +19,7 @@ descargará normalmente artefactos desde recursos externos como módulos de nodo
 como con [Bluemix dedicado](/docs/dedicated/index.html#dedicated) y
 [Bluemix local](/docs/local/index.html#local), es posible que desee no basarse en,
 o tener más control explícito sobre, el acceso a sitios externos a Bluemix.  
+{: shortdesc}
 
 A continuación se muestran los sitios externos a los que puede acceder el paquete de compilación de node.js.  En los entornos de Bluemix [Bluemix dedicado](/docs/dedicated/index.html#dedicated) y
 [Bluemix local](/docs/local/index.html#local), es posible que estos sitios necesiten incluirse en una *lista blanca*.
@@ -35,7 +36,7 @@ Tenga en cuenta que cuando se instalen las versiones nuevas del paquete de compi
 se mueve a nuevas versiones.  Esto puede que necesite que vuelva a configurar la app del nodo para especificar una versión del motor de nodos más reciente.
 
 
-### Aplicaciones fuera de línea
+## Aplicaciones fuera de línea
 {: #offline_applications}
 
 Para eliminar la necesidad de acceder a https://registry.npmjs.org, puede incluir todos los módulos de nodos que necesita su aplicación dentro de la aplicación.  Para ello, ejecute **npm install** para todos los módulos que necesite su aplicación e incluya el directorio *node_modules* resultante con la aplicación enviada por push.
@@ -54,10 +55,3 @@ Siempre que realice un cambio en las dependencias del archivo *package.json*, re
 
 En algunos entornos como por ejemplo [Bluemix dedicado](/docs/dedicated/index.html#dedicated) y
 [Bluemix local](/docs/local/index.html#local), se puede configurar un proxy. Consulte [Cómo trabajar con un proxy](/docs/manageapps/workingWithProxy.html) para obtener más detalles.
-
-# rellinks
-{: #rellinks}
-## general
-{: #general}
-* [Últimas actualizaciones del paquete de compilación Node.js](/docs/runtimes/nodejs/updates.html)
-* [Node.js](https://nodejs.org)

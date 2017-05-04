@@ -2,14 +2,15 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-16"
+lastupdated: "2017-04-06"
 
 ---
 
 {:codeblock:.codeblock}
 
+**Wichtig: Der Service {{site.data.keyword.amafull}} wird durch den Service {{site.data.keyword.appid_full}} ersetzt.**
 
-# Angepasste Authentifizierung für {{site.data.keyword.amashort}}-iOS-App konfigurieren (Swift-SDK)
+# Angepasste Authentifizierung für Mobile Client Access-iOS-App konfigurieren (Swift-SDK)
 {: #custom-ios}
 
 Konfigurieren Sie Ihre iOS-Anwendung, die mit der angepassten Authentifizierung arbeitet, zur Verwendung des {{site.data.keyword.amafull}}-Client-SDK und verbinden Sie Ihre Anwendung mit {{site.data.keyword.Bluemix}}.  

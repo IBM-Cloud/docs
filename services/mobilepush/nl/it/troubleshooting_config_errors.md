@@ -17,7 +17,7 @@ Ultimo aggiornamento: 11 gennaio 2017
 
 Utilizza questa sezione come una guida per risolvere gli errori comuni relativi alla configurazione del push web. Gli errori push web dal `BMSPushSDK.js` contengono informazioni sull'errore. 
 
-Per analizzare un errore restituiti nel callback, considera il seguente codice di esempio:
+Per analizzare un errore restituito nel callback, considera il seguente codice di esempio:
 
 ```
 function showStatus(response) {

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,9 @@ lastupdated: "2017-01-08"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-#Configurazione dell'autenticazione personalizzata per le applicazioni Web {{site.data.keyword.amashort}}
+**Importante: il servizio {{site.data.keyword.amafull}} è stato sostituito con il servizio {{site.data.keyword.appid_full}}.**
+
+#Configurazione dell'autenticazione personalizzata per le applicazioni web Mobile Client Access
 {: #custom-web}
 
 Aggiungi l'autenticazione personalizzata e la funzionalità di sicurezza {{site.data.keyword.amafull}} alla tua applicazione Web.
@@ -104,7 +106,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 {: codeblock}
 
 
-##Configurazione di {{site.data.keyword.amashort}} per l'autenticazione personalizzata
+##Configurazione di Mobile Client Access per l'autenticazione personalizzata
 {: #custom-auth-config-mca}
 
 Dopo che hai configurato il tuo provider di identità personalizzato, puoi abilitare l'autenticazione personalizzata nel dashboard {{site.data.keyword.amashort}}.
@@ -117,7 +119,7 @@ Dopo che hai configurato il tuo provider di identità personalizzato, puoi abili
 1. Fai clic su **Save**.
 
 
-##Implementazione del flusso dell'autorizzazione {{site.data.keyword.amashort}} utilizzando un provider dell'identità personalizzato
+##Implementazione del flusso dell'autorizzazione Mobile Client Access utilizzando un provider dell'identità personalizzato
 {: #custom-auth-flow}
 
 La variabile di ambiente `VCAP_SERVICES` viene creata automaticamente per ogni istanza del servizio {{site.data.keyword.amashort}} e contiene le proprietà necessarie per il processo di autorizzazione. È formato da un oggetto JSON e puoi visualizzarlo nella scheda **Credenziali del servizio** nel dashboard {{site.data.keyword.amashort}}.
@@ -250,7 +252,7 @@ app.get("/oauth/callback", function(req, res, next){
 
 	Tieni presente che il parametro `redirect_uri` deve corrispondere al `redirect_uri` utilizzato nella richiesta di autorizzazione precedente. Il parametro code deve essere il codice concesso ricevuto nella risposta al termine della richiesta di autorizzazione. Il codice concesso è valido solo per 10 minuti, dopo i quali avrai bisogno di ottenere un nuovo codice.
 
-	Il corpo della risposta conterrà `access_token` e `id_token` in formato JWT; vedi il [sito Web JWT![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://jwt.io "Icona link esterno"){: new_window}.
+	Il corpo della risposta conterrà `access_token` e `id_token` in formato JWT; visita il [sito Web JWT ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://jwt.io){: new_window}.
 
 	Come hai ricevuto l'accesso e i token di identità, puoi indicare la sessione Web come autenticata e facoltativamente conservare questi token.
 

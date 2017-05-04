@@ -2,9 +2,11 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-06"
 
 ---
+
+**重要: {{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービス**に置き換えられます。
 
 # Web アプリ用の Facebook 認証の使用可能化
 {: #facebook_web}
@@ -26,7 +28,7 @@ Web サイトで Facebook を ID プロバイダーとして使用するには�
 1. アプリの Application ID、および App Secret をメモします。Web プロジェクトを Facebook 認証用に構成するときに、この値が必要になります。
 1. **「設定」**ページから**「プラットフォームの追加」**をクリックして**「Web サイト」**を選択します。
 1. 変更を保存します。
-1. 左のサイドバーにある**「Facebook ログイン」**をクリックします。
+1. サイドバーにある**「Facebook ログイン」**をクリックします。
 1. **「有効な OAuth リダイレクト URI (Valid OAuth redirect URIs)」**ボックスに、許可サーバーのコールバック・エンドポイントを入力します (https://imf-newauthserver.bluemix.net/oauth/{bluemix_app_guid}/callback)。変更を保存します。
 
 

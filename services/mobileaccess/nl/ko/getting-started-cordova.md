@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+**중요: {{site.data.keyword.amafull}} 서비스는 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다. **
 
 # Cordova 플러그인 설정
 {: #getting-started-cordova}
@@ -107,7 +108,7 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.d
 
 	2. Xcode로 애플리케이션을 빌드하고 실행하십시오.
 
-	**참고**: `cordova build ios`를 실행할 때 다음 오류가 수신될 수 있습니다. 이 문제는 [문제 12 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/blakgeek/cordova-plugin-cocoapods-support/issues/12 "외부 링크 아이콘"){: new_window}에서 추적 중인 종속성 플러그인의 버그 때문에 발생합니다. 시뮬레이터 또는 디바이스를 통해 XCode에서 iOS 프로젝트를 계속 실행할 수 있습니다. 
+	**참고**: `cordova build ios`를 실행할 때 다음 오류가 수신될 수 있습니다. 이 문제는 [문제 12 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/blakgeek/cordova-plugin-cocoapods-support/issues/12){: new_window}에서 추적 중인 종속성 플러그인의 버그 때문에 발생합니다. 시뮬레이터 또는 디바이스를 통해 XCode에서 iOS 프로젝트를 계속 실행할 수 있습니다. 
 
 	```
 	xcodebuild: error: Unable to find a destination matching the provided destination specifier:

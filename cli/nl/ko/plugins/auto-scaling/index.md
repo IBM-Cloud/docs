@@ -40,7 +40,7 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 ## Auto-Scaling 정책 연결
 
-Auto-Scaling 정책을 특정 앱에 연결할 수 있습니다. 다음 명령을 실행하십시오.
+특정 앱에 Auto-Scaling 정책을 연결할 수 있습니다. 다음 명령을 실행하십시오.
 
 ```
 bx as policy-attach <APP_NAME> -p <policy_file>
@@ -99,7 +99,7 @@ bx as policy-detach <APP_NAME>
 
 ## Auto-Scaling 정책의 사용 여부 설정
 
-특정 앱에 대한 Auto-Scaling 정책의 사용 여부를 설정할 수 있습니다. 다음 명령을 실행하십시오.
+특정 앱의 Auto-Scaling 정책을 사용하거나 사용하지 않게 설정할 수 있습니다. 다음 명령을 실행하십시오.
 
 ```
 bx as policy-enable|policy-disable <APP_NAME>

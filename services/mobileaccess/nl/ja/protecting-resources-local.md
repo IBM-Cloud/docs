@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,6 +11,7 @@ lastupdated: "2017-01-08"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+**重要: {{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービス**に置き換えられます。
 
 # ローカル開発環境での {{site.data.keyword.amashort}} の使用
 {: #protecting-local}
@@ -26,7 +27,7 @@ lastupdated: "2017-01-08"
 * **「TenantID」**。{{site.data.keyword.amafull}} ダッシュボードでサービスを開きます。**「モバイル・オプション」**ボタンをクリックします。`tenantId` (`appGUID` とも呼ばれる) の値が、**「アプリ GUID」/「TenantId」**フィールドに表示されます。許可マネージャーを初期化するためにこの値が必要になります。
 * **「アプリケーションの経路 (Application Route)」**。これは、バックエンド・アプリケーションの URL です。保護されているエンドポイントに要求を送信するためにこの値が必要になります。
 * {{site.data.keyword.Bluemix_notm}} **「地域」**。**「アバター」**アイコン![「アバター」アイコン](images/face.jpg "「アバター」アイコン") の横のヘッダー内に現在の {{site.data.keyword.Bluemix_notm}} 地域が表示されます。表示される地域値は、`US South`、`Sydney`、または  `United Kingdom` のいずれかでなければなりません。SDK に必要な正確な構文については、コード・サンプル中のコメントを参照してください。{{site.data.keyword.amashort}} クライアントを初期化するためにこの値が必要になります。
-* Gradle と連動して機能するようにセットアップされた Android Studio プロジェクト。Android 開発環境のセットアップ方法について詳しくは、[Google 開発者ツール![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://developer.android.com/sdk/index.html "外部リンク・アイコン"){: new_window}を参照してください。
+* Gradle と連動して機能するようにセットアップされた Android Studio プロジェクト。Android 開発環境のセットアップ方法について詳しくは、[Google 開発者ツール![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://developer.android.com/sdk/index.html){: new_window}を参照してください。
 
 ## Server SDK のセットアップ
 {: #serversetup}

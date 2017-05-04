@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-03-01"
+lastupdated: "2017-03-21"
 
 ---
 
@@ -148,10 +148,11 @@ Para {{site.data.keyword.Bluemix_notm}} público, puede registrarse para las not
 
   * Aprovechar las diversas regiones de {{site.data.keyword.Bluemix_notm}}
 
-    Todos los usuarios de {{site.data.keyword.Bluemix_notm}} público tienen acceso automáticamente a las regiones US-SOUTH, EU-GB y AU-SYD:
+    Todos los usuarios de {{site.data.keyword.Bluemix_notm}} público tienen acceso automáticamente a las regiones US-SOUTH, EU-GB, EU-DE y AU-SYD:
 
 	  * US-SOUTH: https://console.ng.bluemix.net
 	  * EU-GB: https://console.eu-gb.bluemix.net
+	  * EU-DE: https://console.eu-de.bluemix.net
 	  * AU-SYD: https://console.au-syd.bluemix.net
 
 	El equipo {{site.data.keyword.Bluemix_notm}} Global Operations gestiona todas las regiones para evitar que les afecte el mantenimiento y minimizar el riesgo de incidencias que afecten a todas las regiones al mismo tiempo.
@@ -177,12 +178,11 @@ A todos los clientes de {{site.data.keyword.Bluemix_notm}} se les proporciona so
 Niveles | Gratuito |  Básico | Estándar | Premium
 --- | --- | --- | --- | --- |
 Descripción | Soporte para todos los clientes de prueba de {{site.data.keyword.Bluemix_notm}}.  |  Soporte para entornos de no producción o cargas de trabajo donde no son necesarios las gravedades tradicionales ni los tiempos de respuesta. | Soporte para entornos con un número limitado de aplicaciones críticas de la empresa. Los clientes de {{site.data.keyword.Bluemix_notm}} dedicado y {{site.data.keyword.Bluemix_notm}} local reciben soporte estándar. | Soporte para entornos de misión crítica que tienen una dependencia estratégica en {{site.data.keyword.Bluemix_notm}}. 
-Soporte de gravedad 1-4 |  N/A | N/A | Incluido | 
-Idioma de soporte incluido | Inglés | Inglés | Inglés, japonés | Inglés, japonés 
+Soporte de gravedad 1-4 |  N/A | N/A | Incluido | Idioma de soporte incluido | Inglés | Inglés | Inglés, japonés | Inglés, japonés
 CSM (Client Success Manager) asignado | No se incluye | No se incluye | No se incluye | Se incluye a las<br> 8 horas por semana
 {: caption="Table 1. Support levels" caption-side="top"}
 
-**Importante:** el soporte del idioma japonés está disponible para las incidencias de gravedad 2-4 de lunes a viernes de 9:00 a.m. a 5:00 p.m. JST, excluidos festivos. No se incluyen servicios de la comunidad ni de terceros. Las incidencias de gravedad 1 solo se gestionan en inglés. 
+**Importante:** el soporte del idioma japonés está disponible para las incidencias de gravedad 2-4 de lunes a viernes de 9:00 a.m. a 5:00 p.m. JST, excluidos festivos. No se incluyen servicios de la comunidad ni de terceros. Las incidencias de gravedad 1 solo se gestionan en inglés.
 
 ### Apertura de una incidencia de soporte
 {: #open-ticket}
@@ -194,7 +194,7 @@ Si no ha podido resolver el problema técnico con las opciones de resolución de
 Si el problema no es debido a una parada, puede abrir una incidencia de soporte mediante una de las opciones siguientes:
 
   * En el menú de soporte, pulse **Añadir incidencia**. En la página que se muestra, rellene el formulario para indicar el tipo de soporte técnico que necesita.
-  * Utilice la página de ayuda de [IBM {{site.data.keyword.Bluemix_notm}} ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](ibm.biz/bluemixsupport){: new_window}. Puede enviar incidencias correspondientes a ventas, facturación, ID de IBM e inicio de sesión y problemas de soporte técnico. Para problemas de soporte técnico, puede seleccionar un grupo técnico tras pulsar en **Soporte técnico**. Por ejemplo, si necesita ayuda con apps de Cloud Foundry, {{site.data.keyword.openwhisk_short}}, contenedores, servidores virtuales o servidores nativos, puede elegir **Application Services**. Si necesita ayuda con un servicio específico, seleccione la categoría de servicio correspondiente. Para determinar la categoría a la que pertenece su servicio, consulte las categorías en [Servicios](/docs/services/index.html) en el panel de navegación.  
+  * Utilice la página de ayuda de [soporte de IBM {{site.data.keyword.Bluemix_notm}} ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](ibm.biz/bluemixsupport){: new_window}. Puede enviar incidencias correspondientes a ventas, facturación, ID de IBM e inicio de sesión y problemas de soporte técnico. Para problemas de soporte técnico, puede seleccionar un grupo técnico tras pulsar en **Soporte técnico**. Por ejemplo, si necesita ayuda con apps de Cloud Foundry, {{site.data.keyword.openwhisk_short}}, contenedores, servidores virtuales o servidores nativos, puede elegir **Application Services**. Si necesita ayuda con un servicio específico, seleccione la categoría de servicio correspondiente. Para determinar la categoría a la que pertenece su servicio, consulte las categorías en [Servicios](/docs/services/index.html) en el panel de navegación.  
   
 Cuando abra una incidencia de soporte, asegúrese de indicar una gravedad adecuada a su incidencia. La gravedad determina cómo se maneja la incidencia. Consulte [Gravedad de la incidencia de soporte y tiempo de respuesta](/docs/support/index.html#support-ticket-severity) para obtener información sobre las distintas gravedades. Si su consulta de soporte requiere una respuesta inmediata, le recomendamos actualizar a nuestro nivel de soporte Estándar o Premium para poder enviar incidencias de soporte de gravedad 1-4. Para actualizar su cuenta a un nivel de soporte superior, póngase en contacto con el [representante de ventas de IBM ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://www.ibm.com/cloud-computing/bluemix/contact-us){: new_window} o envíenos un correo electrónico a sales@bluemix.net.
 
@@ -222,7 +222,8 @@ Todos los problemas de soporte al cliente se documentan en una incidencia de sop
 Si es un cliente dedicado de {{site.data.keyword.Bluemix_notm}}, el soporte lo proporciona el equipo de soporte de IBM {{site.data.keyword.Bluemix_notm}}. Puede elegir entre varias opciones distintas para obtener soporte, en función de si tiene o no un {{site.data.keyword.ibmid}}.
 
 <ul>
-<li>Póngase en contacto con soporte abriendo una nueva incidencia a través de la página de ayuda <a href="ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support</a>. Puede utilizar una dirección de correo electrónico o un {{site.data.keyword.ibmid}} para este formulario. Seleccione la opción **{{site.data.keyword.Bluemix_notm}} dedicado** para el campo Región.
+<li>Póngase en contacto con soporte abriendo una nueva incidencia a través de la página de ayuda
+<a href="ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support</a>. Puede utilizar una dirección de correo electrónico o un {{site.data.keyword.ibmid}} para este formulario. Seleccione la opción **{{site.data.keyword.Bluemix_notm}} dedicado** para el campo Región.
 <p>Los envíos de formularios se supervisan entre el domingo a las 21:30 UTC y el viernes a las 23:59 UTC. Para obtener ayuda para convertir este horario de soporte a su huso horario, consulte [Timeanddate.com ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://www.timeanddate.com).</p>
 </li>
 <li>Si tiene un {{site.data.keyword.ibmid}} y tiene acceso al entorno público de {{site.data.keyword.Bluemix_notm}}, en la barra de menús pulse **Soporte** > **Añadir incidencia**. Seleccione el área temática correspondiente a su problema y siga las indicaciones para enviar la incidencia.</li>

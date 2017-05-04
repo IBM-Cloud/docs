@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -49,7 +49,7 @@ lastupdated: "2017-03-30"
   * CocoaPods (バージョン 1.1.0 以上)。
 
 
-## {{site.data.keyword.appid_short_notm}} Client SDK のインストール
+## Client SDK のインストール
 {: #install-appid-sdk}
 
 {{site.data.keyword.appid_short_notm}} Client SDK には、Swift プロジェクトと Objective-C Cocoa プロジェクト用の従属関係マネージャーである CocoaPods が付属しています。CocoaPods は成果物をダウンロードし、プロジェクトで使用できるようにします。
@@ -80,7 +80,7 @@ lastupdated: "2017-03-30"
 7. **「Project Settings」** > **「Info」** > **「URL Types」**の下で、URL タイプを追加します。**「Identifier」**テキスト・ボックスと**「URL Scheme」**テキスト・ボックスに値 $(PRODUCT_BUNDLE_IDENTIFIER) を入力します。
 
 
-## {{site.data.keyword.appid_short_notm}} Client SDK の初期化
+## Client SDK の初期化
 {: #initialize-client-sdk}
 
 1. `AppDelegate.swift` ファイルに以下のインポートを追加します。
@@ -180,7 +180,7 @@ lastupdated: "2017-03-30"
 ### 匿名ログイン
 {: #anonymous notoc}
 
-{{site.data.keyword.appid_short_notm}} では匿名によるログインが可能です。[匿名 ID](/docs/services/appid/user-profile.html#anonymous) を参照してください。
+{{site.data.keyword.appid_short_notm}} では、[匿名](/docs/services/appid/user-profile.html#anonymous)ログインが可能です。
 
   ```swift
   class delegate : AuthorizationDelegate {

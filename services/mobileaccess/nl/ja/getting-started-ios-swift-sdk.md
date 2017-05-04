@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+**重要: {{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービス**に置き換えられます。
 
 # iOS Swift SDK のセットアップ
 {: #getting-started-ios}
@@ -31,7 +32,7 @@ iOS Swift アプリケーションに {{site.data.keyword.amashort}} SDK を装�
 * **「TenantID」**。{{site.data.keyword.amashort}} ダッシュボードでサービスを開きます。**「モバイル・オプション」**をクリックします。`tenantId` (`appGUID` とも呼ばれる) の値が、**「アプリ GUID」/「TenantId」**フィールドに表示されます。{{site.data.keyword.amashort}} 許可マネージャーを初期化するためにこの値が必要になります。
 * **「アプリケーションの経路 (Application Route)」**。これは、バックエンド・アプリケーションの URL です。保護されているエンドポイントに要求を送信するためにこの値が必要になります。
 * {{site.data.keyword.Bluemix_notm}} **「地域」**。**「アバター」**アイコン![「アバター」アイコン](images/face.jpg "「アバター」アイコン") の横のヘッダー内に現在の {{site.data.keyword.Bluemix_notm}} 地域が表示されます。表示される地域の値は、`「米国南部」`、`「シドニー」`、または`「英国」`のいずれかでなければならず、またコードで必要な SDK 値 (`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom`、または `BMSClient.Region.sydney`) に対応している必要があります。{{site.data.keyword.amashort}} SDK を初期化するためにこの値が必要になります。
-* Xcode プロジェクト。iOS 開発環境のセットアップ方法について詳しくは、[Apple Developer Web サイト![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.apple.com/support/xcode/ "外部リンク・アイコン"){: new_window}を参照してください。
+* Xcode プロジェクト。iOS 開発環境のセットアップ方法について詳しくは、[Apple Developer Web サイト![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.apple.com/support/xcode/){: new_window}を参照してください。
 
 
 ## {{site.data.keyword.amashort}} Client SDK のインストール
@@ -51,14 +52,15 @@ sudo gem install cocoapods
 ```
 {: codeblock}
 
-詳しくは、[CocoaPods Web サイト![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cocoapods.org/ "外部リンク・アイコン"){: new_window}を参照してください。
+詳しくは、[CocoaPods Web サイト![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cocoapods.org/){: new_window}を参照してください。
 
 ### CocoaPods を使用した {{site.data.keyword.amashort}} Client SDK のインストール
 {: #install-sdk-cocoapods}
 
 1. 端末ウィンドウで、iOS プロジェクトのルート・ディレクトリーにナビゲートします。
 
-1. まだ CocoaPods 用にワークスペースを初期化していない場合は、`pod init` コマンドを実行します。<br/> CocoaPods が、iOS プロジェクトの依存関係を定義する `Podfile` ファイルを作成します。
+1. まだ CocoaPods 用にワークスペースを初期化していない場合は、`pod init` コマンドを実行します。<br/>
+CocoaPods によって、iOS プロジェクトの依存関係を定義する `Podfile` ファイルが作成されます。
 
 1. `Podfile` ファイルを編集し、必要なターゲットに以下の行を追加します。
 

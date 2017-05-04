@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-21"
+lastupdated: "2017-04-04"
 
 ---
 
@@ -78,9 +78,9 @@ Ein ähnliches Feedaktionsprotokoll tritt für `wsk trigger delete` auf.
 
 Das Einrichten eines Feeds über einen Hook ist einfach, wenn der Ereignisproduzent die Webhook/Callback-Funktion unterstützt.
 
-Mit dieser Methode ist es *nicht erforderlich* einen persistenten Service außerhalb von OpenWhisk automatisch zu installieren.  Die gesamte Feedverwaltung erfolgt über statusunabhängige {{site.data.keyword.openwhisk_short}}-*Feed-Aktionen*, die direkt mit einer Drittanbieter-Webhook-API kommunizieren.
+Mit dieser Methode ist es *nicht erforderlich*, einen persistenten Service außerhalb von {{site.data.keyword.openwhisk_short}} automatisch zu installieren. Die gesamte Feedverwaltung erfolgt über statusunabhängige {{site.data.keyword.openwhisk_short}}-*Feed-Aktionen*, die direkt mit einer Drittanbieter-Webhook-API kommunizieren.
 
-Bei einem Aufruf mit `CREATE` installiert die Feedaktion einen Webhok für einen anderen Service. Dabei sendet der ferne Service Benachrichtigungen an die entsprechende `fireTrigger`-URL in OpenWhisk.
+Bei einem Aufruf mit `CREATE` installiert die Feedaktion einen Webhok für einen anderen Service. Dabei sendet der ferne Service Benachrichtigungen an die entsprechende `fireTrigger`-URL in {{site.data.keyword.openwhisk_short}}. 
 
 Der Webhook sollte angewiesen werden, Benachrichtigungen zu einer URL wie die folgende zu senden:
 
@@ -90,7 +90,7 @@ Das Formular mit der POST-Anforderung wird als JSON-Dokument interpretiert, das 
 
 ## Feeds mit Polling implementieren
 
-Eine {{site.data.keyword.openwhisk_short}}-*Aktion* kann so eingerichtet werden, dass eine Feedquelle innerhalb von OpenWhisk vollständig abgefragt wird, ohne dass persistente Verbindungen oder ein externer Service automatisch installiert werden müssen.
+Eine {{site.data.keyword.openwhisk_short}}-*Aktion* kann so eingerichtet werden, dass eine Feedquelle innerhalb von {{site.data.keyword.openwhisk_short}} vollständig abgefragt wird, ohne dass persistente Verbindungen oder ein externer Service automatisch installiert werden müssen. 
 
 Bei Feeds, bei denen kein Webhook verfügbar ist, die aber keine Antworten mit einem hohen Volumen oder einer geringen Latenz benötigen, ist Polling eine attraktive Option.
 
@@ -106,7 +106,7 @@ Mit dieser Vorgehensweise wird ein Polling-basierter Auslöser implementiert, de
 
 Die vorherigen zwei Architekturoptionen sind einfach zu implementieren. Wenn Sie jedoch einen sehr leistungsfähigen Feed benötigen, sind persistente Verbindungen und Long-Polling- bzw. ähnliche Verfahren notwendig.
 
-Da {{site.data.keyword.openwhisk_short}}-Aktionen eine kurze Laufzeit haben müssen, kann eine Aktion keine persistente Verbindung zu einer dritten Partei verwalten. Stattdessen muss ein separater Service (außerhalb von OpenWhisk) automatisch installiert werden, der durchgehend ausgeführt wird.   Dies sind *Provider-Services*.  Ein Provider-Service kann Verbindungen zu Drittanbieter-Ereignisquellen verwalten, die Long-Polling- oder andere verbindungsbasierte Benachrichtigungen unterstützen.
+Da {{site.data.keyword.openwhisk_short}}-Aktionen eine kurze Laufzeit haben müssen, kann eine Aktion keine persistente Verbindung zu einer dritten Partei verwalten. Stattdessen muss ein separater Service (außerhalb von {{site.data.keyword.openwhisk_short}}) automatisch installiert werden, der durchgehend ausgeführt wird. Dies sind *Provider-Services*.  Ein Provider-Service kann Verbindungen zu Drittanbieter-Ereignisquellen verwalten, die Long-Polling- oder andere verbindungsbasierte Benachrichtigungen unterstützen.
 
 Der Provider-Service muss eine REST-API bereitstellen, die es der {{site.data.keyword.openwhisk_short}}-*Feedaktion* ermöglicht, den Feed zu steuern.   Der Provider-Service fungiert als Proxy zwischen dem Ereignisprovider und {{site.data.keyword.openwhisk_short}}. Wenn er vom Drittanbieter Ereignisse empfängt, werden sie an {{site.data.keyword.openwhisk_short}} gesendet, indem ein Auslöser aktiviert wird.
 

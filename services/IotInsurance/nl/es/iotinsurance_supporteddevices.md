@@ -30,9 +30,9 @@ La tabla siguiente contiene una lista de los proveedores y dispositivos soportad
 <thead>
 <tr>
 <th>Nombre del proveedor</th>
-<th>Tipo de integración </th>
+<th>Tipo de integración</th>
 <th>Dispositivos probados</th>
-<th>Información del proveedor</th>
+<th>Información del proveedor </th>
 </tr>
 </thead>
 <tbody>
@@ -190,7 +190,7 @@ Integre utilizando la aplicación móvil (en desuso). Este método solo funciona
 ### Yanzi
 #### Procedimiento de integración
 **Opción 1**  
-  Añada credenciales de la nube de Yanzi a yanzi-config.json en el directorio del proveedor del repositorio del transformador. El objeto "yanziCloud" es la ubicación correcta de las credenciales.   
+  Añada credenciales de la nube de Yanzi a yanzi-config.json en el directorio del proveedor del repositorio del transformador.  El objeto "yanziCloud" es la ubicación correcta de las credenciales.  
 
 **Opción 2**  
   Yanzi utiliza la integración cloud-to-cloud entre la nube de Yanzi y {{site.data.keyword.iot_short_notm}}. La autorización para esta integración se produce en la nube de Yanzi. Una vez completada la autorización, la nube de Yanzi envía sucesos a {{site.data.keyword.iot_short_notm}}. También deberá añadir las credenciales de la instancia de {{site.data.keyword.iot_short_notm}} a yanzi-config.json en el directorio del proveedor del repositorio del transformador utilizando el objeto "iotfCredentials".

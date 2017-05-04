@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+**중요: {{site.data.keyword.amafull}} 서비스는 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다. **
 
 # Cordova 앱에서 Facebook 인증 사용
 {: #facebook-auth-cordova}
@@ -32,7 +33,7 @@ Facebook 인증을 사용하려면 원시 플랫폼 및 Cordova WebView Javascri
 * 애플리케이션 라우트. 이는 백엔드 애플리케이션의 URL입니다. 
 * `tenantId` 값. {{site.data.keyword.amashort}} 서비스 대시보드를 여십시오. **모바일 옵션**을 클릭하십시오. **앱 GUID / TenantId** 필드에 `tenantId`(`appGUID`라고도 함) 값이 표시됩니다. 이 값은 SDK를 초기화하고 백엔드 서비스에 요청을 보내는 데 필요합니다. 
 *  {{site.data.keyword.Bluemix_notm}} 서비스가 호스트되는 지역. 헤더에서 메뉴 표시줄의 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘") 옆에 현재 {{site.data.keyword.Bluemix_notm}} 지역이 표시됩니다. 지역 값은 **미국 남부**, **시드니** 또는 **영국** 중 하나여야 합니다. 이들 이름에 해당하는 정확한 SDK 상수 값은 코드 예제에 표시되어 있습니다. 
-* Facebook 애플리케이션 및 앱 ID. 자세한 정보는 [Facebook 개발자 포털에서 Facebook 앱 ID 얻기](facebook-auth-overview.html#facebook-appID)를 참조하십시오. 
+* Facebook 애플리케이션 및 앱 ID. 자세한 정보는 [개발자용 Facebook 웹 사이트에서 애플리케이션 작성](facebook-auth-overview.html#facebook-appID)을 참조하십시오.
 
 
 

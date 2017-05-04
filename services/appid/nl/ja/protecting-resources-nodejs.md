@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -24,13 +24,6 @@ lastupdated: "2017-03-30"
 
 **注**: `Express` フレームワークを使用するフレームワークは他にもあります (LoopBack など)。{{site.data.keyword.appid_short_notm}} Server SDK は、それらのどのフレームワークでも使用できます。
 
-## Server SDK について
-{: #about}
-
-{{site.data.keyword.appid_short_notm}} Server SDK には、{{site.data.keyword.Bluemix_notm}} にデプロイされたバックエンド・アプリケーションで使用する ApiStrategy パスポート戦略が用意されています。ご使用のアプリを無許可アクセスから保護するには、Node.js サーバーに ApiStrategy を装備する必要があります。`appid-serversdk-nodejs npm モジュール`には、ApiStrategy パスポート戦略の他に、{{site.data.keyword.appid_short_notm}} から発行されたアクセス・トークンと ID トークンを検証するための検証メソッドも用意されています。
-
-{{site.data.keyword.appid_short_notm}} Server SDK は Passport フレームワークを使用して許可を実施します。<a href="http://passportjs.org/" target="_blank">Passport フレームワーク<img src="../../icons/launch-glyph.svg" alt="External link icon"></a>を参照してください。
-
 
 ## Server SDK のインストール
 {: #protecting-resources-serversdk}
@@ -47,6 +40,10 @@ lastupdated: "2017-03-30"
 
 ## Node.js のリソースの保護
 {: #protecting-resources-nodesdk}
+
+{{site.data.keyword.appid_short_notm}} Server SDK には、{{site.data.keyword.Bluemix_notm}} にデプロイされたバックエンド・アプリケーションで使用する ApiStrategy パスポート戦略が用意されています。ご使用のアプリを無許可アクセスから保護するには、Node.js サーバーに ApiStrategy を装備する必要があります。`appid-serversdk-nodejs npm モジュール`には、ApiStrategy パスポート戦略の他に、{{site.data.keyword.appid_short_notm}} から発行されたアクセス・トークンと ID トークンを検証するための検証メソッドも用意されています。
+
+{{site.data.keyword.appid_short_notm}} Server SDK は、<a href="http://passportjs.org/" target="_blank">Passport フレームワーク <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a> を使用して許可を実施します。
 
 以下のスニペットは、`APIStrategy` を単純な Express アプリケーションで使用して、`/protected` エンドポイント GET メソッドを保護する方法を示しています。
 

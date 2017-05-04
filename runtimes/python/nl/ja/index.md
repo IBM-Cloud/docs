@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-01-25"
 
 ---
 
@@ -53,5 +53,7 @@ python-3.5.0
 アプリケーションが、リストされていない Python バージョンを必要とする場合は、外部の [Python ビルドパック](https://github.com/cloudfoundry/python-buildpack)を使用してアプリケーションをデプロイできます。
 
 # 関連リンク
+{: #rellinks notoc}
 ## 一般
+{: #general notoc}
 * [Cloud Foundry buildpack for the Python Language](https://github.com/cloudfoundry/python-buildpack)

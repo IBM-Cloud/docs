@@ -16,7 +16,7 @@ lastupdated: "2017-02-16"
 # Bluemix でのロギング
 {: #logging_bmx_ov}
 
-{{site.data.keyword.Bluemix_notm}} ロギング機能はプラットフォームに統合されており、クラウド・リソースに関するデータ収集は自動的に有効になります。{{site.data.keyword.Bluemix_notm}} は、デフォルトで、アプリ、アプリ・ランタイム、およびそれらのアプリの実行場所である計算ランタイムについて、ログの収集と表示を行います。
+{{site.data.keyword.Bluemix}} ロギング機能はプラットフォームに統合されており、クラウド・リソースに関するデータ収集は自動的に有効になります。{{site.data.keyword.Bluemix_notm}} は、デフォルトで、アプリ、アプリ・ランタイム、およびそれらのアプリの実行場所である計算ランタイムについて、ログの収集と表示を行います。
 {:shortdesc}
 
 {{site.data.keyword.Bluemix_notm}} のロギング機能を使用して、クラウド・プラットフォームと、そこで稼働しているリソースの動作を理解することができます。標準出力と標準エラーのログを収集するために特別な計測装置は必要ありません。例えば、ログを使用することによって、アプリケーションの監査証跡の提供、ご使用のサービスにおける問題の検出、脆弱性の識別、アプリケーション・デプロイメントおよびランタイム動作の障害追及、アプリを実行しているインフラストラクチャーの問題の検出、クラウド・プラットフォームの複数のコンポーネントにわたるアプリのトレース、および、サービス SLA に影響する可能性のあるアクションを回避するために使用できるパターンの検出を行うことができます。
@@ -26,7 +26,7 @@ FTP を使用できないことがあります (例えば、アプリケーシ�
 
 {{site.data.keyword.Bluemix_notm}} は、Cloud Foundry プラットフォームによって生成されるログ・データ、および Cloud Foundry アプリケーションによって生成されるログ・データを記録します。ログでは、アプリに対して生成されたエラー、警告、および情報の各メッセージを表示できます。Cloud Foundry でのロギングについて詳しくは、『[Bluemix での Cloud Foundry アプリのロギング](logging_cf_apps.html#logging_bluemix_cf_apps)』を参照してください。
 
-{{site.data.keyword.Bluemix_notm}} は、{{site.data.keyword.containershort}} によって生成されるログ・データを記録します。{{site.data.keyword.containershort}} でのロギングについて詳しくは、『[{{site.data.keyword.containershort}} でのロギング](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_logs)』を参照してください。   
+{{site.data.keyword.Bluemix_notm}} は、{{site.data.keyword.containershort}} によって生成されるログ・データを記録します。{{site.data.keyword.containershort}} でのロギングについて詳しくは、『[IBM Bluemix Container Service のロギング](containers/logging_containers_ov.html#logging_containers_ov)』を参照してください。   
 
 
 {{site.data.keyword.Bluemix_notm}} が提供するロギング機能を使用することによって、以下を行うことができます。

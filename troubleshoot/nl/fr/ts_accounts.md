@@ -108,4 +108,4 @@ Procédez comme suit :
 
   1. Sur la page Ajout d'une carte de crédit, remplissez toutes les zones requises qui se trouvent dans les sections relatives aux coordonnées, à l'adresse de contact et à l'adresse de facturation.
   2. Sélectionnez **I have read and agree to IBM's Terms and Conditions**, puis cliquez sur **Soumettre**. La section **Select a payment method** s'affiche.
-  3. Entrez votre numéro de carte de crédit, la date d'expiration de votre carte et le code de sécurité qui se trouve sur votre carte. Cliquez sur **Soumettre**. 
+  3. Entrez votre numéro de carte de crédit, la date d'expiration de votre carte et le code de sécurité qui se trouve sur votre carte. Cliquez sur **Soumettre**.

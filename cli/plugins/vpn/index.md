@@ -69,7 +69,7 @@ cf uninstall-plugin vpn
 	```
 	cf install-plugin vpn -r bluemix
 	```
-##List of {{site.data.keyword.vpn_short}} service commands
+## List of IBM VPN service commands
 
 ### cf vpn-create connection
 

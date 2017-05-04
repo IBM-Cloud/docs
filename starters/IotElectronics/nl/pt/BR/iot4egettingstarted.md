@@ -2,11 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -35,10 +35,9 @@ seção Modelos do catálogo do
 ## Introdução ao {{site.data.keyword.iotelectronics}}
 Para começar, conclua as tarefas a seguir:
 
-1. [Ative comunicações móveis e segurança](iotelectronics_config_mca.html) configurando {{site.data.keyword.amafull}}.
-2. [Crie dispositivos simulados](iot4ecreatingappliances.html) usando o aplicativo da web do iniciador do {{site.data.keyword.iotelectronics}}. Para fins de demonstração, as arruelas são usadas como o dispositivo simulado dentro do iniciador do {{site.data.keyword.iotelectronics}}. O dispositivo
+1. [Crie dispositivos simulados](iot4ecreatingappliances.html) usando o aplicativo da web do iniciador do {{site.data.keyword.iotelectronics}}. Para fins de demonstração, as arruelas são usadas como o dispositivo simulado dentro do iniciador do {{site.data.keyword.iotelectronics}}. O dispositivo
 que você optar por conectar poderia ser qualquer tipo de dispositivo eletrônico inteligente.
-3. [Faça download e conecte](iotelectronics_config_mobile.html) o aplicativo móvel de amostra.
+2. [Faça download e conecte](iotelectronics_config_mobile.html) o aplicativo móvel de amostra.
 
 
 ## O que vem a seguir
@@ -58,14 +57,13 @@ com os seus dispositivos.
 {: #api}
 * [API {{site.data.keyword.iotelectronics}}![Ícone de link externo](../../icons/launch-glyph.svg)](https://broker-uss-iot4e.electronics.internetofthings.ibmcloud.com/public/iot4eregistrationapi.html){:new_window}
 * [API {{site.data.keyword.iot_short}}![Ícone de link externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/iotfoundation/recipes/api-documentation/){:new_window}
-
+* [Painel de funcionamento do serviço IBM Watson IoT ![Ícone do link externo](../../icons/launch-glyph.svg)](https://status.internetofthings.ibmcloud.com){: new_window}
 
 ## Componentes
 {: #general}
 
 * [{{site.data.keyword.iotelectronics}} documentação](iotelectronics_overview.html){:new_window}
 * [{{site.data.keyword.iot_full}} documentação](https://console.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
-*  [{{site.data.keyword.amashort}} documentação](https://console.ng.bluemix.net/docs/services/mobileaccess/overview.html){:new_window}
 * [{{site.data.keyword.sdk4nodefull}} documentação](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime){:new_window}
 
 ## Amostra

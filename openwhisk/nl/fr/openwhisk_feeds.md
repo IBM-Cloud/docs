@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-21"
+lastupdated: "2017-04-04"
 
 ---
 
@@ -78,9 +78,9 @@ Un protocole d'action de flux similaire existe pour `wsk trigger delete`.
 
 Il est facile de configurer un flux via un point d'ancrage si le producteur d'événement prend en charge une fonction de webhook/rappel.
 
-Avec cette méthode, il n'est *pas nécessaire* d'établir un service permanent hors d'OpenWhisk.  La gestion des flux s'exécute naturellement par le biais d'*actions de flux* {{site.data.keyword.openwhisk_short}} sans état, qui négocient directement avec une API de webhook tierce.
+Avec cette méthode, il n'est *pas nécessaire* de maintenir un service persistant hors d'{{site.data.keyword.openwhisk_short}}.  La gestion des flux s'exécute naturellement par le biais d'*actions de flux* {{site.data.keyword.openwhisk_short}} sans état, qui négocient directement avec une API de webhook tierce.
 
-Lorsqu'elle est appelée avec `CREATE`, l'action de flux installe simplement un webhook pour un autre service et demande au service distant d'envoyer des notifications à l'adresse URL `fireTrigger` appropriée dans OpenWhisk.
+Lorsqu'elle est appelée avec `CREATE`, l'action de flux installe simplement un webhook pour un autre service et demande au service distant d'envoyer des notifications à l'URL `fireTrigger` appropriée dans {{site.data.keyword.openwhisk_short}}.
 
 Le webhook doit envoyer les notifications à une adresse URL telle que :
 
@@ -90,7 +90,7 @@ Le formulaire associé à la demande d'envoi est interprété comme un document 
 
 ## Implémentation de flux avec le modèle Interrogation
 
-Il est possible de configurer une *action* {{site.data.keyword.openwhisk_short}} afin d'interroger une source de flux uniquement dans OpenWhisk, sans qu'il ne soit nécessaire d'établir des connexions permanentes ou un service externe.
+Il est possible de configurer une *action* {{site.data.keyword.openwhisk_short}} afin d'interroger une source de flux entièrement dans {{site.data.keyword.openwhisk_short}}, sans qu'il ne soit nécessaire de maintenir des connexions ou un service externe persistants.
 
 Pour les flux pour lesquels aucun webhook n'est disponible mais qui n'ont pas besoin de gérer un volume élevé de demandes simultanées ou qui ne requièrent pas de temps de réponse courts, l'interrogation est une option attrayante.
 
@@ -106,7 +106,8 @@ Cette procédure implémente un déclencheur reposant sur l'interrogation qui n'
 
 Les deux choix d'architecture précédents sont simples et faciles à implémenter. Cependant, si vous voulez créer un flux dont les performances sont élevées, il n'existe pas d'alternative aux connexions permanentes et à l'interrogation longue, ou à des techniques similaires.
 
-Etant donné que les actions {{site.data.keyword.openwhisk_short}} doivent être de courte durée, une action ne peut pas maintenir une connexion permanente à un tiers. A la place, nous devons établir un service distinct (hors d'OpenWhisk) qui s'exécute en permanence.   Il s'agit de *services fournisseurs*.  Un service fournisseur peut maintenir des connexions à des sources d'événement tierces qui prennent en charge l'interrogation longue ou d'autres notifications reposant sur les connexions.
+Etant donné que les actions {{site.data.keyword.openwhisk_short}} doivent être de courte durée, une action ne peut pas maintenir une connexion permanente à un tiers. A la place, nous devons utiliser un service distinct
+(hors d'{{site.data.keyword.openwhisk_short}}) qui s'exécute en permanence. Il s'agit de *services fournisseurs*.  Un service fournisseur peut maintenir des connexions à des sources d'événement tierces qui prennent en charge l'interrogation longue ou d'autres notifications reposant sur les connexions.
 
 Le service fournisseur doit fournir une API REST qui permet à l'*action de flux* {{site.data.keyword.openwhisk_short}} de contrôler le flux.   Il agit comme un proxy entre le fournisseur d'événements et {{site.data.keyword.openwhisk_short}} ; lorsqu'il reçoit des événements d'un tiers, il les envoie à {{site.data.keyword.openwhisk_short}} en exécutant un déclencheur.
 

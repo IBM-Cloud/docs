@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -45,8 +45,7 @@ Hai bisogno delle seguenti informazioni:
     </tr>
   </table>
 
-  * Un progetto Android Studio, configurato per lavorare con Gradle.
-    * Per ulteriori informazioni su come configurare il tuo ambiente di sviluppo Android, consulta <a href="https://developers.google.com/web/tools/setup/" target="_blank">the Google Developer Tools docs <img src="../../icons/launch-glyph.svg" alt="icona link esterno"></a>.
+  * Un <a href="https://developers.google.com/web/tools/setup/" target="_blank">progetto Android Studio<img src="../../icons/launch-glyph.svg" alt="Icona link esterno"></a>, configurato per lavorare con Gradle.
 
 ## Installazione dell'SDK client
 {: #install-appid-sdk}
@@ -173,7 +172,7 @@ Ad esempio, puoi richiamare questo codice per impostare un nuovo attributo o sov
 ### Accesso anonimo
 {: #anonymous notoc}
 
-Con {{site.data.keyword.appid_short_notm}} puoi accedere in modo anonimo, consulta [utente anonimo](/docs/services/appid/user-profile.html#anonymous). 
+Con {{site.data.keyword.appid_short_notm}} puoi accedere a [in modo anonimo](/docs/services/appid/user-profile.html#anonymous).
 
   ```java
   appId.loginAnonymously(getApplicationContext(), new AuthorizationListener() {
@@ -198,7 +197,7 @@ Con {{site.data.keyword.appid_short_notm}} puoi accedere in modo anonimo, consul
 ### Autenticazione progressiva
 {: #progressive notoc}
 
-Quando l'utente contiene un token di accesso anonimo, può essere identificato trasmettendolo al metodo `loginWidget.launch`. 
+Quando l'utente contiene un token di accesso anonimo, può essere identificato trasmettendolo al metodo `loginWidget.launch`.
 
   ```java
   void launch (@NonNull final Activity activity, @NonNull final AuthorizationListener authorizationListener, String accessTokenString);

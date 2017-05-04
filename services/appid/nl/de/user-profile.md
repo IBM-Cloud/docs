@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -10,19 +10,17 @@ lastupdated: "2017-03-30"
 {:shortdesc: .shortdesc}
 
 
-# Benutzerprofile interpretieren
+# Benutzerprofile - Übersicht
 {: #user-profile}
 
 Ein Benutzerprofil ist eine Entität, die von {{site.data.keyword.appid_short}} gespeichert und verwaltet wird. Das Profil enthält die Attribute und Identität eines Benutzers. Es kann anonym oder mit einer Identität verknüpft sein, die von einem Identitätsprovider verwaltet wird.
 {:shortdesc}
 
-{{site.data.keyword.appid_short_notm}} bietet eine API an, um sich entweder anonym oder über eine Authentifizierung mit einem OpenId Connect (OIDC)-Identitätsproviders anzumelden, siehe [Identitätsprovider konfigurieren](/docs/services/appid/identity-providers.html#setting-up-idp). Der API-Endpunkt des Benutzerprofilattributs ist eine Ressource, die durch den Zugriffstoken geschützt ist, der beim Anmelde- und Berechtigungsprozess von {{site.data.keyword.appid_short_notm}} generiert wird.
+{{site.data.keyword.appid_short_notm}} stellt eine API bereit, die eine anonyme Anmeldung oder eine Anmeldung mit einer Authentifizierung über einen OIDC-[Identitätsprovider](/docs/services/appid/identity-providers.html#setting-up-idp) (OIDC = OpenId Connect) ermöglicht. Der API-Endpunkt des Benutzerprofilattributs ist eine Ressource, die durch den Zugriffstoken geschützt ist, der beim Anmelde- und Berechtigungsprozess von {{site.data.keyword.appid_short_notm}} generiert wird.
 
 
 ## Benutzerattribute speichern, lesen und löschen
 {: #storing-data}
-
-
 
 {{site.data.keyword.appid_short_notm}} stellt eine <a href="https://appid-profiles.ng.bluemix.net/swagger-ui/index.html#/" target="_blank">REST-API <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a> für die Durchführung von CRUD-Operationen für Benutzerattribute sowie ein SDK für <a href="https://github.com/ibm-cloud-security/appid-clientsdk-android" target="_blank">Android <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a> sowie <a href="https://github.com/ibm-cloud-security/appid-clientsdk-swift" target="_blank">mobile Swift-Clients <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a> bereit.
 

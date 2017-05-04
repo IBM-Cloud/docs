@@ -25,7 +25,7 @@ lastupdated: "2016-03-15"
 
 外部建置套件是由 Cloud Foundry 社群提供，可用來作為您自己的建置套件。在將您的應用程式部署至 {{site.data.keyword.Bluemix_notm}} 之前，請確定已安裝 cf 指令行介面。
 
-**附註：**外部建置套件不是由 IBM 提供，因此，您可能需要聯絡 Cloud Foundry 社群，以取得支援。
+**附註：**外部建置套件不是由 IBM 提供，因此，您可能需要與 Cloud Foundry 社群聯絡，以獲得支援。
 
 ## 內建社群建置套件
 
@@ -103,4 +103,4 @@ buildpack: https://github.com/cloudfoundry/python-buildpack.git
 </li>
 <li>
 使用 <code>manifest.yml</code> 檔案。您可以直接將想要指定的環境變數和值新增至該檔案。
-如需詳細資訊，請參閱<a href="https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#env-block">環境變數</a>。</li></ul>
+如需詳細資訊，請參閱 <a href="https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#env-block">Environment Variables</a>。</li></ul>

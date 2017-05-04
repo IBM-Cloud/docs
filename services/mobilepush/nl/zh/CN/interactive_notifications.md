@@ -10,15 +10,15 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# 交互式通知
+# 交互式和静默通知  
 {: #interactive-notifications}
-上次更新时间：2017 年 1 月 23 日
+上次更新时间：2017 年 3 月 3 日
 {: .last-updated}
 
 使用交互式通知，用户可以在不打开应用程序的情况下响应通知。当交互式通知到达时，设备会显示通知消息及相应的操作按钮。V8 或更高版本的 iOS 设备上支持交互式通知。对于向版本低于 V8 的 iOS 设备发送的交互式通知，不会显示通知操作。
 
-##发送交互式 {{site.data.keyword.mobilepushshort}}
-
+## 发送交互式通知
+{: #send_interactive_notifications}
 
 使用“推送”仪表板或使用 [REST API 文档](t_restapi.html)可发送交互式通知。
 
@@ -28,10 +28,11 @@ copyright:
 2. 选择通知收件人，并单击**下一步**。 
 3. 在编写通知页面上，可以通过将“类型”设置为“缺省值”或“混合”并在“高级选项”选项卡下指定“类别”值来发送交互式推送。要在客户机上配置类别值，请查看“在本机 iOS 应用程序中**处理交互式 {{site.data.keyword.mobilepushshort}}**”一节。
 
-## 在 iOS 应用程序中处理交互式 {{site.data.keyword.mobilepushshort}}
-
+## 在 iOS 应用程序中处理交互式通知
+{: #send_interactive_notifications_ios}
 
 ### Swift
+{: #send_interactive_notifications_ios_swift}
 
 完成以下步骤以接收交互式通知：
 
@@ -70,6 +71,7 @@ copyright:
 
 
 ### Cordova
+{: #send_interactive_notifications_ios_cordova}
 
 要在 Cordova iOS 应用程序中获取可操作通知，请完成以下步骤：
 
@@ -81,3 +83,29 @@ copyright:
 	{: codeblock} 
 2. 在 AppDelegate 上实施新回调方法。
 3. 用户单击操作按钮时，将调用此新回调方法。要实施此方法，必须执行与指定标识关联的任务，并执行 completionHandler 参数中的块。
+
+## 处理针对 iOS 的静默通知
+{: #send_silent_notifications_for_ios}
+
+静默通知不会显示在设备屏幕上。这些通知由应用程序在后台进行接收，这会将应用程序唤醒最多 30 秒来执行指定的后台任务。用户可能并不知道有通知到达。要针对 iOS 发送静默通知，请使用 [REST API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://mobile.{DomainName}/imfpush/){: new_window}。   
+
+1. 要发送静默推送通知，请在项目的 `appDelegate.m` 文件中实施以下方法。在 Swift 中，服务器针对静默通知发送的 `contentAvailable` 值等于 1。
+```
+//For Swift
+	 func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+       let contentAPS = userInfo["aps"] as [NSObject : AnyObject]
+       if let contentAvailable = contentAPS["content-available"] as? Int {
+           //silent or mixed push
+           if contentAvailable == 1 {
+               completionHandler(UIBackgroundFetchResult.NewData)
+           } else {
+               completionHandler(UIBackgroundFetchResult.NoData)
+           }
+       } else {
+   //Default notification
+           completionHandler(UIBackgroundFetchResult.NoData)
+       }
+    }
+```
+	{: codeblock}
+

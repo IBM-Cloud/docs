@@ -2,16 +2,15 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-
 
 # A propos de {{site.data.keyword.iotelectronics}}
 {: #iotelectronics_about}
@@ -45,15 +44,11 @@ Le conteneur boilerplate du module de démarrage déploie la solution {{site.dat
 
 ![Architecture {{site.data.keyword.iotelectronics}}. Ce diagramme est décrit dans le corps principal de la rubrique.](images/IoT4E_architecture.svg "Architecture {{site.data.keyword.iotelectronics}}")
 
-Le module de démarrage {{site.data.keyword.iotelectronics}} utilise le service {{site.data.keyword.iotelectronics}} et des API pour se connecter à {{site.data.keyword.iot_short_notm}}. L'application de démarrage et le modèle d'application mobile communiquent avec le service {{site.data.keyword.iotelectronics}} et sont connectés entre eux par {{site.data.keyword.amafull}}. Les composants suivants sont inclus dans le module de démarrage :
+Le module de démarrage {{site.data.keyword.iotelectronics}} utilise le service {{site.data.keyword.iotelectronics}} et des API pour se connecter à {{site.data.keyword.iot_short_notm}}. L'application du module de démarrage et le modèle d'application communiquent avec le service {{site.data.keyword.iotelectronics}}. Les composants suivants sont inclus dans le module de démarrage :
 
 **Le service {{site.data.keyword.iotelectronics}}** prend en charge l'enregistrement des utilisateurs et des appareils, ainsi que les notifications.
 
 **{{site.data.keyword.iot_full}}** permet à vos applications de communiquer avec vos appareils, capteurs et passerelles connectés et d'utiliser les données que ces derniers collectent.
-
-<!-- **{{site.data.keyword.iotrtinsights_full}}** enables you to enrich and monitor data from your appliances, visualize what's happening now, and respond to emerging conditions by using automated actions. -->
-
-**{{site.data.keyword.amafull}}** permet aux utilisateurs des applications mobiles de se connecter avec des comptes sociaux existants et garantit la sécurité des communications avec les systèmes dorsaux.
 
 **{{site.data.keyword.sdk4nodefull}}** vous permet de développer, déployer et mettre à l'échelle des applications JavaScript&reg; côté serveur et fournit des performances, une sécurité et une serviçabilité améliorées.
 

@@ -15,7 +15,7 @@ lastupdated: "2017-02-21"
 # Iniciación a {{site.data.keyword.openwhisk_short}}
 
 
-{{site.data.keyword.openwhisk}} es un servicio de computación dirigido por sucesos, también conocido como Computación sin servidor o Function as a Service (FaaS), {{site.data.keyword.openwhisk_short}} ejecuta lógica de aplicación en respuesta a sucesos o invocaciones directas desde aplicaciones web o móvil a través de HTTP. Los sucesos se pueden
+{{site.data.keyword.openwhisk}} es un servicio de computación dirigido por sucesos, también conocido como Computación sin servidor o Function as a Service (FaaS), {{site.data.keyword.openwhisk_short}} ejecuta lógica de aplicación en respuesta a sucesos o invocaciones directas desde apps web o móvil a través de HTTP. Los sucesos se pueden
 proporcionar desde servicios de Bluemix como Cloudant, así como desde orígenes externos. Los desarrolladores se pueden centrar en escribir
 lógica de aplicación y crear acciones que se ejecutan a demanda.
 Las ventajas de este nuevo paradigma son que el usuario no debe suministrar servidores explícitamente ni preocuparse del escalado automático ni de la alta disponibilidad, actualizaciones ni mantenimiento, ni pagar por horas de procesador cuando el servidor se está ejecutando pero no sirviendo solicitudes.
@@ -51,6 +51,9 @@ siga las instrucciones para instalarlo.
 - [Casos de uso comunes para aplicaciones sin servidor](./openwhisk_use_cases.html)
 - [Configuración y utilización de la CLI de OpenWhisk](./openwhisk_cli.html)
 - [Utilización de OpenWhisk desde una app iOS](./openwhisk_mobile_sdk.html)
+- [Artículos, ejemplos y guías de aprendizaje](https://github.com/openwhisk/openwhisk-external-resources)
+- [Preguntas frecuentes de Apache OpenWhisk](http://openwhisk.org/faq)
+- [Tarifas](https://console.ng.bluemix.net/openwhisk/learn/pricing)
 
 ## Modelo de programación
 {: #openwhisk_start_programming}
@@ -126,6 +129,7 @@ esta acción en respuesta a sucesos. Siga el ejemplo
 [alarm service example](./openwhisk_packages.html#openwhisk_packages_trigger) para configurar un origen de sucesos para
 invocar la acción `hello` cada vez que se genere un suceso periódico.
 
+[Aquí encontrará una lista completa de guías de aprendizaje y ejemplos de OpenWhisk](https://github.com/openwhisk/openwhisk-external-resources#sample-applications). Además de ejemplos, este repositorio contiene enlaces con artículos, presentaciones, podcasts, vídeos y otros recursos relacionados con {{site.data.keyword.openwhisk_short}}.
 
 ## Referencia de API
 {: #openwhisk_start_api notoc}

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE map PUBLIC "-//IBM//DTD DITA IBM Map//EN"
+ "ibm-map.dtd">
+
+
+<map xml:lang="ja-jp">
+<title>IoT for Insurance</title>
+<topicref href="index.html" format="html" navtitle="IoT for Insurance" scope="peer" locktitle="yes">
+<topicref href="index.html" format="html" navtitle="概説" locktitle="yes" scope="peer">
+<topicref format="html" href="index.html#deploying_services" outputclass="subsection" scope="peer"
+navtitle="サービスおよびアプリのデプロイ"/>
+<topicref format="html" href="index.html#config_push" outputclass="subsection" scope="peer"
+navtitle="プッシュ通知の構成"/>
+</topicref>
+<topicref href="iotinsurance_overview.html" format="html" navtitle="概要" toc="yes">
+<topicref format="html" href="iotinsurance_overview.html#architecture" outputclass="subsection"
+scope="peer" navtitle="アーキテクチャー"/>
+<topicref format="html" href="iotinsurance_overview.html#insurance_dashboard"
+outputclass="subsection" scope="peer" navtitle="保険ダッシュボード"/>
+<topicref format="html" href="iotinsurance_overview.html#mobileapp" outputclass="subsection"
+scope="peer" navtitle="サンプル・モバイル・アプリ"/>
+<topicref format="html" href="iotinsurance_overview.html#rest_api" outputclass="subsection"
+scope="peer" navtitle="REST とリアルタイム API"/>
+<topicref format="html" href="iotinsurance_overview.html#transformer" outputclass="subsection"
+scope="peer" navtitle="Transformer"/>
+<topicref format="html" href="iotinsurance_overview.html#wcdtransformer" outputclass="subsection"
+scope="peer" navtitle="Weather Company データ変換プログラム"/>
+<topicref format="html" href="iotinsurance_overview.html#shield_engine" outputclass="subsection"
+scope="peer" navtitle="シールド・エンジン"/>
+<topicref format="html" href="iotinsurance_overview.html#action_engine" outputclass="subsection"
+scope="peer" navtitle="アクション・エンジン"/>
+</topicref>
+<topicref href="iotinsurance_extending_service.html" format="html"
+navtitle="API によるサービスの拡張" toc="yes">
+<topicref href="iotinsurance_how_service_works.html" format="html" navtitle="サービスの動作"
+toc="yes"/>
+<topicref href="iotinsurance_device_toolkit.html" format="html" navtitle="デバイス・ツールキット" toc="yes">
+<topicref href="iotinsurance_device_toolkit.html#reg_users" format="html"
+navtitle="許可ユーザーの登録" toc="yes"/>
+<topicref href="iotinsurance_device_toolkit.html#generating_device_events" format="html"
+navtitle="デバイス・イベントの生成" toc="yes"/>
+<topicref href="iotinsurance_device_toolkit.html#deploy_new_transformer" format="html"
+navtitle="変換プログラムの新しいインスタンスのデプロイ" toc="yes"/>
+</topicref>
+<topicref href="iotinsurance_supporteddevices.html" format="html"
+navtitle="サポートされるデバイスとベンダー" toc="yes">
+<topicref href="iotinsurance_supporteddevices.html#supportedvendors" format="html"
+navtitle="ベンダー別に列挙したサポート・デバイス" toc="yes"/>
+<topicref href="iotinsurance_supporteddevices.html#integratingdevices" format="html"
+navtitle="デバイスとベンダー・クラウドを統合する" toc="yes"/>
+</topicref>
+<topicref href="iotinsurance_shield_toolkit.html" format="html" navtitle="シールド・ツールキット" toc="yes">
+<topicref href="iotinsurance_shield_toolkit.html#environment" format="html"
+navtitle="環境の設定" toc="yes"/>
+<topicref href="iotinsurance_shield_toolkit.html#create_shield_def" format="html"
+navtitle="シールド定義の作成" toc="yes"/>
+<topicref href="iotinsurance_shield_toolkit.html#create_shield_code" format="html"
+navtitle="シールド・コードの作成" toc="yes"/>
+<topicref href="iotinsurance_shield_toolkit.html#create_user" format="html"
+navtitle="ユーザーの作成" toc="yes"/>
+<topicref href="iotinsurance_shield_toolkit.html#create_shield_assoc" format="html"
+navtitle="シールド関連付けの作成" toc="yes"/>
+<topicref href="iotinsurance_shield_toolkit.html#create_sim_hazard" format="html"
+navtitle="ハザード・シミュレーションの作成" toc="yes"/>
+<topicref href="iotinsurance_shield_toolkit.html#create_promotion" format="html"
+navtitle="プロモーションの作成" toc="yes"/>
+</topicref>
+</topicref>
+<topicref href="iotinsurance_mobile_app.html" format="html"
+navtitle="モバイル・アプリのインストールと接続" toc="yes">
+<topicref format="html" href="iotinsurance_mobile_app.html#building_mobile" outputclass="subsection"
+scope="peer" navtitle="モバイル・アプリのビルド"/>
+<topicref format="html" href="iotinsurance_mobile_app.html#iot4i_pushNotification"
+outputclass="subsection" scope="peer" navtitle="プッシュ通知の有効化"/>
+</topicref>
+<topicref href="iotinsurance_optimizing_performance.html" format="html"
+navtitle="パフォーマンスの最適化" toc="yes">
+<topicref format="html" href="iotinsurance_advancedservices.html#scaling_apps"
+outputclass="subsection" scope="peer" navtitle="アプリケーションのスケーリング"/>
+<topicref format="html" href="iotinsurance_advancedservices.html#monitoring"
+outputclass="subsection" scope="peer" navtitle="パフォーマンスのモニタリング"/>
+</topicref>
+<topicref format="html" href="iotinsurance_upgrading.html" outputclass="subsection" scope="peer"
+navtitle="新規バージョンへのアップグレード"/>
+<topicref format="html" href="iotinsurance_data_backup.html" outputclass="subsection" scope="peer"
+navtitle="データのバックアップ">
+<topicref format="html" href="iotinsurance_data_backup.html#createinstance" outputclass="subsection"
+scope="peer" navtitle="Cloudant レプリカの作成"/>
+<topicref format="html" href="iotinsurance_data_backup.html#locate_credentials"
+outputclass="subsection" scope="peer" navtitle="資格情報の検索"/>
+<topicref format="html" href="iotinsurance_data_backup.html#create_replication"
+outputclass="subsection" scope="peer" navtitle="複製タスクの作成"/>
+<topicref format="html" href="iotinsurance_data_backup.html#run_backup" outputclass="subsection"
+scope="peer" navtitle="バックアップの実行"/>
+<topicref format="html" href="iotinsurance_data_backup.html#restore_data" outputclass="subsection"
+scope="peer" navtitle="データのリストア"/>
+</topicref>
+<topicref href="iotinsurance_troubleshooting.html" format="html" navtitle="トラブルシューティング"
+toc="yes">
+<topicref format="html" href="iotinsurance_troubleshooting.html#deployingapps"
+outputclass="subsection" scope="peer" navtitle="アプリのデプロイに関する問題"/>
+<topicref format="html" href="iotinsurance_troubleshooting.html#performance_issues"
+outputclass="subsection" scope="peer" navtitle="パフォーマンスの問題"/>
+<topicref format="html" href="iotinsurance_troubleshooting.html#gettinghelp"
+outputclass="subsection" scope="peer" navtitle="ヘルプとサポートの取得"/>
+</topicref>
+</topicref>
+</map>
+

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+**Importante: il servizio {{site.data.keyword.amafull}} è stato sostituito con il servizio {{site.data.keyword.appid_full}}.**
 
 # Abilitazione dell'autenticazione Facebook per le applicazioni iOS (SDK Swift)
 {: #facebook-auth-ios}
@@ -28,7 +30,7 @@ Per utilizzare Facebook come un provider di identità nelle tue applicazioni iOS
 * La tua **Regione** {{site.data.keyword.Bluemix_notm}}. Puoi trovare la tua regione {{site.data.keyword.Bluemix_notm}} corrente nell'intestazione, accanto all'icona **Avatar** ![Icona Avatar](images/face.jpg "Icona Avatar"). Il valore della regione visualizzato deve essere uno dei seguenti: `Stati Uniti Sud`, `Regno Unito` o `Sydney` e corrisponde ai valori SDK richiesti per la SDK Swift: `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` o `BMSClient.Region.sydney`. Avrai bisogno di questo valore per inizializzare il client {{site.data.keyword.amashort}}.
 * Un progetto iOS configurato per lavorare con CocoaPods.  Per ulteriori informazioni, vedi **Installa CocoaPods** in  [Configurazione dell'SDK Swift iOS](getting-started-ios-swift-sdk.html).  
    **Nota:** non è necessario installare l'SDK {{site.data.keyword.amashort}} core prima di procedere.
-* Un'applicazione Facebook sul sito Web [Facebook for Developers ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developers.facebook.com "Icona link esterno"){: new_window}.
+* Un'applicazione Facebook sul sito Web [Facebook for Developers ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developers.facebook.com){: new_window}.
 
 **Importante:** non devi necessariamente installare separatamente l'SDK Facebook (`com.facebook.FacebookSdk`). L'SDK Facebook viene installato automaticamente con il seguente pod {{site.data.keyword.amashort}} `BMSFacebookAuthentication`. Puoi saltare il passo **Aggiungi l'SDK Facebook al tuo progetto Xcode** quando aggiungi o configuri la tua applicazione sul sito web Facebook for Developers.
 
@@ -37,7 +39,7 @@ Per utilizzare Facebook come un provider di identità nelle tue applicazioni iOS
 
 Sul sito Facebook for Developers:
 
-1. Accedi al tuo account in [Facebook for Developers ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developers.facebook.com "Icona link esterno"){: new_window}.
+1. Accedi al tuo account in  [Facebook for Developers ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developers.facebook.com){: new_window}.
 
 1. Assicurati che la piattaforma iOS sia stata aggiunta alla tua applicazione. Quando aggiungi o configuri la piattaforma iOS devi fornire il **bundleId** della tua applicazione iOS. Per trovare il **bundleId** della tua applicazione iOS, cerca il **Bundle Identifier**
 nel file `info.plist` o nella scheda **General** del progetto Xcode.
@@ -71,7 +73,7 @@ Dopo che hai configurato l'ID applicazione Facebook e la tua applicazione Facebo
    ```
    {: codeblock}
 
-Per ulteriori informazioni, visita il [sito Web CocoaPods![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cocoapods.org/ "Icona link esterno"){: new_window}.
+Per ulteriori informazioni, visita il [sito Web CocoaPods ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cocoapods.org/){: new_window}.
 
 ### Installazione dell'SDK Swift client {{site.data.keyword.amashort}} con CocoaPods
 {: #facebook-auth-install-swift-cocoapods}
@@ -166,7 +168,7 @@ Abilita `Keychain Sharing`. Vai alla scheda `Funzionalità` e passa `Keychain Sh
 
    Aggiorna le proprietà `CFBundleURLSchemes` e `FacebookappID` con il tuo ID applicazione Facebook. Aggiorna `FacebookDisplayName` con il nome della tua applicazione Facebook.
 
-   **Importante**: assicurati di non sovrascrivere alcuna proprietà esistente nel file `info.plist`. Se hai delle proprietà che si sovrappongono, devi unirle manualmente. Per ulteriori informazioni, vedi [Configure Xcode Project ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developers.facebook.com/docs/ios/getting-started/ "Icona link esterno"){: new_window} e [Preparing Your Apps for iOS9 ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developers.facebook.com/docs/ios/ios9 "Icona link esterno"){: new_window}.
+   **Importante**: assicurati di non sovrascrivere alcuna proprietà esistente nel file `info.plist`. Se hai delle proprietà che si sovrappongono, devi unirle manualmente. Per ulteriori informazioni, vedi [Configure Xcode Project ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developers.facebook.com/docs/ios/getting-started/){: new_window} e [Preparing Your Apps for iOS9 ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developers.facebook.com/docs/ios/ios9){: new_window}.
 
 ## Inizializzazione dell'SDK Swift client {{site.data.keyword.amashort}}
 {: #facebook-auth-ios-initalize-swift}
@@ -241,7 +243,7 @@ Devi utilizzare il contenitore tipo {{site.data.keyword.mobilefirstbp}} e dispor
 
 1. Prova a inviare una richiesta all'endpoint protetto del backend mobile appena creato nel tuo browser. Apri il seguente URL: `{applicationRoute}/protected`, sostituendo `{applicationRoute}` con il valore richiamato dalle **Opzioni mobili** (consulta [Configurazione di Mobile Client Access per l'autenticazione Facebook](#facebook-auth-ios-configmca)).
 Ad esempio: `http://my-mobile-backend.mybluemix.net/protected`
-<br/>L'endpoint `/protected` di un'applicazione di back-end mobile creato con il contenitore tipo MobileFirst Services Starter è protetto con {{site.data.keyword.amashort}}. Nel tuo browser viene restituito un messaggio `Unauthorized`. Questo messaggio viene restituito perché a questo endpoint possono accedere solo le applicazioni mobili strumentate con l'SDK client {{site.data.keyword.amashort}}.
+<br/>L'endpoint `/protected` di un'applicazione di backend mobile creato con il contenitore tipo MobileFirst Services Starter è protetto con {{site.data.keyword.amashort}}. Nel tuo browser viene restituito un messaggio `Unauthorized`. Questo messaggio viene restituito perché a questo endpoint possono accedere solo le applicazioni mobili strumentate con l'SDK client {{site.data.keyword.amashort}}.
 
 1. Utilizza la tua applicazione iOS per effettuare una richiesta allo stesso endpoint.
 

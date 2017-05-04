@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+**重要: {{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービス**に置き換えられます。
 
 # Cordova プラグインのセットアップ
 {: #getting-started-cordova}
@@ -33,7 +34,7 @@ Cordova クライアント・アプリケーションに {{site.data.keyword.ama
 * バックエンド・アプリケーションの URL (**「アプリの経路 (App Route)」**)。バックエンド・アプリケーションの保護されたエンドポイントに要求を送信するためにこの値が必要になります。
 * **TenantID** 値。{{site.data.keyword.amashort}} ダッシュボードでサービスを開きます。**「モバイル・オプション」**ボタンをクリックします。`tenantId` (`appGUID` とも呼ばれる) の値が、**「アプリ GUID」/「TenantId」**フィールドに表示されます。許可マネージャーを初期化するためにこの値が必要になります。
 * {{site.data.keyword.Bluemix_notm}} **「地域」**。**「アバター」**アイコン![「アバター」アイコン](images/face.jpg "「アバター」アイコン") の横のヘッダー内に現在の {{site.data.keyword.Bluemix_notm}} 地域が表示されます。表示される地域の値は、`「米国南部」`、`「英国」`、または`「シドニー」`のいずれかでなければならず、また WebView Javascript コードで必要な SDK 値 (`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY`、または `BMSClient.REGION_UK`) に対応している必要があります。{{site.data.keyword.amashort}} クライアントを初期化するためにこの値が必要になります。
-* Cordova アプリケーションまたは既存のプロジェクト。Cordova アプリケーションのセットアップ方法について詳しくは、[Cordova Web サイト![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cordova.apache.org/ "外部リンク・アイコン"){: new_window}を参照してください。
+* Cordova アプリケーションまたは既存のプロジェクト。Cordova アプリケーションのセットアップ方法について詳しくは、[Cordova Web サイト![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cordova.apache.org/){: new_window}を参照してください。
 
 ## {{site.data.keyword.amashort}} Cordova プラグインのインストール
 {: #getting-started-cordova-plugin}
@@ -69,7 +70,7 @@ Cordova クライアント・アプリケーションに {{site.data.keyword.ama
 	```
 	{: codeblock}
 
-	*minSdkVersion* の値は、`15` 以上でなければなりません。Android SDK 用にサポートされる *targetSdkVersion* を最新の状態に保つ方法については、[Android Platform Guide![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cordova.apache.org/docs/en/latest/guide/platforms/android/ "外部リンク・アイコン"){: new_window} を参照してください。
+	*minSdkVersion* の値は、`15` 以上でなければなりません。Android SDK 用にサポートされる *targetSdkVersion* を最新の状態に保つ方法については、[Android Platform Guide![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cordova.apache.org/docs/en/latest/guide/platforms/android/){: new_window} を参照してください。
 
 3. iOS オペレーティング・システムを追加した場合は、以下のように、ターゲット宣言で `<platform name="ios">` エレメントを更新してください。
 
@@ -111,7 +112,7 @@ Cordova クライアント・アプリケーションに {{site.data.keyword.ama
 
 	2. Xcode で、アプリケーションをビルドして実行します。
 
-	**注**: `cordova build ios` の実行時に以下のエラーを受け取ることがあります。この問題は、依存関係プラグイン内のバグが原因であり、現在、[Issue 12 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/blakgeek/cordova-plugin-cocoapods-support/issues/12 "外部リンク・アイコン"){: new_window} で追跡中です。シミュレーターまたはデバイスを使用して、XCode の iOS プロジェクトを引き続き実行できます。
+	**注**: `cordova build ios` の実行時に以下のエラーを受け取ることがあります。この問題は、依存関係プラグイン内のバグが原因であり、現在、[Issue 12 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/blakgeek/cordova-plugin-cocoapods-support/issues/12){: new_window}で追跡中です。シミュレーターまたはデバイスを使用して、XCode の iOS プロジェクトを引き続き実行できます。
 
 	```
 	xcodebuild: error: Unable to find a destination matching the provided destination specifier:

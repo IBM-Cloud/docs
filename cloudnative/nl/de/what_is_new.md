@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -19,13 +19,13 @@ lastupdated: "2017-03-17"
 ## Neu ab März 2017
 {: #mar-2017}
 
-Mit der Aktualisierung der {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} im März 2017 wurden folgende Änderungen eingeführt: 
+Mit der Aktualisierung der {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} im März 2017 wurden folgende Änderungen eingeführt:
 
-   * Das {{site.data.keyword.Bluemix_notm}} Mobile-Dashboard ist jetzt die {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}. 
-   * Die Projekterstellung wurde überarbeitet und schließt jetzt Mustertypen für Web-App-, BFF- und Microservice-Server mit Unterstützung für Node.js, Java und Swift ein. 
-   * Die Integration in den neuen und verbesserten {{site.data.keyword.appid_full}}-Service ermöglicht die Authentifizierung für Mobile and Web-Projekte. 
-   * Jetzt können Sie zusätzlich SDKs für Ihre Projekte mit dem [SDK Generator-Plug-in](sdk_cli.html) generieren. Die SDK-Generierung in der {{site.data.keyword.dev_console}} ist nur für mobile Projekte verfügbar. 
-   * Jetzt können Sie zusätzlich Projekte mit dem [{{site.data.keyword.dev_cli_short}}](dev_cli.html) erstellen. 
+   * Das {{site.data.keyword.Bluemix_notm}} Mobile-Dashboard ist jetzt die {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}.
+   * Die Projekterstellung wurde überarbeitet und schließt jetzt Web-App-, BFF- und Microservice-Servermustertypen mit Unterstützung für Node.js, Java und Swift ein.
+   * Die Integration in den neuen und verbesserten {{site.data.keyword.appid_full}}-Service ermöglicht die Authentifizierung für Mobile and Web-Projekte.
+   * Jetzt können Sie SDKs für Ihre Projekte mit dem [SDK Generator-Plug-in](sdk_cli.html) generieren. Die SDK-Generierung in der {{site.data.keyword.dev_console}} ist nur für mobile Projekte verfügbar.
+   * Jetzt können Sie Projekte mit dem [{{site.data.keyword.dev_cli_short}}](dev_cli.html) erstellen.
 
 
 ## Neu ab Januar 2017
@@ -59,9 +59,9 @@ Mit der Aktualisierung des {{site.data.keyword.Bluemix_notm}} Mobile-Dashboards 
 Mit der November-Aktualisierung des {{site.data.keyword.Bluemix_notm}} Mobile-Dashboards wurden folgende Änderungen eingeführt:
 
    * Sie können jetzt SDK-Artefakte für Ihre Projekte auf der Seite **Code** generieren.
-   * Cordova wird jetzt für den Basis-Code-Starter (Basic Code Starter) unterstützt.
-   * Sie können jetzt [Netzwerkereignisse auflisten ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/mobileanalytics/sdk.html#network-requests){: new_window} und [Netzanforderungen überwachen ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/mobileanalytics/app-monitoring.html#monitor-network-requests){: new_window} (auf der Seite **Netzanforderungen** der {{site.data.keyword.mobileanalytics_short}}-Konsole). 
-   * Sie können jetzt [Daten in dashDB exportieren ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/mobileanalytics/app-monitoring.html#dashdb){: new_window} (in der {{site.data.keyword.mobileanalytics_short}}-Konsole). 
+   * Cordova wird jetzt für den Basic Code Starter unterstützt.
+   * Sie können jetzt [Netzwerkereignisse auflisten ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/mobileanalytics/sdk.html#network-requests){: new_window} und [Netzanforderungen überwachen ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/mobileanalytics/app-monitoring.html#monitor-network-requests){: new_window} (auf der Seite **Netzanforderungen** der {{site.data.keyword.mobileanalytics_short}}-Konsole).
+   * Sie können jetzt [Daten in dashDB exportieren ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/mobileanalytics/app-monitoring.html#dashdb){: new_window} (in der {{site.data.keyword.mobileanalytics_short}}-Konsole).
 
 
 ## Neu ab Oktober 2016
@@ -92,6 +92,6 @@ Mit der Aktualisierung des {{site.data.keyword.Bluemix_notm}} Mobile-Dashboards 
 ### Code
 {: #code notoc}
 
-   * Der generierte Objective-C- und Swift-Code für iOS verwendet für die Verwaltung von Abhängigkeiten jetzt CocoaPods. Das bedeutet, dass Sie CocoaPods installieren müssen. Für die Installation führen Sie `sudo gem install cocoapods` aus. Nach der Installation von CocoaPods führen Sie `pod setup` aus, um es zu konfigurieren (wenn es nicht bereits konfiguriert ist). Zum Schluss führen Sie `pod install` aus, um die erforderlichen Projektabhängigkeiten vor dem Öffnen Ihrer `.xcworkspace`-Datei in Xcode herunterzuladen und zu installieren. Weitere Einzelheiten stehen in der `README.md`-Datei im heruntergeladenen Code-Archiv zur Verfügung. Weitere Informationen erhalten Sie unter [Vorausgesetzte Entwicklertools](get_code.html#prereq-dev-tools).
+   * Der generierte Objective-C- und Swift-Code für iOS verwendet für die Verwaltung von Abhängigkeiten jetzt CocoaPods. Das bedeutet, dass Sie CocoaPods installieren müssen. Für die Installation führen Sie `sudo gem install cocoapods` aus. Nach der Installation von CocoaPods führen Sie `pod setup` aus, um es zu konfigurieren (wenn es nicht bereits konfiguriert ist). Zum Schluss führen Sie `pod install` aus, um die Projektabhängigkeiten vor dem Öffnen Ihrer `.xcworkspace`-Datei in Xcode herunterzuladen und zu installieren. Weitere Einzelheiten stehen in der `README.md`-Datei im heruntergeladenen Code-Archiv zur Verfügung. Weitere Informationen erhalten Sie unter [Vorausgesetzte Entwicklertools](get_code.html#prereq-dev-tools).
 
 Prüfen Sie regelmäßig nach, ob neue Aktualisierungen zur Verfügung stehen.

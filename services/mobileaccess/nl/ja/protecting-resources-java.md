@@ -2,10 +2,12 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2016-12-04"
+lastupdated: "2017-04-06"
 
 ---
 {:codeblock:.codeblock}
+
+**重要: {{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービス**に置き換えられます。
 
 # {{site.data.keyword.amashort}} を使用した Liberty for Java リソースの保護
 {: #protecting-liberty}

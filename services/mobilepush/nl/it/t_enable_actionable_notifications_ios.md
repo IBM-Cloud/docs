@@ -8,7 +8,10 @@ copyright:
 # Abilitazione di notifiche operative per iOS
 {: #enable-actionable-notifications-ios}
 
-A differenza delle notifiche di push tradizionali, le notifiche operative richiedono agli utenti di effettuare una selezione al momento della ricezione dell'avviso di notifica senza aprire l'applicazione. Utilizza le seguenti istruzioni per abilitare le notifiche di push operative nella tua applicazione.
+A differenza delle notifiche di push tradizionali, le notifiche operative
+richiedono agli utenti di effettuare una selezione al momento della ricezione dell'avviso di notifica
+senza aprire l'applicazione. Utilizza le seguenti istruzioni
+per abilitare le notifiche di push operative nella tua applicazione.
 
 1. Crea un'azione di risposta utente.
 

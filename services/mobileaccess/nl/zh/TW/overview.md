@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,9 +12,10 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+**重要事項：{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。**
+
 # 關於 {{site.data.keyword.amashort}}
 {: #mca-overview}
-
 
 {{site.data.keyword.amafull}} 服務會針對存取 {{site.data.keyword.Bluemix_notm}} 所管理之雲端資源的行動和 Web 應用程式提供鑑別。
 
@@ -86,21 +87,3 @@ lastupdated: "2017-01-15"
 * 從此時起，使用 {{site.data.keyword.amashort}} 用戶端 SDK 所提出的所有要求都會有新取得的授權標頭。
 * {{site.data.keyword.amashort}} 用戶端 SDK 自動重新傳送已觸發授權流程的原始要求。
 * {{site.data.keyword.amashort}} 伺服器 SDK 從要求擷取授權標頭、向 {{site.data.keyword.amashort}} 服務驗證授權標頭，然後授與對後端資源的存取權。
-
-
-## 取得 {{site.data.keyword.amashort}} 的協助及支援
-{: #gettinghelp}
-
-如果您使用 {{site.data.keyword.amashort}} 時有問題或疑問，可以搜尋資訊或透過討論區提問來取得協助。您也可以開啟支援問題單。 
-
-使用討論區提問時，請標記您的問題，以便 {{site.data.keyword.Bluemix_notm}} 開發團隊能看到它。
-
-* 如果您有使用 {{site.data.keyword.amashort}} 開發或部署應用程式的相關技術問題，請將問題張貼在 [Stack Overflow ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://stackoverflow.com/search?q={{site.data.keyword.amashort}}+ibm-bluemix "外部鏈結圖示"){: new_window} 並使用 "ibm-bluemix" 及 "{{site.data.keyword.amashort}}" 來標記您的問題。
-* 若是服務及開始使用指示的相關問題，請使用 [IBM developerWorks ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=mobile+client+access%20%2B[bluemix] "外部鏈結圖示"){: new_window}。
-
-討論區。 
-
-如需使用討論區的詳細資料，請參閱[取得協助](https://www.{DomainName}/docs/support/index.html#getting-help)。
-
-如需開啟 IBM 支援問題單的相關資訊，或支援層次與問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](https://www.{DomainName}/docs/support/index.html#contacting-support)。
-

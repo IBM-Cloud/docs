@@ -3,7 +3,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-03-21"
 ---
 
 {:shortdesc: .shortdesc}
@@ -77,10 +77,12 @@ lastupdated: "2017-01-11"
 
 {{site.data.keyword.Bluemix_notm}} コンソールにアクセスすると、メニュー・バーに、登録、ログイン、資料へのアクセス、およびカタログへのアクセスのためのリンクやボタンが表示されます。ログイン後には、以下のようにご使用のアカウント・タイプに応じて、メニュー・バーには、ハンバーガー・メニュー ![ハンバーガー・アイコン](../icons/icon_hamburger.svg) および追加リンクが含まれています。
 
-* 新規 {{site.data.keyword.Bluemix_notm}} ユーザーの場合、ハンバーガー・メニュー ![ハンバーガー・アイコン](../icons/icon_hamburger.svg) を使用して、「アプリ」、「サービス」、または「インフラストラクチャー」の各ダッシュボード間で切り替えることができます。サポートおよびアカウント・オプションへのリンクが表示され、**「カタログ」**リンクを使用して、{{site.data.keyword.Bluemix_notm}}、計算、およびインフラストラクチャーのサービスにアクセスできます。 
-* 既存のユーザーで、{{site.data.keyword.Bluemix_notm}} と {{site.data.keyword.BluSoftlayer}} アカウントをリンクしている場合、ハンバーガー・メニュー ![ハンバーガー・アイコン](../icons/icon_hamburger.svg) を使用して、「アプリ」、「サービス」、または「インフラストラクチャー」の各ダッシュボード間で切り替えることができます。サポートおよびアカウント・オプションへのリンクが表示され、**「カタログ」**リンクを使用して、{{site.data.keyword.Bluemix_notm}}、計算、およびインフラストラクチャーのサービスにアクセスできます。 
-* {{site.data.keyword.Bluemix_notm}} アカウントを使用している既存のユーザーの場合、ハンバーガー・メニュー ![ハンバーガー・アイコン](../icons/icon_hamburger.svg) を使用して、「アプリ」ダッシュボードおよび「サービス」ダッシュボード間で切り替えることができます。サポートおよびアカウント・オプションへのリンクが表示され、**「カタログ」**リンクを使用して、{{site.data.keyword.Bluemix_notm}} サービスおよび計算サービスにアクセスできます。 
-* {{site.data.keyword.BluSoftlayer}} アカウントを使用している既存のユーザーで、そのアカウントを {{site.data.keyword.Bluemix_notm}} にまだリンクしていない場合、メニュー・バーには、{{site.data.keyword.BluSoftlayer}} で以前使用可能だったリンク (KnowledgeLayer ヘルプへのアクセス、連絡オプション、通知、チケットのオープン、ログインなど) が表示されます。また、「インフラストラクチャー」ダッシュボードへのリンク、サポートおよびアカウント・オプションへのリンクも表示されます。 
+* 新規 {{site.data.keyword.Bluemix_notm}} ユーザーの場合、ハンバーガー・メニュー ![ハンバーガー・アイコン](../icons/icon_hamburger.svg) を使用して、「アプリ」、「サービス」、および「インフラストラクチャー」の各ダッシュボード間で切り替えることができます。**「カタログ」**リンクを使用して、プラットフォームおよびインフラストラクチャーのサービスにアクセスできます。サポートおよびアカウント、請求および使用量、セキュリティー管理の各オプションへのリンクも表示されます。
+* {{site.data.keyword.Bluemix_notm}} アカウントを使用している既存のユーザーの場合、ハンバーガー・メニュー ![ハンバーガー・アイコン](../icons/icon_hamburger.svg) を使用して、「アプリ」ダッシュボードおよび「サービス」ダッシュボード間で切り替えることができます。**「カタログ」**を使用して、プラットフォームおよびインフラストラクチャーのサービスにアクセスできます。プラットフォーム・レベルのサポートおよびアカウント、請求および使用量、セキュリティー管理の各オプションへのリンクが表示されます。
+* 既存のユーザーで、{{site.data.keyword.Bluemix_notm}} と {{site.data.keyword.BluSoftlayer}} アカウントをリンクしている場合、ハンバーガー・メニュー ![ハンバーガー・アイコン](../icons/icon_hamburger.svg) を使用して、「アプリ」、「サービス」、および「インフラストラクチャー」の各ダッシュボード間で切り替えることができます。また、**「カタログ」**リンクを使用して、プラットフォームおよびインフラストラクチャーのサービスにアクセスできます。
+  * 「アプリ」と「サービス」のダッシュボードでは、{{site.data.keyword.Bluemix_notm}} 資料、サポート、アカウント、セキュリティー管理の各オプションなど、プラットフォーム・レベルのリソースへのリンクがメニュー・バーに含まれています。また、インフラストラクチャー・レベルの請求処理オプションへのリンクにもアクセスできます。 
+  * 「インフラストラクチャー」のダッシュボードでは、KnowledgeLayer ヘルプ、連絡オプション、通知、オープン・チケット、サポートおよびアカウント管理の各オプションなど、インフラストラクチャー・レベルのリソースへのリンクがメニュー・バーに表示されます。
+* {{site.data.keyword.Bluemix_notm}} にリンクされていない {{site.data.keyword.BluSoftlayer}} アカウントを使用している既存のユーザーの場合、ハンバーガー・メニュー ![ハンバーガー・アイコン](../icons/icon_hamburger.svg) を使用して「インフラストラクチャー」ダッシュボードに、**「カタログ」**リンクを使用してインフラストラクチャー・サービスにアクセスすることができます。このメニュー・バーには、KnowledgeLayer ヘルプ、連絡オプション、通知、オープン・チケット、サポートおよびアカウントの各オプションへのリンクも含まれています。
 
 ## {{site.data.keyword.Bluemix_notm}} Cloud Foundry アーキテクチャー
 {: #architecture}
@@ -177,6 +179,7 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 | 米国南部地域 | ダラス、米国 | ng | api.ng.bluemix.net | console.ng.bluemix.net |
 | 英国地域 | ロンドン、イングランド | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
 | シドニー地域 | シドニー、オーストラリア | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
+| ドイツ地域 | フランクフルト、ドイツ | eu-de | api.eu-de.bluemix.net | console.eu-de.bluemix.net |
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} region list" caption-side="top"}
 
 

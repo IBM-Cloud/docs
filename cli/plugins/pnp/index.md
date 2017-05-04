@@ -18,7 +18,7 @@ Use the private network peering command line interface (CLI) to configure and ma
 
 The private network peering CLI plug-in is available for Windows, MAC, and Linux operating systems. Ensure that you use the plug-in that is applicable to you.
 
-Before you begin, create Bluemix spaces. Ensure that each container in a space has an IP address from a different network. For details, see [Using your own private IP address](https://www.{DomainName}/docs/containers/container_security_network.html#container_cli_ips_byoip)
+Before you begin, create Bluemix spaces. Ensure that each container in a space has an IP address from a different network. For details, see [Using your own private IP address](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip)
 
 **Note:** After you use the private network peering with a Bluemix space, if you need to delete the space, first delete the private network peering connections in that space.
 

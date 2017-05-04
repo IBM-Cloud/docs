@@ -15,15 +15,15 @@ lastupdated: "2017-03-16"
 # API-Gateway (experimentell)
 {: #openwhisk_apigateway}
 
-[Webaktionen](openwhisk_webactions.html) werden freigegeben, damit sie allgemein verfügbar sind. 
+[Webaktionen](openwhisk_webactions.html) werden freigegeben, damit sie allgemein verfügbar sind.
 
-Mittels Webaktionen können Sie eine Aktion mit anderen HTTP-Methoden als POST und ohne den Berechtigungs-API-Schlüssel der Aktion aufrufen. 
+Mittels Webaktionen können Sie eine Aktion mit anderen HTTP-Methoden als POST und ohne den Berechtigungs-API-Schlüssel der Aktion aufrufen.
 
-Aufgrund des Benutzerfeedbacks wurde für den Build von OpenWhisk-Aktionen, die zur Behandlung von HTTP-Ereignissen geeignet sind, das Programmiermodell mit Webaktionen gewählt. 
+Aufgrund des Benutzerfeedbacks wurde für den Build von OpenWhisk-Aktionen, die zur Behandlung von HTTP-Ereignissen geeignet sind, das Programmiermodell mit Webaktionen gewählt.
 
-Ein Großteil der API-Gateway-Funktionalität wurde in Webaktionen zusammengefasst. Webaktionen ermöglichen Ihnen die Behandlung jedweder HTTP-Anforderungen und die Rückgabe von HTTP-Antworten aus der Webaktion heraus, wobei Sie jederzeit die vollständige Kontrolle behalten. 
+Ein Großteil der API-Gateway-Funktionalität wurde in Webaktionen zusammengefasst. Webaktionen ermöglichen Ihnen die Behandlung jedweder HTTP-Anforderungen und die Rückgabe von HTTP-Antworten aus der Webaktion heraus, wobei Sie jederzeit die vollständige Kontrolle behalten.
 
-Eine überarbeitete API-Gateway-Integration für OpenWhisk wird in Kürze verfügbar sein. Sie wird so konfiguriert sein, dass Ihre Webaktionen von ihr weitergeleitet und hierbei mit API-Gateway-Funktionen wie beispielsweise Ratenbegrenzung, OAuth-Tokenvalidierung, API-Schlüsseln und anderem ausgestattet werden.
+Eine überarbeitete API-Gateway-Integration für OpenWhisk wird in Kürze verfügbar sein. Sie wird so konfiguriert sein, dass Ihre Webaktionen von ihr weitergeleitet und hierbei mit API-Gateway-Funktionen wie beispielsweise Ratenbegrenzung, OAuth-Tokenvalidierung, API-Schlüsseln und anderem ausgestattet werden. Schauen Sie sich das Video zur [Erstellung und Steuerung von APIs](https://youtu.be/XT9KwWTnnzo) an. 
 
 **Hinweis:** Die APIs, die Sie mit `wsk api-experimental` erstellt haben, können weiterhin verwendet werden. Sie sollten jedoch Ihre APIs nach und nach in Webaktionen migrieren.
 

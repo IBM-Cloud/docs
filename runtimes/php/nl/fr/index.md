@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-04-14"
 
 ---
 
@@ -20,12 +20,12 @@ Le pack php_buildpack fournit un environnement d'exécution complet pour les app
 Le pack php_buildpack est utilisé dans les conditions suivantes :
 * votre appli contient un fichier composer.json, ou
 * votre appli contient un fichier *.php, ou
-* votre appli définit une variable ${WEBDIR} dans son fichier [options.json](https://github.com/cloudfoundry/php-buildpack/blob/master/docs/config.md) et cette variable a pour valeur un répertoire existant dans votre appli.
+* votre appli définit une variable ${WEBDIR} dans son fichier [options.json](https://docs.cloudfoundry.org/buildpacks/php/gsg-php-config.html) et cette variable a pour valeur un répertoire existant dans votre appli.
 
 ## Application de démarrage
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} fournit une application de démarrage PHP. Il s'agit d'une appli PHP simple qui peut servir de modèle pour votre appli. Vous pouvez expérimenter cette application de démarrage et effectuer des modifications, puis les envoyer par commande push vers l'environnement {site.data.keyword.Bluemix}}. Voir [Utilisation des applications de démarrage](/docs/cfapps/starter_app_usage.html) pour obtenir de l'aide.
+{{site.data.keyword.Bluemix}} propose une application de démarrage PHP.  L'application de démarrage PHP est une appli PHP simple qui fournit un modèle que vous pouvez utiliser pour votre appli. Vous pouvez expérimenter cette application et effectuer des modifications puis les envoyer par commande push vers l'environnement {{site.data.keyword.Bluemix}}.  Voir [Utilisation des applications de démarrage](/docs/cfapps/starter_app_usage.html) pour obtenir de l'aide.
 
 ## Versions d'environnement d'exécution
 {: #runtime_versions}
@@ -40,7 +40,7 @@ Vous pouvez spécifier la version de PHP que votre application doit utiliser en 
 }
 ```
 {: codeblock}
-Pour plus d'informations, voir les [liens Composer Package](https://getcomposer.org/doc/04-schema.md#package-links).
+Pour plus d'informations, voir les [liens Composer Package![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://getcomposer.org/doc/04-schema.md#package-links).
 
 Si aucune version n'est spécifiée, la version 5.5.34 est choisie par défaut.
 
@@ -61,10 +61,11 @@ utiliser le [pack de construction PHP](https://github.com/cloudfoundry/php-build
 la déployer.
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## Tutoriels et exemples
-{: #samples}
+{: #samples notoc}
 * [Build and deploy a REST API](http://www.ibm.com/developerworks/library/wa-deployrest-app/)
 * [Build and deploy a mobile-friendly calorie counter ](http://www.ibm.com/developerworks/library/mo-bluemix-php-nutritionix-angularjs/)
 ## general
+{: #general notoc}
 * [Cloud Foundry buildpack for PHP](https://github.com/cloudfoundry/php-buildpack.git)

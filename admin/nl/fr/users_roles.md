@@ -1,12 +1,9 @@
 ---
 
-
-
 copyright:
 
   years: 2015, 2016
-lastupdated: "2016-12-05"
-
+lastupdated: "2017-03-01"
 
 ---
 
@@ -15,21 +12,19 @@ lastupdated: "2016-12-05"
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-
-# Gestion des membres d'équipe et des rôles
+# Gestion des accès utilisateur aux services Cloud Foundry et des rôles dans la page Répertoire d'équipe
 {: #userroles}
 
-Depuis la page **Répertoire d'équipe** pour votre compte, vous pouvez gérer les membres d'équipe existants et leurs rôles dans votre
-organisation et vos espaces, ainsi qu'inviter de nouveaux membres d'équipe. Afin d'accéder au répertoire d'équipe pour votre compte, cliquez sur
-**Compte** > **Répertoire d'équipe**. 
+Vous pouvez gérer les utilisateurs de la plateforme auxquels a été alloué un accès aux services Cloud Foundry depuis la page Répertoire d'équipe de votre compte. Vous pouvez gérer les membres d'équipe existants et leurs rôles dans votre organisation et ses espaces.
 {:shortdesc}
 
-Un propriétaire de compte effectue toutes les opérations sur les organisations et les espaces, y compris la gestion des membres d'équipe et des
-rôles qui leur sont affectés. Un responsable de l'organisation peut inviter des membres d'équipe et gérer leurs rôles. Un responsable de l'espace
+Vous pouvez accéder au Répertoire d'équipe de votre compte depuis un lien situé en haut de la page Nouveaux utilisateurs. Pour accéder à la page Utilisateurs, depuis le menu {{site.data.keyword.Bluemix_notm}}, cliquez sur **Gérer** &gt; **Compte** &gt; **Utilisateurs**.
+
+Les propriétaires de compte peuvent effectuer toutes les opérations sur les organisations et les espaces, notamment gérer les membres d'équipe et les rôles qui leur sont affectés. Les autorisations d'accès des responsables de l'organisation leur permettent de gérer les rôles. Un responsable de l'espace
 peut utiliser la page **Gérer les organisations** pour ajouter des membres de compte existants à l'espace et ajuster leurs rôles. Lisez
 les informations ci-après pour en savoir plus sur les rôles.
 
-## Rôles
+## Rôles utilisateur
 {: #userrolesinfo}
 
 Au niveau du compte, deux rôles permettent l'accès à différentes fonctions de gestion des comptes :
@@ -40,10 +35,9 @@ Au niveau du compte, deux rôles permettent l'accès à différentes fonctions d
 |Membre | Un membre peut accéder à son profil, au répertoire d'équipe, aux crédits du compte et aux limites de facturation dans l'en-tête {{site.data.keyword.Bluemix_notm}}. Toutefois, dans la page Répertoire d'équipe, un membre ne peut afficher que les membres d'équipe existants sur le compte. |
 {:caption="Table 1. Account roles and permissions" caption-side="top"}
 
- Les nouveaux membres d'équipe sont ajoutés en tant que membre du compte. Vous pouvez affecter des rôles d'organisation et d'espace aux invités afin
+Les nouveaux membres d'équipe sont ajoutés en tant que membre du compte. Vous pouvez affecter des rôles d'organisation et d'espace aux invités afin
 d'activer des vues et des droits spécifiques dans {{site.data.keyword.Bluemix_notm}}. Les nouveaux membres d'équipe ajoutés à une organisation, sauf dans un
-environnement local ou dédié, possèdent le rôle Auditeur de l'organisation par défaut. Pour un espace spécifique, vous pouvez choisir d'affecter le rôle Développeur ou Auditeur aux invités. Une fois que vos invités ont accepté l'invitation et rejoint {{site.data.keyword.Bluemix_notm}}, vous pouvez éditer leurs rôles dans la page
-**Répertoire d'équipe**.
+environnement local ou dédié, possèdent le rôle Auditeur de l'organisation par défaut. Pour un espace spécifique, vous pouvez choisir d'affecter le rôle Développeur ou Auditeur aux invités. Une fois que vos invités ont accepté l'invitation et ont rejoint {{site.data.keyword.Bluemix_notm}}, vous pouvez éditer leurs rôles depuis la page Répertoire d'équipe.
 
 Les rôles suivants peuvent être affectés au niveau de l'organisation :
 
@@ -68,101 +62,49 @@ Les rôles suivants peuvent être affectés au niveau de l'espace :
 variable
 d'environnement VCAP_SERVICES. Toutefois, un membre d'équipe possédant le rôle d'auditeur ne peut pas y accéder.
 
-## Ajustement de la visibilité du répertoire d'équipe
-{: #teamdirectoryvisibility}
+## Edition des rôles
+{: #editinguserroles}
 
-Selon la manière dont vos comptes et organisations {{site.data.keyword.Bluemix_notm}} sont configurés, vous souhaiterez peut-être modifier la visibilité de la page du répertoire d'équipe. Par défaut, tous les membres d'équipe de votre compte peuvent voir la liste complète des membres de l'équipe du compte, y compris tous les membres de toutes les organisations au sein du compte. Il se peut que pour des questions de confidentialité ou de sécurité, vous soyez amené à ajuster la visibilité de la page du répertoire d'équipe. Deux options s'offrent à vous pour la configuration de la visibilité de la page du répertoire d'équipe : tous les membres d'équipe ou juste vous, en tant que propriétaire du compte.
+Les propriétaires de compte et les responsables de l'organisation peuvent modifier les rôles dans l'organisation et les espaces des membres d'équipe existants depuis la page Répertoire d'équipe.
 
-Pour modifier la visibilité de la page du répertoire d'équipe, procédez comme suit :
+1. Localisez et sélectionnez le membre d'équipe dont vous désirez éditer les rôles.
+2. Cliquez sur **Afficher les rôles**.
+3. Sélectionnez ou désélectionner les rôles d'espace afin de modifier l'accès du membre d'équipe aux espaces.
+4. Cliquez sur **Sauvegarder**.
 
-1. Cliquez sur **Compte** &gt; **Répertoire d'équipe**.
-2. Pour l'option **Visibilité pour**, cliquez sur la sélection en cours pour afficher les options.
-3. Sélectionnez ensuite **Tous** ou **Moi seulement** selon les besoins en cours pour votre compte.
-4. Ensuite, cliquez sur **Sauvegarder**.
+Les responsables de l'espace peuvent éditer les rôles des membres d'équipe dans leur espace.
+
+1. Localisez et sélectionnez le membre d'équipe dont vous désirez éditer les rôles.
+2. Cliquez sur **Afficher les rôles**.
+3. Cliquez sur **Afficher les espaces**.
+4. Sélectionnez ou désélectionnez l'option de rôle d'espace pour le rôle à ajouter ou retirer pour le membre d'équipe.
+5. Ensuite, cliquez sur **Sauvegarder**.
 
 ## Invitation de membres d'équipe
 {: #inviteteammembers}
 
-Les propriétaires de compte et les responsables de l'organisation peuvent inviter des membres d'équipe dans des organisations depuis la page Inviter
-des membres d'équipe. Lorsque vous ajoutez de nouveaux membres d'équipe, le
+Vous pouvez ajouter un utilisateur depuis la fenêtre Répertoire d'équipe si son ID utilisateur n'est pas un compte lié et que vous êtes le propriétaire du compte ou un gestionnaire de l'organisation. Lorsque vous ajoutez de nouveaux membres d'équipe, le
 rôle Auditeur leur est affecté automatiquement, sauf dans un environnement
 local ou dédié. Vous pouvez changer les rôles
 ultérieurement dans la page Répertoire d'équipe. Pour inviter un membre d'équipe, procédez comme suit :
 
 <ol>
-<li>Cliquez sur **Compte** &gt; **Inviter des membres d'équipe**.</li>
-<li>Sélectionnez l'organisation dans laquelle inviter les membres d'équipe.</li>
-<li>Cliquez sur **Suivant**.</li>
-<li>Sélectionnez les espaces auxquels vos membre d'équipe doivent pouvoir accéder.</li>
-<li>Sélectionnez le rôle à affecter pour les espaces sélectionnés dans l'organisation.</li>
+<li>Cliquez sur **Inviter un utilisateur**.</li>
+<li>Entrez l'adresse électronique de l'utilisateur que vous invitez.</li>
+<li>Sélectionnez le rôle à lui affecter dans l'organisation.</li>
+<li>Sélectionnez le rôle à lui affecter dans l'espace ou les espaces de l'organisation.</li>
 <li>Sélectionnez l'option permettant de confirmer que vous prenez en charge tous les frais liés au compte.</li>
-<li>Entrez l'adresse électronique d'un membre d'équipe ou les adresses électroniques de plusieurs membres d'équipe :
-<ul>
-<li>Pour ajouter un seul membre d'équipe, entrez l'adresse électronique et cliquez sur **Envoyer**.</li>
-<li>Pour ajouter plusieurs membres d'équipe, cliquez sur **Invitez toute le monde d'un coup**. Entrez les adresses électroniques dans
-une liste en les séparant par une virgule, un espace ou un retour à la ligne. Ensuite, cliquez sur **Suivant** afin de vérifier les
-adresses électroniques auxquelles envoyer les invitations, puis cliquez sur **Envoyer**.</li>
-</ul>
-</li>
+<li>Cliquez sur **Inviter**.</li>
 </ol>
 
-Cliquez sur **Afficher les éléments en attente** pour déterminer si les invitations sont en attente ou ont été acceptées. Vous
-pouvez choisir de renvoyer le courrier électronique d'invitation ou d'annuler l'invitation pour une invitation en attente à tout moment.
-
-
-### Ajout de membres d'équipe SoftLayer
-
-Si vous avez un compte SoftLayer lié à votre compte Bluemix, vous pouvez ajouter les membres de votre équipe SoftLayer.
-
-1. Sélectionnez **Compte** > **Inviter des membres d'équipe**.  
-2. Cliquez sur **Ajouter** dans la section **Ajouter des membres d'équipe SoftLayer** afin de vous
-authentifier auprès de votre compte SoftLayer et d'afficher la liste des membres d'équipe de votre compte SoftLayer.
-
-L'ajout de membres d'équipe à votre compte Bluemix ne permet pas
-d'accorder à ces membres l'accès à l'infrastructure Bluemix. Pour accorder aux utilisateurs l'accès au tableau de bord Infrastructure, accédez à
-**Infrastructure** > **Compte** > **Utilisateurs**, puis cliquez sur le lien **Ajouter
-un utilisateur**. Vous devez disposer du droit permettant d'ajouter des utilisateurs.
-
-Pour plus d'informations sur l'ajout de membres d'équipe de votre compte
-SoftLayer, voir
-[Invitation
-de membres d'équipe SoftLayer dans Bluemix](https://console.ng.bluemix.net/docs/admin/softlayerlink.html#invite_users).
-
-
-## Edition des rôles
-{: #editinguserroles}
-
-Les propriétaires de compte et les responsables de l'organisation peuvent éditer les rôles d'organisation et d'espace pour
-les membres d'équipe existants dans la page **Répertoire d'équipe**.
-
-1. Cliquez sur **Compte** &gt; **Répertoire d'équipe**.
-2. Localisez le membre d'équipe dont vous voulez éditer les rôles.
-3. Cliquez sur **Afficher les rôles**.
-4. Sélectionnez ou désélectionner les rôles d'organisation afin de modifier l'accès du membre d'équipe aux organisations.
-5. Cliquez sur **Afficher les espaces** pour ajouter ou retirer des rôles d'espace.
-6. Sélectionnez ou désélectionner les rôles d'espace afin de modifier l'accès du membre d'équipe aux espaces.
-7. Cliquez sur **Fermer les espaces**.
-8. Cliquez sur **Sauvegarder** au bas de la page.
-
-Un gestionnaire de l'espace peut éditer les rôles des membres d'équipe dans son espace dans la page **Gérer les organisations**.
-
-1. Cliquez sur **Compte** &gt; **Gérer les organisations**.
-2. Localisez l'organisation dans laquelle se trouve votre espace.
-3. Cliquez sur **Afficher les détails**.
-4. Localisez votre espace et cliquez sur **Editer l'espace**.
-5. Sélectionnez l'onglet **Utilisateurs**.
-6. Sélectionnez ou désélectionnez l'option de rôle d'espace pour le rôle à ajouter ou retirer pour le membre d'équipe.
-7. Ensuite, cliquez sur **Sauvegarder**.
+L'utilisateur est ajouté à liste des membres d'équipe affichée pour le compte.
 
 ## Retrait de membres d'équipe
 {: #removingteammembers}
 
-Les propriétaires de compte et les responsables de l'organisation peuvent retirer des membres d'équipe d'un compte dans la page **Répertoire
-d'équipe**. Pour retirer un membre d'équipe, procédez comme suit :
+Si l'utilisateur a été ajouté depuis le Répertoire d'équipe et qu'il ne s'agit pas d'un compte lié, les propriétaires du compte et les gestionnaires de l'organisation peuvent retirer des membres de l'équipe depuis la page Répertoire d'équipe. Pour retirer un membre d'équipe, procédez comme suit :
 
-1. Cliquez sur **Compte** &gt; **Répertoire d'équipe**.
-3. Localisez l'utilisateur à retirer du compte et cliquez sur l'icône **Retirer** ![Icône Retirer](../icons/icon_remove_teamuser.svg).
-4. Dans la fenêtre **Retirer l'utilisateur**, cliquez sur **Retirer** pour confirmer le retrait de
-l'utilisateur spécifié du compte.
+1. Localisez l'utilisateur que vous comptez retirer et cliquez sur l'icône **Retirer l'utilisateur** ![Icône Retirer](../icons/icon_remove_teamuser.svg).
+2. Cliquez sur **Retirer** pour confirmer que vous désirez retirer du compte l'utilisateur spécifié.
 
 L'utilisateur est retiré de la liste affichée des membres d'équipe pour le compte.

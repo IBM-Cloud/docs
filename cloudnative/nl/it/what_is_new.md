@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -16,16 +16,16 @@ lastupdated: "2017-03-17"
 {: #what-is-new}
 
 
-## Novità a partire da marzo 2017 
+## Novità a partire da marzo 2017
 {: #mar-2017}
 
 L'aggiornamento di marzo 2017 della {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} introduce le seguenti modifiche:
 
    * Il dashboard mobile {{site.data.keyword.Bluemix_notm}} è ora la {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}.
-   * La creazione del progetto è stata riprogettata per includere i tipi di modello del server Applicazione web, BFF e Microservizio con il supporto per Node.js, Java e Swift.
+   * La creazione dei progetti è stata riprogettata per includere i tipi di modello server Applicazione Web, BFF e Microservizio con il supporto per Node.js, Java e Swift.
    * L'integrazione con il nuovo e migliorato servizio {{site.data.keyword.appid_full}} fornisce l'autenticazione per i progetti mobili e web.
-   * Puoi ora anche generare SDK per i tuoi progetti utilizzando il [Plugin SDK Generator](sdk_cli.html). SDK generation nella {{site.data.keyword.dev_console}} è disponibile solo per i progetti mobili.
-   * Puoi ora anche creare i progetti utilizzando la [{{site.data.keyword.dev_cli_short}}](dev_cli.html).
+   * Puoi ora generare gli SDK per i tuoi progetti utilizzando il [plugin SDK Generator](sdk_cli.html). SDK generation nella {{site.data.keyword.dev_console}} è disponibile solo per i progetti mobili.
+   * Puoi ora creare i progetti utilizzando la [{{site.data.keyword.dev_cli_short}}](dev_cli.html).
 
 
 ## Novità a partire da gennaio 2017
@@ -60,8 +60,8 @@ L'aggiornamento di novembre 2016 del dashboard {{site.data.keyword.Bluemix_notm}
 
    * Puoi ora generare le risorse SDK per i tuoi progetti dalla pagina **Codice**.
    * Cordova è ora supportato per lo starter codice di base.
-   * Puoi ora [segnalare gli eventi di rete ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/mobileanalytics/sdk.html#network-requests){: new_window} e [monitorare le richieste di rete ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/mobileanalytics/app-monitoring.html#monitor-network-requests){: new_window} nella pagina **Richieste di rete** della console {{site.data.keyword.mobileanalytics_short}}.
-   * Puoi ora [esportare i dati in dashDB ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/mobileanalytics/app-monitoring.html#dashdb){: new_window} nella console {{site.data.keyword.mobileanalytics_short}}.
+   * Puoi ora [segnalare gli eventi di rete ![Icona link esterno](../icons/launch-glyph.svg "External link icon")](/docs/services/mobileanalytics/sdk.html#network-requests){: new_window} e [monitorare le richieste di rete ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/mobileanalytics/app-monitoring.html#monitor-network-requests){: new_window} nella pagina **Richieste di rete** della console {{site.data.keyword.mobileanalytics_short}}.
+   * Puoi ora [esportare i dati in dashDB ![Icona link esterno](../icons/launch-glyph.svg "External link icon")](/docs/services/mobileanalytics/app-monitoring.html#dashdb){: new_window} nella console {{site.data.keyword.mobileanalytics_short}}.
 
 
 ## Novità a partire da ottobre 2016
@@ -92,6 +92,6 @@ L'aggiornamento di ottobre 2016 del dashboard {{site.data.keyword.Bluemix_notm}}
 ### Codice
 {: #code notoc}
 
-   * Il codice Objective-C e Swift generato per iOS utilizza ora CocoaPods per gestire le dipendenze. Questo significa che devi installare CocoaPods. Per installarlo, esegui `sudo gem install cocoapods`. Dopo aver installato CocoaPods, esegui `pod setup` per configurarlo se non è già configurato). Infine, esegui `pod install` per scaricare e installare le dipendenze del progetto necessarie prima di aprire il tuo file `.xcworkspace` in Xcode. Ulteriori dettagli sono disponibili nel file `README.md` nell'archivio del codice scaricato. Per ulteriori informazioni, vedi [Strumenti per sviluppatori prerequisiti](get_code.html#prereq-dev-tools).
+   * Il codice Objective-C e Swift generato per iOS utilizza ora CocoaPods per gestire le dipendenze. Questo significa che devi installare CocoaPods. Per installarlo, esegui `sudo gem install cocoapods`. Dopo aver installato CocoaPods, esegui `pod setup` per configurarlo se non è già configurato). Infine, esegui `pod install` per scaricare e installare le dipendenze del progetto prima di aprire il tuo file `.xcworkspace` in Xcode. Ulteriori dettagli sono disponibili nel file `README.md` nell'archivio del codice scaricato. Per ulteriori informazioni, vedi [Strumenti per sviluppatori prerequisiti](get_code.html#prereq-dev-tools).
 
 Controlla frequentemente di essere al passo con i nuovi aggiornamenti.

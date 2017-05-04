@@ -2,14 +2,15 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-16"
+lastupdated: "2017-04-06"
 
 ---
 
 {:codeblock:.codeblock}
 
+**중요: {{site.data.keyword.amafull}} 서비스는 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다. **
 
-# {{site.data.keyword.amashort}} iOS(Swift SDK) 앱용 사용자 정의 인증 구성
+# Mobile Client Access iOS(Swift SDK) 앱의 사용자 정의 인증 구성
 {: #custom-ios}
 
 사용자 정의 인증을 사용하는 iOS 애플리케이션이 {{site.data.keyword.amafull}} 클라이언트 SDK를 사용하고 애플리케이션을 {{site.data.keyword.Bluemix}}에 연결하도록 구성하십시오.  

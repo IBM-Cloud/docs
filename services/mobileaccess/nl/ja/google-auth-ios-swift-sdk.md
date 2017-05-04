@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+**重要: {{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービス**に置き換えられます。
 
 # iOS アプリ用の Google 認証の使用可能化 (Swift SDK)
 {: #google-auth-ios}
@@ -36,7 +38,7 @@ Google Sign-In を使用して、{{site.data.keyword.amafull}} iOS Swift アプ�
 ## Google Sign-In 用のアプリの準備
 {: #google-sign-in-ios}
 
-Google の [Google Sign-In for iOS ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.google.com/identity/sign-in/ios/start-integrating "外部リンク・アイコン"){: new_window}に記載されている指示に従って、Google サインイン用にアプリを準備します。
+Google の [Google Sign-In for iOS ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.google.com/identity/sign-in/ios/start-integrating){: new_window}に記載されている指示に従って、Google サインイン用にアプリを準備します。
 
 このプロセスは以下を行います。
 
@@ -50,7 +52,7 @@ Google の [Google Sign-In for iOS ![外部リンク・アイコン](../../icons
 
 1. メイン・ターゲットの**「General」**タブの**「Identity」**セクションから、Xcode プロジェクト内の**「Bundle Identifier」**をメモします。これは Google Sign-In プロジェクトの作成に必要です。
 
-1. [Google Developer サイト![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.google.com/mobile/add?platform=ios "外部リンク・アイコン"){: new_window}上に Google Sign-In for iOS 用のプロジェクトを作成します。
+1. [Google Developer サイト![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.google.com/mobile/add?platform=ios){: new_window}上に Google Sign-In for iOS 用のプロジェクトを作成します。
 
 1. プロジェクトに Google Sign-In API を追加します。
 
@@ -58,9 +60,9 @@ Google の [Google Sign-In for iOS ![外部リンク・アイコン](../../icons
 
    **重要:** `GoogleService-Info.plist` ファイルの取得時に、そのファイルを開いて、`CLIENT_ID` の値のメモを取ってください。後で、{{site.data.keyword.amashort}} バックエンド・アプリケーションを構成するためにこの値が必要になります。
 
-1. Xcode プロジェクトに `GoogleService-Info.plist` ファイルを追加します。詳しくは、[Add the configuration file to your project ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config "外部リンク・アイコン"){: new_window}を参照してください。
+1. Xcode プロジェクトに `GoogleService-Info.plist` ファイルを追加します。詳しくは、[Add the configuration file to your project ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config){: new_window}を参照してください。
 
-1. Xcode プロジェクト内の URL スキームを、自分の `REVERSE_CLIENT_ID` およびバンドル ID によって更新します。詳しくは、[Add URL schemes to your project ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project "外部リンク・アイコン"){: new_window}を参照してください。
+1. Xcode プロジェクト内の URL スキームを、自分の `REVERSE_CLIENT_ID` およびバンドル ID によって更新します。詳しくは、[Add URL schemes to your project ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project){: new_window}を参照してください。
 
 1. アプリの `project-Bridging-Header.h` ファイルを以下のコードで更新します。
 
@@ -69,9 +71,9 @@ Google の [Google Sign-In for iOS ![外部リンク・アイコン](../../icons
 	```
 	{: codeblock}
 
-	ブリッジング・ヘッダー・ファイルの更新について詳しくは、[Enable sign-in ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in "外部リンク・アイコン"){: new_window}を参照してください。
+	ブリッジング・ヘッダー・ファイルの更新について詳しくは、[Enable sign-in ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in){: new_window}を参照してください。
 
-## Google 認証用の {{site.data.keyword.amashort}} の構成
+## Google 認証用の Mobile Client Access の構成
 {: #google-auth-ios-config}
 
 これで iOS のクライアント ID を取得したので、{{site.data.keyword.amashort}} サービスで Google 認証を使用可能にすることができます。
@@ -82,7 +84,7 @@ Google の [Google Sign-In for iOS ![外部リンク・アイコン](../../icons
 1. **「iOS のアプリケーション ID (Application ID for iOS)」**で、`GoogleService-Info.plist` ファイルから取得した `CLIENT_ID` 値を指定します。
 1. **「保存」**をクリックします。
 
-## iOS 用の {{site.data.keyword.amashort}} Client SDK の構成
+## iOS 用の Client SDK の構成
 {: #google-auth-ios-sdk}
 
 ### CocoaPods のインストール
@@ -97,7 +99,7 @@ Google の [Google Sign-In for iOS ![外部リンク・アイコン](../../icons
 ```
 	{: codeblock}
 
-詳しくは、[CocoaPods Web サイト![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cocoapods.org/ "外部リンク・アイコン"){: new_window}を参照してください。
+詳しくは、[CocoaPods Web サイト![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cocoapods.org/){: new_window}を参照してください。
 
 ### CocoaPods を使用した {{site.data.keyword.amashort}} Client Swift SDK のインストール
 {: #facebook-auth-install-swift-cocoapods}

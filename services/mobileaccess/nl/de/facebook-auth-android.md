@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+**Wichtig: Der Service {{site.data.keyword.amafull}} wird durch den Service {{site.data.keyword.appid_full}} ersetzt.**
 
 # Facebook-Authentifizierung für Android-Apps aktivieren
 {: #facebook-auth-android}
@@ -27,7 +29,7 @@ Voraussetzungen:
 * Der Wert für die Tenant-ID. Öffnen Sie den Service im {{site.data.keyword.amashort}}-Dashboard. Klicken Sie auf die Schaltfläche **Mobile Systemerweiterungen**. Im Feld **App-GUID/TenantId** wird der Wert `tenantId` (auch als `appGUID` bezeichnet) angezeigt. Sie benötigen diesen Wert für die Initialisierung von Authorization Manager.
 * Die {{site.data.keyword.Bluemix_notm}}-**Region**. Ihre aktuelle {{site.data.keyword.Bluemix_notm}}-Region finden Sie im Header neben dem Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol"). Der Regionswert, der angezeigt wird, sollte einer der folgenden sein: `USA (Süden)`, `Vereinigtes Königreich` oder `Sydney`. Außerdem sollte er den im WebView-JavaScript-Code erforderlichen SDK-Werten entsprechen: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` oder `BMSClient.REGION_UK`. Sie benötigen diesen Wert für die Initialisierung des {{site.data.keyword.amashort}}-Clients.
 * Android-Projekt, das für das Arbeiten mit Gradle konfiguriert ist. Das Projekt muss nicht mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sein.  
-* Eine Facebook-App mit einer Android-Plattform auf der [Facebook for Developers-Website ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developers.facebook.com/ "Symbol für externen Link"){: new_window}.
+* Eine Facebook-App mit einer Android-Plattform auf der [Facebook for Developers-Website ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developers.facebook.com/){: new_window}.
 
 **Wichtig:** Sie müssen das Facebook-SDK (`com.facebook.FacebookSdk`) nicht separat installieren. Das Facebook-SDK wird automatisch von Gradle installiert, wenn Sie das {{site.data.keyword.amashort}}-Facebook-Client-SDK hinzufügen. Sie können diesen Schritt überspringen, wenn Sie die Android-Plattform auf der Site 'Facebook for Developers' hinzufügen.
 
@@ -36,7 +38,7 @@ Voraussetzungen:
 
 Über die Site 'Facebook for Developers':
 
-1. Melden Sie sich bei Ihrem Konto auf der [Facebook for Developers-Website ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developers.facebook.com "Symbol für externen Link"){: new_window} an.
+1. Melden Sie sich bei Ihrem Konto auf der [Facebook for Developers-Website ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developers.facebook.com){: new_window} an.
 
 1. Wählen Sie unter **Products List** die Option **Facebook Login** aus.
 
@@ -64,7 +66,7 @@ Voraussetzungen:
 
 	Verwenden Sie verschiedene Zertifikate für den Debugmodus und den Freigabemodus.  Zertifikate, die zum Signieren von Android-Anwendungen im Debugmodus verwendet werden, werden in das Android-SDK gepackt, das von Android Studio in der Regel automatisch installiert wird. Wenn Sie Ihre App für den Google Play-Store freigeben möchten, müssen Sie Ihre App mit einem anderen Zertifikat signieren, das Sie normalerweise selbst generieren.
 
-	Sie können zwei Gruppen von Schlüsselhashwerten mit Facebook eingeben: einen Schlüsselhashwert für Anwendungen, die mit einem Debugzertifikat im Debugmodus erstellt werden, und einen weiteren Schlüsselhashwert für Anwendungen, die mit einem Freigabezertifikat im Freigabemodus erstellt werden. Weitere Informationen finden Sie in [Android-Anwendungen signieren ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://developer.android.com/tools/publishing/app-signing.html "Symbol für externen Link"){: new_window}.
+	Sie können zwei Gruppen von Schlüsselhashwerten mit Facebook eingeben: einen Schlüsselhashwert für Anwendungen, die mit einem Debugzertifikat im Debugmodus erstellt werden, und einen weiteren Schlüsselhashwert für Anwendungen, die mit einem Freigabezertifikat im Freigabemodus erstellt werden. Weitere Informationen finden Sie im Abschnitt zum [Signieren Ihrer Android-Anwendungen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://developer.android.com/tools/publishing/app-signing.html){: new_window}.
 
 1. Der Keystore (Schlüsselspeicher), der das Zertifikat enthält, das Sie für die Entwicklungsumgebung verwenden, wird in der Datei `~/.android/debug.keystore` gespeichert. Das Standardkennwort für den Keystore ist: `android`. Verwenden Sie dieses Zertifikat zum Erstellen von Anwendungen im Debugmodus.
 
@@ -190,7 +192,7 @@ Ihr Android-Projekt enthält möglicherweise zwei Dateien `build.gradle`: eine f
 
 	Weitere Informationen zum Abrufen dieser Werte finden Sie unter [Vorbereitungen](#before-you-begin).
 
-	**Hinweis:** Wenn Ihre Android-Anwendung als Ziel Android Version 6.0 (API-Stufe 23) oder höher ausgewählt hat, müssen Sie sicherstellen, dass die Anwendung über einen `android.permission.GET_ACCOUNTS`-Aufruf verfügt, bevor `register` aufgerufen wird. Weitere Informationen finden Sie in [diesem Abschnit ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.android.com/training/permissions/requesting.html "Symbol für externen Link"){: new_window} auf der Android Developers-Website.
+	**Hinweis:** Wenn Ihre Android-Anwendung als Ziel Android Version 6.0 (API-Stufe 23) oder höher ausgewählt hat, müssen Sie sicherstellen, dass die Anwendung über einen `android.permission.GET_ACCOUNTS`-Aufruf verfügt, bevor `register` aufgerufen wird. Weitere Informationen finden Sie in [diesem Abschnitt ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.android.com/training/permissions/requesting.html){: new_window} auf der Android Developers-Website.
 
 1. Fügen Sie Ihrer Aktivität den folgenden Code hinzu:
 

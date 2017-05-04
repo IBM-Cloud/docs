@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2017 lastupdated: "2017-03-16"
+  years: 2017 lastupdated: "2017-04-17"
 
 ---
 {:new_window: target="_blank"}
@@ -12,11 +12,11 @@ copyright:
 # Customizando o widget de login
 {: #login-widget}
 
-Quando o serviço do {{site.data.keyword.appid_short}} estiver configurado com dois ou mais provedores de identidade, o usuário poderá selecionar um
-provedor de identidade no widget de login.
+É possível configurar o seu widget de login para exibir o logotipo e as cores de sua preferência.
 {:shortdesc}
 
-É possível customizar o seu widget de login concluindo as etapas a seguir:
+Quando o serviço do {{site.data.keyword.appid_short}} estiver configurado com dois ou mais provedores de identidade, o usuário poderá selecionar um
+provedor de identidade no widget de login. É possível customizar o seu widget de login concluindo as etapas a seguir:
 
 1. Abra o painel
 de serviço {{site.data.keyword.appid_short_notm}}.
@@ -27,4 +27,4 @@ empresa.
 5. Inspecione a área de janela de visualização à direita da tela e clique em **Salvar mudanças** quando estiver satisfeito com as suas
 customizações. Uma mensagem de confirmação será exibida.
 
-Não é necessário reconstruir o seu aplicativo. A imagem é armazenada no banco de dados do ID do app e é exibida no próximo login.
+Não é necessário reconstruir o seu aplicativo. A imagem é armazenada no banco de dados do {{site.data.keyword.appid_short}} e é exibida no próximo login.

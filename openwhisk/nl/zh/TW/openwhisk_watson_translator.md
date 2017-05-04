@@ -22,8 +22,8 @@ lastupdated: "2017-02-21"
 | 實體 | 類型 | 參數 | 說明 |
 | --- | --- | --- | --- |
 | `/whisk.system/watson-translator` | 套件 | username、password | 文字翻譯及語言識別的套件  |
-| `/whisk.system/watson-translator/translator` | 動作 (action) | payload、translateFrom、translateTo、translateParam、username、password | 翻譯文字 |
-| `/whisk.system/watson-translator/languageId` | 動作 (action) | payload、username、password | 識別語言 |
+| `/whisk.system/watson-translator/translator` | 動作 | payload、translateFrom、translateTo、translateParam、username、password | 翻譯文字 |
+| `/whisk.system/watson-translator/languageId` | 動作 | payload、username、password | 識別語言 |
 
 **附註**：已淘汰套件 `/whisk.system/watson`（包括動作 `/whisk.system/watson/translate` 及 `/whisk.system/watson/languageId`）。
 

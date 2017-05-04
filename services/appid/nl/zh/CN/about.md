@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -12,10 +12,10 @@ lastupdated: "2017-03-30"
 {:pre: .pre}
 
 
-# 关于 {{site.data.keyword.appid_short_notm}}
+# 工作原理
 {: #about}
 
-通过 {{site.data.keyword.appid_full}}，开发者只需几行代码即可保护 {{site.data.keyword.Bluemix}} 应用程序并向其添加认证。开发者还可以管理特定于用户的数据以构建个性化应用程序体验。
+您可以了解 {{site.data.keyword.appid_short_notm}} 所使用的组件、体系结构和请求流程。
 {:shortdesc}
 
 
@@ -42,19 +42,24 @@ lastupdated: "2017-03-30"
     * 支持的运行时为 Node.js 和 Swift
 
 ## 体系结构概述
+{: #architecture}
 
-![{{site.data.keyword.appid_short_notm}} 体系结构图](/images/appid_architecture.png)
+利用 {{site.data.keyword.appid_short_notm}}，您可以通过要求用户登录来提高应用程序安全性级别。您还可以使用服务器 SDK 来保护后端资源。
+
+下图显示了 {{site.data.keyword.appid_short_notm}} 服务的工作原理概述。
+
+![{{site.data.keyword.appid_short_notm}} 体系结构图](/images/appid_architecture2.png)
 
 图 1. {{site.data.keyword.appid_short_notm}} 体系结构图
 
-您可以通过 {{site.data.keyword.appid_short_notm}} 服务器 SDK 来保护云资源。使用 {{site.data.keyword.appid_short_notm}} 客户端 SDK 提供的请求类可与受保护的云资源进行通信。
-
-* 服务器 SDK 检测到未授权的请求，然后返回 HTTP 401 授权质询。
-* 客户端 SDK 检测到 HTTP 401 授权质询，然后基于身份提供者的配置自动启动认证过程。
-* 将根据当前配置的身份提供者尝试认证。
-* 成功认证后，服务会返回授权和身份令牌。
-* 客户端 SDK 将该授权令牌自动添加到原始请求，并将该请求重新发送到云资源。
-* 服务器 SDK 从请求中抽取访问令牌，并使用 {{site.data.keyword.appid_short_notm}} 进行验证。授予访问权后，响应会返回给应用程序。
+<dl>
+  <dt> 客户端 SDK</dt>
+    <dd> 客户端 SDK 用于与云资源进行通信的请求类。客户端 SDK 在检测到授权质询时将自动启动认证流程。</dd>
+  <dt> Bluemix</dt>
+    <dd>  服务器 SDK 从请求中抽取访问令牌，并使用 {{site.data.keyword.appid_short_notm}} 进行验证。成功认证后，{{site.data.keyword.appid_short_notm}} 会将授权和身份令牌返回到应用程序。</dd>
+  <dt> 身份提供者</dt>
+    <dd> 您可以配置 Facebook 和/或 Google 来认证应用程序。</dd>
+</dl>
 
 
 ## 请求流程
@@ -71,137 +76,6 @@ lastupdated: "2017-03-30"
 * 当客户端 SDK 联系服务时，如果配置了多个身份提供者，那么服务器 SDK 返回登录窗口小部件。{{site.data.keyword.appid_short_notm}} 会调用身份提供者并为该提供者呈现登录表单，如果没有配置身份提供者，那么将返回授权代码，以允许他们进行认证。
 * {{site.data.keyword.appid_short_notm}} 通过提供认证质询，要求客户端进行认证。
 * 如果已配置 Facebook 或 Google，那么在用户登录时，各自的身份提供者 OAuth 流程会处理认证。
-* 如果认证以相同的授权代码结束，那么该代码会发送到令牌端点。端点会返回两个令牌：访问令牌和身份令牌。从此刻开始，通过客户端 SDK 发起的请求全部具有新获取的 Authorization 头。
+* 如果认证以相同的授权代码结束，那么该代码会发送到令牌端点。端点会返回两个令牌：访问令牌和身份令牌。从此刻开始，通过客户端 SDK 发起的请求全部具有新获取的授权头。
 * 客户端 SDK 自动重新发送触发了授权流程的原始请求。
-* 服务器 SDK 从请求中抽取 Authorization 头，通过服务对该头进行验证，然后授予对后端资源的访问权。
-
-## 访问令牌和身份令牌
-{: #access-and-identity}
-
-{{site.data.keyword.appid_short}} 使用两种类型的令牌：访问令牌和身份令牌。令牌的格式为 <a href="https://jwt.io/introduction/" target="_blank">JSON Web 令牌 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a>。
-
-
-### 访问令牌
-{: #access-tokens notoc}
-
-有了访问令牌，就可以与 {{site.data.keyword.appid_short_notm}} 授权过滤器保护的资源进行通信，请参阅[保护后端资源](/docs/services/appid/protecting-resources.html)。令牌符合 JavaScript 对象签名和加密 (JOSE) 规范，并且具有以下格式：
-
-```
-Header: {
-
-    "typ": "JOSE", // 根据规范确定的头类型
-
-    "alg": "RS256", // 根据规范确定的算法
-
-}
-Payload: {
-
-    "iss": "", // 发放者，发放此令牌的 AppID 服务器。StringOrURL
-
-    "sub": "", // 主体，向其发放此令牌的对象。最有可能是 userId
-
-    "aud": "", // 受众，此令牌适用的对象。OAuth2 client_id。
-
-    "exp: "", // 到期时间戳记（戳记时间）
-
-    "iat": "", // 发放时间戳记（戳记时间）
-
-    "tenant": "xxx", // 为其发放令牌的 AppID tenantId
-
-    "auth_by": "appid_anon / appid_facebook / appid_google",
-
-    "scope": "", // 此令牌发放用于的作用域
-
-}
-```
-{:screen}
-
-### 身份令牌
-{: #identity-tokens notoc}
-
-身份令牌包含有关用户的信息，包括姓名、电子邮件、性别、照片和位置。
-
-```
-Header: {
-
-    "typ": "JOSE", // 根据规范确定的头类型
-
-    "alg": "RS256", // 根据规范确定的算法
-
-}
-Payload: {
-
-    "iss": "", // 发放者，发放此令牌的 AppID 服务器。StringOrURL
-
-    "sub": "", // 主体，向其发放此令牌的对象。AppID userid。
-
-    "aud": "", // 受众，此令牌适用的对象。OAuth2 client_id。
-
-    "exp: "", // 到期时间戳记（戳记时间）
-
-    "iat": "", // 发放时间戳记（戳记时间）
-
-    "tenant": "xxx", // 为其发放令牌的 AppID tenantId
-
-    "name": "John Smith", // IDP 所报告的用户全名，必需
-
-    "email": "js@mail.com", // IDP 所报告的电子邮件，仅可用时
-
-    "gender", "male", // IDP 所报告的用户性别，仅可用时
-
-    "locale": "en", // IDP 所报告的用户语言环境，仅可用时
-
-    "picture": "https://url.to.photo", // 用户照片的 URL，仅可用时
-
-    "auth_by": "appid_facebook/appid_google", // 用于认证的 IDP 的名称，必需
-
-    "identities": [
-
-        "provider: "appid_facebook/appid_google", // 必需
-
-        "id": "unique user id as reported by IDP", // 必需
-
-        "profile": { ... } // IDP 返回的 JSON 对象，必需
-
-      },
-
-      {...}, {...} // 更多链接的身份
-
-    ],
-
-    "oauth_client":{
-
-      "type": "serverapp/mobileapp from client registration", // 必需
-
-      "name": "client_name as reported during client registration", // 必需
-
-      "software_id": "software_id as reported during client registration", // 必需
-
-      "software_version": "software_version as reported during client registration", // 必需
-
-      "device_id": "device_id from client registration", //仅移动
-
-      "device_model": "device_model from client registration", //仅移动
-
-      "device_os": "device_os from client registration", //仅移动
-
-    }
-
-}
-```
-{:screen}
-
-
-## 身份提供者概述
-{: #identity-providers-overview}
-
-可以在移动和 web 应用程序中使用以下身份提供者：
-
-* **Facebook** - 用户使用自己的 Facebook 凭证登录到移动或 Web 应用程序。
-* **Google** - 用户使用自己的 Google+ 凭证登录到移动或 Web 应用程序。
-<!--* **Custom** - Bring your own identity provider. The identity providers should be compliant with OIDC. -->
-
-## 使用缺省配置
-{: #default-configuration}
-
-初始设置身份提供者时，{{site.data.keyword.appid_short_notm}} 提供了缺省配置。缺省配置只能用于开发方式。对于每个身份提供者，这些凭证限制为每个 {{site.data.keyword.appid_short_notm}} 实例每天 100 次使用。在发布应用程序之前，请将缺省配置更新为您自己的凭证。要更新配置，请参阅[配置身份提供者](/docs/services/appid/identity-providers.html)。
+* 服务器 SDK 从请求中抽取授权头，通过服务对该头进行验证，然后授予对后端资源的访问权。

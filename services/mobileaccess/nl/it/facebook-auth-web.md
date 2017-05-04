@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+**Importante: il servizio {{site.data.keyword.amafull}} è stato sostituito con il servizio {{site.data.keyword.appid_full}}.**
 
 # Abilitazione dell'autenticazione Facebook per le applicazioni Web
 {: #facebook-auth-web}
@@ -191,7 +192,7 @@ Il passo successivo è quello di ottenere i token di accesso e di identità util
 
 	Tieni presente che il parametro `redirect_uri` deve corrispondere al `redirect_uri` utilizzato per la richiesta di autorizzazione precedente. Il parametro `code`  deve essere il codice concesso ricevuto nella risposta dalla richiesta di autorizzazione. Il codice è valido solo per 10 minuti, dopo i quali deve essere richiamato un nuovo codice..
 
-	Il corpo della risposta conterrà l'ID del token e il codice di accesso in formato JWT (vedi il [sito Web JWT![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://jwt.io/ "Icona link esterno"){: new_window}.
+	Il corpo della risposta conterrà l'ID del token e il codice di accesso in formato JWT (visita il [sito Web JWT ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://jwt.io/){: new_window}).
 
 	Come hai ricevuto l'accesso e i token di identità, puoi indicare la sessione web come autenticata e facoltativamente conservare questi token.  
 

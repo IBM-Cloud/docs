@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
+**重要: {{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービス**に置き換えられます。
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -14,7 +15,7 @@ lastupdated: "2017-01-15"
 {:pre: .pre}
 
 
-# {{site.data.keyword.amashort}} Android アプリ用のカスタム認証の構成
+# Mobile Client Access Android アプリ用のカスタム認証の構成
 {: #custom-android}
 
 
@@ -40,7 +41,7 @@ lastupdated: "2017-01-15"
 
 
 
-## {{site.data.keyword.amashort}} Client SDK の初期化
+## Client SDK の初期化
 {: #custom-android-initialize}
 {{site.data.keyword.amashort}} Android SDK が装備された Android アプリケーションがある場合は、このセクションをスキップできます。
 1. Android Studio にある Android プロジェクトで、アプリケーション・モジュールの `build.gradle` ファイルを開きます (プロジェクト `build.gradle` ではありません)。
@@ -140,7 +141,7 @@ void submitAuthenticationFailure (JSONObject info);
 ## カスタム AuthenticationListener の実装例
 {: #custom-android-samplecustom}
 
-この AuthenticationListener サンプルは、カスタム ID プロバイダーと連携するよう設計されています。このサンプルは、[GitHub リポジトリー![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "外部リンク・アイコン"){: new_window}からダウンロードできます。
+この AuthenticationListener サンプルは、カスタム ID プロバイダーと連携するよう設計されています。このサンプルは、[GitHub リポジトリー![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}からダウンロードできます。
 
 ```Java
 package com.ibm.helloworld;

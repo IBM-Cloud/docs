@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-11"
+  years: 2015, 2017
+lastupdated: "2017-03-22"
 
 ---
 
@@ -57,7 +57,7 @@ Quando viene distribuita un'applicazione autonoma, per l'applicazione viene forn
 * servlet-3.1
 * websocket-1.1
 * icap:managementConnector-1.0
-* appstate-1.0
+* appstate-2.0
 
 Queste funzioni corrispondono alle funzioni del profilo web Java EE 7. Puoi specificare un insieme diverso di funzioni Liberty impostando la variabile di ambiente JBP_CONFIG_LIBERTY. Ad esempio,
 per abilitare solo le funzioni jsp-2.3 e websocket-1.1, esegui il comando e prepara di
@@ -108,7 +108,7 @@ L'intero file di configurazione server.xml Liberty predefinito si presenta come
           <feature>servlet-3.1</feature>
           <feature>websocket-1.1</feature>
           <feature>icap:managementConnector-1.0</feature>
-          <feature>appstate-1.0</feature>
+          <feature>appstate-2.0</feature>
        </featureManager>
 
        <application name='myapp' location='myapp.war' type='war' context-root='/'/>
@@ -120,7 +120,7 @@ L'intero file di configurazione server.xml Liberty predefinito si presenta come
        <applicationMonitor dropinsEnabled='false' updateTrigger='mbean'/>
        <config updateTrigger='mbean'/>
        <cdi12 enableImplicitBeanArchives='false'/>
-       <appstate appName='myapp' markerPath='${home}/../.liberty.state'/>
+       <appstate2 appName='myapp'/>
     </server>
 ```
 {: codeblock}
@@ -198,7 +198,7 @@ Nota: le applicazioni web distribuite come parte della directory server sono acc
 
 Puoi anche eseguire il push di un server in pacchetto a Bluemix. Il file di server in pacchetto viene creato utilizzando il comando di package server di Liberty. Oltre ai file di applicazione e configurazione, il file di server in pacchetto può contenere risorse condivise e funzioni utente Liberty richieste dall'applicazione.
 
-Per impacchettare un server Liberty, utilizza il comando `./bin/server package` dalla directory di installazione di Liberty. Specifica il nome server e includi l'opzione `--include=usr`. 
+Per impacchettare un server Liberty, utilizza il comando `./bin/server package` dalla directory di installazione di Liberty. Specifica il nome server e includi l'opzione `--include=usr`.
 Ad esempio, se il tuo server Liberty è defaultServer, esegui il comando:
 
 ```
@@ -206,7 +206,7 @@ Ad esempio, se il tuo server Liberty è defaultServer, esegui il comando:
 ```
 {: codeblock}
 
-Questo comando genera un file serverName.zip nella directory del server. Se hai utilizzato l'opzione ``--archive`` per specificare un differente file di archivio, assicurati che abbia l'estensione ``.zip` invece di ``.jar`. **Il pacchetto di build non supporta i file del server in pacchetto creati con l'estensione `.jar`**.
+Questo comando genera un file serverName.zip nella directory del server. Se hai utilizzato l'opzione `--archive` per specificare un differente file di archivio, assicurati che abbia l'estensione `.zip` invece di `.jar`. **Il pacchetto di build non supporta i file del server in pacchetto creati con l'estensione `.jar`**.
 
 Puoi quindi eseguire il push del file `.zip` generato a Bluemix con il comando `cf push`.
 Ad esempio:
@@ -247,10 +247,7 @@ sono sensibili al maiuscolo/minuscolo.
 ### Accesso alle informazioni dei servizi di cui è stato eseguito il bind
 {: #accessing_info_of_bound_services}
 
-Quando desideri eseguire il bind di un servizio alla tua applicazione, le informazioni sul servizio,
-				come le credenziali di connessione, sono incluse nella [variabile di ambiente VCAP_SERVICES](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) che
-				Cloud Foundry imposta per l'applicazione. Per i [servizi configurati automaticamente](autoConfig.html), il pacchetto di build Liberty genera o
-				aggiorna le voci di bind di servizio nel file  server.xml. Il contenuto delle voci di bind di
+Quando desideri eseguire il bind di un servizio alla tua applicazione, le informazioni sul servizio, come le credenziali di connessione, sono incluse nella [variabile di ambiente VCAP_SERVICES ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) che Cloud Foundry imposta per l'applicazione. Per i [servizi configurati automaticamente](autoConfig.html), il pacchetto di build Liberty genera o aggiorna le voci di bind di servizio nel file  server.xml. Il contenuto delle voci di bind di
 				servizio può essere in uno dei seguenti formati:
 
 * cloud.services.&lt;nome-servizio&gt;.&lt;proprietà&gt;, che descrive informazioni quali il nome, il tipo e il piano del servizio.
@@ -271,8 +268,8 @@ L'insieme di informazioni tipico è il seguente:
 Per i servizi di cui è stato eseguito il bind che non sono configurati automaticamente dal pacchetto di build Liberty, l'applicazione deve gestire direttamente l'accesso della risorsa di backend.
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
-{: #general}
+{: #general notoc}
 * [Runtime Liberty](index.html)
 * [Panoramica di Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

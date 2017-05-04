@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-04-14"
 
 ---
 
@@ -21,15 +21,15 @@ O php_buildpack é usado nas condições a seguir:
 * Seu app contém um arquivo composer.json ou
 * seu app contém um arquivo *.php, ou
 * seu app define uma variável ${WEBDIR} em seu arquivo
-[options.json](https://github.com/cloudfoundry/php-buildpack/blob/master/docs/config.md) e essa variável está configurada para
+[options.json](https://docs.cloudfoundry.org/buildpacks/php/gsg-php-config.html) e essa variável está configurada para
 um diretório existente dentro de seu app.
 
 ## Aplicativo iniciador
 {: #starter_application}
 
 O {{site.data.keyword.Bluemix}} fornece um app iniciador em PHP.  O aplicativo iniciador em PHP é um app em PHP simples que fornece um modelo
-que pode ser usado para seu app. É possível experimentar o app iniciador, fazendo e enviando mudanças por push para o
-ambiente {site.data.keyword.Bluemix}}.  Consulte [Usando os aplicativos iniciadores](/docs/cfapps/starter_app_usage.html) para
+que pode ser usado para seu app. É possível experimentar o app iniciador, fazendo e enviando mudanças por push para o ambiente
+{{site.data.keyword.Bluemix}}.  Consulte [Usando os aplicativos iniciadores](/docs/cfapps/starter_app_usage.html) para
 obter ajuda sobre o uso do app iniciador.
 
 ## Versões de tempo de execução
@@ -45,7 +45,7 @@ obter ajuda sobre o uso do app iniciador.
 }
 ```
 {: codeblock}
-Para obter mais informações, consulte [Links do pacote do Composer](https://getcomposer.org/doc/04-schema.md#package-links).
+Para obter mais informações, veja [Links do pacote do Composer ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://getcomposer.org/doc/04-schema.md#package-links).
 
 Quando uma versão não é especificada, a versão 5.5.34 é escolhida por padrão.
 
@@ -66,10 +66,11 @@ Se seu app requer uma versão do PHP não listada, é possível usar o [buildpac
 PHP](https://github.com/cloudfoundry/php-buildpack.git) externo para implementar o app.
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## Tutoriais e amostras
-{: #samples}
+{: #samples notoc}
 * [Compilar e implementar uma API REST](http://www.ibm.com/developerworks/library/wa-deployrest-app/)
 * [Compilar e implementar um contador de calorias fácil de usar em dispositivos móveis ](http://www.ibm.com/developerworks/library/mo-bluemix-php-nutritionix-angularjs/)
 ## geral
+{: #general notoc}
 * [Buildpack do Cloud Foundry para PHP](https://github.com/cloudfoundry/php-buildpack.git)

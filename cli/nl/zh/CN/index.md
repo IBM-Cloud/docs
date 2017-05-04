@@ -61,12 +61,12 @@ bluemix plugin install plugin_name -r bluemix-bx
 {: codeblock}
 
 
-| *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *IBM Containers*  |
+| *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *IBM Bluemix Container Service*  |
 |-----|-----|-----|
-| 插件名称：active-deploy<br> [查看文档](/docs/services/ActiveDeploy/cli.html#cli) | 插件名称：auto-scaling<br> [查看文档](/docs/cli/plugins/auto-scaling/index.html) |  插件名称：IBM-Containers<br> [查看文档](/docs/cli/plugins/containers/index.html) |
+| 插件名称：active-deploy<br> [查看文档](/docs/services/ActiveDeploy/cli.html#cli) | 插件名称：auto-scaling<br> [查看文档](/docs/cli/plugins/auto-scaling/index.html) |  插件名称：container-service<br> [查看文档](/docs/containers/cs_cli_devtools.html) |
 {: caption="表 2. 插件" caption-side="top"}
 
-|  *专用网络对等* | *VPN*  |
+|  *专用网络对等连接* | *VPN*  |
 |-----|-----|
 | 插件名称：private-network-peering<br> [查看文档](/docs/cli/plugins/pnp/index.html) |插件名称：VPN<br> [查看文档](/docs/cli/plugins/bx_vpn/index.html) |
 {: caption="表 3. 插件" caption-side="top"}

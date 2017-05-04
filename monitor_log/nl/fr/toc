@@ -1,11 +1,35 @@
 [Surveillance et journalisation](index.html)
     monitoringandlogging.md
     monitoring/monitoring_bmx_ov.md
-        monitoring/monitoring_cf_apps.md
+        monitoring/cf/monitoring_cf_apps.md
+        monitoring/containers/monitoring_containers_ov.md
+        monitoring/grafana/monitoring_analyzing_metrics_grafana.md
+        monitoring/grafana/monitoring_grafana.md
+        monitoring/monitoring_gettinghelp.md
     logging/logging_bmx_ov.md
         logging/logging_cf_apps.md
+        logging/containers/logging_containers_ov.md
+            logging/containers/logging_containers_other_logs.md
         logging/cfapps/logging_writing_to_log_from_cf_app.md
         logging/logging_view_dashboard.md
+        logging/logging_view_cli.md
+        logging/kibana4/logging_analyzing_logs_Kibana.md
+            logging/kibana4/k4_log_format_cf.md
+            logging/kibana4/k4_log_format_containers.md
+            logging/kibana4/k4_log_format_messagehub.md
+        logging/kibana4/logging_kibana_analize_logs_interactively.md
+        logging/kibana4/logging_kibana_filtering_logs.md
+            logging/kibana4/logging_kibana_set_time_filter.md
+            logging/kibana4/k4_filter_queries.md
+            logging/kibana4/k4_filter_logs_spec_text.md
+            logging/kibana4/k4_filter_logs_spec_field.md
+            logging/kibana4/k4_add_filter_out_value.md
+            logging/kibana4/k4_filter_logs_by_log_type.md
+            logging/kibana4/k4_filter_logs_by_instance_id.md
+            logging/kibana4/k4_filter_logs_by_source.md
+            logging/kibana4/k4_filter_cf_logs_by_msg_type.md
+        logging/kibana4/logging_kibana_visualizations.md
+        logging/kibana4/logging_kibana_analize_logs_dashboard.md
         logging/logging_view_kibana3.md
             logging/kibana3/logging_kibana_query.md
             logging/kibana3/logging_kibana_filter_by_component.md
@@ -15,7 +39,8 @@
             logging/kibana3/logging_kibana_filter_by_message_type.md
             logging/kibana3/logging_kibana_tables_graphs.md
             logging/kibana3/logging_kibana_export_share_dashboard.md
-        logging/logging_view_cli.md
         logging/external/logging_external_hosts.md
         logging/dedicated/logging_local_dedicated.md
-    [Surveillance et journalisation du service IBM Bluemix Container](../containers/monitoringandlogging/container_ml_ov.html)
+        logging/qa/logging_qa.md
+        logging/logging_gettinghelp.md
+

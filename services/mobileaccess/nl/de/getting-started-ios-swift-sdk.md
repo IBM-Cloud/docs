@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+**Wichtig: Der Service {{site.data.keyword.amafull}} wird durch den Service {{site.data.keyword.appid_full}} ersetzt.**
 
 # iOS-Swift-SDK einrichten
 {: #getting-started-ios}
@@ -30,7 +31,7 @@ Voraussetzungen:
 * Die **Tenant-ID**. Öffnen Sie den Service im {{site.data.keyword.amashort}}-Dashboard. Klicken Sie auf **Mobile Systemerweiterungen**. Im Feld **App-GUID/TenantId** wird der Wert `tenantId` (auch als `appGUID` bezeichnet) angezeigt. Sie benötigen diesen Wert für die Initialisierung von {{site.data.keyword.amashort}} Authorization Manager.
 * Die **Anwendungsroute**. Dies ist die URL Ihrer Back-End-Anwendung. Sie benötigen diesen Wert zum Senden von Anforderungen an die geschützten Endpunkte der Anwendung.
 * Die {{site.data.keyword.Bluemix_notm}}-**Region**.  Ihre aktuelle {{site.data.keyword.Bluemix_notm}}-Region finden Sie im Header neben dem Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol"). Der Regionswert, der angezeigt wird, sollte einer der folgenden sein: `USA (Süden)`, `Vereinigtes Königreich` oder `Sydney`. Außerdem sollte er den im Code erforderlichen SDK-Werten entsprechen: `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` oder `BMSClient.Region.sydney`.  Sie benötigen diesen Wert für die Initialisierung des {{site.data.keyword.amashort}}-SDK.
-* Xcode-Projekt. Weitere Informationen zum Einrichten Ihrer iOS-Entwicklungsumgebung finden Sie auf der [Apple Developer-Website ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.apple.com/support/xcode/ "Symbol für externen Link"){: new_window}.
+* Xcode-Projekt. Weitere Informationen zum Einrichten Ihrer iOS-Entwicklungsumgebung finden Sie auf der [Apple Developer-Website ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.apple.com/support/xcode/){: new_window}.
 
 
 ## {{site.data.keyword.amashort}}-Client-SDK installieren
@@ -50,7 +51,7 @@ sudo gem install cocoapods
 ```
 {: codeblock}
 
-Weitere Informationen finden Sie auf der [CocoaPods-Website ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cocoapods.org/ "Symbol für externen Link"){: new_window}.
+Weitere Informationen finden Sie auf der [CocoaPods-Website ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cocoapods.org/){: new_window}.
 
 ### {{site.data.keyword.amashort}}-Client-SDK mit CocoaPods installieren
 {: #install-sdk-cocoapods}

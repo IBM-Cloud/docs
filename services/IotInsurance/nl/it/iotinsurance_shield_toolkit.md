@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-01"
+lastupdated: "2017-03-27"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -13,7 +13,7 @@ lastupdated: "2017-03-01"
 {:pre: .pre}
 
 
-# Toolkit dello scudo
+# Utilizzo del toolkit dello scudo
 {: #iot4i_shield_toolkit}
 Utilizza gli scudi per proteggere appropriatamente gli utenti identificando i pericoli e crea le risposte automatizzate appropriate. Utilizza o modifica gli scudi inclusi nella libreria degli scudi {{site.data.keyword.iotinsurance_short}} o crea e implementa i tuoi propri scudi utilizzando i seguenti esempi o istruzioni.
 {:shortdesc}
@@ -269,16 +269,3 @@ var promotion = {
 ```
 
 Puoi facoltativamente distribuire la tua applicazione mobile ed utilizzare [le istruzioni nel repository GitHub ioti-mobile](https://github.com/ibm-watson-iot/ioti-mobile) per collegarti come un utente creato nella sezione precedente.
-
-# Link correlati
-{: #rellinks}
-
-## Riferimento API
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API Examples](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## Link correlati
-{: #general}
-* [Developer support forum](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-* [Stack overflow support forum](http://stackoverflow.com/questions/tagged/ibm-bluemix)

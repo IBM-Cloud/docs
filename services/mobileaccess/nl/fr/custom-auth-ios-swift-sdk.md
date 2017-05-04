@@ -2,14 +2,15 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-16"
+lastupdated: "2017-04-06"
 
 ---
 
 {:codeblock:.codeblock}
 
+**Important : Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.**
 
-# Configuration d'une authentification personnalisée pour votre application {{site.data.keyword.amashort}} iOS (SDK Swift)
+# Configuration d'une authentification personnalisée pour votre application Mobile Client Access iOS (SDK Swift)
 {: #custom-ios}
 
 Configurez votre application iOS qui utilise l'authentification personnalisée afin qu'elle se serve du SDK client de {{site.data.keyword.amafull}} et connectez-la à {{site.data.keyword.Bluemix}}.  

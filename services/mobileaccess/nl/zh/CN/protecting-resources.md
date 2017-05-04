@@ -2,12 +2,14 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 {:codeblock:.codeblock}
+
+**重要信息：{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。**
 
 # 使用 {{site.data.keyword.amashort}} 服务保护后端资源
 {: #protecting-resources}

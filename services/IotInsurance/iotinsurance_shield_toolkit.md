@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-27"
+lastupdated: "2017-04-25"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -61,7 +61,7 @@ var config = module.exports = {
 
 Method: POST  
 API: /shield  
-https://iot4i-docs-api.mybluemix.net/dist/#!/shield/addShield
+https://iot4i-api-docs.mybluemix.net/#!/shield/addShield
 
 Create a shield definition in the createShield.js file.  The following example shows a simple shield that detects a water leak.
 
@@ -160,7 +160,7 @@ Each shield code contains resources that are defined in resource/shield.js state
 
 Method: POST  
 API: /user  
-https://iot4i-docs-api.mybluemix.net/dist/#!/user/addUser
+https://iot4i-api-docs.mybluemix.net/#!/user/addUser
 
 Create a user in the createUser.js file. The following example shows how to create a single user.
 
@@ -195,7 +195,7 @@ where:
 
 Method: POST  
 API: /user  
-https://iot4i-docs-api.mybluemix.net/dist/#!/shieldassociation/addShieldAssociation
+https://iot4i-api-docs.mybluemix.net/#!/shieldassociation/addShieldAssociation
 
 Create a shield association that links the shield to the user in the createUserShieldAssociation.js.
 
@@ -217,7 +217,7 @@ var userShield = {
 
 Method: POST  
 API: /sendPayloadToMQTT  
-https://iot4i-docs-api.mybluemix.net/dist/#!/global/sendPayloadToMQTT
+https://iot4i-api-docs.mybluemix.net/#!/global/sendPayloadToMQTT
 
 You can create a simulated hazard payload to test your shields.
 

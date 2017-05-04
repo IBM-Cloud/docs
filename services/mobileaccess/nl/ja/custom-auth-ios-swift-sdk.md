@@ -2,14 +2,15 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-16"
+lastupdated: "2017-04-06"
 
 ---
 
 {:codeblock:.codeblock}
 
+**重要: {{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービス**に置き換えられます。
 
-# {{site.data.keyword.amashort}} iOS (Swift SDK) アプリ用のカスタム認証の構成
+# Mobile Client Access iOS (Swift SDK) アプリ用のカスタム認証の構成
 {: #custom-ios}
 
 {{site.data.keyword.amafull}} Client SDK の使用および {{site.data.keyword.Bluemix}} へのアプリケーションの接続のためにカスタム認証を使用する iOS アプリケーションを構成します。  
@@ -72,7 +73,7 @@ lastupdated: "2017-01-16"
 
 	//Auth delegate for handling custom challenge
  class MyAuthDelegate : AuthenticationDelegate {
-      func onAuthenticationChallengeReceived(_ authContext: AuthenticationContext, challenge: AnyObject){
+func onAuthenticationChallengeReceived(_ authContext: AuthenticationContext, challenge: AnyObject){
 		    print("onAuthenticationChallengeReceived")
 		    let answer = try? Utils.parseJsonStringtoDictionary( "{\"userName\":\"" + "test" + "\",\"password\":\"" + "test" + "\"}")
 			authContext.submitAuthenticationChallengeAnswer(answer)

@@ -13,23 +13,19 @@ lastupdated: "2017-01-10"
 # Monitoramento de aplicativos com o {{site.data.keyword.mobileanalytics_short}}
 {: #monitoringapps}
 
-O {{site.data.keyword.mobileanalytics_full}} fornece monitoramento e análise para seus aplicativos móveis. É
-possível registrar logs do aplicativo e monitorar dados com o SDK do cliente {{site.data.keyword.mobileanalytics_short}}. Os desenvolvedores podem controlar quando enviar esses dados para o serviço {{site.data.keyword.mobileanalytics_short}}. Quando os dados forem
-entregues para o {{site.data.keyword.mobileanalytics_short}}, será possível usar o
-console do {{site.data.keyword.mobileanalytics_short}} para obter insights analíticos
-sobre seus aplicativos, dispositivos e logs do aplicativo.
+O {{site.data.keyword.mobileanalytics_full}} fornece monitoramento e análise para seus aplicativos móveis. É possível registrar logs do aplicativo e monitorar dados com o SDK do cliente {{site.data.keyword.mobileanalytics_short}}. Os desenvolvedores podem controlar quando enviar esses dados para o serviço {{site.data.keyword.mobileanalytics_short}}. Quando os dados forem entregues para o {{site.data.keyword.mobileanalytics_short}}, será possível usar o console do {{site.data.keyword.mobileanalytics_short}} para obter insights analíticos sobre seus aplicativos, dispositivos e logs do aplicativo.
 {: shortdesc}
 
 <!--
 
 ## Visualizing data with custom charts
-{: #custom-charts}
+{: #custom-charts notoc}
 
 You can visualize the collected analytics data in your analytics repository. This visualization is a powerful way to inspect data for specific use cases. You can create charts with data that is already collected by Operational Analytics, in addition to custom data that you report.
 
 
 ### Creating custom charts for app logs
-{: #custom-charts-client-logs}
+{: #custom-charts-client-logs notoc}
 
 You can create a custom chart for app logs that contain log information that is sent with the Logger API for the platform. The log information also includes contextual information about the device, including environment, app name, and app version.
 
@@ -62,7 +58,7 @@ In this example, you use app log data to create a flow chart. The final graph sh
 7. Click **Save**
 
 ### Exporting custom data
-{: #export-custom-data}
+{: #export-custom-data notoc}
 
 You can export the data from each custom chart into JSON, XML, or CSV format.
 
@@ -71,7 +67,7 @@ The structure of the exported data depends on the chart that is being exported. 
 
 
 ### Exporting and importing custom chart definitions
-{: #export-import-custom}
+{: #export-import-custom notoc}
 
 You can import and export custom chart definitions programmatically or manually in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
 
@@ -96,21 +92,16 @@ You can also export and import custom chart definitions programmatically by usin
 ## Configurando alertas
 {: #alerts}
 
-É possível configurar limite nas definições de alerta no console do {{site.data.keyword.mobileanalytics_short}} para monitorar melhor suas
-atividades.
+É possível configurar limite nas definições de alerta no console do {{site.data.keyword.mobileanalytics_short}} para monitorar melhor suas atividades.
 
-É possível configurar limites que, se excedidos, acionarão alertas para notificar o
-monitor do console do {{site.data.keyword.mobileanalytics_short}}. Os alertas acionados podem ser visualizados no console ou os alertas podem ser manipulados por um webhook customizado. <!-- This feature provides a proactive means of detecting app log errors, server log errors, extended periods of network latency, and authentication failures.--> Esse
-recurso fornece um meio proativo de detectar erros de log do aplicativo e erros de log do servidor de travamentos de aplicativo. Limites e alertas reativos evitam que você filtre seus dados e configure limites em um amplo espectro de granularidade.
+É possível configurar limites que, se excedidos, acionarão alertas para notificar o monitor do console do {{site.data.keyword.mobileanalytics_short}}. Os alertas acionados podem ser visualizados no console ou os alertas podem ser manipulados por um webhook customizado. <!-- This feature provides a proactive means of detecting app log errors, server log errors, extended periods of network latency, and authentication failures.--> Esse recurso fornece um meio proativo de detectar erros de log do aplicativo e erros de log do servidor de travamentos de aplicativo. Limites e alertas reativos evitam que você filtre seus dados e configure limites em um amplo espectro de granularidade.
 
 ### Criando uma definição de alerta para logs do aplicativo
-{: #alert-def-client-logs}
+{: #alert-def-client-logs notoc}
 
 É possível criar uma definição de alerta que é baseada em logs do aplicativo.
 
-Neste exemplo, você usa os dados do log do aplicativo para criar uma definição de alerta. O alerta monitora todos os logs do aplicativo que foram recebidos nos
-últimos cinco minutos e continua a verificação a cada cinco minutos, até que a definição de alerta seja desativada ou excluída. Um alerta é acionado para cada dispositivo que
-enviou três ou mais logs de erro de aplicativo com o mesmo nome e versão do aplicativo.
+Neste exemplo, você usa os dados do log do aplicativo para criar uma definição de alerta. O alerta monitora todos os logs do aplicativo que foram recebidos nos últimos cinco minutos e continua a verificação a cada cinco minutos, até que a definição de alerta seja desativada ou excluída. Um alerta é acionado para cada dispositivo que enviou três ou mais logs de erro de aplicativo com o mesmo nome e versão do aplicativo.
 
 1. No console do {{site.data.keyword.mobileanalytics_short}}, clique em **Definições** para acessar a página Definições de alerta.
 2. Clique em **Criar alerta** para criar um alerta.
@@ -140,13 +131,11 @@ enviou três ou mais logs de erro de aplicativo com o mesmo nome e versão do ap
 Você criou uma definição de alerta para acionar um alerta no término de cada intervalo de 5 minutos se o número de logs de app atingir seu limite de 3 ou mais logs de erro.
 
 ### Criando uma definição de alerta para travamentos de aplicativo
-{: #alert-def-app-crash}
+{: #alert-def-app-crash notoc}
 
 É possível criar uma definição de alerta baseada em travamentos de aplicativo.
 
-Neste exemplo, você usa os dados de travamento de aplicativo para criar uma definição de alerta. O alerta monitora todos os travamentos de aplicativo nos
-últimos dois minutos e continua a verificação a cada dois minutos, até que a definição de alerta seja desativada ou excluída. Um alerta é acionado para cada aplicativo que travou cinco ou mais vezes. Para
-obter mais informações sobre travamentos de aplicativo, veja [Travamentos de aplicativo](#app_crash).
+Neste exemplo, você usa os dados de travamento de aplicativo para criar uma definição de alerta. O alerta monitora todos os travamentos de aplicativo nos últimos dois minutos e continua a verificação a cada dois minutos, até que a definição de alerta seja desativada ou excluída. Um alerta é acionado para cada aplicativo que travou cinco ou mais vezes. Para obter mais informações sobre travamentos de aplicativo, veja [Travamentos de aplicativo](#app_crash).
 
 1. No console do {{site.data.keyword.mobileanalytics_short}}, clique em **Definições** para exibir a página Definições de alertas.
 2. Clique em **Criar alerta**.
@@ -171,7 +160,7 @@ obter mais informações sobre travamentos de aplicativo, veja [Travamentos de a
 5. Clique em **Salvar (Save)**.
 
 ### Gerenciando definições de alerta
-{: #managing-alert-definitions}
+{: #managing-alert-definitions notoc}
 
 Neste exemplo, você gerencia suas definições de alerta a partir da página Gerenciamento de alerta.
 
@@ -182,7 +171,7 @@ Neste exemplo, você gerencia suas definições de alerta a partir da página Ge
 5. Opcional: clique no ícone **Lixeira** se desejar excluir uma definição de alerta.
 
 ### Visualizando Detalhes de Alerta
-{: #viewing-alert-details}
+{: #viewing-alert-details notoc}
 
 Neste exemplo, você visualiza os detalhes de seus alertas acionados a partir da página Log de alerta.
 
@@ -198,11 +187,10 @@ Neste exemplo, você visualiza os detalhes de seus alertas acionados a partir da
 ## Monitoramento de travamentos de aplicativo
 {: #monitor-app-crash}
 
-É possível visualizar informações sobre travamentos do seu aplicativo no console do {{site.data.keyword.mobileanalytics_short}} para monitorar melhor e solucionar
-problemas de seus aplicativos.
+É possível visualizar informações sobre travamentos do seu aplicativo no console do {{site.data.keyword.mobileanalytics_short}} para monitorar melhor e solucionar problemas de seus aplicativos.
 
 ### Monitoramento de travamento de aplicativo
-{: #app-crash}
+{: #app-crash notoc}
 
 Na página **Travamentos**, a tabela **Visão geral de travamento** mostra as colunas de dados a seguir:
 
@@ -220,7 +208,7 @@ Na página **Travamentos**, a tabela **Visão geral de travamento** mostra as co
 2. Exibir total de travamentos: total de travamentos ao longo do tempo
 
 ### Resolução de problemas de travamento de aplicativo
-{: #app-crash-troubleshooting}
+{: #app-crash-troubleshooting notoc}
 
 A página **Resolução de problemas** no console do <!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}} oferece uma visualização granular dos travamentos do seu app, usando a tabela **Resumo do travamento**.
 
@@ -233,10 +221,7 @@ A tabela **Resumo de travamento** é classificável e inclui as colunas de dados
 * OS
 * Message
 
-Clique no ícone + próximo a qualquer entrada para exibir a
-tabela
-**Detalhes do travamento**, que inclui as
-colunas a seguir:
+Clique no ícone + próximo a qualquer entrada para exibir a tabela **Detalhes do travamento**, que inclui as colunas a seguir:
 
 * Horário do travamento
 * Versão de Aplicativo
@@ -247,37 +232,25 @@ colunas a seguir:
 
 Expanda qualquer entrada na tabela **Detalhes do travamento** para obter mais detalhes, incluindo um rastreio de pilha.
 
-**Nota**: os dados da tabela **Resumo de travamento** são preenchidos consultando os logs de app de nível fatal. Se o seu
-aplicativo não coletar logs do aplicativo fatais, nenhum dado estará disponível.
+**Nota**: os dados da tabela **Resumo de travamento** são preenchidos consultando os logs de app de nível fatal. Se o seu aplicativo não coletar logs do aplicativo fatais, nenhum dado estará disponível.
 
 ## Monitorando solicitações de rede
 {: #monitor-network-requests}
 
 
-Visualize os dados da solicitação de rede para seus aplicativos no console
-do {{site.data.keyword.mobileanalytics_short}}. 
+Visualize os dados da solicitação de rede para seus aplicativos no console do {{site.data.keyword.mobileanalytics_short}}. 
 
 Os dados estão disponíveis para as medidas a seguir:
 	
-* Tempo de roundtrip - define o período de tempo, medido em ms,
-que é necessário para o seu app para fazer solicitações de rede.
-* Contagem de solicitações - exibe com que frequência um
-app faz solicitações de rede. Os dados também são exibidos como uma média.
+* Tempo de roundtrip - define o período de tempo, medido em ms, que é necessário para o seu app para fazer solicitações de rede.
+* Contagem de solicitações - exibe com que frequência um app faz solicitações de rede. Os dados também são exibidos como uma média.
 
 ## Exportando dados para o dashDB
 {: #dashdb}
 
-As métricas que você vê no console do {{site.data.keyword.mobileanalytics_short}}
-são apenas uma amostra dos insights que podem ser obtidos de seus dados móveis. É possível canalizar
-automaticamente seus dados móveis para o data warehouse do {{site.data.keyword.IBM}} dashDB,
-no qual é possível customizar suas análises, agregar seus dados com outras fontes de dados públicas
-e privadas e aplicar analítica de ponta para derivar insights profundos, detalhados e sofisticados
-para ajudá-lo a entender e impulsionar seus negócios.
+As métricas que você vê no console do {{site.data.keyword.mobileanalytics_short}} são apenas uma amostra dos insights que podem ser obtidos de seus dados móveis. É possível canalizar automaticamente seus dados móveis para o data warehouse do {{site.data.keyword.IBM}} dashDB, no qual é possível customizar suas análises, agregar seus dados com outras fontes de dados públicas e privadas e aplicar analítica de ponta para derivar insights profundos, detalhados e sofisticados para ajudá-lo a entender e impulsionar seus negócios.
 
-Configure o dashDB no console do {{site.data.keyword.mobileanalytics_short}} clicando
-em **DashDB** na página **Exportar**. Após concluir a
-configuração, novos dados enviados para o {{site.data.keyword.mobileanalytics_short}} também
-serão encaminhados para o dashDB dentro de uma a duas horas. 
+Configure o dashDB no console do {{site.data.keyword.mobileanalytics_short}} clicando em **DashDB** na página **Exportar**. Após concluir a configuração, novos dados enviados para o {{site.data.keyword.mobileanalytics_short}} também serão encaminhados para o dashDB dentro de uma a duas horas. 
 
 <!--
 If you have existing DashDB instances, those instances will no longer accept new data because the incoming data no longer matches the schema. Manually add columns for the new data to resume incoming data. Modifying {{site.data.keyword.mobileanalytics_short}} collection tables by adding new columns also breaks the stream of incoming data.

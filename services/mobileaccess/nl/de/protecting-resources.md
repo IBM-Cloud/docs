@@ -2,12 +2,14 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 {:codeblock:.codeblock}
+
+**Wichtig: Der Service {{site.data.keyword.amafull}} wird durch den Service {{site.data.keyword.appid_full}} ersetzt.**
 
 # Back-End-Ressourcen mit dem {{site.data.keyword.amashort}}-Service schützen
 {: #protecting-resources}

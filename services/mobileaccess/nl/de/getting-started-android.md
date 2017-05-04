@@ -2,13 +2,15 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+**Wichtig: Der Service {{site.data.keyword.amafull}} wird durch den Service {{site.data.keyword.appid_full}} ersetzt.**
 
 # Android-SDK einrichten
 {: #getting-started-android}
@@ -26,7 +28,7 @@ Voraussetzungen:
 * Die **Tenant-ID**. Öffnen Sie den Service im {{site.data.keyword.amafull}}-Dashboard. Klicken Sie auf die Schaltfläche **Mobile Systemerweiterungen**. Im Feld **App-GUID/TenantId** wird der Wert `tenantId` (auch als `appGUID` bezeichnet) angezeigt. Sie benötigen diesen Wert für die Initialisierung von Authorization Manager.
 * Die **Anwendungsroute**. Dies ist die URL Ihrer Back-End-Anwendung. Sie benötigen diesen Wert zum Senden von Anforderungen an die geschützten Endpunkte der Anwendung.
 * Die {{site.data.keyword.Bluemix_notm}}-**Region**.  Ihre aktuelle {{site.data.keyword.Bluemix_notm}}-Region finden Sie im Header neben dem Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol"). Der Regionswert, der angezeigt wird, sollte einer der folgenden sein: `USA (Süden)`, `Vereinigtes Königreich` oder `Sydney`. Außerdem sollte er den im Code erforderlichen SDK-Werten entsprechen: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` oder `BMSClient.REGION_UK`. Sie benötigen diesen Wert für die Initialisierung des {{site.data.keyword.amashort}}-Clients.
-* Android Studio-Projekt, das für das Arbeiten mit Gradle eingerichtet ist. Weitere Informationen zur Einrichtung Ihrer Android-Entwicklungsumgebung finden Sie in [Google Developer Tools ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://developer.android.com/sdk/index.html "Symbol für externen Link"){: new_window}.
+* Android Studio-Projekt, das für das Arbeiten mit Gradle eingerichtet ist. Weitere Informationen zur Einrichtung Ihrer Android-Entwicklungsumgebung finden Sie unter [Google Developer Tools ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://developer.android.com/sdk/index.html){: new_window}.
 
 ## {{site.data.keyword.amashort}}-Client-SDK installieren
 {: #install-mca-sdk}

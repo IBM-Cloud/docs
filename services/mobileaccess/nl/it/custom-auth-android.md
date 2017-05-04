@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
+**Importante: il servizio {{site.data.keyword.amafull}} è stato sostituito con il servizio {{site.data.keyword.appid_full}}.**
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -14,7 +15,7 @@ lastupdated: "2017-01-15"
 {:pre: .pre}
 
 
-# Configurazione dell'autenticazione personalizzata per l'applicazione Android {{site.data.keyword.amashort}}
+# Configurazione dell'autenticazione personalizzata per la tua applicazione Android Mobile Client Access
 {: #custom-android}
 
 
@@ -39,7 +40,7 @@ Per ulteriori informazioni, consulta:
 
 
 
-## Inizializzazione dell'SDK client {{site.data.keyword.amashort}}
+## Inizializzazione dell'SDK client
 {: #custom-android-initialize}
 Se disponi di un'applicazione Android strumentata con l'SDK Android {{site.data.keyword.amashort}} puoi saltare questa sezione.
 1. Nel tuo progetto Android in Android Studio, apri il file `build.gradle` del tuo modulo applicazione (non il progetto `build.gradle`).
@@ -139,7 +140,7 @@ void submitAuthenticationFailure (JSONObject info);
 ## Implementazione di esempio di un AuthenticationListener personalizzato
 {: #custom-android-samplecustom}
 
-Questo esempio AuthenticationListener è progettato per funzionare con un provider di identità personalizzato. Puoi scaricare questo esempio dal [repository Github![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "Icona link esterno"){: new_window}.
+Questo esempio AuthenticationListener è progettato per funzionare con un provider di identità personalizzato. Puoi scaricare questo esempio dal [Repository Github ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}.
 
 ```Java
 package com.ibm.helloworld;

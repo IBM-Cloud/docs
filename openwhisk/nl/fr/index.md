@@ -21,7 +21,7 @@ Votre code s'exécute chaque fois que se produit un appel HTTP, un changement d'
 Vous êtes facturé à la milliseconde de temps d'exécution (arrondie aux 100 ms supérieurs) et non à l'heure d'utilisation de machine virtuelle, que le travail effectué par celle-ci ait été utile ou non.
 {: shortdesc}
 
-Ce modèle de programmation est idéal pour les microservices, les appareils mobiles, IoT et de nombres autres applications. Vous bénéficiez implicitement d'une mise à l'échelle automatique et d'un équilibrage de charge clés en main sans avoir à configurer manuellement des clusters, des équilibreurs de charge, des plug-ins HTTP, etc. Si vous travaillez sur {{site.data.keyword.openwhisk}}, vous êtes déchargé de toutes les tâches d'administration, en effet, l'ensemble du matériel, du réseau et des logiciels sont gérés par IBM. Tout ce que vous avez à faire est fournir le code que vous souhaitez exécuter et le donner à {{site.data.keyword.openwhisk}}. Le reste se fait par magie. Vous trouverez une excellente présentation du modèle de programmation sans serveur sur le [blogue de Martin Fowler](https://martinfowler.com/articles/serverless.html).
+Ce modèle de programmation convient particulièrement bien pour les applications de microservices, de mobiles, IoT, et beaucoup d'autres. La mise à l'échelle automatique et l'équilibrage de charge y sont inhérents, sans que vous ayez à configurer manuellement des clusters, des équilibreurs de charge, des plug-ins HTTP, etc. Si vous utilisez {{site.data.keyword.openwhisk}}, vous êtes également déchargé de toutes les tâches d'administration, la maintenance du matériel, du réseau et des logiciels étant assurée par IBM. Tout ce que vous avez à faire est fournir le code que vous souhaitez exécuter et le donner à {{site.data.keyword.openwhisk}}. Le reste se fait par magie. Vous trouverez une excellente présentation du modèle de programmation sans serveur sur le [blogue de Martin Fowler](https://martinfowler.com/articles/serverless.html).
 
 Vous pouvez également obtenir le [code source Apache OpenWHisk](https://github.com/openwhisk/openwhisk) et exécuter le système vous-même.
 
@@ -48,6 +48,9 @@ Accédez à la page de [configuration de l'interface de ligne de commande](https
 - [Scénarios d'utilisation courants pour les applications sans serveur](./openwhisk_use_cases.html)
 - [Configuration et utilisation de l'interface de ligne de commande d'OpenWhisk](./openwhisk_cli.html)
 - [Utilisation d'OpenWhisk depuis une application iOS](./openwhisk_mobile_sdk.html)
+- [Articles, exemples et tutoriels](https://github.com/openwhisk/openwhisk-external-resources)
+- [Foire aux questions Apache OpenWhisk](http://openwhisk.org/faq)
+- [Tarification](https://console.ng.bluemix.net/openwhisk/learn/pricing)
 
 ## Modèle de programmation
 {: #openwhisk_start_programming}
@@ -121,6 +124,7 @@ commande suivante :
 
 Vous pouvez aussi utiliser les fonctions gérées par des événements dans {{site.data.keyword.openwhisk_short}} pour appeler cette action en réponse à des événements. Suivez l'[exemple de service Alarm](./openwhisk_packages.html#openwhisk_packages_trigger) afin de configurer une source d'événements pour appeler l'action `hello` à chaque fois qu'un événement régulier est généré.
 
+Cliquez [ici](https://github.com/openwhisk/openwhisk-external-resources#sample-applications) pour la liste complète des tutoriels et exemples OpenWhisk. Outre des exemples, ce référentiel comporte des liens vers des articles, des présentations, des podcasts, des vidéos et d'autres ressources {{site.data.keyword.openwhisk_short}} associées.
 
 ## Référence d'API
 {: #openwhisk_start_api notoc}

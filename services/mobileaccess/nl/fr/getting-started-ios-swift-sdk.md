@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+**Important : Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.**
 
 # Configuration du SDK Swift iOS
 {: #getting-started-ios}
@@ -31,7 +32,7 @@ Vous devez disposer des éléments suivants :
 * Valeur de votre **TenantID**. Ouvrez votre service dans le tableau de bord {{site.data.keyword.amashort}}. Cliquez sur **Options pour application mobile**. Les valeurs `tenantId` (qui portent également le nom d'`appGUID`) sont affichées dans la zone **App GUID / TenantId**. Vous aurez besoin de cette valeur pour initialiser le Gestionnaire des autorisations {{site.data.keyword.amashort}}.
 * Votre **Application Route**. Il s'agit de l'URL de votre application back end. Vous avez besoin de cette valeur pour envoyer des demandes à ses noeuds finaux protégés.
 * Votre **région** {{site.data.keyword.Bluemix_notm}}.  Vous pouvez trouver votre région {{site.data.keyword.Bluemix_notm}} actuelle dans l'en-tête, en regard de l'icône **Avatar**![icône Avatar](images/face.jpg "icône Avatar"). La valeur de la région qui apparaît doit être l'une des suivantes : `US South`, `Sydney` ou `United Kingdom`, et correspondre aux valeurs SDK requises dans le code : `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` ou `BMSClient.Region.sydney`.  Vous aurez besoin de cette valeur pour initialiser le SDK {{site.data.keyword.amashort}}.
-* Un projet Xcode. Pour plus d'informations sur la configuration de votre environnement de développement iOS, accédez au site Web [Apple Developer ![Icône de lien externe ](../../icons/launch-glyph.svg "Icône de lien externe ")](https://developer.apple.com/support/xcode/ "Icône de lien externe"){: new_window}.
+* Un projet Xcode. Pour plus d'informations sur la configuration de votre environnement de développement iOS, voir le [site Web Apple Developer ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.apple.com/support/xcode/){: new_window}.
 
 
 ## Installation du SDK client de {{site.data.keyword.amashort}}
@@ -53,7 +54,7 @@ sudo gem install cocoapods
 ```
 {: codeblock}
 
-Pour plus d'informations, reportez-vous au [site Web CocoaPods ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cocoapods.org/ "Icône de lien externe"){: new_window}.
+Pour plus d'informations, voir le [site Web CocoaPods![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cocoapods.org/){: new_window}.
 
 ### Installation du SDK client de {{site.data.keyword.amashort}} avec CocoaPods
 {: #install-sdk-cocoapods}
@@ -61,7 +62,7 @@ Pour plus d'informations, reportez-vous au [site Web CocoaPods ![Icône de lien 
 1. Dans une fenêtre de terminal, naviguez jusqu'au répertoire racine de votre projet iOS.
 
 1. Si vous n'avez pas encore initialisé votre espace de travail pour CocoaPods, exécutez la commande `pod init`.<br/>
-CocoaPods crée automatiquement un fichier `Podfile`, dans lequel vous définirez les dépendances de votre projet iOS.
+ CocoaPods crée un fichier `Podfile`, dans lequel vous définirez les dépendances de votre projet iOS.
 
 1. Editez le fichier `Podfile` et ajoutez la ligne suivante aux cibles requises.
 
@@ -73,8 +74,7 @@ CocoaPods crée automatiquement un fichier `Podfile`, dans lequel vous définire
 
   **Astuce :** Vous pouvez ajouter `use_frameworks!` à votre cible Xcode au lieu du Podfile.
 
-1. Enregistrez le fichier `Podfile` et lancez `pod install` depuis la ligne de commande. CocoaPods installe les dépendances
-pertinentes et affiche les dépendances et nacelles ajoutées.<br/>
+1. Enregistrez le fichier `Podfile` et lancez `pod install` depuis la ligne de commande. CocoaPods installe les dépendances pertinentes et affiche les dépendances et nacelles ajoutées.<br/>
 
    **Important** : CocoaPods génère un fichier `xcworkspace`.  A partir de ce moment, vous devrez toujours ouvrir ce fichier pour travailler sur votre projet.
 

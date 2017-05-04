@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-04-13"
+lastupdated: "2017-05-02"
 
 ---
 
@@ -346,7 +346,7 @@ In the **Resource Usage** section, you can view the following information:
 {{site.data.keyword.Bluemix_notm}} over the past 10
 minutes, hour, and day.
 
-#### Memory, Disk, and CPU details
+#### System Memory, Disk, and CPU details
 {: #resourceusagedetails}
 
 In the **Resource Usage** section, you can see a summary of the **Reserved** and **Physical** amounts for your memory and disk.    
@@ -373,6 +373,13 @@ To see more detailed information about your physical and reserved memory or disk
 	<dt><strong>Physical</strong></dt>
 	<dd>The Physical area shows the amount of memory or disk space that is actually being used.</dd>
 	</dl>
+
+#### Service usage details
+{: #servicesresourceusage}
+
+The **Service** tab shows the total service usage in relation to the maximum capacity that you have for a dedicated service. For example, if you have a dedicated Cloudant service, and you are using 500 GB of your 1000 GB capacity, then you see a graphic showing that you have used 50% of your total capacity. The color of the graphic changes based on how close you are to the capacity limit. Yellow is shown when you have used 70% to 84% of your capacity, and red is used when you have reached 85% or more of the available capacity.
+
+**Note**: Service consumption information may not be available in all environments at this time. This feature is available for Cloudant, MessageHub, API Connect, and Session Cache.
 
 
 ### Account usage
@@ -849,7 +856,7 @@ A quota represents the resource limits for the organizations in your environment
 <dd>The maximum number of public IP addresses that you cal allocate across all spaces of an organization.</dd>
 </dl>
 <strong>Note</strong>: If you do not yet have containers in your environment or if you do not yet have the containers in your environment set up, you get an error message.
-<p>For more information about containers, see [About IBM containers](/docs/containers/container_ov.html). For more information about container quotas, see [Quota and Bluemix accounts](/docs/containers/container_planning_org_ov.html#container_planning_quota).</p>
+<p>For more information about containers, see [About IBM containers](/docs/containers/container_ov.html). For more information about container quotas, see [Quota and Bluemix accounts](/docs/containers/container_planning.html#container_planning_quota).</p>
 <strong>Note:</strong> Containers are not available in the {{site.data.keyword.Bluemix_notm}} Sydney region.</li>
 </ul>
 <li>To save any changes that you made on the Manage Organization page, click <strong>SAVE</strong>.</li>

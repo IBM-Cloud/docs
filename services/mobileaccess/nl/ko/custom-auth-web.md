@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,9 @@ lastupdated: "2017-01-08"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-#{{site.data.keyword.amashort}} 웹 애플리케이션용 사용자 정의 인증 구성
+**중요: {{site.data.keyword.amafull}} 서비스는 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다. **
+
+#Mobile Client Access 웹 애플리케이션의 사용자 정의 인증 구성
 {: #custom-web}
 
 사용자 정의 인증 및 {{site.data.keyword.amafull}} 보안 기능을 웹 앱에 추가하십시오.
@@ -103,7 +105,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 {: codeblock}
 
 
-##사용자 정의 인증용 {{site.data.keyword.amashort}} 구성
+##사용자 정의 인증을 위한 Mobile Client Access 구성
 {: #custom-auth-config-mca}
 
 사용자 정의 ID 제공자를 구성하면 {{site.data.keyword.amashort}} 대시보드에서 사용자 정의 인증을 사용으로 설정할 수 있습니다. 
@@ -116,7 +118,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 1. **저장**을 클릭하십시오.
 
 
-##사용자 정의 ID 제공자를 사용하여 {{site.data.keyword.amashort}} 권한 부여 플로우 구현
+##사용자 정의 ID 제공자를 사용하여 Mobile Client Access 권한 부여 플로우 구현
 {: #custom-auth-flow}
 
 `VCAP_SERVICES` 환경 변수는 각 {{site.data.keyword.amashort}} 서비스 인스턴스에 대해 자동으로 작성되며 권한 부여 프로세스에 필요한 특성을 포함합니다. JSON 오브젝트로 구성되며 {{site.data.keyword.amashort}} 대시보드의 **서비스 신임 정보** 탭에 표시됩니다. 
@@ -243,7 +245,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 
 	`redirect_uri` 매개변수는 이전 권한 부여 요청에 사용된 `redirect_uri`와 일치해야 합니다. 코드 매개변수 값은 권한 부여 요청 종료 시 응답에 수신된 권한 부여 코드여야 합니다. 권한 부여 코드는 10분 동안만 유효합니다. 이후에는 새 코드를 확보해야 합니다.
 
-	응답 본문에는 JWT 형식의 `access_token` 및 `id_token`이 포함됩니다. [JWT 웹 사이트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://jwt.io "외부 링크 아이콘"){: new_window}를 참조하십시오. 
+	응답 본문에는 JWT 형식의 `access_token` 및 `id_token`이 포함됩니다. [JWT 웹 사이트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://jwt.io){: new_window}를 참조하십시오. 
 
 	액세스 및 ID 토큰을 받은 후에는 웹 세션을 인증됨으로 플래그 지정할 수 있으며 선택적으로 이러한 토큰을 유지할 수 있습니다. 
 

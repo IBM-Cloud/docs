@@ -20,7 +20,7 @@ lastupdated: "2017-03-07"
 
 ## Terminaux pris en charge par fournisseur
 {: #supportedvendors}
-Le tableau suivant répertorie les fournisseurs et les terminaux pris en charge par {{site.data.keyword.iotinsurance_short}} et décrit le type d'intégration. Les types d'intégration suivants sont disponibles : 
+Le tableau suivant répertorie les fournisseurs et les terminaux pris en charge par {{site.data.keyword.iotinsurance_short}} et décrit le type d'intégration. Les types d'intégration suivants sont disponibles :
 
   - **{{site.data.keyword.iot_short_notm}}** : le terminal ou le concentrateur publie les événements de capteur directement dans {{site.data.keyword.iot_short_notm}}. {{site.data.keyword.iotinsurance_short}} peut traiter les événements de capteur directement ou après leur modification par le transformateur {{site.data.keyword.iotinsurance_short}}.
 
@@ -32,7 +32,7 @@ Le tableau suivant répertorie les fournisseurs et les terminaux pris en charge 
 <th>Nom du fournisseur</th>
 <th>Type d'intégration</th>
 <th>Terminaux testés</th>
-<th>Informations sur le fournisseur</th>
+<th>Informations sur le fournisseur </th>
 </tr>
 </thead>
 <tbody>
@@ -82,7 +82,7 @@ Une application de passerelle a été écrite pour tester l'intégration.</td>
 
 ## Intégration de terminaux et de clouds fournisseur
 {: #integratingdevices}
-Vous pouvez intégrer vos terminaux et clouds fournisseur avec {{site.data.keyword.iotinsurance_short}}. Les sections suivantes décrivent les procédures d'intégration et proposent des exemples d'enregistrement utilisateur pour chaque fournisseur. 
+Vous pouvez intégrer vos terminaux et clouds fournisseur avec {{site.data.keyword.iotinsurance_short}}. Les sections suivantes décrivent les procédures d'intégration et proposent des exemples d'enregistrement utilisateur pour chaque fournisseur.
 
 Pour plus d'informations sur l'intégration des capteurs et des terminaux, voir [Kit d'outils de terminal](iotinsurance_device_toolkit.html) :
 
@@ -90,7 +90,7 @@ Pour plus d'informations sur l'intégration des capteurs et des terminaux, voir 
 ### EnOcean
 #### Procédure d'intégration
   1. Créez une passerelle dans l'instance {{site.data.keyword.iot_short_notm}} connectée à {{site.data.keyword.iotinsurance_short}}.
-  2. Connectez le concentrateur EnOcean à la passerelle {{site.data.keyword.iot_short_notm}}. 
+  2. Connectez le concentrateur EnOcean à la passerelle {{site.data.keyword.iot_short_notm}}.
   3. Ajoutez l'identificateur de passerelle à l'enregistrement utilisateur dans {{site.data.keyword.iotinsurance_short}}.
 
 #### Exemple d'enregistrement utilisateur
@@ -190,7 +190,7 @@ Procédez à l'intégration avec l'application mobile (obsolète). Cette méthod
 ### Yanzi
 #### Procédure d'intégration
 **Option 1**  
-  Ajoutez les données d'identification du cloud Yanzi dans le fichier yanzi-config.json de l'annuaire du fournisseur dans le référentiel du transformateur. L'objet "yanziCloud" est l'emplacement correct des données d'identification.   
+  Ajoutez les données d'identification du cloud Yanzi dans le fichier yanzi-config.json de l'annuaire du fournisseur dans le référentiel du transformateur.  L'objet "yanziCloud" est l'emplacement correct des données d'identification.  
 
 **Option 2**  
   Yanzi utilise une intégration cloud-à-cloud entre le cloud Yanzi et {{site.data.keyword.iot_short_notm}}. L'autorisation pour cette intégration survient dans le cloud Yanzi. Une fois l'autorisation terminée, le cloud Yanzi envoie les événements à {{site.data.keyword.iot_short_notm}}. Vous devez également ajouter les données d'identification de l'instance {{site.data.keyword.iot_short_notm}} dans le fichier yanzi-config.json de l'annuaire du fournisseur dans le référentiel du transformateur à l'aide de l'objet "iotfCredentials".
@@ -219,9 +219,9 @@ Procédez à l'intégration avec l'application mobile (obsolète). Cette méthod
 
 ### Données Weather Company
 #### Procédure d'intégration
-L'intégration avec les données Weather Company est actuellement prise en charge en tant que démonstration de faisabilité ou aperçu technique uniquement et n'est pas destinée à une utilisation en production. 
+L'intégration avec les données Weather Company est actuellement prise en charge en tant que démonstration de faisabilité ou aperçu technique uniquement et n'est pas destinée à une utilisation en production.
 
-Fournissez une adresse pour l'extraction des conditions météorologiques en cours (température extérieure) de The Weather Company pour un emplacement spécifique. 
+Fournissez une adresse pour l'extraction des conditions météorologiques en cours (température extérieure) de The Weather Company pour un emplacement spécifique.
 
 
 

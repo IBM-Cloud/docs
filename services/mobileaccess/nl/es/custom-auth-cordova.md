@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,7 +12,9 @@ lastupdated: "2017-01-08"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Configuración de la autenticación personalizada para la app {{site.data.keyword.amashort}} Cordova
+**Importante: El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.**
+
+# Configuración de la autenticación personalizada para la app de Cordova Mobile Client Access
 {: #custom-cordova}
 
 Prepare la aplicación Cordova para que utilice la autenticación personalizada y el SDK del cliente de {{site.data.keyword.amafull}} para acceder a la aplicación protegida.
@@ -72,7 +74,7 @@ onAuthenticationChallengeReceived: function(authenticationContext, challenge) {.
 * `authenticationContext`: proporcionado por el SDK del cliente de {{site.data.keyword.amashort}} para que el desarrollador pueda volver a notificar los errores o las respuestas al cambio de autenticación durante la recopilación de credenciales, como si el usuario cancela una solicitud de autenticación.
 * `challenge`: un objeto JSON que contiene un cambio de autenticación personalizada, tal como se devuelve desde un proveedor de identidad personalizado.
 
-Llamando al método `onAuthenticationChallengeReceived`, el SDK del cliente de {{site.data.keyword.amashort}} delega el control al desarrollador. {{site.data.keyword.amashort}} espera las credenciales. El desarrollador debe recopilar las credenciales y volverlas a notificar al SDK del cliente de {{site.data.keyword.amashort}} utilizando uno de los métodos siguientes de la interfaz `authContext`:
+Llamando al método `onAuthenticationChallengeReceived`, el SDK del cliente de {{site.data.keyword.amashort}} delega el control al desarrollador. {{site.data.keyword.amashort}} espera las credenciales. El desarrollador debe recopilar las credenciales y volverlas a notificar al SDK del cliente de {{site.data.keyword.amashort}} utilizando uno de los métodos siguientes de la interfaz `authContext`.
 
 ```JavaScript
 onAuthenticationSuccess: function(info){...}
@@ -108,7 +110,7 @@ El código siguiente muestra cómo una escucha de autenticación de un cliente p
 ## Implementación de ejemplo de un flujo de trabajo de escucha de autenticación personalizada
 {: #custom-cordova-authlisten-sample}
 
-Este ejemplo de escucha de autenticación se ha diseñado para que funcione con un proveedor de identidad personalizado. Puede descargar el proveedor de identidad personalizado desde [este repositorio de Github ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "Icono de enlace externo"){: new_window}.
+Este ejemplo de escucha de autenticación se ha diseñado para que funcione con un proveedor de identidad personalizado. Puede descargar el proveedor de identidad personalizado desde [este repositorio de Github ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}.
 
 ```JavaScript
 var customAuthenticationListener = {

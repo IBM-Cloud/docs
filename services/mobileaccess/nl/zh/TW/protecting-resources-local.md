@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,6 +11,7 @@ lastupdated: "2017-01-08"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+**重要事項：{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。**
 
 # 搭配使用 {{site.data.keyword.amashort}} 與本端開發環境
 {: #protecting-local}
@@ -26,7 +27,7 @@ lastupdated: "2017-01-08"
 * **承租戶 ID**。在 {{site.data.keyword.amafull}} 儀表板中，開啟服務。按一下**行動選項**按鈕。`tenantId`（也稱為 `appGUID`）值會顯示在**應用程式 GUID/承租戶 ID** 欄位中。您需要此值來起始設定「授權管理程式」。
 * **應用程式路徑**。這是後端應用程式的 URL。在傳送要求至其受保護端點時，將需要此值。
 * {{site.data.keyword.Bluemix_notm}} **地區**。您可以在標頭中找到您目前的 {{site.data.keyword.Bluemix_notm}} 地區，就在**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示") 的旁邊。出現的地區值應該是下列其中一項：`美國南部`、`雪梨`或`英國`。如需 SDK 所需的確切語法，請參閱程式碼範例中的註解。您需要此值來起始設定 {{site.data.keyword.amashort}} 用戶端。
-* 設定成使用 Gradle 的 Android Studio 專案。如需如何設定 Android 開發環境的相關資訊，請參閱 [Google Developer Tools ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://developer.android.com/sdk/index.html "外部鏈結圖示"){: new_window}。
+* 設定成使用 Gradle 的 Android Studio 專案。如需如何設定 Android 開發環境的相關資訊，請參閱 [Google Developer Tools ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://developer.android.com/sdk/index.html){: new_window}。
 
 ## 設定伺服器 SDK
 {: #serversetup}

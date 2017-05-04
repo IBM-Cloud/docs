@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -11,6 +11,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+**重要信息：{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。**
 
 # 使用定制身份提供者认证用户
 {: #custom-id}
@@ -108,8 +110,8 @@ lastupdated: "2017-01-15"
 
 开发定制身份提供者时，可以将定制身份提供者的以下任何 Node.js 样本实现用作参考。请从 GitHub 存储库下载完整应用程序代码。
 
- * [简单样本 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "外部链接图标"){: new_window}
- * [高级样本 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management "外部链接图标"){: new_window}
+ * [简单样本 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}
+ * [高级样本 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management){: new_window}
 
 ## {{site.data.keyword.amashort}} 服务器与定制身份提供者之间的典型通信
 {: #custom-id-comm}

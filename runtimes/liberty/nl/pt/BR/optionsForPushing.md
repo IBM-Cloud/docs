@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-11"
+  years: 2015, 2017
+lastupdated: "2017-03-22"
 
 ---
 
@@ -53,7 +53,7 @@ Quando um aplicativo independente for implementado, uma configuração padrão d
 * servlet-3.1
 * websocket-1.1
 * icap:managementConnector-1.0
-* appstate-1.0
+* appstate-2.0
 
 Esses recursos correspondem aos recursos do Java EE 7 Web Profile. É possível especificar um conjunto diferente de recursos do Liberty configurando a variável de ambiente JBP_CONFIG_LIBERTY. Por exemplo, para ativar somente os recursos jsp-2.3 e websocket-1.1, execute o comando e remonte o aplicativo:
 
@@ -97,7 +97,7 @@ O arquivo de configuração server.xml padrão inteiro do Liberty é como a seg
           <feature>servlet-3.1</feature>
           <feature>websocket-1.1</feature>
           <feature>icap:managementConnector-1.0</feature>
-          <feature>appstate-1.0</feature>
+          <feature>appstate-2.0</feature>
        </featureManager>
 
        <application name='myapp' location='myapp.war' type='war' context-root='/'/>
@@ -109,7 +109,7 @@ O arquivo de configuração server.xml padrão inteiro do Liberty é como a seg
        <applicationMonitor dropinsEnabled='false' updateTrigger='mbean'/>
        <config updateTrigger='mbean'/>
        <cdi12 enableImplicitBeanArchives='false'/>
-       <appstate appName='myapp' markerPath='${home}/../.liberty.state'/>
+       <appstate2 appName='myapp'/>
     </server>
 ```
 {: codeblock}
@@ -188,7 +188,7 @@ Também é possível enviar por push um arquivo do servidor em pacote para o Blu
 
 Para colocar em pacote um servidor do Liberty, use o comando
 `./bin/server package` a partir do seu diretório de instalação do
-Liberty. Especifique o nome do servidor e inclua a opção `--include=usr`. 
+Liberty. Especifique o nome do servidor e inclua a opção `--include=usr`.
 Por exemplo, se o servidor Liberty for defaultServer, execute o comando:
 
 ```
@@ -237,7 +237,7 @@ UUID, como `b687ea75-49f0-456e-b69d-e36e8a854caa`. Esta variável muda à cada e
 ### Acessando informações de serviços ligados
 {: #accessing_info_of_bound_services}
 
-Quando desejar ligar um serviço a seu aplicativo, as informações sobre o serviço, como as credenciais de conexão, são incluídas na [Variável de ambiente VCAP_SERVICES](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) que o Cloud Foundry configura para o aplicativo. Para os [serviços automaticamente configurados](autoConfig.html), o buildpack Liberty gera ou atualiza entradas de ligação de serviço no arquivo server.xml. O conteúdo das entradas de ligação de serviço pode estar em um dos formatos a seguir:
+Quando desejar ligar um serviço a seu aplicativo, as informações sobre o serviço, como as credenciais de conexão, são incluídas na [Variável de ambiente VCAP_SERVICES![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) que o Cloud Foundry configura para o aplicativo. Para os [serviços automaticamente configurados](autoConfig.html), o buildpack Liberty gera ou atualiza entradas de ligação de serviço no arquivo server.xml. O conteúdo das entradas de ligação de serviço pode estar em um dos formatos a seguir:
 
 * cloud.services.&lt;service-name&gt;.&lt;property&gt;, que descreve as informações como o nome, o tipo e o plano do serviço.
 * cloud.services.&lt;service-name&gt;.connection.&lt;property&gt;, que descreve as informações de conexão para o serviço.
@@ -262,8 +262,8 @@ gerada automaticamente pelo Cloud Foundry, por exemplo, pvyCY0YzX9pu5.
 Para serviços ligados que não sejam automaticamente configurados pelo buildpack do Liberty, o aplicativo precisa gerenciar o acesso do recurso de backend sozinho.
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## geral
-{: #general}
+{: #general notoc}
 * [Tempo de execução do Liberty](index.html)
-* [Visão geral do perfil do Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Visão geral do perfil Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

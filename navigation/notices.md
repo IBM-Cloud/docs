@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-03-07"
+lastupdated: "2017-05-03"
 
 
 ---
@@ -101,7 +101,7 @@ Java™ and all Java-based trademarks and logos are trademarks or registered tra
 
 Other company, product, and service names may be trademarks or service marks of others.
 
-## {{site.data.keyword.Bluemix_notm}} terms
+## Cloud Services terms
 {: #terms}
 
 Your use of {{site.data.keyword.Bluemix_notm}} is governed by the terms of the IBM Cloud Services Agreement (CSA), unless you have elected to order {{site.data.keyword.Bluemix_notm}} under your existing International Passport Advantage Agreement (IPAA). The agreement incorporates by reference all of the associated Service Descriptions and Terms of Use documents. Your placement of an order and continued use of {{site.data.keyword.Bluemix_notm}} constitutes your acceptance of the process, terms, and conditions stated or referenced in this document.

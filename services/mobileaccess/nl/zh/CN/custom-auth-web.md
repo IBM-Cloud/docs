@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,9 @@ lastupdated: "2017-01-08"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-#针对 {{site.data.keyword.amashort}} Web 应用程序配置定制认证
+**重要信息：{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。**
+
+#针对 Mobile Client Access Web 应用程序配置定制认证
 {: #custom-web}
 
 将定制认证和 {{site.data.keyword.amafull}} 安全功能添加到 Web 应用程序。
@@ -103,7 +105,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 {: codeblock}
 
 
-##配置 {{site.data.keyword.amashort}} 进行定制认证
+##配置 Mobile Client Access 进行定制认证
 {: #custom-auth-config-mca}
 
 配置定制身份提供者后，可以在 {{site.data.keyword.amashort}} 仪表板中启用定制认证。
@@ -116,7 +118,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 1. 单击**保存**。
 
 
-##使用定制身份提供者实施 {{site.data.keyword.amashort}} 授权流程
+##使用定制身份提供者实施 Mobile Client Access 授权流程
 {: #custom-auth-flow}
 
 针对每一个 {{site.data.keyword.amashort}} 服务实例会自动创建 `VCAP_SERVICES` 环境变量，该环境变量包含授权流程所需的属性。它包含 JSON 对象，通过单击 {{site.data.keyword.amashort}}“仪表板”中的**服务凭证**选项卡，可以查看该对象。
@@ -243,7 +245,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 
 	请注意，`redirect_uri` 参数必须与之前授权请求中使用的 `redirect_uri` 相匹配。code 数值应该是在授权请求结束时响应中收到的授权代码。授权代码的有效时间仅为 10 分钟，之后您需要获取新代码。
 
-	响应主体将包含 `access_token` 和 `id_token`，格式为 JWT，请参阅 [JWT Web 站点 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://jwt.io "外部链接图标"){: new_window}。
+	响应主体将包含 `access_token` 和 `id_token`，格式为 JWT，请参阅 [JWT Web 站点 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://jwt.io){: new_window}。
 
 	在您收到访问令牌和身份令牌之后，您可以将 Web 会话标记为已认证，并且可以选择持久存储这些令牌
 

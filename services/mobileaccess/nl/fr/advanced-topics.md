@@ -2,9 +2,11 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-06"
 
 ---
+
+**Important : Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.**
 
 # Fonctions avancées de {{site.data.keyword.amashort}}
 {: #before-you-begin}

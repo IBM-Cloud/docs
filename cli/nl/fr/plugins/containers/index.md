@@ -1426,8 +1426,7 @@ bluemix ic version
 
 <strong>Prérequis</strong> : Docker
 
-Pour afficher la version d'IBM Containers, exécutez `bluemix ic
-info`. Pour plus d'informations, voir la commande [version ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/version/){: new_window} dans l'aide de Docker.
+Pour identifier la version d'IBM Containers, exécutez la commande `bluemix ic info`. Pour plus d'informations, reportez-vous à la commande [version ![Icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/version/){: new_window} dans l'aide de Docker.
 
 
 ## bluemix ic volume-create

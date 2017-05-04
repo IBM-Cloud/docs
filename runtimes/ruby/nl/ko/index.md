@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-03-23"
 
 ---
 
@@ -60,9 +60,9 @@ ruby_buildpack은 앱의 루트 디렉토리에 Gemfile이 있는 경우 사용�
 [Ruby 빌드팩](https://github.com/cloudfoundry/ruby-buildpack)을
 사용하여 애플리케이션을 배치할 수 있습니다. 
 
-# 관련 링크
-{: #rellinks}
-## 일반
-{: #general}
+# rellinks
+{: #rellinks notoc}
+## general
+{: #general notoc}
 * [Ruby에 대한 Cloud Foundry 빌드팩](https://github.com/cloudfoundry/cf-buildpack-ruby)
-* [Ruby on Rails 문서](http://api.rubyonrails.org/)
+* [Ruby on Rails 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://api.rubyonrails.org/)

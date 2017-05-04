@@ -24,9 +24,9 @@ lastupdated:  "2017-02-17"
   |`mybluemix.net` | 美国南部 |    
   |`eu-gb.mybluemix.net` | 英国  |
   |`au-syd.mybluemix.net` | 悉尼  |      
-  {: caption="Table 1. Application domain names based on Region in {{site.data.keyword.Bluemix_notm}}" caption-side="top"}
+  {: caption="表 1. 基于 {{site.data.keyword.Bluemix_notm}} 中“区域”的应用程序域名" caption-side="top"}
 
-为了可以使用您自己的域，将需要执行以下步骤来配置定制域：
+为了能够使用您自己的域，需要执行以下步骤来配置定制域：
 
 1.	通过选择其中一个受支持套餐创建 {{site.data.keyword.mobilefoundation_short}} 服务实例来创建 {{site.data.keyword.mfserver_short_notm}} 实例。
 

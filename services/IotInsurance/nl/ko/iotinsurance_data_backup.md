@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-01"
+lastupdated: "2017-03-22"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -39,7 +39,7 @@ aggregationschedule|-|-| 아니오|다시 빌드할 수 있습니다.
 
 {{site.data.keyword.iotinsurance_short}} 데이터를 백업하려면 다음 단계를 수행하십시오. 
 
-## 복제본 {{site.data.keyword.cloudant}} 인스턴스 작성
+## 복제본 {{site.data.keyword.cloudant_short_notm}} 인스턴스 작성
 {: #createinstance}
 [{{site.data.keyword.cloudant}} 복제 지시사항 ![외부 아이콘](../../icons/launch-glyph.svg)](https://docs.cloudant.com/replication.html)을 사용하여 복제본 {{site.data.keyword.cloudant}} 인스턴스를 작성하십시오. 재해 복구 시 사용할 수 있게 원래 {{site.data.keyword.iotinsurance_short}} 서비스와 다른 위치에 복제본을 작성하십시오. 예를 들어, 원래 인스턴스가 댈러스에 있다면 런던에 복제본을 둘 수 있습니다. 
 

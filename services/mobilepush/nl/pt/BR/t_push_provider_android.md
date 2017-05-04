@@ -20,8 +20,7 @@ Firebase Cloud Messaging (FCM) é o gateway usado para entregar notificações p
 ##Obtendo seu ID de emissor e chave de API
 {: #android-senderid-apikey}
 
-A chave API é armazenada com segurança e usada pelo serviço {{site.data.keyword.mobilepushshort}} para se conectar ao servidor FCM e o ID do emissor
-(número do projeto) é usado pelo SDK do Android e o SDK do JS para Google Chrome e Mozilla Firefox no lado do cliente. 
+A chave API é armazenada com segurança e usada pelo serviço {{site.data.keyword.mobilepushshort}} para se conectar ao servidor FCM e o ID do emissor (número do projeto) é usado pelo SDK do Android e o SDK do JS para Google Chrome e Mozilla Firefox no lado do cliente. 
 
 Para configurar o FCM, gerar a chave API e o ID do emissor, conclua as etapas:
 
@@ -37,16 +36,12 @@ Para configurar o FCM, gerar a chave API e o ID do emissor, conclua as etapas:
 **Nota:** você precisará da sua Chave API e do ID do emissor do FCM/GCM (número do projeto).
 
 1. Abra o painel Bluemix e, em seguida, clique na instância de serviço
-{{site.data.keyword.mobilepushfull}} que você criou para abrir o painel. O painel Push é exibido. Para configurar um serviço {{site.data.keyword.mobilepushshort}} desvinculado
-para Android, selecione o ícone do serviço {{site.data.keyword.mobilepushshort}}
-desvinculado para abrir o painel do serviço {{site.data.keyword.mobilepushshort}}. 
+{{site.data.keyword.mobilepushfull}} que você criou para abrir o painel. O painel Push é exibido. Para configurar um serviço {{site.data.keyword.mobilepushshort}} desvinculado para Android, selecione o ícone do serviço {{site.data.keyword.mobilepushshort}} desvinculado para abrir o painel do serviço {{site.data.keyword.mobilepushshort}}. 
 
 ![painel Push](images/push_unbound.jpg)
 
 2. Clique no botão **Configurar push**, para configurar as credenciais do FCM/GCM para aplicativos Android e Apps Google Chrome e Extensões.
-3. Na página **Configuração**, para Android, acesse a guia **Móvel** e configure o ID do emissor (número do projeto do
-GCM) e a Chave API. Para Apps Google Chrome e Extensões, acesse a guia **Web** e configure o ID do emissor (número do projeto do FCM/GCM) e
-a Chave API apropriadamente.
+3. Na página **Configuração**, para Android, acesse a guia **Móvel** e configure o ID do emissor (número do projeto do GCM) e a Chave API. Para Apps Google Chrome e Extensões, acesse a guia **Web** e configure o ID do emissor (número do projeto do FCM/GCM) e a Chave API apropriadamente.
 4. Clique em **Salvar**.
 5. Próximas etapas. [Ativando notificações para Android](c_enable_push.html) ou [Ativando notificações para Apps Google Chrome e Extensões](c_enable_push.html).
 

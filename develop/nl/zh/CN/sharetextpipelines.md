@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-21"
+  years: 2015, 2017
+lastupdated: "2017-3-16"
 
 ---
 
@@ -11,14 +11,14 @@ lastupdated: "2016-12-21"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#共享 {{site.data.keyword.jazzhub_short}} 样本项目中基于文本的管道 {: #share-pipeline}
+#共享样本项目中基于文本的管道 {: #share-pipeline}
 
-对于通过“部署到 {{site.data.keyword.Bluemix_notm}}”按钮部署到 {{site.data.keyword.Bluemix_notm}} 的样本项目，可以将 {{site.data.keyword.jazzhub_short}} 管道配置定义为 YAML 文件。定义为文本的管道可以共享，这样派生您项目的人员就不必对自己的管道进行配置。此功能正在开发中：YAML 格式和实现可能会随时更改。目前，此功能仅可用于具有以 {{site.data.keyword.Bluemix_notm}} 为目标的 Git 和 GitHub 存储库的项目。
+对于通过“部署到 {{site.data.keyword.Bluemix_notm}}”按钮部署到 {{site.data.keyword.Bluemix_notm}} 的样本项目，可以将管道配置定义为 YAML 文件。定义为文本的管道可以共享，这样派生您项目的人员就不必对自己的管道进行配置。此功能正在开发中：YAML 格式和实现可能会随时更改。目前，此功能仅可用于具有以 {{site.data.keyword.Bluemix_notm}} 为目标的 Git 和 GitHub 存储库的项目。
 {: shortdesc} 
 
 在样本项目的根目录中，必须具有名为 `.bluemix` 且包含 `pipeline.yml` 文件的文件夹。
 
-使用“部署到 {{site.data.keyword.Bluemix_notm}}”按钮克隆项目后，{{site.data.keyword.jazzhub_short}} 会创建一个基于 `pipeline.yml` 文件的管道。 
+使用“部署到 {{site.data.keyword.Bluemix_notm}}”按钮克隆项目后，会创建一个基于 `pipeline.yml` 文件的管道。 
 
 示例：
  
@@ -30,7 +30,7 @@ lastupdated: "2016-12-21"
 ```
 {: codeblock} 
 
-YAML 文件格式是包含管道规范的单个 YAML 文档。以下样本 {{site.data.keyword.jazzhub_short}} 管道在一个阶段中使用 Ant 构建了 Java 应用程序。然后，在另一个阶段中，该管道将该应用程序部署到 {{site.data.keyword.Bluemix_notm}}。 
+YAML 文件格式是包含管道规范的单个 YAML 文档。以下样本管道在一个阶段中使用 Ant 来构建 Java 应用程序。然后，在另一个阶段中，该管道将该应用程序部署到 {{site.data.keyword.Bluemix_notm}}。 
 
 ``` 
 ---
@@ -213,7 +213,7 @@ CF_APP	| 应用程序名称
 使用以下格式的 URL 从现有管道生成文件： 
 
 ```
-<DevOps Services domain>/pipeline/user/project/yaml
+<domain>/pipeline/user/project/yaml
 ```
 {: codeblock} 
 

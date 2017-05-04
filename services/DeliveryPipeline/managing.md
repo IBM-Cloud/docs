@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-08-30"
+lastupdated: "2017-04-26"
 
 ---
 <!-- Copyright info at top of file: REQUIRED
@@ -22,6 +22,9 @@ lastupdated: "2016-08-30"
 
 You can administer, configure, and extend IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} integrations.
 {:shortdesc}
+
+
+**This service is being deprecated:**  All instances of this service are being deprecated. Existing instances can be used until 5 July 2017. For more information, see the [deprecation announcement blog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/04/delivery-pipeline-retirement/){: new_window}. To get the latest tools for app delivery, use the {{site.data.keyword.contdelivery_full}} service. For upgrade instructions, see [Upgrade your DevOps Services project to a toolchain](/docs/services/ContinuousDelivery/upgrade_projects.html){: new_window}.
 
 Complete the following tasks to administer, configure, and extend a pipeline.
 

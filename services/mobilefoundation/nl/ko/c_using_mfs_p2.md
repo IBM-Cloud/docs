@@ -102,7 +102,7 @@ Professional 1 Application 플랜을 사용하면 여러 모바일 운영 체제
 
  데이터를 유지하기 위해 컨테이너에 볼륨도 연결할 수 있습니다. 볼륨을 한 번 선택하면 변경할 수 없습니다. 사용 가능한 기본 파일 공유 영역은 20GB입니다. 사용자가 분석 데이터를 유지할 추가 스토리지 영역이 필요하면 추가 파일 공유를 구매하고 이 파일 공유를 사용하여 볼륨을 작성해야 합니다. 그런 다음 분석 서버를 배치하는 동안 이 새 볼륨을 선택할 수 있습니다.
 
- {{site.data.keyword.containerlong}}에 볼륨 추가에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} 대시보드를 사용하여 볼륨에 지속적 데이터 저장 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}을 참조하십시오. 
+ {{site.data.keyword.containerlong}}에 볼륨 추가에 대한 자세한 정보는 [Storing persistent data in a volume by using the {{site.data.keyword.Bluemix_notm}} Dashboard ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.ng.bluemix.net/docs/containers/container_volumes_ov.html#container_volumes_ui){: new_window}을 참조하십시오.
 
 * **분석 추가**를 클릭하여 {{site.data.keyword.mobilefoundation_short}} 서비스 인스턴스에 Mobile Analytics 서버를 추가하십시오.
 
@@ -147,4 +147,4 @@ MobileFirst Analytics에 대한 자세한 정보는 [MobileFirst Foundation Oper
 
       - {{site.data.keyword.mobilefirst}} 서버 팜은 여기서 노드의 수를 구성하여 작성될 수 있습니다.
 
-세부사항은 [{{site.data.keyword.mobilefoundation_long}} 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}를 참조하십시오. 
+세부사항은 [{{site.data.keyword.mobilefoundation_long}} 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}을 참조하십시오. 

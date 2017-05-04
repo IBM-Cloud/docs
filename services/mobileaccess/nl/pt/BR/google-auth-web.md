@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -11,6 +11,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+**Importante: o serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.**
 
 # Ativando a autenticação do Google para aplicativos da web
 {: #google-auth-web}
@@ -32,7 +34,9 @@ Você deve ter:
 ## Configurando um aplicativo Google para seu website
 {: #google-auth-config}
 
-Para iniciar o uso do Google como um provedor de identidade, crie um projeto no [Google Developer Console ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.developers.google.com "Ícone de link externo"){: new_window}.Parte
+Para começar a usar o Google como um provedor de identidade, crie um projeto no
+[Console do Google Developer ![Ícone de link
+externo](../../icons/launch-glyph.svg "External link icon")](https://console.developers.google.com){: new_window}. Parte
 da criação de um projeto é obter um **Identificador de cliente do Google** e um **Segredo**. O Identificador
 de cliente do Google e o Segredo são os identificadores exclusivos para seu aplicativo usados pela autenticação do Google e são necessários para
 configurar o painel {{site.data.keyword.amashort}}.
@@ -47,7 +51,7 @@ do Google** e o **Segredo do
 aplicativo**.
 
 
-## Configurando o {{site.data.keyword.amashort}} para autenticação do Google
+## Configurando o Mobile Client Access para autenticação do Google
 {: #google-auth-config-ama}
 
 Depois de ter um ID de aplicativo e um segredo do Google, é possível ativar a autenticação do Google no painel do {{site.data.keyword.amashort}}.
@@ -71,7 +75,7 @@ redirecionamento seja acessado após o processo de autorização ser concluído 
 5. Clique em **Salvar**.
 
 
-## Implementando o fluxo de autorização {{site.data.keyword.amashort}} usando o Google como provedor de identidade
+## Implementando o fluxo de autorização do Mobile Client Access usando o Google como provedor de identidade
 {: #google-auth-flow}
 
 A variável de ambiente `VCAP_SERVICES` é criada automaticamente para cada instância de serviço do
@@ -118,15 +122,12 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 		res.send("Hello from protected endpoint"); 
  });
 
-	app.get("/protected", checkAuthentication, function(req, res, next){
-		res.send("Hello from protected endpoint"); 
- 	function checkAuthentication(req, res, next){
-
-			// Check if user is authenticated 
- 	if (req.session.userIdentity){
-				next()
-			} else {
-				// If not - redirect to authorization server 
+	function checkAuthentication(req, res, next){
+		// Check if user is authenticated 
+  if (req.session.userIdentity){
+			next()
+		} else {
+			// If not - redirect to authorization server 
 				var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
 				var authorizationEndpoint = mcaCredentials.authorizationEndpoint; 
 				var clientId = mcaCredentials.clientId; 
@@ -136,9 +137,7 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 				redirectUrl += "&redirect_uri=" + redirectUri; 
 				res.redirect(redirectUrl); 
 			}
-		 	}
-	   	}
-       }
+	}
 	```
 	{: codeblock}
 
@@ -225,7 +224,7 @@ será possível sinalizar a sessão da web como autenticada e,
 opcionalmente, persistir esses tokens.  
 
 
-##Usando o acesso e o token de identidade obtidos
+## Usando o acesso e o token de identidade obtidos
 {: #google-auth-using-token}
 
 O token de identidade contém informações sobre a identidade do usuário. Para autenticação do Google, o token contém todas as informações que o usuário concordou em compartilhar, como nome completo, URL da foto de perfil, etc.  
@@ -236,7 +235,7 @@ Para fazer solicitações para recursos protegidos, inclua um cabeçalho de auto
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-####Dicas:
+#### Dicas:
 {: #tips}
 
 * O `accessToken` e o `idToken` devem ser separados por um espaço em branco.

@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-  lastupdated: "2017-04-04"
+  lastupdated: "2017-04-21"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -192,7 +191,8 @@ Parameters can be passed to the action when it is invoked.
   }
   ```
 
-  Notice the use of the `--result` option to display only the invocation result.
+  Notice the use of the `--result` option: it implies a blocking invocation where the CLI waits for the activation to complete and then
+  displays only the result. For convenience, this option may be used without `--blocking` which is automatically inferred.
 
 ### Setting default parameters
 {: #openwhisk_binding_actions}
@@ -540,7 +540,7 @@ For more information about invoking action sequences with multiple named paramet
 
 The process of creating Python actions is similar to that of JavaScript actions. The following sections guide you through creating and invoking a single Python action, and adding parameters to that action.
 
-### Creating and invoking an action
+### Creating and invoking a Python action
 {: #openwhisk_actions_python_invoke}
 
 An action is simply a top-level Python function. For example, create a file called `hello.py` with the following source code:
@@ -575,8 +575,52 @@ wsk action invoke --blocking --result helloPython --param name World
   {
       "greeting": "Hello World!"
   }
+
+### Packaging Python actions in zip files
+{: #openwhisk_actions_python_zip}
+
+You can package a Python action and dependent modules in a zip file.
+The filename of the source file containing the entry point (e.g., `main`) must be `__main__.py`.
+For example, to create an action with a helper module called `helper.py`, first create an archive containing your source files:
+
+```bash
+$ zip -r helloPython.zip __main__.py helper.py
 ```
 
+and then create the action:
+
+```bash
+$ wsk action create helloPython --kind python:3 helloPython.zip
+```
+
+### Packaging Python actions with a virtual environment in zip files
+{: #openwhisk_actions_python_virtualenv}
+
+Another way of packaging Python dependencies is using a virtual environment (`virtualenv`). This allows you to link additional packages
+that may be installed via [`pip`](https://packaging.python.org/installing/) for example.
+To ensure compatibility with the OpenWhisk container, package installations inside a virtualenv must be done in the target environment.
+So the docker image `openwhisk/python2action` or `openwhisk/python3action` should be used to create a virtualenv directory for your action.
+
+As with basic zip file support, the name of the source file containing the main entry point must be `__main__.py`. In addition, the virtualenv directory must be named `virtualenv`.
+Below is an example scenario for installing dependencies, packaging them in a virtualenv, and creating a compatible OpenWhisk action.
+
+1. Given a `requirements.txt` file that contains the `pip` modules and versions to install, run the following to install the dependencies and create a virtualenv using a compatible Docker image:
+ ```bash
+ $ docker run --rm -v "$PWD:/tmp" openwhisk/python3action sh \
+   -c "cd tmp; virtualenv virtualenv; source virtualenv/bin/activate; pip install -r requirements.txt;"
+ ```
+
+2. Archive the virtualenv directory and any additional Python files:
+ ```bash
+ $ zip -r helloPython.zip virtualenv __main__.py
+ ```
+
+3. Create the action:
+```bash
+$ wsk action create helloPython --kind python:3 helloPython.zip
+```
+
+While the steps above are shown for Python 3.6, you can do the same for Python 2.7 as well.
 
 ## Creating Swift actions
 
@@ -775,7 +819,7 @@ With {{site.data.keyword.openwhisk_short}} Docker actions, you can write your ac
 
 Your code is compiled into an executable binary and embedded into a Docker image. The binary program interacts with the system by taking input from `stdin` and replying through `stdout`.
 
-As a prerequisite, you must have a Docker Hub account.  To set up a free Docker ID and account, go to [Docker Hub](https://hub.docker.com){: new_window}.
+As a prerequisite, you must have a Docker Hub account.  To set up a free Docker ID and account, go to [Docker Hub](https://hub.docker.com).
 
 For the instructions that follow, assume that the Docker user ID is `janesmith` and the password is `janes_password`.  Assuming that the CLI is already set up, three steps are required to set up a custom binary for use by {{site.data.keyword.openwhisk_short}}. After that, the uploaded Docker image can be used as an action.
 

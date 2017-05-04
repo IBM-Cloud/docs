@@ -73,7 +73,7 @@ Durch das Hinzufügen Ihrer eigenen **angepassten Ereignisse** können Sie Frage
 Clientseitige Protokolle und Nutzungsdaten werden automatisch gesammelt und bei Bedarf an den Mobile Analytics-Service gesendet. Entwickler und Administratoren können das {{site.data.keyword.mobileanalytics_short}}-Service-Dashboard zum Anzeigen von Daten verwenden, die vom Client-SDK erfasst werden.
 
 ## Datenvisualisierung
-{: data-visualization}
+{: data-visualization notoc}
 
 Alle Daten, die vom Analyseservice erfasst werden, können über das {{site.data.keyword.mobileanalytics_short}}-Dashboard, auf das über Ihr {{site.data.keyword.Bluemix_notm}}-Dashboard durch Klicken auf die Kachel für Ihre IBM {{site.data.keyword.mobileanalytics_short}}-Serviceinstanz zugegriffen werden kann, visualisiert werden. <!--You can also create custom charts, based on data that is collected by the analytics service in the dashboard.--> Zusätzlich zu einer Übersicht Ihrer mobilen Analyse umfasst das Analysefeature die Funktion zum Durchführen einer unformatierten Suche für Clientprotokolle, für erfasste Daten zu einem Clientabsturz sowie beliebige zusätzliche Daten, die Sie explizit über Client-API-Funktionsaufrufe bereitstellen, die dem {{site.data.keyword.mobileanalytics_short}}-Service zugeführt werden. 
 
@@ -118,19 +118,18 @@ Pro Sitzungen können zwischen zwei und mehrere Hundert Ereignisse auftreten. Di
 	<dt>Worin liegt der Unterschied zwischen {{site.data.keyword.mobileanalytics_full}} und der mobilen Analyse in MobileFirst Platform Foundation?</dt>
 		<dd>Benutzer und Sitzungen unterscheiden sich bei beiden Konsolen kaum. Die Analysedaten von MobileFirst Platform Foundation enthalten allerdings zusätzliche Metriken und Einstellungen, die es Kunden ermöglichen, ihre eigenen Analysecluster lokal zu verwalten. Außerdem werden in der Analysekonsole von MobileFirst Platform Foundation Metriken für Adapter und Adapterprozeduren aufgegliedert, während beim {{site.data.keyword.mobileanalytics_short}}-Service diese Metriken in Netzanforderungsdiagramme und -tabellen integriert sind.</dd>
 	<dt>Ich verwende MobileFirst Platform Foundation lokal zur Entwicklung meiner Apps, möchte aber nicht meinen eigenen Analysecluster hosten. Kann ich stattdessen {{site.data.keyword.mobileanalytics_full}} verwenden?</dt>
-		<dd>Ja. Sie haben mehrere Optionen zur Auswahl: Wenn Sie MobileFirst Platform Foundation 7.x oder 8.0 verwenden und Ihre Apps mit MobileFirst Platform-SDKs instrumentiert sind, können Sie Ihren Worklight Server so konfigurieren, dass er Analysedaten an {{site.data.keyword.mobileanalytics_short}} for {{site.data.keyword.Bluemix_notm}} meldet. Im Blogbeitrag [Configuring Mobile Analytics and Mobile Foundation Bluemix services![Symbol für externen Link](https://mobilefirstplatform.ibmcloud.com/blog/2016/07/11/analytics-bm-service/){: new_window}(../../icons/launch-glyph.svg "Symbol für externen Link")] finden Sie weitere Details. Alternativ können Sie Ihre Apps auch mit dem {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.mobileanalytics_short}}-SDK instrumentieren und Daten direkt an den {{site.data.keyword.mobileanalytics_short}}-Service melden.</dd>
+		<dd>Ja. Sie haben mehrere Optionen zur Auswahl: Wenn Sie MobileFirst Platform Foundation 7.x oder 8.0 verwenden und Ihre Apps mit MobileFirst Platform-SDKs instrumentiert sind, können Sie Ihren Worklight Server so konfigurieren, dass er Analysedaten an {{site.data.keyword.mobileanalytics_short}} for {{site.data.keyword.Bluemix_notm}} meldet. Im Blogbeitrag [Configuring Mobile Analytics and Mobile Foundation Bluemix services ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://mobilefirstplatform.ibmcloud.com/blog/2016/07/11/analytics-bm-service/){: new_window} finden Sie weitere Details. Alternativ können Sie Ihre Apps auch mit dem {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.mobileanalytics_short}}-SDK instrumentieren und Daten direkt an den {{site.data.keyword.mobileanalytics_short}}-Service melden.</dd>
 	<!-- <dt>My instance of  {{site.data.keyword.mobileanalytics_short}} does not look like the screen shots in the catalog. What's going on?</dt> -->
 		<!-- <dd>Most likely you are using the Classic view interface for {{site.data.keyword.Bluemix_notm}}. Classic view is deprecated, so {{site.data.keyword.mobileanalytics_short}} runs best in the new {{site.data.keyword.Bluemix_notm}} interface. If you are in Classic view, you will see a link in the {{site.data.keyword.Bluemix_notm}} header that says <strong>Try the new {{site.data.keyword.Bluemix_notm}}</strong>. Click that link to use the new interface.</dd> -->
 </dl>
 
 
 # Zugehörige Links
- {:class="linklist"}
+{: #rellinks notoc}
 
 ## SDK
-{: rellink-sdk}
+{: #sdk notoc}
 <!-- Links to SDK download and SDK Developer Guide -->
-* [Android-SDK ![Symbol für externen Link](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}(../../icons/launch-glyph.svg "Symbol für externen Link")] 
-* [iOS-SDK ![Symbol für externen Link](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}(../../icons/launch-glyph.svg "Symbol für externen Link")]
+* [Android-SDK ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window} 
+* [iOS-SDK ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
 
-<!-- {:elementKind="article" id="rellinks"} -->

@@ -1,4 +1,4 @@
-## WebSocket 패키지 사용
+# WebSocket 패키지 사용
 {: #openwhisk_catalog_websocket}
 
 `/whisk.system/websocket` 패키지는 WebSocket에 메시지를 게시하는 편리한 방법을 제공합니다.
@@ -12,7 +12,7 @@
 
 동일한 WebSocket URI로 많은 메시지를 보내려는 경우 `uri` 값으로 패키지 바인딩을 작성하는 것이 좋습니다. 바인딩을 사용하면 `send` 조치를 사용할 때마다 값을 지정하지 않아도 됩니다.
 
-### WebSocket으로 메시지 전송
+## WebSocket으로 메시지 전송
 
 `/whisk.system/websocket/send` 조치는 WebSocket URI로 페이로드를 보냅니다. 매개변수는 다음과 같습니다.
 

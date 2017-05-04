@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+**Importante: El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.**
 
 # Configuración del plug-in de Cordova
 {: #getting-started-cordova}
@@ -29,7 +30,7 @@ Debe tener lo siguiente:
 * El URL de la aplicación de programa de fondo (**Ruta de app**). Necesitará estos valores para enviar solicitudes a los puntos finales protegidos de la aplicación de programa de fondo.
 * El valor de **TenantID**. Abra el servicio en el panel de control de {{site.data.keyword.amashort}}. Pulse el botón **Opciones móviles**. El valor `tenantId` (también conocido como `appGUID`) se muestra en el campo **GUID de app / TenantId**. Necesitará este valor para inicializar el gestor de autorización.
 * Su {{site.data.keyword.Bluemix_notm}} **Región**. Encontrará su región de {{site.data.keyword.Bluemix_notm}} actual en la cabecera, junto al icono **Avatar** ![icono Avatar](images/face.jpg "icono Avatar"). El valor de región que aparece debe ser uno de los siguientes: `EE.UU. Sur`, `Reino Unido` o `Sidney` y debe corresponder con los valores de SDK necesarios en el código Javascript de WebView: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` o `BMSClient.REGION_UK`. Necesitará este valor para inicializar el cliente {{site.data.keyword.amashort}}.
-* Una aplicación de Cordova o un proyecto existente. Para obtener más información sobre la configuración de la aplicación de Cordova, consulte el [sitio web de Cordova ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cordova.apache.org/ "Icono de enlace externo"){: new_window}.
+* Una aplicación de Cordova o un proyecto existente. Para obtener más información sobre la configuración de la aplicación de Cordova, consulte el [sitio web de Cordova ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://cordova.apache.org/){: new_window}.
 
 ## Instalación del plug-in de Cordova de {{site.data.keyword.amashort}}
 {: #getting-started-cordova-plugin}
@@ -65,7 +66,7 @@ El SDK del cliente de {{site.data.keyword.amashort}} para Cordova es un plug-in 
 	```
 	{: codeblock}
 
-	El valor *minSdkVersion* debe ser `15` o superior. Consulte la [Guía de la plataforma Android ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cordova.apache.org/docs/en/latest/guide/platforms/android/ "Icono de enlace externo"){: new_window} para obtener información actualizada sobre la *targetSdkVersion* soportada para el SDK de Android.
+	El valor *minSdkVersion* debe ser `15` o superior. Consulte la [Guía de la plataforma Android ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://cordova.apache.org/docs/en/latest/guide/platforms/android/){: new_window} para obtener información actualizada sobre la *targetSdkVersion* soportada para el SDK de Android.
 
 3. Si ha añadido el sistema operativo iOS, actualice el elemento `<platform name="ios">` con una declaración de destino:
 
@@ -107,7 +108,7 @@ El SDK del cliente de {{site.data.keyword.amashort}} para Cordova es un plug-in 
 
 	2. Cree y ejecute la aplicación con Xcode.
 
-	**Nota**: es posible que reciba el siguiente error al ejecutar `cordova build ios`. Este problema se debe a un error en el plugin de dependencias y se está realizando un seguimiento en el [Problema 12 ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/blakgeek/cordova-plugin-cocoapods-support/issues/12 "Icono de enlace externo"){: new_window}. Puede ejecutar el proyecto iOS en XCode a través de un simulador o un dispositivo.
+	**Nota**: es posible que reciba el siguiente error al ejecutar `cordova build ios`. Este problema se debe a un error en el plugin de dependencias y se está realizando un seguimiento en el [Problema 12 ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/blakgeek/cordova-plugin-cocoapods-support/issues/12){: new_window}. Puede ejecutar el proyecto iOS en XCode a través de un simulador o un dispositivo.
 
 	```
 	xcodebuild: error: No se ha podido encontrar un destino que coincida con el especificador de destino especificado:
@@ -166,7 +167,8 @@ Añada la inicialización del gestor de autorización en `AppDelegate.m` según 
 ```
 {: codeblock}
 
-**Nota:** el nombre del archivo de cabecera importado se compone del nombre del módulo concatenado con la serie `-Swift.h`, por ejemplo, si el nombre del módulo es `Cordova`, la línea de importación debería ser `#import "Cordova-Swift.h"` Para encontrar el nombre del módulo, vaya a `Crear configuración` > `Paquete` > `Nombre del módulo del producto`.Sustituya `<tenantId>` por su id de arrendatario (consulte [Antes de empezar](#before-you-begin)).
+**Nota:** el nombre del archivo de cabecera importado se compone del nombre del módulo concatenado con la serie `-Swift.h`, por ejemplo, si el nombre del módulo es `Cordova`, la línea de importación debería ser `#import "Cordova-Swift.h"` Para encontrar el nombre del módulo, vaya a `Crear configuración` > `Paquete` > `Nombre del módulo del producto`.
+Sustituya `<tenantId>` por su id de arrendatario (consulte [Antes de empezar](#before-you-begin)).
 
 
 ## Cómo realizar una solicitud al servicio de programa de fondo móvil

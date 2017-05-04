@@ -19,8 +19,8 @@ lastupdated: "2017-02-23"
 | 實體 | 類型 | 參數 | 說明 |
 | --- | --- | --- | --- |
 | `/whisk.system/cloudant` | 套件 | dbname、host、username、password | 使用 Cloudant 資料庫 |
-| `/whisk.system/cloudant/read` | 動作 (action) | dbname、id | 讀取資料庫中的文件 |
-| `/whisk.system/cloudant/write` | 動作 (action) | dbname、overwrite、doc | 將文件寫入資料庫 |
+| `/whisk.system/cloudant/read` | 動作 | dbname、id | 讀取資料庫中的文件 |
+| `/whisk.system/cloudant/write` | 動作 | dbname、overwrite、doc | 將文件寫入資料庫 |
 | `/whisk.system/cloudant/changes` | 資訊來源 | dbname、maxTriggers | 在資料庫變更時發動觸發程式事件 |
 
 下列各主題逐步說明如何設定 Cloudant 資料庫、配置關聯的套件，以及使用 `/whisk.system/cloudant` 套件中的動作及資訊來源。

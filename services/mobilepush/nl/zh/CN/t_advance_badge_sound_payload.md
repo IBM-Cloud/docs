@@ -10,8 +10,8 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-#启用高级 {{site.data.keyword.mobilepushshort}}
-上次更新时间：2017 年 1 月 23 日
+#启用高级推送通知
+上次更新时间：2017 年 2 月 28 日
 {: .last-updated}
 
 配置 iOS 角标、声音、其他 JSON 有效内容、可操作通知和暂停通知。
@@ -26,7 +26,8 @@ copyright:
 	- **声音文件** - 输入字符串，以指向移动应用程序中的声音文件。在有效内容中，指定要使用的声音文件的字符串名称。
 	- **iOS 角标** - 对于 iOS 设备，要显示为应用程序图标角标的数字。如果缺少此属性，那么角标不会改变。要除去角标，请将此属性的值设置为 0。
 	
-###Android
+### Android
+{: #badge-sound-payload_android}
 
 将声音文件添加到 Android 应用程序的 `res/raw` 目录中。发送通知时，在 {{site.data.keyword.mobilepushshort}} 的声音字段中添加声音文件名。
 
@@ -39,7 +40,8 @@ copyright:
 ```
     {: codeblock}	
 	
-###iOS
+### iOS
+{: #badge-sound-payload_ios}
 
 ```
 "settings": {

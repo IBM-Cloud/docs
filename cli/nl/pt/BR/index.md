@@ -60,9 +60,9 @@ bluemix plugin install plugin_name -r bluemix-bx
 {: codeblock}
 
 
-| *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *IBM Containers*  |
+| *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *IBM Bluemix Container Service*  |
 |-----|-----|-----|
-| Plug-in name: active-deploy <br> [Visualizar docs](/docs/services/ActiveDeploy/cli.html#cli) | Plug-in name: auto-scaling <br> [Visualizar docs](/docs/cli/plugins/auto-scaling/index.html) |  Nome do plug-in: IBM-Containers  <br> [Visualizar docs](/docs/cli/plugins/containers/index.html) |
+| Plug-in name: active-deploy <br> [View Docs](/docs/services/ActiveDeploy/cli.html#cli) | Plug-in name: auto-scaling <br> [View Docs](/docs/cli/plugins/auto-scaling/index.html) |  Plug-in name: container-service  <br> [View Docs](/docs/containers/cs_cli_devtools.html) |
 {: caption="Table 2. Plug-ins" caption-side="top"}
 
 |  *Peer de rede privada* | *VPN*  |
@@ -92,7 +92,7 @@ cf install-plugin plugin_name -r bluemix-cf
 
 | *Active Deploy* | *Admin Console* |
 |-----------------|-----------------|
-| Plug-in name: active-deploy <br>  [Visualizar docs](/docs/services/ActiveDeploy/cli.html#cli) |  Plug-in name: bluemix-admin <br> [Visualizar docs](/docs/cli/plugins/bluemix_admin/index.html) |
+| Plug-in name: active-deploy <br>  [View Docs](/docs/services/ActiveDeploy/cli.html#cli) |  Plug-in name: bluemix-admin <br> [View Docs](/docs/cli/plugins/bluemix_admin/index.html) |
 {: caption="Table 4. Plug-ins" caption-side="top"}
 
 

@@ -2,9 +2,11 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-06"
 
 ---
+
+**Importante: El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.**
 
 # Habilitación de la autenticación de Google para apps de web
 {: #google-auth-web}
@@ -31,7 +33,7 @@ Para empezar a utilizar Google como proveedor de identidad, cree un proyecto en 
 1. Complete el proceso de creación de credenciales y tome nota del ID y del secreto del cliente Google.
 
 
-## Configuración de {{site.data.keyword.amashort}} para la autenticación de Google
+## Configuración de Mobile Client Access para la autenticación de Google
 Una vez que ya tenga el ID de aplicación y el secreto de Google puede habilitar la autenticación de Google en el panel de control de {{site.data.keyword.amashort}}.
 
 1. Abra la app en el panel de control de {{site.data.keyword.Bluemix_notm}}.
@@ -40,7 +42,7 @@ Una vez que ya tenga el ID de aplicación y el secreto de Google puede habilitar
 1. Especifique el ID de cliente y el secreto de Google y guarde los cambios.
 
 
-## Utilización de {{site.data.keyword.amashort}} para la autenticación web de Google
+## Utilización de Mobile Client Access para la autenticación web de Google
 Para iniciar el proceso de autorización:
 
 1. Redireccione desde su app web al siguiente punto final del servidor de autorización:  

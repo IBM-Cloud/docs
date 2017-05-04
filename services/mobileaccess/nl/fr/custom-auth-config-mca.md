@@ -2,11 +2,13 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-07"
 
 ---
 
-# Configuration de {{site.data.keyword.amashort}} pour l'authentification personnalisée
+**Important : Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.**
+
+# Configuration de Mobile Client Access pour l'authentification personnalisée
 {: #custom-dash}
 
 
@@ -18,8 +20,9 @@ Vous devez disposer des éléments suivants :
 * Une instance d'un service {{site.data.keyword.amafull}}.
 * Une application de fournisseur d'identité personnalisée.
 
-## Configuration de l'authentification personnalisée dans le tableau de bord {{site.data.keyword.amafull}}
+## Configuration de l'authentification personnalisée dans le tableau de bord
 {: #custom-dash-config}
+
 Utilisez le tableau de bord {{site.data.keyword.amafull}} pour configurer l'authentification personnalisée.
 
 1. Ouvrez votre service dans le tableau de bord de {{site.data.keyword.amafull}}.

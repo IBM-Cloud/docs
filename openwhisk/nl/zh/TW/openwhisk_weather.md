@@ -22,7 +22,7 @@ lastupdated: "2017-02-21"
 | 實體 | 類型 | 參數 | 說明 |
 | --- | --- | --- | --- |
 | `/whisk.system/weather` | 套件 | username、password | Weather Company Data for IBM Bluemix API 的服務  |
-| `/whisk.system/weather/forecast` | 動作 (action) | latitude、longitude、timePeriod | 指定時段的預報|
+| `/whisk.system/weather/forecast` | 動作 | latitude、longitude、timePeriod | 指定時段的預報|
 
 建議使用 `username` 及 `password` 值來建立套件連結。如此，您就不需要每次在呼叫套件中的動作時都指定認證。
 

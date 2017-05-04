@@ -2,11 +2,13 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-06"
 
 ---
 
 {:codeblock:.codeblock}
+
+**Wichtig: Der Service {{site.data.keyword.amafull}} wird durch den Service {{site.data.keyword.appid_full}} ersetzt.**
 
 # Kommunikation zwischen Back-End-Anwendungen und -Services
 {: #backend-comm}

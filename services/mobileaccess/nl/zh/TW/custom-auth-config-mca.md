@@ -2,11 +2,13 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-07"
 
 ---
 
-# 配置 {{site.data.keyword.amashort}} 進行自訂鑑別
+**重要事項：{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。**
+
+# 配置 Mobile Client Access 進行自訂鑑別
 {: #custom-dash}
 
 
@@ -18,8 +20,9 @@ lastupdated: "2017-01-08"
 * {{site.data.keyword.amafull}} 服務的實例。
 * 自訂身分提供者應用程式。
 
-## 在 {{site.data.keyword.amafull}} 儀表板中配置自訂鑑別
+## 在儀表板中配置自訂鑑別
 {: #custom-dash-config}
+
 使用 {{site.data.keyword.amafull}} 儀表板來配置自訂鑑別。
 
 1. 在 {{site.data.keyword.amafull}} 儀表板中，開啟服務。

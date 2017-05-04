@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+**중요: {{site.data.keyword.amafull}} 서비스는 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다. **
 
 # iOS Swift SDK 설정
 {: #getting-started-ios}
@@ -30,7 +31,7 @@ lastupdated: "2017-01-15"
 * **테넌트 ID**. {{site.data.keyword.amashort}} 대시보드에서 서비스를 여십시오. **모바일 옵션**을 클릭하십시오. **앱 GUID / TenantId** 필드에 `tenantId`(`appGUID`라고도 함) 값이 표시됩니다. 이 값은 {{site.data.keyword.amashort}} 권한 관리자를 초기화하는 데 필요합니다. 
 * **애플리케이션 라우트**. 이는 백엔드 애플리케이션의 URL입니다. 이 값은 해당 보호 엔드포인트에 요청을 전송하는 데 필요합니다. 
 * {{site.data.keyword.Bluemix_notm}} **지역**. 헤더에서 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘") 옆에 현재 {{site.data.keyword.Bluemix_notm}} 지역이 표시됩니다. 표시되는 지역 값은 `US South`, `Sydney` 및 `United Kingdom` 중 하나여야 하며 코드 `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` 또는 `BMSClient.Region.sydney`에 필요한 SDK 값에 해당해야 합니다. 이 값은 {{site.data.keyword.amashort}} SDK를 초기화하는 데 필요합니다. 
-* Xcode 프로젝트. iOS 개발 환경을 설정하는 방법에 대한 자세한 정보는 [Apple 개발자 웹 사이트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.apple.com/support/xcode/ "외부 링크 아이콘"){: new_window}를 참조하십시오. 
+* Xcode 프로젝트. iOS 개발 환경을 설정하는 방법에 대한 자세한 정보는 [Apple 개발자 웹 사이트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.apple.com/support/xcode/){: new_window}를 참조하십시오. 
 
 
 ## {{site.data.keyword.amashort}} 클라이언트 SDK 설치
@@ -50,15 +51,15 @@ sudo gem install cocoapods
 ```
 {: codeblock}
 
-자세한 정보는 [CocoaPods 웹 사이트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cocoapods.org/ "외부 링크 아이콘"){: new_window}를 참조하십시오. 
+자세한 정보는 [CocoaPods 웹 사이트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cocoapods.org/){: new_window}를 참조하십시오. 
 
 ### CocoaPods를 사용하여 {{site.data.keyword.amashort}} 클라이언트 SDK 설치
 {: #install-sdk-cocoapods}
 
 1. 터미널 창에서 iOS 프로젝트의 루트 디렉토리로 이동하십시오. 
 
-1. 이미 CocoaPods에 대한 작업공간을 초기화하지 않은 경우 `pod init` 명령을 실행하십시오. <br/>
- CocoaPods가 `Podfile` 파일을 작성하고 이 파일에서 사용자는 iOS 프로젝트용 종속성을 정의합니다. 
+1. CocoaPods용 작업공간이 이미 설치되어 있지 않은 경우 `pod init` 명령을 실행하십시오. <br/>
+ CocoaPods는 `Podfile` 파일을 작성하며 이 파일에서 iOS 프로젝트용 종속 항목을 정의합니다. 
 
 1. `Podfile` 파일을 편집하고 필요한 대상에 다음 행을 추가하십시오. 
 
@@ -70,7 +71,7 @@ sudo gem install cocoapods
 
   **팁:** `use_frameworks!`를 Podfile에 삽입하는 대신 Xcode 대상에 추가할 수 있습니다.
 
-1. `Podfile` 파일을 저장하고 명령행에서 `pod install`을 실행하십시오. CocoaPods는 관련 종속 항목을 설치하고, 추가된 종속 항목 및 pod을 표시합니다. <br/>
+1. `Podfile` 파일을 저장하고 명령행에서 `pod install`을 실행하십시오. CocoaPods는 관련 종속 항목을 설치하고 추가된 종속 항목 및 pod를 표시합니다. <br/>
 
    **중요**: CocoaPods는 `xcworkspace` 파일을 생성합니다. 앞으로 프로젝트에 대해 작업하려면 이 파일을 열어야 합니다. 
 

@@ -1,4 +1,4 @@
-## Utilisation du package WebSocket
+# Utilisation du package WebSocket
 {: #openwhisk_catalog_websocket}
 
 Le package `/whisk.system/websocket` offre un moyen très pratique de publier de messages sur un WebSocket.
@@ -12,7 +12,7 @@ Le package inclut l'action suivante :
 
 Si vous prévoyez d'envoyer un grand nombre de messages au même URI de WebSocket, il est recommandé de créer une liaison de package avec la valeur `uri`.  Grâce à la liaison, vous n'avez pas besoin de spécifier la valeur à chaque fois que vous utilisez l'action `send`.
 
-### Envoi d'un message à un WebSocket
+## Envoi d'un message à un WebSocket
 
 L'action `/whisk.system/websocket/send` envoie un contenu à un URI de WebSocket. Les paramètres sont les suivants :
 

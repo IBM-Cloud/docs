@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -25,13 +25,6 @@ lastupdated: "2017-03-30"
 
 **注**：有其他框架使用 `Express` 框架，例如 LoopBack。可以将 {{site.data.keyword.appid_short_notm}} 服务器 SDK 与其中任意框架一起使用。
 
-## 关于服务器 SDK
-{: #about}
-
-{{site.data.keyword.appid_short_notm}} 服务器 SDK 提供了用于 {{site.data.keyword.Bluemix_notm}} 上部署的后端应用程序的 ApiStrategy 通行证策略。要保护应用程序不受未经授权的访问，您必须使用 ApiStrategy 检测 Node.js 服务器。`appid-serversdk-nodejs npm 模块`提供了 ApiStrategy 通行证策略和验证方法，以验证 {{site.data.keyword.appid_short_notm}} 发出的访问令牌和身份令牌。
-
-{{site.data.keyword.appid_short_notm}} 服务器 SDK 使用 Passport 框架来实施授权功能，请参阅 <a href="http://passportjs.org/" target="_blank">Passport 框架 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a>。
-
 
 ## 安装服务器 SDK
 {: #protecting-resources-serversdk}
@@ -48,6 +41,10 @@ lastupdated: "2017-03-30"
 
 ## 在 Node.js 中保护资源
 {: #protecting-resources-nodesdk}
+
+{{site.data.keyword.appid_short_notm}} 服务器 SDK 提供了用于 {{site.data.keyword.Bluemix_notm}} 上部署的后端应用程序的 ApiStrategy 通行证策略。要保护应用程序不受未经授权的访问，您必须使用 ApiStrategy 检测 Node.js 服务器。`appid-serversdk-nodejs npm 模块`提供了 ApiStrategy 通行证策略和验证方法，以验证 {{site.data.keyword.appid_short_notm}} 发出的访问令牌和身份令牌。
+
+{{site.data.keyword.appid_short_notm}} 服务器 SDK 使用 <a href="http://passportjs.org/" target="_blank">Passport 框架 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a> 来强制实施授权。
 
 以下片段演示了如何在简单 Express 应用程序中使用 `APIStrategy` 来保护 `/protected` 端点 GET 方法。
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -51,7 +51,7 @@ Sie benötigen die folgenden Informationen:
   * CocoaPods (Version 1.1.0 oder höher).
 
 
-## {{site.data.keyword.appid_short_notm}}-Client-SDK installieren
+## Client-SDK installieren
 {: #install-appid-sdk}
 
 Das {{site.data.keyword.appid_short_notm}}-Client-SDK wird mit CocoaPods verteilt, einem Abhängigkeitenmanager für Swift- und Objective-C Cocoa-Projekte. CocoaPods lädt Artefakte herunter und stellt sie für Ihr Projekt zur Verfügung.
@@ -81,7 +81,7 @@ Das {{site.data.keyword.appid_short_notm}}-Client-SDK wird mit CocoaPods verteil
 7. Fügen Sie unter **Projekteinstellungen** > **Info** > **URL-Typen** einen URL-Typ hinzu. Tragen Sie sowohl in das Textfeld **ID** als auch **URL-Schema** diesen Wert ein: $(PRODUCT_BUNDLE_IDENTIFIER)
 
 
-## {{site.data.keyword.appid_short_notm}}-Client-SDK initialisieren
+## Client-SDK initialisieren
 {: #initialize-client-sdk}
 
 1. Fügen Sie den folgenden Import zu Ihrer Datei `AppDelegate.swift` hinzu:
@@ -184,7 +184,7 @@ Sie können beispielsweise diesen Code aufrufen, um ein neues Attribut festzuleg
 ### Anonyme Anmeldung
 {: #anonymous notoc}
 
-Sie können sich mit {{site.data.keyword.appid_short_notm}} anonym anmelden; siehe [anonyme Identität](/docs/services/appid/user-profile.html#anonymous).
+Mit {{site.data.keyword.appid_short_notm}} können Sie sich [anonym](/docs/services/appid/user-profile.html#anonymous) anmelden.
 
   ```swift
   class delegate : AuthorizationDelegate {

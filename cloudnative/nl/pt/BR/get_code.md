@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-18"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -13,7 +13,7 @@ lastupdated: "2017-03-18"
 # Obter código
 {: #Get_Code}
 
-Ao concluir a configuração e a instalação de seu projeto com os recursos selecionados, será possível fazer download do código que permitirá executá-lo. Seu projeto transferido por
+Quando tiver concluído a configuração e a instalação do seu projeto com suas capacidades selecionadas, será possível fazer download do código que permite executar o aplicativo. Seu projeto transferido por
 download é pré-configurado com as dependências e credenciais do SDK necessárias para
 cada recurso que você configurou.
 

@@ -56,7 +56,7 @@ Sie verwenden dieses Benennungsschema unter anderem zum Beispiel, wenn Sie die {
 
 Die Namen aller Entitäten, zu denen Aktionen, Auslöser, Regeln, Pakete und Namensbereiche gehören, sind eine Folge von Zeichen mit dem folgenden Format:
 
-* Das erste Zeichen muss ein alphanumerisches Zeichen oder ein Unterstreichungszeichen sein.
+* Das erste Zeichen muss ein alphanumerisches Zeichen oder ein Unterstreichungszeichen sein. 
 * Die nachfolgenden Zeichen können alphanumerische Zeichen, Leerzeichen oder die folgenden Zeichen sein: `_`, `@`, `.`, `-`.
 * Das letzte Zeichen kann kein Leerzeichen sein.
 
@@ -224,11 +224,11 @@ Es ist möglich, dass eine Aktion für einige Eingaben synchron und für andere 
 
 Beachten Sie, dass der Aufruf einer Aktion blockierend oder nicht blockierend sein kann, unabhängig davon, ob die Aktivierung synchron oder asynchron ist.
 
-### Globales JavaScript-Objekt 'whisk' nicht mehr verwendet
+### Globales JavaScript-Objekt 'whisk' wurde entfernt
 
-Das globale Objekt `whisk` wird derzeit nicht verwendet. Migrieren Sie Ihre Node.js-Aktionen, um alternative Methoden zu verwenden.
-Für die Funktionen `whisk.invoke()` und `whisk.trigger()` können Sie die Clientbibliothek [openwhisk](https://www.npmjs.com/package/openwhisk) verwenden.
-Für `whisk.getAuthKey()` können Sie den API-Schlüsselwert aus der Umgebungsvariable `__OW_API_KEY` abrufen.
+Das globale Objekt `whisk` wurde entfernt. Migrieren Sie Ihre Node.js-Aktionen, um alternative Methoden zu verwenden.
+Verwenden Sie für die Funktionen `whisk.invoke()` und `whisk.trigger()` die bereits installierte Clientbibliothek [openwhisk](https://www.npmjs.com/package/openwhisk).
+Für `whisk.getAuthKey()` können Sie den API-Schlüsselwert aus der Umgebungsvariablen `__OW_API_KEY` abrufen.
 Für `whisk.error()` können Sie ein abgelehntes Objekt des Typs 'Promise' zurückgeben (d. h. Promise.reject).
 
 ### JavaScript-Laufzeitumgebungen
@@ -261,7 +261,7 @@ In der Node.js Version 6.9.1-Umgebung können die folgenden Pakete verwendet wer
 - node-uuid v1.4.7
 - nodemailer v2.6.4
 - oauth2-server v2.4.1
-- openwhisk v3.0.0
+- openwhisk v3.3.2
 - pkgcloud v1.4.0
 - process v0.11.9
 - pug v2.0.0-beta6
@@ -289,87 +289,104 @@ In der Node.js Version 6.9.1-Umgebung können die folgenden Pakete verwendet wer
 - xmlhttprequest v1.8.0
 - yauzl v2.7.0
 
-Die Node.js Version 0.12.17-Umgebung wird für eine Aktion verwendet, wenn das Flag `--kind` bei der Erstellung oder Aktualisierung der Aktion explizit mit dem Wert 'nodejs' angegeben wird.
-In der Node.js Version 0.12.17-Umgebung können die folgenden Pakete verwendet werden:
 
-**Hinweis:** Node.js Version 0.12.x ist veraltet. Führen Sie eine Migration aller Node.js-Aktionen durch, sodass Node.js Version 6.x verwendet wird.
+## Python-Laufzeitumgebungen
+{: #openwhisk_ref_python_environments}
 
-- apn v1.7.4
-- async v1.5.2
-- btoa v1.1.2
-- cheerio v0.20.0
-- cloudant v1.4.1
-- commander v2.7.0
-- consul v0.18.1
-- cookie-parser v1.3.4
-- cradle v0.6.7
-- errorhandler v1.3.5
-- gm v1.20.0
-- jade v1.9.2
-- log4js v0.6.38
-- merge v1.2.0
-- moment v2.8.1
-- mustache v2.1.3
-- nano v5.10.0
-- node-uuid v1.4.2
-- oauth2-server v2.4.0
-- openwhisk v3.0.0
-- process v0.11.0
-- request v2.79.0
-- rimraf v2.5.1
-- semver v4.3.6
-- serve-favicon v2.2.0
-- socket.io v1.3.5
-- socket.io-client v1.3.5
-- superagent v1.3.0
-- swagger-tools v0.8.7
-- tmp v0.0.28
-- watson-developer-cloud v1.4.1
-- when v3.7.3
-- ws v1.1.0
-- xml2js v0.4.15
-- xmlhttprequest v1.7.0
-- yauzl v2.3.1
+OpenWhisk unterstützt die Ausführung von Python-Aktionen mit zwei verschiedenen Laufzeitversionen. 
 
-## Python-Aktionen
+### Python 3-Aktionen
 
-Python-Aktionen werden standardmäßig mit Python 2.7.12 ausgeführt.
-Neben der Python-Standardbibliothek stehen die folgenden Pakete zur Verfügung, um Python-Aktionen zu verwenden.
+Python 3-Aktionen werden mit Python 3.6.1 ausgeführt. Zur Verwendung dieser Laufzeit geben Sie den Parameter `--kind python:3` in der `wsk`-Befehlszeilenschnittstelle an, wenn Sie eine Aktion erstellen oder aktualisieren.
+Die folgenden Pakete sind neben den Standardbibliotheken von Python 3.6 zur Verwendung durch Python-Aktionen verfügbar: 
 
-- attrs v16.1.0
+- aiohttp v1.3.3
+- appdirs v1.4.3
+- asn1crypto v0.21.1
+- async-timeout v1.2.0
+- attrs v16.3.0
 - beautifulsoup4 v4.5.1
-- cffi v1.7.0
-- click v6.6
-- cryptography v1.5
-- cssselect v0.9.2
-- enum34 v1.1.6
-- flask v0.11.1
-- gevent v1.1.2
-- greenlet v0.4.10
+- cffi v1.9.1
+- chardet v2.3.0
+- click v6.7
+- cryptography v1.8.1
+- cssselect v1.0.1
+- Flask v0.12
+- gevent v1.2.1
+- greenlet v0.4.12
 - httplib2 v0.9.2
-- idna v2.1
-- ipaddress v1.0.16
+- idna v2.5
 - itsdangerous v0.24
-- jinja2 v2.8
+- Jinja2 v2.9.5
+- kafka-python v1.3.1
 - lxml v3.6.4
-- markupsafe v0.23
-- parsel v1.0.3
-- pyasn1 v0.1.9
+- MarkupSafe v1.0
+- multidict v2.1.4
+- packaging v16.8
+- parsel v1.1.0
+- pyasn1 v0.2.3
 - pyasn1-modules v0.0.8
-- pycparser v2.14
-- pydispatcher v2.0.5
-- pyopenssl v16.1.0
+- pycparser v2.17
+- PyDispatcher v2.0.5
+- pyOpenSSL v16.2.0
+- pyparsing v2.2.0
 - python-dateutil v2.5.3
 - queuelib v1.4.2
 - requests v2.11.1
-- scrapy v1.1.2
+- Scrapy v1.1.2
 - service-identity v16.0.0
 - simplejson v3.8.2
 - six v1.10.0
-- twisted v16.4.0
-- w3lib v1.15.0
-- werkzeug v0.11.10
-- zope.interface v4.3.1
+- Twisted v16.4.0
+- w3lib v1.17.0
+- Werkzeug v0.12
+- yarl v0.9.8
+- zope.interface v4.3.3
+
+### Python 2-Aktionen
+
+Python 2-Aktionen werden mit Python 2.7.12 ausgeführt. Dies ist die Standardlaufzeit für Python-Aktionen, sofern Sie nicht das Flag `--kind` beim Erstellen oder Aktualisieren einer Aktion angeben. Wenn Sie diese Laufzeit explizit auswählen wollen, verwenden Sie das Flag `--kind python:2`. Die folgenden Pakete sind neben der Standardbibliothek von Python 2.7 zur Verwendung durch Python 2-Aktionen verfügbar: 
+
+- appdirs v1.4.3
+- asn1crypto v0.21.1
+- attrs v16.3.0
+- beautifulsoup4 v4.5.1
+- cffi v1.9.1
+- click v6.7
+- cryptography v1.8.1
+- cssselect v1.0.1
+- enum34 v1.1.6
+- Flask v0.11.1
+- gevent v1.1.2
+- greenlet v0.4.12
+- httplib2 v0.9.2
+- idna v2.5
+- ipaddress v1.0.18
+- itsdangerous v0.24
+- Jinja2 v2.9.5
+- kafka-python v1.3.1
+- lxml v3.6.4
+- MarkupSafe v1.0
+- packaging v16.8
+- parsel v1.1.0
+- pyasn1 v0.2.3
+- pyasn1-modules v0.0.8
+- pycparser v2.17
+- PyDispatcher v2.0.5
+- pyOpenSSL v16.2.0
+- pyparsing v2.2.0
+- python-dateutil v2.5.3
+- queuelib v1.4.2
+- requests v2.11.1
+- Scrapy v1.1.2
+- service-identity v16.0.0
+- simplejson v3.8.2
+- six v1.10.0
+- Twisted v16.4.0
+- virtualenv v15.1.0
+- w3lib v1.17.0
+- Werkzeug v0.12
+- zope.interface v4.3.3
 
 ## Docker-Aktionen
 {: #openwhisk_ref_docker}
@@ -450,7 +467,7 @@ Von der OpenWhisk-API werden Anforderung/Antwort-Aufrufe von Web-Clients unterst
 {: #openwhisk_syslimits}
 
 ### Aktionen
-{{site.data.keyword.openwhisk_short}} unterliegt einigen wenigen Systembegrenzungen, wie zum Beispiel in Bezug auf die Speicherkapazität, die eine Aktion verwenden kann, oder auf die zulässige Anzahl von Aktionsaufrufen pro Minute. 
+{{site.data.keyword.openwhisk_short}} unterliegt einigen wenigen Systembegrenzungen, wie zum Beispiel in Bezug auf die Speicherkapazität, die eine Aktion verwenden kann, oder auf die zulässige Anzahl von Aktionsaufrufen pro Minute.
 
 n der folgenden Tabelle sind die Standardbegrenzungen für Aktionen aufgeführt.
 
@@ -459,8 +476,8 @@ n der folgenden Tabelle sind die Standardbegrenzungen für Aktionen aufgeführt.
 | Zeitlimit | Ein Container darf nicht länger als N Millisekunden aktiv sein. | pro Aktion |  Millisekunden | 60000 |
 | Speicher | Ein Container darf nicht mehr als N MB Speicher zuordnen. | pro Aktion | MB | 256 |
 | Protokolle | Ein Container darf nicht mehr als N MB in die Standardausgabe schreiben. | pro Aktion | MB | 10 |
-| Gleichzeitig | Pro Namensbereich sind nicht mehr als N aktuell ausgeführte oder in die Warteschlange für die Ausführung gestellte Aktivierungen zulässig. | pro Namensbereich | Anzahl | 1000 |
-| Minutenrate | Ein Benutzer kann nicht mehr als diese Anzahl Aktionen pro Minute aufrufen. | pro Benutzer | Anzahl | 5000 |
+| Gleichzeitig | Pro Namensbereich können nicht mehr als N aktuell ausgeführte oder in die Warteschlange für die Ausführung gestellte Aktivierungen übergeben werden. | pro Namensbereich | Anzahl | 1000 |
+| Minutenrate | Pro Namensbereich können nicht mehr als N Aktivierungen pro Minute übergeben werden. | pro Benutzer | Anzahl | 5000 |
 | Codegröße | Die maximale Größe des Aktionscodes. | nicht konfigurierbar, Limit pro Aktion | MB | 48 |
 | Parameter | Die maximale Größe der Parameter, die angehängt werden können. | nicht konfigurierbar, Limit pro Aktion/Paket/Auslöser | MB | 1 |
 
@@ -527,10 +544,9 @@ Auslöser unterliegen einer Auslöserate pro Minute (wie in der folgenden Tabell
 
 | Begrenzung | Beschreibung | Konfigurierbar | Einheit | Standardwert |
 | ----- | ----------- | ------------ | -----| ------- |
-| Minutenrate | Ein Benutzer kann nicht mehr als diese Anzahl Auslöser pro Minute abrufen. | pro Benutzer | Anzahl | 5000 |
+| Minutenrate | Pro Namensbereich können nicht mehr als N Auslöser pro Minute aktiviert werden. | pro Benutzer | Anzahl | 5000 |
 
 ### Auslöser pro Minute (Festgelegt: 5000)
-{: #openwhisk_syslimits_triggerratelimit}
 * Die Begrenzung N der Rate ist auf 5000 festgelegt und begrenzt die Anzahl von Auslösern in Fenstern von 1 Minute.
 * Ein Benutzer kann diese Begrenzung beim Erstellen des Auslösers nicht ändern.
 * Ein CLI- oder API-Aufruf, der diese Begrenzung überschreitet, empfängt einen Fehlercode, der dem HTTP-Statuscode `429: TOO MANY REQUESTS` entspricht.

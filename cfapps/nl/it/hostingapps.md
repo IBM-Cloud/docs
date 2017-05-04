@@ -112,7 +112,8 @@ Per effettuare la migrazione della tua applicazione, attieniti alla seguente pro
 <ol>
 <li>Scarica il programma di installazione per il tuo sistema operativo.</li>
 <li>Segui la procedura guidata di installazione della riga di comando.</li>
-<li>Utilizza il seguente comando per verificare la versione dell'interfaccia riga di comando cf:
+<li>Utilizza il seguente comando per verificare la versione
+dell'interfaccia riga di comando cf:
 <pre>cf -v</pre></li>
 </ol>
 </li>
@@ -177,7 +178,7 @@ services = JSON.parse(ENV['VCAP_SERVICES'], :symbolize_names => true)
         end.flatten!.first
 ```
 {:codeblock}
-
+ 
 Per accertarti che la tua applicazione possa essere eseguita in un ambiente locale una volta modificata l'applicazione per {{site.data.keyword.Bluemix_notm}}, verifica che sia presente la variabile d'ambiente VCAP_SERVICES, che viene impostata per tutte le applicazioni {{site.data.keyword.Bluemix_notm}} Cloud Foundry.
 
 

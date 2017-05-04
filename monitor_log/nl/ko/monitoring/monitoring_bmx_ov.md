@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-16"
+lastupdated: "2017-03-06"
 
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2017-02-16"
 
 또한 추가 성능 메트릭을 구성하고 모니터링할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 외부에서 이러한 메트릭을 시각화하고 분석할 수 있습니다. 예를 들어, {{site.data.keyword.containershort}}에서 앱을 실행하는 경우 Grafana를 사용하여 추가 메트릭을 모니터링할 수 있습니다. 성능 데이터를 시각화하고 분석하는 영역마다 또는 컨테이너 인스턴스마다 대시보드를 사용자 정의할 수 있습니다.
 
-![{{site.data.keyword.Bluemix_notm}}에서 실행되는 컨테이너의 Grafana 모니터링 보기](images/monitoring_default_container_grafana_view.jpg)
+![{{site.data.keyword.Bluemix_notm}}에서 실행 중인 컨테이너의 Grafana 모니터링 보기](images/monitoring_default_container_grafana_view.jpg "Bluemix에서 실행 중인 컨테이너의 Grafana 모니터링 보기") 
 
 {{site.data.keyword.Bluemix_notm}} 플랫폼 모니터링을 사용하여 다음을 수행할 수 있습니다.
 
@@ -33,5 +33,4 @@ lastupdated: "2017-02-16"
 
 Cloud Foundry에서 실행되는 앱 모니터링에 대한 자세한 정보는 [Cloud Foundry에서 실행되는 앱 모니터링](monitoring_cf_apps.html#monitoring_bluemix_apps)을 참조하십시오.
 
-{{site.data.keyword.containershort}}에서 모니터링에 대한 자세한 정보는 [{{site.data.keyword.containershort}}에서 모니터링](/docs/containers/monitoringandlogging/container_ml_monitor.html#container_ml_monitor)을 참조하십시오.   
-
+{{site.data.keyword.containershort}}의 모니터링에 대한 자세한 정보는 [{{site.data.keyword.containershort}}에서 모니터링](containers/monitoring_containers_ov.html#monitoring_bmx_containers_ov)을 참조하십시오.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-04-14"
 
 ---
 
@@ -21,12 +21,12 @@ php_buildpack은 PHP 앱을 위한 완전한 런타임 환경을
 php_buildpack은 다음과 같은 조건에서 사용됩니다. 
 * 앱에 composer.json 파일이 있는 경우. 또는
 * 앱에 *.php 파일이 있는 경우. 또는
-* 앱이 [options.json](https://github.com/cloudfoundry/php-buildpack/blob/master/docs/config.md) 파일에 ${WEBDIR} 변수를 정의하고, 해당 변수가 앱에 있는 기존 디렉토리로 설정된 경우.
+* 앱이 [options.json](https://docs.cloudfoundry.org/buildpacks/php/gsg-php-config.html) 파일에 ${WEBDIR} 변수를 정의하고, 해당 변수가 앱에 있는 기존 디렉토리로 설정된 경우.
 
 ## 스타터 애플리케이션
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}}는 PHP 스타터 애플리케이션을 제공합니다. PHP 스타터 애플리케이션은 앱에 사용할 수 있는 템플리트를 제공하는 단순한 PHP 앱입니다. 스타터 앱을 사용하여 시험해 볼 수 있으며 {site.data.keyword.Bluemix}} 환경을 변경하고 변경사항을 푸시할 수
+{{site.data.keyword.Bluemix}}는 PHP 스타터 애플리케이션을 제공합니다. PHP 스타터 애플리케이션은 앱에 사용할 수 있는 템플리트를 제공하는 단순한 PHP 앱입니다. 스타터 앱을 사용하여 시험해 볼 수 있으며 {{site.data.keyword.Bluemix}} 환경을 변경하고 변경사항을 푸시할 수
 있습니다. 스타터 애플리케이션 사용에 대한 도움말은 [스타터 애플리케이션 사용](/docs/cfapps/starter_app_usage.html)을 참조하십시오. 
 
 ## 런타임 버전
@@ -42,7 +42,9 @@ composer.json 파일에서 앱이 사용할 PHP 버전을 지정할 수 있습�
 }
 ```
 {: codeblock}
-자세한 정보는 [작성기 패키지 링크](https://getcomposer.org/doc/04-schema.md#package-links)를 참조하십시오. 버전이 지정되지 않은 경우 기본적으로 버전 5.5.34가 선택됩니다.
+자세한 정보는 [Composer Package links ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://getcomposer.org/doc/04-schema.md#package-links)를 참조하십시오.
+
+버전이 지정되지 않은 경우 기본적으로 버전 5.5.34가 선택됩니다.
 
 ### 사용 가능한 버전: 
 {: #available_versions}
@@ -63,11 +65,12 @@ composer.json 파일에서 앱이 사용할 PHP 버전을 지정할 수 있습�
 [PHP 빌드팩](https://github.com/cloudfoundry/php-buildpack.git)을
 사용하여 애플리케이션을 배치할 수 있습니다. 
 
-# 관련 링크
-{: #rellinks}
+# rellinks
+{: #rellinks notoc}
 ## 튜토리얼 및 샘플
-{: #samples}
+{: #samples notoc}
 * [REST API 빌드 및 배치](http://www.ibm.com/developerworks/library/wa-deployrest-app/)
 * [모바일 친화 칼로리 카운터 빌드 및 배치](http://www.ibm.com/developerworks/library/mo-bluemix-php-nutritionix-angularjs/)
-## 일반
+## general
+{: #general notoc}
 * [PHP에 대한 Cloud Foundry 빌드팩](https://github.com/cloudfoundry/php-buildpack.git)

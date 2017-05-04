@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-11"
+  years: 2015, 2017
+lastupdated: "2017-03-22"
 
 ---
 
@@ -54,7 +54,7 @@ Nutzung der folgenden Liberty-Features:
 * servlet-3.1
 * websocket-1.1
 * icap:managementConnector-1.0
-* appstate-1.0
+* appstate-2.0
 
 Diese Features entsprechen den Java EE 7 Web Profile-Features. Sie können eine andere Gruppe von Liberty-Features angeben, indem Sie die Umgebungsvariable JBP_CONFIG_LIBERTY festlegen. Um zum Beispiel nur die Features
 'jsp-2.3' und 'websocket-1.1' zu aktivieren, führen Sie mit dem folgenden Befehl ein erneutes Staging für die Anwendung aus:
@@ -103,7 +103,7 @@ Die vollständige Standardkonfigurationsdatei 'server.xml' für Liberty lautet w
           <feature>servlet-3.1</feature>
           <feature>websocket-1.1</feature>
           <feature>icap:managementConnector-1.0</feature>
-          <feature>appstate-1.0</feature>
+          <feature>appstate-2.0</feature>
        </featureManager>
 
        <application name='myapp' location='myapp.war' type='war' context-root='/'/>
@@ -115,7 +115,7 @@ Die vollständige Standardkonfigurationsdatei 'server.xml' für Liberty lautet w
        <applicationMonitor dropinsEnabled='false' updateTrigger='mbean'/>
        <config updateTrigger='mbean'/>
        <cdi12 enableImplicitBeanArchives='false'/>
-       <appstate appName='myapp' markerPath='${home}/../.liberty.state'/>
+       <appstate2 appName='myapp'/>
     </server>
 ```
 {: codeblock}
@@ -240,10 +240,7 @@ Die folgenden Variablen sind in der Datei `runtime-vars.xml` definiert und werde
 ### Auf Informationen gebundener Services zugreifen
 {: #accessing_info_of_bound_services}
 
-Wenn Sie einen Service an Ihre Anwendung binden möchten, werden
-Informationen zu diesem Service, wie beispielsweise Verbindungsberechtigungsnachweise, in die
-[Umgebungsvariable VCAP_SERVICES](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES)
-eingefügt, die Cloud Foundry für die Anwendung festlegt. Für [automatisch konfigurierte
+Wenn Sie einen Service an Ihre Anwendung binden möchten, finden Sie Informationen zum Service wie beispielsweise Verbindungsberechtigungsnachweise in der Umgebungsvariable [VCAP_SERVICES ![Symbol 'Externer Link'](../../icons/launch-glyph.svg "Symbol 'Externer Link'")](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES), die Cloud Foundry für die Anwendung festlegt. Für [automatisch konfigurierte
 Services](autoConfig.html) werden Servicebindungseinträge in der Datei 'server.xml' vom Liberty-Buildpack
 generiert oder aktualisiert. Der Inhalt der Servicebindungseinträge kann in einem der folgenden Formate vorliegen:
 
@@ -265,8 +262,8 @@ Die typischen Informationen lauten wie folgt:
 Bei gebundenen Services, die nicht automatisch vom Liberty-Buildpack konfiguriert werden, muss die Anwendung den Zugriff der Back-End-Ressource selbst verwalten.
 
 # Zugehörige Links
-{: #rellinks}
+{: #rellinks notoc}
 ## Allgemein
-{: #general}
+{: #general notoc}
 * [Liberty-Laufzeit](index.html)
 * [Übersicht über das Liberty-Profil](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

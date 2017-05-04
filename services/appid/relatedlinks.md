@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-04-17"
+lastupdated: "2017-04-20"
 
 ---
 
@@ -15,25 +15,16 @@ lastupdated: "2017-04-17"
 You can use the following related links to learn more and interact with the service.
 {:shortdesc}
 
-## API Reference
-{: #api}
+<!--- ## Tutorials and samples
+{: #tutorials-samples}
 
-* <a href="https://appid-oauth.ng.bluemix.net/swagger-ui/#!/Authorization_Server_V3/authorization" target="_blank">{{site.data.keyword.appid_short_notm}} oauth-flows <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
-
-
-## SDK
-{: #sdk}
-
-* <a href="https://github.com/ibm-cloud-security/appid-clientsdk-android" target="_blank">{{site.data.keyword.appid_short_notm}} Android Client SDK <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
-* <a href="https://github.com/ibm-cloud-security/appid-clientsdk-swift" target="_blank">{{site.data.keyword.appid_short_notm}} iOS-Swift Client SDK <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
-* <a href="https://github.com/ibm-cloud-security/appid-serversdk-nodejs" target="_blank">{{site.data.keyword.appid_short_notm}} Nodejs Server SDK <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
-* <a href="https://github.com/ibm-cloud-security/appid-serversdk-swift" target="_blank">{{site.data.keyword.appid_short_notm}} Swift Server SDK <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
+* REVIEWER: Links to samples and tutorials here --->
 
 
 ## Videos
 {: #videos}
 
-* <a href="https://www.youtube.com/watch?v=cTn7l_J3tPg" target="_blank">Introducing {{site.data.keyword.appid_short_notm}} <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
+* <a href="https://www.youtube.com/watch?v=cTn7l_J3tPg" target="_blank">Tell me about {{site.data.keyword.appid_short_notm}} <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
 
 
 ## Blogs

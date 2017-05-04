@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,7 +12,9 @@ lastupdated: "2017-01-08"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# {{site.data.keyword.amashort}} Cordova 앱용 사용자 정의 인증 구성
+**중요: {{site.data.keyword.amafull}} 서비스는 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다. **
+
+# Mobile Client Access Cordova 앱의 사용자 정의 인증 구성
 {: #custom-cordova}
 
 사용자 정의 인증 및 {{site.data.keyword.amafull}} 클라이언트 SDK를 사용하여 보호 애플리케이션에 액세스하도록 Cordova 애플리케이션을 인스트루먼트합니다. 
@@ -107,7 +109,7 @@ authenticationContext.submitAuthenticationFailure(info);
 ## 사용자 정의 인증 리스너 워크플로우의 샘플 구현
 {: #custom-cordova-authlisten-sample}
 
-이 인증 리스너 샘플은 사용자 정의 ID 제공자와 함께 작동하도록 설계되었습니다. [이 Github 저장소 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "외부 링크 아이콘"){: new_window}에서 사용자 정의 ID 제공자를 다운로드할 수 있습니다. 
+이 인증 리스너 샘플은 사용자 정의 ID 제공자와 함께 작동하도록 설계되었습니다. 사용자 정의 ID 제공자는 [이 Github 저장소 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}에서 다운로드할 수 있습니다. 
 
 ```JavaScript
 var customAuthenticationListener = {

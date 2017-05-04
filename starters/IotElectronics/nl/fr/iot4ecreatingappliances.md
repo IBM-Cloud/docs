@@ -2,15 +2,16 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
 
 # Utilisation de l'application de démarrage
 Créez des appareils simulés dans l'application de démarrage {{site.data.keyword.iotelectronics_full}}. Découvrez comment un fabricant peut surveiller des appareils connectés à {{site.data.keyword.iot_short_notm}}. Interagissez manuellement avec l'appareil simulé pour déclencher des alertes, des notifications et des actions.
@@ -48,25 +49,3 @@ Dans l'application de démarrage, vous pouvez créer et contrôler des appareils
 3. Pour afficher les détails de votre machine à laver, cliquez sur un modèle. Dans la commande et le panneau de commande, démarrez la machine à laver ou cliquez sur les différents types de panne pour afficher les changements de statut. Vous pouvez également afficher les changements de statut et contrôler la machine à laver depuis votre application mobile.
 
   ![Détails statut de la machine à laver.](images/IoT4E_washer_control.svg "Détails du statut de la machine à laver")
-
-
-# Liens connexes
-{: #rellinks}
-
-## Documentation sur les API
-{: #api}
-* [{{site.data.keyword.iotelectronics}} API](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)
-* [{{site.data.keyword.iot_short}} API](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)
-
-
-## Composants
-{: #general}
-
-* [Documentation d'{{site.data.keyword.iotelectronics}}](iotelectronics_overview.html)
-* [Documentation d'{{site.data.keyword.iot_full}}](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-*  [Documentation de {{site.data.keyword.amashort}}](https://console.ng.bluemix.net/docs/services/mobileaccess/overview.html)
-* [Documentation d'{{site.data.keyword.sdk4nodefull}}](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
-
-## Exemples
-{: #samples}
-* [Modèle d'application mobile](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html)

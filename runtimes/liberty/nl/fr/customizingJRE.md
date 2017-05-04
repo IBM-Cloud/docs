@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-08-15"
+  years: 2015, 2017
+lastupdated: "2017-03-23"
 
 ---
 
@@ -84,7 +84,8 @@ Java est désactivé et les vidages mémoire de machine virtuelle Java sont ache
 l'application commun. Ces vidages peuvent être affichés depuis le tableau de bord Bluemix ou l'interface de ligne de commande CF.
 
 L'exemple ci-après illustre une configuration de machine virtuelle Java par défaut qui est générée par le pack de construction
-pour une application déployée avec une limite de mémoire de 512 Mo :   
+pour une application déployée avec une limite mémoire de 512M :
+
 ```
     -Xtune:virtualized
     -Xmx384M
@@ -124,7 +125,7 @@ utilisation car les options varient en fonction de l'environnement d'exécution 
 <td> OpenJDK </td>
 <td>repose sur l'exécution HotSpot avec le préfixe -X pour les options non standard, -XX pour les options de développement et des indicateurs booléen
 pour activer ou désactiver une option </td>
-<td>[Présentation de l'exécution HotSpot](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
+<td>[Présentation de l'exécution HotSpot ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
 </tr>
 </table>
 
@@ -189,72 +190,78 @@ Liberty</td>
 ### Détermination des options JVM appliquées pour une application en cours d'exécution
 {: #determining_applied_jvm_options}
 
-Sauf pour les options définies par l'application qui sont spécifiées avec la variable d'environnement JVM_ARGS, les options résultantes sont
-conservées dans l'environnement d'exécution sous forme d'options de ligne de commande (applications Java autonomes) ou dans un fichier jvm.options (applications Java non autonomes). Les options JVM appliquées pour l'application peuvent être affichées depuis le tableau de bord Bluemix ou l'interface de ligne de commande CF.
+Sauf pour les options définies par l'application qui sont spécifiées avec la variable d'environnement JVM_ARGS, les options résultantes sont conservées dans l'environnement d'exécution sous forme d'options de ligne de commande (applications Java autonomes) ou dans un fichier `jvm.options` (applications Java non autonomes). Les options de JVM en vigueur pour l'application peuvent être affichées depuis la console IBM Bluemix ou l'interface de ligne de commande CF.
 
-Les
-options JVM pour l'application Java autonome sont conservées sous forme d'options de ligne de commande. Elles peuvent être consultées dans le fichier staging_info.yml.
+Les options de JVM pour l'application Java autonome sont conservées sous forme d'options de ligne de commande. Elles peuvent être consultées dans le fichier `staging_info.yml`.
+
+Pour voir le fichier `staging_info.yml` sur une application lancée dans un noeud DEA, exécutez :
+
 ```
     $ cf files myapp staging_info.yml
 ```
 {: codeblock}
 
-Les options JVM pour les fichiers WAR, les fichiers EAR, les répertoires de serveur et le déploiement de package de serveur sont conservées dans un fichier jvm.options.
+Pour voir le fichier `staging_info.yml` sur une application lancée dans une cellule Diego, exécutez :
 
-Pour afficher le fichier jvm.options pour les fichiers WAR, les fichiers EAR et les répertoires de serveur, exécutez la commande suivante :
+```
+    $ cf ssh myapp -c "cat staging_info.yml"
+```
+{: codeblock}
+
+Les options de JVM pour les déploiements sous forme de fichier WAR ou EAR, sous forme de répertoire de serveur ou sous forme de package de serveur sont conservées dans un fichier `jvm.options`. Le fichier `jvm.options` se trouve dans le répertoire `app/wlp/usr/servers/<nomServeur>/`. Dans la plupart des cas, ```<nomServeur>``` est `defaultServer`, sauf si un serveur en package a été déployé avec un nom de serveur différent. Par exemple :
+
+Pour voir le fichier `jvm.options` sur une application lancée dans un noeud DEA, exécutez :
+
 ```
     $ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
 ```
 {: codeblock}
 
-Pour afficher le fichier jvm.options pour un package de serveur, remplacez <serverName> par le nom de votre serveur et exécutez la commande suivante :
+Pour voir le fichier `jvm.options` sur une application lancée dans une cellule Diego, exécutez :
+
 ```
-    $ cf files myapp app/wlp/usr/servers/<serverName>jvm.options
+    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/jvm.options"
 ```
 {: codeblock}
+
 
 #### Exemple d'utilisation
 {: #example_usage}
 
-Déploiement d'une application avec des options JVM personnalisées pour activer la journalisation de la récupération de place en mode prolixe pour la machine virtuelle Java d'IBM JRE :
-* Options JVM incluses dans le fichier manifest.yml d'une application :
+Déploiement d'une application avec des options de JVM personnalisées pour activer la journalisation de la récupération de place en mode prolixe de l'IBM JRE
+* Options de JVM incluses dans le fichier `manifest.yml` d'une application :
 
-  <pre>
+```
     env:
       JAVA_OPTS: "-verbose:gc -Xverbosegclog:./verbosegc.log,10,1000"
-  </pre>
-  {: codeblock}
+```
+{: codeblock}
 
-* Pour afficher la journalisation de la récupération de place en mode prolixe de la machine virtuelle Java générée :
+* Pour voir le fichier journal généré par la JVM pour la récupération de place en mode prolixe sur une application lancée dans un noeud DEA, exécutez :
 
-  <pre>
+```
     $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
-  </pre>
-  {: codeblock}    
+```
+{: codeblock}
 
-* Pour mettre à jour l'option JVM
-d'IBM pour une application déployée afin de déclencher un vidage heap, snap et
-javacore sur une condition OutOfMemory, définissez la variable d'environnement de l'application avec l'option JVM et redémarrez l'application :
+* Pour voir le fichier journal généré par la JVM pour la récupération de place en mode prolixe sur une application lancée dans une cellule Diego, exécutez :
 
-  <pre>
+```
+    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/verbosegc.log.001"
+```
+{: codeblock}
+
+* Pour mettre à jour l'option du JRE IBM
+d'une application déployée afin de déclencher un vidage heap, snap et
+javacore sur une condition OutOfMemory, définissez la variable d'environnement de l'application avec l'option de JVM correspondante et redémarrez l'application :
+
+```
     $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
     $ cf restart myapp
-  </pre>
-  {: codeblock}
+```
+{: codeblock}
 
-* Pour afficher les vidages de machine virtuelle Java générés lorsque la condition d'insuffisance de mémoire est déclenchée :
-
-  <pre>
-    $ cf files myapp dumps
-
-    Getting files for app myapp in org myemail@email.com / space dev as myemail@email.com...
-    OK
-
-    Snap.20141106.100252.81.0003.trc           307.3K
-    heapdump.20141106.100252.81.0001.phd       3.9M
-    javacore.20141106.100252.81.0002.txt     870.5K
-  </pre>
-  {: codeblock}
+ Consultez la documentation [Journalisation et traçage](loggingAndTracing.html#download_dumps) les détails concernant la visualisation et le téléchargement des fichiers de vidage générés.
 
 ### Surimposition de l'environnement d'exécution Java (JRE)
 {: #overlaying_jre}
@@ -298,6 +305,7 @@ ressources à la racine de l'archive. Dans le cas d'un serveur (fichier compress
 Le répertoire .java-overlay contient des fichiers spécifiques sous la même hiérarchie de fichiers que l'environnement d'exécution Java surimposé à partir de .java/jre.
 
 Par exemple, si vous voulez utiliser le chiffrement AES 256 bits, vous devez surimposer les fichiers de règles Java suivants :
+
 ```
     .java\jre\lib\security\US_export_policy.jar
     .java\jre\lib\security\local_policy.jar
@@ -305,6 +313,7 @@ Par exemple, si vous voulez utiliser le chiffrement AES 256 bits, vous devez sur
 {: codeblock}
 
 Téléchargez les fichiers de règles non restreintes appropriées et ajoutez-les à votre application sous la forme :
+
 ```
     resources\.java-overlay\.java\jre\lib\security\US_export_policy.jar
     resources\.java-overlay\.java\jre\lib\security\local_policy.jar
@@ -314,8 +323,8 @@ Téléchargez les fichiers de règles non restreintes appropriées et ajoutez-le
 Lorsque vous envoyez votre application par commande push, ces fichiers JAR se surimposent aux fichiers JAR de règles par défaut dans l'environnement d'exécution Java. Ce processus active le chiffrement AES 256 bits.
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
-{: #general}
+{: #general notoc}
 * [Environnement d'exécution Liberty](index.html)
 * [Présentation de Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

@@ -252,7 +252,7 @@ wsk action invoke /messaging/messageHubProduce -p kafka_brokers_sasl "[\"kafka01
 ## Exemples
 
 ### Intégration d'OpenWhisk avec IBM Message Hub, Node Red, IBM Watson IoT, IBM Object Storage et IBM Data Science Experience
- [Cliquez ici](https://medium.com/openwhisk/transit-flexible-pipeline-for-iot-data-with-bluemix-and-openwhisk-4824cf20f1e0) pour consulter un exemple d'intégration OpenWhisk avec IBM Message Hub, Node Red, IBM Watson IoT, IBM Object Storage et le service IBM Data Science Experience (Spark).
+[Cliquez ici](https://medium.com/openwhisk/transit-flexible-pipeline-for-iot-data-with-bluemix-and-openwhisk-4824cf20f1e0) pour consulter un exemple d'intégration OpenWhisk avec IBM Message Hub, Node Red, IBM Watson IoT, IBM Object Storage et le service IBM Data Science Experience (Spark).
 
 ## Références
 - [IBM Message Hub](https://developer.ibm.com/messaging/message-hub/)

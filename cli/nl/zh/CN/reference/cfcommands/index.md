@@ -414,7 +414,7 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 <dd>您的密码。</dd>
 <dd>*重要信息：*如果在命令行界面上使用 *-p* 参数来提供密码，那么密码可能会记录在命令行历史记录中。出于安全考虑，请避免使用 -p 参数来提供密码。请改为在命令行界面提示您时输入密码。</dd>
 <dt>*-sso*</dt>
-<dd>使用联合标识登录时，必须使用单点登录选项 (SSO)。使用 IBM 标识登录时则无需如此。如果您尝试使用联合标识登录，且您未指定 SSO 参数，那么系统将提示您包含它。使用 SSO 参数会在登录时提示您输入一次性密码。</dd>
+<dd>使用联合标识登录时，必须使用单点登录选项 (SSO)。使用 IBM 标识登录时则无需如此。如果您尝试使用联合标识登录，但未指定 SSO 参数，系统将提示您使用该参数。使用 SSO 参数会在登录时提示您输入一次性密码。</dd>
 <dt>*-o* organization_name</dt>
 <dd>您要登录的组织的名称。</dd>
 <dt>*-s* space_name</dt>
@@ -559,7 +559,7 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 
 <strong>示例</strong>：
 
-使用缺省 start 命令启动名为 `my_app` 的应用程序。
+使用缺省启动命令启动名为 `my_app` 的应用程序。
 ```
 cf push `my_app` -c null
 ```

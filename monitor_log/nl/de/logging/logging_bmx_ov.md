@@ -16,7 +16,7 @@ lastupdated: "2017-02-16"
 # Protokollierung in Bluemix
 {: #logging_bmx_ov}
 
-Die {{site.data.keyword.Bluemix_notm}}-Protokollierungsfunktionen sind in die Plattform integriert und die Erfassung von Daten wird für Cloudressourcen automatisch aktiviert. {{site.data.keyword.Bluemix_notm}} erfasst standardmäßig Protokolle für Ihre Apps, App-Laufzeiten und Verarbeitungslaufzeiten, in denen diese Apps ausgeführt werden. 
+Die {{site.data.keyword.Bluemix}}-Protokollierungsfunktionen sind in die Plattform integriert und die Erfassung von Daten wird für Cloudressourcen automatisch aktiviert. {{site.data.keyword.Bluemix_notm}} erfasst standardmäßig Protokolle für Ihre Apps, App-Laufzeiten und Verarbeitungslaufzeiten, in denen diese Apps ausgeführt werden. 
 {:shortdesc}
 
 Mithilfe der Protokollierungsfunktionen in {{site.data.keyword.Bluemix_notm}} können Sie das Verhalten der Cloudplattform und der Ressourcen, die in ihr ausgeführt werden, untersuchen. Zur Erfassung des Standardausgabeprotokolls und des Standardfehlerprotokolls ist keine besondere Ausstattung erforderlich. Anhand von Protokollen können Sie zum Beispiel ein Prüfprotokoll für eine Anwendung bereitstellen, Probleme in Ihrem Service ermitteln, Sicherheitslücken aufdecken, eine Fehlerermittlung für App-Bereitstellungen und das Laufzeitverhalten durchführen, Probleme in der Infrastruktur, in der Ihre App ausgeführt wird, erkennen, Ihre App komponentenübergreifend auf der Cloudplattform verfolgen sowie Muster erkennen, die es Ihnen ermöglichen, präemptive Aktionen durchzuführen, die sich auf Ihr Service-SLA auswirken könnten.
@@ -25,7 +25,7 @@ Wenn Sie Ihre Apps in der Cloud ausführen, können Sie möglicherweise nicht ü
 
 {{site.data.keyword.Bluemix_notm}} zeichnet Protokolldaten auf, die von der Cloud Foundry-Plattform und von Cloud Foundry-Anwendungen generiert werden. In den Protokollen können Sie die Fehler, Warnungen und Informationsnachrichten prüfen, die für Ihre App generiert wurden. Weitere Informationen zur Protokollierung in Cloud Foundry finden Sie unter [Protokollierung für Cloud Foundry-Apps in Bluemix](logging_cf_apps.html#logging_bluemix_cf_apps).
 
-{{site.data.keyword.Bluemix_notm}} zeichnet Protokolldaten auf, die durch {{site.data.keyword.containershort}} generiert werden. Weitere Informationen zur Protokollierung in {{site.data.keyword.containershort}} finden Sie unter [Protokollierung in {{site.data.keyword.containershort}}](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_logs).   
+{{site.data.keyword.Bluemix_notm}} zeichnet Protokolldaten auf, die durch {{site.data.keyword.containershort}} generiert werden. Weitere Informationen zur Protokollierung in {{site.data.keyword.containershort}} finden Sie unter [Protokollierung für den IBM Bluemix Container Service](containers/logging_containers_ov.html#logging_containers_ov).    
 
 
 Die von {{site.data.keyword.Bluemix_notm}} bereitgestellte Protokollierungsfunktionalität bietet Ihnen folgende Möglichkeiten:

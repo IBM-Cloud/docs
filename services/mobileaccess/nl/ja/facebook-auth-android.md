@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+**重要: {{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービス**に置き換えられます。
 
 # Android アプリ用の Facebook 認証の使用可能化
 {: #facebook-auth-android}
@@ -27,7 +29,7 @@ lastupdated: "2017-01-15"
 * **TenantID** 値。{{site.data.keyword.amashort}} ダッシュボードでサービスを開きます。**「モバイル・オプション」**ボタンをクリックします。`tenantId` (`appGUID` とも呼ばれる) の値が、**「アプリ GUID」/「TenantId」**フィールドに表示されます。許可マネージャーを初期化するためにこの値が必要になります。
 * {{site.data.keyword.Bluemix_notm}} **「地域」**。**「アバター」**アイコン![「アバター」アイコン](images/face.jpg "「アバター」アイコン") の横のヘッダー内に現在の {{site.data.keyword.Bluemix_notm}} 地域が表示されます。表示される地域の値は、`「米国南部」`、`「英国」`、または`「シドニー」`のいずれかでなければならず、また WebView Javascript コードで必要な SDK 値 (`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY`、または `BMSClient.REGION_UK`) に対応している必要があります。{{site.data.keyword.amashort}} クライアントを初期化するためにこの値が必要になります。
 * Gradle と連動して機能するように構成された Android プロジェクト。このプロジェクトに {{site.data.keyword.amashort}} Client SDK が装備される必要はありません。  
-* [Facebook for Developers サイト![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.facebook.com/ "外部リンク・アイコンn"){: new_window}上の Android プラットフォームを伴う Facebook アプリ。
+* [Facebook for Developers サイト![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.facebook.com/){: new_window}上の Android プラットフォームを伴う Facebook アプリ。
 
 **重要:** Facebook SDK (`com.facebook.FacebookSdk`) を別個にインストールする必要はありません。Facebook SDK は、{{site.data.keyword.amashort}} Facebook Client SDK を追加する際に Gradle によって自動的にインストールされます。Facebook for Developers サイトで Android プラットフォームを追加する場合はこのステップをスキップできます。
 
@@ -36,7 +38,7 @@ lastupdated: "2017-01-15"
 
 Facebook for Developers Web サイトから、以下を実行します。
 
-1. [Facebook for Developers Web サイト![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.facebook.com "外部リンク・アイコン"){: new_window}で自分のアカウントにログインします。
+1. [Facebook for Developers Web サイト![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.facebook.com){: new_window}で自分のアカウントにログインします。
 
 1. **「製品リスト (Products List)」**から、**「Facebook ログイン (Facebook Login)」**を選択します。
 
@@ -64,7 +66,7 @@ Facebook for Developers Web サイトから、以下を実行します。
 
 	デバッグ・モードとリリース・モードには異なる証明書を使用してください。デバッグ・モードで Android アプリケーションの署名に使用する証明書は Android SDK にバンドルされています。Android SDK は通常、Android Studio によって自動的にインストールされます。作成したアプリを Google Play ストアでリリースする場合、通常自身で生成する別の証明書を使ってアプリに署名する必要があります。
 
-	Facebook の 2 セットのキー・ハッシュを入力できます。1 つはデバッグ証明書を使用してデバッグ・モードでビルドされたアプリケーション用のキー・ハッシュで、もう 1 つはリリース証明書を使用してリリース・モードでビルドされたアプリケーション用のキー・ハッシュです。詳しくは、[アプリに署名する![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://developer.android.com/tools/publishing/app-signing.html "外部リンク・アイコン"){: new_window}を参照してください。
+	Facebook の 2 セットのキー・ハッシュを入力できます。1 つはデバッグ証明書を使用してデバッグ・モードでビルドされたアプリケーション用のキー・ハッシュで、もう 1 つはリリース証明書を使用してリリース・モードでビルドされたアプリケーション用のキー・ハッシュです。詳しくは、[アプリに署名する![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://developer.android.com/tools/publishing/app-signing.html){: new_window}を参照してください。
 
 1. 開発環境用に使用する証明書が含まれた鍵ストアは、`~/.android/debug.keystore` ファイルに保管されています。デフォルトの鍵ストア・パスワードは `android` です。デバッグ・モードでアプリケーションをビルドする際はこの証明書を使用してください。
 
@@ -117,8 +119,6 @@ Client SDK を Android 用に構成するには、Android Studio 内の Gradle �
 	{: codeblock}
 
 	**注:** `com.ibm.mobilefirstplatform.clientsdk.android` グループの `core` モジュールへの依存関係がファイル内にある場合は削除することができます。`facebookauthentication` モジュールは、`core` モジュールと、Facebook 自体の SDK を自動的にダウンロードします。
-
-  
 
 	更新を保存すると、`facebookauthentication` モジュールはすべての必要な SDK をダウンロードして Android プロジェクトにインストールします。
 
@@ -173,7 +173,7 @@ Client SDK を Android 用に構成するには、Android Studio 内の Gradle �
 
 1. Client SDK を初期化し、認証マネージャーを登録します。**context** と **region** を渡して、{{site.data.keyword.amashort}} Client SDK を初期化します。
 
-	初期化コードを入れる一般的な場所 (ただし、必須ではない) は、Android アプリケーションのメイン・アクティビティーの `onCreate` メソッドです。<br/>
+	初期化コードを入れる一般的な場所 (ただし、必須ではない) は、Android アプリケーション内のメイン・アクティビティーの `onCreate` メソッド内です。<br/>
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
@@ -190,7 +190,7 @@ Client SDK を Android 用に構成するには、Android Studio 内の Gradle �
 
 	これらの値の取得について詳しくは、[開始する前に](#before-you-begin)を参照してください。
 
-	**注:** Android アプリケーションの対象が Android バージョン 6.0 (API レベル 23) 以降の場合、そのアプリケーションに、`register` の呼び出しの前に `android.permission.GET_ACCOUNTS` 呼び出しがあるようにする必要があります。詳しくは、Android Developers サイト上の[このトピック![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.android.com/training/permissions/requesting.html "外部リンク・アイコン"){: new_window}を参照してください。
+	**注:** Android アプリケーションの対象が Android バージョン 6.0 (API レベル 23) 以降の場合、そのアプリケーションに、`register` の呼び出しの前に `android.permission.GET_ACCOUNTS` 呼び出しがあるようにする必要があります。詳しくは、Android Developers サイト上の[このトピック![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.android.com/training/permissions/requesting.html){: new_window}を参照してください。
 
 1. 以下のコードをアクティビティーに追加します。
 

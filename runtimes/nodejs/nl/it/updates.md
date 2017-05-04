@@ -1,22 +1,40 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-03-23"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Aggiornamenti più recenti al pacchetto di build sdk-for-nodejs
+# Aggiornamenti più recenti al pacchetto di build di SDK for Nodejs
 {: #latest_updates}
 
 Un elenco degli aggiornamenti più recenti nel pacchetto di build sdk-for-nodejs.
+
+## 10 marzo, 2017: pacchetto di build Node.js aggiornato v3.11
+Questa release del pacchetto di build supporta le versioni di runtime di IBM SDK for Node.js: 0.10.47, 0.10.48, 0.12.17, 0.12.18, 4.7.3, 4.8.0, 6.9.5 e 6.10.0. La versione predefinita è ora la 4.8.0.
+
+In aggiunta ai nuovi runtime, questa release contiene una correzione a un bug riscontrato durante l'abilitazione dell'handler di gestione dell'applicazione shell utilizzando la IU devconsole. Questo pacchetto di build modifica il modo in cui la configurazione automatica utilizza il servizio Monitoring and Analytics. Le applicazioni che utilizzano il piano gratuito non avranno più la funzionalità di registrazione aggiunta alle loro applicazioni, sta venendo sostituita da logmet.
+
+## 20 gennaio, 2017: pacchetto di build Node.js aggiornato v3.10
+Questa release del pacchetto di build supporta le versioni di runtime di IBM SDK for Node.js: 0.10.47, 0.10.48, 0.12.17, 0.12.18, 4.7.0, 4.7.2, 6.9.2 e 6.9.4. La versione predefinita è ora la 4.7.2.
+
+Contiene una correzione a un bug per cui "npm start" non veniva sempre richiamato per avviare l'applicazione.
+
+## 17 novembre, 2016: pacchetto di build Node.js aggiornato v3.9
+Questa release del pacchetto di build supporta le versioni di runtime di IBM SDK for Node.js: 0.10.47, 0.10.48, 0.12.16, 0.12.17, 4.6.1, 4.6.2, 6.7.0 e 6.9.1. La versione predefinita è ora la 4.6.2.
+
+Tieni presente che Node.js v6 è stato promosso allo stato di LTS il 18 ottobre 2016 e presto diventerà il runtime predefinito del pacchetto di build. Node.js v0.10 ha terminato il suo ciclo di vita il 31 ottobre 2016 e a breve non sarà più incluso nel pacchetto di build. Consulta [Node.js version long-term support and the SDK for Node.js buildpack](https://www.ibm.com/blogs/bluemix/2016/11/node-version-support-and-sdk-buildpack/) per ulteriori dettagli.
+
+I bug che influenzano gli handler di traccia e di inspector della gestione dell'applicaizone, quando utilizzati insieme a Node.js v6, sono stati risolti in questa release. Consulta [Managing Liberty and Node.js apps](/docs/manageapps/app_mng.html#inspector) per ulteriori informazioni su come l'handler inspector sta venendo modificato ora che Node.js v6 ha integrato la funzionalità inspector.
+
 ## 7 ottobre 2016: pacchetto di build Node.js aggiornato v3.8-20161006-1211
 Questa release del pacchetto di build supporta le versioni di runtime di IBM SDK for Node.js: 0.10.46, 0.10.47, 0.12.15, 0.12.16, 4.5.0, 4.6.0, 6.6.0 e 6.7.0. La versione predefinita è ora la 4.6.0.
 
-In aggiunta ai nuovi runtime, questa release contiene correzioni di bug del pacchetto di build. Inclusa una correzione a un problema noto quando utilizzi Node.js 6.x e la modalità di sviluppo che era stata menzionata negli aggiornamenti della release v3.7-20160826-1101. È inoltre sincronizzata con il [pacchetto di build Node.js Cloud Foundry v1.5.20](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.20). 
+In aggiunta ai nuovi runtime, questa release contiene correzioni di bug del pacchetto di build. Inclusa una correzione a un problema noto quando utilizzi Node.js 6.x e la modalità di sviluppo che era stata menzionata negli aggiornamenti della release v3.7-20160826-1101. È inoltre sincronizzata con il [pacchetto di build Node.js Cloud Foundry v1.5.20](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.20).
 
 ## 26 agosto, 2016: pacchetto di build Node.js aggiornato v3.7-20160826-1101
 Questa release del pacchetto di build supporta le versioni di runtime di IBM SDK for Node.js: 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.7, 4.5.0, 6.2.2 e 6.4.0. La versione predefinita è ora la 4.5.0.
@@ -49,7 +67,7 @@ Questa release del pacchetto di build aggiunge le versioni di runtime di IBM SDK
 
 Sono incluse le correzioni per le seguenti vulnerabilità di sicurezza:
 * [CVE-2015-8855](http://www-01.ibm.com/support/docview.wss?uid=swg21982852)
-* [CVE-2016-2108 CVE-2016-2107 CVE-2016-2105 CVE-2016-2106 CVE-2016-2109 CVE-2016-2176](https://www.openssl.org/news/secadv/20160503.txt)
+* [CVE-2016-2108 CVE-2016-2107 CVE-2016-2105 CVE-2016-2106 CVE-2016-2109 CVE-2016-2176 ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.openssl.org/news/secadv/20160503.txt)
 
 Nota che è presente un problema noto con npm v3 e il programma di utilità dell'inspector Gestione applicazioni. npm 3.8.6 è il valore predefinito con i runtime 6.0.0 e 6.1.0. Se desideri utilizzare i runtime 6.x e il programma di utilità dell'inspector, dovrai specificare una versione npm 2.X nel tuo package.json come soluzione alternativa temporanea.
 
@@ -129,7 +147,9 @@ Per eseguire il push della tua applicazione con v3.0beta:
 ```
 {: codeblock}
 
-Questa modifica al runtime predefinito non influenzerà la tua applicazione se hai configurato una specifica versione di Node.js nel package.json della tua applicazione. **Nota:** puoi sempre specificare la versione di Node.js per eseguire la tua applicazione utilizzando la voce engines.node nel tuo package.json come spiegato in [Versioni disponibili](index.html#available_versions).
+Questa modifica al runtime predefinito non influenzerà la tua applicazione se hai configurato una specifica versione di Node.js nel package.json della tua applicazione.
+
+**Nota:** puoi sempre specificare la versione di Node.js per eseguire la tua applicazione utilizzando la voce engines.node nel tuo package.json come spiegato in [Versioni disponibili](index.html#available_versions).
 
 ## 23 novembre 2015: pacchetto di build Node.js aggiornato v2.7-20151118-1003
 
@@ -141,7 +161,7 @@ Node.js v2.6.1 introduce una correzione di bug al [gestore di gestione delle app
 
 ## 15 ottobre 2015: pacchetto di build Node.js aggiornato v2.6-20151006-1309
 
-Questa release del pacchetto di build Node.js offre l'integrazione di [StrongLoop Process Manager](https://strong-pm.io) alla funzione Gestione applicazioni. Per ulteriori informazioni, consulta il post del blog [StrongLoop DevOps for Node.js Applications on Bluemix](https://developer.ibm.com/bluemix/2015/10/15/strongloop-devops-on-bluemix/).
+Questa release del pacchetto di build Node.js offre l'integrazione di [StrongLoop Process Manager ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://strong-pm.io) alla funzione Gestione applicazioni. Per ulteriori informazioni, consulta il post del blog [StrongLoop DevOps for Node.js Applications on Bluemix](https://developer.ibm.com/bluemix/2015/10/15/strongloop-devops-on-bluemix/).
 
 ## 15 giugno 2015: pacchetto di build Node.js aggiornato v2.0-20150608-1503
 
@@ -198,15 +218,15 @@ index.html non corretto nell'applicazione del cliente durante la distribuzione.
 
 ## 28 agosto 2014: pacchetto di build Node.js aggiornato v1.3-20140821-1143
 
-* Il pacchetto di build Node.js più recente è ora fornito con IBM SDK for Node.js v1.1.0.6. Questo aggiornamento indica che otterrai un runtime IBM Node.js pienamente supportato quando specifichi il runtime Node.js stabile più recente, v0.10.30, per la tua applicazione. Questo runtime corregge la [vulnerabilità di danneggiamento della memoria V8](http://blog.nodejs.org/2014/07/31/v8-memory-corruption-stack-overflow).
+* Il pacchetto di build Node.js più recente è ora fornito con IBM SDK for Node.js v1.1.0.6. Questo aggiornamento indica che otterrai un runtime IBM Node.js pienamente supportato quando specifichi il runtime Node.js stabile più recente, v0.10.30, per la tua applicazione. Questo runtime corregge [V8 Memory Corruption vulnerability ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://blog.nodejs.org/2014/07/31/v8-memory-corruption-stack-overflow).
 * Il pacchetto di build include anche dei miglioramenti e delle correzioni di bug all'estensione del servizio Monitoring and Analytics, consentendoti di diagnosticare le prestazioni e le condizioni di errore tramite il servizio.
 
 ## 29 luglio 2014: pacchetto di build Node.js aggiornato v1.1-20140717-1447
 
-Il pacchetto di build Node.js è ora fornito con IBM SDK for Node.js v1.1.0.5. Questo aggiornamento indica che otterrai un runtime IBM Node.js pienamente supportato quando specifichi il runtime Node.js stabile più recente per la tua applicazione, v0.10.29. Per ulteriori informazioni sugli SDK IBM Node.js, fai clic [qui](https://developer.ibm.com/node/sdk/).
+Il pacchetto di build Node.js è ora fornito con IBM SDK for Node.js v1.1.0.5. Questo aggiornamento indica che otterrai un runtime IBM Node.js pienamente supportato quando specifichi il runtime Node.js stabile più recente per la tua applicazione, v0.10.29. Per ulteriori informazioni sulle [IBM Node.js SDKs](https://developer.ibm.com/node/sdk/).
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
-{: #general}
+{: #general notoc}
 * [runtime node.js](index.html)

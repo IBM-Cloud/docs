@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -14,13 +14,14 @@ lastupdated: "2017-03-17"
 # Guía de aprendizaje del iniciador Mobile Basic
 {: #tutorial}
 
-En la siguiente guía de aprendizaje encontrará los pasos a seguir para crear un proyecto desde el iniciador Mobile Basic, incluidas las herramientas que debe tener instaladas y, por lo tanto, los pasos para ejecutar el proyecto en Xcode y Android Studio.
+En la siguiente guía de aprendizaje encontrará los pasos a seguir para crear un proyecto desde el iniciador Mobile Basic. Incluye la instalación de las herramientas necesarias y los pasos a seguir para ejecutar el proyecto en Xcode y Android Studio. 
 
+Puede crear un proyecto utilizando la [{{site.data.keyword.dev_console}}](#create-devex) basada en la web o la [{{site.data.keyword.dev_cli_notm}}](#create-cli) de mandatos.
 
 ## Instalación de herramientas del desarrollador
 {: #dev_tools}
 
-Asegúrese de haber instalado las [herramientas de desarrollador necesarias ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](get_code.html#prereq-dev-tools){: new_window}.
+Asegúrese de instalar las [herramientas de desarrollador necesarias ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](get_code.html#prereq-dev-tools){: new_window}.
 
 
 ## Creación de un proyecto mediante la {{site.data.keyword.dev_console}}
@@ -28,11 +29,11 @@ Asegúrese de haber instalado las [herramientas de desarrollador necesarias ![ic
 
 1. Cree un proyecto de {{site.data.keyword.dev_console}} en {{site.data.keyword.Bluemix}}.
 
-   1. Desde la página **Cómo empezar** en la {{site.data.keyword.dev_console}}, pulse **Crear proyecto**.
+   1. En la página [**Iniciación** ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://console.ng.bluemix.net/developer/getting-started/) de la {{site.data.keyword.dev_console}}, pulse **Crear proyecto**.
 
       De forma alternativa, puede pulsar **Crear proyecto** desde la página **Proyectos**.
 
-   2. Seleccione **Aplicación móvil** y pulse **Siguiente**.
+   2. Seleccione **App móvil** y pulse **Siguiente**.
 
    3. Seleccione **Basic** y pulse **Siguiente**.
 
@@ -52,7 +53,7 @@ Asegúrese de haber instalado las [herramientas de desarrollador necesarias ![ic
    
    3. Active **Autenticación**.
    
-   4. Seleccione su proveedor de identidad y especifique la información necesaria para configurarlo. Solo puede habilitar un proveedor de identidad.
+   4. Seleccione su proveedor de identidad y especifique la información para configurarlo. Solo puede habilitar un proveedor de identidad.
    
    5. Consulte [Configuración de los proveedores de identidad} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/appid/identity-providers.html){: new_window} para obtener más información sobre cómo configurar Authentication.
 
@@ -94,7 +95,7 @@ Asegúrese de haber instalado las [herramientas de desarrollador necesarias ![ic
 
    5. Consulte [Iniciación a {{site.data.keyword.objectstorageshort}} ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](/docs/services/ObjectStorage/index.html){: new_window} para obtener más información sobre cómo configurar {{site.data.keyword.objectstorageshort}}.
 
-6. Genere el código del proyecto.
+6. Genere el código del proyecto:
 
    1. Pulse **Obtener el código** en la página **Visión general del proyecto** para seleccionar el lenguaje.
    
@@ -104,13 +105,21 @@ Asegúrese de haber instalado las [herramientas de desarrollador necesarias ![ic
    
    3. Cuando se haya generado el código, pulse **Descargar Swift** para descargar el archivo del proyecto.
 
-7. Opcional: [Actualización del proyecto](project_overview_page.html#update_language) para generar un nuevo lenguaje.
+7. Empiece a trabajar con el proyecto descargado: 
+
+	1. Expanda el archivo archivado. 
+	
+	2. Vaya al directorio del nuevo proyecto. 
+	
+	3. Utilice {{site.data.keyword.dev_cli_notm}} para continuar. 
+
+8. Opcional: [Actualización del proyecto](project_overview_page.html#update_language) para generar un nuevo lenguaje.
 
 
-## Creación de un proyecto mediante {{site.data.keyword.dev_cli_notm}}
+## Creación de un proyecto mediante la {{site.data.keyword.dev_cli_notm}}
 {: #create-cli}
 
-1. Asegúrese de haber instalado [{{site.data.keyword.dev_cli_short}}](dev_cli.html).
+1. Asegúrese de instalar [{{site.data.keyword.dev_cli_short}}](dev_cli.html).
 
 2. En la solicitud de terminal, vaya al directorio local que prefiera y ejecute el siguiente mandato.
 
@@ -138,7 +147,7 @@ Asegúrese de haber instalado las [herramientas de desarrollador necesarias ![ic
 
 2. Abra el archivo `README.md` en un visor Markdown para ver los pasos a seguir para configurar el proyecto.
 
-   1. Abra el terminar y vaya a la carpeta del proyecto.
+   1. Abra el terminal y vaya a la carpeta del proyecto.
    
       1. Ejecute `pod setup` si tiene que configurar el repositorio de CocoaPods.
       

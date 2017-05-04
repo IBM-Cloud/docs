@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-01-25"
 
 ---
 
@@ -22,8 +22,8 @@ Il python_buildpack verrà utilizzato se la directory root della tua applicazion
 ## Applicazione starter
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} fornisce un'applicazione starter Python.  L'applicazione starter Python è una semplice applicazione PHP che fornisce un template che puoi utilizzare per la tua applicazione.
-Puoi sperimentare l'applicazione starter ed effettuare e inviare modifiche all'ambiente {{site.data.keyword.Bluemix}}. Consulta [Utilizzo di applicazioni starter](/docs/cfapps/starter_app_usage.html) per informazioni sull'utilizzo dell'applicazione starter.
+{{site.data.keyword.Bluemix}} fornisce un'applicazione starter Python.  L'applicazione starter Python è una semplice applicazione Python che fornisce un template che puoi utilizzare per la tua applicazione. Puoi fare delle prove con l'applicazione starter, apportare modifiche ed eseguirne il push
+all'ambiente {{site.data.keyword.Bluemix}}.  Consulta [Utilizzo di applicazioni starter](/docs/cfapps/starter_app_usage.html) per informazioni sull'utilizzo dell'applicazione starter.
 
 ## Versioni di runtime
 {: #runtime_versions}
@@ -58,5 +58,7 @@ il [pacchetto di build Python](https://github.com/cloudfoundry/python-buildpack)
 per distribuire l'applicazione.
 
 # rellinks
+{: #rellinks notoc}
 ## general
+{: #general notoc}
 * [Pacchetto di build Cloud Foundry per Python](https://github.com/cloudfoundry/python-buildpack)

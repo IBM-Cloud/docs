@@ -61,9 +61,9 @@ bluemix plugin install plugin_name -r bluemix-bx
 {: codeblock}
 
 
-| *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *IBM Containers*  |
+| *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *IBM Bluemix Container Service*  |
 |-----|-----|-----|
-| 外掛程式名稱：active-deploy<br> [檢視文件](/docs/services/ActiveDeploy/cli.html#cli) | 外掛程式名稱：auto-scaling <br> [檢視文件](/docs/cli/plugins/auto-scaling/index.html) |  外掛程式名稱：IBM-Containers  <br> [檢視文件](/docs/cli/plugins/containers/index.html) |
+| 外掛程式名稱：active-deploy<br> [檢視文件](/docs/services/ActiveDeploy/cli.html#cli) | 外掛程式名稱：auto-scaling <br> [檢視文件](/docs/cli/plugins/auto-scaling/index.html) |  外掛程式名稱：container-service  <br> [檢視文件](/docs/containers/cs_cli_devtools.html) |
 {: caption="表 2. 外掛程式" caption-side="top"}
 
 |  *專用網路對等作業* | *VPN*  |

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-14"
+  years: 2016, 2017
+lastupdated: "2017-04-11"
 
 ---
 
@@ -19,8 +19,9 @@ normalmente scarica le risorse utente dalle risorse esterne come i moduli del no
 come con [Bluemix Dedicato](/docs/dedicated/index.html#dedicated) e
 [Bluemix Locale](/docs/local/index.html#local),  puoi desiderare di non affidarti ai siti esterni a Bluemix oppure
 di disporre di un controllo più esplicito su essi.  
+{: shortdesc}
 
-I seguenti sono dei siti esterni a cui può accedere il pacchetto di build node.js.  Negli ambienti Bluemix [Bluemix dedicato](/docs/dedicated/index.html#dedicated) e
+I seguenti sono dei siti esterni a cui può accedere il pacchetto di build node.js. Negli ambienti Bluemix [Bluemix dedicato](/docs/dedicated/index.html#dedicated) e
 [Bluemix locale](/docs/local/index.html#local) è necessario che questi siti siano *consentiti*.
 
 * http://nodejs.org/ può essere utilizzato per verificare le versioni del motore del nodo disponibili.
@@ -35,7 +36,7 @@ Fai attenzione che quando vengono installate le nuove versioni del pacchetto di 
 viene spesso spostata alle nuove versioni.  Questo può richiedere la riconfigurazione della tua applicazione del nodo per specificare una nuova versione del motore del nodo.
 
 
-### Applicazioni offline
+## Applicazioni offline
 {: #offline_applications}
 
 Per eliminare la necessità di accedere a https://registry.npmjs.org puoi includere tutti i moduli del nodo richiesti dalla tua applicazione all'interno dell'applicazione.  Per fare ciò esegui **npm install** per tutti i moduli richiesti dalla tua applicazione e includi la risultante directory *node_modules* con la tua applicazione trasmessa.
@@ -55,10 +56,3 @@ Ogni volta che effettui una modifica alle dipendenze nel file *package.json*, ri
 In alcuni ambienti come [Bluemix dedicato](/docs/dedicated/index.html#dedicated) e
 [Bluemix locale](/docs/local/index.html#local) può essere configurato un proxy. Consulta
 [Gestione di un proxy](/docs/manageapps/workingWithProxy.html) per ulteriori dettagli.
-
-# rellinks
-{: #rellinks}
-## general
-{: #general}
-* [Aggiornamenti più recenti al pacchetto di build Node.js](/docs/runtimes/nodejs/updates.html)
-* [Node.js](https://nodejs.org)

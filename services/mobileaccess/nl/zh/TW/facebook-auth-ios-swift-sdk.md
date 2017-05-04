@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+**重要事項：{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。**
 
 # 啟用 iOS 應用程式的 Facebook 鑑別 (Swift SDK)
 {: #facebook-auth-ios}
@@ -28,7 +30,7 @@ lastupdated: "2017-01-15"
 * {{site.data.keyword.Bluemix_notm}} **地區**。您可以在標頭中找到您目前的 {{site.data.keyword.Bluemix_notm}} 地區，就在**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示") 的旁邊。出現的地區值應該是下列其中一項：`美國南部`、`英國`或`雪梨`，並對應至 Swift SDK 所需的 SDK 值：`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom` 或 `BMSClient.Region.sydney`。您需要此值來起始設定 {{site.data.keyword.amashort}} 用戶端。
 * 設定成使用 CocoaPods 的 iOS 專案。如需相關資訊，請參閱[設定 iOS Swift SDK](getting-started-ios-swift-sdk.html) 中的**安裝 CocoaPods**。  
    **附註：**您不需要安裝核心 {{site.data.keyword.amashort}} 用戶端 SDK，即可繼續進行。
-* [Facebook for Developers ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developers.facebook.com "外部鏈結圖示"){: new_window} 網站上的 Facebook 應用程式。
+* [Facebook for Developers ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developers.facebook.com){: new_window} 網站上的 Facebook 應用程式。
 
 **重要事項：**您不需要個別安裝 Facebook SDK (`com.facebook.FacebookSdk`)。{{site.data.keyword.amashort}} `BMSFacebookAuthentication` Pod 會自動安裝 Facebook SDK。在 Facebook for Developers 網站上新增或配置應用程式時，可跳過**將 Facebook SDK 新增至 Xcode 專案**步驟。
 
@@ -37,7 +39,7 @@ lastupdated: "2017-01-15"
 
 在 Facebook for Developers 網站上，執行下列動作：
 
-1. 在 [Facebook for Developers ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developers.facebook.com "外部鏈結圖示"){: new_window} 上登入您的帳戶。
+1. 在 [Facebook for Developers ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developers.facebook.com){: new_window} 上登入您的帳戶。
 
 1. 確保 iOS 平台已新增至您的應用程式。在新增或配置 iOS 平台時，您需要提供 iOS 應用程式的 **bundleId**。若要尋找 iOS 應用程式的 **bundleId**，請在 `info.plist` 檔案或 Xcode 專案**一般**標籤中尋找**軟體組 ID**。
 
@@ -66,11 +68,11 @@ lastupdated: "2017-01-15"
 1. 如果您未安裝 CocoaPods，請執行：
 
    ```
-sudo gem install cocoapods
-```
+   sudo gem install cocoapods
+   ```
    {: codeblock}
 
-如需相關資訊，請參閱 [CocoaPods 網站 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cocoapods.org/ "外部鏈結圖示"){: new_window}。
+如需相關資訊，請參閱 [CocoaPods 網站 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cocoapods.org/){: new_window}。
 
 ### 使用 CocoaPods 安裝 {{site.data.keyword.amashort}} 用戶端 Swift SDK
 {: #facebook-auth-install-swift-cocoapods}
@@ -80,9 +82,9 @@ sudo gem install cocoapods
 1. 編輯 `Podfile`，並新增下列幾行：
 
    ```
-use_frameworks!
-pod 'BMSFacebookAuthentication'
- ```
+   use_frameworks!
+   pod 'BMSFacebookAuthentication'
+   ```
    {: codeblock}
 
    **附註：**如果您在 Podfile 中有 `pod 'BMSSecurity'` 這一行，則必須先移除它。`BMSFacebookAuthentication` Pod 會安裝所有必要的架構。
@@ -164,7 +166,7 @@ pod 'BMSFacebookAuthentication'
 
    使用「Facebook 應用程式 ID」更新 `CFBundleURLSchemes` 及 `FacebookappID` 內容。使用 Facebook 應用程式的名稱更新 `FacebookDisplayName`。
 
-   **重要事項**：請確定您未置換 `info.plist` 檔案中的任何現有內容。如果您具有重疊的內容，則必須手動進行合併。如需相關資訊，請參閱[配置 Xcode 專案 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developers.facebook.com/docs/ios/getting-started/ "外部鏈結圖示"){: new_window} 及[準備適用於 iOS9 的應用程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developers.facebook.com/docs/ios/ios9 "外部鏈結圖示"){: new_window}。
+   **重要事項**：請確定您未置換 `info.plist` 檔案中的任何現有內容。如果您具有重疊的內容，則必須手動進行合併。如需相關資訊，請參閱[設定 Xcode 專案 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developers.facebook.com/docs/ios/getting-started/){: new_window} 及[讓應用程式在 iOS9 環境下運作無礙 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developers.facebook.com/docs/ios/ios9){: new_window}。
 
 ## 起始設定 {{site.data.keyword.amashort}} 用戶端 Swift SDK
 {: #facebook-auth-ios-initalize-swift}
@@ -176,22 +178,21 @@ pod 'BMSFacebookAuthentication'
 1. 新增下列標頭，在您要使用 {{site.data.keyword.amashort}} 用戶端 SDK 的類別中匯入必要架構：
 
    ```swift
- import UIKit
- import BMSCore
- import BMSSecurity
- ```
+   import UIKit
+   import BMSCore
+   import BMSSecurity
+   ```
    {: codeblock}
 
 1. 起始設定用戶端 SDK。
 
    ```Swift
-	let tenantId = "<serviceTenantID>"
-	let regionName = <applicationBluemixRegion>
+   let tenantId = "<serviceTenantID>"
+   let regionName = <applicationBluemixRegion>
 
-	func application(_ application: UIApplication, 
-	    didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
- let mcaAuthManager = MCAAuthorizationManager.sharedInstance
+   func application(_ application: UIApplication,
+      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+      let mcaAuthManager = MCAAuthorizationManager.sharedInstance
       mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
       //the regionName should be one of the following: BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom, or BMSClient.Region.sydney
       BMSClient.sharedInstance.authorizationManager = mcaAuthManager
@@ -210,8 +211,8 @@ pod 'BMSFacebookAuthentication'
 1. 將下列程式碼新增至應用程式委派中的 `application:didFinishLaunchingWithOptions` 方法，以通知 Facebook SDK 有關應用程式啟動的資訊，並登錄「Facebook 鑑別處理程式」。在起始設定 BMSClient 實例之後新增此程式碼，並將 Facebook 登錄為鑑別管理程式。
 
    ```Swift
-  return FacebookAuthenticationManager.sharedInstance.onFinishLaunching(application, withOptions: launchOptions)
- ```
+   return FacebookAuthenticationManager.sharedInstance.onFinishLaunching(application, withOptions: launchOptions)
+   ```
    {: codeblock}
 
 1. 將 `FacebookAuthenticationManager.swift` 檔案從 `BMSFacebookAuthentication` pod 原始檔複製到您的專案目錄。
@@ -276,8 +277,8 @@ response:Optional("Hello, this is a protected resouce of the mobile backend appl
 1. 您也可以新增下列程式碼，來新增登出功能：
 
    ```
-FacebookAuthenticationManager.sharedInstance.logout(callBack)
-```
+   FacebookAuthenticationManager.sharedInstance.logout(callBack)
+   ```
    {: codeblock}
 
    如果您在使用者使用 Facebook 登入之後呼叫此程式碼，而且使用者嘗試重新登入，則系統會提示他們授權 {{site.data.keyword.amashort}} 使用 Facebook 進行鑑別。

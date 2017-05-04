@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,9 @@ lastupdated: "2017-01-08"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-#Angepasste Authentifizierung für {{site.data.keyword.amashort}}-Webanwendungen konfigurieren
+**Wichtig: Der Service {{site.data.keyword.amafull}} wird durch den Service {{site.data.keyword.appid_full}} ersetzt.**
+
+#Angepasste Authentifizierung für die Mobile Client Access-Webanwendung konfigurieren
 {: #custom-web}
 
 Sie können Ihrer Web-App eine angepasste Authentifizierung und die Sicherheitsfunktionalität von {{site.data.keyword.amafull}} hinzufügen.
@@ -104,7 +106,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 {: codeblock}
 
 
-##{{site.data.keyword.amashort}} für eine angepasste Authentifizierung konfigurieren
+##Mobile Client Access für die angepasste Authentifizierung konfigurieren
 {: #custom-auth-config-mca}
 
 Nach der Konfiguration des angepassten Identitätsproviders können Sie die angepasste Authentifizierung im {{site.data.keyword.amashort}}-Dashboard aktivieren.
@@ -117,7 +119,7 @@ Nach der Konfiguration des angepassten Identitätsproviders können Sie die ange
 1. Klicken Sie auf **Speichern**.
 
 
-##{{site.data.keyword.amashort}}-Berechtigungsablauf mit einem angepassten Identitätsprovider implementieren
+##Mobile Client Access-Berechtigungsablauf mit einem angepassten Identitätsprovider implementieren
 {: #custom-auth-flow}
 
 Die Umgebungsvariable `VCAP_SERVICES` wird automatisch für jede {{site.data.keyword.amashort}}-Serviceinstanz erstellt und enthält Eigenschaften, die für den Berechtigungsprozess erforderlich sind. Sie besteht aus einem JSON-Objekt und kann auf die Registerkarte mit den Serviceberechtigungsnachweisen im {{site.data.keyword.amashort}}-Dashboard angezeigt werden.
@@ -247,7 +249,7 @@ app.get("/oauth/callback", function(req, res, next){
 
 	Beachten Sie, dass der Parameter `redirect_uri` mit dem Parameter `redirect_uri` aus der vorhergehenden Berechtigungsanforderung übereinstimmen muss. Als Wert für den Parameter 'code' muss der Autorisierungscode angegeben werden, der in der Antwort am Ende der Autorisierungsanforderung empfangen wurde. Der Autorisierungscode ist nur 10 Minuten gültig, danach muss ein neuer Code abgerufen werden.
 
-	Der Antworthauptteil enthält die Parameter `access_token` und `id_token` im JWT-Format (siehe die [JWT-Website ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://jwt.io "Symbol für externen Link"){: new_window}.
+	Der Antworthauptteil enthält die Parameter `access_token` und `id_token` im JWT-Format (siehe die [JWT-Website ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://jwt.io){: new_window}).
 
 	Nachdem Sie das Zugriffstoken und das Identitätstoken empfangen haben, können Sie die Websitzung als authentifiziert markieren und optional diese Tokens speichern.
 

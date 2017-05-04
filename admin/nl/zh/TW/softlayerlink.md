@@ -23,7 +23,7 @@ lastupdated: "2017-01-11"
 您可以透過鏈結帳戶，來統一現有的 {{site.data.keyword.Bluemix_notm}} 與 SoftLayer 計費帳戶。鏈結帳戶之後，即會透過 {{site.data.keyword.Bluemix_notm}} 向您收取 {{site.data.keyword.Bluemix_notm}} 和 SoftLayer 資源的費用。
 
 
-**注意：**{{site.data.keyword.Bluemix_notm}} 訂閱帳戶不能與 SoftLayer 帳戶相鏈結。若要存取「基礎架構」儀表板，您必須建立自動鏈結至 SoftLayer 帳戶的「隨收隨付制」帳戶（第二個帳戶）。您之後會收到兩張發票，一個 {{site.data.keyword.Bluemix_notm}} 帳戶一張。雖然在個別「隨收隨付制」帳戶中會開出基礎架構資源的發票，但是在訂閱帳戶中，可以搭配使用資源與應用程式及服務。例如，如果您在訂閱帳戶中啟動 Watson 服務，則可以複製服務認證，然後將認證新增至源自「隨收隨付制」帳戶的裸機應用程式。
+**注意：**在自動帳戶鏈結之前建立的 {{site.data.keyword.Bluemix_notm}} 訂閱帳戶及舊的 {{site.data.keyword.Bluemix_notm}} 隨收隨付制帳戶，無法與 SoftLayer 帳戶鏈結。若要存取「基礎架構」儀表板，您必須建立自動鏈結至 SoftLayer 帳戶的「隨收隨付制」帳戶（第二個帳戶）。您之後會收到兩張發票，一個 {{site.data.keyword.Bluemix_notm}} 帳戶一張。雖然在個別「隨收隨付制」帳戶中會開出基礎架構資源的發票，但是在訂閱帳戶中，可以搭配使用資源與應用程式及服務。例如，如果您在訂閱帳戶中啟動 Watson 服務，則可以複製服務認證，然後將認證新增至源自「隨收隨付制」帳戶的裸機應用程式。
 {:shortdesc}
 
 ## 升級至 {{site.data.keyword.Bluemix_notm}} 隨收隨付制帳戶
@@ -95,7 +95,7 @@ lastupdated: "2017-01-11"
 SoftLayer 中的鑑別現在使用 IBM ID 來提供所有 {{site.data.keyword.Bluemix_notm}} 的單一登入。現有的 SoftLayer 帳戶將可切換至 IBM ID 鑑別。移轉精靈會引導您完成這項切換。
 {:shortdesc}
 
-如果您是主要使用者，而 {{site.data.keyword.slportal}} 中未顯示切換至 IBM ID 的提示，請[聯絡 IBM 支援中心](/docs/support/index.html#contacting-support)以取得啟用此特性的協助。
+如果您是主要使用者，而 {{site.data.keyword.slportal}} 中未顯示切換至 IBM ID 的提示，請[與 IBM 支援中心聯絡](/docs/support/index.html#contacting-support)以取得啟用此特性的協助。
 
 開始切換至 IBM ID 時，在完成這項程序之前，您隨時都可以取消此切換作業。不過，在您每次登入時，都會顯示切換至 IBM ID 的提示。您計劃要鏈結至 {{site.data.keyword.Bluemix_notm}} 帳戶的每一個 SoftLayer 帳戶，都必須為具有唯一電子郵件位址的唯一 IBM ID 所擁有。
 
@@ -129,9 +129,9 @@ SoftLayer 中的鑑別現在使用 IBM ID 來提供所有 {{site.data.keyword.Bl
 
 在部分情況下，轉銷商或經銷商必須允許帳戶使用 IBM ID 鑑別，使用者才能切換至 IBM ID。 
 
- * 若要允許具有舊式 SoftLayer 認證的現有帳戶使用 IBM ID 鑑別，請[聯絡 IBM 支援中心](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)來啟用 IBM ID 移轉。對於每一個您要鏈結至 {{site.data.keyword.Bluemix_notm}} 帳戶的現有一般使用者帳戶都必須予以啟用。
+ * 若要允許具有舊式 SoftLayer 認證的現有帳戶使用 IBM ID 鑑別，請[與 IBM 支援中心聯絡](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)來啟用 IBM ID 移轉。對於每一個您要鏈結至 {{site.data.keyword.Bluemix_notm}} 帳戶的現有一般使用者帳戶都必須予以啟用。
  
- * 若要確保使用 IBM ID 來建立新的使用者帳戶，則必須在立即主要使用者帳戶上設定 `CREATE_NEW_ACCOUNT_WITH_IBMid_AUTHENTICATION` 屬性。請[聯絡 IBM 支援中心](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)或供應商，為您的帳戶設定此項目。
+ * 若要確保使用 IBM ID 來建立新的使用者帳戶，則必須在立即主要使用者帳戶上設定 `CREATE_NEW_ACCOUNT_WITH_IBMid_AUTHENTICATION` 屬性。請[與 IBM 支援中心聯絡](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)或與供應商聯絡，為您的帳戶設定此項目。
  
 ### 鏈結使用者帳戶
 {: #link_user_accounts}

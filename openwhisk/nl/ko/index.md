@@ -15,7 +15,7 @@ lastupdated: "2017-02-21"
 # {{site.data.keyword.openwhisk_short}} 시작하기
 
 
-{{site.data.keyword.openwhisk}}는 이벤트로 구동되는 분산형 컴퓨팅 서비스이며 Serverless 컴퓨팅 또는 FaaS(Function as a Service)라고도 합니다. {{site.data.keyword.openwhisk_short}}는 HTTP를 통한 웹 또는 모바일 앱에서의 직접 호출이나 이벤트에 응답하여 애플리케이션 로직을 실행합니다. Cloudant 같은 Bluemix 서비스와 외부 소스에서 이벤트를 제공할 수 있습니다. 개발자는 애플리케이션 로직 작성 및 On-Demand 실행이 수행되는 조치 작성에 집중할 수 있습니다. 새 패러다임의 이점은 서버를 명시적으로 프로비저닝하지 않고 Auto-Scaling에 대해 염려하지 않아도 되거나, 서버가 실행되지만 요청을 제공하지 않는 경우 고가용성, 업데이트, 유지보수 및 프로세서 시간에 대한 비용에 대해 걱정하지 않아도 된다는 점입니다.
+{{site.data.keyword.openwhisk}}는 이벤트로 구동되는 분산형 컴퓨팅 서비스이며 서버리스(serverless) 컴퓨팅 또는 FaaS(Function as a Service)라고도 합니다. {{site.data.keyword.openwhisk_short}}는 HTTP를 통한 웹 또는 모바일 앱에서의 직접 호출이나 이벤트에 응답하여 애플리케이션 로직을 실행합니다. Cloudant 같은 Bluemix 서비스와 외부 소스에서 이벤트를 제공할 수 있습니다. 개발자는 애플리케이션 로직 작성 및 On-Demand 실행이 수행되는 조치 작성에 집중할 수 있습니다. 새 패러다임의 이점은 서버를 명시적으로 프로비저닝하지 않고 Auto-Scaling에 대해 염려하지 않아도 되거나, 서버가 실행되지만 요청을 제공하지 않는 경우 고가용성, 업데이트, 유지보수 및 프로세서 시간에 대한 비용에 대해 걱정하지 않아도 된다는 점입니다.
 HTTP 호출, 데이터베이스 스테이지 변경 또는 코드 실행을 트리거하는 다른 이벤트 유형이 있을 때마다 사용자 코드가 실행됩니다.
 VM이 유용한 작업을 수행하는지 여부에 관계없이 VM 사용률에 대해 시간당이 아닌 밀리초 단위 실행 시간(반올림하여 100ms)을 기준으로 청구됩니다.
 {: shortdesc}
@@ -47,6 +47,9 @@ OpenWhisk 사용자 인터페이스 둘러보기를 보려면 [자세히 보기]
 - [서버리스(serverless) 애플리케이션에 대한 공통 유스 케이스](./openwhisk_use_cases.html)
 - [OpenWhisk CLI 설정 및 사용](./openwhisk_cli.html)
 - [iOS 앱에서 OpenWhisk 사용](./openwhisk_mobile_sdk.html)
+- [기사, 샘플 및 튜토리얼](https://github.com/openwhisk/openwhisk-external-resources)
+- [Apache OpenWhisk FAQ](http://openwhisk.org/faq)
+- [가격 책정](https://console.ng.bluemix.net/openwhisk/learn/pricing)
 
 ## 프로그래밍 모델
 {: #openwhisk_start_programming}
@@ -119,6 +122,7 @@ function main(params) {
 
 또한 {{site.data.keyword.openwhisk_short}}에서 이벤트 주도적인 기능을 사용하여 이벤트에 대한 응답으로 이 조치를 호출할 수 있습니다. [알람 서비스 예](./openwhisk_packages.html#openwhisk_packages_trigger)에 따라 정기 이벤트가 생성될 때마다 이벤트 소스가 `hello` 조치를 호출하도록 구성하십시오.
 
+전체 [OpenWhisk 튜토리얼 및 샘플 목록은 여기에 있습니다](https://github.com/openwhisk/openwhisk-external-resources#sample-applications). 샘플 외에도 이 저장소에는 기사, 프리젠테이션, 팟캐스트, 동영상 및 기타 {{site.data.keyword.openwhisk_short}} 관련 리소스의 링크가 포함되어 있습니다.
 
 ## API 참조
 {: #openwhisk_start_api notoc}

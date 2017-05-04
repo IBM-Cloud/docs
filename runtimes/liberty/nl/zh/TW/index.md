@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-02-07"
 
 ---
 
@@ -31,9 +31,9 @@ lastupdated: "2016-11-14"
 {{site.data.keyword.Bluemix}} 提供數個 Liberty 入門範本應用程式。Liberty 入門範本應用程式是簡單的 Liberty 應用程式，提供可以讓您使用的範本。您可以用入門範本應用程式進行實驗，並進行及推送對 Bluemix 環境的變更。如需關於使用入門範本應用程式的協助，請參閱[使用入門範本應用程式](/docs/cfapps/starter_app_usage.html)。
 
 # 相關鏈結
-{: #rellinks}
+{: #rellinks notoc}
 ## 一般
-{: #general}
+{: #general notoc}
 * [Liberty 設定檔概觀](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
 * [管理 Liberty 應用程式](/docs/manageapps/app_mng.html#Utilities)
 * [使用 IBM Eclipse Tools for Bluemix 部署應用程式](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools)

@@ -20,7 +20,7 @@ lastupdated: "2017-03-02"
 {: #accessing}
 
 
-Problemas gerais ao acessar o {{site.data.keyword.Bluemix}} podem incluir dificuldades em efetuar login no {{site.data.keyword.Bluemix_notm}} ou em uma conta que está em um estado pendente. Em muitos casos, é possível recuperar-se desses problemas seguindo algumas etapas simples.
+Problemas gerais ao acessar o {{site.data.keyword.Bluemix}} podem incluir dificuldades em efetuar login no {{site.data.keyword.Bluemix_notm}} ou em uma conta que está em um estado pendente. Em muitos casos, é possível recuperar-se desses problemas seguindo algumas etapas simples. 
 {:shortdesc}
 
 ## Não é possível efetuar login no {{site.data.keyword.Bluemix_notm}}: senha incorreta
@@ -30,7 +30,7 @@ Deve-se ter uma senha válida que esteja associada a seu IBMid para efetuar logi
 
 Deve-se ter uma senha válida que esteja associada a seu IBMid ou ID do SoftLayer para efetuar login por meio do [Portal do cliente](https://control.softlayer.com).
 
-Ao tentar efetuar login no {{site.data.keyword.Bluemix_notm}}, a mensagem de erro a seguir será exibida:
+Ao tentar efetuar login no {{site.data.keyword.Bluemix_notm}}, a mensagem de erro a seguir será exibida: 
 {: tsSymptoms} 
 
 `A senha inserida não está correta.`
@@ -56,7 +56,7 @@ Ao efetuar login usando seu IBMid, a mensagem a seguir é exibida:
 
 `Credenciais de login inválidas fornecidas. Se você tiver um IBMid associado à sua conta, efetue login aqui` 
 
-* Você alternou para um IBMid, mas tentou efetuar login por meio do [Portal do cliente](https://control.softlayer.com) usando seu nome de usuário e senha anteriores do SoftLayer.
+* Você alternou para um IBMid, mas tentou efetuar login por meio do [Portal do cliente](https://control.softlayer.com) usando seu nome de usuário e senha anteriores do SoftLayer. 
 {: tsCauses}
 
 * Você tentou efetuar login por meio do [Portal do cliente](https://control.softlayer.com), mas inseriu seu IBMid e senha nos campos Nome de usuário e Senha. 
@@ -70,7 +70,7 @@ Não use os campos **Nome do usuário** e **Senha** que foram usados com o ID an
 ## Não é possível efetuar login no {{site.data.keyword.Bluemix_notm}}: IBMid ou e-mail não reconhecido
 {: #ts_softlayer_username}
 
-Ao efetuar login no console do {{site.data.keyword.Bluemix_notm}}, a mensagem a seguir será exibida:
+Ao efetuar login no console do {{site.data.keyword.Bluemix_notm}}, a mensagem a seguir será exibida: 
 {: tsSymptoms} 
 
 `Nós não reconhecemos este IBMid ou e-mail. `
@@ -83,7 +83,7 @@ Deve-se ter um ID IBM e uma senha válidos para efetuar login no
 
  * Assegure-se de inserir um endereço de e-mail completo para o IBMid.
  {: tsResolve}
- * No caso de um usuário do SoftLayer com um ID do SoftLayer, deve-se alternar para a autenticação do IBMid no Portal do cliente em cada conta à qual tiver acesso antes de ser possível efetuar login usando a autenticação do IBMid.
+ * No caso de um usuário do SoftLayer com um ID do SoftLayer, deve-se alternar para a autenticação do IBMid no Portal do cliente em cada conta à qual tiver acesso antes de ser possível efetuar login usando a autenticação do IBMid. 
  Para obter mais informações, veja [Alternando para o IBMid](/docs/admin/softlayerlink.html#ibmid_switch).
 
 
@@ -114,15 +114,15 @@ Dependendo de como sua conta foi configurada, algumas dessas opções de login p
 ## Não é possível efetuar login no {{site.data.keyword.Bluemix_notm}}: o IBMid não está associado a nenhuma conta do {{site.data.keyword.Bluemix_notm}}
 {: #ts_unabletologin}
 
-Ao efetuar login no {{site.data.keyword.Bluemix_notm}}, a mensagem a seguir é exibida:
+Ao efetuar login no {{site.data.keyword.Bluemix_notm}}, a mensagem a seguir é exibida: 
 {: tsSymptoms} 
  
 `You have reached this page because your authentication was successful, however, this IBMid is not associated with any  {{site.data.keyword.Bluemix_notm}} accounts.`
 
-Você efetuou login por meio do [console do Bluemix](https://console.{DomainName}) com um IBMid válido, mas ainda não tem uma conta criada do {{site.data.keyword.Bluemix_notm}}.
+Você efetuou login por meio do [console do Bluemix](https://console.{DomainName}) com um IBMid válido, mas ainda não tem uma conta criada do {{site.data.keyword.Bluemix_notm}}. 
 {: tsCauses} 
 
-Para criar uma conta do {{site.data.keyword.Bluemix_notm}}, siga o processo de inscrição.
+Para criar uma conta do {{site.data.keyword.Bluemix_notm}}, siga o processo de inscrição. 
 {: tsResolve}
 
 Dependendo de como sua conta foi configurada, algumas dessas opções de login podem se aplicar a você: 
@@ -222,7 +222,7 @@ nslookup stage1.mybluemix.net
 somente se você for o proprietário da conta ou se for ambos, um gerente
 e um membro da organização.
  
-Não é possível ver o link **Convidar um novo usuário** na seção **Gerenciar organizações**.
+Não é possível ver o link **Convidar um novo usuário** na seção **Gerenciar organizações**. 
 {: tsSymptoms}
 
 Somente os usuários {{site.data.keyword.Bluemix_notm}} a seguir

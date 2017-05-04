@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-03-23"
 
 ---
 
@@ -50,13 +50,13 @@ Para obter mais informações veja [Liberações do java-buildpack](https://gith
 {: #https_redirect}
 
 O tempo de execução do Tomcat pode ser configurado para confiar em proxies internos do Bluemix e permitir
-o redirecionamento de tráfego HTTP para HTTPS (SSL). Para fazer isso, modifique o arquivo server.xml,
+o redirecionamento de tráfego HTTP para HTTPS (SSL).
+Para fazer isso, modifique o arquivo server.xml,
 configurando o elemento RemoteIpValve Valve com as opções internalProxies e protocolHeader.
 
 O tempo de execução Tomcat
 [server.xml](https://github.com/cloudfoundry/java-buildpack/blob/master/resources/tomcat/conf/server.xml)
-incluído no buildpack configura somente o protocolHeader do elemento RemoteIpValve Valve por padrão.
-Para redirecionar o tráfego HTTP para HTTPS no Bluemix, configure o elemento RemoteIpValve no seu
+incluído no buildpack configura somente o protocolHeader do elemento RemoteIpValve Valve por padrão.  Para redirecionar o tráfego HTTP para HTTPS no Bluemix, configure o elemento RemoteIpValve no seu
 server.xml customizado como segue:
 
 ```
@@ -65,11 +65,10 @@ server.xml customizado como segue:
 {: codeblock}
 
 Mais opções de configuração para o RemoteIpValve podem ser localizadas na
-[Documentação
-do Tomcat](https://tomcat.apache.org/tomcat-8.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html).
+[documentação do Tomcat ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://tomcat.apache.org/tomcat-8.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html).
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## geral
-{: #general}
+{: #general notoc}
 * [java-buildpack](https://github.com/cloudfoundry/java-buildpack)

@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
+**Wichtig: Der Service {{site.data.keyword.amafull}} wird durch den Service {{site.data.keyword.appid_full}} ersetzt.**
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -14,7 +15,7 @@ lastupdated: "2017-01-15"
 {:pre: .pre}
 
 
-# Angepasste Authentifizierung für {{site.data.keyword.amashort}}-Android-App konfigurieren
+# Angepasste Authentifizierung für die Mobile Client Access-Android-App konfigurieren
 {: #custom-android}
 
 
@@ -39,7 +40,7 @@ Weitere Informationen finden Sie über die folgenden Links:
 
 
 
-## {{site.data.keyword.amashort}}-Client-SDK initialisieren
+## Client-SDK initialisieren
 {: #custom-android-initialize}
 Wenn eine Android-App mit dem {{site.data.keyword.amashort}}-Android-SDK instrumentiert ist, können Sie diesen Abschnitt überspringen.
 1. Öffnen Sie in Android Studio in Ihrem Android-Projekt die Datei `build.gradle` Ihres App-Moduls (nicht die Datei `build.gradle` des Projekts).
@@ -137,7 +138,7 @@ void submitAuthenticationFailure (JSONObject info);
 ## Beispielimplementierung einer angepassten Schnittstelle 'AuthenticationListener'
 {: #custom-android-samplecustom}
 
-Dieses Beispiel für 'AuthenticationListener' ist für die Ausführung mit einem angepassten Identitätsprovider gedacht. Sie können dieses Beispiel aus dem [Github-Repository ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "Symbol für externen Link"){: new_window} herunterladen.
+Dieses Beispiel für 'AuthenticationListener' ist für die Ausführung mit einem angepassten Identitätsprovider gedacht. Sie können dieses Beispiel aus dem [Github-Repository ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window} herunterladen.
 
 ```Java
 package com.ibm.helloworld;

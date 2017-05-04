@@ -10,8 +10,8 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-#Activation des {{site.data.keyword.mobilepushshort}} avancées
-Dernière mise à jour : 23 janvier 2017
+#Activation des notifications push avancées
+Dernière mise à jour : 28 février 2017
 {: .last-updated}
 
 Configurez un badge iOS, un son, un contenu JSON supplémentaire, des notifications interactives et la conservation des notifications.
@@ -26,7 +26,8 @@ Configurez un badge, un son et un contenu JSON supplémentaire iOS.
 	- **Fichier son** - Entrez une chaîne pour pointer vers le fichier son dans votre application mobile. Dans le contenu, spécifiez le nom de chaîne du fichier son à utiliser.
 	- **Badge iOS** - Pour les appareils iOS, numéro à afficher comme badge de l'icône d'application. Si cette propriété manque, le badge n'est pas changé. Pour supprimer le badge, associez cette propriété à la valeur 0.
 	
-###Android
+### Android
+{: #badge-sound-payload_android}
 
 Ajoutez votre fichier son dans le répertoire `res/raw` de votre application Android. Lors de l'envoi de la notification, ajoutez le nom du fichier son dans la zone son de {{site.data.keyword.mobilepushshort}}.
 
@@ -39,7 +40,8 @@ Ajoutez votre fichier son dans le répertoire `res/raw` de votre application And
 ```
     {: codeblock}	
 	
-###iOS
+### iOS
+{: #badge-sound-payload_ios}
 
 ```
 "settings": {

@@ -161,10 +161,10 @@ en una base de datos Cloudant. Probar los siguientes pasos de lectura y escritur
   
   El contenido de los sucesos generados tiene los siguientes parámetros:
   
-  - `id`: el id. del documento
+  - `id`: el ID del documento
   - `seq`: el identificador de secuencia generado por Cloudant.
   - `changes`: una matriz de objetos, cada uno de los cuales tiene un campo `rev` que contiene
-el id de revisión del documento.
+el ID de revisión del documento.
   
   La representación JSON del suceso desencadenante es según se indica a continuación:
   

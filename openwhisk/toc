@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="openwhisk" audience="compute"}
+{: .toc subcollection="openwhisk" audience="compute" href="/docs/openwhisk/index.html}
 IBM OpenWhisk
 
     {: .navgroup id="learn"}
@@ -13,11 +13,12 @@ IBM OpenWhisk
         [Discover: OpenWhisk](http://www.ibm.com/cloud-computing/bluemix/openwhisk/)
         [OpenWhisk on IBM developerWorks](https://developer.ibm.com/openwhisk/)
         [Apache OpenWhisk project website](http://openwhisk.org)
+        [Native API management in Bluemix](https://console.ng.bluemix.net/docs/apis/management/index.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     [REST API Documentation](./openwhisk_reference.html#openwhisk_ref_restapi)
-    [REST API Reference](https://new-console.{DomainName}/apidocs/98)
+    [REST API Reference](https://console.ng.bluemix.net/apidocs/98)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}

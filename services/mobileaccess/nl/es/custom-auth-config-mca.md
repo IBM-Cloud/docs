@@ -2,11 +2,13 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-07"
 
 ---
 
-# Configuración de {{site.data.keyword.amashort}} para la autenticación personalizada
+**Importante: El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.**
+
+# Configuración de Mobile Client Access para la autenticación personalizada
 {: #custom-dash}
 
 
@@ -18,8 +20,9 @@ Debe tener lo siguiente:
 * Una instancia de un servicio {{site.data.keyword.amafull}}.
 * Disponga de una aplicación de proveedor de identidad.
 
-## Configuración de la autenticación personalizada en el panel de control de {{site.data.keyword.amafull}}
+## Configuración de la autenticación personalizada en el panel de control
 {: #custom-dash-config}
+
 Utilice el panel de control de {{site.data.keyword.amafull}} para configurar la autenticación personalizada.
 
 1. Abra el servicio en el panel de control de {{site.data.keyword.amafull}}.

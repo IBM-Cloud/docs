@@ -25,21 +25,20 @@ Depois de ter desenvolvido seus aplicativos, é possível enviar uma notificaç�
   - **Tempo de vida**: notifica o servidor sobre a validade das mensagens.
 4. Para notificações da web enviadas ao navegador Safari, há algumas informações adicionais necessárias:
   - **Ação**: este é o rótulo do botão de ação.
-  - **Argumentos da URL**: os argumentos da URL que precisam ser usados com esta
-notificação. Assegure-se de que isso seja fornecido na forma de uma matriz JSON. 
+  - **Argumentos da URL**: os argumentos da URL que precisam ser usados com esta notificação. Assegure-se de que isso seja fornecido na forma de uma matriz JSON. 
  
 A imagem a seguir mostra a opção de notificações da web no painel.
 
   ![Tela de notificações](images/DashboardWebpush.jpg)
 
 
+
 ## Etapas Seguintes
   {: #next_steps_tags}
 
-Após ter configurado com sucesso as notificações básicas,
-será possível configurar notificações baseadas em tag e opções avançadas.
+Após ter configurado com sucesso as notificações básicas, será possível configurar notificações baseadas em tag e opções avançadas.
 
-Inclua esses recursos de serviço do {{site.data.keyword.mobilepushshort}} no seu app. Para usar notificações baseadas em tag, consulte [Notificações baseadas em tag](c_tag_basednotifications.html). Para usar opções de notificações avançadas, veja [Notificações avançadas](t_advance_badge_sound_payload.html).
+Inclua esses recursos do serviço {{site.data.keyword.mobilepushshort}} em seu app. Para usar notificações baseadas em tag, consulte [Notificações baseadas em tag](c_tag_basednotifications.html). Para usar opções de notificações avançadas, veja [Notificações avançadas](t_advance_badge_sound_payload.html).
 
 
 

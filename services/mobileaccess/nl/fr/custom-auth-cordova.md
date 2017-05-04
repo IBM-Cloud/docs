@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,7 +12,9 @@ lastupdated: "2017-01-08"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Configuration d'une authentification personnalisée pour votre application {{site.data.keyword.amashort}} Cordova
+**Important : Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.**
+
+# Configuration d'une authentification personnalisée pour votre application Mobile Client Access Cordova
 {: #custom-cordova}
 
 Instrumentez votre application Cordova pour utiliser l'authentification personnalisée et le SDK client d'{{site.data.keyword.amafull}} pour accéder à votre application protégée.
@@ -107,8 +109,7 @@ Le code suivant montre comment un programme d'écoute d'authentification client 
 ## Exemple d'implémentation du workflow d'un programme d'écoute d'authentification personnalisé
 {: #custom-cordova-authlisten-sample}
 
-Cet exemple de programme d'écoute d'authentification est conçu pour fonctionner avec un fournisseur d'identité personnalisé. Vous pouvez télécharger le
-fournisseur d'identité personnalisé depuis ce [référentiel Github ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "Icône de lien externe"){: new_window}.
+Cet exemple de programme d'écoute d'authentification est conçu pour fonctionner avec un fournisseur d'identité personnalisé. Vous pouvez télécharger le fournisseur d'identité personnalisé depuis ce [référentiel Github ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}.
 
 ```JavaScript
 var customAuthenticationListener = {
@@ -174,7 +175,7 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 Enregistrez votre Gestionnaire d'autorisations selon votre version de Xcode.
 
 ```
-#import "<nom_votre_module>-Swift.h"
+#import "<your_module_name>-Swift.h"
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 
@@ -185,7 +186,7 @@ Enregistrez votre Gestionnaire d'autorisations selon votre version de Xcode.
 ```
 {: codeblock}
 
-Remarque : Pour utiliser le fichier d'en-tête Swift correct, remplacez `nom_votre_module` par le nom de module de votre projet (par
+Remarque : Pour utiliser le fichier d'en-tête Swift correct, remplacez `your_module_name` par le nom de module de votre projet (par
 exemple, si votre module se nomme `Cordova`, remplacez-le par `#import "Cordova-Swift.h"`). Pour trouver le nom du module, allez à **Build Settings > Packagin` > Product Module Name**.
 
 **Remarque :** remplacez votre `tenantId` par votre identifiant de locataire situé sur le bouton **Mobile Options** du tableau de bord du service de {{site.data.keyword.amashort}}.

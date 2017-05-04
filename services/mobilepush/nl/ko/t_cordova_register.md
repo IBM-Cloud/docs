@@ -9,7 +9,7 @@ copyright:
 
 {: #cordova_register}
 
-디바이스를 푸시 알림 서비스에 등록하려면 등록 메소드를 호출하십시오.
+디바이스를 Push Notification 서비스에 등록하려면 등록 메소드를 호출하십시오.
 
 디바이스를 등록하려면 다음 코드 스니펫을 복사하여 Cordova 애플리케이션에 붙여넣으십시오. 
 
@@ -34,8 +34,8 @@ Android에서는 이 설정 매개변수를 사용하지 않습니다. Android �
 
 ```
 	var settings = {
-ios: {
-alert: true,
+	   ios: {
+	       alert: true,
 	       badge: true,
 	       sound: true
 	   }
@@ -58,7 +58,7 @@ JSON.parse를 사용하여 Javascript에서 성공 응답 매개변수의 컨텐
 
 사용 가능한 키는 다음과 같습니다. `token`, `userId`, `deviceId`.
 
-다음 JavaScript 코드 스니펫은 Bluemix Mobile Services 클라이언트 SDK를 초기화하고, 푸시 알림 서비스를 사용하여 디바이스를 등록하고, 푸시 알림을 청취하는 방법을 보여줍니다. 이 코드를 Javascript 파일에 넣으십시오. 
+다음 JavaScript 코드 스니펫은 Bluemix Mobile Services 클라이언트 SDK를 초기화하고, Push Notification 서비스를 사용하여 디바이스를 등록하고, Push Notification을 청취하는 방법을 보여줍니다. 이 코드를 Javascript 파일에 넣으십시오. 
 
 
 
@@ -79,23 +79,25 @@ CDVMFPPush.sharedInstance().didFailToRegisterForRemoteNotifications(error)
 **onDeviceReady: function()**에서 다음을 수행하십시오. 
 
 ```
-  onDeviceReady: function() {
-	 app.receivedEvent('deviceready');
+onDeviceReady: function() {
+     app.receivedEvent('deviceready');
      BMSClient.initialize("https://http://myroute_mybluemix.net","my_appGuid");
      var success = function(message) { console.log("Success: " + message); };
      var failure = function(message) { console.log("Error: " + message); };
      var settings = {
          ios: {
-alert: true,
-	       badge: true,
-	       sound: true
-	   }
-	     };
+             alert: true,
+             badge: true,
+             sound: true
+         }
+     };
      MFPPush.registerDevice(settings, success, failure);
      var notification = function(notif){
          alert (notif.message);
      };
-     MFPPush.registerNotificationsCallback(notification);}
+     MFPPush.registerNotificationsCallback(notification);
+
+ }
 ```
 
 ## Objective-C

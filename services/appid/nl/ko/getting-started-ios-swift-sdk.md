@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -51,7 +51,7 @@ lastupdated: "2017-03-30"
   * CocoaPods(버전 1.1.0 이상).
 
 
-## {{site.data.keyword.appid_short_notm}} 클라이언트 SDK 설치
+## 클라이언트 SDK 설치
 {: #install-appid-sdk}
 
 {{site.data.keyword.appid_short_notm}} 클라이언트 SDK는 Swift 및 Objective-C Cocoa 프로젝트의 종속성 관리자인 CocoaPods를 사용하여 분배됩니다. CocoaPods는 아티팩트를 다운로드하고 프로젝트에서 아티팩트를 사용할 수 있게 합니다. 
@@ -82,7 +82,7 @@ lastupdated: "2017-03-30"
 7. **프로젝트 설정** > **정보** > **URL 유형** 아래에 URL 유형을 추가하십시오. **ID** 텍스트 상자 및 **URL 체계** 텍스트 상자를 모두 $(PRODUCT_BUNDLE_IDENTIFIER) 값으로 채우십시오. 
 
 
-## {{site.data.keyword.appid_short_notm}} 클라이언트 SDK 초기화
+## 클라이언트 SDK 초기화
 {: #initialize-client-sdk}
 
 1. `AppDelegate.swift` 파일에 다음과 같이 가져오기를 추가하십시오. 
@@ -182,7 +182,7 @@ lastupdated: "2017-03-30"
 ### 익명 로그인
 {: #anonymous notoc}
 
-{{site.data.keyword.appid_short_notm}}로 익명으로 로그인할 수 있습니다. [익명 ID](/docs/services/appid/user-profile.html#anonymous)를 참조하십시오. 
+{{site.data.keyword.appid_short_notm}}에서 사용자는 [익명으로](/docs/services/appid/user-profile.html#anonymous) 로그인할 수 있습니다.
 
   ```swift
   class delegate : AuthorizationDelegate {

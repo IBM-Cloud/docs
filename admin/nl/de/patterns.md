@@ -141,7 +141,7 @@ Die folgenden Szenarios zeigen verschiedene Ansätze, die Sie verfolgen können,
 
  Beschreibung: Im Unternehmen festgelegte Regeln sehen vor, dass die Apps jedes Geschäftsfelds (LOB) jeweils von Benutzern dieser Geschäftsfelder entwickelt, verwaltet und bereitgestellt werden sollen. Sicherheitsmaßnahmen müssen eingerichtet werden, sodass Benutzer nur auf die Apps zugreifen können, die für ihren Teil des Geschäfts relevant sind. Das heißt, die Benutzer arbeiten in verschiedenen Geschäftsbereichen und die Anwendungen, an denen sie arbeiten, erfordern Zugriff auf verschiedene {{site.data.keyword.Bluemix_notm}}-Ressourcen und es gibt keine Überschneidung von Aktivitäten. 
 
-  Lösung: Sie können eine Organisation für jeden Bereitstellungsprozess von Geschäftsanwendungen erstellen. Zum Beispiel eine Organisation für das Privatkundengeschäft einer Bank und eine Organisation für das Investment Banking der Bank.
+  Lösung: Sie können eine Organisation für jeden Bereitstellungsprozess von Geschäftsanwendungen erstellen. Zum Beispiel eine Organisation für das Privatkundengeschäft (Einzelhandel) einer Bank und eine Organisation für das Investment Banking der Bank.
 
   ![Abbildung, die die Trennung von Benutzern nach Geschäftsanwendungsbereitstellung zeigt](images/bank_example.svg "Abbildung, die die Trennung von Benutzern nach Geschäftsanwendungsbereitstellung zeigt")
 

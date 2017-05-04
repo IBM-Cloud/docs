@@ -2,9 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-06"
 
 ---
+
+**중요: {{site.data.keyword.amafull}} 서비스는 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다. **
 
 # 웹 앱 사용자 정의 인증
 {: #custom-web}
@@ -46,7 +48,7 @@ lastupdated: "2017-01-08"
 
     https://imf-newauthserver.bluemix.net/oauth/v2/authorization
 
-    다음 조회 매개변수를 사용합니다. 
+  다음 조회 매개변수를 사용합니다. 
    ```
    response_type=’authorization_code’
    client_id= <bluemix\_app\_guid>

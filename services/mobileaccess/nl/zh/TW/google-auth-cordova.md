@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+**重要事項：{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。**
 
 # 啟用 Cordova 應用程式的 Google 鑑別
 {: #google-auth-cordova}
@@ -40,7 +42,7 @@ lastupdated: "2017-01-15"
    * [在 Google Developer Console 中建立專案](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html#create-google-project)。這會為您示範如何在 Google Developers 網站上設定鑑別服務。
    * [配置 MCA 以進行 Google 鑑別](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html#google-auth-android-config)。這會為您示範如何設定 {{site.data.keyword.amashort}} 來使用 Google 授權。
 
-### 配置適用於 Android Cordova 的 {{site.data.keyword.amashort}} 用戶端 SDK
+### 配置適用於 Android Cordova 的用戶端 SDK
 
 1. 在 Android 專案資料夾中，開啟應用程式模組的 `build.gradle` 檔案（**不是**專案 `build.gradle` 檔案）。
 尋找 dependencies 區段，並新增用戶端 SDK 的編譯相依關係：
@@ -129,7 +131,9 @@ lastupdated: "2017-01-15"
 ```
 {: codeblock}
 
-**附註：**
+
+####附註：
+{: #note notoc}
 
 * 將 `<your_module_name>` 取代為您專案的模組名稱。例如，如果模組名稱為 `Cordova`，則匯入指令行應為 `#import "Cordova-Swift.h"`。若要尋找模組名稱，請移至 `Build Settings` 標籤、`Packaging` > `Product Module Name`。
 * 將 `<tenantId>` 取代為您的承租戶 ID（請參閱[開始之前](#before-you-begin)）。

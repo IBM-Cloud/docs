@@ -43,6 +43,9 @@ lastupdated: "2017-02-21"
 - [無伺服器應用程式的常見使用案例](./openwhisk_use_cases.html)
 - [設定及使用 OpenWhisk CLI](./openwhisk_cli.html)
 - [從 iOS 應用程式使用 OpenWhisk](./openwhisk_mobile_sdk.html)
+- [文章、範例及指導教學](https://github.com/openwhisk/openwhisk-external-resources)
+- [Apache OpenWhisk FAQ](http://openwhisk.org/faq)
+- [定價](https://console.ng.bluemix.net/openwhisk/learn/pricing)
 
 ## 程式設計模型
 {: #openwhisk_start_programming}
@@ -115,6 +118,7 @@ wsk action invoke hello --blocking --result --param name Fred
 
 您也可以使用 {{site.data.keyword.openwhisk_short}} 中的事件驅動功能，來呼叫此動作以回應事件。請遵循[警示服務範例](./openwhisk_packages.html#openwhisk_packages_trigger)，將事件來源配置成每次產生定期事件時都呼叫 `hello` 動作。
 
+[OpenWhisk 指導教學及範例的完整清單可在這裡找到](https://github.com/openwhisk/openwhisk-external-resources#sample-applications)。除了範例之外，此儲存庫也包含文章、簡報、播客、視訊及其他 {{site.data.keyword.openwhisk_short}} 相關資源的鏈結。
 
 ## API 參考資料
 {: #openwhisk_start_api notoc}

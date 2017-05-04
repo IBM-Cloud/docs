@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,9 +12,10 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+**重要信息：{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。**
+
 # 关于 {{site.data.keyword.amashort}}
 {: #mca-overview}
-
 
 {{site.data.keyword.amafull}} 服务为访问 {{site.data.keyword.Bluemix_notm}} 上所托管云资源的移动和 Web 应用程序提供认证。
 
@@ -87,24 +88,3 @@ lastupdated: "2017-01-15"
 * 从此刻开始，通过 {{site.data.keyword.amashort}} 客户端 SDK 发起的所有请求都具有新获取的 Authorization 头。
 * {{site.data.keyword.amashort}} 客户端 SDK 自动重新发送触发了授权流程的原始请求。
 * {{site.data.keyword.amashort}} 服务器 SDK 从请求中抽取 Authorization 头，通过 {{site.data.keyword.amashort}} 服务对该头进行验证，然后授予对后端资源的访问权。
-
-
-## 获取有关 {{site.data.keyword.amashort}} 的帮助和支持
-{: #gettinghelp}
-
-如果在使用 {{site.data.keyword.amashort}} 时遇到任何问题或者有任何疑问，都可以
-通过搜索信息或通过论坛提问来获得帮助。您还可以开具支持凭单。 
-
-在使用论坛提问时，请给问题做标记，以便 {{site.data.keyword.Bluemix_notm}} 开发
-团队能看到您的问题。
-
-* 如果是关于使用 {{site.data.keyword.amashort}} 开发或者部署应用程序方面的问题，请在 [Stack Overflow ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://stackoverflow.com/search?q={{site.data.keyword.amashort}}+ibm-bluemix "外部链接图标"){: new_window} 上发帖，并将问题标记为“ibm-bluemix”和“{{site.data.keyword.amashort}}”。
-* 有关服务和入门指示信息的问题，请使用 [IBM developerWorks ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=mobile+client+access%20%2B[bluemix] "外部链接图标"){: new_window} 
-
-论坛。 
-
-请参阅[获取
-帮助](https://www.{DomainName}/docs/support/index.html#getting-help)了解有关如何使用论坛的更多详细信息。
-
-有关开具 IBM 支持凭单的信息，或有关支持级别和凭单严重性的信息，请参阅[联系支持人员](https://www.{DomainName}/docs/support/index.html#contacting-support)。
-

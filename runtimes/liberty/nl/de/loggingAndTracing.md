@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-09"
+  years: 2015, 2017
+lastupdated: "2017-03-23"
 
 ---
 
@@ -16,72 +16,102 @@ lastupdated: "2016-11-09"
 ## Protokolldateien
 {: #log_files}
 
-Die Liberty-Standardprotokolle wie beispielsweise 'messages.log' oder das Verzeichnis 'ffdc' stehen in IBM Bluemix in den Protokollverzeichnissen der einzelnen Anwendungsinstanzen zur Verfügung. Auf diese Protokolle kann über die Konsole von IBM Bluemix oder mithilfe der Befehle 'cf logs' und 'cf files' zugegriffen werden.
-Führen Sie beispielsweise zum Anzeigen der Datei 'messages.log' folgenden Befehl aus:
-```
-    $ cf files <yourappname> logs/messages.log
-```
-{: codeblock}
+Die Liberty-Standardprotokolle wie `messages.log` oder das Verzeichnis `ffdc` stehen unter IBM Bluemix im Verzeichnis `logs` jeder Anwendungsinstanz zur Verfügung. Auf diese Protkolle kann über die Konsole von IBM Bluemix zugegriffen werden. Beispiel:
 
-Die Protokollebene und weitere Traceoptionen können in der Liberty-Konfigurationsdatei definiert werden. Weitere Informationen hierzu finden Sie unter [Liberty-Profil: Protokollierung und Trace](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html?cp=SSAW57_8.5.5%2F3-17-0-0). Das Tracing kann mithilfe der Konsole von IBM Bluemix auch in einer aktive Anwendungsinstanz angepasst werden.
+* Um auf die aktuellen Protokolle für eine App zuzugreifen, führen Sie den folgenden Befehl aus: 
+
+  ```
+  $ cf logs --recent <appname>
+  ```
+  {: codeblock}
+
+* Um die Datei `messages.log` einer App anzuzeigen, die auf einem DEA-Knoten ausgeführt wird, führen Sie den folgenden Befehl aus:
+
+  ```
+  $ cf files <appname> logs/messages.log
+  ```
+  {: codeblock}
+
+* Um die Datei `messages.log` einer App anzuzeigen, die in einer Diego-Zelle ausgeführt wird, führen Sie den folgenden Befehl aus:
+
+  ```
+  $ cf ssh <appname> -c "cat logs/messages.log"
+  ```
+  {: codeblock}
+
+Die Protokollebene und weitere Traceoptionen können in der Liberty-Konfigurationsdatei definiert werden. Weitere Informationen hierzu finden Sie unter [Liberty-Profil: Protokollierung und Trace](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html). Das Tracing kann mithilfe der Konsole von IBM Bluemix auch in einer aktive Anwendungsinstanz angepasst werden.
 
 ## Trace- und Speicherauszugsfunktionen verwenden
 {: #using_trace_and_dump}
 
-In der Benutzerschnittstelle von IBM Bluemix gibt es Trace- und Speicherauszugsfunktionen.
-* Mit der Option 'Trace' kann die Tracespezifikation der Liberty-Protokollierung für aktive Anwendungsinstanzen angezeigt und aktualisiert werden.
-* Mit der Option 'Speicherauszug' können Thread- und Heapspeicherauszüge für aktive Anwendungsinstanzen erstellt werden.
+Die Liberty-Tracekonfiguration kann für die Ausführung einer Anwendung direkt über die Konsole von IBM Bluemix angepasst werden. Die Konsole bietet ferner die Funktion zur Abfrage und zum Herunterladen von Thread- und Heapspeicherauszügen. Um die Tracekonfiguration anzupassen oder um einen Speicherauszug anzufordern, wählen Sie eine Liberty-Anwendung in der Konsole von Bluemix aus und dann das Menü `Laufzeit` in der Navigation. Wählen Sie in der Ansicht `Laufzeit `eine Instanz aus und drücken Sie die Taste für *TRACE* oder *SPEICHERAUSZUG*. Wenn Sie die Tracestufe anpassen, finden Sie Informationen zu Syntaxdetails der Tracespezifikation unter [Liberty-Profil: Protokollierung und Trace](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html). 
 
-Wählen Sie hierzu eine Liberty-Anwendung in der Benutzerschnittstelle aus. In der Kategorie 'Laufzeit' in der Navigation können die Instanzdetails geöffnet werden. Wählen Sie eine oder mehrere Instanzen aus. Im Menü 'Aktionen' können Sie TRACE oder SPEICHERAUSZUG auswählen.
+### Diego: Speicherauszüge über SSH auslösen
+
+Eine Anwendung, die in einer Diego-Zelle ausgeführt wird, kann ebenfalls über die CF CLI unter Verwendung der SSH-Funktion einen Thread und einen Heapspeicherauszug auslösen. Beispiel:
+
+```
+$ cf ssh <appname> -c "pkill -3 java"
+```
+{: codeblock}
+
+Details zum Herunterladen der generierten Speicherauszugsdateien finden Sie in der Dokumentation unten. 
 
 ## Speicherauszugsdateien herunterladen
 {: #download_dumps}
 
-<strong>Voraussetzung:</strong>
-* [Installieren Sie CF CLI](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html).
-* [Installieren Sie Diego-Enabler-Plug-in](https://github.com/cloudfoundry-incubator/Diego-Enabler), wenn Ihre Anwendung in Diego ausgeführt wird.
+Verschiedene Speicherauszugsdateien werden standardmäßig im Verzeichnis `dumps` des Anwendungscontainers gespeichert.
 
-<strong>Wenn Ihre Anwendung in DEA ausgeführt wird, führen Sie folgende Schritte aus: </strong>
-  
-1. Rufen Sie app_guid ab.
-```
-$ cf app <app_name> --guid
-```
+### DEA-Anwendung
 
-2. Laden Sie die Speicherauszugsdatei herunter.
-```
+Bei einer Anwendung, die auf einem DEA-Knoten ausgeführt wird, verwenden Sie die Funktion "cf files", um die Speicherauszugsdateien anzuzeigen und herunterzuladen.
+
+* Um die generierten Speicherauszüge anzuzeigen, führen Sie den folgenden Befehl aus:
+
+  ```
+  $ cf files <appname> dumps
+  ```
+  {: codeblock}
+
+* Um eine Speicherauszugsdatei herunterzuladen, führen Sie die folgenden Befehle aus:
+
+    1. Anwendungs-GUID abrufen
+
+      ```
+      $ cf app <appname> --guid
+      ```
+      {: codeblock}
+
+    2. Speicherauszugsdatei herunterladen
+
+      ```
 $ cf curl /v2/apps/<app_guid>/instances/<instance_id>/files/dumps/<dump_file_name> --output <local_dump_file_name>
 ```
+      {: codeblock}
 
-<strong>Wenn Ihre Anwendung Diego ausgeführt wird, führen Sie folgende Schritte aus: </strong>
-  
-1. Rufen Sie app_guid ab.
-```
-$ cf app <app_name> --guid
-```
+### Diego-Anwendung
 
-2. Rufen Sie app_ssh_endpoint (Host und Port) und app_ssh_host_key_fingerprint ab.
-```
-$ cf curl /v2/info
-```
+Bei einer Anwendung, die in einer Diego-Zelle ausgeführt wird, verwenden Sie die Funktion "cf ssh", um die Speicherauszugsdatei anzuzeigen und herunterzuladen.
 
-3. Rufen Sie ssh-code für den Befehl scp ab.
-```
-$ cf ssh-code
-```
+* Um die generierten Speicherauszüge anzuzeigen, führen Sie den folgenden Befehl aus:
 
-4. Verwenden Sie den Befehl scp, um die ferne Speicherauszugsdatei lokal zu speichern. Verwenden Sie den ssh-code, wenn Sie aufgefordert werden, ein Kennwort einzugeben. 
-```
-$ scp -P <app_ssh_endpoint_port> -o User=cf:<app_guid>/<instance_id> <app_ssh_endpoint_host>:/home/vcap/dumps/<dump_file_name> <local_dump_file_name>
-```
+  ```
+  $ cf ssh <appname> -c "ls -l dumps"
+  ```
+  {: codeblock}
 
-Weitere Details finden Sie unter dem Thema über den Zugriff auf Apps mit SSH ([Accessing Apps with SSH](https://docs.cloudfoundry.org/devguide/deploy-apps/ssh-apps.html)). 
+* Um eine Speicherauszugsdatei herunterzuladen, führen Sie folgenden Befehl aus:
 
+  ```
+  $ cf ssh <appname> -i <instance_id> -c "cat dumps/<dump_file_name>" > <local_dump_file_name>
+  ```
+  {: codeblock}
+
+Es ist auch möglich, `scp` und andere ähnliche Tools zu verwenden, um die Speicherauszugsdateien anzuzeigen und herunterzuladen. Weitere Informationen finden Sie unter [Accessing Apps with SSH ![Symbol 'Externer Link'](../../icons/launch-glyph.svg "Symbol 'Externer Link'")](https://docs.cloudfoundry.org/devguide/deploy-apps/ssh-apps.html).
 
 # Zugehörige Links
-{: #rellinks}
+{: #rellinks notoc}
 ## Allgemein
-{: #general}
+{: #general notoc}
 * [Liberty-Laufzeit](index.html)
 * [Übersicht über das Liberty-Profil](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
-

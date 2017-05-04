@@ -45,7 +45,7 @@ $ pod update
 ```
 このコマンドにより、依存関係がインストールされ、新しい Xcode ワークスペースが作成されます。**注**: 元の Xcode プロジェクト・ファイルではなく、次のように必ず新しい Xcode ワークスペースを開いてください。
 
- ```
+```
 	$ open App.xcworkspace
 	```
 このワークスペースには、元のプロジェクトと、依存関係が含まれている Pods プロジェクトが含まれています。Bluemix Mobile Services ソース・フォルダーを変更したい場合は、Pods プロジェクト内の `Pods/yourImportedSourceFolder` の下にあります (例えば、`Pods/IMFGoogleAuthentication`)。##インポートされたフレームワークおよびソース・フォルダーの使用

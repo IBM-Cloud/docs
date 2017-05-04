@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,7 +12,9 @@ lastupdated: "2017-01-08"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 针对 {{site.data.keyword.amashort}} Cordova 应用程序配置定制认证
+**重要信息：{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。**
+
+# 针对 Mobile Client Access Cordova 应用程序配置定制认证
 {: #custom-cordova}
 
 安装 Cordova 应用程序以使用定制认证和 {{site.data.keyword.amafull}} 客户端 SDK 来访问受保护应用程序。
@@ -111,7 +113,7 @@ authenticationContext.submitAuthenticationFailure(info);
 ## 定制认证侦听器工作流程的样本实现
 {: #custom-cordova-authlisten-sample}
 
-此认证侦听器样本设计用于处理定制身份提供者。您可以从[此 Github 存储库 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "外部链接图标"){: new_window} 下载定制身份提供者。
+此认证侦听器样本设计用于处理定制身份提供者。您可以从[此 Github 存储库 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window} 下载定制身份提供者。
 
 ```JavaScript
 var customAuthenticationListener = {

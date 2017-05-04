@@ -2,11 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -29,9 +29,8 @@ lastupdated: "2017-03-10"
 ## {{site.data.keyword.iotelectronics}} の概説
 開始するには、次のタスクを完了してください。
 
-1. {{site.data.keyword.amafull}} を構成して、[モバイル通信とセキュリティーを使用可能にします](iotelectronics_config_mca.html)。
-2. {{site.data.keyword.iotelectronics}} スターター Web アプリケーションを使用して、[シミュレート電気製品を作成します](iot4ecreatingappliances.html)。{{site.data.keyword.iotelectronics}} Starter 内では、デモンストレーション用のシミュレート電気製品として、洗濯機が使用されます。接続先に選択する電気製品は、どのタイプのスマート電子デバイスでもかまいません。
-3. サンプル・モバイル・アプリを[ダウンロードして接続します](iotelectronics_config_mobile.html)。
+1. {{site.data.keyword.iotelectronics}} スターター Web アプリケーションを使用して、[シミュレート電気製品を作成します](iot4ecreatingappliances.html)。{{site.data.keyword.iotelectronics}} Starter 内では、デモンストレーション用のシミュレート電気製品として、洗濯機が使用されます。接続先に選択する電気製品は、どのタイプのスマート電子デバイスでもかまいません。
+2. サンプル・モバイル・アプリを[ダウンロードして接続します](iotelectronics_config_mobile.html)。
 
 
 ## 次に行うこと
@@ -49,14 +48,13 @@ lastupdated: "2017-03-10"
 {: #api}
 * [{{site.data.keyword.iotelectronics}} API ![外部リンクのアイコン](../../icons/launch-glyph.svg)](https://broker-uss-iot4e.electronics.internetofthings.ibmcloud.com/public/iot4eregistrationapi.html){:new_window}
 * [{{site.data.keyword.iot_short}} API ![外部リンクのアイコン](../../icons/launch-glyph.svg)](https://developer.ibm.com/iotfoundation/recipes/api-documentation/){:new_window}
-
+* [IBM Watson IoT Service Health ダッシュボード ![外部リンクのアイコン](../../icons/launch-glyph.svg)](https://status.internetofthings.ibmcloud.com){: new_window}
 
 ## コンポーネント
 {: #general}
 
 * [{{site.data.keyword.iotelectronics}} の資料](iotelectronics_overview.html){:new_window}
 * [{{site.data.keyword.iot_full}} の資料](https://console.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
-*  [{{site.data.keyword.amashort}} の資料](https://console.ng.bluemix.net/docs/services/mobileaccess/overview.html){:new_window}
 * [{{site.data.keyword.sdk4nodefull}} の資料](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime){:new_window}
 
 ## サンプル

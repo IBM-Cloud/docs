@@ -222,7 +222,7 @@ cf bind-service appname service_instance
 您可能需要閱讀服務文件，以瞭解預期的內容，以及如何解譯每一份資訊。
 
 
-如果您連結至應用程式的服務當機，應用程式可能會停止執行或發生錯誤。{{site.data.keyword.Bluemix_notm}} 不會自動重新啟動應用程式，以從這些問題中回復。請考慮將應用程式編碼成可識別運作中斷、異常狀況和連線失敗並從其中回復。如需相關資訊，請參閱[應用程式不會自動重新啟動](/docs/troubleshoot/index.html#ts_topmenubar)疑難排解主題。
+如果您連結至應用程式的服務當機，應用程式可能會停止執行或發生錯誤。{{site.data.keyword.Bluemix_notm}} 不會自動重新啟動應用程式，以從這些問題回復。請考慮將應用程式編碼成可識別運作中斷、異常狀況和連線失敗並從其中回復。如需相關資訊，請參閱[應用程式不會自動重新啟動](/docs/troubleshoot/index.html#ts_topmenubar)疑難排解主題。
 
 
 ## 讓外部應用程式能使用 {{site.data.keyword.Bluemix_notm}} 服務

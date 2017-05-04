@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-21"
+lastupdated: "2017-04-04"
 
 ---
 
@@ -88,10 +88,12 @@ Um protocolo de ação de feed semelhante ocorre para `wsk trigger delete`.
 
 É fácil configurar um feed por meio de um gancho se o produtor de evento suporta um recurso webhook/retorno de chamada.
 
-Com esse método *não é necessário* levantar qualquer serviço persistente fora do OpenWhisk.  Todo o gerenciamento de feed acontece naturalmente por meio de *ações de feed* stateless do {{site.data.keyword.openwhisk_short}}, que negociam diretamente com um API de webhook de terceiro.
+Com esse método, *não é necessário* levantar qualquer serviço persistente fora do {{site.data.keyword.openwhisk_short}}.
+Todo o gerenciamento de feed acontece naturalmente por meio de *ações de feed* stateless do {{site.data.keyword.openwhisk_short}}, que negociam diretamente com um API de webhook de terceiro.
 
-Quando chamada com `CREATE`, a ação de feed simplesmente instala um webhook para algum outro serviço, solicitando que o serviço remoto efetue POST de notificações para a URL apropriada do
-`fireTrigger` no OpenWhisk.
+Quando chamada com `CREATE`, a ação de feed simplesmente instala um webhook para algum
+outro serviço, solicitando que o serviço remoto efetue POST de notificações para a URL apropriada do
+`fireTrigger` no {{site.data.keyword.openwhisk_short}}.
 
 O webhook deve ser direcionado para enviar notificações para uma URL como:
 
@@ -101,7 +103,9 @@ O formulário com a solicitação POST será interpretado como um documento de J
 
 ## Implementando feeds com pesquisa
 
-É possível configurar uma *ação* do {{site.data.keyword.openwhisk_short}} para pesquisar uma origem do feed inteiramente no OpenWhisk, sem a necessidade de levantar qualquer conexão persistente ou serviço externo.
+É possível configurar uma *ação* do {{site.data.keyword.openwhisk_short}} para
+pesquisar uma origem do feed inteiramente no {{site.data.keyword.openwhisk_short}}, sem a necessidade de levantar qualquer conexão
+persistente ou serviço externo.
 
 Para feeds nos quais um webhook não está disponível, mas não precisam de alto volume ou tempos de resposta de baixa latência, a pesquisa é uma opção atraente.
 
@@ -118,8 +122,8 @@ Esse procedimento implementa um acionador baseado em pesquisa usando inteirament
 As 2 opções anteriores de arquitetura são simples e fáceis de implementar. No entanto, se você deseja um feed de alto desempenho, não há substituto para conexões persistentes e técnicas de pesquisa
 longa ou similares.
 
-Como as ações do {{site.data.keyword.openwhisk_short}} devem ser de execução curta, uma ação não poderá manter uma conexão persistente com um terceiro. Em vez disso, devemos
-levantar um serviço separado (fora do OpenWhisk) que seja executado o tempo todo.   Nós os chamamos de *serviços do provedor*.  Um serviço do provedor pode manter conexões com origens de eventos de
+Como as ações do {{site.data.keyword.openwhisk_short}} devem ser de execução curta, uma ação não poderá manter uma conexão persistente com um terceiro. 
+Em vez disso, devemos levantar um serviço separado (fora do {{site.data.keyword.openwhisk_short}}) que seja executado o tempo todo.   Nós os chamamos de *serviços do provedor*.  Um serviço do provedor pode manter conexões com origens de eventos de
 terceiro que suportam notificações de pesquisa longa ou outras baseadas em conexão.
 
 O serviço do provedor deve fornecer uma API de REST que permita que a *ação de feed* do {{site.data.keyword.openwhisk_short}} controle o feed.   O serviço do provedor age como um proxy entre o provedor de evento e o {{site.data.keyword.openwhisk_short}} -- quando recebe eventos do terceiro, ele os envia para o {{site.data.keyword.openwhisk_short}} disparando um acionador.

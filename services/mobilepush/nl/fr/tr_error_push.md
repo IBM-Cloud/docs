@@ -94,8 +94,7 @@ plus d'informations, voir [Configuration des données d'identification pour le s
 **Explication **: l'URL de la demande comporte une chaîne de requête avec des paramètres non reconnus. Par exemple, si la demande de suppression de l'abonnement comporte des paramètres autres que deviceId et tagName, cette erreur peut se produire.
 
 
-**Réponse de l'utilisateur **: vérifiez que le corps JSON dans la demande respecte le format de demande attendu par le serveur {{site.data.keyword.mobilepushshort}}. 
-Pour plus d'informations, voir [API REST ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobile.{DomainName}/imfpush/){: new_window}.
+**Réponse de l'utilisateur **: vérifiez que le corps JSON dans la demande respecte le format de demande attendu par le serveur {{site.data.keyword.mobilepushshort}}. Pour plus d'informations, voir [API REST ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobile.{DomainName}/imfpush/){: new_window}.
 
 
 
@@ -105,8 +104,7 @@ Pour plus d'informations, voir [API REST ![Icône de lien externe](../../icons/l
 **Explication **: l'URL de la demande comporte une chaîne de requête avec des paramètres requis manquants. Par exemple, les paramètres deviceId et tagName peuvent être absents de la demande de suppression de l'abonnement.
 
 
-**Réponse de l'utilisateur **: vérifiez que le corps JSON dans la demande respecte le format de demande attendu par le serveur {{site.data.keyword.mobilepushshort}}. 
-Pour plus d'informations, voir [API REST ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobile.{DomainName}/imfpush/){: new_window}.
+**Réponse de l'utilisateur **: vérifiez que le corps JSON dans la demande respecte le format de demande attendu par le serveur {{site.data.keyword.mobilepushshort}}. Pour plus d'informations, voir [API REST ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobile.{DomainName}/imfpush/){: new_window}.
 
 
 

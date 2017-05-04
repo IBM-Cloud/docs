@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -11,6 +11,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+**Importante: o serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.**
 
 # Autenticando usuários com um provedor de identidade customizado
 {: #custom-id}
@@ -117,8 +119,9 @@ objeto de identidade do usuário customizado que é obtido pelo cliente após a 
 
 Use qualquer uma das implementações de amostra Node.js a seguir de um provedor de identidade customizado como uma referência ao desenvolver seu provedor de identidade customizado. Faça download do código do aplicativo completo dos repositórios GitHub.
 
- * [Amostra simples ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "Ícone de link externo"){: new_window}
- * [Amostra avançada ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management "Ícone de link externo"){: new_window}
+ * [Amostra
+simples ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}
+ * [Amostra avançada ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management){: new_window}
 
 ## Comunicação típica entre o servidor {{site.data.keyword.amashort}} e um provedor de identidade customizado
 {: #custom-id-comm}
@@ -142,7 +145,7 @@ Por padrão, o provedor de identidade customizado é considerado um aplicativo s
 
 Um provedor de identidade customizado suporta um domínio de autenticação customizado. Para manipular desafios de autenticação recebidos, crie e registre uma instância do `AuthenticationDelegate`/ `AuthenticationListener` em seu aplicativo cliente. Defina o nome do domínio de autenticação customizado ao configurar um provedor de identidade customizado no painel do {{site.data.keyword.amashort}}. A região identifica a instância de serviço específica {{site.data.keyword.amashort}} de uma solicitação recebida.
 
-## Próximas Etapas
+## Próximas etapas
 {: #next-steps}
 
 * [Criando um provedor de identidade customizado](custom-auth-identity-provider.html)

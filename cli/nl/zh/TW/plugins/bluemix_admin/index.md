@@ -172,7 +172,7 @@ cf ba set-permissions <user_name> <permission> <access>
 ### 移除使用者
 {: #admin_remov_user}
 
-若要從 {{site.data.keyword.Bluemix_notm}} 環境中移除使用者，請使用下列指令：
+若要從 {{site.data.keyword.Bluemix_notm}} 環境移除使用者，請使用下列指令：
 
 ```
 cf ba remove-user <user_name>
@@ -445,7 +445,7 @@ cf bluemix-admin delete-space <organization> <space_name>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">要從中移除空間的組織的名稱或 GUID。</dd>
 <dt class="pt dlterm">&lt;space_name&gt;</dt>
-<dd class="pd">要從組織中移除的空間的名稱。</dd>
+<dd class="pd">要從組織移除的空間的名稱。</dd>
 </dl>
 
 **提示：**您也可以使用 **ba cs** 作為較長的 **ba delete-space** 指令名稱的別名。
@@ -556,7 +556,7 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 ### 移除組織的服務可見性
 {: #admin_remvis_service_org}
 
-您可以從組織清單中移除可在 {{site.data.keyword.Bluemix_notm}}「型錄」中看見特定服務的組織。若要針對組織移除 {{site.data.keyword.Bluemix_notm}}「型錄」中的服務可見性，請使用下列指令：
+您可以從組織清單移除可在 {{site.data.keyword.Bluemix_notm}}「型錄」中看見特定服務的組織。若要針對組織移除 {{site.data.keyword.Bluemix_notm}}「型錄」中的服務可見性，請使用下列指令：
 
 ```
 cf ba remove-service-plan-visibility <plan_identifier> <organization>
@@ -727,7 +727,7 @@ cf ba add-service-broker <broker_name> <user_name> <password> <broker_url>
 ### 刪除服務分配管理系統
 {: #clidelservbro}
 
-若要刪除服務分配管理系統，以從 {{site.data.keyword.Bluemix_notm}}「型錄」中移除自訂服務，請使用下列指令：
+若要刪除服務分配管理系統，以從 {{site.data.keyword.Bluemix_notm}}「型錄」移除自訂服務，請使用下列指令：
 
 ```
 cf ba delete-service-broker <service_broker>

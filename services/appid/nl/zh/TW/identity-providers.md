@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -14,11 +14,11 @@ lastupdated: "2017-03-30"
 # 配置身分提供者
 {: #setting-up-idp}
 
-您可以配置 Facebook 及（或）Google 來鑑別應用程式，以及授權受保護後端資源的存取權。
+您可以配置 Facebook 及（或）Google 來設定使用者的單一登入體驗。藉由使用身分提供者，使用者可以用他們已經熟悉的認證登入。
 {:shortdesc}
 
 
-## Facebook
+## 配置 Facebook 鑑別
 {: #facebook}
 
 配置 {{site.data.keyword.appid_short}} 服務，以使用 Facebook 作為身分提供者。
@@ -31,8 +31,8 @@ lastupdated: "2017-03-30"
 
 若要使用 Facebook 作為行動或 Web 應用程式上的身分提供者，您必須在 Facebook 應用程式上新增及配置網站平台。
 
-1. 在 Facebook for Developers 網站上登入您的帳戶。如需建立新 Facebook 應用程式的相關資訊，請參閱<a href="https://developers.facebook.com/docs/apps/register" target="_blank">建立應用程式 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示"></a>。
-2. 記下 Facebook 應用程式 ID 及密碼。在服務儀表板中，您需要這些值來配置 Web 專案以進行鑑別。
+1. 在 <a href="https://developers.facebook.com/docs/apps/register" target="_blank">Facebook for Developers 網站 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示"></a> 上登入您的帳戶。
+2. 記下 Facebook 應用程式 ID 及密碼。在服務儀表板中，需要這些值才能配置 Web 專案以進行鑑別。
 3. 新增 Web 平台，並輸入網站 URL。
 4. 從產品清單中，選取 **Facebook 登入**。
 5. 在「有效 OAuth 重新導向 URL」欄位中，輸入授權伺服器回呼端點 URL。您可以在後續步驟中配置 {{site.data.keyword.appid_short_notm}} 服務之後，再新增此值。
@@ -47,10 +47,10 @@ lastupdated: "2017-03-30"
 2. 輸入自 Facebook for Developers 網站取得的 Facebook 應用程式 ID 及密碼。
 3. 複製 **Facebook for Developers 的重新導向 URI** 欄位中的 URI。將 URI 貼入 Facebook Developers 入口網站的 **Facebook 登入**區段中的**有效 OAuth 重新導向 URI** 欄位。
 4. 按一下**儲存**。
-5. 選用項目：若要配置 Web 應用程式的鑑別，請在「Web 應用程式重新導向 URI」中輸入重新導向 URI。此值是由開發人員所判定，並且用來在授權處理程序完成之後存取重新導向 URI。
+5. 選用項目：若要配置 Web 應用程式的鑑別，請在「Web 應用程式重新導向 URL」中輸入重新導向 URL。此值是由開發人員所判定，並且用來在授權處理程序完成之後存取重新導向 URL。
 
 
-## Google
+## 配置 Google 鑑別
 {: #google}
 
 配置 {{site.data.keyword.appid_short_notm}} 服務，以使用 Google 作為身分提供者。
@@ -63,11 +63,10 @@ lastupdated: "2017-03-30"
 
 若要使用 Google 作為身分提供者，請取得 Google 用戶端 ID 及密碼，並在 Google Developer Console 中建立專案。
 
-1. 在 Google Developer Console 中，開啟 Google 應用程式。
+1. 在 <a href="https://console.developers.google.com/apis/library" target="_blank">Google Developer Console <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示"></a> 中，開啟 Google 應用程式。
 2. 新增 Google+ API。
 3. 使用 OAuth 建立認證。在**應用程式類型**欄位中，選取 **Web 應用程式**。在**授權重新導向 URI** 欄位中，輸入「應用程式 ID 重新導向 URI」。您可以從服務儀表板的 Google 配置畫面中取得「應用程式 ID 重新導向授權 URI」。
 4. 儲存變更。記下 Google 用戶端 ID 及密碼。
-
 
 
 

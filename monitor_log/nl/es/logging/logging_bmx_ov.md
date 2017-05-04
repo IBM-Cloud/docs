@@ -16,7 +16,7 @@ lastupdated: "2017-02-16"
 # Registro en Bluemix
 {: #logging_bmx_ov}
 
-Las funciones de registro de {{site.data.keyword.Bluemix_notm}} están integradas en la plataforma y la recopilación de datos se habilita automáticamente para los recursos de la nube. De forma predeterminada, {{site.data.keyword.Bluemix_notm}} recopila y muestra los registros correspondientes a sus apps, tiempos de ejecución de apps y tiempos de ejecución del sistema en el que se ejecutan dichas apps. 
+Las funciones de registro de {{site.data.keyword.Bluemix}} están integradas en la plataforma y la recopilación de datos se habilita automáticamente para los recursos de la nube. De forma predeterminada, {{site.data.keyword.Bluemix_notm}} recopila y muestra los registros correspondientes a sus apps, tiempos de ejecución de apps y tiempos de ejecución del sistema en el que se ejecutan dichas apps. 
 {:shortdesc}
 
 Puede utilizar las funciones de registro de {{site.data.keyword.Bluemix_notm}} para comprender el comportamiento de la plataforma de nube y los recursos que se ejecutan la misma. No se requiere ninguna instrumentación especial para recopilar la salida estándar y los registros de error estándares. Por ejemplo, puede utilizar registros para proporcionar un seguimiento de auditoría para una aplicación, detectar problemas en un servicio, identificar vulnerabilidades, resolver problemas de despliegues de app y de comportamiento del tiempo de ejecución, detectar problemas en la infraestructura en la que se ejecuta la app, realizar un rastreo de la app entre los componentes de la plataforma de nube y detectar patrones que puede utilizar para tomar el control de acciones que podrían afectar al SLA del servicio.
@@ -25,14 +25,14 @@ Cuando ejecuta sus apps en la nube, es posible que no pueda utilizar SSH ni FTP 
 
 {{site.data.keyword.Bluemix_notm}} registra los datos de registro que genera la plataforma Cloud Foundry y las aplicaciones de Cloud Foundry. En los registros puede ver los errores, avisos y mensajes informativos que se generan para la app. Para obtener más información sobre el registro en Cloud Foundry, consulte [Registro de apps de Cloud Foundry en Bluemix](logging_cf_apps.html#logging_bluemix_cf_apps).
 
-{{site.data.keyword.Bluemix_notm}} registra los datos de registro que genera {{site.data.keyword.containershort}}. Para obtener más información sobre el registro en {{site.data.keyword.containershort}}, consulte [Registro en {{site.data.keyword.containershort}}](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_logs).   
+{{site.data.keyword.Bluemix_notm}} registra los datos de registro que genera {{site.data.keyword.containershort}}. Para obtener más información sobre el registro en {{site.data.keyword.containershort}}, consulte [Registro correspondiente al servicio IBM Bluemix Container](containers/logging_containers_ov.html#logging_containers_ov).   
 
 
 Con la función de registro que proporciona {{site.data.keyword.Bluemix_notm}}, puede:
 
 * Obtener una perspectiva de los recursos de la nube y sobre su rendimiento y ejecución.
 * Definir tendencias que le ayuden a identificar escenarios que requieran su intervención.
-* Definir seguimientos de datos para un app que puede, por ejemplo, utilizar para la auditoría.
+* Definir seguimientos de datos para una app que puede, por ejemplo, utilizar para la auditoría.
 * Reducir el tiempo y esfuerzo necesarios para localizar y solucionar cualquier problema de una app. 
 * Supervisar el despliegue de sus apps en la plataforma de nube.
 * Detectar cuándo un servicio o una app está inactivo o se ha colgado.

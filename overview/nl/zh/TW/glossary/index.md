@@ -540,7 +540,7 @@ Cloud Foundry 中的保存檔，其中包含應用程式及其運行環境和架
 ### 檔案共用 (file share)
 {: #x2022902}
 
-在 IBM 雲端環境中，使用者在其中儲存及共用檔案的持續性儲存空間系統。在 IBM Containers 中，使用者可以在檔案共用上裝載 Docker 磁區。
+在 IBM Cloud 環境中，使用者在其中儲存及共用檔案的持續性儲存空間系統。在 IBM Containers 中，使用者可以在檔案共用上裝載 Docker 磁區。
 
 ### 發動 (fire)
 {: #x2239904}

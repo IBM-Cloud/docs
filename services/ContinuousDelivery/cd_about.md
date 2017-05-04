@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-4"
+lastupdated: "2017-4-28"
 
 ---
 
@@ -45,6 +45,8 @@ The {{site.data.keyword.contdelivery_short}} service supports your DevOps workfl
 For source-code management and issue tracking, {{site.data.keyword.Bluemix_notm}} Public generally uses github.com. {{site.data.keyword.Bluemix_notm}} Dedicated can also use github.com, but it generally uses {{site.data.keyword.ghe_short}} that is either installed by your company or managed by IBM.
 
 {{site.data.keyword.contdelivery_short}} is available on {{site.data.keyword.Bluemix_notm}} Public and {{site.data.keyword.Bluemix_notm}} Dedicated. Toolchains differ depending on whether you use {{site.data.keyword.contdelivery_short}} on {{site.data.keyword.Bluemix_notm}} Public or {{site.data.keyword.Bluemix_notm}} Dedicated.
+
+**Tip**: Toolchains are hosted in the US South region. If your toolchain is configured to deploy apps to a different region, it will still deploy apps to that region.
 
 |Toolchains |{{site.data.keyword.Bluemix_notm}} Public	|{{site.data.keyword.Bluemix_notm}} Dedicated |
 |:----------|:------------------------------|:------------------|

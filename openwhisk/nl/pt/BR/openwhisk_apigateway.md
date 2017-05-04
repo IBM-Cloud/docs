@@ -23,7 +23,8 @@ Como resultado do feedback do usuário, as Ações da web são o modelo de progr
 
 A maioria da funcionalidade de API Gateway foi mesclada em Ações da web. As Ações da web permitem manipular qualquer solicitação de HTTP e retornar respostas de HTTP com controle total da sua Ação da web.
 
-Uma integração revisada do OpenWhisk API Gateway estará disponível em breve. Ela será configurada para transmitir por proxy as Ações da web, fornecendo a elas recursos de API Gateway, como limitação de taxa, validação de token oauth, chaves API e muito mais.
+Uma integração revisada do OpenWhisk API Gateway estará disponível em breve. Ela será configurada para transmitir por proxy as Ações da web, fornecendo a elas recursos de API Gateway, como limitação de taxa, validação de token oauth, chaves API e muito mais. 
+Veja o vídeo [Criar e controlar APIs](https://youtu.be/XT9KwWTnnzo)
 
 **Nota:** as APIs criadas usando o `wsk api-experimental` continuarão funcionando, no entanto, será necessário iniciar a migração das APIs para as ações da web.
 

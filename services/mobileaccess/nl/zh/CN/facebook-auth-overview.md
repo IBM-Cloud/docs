@@ -2,13 +2,15 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
+
+**重要信息：{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。**
 
 # 使用 Facebook 凭证认证用户
 {: #facebook-auth-overview}
@@ -62,7 +64,7 @@ Facebook 集成进
 
 为移动应用程序或 Web 应用程序配置 Facebook 认证时需要此值。
 
-1. 访问 [Facebook for Developers ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developers.facebook.com "外部链接图标"){: new_window} 站点。
+1. 访问 [Facebook for Developers ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developers.facebook.com){: new_window} 站点。
 
 1. 打开**我的应用程序**下拉列表，并选择**添加新应用程序**。
 

@@ -41,9 +41,9 @@ Für [Liberty for Java](/docs/runtimes/liberty/index.html) und die [java_buildpa
 
 Führen Sie ein erneutes Staging für die Anwendung durch.  Die angegebenen Proxy-Einstellungen werden daraufhin zur Laufzeit von der Anwendung verwendet. Weitere Informationen zu den Java-Proxy-Optionen finden Sie in [Java Networking and Proxies](https://docs.oracle.com/javase/8/docs/technotes/guides/net/proxies.html).
 
-# Zugehörige Links
+# rellinks
 {: #rellinks notoc}
-## Allgemein
+## general
 {: #general}
 * [Liberty for Java](/docs/runtimes/liberty/index.html)
 * [SDK for Nodejs](/docs/runtimes/nodejs/index.html)

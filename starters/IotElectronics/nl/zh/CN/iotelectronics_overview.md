@@ -2,16 +2,15 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-
 
 # 关于 {{site.data.keyword.iotelectronics}}
 {: #iotelectronics_about}
@@ -44,15 +43,11 @@ lastupdated: "2017-03-10"
 
 ![{{site.data.keyword.iotelectronics}} 体系结构。此图在主题的主体中进行描述。](images/IoT4E_architecture.svg "{{site.data.keyword.iotelectronics}} 体系结构")
 
-{{site.data.keyword.iotelectronics}} Starter 使用 {{site.data.keyword.iotelectronics}} 服务和 API 与 {{site.data.keyword.iot_short_notm}} 连接。入门模板应用程序和样本移动应用程序与 {{site.data.keyword.iotelectronics}} 服务进行通信，并通过 {{site.data.keyword.amafull}} 相互连接。入门模板中包含以下组件：
+{{site.data.keyword.iotelectronics}} Starter 使用 {{site.data.keyword.iotelectronics}} 服务和 API 与 {{site.data.keyword.iot_short_notm}} 连接。入门模板应用程序和样本移动应用程序与 {{site.data.keyword.iotelectronics}} 服务进行通信。入门模板中包含以下组件：
 
 **{{site.data.keyword.iotelectronics}} 服务**支持用户和设备注册与通知。
 
 **{{site.data.keyword.iot_full}}** 允许应用程序与连接的设备、传感器和网关进行通信，以及使用这些对象收集的数据。
-
-<!-- **{{site.data.keyword.iotrtinsights_full}}** enables you to enrich and monitor data from your appliances, visualize what's happening now, and respond to emerging conditions by using automated actions. -->
-
-**{{site.data.keyword.amafull}}** 使得移动应用程序的用户可以使用现有的社交帐户进行登录，并可确保与后端系统的通信安全。
 
 **{{site.data.keyword.sdk4nodefull}}** 使您能够开发、部署和扩展服务器端 JavaScript&reg; 应用程序，并提供增强的性能、安全性和可维护性。
 

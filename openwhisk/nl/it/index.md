@@ -48,6 +48,9 @@ Passa a [Configura CLI](https://new-console.{DomainName}/openwhisk/cli){: new_wi
 - [Casi d'uso comuni per le applicazioni Serverless](./openwhisk_use_cases.html)
 - [Configurazione e utilizzo della CLI OpenWhisk](./openwhisk_cli.html)
 - [Utilizzo di OpenWhisk da un'applicazione iOS](./openwhisk_mobile_sdk.html)
+- [Articoli, esempi ed esercitazioni](https://github.com/openwhisk/openwhisk-external-resources)
+- [FAQ Apache OpenWhisk](http://openwhisk.org/faq)
+- [Prezzi](https://console.ng.bluemix.net/openwhisk/learn/pricing)
 
 ## Modello di programmazione
 {: #openwhisk_start_programming}
@@ -120,6 +123,7 @@ Per utilizzare questo esempio, completa la seguente procedura:
 
 Puoi anche utilizzare le funzionalità guidate dagli eventi in {{site.data.keyword.openwhisk_short}} per richiamare questa azione in risposta agli eventi. Segui l'[esempio di servizio di allerta](./openwhisk_packages.html#openwhisk_packages_trigger) per configurare un'origine eventi che richiami l'azione `hello` ogni volta che viene generato un evento periodico.
 
+Un elenco completo di [Esempi ed esercitazioni OpenWhisk può essere trovato qui](https://github.com/openwhisk/openwhisk-external-resources#sample-applications). In aggiunta agli esempi, questo repository contiene link agli articoli, alle presentazioni, ai podcast, ai video e ad altre risorse correlate a {{site.data.keyword.openwhisk_short}}.
 
 ## Guida di riferimento API
 {: #openwhisk_start_api notoc}

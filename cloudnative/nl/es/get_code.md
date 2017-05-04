@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-18"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -13,7 +13,7 @@ lastupdated: "2017-03-18"
 # Obtener código
 {: #Get_Code}
 
-Cuando haya completado la configuración del proyecto con las funciones, podrá descargar el código que le permite ejecutarlo. El proyecto descargado está preconfigurado con las dependencias y las credenciales requeridas de SDK para cada función que configure.
+Cuando haya completado la configuración del proyecto con las funciones, podrá descargar el código que le permite ejecutar la aplicación. El proyecto descargado está preconfigurado con las dependencias y las credenciales requeridas de SDK para cada función que configure.
 
 Tendrá que completar las credenciales para servicios que no sean configurables en el proyecto descargado. El archivo `README.md` para el proyecto iniciador contiene instrucciones. Visualice el archivo `README.md` en un visor Markdown para completar la configuración.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-16"
+  lastupdated: "2017-04-04"
 
 ---
 
@@ -30,19 +30,21 @@ function main({name}) {
   return {body: `<html><body><h3>${msg}</h3></body></html>`}
 }
 ```
-{: codeblock}
+{: codeblock}  
 
-Puoi creare un'*azione web* `hello` nel pacchetto `demo` per lo spazio dei nomi `guest` utilizzando l'annotazione `web-export`:
+Puoi creare un'*azione web* `hello` nel pacchetto `demo` per lo spazio dei nomi `guest` utilizzando l'indicatore `--web` della CLI con un valore di `true` o `yes`:
 ```
 wsk package create demo
 ```
 {: pre}
 ```
-wsk action create /guest/demo/hello hello.js -a web-export true
+wsk action create /guest/demo/hello hello.js --web true
 ```
 {: pre}
 
-L'annotazione `web-export` permette all'azione di essere accessibile come azione web tramite una nuova interfaccia REST. L'URL è strutturato nel seguente modo: `https://openwhisk.ng.bluemix.net/api/v1/web/{QUALIFIED ACTION NAME}.{EXT}`. Il nome completo di un'azione è composto da tre parti: lo spazio dei nomi, il nome pacchetto e il nome azione.
+Utilizzando l'indicatore `--web` con un valore di `true` o `yes` si consente che un'azione sia accessibile tramite l'interfaccia REST senza
+bisogno delle credenziali. Un'azione web può essere richiamata utilizzando un URL strutturato nel seguente modo:
+`https://{APIHOST}/api/v1/web/{QUALIFIED ACTION NAME}.{EXT}`. Il nome completo di un'azione è composto da tre parti: lo spazio dei nomi, il nome pacchetto e il nome azione.
 
 *Il nome completo dell'azione deve includere il suo nome pacchetto, che sarà 'predefinito' se l'azione non si trova in un pacchetto denominato.*
 
@@ -63,7 +65,7 @@ function main() {
   }
 }
 ```
-{: codeblock}  
+{: codeblock}    
 
 O imposta un cookie:
 ```javascript
@@ -77,7 +79,7 @@ function main() {
     body: '<html><body><h3>hello</h3></body></html>' }
 }
 ```
-{: codeblock}
+{: codeblock}  
 
 O restituisce un `image/png`:
 ```javascript
@@ -88,7 +90,7 @@ function main() {
              body: png };
 }
 ```
-{: codeblock}
+{: codeblock}  
 
 Or returns `application/json`:
 ```javascript
@@ -100,7 +102,7 @@ function main(params) {
     };
 }
 ```
-{: codeblock}
+{: codeblock}  
 
 It is important to be aware of the [limite della dimensione della risposta](./openwhisk_reference.html) per le azioni, in quanto una risposta che supera i limiti di sistema predefiniti avrà esito negativo. Gli oggetti di grandi dimensioni non devono essere inviati in linea attraverso OpenWhisk, ma differite ad esempio a un archivio oggetti.
 
@@ -155,8 +157,8 @@ Quando questa azione viene richiamata come azione web, puoi modificare la rispos
 Ad esempio, per restituire l'intero oggetto e vedere quali argomenti riceve l'azione:
 
 ```
-curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json
-```
+ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json
+ ```
 {: pre}
 ```json
 {
@@ -175,8 +177,8 @@ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json
 
 e con un parametro di query:
 ```
-curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json?name=Jane
-```
+ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json?name=Jane
+ ```
 {: pre}
 ```json
 {
@@ -196,8 +198,8 @@ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json?name=Jane
 
 o dati di modulo:
 ```
-curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json -d "name":"Jane"
-```
+ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json -d "name":"Jane"
+ ```
 {: pre}
 ```json
 {
@@ -219,7 +221,7 @@ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json -d "name"
 
 o l'oggetto JSON:
 ```
-curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json -H 'Content-Type: application/json' -d '{"name":"Jane"}'
+ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json -H 'Content-Type: application/json' -d '{"name":"Jane"}'
 ```
 {: pre}
 ```json
@@ -284,34 +286,35 @@ Un'estensione di contenuto è generalmente richiesta quando si richiama un'azion
 ## Parametri protetti
 {: #openwhisk_webactions_protected}
 
-I parametri di azione possono essere anche protetti e trattati come immutabili. Per finalizzare i parametri e per rendere accessibile un'azione web, è necessario collegare due [annotazioni](openwhisk_annotations.html) all'azione: `final` e `web-export`, una delle quali deve essere impostata su `true` per avere effetto. Riprendendo la distribuzione dell'azione precedente, aggiungiamo le annotazioni nel seguente modo:
+Un'estensione di contenuto è generalmente richiesta quando si richiama un'azione web; in assenza di un'estensione, viene utilizzato `.http` come estensione predefinita. Le estensioni `.json` e `.http` non richiedono un percorso di proiezione, mentre le estensioni `.html`, `.svg` e `.text` lo richiedono; tuttavia per comodità si utilizza il percorso predefinito per la corrispondenza con il nome estensione. Quindi, per richiamare un'azione web e ricevere una risposta `.html`, l'azione deve rispondere con un oggetto JSON contenente una proprietà di livello superiore denominata `html` (o la risposta deve essere nel percorso indicato esplicitamente). In altre parole, `/guest/demo/hello.html` equivale a proiettare esplicitamente la proprietà `html`, come in `/guest/demo/hello.html/html`. Il nome completo dell'azione deve includere il suo nome pacchetto, che sarà `default` se l'azione non si trova in un pacchetto denominato.
+
+
+## Parametri protetti
+
+I parametri di azione sono protetti e trattati come immutabili. I parametri vengono automaticamente finalizzati durante l'abilitazione della azioni web.
 
 ```
-wsk action create /guest/demo/hello hello.js \
+ wsk action create /guest/demo/hello hello.js \
       --parameter name Jane \
-      --annotation final true \
-      --annotation web-export true
+      --web true
 ```
-{: pre}
 
 Come risultato di queste modifiche, `name` viene collegato a `Jane` e non può essere sovrascritto dai parametri di query o corpo per via dell'annotazione finale. Ciò protegge l'azione dai parametri di query o corpo che tentano di modificare questo valore in modo intenzionale o accidentale. 
 
 ## Disabilitazione delle azioni web
-{: #openwhisk_webactions_disable}
 
-Per disabilitare il richiamo di un'azione web tramite la nuova API (`https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/web/`), basta rimuovere l'annotazione o impostarla su `false`.
+Per disabilitare il richiamo di un'azione web tramite l'API web (`https://openwhisk.ng.bluemix.net/api/v1/web/`), trasmetti un valore di `false` o `no` all'indicatore `--web` durante l'aggiornamento di un'azione con la CLI.
 
 ```
-wsk action update /guest/demo/hello hello.js \
-      --annotation web-export false
+ wsk action update /guest/demo/hello hello.js --web false
 ```
+{: pre}
 
 ## Gestione HTTP raw
-{: #raw-http-handling}
 
-Un'azione web può scegliere di interpretare ed elaborare direttamente un corpo HTTP in entrata, senza la promozione di un oggetto JSON a proprietà di prima classe disponibili per l'input dell'azione (ad esempio, `args.name` rispetto all'analisi di `args.__ow_query`). Ciò viene fatto tramite l'[annotazione](openwhisk_annotations.html) `raw-http`. Utilizziamo lo stesso esempio mostrato in precedenza, ma abbiamo adesso un'azione web HTTP "raw" che riceve `name` sia come parametri di query sia come valore JSON nel corpo della richiesta HTTP:
+Un'azione web può scegliere di interpretare ed elaborare direttamente un corpo HTTP in entrata, senza la promozione di un oggetto JSON a proprietà di prima classe disponibili per l'input dell'azione (ad esempio, `args.name` rispetto all'analisi di `args.__ow_query`). Ciò viene fatto tramite un'[annotazione](annotations.md) `raw-http`. Utilizziamo lo stesso esempio mostrato in precedenza, ma abbiamo adesso un'azione web HTTP "raw" che riceve `name` sia come parametri di query sia come valore JSON nel corpo della richiesta HTTP:
 ```
-curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json?name=Jane -X POST -H "Content-Type: application/json" -d '{"name":"Jane"}'
+ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json?name=Jane -X POST -H "Content-Type: application/json" -d '{"name":"Jane"}' 
 ```
 {: pre}
 ```json
@@ -338,31 +341,90 @@ In questo caso, possiamo notare che il contenuto JSON è codificato in base64 pe
 
 ### Abilitazione della gestione HTTP raw
 
-Le azioni web HTTP raw sono abilitate tramite l'[annotazione](openwhisk_annotations.html) `raw-http` con il valore `true`.
+Le azioni web HTTP raw sono abilitate tramite l'indicatore `--web` utilizzando un valore di `raw`.
 
 ```
-wsk action create /guest/demo/hello hello.js \
-      --annotation web-export true
-      --annotation raw-http true
+ wsk action create /guest/demo/hello hello.js --web raw
 ```
-{: pre}
-
-**Nota:** poiché `raw-http` implica `web-export`, ci proponiamo di migliorare la CLI per fornire un modo più pratico per aggiungere (e rimuovere) queste annotazioni in futuro.
-
 
 ### Disabilitazione della gestione HTTP raw
 
-La disabilitazione di HTTP raw viene effettuata impostando il valore dell' [annotazione](openwhisk_annotations.html) `raw-http` su `false`.
+La disabilitazione di HTTP raw può essere realizzata trasmettendo un valore di `false` o `no` all'indicatore `--web`.
 
 ```
-wsk update create /guest/demo/hello hello.js \
-      --annotation web-export true
-      --annotation raw-http false
+ wsk update create /guest/demo/hello hello.js --web false
+```
+
+### Decodifica del contenuto del corpo binario da Base64
+
+Quando si utilizza la gestione HTTP raw, il contenuto `__ow_body` sarà codificato in Base64 quando il tipo di contenuto della richiesta è binario.
+Le seguenti sono funzioni che dimostrano come decodificare il contenuto del corpo in Node, Python e Swift. Salva semplicemente un metodo illustrato
+di seguito nel file, crea un'azione web HTTP raw utilizzando la risorsa salvata e richiama l'azione web.
+
+#### Node
+
+```javascript
+  function main(args) {
+    decoded = new Buffer(args.__ow_body, 'base64').toString('utf-8')
+    return {body: decoded}
+}
+```
+{: codeblock}
+
+#### Python
+
+```python
+def main(args):
+    try:
+        decoded = args['__ow_body'].decode('base64').strip()
+        return {"body": decoded}
+    except:
+        return {"body": "Could not decode body from Base64."}
+```
+{: codeblock}
+
+#### Swift
+
+```swift
+extension String {
+    func base64Decode() -> String? {
+        guard let data = Data(base64Encoded: self) else {
+            return nil
+        }
+
+        return String(data: data, encoding: .utf8)
+    }
+}
+
+func main(args: [String:Any]) -> [String:Any] {
+    if let body = args["__ow_body"] as? String {
+        if let decoded = body.base64Decode() {
+            return [ "body" : decoded ]
+        }
+    }
+
+    return ["body": "Could not decode body from Base64."]
+}
+```
+{: codeblock}
+
+Come esempio, slava la funzione Node come `decode.js` ed esegui i seguenti comandi:
+```
+ wsk action create decode decode.js --web raw
 ```
 {: pre}
-
-**Nota:**  tutte le annotazioni per una singola azione devono essere impostate contemporaneamente, durante la creazione oppure durante l'aggiornamento dell'azione. Questo è dovuto a una limitazione corrente sull'API e sulla CLI. In caso contrario, verranno rimosse tutte le annotazioni precedentemente collegate.
-
+```
+ok: created action decode
+```
+```
+curl -k -H "content-type: application" -X POST -d "Decoded body" https:// openwhisk.ng.bluemix.net/api/v1/web/guest/default/decodeNode.json
+```
+{: pre}
+```json
+{
+  "body": "Decoded body"
+}
+```
 
 ## Gestione degli errori
 {: #openwhisk_webactions_errors}
@@ -373,5 +435,5 @@ Quando un'azione OpenWhisk non riesce, esistono due diverse modalità di errore.
 - Il controller applica la gestione dei contenuti prevista dall'estensione dell'azione al valore della proprietà `error`.
 
 Gli sviluppatori devono essere consapevoli di come possono essere utilizzate le azioni web e generare di conseguenza le risposte di errore. Ad esempio, un'azione web utilizzata con l'estensione `.http`
-dovrebbe restituire una risposta HTTP come: `{error: { statusCode: 400 }`. In caso contrario, si avrà una mancata corrispondenza tra il content-type implicito dall'estensione e il content-type dell'azione nella risposta di errore. Una considerazione speciale va fatta per le azioni web che sono delle sequenze, affinché i componenti che costituiscono una sequenza possano generare, quando necessario, gli errori adeguati.
+dovrebbe restituire una risposta HTTP come: `{error: { statusCode: 400 }`. In caso contrario, si avrà una mancata corrispondenza tra il tipo di contenuto implicito dall'estensione e il content-type dell'azione nella risposta di errore. Una considerazione speciale va fatta per le azioni web che sono delle sequenze, affinché i componenti che costituiscono una sequenza possano generare, quando necessario, gli errori adeguati.
 

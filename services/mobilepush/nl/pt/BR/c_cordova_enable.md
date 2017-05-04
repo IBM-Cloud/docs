@@ -341,7 +341,6 @@ Depois de configurar com êxito notificações básicas,
 é possível configurar notificações baseadas em tag e opções
 avançadas.
 
-Inclua os recursos de serviço do {{site.data.keyword.mobilepushshort}} no seu app. Para usar
-notificações baseadas em tag, consulte [Notificações baseadas em
-tag](c_tag_basednotifications.html).
+Inclua os recursos do serviço {{site.data.keyword.mobilepushshort}} em seu app.
+Para usar notificações baseadas em tag, consulte [Notificações baseadas em tag](c_tag_basednotifications.html).
 Para usar opções de notificações avançadas, veja [Ativando notificações push avançadas](t_advance_badge_sound_payload.html).

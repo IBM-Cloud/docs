@@ -22,7 +22,7 @@ lastupdated: "2017-02-21"
 | 實體 | 類型 | 參數 | 說明 |
 | --- | --- | --- | --- |
 | `/whisk.system/watson-textToSpeech` | 套件 | username、password | 將文字轉換為語音的套件 |
-| `/whisk.system/watson-textToSpeech/textToSpeech` | 動作 (action) | payload、voice、accept、encoding、username、password | 將文字轉換為音訊 |
+| `/whisk.system/watson-textToSpeech/textToSpeech` | 動作 | payload、voice、accept、encoding、username、password | 將文字轉換為音訊 |
 
 **附註**：已淘汰套件 `/whisk.system/watson`（包括動作 `/whisk.system/watson/textToSpeech`）。
 

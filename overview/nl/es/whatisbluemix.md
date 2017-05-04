@@ -3,7 +3,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-03-21"
 ---
 
 {:shortdesc: .shortdesc}
@@ -29,22 +29,22 @@ Todos los recursos de nube de {{site.data.keyword.IBM_notm}} desplegados en ento
 
 * Desplegar la infraestructura de almacenamiento y de cálculo de alto rendimiento en {{site.data.keyword.CloudDataCents_notm}} seguro de todo el mundo.
 * Probar y adoptar una amplia gama de servicios y prestaciones de nube desde {{site.data.keyword.IBM_notm}}, comunidades de código abierto y desarrolladores de terceros.
-* Conectar a todos los sistemas y aplicaciones existentes desde una plataforma única, escalable y de nube mediante funciones de API y de red privada.
+* Conectar a todos los sistemas y apps existentes desde una plataforma única, escalable y de nube mediante funciones de API y de red privada.
 * Utilizar o descartar recursos en tiempo real a medida que cambien sus necesidades empresariales o sus demandas de carga de trabajo.
 
 ### Apps
 {: #bluemixoverviewapplications}
 
-El panel de control Apps proporciona todo lo que necesita para hacer que sus aplicaciones se ejecuten, y para gestionar dichas apps mientras se ejecutan. {{site.data.keyword.Bluemix_notm}} proporciona varios contenedores modelo y tiempos de ejecución:
+El panel de control Apps proporciona todo lo que necesita para hacer que sus apps se ejecuten, y para gestionar dichas apps mientras se ejecutan. {{site.data.keyword.Bluemix_notm}} proporciona varios contenedores modelo y tiempos de ejecución:
 
 * Un contenedor modelo es una plantilla para una aplicación y su entorno de tiempo de ejecución y servicios predefinidos asociados para un dominio concreto. 
 * Un tiempo de ejecución es el conjunto de recursos que se utiliza para ejecutar una app, proporcionado como contenedores para distintos tipos de apps.
 
 {{site.data.keyword.Bluemix_notm}} proporciona distintos modos para ejecutar las apps, como por ejemplo Cloud Foundry y {{site.data.keyword.containerlong}}. Utilice {{site.data.keyword.containerlong}} para ejecutar contenedores de Docker en un entorno de nube alojado en {{site.data.keyword.Bluemix_notm}}. 
 
-Puede utilizar {{site.data.keyword.openwhisk}} para el cálculo distribuido y dirigido por sucesos. {{site.data.keyword.openwhisk_short}} ejecuta la lógica de aplicaciones en respuesta a sucesos o invocaciones directas desde aplicaciones web o móviles a través de HTTP.
+Puede utilizar {{site.data.keyword.openwhisk}} para el cálculo distribuido y dirigido por sucesos. {{site.data.keyword.openwhisk_short}} ejecuta la lógica de aplicaciones en respuesta a sucesos o invocaciones directas desde apps web o móviles a través de HTTP.
  
-Puede utilizar los servicios móviles de {{site.data.keyword.Bluemix_notm}} para incorporar servicios de nube integrados, gestionados y escalables a las aplicaciones móviles. 
+Puede utilizar los servicios móviles de {{site.data.keyword.Bluemix_notm}} para incorporar servicios de nube integrados, gestionados y escalables a las apps móviles. 
 
 ### Servicios
 {: #bluemixoverviewservices}
@@ -55,7 +55,7 @@ El panel de control Servicios proporciona acceso a los servicios de {{site.data.
 * Blockchain es una tecnología de libro mayor distribuida de igual a igual para una nueva generación de aplicaciones transaccionales que establece confianza, responsabilidad y transparencia mientras se reducen los procesos empresariales.  
 * Watson proporciona a las apps la potencia de la informática cognitiva con una suite completa de API de voz, visión y datos.  Resuelva sus problemas empresariales más complejos desplegando una plataforma cognitiva con servicios de Watson.
 * {{site.data.keyword.IBM_notm}} le permite hacer más con bases de datos de nube enriquecidas e integradas y servicios de Data & Analytics. 
-* El servicio de Internet of Things de {{site.data.keyword.IBM_notm}} permite a las apps comunicarse y consumir datos recopilados por los dispositivos, sensores y pasarelas conectados. Nuestras recetas facilitan la obtención de dispositivos conectados a nuestra nube de Internet of Things. Sus aplicaciones pueden utilizar las API de tiempo real y las API REST para comunicarse con sus dispositivos y consumir los datos configurados para su recopilación. 
+* El servicio de Internet of Things de {{site.data.keyword.IBM_notm}} permite a las apps comunicarse y consumir datos recopilados por los dispositivos, sensores y pasarelas conectados. Nuestras recetas facilitan la obtención de dispositivos conectados a nuestra nube de Internet of Things. Sus apps pueden utilizar las API de tiempo real y las API REST para comunicarse con sus dispositivos y consumir los datos configurados para su recopilación. 
 * {{site.data.keyword.IBM_notm}} ofrece una infraestructura de programa de fondo móvil donde puede crear apps de multiplataforma, nativas o híbridas mientras también puede supervisarlas y probarlas. También puede mejorar su app con analíticas, seguridad, las valoraciones de los usuarios y la entrega continua. 
  
 {{site.data.keyword.Bluemix_notm}} también proporciona servicios experimentales que puede probar. Para obtener más información acerca de los tipos de servicios y su disponibilidad, consulte [Servicios de {{site.data.keyword.Bluemix_notm}}](/docs/services/index.html).
@@ -77,10 +77,12 @@ Las ofertas de infraestructura de {{site.data.keyword.Bluemix_notm}} están cone
 
 Al acceder a la consola de {{site.data.keyword.Bluemix_notm}}, la barra de menús mostrará enlaces o botones para inscribirse, iniciar sesión, acceder a documentación y acceder al catálogo. Tras iniciar la sesión, la barra de menús contiene un menú en forma de 3 líneas horizontales ![Icono de 3 líneas horizontales](../icons/icon_hamburger.svg) y enlaces adicionales, según el tipo de cuenta:
 
-* Si es un nuevo usuario de {{site.data.keyword.Bluemix_notm}}, puede utilizar el menú de 3 líneas horizontales ![Icono de 3 líneas horizontales](../icons/icon_hamburger.svg) para cambiar entre los paneles de control de Apps, Servicios o Infraestructura. Se mostrarán los enlaces a las opciones de soporte y de cuenta, y puede utilizar el enlace **Catálogo** para acceder a los servicios de {{site.data.keyword.Bluemix_notm}}, de cálculo y de infraestructura. 
-* Si es un usuario existente y ha enlazado su cuenta de {{site.data.keyword.Bluemix_notm}} con la de {{site.data.keyword.BluSoftlayer}}, puede utilizar el menú de 3 líneas horizontales ![Icono de 3 líneas horizontales](../icons/icon_hamburger.svg) para cambiar entre los paneles de control de Apps, Servicios o Infraestructura. Se mostrarán los enlaces a las opciones de soporte y de cuenta, y puede utilizar el enlace **Catálogo** para acceder a los servicios de {{site.data.keyword.Bluemix_notm}}, de cálculo y de infraestructura. 
-* Si es un usuario existente con una cuenta de {{site.data.keyword.Bluemix_notm}}, puede utilizar el menú de 3 líneas horizontales ![Icono de 3 líneas horizontales](../icons/icon_hamburger.svg) para cambiar entre los paneles de control de Apps y Servicios. Se mostrarán los enlaces a las opciones de soporte y de cuenta, y puede utilizar el enlace **Catálogo** para acceder a {{site.data.keyword.Bluemix_notm}} y calcular servicios. 
-* Si es usted un usuario existente con una cuenta de {{site.data.keyword.BluSoftlayer}} y no ha enlazado su cuenta a {{site.data.keyword.Bluemix_notm}}, la barra de menús mostrará enlaces que estaban anteriormente disponibles en {{site.data.keyword.BluSoftlayer}}, como el acceso a la ayuda de KnowledgeLayer, las opciones de contacto, las notificaciones, las incidencias abiertas y el inicio de sesión. Además, se mostrará un enlace al panel de control Infraestructura, y enlaces a las opciones de soporte y de cuenta. 
+* Si es un nuevo usuario de {{site.data.keyword.Bluemix_notm}}, puede utilizar el menú de 3 líneas horizontales ![Icono de 3 líneas horizontales](../icons/icon_hamburger.svg) para cambiar entre los paneles de control de Apps, Servicios e Infraestructura. Puede utilizar el enlace **Catálogo** para acceder a servicios de plataforma y de infraestructura. También se muestran enlaces con opciones de soporte y cuenta, facturación y uso y gestión de seguridad. 
+* Si es un usuario existente con una cuenta de {{site.data.keyword.Bluemix_notm}}, puede utilizar el menú de 3 líneas horizontales ![Icono de 3 líneas horizontales](../icons/icon_hamburger.svg) para cambiar entre los paneles de control de Apps y Servicios. Puede utilizar el **Catálogo** para acceder a servicios de plataforma y de infraestructura y se muestran enlaces con opciones de soporte y cuenta a nivel de plataforma, facturación y uso y gestión de seguridad. 
+* Si es un usuario existente y ha enlazado su cuenta de {{site.data.keyword.Bluemix_notm}} con la de {{site.data.keyword.BluSoftlayer}}, puede utilizar el menú de 3 líneas horizontales ![Icono de 3 líneas horizontales](../icons/icon_hamburger.svg) para cambiar entre los paneles de control de Apps, Servicios e Infraestructura. También puede utilizar el enlace **Catálogo** para acceder a servicios de plataforma y de infraestructura. 
+  * Cuando está en los paneles de control de Apps y Servicios, la barra de menús incluye enlaces con recursos a nivel de plataforma, como documentación de {{site.data.keyword.Bluemix_notm}} y opciones de soporte, cuenta y gestión de seguridad.  También puede acceder a enlaces con opciones de facturación a nivel de infraestructura.  
+  * Cuando está en el panel de control Infraestructura, la barra de menús muestra enlaces con recursos a nivel de infraestructura, como ayuda de KnowledgeLayer, opciones de contacto, notificaciones, incidencias abiertas y opciones de soporte y de gestión de cuentas. 
+* Si es un usuario existente con una cuenta de {{site.data.keyword.BluSoftlayer}} que no está enlazada a {{site.data.keyword.Bluemix_notm}}, puede utilizar el menú en forma de tres líneas horizontales ![Icono de tres líneas horizontales](../icons/icon_hamburger.svg) para acceder al panel de control de Infraestructura y al enlace **Catálogo** para acceder a servicios de infraestructura. La barra de menús también incluye enlaces a la ayuda de KnowledgeLayer, opciones de contacto, contacto notificaciones, incidencias abiertas y opciones de soporte y de cuenta. 
 
 ## Arquitectura de {{site.data.keyword.Bluemix_notm}} Cloud Foundry
 {: #architecture}
@@ -111,7 +113,7 @@ Figura 2. Despliegue de apps en varias regiones
 
 Cuando despliega una app en {{site.data.keyword.Bluemix_notm}} Cloud Foundry, debe configurar {{site.data.keyword.Bluemix_notm}} con suficiente información para dar soporte a la app.
 
-* En el caso de una app para móvil, {{site.data.keyword.Bluemix_notm}} contiene un artefacto que representa el programa de fondo de las aplicaciones para móvil, como por ejemplo los servicios que utilice la app para móvil para comunicarse con un servidor.
+* En el caso de una app para móvil, {{site.data.keyword.Bluemix_notm}} contiene un artefacto que representa el programa de fondo de las apps para móvil, como por ejemplo los servicios que utilice la app para móvil para comunicarse con un servidor.
 * En el caso de una app web, debe asegurarse de que esta información sobre el tiempo de ejecución y la infraestructura se comunique a {{site.data.keyword.Bluemix_notm}}, para que {{site.data.keyword.Bluemix_notm}} pueda configurar el entorno de ejecución apropiado para ejecutar la app.
 
 Cada entorno de ejecución, que incluye tanto móvil como web, se aísla del entorno de ejecución de otras apps. Los entornos de ejecución se aíslan aunque estas apps estén en la misma máquina física. La figura siguiente muestra el flujo básico de cómo {{site.data.keyword.Bluemix_notm}} Cloud Foundry gestiona el despliegue de apps:
@@ -168,6 +170,7 @@ Cada región tienen asignado un prefijo exclusivo. {{site.data.keyword.Bluemix_n
 | Región EE.UU. sur | Dallas, EE.UU. | ng | api.ng.bluemix.net | console.ng.bluemix.net |
 | Región Reino Unido | Londres, Inglaterra | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
 | Región Sídney | Sídney, Australia | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
+| Región Alemania | Frankfurt, Alemania | eu-de | api.eu-de.bluemix.net | console.eu-de.bluemix.net |
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} region list" caption-side="top"}
 
 

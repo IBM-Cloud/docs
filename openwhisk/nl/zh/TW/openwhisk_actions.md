@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+  lastupdated: "2017-04-04"
 
 ---
 
@@ -53,15 +53,16 @@ lastupdated: "2017-03-13"
       return {payload: 'Hello world'};
   }
   ```
-  {: codeblock}
-  JavaScript 檔可能包含其他函數。不過，依慣例，必須要有稱為 `main` 的函數，以提供動作的進入點。
+    {: codeblock}
+
+    JavaScript 檔可能包含其他函數。不過，依慣例，必須要有稱為 `main` 的函數，以提供動作的進入點。
 
 2. 從下列 JavaScript 函數建立動作。在此範例中，動作稱為 'hello'。
 
   ```
   wsk action create hello hello.js
   ```
-    {: pre}
+      {: pre}
   ```
   ok: created action hello
   ```
@@ -78,8 +79,6 @@ lastupdated: "2017-03-13"
   ```
 
     您可以看到剛剛建立的 `hello` 動作。
-
-
 
 4. 建立動作之後，即可使用 'invoke' 指令透過 OpenWhisk 在雲端執行它。在指令中指定旗標，即可透過*封鎖* 呼叫（即要求/回應樣式）或*非封鎖* 呼叫來呼叫動作。封鎖呼叫要求將*等待* 啟動結果可供使用。等待期間小於 60 秒或動作的已配置[時間限制](./openwhisk_reference.html#openwhisk_syslimits)。如果在等待期間內有啟動結果，則會予以傳回。否則，會在系統中繼續處理啟動，並傳回啟動 ID，讓您可以稍後檢查結果，這與非封鎖要求相同（如需監視啟動的提示，請參閱[這裡](#openwhisk_actions_polling)）。
 
@@ -103,14 +102,13 @@ lastupdated: "2017-03-13"
   ```
 
   此指令輸出兩個重要的資訊部分：
-
   * 啟動 ID (`44794bd6aab74415b4e42a308d880e5b`)
   * 如果在預期的等待期間內有呼叫結果，則為呼叫結果
 
   在此情況下，結果是 JavaScript 函數所傳回的 `Hello world` 字串。啟動 ID 之後可以用來擷取日誌或呼叫結果。  
 
 5. 如果您不是立即需要動作結果，則可以省略 `--blocking` 旗標，以進行非封鎖呼叫。您稍後可以透過使用啟動 ID 來取得結果。請參閱下列範例：
-  
+
   ```
   wsk action invoke hello
   ```
@@ -118,6 +116,7 @@ lastupdated: "2017-03-13"
   ```
   ok: invoked hello with id 6bf1f670ee614a7eb5af3c9fde813043
   ```
+
   ```
   wsk activation result 6bf1f670ee614a7eb5af3c9fde813043
   ```
@@ -139,10 +138,8 @@ lastupdated: "2017-03-13"
   44794bd6aab74415b4e42a308d880e5b         hello
   6bf1f670ee614a7eb5af3c9fde813043         hello
   ```
-  
 
 ### 將參數傳遞給動作
-{: #openwhisk_adding_parameters_js}
 
 呼叫動作時，可以將參數傳遞給動作。
 
@@ -193,7 +190,10 @@ lastupdated: "2017-03-13"
       "payload": "Hello, Bernie from Vermont"
   }
   ```
-  請注意，使用 `--result` 選項，只會顯示呼叫結果。
+
+    請注意，使用 `--result` 選項，只會顯示呼叫結果。
+
+
 
 ### 設定預設參數
 {: #openwhisk_binding_actions}
@@ -237,16 +237,20 @@ lastupdated: "2017-03-13"
       "payload": "Hello, Bernie from Vermont"
   }
   ```
-  請注意，呼叫動作時，您不需要指定 place 參數。在呼叫時指定參數值，仍然可以改寫連結的參數。
+
+    請注意，呼叫動作時，您不需要指定 place 參數。在呼叫時指定參數值，仍然可以改寫連結的參數。
 
 3. 呼叫動作，並傳遞 `name` 及 `place` 值。後者會改寫連結至動作的值。
 
   使用 `--param` 旗標：
+
   ```
   wsk action invoke --blocking --result hello --param name Bernie --param place "Washington, DC"
   ```
   {: pre}
+
   使用 `--param-file` 旗標：
+
   檔案 parameters.json：
   ```json
   {
@@ -254,13 +258,14 @@ lastupdated: "2017-03-13"
     "place": "Vermont"
   }
   ```
-  {: codeblock}  
+  {: codeblock}
   ```
   wsk action invoke --blocking --result hello --param-file parameters.json
   ```
   {: pre}
+  
   ```json
-  {  
+  {
       "payload": "Hello, Bernie from Washington, DC"
   }
   ```
@@ -306,7 +311,8 @@ lastupdated: "2017-03-13"
       "done": true
   }
   ```
-  請注意，您已執行非同步動作的封鎖呼叫。
+
+    請注意，您已執行非同步動作的封鎖呼叫。
 
 3. 提取啟動日誌，來查看啟動需要多久時間才能完成：
 
@@ -319,18 +325,19 @@ lastupdated: "2017-03-13"
   b066ca51e68c4d3382df2d8033265db0             asyncAction
   ```
 
+
   ```
   wsk activation get b066ca51e68c4d3382df2d8033265db0
   ```
   {: pre}
-  ```json
+ ```json
   {
       "start": 1455881628103,
       "end":   1455881648126
   }
   ```
-  比較啟動記錄中的 `start` 與 `end` 時間戳記，您可以發現完成此啟動所需的時間略高於兩秒。
 
+    比較啟動記錄中的 `start` 與 `end` 時間戳記，您可以發現完成此啟動所需的時間略高於兩秒。
 
 ### 使用動作來呼叫外部 API
 {: #openwhisk_apicall_action}
@@ -340,28 +347,27 @@ lastupdated: "2017-03-13"
 此範例會呼叫 Yahoo Weather 服務，以取得特定位置的現行狀況。
 
 1. 將下列內容儲存至稱為 `weather.js` 的檔案中。
-  
 
   ```javascript
   var request = require('request');
 
   function main(params) {
-     var location = params.location || 'Vermont';
-        var url = 'https://query.yahooapis.com/v1/public/yql?q=select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '")&format=json';
-    
-        return new Promise(function(resolve, reject) {
-            request.get(url, function(error, response, body) {
-            if (error) {
-                    reject(error);    
-                }
-                else {
-                    var condition = JSON.parse(body).query.results.channel.item.condition;
-                    var text = condition.text;
-                    var temperature = condition.temp;
-                    var output = 'It is ' + temperature + ' degrees in ' + location + ' and ' + text;
-                    resolve({msg: output});
-                }
-            });
+      var location = params.location || 'Vermont';
+      var url = 'https://query.yahooapis.com/v1/public/yql?q=select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '")&format=json';
+
+      return new Promise(function(resolve, reject) {
+          request.get(url, function(error, response, body) {
+              if (error) {
+                  reject(error);
+              }
+              else {
+                  var condition = JSON.parse(body).query.results.channel.item.condition;
+                  var text = condition.text;
+                  var temperature = condition.temp;
+                  var output = 'It is ' + temperature + ' degrees in ' + location + ' and ' + text;
+                  resolve({msg: output});
+              }
+          });
       });
   }
   ```
@@ -386,7 +392,6 @@ lastupdated: "2017-03-13"
       "msg": "It is 28 degrees in Brooklyn, NY and Cloudy"
   }
   ```
-
 
 ### 將動作包裝為 Node.js 模組
 {: #openwhisk_js_packaged_action}
@@ -533,18 +538,18 @@ exports.main = myAction;
 ### 建立及呼叫動作
 {: #openwhisk_actions_python_invoke}
 
-動作只是最上層的 Python 函數，這表示必須要有名為 `main` 的方法。例如，建立稱為 `hello.py` 且含有下列內容的檔案：
+動作只是最上層 Python 函數。例如，使用下列原始碼建立稱為 `hello.py` 的 Java 檔案：
 
 ```python
-def main(dict):
-    name = dict.get("name", "stranger")
+def main(args):
+    name = args.get("name", "stranger")
     greeting = "Hello " + name + "!"
     print(greeting)
     return {"greeting": greeting}
 ```
 {: codeblock}
 
-Python 動作一律會使用某個字典，並產生一個字典。
+Python 動作一律會使用某個字典，並產生一個字典。動作的輸入方法預設是 `main`，但可以在搭配使用 `wsk` CLI 與 `--main` 來建立動作時明確指定時，以及在建立具有任何其他動作類型的動作時明確指定時。
 
 您可以從此函數建立稱為 `helloPython` 的 OpenWhisk 動作，如下所示：
 
@@ -552,8 +557,7 @@ Python 動作一律會使用某個字典，並產生一個字典。
 wsk action create helloPython hello.py
 ```
 {: pre}
-
-使用指令行及 `.py` 原始檔時，不需要指定是在建立 Python 動作（與 JavaScript 動作相反）；工具是透過副檔名來判斷。
+CLI 會從原始檔副檔名自動推斷動作類型。對於 `.py` 原始檔，動作會使用 Python 2.7 運行環境來執行。您也可以明確地指定參數 `--kind python:3`，來建立與 Python 3.6 一起執行的動作。如需 Python 2.7 與 3.6 的相關資訊，請參閱 Python [參照](./openwhisk_reference.html#openwhisk_ref_python_environments)。
 
 Python 動作與 JavaScript 動作的動作呼叫相同：
 
@@ -569,16 +573,13 @@ wsk action invoke --blocking --result helloPython --param name World
 ```
 
 
-
 ## 建立 Swift 動作
-{: #openwhisk_actions_swift}
 
 建立 Swift 動作的程序，與建立 JavaScript 動作的程序類似。下列各節會引導您建立及呼叫單一 Swift 動作，以及將參數新增至該動作。
 
 您也可以使用線上 [Swift 沙盤推演](https://swiftlang.ng.bluemix.net)來測試 Swift 程式碼，而不需要在機器上安裝 Xcode。
 
 ### 建立及呼叫動作
-{: #openwhisk_actions_invoke_swift}
 
 動作只是最上層 Swift 函數。例如，建立稱為 `hello.swift` 且含有下列內容的檔案：
 
@@ -617,28 +618,29 @@ wsk action invoke --blocking --result helloSwift --param name World
   }
 ```
 
-
 **注意：**Swift 動作是在 Linux 環境中執行。Swift on Linux 仍在開發中，而且 {{site.data.keyword.openwhisk_short}} 通常會使用最新的可用版本，但此版本不一定是穩定的。此外，與 {{site.data.keyword.openwhisk_short}} 搭配使用的 Swift 版本，可能與 MacOS 上穩定 XCode 版本的 Swift 版本不一致。
 
 ### 將動作包裝成 Swift 執行檔
 {: #openwhisk_actions_swift_zip}
-當您使用 Swift 來源檔建立 OpenWhisk Swift 動作時，必須先將其編譯成二進位檔，才能執行動作。完成之後，後續呼叫動作時就會快很多，直到清除用來保存動作的容器為止。
 
-若要避免編譯步驟延遲，您可以將 Swift 檔案編譯成二進位檔，然後將它以 zip 檔案上傳至 OpenWhisk。當您需要 OpenWhisk scaffolding 時，建立二進位檔最簡單的方式，就是在要執行檔案的相同環境中建置檔案。步驟如下：
+當您使用 Swift 來源檔建立 OpenWhisk Swift 動作時，必須先將其編譯成二進位檔，才能執行動作。完成之後，後續呼叫動作時就會快很多，直到清除用來保存動作的容器為止。這項延遲稱為冷啟動延遲。
+
+若要避免冷啟動延遲，您可以將 Swift 檔案編譯成二進位檔，然後將它以 zip 檔案形式上傳至 OpenWhisk。當您需要 OpenWhisk 支撐時，建立二進位檔最簡單的方式，就是在要執行檔案的相同環境中建置檔案。步驟如下：
 
 - 執行互動式 Swift 動作容器。
-  ```
-  docker run -it -v "$(pwd):/owexec" openwhisk/swift3action bash
-  ```
-  {: pre}
-這會將您放在 Docker 容器的 bash shell 中。在裡面執行下列指令：
-  
-- 為了方便起見，可安裝 zip 來包裝二進位檔
+```
+docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
+```
+{: pre}
+
+    這會讓您進入 Docker 容器的 Bash Shell 中。在裡面執行下列指令：
+
+- 為了方便起見，安裝 zip 來包裝二進位檔
   ```
   apt-get install -y zip
   ```
   {: pre}
-- 複製原始碼，準備建置檔案
+- 複製原始碼，並準備建置它
   ```
   cp /owexec/hello.swift /swift3Action/spm-build/main.swift 
   ```
@@ -681,6 +683,7 @@ wsk action invoke --blocking --result helloSwift --param name World
   ``` 
   {: pre}
 
+動作所需的執行時間位於 "duration" 內容中，並且與使用 hello 動作中的編譯步驟執行所需的時間進行比較。
 
 ## 建立 Java 動作
 {: #openwhisk_actions_java}
@@ -732,7 +735,6 @@ jar cvf hello.jar Hello.class
 ```
 wsk action create helloJava hello.jar --main Hello
 ```
-{: pre}
 
 當使用指令行及 `.jar` 原始檔時，您不需要指定您是建立 Java 動作；工具會根據副檔名判定。
 
@@ -752,7 +754,6 @@ wsk action invoke --blocking --result helloJava --param name World
 ```
 
 ## 建立 Docker 動作
-{: #openwhisk_actions_docker}
 
 使用 {{site.data.keyword.openwhisk_short}} Docker 動作，您可以使用任何語言來撰寫動作。
 
@@ -767,17 +768,19 @@ wsk action invoke --blocking --result helloJava --param name World
   ```
   wsk sdk install docker
   ```
-  {: pre}
+  
   ```
   Docker 架構現在安裝在現行目錄中。
   ```
+
   ```
   ls dockerSkeleton/
   ```
-  {: pre}
+
   ```
   Dockerfile      README.md       buildAndPush.sh example.c
   ```
+
   架構是一個 Docker 容器範本，您可以在其中以自訂二進位檔形式來注入程式碼。
 
 2. 在 blackbox 架構中，設定您的自訂二進位檔。此架構已包含您可以使用的 C 程式。
@@ -785,7 +788,7 @@ wsk action invoke --blocking --result helloJava --param name World
   ```
   cat dockerSkeleton/example.c
   ```
-  {: pre}
+
   ```c
   #include <stdio.h>
   int main(int argc, char *argv[]) {
@@ -796,16 +799,19 @@ wsk action invoke --blocking --result helloJava --param name World
   ```
   {: codeblock}
 
-  您可以視需要修改此檔案，或者將其他程式碼及相依關係新增至 Docker 映像檔。如果是後者，您可能需要在必要時調整 `Dockerfile` 以建置執行檔。二進位檔必須位在 `/action/exec` 的容器內。
+  您可以視需要修改此檔案，或者將其他程式碼及相依關係新增至 Docker 映像檔。
+  如果是後者，您可能需要在必要時調整 `Dockerfile` 以建置執行檔。
+  二進位檔必須位在 `/action/exec` 的容器內。
 
-  執行檔會從指令行接收到單一引數。它是代表動作引數之 JSON 物件的字串序列化。程式可能會記載至 `stdout` 或 `stderr`。依照慣例，輸出的最後一行*必須* 是代表動作結果的字串化 JSON 物件。
+  執行檔會從指令行接收到單一引數。它是代表動作引數之 JSON 物件的字串序列化。程式可能會記載至 `stdout` 或 `stderr`。
+  依照慣例，輸出的最後一行「必須」是代表動作結果的字串化 JSON 物件。
 
 3. 建置 Docker 映像檔，並使用提供的 Script 予以上傳。您必須先執行 `docker login` 進行鑑別，然後執行具有所選擇映像檔名稱的 Script。
 
   ```
   docker login -u janesmith -p janes_password
   ```
-  {: pre}
+
   ```
   cd dockerSkeleton
   ```
@@ -824,7 +830,8 @@ wsk action invoke --blocking --result helloJava --param name World
   ```
   {: pre}
 
-  請注意，建立動作時，應如何使用 `--docker`。目前所有 Docker 映像檔都假設是在 Docker Hub 上進行管理。動作可能會呼叫為任何其他 {{site.data.keyword.openwhisk_short}} 動作。
+  請注意，建立動作時，應如何使用 `--docker`。目前所有 Docker 映像檔都假設是在 Docker Hub 上進行管理。
+  動作可能會呼叫為任何其他 {{site.data.keyword.openwhisk_short}} 動作。
 
   ```
   wsk action invoke --blocking --result example --param payload Rey
@@ -856,9 +863,7 @@ wsk action invoke --blocking --result helloJava --param name World
 ## 監看動作輸出
 {: #openwhisk_actions_polling}
 
-其他使用者可能會呼叫 {{site.data.keyword.openwhisk_short}} 動作來回應各種事件，或是作為動作序列的一部分。在這類情況下，監視呼叫可能十分有用。
-
-您可以使用 {{site.data.keyword.openwhisk_short}} CLI 來監看所呼叫動作的輸出。
+其他使用者可能會呼叫 {{site.data.keyword.openwhisk_short}} 動作來回應各種事件，或是作為動作序列的一部分。在這類情況下，監視呼叫可能十分有用。您可以使用 {{site.data.keyword.openwhisk_short}} CLI 來監看所呼叫動作的輸出。
 
 1. 從 Shell，發出下列指令：
   ```
@@ -894,11 +899,11 @@ wsk action invoke --blocking --result helloJava --param name World
 您可以使用下列指令，列出您已建立的所有動作：
 
 ```
-  wsk action list
-  ```
+wsk action list
+```
 {: pre}
 
-隨著您撰寫愈多動作，此清單也會變得愈長，而其有助於將相關的動作分組成[套件](./packages.md)。若要將您的動作清單過濾為只有特定套件中的動作，您可以使用： 
+隨著您撰寫愈多動作，此清單也會變得愈長，將相關的動作分組成[套件](./openwhisk_packages.html)可能會有所助益。若要將您的動作清單過濾為只有特定套件中的動作，您可以使用：
 
 ```
 wsk action list [PACKAGE NAME]
@@ -909,7 +914,7 @@ wsk action list [PACKAGE NAME]
 ## 刪除動作
 {: #openwhisk_delete_action}
 
-刪除您不要使用的動作來進行清除。
+透過刪除您不要使用的動作來進行清除。
 
 1. 執行下列指令，以刪除動作：
   ```
@@ -935,9 +940,9 @@ wsk action list [PACKAGE NAME]
 
 動作環境包含執行中動作特有的數個內容。這些內容容許動作透過 REST API 以程式設計方式使用 OpenWhisk 資產，或設定在動作即將用完其分配時間預算時的內部警示。使用 OpenWhisk Docker 架構時，可以透過所有支援運行環境的系統環境來存取這些內容：Node.js、Python、Swift、Java 及 Docker 動作。
 
-* `__OW_API_HOST`：執行此動作之 OpenWhisk 部署的 API 主機
-* `__OW_API_KEY`：呼叫動作之主題的 API 金鑰，此金鑰可能是受限 API 金鑰
-* `__OW_NAMESPACE`：*啟動* 的名稱空間（這可能與動作的名稱空間不同）
-* `__OW_ACTION_NAME`：執行中動作的完整名稱
-* `__OW_ACTIVATION_ID`：此執行中動作實例的啟動 ID
-* `__OW_DEADLINE`：此動作將用完其整個持續期間配額的大約時間（以新紀元毫秒測量）
+* `__OW_API_HOST` 執行此動作之 OpenWhisk 部署的 API 主機
+* `__OW_API_KEY` 呼叫動作之主題的 API 金鑰，此金鑰可能是受限 API 金鑰
+* `__OW_NAMESPACE` 「啟動」的名稱空間（這可能與動作的名稱空間不同）
+* `__OW_ACTION_NAME` 執行中動作的完整名稱
+* `__OW_ACTIVATION_ID` 此執行中動作實例的啟動 ID
+* `__OW_DEADLINE` 此動作將用完其整個持續期間配額的大約時間（以新紀元毫秒測量）

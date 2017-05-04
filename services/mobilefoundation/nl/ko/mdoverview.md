@@ -52,4 +52,4 @@ lastupdated:  "2017-02-17"
 
 포럼 사용에 대한 세부사항은 [도움 받기 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.{DomainName}/docs/support/index.html#getting-help){: new_window}을 참조하십시오. 
 
-IBM 지원 티켓 개설 또는 지원 레벨과 티켓 심각도에 대한 정보는 [지원 센터에 문의 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.{DomainName}/docs/support/index.html#contacting-support){: new_window}을 참조하십시오. 
+IBM 지원 티켓 개설 또는 지원 레벨과 티켓 심각도에 대한 정보는 [지원 문의 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.{DomainName}/docs/support/index.html#contacting-support){: new_window}을 참조하십시오. 

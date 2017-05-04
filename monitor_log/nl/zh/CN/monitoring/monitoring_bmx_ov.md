@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-16"
+lastupdated: "2017-03-06"
 
 ---
 
@@ -24,14 +24,13 @@ lastupdated: "2017-02-16"
 
 您还可以配置并监视更多性能度量值。您可以在 {{site.data.keyword.Bluemix_notm}} 外部可视化和分析这些度量值。例如，在 {{site.data.keyword.containershort}} 中运行应用程序时，可以使用 Grafana 来监视更多度量值。可以按要可视化和分析性能数据的容器实例或空间来定制仪表板。
 
-![在 {{site.data.keyword.Bluemix_notm}} 中运行的容器的 Grafana 监视视图](images/monitoring_default_container_grafana_view.jpg)
+![在 {{site.data.keyword.Bluemix_notm}} 中运行的容器的 Grafana 监视视图](images/monitoring_default_container_grafana_view.jpg "在 Bluemix 中运行的容器的 Grafana 监视视图")
 
 可以使用 {{site.data.keyword.Bluemix_notm}} 平台监视执行以下操作：
 
-* 深入了解应用程序操作，例如检测潜在瓶颈或何时需要升级。
+* 深入了解应用程序运行情况，例如，检测潜在瓶颈或何时需要升级。
 * 定义可用于计划云平台中的未来应用程序需求的趋势。
 
 有关监视在 Cloud Foundry 上运行的应用程序的更多信息，请参阅[监视在 Cloud Foundry 上运行的应用程序](monitoring_cf_apps.html#monitoring_bluemix_apps)。
 
-有关在 {{site.data.keyword.containershort}} 中进行监视的更多信息，请参阅[在 {{site.data.keyword.containershort}} 中进行监视](/docs/containers/monitoringandlogging/container_ml_monitor.html#container_ml_monitor)。   
-
+有关在 {{site.data.keyword.containershort}} 中进行监视的更多信息，请参阅[在 {{site.data.keyword.containershort}} 中进行监视](containers/monitoring_containers_ov.html#monitoring_bmx_containers_ov)。

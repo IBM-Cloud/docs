@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-08-15"
+  years: 2015, 2017
+lastupdated: "2017-03-23"
 
 ---
 
@@ -72,7 +72,8 @@ El paquete de compilación de Liberty configura las opciones predeterminadas de 
   * direccionamiento de la información en los recursos de memoria disponible de la aplicación en el momento de producirse el error en Loggregator.
   * si se ha configurado una aplicación para habilitar los volcados de memoria de JVM, se inhabilitará la interrupción de los procesos Java, y los volcados de memoria de JVM se direccionan a un directorio común "volcados" de la aplicación. Estos volcados pueden visualizarse desde el panel de control de Bluemix o la interfaz de línea de mandatos (CLI) CF.
 
-A continuación se muestra una configuración de JVM predeterminada de ejemplo que se genera con el paquete de compilación para una aplicación desplegada con un límite de memoria de 512 M:   
+A continuación se muestra una configuración de JVM predeterminada de ejemplo que se genera con el paquete de compilación para una aplicación desplegada con un límite de memoria de 512 M:
+
 ```
     -Xtune:virtualized
     -Xmx384M
@@ -108,7 +109,7 @@ Las aplicaciones pueden personalizar las opciones de JVM con las especificacione
 <tr>
 <td> OpenJDK </td>
 <td>se basa en el tiempo de ejecución de HotSpot que tiene la notación de -X para no estándar, -XX para las opciones de desarrollador y los distintivos booleanos para habilitar o inhabilitar la opción </td>
-<td>[Visión general del tiempo de ejecución de HotSpot](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
+<td>[Visión general de HotSpot Runtime![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
 </tr>
 </table>
 
@@ -169,76 +170,83 @@ Nota: Es posible que algunas opciones no surtan efecto a no ser que las desencad
 ### Determinación de las opciones de JVM aplicadas de una aplicación en ejecución
 {: #determining_applied_jvm_options}
 
-A excepción de las opciones definidas por la aplicación especificadas con la variable de entorno JVM_ARGS, las opciones resultantes se persisten en el entorno de ejecución como opciones de línea de mandatos (aplicaciones Java autónomas) o en un archivo jvm.options (aplicaciones Java no autónomas). Las opciones de JVM aplicadas de la aplicación se pueden visualizar desde el panel de control de Bluemix o la interfaz de línea de mandatos (CLI) CF.
+A excepción de las opciones definidas por la aplicación especificadas con la variable de entorno JVM_ARGS, las opciones resultantes se persisten en el entorno de ejecución como opciones de línea de mandatos (aplicaciones Java autónomas) o en un archivo `jvm.options` (aplicaciones Java no autónomas). Las opciones de JVM aplicadas de la aplicación se pueden visualizar desde la consola de Bluemix o la interfaz de línea de mandatos (CLI) CF.
 
-Las opciones JVM para la aplicación Java autónoma se mantienen como opciones de línea de mandatos. Se pueden visualizar en el archivo staging_info.yml.
+Las opciones JVM para la aplicación Java autónoma se mantienen como opciones de línea de mandatos. Se pueden visualizar en el archivo `staging_info.yml`.
+
+Para ver el archivo `staging_info.yml` en una aplicación que se ejecuta en un nodo DEA, ejecute:
+
 ```
     $ cf files myapp staging_info.yml
 ```
 {: codeblock}
 
-Las opciones de JVM para el despliegue de WAR, EAR, directorio de servidor y servidor empaquetado se mantienen en un archivo jvm.options. 
+Para ver el archivo `staging_info.yml` en una aplicación que se ejecuta en una célula de Diego, ejecute:
 
-Para ver el archivo jvm.options para WAR, EAR y directorio de servidor, ejecute el mandato:
+```
+    $ cf ssh myapp -c "cat staging_info.yml"
+```
+{: codeblock}
+
+Las opciones de JVM para el despliegue de WAR, EAR, directorio de servidor y servidor empaquetado se mantienen en un archivo `jvm.options`. El archivo `jvm.options` se encuentra en el directorio `app/wlp/usr/servers/<serverName>/`. En la mayoría de los casos, ```<serverName>``` está establecido en `defaultServer`, a no ser que el servidor empaquetado se haya desplegado con otro nombre de servidor. Por ejemplo:
+
+Para ver el archivo `jvm.options` en una aplicación que se ejecuta en un nodo DEA, ejecute:
+
 ```
     $ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
 ```
 {: codeblock}
 
-Para ver el archivo jvm.options para un servidor empaquetado, sustituya <serverName> por el nombre de su servidor y ejecute el mandato:
+Para ver el archivo `jvm.options` en una aplicación que se ejecuta en una célula de Diego, ejecute:
+
 ```
-    $ cf files myapp app/wlp/usr/servers/<serverName>jvm.options
+    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/jvm.options"
 ```
 {: codeblock}
+
 
 #### Uso de ejemplo
 {: #example_usage}
 
-Despliegue de una aplicación con las opciones personalizadas de JVM para habilitar el registro de recogida de basura detallada de JVM de IBM JRE:
-* Las opciones de JVM incluidas en el archivo manifest.yml de una aplicación:
+Despliegue de una aplicación con las opciones personalizadas de JVM para habilitar el registro de recogida de basura detallada de IBM JRE:
+* Las opciones de JVM incluidas en el archivo `manifest.yml` de una aplicación:
 
-  <pre>
+```
     env:
       JAVA_OPTS: "-verbose:gc -Xverbosegclog:./verbosegc.log,10,1000"
-  </pre>
-  {: codeblock}
+```
+{: codeblock}
 
-* Para visualizar el registro generado de recogida de basura detallada de JVM:
+* Para ver el archivo de registro detallado de recogida de basura generado por JVM en una aplicación que se ejecuta en un nodo DEA, ejecute:
 
-  <pre>
+```
     $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
-  </pre>
-  {: codeblock}    
+```
+{: codeblock}
 
-* Para actualizar la opción de JVM de IBM JRE de una aplicación desplegada para desencadenar un heap, snap y javacore en una condición OutOfMemory, establezca la variable de entorno de la aplicación con la opción JVM y reinicie la aplicación:
+* Para ver el archivo de registro detallado de recogida de basura generado por JVM en una aplicación que se ejecuta en una célula de Diego, ejecute:
 
+```
+    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/verbosegc.log.001"
+```
+{: codeblock}
 
-  <pre>
+* Para actualizar la opción de IBM JRE de una aplicación desplegada para desencadenar un heap, snap y javacore en una condición OutOfMemory, establezca la variable de entorno de la aplicación con la opción JVM y reinicie la aplicación:
+
+```
     $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
     $ cf restart myapp
-  </pre>
-  {: codeblock}
+```
+{: codeblock}
 
-* Para visualizar los volcados de JVM generados al desencadenarse la condición de falta de memoria:
-
-  <pre>
-    $ cf files myapp dumps
-
-    Getting files for app myapp in org myemail@email.com / space dev as myemail@email.com...
-    OK
-
-    Snap.20141106.100252.81.0003.trc           307.3K
-    heapdump.20141106.100252.81.0001.phd       3.9M
-    javacore.20141106.100252.81.0002.txt     870.5K
-  </pre>
-  {: codeblock}
+ Consulte la documentación sobre [Registro y rastreo](loggingAndTracing.html#download_dumps) para ver más información sobre cómo visualizar y descargar los archivos de vuelco generados.
 
 ### Superposición del JRE
 {: #overlaying_jre}
 
 En algunos casos es necesario empaquetar los archivos con el JRE para disponer de su funcionalidad. El desarrollador de aplicaciones puede suministrar archivos JRE para su personalización.
 
-Los archivos que se deben solapar se pueden empaquetar con el archivo WAR, EAR o JAR de la aplicación en una carpeta de recursos en la raíz del archivo. En el caso de un servidor (archivo comprimido o directorio del servidor), los archivos se pueden empaquetar en una carpeta de recursos en el directorio del servidor, con el archivo server.xml. 
+Los archivos que se deben solapar se pueden empaquetar con el archivo WAR, EAR o JAR de la aplicación en una carpeta de recursos en la raíz del archivo. En el caso de un servidor (archivo comprimido o directorio del servidor), los archivos se pueden empaquetar en una carpeta de recursos en el directorio del servidor, con el archivo server.xml.
 
 * archivo WAR
   * WEB-INF
@@ -272,6 +280,7 @@ Los archivos que se deben solapar se pueden empaquetar con el archivo WAR, EAR o
 El directorio .java-overlay contiene archivos específicos en la misma jerarquía de archivos que el Java JRE que se está solapando, empezando por .java/jre.
 
 Por ejemplo, si desea utilizar el cifrado AES de 256 bits, tiene que solapar estos archivos de política de Java:
+
 ```
     .java\jre\lib\security\US_export_policy.jar
     .java\jre\lib\security\local_policy.jar
@@ -279,6 +288,7 @@ Por ejemplo, si desea utilizar el cifrado AES de 256 bits, tiene que solapar est
 {: codeblock}
 
 Descargue los archivos de política sin restricciones adecuados y añádalos a su aplicación como:
+
 ```
     resources\.java-overlay\.java\jre\lib\security\US_export_policy.jar
     resources\.java-overlay\.java\jre\lib\security\local_policy.jar
@@ -288,8 +298,8 @@ Descargue los archivos de política sin restricciones adecuados y añádalos a s
 Cuando envíe la aplicación, estos archivos jar solaparán los archivos jar de política predeterminados en el tiempo de ejecución de Java. Este proceso habilita el cifrado AES de 256 bits.
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
-{: #general}
+{: #general notoc}
 * [Tiempo de ejecución de Liberty](index.html)
 * [Visión general del perfil de Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

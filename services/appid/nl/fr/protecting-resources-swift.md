@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -46,7 +46,7 @@ Vous pouvez utiliser le SDK serveur {{site.data.keyword.appid_short}} pour prot�
 ## Protection des ressources dans Swift
 {: #protecting}
 
-Le SDK Swift fournit un plug-in de données d'identification Kitura qui est utilisé pour protéger des applications Web. Lors de l'utilisation de ce plug-in, un client non authentifié reçoit une réponse HTTP 302. Le client est redirigé vers la page de connexion  hébergée par {{site.data.keyword.appid_short_notm}} ou vers la page de connexion du fournisseur d'identité, selon votre configuration.
+Le SDK Swift fournit un plug-in de données d'identification Kitura qui est utilisé pour protéger des applications Web. Lors de l'utilisation de ce plug-in, un client non authentifié reçoit une réponse HTTP 302. Le client est redirigé vers la page de connexion hébergée par {{site.data.keyword.appid_short_notm}} ou vers la page de connexion du fournisseur d'identité, selon votre configuration.
 
 
 

@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-04"
+lastupdated: "2017-04-24"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock:.codeblock}
 {:screen:.screen}
 {:pre: .pre}
@@ -286,7 +285,7 @@ The following packages are available to be used in the Node.js 6.9.1 environment
 - underscore v1.8.3
 - uuid v3.0.0
 - validator v6.1.0
-- watson-developer-cloud v2.9.0
+- watson-developer-cloud v2.29.0
 - when v3.7.7
 - winston v2.3.0
 - ws v1.1.1
@@ -400,7 +399,7 @@ Docker actions run a user-supplied binary in a Docker container. The binary runs
 
 The Docker skeleton is a convenient way to build OpenWhisk-compatible Docker images. You can install the skeleton with the `wsk sdk install docker` CLI command.
 
-The main binary program must be located in `/action/exec` inside the container. The executable receives the input arguments via `stdin` and must return a result via `stdout`.
+The main binary program must be located in `/action/exec` inside the container. The executable receives the input arguments via a single command-line argument string which can be deserialized as a `JSON` object. It must return a result via `stdout` as a single-line string of serialized `JSON`.
 
 You may include any compilation steps or dependencies by modifying the `Dockerfile` included in the `dockerSkeleton`.
 
@@ -435,7 +434,7 @@ There are entity endpoints for each type of entity:
 - `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations/{activationName}`
 
 
-The namespace and activation endpoints support only GET requests. The actions, triggers, rules, and packages endpoints support GET, PUT, and DELETE requests. The endpoints of actions, triggers, and rules also support POST requests, which are used to invoke actions and triggers and enable or disable rules. Refer to the [API reference](https://new-console.{DomainName}/apidocs/98) for details.
+The namespace and activation endpoints support only GET requests. The actions, triggers, rules, and packages endpoints support GET, PUT, and DELETE requests. The endpoints of actions, triggers, and rules also support POST requests, which are used to invoke actions and triggers and enable or disable rules. Refer to the [API reference](https://console.{DomainName}/apidocs/98) for details.
 
 All APIs are protected with HTTP Basic authentication. The Basic authentication credentials are in the `AUTH` property in your `~/.wskprops` file, delimited by a colon. You can also retrieve these credentials in the [CLI configuration steps](./index.html#openwhisk_start_configure_cli).
 

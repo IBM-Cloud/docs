@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -10,19 +10,17 @@ lastupdated: "2017-03-30"
 {:shortdesc: .shortdesc}
 
 
-# Descrizione dei profili utente
+# Panoramica profili utente
 {: #user-profile}
 
 Un profilo utente è un'entità archiviata e conservata da {{site.data.keyword.appid_short}}. Il profilo ospita l'identità e gli attributi dell'utente e può essere anonimo o collegato a un'identità gestita da un provider di identità.
 {:shortdesc}
 
-{{site.data.keyword.appid_short_notm}} fornisce un'API per l'accesso, sia in modo anonimo che tramite autenticazione con un IdP OpenId Connect (OIDC), consulta [Configurazione dei provider di identità](/docs/services/appid/identity-providers.html#setting-up-idp). L'endpoint API dell'attributo del profilo utente è una risorsa protetta dal token di accesso generato da {{site.data.keyword.appid_short_notm}} durante il processo di autorizzazione e accesso.
+{{site.data.keyword.appid_short_notm}} fornisce un'API per l'accesso, sia in modo anonimo che tramite autenticazione con un IdP OpenId Connect (OIDC) ai [provider di identità](/docs/services/appid/identity-providers.html#setting-up-idp). L'endpoint API dell'attributo del profilo utente è una risorsa protetta dal token di accesso generato da {{site.data.keyword.appid_short_notm}} durante il processo di autorizzazione e accesso.
 
 
 ## Memorizzazione, lettura ed eliminazione degli attributi utente
 {: #storing-data}
-
-
 
 {{site.data.keyword.appid_short_notm}} fornisce un'API REST <a href="https://appid-profiles.ng.bluemix.net/swagger-ui/index.html#/" target="_blank"> <img src="../../icons/launch-glyph.svg" alt="Icona link esterno"></a> per eseguire le operazioni CRUD sugli attributi dell'utente, così come un'SDK per i client mobili <a href="https://github.com/ibm-cloud-security/appid-clientsdk-android" target="_blank">Android <img src="../../icons/launch-glyph.svg" alt="Icona link esterno"></a> e <a href="https://github.com/ibm-cloud-security/appid-clientsdk-swift" target="_blank">Swift <img src="../../icons/launch-glyph.svg" alt="Icona link esterno"></a>.
 
@@ -42,7 +40,7 @@ Quando esegui l'accesso anonimamente, {{site.data.keyword.appid_short_notm}} cre
 ## Utente identificato
 {: #identified}
 
-Un utente anonimo con un'identità fornita da un provider di identità può diventare un utente identificato. Il flusso per la modifica di un utente anonimo an un utente identificato viene descritto nei seguenti passi: 
+Un utente anonimo con un'identità fornita da un provider di identità può diventare un utente identificato. Il flusso per la modifica di un utente anonimo an un utente identificato viene descritto nei seguenti passi:
 
 * Lo sviluppatore trasmette il token di accesso anonimo all'API di accesso.
 * {{site.data.keyword.appid_short_notm}} autentica il chiamante con il provider di identità.

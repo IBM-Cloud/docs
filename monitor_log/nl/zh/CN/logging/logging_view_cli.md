@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-16"
+lastupdated: "2017-03-01"
 
 ---
 
@@ -13,11 +13,21 @@ lastupdated: "2017-02-16"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# 通过 CLI 分析 CF 应用程序日志
+# 通过 CLI 分析日志
 {: #analyzing_logs_cli}
 
-在 {{site.data.keyword.Bluemix}} 中，可以通过命令行界面使用 **cf logs** 命令来查看、过滤和分析日志。使用命令行以编程方式管理日志。
+在 {{site.data.keyword.Bluemix}} 中，可以通过命令行界面来查看、过滤和分析日志。使用命令行以编程方式管理日志。
 {:shortdesc}
+
+要分析 Cloud Foundry (CF) 应用程序日志，请使用以下命令：`cf logs`
+有关更多信息，请参阅[通过 CLI 分析 CF 应用程序日志](logging_view_cli.html#analyzing_cf_logs_cli)。
+
+要分析 Docker 容器日志，请使用以下命令：`cf ic logs`
+有关更多信息，请参阅[通过 CLI 分析 Docker 容器日志](logging_view_cli.html#analyzing_container_logs_cli)。
+
+
+## 通过 CLI 分析 CF 应用程序日志
+{: #analyzing_cf_logs_cli}
 
 将应用程序部署到 {{site.data.keyword.Bluemix_notm}} 中时，可使用 **cf logs** 命令来显示 Cloud Foundry 应用程序的日志以及与该应用程序进行交互的系统组件的日志。**cf logs** 命令显示 Cloud Foundry 应用程序的 STDOUT 和 STDERR 日志流。
 
@@ -27,6 +37,16 @@ lastupdated: "2017-02-16"
 * 要查看 Cloud Foundry 应用程序的最新日志记录，请参阅[查看 Cloud Foundry 应用程序的最新日志条目](logging_view_cli.html#tailing_log_cli)。
 * 要查看 Cloud Foundry 应用程序在特定时间范围内的日志记录，请参阅[查看日志的一部分](logging_view_cli.html#partial_log_cli)。
 * 要查看 Cloud Foundry 应用程序日志中包含特定关键字的条目，请参阅[查看包含特定关键字的日志条目](logging_view_cli.html#partial_by_keyword_log_cli)。
+
+
+## 通过 CLI 分析 Docker 容器日志
+{: #analyzing_container_logs_cli}
+
+使用 `cf ic logs` 命令来显示 {{site.data.keyword.Bluemix_notm}} 中容器的日志。例如，可以使用日志来分析容器停止的原因或用于查看容器输出。 
+
+要通过 `cf ic logs` 命令来查看在容器中运行的应用程序的应用程序错误，该应用程序必须将其日志写入标准输出 (STDOUT) 和标准错误 (STDERR) 输出流。如果将应用程序设计为写入这些标准输出流，那么可以通过命令行来查看日志，即便容器关闭或崩溃也如此。
+
+有关 `cf ic logs` 命令的更多信息，请参阅 [cf ic logs 命令](/docs/containers/container_cli_reference_cfic.html#container_cli_reference_cfic__logs)。
 
 
 ## 查看 Cloud Foundry 应用程序的日志
@@ -98,31 +118,24 @@ lastupdated: "2017-02-16"
 
 将 Cloud Foundry 应用程序部署到 {{site.data.keyword.Bluemix}} 后，将为该应用程序提供以下日志：
 
-<dl><dt><strong>buildpack.log</strong></dt>
-<dd>
-<p>此日志文件会记录细颗粒度的参考事件，用于调试目的。您可以使用此日志来对 buildpack 执行问题进行故障诊断。</p>
+**buildpack.log**
 
-<p>要将数据生成到 <span class="ph filepath">buildpack.log</span> 文件中，必须使用以下命令来启用 buildpack 跟踪：
-</p>
+此日志文件会记录细颗粒度的参考事件，用于调试目的。您可以使用此日志来对 buildpack 执行问题进行故障诊断。
 
-   <pre class="pre">cf set-env <var class="keyword varname">appname</var> JBP_LOG_LEVEL DEBUG</pre>
+要将数据生成到 *buildpack.log* 文件中，必须使用以下命令来启用 buildpack 跟踪：`cf set-env appname JBP_LOG_LEVEL DEBUG`
+
    
-<p>要查看此日志，请输入以下命令：
-</p>
+要查看此日志，请输入以下命令：`cf files appname app/.buildpack-diagnostics/buildpack.log`
 
-    <pre class="pre">cf files <var class="keyword varname">appname</var> app/.buildpack-diagnostics/buildpack.log</pre>
 
-</dd>
+**staging_task.log**
 
-<dt><strong>staging_task.log</strong></dt>
-<dd><p>此日志文件会在编译打包任务的主要步骤之后记录消息。您可以使用此日志来对编译打包问题进行故障诊断。</p>
+此日志文件会在编译打包任务的主要步骤之后记录消息。您可以使用此日志来对编译打包问题进行故障诊断。
 
-<p>要查看此日志，请输入以下命令：
-</p>
+要查看此日志，请输入以下命令：`cf files appname logs/staging_task.log`
 
-    <pre class="pre">cf files <var class="keyword varname">appname</var> logs/staging_task.log</pre>
-</dd>
-</dl>
 
 **注：**有关如何启用应用程序日志记录的信息，请参阅[调试运行时错误](/docs/debug/index.html#debugging-runtime-errors)。
+
+
 

@@ -2,15 +2,16 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
 
 # スターター・アプリの使用
 {{site.data.keyword.iotelectronics_full}} スターター・アプリでシミュレート電気製品を作成します。{{site.data.keyword.iot_short_notm}} に接続された電気製品を製造メーカーがどのようにモニターできるのか体験します。シミュレート電気製品と手動で対話して、アラート、通知、アクションを起動します。
@@ -46,25 +47,3 @@ lastupdated: "2017-03-10"
 3. 洗濯機の詳細情報を確認するには、洗濯機をクリックします。コマンドと制御パネルで、洗濯機を始動させるか別のタイプの故障をクリックして、状況の変化を確認します。モバイル・アプリから、状況の変化を確認したり洗濯機を制御したりすることもできます。
 
   ![洗濯機の状況の詳細。](images/IoT4E_washer_control.svg "洗濯機の状況の詳細")
-
-
-# 関連リンク
-{: #rellinks}
-
-## API 資料
-{: #api}
-* [{{site.data.keyword.iotelectronics}} API](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)
-* [{{site.data.keyword.iot_short}} API](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)
-
-
-## コンポーネント
-{: #general}
-
-* [{{site.data.keyword.iotelectronics}} の資料](iotelectronics_overview.html)
-* [{{site.data.keyword.iot_full}} の資料](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-*  [{{site.data.keyword.amashort}} の資料](https://console.ng.bluemix.net/docs/services/mobileaccess/overview.html)
-* [{{site.data.keyword.sdk4nodefull}} の資料](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
-
-## サンプル
-{: #samples}
-* [サンプル・モバイル・アプリ](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html)

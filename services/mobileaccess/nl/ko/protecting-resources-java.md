@@ -2,10 +2,12 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2016-12-04"
+lastupdated: "2017-04-06"
 
 ---
 {:codeblock:.codeblock}
+
+**중요: {{site.data.keyword.amafull}} 서비스는 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다. **
 
 # {{site.data.keyword.amashort}}로 Liberty for Java 리소스 보호
 {: #protecting-liberty}

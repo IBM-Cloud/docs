@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,7 +12,9 @@ lastupdated: "2017-01-08"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 配置適用於 {{site.data.keyword.amashort}} Cordova 應用程式的自訂鑑別
+**重要事項：{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。**
+
+# 配置適用於 Mobile Client Access Cordova 應用程式的自訂鑑別
 {: #custom-cordova}
 
 檢測 Cordova 應用程式，以使用自訂鑑別和 {{site.data.keyword.amafull}} 用戶端 SDK，存取受保護的應用程式。
@@ -108,7 +110,7 @@ authenticationContext.submitAuthenticationFailure(info);
 ## 自訂鑑別接聽器工作流程的範例實作
 {: #custom-cordova-authlisten-sample}
 
-此鑑別接聽器範例設計成使用自訂身分提供者。您可以從[這個 Github 儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "外部鏈結圖示"){: new_window} 下載自訂身分提供者。
+此鑑別接聽器範例設計成使用自訂身分提供者。您可以從[這個 Github 儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window} 下載自訂身分提供者。
 
 ```JavaScript
 var customAuthenticationListener = {

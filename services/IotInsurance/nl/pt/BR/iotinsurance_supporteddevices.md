@@ -199,7 +199,7 @@ Integre usando o app móvel (descontinuado). Esse método funciona somente com a
 #### Procedimento de integração
 **Opção 1**  
   Inclua credenciais da nuvem Yanzi ao yanzi-config.json no diretório do fornecedor do
-repositório do Transformer. O objeto "yanziCloud" é o local correto das credenciais.  
+repositório do Transformer.  O objeto "yanziCloud" é o local correto das credenciais.  
 
 **Opção 2**  
   O Yanzi usa uma integração de nuvem para nuvem entre a nuvem Yanzi e o

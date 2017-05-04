@@ -17,10 +17,9 @@ lastupdated: "2017-02-16"
 # Configuración de hosts de registro externo
 {: #thirdparty_logging}
 
-{{site.data.keyword.Bluemix_notm}} mantiene una cantidad limitada de información de registro en la memoria. Cuando se registra información, la información antigua se sustituye por la nueva. Para mantener toda la información de registro, puede guardar los registros en un host de log externo, como un servicio de gestión de registros de terceros o en otro host.
-{:shortdesc}
+{{site.data.keyword.Bluemix_notm}} mantiene una cantidad limitada de información de registro en la memoria. Cuando se registra información, la información antigua se sustituye por la nueva. Para mantener toda la información de registro, puede guardar los registros de la aplicación Cloud Foundry en un host de registro externo, como un servicio de gestión de registros de terceros o en otro host.{:shortdesc}
 
-Para enviar la secuencia de los registros de su app y el sistema a un host de registro externo, realice los pasos siguientes:
+Para enviar la secuencia de los registros de su app CF y del sistema a un host de registro externo, realice los pasos siguientes:
 
   1. Determine el punto final de registro.
 

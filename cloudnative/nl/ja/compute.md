@@ -176,6 +176,6 @@ bluemix sdk generate <AppName> <SDKName> --<Platform>
 
 これで、生成された SDK を使用して BFF がモバイル・アプリに統合されたので、それを使用した作業を開始することができます。
 
-SDK には、`docs` ディレクトリーと `source` ディレクトリー内に、完全に生成された資料が付いてきます。資料の Web ビュー用に `README.html` ファイルを開くか、資料の Markdown ビュー用に `README.md` ファイルを開くことができます。Markdown 資料は、SDK を Cocoapods または Maven Central に公開する際に役立ちます。
+SDK には、`docs` ディレクトリーと `source` ディレクトリー内に、完全に生成された資料が付いてきます。資料の Web 表示用に `README.html` ファイルを開くか、資料の Markdown 表示用に `README.md` ファイルを開くことができます。Markdown 資料は、SDK を Cocoapods または Maven Central に公開する際に役立ちます。
 
 資料内で、生成された API のリストを表示できます。API をクリックすると、モバイル・アプリに直接貼り付けることができるコード・スニペットが表示されます。

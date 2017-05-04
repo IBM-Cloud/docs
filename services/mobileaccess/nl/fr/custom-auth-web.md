@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,9 @@ lastupdated: "2017-01-08"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-#Configuration d'une authentification personnalisée pour les applications Web {{site.data.keyword.amashort}}
+**Important : Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.**
+
+#Configuration d'une authentification personnalisée pour les applications Web Mobile Client Access
 {: #custom-web}
 
 Ajoutez une authentification personnalisée et une fonctionnalité de sécurité {{site.data.keyword.amafull}} à votre application Web.
@@ -104,7 +106,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 {: codeblock}
 
 
-##Configuration de {{site.data.keyword.amashort}} pour l'authentification personnalisée
+##Configuration de Mobile Client Access pour l'authentification personnalisée
 {: #custom-auth-config-mca}
 
 Une fois que vous avez configuré votre fournisseur d'identité personnalisé, vous pouvez activer l'authentification personnalisée dans le tableau de bord
@@ -118,7 +120,7 @@ Une fois que vous avez configuré votre fournisseur d'identité personnalisé, v
 1. Cliquez sur **Sauvegarder**.
 
 
-##Implémentation du flux d'autorisation {{site.data.keyword.amashort}} à l'aide d'un fournisseur d'identité personnalisé
+##Implémentation du flux d'autorisation Mobile Client Access à l'aide d'un fournisseur d'identité personnalisé
 {: #custom-auth-flow}
 
 La variable d'environnement `VCAP_SERVICES` est créée automatiquement pour chaque instance de service {{site.data.keyword.amashort}} et contient les propriétés requises pour le processus d'autorisation. Elle se compose d'un objet JSON et vous pouvez la visualiser dans l'onglet **Données d'identification pour le service** du tableau de bord de {{site.data.keyword.amashort}}.
@@ -258,7 +260,7 @@ d'authentification HTTP de base.
 d'autorisation. La valeur du paramètre code doit être le code d'accord reçu dans la réponse à l'issue de la demande d'autorisation. Ce code n'est valide que
 pendant 10 minutes, après quoi vous devrez en obtenir un nouveau.
 
-	Le corps de la réponse contiendra les éléments `access_token` et `id_token` au format JWT. Pour plus d'informations sur ces jetons, reportez-vous au [site Web JWT ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://jwt.io "Icône de lien externe"){: new_window}.
+	Le corps de la réponse contiendra les éléments `access_token` et `id_token` au format JWT. Pour plus d'informations sur ces jetons, reportez-vous au [site Web JWT ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://jwt.io){: new_window}.
 
 	Une fois que vous avez reçu les jetons d'accès et d'identité, vous pouvez marquer la session Web comme authentifiée
 et, si vous le désirez, rendre persistants ces jetons.

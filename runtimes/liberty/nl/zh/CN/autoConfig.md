@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-03-22"
 
 ---
 
@@ -25,13 +25,11 @@ lastupdated: "2016-11-14"
 
 此过程称为自动配置。Liberty buildpack 提供以下服务类型的自动配置：
 
-* [SQL Database](/docs/services/SQLDB/index.html#SQLDB)
-* ClearDB MySQL Database
+* [ClearDB MySQL Database ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://www.cleardb.com/developers)
 * [MySQL](/docs/services/MySQL/index.html#MySQL)
-* ElephantSQL
+* [ElephantSQL](docs/services/ElephantSQL/index.html)
 * [PostgreSQL](/docs/services/PostgreSQL/index.html#PostgreSQL)
 * [Cloudant NoSQL Database](/docs/services/Cloudant/index.html#Cloudant)
-* MongoLab
 * [dashDB](/docs/services/dashDB/index.html#dashDB)
 * [Data Cache](/docs/services/DataCache/index.html#data_cache)
 * [Session Cache](/docs/services/SessionCache/index.html#session_cache)
@@ -41,6 +39,8 @@ lastupdated: "2016-11-14"
 * [Single Sign On](/docs/services/SingleSignOn/index.html#sso_gettingstarted)
 * [New Relic](newRelic.html)
 * [Dynatrace](dynatrace.html)
+* [Compose for PostgreSQL](/docs/services/ComposeForPostgreSQL/index.html)
+* [Compose for MongoDB](/docs/services/ComposeForMongoDB/index.html)（目前仅每月 Liberty 运行时中可用）。
 
 如上所述，某些服务既可以是应用程序管理的服务，也可以是容器管理的服务。例如，Mongo 和 SQLDB 就是此类服务。缺省情况下，Liberty buildpack 假定这些服务是容器管理的服务，并自动对其进行配置。如果希望应用程序来管理服务，那么可以通过设置 services_autoconfig_excludes 环境变量选择退出服务自动配置。有关更多信息，请参阅[选择退出服务自动配置](autoConfig.html#opting_out)。
 
@@ -92,7 +92,7 @@ Opt_out_string :: <service_type_specification[<delimiter>service_type_specificat
 ```
 {: codeblock}
 
-**重要信息**：您指定的服务类型必须与 VCAP_SERVICES 环境变量中所示的服务标签相匹配。不允许使用空格。**重要信息**：&lt;service_type_specification> 中不允许使用空格。空格只允许用于分隔多个 &lt;service_type_specification> 实例。
+**重要信息**：您指定的服务类型必须与 VCAP_SERVICES 环境变量中所示的服务标签相匹配。不允许使用空格。**重要信息**：```<service_type_specification>``` 中不允许使用空格。空格只允许用于分隔多个 ```<service_type_specification>```  实例。
 
 使用“all”选项可选择退出服务的所有自动配置操作，如上面的 Mongo 场景。使用“config”选项可仅选择退出配置更新操作，如上面的 SQLDB 场景。
 
@@ -148,8 +148,8 @@ $ cf set-env myapp services_autoconfig_excludes sqldb=config
 
 
 # 相关链接
-{: #rellinks}
+{: #rellinks notoc}
 ## 常规
-{: #general}
+{: #general notoc}
 * [Liberty 运行时](index.html)
 * [Liberty 概要文件概述](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

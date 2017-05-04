@@ -18,7 +18,7 @@ lastupdated: "2017-01-10"
 # 管理帳戶疑難排解
 {: #managingaccounts}
 
-管理帳戶的一般問題，可能包括不同應用程式共用相同的網域名稱，或是管理者無法檢視所有組織。在許多情況下，您都可以依照下列一些簡單的步驟，從這些問題中回復。
+管理帳戶的一般問題，可能包括不同應用程式共用相同的網域名稱，或是管理者無法檢視所有組織。在許多情況下，您可以遵照一些簡單的步驟，從這些問題回復。
 {:shortdesc}
 
 
@@ -36,7 +36,7 @@ lastupdated: "2017-01-10"
 {: tsCauses}
 
 
-若要重新啟動您的帳戶，請聯絡 [{{site.data.keyword.Bluemix_notm}} 支援中心 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://ibm.biz/bluemixsupport.com){: new_window}。在電子郵件中併入下列資訊：
+若要重新啟動您的帳戶，請與 [{{site.data.keyword.Bluemix_notm}} 支援中心 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://ibm.biz/bluemixsupport.com){: new_window} 聯絡。在電子郵件中包含下列資訊：
 {: tsResolve}
 
   * 您用來登入 {{site.data.keyword.Bluemix_notm}} 的 IBM ID。
@@ -73,7 +73,7 @@ lastupdated: "2017-01-10"
 
 例如，您將 myApp1 應用程式推送至 {{site.data.keyword.Bluemix_notm}}，並將網域設為 "mynewapp.stage1.mybluemix.net"。然後，將另一個 myApp2 應用程式推送至相同的空間，並將其中一個 URL 路徑設為 "mynewapp.stage1.mybluemix.net"。路徑現在同時對映至這兩個應用程式。
 
-這是 {{site.data.keyword.Bluemix_notm}} 的支援行為，而且您可以使用此作法，讓應用程式升級達到零中斷時間。如需相關資訊，請參閱[使用藍綠部署以減少關閉時間和風險 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.cloudfoundry.org/devguide/deploy-apps/blue-green.html){: new_window}。
+這是 {{site.data.keyword.Bluemix_notm}} 的支援行為，而且您可以使用此作法，讓應用程式升級達到零中斷時間。如需相關資訊，請參閱 [Using Blue-Green Deployment to Reduce Downtime and Risk ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.cloudfoundry.org/devguide/deploy-apps/blue-green.html){: new_window}。
 {: tsResolve}
   
 

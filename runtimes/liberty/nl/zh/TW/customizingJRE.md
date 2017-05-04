@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-08-15"
+  years: 2015, 2017
+lastupdated: "2017-03-23"
 
 ---
 
@@ -71,7 +71,8 @@ JVM 選項的配置是為了提供 Bluemix 環境中的最佳化，以及輔助�
   * 將失敗時的應用程式可用記憶體資源資訊遞送至 Loggregator。
   * 如果應用程式是配置為啟用 JVM 記憶體傾出，則會停用 Java 處理程序的結束 (kill) 功能，且 JVM 記憶體傾出會遞送至一個共同的應用程式 "dumps" 目錄。然後，即可從 Bluemix 儀表板或 CF CLI 檢視這些傾出。
 
-以下是預設 JVM 配置的範例，它是建置套件針對以「512 M 記憶體限制」所部署的應用程式而產生的：   
+下列是建置套件針對已部署「512M 記憶體限制」的應用程式所產生的範例預設 JVM 配置：
+
 ```
 -Xtune:virtualized
     -Xmx384M
@@ -93,7 +94,7 @@ JVM 選項的配置是為了提供 Bluemix 環境中的最佳化，以及輔助�
 <tr>
 <th align="left">JRE</th>
 <th align="left">指令行選項格式</th>
-<th align="left">參照</th>
+<th align="left">參考資料</th>
 </tr>
 
 <tr>
@@ -106,7 +107,7 @@ JVM 選項的配置是為了提供 Bluemix 環境中的最佳化，以及輔助�
 <tr>
 <td> OpenJDK</td>
 <td>根據 HotSpot 運行環境，以 -X 表示非標準、-XX 表示開發人員選項，並使用布林旗標來啟用或停用選項</td>
-<td>[HotSpot 運行環境概觀](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
+<td>[HotSpot 運行環境概觀 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
 </tr>
 </table>
 
@@ -167,71 +168,76 @@ JVM 選項的配置是為了提供 Bluemix 環境中的最佳化，以及輔助�
 ### 決定執行中應用程式的已套用 JVM 選項
 {: #determining_applied_jvm_options}
 
-使用 JVM_ARGS 環境變數所指定的應用程式定義選項除外，其他產生的選項會以指令行選項形式（獨立式 Java 應用程式）或以 jvm.options 檔案（非獨立式 Java 應用程式）持續保存在運行環境中。您可以從「Bluemix 儀表板」或 CF CLI 檢視應用程式的已套用 JVM 選項。
+除了使用 JVM_ARGS 環境變數所指定的應用程式定義選項之外，所產生的選項也會以指令行選項形式（獨立式 Java 應用程式）或以 `jvm.options` 檔案（非獨立式 Java 應用程式）持續保存在運行環境中。您可以從 IBM Bluemix 主控台或 CF CLI 檢視應用程式的已套用 JVM 選項。
 
-獨立式 Java 應用程式的 JVM 選項會持續保存為指令行選項。您可以從 staging_info.yml 檔案檢視它們。
+獨立式 Java 應用程式的 JVM 選項會持續保存為指令行選項。您可以從 `staging_info.yml` 檔案中檢視它們。
+
+若要在執行於 DEA 節點中的應用程式上檢視 `staging_info.yml` 檔案，請執行下列指令：
 
 ```
 $ cf files myapp staging_info.yml
 ```
 {: codeblock}
 
-WAR、EAR、伺服器目錄及包裝伺服器部署的 JVM 選項會持續保存在 jvm.options 檔案中。
+若要在執行於 Diego cell 中的應用程式上檢視 `staging_info.yml` 檔案，請執行下列指令：
 
-若要檢視 WAR、EAR 及伺服器目錄的 jvm.options 檔案，請執行下列指令：
+```
+    $ cf ssh myapp -c "cat staging_info.yml"
+```
+{: codeblock}
+
+WAR、EAR、伺服器目錄及包裝伺服器部署的 JVM 選項會持續保存在 `jvm.options` 檔案中。`jvm.options` 檔案位於 `app/wlp/usr/servers/<serverName>/` 目錄中。在大部分情況下，```<serverName>``` 會設為 `defaultServer`，除非包裝伺服器已部署不同的伺服器名稱。例如：
+
+若要在執行於 DEA 節點中的應用程式上檢視 `jvm.options` 檔案，請執行下列指令：
 
 ```
 $ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
 ```
 {: codeblock}
 
-若要檢視包裝伺服器的 jvm.options 檔案，請以您的伺服器名稱取代 &lt;serverName>，並執行下列指令：
+若要在執行於 Diego cell 中的應用程式上檢視 `jvm.options` 檔案，請執行下列指令：
+
 ```
-$ cf files myapp app/wlp/usr/servers/<serverName>jvm.options
+    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/jvm.options"
 ```
 {: codeblock}
+
 
 #### 用法範例
 {: #example_usage}
 
-使用自訂的 JVM 選項部署應用程式，以啟用 IBM JRE JVM 詳細記憶體回收記載：
-* 應用程式的 manifest.yml 檔案中包含的 JVM 選項：
+使用自訂的 JVM 選項部署應用程式，以啟用 IBM JRE 詳細記憶體回收記載：
+* 應用程式的 `manifest.yml` 檔案中內含的 JVM 選項：
 
-
-  <pre>
+```
     env:
       JAVA_OPTS: "-verbose:gc -Xverbosegclog:./verbosegc.log,10,1000"
-  </pre>
-  {: codeblock}
+```
+{: codeblock}
 
-* 檢視產生的 JVM 詳細記憶體回收記載：
+* 若要在執行於 DEA 節點中的應用程式上檢視 JVM 所產生的詳細記憶體回收日誌檔，請執行下列指令：
 
-  <pre>
+```
 $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
-  </pre>
-  {: codeblock}    
+```
+{: codeblock}
 
-* 若要更新已部署應用程式的 IBM JRE JVM 選項，以便在記憶體不足 (OutOfMemory) 狀況中觸發 heap、snap 和 javacore，請使用 JVM 選項來設定應用程式環境變數，並重新啟動應用程式：
+* 若要在執行於 Diego cell 中的應用程式上檢視 JVM 所產生的詳細記憶體回收日誌檔，請執行下列指令：
 
-  <pre>
+```
+    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/verbosegc.log.001"
+```
+{: codeblock}
+
+* 若要更新已部署應用程式的 IBM JRE 選項，以在記憶體不足 (OutOfMemory) 的狀況下觸發 heap、snap 及 javacore，請使用 JVM 選項來設定應用程式的環境變數，並重新啟動應用程式：
+
+```
     $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
     $ cf restart myapp
-  </pre>
-  {: codeblock}
+```
+{: codeblock}
 
-* 在觸發記憶體不足狀況時檢視產生的 JVM 傾出：
-
-  <pre>
-    $ cf files myapp dumps
-
-    Getting files for app myapp in org myemail@email.com / space dev as myemail@email.com...
-    OK
-
-    Snap.20141106.100252.81.0003.trc         307.3K
-    heapdump.20141106.100252.81.0001.phd       3.9M
-    javacore.20141106.100252.81.0002.txt     870.5K
-  </pre>
-  {: codeblock}
+ 如需檢視及下載已產生之傾出檔案的詳細資料，請參閱[記載和追蹤](loggingAndTracing.html#download_dumps)文件。
 
 ### 重疊 JRE
 {: #overlaying_jre}
@@ -273,6 +279,7 @@ $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
 
 例如，如果您要使用 AES 256 位元加密，則需要重疊這些 Java 原則檔案：
 
+
 ```
 .java\jre\lib\security\US_export_policy.jar
     .java\jre\lib\security\local_policy.jar
@@ -280,6 +287,7 @@ $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
 {: codeblock}
 
 下載適當的未限定原則檔案，並將它們新增到您的應用程式，如：
+
 ```
 resources\.java-overlay\.java\jre\lib\security\US_export_policy.jar
     resources\.java-overlay\.java\jre\lib\security\local_policy.jar
@@ -289,8 +297,8 @@ resources\.java-overlay\.java\jre\lib\security\US_export_policy.jar
 當您推送應用程式時，這些 Jar 會重疊 Java 運行環境中的預設原則 Jar。這個處理程序會啟用 AES 256 位元加密。
 
 # 相關鏈結
-{: #rellinks}
+{: #rellinks notoc}
 ## 一般
-{: #general}
+{: #general notoc}
 * [Liberty 運行環境](index.html)
 * [Liberty 設定檔概觀](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

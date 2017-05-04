@@ -1,4 +1,4 @@
-## WebSocket パッケージの使用
+# WebSocket パッケージの使用
 {: #openwhisk_catalog_websocket}
 
 `/whisk.system/websocket` パッケージは、WebSocket にメッセージを送るための便利な方法を提供します。
@@ -12,7 +12,7 @@
 
 多数のメッセージを同じ WebSocket URI に送信する予定の場合、`uri` 値を指定してパッケージ・バインディングを作成することをお勧めします。バインディングを使用すると、`send` アクションを使用するたびに値を指定する必要がありません。
 
-### WebSocket にメッセージを送信する
+## WebSocket にメッセージを送信する
 
 `/whisk.system/websocket/send` アクションは、WebSocket URI にペイロードを送信します。 パラメーターは次のとおりです。
 

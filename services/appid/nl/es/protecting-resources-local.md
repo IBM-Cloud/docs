@@ -2,7 +2,7 @@
 
 copyright:
   years:  2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2017-03-30"
 # Uso de {{site.data.keyword.appid_short_notm}} con un entorno de desarrollo local
 {: #protecting-local}
 
-Puede configurar su entorno local para que utilice el servicio {{site.data.keyword.appid_short}}. Específicamente, puede desarrollar código de forma local utilizando el SDK de servidor de {{site.data.keyword.appid_short_notm}} y enviar solicitudes al servidor de desarrollo.
+Puede configurar su entorno local para que utilice el servicio {{site.data.keyword.appid_short}}. Específicamente, puede desarrollar código de forma local utilizando el SDK de servidor de {{site.data.keyword.appid_short_notm}} para enviar solicitudes al servidor de desarrollo.
 {:shortdesc}
 
 
@@ -48,7 +48,7 @@ Para configurar sus apps para trabajar con un servidor de desarrollo local, util
 <table> <caption> Tabla 1. Regiones de {{site.data.keyword.Bluemix_notm}} y regiones de {{site.data.keyword.appid_short_notm}} correspondientes para Android e iOS </caption>
 <tr>
   <th> Región Bluemix </th>
-  <th> Android </th>
+  <th> Android e iOS </th>
 </tr>
 <tr>
   <td> Sur de EE.UU. </td>

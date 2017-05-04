@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -45,8 +45,7 @@ lastupdated: "2017-03-30"
     </tr>
   </table>
 
-  * Gradle과 작동하도록 설정된 Android Studio 프로젝트. 
-    * Android 개발 환경을 설정하는 방법에 대한 자세한 정보는 <a href="https://developers.google.com/web/tools/setup/" target="_blank">Google 개발자 도구 문서 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a>을 참조하십시오. 
+  * Gradle에서 작동하도록 설정된 <a href="https://developers.google.com/web/tools/setup/" target="_blank">Android Studio 프로젝트 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a>. 
 
 ## 클라이언트 SDK 설치
 {: #install-appid-sdk}
@@ -173,7 +172,7 @@ initialize 메소드에 컨텍스트, 테넌트 ID 및 지역 매개변수를 �
 ### 익명 로그인
 {: #anonymous notoc}
 
-{{site.data.keyword.appid_short_notm}}를 사용하여 익명으로 로그인할 수 있습니다. [익명 사용자](/docs/services/appid/user-profile.html#anonymous)를 참조하십시오. 
+{{site.data.keyword.appid_short_notm}}에서 사용자는 [익명으로](/docs/services/appid/user-profile.html#anonymous) 로그인할 수 있습니다.
 
   ```java
   appId.loginAnonymously(getApplicationContext(), new AuthorizationListener() {

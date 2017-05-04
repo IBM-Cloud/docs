@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-4-5"
+lastupdated: "2017-04-26"
 
 ---
 
@@ -13,8 +13,11 @@ lastupdated: "2017-4-5"
 
 #Creating and displaying work items {: #tp-creatingwis}  
 
+
 You can create and display work items in several ways, depending on your context.
 {: shortdesc}
+
+**This service is being deprecated:**  All instances of this service are being deprecated. Existing instances can be used until 5 July 2017. For more information, see the [deprecation announcement blog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/04/track-plan-retirement/){: new_window}. To get the latest tools for issue tracking, use the {{site.data.keyword.contdelivery_full}} service. For upgrade instructions, see [Upgrade your DevOps Services project to a toolchain](/docs/services/ContinuousDelivery/upgrade_projects.html){: new_window}.
 
 For example, if you create a work item in the My Work view, you own the work item automatically. But if you create a work item from the Incoming Work view, the owner will be unassigned unless you select one.
 

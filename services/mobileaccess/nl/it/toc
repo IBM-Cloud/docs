@@ -1,0 +1,63 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="mobileaccess" audience="service"}
+Mobile Client Access
+
+    {: .navgroup id="learn"}
+    index.md
+    overview.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    sdks-samples-apis.md
+    relatedlinks.md
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    {: .topicgroup}
+    Protecting resources
+        protecting-resources.md
+        protecting-resources-nodejs.md
+        protecting-resources-java.md
+        protecting-resources-local.md
+
+    {: .topicgroup}
+    Setting up the MCA SDK
+        getting-started.md
+        getting-started-android.md
+        getting-started-ios-swift-sdk.md
+        getting-started-cordova.md
+
+    {: .topicgroup}
+    Authenticating with Facebook
+        facebook-auth-overview.md
+        facebook-auth-android.md
+        facebook-auth-ios-swift-sdk.md
+        facebook-auth-cordova.md
+        facebook-web.md
+
+    {: .topicgroup}
+    Authenticating with Google
+        google-auth-overview.md
+        google-auth-android.md
+        google-auth-ios-swift-sdk.md
+        google-auth-cordova.md
+        google-web.md
+
+    {: .topicgroup}
+    Authenticating with custom IDs
+        custom-auth.md
+        custom-auth-identity-provider.md
+        custom-auth-config-mca.md
+        custom-auth-android.md
+        custom-auth-ios-swift.md
+        custom-auth-cordova.md
+        custom-auth-web.md
+
+    advanced-topics-oauthsdk.md
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    ts_index.md
+    {: .navgroup-end}

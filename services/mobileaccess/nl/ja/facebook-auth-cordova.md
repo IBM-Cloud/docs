@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+**重要: {{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービス**に置き換えられます。
 
 # Cordova アプリ用の Facebook 認証の使用可能化
 {: #facebook-auth-cordova}
@@ -33,7 +34,7 @@ Facebook 認証を使用可能にするために、ネイティブ・プラッ�
 * アプリケーションの経路。これは、バックエンド・アプリケーションの URL です。
 * `tenantId` 値。{{site.data.keyword.amashort}} サービス・ダッシュボードを開きます。**「モバイル・オプション」**をクリックします。`tenantId` (`appGUID` とも呼ばれる) の値が、**「アプリ GUID」/「TenantId」**フィールドに表示されます。これらの値は、SDK を初期化するため、および要求をバックエンド・サービスに送信するために必要になります。
 *  {{site.data.keyword.Bluemix_notm}} サービスがホストされている地域を見つけます。メニュー・バーの **「アバター」**アイコン![「アバター」アイコン](images/face.jpg "「アバター」アイコン") の横のヘッダー内に現在の {{site.data.keyword.Bluemix_notm}} 地域が表示されます。地域値は、**「米国南部」**、**「シドニー」**、または**「英国」**のいずれかでなければなりません。これらの名前に対応する正確な SDK の定数値は、コードの例に示しています。
-* Facebook アプリケーションと App ID。詳しくは、『[Facebook for Developers Web サイトからの Facebook App ID の取得](facebook-auth-overview.html#facebook-appID)』を参照してください。
+* Facebook アプリケーションと App ID。詳しくは、[Facebook for Developers Web サイトでのアプリケーションの作成](facebook-auth-overview.html#facebook-appID)を参照してください。
 
 
 

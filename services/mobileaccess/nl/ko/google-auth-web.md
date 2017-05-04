@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -11,6 +11,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+**중요: {{site.data.keyword.amafull}} 서비스는 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다. **
 
 # 웹 애플리케이션에서 Google 인증 사용
 {: #google-auth-web}
@@ -31,7 +33,7 @@ Google 로그인을 사용하여 웹 애플리케이션의 사용자를 인증�
 ## 웹 사이트에 맞게 Google 애플리케이션 구성
 {: #google-auth-config}
 
-ID 제공자로서 Google 사용을 시작하려면 [Google 개발자 콘솔 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.developers.google.com "외부 링크 아이콘"){: new_window}에서 프로젝트를 작성하십시오. 프로젝트 작성의 일부로 **Google 클라이언트 ID** 및 **본인확인정보**를 확보하십시오. Google 클라이언트 ID 및 본인확인정보는 Google 인증에서 사용하는 애플리케이션에 대한 고유 ID이며, {{site.data.keyword.amashort}} 대시보드 설정에 필요합니다. 
+ID 제공자로 Google 사용을 시작하려면 [Google 개발자 콘솔 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.developers.google.com){: new_window}에서 프로젝트를 작성하십시오. 프로젝트 작성의 일부로 **Google 클라이언트 ID** 및 **본인확인정보**를 확보하십시오. Google 클라이언트 ID 및 본인확인정보는 Google 인증에서 사용하는 애플리케이션에 대한 고유 ID이며, {{site.data.keyword.amashort}} 대시보드 설정에 필요합니다. 
 
 1. Google 개발자 콘솔에서 Google 애플리케이션을 여십시오. 
 3. **Google+** API를 추가하십시오. 
@@ -39,7 +41,7 @@ ID 제공자로서 Google 사용을 시작하려면 [Google 개발자 콘솔 ![�
 4. 변경사항을 저장하십시오. **Google 클라이언트 ID** 및 **애플리케이션 본인확인정보**를 기록해 두십시오.
 
 
-## Google 인증용 {{site.data.keyword.amashort}} 구성
+## Google 인증을 위한 Mobile Client Access 구성
 {: #google-auth-config-ama}
 
 Google 애플리케이션 ID와 본인확인정보가 있으면 {{site.data.keyword.amashort}} 대시보드에서 Google 인증을 사용할 수 있습니다.
@@ -55,7 +57,7 @@ Google 애플리케이션 ID와 본인확인정보가 있으면 {{site.data.keyw
 5. **저장**을 클릭하십시오.
 
 
-## ID 제공자로 Google을 사용하여 {{site.data.keyword.amashort}} 권한 부여 플로우 구현
+## ID 제공자로서 Google을 사용하여 Mobile Client Access 권한 부여 플로우 구현
 {: #google-auth-flow}
 
 `VCAP_SERVICES` 환경 변수는 각 {{site.data.keyword.amashort}} 서비스 인스턴스에 대해 자동으로 작성되며 권한 부여 프로세스에 필요한 특성을 포함합니다. JSON 오브젝트로 구성되며 {{site.data.keyword.amashort}} 서비스 대시보드의 **서비스 신임 정보** 탭을 클릭하면 표시됩니다. 
@@ -94,27 +96,22 @@ Google 애플리케이션 ID와 본인확인정보가 있으면 {{site.data.keyw
 		res.send("Hello from protected endpoint");
 	});
 
-	app.get("/protected", checkAuthentication, function(req, res, next) {
-		res.send("Hello from protected endpoint");
-		function checkAuthentication(req, res, next) {
-
-			// Check if user is authenticated
-			if (req.session.userIdentity) {
-				next()
-			} else {
-				// If not - redirect to authorization server
-				var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
-				var authorizationEndpoint = mcaCredentials.authorizationEndpoint;
-				var clientId = mcaCredentials.clientId;
-				var redirectUri = "http://some-server/oauth/callback"; // Your Web application redirect URI
-				var redirectUrl = authorizationEndpoint + "?response_type=code";
-				redirectUrl += "&client_id=" + clientId;
-				redirectUrl += "&redirect_uri=" + redirectUri;
-				res.redirect(redirectUrl);
-				}
-		 	}
-	   	}
-       }
+	function checkAuthentication(req, res, next) {
+		// Check if user is authenticated
+		if (req.session.userIdentity) {
+			next()
+		} else {
+			// If not - redirect to authorization server
+			var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
+			var authorizationEndpoint = mcaCredentials.authorizationEndpoint;
+			var clientId = mcaCredentials.clientId;
+			var redirectUri = "http://some-server/oauth/callback"; // Your Web application redirect URI
+			var redirectUrl = authorizationEndpoint + "?response_type=code";
+			redirectUrl += "&client_id=" + clientId;
+			redirectUrl += "&redirect_uri=" + redirectUri;
+			res.redirect(redirectUrl);
+		}
+	}
 	```
 	{: codeblock}
 
@@ -189,7 +186,7 @@ Google 애플리케이션 ID와 본인확인정보가 있으면 {{site.data.keyw
 	액세스 및 ID 토큰을 받은 후에는 웹 세션을 인증됨으로 플래그 지정할 수 있으며 선택적으로 이러한 토큰을 유지할 수 있습니다.   
 
 
-##확보한 액세스 권한 및 ID 토큰 사용
+## 확보한 액세스 권한 및 ID 토큰 사용
 {: #google-auth-using-token}
 
 ID 토큰에는 사용자 ID에 대한 정보가 포함되어 있습니다. Google 인증의 경우 토큰에는 사용자가 공유하도록 동의한 모든 정보가 포함됩니다(예: 전체 이름, 프로파일 사진의 URL 등).  
@@ -200,7 +197,7 @@ ID 토큰에는 사용자 ID에 대한 정보가 포함되어 있습니다. Goog
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-####팁:
+#### 팁:
 {: #tips}
 
 * `accessToken` 및 `idToken`은 공백으로 구분해야 합니다. 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-18"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -13,7 +13,7 @@ lastupdated: "2017-03-18"
 # Richiama codice
 {: #Get_Code}
 
-Dopo aver completato la configurazione del tuo progetto con le funzionalità selezionate puoi scaricare il codice che ti abilita ad eseguire il codice. Il progetto scaricato è preconfigurato con le credenziali e le dipendenze SDK richieste per ogni funzionalità che hai configurato.
+Dopo aver completato la configurazione e l'impostazione del tuo progetto con le funzionalità selezionate, puoi scaricare il codice che ti consente di eseguire l'applicazione. Il progetto scaricato è preconfigurato con le credenziali e le dipendenze SDK richieste per ogni funzionalità che hai configurato.
 
 Avrai bisogno di completare le credenziali per i servizi che non sono configurabili nel tuo progetto scaricato. Il file `README.md` per il progetto starter contiene le istruzioni. Visualizza il file `README.md` in un visualizzatore Markdown per completare la configurazione.
 
@@ -23,7 +23,7 @@ Avrai bisogno di completare le credenziali per i servizi che non sono configurab
 I seguenti strumenti per sviluppatori sono necessari quando stai lavorando con il codice generato dalla {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}:
 
 
-### Generale 
+### Generale
 {: #general notoc}
 
 * [Homebrew ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://brew.sh/)
@@ -43,7 +43,7 @@ I seguenti strumenti per sviluppatori sono necessari quando stai lavorando con i
 	$ brew install Node5
 	```
 
-* [Strumenti CLI Bluemix ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://clis.ng.bluemix.net/ui/home.html) 
+* [Strumenti CLI Bluemix ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://clis.ng.bluemix.net/ui/home.html)
 
    Strumenti della riga di comando per distribuire i runtime Cloud Foundry da una CLI (command line interface) con {{site.data.keyword.Bluemix_notm}}.  
 

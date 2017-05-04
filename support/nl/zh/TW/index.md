@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-03-01"
+lastupdated: "2017-03-21"
 
 ---
 
@@ -42,7 +42,7 @@ lastupdated: "2017-03-01"
 * 您可以設定過濾器，將搜尋結果變更成只包括選取的項目，以搜尋 {{site.data.keyword.Bluemix_notm}} 文件、Stack Overflow 及 DW Answers。
 * 您可以直接鏈結至 Stack Overflow **#IBMBluemix** 或 DW Answers，以進行搜尋或張貼。
 * 您可以將結構化構想提交至 [IBM Cloud - Structured Ideas](https://ibmcloud.ideas.aha.io/) 網站。
-* 呼叫或尋找業務代表，即可聯絡銷售人員。請參閱[聯絡我們](https://www.ibm.com/cloud-computing/bluemix/contact-us)頁面。
+* 呼叫或尋找業務代表，即可聯絡銷售人員。請參閱[與我們聯絡](https://www.ibm.com/cloud-computing/bluemix/contact-us)頁面。
 * 您可以與 Twitter 上的 [**@IBMBluemixHelp**](http://www.twitter.com/IBMBluemixHelp) 連線，以加強 {{site.data.keyword.Bluemix_notm}} 體驗。
 * 雖然支援小組件是取得支援的偏好方法，但是如果您無法登入 {{site.data.keyword.Bluemix_notm}}，則也可以使用[取得協助](ibm.biz/bluemixsupport)頁面來提交問題單。
 
@@ -150,10 +150,11 @@ News 來源（例如下列網站）也提供方法來讀取 RSS 資訊來源：
 
   * 充分運用多個 {{site.data.keyword.Bluemix_notm}} 地區
 
-    「{{site.data.keyword.Bluemix_notm}} 公用」的所有使用者都自動可存取 US-SOUTH、EU-GB 及 AU-SYD 地區：
+    「{{site.data.keyword.Bluemix_notm}} 公用」的所有使用者都自動可存取 US-SOUTH、EU-GB、EU-DE 及 AU-SYD 地區：
 
 	  * US-SOUTH：https://console.ng.bluemix.net
 	  * EU-GB：https://console.eu-gb.bluemix.net
+	  * EU-DE：https://console.eu-de.bluemix.net
 	  * AU-SYD：https://console.au-syd.bluemix.net
 
 	{{site.data.keyword.Bluemix_notm}} Global Operations 團隊會管理所有地區，以避免維護造成的影響，並讓發生同時影響所有地區之突發事件的風險降到最低。
@@ -260,7 +261,7 @@ News 來源（例如下列網站）也提供方法來讀取 RSS 資訊來源：
 
 嚴重性 | 嚴重性定義 | 回應時間目標 | 回應時間涵蓋範圍
 ------|-------- | --- | --- |
-嚴重性 1 | <strong>嚴重業務影響，或服務已關閉。</strong><br> 重要業務功能未作業，或重要介面失敗。此嚴重性通常會套用至正式作業環境，指出無法存取服務將嚴重影響作業。必須立即解決此狀況。 | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>1 小時內</li><li><strong>高階：</strong>1 小時內</li></ul> | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>24 小時全年無休</li><li><strong>高階：</strong>24 小時全年無休</li></ul> 			   
+嚴重性 1 | <strong>嚴重業務影響，或服務已關閉。</strong><br> 重要業務功能未作業，或重要介面失敗。此嚴重性通常適用於正式作業環境，指出無法存取服務將嚴重影響作業。必須立即解決此狀況。 | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>1 小時內</li><li><strong>高階：</strong>1 小時內</li></ul> | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>24 小時全年無休</li><li><strong>高階：</strong>24 小時全年無休</li></ul> 			   
 嚴重性 2 | <strong>重大業務影響。</strong> <br> 服務特性或功能的使用嚴重受限，或者您快要錯過業務截止時間。 | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>2 小時內</li><li><strong>高階：</strong>90 分鐘內</li></ul> | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>作業時間</li><li><strong>高階：</strong>作業時間</li></ul>
 嚴重性 3 | <strong>次要業務影響。</strong> <br> 服務特性或功能仍可使用，但有些問題會影響其使用。未對作業造成重要影響。 | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>4 小時內</li><li><strong>高階：</strong>2 小時內</li></ul> | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>作業時間</li><li><strong>高階：</strong>作業時間</li></ul>
 嚴重性 4 | <strong>最小業務影響。</strong> <br> 查詢或非技術要求。 | <ul><li><strong>免費：</strong>最大努力</li><li><strong>基本：</strong>最大努力</li><li><strong>標準：</strong>8 小時內</li><li><strong>高階：</strong>4 小時內</li></ul> | <ul><li><strong>免費：</strong>作業時間</li><li><strong>基本：</strong>作業時間</li><li><strong>標準：</strong>作業時間</li><li><strong>高階：</strong>作業時間</li></ul>

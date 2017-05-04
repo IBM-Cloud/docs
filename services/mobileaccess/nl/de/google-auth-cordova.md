@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+**Wichtig: Der Service {{site.data.keyword.amafull}} wird durch den Service {{site.data.keyword.appid_full}} ersetzt.**
 
 # Google-Authentifizierung für Cordova-Apps aktivieren
 {: #google-auth-cordova}
@@ -39,7 +41,7 @@ Die Schritte, die zur Konfiguration der Android-Plattform einer Cordova-Anwendun
    * [Projekt in Google Developer Console erstellen](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html#create-google-project). Hier erfahren Sie, wie Sie den Authentifizierungsservice auf der Google Developers-Website einrichten.
    * [MCA für die Google-Authentifizierung konfigurieren](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html#google-auth-android-config). Hier erfahren Sie, wie Sie {{site.data.keyword.amashort}} für die Google-Authentifizierung einrichten.
 
-### {{site.data.keyword.amashort}}-Client-SDK fur Android (Cordova) konfigurieren
+### Client-SDK für Android Cordova konfigurieren
 
 1. Öffnen Sie in Ihrem Android-Projektordner die Datei `build.gradle` für das Anwendungsmodul (**nicht** die Projektdatei `build.gradle`).
 	Suchen Sie den Abschnitt für Abhängigkeiten ('dependencies') und fügen Sie eine neue Abhängigkeit 'compile' für das Client-SDK hinzu:
@@ -127,7 +129,9 @@ Initialisieren Sie {{site.data.keyword.amashort}} Authorization Manager in Objec
 ```
 {: codeblock}
 
-**Hinweis:**
+
+####Hinweis:
+{: #note notoc}
 
 * Ersetzen Sie `<ihr_modulname>` mit dem Modulnamen des Projekts. Wenn beispielsweise der Modulname `Cordova` ist, sollte die Importzeile `#import "Cordova-Swift.h"` lauten. Suchen Sie den Modulnamen und wechseln Sie zu
 `Build Settings`, `Packaging` > `Product Module Name`.

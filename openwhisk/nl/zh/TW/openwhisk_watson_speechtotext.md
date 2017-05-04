@@ -22,7 +22,7 @@ lastupdated: "2017-02-21"
 | 實體 | 類型 | 參數 | 說明 |
 | --- | --- | --- | --- |
 | `/whisk.system/watson-speechToText` | 套件 | username、password | 將語音轉換為文字的套件 |
-| `/whisk.system/watson-speechToText/speechToText` | 動作 (action) | payload、content_type、encoding、username、password、continuous、inactivity_timeout、interim_results、keywords、keywords_threshold、max_alternatives、model、timestamps、watson-token、word_alternatives_threshold、word_confidence、X-Watson-Learning-Opt-Out | 將音訊轉換為文字 |
+| `/whisk.system/watson-speechToText/speechToText` | 動作 | payload、content_type、encoding、username、password、continuous、inactivity_timeout、interim_results、keywords、keywords_threshold、max_alternatives、model、timestamps、watson-token、word_alternatives_threshold、word_confidence、X-Watson-Learning-Opt-Out | 將音訊轉換為文字 |
 
 **附註**：已淘汰套件 `/whisk.system/watson`（包括動作 `/whisk.system/watson/speechToText`）。
 

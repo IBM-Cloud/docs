@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-01"
+lastupdated: "2017-03-27"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -13,12 +13,12 @@ lastupdated: "2017-03-01"
 {:pre: .pre}
 
 
-# 保障工具包
+# 使用保障工具包
 {: #iot4i_shield_toolkit}
 使用保障通过识别危险并创建相应的自动响应来保护财产和用户。通过使用下面的指示信息和示例，来使用或修改 {{site.data.keyword.iotinsurance_short}} 保障库中包含的保障或创建并实施自己的保障。
 {:shortdesc}
 
-## 关于保障。
+## 关于保障
 保障是一组规则和定义的操作，从传感器接收到的输入中的特定条件会触发这些操作。例如，您可以使用某个规则来创建保障，通过该规则，在传感器检测到漏水时会发送短信。
 
 ## 从 {{site.data.keyword.iotinsurance_short}} 保障库使用保障
@@ -270,16 +270,3 @@ var promotion = {
 ```
 
 您可以选择以先前部分中创建的用户身份来部署移动应用程序并使用 [ioti-mobile GitHub 存储库中的指示信息](https://github.com/ibm-watson-iot/ioti-mobile)进行连接。
-
-# 相关链接
-{: #rellinks}
-
-## API 参考
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API 示例](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## 相关链接
-{: #general}
-* [开发人员支持论坛](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-* [堆栈溢出支持论坛](http://stackoverflow.com/questions/tagged/ibm-bluemix)

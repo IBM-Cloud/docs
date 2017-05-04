@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-16"
+lastupdated: "2017-03-06"
 
 ---
 
@@ -24,7 +24,7 @@ Vous pouvez utiliser les fonctions de surveillance dans {{site.data.keyword.Blue
 
 Vous pouvez également configurer et surveiller d'autres métriques de performance. Vous pouvez visualiser et analyser ces métriques en dehors de {{site.data.keyword.Bluemix_notm}}. Par exemple, vous pouvez utiliser Grafana pour surveiller d'autres métriques lorsque vous exécutez votre application dans {{site.data.keyword.containershort}}. Vous pouvez personnaliser des tableaux de bord par instance de conteneur ou par espace dans lesquels vous visualisez et analysez les données de performance.
 
-![Vue de surveillance d'un conteneur dans Grafana qui s'exécute dans {{site.data.keyword.Bluemix_notm}}](images/monitoring_default_container_grafana_view.jpg)
+![Vue de surveillance Grafana d'un conteneur s'exécutant dans {{site.data.keyword.Bluemix_notm}}](images/monitoring_default_container_grafana_view.jpg "Vue de surveillance Grafana d'un conteneur s'exécutant dans Bluemix")
 
 Vous pouvez utiliser la surveillance de plateforme de {{site.data.keyword.Bluemix_notm}} pour :
 
@@ -33,5 +33,4 @@ Vous pouvez utiliser la surveillance de plateforme de {{site.data.keyword.Bluemi
 
 Pour plus d'informations sur la surveillance d'applications qui s'exécutent sur Cloud Foundry, voir [Surveillance d'applications qui s'exécutent sur Cloud Foundry](monitoring_cf_apps.html#monitoring_bluemix_apps).
 
-Pour plus d'informations sur la surveillance dans {{site.data.keyword.containershort}}, voir [Surveillance dans {{site.data.keyword.containershort}}](/docs/containers/monitoringandlogging/container_ml_monitor.html#container_ml_monitor).   
-
+Pour plus d'informations sur la surveillance dans {{site.data.keyword.containershort}}, voir [Surveillance dans {{site.data.keyword.containershort}}](containers/monitoring_containers_ov.html#monitoring_bmx_containers_ov).

@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
+**Important : Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.**
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -14,7 +15,7 @@ lastupdated: "2017-01-15"
 {:pre: .pre}
 
 
-# Configuration d'une authentification personnalisée pour votre application {{site.data.keyword.amashort}} Android
+# Configuration d'une authentification personnalisée pour votre application Mobile Client Access Android
 {: #custom-android}
 
 
@@ -39,7 +40,7 @@ Pour plus d'informations, voir les sujets suivants :
 
 
 
-## Initialisation du logiciel SDK client de {{site.data.keyword.amashort}}
+## Initialisation du logiciel SDK client
 {: #custom-android-initialize}
 Si vous disposez d'une application Android équipée du SDK Android {{site.data.keyword.amashort}}, vous pouvez ignorer cette section.
 1. Dans votre projet Android dans Android Studio, ouvrez le fichier `build.gradle` de votre module d'application (et non pas le fichier `build.gradle` du projet).
@@ -138,7 +139,7 @@ void submitAuthenticationFailure (JSONObject info);
 ## Exemple d'implémentation d'un programme d'écoute d'authentification personnalisé
 {: #custom-android-samplecustom}
 
-Cet exemple de programme d'écoute d'authentification est conçu pour fonctionner avec un fournisseur d'identité personnalisé. Vous pouvez télécharger cet exemple depuis le [Référentiel Github ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "Icône de lien externe"){: new_window}.
+Cet exemple de programme d'écoute d'authentification est conçu pour fonctionner avec un fournisseur d'identité personnalisé. Vous pouvez télécharger cet exemple depuis le [référentiel Github ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}.
 
 ```Java
 package com.ibm.helloworld;

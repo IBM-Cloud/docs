@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-22"
+lastupdated: "2017-04-18"
 
 ---
 
@@ -346,7 +346,8 @@ In the **Resource Usage** section, you can view the following information:
 {{site.data.keyword.Bluemix_notm}} over the past 10
 minutes, hour, and day.
 
-#### Memory, Disk, and CPU details
+
+#### System Memory, Disk, and CPU details
 {: #resourceusagedetails}
 
 In the **Resource Usage** section, you can see a summary of the **Reserved** and **Physical** amounts for your memory and disk.    
@@ -373,6 +374,13 @@ To see more detailed information about your physical and reserved memory or disk
 	<dt><strong>Physical</strong></dt>
 	<dd>The Physical area shows the amount of memory or disk space that is actually being used.</dd>
 	</dl>
+	
+#### Service usage details
+{: #servicesresourceusage}
+
+The **Service** tab shows the total service usage in relation to the maximum capacity that you have for a dedicated service. For example, if you have a dedicated Cloudant service, and you are using 500 GB of your 1000 GB capacity, then you see a graphic showing that you have used 50% of your total capacity. The color of the graphic changes based on how close you are to the capacity limit. Yellow is shown when you have used 70% to 84% of your capacity, and red is used when you have reached 85% or more of the available capacity.
+
+**Note**: Service consumption information may not be available in all environments at this time. This feature is available for Cloudant, MessageHub, API Connect, and Session Cache.
 
 
 ### Account usage
@@ -2043,14 +2051,13 @@ Content-Type: application/json
 ```
 {: screen}
 
-## Managing users with the cf CLI
+### Managing users with the cf CLI
 {: #usingadmincli}
 
 You can manage users for your
 {{site.data.keyword.Bluemix_notm}} environment by
 using the Cloud Foundry command line interface with the
-{{site.data.keyword.Bluemix_notm}} Admin CLI plug-in. For
-example, you can add users from an LDAP registry.
+{{site.data.keyword.Bluemix_notm}} Admin CLI plug-in. You must download this plug-in for your Cloud Foundry CLI.
 
 Before you begin, install the cf command line interface. The
 {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in
@@ -2060,7 +2067,7 @@ requires cf version 6.11.2 or later. [Download Cloud Foundry command line interf
 Cygwin. Use the Cloud Foundry command line interface in a command line window other than the Cygwin
 command line window.
 
-### Adding the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in
+#### Adding the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in
 
 After the cf command line interface is installed, you can add the
 {{site.data.keyword.Bluemix_notm}} admin CLI
@@ -2087,8 +2094,7 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 </li>
 </ol>
 
-
-To see a list of commands, run the following
+To see a list of the sub-commands available from the plug-ins that you have installed, run the following
 command:
 
 ```
@@ -2096,6 +2102,13 @@ cf plugins
 ```
 {: codeblock}
 
+To see a list of the available command groups for the {{site.data.keyword.Bluemix_notm}} Admin plug-in, run the following command:
+
+```
+cf ba
+```
+{: codeblock}
+
+For more help for a command, use the `-help` option.
+
 For more information about how to work with the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in, see [{{site.data.keyword.Bluemix_notm}} admin](../cli/plugins/bluemix_admin/index.html).
-* [What's new in {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)
-* [{{site.data.keyword.Bluemix_notm}} glossary](/docs/overview/glossary/index.html)

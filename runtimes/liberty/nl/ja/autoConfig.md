@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-03-22"
 
 ---
 
@@ -29,13 +29,11 @@ VCAP_SERVICES を読み取って、バインドされたサービスについて
 
 このプロセスは自動構成と呼ばれます。Liberty ビルドパックは、以下のサービス・タイプに対して自動構成を提供します。
 
-* [SQL Database](/docs/services/SQLDB/index.html#SQLDB)
-* ClearDB MySQL Database
+* [ClearDB MySQL Database ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.cleardb.com/developers)
 * [MySQL](/docs/services/MySQL/index.html#MySQL)
-* ElephantSQL
+* [ElephantSQL](docs/services/ElephantSQL/index.html)
 * [PostgreSQL](/docs/services/PostgreSQL/index.html#PostgreSQL)
 * [Cloudant NoSQL Database](/docs/services/Cloudant/index.html#Cloudant)
-* MongoLab
 * [dashDB](/docs/services/dashDB/index.html#dashDB)
 * [Data Cache](/docs/services/DataCache/index.html#data_cache)
 * [Session Cache](/docs/services/SessionCache/index.html#session_cache)
@@ -45,6 +43,8 @@ VCAP_SERVICES を読み取って、バインドされたサービスについて
 * [Single Sign On](/docs/services/SingleSignOn/index.html#sso_gettingstarted)
 * [New Relic](newRelic.html)
 * [Dynatrace](dynatrace.html)
+* [PostgreSQL の作成](/docs/services/ComposeForPostgreSQL/index.html)
+* [MongoDB の作成](/docs/services/ComposeForMongoDB/index.html) (現在は月次 Liberty ランタイムでのみ使用可能)。
 
 前述の通り、一部のサービスは、アプリケーション管理またはコンテナー管理のいずれかにすることができます。Mongo と SQLDB は、そういったサービスの例です。デフォルトでは、
 Liberty ビルドパックは、これらのサービスはコンテナー管理であると想定し、これらを自動的に構成します。アプリケーションがサービスを管理するようにしたい場合、services_autoconfig_excludes 環境変数を設定することで、サービスの自動構成をオプトアウトできます。詳しくは、[『サービス自動構成のオプトアウト』](autoConfig.html#opting_out)を参照してください。
@@ -62,7 +62,7 @@ jar が Liberty インストール済み環境の既知の場所にダウンロ�
 ## server.xml 構成スタンザの生成または更新
 {: #generating_or_updating_serverxml}
 
-Bluemix への [Options for Pushing Liberty Applications](optionsForPushing.html#options_for_pushing) に記述されているように、スタンドアロン・アプリケーションをプッシュすると、Liberty ビルドパックは server.xml スタンザを生成します。スタンドアロン・アプリケーションをプッシュし、コンテナー管理サービスにバインドすると、それらのバインドされたサービスに必要な server.xml スタンザが Liberty ビルドパックによって生成されます。
+『[Liberty アプリケーションのプッシュのオプション](optionsForPushing.html#options_for_pushing)』に記述されているように、スタンドアロン・アプリケーションをプッシュすると、Liberty ビルドパックによって server.xml スタンザが Bluemix に生成されます。スタンドアロン・アプリケーションをプッシュし、コンテナー管理サービスにバインドすると、それらのバインドされたサービスに必要な server.xml スタンザが Liberty ビルドパックによって生成されます。
 
 server.xml ファイルを用意し、コンテナー管理サービスにバインドすると、Liberty ビルドパックによって以下が行われます。
 
@@ -105,8 +105,8 @@ services_autoconfig_excludes 環境変数を使用します。この環境変数
 ```
 {: codeblock}
 
-**重要**: 指定するサービス・タイプは、VCAP_SERVICES 環境変数内で表示されるサービス・ラベルと一致しなければなりません。空白文字は使用できません。**重要**: <service_type_specification> 内に空白文字を含めることはできません。空白文字の使用が許可されるのは、
-複数の <service_type_specification> インスタンスを区切る場合のみです。
+**重要**: 指定するサービス・タイプは、VCAP_SERVICES 環境変数内で表示されるサービス・ラベルと一致しなければなりません。空白文字は使用できません。**重要**: ```<service_type_specification>``` 内に空白文字を含めることはできません。空白文字の使用が許可されるのは、
+複数の ```<service_type_specification>``` インスタンスを区切る場合のみです。
 
 上記の Mongo シナリオのように、特定のサービスに対するすべての自動構成アクションをオプトアウトするには、「all」オプションを使用します。上記の SQLDB シナリオのように、構成の更新アクションのみをオプトアウトするには、「config」オプションを使用します。
 
@@ -117,7 +117,9 @@ services_autoconfig_excludes 環境変数を使用します。この環境変数
       services_autoconfig_excludes: mongodb-2.2=all
 
     env:
-      services_autoconfig_excludes: sqldb=configenv:
+      services_autoconfig_excludes: sqldb=config
+
+    env:
       services_autoconfig_excludes: sqldb=config mongodb-2.2=all
 ```
 {: codeblock}
@@ -164,8 +166,8 @@ services_autoconfig_excludes 環境変数を使用します。この環境変数
 
 
 # 関連リンク
-{: #rellinks}
+{: #rellinks notoc}
 ## 一般
-{: #general}
+{: #general notoc}
 * [Liberty ランタイム](index.html)
 * [Liberty プロファイル概要](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

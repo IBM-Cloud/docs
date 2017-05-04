@@ -148,10 +148,10 @@ Je nachdem, wie der neue Code bereitgestellt wurde, können Sie für das Debuggi
   * Wenn der neue Code über eine GUI wie z. B. die {{site.data.keyword.Bluemix_notm}}-Konsole, DevOps Delivery Pipeline oder Travis-CI bereitgestellt wird, können Sie die Protokolle über die Schnittstelle überprüfen. Wenn der neue Code beispielsweise über die {{site.data.keyword.Bluemix_notm}}-Konsole bereitgestellt wird, können Sie zum Dashboard wechseln, Ihre App suchen und die Protokolle auf Suchhinweisbegriffe überprüfen.   Weitere Informationen zum Anzeigen von Protokollen über die {{site.data.keyword.Bluemix_notm}}-Konsole finden Sie unter [Protokolle über das Bluemix-Dashboard anzeigen](/docs/monitor_log/monitoringandlogging.html#viewing_logs_UI).  
 
 
-# Zugehörige Links
+# rellinks
 {: #rellinks}
 
-## Allgemein
+## general
 {: #general}
 
   * [Droplet Execution Agent (DEA) ![Symbol für externen Link](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}

@@ -22,7 +22,7 @@ Il seguente diagramma mostra una panoramica dell'architettura.
 
 Figura 1: architettura BFF
 
-Il concetto di un BFF è quello di astrarre la logica di business e la logica di integrazione comune dai tuoi microservizi o dai servizi cloud {{site.data.keyword.Bluemix}} di alto valore. 
+Il concetto di un BFF è quello di astrarre la logica di business e la logica di integrazione comune dai tuoi microservizi o dai servizi cloud {{site.data.keyword.Bluemix}} di alto valore.
 
 Con questa architettura, puoi distribuire e rilasciare aggiornamenti alla tua applicazione mobile o Web e distribuire nuove versioni del BFF utilizzando pipeline di fornitura continua con il servizio DevOps.
 

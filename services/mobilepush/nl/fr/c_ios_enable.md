@@ -125,7 +125,7 @@ Le code d'initialisation se trouve généralement dans le délégué d'applicati
 ```
 // Initialisation du SDK Core pour Swift avec l'identificateur global unique GUID, la route et la région Bluemix
 let myBMSClient = BMSClient.sharedInstance
-myBMSClient.initialize(bluemixRegion: "Location where your app is hosted.")
+myBMSClient.initialize(bluemixRegion: "Location where your app is hosted.") 
 ```
 	{: codeblock}
 

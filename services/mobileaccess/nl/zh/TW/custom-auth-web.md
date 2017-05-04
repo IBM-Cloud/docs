@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,9 @@ lastupdated: "2017-01-08"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-#配置適用於 {{site.data.keyword.amashort}} Web 應用程式的自訂鑑別
+**重要事項：{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。**
+
+#配置適用於 Mobile Client Access Web 應用程式的自訂鑑別
 {: #custom-web}
 
 將自訂鑑別及 {{site.data.keyword.amafull}} 安全功能新增至 Web 應用程式。
@@ -104,7 +106,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 {: codeblock}
 
 
-##配置 {{site.data.keyword.amashort}} 進行自訂鑑別
+##配置 Mobile Client Access 進行自訂鑑別
 {: #custom-auth-config-mca}
 
 配置您的自訂身分提供者之後，您可以在 {{site.data.keyword.amashort}} 儀表板中啟用自訂鑑別。
@@ -117,7 +119,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 1. 按一下**儲存**。
 
 
-##使用自訂身分提供者實作 {{site.data.keyword.amashort}} 授權流程
+##使用自訂身分提供者實作 Mobile Client Access 授權流程
 {: #custom-auth-flow}
 
 `VCAP_SERVICES` 環境變數是針對每一個 {{site.data.keyword.amashort}} 服務實例自動建立的，並且包含授權處理程序所需的內容。其由 JSON 物件組成，您可以在 {{site.data.keyword.amashort}} 儀表板的**服務認證**標籤中進行檢視。
@@ -134,20 +136,15 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 
 	美國南部：
 
-	`  https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization 
-  `
+	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization`
 
-	  倫敦：
-  
+	倫敦：
 
-	` https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization
-   `
+	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization`
 
-	  雪梨：
-  
+	雪梨：
 
-	`  https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization 
-  `
+	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization`
 
 2. 使用 `response_type("code")`、`client_id` 及 `redirect_uri` 作為查詢參數，來建置授權伺服器 URI。  
 
@@ -156,29 +153,28 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
    下列範例會擷取 `VCAP_SERVICES` 變數中的參數、建置 URL，然後傳送重新導向要求。
 
 	```Java
-var cfEnv = require("cfenv"); 
-app.get("/protected", checkAuthentication, function(req, res, next){ 
-  res.send("Hello from protected endpoint"); 
-  }
-);
+	var cfEnv = require("cfenv");
+	app.get("/protected", checkAuthentication, function(req, res, next) {
+		res.send("Hello from protected endpoint");
+	}
+	);
 
-	function checkAuthentication(req, res, next){ 
-  // Check if user is authenticated 
-  if (req.session.userIdentity){ 
-    next()
+	function checkAuthentication(req, res, next) {
+		// Check if user is authenticated
+		if (req.session.userIdentity) {
+			next()
 		} else {
-			// If not - redirect to authorization server 
-    var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
-    var authorizationEndpoint = mcaCredentials.authorizationEndpoint; 
-    var clientId = mcaCredentials.clientId; 
-    var redirectUri = "http://some-server/oauth/callback"; // Your web application redirect uri 
-    var redirectUrl = authorizationEndpoint + "?response_type=code";
-    redirectUrl += "&client_id=" + clientId; 
-    redirectUrl += "&redirect_uri=" + redirectUri; 
-    res.redirect(redirectUrl); 
-  } 
-
-}
+			// If not - redirect to authorization server
+			var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
+			var authorizationEndpoint = mcaCredentials.authorizationEndpoint;
+			var clientId = mcaCredentials.clientId;
+			var redirectUri = "http://some-server/oauth/callback"; // Your web application redirect uri
+			var redirectUrl = authorizationEndpoint + "?response_type=code";
+			redirectUrl += "&client_id=" + clientId;
+			redirectUrl += "&redirect_uri=" + redirectUri;
+			res.redirect(redirectUrl);
+		}
+	}
 	```
 	{: codeblock}
 
@@ -250,7 +246,7 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 
 	請注意，`redirect_uri` 參數必須符合先前的授權要求中所使用的 `redirect_uri`。code 參數值應該是授權要求結束時的回應中收到的授權碼。授權碼的有效時間只有 10 分鐘，過了此時間您將需要取得新的授權碼。
 
-	回應內文將包含 JWT 格式的 `access_token` 及 `id_token`。請參閱 [JWT 網站 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://jwt.io "外部鏈結圖示"){: new_window}。
+	回應內文將包含 JWT 格式的 `access_token` 及 `id_token`。請參閱 [JWT 網站 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://jwt.io){: new_window}。
 
 	收到存取權和身分記號之後，您可以將 Web 階段作業標示為已鑑別，並可選擇持續保存這些記號。
 

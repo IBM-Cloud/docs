@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-01-10"
+lastupdated: "2017-3-16"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2017-01-10"
 {: #managingapps}
 
 
-管理應用程式的一般問題，可能包括無法更新應用程式，或是未顯示雙位元組字元。在許多情況下，您都可以依照下列一些簡單的步驟，從這些問題中回復。
+管理應用程式的一般問題，可能包括無法更新應用程式，或是未顯示雙位元組字元。在許多情況下，您可以遵照一些簡單的步驟，從這些問題回復。
 {:shortdesc}
 
 
@@ -94,7 +94,7 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 
 如果您的工作台 JVM 是 IBM JVM 7 或 8，或舊版 Oracle JVM 8，請完成下列步驟來切換至 Oracle JVM 8：
 
-  1. 下載並安裝 Oracle JVM 8，如需詳細資料，請參閱 [Java SE 下載 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window}。
+  1. 下載並安裝 Oracle JVM 8，如需詳細資料，請參閱 [Java SE Downloads ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window}。
   2. 重新啟動 Eclipse。
   3. 檢查 `eclipse.vm` 內容是否指向新的 Oracle JVM 8 安裝。
 
@@ -199,10 +199,9 @@ process.env.VCAP_SERVICES
 
 當不受支援的資料類型套用至 Eclipse 專案時，您可能無法使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 將您的應用程式部署至 {{site.data.keyword.Bluemix_notm}}。 
 
-您可以使用 Cloud Foundry CLI，順利地將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。不過，您無法使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 將應用程式部署至 {{site.data.keyword.Bluemix_notm}}，並且會看到此錯誤訊息：`不支援專案資料類型 <facet_name>。`例如：
+您可以使用 Cloud Foundry CLI，順利地將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。不過，您無法使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 將應用程式部署至 {{site.data.keyword.Bluemix_notm}}，並且會看到此錯誤訊息：`Project facet <facet_name> is not supported`。例如：
 {: tsSymptoms}
-`不支援專案資料類型 Cloud Foundry 獨立式應用程式 1.0 版。`
-
+`Project facet Cloud Foundry Standalone Application version 1.0 is not supported.`
 
 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 會依專案資料類型將專案對映至 {{site.data.keyword.Bluemix_notm}} 運行環境。資料類型可定義 Eclipse 中 Java EE 專案的需求，並作為運行環境配置的一部分，以便不同的運行環境與不同的專案相關聯。如果 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 不支援套用至專案的資料類型，您可能無法使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 來部署應用程式。
 {: tsCauses}
@@ -374,7 +373,7 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 
 當連結至應用程式的服務停止運作時，不會自動重新啟動應用程式。	  
 
-當連結至應用程式的服務損毀時，應用程式可能會發生運作中斷、異常狀況和連線失敗之類的問題。{{site.data.keyword.Bluemix_notm}} 不會自動重新啟動應用程式，以從這些問題中回復。
+當連結至應用程式的服務損毀時，應用程式可能會發生運作中斷、異常狀況和連線失敗之類的問題。{{site.data.keyword.Bluemix_notm}} 不會自動重新啟動應用程式，以從這些問題回復。
 {: tsSymptoms}
 
 此行為是 Cloud Foundry 的設計。
@@ -406,16 +405,16 @@ cf push appname -p app_path
 ## {{site.data.keyword.Bluemix_notm}} Live Sync 圖示未顯示
 {: #ts_llz_lkb_3r}
 
-您已在 IBM Bluemix DevOps Services 中建立應用程式，但是 IBM Bluemix Live Sync 圖示未顯示在 Web IDE 中。
+您已建立應用程式，但是 IBM Bluemix Live Sync 圖示未顯示在 Web IDE 中。
 
-當您在 DevOps Services Web IDE 中編輯 Node.js 應用程式時，未顯示 {{site.data.keyword.Bluemix_notm}} 即時編輯、快速重新啟動和除錯圖示。
+當您在 Web IDE 中編輯 Node.js 應用程式時，未顯示 {{site.data.keyword.Bluemix_notm}} 即時編輯、快速重新啟動和除錯圖示。
 {: tsSymptoms}
 
 在下列情況下，無法使用這些圖示：
 {: tsCauses}
 
   * `manifest.yml` 檔案未儲存在專案的最上層。
-  * 您的應用程式儲存在子目錄中，而不是專案的最上層，但卻未於 `manifest.yml` 檔案中指定該子目錄的路徑。
+  * 您的應用程式儲存在子目錄中，而不是專案的最上層，但未於 `manifest.yml` 檔案中指定該子目錄的路徑。
   * 應用程式未包含 `package.json` 檔案。
 
 請使用下列其中一種方法：
@@ -426,7 +425,7 @@ cf push appname -p app_path
   ```
    path: path_to_application
    ```
-  * 在與應用程式相同的目錄中，建立 `package.json` 檔案。
+  * 在與應用程式相同的目錄中，建立 `package.json` 檔案。   
   
   
 ## 在 {{site.data.keyword.Bluemix_notm}} 上找不到組織
@@ -491,7 +490,7 @@ cf api https://api.eu-gb.bluemix.net
 
 使用 `cf push` 指令將 WAR 應用程式上傳至 {{site.data.keyword.Bluemix_notm}} 時，您看到下列錯誤訊息：
 {: tsSymptoms} 
-`編譯打包錯誤：無法取得實例，因為編譯打包失敗。`
+`Staging error: cannot get instances since staging failed.`
  
 如果未指定 WAR 檔，或未指定 WAR 檔的路徑，就可能會發生此問題。
 {: tsCauses}
@@ -604,12 +603,12 @@ cf push MyUniqueAppName02 -p "./app.war"
 如需 Node.js 應用程式的相關提示，請參閱 [Node.js 應用程式的提示](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html ![External link icon](../icons/launch-glyph.svg "外部鏈結圖示"){: new_window}。	
 
 
-## 將 {{site.data.keyword.Bluemix_notm}} Liberty 應用程式從 Bluemix DevOps Services 匯入至 Eclipse 之後，`server.xml` 檔案中出現配置錯誤
+## 將 {{site.data.keyword.Bluemix_notm}} Liberty 應用程式匯入至 Eclipse 之後，`server.xml` 檔案中出現配置錯誤
 {: #ts_eclipse}
 
-如果您在將 {{site.data.keyword.Bluemix_notm}} Liberty 應用程式從 IBM Bluemix DevOps Services 匯入至 Eclipse 之後，於 `server.xml` 檔案中看到配置錯誤，則可能需要移除專案中的 `server.xml` 檔案。 
+如果您在將 {{site.data.keyword.Bluemix_notm}} Liberty 應用程式匯入至 Eclipse 之後，於 `server.xml` 檔案中看到配置錯誤，則可能需要移除專案中的 `server.xml` 檔案。 
 
-將 {{site.data.keyword.Bluemix_notm}} Liberty 應用程式從 {{site.data.keyword.Bluemix_notm}} DevOps Services 匯入至 Eclipse 之後，您會從「Eclipse 問題」視圖中，看到 `server.xml` 檔案內的配置錯誤。
+將 {{site.data.keyword.Bluemix_notm}} Liberty 應用程式匯入至 Eclipse 之後，您會從「Eclipse 問題」視圖中，看到 `server.xml` 檔案內的配置錯誤。
 {: tsSymptoms}
 
 Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且在將 Liberty 應用程式推送至 {{site.data.keyword.Bluemix_notm}} 時產生 `runtime-vars.xml` 檔案。將應用程式匯入至 Eclipse 時，本端環境中沒有 `runtime-vars.xml` 檔案。
@@ -677,7 +676,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 
 如果您按一下「部署至 {{site.data.keyword.Bluemix_notm}}」按鈕，但發現未複製 Git 儲存庫，或是未部署應用程式，請嘗試使用下列問題的疑難排解方法。
   * [無法建立 Bluemix DevOps Services 專案](#ts_project-cant-be-created)
-  * [在 DevOps Services 中找不到且無法複製 Git 儲存庫](#ts_repo-not-found)
+  * [找不到 Git 儲存庫且無法在 DevOps Services 中複製](#ts_repo-not-found)
   * [已在 DevOps Services 中複製 Git 儲存庫，但應用程式未部署至 {{site.data.keyword.Bluemix_notm}}](#ts_repo-cloned-app-not-deployed)
 
 如需如何建立按鈕的相關資訊，請參閱「建立『部署至 {{site.data.keyword.Bluemix_notm}}』按鈕」。
@@ -699,12 +698,12 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
   * 登入 {{site.data.keyword.Bluemix_notm}}，並更新您的帳戶資訊。
   * 再按一下**部署至 Bluemix** 按鈕。
 
-### 在 DevOps Services 中找不到且無法複製 Git 儲存庫
+### 找不到 Git 儲存庫且無法在 DevOps Services 中複製
 {: #ts_repo-not-found}
 
 如果您發現未複製 Git 儲存庫，可能是因為儲存庫或按鈕 Snippet 有問題。
 
-您按一下**部署至 Bluemix** 按鈕，但是在 DevOps Services 中找不到且無法複製 Git 儲存庫。「複製儲存庫」步驟未順利完成。因此，無法將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。
+您按一下**部署至 Bluemix** 按鈕，但是找不到 Git 儲存庫且無法在 DevOps Services 中複製。「複製儲存庫」步驟未順利完成。因此，無法將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。
 {: tsSymptoms} 
 
 發生此問題的可能原因如下：

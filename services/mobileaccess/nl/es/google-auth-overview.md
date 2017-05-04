@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,8 +11,10 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+**Importante: El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.**
 
-# Autenticación de usuarios con las credenciales de Google 
+
+# Autenticación de usuarios con las credenciales de Google
 {: #google-auth}
 
 Puede configurar el servicio de {{site.data.keyword.amafull}} para proteger los recursos utilizando Google como proveedor de identidad. Los usuarios de la aplicación móvil o de aplicación web podrán autenticarse con las credenciales de Google.
@@ -43,7 +45,7 @@ En el siguiente diagrama se explica cómo {{site.data.keyword.amashort}} se inte
 * El SDK del servidor de {{site.data.keyword.amashort}} extrae la cabecera de autorización de la solicitud, la valida con el servicio de {{site.data.keyword.amashort}} y otorga acceso a un recurso de fondo.
 
 
-### Flujo de solicitud de aplicación web de {{site.data.keyword.amashort}}
+### Flujo de solicitud de aplicación web de Mobile Client Access
 {: #mca-google-web-sequence}
 El flujo de solicitud de aplicación web de {{site.data.keyword.amashort}} es similar al flujo del cliente móvil. Sin embargo, {{site.data.keyword.amashort}} protege la aplicación web, en lugar de un recurso de fondo de {{site.data.keyword.Bluemix_notm}}.
 

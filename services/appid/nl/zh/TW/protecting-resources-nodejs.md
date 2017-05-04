@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -25,13 +25,6 @@ lastupdated: "2017-03-30"
 
 **附註**：有其他架構使用 `Express` 架構（例如 LoopBack）。您可以搭配使用 {{site.data.keyword.appid_short_notm}} 伺服器 SDK 與任何這些架構。
 
-## 關於伺服器 SDK
-{: #about}
-
-{{site.data.keyword.appid_short_notm}} 伺服器 SDK 提供 {{site.data.keyword.Bluemix_notm}} 上所部署的後端應用程式中使用的 ApiStrategy 通行證策略。若要保護應用程式免於遭受未經授權的存取，您必須使用 ApiStrategy 來檢測 Node.js 伺服器。`appid-serversdk-nodejs npm 模組`提供 ApiStrategy 通行證策略及驗證方法，以驗證 {{site.data.keyword.appid_short_notm}} 所發出的存取記號及 ID 記號。
-
-{{site.data.keyword.appid_short_notm}} 伺服器 SDK 使用 Passport 架構來強制執行授權，請參閱 <a href="http://passportjs.org/" target="_blank">Passport 架構 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示"></a>。
-
 
 ## 安裝伺服器 SDK
 {: #protecting-resources-serversdk}
@@ -48,6 +41,10 @@ lastupdated: "2017-03-30"
 
 ## 保護 Node.js 中的資源
 {: #protecting-resources-nodesdk}
+
+{{site.data.keyword.appid_short_notm}} 伺服器 SDK 提供 {{site.data.keyword.Bluemix_notm}} 上所部署的後端應用程式中使用的 ApiStrategy 通行證策略。若要保護應用程式免於遭受未經授權的存取，您必須使用 ApiStrategy 來檢測 Node.js 伺服器。`appid-serversdk-nodejs npm 模組`提供 ApiStrategy 通行證策略及驗證方法，以驗證 {{site.data.keyword.appid_short_notm}} 所發出的存取記號及 ID 記號。
+
+{{site.data.keyword.appid_short_notm}} 伺服器 SDK 使用 <a href="http://passportjs.org/" target="_blank">Passport 架構 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示"></a> 來強制執行授權。
 
 下列 Snippet 示範如何在簡式 Express 應用程式中使用 `APIStrategy` 來保護 `/protected` 端點 GET 方法。
 

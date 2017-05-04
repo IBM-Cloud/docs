@@ -22,7 +22,7 @@ Wenn Sie über ein {{site.data.keyword.Bluemix_notm}}-Testkonto verfügen und au
 
 Sie können Ihre bestehenden {{site.data.keyword.Bluemix_notm}}- und SoftLayer-Abrechnungskonten zusammenführen, indem Sie die Konten verknüpfen. Wenn Sie die Konten verknüpfen, werden sowohl die {{site.data.keyword.Bluemix_notm}}- als auch die SoftLayer-Ressourcen über {{site.data.keyword.Bluemix_notm}} in Rechnung gestellt.
 
-**Achtung:** Ein {{site.data.keyword.Bluemix_notm}}-Abonnementkonto kann nicht mit einem SoftLayer-Konto verknüpft werden. Um auf das Infrastruktur-Dashboard zuzugreifen, müssen Sie ein nutzungsabhängiges Konto erstellen. Dabei handelt es sich um ein zweites Konto, das automatisch mit einem SoftLayer-Konto verknüpft wird. Daraufhin erhalten Sie zwei separate Rechnungen für die beiden {{site.data.keyword.Bluemix_notm}}-Konten. Obwohl die Rechnungsstellung für Ihre Infrastrukturressourcen in einem separaten nutzungsabhängigen Konto erfolgt, können die Ressourcen mit Apps und Services in Ihrem Abonnementkonto verwendet werden. Wenn Sie beispielsweise einen Watson-Service in Ihrem Abonnementkonto aktivieren, dann können Sie die Serviceberechtigungsnachweise kopieren und die Berechtigungsnachweise dann zu Ihrer Bare-Metal-Anwendung hinzufügen, die aus dem nutzungsabhängigen Konto abgeleitet wird. 
+**Achtung:** {{site.data.keyword.Bluemix_notm}}-Abonnementkonten und alte nutzungsabhängige {{site.data.keyword.Bluemix_notm}}-Konten, die vor der Möglichkeit zum automatischen Verknüpfen von Konten erstellt wurden, können nicht mit einem SoftLayer-Konto verknüpft werden. Um auf das Infrastruktur-Dashboard zuzugreifen, müssen Sie ein nutzungsabhängiges Konto erstellen. Dabei handelt es sich um ein zweites Konto, das automatisch mit einem SoftLayer-Konto verknüpft wird. Daraufhin erhalten Sie zwei separate Rechnungen für die beiden {{site.data.keyword.Bluemix_notm}}-Konten. Obwohl die Rechnungsstellung für Ihre Infrastrukturressourcen in einem separaten nutzungsabhängigen Konto erfolgt, können die Ressourcen mit Apps und Services in Ihrem Abonnementkonto verwendet werden. Wenn Sie beispielsweise einen Watson-Service in Ihrem Abonnementkonto aktivieren, dann können Sie die Serviceberechtigungsnachweise kopieren und die Berechtigungsnachweise dann zu Ihrer Bare-Metal-Anwendung hinzufügen, die aus dem nutzungsabhängigen Konto abgeleitet wird. 
 {:shortdesc}
 
 ## Aktualisierung auf ein nutzungsabhängiges {{site.data.keyword.Bluemix_notm}}-Konto
@@ -91,7 +91,7 @@ Weitere Informationen zum Einladen von Teammitgliedern über die {{site.data.key
 ## Zur IBMid wechseln
 {: #ibmid_switch}
 
-Für die Authentifizierung in SoftLayer wird jetzt eine IBMid verwendet, die eine einzige Anmeldung bei allen {{site.data.keyword.Bluemix_notm}}-Komponenten ermöglicht. Es wird ein Wechsel für vorhandene SoftLayer-Konten zur Authentifizierung mit IBMid ermöglicht. Sie werden von einem Migrationsassistenten durch diesen Wechsel geführt.
+Für die Authentifizierung in SoftLayer wird jetzt eine IBMid verwendet, die eine einzige Anmeldung bei allen {{site.data.keyword.Bluemix_notm}}-Komponenten ermöglicht. Es wird ein Wechsel für vorhandene SoftLayer-Konten zur Authentifizierung mit IBMid ermöglicht. Sie werden von einem Migrationsassistenten durch diesen Wechsel geführt. 
 {:shortdesc}
 
 Wenn Sie Masterbenutzer sind und keine Eingabeaufforderung zum Wechsel zur IBMid im {{site.data.keyword.slportal}} angezeigt wird, [wenden Sie sich an den IBM Support](/docs/support/index.html#contacting-support), um Hilfe zum Aktivieren dieser Funktion zu erhalten.
@@ -106,7 +106,7 @@ Führen Sie folgende Schritte aus, um von Ihrem bisherigen SoftLayer-Benutzernam
 	
  2. Befolgen Sie die Anweisungen im Assistenten, um Ihre IBMid zu erstellen. 
  
-    Geben Sie zum Erstellen einer neuen IBMid eine E-Mail-Adresse ein, die noch nicht von einer IBMid verwendet wird. Die neue IBMid verwendet diese E-Mail-Adresse als Benutzernamen und als E-Mail-Adresse. Nachdem die IBMid erstellt wurde, können Sie die E-Mail-Adresse aktualisieren, die der IBMid zugeordnet ist, jedoch nicht den Benutzernamen ändern. Die Einladungs-E-Mail wird an die angegebene E-Mail-Adresse gesendet. 
+    Geben Sie zum Erstellen einer neuen IBMid eine E-Mail-Adresse ein, die noch nicht von einer IBMid verwendet wird. Die neue IBMid verwendet diese E-Mail-Adresse als Benutzernamen und als E-Mail-Adresse. Nachdem die IBMid erstellt wurde, können Sie die E-Mail-Adresse aktualisieren, die der IBMid zugeordnet ist, jedoch nicht den Benutzernamen ändern. Die Einladungs-E-Mail wird an die angegebene E-Mail-Adresse gesendet.
     
     Sie erhalten eine E-Mail mit Ihrem Registrierungscode, sobald Sie den Migrationsassistenten abgeschlossen haben.
  
@@ -118,7 +118,7 @@ Wenn Sie Ihre Bestellung als neuer Kunde auschecken, werden Sie zur Angabe Ihrer
 
  * Zur Verwendung einer bestehenden IBMid geben Sie den Benutzernamen oder die E-Mail-Adresse der IBMid ein, falls diese eindeutig ist (also nicht von mehreren IBMids gemeinsam genutzt wird).
  
- * Zur Erstellung einer neuen IBMid geben Sie eine E-Mail-Adresse ein, die noch nicht von einer IBMid verwendet wird. Die neue IBMid verwendet diese E-Mail-Adresse als Benutzernamen und als E-Mail-Adresse. Nachdem die IBMid erstellt wurde, können Sie die E-Mail-Adresse aktualisieren, die der IBMid zugeordnet ist, jedoch nicht den Benutzernamen ändern. Die Einladungs-E-Mail wird an die angegebene E-Mail-Adresse gesendet. 
+ * Zur Erstellung einer neuen IBMid geben Sie eine E-Mail-Adresse ein, die noch nicht von einer IBMid verwendet wird.  Die neue IBMid verwendet diese E-Mail-Adresse als Benutzernamen und als E-Mail-Adresse.  Nachdem die IBMid erstellt wurde, können Sie die E-Mail-Adresse aktualisieren, die der IBMid zugeordnet ist, jedoch nicht den Benutzernamen ändern. Die Einladungs-E-Mail wird an die angegebene E-Mail-Adresse gesendet.
 
 Informationen zur Lösung von Problemen, die bei der Anmeldung mit Ihrer IBMid auftreten könnten, finden Sie unter [Fehlerbehebung für den Zugriff auf Bluemix](/docs/troubleshoot/ts_accessing.html#accessing).
 

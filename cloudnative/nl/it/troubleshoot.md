@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-10"
 
 ---
 
@@ -24,7 +24,7 @@ Alcuni problemi noti con la {{site.data.keyword.dev_cli_notm}} sono documentati 
 ## Problemi noti
 {: #knownissues}
 
-Le seguenti sezioni descrivono problemi noti e risoluzioni possibili. 
+Le seguenti sezioni descrivono problemi noti e risoluzioni possibili.
 
 
 ### Nome host già preso durante la creazione di un progetto con un modello non mobile
@@ -41,10 +41,10 @@ Il nome host <myHostname> è preso.
 #### Causa
 {: #hostname-cause}
    
-Questo errore è dovuto ad un token di accesso scaduto. 
+Questo errore è dovuto ad un token di accesso scaduto.
 
 
-#### Soluzione 
+#### Soluzione
 {: #hostname-resolution}
 
 Riaccedi.
@@ -67,13 +67,13 @@ Errore nel <command> progetto.
 
 
 #### Causa
-{: #hostname-cause}
+{: #general-cause}
    
-Questo errore è dovuto ad un token di accesso scaduto. 
+Questo errore è dovuto ad un token di accesso scaduto.
 
 
-#### Soluzione 
-{: #hostname-resolution}
+#### Soluzione
+{: #general-resolution}
 
 Riaccedi.
 
@@ -98,13 +98,13 @@ Errore broker di servizi: {"description"=>"Non puoi creare questa istanza Object
 #### Causa
 {: #os-cause}
    
-Questo errore è dovuto al servizio {{site.data.keyword.objectstorageshort}} che consente solo un'istanza del piano {{site.data.keyword.objectstorageshort}} gratuito.
+Questo errore è dovuto al servizio {{site.data.keyword.objectstorageshort}} che fornisce solo una istanza del piano Gratuito {{site.data.keyword.objectstorageshort}}.
 
 
-#### Soluzione 
+#### Soluzione
 {: #os-resolution}
 
-Ti sarà chiesto di scegliere un piano differente per evitare questo errore.
+Per evitare questo errore ti viene richiesto di scegliere un piano diverso.
 
 
 ### Errore durante l'ottenimento del codice durante la creazione del progetto
@@ -126,19 +126,19 @@ https://console.ng.bluemix.net/developer/projects/b22165f3-cbc6-4f73-876f-e33cbe
 Questo errore è dovuto a un timeout interno.
 	
 
-#### Soluzione 
+#### Soluzione
 {: #code-resolution}
 
 Puoi ottenere il codice in uno dei seguenti modi:
 
-* Esegui il seguente comando utilizzando la CLI:
+* Immetti il seguente comando utilizzando la CLI:
 
-	```
-	bx dev code <your-project-name>
-	```
-	{: codeblock}
-	
-	`<your-project-name>` deve essere sostituito con il nome del progetto che hai utilizzato durante la creazione del progetto.
+   ```
+   bx dev code <your-project-name>
+   ```
+   {: codeblock}
+
+   Sostituisci `<your-project-name>` con il nome progetto che hai specificato durante la creazione del progetto.
 
 * Utilizza la {{site.data.keyword.dev_console}}.
 
@@ -178,10 +178,10 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 #### Causa
 {: #node-cause}
    
-Questo errore è dovuto al modulo `appmetrics` che sta venendo installato in una differente architettura. I moduli npm nativi installati su un'architettura non funzioneranno su di un'altra. Le immagini Docker incluse si basano sul kernel Linux.
+Questo errore è causato dal modulo `appmetrics` installato su un'architettura diversa. I moduli npm nativi installati su un'architettura non funzionano su un'altra. Le immagini Docker incluse si basano sul kernel Linux.
 
 
-#### Soluzione 
+#### Soluzione
 {: #node-resolution}
 
 Elimina la cartella `node_modules` ed esegui nuovamente `bx dev run`.
@@ -195,20 +195,20 @@ Elimina la cartella `node_modules` ed esegui nuovamente `bx dev run`.
 <!-- Add a heading and content for how to get help and support. Use this template for beta and GA services:  -->
 
 
-## Come ottenere aiuto e supporto 
+## Come ottenere aiuto e supporto
 {: #gettinghelp}
 
-Se hai problemi o domande sull'utilizzo della {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} o della {{site.data.keyword.dev_cli_notm}}, puoi ottenere aiuto ricercando le informazioni o facendo delle domande in un forum. Puoi anche aprire un ticket di supporto.
+Se hai dei problemi o delle domande relative a {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} o {{site.data.keyword.dev_cli_notm}}, puoi ottenere aiuto ricercando le informazioni o facendo delle domande in un forum. Puoi anche aprire un ticket di supporto.
 
-Quando utilizzi il forum per fare delle domande, contrassegna con una tag la tua domanda in modo che sia vista dai team di sviluppo {{site.data.keyword.Bluemix_notm}}.
+Quando fai una domanda nei forum, contrassegnala con una tag in modo che possa essere vista dai team di sviluppo {{site.data.keyword.Bluemix_notm}}.
 
 <!--Insert the appropriate Stack Overflow tag for your service for <service_keyword> in URL and text below:  -->
 
 Se hai domande tecniche sullo sviluppo o la distribuzione di un'applicazione con {{site.data.keyword.dev_console}} o {{site.data.keyword.dev_cli_notm}}:
 
-* Inserisci la tua domanda in [Stack Overflow ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix) e contrassegnala con le tag `bluemix-dev-services` e `ibm-bluemix`.
+* Inserisci la tua domanda in [Stack Overflow ![Icona link esterno](../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix) e contrassegnala con le tag `bluemix-dev-services` e `ibm-bluemix`.
 * Inserisci la tua domanda in [Slack
-![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://ibm-cloud-tech.slack.com/) nel canale bluemix-dev-services. [Registrati a ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://ibm.biz/IBMCloudNativeSlack) oggi.
+![Icona link esterno](../icons/launch-glyph.svg "External link icon")](http://ibm-cloud-tech.slack.com/) nel canale bluemix-dev-services. [Registrati a ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://ibm.biz/IBMCloudNativeSlack) oggi.
 
 
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->

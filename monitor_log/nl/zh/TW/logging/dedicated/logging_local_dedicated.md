@@ -16,7 +16,7 @@ lastupdated: "2017-02-16"
 # 記載專用及本端版本中的 CF 應用程式
 {: #hybrid_apps_logs_ov}
 
-在 {{site.data.keyword.Bluemix_dedicated_notm}} 及 {{site.data.keyword.Bluemix_local_notm}} 中，Cloud Foundry 應用程式隨附內建的記載。您可以在 {{site.data.keyword.Bluemix_notm}} 主控台上檢閱從您的應用程式收集到的資料。
+在 {{site.data.keyword.Bluemix_dedicated_notm}} 及 {{site.data.keyword.Bluemix_local_notm}} 中，Cloud Foundry 應用程式有內建的記載。您可以在 {{site.data.keyword.Bluemix_notm}} 主控台上檢閱從您的應用程式收集到的資料。
 {:shortdesc}
 
 Cloud Foundry 應用程式會使用 Cloud Foundry 日誌聚集器，從應用程式之外監視並轉遞日誌。您不需要在應用程式內安裝代理程式。

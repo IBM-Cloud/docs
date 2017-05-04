@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-03-01"
+lastupdated: "2017-03-21"
 
 ---
 
@@ -148,10 +148,11 @@ Pour l'environnement {{site.data.keyword.Bluemix_notm}} public, vous pouvez vous
 
   * Bénéfice lié à plusieurs régions {{site.data.keyword.Bluemix_notm}}
 
-    Tous les utilisateurs de l'environnement {{site.data.keyword.Bluemix_notm}} public ont automatiquement accès aux régions Sud des Etats-Unis, Europe-Royaume-Uni et Australie-Sydney :
+    Tous les utilisateurs de l'environnement {{site.data.keyword.Bluemix_notm}} Public ont automatiquement accès aux régions Sud des Etats-Unis, Europe-Royaume-Uni, Europe-Allemagne et Australie-Sydney :
 
 	  * Sud des Etats-Unis : https://console.ng.bluemix.net
 	  * Europe-Royaume-Uni : https://console.eu-gb.bluemix.net
+	  * EU-DE : https://console.eu-de.bluemix.net
 	  * Australie-Sydney : https://console.au-syd.bluemix.net
 
 	L'équipe de {{site.data.keyword.Bluemix_notm}} Global Operations gère toutes les régions afin d'éviter les impacts de la maintenance et de minimiser le risque d'incidents affectant simultanément toutes les régions.
@@ -182,7 +183,7 @@ Prise en charge de langues | Anglais | Anglais | Anglais, japonais | Anglais, ja
 Responsable Client Success (CSM) affecté | Non inclus | Non inclus | Non inclus | Inclus avec<br> 8 heures par semaine
 {: caption="Table 1. Support levels" caption-side="top"}
 
-**Important :** La prise en charge du japonais est disponible pour les tickets de gravité 2 à 4 du lundi au vendredi de 9h00 à 17h00 JST, à l'exception des jours fériés. La communauté et les services tiers sont exclus. Les tickets de gravité 1 sont traités en anglais uniquement. 
+**Important:** La prise en charge du japonais est disponible pour les tickets de gravité 2 à 4 du lundi à vendredi de 9h00 à 17h00 (heure du Japon), à l'exception des jours fériés. La communauté et les services tiers sont exclus. Les tickets de gravité 1 sont traités en anglais uniquement.
 
 ### Ouverture d'un ticket de demande de service
 {: #open-ticket}

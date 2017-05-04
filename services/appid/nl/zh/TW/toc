@@ -1,15 +1,59 @@
-[開始使用 App ID](/docs/services/appid/index.html)
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="appid" audience="service" href="/docs/services/appid/index.html"}
+App ID
+
+    {: .navgroup id="learn"}
     index.md
-    about.md
-    developing-apps.md
+
+    {: .topicgroup}
+    About App ID
+        about.md
+        id-overview.md
+        access-identity.md
+        authorization-resources.md
+        user-profile.md
+
+    {: .topicgroup}
+    Videos
+        [Tell me about App ID](https://www.youtube.com/watch?v=cTn7l_J3tPg)
+
+    {: .topicgroup}
+    Blogs
+        [Introducing App ID](https://www.ibm.com/blogs/bluemix/2017/03/introducing-ibm-bluemix-app-id-authentication-profiles-service-app-developers/)
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [REST API](https://appid-oauth.ng.bluemix.net/swagger-ui/#!/Authorization_Server_V3/authorization)
+
+    {: .topicgroup}
+    SDKs
+        [Android 用戶端 SDK](https://github.com/ibm-cloud-security/appid-clientsdk-android)
+        [iOS Swift 用戶端 SDK](https://github.com/ibm-cloud-security/appid-clientsdk-swift)
+        [Node.js 伺服器 SDK](https://github.com/ibm-cloud-security/appid-serversdk-nodejs)
+        [Swift 伺服器 SDK](https://github.com/ibm-cloud-security/appid-serversdk-swift)
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    {: .topicgroup}
+    Setting up the SDKs and sample app
+        developing-apps.md
+        protecting-resources-local.md
         getting-started-android.md
         getting-started-ios-swift-sdk.md
+
     identity-providers.md
     login-widget.md
-    protecting-resources.md
+
+    {: .topicgroup}
+    Protecting resources
+        protecting-resources.md
         protecting-resources-nodejs.md
         protecting-resources-swift.md
-        protecting-resources-local.md
-    user-profile.md
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
     ts_index.md
     mca.md
+    {: .navgroup-end}

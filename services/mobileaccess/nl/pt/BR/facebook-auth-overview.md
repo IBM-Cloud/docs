@@ -2,13 +2,15 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
+
+**Importante: o serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.**
 
 # Autenticando usuários com as credenciais do Facebook
 {: #facebook-auth-overview}
@@ -65,7 +67,7 @@ app Facebook é criado. Este é um identificador exclusivo usado pelo Facebook p
 
 Você precisa desse valor para configurar a autenticação do Facebook para o seu aplicativo móvel ou da web.
 
-1. Acesse o site [Facebook for Developers ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developers.facebook.com "Ícone de link externo"){: new_window}.
+1. Acesse o site [Facebook for Developers ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://developers.facebook.com){: new_window}.
 
 1. Abra a lista suspensa **Meus Aplicativos** e selecione **Incluir um novo aplicativo**.
 
@@ -78,7 +80,7 @@ Você precisa desse valor para configurar a autenticação do Facebook para o se
 
 1. A página **Configuração do produto** aparece. Copie o **ID do app** exibido.
 
-## Próximas Etapas
+## Próximas etapas
 {: #next-steps}
 
 * [Ativando a autenticação do Facebook para apps Android](facebook-auth-android.html)

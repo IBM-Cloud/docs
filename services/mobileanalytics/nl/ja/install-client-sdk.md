@@ -15,7 +15,7 @@ lastupdated: "2017-01-13"
 
 {{site.data.keyword.mobileanalytics_short}} クライアント SDK は、現在 Android、iOS、WatchOS、Cordova で使用できます。
 
-{: #shortdesc}
+{: shortdesc}
 
 ## Android クライアント SDK のインストール
 {: #install-sdk-android}
@@ -24,7 +24,7 @@ lastupdated: "2017-01-13"
 
 {{site.data.keyword.mobileanalytics_short}} クライアント SDK は、Gradle (Android プロジェクト用の依存関係マネージャー) で配布されています。Gradle は自動的に成果物をリポジトリーからダウンロードし、それらを Android アプリケーションで使用できるようにします。
 
-1. [Android Studio ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://developer.android.com/sdk/index.html "外部リンク・アイコン"){: new_window} プロジェクトを作成するか、既存のプロジェクトを開きます。
+1. Create an [Android Studio ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://developer.android.com/sdk/index.html){: new_window} プロジェクトを作成するか、既存のプロジェクトを開きます。
 
 2. ご使用の**アプリ・モジュール**にある `build.gradle` ファイルを開きます。
 
@@ -59,25 +59,25 @@ lastupdated: "2017-01-13"
 {{site.data.keyword.mobileanalytics_full}} SDK によって、モバイル・アプリケーションを装備できるようになります。Swift SDK は iOS および watchOS で使用できます。
 
 ### 始める前に
-{: #before-you-begin-ios}
+{: #before-you-begin-ios notoc}
 
-Xcode が正しくセットアップされていることを確認します。iOS 開発環境のセットアップ方法について詳しくは、[Apple Developer Web サイト ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.apple.com/support/xcode/ "外部リンク・アイコン"){: new_window} を参照してください。Client SDK Swift Analytics の [Xcode の要件 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#requirements "外部リンク・アイコン"){: new_window} を参照してください。
+Xcode が正しくセットアップされていることを確認します。iOS 開発環境のセットアップ方法について詳しくは、[Apple Developer Web サイト ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.apple.com/support/xcode/){: new_window} を参照してください。Client SDK Swift Analytics の [Xcode の要件 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#requirements){: new_window} を参照してください。
 
-{{site.data.keyword.mobileanalytics_short}} SDK は、[CocoaPods ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cocoapods.org/ "外部リンク・アイコン"){: new_window} および [Carthage ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/Carthage/Carthage#getting-started "外部リンク・アイコン"){: new_window} で配布されています。これらは、Cocoa プロジェクト用の依存関係管理プログラムです。CocoaPods および Carthage は、自動的に成果物をリポジトリーからダウンロードし、それらをアプリケーションで使用できるようにします。CocoaPods または Carthage を選択します。
+{{site.data.keyword.mobileanalytics_short}} SDK は、[CocoaPods ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cocoapods.org/){: new_window} および [Carthage ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/Carthage/Carthage#getting-started){: new_window} で配布されています。これらは、Cocoa プロジェクト用の依存関係管理プログラムです。CocoaPods および Carthage は、自動的に成果物をリポジトリーからダウンロードし、それらをアプリケーションで使用できるようにします。CocoaPods または Carthage を選択します。
 
 #### CocoaPods
-{: #cocoapods}
+{: #cocoapods notoc}
 
-1. GitHub の [{{site.data.keyword.Bluemix_notm}} Mobile Services Swift SDK の説明 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#cocoapods "外部リンク・アイコン"){: new_window} に従い、Cocoapods を使用して `BMSAnalytics` をインストールし、それを Podfile に追加します。 
+1. GitHub の [{{site.data.keyword.Bluemix_notm}} Mobile Services Swift SDK の説明 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#cocoapods){: new_window} に従い、Cocoapods を使用して `BMSAnalytics` をインストールし、それを Podfile に追加します。 
 	
 2. iOS Client SDK をインストールしたら、Analytics Client SDK の[インポートと初期設定](sdk.html#initalize-ma-sdk)を実行します。   
 
 #### Carthage
-{: #carthage}
+{: #carthage notoc}
 
-CocoaPods を使用していない場合、[Carthage ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos "外部リンク・アイコン"){: new_window} を使用してプロジェクトにフレームワークを追加することができます。
+CocoaPods を使用していない場合、[Carthage ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos){: new_window} を使用してプロジェクトにフレームワークを追加することができます。
 
-1. GitHub の [Carthage のインストールの説明 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#carthage "外部リンク・アイコン"){: new_window} に従い、`BMSAnalytics` をインストールします。
+1. GitHub の [Carthage のインストールの説明 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#carthage){: new_window} に従い、`BMSAnalytics` をインストールします。
 
 2. iOS Client SDK をインストールしたら、Analytics Client SDK の[インポートと初期設定](sdk.html#initalize-ma-sdk)を実行します。
 
@@ -86,7 +86,7 @@ CocoaPods を使用していない場合、[Carthage ![外部リンク・アイ�
 
 {{site.data.keyword.mobileanalytics_full}} Cordova プラグインによって、モバイル・アプリケーションを装備できるようになります。 
 
-1. [Cordova ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://cordova.apache.org/#getstarted "外部リンク・アイコン"){: new_window} プロジェクトを作成するか、既存のプロジェクトを開きます。
+1. [Cordova ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://cordova.apache.org/#getstarted){: new_window} プロジェクトを作成するか、既存のプロジェクトを開きます。
 
 2. Android と iOS のプラットフォームを、Cordova アプリケーションに追加します。コマンド・ラインから、以下のコマンドのいずれかまたは両方を実行します。現在、Cordova-CLI V6.3.0 以前がサポートされています。
    
@@ -115,7 +115,7 @@ CocoaPods を使用していない場合、[Carthage ![外部リンク・アイ�
 	```
    {: codeblock}
 
- *minSdkVersion* の値は、バージョン `15` 以上でなければなりません。Android SDK 用にサポートされる *targetSdkVersion* を最新の状態に保つ方法については、[Android プラットフォーム・ガイド (Android Platform Guide) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cordova.apache.org/docs/en/latest/guide/platforms/android/ "外部リンク・アイコン"){: new_window} を参照してください。
+ *minSdkVersion* の値は、バージョン `15` 以上でなければなりません。Android SDK 用にサポートされる *targetSdkVersion* を最新の状態に保つ方法については、[Android プラットフォーム・ガイド (Android Platform Guide) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cordova.apache.org/docs/en/latest/guide/platforms/android/){: new_window} を参照してください。
 
 4. iOS オペレーティング・システムを追加した場合、ターゲット宣言で `<platform name="ios">` 要素を更新します。
 
@@ -141,17 +141,19 @@ CocoaPods を使用していない場合、[Carthage ![外部リンク・アイ�
 	```
 	{: codeblock}
 	
-7. [Android および iOS 環境の構成 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.npmjs.com/package/bms-core#4-configuring-your-platform "外部リンク・アイコン"){: new_window} を実行します。
+7. [Android および iOS 環境の構成 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.npmjs.com/package/bms-core#4-configuring-your-platform){: new_window} を実行します。
 
 8. これで、Cordova プラグインがインストールされ、環境が構成されました。次に、Analytics Client SDK の[インポートと初期設定](sdk.html#initalize-ma-sdk)を実行します。
 
 # 関連リンク
+{: #rellinks notoc}
 
 ## SDK
-* [Android SDK ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics "外部リンク・アイコン"){: new_window}  
-* [iOS SDK ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics "外部リンク・アイコン"){: new_window}
-* [Cordova Plugin Core SDK ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.npmjs.com/package/bms-core "外部リンク・アイコン"){: new_window}
+{: #sdk notoc}
+* [Android SDK ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window}  
+* [iOS SDK ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics){: new_window}
+* [Cordova Plugin Core SDK ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.npmjs.com/package/bms-core){: new_window}
 
 ## API リファレンス
-{: #api}
-* [REST API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobile-analytics-dashboard.{DomainName}/analytics-service/ "外部リンク・アイコン"){:new_window}
+{: #api notoc}
+* [REST API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

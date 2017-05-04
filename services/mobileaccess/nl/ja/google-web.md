@@ -2,9 +2,11 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-06"
 
 ---
+
+**重要: {{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービス**に置き換えられます。
 
 # Web アプリ用の Google 認証の使用可能化
 {: #google-auth-web}
@@ -31,7 +33,7 @@ Google を ID プロバイダーとして使用し始めるには、[Google Deve
 1. 資格情報作成を完了し、Google Client ID および Secret をメモします。
 
 
-## Google 認証用の {{site.data.keyword.amashort}} の構成
+## Google 認証用の Mobile Client Access の構成
 Google Application ID および Secret を作成した後、{{site.data.keyword.amashort}} ダッシュボードで Google 認証を使用可能にすることができます。
 
 1. {{site.data.keyword.Bluemix_notm}}ダッシュボードでアプリを開きます。
@@ -40,7 +42,7 @@ Google Application ID および Secret を作成した後、{{site.data.keyword.
 1. Google Client ID および Secret を入力し、保存します。
 
 
-## Google Web 認証用の {{site.data.keyword.amashort}} の使用
+## Google Web 認証用の Mobile Client Access の使用
 許可プロセスを開始するには、以下のようにします。
 
 1. Web アプリから、許可サーバーの以下のエンドポイントにリダイレクトします。  

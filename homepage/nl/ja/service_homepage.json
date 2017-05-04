@@ -36,8 +36,13 @@
     "category_id": "devops"
   }, {
     "type": "extra",
-    "title": "モバイル・プロジェクトのビルド",
-    "href": "mobile/index.html",
+    "title": "クラウド・ネイティブ・プロジェクトの構築",
+    "href": "cloudnative/index.html",
+    "category_id": "mobile"
+  }, {
+    "type": "extra",
+    "title": "モバイル・クライアント・アクセスの処理",
+    "href": "services/mobileaccess/index.html",
     "category_id": "mobile"
   }]
 }

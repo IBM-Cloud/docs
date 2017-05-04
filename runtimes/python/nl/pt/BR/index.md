@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-01-25"
 
 ---
 
@@ -59,5 +59,7 @@ Se seu aplicativo requerer uma versão do Python não listada, é possível usar
 [buildback Python](https://github.com/cloudfoundry/python-buildpack) externo para implementar o app.
 
 # rellinks
+{: #rellinks notoc}
 ## geral
+{: #general notoc}
 * [Buildpack do Cloud Foundry para Python](https://github.com/cloudfoundry/python-buildpack)

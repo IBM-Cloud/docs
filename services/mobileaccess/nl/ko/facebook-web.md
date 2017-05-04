@@ -2,9 +2,11 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-06"
 
 ---
+
+**중요: {{site.data.keyword.amafull}} 서비스는 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다. **
 
 # 웹 앱에서 Facebook 인증 사용
 {: #facebook_web}
@@ -26,7 +28,7 @@ Facebook을 사용하여 웹 앱에서 사용자를 인증하십시오.
 1. 앱의 애플리케이션 ID 및 앱 본인확인정보를 기록해 두십시오. Facebook 인증용 웹 프로젝트를 구성할 때 해당 값이 필요합니다.
 1. **설정** 페이지에서 **플랫폼 추가**를 클릭하고 **웹 사이트**를 선택하십시오.
 1. 변경사항을 저장하십시오.
-1. 왼쪽 표시줄에서 **Facebook 로그인**을 클릭하십시오.
+1. 사이드바에서 **Facebook 로그인**을 클릭하십시오. 
 1. **올바른 OAuth 경로 재지정 URI** 상자에서 권한 서버 콜백 엔드포인트를 입력하십시오. https://imf-newauthserver.bluemix.net/oauth/{bluemix_app_guid}/callback. 변경사항을 저장하십시오.
 
 

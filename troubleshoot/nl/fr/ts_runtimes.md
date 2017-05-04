@@ -27,13 +27,13 @@ Vous pouvez rencontrer des problèmes lorsque vous utilisez des contextes d'exé
 
 Il est possible que vous ne puissiez pas utiliser les derniers composants du pack de construction lorsque vous envoyez une application par commande push. Vous pouvez utiliser des packs de construction disposant de mécanismes intégrés pour empêcher le chargement de composants obsolètes ou supprimer le contenu du répertoire cache de votre application avant de l'envoyer par commande push ou de la reconstituer. 
 
-Lorsque vous envoyez une application par commande push ou que vous la reconstituez une fois le pack de construction mis à jour, les composants les plus récents du pack de construction ne sont pas automatiquement chargés. Par conséquent, votre application utilise les composants obsolètes du pack de construction à partir du cache. Les mises à jour qui ont été appliquées au pack de construction depuis le dernier envoi de l'application par commande push ne sont pas implémentées.
+Lorsque vous envoyez une application par commande push ou que vous la reconstituez une fois le pack de construction mis à jour, les composants les plus récents du pack de construction ne sont pas automatiquement chargés. Par conséquent, votre application utilise les composants obsolètes du pack de construction à partir du cache. Les mises à jour qui ont été appliquées au pack de construction depuis le dernier envoi de l'application par commande push ne sont pas implémentées. 
 {: tsSymptoms}
 
 Certains packs de construction ne sont pas configurés pour télécharger automatiquement depuis Internet tous les composants mis à jour pour faire en sorte que vous utilisiez toujours la version la plus récente.
 {: tsCauses} 
 
-Vous pouvez utiliser des packs de construction disposant de mécanismes intégrés pour éviter de charger des composants obsolètes, par exemple :
+Vous pouvez utiliser des packs de construction disposant de mécanismes intégrés pour éviter de charger des composants obsolètes, par exemple : 
 {: tsResolve}
 
   * [Cloud Foundry Java buildpack ![Icône de lien externe](../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/java-buildpack){: new_window}. Ce pack de construction comporte un mécanisme intégré qui permet de s'assurer d'utiliser la version la plus récente. Pour plus d'informations sur le fonctionnement de ce mécanisme, voir [extending-caches.md ![Icône de lien externe](../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
@@ -42,8 +42,7 @@ Vous pouvez utiliser des packs de construction disposant de mécanismes intégr�
   set NODE_MODULES_CACHE=false
   ```
 
-Si le pack de construction que vous utilisez ne dispose pas d'un mécanisme permettant de charger automatiquement les composants les plus récents, vous pouvez supprimer manuellement le contenu du répertoire cache et envoyer à nouveau votre application par commande push.
-Utilisez la procédure suivante :
+Si le pack de construction que vous utilisez ne dispose pas d'un mécanisme permettant de charger automatiquement les composants les plus récents, vous pouvez supprimer manuellement le contenu du répertoire cache et envoyer à nouveau votre application par commande push. Utilisez la procédure suivante :
 
  1. Réservez une branche d'un pack de construction null, par exemple https://github.com/ryandotsmith/null-buildpack. Pour plus d'informations sur la réservation d'une branche, voir [Git Basics - Getting a Git Repository ![Icône de lien externe](../icons/launch-glyph.svg "External link icon")](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}.  
  2. Ajoutez la ligne suivante au fichier `null-buildpack/bin/compile` et validez les modifications. Pour plus d'informations sur la validation des modifications, voir [Git Basics - Recording Changes to the Repository ![Icône de lien externe](../icons/launch-glyph.svg "External link icon")](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
@@ -100,7 +99,6 @@ Pour plus d'informations sur la modification de la configuration de journalisati
 
 Il se peut que vous ne puissiez pas importer une bibliothèque Python tierce dans {{site.data.keyword.Bluemix_notm}}. Pour résoudre le problème, ajoutez des fichiers de configuration au répertoire racine de votre application Python.
 
-
 Lorsque vous essayez d'importer une bibliothèque Python tierce, par exemple la bibliothèque `web.py`, la commande `cf push` échoue.
 {: tsSymptoms}
 
@@ -110,7 +108,7 @@ Les informations de configuration pour l'application Python sont manquantes.
 Ajoutez un fichier `requirements.txt` et un fichier `Procfile` au répertoire racine de votre application Python. Les informations suivantes supposent que vous importiez la bibliothèque `web.py` :
 {: tsResolve}
 
- 1. Ajoutez un fichier `requirements.txt` au répertoire racine de votre application Python. 
+ 1. Ajoutez un fichier `requirements.txt` au répertoire racine de votre application Python.
  
  Le fichier `requirements.txt` spécifie les packages de bibliothèque requis pour votre application Python ainsi que la version des packages. L'exemple ci-après illustre le contenu du fichier `requirements.txt`, où `web.py==0.37` indique que la version de la bibliothèque `web.py` qui sera téléchargée est la version 0.37 et `wsgiref==0.1.2` indique que la version de l'interface Web de Secure Gateway requise par la bibliothèque web.py est la version 0.1.2.
 	 ```
@@ -120,13 +118,12 @@ Ajoutez un fichier `requirements.txt` et un fichier `Procfile` au répertoire ra
 	 Pour plus d'informations sur la configuration du fichier `requirements.txt`, voir [Requirements files](https://pip.readthedocs.org/en/1.1/requirements.html). 
 	 
  2. Ajoutez un fichier `Procfile` au répertoire racine de votre application Python.
- Le fichier `Procfile` doit contenir la commande de démarrage de votre application Python. Dans la commande suivante, *nom_de_votre_app* est le nom de votre application Python et *PORT* est le numéro de port que votre application Python doit utiliser pour recevoir les demandes des utilisateurs de l'application. *$PORT* est facultatif. Si vous ne spécifiez pas PORT dans la commande de démarrage, le numéro de port qui figure dans la variable d'environnement `VCAP_APP_PORT` dans l'application est utilisé.  
+ Le fichier `Procfile` doit contenir la commande de démarrage de votre application Python. Dans la commande suivante, *nom_de_votre_app* est le nom de votre application Python et *PORT* est le numéro de port que votre application Python doit utiliser pour recevoir les demandes des utilisateurs de l'application. *$PORT* est facultatif. Si vous ne spécifiez pas PORT dans la commande de démarrage, le numéro de port qui figure dans la variable d'environnement `VCAP_APP_PORT` dans l'application est utilisé. 
 	```
 	web: python <nom_de_votre_app>.py $PORT
 	```
 
 A présent, vous pouvez importer la bibliothèque Python tierce dans {{site.data.keyword.Bluemix_notm}}.	
-	
 
 
 ## Le bouton Actions de la page Détails de l'instance est désactivé
@@ -212,7 +209,7 @@ Vous pouvez constater, dans votre journal d'application, que le quota de disque 
 Le message d'erreur `Disk quota exceeded` figure dans le journal de votre application.
 {: tsSymptoms}
 
-Ce problème se produit pour l'une des raisons suivantes :
+Ce problème se produit pour l'une des raisons suivantes : 
 {: tsCauses} 
 
   * Les fichiers de vidage sont générés avec les instances d'application en cours d'exécution ; le quota de disque alloué est dépassé. Par défaut, le quota de disque pour une instance d'application est de 1 Go. Vous pouvez vérifier l'utilisation de votre disque en cliquant sur **Tableau de bord > Application > Contexte d'exécution de l'application**. L'exemple suivant montre les informations de contexte d'exécution, notamment l'utilisation du disque, pour deux instances d'une application :

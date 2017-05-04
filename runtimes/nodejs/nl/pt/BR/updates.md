@@ -1,27 +1,44 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-03-23"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Atualizações mais recentes para o buildpack sdk-for-nodejs
+# Atualizações mais recentes para o buildpack do SDK for Nodejs
 {: #latest_updates}
 
 Uma lista das atualizações mais recentes no buildpack sdk-for-nodejs.
+
+## 10 de março de 2017: atualizado o buildpack do Node.js v3.11
+Essa liberação do buildpack suporta as versões de runtime do IBM SDK for Node.js: 0.10.47, 0.10.48, 0.12.17, 0.12.18, 4.7.3, 4.8.0, 6.9.5 e 6.10.0. A versão padrão agora é 4.8.0.
+
+Além dos novos tempos de execução, essa liberação contém uma correção para um erro encontrado ao ativar o manipulador de gerenciamento de app shell usando a UI do devconsole. Esse buildpack também muda o modo de funcionamento da configuração automática do serviço Monitoring and Analytics. Os aplicativos que usam o plano Gratuito não terão mais a capacidade de log incluída em seus aplicativos, ele está sendo substituído por logmet.
+
+## 20 de janeiro de 2017: atualizado o buildpack do Node.js v3.10
+Essa liberação do buildpack suporta as versões de runtime do IBM SDK for Node.js: 0.10.47, 0.10.48, 0.12.17, 0.12.18, 4.7.0, 4.7.2, 6.9.2 e 6.9.4. O padrão agora é 4.7.2.
+
+Ela contém uma correção para um erro em que "npm start" nem sempre foi chamado para iniciar aplicativos.
+
+## 17 de novembro de 2016: atualizado o buildpack do Node.js v3.9
+Essa liberação do buildpack suporta as versões de runtime do IBM SDK for Node.js: 0.10.47, 0.10.48, 0.12.16, 0.12.17, 4.6.1, 4.6.2, 6.7.0 e 6.9.1. O padrão agora é 4.6.2.
+
+Observe que o Node.js v6 foi promovido para o status LTS em 18 de outubro de 2016 e em breve se tornará o tempo de execução padrão do buildpack. Node.js v0.10 atingiu o término de vida em 31 de outubro de 2016 e em breve não será mais incluído no buildpack. Veja [Suporte de longo prazo da versão do Node.js e o buildpack do SDK for Node.js](https://www.ibm.com/blogs/bluemix/2016/11/node-version-support-and-sdk-buildpack/) para obter mais detalhes.
+
+Os erros que afetam os manipuladores de rastreio e inspetor do App Management, quando usados em conjunto com o Node.js v6, foram tratados nessa liberação. Veja [Gerenciando apps Liberty e Node.js](/docs/manageapps/app_mng.html#inspector) para obter mais informações sobre como o manipulador do inspetor está mudando, agora que o Node.js v6 integrou o recurso de inspetor.
+
 ## 7 de outubro de 2016: atualizado o buildpack do Node.js v3.8-20161006-1211
 Esta liberação do buildpack suporta as versões de runtime do IBM SDK for Node.js: 0.10.46, 0.10.47, 0.12.15,
 0.12.16, 4.5.0, 4.6.0, 6.6.0 e 6.7.0. O padrão agora é 4.6.0.
 
-Além dos novos tempos de execução, esta liberação contém correções de erro do buildpack.
-Uma correção para o problema conhecido ao usar o Node.js 6.x e o Modo de desenvolvimento que foi mencionado
+Além dos novos tempos de execução, esta liberação contém correções de erro do buildpack. Uma correção para o problema conhecido ao usar o Node.js 6.x e o Modo de desenvolvimento que foi mencionado
 nas atualizações de liberação v3.7-20160826-1101 é uma delas. Ela também é sincronizada com o
 [Buildpack do Cloud Foundry Node.js
-v1.5.20](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.20). 
+v1.5.20](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.20).
 
 ## 26 de agosto de 2016: atualizado o buildpack do Node.js v3.7-20160826-1101
 Esta liberação do buildpack suporta as versões de runtime do IBM SDK for Node.js: 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.7, 4.5.0, 6.2.2 e 6.4.0. O padrão agora é 4.5.0.
@@ -64,7 +81,7 @@ Esta liberação do buildpack inclui as versões de runtime 0.10.45, 0.12.14, 4.
 
 Estão incluídas correções para as vulnerabilidades de segurança a seguir:
 * [CVE-2015-8855](http://www-01.ibm.com/support/docview.wss?uid=swg21982852)
-* [CVE-2016-2108 CVE-2016-2107 CVE-2016-2105 CVE-2016-2106 CVE-2016-2109 CVE-2016-2176](https://www.openssl.org/news/secadv/20160503.txt)
+* [CVE-2016-2108 CVE-2016-2107 CVE-2016-2105 CVE-2016-2106 CVE-2016-2109 CVE-2016-2176 ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.openssl.org/news/secadv/20160503.txt)
 
 Observe que há um problema conhecido com o npm v3 e o utilitário inspetor de
 Gerenciamento de app. O npm 3.8.6 é o padrão com os tempos de execução 6.0.0 e 6.1.0. Se
@@ -86,8 +103,8 @@ O buildpack atualizado e as novas versões de runtime também contêm correçõe
 
 O buildpack atualizado contém também correções para diversos erros:
 * Agora as construções do IBM SDK for Node.js serão sempre usadas se houver uma disponível correspondente ao intervalo solicitado. Anteriormente, esse caso era verdadeiro somente para versões de runtime 4.x.
-* Agora o utilitário inspetor de Gerenciamento de app funcionará com as versões de runtime 4.x.
-* Corrigida uma regressão no utilitário de Gerenciamento de app strongpm.
+* Agora o utilitário inspetor do App Management funcionará com as versões de runtime 4.x.
+* Corrigida uma regressão no utilitário strongpm do App Management.
 
 ## 18 de março de 2016: atualizado o buildpack do Node.js v3.2-20160315-1257
 
@@ -161,7 +178,9 @@ Para enviar por push seu aplicativo com v3.0beta:
 {: codeblock}
 
 Essa mudança no tempo de execução padrão não afetará seu aplicativo se você tiver
-configurado uma versão específica do Node.js no package.json de seu aplicativo. **Nota:**
+configurado uma versão específica do Node.js no package.json de seu aplicativo.
+
+**Nota:**
 sempre é possível especificar a versão do Node.js para executar seu aplicativo usando a
 entrada engines.node em seu package.json conforme explicado em
 [Versões disponíveis](index.html#available_versions).
@@ -179,8 +198,7 @@ O Node.js v2.6.1 apresenta uma correção de bug para o [Manipulador de gerencia
 
 ## 15 de outubro de 2015: atualizado o buildpack do Node.js v2.6-20151006-1309
 
-Esta liberação do buildpack Node.js apresenta a integração do [Gerenciador de processos StrongLoop](https://strong-pm.io) para o
-recurso de Gerenciamento de app. Para obter mais informações, consulte a postagem do blog [StrongLoop DevOps for Node.js Applications on Bluemix](https://developer.ibm.com/bluemix/2015/10/15/strongloop-devops-on-bluemix/).
+Essa liberação do buildpack do Node.js apresenta a integração do [Gerenciador de processos StrongLoop ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://strong-pm.io) para o recurso App Management. Para obter mais informações, consulte a postagem do blog [StrongLoop DevOps for Node.js Applications on Bluemix](https://developer.ibm.com/bluemix/2015/10/15/strongloop-devops-on-bluemix/).
 
 ## 15 de junho de 2015: atualizado o buildpack do Node.js v2.0-20150608-1503
 
@@ -240,18 +258,17 @@ mostrado.
 
 ## 28 de agosto de 2014: atualizado o buildpack do Node.js v1.3-20140821-1143
 
-* Agora, o buildpack Node.js mais novo vem com o IBM SDK for Node.js v1.1.0.6. Essa atualização significa que você obterá um tempo de execução do IBM Node.js totalmente suportado ao especificar o tempo de execução do Node.js estável mais recente, v0.10.30, para seu aplicativo. Esse tempo de execução corrige a
-[ vulnerabilidade de dano à memória V8](http://blog.nodejs.org/2014/07/31/v8-memory-corruption-stack-overflow).
+* Agora, o buildpack Node.js mais novo vem com o IBM SDK for Node.js v1.1.0.6. Essa atualização significa que você obterá um tempo de execução do IBM Node.js totalmente suportado ao especificar o tempo de execução do Node.js estável mais recente, v0.10.30, para seu aplicativo. Esse tempo de execução corrige a [vulnerabilidade Dano à memória V8![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://blog.nodejs.org/2014/07/31/v8-memory-corruption-stack-overflow).
 * O buildpack também inclui melhorias e correções de bug na extensão de serviço de
 Monitoramento e Analítica, permitindo diagnosticar condições de desempenho e
 erro por meio do serviço.
 
 ## 29 de julho de 2014: atualizado o buildpack do Node.js v1.1-20140717-1447
 
-Agora, o buildpack Node.js vem com o IBM SDK for Node.js v1.1.0.5. Essa atualização significa que você obterá um tempo de execução do IBM Node.js totalmente suportado ao especificar o tempo de execução do Node.js estável mais recente para seu aplicativo, v0.10.29. Veja mais sobre os IBM Node.js SDKs [aqui](https://developer.ibm.com/node/sdk/).
+Agora, o buildpack Node.js vem com o IBM SDK for Node.js v1.1.0.5. Essa atualização significa que você obterá um tempo de execução do IBM Node.js totalmente suportado ao especificar o tempo de execução do Node.js estável mais recente para seu aplicativo, v0.10.29. Veja mais sobre os [IBM Node.js SDKs](https://developer.ibm.com/node/sdk/).
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## geral
-{: #general}
+{: #general notoc}
 * [Tempo de execução do node.js](index.html)

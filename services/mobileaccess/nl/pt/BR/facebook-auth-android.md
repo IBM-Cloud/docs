@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+**Importante: o serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.**
 
 # Ativando a autenticação do Facebook para apps Android
 {: #facebook-auth-android}
@@ -20,7 +22,7 @@ Android, inclua e configure o cliente Android para acessar seu
 aplicativo Facebook no site Facebook for Developers.
 {:shortdesc}
 
-## Antes de Começar
+## Antes de iniciar
 {: #before-you-begin}
 
 Você deve ter:
@@ -49,8 +51,8 @@ valor de SDK requerido no código WebView Javascript:
 valor para inicializar o cliente
 {{site.data.keyword.amashort}}.
 * Um projeto do Android que esteja configurado para trabalhar com Gradle. O projeto não precisa ser instrumentado com o {{site.data.keyword.amashort}} client SDK.  
-* Um app Facebook com uma plataforma Android no [site Facebook for Developers ![Ícone de link
-externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developers.facebook.com/ "Ícone de link externo"){: new_window}.
+* Um app Facebook com uma plataforma Android no [site
+Facebook for Developers ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://developers.facebook.com/){: new_window}.
 
 **Importante:** não é necessário instalar separadamente o Facebook SDK (`com.facebook.FacebookSdk`). O Facebook SDK é instalado automaticamente pelo Gradle quando você inclui o {{site.data.keyword.amashort}} Facebook client SDK. É possível ignorar esta etapa ao incluir a plataforma Android no site Facebook for Developers.
 
@@ -59,7 +61,7 @@ externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://develop
 
 No website Facebook for Developers:
 
-1. Efetue login em sua conta no [website Facebook for Developers![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developers.facebook.com "Ícone de link externo"){: new_window}.
+1. Efetue login em sua conta no [website Facebook for Developers ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://developers.facebook.com){: new_window}.
 
 1. Na **Lista de Produtos**, escolha
 **Facebook Login**.
@@ -94,7 +96,8 @@ houver mais de uma atividade no arquivo `AndroidManifest.xml`, procure a ativida
 	É possível inserir dois conjuntos de hashes de chave com o Facebook: um hash de chave
 para aplicativos que são construídos no modo de depuração com um certificado de depuração e
 outro hash de chave para aplicativos que são construídos no modo de liberação com um certificado
-de liberação. Para obter mais informações, veja [Assinando seus aplicativos Android![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://developer.android.com/tools/publishing/app-signing.html "Ícone de link externo"){: new_window}.
+de liberação. Para obter mais informações, veja [Assinando seus
+aplicativos Android ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](http://developer.android.com/tools/publishing/app-signing.html){: new_window}.
 
 1. O keystore que contém o certificado que você está usando para o ambiente de desenvolvimento é armazenado no arquivo `~/.android/debug.keystore`. A senha do keystore padrão é: `android`. Use esse certificado para construir aplicativos no modo de depuração.
 
@@ -170,7 +173,7 @@ arquivos Gradle**.
 	{: codeblock}
 
 1. No arquivo `AndroidManifest.xml` do projeto do Android:
-	* Inclua a permissão de acesso à Internet sob o elemento `<manifest>`:
+	* Inclua a permissão de acesso à Internet no elemento `<manifest>`:
 
 		```XML
 	<uses-permission android:name="android.permission.INTERNET" />
@@ -210,7 +213,7 @@ arquivos Gradle**.
 1. Inicialize o cliente SDK e registre o gerenciador de
 autenticação. Inicialize o SDK do cliente do {{site.data.keyword.amashort}} passando **context** e **region**.
 
-	Um lugar comum, embora não obrigatório, para colocar o código de inicialização é no método `onCreate` da atividade principal em seu aplicativo Android.<br/>
+	Um local comum, mas não obrigatório, para colocar o código de inicialização é o método `onCreate` da atividade principal em seu aplicativo Android.<br/>
 
 	```Java 	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 
@@ -229,9 +232,9 @@ MCAServiceTenantId>` pelo valor `tenantId`
 informações sobre como obter esses valores, consulte
 [Antes de iniciar](#before-you-begin)).
 
-	**Nota:** se seu aplicativo Android está definindo como destino o Android versão 6.0 (API nível 23) ou superior, deve-se assegurar que o aplicativo tenha uma chamada `android.permission.GET_ACCOUNTS` antes de chamar `register`. Para
-obter mais informações, veja [esse tópico ![Ícone de
-link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.android.com/training/permissions/requesting.html "Ícone de link externo"){: new_window} no site Android Developers.
+	**Nota:** se seu aplicativo Android está definindo como destino o Android versão 6.0 (API nível 23) ou superior, deve-se assegurar que o aplicativo tenha uma chamada `android.permission.GET_ACCOUNTS` antes de chamar `register`. Para obter
+mais informações, veja [esse
+tópico ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://developer.android.com/training/permissions/requesting.html){: new_window} no site Android Developers.
 
 1. Inclua o código a seguir em sua Atividade:
 

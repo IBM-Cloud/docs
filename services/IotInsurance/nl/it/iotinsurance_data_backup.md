@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-01"
+lastupdated: "2017-03-22"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -29,7 +29,7 @@ Nomi database| Frequenza di modifica| Motivo della modifica | Richiede il backup
 favorites|Gestione|Nuova azione dell'amministratore|SÍ|-
 Devices|Gestione|Aggiunti o rimossi nuovi dispositivi o utenti|SÍ| Il trasformatore genera dinamicamente una tabella nella memoria e la compila con i dati dal provider del dispositivo. Per i gateway collegati direttamente, questa tabella archivia i dispositivi.
 hazardevents|Casuale|Individuato nuovo evento scudo|SÍ|-
-Jscode|Gestione|Distribuito nuovo codice JS per gl iscudi|SÍ*| L'amministratore può facoltativamente saltare il backup e distribuire una nuova versione del codice JS.
+Jscode|Gestione|Distribuito nuovo codice JS per gli scudi|SÍ*| L'amministratore può facoltativamente saltare il backup e distribuire una nuova versione del codice JS.
 Promotions|Gestione|Aggiunta nuova promozione|SÍ|-
 shieldassociations|Gestione|Aggiunto nuovo utente o scudo|SÍ|-
 Shields|Gestione|Aggiunto nuovo scudo|SÍ|-
@@ -39,9 +39,9 @@ aggregationschedule|-|-| NO|Può essere ricompilato.
 
 Per eseguire il backup dei dati {{site.data.keyword.iotinsurance_short}} esegui la seguente procedura:
 
-## Creazione di un'istanza {{site.data.keyword.cloudant}} di replica
+## Creazione di un'istanza {{site.data.keyword.cloudant_short_notm}} di replica
 {: #createinstance}
-Crea un'istanza {{site.data.keyword.cloudant}} di replica utilzzando le [{{site.data.keyword.cloudant}}Istruzioni per la replica ![icona link esterno](../../icons/launch-glyph.svg)](https://docs.cloudant.com/replication.html). Per scopi di ripristino di emergenza, crea la replica in una posizione differente rispetto al servizio {{site.data.keyword.iotinsurance_short}} originale. Ad esempio, se la tua istanza originale è a Dallas, la replica potrebbe essere a Londra.
+Crea un'istanza {{site.data.keyword.cloudant}} di replica utilizzando le [{{site.data.keyword.cloudant}}Istruzioni per la replica ![icona link esterno](../../icons/launch-glyph.svg)](https://docs.cloudant.com/replication.html). Per scopi di ripristino di emergenza, crea la replica in una posizione differente rispetto al servizio {{site.data.keyword.iotinsurance_short}} originale. Ad esempio, se la tua istanza originale è a Dallas, la replica potrebbe essere a Londra.
 
 ## Individua le credenziali e gli URL
 {: #locate_credentials}
@@ -63,7 +63,7 @@ Crea un'attività di replica per ogni database di cui si deve eseguire il backup
 
 4. Nel menu, seleziona **Replica**.
 
-5. Immetti l'URL del database originale nella sezione Database di origine. Ogni URL del adatabase è nel formato https://<CloudantbaseURL>/<database_name>.  Ad esempio, l'URL del database hazardevents è https://<CloudantbaseURL>/hazardevents.
+5. Immetti l'URL del database originale nella sezione Database di origine. Ogni URL del database è nel formato https://<CloudantbaseURL>/<database_name>.  Ad esempio, l'URL del database hazardevents è https://<CloudantbaseURL>/hazardevents.
 
 6. Immetti l'URL del nuovo database nella sezione Database di destinazione.
 
@@ -89,10 +89,10 @@ Dopo aver creato le attività di replica, puoi rieseguire i backup in qualsiasi 
 {: #restore_data}
 Puoi ripristinare i dati da un database replicato o caricando un file CSV salvato.
 1. Apri la tua console {{site.data.keyword.Bluemix_notm}}.
-2. Arrsta il servizio {{site.data.keyword.iotinsurance_short}}.
-3. Rirpistina i dati in uno dei seguenti modi:
+2. Arresta il servizio {{site.data.keyword.iotinsurance_short}}.
+3. Ripristina i dati in uno dei seguenti modi:
   - Carica direttamente i dati da un file di backup CSV nell'istanza Cloudant principale
   - Crea un'attività di replica che dispone di un database replicato come l'origine e il database originale come la destinazione. Questa attività sposta i dati replicati nel database originale.
 4. Esegui i seguenti script per ricreare i documenti di progettazione e ripristinare l'integrità di riferimento.  Gli script sono ubicati in [{{site.data.keyword.iotinsurance_short}} API examples GitHub site ![icona link esterno](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/){: new_window}.
-  - iot4i-api/wearable-framework/auto-create/create.sh - Questo script ricrea i documenti di progetttazioni all'interno di {{site.data.keyword.cloudant}}.
+  - iot4i-api/wearable-framework/auto-create/create.sh - Questo script ricrea i documenti di progettazioni all'interno di {{site.data.keyword.cloudant}}.
   - iot4i-api/wearable-framework/health/check-relations - Questo script ristabilisce l'integrità di riferimento. Ad esempio, lo script correggere un caso in cui uno scudo viene eliminato ma l'associazione a un utente ancora esiste.

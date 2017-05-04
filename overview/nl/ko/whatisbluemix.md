@@ -3,7 +3,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-03-21"
 ---
 
 {:shortdesc: .shortdesc}
@@ -75,10 +75,12 @@ lastupdated: "2017-01-11"
 
 {{site.data.keyword.Bluemix_notm}} 콘솔에 액세스하는 경우 메뉴 표시줄은 둥록, 로그인, 문서 액세스 및 카탈로그 액세스에 필요한 링크 및 단추를 표시합니다. 로그인 후 메뉴 표시줄에는 계정 유형에 따라 햄버거 메뉴 ![햄버거 아이콘](../icons/icon_hamburger.svg) 및 추가 링크가 포함됩니다. 
 
-* 새 {{site.data.keyword.Bluemix_notm}} 사용자인 경우 햄버거 메뉴 ![햄버거 아이콘](../icons/icon_hamburger.svg)를 사용하여 앱, 서비스 또는 인프라 대시보드 간에 전환할 수 있습니다. 지원에 필요한 링크 및 계정 옵션이 표시되며 **카탈로그** 링크를 사용하여 {{site.data.keyword.Bluemix_notm}}, 컴퓨팅 및 인프라 서비스에 액세스할 수 있습니다.  
-* 기존 사용자이며 사용자의 {{site.data.keyword.Bluemix_notm}} 및 {{site.data.keyword.BluSoftlayer}} 계정이 연결되어 있는 경우 햄버거 메뉴 ![햄버거 아이콘](../icons/icon_hamburger.svg)를 사용하여 앱, 서비스 또는 인프라 대시보드 간에 전환할 수 있습니다. 지원에 필요한 링크 및 계정 옵션이 표시되며 **카탈로그** 링크를 사용하여 {{site.data.keyword.Bluemix_notm}}, 컴퓨팅 및 인프라 서비스에 액세스할 수 있습니다.  
-* {{site.data.keyword.Bluemix_notm}} 계정이 있는 기존 사용자인 경우 햄버거 메뉴 ![햄버거 아이콘](../icons/icon_hamburger.svg)를 사용하여 앱, 서비스 또는 인프라 대시보드 간에 전환할 수 있습니다. 지원에 필요한 링크 및 계정 옵션이 표시되며 **카탈로그** 링크를 사용하여 {{site.data.keyword.Bluemix_notm}} 및 컴퓨팅 서비스에 액세스할 수 있습니다.  
-* {{site.data.keyword.BluSoftlayer}} 계정이 있는 기존 사용자이며 계정이 {{site.data.keyword.Bluemix_notm}}에 연결되어 있지 않은 경우 메뉴 표시줄은 이전에 {{site.data.keyword.BluSoftlayer}}에 사용 가능했던 링크를 표시합니다(예: KnowledgeLayer 도움말에 대한 액세스, 문의 옵션, 알림, 티켓 열기 및 로그인). 또한 인프라 대시보드에 대한 링크 및 지원과 계정 옵션에 대한 링크가 표시됩니다.  
+* 새 {{site.data.keyword.Bluemix_notm}} 사용자인 경우 햄버거 메뉴 ![햄버거 아이콘](../icons/icon_hamburger.svg)를 사용하여 앱, 서비스 및 인프라 대시보드 간에 전환할 수 있습니다. **카탈로그** 링크를 사용하여 플랫폼과 인프라 서비스에 액세스할 수 있습니다. 지원 및 계정, 청구 및 사용, 보안 관리 옵션 링크도 표시됩니다.
+* {{site.data.keyword.Bluemix_notm}} 계정이 있는 기존 사용자인 경우 햄버거 메뉴 ![햄버거 아이콘](../icons/icon_hamburger.svg)를 사용하여 앱, 서비스 또는 인프라 대시보드 간에 전환할 수 있습니다. **카탈로그**를 사용하여 플랫폼과 인프라 서비스에 액세스할 수 있으며, 플랫폼 레벨 지원 및 계정, 청구 및 사용, 보안 관리 옵션 링크가 표시됩니다.
+* 기존 사용자이며 사용자의 {{site.data.keyword.Bluemix_notm}} 및 {{site.data.keyword.BluSoftlayer}} 계정이 연결되어 있는 경우 햄버거 메뉴 ![햄버거 아이콘](../icons/icon_hamburger.svg)를 사용하여 앱, 서비스 및 인프라 대시보드 간에 전환할 수 있습니다. **카탈로그** 링크를 사용하여 플랫폼과 인프라 서비스에도 액세스할 수 있습니다. 
+  * 앱과 서비스 대시보드에 있는 경우 메뉴 표시줄에는 {{site.data.keyword.Bluemix_notm}} 문서, 지원과 계정 및 보안 관리 옵션과 같은 플랫폼 레벨 리소스에 대한 링크가 포함되어 있습니다. 인프라 레벨 청구 옵션에 대한 링크에도 액세스할 수 있습니다. 
+  * 인프라 대시보드에 있는 경우 메뉴 표시줄에는 KnowledgeLayer 도움말, 연락처 옵션, 알림, 열린 티켓 및 지원과 계정 관리 옵션 등의 인프라 레벨 리소스에 대한 링크가 표시됩니다.
+* {{site.data.keyword.Bluemix_notm}}에 링크되지 않은 {{site.data.keyword.BluSoftlayer}} 계정을 사용하는 기존 사용자인 경우 햄버거 메뉴 ![햄버거 아이콘](../icons/icon_hamburger.svg)을 사용하여 인프라 대시보드에 액세스하고 **카탈로그** 링크를 사용하여 인프라 서비스에 액세스할 수 있습니다. 메뉴 표시줄에는 KnowledgeLayer 도움말, 연락처 옵션, 알림, 열린 티켓 및 지원과 계정 옵션에 대한 링크도 포함됩니다.
 
 ## {{site.data.keyword.Bluemix_notm}} Cloud Foundry 아키텍처
 {: #architecture}
@@ -91,7 +93,7 @@ lastupdated: "2017-01-11"
 
 모바일 앱, 외부에서 실행되는 앱, {{site.data.keyword.Bluemix_notm}}에서 빌드된 앱 또는 브라우저를 사용하는 개발자일 수 있는 클라이언트는 {{site.data.keyword.Bluemix_notm}}에서 호스팅되는 앱과 상호 작용합니다. 클라이언트는 REST 또는 HTTP API를 사용하여 {{site.data.keyword.Bluemix_notm}}를 통해 앱 인스턴스 또는 복합 서비스 중 하나로 요청을 라우팅합니다.
 
-다음 그림에서는 상위 레벨 {{site.data.keyword.Bluemix_notm}} Cloud Foundry 아키텍처를 보여줍니다. 
+다음 그림은 상위 레벨 {{site.data.keyword.Bluemix_notm}} Cloud Foundry 아키텍처를 보여줍니다. 
 
 ![{{site.data.keyword.Bluemix_notm}} 아키텍처](images/arch.png)
 
@@ -112,7 +114,7 @@ lastupdated: "2017-01-11"
 * 모바일 앱의 경우 {{site.data.keyword.Bluemix_notm}}에는 모바일 앱의 백엔드(예: 모바일 앱이 서버와 통신하는 데 사용하는 서비스)를 나타내는 아티팩트가 포함됩니다. 
 * 웹 앱의 경우 런타임 및 프레임워크 관련 정보가 {{site.data.keyword.Bluemix_notm}}에 전달되는지 확인하여 {{site.data.keyword.Bluemix_notm}}가 앱을 실행하기 위한 적절한 실행 환경을 설정할 수 있도록 해야 합니다. 
 
-모바일 및 웹 모두를 포함하여, 각 실행 환경은 다른 앱의 실행 환경에서 격리됩니다. 이러한 실행 환경은 앱이 동일한 물리적 시스템에 있더라도 격리됩니다. 다음 그림에서는 {{site.data.keyword.Bluemix_notm}} Cloud Foundry가 앱의 배치를 관리하는 방법에 대한 기본 플로우를 보여줍니다. 
+모바일 및 웹 모두를 포함하여, 각 실행 환경은 다른 앱의 실행 환경에서 격리됩니다. 이러한 실행 환경은 앱이 동일한 물리적 시스템에 있더라도 격리됩니다. 다음 그림은 {{site.data.keyword.Bluemix_notm}} Cloud Foundry가 앱의 배치를 관리하는 방법에 대한 기본 플로우를 보여줍니다. 
 
 ![앱 배치](images/deploy.png)
 
@@ -125,7 +127,7 @@ lastupdated: "2017-01-11"
 
 가상 서버를 선택한 후 각 가상 서버의 애플리케이션 관리자에서 앱에 적절한 프레임워크 및 런타임을 설치합니다. 그런 다음 앱이 해당 프레임워크로 배치될 수 있습니다. 배치가 완료되면 애플리케이션 아티팩트가 시작됩니다.
 
-다음 그림에서는 여러 앱이 배치되어 있고 DEA(Droplet Execution Agent)라고도 하는 가상 서버의 구조를 보여줍니다.
+다음 그림은 여러 앱이 배치되어 있고 DEA(Droplet Execution Agent)라고도 하는 가상 서버의 구조를 보여줍니다.
 
 ![가상 서버 디자인](images/container.png)
 
@@ -164,6 +166,7 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 | 미국 남부 지역 | 댈러스, 미국 | ng | api.ng.bluemix.net | console.ng.bluemix.net |
 | 영국 지역 | 런던, 영국 | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
 | 시드니 지역 | 시드니, 호주 | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
+| 독일 지역 | 프랑크푸르트, 독일 | eu-de | api.eu-de.bluemix.net | console.eu-de.bluemix.net |
 {: caption="표 1. {{site.data.keyword.Bluemix_notm}} 지역 목록" caption-side="top"}
 
 
@@ -172,7 +175,8 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 
 {{site.data.keyword.Bluemix_notm}}는 사용자 요구사항을 충족할 수 있도록 확장하고 고가용성을 유지하며 문제점에서 빠르게 복구할 수 있는, 확장 가능한 복원성을 갖춘 앱 및 애플리케이션 아티팩트를 호스팅하도록 디자인되었습니다. {{site.data.keyword.Bluemix_notm}}는 상호작용의 상태를 추적하는 컴포넌트(stateful)를 그렇지 않은 컴포넌트(stateless)와 구분합니다. 이러한 구분을 통해 {{site.data.keyword.Bluemix_notm}}는 확장성과 복원성을 달성하는 데 필요한 만큼 앱을 유연하게 이동할 수 있습니다.
 
-앱에 대해 실행 중인 인스턴스가 하나 이상 있을 수 있습니다. 하나의 앱에 대해 여러 인스턴스가 있는 경우 앱이 한 번만 업로드됩니다. 하지만 {{site.data.keyword.Bluemix_notm}}는 요청된 수의 앱 인스턴스를 배치하고 가능한 한 많은 가상 서버에 앱을 분배합니다.
+앱에 대해
+실행 중인 인스턴스가 하나 이상 있을 수 있습니다. 단일 앱이 여러 개 있는 경우 앱은 한 번만 업로드됩니다. 하지만 {{site.data.keyword.Bluemix_notm}}는 요청된 수의 앱 인스턴스를 배치하고 가능한 한 많은 가상 서버에 앱을 분배합니다.
 
 앱 외부에 있는 Stateful 데이터 저장소(예: {{site.data.keyword.Bluemix_notm}}에서 제공하는 데이터 저장소 서비스 중 하나)에 모든 지속적 데이터를 저장해야 합니다. 다시 시작한 후에도 메모리 또는 디스크에 캐시된 항목을 사용하지 못할 수 있으므로 단일 {{site.data.keyword.Bluemix_notm}} 인스턴스의 메모리 공간 또는 파일 시스템을 간단한 단일 트랜잭션 캐시로 사용할 수 있습니다. 단일 인스턴스 설정을 사용하면 {{site.data.keyword.Bluemix_notm}}의 Stateless 특성 때문에 앱에 대한 요청이 중단될 수 있습니다. 앱의 가용성을 보장하기 위해 각 앱에 대해 3개 이상의 인스턴스를 사용하는 것이 좋습니다. 
 

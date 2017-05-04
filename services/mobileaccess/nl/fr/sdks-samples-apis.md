@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,6 +11,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+**Important : Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.**
 
 # {{site.data.keyword.amashort}} Logiciels SDK, exemples et référence d'API
 Pour ajouter des SDK {{site.data.keyword.amafull}} à votre appli client, sélectionnez ceux que vous désirez utiliser. Configurez ensuite votre
@@ -28,7 +29,7 @@ Le SDK de base inclut des API permettant d'activer l'authentification et la jour
 ### Android
 {: #coresdk-android}
 
-[Référentiel GitHub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core "Icône de lien externe"){: new_window}
+[Référentiel GitHub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
 
 #### Installation du logiciel SDK Core avec Gradle
 {: #coresdk-android-gradle}
@@ -47,7 +48,7 @@ Ajoutez une dépendance de compilation au fichier `build.gradle` de votre applic
 ### iOS (SDK Swift)
 {: #coresdk-ios-swift}
 
-[Référentiel GitHub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security "Icône de lien externe"){: new_window}
+[Référentiel GitHub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security){: new_window}
 
 #### Installation du logiciel SDK Core avec CocoaPods
 {: #coresdk-ios-siwft-cocoapods}
@@ -63,7 +64,7 @@ pod 'BMSSecurity'
 ### Cordova
 {: #coresdk-cordova}
 
-[Référence du référentiel GitHub et d'API![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core "Icône de lien externe"){: new_window}
+[Référentiel GitHub  et référence d'API ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}
 
 #### Installation du logiciel SDK Core avec l'interface de ligne de commande Cordova
 {: #coresdk-cordova-cli}
@@ -80,7 +81,7 @@ cordova plugin add bms-core
 ### Android
 {: #facebooksdk-android}
 
-[Référentiel GitHub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-facebookauthentication "Icône de lien externe "){: new_window},
+[Référentiel GitHub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-facebookauthentication){: new_window},
 
 #### Installation du logiciel SDK Facebook avec Gradle
 {: #facebooksdk-android-gradle}
@@ -98,7 +99,7 @@ Ajoutez une dépendance de compilation au fichier `build.gradle` de votre applic
 ### iOS (SDK Swift)
 {: #facebooksdk-ios-swift}
 
-[Référentiel GitHub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-facebookauthentication "Icône de lien externe"){: new_window}
+[Référentiel GitHub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-facebookauthentication){: new_window}
 
 #### Installation du logiciel SDK Facebook avec CocoaPods
 {: #facebooksdk-ios-swift-cocoapods}
@@ -114,7 +115,7 @@ pod 'BMSFacebookAuthentication'
 ### Cordova
 {: #facebooksdk-cordova}
 
-[Référence du référentiel GitHub et d'API![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core "Icône de lien externe"){: new_window}
+[Référentiel GitHub  et référence d'API ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}
 
 #### Installez le SDK Facebook avec l'interface CLI Cordova
 {: #facebooksdk-cordova-cli}
@@ -132,7 +133,7 @@ cordova plugin add ibm-mfp-core
 ### Android
 {: #googlesdk-android}
 
-[Référentiel GitHub r![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-googleauthentication "Icône de lien externe "){: new_window},
+[Référentiel GitHub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-googleauthentication){: new_window},
 
 
 #### Installez le SDK Google+ avec Gradle
@@ -152,7 +153,7 @@ Ajoutez une dépendance de compilation au fichier `build.gradle` de votre applic
 ### iOS (SDK Swift)
 {: #googlesdk-ios-swift}
 
-[Référentiel GitHub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-googleauthentication "Icône de lien externe"){: new_window}
+[Référentiel GitHub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-googleauthentication){: new_window}
 
 #### Installez le SDK Google+ avec CocoaPods
 {: #googlesdk-ios-swift-cocoapods}
@@ -169,7 +170,7 @@ pod 'BMSGoogleAuthentication'
 ### Cordova
 {: #googlesdk-cordova}
 
-[Référence du référentiel GitHub et d'API![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core "Icône de lien externe"){: new_window}
+[Référentiel GitHub  et référence d'API ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}
 
 #### Installez le SDK Google+ avec l'interface CLI de Cordova
 {: #googlesdk-cordova-cli}
@@ -184,7 +185,7 @@ cordova plugin add ibm-mfp-core
 ## SDK serveur pour serveurs Node.js
 {: #serversdk}
 
-[Référentiel GitHub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-mca-token-validation-strategy "Icône de lien externe"){: new_window}
+[Référentiel GitHub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-mca-token-validation-strategy){: new_window}
 
 #### Installez le SDK serveur avec npm
 {: #serversdk-npm}
@@ -216,7 +217,7 @@ le répertoire utilisateur pour le contexte d'exécution Liberty for Java. So no
 ## SDK OAuth Node.js
 {: #serverlibertysdk-github}
 
-[Référentiel GitHub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-mca-oauth-sdk "Icône de lien externe"){: new_window}
+[Référentiel GitHub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-mca-oauth-sdk){: new_window}
 
 #### Installez le SDK OAuth avec npm
 {: #oauthsdk}
@@ -230,8 +231,6 @@ npm install -save bms-mca-oauth-sdk
 ## Exemples de fournisseur d'identité personnalisé
 {: #customidprovider}
 
-[Exemple simple de référentiel GitHub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "Icône de lien externe"){: new_window}
+[Custom Identity Provider sample - exemple simple ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}
 
-[Exemple avancé de référentiel GitHub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management "Icône de lien externe"){: new_window}
-
-
+[Custom Identity Provider with User Management - exemple avancé ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management){: new_window}

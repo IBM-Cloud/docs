@@ -32,7 +32,7 @@ In der folgenden Tabelle sind die Anbieter und Geräte aufgeführt, die von {{si
 <th>Anbietername</th>
 <th>Integrationstyp</th>
 <th>Getestete Geräte</th>
-<th>Anbieterinformationen</th>
+<th>Anbieterinformationen </th>
 </tr>
 </thead>
 <tbody>
@@ -219,7 +219,7 @@ Die Integration wird mithilfe der mobilen App durchgeführt (veraltet). Diese Me
 
 ### Weather Company Data
 #### Integrationsprozedur
-Die Integration mit Weather Company Data wird derzeit nur als Konzeptnachweis bzw. technische Neuentwicklung unterstützt und ist nicht für den Einsatz in der Produktion gedacht. 
+Die Integration mit Weather Company Data wird derzeit nur als Konzeptnachweis bzw. technische Neuentwicklung unterstützt und ist nicht für den Einsatz in der Produktion gedacht.
 
 Geben Sie eine Adresse zum Abrufen der aktuellen Wetterdaten (Außentemperatur) der Weather Company für einen bestimmten Standort an.
 

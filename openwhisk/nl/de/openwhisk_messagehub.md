@@ -102,9 +102,9 @@ Die Nutzdaten dieses Auslösers enthalten das Feld `messages`. Dabei handelt es 
 
 In Bezug auf Kafka sollten diese Felder selbsterklärend sein. Das Feld `key` ist jedoch mit der optionalen Funktion `isBinaryKey` ausgestattet, die die Übertragung von binären Daten im Feld `key` ermöglicht. Außerdem erfordert das Feld `value` besondere Aufmerksamkeit. Die optionalen Felder `isJSONData` und `isBinaryValue` sind verfügbar, um JSON- und Binärnachrichten zu verarbeiten. Die Felder `isJSONData` und `isBinaryValue` können nicht miteinander kombiniert werden.
 
-Beispiel: Falls für `isBinaryKey` der Wert `true` bei der Erstellung des Auslösers festgelegt wurde, wird das Feld `key` bei der Rückgabe aus den Nutzdaten eines ausgelösten Auslösers als Base64-Zeichenfolge codiert. 
+Beispiel: Falls für `isBinaryKey` der Wert `true` bei der Erstellung des Auslösers festgelegt wurde, wird das Feld `key` bei der Rückgabe aus den Nutzdaten eines ausgelösten Auslösers als Base64-Zeichenfolge codiert.
 
-Beispiel: Falls ein Feld `key` mit dem Wert `Some key` gesendet wird und für `isBinaryKey` der Wert `true` festgelegt ist, sehen die Nutzdaten des Auslösers in etwa folgendermaßen aus: 
+Beispiel: Falls ein Feld `key` mit dem Wert `Some key` gesendet wird und für `isBinaryKey` der Wert `true` festgelegt ist, sehen die Nutzdaten des Auslösers in etwa folgendermaßen aus:
 
 ```json
 {
@@ -160,7 +160,7 @@ Wird jedoch derselbe Nachrichteninhalt mit dem Wert `false` für `isJSONData` ge
 
 Analog zu `isJSONData` gilt: Falls für das Feld `isBinaryValue` bei der Erstellung des Auslösers der Wert `true` festgelegt wurde, wird das resultierende Feld `value` in den Nutzdaten des Auslösers als Base64-Zeichenfolge codiert.
 
-Beispiel: Falls ein Feld `value` mit dem Wert `Some data` gesendet wird und für `isBinaryValue` der Wert `true` festgelegt ist, sehen die Nutzdaten des Auslösers in etwa folgendermaßen aus: 
+Beispiel: Falls ein Feld `value` mit dem Wert `Some data` gesendet wird und für `isBinaryValue` der Wert `true` festgelegt ist, sehen die Nutzdaten des Auslösers in etwa folgendermaßen aus:
 
 ```json
 {
@@ -176,7 +176,7 @@ Beispiel: Falls ein Feld `value` mit dem Wert `Some data` gesendet wird und für
 }
 ```
 
-Wird dieselbe Nachricht gesendet, ohne dass für `isBinaryData` der Wert `true` festgelegt ist, ähneln die Nutzdaten des Auslösers dem folgenden Beispiel: 
+Wird dieselbe Nachricht gesendet, ohne dass für `isBinaryData` der Wert `true` festgelegt ist, ähneln die Nutzdaten des Auslösers dem folgenden Beispiel:
 
 ```json
 {
@@ -232,7 +232,7 @@ Berücksichtigen Sie beim Codieren von Aktionen, die von Ihrem Auslöser gestart
  ```
 
 ## Nachrichten für Message Hub erstellen
-Falls Sie eine OpenWhisk-Aktion verwenden wollen, um eine Nachricht für Message Hub zu erstellen, können Sie die Aktion `/messaging/messageHubProduce` verwenden. Diese Aktion verwendet die folgenden Parameter:  
+Falls Sie eine OpenWhisk-Aktion verwenden wollen, um eine Nachricht für Message Hub zu erstellen, können Sie die Aktion `/messaging/messageHubProduce` verwenden. Diese Aktion verwendet die folgenden Parameter:
 
 |Name|Typ|Beschreibung|
 |---|---|---|

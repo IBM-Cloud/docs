@@ -58,7 +58,7 @@ Userai questo schema di denominazione quando utilizzi, ad esempio, la CLI {{site
 
 I nomi di tutte le entità, inclusi azioni, trigger, regole, pacchetti e spazi dei nomi, sono una sequenza di caratteri aventi il seguente formato:
 
-* Il primo carattere deve essere un carattere alfanumerico o un carattere di sottolineatura.
+* Il primo carattere deve essere un carattere alfanumerico o un carattere di sottolineatura. 
 * I caratteri successivi possono essere alfanumerici, spazi o i seguenti: `_`, `@`, `.`, `-`.
 * L'ultimo carattere non può essere uno spazio.
 
@@ -231,10 +231,10 @@ function main(args) {
 
 Nota che, indipendentemente dal fatto che un attivazione sia sincrona o asincrona, il richiamo dell'azione può essere bloccante o non bloccante.
 
-### Oggetto whisk globale JavaScript obsoleto
+### Oggetto whisk globale JavaScript rimosso 
 
-L'oggetto globale `whisk` è al momento obsoleto; migra le tue azioni nodejs per utilizzare metodi alternativi.
-Per le funzioni `whisk.invoke()` e `whisk.trigger()` puoi utilizzare la libreria client [openwhisk](https://www.npmjs.com/package/openwhisk).
+L'oggetto globale `whisk` è stato rimosso; migra le tue azioni nodejs per utilizzare metodi alternativi.
+Per le funzioni `whisk.invoke()` e `whisk.trigger()` utilizza la libreria client già installata [openwhisk](https://www.npmjs.com/package/openwhisk).
 Per `whisk.getAuthKey()` puoi ottenere il valore della chiave API dalla variabile di ambiente `__OW_API_KEY`.
 Per `whisk.error()` puoi restituire un rejected Promise (ad esempio Promise.reject).
 
@@ -268,7 +268,7 @@ I seguenti pacchetti sono utilizzabili nell'ambiente Node.js 6.9.1:
 - node-uuid v1.4.7
 - nodemailer v2.6.4
 - oauth2-server v2.4.1
-- openwhisk v3.0.0
+- openwhisk v3.3.2
 - pkgcloud v1.4.0
 - process v0.11.9
 - pug v2.0.0-beta6
@@ -296,87 +296,104 @@ I seguenti pacchetti sono utilizzabili nell'ambiente Node.js 6.9.1:
 - xmlhttprequest v1.8.0
 - yauzl v2.7.0
 
-L'ambiente Node.js versione 0.12.17 verrà utilizzato per un'azione se l'indicatore `--kind` viene specificato esplicitamente con il valore 'nodejs' quando si crea o si aggiorna l'azione.
-I seguenti pacchetti sono utilizzabili nell'ambiente  Node.js 0.12.17:
 
-**Nota**: Node.js versione 0.12.x è obsoleto, migra tutte le tue azioni Node.js per utilizzare Node.js versione 6.x.
+## Ambienti di runtime Python
+{: #openwhisk_ref_python_environments}
 
-- apn v1.7.4
-- async v1.5.2
-- btoa v1.1.2
-- cheerio v0.20.0
-- cloudant v1.4.1
-- commander v2.7.0
-- consul v0.18.1
-- cookie-parser v1.3.4
-- cradle v0.6.7
-- errorhandler v1.3.5
-- gm v1.20.0
-- jade v1.9.2
-- log4js v0.6.38
-- merge v1.2.0
-- moment v2.8.1
-- mustache v2.1.3
-- nano v5.10.0
-- node-uuid v1.4.2
-- oauth2-server v2.4.0
-- openwhisk v3.0.0
-- process v0.11.0
-- request v2.79.0
-- rimraf v2.5.1
-- semver v4.3.6
-- serve-favicon v2.2.0
-- socket.io v1.3.5
-- socket.io-client v1.3.5
-- superagent v1.3.0
-- swagger-tools v0.8.7
-- tmp v0.0.28
-- watson-developer-cloud v1.4.1
-- when v3.7.3
-- ws v1.1.0
-- xml2js v0.4.15
-- xmlhttprequest v1.7.0
-- yauzl v2.3.1
+OpenWhisk supporta l'esecuzione di azioni Python utilizzando due versioni di runtime differenti.
 
-## Azioni Python
+### Azioni Python 3
 
-Le azioni Python vengono eseguite per impostazione predefinita mediante Python 2.7.12.
-Oltre alla libreria Python standard, le azioni Python possono utilizzare anche i seguenti pacchetti:
+Le azioni Python 3 sono eseguite utilizzando Python 3.6.1. Per utilzizare questo runtime, specifica il parametro CLI `wsk` `--kind python:3` durante la creazione o l'aggiornamento di un'azione.
+Le azioni Python possono anche utilizzare i seguenti pacchetti, in aggiunta alle librerie standard Python 3.6.
 
-- attrs v16.1.0
+- aiohttp v1.3.3
+- appdirs v1.4.3
+- asn1crypto v0.21.1
+- async-timeout v1.2.0
+- attrs v16.3.0
 - beautifulsoup4 v4.5.1
-- cffi v1.7.0
-- click v6.6
-- cryptography v1.5
-- cssselect v0.9.2
-- enum34 v1.1.6
-- flask v0.11.1
-- gevent v1.1.2
-- greenlet v0.4.10
+- cffi v1.9.1
+- chardet v2.3.0
+- click v6.7
+- cryptography v1.8.1
+- cssselect v1.0.1
+- Flask v0.12
+- gevent v1.2.1
+- greenlet v0.4.12
 - httplib2 v0.9.2
-- idna v2.1
-- ipaddress v1.0.16
+- idna v2.5
 - itsdangerous v0.24
-- jinja2 v2.8
+- Jinja2 v2.9.5
+- kafka-python v1.3.1
 - lxml v3.6.4
-- markupsafe v0.23
-- parsel v1.0.3
-- pyasn1 v0.1.9
+- MarkupSafe v1.0
+- multidict v2.1.4
+- packaging v16.8
+- parsel v1.1.0
+- pyasn1 v0.2.3
 - pyasn1-modules v0.0.8
-- pycparser v2.14
-- pydispatcher v2.0.5
-- pyopenssl v16.1.0
+- pycparser v2.17
+- PyDispatcher v2.0.5
+- pyOpenSSL v16.2.0
+- pyparsing v2.2.0
 - python-dateutil v2.5.3
 - queuelib v1.4.2
 - requests v2.11.1
-- scrapy v1.1.2
+- Scrapy v1.1.2
 - service-identity v16.0.0
 - simplejson v3.8.2
 - six v1.10.0
-- twisted v16.4.0
-- w3lib v1.15.0
-- werkzeug v0.11.10
-- zope.interface v4.3.1
+- Twisted v16.4.0
+- w3lib v1.17.0
+- Werkzeug v0.12
+- yarl v0.9.8
+- zope.interface v4.3.3
+
+### Azioni Python 2
+
+Le azioni Python 2 sono eseguite utilizzando Python 2.7.12. Questo è il runtime predefinito per le azioni Python, a meno che non specifichi l'indicatore `--kind` durante la creazione o l'aggiornamento di un'azione. Per selezionare esplicitamente questo runtime, utilizza `--kind python:2`. Le azioni Python 2 possono anche utilizzare i seguenti pacchetti, in aggiunta alla libreria standard Python 2.7. 
+
+- appdirs v1.4.3
+- asn1crypto v0.21.1
+- attrs v16.3.0
+- beautifulsoup4 v4.5.1
+- cffi v1.9.1
+- click v6.7
+- cryptography v1.8.1
+- cssselect v1.0.1
+- enum34 v1.1.6
+- Flask v0.11.1
+- gevent v1.1.2
+- greenlet v0.4.12
+- httplib2 v0.9.2
+- idna v2.5
+- ipaddress v1.0.18
+- itsdangerous v0.24
+- Jinja2 v2.9.5
+- kafka-python v1.3.1
+- lxml v3.6.4
+- MarkupSafe v1.0
+- packaging v16.8
+- parsel v1.1.0
+- pyasn1 v0.2.3
+- pyasn1-modules v0.0.8
+- pycparser v2.17
+- PyDispatcher v2.0.5
+- pyOpenSSL v16.2.0
+- pyparsing v2.2.0
+- python-dateutil v2.5.3
+- queuelib v1.4.2
+- requests v2.11.1
+- Scrapy v1.1.2
+- service-identity v16.0.0
+- simplejson v3.8.2
+- six v1.10.0
+- Twisted v16.4.0
+- virtualenv v15.1.0
+- w3lib v1.17.0
+- Werkzeug v0.12
+- zope.interface v4.3.3
 
 ## Azioni Docker
 {: #openwhisk_ref_docker}
@@ -458,7 +475,7 @@ L'API OpenWhisk supporta chiamate di richiesta-risposta dai client web. OpenWhis
 {: #openwhisk_syslimits}
 
 ### Azioni
-{{site.data.keyword.openwhisk_short}} ha dei limiti di sistema, tra cui la quantità di memoria che un'azione può utilizzare e il numero di chiamate di azioni consentite per ciascun mniuto. 
+{{site.data.keyword.openwhisk_short}} ha dei limiti di sistema, tra cui la quantità di memoria che un'azione può utilizzare e il numero di chiamate di azioni consentite per ciascun mniuto.
 
 La seguente tabella elenca i limiti predefiniti per le azioni.
 
@@ -467,8 +484,8 @@ La seguente tabella elenca i limiti predefiniti per le azioni.
 | timeout | un contenitore non può essere eseguito per più di N millisecondi | per azione |  millisecondi | 60000 |
 | memory | a un contenitore non possono essere assegnati più di N MB di memoria | per azione | MB | 256 |
 | logs | un contenitore non può scrivere più di N MB in stdout | per azione | MB | 10 |
-| concurrent | non sono consentite più di N attivazioni per ogni spazio dei nomi in esecuzione o in coda per l'esecuziome | per spazio dei nomi | numero | 1000 |
-| minuteRate | un utente non può richiamare un numero di azioni al minuto superiore a questo | per utente | numero | 5000 |
+| concurrent | non possono essere inviate più di N attivazioni per ogni spazio dei nomi in esecuzione o in coda per l'esecuziome  | per spazio dei nomi | numero | 1000 |
+| minuteRate | non possono essere inviate più di N attivazioni per ogni spazio dei nomi al minuto  | per utente | numero | 5000 |
 | codeSize | la dimensiona massima del codice azione | non configurabile, limite per azione | MB | 48 |
 | parameters | la dimensione massima dei parametri che possono essere collegati | non configurabile, limite per azione/pacchetto/trigger | MB | 1 |
 
@@ -535,10 +552,9 @@ I trigger sono soggetti a una frequenza di attivazione al minuto come indicato n
 
 | limite | descrizione | configurabile | unità | valore predefinito |
 | ----- | ----------- | ------------ | -----| ------- |
-| minuteRate | un utente non può attivare un numero di trigger al minuto superiore a questo | per utente | numero | 5000 |
+| minuteRate | non possono essere attivati più di N trigger per ogni spazio dei nomi al minuto  | per utente | numero | 5000 |
 
 ### Trigger al minuto (valore fisso: 5000)
-{: #openwhisk_syslimits_triggerratelimit}
 * Il limite di frequenza N è impostato su 5000 e limita il numero di trigger che possono essere attivati in finestre temporali di un minuto.
 * L'utente non può modificare questo limite durante la creazione del trigger.
 * Una chiamata CLI o API che superi questo limite riceverà un codice di errore corrispondente al codice di stato HTTP `429: TOO MANY REQUESTS`.

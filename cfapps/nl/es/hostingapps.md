@@ -19,8 +19,7 @@ lastupdated: "2016-05-09"
 
 <!--The whole topic is staging only -->
 
-Con {{site.data.keyword.Bluemix}},
-puede crear apps, así como alojar sus apps existentes. Puede migrar sus apps a {{site.data.keyword.Bluemix_notm}} siempre que estén preparadas para la nube. {{site.data.keyword.Bluemix_notm}} proporciona distintos modos para ejecutar las apps, como por ejemplo Cloud Foundry, IBM Containers y Virtual Machines.
+Con {{site.data.keyword.Bluemix}}, puede crear apps, así como alojar sus apps existentes. Puede migrar sus apps a {{site.data.keyword.Bluemix_notm}} siempre que estén preparadas para la nube. {{site.data.keyword.Bluemix_notm}} proporciona distintos modos para ejecutar las apps, como por ejemplo Cloud Foundry, IBM Containers y Virtual Machines.
 
 ##Haciendo que sus apps estén listas para la nube
 {: #cloud-readyapps}
@@ -67,8 +66,8 @@ Si su app cumple todos los principios siguientes, será una app lista para la nu
 
 * No se base en características específicas del sistema operativo.
 
-  Si ya ha utilizado características específicas del sistema operativo, puede solucionarlo mediante el uso de bibliotecas de compatibilidad, como Cygwin y Mono. Cygwin es una biblioteca de compatibilidad que proporciona un conjunto de herramientas Linux en un entorno Windows. Mono es una biblioteca de compatibilidad que proporciona capacidades de Windows .NET en Linux. 
-  
+  Si ya ha utilizado características específicas del sistema operativo, puede solucionarlo mediante el uso de bibliotecas de compatibilidad, como Cygwin y Mono. Cygwin es una biblioteca de compatibilidad que proporciona un conjunto de herramientas Linux en un entorno Windows. Mono es una biblioteca de compatibilidad que proporciona capacidades de Windows .NET en Linux.
+
   Evite las dependencias de un sistema operativo específico; en su lugar, utilice servicios proporcionados por la infraestructura middleware o proveedores de servicios.
 
 * No instale su app manualmente.

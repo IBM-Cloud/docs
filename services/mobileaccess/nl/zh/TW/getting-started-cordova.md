@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+**重要事項：{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。**
 
 # 設定 Cordova 外掛程式
 {: #getting-started-cordova}
@@ -29,7 +30,7 @@ lastupdated: "2017-01-15"
 * 後端應用程式的 URL（**應用程式路徑**）。在傳送要求至後端應用程式的受保護端點時，將需要此值。
 * **承租戶 ID** 值。在 {{site.data.keyword.amashort}} 儀表板中，開啟服務。按一下**行動選項**按鈕。`tenantId`（也稱為 `appGUID`）值會顯示在**應用程式 GUID/承租戶 ID** 欄位中。您需要此值來起始設定「授權管理程式」。
 * {{site.data.keyword.Bluemix_notm}} **地區**。您可以在標頭中找到您目前的 {{site.data.keyword.Bluemix_notm}} 地區，就在**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示") 的旁邊。出現的地區值應該是下列其中一項：`美國南部`、`雪梨`或`英國`，並對應至 WebView Javascript 程式碼中所需的 SDK 值：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY` 或 `BMSClient.REGION_UK`。您需要此值來起始設定 {{site.data.keyword.amashort}} 用戶端。
-* Cordova 應用程式或現有專案。如需如何設定 Cordova 應用程式的相關資訊，請參閱 [Cordova 網站 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cordova.apache.org/ "外部鏈結圖示"){: new_window}。
+* Cordova 應用程式或現有專案。如需如何設定 Cordova 應用程式的相關資訊，請參閱 [Cordova 網站 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cordova.apache.org/){: new_window}。
 
 ## 安裝 {{site.data.keyword.amashort}} Cordova 外掛程式
 {: #getting-started-cordova-plugin}
@@ -65,7 +66,7 @@ lastupdated: "2017-01-15"
 	```
 	{: codeblock}
 
-	*minSdkVersion* 值必須是 `15` 或更高。請參閱 [Android 平台手冊 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cordova.apache.org/docs/en/latest/guide/platforms/android/ "外部鏈結圖示"){: new_window}，讓 Android SDK 支援的 *targetSdkVersion* 保持最新。
+	*minSdkVersion* 值必須是 `15` 或更高。請參閱 [Android 平台手冊 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cordova.apache.org/docs/en/latest/guide/platforms/android/){: new_window}，讓 Android SDK 支援的 *targetSdkVersion* 保持最新。
 
 3. 如果您已新增 iOS 作業系統，請使用目標宣告來更新 `<platform name="ios">` 元素：
 
@@ -107,7 +108,7 @@ lastupdated: "2017-01-15"
 
 	2. 使用 Xcode 建置並執行您的應用程式。
 
-	**附註**：您在執行 `cordova build ios` 時，可能會收到下列錯誤。這個問題是[問題 12 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/blakgeek/cordova-plugin-cocoapods-support/issues/12 "外部鏈結圖示"){: new_window} 中追蹤的相依外掛程式錯誤所引起。您還是可以透過模擬器或裝置在 XCode 中執行 iOS 專案。
+	**附註**：您在執行 `cordova build ios` 時，可能會收到下列錯誤。這個問題是[問題 12 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/blakgeek/cordova-plugin-cocoapods-support/issues/12){: new_window} 中追蹤的相依外掛程式錯誤所引起。您還是可以透過模擬器或裝置在 XCode 中執行 iOS 專案。
 
 	```
 	xcodebuild: error: Unable to find a destination matching the provided destination specifier:

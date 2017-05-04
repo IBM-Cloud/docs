@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-21"
+  years: 2015, 2017
+lastupdated: "2017-3-16"
 
 ---
 
@@ -11,12 +11,9 @@ lastupdated: "2016-12-21"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#Condivisione di pipeline basate sul testo nei progetti di esempio {{site.data.keyword.jazzhub_short}} {: #share-pipeline}
+#Condivisione di pipeline basate sul testo nei progetti di esempio {: #share-pipeline}
 
-Per i progetti di esempio distribuiti a {{site.data.keyword.Bluemix_notm}} mediante
-il pulsante Distribuisci a {{site.data.keyword.Bluemix_notm}},
-puoi definire delle configurazioni pipeline {{site.data.keyword.jazzhub_short}} come
-file YAML. Le pipeline definite come testo possono essere condivise; in questo modo, gli utenti che
+Per i progetti di esempio distribuiti a {{site.data.keyword.Bluemix_notm}} mediante il pulsante Distribuisci a {{site.data.keyword.Bluemix_notm}}, puoi definire delle configurazioni pipeline come file YAML. Le pipeline definite come testo possono essere condivise; in questo modo, gli utenti che
 biforcano il tuo progetto non devono configurare le loro pipeline. Questa funzione è in fase di sviluppo: il formato e l'implementazione YAML
 potrebbero subire modifiche in qualsiasi momento. Attualmente, questa funzione è disponibile solo per i
 progetti con repository Git e GitHub mirati a {{site.data.keyword.Bluemix_notm}}. 
@@ -25,7 +22,7 @@ progetti con repository Git e GitHub mirati a {{site.data.keyword.Bluemix_notm}}
 Nella directory root del progetto di esempio, devi avere una cartella denominata
 `.bluemix` che contiene un file `pipeline.yml`.
 
-Quando un progetto viene clonato utilizzando il pulsante Distribuisci a {{site.data.keyword.Bluemix_notm}}, {{site.data.keyword.jazzhub_short}} crea una pipeline basata sul file `pipeline.yml`. 
+Quando un progetto viene clonato utilizzando il pulsante Distribuisci a {{site.data.keyword.Bluemix_notm}},  viene creata una pipeline basata sul file `pipeline.yml`.. 
 
 Esempio: 
 ``` 
@@ -37,7 +34,7 @@ Esempio:
 {: codeblock} 
 
 Il formato file YAML è un singolo documento YAML che contiene una
-specifica di pipeline. La seguente pipeline {{site.data.keyword.jazzhub_short}} di esempio crea un'applicazione Java con Ant in una singola fase. Quindi, in un'altra fase, la pipeline distribuisce l'applicazione a {{site.data.keyword.Bluemix_notm}}. 
+specifica di pipeline. La seguente pipeline di esempio crea un'applicazione Java con Ant in una singola fase. Quindi, in un'altra fase, la pipeline distribuisce l'applicazione a {{site.data.keyword.Bluemix_notm}}. 
 
 ``` 
 ---
@@ -225,7 +222,7 @@ Genera il
 file da una pipeline esistente con un URL in questo formato:
 
 ```
-<DevOps Services domain>/pipeline/user/project/yaml
+<domain>/pipeline/user/project/yaml
 ```
 {: codeblock} 
 

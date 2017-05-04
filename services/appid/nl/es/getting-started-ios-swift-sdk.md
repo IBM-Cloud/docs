@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -51,7 +51,7 @@ Necesita la siguiente información:
   * CocoaPods (versión 1.1.0 o superior).
 
 
-## Instalación del SDK del cliente de {{site.data.keyword.appid_short_notm}}
+## Instalación del SDK del cliente
 {: #install-appid-sdk}
 
 El SDK del cliente de {{site.data.keyword.appid_short_notm}} se distribuye con CocoaPods, un gestor de dependencias para proyectos de Swift y de Objective-C Cocoa. CocoaPods descarga artefactos, y los pone a disposición de su proyecto.
@@ -81,7 +81,7 @@ El SDK del cliente de {{site.data.keyword.appid_short_notm}} se distribuye con C
 7. En **Valores de proyecto** > **Info** > **Tipos de URL**, añada un Tipo de URL. Rellene los recuadros de texto **Identificador** y **Esquema de URL** con este valor: $(PRODUCT_BUNDLE_IDENTIFIER)
 
 
-## Inicialización del SDK del cliente de {{site.data.keyword.appid_short_notm}}
+## Inicialización del SDK del cliente
 {: #initialize-client-sdk}
 
 1. Añada la siguiente importación al archivo `AppDelegate.swift`:
@@ -98,7 +98,7 @@ El SDK del cliente de {{site.data.keyword.appid_short_notm}} se distribuye con C
   ```
   {:pre}
 
-  * Sustituya "tenantId" por el id de arrendatario para el servicio de la ID de app.
+  * Sustituya "tenantId" por el ID de arrendatario para el servicio de ID de app.
   * Sustituya AppID.REGION_UK por la región de {{site.data.keyword.appid_short_notm}}.
 
 3. Añada el código siguiente al archivo AppDelegate.
@@ -184,7 +184,7 @@ Por ejemplo, puede invocar este código para establecer un atributo nuevo, o par
 ### Inicio de sesión anónimo
 {: #anonymous notoc}
 
-Con {{site.data.keyword.appid_short_notm}} puede iniciar sesión de forma anónima, consulte [identidad anónima](/docs/services/appid/user-profile.html#anonymous).
+Con {{site.data.keyword.appid_short_notm}} puede iniciar sesión [de forma anónima](/docs/services/appid/user-profile.html#anonymous).
 
   ```swift
   class delegate : AuthorizationDelegate {

@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-01-10"
+lastupdated: "2017-3-16"
 
 ---
 
@@ -112,7 +112,7 @@ Quando você tentar reutilizar o nome do app, receberá a mensagem a seguir:
 Quando um app é excluído, sua rota, que é a URL do app, não é automaticamente excluída. Portanto, não está disponível para reutilização. Deve-se acessar o espaço em que o app foi criado para excluir a rota para que ele possa ser reutilizado.
 {: tsCauses}
 
-Conclua as etapas a seguir para excluir a rota não usada:
+Conclua as etapas a seguir para excluir a rota não usada: 
 {: tsResolve}
 
   1. Verifique se a rota pertence ao espaço atual inserindo o comando a seguir: 
@@ -143,7 +143,7 @@ Ao tentar criar um aplicativo no Bluemix, você vê a mensagem de erro a seguir:
 
 `BXNUI0515E: os espaços na organização não foram recuperados. Ou ocorreu um problema de conexão de rede ou sua organização atual não possui um espaço associado a ela.`
 
-Esse erro geralmente ocorre na primeira vez que você tenta criar um app ou um serviço por meio do Catálogo quando um espaço ainda não foi criado.
+Esse erro geralmente ocorre na primeira vez que você tenta criar um app ou um serviço por meio do Catálogo quando um espaço ainda não foi criado. 
 {: tsCauses}
 
 Certifique-se de que você criou um espaço em sua organização atual. Para criar um espaço, use um dos métodos a seguir:
@@ -167,7 +167,7 @@ Ao tentar executar ações para uma instância de serviço ou uma instância de 
 
 `Erro do servidor, código de status: 403, código de erro: 10003, mensagem: você não tem autorização para executar a ação solicitada.`
 
-Você não possui o nível apropriado de autoridade para executar as ações.
+Você não possui o nível apropriado de autoridade para executar as ações. 
 {: tsCauses}
 
 Para obter o nível de autoridade apropriado, use um dos métodos a seguir: 
@@ -192,8 +192,8 @@ Em vez de codificar permanentemente as credenciais no app, use parâmetros de co
 ```
 process.env.VCAP_SERVICES
 ```
-Para obter mais informações sobre os comandos que podem ser usados em outras linguagens de programa, veja [Java ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} e [Ruby ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}.
-
+Para obter mais informações sobre os comandos que podem ser usados em outras linguagens de programa, veja [Java ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} e [Ruby ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}. 
+ 
 
 ## Não é possível implementar apps usando o IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}
 {: #ts_bm_tools_facet}
@@ -406,9 +406,10 @@ Ao enviar por push um app para o {{site.data.keyword.Bluemix_notm}} a partir do 
 ## Os ícones do {{site.data.keyword.Bluemix_notm}} Live Sync não são mostrados
 {: #ts_llz_lkb_3r}
 
-Você criou um app no IBM Bluemix DevOps Services, mas os ícones do IBM Bluemix Live Sync não são mostrados no IDE da web.
+Você criou um app, mas os ícones do IBM Bluemix Live Sync não são mostrados no IDE da web.
 
-Ao editar um app Node.js no IDE da web do DevOps Services, os ícones de edição em tempo real, de reinicialização rápida e de depuração do {{site.data.keyword.Bluemix_notm}} não são mostrados.
+Ao editar um app Node.js no IDE da web, os ícones de edição em tempo real, reinicialização rápida e
+depuração do {{site.data.keyword.Bluemix_notm}} não são mostrados.
 {: tsSymptoms}
 
 Os ícones não ficarão disponíveis nestas circunstâncias:
@@ -428,7 +429,7 @@ subdiretório no arquivo `manifest.yml`.
    path: path_to_application
    ```
   * Crie um arquivo `package.json` que esteja no
-mesmo diretório que seu app.
+mesmo diretório que seu app.   
   
   
 ## As organizações não podem ser localizadas no {{site.data.keyword.Bluemix_notm}}
@@ -509,7 +510,7 @@ Ao fazer upload de um app WAR no {{site.data.keyword.Bluemix_notm}} usando o com
 {: tsSymptoms} 
 `Erro de preparação: não é possível obter instâncias, uma vez que a preparação falhou.`
  
-Esse problema poderá ocorrer se o arquivo WAR não for especificado ou se o caminho para o arquivo WAR não for especificado.
+Esse problema poderá ocorrer se o arquivo WAR não for especificado ou se o caminho para o arquivo WAR não for especificado. 
 {: tsCauses}
 	
 Use a opção **-p** para especificar
@@ -626,12 +627,16 @@ exemplo:
 Para obter mais dicas sobre apps Node.js, veja [Dicas para aplicativos Node.js](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html ![External link icon](../icons/launch-glyph.svg "Ícone de link externo"){: new_window}.	
 
 
-## Erros de configuração aparecem no arquivo `server.xml` depois de importar um app {{site.data.keyword.Bluemix_notm}} Liberty do Bluemix DevOps Services para o Eclipse
+## Erros de configuração aparecem no arquivo `server.xml` depois de importar um app
+{{site.data.keyword.Bluemix_notm}} Liberty no Eclipse
 {: #ts_eclipse}
 
-Se você vir erros de configuração no arquivo `server.xml` depois de importar um app {{site.data.keyword.Bluemix_notm}} Liberty do IBM Bluemix DevOps Services para o Eclipse, pode ser necessário remover o arquivo `server.xml` do projeto. 
+Se ocorrerem erros de configuração no arquivo `server.xml` depois de importar um app
+{{site.data.keyword.Bluemix_notm}} Liberty no Eclipse, poderá ser necessário remover o arquivo
+`server.xml` do projeto. 
 
-Depois de você importar um app {{site.data.keyword.Bluemix_notm}} Liberty do {{site.data.keyword.Bluemix_notm}} DevOps Services para o Eclipse, você vê erros de configuração no arquivo `server.xml` na visualização Problemas do Eclipse.
+Depois de importar um app {{site.data.keyword.Bluemix_notm}} Liberty no Eclipse, ocorrerão erros
+de configuração no arquivo `server.xml` na visualização Problemas do Eclipse.
 {: tsSymptoms}
 
 O buildpack do Liberty usa o arquivo `server.xml` para configurar o app e gera um arquivo `runtime-vars.xml` quando o app Liberty é enviado por push ao {{site.data.keyword.Bluemix_notm}}. Quando você importa o app para o Eclipse, o arquivo `runtime-vars.xml` não existe em seu ambiente local.
@@ -736,7 +741,7 @@ atualize as informações de sua conta.
 
 Se você descobrir que o repositório Git não está clonado, poderá existir um problema com o repositório ou com o fragmento do botão.
 
-Você clica no botão **Implementar no Bluemix**, mas o repositório Git não é localizado e não pode ser clonado no DevOps Services. A etapa "Clonando repositório" não é concluída com sucesso. Portanto, o app não pode ser implementado no {{site.data.keyword.Bluemix_notm}}.
+Você clica no botão **Implementar no Bluemix**, mas o repositório Git não é localizado e não pode ser clonado no DevOps Services. A etapa "Clonando repositório" não é concluída com sucesso. Portanto, o app não pode ser implementado no {{site.data.keyword.Bluemix_notm}}. 
 {: tsSymptoms} 
 
 Esse problema pode ocorrer pelas razões a seguir:
@@ -822,7 +827,7 @@ construído. Para verificar se o código não contém problemas, construa o cód
 ## Não é possível implementar um app por meio da barra de execução
 {: #ts_runbar}
 
-A implementação falha em um estado amarelo, "não sincronizado".
+A implementação falha em um estado amarelo, "não sincronizado". 
 {: tsSymptoms} 
 
 O app que você está implementando tem a mesma rota de outro app que está

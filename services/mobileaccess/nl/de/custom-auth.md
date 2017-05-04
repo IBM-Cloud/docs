@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -11,6 +11,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+**Wichtig: Der Service {{site.data.keyword.amafull}} wird durch den Service {{site.data.keyword.appid_full}} ersetzt.**
 
 # Benutzer mit angepasstem Identitätsprovider authentifizieren
 {: #custom-id}
@@ -108,8 +110,8 @@ Beim Erstellen eines angepassten Identitätsproviders haben Sie folgende Möglic
 
 Verwenden Sie beliebige der folgenden Beispiele für Node.js-Implementierungen eines angepassten Identitätsproviders als Referenz, wenn Sie Ihren angepassten Identitätsprovider entwickeln. Laden Sie den vollständigen Anwendungscode aus den GitHub-Repositorys herunter.
 
- * [Einfaches Beispiel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "Symbol für externen Link"){: new_window}
- * [Erweitertes Beispiel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management "Symbol für externen Link"){: new_window}
+ * [Einfaches Beispiel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}
+ * [Erweitertes Beispiel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management){: new_window}
 
 ## Typische Kommunikation zwischen dem {{site.data.keyword.amashort}}-Server und einem angepassten Identitätsprovider
 {: #custom-id-comm}

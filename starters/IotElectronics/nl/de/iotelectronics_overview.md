@@ -2,16 +2,15 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-
 
 # Informationen zu {{site.data.keyword.iotelectronics}}
 {: #iotelectronics_about}
@@ -44,15 +43,11 @@ Die Boilerplate für Starter stellt die integrierte {{site.data.keyword.iotelect
 
 ![{{site.data.keyword.iotelectronics}}-Architektur. Dieses Diagramm wird im Textkörper des Themas beschrieben.](images/IoT4E_architecture.svg "{{site.data.keyword.iotelectronics}}-Architektur")
 
-Der {{site.data.keyword.iotelectronics}}-Starter nutzt den {{site.data.keyword.iotelectronics}}-Service und die APIs zur Herstellung einer Verbindung mit {{site.data.keyword.iot_short_notm}}. Die Starter-App und das Beispiel für die mobile App kommunizieren mit dem {{site.data.keyword.iotelectronics}}-Service und sind miteinander durch {{site.data.keyword.amafull}} verbunden. Die folgenden Komponenten sind im Starter enthalten:
+Der {{site.data.keyword.iotelectronics}}-Starter nutzt den {{site.data.keyword.iotelectronics}}-Service und die APIs zur Herstellung einer Verbindung mit {{site.data.keyword.iot_short_notm}}. Die Starter-App und das Beispiel für die mobile App kommunizieren mit dem {{site.data.keyword.iotelectronics}}-Service. Die folgenden Komponenten sind im Starter enthalten:
 
 Der **{{site.data.keyword.iotelectronics}}-Service** unterstützt die Benutzer- und Applianceregistrierung und Benachrichtigungsvorgänge.
 
 Mit **{{site.data.keyword.iot_full}}** können Ihre Apps mit Ihren verbundenen Appliances, Sensoren und Gateways kommunizieren und Daten verarbeiten, die über diese Komponenten erfasst werden.
-
-<!-- **{{site.data.keyword.iotrtinsights_full}}** enables you to enrich and monitor data from your appliances, visualize what's happening now, and respond to emerging conditions by using automated actions. -->
-
-**{{site.data.keyword.amafull}}** ermöglicht Benutzern mobiler Apps die Anmeldung mithilfe bereits vorhandener Social Media-Konten und garantiert eine sichere Kommunikation mit Back-End-Systemen.
 
 Mit **{{site.data.keyword.sdk4nodefull}}** können Sie serverseitige JavaScript&reg;-Apps entwickeln, bereitstellen und skalieren; außerdem bietet Ihnen diese Software erweiterte Leistung, Sicherheit und Funktionsfähigkeit.
 

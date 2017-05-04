@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+**Importante: o serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.**
 
 # Ativando a autenticação do Facebook para apps Cordova
 {: #facebook-auth-cordova}
@@ -29,7 +30,7 @@ Facebook.
 Use o ambiente de desenvolvimento nativo para fazer mudanças no código nativo, por exemplo, no Android Studio ou no Xcode.
 {:shortdesc}
 
-## Antes de Começar
+## Antes de iniciar
 {: #facebook-auth-before}
 
 Você deve ter:
@@ -57,8 +58,7 @@ próximo ao ícone **Avatar**
 ![ícone de avatar
 ](images/face.jpg "ícone de avatar") na barra de menus. O valor da região deve ser um destes: US South, Sydney ou UK. Os valores constantes de
 SDK exatos que correspondem a esses nomes são indicados nos exemplos de código.
-* Um aplicativo do Facebook e um ID do app. Para obter mais informações, veja [Obtendo um ID do app Facebook no
-Portal do Desenvolvedor do Facebook](facebook-auth-overview.html#facebook-appID).
+* Um aplicativo do Facebook e um ID do app. Para obter mais informações, consulte [Criando um aplicativo no website Facebook for Developers](facebook-auth-overview.html#facebook-appID).
 
 
 
@@ -291,10 +291,10 @@ Após o SDK do cliente ser inicializado e o gerenciador de
 autenticação do Facebook ser registrado, é possível começar a
 fazer solicitações ao serviço de backend móvel.
 
-### Antes de Começar
+### Antes de iniciar
 {: #testing_auth_before}
 
-Deve-se estar usando o modelo do {{site.data.keyword.mobilefirstbp}} e já ter um recurso protegido pelo {{site.data.keyword.amashort}} no terminal `/protected`. Para obter mais informações, consulte [Protegendo recursos](protecting-resources.html).
+Deve-se usar o modelo do {{site.data.keyword.mobilefirstbp}} e já ter um recurso protegido pelo {{site.data.keyword.amashort}} no terminal `/protected`. Para obter mais informações, consulte [Protegendo recursos](protecting-resources.html).
 
 1. Tente enviar uma solicitação para o terminal protegido
 do seu aplicativo backend móvel a partir do seu
@@ -324,7 +324,7 @@ Starter e é protegido com o {{site.data.keyword.amashort}}. Uma mensagem `Unaut
 
 	![image](images/android-facebook-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![image](images/ios-facebook-login.png)
 
-	Essa tela pode parecer ligeiramente diferente se você não tiver o app Facebook instalado em seu dispositivo ou se não estiver com login efetuado atualmente no Facebook.
+	Essa tela poderá parecer um pouco diferente se o app Facebook não estiver instalado em seu dispositivo, ou se você não estiver atualmente conectado ao Facebook.
 
 1. Clique em **OK** para autorizar o {{site.data.keyword.amashort}} a usar sua identidade de usuário do Facebook para propósitos de autenticação.
 

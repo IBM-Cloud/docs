@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-08-15"
+  years: 2015, 2017
+lastupdated: "2017-03-23"
 
 ---
 
@@ -36,7 +36,6 @@ lastupdated: "2016-08-15"
 {: codeblock}
 
 사용으로 설정되는 경우 기본적으로 OpenJDK 버전 8이 사용됩니다. JBP_CONFIG_OPENJDK 환경 변수를 사용하면 OpenJDK의 대체 버전을 지정할 수 있습니다. 예를 들어, 최신 OpenJDK 7을 사용하려면 다음 환경 변수를 설정하십시오.
-
 ```
     $ cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
 ```
@@ -72,7 +71,8 @@ JVM 옵션은 Bluemix 환경에서 최적화를 제공하고 메모리 관련 �
   * 장애 발생 시 애플리케이션의 사용 가능한 메모리 리소스 정보를 Loggregator로 라우팅. 
   * JVM 메모리 덤프를 사용하도록 애플리케이션이 구성되고, Java 프로세스의 강제 종료가 비활성 상태이며, JVM 메모리 덤프가 애플리케이션 "dumps" 공통 디렉토리로 라우팅되는 경우. 그리고 이 덤프는 Bluemix 대시보드 또는 CF CLI에서 볼 수 있습니다. 
 
-다음은 512M 메모리 제한을 적용하여 배치된 애플리케이션에 대한 빌드팩이 생성하는 기본 JVM 구성 예제입니다.    
+다음은 512M 메모리 제한을 적용하여 배치된 애플리케이션에 대한 빌드팩이 생성하는 기본 JVM 구성 예제입니다.
+
 ```
     -Xtune:virtualized
     -Xmx384M
@@ -108,7 +108,7 @@ JVM 옵션은 Bluemix 환경에서 최적화를 제공하고 메모리 관련 �
 <tr>
 <td> OpenJDK</td>
 <td>표준이 아닌 옵션에서는 -X로, 개발자 옵션에서는 -XX로 표시되는 HotSpot 런타임와 옵션의 사용 여부를 설정하는 부울 플래그를 기반으로 합니다.</td>
-<td>[HotSpot 런타임 개요](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
+<td>[HotSpot Runtime Overview ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
 </tr>
 </table>
 
@@ -168,99 +168,101 @@ JVM 옵션을 JRE에 적용하면 Liberty 빌드팩의 기본 옵션이 먼저 �
 ### 실행 중인 애플리케이션에 적용된 JVM 옵션 판별
 {: #determining_applied_jvm_options}
 
-JVM_ARGS 환경 변수를 통해 지정된 애플리케이션 정의 옵션을 제외하고는, 작업 결과로 지정된 옵션이 런타임 환경에서 명령행 옵션(독립형 Java 애플리케이션)으로 또는 jvm.options 파일(비독립형 Java 애플리케이션)에 지속됩니다. 애플리케이션에 대해 적용된 JVM 옵션은 Bluemix 대시보드 또는 CF CLI에서 볼 수 있습니다. 
+JVM_ARGS 환경 변수를 통해 지정된 애플리케이션 정의 옵션을 제외하고는, 작업 결과로 지정된 옵션이 런타임 환경에서 명령행 옵션(독립형 Java 애플리케이션)으로 또는 `jvm.options` 파일(비독립형 Java 애플리케이션)에 지속됩니다. 애플리케이션에 대해 적용된 JVM 옵션은 IBM Bluemix 콘솔 또는 CF CLI에서 볼 수 있습니다.
 
-독립형 Java 애플리케이션에 대한 JVM 옵션은 명령행 옵션으로서 유지됩니다. 이 옵션은 staging_info.yml 파일에서 확인할 수 있습니다.
+독립형 Java 애플리케이션에 대한 JVM 옵션은 명령행 옵션으로서 유지됩니다. 이 옵션은 `staging_info.yml` 파일에서 확인할 수 있습니다. 
+
+DEA 노드에서 실행 중인 애플리케이션에 대한 `staging_info.yml` 파일을 보려면 다음을 실행하십시오.
 
 ```
     $ cf files myapp staging_info.yml
 ```
 {: codeblock}
 
-WAR, EAR, 서버 디렉토리 및 패키지된 서버 배치에 대한 JVM 옵션은 jvm.options 파일에서 유지됩니다. 
+Diego 셀에서 실행 중인 애플리케이션에 대한 `staging_info.yml` 파일을 보려면 다음을 실행하십시오.
 
-WAR, EAR 및 서버 디렉토리에 대한 jvm.options 파일을 보려면 다음 명령을 실행하십시오.
+```
+    $ cf ssh myapp -c "cat staging_info.yml"
+```
+{: codeblock}
+
+WAR, EAR, 서버 디렉토리 및 패키지된 서버 배치에 대한 JVM 옵션은 `jvm.options` 파일에서 유지됩니다. `jvm.options` 파일은 `app/wlp/usr/servers/<serverName>/` 디렉토리에 있습니다. 패키지된 서버가 다른 서버 이름을 사용하여 배치된 경우를 제외한 대부분의 경우 ```<serverName>```이 `defaultServer`로 설정됩니다. 예: 
+
+DEA 노드에서 실행 중인 애플리케이션에 대한 `jvm.options` 파일을 보려면 다음을 실행하십시오.
 
 ```
     $ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
 ```
 {: codeblock}
 
-패키지된 서버의 jvm.options 파일을 보려면 <serverName>을 서버의 이름으로 대체하고 다음 명령을 실행하십시오.
+Diego 셀에서 실행 중인 애플리케이션에 대한 `jvm.options` 파일을 보려면 다음을 실행하십시오.
 
 ```
-    $ cf files myapp app/wlp/usr/servers/<serverName>jvm.options
+    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/jvm.options"
 ```
 {: codeblock}
+
 
 #### 사용 예제
 {: #example_usage}
 
-IBM JRE JVM 세부 가비지 콜렉션 로깅을 활성화하기 위해 사용자 정의 JVM 옵션을 사용하여 애플리케이션 배치:
-* 애플리케이션의 manifest.yml 파일에 있는 JVM 옵션:
+IBM JRE 상세 가비지 콜렉션 로깅을 사용으로 설정하기 위해 사용자 정의 JVM 옵션을 사용하여 애플리케이션 배치:
+* 애플리케이션의 `manifest.yml` 파일에 있는 JVM 옵션:
 
-
-  <pre>
+```
     env:
       JAVA_OPTS: "-verbose:gc -Xverbosegclog:./verbosegc.log,10,1000"
-  </pre>
-  {: codeblock}
+```
+{: codeblock}
 
-* 생성된 JVM 세부 가비지 콜렉션 로깅을 확인합니다.
+* DEA 노드에서 실행 중인 애플리케이션에 대한 JVM 생성 상세 가비지 콜렉션 로그 파일을 보려면 다음을 실행하십시오.
 
-
-  <pre>
+```
     $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
-  </pre>
-  {: codeblock}    
+```
+{: codeblock}
 
-* 메모리 부족 조건에서 힙, 스냅 및 javacore를 트리거하도록 배치된 애플리케이션의 IBM JRE JVM 옵션을 업데이트하려면 애플리케이션의 환경 변수를 JVM 옵션과 함께 설정하고 애플리케이션을 다시 시작하십시오.
+* Diego 노드에서 실행 중인 애플리케이션에 대한 JVM 생성 상세 가비지 콜렉션 로그 파일을 보려면 다음을 실행하십시오.
 
-  <pre>
+```
+    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/verbosegc.log.001"
+```
+{: codeblock}
+
+* 메모리 부족 조건에서 힙, 스냅 및 javacore를 트리거하도록 배치된 애플리케이션의 IBM JRE 옵션을 업데이트하려면, JVM 옵션으로 애플리케이션의 환경 변수를 설정하고 애플리케이션을 다시 시작하십시오.
+
+```
     $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
     $ cf restart myapp
-  </pre>
-  {: codeblock}
+```
+{: codeblock}
 
-* 메모리 부족 조건에서 생성된 JVM 덤프를 확인합니다.
-
-
-  <pre>
-    $ cf files myapp dumps
-
-    Getting files for app myapp in org myemail@email.com / space dev as myemail@email.com...
-    OK
-
-    Snap.20141106.100252.81.0003.trc           307.3K
-    heapdump.20141106.100252.81.0001.phd       3.9M
-    javacore.20141106.100252.81.0002.txt     870.5K
-  </pre>
-  {: codeblock}
+ 생성된 덤프 파일 표시 및 다운로드에 대한 세부사항은 [로깅 및 추적](loggingAndTracing.html#download_dumps) 문서를 참조하십시오.
 
 ### JRE 오버레이
 {: #overlaying_jre}
 
 기능을 지원하기 위해 파일을 JRE와 묶음으로 제공해야 하는 경우가 있습니다. 애플리케이션 개발자는 사용자 정의하기 위한 JRE 파일을 제공합니다.
 
-오버레이되는 파일과 애플리케이션 WAR, EAR 또는 JAR을 아카이브 루트의 리소스 폴더에 패키지로 만들 수 있습니다. 서버(압축 파일 또는 서버 디렉토리)의 경우, 서버 디렉토리의 리소스 폴더에 이 파일과 server.xml 파일을 패키지로 만들 수 있습니다. 
+오버레이되는 파일과 애플리케이션 WAR, EAR 또는 JAR을 아카이브 루트의 resources 폴더에 패키지로 만들 수 있습니다. 서버(압축 파일 또는 서버 디렉토리)의 경우, 서버 디렉토리의 resources 폴더에 이 파일과 server.xml 파일을 패키지로 만들 수 있습니다. 
 
 * WAR 파일
   * WEB-INF
-  * 리소스
+  * resources
     * 기타 파일
     * .java-overlay
 
 
 * EAR 파일
   * META-INF
-  * 리소스
+  * resources
     * 기타 파일
     * .java-overlay
 
 
 * JAR 파일
   * META-INF
-  * 리소스
+  * resources
     * 기타 파일
     * .java-overlay
 
@@ -269,7 +271,7 @@ IBM JRE JVM 세부 가비지 콜렉션 로깅을 활성화하기 위해 사용�
   * apps
   * dropins
   * server.xml
-  * 리소스
+  * resources
     * 기타 파일
     * .java-overlay
 
@@ -293,9 +295,9 @@ IBM JRE JVM 세부 가비지 콜렉션 로깅을 활성화하기 위해 사용�
 
 애플리케이션을 푸시하면 이 jar이 Java 런타임의 기본 정책 jar을 오버레이합니다. 이 프로세스를 통해 AES 256비트 암호화가 활성화됩니다.
 
-# 관련 링크
-{: #rellinks}
-## 일반
-{: #general}
+# rellinks
+{: #rellinks notoc}
+## general
+{: #general notoc}
 * [Liberty 런타임](index.html)
 * [Liberty 프로파일 개요](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

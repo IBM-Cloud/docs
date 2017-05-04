@@ -3,8 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-01-11"
-  
+lastupdated: "2017-3-16"  
 
 ---
 
@@ -512,38 +511,6 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱을 
 
 	
 	
-## Git 저장소를 추가할 수 없음
-{: #ts_cannot_addgit}
-
-대시보드에서 앱을 작성한 후 Git 추가를 클릭하여 Git 저장소를 작성할 수 있지만 처리할 수는 없습니다.
-
-
-
-**Git 추가**를 클릭하면 이 열리고 다음 문제 중 하나가 발생합니다.
-{: tsSymptoms} 
-
-  * 창이 빈 화면 상태로 정지합니다.
-  * 써드파티 쿠키와 관련하여 문제점이 발생했다는 메시지가 표시됩니다.
-
-
-
-쿠키가 설정되지 않도록 브라우저를 구성할 수 있습니다. 해당 쿠키는 {{site.data.keyword.Bluemix_notm}} 콘솔 컨텍스트 내 hub.jazz.net 인터넷 도메인에 있는 IBM® Bluemix DevOps Services 사이트에서 설정해야 합니다.
-{: tsCauses}  
-
- 
-
-다음 방법 중 하나를 사용하여 이러한 문제점을 해결할 수 있습니다.
-{: tsResolve}
-
-  * {{site.data.keyword.Bluemix_notm}} 콘솔에서 열리는 창에 나와 있는 지시사항을 따르십시오. 단추를 클릭하십시오. 다른 브라우저 창이 일시적으로 열립니다. 해당 창에서 DevOps Services는 인증 쿠키를 설정합니다.
-  * 다른 브라우저 탭에서 다음으로 이동하여 로그인하십시오. https://hub.jazz.net {{site.data.keyword.Bluemix_notm}} 콘솔로 돌아가서 페이지를 새로 고치십시오. **Git 추가**를 다시 클릭하십시오.
-  * 써드파티 쿠키를 지원하도록 브라우저 설정을 변경하고 Git 추가를 다시 클릭하십시오. 설정을 구성하는 방법에 대한 자세한 정보는 브라우저 관련 문서를 참조하십시오.
-    * [Mozilla Firefox ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences#w_how-do-i-change-cookie-settings){: new_window}
-	* [Google Chrome ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://support.google.com/chrome/answer/95647){: new_window}
-	* [Apple Safari ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://support.apple.com/kb/PH17191){: new_window}
-	* [Microsoft Internet Explorer ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window}
-이러한 임시 해결책으로 문제점이 해결되지 않는 경우에는 idslogin@jazz.net으로 이메일을 보내십시오. 
-
 
 
 ## Android 앱이 푸시 알림을 받을 수 없음
@@ -655,8 +622,7 @@ cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/n
   * 앱에서 사용하는 메모리를 줄이려면 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스 또는 cf 명령행 인터페이스를 사용하십시오.
     {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용하는 경우 다음 단계를 완료하십시오.
 	  1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 애플리케이션을 선택하십시오. 앱 세부사항 페이지가 열립니다.
-	  2. 런타임 페이지에서 앱에 대한 최대 메모리 한계 또는 앱 인스턴스 수를 줄이거나 둘 다 줄일 수 있습니다.
-	cf 명령행 인터페이스를 사용하는 경우 다음 단계를 완료하십시오.
+	  2. 런타임 페이지에서 앱에 대한 최대 메모리 한계 또는 앱 인스턴스 수를 줄이거나 둘 다 줄일 수 있습니다.cf 명령행 인터페이스를 사용하는 경우 다음 단계를 완료하십시오.
 	  1. 앱에 사용 중인 메모리의 양을 확인하십시오.
 	  ```
 	  cf apps
@@ -679,7 +645,7 @@ cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/n
 	  
  
 
-앱에 바인딩된 서비스가 충돌할 경우 가동 중단, 예외, 연결 실패 등의 문제가 앱에서 발생할 수 있습니다. {{site.data.keyword.Bluemix_notm}}에서는 이러한 문제점에서 복구하기 위해 앱을 자동으로 다시 시작하지 않습니다.
+앱에 바인드된 서비스가 충돌할 경우 가동 중단, 예외, 연결 실패 등의 문제점이 앱에서 발생할 수 있습니다. {{site.data.keyword.Bluemix_notm}}에서는 이러한 문제점에서 복구하기 위해 앱을 자동으로 다시 시작하지 않습니다.
 {: tsSymptoms}
 
 
@@ -723,11 +689,11 @@ cf push <appname> -p <app_path>
 ## {{site.data.keyword.Bluemix_notm}} Live Sync 아이콘이 표시되지 않음
 {: #ts_llz_lkb_3r}
 
-IBM Bluemix DevOps Services에서 앱을 작성했지만 IBM Bluemix Live Sync 아이콘이 Web IDE에 표시되지 않습니다.
+앱을 작성했지만 IBM Bluemix Live Sync 아이콘이 Web IDE에 표시되지 않습니다.
 
  
 
-DevOps Services Web IDE에서 Node.js 앱을 편집할 때 {{site.data.keyword.Bluemix_notm}} 실시간 편집, 빠른 다시 시작 및 디버그 아이콘이 표시되지 않습니다.
+Web IDE에서 Node.js 앱을 편집할 때 {{site.data.keyword.Bluemix_notm}} 실시간 편집, 빠른 다시 시작 및 디버그 아이콘이 표시되지 않습니다.
 {: tsSymptoms}
 
  
@@ -749,8 +715,6 @@ DevOps Services Web IDE에서 Node.js 앱을 편집할 때 {{site.data.keyword.B
 path: path_to_application
    ```
   * 앱과 동일한 디렉토리에 `package.json` 파일을 작성하십시오.
-
-  
   
   
 
@@ -975,14 +939,14 @@ Node.js 앱에 대한 추가 팁은 [Tips for Node.js Applications ![외부 링�
 
 
 
-## {{site.data.keyword.Bluemix_notm}} Liberty 앱을 Bluemix DevOps Services에서 Eclipse로 가져온 후 `server.xml` 파일에서 구성 오류가 나타남
+## {{site.data.keyword.Bluemix_notm}} Liberty 앱을 Eclipse로 가져온 후 `server.xml` 파일에서 구성 오류가 나타남
 {: #ts_eclipse}
 
-{{site.data.keyword.Bluemix_notm}} Liberty 앱을 IBM Bluemix DevOps Services에서 Eclipse로 가져온 후 `server.xml` 파일에 구성 오류가 표시될 경우, 프로젝트에서 `server.xml` 파일을 제거해야 할 수 있습니다. 
+{{site.data.keyword.Bluemix_notm}} Liberty 앱을 Eclipse로 가져온 후 `server.xml` 파일에 구성 오류가 표시될 경우, 프로젝트에서 `server.xml` 파일을 제거해야 할 수 있습니다. 
 
  
 
-{{site.data.keyword.Bluemix_notm}} Liberty 앱을 {{site.data.keyword.Bluemix_notm}} DevOps Services에서 Eclipse로 가져온 후 Eclipse 문제점 보기의 `server.xml` 파일에 구성 오류가 표시됩니다. 
+{{site.data.keyword.Bluemix_notm}} Liberty 앱을 Eclipse로 가져온 후 Eclipse 문제점 보기의 `server.xml` 파일에 구성 오류가 표시됩니다.
 {: tsSymptoms}
 
  
@@ -992,7 +956,7 @@ Liberty 앱이 {{site.data.keyword.Bluemix_notm}}로 푸시되면 Liberty 빌드
 
  
 
-이 문제점은 프로젝트에서 server.xml 파일을 제거하여 해결할 수 있습니다. 앱을 WAR 앱으로 푸시하면 빌드팩이 동적으로 `server.xml` 파일을 작성합니다. 자세한 정보는 [Liberty for Java](/docs/runtimes/liberty/index.html)를 참조하십시오.
+이 문제점은 프로젝트에서 server.xml 파일을 제거하여 해결할 수 있습니다. 앱을 WAR 앱으로 푸시하면 빌드팩이 동적으로 `server.xml` 파일을 작성합니다. 자세한 정보는 [Liberty for Java ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/runtimes/liberty/index.html){: new_window}를 참조하십시오.
 {: tsResolve}
 	
 	

@@ -21,7 +21,7 @@ El paquete incluye las acciones siguientes:
 
 | Entidad | Tipo | Parámetros | Descripción |
 | --- | --- | --- | --- |
-| `/whisk.system/slack` | paquete | url, channel, username | Interactuar con la API de Slack. |
+| `/whisk.system/slack` | paquete | url, channel, username | Interactuar con la API de Slack |
 | `/whisk.system/slack/post` | acción | text, url, channel, username | Publicar un mensaje en un canal de Slack |
 
 Se recomienda la creación de un enlace de paquete con los valores de `username`, `url` y `channel`. Con enlace, no necesita especificar los valores cada vez que invoca la acción en el paquete.

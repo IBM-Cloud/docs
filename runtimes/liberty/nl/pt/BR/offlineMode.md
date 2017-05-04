@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-14"
+  years: 2016, 2017
+lastupdated: "2017-03-23"
 
 ---
 
@@ -19,12 +19,12 @@ para adquirir os artefatos requeridos pelo aplicativo.  Veja a seguir os sites e
 [Bluemix Local](/docs/local/index.html#local), estes sites podem precisar ser *incluídos na lista de desbloqueio*.
 
 * https://download.run.pivotal.io e https://java-buildpack.cloudfoundry.org são usados para acessar componentes para:
-  * [Agente AppDynamics](https://www.appdynamics.com/)
-  * [Driver JDBC MariaDB](https://mariadb.com/)
-  * [Novo agente Relic](newRelic.html)
-  * [OpenJDK ](customizingJRE.html#OpenJDK)
-  * [Driver JDBC PostgreSQL](https://www.postgresql.org)
-* https://dl.zeroturnaround.com/jrebel/ é usado para acessar componentes para [JRebel](https://zeroturnaround.com/software/jrebel/).
+  * [Agente AppDynamics ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.appdynamics.com/)
+  * [Driver JDBC MariaDB ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://mariadb.com/)
+  * [Agente New Relic](newRelic.html)
+  * [OpenJDK](customizingJRE.html#OpenJDK)
+  * [Driver JDBC PostgreSQL ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.postgresql.org)
+* https://dl.zeroturnaround.com/jrebel/ é usado para acessar componentes para o [JRebel ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://zeroturnaround.com/software/jrebel/).
 * https://download.ruxit.com/agent/paas/cloudfoundry/java é usado para acessar componentes para o [agente Dynatrace Ruxit](dynatrace.html).
 * http://downloads.dynatracesaas.com/cloudfoundry/buildpack/java/ é usado para acessar o [agente Dynatrace](dynatrace.html).
 
@@ -36,8 +36,8 @@ Em alguns ambientes, como [Bluemix Dedicado](/docs/dedicated/index.html#dedicate
 [Trabalhando com um proxy](/docs/manageapps/workingWithProxy.html) para obter mais detalhes.
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## geral
-{: #general}
+{: #general notoc}
 * [Tempo de execução do Liberty](index.html)
-* [Visão geral do perfil do Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Visão geral do perfil Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

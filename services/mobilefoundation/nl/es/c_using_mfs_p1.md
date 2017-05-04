@@ -30,7 +30,7 @@ Se inicia el proceso de suministro. Este proceso dura unos 10 minutos y un mensa
 *	Pulse **Iniciar consola** para iniciar la {{site.data.keyword.mfp_oc_short_notm}}.
 
 
-<!--This console runs inside the container.--> Con la consola, puede gestionar sus aplicaciones móviles y dispositivos móviles, utilizar su servidor como programa de fondo móvil, enviar notificaciones push, etc.
+<!--This console runs inside the container.--> Con la consola, puede gestionar sus apps móviles y dispositivos móviles, utilizar su servidor como programa de fondo móvil, enviar notificaciones push, etc.
 
 ##  Adición de servidor de Mobile Analytics
 {: #adding_analytics_server_dev}

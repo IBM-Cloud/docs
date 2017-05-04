@@ -15,7 +15,7 @@ lastupdated: "2017-01-13"
 
 {{site.data.keyword.mobileanalytics_short}}
 Client SDK 目前適用於 Android、iOS、WatchOS 及 Cordova。
-{: #shortdesc}
+{: shortdesc}
 
 ## 安裝 Android Client SDK
 {: #install-sdk-android}
@@ -24,7 +24,7 @@ Client SDK 目前適用於 Android、iOS、WatchOS 及 Cordova。
 
 {{site.data.keyword.mobileanalytics_short}} Client SDK 隨 Gradle（Android 專案的相依關係管理程式）一起配送。Gradle 會從儲存庫自動下載構件，並讓它們可供 Android 應用程式使用。
 
-1. 建立 [Android Studio ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://developer.android.com/sdk/index.html "外部鏈結圖示"){: new_window} 專案或開啟現有專案。
+1. 建立 [Android Studio ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://developer.android.com/sdk/index.html){: new_window} 專案或開啟現有專案。
 
 2. 開啟**應用程式模組**中的 `build.gradle` 檔案。
 
@@ -59,25 +59,25 @@ Client SDK 目前適用於 Android、iOS、WatchOS 及 Cordova。
 {{site.data.keyword.mobileanalytics_full}} SDK 可讓您檢測行動應用程式。Swift SDK 適用於 iOS 及 watchOS。
 
 ### 開始之前
-{: #before-you-begin-ios}
+{: #before-you-begin-ios notoc}
 
-請確定已正確設定 Xcode。若要瞭解如何設定 iOS 開發環境，請參閱 [Apple Developer 網站 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.apple.com/support/xcode/ "外部鏈結圖示"){: new_window}。閱讀 Client SDK Swift Analytics 的 [Xcode 需求 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#requirements "外部鏈結圖示"){: new_window}。
+請確定已正確設定 Xcode。若要瞭解如何設定 iOS 開發環境，請參閱 [Apple Developer 網站 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.apple.com/support/xcode/){: new_window}。閱讀 Client SDK Swift Analytics 的 [Xcode 需求 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#requirements){: new_window}。
 
-{{site.data.keyword.mobileanalytics_short}} SDK 隨 [CocoaPods ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cocoapods.org/ "外部鏈結圖示"){: new_window} 及 [Carthage ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/Carthage/Carthage#getting-started "外部鏈結圖示"){: new_window}（Cocoa 專案的相依關係管理員）一起配送。CocoaPods 及 Carthage 會從儲存庫自動下載構件，並讓它們可供應用程式使用。選取 CocoaPods 或 Carthage：
+{{site.data.keyword.mobileanalytics_short}} SDK 隨 [CocoaPods ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cocoapods.org/){: new_window} 及 [Carthage ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/Carthage/Carthage#getting-started "外部鏈結圖示"){: new_window}（Cocoa 專案的相依關係管理員）一起配送。CocoaPods 及 Carthage 會從儲存庫自動下載構件，並讓它們可供應用程式使用。選取 CocoaPods 或 Carthage：
 
 #### CocoaPods
-{: #cocoapods}
+{: #cocoapods notoc}
 
-1. 遵循 GitHub 上的 [{{site.data.keyword.Bluemix_notm}}Mobile Services Swift SDK 指示 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#cocoapods "外部鏈結圖示"){: new_window}，使用 Cocoapods 來安裝 `BMSAnalytics`，並將它新增至您的 Podfile。 
+1. 遵循 GitHub 上的 [{{site.data.keyword.Bluemix_notm}}Mobile Services Swift SDK 指示 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#cocoapods){: new_window}，使用 Cocoapods 來安裝 `BMSAnalytics`，並將它新增至您的 Podfile。 
 	
 2. 在安裝 iOS Client SDK 之後，請[匯入並起始設定](sdk.html#initalize-ma-sdk) Analytics Client SDK。   
 
 #### Carthage
-{: #carthage}
+{: #carthage notoc}
 
-如果您不是使用 CocoaPods，則可以使用 [Carthage ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos "外部鏈結圖示"){: new_window}，將架構新增至專案中。
+如果您不是使用 CocoaPods，則可以使用 [Carthage ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos){: new_window}，將架構新增至專案中。
 
-1. 遵循 GitHub 上的 [Carthage 安裝指示 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#carthage "外部鏈結圖示"){: new_window} 來安裝 `BMSAnalytics`。
+1. 遵循 GitHub 上的 [Carthage 安裝指示 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#carthage){: new_window} 來安裝 `BMSAnalytics`。
 
 2. 在安裝 iOS Client SDK 之後，請[匯入並起始設定](sdk.html#initalize-ma-sdk) Analytics Client SDK。
 
@@ -86,7 +86,7 @@ Client SDK 目前適用於 Android、iOS、WatchOS 及 Cordova。
 
 {{site.data.keyword.mobileanalytics_full}} Cordova 外掛程式可讓您檢測行動應用程式。 
 
-1. 建立 [Cordova ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://cordova.apache.org/#getstarted "外部鏈結圖示"){: new_window} 專案或開啟現有專案。
+1. 建立 [Cordova ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://cordova.apache.org/#getstarted){: new_window} 專案或開啟現有專案。
 
 2. 將 Android 及 iOS 平台新增至 Cordova 應用程式中。從指令行中執行下列其中一或兩個指令：目前支援 Cordova-CLI 6.3.0 版或更早版本：
    
@@ -115,7 +115,7 @@ Client SDK 目前適用於 Android、iOS、WatchOS 及 Cordova。
 	```
    {: codeblock}
 
- *minSdkVersion* 值必須是版本 `15` 或更高。請參閱 [Android 平台手冊![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cordova.apache.org/docs/en/latest/guide/platforms/android/ "外部鏈結圖示"){: new_window}，讓 Android SDK 支援的 *targetSdkVersion* 保持最新。
+ *minSdkVersion* 值必須是版本 `15` 或更高。請參閱 [Android 平台手冊![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cordova.apache.org/docs/en/latest/guide/platforms/android/){: new_window}，讓 Android SDK 支援的 *targetSdkVersion* 保持最新。
 
 4. 如果您已新增 iOS 作業系統，請使用目標宣告來更新 `<platform name="ios">` 元素：
 
@@ -141,17 +141,19 @@ Client SDK 目前適用於 Android、iOS、WatchOS 及 Cordova。
 	```
 	{: codeblock}
 	
-7. [配置您的 Android 及 iOS 環境 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.npmjs.com/package/bms-core#4-configuring-your-platform "外部鏈結圖示"){: new_window}.
+7. [配置您的 Android 及 iOS 環境 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.npmjs.com/package/bms-core#4-configuring-your-platform){: new_window}.
 
 8. 您現在已安裝 Cordova 外掛程式並配置您的環境。接下來，請[匯入並起始設定](sdk.html#initalize-ma-sdk) Analytics Client SDK。
 
 # 相關鏈結
+{: #rellinks notoc}
 
 ## SDK
-* [Android SDK ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics "外部鏈結圖示"){: new_window}  
-* [iOS SDK ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics "外部鏈結圖示"){: new_window}
-* [Cordova 外掛程式核心 SDK ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.npmjs.com/package/bms-core "外部鏈結圖示"){: new_window}
+{: #sdk notoc}
+* [Android SDK ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window}  
+* [iOS SDK ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics){: new_window}
+* [Cordova 外掛程式核心 SDK ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.npmjs.com/package/bms-core){: new_window}
 
 ## API 參考資料
-{: #api}
-* [REST API ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mobile-analytics-dashboard.{DomainName}/analytics-service/ "外部鏈結圖示"){:new_window}
+{: #api notoc}
+* [REST API ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

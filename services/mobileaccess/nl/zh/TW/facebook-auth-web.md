@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+**重要事項：{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。**
 
 # 啟用 Web 應用程式的 Facebook 鑑別
 {: #facebook-auth-web}
@@ -32,7 +33,8 @@ lastupdated: "2017-01-15"
 
 若要使用 Facebook 作為網站上的身分提供者，您必須在 Facebook 應用程式上新增及配置網站平台。
 
-1. 在 [Facebook for Developers](https://developers.facebook.com) 網站上登入您的帳戶。如需建立新應用程式的相關資訊，請參閱[在 Facebook for Developers 網站上建立應用程式](facebook-auth-overview.html#facebook-appID)。
+1. 在 [Facebook for Developers](https://developers.facebook.com) 網站上登入您的帳戶。
+	如需建立新應用程式的相關資訊，請參閱[在 Facebook for Developers 網站上建立應用程式](facebook-auth-overview.html#facebook-appID)。
 1. 記下**應用程式 ID** 及**應用程式密碼**。當您在 Mobile Client Access 儀表板中配置 Web 專案來進行 Facebook 鑑別時，會需要這些值。
 1. 從**產品清單**中，選擇 **Facebook 登入**。
 4. 新增 **Web** 平台（如果不存在）。
@@ -70,20 +72,15 @@ lastupdated: "2017-01-15"
 
 	美國南部：
 
-	`  https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization 
-  `
+	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization`
 
-	    倫敦：
-      
+	倫敦：
 
-	` https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization
-   `
+	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization`
 
-	    雪梨：
-      
+	雪梨：
 
-	`  https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization 
-  `
+	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization`
 
 2. 使用 `response_type("code")`、`client_id` 及 `redirect_uri` 作為查詢參數，來建置授權伺服器 URI。
 
@@ -92,34 +89,34 @@ lastupdated: "2017-01-15"
 	下列範例會擷取 `VCAP_SERVICES` 變數中的參數，並建置 URL，然後傳送重新導向要求。
 
 	```Java
-  var cfEnv = require("cfenv"); 
+	var cfEnv = require("cfenv");
 
-  app.get("/protected", checkAuthentication, function(req, res, next){  
-      res.send("Hello from protected endpoint"); 
-    }
-  );
+	app.get("/protected", checkAuthentication, function(req, res, next) {
+		res.send("Hello from protected endpoint");
+		}
+	);
 
-	function checkAuthentication(req, res, next){ 
-  // Check if user is authenticated 
-  
-		if (req.session.userIdentity){
-       next()  
-     } else {   
-			// If not - redirect to authorization server   
-			var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;   
-			var authorizationEndpoint = mcaCredentials.authorizationEndpoint;   
-			var clientId = mcaCredentials.clientId;   
-			var redirectUri = "http://some-server/oauth/callback"; 
-			// Your Web application redirect URI   
+	function checkAuthentication(req, res, next) {
+		// Check if user is authenticated
+
+		if (req.session.userIdentity) {
+			next()
+		} else {
+			// If not - redirect to authorization server
+			var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
+			var authorizationEndpoint = mcaCredentials.authorizationEndpoint;
+			var clientId = mcaCredentials.clientId;
+			var redirectUri = "http://some-server/oauth/callback";
+			// Your Web application redirect URI
 
 			var redirectUrl = authorizationEndpoint + "?response_type=code";
-        redirectUrl += "&client_id=" + clientId;   
-        redirectUrl += "&redirect_uri=" + redirectUri;   
-  
-        res.redirect(redirectUrl);  
-  
-      } 
-  }
+			redirectUrl += "&client_id=" + clientId;
+			redirectUrl += "&redirect_uri=" + redirectUri;
+
+			res.redirect(redirectUrl);
+
+		}
+	}
 	```
 	{: codeblock}
 
@@ -139,64 +136,58 @@ lastupdated: "2017-01-15"
 
 	美國南部：
 
-	`    https://mobileclientaccess.ng.bluemix.net/oauth/v2/token
-     `
+	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/token`
 
-	    倫敦：
-      
+	倫敦：
 
-	`    https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token  
-     `
+	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token`
 
-	    雪梨：
-      
+	雪梨：
 
-	`     https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token 
- `
+	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token`
 
 2. 將 POST 要求傳送至記號伺服器 URI，並以授權類型 ("authorization_code")、`clientId` 及您的重新導向 URI 作為表單參數。傳送 `clientId` 及 `secret` 作為基本 HTTP 鑑別認證。
 
 	下列程式碼會擷取必要值，並透過 POST 要求傳送它們。
 
 	```Java
-  var cfEnv = require("cfenv");
-  var base64url = require("base64url ");
-  var request = require('request');
-  
-  app.get("/oauth/callback", function(req, res, next){ 
-	var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
-    var tokenEndpoint = mcaCredentials.tokenEndpoint; 
-    var formData = { 
-      grant_type: "authorization_code", 
-		client_id: mcaCredentials.clientId, 
-		redirect_uri: "http://some-server/oauth/callback",// Your web application redirect uri 
-		code: req.query.code 
-	} 
+	var cfEnv = require("cfenv");
+	var base64url = require("base64url");
+	var request = require('request');
 
-	request.post({ 
-		url: tokenEndpoint, 
-    formData: formData 
-    }, function (err, response, body){ 
-      var parsedBody = JSON.parse(body); 
-			req.session.accessToken = parsedBody.access_token; 
-			req.session.idToken = parsedBody.id_token; 
-			var idTokenComponents = parsedBody.id_token.split("."); 
-			// [header, payload, signature] 
+	app.get("/oauth/callback", function(req, res, next) {
+		var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
+		var tokenEndpoint = mcaCredentials.tokenEndpoint;
+		var formData = {
+			grant_type: "authorization_code",
+			client_id: mcaCredentials.clientId,
+			redirect_uri: "http://some-server/oauth/callback",
+			// Your web application redirect uri
+			code: req.query.code
+		}
+
+		request.post( {
+			url: tokenEndpoint,
+			formData: formData
+		}, function (err, response, body) {
+			var parsedBody = JSON.parse(body);
+			req.session.accessToken = parsedBody.access_token;
+			req.session.idToken = parsedBody.id_token;
+			var idTokenComponents = parsedBody.id_token.split(".");
+			// [header, payload, signature]
 			var decodedIdentity= base64url.decode(idTokenComponents[1]);
-			req.session.userIdentity = JSON.parse(decodedIdentity)["imf.user"]; 
+			req.session.userIdentity = JSON.parse(decodedIdentity)["imf.user"];
 			res.redirect("/");
 		}
-		).auth(mcaCredentials.clientId, mcaCredentials.secret); 
-
-   }
-  );
+		).auth(mcaCredentials.clientId, mcaCredentials.secret);
+		}
+	);
 	```
 	{: codeblock}
 
 	請注意，`redirect_uri` 參數必須符合前一個授權要求所使用的 `redirect_uri`。`code` 參數值應該是來自授權要求之回應中收到的授權碼。授權碼的有效時間只有 10 分鐘，過了此時間則必須擷取新的授權碼。
 
-
-	回應內文將包含 JWT 格式的存取碼及記號 ITD（請參閱 [JWT 網站 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://jwt.io/ "外部鏈結圖示"){: new_window}）。
+	回應內文將包含 JWT 格式的存取碼及記號 ITD（請參閱 [JWT 網站 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://jwt.io/){: new_window}）。
 
 	取得存取記號並收到身分記號之後，您就可以將 Web 階段作業標示為已鑑別，並可選擇性地持續保存這些記號。  
 

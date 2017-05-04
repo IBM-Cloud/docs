@@ -220,10 +220,10 @@ function main(params) {
 
 請注意，不論啟動是同步還是非同步，動作的呼叫都可以是封鎖或非封鎖。
 
-### 已淘汰 JavaScript 廣域 whisk 物件
+### 已移除 JavaScript 廣域 whisk 物件
 
-目前已淘汰廣域物件 `whisk`；請移轉 nodejs 動作，以使用替代方法。
-對於函數 `whisk.invoke()` 及 `whisk.trigger()`，您可以使用用戶端程式庫 [openwhisk](https://www.npmjs.com/package/openwhisk)。
+已移除廣域物件 `whisk`；請移轉 nodejs 動作，以使用替代方法。
+對於函數 `whisk.invoke()` 及 `whisk.trigger()`，請使用已安裝的用戶端程式庫 [openwhisk](https://www.npmjs.com/package/openwhisk)。
 對於 `whisk.getAuthKey()`，您可以從環境變數 `__OW_API_KEY` 取得 API 金鑰值。
 對於 `whisk.error()`，您可以傳回已拒絕的 Promise（即 Promise.reject）。
 
@@ -257,7 +257,7 @@ function main(params) {
 - node-uuid 1.4.7 版
 - nodemailer 2.6.4 版
 - oauth2-server 2.4.1 版
-- openwhisk 3.0.0 版
+- openwhisk 3.3.2 版
 - pkgcloud 1.4.0 版
 - process 0.11.9 版
 - pug 2.0.0-beta6 版
@@ -285,87 +285,104 @@ function main(params) {
 - xmlhttprequest 1.8.0 版
 - yauzl 2.7.0 版
 
-如果在建立/更新動作時明確指定值為 'nodejs' 的 `--kind` 旗標，則 Node.js 0.12.17 版環境將會用於動作。
-下列套件適用於 Node.js 0.12.17 環境：
 
-**附註**：已淘汰 Node.js 0.12.x 版，請移轉所有 Node.js 動作以使用 Node.js 6.x 版。
+## Python 運行環境
+{: #openwhisk_ref_python_environments}
 
-- apn 1.7.4 版
-- async 1.5.2 版
-- btoa 1.1.2 版
-- cheerio 0.20.0 版
-- cloudant 1.4.1 版
-- commander 2.7.0 版
-- consul 0.18.1 版
-- cookie-parser 1.3.4 版
-- cradle 0.6.7 版
-- errorhandler 1.3.5 版
-- gm 1.20.0 版
-- jade 1.9.2 版
-- log4js 0.6.38 版
-- merge 1.2.0 版
-- moment 2.8.1 版
-- mustache 2.1.3 版
-- nano 5.10.0 版
-- node-uuid 1.4.2 版
-- oauth2-server 2.4.0 版
-- openwhisk 3.0.0 版
-- process 0.11.0 版
-- request 2.79.0 版
-- rimraf 2.5.1 版
-- semver 4.3.6 版
-- serve-favicon 2.2.0 版
-- socket.io 1.3.5 版
-- socket.io-client 1.3.5 版
-- superagent 1.3.0 版
-- swagger-tools 0.8.7 版
-- tmp 0.0.28 版
-- watson-developer-cloud 1.4.1 版
-- when 3.7.3 版
-- ws 1.1.0 版
-- xml2js 0.4.15 版
-- xmlhttprequest 1.7.0 版
-- yauzl 2.3.1 版
+OpenWhisk 支援使用兩個不同的運行環境版本來執行 Python 動作。
 
-## Python 動作
+### Python 3 動作
 
-Python 動作預設是使用 Python 2.7.12 來執行。
-除了標準 Python 程式庫之外，下列套件也可供 Python 動作使用。
+Python 3 動作是使用 Python 3.6.1 執行的。若要使用此運行環境，請在建立或更新動作時指定 `wsk` CLI 參數 `--kind python:3`。
+除了 Python 3.6 標準程式庫之外，Python 動作還可以使用下列套件。
 
-- attrs 16.1.0 版
+- aiohttp 1.3.3 版
+- appdirs 1.4.3 版
+- asn1crypto 0.21.1 版
+- async-timeout 1.2.0 版
+- attrs 16.3.0 版
 - beautifulsoup4 4.5.1 版
-- cffi 1.7.0 版
-- click 6.6 版
-- cryptography 1.5 版
-- cssselect 0.9.2 版
-- enum34 1.1.6 版
-- flask 0.11.1 版
-- gevent 1.1.2 版
-- greenlet 0.4.10 版
+- cffi 1.9.1 版
+- chardet 2.3.0 版
+- click 6.7 版
+- cryptography 1.8.1 版
+- cssselect 1.0.1 版
+- Flask 0.12 版
+- gevent 1.2.1 版
+- greenlet 0.4.12 版
 - httplib2 0.9.2 版
-- idna 2.1 版
-- ipaddress 1.0.16 版
+- idna 2.5 版
 - itsdangerous 0.24 版
-- jinja2 2.8 版
+- Jinja2 2.9.5 版
+- kafka-python 1.3.1 版
 - lxml 3.6.4 版
-- markupsafe 0.23 版
-- parsel 1.0.3 版
-- pyasn1 0.1.9 版
+- MarkupSafe 1.0 版
+- multidict 2.1.4 版
+- packaging 16.8 版
+- parsel 1.1.0 版
+- pyasn1 0.2.3 版
 - pyasn1-modules 0.0.8 版
-- pycparser 2.14 版
-- pydispatcher 2.0.5 版
-- pyopenssl 16.1.0 版
+- pycparser 2.17 版
+- PyDispatcher 2.0.5 版
+- pyOpenSSL 16.2.0 版
+- pyparsing 2.2.0 版
 - python-dateutil 2.5.3 版
 - queuelib 1.4.2 版
 - requests 2.11.1 版
-- scrapy 1.1.2 版
+- Scrapy 1.1.2 版
 - service-identity 16.0.0 版
 - simplejson 3.8.2 版
 - six 1.10.0 版
-- twisted 16.4.0 版
-- w3lib 1.15.0 版
-- werkzeug 0.11.10 版
-- zope.interface 4.3.1 版
+- Twisted 16.4.0 版
+- w3lib 1.17.0 版
+- Werkzeug 0.12 版
+- yarl 0.9.8 版
+- zope.interface 4.3.3 版
+
+### Python 2 動作
+
+Python 2 動作是使用 Python 2.7.12 執行的。除非您在建立或更新動作時指定 `--kind` 旗標，否則這是 Python 動作的預設運行環境。若要明確地選取此運行環境，請使用 `--kind python:2`。除了 Python 2.7 標準程式庫之外，Python 2 動作還可以使用下列套件。
+
+- appdirs 1.4.3 版
+- asn1crypto 0.21.1 版
+- attrs 16.3.0 版
+- beautifulsoup4 4.5.1 版
+- cffi 1.9.1 版
+- click 6.7 版
+- cryptography 1.8.1 版
+- cssselect 1.0.1 版
+- enum34 1.1.6 版
+- Flask 0.11.1 版
+- gevent 1.1.2 版
+- greenlet 0.4.12 版
+- httplib2 0.9.2 版
+- idna 2.5 版
+- ipaddress 1.0.18 版
+- itsdangerous 0.24 版
+- Jinja2 2.9.5 版
+- kafka-python 1.3.1 版
+- lxml 3.6.4 版
+- MarkupSafe 1.0 版
+- packaging 16.8 版
+- parsel 1.1.0 版
+- pyasn1 0.2.3 版
+- pyasn1-modules 0.0.8 版
+- pycparser 2.17 版
+- PyDispatcher 2.0.5 版
+- pyOpenSSL 16.2.0 版
+- pyparsing 2.2.0 版
+- python-dateutil 2.5.3 版
+- queuelib 1.4.2 版
+- requests 2.11.1 版
+- Scrapy 1.1.2 版
+- service-identity 16.0.0 版
+- simplejson 3.8.2 版
+- six 1.10.0 版
+- Twisted 16.4.0 版
+- virtualenv 15.1.0 版
+- w3lib 1.17.0 版
+- Werkzeug 0.12 版
+- zope.interface 4.3.3 版
 
 ## Docker 動作
 {: #openwhisk_ref_docker}
@@ -446,7 +463,7 @@ OpenWhisk API 支援 Web 用戶端發出的「要求/回應」呼叫。OpenWhisk
 {: #openwhisk_syslimits}
 
 ### 動作
-{{site.data.keyword.openwhisk_short}} 有一些系統限制，包括動作可使用的記憶體數量，以及每分鐘允許的動作呼叫次數。 
+{{site.data.keyword.openwhisk_short}} 有一些系統限制，包括動作可使用的記憶體數量，以及每分鐘允許的動作呼叫次數。
 
 下表列出動作的預設限制。
 
@@ -455,8 +472,8 @@ OpenWhisk API 支援 Web 用戶端發出的「要求/回應」呼叫。OpenWhisk
 | timeout | 不容許容器的執行時間超過 N 毫秒 | 每個動作 |  毫秒 | 60000 |
 | memory | 不容許容器配置超過 N MB 的記憶體 | 每個動作 | MB | 256 |
 | logs | 不容許容器寫入 stdout 的內容超過 N MB | 每個動作 | MB | 10 |
-| concurrent | 每個名稱空間的執行中或置入佇列等待執行的活動次數不容許超過 N 次 | 每個名稱空間 | 數字 | 1000 |
-| minuteRate | 使用者每分鐘不能呼叫超過這麼多動作 | 每位使用者 | 數字 | 5000 |
+| concurrent | 每個名稱空間的執行中或置入佇列等待執行的活動次數未提交超過 N 次 | 每個名稱空間 | 數字 | 1000 |
+| minuteRate | 每個名稱空間每分鐘的活動次數未提交超過 N 次 | 每位使用者 | 數字 | 5000 |
 | codeSize | 動作碼的大小上限 | 不可配置，每個動作的限制 | MB | 48 |
 | parameters | 可附加的參數的大小上限 | 不可配置，每個動作/套件/觸發程式的限制 | MB | 1 |
 
@@ -523,10 +540,9 @@ OpenWhisk API 支援 Web 用戶端發出的「要求/回應」呼叫。OpenWhisk
 
 | 限制 | 說明 | 可配置 | 單位 | 預設值 |
 | ----- | ----------- | ------------ | -----| ------- |
-| minuteRate | 使用者每分鐘不能發動超過這麼多觸發程式 | 每位使用者 | 數字 | 5000 |
+| minuteRate | 每個名稱空間每分鐘的觸發程式次數未發動超過 N 次 | 每位使用者 | 數字 | 5000 |
 
 ### 每分鐘的觸發程式數目（固定：5000）
-{: #openwhisk_syslimits_triggerratelimit}
 * 速率限制 N 設定為 5000，並限制一分鐘時間範圍內可能發動的觸發程式數目。
 * 使用者無法在建立觸發程式時變更此限制。
 * 超過此限制的 CLI 或 API 呼叫會收到與 HTTP 狀態碼 `429: TOO MANY REQUESTS` 對應的錯誤碼。

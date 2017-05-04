@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-04-04"
 
 ---
 
@@ -30,19 +30,20 @@ function main({name}) {
   return {body: `<html><body><h3>${msg}</h3></body></html>`}
 }
 ```
-{: codeblock}
+{: codeblock}  
 
-어노테이션 `web-export`를 사용하여 네임스페이스 `guest`에 대한 패키지 `demo`에서 *웹 조치* `hello`를 작성할 수 있습니다.
+값이 `true` 또는 `yes`인 CLI의 `--web` 플래그를 사용하여 `guest` 네임스페이스의 `demo` 패키지에 *웹 조치* `hello`를 작성할 수 있습니다.
 ```
 wsk package create demo
 ```
 {: pre}
 ```
-wsk action create /guest/demo/hello hello.js -a web-export true
+wsk action create /guest/demo/hello hello.js --web true
 ```
 {: pre}
 
-`web-export` 어노테이션을 사용하면 조치가 새 REST 인터페이스를 통해 웹 조치로 액세스할 수 있습니다. URL은 다음과 같이 구조화되어 있습니다. `https://openwhisk.ng.bluemix.net/api/v1/web/{QUALIFIED ACTION NAME}.{EXT}`. 조치의 완전한 이름은 세 가지 파트, 즉 네임스페이스, 패키지 이름 및 조치 이름으로 구성됩니다. 
+값이 `true` 또는 `yes`인 `--web` 플래그를 사용하면 신임 정보가 없어도 REST 인터페이스를 통해 조치에 액세스할 수 있습니다. 다음과 같은 구조의 URL을 사용하여 웹 조치를 호출할 수 있습니다.
+`https://{APIHOST}/api/v1/web/{QUALIFIED ACTION NAME}.{EXT}`. 조치의 완전한 이름은 세 가지 파트, 즉 네임스페이스, 패키지 이름 및 조치 이름으로 구성됩니다. 
 
 *조치의 완전한 이름에는 해당 패키지 이름이 포함되어야 하며, 조치가 이름 지정된 패키지에 없는 경우 패키지 이름은 `default`입니다.*
 
@@ -64,7 +65,7 @@ function main() {
   }
 }
 ```
-{: codeblock}  
+{: codeblock}    
 
 또는 쿠키를 설정합니다.
 ```javascript
@@ -78,7 +79,7 @@ function main() {
     body: '<html><body><h3>hello</h3></body></html>' }
 }
 ```
-{: codeblock}
+{: codeblock}  
 
 또는 `image/png`를 리턴합니다.
 ```javascript
@@ -89,7 +90,7 @@ function main() {
              body: png };
 }
 ```
-{: codeblock}
+{: codeblock}  
 
 Or returns `application/json`:
 ```javascript
@@ -101,7 +102,7 @@ function main(params) {
     };
 }
 ```
-{: codeblock}
+{: codeblock}  
 
 It is important to be aware of the [응답 크기 한계](./openwhisk_reference.html)를 파악해야 합니다. 사전 정의된 시스템 한계를 초과하는 응답은 실패하기 때문입니다. 대형 오브젝트는 OpenWhisk를 통해 인라인으로 전송하면 안 되고 대신 예를 들어 오브젝트 저장소에 보류됩니다.
 
@@ -285,32 +286,33 @@ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json -H 'Conte
 ## 보호된 매개변수
 {: #openwhisk_webactions_protected}
 
-조치 매개변수는 보호되고 불변으로 취급될 수 있습니다. 매개변수를 완성하고 조치 웹이 액세스 가능하게 하려면 두 가지 [어노테이션](openwhisk_annotations.html)을 조치 `final`과 `web-export`(적용하려면 둘 중 하나를 `true`로 설정해야 함)에 첨부해야 합니다. 앞에서 조치 배치를 다시 논의한 경우 다음과 같이 어노테이션을 추가합니다.
+컨텐츠 확장자는 일반적으로 웹 조치를 호출할 때 필요합니다. 확장자가 없는 경우 `.http`를 기본값으로 가정합니다. `.json` 및 `.http` 확장자에는 추정 경로가 필요하지 않습니다. `.html`, `.svg` 및 `.text` 확장자에는 필요하지만 편의를 위해 기본 경로가 확장자 이름과 일치하는 것으로 가정합니다. 따라서 웹 조치를 호출하고 `.html` 응답을 수신하려면 조치가 최상위 레벨 특성 `html`이 포함된 JSON 오브젝트로 응답해야 합니다(또는 응답이 명시적으로 지정된 경로에 있어야 함). 즉, `/guest/demo/hello.html`은 `/guest/demo/hello.html/html`의 경우와 같이 `html` 특성의 명시적 추정에 해당합니다. 조치의 완전한 이름에는 해당 패키지 이름이 포함되어야 하며, 조치가 이름 지정된 패키지에 없는 경우 패키지 이름은 `default`입니다.
+
+
+## 보호된 매개변수
+
+조치 매개변수는 보호되고 불변으로 취급됩니다. 매개변수는 웹 조치를 사용할 때 자동으로 완료됩니다.
 
 ```
-wsk action create /guest/demo/hello hello.js \
+ wsk action create /guest/demo/hello hello.js \
       --parameter name Jane \
-      --annotation final true \
-      --annotation web-export true
+      --web true
 ```
-{: pre}
 
 이러한 변경 결과에서는 `name`이 `Jane`으로 바인드되고 마지막 어노테이션으로 인해 조회 또는 본문 매개변수로 대체될 수 없습니다. 이 경우 의도적인지 여부에 관계없이 이 값을 변경하려는 조회 또는 본문 매개변수에 대해 조치가 보호됩니다. 
 
 ## 웹 조치 사용 안함
-{: #openwhisk_webactions_disable}
 
-웹 조치가 새 API(`https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/web/`)를 통해 호출되지 않도록 하려면 어노테이션을 제거하거나 `false`로 설정하면 됩니다.
+웹 API(`https://openwhisk.ng.bluemix.net/api/v1/web/`)를 통해 웹 조치를 호출하지 않게 설정하려면 CLI로 조치를 업데이트하는 동안 `false` 또는 `no` 값을 `--web` 플래그에 전달하십시오.
 
 ```
-wsk action update /guest/demo/hello hello.js \
-      --annotation web-export false
+ wsk action update /guest/demo/hello hello.js --web false
 ```
+{: pre}
 
 ## 원시 HTTP 처리
-{: #raw-http-handling}
 
-웹 조치는 JSON 오브젝트를 조치 입력에 사용 가능한 첫 번째 클래스 특성으로 승격하지 않고 수신 HTTP 본문을 직접 해석하고 처리하도록 선택할 수 있습니다(예: `args.name` 대 `args.__ow_query` 구문 분석). 이는 `raw-http` [어노테이션](openwhisk_annotations.html)을 통해 수행됩니다. 동일한 예제 사용이 이전에 표시되었지만 이제 `name`을 HTTP 요청 본문의 조회 매개변수 및 JSON 값으로 수신하는 "원시" HTTP 웹 조치로 표시됩니다.
+웹 조치는 JSON 오브젝트를 조치 입력에 사용 가능한 첫 번째 클래스 특성으로 승격하지 않고 수신 HTTP 본문을 직접 해석하고 처리하도록 선택할 수 있습니다(예: `args.name` 대 `args.__ow_query` 구문 분석). 이는 `raw-http` [어노테이션](annotations.md)을 통해 수행됩니다. 동일한 예제 사용이 이전에 표시되었지만 이제 `name`을 HTTP 요청 본문의 조회 매개변수 및 JSON 값으로 수신하는 "원시" HTTP 웹 조치로 표시됩니다.
 ```
 curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json?name=Jane -X POST -H "Content-Type: application/json" -d '{"name":"Jane"}'
 ```
@@ -339,31 +341,89 @@ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json?name=Jane
 
 ### 원시 HTTP 처리 사용
 
-원시 HTTP 웹 조치는 값이 `true`인 어노테이션 `raw-http` [어노테이션](openwhisk_annotations.html)을 통해 사용 가능합니다.
+원시 HTTP 웹 조치는 `원시`의 값을 사용하는 `--web` 플래그를 통해 사용됩니다.
 
 ```
-wsk action create /guest/demo/hello hello.js \
-      --annotation web-export true
-      --annotation raw-http true
+ wsk action create /guest/demo/hello hello.js --web raw
 ```
-{: pre}
-
-**참고:** `raw-http`는 `web-export`를 나타내므로 CLI를 개선하여 향후에 이러한 어노테이션을 추가(및 제거)하는 편리한 방법을 제공할 수 있습니다.
-
 
 ### 원시 HTTP 처리 사용 안함
 
-원시 HTTP를 사용 안함으로 설정하려면 `raw-http` [어노테이션](openwhisk_annotations.html) 값을 `false`로 설정합니다.
+`false` 또는 `no` 값을 `--web` 플래그에 전달하여 원시 HTTP를 사용하지 않게 설정할 수 있습니다.
 
 ```
-wsk update create /guest/demo/hello hello.js \
-      --annotation web-export true
-      --annotation raw-http false
+ wsk update create /guest/demo/hello hello.js --web false
+```
+
+### Base64에서 바이너리 본문 컨텐츠 디코딩
+
+원시 HTTP 처리를 사용하면 요청 content-type이 바이너리일 때 `__ow_body` 컨텐츠가 Base64로 인코딩됩니다. 다음은 Node, Python 및 Swift에서 본문 컨텐츠를 디코딩하는 방법을 보여주는 함수입니다. 아래 표시된 메소드를 파일에 저장하고,
+저장된 아티팩트를 활용하는 원시 HTTP 웹 조치를 작성한 다음, 웹 조치를 호출하기만 하면 됩니다.
+
+#### Node
+
+```javascript
+  function main(args) {
+       decoded = new Buffer(args.__ow_body, 'base64').toString('utf-8')
+    return {body: decoded}
+}
+```
+{: codeblock}
+
+#### Python
+
+```python
+def main(args):
+    try:
+        decoded = args['__ow_body'].decode('base64').strip()
+        return {"body": decoded}
+    except:
+        return {"body": "Could not decode body from Base64."}
+```
+{: codeblock}
+
+#### Swift
+
+```swift
+extension String {
+    func base64Decode() -> String? {
+        guard let data = Data(base64Encoded: self) else {
+            return nil
+        }
+
+        return String(data: data, encoding: .utf8)
+    }
+}
+
+func main(args: [String:Any]) -> [String:Any] {
+    if let body = args["__ow_body"] as? String {
+        if let decoded = body.base64Decode() {
+            return [ "body" : decoded ]
+        }
+    }
+
+    return ["body": "Could not decode body from Base64."]
+}
+```
+{: codeblock}
+
+예를 들어, Node 함수를 `decode.js`로 저장하고 다음 명령을 실행하십시오.
+```
+ wsk action create decode decode.js --web raw
 ```
 {: pre}
-
-**참고:** 조치를 작성하거나 업데이트할 때 단일 조치에 대한 모든 어노테이션은 동시에 설정해야 합니다. 이는 API 및 CLI에 대한 현재 제한사항 때문입니다. 이렇게 하는 데 실패하면 이전에 첨부된 어노테이션이 제거됩니다.
-
+```
+ok: created action decode
+```
+```
+curl -k -H "content-type: application" -X POST -d "Decoded body" https:// openwhisk.ng.bluemix.net/api/v1/web/guest/default/decodeNode.json
+```
+{: pre}
+```json
+{
+  "body": "Decoded body"
+}
+```
 
 ## 오류 처리
 {: #openwhisk_webactions_errors}

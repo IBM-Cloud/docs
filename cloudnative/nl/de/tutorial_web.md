@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -11,10 +11,13 @@ lastupdated: "2017-03-17"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Umfassendes Lernprogramm zum Web-Basis-Starter (Web Basic Starter)
+# Umfassendes Lernprogramm zum Web Basic Starter
 {: #tutorial}
 
-Das folgende umfassende Lernprogramm führt Sie durch die Schritte zur Erstellung eines Projekts aus dem Web-Basis-Starter, inklusive der Tools, die Sie installiert haben müssen, sowie durch die Schritte zum Ausführen des Projektcodes. 
+Das folgende umfassende Lernprogramm führt Sie durch die Schritte zur Erstellung eines Projekts mit dem Web Basic Starter. Dies schließt das Installieren erforderlicher Tools sowie die Schritte zum Ausführen des Projektcodes ein.
+
+Sie können ein Projekt entweder mithilfe der webbasierten [{{site.data.keyword.dev_console}}](#create-devex) oder über das befehlsgesteuerte [{{site.data.keyword.dev_cli_notm}}](#create-cli) erstellen.
+
 
 ## Entwicklertools installieren
 {: #dev_tools}
@@ -25,19 +28,19 @@ Stellen Sie sicher, dass die [vorausgesetzten Entwicklertools ![Symbol für exte
 ## Projekt mit der {{site.data.keyword.dev_console}} erstellen
 {: #create-devex}
 
-1. Erstellen Sie ein Projekt in der {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}}. 
+1. Erstellen Sie ein Projekt in der {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}}.
 
-	1. Klicken Sie auf der Seite **Einführung** in der {{site.data.keyword.dev_console}} auf **Projekt erstellen**.
+	1. Klicken Sie auf der Seite [**Einführung** ![Symbol für externen Link](../icons/launch-glyph.svg " Symbol für externen Link")](https://console.ng.bluemix.net/developer/getting-started/) in der {{site.data.keyword.dev_console}} auf **Projekt erstellen**.
 
 		Alternativ können Sie auf der Seite **Projekte** auf **Projekt erstellen** klicken.
 
-	2. Wählen Sie **Web-App** aus und klicken Sie auf **Weiter**. 
+	2. Wählen Sie **Web-App** aus und klicken Sie auf **Weiter**.
 
-	3. Wählen Sie **Basic Web** aus und klicken Sie auf **Weiter**. 
+	3. Wählen Sie **Basic Web** aus und klicken Sie auf **Weiter**.
 
-	4. Geben Sie Ihren Projektnamen ein. Verwenden Sie für dieses Lernprogramm `WebBasicProject`.    
+	4. Geben Sie Ihren Projektnamen ein. Verwenden Sie für dieses Lernprogramm `WebBasicProject`.   
 
-	5. Geben Sie einen Hostnamen ein. Verwenden Sie für dieses Lernprogramm `devhost`.  
+	5. Geben Sie einen eindeutigen Hostnamen ein. Verwenden Sie für dieses Lernprogramm `devhost`. 
 
 	6. Wählen Sie Ihre Sprachplattform aus. Verwenden Sie für dieses Lernprogramm `Swift`.
    
@@ -47,30 +50,37 @@ Stellen Sie sicher, dass die [vorausgesetzten Entwicklertools ![Symbol für exte
 
 	1. Klicken Sie auf der Seite **Projektübersicht** für **Data** auf **Anzeigen**.
 
-      Alternativ können Sie **Erstellen** oder **Vorhandenen hinzufügen** auf der Seite **Funktionen > Data** aus. 
+      Alternativ können Sie **Erstellen** oder **Vorhandenen hinzufügen** auf der Seite **Funktionen > Data** aus.
 
    2. Geben Sie Ihren Servicenamen ein und klicken Sie auf **Erstellen**.
 
+3. Generieren Sie den Projektcode:
 
-3. Generieren Sie den Projektcode.
-
-	1. Klicken Sie auf der Seite **Projektübersicht** auf **Code abrufen**, um Ihre Sprache auszuwählen. 
+	1. Klicken Sie auf der Seite **Projektübersicht** auf **Code abrufen**, um Ihre Sprache auszuwählen.
    
 		Alternativ können Sie auf die Seite **Code** klicken.
       
-	2. Klicken Sie auf **Code generieren**. 
+	2. Klicken Sie auf **Code generieren**.
    
 	3. Wenn die Projektcodegenerierung fertig ist, klicken Sie auf **Code herunterladen**, um Ihr Projektarchiv herunterzuladen.
 
-4. Optional: [Aktualisieren Sie das Projekt](project_overview_page.html#update_language), um eine neue Sprache zu generieren. 
+4. Beginnen Sie mit Ihrem heruntergeladenen Projekt zu arbeiten:
+
+	1. Dekomprimieren Sie die archivierte Datei.
+	
+	2. Navigieren Sie zum neuen Projektverzeichnis.
+	
+	3. Verwenden Sie den {{site.data.keyword.dev_cli_notm}}, um fortzufahren.
+
+5. Optional: [Aktualisieren Sie das Projekt](project_overview_page.html#update_language), um eine neue Sprache zu generieren.
 
 
 ## Projekt mit dem {{site.data.keyword.dev_cli_notm}} erstellen
 {: #create-cli}
 
-1. Stellen Sie sicher, dass das [{{site.data.keyword.dev_cli_short}}](dev_cli.html) installiert ist. 
+1. Stellen Sie sicher, dass das [{{site.data.keyword.dev_cli_short}}](dev_cli.html) installiert ist.
 
-2. Navigieren Sie in der Eingabeaufforderung des Terminals zu einem lokalen Verzeichnis Ihrer Wahl und führen Sie den folgenden Befehl aus. 
+2. Navigieren Sie in der Eingabeaufforderung des Terminals zu einem lokalen Verzeichnis Ihrer Wahl und führen Sie den folgenden Befehl aus.
   
 	```
 	bx dev create
@@ -78,7 +88,7 @@ Stellen Sie sicher, dass die [vorausgesetzten Entwicklertools ![Symbol für exte
 	{: codeblock}
 
 
-3. Geben Sie bei Aufforderung die folgenden Werte an: 
+3. Geben Sie bei Aufforderung die folgenden Werte an:
 
 	* Wählen Sie ein Muster aus: 1 (für Web)
 	* Wählen Sie einen Starter aus: 1 (für Basic Web)
@@ -86,20 +96,13 @@ Stellen Sie sicher, dass die [vorausgesetzten Entwicklertools ![Symbol für exte
 	* Geben Sie einen Namen für Ihr Projekt ein: `WebBasicProjectCLI`
 	* Geben Sie einen Hostnamen für Ihr Projekt ein: `myhost`
 
-4. Wenn Sie Services zu Ihrem Projekt hinzufügen möchten, geben Sie `y` ein, wenn Sie in der Eingabeaufforderung danach gefragt werden, und beantworten Sie die restlichen Fragen. 
+4. Wenn Sie Services zu Ihrem Projekt hinzufügen möchten, geben Sie `y` ein, wenn Sie in der Eingabeaufforderung danach gefragt werden, und beantworten Sie die restlichen Fragen.
 
-5. Navigieren Sie nach dem erfolgreichen Speichern des Projekts `WebBasicProjectCLI` zum Ordner `WebBasicProjectCLI`. 
+5. Navigieren Sie nach dem erfolgreichen Speichern des Projekts `WebBasicProjectCLI` zum Ordner `WebBasicProjectCLI`.
 
-6. Fügen Sie eigenen Code hinzu, erstellen Sie das Projekt und führen Sie es aus. 
+6. Fügen Sie eigenen Code hinzu und führen Sie das Projekt aus.
  
-	1. Erstellen Sie das Projekt mit dem folgenden Befehl: 
-   
-		```
- 		bx dev build
- 		```     
-		{: codeblock}
-
-	2. Führen Sie das Projekt mit dem folgenden Befehl aus: 
+	1. Führen Sie das Projekt mit dem folgenden Befehl aus:
  
 		```
 		bx dev run
@@ -113,81 +116,81 @@ Stellen Sie sicher, dass die [vorausgesetzten Entwicklertools ![Symbol für exte
 ### Lokal
 {: #local notoc}
 
-1. Installieren Sie Ihre Knotenabhängigkeiten: 
+1. Installieren Sie Ihre Knotenabhängigkeiten:
 
   ```
   npm install
   ```
   {: codeblock}
 
-2. Bündeln Sie den Front-End-Code in einem Modul: 
+2. Bündeln Sie den Front-End-Code in einem Modul:
 
   ```
   node_modules/.bin/gulp
   ```
   {: codeblock}
 
-3. Kompilieren Sie den Server: 
+3. Kompilieren Sie den Server:
 
   ```
   swift build
   ```
   {: codeblock}
 
-4. Führen Sie die Anwendung aus: 
+4. Führen Sie die Anwendung aus:
 
   ```
   .build/debug/WebBasicProjectCLI
   ```
   {: codeblock}
 
-5. Öffnen Sie im Browser `http://localhost:8080`. 
+5. Öffnen Sie im Browser `http://localhost:8080`.
 
 
 ### {{site.data.keyword.dev_cli_short}} verwenden
 {: #dev notoc}
 
-1. Installieren Sie die Knotenabhängigkeiten: 
+1. Installieren Sie die Knotenabhängigkeiten:
 
   ```
   npm install
   ```
   {: codeblock}
 
-2. Bündeln Sie den Front-End-Code in einem Modul: 
+2. Bündeln Sie den Front-End-Code in einem Modul:
 
   ```
   gulp
   ```
   {: codeblock}
 
-3. Führen Sie die Kompilierung aus: 
+3. Führen Sie die Kompilierung aus:
 
   ```
   bx dev run
   ```
   {: codeblock}
 
-4. Öffnen Sie im Browser `http://localhost:8080`. 
+4. Öffnen Sie im Browser `http://localhost:8080`.
 
 
 ## Eigenes Projekt in Xcode ausführen
 {: #Xcode}
 
-1. Erstellen Sie ein Xcode-Projekt. 
+1. Erstellen Sie ein Xcode-Projekt.
 
-	Damit Sie mit der Entwicklung in Xcode beginnen können, müssen Sie mit dem Paketmanager für Swift ein Xcode-Projekt erstellen. 
+	Damit Sie mit der Entwicklung in Xcode beginnen können, müssen Sie mit dem Paketmanager für Swift ein Xcode-Projekt erstellen.
 	
 	```
 	swift project generate-xcodeproj
 	```
 	{: codeblock}
 
-2. Ändern Sie das aktive Ziel in die ausführbare Datei: 
+2. Ändern Sie das aktive Ziel in die ausführbare Datei:
 
 	Öffnen Sie anschließend das Projekt in Xcode und stellen Sie sicher, dass das aktuelle Ziel die ausführbare Datei ist. Sie können die Optionstaste gedrückt halten, während Sie auf das Dropdown-Menü klicken, um die gewünschte ausführbare Datei auszuwählen. 
 
-3. Klicken Sie auf **Ausführen**. 
+3. Klicken Sie auf **Ausführen**.
 
-4. Öffnen Sie im Browser `http://localhost:8080`. 
+4. Öffnen Sie im Browser `http://localhost:8080`.
 

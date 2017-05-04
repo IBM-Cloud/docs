@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-28"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}  
@@ -14,13 +14,13 @@ lastupdated: "2017-03-28"
 # {{site.data.keyword.dev_cli_short}}
 {: #developercli}	
 
-The {{site.data.keyword.dev_cli_long}} provides an extensible command driven approach for creating, developing, and deploying a web project with the `dev` plug-in. Ideal for developers that would like to use command-line control while developing end-to-end microservice applications.
+The {{site.data.keyword.dev_cli_long}} provides an extensible command driven approach for creating, developing, and deploying a web project with the `dev` plug-in. Ideal for developers that would like to use command-line control when developing end-to-end microservice applications.
 
 {: shortdesc}
 
-The {{site.data.keyword.dev_cli_notm}} uses two containers to facilitate building and testing your application. The first is the tools container which contains the necessary utilities to build and test your application. The Dockerfile for this container is defined by the [dockerfile-tools](#command-parameters) parameter. You might think of it as a development container as it contains the tools normally useful for development of a particular runtime.
+The {{site.data.keyword.dev_cli_notm}} uses two containers to facilitate building and testing your application. The first is the tools container, which contains the necessary utilities to build and test your application. The Dockerfile for this container is defined by the [dockerfile-tools](#command-parameters) parameter. You might think of it as a development container as it contains the tools normally useful for development of a particular runtime.
 
-The second container is the run container. This container is of a form suitable to be deployed for use, for example, in {{site.data.keyword.Bluemix}}. As a result, this container generally will have an entry point defined that starts your application. When you select to run your application through the {{site.data.keyword.dev_cli_short}}, it uses this container. The Dockerfile for this container is defined by the [dockerfile-run](#run-parameters) parameter.
+The second container is the run container. This container is of a form suitable to be deployed for use, for example, in {{site.data.keyword.Bluemix}}. As a result, this container generally has an entry point defined that starts your application. When you select to run your application through the {{site.data.keyword.dev_cli_short}}, it uses this container. The Dockerfile for this container is defined by the [dockerfile-run](#run-parameters) parameter.
 
 
 ## Adding the {{site.data.keyword.dev_cli_notm}}
@@ -30,15 +30,15 @@ The second container is the run container. This container is of a form suitable 
 ### Prerequisites
 {: #prereq}
 
-A few prerequisites are required to fully explore and properly utilize the {{site.data.keyword.dev_cli_short}}, as it is highly extensible and allows you to leverage additional complimentary technologies.
+There are a few prerequisites that allow you to fully explore and properly utilize the {{site.data.keyword.dev_cli_short}}, as it is highly extensible and allows you to leverage more complementary technologies.
 
-1. Install the [Cloud Foundry CLI ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/cli#getting-started).
+<!--1. Install the [Cloud Foundry CLI ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/cli#getting-started).-->
 
 2. Install the [{{site.data.keyword.Bluemix}} CLI ![External link icon](../icons/launch-glyph.svg "External link icon")](http://clis.ng.bluemix.net/ui/home.html).
 
 3. Obtain a [{{site.data.keyword.Bluemix_notm}}](https://www.bluemix.net) ID.
 
-4. Optional: If you plan on running and debugging applications locally then you must also install [Docker ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.docker.com/get-docker). This is required only for non-mobile projects.
+4. If you plan on running and debugging applications locally, then you must also install [Docker ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.docker.com/get-docker). Docker installation is only  required for non-mobile projects.
 
 
 ### Before you begin
@@ -58,7 +58,7 @@ A few prerequisites are required to fully explore and properly utilize the {{sit
 	```
 	{: codeblock}
 	
-	**Note:** If your credentials are rejected you might be using a Federated ID. Follow these steps to authenticate using a Federated ID.
+	**Note:** If your credentials are rejected, you might be using a Federated ID. Follow these steps to authenticate by using a Federated ID.
 	
 	<!-- 
 	POINT TO BLUEMIX CLI LOG IN DOCUMENTATION !!!
@@ -104,7 +104,7 @@ Use the following commands to create a project, deploy, debug, and test it.
 ### Build
 {: #build}
 
-You can build your application using the `build` command. The `build-cmd-run` configuration element is used to build the application. The `test`, `debug`, and `run` commands all run a build in the same way as this command as part of their normal operation, and so executing this command before these is not necessary.
+You can build your application by using the `build` command. The `build-cmd-run` configuration element is used to build the application. The `test`, `debug`, and `run` commands all run a build automatically, so running the build command explicitly beforehand is not always necessary.
 
 Run the following command in your current project directory to build your application:  
 
@@ -120,7 +120,7 @@ bx dev build
 ### Code
 {: #code}
 
-The `code` command allows you to download application code after deployment, so you can review locally or make additional changes.
+Use the `code` command to download application code after deployment, so you can review it locally or make changes.
 
 Run the following command to download the code from a specified project.
 
@@ -133,7 +133,7 @@ bx dev code <projectName>
 ### Create
 {: #create}
 
-Create a new project, prompting for all required information, including language, project name and app pattern type. The project will be created in the current directory. 
+Create a new project, prompting for all information, including language, project name, and app pattern type. The project is created in the current directory. 
 
 To create a new project in the current project directory and associate services with it, run the following command:
 
@@ -146,9 +146,9 @@ bx dev create
 ### Debug
 {: #debug}
 
-You can debug your application through the `debug` command. A build is first completed against the project using the `build-cmd-debug` configuration element as the build instruction. A container is then started exposing a debug port or ports as defined in the `container-port-map-debug`. Connect your favorite debug tool to the port or ports, and you can debug your application as normal.
+You can debug your application through the `debug` command. A build is first completed against the project by using the `build-cmd-debug` configuration element as the build instruction. A container is then started which provides a debug port or ports as defined in the `container-port-map-debug`. Connect your favorite debug tool to the port or ports, and you can debug your application as normal.
 
-**Limitation**: Currently Swift projects are not available for debug.
+**Limitation**: Swift projects are not available for debug.
 
 Run the following command in your current project directory to debug your application:
 
@@ -169,7 +169,7 @@ assist with debugging an application.
 ##### `container-port-map-debug`
 {: #port-map-debug}
 
-* Port mappings for the debug port. The first value is the port to use in the host OS, the second is the port in the container (host:container).
+* Port mappings for the debug port. The first value is the port to use in the host OS, the second is the port in the container [host-port:container-port].
 * Usage: `bx dev debug container-port-map-debug [7777:7777]`
 
 ##### `build-cmd-debug`
@@ -181,7 +181,7 @@ assist with debugging an application.
 ##### `debug-cmd`
 {: #debug-cmd}
 
-* Used to debug code in the tools container. This is optional if your `build-cmd-debug` will start your application in debug.
+* Used to debug code in the tools container. This parameter is optional if your `build-cmd-debug` starts your application in debug.
 * Usage: `bx dev debug debug-cmd /the/debug/command`
 
 #### Local application debugging:
@@ -193,7 +193,7 @@ For more information about local application debugging, see [Local application d
 ### Delete
 {: #delete}
 
-This command allows you to remove projects from your {{site.data.keyword.Bluemix}} space. You may run the command without parameters to list available projects to delete. Project code and directories are not removed from your local disk space.
+Use the `delete` command to remove projects from your {{site.data.keyword.Bluemix}} space. You can run the command without parameters to list available projects to delete. Project code and directories are not removed from your local disk space.
 
 Run the following command to delete your project from {{site.data.keyword.Bluemix}}:
 
@@ -209,7 +209,7 @@ bx dev delete <projectName>
 ### Help
 {: #help}
 
-By default, if no action or arguments are passed in, or if the 'help' action is provided, this command will show a general "Help" text. General help displayed includes a description of the base arguments as well as a listing of the available actions.  
+By default, if no action or arguments are passed in, or if the 'help' action is provided, this command shows a general "Help" text. General help displayed includes a description of the base arguments as well as a listing of the available actions.  
 
 Run the following command to display General help information:
 
@@ -248,7 +248,7 @@ bx dev edit
 ### Run
 {: #run}
 
-You can run your application through the `run` command. A build is first completed against the project using the `build-cmd-run` configuration element as the build instruction. The run container is then started and exposes the ports as defined in the `container-port-map`. The `run-cmd` can be used to invoke the application if the run container does not contain an entry point to complete this step. 
+You can run your application through the `run` command. A build is first completed against the project by using the `build-cmd-run` configuration element as the build instruction. The run container is then started and exposes the ports as defined in the `container-port-map`. The `run-cmd` can be used to invoke the application if the run container does not contain an entry point to complete this step. 
 
 Run the following command in your current project directory to start your application:
 
@@ -299,13 +299,13 @@ assist with managing your application within the run container.
 ##### `run-cmd`
 {: #run-cmd}
 
-* Optional parameter used to run code in the run container. This is optional if your image will start your application.
+* Parameter that is used to run code in the run container. This parameter is optional if your image starts your application.
 * Usage: `bx dev run run-cmd [/the/run/command]`
 	
 ### Status
 {: #status}
 
-You can query the status of the containers used by the {{site.data.keyword.dev_cli_short}} as defined by `container-name-run` and `container-name-tools`. 
+You can query the status of the containers that are used by the {{site.data.keyword.dev_cli_short}} as defined by `container-name-run` and `container-name-tools`. 
 
 Run the following command in your current project directory to check container status:
 
@@ -321,7 +321,7 @@ bx dev status
 ### Stop
 {: #stop}
 
-You can stop a container through the `stop` command. The `container-name` parameter allows you to specify the container to stop. If this is not specified, the stop command stops the run container as defined by `container-name-run`. 
+You can stop a container through the `stop` command. Use the `container-name` parameter to specify a container to stop. If this parameter is not specified, the stop command stops the run container as defined by the `container-name-run` parameter. 
 
 Run the following command in your current project directory to stop a container:
 
@@ -343,7 +343,7 @@ bx dev stop
 ### Test
 {: #test}
 
-You can test your application through the `test` command. A build is first completed against the project using the `build-cmd-run` configuration element as the build instruction. The tools container is then used to invoke the `test-cmd` for the application.
+You can test your application through the `test` command. A build is first completed against the project by using the `build-cmd-run` configuration element as the build instruction. The tools container is then used to invoke the `test-cmd` for the application.
 
 Run the following command to test your application: 
 
@@ -361,7 +361,7 @@ bx dev test
 
 The following parameters can be used with the `build|debug|run|test` commands or by updating the project's `cli-config.yml` file directly. Additional parameters are available for the [`debug`](#debug-parameters) and [`run`](#run-parameters) commands.
 
-**Note**: Command parameters entered on the command line take precedence over the `cli-config.yml` configuration.
+**Note**: Command parameters that are entered on the command line take precedence over the `cli-config.yml` configuration.
 
 ### `container-name-tools`  
 {: #container-name-tools}
@@ -384,7 +384,7 @@ The following parameters can be used with the `build|debug|run|test` commands or
 ### `container-port-map`
 {: #container-port-map}
 
-* Port mappings for the container. The first value is the port to use in the host OS, the second is the port in the container (host:container).
+* Port mappings for the container. The first value is the port to use in the host OS, the second is the port in the container [host-port:container-port].
 * Usage: `bx dev <build|debug|run|test> container-port-map [8090:8090,9090,9090]`
 
 ### `dockerfile-tools`

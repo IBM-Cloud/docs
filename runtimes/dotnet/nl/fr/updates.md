@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-06"
+  years: 2015, 2017
+lastupdated: "2017-03-30"
 
 ---
 
@@ -14,6 +14,28 @@ lastupdated: "2016-10-06"
 
 
 Liste des dernières mises à jour apportées au pack de construction aspnet.
+
+## 29 mars 2017 : pack de construction ASP.NET Core v1.0.13-20170330-1023 mis à jour
+
+* Ajout de la prise en charge de .NET Core runtime 1.0.4
+* Ajout de la prise en charge de .NET Core runtime 1.1.1
+* Ajout de la prise en charge de .NET SDK 1.0.1
+* Mise à jour de Node à la version 6.10.0
+* Retrait du support de .NET Core SDK 1.0.0-preview2-003131
+* Retrait du support de .NET Core SDK 1.0.0-preview3-004056
+
+## 31 janvier 2017 : pack de construction ASP.NET Core v1.0.10-20170124-1145 mis à jour
+
+* Ajout de la prise en charge de .NET Core 1.0.3
+* Ajout de la prise en charge de l'outillage .NET Core MSBuild 
+* Ajout de la prise en charge des projets F#
+* Retrait du support de .NET Core SDK 1.0.0-preview2-003121
+
+## 9 décembre 2016 : pack de construction ASP.NET Core v1.0.6-20161205-0912 mis à jour
+
+* Ajout de la prise en charge de .NET Core 1.1.0
+* Retrait du support de .NET Core 1.0.0 RC2
+* Ajout d'une option d'effacement du cache de packages NuGet
 
 ## 10 octobre 2016 : Pack de construction ASP.NET Core v1.0.1-20161005-1225 mis à jour
 
@@ -60,7 +82,7 @@ qui dépendent d'éditions bêta plus anciennes avec la commande de démarrage p
 * L'utilisation du serveur Web Nowin a été retirée de ce pack de construction et le serveur Web [Kestrel]{https://github.com/aspnet/KestrelHttpServer} est utilisé à la place.
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
-{: #general}
+{: #general notoc}
 * [Environnement d'exécution Dotnet Core](index.html)

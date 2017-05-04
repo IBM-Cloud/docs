@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -14,12 +14,14 @@ lastupdated: "2017-03-17"
 # Tutorial de ponta a ponta do Iniciador Microservice Basic
 {: #tutorial}
 
-O tutorial de ponta a ponta a seguir percorre as etapas para criar um projeto por meio do Iniciador Microservice Basic, incluindo as ferramentas que devem ser instaladas e, subsequentemente, as etapas para executar o código do projeto.
+O tutorial de ponta a ponta a seguir o acompanha nas etapas para criar um projeto por meio do Microservice Basic Starter. Isso inclui instalar ferramentas de pré-requisito e as etapas para executar o código do projeto.
+
+É possível criar um projeto usando o [{{site.data.keyword.dev_console}}](#create-devex) baseado na web ou por meio do [{{site.data.keyword.dev_cli_notm}}](#create-cli) orientado por comando.
 
 ## Instalando ferramentas do desenvolvedor
 {: #dev_tools}
 
-Assegure-se de que você tenha instalado as [ferramentas do desenvolvedor de pré-requisito ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](get_code.html#prereq-dev-tools){: new_window}.
+Assegure-se de instalar as [ferramentas de desenvolvedor de pré-requisito![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](get_code.html#prereq-dev-tools){: new_window}.
 
 
 ## Criando um projeto usando o {{site.data.keyword.dev_console}}
@@ -27,7 +29,7 @@ Assegure-se de que você tenha instalado as [ferramentas do desenvolvedor de pr�
 
 1. Crie um projeto no {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}}.
 
-	1. Na página **Introdução** no {{site.data.keyword.dev_console}}, clique em **Criar projeto**.
+	1. Na página [**Introdução** ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/developer/getting-started/) no {{site.data.keyword.dev_console}}, clique em **Criar projeto**.
 
 		Como alternativa, clique em **Criar projeto** na página **Projetos**.
 
@@ -37,7 +39,7 @@ Assegure-se de que você tenha instalado as [ferramentas do desenvolvedor de pr�
 
 	4. Insira o nome do projeto. Para este tutorial, use `MicroserviceProject`.   
 
-	5. Insira um nome do host. Para este tutorial, use `devhost`. 
+	5. Insira um nome do host exclusivo. Para este tutorial, use `devhost`. 
    
 	6. Clique em **Criar**.
 
@@ -49,7 +51,7 @@ Assegure-se de que você tenha instalado as [ferramentas do desenvolvedor de pr�
 
    2. Insira o nome do serviço e clique em **Criar**.
 
-3. Gere seu código do projeto.
+3. Gere seu código do projeto:
 
 	1. Clique em **Obter o código** na página **Visão geral do projeto** para selecionar sua linguagem.
    
@@ -61,13 +63,21 @@ Assegure-se de que você tenha instalado as [ferramentas do desenvolvedor de pr�
 em **Fazer download do código** para fazer
 download do seu archive de projeto.
 
-4. Opcional: [atualize seu projeto](project_overview_page.html#update_language) para gerar uma nova linguagem.
+4. Comece a trabalhar com seu projeto transferido por download:
+
+	1. Expanda o arquivo arquivado.
+	
+	2. Navegue até o novo diretório de projeto.
+	
+	3. Use o {{site.data.keyword.dev_cli_notm}} para continuar.
+
+5. Opcional: [atualize seu projeto](project_overview_page.html#update_language) para gerar uma nova linguagem.
 
 
-## Criando um projeto usando a {{site.data.keyword.dev_cli_notm}}
+## Criando um projeto usando o {{site.data.keyword.dev_cli_notm}}
 {: #create-cli}
 
-1. Assegure-se de que tenha instalado a [{{site.data.keyword.dev_cli_short}}](dev_cli.html).
+1. Assegure-se de instalar o [{{site.data.keyword.dev_cli_short}}](dev_cli.html).
 
 2. No prompt do Terminal, navegue para um diretório local de sua preferência e execute o comando a seguir.
   
@@ -85,29 +95,29 @@ download do seu archive de projeto.
 
 4. Se desejar incluir serviços no projeto, digite `y` no prompt de pergunta e responda às perguntas restantes.
 
-5. Quando o `MicroserviceProjectCLI` tiver sido salvo com sucesso, navegue para a pasta `MicroserviceProjectCLI`.
+5. Quando seu `MicroserviceProjectCLI` estiver salvo com sucesso, navegue até a pasta `MicroserviceProjectCLI`.
 
-6. Nesse ponto será possível incluir seu próprio código, construir ou executar o projeto.
+6. Agora, é possível incluir seu próprio código, construir ou executar o projeto.
  
  
-## Executando o projeto usando a {{site.data.keyword.dev_cli_notm}}
+## Executando o projeto usando o {{site.data.keyword.dev_cli_notm}}
 {: #running-dev-plugin}
 
-1. Para construir o projeto no diretório de projeto atual, insira o comando a seguir:
+1. Para construir o projeto em seu diretório de projeto atual, insira o comando a seguir:
 
 	```
 	bx dev build
 	```     
 	{: codeblock}
 
-2. Para construir e executar o projeto no diretório de projeto atual, insira o comando a seguir:
+2. Para construir e executar o projeto em seu diretório de projeto atual, insira o comando a seguir:
 
 	```
 	bx dev run
 	```
 	{: codeblock}	
 
-3. É possível acessar o aplicativo usando curl no servidor:
+3. É possível acessar o aplicativo usando `curl` em seu servidor:
 
 	```
 	curl http://localhost:8080	

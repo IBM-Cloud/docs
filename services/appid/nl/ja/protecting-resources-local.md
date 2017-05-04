@@ -2,7 +2,7 @@
 
 copyright:
   years:  2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2017-03-30"
 # ローカル開発環境での {{site.data.keyword.appid_short_notm}} の使用
 {: #protecting-local}
 
-ローカル環境を、{{site.data.keyword.appid_short}} サービスを使用するように構成できます。具体的には、{{site.data.keyword.appid_short_notm}} サーバー SDK を使用してコードをローカルで開発し、要求を開発サーバーに送信することができます。
+ローカル環境を、{{site.data.keyword.appid_short}} サービスを使用するように構成できます。具体的には、{{site.data.keyword.appid_short_notm}} Server SDK を使用してコードをローカルで開発し、要求を開発サーバーに送信できます。
 {:shortdesc}
 
 
@@ -48,7 +48,7 @@ lastupdated: "2017-03-30"
 <table> <caption> 表 1。{{site.data.keyword.Bluemix_notm}} 地域と対応する Android および iOS の {{site.data.keyword.appid_short_notm}} 地域</caption>
 <tr>
   <th> Bluemix 地域</th>
-  <th> Android</th>
+  <th> Android と iOS</th>
 </tr>
 <tr>
   <td> 米国南部</td>

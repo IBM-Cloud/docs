@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,7 +12,9 @@ lastupdated: "2017-01-08"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Angepasste Authentifizierung für {{site.data.keyword.amashort}}-Cordova-App konfigurieren
+**Wichtig: Der Service {{site.data.keyword.amafull}} wird durch den Service {{site.data.keyword.appid_full}} ersetzt.**
+
+# Angepasste Authentifizierung für die Mobile Client Access-Cordova-App konfigurieren
 {: #custom-cordova}
 
 Instrumentieren Sie die Cordova-Anwendung für die Verwendung der angepassten Authentifizierung und des {{site.data.keyword.amafull}}-Client-SDKs für den Zugriff auf die geschützte Anwendung.
@@ -107,7 +109,7 @@ Der folgende Code zeigt, wie ein Authentifizierungslistener eines Kunden Berecht
 ## Workflow für die Beispielimplementierung eines angepassten Authentifizierungslisteners
 {: #custom-cordova-authlisten-sample}
 
-Dieses Beispiel für einen Authentifizierungslistener ist für die Ausführung mit einem angepassten Identitätsprovider gedacht. Sie können den angepassten Identitätsprovider aus [diesem Github-Repository ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "Symbol für externen Link"){: new_window} herunterladen.
+Dieses Beispiel für einen Authentifizierungslistener ist für die Ausführung mit einem angepassten Identitätsprovider gedacht. Sie können den angepassten Identitätsprovider aus [diesem Github-Repository ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window} herunterladen.
 
 ```JavaScript
 var customAuthenticationListener = {

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-01"
+lastupdated: "2017-03-22"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -39,7 +39,7 @@ aggregationschedule|-|-| いいえ|再作成可能。
 
 {{site.data.keyword.iotinsurance_short}} のデータをバックアップするには、以下の手順を実行します。
 
-## {{site.data.keyword.cloudant}} インスタンスのレプリカの作成
+## {{site.data.keyword.cloudant_short_notm}} インスタンスのレプリカの作成
 {: #createinstance}
 {{site.data.keyword.cloudant}} インスタンスのレプリカを作成するには、[{{site.data.keyword.cloudant}} のレプリケーションの手順 ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://docs.cloudant.com/replication.html) に従います。災害復旧が目的の場合、元の {{site.data.keyword.iotinsurance_short}} サービスとは別の場所にレプリカを作成します。例えば、元のインスタンスがダラスにある場合、レプリカをロンドンに作成することができます。
 

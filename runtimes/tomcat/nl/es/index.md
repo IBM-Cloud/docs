@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-03-23"
 
 ---
 
@@ -49,19 +49,19 @@ Para obtener más información, consulte [releases de java-buildpack](https://gi
 {: #https_redirect}
 
 El tiempo de Tomcat se puede configurar de modo que confíe en los proxies internos de Bluemix y permita la redirección del tráfico de HTTP a HTTPS (SSL).
-Para ello, modifique el archivo server.xml estableciendo el elemento RemoteIpValve Valve con las opciones internalProxies y protocolHeader. 
+Para ello, modifique el archivo server.xml estableciendo el elemento RemoteIpValve Valve con las opciones internalProxies y protocolHeader.
 
-El tiempo de ejecución de Tomcat [server.xml](https://github.com/cloudfoundry/java-buildpack/blob/master/resources/tomcat/conf/server.xml) que se incluye en el paquete de compilación solo establece la opción protocolHeader del elemento RemoteIpValve Valve de forma predeterminada. Para redirigir el tráfico de HTTP a HTTPS en Bluemix configure el elemento RemoteIpValve en el archivo server.xml personalizado del siguiente modo: 
+El tiempo de ejecución de Tomcat [server.xml](https://github.com/cloudfoundry/java-buildpack/blob/master/resources/tomcat/conf/server.xml) que se incluye en el paquete de compilación solo establece la opción protocolHeader del elemento RemoteIpValve Valve de forma predeterminada.  Para redirigir el tráfico de HTTP a HTTPS en Bluemix configure el elemento RemoteIpValve en el archivo server.xml personalizado del siguiente modo:
 
 ```
  <Valve className='org.apache.catalina.valves.RemoteIpValve' protocolHeader='x-forwarded-proto' internalProxies='.*' />
 ```
 {: codeblock}
 
-Encontrará más opciones de configuración para RemoteIpValve en la [documentación de Tomcat](https://tomcat.apache.org/tomcat-8.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html).
+Encontrará más opciones de configuración para RemoteIpValve en la [documentación de Tomcat![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://tomcat.apache.org/tomcat-8.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html).
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
-{: #general}
+{: #general notoc}
 * [java-buildpack](https://github.com/cloudfoundry/java-buildpack)

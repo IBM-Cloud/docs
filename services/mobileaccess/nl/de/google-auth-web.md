@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -11,6 +11,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+**Wichtig: Der Service {{site.data.keyword.amafull}} wird durch den Service {{site.data.keyword.appid_full}} ersetzt.**
 
 # Google-Authentifizierung für Webanwendungen aktivieren
 {: #google-auth-web}
@@ -31,7 +33,7 @@ Voraussetzungen:
 ## Google-Anwendung für die Website konfigurieren
 {: #google-auth-config}
 
-Erstellen Sie zur Verwendung von Google als Identitätsprovider ein Projekt in [Google Developer Console ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.developers.google.com "Symbol für externen Link"){: new_window}. Zum Erstellen eines Projekts gehört das Anfordern einer **Google-Client-ID** und eines **geheimen Schlüssels**. Die Google-Client-ID und der geheime Schlüssel sind die eindeutigen Kennungen für Ihre Anwendung, die von der Google-Authentifizierung verwendet werden und zum Einrichten des {{site.data.keyword.amashort}}-Dashboards erforderlich sind.
+Erstellen Sie zur Verwendung von Google als Identitätsprovider ein Projekt in der [Google Developer Console ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.developers.google.com){: new_window}. Zum Erstellen eines Projekts gehört das Anfordern einer **Google-Client-ID** und eines **geheimen Schlüssels**. Die Google-Client-ID und der geheime Schlüssel sind die eindeutigen Kennungen für Ihre Anwendung, die von der Google-Authentifizierung verwendet werden und zum Einrichten des {{site.data.keyword.amashort}}-Dashboards erforderlich sind.
 
 1. Öffnen Sie Ihre Google-Anwendung in der Google Developer Console.
 3. Fügen Sie die **Google+**-API hinzu.
@@ -39,7 +41,7 @@ Erstellen Sie zur Verwendung von Google als Identitätsprovider ein Projekt in [
 4. Speichern Sie die Änderungen. Notieren Sie die **Google-Client-ID** und den **geheimen Schlüssel der Anwendung**.
 
 
-## {{site.data.keyword.amashort}} für die Google-Authentifizierung konfigurieren
+## Mobile Client Access für die Google-Authentifizierung konfigurieren
 {: #google-auth-config-ama}
 
 Wenn Sie eine Google-Anwendungs-ID und einen geheimen Schlüssel besitzen, können Sie die Google-Authentifizierung im {{site.data.keyword.amashort}}-Dashboard aktivieren.
@@ -55,7 +57,7 @@ Wenn Sie eine Google-Anwendungs-ID und einen geheimen Schlüssel besitzen, könn
 5. Klicken Sie auf **Speichern**.
 
 
-## {{site.data.keyword.amashort}}-Berechtigungsablauf mit Google als Identitätsprovider implementieren
+## Mobile Client Access-Berechtigungsablauf mit Google als Identitätsprovider implementieren
 {: #google-auth-flow}
 
 Die Umgebungsvariable `VCAP_SERVICES` wird automatisch für jede {{site.data.keyword.amashort}}-Serviceinstanz erstellt und enthält Eigenschaften, die für den Berechtigungsprozess erforderlich sind. Sie besteht aus einem JSON-Objekt und kann durch Klicken auf die Registerkarte **Service Credentials** im {{site.data.keyword.amashort}}-Service-Dashboard angezeigt werden.
@@ -94,15 +96,12 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 		res.send("Hello from protected endpoint"); 
  });
 
-	app.get("/protected", checkAuthentication, function(req, res, next){
-		res.send("Hello from protected endpoint"); 
- 	function checkAuthentication(req, res, next){
-
-			// Prüfen, ob Benutzer authentifiziert ist
+	function checkAuthentication(req, res, next){
+		// Prüfen, ob Benutzer authentifiziert ist
  	if (req.session.userIdentity){
-				next()
-			} else {
-				// If not - redirect to authorization server 
+			next()
+		} else {
+			// If not - redirect to authorization server 
 				var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
 				var authorizationEndpoint = mcaCredentials.authorizationEndpoint; 
 				var clientId = mcaCredentials.clientId; 
@@ -112,9 +111,7 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 				redirectUrl += "&redirect_uri=" + redirectUri; 
 				res.redirect(redirectUrl); 
 			}
-		 	}
-	   	}
-       }
+	}
 	```
 	{: codeblock}
 
@@ -192,7 +189,7 @@ Im nächsten Schritt werden Zugriffstoken und Identitätstokens mithilfe des zuv
 	Nachdem Sie das Zugriffstoken und das Identitätstoken empfangen haben, können Sie die Websitzung als authentifiziert markieren und optional diese Tokens speichern.  
 
 
-##Abgerufenes Zugriffs- und Identitätstoken verwenden
+## Abgerufenes Zugriffs- und Identitätstoken verwenden
 {: #google-auth-using-token}
 
 Das Identitätstoken enthält Informationen zu der Benutzeridentität. Bei der Google-Authentifizierung enthält das Token alle Informationen, bei denen der Benutzer eingewilligt hat, dass sie geteilt werden, wie zum Beispiel den vollständigen Namen, die URL des Profilfotos usw.  
@@ -203,7 +200,7 @@ Um Anforderungen an geschützte Ressourcen zu stellen, fügen Sie einen Berechti
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-####Tipps:
+#### Tipps:
 {: #tips}
 
 * `accessToken` und `idToken` müssen durch ein Leerzeichen getrennt werden.

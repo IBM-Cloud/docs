@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-12"
+lastupdated: "2017-05-02"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -101,24 +101,4 @@ Learn what you can do with {{site.data.keyword.iotinsurance_short}}.
 
 - Use the instructions and APIs in the Shield Toolkit to create a [user and shield association](iotinsurance_shield_toolkit.html).
 <!-- - Install and connect the [sample mobile app](iotinsurance_mobile_app.html). -->
-- Get started programming. Download or view the [{{site.data.keyword.iotinsurance_short}} API examples ![External link icon](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window} on the GitHub repository.
-
-## Related Links
-{: #rellinks}
-
-**Tutorials and samples**
-{: #samples}
-* [{{site.data.keyword.iotinsurance_short}} shields library ![External link icon](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-shields){: new_window}
-* [Sample mobile app code on GitHub ![External link icon](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-**API reference**
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API ![External link icon](../../icons/launch-glyph.svg)](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API Examples ![External link icon](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-
-**Other links**
-{: #general}
-* [{{site.data.keyword.iot_full}} documentation](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [Developer support forum ![External link icon](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix]){:new_window}
-* [Stack overflow support forum ![External link icon](../../icons/launch-glyph.svg)](http://stackoverflow.com/questions/tagged/ibm-bluemix){:new_window}
+- Download or view all the [API examples on the GitHub site ![External link icon](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}.

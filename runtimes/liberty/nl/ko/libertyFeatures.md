@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-07-28"
+  years: 2015, 2017
+lastupdated: "2017-02-07"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2016-07-28"
 Liberty for Java 인스턴트 런타임에는 Liberty 프로파일 기능 서브세트가 포함됩니다. Liberty 프로파일에서 제공하는 일부 기능은 클라우드 환경에서 적용할 수 없기 때문에 Liberty for Java 인스턴트 런타임에서 사용할 수 없습니다. 
 
 Bluemix에 특정한 다음 기능이 포함됩니다. 
-* appState-1.0
+* appstate-2.0
 * cloudAutowiring-1.0
 * logAnalysis-1.0
 
@@ -34,14 +34,14 @@ Bluemix에 특정한 다음 기능이 포함됩니다.
 <td>apiDiscovery-1.0</td>
 <td>appSecurity-1.0</td>
 <td>appSecurity-2.0</td>
-<td>appState-1.0</td>
+<td>appstate-2.0</td>
 </tr>
 
 <tr>
 <td>batch-1.0</td>
 <td>batchManagement-1.0</td>
 <td>beanValidation-1.0</td>
-<td>beanValidation-1.1</td>
+<td>beanValidation-1.1 </td>
 </tr>
 
 <tr>
@@ -132,77 +132,77 @@ Bluemix에 특정한 다음 기능이 포함됩니다.
 <td>logAnalysis-1.0</td>
 <td>logstashCollector-1.0</td>
 <td>managedBeans-1.0</td>
-<td>mdb-3.1</td>
+<td>microProfile-1.0</td>
 </tr>
 
 <tr>
-<td>mdb-3.2 </td>
+<td>mdb-3.1</td>
+<td>mdb-3.2</td>
 <td>mediaServerControl-1.0</td>
 <td>mongodb-2.0</td>
-<td>monitor-1.0</td>
 </tr>
 
 <tr>
+<td>monitor-1.0</td>
 <td>oauth-2.0</td>
 <td>openid-2.0</td>
 <td>openidConnectClient-1.0</td>
-<td>openidConnectServer-1.0</td>
 </tr>
 
 <tr>
+<td>openidConnectServer-1.0</td>
 <td>osgiAppIntegration-1.0</td>
 <td>osgiConsole-1.0</td>
 <td>osgi.jpa-1.0</td>
-<td>passwordUtilities-1.0</td>
 </tr>
 
 <tr>
+<td>passwordUtilities-1.0</td>
 <td>restConnector-1.0</td>
 <td>requestTiming-1.0</td>
 <td>rtcomm-1.0</td>
-<td>rtcommGateway-1.0</td>
 </tr>
 
 <tr>
+<td>rtcommGateway-1.0</td>
 <td>samlWeb-2.0</td>
 <td>scim-1.0</td>
 <td>servlet-3.0</td>
-<td>servlet-3.1</td>
 </tr>
 
 <tr>
+<td>servlet-3.1</td>
 <td>sessionDatabase-1.0</td>
 <td>sipServlet-1.1</td>
 <td>spnego-1.0</td>
-<td>ssl-1.0</td>
 </tr>
 
 <tr>
+<td>ssl-1.0</td>
 <td>timedOperations-1.0</td>
 <td>wab-1.0</td>
 <td>wasJmsClient-1.1</td>
-<td>wasJmsClient-2.0</td>
 </tr>
 
 <tr>
+<td>wasJmsClient-2.0</td>
 <td>wasJmsSecurity-1.0</td>
 <td>wasJmsServer-1.0</td>
 <td>webCache-1.0</td>
-<td>webProfile-6.0</td>
 </tr>
 
 <tr>
+<td>webProfile-6.0</td>
 <td>webProfile-7.0</td>
 <td>websocket-1.0</td>
 <td>websocket-1.1</td>
-<td>wmqJmsClient-1.1</td>
 </tr>
 
 <tr>
+<td>wmqJmsClient-1.1</td>
 <td>wmqJmsClient-2.0</td>
 <td>wsSecurity-1.1</td>
 <td>wsSecuritySaml-1.1</td>
-<td></td>
 </tr>
 </table>
 
@@ -221,9 +221,9 @@ Java EE 버전 및 기타 정보와 함께 Liberty에서 사용 가능한 전체
 그러나 원격 EJB는 Bluemix 환경의 포트 제한사항 때문에
 CORBA/IIOP 프로토콜을 사용하여 원격 액세스할 수 없습니다. 
 
-# 관련 링크
-{: #rellinks}
-## 일반
-{: #general}
+# rellinks
+{: #rellinks notoc}
+## general
+{: #general notoc}
 * [Liberty 런타임](index.html)
 * [Liberty 프로파일 개요](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

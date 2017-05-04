@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-16"
+lastupdated: "2017-03-01"
 
 ---
 
@@ -13,11 +13,21 @@ lastupdated: "2017-02-16"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Analisi dei log dell'applicazione CF dalla CLI
+# Analisi dei log dalla CLI
 {: #analyzing_logs_cli}
 
-In {{site.data.keyword.Bluemix}}, puoi visualizzare, filtrare e analizzare i log attraverso l'interfaccia riga di comando utilizzando il comando **cf logs**. Utilizza la riga comandi per gestire i log a livello di programmazione. 
+In {{site.data.keyword.Bluemix}}, puoi visualizzare, filtrare e analizzare i log attraverso l'interfaccia riga di comando (CLI). Utilizza la riga comandi per gestire i log a livello di programmazione. 
 {:shortdesc}
+
+Per analizzare i log dell'applicazione Cloud Foundry (CF) utilizza il seguente comando: `cf logs`
+Per ulteriori informazioni, vedi [Analisi dei log dalla CLI](logging_view_cli.html#analyzing_cf_logs_cli).
+
+Per analizzare i log del contenitore Docker, utilizza il seguente comando: `cf ic logs`
+Per ulteriori informazioni, vedi [Analisi dei log del contenitore Docker dalla CLI](logging_view_cli.html#analyzing_container_logs_cli).
+
+
+## Analisi dei log dell'applicazione CF dalla CLI
+{: #analyzing_cf_logs_cli}
 
 Utilizza il comando **cf logs** per visualizzare i log da un'applicazione Cloud Foundry e dai componenti di sistema che interagiscono con essa quando la distribuisci in {{site.data.keyword.Bluemix_notm}}. Il comando **cf logs** visualizza i flussi di log STDOUT e STDERR di un'applicazione Cloud Foundry.
 
@@ -27,6 +37,16 @@ Per visualizzare i log che ti interessano o per escludere i contenuti che non vu
 * Per visualizzare i record di log più recenti di un'applicazione Cloud Foundry, vedi [Visualizzazione delle ultime voci di log per un'applicazione Cloud Foundry](logging_view_cli.html#tailing_log_cli).
 * Per visualizzare i record di log di un'applicazione Cloud Foundry in uno specifico intervallo di tempo, vedi [Visualizzazione di una sezione dei log](logging_view_cli.html#partial_log_cli).
 * Per visualizzare le voci di log di un'applicazione Cloud Foundry che contengono specifiche parole chiave, vedi [Visualizzazione di voci di log contenenti determinate parole chiave](logging_view_cli.html#partial_by_keyword_log_cli).
+
+
+## Analisi dei log del contenitore Docker dalla CLI 
+{: #analyzing_container_logs_cli}
+
+Utilizza il comando `cf ic logs` per visualizzare i log da un contenitore in {{site.data.keyword.Bluemix_notm}}. Ad esempio, puoi usare i log per analizzare il motivo per cui un contenitore si è arrestato o per rivedere l'aout del contenitore. 
+
+Per visualizzare gli errori dell'applicazione in esecuzione in un contenitore tramite il comando `cf ic logs`, l'applicazione deve scrivere i propri log nei flussi di output dell'output standard (STDOUT) e dell'errore standard (STDERR). Se progetti la tua applicazione per scrivere questi flussi di output standard, puoi visualizzare i log tramite la riga di comando anche se il contenitore viene spento o ha un arresto anomalo.
+
+Per ulteriori informazioni sui comandi `cf ic logs`, consulta [Comando cf ic logs](/docs/containers/container_cli_reference_cfic.html#container_cli_reference_cfic__logs).
 
 
 ## Visualizzazione dei log per un'applicazione Cloud Foundry
@@ -97,32 +117,27 @@ Per ulteriori informazioni sull'opzione **grep**, immetti **grep --help**.
 
 I seguenti log sono disponibili per un'applicazione Cloud Foundry dopo averla distribuita in {{site.data.keyword.Bluemix}}:
 
-<dl><dt><strong>buildpack.log</strong></dt>
-<dd>
-<p>Questo file di log registra eventi informativi accurati per il
+**buildpack.log**
+
+Questo file di log registra eventi informativi accurati per il
 debug. Puoi utilizzare il log per risolvere problemi relativi all'esecuzione dei pacchetti di
-build.</p>
+build.
 
-<p>Per generare dei dati nel file <span class="ph filepath">buildpack.log</span>, devi abilitare la traccia del pacchetto di build utilizzando il seguente comando:</p>
-
-   <pre class="pre">cf set-env <var class="keyword varname">nomeapplicazione</var> JBP_LOG_LEVEL DEBUG</pre>
+Per generare dei dati nel file *buildpack.log*, devi abilitare la traccia del pacchetto di build utilizzando il seguente comando: `cf set-env appname JBP_LOG_LEVEL DEBUG`
    
-<p>Per visualizzare questo log, immetti il seguente comando:</p>
+Per visualizzare questo log, immetti il seguente comando: `cf files appname app/.buildpack-diagnostics/buildpack.log`
 
-    <pre class="pre">cf files <var class="keyword varname">nomeapp</var> app/.buildpack-diagnostics/buildpack.log</pre>
 
-</dd>
+**staging_task.log**
 
-<dt><strong>staging_task.log</strong></dt>
-<dd><p>Questo file di log registra i messaggi dopo i passi principali dell'attività di
+Questo file di log registra i messaggi dopo i passi principali dell'attività di
 preparazione. Puoi utilizzare questo log per risolvere i problemi relativi alla
-preparazione.</p>
+preparazione.
 
-<p>Per visualizzare questo log, immetti il seguente comando:</p>
+Per visualizzare questo log, immetti il seguente comando: `cf files appname logs/staging_task.log`
 
-    <pre class="pre">cf files <var class="keyword varname">nomeapp</var> logs/staging_task.log</pre>
-</dd>
-</dl>
 
 **Nota:** per informazioni su come abilitare la registrazione dell'applicazione, vedi [Debug degli errori di runtime](/docs/debug/index.html#debugging-runtime-errors).
+
+
 

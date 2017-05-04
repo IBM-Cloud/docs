@@ -19,13 +19,13 @@ lastupdated: "2017-01-10"
 <!--
 
 ## Visualizing data with custom charts
-{: #custom-charts}
+{: #custom-charts notoc}
 
 You can visualize the collected analytics data in your analytics repository. This visualization is a powerful way to inspect data for specific use cases. You can create charts with data that is already collected by Operational Analytics, in addition to custom data that you report.
 
 
 ### Creating custom charts for app logs
-{: #custom-charts-client-logs}
+{: #custom-charts-client-logs notoc}
 
 You can create a custom chart for app logs that contain log information that is sent with the Logger API for the platform. The log information also includes contextual information about the device, including environment, app name, and app version.
 
@@ -58,7 +58,7 @@ In this example, you use app log data to create a flow chart. The final graph sh
 7. Click **Save**
 
 ### Exporting custom data
-{: #export-custom-data}
+{: #export-custom-data notoc}
 
 You can export the data from each custom chart into JSON, XML, or CSV format.
 
@@ -67,7 +67,7 @@ The structure of the exported data depends on the chart that is being exported. 
 
 
 ### Exporting and importing custom chart definitions
-{: #export-import-custom}
+{: #export-import-custom notoc}
 
 You can import and export custom chart definitions programmatically or manually in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
 
@@ -97,7 +97,7 @@ Puede establecer umbrales en las definiciones de alerta en la consola de {{site.
 Puede configurar umbrales que, si se superan, activan alertas para notificar al monitor de la consola de {{site.data.keyword.mobileanalytics_short}}. Las alertas activadas se pueden visualizar en la consola o bien se pueden gestionar con un webhook personalizado. <!-- This feature provides a proactive means of detecting app log errors, server log errors, extended periods of network latency, and authentication failures.--> Gracias a esta función, se pueden detectar de forma proactiva errores y detenciones anómalas de la aplicación en los registros de cliente. Gracias a los umbrales y las alertas reactivos, no hace falta que examine a conciencia los datos y puede establecer umbrales con un espectro de granularidad amplio.
 
 ### Creación de una definición de alerta para registros de aplicaciones
-{: #alert-def-client-logs}
+{: #alert-def-client-logs notoc}
 
 Puede crear una definición de alerta basada en registros de aplicaciones.
 
@@ -131,7 +131,7 @@ En este ejemplo, utilice los datos de registro de la aplicación para crear una 
 Ha creado una definición de alerta para activar una alerta al término de cada intervalo de 5 minutos si los registros de app alcanzan el umbral de 3 o más registros de error.
 
 ### Creación de una definición de alerta para bloqueos de aplicaciones
-{: #alert-def-app-crash}
+{: #alert-def-app-crash notoc}
 
 Puede crear una definición de alerta basada en bloqueos de aplicaciones.
 
@@ -160,7 +160,7 @@ En este ejemplo se utilizan los datos de bloqueo de aplicaciones para crear una 
 5. Pulse **Guardar**.
 
 ### Gestión de definiciones de alerta
-{: #managing-alert-definitions}
+{: #managing-alert-definitions notoc}
 
 En este ejemplo se gestionan las definiciones de alerta desde la página Gestión de alertas.
 
@@ -171,7 +171,7 @@ En este ejemplo se gestionan las definiciones de alerta desde la página Gestió
 5. Opcional: Pulse el icono **Papelera** si desea suprimir una definición de alerta.
 
 ### Visualización de los detalles de alertas
-{: #viewing-alert-details}
+{: #viewing-alert-details notoc}
 
 En este ejemplo se muestran los detalles de las alertas activadas desde la página Registro de alertas.
 
@@ -190,7 +190,7 @@ En este ejemplo se muestran los detalles de las alertas activadas desde la pági
 Puede consultar la información de los bloqueos de aplicaciones en la consola de {{site.data.keyword.mobileanalytics_short}} a fin de supervisar las aplicaciones y resolver los posibles problemas de forma más eficaz.
 
 ### Supervisión de bloqueos de aplicaciones
-{: #app-crash}
+{: #app-crash notoc}
 
 En la tabla **Visión general de bloqueos** de la página **Bloqueos** se muestran las siguientes columnas de datos:
 
@@ -207,9 +207,9 @@ Puede visualizar los datos de bloqueos de dos formas:
 2. Visualizar bloqueos totales: bloqueos totales con el tiempo
 
 ### Resolución de problemas de bloqueos de apps
-{: #app-crash-troubleshooting}
+{: #app-crash-troubleshooting notoc}
 
-La página **Resolución de problemas** de la consola de <!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}} ofrece una vista granular de los bloqueos de app, utilizando la tabla **Resumen de bloqueos**. 
+La página **Resolución de problemas** de la consola de <!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}} ofrece una vista granular de los bloqueos de app, utilizando la tabla **Resumen de bloqueos**.
 
 La tabla **Resumen de bloqueos** se puede ordenar e incluye las siguientes columnas de datos:
 
@@ -237,7 +237,7 @@ Expanda cualquier entrada de la tabla **Detalles de bloqueo** para obtener infor
 {: #monitor-network-requests}
 
 
-Consulte los datos de las solicitudes de red correspondientes a las aplicaciones en la consola de {{site.data.keyword.mobileanalytics_short}}.  
+Consulte los datos de las solicitudes de red correspondientes a las aplicaciones en la consola de {{site.data.keyword.mobileanalytics_short}}. 
 
 Dispone de datos para las siguientes medidas:
 	

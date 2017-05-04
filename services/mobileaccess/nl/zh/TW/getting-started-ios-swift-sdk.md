@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+**重要事項：{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。**
 
 # 設定 iOS Swift SDK
 {: #getting-started-ios}
@@ -31,7 +32,7 @@ lastupdated: "2017-01-15"
 * **承租戶 ID**。在 {{site.data.keyword.amashort}} 儀表板中，開啟服務。按一下**行動選項**。`tenantId`（也稱為 `appGUID`）值會顯示在**應用程式 GUID/承租戶 ID** 欄位中。您需要此值來起始設定「{{site.data.keyword.amashort}} 授權管理程式」。
 * **應用程式路徑**。這是後端應用程式的 URL。在傳送要求至其受保護端點時，將需要此值。
 * {{site.data.keyword.Bluemix_notm}} **地區**。您可以在標頭中找到您目前的 {{site.data.keyword.Bluemix_notm}} 地區，就在**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示") 的旁邊。出現的地區值應該是下列其中一項：`美國南部`、`雪梨`或`英國`，並對應至程式碼中所需的 SDK 值：`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom` 或 `BMSClient.Region.sydney`。您需要此值來起始設定 {{site.data.keyword.amashort}} SDK。
-* Xcode 專案。如需如何設定 iOS 開發環境的相關資訊，請參閱 [Apple Developer 網站 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.apple.com/support/xcode/ "External link icon"){: new_window}。
+* Xcode 專案。如需如何設定 iOS 開發環境的相關資訊，請參閱 [Apple Developer 網站 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.apple.com/support/xcode/){: new_window}。
 
 
 ## 安裝 {{site.data.keyword.amashort}} 用戶端 SDK
@@ -46,25 +47,25 @@ lastupdated: "2017-01-15"
 
 1. 如果您未安裝 CocoaPods，請執行：
 
-
 ```
 sudo gem install cocoapods
 ```
 {: codeblock}
 
-如需相關資訊，請參閱 [CocoaPods 網站 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cocoapods.org/ "外部鏈結圖示"){: new_window}。
+如需相關資訊，請參閱 [CocoaPods 網站 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cocoapods.org/){: new_window}。
 
 ### 使用 CocoaPods 安裝 {{site.data.keyword.amashort}} 用戶端 SDK
 {: #install-sdk-cocoapods}
 
 1. 在終端機視窗中，導覽至您 iOS 專案的根目錄。
 
-1. 如果您尚未起始設定 CocoaPods 的工作區，請執行 `pod init` 指令。<br/>CocoaPods 會為您建立 `Podfile` 檔案，其中定義 iOS 專案的相依關係。
+1. 如果您尚未起始設定 CocoaPods 的工作區，請執行 `pod init` 指令。<br/>
+ CocoaPods 會為您建立 `Podfile` 檔案，其中定義 iOS 專案的相依關係。
 
 1. 編輯 `Podfile` 檔案，並將下行新增至必要目標：
 
 	```
-use_frameworks!
+  use_frameworks!
   pod 'BMSSecurity'
 	```
 	{: codeblock}
@@ -108,10 +109,10 @@ use_frameworks!
 	 let mcaAuthManager = MCAAuthorizationManager.sharedInstance
     mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
       // possible values for regionName: BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom, BMSClient.Region.sydney
-	BMSClient.sharedInstance.authorizationManager = mcaAuthManager	
+	BMSClient.sharedInstance.authorizationManager = mcaAuthManager
 	return true
 	}
- ```
+  ```
   {: codeblock}
 
 * 將 `tenantId` 取代為從**行動選項**中取得的值。
@@ -127,12 +128,9 @@ use_frameworks!
 
 1. 嘗試在瀏覽器中將要求傳送給行動後端應用程式上的受保護端點。開啟下列 URL：`{applicationRoute}/protected`，並將 `{applicationRoute}` 取代為從**行動選項**中擷取的 **applicationRoute** 值（請參閱[起始設定 Mobile Client Access 用戶端 SDK](#init-mca-sdk-ios)）。例如：
 
-	`http://my-mobile-backend.mybluemix.net/protected
-	`
+	`http://my-mobile-backend.mybluemix.net/protected`
 
 	在瀏覽器中會傳回 `Unauthorized` 訊息，因為只有使用 {{site.data.keyword.amashort}} 用戶端 SDK 所檢測的行動應用程式才能存取這個端點。
-
-
 
 1. 使用 iOS 應用程式以對相同的端點提出要求。起始設定 `BMSClient` 之後，請新增下列程式碼：
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -10,13 +10,15 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+**Importante: o serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.**
+
 # Configurando o SDK do Android
 {: #getting-started-android}
 
 Instrumente seu aplicativo Android com o {{site.data.keyword.amafull}} client SDK, inicialize o SDK e faça as solicitações para recursos protegidos e desprotegidos.
 {: shortdesc}
 
-## Antes de Começar
+## Antes de iniciar
 {: #before-you-begin}
 
 Você deve ter:
@@ -46,7 +48,8 @@ corresponder aos valores de SDK requeridos no código code SDK:
 `BMSClient.REGION_UK`. Você precisará desse
 valor para inicializar o cliente
 {{site.data.keyword.amashort}}.
-* Um projeto Android Studio, configure para trabalhar com Gradle. Para obter mais informações sobre como configurar seu ambiente de desenvolvimento Android, veja [Google Developer Tools ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://developer.android.com/sdk/index.html "Ícone de link externo"){: new_window}.
+* Um projeto Android Studio, configure para trabalhar com Gradle. Para obter mais informações
+sobre como configurar seu ambiente de desenvolvimento Android, veja [Google Developer Tools ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](http://developer.android.com/sdk/index.html){: new_window}.
 
 ## Instalando o {{site.data.keyword.amashort}} client SDK
 {: #install-mca-sdk}
@@ -117,7 +120,7 @@ seu navegador, abra a URL a seguir: `{applicationRoute}/protected`
 
 	O terminal `/protected` de um aplicativo backend móvel que foi criado com o modelo MobileFirst Services Starter é protegido com {{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada em seu navegador, porque esse terminal só pode ser acessado por aplicativos móveis instrumentados com o SDK do cliente {{site.data.keyword.amashort}}.
 
-1. Use seu aplicativo Android para fazer uma solicitação ao mesmo terminal. Inclua o código a seguir depois de inicializar o `BMSClient`:
+1. Use seu aplicativo Android para fazer uma solicitação ao mesmo terminal. Inclua o código a seguir depois de inicializar `BMSClient`:
 
 	```Java
 	Request request = new Request("http://my-mobile-backend.mybluemix.net/protected", Request.GET);
@@ -144,10 +147,10 @@ seu navegador, abra a URL a seguir: `{applicationRoute}/protected`
 
 	![image](images/getting-started-android-success.png)
 
-## Próximas Etapas
+## Próximas etapas
 {: #next-steps}
 
-Quando você se conectou ao terminal protegido, nenhuma credencial foi necessária. Para requerer que os usuários efetuem login no aplicativo, deve-se configurar autenticação do Facebook, Google ou customizada.
+Quando você se conectou ao terminal protegido, nenhuma credencial foi necessária. Para requerer que os usuários efetuem login em seu aplicativo, deve-se configurar a autenticação do Facebook, do Google ou customizada.
 
 * [Facebook
 ](facebook-auth-android.html)

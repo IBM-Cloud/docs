@@ -1,0 +1,30 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="Nodejs" audience="runtime"}
+SDK for Node.js
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    index.md
+    startup.md
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    runningLocally.md
+    offlineMode.md
+    configurationOptions.md
+    fipsMode.md
+    [Liberty- und Node.js-Apps verwalten](../../manageapps/app_mng.html)
+    [Starteranwendungen verwenden](../../cfapps/starter_app_usage.html)
+    [Mit einem Proxy arbeiten](../../manageapps/workingWithProxy.html)
+    [Community-Buildpacks verwenden](../../cfapps/byob.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    updates.md
+    availableVersions.md
+    nodejsBuildpacks.md
+    ts_index.md
+    [Buildpack Support Statement](../../manageapps/buildpackSupport.html)
+    {: .navgroup-end}

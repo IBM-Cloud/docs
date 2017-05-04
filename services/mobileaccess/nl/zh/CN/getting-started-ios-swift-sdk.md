@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+**重要信息：{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。**
 
 # 设置 iOS Swift SDK
 {: #getting-started-ios}
@@ -31,7 +32,7 @@ lastupdated: "2017-01-15"
 * **TenantID**。在 {{site.data.keyword.amashort}}“仪表板”中打开服务。单击**移动选项**。`tenantId`（也称为 `appGUID`）值会显示在**应用程序 GUID/TenantId** 字段中。您将需要此值来初始化 {{site.data.keyword.amashort}} 授权管理器。
 * **应用程序路径**。这是后端应用程序的 URL。您将需要此值来向其受保护端点发送请求。
 * {{site.data.keyword.Bluemix_notm}} **区域**。您可以在**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的头中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。显示的区域值应为以下某个值：`US South`、`United Kingdom` 或 `Sydney`，并对应于代码中需要的 SDK 值：`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom` 或 `BMSClient.Region.sydney`。您将需要此值来初始化 {{site.data.keyword.amashort}} SDK。
-* Xcode 项目。有关如何设置 iOS 开发环境的更多信息，请参阅 [Apple Developer Web 站点![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.apple.com/support/xcode/ "外部链接图标"){: new_window}。
+* Xcode 项目。有关如何设置 iOS 开发环境的更多信息，请参阅 [Apple Developer Web 站点 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.apple.com/support/xcode/){: new_window}。
 
 
 ## 安装 {{site.data.keyword.amashort}} 客户端 SDK
@@ -51,7 +52,7 @@ sudo gem install cocoapods
 ```
 {: codeblock}
 
-有关更多信息，请参阅 [CocoaPods Web 站点![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cocoapods.org/ "外部链接图标"){: new_window}。
+有关更多信息，请参阅 [CocoaPods Web 站点 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cocoapods.org/){: new_window}。
 
 ### 使用 CocoaPods 安装 {{site.data.keyword.amashort}} 客户端 SDK
 {: #install-sdk-cocoapods}
@@ -59,7 +60,7 @@ sudo gem install cocoapods
 1. 在终端窗口中，浏览到 iOS 项目的根目录。
 
 1. 如果尚未针对 CocoaPods 初始化工作空间，请运行 `pod init` 命令。<br/>
- CocoaPods 会创建 `Podfile` 文件，用于为 iOS 项目定义依赖关系。
+ CocoaPods 会为您创建 `Podfile` 文件，可在此文件中定义 iOS 项目的依赖关系。
 
 1. 编辑 `Podfile` 文件，并将以下行添加到所需目标：
 
@@ -71,8 +72,7 @@ use_frameworks!
 
   **提示：**您可以将 `use_frameworks!` 添加到 Xcode 目标中，而不是置于 Podfile 中。
 
-1. 保存 `Podfile` 文件，然后在命令行中运行 `pod install`。Cocoapods 会安装相关依赖项，并显示添加的依赖项和 Pods。<br/>
-
+1. 保存 `Podfile` 文件，然后在命令行中运行 `pod install`。CocoaPods 会安装相关依赖项，并显示添加的依赖项和 Pods。<br/>
 
    **重要信息**：CocoaPods 会生成 `xcworkspace` 文件。必须打开此文件才能继续处理项目。
 

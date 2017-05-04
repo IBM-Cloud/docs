@@ -14,7 +14,7 @@ lastupdated: "2017-03-08"
 
 
 
-# Toolkit del dispositivo
+# Utilizzo del toolkit del dispositivo
 {: #iot4i_connecting_devices}
 Utilizzando il toolkit del dispositivo {{site.data.keyword.iotinsurance_full}}, puoi collegare i dispositivi creati da un fornitore del dispositivo al tuo servizio {{site.data.keyword.iotinsurance_short}}.
 {:shortdesc}
@@ -57,7 +57,7 @@ Quando il dispositivo viene collegato direttamente a {{site.data.keyword.iot_sho
 
 ### Cloud a Cloud - flusso evento dispositivo
 {: #device_event_flow}
-Il seguente diagramma mostra un flusso dell'evento del dispositivo semplificato. In questo esempio, un dispositivo rileva una fuoriuscita d'acqua. Il trasformatore {{site.data.keyword.iotinsurance_short}} esegue periodicamente il polling delle modifiche nello stato del dispositivo al cloud del fornitore. Quando viene rilevato l'evento, il trasformatore lo invia a {{site.data.keyword.iot_short_notm}}. Il motore dello scudo {{site.data.keyword.iotinsurance_short}} analizza l'evento e genera un avviso e lo archivia in {{site.data.keyword.cloudant}}. {{site.data.keyword.iot_short_notm}} trasferisce l'archivio al motore dell e azioni {{site.data.keyword.iotinsurance_short}} per le analisi. Il motore delle azioni trasmette l'avviso all'applicazione mobile del cliente tramite {{site.data.keyword.mobilepushshort}}.  
+Il seguente diagramma mostra un flusso dell'evento del dispositivo semplificato. In questo esempio, un dispositivo rileva una fuoriuscita d'acqua. Il trasformatore {{site.data.keyword.iotinsurance_short}} esegue periodicamente il polling delle modifiche nello stato del dispositivo al cloud del fornitore. Quando viene rilevato l'evento, il trasformatore lo invia a {{site.data.keyword.iot_short_notm}}. Il motore dello scudo {{site.data.keyword.iotinsurance_short}} analizza l'evento e genera un avviso e lo archivia in {{site.data.keyword.cloudant}}. {{site.data.keyword.iot_short_notm}} trasferisce l'archivio al motore delle azioni {{site.data.keyword.iotinsurance_short}} per le analisi. Il motore delle azioni trasmette l'avviso all'applicazione mobile del cliente tramite {{site.data.keyword.mobilepushshort}}.  
 
 ![{{site.data.keyword.iotinsurance_short}} Flusso di registrazione dell'evento del dispositivo. Questo diagramma è descritto nel corpo principale dell'argomento.](images/IoT4I_device_reg.svg "{{site.data.keyword.iotinsurance_short}} Flusso di registrazione dell'evento del dispositivo")
 

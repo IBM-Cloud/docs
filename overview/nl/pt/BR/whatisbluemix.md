@@ -3,7 +3,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-03-21"
 ---
 
 {:shortdesc: .shortdesc}
@@ -79,14 +79,33 @@ da rede pública. A transferência de dados entre esses dois tipos de ofertas é
 
 Ao acessar o console do {{site.data.keyword.Bluemix_notm}}, a barra de menus exibe links ou botões para se inscrever, efetuar login, acessar a documentação e acessar o catálogo. Depois de efetuar login, a barra de menus contém um menu de hambúrguer ![Ícone de hambúrguer](../icons/icon_hamburger.svg) e links adicionais, dependendo do seu tipo de conta:
 
-* Se você for um novo usuário do {{site.data.keyword.Bluemix_notm}}, poderá usar o menu de hambúrguer ![Ícone de hambúrguer](../icons/icon_hamburger.svg) para alternar entre os painéis Apps,
-Serviços ou Infraestrutura. Os links para as opções de suporte e conta são exibidos e é possível usar o link **Catálogo** para acessar o {{site.data.keyword.Bluemix_notm}} e os serviços de cálculo e de infraestrutura. 
-* Se você for um usuário existente e tiver vinculado a conta do {{site.data.keyword.Bluemix_notm}} e a conta {{site.data.keyword.BluSoftlayer}}, será possível usar o menu de hambúrguer ![Ícone
-de hambúrguer](../icons/icon_hamburger.svg) para alternar entre os painéis Apps, Serviços ou Infraestrutura. Os links para as opções de suporte e conta são exibidos e é possível usar o link Catálogo para acessar o {{site.data.keyword.Bluemix_notm}} e os serviços de cálculo e de infraestrutura. 
-* Se você for um novo usuário existente com uma conta do {{site.data.keyword.Bluemix_notm}}, poderá usar o menu de hambúrguer ![Ícone de hambúrguer](../icons/icon_hamburger.svg) para alternar entre os painéis Apps, Serviços ou
-Infraestrutura. Os links para as opções de suporte e conta são exibidos e é possível usar o link **Catálogo** para acessar o {{site.data.keyword.Bluemix_notm}} e os serviços de cálculo. 
-* Se você for um usuário existente com uma conta {{site.data.keyword.BluSoftlayer}} e não tiver vinculado sua conta ao {{site.data.keyword.Bluemix_notm}}, a barra de menus exibirá os links que estavam disponíveis anteriormente no
-{{site.data.keyword.BluSoftlayer}}, tais como acesso à ajuda do KnowledgeLayer, opções de contato, notificações, chamados abertos e login. Além disso, um link para o painel de Infraestrutura e links para as opções de suporte e conta são exibidos. 
+* Se você for um novo usuário do {{site.data.keyword.Bluemix_notm}}, será possível usar o menu
+de hambúrguer ![Ícone de hambúrguer](../icons/icon_hamburger.svg) para alternar entre os
+painéis Apps, Serviços e Infraestrutura. É possível usar o link **Catálogo** para
+acessar os serviços da plataforma e da infraestrutura. Links para opções de gerenciamento de suporte e conta,
+de faturamento e uso e de segurança também são exibidos.
+* Se você for um usuário existente com uma conta do {{site.data.keyword.Bluemix_notm}}, poderá usar o menu de hambúrguer ![Ícone de hambúrguer](../icons/icon_hamburger.svg) para alternar entre os painéis Apps, Serviços ou
+Infraestrutura. É possível usar o **Catálogo** para acessar os serviços da plataforma e
+da infraestrutura e links para opções de gerenciamento de suporte e conta, de faturamento e uso e de
+segurança de nível de plataforma são exibidos.
+* Se você for um usuário existente e tiver vinculado a conta do
+{{site.data.keyword.Bluemix_notm}} e a conta {{site.data.keyword.BluSoftlayer}}, será possível
+usar o menu de hambúrguer ![Ícone de hambúrguer](../icons/icon_hamburger.svg) para alternar
+entre os painéis Apps, Serviços e Infraestrutura. Também é possível usar o link **Catálogo**
+para acessar os serviços da plataforma e da infraestrutura. 
+  * Quando você está nos painéis Apps e Serviços, a barra de menus inclui links para recursos
+de nível de plataforma, como opções de gerenciamento de documentação, de suporte e conta e de
+segurança do {{site.data.keyword.Bluemix_notm}}. Também é possível acessar links para
+opções de faturamento de nível de infraestrutura. 
+  * Quando você está no painel de Infraestrutura, a barra de menus exibe links para recursos de nível
+de infraestrutura, como ajuda do KnowledgeLayer, opções de contato, notificações, chamados abertos e opções
+de gerenciamento de suporte e de conta.
+* Se você for um usuário existente com uma conta do {{site.data.keyword.BluSoftlayer}} que não
+esteja vinculada ao {{site.data.keyword.Bluemix_notm}}, será possível
+usar o menu de hambúrguer ![Ícone de hambúrguer](../icons/icon_hamburger.svg) para
+acessar o painel de Infraestrutura e o link **Catálogo** para acessar os serviços de
+infraestrutura. A barra de menus também inclui links para ajuda do KnowledgeLayer, opções de contato,
+notificações, chamados abertos e opções de suporte e de conta.
 
 ## Arquitetura do {{site.data.keyword.Bluemix_notm}} Cloud Foundry
 {: #architecture}
@@ -200,6 +219,7 @@ de API cf** | **Console da interface com o usuário** |
 | Região Sul dos EUA | Dallas, EUA | ng | api.ng.bluemix.net | console.ng.bluemix.net |
 | Região do Reino Unido | Londres, Inglaterra | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
 | Região de Sydney | Sydney, Austrália | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
+| Região da Alemanha | Frankfurt, Alemanha | eu-de | api.eu-de.bluemix.net | console.eu-de.bluemix.net |
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} region list" caption-side="top"}
 
 

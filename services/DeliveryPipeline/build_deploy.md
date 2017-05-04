@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-08-29"
+lastupdated: "2017-04-26"
 
 ---
 <!-- Copyright info at top of file: REQUIRED
@@ -22,6 +22,9 @@ lastupdated: "2016-08-29"
 
 The IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} service allows you to implement a repeatable continuous integration and continuous delivery process.
 {:shortdesc}
+
+
+**This service is being deprecated:**  All instances of this service are being deprecated. Existing instances can be used until 5 July 2017. For more information, see the [deprecation announcement blog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/04/delivery-pipeline-retirement/){: new_window}. To get the latest tools for app delivery, use the {{site.data.keyword.contdelivery_full}} service. For upgrade instructions, see [Upgrade your DevOps Services project to a toolchain](/docs/services/ContinuousDelivery/upgrade_projects.html){: new_window}.
 
 Complete the following tasks to create and configure a pipeline.
 
@@ -92,4 +95,3 @@ In addition to job logs, you can view unit test results, generated artifacts, an
 You can also run, cancel, or configure a stage from the Stage History page. At the top of the page, click **RUN** to run a stage or **CONFIGURE** to configure a stage. While a stage is running, you can cancel it by clicking the run number and then clicking CANCEL.
 
 ![Clicking a stage run number to select it on the Stage History page](images/click_stage_run_number.png)
-

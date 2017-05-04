@@ -22,7 +22,7 @@ lastupdated: "2017-02-23"
 | 實體 | 類型 | 參數 | 說明 |
 | --- | --- | --- | --- |
 | `/whisk.system/pushnotifications` | 套件 | appId、appSecret  | 使用 Push 服務 |
-| `/whisk.system/pushnotifications/sendMessage` | 動作 (action) | text、url、deviceIds、platforms、tagNames、gcmPayload、gcmSound、gcmCollapseKey、gcmDelayWhileIdle、gcmPriority、gcmTimeToLive、gcmSync、gcmVisibility、gcmStyleType、gcmStyleTitle、gcmStyleUrl、gcmStyleText、gcmStyleLines、apnsBadge、apnsCategory、apnsIosActionKey、apnsPayload、apnsType、apnsSound、fireFoxTitle、fireFoxIconUrl、fireFoxTimeToLive、fireFoxPayload、chromeTitle、chromeIconUrl、chromeTimeToLive、chromePayload、chromeAppExtTitle、chromeAppExtCollapseKey、chromeAppExtDelayWhileIdle、chromeAppExtIconUrl、chromeAppExtTimeToLive、chromeAppExtPayload | 將推送通知傳送至一個以上的指定裝置 |
+| `/whisk.system/pushnotifications/sendMessage` | 動作 | text、url、deviceIds、platforms、tagNames、gcmPayload、gcmSound、gcmCollapseKey、gcmDelayWhileIdle、gcmPriority、gcmTimeToLive、gcmSync、gcmVisibility、gcmStyleType、gcmStyleTitle、gcmStyleUrl、gcmStyleText、gcmStyleLines、apnsBadge、apnsCategory、apnsIosActionKey、apnsPayload、apnsType、apnsSound、fireFoxTitle、fireFoxIconUrl、fireFoxTimeToLive、fireFoxPayload、chromeTitle、chromeIconUrl、chromeTimeToLive、chromePayload、chromeAppExtTitle、chromeAppExtCollapseKey、chromeAppExtDelayWhileIdle、chromeAppExtIconUrl、chromeAppExtTimeToLive、chromeAppExtPayload | 將推送通知傳送至一個以上的指定裝置 |
 | `/whisk.system/pushnotifications/webhook` | 資訊來源 | 事件 | 在 Push 服務上產生裝置活動（裝置登錄、取消註冊、訂閱或取消訂閱）時發動觸發程式事件 |
 建議使用 `appId` 及 `appSecret` 值來建立套件連結。如此，您就不需要每次在呼叫套件中的動作時都指定這些認證。
 

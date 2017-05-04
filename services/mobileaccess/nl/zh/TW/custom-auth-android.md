@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
+**重要事項：{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。**
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -14,7 +15,7 @@ lastupdated: "2017-01-15"
 {:pre: .pre}
 
 
-# 配置適用於 {{site.data.keyword.amashort}} Android 應用程式的自訂鑑別
+# 配置適用於 Mobile Client Access Android 應用程式的自訂鑑別
 {: #custom-android}
 
 
@@ -39,7 +40,7 @@ lastupdated: "2017-01-15"
 
 
 
-## 起始設定 {{site.data.keyword.amashort}} 用戶端 SDK
+## 起始設定用戶端 SDK
 {: #custom-android-initialize}
 如果您的 Android 應用程式已使用 {{site.data.keyword.amashort}} Android SDK 進行檢測，則可以跳過本節。
 1. 在 Android Studio 的 Android 專案中，開啟應用程式模組的 `build.gradle` 檔案（不是專案 `build.gradle`）。
@@ -138,7 +139,7 @@ void submitAuthenticationFailure (JSONObject info);
 ## 自訂 AuthenticationListener 範例實作
 {: #custom-android-samplecustom}
 
-此 AuthenticationListener 範例設計成使用自訂身分提供者。您可以從 [Github 儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "外部鏈結圖示"){: new_window} 下載此範例。
+此 AuthenticationListener 範例設計成使用自訂身分提供者。您可以從 [Github 儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window} 下載此範例。
 
 ```Java
 package com.ibm.helloworld;

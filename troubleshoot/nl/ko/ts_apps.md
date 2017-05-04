@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-01-10"
+lastupdated: "2017-3-16"
 
 ---
 
@@ -406,9 +406,9 @@ cf push appname -p app_path
 ## {{site.data.keyword.Bluemix_notm}} Live Sync 아이콘이 표시되지 않음
 {: #ts_llz_lkb_3r}
 
-IBM Bluemix DevOps Services에서 앱을 작성했지만 IBM Bluemix Live Sync 아이콘이 Web IDE에 표시되지 않습니다.
+앱을 작성했지만 IBM Bluemix Live Sync 아이콘이 Web IDE에 표시되지 않습니다.
 
-DevOps Services Web IDE에서 Node.js 앱을 편집할 때 {{site.data.keyword.Bluemix_notm}} 실시간 편집, 빠른 다시 시작 및 디버그 아이콘이 표시되지 않습니다.
+Web IDE에서 Node.js 앱을 편집할 때 {{site.data.keyword.Bluemix_notm}} 실시간 편집, 빠른 다시 시작 및 디버그 아이콘이 표시되지 않습니다.
 {: tsSymptoms}
 
 다음과 같은 경우 이 아이콘을 사용할 수 없습니다.
@@ -426,7 +426,7 @@ DevOps Services Web IDE에서 Node.js 앱을 편집할 때 {{site.data.keyword.B
   ```
    path: path_to_application
    ```
-  * 앱과 동일한 디렉토리에 `package.json` 파일을 작성하십시오.
+  * 앱과 동일한 디렉토리에 `package.json` 파일을 작성하십시오.   
   
   
 ## {{site.data.keyword.Bluemix_notm}}에서 조직을 찾을 수 없음
@@ -605,12 +605,12 @@ Node.js 앱을 업데이트하거나 {{site.data.keyword.Bluemix_notm}}에 배�
 Node.js 앱에 대한 추가 팁은 [Tips for Node.js Applications](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘"){: new_window}를 참조하십시오.	
 
 
-## {{site.data.keyword.Bluemix_notm}} Liberty 앱을 Bluemix DevOps Services에서 Eclipse로 가져온 후 `server.xml` 파일에서 구성 오류가 나타남
+## {{site.data.keyword.Bluemix_notm}} Liberty 앱을 Eclipse로 가져온 후 `server.xml` 파일에서 구성 오류가 나타남
 {: #ts_eclipse}
 
-{{site.data.keyword.Bluemix_notm}} Liberty 앱을 IBM Bluemix DevOps Services에서 Eclipse로 가져온 후 `server.xml` 파일에 구성 오류가 표시될 경우, 프로젝트에서 `server.xml` 파일을 제거해야 할 수 있습니다. 
+{{site.data.keyword.Bluemix_notm}} Liberty 앱을 Eclipse로 가져온 후 `server.xml` 파일에 구성 오류가 표시될 경우, 프로젝트에서 `server.xml` 파일을 제거해야 할 수 있습니다. 
 
-{{site.data.keyword.Bluemix_notm}} Liberty 앱을 {{site.data.keyword.Bluemix_notm}} DevOps Services에서 Eclipse로 가져온 후 Eclipse 문제점 보기의 `server.xml` 파일에 구성 오류가 표시됩니다.
+{{site.data.keyword.Bluemix_notm}} Liberty 앱을 Eclipse로 가져온 후 Eclipse 문제점 보기의 `server.xml` 파일에 구성 오류가 표시됩니다.
 {: tsSymptoms}
 
 Liberty 앱이 {{site.data.keyword.Bluemix_notm}}로 푸시되면 Liberty 빌드팩은 `server.xml` 파일을 사용하여 앱을 구성하고 `runtime-vars.xml` 파일을 생성합니다. 앱을 Eclipse로 가져오면 `runtime-vars.xml` 파일이 로컬 환경에 없습니다.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-21"
+lastupdated: "2017-04-04"
 
 ---
 
@@ -78,9 +78,9 @@ an open repo -->
 
 如果事件发起者支持 Webhook/回调工具，那么通过 Hook 设置订阅源非常简单。
 
-通过此方法，*无需*在 OpenWhisk 外部坚持使用任何持久服务。所有订阅源管理工作均通过无状态的 {{site.data.keyword.openwhisk_short}} *订阅源操作*很自然地执行，这些操作直接与第三方 Webhook API 进行协商。
+通过此方法，*无需*在 {{site.data.keyword.openwhisk_short}} 外部坚持使用任何持久服务。所有订阅源管理工作均通过无状态的 {{site.data.keyword.openwhisk_short}} *订阅源操作*很自然地执行，这些操作直接与第三方 Webhook API 进行协商。
 
-使用 `CREATE` 进行调用时，订阅源操作只会为其他某个服务安装 Webhook，并请求远程服务执行 POST 操作将通知发布到 OpenWhisk 中的相应 `fireTrigger` URL。
+使用 `CREATE` 进行调用时，订阅源操作只会为其他某个服务安装 Webhook，并请求远程服务执行 POST 操作将通知发布到 {{site.data.keyword.openwhisk_short}} 中的相应 `fireTrigger` URL。
 
 Webhook 应该定向到向 URL 发送通知，例如：
 
@@ -90,7 +90,7 @@ Webhook 应该定向到向 URL 发送通知，例如：
 
 ## 通过轮询实现订阅源
 
-可以设置 {{site.data.keyword.openwhisk_short}} *操作*来轮询 OpenWhisk 中的整个源订阅源，而无需坚持使用任何持续连接或外部服务。
+可以设置 {{site.data.keyword.openwhisk_short}} *操作*以完全在 {{site.data.keyword.openwhisk_short}} 中轮询源订阅源，而无需坚持使用任何持久连接或外部服务。
 
 对于 Webhook 不可用，但无需大容量或短等待响应时间的订阅源，轮询是很有吸引力的选项。
 
@@ -106,7 +106,7 @@ Webhook 应该定向到向 URL 发送通知，例如：
 
 前 2 个体系结构选项实现起来既简单又轻松。但是，如果需要高性能订阅源，那么没有持续连接和长时间轮询的替代方法或类似方法。
 
-由于 {{site.data.keyword.openwhisk_short}} 操作必须是短时间运行的，因此操作不能保持与第三方的持续连接。必须改为坚持使用始终运行的单独服务（在 OpenWhisk 外部）。我们将这些服务称为*提供者服务*。提供者服务可以保持与第三方事件源的连接，这些事件源支持长时间轮询或其他基于连接的通知。
+由于 {{site.data.keyword.openwhisk_short}} 操作必须是短时间运行的，因此操作不能保持与第三方的持续连接。必须改为坚持使用始终运行的单独服务（在 {{site.data.keyword.openwhisk_short}} 外部）。我们将这些服务称为*提供者服务*。提供者服务可以保持与第三方事件源的连接，这些事件源支持长时间轮询或其他基于连接的通知。
 
 提供者服务应该提供 REST API 以允许 {{site.data.keyword.openwhisk_short}} *订阅源操作*控制订阅源。提供者服务充当事件提供程序和 {{site.data.keyword.openwhisk_short}} 之间的代理；当提供者服务收到来自第三方的事件时，会通过触发触发器来将其发送给 {{site.data.keyword.openwhisk_short}}。
 

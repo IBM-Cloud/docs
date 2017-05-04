@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+**Importante: il servizio {{site.data.keyword.amafull}} è stato sostituito con il servizio {{site.data.keyword.appid_full}}.**
 
 # Configurazione del plugin Cordova
 {: #getting-started-cordova}
@@ -29,7 +30,7 @@ Instrumenta la tua applicazione client Cordova con l'SDK client {{site.data.keyw
 * L'URL della tua applicazione di back-end (**Rotta applicazione**). Avrai bisogno di questo valore per inviare le richieste agli endpoint protetti della tua applicazione di back-end.
 * Il tuo valore **TenantID**. Apri il tuo servizio nel dashboard {{site.data.keyword.amashort}}. Fai clic sul pulsante **Opzioni per dispositivi mobili**. Il valore `tenantId` (noto anche come `appGUID`)  viene visualizzato nel campo **GUID applicazione / TenantId**. Avrai bisogno di questo valore per inizializzare il gestore autorizzazione.
 * La tua **Regione** {{site.data.keyword.Bluemix_notm}}. Puoi trovare la tua regione {{site.data.keyword.Bluemix_notm}} corrente nell'intestazione, accanto all'icona **Avatar** ![Icona Avatar](images/face.jpg "Icona Avatar"). Il valore della regione visualizzato deve essere uno dei seguenti: `Stati Uniti Sud`, `Regno Unito` o `Sydney` e corrisponde ai valori delle SDK richiesti nel codice WebView Javascript: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` o `BMSClient.REGION_UK`. Avrai bisogno di questo valore per inizializzare il client {{site.data.keyword.amashort}}.
-* Crea un'applicazione Cordova o un progetto esistente. Per ulteriori informazioni su come configurare la tua applicazione Cordova, consulta il [sito Web Cordova![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cordova.apache.org/ "Icona link esterno"){: new_window}.
+* Crea un'applicazione Cordova o un progetto esistente. Per ulteriori informazioni su come configurare la tua applicazione Cordova, visita il [sito Web Cordova ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cordova.apache.org/){: new_window}.
 
 ## Installazione del plugin Cordova {{site.data.keyword.amashort}}
 {: #getting-started-cordova-plugin}
@@ -67,7 +68,7 @@ tua applicazione Cordova. Apri il file `config.xml` e aggiungi la seguente riga 
 	```
 	{: codeblock}
 
-	Il valore *minSdkVersion* deve essere maggiore di `15`. Fai riferimento alla [Guida della piattaforma Android![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cordova.apache.org/docs/en/latest/guide/platforms/android/ "Icona link esterno"){: new_window} per restare aggiornato sulla *targetSdkVersion* supportata per l'SDK Android.
+	Il valore *minSdkVersion* deve essere maggiore di `15`. Fai riferimento alla [Guida della piattaforma Android ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cordova.apache.org/docs/en/latest/guide/platforms/android/){: new_window} per restare aggiornato sulla *targetSdkVersion* supportata per l'SDK Android.
 
 3. Se hai aggiunto il sistema operativo iOS, aggiorna l'elemento `<platform name="ios">` con una dichiarazione di destinazione:
 
@@ -109,7 +110,7 @@ tua applicazione Cordova. Apri il file `config.xml` e aggiungi la seguente riga 
 
 	2. Genera ed esegui la tua applicazione con Xcode.
 
-	**Nota**: potresti ricevere il seguente errore durante l'esecuzione di `cordova build ios`. Questo problema è causato da un bug in un plugin della dipendenza che sta venendo tracciato in [Issue 12 ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/blakgeek/cordova-plugin-cocoapods-support/issues/12 "Icona link esterno"){: new_window}. Puoi ancora eseguire il progetto iOS in XCode tramite un simulatore o un dispositivo.
+	**Nota**: potresti ricevere il seguente errore durante l'esecuzione di `cordova build ios`. Questo problema è causato da un bug in un plugin della dipendenza che sta venendo tracciato in  [Issue 12 ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/blakgeek/cordova-plugin-cocoapods-support/issues/12){: new_window}. Puoi ancora eseguire il progetto iOS in XCode tramite un simulatore o un dispositivo.
 
 	```
 	xcodebuild: error: Unable to find a destination matching the provided destination specifier:

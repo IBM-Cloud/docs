@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -104,7 +104,7 @@ El código siguiente muestra cómo utilizar WebAppKituraCredentialsPlugin en una
   												   failureRedirect: LANDING_PAGE_URL
   ))
 
-  // Punto final de cierre de sesión. Borra la información de la sesión
+  // Punto final de cierre de sesión. Borra la información de autenticación de la sesión
   router.get(LOGOUT_URL, handler:  { (request, response, next) in
   	kituraCredentials.logOut(request: request)
   	webappKituraCredentialsPlugin.logout(request: request)

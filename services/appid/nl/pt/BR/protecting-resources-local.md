@@ -1,8 +1,7 @@
 ---
 
 copyright:
-  years:  2017
-lastupdated: "2017-03-16"
+  years: 2017 lastupdated: "2017-04-17"
 
 ---
 {:new_window: target="_blank"}
@@ -16,7 +15,7 @@ lastupdated: "2017-03-16"
 {: #protecting-local}
 
 É possível configurar o seu ambiente local para usar o serviço do {{site.data.keyword.appid_short}}. Especificamente, é possível desenvolver o código
-localmente usando o SDK do servidor {{site.data.keyword.appid_short_notm}} e enviar solicitações ao servidor de desenvolvimento.
+localmente usando o SDK do servidor {{site.data.keyword.appid_short_notm}} para enviar solicitações ao servidor de desenvolvimento.
 {:shortdesc}
 
 
@@ -50,26 +49,22 @@ Para configurar os seus apps para trabalharem com um servidor de desenvolvimento
 serviço.
 2. Substitua a região pela região apropriada, conforme mostrado na tabela a seguir.
 
-<table> <caption> Tabela 1. Regiões do {{site.data.keyword.Bluemix_notm}} e regiões correspondentes do SDK do Android e do iOS </caption>
+<table> <caption> Tabela 1. Regiões do {{site.data.keyword.Bluemix_notm}} e regiões do {{site.data.keyword.appid_short_notm}} correspondentes para Android e iOS </caption>
 <tr>
   <th> Região do Bluemix </th>
-  <th> Android </th>
-  <th> iOS </th>
+  <th> Android e iOS </th>
 </tr>
 <tr>
   <td> Sul dos Estados Unidos </td>
   <td> AppID.REGION_US_SOUTH </td>
-  <td> BMSClient.Region.usSouth </td>
 </tr>
 <tr>
   <td> Sydney </td>
   <td> AppID.REGION_SYDNEY </td>
-  <td> BMSClient.Region.sydney </td>
 </tr>
 <tr>
   <td> United Kingdom </td>
   <td> AppID.REGION_UK </td>
-  <td> BMSClient.Region.unitedKingdom </td>
 </tr>
 </table>
 
@@ -82,6 +77,7 @@ String baseRequestUrl = "http://localhost:<port>"; //set to your server running 
 String tenantId = "your-AppID-service-tenantID";
 String region = AppID.REGION_UK; //set your App ID application region here. Currently possible values are AppID.REGION_US_SOUTH, AppID.REGION_SYDNEY, or
 AppID.REGION_UK.
+
 BMSClient bmsClient= BMSClient.getInstance();
 bmsClient.initialize(getApplicationContext(), region);
 AppID appId = AppID.getInstance();
@@ -116,7 +112,8 @@ request.send(this, new ResponseListener() {
 
  let baseRequestUrl = "http://localhost:<port>"; //set to your server running port
  let tenantId = "your-AppID-service-tenantID"
- let region = AppID.Region.unitedKingdom; //set your App ID application region here. Currently possible values are AppID.Region.usSouth, AppID.Region.sydney, or AppID.Region.unitedKingdom.
+ let region = AppID.REGION_UK; //set your App ID application region here. Currently possible values are AppID.REGION_US_SOUTH, AppID.REGION_SYDNEY, or
+AppID.REGION_UK.
 
 BMSClient.sharedInstance.initialize(bluemixRegion: region)
 BMSClient.sharedInstance.authorizationManager = AppIDAuthorizationManager(appid:AppID.sharedInstance)

@@ -1,6 +1,6 @@
 [앱 관리](/docs/manageapps/mngapps.html)
     mngapps.md
-    [애플리케이션에 서비스 추가](../services/reqnsi.html)
+    [앱에 서비스 추가](../services/reqnsi.html)
         [새 서비스 인스턴스 요청](../services/reqnsi.html#req_instance)
         [애플리케이션이 서비스와 상호작용하도록 구성](../services/reqnsi.html#config)
         [외부 앱이 Bluemix 서비스를 사용하도록 설정](../services/reqnsi.html#accser_external)

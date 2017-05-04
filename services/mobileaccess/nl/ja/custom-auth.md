@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -11,6 +11,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+**重要: {{site.data.keyword.amafull}} サービスは {{site.data.keyword.appid_full}} サービス**に置き換えられます。
 
 # カスタム ID プロバイダーを使用したユーザーの認証
 {: #custom-id}
@@ -108,8 +110,8 @@ lastupdated: "2017-01-15"
 
 カスタム ID プロバイダーを開発する際に参考として使用できる、カスタム ID プロバイダーの Node.js 実装のサンプルを以下に示します。GitHub リポジトリーから、完全なアプリケーション・コードをダウンロードしてください。
 
- * [簡単なサンプル![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "外部リンク・アイコン"){: new_window}
- * [高度なサンプル![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management "外部リンク・アイコン"){: new_window}
+ * [簡単なサンプル![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}
+ * [高度なサンプル![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management){: new_window}
 
 ## {{site.data.keyword.amashort}} Server とカスタム ID プロバイダーとの間の標準的な通信
 {: #custom-id-comm}

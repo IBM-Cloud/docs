@@ -2,9 +2,11 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-06"
 
 ---
+
+**Wichtig: Der Service {{site.data.keyword.amafull}} wird durch den Service {{site.data.keyword.appid_full}} ersetzt.**
 
 # Facebook-Authentifizierung für Web-Apps aktivieren
 {: #facebook_web}
@@ -26,7 +28,7 @@ Zur Verwendung von Facebook als Identitätsprovider auf Ihrer Website müssen Si
 1. Notieren Sie die Anwendungs-ID für Ihre App und den geheimen Schlüssel der App. Sie benötigen diese Werte beim Konfigurieren Ihres Webprojekts für die Facebook-Authentifizierung.
 1. Klicken Sie auf der Seite **Settings** auf **Add Platform** und wählen Sie die Option **Website** aus.
 1. Speichern Sie die Änderungen.
-1. Klicken Sie auf **Facebook Login** in der linken Seitenleiste.
+1. Klicken Sie in der Seitenleiste auf **Facebook Login**.
 1. Geben Sie den Callback-Endpunkt des Autorisierungsservers im Feld **Valid OAuth redirect URIs** ein: https://imf-newauthserver.bluemix.net/oauth/{bluemix_app_guid}/callback. Speichern Sie die Änderungen.
 
 

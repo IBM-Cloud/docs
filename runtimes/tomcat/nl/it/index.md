@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-03-23"
 
 ---
 
@@ -45,7 +45,7 @@ Possono essere entrambe specificate nel file manifest dell'applicazione.  Ad ese
 La versione corrente del pacchetto di build è v3.6 che contiene Tomcat versione 8.30.0 e la versione Java predefinita 1.8.0_71.
 Per ulteriori informazioni, consulta per favore le [java-buildpack releases](https://github.com/cloudfoundry/java-buildpack/releases).
 
-## Reindirizzamento HTTPS 
+## Reindirizzamento HTTPS
 {: #https_redirect}
 
 Il runtime Tomcat può essere configurato per rendere affidabili i proxy interni Bluemix e consentire il reindirizzamento del traffico HTTP a HTTPS (SSL).
@@ -59,10 +59,10 @@ Il runtime Tomcat [server.xml](https://github.com/cloudfoundry/java-buildpack/bl
 {: codeblock}
 
 Possono essere trovate ulteriori opzioni per RemoteIpValve nella
-[Tomcat documentation](https://tomcat.apache.org/tomcat-8.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html).
+[Tomcat documentation ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://tomcat.apache.org/tomcat-8.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html).
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
-{: #general}
+{: #general notoc}
 * [java-buildpack](https://github.com/cloudfoundry/java-buildpack)

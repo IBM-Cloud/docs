@@ -1,22 +1,40 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-03-23"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# sdk-for-nodejs buildpack 的最新更新
+# SDK for Nodejs buildpack 的最新更新
 {: #latest_updates}
 
 sdk-for-nodejs buildpack 中最新更新的列表。
+
+## 2017 年 3 月 10 日：更新了 Node.js buildpack V3.11
+此 buildpack 发行版支持以下 IBM SDK for Node.js 运行时版本：0.10.47、0.10.48、0.12.17、0.12.18、4.7.3、4.8.0、6.9.5 和 6.10.0。现在的缺省版本为 4.8.0。
+
+除了新运行时，此发行版还包含一个修订，用于解决使用 devconsole UI 启用 shell 应用程序管理处理程序时遇到的错误。此 buildpack 还更改了 Monitoring and Analytics 服务的自动配置工作方式。使用免费套餐的应用程序不再向其应用程序添加日志功能，此功能将替换为 logmet。
+
+## 2017 年 1 月 20 日：更新了 Node.js buildpack V3.10
+此 buildpack 发行版支持以下 IBM SDK for Node.js 运行时版本：0.10.47、0.10.48、0.12.17、0.12.18、4.7.0、4.7.2、6.9.2 和 6.9.4。现在的缺省版本为 4.7.2。
+
+此发行版包含一个修订，用于解决不能每次都调用“npm start”来启动应用程序的错误。
+
+## 2016 年 11 月 17 日：更新了 Node.js buildpack V3.9
+此 buildpack 发行版支持以下 IBM SDK for Node.js 运行时版本：0.10.47、0.10.48、0.12.16、0.12.17、4.6.1、4.6.2、6.7.0 和 6.9.1。现在的缺省版本为 4.6.2。
+
+请注意，2016 年 10 月 18 日 Node.js V6 已升级到 LTS 状态，不久将成为此 buildpack 的缺省运行时。Node.js V0.10 已于 2016 年 10 月 31 日到期，很快就不会再包含在此 buildpack 中。有关更多详细信息，请参阅 [Node.js version long-term support and the SDK for Node.js buildpack](https://www.ibm.com/blogs/bluemix/2016/11/node-version-support-and-sdk-buildpack/)。
+
+在此发行版中解决了与 Node.js V6 一起使用时，影响跟踪和检验器“应用程序管理”处理程序的错误。有关 Node.js V6 集成了检验器功能后检验器处理程序有何变化的更多信息，请参阅[管理 Liberty 和 Node.js 应用程序](/docs/manageapps/app_mng.html#inspector)。
+
 ## 2016 年 10 月 7 日：更新了 Node.js buildpack V3.8-20161006-1211
 此 buildpack 发行版支持以下 IBM SDK for Node.js 运行时版本：0.10.46、0.10.47、0.12.15、0.12.16、4.5.0、4.6.0、6.6.0 和 6.7.0。现在的缺省值为 4.6.0。
 
-除了新运行时，此发行版还包含 buildpack 错误修订。使用 Node.js 6.x 和 V3.7-20160826-1101 发行版更新中提到的开发方式时已知问题的修订如下所示。此发行版还与 [Cloud Foundry Node.js buildpack V1.5.20](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.20) 同步。 
+除了新运行时，此发行版还包含 buildpack 错误修订。使用 Node.js 6.x 和 V3.7-20160826-1101 发行版更新中提到的开发方式时已知问题的修订如下所示。此发行版还与 [Cloud Foundry Node.js buildpack V1.5.20](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.20) 同步。
 
 ## 2016 年 8 月 26 日：更新了 Node.js buildpack V3.7-20160826-1101
 此 buildpack 发行版支持以下 IBM SDK for Node.js 运行时版本：0.10.45、0.10.46、0.12.14、0.12.15、4.4.7、4.5.0、6.2.2 和 6.4.0。现在的缺省值为 4.5.0。
@@ -49,13 +67,14 @@ sdk-for-nodejs buildpack 中最新更新的列表。
 
 其中包含对以下安全漏洞的修订：
 * [CVE-2015-8855](http://www-01.ibm.com/support/docview.wss?uid=swg21982852)
-* [CVE-2016-2108 CVE-2016-2107 CVE-2016-2105 CVE-2016-2106 CVE-2016-2109 CVE-2016-2176](https://www.openssl.org/news/secadv/20160503.txt)
+* [CVE-2016-2108 CVE-2016-2107 CVE-2016-2105 CVE-2016-2106 CVE-2016-2109 CVE-2016-2176 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.openssl.org/news/secadv/20160503.txt)
 
 请注意，npm V3 和“应用程序管理”检验器实用程序存在一个已知问题。npm 3.8.6 是 6.0.0 和 6.1.0 运行时的缺省值。如果想要使用其中任一 6.x 运行时与检验器实用程序，那么变通的方法是在 package.json 中指定 2.x npm 版本。
 
 ## 2016 年 4 月 29 日：更新了 Node.js buildpack V3.3-20160428-1409
 
-此 buildpack 发行版添加了 IBM SDK for Node.js 运行时 V0.10.44、0.12.13、4.4.0、4.4.1、4.4.2 和 4.4.3。现在的缺省值为 4.4.3。对于 4.3.1 及更高版本，现在可以通过为应用程序设置 `FIPS_MODE=true` 环境变量来使用已启用 FIPS 的运行时版本。
+此 buildpack 发行版添加了 IBM SDK for Node.js 运行时 V0.10.44、0.12.13、4.4.0、4.4.1、4.4.2 和 4.4.3。现在的缺省值为 4.4.3。
+对于 4.3.1 及更高版本，现在可以通过为应用程序设置 `FIPS_MODE=true` 环境变量来使用已启用 FIPS 的运行时版本。
 
 更新的 buildpack 和新的运行时版本还包含对以下安全漏洞的修订：
 * [CVE-2016-2515](http://www-01.ibm.com/support/docview.wss?uid=swg21977578)
@@ -128,7 +147,9 @@ buildpack: sdk-for-nodejs-v3beta
 ```
 {: codeblock}
 
-如果已在应用程序的 package.json 中配置特定版本的 Node.js，那么对缺省运行时进行此更改不会影响您的应用程序。**注：**您可以始终指定要运行应用程序的 Node.js 版本，方法是如[可用版本](index.html#available_versions)中所述使用 package.json 中的 engines.node 条目。
+如果已在应用程序的 package.json 中配置特定版本的 Node.js，那么对缺省运行时进行此更改不会影响您的应用程序。
+
+**注：**您可以始终指定要运行应用程序的 Node.js 版本，方法是如[可用版本](index.html#available_versions)中所述使用 package.json 中的 engines.node 条目。
 
 ## 2015 年 11 月 23 日：更新了 Node.js buildpack V2.7-20151118-1003
 
@@ -140,12 +161,12 @@ Node.js V2.6.1 引入了对 [StrongPM 应用程序管理处理程序](https://de
 
 ## 2015 年 10 月 15 日：更新了 Node.js buildpack V2.6-20151006-1309
 
-此发行版的 Node.js buildpack 的特点是将 [StrongLoop Process Manager](https://strong-pm.io) 集成到了“应用程序管理”功能部件中。
-有关更多信息，请参阅博客帖子 [StrongLoop DevOps for Node.js Applications on Bluemix](https://developer.ibm.com/bluemix/2015/10/15/strongloop-devops-on-bluemix/)。
+此发行版的 Node.js buildpack 的特点是将 [StrongLoop Process Manager ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://strong-pm.io) 集成到“应用程序管理”功能部件中。有关更多信息，请参阅博客帖子 [StrongLoop DevOps for Node.js Applications on Bluemix](https://developer.ibm.com/bluemix/2015/10/15/strongloop-devops-on-bluemix/)。
 
 ## 2015 年 6 月 15 日：更新了 Node.js buildpack V2.0-20150608-1503
 
-在此发行版中，我们已将 Node.js buildpack 与最新的 [CF 社区 Node.js buildpack](https://github.com/cloudfoundry/nodejs-buildpack) 同步，这带来大量来自该社区的新功能。此外，我们改进了 Node.js buildpack 中的“应用程序管理”功能，该功能启用 shell、node-inspector、Bluemix Live Sync 等实用程序。请参阅[应用程序管理](/docs/manageapps/app_mng.html)，以获取详细信息。
+在此发行版中，我们已将 Node.js buildpack 与最新的 [CF 社区 Node.js buildpack](https://github.com/cloudfoundry/nodejs-buildpack) 同步，这带来大量来自该社区的新功能。
+此外，我们改进了 Node.js buildpack 中的“应用程序管理”功能，该功能启用 shell、node-inspector、Bluemix Live Sync 等实用程序。请参阅[应用程序管理](/docs/manageapps/app_mng.html)，以获取详细信息。
 
 ## 2015 年 5 月 5 日：更新了 Node.js buildpack V1.17-20150429-1033
 
@@ -194,15 +215,15 @@ Node.js V2.6.1 引入了对 [StrongPM 应用程序管理处理程序](https://de
 
 ## 2014 年 8 月 28 日：更新了 Node.js buildpack V1.3-20140821-1143
 
-* 最新的 Node.js buildpack 现在随 IBM SDK for Node.js V1.1.0.6 一起提供。此更新意味着在为应用程序指定最新稳定的 Node.js 运行时 V0.10.30 时，您将获取完全受支持的 IBM Node.js 运行时。此运行时修订 [V8 Memory Corruption 漏洞](http://blog.nodejs.org/2014/07/31/v8-memory-corruption-stack-overflow)。
+* 最新的 Node.js buildpack 现在随 IBM SDK for Node.js V1.1.0.6 一起提供。此更新意味着在为应用程序指定最新稳定的 Node.js 运行时 V0.10.30 时，您将获取完全受支持的 IBM Node.js 运行时。此运行时修订了 [V8 Memory Corruption 漏洞 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://blog.nodejs.org/2014/07/31/v8-memory-corruption-stack-overflow)。
 * 该 buildpack 还包含 Monitoring and Analytics 服务扩展的增强功能和错误修订，使您能够通过该服务诊断性能和错误状况。
 
 ## 2014 年 7 月 29 日：更新了 Node.js buildpack V1.1-20140717-1447
 
-该 Node.js buildpack 现在随 IBM SDK for Node.js V1.1.0.5 一起提供。此更新意味着在为应用程序指定最新稳定的 Node.js 运行时 V0.10.29 时，您将获取完全受支持的 IBM Node.js 运行时。请参阅[此处](https://developer.ibm.com/node/sdk/)，以获取有关 IBM Node.js SDK 的更多信息。
+该 Node.js buildpack 现在随 IBM SDK for Node.js V1.1.0.5 一起提供。此更新意味着在为应用程序指定最新稳定的 Node.js 运行时 V0.10.29 时，您将获取完全受支持的 IBM Node.js 运行时。请参阅有关 [IBM Node.js SDK](https://developer.ibm.com/node/sdk/) 的更多信息。
 
 # 相关链接
-{: #rellinks}
+{: #rellinks notoc}
 ## 常规
-{: #general}
+{: #general notoc}
 * [node.js 运行时](index.html)

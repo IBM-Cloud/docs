@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-06"
+  years: 2015, 2017
+lastupdated: "2017-03-30"
 
 ---
 
@@ -14,6 +14,28 @@ lastupdated: "2016-10-06"
 
 
 aspnet 빌드팩의 최신 업데이트 목록
+
+## 2017년 3월 29일: 업데이트된 ASP.NET Core 빌드팩 v1.0.13-20170330-1023
+
+* .NET Core 런타임 1.0.4에 대한 지원 추가
+* .NET Core 런타임 1.1.1에 대한 지원 추가
+* .NET Core SDK 1.0.1에 대한 지원 추가
+* 노드 버전 6.10.0으로 업데이트
+* .NET Core SDK 1.0.0-preview2-003131에 대한 지원 제거
+* .NET Core SDK 1.0.0-preview3-004056에 대한 지원 제거
+
+## 2017년 1월 31일: 업데이트된 ASP.NET Core 빌드팩 v1.0.10-20170124-1145
+
+* .NET Core 1.0.3에 대한 지원 추가
+* .NET Core MSBuild 도구에 대한 지원 추가
+* F# 프로젝트에 대한 지원 추가
+* .NET Core SDK 1.0.0-preview2-003121에 대한 지원 제거
+
+## 2016년 12월 9일: 업데이트된 ASP.NET Core 빌드팩 v1.0.6-20161205-0912
+
+* .NET Core 1.1.0에 대한 지원 추가
+* .NET Core 1.0.0 RC2에 대한 지원 제거
+* NuGet 패키지 캐시를 지우는 옵션 추가
 
 ## 2016년 10월 10일: 업데이트된 ASP.NET Core 빌드팩 v1.0.1-20161005-1225
 
@@ -58,8 +80,8 @@ aspnet 빌드팩의 최신 업데이트 목록
 
 * Nowin 웹 서버의 사용이 이 빌드팩에서 제거되었으며 그 대신 [Kestrel]{https://github.com/aspnet/KestrelHttpServer} 웹 서버가 사용됩니다.
 
-# 관련 링크
-{: #rellinks}
-## 일반
-{: #general}
+# rellinks
+{: #rellinks notoc}
+## general
+{: #general notoc}
 * [Dotnet Core 런타임](index.html)

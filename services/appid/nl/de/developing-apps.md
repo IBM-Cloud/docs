@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -11,7 +11,8 @@ lastupdated: "2017-03-30"
 {:screen: .screen}
 {:pre: .pre}
 
-# Mobile und Web-Apps entwickeln
+# Beispiel-App und -SDKs einrichten
+{: #developing}
 
 Sobald der {{site.data.keyword.appid_short}}-Service erstellt wurde, können Sie Beispielapps für Android, iOS und Node.js über das Dashboard herunterladen.
 
@@ -19,9 +20,8 @@ Sobald der {{site.data.keyword.appid_short}}-Service erstellt wurde, können Sie
 2. Folgen Sie den Anweisungen im Dashboard, um mit einem Schritt-für-Schritt-Beispiel die Entwicklung zu beginnen.
 
 
-
 ## Webentwicklung
-{: #web-dev}
+{: #web-dev notoc}
 
 Der {{site.data.keyword.appid_short_notm}}-Service schützt Ihre Web-App und erfordert kein bestimmtes SDK.<!--- You can use different identity providers in addition to the protection that is provided by the service.---> Durch die {{site.data.keyword.appid_short_notm}}-Integration können alle Webanwendungen unabhängig von der implementierten Technologie die Vorteile des OAuth2-Protokolls nutzen.
 

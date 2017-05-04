@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -25,13 +25,6 @@ Sie können das {{site.data.keyword.appid_short}}-Server-SDK verwenden, um Resso
 
 **Hinweis**: Es gibt andere Frameworks, die `Express`-Frameworks verwenden, wie zum Beispiel LoopBack. Sie können das {{site.data.keyword.appid_short_notm}}-Server-SDK mit einem beliebigen dieser Frameworks verwenden.
 
-## Informationen zum Server-SDK
-{: #about}
-
-Das {{site.data.keyword.appid_short_notm}}-Server-SDK stellt eine ApiStrategy-Passwort-Strategie zur Verfügung, die in Back-End-Anwendungen verwendet werden, die in {{site.data.keyword.Bluemix_notm}} bereitgestellt werden. Zum Schutz Ihrer App gegen unbefugten Zugriff müssen Sie Ihren Node.js-Server mit ApiStrategy instrumentieren. Das NPM-Modul `appid-serversdk-nodejs` stellt die Passport-Strategie 'ApiStrategy' und eine Verifizierungsmethode bereit, um das von {{site.data.keyword.appid_short_notm}} ausgegebene Zugriffstoken und ID-Token zu validieren.
-
-Das {{site.data.keyword.appid_short_notm}}-Server-SDK verwendet das Passport-Framework, um die Berechtigung umzusetzen, siehe <a href="http://passportjs.org/" target="_blank">Passport-Framework <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a>.
-
 
 ## Server-SDK installieren
 {: #protecting-resources-serversdk}
@@ -48,6 +41,10 @@ Das {{site.data.keyword.appid_short_notm}}-Server-SDK verwendet das Passport-Fra
 
 ## Ressourcen in Node.js schützen
 {: #protecting-resources-nodesdk}
+
+Das {{site.data.keyword.appid_short_notm}}-Server-SDK stellt eine ApiStrategy-Passwort-Strategie zur Verfügung, die in Back-End-Anwendungen verwendet werden, die in {{site.data.keyword.Bluemix_notm}} bereitgestellt werden. Zum Schutz Ihrer App gegen unbefugten Zugriff müssen Sie Ihren Node.js-Server mit ApiStrategy instrumentieren. Das NPM-Modul `appid-serversdk-nodejs` stellt die Passport-Strategie 'ApiStrategy' und eine Verifizierungsmethode bereit, um das von {{site.data.keyword.appid_short_notm}} ausgegebene Zugriffstoken und ID-Token zu validieren.
+
+Das {{site.data.keyword.appid_short_notm}}-Server-SDK verwendet das <a href="http://passportjs.org/" target="_blank">Passport-Framework <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a> zur Umsetzung der Berechtigung. 
 
 Das folgende Snippet demonstriert, wie `APIStrategy` in einer einfachen Express-Anwendung zum Schutz der GET-Methoden für den Endpunkt `/protected` verwendet wird.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+**Importante: o serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.**
 
 # Configurando o iOS Swift SDK
 {: #getting-started-ios}
@@ -53,7 +54,9 @@ valores de SDK requeridos no código code SDK:
 `BMSClient.Region.sydney`.  Você precisará desse
 valor para inicializar o SDK
 {{site.data.keyword.amashort}}.
-* Um projeto do Xcode. Para obter mais informações sobre como configurar seu ambiente de desenvolvimento iOS, veja o [website Apple Developer ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.apple.com/support/xcode/ "Ícone de link externo"){: new_window}.
+* Um projeto do Xcode. Para obter mais informações sobre como configurar seu ambiente de
+desenvolvimento iOS, veja o [website Apple
+Developer ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://developer.apple.com/support/xcode/){: new_window}.
 
 
 ## Instalando o {{site.data.keyword.amashort}} client SDK
@@ -74,15 +77,17 @@ sudo gem install cocoapods
 ```
 {: codeblock}
 
-Para obter mais informações, veja o [website CocoaPods ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cocoapods.org/ "Ícone de link externo"){: new_window}.
+Para obter mais informações, veja o [website CocoaPods ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://cocoapods.org/){: new_window}.
 
 ### Instalar o {{site.data.keyword.amashort}} client SDK com o CocoaPods
 {: #install-sdk-cocoapods}
 
 1. Em uma janela do terminal, navegue para o diretório-raiz do seu projeto iOS.
 
-1. Se ainda não tiver inicializado sua área de trabalho para CocoaPods, execute o comando `pod init`.<br/>
-O CocoaPods cria um arquivo `Podfile` para você, que fica onde você define as dependências de seu projeto iOS.
+1. Se você ainda não tiver inicializado sua área de trabalho para o CocoaPods, execute o
+comando `pod init`.<br/>
+ O CocoaPods cria um arquivo `Podfile` para você, que é onde você define dependências
+para o seu projeto iOS.
 
 1. Edite o arquivo `Podfile` e inclua a linha a seguir nos destinos necessários:
 
@@ -95,8 +100,7 @@ O CocoaPods cria um arquivo `Podfile` para você, que fica onde você define as 
   **Dica:** é possível incluir `use_frameworks!` em
 seu destino Xcode em vez de tê-lo no Podfile.
 
-1. Salve o arquivo `Podfile` e execute `pod install` a partir da linha de comandos. O CocoaPods instala as
-dependências relevantes e exibe as dependências e pods incluídos.<br/>
+1. Salve o arquivo `Podfile` e execute `pod install` a partir da linha de comandos. O CocoaPods instala as dependências relevantes e exibe as dependências e os pods incluídos.<br/>
 
    **Importante**: o CocoaPods gera um arquivo `xcworkspace`.  Deve-se abrir esse arquivo para trabalhar em seu projeto futuro.
 

@@ -2,15 +2,16 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
 
 # モバイル・アプリの使用
 {: #iot4e_using_mobile}
@@ -18,9 +19,7 @@ lastupdated: "2017-03-10"
 {{site.data.keyword.iotelectronics_full}} モバイル・アプリの使用を開始して、スマートフォンやタブレットなどのモバイル・デバイスを使用することによって、アラートの受信、コマンドの送信、接続された電気製品の状況の確認をどのように実行できるか確認します。
 {:shortdesc}
 
-モバイル・アプリを使用するには、その前に次のタスクを実行する必要があります。
-  - {{site.data.keyword.Bluemix_notm}} 組織に {{site.data.keyword.iotelectronics}} Starter のインスタンスをデプロイします。Starter のインスタンスをデプロイすると、Starter のコンポーネント・アプリケーションとサービスが自動的にデプロイされます。
-  - {{site.data.keyword.amafull}} を構成して、[モバイル通信とセキュリティーを使用可能にします](iotelectronics_config_mca.html)。
+モバイル・アプリを使用する場合は、その前に、{{site.data.keyword.Bluemix_notm}} 組織の {{site.data.keyword.iotelectronics}} Starter のインスタンスをデプロイする必要があります。Starter のインスタンスをデプロイすると、Starter のコンポーネント・アプリケーションとサービスが自動的にデプロイされます。
 
 モバイル・アプリの使用を開始するには、次のタスクを完了してください。
 1. モバイル・デバイスに[モバイル・アプリをダウンロードします](#iot4e_downloadmobile)。

@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-16"
+lastupdated: "2017-03-01"
 
 ---
 
@@ -13,11 +13,21 @@ lastupdated: "2017-02-16"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# 從 CLI 分析 CF 應用程式日誌
+# 從 CLI 分析日誌
 {: #analyzing_logs_cli}
 
-在 {{site.data.keyword.Bluemix}} 中，您可以使用 **cf logs** 指令，透過指令行介面來檢視、過濾及分析日誌。使用指令行，以程式設計方式管理日誌。
+在 {{site.data.keyword.Bluemix}} 中，您可以透過指令行介面來檢視、過濾及分析日誌。使用指令行，以程式設計方式管理日誌。
 {:shortdesc}
+
+若要分析 Cloud Foundry (CF) 應用程式日誌，請使用下列指令：`cf logs`。
+如需相關資訊，請參閱[從 CLI 分析 CF 應用程式日誌](logging_view_cli.html#analyzing_cf_logs_cli)。
+
+若要分析 Docker 容器日誌，請使用下列指令：`cf ic logs`。
+如需相關資訊，請參閱[從 CLI 分析 Docker 容器日誌](logging_view_cli.html#analyzing_container_logs_cli)。
+
+
+## 從 CLI 分析 CF 應用程式日誌
+{: #analyzing_cf_logs_cli}
 
 當您將應用程式部署在 {{site.data.keyword.Bluemix_notm}} 時，請使用 **cf logs** 指令來顯示來自 Cloud Foundry 應用程式以及來自與其互動之系統元件的日誌。**cf logs** 指令會顯示 Cloud Foundry 應用程式的 STDOUT 和 STDERR 日誌串流。
 
@@ -27,6 +37,16 @@ lastupdated: "2017-02-16"
 * 若要檢視 Cloud Foundry 應用程式最近的日誌記錄，請參閱[檢視 Cloud Foundry 應用程式最新的日誌項目](logging_view_cli.html#tailing_log_cli)。
 * 若要檢視 Cloud Foundry 應用程式在特定時間範圍中的日誌記錄，請參閱[檢視某區段的日誌](logging_view_cli.html#partial_log_cli)。
 * 若要檢視 Cloud Foundry 應用程式日誌中包含特定關鍵字的項目，請參閱[檢視包含特定關鍵字的日誌項目](logging_view_cli.html#partial_by_keyword_log_cli)。
+
+
+## 從 CLI 分析 Docker 容器日誌
+{: #analyzing_container_logs_cli}
+
+使用 `cf ic logs` 指令可顯示 {{site.data.keyword.Bluemix_notm}} 中容器的日誌。例如，您可以使用這些日誌來分析容器停止的原因，或是檢閱容器輸出。 
+
+若要透過 `cf ic logs` 指令來查看在容器中執行之應用程式的應用程式錯誤，該應用程式必須將其日誌寫入標準輸出 (STDOUT) 及標準錯誤 (STDERR) 輸出串流。如果您將應用程式設計為寫入這些標準輸出串流，即可透過指令行來檢視日誌，即使容器關閉或損毀。
+
+如需 `cf ic logs` 指令的相關資訊，請參閱 [cf ic logs 指令](/docs/containers/container_cli_reference_cfic.html#container_cli_reference_cfic__logs)。
 
 
 ## 檢視 Cloud Foundry 應用程式的日誌
@@ -94,28 +114,23 @@ lastupdated: "2017-02-16"
 
 將 Cloud Foundry 應用程式部署在 {{site.data.keyword.Bluemix}} 之後，Cloud Foundry 應用程式將會有下列日誌：
 
-<dl><dt><strong>buildpack.log</strong></dt>
-<dd>
-<p>此日誌檔會記錄精細的參考資訊事件，以進行除錯。您可以使用此日誌，對建置套件執行問題進行疑難排解。</p>
+**buildpack.log**
 
-<p>若要在 <span class="ph filepath">buildpack.log</span> 檔案中產生資料，您必須使用下列指令來啟用建置套件追蹤：</p>
+此日誌檔會記錄精細的參考資訊事件，以進行除錯。您可以使用此日誌，對建置套件執行問題進行疑難排解。
 
-   <pre class="pre">cf set-env <var class="keyword varname">appname</var> JBP_LOG_LEVEL DEBUG</pre>
+若要在 *buildpack.log* 檔案中產生資料，您必須使用下列指令來啟用建置套件追蹤：`cf set-env appname JBP_LOG_LEVEL DEBUG`
    
-<p>若要檢視此日誌，請輸入下列指令：</p>
+若要檢視此日誌，請輸入下列指令：`cf files appname app/.buildpack-diagnostics/buildpack.log`
 
-    <pre class="pre">cf files <var class="keyword varname">appname</var> app/.buildpack-diagnostics/buildpack.log</pre>
 
-</dd>
+**staging_task.log**
 
-<dt><strong>staging_task.log</strong></dt>
-<dd><p>此日誌檔會記錄編譯打包作業的主要步驟之後的訊息。您可以使用此日誌，對編譯打包問題進行疑難排解。</p>
+此日誌檔會記錄編譯打包作業的主要步驟之後的訊息。您可以使用此日誌，對編譯打包問題進行疑難排解。
 
-<p>若要檢視此日誌，請輸入下列指令：</p>
+若要檢視此日誌，請輸入下列指令：`cf files appname logs/staging_task.log`
 
-    <pre class="pre">cf files <var class="keyword varname">appname</var> logs/staging_task.log</pre>
-</dd>
-</dl>
 
 **附註：**如需如何啟用應用程式記載的相關資訊，請參閱[針對運行環境錯誤進行除錯](/docs/debug/index.html#debugging-runtime-errors)。
+
+
 

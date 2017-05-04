@@ -1,11 +1,12 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-03-09"
+  years: 2016, 2017
+lastupdated: "2017-03-15"
 ---
 
-{:new_window: target="_blank"}
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -14,7 +15,7 @@ lastupdated: "2017-03-09"
 # 服務狀態
 {: #service_status}
 
-[IBM Watson IoT Service 性能儀表板 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://status.internetofthings.ibmcloud.com) 提供 {{site.data.keyword.Bluemix_notm}} 上 {{site.data.keyword.iot_full}} 及其他 Watson IoT 服務的相關資訊。
+[IBM Watson IoT Service 性能儀表板 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://status.internetofthings.ibmcloud.com){: new_window} 提供 {{site.data.keyword.Bluemix_notm}} 上 {{site.data.keyword.iot_full}} 及其他 Watson IoT 服務的相關資訊。
 {:shortdesc}
 
 ## 服務可用性及更新

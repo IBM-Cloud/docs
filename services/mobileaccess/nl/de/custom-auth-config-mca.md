@@ -2,11 +2,13 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-07"
 
 ---
 
-# {{site.data.keyword.amashort}} für eine angepasste Authentifizierung konfigurieren
+**Wichtig: Der Service {{site.data.keyword.amafull}} wird durch den Service {{site.data.keyword.appid_full}} ersetzt.**
+
+# Mobile Client Access für die angepasste Authentifizierung konfigurieren
 {: #custom-dash}
 
 
@@ -18,8 +20,9 @@ Voraussetzungen:
 * Eine Instanz eines {{site.data.keyword.amafull}}-Service.
 * Eine Anwendung eines Identitätsproviders.
 
-## Angepasste Authentifizierung im {{site.data.keyword.amafull}}-Dashboard konfigurieren
+## Angepasste Authentifizierung im Dashboard konfigurieren
 {: #custom-dash-config}
+
 Verwenden Sie das {{site.data.keyword.amafull}}-Dashboard, um die angepasste Authentifizierung zu konfigurieren.
 
 1. Öffnen Sie den Service im {{site.data.keyword.amafull}}-Dashboard.

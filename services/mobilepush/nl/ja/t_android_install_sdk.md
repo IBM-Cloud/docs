@@ -28,8 +28,8 @@ Bluemix® モバイル・サービスの Push SDK は、Gradle を使用して�
 
 	```
 	dependencies {
-	  compile 'com.ibm.mobilefirstplatform.clientsdk.android:push:1.+' 
-compile 'com.google.android.gms:play-services:7.8.0' 
+	  compile 'com.ibm.mobilefirstplatform.clientsdk.android:push:1.+'
+	  compile 'com.google.android.gms:play-services:7.8.0' 
 }  
 	```
 1. **AndroidManifest.xml** ファイルに、以下のアクセス権を追加します。サンプル・マニフェストを表示するには、[Android helloPush Sample Application (Android helloPush サンプル・アプリケーション)](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml)を参照してください。 サンプル Gradle ファイルを表示するには、[Sample Build Gradle file (サンプル Build Gradle ファイル)](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle) を参照してください。

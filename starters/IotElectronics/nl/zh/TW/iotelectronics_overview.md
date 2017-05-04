@@ -2,16 +2,15 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-
 
 # 關於 {{site.data.keyword.iotelectronics}}
 {: #iotelectronics_about}
@@ -44,15 +43,11 @@ lastupdated: "2017-03-10"
 
 ![{{site.data.keyword.iotelectronics}} 架構。主題本文中會說明此圖。](images/IoT4E_architecture.svg "{{site.data.keyword.iotelectronics}} 架構")
 
-{{site.data.keyword.iotelectronics}} 入門範本使用 {{site.data.keyword.iotelectronics}} 服務及 API 來與 {{site.data.keyword.iot_short_notm}} 連接。入門範本應用程式及範例行動應用程式可與 {{site.data.keyword.iotelectronics}} 服務進行通訊，並且透過 {{site.data.keyword.amafull}} 彼此連接。入門範本中包括下列元件：
+{{site.data.keyword.iotelectronics}} 入門範本使用 {{site.data.keyword.iotelectronics}} 服務及 API 來與 {{site.data.keyword.iot_short_notm}} 連接。入門範本應用程式及範例行動應用程式可與 {{site.data.keyword.iotelectronics}} 服務進行通訊。入門範本中包括下列元件：
 
 **{{site.data.keyword.iotelectronics}} 服務**支援使用者及應用裝置登錄和通知。
 
 **{{site.data.keyword.iot_full}}** 可讓您的應用程式與已連接的應用裝置、感應器及閘道通訊，並且使用它們所收集的資料。
-
-<!-- **{{site.data.keyword.iotrtinsights_full}}** enables you to enrich and monitor data from your appliances, visualize what's happening now, and respond to emerging conditions by using automated actions. -->
-
-**{{site.data.keyword.amafull}}** 讓行動應用程式的使用者可以使用現有社交帳戶登入，並確保與後端系統的通訊安全。
 
 **{{site.data.keyword.sdk4nodefull}}** 讓您能開發、部署及調整伺服器端的 JavaScript&reg; 應用程式，並提供加強的效能、安全及服務功能。
 

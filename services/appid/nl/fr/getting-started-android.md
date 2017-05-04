@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -45,8 +45,8 @@ Vous devez disposer des éléments suivants :
     </tr>
   </table>
 
-  * Un projet Android Studio, configuré pour fonctionner avec Gradle.
-    * Pour plus d'informations sur la configuration de votre environnement de développement Android, reportez-vous à la documentation <a href="https://developers.google.com/web/tools/setup/" target="_blank">Google Developer Tools<img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a>.
+  * Un projet <a href="https://developers.google.com/web/tools/setup/" target="_blank">Android Studio<img src="../../icons/launch-glyph.svg" alt="icône de lien externe"></a>, configuré pour
+fonctionner avec Gradle.
 
 ## Installation du SDK client
 {: #install-appid-sdk}
@@ -173,7 +173,7 @@ Vous pouvez, par exemple utiliser le code ci-dessous pour définir un nouvel att
 ### Connexion anonyme
 {: #anonymous notoc}
 
-Avec {{site.data.keyword.appid_short_notm}}, vous pouvez effectuer une connexion anonyme. Voir [Utilisateur anonyme](/docs/services/appid/user-profile.html#anonymous).
+Avec {{site.data.keyword.appid_short_notm}}, vous pouvez vous connecter de manière [anonyme](/docs/services/appid/user-profile.html#anonymous).
 
   ```java
   appId.loginAnonymously(getApplicationContext(), new AuthorizationListener() {

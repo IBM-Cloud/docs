@@ -2,15 +2,16 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
 
 # 使用入門範本應用程式
 在 {{site.data.keyword.iotelectronics_full}} 入門範本應用程式中，建立模擬應用裝置。體驗企業製造商如何監視連接至 {{site.data.keyword.iot_short_notm}} 的應用裝置。手動與模擬應用裝置互動，以觸發警示、通知及動作。
@@ -46,25 +47,3 @@ lastupdated: "2017-03-10"
 3. 若要檢視洗衣機詳細資料，請按一下洗衣機。在命令及控制面板中，啟動洗衣機或按一下不同的故障類型以檢視狀態變更。您也可以從行動應用程式檢視狀態變更並控制洗衣機。
 
   ![洗衣機狀態詳細資料。](images/IoT4E_washer_control.svg "洗衣機狀態詳細資料")
-
-
-# 相關鏈結
-{: #rellinks}
-
-## API 文件
-{: #api}
-* [{{site.data.keyword.iotelectronics}} API](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)
-* [{{site.data.keyword.iot_short}} API](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)
-
-
-## 元件
-{: #general}
-
-* [{{site.data.keyword.iotelectronics}} 文件](iotelectronics_overview.html)
-* [{{site.data.keyword.iot_full}} 文件](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-*  [{{site.data.keyword.amashort}} 文件](https://console.ng.bluemix.net/docs/services/mobileaccess/overview.html)
-* [{{site.data.keyword.sdk4nodefull}} 文件](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
-
-## 範例
-{: #samples}
-* [範例行動應用程式](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html)

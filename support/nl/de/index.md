@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-03-01"
+lastupdated: "2017-03-21"
 
 ---
 
@@ -58,8 +58,8 @@ Sie können die Konto-Menüelemente verwenden, sich über Plattformbenachrichtig
 
 Die Foren Stack Overflow und dW Answers bieten beide eine breite Palette durchsuchbarer Antworten für Ihre Fragen zu {{site.data.keyword.Bluemix_notm}}. Wenn Sie keine Antwort vorfinden, stellen Sie eine neue Frage. 
 
-  * Rufen Sie [Stack Overflow ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window} auf, um technische Fragen zur Entwicklung von Apps mit der {{site.data.keyword.Bluemix_notm}}-Plattform und den entsprechenden Services zu stellen.
-  * Rufen Sie [dW Answers ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} auf, um Fragen zum {{site.data.keyword.Bluemix_notm}}-Angebot zu stellen und einführende Anweisungen zu erhalten.
+  * Rufen Sie [Stack Overflow ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window} auf, um technische Fragen zur Entwicklung von Apps mit der {{site.data.keyword.Bluemix_notm}}-Plattform und den entsprechenden Services zu stellen.
+  * Rufen Sie [dW Answers ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} auf, um Fragen zum {{site.data.keyword.Bluemix_notm}}-Angebot zu stellen und einführende Anweisungen zu erhalten.
 
 
 Sie können eine Frage in Stack Overflow auch direkt über die Support-Menüelemente stellen, indem Sie die folgenden Schritte ausführen:
@@ -89,7 +89,7 @@ Auf der Seite 'Status' sind die folgenden Informationen zu finden:
 Die Seite 'Status' wird angezeigt, wenn Sie eine der beiden folgenden Optionen auswählen:
 
   * Melden Sie sich bei der {{site.data.keyword.Bluemix_notm}}-Konsole an. Klicken Sie in der Menüleiste auf **Support** und anschließend auf **Status**. Prüfen Sie die aufgelisteten Ressourcen auf das Symbol ![Probleme](images/some_issues.svg). Dieses Symbol könnte auf einen Ausfall hinweisen.
-  * Greifen Sie direkt über [IBM {{site.data.keyword.Bluemix_notm}} - System Status ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixstatus){: new_window} darauf zu.
+  * Greifen Sie direkt über [IBM {{site.data.keyword.Bluemix_notm}} - System Status ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://ibm.biz/bluemixstatus){: new_window} darauf zu.
 
 
 ### RSS-Feed abonnieren
@@ -107,12 +107,12 @@ Führen Sie die folgenden Schritte durch, um einen RSS-Feed zu abonnieren:
 	Im Abschnitt **Hilfe** Ihre Readers finden Sie weitere Informationen. 	   
 
 Weitere Methoden zum Lesen von RSS-Feeds stehen über Web-Browser-Plug-ins zur Verfügung: 
-  * [RSS Feed ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](http://feeder.co/){: new_window} Reader für Chrome
-  * [Add-on Brief ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](https://addons.mozilla.org/en-US/firefox/addon/brief/){: new_window} für Firefox
+  * [RSS Feed ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://feeder.co/){: new_window} Reader für Chrome
+  * [Add-on Brief ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://addons.mozilla.org/en-US/firefox/addon/brief/){: new_window} für Firefox
 
 Neue Quellen wie die folgenden bieten ebenfalls Möglichkeiten zum Lesen von RSS-Feeds:
-  * [Feedly ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](http://www.feedly.com/){: new_window}
-  * [G2reader ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](http://www.g2reader.com/en/){: new_window}
+  * [Feedly ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://www.feedly.com/){: new_window}
+  * [G2reader ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://www.g2reader.com/en/){: new_window}
 
 Sie können auch einen Drittanbieterservice nutzen, damit automatisch eine E-Mail für die einzelnen RSS-Updates gesendet wird. In der folgenden Liste sind einige Beispiele für Drittanbieterservices aufgeführt:
 
@@ -139,19 +139,20 @@ Bei {{site.data.keyword.Bluemix_notm}} Public können Sie sich für Plattformben
   * Prüfen, ob Wartungszeiten bevorstehen
 
 	Prüfen Sie mindestens einmal alle 24 Stunden, ob Wartungszeiten bevorstehen, die auf der Statusseite veröffentlicht werden; verwenden Sie hierfür eine der folgenden Optionen:
-	  * Direktes Navigieren zur Seite [Status ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixstatus){: new_window}
+	  * Direktes Navigieren zur Seite [Status ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://ibm.biz/bluemixstatus){: new_window}
 	  * Verwenden des RSS-Feeds oder eines Weiterleitungsservers, der RSS-Feeds an eine E-Mail-Adresse weiterleitet
 
   * Prüfen, ob derzeit Wartungszeiten existieren oder ob es einen Vorfall gibt
 
-	Wenn Sie vermuten, dass {{site.data.keyword.Bluemix_notm}} nicht wie erwartet funktioniert, überprüfen Sie die Seite 'Status' auf aktuelle Wartungszeiten oder ein aktueller Vorfall hin. Wenn Sie einen Vorfall melden möchten, der noch nicht auf der Seite 'Status' aufgeführt ist, öffnen Sie ein Support-Ticket über das Menüelement **Support** in der Menüleiste oder über die Hilfetextseite [IBM Bluemix-Support ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](ibm.biz/bluemixsupport){: new_window}.
+	Wenn Sie vermuten, dass {{site.data.keyword.Bluemix_notm}} nicht wie erwartet funktioniert, überprüfen Sie die Seite 'Status' auf aktuelle Wartungszeiten oder einen aktuellen Vorfall. Wenn Sie einen Vorfall melden möchten, der noch nicht auf der Seite 'Status' aufgeführt ist, öffnen Sie ein Support-Ticket über das Menüelement **Support** in der Menüleiste oder über die Hilfetextseite [IBM Bluemix-Support ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](ibm.biz/bluemixsupport){: new_window}.
 
   * Nutzen der Vorteile mehrerer {{site.data.keyword.Bluemix_notm}}-Regionen
 
-    Alle Benutzer von {{site.data.keyword.Bluemix_notm}} Public haben automatisch Zugriff auf die Regionen US-SOUTH, EU-GB und AU-SYD:
+    Alle Benutzer von {{site.data.keyword.Bluemix_notm}} Public haben automatisch Zugriff auf die Regionen US-SOUTH, EU-GB, EU-DE und AU-SYD: 
 
 	  * US-SOUTH: https://console.ng.bluemix.net
 	  * EU-GB: https://console.eu-gb.bluemix.net
+	  * EU-DE: https://console.eu-de.bluemix.net
 	  * AU-SYD: https://console.au-syd.bluemix.net
 
 	Das {{site.data.keyword.Bluemix_notm}} Global Operations-Team verwaltet alle Regionen, um Auswirkungen von Instandhaltungsmaßnahmen zu verhindern und um das Risiko von Zwischenfällen zu minimieren, die sich auf alle Regionen gleichzeitig auswirken.
@@ -182,21 +183,21 @@ Support-Sprache | Englisch | Englisch | Englisch, Japanisch | Englisch, Japanisc
 Zugeordneter Client Success Manager (CSM) | Nicht inbegriffen | Nicht inbegriffen | Nicht inbegriffen | Inbegriffen für<br> 8 Stunden pro Woche
 {: caption="Table 1. Support levels" caption-side="top"}
 
-**Wichtig:** Die Unterstützung in japanischer Sprache ist für Tickets mit einer Priorität zwischen 2 und 4 außer an Feiertagen von Montags bis Freitags zwischen 9.00 und 17.00 Uhr (japanische Standardzeit) verfügbar. Community- und Drittanbieterservices sind hiervon ausgenommen. Tickets mit der Priorität 1 werden ausschließlich in Englisch bearbeitet. 
+**Wichtig:** Die Unterstützung in japanischer Sprache ist für Tickets mit einer Priorität zwischen 2 und 4 außer an Feiertagen von Montags bis Freitags zwischen 9.00 und 17.00 Uhr (japanische Standardzeit) verfügbar. Community- und Drittanbieterservices sind hiervon ausgenommen. Tickets mit der Priorität 1 werden ausschließlich in Englisch bearbeitet.
 
 ### Support-Ticket öffnen
 {: #open-ticket}
 
-Wenn Sie Ihr technisches Problem nicht mithilfe der Fehlerbehebungs- und Hilfeoptionen lösen können, können Sie Unterstützung anfordern. Stellen Sie vor der Anforderung von Unterstützung für ein technisches Problem jedoch durch Prüfen des [{{site.data.keyword.Bluemix_notm}}-Status ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixstatus){: new_window} sicher, dass das Problem nicht auf einen Ausfall zurückzuführen ist.
+Wenn Sie Ihr technisches Problem nicht mithilfe der Fehlerbehebungs- und Hilfeoptionen lösen können, können Sie Unterstützung anfordern. Stellen Sie vor der Anforderung von Unterstützung für ein technisches Problem jedoch durch Prüfen des [{{site.data.keyword.Bluemix_notm}}-Status ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://ibm.biz/bluemixstatus){: new_window} sicher, dass das Problem nicht auf einen Ausfall zurückzuführen ist.
 
 
 
 Wenn das Problem nicht auf einen Ausfall zurückzuführen ist, öffnen Sie ein Support-Ticket mit einer der folgenden Optionen:
 
   * Klicken Sie im Support Menü auf **Ticket hinzufügen**. Füllen Sie auf der angezeigten Seite das Formular aus, um anzugeben, wofür Sie technische Unterstützung benötigen.
-  * Verwenden Sie die Hilfetextseite von [IBM {{site.data.keyword.Bluemix_notm}} Support ![ Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](ibm.biz/bluemixsupport){: new_window}. Sie können Tickets für Probleme bei Vertrieb, Abrechnung, IBMid und Anmeldung sowie für technische Unterstützung einreichen. Um technische Unterstützung zu erhalten, können Sie außerdem nach dem Klicken auf **Technical Support** eine technische Gruppe auswählen. Wenn Sie zum Beispiel Hilfe für Cloud Foundry-Apps, {{site.data.keyword.openwhisk_short}}, Container, virtuelle Server oder Bare-Metal-Server benötigen, können Sie **Application Services** auswählen. Wenn Sie Hilfe für einen bestimmten Service benötigen, wählen Sie die entsprechende Kategorie des Service aus. Zum Ermitteln der Kategorie, zu der Ihr Service gehört, finden Sie Kategorien unter [Services](/docs/services/index.html) im Navigationsbereich.  
+  * Verwenden Sie die Hilfetextseite von [IBM {{site.data.keyword.Bluemix_notm}} Support ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](ibm.biz/bluemixsupport){: new_window}. Sie können Tickets für Probleme bei Vertrieb, Abrechnung, IBMid und Anmeldung sowie für technische Unterstützung einreichen. Um technische Unterstützung zu erhalten, können Sie außerdem nach dem Klicken auf **Technical Support** eine technische Gruppe auswählen. Wenn Sie zum Beispiel Hilfe für Cloud Foundry-Apps, {{site.data.keyword.openwhisk_short}}, Container, virtuelle Server oder Bare-Metal-Server benötigen, können Sie **Application Services** auswählen. Wenn Sie Hilfe für einen bestimmten Service benötigen, wählen Sie die entsprechende Kategorie des Service aus. Zum Ermitteln der Kategorie, zu der Ihr Service gehört, finden Sie Kategorien unter [Services](/docs/services/index.html) im Navigationsbereich.  
   
-Stellen Sie beim Öffnen eines Support-Tickets sicher, dass Sie eine geeignete Priorität für das Ticket angeben. Die Priorität bestimmt, wie Ihr Ticket bearbeitet wird. Informationen zu den verschiedenen Prioritätsstufen finden Sie unter [Support-Ticket - Priorität und Reaktionszeit](/docs/support/index.html#support-ticket-severity). Wenn Ihre Supportanfrage eine schnellere Antwort erfordert, empfiehlt es sich, ein Upgrade auf Standard- oder Premium-Support durchzuführen, damit Sie Support-Tickets mit einer Priorität von 1-4 öffnen können. Zum Aktualisieren Ihres Kontos auf eine höhere Supportstufe, wenden Sie sich an Ihren [IBM Vertriebsbeauftragten ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud-computing/bluemix/contact-us){: new_window} oder senden Sie eine E-Mail an sales@bluemix.net.
+Stellen Sie beim Öffnen eines Support-Tickets sicher, dass Sie eine geeignete Priorität für das Ticket angeben. Die Priorität bestimmt, wie Ihr Ticket bearbeitet wird. Informationen zu den verschiedenen Prioritätsstufen finden Sie unter [Support-Ticket - Priorität und Reaktionszeit](/docs/support/index.html#support-ticket-severity). Wenn Ihre Supportanfrage eine schnellere Antwort erfordert, empfiehlt es sich, ein Upgrade auf Standard- oder Premium-Support durchzuführen, damit Sie Support-Tickets mit einer Priorität von 1-4 öffnen können. Zum Aktualisieren Ihres Kontos auf eine höhere Supportstufe, wenden Sie sich an Ihren [IBM Vertriebsbeauftragten ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud-computing/bluemix/contact-us){: new_window} oder senden Sie eine E-Mail an sales@bluemix.net.
 
 ### Support-Ticket für verknüpfte Konten verwenden
 {: #open-ticket-linked}
@@ -223,7 +224,7 @@ Wenn Sie Benutzer von {{site.data.keyword.Bluemix_notm}} Dedicated sind, erhalte
 
 <ul>
 <li>Kontaktieren Sie den Support, indem Sie ein neues Ticket über die Hilfetextseite <a href="ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support</a> öffnen. Sie können eine E-Mail-Adresse oder Ihre {{site.data.keyword.ibmid}} für dieses Formular verwenden. Wählen Sie die Option **{{site.data.keyword.Bluemix_notm}} Dedicated** (Dediziert) für das Feld 'Region' aus.
-<p>Einreichungen von Formularen werden von Sonntag ab 21:30 UTC bis Freitag um 23:59 UTC überwacht. Hilfe zur Umrechnung dieser Support-Stunden in Ihre örtliche Zeitzone finden Sie unter [Timeanddate.com ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](https://www.timeanddate.com).</p>
+<p>Einreichungen von Formularen werden von Sonntag ab 21:30 Uhr UTC bis Freitag um 23:59 Uhr UTC überwacht. Hilfe zur Umrechnung dieser Support-Stunden in Ihre örtliche Zeitzone finden Sie unter [Timeanddate.com ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.timeanddate.com).</p>
 </li>
 <li>Wenn Sie über eine {{site.data.keyword.ibmid}} verfügen und Zugriff auf die {{site.data.keyword.Bluemix_notm}} Public-Umgebung haben, klicken Sie auf das Menüleistenelement **Support** > **Ticket hinzufügen**. Wählen Sie den Themenbereich für Ihr Problem aus und befolgen Sie die Eingabeaufforderungen, um Ihr Ticket einzureichen.</li>
 <li>Wenn Sie keine {{site.data.keyword.ibmid}} haben, können Sie sich an eine Person in Ihrer Organisation mit einer solchen ID wenden oder mit Ihrem IBM Ansprechpartner zusammenarbeiten.
@@ -238,8 +239,8 @@ Wenn Sie Benutzer von {{site.data.keyword.Bluemix_notm}} Dedicated sind, erhalte
 Wenn Sie Benutzer von {{site.data.keyword.Bluemix_notm}} Local sind, erhalten Sie Support vom {{site.data.keyword.Bluemix_notm}}-Support-Team. Auch wenn Sie möglicherweise keine {{site.data.keyword.ibmid}} haben, stehen Ihnen jedoch einige verschiedene Optionen zum Abrufen der Unterstützung zur Verfügung.
 
 <ul>
-<li>Kontaktieren Sie den Support, indem Sie ein neues Ticket über die Hilfetextseite <a href="ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support <img src="../icons/launch-glyph.svg" alt="External link icon"></a> öffnen. Sie können eine E-Mail-Adresse oder Ihre {{site.data.keyword.ibmid}} für dieses Formular verwenden. Wählen Sie die Option **{{site.data.keyword.Bluemix_notm}} Local** (Lokal) für das Feld 'Region' aus.
-<p>Einreichungen von Formularen werden von Sonntag ab 21:30 Uhr UTC bis Freitag um 23:59 Uhr UTC überwacht. Hilfe zur Umrechnung dieser Support-Stunden in Ihre örtliche Zeitzone finden Sie unter [Timeanddate.com ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](https://www.timeanddate.com).</p>
+<li>Kontaktieren Sie den Support, indem Sie ein neues Ticket über die Hilfetextseite <a href="ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support <img src="../icons/launch-glyph.svg" alt="Symbol für externen Link"></a> öffnen. Sie können eine E-Mail-Adresse oder Ihre {{site.data.keyword.ibmid}} für dieses Formular verwenden. Wählen Sie die Option **{{site.data.keyword.Bluemix_notm}} Local** (Lokal) für das Feld 'Region' aus.
+<p>Einreichungen von Formularen werden von Sonntag ab 21:30 Uhr UTC bis Freitag um 23:59 Uhr UTC überwacht. Hilfe zur Umrechnung dieser Support-Stunden in Ihre örtliche Zeitzone finden Sie unter [Timeanddate.com ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.timeanddate.com).</p>
 </li>
 <li>Wenn Sie über eine {{site.data.keyword.ibmid}} verfügen und Zugriff auf die {{site.data.keyword.Bluemix_notm}} Public-Umgebung haben, klicken Sie auf das Menüleistenelement **Support** > **Ticket hinzufügen**. Wählen Sie den Themenbereich für Ihr Problem aus und befolgen Sie die Eingabeaufforderungen, um Ihr Ticket einzureichen.</li>
 <li>Wenn Sie keine {{site.data.keyword.ibmid}} haben, können Sie sich an eine Person in Ihrer Organisation mit einer solchen ID wenden oder mit Ihrem IBM Ansprechpartner zusammenarbeiten.
@@ -253,7 +254,7 @@ Wenn Sie Kontakt mit dem Support aufnehmen, können Sie eine bestimmte Prioritä
 
 In der folgenden Tabelle sind einige allgemeine Beispiele für Supportfälle mit vorgeschlagenen Prioritätsstufen und den zugehörigen angestrebten Reaktionszeiten aufgeführt. Die angestrebten Reaktionszeiten geben lediglich die Ziele von IBM wieder und stellen keine Leistungsgarantie dar.
 
-**Betriebszeiten:** Sonntag 21:30 Uhr (UTC) bis Freitag 23:59 Uhr UTC (außer an offiziellen Feiertagen in USA, Italien und Australien). Hilfe zur Umrechnung dieser Support-Stunden in Ihre örtliche Zeitzone finden Sie unter [Timeanddate.com ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](https://www.timeanddate.com). Weitere Informationen zum Feiertagsplan finden Sie unter [Bluemix Support Holidays ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixholidays). 
+**Betriebszeiten:** Sonntag 21:30 Uhr (UTC) bis Freitag 23:59 Uhr UTC (außer an offiziellen Feiertagen in USA, Italien und Australien). Hilfe zur Umrechnung dieser Support-Stunden in Ihre örtliche Zeitzone finden Sie unter [Timeanddate.com ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.timeanddate.com). Weitere Informationen zum Feiertagsplan finden Sie unter [Bluemix Support Holidays ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://ibm.biz/bluemixholidays). 
 
 
 Priorität | Prioritätsdefinition | Angestrebte Reaktionszeiten | Abgedeckte Reaktionszeiten
@@ -272,7 +273,7 @@ Wenn die Ursachenanalyse ergibt, dass das Problem ein Fehler im allgemein verfü
 * IBM Betaservice oder Beta-Container-Image<br>
 IBM gibt Services oder Container-Images frei, die als Betaversion klassifiziert sind. Eine Betaversion hilft IBM Entwicklungs- und Marketing-Teams den Wert eines Service am Markt zu bewerten. Infolgedessen können sie Anpassungen vornehmen, bevor der Service oder das Container-Image potenziell als allgemein verfügbar freigegeben wird. Wenn die Ursachenanalyse ergibt, dass es sich bei dem Problem um einen Fehler im IBM Betaservice oder Beta-Container-Image handelt, ist IBM nicht verpflichtet, eine Korrektur bereitzustellen. Darüber hinaus wird dem Ticket dem Fall entsprechend die Priorität 3 oder 4 zugewiesen. 
 * Experimenteller IBM Service oder experimentelles Container-Image<br>
-IBM gibt Services oder Container-Images frei, die als experimentell klassifiziert sind. Solche Services können instabil sein, sich häufig ändern und möglicherweise nach kurzfristiger Benachrichtigung eingestellt werden. Für Services, die als experimentell klassifiziert sind, können Sie nur Community-Unterstützung über [Stack Overflow ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window} und [dW Answers ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} erhalten.
+IBM gibt Services oder Container-Images frei, die als experimentell klassifiziert sind. Solche Services können instabil sein, sich häufig ändern und möglicherweise nach kurzfristiger Benachrichtigung eingestellt werden. Für Services, die als experimentell klassifiziert sind, können Sie nur Community-Unterstützung über [Stack Overflow ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window} und [dW Answers ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} erhalten.
 * Services anderer Anbieter<br>
 Services anderer Anbieter werden von Anbietern außerhalb von IBM bereitgestellt. Diese Services werden durch einzelne Softwaredefinitionseinheiten, Partner oder unabhängige Softwareanbieter (ISV) bereitgestellt. Wenn die Ursachenanalyse ergibt, dass es sich bei dem Problem um einen Fehler in einem Service eines anderen Anbieters handelt, ist IBM nicht verpflichtet, eine Korrektur bereitzustellen. Allerdings ist IBM bereit, mit dem Service des anderen Anbieters im Markt und mit dem IBM Kunden zusammenzuarbeiten, um eine Lösung des Problems zu unterstützen. 
 * Open-Source-Service oder Community-Service<br>
@@ -285,7 +286,7 @@ Open-Source- oder Community-Services werden von Open-Source-Communitys außerhal
 Wenn Sie vermuten, dass eine potenziell Sicherheitslücke vorliegt, melden Sie das Vorkommnis an Bluemix, indem Sie ein Support-Ticket öffnen. 
 
 Führen Sie die folgenden Schritte aus, um eine potenzielle Sicherheitslücke zu melden:
-  1. Öffnen Sie ein Ticket mit der Prioritätsstufe 1 oder ein Ticket mit der höchsten zulässigen Support-Priorität. Informationen zum Öffnen eines Tickets finden Sie unter [Support-Ticket öffnen ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](#open-ticket){: new_window}. 
+  1. Öffnen Sie ein Ticket mit der Prioritätsstufe 1 oder ein Ticket mit der höchsten zulässigen Support-Priorität. Informationen zum Öffnen eines Tickets finden Sie unter [Support-Ticket öffnen ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](#open-ticket){: new_window}. 
   2. Beschreiben Sie in der Ticket-Zusammenfassung deutlich, dass es um ein potenzielle Sicherheitslücke geht.
   2. Stellen Sie in den Details für die potenzielle Sicherheitslücke eines der folgenden Elemente bereit:
        * Eine Telefonnummer, unter der Sie für Rückfragen erreichbar sind.
@@ -318,12 +319,12 @@ Führen Sie die folgenden Schritte aus, bevor Sie Diagnoseinformationen erfassen
 
   2. Stellen Sie sicher, dass die cf-Befehlszeilenschnittstelle mit dem System verbunden ist, auf dem {{site.data.keyword.Bluemix_notm}} ausgeführt wird; führen Sie hierzu den Befehl `cf api` aus.
 
-  3. Stellen Sie sicher, dass alle Voraussetzungen in [{{site.data.keyword.Bluemix_notm}} - Voraussetzungen ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/bluemix/support/#prereqs){: new_window} erfüllt sind.
+  3. Stellen Sie sicher, dass alle Voraussetzungen in [{{site.data.keyword.Bluemix_notm}} - Voraussetzungen ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/bluemix/support/#prereqs){: new_window} erfüllt sind.
 
 Verwenden Sie die folgenden Scripts zum Erfassen der Diagnoseinformationen:
 
-  * Windows-Betriebssysteme: Laden Sie die Datei [bmdiag-general.bat ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](http://bluemix-mustgather.mybluemix.net/mustgather/general/bmdiag-general.bat){: new_window} herunter und führen Sie sie aus.
-  * Linux- und Mac-Betriebssysteme: Laden Sie die Datei [bmdiag-general.sh ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](http://bluemix-mustgather.mybluemix.net/mustgather/general/bmdiag-general.sh){: new_window} herunter und führen Sie sie aus.
+  * Windows-Betriebssysteme: Laden Sie die Datei [bmdiag-general.bat ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://bluemix-mustgather.mybluemix.net/mustgather/general/bmdiag-general.bat){: new_window} herunter und führen Sie sie aus.
+  * Linux- und Mac-Betriebssysteme: Laden Sie die Datei [bmdiag-general.sh ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://bluemix-mustgather.mybluemix.net/mustgather/general/bmdiag-general.sh){: new_window} herunter und führen Sie sie aus.
 
 Von den Scripts wird die cf-Befehlszeilenschnittstelle zum Extrahieren der folgenden Informationen aus der Anwendungsumgebung verwendet:
 
@@ -365,14 +366,14 @@ In der folgenden Tabelle sind die unterstützten Landessprachen und die Sprachen
 IBM sendet regelmäßig Umfragen an {{site.data.keyword.Bluemix_notm}}-Kunden, um Feedback zu ihren jüngsten Erfahrungen mit dem Kundendienst zu erhalten. In den Umfragen geht es hauptsächlich um die Support-Qualität und den allgemeinen Eindruck des Kunden. Die Umfrageergebnisse werden vom IBM Management ausgewertet, um die Support-Qualität zu verbessern. 
 
 
-# Zugehörige Links
+# rellinks
 {: #rellinks}
 
-## Allgemein
+## general
 {: #general}
 
-  * [Bluemix-Support-Portal ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](https://support.ibmcloud.com){: new_window}
-  * [dW Answers ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window}
+  * [Bluemix-Support-Portal ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://support.ibmcloud.com){: new_window}
+  * [dW Answers ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window}
   * [cf-Befehlstool installieren](/docs/starters/install_cli.html)
-  * [Stack Overflow ![Symbol für externen Link](../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window}
+  * [Stack Overflow ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window}
   

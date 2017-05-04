@@ -18,8 +18,7 @@ lastupdated: "2017-01-10"
 # Resolução de problemas para tempos de execução
 {: #runtimes}
 
-Você pode ter problemas ao usar tempos de execução do {{site.data.keyword.Bluemix}}.
-Em muitos casos, é possível recuperar-se desses problemas seguindo algumas etapas simples.
+Você pode ter problemas ao usar tempos de execução do {{site.data.keyword.Bluemix}}. Em muitos casos, é possível recuperar-se desses problemas seguindo algumas etapas simples.
 {:shortdesc}
 
 
@@ -29,13 +28,13 @@ Em muitos casos, é possível recuperar-se desses problemas seguindo algumas eta
 Talvez você não consiga usar os componentes de buildpack mais recentes ao enviar um app por push. É possível usar buildpacks que possuem mecanismos integrados
 para evitar o carregamento de componentes obsoletos ou é possível excluir os conteúdos no diretório de cache de seu app antes de enviar por push ou remontar o app. 
 
-Ao enviar por push ou remontar um app após a atualização do buildpack, os componentes de buildpack mais recentes não são carregados automaticamente. Como resultado, o seu aplicativo usa os componentes de buildpack obsoletos a partir do cache. As atualizações que foram aplicadas ao buildpack desde a última vez que o app foi enviado por push não são implementadas.
+Ao enviar por push ou remontar um app após a atualização do buildpack, os componentes de buildpack mais recentes não são carregados automaticamente. Como resultado, o seu aplicativo usa os componentes de buildpack obsoletos a partir do cache. As atualizações que foram aplicadas ao buildpack desde a última vez que o app foi enviado por push não são implementadas. 
 {: tsSymptoms}
 
 Alguns buildpacks não são configurados para fazer download automaticamente de todos os componentes atualizados da Internet para assegurar que você sempre use a versão mais recente.
 {: tsCauses} 
 
-É possível usar buildpacks que tenham mecanismos integrados para evitar o carregamento de componentes obsoletos, por exemplo, os buildpacks a seguir:
+É possível usar buildpacks que tenham mecanismos integrados para evitar o carregamento de componentes obsoletos, por exemplo, os buildpacks a seguir: 
 {: tsResolve}
 
   * [Buildpack Java do Cloud Foundry ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/cloudfoundry/java-buildpack){: new_window}. Esse buildpack tem um mecanismo integrado para assegurar que a versão mais recente do buildpack seja usada. Para obter mais informações sobre como esse mecanismo funciona, veja [extending-caches.md ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
@@ -176,7 +175,7 @@ Insira o nome do usuário e a senha novamente.
 {: #ts_target}
 
 Uma mensagem de erro é exibida quando as operações de rastreio ou dump
-estão em execução. A mensagem indica que uma instância de destino para um app não está no estado em execução:
+estão em execução. A mensagem indica que uma instância de destino para um app não está no estado em execução:	
 {: tsSymptoms}
 
 ```
@@ -223,7 +222,7 @@ Você pode ver, em seu log de app, que sua cota do disco foi excedida.
 Você vê a mensagem de erro `Cota do disco excedida` no log de seu app.
 {: tsSymptoms}
 
-Esse problema ocorre por causa de um dos motivos a seguir:
+Esse problema ocorre por causa de um dos motivos a seguir: 
 {: tsCauses} 
 
   * Os arquivos de dump são gerados com as instâncias do app em execução e os arquivos usam até a cota de disco alocada. Por padrão, a cota de disco para uma instância de app é 1 GB. É possível verificar o uso de

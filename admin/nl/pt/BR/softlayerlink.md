@@ -22,7 +22,9 @@ Se você tem uma conta para teste do {{site.data.keyword.Bluemix_notm}} e deseja
 
 É possível unificar suas contas de cobrança {{site.data.keyword.Bluemix_notm}} e SoftLayer existentes, vinculando as contas. Ao vincular as suas contas, você será faturado pelo {{site.data.keyword.Bluemix_notm}} pelos recursos do {{site.data.keyword.Bluemix_notm}} e do SoftLayer.
 
-**Atenção:** Uma conta da assinatura do {{site.data.keyword.Bluemix_notm}} não pode ser vinculada com uma conta do SoftLayer. Para
+**Atenção:** as contas da assinatura do {{site.data.keyword.Bluemix_notm}}
+e as contas Pay-As-You-Go do {{site.data.keyword.Bluemix_notm}} antigas que foram criadas antes de
+vinculação da conta automática não podem ser vinculadas com uma conta do SoftLayer. Para
 acessar o painel Infraestrutura deve-se criar uma conta Pay-As-You-Go, uma segunda conta, que é automaticamente vinculada com uma conta do SoftLayer. Você, então,
 receberá duas faturas, uma para cada conta do {{site.data.keyword.Bluemix_notm}}. Embora os seus recursos de infraestrutura irão ser faturados em uma conta
 Pay-As-You-Go separada, os recursos poderão ser usados com apps e serviços em sua conta da assinatura. Por exemplo, se você ativar um serviço do Watson em sua conta
@@ -106,7 +108,7 @@ Para obter mais informações sobre convidar membros da equipe por meio da inter
 ## Alternando para o IBMid
 {: #ibmid_switch}
 
-A autenticação no SoftLayer agora usa o IBMid para fornecer um único login para todos os {{site.data.keyword.Bluemix_notm}}. As contas existentes do SoftLayer estão sendo ativadas para alternar para a autenticação do IBMid. Um assistente de migração fornece orientação durante essa alternância.
+A autenticação no SoftLayer agora usa o IBMid para fornecer um único login para todos os {{site.data.keyword.Bluemix_notm}}. As contas existentes do SoftLayer estão sendo ativadas para alternar para a autenticação do IBMid. Um assistente de migração fornece orientação durante essa alternância. 
 {:shortdesc}
 
 Se você for um usuário principal e um prompt para alternar para um IBMid não for exibido no {{site.data.keyword.slportal}}, [entre em contato com o suporte IBM](/docs/support/index.html#contacting-support) para obter ajuda com a ativação do recurso.
@@ -133,7 +135,7 @@ Se for um novo cliente, ao efetuar check-out de sua ordem, você será solicitad
 
  * Para usar um IBMid existente, insira o nome do usuário ou o endereço de e-mail do IBMid se for exclusivo (ou seja, ele não é compartilhado entre diversos IBMids).
  
- * Para criar um novo IBMid, insira um endereço de e-mail que não esteja atualmente em uso por nenhum IBMid. O novo IBMid usará esse endereço de e-mail como o nome do usuário e o endereço de e-mail. Após a criação do IBMid, será possível atualizar o endereço de e-mail que está associado ao IBMid, mas não será possível mudar o nome do usuário. O e-mail de convite vai para o endereço de e-mail fornecido.
+ * Para criar um novo IBMid, insira um endereço de e-mail que não esteja atualmente em uso por nenhum IBMid.  O novo IBMid usará esse endereço de e-mail como o nome do usuário e o endereço de e-mail.  Após a criação do IBMid, será possível atualizar o endereço de e-mail que está associado ao IBMid, mas não será possível mudar o nome do usuário. O e-mail de convite vai para o endereço de e-mail fornecido.
 
 Para resolver quaisquer problemas ao efetuar login com seu IBMid, veja [Resolução de problemas para acessar o Bluemix](/docs/troubleshoot/ts_accessing.html#accessing).
 

@@ -19,13 +19,13 @@ lastupdated: "2017-01-10"
 <!--
 
 ## Visualizing data with custom charts
-{: #custom-charts}
+{: #custom-charts notoc}
 
 You can visualize the collected analytics data in your analytics repository. This visualization is a powerful way to inspect data for specific use cases. You can create charts with data that is already collected by Operational Analytics, in addition to custom data that you report.
 
 
 ### Creating custom charts for app logs
-{: #custom-charts-client-logs}
+{: #custom-charts-client-logs notoc}
 
 You can create a custom chart for app logs that contain log information that is sent with the Logger API for the platform. The log information also includes contextual information about the device, including environment, app name, and app version.
 
@@ -58,7 +58,7 @@ In this example, you use app log data to create a flow chart. The final graph sh
 7. Click **Save**
 
 ### Exporting custom data
-{: #export-custom-data}
+{: #export-custom-data notoc}
 
 You can export the data from each custom chart into JSON, XML, or CSV format.
 
@@ -67,7 +67,7 @@ The structure of the exported data depends on the chart that is being exported. 
 
 
 ### Exporting and importing custom chart definitions
-{: #export-import-custom}
+{: #export-import-custom notoc}
 
 You can import and export custom chart definitions programmatically or manually in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
 
@@ -97,7 +97,7 @@ You can also export and import custom chart definitions programmatically by usin
 您可以配置臨界值，以在超出時，觸發警示來通知 {{site.data.keyword.mobileanalytics_short}} 主控台監視器。觸發的警示可以在主控台上進行視覺化，或者自訂 Webhook 可以處理警示。<!-- This feature provides a proactive means of detecting app log errors, server log errors, extended periods of network latency, and authentication failures.-->此特性提供主動的方法來偵測應用程式日誌錯誤和應用程式損毀的伺服器日誌錯誤。反應臨界值及警示讓您不需要篩選資料，並且用更廣的精度來設定臨界值。
 
 ### 建立應用程式日誌的警示定義
-{: #alert-def-client-logs}
+{: #alert-def-client-logs notoc}
 
 您可以根據應用程式日誌來建立警示定義。
 
@@ -131,7 +131,7 @@ You can also export and import custom chart definitions programmatically by usin
 您已建立警示定義，以在應用程式日誌數目達到 3 個以上錯誤日誌的臨界值時，於每 5 分鐘間隔結束時觸發警示。
 
 ### 建立應用程式損毀的警示定義
-{: #alert-def-app-crash}
+{: #alert-def-app-crash notoc}
 
 您可以根據應用程式損毀來建立警示定義。
 
@@ -160,7 +160,7 @@ You can also export and import custom chart definitions programmatically by usin
 5. 按一下**儲存**。
 
 ### 管理警示定義
-{: #managing-alert-definitions}
+{: #managing-alert-definitions notoc}
 
 在此範例中，您從「警示管理」頁面中管理警示定義。
 
@@ -171,7 +171,7 @@ You can also export and import custom chart definitions programmatically by usin
 5. 選用項目：如果您要刪除警示定義，請按一下**垃圾桶**圖示。
 
 ### 檢視警示詳細資料
-{: #viewing-alert-details}
+{: #viewing-alert-details notoc}
 
 在此範例中，您從「警示日誌」頁面中檢視已觸發警示的詳細資料。
 
@@ -190,7 +190,7 @@ You can also export and import custom chart definitions programmatically by usin
 您可以在 {{site.data.keyword.mobileanalytics_short}} 主控台中檢視應用程式損毀的相關資訊，以更適當地監視應用程式並進行疑難排解。
 
 ### 應用程式損毀監視
-{: #app-crash}
+{: #app-crash notoc}
 
 在**毀損**頁面上，**損毀概觀**表格會顯示下列資料直欄：
 
@@ -207,7 +207,7 @@ You can also export and import custom chart definitions programmatically by usin
 2. 顯示損毀總計：一段時間的損毀總計
 
 ### 應用程式損毀疑難排解
-{: #app-crash-troubleshooting}
+{: #app-crash-troubleshooting notoc}
 
 {{site.data.keyword.mobileanalytics_short}} 主控台中的**疑難排解**頁面會使用**損毀摘要**表格提供應用程式損毀的細微視圖。
 

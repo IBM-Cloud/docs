@@ -2,15 +2,16 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
 
 # Starter-App verwenden
 Erstellen Sie simulierte Appliances in der {{site.data.keyword.iotelectronics_full}}-Starter-App und bekommen Sie einen Eindruck davon, wie ein EM (Enterprise Manufacturer) Appliances überwachen kann, die mit der {{site.data.keyword.iot_short_notm}} verbunden sind. Sie können manuell mit der simulierten Appliance interagieren, um Alerts, Benachrichtigungen und Aktionen auszulösen.
@@ -46,25 +47,3 @@ In der Starter-App können Sie simulierte Appliances wie der Appliancehersteller
 3. Um Details zu Ihrer Waschmaschine anzuzeigen, klicken Sie auf eine Waschmaschine. Starten Sie die Waschmaschine über das Befehls- und Bedienfeld oder klicken Sie auf die unterschiedlichen Fehlertypen, um die Statusänderungen anzuzeigen. Sie können außerdem sowohl die Statusänderungen anzeigen als auch die Waschmaschine über Ihre mobile App steuern.
 
   ![Details zum Status der Waschmaschine.](images/IoT4E_washer_control.svg "Details zum Status der Waschmaschine")
-
-
-# Zugehörige Links
-{: #rellinks}
-
-## API-Dokumentation
-{: #api}
-* [{{site.data.keyword.iotelectronics}}-API](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)
-* [{{site.data.keyword.iot_short}}-API](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)
-
-
-## Komponenten
-{: #general}
-
-* [{{site.data.keyword.iotelectronics}}-Dokumentation](iotelectronics_overview.html)
-* [{{site.data.keyword.iot_full}}-Dokumentation](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-*  [{{site.data.keyword.amashort}}-Dokumentation](https://console.ng.bluemix.net/docs/services/mobileaccess/overview.html)
-* [{{site.data.keyword.sdk4nodefull}}-Dokumentation](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
-
-## Beispiele
-{: #samples}
-* [Beispiel für mobile App](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html)

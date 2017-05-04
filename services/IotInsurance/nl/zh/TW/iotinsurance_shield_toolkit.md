@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-01"
+lastupdated: "2017-03-27"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -13,7 +13,7 @@ lastupdated: "2017-03-01"
 {:pre: .pre}
 
 
-# 防護工具箱
+# 使用防護工具箱
 {: #iot4i_shield_toolkit}
 使用防護可透過識別危害及建立適當的自動回應來保護內容及使用者。使用或修改 {{site.data.keyword.iotinsurance_short}} 防護程式庫中包含的防護，或使用下列指示及範例建立並實作您自己的防護。
 {:shortdesc}
@@ -271,16 +271,3 @@ var promotion = {
 ```
 
 您可以選擇性地部署行動應用程式，以及使用 [ioti-mobile GitHub 儲存庫中的指示](https://github.com/ibm-watson-iot/ioti-mobile)以您在前一節中建立的使用者身分進行連接。
-
-# 相關鏈結
-{: #rellinks}
-
-## API 參考資料
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API 範例](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## 相關鏈結
-{: #general}
-* [開發人員支援討論區](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-* [Stack Overflow 支援討論區](http://stackoverflow.com/questions/tagged/ibm-bluemix)

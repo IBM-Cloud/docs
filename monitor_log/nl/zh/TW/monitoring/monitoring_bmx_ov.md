@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-16"
+lastupdated: "2017-03-06"
 
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2017-02-16"
 
 您也可以配置及監視更多效能度量值。您可以在 {{site.data.keyword.Bluemix_notm}} 外部視覺化及分析這些度量值。例如，在 {{site.data.keyword.containershort}} 中執行應用程式時，您可以使用 Grafana 來監視更多度量值。您可以自訂視覺化及分析效能資料的每個容器實例或每個空間的儀表板。
 
-![{{site.data.keyword.Bluemix_notm}} 中所執行容器的 Grafana 監視視圖](images/monitoring_default_container_grafana_view.jpg)
+![{{site.data.keyword.Bluemix_notm}} 中所執行容器的 Grafana 監視視圖](images/monitoring_default_container_grafana_view.jpg "Grafana monitoring view of a container running in Bluemix")
 
 您可以使用 {{site.data.keyword.Bluemix_notm}} 平台監視來：
 
@@ -33,5 +33,4 @@ lastupdated: "2017-02-16"
 
 如需監視 Cloud Foundry 上所執行的應用程式的相關資訊，請參閱[監視 Cloud Foundry 上所執行的應用程式](monitoring_cf_apps.html#monitoring_bluemix_apps)。
 
-如需在 {{site.data.keyword.containershort}} 中監視的相關資訊，請參閱[在 {{site.data.keyword.containershort}} 中監視](/docs/containers/monitoringandlogging/container_ml_monitor.html#container_ml_monitor)。   
-
+如需在 {{site.data.keyword.containershort}} 中監視的相關資訊，請參閱[在 {{site.data.keyword.containershort}} 中監視](containers/monitoring_containers_ov.html#monitoring_bmx_containers_ov)。

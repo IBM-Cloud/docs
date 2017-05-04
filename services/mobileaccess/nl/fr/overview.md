@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,9 +12,10 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+**Important : Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.**
+
 # À propos de {{site.data.keyword.amashort}}
 {: #mca-overview}
-
 
 Le service {{site.data.keyword.amafull}} fournit un service d'authentification aux applications mobiles et Web accédant au
 ressources de cloud hébergées sur {{site.data.keyword.Bluemix_notm}}.
@@ -71,9 +72,9 @@ ressource de cloud.
 
 * L'accès est accordé.  La réponse est renvoyée à l'application mobile.
 
-## Flux de requête
+## Flux de demande
 {: #flow}
-Le diagramme suivant illustre le flux d'une requête depuis le SDK client vers votre application back end
+Le diagramme suivant illustre le flux d'une demande depuis le SDK client vers votre application back end
 mobile et les fournisseurs d'identité.
 
 ![Diagramme de flux de demande](images/mca-sequence-overview.jpg)
@@ -96,19 +97,3 @@ mobile et les fournisseurs d'identité.
 * A partir de ce moment, toutes les demandes faites avec le SDK client de {{site.data.keyword.amashort}} contiennent un nouvel en-tête d'autorisation.
 * Le SDK client de {{site.data.keyword.amashort}} renvoie automatiquement la demande d'origine qui avait déclenché le flux d'autorisation.
 * Le SDK serveur de {{site.data.keyword.amashort}} extrait l'en-tête d'autorisation de la demande, la valide auprès du service {{site.data.keyword.amashort}} et donne l'accès à la ressource de back end.
-
-
-## Aide et support pour {{site.data.keyword.amashort}}
-{: #gettinghelp}
-
-Si vous avez des problèmes ou des questions quand vous utilisez {{site.data.keyword.amashort}}, vous pouvez obtenir de l'aide en recherchant des informations précises ou en posant des questions via un forum. Vous pouvez aussi ouvrir un ticket de demande de service. 
-
-Quand vous utilisez les forums pour poser une question, prenez soin d'étiqueter cette dernière de façon à ce qu'elle soit vue par les équipes de développement {{site.data.keyword.Bluemix_notm}}.
-
-* En cas de questions d'ordre technique sur le développement et le déploiement d'une application avec {{site.data.keyword.amashort}}, postez votre question sur le forum [Stack Overflow ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://stackoverflow.com/search?q={{site.data.keyword.amashort}}+ibm-bluemix "Icône de lien externe"){: new_window} en lui adjoignant les balises "ibm-bluemix" et "{{site.data.keyword.amashort}}".
-* Pour les questions relatives au service et aux instructions de mise en route, lancez une recherche sur le forum [IBM developerWorks ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=mobile+client+access%20%2B[bluemix] "Icône de lien externe"){: new_window}.. 
-
-Voir la rubrique expliquant comment [obtenir de l'aide](https://www.{DomainName}/docs/support/index.html#getting-help) pour plus de détails sur l'utilisation des forums.
-
-Pour plus d'informations sur l'ouverture d'un ticket de demande de service IBM, sur les niveaux de support disponibles ou les niveaux de gravité des tickets, voir la rubrique décrivant [comment contacter le support](https://www.{DomainName}/docs/support/index.html#contacting-support).
-

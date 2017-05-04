@@ -3,7 +3,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-03-21"
 ---
 
 {:shortdesc: .shortdesc}
@@ -75,10 +75,12 @@ Le offerte dell'infrastruttura {{site.data.keyword.Bluemix_notm}} sono collegate
 
 Quando accedi alla console {{site.data.keyword.Bluemix_notm}}, la barra dei menu visualizza link o pulsanti per eseguire la registrazione o l'accesso e per accedere alla documentazione e al catalogo. Dopo aver eseguito l'accesso, la barra dei menu contiene un menu hamburger ![Icona Hamburger](../icons/icon_hamburger.svg) e ulteriori link, a seconda del tuo tipo di account:
 
-* Se sei un nuovo utente di {{site.data.keyword.Bluemix_notm}}, puoi utilizzare il menu hamburger ![Icona Hamburger](../icons/icon_hamburger.svg) per passare tra i dashboard Applicazioni, Servizi o Infrastruttura. Vengono visualizzati dei link alle opzioni di supporto e account e puoi utilizzare il link **Catalogo** per accedere ai servizi {{site.data.keyword.Bluemix_notm}}, di elaborazione e dell'infrastruttura. 
-* Se sei un utente esistente e hai collegato i tuoi account {{site.data.keyword.Bluemix_notm}} e {{site.data.keyword.BluSoftlayer}}, puoi utilizzare il menu hamburger ![Icona Hamburger](../icons/icon_hamburger.svg) per passare tra i dashboard Applicazioni, Servizi o Infrastruttura. Vengono visualizzati dei link alle opzioni di supporto e account e puoi utilizzare il link **Catalogo** per accedere ai servizi {{site.data.keyword.Bluemix_notm}}, di elaborazione e dell'infrastruttura. 
-* Se sei un utente esistente con un account {{site.data.keyword.Bluemix_notm}}, puoi utilizzare il menu hamburger ![Icona Hamburger](../icons/icon_hamburger.svg) per passare tra i dashboard Applicazioni e Servizi. Vengono visualizzati dei link alle opzioni di supporto e account e puoi utilizzare il link **Catalogo** per accedere ai servizi {{site.data.keyword.Bluemix_notm}} e di elaborazione. 
-* Se sei un utente esistente con un account {{site.data.keyword.BluSoftlayer}} e non hai collegato il tuo account a {{site.data.keyword.Bluemix_notm}}, la barra dei menu visualizza i link che erano disponibili in precedenza in  {{site.data.keyword.BluSoftlayer}}, come l'accesso alla guida KnowledgeLayer, le opzioni di contatto, le notifiche, l'apertura di ticket e l'accesso. Inoltre, vengono visualizzati un link al dashboard Infrastruttura e dei link alle opzioni di supporto e account. 
+* Se sei un nuovo utente di {{site.data.keyword.Bluemix_notm}}, puoi utilizzare il menu hamburger ![Icona Hamburger](../icons/icon_hamburger.svg) per passare tra i dashboard Applicazioni, Servizi e Infrastruttura. Puoi utilizzare il link **Catalogo** per accedere ai servizi infrastruttura e piattaforma. Vengono inoltre visualizzati i link per il supporto e l'account, la fatturazione e l'utilizzo e le opzioni di gestione sicura.
+* Se sei un utente esistente con un account {{site.data.keyword.Bluemix_notm}}, puoi utilizzare il menu hamburger ![Icona Hamburger](../icons/icon_hamburger.svg) per passare tra i dashboard Applicazioni e Servizi. Puoi utilizzare il **Catalogo** per accedere ai servizi infrastruttura e piattaforma e vengono visualizzati i link per il supporto e l'account a livello della piattaforma, la fatturazione e l'utilizzo e le opzioni di gestione sicura.
+* Se sei un utente esistente e hai collegato i tuoi account {{site.data.keyword.Bluemix_notm}} e {{site.data.keyword.BluSoftlayer}}, puoi utilizzare il menu hamburger ![Icona Hamburger](../icons/icon_hamburger.svg) per passare tra i dashboard Applicazioni, Servizi e Infrastruttura. Puoi anche utilizzare il link **Catalogo** per accedere ai servizi infrastruttura e piattaforma. 
+  * Quando sei nei dashboard Applicazioni e Servizi, la barra del menu include i link alle risorse al livello della piattaforma, come la documentazione, il supporto e l'account {{site.data.keyword.Bluemix_notm}} e le opzioni di gestione della sicurezza. Puoi anche accedere ai link alle opzioni di fatturazione a livello dell'infrastruttura. 
+  * Quando sei nel dashboard Infrastruttura, la barra del menu visualizza i link alle risorse al livello dell'infrastruttura come la guida KnowledgeLayer, le opzioni di contatto, le notifiche, i ticket aperti e le opzioni di gestione dell'account e del supporto.
+* Se sei un utente esistente con un account {{site.data.keyword.BluSoftlayer}} collegato a {{site.data.keyword.Bluemix_notm}}, puoi utilizzare il menu hamburger ![Icona Hamburger](../icons/icon_hamburger.svg) per accedere al dashboard Infrastruttura e il link **Catalogo** per accedere ai servizi dell'infrastruttura. La barra del menu include inoltre i link alla guida KnowledgeLayer, alle opzioni di contatto, alle notifiche, ai ticket aperti e alle opzioni dell'account e del supporto. 
 
 ## Architettura {{site.data.keyword.Bluemix_notm}} Cloud Foundry
 {: #architecture}
@@ -129,7 +131,7 @@ Quando crei un'applicazione e la distribuisci a {{site.data.keyword.Bluemix_notm
 * Il carico già sulla macchina
 * I runtime o i framework supportati da tale server virtuale.
 
-Una volta selezionato un server virtuale, su ciascun server virtuale un gestore dell'applicazione installa il framework e il runtime appropriati per l'applicazione. Quindi, l'applicazione può essere distribuita in tale framework. Una volta completata la distribuzione, le risorse dell'applicazione vengono avviate.
+Una volta selezionato un server virtuale, su ciascun server virtuale un gestore dell'applicazione installa il framework e il runtime appropriati per l'applicazione. L'applicazione può quindi essere distribuita in tale framework. Una volta completata la distribuzione, le risorse dell'applicazione vengono avviate.
 
 La seguente figura mostra la struttura di un server virtuale, nota anche come DEA (Droplet Execution Agent), su cui sono distribuite più applicazioni:
 
@@ -172,6 +174,7 @@ seguenti regioni e i seguenti prefissi di regione.
 | Regione Stati Uniti Sud | Dallas, Stati Uniti | ng | api.ng.bluemix.net | console.ng.bluemix.net |
 | Regione Regno Unito | Londra, Inghilterra | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
 | Regione Sydney | Sydney, Australia | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
+| Regione Germania | Francoforte, Germania | eu-de | api.eu-de.bluemix.net | console.eu-de.bluemix.net |
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} region list" caption-side="top"}
 
 

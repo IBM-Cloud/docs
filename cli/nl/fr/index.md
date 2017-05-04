@@ -63,9 +63,9 @@ bluemix plugin install nom_plug-in -r bluemix-bx
 {: codeblock}
 
 
-| *{{site.data.keyword.activedeployshort}} interface de ligne de commande* | *{{site.data.keyword.autoscaling}} interface de ligne de commande* | *IBM Containers*  |
+| *{{site.data.keyword.activedeployshort}} interface de ligne de commande* | *{{site.data.keyword.autoscaling}} interface de ligne de commande* | *Service IBM Bluemix Container*  |
 |-----|-----|-----|
-| Nom du plug-in : active-deploy <br> [Afficher la documentation](/docs/services/ActiveDeploy/cli.html#cli) | Nom du plug-in : auto-scaling <br> [Afficher la documentation](/docs/cli/plugins/auto-scaling/index.html) |  Nom du plug-in : IBM-Containers  <br> [Afficher la documentation](/docs/cli/plugins/containers/index.html) |
+| Nom du plug-in : active-deploy <br> [Afficher la documentation](/docs/services/ActiveDeploy/cli.html#cli) | Nom du plug-in : auto-scaling <br> [Afficher la documentation](/docs/cli/plugins/auto-scaling/index.html) |  Nom du plug-in : container-service  <br> [Afficher la documentation](/docs/containers/cs_cli_devtools.html) |
 {: caption="Table 2. Plug-ins" caption-side="top"}
 
 |  *Appairage de réseaux privés* | *réseau privé virtuel (VPN)*  |

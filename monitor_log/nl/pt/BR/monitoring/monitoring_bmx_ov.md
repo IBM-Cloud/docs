@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-16"
+lastupdated: "2017-03-06"
 
 ---
 
@@ -24,7 +24,7 @@ O {{site.data.keyword.Bluemix_notm}}, por padrão, coleta e exibe métricas de d
 
 Também é possível configurar e monitorar mais métricas de desempenho. É possível visualizar e analisar essas métricas fora do {{site.data.keyword.Bluemix_notm}}. Por exemplo, é possível usar o Grafana para monitorar mais métricas quando você executar seu app no {{site.data.keyword.containershort}}. É possível customizar painéis por instância de contêiner ou por espaço no qual você visualiza e analisa os dados de desempenho.
 
-![Visualização de monitoramento do Grafana de um contêiner em execução no {{site.data.keyword.Bluemix_notm}}](images/monitoring_default_container_grafana_view.jpg)
+![Visualização de monitoramento do Grafana de um contêiner em execução no {{site.data.keyword.Bluemix_notm}}](images/monitoring_default_container_grafana_view.jpg "Visualização de monitoramento do Grafana de um contêiner em execução no Bluemix")
 
 É possível usar o monitoramento da plataforma {{site.data.keyword.Bluemix_notm}} para:
 
@@ -33,5 +33,4 @@ Também é possível configurar e monitorar mais métricas de desempenho. É pos
 
 Para obter mais informações sobre o monitoramento de apps que são executados no Cloud Foundry, veja [Monitorando apps que são executados no Cloud Foundry](monitoring_cf_apps.html#monitoring_bluemix_apps).
 
-Para obter mais informações sobre o monitoramento no {{site.data.keyword.containershort}}, veja [Monitoramento no {{site.data.keyword.containershort}}](/docs/containers/monitoringandlogging/container_ml_monitor.html#container_ml_monitor).   
-
+Para obter mais informações sobre o monitoramento no {{site.data.keyword.containershort}}, veja [Monitoramento no {{site.data.keyword.containershort}}](containers/monitoring_containers_ov.html#monitoring_bmx_containers_ov).

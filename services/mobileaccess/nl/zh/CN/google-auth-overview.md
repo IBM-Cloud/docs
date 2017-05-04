@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+**重要信息：{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。**
 
 
 # 使用 Google 凭证认证用户
@@ -45,7 +47,7 @@ lastupdated: "2017-01-15"
 * {{site.data.keyword.amashort}} 服务器 SDK 从请求中抽取 Authorization 头，通过 {{site.data.keyword.amashort}} 服务对其进行验证，然后授予对后端资源的访问权。
 
 
-### {{site.data.keyword.amashort}} Web 应用程序请求流程
+### Mobile Client Access Web 应用程序请求流程
 {: #mca-google-web-sequence}
 {{site.data.keyword.amashort}} Web 应用程序请求流程类似于移动客户端的流程。但是，{{site.data.keyword.amashort}} 保护 Web 应用程序而非 {{site.data.keyword.Bluemix_notm}} 后端资源。
 

@@ -2,9 +2,11 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-06"
 
 ---
+
+**Importante: o serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.**
 
 # Ativando a autenticação do Facebook para apps da web
 {: #facebook_web}
@@ -26,7 +28,7 @@ Para usar o Facebook como provedor de identidade em seu website, deve-se incluir
 1. Anote o ID do aplicativo para seu app e o segredo do app. Esse valor é necessário ao configurar seu projeto da web para autenticação do Facebook.
 1. Na página **Configurações**, clique em **Incluir plataforma** e escolha **Website**.
 1. Salve as mudanças.
-1. Clique em **Login do Facebook** na barra lateral esquerda.
+1. Clique no **Login do Facebook** na barra lateral.
 1. Insira o terminal de retorno de chamada do servidor de autorizações na caixa **URIs de redirecionamento válidos de OAuth**: https://imf-newauthserver.bluemix.net/oauth/{bluemix_app_guid}/callback. Salve as mudanças.
 
 

@@ -2,13 +2,15 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
+
+**Important : Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.**
 
 # Authentification des utilisateurs à l'aide des données d'identification Facebook
 {: #facebook-auth-overview}
@@ -64,7 +66,7 @@ Vous aurez besoin de cette valeur pour
 configurer l'authentification Facebook
 pour votre application mobile ou Web.
 
-1. Accédez au site [Facebook for Developers ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developers.facebook.com "Icône de lien externe"){: new_window}.
+1. Accédez au site [Facebook for Developers ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developers.facebook.com){: new_window}.
 
 1. Ouvrez la liste déroulante **Mes applications** et sélectionnez **Ajouter une application**.
 

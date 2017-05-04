@@ -16,7 +16,9 @@ lastupdated: "2017-02-16"
 # Analisando logs no Kibana
 {: #analyzing_logs_Kibana3}
 
-No {{site.data.keyword.Bluemix}}, é possível usar o Kibana, uma plataforma de analítica e visualização de software livre, para monitorar, procurar, analisar e visualizar seus dados em uma variedade de gráficos, por exemplo, gráficos e tabelas. Use o Kibana para executar tarefas analíticas avançadas.
+No {{site.data.keyword.Bluemix}}, é possível usar o Kibana, uma plataforma de software livre
+para análise de dados e visualização, para monitorar, procurar, analisar e visualizar seus dados em uma
+variedade de gráficos, por exemplo, diagramas e tabelas. Use o Kibana para executar tarefas analíticas avançadas.
 {:shortdesc}
 
 É possível ativar o Kibana de qualquer uma das maneiras a seguir:
@@ -25,13 +27,13 @@ No {{site.data.keyword.Bluemix}}, é possível usar o Kibana, uma plataforma de 
 
     É possível ativar para seus logs específicos do app CF no Kibana, no contexto para esse app específico.
     
-    A consulta usada para filtrar os dados que são exibidos no painel recupera entradas de log para o aplicativo Cloud Foundry. As informações de log exibidas por padrão pelo painel do Kibana estão todas relacionadas a um único aplicativo Cloud Foundry e todas as suas instâncias. Para obter mais informações, veja [Acessando o painel do Kibana no painel do {{site.data.keyword.Bluemix}}](logging_view_kibana3.html#launch_Kibana_from_bluemix).
+    A consulta que é usada para filtrar os dados que são exibidos no painel recupera entradas de log para o aplicativo Cloud Foundry. As informações de log exibidas por padrão pelo painel do Kibana estão todas relacionadas a um único aplicativo Cloud Foundry e todas as suas instâncias. Para obter mais informações, veja [Acessando o painel do Kibana no painel do {{site.data.keyword.Bluemix}}](logging_view_kibana3.html#launch_Kibana_from_bluemix).
 
 * Em um link direto do navegador
 
     Você pode desejar ativar para o painel customizado do Kibana que agrega dados de serviços dentro de um espaço do {{site.data.keyword.Bluemix}} fornecido.
     
-    A consulta usada para filtrar os dados que são exibidos no painel recupera entradas de log para um espaço na organização do {{site.data.keyword.Bluemix}}. As informações de log exibidas pelo painel do Kibana incluem registros para todos os recursos que são implementados no espaço da organização do {{site.data.keyword.Bluemix}} em que você efetuou login. Para obter mais informações, veja [Acessando o painel do Kibana em um navegador da web](logging_view_kibana3.html#launch_Kibana_from_browser).
+    A consulta que é usada para filtrar os dados que são exibidos no painel recupera entradas de log para um espaço na organização do {{site.data.keyword.Bluemix}}. As informações de log exibidas pelo painel do Kibana incluem registros para todos os recursos que são implementados no espaço da organização do {{site.data.keyword.Bluemix}} em que você efetuou login. Para obter mais informações, veja [Acessando o painel do Kibana em um navegador da web](logging_view_kibana3.html#launch_Kibana_from_browser).
     
     Também é possível mudar ou remover a consulta inicial e incluir mais consultas. Para obter mais informações, veja [Filtrando seus logs do app Cloud Foundry com consultas no Kibana](kibana3/logging_kibana_query.html#logging_kibana_query).
 
@@ -64,7 +66,7 @@ Para obter mais informações, veja a documentação do [Kibana](https://www.ela
 ##  Acessando o painel do Kibana por meio do painel do Bluemix
 {: #launch_Kibana_from_bluemix}
 
-A consulta usada para filtrar os dados que são exibidos no painel recupera entradas de log para o aplicativo Cloud Foundry. As informações de log exibidas por padrão pelo painel do Kibana estão todas relacionadas a um único aplicativo Cloud Foundry e todas as suas instâncias.
+A consulta que é usada para filtrar os dados que são exibidos no painel recupera entradas de log para o aplicativo Cloud Foundry. As informações de log exibidas por padrão pelo painel do Kibana estão todas relacionadas a um único aplicativo Cloud Foundry e todas as suas instâncias.
 
 Para ver os logs de um aplicativo Cloud Foundry no Kibana, conclua as etapas a seguir:
 
@@ -81,7 +83,7 @@ Para obter mais informações sobre como customizar um painel do Kibana, veja [e
 ##  Acessando o painel do Kibana por meio de um navegador da web
 {: #launch_Kibana_from_browser}
 
-A consulta usada para filtrar os dados que são exibidos no painel recupera entradas de log para um espaço na organização do {{site.data.keyword.Bluemix}}. As informações de log exibidas pelo painel do Kibana incluem registros para todos os recursos que são implementados no espaço da organização do {{site.data.keyword.Bluemix}} em que você efetuou login.
+A consulta que é usada para filtrar os dados que são exibidos no painel recupera entradas de log para um espaço na organização do {{site.data.keyword.Bluemix}}. As informações de log exibidas pelo painel do Kibana incluem registros para todos os recursos que são implementados no espaço da organização do {{site.data.keyword.Bluemix}} em que você efetuou login.
 
 Conclua as etapas a seguir para abrir um painel do Kibana em um navegador:
 

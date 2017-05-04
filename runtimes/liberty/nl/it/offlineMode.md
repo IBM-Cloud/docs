@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-14"
+  years: 2016, 2017
+lastupdated: "2017-03-23"
 
 ---
 
@@ -19,12 +19,12 @@ per acquisire le risorse richieste dall'applicazione.  I seguenti sono dei siti 
 [Bluemix locale](/docs/local/index.html#local) è necessario che questi siti siano *consentiti*.
 
 * https://download.run.pivotal.io e https://java-buildpack.cloudfoundry.org sono utilizzati per accedere ai componenti di:
-  * [AppDynamics agent](https://www.appdynamics.com/)
-  * [MariaDB JDBC driver](https://mariadb.com/)
+  * [AppDynamics agent ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.appdynamics.com/)
+  * [MariaDB JDBC driver ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://mariadb.com/)
   * [New Relic agent](newRelic.html)
   * [OpenJDK ](customizingJRE.html#OpenJDK)
-  * [PostgreSQL JDBC driver](https://www.postgresql.org)
-* https://dl.zeroturnaround.com/jrebel/ è utilizzato per accedere ai componenti di [JRebel](https://zeroturnaround.com/software/jrebel/).
+  * [PostgreSQL JDBC driver ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.postgresql.org)
+* https://dl.zeroturnaround.com/jrebel/ è utilizzato per accedere ai componenti di [JRebel ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://zeroturnaround.com/software/jrebel/).
 * https://download.ruxit.com/agent/paas/cloudfoundry/java è utilizzato per accedere ai componenti di [Dynatrace Ruxit agent](dynatrace.html).
 * http://downloads.dynatracesaas.com/cloudfoundry/buildpack/java/  è utilizzato per accedere a [Dynatrace agent](dynatrace.html).
 
@@ -36,8 +36,8 @@ In alcuni ambienti come [Bluemix dedicato](/docs/dedicated/index.html#dedicated)
 [Gestione di un proxy](/docs/manageapps/workingWithProxy.html) per ulteriori dettagli.
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
-{: #general}
+{: #general notoc}
 * [Runtime Liberty](index.html)
 * [Panoramica di Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

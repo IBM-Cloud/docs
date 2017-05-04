@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-04"
+lastupdated: "2017-04-18"
 
 ---
 {:new_window: target="_blank"}
@@ -14,17 +14,17 @@ lastupdated: "2017-04-04"
 # End-to-end tutorial of the Mobile Basic Starter
 {: #tutorial}
 
-The following end-to-end tutorial walks through the steps to create a project from the Mobile Basic Starter, including the tools that you must have installed, and subsequently, the steps to run the project in Xcode and Android Studio.
+The following end-to-end tutorial walks you through the steps to create a project from the Mobile Basic Starter. This includes installing prerequisite tools and the steps to run the project in Xcode and Android Studio.
 
-You have the option to create a project using either the web-based [{{site.data.keyword.dev_console}}](#create-devex) or through the command-driven [{{site.data.keyword.dev_cli_notm}}](#create-cli).
+You can create a project using either the web-based [{{site.data.keyword.dev_console}}](#create-devex) or through the command-driven [{{site.data.keyword.dev_cli_notm}}](#create-cli).
 
 ## Installing developer tools
 {: #dev_tools}
 
-Ensure that you have installed the [prerequisite developer tools ![External link icon](../icons/launch-glyph.svg "External link icon")](get_code.html#prereq-dev-tools){: new_window}.
+Ensure that you install the [prerequisite developer tools ![External link icon](../icons/launch-glyph.svg "External link icon")](get_code.html#prereq-dev-tools){: new_window}.
 
 
-## Creating a project using the {{site.data.keyword.dev_console}}
+## Creating a project by using the {{site.data.keyword.dev_console}}
 {: #create-devex}
 
 1. Create a {{site.data.keyword.dev_console}} project in {{site.data.keyword.Bluemix}}.
@@ -53,7 +53,7 @@ Ensure that you have installed the [prerequisite developer tools ![External link
    
    3. Toggle on **Authentication**.
    
-   4. Select your identity provider and enter the required information to configure it. You can enable only one identity provider.
+   4. Select your identity provider and enter the information to configure it. You can enable only one identity provider.
    
    5. See [Configuring identity providers} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/appid/identity-providers.html){: new_window} for more information about configuring Authentication.
 
@@ -116,10 +116,10 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 8. Optional: [Update your project](project_overview_page.html#update_language) to generate a new language.
 
 
-## Creating a project using the {{site.data.keyword.dev_cli_notm}}
+## Creating a project by using the {{site.data.keyword.dev_cli_notm}}
 {: #create-cli}
 
-1. Ensure that you have installed the [{{site.data.keyword.dev_cli_short}}](dev_cli.html).
+1. Ensure that you install the [{{site.data.keyword.dev_cli_short}}](dev_cli.html).
 
 2. In your Terminal prompt, navigate to a local directory of your choice and run the following command.
 
@@ -137,7 +137,7 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 
 4. If you want to add services to your project, type `y` at the question prompt and answer the remaining questions.
 
-5. When your `MobileBasicProjectCLI` has been successfully saved, navigate to the `MobileBasicProjectCLI/MobileBasicProjectCLI-Swift` folder.
+5. When your `MobileBasicProjectCLI` is successfully saved, navigate to the `MobileBasicProjectCLI/MobileBasicProjectCLI-Swift` folder.
 
 
 ## Running your Swift project in Xcode

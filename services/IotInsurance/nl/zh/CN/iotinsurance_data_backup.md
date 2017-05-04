@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-01"
+lastupdated: "2017-03-22"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -39,7 +39,7 @@ aggregationschedule|-|-| 否|可以重新构建。
 
 要备份 {{site.data.keyword.iotinsurance_short}} 数据，请执行以下步骤：
 
-## 创建副本 {{site.data.keyword.cloudant}} 实例
+## 创建副本 {{site.data.keyword.cloudant_short_notm}} 实例
 {: #createinstance}
 使用 [{{site.data.keyword.cloudant}} 复制指示信息 ![外部链接图标](../../icons/launch-glyph.svg)](https://docs.cloudant.com/replication.html)，创建副本 {{site.data.keyword.cloudant}} 实例。为了进行灾难恢复，请在非原始 {{site.data.keyword.iotinsurance_short}} 服务位置创建副本。例如，如果原始实例位于达拉斯，那么副本可位于伦敦。
 

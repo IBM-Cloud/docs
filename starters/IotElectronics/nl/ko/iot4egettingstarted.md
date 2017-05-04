@@ -2,11 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -29,9 +29,8 @@ lastupdated: "2017-03-10"
 ## {{site.data.keyword.iotelectronics}} 시작하기
 시작하려면 다음 태스크를 완료하십시오. 
 
-1. {{site.data.keyword.amafull}}를 구성하여 [모바일 통신과 보안을 사용으로 설정](iotelectronics_config_mca.html)하십시오. 
-2. {{site.data.keyword.iotelectronics}} 스타터 웹 애플리케이션을 사용하여 [시뮬레이션된 어플라이언스를 작성](iot4ecreatingappliances.html)하십시오. 시연을 위해서 세탁기는 {{site.data.keyword.iotelectronics}} 스타터의 시뮬레이션된 어플라이언스로 사용됩니다. 연결하려고 선택하는 어플라이언스는 스마트 전자식 디바이스인 경우 어느 유형이든 가능합니다. 
-3. 샘플 모바일 앱을 [다운로드하고 연결](iotelectronics_config_mobile.html)하십시오. 
+1. {{site.data.keyword.iotelectronics}} 스타터 웹 애플리케이션을 사용하여 [시뮬레이션된 어플라이언스를 작성](iot4ecreatingappliances.html)하십시오. 시연을 위해 {{site.data.keyword.iotelectronics}} 스타터에서는 세탁기를 시뮬레이션된 어플라이언스로 사용합니다. 사용자는 모든 유형의 스마트 전자 기기를 연결할 수 있습니다. 
+2. 샘플 모바일 앱을 [다운로드하고 연결](iotelectronics_config_mobile.html)하십시오. 
 
 
 ## 다음에 수행할 작업
@@ -49,14 +48,13 @@ lastupdated: "2017-03-10"
 {: #api}
 * [{{site.data.keyword.iotelectronics}} API ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://broker-uss-iot4e.electronics.internetofthings.ibmcloud.com/public/iot4eregistrationapi.html){:new_window}
 * [{{site.data.keyword.iot_short}} API ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://developer.ibm.com/iotfoundation/recipes/api-documentation/){:new_window}
-
+* [IBM Watson IoT Service Health Dashboard ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://status.internetofthings.ibmcloud.com){: new_window}
 
 ## 컴포넌트
 {: #general}
 
 * [{{site.data.keyword.iotelectronics}} 문서](iotelectronics_overview.html){:new_window}
 * [{{site.data.keyword.iot_full}} 문서](https://console.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
-*  [{{site.data.keyword.amashort}} 문서](https://console.ng.bluemix.net/docs/services/mobileaccess/overview.html){:new_window}
 * [{{site.data.keyword.sdk4nodefull}} 문서](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime){:new_window}
 
 ## 샘플

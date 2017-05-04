@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-04-13"
+lastupdated: "2017-05-03"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-04-13"
 # {{site.data.keyword.Bluemix_notm}} (bx) commands
 {: #bluemix_cli}
 
-Version: 0.5.1
+Version: 0.5.2
 
 The {{site.data.keyword.Bluemix_notm}} command line interface (CLI) provides a set of commands that are grouped by namespace for users to interact with {{site.data.keyword.Bluemix_notm}}. Some {{site.data.keyword.Bluemix_notm}} commands are wrappers of existing cf commands, while others provide extended capabilities for {{site.data.keyword.Bluemix_notm}} users. The following information lists commands that are supported by {{site.data.keyword.Bluemix_notm}} CLI, and includes their names, options, usage, prerequisites, descriptions, and examples.
 {:shortdesc}
@@ -27,7 +27,9 @@ The {{site.data.keyword.Bluemix_notm}} command line interface (CLI) provides a s
 <dt>Endpoint</dt>
 <dd>An API endpoint must be set through the <code>bluemix api</code> before using the command.</dd>
 <dt>Login</dt>
-<dd>Login by using the <code>bluemix login</code> command is required before using this command. <b>If logging in with federated ID, use '--sso' option to authenticate with one time passcode, or use '--apikey' to authenticate with API key</b>. Go to {{site.data.keyword.Bluemix_notm}} console “Manage” -> “Security” -> “Bluemix API keys” to create API keys</dd>
+<dd>Login by using the <code>bluemix login</code> command is required before using this command.
+If logging in with federated ID, use '--sso' option to authenticate with one time passcode, or use '--apikey' to authenticate with API key. Go to {{site.data.keyword.Bluemix_notm}} console **Manage** &gt; **Security** &gt; **Bluemix API keys** to create API keys.
+</dd>
 <dt>Target</dt>
 <dd>The <code>bluemix target</code> command must be used to set an org and space before using this command.</dd>
 <dt>Docker</dt>
@@ -332,8 +334,6 @@ bluemix login [OPTIONS...]
 
 <strong>Prerequisites</strong>:  None
 
-<!-- staging comment for Atlas 45: might need prereq for federated ID/SSO option unless we expect them to just view the details from the cf login command -->
-
 <strong>Command options</strong>:
 <dl>
   <dt>-a <i>API_ENDPOINT</i> (optional)</dt>
@@ -352,6 +352,8 @@ bluemix login [OPTIONS...]
   <dd> Name of the target organization </dd>
   <dt> -s <i>SPACE_NAME</i> (optional) </dt>
   <dd> Name of the target space</dd>
+  <dt> --skip-ssl-validation (optional) </dt>
+  <dd> Bypass SSL validation of HTTP requests. This option is not recommended.</dd>
 </dl>
 
 <strong>Examples</strong>:
@@ -1333,7 +1335,7 @@ bluemix app domain-cert ibmcxo-eventconnect.com
 Add a certificate to the specified domain in the current org.
 
 ```
-bluemix app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [--verify-client]
+bluemix app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD] [-i INTERMEDIATE_CERT_FILE] [-t TRUST_STORE_FILE]
 ```
 
 <strong>Prerequisites</strong>:  Endpoint, Login, Target
@@ -1350,8 +1352,8 @@ bluemix app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD
    <dd>The password for the certificate.</dd>
    <dt>-i <i>INTERMEDIATE_CERT_FILE</i> (optional)</dt>
    <dd>The intermediate certificate file path.</dd>
-   <dt>--verify-client (optional)</dt>
-   <dd>Whether to enable the client certificate verification.</dd>
+   <dt>-t <i>TRUST_STORE_FILE</i> (optional)</dt>
+   <dd>The trust store file.</dd>
    </dl>
 
 

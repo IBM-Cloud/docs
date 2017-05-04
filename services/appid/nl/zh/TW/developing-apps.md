@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -11,7 +11,8 @@ lastupdated: "2017-03-30"
 {:screen: .screen}
 {:pre: .pre}
 
-# 開發行動及 Web 應用程式
+# 設定範例應用程式及 SDK
+{: #developing}
 
 建立 {{site.data.keyword.appid_short}} 服務之後，即可使用儀表板來下載 Android、iOS 及 Node.js 的範例應用程式。
 
@@ -19,9 +20,8 @@ lastupdated: "2017-03-30"
 2. 遵循儀表板上的指示，開始使用逐步範例。
 
 
-
 ## Web 開發
-{: #web-dev}
+{: #web-dev notoc}
 
 {{site.data.keyword.appid_short_notm}} 服務可保護 Web 應用程式，並且不需要特殊 SDK。{{site.data.keyword.appid_short_notm}} 整合可讓任何 Web 應用程式（不論其實作何種技術）充分運用 OAuth2 通訊協定。
 

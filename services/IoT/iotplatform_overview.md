@@ -37,6 +37,8 @@ When you register with the {{site.data.keyword.iot_short_notm}}, you are given a
 
 For your security, it is impossible for cross-organization communication. The only way to transmit data between two organizations is to create an application within each organization that will communicate with applications in the other organization.
 
+**Note:** Your {{site.data.keyword.iot_short_notm}} organization ID is different from your [Bluemix organization](../../docs/admin/orgs_spaces.html#orginfo).
+
 ### Devices
 
 A device can be anything that has a connection to the Internet and that can push data into the cloud. However, devices cannot communicate directly with other devices, instead devices accept commands from applications, and send events to applications. Devices in the {{site.data.keyword.iot_short_notm}} are identified by a unique authentication token. Devices must be registered before they can connect to the {{site.data.keyword.iot_short_notm}}.

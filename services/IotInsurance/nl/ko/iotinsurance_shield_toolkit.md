@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-01"
+lastupdated: "2017-03-27"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -13,7 +13,7 @@ lastupdated: "2017-03-01"
 {:pre: .pre}
 
 
-# 실드 툴킷
+# 실드 툴킷 사용
 {: #iot4i_shield_toolkit}
 실드를 통해 위험을 식별하고 적절한 자동 응답을 작성하여 재산 및 사용자를 보호합니다. {{site.data.keyword.iotinsurance_short}} 실드 라이브러리에 포함된 실드를 사용 또는 수정하거나 다음에 소개되는 지시사항 및 예제를 사용하여 사용자 자신의 실드를 작성해서 구현하십시오.
 {:shortdesc}
@@ -269,16 +269,3 @@ var promotion = {
 ```
 
 선택적으로 모바일 앱을 배치하고 [ioti-mobile GitHub 저장소의 지시사항](https://github.com/ibm-watson-iot/ioti-mobile)을 사용하여 이전 섹션에서 작성한 사용자로 연결할 수 있습니다. 
-
-# 관련 링크
-{: #rellinks}
-
-## API 참조
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API 예제](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## 관련 링크
-{: #general}
-* [개발자 지원 포럼](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-* [Stack Overflow 지원 포럼](http://stackoverflow.com/questions/tagged/ibm-bluemix)

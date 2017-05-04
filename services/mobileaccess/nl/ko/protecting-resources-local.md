@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,6 +11,7 @@ lastupdated: "2017-01-08"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+**중요: {{site.data.keyword.amafull}} 서비스는 {{site.data.keyword.appid_full}} 서비스로 대체되었습니다. **
 
 # 로컬 개발 환경에서 {{site.data.keyword.amashort}} 사용
 {: #protecting-local}
@@ -26,7 +27,7 @@ lastupdated: "2017-01-08"
 * **테넌트 ID**. {{site.data.keyword.amafull}} 대시보드에서 서비스를 여십시오. **모바일 옵션** 단추를 클릭하십시오. **앱 GUID / TenantId** 필드에 `tenantId`(`appGUID`라고도 함) 값이 표시됩니다. 이 값은 권한 관리자를 초기화하는 데 필요합니다. 
 * **애플리케이션 라우트**. 이는 백엔드 애플리케이션의 URL입니다. 이 값은 해당 보호 엔드포인트에 요청을 전송하는 데 필요합니다. 
 * {{site.data.keyword.Bluemix_notm}} **지역**. 헤더에서 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘") 옆에 현재 {{site.data.keyword.Bluemix_notm}} 지역이 표시됩니다. 표시되는 지역 값은 `US South`,  `Sydney` 또는 `United Kingdom` 중 하나여야 합니다. SDK에서 필요로 하는 정확한 구문은 코드 샘플의 주석을 참조하십시오. 이 값은 {{site.data.keyword.amashort}} 클라이언트를 초기화하는 데 필요합니다. 
-* Gradle과 작동하도록 설정된 Android Studio 프로젝트. Android 개발 환경을 설정하는 방법에 대한 자세한 정보는 [Google 개발자 도구 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://developer.android.com/sdk/index.html "외부 링크 아이콘"){: new_window}를 참조하십시오. 
+* Gradle과 작동하도록 설정된 Android Studio 프로젝트. Android 개발 환경을 설정하는 방법에 대한 자세한 정보는 [Google 개발자 도구 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://developer.android.com/sdk/index.html){: new_window}를 참조하십시오. 
 
 ## 서버 SDK 설정
 {: #serversetup}

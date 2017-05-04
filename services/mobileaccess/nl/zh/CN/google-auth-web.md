@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -11,6 +11,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+**重要信息：{{site.data.keyword.amafull}} 服务已替换为 {{site.data.keyword.appid_full}} 服务。**
 
 # 启用 Web 应用程序的 Google 认证
 {: #google-auth-web}
@@ -31,7 +33,7 @@ lastupdated: "2017-01-15"
 ## 针对 Web 站点配置 Google 应用程序
 {: #google-auth-config}
 
-要开始将 Google 用作身份提供者，请在 [Google 开发者控制台 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.developers.google.com "外部链接图标"){: new_window} 中创建项目。创建项目的步骤之一是获取 **Google 客户端标识**和**私钥**。Google 客户端标识和私钥是 Google 认证针对您的应用程序使用的唯一标识，设置 {{site.data.keyword.amashort}} 仪表板时需要这些标识。
+要开始将 Google 用作身份提供者，请在 [Google 开发者控制台 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.developers.google.com){: new_window} 中创建项目。创建项目的步骤之一是获取 **Google 客户端标识**和**私钥**。Google 客户端标识和私钥是 Google 认证针对您的应用程序使用的唯一标识，设置 {{site.data.keyword.amashort}} 仪表板时需要这些标识。
 
 1. 在 Google 开发者控制台中打开 Google 应用程序。
 3. 添加 **Google+** API。
@@ -40,7 +42,7 @@ lastupdated: "2017-01-15"
 4. 保存更改。记录 **Google 客户端标识**和**应用程序私钥**。
 
 
-## 配置 {{site.data.keyword.amashort}} 进行 Google 认证
+## 配置 Mobile Client Access 进行 Google 认证
 {: #google-auth-config-ama}
 
 在您已经有 Google 应用程序标识和私钥之后，可以在 {{site.data.keyword.amashort}} 仪表板中启用 Google 认证。
@@ -52,12 +54,11 @@ lastupdated: "2017-01-15"
 4. 在**针对 Web 配置**部分中：   
     * 记录 **Google 开发者控制台的 Mobile Client Access 重定向 URI** 文本框中的值。您需要将此值添加到 **Google 开发者门户网站**的 **Web 应用程序客户端标识的限制**下的**授权重定向 URI** 框中。
     * 输入**客户端标识**和**客户端私钥**。
-    * 在 **Web 应用程序重定向 URI**中输入重定向 URI。
-此值是为了在完成授权流程之后可访问该重定向 URI，由开发者确定。
+    * 在 **Web 应用程序重定向 URI** 中输入重定向 URI。此值是为了在完成授权流程之后可访问该重定向 URI，由开发者确定。
 5. 单击**保存**。
 
 
-## 使用 Google 作为身份提供者实施 {{site.data.keyword.amashort}} 授权流程
+## 使用 Google 作为身份提供者实施 Mobile Client Access 授权流程
 {: #google-auth-flow}
 
 针对每一个 {{site.data.keyword.amashort}} 服务实例会自动创建 `VCAP_SERVICES` 环境变量，该环境变量包含授权流程所需的属性。它包含 JSON 对象，通过单击 {{site.data.keyword.amashort}} 服务仪表板中的**服务凭证**选项卡，可以查看该对象。
@@ -74,8 +75,7 @@ lastupdated: "2017-01-15"
 
 	美国南部：
 
-	`  https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization
-   `
+	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization`
 
 	伦敦：
 
@@ -92,20 +92,17 @@ lastupdated: "2017-01-15"
 	以下示例从 `VCAP_SERVICES` 变量检索参数，构建 URL，并发送重定向请求。
 
 	```Java
- var cfEnv = require("cfenv"); 
- app.get("/protected", checkAuthentication, function(req, res, next){ 
- 	res.send("Hello from protected endpoint"); 
+	var cfEnv = require("cfenv");
+	app.get("/protected", checkAuthentication, function(req, res, next) {
+		res.send("Hello from protected endpoint"); 
  }); 
 
- app.get("/protected", checkAuthentication, function(req, res, next){ 
- 	res.send("Hello from protected endpoint"); 
- 	function checkAuthentication(req, res, next){ 
-
-	// Check if user is authenticated 
- 	if (req.session.userIdentity){ 
-		next()
-			} else {
-				// If not - redirect to authorization server 
+ function checkAuthentication(req, res, next) {
+		// Check if user is authenticated
+		if (req.session.userIdentity) {
+			next()
+		} else {
+			// If not - redirect to authorization server 
 				var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
 				var authorizationEndpoint = mcaCredentials.authorizationEndpoint; 
 				var clientId = mcaCredentials.clientId; 
@@ -116,8 +113,6 @@ lastupdated: "2017-01-15"
 				res.redirect(redirectUrl); 
 			} 
 		}
-	   	}
-       }
 	```
 	{: codeblock}
 
@@ -157,8 +152,8 @@ lastupdated: "2017-01-15"
   var base64url = require("base64url ");
   var request = require('request');
 
-   app.get("/oauth/callback", function(req, res, next){ 
-	var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
+   app.get("/oauth/callback", function(req, res, next) {
+		var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
 		var tokenEndpoint = mcaCredentials.tokenEndpoint;
 		var formData = {
 			grant_type: "authorization_code",
@@ -196,7 +191,7 @@ lastupdated: "2017-01-15"
 	在您收到访问令牌和身份令牌之后，您可以将 Web 会话标记为已认证，并且可以选择持久存储这些令牌。  
 
 
-##使用获取的访问和身份令牌
+## 使用获取的访问和身份令牌
 {: #google-auth-using-token}
 
 身份令牌包含有关用户身份的信息。对于 Google 认证，该令牌将包含用户同意共享的所有信息，如全名、个
@@ -209,7 +204,7 @@ lastupdated: "2017-01-15"
 
 `Authorization=Bearer <accessToken> <idToken>`
 
-####提示：
+#### 提示：
 {: #tips}
 
 * `accessToken` 和 `idToken` 必须以空格分隔。

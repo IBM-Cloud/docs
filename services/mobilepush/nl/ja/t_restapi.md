@@ -12,7 +12,7 @@ copyright:
 
 # REST API の使用
 {: #push-api-rest}
-最終更新日: 2017 年 1 月 16 日
+最終更新日: 2017 年 2 月 28 日
 {: .last-updated}
 
 {{site.data.keyword.mobilepushshort}}には REST (Representational State Transfer) API (アプリケーション・プログラム・インターフェース) を使用できます。また、SDK と [Push API ![アイコン・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobile.{DomainName}/imfpush/){: new_window} を使用して、クライアント・アプリケーションをさらに開発することもできます。
@@ -77,7 +77,7 @@ appSecret 値を取得するには、以下のようにします。
 	{: codeblock} 
 
 
-##Push REST API のフィルター
+## Push REST API のフィルター
 {: #push-api-rest-filters}
 
 フィルターは、{{site.data.keyword.mobilepushshort}}の GET API から返されるデータを制限する検索条件を定義します。フィルタリングする GET 操作の結果に対してフィルターを適用します。フィルターは、結果に含まれる項目の数を制限します。例えば、フィルターを使用して、名前が「test」で始まるタグを検索できます。 
@@ -116,7 +116,7 @@ appSecret 値を取得するには、以下のようにします。
 - == が使用された場合、値は完全一致ストリングでなければなりません。
 
 
-##{{site.data.keyword.mobilepushshort}}の応答コード
+## プッシュ通知サービス応答コード
 {: #push-api-response-codes}
 
 状況: 405 Method Not Allowed - 適切なメソッドを使用する必要があります。

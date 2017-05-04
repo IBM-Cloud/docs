@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016, 2017
-lastupdated: "2017-02-02"
+lastupdated: "2017-02-09"
 
 
 ---
@@ -35,7 +35,7 @@ Puede que se pregunte sobre qué diferencia hay entre la cuenta Estándar y la c
 | Puede acceder a planes Lite gratuitos para Cloudant NoSQL DB y a la Plataforma Internet de las cosas con más servicios gratuitos disponibles muy pronto. |
 | Sus aplicaciones entrarán en suspensión si no hay actividad de desarrollo durante 10 días. |
 | Las instancias de servicio se suprimirán tras 30 días de inactividad. |
-{:caption="Table 1. What's new in a Standard Account" caption-side="top"}
+{:caption="Table 1. What's new in a Standard account" caption-side="top"}
 
 |¿Qué es lo que no cambia cuando se convierte una cuenta de prueba? | 
 |-----------------|
@@ -45,12 +45,12 @@ Puede que se pregunte sobre qué diferencia hay entre la cuenta Estándar y la c
 |El nivel de soporte de {{site.data.keyword.Bluemix_notm}} sigue siendo el mismo. |
 {:caption="Table 2. What's not changing" caption-side="top"}
 
-**Nota** Si la cuenta de prueba no se convierte, verá un mensaje que le dirá el motivo. Puede que tenga más de una organización en la cuenta de prueba existente o aplicaciones que no se puedan transferir. Puede realizar la acción apropiada y volver a intentar convertir la cuenta.
+**Nota:** Si la cuenta de prueba no se convierte, verá un mensaje que le dirá el motivo. Puede que tenga más de una organización en la cuenta de prueba existente o apps que no se puedan transferir. Puede realizar la acción apropiada y volver a intentar convertir la cuenta.
 
 Cuando se haya registrado para una cuenta Estándar, puede invitar a los miembros del equipo a colaborar en su organización y espacios, a ver su uso, a crear espacios, a actualizar el perfil de la cuenta y a gestionar su organización. Para obtener más información,
 consulte [Configuración de la cuenta](/docs/admin/adminpublic.html#account).
 
-### Planes de Lite
+## Planes de Lite
 {: #liteplans}
    
 Los planes de Lite, que también están disponibles en una cuenta de pago según uso, están estructurados como una cuota gratuita. Puede trabajar en sus proyectos sin preocuparse, sin el riesgo de generar una factura accidentalmente. La cuota puede funcionar durante un periodo de tiempo específico, por ejemplo, un mes, o sobre una base de uso único. A continuación se mencionan algunos ejemplos de las cuotas del plan de Lite:
@@ -64,10 +64,10 @@ Los planes de Lite, que también están disponibles en una cuenta de pago según
 
 En una cuenta Estándar, puede utilizar cualquier cosa del Catálogo de {{site.data.keyword.Bluemix_notm}} que tiene un plan de Lite. Los planes de Lite son fáciles de encontrar. De forma predeterminada, cuando abra el Catálogo, todos los servicios de que tengan un plan de Lite se muestran y se identifican con una etiqueta de Lite ![etiqueta de Lite](../icons/Lite.svg). Seleccione un servicio para ver los detalles de la cuota para el plan de Lite asociado.
 
-### ¿Qué hay disponible en la cuenta Estándar?
+## ¿Qué hay disponible en la cuenta Estándar?
 {: #whatsavailable}
 
-En una cuenta Estándar, las aplicaciones de Cloud Foundry pueden acceder hasta un máximo de 256 MB de memoria de tiempo de ejecución instantánea. Si supera la cuota asignada, puede detener algunas de las aplicaciones para liberar memoria de tiempo de ejecución. 
+En una cuenta Estándar, las aplicaciones de Cloud Foundry pueden acceder hasta un máximo de 256 MB de memoria de tiempo de ejecución instantánea. Si supera la cuota asignada, puede detener algunas de las apps para liberar memoria de tiempo de ejecución. 
 
 Durante la cuenta Estándar Beta, los servicios siguientes ofrecen un plan Lite:
 
@@ -82,9 +82,9 @@ Cuando se alcancen los límites de la cuota, se detendrá la aplicación o se in
 
 Puede suministrar 1 instancia por plan de Lite. 
 
-**Nota**: Estas limitaciones se aplican únicamente a la cuenta Estándar. Puede actualizar a una cuenta de pago según uso o de facturación por suscripción en cualquier momento. Pague sólo lo que utilice más allá de las concesiones gratuitas. Para obtener más información sobre las cuentas Pago según uso y Suscripción, consulte [Cómo se le factura](/docs/pricing/index.html#pay-accounts).
+**Nota:** Estas limitaciones se aplican únicamente a la cuenta Estándar. Puede actualizar a una cuenta de pago según uso o de facturación por suscripción en cualquier momento. Pague sólo lo que utilice más allá de las concesiones gratuitas. Para obtener más información sobre las cuentas Pago según uso y Suscripción, consulte [Cómo se le factura](/docs/pricing/index.html#pay-accounts).
 
-### Actividad de desarrollo
+## Actividad de desarrollo
 {: #devactivity}
 
 Para ayudar a los usuarios de la cuenta Estándar a gestionar mejor sus recursos, hemos creado varias características de eficiencia que se basan en la actividad de despliegue y en el uso:
@@ -112,7 +112,7 @@ Para ayudar a los usuarios de la cuenta Estándar a gestionar mejor sus recursos
  
  Mantenga activa la instancia Lite de la Plataforma Internet de las cosas iniciando sesión en el panel de control de la instancia de servicio de la Plataforma Internet de las cosas.
  
-### Participación en la cuenta Estándar Beta
+## Participación en la cuenta Estándar Beta
 {: #betainvitation}
 
 Si ha seleccionado participar en la Beta, se enviará una invitación a la dirección de correo electrónico asociada con la cuenta de prueba de {{site.data.keyword.Bluemix_notm}}. Cuando reciba la invitación, lleve a cabo las instrucciones del correo electrónico para registrarse para la cuenta Estándar. 

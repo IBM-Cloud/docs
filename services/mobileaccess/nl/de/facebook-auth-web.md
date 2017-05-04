@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+**Wichtig: Der Service {{site.data.keyword.amafull}} wird durch den Service {{site.data.keyword.appid_full}} ersetzt.**
 
 # Facebook-Authentifizierung für Webanwendungen aktivieren
 {: #facebook-auth-web}
@@ -190,7 +191,7 @@ Im nächsten Schritt werden das Zugriffs- und das Identitätstoken mithilfe des 
 
 	Beachten Sie, dass der Parameter `redirect_uri` mit dem Parameter `redirect_uri` aus der vorhergehenden Berechtigungsanforderung übereinstimmen muss. Als Wert für den Parameter `code` muss der Autorisierungscode angegeben werden, der in der Antwort von der Berechtigungsanforderung empfangen wurde. Der Autorisierungscode ist 10 Minuten gültig, danach muss ein neuer Code abgerufen werden.
 
-	Der Antworthauptteil enthält den Zugriffscode und die Token-ID im JWT-Format (siehe die [JWT-Website ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://jwt.io/ "Symbol für externen Link"){: new_window}.
+	Der Antworthauptteil enthält den Zugriffscode und die Token-ID im JWT-Format (siehe die MD:A HREF="https://jwt.io/">JWT-Website ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")).
 
 	Nachdem Sie das Zugriffstoken und das Identitätstoken empfangen haben, können Sie die Websitzung als authentifiziert markieren und optional diese Tokens speichern.  
 

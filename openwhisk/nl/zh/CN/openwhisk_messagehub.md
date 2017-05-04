@@ -25,7 +25,7 @@ lastupdated: "2017-03-04"
 
 |名称|类型|描述|
 |---|---|---|
-|kafka_brokers_sasl|字符串的 JSON 数组|此参数是 `<host>:<port>` 字符串的数组，字符串中包含 Message Hub 实例中的代理程序|
+|kafka_brokers_sasl|字符串的 JSON 数组|此参数是一组 `<host>:<port>` 字符串，字符串中包含 Message Hub 实例中的代理程序|
 |user|字符串|您的 Message Hub 用户名|
 |password|字符串|您的 Message Hub 密码|
 |topic|字符串|希望触发器侦听的主题|
@@ -93,7 +93,7 @@ wsk package refresh
 
 创建触发器后，系统将监视消息传递服务中指定的主题。发布新消息时，将触发触发器。
 
-该触发器的有效内容将包含 `messages` 字段，此字段是自上次触发触发器以来已发布的消息的数组。数组中的每个消息对象都将包含以下字段：
+该触发器的有效内容将包含 `messages` 字段，此字段是自上次触发触发器以来已发布的一组消息。其中的每个消息对象都将包含以下字段：
 - topic
 - partition
 - offset
@@ -193,15 +193,15 @@ wsk package refresh
 ```
 
 ### 消息将批量处理
-您会注意到触发器有效内容包含消息数组。这意味着如果向消息传递系统生成消息的速度非常快，订阅源将尝试在单次触发触发器时对发布的消息进行批量处理。这将允许消息更快速、更高效地发布到触发器。
+您会注意到触发器有效内容包含一组消息。这意味着如果向消息传递系统生成消息的速度非常快，订阅源将尝试在单次触发触发器时对发布的消息进行批量处理。这将允许消息更快速、更高效地发布到触发器。
 
 请记住，对触发器所触发的操作编写代码时，有效内容中的消息数在技术上是无限的，但始终会大于 0。下面是批量消息的示例（请注意 *offset* 值的变化）：
  
  ```json
  {
    "messages": [
-      {
-        "partition": 0,
+       {
+         "partition": 0,
          "key": null,
          "offset": 100,
          "topic": "mytopic",
@@ -236,7 +236,7 @@ wsk package refresh
 
 |名称|类型|描述|
 |---|---|---|
-|kafka_brokers_sasl|字符串的 JSON 数组|此参数是 `<host>:<port>` 字符串的数组，字符串中包含 Message Hub 实例中的代理程序|
+|kafka_brokers_sasl|字符串的 JSON 数组|此参数是一组 `<host>:<port>` 字符串，字符串中包含 Message Hub 实例中的代理程序|
 |user|字符串|您的 Message Hub 用户名|
 |password|字符串|您的 Message Hub 密码|
 |topic|字符串|希望触发器侦听的主题|

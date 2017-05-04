@@ -1,11 +1,12 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-03-09"
+  years: 2016, 2017
+lastupdated: "2017-03-15"
 ---
 
-{:new_window: target="_blank"}
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -14,7 +15,7 @@ lastupdated: "2017-03-09"
 # Servicestatus
 {: #service_status}
 
-Das [IBM Watson IoT Service Health Dashboard ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://status.internetofthings.ibmcloud.com) enthält Informationen zum aktuellen Status von {{site.data.keyword.iot_full}} und weiteren Watson IoT-Services unter {{site.data.keyword.Bluemix_notm}}.
+Das [IBM Watson IoT Service Health Dashboard ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://status.internetofthings.ibmcloud.com){: new_window} enthält Informationen zum aktuellen Status von {{site.data.keyword.iot_full}} und weiteren Watson IoT-Services unter {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
 
 ## Serviceverfügbarkeit und Aktualisierungen

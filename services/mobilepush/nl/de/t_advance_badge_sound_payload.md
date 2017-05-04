@@ -10,8 +10,8 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-#Erweitertes {{site.data.keyword.mobilepushshort}} aktivieren
-Letzte Aktualisierung: 23. Januar 2017
+#Erweiterte Push-Benachrichtigungen aktivieren
+Letzte Aktualisierung: 28. Februar 2017
 {: .last-updated}
 
 Konfigurieren Sie ein iOS Badge, zusätzliche JSON-Nutzdaten, umsetzbare Benachrichtigungen und Blockierungsnachrichten.
@@ -26,7 +26,8 @@ Konfigurieren Sie ein iOS Badge, eine Audiodatei und zusätzliche JSON-Nutzdaten
 	- **Sound File** (Audiodatei) - Geben Sie eine Zeichenfolge ein, die auf die Audiodatei in Ihrer mobilen App verweist. Geben Sie den Zeichenfolgenamen der zu verwendenden Audiodatei in den Nutzdaten an.
 	- **iOS Badge**: Für iOS-Geräte die Nummer, die als Badge für das App-Symbol angezeigt werden soll. Wenn diese Eigenschaft fehlt, wird das Badge nicht geändert. Um das Badge zu entfernen, legen Sie für diese Eigenschaft den Wert 0 fest.
 	
-###Android
+### Android
+{: #badge-sound-payload_android}
 
 Fügen Sie die Audiodatei zum Verzeichnis `res/raw` der Android-Anwendung hinzu. Fügen Sie beim Senden einer Benachrichtigung den Namen der Audiodatei zum entsprechenden Feld für {{site.data.keyword.mobilepushshort}} hinzu.
 
@@ -39,7 +40,8 @@ Fügen Sie die Audiodatei zum Verzeichnis `res/raw` der Android-Anwendung hinzu.
 ```
     {: codeblock}	
 	
-###iOS
+### iOS
+{: #badge-sound-payload_ios}
 
 ```
 "settings": {

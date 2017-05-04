@@ -45,7 +45,6 @@ To submit a ``POST`` request from a device that is connected to {{site.data.keyw
 
 **Important notes:**
 - You can submit gateway device events only by using HTTP messaging. Use the MQTT messaging protocol to submit requests for other gateway device management and control features.
-- HTTP connections can be reused only to publish events for the same device because the authorization HTTP header cannot be changed.
 - Port 443, the default SSL port, can also be specified for secure HTTP API calls.
 - If a gateway is not assigned the *Standard Gateway* role, it can publish events on behalf of any devices in the organization. If the device that is connected to the gateway is unregistered, the gateway automatically registers that device.
 - Assign the *Standard Gateway* role if you want to check device authorization levels.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,9 @@ lastupdated: "2017-01-08"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-#Configuración de la autenticación personalizada para las aplicaciones web de {{site.data.keyword.amashort}}
+**Importante: El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.**
+
+#Configuración de la autenticación personalizada para las aplicaciones web de Mobile Client Access
 {: #custom-web}
 
 Añadir autenticación personalizada y funcionalidad de seguridad de {{site.data.keyword.amafull}} a su app web.
@@ -51,13 +53,13 @@ El cuerpo de la solicitud contendrá un objeto `challengeAnswer` que contiene `n
 Después de validar el usuario, esta ruta debe devolver un objeto JSON de la estructura siguiente:
 
 ```json
-{ 
+{
 	status: "success", 
-            userIdentity: { 
+            userIdentity: {
 		userName: <user name>, 
                 displayName: <display name> 
                 attributes: <additional attributes json> 
-            } 
+            }
 }
 ```
 {: codeblock}
@@ -81,7 +83,7 @@ var users = {
 app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
          function(req, res) {
 	console.log ("tenantID " + req.params.tenantID);
-         
+
 	var challengeAnswer = req.body.challengeAnswer;
          console.log ("challengeAnswer " + JSON.stringify(challengeAnswer));
 
@@ -104,7 +106,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 {: codeblock}
 
 
-##Configuración de {{site.data.keyword.amashort}} para la autenticación personalizada
+##Configuración de Mobile Client Access para la autenticación personalizada
 {: #custom-auth-config-mca}
 
 Una vez que haya configurado el proveedor de identidad personalizado, puede habilitar la autenticación personalizada en el panel de control {{site.data.keyword.amashort}}.
@@ -117,7 +119,7 @@ Una vez que haya configurado el proveedor de identidad personalizado, puede habi
 1. Pulse **Guardar**.
 
 
-##Implementación del flujo de autorización de {{site.data.keyword.amashort}} utilizando un proveedor de identidad personalizado
+##Implementación del flujo de autorización de Mobile Client Access utilizando un proveedor de identidad personalizado
 {: #custom-auth-flow}
 
 La variable de entorno `VCAP_SERVICES` se crea automáticamente para cada instancia de servicio de {{site.data.keyword.amashort}} y contiene propiedades que son necesarias para el proceso de autorización. Consta de un objeto JSON y se puede ver en el separador **Credenciales de servicio** del panel de control de {{site.data.keyword.amashort}}.
@@ -155,26 +157,26 @@ Para solicitar la autorización de usuario, redirija el navegador al punto final
 
 	```Java
 var cfEnv = require("cfenv"); 
-app.get("/protected", checkAuthentication, function(req, res, next){ 
+app.get("/protected", checkAuthentication, function(req, res, next){
 		res.send("Hello from protected endpoint"); 
   }
 	);
 
-	function checkAuthentication(req, res, next){ 
+	function checkAuthentication(req, res, next){
 		// Compruebe si el usuario está autenticado
-  if (req.session.userIdentity){ 
+  if (req.session.userIdentity){
 			next()
 		} else {
 			// Si no - redireccione al servidor de autorizaciones
-    var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
-    var authorizationEndpoint = mcaCredentials.authorizationEndpoint;
-    var clientId = mcaCredentials.clientId;
-    var redirectUri = "http://some-server/oauth/callback"; // El URI de redirección de la aplicación web
-    var redirectUrl = authorizationEndpoint + "?response_type=code";
-    redirectUrl += "&client_id=" + clientId;
-    redirectUrl += "&redirect_uri=" + redirectUri;
-    res.redirect(redirectUrl);
-  } 
+			var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
+			var authorizationEndpoint = mcaCredentials.authorizationEndpoint;
+			var clientId = mcaCredentials.clientId;
+			var redirectUri = "http://some-server/oauth/callback"; // Your web application redirect uri
+			var redirectUrl = authorizationEndpoint + "?response_type=code";
+			redirectUrl += "&client_id=" + clientId;
+			redirectUrl += "&redirect_uri=" + redirectUri;
+			res.redirect(redirectUrl);
+		}
 	}
 	```
 	{: codeblock}
@@ -218,11 +220,11 @@ El siguiente paso consiste en obtener la señal de acceso y la señal de identid
 	```Java
 var cfEnv = require("cfenv");
 var base64url = require("base64url ");
-app.get("/oauth/callback", function(req, res, next){ 
+app.get("/oauth/callback", function(req, res, next){
 		var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
-    var tokenEndpoint = mcaCredentials.tokenEndpoint; 
+    var tokenEndpoint = mcaCredentials.tokenEndpoint;
 
-		var formData = { 
+		var formData = {
 			grant_type: "authorization_code",
 			client_id: mcaCredentials.clientId,
 			redirect_uri: "http://some-server/oauth/callback",   // Your Web application redirect uri
@@ -233,7 +235,7 @@ app.get("/oauth/callback", function(req, res, next){
 			url: tokenEndpoint,
 			formData: formData
 		}, function (err, response, body) {
-			var parsedBody = JSON.parse(body); 
+			var parsedBody = JSON.parse(body);
 
 			req.session.accessToken = parsedBody.access_token; 
       req.session.idToken = parsedBody.id_token; 
@@ -250,7 +252,7 @@ app.get("/oauth/callback", function(req, res, next){
 
 	Tenga en cuenta que el parámetro `redirect_uri` debe coincidir con el `redirect_uri` utilizado previamente en la solicitud de autorización. El valor de parámetro code debe ser el código de concesión recibido en la respuesta al final de la solicitud de autorización. El código de concesión es válido solo para 10 minutos, tras los que necesitará obtener un código nuevo.
 
-	El cuerpo de respuesta contendrá `access_token` e `id_token` en formato JWT. Consulte el [sitio web de JWT ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://jwt.io "Icono de enlace externo"){: new_window}.
+	El cuerpo de respuesta contendrá `access_token` e `id_token` en formato JWT. Consulte el [sitio web de JWT ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://jwt.io){: new_window}.
 
 	Una vez que haya recibido acceso, y la identidad de las señales, puede señalar la sesión web como autenticada y, opcionalmente, persistir estas señales
 

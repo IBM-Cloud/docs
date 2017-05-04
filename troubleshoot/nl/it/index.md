@@ -3,8 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-01-11"
-  
+lastupdated: "2017-3-16"  
 
 ---
 
@@ -594,44 +593,6 @@ quando distribuisci la tua applicazione a {{site.data.keyword.Bluemix_notm}}:
 
 	
 	
-## Impossibile aggiungere il repository Git
-{: #ts_cannot_addgit}
-
-Dopo aver creato un'applicazione sul Dashboard, fai clic sul AGGIUNGI GIT per aggiungere un repository Git, ma non riesci a continuare.
-
-
-
-Quando fai clic su **AGGIUNGI GIT**, si apre una finestra
-e si verifica uno dei seguenti problemi:
-{: tsSymptoms} 
-
-  * La finestra si blocca con una schermata vuota.
-  * Un messaggio indica che esiste un problema con i cookie di terze parti.
-
-
-
-È possibile che il tuo browser sia configurato per impedire l'impostazione
-di un cookie. Tale cookie deve essere impostato dal sito di IBM® Bluemix DevOps Services nel dominio Internet hub.jazz.net all'interno del contesto della console {{site.data.keyword.Bluemix_notm}}.
-{: tsCauses}  
-
- 
-
-Puoi risolvere questo problema in uno dei seguenti modi:
-{: tsResolve}
-
-  * Segui le istruzioni presenti nella finestra che viene visualizzata
-dalla console {{site.data.keyword.Bluemix_notm}}. Fai clic sul pulsante. Si aprirà temporaneamente un'altra finestra del browser. In tale
-finestra, DevOps Services imposta il cookie di autenticazione.
-  * In un'altra scheda del browser, vai all'indirizzo https://hub.jazz.net ed esegui l'accesso. Torna alla console {{site.data.keyword.Bluemix_notm}}
-e aggiorna la pagina. Fai di nuovo clic su **AGGIUNGI GIT**.
-  * Modifica le impostazioni del tuo browser per abilitare i cookie di terze parti e fai di nuovo clic su AGGIUNGI GIT. Per i dettagli sulla configurazione delle impostazioni,
-consulta la documentazione relativa al tuo browser:
-    * [Mozilla Firefox ![icona link esterno](../icons/launch-glyph.svg)](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences#w_how-do-i-change-cookie-settings){: new_window}
-	* [Google Chrome ![icona link esterno](../icons/launch-glyph.svg)](https://support.google.com/chrome/answer/95647){: new_window}
-	* [Apple Safari ![icona link esterno](../icons/launch-glyph.svg)](https://support.apple.com/kb/PH17191){: new_window}
-	* [Microsoft Internet Explorer ![icona link esterno](../icons/launch-glyph.svg)](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window}
-Se queste soluzioni alternative non risolvono il problema, invia un'email a idslogin@jazz.net.
-
 
 
 ## Le applicazioni Android non possono ricevere le notifiche di push
@@ -788,7 +749,7 @@ accounts](/docs/pricing/index.html#pay-accounts).
   * Per ridurre la memoria utilizzata dalle tue applicazioni, utilizza l'interfaccia utente{{site.data.keyword.Bluemix_notm}} o l'interfaccia riga di comando cf.
     Se utilizzi l'interfaccia utente {{site.data.keyword.Bluemix_notm}}, completa la seguente procedura:
 	  1. Sul Dashboard {{site.data.keyword.Bluemix_notm}}, seleziona la tua applicazione. Viene visualizzata la pagina dei dettagli dell'applicazione.
-	  2. Nel riquadro runtime, puoi ridurre il limite massimo di memoria o il numero di istanze dell'applicazione, o entrambi, per tua applicazione.
+	  2. Nel riquadro runtime, puoi ridurre il limite massimo di memoria o il numero di istanze dell'applicazione, o entrambi, per tua applicazione. 
 	Se utilizzi l'interfaccia riga di comando cf, completa la seguente procedura:
 	  1. Verifica la quantità di memoria utilizzata per le tue applicazioni:
 	  ```
@@ -812,7 +773,8 @@ Un'applicazione non si riavvia automaticamente quando un servizio che associ med
 	  
  
 
-Quando un servizio che associ mediante bind a un'applicazione viene arrestato in modo anomalo, nell'applicazione potrebbero verificarsi dei problemi come interruzioni, eccezioni ed errori di connessione. {{site.data.keyword.Bluemix_notm}} non riavvia automaticamente l'applicazione per eseguire un ripristino da tali problemi.
+Quando un servizio che associ mediante bind a un'applicazione viene arrestato in modo anomalo, nell'applicazione potrebbero verificarsi dei problemi come interruzioni, eccezioni ed errori di connessione. {{site.data.keyword.Bluemix_notm}} non
+riavvia automaticamente l'applicazione per eseguire un ripristino da tali problemi.
 {: tsSymptoms}
 
 
@@ -862,11 +824,11 @@ salvate nel file manifest della tua applicazione. La prossima volta che apri la 
 Sync non vengono visualizzate
 {: #ts_llz_lkb_3r}
 
-Hai creato un'applicazione in IBM Bluemix DevOps Services, ma le icone IBM Bluemix Live Sync non sono visualizzate nel Web IDE.
+Hai creato un'applicazione ma le icone IBM Bluemix Live Sync non sono visualizzate nel Web IDE. 
 
  
 
-Quando modifichi un'applicazione Node.js nel DevOps Services Web IDE, le icone di le icone di live edit, riavvio rapido e debug di {{site.data.keyword.Bluemix_notm}} non vengono visualizzate.
+Quando modifichi un'applicazione Node.js iin Web IDE, le icone di le icone di live edit, riavvio rapido e debug di {{site.data.keyword.Bluemix_notm}} non vengono visualizzate..
 {: tsSymptoms}
 
  
@@ -894,8 +856,6 @@ di tale sottodirectory nel file `manifest.yml`.
    ```
   * Crea un file `package.json` che si trovi nella stessa
 directory della tua applicazione.
-
-  
   
   
 
@@ -1119,7 +1079,10 @@ problema:
   ...
         ```
 
-  * Assicurati che nella tua applicazione Node.js sia presente un file `package.json` per consentire al pacchetto di build Node.js di riconoscere l'applicazione. Inoltre, devi inserire questo file nella directory root della tua applicazione.	
+  * Assicurati che nella tua applicazione Node.js sia presente un file `package.json`
+per consentire al pacchetto di build Node.js di riconoscere
+l'applicazione. Inoltre, devi inserire questo file nella directory root
+della tua applicazione.	
     Il seguente
                                                   esempio mostra un semplice file
                                                   `package.json`:  
@@ -1146,14 +1109,14 @@ Per ulteriori suggerimenti relativi alle applicazioni Node.js, vedi [Tips for No
 
 
 
-## Sono presenti degli errori di configurazione nel file `server.xml` dopo che importi un'applicazione {{site.data.keyword.Bluemix_notm}} Liberty da Bluemix DevOps Services a Eclipse
+## Sono presenti degli errori di configurazione nel file `server.xml` dopo che importi un'applicazione {{site.data.keyword.Bluemix_notm}} Liberty in Eclipse
 {: #ts_eclipse}
 
-Se vedi degli errori di configurazione nel file `server.xml` dopo aver importato un'applicazione {{site.data.keyword.Bluemix_notm}} Liberty da IBM Bluemix DevOps Services a Eclipse, potresti dover rimuovere il file `server.xml` dal progetto. 
+Se vedi degli errori di configurazione nel file `server.xml` dopo aver importato un'applicazione {{site.data.keyword.Bluemix_notm}} Liberty in Eclipse, potresti dover rimuovere il file `server.xml` dal progetto. 
 
  
 
-Dopo aver importato un'applicazione {{site.data.keyword.Bluemix_notm}} Liberty da {{site.data.keyword.Bluemix_notm}} DevOps Services in Eclipse, vedi degli errori di configurazione nel file `server.xml` dalla vista Problemi di Eclipse. 
+Dopo aver importato un'applicazione {{site.data.keyword.Bluemix_notm}} Liberty in Eclipse, vedi degli errori di configurazione nel file `server.xml` dalla vista Problemi di Eclipse.
 {: tsSymptoms}
 
  
@@ -1163,7 +1126,8 @@ Il pacchetto di build Liberty utilizza il file `server.xml` per configurare l'ap
 
  
 
-Puoi risolvere questo problema rimuovendo il file server.xml dal progetto. Il pacchetto di build crea il file `server.xml` dinamicamente quando esegui il push dell'applicazione come un'applicazione WAR. Per ulteriori informazioni, consulta [Liberty for Java](/docs/runtimes/liberty/index.html).
+Puoi risolvere questo problema rimuovendo il file server.xml dal progetto. Il pacchetto di build crea il file `server.xml` dinamicamente quando
+esegui il push dell'applicazione come un'applicazione WAR. Per ulteriori informazioni, vedi [Liberty for Java ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/runtimes/liberty/index.html){: new_window}.
 {: tsResolve}
 	
 	
@@ -1571,7 +1535,10 @@ Potresti riscontrare dei problemi quando utilizzi i runtime IBM® Bluemix™. Tu
 {: #ts_loading_bp}
 
 
-Potresti non essere in grado di utilizzare i componenti di pacchetti di build più recenti quando esegui il push di un'applicazione. Puoi utilizzare i pacchetti di build che hanno dei meccanismi integrati per impedire il caricamento di componenti obsoleti oppure puoi eliminare il contenuto nella directory cache della tua applicazione prima di eseguire il push o di preparare di nuovo l'applicazione. 
+Potresti non essere in grado di utilizzare i componenti di pacchetti di build più recenti
+quando esegui il push di un'applicazione. Puoi utilizzare i pacchetti di build che hanno dei meccanismi integrati
+per impedire il caricamento di componenti obsoleti oppure puoi eliminare il contenuto nella
+directory cache della tua applicazione prima di eseguire il push o di preparare di nuovo l'applicazione. 
 
  
 
@@ -1695,7 +1662,9 @@ Per risolvere il problema, aggiungi un file `requirements.txt` e un file `Procfi
 {: tsResolve}
 
   1. Aggiungi un file `requirements.txt` nella directory root della tua applicazione Python.
-     Il file `requirements.txt` specifica i pacchetti di libreria richiesti per l'applicazione Python e la versione dei pacchetti. Il seguente esempio mostra il contenuto del file `requirements.txt`, dove `web.py==0.37` indica
+     Il file `requirements.txt`
+specifica i pacchetti di libreria richiesti per la tua applicazione Python
+e la versione dei pacchetti. Il seguente esempio mostra il contenuto del file `requirements.txt`, dove `web.py==0.37` indica
 che la versione della libreria `web.py` che verrà scaricata è la 0.37 e `wsgiref==0.1.2` indica che la versione dell'interfaccia gateway del server Web richiesta dalla libreria web.py è la 0.1.2.
 	 ```
 	 web.py==0.37
@@ -1707,7 +1676,9 @@ il file `requirements.txt`, vedi [Requirements files](https://pip.readthedocs.or
   2. Aggiungi un file `Procfile` nella directory root
 della tua applicazione Python.
 	Il file `Procfile`
-deve contenere il comando di avvio per la tua applicazione Python. Nel seguente comando, *ilnomedellatuaapplicazione* è il nome della tua applicazione Python e *PORT* è il numero di porta che l'applicazione Python dovrà utilizzare per ricevere le richieste dagli utenti dell'applicazione. *$PORT* è facoltativo. Se non specifichi una PORTA nel comando di avvio, verrà utilizzato
+deve contenere il comando di avvio per la tua applicazione Python. Nel seguente comando, *ilnomedellatuaapplicazione* è il nome della tua
+applicazione Python e *PORT* è il numero di porta che l'applicazione Python dovrà utilizzare per ricevere le richieste dagli utenti
+dell'applicazione. *$PORT* è facoltativo. Se non specifichi una PORTA nel comando di avvio, verrà utilizzato
 il numero di porta indicato nella variabile di ambiente `VCAP_APP_PORT` che si trova all'interno dell'applicazione. 
 	```
 	web: python <ilnomedellatuaapplicazione>.py $PORT

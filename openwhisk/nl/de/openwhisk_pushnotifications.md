@@ -179,7 +179,7 @@ Das folgende Beispiel die Erstellung eines Auslösers, der jedes Mal aktiviert w
   
   Überprüfen Sie die Ergebnisse mit dem Befehl `wsk activation poll`.
 
-  Registrieren Sie ein Gerät in Ihrer Bluemix-Anwendung und Sie können sehen, wie die Regel (`rule`), der Auslöser (`trigger`) und die Aktion (`action`) im openWhisk-Dashboard (https://console.{Domain}/openwhisk/dashboard) ausgeführt werden.
+  Registrieren Sie ein Gerät in Ihrer Bluemix-Anwendung und Sie können sehen, wie die Regel (`rule`), der Auslöser (`trigger`) und die Aktion (`action`) im openWhisk-[Dashboard] (https://console.{Domain}/openwhisk/dashboard) ausgeführt werden.
 
   Die Aktion sendet dann eine Push-Benachrichtigung.
   

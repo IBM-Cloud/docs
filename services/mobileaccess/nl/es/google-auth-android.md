@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+**Importante: El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.**
 
 # Habilitación de la autenticación de Google para apps de Android
 {: #google-auth-android}
@@ -35,7 +37,7 @@ Para configurar la autenticación de Google para su app Android {{site.data.keyw
 ## Creación de un proyecto en Google Developer Console
 {: #create-google-project}
 
-Para empezar a utilizar Google como proveedor de identidad, cree un proyecto en la [Google Developer Console ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.developers.google.com "Icono de enlace externo"){: new_window}.
+Para empezar a utilizar Google como proveedor de identidad, cree un proyecto en la [Google Developer Console ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://console.developers.google.com){: new_window}.
 Parte de la creación de un proyecto consiste en obtener un ID de cliente de Google.  El ID de cliente de Google es un identificador exclusivo para su aplicación que se utiliza en la autenticación de Google y se necesita para configurar el servicio {{site.data.keyword.amashort}}.
 
 Desde la consola:
@@ -53,7 +55,7 @@ Para completar el proceso de creación de credenciales, debe añadir **la huella
 
 Para que Google verifique la autenticidad de la aplicación, debe especificar una huella dactilar del certificado para firmas.
 
-El sistema operativo Android necesita que todas las aplicaciones instaladas en un dispositivo Android estén firmadas con un certificado de desarrollador. Una aplicación de Android se puede compilar con dos modos: depuración y publicación. Normalmente se recomienda tener certificados diferentes para los modos de depuración y publicación.  Los certificados que se utilizan para firmar aplicaciones de Android en modo de depuración se empaquetan con el SDK de Android.  Android Studio suele instalar automáticamente el SDK de Android. Cuando quiera publicar su aplicación en la tienda Google Play deberá firmar la app con otro certificado, que normalmente genera usted mismo. Para obtener más información, consulte [firma de sus aplicaciones Android ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://developer.android.com/tools/publishing/app-signing.html "Icono de enlace externo"){: new_window}.
+El sistema operativo Android necesita que todas las aplicaciones instaladas en un dispositivo Android estén firmadas con un certificado de desarrollador. Una aplicación de Android se puede compilar con dos modos: depuración y publicación. Normalmente se recomienda tener certificados diferentes para los modos de depuración y publicación.  Los certificados que se utilizan para firmar aplicaciones de Android en modo de depuración se empaquetan con el SDK de Android.  Android Studio suele instalar automáticamente el SDK de Android. Cuando quiera publicar su aplicación en la tienda Google Play deberá firmar la app con otro certificado, que normalmente genera usted mismo. Para obtener más información, consulte [firma de sus aplicaciones Android ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](http://developer.android.com/tools/publishing/app-signing.html){: new_window}.
 
 Un almacén de claves con un certificado para entornos de desarrollo se almacena en un archivo `~/.android/debug.keystore`. La contraseña del almacén de claves por defecto es `android`. Este certificado se utiliza para compilar aplicaciones en modo de depuración.
 
@@ -156,7 +158,7 @@ Desde el proyecto Android Studio.
 
 	Para obtener más información sobre cómo obtener estos valores, consulte [Antes de empezar](##before-you-begin).
 
-	**Nota:** Si su aplicación Android está dirigida a Android versión 6.0 (nivel de API 23) o superior, deberá asegurarse de que la aplicación tenga una llamada `android.permission.GET_ACCOUNTS` antes de llamar al `registro`. Para obtener más información, consulte [Solicitud de permisos en Android ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.android.com/training/permissions/requesting.html "Icono de enlace externo"){: new_window}.
+	**Nota:** Si su aplicación Android está dirigida a Android versión 6.0 (nivel de API 23) o superior, deberá asegurarse de que la aplicación tenga una llamada `android.permission.GET_ACCOUNTS` antes de llamar al `registro`. Para obtener más información, consulte [Solicitud de permisos en Android ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://developer.android.com/training/permissions/requesting.html){: new_window}.
 
 1. Añada el código siguiente a la actividad:
 

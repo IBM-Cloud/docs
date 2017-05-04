@@ -2,11 +2,13 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-07"
 
 ---
 
-# Configurazione di {{site.data.keyword.amashort}} per l'autenticazione personalizzata
+**Importante: il servizio {{site.data.keyword.amafull}} è stato sostituito con il servizio {{site.data.keyword.appid_full}}.**
+
+# Configurazione di Mobile Client Access per l'autenticazione personalizzata
 {: #custom-dash}
 
 
@@ -18,8 +20,9 @@ Per utilizzare l'autenticazione personalizzata con la tua applicazione mobile, d
 * Un'istanza di un servizio {{site.data.keyword.amafull}}.
 * Un'applicazione provider di identità personalizzata.
 
-## Configura l'autenticazione personalizzata nel dashboard {{site.data.keyword.amafull}}
+## Configura l'autenticazione personalizzata nel dashboard
 {: #custom-dash-config}
+
 Utilizza il dashboard {{site.data.keyword.amafull}} per configurare l'autenticazione personalizzata.
 
 1. Apri il tuo servizio nel dashboard {{site.data.keyword.amafull}}.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -45,8 +45,7 @@ lastupdated: "2017-03-30"
     </tr>
   </table>
 
-  * 設定成使用 Gradle 的 Android Studio 專案。
-    * 如需如何設定 Android 開發環境的相關資訊，請參閱 <a href="https://developers.google.com/web/tools/setup/" target="_blank">Google 開發人員工具文件 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示"></a>。
+  * 設定成使用 Gradle 的 <a href="https://developers.google.com/web/tools/setup/" target="_blank">Android Studio 專案 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示"></a>。
 
 ## 安裝用戶端 SDK
 {: #install-appid-sdk}
@@ -173,7 +172,7 @@ lastupdated: "2017-03-30"
 ### 匿名登入
 {: #anonymous notoc}
 
-使用 {{site.data.keyword.appid_short_notm}}，您可以匿名登入，請參閱[匿名使用者](/docs/services/appid/user-profile.html#anonymous)。
+使用 {{site.data.keyword.appid_short_notm}}，您可以[匿名](/docs/services/appid/user-profile.html#anonymous)登入。
 
   ```java
   appId.loginAnonymously(getApplicationContext(), new AuthorizationListener() {

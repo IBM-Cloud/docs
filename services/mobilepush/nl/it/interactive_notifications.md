@@ -10,15 +10,15 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Notifiche interattive
+# Notifiche interattive e automatiche  
 {: #interactive-notifications}
-Ultimo aggiornamento: 23 gennaio 2017
+Ultimo aggiornamento: 03 marzo 2017
 {: .last-updated}
 
 Le notifiche interattive consentono agli utenti di rispondere a una notifica senza aprire l'applicazione. Quando viene ricevuta una notifica, il dispositivo visualizza i pulsanti di azione insieme al messaggio di notifica. Le notifiche interattive sono supportare sui dispositivi iOS con versione 8 o successiva. Per le notifiche interattive inviate a dispositivi iOS precedenti alla versione 8, le azioni di notifica non vengono visualizzate.
 
-##Invio di {{site.data.keyword.mobilepushshort}} interattive
-
+## Invio di notifiche interattive
+{: #send_interactive_notifications}
 
 La notifica interattiva può essere inviata utilizzando il dashboard Push o utilizzando la [Documentazione API REST](t_restapi.html).
 
@@ -28,10 +28,11 @@ Dalla console {{site.data.keyword.mobilepushshort}}:
 2. Scegli i tuoi destinatari per la notifica e fai clic su **Avanti**. 
 3. Nella pagina di composizione della notifica, può essere inviato un push interattivo impostando il tipo su predefinito o misto e specificando il valore della categoria nella scheda del delle opzioni avanzate. Per configurare il valore della categoria sul client, controlla **Gestione {{site.data.keyword.mobilepushshort}}** interattiva nella sezione dell'applicazione iOS nativa.
 
-## Gestione {{site.data.keyword.mobilepushshort}} interattive in un'applicazione iOS
-
+## Gestione di notifiche interattive su un'applicazione iOS
+{: #send_interactive_notifications_ios}
 
 ### Swift
+{: #send_interactive_notifications_ios_swift}
 
 Completa la seguente procedura per ricevere le notifiche interattive:
 
@@ -70,6 +71,7 @@ Completa la seguente procedura per ricevere le notifiche interattive:
 
 
 ### Cordova
+{: #send_interactive_notifications_ios_cordova}
 
 Per ottenere una notifica operativa in un'applicazione iOS Cordova, completa la procedura:
 
@@ -81,3 +83,29 @@ Per ottenere una notifica operativa in un'applicazione iOS Cordova, completa la 
 	{: codeblock} 
 2. Implementa il nuovo metodo di callback su AppDelegate.
 3. Questo nuovo metodo di callback viene richiamato quando l'utente fa clic sul pulsante azione. L'implementazione di questo metodo deve eseguire le attività associate con l'identificativo specificato ed eseguire il blocco nel parametro completionHandler.
+
+## Gestione di notifiche automatiche per iOS
+{: #send_silent_notifications_for_ios}
+
+Le notifiche automatiche non vengono visualizzate sulla schermata del dispositivo. Queste notifiche vengono ricevute dall'applicazione in background, che la attivano per 30 secondi in modo che esegua l'attività in background specificata. Un utente non viene avvisato dell'arrivo della notifica. Per inviare notifiche automatiche per iOS, utilizza l'[API REST![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://mobile.{DomainName}/imfpush/){: new_window}.   
+
+1. Per inviare notifiche automatiche, implementa il seguente metodo nel file `appDelegate.m` nel tuo progetto. In Swift, il valore `contentAvailable` inviato dal server per le notifiche automatiche è uguale a 1.
+```
+// Per Swift
+func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+       let contentAPS = userInfo["aps"] as [NSObject : AnyObject]
+       if let contentAvailable = contentAPS["content-available"] as? Int {
+           //silent or mixed push
+           if contentAvailable == 1 {
+               completionHandler(UIBackgroundFetchResult.NewData)
+           } else {
+               completionHandler(UIBackgroundFetchResult.NoData)
+           }
+       } else {
+    //Notifica predefinita
+           completionHandler(UIBackgroundFetchResult.NoData)
+       }
+    }
+```
+	{: codeblock}
+

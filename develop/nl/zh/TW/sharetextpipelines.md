@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-21"
+  years: 2015, 2017
+lastupdated: "2017-3-16"
 
 ---
 
@@ -11,14 +11,14 @@ lastupdated: "2016-12-21"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#在 {{site.data.keyword.jazzhub_short}} 專案範例中共用以文字為基礎的管線 {: #share-pipeline}
+#在專案範例中共用以文字為基礎的管線 {: #share-pipeline}
 
-針對透過「部署至 {{site.data.keyword.Bluemix_notm}}」按鈕而部署至 {{site.data.keyword.Bluemix_notm}} 的專案範例，您可以定義 {{site.data.keyword.jazzhub_short}} 管線配置作為 YAML 檔案。可以共用定義為文字的管線，以便分出您的專案的人不必自行配置管線。此特性仍在開發中：YAML 格式和實作可能會隨時變更。目前，此特性只適用於具有 Git 及 GitHub 儲存庫且以 {{site.data.keyword.Bluemix_notm}} 為目標的專案。
+針對透過「部署至 {{site.data.keyword.Bluemix_notm}}」按鈕而部署至 {{site.data.keyword.Bluemix_notm}} 的專案範例，您可以定義管線配置作為 YAML 檔案。可以共用定義為文字的管線，以便分出您的專案的人不必自行配置管線。此特性仍在開發中：YAML 格式和實作可能會隨時變更。目前，此特性只適用於具有 Git 及 GitHub 儲存庫且以 {{site.data.keyword.Bluemix_notm}} 為目標的專案。
 {: shortdesc} 
 
 在專案範例的根目錄中，您必須有名為 `.bluemix` 的資料夾，其中包含 `pipeline.yml` 檔案。
 
-使用「部署至 {{site.data.keyword.Bluemix_notm}}」按鈕複製專案時，{{site.data.keyword.jazzhub_short}} 會建立以 `pipeline.yml` 檔案為基礎的管線。 
+使用「部署至 {{site.data.keyword.Bluemix_notm}}」按鈕複製專案時，會建立以 `pipeline.yml` 檔案為基礎的管線。 
 
 範例：
  
@@ -30,7 +30,7 @@ lastupdated: "2016-12-21"
 ```
 {: codeblock} 
 
-YAML 檔案格式是單一 YAML 文件，其中包含管線規格。下列範例 {{site.data.keyword.jazzhub_short}} 管線會在某一個階段中使用 Ant 建置 Java 應用程式。然後在另一個階段，管線會將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。 
+YAML 檔案格式是單一 YAML 文件，其中包含管線規格。下列範例管線會在某一個階段中使用 Ant 建置 Java 應用程式。然後在另一個階段，管線會將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。 
 
 ``` 
 ---
@@ -213,7 +213,7 @@ CF_APP	| 應用程式名稱
 從現有的管線產生具有此格式之 URL 的檔案：
 
 ```
-<DevOps Services domain>/pipeline/user/project/yaml
+<domain>/pipeline/user/project/yaml
 ```
 {: codeblock} 
 

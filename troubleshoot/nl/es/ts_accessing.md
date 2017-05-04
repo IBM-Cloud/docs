@@ -152,7 +152,7 @@ Cuando inicia una sesión en {{site.data.keyword.Bluemix_notm}}, la autenticaci�
 Es posible que haya un problema con el servicio de autenticación de ID de IBM.
 {: tsCauses}
 
-Compruebe el estado de el servicio en [IBM BlueID ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://new.wind.ibmcloud.com/webapp/#/status/a1a0c5d743d94a6a9597087541564d8e){: new_window} y vuélvalo a intentar.
+Compruebe el estado del servicio en [IBM BlueID ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://new.wind.ibmcloud.com/webapp/#/status/a1a0c5d743d94a6a9597087541564d8e){: new_window} y vuélvalo a intentar.
 {: tsResolve}
 
 
@@ -176,7 +176,7 @@ El correo electrónico de confirmación se envía a la dirección de correo elec
 ## Hay cambios sin guardar
 {: #ts_unsaved_changes}
 
-Al navegar en la página de detalles de aplicaciones, es posible que no pueda realizar las acciones y es posible que se le solicite que guarde los cambios para poder continuar. 
+Al navegar en la página de detalles de apps, es posible que no pueda realizar las acciones y es posible que se le solicite que guarde los cambios para poder continuar. 
 
 Cuando intente comprobar la app o los servicios en la página de detalles de la app, seguirá recibiendo el siguiente mensaje de error:
 {: tsSymptoms} 
@@ -296,5 +296,4 @@ Lleve a cabo una o varias de estas acciones si es necesario:
   * Utilice la modalidad de navegación privada del navegador. 
   * Borre las cookies y la memoria caché del navegador.
   * Utilice otro navegador. Para obtener información sobre las versiones de los navegadores a las que da soporte {{site.data.keyword.Bluemix_notm}}, consulte [Requisitos previos de Bluemix](/docs/overview/whatisbluemix.html#prereqs).
-  * Si ha instalado la interfaz de línea de mandatos cf, escriba el mandato `cf
-apps` para ver si la aplicación se está ejecutando.
+  * Si ha instalado la interfaz de línea de mandatos cf, escriba el mandato `cf apps` para ver si la app se está ejecutando.

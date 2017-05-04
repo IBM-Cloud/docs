@@ -12,7 +12,7 @@ copyright:
 
 # Webhooks aktivieren 
 {: #tag_based_notifications}
-Letzte Aktualisierung: 23. Januar 2017
+Letzte Aktualisierung: 01. März 2017
 {: .last-updated}
 
 
@@ -33,3 +33,108 @@ Webhooks sind benutzerdefinierte Callbacks, die durch ein Ereignis ausgelöst we
 Die Webhook-Ereignisse haben dieselbe Nachrichten-ID (messageID) wie die versandte Nachricht. 
 
 Weitere Informationen zu Webhooks finden Sie in der [IBM Push Notifications-REST-API ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://mobile.{DomainName}/imfpush/#/webhooks){: new_window}.
+
+## Alerts für Webhookereignisse empfangen
+{: #webhook_alert_event}
+
+Subskribenten können festlegen, dass sie Alerts für Webhookereignisse als JSON-Dateien erhalten möchten. Die Ereignisstruktur und die Beispielnutzdaten lauten wie folgt: 
+
+- Gerät registrieren
+	```
+		{ type: 'onDeviceRegister',
+		entity:
+		{ id: 1,
+		deviceId: 'device1',
+		applicationId: 'app1',
+		userId: 'user1',
+		token: 'token1',
+		platform: 'G' },
+		applicationId: 'app1',
+		eventTimeStamp: 1487523766958 }
+	```
+		{: codeblock}
+
+- Registrierung für ein Gerät aufheben
+	```
+		{ type: 'onDeviceUnregister',
+		entity:
+		{ id: 1,
+		deviceId: 'device1',
+		applicationId: 'app1',
+		userId: 'user1',
+		token: 'token1',
+		platform: 'G' },
+		applicationId: 'app1',
+		eventTimeStamp: 1487523841874 }
+	```
+		{: codeblock}
+
+- Tag subskribieren
+	```
+		{ type: 'onSubscribe',
+		entity:
+		{ device:
+		{ id: 18,
+		deviceId: 'device1',
+		applicationId: 'app1',
+		userId: 'user1',
+		token: 'token1',
+		platform: 'G' },
+		tagName: 'tag1',
+		deviceId: 'device1',
+		subscriptionId: 'b0246677bfa655385fbc2b5532f6443f' },
+		applicationId: 'app1',
+		eventTimeStamp: 1487755527470 }
+	```
+		{: codeblock}
+
+- Subskription eines Tags aufheben
+	```
+		{ type: 'onUnsubscribe',
+		entity:
+		{ device:
+		{ id: 18,
+		deviceId: 'device1',
+		applicationId: 'app1',
+		userId: 'user1',
+		token: 'token1',
+		platform: 'G' },
+		tagName: 'tag1',
+		deviceId: 'device1',
+		subscriptionId: 'b0246677bfa655385fbc2b5532f6443f' },
+		applicationId: 'app1',
+		eventTimeStamp: 1487755581059 }
+	```
+		{: codeblock}
+
+- Benachrichtigung senden
+	```
+		{ type: 'onNotificationSent',
+		entity:
+		{ applicationId: 'app1',
+		deviceIds:
+		[ 'device1',
+		'device2'],
+		platform: 'A',
+		msgStatus: 'dispatched',
+		messageId: '55cb688' },
+		applicationId: 'app1',
+		eventTimeStamp: 1487524517353 }
+	```
+		{: codeblock}
+
+- Fehlgeschlagene Benachrichtigung
+	```
+		{ type: 'onNotificationFailure',
+		entity:
+		{ applicationId: 'app1',
+		deviceIds: [ 'device1' ],
+		platform: 'G',
+		msgStatus: 'failure',
+		failureReason: 'InvalidRegistration',
+		messageId: '55cb688' },
+		applicationId: 'app1',
+		eventTimeStamp: 1487524519453 }
+	```
+		{: codeblock}
+

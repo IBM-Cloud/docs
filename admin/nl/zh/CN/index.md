@@ -148,7 +148,7 @@ lastupdated: "2017-02-22"
 | 有效内容 | 如果选择了 POST 或 PUT 方法，请输入特定于要使用的 Web Service 的属性，以及与属性成对的用于 IBM 通知的有效内容值。请参阅[维护和事件有效内容部分值](index.html#payload)表，以识别可以使用的值。如果未在此部分中输入信息，您会收到不含任何更多信息的通知。 |
 | 组合通知 | 选中该选项可将所有区域的事件通知组合到单个通知。此选项仅可用于事件。
  |
-{: caption="表 5. 关于维护更新或事件的 Webhook 通知预订的表单字段" caption-side="top"}
+{: caption="表 5. 关于维护或事件的 Webhook 通知预订的表单字段" caption-side="top"}
 
 
 {: #webhooknotthresh}
@@ -622,7 +622,7 @@ lastupdated: "2017-02-22"
 |name | 服务的名称，在 cf 命令行界面中显示。此名称必须在 {{site.data.keyword.Bluemix_notm}} 中唯一，并且必须使用小写字母且不能包含空格。向 {{site.data.keyword.Bluemix_notm}} 注册服务后，不能更改该服务的名称。 |
 |id  | 服务的标识。此标识必须在 {{site.data.keyword.Bluemix_notm}} 中唯一，并且必须是 GUID（全局唯一标识）。向 {{site.data.keyword.Bluemix_notm}} 注册服务后，不能更改该服务的标识。 |
 |metadata | 服务套餐元数据，在 {{site.data.keyword.Bluemix_notm}}“目录”和价格表中显示。metadata 字段是可选字段。可以指定 metadata 的更多字段。请参阅下表 [Metadata 字段](index.html#metadatafields)，以获取更多信息。 |
-|plans | 服务套餐定义的数组。请参阅下表 [Plan 字段](index.html#planfields)，以获取更多信息。 |
+|plans | 一组服务套餐定义。请参阅下表 [Plan 字段](index.html#planfields)，以获取更多信息。 |
 {: caption="表 10. JSON 字段" caption-side="top"}
 
 
@@ -633,15 +633,15 @@ lastupdated: "2017-02-22"
 |displayName          | 套餐的名称，在 {{site.data.keyword.Bluemix_notm}} 用户界面中显示。此名称会同时显示在“目录”中的服务详细信息页面上以及价格表上。套餐名称仅第一个字母大写。请勿使用“Default”作为缺省套餐名称；请改为使用“Standard”。 |
 |providerDisplayName | 服务提供者的名称 |
 |longDescription | 服务的详细描述。请考虑至少对详细描述使用两个语句。 |
-|plans                | 服务套餐定义的数组。plans 字段的每个数组条目都由以下字段组成：name、description、free、id 和 metadata。请参阅下表 [Plan 字段](index.html#planfields)，以获取更多信息。 |
-|bullets | 为服务显示的字符串的数组。可以使用 bullets 来提供详细描述以及其他信息。bullets 字段必须至少包含两个 bullet 元素。每个 bullet 都包含 title 和 description 字段。 |
+|plans                | 一组服务套餐定义。plans 字段的每组条目都由以下字段组成：name、description、free、id 和 metadata。请参阅下表 [Plan 字段](index.html#planfields)，以获取更多信息。 |
+|bullets | 为服务显示的一组字符串。可使用 bullets 来提供详细描述以及其他信息。bullets 字段必须至少包含两个 bullet 元素。每个 bullet 都包含 title 和 description 字段。 |
 |imageUrl | 大型 PNG 图像（50 x 50 像素）的 URL。 |
 |smallImageUrl | 小型 PNG 图像（24 x 24 像素）的 URL。 |
 |mediumImageUrl | 中型 PNG 图像（32 x 32 像素）的 URL。 |
 |featuredImageUrl | 特色图像的（64 x 64 像素）的 URL。 |
 |documentationUrl | 有关服务的文档的 URL。 |
 |termsUrl | 包含协议条款的 PDF 文件的 URL。 |
-|media（可选） | 元素的数组，用于显示在 {{site.data.keyword.Bluemix_notm}} 用户界面中介绍服务的视频和截屏。media 元素可以包含以下字段：type（image、youtube 或 video）、thumbnailUrl（media 元素的预览图像的 URL。）、url（截屏或 YouTube 视频的 URL。）、source（未在 YouTube 上托管的视频的来源。视频来源的“类型”必须得到 HTML5 的支持。对于 video，请包含“type”和“url”。）和 caption（media 元素的文字说明。文字说明有助于身有残疾的人员进行访问以了解 media 元素。）. |
+|media（可选） | 一组元素，用于显示在 {{site.data.keyword.Bluemix_notm}} 用户界面中介绍服务的视频和截屏。media 元素可以包含以下字段：type（image、youtube 或 video）、thumbnailUrl（media 元素的预览图像的 URL）、url（截屏或 YouTube 视频的 URL）、source（未在 YouTube 上托管的视频的来源。视频来源的“类型”必须受 HTML5 支持。对于 video，请包含“type”和“url”。）和 caption（media 元素的文字说明。文字说明有助于身有残疾的人员进行访问以了解 media 元素。）。 |
 |serviceKeysSupported | 布尔值，指示是否支持服务密钥 API。服务密钥 API 用于支持服务在 {{site.data.keyword.Bluemix_notm}} 外部使用。缺省值为 false。 |
 |plan_updateable | 布尔值，指示服务是否支持更改套餐。缺省值为 false。 |
 |embeddableDashboard（可选） | 此字段指示服务仪表板在 {{site.data.keyword.Bluemix_notm}} 用户界面中的显示方式。如果未指定此字段，仪表板将嵌入用户界面中，但限制为宽度不低于 960px，并且仪表板围绕 iFrame 有更多水平内边距。可以使用 true、false、drilldown 或 launch。对于此值，可以使用以下字段：true、false、drilldown 和 launch。  |
@@ -652,7 +652,7 @@ lastupdated: "2017-02-22"
 |sdkDownloadUrl（可选） | 单击“下载 SDK”按钮时打开的 Web 页面的 URL。“下载 SDK”按钮位于“仪表板”中“应用程序概述”页面的服务磁贴上。Web 页面会在新的浏览器选项卡中打开。 |
 |serviceMonitorApi    | 返回 JSON 数据的 API 的 URL，如以下示例中所示，用于报告服务运行状况。必须在服务元数据中具有 serviceMonitorApi 或 serviceMonitorApp。请参阅以下代码样本以获取示例。 |
 |serviceMonitorApp    | 应用程序的 URL，该应用程序可部署到 {{site.data.keyword.Bluemix_notm}} 并绑定服务，以提供特定于服务状态的输出。应用程序返回的 JSON 数据格式必须与 serviceMonitorApi 相同。必须在服务元数据中具有 serviceMonitorApi 或 serviceMonitorApp。请参阅以下代码样本以获取示例。 |
-{: caption="表 11. 元数据字段" caption-side="top"}
+{: caption="表 11. Metadata 字段" caption-side="top"}
 
 
 ```
@@ -703,9 +703,9 @@ lastupdated: "2017-02-22"
 |displayName             | 套餐的名称，在 {{site.data.keyword.Bluemix_notm}} 用户界面中显示。此名称会同时显示在“目录”中的服务详细信息页面上以及价格表上。   |
 |type                    | 套餐的类型。此字段可以使用以下值：subscription（预订套餐。缺省值为 false。）、reservable（可保留套餐。仅当套餐是预订套餐，即 plan.metadata.subscription 的值为 true 时，才使用此值。缺省值为 false。）或 planDetails（可用于套餐的资源的详细数量和描述。仅当套餐是可保留套餐，即 plan.metadata.reserveable 的值为 true 时，才使用此值。） |
 |bullets                 | 可用于套餐的资源的描述。描述会显示在“目录”中服务详细信息页面上的**功能**列中以及价格表上。 |
-|costs                   | 有关服务的成本信息，显示在“目录”中服务详细信息页面上的“价格”列中以及价格表上。每个数组条目都包含以下字段：unitId（单位标识。使用复数形式并且所有字母均大写。对于免费套餐，此字段是可选的。）、unit（用于计算服务费用的度量值。此字段的值在 {{site.data.keyword.Bluemix_notm}} 用户界面中用于表示费用度量值。）和 partNumber（记帐系统使用的 `part_number` 标识。对于免费套餐，此字段是可选的。）.   |
+|costs                   | 有关服务的成本信息，显示在“目录”中服务详细信息页面上的“价格”列中以及价格表上。每组条目都包含以下字段：unitId（单位标识。使用复数形式并且所有字母均大写。对于免费套餐，此字段是可选的。）、unit（用于计算服务费用的度量值。此字段的值在 {{site.data.keyword.Bluemix_notm}} 用户界面中用于表示费用度量值。）和 partNumber（记帐系统使用的 `part_number` 标识。对于免费套餐，此字段是可选的。）.   |
 |paidOnly（可选）     | 布尔值，指示此服务套餐是否只可用于 {{site.data.keyword.Bluemix_notm}} 付费帐户。值为 **true** 表示此服务套餐只可用于付费帐户，不能添加到试用帐户。值为 **false** 表示此服务套餐可以添加到付费帐户和试用帐户。缺省值为 **false**。	  |
-{: caption="表 13. Plan 元数据字段" caption-side="top"}
+{: caption="表 13. Plan metadata 字段" caption-side="top"}
 
 以下示例显示了 GET /v2/catalog 的 JSON 响应如何映射到 {{site.data.keyword.Bluemix_notm}}“目录”中的服务详细信息页面。具体而言，即上表中描述的 plan metadata 字段如何映射到用户界面：
 
@@ -1295,7 +1295,7 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 ## 用于度量值的 API（试验性）
 {: #envappmetricsapi}
 
-您可以使用三个试验性 API 来收集有关环境或应用程序的度量值。这两个 API 都会返回在指定的时间内所请求度量值的数据点数组。
+您可以使用三个试验性 API 来收集有关环境或应用程序的度量值。这些 API 会针对指定时间段内所请求的度量值返回一组数据点。
 
 以下各部分中描述的度量值 API 可以从特定于区域的端点进行访问，例如： 
 

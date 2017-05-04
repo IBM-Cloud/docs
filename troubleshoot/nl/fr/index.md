@@ -3,8 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-01-11"
-  
+lastupdated: "2017-3-16"  
 
 ---
 
@@ -112,7 +111,7 @@ nslookup mybluemix.net
 Si votre compte est en attente, vous ne pouvez pas vous connecter à {{site.data.keyword.Bluemix_notm}}.
 
  
-Après avoir procédé à votre inscription pour un compte d'essai {{site.data.keyword.Bluemix_notm}}, il est possible que vous ne puissiez pas vous connecter à {{site.data.keyword.Bluemix_notm}} et que le message suivant s'affiche :
+Après avoir procédé à votre enregistrement pour un compte d'essai {{site.data.keyword.Bluemix_notm}}, il est possible que vous ne puissiez pas vous connecter à {{site.data.keyword.Bluemix_notm}}. A la place, le message suivant s'affiche :
 {: tsSymptoms}
 
 <code>Votre compte est en attente. La confirmation par courrier électronique peut prendre jusqu'à 24 heures ; vérifiez également votre dossier de courrier indésirable. Si vous ne recevez pas votre confirmation par courrier électronique, envoyez un message au <a href="http://ibm.biz/bluemixsupport.com" target="_blank">support Bluemix <img src="../icons/launch-glyph.svg" alt="icône de lien externe"></a>.</code>
@@ -610,44 +609,6 @@ application dans {{site.data.keyword.Bluemix_notm}} :
 
 	
 	
-## Impossibilité d'ajouter un référentiel Git
-{: #ts_cannot_addgit}
-
-Après avoir créé une application dans le tableau de bord, vous cliquez sur Ajouter un référentiel Git afin de créer un référentiel Git, mais vous ne
-pouvez pas continuer.
-
-
-
-Lorsque vous cliquez sur **Ajouter un référentiel Git**,
-une fenêtre s'ouvre et l'un des problèmes suivants survient :
-{: tsSymptoms} 
-
-  * La fenêtre est bloquée et affiche un écran blanc.
-  * Un message signale qu'un problème lié à des cookies tiers existe.
-
-
-
-Il se peut que votre navigateur soit configuré de sorte à empêcher la
-définition d'un cookie. Ce cookie doit être défini depuis le site IBM® Bluemix DevOps Services dans le domaine Internet hub.jazz.net, dans le contexte de
-la console {{site.data.keyword.Bluemix_notm}}.
-{: tsCauses}  
-
- 
-
-Pour résoudre ce problème, procédez de l'une des manières suivantes :
-{: tsResolve}
-
-  * Suivez les instructions figurant dans la fenêtre qui s'ouvre depuis la console
-{{site.data.keyword.Bluemix_notm}}. Cliquez sur le bouton. Une autre fenêtre de navigateur s'ouvre
-provisoirement. Dans cette fenêtre, DevOps Services définit le cookie d'authentification.
-  * Dans un autre onglet de navigateur, accédez à https://hub.jazz.net et connectez-vous. Revenez à la console {{site.data.keyword.Bluemix_notm}} et actualisez la page. Cliquez sur
-**Ajouter un référentiel Git** à nouveau.
-  * Changez les paramètres de votre navigateur pour autoriser les cookies tiers et cliquez sur Ajouter un référentiel Git à nouveau. Pour des détails sur la configuration des paramètres, voir la documentation de votre navigateur :
-    * [Mozilla Firefox ![icône de lien externe](../icons/launch-glyph.svg)](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences#w_how-do-i-change-cookie-settings){: new_window}
-	* [Google Chrome ![icône de lien externe](../icons/launch-glyph.svg)](https://support.google.com/chrome/answer/95647){: new_window}
-	* [Apple Safari ![icône de lien externe](../icons/launch-glyph.svg)](https://support.apple.com/kb/PH17191){: new_window}
-	* [Microsoft Internet Explorer ![icône de lien externe](../icons/launch-glyph.svg)](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window} Si ces solutions de contournement ne résolvent pas le problème, envoyez un courrier électronique à idslogin@jazz.net.
-
 
 
 ## Impossibilité de recevoir des notifications push pour les applications Android
@@ -871,12 +832,11 @@ affichées automatiquement.
 ## Les icônes de {{site.data.keyword.Bluemix_notm}} Live Sync ne s'affichent pas
 {: #ts_llz_lkb_3r}
 
-Vous avez créé une application dans IBM Bluemix DevOps Services, mais les icônes d'IBM Bluemix Live Sync ne s'affichent pas dans l'environnement de
-développement intégré Web.
+Vous avez créé une application, mais les icônes IBM Bluemix Live Sync ne sont pas affichées dans l'interface IDE Web.
 
  
 
-Lorsque vous éditez une application Node.js dans l'environnement de développement intégré Web DevOps Services, les icônes {{site.data.keyword.Bluemix_notm}} d'édition directe, de redémarrage rapide et de débogage ne s'affichent pas.
+Lorsque vous éditez une application Node.js dans l'interface IDE Web, les icônes {{site.data.keyword.Bluemix_notm}} Live Edit, Quick Restart, et Debug ne sont pas affichées.
 {: tsSymptoms}
 
  
@@ -900,8 +860,6 @@ Utilisez l'une des méthodes suivantes pour résoudre le problème :
    path: chemin_application
    ```
   * Créez un fichier `package.json` dans le répertoire dans lequel se trouve votre application.
-
-  
   
   
 
@@ -1152,19 +1110,14 @@ Pour d'autres conseils relatifs aux applications Node.js, voir [Tips for Node.js
 
 
 
-## Des erreurs de configuration apparaissent dans le fichier `server.xml` après l'importation d'une application
-{{site.data.keyword.Bluemix_notm}} Liberty depuis Bluemix DevOps Services dans Eclipse
+## Des erreurs de configuration figurent dans le fichier `server.xml` après avoir importé une application {{site.data.keyword.Bluemix_notm}} Liberty dans Eclipse
 {: #ts_eclipse}
 
-Si des erreurs de configuration apparaissent dans le fichier `server.xml` après l'importation d'une application
-{{site.data.keyword.Bluemix_notm}} Liberty depuis IBM Bluemix DevOps Services dans Eclipse, il peut être nécessaire de retirer le fichier
-`server.xml` du projet. 
+Si vous rencontrez des erreurs de configuration dans le fichier `server.xml` après avoir importé une application {{site.data.keyword.Bluemix_notm}} Liberty dans Eclipse, vous devrez peut-être supprimer du projet le fichier `server.xml`. 
 
  
 
-Après avoir importé une application {{site.data.keyword.Bluemix_notm}} Liberty depuis {{site.data.keyword.Bluemix_notm}}
-DevOps Services dans Eclipse, vous constatez que le fichier `server.xml` contient des erreurs de configuration dans la vue Erreurs
-d'Eclipse. 
+Après avoir importé une application {{site.data.keyword.Bluemix_notm}} Liberty dans Eclipse, vous rencontrez des erreurs de configuration dans le fichier `server.xml` dans la vue Erreurs d'Eclipse.
 {: tsSymptoms}
 
  
@@ -1177,8 +1130,7 @@ vous importez l'application dans Eclipse, le fichier `runtime-vars.xml` n'existe
  
 
 Pou résoudre ce problème, supprimez le fichier server.xml du projet. Le pack de construction crée le fichier `server.xml` de manière
-dynamique lorsque vous envoyez par commande push l'application sous forme d'application WAR. Pour
-plus d'informations, voir [Liberty for Java](/docs/runtimes/liberty/index.html).
+dynamique lorsque vous envoyez par commande push l'application sous forme d'application WAR. Pour plus d'informations, voir [Liberty for Java ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/runtimes/liberty/index.html){: new_window}.
 {: tsResolve}
 	
 	

@@ -2,14 +2,15 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-16"
+lastupdated: "2017-04-06"
 
 ---
 
 {:codeblock:.codeblock}
 
+**重要事項：{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。**
 
-# 配置適用於 {{site.data.keyword.amashort}} iOS (Swift SDK) 應用程式的自訂鑑別
+# 配置適用於 Mobile Client Access iOS (Swift SDK) 應用程式的自訂鑑別
 {: #custom-ios}
 
 配置 iOS 應用程式，這個應用程式利用自訂鑑別來使用 {{site.data.keyword.amafull}} 用戶端 SDK，並將您的應用程式連接至 {{site.data.keyword.Bluemix}}。  

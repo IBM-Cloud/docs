@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
+**Importante: El servicio {{site.data.keyword.amafull}} se sustituye por el servicio {{site.data.keyword.appid_full}}.**
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -14,7 +15,7 @@ lastupdated: "2017-01-15"
 {:pre: .pre}
 
 
-# Configuración de la autenticación personalizada para la app {{site.data.keyword.amashort}} Android
+# Configuración de la autenticación personalizada para la app de Android Mobile Client Access
 {: #custom-android}
 
 
@@ -39,7 +40,7 @@ Para obtener más información, consulte la siguiente información:
 
 
 
-## Inicialización del SDK del cliente de {{site.data.keyword.amashort}}
+## Inicialización del SDK del cliente
 {: #custom-android-initialize}
 Si tiene una Android preparada con el SDK de Android de {{site.data.keyword.amashort}}, puede saltarse esta sección.
 1. En el proyecto de Android en Android Studio, abra el archivo `build.gradle` del módulo de la app (no el proyecto `build.gradle`).
@@ -69,7 +70,6 @@ Añada el permiso de acceso a Internet al elemento `<manifest>`:
 	{: codeblock}
 
 1. Inicialice el SDK.  
-	  
 	Un lugar habitual, pero no obligatorio, donde poner el código de inicialización es en el método `onCreate` de la actividad principal de la aplicación de Android.
 
 	```Java
@@ -138,7 +138,7 @@ void submitAuthenticationFailure (JSONObject info);
 ## Implementación de ejemplo de una AuthenticationListener personalizada
 {: #custom-android-samplecustom}
 
-Este ejemplo de AuthenticationListener está diseñado para que funcione con un proveedor de identidad personalizado. Puede descargar este ejemplo del [Repositorio de Github ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "Icono de enlace externo"){: new_window}.
+Este ejemplo de AuthenticationListener está diseñado para que funcione con un proveedor de identidad personalizado. Puede descargar este ejemplo del [Repositorio de Github ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}.
 
 ```Java
 package com.ibm.helloworld;

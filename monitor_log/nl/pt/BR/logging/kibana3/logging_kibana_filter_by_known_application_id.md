@@ -51,13 +51,13 @@ Conclua as tarefas a seguir para visualizar e filtrar seus logs do app Cloud Fou
 	
         ![Janela Todos os eventos exibindo detalhes para um evento de log selecionado](images/logging_selected_log_event.jpg)
 	
-    2. Escolha um evento que exiba o valor do campo que você deseja filtrar.
+    2. Escolha um evento que exiba o valor de campo que você deseja filtrar.
 	
     3. Inclua um filtro.
     
-        Para incluir um filtro que inclua informações sobre esse valor do campo específico, clique no ícone de **Lupa** ![Ícone de Lupa](images/logging_magnifying_glass.jpg) na linha da tabela que contém o campo que você deseja filtrar. 
+        Para incluir um filtro que inclua informações sobre esse valor de campo específico, clique no ícone de **Lupa** ![Ícone de Lupa](images/logging_magnifying_glass.jpg) na linha da tabela que contém o campo que você deseja filtrar. 
 	
-        Para incluir um filtro que exclua informações sobre esse valor do campo específico, clique no ícone de **Exclusão** ![Ícone de Exclusão](images/logging_exclusion_icon.png) na linha da tabela que contém o campo que você deseja filtrar.  
+        Para incluir um filtro que exclua informações sobre esse valor de campo específico, clique no ícone de **Exclusão** ![Ícone de Exclusão](images/logging_exclusion_icon.png) na linha da tabela que contém o campo que você deseja filtrar.  
 
         Uma nova condição do filtro é incluída no painel do Kibana.
 	

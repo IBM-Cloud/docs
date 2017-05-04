@@ -6,9 +6,11 @@ lastupdated: "2017-04-06"
 
 ---
 
-# Related Links
-
 **Important: The {{site.data.keyword.amafull}} service is replaced with the {{site.data.keyword.appid_full}} service.**
+
+# Related Links
+You can use the following related links to learn more and interact with the service.
+{:shortdesc}
 
 ## Tutorials and Samples
 {: #samples notoc}

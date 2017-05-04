@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-03-23"
 
 ---
 
@@ -57,10 +57,10 @@ Die Tomcat-Laufzeit [server.xml](https://github.com/cloudfoundry/java-buildpack/
 ```
 {: codeblock}
 
-Weitere Konfigurationsoptionen für 'RemoteIpValve' finden Sie in der [Dokumentation zu Tomcat](https://tomcat.apache.org/tomcat-8.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html).
+Weitere Konfigurationsoptionen für RemoteIpValve finden Sie in der [Dokumentation zu Tomcat ![Symbol 'Externer Link'](../../icons/launch-glyph.svg "Symbol 'Externer Link")](https://tomcat.apache.org/tomcat-8.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html).
 
 # Zugehörige Links
-{: #rellinks}
+{: #rellinks notoc}
 ## Allgemein
-{: #general}
+{: #general notoc}
 * [java-buildpack](https://github.com/cloudfoundry/java-buildpack)

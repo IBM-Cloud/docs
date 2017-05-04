@@ -2,9 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-06"
 
 ---
+
+**重要事項：{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。**
 
 # Web 應用程式自訂鑑別
 {: #custom-web}
@@ -34,8 +36,6 @@ lastupdated: "2017-01-08"
 1. 按一下 {{site.data.keyword.amashort}} 磚。即會載入 {{site.data.keyword.amashort}} 儀表板。
 1. 按一下「自訂」磚。
 1. 輸入**自訂領域**、**自訂身分提供者 URL** 及 **redirect_uri**。按一下「儲存」。
-
-
 
 ## 使用 {{site.data.keyword.amashort}} 進行自訂 Web 鑑別
 
@@ -74,7 +74,7 @@ lastupdated: "2017-01-08"
 `redirect_uri` 參數必須符合步驟 1 中的 `redirect_uri`。授權碼是由步驟 2 中的要求所傳回。
   因為授權碼的有效時間最多為 10 分鐘，所以請一定要在 10 分鐘內傳送此 `POST` 要求。
 
-`POST` 回應內文包含以 base64 編碼的 *access_token* 及 *id_token*。
+  `POST` 回應內文包含以 base64 編碼的 *access_token* 及 *id_token*。
 
 ## 測試鑑別
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+  lastupdated: "2017-04-04"
 
 ---
 
@@ -53,7 +53,8 @@ Sehen Sie sich die folgenden Schritte und Beispiele an, um Ihre erste JavaScript
       return {payload: 'Hello world'};
   }
   ```
-  {: codeblock}
+    {: codeblock}
+
   Die JavaScript-Datei könnte noch weitere Funktionen enthalten. Allerdings muss nach allgemeiner Konvention eine Funktion mit dem Namen `main` vorhanden sein, um den Einstiegspunkt für die Aktion bereitzustellen.
 
 2. Erstellen Sie eine Aktion aus der folgenden JavaScript-Funktion. Für dieses Beispiel heißt die Aktion 'hello'.
@@ -61,7 +62,7 @@ Sehen Sie sich die folgenden Schritte und Beispiele an, um Ihre erste JavaScript
   ```
   wsk action create hello hello.js
   ```
-    {: pre}
+      {: pre}
   ```
   ok: created action hello
   ```
@@ -89,7 +90,7 @@ Sehen Sie sich die folgenden Schritte und Beispiele an, um Ihre erste JavaScript
   {: pre}
   ```
   ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
-    ```
+  ```
   ```json
   {
       "result": {
@@ -107,7 +108,7 @@ Sehen Sie sich die folgenden Schritte und Beispiele an, um Ihre erste JavaScript
   Das Ergebnis ist in diesem Fall die Zeichenfolge `Hello world`, die von der JavaScript-Funktion zurückgegeben wird. Mithilfe der Aktivierungs-ID können später die Protokolle oder das Ergebnis des Aufrufs abgerufen werden.  
 
 5. Wenn Sie das Aktionsergebnis nicht sofort benötigen, können Sie das Flag `--blocking` nicht angeben und einen nicht blockierenden Aufruf ausführen. Später können Sie das Ergebnis über die Aktivierungs-ID abrufen. Beispiel:
-  
+
   ```
   wsk action invoke hello
   ```
@@ -115,6 +116,7 @@ Sehen Sie sich die folgenden Schritte und Beispiele an, um Ihre erste JavaScript
   ```
   ok: invoked hello with id 6bf1f670ee614a7eb5af3c9fde813043
   ```
+
   ```
   wsk activation result 6bf1f670ee614a7eb5af3c9fde813043
   ```
@@ -136,10 +138,8 @@ Sehen Sie sich die folgenden Schritte und Beispiele an, um Ihre erste JavaScript
   44794bd6aab74415b4e42a308d880e5b         hello
   6bf1f670ee614a7eb5af3c9fde813043         hello
   ```
-  
 
 ### Parameter an eine Aktion übergeben
-{: #openwhisk_adding_parameters_js}
 
 Beim Aufruf können Parameter an die Aktion übergeben werden.
 
@@ -194,6 +194,7 @@ das Flag `param-file` übergeben werden:
       "payload": "Hello, Bernie from Vermont"
   }
   ```
+
   Beachten Sie die Verwendung der Option `--result`,
 damit nur das Aufrufergebnis angezeigt wird.
 
@@ -246,28 +247,33 @@ werden, die den gewünschten Inhalt im JSON-Format enthält.
       "payload": "Hello, Bernie from Vermont"
   }
   ```
+
   Sie stellen fest, dass Sie den Parameter "place" beim Aufruf der Aktion nicht angeben mussten. Gebundene Parameter können weiterhin durch eine entsprechende Angabe eines Parameterwerts im Aufruf überschrieben werden.
 
 3. Rufen Sie die Aktion auf, indem Sie Werte für `name` und `place` übergeben. Der letztere Wert überschreibt den Wert, der an die Aktion gebunden ist.
 
   Verwendung des Flags `--param`:
+
   ```
   wsk action invoke --blocking --result hello --param name Bernie --param place "Washington, DC"
   ```
   {: pre}
-  Verwendung des Flags `--param-file`:
-  Datei parameters.json:
+
+  Verwendung des Flags `--param-file`: 
+
+  Datei: parameters.json:
   ```json
   {
     "name": "Bernie",
     "place": "Vermont"
   }
   ```
-  {: codeblock}  
+  {: codeblock}
   ```
   wsk action invoke --blocking --result hello --param-file parameters.json
   ```
   {: pre}
+  
   ```json
   {  
       "payload": "Hello, Bernie from Washington, DC"
@@ -316,6 +322,7 @@ diesem Beispiel zwei Sekunden ab, bevor die Callback-Funktion aufgerufen wird.  
       "done": true
   }
   ```
+
   Beachten Sie, dass Sie einen blockierenden Aufruf einer asynchronen Aktion ausgeführt haben.
 
 3. Rufen Sie das Aktivierungsprotokoll ab, um zu prüfen, wie lange die Ausführung der Aktivierung gedauert hat:
@@ -329,18 +336,19 @@ diesem Beispiel zwei Sekunden ab, bevor die Callback-Funktion aufgerufen wird.  
   b066ca51e68c4d3382df2d8033265db0             asyncAction
   ```
 
+
   ```
   wsk activation get b066ca51e68c4d3382df2d8033265db0
   ```
   {: pre}
-  ```json
+ ```json
   {
       "start": 1455881628103,
       "end":   1455881648126
   }
   ```
-  Beim Vergleich der Zeitmarken für `start` und `end` im Aktivierungsdatensatz können Sie erkennen, dass diese Aktivierung geringfügig länger als zwei Sekunden zur Ausführung benötigt hat.
 
+  Beim Vergleich der Zeitmarken für `start` und `end` im Aktivierungsdatensatz können Sie erkennen, dass diese Aktivierung geringfügig länger als zwei Sekunden zur Ausführung benötigt hat.
 
 ### Externe API mit Aktionen aufrufen
 {: #openwhisk_apicall_action}
@@ -395,7 +403,6 @@ Im folgenden Beispiel wird ein Yahoo Weather-Services aufgerufen, um die aktuell
       "msg": "It is 28 degrees in Brooklyn, NY and Cloudy"
   }
   ```
-
 
 ### Aktion als Node.js-Modul paketieren
 {: #openwhisk_js_packaged_action}
@@ -547,18 +554,18 @@ Das Verfahren zur Erstellung von Python-Aktionen ist dem von JavaScript-Aktionen
 ### Aktion erstellen und aufrufen
 {: #openwhisk_actions_python_invoke}
 
-Eine Aktion ist einfach eine Python-Funktion der höchsten Ebene. Das heißt, dass eine Methode mit dem Namen `main` erforderlich ist. Erstellen Sie beispielsweise eine Datei mit dem Namen `hello.py` und dem folgenden Inhalt:
+Eine Aktion ist eine einfache Python-Funktion der höchsten Ebene. Erstellen Sie zum Beispiel eine Datei mit dem Namen `hello.py` und dem folgenden Quellcode: 
 
 ```python
-def main(dict):
-    name = dict.get("name", "stranger")
+def main(args):
+    name = args.get("name", "stranger")
     greeting = "Hello " + name + "!"
     print(greeting)
         return {"greeting": greeting}
 ```
 {: codeblock}
 
-Python-Aktionen lesen stets ein Wörterverzeichnis (Dictionary) und generieren ein Wörterverzeichnis.
+Python-Aktionen lesen stets ein Wörterverzeichnis (Dictionary) und generieren ein Wörterverzeichnis. Die Eingangsmethode für die Aktion ist standardmäßig `main`. Sie kann jedoch explizit beim Erstellen der Aktion über die CLI `wsk` mit der Option `--main` angegeben werden, wie bei jedem anderen Aktiontyp. 
 
 Sie können eine OpenWhisk-Aktion mit dem Namen `helloPython` wie folgt aus dieser Funktion erstellen:
 
@@ -566,8 +573,7 @@ Sie können eine OpenWhisk-Aktion mit dem Namen `helloPython` wie folgt aus dies
 wsk action create helloPython hello.py
 ```
 {: pre}
-
-Bei Verwendung der Befehlszeile und einer `.py`-Quellendatei brauchen Sie nicht anzugeben, dass Sie eine Python-Aktion (im Unterschied zu einer JavaScript-Aktion) erstellen; das Tool bestimmt dies anhand der Dateierweiterung.
+Die CLI leitet den Typ der Aktion automatisch aus der Erweiterung der Quellendatei ab. Für `.py`-Quellendateien wird die Aktion in einer Laufzeit mit Python 2.7 ausgeführt. Sie können auch eine Aktion erstellen, die mit Python 3.6 ausgeführt wird, indem Sie den Parameter `--kind python:3` explizit angeben. Weitere Informationen zu Python 2.7 im Vergleich zu Python 3.6 finden Sie in den [Referenzinformationen zu Phyton](./openwhisk_reference.html#openwhisk_ref_python_environments).
 
 Der Aktionsaufruf für Python-Aktionen stimmt mit dem für JavaScript-Aktionen überein:
 
@@ -583,16 +589,13 @@ wsk action invoke --blocking --result helloPython --param name World
 ```
 
 
-
 ## Swift-Aktionen erstellen
-{: #openwhisk_actions_swift}
 
 Das Verfahren zur Erstellung von Swift-Aktionen ist dem von JavaScript-Aktionen ähnlich. In den folgenden Abschnitten werden die Schritte zum Erstellen und Aufrufen einer einzelnen Swift-Aktion sowie zum Übergeben von Parametern an diese Aktion beschrieben.
 
 Sie können Ihren Swift-Code auch online mithilfe der [Swift-Sandbox](https://swiftlang.ng.bluemix.net) testen, ohne Xcode auf Ihrer Maschine installieren zu müssen.
 
 ### Aktion erstellen und aufrufen
-{: #openwhisk_actions_invoke_swift}
 
 Eine Aktion ist eine einfache Swift-Funktion der höchsten Ebene. Erstellen Sie zum Beispiel eine Datei mit dem Namen `hello.swift` und dem folgenden Inhalt:
 
@@ -631,28 +634,29 @@ wsk action invoke --blocking --result helloSwift --param name World
   }
 ```
 
-
 **Achtung:** Swift-Aktionen werden in einer Linux-Umgebung ausgeführt. Swift unter Linux befindet sich noch in Entwicklung und {{site.data.keyword.openwhisk_short}} arbeitet in der Regel mit dem neuesten verfügbaren Release, das jedoch nicht unbedingt stabil ist. Darüber hinaus ist es möglich, dass die mit {{site.data.keyword.openwhisk_short}} verwendete Version von Swift nicht mit den Versionen von Swift aus stabilen Releases von XCode on MacOS konsistent ist.
 
 ### Aktion als ausführbare Swift-Datei paketieren
 {: #openwhisk_actions_swift_zip}
-Wenn Sie eine OpenWhisk-Swift-Aktion mit einer Swift-Quellendatei erstellen, muss diese in eine Binärdatei kompiliert werden, bevor die Aktion ausgeführt wird. Danach werden Aufrufe der Aktion viel schneller durchgeführt, bis der Container, in dem die Aktion enthalten ist, gelöscht wird. 
 
-Um die Verzögerung zu vermeiden, die durch den Kompilierungsschritt entsteht, können Sie Ihre Swift-Datei in eine Binärdatei kompilieren und anschließend in einer ZIP-Datei in OpenWhisk hochladen. Da Sie das OpenWhisk-Scaffolding benötigen, ist es am einfachsten, die Binärdatei innerhalb derselben Umgebung zu erstellen, in der sie ausgeführt wird. Die Schritte lauten wie folgt:
+Wenn Sie eine OpenWhisk-Swift-Aktion mit einer Swift-Quellendatei erstellen, muss diese in eine Binärdatei kompiliert werden, bevor die Aktion ausgeführt wird. Danach werden Aufrufe der Aktion viel schneller durchgeführt, bis der Container, in dem die Aktion enthalten ist, gelöscht wird. Diese Verzögerung wird als Kaltstartverzögerung bezeichnet. 
 
-- Führen Sie einen interaktiven Container für Swift-Aktionen aus. 
-  ```
-  docker run -it -v "$(pwd):/owexec" openwhisk/swift3action bash
-  ```
-  {: pre}
-Anschließend befinden Sie sich in einer Bash-Shell innerhalb des Docker-Containers. Führen Sie die folgenden Befehle in dieser Shell aus:
-  
+Zur Vermeidung der Kaltstartverzögerung können Sie Ihre Swift-Datei in eine Binärdatei kompilieren und anschließend in einer ZIP-Datei in OpenWhisk hochladen. Da Sie das OpenWhisk-Scaffolding benötigen, ist es am einfachsten, die Binärdatei innerhalb derselben Umgebung zu erstellen, in der sie ausgeführt wird. Die Schritte sehen wie folgt aus: 
+
+- Führen Sie einen interaktiven Container für Swift-Aktionen aus.
+```
+docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
+```
+{: pre}
+
+    Anschließend befinden Sie sich in einer Bash-Shell innerhalb des Docker-Containers. Führen Sie die folgenden Befehle in dieser Shell aus:
+
 - Installieren Sie der Einfachheit halber 'zip', um die Binärdatei zu paketieren:
   ```
   apt-get install -y zip
   ```
   {: pre}
-- Kopieren Sie den Quellcode und bereiten Sie den Build vor: 
+- Kopieren Sie den Quellcode und bereiten Sie den Build vor:
   ```
   cp /owexec/hello.swift /swift3Action/spm-build/main.swift 
   ```
@@ -665,12 +669,12 @@ Anschließend befinden Sie sich in einer Bash-Shell innerhalb des Docker-Contain
   echo '_run_main(mainFunction:main)' >> /swift3Action/spm-build/main.swift
   ```
   {: pre}
-- Führen Sie den Build (zBuild) aus und erstellen Sie den Link: 
+- Führen Sie den Build (zBuild) aus und erstellen Sie den Link:
   ```
   /swift3Action/spm-build/swiftbuildandlink.sh
   ```
   {: pre}
-- Erstellen Sie das ZIP-Archiv: 
+- Erstellen Sie das ZIP-Archiv:
   ```
   cd /swift3Action/spm-build
   ```
@@ -678,7 +682,7 @@ Anschließend befinden Sie sich in einer Bash-Shell innerhalb des Docker-Contain
   ```
   zip /owexec/hello.zip .build/release/Action
   ```
-- Beenden Sie den Docker-Container: 
+- Beenden Sie den Docker-Container:
   ```
   exit
   ```
@@ -689,38 +693,31 @@ Hierdurch wurde eine Datei 'hello.zip' in demselben Verzeichnis wie 'hello.swift
   wsk action update helloSwiftly hello.zip --kind swift:3
   ```
   {: pre}
-  Führen Sie den folgenden Befehl aus, um zu prüfen, wie viel schneller die Aktion ist:  
+- Führen Sie den folgenden Befehl aus, um zu prüfen, wie viel schneller die Aktion ist: 
   ```
   wsk action invoke helloSwiftly --blocking
   ``` 
   {: pre}
 
+Die Zeit, die zur Ausführung der Aktion benötigt wurde, ist in der Eigenschaft "duration" (Dauer) enthalten. Vergleichen Sie diese mit der Zeit, die zur Ausführung mit einem Kompilierungsschritt in der Aktion 'hello' benötigt wird. 
 
 ## Java-Aktionen erstellen
 {: #openwhisk_actions_java}
 
-Das Verfahren zur Erstellung von Java-Aktionen ist dem von
-JavaScript- und Swift-Aktionen ähnlich. In den folgenden Abschnitten werden die
-Schritte zum Erstellen und Aufrufen einer einzelnen Java-Aktion sowie zum
-Übergeben von Parametern an diese Aktion beschrieben.
+Das Verfahren zur Erstellung von Java-Aktionen ist dem von JavaScript- und Swift-Aktionen ähnlich. In den folgenden Abschnitten werden die Schritte zum Erstellen und Aufrufen einer einzelnen Java-Aktion sowie zum Übergeben von Parametern an diese Aktion beschrieben. 
 
-Damit Sie Java-Dateien kompilieren, testen und archivieren können, muss
-lokal eine
-[JDK
-8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) installiert sein.
+Damit Sie Java-Dateien kompilieren, testen und archivieren können, muss lokal ein [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) installiert sein.
 
 ### Aktion erstellen und aufrufen
 {: #openwhisk_actions_java_invoke}
 
-Eine Java-Aktion ist ein Java-Programm mit einer Methode namens
-`main`, deren exakte Signatur wie folgt lautet:
+Eine Java-Aktion ist ein Java-Programm mit einer Methode namens `main`, deren exakte Signatur wie folgt aussieht:
 ```java
 public static com.google.gson.JsonObject main(com.google.gson.JsonObject);
 ```
 {: codeblock}
 
-Erstellen Sie beispielsweise eine Java-Datei namens
-`Hello.java` mit dem folgenden Inhalt:
+Erstellen Sie beispielsweise eine Java-Datei namens `Hello.java` mit dem folgenden Inhalt:
 
 ```java
 import com.google.gson.JsonObject;
@@ -755,7 +752,6 @@ namens `helloJava` erstellen:
 ```
 wsk action create helloJava hello.jar --main Hello
 ```
-{: pre}
 
 Bei Verwendung der Befehlszeile und einer Swift-Quellendatei
 (`.jar`) brauchen Sie nicht anzugeben, dass Sie eine
@@ -782,7 +778,6 @@ wsk action invoke --blocking --result helloJava --param name World
 ```
 
 ## Docker-Aktionen erstellen
-{: #openwhisk_actions_docker}
 
 Bei {{site.data.keyword.openwhisk_short}} Docker-Aktionen können Sie Ihre Aktionen in einer beliebigen Sprache schreiben.
 
@@ -797,10 +792,12 @@ In den nachfolgenden Anweisungen wird die Docker-Benutzer-ID `janesmith` und das
   ```
   wsk sdk install docker
   ```
+  ```
   {: pre}
   ```
   The Docker skeleton is now installed at the current directory.
   ```
+
   ```
   ls dockerSkeleton/
   ```
@@ -808,6 +805,7 @@ In den nachfolgenden Anweisungen wird die Docker-Benutzer-ID `janesmith` und das
   ```
   Dockerfile      README.md       buildAndPush.sh example.c
   ```
+
   Das Gerüst ist eine Docker-Containervorlage, in die Sie Ihren Code in Form von angepassten Binärdateien einfügen können.
 
 2. Richten Sie Ihre angepasste Binärdatei im Docker-Gerüst ('docherSkeleton') ein. Das Gerüst schließt bereits ein C-Programm ein, das Sie verwenden können.
@@ -830,9 +828,9 @@ In den nachfolgenden Anweisungen wird die Docker-Benutzer-ID `janesmith` und das
   Im letzteren Fall müssen Sie ggf. die `Dockerfile` optimieren, um Ihre ausführbare Datei zu erstellen.
   Die Binärdatei muss sich im Container unter `/action/exec` befinden.
 
-  Die Binärdatei empfängt ein einzelnes Argument von der Befehlszeile. Es handelt sich um eine Serialisierungen-Serialisierung des JSON-Objekts,
+  Die Binärdatei empfängt ein einzelnes Argument von der Befehlszeile. Es handelt sich um eine Zeichenfolgeserialisierung des JSON-Objekts,
   das die Argumente für die Aktion darstellt. Das Programm gibt die Protokolle in `stdout` oder `stderr` aus.
-  Die letzte Zeile der Ausgabe *muss* ein in eine Zeichenfolge konvertiertes JSON-Objekt sein, das das Aktionsergebnis darstellt.
+  Die letzte Zeile der Ausgabe _muss_ der Konvention entsprechend ein in eine Zeichenfolge konvertiertes JSON-Objekt sein, das das Aktionsergebnis darstellt.
 
 3. Erstellen Sie das Docker-Image und laden Sie es mithilfe eines bereitgestellten Scripts hoch. Sie müssen zunächst den Befehl `docker login` zur Authentifizierung und anschließend das Script mit einem ausgewählten Imagenamen ausführen.
 
@@ -929,14 +927,14 @@ Sie können die Ausgabe von Aktionen, wenn sie aufgerufen werden, über die {{si
 ## Aktionen auflisten
 {: #openwhisk_listing_actions}
 
-Mit dem folgenden Befehl können Sie alle Aktionen auflisten, die Sie erstellt haben: 
+Mit dem folgenden Befehl können Sie alle Aktionen auflisten, die Sie erstellt haben:
 
 ```
 wsk action list
 ```
 {: pre}
 
-Je mehr Aktionen Sie schreiben, desto umfangreicher wird die Liste. Es kann daher hilfreich sein, zusammengehörige Aktionen in [Paketen](./packages.md) zu gruppieren. Mit dem folgenden Befehl können Sie die Liste der Aktionen so filtern, dass nur Aktionen aus einem bestimmten Paket angezeigt werden:  
+Je mehr Aktionen Sie schreiben, desto umfangreicher wird die Liste. Es kann daher hilfreich sein, zusammengehörige Aktionen in [Paketen](./openwhisk_packages.html) zu gruppieren. Mit dem folgenden Befehl können Sie die Liste der Aktionen so filtern, dass nur Aktionen aus einem bestimmten Paket angezeigt werden: 
 
 ```
 wsk action list [PAKETNAME]
@@ -977,9 +975,9 @@ Alarm auslösen, wenn die Aktion kurz davor ist, das zugeteilte Zeitbudget aufzu
 Auf die Eigenschaften kann über die Systemumgebung für alle unterstützten Laufzeiten zugegriffen werden:
 Node.js-, Python-, Swift-, Java- und Docker-Aktionen bei Verwendung des Docker-Gerüsts für OpenWhisk.
 
-* `__OW_API_HOST`: Der API-Host für die OpenWhisk-Bereitstellung, in der diese Aktion ausgeführt wird.
-* `__OW_API_KEY`: Der API-Schlüssel für das Subjekt, das die Aktion aufruft; bei diesem Schlüssel kann es sich um einen eingeschränkten API-Schlüssel handeln.
-* `__OW_NAMESPACE`: Der Namensbereich für die Aktivierung (*activation*) (möglicherweise nicht mit dem Namensbereich für die Aktion identisch).
-* `__OW_ACTION_NAME`: Der vollständig qualifizierte Name der aktiven Aktion.
-* `__OW_ACTIVATION_ID`: Die Aktivierungs-ID für diese aktive Aktionsinstanz.
-* `__OW_DEADLINE`: Der näherungsweise berechnete Zeitpunkt, an dem diese Aktion das gesamte Zeitkontingent aufgebraucht hat (in Epoch-Millisekunden).
+* `__OW_API_HOST`: Der API-Host für die OpenWhisk-Bereitstellung, die diese Aktion ausführt.
+* `__OW_API_KEY`: Der API-Schlüssel für das Subjekt, das die Aktion aufruft; dieser Schlüssel kann ein eingeschränkter API-Schlüssel sein.
+* `__OW_NAMESPACE`: Der Namensbereich für die _Aktivierung_ (kann sich vom Namensbereich für die Aktion unterscheiden).
+* `__OW_ACTION_NAME`: Der vollständig qualifizierte Name der ausgeführten Aktion.
+* `__OW_ACTIVATION_ID`: Die Aktivierungs-ID für diese ausgeführte Aktionsinstanz.
+* `__OW_DEADLINE`: Der näherungsweise berechnete Zeitpunkt, zu dem diese Aktion das gesamte Zeitkontingent aufbraucht (in Epoch-Millisekunden).

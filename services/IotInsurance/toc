@@ -19,6 +19,9 @@ IoT for Insurance
         iotinsurance_extending_service.md
         [IoT for Insurance API](https://iot4i-api-docs.mybluemix.net/)
         [IoT for Insurance API Examples](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples)
+
+    [IoT for Insurance shields library](https://github.com/ibm-watson-iot/ioti-shields)
+    [IoT for Insurance sample mobile app code](https://github.com/ibm-watson-iot/ioti-mobile)
   {: .navgroup-end}
 
   {: .navgroup id="howto"}
@@ -28,6 +31,7 @@ IoT for Insurance
     iotinsurance_optimizing_performance.md
     iotinsurance_upgrading.md
     iotinsurance_data_backup.md
+    iotinsurance_sms_voice_integration.md
   {: .navgroup-end}
 
   {: .navgroup id="help"}

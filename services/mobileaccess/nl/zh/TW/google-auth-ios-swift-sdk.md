@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,8 @@ lastupdated: "2017-01-15"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+**重要事項：{{site.data.keyword.amafull}} 服務取代為 {{site.data.keyword.appid_full}} 服務。**
 
 # 啟用 iOS 應用程式的 Google 鑑別 (Swift SDK)
 {: #google-auth-ios}
@@ -36,7 +38,7 @@ lastupdated: "2017-01-15"
 ## 準備您的應用程式進行 Google 登入
 {: #google-sign-in-ios}
 
-遵循 Google 在 [Google Sign-In for iOS ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developers.google.com/identity/sign-in/ios/start-integrating "外部鏈結圖示"){: new_window} 中所提供的指示，來準備您的應用程式進行 Google 登入。
+遵循 Google 在 [Google Sign-In for iOS ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developers.google.com/identity/sign-in/ios/start-integrating){: new_window} 中所提供的指示，來準備您的應用程式進行 Google 登入。
 
 此處理程序：
 
@@ -50,7 +52,7 @@ lastupdated: "2017-01-15"
 
 1. 從主要目標之**一般**標籤的**身分**區段中，記下 Xcode 專案中的**軟體組 ID**。您需要它才能建立「Google 登入」專案。
 
-1. 在 [Google Developer 網站 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developers.google.com/mobile/add?platform=ios "外部鏈結圖示"){: new_window} 上，為 Google Sign-In for iOS 建立專案。
+1. 在 [Google Developer 網站 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developers.google.com/mobile/add?platform=ios){: new_window} 上，為 Google Sign-In for iOS 建立專案。
 
 1. 將「Google 登入 API」新增至專案。
 
@@ -58,9 +60,9 @@ lastupdated: "2017-01-15"
 
    **重要事項：**取得 `GoogleService-Info.plist` 檔案後，請開啟它並記下 `CLIENT_ID` 值。您稍後需要此值，才能配置 {{site.data.keyword.amashort}} 後端應用程式。
 
-1. 新增 `GoogleService-Info.plist` 檔案至 Xcode 專案。如需相關資訊，請參閱[將配置檔新增至您的專案 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config "外部鏈結圖示"){: new_window}。
+1. 新增 `GoogleService-Info.plist` 檔案至 Xcode 專案。如需相關資訊，請參閱[將配置檔新增至您的專案 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config){: new_window}。
 
-1. 利用 `REVERSE_CLIENT_ID` 及軟體組 ID 更新 Xcode 專案中的「URL 架構」。如需相關資訊，請參閱[將 URL 架構新增至您的專案 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project "外部鏈結圖示"){: new_window}。
+1. 利用 `REVERSE_CLIENT_ID` 及軟體組 ID 更新 Xcode 專案中的「URL 架構」。如需相關資訊，請參閱[將 URL 架構新增至您的專案 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project){: new_window}。
 
 1. 以下列程式碼來更新應用程式的 `project-Bridging-Header.h` 檔案：
 
@@ -69,9 +71,9 @@ lastupdated: "2017-01-15"
 	```
 	{: codeblock}
 
-	如需更新橋接標頭檔的相關資訊，請參閱[啟用登入 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in "外部鏈結圖示"){: new_window}。
+	如需更新橋接標頭檔的相關資訊，請參閱[啟用登入 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in){: new_window}。
 
-## 配置 {{site.data.keyword.amashort}} 進行 Google 鑑別
+## 配置 Mobile Client Access 進行 Google 鑑別
 {: #google-auth-ios-config}
 
 現在您已經有 iOS 用戶端 ID，可以在 {{site.data.keyword.amashort}} 服務中啟用 Google 鑑別。
@@ -82,7 +84,7 @@ lastupdated: "2017-01-15"
 1. 在**適用於 iOS 的應用程式 ID** 中，指定您從 `GoogleService-Info.plist` 檔案取得的 `CLIENT_ID` 值。
 1. 按一下**儲存**。
 
-## 配置適用於 iOS 的 {{site.data.keyword.amashort}} 用戶端 SDK
+## 配置適用於 iOS 的用戶端 SDK
 {: #google-auth-ios-sdk}
 
 ### 安裝 CocoaPods
@@ -92,13 +94,12 @@ lastupdated: "2017-01-15"
 
 1. 如果您未安裝 CocoaPods，請執行：
 
-
 	```
 	sudo gem install cocoapods
-```
+	```
 	{: codeblock}
 
-如需相關資訊，請參閱 [CocoaPods 網站 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cocoapods.org/ "外部鏈結圖示"){: new_window}。
+如需相關資訊，請參閱 [CocoaPods 網站 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cocoapods.org/){: new_window}。
 
 ### 使用 CocoaPods 安裝 {{site.data.keyword.amashort}} 用戶端 Swift SDK
 {: #facebook-auth-install-swift-cocoapods}
@@ -219,15 +220,15 @@ lastupdated: "2017-01-15"
 1. 您的要求應該會成功。下列輸出會出現在日誌中。
 
 	```
-	 response:Optional("Hello, this is a protected resource of the mobile backend application!"), no error
- ```
+	response:Optional("Hello, this is a protected resource of the mobile backend application!"), no error
+	```
 	{: screen}
 
 1. 您也可以新增下列程式碼，來新增登出功能：
 
 	```
 	GoogleAuthenticationManager.sharedInstance.logout(callBack)
- ```
+	```
 	{: codeblock}
 
 	如果您在使用者使用 Google 登入之後呼叫此程式碼，而且使用者嘗試重新登入，則系統會提示他們授權 {{site.data.keyword.amashort}} 使用 Google 進行鑑別。此時，使用者可以按一下使用者名稱<!--in the upper-right corner of the screen-->來進行選取，並利用另一個使用者來登入。

@@ -25,9 +25,9 @@ Mit dem öffentlichen, dedizierten und lokalen Modell für integrierte Bereitste
 
 Mit {{site.data.keyword.Bluemix_notm}} Local können Sie den realen Wert einer privaten Cloud innerhalb Ihres Rechenzentrums nutzen.  {{site.data.keyword.Bluemix_notm}} Local wird als As-a-Service-Produkt in permanenter Zusammenarbeit mit Ihrem IT-Team geliefert. Das Produkt bietet Ihnen außerdem die Möglichkeit, vorhandene Mainframe-Computer, eine serviceorientierte Architektur, Prozesse und Daten in einer modernen Cloudplattform zu nutzen. Weitere Informationen zu [{{site.data.keyword.Bluemix_notm}} Local](/docs/local/index.html).
 
-# Zugehörige Links
+# rellinks
 {: #rellinks}
-## Allgemein
+## general
 {: #general}
 * [Was ist {{site.data.keyword.Bluemix_notm}} ![Symbol für externen Link](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
 * [Einführung ![Symbol für externen Link](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/getting-started/){:new_window}

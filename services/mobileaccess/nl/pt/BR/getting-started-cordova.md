@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+**Importante: o serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.**
 
 # Configurando o plug-in do Cordova
 {: #getting-started-cordova}
@@ -24,7 +25,7 @@ e desprotegidos da WebView.
 
 {:shortdesc}
 
-## Antes de Começar
+## Antes de iniciar
 {: #before-you-begin}
 Você deve ter:
 
@@ -52,7 +53,8 @@ valores de SDK requeridos no código WebView Javascript:
 `BMSClient.REGION_UK`. Você precisará desse
 valor para inicializar o cliente
 {{site.data.keyword.amashort}}.
-* Um aplicativo Cordova ou um projeto existente. Para obter mais informações sobre como configurar seu aplicativo Cordova, veja o [website do Cordova ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cordova.apache.org/ "Ícone de link externo"){: new_window}.
+* Um aplicativo Cordova ou um projeto existente. Para obter mais informações sobre como
+configurar seu aplicativo Cordova, veja o [website Cordova ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://cordova.apache.org/){: new_window}.
 
 ## Instalando o plug-in {{site.data.keyword.amashort}} Cordova
 {: #getting-started-cordova-plugin}
@@ -92,11 +94,9 @@ name="android">`:
 	```
 	{: codeblock}
 
-	O valor *minSdkVersion* deve ser `15` ou mais alto. Consulte
-o [Guia da Plataforma Android ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de
-link externo")](https://cordova.apache.org/docs/en/latest/guide/platforms/android/ "Ícone delink externo"){: new_window} para manter-se atualizado
-
-com relação à *targetSdkVersion* suportada para o Android SDK.
+	O valor *minSdkVersion* deve ser `15` ou mais alto. Consulte o [Guia da Plataforma
+Android ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://cordova.apache.org/docs/en/latest/guide/platforms/android/){: new_window} para manter-se atualizado com relação ao
+*targetSdkVersion* suportado para o SDK Android.
 
 3. Se você incluiu o sistema operacional iOS, atualize o elemento `<platform name="ios">` com uma declaração de destino:
 
@@ -142,7 +142,7 @@ Swift, clique em **Cancelar**.
 	2. Compile e execute seu aplicativo com Xcode.
 
 	**Nota**: você pode receber o seguinte erro ao executar `cordova build ios`. Esse problema é devido a um erro em um plug-in de dependência que está sendo
-rastreado no [Problema 12 ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/blakgeek/cordova-plugin-cocoapods-support/issues/12 "Ícone de link externo"){: new_window}. Você ainda pode executar o projeto do iOS em XCode por meio de um simulador ou dispositivo.
+rastreado no [Problema 12 ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://github.com/blakgeek/cordova-plugin-cocoapods-support/issues/12){: new_window}. Você ainda pode executar o projeto do iOS em XCode por meio de um simulador ou dispositivo.
 
 	```
 	xcodebuild: erro: impossível localizar um destino correspondente ao identificador de destino fornecido:
@@ -275,7 +275,7 @@ exemplo: `http://my-mobile-backend.mybluemix.net/protected`).
 
 	![Mensagem de êxito](images/getting-started-android-success.png)
 
-	## Próximas Etapas
+	## Próximas etapas
 	{: #next-steps}
 
 	Quando você se conectou ao terminal protegido, nenhuma credencial foi necessária. Para requerer que os usuários efetuem login em seu aplicativo, deve-se configurar a autenticação do Facebook, do Google ou customizada.

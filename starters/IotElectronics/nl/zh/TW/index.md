@@ -2,11 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -21,9 +21,8 @@ lastupdated: "2017-03-10"
 
 若要開始使用 {{site.data.keyword.iotelectronics}}，請完成下列作業：
 
-1. 配置 {{site.data.keyword.amashort}}，以[啟用行動通訊及安全](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mca.html)。
-2. 使用 {{site.data.keyword.iotelectronics}} 入門範本 Web 應用程式，以[建立模擬應用裝置](https://console.ng.bluemix.net/docs/starters/IotElectronics/iot4ecreatingappliances.html)。會使用洗衣機作為 {{site.data.keyword.iotelectronics}} 入門範本內的模擬應用裝置，來進行示範。您選擇連接的應用裝置可以是任何類型的智慧型電子裝置。
-3. [下載及連接](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html)範例行動應用程式。
+1. 使用 {{site.data.keyword.iotelectronics}} 入門範本 Web 應用程式，以[建立模擬應用裝置](https://console.ng.bluemix.net/docs/starters/IotElectronics/iot4ecreatingappliances.html)。會使用洗衣機作為 {{site.data.keyword.iotelectronics}} 入門範本內的模擬應用裝置，來進行示範。您選擇連接的應用裝置可以是任何類型的智慧型電子裝置。
+2. [下載及連接](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html)範例行動應用程式。
 
 
 ## 下一步為何？
@@ -37,5 +36,4 @@ lastupdated: "2017-03-10"
 ## 進一步瞭解元件
 - [{{site.data.keyword.iotelectronics}} 文件](iotelectronics_overview.html)
 - [{{site.data.keyword.iot_full}} 文件](https://console.ng.bluemix.net/docs/services/IoT/index.html)
--  [{{site.data.keyword.amashort}} 文件](https://console.ng.bluemix.net/docs/services/mobileaccess/overview.html)
 - [{{site.data.keyword.sdk4nodefull}} 文件](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)

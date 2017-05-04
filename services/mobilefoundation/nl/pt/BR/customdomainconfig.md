@@ -25,9 +25,9 @@ com os nomes de domínio padrão, com base na {{site.data.keyword.Bluemix_notm}}
   |`mybluemix.net` | Sul dos EUA |    
   |`eu-gb.mybluemix.net` | Reino Unido  |
   |`au-syd.mybluemix.net` | Sydney  |      
-  {: caption="Table 1. Application domain names based on Region in {{site.data.keyword.Bluemix_notm}}" caption-side="top"}
+  {: caption="Tabela 1. Nomes de domínio de aplicativo baseados na Região do {{site.data.keyword.Bluemix_notm}}" caption-side="top"}
 
-Para ser capaz de usar seu próprio domínio, você precisará configurar o domínio customizado executando as etapas a seguir:
+To be able to use your own domain you will need to configure custom domain by performing the following steps:
 
 1.	Crie uma instância {{site.data.keyword.mfserver_short_notm}} criando a instância de serviço {{site.data.keyword.mobilefoundation_short}} escolhendo um dos planos suportados.
 

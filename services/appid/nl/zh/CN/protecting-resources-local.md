@@ -2,7 +2,7 @@
 
 copyright:
   years:  2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2017-03-30"
 # 将 {{site.data.keyword.appid_short_notm}} 用于本地开发环境
 {: #protecting-local}
 
-您可以将本地环境配置为使用 {{site.data.keyword.appid_short}} 服务。具体来说，您可以使用 {{site.data.keyword.appid_short_notm}} 服务器 SDK 在本地开发代码，然后向开发服务器发送请求。
+您可以将本地环境配置为使用 {{site.data.keyword.appid_short}} 服务。具体来说，您可以使用 {{site.data.keyword.appid_short_notm}} 服务器 SDK 在本地开发代码，以向开发服务器发送请求。
 {:shortdesc}
 
 
@@ -48,7 +48,7 @@ lastupdated: "2017-03-30"
 <table> <caption> 表 1. {{site.data.keyword.Bluemix_notm}} 区域及对应的 Android 和 iOS {{site.data.keyword.appid_short_notm}} 区域</caption>
 <tr>
   <th> Bluemix 区域</th>
-  <th> Android</th>
+  <th> Android 和 iOS </th>
 </tr>
 <tr>
   <td> 美国南部</td>

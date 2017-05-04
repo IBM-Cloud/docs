@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-14"
+  years: 2016, 2017
+lastupdated: "2017-04-11"
 
 ---
 
@@ -19,8 +19,9 @@ normalmente faz o download de artefatos a partir de recursos externos, como mód
 situações, como com o [Bluemix Dedicado](/docs/dedicated/index.html#dedicated) e o
 [Bluemix Local](/docs/local/index.html#local), você pode desejar não depender do
 acesso a sites externos ao Bluemix ou ter um controle mais explícito sobre o acesso.  
+{: shortdesc}
 
-Veja a seguir os sites externos que o buildpack do node.js pode acessar.  Nos ambientes [Bluemix Dedicado](/docs/dedicated/index.html#dedicated) e
+A seguir estão os sites externos que o buildpack do node.js pode acessar. Nos ambientes [Bluemix Dedicado](/docs/dedicated/index.html#dedicated) e
 [Bluemix Local](/docs/local/index.html#local), estes sites podem precisar ser *incluídos na lista de desbloqueio*.
 
 * http://nodejs.org/ pode ser usado para determinar as versões do mecanismo de nó disponíveis.
@@ -35,7 +36,7 @@ Esteja ciente de que quando novas versões do buildpack do SDK for Node.js são 
 é movido para versões mais novas.  Isso pode requerer que você reconfigure seu app de nó para especificar uma versão mais nova do mecanismo de nó.
 
 
-### Aplicativos off-line
+## Aplicativos off-line
 {: #offline_applications}
 
 Para eliminar a necessidade de acessar https://registry.npmjs.org, é possível incluir em seu aplicativo todos os módulos de nó requeridos pelo aplicativo.  Para fazer isso, execute **npm install** para todos os módulos que o seu aplicativo requer e inclua o diretório *node_modules* resultante em seu aplicativo enviado por push.
@@ -55,10 +56,3 @@ Sempre que você fizer uma mudança em dependências no arquivo *package.json*, 
 Em alguns ambientes, como [Bluemix Dedicado](/docs/dedicated/index.html#dedicated) e
 [Bluemix Local](/docs/local/index.html#local), um proxy pode ser configurado. Consulte
 [Trabalhando com um proxy](/docs/manageapps/workingWithProxy.html) para obter mais detalhes.
-
-# rellinks
-{: #rellinks}
-## geral
-{: #general}
-* [Atualizações mais recentes para o buildpack Node.js](/docs/runtimes/nodejs/updates.html)
-* [Node.js](https://nodejs.org)

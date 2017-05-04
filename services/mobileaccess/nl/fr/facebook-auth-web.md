@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+**Important : Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.**
 
 # Activation de l'authentification Facebook pour les applications Web
 {: #facebook-auth-web}
@@ -198,10 +199,10 @@ parsedBody.access_token; 			req.session.idToken = parsedBody.id_token; 			var id
 	```
 	{: codeblock}
 
-	Notez que le paramètre `redirect_uri` doit correspondre au paramètre `redirect_uri` utilisé dans la demandee d'autorisation
-précédente. La valeur du paramètre `code` doit être le code d'accord dans la réponse  de la demandee d'autorisation . Le code d'accord est valide pendant 10 minutes, après quoi un nouveau code doit être obtenu.
+	Notez que le paramètre `redirect_uri` doit correspondre au paramètre `redirect_uri` utilisé dans la demande d'autorisation
+précédente. La valeur du paramètre `code` doit être le code d'accord dans la réponse de la demande d'autorisation. Le code d'accord est valide pendant 10 minutes, après quoi un nouveau code doit être obtenu.
 
-	Le corps de la réponse contiendra le code d'accès et l'ID du jeton au format JWT (pour plus d'informations, reportez-vous au [site Web JWT ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://jwt.io/ "Icône de lien externe"){: new_window}.
+	Le corps de la réponse contiendra le code d'accès et l'ID du jeton au format JWT (voir le [site Web JWT ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://jwt.io/){: new_window}.
 
 	Une fois que vous avez obtenu l'accès et reçu les jetons d'identité, vous pouvez marquer la session Web comme authentifiée et, si vous le désirez,
 rendre

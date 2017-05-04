@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-04-14"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2016-11-14"
 在以下情况下，将使用 php_buildpack：
 * 您的应用程序包含 composer.json 文件，或者
 * 您的应用程序包含 *.php 文件，或者
-* 您的应用程序在其 [options.json](https://github.com/cloudfoundry/php-buildpack/blob/master/docs/config.md) 文件中定义了 ${WEBDIR} 变量，该变量设置为您应用程序内的一个现有目录。
+* 您的应用程序在其 [options.json](https://docs.cloudfoundry.org/buildpacks/php/gsg-php-config.html) 文件中定义了 ${WEBDIR} 变量，该变量设置为您应用程序内的一个现有目录。
 
 ## 入门模板应用程序
 {: #starter_application}
@@ -39,8 +39,7 @@ lastupdated: "2016-11-14"
 }
 ```
 {: codeblock}
-有关更多信息，请参阅 [Composer Package links](https://getcomposer.org/doc/04-schema.md#package-links)。
-
+有关更多信息，请参阅 [Composer Package links ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://getcomposer.org/doc/04-schema.md#package-links)。
 如果未指定版本，缺省情况下会选择 V5.5.34。
 
 ### 可用版本：
@@ -58,10 +57,11 @@ lastupdated: "2016-11-14"
 如果您应用程序所需的 PHP 版本没有列在上述列表中，那么可以使用外部 [PHP buildpack](https://github.com/cloudfoundry/php-buildpack.git) 来部署应用程序。
 
 # 相关链接
-{: #rellinks}
+{: #rellinks notoc}
 ## 教程和样本
-{: #samples}
+{: #samples notoc}
 * [构建和部署 REST API](http://www.ibm.com/developerworks/library/wa-deployrest-app/)
 * [构建和部署移动友好的卡路里计数器](http://www.ibm.com/developerworks/library/mo-bluemix-php-nutritionix-angularjs/)
 ## 常规
+{: #general notoc}
 * [用于 PHP 的 Cloud Foundry buildpack](https://github.com/cloudfoundry/php-buildpack.git)

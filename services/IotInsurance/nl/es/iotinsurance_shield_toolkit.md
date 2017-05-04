@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-01"
+lastupdated: "2017-03-27"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -13,7 +13,7 @@ lastupdated: "2017-03-01"
 {:pre: .pre}
 
 
-# Kit de herramientas de cobertura
+# Utilización del kit de herramientas de cobertura
 {: #iot4i_shield_toolkit}
 Utilice coberturas para proteger la propiedad y los usuarios identificando riesgos y creando las respuestas automatizadas adecuadas. Utilice o modifique las coberturas que se incluyen en la biblioteca de coberturas de {{site.data.keyword.iotinsurance_short}} o bien cree e implemente sus propias coberturas utilizando las instrucciones y ejemplos a continuación.
 {:shortdesc}
@@ -269,16 +269,3 @@ var promotion = {
 ```
 
 De forma opcional, puede desplegar la aplicación móvil y utilizar [las instrucciones del repositorio GitHub ioti-mobile](https://github.com/ibm-watson-iot/ioti-mobile) para conectarse como el usuario que ha creado en la sección anterior.
-
-# Enlaces relacionados
-{: #rellinks}
-
-## Referencia de API
-{: #api}
-* [API de {{site.data.keyword.iotinsurance_short}}](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [Ejemplos de API de {{site.data.keyword.iotinsurance_short}}](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## Enlaces relacionados
-{: #general}
-* [Foro de soporte para desarrolladores](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-* [Foro de soporte de Stack Overflow](http://stackoverflow.com/questions/tagged/ibm-bluemix)

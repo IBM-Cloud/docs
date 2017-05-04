@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-03-01"
+lastupdated: "2017-03-21"
 
 ---
 
@@ -169,10 +169,11 @@ RSS フィードを読むには、他に、以下のような Web ブラウザ�
 
   * 複数の {{site.data.keyword.Bluemix_notm}} 地域を利用する
 
-    {{site.data.keyword.Bluemix_notm}} Public のユーザーはすべて、US-SOUTH、EU-GB、および AU-SYD の各地域に自動的にアクセスできるようになっています。
+    {{site.data.keyword.Bluemix_notm}} Public のユーザーはすべて、US-SOUTH、EU-GB、EU-DE、および AU-SYD の各地域に自動的にアクセスできるようになっています。
 
 	  * US-SOUTH: https://console.ng.bluemix.net
 	  * EU-GB: https://console.eu-gb.bluemix.net
+	  * EU-DE: https://console.eu-de.bluemix.net
 	  * AU-SYD: https://console.au-syd.bluemix.net
 
 	{{site.data.keyword.Bluemix_notm}} グローバル運用チームは、すべての地域を管理して、メンテナンスの影響を回避し、同時にすべての地域に影響する問題のリスクを最小限に抑えるようにしています。
@@ -208,7 +209,7 @@ RSS フィードを読むには、他に、以下のような Web ブラウザ�
 CSM (client success manager) 割り当て | 含まれない | 含まれない | 含まれない | 含まれる<br> 週 8 時間
 {: caption="Table 1. Support levels" caption-side="top"}
 
-**重要:** 日本語のサポートは、法定休日を除き、月曜日から金曜日の午前 9:00 から午後 5:00 (日本標準時) まで、重大度 2 から 4 のチケットについてご利用いただけます。コミュニティーおよびサード・パーティーのサービスは対象外です。重大度 1 のチケットは英語のみでのご対応となります。
+**重要:** 日本語のサポートは、祝祭日、年末年始休日、および法定点検日を除き、月曜日から金曜日の午前 9:00 から午後 5:00 (日本標準時) まで、重大度 2 から 4 のチケットについてご利用いただけます。コミュニティーおよびサード・パーティーのサービスは対象外です。重大度 1 のチケットは英語のみでのご対応となります。
 
 ### サポート・チケットのオープン
 {: #open-ticket}

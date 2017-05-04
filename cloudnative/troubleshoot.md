@@ -98,13 +98,13 @@ Service broker error: {"description"=>"You can not create this Object Storage in
 #### Cause
 {: #os-cause}
    
-This error is due to the {{site.data.keyword.objectstorageshort}} service allowing only one instance of the Free {{site.data.keyword.objectstorageshort}} plan.
+This error is due to the {{site.data.keyword.objectstorageshort}} service which provides only one instance of the Free {{site.data.keyword.objectstorageshort}} plan.
 
 
 #### Resolution
 {: #os-resolution}
 
-You will be prompted to choose a different plan to avoid this error.
+You are prompted to choose a different plan to avoid this error.
 
 
 ### Failure getting the code during project creation
@@ -131,7 +131,7 @@ This error is due to an internal timeout.
 
 You can get the code either of the following ways:
 
-* Run the following command using the CLI:
+* Run the following command by using the CLI:
 
    ```
    bx dev code <your-project-name>
@@ -178,7 +178,7 @@ Error: /app/node_modules/bluemix-autoscaling-agent/node_modules/appmetrics/appme
 #### Cause
 {: #node-cause}
    
-This error is due to the `appmetrics` module being installed in a different architecture. Native npm modules installed on one architecture will not work on another. The included Docker images are based on the Linux kernel.
+This error is caused by the `appmetrics` module being installed on a different architecture. Native npm modules that are installed on one architecture do not work on another. The included Docker images are based on the Linux kernel.
 
 
 #### Resolution
@@ -198,9 +198,9 @@ Delete `node_modules` folder and run `bx dev run` again.
 ## Getting help and support
 {: #gettinghelp}
 
-If you have problems or questions when using the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} or the {{site.data.keyword.dev_cli_notm}}, you can get help by searching for information or by asking questions through a forum. You can also open a support ticket.
+If you have problems or questions about the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} or the {{site.data.keyword.dev_cli_notm}}, you can get help by searching for information or by asking questions through a forum. You can also open a support ticket.
 
-When using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.Bluemix_notm}} development teams.
+When asking a question in the forums, tag your question so that it is seen by the {{site.data.keyword.Bluemix_notm}} development teams.
 
 <!--Insert the appropriate Stack Overflow tag for your service for <service_keyword> in URL and text below:  -->
 

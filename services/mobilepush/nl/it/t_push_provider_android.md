@@ -24,7 +24,7 @@ La chiave API è archiviata in modo protetto e utilizzata dal servizio {{site.da
 
 Per configurare FCM, generare la chiave API e l'ID mittente, completa la seguente procedura:
 
-1. Visita il sito [Firebase Console ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.firebase.google.com/?pli=1 "Icona link esterno"){: new_window}.
+1. Visita il sito [Firebase Console ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.firebase.google.com/?pli=1){: new_window}.
 2. Seleziona **Create new project**. 
 3. Nella finestra Create a project, fornisci un nome progetto, scegli una regione/paese e fai clic su **Create project**.
 3. Nel pannello di navigazione, fai clic sull'icona delle impostazioni e seleziona **Project settings**.

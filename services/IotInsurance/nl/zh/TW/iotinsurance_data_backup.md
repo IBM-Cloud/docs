@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-01"
+lastupdated: "2017-03-22"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -39,7 +39,7 @@ aggregationschedule|-|-| 否|可以予以重建。
 
 若要備份 {{site.data.keyword.iotinsurance_short}} 資料，請執行下列步驟：
 
-## 建立抄本 {{site.data.keyword.cloudant}} 實例
+## 建立抄本 {{site.data.keyword.cloudant_short_notm}} 實例
 {: #createinstance}
 使用 [{{site.data.keyword.cloudant}} 抄寫指示 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://docs.cloudant.com/replication.html)，以建立抄本 {{site.data.keyword.cloudant}} 實例。若要進行災難回復，請透過原始 {{site.data.keyword.iotinsurance_short}} 服務在不同的位置中建立抄本。例如，如果原始實例位在達拉斯，則抄本可能位在倫敦。
 

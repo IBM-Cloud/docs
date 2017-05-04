@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-30"
+lastupdated: "2017-04-17"
 
 ---
 
@@ -10,19 +10,17 @@ lastupdated: "2017-03-30"
 {:shortdesc: .shortdesc}
 
 
-# 了解用户概要文件
+# 用户概要文件概述
 {: #user-profile}
 
 用户概要文件是由 {{site.data.keyword.appid_short}} 存储并维护的实体。概要文件保存用户的属性和身份，可以是匿名的，也可以链接到身份提供者管理的身份。
 {:shortdesc}
 
-{{site.data.keyword.appid_short_notm}} 提供了用于匿名登录或通过向 OpenId Connect (OIDC) IdP 认证来登录的 API，请参阅[配置身份提供者](/docs/services/appid/identity-providers.html#setting-up-idp)。用户概要文件属性 API 端点是通过在登录和授权过程中由 {{site.data.keyword.appid_short_notm}} 生成的访问令牌保护的资源。
+{{site.data.keyword.appid_short_notm}} 提供用于登录的 API，可以匿名登录，也可以使用 OpenId Connect (OIDC) [身份提供者](/docs/services/appid/identity-providers.html#setting-up-idp)进行认证。用户概要文件属性 API 端点是通过在登录和授权过程中由 {{site.data.keyword.appid_short_notm}} 生成的访问令牌保护的资源。
 
 
 ## 存储、读取和删除用户属性
 {: #storing-data}
-
-
 
 {{site.data.keyword.appid_short_notm}} 提供 <a href="https://appid-profiles.ng.bluemix.net/swagger-ui/index.html#/" target="_blank">REST API <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a>，用于对用户属性执行 CRUD 操作，同时为 <a href="https://github.com/ibm-cloud-security/appid-clientsdk-android" target="_blank">Android <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a> 和 <a href="https://github.com/ibm-cloud-security/appid-clientsdk-swift" target="_blank">Swift <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a> 移动客户端提供 SDK。
 

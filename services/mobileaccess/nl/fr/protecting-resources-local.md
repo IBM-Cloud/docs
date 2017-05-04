@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-04-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,6 +11,7 @@ lastupdated: "2017-01-08"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+**Important : Le service {{site.data.keyword.amafull}} est remplacé par le service {{site.data.keyword.appid_full}}.**
 
 # Utilisation de {{site.data.keyword.amashort}} avec un environnement de développement local
 {: #protecting-local}
@@ -26,7 +27,7 @@ Vous devez disposer des éléments suivants :
 * Valeur de votre **TenantID**. Ouvrez votre service dans le tableau de bord de {{site.data.keyword.amafull}}. Cliquez sur le bouton **Options pour application mobile**. Les valeurs `tenantId` (qui portent également le nom d'`appGUID`) sont affichées dans la zone **App GUID / TenantId**. Vous aurez besoin de cette valeur pour initialiser le Gestionnaire des autorisations.
 * Votre **Application Route**. Il s'agit de l'URL de votre application back end. Vous avez besoin de cette valeur pour envoyer des demandes à ses noeuds finaux protégés.
 * Votre **région** {{site.data.keyword.Bluemix_notm}}.  Vous pouvez trouver votre région {{site.data.keyword.Bluemix_notm}} actuelle dans l'en-tête, en regard de l'icône **Avatar**![icône Avatar](images/face.jpg "icône Avatar"). La valeur de la région qui apparaît doit être l'une des suivantes : `US South`,  `Sydney` ou `United Kingdom`. Pour la syntaxe exacte requise par le SDK, voir les commentaires dans les exemples de code. Vous aurez besoin de cette valeur pour initialiser le client {{site.data.keyword.amashort}}.
-* Un projet Android Studio, configuré pour fonctionner avec Gradle. Pour plus d'informations sur la configuration de votre environnement de développement Android, accédez au site [Google Developer Tools ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://developer.android.com/sdk/index.html "Icône de lien externe"){: new_window}.
+* Un projet Android Studio, configuré pour fonctionner avec Gradle. Pour plus d'informations sur la configuration de votre environnement de développement Android, voir [Google Developer Tools  ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://developer.android.com/sdk/index.html){: new_window}.
 
 ## Configuration du SDK serveur
 {: #serversetup}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-10"
+lastupdated: "2017-04-26"
 
 ---
 
@@ -23,6 +23,9 @@ lastupdated: "2017-4-10"
 
 You can extend the capabilities of the {{site.data.keyword.deliverypipeline}} service by configuring your jobs to use supported services. For example, test jobs can run static code scans and build jobs can globalize strings.
 {:shortdesc}
+
+
+**This service is being deprecated:**  All instances of this service are being deprecated. Existing instances can be used until 5 July 2017. For more information, see the [deprecation announcement blog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/04/delivery-pipeline-retirement/){: new_window}. To get the latest tools for app delivery, use the {{site.data.keyword.contdelivery_full}} service. For upgrade instructions, see [Upgrade your DevOps Services project to a toolchain](/docs/services/ContinuousDelivery/upgrade_projects.html){: new_window}.
 
 <!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->
 
@@ -73,7 +76,7 @@ Before you begin, review the [Terms of Use for the service ![External link icon]
 
     * If you want the pipeline to check your Bluemix space for the service and an app that binds the service to the container, select the check box. If the service or bound app does not exist, the pipeline adds the free plan of the service to your space. The bound app that is created is named `pipeline_bridge_app`. Then, the pipeline uses the credentials from pipeline_bridge_app to access the bound services.
 
-    * If you already configured the service and bound app in your Bluemix space already, or if you want to [configure these requirements manually](/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline), leave the check box cleared.
+    * If you already configured the service and bound app in your Bluemix space already, or if you want to [configure these requirements manually](/docs/containers/container_integrations.html#container_binding_pipeline), leave the check box cleared.
 
   f. In the **Minutes to wait for analysis to complete** field, type a value of 0 - 59 minutes. The default value is 5 minutes. A URL to the Static Analyzer dashboard is in the console logs at the end of the job.
 
@@ -154,7 +157,7 @@ To create the globalization stage and job:
 
     * If you want the pipeline to check your Bluemix space for the service and an app that binds the service to the container, select this check box. If the service or bound app does not exist, the pipeline adds the free plan of the service to your space for you. The bound app that is created is named `pipeline_bridge_app`. Then, the pipeline uses the credentials from pipeline_bridge_app to access the bound services.
 
-    * If you configured the service and bound app in your Bluemix space already or if you want to [configure these requirements manually](https://www.ng.bluemix.net/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline), leave this check box cleared.
+    * If you configured the service and bound app in your Bluemix space already or if you want to [configure these requirements manually](/docs/containers/container_integrations.html#container_binding_pipeline), leave this check box cleared.
 
   g. For the Globalization bundle prefix, enter a prefix for the bundle name, which is structured in this format: `<globalization_bundle_prefix>.path.to.source.file`. The pipeline job creates this Globalization bundle for you in the Globalization Pipeline service.
 
@@ -333,4 +336,4 @@ You can automate your app builds and container deployments to Bluemix by using t
   - Building Docker images
   - Deploying images in containers to Bluemix
 
-For more information about getting started, see the [Delivery Pipeline and containers overview](/docs/containers/container_pipeline_ov.html#container_pipeline_ov).
+For more information about getting started, see the [Delivery Pipeline and containers overview](/docs/containers/container_integrations.html#container_pipeline_ov).

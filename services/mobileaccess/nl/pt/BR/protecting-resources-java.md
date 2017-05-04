@@ -2,10 +2,12 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2016-12-04"
+lastupdated: "2017-04-06"
 
 ---
 {:codeblock:.codeblock}
+
+**Importante: o serviço {{site.data.keyword.amafull}} foi substituído pelo serviço {{site.data.keyword.appid_full}}.**
 
 # Protegendo recursos do Liberty for Java com o {{site.data.keyword.amashort}}
 {: #protecting-liberty}
