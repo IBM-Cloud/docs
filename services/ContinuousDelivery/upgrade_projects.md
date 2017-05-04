@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-27"
+lastupdated: "2017-5-4"
 
 ---
  
@@ -36,10 +36,12 @@ You can learn about toolchains on [YouTube ![External link icon](../../icons/lau
 - Make sure that your {{site.data.keyword.jazzhub_short}} project owner is correct. The toolchain that is created from your project will be part of that owner's {{site.data.keyword.Bluemix_notm}} organization. 
 - If you're planning to start the upgrade, make sure that you're a member of every org and space that the pipeline deploys to. Any project admin can start the upgrade. However, if the admin who starts the upgrade is not a member of every org and space that the pipeline deploys to, the pipeline cannot be created. The person who starts the upgrade becomes the owner of the repo in the toolchain.
 - The Eclipse Orion {{site.data.keyword.webide}} in the toolchain is separate from the {{site.data.keyword.webide}} that is associated with your project. If you use the {{site.data.keyword.webide}} and you have uncommitted changes, commit them before you upgrade.
-- Projects at hub.jazz.net and toolchains are both hosted in the US South region. If your project was configured to deploy apps to a different region, it will still deploy apps to that region after it is upgraded to a toolchain.
+
 
 ## Upgrading from a project to a toolchain
 {: #project_to_toolchain}
+
+**Important:** Projects at hub.jazz.net and toolchains are both hosted in the US South region. If your project was configured to deploy apps to a different region, it will still deploy apps to that region after it is upgraded to a toolchain.
 
 When your project is ready to be upgraded, a message is displayed on the project's card and Overview page.
 
@@ -51,11 +53,16 @@ When your project is ready to be upgraded, a message is displayed on the project
 
 ![Image of the Projects To Upgrade menu item](images/menu-projects-to-upgrade.png)
 
+When you start the upgrade, the pipeline stages in your project are locked. You won't be able to run or modify them. If you revert the upgrade by deleting the toolchain, the pipeline is unlocked. 
+
+If your project uses a Git repo that is hosted on JazzHub, after you start the upgrade, the repo is locked to ensure the integrity of the data that is moved to the toolchain. If you revert the upgrade by deleting the toolchain, the repo on JazzHub is unlocked.
+
 ## Starting the upgrade process
 {: #start_upgrade}
 
 Before you start the upgrade process, you can watch it in action on [YouTube ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://youtu.be/LSr2e3uvyLs){: new_window}. 
 [![External link to YouTube](images/migration-video2.png)](https://youtu.be/LSr2e3uvyLs){: new_window}    
+
 To upgrade your project to a toolchain, follow these steps:
 
 1. To start the upgrade process, on the banner message, click **upgrade now**. The "Project upgrade toolchain" page opens. 
@@ -111,7 +118,11 @@ You can see which projects are upgraded by selecting **Upgraded Projects** from 
 
 ![Image of the Upgraded Projects menu item](images/menu-upgraded-projects.png)
 
-If you need to revert the upgrade, delete your toolchain. Then, when you return to the project's Overview page, the upgrade message is displayed again, and you can upgrade again when you are ready.
+If you need to revert the upgrade, delete your toolchain. You can delete your toolchain from the **More Actions** menu on the toolchain's Overview page:
+
+![image of Delete action in More Actions menu](images/upgrade-tutorial-delete-toolchain.png)
+
+When you return to your project, the upgrade message is displayed again, and you can upgrade again when you are ready.
 
 ## Next steps
 {: #upgrade_next_steps}   
@@ -130,7 +141,13 @@ If you need to revert the upgrade, delete your toolchain. Then, when you return 
     - If a user is not a member of the org that the toolchain belongs to, add them to the org from the Manage Organizations page.
       For more information about managing organizations, see [Managing organizations and spaces ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/admin/orgs_spaces.html#orgsspacesusers){:new_window}.
     
-3. Use the tools from your toolchain instead of the tools from your {{site.data.keyword.jazzhub_short}} project. For example, to edit code from a browser, use the Web IDE from your toolchain.    
+3. Use the tools from your toolchain instead of the tools from your {{site.data.keyword.jazzhub_short}} project. For example, to edit code from a browser, use the Web IDE from your toolchain. 
+
+4. When your toolchain is set up and you have started to use it, consider taking all or any of these steps to ensure that no one uses your project: 
+    - Add a suffix to your project name to indicate that it must not be used. You might add `_DO_NOT_USE` to the end of the project name.
+    - Update the project's description to mention that it is no longer used, and add a pointer to the toolchain.
+    - Remove the members from the project.
+    - When you no longer need the project, delete it.
 
 ## Troubleshooting
 {: #upgrade_troubleshoot}    
