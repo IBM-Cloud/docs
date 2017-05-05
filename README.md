@@ -5,7 +5,7 @@ The docs repo is for the product content for IBM Bluemix that is authored in Mar
 
 Each directory in the docs repo must synch with the overall architecture of the Bluemix doc app.
 
-##How to suggest changes or updates to Bluemix documentation
+## How to suggest changes or updates to Bluemix documentation
 
 All you need is a GitHub ID, and you can suggest edits and changes to Bluemix docs. A Bluemix team member will review any pull requests, and merge all or parts of your suggested changes as quickly as possible.
 To make your changes:
@@ -20,8 +20,7 @@ For more detailed information on how to contribute content to Bluemix documentat
 https://help.github.com/articles/github-flow-in-the-browser/
 
 
-##Authoring Bluemix content in Markdown
-===============
+## Authoring Bluemix content in Markdown
 
 Purpose
 -----------
@@ -36,10 +35,10 @@ Bluemix has designed a parser that transforms Markdown into HTML5. Because the s
 Before you begin
 -----------
 
-###Markdown Editors
+### Markdown Editors
 There are many free Markdown editors available, however, not all editors will honor the syntax used by Bluemix extensions. Notepad ++ is free, compatible, and also supports YAML, which is used to define content reference keywords.
 
-#Mappings between DITA, MarkDown, and HTML 5
+# Mappings between DITA, MarkDown, and HTML 5
 
 |     Element     |   XDITA   |   HDITA     | MarkDown (Git flavored)  |   HTML 5      |
 |-----------------|-----------|-------------|--------------------------|---------------|
@@ -72,7 +71,7 @@ There are many free Markdown editors available, however, not all editors will ho
 | **comments** |  |  | `<!-– comment -->` | `<!-– comment -->` |	
 | **mdash** |  |  | `no equivalent` | `&mdash;` |	
 
-#Mappings for how to code in DITA vs Markdown
+# Mappings for how to code in DITA vs Markdown
 
 |  Dita Element     |   HTML 5 output from Dita  |   How to code in Markdown    | HTML 5 output from Markdown  |
 |-----------------|-----------|-------------|-------------------|
@@ -93,7 +92,7 @@ There are many free Markdown editors available, however, not all editors will ho
 | **shortdesc**    | `<shortdesc>	<p class="shortdesc">	` | This is a shortdesc paragraph<br>`{: shortdesc} `<br>**Note:** This requires the following attribute definition available in the attribute definition template: `{:shortdesc: .shortdesc}` | `<p class="shortdesc">`|
 | **term**    | `<span class="ph term">term</span>` |`*term*` | `<em>term</em>`|
 
-#Bluemix special mappings for how to code in DITA vs Markdown
+# Bluemix special mappings for how to code in DITA vs Markdown
 
 |  Dita Element     |   HTML 5 output from Dita  |   How to code in Markdown    | HTML 5 output from Markdown  |
 |-----------------|-----------|-------------|-------------------|
@@ -127,7 +126,7 @@ You can use the Bluemix attributes extension to map the following attributes to 
 
 **Note**: Attributes, when defined and applied within a Markdown file, are output by the Bluemix Markdown parser by default. No additional parameters or flags need to be passed to the parser when the command is run.
   
-####How attributes are defined in Markdown
+#### How attributes are defined in Markdown
 Attributes are defined at the top of your Markdown file. Each Attribute definition must be enclosed in curly brackets { }, and must contain a unique name. While you can provide attribute definition values for ID, Class, and Custom, none of these values are required, and you can define any combination of these different attribute values. The Bluemix Attribute Definitions implimentation is based on the Kramdown / Maraku Attribute Definiton extension: (http://kramdown.gettalong.org/syntax.html#attribute-list-definitions).
 
 For Example:
@@ -144,7 +143,7 @@ For Example:
 * **.Class** sets a value associated with the Class attribute. This value is optional. If I define a Class of `.ph` in my attribute, and I set this attribute on a Header, the HTML5 output will produce `<h1 Class="ph"></h1>`. This value must begin with a pound period (.).
 * **.Custom** sets a custom attribute value. This value is optional. If I define a Custom value of `data-hd-programlang='java'` in my attribute, and I set this attribute on a Header, the HTML5 output will produce `<h1 data-hd-programlang='java'></h1>`. 
 
-####How attributes are applied in Markdown
+#### How attributes are applied in Markdown
 After you define your attribute at the top of your Markdown file, you can apply the attribute by adding a call to the name of your attribute to the end of the Markdown tag you want to bind your attribute to. The implimentation of Bluemix attribute usage is based on the Kramdown / Maraku Block/Span Inline Attribute Lists: http://kramdown.gettalong.org/syntax.html#inline-attribute-lists
 
 To apply a defined attribute, call the name of the attribute surrounded by curly brackets, and pre-pended by a colon and a space: `{: Name}`
@@ -165,7 +164,7 @@ The Markdown parser will output HTML5 that looks like this:
 
 ```
   
-####Attributes in DITA vs Markdown  
+#### Attributes in DITA vs Markdown  
 In DITA, attributes are used to add metadata to elements. For example, you might add a `product`, `props`, or `otherprops` attribute on a phrase or paragraph element in order to associate a value with that phrase or paragraph. These values allow for filtering either during build or runtime. DITA transforms to HTML5 also apply Class attributes to HTML5 elements, and these values are used by the .CSS stylesheets at runtime to control the display.
 
 Example of DITA attributes (from `using_rabbitmq_service.dita`):
@@ -216,12 +215,12 @@ Output of HTML5 from Markdown parser:
 ### Headers and footers
 Bluemix needed to add copyright and metadata to the header of the HTML 5 output. We have standard header and footer files that are called during transformation.
 
-####Anchor IDs Generated for all Headers
+#### Anchor IDs Generated for all Headers
 When the Bluemix Markdown parser transforms Markdown to HTML5, it automatically binds an anchor ID to all Header elements. Any time the parser transforms a Markdown file that contains a header, the HTML5 output of that header tag will produce an `id` attribute, with a value that is unique. Unique anchor IDs on headers provide writers with the ability to link directly to a sub-topic that begins with a Header.
 
 For example, here is a level 4 Header in Markdown: 
 ```
-####Content references in DITA vs Markdown
+#### Content references in DITA vs Markdown
 ```
 When the above Markdown is transformed into HTML5, the parser produces a unique id with a value that is equal to the name of the header:
 ```
@@ -229,14 +228,14 @@ When the above Markdown is transformed into HTML5, the parser produces a unique 
 ```
 **Note**: Header anchor IDs are output by the Bluemix Markdown parser by default. No additional parameters or flags need to be passed to the parser when the command is run.
 
-####Changing an anchor ID on a Header
+#### Changing an anchor ID on a Header
 
 The Anchor ID is bound to a header by default, and it always uses the text of the header as its name, so you can always just link to that. However, any time you want to override the anchor tag of a header, you can use an attribute. See the Attribute section above for more details on using attributes.
 
 Example of default anchor bound to a header:
 
 Mardown source:
-`##Visualizing your data sample`
+`## Visualizing your data sample`
 
 HTML5 output:
 `<h2 id="visualizing-your-data-sample">Visualizing your data sample</h2>`
@@ -245,7 +244,7 @@ Example of remapping using a simple attribute (we use the ID attribute, which is
 
 Markdown source:
 ```
-##Visualizing your data sample
+## Visualizing your data sample
   {: #my-renamed-anchor}
 ```
 
@@ -256,26 +255,26 @@ HTML5 output:
 ```
 {:myanchor: #my-renamed-anchor}
 
-##Visualizing your data sample
+## Visualizing your data sample
   {: myanchor}
 ```
 
-####Linking to an anchor ID for a header
+#### Linking to an anchor ID for a header
 
 You can link directly to a header within a file using the header anchor ID. You can link to sub-headings; it does not need to be the top-level header. Use the automatically generated header value based on the text that is defined in the header (see Anchor IDs Generated for all Headers), or add your own anchor ID to use for linking (see Changing an anchor ID on a header). The following example for linking uses user-defined ID anchors for each header, and the goal is to provide a link to content that is further down in the same file.
 
 ```
 Headings and user-defined header anchors for my file:
 
-#Bluemix
+# Bluemix
 {: #bluemix}
 
 My short description links to the [Applications heading](filename.html#header_id).
 
-##Services
+## Services
 {: #services}
 
-##Applications
+## Applications
 {: #applications}
 
 I want to create a link within my short description that links to the second sub-heading, Applications. 
@@ -303,7 +302,7 @@ Conref definitions in YAML are structured in nested keys, each key that contains
 Conrefs in Markdown are called by using the following syntax: `{{site.data.key1.key2...keyN}}`
 **Note:** While you can Nest keys as deep as you like in YAML, and call deeper sets of keys from markdown, Bluemix conrefs use only 2 keys. For example: `{{site.data.keyword.bluemix}}`  
 
-####Content references in DITA vs Markdown
+#### Content references in DITA vs Markdown
 In DITA, a content reference, or conref, is a way of reusing or pulling content from one file into another file; effectively making a copy during the transform. 
  
 Example of conrefs sourced in DITA (stored in cloudoeconrefs.dita):
