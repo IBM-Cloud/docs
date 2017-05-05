@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-
+  years: 2016, 2017
+lastupdated: "2017-3-16"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -18,8 +18,6 @@ copyright:
 
 # Construindo e implementando
 {: #deliverypipeline_build_deploy}
-Última atualização: 17 de novembro de 2016
-{: .last-updated}
 
 O serviço {{site.data.keyword.deliverypipeline}} do IBM&reg; Bluemix&reg; permite que você implemente um processo repetido de integração contínua e entrega contínua.
 {:shortdesc}
@@ -47,7 +45,7 @@ ser incluído.
 4. Configure a tarefa.
 5. Clique em **SALVAR**.
 
-![Incluindo uma tarefa em um estágio](./images/AddJob2.png)
+![Incluindo uma tarefa em um estágio](images/AddJob2.png)
 
 ## Executando um estágio
 {: #deliverypipeline_run_stage}
@@ -55,13 +53,13 @@ ser incluído.
 É possível executar manualmente um estágio clicando no ícone **Executar
 estágio** na página Pipeline.
 
-![Clicando no ícone Executar estágio em um estágio](./images/RunStage.png)
+![Clicando no ícone Executar estágio em um estágio](images/RunStage.png)
 
 É possível também solicitar construções e implementações sob demanda na página de
 histórico de construções de uma de duas maneiras:
 * Arraste uma construção para a caixa que está sob um estágio configurado.
 * Ao lado de uma construção, clique no ícone **Enviar para** e, em seguida, selecione um espaço no qual implementar.
-  ![O estágio de Execução com este ícone de construção](./images/deploy_to.png)
+  ![O estágio de Execução com este ícone de construção](images/deploy_to.png)
 
 Para cancelar um estágio em execução, no estágio, clique em **Visualizar
 logs e histórico**. Na lista de tarefas, clique no número da tarefa em
@@ -95,13 +93,11 @@ tarefa de construção. Clique em **ENVIAR PARA** e selecione um
 destino.
 
 ###Incluindo serviços em apps
-É possível incluir serviços em seus apps e gerenciá-los no Painel do Bluemix ou na
-interface da linha de comandos (CLI) do Cloud Foundry. É possível também emitir
-comandos da CLI do Cloud Foundry em scripts para tarefas do pipeline de serviços DevOps. Por
+É possível incluir serviços nos apps e gerenciá-los no painel do Bluemix ou na interface da linha de comandos (CLI) do Cloud Foundry. Também é possível emitir comandos da CLI do Cloud Foundry em scripts para tarefas do pipeline. Por
 exemplo, é possível incluir um serviço em um app no script de uma tarefa de implementação. Para
 obter mais informações sobre como incluir serviços, consulte
 [Incluindo
-um serviço em seu aplicativo](https://www.ng.bluemix.net/docs/services/reqnsi.html#add_service).
+um serviço em seu aplicativo](/docs/services/reqnsi.html#add_service).
 
 ## Exibindo logs
 {: #deliverypipeline_view_logs}
@@ -113,15 +109,12 @@ Para visualizar o log de uma tarefa, clique na tarefa. Como alternativa, em um e
 
 Para visualizar o log de tempo de execução de um aplicativo implementado, clique em **Visualizar log de tempo de execução**.
 
-![Áreas em um quadro de estágio que pode ser clicado para abrir os logs relevantes](./images/view_logs_and_history.png)
+![Áreas em um quadro de estágio que pode ser clicado para abrir os logs relevantes](images/view_logs_and_history.png)
 
 Além dos logs de tarefas, é possível visualizar resultados de testes, artefatos
 gerados e mudanças de código para qualquer tarefa de construção.
 
 É possível também executar, cancelar ou configurar um estágio na página Histórico
-de estágios. Clique em **EXECUTAR** para executar um estágio ou
-**CONFIGURAR** para configurar um estágio. Enquanto um estágio está em
+de estágios. Clique em **EXECUTAR** para executar um estágio ou em **CONFIGURAR** para configurar um estágio. Enquanto um estágio está em
 execução, é possível cancelá-lo clicando no número da execução e depois clicando em
 **CANCELAR**.
-
-

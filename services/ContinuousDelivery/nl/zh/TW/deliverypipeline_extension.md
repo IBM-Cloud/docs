@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2017-3-16"
 
 ---
 
@@ -17,10 +18,8 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# 延伸 {{site.data.keyword.deliverypipeline}} 
+# 延伸 {{site.data.keyword.deliverypipeline}}
 {: #deliverypipeline_extending}
-前次更新：2016 年 11 月 16 日
-{: .last-updated}
 
 將工作配置成使用支援的服務，即可延伸 {{site.data.keyword.deliverypipeline}} 功能。例如，測試工作可以執行靜態程式碼掃描，建置工作則可以將字串進行全球化。
 {:shortdesc}
@@ -37,16 +36,16 @@ copyright:
 
 使用 Static Analyzer 服務的管線通常包括下列階段：
 
-+ 建置原始檔的建置階段
++ 用來建置原始檔的建置階段
 + 包括下列工作的處理階段：
-  + 執行 Static Analyzer 服務的建置工作
-  + 執行容器建置的建置工作
-+ 部署容器的部署階段
+  + 用來執行 Static Analyzer 服務的建置工作
+  + 用來執行容器建置的建置工作
++ 用來部署容器的部署階段
 
 
-### 建立靜態程式掃描
+### 建立靜態程式碼掃描
 
-開始之前，請[檢閱服務的使用條款](http://www-03.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01)。
+開始之前，請[檢閱服務的使用條款 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://www.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01){: new_window}
 
 <!-- Use ordered list markup for the step section. Include code examples as needed. -->
 
@@ -72,15 +71,15 @@ copyright:
 
   e. 視需要，選取或清除**為我設定服務及空間**勾選框。
 
-    * 如果您要管線檢查服務的 Bluemix 空間，以及將服務連結至容器的應用程式，請選取此勾選框。如果服務或所連結的應用程式不存在，則管線會將服務的免費方案新增至您的空間。建立的已連結應用程式命名為 `pipeline_bridge_app`。然後，管線會使用來自 pipeline_bridge_app 的認證，以存取連結的服務。
+    * 如果您要管線針對服務以及將服務連結至容器的應用程式，檢查 Bluemix 空間，請選取此勾選框。如果服務或所連結的應用程式不存在，則管線會將服務的免費方案新增至您的空間。建立的已連結應用程式命名為 `pipeline_bridge_app`。然後，管線會使用來自 pipeline_bridge_app 的認證，以存取連結的服務。
 
-    * 如果您已在 Bluemix 空間中配置服務及連結的應用程式，或者要[手動配置這些需求](https://www.ng.bluemix.net/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline)，請清除此勾選框。
+    * 如果您已在 Bluemix 空間中配置服務及連結的應用程式，或者要[手動配置這些需求](/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline){: new_window}，請清除此勾選框。
 
   f. 在**等待分析完成的分鐘數**欄位中，鍵入 0 - 59 分鐘的值。預設值為 5 分鐘。在工作結束時，Static Analyzer 儀表板的 URL 是在主控台日誌中。
 
      如果 Static Analyzer 掃描未在指定的時間之前完成，則工作會失敗。不過，掃描分析會繼續執行，而且您可以在 Static Analyzer 儀表板上進行檢視。Static Analyzer 掃描完成之後，如果您重新執行工作，則不會重新提交掃描要求，而且可以完成管線工作。您也可以配置在掃描結果成功時不封鎖管線。如需指示，請參閱下一步。
 
-  g. 根據此工作失敗或逾時要發生的狀況，選取或清除**此工作失敗時停止執行這個階段**勾選框。漏洞數太高時，工作會失敗。
+  g. 根據此工作失敗或逾時要發生的狀況，選取或清除**如果此工作失敗，停止執行此階段**勾選框。漏洞數太高時，工作會失敗。
 
     * 如果您選取此勾選框，而且工作失敗，則階段中的後續工作以及後續階段不會執行。
 
@@ -90,9 +89,9 @@ copyright:
 
 3. 工作完成時，請按一下**檢視日誌及歷程**來檢視結果。如果分析成功或逾時，則會在掃描結果中顯示 URL。如果掃描狀態為擱置中，請等待掃描完成，以查看完整結果。
 
-4. 如果您需要在分析完成之前再次執行處理階段，則可以重新執行。不過，在下列情況下，不會重新提交新的分析，並使用先前的結果：
+4. 如果您需要在分析完成之前再次執行處理階段，您可以重新執行。不過，在下列情況下，不會重新提交新的分析，而會使用先前的結果：
   * 當您啟動新的分析時，處理階段仍在執行中
-  * 已提交掃描來進行建置
+  * 已提交針對建置的掃描
   * 尚未執行新的來源建置
 
 5. 若要開始新的分析，請完成下列其中一個步驟：
@@ -107,7 +106,7 @@ copyright:
 **擱置掃描**
 ![範例擱置掃描](images/analyzer_pending.png)
 
-如需使用 Static Analyzer 服務的相關資訊，請參閱 [Static Analyzer 服務文件](https://console.ng.bluemix.net/docs/services/ApplicationSecurityonCloud/index.html)。
+如需使用 Static Analyzer 服務的相關資訊，請參閱 [Static Analyzer 服務文件](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}。
 
 <!--
 
@@ -178,16 +177,16 @@ For more information about using the Globalization Pipeline service from the Blu
 ## 在管線中建立建置的 Slack 通知
 {: #deliverypipeline_slack}
 
-您可以將 IBM Container Service、IBM Security Static Analyzer 及 IBM Globalization 建置結果的相關通知，從 Delivery Pipeline 傳送至 Slack 通道。
+您可以將 IBM Container Service、IBM Security Static Analyzer 及 IBM Globalization 建置結果的相關通知，從 Delivery Pipeline 傳送至 Slack 頻道。
 
 開始之前，請建立或複製 Slack WebHook URL：
 
 1. 開啟您團隊的「Slack 整合」頁面：`https://_project_name_.slack.com/services`
 2. 在整合清單中，尋找**送入的 WebHook**，然後按一下**新增**。
-3. 選取通道，然後按一下**新增送入的 WebHook 整合**。
+3. 選取頻道，然後按一下**新增送入的 WebHook 整合**。
 4. 新增 **WebHook URL**，或複製現有項目。
 
-如需相關資訊，請參閱 [Slack 文件中的送入 WebHook](https://api.slack.com/incoming-webhooks)。
+如需相關資訊，請參閱 [Slack 文件中的送入 WebHook ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://api.slack.com/incoming-webhooks){: new_window}。
 
 若要建立 Slack 通知，請執行下列動作：
 
@@ -216,7 +215,7 @@ For more information about using the Globalization Pipeline service from the Blu
       <li><code>warning</code></li>
       <li><code>danger</code></li>
       <li>任何十六進位顏色（例如 #439FEO）</li></ul></td>
-    <td>選用。沿著 Slack 中訊息端所顯示的邊框顏色。預設顏色如下：綠色代表良好訊息、紅色代表錯誤訊息，而灰色代表參考訊息。</td>
+    <td>選用。沿著 Slack 中的訊息部分所顯示的邊框顏色。預設顏色如下：綠色代表良好訊息、紅色代表錯誤訊息，而灰色代表參考訊息。</td>
   </tr>
   <tr>
     <td><code>NOTIFY_FILTER</code></td>
@@ -226,7 +225,7 @@ For more information about using the Globalization Pipeline service from the Blu
       <li><code>bad</code>：取得所有訊息。</li>
       <li><code>info</code>：只取得參考訊息。不會傳送良好、錯誤及不明訊息。</li>
       <li><code>unknown</code>：取得所有訊息。</li></ul>
-      範例：如果您設定 <code>NOTIFY_FILTER = bad</code>，則只會在「Slack 通道」中顯示錯誤通知。</td>
+      範例：如果您設定 <code>NOTIFY_FILTER = bad</code>，則只會在「Slack 頻道」中顯示錯誤通知。</td>
     <td>選用。決定哪些類型的訊息要傳送通知。依預設，會傳送良好及錯誤訊息，但不會傳送參考訊息。
       <ul><li><code>good</code>：成功建置結果。</li>
       <li><code>bad</code>：失敗建置結果。</li>
@@ -238,7 +237,7 @@ For more information about using the Globalization Pipeline service from the Blu
 
 6. 重複這些步驟，以針對包括 IBM Container Service、IBM Security Analyzer 及 IBM Globalization 工作的其他階段傳送 Slack 通知。
 
-Slack 中所顯示的建置通知包括 DevOps Services 專案的鏈結，有時會包括專案儀表板的鏈結。為了讓 Slack 使用者開啟這些鏈結，必須在 DevOps Services 中註冊使用者，而且使用者必須是在其中配置管線之專案的成員。
+Slack 中所顯示的建置通知包括專案的鏈結，有時會包括專案儀表板的鏈結。為了讓 Slack 使用者開啟這些鏈結，必須在 Bluemix 中註冊使用者，而且使用者必須是管線配置所在專案的成員。
 
 ## 在管線中建立建置的 HipChat 通知
 {: #deliverypipeline_hipchat}
@@ -327,13 +326,13 @@ Slack 中所顯示的建置通知包括 DevOps Services 專案的鏈結，有時
 ## 在管線中使用 Active Deploy 進行零關閉時間部署
 {: #deliverypipeline_activedeploy}
 
-在 Bluemix® DevOps Services Delivery Pipeline 中使用 IBM® Active Deploy 服務，即可自動化持續部署應用程式或容器群組。如需開始使用的相關資訊，請參閱 [Active Deploy 文件](https://new-console.ng.bluemix.net/docs/services/ActiveDeploy/updatingapps.html#adpipeline)。
+在 Delivery Pipeline 中使用 IBM® Active Deploy 服務，即可自動持續部署應用程式或容器群組。如需開始使用的相關資訊，請參閱 [Active Deploy 文件](/docs/services/ActiveDeploy/updatingapps.html#adpipeline){: new_window}。
 
 ## 使用管線建置及部署容器映像檔
 {: #deliverypipeline_containers}
 
-使用 IBM® Continuous Delivery Pipeline for Bluemix，即可自動化 Bluemix® 的應用程式建置及容器部署。DevOps Services 中的 Delivery Pipeline 服務支援：
+使用 IBM Continuous Delivery Pipeline for Bluemix，即可自動進行 Bluemix 的應用程式建置及容器部署。Delivery Pipeline 服務支援：
   - 建置 Docker 映像檔
   - 將容器中的映像檔部署至 Bluemix
 
-如需開始使用的相關資訊，請參閱 [Delivery Pipeline 及容器概觀](https://new-console.ng.bluemix.net/docs/containers/container_pipeline_ov.html#container_pipeline_ov)。
+如需開始使用的相關資訊，請參閱 [Delivery Pipeline 及容器概觀](/docs/containers/container_pipeline_ov.html#container_pipeline_ov){: new_window}。

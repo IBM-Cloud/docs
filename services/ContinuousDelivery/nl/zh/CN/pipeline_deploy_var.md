@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-11-17"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -18,11 +18,18 @@ copyright:
 
 # 环境属性和资源
 {: #deliverypipeline_environment}
-上次更新时间：2016 年 11 月 17 日
-{: .last-updated}
 
-您可以使用环境属性和预安装的资源与 IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} 服务进行交互。例如，可以在作业脚本或测试命令中使用它们。
+您可以使用环境属性和预安装的资源与 IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} 服务进行交互。例如，您可能会将它们引入作业脚本或测试命令。
 {:shortdesc}
+
+您可以通过某个阶段的**环境属性**选项卡，将您自己的环境属性添加到阶段。环境属性可用于阶段中的每个作业。
+
+通过“环境属性”选项卡，可添加四种类型的属性：
+* **文本**：具有单行值的属性关键字。
+* **文本区域**：具有多行值的属性关键字。
+* **安全**：具有单行值的属性关键字。该值显示为星号。
+* **属性**：项目存储库中的文件。此文件可以包含多个属性。每一个属性必须位于自己的行上。要分隔键值对，请使用等号 (=)。
+
 
 缺省情况下，可以在管道环境中使用下列属性和资源。
 

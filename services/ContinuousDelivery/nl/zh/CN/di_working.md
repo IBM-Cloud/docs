@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-15"
+lastupdated: "2016-12-14"
 
 ---
 
@@ -15,9 +15,9 @@ lastupdated: "2016-11-15"
 # 使用 {{site.data.keyword.DRA_short}}（试验性）
 {: #di_working}
 
-{{site.data.keyword.DRA_full}} 通过在发行部署之前，监视这些部署以识别风险，从而支持保持并提高 {{site.data.keyword.Bluemix_notm}} 中代码的质量。
+使用 {{site.data.keyword.DRA_full}}，可以监视部署以便在部署发布之前发现风险，从而保持和提高 {{site.data.keyword.Bluemix_notm}} 中代码的质量。
 {:shortdesc}
 
-{{site.data.keyword.DRA_short}} 会从单元测试、功能测试和代码覆盖工具收集和分析结果，以确定您的代码是否满足部署过程中指定保护门处的预定义策略。如果您的代码不满足或超出策略，那么会停止部署以防止释放风险。您可以使用 {{site.data.keyword.DRA_short}} 作为持续交付环境的安全网，或者作为随时间推移实现和提高质量标准的方法。 
+{{site.data.keyword.DRA_short}} 会从单元测试、功能测试和代码覆盖工具收集和分析结果，以确定您的代码是否符合部署过程中指定检测点的预定义策略。如果您的代码不符合策略或超出策略，那么会停止部署以防产生风险。您可以使用 {{site.data.keyword.DRA_short}} 作为持续交付环境的安全网，或用于实施和提高质量标准。 
 
 有关更多信息，请参阅 [{{site.data.keyword.DRA_short}} 入门（试验性）](/docs/services/DevOpsInsights/index.html)。

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-15"
+lastupdated: "2016-12-14"
 
 ---
 
@@ -15,15 +15,10 @@ lastupdated: "2016-11-15"
 # Trabalhando com {{site.data.keyword.DRA_short}} (experimental)
 {: #di_working}
 
-O {{site.data.keyword.DRA_full}} permite que você mantenha e melhore a qualidade de seu código no {{site.data.keyword.Bluemix_notm}} monitorando suas implementações para identificar riscos antes da liberação.
+Com o {{site.data.keyword.DRA_full}}, é possível manter e melhorar a qualidade de seu código no {{site.data.keyword.Bluemix_notm}} monitorando suas implementações para identificar riscos antes da liberação.
 {:shortdesc}
 
-O {{site.data.keyword.DRA_short}} coleta e analisa os resultados de testes
-de unidade, testes funcionais e ferramentas de cobertura de código para determinar se o
-código atende às políticas predefinidas nos gates especificados de seu processo de
-implementação. Se seu código não atender a uma política ou excedê-la, a implementação será
-interrompida, impedindo a liberação de riscos. É possível usar o
-{{site.data.keyword.DRA_short}} como rede de segurança para seu ambiente de
-entrega contínua ou como uma maneira de implementar e melhorar os padrões de qualidade ao longo do tempo. 
+O {{site.data.keyword.DRA_short}} coleta e analisa os resultados de testes de unidade, testes funcionais e ferramentas de cobertura de código para determinar se o código atende às políticas predefinidas nos gates especificados de seu processo de implementação. Se seu código não atender a uma política ou excedê-la, a implementação será
+interrompida, impedindo a liberação de riscos. É possível usar o {{site.data.keyword.DRA_short}} como uma rede de segurança para o seu ambiente de entrega contínua ou como uma forma de implementar e melhorar os padrões de qualidade. 
 
-Para obter mais informações, consulte [Introdução ao {{site.data.keyword.DRA_short}} (experimental)](/docs/services/DevOpsInsights/index.html)
+Para obter mais informações, veja [Introdução ao {{site.data.keyword.DRA_short}} (Experimental)](/docs/services/DevOpsInsights/index.html).

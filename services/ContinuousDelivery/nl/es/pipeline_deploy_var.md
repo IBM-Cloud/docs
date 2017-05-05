@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-11-17"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -18,11 +18,17 @@ copyright:
 
 # Propiedades y recursos del entorno
 {: #deliverypipeline_environment}
-Última actualización: 17 de Noviembre de 2016
-{: .last-updated}
 
-Puede utilizar propiedades de entorno y recursos preinstalados para interactuar con el servicio de IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}}. Por ejemplo, puede utilizarlos en un script de trabajo o en un mandato de prueba.
-{:shortdesc}
+Puede utilizar propiedades de entorno y recursos preinstalados para interactuar con el servicio de IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}}. Por ejemplo, puede incorporarlos a un script de trabajo o a un mandato de prueba. {:shortdesc}
+
+Puede añadir sus propias propiedades de entorno a una etapa desde su separador **PROPIEDADES DE ENTORNO**. Las propiedades de entorno están disponibles para todos los trabajos en una etapa.
+
+Puede añadir cuatro tipos de propiedades desde el separador Propiedades de entorno:
+* **Texto**: Una clave de propiedad con un valor de línea única.
+* **Área de texto**: Una clave de propiedad con un valor de varias líneas.
+* **Seguro**: Una clave de propiedad con un valor de línea única. El valor se visualiza como asteriscos.
+* **Propiedades**: Un archivo del repositorio del proyecto. Este archivo puede contener varias propiedades. Cada propiedad debe estar en su propia línea. Para pares de clave-valor independientes, utilice el signo igual (=).
+
 
 Las siguientes propiedades y recursos están disponibles de forma predeterminada en los entornos de conducto.
 
@@ -81,13 +87,13 @@ Las siguientes propiedades y recursos están disponibles de forma predeterminada
 
 | Propiedad de entorno | Descripción |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| CF_APP | Para despliegues, el nombre de la aplicación a desplegar. Esta propiedad es necesaria para el despliegue y se puede especificar en el propio script, en la interfaz de configuración del trabajo de despliegue, o en el archivo `manifest.yml` del proyecto. |
+| CF_APP | Para despliegues, el nombre de la app a desplegar. Esta propiedad es necesaria para el despliegue y se puede especificar en el propio script, en la interfaz de configuración del trabajo de despliegue, o en el archivo `manifest.yml` del proyecto. |
 | CF_ORG | Para despliegues, el nombre de la organización (org) en la que se desplegará. |
 | CF_ORGANIZATION_ID | Para despliegues, el ID de la org en la que se desplegará. |
 | CF_SPACE | Para despliegues, el nombre del espacio en el que se desplegará. |
 | CF_SPACE_ID | Para despliegues, el ID del espacio en el que se desplegará.  |
 | CF_TARGET_URL | Para despliegues, el URL de IBM Bluemix&reg; o Cloud Foundry. |
-| IDS_VERSION | Para despliegues, la versión de la aplicación que se está desplegando o el identificador de origen. |
+| IDS_VERSION | Para despliegues, la versión de la app que se está desplegando o el identificador de origen. |
 
 ## Recursos preinstalados
 {: #deliverypipeline_resources}

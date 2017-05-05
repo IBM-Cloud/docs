@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-11-17"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -18,11 +18,18 @@ copyright:
 
 # 環境內容及資源
 {: #deliverypipeline_environment}
-前次更新：2016 年 11 月 17 日
-{: .last-updated}
 
-您可以使用環境內容及預先安裝的資源，以與 IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} 服務互動。例如，您可以將它們用於工作 Script 或測試指令中。
+您可以使用環境內容及預先安裝的資源，以與 IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} 服務互動。例如，您可以將它們包含在工作 Script 或測試指令中。
 {:shortdesc}
+
+您可以從階段的**環境內容**標籤中，將自己的環境內容新增至階段。階段中的每個工作都會有環境內容。
+
+您可以從「環境內容」標籤中新增四種類型的內容：
+* **文字**：具有單行值的內容索引鍵。
+* **文字區**：具有多行值的內容索引鍵。
+* **安全**：具有單行值的內容索引鍵。值會顯示為星號。
+* **內容**：專案儲存庫中的檔案。此檔案可以包含多個內容。每一個內容都必須單獨一行。若要區隔索引鍵值組，請使用等號 (=)。
+
 
 依預設，下列內容及資源可用於管線環境中。
 
@@ -56,7 +63,7 @@ copyright:
 | IDS_PROJECT_NAME | 專案名稱，例如 <code>Owner - Project Name</code>。 |
 | IDS_STAGE_NAME | 現行階段的名稱。 |
 | IDS_URL | 現行管線的 URL。 |
-| IDS_VERSION | 正在部署的建置號碼，或 SCM ID。此內容僅適用於 deploy 工作。
+| IDS_VERSION | 正在部署的建置號碼，或 SCM ID。此內容僅適用於部署工作。
 | JOB_NAME | 現行管線環境定義中的唯一工作 ID。 |
 | PIPELINE_STAGE_INPUT_JOB_ID | 現行階段的輸入工作 ID。 |
 | PIPELINE_STAGE_INPUT_REV | 現行階段的輸入修訂。 |
@@ -81,7 +88,7 @@ copyright:
 
 | 環境內容 | 說明 |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| CF_APP | 若為部署，此為要部署的應用程式名稱。此內容為部署所必要，且可以指定在 Script 本身中、deploy 工作配置介面，或專案的 `manifest.yml` 檔。 |
+| CF_APP | 若為部署，此為要部署的應用程式名稱。此內容為部署所必要，且可以指定在 Script 本身中、部署工作配置介面，或專案的 `manifest.yml` 檔。 |
 | CF_ORG | 若為部署，此為要部署到其中的組織名稱。 |
 | CF_ORGANIZATION_ID | 若為部署，此為要部署到其中的組織 ID。 |
 | CF_SPACE | 若為部署，此為要部署到其中的空間名稱。 |
