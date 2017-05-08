@@ -42,8 +42,8 @@ Liberty アプリケーションが Dynatrace を使用するように構成さ�
 
 3. アプリケーションを Bluemix にプッシュ後、作成したユーザー提供サービスをアプリケーションにバインドします。例えば、次のコマンドを使用します。
 
-         $ cf bs myApp my-dynatrace-collector
-         {: codeblock}
+          $ cf bs myApp my-dynatrace-collector
+          {: codeblock}
 
     **注**: サービスのバインド後にアプリケーションを再ステージングする必要があります。
 

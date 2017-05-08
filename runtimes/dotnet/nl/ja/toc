@@ -10,13 +10,13 @@ ASP.NET Core
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    [Using the starter applications](../../cfapps/starter_app_usage.html)
-    [Working with a proxy](../../manageapps/workingWithProxy.html)
-    [Using community buildpacks](../../cfapps/byob.html)
+    [スターター・アプリケーションの使用](../../cfapps/starter_app_usage.html)
+    [プロキシーの処理](../../manageapps/workingWithProxy.html)
+    [コミュニティー・ビルドパックの使用](../../cfapps/byob.html)
     {: .navgroup-end}
 
 
     {: .navgroup id="help"}
     updates.md
-    [Buildpack support statement](../../manageapps/buildpackSupport.html)
+    [ビルドパックのサポート・ステートメント](../../manageapps/buildpackSupport.html)
     {: .navgroup-end}
