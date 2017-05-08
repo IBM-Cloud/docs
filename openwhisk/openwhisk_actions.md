@@ -52,7 +52,7 @@ Review the following steps and examples to create your first JavaScript action.
       return {payload: 'Hello world'};
   }
   ```
-    {: codeblock}
+  {: codeblock}
 
   The JavaScript file might contain additional functions. However, by convention, a function called `main` must exist to provide the entry point for the action.
 
@@ -61,7 +61,7 @@ Review the following steps and examples to create your first JavaScript action.
   ```
   wsk action create hello hello.js
   ```
-      {: pre}
+  {: pre}
   ```
   ok: created action hello
   ```
@@ -607,20 +607,22 @@ Below is an example scenario for installing dependencies, packaging them in a vi
 
 1. Given a `requirements.txt` file that contains the `pip` modules and versions to install, run the following to install the dependencies and create a virtualenv using a compatible Docker image:
  ```bash
- $ docker run --rm -v "$PWD:/tmp" openwhisk/python3action sh \
+ docker run --rm -v "$PWD:/tmp" openwhisk/python3action sh \
    -c "cd tmp; virtualenv virtualenv; source virtualenv/bin/activate; pip install -r requirements.txt;"
  ```
+ {: pre}
 
 2. Archive the virtualenv directory and any additional Python files:
  ```bash
- $ zip -r helloPython.zip virtualenv __main__.py
+ zip -r helloPython.zip virtualenv __main__.py
  ```
+ {: pre}
 
 3. Create the action:
 ```bash
-$ wsk action create helloPython --kind python:3 helloPython.zip
+wsk action create helloPython --kind python:3 helloPython.zip
 ```
-
+{: pre}
 While the steps above are shown for Python 3.6, you can do the same for Python 2.7 as well.
 
 ## Creating Swift actions
