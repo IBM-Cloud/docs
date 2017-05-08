@@ -585,14 +585,16 @@ The filename of the source file containing the entry point (e.g., `main`) must b
 For example, to create an action with a helper module called `helper.py`, first create an archive containing your source files:
 
 ```bash
-$ zip -r helloPython.zip __main__.py helper.py
+zip -r helloPython.zip __main__.py helper.py
 ```
+{: pre}
 
 and then create the action:
 
 ```bash
-$ wsk action create helloPython --kind python:3 helloPython.zip
+wsk action create helloPython --kind python:3 helloPython.zip
 ```
+{: pre}
 
 ### Packaging Python actions with a virtual environment in zip files
 {: #openwhisk_actions_python_virtualenv}
@@ -619,10 +621,11 @@ Below is an example scenario for installing dependencies, packaging them in a vi
  {: pre}
 
 3. Create the action:
-```bash
-wsk action create helloPython --kind python:3 helloPython.zip
-```
-{: pre}
+  ```bash
+  wsk action create helloPython --kind python:3 helloPython.zip
+  ```
+  {: pre}
+
 While the steps above are shown for Python 3.6, you can do the same for Python 2.7 as well.
 
 ## Creating Swift actions
