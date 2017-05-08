@@ -114,17 +114,17 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 ### Locally
 {: #bff-local}
 
-1. Compile your server:
+1. Build your server:
 
   ```
-  swift build
+  npm install
   ```
   {: codeblock}
 
-2. Run your application. For example, assuming your application is called `MyServer`:
+2. Run your application:
 
   ```
-  .build/debug/MyServer
+  npm start 
   ```
   {: codeblock}
 
