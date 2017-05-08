@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-05-08"
 
 ---
 {:new_window: target="_blank"}
@@ -116,61 +116,66 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 
 1. Compile your server:
 
-  ```
-  swift build
-  ```
-  {: codeblock}
+   ```
+   swift build
+   ```
+   {: codeblock}
 
 2. Run your application. For example, assuming your application is called `MyServer`:
 
-  ```
-  .build/debug/MyServer
-  ```
-  {: codeblock}
+   ```
+   .build/debug/MyServer
+   ```
+   {: codeblock}
 
-3. You can run curl on your server with `curl http://localhost:8080`.
+3. You can run curl on your server with:
+
+   ```
+   curl http://localhost:8080
+   ```
+   {: codeblock}
 
 4. You can view the API document on your server at: 
 
-	```
-	http://localhost:8080/swagger/api
-	```
-	{: codeblock}
+   ```
+   http://localhost:8080/swagger/api
+   ```
+   {: codeblock}
 
 5. You can explore the API on your server at: 
 
-	```
-	http://localhost:8080/explorer
-	```
-	{: codeblock}
+   ```
+   http://localhost:8080/explorer
+   ```
+   {: codeblock}
 
 ### Using the Bluemix Plugin
 {: #using-blumix}
 
 1. Run compilation:
 
-	```
-	bx dev run
-	```
-	{: codeblock}
+   ```
+   bx dev run
+   ```
+   {: codeblock}
 
 2. You can run curl on your server with:
   
-	```
-	curl http://localhost:8080
-	```
-	{: codeblock}
+   ```
+   curl http://localhost:8080
+   ```
+   {: codeblock}
 
 3. You can view the API document on your server at: 
 
-	```
-	http://localhost:8080/swagger/api
-	```
-	{: codeblock}
+   ```
+   http://localhost:8080/swagger/api
+   ```
+   {: codeblock}
 
 4. You can explore the API on your server at: 
 
-	```
-	http://localhost:8080/explorer
-	```
-	{: codeblock}
+   ```
+   http://localhost:8080/explorer
+   ```
+   {: codeblock}
