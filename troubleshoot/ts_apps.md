@@ -692,21 +692,6 @@ You can use the [git update ![External link icon](../icons/launch-glyph.svg "Ext
 {: tsResolve}
 
 
-## Can't deploy an app from DevOps Services to Bluemix
-{: #ts_devops_to_bm}
-
-You might not be able to push your app from IBM Bluemix DevOps Services to {{site.data.keyword.Bluemix_notm}} if the `manifest.yml` file isn't present in your app.
-
-When you deploy an app from DevOps Services to {{site.data.keyword.Bluemix_notm}}, an error message `Unable to detect a supported application type` might display.
-{: tsSymptoms}
-
-This problem might happen because DevOps Services requires a `manifest.yml` file to deploy an app to {{site.data.keyword.Bluemix_notm}}.
-{: tsCauses}
-
-To resolve this problem, you must create a `manifest.yml` file. For more information about how to create a `manifest.yml` file, see [Application manifest](/docs/manageapps/depapps.html#appmanifest).
-{: tsResolve}
-
-
 ## Meteor apps can't be pushed
 {: #ts_meteor}
 
