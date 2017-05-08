@@ -130,6 +130,19 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 
 3. You can run curl on your server with `curl http://localhost:8080`.
 
+4. You can view your the API document on your server at: 
+
+	```
+	http://localhost:8080/swagger/api
+	```
+	{: codeblock}
+
+5. You can explore the API on your server at: 
+
+	```
+	http://localhost:8080/explorer
+	```
+	{: codeblock}
 
 ### Using the Bluemix Plugin
 {: #using-blumix}
@@ -145,5 +158,19 @@ Ensure that you have installed the [prerequisite developer tools ![External link
   
 	```
 	curl http://localhost:8080
+	```
+	{: codeblock}
+
+3. You can view your the API document on your server at: 
+
+	```
+	http://localhost:8080/swagger/api
+	```
+	{: codeblock}
+
+4. You can explore the API on your server at: 
+
+	```
+	http://localhost:8080/explorer
 	```
 	{: codeblock}
