@@ -864,7 +864,7 @@ function(doc) {
 >   **Note**: To use facets,
     all the documents in the index must include all the fields that have faceting enabled.
     If your documents do not include all the fields,
-    you receive a `bad_request` error with the following reason, "The `field_name` does not exist."
+    you receive a `bad_request` error with the following reason, "Dim `field_name` does not exist."
     If each document does not contain all the fields for facets,
     create separate indexes for each field.
     If you do not create separate indexes for each field,
@@ -876,7 +876,7 @@ _Example `if` statement to verify that the required fields exist in each documen
 ```javascript
 if (typeof doc.town == "string" && typeof doc.name == "string") {
         index("town", doc.town, {facet: true});
-        index("name", doc.name, {facet: true});        
+        index("town", doc.town, {facet: true});        
     }
 ```
 {:codeblock}
