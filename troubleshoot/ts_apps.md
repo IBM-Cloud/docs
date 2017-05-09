@@ -436,33 +436,6 @@ The variables that you specified are saved only if you save them to the manifest
 When you push an app to {{site.data.keyword.Bluemix_notm}} from IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, select the **Save to the manifest file** check box in the Application details page of the Application wizard. Then, the variables that you specified in the wizard are saved to the manifest file for your application. The next time you open the wizard, the variables are displayed automatically.
 {: tsResolve}
 
-
-## Bluemix Live Sync icons aren't shown
-{: #ts_llz_lkb_3r}
-
-You created an app, but the IBM Bluemix Live Sync icons aren't shown in the Web IDE.
-
-When you edit a Node.js app in the Web IDE, the {{site.data.keyword.Bluemix_notm}} live edit, quick restart, and debug icons aren't shown.
-{: tsSymptoms}
-
-The icons aren't available in these circumstances:
-{: tsCauses}
-
-  * The `manifest.yml` file isn't stored at the top level of your project.
-  * Your app is stored in a subdirectory rather than the top level of your project, but the path to the subdirectory isn't specified in the `manifest.yml` file.
-  * The app does not contain a `package.json` file.
-
-Use one of the following methods:
-{: tsResolve}
-
-  * If the `manifest.yml` file isn't stored at the top level of your project, store it there.
-  * If your app is stored in a subdirectory, specify the path to the subdirectory in the `manifest.yml` file.
-  ```
-   path: path_to_application
-   ```
-  * Create a `package.json` file that is in the same directory as your app.
-
-
 <!-- begin STAGING ONLY -->
 
 ## Bluemix Live Sync Debug doesn't start from the command line
@@ -727,32 +700,3 @@ To use a custom buildpack for Meteor apps, use one of the following methods:
     ```
 	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
 	```
-
-## Can't deploy an app from the run bar
-{: #ts_runbar}
-
-The deployment fails in a yellow, "not synchronized" state.
-{: tsSymptoms}
-
-The app that you are deploying has the same route as another app that is running.
-{: tsCauses}
-
-Change the route to be unique.
-{: tsResolve}
-
-## Can't find the run bar in the Eclipse Orion Web IDE
-{: #ts_runbar-missing}
-
-If you don't see the run bar in the Eclipse Orion {{site.data.keyword.webide}}, one of the following issues occurred:
-{: tsCauses}
-
-* {{site.data.keyword.contdelivery_full}} couldn't determine which folder your app is in.
-* {{site.data.keyword.contdelivery_short}} doesn't detect that your app is a Node.js app.
-
-Use one of the following methods, as appropriate:
-{: tsResolve}  
-
-* If {{site.data.keyword.contdelivery_short}} couldn't determine which folder your app is in, and your app is not in the project's root directory, use one of the following steps:
-  * Create a `manifest.yml` file in your project's root directory, then edit the file to point to the location of your app. For example, `path: path_to_your_app`.
-  * Move your app to your project's root directory.
-* If {{site.data.keyword.contdelivery_short}} doesn't detect that your app is a Node.js app, create a `package.json` file in the app folder of your project.
