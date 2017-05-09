@@ -324,10 +324,6 @@ To create HipChat notifications:
 
 6. Repeat these steps to send HipChat notifications for other stages that include IBM Container Service, IBM Security Static Analyzer, and IBM Globalization jobs.
 
-## Using Active Deploy for zero downtime deployment in the pipeline
-{: #deliverypipeline_activedeploy}
-
-You can automate the continuous deployment of your apps or container groups by using the IBM Active Deploy service in the Delivery Pipeline. For more information about getting started, see the [Active Deploy documentation](/docs/services/ActiveDeploy/updatingapps.html#adpipeline).
 
 ## Building and deploying container images with the pipeline
 {: #deliverypipeline_containers}
