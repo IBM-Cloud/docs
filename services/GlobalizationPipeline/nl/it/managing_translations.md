@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-10-14"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 # Gestione delle traduzioni
 {: #globalizationpipeline_managingtranslations}
 
-*Ultimo aggiornamento: 14 ottobre 2016*
-{: .last-updated}
 
 Dopo aver creato i bundle e avviato la generazione delle traduzioni per la tua applicazione, il contenuto generato della machine può essere utilizzato così come è oppure modificato ulteriormente. Puoi inoltre scegliere di utilizzare una machine translation differente dalla predefinita. Questa sezione descrive come modificare il motore della machine translation che esegue le traduzioni per i bundle, come eseguire una modifica post traduzione umana e anche come puoi assegnare i ruoli utente e le restrizioni di accesso alle persone che avranno bisogno di accedere alle tue traduzioni.
 {:shortdesc}
