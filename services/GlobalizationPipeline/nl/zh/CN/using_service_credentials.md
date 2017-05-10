@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-07-13"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 # 在 {{site.data.keyword.GlobalizationPipeline_short}} 以外使用 {{site.data.keyword.Bluemix_notm}}
 {: #globalizationpipeline_external}
 
-*上次更新时间：2016 年 7 月 13 日*
-{: .last-updated}
 
 许多 {{site.data.keyword.Bluemix_notm}} 服务（包括 {{site.data.keyword.GlobalizationPipeline_short}}）都可从内部部署应用程序托管环境使用，甚至可从其他云平台使用，而无需在 {{site.data.keyword.Bluemix_notm}} 上托管应用程序。
 {:shortdesc}
