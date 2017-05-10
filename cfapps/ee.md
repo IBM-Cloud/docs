@@ -29,7 +29,7 @@ Before you can get started, you sign up for an IBMid from [https://console.ng.bl
 
 
 ## Developing and deploying your apps by using toolchains and the {{site.data.keyword.contdelivery_short}} service
-{:ht_cd}
+{: #ee_cd}
 
 <a href="/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_an_app">Add a toolchain</a> that includes the {{site.data.keyword.contdelivery_full}} service to your app. Then, <a href="docs/services/ContinuousDelivery/toolchains_using.html#toolchains-using">use the toolchain</a> to develop and deploy your app.
 
