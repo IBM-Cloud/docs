@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-09-09"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 # Einführung in {{site.data.keyword.GlobalizationPipeline_short}}
 {: #globalizationpipeline}
-
-*Letzte Aktualisierung: 09. September 2016*
-{: .last-updated}
 
 {{site.data.keyword.GlobalizationPipeline_full}} ist ein Service, der automatische Übersetzungs- und Bearbeitungsfunktionen für die schnelle Übersetzung von mobilen oder Webbenutzerschnittstellen bietet. Mit dem zugehörigen Dashboard, der RESTful-API und der Integration in die Bereitstellungspipeline Ihrer App können Sie die Freigabe für globale Kunden erteilen, ohne einen erneuten Build für Ihre App zu erstellen oder diese erneut zu implementieren.
 {:shortdesc}
