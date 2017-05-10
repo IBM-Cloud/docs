@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-10-14"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 # Migrazione dei dati di risorsa dalla versione beta
 {: #globalizationpipeline_betaresourcedatamigration}
 
-*Ultimo aggiornamento: 14 ottobre 2016*
-{: .last-updated}
 
 La versione beta di {{site.data.keyword.GlobalizationPipeline_full}} sarà interrotta dopo un determinato periodo di tempo dall'uscita della versione GA. I dati utente nelle istanze beta non saranno spostati alle istanze del servizio GAS. Per mantenere i dati dopo lo spostamento alla GA, puoi esportare i dati della risorsa nei file, quindi importali nella nuova istanza. Tieni presente che non puoi eseguire questa operazione utilizzando il dashboard del servizio. Inoltre, l'esportazione dei dati della risorsa in un formato file di risorsa non conserverà gli altri metadati associati con le voci della risorsa.
 
