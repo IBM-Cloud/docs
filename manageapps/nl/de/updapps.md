@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-08-25"
+lastupdated: "2017-04-25"
 
 ---
 
@@ -24,30 +24,25 @@ Sie können den Befehl 'cf push' oder {{site.data.keyword.Bluemix}} DevOps Servi
 
 Sie können für CF-Apps und Containergruppen in der URL Ihrer Anwendung eine angepasste Domäne anstelle der standardmäßigen {{site.data.keyword.Bluemix_notm}}-Systemdomäne (mybluemix.net) verwenden.
 
-Mithilfe von Domänen wird die URL-Route angegeben, die Ihrer Organisation in
-{{site.data.keyword.Bluemix_notm}} zugeordnet ist. Um eine angepasste Domäne zu verwenden, müssen Sie die angepasste Domäne auf einem öffentlichen DNS-Server registrieren, die angepasste Domäne in {{site.data.keyword.Bluemix_notm}} konfigurieren und die angepasste Domäne der {{site.data.keyword.Bluemix_notm}}-Systemdomäne auf dem öffentlichen DNS-Server zuordnen. Nachdem Ihre angepasste Domäne der {{site.data.keyword.Bluemix_notm}}-Systemdomäne zugeordnet wurde, werden Anforderungen
-für Ihre angepasste Domäne an Ihre Anwendung in {{site.data.keyword.Bluemix_notm}} weitergeleitet.
+Mithilfe von Domänen wird die URL-Route angegeben, die Ihrer Organisation in {{site.data.keyword.Bluemix_notm}} zugeordnet ist. Um eine angepasste Domäne zu verwenden, müssen Sie die angepasste Domäne auf einem öffentlichen DNS-Server registrieren, die angepasste Domäne in {{site.data.keyword.Bluemix_notm}} konfigurieren und die angepasste Domäne der {{site.data.keyword.Bluemix_notm}}-Systemdomäne auf dem öffentlichen DNS-Server zuordnen. Nachdem Ihre angepasste Domäne der {{site.data.keyword.Bluemix_notm}}-Systemdomäne zugeordnet wurde, werden Anforderungen für Ihre angepasste Domäne an Ihre Anwendung in {{site.data.keyword.Bluemix_notm}} weitergeleitet.
 
-Sie können eine angepasste Domäne in {{site.data.keyword.Bluemix_notm}} erstellen und verwenden, indem Sie
-entweder die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle oder die Befehlszeilenschnittstelle
-'cf' verwenden.
+Sie können eine angepasste Domäne in {{site.data.keyword.Bluemix_notm}} erstellen und verwenden, indem Sie entweder die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle oder die Befehlszeilenschnittstelle 'cf' verwenden.
 
 * Verwendung der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle:
 
   1. Erstellen Sie eine angepasste Domäne für Ihre Organisation.
 
-	1. Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Organisationen verwalten** &gt; **Details anzeigen** für Ihre Organisation &gt; **Organisation bearbeiten** &gt; **Domänen**.
+	1. Wechseln Sie zu **Verwalten** &gt; **Konto** &gt; **Organisationen** &gt; **Details anzeigen** für Ihre Organisation. Klicken Sie anschließend auf **Organisation bearbeiten** &gt; **Domänen**.
 
-	2. Klicken Sie auf der Registerkarte **Domänen** auf **Domäne hinzufügen**,
-geben Sie den Namen Ihrer angepassten Domäne ein und klicken Sie auf **Speichern**.
+	2. Klicken Sie auf der Registerkarte **Domänen** auf **Domäne hinzufügen**, geben Sie den Namen Ihrer angepassten Domäne ein und klicken Sie auf **Speichern**. 
 
 	**Hinweis:** Sie können beispielsweise `mycompany.com` verwenden, um Ihrer App die Route `www.mycompany.com` zuzuordnen. Sie können auch `example.mycompany.com` verwenden, um Ihrer App die Route `www.example.mycompany.com` zuzuordnen.
 
-  2. Fügen Sie die Route mit der angepassten Domäne zu einer Anwendung hinzu.
+  2. Fügen Sie die Route mit der angepassten Domäne einer Anwendung hinzu. 
 
-    1. Wählen Sie in der Menüleiste aus dem Dropdown-Menü die Option **Konsole** aus. Klicken Sie dann auf die Zeile mit der Anwendung, die Sie der Route hinzufügen möchten. Die Seite **Übersicht** wird angezeigt.
+    1. Klicken Sie auf das Symbol **Menü** ![Menüsymbol](../icons/icon_hamburger.svg) &gt; **Dashboard**. Klicken Sie dann auf die Zeile für die Anwendung, der Sie die Route hinzufügen möchten. Die Seite **Übersicht** wird angezeigt.
 
-	2. Wählen Sie im Menü **App anzeigen** die Option **Routen und Zugriff bearbeiten** aus.
+	2. Wählen Sie im Menü **Routen** die Option **Routen bearbeiten** aus. 
 
 	3. Klicken Sie auf **Route hinzufügen**. Geben Sie die Route an, die Sie für die Anwendung verwenden möchten.
 	4. Klicken Sie auf **Speichern**.
@@ -83,7 +78,7 @@ geben Sie den Namen Ihrer angepassten Domäne ein und klicken Sie auf **Speicher
 
     *mydomain*
 
-    	Der Name Ihrer angepassten Domäne.
+    	Der Name Ihrer angepassten Domäne. Beispiel: `www.mydomain.mybluemix.net`.
 
     *host_name*
 
@@ -102,6 +97,7 @@ Nach der Konfiguration der angepassten Domäne in {{site.data.keyword.Bluemix_no
     * US-SOUTH: `secure.us-south.bluemix.net`
     * EU-GB: `secure.eu-gb.bluemix.net`
     * AU-SYD: `secure.au-syd.bluemix.net`
+    * EU-DE: `secure.eu-de.bluemix.net`
 
 Geben Sie die folgende URL in einen Browser oder eine Befehlszeilenschnittstelle ein, um auf die Anwendung 'myapp' zuzugreifen:
 
@@ -129,19 +125,13 @@ Die *Blue-Green-Bereitstellung* ist ein Bereitstellungsverfahren ohne Ausfallzei
 
 * Zeitnahe Überführung der Software aus der letzten Testphase in die Live-Produktion.
 * Bereitstellung einer neuen Anwendungsversion ohne Unterbrechung des Datenverkehrs zu der betreffenden Anwendung.
-* Rasche Durchführung von Rollback-Operationen. Beim Auftreten von Problemen in einer Ihrer Umgebungen können Sie schnell zu der jeweils anderen Umgebung
-umschalten.
+* Rasche Durchführung von Rollback-Operationen. Beim Auftreten von Problemen in einer Ihrer Umgebungen können Sie schnell zu der jeweils anderen Umgebung umschalten.
 
-Wenn Sie bereits eine Anwendung
-für {{site.data.keyword.Bluemix_notm}} bereitgestellt haben und
-diese Anwendung auf eine neue Version aktualisieren wollen, können Sie eine der folgenden beiden Methoden verwenden,
-um eine Blue-Green-Bereitstellung sicherzustellen.
+Wenn Sie bereits eine Anwendung für {{site.data.keyword.Bluemix_notm}} bereitgestellt haben und diese Anwendung auf eine neue Version aktualisieren wollen, können Sie eine der folgenden beiden Methoden verwenden, um eine Blue-Green-Bereitstellung sicherzustellen.
 
 ### Beispiel: Befehl 'cf rename' verwenden
 
-In diesem Beispiel lautet der Name der Anwendung 'Blue'. Das Beispiel veranschaulicht, wie die Version von *Blue* mithilfe des Befehls
-**cf rename** aktualisiert wird, ohne den Datenverkehr zu der Anwendung zu unterbrechen. Optional kann die dann alte Version von
-*Blue* gelöscht werden, wenn die aktualisierte Version vorhanden ist.
+In diesem Beispiel lautet der Name der Anwendung 'Blue'. Das Beispiel veranschaulicht, wie die Version von *Blue* mithilfe des Befehls **cf rename** aktualisiert wird, ohne den Datenverkehr zu der Anwendung zu unterbrechen. Optional kann die dann alte Version von *Blue* gelöscht werden, wenn die aktualisierte Version vorhanden ist.
 
 1. Stellen Sie die App *Blue* per Push-Operation in {{site.data.keyword.Bluemix_notm}} bereit.
 
@@ -168,8 +158,7 @@ In diesem Beispiel lautet der Name der Anwendung 'Blue'. Das Beispiel veranschau
 
   **Ergebnis:** Die App *Green* wird ausgeführt und antwortet an die URL `Blue.mybluemix.net`.
 
-3. Nehmen Sie die erforderlichen Änderungen vor und bereiten Sie die aktualisierte Version von
-*Blue* vor. Stellen Sie die aktualisierte App *Blue* per Push-Operation in {{site.data.keyword.Bluemix_notm}} bereit:
+3. Nehmen Sie die erforderlichen Änderungen vor und bereiten Sie die aktualisierte Version von *Blue* vor. Stellen Sie die aktualisierte App *Blue* per Push-Operation in {{site.data.keyword.Bluemix_notm}} bereit:
 
   ```
   cf push Blue
@@ -186,19 +175,16 @@ In diesem Beispiel lautet der Name der Anwendung 'Blue'. Das Beispiel veranschau
   ```
 
   **Ergebnisse:**
-    * Zwei Instanzen der Anwendung sind bereitgestellt: die Instanz *Blue* und die Instanz
-*Green*.
+    * Zwei Instanzen der Anwendung sind bereitgestellt: die Instanz *Blue* und die Instanz *Green*.
 	* Die App *Green* wird ausgeführt und antwortet an die URL `Blue.mybluemix.net`.
 
-4. Optional: Wenn Sie die alte Version (*Green*) der App löschen wollen, verwenden Sie den Befehl **cf
-delete**.
+4. Optional: Wenn Sie die alte Version (*Green*) der App löschen wollen, verwenden Sie den Befehl **cf delete**.
 
   ```
   cf delete Green -f
   ```
 
-  Listen Sie die Routen in Ihrem Bereich mit dem Befehl
-**cf route** auf:
+  Listen Sie die Routen in Ihrem Bereich mit dem Befehl **cf route** auf:
 
   ```
   ...
@@ -211,10 +197,7 @@ delete**.
 
 ### Beispiel: Befehl 'cf map-route' verwenden
 
-In diesem Beispiel ist *Blue* die zuvor bereitgestellte Anwendung, und
-*Green* ist die aktualisierte Version. Dieses Beispiel veranschaulicht, wie die Version von *Blue* mithilfe des Befehls
-**cf map-route** aktualisiert wird, ohne den Datenverkehr zu der Anwendung zu unterbrechen. Optional kann die dann alte Version von
-*Blue* gelöscht werden, wenn die aktualisierte Version vorhanden ist.
+In diesem Beispiel ist *Blue* die zuvor bereitgestellte Anwendung, und *Green* ist die aktualisierte Version. Dieses Beispiel veranschaulicht, wie die Version von *Blue* mithilfe des Befehls **cf map-route** aktualisiert wird, ohne den Datenverkehr zu der Anwendung zu unterbrechen. Optional kann die dann alte Version von *Blue* gelöscht werden, wenn die aktualisierte Version vorhanden ist.
 
 1. Stellen Sie die App *Blue* per Push-Operation in {{site.data.keyword.Bluemix_notm}} bereit.
 
@@ -242,8 +225,7 @@ In diesem Beispiel ist *Blue* die zuvor bereitgestellte Anwendung, und
 
   **Ergebnisse:**
 
-    * Zwei Instanzen der App sind bereitgestellt: die Instanz *Blue* und die Instanz
-*Green*.
+    * Zwei Instanzen der App sind bereitgestellt: die Instanz *Blue* und die Instanz *Green*.
 	* Die App *Blue* antwortet an die URL `Blue.mybluemix.net`. Und die App *Green* antwortet an die URL `Green.mybluemix.net`.
 
 3. Ordnen Sie die App *Blue* der App *Green* zu, sodass der gesamte Datenverkehr an `Blue.mybluemix.net` sowohl an die App *Blue* als auch an die App *Green* weitergeleitet wird.
@@ -267,9 +249,7 @@ In diesem Beispiel ist *Blue* die zuvor bereitgestellte Anwendung, und
     * Der CF-Router sendet nun den Datenverkehr für 'Blue.mybluemix.net' sowohl an die App 'Blue' als auch an die App 'Green'.
 	* Der CF-Router sendet den Datenverkehr für 'Green.mybluemix.net' weiterhin an die App 'Green'.
 
-4. Wenn Sie sich vergewissert haben, dass *Green* wie erwartet ausgeführt wird, entfernen Sie die Route
-`Blue.mybluemix.net` aus
-der App *Blue* :
+4. Wenn Sie sich vergewissert haben, dass *Green* wie erwartet ausgeführt wird, entfernen Sie die Route `Blue.mybluemix.net` aus der App *Blue* :
 
   ```
   cf unmap-route Blue mybluemix.net -n Blue
@@ -295,8 +275,7 @@ der App *Blue* :
 
   **Ergebnis:** Der CF-Router sendet keinen Datenverkehr mehr an die App *Blue*. Die App *Green* antwortet an die URL `Blue.mybluemix.net`.
 
-6. Optional: Wenn Sie die alte Version (*Blue*) der Anwendung löschen wollen, verwenden Sie hierzu den Befehl `cf
-delete`.
+6. Optional: Wenn Sie die alte Version (*Blue*) der Anwendung löschen wollen, verwenden Sie hierzu den Befehl `cf delete`.
 
   ```
   cf delete Blue -f
