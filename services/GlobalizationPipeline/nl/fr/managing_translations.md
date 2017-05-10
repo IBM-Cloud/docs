@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-10-14"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # Gestion des traductions
 {: #globalizationpipeline_managingtranslations}
-
-*Dernière mise à jour : 14 octobre 2016*
-{: .last-updated}
 
 Une fois que vous avez créé des bundles et commencé à générer des traductions pour votre application, le contenu généré automatiquement peut être utilisé tel quel ou être modifié. Vous pouvez également utiliser une traduction automatique autre que celle par défaut. Cette section explique comment modifier le moteur de traduction automatique qui effectue les traductions pour vos bundles, comment effectuer des tâches d'édition humaine après traduction et comment affecter des rôles utilisateur et des restrictions d'accès aux personnes qui auront besoin d'accéder à vos traductions.
 {:shortdesc}
