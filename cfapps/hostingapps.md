@@ -93,7 +93,7 @@ You can use the following tools and services that {{site.data.keyword.Bluemix_no
 |:------|:--------|
 |Cloud Foundry command line interface (cf cli)	|Manage your code on local client and use Cloud Foundry command line interface to push your application to {{site.data.keyword.Bluemix_notm}} manually. For more information, see [Uploading your apps](/docs/starters/upload_app.html).|
 |Eclipse	|Manage your code in Eclipse and use the IBM Eclipse tools for {{site.data.keyword.Bluemix_notm}} to push your application.|
-|{{site.data.keyword.contdelivery_full}} |    Use IBM Bluemix Continuous Delivery to automate builds, unit tests, deployments, and more. Edit and push code through the rich web based IDE. Create toolchains to enable tool integrations that support your development, deployment, and operation tasks. The Continuous Delivery service includes Delivery Pipeline, the Eclipse Orion Web IDE, and Git Repos and Issue Tracking. For more information, see <a href="/docs/services/ContinuousDelivery/index.html#cd_getting_started">Getting started with Continuous Delivery</a>|
+|{{site.data.keyword.contdelivery_full}} |    Use {{site.data.keyword.contdelivery_short}} to automate builds, unit tests, deployments, and more. Edit and push code through the rich web based IDE. Create toolchains to enable tool integrations that support your development, deployment, and operation tasks. The Continuous Delivery service includes Delivery Pipeline, the Eclipse Orion Web IDE, and Git Repos and Issue Tracking. For more information, see <a href="/docs/services/ContinuousDelivery/index.html#cd_getting_started">Getting started with Continuous Delivery</a>|
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} tools" caption-side="top"}
 
 
