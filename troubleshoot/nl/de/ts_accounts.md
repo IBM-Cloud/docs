@@ -56,12 +56,10 @@ Bei dem Versuch, in {{site.data.keyword.Bluemix_notm}} eine App zu erstellen, wi
 Apps in {{site.data.keyword.Bluemix_notm}} müssen in Ihrer Organisation innerhalb eines Bereichs erstellt werden.
 {: tsCauses} 
 
-Wenden Sie eine der folgenden Methoden an,
-um einen Bereich zu erstellen: 
+Verwenden Sie eine der folgenden Methoden, um einen Bereich zu erstellen:
 {: tsResolve}
  
-  * Wählen Sie auf dem Dashboard von {{site.data.keyword.Bluemix_notm}} die Organisation aus, in der Sie den Bereich erstellen möchten;
-klicken Sie anschließend auf **Bereich erstellen**.
+  * Wählen Sie auf dem Dashboard von {{site.data.keyword.Bluemix_notm}} die Organisation aus, in der Sie den Bereich erstellen möchten. Klicken Sie anschließend auf **Bereich erstellen**.
   * Geben Sie in der Befehlszeilenschnittstelle 'cf' Folgendes ein: `cf create-space <Name des Bereichs> -o <Name der Organisation>`.
 
   
