@@ -13,19 +13,19 @@ lastupdated: "2017-04-12"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 通过 {{site.data.keyword.openwhisk_short}} 操作创建 API
+# 從 {{site.data.keyword.openwhisk_short}} 動作建立 API
 {: #manage_openwhisk_apis}
 
-OpenWhisk 操作可通过由 API Management 进行管理而受益。
+透過 API Management 進行管理，有利於 OpenWhisk 動作。
 
-使用 API Management，可以将 {{site.data.keyword.openwhisk_short}} 操作作为 API 公开。定义 API 后，可以应用安全性和速率限制策略，查看 API 使用情况和响应日志，以及定义 API 共享策略。  
+使用 API Management，您可以將 {{site.data.keyword.openwhisk_short}} 動作公開為 API。在您定義 API 之後，可以套用安全和比率限制原則、檢視 API 使用情形和回應日誌，以及定義 API 共用原則。  
 
-要创建 {{site.data.keyword.openwhisk_short}} API，请完成以下步骤：
+若要建立 {{site.data.keyword.openwhisk_short}} API，請完成下列步驟：
 
-1. 在 {{site.data.keyword.openwhisk_short}}“仪表板”中，单击 **API** 选项卡。如果已经创建了 {{site.data.keyword.openwhisk_short}} API，那么会显示 {{site.data.keyword.openwhisk_short}} API 的列表。如果您还没有任何 {{site.data.keyword.openwhisk_short}} API，那么会显示“开始使用”屏幕。 
-2. 单击**创建 {{site.data.keyword.openwhisk_short}} API**。这将显示“创建 {{site.data.keyword.openwhisk_short}} API”窗口。 
-3. 填写“API 信息”部分中的字段，然后单击**创建操作**。这将显示“创建操作”窗口。可创建用于为 API 定义端点、HTTPS 路径和方法的操作。
-4. 在“创建操作”窗口中，填写必填字段，然后选择**创建**。该操作将添加到用于调用 {{site.data.keyword.openwhisk_short}} 操作表的“操作”中。
-5. 填写您希望填写的其余信息。也可以日后管理 API 时添加或更新其余信息。
-6. 单击**保存**。这将打开 API 的“API Management 概述”页面，并且显示刚才定义的所有信息。
-7. 继续使用[管理 API](manage_apis.html) 来管理 API。
+1. 在「{{site.data.keyword.openwhisk_short}} 儀表板」中，按一下 **API** 標籤。如果您已建立 {{site.data.keyword.openwhisk_short}} API，則會顯示 {{site.data.keyword.openwhisk_short}} API 清單。如果您沒有任何 {{site.data.keyword.openwhisk_short}} API，則會顯示「開始使用」畫面。 
+2. 按一下**建立 {{site.data.keyword.openwhisk_short}} API**。隨即會顯示「建立 {{site.data.keyword.openwhisk_short}} 的 API」視窗。 
+3. 完成「API 資訊」區段中的欄位，然後按一下**建立作業**。隨即會顯示「建立作業」視窗。您可以建立作業來定義 API 端點、https 路徑及 API 的方法。
+4. 在「建立作業」視窗中，完成必要欄位，然後選取**建立**。「作業」會新增至呼叫 {{site.data.keyword.openwhisk_short}} 動作表格的「作業」。
+5. 完成您要完成的其餘資訊。當您管理 API 時，也可以稍後再新增或更新其餘資訊。
+6. 按一下**儲存**。隨即會開啟 API 的「API Management 概觀」頁面，並顯示您剛剛所定義的所有資訊。
+7. 使用[管理 API](manage_apis.html)，來繼續管理 API。

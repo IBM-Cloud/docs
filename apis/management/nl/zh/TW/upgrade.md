@@ -13,50 +13,50 @@ lastupdated: "2017-04-11"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 访问更多 API Management 功能
+# 存取其他 API Management 特性
 {: #upgrade}
 
-通过 API Management，可控制调用速率、OAuth 以及查看分析结果。您可通过升级到 {{site.data.keyword.apiconnect_full}} 服务，掌握对 API 的更大管理控制权。{{site.data.keyword.apiconnect_short}} 服务提供了安全策略的更多选项，以及对速率限制的更大控制权。除此之外，您还能配置完全可定制的开发者门户网站，这样您就可以对 API 进行社交化，并参与开发者社区。其他优势包括：
-* 生命周期管理
-* 组合 API
-* Web Service 集成
-* 协议调解
-* 通过模式生成 API
-* 微服务开发
+API Management 可讓您控制呼叫率、OAuth 及視圖分析。升級為 {{site.data.keyword.apiconnect_full}} 服務，就可以具有 API 的更高管理控制權。{{site.data.keyword.apiconnect_short}} 服務提供更多安全原則選項，並且具有比率限制的更高控制權。除此之外，您將可以配置完整可自訂的「開發人員入口網站」以將 API 社交化，並使用開發人員社群。其他好處包括：
+* 生命週期管理
+* 複合 API
+* Web 服務整合
+* 通訊協定調解
+* 從綱目產生 API
+* 微服務開發
 
-迁移到 {{site.data.keyword.apiconnect_short}} 服务非常容易，您不必重新创建通过 API Management 管理的任何 API。
+移轉至 {{site.data.keyword.apiconnect_short}} 服務十分簡單，而且您不需要重建任何使用 API Management 所管理的 API。
 
-## 将 API 迁移到 {{site.data.keyword.apiconnect_short}}
+## 將 API 移轉至 {{site.data.keyword.apiconnect_short}}
 {: #migrate_api}
 
-如果决定升级到 {{site.data.keyword.apiconnect_full}}，那么需要通过对 API Management 中的每个 API 完成以下步骤，才可将这些 API 从 API Management 迁移到 {{site.data.keyword.apiconnect_short}} 服务： 
+如果您決定升級至 {{site.data.keyword.apiconnect_full}}，則需要針對每一個 API 完成下列步驟，以將 API 從 API Management 移轉至 {{site.data.keyword.apiconnect_short}} 服務： 
 
-1. 为 API Management 中的 API 下载 Swagger 文档。
-    1. 打开应用程序，并选择 **API Management**。
-	2. 选择 **API Explorer** 选项卡。这将显示与该项目相关的 API 的列表。
-    2. 通过选择 API 名称旁边的相应图标，下载该 API 的 Swagger 文档。
-2. 创建并准备 {{site.data.keyword.apiconnect_short}} 实例。 
-    1. 通过 {{site.data.keyword.Bluemix_notm}} 目录，创建 {{site.data.keyword.apiconnect_short}} 服务的实例。
-	2. 选择套餐。
-	3. 选择 **+添加**以创建目录。
-	4. 输入目录的显示名称和名称，然后选择**添加**。
-	5. 选择已创建的目录。
-3. 通过完成以下步骤，将 Swagger 文档导入到 {{site.data.keyword.apiconnect_short}} 实例：
-	1. 在 {{site.data.keyword.apiconnect_short}} 服务仪表板中，选择菜单中的**浏览至...(>>)** > **草稿**。
-	2. 选择 API 选项卡。
-	3. 选择 **+添加** > **从文件或 URL 导入 API**。
-	4. 找到并选择从 API Management 下载的 Swagger 文件。选择**打开**。
-	5. 选择**导入**以将 API 导入到 {{site.data.keyword.apiconnect_short}} 服务。
-4. 指定 API 的设置。
-    1. 选择**创建产品**。
-	2. 选择已创建的产品以查看其设置。
-	3. 为 API 设置速率限制。
-	4. 为 API 设置层。
-5. 根据需要，为 API 添加端点。
-    1. 选择该 API。
-	2. 选择“组合”选项卡。
-	3. 添加端点（如果尚未指定）。
+1. 從 API Management 下載 API 的 Swagger 文件。
+    1. 開啟應用程式，然後選取 **API Management**。
+	2. 選取 **API 瀏覽器**標籤。隨即會顯示與該專案相關的 API 清單。
+    2. 選取 API 名稱旁的圖示，以下載 API 的 Swagger 文件。
+2. 建立及準備 {{site.data.keyword.apiconnect_short}} 實例。 
+    1. 從 {{site.data.keyword.Bluemix_notm}} 型錄中，建立 {{site.data.keyword.apiconnect_short}} 服務的實例。
+	2. 選取方案。
+	3. 選取 **+新增**，以建立型錄。
+	4. 輸入型錄的「顯示名稱」及名稱，然後選取**新增**。
+	5. 選取您已建立的型錄。
+3. 完成下列步驟，以將 Swagger 文件匯入至 {{site.data.keyword.apiconnect_short}} 實例：
+	1. 從 {{site.data.keyword.apiconnect_short}} 服務儀表板中，選取功能表中的**導覽至... (>>)** > **草稿**。
+	2. 選取 API 標籤。
+	3. 選取 **+新增** > **從檔案或 URL 匯入 API**。
+	4. 尋找並選取您已從 API Management 下載的 Swagger 檔案。選取**開啟**。
+	5. 選取**匯入**，以將 API 匯入至 {{site.data.keyword.apiconnect_short}} 服務。
+4. 指定 API 的設定。
+    1. 選取**建立產品**。
+	2. 選取您已建立來檢視其設定的產品。
+	3. 設定 API 的比率限制。
+	4. 設定 API 的層級。
+5. 新增 API 的端點（必要的話）。
+    1. 選取 API。
+	2. 選取「組合」標籤。
+	3. 新增端點（如果尚未指定）。
 	
- 迁移 API 后，您将能通过打开 {{site.data.keyword.apiconnect_short}} 服务磁贴以及通过 {{site.data.keyword.Bluemix_notm}}“仪表板”来访问所有 API Management 功能。 
+ 在您移轉 API 之後，將可以存取所有 API Management 特性，方法是開啟 {{site.data.keyword.apiconnect_short}} 服務磚，也可以透過「{{site.data.keyword.Bluemix_notm}} 儀表板」。 
 
  

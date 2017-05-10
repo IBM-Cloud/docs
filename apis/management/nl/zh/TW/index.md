@@ -13,49 +13,49 @@ lastupdated: "2017-04-12"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 概述
+# 概觀
 {: #index}
 
-您可以在 {{site.data.keyword.Bluemix}} 中本机管理 API，不管这些 API 是与 {{site.data.keyword.openwhisk_short}} 操作相关联，还是与不断增长的集成 {{site.data.keyword.Bluemix_notm}} 服务（例如，{{site.data.keyword.appconserviceshort}} 服务）的列表相关联。通过管理 API，可以控制使用情况、提高采用率以及跟踪统计信息。
+您可以在 {{site.data.keyword.Bluemix}} 中使用原生方式管理 API，不論它們是與 {{site.data.keyword.openwhisk_short}} 動作還是成長中的整合式 {{site.data.keyword.Bluemix_notm}} 服務（例如 {{site.data.keyword.appconserviceshort}} 服務）清單相關聯都一樣。管理 API 可讓您控制使用情形、增加採用，以及追蹤統計資料。
 
-如下图中所示，API Management 通过在现有云端点前插入快速、轻量级的网关进行工作。网关（图中称为“API 网关”）负责响应来自应用程序的入局 API 调用。API 网关提供了一组综合 API 策略，用于支持安全性、流量管理、调解、加速和非 HTTP 协议。
+如下圖所示，API Management 的運作方式是在現有雲端端點的前面插入快速及輕量型閘道。閘道（在本圖中稱為「API 閘道」）負責回應從應用程式送入的 API 呼叫。「API 閘道」提供一組綜合性的 API 原則，來進行安全、資料流量管理、調解、加速及非 HTTP 通訊協定支援。
 
-![API 网关流程。](images/bluemix-native-apim-flow_ow.png "API Management 流程。")
+![「API 閘道」流程。](images/bluemix-native-apim-flow_ow.png "API Management 流程。")
 
-公开 API 后，该 API 即可供其他人使用。这通常意味着给予 API 用户对您在服务器上所维护信息的有限访问权。此访问权允许最终用户直接从当前界面访问信息，从而为他们提供更无缝的客户体验。
+當您公開 API 時，即表示其他人可以使用它。這通常表示讓 API 使用者具有所維護伺服器上資訊的有限存取權。這個存取權可讓一般使用者擁有更流暢的客戶體驗，因為他們可以直接從現行介面中存取資訊。
 
-有时您会希望控制服务器上的某些活动。例如，如果服务器上短时间内的 API 请求数太多，那么服务器会因超负荷而关闭。为了避免类似这样的情况，可以使用 API Management 来管理 API 调用速率。连接到 API 的轻量级网关可跟踪对 API 的调用数，并强制实施对其接受的调用数的限制。此外，API Management 还支持通过记录特定源的 API 密钥，跟踪来自该源的 API 调用量。API 密钥是 API 开发团队为 API 使用团队提供的唯一字符串，支持 API 开发者监视有关使用团队请求所生成的调用的统计信息。  
+您偶而會想要控制伺服器上的一些活動。例如，如果伺服器在短時間內有太多 API 要求，則伺服器可能會超載並關閉。若要避免這類狀況，您可以使用 API Management 來管理 API 呼叫率。連接至 API 的輕量型閘道會追蹤 API 的呼叫數目，並強制執行所接受呼叫數目的限制。API Management 也可讓您記錄 API 金鑰，以追蹤來自特定來源的 API 呼叫數量。API 金鑰是 API 開發團隊提供給 API 使用團隊的唯一字串，可讓 API 開發人員監視使用團隊要求所產生呼叫的統計資料。  
 
-针对 {{site.data.keyword.Bluemix_notm}} API Management 提供了以下功能：
+{{site.data.keyword.Bluemix_notm}} API Management 提供下列特性：
 ## API 分析
 {: #basic_analytics notoc}
 
-如果要对 API 的使用计算费用，可以使用分析功能来跟踪调用使用情况。您还可以监视使用情况来了解 API 的目前使用情况，以便可以就如何更新 API 来提高采用率进行知情决策。
+如果您要將 API 的使用換算成貨幣，則可以使用分析特性來追蹤呼叫使用情形。您也可以監視使用情形，以瞭解如何使用 API 通知您有關如何更新 API 來增加採用的決策。
 
-可以查看有关 API 的以下统计信息：
-* 最近 1 小时或指定时间间隔内的响应数和平均响应时间。
-* 每分钟的 API 调用数。
-* 最近 100 个响应。
+您可以檢視 API 的下列統計資料：
+* 最後一小時或所指定時間間隔的回應數目及平均回應時間。
+* 每分鐘的 API 呼叫數目。
+* 最後 100 個回應。
 
-## 按预订（API 密钥）限制速率
+## 訂閱的比率限制（API 金鑰）
 {: #rate_limit notoc}
 
-可以强制实施速率限制，以管理应用程序可以对 API 发起的调用数。您可以指定速率限制，以便每秒、每分钟或每小时只发起允许数量的调用，这样可避免一些问题，例如后端不会超负荷。可以按总体 API 或按每个 API 密钥设置速率限制。
+您可以強制執行比率限制，來管理應用程式可對 API 進行的呼叫數目。您可以指定比率限制，限制每秒、每分鐘、每小時只能進行允許的呼叫數目，因此，舉例來說，後端就不會超載。設定此作業的方式是根據整體 API 或每一個 API 金鑰。
 
 ## OAuth
 {: #oauth notoc}
 
-要阻止不必要的使用您提供的数据，可以确保只有正确认证的用户才能访问您的 API。可以通过 OAuth 授权标准来控制对 API 的访问。OAuth 是基于令牌的授权协议，允许第三方 Web 站点或应用程序访问用户数据，而无需用户共享个人信息。
+若要停止所提供資料的不必要使用，您可以確定只有具有正確鑑別的使用者才能存取 API。您可以透過 OAuth 授權標準來控制對 API 的存取。OAuth 是記號型授權通訊協定，容許第三方網站或應用程式存取使用者資料，而不需要使用者分享個人資訊。
 
 ## CORS
 {: #cors notoc}
 
-CORS 允许 Web 页面中嵌入的脚本跨域边界调用 API。这对 API 用户十分有利，因为它允许 API 从其调用的其他域中检索信息。未启用 CORS 时，任何内容检索都限制为在其中发起请求的域。有关 CORS 以及如何实施 CORS 的更多信息，请参阅 [HTTP 访问控制 (CORS) ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS.html){: new_window}。
+CORS 容許將 Script 內嵌在網頁中，以跨網域界限來呼叫 API。這有利於 API 使用者，因為它容許 API 在呼叫它時擷取另一個網域中的資訊。若未啟用 CORS，則會將任何內容擷取都限制為與起源要求相同的網域。如需 CORS 及其實作方式的相關資訊，請參閱 [HTTP 存取控制 (CORS) ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS.html){: new_window}。
 
-## 其他 API Management 选项
+## 其他 API Management 選項
 {: #add_mgt_options notoc}
 
-API Management 的这些功能在 {{site.data.keyword.openwhisk_short}} 的 API Management 选项卡中或者在 App Connect 仪表板中提供。要获取更复杂的管理解决方案，可以升级到完整 {{site.data.keyword.apiconnect_full}} 服务来访问更多功能，例如详细分析、API 的包装策略或用于将 API 社交化的开发者门户网站。有关 {{site.data.keyword.apiconnect_full}} 服务的更多信息，请参阅 [Getting started with API Connect](https://console.ng.bluemix.net/docs/services/apiconnect/index.html){: new_window}。
+{{site.data.keyword.openwhisk_short}} 或「應用程式連接儀表板」的 API Management 標籤中提供這些 API Management 特性。如需較複雜的管理解決方案，您可以升級為完整 {{site.data.keyword.apiconnect_full}} 服務，以存取其他特性（例如詳細分析、API 的包裝策略，開發人員入口網站）將 API 社交化。如需 {{site.data.keyword.apiconnect_full}} 服務的相關資訊，請參閱[開始使用 API Connect](https://console.ng.bluemix.net/docs/services/apiconnect/index.html){: new_window}。
 
-有关将 {{site.data.keyword.Bluemix_notm}} 中管理的 API 升级到 {{site.data.keyword.apiconnect_short}} 服务的更多信息，请参阅[访问更多 API Management 功能](upgrade.html)。
+如需將 {{site.data.keyword.Bluemix_notm}} 中所管理之 API 升級為 {{site.data.keyword.apiconnect_short}} 服務的相關資訊，請參閱[存取其他 API Management 特性](upgrade.html)。
 
