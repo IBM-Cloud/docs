@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-08-30"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 # {{site.data.keyword.GlobalizationPipeline_short}} 故障诊断
 {: #globalizationpipelinets}
 
-*上次更新时间：2016 年 8 月 30 日*
-{: .last-updated}
 
 以下是有关使用 {{site.data.keyword.GlobalizationPipeline_short}} 常见问题的一些解答。
 {:shortdesc}
