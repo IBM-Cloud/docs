@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-09-09"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 # Introduzione alla {{site.data.keyword.GlobalizationPipeline_short}}
 {: #globalizationpipeline}
 
-*Ultimo aggiornamento: 9 settembre 2016*
-{: .last-updated}
 
 {{site.data.keyword.GlobalizationPipeline_full}} è un servizio che fornisce le funzionalità di machine translation e modifica per una rapida traduzione del web o delle IU mobili. Con il relativo dashboard, l'API RESTful e l'integrazione con la delivery pipeline della tua applicazione, puoi distribuire ai clienti globali senza ricreare o ridistribuire la tua applicazione.
 {:shortdesc}
