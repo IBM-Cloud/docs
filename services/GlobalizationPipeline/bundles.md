@@ -14,9 +14,6 @@ lastupdated: "2016-08-30"
 # Working with bundles
 {: #globalizationpipeline_workingwithbundles}
 
-*Last updated: 30 August 2016*
-{: .last-updated}
-
 Each bundle you create contains the key value pairs from your resource file and the complete set of translations that have been generated.
 {:shortdesc}
 
