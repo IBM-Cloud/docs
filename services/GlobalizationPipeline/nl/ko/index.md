@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-09-09"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 # {{site.data.keyword.GlobalizationPipeline_short}} 시작
 {: #globalizationpipeline}
 
-*마지막 업데이트 날짜: 2016년 9월 9일*
-{: .last-updated}
 
 {{site.data.keyword.GlobalizationPipeline_full}}은 웹 또는 모바일 UI를 신속하게 번역하기 위한 편집 기능 및 기계 번역을 제공하는 서비스입니다. 해당 대시보드, RESTful API 및 앱의 딜리버리 파이프라인과의 통합으로, 앱을 다시 빌드하거나 다시 배치할 필요 없이 글로벌 고객에게 릴리스할 수 있습니다.
 {:shortdesc}
