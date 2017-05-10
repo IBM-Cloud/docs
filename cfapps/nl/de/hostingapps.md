@@ -95,7 +95,7 @@ Sie können die folgenden Tools und Services verwenden, die von {{site.data.keyw
 |Eclipse	|Verwalten Sie den Code in Eclipse und verwenden Sie IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, um Ihre Anwendung mit einer Push-Operation zu übertragen.|
 |Git-Integration	|Verwalten Sie den Code mit GitHub und integrieren Sie Git in {{site.data.keyword.Bluemix_notm}}. Sie können mit anderen Entwicklern zusammenarbeiten. Die Anwendung wird automatisch in {{site.data.keyword.Bluemix_notm}} bereitgestellt, wenn Sie Änderungen am Code festschreiben. Sie müssen die Anwendung nicht manuell mit einer Push-Operation übertragen.|
 |{{site.data.keyword.Bluemix_notm}} DevOps Delivery Pipeline	|Verwalten Sie den Code mithilfe eines DevOps GitHub-Repositorys und stellen Sie die Anwendung in {{site.data.keyword.Bluemix_notm}} unter Verwendung von DevOps Delivery Pipeline bereit.|
-{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} tools" caption-side="top"}
+{: caption="Tabelle 1. Bluemix-Tools" caption-side="top"}
 
 
 Wenn die Cloud Foundry-Plattform nicht die Anforderungen der Anwendung erfüllt, können Sie einen Container oder eine virtuelle Maschine verwenden, für den bzw. die eine Laufzeit mit entsprechend angepassten Optionen konfiguriert ist und verwaltet wird.
