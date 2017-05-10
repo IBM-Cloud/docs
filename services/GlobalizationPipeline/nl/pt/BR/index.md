@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-09-09"
 
 ---
 
@@ -15,8 +16,6 @@ copyright:
 {{site.data.keyword.GlobalizationPipeline_short}}
 {: #globalizationpipeline}
 
-*Última atualização: 9 de setembro de 2016*
-{: .last-updated}
 
 {{site.data.keyword.GlobalizationPipeline_full}} é um serviço que fornece tradução de máquina e recursos de edição para traduzir rapidamente IUs da web ou móveis. Com seu painel, API RESTful e integração com o pipeline de entrega de seu app, é possível liberar para clientes globais sem ter de reconstruir ou reimplementar seu app.
 {:shortdesc}
