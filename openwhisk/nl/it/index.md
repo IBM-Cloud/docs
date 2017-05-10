@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-21"
+lastupdated: "2017-04-25"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -33,14 +32,14 @@ Entrambi hanno funzionalità simili per sviluppare le applicazioni, tuttavia la 
 ## Sviluppa nel tuo browser
 {: #openwhisk_start_editor}
 
-Prova {{site.data.keyword.openwhisk_short}} nel tuo [Browser](https://console.{DomainName}/openwhisk/editor){: new_window} per creare azioni, automatizzare le azioni mediante i trigger e scoprire i pacchetti pubblici. 
-Visita la pagina [Ulteriori informazioni](https://console.{DomainName}/openwhisk/learn){: new_window} per un rapido tour dell'interfaccia utente OpenWhisk.
+Prova {{site.data.keyword.openwhisk_short}} nel tuo [Browser](https://console.{DomainName}/openwhisk/editor) per creare azioni, automatizzare le azioni mediante i trigger e scoprire i pacchetti pubblici. 
+Visita la pagina [Ulteriori informazioni](https://console.{DomainName}/openwhisk/learn) per un rapido tour dell'interfaccia utente OpenWhisk.
 
 ## Sviluppa con la CLI
 {: #openwhisk_start_configure_cli}
 
 Puoi utilizzare l'interfaccia di riga comando (CLI) {{site.data.keyword.openwhisk_short}} per configurare il tuo spazio dei nomi e la tua chiave di autorizzazione.
-Passa a [Configura CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window} e segui le istruzioni per installarla.
+Passa a [Configura CLI](https://console.{DomainName}/openwhisk/cli) e segui le istruzioni per installarla.
 
 ## Panoramica
 {: #openwhisk_start_overview}
@@ -128,10 +127,10 @@ Un elenco completo di [Esempi ed esercitazioni OpenWhisk può essere trovato qui
 ## Guida di riferimento API
 {: #openwhisk_start_api notoc}
 * [Documentazione API REST](./openwhisk_reference.html#openwhisk_ref_restapi)
-* [API REST](https://new-console.{DomainName}/apidocs/98){:new_window}
+* [API REST](https://console.{DomainName}/apidocs/98)
 
 ## Link correlati
 {: #general notoc}
-* [Scopri: {{site.data.keyword.openwhisk_short}}](http://www.ibm.com/cloud-computing/bluemix/openwhisk/){:new_window}
-* [{{site.data.keyword.openwhisk_short}} su IBM developerWorks](https://developer.ibm.com/openwhisk/){:new_window}
-* [Sito web dei progetti Apache {{site.data.keyword.openwhisk_short}}](http://openwhisk.org){:new_window}
+* [Scopri: {{site.data.keyword.openwhisk_short}}](http://www.ibm.com/cloud-computing/bluemix/openwhisk/)
+* [{{site.data.keyword.openwhisk_short}} su IBM developerWorks](https://developer.ibm.com/openwhisk/)
+* [Sito web dei progetti Apache {{site.data.keyword.openwhisk_short}}](http://openwhisk.org)

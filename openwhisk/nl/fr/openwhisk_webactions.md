@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-04"
+lastupdated: "2017-04-21"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -47,11 +46,11 @@ L'utilisation de l'indicateur `--web` avec la valeur `true` ou `yes` rend une ac
 
 *Le nom qualifié complet de l'action doit inclure son nom de package, qui est 'default' si l'action ne figure pas dans un package nommé.*
 
-Par exemple, `guest/demo/hello`. La dernière partie de l'URI appelée l'`extension` est généralement `.http` même si d'autres valeurs sont également autorisées, comme décrit ultérieurement. Le chemin de l'API d'action Web peut être utilisé avec `curl` ou `wget` sans clé d'API. Il peut même être entré directement dans votre navigateur.
+Par exemple, `guest/demo/hello`. Le chemin de l'API d'action Web peut être utilisé avec `curl` ou `wget` sans clé d'API. Il peut même être entré directement dans votre navigateur.
 
-Tentez d'ouvrir [https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.http?name=Jane](https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.http?name=Jane) dans votre navigateur Web. Ou essayez d'appeler l'action via `curl` :
+Tentez d'ouvrir [https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello?name=Jane](https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello?name=Jane) dans votre navigateur Web. Ou essayez d'appeler l'action via `curl` :
 ```
-curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.http?name=Jane
+curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello?name=Jane
 ```
 {: pre}
 

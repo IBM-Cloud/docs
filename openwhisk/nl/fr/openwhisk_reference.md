@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-04"
+lastupdated: "2017-04-24"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock:.codeblock}
 {:screen:.screen}
 {:pre: .pre}
@@ -320,7 +319,7 @@ Node.js 6.9.1 :
 - underscore v1.8.3
 - uuid v3.0.0
 - validator v6.1.0
-- watson-developer-cloud v2.9.0
+- watson-developer-cloud v2.29.0
 - when v3.7.7
 - winston v2.3.0
 - ws v1.1.1
@@ -436,17 +435,14 @@ distribution.
 
 Le squelette Docker est pratique pour générer des images Docker compatibles avec OpenWhisk. Vous pouvez l'installer avec la commande d'interface de ligne de commande `wsk sdk install docker`.
 
-Le programme binaire principal doit se trouver dans `/action/exec` à l'intérieur du conteneur. Le fichier exécutable reçoit les
-arguments d'entrée via `stdin` et doit renvoyer un résultat via `stdout`.
+Le programme binaire principal doit se trouver dans `/action/exec` à l'intérieur du conteneur. L'exécutable reçoit les arguments d'entrée via un argument de ligne de commande qui peut être désérialisé en tant qu'objet `JSON`. Il doit renvoyer un résultat via `stdout` sous la forme d'une chaîne d'une ligne `JSON` sérialisée.
 
-Vous pouvez inclure des étapes de compilation ou des dépendances en modifiant le document `Dockerfile` inclus dans
-`dockerSkeleton`.
+Vous pouvez inclure des étapes de compilation ou des dépendances en modifiant le document `Dockerfile` inclus dans `dockerSkeleton`.
 
 ## API REST
 {: #openwhisk_ref_restapi}
 
-Toutes les fonctions du système sont disponibles via une API REST. Des noeuds finaux de collection et d'entité sont présents pour les
-actions, les déclencheurs, les packages, les activations, et les espaces de nom.
+Toutes les fonctions du système sont disponibles via une API REST. Des noeuds finaux de collection et d'entité sont présents pour les actions, les déclencheurs, les packages, les activations, et les espaces de nom.
 
 Les noeuds finaux de collection sont les suivants :
 
@@ -478,7 +474,7 @@ Les noeuds finaux d'espace de nom et d'activation ne prennent en charge que les 
 de packages prennent en charge les requêtes GET, PUT et DELETE. Les noeuds finaux d'actions, de déclencheurs et de règles prennent également en charge les
 requêtes POST, lesquelles sont utilisées pour appeler des actions et des déclencheurs et pour activer ou désactiver des règles. Reportez-vous au document
 [API
-reference](https://new-console.{DomainName}/apidocs/98) pour plus d'informations.
+reference](https://console.{DomainName}/apidocs/98) pour plus d'informations.
 
 Toutes les API sont protégées via une authentification HTTP Basic. Les données d'identification pour l'authentification de base résident dans la propriété
 `AUTH` de votre fichier `~/.wskprops`, et sont délimitées par un signe deux-points. Vous pouvez également extraire ces données
@@ -530,8 +526,8 @@ Le tableau ci-dessous répertorie les limites par défaut pour les actions.
 | timeout | un conteneur ne peut pas s'exécuter plus de N millisecondes | par action |  millisecondes | 60000 |
 | memory | un conteneur ne peut pas allouer plus de N Mo de mémoire | par action | Mo | 256 |
 | logs | un conteneur ne peut pas écrire plus de N Mo de données dans la sortie standard | par action | Mo | 10 |
-| concurrent | N activations au maximum peuvent être soumises par espace de nom ou placées en file d'attente pour leur exécution.  | par espace de nom | nombre | 1000 |
-| minuteRate | N activations au maximum peuvent être soumises par minute par espace de nom.  | par utilisateur | nombre | 5000 |
+| concurrent | N activations au maximum peuvent être soumises par espace de nom ou placées en file d'attente pour leur exécution. | par espace de nom | nombre | 1000 |
+| minuteRate | N activations au maximum peuvent être soumises par minute par espace de nom. | par utilisateur | nombre | 5000 |
 | codeSize | taille maximale du code d'action | non configurable, limite par action | Mo | 48 |
 | parameters | taille maximale des paramètres pouvant être associés | non configurable, limite par action/package/déclencheur | Mo | 1 |
 
@@ -599,7 +595,7 @@ Les déclencheurs sont soumis à un débit de déclenchements par minute, comme 
 
 | limite | description | configurable | unité | défaut |
 | ----- | ----------- | ------------ | -----| ------- |
-| minuteRate | N déclencheurs au maximum peuvent être lancés par minute par espace de nom.  | par utilisateur | nombre | 5000 |
+| minuteRate | N déclencheurs au maximum peuvent être lancés par minute par espace de nom. | par utilisateur | nombre | 5000 |
 
 ### Déclencheurs par minute (valeur fixe : 5000)
 * La limite de débit N est 5000 et limite le nombre de déclencheurs dans des fenêtres d'une minute.

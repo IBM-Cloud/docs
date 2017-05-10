@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-  lastupdated: "2017-04-04"
+lastupdated: "2017-04-21"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -48,11 +47,11 @@ bisogno delle credenziali. Un'azione web può essere richiamata utilizzando un U
 
 *Il nome completo dell'azione deve includere il suo nome pacchetto, che sarà 'predefinito' se l'azione non si trova in un pacchetto denominato.*
 
-Un esempio è `guest/demo/hello`. L'ultima parte dell'URI richiama l'`extension` che in genere è `.http`, sebbene siano permessi anche altri valori come descritto più avanti. Il percorso dell'API dell'azione web può essere utilizzato con `curl` o `wget` senza una chiave API. Può anche essere immesso direttamente nel tuo browser.
+Un esempio è `guest/demo/hello`. Il percorso dell'API dell'azione web può essere utilizzato con `curl` o `wget` senza una chiave API. Può anche essere immesso direttamente nel tuo browser.
 
-Prova ad aprire [https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.http?name=Jane](https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.http?name=Jane) nel tuo browser Web o prova a richiamare l'azione tramite `curl`:
+Prova ad aprire [https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello?name=Jane](https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello?name=Jane) nel tuo browser Web o prova a richiamare l'azione tramite `curl`:
 ```
-curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.http?name=Jane
+curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello?name=Jane
 ```
 {: pre}
 

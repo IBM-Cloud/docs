@@ -29,7 +29,7 @@ end
 Depuis la ligne de commande, entrez `pod install`. Cette commande installe le logiciel SDK pour une application iOS avec une extension watchOS.  Utilisez le fichier d'espace de travail que CocoaPods a créé pour votre application afin d'ouvrir le projet dans Xcode. 
 
 Après l'installation, ouvrez l'espace de travail de votre projet.  L'avertissement suivant peut s'afficher lors de la génération : `Use Legacy Swift Language Version” (SWIFT_VERSION) is required to be configured correctly for targets which use Swift. Use the [Edit > Convert > To Current Swift Syntax…] menu to choose a Swift version or use the Build Settings editor to configure the build setting directly.`
-Ce message apparaît si Cocoapods ne met pas à jour la version de Swift dans le projet Pods. Pour résoudre ce problème, sélectionnez le projet Pods et la cible OpenWhisk. Accédez aux paramètres de génération et associez le paramètre `Use Legacy Swift Language Version` à la valeur `no`. Vous pouvez aussi ajouter les instructions de postinstallation suivantes à la fin de votre fichier Pod :
+Ce message apparaît si Cocoapods ne met pas à jour la version de Swift dans le projet Pods.  Pour résoudre ce problème, sélectionnez le projet Pods et la cible OpenWhisk.  Accédez aux paramètres de génération et associez le paramètre `Use Legacy Swift Language Version` à la valeur `no`. Vous pouvez aussi ajouter les instructions de postinstallation suivantes à la fin de votre fichier Pod :
 
 ```
 post_install do |installer|
@@ -50,7 +50,7 @@ github "openwhisk/openwhisk-client-swift.git" ~> 0.2.2 # Ou version la plus réc
 
 Depuis la ligne de commande, entrez `carthage update --platform ios`. Carthage télécharge et construit le SDK, crée un répertoire intitulé Carthage dans le répertoire de projets de votre application et place un fichier OpenWhisk.framework sous Carthage/build/iOS.
 
-Vous devez ensuite ajouter l'infrastructure OpenWhisk.framework à celles intégrées dans votre projet Xcode. 
+Vous devez ensuite ajouter l'infrastructure OpenWhisk.framework à celles intégrées dans votre projet Xcode.
 
 ### Installation depuis le code source
 

@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-04"
+lastupdated: "2017-04-24"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock:.codeblock}
 {:screen:.screen}
 {:pre: .pre}
@@ -315,7 +314,7 @@ Os pacotes a seguir estão disponíveis para serem usados no ambiente do Node.js
 - underscore v1.8.3
 - uuid v3.0.0
 - validator v6.1.0
-- watson-developer-cloud v2.9.0
+- watson-developer-cloud v2.29.0
 - when v3.7.7
 - winston v2.3.0
 - ws v1.1.1
@@ -331,9 +330,9 @@ O OpenWhisk suporta a execução de ações Python usando duas versões de tempo
 
 ### Ações do Python 3
 
-As ações do Python 3 são executadas usando o Python 3.6.1.
-Para usar esse tempo de execução, especifique o parâmetro da CLI `wsk`,
-`--kind python:3` ao criar ou atualizar uma ação. Os pacotes a seguir estão disponíveis para
+As ações do Python 3 são executadas usando o Python 3.6.1. Para usar esse tempo de execução, especifique o parâmetro da CLI `wsk`,
+`--kind python:3` ao criar ou atualizar uma ação.
+Os pacotes a seguir estão disponíveis para
 uso por ações do Python, além das bibliotecas padrão do Python 3.6.
 
 - aiohttp v1.3.3
@@ -381,8 +380,7 @@ uso por ações do Python, além das bibliotecas padrão do Python 3.6.
 
 ### Ações do Python 2
 
-As ações do Python 2 são executadas usando o Python 2.7.12.
-Esse é o tempo de execução padrão para ações do Python, a menos que você especifique a sinalização
+As ações do Python 2 são executadas usando o Python 2.7.12. Esse é o tempo de execução padrão para ações do Python, a menos que você especifique a sinalização
 `--kind` ao criar ou atualizar uma ação. Para selecionar explicitamente esse tempo de
 execução, use `--kind python:2`. Os pacotes a seguir estão disponíveis para uso por ações do
 Python 2, além da biblioteca padrão do Python 2.7.
@@ -436,8 +434,7 @@ As ações do Docker executam binário fornecido pelo usuário em um contêiner 
 
 A estrutura básica do Docker é uma maneira conveniente de construir imagens do Docker compatíveis com o OpenWhisk. É possível instalar a estrutura básica com o comando da CLI `wsk sdk install docker`.
 
-O programa binário principal deve estar localizado em `/action/exec` dentro do contêiner. O executável recebe os argumentos de entrada via `stdin` e deve retornar um
-resultado via `stdout`.
+O programa binário principal deve estar localizado em `/action/exec` dentro do contêiner. O executável recebe os argumentos de entrada por meio de uma sequência única de argumentos de linha de comandos que pode ser desserializada como um objeto `JSON`. Ele deve retornar um resultado por meio de `stdout` como sequência de linha única de `JSON` serializado.
 
 Você pode incluir qualquer etapa ou dependência de compilação modificando o `Dockerfile` incluído no `dockerSkeleton`.
 
@@ -476,7 +473,7 @@ Existem terminais de entidade para cada tipo de entidade:
 Os terminais de namespace e ativação suportam apenas solicitações GET. Os terminais
 de ações, acionadores, regras e pacotes suportam solicitações GET, PUT e DELETE. Os
 terminais de ações, acionadores e regras também suportam solicitações POST, que são
-usadas para chamar ações e acionadores e ativar ou desativar as regras. Consulte a [Referência de API](https://new-console.{DomainName}/apidocs/98)
+usadas para chamar ações e acionadores e ativar ou desativar as regras. Consulte a [Referência de API](https://console.{DomainName}/apidocs/98)
 para obter detalhes.
 
 Todas as APIs são protegidas com autenticação Básica de HTTP. As credenciais de

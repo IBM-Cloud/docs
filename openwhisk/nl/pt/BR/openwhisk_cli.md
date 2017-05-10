@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+lastupdated: "2017-04-25"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -19,7 +18,7 @@ O {{site.data.keyword.openwhisk_short}} oferece uma interface da linha de comand
 ## Configurando a CLI do {{site.data.keyword.openwhisk_short}} 
 
 É possível usar a interface da linha de comandos (CLI) do {{site.data.keyword.openwhisk_short}} para configurar o namespace e a chave de autorização.
-Acesse [Configurar CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window} e siga as instruções para instalá-la.
+Acesse [Configurar CLI](https://console.{DomainName}/openwhisk/cli) e siga as instruções para instalá-la.
 
 Há duas propriedades necessárias a serem configuradas para usar a CLI:
 

@@ -7,7 +7,6 @@ lastupdated: "2017-03-16"
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -15,7 +14,7 @@ lastupdated: "2017-03-16"
 # Intégration d'OpenWhisk avec Serverless Framework
 {: #openwhisk_goserverless}
 
-[Serverless Framework](https://serverless.com/) est une infrastructure open source pour construction d'applications sans serveur. A l'aide d'un simple fichier manifeste, les développeurs peuvent définir des fonctions sans serveur, les connecter à des sources d'événements et déclarer les services de cloud requis par leur application. L'infrastructure gère le déploiement de ces applications sans serveur vers les fournisseurs de cloud. Elle permet également aux développeurs de surveiller des services en environnement de production, de diffuser des mises à jour et d'aider au débogage de problèmes. Elle dispose aussi d'un écosystème dynamique de plug-ins tiers venant étendre les fonctionnalités de l'infrastructure. OpenWhisk en fait partie.
+[Serverless Framework](https://serverless.com/) est une infrastructure open source pour construction d'applications sans serveur. A l'aide d'un simple fichier manifeste, les développeurs peuvent définir des fonctions sans serveur, les connecter à des sources d'événements et déclarer les services de cloud requis par leur application. L'infrastructure gère le déploiement de ces applications sans serveur vers les fournisseurs de cloud. Elle permet également aux développeurs de surveiller des services en environnement de production, de diffuser des mises à jour et d'aider au débogage de problèmes. Elle dispose aussi d'un écosystème dynamique de plug-ins tiers venant étendre les fonctionnalités de l'infrastructure. OpenWhisk en fait partie. 
 {:shortdesc}
 
 OpenWhisk a [son propre plug-in de fournisseur pour Serverless Framework](https://github.com/serverless/serverless-openwhisk). Les développeurs utilisant l'infrastructure Serverless Framework peuvent choisir de déployer leurs applications vers n'importe quelle instance de la plateforme OpenWhisk (hébergée sur Bluemix, un autre cloud ou un registre privé). La prise en charge de fournisseurs divers signifie également que le portage d'applications entre plateformes est beaucoup plus facile et que les développeurs peuvent développer des applications multi-clouds sans serveur.
