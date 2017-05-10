@@ -219,7 +219,7 @@ No modelo de camada simples, o preço unitário é determinado pela camada na qu
 | Camada 3: 2.001 - 3.000                  |   US$ 0,75                       |
 | Camada 4: 3.001 - 4.000           |      US$ 0,60                    |
 |Camada 5: &gt; 4.000 | US$ 0,40 | 
-{:caption="Table 1. Simple tier pricing table" caption-side="top"}
+{:caption="Tabela 1. Tabela de precificação de camada simples" caption-side="top"}
 
 A tabela a seguir ilustra o quanto do valor que você paga pelo seu plano se baseia em um modelo de precificação de camada simples:
 
@@ -230,7 +230,7 @@ A tabela a seguir ilustra o quanto do valor que você paga pelo seu plano se bas
 |2.500 |	2.500 × 0,75 = 1.875 |	US$ 1.875|
 |... |	... |	...|
 |5.200 |	5.200 × 0,40 = 2.080 |US$ 2.080|
-{:caption="Table 2. Charge calculation by using the simple tier pricing model" caption-side="top"}
+{:caption="Tabela 2. Cálculo de encargo usando o modelo de precificação de camada simples" caption-side="top"}
 
 ####Camada graduada
 {: #graduated_tier}
@@ -244,7 +244,7 @@ No modelo de camada graduada, o preço unitário por camada diminui à medida qu
 |    Camada 3: 2.001 - 3.000 |	US$ 0,75 |
 |    Camada 4: 3.001 - 4.000 |	US$ 0,60 |
 |    Camada 5: &gt; 4.000 |	US$ 0,40 |
-{:caption="Table 3. Graduated tier pricing table" caption-side="top"}
+{:caption="Tabela 3. Tabela de precificação de camada graduada" caption-side="top"}
 
 A tabela a seguir ilustra o quanto do valor que você paga pelo seu plano se baseia em um modelo de precificação de camada graduada:
 
@@ -255,7 +255,7 @@ A tabela a seguir ilustra o quanto do valor que você paga pelo seu plano se bas
 |2.500 |	(1000 × 1 (preço unitário da Camada 1) + (1000 × 0,90 (preço unitário da Camada 2) + (500 × 0,75 (preço unitário da Camada 3)) = 2275 |	US$ 2.275 |
 |... |	... |	...|
 |5.200 |	(1000 × 1 (preço unitário da Camada 1) + (1000 × 0,90 (preço unitário da Camada 2) + (1000 × 0,75 (preço unitário da Camada 3) + (1000 × 0,60 (preço unitário da Camada 4) + (1200 × 0,40 (preço unitário da Camada 5)) = 3730 |	US$ 3.730|
-{:caption="Table 4. Charge calculation by using the graduated tier pricing model" caption-side="top"}
+{:caption="Tabela 4. Cálculo de encargo usando o modelo de precificação de camada graduada" caption-side="top"}
 
 ####Camada em bloco
 {: #block_tier}
@@ -269,7 +269,7 @@ No modelo de camada em bloco, o preço é um encargo definido pela quantidade ut
 | Camada 3: &lt;= 3.000 |	US$ 2.800|
 | Camada 4: &lt;= 4.000 |	US$ 3.500|
 | Camada 5: &lt;= 10.000 |	US$ 5.000|
-{:caption="Table 5. Block tier pricing table" caption-side="top"}
+{:caption="Tabela 5. Tabela de precificação de camada de bloco" caption-side="top"}
 
 A tabela a seguir ilustra o quanto do valor que você paga pelo seu plano se baseia em um modelo de precificação de camada em bloco:
 
@@ -279,7 +279,7 @@ A tabela a seguir ilustra o quanto do valor que você paga pelo seu plano se bas
 |1.500 |	O número de itens se enquadra na Camada 2, assim o preço total é US$ 1.900. |	U$ 1.900|
 |... |	... |	...|
 |5.200 |	O número de itens se enquadra na Camada 5, assim o preço total é US$ 5.000. |	US$ 5.000|
-{:caption="Table 6. Charge calculation by using the block tier pricing model" caption-side="top"}
+{:caption="Tabela 6. Cálculo de encargo usando o modelo de precificação de camada de bloco" caption-side="top"}
 
 ##Como estimar seus custos
 {: #cost}
@@ -329,7 +329,7 @@ Para manter o exemplo simples, suponha que os preços na tabela a seguir não fl
 |Data Cache - Padrão |	5 GB de espaço em cache e uma réplica |	$155,00 USD/instância |
 |Data Cache - Premium |	25 GB de espaço em cache e uma réplica |	$505,00 USD/instância|
 |IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2 GB de armazenamento de dados grátis<br/>50.000 chamadas API leves grátis por mês<br/>10.000 chamadas API pesadas grátis por mês | $1,00 USD/GB<br/>$0,03 USD/1000 chamadas API leves<br/>$0,15 USD/1000 chamadas API pesadas |
-{:caption="Table 7. Pricing sheet" caption-side="top"}
+{:caption="Tabela 7. Folha de precificação" caption-side="top"}
 
 ###Calculando o preço do aplicativo
 
@@ -389,7 +389,7 @@ Embora o dólar dos Estados Unidos (USD) seja usado nos exemplos de precificaç�
 |SEK |	  Coroa sueca|
 |vermelho cereja |    Dólar americano|
 |ZAR |	  Rand sul-africano|
-{:caption="Table 8. Supported currencies" caption-side="top"}
+{:caption="Tabela 8. Moedas suportadas" caption-side="top"}
 
 **Observação:** se você vinculou suas contas {{site.data.keyword.Bluemix_notm}} e SoftLayer, a fatura única que você recebe será somente em dólares dos Estados Unidos (USD).  
 
@@ -428,13 +428,15 @@ Para abrir a visualização **Notificações**, clique em **Conta** &gt; *your_a
 Apenas determinados serviços oferecem a possibilidade de mudança de plano de serviço. Se mudanças de plano estiverem ativadas para o serviço, o Painel de serviço exibirá uma opção **Plano** na navegação. Cada serviço terá um conjunto diferente de etapas subsequentes se você mudar o seu plano.
 
 1. Para mudar seu plano, no Painel de serviço, clique em **Plano**. Normalmente, é possível fazer upgrade do plano ou reduzi-lo.
-2. Depois de mudar o plano, você deverá executar um conjunto de etapas subsequentes. As etapas serão diferentes dependendo do tipo de mudança de plano e do serviço. Por exemplo, se você reduziu o seu plano, pode precisar remontar o seu app. Ou, se você fez upgrade do seu plano, pode precisar remontar o seu app e tomar outras ações.<br/><br/>Para remontar seu app, acesse o Painel do {{site.data.keyword.Bluemix_notm}} e localize o app ao qual o serviço está ligado. No menu do app, selecione **Reiniciar app**.<br/><br/>Outras ações de etapa subsequente dependem do serviço. Veja as ações específicas na tabela a seguir.
+2. Depois de mudar o plano, você deverá executar um conjunto de etapas subsequentes. As etapas serão diferentes dependendo do tipo de mudança de plano e do serviço. Por exemplo, se
+tiver reduzido o plano, talvez precise remontar seu app. Ou, caso tenha feito upgrade do
+plano, talvez seja necessário remontar o app e tomar ações adicionais.<br/><br/>Para remontar seu app, acesse o Painel do {{site.data.keyword.Bluemix_notm}} e localize o app ao qual o serviço está ligado. No menu do app, selecione **Reiniciar app**.<br/><br/>Outras ações de etapa subsequente dependem do serviço. Veja as ações específicas na tabela a seguir.
 
 |Serviço |	Informações|
 |--------|-------------|
 |Presence Insights 	|Se você tiver um plano Lite e exceder os abonos grátis, uma mensagem 403 é exibida ou registrada para indicar que você não está mais autorizado e que a sua instância de serviço está desativada. Ademais, as chamadas API REST do POST serão
 rejeitadas com a resposta 403.<br/><br/>Se o serviço estiver desativado porque o abono grátis foi excedido, será necessário fazer upgrade de um plano Lite para um plano Pago. O seu serviço será reativado em 2 horas.<br/><br/>Se você tiver um plano Pago, será possível reduzi-lo para o plano Lite, desde que seu uso permaneça dentro do abono do plano Lite para eventos e armazenamento total.<br/><br/>Ao fazer upgrade ou reduzir seu plano, você não precisará remontar ou reiniciar seus apps.|
-{:caption="Table 9. Next steps for changing your plan" caption-side="top"}
+{:caption="Tabela 9. Etapas seguintes para mudar seu plano" caption-side="top"}
 
 ###Como mudar seu plano por meio da interface de linha de comandos
 
