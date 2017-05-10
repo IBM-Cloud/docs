@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-10-14"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 # Gerenciando traduções
 {: #globalizationpipeline_managingtranslations}
 
-*Última atualização: 14 de outubro de 2016*
-{: .last-updated}
 
 Uma vez criados os pacotes configuráveis e iniciada a geração de traduções para seu aplicativo, o conteúdo gerado pela máquina poderá ser usado como está ou modificado posteriormente. Você também tem a opção de usar uma tradução de máquina diferente do padrão. Esta seção descreve como mudar o mecanismo de tradução de máquina que executa as traduções de seus pacotes configuráveis, como executar edição humana pós-tradução e também como designar funções de usuário e restrições de acesso às pessoas que precisarão acessar as traduções.
 {:shortdesc}
