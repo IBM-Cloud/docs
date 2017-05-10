@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-08-30"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 # 번들 작업
 {: #globalizationpipeline_workingwithbundles}
 
-*마지막 업데이트 날짜: 2016년 8월 30일*
-{: .last-updated}
 
 작성하는 각 번들에는 생성된 번역의 전체 세트 및 리소스 파일의 키 값 쌍이 포함되어 있습니다.
 {:shortdesc}
