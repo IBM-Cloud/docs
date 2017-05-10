@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-07-12"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 # Tipps zur automatischen Übersetzung
 {: #globalizationpipeline_tips}
-
-*Letzte Aktualisierung: 12. Juli 2016*
-{: .last-updated}
 
 Automatische Übersetzung kann dazu dienen, eine Näherung der Bedeutung des Ausgangstextes zur Verfügung zu stellen. Die Qualität und Zweckmäßigkeit von automatische Übersetzung variiert stark und hängt von der Zielsprache und der verwendeten Engine für automatische Übersetzung ab. Einer der Schlüsselfaktoren für die Qualität einer automatischen Übersetzung ist die Qualität des Ausgangstexts selbst. Ein Ausgangstext, der viele umgangssprachliche Ausdrücke, unvollständige Sätze, falsche Interpunktion und mehrdeutige Wörter und Ausdrücke enthält, wird möglicherweise nicht angemessen übersetzt.
 {:shortdesc}
