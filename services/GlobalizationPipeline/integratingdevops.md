@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-08-30"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # Integrating with IBM DevOps
 {: #integratingdevops}
-
-*Last updated: 30 August 2016*
-{: .last-updated}
 
 You can integrate {{site.data.keyword.GlobalizationPipeline_short}} with {{site.data.keyword.jazzhub_short}} to automate the translation of your application UI, saving time and reducing manual translation management operations. See [this video](https://www.youtube.com/watch?v=sSrIUjRbXYQ) and learn how to use {{site.data.keyword.GlobalizationPipeline_short}} with {{site.data.keyword.jazzhub_short}}.
 
