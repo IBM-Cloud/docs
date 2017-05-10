@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-08-30"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 # 使用軟體組
 {: #globalizationpipeline_workingwithbundles}
 
-*前次更新：2016 年 8 月 30 日*
-{: .last-updated}
 
 您建立的每一個軟體組都會包含資源檔中的鍵值組，以及一組已產生的完整翻譯。
 {:shortdesc}
