@@ -6,7 +6,6 @@ lastupdated: "2017-02-07"
 
 ---
 
-
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -26,31 +25,31 @@ Procédez comme suit pour ajouter un graphique ou un tableau sur le tableau de b
 
 1. Pour accéder à l'onglet **Journaux** de votre application Cloud Foundry, cliquez sur le nom d'application dans le tableau **Applications Cloud Foundry** du tableau de bord **Applications** de {{site.data.keyword.Bluemix_notm}}, puis cliquez sur l'onglet **Journaux**. Les journaux de votre application s'affichent.
 
-2. Pour accéder au tableau de bord Kibana pour votre application, cliquez sur **Vue avancée** ![](images/logging_advanced_view.jpg). Le tableau de bord Kibana s'affiche.
+2. Pour accéder au tableau de bord Kibana pour votre application, cliquez sur **Vue avancée** ![Lien Vue avancée](images/logging_advanced_view.jpg "Lien Vue avancée"). Le tableau de bord Kibana s'affiche.
 
-3. Sur le tableau de bord Kibana, faites défiler l'écran vers le bas, puis cliquez sur l'icône d'**ajout d'une ligne** ![](images/logging_add_row.jpg) afin de créer une ligne pour le panneau que vous souhaitez ajouter. La sous-fenêtre Paramètres du tableau de bord s'affiche. 
+3. Sur le tableau de bord Kibana, faites défiler l'écran vers le bas, puis cliquez sur l'icône d'**ajout d'une ligne** ![Icône d'ajout d'une ligne](images/logging_add_row.jpg "Icône d'ajout d'une ligne") afin de créer une ligne pour le panneau que vous souhaitez ajouter. La sous-fenêtre Paramètres du tableau de bord s'affiche. 
 	
-	![Sous-fenêtre Paramètres du tableau de bord](images/logging_dashboard_settings.jpg)
+	![Sous-fenêtre Paramètres du tableau de bord](images/logging_dashboard_settings.jpg "Sous-fenêtre Paramètres du tableau de bord")
 	
 	Dans la sous-fenêtre Ajouter une ligne, entrez un nom pour votre ligne dans la zone **Titre**, puis cliquez sur **Créer une ligne**. Une nouvelle ligne est ajoutée. Vous pouvez ajuster l'ordre des lignes en cliquant sur les icônes représentant une **flèche vers le haut** ou une **flèche vers le bas** en regard des titres de ligne. Lorsque vous avez défini l'ordre des lignes, cliquez sur **Sauvegarder**. Une ligne vide est créée sur le tableau de bord Kibana.
 
 4. Ajoutez un panneau en cliquant sur **Ajouter un panneau à une ligne vide**. La sous-fenêtre Paramètres de ligne s'affiche.
 
-    ![Sous-fenêtre Paramètres de ligne](images/logging_row_settings.jpg)
+    ![Sous-fenêtre Paramètres de ligne](images/logging_row_settings.jpg "Sous-fenêtre Paramètres de ligne")
 	
 	Vous pouvez choisir d'autres types de panneau, tels que **Tableau**, **Histogramme** ou **Dispositions** dans la liste déroulante **Sélectionner un type de panneau**. Sélectionnez **Dispositions** pour créer un graphique à barres, un graphique circulaire ou un tableau en fonction de vos requêtes. Une plage d'options de configuration s'affiche dans la sous-fenêtre Paramètres de ligne.
 	
-	![Ajout d'un panneau dans la sous-fenêtre Paramètres de ligne](images/logging_add_panel.jpg)
+	![Ajout d'un panneau dans la sous-fenêtre Paramètres de ligne](images/logging_add_panel.jpg "Ajout d'un panneau dans la sous-fenêtre Paramètres de ligne")
 	
 	Configurez votre panneau. Entrez un **titre** pour votre représentation graphique. Sélectionnez l'**étendue** de votre panneau dans la liste déroulante ; l'**étendue** détermine la largeur de votre panneau dans le tableau de bord. Dans la section Paramètres, supprimez le contenu de **Zone** et entrez une zone de journal valide ; par exemple, `instance_id`. 
 
 5. Dans la section Options d'affichage, sélectionnez **Barres**, **Circulaire** ou **Tableau** dans la liste déroulante **Style** pour choisir un graphique à barres, un graphique circulaire ou un tableau. Dans la section Requêtes, choisissez **Sélectionné** dans la liste déroulante **Requêtes** pour utiliser les données de journal de vos requêtes de tableau de bord. Pour terminer, cliquez sur **Sauvegarder**. Votre nouveau panneau s'affiche sur le tableau de bord.
 
-	![Panneau contenant un graphique à barres affiché dans le tableau de bord](images/logging_bar_chart_panel.jpg)
+	![Panneau contenant un graphique à barres affiché dans le tableau de bord](images/logging_bar_chart_panel.jpg "Panneau contenant un graphique à barres affiché dans le tableau de bord")
 	
-6. Pour modifier ce panneau de sorte qu'il affiche un tableau, cliquez sur l'icône de **configuration** ![](images/logging_dashboard_config_panel.jpg). La sous-fenêtre Paramètres de dispositions s'affiche. 
+6. Pour modifier ce panneau de sorte qu'il affiche un tableau, cliquez sur l'icône de **configuration** ![Icône de configuration](images/logging_dashboard_config_panel.jpg "Icône de configuration"). La sous-fenêtre Paramètres de dispositions s'affiche. 
 
-	![Sous-fenêtre Paramètres de dispositions](images/logging_terms_settings.jpg)
+	![Sous-fenêtre Paramètres de dispositions](images/logging_terms_settings.jpg "Sous-fenêtre Paramètres de dispositions")
 	
 	Cliquez sur l'onglet **Panneau**, puis sélectionnez **Tableau** dans la liste déroulante **Style**. Cliquez sur **Sauvegarder** pour mettre à jour le panneau et revenir au tableau de bord.
 
@@ -58,6 +57,6 @@ Procédez comme suit pour ajouter un graphique ou un tableau sur le tableau de b
 
     **Remarque :** Si vous tentez de sauvegarder un tableau de bord avec un nom contenant des espaces vides, l'opération échoue. Entrez un nom ne contenant pas d'espaces et cliquez sur l'icône de **sauvegarde**.
 
-    ![Sauvegarde d'un nom du tableau de bord](images/logging_save_dashboard.jpg).
+    ![Sauvegarde d'un nom de tableau de bord](images/logging_save_dashboard.jpg "Sauvegarde d'un nom de tableau de bord").
 
 

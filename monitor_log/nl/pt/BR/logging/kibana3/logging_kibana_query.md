@@ -27,9 +27,9 @@ Conclua as tarefas a seguir para criar uma consulta para seus logs do app Cloud 
     
     Os logs para seu app são exibidos.
 
-2. Acesse o painel do Kibana para seu app. Clique em **Visualização avançada** ![Link de visualização avançada](images/logging_advanced_view.jpg). O painel do Kibana é exibido.
+2. Acesse o painel do Kibana para seu app. Clique em **Visualização avançada** ![Link da visualização avançada](images/logging_advanced_view.jpg "Link da visualização avançada"). O painel do Kibana é exibido.
 
-3. No painel do Kibana, clique em **CONSULTA** ![Ícone de Consulta](images/logging_query.jpg) para exibir o campo. Ao acessar o Kibana para visualizar seus logs do app na guia **Logs** para seu app, uma consulta é criada para mostrar todos os logs para o application_id de seu app.
+3. No painel do Kibana, clique em **CONSULTA** ![Ícone de consulta](images/logging_query.jpg "Ícone de consulta") para exibir o campo. Ao acessar o Kibana para visualizar seus logs do app na guia **Logs** para seu app, uma consulta é criada para mostrar todos os logs para o application_id de seu app.
 	
     Para editar sua consulta, clique no campo **CONSULTA** e insira um termo de procura.
 
@@ -41,28 +41,28 @@ Conclua as tarefas a seguir para criar uma consulta para seus logs do app Cloud 
 
 4. Se você desejar comparar os resultados de duas consultas separadas, será possível incluir outro termo de consulta em seu painel. Para incluir outra consulta, clique no ícone **+** no final do campo **CONSULTA**.
 
-    ![Campo de consulta](images/logging_query_field.jpg)
+    ![Campo de Consulta](images/logging_query_field.jpg "Campo de Consulta")
 	
     Um novo campo **CONSULTA** que contém o curinga \* é exibido. Essa consulta instrui o Kibana a incluir todas as entradas.
 	
-    ![Campo de consulta adicional](images/logging_additional_query_field.jpg)
+    ![Campo de consulta adicional](images/logging_additional_query_field.jpg "Campo de consulta adicional")
 	
     O painel é atualizado com os resultados de sua nova consulta. A área de janela **EVENTOS POR HORÁRIO** exibe uma representação gráfica para ambas as consultas, junto com o número de termos para cada consulta entre parênteses. 
 	
-    ![Painel exibindo o gráfico para ambas as consultas](images/logging_dashboard_queries.jpg)
+    ![Painel exibindo gráfico para ambas as consultas](images/logging_dashboard_queries.jpg "Painel exibindo gráfico para ambas as consultas")
 	
 5. Clique no novo campo **CONSULTA** para editar seu conteúdo e incluir uma condição de consulta; por exemplo, `instance_id:1`. Use a área de janela **EVENTOS POR HORÁRIO** para comparar os resultados de suas consultas.
 
-    ![Painel exibindo o gráfico para ambas as consultas](images/logging_dashboard_queries2.jpg)
+    ![Painel exibindo gráfico para ambas as consultas](images/logging_dashboard_queries2.jpg "Painel exibindo gráfico para ambas as consultas")
 
 6. Para excluir uma consulta, mova o mouse sobre o campo **CONSULTA** que você deseja excluir para revelar o ícone de **exclusão**. Clique no ícone de **exclusão**.
 
-    ![Campo de consulta com o ícone de exclusão](images/logging_delete_query.jpg)
+    ![Campo de consulta com ícone de exclusão](images/logging_delete_query.jpg "Campo de consulta com ícone de exclusão")
 
-7. Para salvar esse painel com um nome reconhecível, clique no ícone **Salvar** ![Ícone Salvar](images/logging_save.jpg) e insira um nome para seu painel. 
+7. Para salvar esse painel com um nome reconhecível, clique no ícone **Salvar** ![Ícone Salvar](images/logging_save.jpg "Ícone Salvar") e insira um nome para seu painel. 
 
     **Nota:** se você tentar salvar um painel com um nome contendo espaços em branco, ele não será salvo. Insira um nome sem espaços e clique no ícone **Salvar**.
 
-    ![Salvar nome do painel ](images/logging_save_dashboard.jpg)
+    ![Salvar nome do painel](images/logging_save_dashboard.jpg "Salvar nome do painel")
 
 

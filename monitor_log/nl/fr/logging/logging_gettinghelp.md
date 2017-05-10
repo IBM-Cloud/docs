@@ -14,10 +14,10 @@ lastupdated: "2017-03-06"
 {:screen: .screen}
 
 
-# Aide et support
+# Aide et assistance relatives à la consignation
 {: #gettinghelp}
 
-Si vous avez des problèmes ou des questions quand vous utilisez les fonctions de journalisation dans {{site.data.keyword.Bluemix}}, vous pouvez vérifier le statut de {{site.data.keyword.Bluemix_notm}}, ou obtenir de l'aide en recherchant des informations ou en posant des questions sur un forum. Vous pouvez également ouvrir un ticket de demande de service.
+En cas de problèmes ou si vous vous posez des questions lors de l'utilisation des fonctions de consignation dans {{site.data.keyword.Bluemix}}, vous pouvez vérifier le statut de {{site.data.keyword.Bluemix_notm}}, ou obtenir de l'aide en recherchant des informations ou en posant des questions sur un forum. Vous pouvez également ouvrir un ticket de demande de service.
 {:shortdesc}
 
 * Vous pouvez vérifier si {{site.data.keyword.Bluemix_notm}} est disponible en accédant à la [page de statut Bluemix](https://developer.ibm.com/bluemix/support/#status){:new_window}.

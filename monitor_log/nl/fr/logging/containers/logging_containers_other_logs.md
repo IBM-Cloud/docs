@@ -17,7 +17,7 @@ lastupdated: "2017-03-16"
 # Collecte de données de journal autres que par défaut depuis un conteneur
 {: #logging_containers_collect_data}
 
-Pour capturer des données depuis des emplacements de journal autres que ceux par défaut dans un conteneur, définissez la variable d'environnement **LOG_LOCATIONS** lorsque vous créez un conteneur.
+Pour capturer des données depuis des emplacements de journal autres que ceux par défaut dans un conteneur, définissez la variable d'environnement **LOG_LOCATIONS** lorsque vous créez un conteneur. 
 {:shortdesc}
 
 * Ajoutez la variable d'environnement **LOG_LOCATIONS** en spécifiant le chemin du fichier journal lorsque vous créez le conteneur. 
@@ -32,7 +32,7 @@ Pour collecter des données autres que celles par défaut via la console, procé
 
     La liste des images qui est affichée inclut les images fournies par {{site.data.keyword.IBM}} et celles stockées dans votre registre {{site.data.keyword.Bluemix_notm}} privé. 
 
-2. Définissez votre conteneur. Choisissez un type, entrez un nom pour le conteneur, sélectionnez sa taille et définissez d'autres attributs comme les informations d'adresse IP et les ports. Pour plus d'informations, voir [création et déploiement d'un conteneur unique via l'interface utilisateur de {{site.data.keyword.Bluemix_notm}}](/docs/containers/container_single_ui.html). 
+2. Définissez votre conteneur. Choisissez un type, entrez un nom pour le conteneur, sélectionnez sa taille et définissez d'autres attributs comme les informations d'adresse IP et les ports. Pour plus d'informations, voir [Création et déploiement d'un conteneur unique via l'interface utilisateur {{site.data.keyword.Bluemix_notm}}](/docs/containers/container_single_ui.html#gui). 
 
 3. Développez la section **Options avancées** et sélectionnez **Ajouter une nouvelle variable d'environnement**.
 
@@ -41,6 +41,7 @@ Pour collecter des données autres que celles par défaut via la console, procé
     Par exemple, lorsque vous ajoutez un conteneur basé sur l'image Liberty la plus récente, pour analyser le fichier journal *dpkg.log*, définissez la variable d'environnement sur la valeur suivante :
     
     <table>
+      <caption>Tableau 1. Exemple de valeur d'emplacement de journal</caption>
       <tbody>
         <tr>
           <th align="center">Nom de la variable</th>
@@ -75,6 +76,7 @@ connecté.
     Vous pouvez inclure l'option **–a** si vous désirez vous connecter à une région spécifique dans {{site.data.keyword.Bluemix_notm}}. Par exemple, le tableau suivant liste les commandes par région :
 
     <table>
+      <caption>Tableau 2. Commandes par région</caption>
       <tbody>
         <tr>
           <th align="center">Région</th>
@@ -88,11 +90,11 @@ connecté.
           <td align="left">Royaume-Uni</td>
           <td align="left">cf login -a api.eu-gb.bluemix.net</td>
         </tr>
-        <tr>
-          <td align="left">Sydney</td>
-          <td align="left">cf login -a api.au-syd.bluemix.net</td>
+	 <tr>
+          <td align="left">Francfort</td>
+          <td align="left">cf login -a api.eu-de.bluemix.net</td>
         </tr>
-      </tbody>
+       </tbody>
     </table>
     
 
@@ -104,9 +106,10 @@ connecté.
     
     `docker run -p numéro_port -e "LOG_LOCATIONS=log1,log2" --name nom_conteneur registry.nom_domaine/nom_image:étiquette_image`
     
-    où 
+    où
     
      <table>
+      <caption>Tableau 3. Options de commande</caption>
       <tbody>
         <tr>
           <th align="center">Option</th>

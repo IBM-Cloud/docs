@@ -17,11 +17,11 @@ lastupdated: "2017-03-16"
 # Coletando dados do log não padrão de um contêiner
 {: #logging_containers_collect_data}
 
-Para capturar dados de locais de log não padrão dentro de um contêiner, configure a variável de ambiente **LOG_LOCATIONS** ao criar um contêiner.
+Para capturar dados de locais de log não padrão dentro de um contêiner, configure a variável de ambiente **LOG_LOCATIONS** ao criar um contêiner. 
 {:shortdesc}
 
-* Inclua a variável de ambiente **LOG_LOCATIONS** com um caminho para o arquivo de log quando criar o contêiner.  
-* É possível incluir múltiplos arquivos de log separando-os com vírgulas.  
+* Inclua a variável de ambiente **LOG_LOCATIONS** com um caminho para o arquivo de log quando criar o contêiner. 
+* É possível incluir múltiplos arquivos de log separando-os com vírgulas. 
 
 ## Coletando dados do log não padrão por meio do console do Bluemix
 {: #logging_containers_collect_data_ui}
@@ -32,15 +32,16 @@ Conclua as etapas a seguir para coletar dados não padrão por meio do console:
 
     A lista de imagens que são exibidas inclui imagens que são fornecidas pela {{site.data.keyword.IBM}} e imagens que estão armazenadas em seu registro privado do {{site.data.keyword.Bluemix_notm}}. 
 
-2. Defina seu contêiner. Escolha o tipo, insira um nome para o contêiner, selecione seu tamanho e defina outros atributos, como detalhes e portas de endereço IP. Para obter mais informações, consulte [Criar e implementar um contêiner único por meio da IU do {{site.data.keyword.Bluemix_notm}}](/docs/containers/container_single_ui.html). 
+2. Defina seu contêiner. Escolha o tipo, insira um nome para o contêiner, selecione seu tamanho e defina outros atributos, como detalhes e portas de endereço IP. Para obter mais informações, veja [Criar e implementar um contêiner único por meio da UI do {{site.data.keyword.Bluemix_notm}}](/docs/containers/container_single_ui.html#gui). 
 
 3. Expanda a seção **Opções avançadas** e selecione **Incluir uma nova variável de ambiente**.
 
 4. Inclua a variável **LOG_LOCATIONS** e configure seu valor para o log que deseja analisar.
 
-    Por exemplo, ao incluir um contêiner que se baseia na imagem mais recente do Liberty, para analisar o arquivo de log *dpkg.log*, configure o valor de ambiente para o seguinte:  
+    Por exemplo, ao incluir um contêiner que se baseia na imagem mais recente do Liberty, para analisar o arquivo de log *dpkg.log*, configure o valor de ambiente para o seguinte:
     
     <table>
+      <caption>Tabela 1. Valor de amostra de locais de log</caption>
       <tbody>
         <tr>
           <th align="center">Nome da variável</th>
@@ -65,13 +66,14 @@ Conclua as etapas a seguir para coletar dados do log não padrão por meio da CL
 
 1. Configure um terminal para usar a CLI do {{site.data.keyword.containershort}}. Para obter mais informações, consulte [Configurando a CLI do IBM Bluemix Container Service](/docs/containers/container_cli_cfic_install.html).
 
-2. Efetue login na CLI do Cloud Foundry usando o comando a seguir: `cf login`. Insira seu ID, sua senha, sua organização e seu espaço do {{site.data.keyword.Bluemix_notm}} quando forem solicitados.  
+2. Efetue login na CLI do Cloud Foundry usando o comando a seguir: `cf login`. Insira seu ID, sua senha, sua organização e seu espaço do {{site.data.keyword.Bluemix_notm}} quando forem solicitados. 
 
     Por padrão, você é conectado à região sul dos EUA ou à última região na qual efetuou login. 
     
     É possível incluir a opção **-a** para efetuar login em uma região específica no {{site.data.keyword.Bluemix_notm}}. Por exemplo, a tabela a seguir lista os comandos por região:
 
     <table>
+      <caption>Tabela 2. Comandos por região</caption>
       <tbody>
         <tr>
           <th align="center">Região</th>
@@ -85,11 +87,11 @@ Conclua as etapas a seguir para coletar dados do log não padrão por meio da CL
           <td align="left">Reino Unido</td>
           <td align="left">cf login -a api.eu-gb.bluemix.net</td>
         </tr>
-        <tr>
-          <td align="left">Sydney</td>
-          <td align="left">cf login -a api.au-syd.bluemix.net</td>
+	 <tr>
+          <td align="left">Frankfurt</td>
+          <td align="left">cf login -a api.eu-de.bluemix.net</td>
         </tr>
-      </tbody>
+       </tbody>
     </table>
     
 
@@ -104,6 +106,7 @@ Conclua as etapas a seguir para coletar dados do log não padrão por meio da CL
     em que
     
      <table>
+      <caption>Tabela 3. Opções de comando</caption>
       <tbody>
         <tr>
           <th align="center">Opção</th>
@@ -123,15 +126,15 @@ Conclua as etapas a seguir para coletar dados do log não padrão por meio da CL
         </tr>
 	<tr>
           <td align="left">registry.domain_name</td>
-          <td align="left">Registro na região pública. Por exemplo, para a região sul dos EUA, o nome de domínio padrão é: `ng.bluemix.net` e, para o Reino Unido, o nome de domínio padrão é: `eu-gb.bluemix.net`</td>
+          <td align="left">Registro na região pública. Por exemplo, para a região sul dos EUA, o nome de domínio padrão é: `ng.bluemix.net` e, para o Reino Unido, o nome de domínio padrão é: `eu-gb.bluemix.net` </td>
         </tr>
         <tr>
           <td align="left">imageName</td>
-          <td align="left">Nome da imagem que deseja incluir. </td>
+          <td align="left">Nome da imagem que deseja incluir.</td>
         </tr>
 	<tr>
           <td align="left">imageTag</td>
-          <td align="left">Tag da imagem que deseja incluir. </td>
+          <td align="left">Tag da imagem que deseja incluir.</td>
         </tr>
       </tbody>
     </table>

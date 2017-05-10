@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -21,7 +21,7 @@ Vous pouvez créer un tableau de bord Grafana personnalisé afin d'afficher des 
 
 Pour créer un tableau de bord Grafana, procédez comme suit :
 
-1. Lancez Grafana depuis un navigateur Web. Pour plus d'informations, voir [Accès au tableau de bord Grafana depuis un navigateur Web](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_browser).
+1. Lancez Grafana depuis un navigateur Web. Pour plus d'informations, voir[Accès au tableau de bord Grafana depuis un navigateur Web](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_browser).
 
 2. Sauvegardez le tableau de bord par défaut.
 
@@ -91,7 +91,7 @@ désirez examiner que les métriques de conteneurs uniques et non de groupes de 
     
 6. Facultatif : Personnalisez l'affichage du graphique.
     
-    * Pour attribuer un nom au graphique, cliquez sur l'onglet General (Général) et dans la zone Title (Titre), entrez un nom pour le graphique (par exemple, UC inactive). 
+    * Pour attribuer un nom au graphique, cliquez sur l'onglet General (Général) et dans la zone Title (Titre), entrez un nom pour le graphique (par exemple, UC inactive).
     * Pour attribuer un libellé à l'axe vertical, cliquez sur l'onglet Axes and grid (Axes et grilles) et dans la section Left Y Axis (Axe Y gauche), dans l'onglet Label (Libellé), entrez UC.
     * Pour modifier la couleur d'arrière-plan du graphique, dans la section Grid threshholds (Seuils de grille), pour Level 2 (Niveau 2), cliquez sur l'icône de sélection de couleur d'arrière-plan en sélectionnant la couleur blanche ou gris clair.
     
@@ -127,11 +127,11 @@ désirez examiner que les métriques de conteneurs uniques et non de groupes de 
         
     4. Cliquez sur **Select metric** (Sélectionner une métrique) et sur **memory** (mémoire).
         
-    5. Cliquez sur **Select metric** (Sélectionner une métrique) et sur **memory-used** (mémoire utilisée).L'aperçu du graphique est actualisé et affiche les métriques correspondant à cette requête.
+    5. Cliquez sur **Select metric** (Sélectionner une métrique) et sur **memory-used** (mémoire utilisée). L'aperçu du graphique est actualisé et affiche les métriques correspondant à cette requête.
     
 6. Facultatif : Personnalisez l'affichage du graphique.
     
-    * Pour attribuer un nom au graphique, cliquez sur l'onglet General (Général) et dans la zone Title (Titre), entrez un nom pour le graphique (par exemple, Mémoire utilisée). 
+    * Pour attribuer un nom au graphique, cliquez sur l'onglet General (Général) et dans la zone Title (Titre), entrez un nom pour le graphique (par exemple, Mémoire utilisée).
     *  Pour modifier le format des valeurs de l'axe X, cliquez sur l'onglet Axes and grid (Axes et grilles) et dans la section Left Y Axis (Axe Y gauche), pour Format, sélectionnez "bytes" (octets).
     * Pour attribuer un libellé à l'axe vertical, dans la zone Label (Label), entrez Mémoire.
     * Pour modifier la couleur d'arrière-plan du graphique, dans la section Grid threshholds (Seuils de grille), pour Level 2 (Niveau 2), cliquez sur l'icône de sélection de couleur d'arrière-plan en sélectionnant la couleur blanche ou gris clair.

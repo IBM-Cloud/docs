@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-14"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-02-14"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Surveillance et journalisation
+# Présentation
 {: #monitoringandlogging}
 
 {{site.data.keyword.Bluemix}} offre des fonctions de journalisation et de surveillance dans différents services, tels que Cloud Foundry et {{site.data.keyword.containershort}}. Vous pouvez développer, exécuter et gérer des applications dans n'importe quel contexte d'exécution sans être confronté à la complexité que représentent la création et la gestion de l'infrastructure qui est généralement liée au développement et au lancement d'une application. 
@@ -28,6 +28,7 @@ Les fonctions de journalisation de {{site.data.keyword.Bluemix_notm}} sont inté
 Les fonctions de surveillance et de journalisation sont disponibles dans les régions suivantes :
 * Sud des États-Unis
 * Royaume-Uni
+* Francfort
 
 
 

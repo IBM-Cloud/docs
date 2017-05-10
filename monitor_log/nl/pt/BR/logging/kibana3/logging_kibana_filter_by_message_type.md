@@ -14,14 +14,11 @@ lastupdated: "2017-02-16"
 
 
 # Filtrando seus logs do app Cloud Foundry por tipo de mensagem no Kibana
-<!-- for example, Uploading your data -->
 {: #logging_kibana_message_type_filter}
-<!-- Provide an appropriate ID above -->
 
 Visualize e filtre os logs do aplicativo {{site.data.keyword.Bluemix_notm}} por tipo de mensagem no painel do Kibana. É possível acessar o painel do Kibana na guia **Logs** para seu app Cloud Foundry. 
 {:shortdesc}
 
-<!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->
 Conclua as tarefas a seguir para visualizar e filtrar seus logs do app Cloud Foundry por tipo de mensagem no painel do Kibana:
 
 1. Acesse a guia **Logs** de seu app Cloud Foundry. 
@@ -31,27 +28,27 @@ Conclua as tarefas a seguir para visualizar e filtrar seus logs do app Cloud Fou
     
     Os logs para seu app são exibidos.
 
-2. Acesse o painel do Kibana para seu app. Clique em **Visualização avançada** ![Link de visualização avançada](images/logging_advanced_view.jpg). O painel do Kibana é exibido.
+2. Acesse o painel do Kibana para seu app. Clique em **Visualização avançada** ![Link da visualização avançada](images/logging_advanced_view.jpg "Link da visualização avançada"). O painel do Kibana é exibido.
 
 3. Na janela **TODOS OS EVENTOS**, clique no ícone de seta à direita para mostrar todos os campos. 
 
-    ![Janela Todos os eventos com o ícone de seta à direita](images/logging_all_events_no_fields.jpg)
+    ![Janela Todos os eventos com ícone de seta à direita](images/logging_all_events_no_fields.jpg "Janela Todos os eventos com ícone de seta à direita")
 
 4. Na área de janela **Campos**, selecione **message_type** para exibir o componente que gerou cada entrada de log na janela **TODOS OS EVENTOS**.
 
-    ![Janela Todos os eventos com o campo message_type selecionado](images/logging_message_type.png)
+    ![Janela Todos os eventos com o campo message_type selecionado](images/logging_message_type.png "Janela Todos os eventos com o campo message_type selecionado")
 
 5. Na janela **TODOS OS EVENTOS**, clique em uma linha de evento de log para exibir os detalhes para esse evento. Escolha um evento que exiba o **message_type** que você deseja filtrar.
 
-    ![Janela Todos os eventos exibindo detalhes para um evento de log selecionado](images/logging_message_type_add_filter.png)
+    ![Janela Todos os eventos exibindo detalhes para um evento de log selecionado](images/logging_message_type_add_filter.png "Janela Todos os eventos exibindo detalhes para um evento de log selecionado")
 
 6. Inclua um filtro para incluir ou excluir informações sobre um tipo de mensagem. 
 
-    * Para incluir um filtro que inclua informações sobre um tipo de mensagem, clique no ícone de **Lupa** ![Ícone de Lupa](images/logging_magnifying_glass.jpg) na linha message_type da tabela. 
+    * Para incluir um filtro que inclua informações sobre um tipo de mensagem, clique no ícone de **Lupa** ![Ícone de lupa](images/logging_magnifying_glass.jpg "Ícone de lupa") na linha message_type da tabela. 
     
-           ![Condição do filtro para o campo message_type](images/logging_message_type_filter.png)
+           ![Condição do filtro para o campo message_type](images/logging_message_type_filter.png "Condição do filtro para o campo message_type")
     
-    * Para incluir um filtro que exclua informações sobre um tipo de mensagem, clique no ícone de **Exclusão** ![Ícone de Exclusão](images/logging_exclusion_icon.png) na linha message_type da tabela. 
+    * Para incluir um filtro que exclua informações sobre um tipo de mensagem, clique no ícone de **Exclusão** ![Ícone de exclusão](images/logging_exclusion_icon.png "Ícone de exclusão") na linha message_type da tabela. 
     
     Uma nova condição do filtro é incluída no painel do Kibana.
 
@@ -59,10 +56,10 @@ Conclua as tarefas a seguir para visualizar e filtrar seus logs do app Cloud Fou
 
 9. Salve o painel.    
         
-    Quando concluir a criação de filtros, clique no ícone **Salvar** ![Ícone Salvar](images/logging_save.jpg) e insira um nome para seu painel. 
+    Quando concluir a criação de seus filtros, clique no ícone **Salvar** ![Ícone Salvar](images/logging_save.jpg "Ícone Salvar") e insira um nome para seu painel. 
       
     **Nota:** se você tentar salvar um painel com um nome contendo espaços em branco, ele não será salvo. Insira um nome sem espaços e clique no ícone **Salvar**.
     
-    ![Salvar nome do painel](images/logging_save_dashboard.jpg).
+    ![Salvar nome do painel](images/logging_save_dashboard.jpg "Salvar nome do painel").
 
-Você criou um painel que filtra suas entradas de log por tipo de mensagem. É possível carregar seu painel salvo a qualquer momento clicando no ícone **Pasta** ![Ícone Pasta](images/logging_folder.jpg) e selecionando seu painel por nome.
+Você criou um painel que filtra suas entradas de log por tipo de mensagem. É possível carregar seu painel salvo a qualquer momento clicando no ícone **Pasta** ![Ícone Pasta](images/logging_folder.jpg "Ícone Pasta") e selecionando seu painel por nome.

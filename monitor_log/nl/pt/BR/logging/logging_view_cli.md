@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-01"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -42,23 +42,7 @@ Para visualizar os logs de seu interesse ou excluir o conteúdo que você não d
 * Para visualizar as entradas nos logs para um app Cloud Foundry que contenham palavras-chave específicas, veja [Visualizando entradas de log que contenham determinadas palavras-chave](logging_view_cli.html#partial_by_keyword_log_cli).
 
 
-## Analisando logs do contêiner do Docker na CLI
-{: #analyzing_container_logs_cli}
-
-Use o comando `cf ic logs` para exibir logs de um contêiner no
-{{site.data.keyword.Bluemix_notm}}. Por exemplo, é possível usar os logs para analisar por que um
-contêiner parou ou para revisar a saída do contêiner. 
-
-Para ver os erros do aplicativo para o app que é executado em um contêiner por meio do
-comando `cf ic logs`, o aplicativo deve gravar seus logs nos fluxos de saída padrão (STDOUT)
-e de saída de erro (STDERR). Se você projetar seu aplicativo para gravar nesses fluxos de saída padrão, será
-possível visualizar os logs por meio da linha de comandos, mesmo se o contêiner for encerrado ou travar.
-
-Para obter mais informações sobre o comando `cf ic logs`, consulte o comando
-[cf ic logs](/docs/containers/container_cli_reference_cfic.html#container_cli_reference_cfic__logs).
-
-
-## Visualizando o log para um app Cloud Foundry
+### Visualizando o log para um app Cloud Foundry
 {: #full_log_cli}
 
 Para ver todos os logs disponíveis para um app Cloud Foundry, conclua as etapas a seguir:
@@ -70,7 +54,7 @@ Para ver todos os logs disponíveis para um app Cloud Foundry, conclua as etapas
    <pre class="pre screen"><code>cf logs <var class="keyword varname">appname</var></code></pre>
    
    
-## Visualizando as entradas de log mais recentes para um app Cloud Foundry
+### Visualizando as entradas de log mais recentes para um app Cloud Foundry
 {: #tailing_log_cli}
 
 Para ver os logs mais recentes que estão disponíveis para um app Cloud Foundry, conclua as etapas a seguir:
@@ -87,7 +71,7 @@ logs appname --recent</samp> em outra janela de linha de comandos para ver
 os logs em tempo real. </div>
 
 
-## Visualizando uma seção de um log do Cloud Foundry
+### Visualizando uma seção de um log do Cloud Foundry
 {: #partial_log_cli}
 
 Para visualizar uma parte dos logs que estão disponíveis para um app Cloud Foundry dentro de um intervalo de tempo, conclua as etapas a seguir:
@@ -101,7 +85,7 @@ Para visualizar uma parte dos logs que estão disponíveis para um app Cloud Fou
     Para obter mais informações sobre a opção **cut**, insira **cut --help**.
 
 
-## Visualizando entradas de log que contêm determinadas palavras-chave
+### Visualizando entradas de log que contêm determinadas palavras-chave
 {: #partial_by_keyword_log_cli}
 
 Para exibir entradas de log que contenham determinadas palavras-chave para um app Cloud Foundry, conclua as etapas a seguir:
@@ -120,7 +104,7 @@ Por exemplo, para exibir entradas de log que contenham a palavra-chave **APP**, 
 Para obter mais informações sobre a opção **grep**, digite **grep --help**.
 
 
-## Logs do aplicativo Cloud Foundry
+### Logs do aplicativo Cloud Foundry
 {: #cf_app_logs_cli}
 
 Os logs a seguir estão disponíveis para um aplicativo Cloud Foundry depois de implementá-lo no {{site.data.keyword.Bluemix}}:
@@ -149,5 +133,19 @@ logs/staging_task.log`
 
 **Nota:** para obter informações sobre como ativar a criação de log do aplicativo, consulte [Depurando erros de tempo de execução](/docs/debug/index.html#debugging-runtime-errors).
 
+## Analisando logs do contêiner do Docker na CLI
+{: #analyzing_container_logs_cli}
+
+Use o comando `cf ic logs` para exibir logs de um contêiner no
+{{site.data.keyword.Bluemix_notm}}. Por exemplo, é possível usar os logs para analisar por que um
+contêiner parou ou para revisar a saída do contêiner. 
+
+Para ver os erros do aplicativo para o app que é executado em um contêiner por meio do
+comando `cf ic logs`, o aplicativo deve gravar seus logs nos fluxos de saída padrão (STDOUT)
+e de saída de erro (STDERR). Se você projetar seu aplicativo para gravar nesses fluxos de saída padrão, será
+possível visualizar os logs por meio da linha de comandos, mesmo se o contêiner for encerrado ou travar.
+
+Para obter mais informações sobre o comando `cf ic logs`, consulte o comando
+[cf ic logs](/docs/containers/container_cli_reference_cfic.html#container_cli_reference_cfic__logs).
 
 

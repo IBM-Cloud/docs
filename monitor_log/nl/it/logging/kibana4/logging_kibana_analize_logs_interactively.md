@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-16"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-03-16"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Analisi dei log interattiva in Kibana 
+# Analisi dei log interattiva in Kibana
 {:#kibana_analize_logs_interactively}
 
 Nella pagina Rileva, puoi visualizzare e analizzare i tuoi log {{site.data.keyword.Bluemix}} interattivamente. Puoi definire le query di ricerca per filtrare i dati utilizzando il linguaggio di query Lucene. Per ogni query ricerca, puoi applicare i filtri per restringere le voci disponibili per l'analisi. Puoi salvare un ricerca per un riutilizzo futuro.
@@ -26,8 +26,9 @@ La seguente tabella mostra la query predefinita per la risorsa quando avvii kiba
 | Risorsa | Query di ricerca predefinita Kibana |
 |---------------|---------------|
 | Applicazione CF   | `application_id:<app_GUID>`    |
-| Singolo contenitore Docker  | `instance:<instance_GUID>`    |
-| Gruppo di contenitori con 2 istanze  | `instance:<instance_GUID> OR instance:<instance_GUID>` |
+| Singolo contenitore Docker | `instance:<instance_GUID>`    |
+| Gruppo di contenitori con 2 istanze | `instance:<instance_GUID> OR instance:<instance_GUID>` |
+{: caption="Tabella 1. Ricerche query predefinite" caption-side="top"}
 
 **Nota:** 
 * Ogni volta che avvii Kibana dalla IU {{site.data.keyword.Bluemix_notm}}, i dati che puoi visualizzare corrispondono alla query predefinita per impostazione predefinita e che si basa sul modello di indice.
@@ -47,6 +48,7 @@ Puoi eseguire ognuna delle seguenti attività per personalizzare la tabella nell
 | [Rimuovere una colonna del campo](logging_kibana_analize_logs_interactively.html#kibana_discover_remove_fields_from_table) | Rimuovere un campo quando non è più necessario nella vista delle analisi. |
 | [Ordinare le voci per il valore di un campo indicizzato](logging_kibana_analize_logs_interactively.html#kibana_discover_sort_by_table) | Riordinare le voci per analisi più semplici. |
 | [Aggiornare automaticamente i dati](logging_kibana_analize_logs_interactively.html#kibana_discover_view_refresh_interval) | Aggiornare i dati visualizzati nella tabella con le ultime voci. Per impostazione predefinita, l'aggiornamento è **DISATTIVO**. |
+{: caption="Tabella 2. Attività per personalizzare una tabella" caption-side="top"}
 
 <br>
 
@@ -60,7 +62,7 @@ Per definire una nuova ricerca, utilizza la query di ricerca predefinita come tu
 
 * Applica i filtri del campo per rifinire la serie di dati che puoi visualizzare. Puoi attivare/disattivare ogni filtro, bloccarlo nella pagina, abilitarlo o disabilitarlo se necessario e configurarlo per includere o escludere il valore. Per ulteriori informazioni, vedi [Filtro dei log in Kibana](logging_kibana_filtering_logs.html#kibana_filtering_logs).
 
-    **Suggerimento:** se non puoi trovare un campo nell'*Elenco campi* che ti aspetti di visualizzare o alcune delle lenti di ingrandimento per i campi elencati sono disabilitate nella pagina Rileva, ricarica l'elenco dei campi aggiornando il modello di indice nella pagina Rileva. Per ulteriori informazioni, vedi [Ricaricamento dell'elenco campo](logging_kibana_analize_logs_interactively.html#kibana_discover_add_reload_fields).
+    **Suggerimento:** se non puoi trovare un campo nell'*Elenco campi* che ti aspetti di visualizzare o alcune delle lenti di ingrandimento per i campi elencati sono disabilitate nella pagina Rileva, ricarica l'elenco dei campi aggiornando il modello di indice nella pagina Rileva. Per ulteriori informazioni, vedi [Ricaricamento dell'elenco campo](logging_kibana_analize_logs_interactively.html#kibana_discover_view_reload_fields).
 
     Ad esempio, se la tua applicazione CF ha più istanze, potresti voler analizzare i dati di un'istanza specifica. Puoi definire un filtro del campo per il valore dell'ID dell'istanza specifico che desideri analizzare. 
     
@@ -68,16 +70,17 @@ Per definire una nuova ricerca, utilizza la query di ricerca predefinita come tu
 
 Dopo aver configurato la ricerca che definisce la sottoserie di dati che desideri analizzare, puoi salvarla per un riutilizzo successivo.
 
-Puoi eseguire ognuna delle seguenti attività con le ricerche che definisci nella pagina Rileva: 
+Puoi eseguire ognuna delle seguenti attività con le ricerche che definisci nella pagina Rileva:
 
 | Attività | Descrizione |
 |------|-------------|
 | [Salvare una ricerca](logging_kibana_filtering_logs.html#k4_save_search) | Salvare la ricerca per un riutilizzo successivo.  |
-| [Eliminare una ricerca](logging_kibana_filtering_logs.html#k4_delete_search) | Eliminare una ricerca quando non è più necessaria.  |
+| [Eliminare una ricerca](logging_kibana_filtering_logs.html#k4_delete_search) | Eliminare una ricerca quando non è più necessaria. |
 | [Esportare una ricerca](logging_kibana_filtering_logs.html#k4_export_search) | Esportare una ricerca per condividerla.  |
 | [Ricaricare una ricerca](logging_kibana_filtering_logs.html#k4_reload_search)  | Caricare una ricerca esistente per analizzare nuovamente una serie di dati. |
 | [Aggiornare i dati di una ricerca](logging_kibana_filtering_logs.html#k4_refresh_search) | Configurare l'aggiornamento automatico dei dati visualizzati tramite la ricerca.  |
 | [Importare una ricerca](logging_kibana_filtering_logs.html#k4_import_search) | Importare una ricerca.  |
+{: caption="Tabella 3. Attività per lavorare con le ricerche" caption-side="top"}
 
 <br>
 
@@ -88,6 +91,60 @@ Puoi inoltre esaminare le statistiche nella pagina Rileva:
 Per ulteriori informazioni, vedi [Visualizzazione delle statistiche dei dati del campo](logging_kibana_analize_logs_interactively.html#kibana_discover_view_fields_stats).
 
 **Nota:** i dati visualizzati nella tabella e nell'istogramma sono statici. Per continuare a visualizzare le ultime voci, devi impostare un intervallo di aggiornamento. 
+
+
+## Aggiunta di colonne del campo alla tabella
+{: #kibana_discover_add_fields_to_table}
+
+La tabella disponibile per analizzare i dati nella pagina Rileva, include i seguenti campi per impostazione predefinita:
+* **time:** questo campo indica quando una voce è stata acquisita e registrata in {{site.data.keyword.Bluemix_notm}}.
+* **_source:** questo campo include i dati originali della voce.
+
+Puoi aggiungere una colonna del campo alla tabella scegliendo una delle seguenti opzioni:
+
+* Aggiungi una colonna del campo dall'Elenco campo disponibile nella pagina.
+
+    1. Nella pagina Rileva, identifica il campo nella sezione `Campi selezionati`.
+    2. Passa con il mouse su un campo nell'Elenco campi.
+    
+        ![Aggiungi campo dalla vista tabella](images/k4_add_field_column_hover.jpg "Aggiungi campo dalla vista tabella")
+    
+    3. Per aggiungere un campo, fai clic su **Aggiungi**.
+    
+ * Aggiungi un campo dalla vista tabella di una voce espansa.
+
+    1. Espandi una voce nella tabella.
+    2. Nella vista Tabella, identifica il campo che desideri aggiungere.
+    
+        ![Aggiungi campo dalla vista tabella](images/k4_add_field_column.jpg "Aggiungi campo dalla vista tabella")
+    
+    3. Fai clic sull'icona **Attiva colonna nella tabella** ![Attiva colonna nella tabella](images/k4_toggle_field_icon.jpg).
+    
+
+**Nota:** quando aggiungi una colonna del campo alla tabella per la prima volta, la colonna del campo *_source* visualizzata nella tabella è nascosta. Il campo *_source* mostra il valore di ogni campo per ogni voce di log. Per visualizzare altri valori del campo per una voce di log nella tabella dopo aver aggiunto una colonna alla tabella, consulta la scheda vista tabella o la scheda JSON di ogni voce.
+
+Ad esempio, se aggiungi il campo *application_id* alla tabella, essa viene modificata come segue:
+
+![Vista tabella dopo l'aggiunta di un nuovo campo](images/k4_add_field_filter_new_table_look.jpg "Vista tabella dopo l'aggiunta di un nuovo campo")
+
+
+## Aggiornamento automatico dei dati
+{: #kibana_discover_view_refresh_interval}
+
+Per impostazione predefinita, in {{site.data.keyword.Bluemix_notm}}, il periodo di *Aggiornamento automatico* è impostato su **DISATTIVO** e i dati che puoi visualizzare in Kibana corrispondono agli ultimi 15 minuti da quando hai avviato Kibana. I 15 minuti corrispondono al filtro temporale preconfigurato. Puoi scegliere di impostare un periodo di tempo differente. Per ulteriori informazioni, consulta [Configurazione di un filtro temporale](logging_kibana_set_time_filter.html#set_time_filter).
+
+Completa la seguente procedura per impostare un periodo di *Aggiornamento automatico*:
+
+1. Nella barra del menu della pagina Rileva, fai clic sul selezionatore di tempo ![Selezionatore di tempo](images/k4_time_picker_icon.jpg "Selezionatore di tempo").
+
+2. Seleziona il pulsante di aggiornamento automatico ![Pulsante di aggiornamento automatico](images/k4_auto_refresh_icon.jpg "Pulsante di aggiornamento automatico").
+
+3. Scegli un intervallo di aggiornamento.
+
+    ![Opzioni per impostare un intervallo di aggiornamento automatico](images/k4_change_autorefresh.jpg "Opzioni per impostare un intervallo di aggiornamento automatico")
+
+
+Puoi mettere in pausa l'intervallo di aggiornamento facendo clic sul pulsante di pausa ![Pulsante di pausa](images/k4_auto_refresh_pause_icon.jpg "Pausa") 
 
 
 ## Identificazione dei dati visualizzati nella pagina Rileva
@@ -127,74 +184,7 @@ esempio:
     Puoi definire 0 o più filtri del campo per attivare le voci basate sul valore del campo. Ad esempio, se è abilitato un filtro del campo, le voci che puoi visualizzare corrispondono alla voci in cui il valore per tale campo corrisponde.
     
 
-## Aggiunta di colonne del campo alla tabella
-{: #kibana_discover_add_fields_to_table}
-
-La tabella disponibile per analizzare i dati nella pagina Rileva, include i seguenti campi per impostazione predefinita:
-* **time:** questo campo indica quando una voce è stata acquisita e registrata in {{site.data.keyword.Bluemix_notm}}.
-* **_source:** questo campo include i dati originali della voce.
-
-Puoi aggiungere una colonna del campo alla tabella scegliendo una delle seguenti opzioni:
-
-* Aggiungi una colonna del campo dall'Elenco campo disponibile nella pagina.
-
-    1. Nella pagina Rileva, identifica il campo nella sezione `Campi selezionati`.
-    2. Passa con il mouse su un campo nell'Elenco campi.
-    
-        ![Aggiungi campo dalla vista tabella](images/k4_add_field_column_hover.jpg "Aggiungi campo dalla vista tabella")
-    
-    3. Per aggiungere un campo, fai clic su **Aggiungi**.
-    
- * Aggiungi un campo dalla vista tabella di una voce espansa.
-
-    1. Espandi una voce nella tabella.
-    2. Nella vista Tabella, identifica il campo che desideri aggiungere.
-    
-        ![Aggiungi campo dalla vista tabella](images/k4_add_field_column.jpg "Aggiungi campo dalla vista tabella")
-    
-    3. Fai clic sull'icona **Attiva colonna nella tabella** ![Attiva colonna nella tabella](images/k4_toggle_field_icon.jpg).
-    
-
-**Nota:** quando aggiungi una colonna del campo alla tabella per la prima volta, la colonna del campo *_source* visualizzata nella tabella è nascosta. Il campo *_source* mostra il valore di ogni campo per ogni voce di log. Per visualizzare altri valori del campo per una voce di log nella tabella dopo aver aggiunto una colonna alla tabella, consulta la scheda vista tabella o la scheda JSON di ogni voce.
-
-Ad esempio, se aggiungi il campo *application_id* alla tabella, essa viene modificata come segue:
-
-![Vista tabella dopo l'aggiunta di un nuovo campo](images/k4_add_field_filter_new_table_look.jpg "Vista tabella dopo l'aggiunta di un nuovo campo")
-
-
-## Riorganizzazione delle colonne del campo nella tabella
-{: #kibana_discover_rearrange_fields_in_table}
-
-Puoi riorganizzare le colonne del campo nella tabella. Passa con il mouse sull'intestazione della colonna che desideri spostare e fai clic sul pulsante **Sposta colonna a sinistra** o **Sposta colonna a destra**.
-<br>
-![Sposta campo nella tabella](images/k4_add_field_filter_new_table_look.jpg "Sposta campo nella tabella")
-
-
-## Rimozione delle colonne del campo dalla tabella
-{: #kibana_discover_remove_fields_from_table}
-
-Per rimuovere i campi dalla tabella, completa la seguente procedura:
-
-1. Nella tabella, identifica il campo che desideri rimuovere dalla vista tabella.
-2. Fai clic su **Rimuovi colonna**.
-    
-    ![Rimuovi un campo dalla vista tabella](images/k4_remove_field_column.jpg)
-
-
-## Visualizzazione di una voce nella tabella
-{: #kibana_discover_view_entry_in_table}
-
-Per visualizzare i dati di una voce nella tabella, fai clic sul pulsante di espansione ![icona pulsante di espansione](images/k4_expand_icon.jpg "icona pulsante di espansione") della voce che desideri analizzare. 
-
-![Tabella nella pagina Rileva in Kibana](images/k4_table_discover.jpg "Tabella nella pagina Rileva in Kibana") 	
-
-Successivamente, scegli una delle seguenti opzioni per visualizzare i dati:
-
-* Per visualizzare i dati in un formato tabella, fai clic su **Tabella**. Puoi visualizzare il valore di ogni campo disponibile per l'analisi in un formato tabella. Per ogni campo, puoi inoltre disporre di pulsanti di filtro e di un pulsante di attivazione.
-* Per visualizzare i dati nel formato Json, fai clic su **JSON**.
-
-
-## Ordinare le voci per il valore di un campo indicizzato  
+## Ordinare le voci per il valore di un campo indicizzato 
 {: #kibana_discover_sort_by_table}
 
 Puoi ordinare solo le voci nella tabella per i campi indicizzati.
@@ -221,23 +211,14 @@ Per ordinare le voci in una tabella per i valori di un campo indicizzato, comple
 
 **Nota:** quando ordini per un campo di tempo, per impostazione predefinita le voci sono ordinate in ordine cronologico inverso. Le voci più recenti vengono visualizzate per prime.
 
-## Aggiornamento automatico dei dati
-{: #kibana_discover_view_refresh_interval}
 
-Per impostazione predefinita, in {{site.data.keyword.Bluemix_notm}}, il periodo di *Aggiornamento automatico* è impostato su **DISATTIVO** e i dati che puoi visualizzare in Kibana corrispondono agli ultimi 15 minuti da quando hai avviato Kibana. I 15 minuti corrispondono al filtro temporale preconfigurato. Puoi scegliere di impostare un periodo di tempo differente. Per ulteriori informazioni, consulta [Configurazione di un filtro temporale](logging_kibana_set_time_filter.html#set_time_filter).
+## Riorganizzazione delle colonne del campo nella tabella
+{: #kibana_discover_rearrange_fields_in_table}
 
-Completa la seguente procedura per impostare un periodo di *Aggiornamento automatico*:
+Puoi riorganizzare le colonne del campo nella tabella. Passa con il mouse sull'intestazione della colonna che desideri spostare e fai clic sul pulsante **Sposta colonna a sinistra** o **Sposta colonna a destra**.
+<br>
+![Sposta campo nella tabella](images/k4_add_field_filter_new_table_look.jpg "Sposta campo nella tabella")
 
-1. Nella barra del menu della pagina Rileva, fai clic sul selezionatore di tempo ![Selezionatore di tempo](images/k4_time_picker_icon.jpg "Selezionatore di tempo").
-
-2. Seleziona il pulsante di aggiornamento automatico ![Pulsante di aggiornamento automatico](images/k4_auto_refresh_icon.jpg "Pulsante di aggiornamento automatico").
-
-3. Scegli un intervallo di aggiornamento.
-
-    ![Opzioni per impostare un intervallo di aggiornamento automatico](images/k4_change_autorefresh.jpg "Opzioni per impostare un intervallo di aggiornamento automatico")
-
-
-Puoi mettere in pausa l'intervallo di aggiornamento facendo clic sul pulsante di pausa ![Pulsante di pausa](images/k4_auto_refresh_pause_icon.jpg "Pausa") 
 
 ## Ricaricamento dell'elenco dei campi
 {: #kibana_discover_view_reload_fields}
@@ -254,6 +235,30 @@ Completa la seguente procedura per ricaricare l'elenco dei campi visualizzati in
 
 L'elenco dei campi viene aggiornato.
 
+
+## Rimozione delle colonne del campo dalla tabella
+{: #kibana_discover_remove_fields_from_table}
+
+Per rimuovere i campi dalla tabella, completa la seguente procedura:
+
+1. Nella tabella, identifica il campo che desideri rimuovere dalla vista tabella.
+2. Fai clic su **Rimuovi colonna**.
+    
+    ![Rimuovi un campo dalla vista tabella](images/k4_remove_field_column.jpg "Remove a field from table view")
+
+
+## Visualizzazione di una voce nella tabella
+{: #kibana_discover_view_entry_in_table}
+
+Per visualizzare i dati di una voce nella tabella, fai clic sul pulsante di espansione ![icona pulsante di espansione](images/k4_expand_icon.jpg "icona pulsante di espansione") della voce che desideri analizzare. 
+
+![Tabella nella pagina Rileva in Kibana](images/k4_table_discover.jpg "Tabella nella pagina Rileva in Kibana") 	
+
+Successivamente, scegli una delle seguenti opzioni per visualizzare i dati:
+
+* Per visualizzare i dati in un formato tabella, fai clic su **Tabella**. Puoi visualizzare il valore di ogni campo disponibile per l'analisi in un formato tabella. Per ogni campo, puoi inoltre disporre di pulsanti di filtro e di un pulsante di attivazione.
+* Per visualizzare i dati nel formato Json, fai clic su **JSON**.
+
 ## Visualizzazione delle statistiche dei dati del campo
 {: #kibana_discover_view_fields_stats}
 
@@ -264,7 +269,7 @@ Puoi visualizzare le seguenti informazioni nell'Elenco Campi:
 * Quali sono i primi 5 valori.
 * Quale percentuale di voci contiene ogni valore.
 
-Puoi visualizzare le seguenti informazioni nell'istogramma: 
+Puoi visualizzare le seguenti informazioni nell'istogramma:
 * Il numero di voci in un intervallo di tempo.
 
 Per visualizzare le statistiche nell'istogramma, fai clic su una data/ora per visualizzare le statistiche per tale periodo. Ad esempio, 

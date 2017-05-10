@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-14"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-02-14"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Monitoramento e criação de log
+# Visão geral
 {: #monitoringandlogging}
 
 O {{site.data.keyword.Bluemix}} oferece recursos de criação de log e monitoramento em diferentes serviços, como o Cloud Foundry e o {{site.data.keyword.containershort}}. É possível desenvolver, executar e gerenciar aplicativos em qualquer tempo de execução sem a complexidade de construir e manter a infraestrutura que está geralmente associada ao desenvolvimento e ativação de um app. 
@@ -28,6 +28,7 @@ O {{site.data.keyword.Bluemix_notm}} também oferece monitoramento de infraestru
 Os recursos de monitoramento e criação de log estão disponíveis nas regiões a seguir:
 * Sul dos EUA
 * Reino Unido
+* Frankfurt
 
 
 

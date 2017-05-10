@@ -14,7 +14,6 @@ lastupdated: "2017-02-06"
 
 
 # Filtrage de vos journaux d'application Cloud Foundry par période dans Kibana
-<!-- for example, Uploading your data -->
 {: #logging_kibana_time_filter}
 
 
@@ -30,12 +29,12 @@ Procédez comme suit pour afficher et filtrer vos journaux d'application Cloud F
     
     Les journaux de votre application s'affichent.
 
-2. Accédez au tableau de bord Kibana de votre application. Cliquez sur **Vue avancée** ![](images/logging_advanced_view.jpg). Le tableau de bord Kibana s'affiche.
+2. Accédez au tableau de bord Kibana de votre application. Cliquez sur **Vue avancée** ![Lien Vue avancée](images/logging_advanced_view.jpg "Lien Vue avancée"). Le tableau de bord Kibana s'affiche.
 
 
-3. Sur le tableau de bord Kibana, cliquez sur l'icône de **filtre temporel** ![](images/logging_kibana_time_filter.jpg), puis sélectionnez **Personnalisé** dans le menu déroulant. La fenêtre suivante s'affiche :
+3. Sur le tableau de bord Kibana, cliquez sur l'icône de **filtre temporel**![Filtre temporel Kibana](images/logging_kibana_time_filter.jpg "Filtre temporel Kibana"), puis sélectionnez **Personnalisé** dans le menu déroulant. La fenêtre suivante s'affiche :
 
-    ![Filtre temporel personnalisé sur le tableau de bord Kibana](images/logging_custom_time_filter.jpg)
+    ![Filtre temporel personnalisé sur le tableau de bord Kibana](images/logging_custom_time_filter.jpg "Filtre temporel personnalisé sur le tableau de bord Kibana")
 
 4. Cliquez sur les zones **De** et **A** pour éditer l'heure de début et l'heure de fin de votre filtre. 
     

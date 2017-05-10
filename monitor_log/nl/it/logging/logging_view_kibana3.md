@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-16"
+lastupdated: "2017-02-22"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-02-16"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Analisi dei log in Kibana
+# Analisi dei log in Kibana 3 (obsoleto)
 {: #analyzing_logs_Kibana3}
 
 In {{site.data.keyword.Bluemix}}, puoi utilizzare Kibana, una piattaforma di analisi e visualizzazione open source, per monitorare, ricercare, analizzare e visualizzare i tuoi dati in una varietà di grafici, ad esempio, diagrammi e tabelle. Utilizza Kibana per eseguire attività di analisi avanzate.
@@ -25,7 +25,7 @@ Puoi avviare Kibana in uno dei seguenti modi:
 
     Puoi avviare i log della tua specifica applicazione CF in Kibana, nel contesto di quella specifica applicazione.
     
-    La query che viene utilizzata per filtrare i dati visualizzati nel dashboard richiama le voci di log per l'applicazione Cloud Foundry. Le informazioni di log visualizzate dal dashboard Kibana per impostazione predefinita sono tutte correlate a un'unica applicazione Cloud Foundry e a tutte le sue istanze. Per ulteriori informazioni, vedi [Accesso al dashboard Kibana dal dashboard {{site.data.keyword.Bluemix}}](logging_view_kibana3.html#launch_Kibana_from_bluemix).
+    La query che viene utilizzata per filtrare i dati visualizzati nel dashboard richiama le voci di log per l'applicazione Cloud Foundry. Le informazioni di log visualizzate dal dashboard Kibana per impostazione predefinita sono tutte correlate a un'unica applicazione Cloud Foundry e a tutte le sue istanze. Per ulteriori informazioni, vedi [Accesso al dashboard Kibana dal dashboard Bluemix](logging_view_kibana3.html#launch_Kibana_from_bluemix).
 
 * Da un link diretto del browser
 
@@ -36,7 +36,7 @@ Puoi avviare Kibana in uno dei seguenti modi:
     Puoi anche modificare o rimuovere la query iniziale e aggiungere altre query. Per ulteriori informazioni, vedi [Filtraggio dei log dell'applicazione Cloud Foundry con le query in Kibana](kibana3/logging_kibana_query.html#logging_kibana_query).
 
 
-Kibana è un'interfaccia basata su browser in cui puoi personalizzare i dahboard che potrai quindi utilizzare per analizzare i dati di log ed eseguire attività di gestione avanzate. 
+Kibana è un'interfaccia basata su browser in cui puoi personalizzare i dashboard che potrai quindi utilizzare per analizzare i dati di log ed eseguire attività di gestione avanzate. 
 
 In {{site.data.keyword.Bluemix}}, puoi analizzare i dati utilizzando il dashboard Kibana predefinito disponibile per ogni applicazione Cloud Foundry e per ogni spazio della tua organizzazione. Per impostazione predefinita, questi dashboard visualizzano tutti i dati disponibili durante le ultime 24 ore attraverso un pannello che include la riga Istogramma e una riga Tabella di eventi. 
 
@@ -56,7 +56,7 @@ Dopo aver personalizzato un dashboard, puoi scegliere una delle seguenti azioni:
 
 * Puoi incorporare il tuo dashboard in una pagina web. Perché un utente possa visualizzare un dashboard incorporato, deve avere le autorizzazioni per accedere a Kibana.
 
-Per ulteriori informazioni, consulta la documentazione [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html).
+Per ulteriori informazioni, consulta la documentazione [Kibana ![icona link esterno](../../icons/launch-glyph.svg "External link icon")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.
 
 **Nota:** Kibana 4 e Kibana 3 sono supportati. Kibana 3 è obsoleto.
 
@@ -76,7 +76,7 @@ Per visualizzare i log di un'applicazione Cloud Foundry in Kibana, completa la s
 
 Se non visualizzi alcun log, modifica il selezionatore di tempo nell'intestazione.
 
-Per ulteriori informazioni sulla personalizzazione di un dashboard Kibana, consulta [questo post del blog](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/) o la documentazione [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html).
+Per ulteriori informazioni sulla personalizzazione di un dashboard Kibana, consulta [questo post del blog ![icona link esterno](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} o la documentazione [Kibana ![icona link esterno](../../icons/launch-glyph.svg "External link icon")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.
 
 ##  Accesso al dashboard Kibana da un browser web
 {: #launch_Kibana_from_browser}
@@ -91,7 +91,7 @@ Completa la seguente procedura per aprire un dashboard Kibana da un browser:
 
 Se non visualizzi alcun log, modifica il selezionatore di tempo nell'intestazione.
 
-Per ulteriori informazioni sulla personalizzazione di un dashboard Kibana, consulta [questo post del blog](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/) o la documentazione [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html).
+Per ulteriori informazioni sulla personalizzazione di un dashboard Kibana, consulta [questo post del blog ![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} o la documentazione [Kibana ![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.
 
 
 

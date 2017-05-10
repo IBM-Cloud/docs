@@ -14,7 +14,6 @@ lastupdated: "2017-02-06"
 
 
 # Filtrando seus logs do app Cloud Foundry por horário no Kibana
-<!-- for example, Uploading your data -->
 {: #logging_kibana_time_filter}
 
 
@@ -30,12 +29,12 @@ Conclua as tarefas a seguir para visualizar e filtrar seus logs do app Cloud Fou
     
     Os logs para seu app são exibidos.
 
-2. Acesse o painel do Kibana para seu app. Clique em **Visualização avançada** ![Link de visualização avançada](images/logging_advanced_view.jpg). O painel do Kibana é exibido.
+2. Acesse o painel do Kibana para seu app. Clique em **Visualização avançada** ![Link da visualização avançada](images/logging_advanced_view.jpg "Link da visualização avançada"). O painel do Kibana é exibido.
 
 
-3. No painel do Kibana, clique no ícone **Filtro de tempo** ![Filtro de tempo do Kibana](images/logging_kibana_time_filter.jpg), em seguida, selecione **Customizado** no menu suspenso. A janela a seguir é exibida:
+3. No painel do Kibana, clique no **Filtro de tempo**; ![Filtro de tempo do Kibana](images/logging_kibana_time_filter.jpg "Filtro de tempo do Kibana"), em seguida, selecione **Customizado** no menu suspenso. A janela a seguir é exibida:
 
-    ![Filtro de tempo customizado no painel do Kibana](images/logging_custom_time_filter.jpg)
+    ![Filtro de tempo customizado no painel do Kibana](images/logging_custom_time_filter.jpg "Filtro de tempo customizado no painel do Kibana")
 
 4. Clique nos campos **De** e **Até** para editar o horário de início e encerramento de seu filtro. 
     

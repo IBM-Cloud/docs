@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-16"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -38,6 +38,7 @@ A tabela a seguir mostra a consulta padrão por recurso ao ativar o Kibana no
 | Aplicativo CF   | `application_id:<app_GUID>`    |
 | Contêiner do Docker único | `instance:<instance_GUID>`    |
 | Grupo de contêiner com duas instâncias | `instance:<instance_GUID> OR instance:<instance_GUID>` |
+{: caption="Tabela 1. Procuras de consulta padrão" caption-side="top"}
 
 **Nota:** 
 * Toda vez que você ativa o Kibana na IU do {{site.data.keyword.Bluemix_notm}}, os dados que
@@ -47,7 +48,7 @@ Descobrir. É possível modificar esse valor na página Configurações.
 
 Ao ativar o Kibana em um navegador, os dados que são exibidos na página Descobrir incluem todos
 os dados do log que estiverem disponíveis no espaço no qual você efetuou login. A página não é limitada a
-contêineres ou apps específicos. 
+contêineres ou apps específicos.
 
 A página Descobrir inclui um histograma e uma tabela que podem ser customizados para que
 os dados possam ser analisados interativamente. 
@@ -57,7 +58,7 @@ os dados possam ser analisados interativamente.
 | Atividade | Descrição | 
 |------|-------------|
 | [Incluir uma
-coluna de campo](logging_kibana_analize_logs_interactively.html#kibana_discover_add_fields_to_table)  | Inclua campos para ver os dados específicos que são necessários para análise em vez
+coluna de campo](logging_kibana_analize_logs_interactively.html#kibana_discover_add_fields_to_table) | Inclua campos para ver os dados específicos que são necessários para análise em vez
 da mensagem completa. |
 | [Reorganizar
 uma coluna de campo](logging_kibana_analize_logs_interactively.html#kibana_discover_rearrange_fields_in_table) | Mova a posição de um campo na tabela para a posição desejada. |
@@ -71,6 +72,7 @@ valor de um campo indexado](logging_kibana_analize_logs_interactively.html#kiban
 | [Atualizar
 os dados automaticamente](logging_kibana_analize_logs_interactively.html#kibana_discover_view_refresh_interval) | Atualize os dados exibidos na tabela com as entradas mais recentes. Por
 padrão, a atualização é **OFF**. |
+{: caption="Tabela 2. Tarefas para customizar uma tabela" caption-side="top"}
 
 <br>
 
@@ -89,15 +91,14 @@ refine a procura executando as seguintes tarefas:
 
 * Aplique filtros de campo para refinar o conjunto de dados que pode ser visto. É possível alternar cada
 filtro, fixá-lo na página, ativá-lo ou desativá-lo, conforme necessário, e configurá-lo para incluir ou
-excluir o valor. Para obter mais informações, consulte
-[Filtrando logs no Kibana](logging_kibana_filtering_logs.html#kibana_filtering_logs).
+excluir o valor. Para obter mais informações, consulte [Filtrando logs no Kibana](logging_kibana_filtering_logs.html#kibana_filtering_logs).
 
     **Dica:** se não for possível localizar um campo na *Lista de campos*
 que você espera ver ou se algumas das lupas nos campos listados estiverem desativadas na
 página Descobrir, recarregue a lista de campos atualizando o padrão de índice na página Configurações. Para
 obter mais informações, consulte
 [Recarregando a
-lista de campos](logging_kibana_analize_logs_interactively.html#kibana_discover_add_reload_fields).
+lista de campos](logging_kibana_analize_logs_interactively.html#kibana_discover_view_reload_fields).
 
     Por exemplo, se seu app CF tiver múltiplas instâncias, talvez você queira analisar dados para uma
 instância específica. É possível definir um filtro de campo para o valor do ID da instância específico que
@@ -105,8 +106,7 @@ deseja analisar.
     
 * Customize o *Selecionador de tempo* para dados baseados em tempo. É possível definir um
 intervalo de tempo absoluto para uma consulta, um relativo ou escolher por meio de um conjunto de valores
-predefinidos. Para obter mais informações, consulte
-[Configurando um filtro de tempo](logging_kibana_set_time_filter.html#set_time_filter).
+predefinidos. Para obter mais informações, consulte [Configurando um filtro de tempo](logging_kibana_set_time_filter.html#set_time_filter).
 
 Depois de configurar a procura que define o subconjunto de dados que deseja analisar, é possível
 salvá-la para reutilização posterior.
@@ -124,10 +124,10 @@ procura quando ela não for mais necessária. |
 procura para compartilhá-la.  |
 | [Recarregar uma procura](logging_kibana_filtering_logs.html#k4_reload_search)  | Faça
 upload de uma procura existente para analisar um conjunto de dados novamente. |
-| [Atualizar os dados de uma procura](logging_kibana_filtering_logs.html#k4_refresh_search) | 
-Configure atualização automática dos dados que são exibidos por meio da procura.  |
+| [Atualizar os dados de uma procura](logging_kibana_filtering_logs.html#k4_refresh_search) | Configure atualização automática dos dados que são exibidos por meio da procura.  |
 | [Importar uma procura](logging_kibana_filtering_logs.html#k4_import_search) | Importe uma
 procura.  |
+{: caption="Tabela 3. Tarefas para trabalhar com procuras" caption-side="top"}
 
 <br>
 
@@ -141,6 +141,80 @@ estatísticas de dados do campo](logging_kibana_analize_logs_interactively.html#
 
 **Nota:** os dados que são mostrados na tabela e no histograma são estáticos. Para
 continuar visualizando as entradas mais recentes, deve-se configurar um intervalo de atualização. 
+
+
+## Incluindo colunas de campo na tabela
+{: #kibana_discover_add_fields_to_table}
+
+A tabela que está disponível para analisar dados na página Descobrir inclui os seguintes campos por
+padrão:
+* **time:** esse campo indica quando a entrada foi capturada e registrada no
+{{site.data.keyword.Bluemix_notm}}.
+* **_source:** esse campo inclui os dados originais da entrada.
+
+É possível incluir uma coluna de campo na tabela escolhendo qualquer uma das opções a seguir:
+
+* Incluir uma coluna de campo na lista Campo que está disponível na página.
+
+    1. Na página Descobrir, identifique o campo na seção `Campos selecionados`.
+    2. Passe o mouse sobre um campo na lista Campos.
+    
+        ![Incluir campo na visualização de tabela](images/k4_add_field_column_hover.jpg "Incluir campo na visualização detabela")
+
+    
+    3. Para incluir um campo, clique em **Incluir**.
+    
+ * Incluir uma coluna de campo na visualização de tabela de uma entrada expandida.
+
+    1. Expanda uma entrada na tabela.
+    2. Na Visualização de tabela, identifique o campo que deseja incluir.
+    
+        ![Incluir campo na visualização de tabela](images/k4_add_field_column.jpg "Incluir campo na visualização detabela")
+
+    
+    3. Clique no ícone **Alternar coluna na tabela**
+![Alternar coluna na tabela](images/k4_toggle_field_icon.jpg).
+    
+
+**Nota:** ao incluir uma coluna de campo na tabela pela primeira vez, a
+coluna de campo *_source* que é exibida na tabela é ocultada. O campo *_source*
+mostra o valor de cada campo para cada entrada de log. Para ver outros valores de campo para uma entrada de
+log na tabela após incluir uma coluna na tabela, consulte a guia de visualização de tabela ou a guia JSON
+de cada entrada.
+
+Por exemplo, se você incluir o campo *application_id* na tabela, a tabela mudará para a
+aparência a seguir:
+
+![Visualização de tabela após incluir um novo campo](images/k4_add_field_filter_new_table_look.jpg "Visualização de tabela após incluir umnovo campo")
+
+
+
+## Atualizando os dados automaticamente
+{: #kibana_discover_view_refresh_interval}
+
+Por padrão, no {{site.data.keyword.Bluemix_notm}}, o período de *Atualização
+automática* é configurado como **OFF** e os dados que podem ser vistos no Kibana
+correspondem aos últimos 15 minutos desde que você ativou o Kibana. Os 15 minutos correspondem ao filtro de
+tempo que é pré-configurado. É possível mudá-lo configurando um período de tempo diferente. Para obter mais informações, consulte [Configurando um filtro de tempo](logging_kibana_set_time_filter.html#set_time_filter).
+
+Conclua as etapas a seguir para configurar um período de *Atualização automática*:
+
+1. Na barra de menus da página Descobrir, clique no Selecionador de tempo
+![Selecionador de tempo](images/k4_time_picker_icon.jpg "Selecionador de tempo").
+
+2. Selecione o botão de atualização automática
+![Botão de
+atualização automática](images/k4_auto_refresh_icon.jpg "Botão de atualização automática").
+
+3. Escolha um intervalo de atualização.
+
+    ![Opções
+
+para configurar um tempo de atualização automática](images/k4_change_autorefresh.jpg "Opçõespara configurar um tempo de atualização automática")
+
+
+É possível pausar o intervalo de atualização clicando no botão de pausa
+![Botão Pausar](images/k4_auto_refresh_pause_icon.jpg "Pausa") 
 
 
 ## Identificando os dados que são exibidos na página Descobrir
@@ -205,90 +279,6 @@ entradas do app CF que estiverem disponíveis no espaço que estiver configurado
 entradas nas quais o valor desse campo corresponde.
     
 
-## Incluindo colunas de campo na tabela
-{: #kibana_discover_add_fields_to_table}
-
-A tabela que está disponível para analisar dados na página Descobrir inclui os seguintes campos por
-padrão:
-* **time:** esse campo indica quando a entrada foi capturada e registrada no
-{{site.data.keyword.Bluemix_notm}}.
-* **_source:** esse campo inclui os dados originais da entrada.
-
-É possível incluir uma coluna de campo na tabela escolhendo qualquer uma das opções a seguir:
-
-* Incluir uma coluna de campo na lista Campo que está disponível na página.
-
-    1. Na página Descobrir, identifique o campo na seção `Campos selecionados`.
-    2. Passe o mouse sobre um campo na lista Campos.
-    
-        ![Incluir campo na visualização de tabela](images/k4_add_field_column_hover.jpg "Incluir campo na visualização detabela")
-
-    
-    3. Para incluir um campo, clique em **Incluir**.
-    
- * Incluir uma coluna de campo na visualização de tabela de uma entrada expandida.
-
-    1. Expanda uma entrada na tabela.
-    2. Na Visualização de tabela, identifique o campo que deseja incluir.
-    
-        ![Incluir campo na visualização de tabela](images/k4_add_field_column.jpg "Incluir campo na visualização detabela")
-
-    
-    3. Clique no ícone **Alternar coluna na tabela**
-![Alternar coluna na tabela](images/k4_toggle_field_icon.jpg).
-    
-
-**Nota:** ao incluir uma coluna de campo na tabela pela primeira vez, a
-coluna de campo *_source* que é exibida na tabela é ocultada. O campo *_source*
-mostra o valor de cada campo para cada entrada de log. Para ver outros valores de campo para uma entrada de
-log na tabela após incluir uma coluna na tabela, consulte a guia de visualização de tabela ou a guia JSON
-de cada entrada.
-
-Por exemplo, se você incluir o campo *application_id* na tabela, a tabela mudará para a
-aparência a seguir:
-
-![Visualização de tabela após incluir um novo campo](images/k4_add_field_filter_new_table_look.jpg "Visualização de tabela após incluir umnovo campo")
-
-
-
-## Reorganizando colunas de campo na tabela
-{: #kibana_discover_rearrange_fields_in_table}
-
-É possível reorganizar as colunas de campo na tabela. Passe o mouse sobre o cabeçalho da coluna que
-deseja mover e clique no botão **Mover coluna para a esquerda** ou no botão **Mover
-coluna para a direita**.
-<br>
-![Mover campo na tabela](images/k4_add_field_filter_new_table_look.jpg "Mover campo na tabela")
-## Removendo colunas de campo da tabela
-{: #kibana_discover_remove_fields_from_table}
-
-Para remover campos da tabela, conclua as etapas a seguir:
-
-1. Na tabela, identifique o campo que deseja remover da visualização de tabela.
-2. Clique em **Remover coluna**.
-    
-    ![Remover um campo na visualização de tabela](images/k4_remove_field_column.jpg)
-
-
-## Visualizando uma entrada na tabela
-{: #kibana_discover_view_entry_in_table}
-
-Para ver os dados de uma entrada na tabela, clique no botão Expandir
-![ícone do botão expandir](images/k4_expand_icon.jpg "ícone do botão expandir") da entrada que
-deseja analisar. 
-
-![Tabela na
-página Descobrir no Kibana](images/k4_table_discover.jpg "Tabela na página Descobrir no Kibana") 	
-
-Em seguida, escolha uma das opções a seguir para ver os dados:
-
-
-* Para ver os dados em um formato de tabela, clique em **Tabela**. É possível ver o
-valor de cada campo que estiver disponível para análise em um formato de tabela. Para cada campo, também
-há botões de filtro e um botão de alternância.
-* Para ver os dados em formato JSON, clique em **JSON**.
-
-
 ## Ordenando entradas por valor de um campo indexado 
 {: #kibana_discover_sort_by_table}
 
@@ -309,7 +299,7 @@ campo de procura **Indexados**.
     ![Atributo
 indexado](images/k4_reset_filters_indexed_options.jpg "Atributo indexado")
     
- A lista de campos indexados é mostrada. 
+ A lista de campos indexados é mostrada.
  
  ![Lista de campos
 indexados](images/k4_list_indexed_fields.jpg "Lista de campos indexados")
@@ -326,34 +316,16 @@ classificação de campo uma segunda vez para inverter a ordem de classificaçã
 **Nota:** ao classificar por um campo de tempo, as entradas são
 classificadas em ordem cronológica reversa por padrão. As entradas mais recentes aparecem primeiro.
 
-## Atualizando os dados automaticamente
-{: #kibana_discover_view_refresh_interval}
 
-Por padrão, no {{site.data.keyword.Bluemix_notm}}, o período de *Atualização
-automática* é configurado como **OFF** e os dados que podem ser vistos no Kibana
-correspondem aos últimos 15 minutos desde que você ativou o Kibana. Os 15 minutos correspondem ao filtro de
-tempo que é pré-configurado. É possível mudá-lo configurando um período de tempo diferente. Para obter mais
-informações, consulte [Configurando um filtro
-de tempo](logging_kibana_set_time_filter.html#set_time_filter).
+## Reorganizando colunas de campo na tabela
+{: #kibana_discover_rearrange_fields_in_table}
 
-Conclua as etapas a seguir para configurar um período de *Atualização automática*:
+É possível reorganizar as colunas de campo na tabela. Passe o mouse sobre o cabeçalho da coluna que
+deseja mover e clique no botão **Mover coluna para a esquerda** ou no botão **Mover
+coluna para a direita**.
+<br>
+![Mover campo na tabela](images/k4_add_field_filter_new_table_look.jpg "Mover campo na tabela")
 
-1. Na barra de menus da página Descobrir, clique no Selecionador de tempo
-![Selecionador de tempo](images/k4_time_picker_icon.jpg "Selecionador de tempo").
-
-2. Selecione o botão de atualização automática
-![Botão de
-atualização automática](images/k4_auto_refresh_icon.jpg "Botão de atualização automática").
-
-3. Escolha um intervalo de atualização.
-
-    ![Opções
-
-para configurar um tempo de atualização automática](images/k4_change_autorefresh.jpg "Opçõespara configurar um tempo de atualização automática")
-
-
-É possível pausar o intervalo de atualização clicando no botão de pausa
-![Botão Pausar](images/k4_auto_refresh_pause_icon.jpg "Pausa") 
 
 ## Recarregando a lista de campos
 {: #kibana_discover_view_reload_fields}
@@ -372,6 +344,35 @@ registrado pelo Elasticsearch.
 ](images/k4_reload_field_list_icon.jpg "Recarregar lista de campo") para recarregar os campos de padrão de índice. 
 
 A lista de campos é atualizada.
+
+
+## Removendo colunas de campo da tabela
+{: #kibana_discover_remove_fields_from_table}
+
+Para remover campos da tabela, conclua as etapas a seguir:
+
+1. Na tabela, identifique o campo que deseja remover da visualização de tabela.
+2. Clique em **Remover coluna**.
+    
+    ![Remover um campo da visualização de tabela](images/k4_remove_field_column.jpg "Remover um campo da visualização de tabela")
+
+
+## Visualizando uma entrada na tabela
+{: #kibana_discover_view_entry_in_table}
+
+Para ver os dados de uma entrada na tabela, clique no botão Expandir
+![ícone do botão expandir](images/k4_expand_icon.jpg "ícone do botão expandir") da entrada que
+deseja analisar. 
+
+![Tabela na
+página Descobrir no Kibana](images/k4_table_discover.jpg "Tabela na página Descobrir no Kibana") 	
+
+Em seguida, escolha uma das opções a seguir para ver os dados:
+
+* Para ver os dados em um formato de tabela, clique em **Tabela**. É possível ver o
+valor de cada campo que estiver disponível para análise em um formato de tabela. Para cada campo, também
+há botões de filtro e um botão de alternância.
+* Para ver os dados em formato JSON, clique em **JSON**.
 
 ## Visualizando Estatísticas de Dados do Campo
 {: #kibana_discover_view_fields_stats}

@@ -22,36 +22,13 @@ Dans {{site.data.keyword.Bluemix}}, vous pouvez visualiser, filtrer et analyser 
 
 Les journaux de conteneurs sont surveillés et retransmis depuis l'extérieur du conteneur par le biais de moteurs de balayage. Les données sont envoyés par les moteurs de balayage à un service partagé Elasticsearch dans {{site.data.keyword.Bluemix_notm}}.
 
+**Remarque :** Vous pouvez analyser des journaux de conteneur dans {{site.data.keyword.Bluemix_notm}} pour les conteneurs Docker qui sont déployés dans l'infrastructure de cloud gérée par {{site.data.keyword.IBM}}. 
+
 Le diagramme suivant offre une vue d'ensemble de la journalisation pour {{site.data.keyword.containershort}}:
 
 ![Vue d'ensemble des composants pour les conteneurs](images/logging_containers_ov.jpg "Vue d'ensemble des composants pour les conteneurs")
 
 La journalisation des conteneurs est automatiquement activée lorsque vous déployez ce conteneur dans {{site.data.keyword.Bluemix_notm}}.
-
-## Journaux collectés pour les conteneurs
-{: #logging_containers_ov_logs_collected}
-
-Par défaut, les journaux suivants sont collectés :
-
-<table>
-  <tbody>
-    <tr>
-      <th align="center">Journal</th>
-      <th align="center">Description</th>
-    </tr>
-    <tr>
-      <td align="left" width="30%">/var/log/messages</td>
-      <td align="left" width="70%"> Par défaut, les messages Docker sont consignés dans le dossier /var/log/messages du conteneur. Ce journal inclut les messages système.
-      </td>
-    </tr>
-    <tr>
-      <td align="left">./docker.log</td>
-      <td align="left">Il s'agit du journal Docker. <br> Le fichier journal Docker n'est pas stocké sous la forme d'un fichier dans le conteneur mais il est quand même collecté. Ce fichier journal est collecté par défaut vu qu'il s'agit de la convention Docker standard pour exposition des informations du fichier stdout (sortie standard) et du fichier stderr (erreur standard) pour le conteneur. Si un processus de conteneur consigne des informations dans le fichier stdout ou stderr, ces informations sont collectées. </td>
-     </tr>
-  </tbody>
-</table>
-
-Pour collecter des informations de journaux supplémentaires, ajoutez la variable d'environnement **LOG_LOCATIONS** en spécifiant le chemin d'accès du fichier journal concerné lorsque vous créez le conteneur. Vous pouvez ajouter plusieurs fichiers journaux en les séparant par des virgules. Pour plus d'informations, voir [Collecte de données de journaux autres que ceux par défaut d'un conteneur](logging_containers_other_logs.html#logging_containers_collect_data).
 
 
 ## Méthodes pour l'analyse des journaux de conteneurs
@@ -70,6 +47,34 @@ Vous pouvez choisir l'une des méthodes suivantes pour analyser les journaux de 
 * Analyser des journaux via l'interface de ligne de commande pour utiliser des commandes permettant de gérer des journaux à l'aide d'un programme.
     
     Vous pouvez visualiser, filtrer et analyser des journaux via l'interface de ligne de commande en utilisant la commande **cf ic logs**. Pour plus d'informations, voir [Analyse de journaux depuis l'interface de ligne de commande](../logging_view_cli.html#analyzing_logs_cli).
+
+## Journaux collectés pour les conteneurs
+{: #logging_containers_ov_logs_collected}
+
+Par défaut, les journaux suivants sont collectés :
+
+<table>
+  <caption>Tableau 1. Journaux</caption>
+  <tbody>
+    <tr>
+      <th align="center">Journal</th>
+      <th align="center">Description</th>
+    </tr>
+    <tr>
+      <td align="left" width="30%">/var/log/messages</td>
+      <td align="left" width="70%"> Par défaut, les messages Docker sont consignés dans le dossier /var/log/messages du conteneur. Ce journal inclut les messages système.
+      </td>
+    </tr>
+    <tr>
+      <td align="left">./docker.log</td>
+      <td align="left">Il s'agit du journal Docker. <br> Le fichier journal Docker n'est pas stocké sous la forme d'un fichier dans le conteneur mais il est quand même collecté. Ce fichier journal est collecté par défaut vu qu'il s'agit de la convention Docker standard pour exposition des informations du fichier stdout (sortie standard) et du fichier stderr (erreur standard) pour le conteneur. Si un processus de conteneur consigne des informations dans le fichier stdout ou stderr, ces informations sont collectées. 
+      </td>
+     </tr>
+  </tbody>
+</table>
+
+Pour collecter des informations de journaux supplémentaires, ajoutez la variable d'environnement **LOG_LOCATIONS** en spécifiant le chemin d'accès du fichier journal concerné lorsque vous créez le conteneur. Vous pouvez ajouter plusieurs fichiers journaux en les séparant par des virgules. Pour plus d'informations, voir [Collecte de données de journaux autres que ceux par défaut d'un conteneur](logging_containers_other_logs.html#logging_containers_collect_data).
+
 
 
 ## Conservation des journaux

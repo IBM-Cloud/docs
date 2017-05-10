@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-08"
+lastupdated: "2017-03-27"
 
 ---
 
@@ -36,12 +36,12 @@ Vous pouvez lancer Grafana depuis l'interface utilisateur de {{site.data.keyword
 
 Les conventions Docker et les informations de comptabilité des groupes sont utilisées comme mécanisme de base pour la collecte de données de surveillance.
 
-**Conservation des métriques**
+## Conservation des métriques
 
 Jusqu'à un point de données par minute est collecté. Les métriques de conteneurs qui n'ont pas été actualisées pendant
 7 jours sont supprimées.
     
-**Tri des métriques**
+## Tri des métriques
 
 Les données sont affichées et organisées par ID de conteneur. 
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-01"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -33,6 +33,7 @@ Vous pouvez lancer Grafana d'une des manières suivantes :
     
     Pour plus d'informations, voir [Accès au tableau de bord Kibana depuis un navigateur Web](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_browser).
     
+Pour plus d'informations sur Grafana, reportez-vous au manuel [Grafana User Guide ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](http://docs.grafana.org/guides/getting_started/){: new_window}.
 
 
 ##  Accès au tableau de bord Grafana depuis le tableau de bord Bluemix
@@ -48,8 +49,6 @@ Pour examiner les métriques d'un conteneur Docker dans Grafana, procédez comme
     
 3. Cliquez sur **Vue avancée**. Le tableau de bord **Grafana** s'ouvre.
 
-Pour plus d'informations sur Grafana, reportez-vous au manuel [Grafana User Guide ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](http://docs.grafana.org/){: new_window}.
-
 
 ##  Accès au tableau de bord Grafana depuis un navigateur Web
 {: #launch_grafana_from_browser}
@@ -62,4 +61,4 @@ Pour lancer Grafana depuis un navigateur, procédez comme suit :
 
 2. Sélectionnez **Grafana**.
      
-Pour plus d'informations sur Grafana, reportez-vous au manuel [Grafana User Guide ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](http://docs.grafana.org/){: new_window}.
+
