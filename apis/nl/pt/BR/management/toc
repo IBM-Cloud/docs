@@ -1,0 +1,22 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="bluemix" audience="platform" href="/docs/apis/management/index.html"}
+Gerenciamento de API
+
+	{: .navgroup id="learn"}
+	index.md
+	upgrade.md
+
+	{: topicgroup}
+	Links relacionados
+	    [IBM Knowledge Center: Introdução ao IBM API Connect for Bluemix](https://www.ibm.com/support/knowledgecenter/SSFS6T/mapfiles/getting_started_bluemix.html){: new_window}
+	    [IBM Knowledge Center: Página de entrada do IBM API Connect Versão 5.0](https://www.ibm.com/support/knowledgecenter/SSMNED_5.0.0/mapfiles/getting_started.html){: new_window}
+	    [/apimanagement](https://apim.ibmcloud.com/){: new_window}
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    manage_openwhisk_apis.md
+    manage_apis.md
+    managed_apis.md
+    {: .navgroup-end}
