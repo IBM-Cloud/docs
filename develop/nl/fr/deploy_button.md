@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-2-21"
+lastupdated: "2017-4-24"
 
 ---
 
@@ -65,7 +65,7 @@ Pour créer un bouton Déployer dans {{site.data.keyword.Bluemix_notm}} :
 <li> Copiez et modifiez l'un des modèles de fragment suivants et incluez un référentiel Git public.
 <p></p>
 <p>
-<strong>Astuce</strong> : Pour spécifier l'entrée de génération d'un projet DevOps Services, ajoutez un paramètre de branche dans l'URL Git. Lorsque vous ajoutez un paramètre de branche, le référentiel Git public d'origine, avec toutes ses branches, est cloné dans un nouveau projet DevOps Services privé avec un nouveau référentiel Git. La branche Git indiquée est définie comme entrée du travail de génération. Si vous n'indiquez pas de branche, l'entrée du travail de génération et défini sur la branche principale par défaut.
+<strong>Astuce</strong> : Vous pouvez spécifier la branche à utiliser en ajoutant un paramètre de branche à l'URL Git. Si vous n'indiquez pas de branche, la branche principale est utilisée par défaut.
 </p>
 <ul>
 <li>HTML :
@@ -73,13 +73,17 @@ Pour créer un bouton Déployer dans {{site.data.keyword.Bluemix_notm}} :
 Branche principale par défaut :
 </p>
 <pre class="codeblock">
+<code class="hljs">
 &lt;a href="https://bluemix.net/deploy?repository=&lt;URL_référentiel_Git>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Déployer dans Bluemix"&gt;&lt;/a&gt;
+</code>
 </pre>
 <p>
 Branche Git indiquée :
 </p>
 <pre class="codeblock">
+<code class="hljs">
 &lt;a href="https://bluemix.net/deploy?repository=&lt;URL_référentiel_Git&gt;&branch=&lt;branche_Git>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Déployer dans Bluemix"&gt;&lt;/a&gt;
+</code>
 </pre>
 </li>
 <li>Markdown :
@@ -87,12 +91,16 @@ Branche Git indiquée :
 Branche principale par défaut :
 </p>
 <pre class="codeblock">
+<code class="hljs">
 [&excl;[Déployer dans Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;URL_référentiel_git> # [required]&rpar;
+</code>
 </pre>
 <p>Branche Git indiquée :
 </p>
 <pre class="codeblock">
+<code class="hljs"
 [&excl;[Déployer dans Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;URL_référentiel_git> &branch=&lt;branche_git&gt; # [required]&rpar;
+</code>
 </pre>
 </li>
 </ul>
@@ -196,4 +204,4 @@ racine du référentiel, et, dans un répertoire <code>.bluemix</code>, inclure 
  </ul>
 </ul>
 
-Pour obtenir de l'aide relative au traitement des incidents, voir [Le bouton Déployer dans Bluemix ne déploie pas d'application](/docs/troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}.	
+Pour obtenir de l'aide relative au traitement des incidents, voir [Le bouton Déployer dans Bluemix ne déploie pas d'application](/docs/troubleshoot/ts_apps.html#ts_deploybutton){:new_window}.	

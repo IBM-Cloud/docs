@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-2-21"
+lastupdated: "2017-4-24"
 
 ---
 
@@ -72,7 +72,7 @@ Per creare un pulsante Distribuisci a {{site.data.keyword.Bluemix_notm}}:
 <li> Copia e modifica uno dei seguenti template di frammento e includi un repository Git pubblico.
 <p></p>
 <p>
-<strong>Suggerimento</strong>: se vuoi specificare l'input di build per un progetto DevOps Services, aggiungi un parametro di ramo all'URL Git. Quando aggiungi un parametro di ramo, il repository Git pubblico originale, inclusi tutti i sui rami, viene clonato in un nuovo progetto DevOps Services privato con un nuovo repository Git. Il ramo Git specificato viene impostato come input per il lavoro di build. Se non specifichi un ramo, l'input per il lavoro di build viene impostato sul ramo master per impostazione predefinita.
+<strong>Suggerimento</strong>: puoi specificare quale ramo usare aggiungendo un parametro di ramo all'URL Git. Se non specifichi un ramo, viene utilizzato il ramo master per impostazione predefinita.
 </p>
 <ul>
 <li>HTML:
@@ -80,13 +80,17 @@ Per creare un pulsante Distribuisci a {{site.data.keyword.Bluemix_notm}}:
 Ramo master predefinito:
 </p>
 <pre class="codeblock">
+<code class="hljs">
 &lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
+</code>
 </pre>
 <p>
 Ramo Git specificato:
 </p>
 <pre class="codeblock">
+<code class="hljs">
 &lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;&branch=&lt;git_branch>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
+</code>
 </pre>
 </li>
 <li>Markdown:
@@ -94,12 +98,16 @@ Ramo Git specificato:
 Ramo master predefinito:
 </p>
 <pre class="codeblock">
+<code class="hljs">
 [&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&rpar;
+</code>
 </pre>
 <p>Ramo Git specificato:
 </p>
 <pre class="codeblock">
+<code class="hljs"
 [&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&rpar;
+</code>
 </pre>
 </li>
 </ul>
@@ -207,4 +215,4 @@ il servizio di memorizzazione nella cache dei dati. Puoi trovare un elenco dei p
  </ul>
 </ul>
 
-Per un aiuto nella risoluzione dei problemi, vedi [Il pulsante Distribuisci a Bluemix non distribuisce un'applicazione](/docs/troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}.	
+Per un aiuto nella risoluzione dei problemi, vedi [Il pulsante Distribuisci a Bluemix non distribuisce un'applicazione](/docs/troubleshoot/ts_apps.html#ts_deploybutton){:new_window}.	

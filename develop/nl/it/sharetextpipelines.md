@@ -212,7 +212,7 @@ CF_ORGANIZATION_ID	| GUID organizzazione
 CF_SPACE |	Nome spazio
 CF_SPACE_ID |	GUID spazio
 CF_APP	| Nome applicazione
-{: caption="Table 1. Environment variables" caption-side="top"}
+{: caption="Tabella 1. Variabili di ambiente" caption-side="top"}
 
 **GENERAZIONE DI UN FILE YAML DA UNA PIPELINE** 
 
