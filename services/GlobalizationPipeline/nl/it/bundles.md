@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-08-30"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 # Gestione dei bundle
 {: #globalizationpipeline_workingwithbundles}
 
-*Ultimo aggiornamento: 30 agosto 2016*
-{: .last-updated}
 
 Ogni bundle che hai creato contiene la coppia di valore chiave dal tuo file di risorsa e la serie completa di traduzioni che sono state generate.
 {:shortdesc}
