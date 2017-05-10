@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-03-20"
+lastupdated: "2017-04-07"
 
 
 ---
@@ -15,7 +15,7 @@ lastupdated: "2017-03-20"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.registrylong_notm}} CLI
+# {{site.data.keyword.registrylong_notm}}CLI
 {: #containerregcli}
 
 La CLI {{site.data.keyword.registrylong}} è un plugin che ti permette di gestire le tue risorse del registro, come gli spazi dei nomi e le immagini, nell'organizzazione.
@@ -30,7 +30,7 @@ La CLI {{site.data.keyword.registrylong}} è un plugin che ti permette di gestir
 <caption>Tabella 1. Comandi per la gestione di {{site.data.keyword.registryshort}} su {{site.data.keyword.Bluemix_short}}
 </caption>
  <thead>
- <th colspan="5">Comandi per la gestione del registro </th>
+ <th colspan="5">Comandi per la gestione del registro</th>
  </thead>
  <tbody>
  <tr>
@@ -79,7 +79,7 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE]
 <dt>--format FORMAT</dt>
 <dd>(Facoltativo) Formatta gli elementi di output utilizzando un modello Go.</dd>
 <dt>IMMAGINE</dt>
-<dd>Il percorso del registro {{site.data.keyword.Bluemix_short}} completo all'immagine che desideri analizzare. Se nel percorso dell'immagine non è specificata alcuna tag, viene analizzata l'immagine cotnrassegnata con `latest`. Puoi analizzare più immagini elencando ogni percorso del registro {{site.data.keyword.Bluemix_short}} privato nel comando con uno spazio tra ogni percorso.</dd>
+<dd>Il percorso di registro {{site.data.keyword.Bluemix_short}} completo dell'immagine che desideri analizzare, in formato spaziodeinomi/immagine:tag. Se nel percorso dell'immagine non è specificata alcuna tag, viene analizzata l'immagine contrassegnata con `latest`. Puoi analizzare più immagini elencando ogni percorso del registro {{site.data.keyword.Bluemix_short}} privato nel comando con uno spazio tra ogni percorso.</dd>
 </dl>
 
 
@@ -115,7 +115,7 @@ bx cr image-rm IMAGE [IMAGE]
 **Parametri**
 <dl>
 <dt>IMAGE</dt>
-<dd>Il percorso del registro {{site.data.keyword.Bluemix_short}} completo all'immagine che desideri rimuovere. Se nel percorso dell'immagine non è specificata alcuna tag, per impostazione predefinita verrà eliminata l'immagine con tag `latest`. Puoi rimuovere più immagini elencando ogni percorso del registro {{site.data.keyword.Bluemix_short}} privato nel comando con uno spazio tra ogni percorso. </dd>
+<dd>Il percorso di registro {{site.data.keyword.Bluemix_short}} completo dell'immagine che desideri rimuovere , in formato spaziodeinomi/immagine:tag. Se nel percorso dell'immagine non è specificata alcuna tag, per impostazione predefinita verrà eliminata l'immagine con tag `latest`. Puoi rimuovere più immagini elencando ogni percorso del registro {{site.data.keyword.Bluemix_short}} privato nel comando con uno spazio tra ogni percorso.</dd>
 </dl>
 
 

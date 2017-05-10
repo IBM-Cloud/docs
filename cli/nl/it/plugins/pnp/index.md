@@ -18,7 +18,7 @@ Utilizza la CLI (command line interface) per configurare e gestire il peering de
 
 Il plug-in della CLI peering della rete privata è disponibile per i sistemi operativi Windows, MAC e Linux. Assicurati di utilizzare il plug-in adatto a te.
 
-Prima di iniziare, crea gli spazi Bluemix. Assicurati che ogni contenitore all'interno di uno spazio abbia un indirizzo IP da una rete diversa. Per i dettagli, vedi [Using your own private IP address](https://www.{DomainName}/docs/containers/container_security_network.html#container_cli_ips_byoip)
+Prima di iniziare, crea gli spazi Bluemix. Assicurati che ogni contenitore all'interno di uno spazio abbia un indirizzo IP da una rete diversa. Per i dettagli, vedi [Using your own private IP address](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip)
 
 **Nota:** dopo aver utilizzato il peering della rete privata con uno spazio Bluemix, se devi eliminare lo spazio, elimina prima le connessioni peering della rete privata in tale spazio.
 
@@ -87,7 +87,7 @@ Sono supportati i seguenti comandi. Utilizza il comando `bluemix network` per vi
 | pnp-create  | Crea una connessione peering della rete privata   |
 | pnp-delete  | Elimina una connessione peering della rete privata   |
 | pnp-show    | Elenca tutte le connessioni peering della rete privata  |
-{: caption="Table 1. Private network peering commands" caption-side="top"}
+{: caption="Tabella 1. Comandi per il peering della rete privata" caption-side="top"}
 
 
 ### Utilizzo dei comandi

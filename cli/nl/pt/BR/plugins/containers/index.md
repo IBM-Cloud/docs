@@ -294,7 +294,7 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
    <dt>-n <i>HOSTNAME</i>|--hostname <i>HOSTNAME</i> (opcional)</dt>
    <dd>O nome do host, como <i>mycontainerhost</i>. O host e o domínio são combinados para formar a URL da rota pública completa, como <i>http://mycontainerhost.mybluemix.net</i>. Ao revisar os detalhes de um grupo de contêiner com o comando <i>bluemix ic group-inspect</i>, o host e o domínio são listados juntos como a rota.</dd>
    <dt>-d <i>DOMAIN</i>|--domain <i>DOMAIN</i> (opcional)</dt>
-   <dd>Geralmente, o domínio é <i>.mybluemix.net</i>. O host e o domínio são combinados para formar a URL da rota pública completa, como <i>http://mycontainerhost.mybluemix.net</i>. Ao revisar os detalhes de um grupo de contêiner com o comando <i>bluemix ic group-inspect</i>, o host e o domínio são listados juntos como a rota.</dd>
+   <dd>Geralmente, o domínio é <i>.mybluemix.net</i>. O host e o domínio são combinados para formar a URL da rota pública completa, como <i>http://mycontainerhost.mybluemix.net</i>. Ao revisar os detalhes de um grupo de contêineres com o comando <i>bluemix ic group-inspect</i>, o host e o domínio são listados juntos como a rota.</dd>
    <dt>-e <i>ENV_KEY=ENV_VAL</i>|--env <i>ENV_KEY=ENV_VAL</i> (opcional)</dt>
    <dd>Configure a variável de ambiente. Liste diversas chaves separadamente. Se aspas forem incluídas, inclua-as em torno do nome da variável de ambiente e do valor. Por
 exemplo: `-e "key1=value1" -e "key2=value2" -e "key3=value3"`.  A tabela a seguir mostra algumas variáveis de ambiente comumente usadas que podem ser especificadas:</dd>
@@ -306,7 +306,7 @@ exemplo: `-e "key1=value1" -e "key2=value2" -e "key3=value3"`.  A tabela a segui
 | CCS_BIND_APP=*&lt;appname&gt;*       | Faça a ligação de um serviço a um contêiner. Use a variável de ambiente `CCS_BIND_APP` para ligar um aplicativo ao contêiner. O app é ligado ao serviço de destino e age como uma ponte que permite que o {{site.data.keyword.Bluemix_notm}} traga as informações de `VCAP_SERVICES` de seu app de ponte para a instância do contêiner em execução. Para obter mais informações sobre como criar um app de ponte, consulte [Ligando um serviço a um contêiner](../../../containers/container_integrations_binding.html){: new_window}. |
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | Para ligar um serviço Bluemix diretamente a um contêiner, sem usar um app de ponte, use CCS_BIND_SRV. Essa ligação permite que o Bluemix injete as informações de VCAP_SERVICES na instância do contêiner em execução. Para listar vários serviços do Bluemix, inclua-os como parte da mesma variável de ambiente. |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | Inclua um arquivo de log a ser monitorado no contêiner. Inclua a variável de ambiente `LOG_LOCATIONS` com um caminho para o arquivo de log. |
-{: caption="Table 2. Commonly used environment variables" caption-side="top"}
+{: caption="Tabela 2. Variáveis de ambiente comumente usadas" caption-side="top"}
 
  <dl>
    <dt>--env-file <i>ENVIRONMENT_VARIABLE_FILE</i> (opcional)</dt>
@@ -1151,7 +1151,7 @@ exemplo: -e "key1=value1" -e "key2=value2" -e "key3=value3". A tabela a seguir m
 | CCS_BIND_APP=*&lt;appname&gt;*       | Faça a ligação de um serviço a um contêiner. Use a variável de ambiente `CCS_BIND_APP` para ligar um aplicativo ao contêiner. O app é ligado ao serviço de destino e age como uma ponte que permite que o {{site.data.keyword.Bluemix_notm}} traga as informações de `VCAP_SERVICES` de seu app de ponte para a instância do contêiner em execução. Para obter mais informações sobre como criar um app de ponte, consulte [Ligando um serviço a um contêiner](../../../containers/container_integrations_binding.html){: new_window}. |
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | Para ligar um serviço Bluemix diretamente a um contêiner, sem usar um app de ponte, use CCS_BIND_SRV. Essa ligação permite que o Bluemix injete as informações de VCAP_SERVICES na instância do contêiner em execução. Para listar vários serviços do Bluemix, inclua-os como parte da mesma variável de ambiente. |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | Inclua um arquivo de log a ser monitorado no contêiner. Inclua a variável de ambiente `LOG_LOCATIONS` com um caminho para o arquivo de log. |
-{: caption="Table 3. Commonly used environment variables" caption-side="top"}
+{: caption="Tabela 3. Variáveis de ambiente comumente usadas" caption-side="top"}
 
 
    <dl>

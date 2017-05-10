@@ -41,7 +41,7 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 ## Anexando uma política de ajuste automático de escala
 
-É possível anexar uma política de ajuste automático de escala a um app específico. Execute o comando a seguir:
+É possível anexar uma política de ajuste automático de escala a um app específico. Execute o seguinte comando:
 
 ```
 bx as policy-attach <APP_NAME> -p <policy_file>
@@ -68,7 +68,7 @@ bx as policy-create
 
 ## Exibindo uma política de ajuste automático de escala
 
-É possível mostrar a política de ajuste automático de escala de um app. O conteúdo da política é impresso diretamente na linha de comandos. Execute o seguinte comando:
+É possível mostrar a política de ajuste automático de escala de um app. O conteúdo da política é impresso na linha de comandos diretamente. Execute o seguinte comando:
 
 ```
 bx as policy-show <APP_NAME> [--json]
@@ -85,7 +85,7 @@ bx as policy-show <APP_NAME> [--json]
 
 ## Removendo uma política de ajuste automático de escala
 
-É possível remover uma política de ajuste automático de escala de um app. Execute o comando a seguir:
+É possível remover uma política de ajuste automático de escala de um app. Execute o seguinte comando:
 
 ```
 bx as policy-detach <APP_NAME>
@@ -100,7 +100,7 @@ bx as policy-detach <APP_NAME>
 
 ## Ativando ou desativando uma política de ajuste automático de escala
 
-É possível ativar ou desativar a política de ajuste automático de escala de um app específico. Execute o comando a seguir:
+É possível ativar ou desativar a política de ajuste automático de escala de um app específico. Execute o seguinte comando:
 
 ```
 bx as policy-enable|policy-disable <APP_NAME>
