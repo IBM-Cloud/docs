@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-09-09"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 # Iniciación a {{site.data.keyword.GlobalizationPipeline_short}}
 {: #globalizationpipeline}
-
-*Última actualización: 9 de septiembre de 2016*
-{: .last-updated}
 
 {{site.data.keyword.GlobalizationPipeline_full}} es un servicio que proporciona la traducción automática y posibilidades de edición para traducir rápidamente interfaces de usuario web o móviles. Con su panel de control, la API RESTful y la integración con el conducto de entrega de la app, puede entregar a los clientes globales sin tener que volver a crear o desplegar la app.
 {:shortdesc}
