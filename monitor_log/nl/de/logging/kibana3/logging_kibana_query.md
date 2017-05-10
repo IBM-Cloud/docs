@@ -27,9 +27,9 @@ Führen Sie die folgenden Tasks aus, um eine Abfrage für Ihre Cloud Foundry-App
     
     Die Protokolle für Ihre App werden angezeigt.
 
-2. Greifen Sie auf das Kibana-Dashboard für Ihre App zu. Klicken Sie auf **Erweiterte Ansicht** ![Link für erweiterte Ansicht](images/logging_advanced_view.jpg). Das Kibana-Dashboard wird angezeigt.
+2. Greifen Sie auf das Kibana-Dashboard für Ihre App zu. Klicken Sie auf **Erweiterte Ansicht** ![Link für erweiterte Ansicht](images/logging_advanced_view.jpg "Link für Erweiterte Ansicht"). Das Kibana-Dashboard wird angezeigt.
 
-3. Klicken Sie im Kibana-Dashboard auf das Symbol **QUERY** ![Abfragesymbol](images/logging_query.jpg), um das Feld anzuzeigen. Wenn Sie auf Kibana zugreifen, um Ihre App-Protokolle auf der Registerkarte **Protokolle** für Ihre App anzuzeigen, wird eine Abfrage erstellt, durch die alle Protokolle für die Anwendungs-ID (application_id) Ihrer App angezeigt werden.
+3. Klicken Sie im Kibana-Dashboard auf das Symbol **QUERY** ![Abfragesymbol](images/logging_query.jpg "Abfragesymbol"), um das Feld anzuzeigen. Wenn Sie auf Kibana zugreifen, um Ihre App-Protokolle auf der Registerkarte **Protokolle** für Ihre App anzuzeigen, wird eine Abfrage erstellt, durch die alle Protokolle für die Anwendungs-ID (application_id) Ihrer App angezeigt werden.
 	
     Zum Bearbeiten Ihrer Abfrage klicken Sie auf das Feld **QUERY** und geben einen Suchbegriff ein.
 
@@ -41,28 +41,28 @@ Führen Sie die folgenden Tasks aus, um eine Abfrage für Ihre Cloud Foundry-App
 
 4. Wenn Sie die Ergebnisse von zwei separaten Abfragen vergleichen wollen, können Sie Ihrem Dashboard eine weitere Abfragebedingung hinzufügen. Zum Hinzufügen einer weiteren Abfrage klicken Sie auf das Symbol **+** am Ende des Felds **QUERY**.
 
-    ![Abfragefeld](images/logging_query_field.jpg)
+    ![Abfragefeld](images/logging_query_field.jpg "Abfragefeld")
 	
     Ein neues Feld **QUERY** mit dem Platzhalterzeichen \* wird angezeigt. Diese Abfrage weist Kibana an, alle Einträge einzuschließen.
 	
-    ![Zusätzliches Abfragefeld](images/logging_additional_query_field.jpg)
+    ![Zusätzliches Abfragefeld](images/logging_additional_query_field.jpg "Zusätzliches Abfragefeld")
 	
     Ihr Dashboard wird mit den Ergebnissen Ihrer neuen Abfrage aktualisiert. Das Teilfenster **EVENTS BY TIME** zeigt eine grafische Darstellung für beide Abfragen mit Angabe der Anzahl der Bedingungen (Terms) für jede Abfrage in Klammern an. 
 	
-    ![Dashboard mit einem Diagramm für beide Abfragen](images/logging_dashboard_queries.jpg)
+    ![Dashboard mit einem Diagramm für beide Abfragen](images/logging_dashboard_queries.jpg "Dashboard mit einem Diagramm für beide Abfragen")
 	
 5. Klicken Sie auf das neue Feld **QUERY**, um den Inhalt zu bearbeiten und eine Abfragebedingung hinzuzufügen. Beispiel: `instance_id:1`. Vergleichen Sie die Ergebnisse Ihrer Abfragen im Teilfenster **EVENTS BY TIME**.
 
-    ![Dashboard mit einem Diagramm für beide Abfragen](images/logging_dashboard_queries2.jpg)
+    ![Dashboard mit einem Diagramm für beide Abfragen](images/logging_dashboard_queries2.jpg "Dashboard mit einem Diagramm für beide Abfragen")
 
 6. Zum Löschen einer Abfrage setzen Sie den Mauszeiger auf das Feld **QUERY**, das Sie löschen wollen, um das Symbol **Löschen** einzublenden. Klicken Sie auf das Symbol **Löschen**.
 
-    ![Abfragefeld mit Löschsymbol](images/logging_delete_query.jpg)
+    ![Abfragefeld mit Löschsymbol](images/logging_delete_query.jpg "Abfragefeld mit Löschsymbol")
 
-7. Zum Speichern dieses Dashboards unter einem wiedererkennbaren Namen klicken Sie auf das Symbol **Speichern** ![Symbol für Speichern](images/logging_save.jpg) und geben einen Namen für Ihr Dashboard an. 
+7. Zum Speichern dieses Dashboards unter einem wiedererkennbaren Namen klicken Sie auf das Symbol **Speichern** ![Symbol für Speichern](images/logging_save.jpg "Symbol für Speichern") und geben einen Namen für Ihr Dashboard an.  
 
     **Hinweis:** Wenn Sie versuchen, ein Dashboard unter einem Namen zu speichern, der Leerzeichen enthält, wird es nicht gespeichert. Geben Sie einen Namen ohne Leerzeichen ein und klicken Sie auf das Symbol **Speichern**.
 
-    ![Name zum Speichern des Dashboards](images/logging_save_dashboard.jpg)
+    ![Name zum Speichern des Dashboards](images/logging_save_dashboard.jpg "Name zum Speichern des Dashboards")
 
 

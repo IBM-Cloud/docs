@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-08"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -41,7 +41,6 @@ Sie können Kibana so konfigurieren, dass für jeden Protokolleintrag die folgen
 | source_id | Die Komponente, die Protokolle generiert. <br> In der folgenden Liste werden die Protokolle aus jeder Komponente beschrieben: <br> * **API**: Protokollierte Antworten auf API-Aufrufe, die eine Änderung an Ihrem App-Status anfordern. <br> * **APP**: Protokollierte Antworten aus Ihrer App. <br> * **CELL**: Protokollierte Antworten aus der Diego-Zelle, die den Zeitpunkt eines Starts, Stopps oder Absturzes einer App angeben. <br> * **LGR**: Protokollierte Antworten aus Loggregator, die auf Probleme mit dem Protokollierungsprozess hinweisen. <br> * **RTR**: Protokollierte Antworten aus dem Router, wenn er HTTP-Anforderungen an Ihre App leitet. <br> * **SSH**: Protokollierte Antworten aus der Diego-Zelle, wenn ein Benutzer auf einen App-Container mit dem Befehl `cf ssh` zugreift. <br> * **STG**: Protokollierte Antworten aus der Diego-Zelle oder dem Droplet Execution Agent (DEA), wenn ein Staging oder erneutes Staging für Ihre App erfolgt. |
 | space_name | Der Name des {{site.data.keyword.Bluemix_notm}}-Bereichs, in dem das Staging für Ihre App erfolgt. |
 | timestamp | Der Zeitpunkt des protokollierten Ereignisses. Die Zeitmarke ist bis auf die Millisekunde definiert. |
-
-
+{: caption="Tabelle 1. Felder für CF-Apps" caption-side="top"}
 
 

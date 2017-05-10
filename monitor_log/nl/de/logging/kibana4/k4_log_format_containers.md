@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-01"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -37,6 +37,6 @@ Sie können Kibana so konfigurieren, dass für jeden Protokolleintrag die folgen
 | stream | Gibt den Typ von Protokoll an: stdout, stderr |
 | time | Das Datum und die Uhrzeit des Zeitpunkts für das Ereignis, als es auftrat. Die Zeitmarke ist bis auf die Millisekunde definiert.|
 | timestamp | Das Datum und die Uhrzeit des protokollierten Ereignisses. Die Zeitmarke ist bis auf die Millisekunde definiert. |
-
+{: caption="Tabelle 1. Felder für Docker-Container" caption-side="top"}
 
 

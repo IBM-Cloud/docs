@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-16"
+lastupdated: "2017-02-22"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-02-16"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Protokolle in Kibana analysieren
+# Protokolle in Kibana 3 analysieren (veraltet)
 {: #analyzing_logs_Kibana3}
 
 In {{site.data.keyword.Bluemix}} können Sie Kibana, eine quelloffene Analyse- und Visualisierungsplattform, dazu verwenden, Ihre Daten in einer Reihe von Darstellungsarten, wie zum Beispiel Diagrammen und Tabellen, zu überwachen, zu durchsuchen, zu analysieren und zu visualisieren. Verwenden Sie Kibana für erweiterte Analysetasks.
@@ -25,7 +25,7 @@ Sie können Kibana auf eine beliebige der folgenden Arten starten:
 
     Sie können Ihre CF-App-Protokolle in Kibana im Kontext der jeweiligen App starten.
     
-    Die Abfrage, die zum Filtern der im Dashboard angezeigten Daten verwendet wird, ruft Protokolleinträge für die Cloud Foundry-Anwendung ab. Die Protokollinformationen, die standardmäßig im Kibana-Dashboard angezeigt werden, beziehen sich sämtlich auf eine einzelne Cloud Foundry-Anwendung und alle zugehörigen Instanzen. Weitere Informationen finden Sie unter [Kibana-Dashboard über das {{site.data.keyword.Bluemix}}-Dashboard aufrufen](logging_view_kibana3.html#launch_Kibana_from_bluemix).
+    Die Abfrage, die zum Filtern der im Dashboard angezeigten Daten verwendet wird, ruft Protokolleinträge für die Cloud Foundry-Anwendung ab. Die Protokollinformationen, die standardmäßig im Kibana-Dashboard angezeigt werden, beziehen sich sämtlich auf eine einzelne Cloud Foundry-Anwendung und alle zugehörigen Instanzen. Weitere Informationen finden Sie unter [Kibana-Dashboard über das Bluemix-Dashboard aufrufen](logging_view_kibana3.html#launch_Kibana_from_bluemix).
 
 * Über einen direkten Browser-Link
 
@@ -56,7 +56,7 @@ Nach der Anpassung eines Dashboards können Sie beliebige der folgenden Aktionen
 
 * Sie können das Dashboard in eine Webseite integrieren. Ein Benutzer, der ein integriertes Dashboard anzeigen möchte, muss über eine Zugriffsberechtigung für Kibana verfügen.
 
-Weitere Informationen finden Sie in der [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html)-Dokumentation.
+Weitere Informationen finden Sie in der Dokumentation zu [Kibana ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}. 
 
 **Hinweis:** Kibana 4 und Kibana 3 werden unterstützt. Kibana 3 ist veraltet.
 
@@ -76,7 +76,7 @@ Führen Sie die folgenden Schritte aus, um die Protokolle einer Cloud Foundry-An
 
 Wenn keine Protokolle angezeigt werden, passen Sie das Zeitauswahlfeld im Header an.
 
-Weitere Informationen zur Anpassung eines Kibana-Dashboards finden Sie in [diesem Blogbeitrag](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/) oder in der Dokumentation zu [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html).
+Weitere Informationen zur Anpassung eines Kibana-Dashboards finden Sie [in diesem Blogbeitrag ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} oder in der Dokumentation zu [Kibana ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}. 
 
 ##  Kibana-Dashboard im Web-Browser aufrufen
 {: #launch_Kibana_from_browser}
@@ -91,7 +91,7 @@ Führen Sie die folgenden Schritte aus, um ein Kibana-Dashboard über einen Brow
 
 Wenn keine Protokolle angezeigt werden, passen Sie das Zeitauswahlfeld im Header an.
 
-Weitere Informationen zur Anpassung eines Kibana-Dashboards finden Sie in [diesem Blogbeitrag](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/) oder in der Dokumentation zu [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html).
+Weitere Informationen zur Anpassung eines Kibana-Dashboards finden Sie [in diesem Blogbeitrag ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} oder in der Dokumentation zu [Kibana ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}. 
 
 
 
@@ -130,13 +130,13 @@ Sie können Anzeigen (Panels) zur Visualisierung der Daten konfigurieren. Kibana
 
 Führen Sie die folgenden Schritte aus, um ein Kibana-Dashboard nach einer Anpassung zu speichern:
 
-1. Klicken Sie in der Symbolleiste auf das Symbol **Save** (Speichern). 
+1. Klicken Sie in der Symbolleiste auf das Symbol **Save** (Speichern).
 
 2. Geben Sie einen Namen für das Dashboard ein.
 
     **Hinweis:** Wenn Sie versuchen, ein Dashboard unter einem Namen zu speichern, der Leerzeichen enthält, wird es nicht gespeichert.
 
-3. Klicken Sie neben dem Namensfeld auf das Symbol **Save** (Speichern). 
+3. Klicken Sie neben dem Namensfeld auf das Symbol **Save** (Speichern).
 
 
 
@@ -253,7 +253,7 @@ Sie können ein Kibana-Dashboard so konfigurieren, dass es die folgenden Felder 
 <dt><strong>message_type</strong></dt>
 <dd>
 <pre class="pre screen"><code>OUT</code></pre>
-<p>Der Datenstrom, in den die Protokollnachricht geschrieben wird. <samp class="ph codeph">OUT</samp> bezieht sich auf den Datenstrom <samp class="ph codeph">stdout</samp> und <samp class="ph codeph">ERR</samp> bezieht sich auf den Datenstrom <samp class="ph codeph">stderr</samp>.</p>
+<p>Der Datenstrom, in den die Protokollnachricht geschrieben wird. <samp class="ph codeph">OUT</samp> bezeichnet den Datenstrom <samp class="ph codeph">stdout</samp> und <samp class="ph codeph">ERR</samp> den Datenstrom <samp class="ph codeph">stderr</samp>.</p>
 </dd>
 
 <dt><strong>org_id</strong></dt>
@@ -274,7 +274,7 @@ Sie können ein Kibana-Dashboard so konfigurieren, dass es die folgenden Felder 
 <dt><strong>source_id</strong></dt>
 <dd>
 <pre class="pre screen"><code>[App/0]</code></pre>
-<p>Die Komponente, die Protokolle produziert. In der folgenden Liste werden die Protokolle aus jeder Komponente beschrieben:</p>
+<p>Die Komponente, die Protokolle generiert. In der folgenden Liste werden die Protokolle aus jeder Komponente beschrieben:</p>
 
 <dl>
 <dt><strong>API</strong></dt>

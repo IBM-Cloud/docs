@@ -14,7 +14,6 @@ lastupdated: "2017-02-06"
 
 
 # Protokolle für Cloud Foundry-Apps nach Zeit in Kibana filtern
-<!-- for example, Uploading your data -->
 {: #logging_kibana_time_filter}
 
 
@@ -30,12 +29,12 @@ Führen Sie die folgenden Tasks aus, um Ihre Cloud Foundry-App-Protokolle nach Z
     
     Die Protokolle für Ihre App werden angezeigt.
 
-2. Greifen Sie auf das Kibana-Dashboard für Ihre App zu. Klicken Sie auf **Erweiterte Ansicht** ![Link für erweiterte Ansicht](images/logging_advanced_view.jpg). Das Kibana-Dashboard wird angezeigt.
+2. Greifen Sie auf das Kibana-Dashboard für Ihre App zu. Klicken Sie auf **Erweiterte Ansicht** ![Link für erweiterte Ansicht](images/logging_advanced_view.jpg "Link für Erweiterte Ansicht"). Das Kibana-Dashboard wird angezeigt.
 
 
-3. Klicken Sie im Kibana-Dashboard auf den **Zeitfilter** ![Kibana-Zeitfilter](images/logging_kibana_time_filter.jpg) und wählen Sie anschließend die Option **Custom** im Dropdown-Menü aus. Das folgende Fenster wird angezeigt:
+3. Klicken Sie im Kibana-Dashboard auf den **Zeitfilter**; ![Kibana-Zeitfilter](images/logging_kibana_time_filter.jpg "Kibana-Zeitfilter") und wählen Sie anschließend die Option **Custom** im Dropdown-Menü aus. Das folgende Fenster wird angezeigt:
 
-    ![Angepasster Zeitfilter im Kibana-Dashboard](images/logging_custom_time_filter.jpg)
+    ![Angepasster Zeitfilter im Kibana-Dashboard](images/logging_custom_time_filter.jpg "Angepasster Zeitfilter im Kibana-Dashboard")
 
 4. Klicken Sie auf Felder **From** und **To**, um die Anfangszeit und die Endzeit für Ihren Filter zu bearbeiten. 
     
