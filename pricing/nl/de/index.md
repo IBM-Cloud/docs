@@ -220,7 +220,7 @@ Im Modell mit einer einfachen Preisstufe wird der Einzelpreis durch die Preisstu
 | Preisstufe 3: 2001 - 3000                  |   $ 0,75 USD                       |
 | Preisstufe 4: 3001 - 4000           |      $ 0,60 USD                    |
 |Preisstufe 5: &gt; 4000 | $ 0,40 USD | 
-{:caption="Table 1. Simple tier pricing table" caption-side="top"}
+{:caption="Tabelle 1. Tabelle der einfachen Preisabstufung" caption-side="top"}
 
 In der folgenden Tabelle sind die Gebühren dargestellt, die im Rahmen eines Plans anfallen, der auf dem Preismodell mit einfacher Preisstufe basiert:
 
@@ -231,7 +231,7 @@ In der folgenden Tabelle sind die Gebühren dargestellt, die im Rahmen eines Pla
 |2500 |	2500 × 0,75 = 1875 |	$ 1875 USD|
 |... |	... |	...|
 |5200 |	5200 × 0,40 = 2080 |$ 2080 USD|
-{:caption="Table 2. Charge calculation by using the simple tier pricing model" caption-side="top"}
+{:caption="Tabelle 2. Gebührenberechnung mit einem einfachen Preisstaffelungsmodell" caption-side="top"}
 
 ####Gestaffelte Preisstufe
 {: #graduated_tier}
@@ -245,7 +245,7 @@ Im Modell mit gestaffelter Preisstufe sinkt der Einzelpreis bei einer höheren N
 |    Preisstufe 3: 2001 - 3000 |	$ 0,75 USD |
 |    Preisstufe 4: 3001 - 4000 |	$ 0,60 USD |
 |    Preisstufe 5: &gt; 4000 |	$ 0,40 USD |
-{:caption="Table 3. Graduated tier pricing table" caption-side="top"}
+{:caption="Tabelle 3. Tabelle mit erweiterter Preisstaffelung" caption-side="top"}
 
 In der folgenden Tabelle sind die Gebühren dargestellt, die im Rahmen eines Plans anfallen, der auf dem Preismodell mit gestaffelter Preisstufe basiert:
 
@@ -256,7 +256,7 @@ In der folgenden Tabelle sind die Gebühren dargestellt, die im Rahmen eines Pla
 |2500 |	(1000 × 1 (Einzelpreis für Preisstufe 1)) + (1000 × 0,90 (Einzelpreis für Preisstufe 2)) + (500 × 0,75 (Einzelpreis für Preisstufe 3)) = 2275 |	$ 2275 USD |
 |... |	... |	...|
 |5200 |	(1000 × 1 (Einzelpreis für Preisstufe 1)) + (1000 × 0,90 (Einzelpreis für Preisstufe 2)) + (1000 × 0,75 (Einzelpreis für Preisstufe 3)) + (1000 × 0,60 (Einzelpreis für Preisstufe 4)) + (1200 × 0,40 (Einzelpreis für Preisstufe 5)) = 3730 |	$ 3730 USD|
-{:caption="Table 4. Charge calculation by using the graduated tier pricing model" caption-side="top"}
+{:caption="Tabelle 4. Gebührenberechnung mit dem erweiterten Preisstaffelungsmodell" caption-side="top"}
 
 ####Blockpreisstufe
 {: #block_tier}
@@ -270,7 +270,7 @@ Im Preismodell mit Blockpreisstufen ist der Preis eine feste Gebühr für die ge
 | Preisstufe 3: &lt;= 3000 |	$ 2800 USD|
 | Preisstufe 4: &lt;= 4000 |	$ 3500 USD|
 | Preisstufe 5: &lt;= 10000 |	$ 5000 USD|
-{:caption="Table 5. Block tier pricing table" caption-side="top"}
+{:caption="Tabelle 5. Tabelle der Blockpreisstaffelung" caption-side="top"}
 
 In der folgenden Tabelle sind die Gebühren dargestellt, die im Rahmen eines Plans anfallen, der auf dem Preismodell mit Blockpreisstufe basiert:
 
@@ -280,7 +280,7 @@ In der folgenden Tabelle sind die Gebühren dargestellt, die im Rahmen eines Pla
 |1500 |	Die Anzahl der Posten fällt in die Preisstufe 2, d. h., der Gesamtpreis beträgt $ 1900 USD. |	$ 1900 USD|
 |... |	... |	...|
 |5200 |	Die Anzahl der Posten fällt in die Preisstufe 5, d. h., der Gesamtpreis beträgt $ 5000 USD. |	$ 5000 USD|
-{:caption="Table 6. Charge calculation by using the block tier pricing model" caption-side="top"}
+{:caption="Tabelle 6. Gebührenberechnung mit dem Blockpreisstaffelungsmodell" caption-side="top"}
 
 ##Vorgehensweise zum Schätzen der Kosten
 {: #cost}
@@ -330,7 +330,7 @@ Nehmen Sie an, um das Beispiel einfach zu halten, dass die Preise in der folgend
 |Datencache - Standard |	5 GB Cachebereich und ein Replikat |	$155,00 USD/Instanz |
 |Datencache - Premium |	25 GB Cachebereich und ein Replikat |	$505,00 USD/Instanz|
 |IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2 GB Datenspeicher kostenlos<br/>50.000 einfache API-Aufrufe pro Monat kostenlos<br/>10.000 komplexe API-Aufrufe pro Monat kostenlos | $1,00 USD/GB<br/>$0,03 USD/1000 einfache API-Aufrufe<br/>$0,15 USD/1000 komplexe API-Aufrufe |
-{:caption="Table 7. Pricing sheet" caption-side="top"}
+{:caption="Tabelle 7. Preisliste" caption-side="top"}
 
 ###Berechnung des Anwendungspreises
 
@@ -390,7 +390,7 @@ Obwohl in den Preisbeispielen US-Dollar (USD) verwendet werden, werden in {{site
 |SEK |	  Schwedische Krone|
 |USD |    US-Dollar|
 |ZAR |	  Südafrikanischer Rand|
-{:caption="Table 8. Supported currencies" caption-side="top"}
+{:caption="Tabelle 8. Unterstützte Währungen" caption-side="top"}
 
 **Hinweis:** Wenn Sie Ihre {{site.data.keyword.Bluemix_notm}}- und SoftLayer-Konten verknüpft haben, ist die einzige Rechnung, die Sie erhalten, nur in USD ausgestellt.  
 
@@ -434,7 +434,7 @@ Nur bestimmte Services ermöglichen Ihnen das Ändern des Serviceplans. Wenn Pla
 |Service |	Informationen|
 |--------|-------------|
 |Presence Insights 	|Wenn Sie einen Lite-Plan verwenden und das kostenfreie Kontingent überschreiten, wird die Nachricht 403 angezeigt oder protokolliert, um anzugeben, dass Sie nicht mehr über die entsprechende Berechtigung verfügen und dass Ihre Serviceinstanz inaktiviert ist. Außerdem werden POST-Aufrufe der REST-API mit der Antwort 403 zurückgewiesen.<br/><br/>Wenn der Service inaktiviert wurde, weil Sie das kostenfreie Kontingent überschritten haben, können Sie ein Upgrade von einem Lite-Plan auf einen Paid-Plan durchführen. Ihr Service wird innerhalb von zwei Stunden erneut aktiviert.<br/><br/>Wenn Sie einen Paid-Plan verwenden, können Sie eine Herabstufung auf einen Lite-Plan durchführen, vorausgesetzt, Ihre Nutzungsrate für Ereignisse und Gesamtspeicher bleibt innerhalb des Lite-Kontingents für diese Posten.<br/><br/>Wenn Sie ein Upgrade oder eine Herabstufung des Plans vornehmen, müssen Sie kein erneutes Staging und keinen Neustart für Ihre Apps durchführen.|
-{:caption="Table 9. Next steps for changing your plan" caption-side="top"}
+{:caption="Tabelle 9. Nächste Schritte zur Änderung eines Plans" caption-side="top"}
 
 ###Verwendungshinweise zum Ändern des Plans über die Befehlszeilenschnittstelle
 
