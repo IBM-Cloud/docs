@@ -1,0 +1,9 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc}
+Environnement Bluemix local
+
+    {: .navgroup id="howto"}
+    index.md
+    {: .navgroup-end}
