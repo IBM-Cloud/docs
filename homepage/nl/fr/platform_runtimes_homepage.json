@@ -66,7 +66,7 @@
 	}, {
 		"title": "Disponibilité des services",
 		"description": "Découvrez les types et la disponibilité des services.",
-		"href": "services/index.html"
+		"href": "services/services_region.html"
 	}, {
 		"title": "Gestion des applications",
 		"description": "Utilisez le tableau de bord dans l'interface utilisateur Bluemix pour afficher et gérer vos applications et vos services.",
@@ -77,6 +77,9 @@
 		"description": "Effectuez le suivi du flux de données et de l'utilisation des applications afin de mieux comprendre votre déploiement.",
 		"img": "homepage/images/monitor_log.svg",
 		"href": "monitor_log/monitoringandlogging.html"
+	}, {
+		"title": "Gestion des API",
+		"href": "apis/management/index.html"
 	}, {
 		"title": "Sécurité Bluemix",
 		"description": "Découvrez comment Bluemix assure une sécurité fonctionnelle, d'infrastructure, opérationnelle et physique.",
