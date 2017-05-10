@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-07-13"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 # Tutorial do {{site.data.keyword.GlobalizationPipeline_short}}
 {: #globalizationpipeline_tutorial}
 
-*Última atualização: 13 de julho de 2016*
-{: .last-updated}
 
 Para o tutorial em vídeo do {{site.data.keyword.GlobalizationPipeline_short}}, consulte [Tutorial do {{site.data.keyword.GlobalizationPipeline_short}}](https://www.youtube.com/watch?v=r_w7IvPNtH0){: new_window}.
 
