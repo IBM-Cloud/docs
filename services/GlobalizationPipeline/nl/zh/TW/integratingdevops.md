@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-08-30"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 # 與 IBM DevOps 整合
 {: #integratingdevops}
 
-*前次更新：2016 年 8 月 30 日*
-{: .last-updated}
 
 您可以整合 {{site.data.keyword.GlobalizationPipeline_short}} 與 {{site.data.keyword.jazzhub_short}}，以自動翻譯應用程式使用者介面，節省時間並減少人工翻譯的管理作業。請參閱[這個影片](https://www.youtube.com/watch?v=sSrIUjRbXYQ)，了解如何使用 {{site.data.keyword.GlobalizationPipeline_short}} 搭配 {{site.data.keyword.jazzhub_short}}。
 
