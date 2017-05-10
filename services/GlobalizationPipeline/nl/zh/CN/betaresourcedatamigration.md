@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-10-14"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 # 从 beta 版本迁移资源数据
 {: #globalizationpipeline_betaresourcedatamigration}
 
-*上次更新时间：2016 年 10 月 14 日*
-{: .last-updated}
 
 {{site.data.keyword.GlobalizationPipeline_full}} 的 beta 版本将在 GA 版本发布之后的一段时间内终止。beta 实例中的用户数据不会移动到 GA 服务实例。要在 GA 之后保留数据，您可以将资源数据导出到文件，然后再导入到新实例。请注意，您无法使用服务仪表板执行此操作。此外，将资源数据导出到其中一个资源文件格式不会保留与资源条目相关联的其他元数据。
 
