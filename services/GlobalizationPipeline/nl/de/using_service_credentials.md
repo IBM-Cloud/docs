@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-07-13"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # {{site.data.keyword.GlobalizationPipeline_short}} außerhalb von {{site.data.keyword.Bluemix_notm}} verwenden
 {: #globalizationpipeline_external}
-
-*Letzte Aktualisierung: 13. Juli 2016*
-{: .last-updated}
 
 Viele {{site.data.keyword.Bluemix_notm}}-Services einschließlich {{site.data.keyword.GlobalizationPipeline_short}} können von einer Anwendungshostingumgebung im Unternehmen aus verwendet werden oder sogar von einer anderen Cloudplattform, ohne dass die Anwendung auf {{site.data.keyword.Bluemix_notm}} gehostet werden muss.
 {:shortdesc}
