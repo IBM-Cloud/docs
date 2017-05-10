@@ -116,7 +116,7 @@ Un nome breve univoco e visibile pubblicamente che viene utilizzato in client de
 ### anti-affinità
 {: #x8888040}
 
-Due o più istanze del gruppo di contenitori che vengono eseguite su diversi nodi di rete per garantire una maggiore disponibilità per un'applicazione. Consulta anche [affinità](#x2149238).
+Due o più istanze del gruppo di contenitori che vengono eseguite su diversi nodi di rete per garantire una maggiore disponibilità per un'applicazione. Vedi anche [affinità](#x2149238).
 
 ### API
 {: #x2008805}
