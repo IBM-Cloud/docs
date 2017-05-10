@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-08-30"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 # Trabalhando com pacotes configuráveis
 {: #globalizationpipeline_workingwithbundles}
 
-*Última atualização: 30 de agosto de 2016*
-{: .last-updated}
 
 Cada pacote configurável que você cria contém os pares de valores de chave de seu arquivo de recursos e o conjunto completo de traduções que foram geradas.
 {:shortdesc}
