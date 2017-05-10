@@ -19,4 +19,4 @@ utilizzare la console Gestisci i dati per ottenere dati nei tuoi servizi, creare
 Crea di più | Cresci di più | Dormi di più
 ---- | ---- | ----
 Concentrati sulla cosa più divertente, ossia la creazione di nuove applicazioni, senza doverti preoccupare dell'amministrazione del sistema. | Ridimensiona i tuoi dati su IBM Cloud. | Dormi sonni tranquilli mentre gli esperti IBM si occupano del corretto funzionamento dei tuoi dati 24 ore al giorno, sette giorni alla settimana.
-{: caption="Table 1. Benefits of using the Work with Data console" caption-side="top"}
+{: caption="Tabella 1. Vantaggi dell'utilizzo della console Gestisci i dati" caption-side="top"}

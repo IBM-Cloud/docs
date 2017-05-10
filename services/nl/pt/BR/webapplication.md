@@ -28,4 +28,4 @@ nas plataformas existentes no local e nas nuvens com serviços consistentes. | C
 na lógica e captura codificada de políticas, práticas e regulamentações de negócios. Expresse
 facilmente a lógica de negócios com as regras de negócios para automatizar as decisões com a
 fidelidade de um especialista no assunto.
-{: caption="Table 1. Options for using web app services" caption-side="top"}
+{: caption="Tabela 1. Opções para usar serviços de app da web" caption-side="top"}

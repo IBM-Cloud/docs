@@ -23,4 +23,4 @@ os aplicativos para serem rapidamente editados a partir dos serviços. Inclua e 
 nas plataformas existentes no local e nas nuvens com serviços consistentes. | Crie lógica de negócios separadamente do aplicativo, permitindo uma mudança mais fácil na política e lógica de negócios e captura codificada de políticas de negócios, práticas e regulamentos. Expresse
 facilmente a lógica de negócios com as regras de negócios para automatizar as decisões com a
 fidelidade de um especialista no assunto.
-{: caption="Table 1. Options for using application services" caption-side="top"}
+{: caption="Tabela 1. Opções para usar os serviços de aplicativo" caption-side="top"}

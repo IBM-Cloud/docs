@@ -60,7 +60,7 @@ serviço geralmente disponível.	|Problemas que são determinados como sendo um 
 em um serviço beta fornecido pela IBM são suportados mas a IBM não é obrigada a
 fornecer uma correção. Além disso,
 o chamado de problema será designado como severidade 3 ou 4 onde aplicável. Para obter informações sobre severidade de chamados, consulte [Entrando em contato com o suporte](/docs/support/index.html#contacting-bluemix-support).|
-{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} services support information" caption-side="top"}
+{: caption="Tabela 1. Informações de suporte de serviços do Bluemix" caption-side="top"}
 
 
 
@@ -162,7 +162,7 @@ Nem todos os serviços estão disponíveis em toda região do {{site.data.keywor
 |{{site.data.keyword.workloadscheduler}}	|Sim		|Sim		|Não|
 |{{site.data.keyword.xpagesservice_short}}	|Sim		|Sim		|Não|
 *Tabela 2. Disponibilidade do serviço*
-{: caption="Table 2. Service availability" caption-side="top"}
+{: caption="Tabela 2. Disponibilidade de serviço" caption-side="top"}
 
 
 

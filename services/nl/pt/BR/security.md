@@ -23,4 +23,4 @@ Inclua facilmente a autenticação do usuário e recursos de conexão única na 
 em execução no Bluemix. As interfaces de autenticação baseadas em política permitem a rápida criação da autenticação de fatores múltiplos. | Avalie os aplicativos móveis e da web quanto a vulnerabilidades, fortalecendo
 os esforços de conformidade regulamentar e segurança. Ao varrer os apps antes da implementação, é possível
 identificar os problemas, gerar relatórios e fazer as correções recomendadas. | Utilize os controles de segurança e de privacidade integrados no Big Data e nos serviços de gerenciamento de dados, incluindo mascaramento de dados, descoberta e auditoria.
-{: caption="Table 1. Benefits of using security services" caption-side="top"}
+{: caption="Tabela 1. Benefícios de usar serviços de segurança" caption-side="top"}
