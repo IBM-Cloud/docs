@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-22"
+lastupdated: "2017-04-13"
 
 ---
 
@@ -32,7 +32,7 @@ Se você tiver acesso de administrador para o {{site.data.keyword.Bluemix}} Loca
 |Revisar relatórios e logs | Clique em **ADMINISTRAÇÃO &gt; RELATÓRIOS E LOGS** para visualizar relatórios de segurança e logs de auditoria para sua instância. Consulte [Visualizando relatórios](/docs/admin/index.html#oc_report). |
 |Visualizar Informações do Sistema | Clique em **ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA** para visualizar informações do sistema, como atualizações de manutenção pendentes, nome e versão de sua instância, região, URL da API, URL da CLI, detalhes da configuração de LDAP, mapeamentos de grupos e de usuários, estatísticas e domínios compartilhados. Consulte [Visualizando informações do sistema](/docs/admin/index.html#oc_system). |
 |Estender notificações e configurar assinaturas de notificação | Clique em **ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA &gt; *Número* pendente**. É possível usar webhooks para integração com um serviço da web de sua opção para configurar uma assinatura de notificação de eventos para uma atualização ou um incidente. Consulte [Notificações e assinaturas de notificação](/docs/admin/index.html#oc_eventsubscription). |
-{: caption="Table 1. Administrative tasks for managing your {{site.data.keyword.Bluemix_notm}} local or dedicated instance" caption-side="top"}
+{: caption="Tabela 1. Tarefas administrativas para gerenciar sua instância local ou dedicada do Bluemix" caption-side="top"}
 
 <!-- staging only for WoW start -->
 
@@ -59,7 +59,7 @@ Também é possível sempre saber o status de seu ambiente, verificando a págin
 | Incidentes críticos | Você é alertado sobre incidentes críticos na página Status. Clique em **Suporte** &gt; **Status**. É possível estender o recurso de notificação configurando uma assinatura de notificação que envia um e-mail para um destinatário de sua escolha. Ou é possível configurar uma assinatura que use webhooks para integrar as notificações a partir da página Administração com um serviço da web de sua opção.  |  
 | Eventos de limite | É possível configurar uma assinatura de notificação que envia um e-mail para um destinatário de sua escolha quando os limites para cota da organização, disco físico, memória física, disco reservado ou memória reservada são atingidos em seu ambiente. Ou é possível configurar uma assinatura que usa webhooks para integrar as notificações a um serviço da web de sua opção.  |  
 | {{site.data.keyword.Bluemix_notm}} Status | É sempre possível visualizar o status mais recente para a plataforma, os serviços e a sua instância do {{site.data.keyword.Bluemix_notm}} na página Status. Clique em **Suporte** &gt; **Status**.  |
-{: caption="Table 2. Event types and notifications methods" caption-side="top"}
+{: caption="Tabela 2. Tipos de eventos e métodos de notificações" caption-side="top"}
 
 ### Configurando assinaturas de notificação
 {: #seteventsub}
@@ -99,7 +99,7 @@ Para criar uma assinatura de e-mail ou webhook a partir da página **Assinaturas
 | Corpo | Insira o texto do corpo da mensagem a ser enviada no e-mail. É possível usar os valores de carga útil da IBM para preencher a notificação por e-mail com informações pertinentes. Consulte a tabela [Valores da seção Carga útil de manutenção e incidente](index.html#payload) para identificar quais valores podem ser usados. Use marcas HTML básicas para estruturar o seu e-mail. Este campo é requerido. |
 | Para | Insira o endereço ou endereços de e-mail usando uma lista separada por vírgula para os destinatários da notificação por e-mail. Expanda as opções "cc" ou "bcc" para copiar outros no e-mail. Este campo é requerido. |
 | Descrição | Inclua uma descrição exclusiva para a assinatura que você está criando. |
-{: caption="Table 3. Fields for email notification subscriptions about thresholds" caption-side="top"}
+{: caption="Tabela 3. Campos para assinaturas de notificação por e-mail sobre limites" caption-side="top"}
 
 
 {: #emailnottrhesh}
@@ -117,7 +117,7 @@ Para criar uma assinatura de e-mail ou webhook a partir da página **Assinaturas
 | Assunto | Insira a linha de assunto para o e-mail. Este campo é requerido.  |
 | Corpo da mensagem | Insira o texto do corpo da mensagem a ser enviada no e-mail. É possível usar os valores de carga útil da IBM para preencher a notificação por e-mail com informações pertinentes. Consulte a tabela [Valores da seção Carga útil do limite](index.html#threshpayload) para identificar quais valores podem ser usados. Use marcas HTML básicas para estruturar o seu e-mail. Este campo é requerido. |
 | Para | Insira o endereço ou endereços de e-mail usando uma lista separada por vírgula para os destinatários da notificação por e-mail. Expanda as opções "cc" ou "bcc" para copiar outros no e-mail. Este campo é requerido. |
-{: caption="Table 4. Fields for email notification subscriptions about maintenance updates or incidents" caption-side="top"}
+{: caption="Tabela 4. Campos para assinaturas de notificação por e-mail sobre atualizações de manutenção ou incidentes" caption-side="top"}
 
 Os dados de limite são coletados uma vez a cada seis horas. Uma notificação é enviada apenas quando o valor cruza o valor limite que você definir. Se você escolheu ascendente, uma nova notificação não será enviada, a menos que o valor caia abaixo do limite e, em seguida, aumente acima do limite novamente. Da mesma forma, se escolheu decrescente, você será notificado somente se o valor subir acima do limite configurado e, em seguida, cair abaixo do limite novamente. 
 
@@ -138,16 +138,16 @@ Uma notificação de limite de Cota da organização inclui somente as organiza�
 | Descrição | Inclua uma descrição exclusiva para a assinatura que você está criando. |
 | Novo evento | Selecione esta opção para ativar a notificação para novos eventos de manutenção ou de incidentes. Limpe a seleção para desativar a notificação. |
 | Método | Selecione **GET**, **POST** ou **PUT**. |
-| URL | Insira a URL para se conectar ao seu serviço da web. |
+| Url | Insira a URL para se conectar ao seu serviço da web. |
 | Propriedade de resposta | Esse campo opcional é o nome da propriedade que identifica o recurso que é criado pelo seu serviço da web quando uma solicitação POST ou PUT é enviada. No caso de você fornecer uma propriedade de resposta para um novo evento e escolher criar uma assinatura para uma mudança em um evento, deverá também fornecê-la para a assinatura Mudança no evento. Dependendo do serviço da web que você está usando, é possível especificá-lo como parte da URL ou como um valor de carga útil.  |
 | Carga Útil | Se você selecionou os métodos POST ou PUT, insira as propriedades que são específicas para o serviço da web que você está usando emparelhado com os valores de carga útil usados para a notificação da IBM. Consulte a tabela [Valores da seção Carga útil de manutenção e incidente](index.html#payload) para identificar quais valores podem ser usados. Se você não inserir informações nessa seção, receberá uma notificação de que não tem mais informações. |
 | Mudar para evento | Selecione essa opção para criar assinaturas de notificação sobre mudanças em eventos de manutenção ou de incidentes para os quais você criou assinaturas. Limpe a seleção para desativar a notificação. |
 | Usar valores e carga útil do Novo evento | Usa o conteúdo dos campos Método, URL e Carga útil da seção Novo evento. Observe que se essa opção estiver marcada, esses campos não estarão disponíveis para edição adicional na seção Mudanças no evento. |
 | Método | Selecione **GET**, **POST** ou **PUT**. |
-| URL | Insira a URL para se conectar ao seu serviço da web. |
+| Url | Insira a URL para se conectar ao seu serviço da web. |
 | Carga Útil | Se você selecionou os métodos POST ou PUT, insira as propriedades que são específicas para o serviço da web que você está usando emparelhado com os valores de carga útil usados para a notificação da IBM. Consulte a tabela [Valores da seção Carga útil de manutenção e incidente](index.html#payload) para identificar quais valores podem ser usados. Se você não inserir informações nessa seção, receberá uma notificação de que não tem mais informações. |
 | Combinar notificações | Selecione a opção para combinar as notificações de incidentes para todas as regiões em uma única notificação. Essa opção está disponível somente para incidentes. |
-{: caption="Table 5. Form fields for a webhook notification subscription about maintenance or incidents" caption-side="top"}
+{: caption="Tabela 5. Campos de formulário para uma assinatura de notificação de webhook sobre manutenção ou incidentes" caption-side="top"}
 
 
 {: #webhooknotthresh}
@@ -166,8 +166,8 @@ Uma notificação de limite de Cota da organização inclui somente as organiza�
 | Nome de Usuário | Se você escolheu a autorização básica, insira seu nome de usuário para o serviço da web. Se não desejar usar suas credenciais pessoais, será possível configurar um ID funcional para usar especificamente com o {{site.data.keyword.Bluemix_notm}}. |
 | Senha | Se você escolheu a autorização básica, insira a senha para o serviço da web. |
 | Método | Selecione **GET**, **POST** ou **PUT**. |
-| URL | Insira a URL para se conectar ao seu serviço da web. |
-{: caption="Table 6. Form fields for a webhook notification subscription about thresholds" caption-side="top"}
+| Url | Insira a URL para se conectar ao seu serviço da web. |
+{: caption="Tabela 6. Campos de formulário para uma assinatura de notificação de webhook sobre limites" caption-side="top"}
 
 Os dados de limite são coletados uma vez a cada seis horas. Uma notificação é enviada apenas quando o valor cruza o valor limite que você definir. Uma nova notificação não é enviada, a menos que o valor caia abaixo do limite, se você escolheu crescente, e depois ultrapasse o limite novamente. Da mesma forma, se você escolheu decrescente, você será notificado novamente somente se o valor subir acima do limite que você configurar e, em seguida, cair abaixo do limite novamente. 
 
@@ -190,7 +190,7 @@ Uma notificação de limite de Cota da organização inclui somente as organiza�
 | {{region}} | Região afetada | Atualização de manutenção e incidente |
 | {{status}} | Status da atualização | Atualização de manutenção |
 | {{type}} | Atualização ou incidente | Atualização de manutenção e incidente |
-{: caption="Table 7. Maintenance and incident payload section values" caption-side="top"}
+{: caption="Tabela 7. Valores da seção Carga útil de manutenção e incidente" caption-side="top"}
 
 
 {: #threshpayload}
@@ -202,7 +202,7 @@ Uma notificação de limite de Cota da organização inclui somente as organiza�
 | {{content.physical_memory}} | Limite de memória física | Limite |  
 | {{content.reserved_disk}} | Limite de disco reservado | Limite |
 | {{content.reserved_memory}} | Limite de memória reservada | Limite |
-{: caption="Table 8. Threshold payload section values" caption-side="top"}
+{: caption="Tabela 8. Valores da seção Carga útil de limite" caption-side="top"}
 
 Quando a notificação de assinatura é salva, você recebe notificações por meio do método que você configurar. Notificações ainda são postadas nos locais a seguir:  
  * Na página Status para incidentes
@@ -424,7 +424,7 @@ Para visualizar o uso por organização, clique em **ADMINISTRAÇÃO &gt; ADMINI
 - Número de rotas que estão atualmente em uso.
 - Gráfico de cota de memória que mostra o quanto da cota está usado e quanto não está atualmente sendo usado.
 - Gráfico de alocação de aplicativos que mostra quais aplicativos estão incluídos na cota de memória usada.
-- Gráfico de uso de aplicativo medido que mostra um relatório trimestral de GB/horas usados por app implementado. É possível selecionar a **Visualização de lista** para ver dados para todos os apps, incluindo a alocação de memória por app e o uso de GB/hora medido para os últimos três meses.
+- Gráfico de uso de aplicativos medido que mostra um relatório trimestral de GB/horas usados por app implementado. É possível selecionar a **Visualização de lista** para ver dados de todos os apps, incluindo a alocação de memória por app e o uso de GB/hora medido para os últimos três meses.
 
 Para obter mais informações sobre como visualizar o uso por organização, ajustar planos de cotas e gerenciar suas organizações, consulte [Administrando organizações](../admin/index.html#oc_organizations).
 
@@ -468,7 +468,7 @@ A tabela a seguir mostra a lista de relatórios de segurança gerados para o {{s
 | Anti-virus | Relatório de varredura antivírus | Software antivírus que está em vigor. |
 | Gerenciamento de correção de software | Relatório de aplicativo de correção | Correções de software que foram aplicadas. |
 | Gerenciamento de incidentes de segurança | Relatório de correção de incidentes de segurança | Evidência de incidentes de segurança para gerenciamento de incidentes de segurança. |
-{: caption="Table 9. Security report list" caption-side="top"}
+{: caption="Tabela 9. Lista de relatórios de segurança" caption-side="top"}
 
 ## Visualizando o status
 {: #oc_status}
@@ -634,7 +634,7 @@ As tabelas a seguir podem ajudá-lo a preencher o arquivo de JSON.
 |ID  | O ID do serviço. Esse ID deve ser exclusivo no {{site.data.keyword.Bluemix_notm}} e deve ser um GUID (Identificador Exclusivo Global). Não é possível mudar o ID do serviço depois de registrar o serviço com o {{site.data.keyword.Bluemix_notm}}. |
 |meta-dados | Os metadados de plano de serviço que são exibidos no catálogo do {{site.data.keyword.Bluemix_notm}} e na folha de precificação. O campo de metadados é um campo opcional. É possível especificar mais campos para os metadados. Consulte a tabela a seguir para [Campos de metadados](index.html#metadatafields) para obter mais informações. |
 |planejamentos | Uma matriz de definições de plano de serviço. Consulte a tabela a seguir para [Campos de plano](index.html#planfields) para obter mais informações. |
-{: caption="Table 10. JSON fields" caption-side="top"}
+{: caption="Tabela 10. Campos JSON" caption-side="top"}
 
 
 {: #metadatafields}
@@ -663,7 +663,7 @@ As tabelas a seguir podem ajudá-lo a preencher o arquivo de JSON.
 |sdkDownloadUrl (opcional) | A URL da página da web que será aberta quando você clicar no botão Download SDK. O botão Download SDK está no ladrilho de serviço da página de visão geral do aplicativo no	Painel. A página da web é aberta em uma nova guia do navegador. |
 |serviceMonitorApi    | A URL para uma API que retorna os dados de JSON, conforme mostrado no exemplo a seguir, que relata o funcionamento do serviço. Deve-se ter serviceMonitorApi ou serviceMonitorApp em seus metadados de serviço. Consulte a amostra de código a seguir para obter um exemplo. |
 |serviceMonitorApp    | A URL para um aplicativo que pode ser implementado no {{site.data.keyword.Bluemix_notm}} e ligado a um serviço para fornecer a saída específica de status de serviço. O aplicativo deve retornar o mesmo formato de dados de JSON que a serviceMonitorApi. Deve-se ter serviceMonitorApi ou serviceMonitorApp em seus metadados de serviço. Consulte a amostra de código a seguir para obter um exemplo. |
-{: caption="Table 11. Metadata fields" caption-side="top"}
+{: caption="Tabela 11. Campos de metadados" caption-side="top"}
 
 
 ```
@@ -704,7 +704,7 @@ O exemplo a seguir mostra como a resposta de JSON de GET /v2/catalog é mapeada 
 |grátis      | Um valor booleano que indica se o plano de serviço é grátis. O valor padrão é verdadeiro. |
 |ID       | O ID do plano de serviço. O ID deve ser exclusivo e deve ser um GUID.  |
 |metadados (opcional)    | Os metadados de plano de serviço que são exibidos no catálogo do {{site.data.keyword.Bluemix_notm}} e na folha de precificação. O campo de metadados é um campo opcional. É possível especificar os campos a seguir no campo de metadados: displayName, tipo (assinatura, reservável, planDetails), custo, custos (unitId, unidade, partNumber) e paidOnly. Consulte a tabela a seguir para [Campos de metadados de plano](index.html#planmetadata) para obter mais informações. |
-{: caption="Table 12. Plan fields" caption-side="top"}
+{: caption="Tabela 12. Campos de plano" caption-side="top"}
 
 
 {: #planmetadata}
@@ -716,7 +716,7 @@ O exemplo a seguir mostra como a resposta de JSON de GET /v2/catalog é mapeada 
 |projéteis                 | Uma descrição dos recursos que podem ser usados com o plano. A descrição é exibida na coluna **Recursos** na página de detalhes do serviço do catálogo e na folha de precificação. |
 |custos                   | As informações de custo sobre o serviço que é exibido na coluna Preço na página de detalhes do serviço do catálogo e na folha de precificação  . Cada entrada de matriz contém os campos a seguir: unitId (O ID da unidade. Use a forma plural e altere para letras maiúsculas todas as letras. Para planos grátis, esse campo é opcional), unidade (A métrica que é usada para calcular os encargos do serviço. O valor desse campo é usado na interface com o usuário do {{site.data.keyword.Bluemix_notm}} para representar a métrica de encargo)e partNumber (O identificador `part_number` que é usado pelo sistema de faturamento. Para planos grátis, esse campo é opcional).   |
 |paidOnly (opcional)     | Um valor booleano que indica se esse plano de serviço está disponível apenas para o {{site.data.keyword.Bluemix_notm}} pagar contas. Um valor de **true** significa que o plano de serviço é somente para contas de pagamento e não pode ser incluído em contas para teste. Um valor de **false** significa que o plano de serviço pode ser incluído nas contas de pagamento e contas para teste. O valor padrão é **false**.	  |
-{: caption="Table 13. Plan metadata fields" caption-side="top"}
+{: caption="Tabela 13. Campos de metadados de plano" caption-side="top"}
 
 O exemplo a seguir mostra como a resposta de JSON de GET /v2/catalog é mapeada para a página de detalhes do serviço no catálogo do {{site.data.keyword.Bluemix_notm}}. Especificamente, como os campos de metadados do plano descritos na tabela anterior mapeiam para a interface com o usuário:
 
@@ -771,7 +771,11 @@ a organização.
 
 ### Criando Espaços
 
-É possível criar espaços em sua organização, por exemplo, um espaço *dev* como um ambiente de desenvolvimento, um espaço *test* como um ambiente de teste e um espaço *production* como um ambiente de produção. Em seguida, é possível associar os apps aos espaços. Conclua as etapas a seguir para criar um espaço:
+É possível criar espaços em
+sua organização, por exemplo, um espaço *dev* como
+um ambiente de desenvolvimento, um espaço *test* como um ambiente
+de teste e um espaço *production* como um ambiente de
+produção. Em seguida, é possível associar os apps aos espaços. Conclua as etapas a seguir para criar um espaço:
 
 1. Na barra de menus, clique em **Conta** &gt; **Gerenciar organizações**.
 2. Selecione a organização na qual deseja incluir um espaço.
@@ -846,7 +850,7 @@ Uma cota representa os limites de recurso para as organizações em seu ambiente
 <dd>O número máximo de endereços IP públicos que podem ser alocados em todos os espaços de uma organização.</dd>
 </dl>
 <strong>Nota</strong>: se você ainda não tiver contêineres em seu ambiente ou se ainda não tiver os contêineres na configuração de seu ambiente, você receberá uma mensagem de erro.
-<p>Para obter mais informações sobre contêineres, veja [Sobre contêineres IBM](/docs/containers/container_ov.html). Para obter mais informações sobre cotas de contêiner, veja [Cota e contas do Bluemix](/docs/containers/container_planning_org_ov.html#container_planning_quota).</p>
+<p>Para obter mais informações sobre contêineres, veja [Sobre contêineres IBM](/docs/containers/container_ov.html). Para obter mais informações sobre cotas de contêiner, veja [Cota e contas do Bluemix](/docs/containers/container_planning.html#container_planning_quota).</p>
 <strong>Nota:</strong> Os contêineres não estão disponíveis na região de Sydney do {{site.data.keyword.Bluemix_notm}}.</li>
 </ul>
 <li>Para salvar qualquer mudança feita na página Gerenciar organização, clique em <strong>SALVAR</strong>.</li>
@@ -867,7 +871,7 @@ lista. Na página **Gerenciar organizações** para a organização selecionada,
   - Número de rotas que estão atualmente em uso.
   - Gráfico de cota de memória que mostra o quanto da cota está usado e quanto não está atualmente sendo usado.
   - Gráfico de alocação de aplicativos que mostra quais aplicativos estão incluídos na cota de memória usada.
-  - Gráfico de uso de aplicativo medido que mostra um relatório trimestral de GB/horas usados por app implementado. É possível selecionar a **Visualização de lista** para ver dados para todos os apps, incluindo a alocação de memória por app e o uso de GB/hora medido para os últimos três meses.
+  - Gráfico de uso de aplicativos medido que mostra um relatório trimestral de GB/horas usados por app implementado. É possível selecionar a **Visualização de lista** para ver dados de todos os apps, incluindo a alocação de memória por app e o uso de GB/hora medido para os últimos três meses.
 
 - Para editar o nome da organização e incluir ou remover os gerenciadores, clique no nome da organização
 na lista e siga os prompts na tela.
@@ -967,7 +971,7 @@ Os usuários podem ser designados com as permissões a seguir com níveis de ace
 | Catálogo | Usuários com permissão de **Catálogo** podem ter o acesso designado para **Leitura** ou **Gravação** (modificar) cujos serviços estão disponíveis na instância local ou dedicada. O acesso de leitura permite que o usuário acesse o quadro de Gerenciamento de catálogo para visualizar serviços disponíveis. O acesso de gravação permite que o usuário acesse o quadro de [Gerenciamento de catálogo](#oc_catalog) para visualizar serviços, editar a visibilidade de serviços, registrar serviços customizados e controlar a lista de prioridades do buildpack. |  
 | Relatórios | Usuários com permissão de **Relatórios** podem ter o acesso designado para **Leitura** ou **Gravação** (modificar) relatórios de segurança. O acesso de leitura permite que o usuário acesse o quadro Relatórios e Logs para fazer download de relatórios. O acesso de gravação permite que o usuário visualize o quadro [Relatórios e logs](#oc_report), bem como use a CLI para fazer upload de novos relatórios e criar novas categorias para os usuários acessarem. |
 | Usuários | Os usuários com permissão de **Usuários** podem ter designado o acesso para **Leitura** (visualizar) a lista de usuários ou **Gravação** (incluir ou remover) usuários. Essa permissão não permite configurar permissões para outros usuários. O acesso de gravação permite que o usuário inclua novos usuários no ambiente, exclua usuários do ambiente e inclua usuários existentes em organizações que já existem no ambiente. Além disso, o acesso de **Gravação** permite que o usuário inclua novas organizações, exclua organizações e edite os usuários dentro das organizações. |
-{: caption="Table 14. Permissions" caption-side="top"}
+{: caption="Tabela 14. Permissões" caption-side="top"}
 
 ## Usando
 APIs REST 
@@ -1872,7 +1876,7 @@ POST /codi/v1/serviceBrokers
 | auth_password | Senha usada para conectar ao broker de serviço. |
 | broker_url | URL usada para conectar ao broker de serviço. |
 | owningOrganization | Organização inicial para incluir o serviço na lista de desbloqueio. |
-{: caption="Table 15. Fields" caption-side="top"}
+{: caption="Tabela 15. Campos" caption-side="top"}
 
 #### Corpo
 {: #registerbody}
@@ -1947,7 +1951,7 @@ Use a API a seguir e os exemplos de código para atualizar um serviço.
 | auth_password | Senha usada para conectar ao broker de serviço. |
 | broker_url | URL usada para conectar ao broker de serviço. |
 | owningOrganization | Organização inicial para incluir o serviço na lista de desbloqueio. |
-{: caption="Table 16. Requests" caption-side="top"}
+{: caption="Tabela 16. Pedidos" caption-side="top"}
 
 #### Corpo
 {: #updatebody}
@@ -2009,7 +2013,7 @@ Use a API a seguir e os exemplos de código para excluir um serviço.
 | **Nome** | **Descrição** |
 |-----------------|-------------------|
 | Nome | Nome do broker de serviço. O nome com que esse serviço foi criado não pode ser mudado. |
-{: caption="Table 17. Parameter" caption-side="top"}
+{: caption="Tabela 17. Parâmetros" caption-side="top"}
 
 ### Rotear
 
@@ -2042,14 +2046,13 @@ Content-Type: application/json
 ```
 {: screen}
 
-## Gerenciando usuários com a CLI cf
+### Gerenciando usuários com a CLI cf
 {: #usingadmincli}
 
 É possível gerenciar usuários para o ambiente do
 {{site.data.keyword.Bluemix_notm}} usando a
 interface da linha de comandos do Cloud Foundry com o plug-in
-CLI admin do {{site.data.keyword.Bluemix_notm}}. Por
-exemplo, é possível incluir usuários a partir de um registro LDAP.
+CLI admin do {{site.data.keyword.Bluemix_notm}}. Deve-se fazer download desse plug-in para a CLI do Cloud Foundry.
 
 Antes de iniciar, instale a interface de linha de comandos do cf. O plug-in da CLI
 Admin do {{site.data.keyword.Bluemix_notm}}
@@ -2059,7 +2062,7 @@ requer o cf versão 6.11.2 ou posterior. [Fazer download da interface da linha d
 comandos do Cloud Foundry não é suportada por Cygwin. Use a interface de linha de comandos do Cloud Foundry
 em uma janela de linha de comandos diferente da janela de linha de comandos do Cygwin.
 
-### Incluindo o plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}}
+#### Incluindo o plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}}
 
 Após a interface de linha de comandos do cf ser instalada, é possível
 incluir o plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}}.
@@ -2085,11 +2088,18 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 </li>
 </ol>
 
-Para ver uma lista de comandos, execute o comando
+Para ver uma lista dos subcomandos disponíveis nos plug-ins que você instalou, execute o comando
 a seguir:
 
 ```
 cf plugins
+```
+{: codeblock}
+
+Para ver uma lista dos grupos de comandos disponíveis para o plug-in Administrador do {{site.data.keyword.Bluemix_notm}}, execute o comando a seguir:
+
+```
+cf ba
 ```
 {: codeblock}
 

@@ -44,7 +44,7 @@ ou do cliente, é necessário quando você solicita o registro de IDs federados.
 do domínio de sua empresa na IBM, será possível se inscrever para o
 {{site.data.keyword.Bluemix_notm}} usando as credenciais que você já usa para
 login de sua empresa. É necessário inserir um número de telefone ao se inscrever. |
-{:caption="Table 1. Sign up methods" caption-side="top"}
+{:caption="Tabela 1. Métodos de inscrição" caption-side="top"}
 
 ## Configurando Notificações
 {: #notifications}

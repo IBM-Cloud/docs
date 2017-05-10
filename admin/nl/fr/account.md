@@ -33,7 +33,7 @@ Un ID fédéré peut être utilisé pour s'inscrire à {{site.data.keyword.Bluem
 |IBMid existant | Si vous possédez déjà un IBMid, inscrivez-vous à {{site.data.keyword.Bluemix_notm}} avec les données d'identification existantes que vous utilisez pour recevoir les autres produits et services IBM. Vous devez entrer un numéro de téléphone lorsque vous vous inscrivez. |
 |Nouvel IBMid | Si vous ne possédez pas encore d'IBMid, vous pouvez choisir d'en créer un. L'IBMid vous permet d'utiliser un seul et même nom d'utilisateur de connexion pour tous les produits et services IBM que vous utilisez, y compris {{site.data.keyword.Bluemix_notm}}. Vous devez entrer vos informations personnelles, y compris vos nom et prénom, votre numéro de téléphone et votre mot de passe pour les nouvelles données d'identification. Vous pouvez utiliser cet IBMid pour vous connecter lorsque vous utilisez d'autres produits et services IBM.  |
 |ID fédéré | Si votre société a demandé à enregistrer auprès d'IBM les données d'identification de l'utilisateur du domaine de votre société, vous pouvez vous inscrire à {{site.data.keyword.Bluemix_notm}} à l'aide des données d'identification dont vous vous servez déjà pour la connexion de votre société. Vous devez entrer un numéro de téléphone lorsque vous vous inscrivez. |
-{:caption="Table 1. Sign up methods" caption-side="top"}
+{:caption="Tableau 1. Méthodes d'inscription" caption-side="top"}
 
 ## Définition de notifications
 {: #notifications}

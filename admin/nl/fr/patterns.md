@@ -61,7 +61,7 @@ Le tableau suivant fournit un récapitulatif de certains des éléments clés.
 || Contient un ou plusieurs membres d'équipe. Chaque utilisateur doit déjà être un membre d'équipe dans l'organisation propriétaire. Chaque membre d'équipe peut se voir accorder un ou plusieurs rôles. |
 | Membre d'équipe   | Peut être ajouté à une ou plusieurs organisations et à un ou plusieurs espaces sur différents comptes. |
 || Peut se voir accorder plusieurs rôles au sein d'une même organisation et/ou d'un même espace. | 
-{:caption="Table 1. Description of key elements" caption-side="top"}
+{:caption="Tableau 1. Description des éléments clés" caption-side="top"}
 
 ## Détermination de votre environnement {{site.data.keyword.Bluemix_notm}}
 {: #bpimplementation}

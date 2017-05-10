@@ -15,7 +15,7 @@ lastupdated: "2017-03-08"
 # Invito di utenti, assegnazione e gestione dell'accesso
 {: #iamuserinv}
 
-Puoi invitare gli utenti con le applicazioni, i servizi {{site.data.keyword.Bluemix_notm}} e l'infrastruttura {{site.data.keyword.Bluemix_notm}} da una sola ubicazione. Assegni l'accesso agli utenti come li inviti, assegna i ruoli, le politiche, gli account o le organizzazioni, o entrambi, a cui possono accedere. A seconda delle opzioni di accesso che sei autorizzato a gestire, puoi invitare e fornire l'accesso agli utenti nell'account o nell'organizzazione. Come proprietario di un account, puoi assegnare le opzioni di accesso al tuo account a un utente quando siete entrambi membri, indipendentemente dal ruolo.
+Puoi invitare gli utenti con le applicazioni, i servizi {{site.data.keyword.Bluemix_notm}} e l'infrastruttura {{site.data.keyword.Bluemix_notm}} da una sola ubicazione. Assegni l'accesso agli utenti come li inviti, assegna i ruoli, le politiche, gli account o le organizzazioni, o entrambi, a cui possono accedere. A seconda delle opzioni di accesso che sei autorizzato a gestire, puoi invitare e fornire l'accesso agli utenti nell'account o nell'organizzazione. Come proprietario di un account, puoi assegnare le opzioni di accesso al tuo account a un utente quando siete entrambi membri, indipendentemente dal ruolo. 
 {:shortdesc}
 
 Per invitare gli utenti o per gestire gli inviti utente nel tuo account, dalla barra del menu, fai clic su **Gestione** &gt; **Account** &gt; **Utenti**. La finestra Utenti visualizza un elenco di utenti con i rispettivi indirizzi email e stato corrente negli account che gestisci. 

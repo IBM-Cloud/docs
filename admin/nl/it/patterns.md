@@ -62,7 +62,7 @@ La seguente tabella fornisce un riepilogo di alcuni degli elementi chiave.
 || Contiene uno o più membri del team. Ogni utente deve essere già un membro del team nell'organizzazione proprietaria. A ogni membro del team possono essere concessi uno o più ruoli. |
 | Membro del team   | Può essere aggiunto a una o più organizzazioni e spazi tra i diversi account. |
 || Gli può essere fornito più di un ruolo all'interno della stessa organizzazione e/o dello stesso spazio. | 
-{:caption="Table 1. Description of key elements" caption-side="top"}
+{:caption="Tabella 1.  Descrizione di elementi chiave" caption-side="top"}
 
 ## Determinazione del tuo ambiente {{site.data.keyword.Bluemix_notm}}
 {: #bpimplementation}

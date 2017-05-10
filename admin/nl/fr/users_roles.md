@@ -15,7 +15,7 @@ lastupdated: "2017-03-01"
 # Gestion des accès utilisateur aux services Cloud Foundry et des rôles dans la page Répertoire d'équipe
 {: #userroles}
 
-Vous pouvez gérer les utilisateurs de la plateforme auxquels a été alloué un accès aux services Cloud Foundry depuis la page Répertoire d'équipe de votre compte. Vous pouvez gérer les membres d'équipe existants et leurs rôles dans votre organisation et ses espaces.
+Vous pouvez gérer les utilisateurs de la plateforme auxquels a été alloué un accès aux services Cloud Foundry depuis la page Répertoire d'équipe de votre compte. Vous pouvez gérer les membres d'équipe existants et leurs rôles dans votre organisation et ses espaces. 
 {:shortdesc}
 
 Vous pouvez accéder au Répertoire d'équipe de votre compte depuis un lien situé en haut de la page Nouveaux utilisateurs. Pour accéder à la page Utilisateurs, depuis le menu {{site.data.keyword.Bluemix_notm}}, cliquez sur **Gérer** &gt; **Compte** &gt; **Utilisateurs**.
@@ -33,7 +33,7 @@ Au niveau du compte, deux rôles permettent l'accès à différentes fonctions d
 |----------------|---------|
 |Propriétaire | Un propriétaire de compte peut accéder à son profil, au répertoire d'équipe, aux informations de facturation, aux notifications relatives aux dépenses et au tableau de bord de l'utilisation. Dans la page Répertoire d'équipe, le propriétaire peut inviter de nouveaux membres d'équipe et ajuster les rôles. Il peut également ajouter des offres promotionnelles, définir ou changer la limite de facturation, définir l'accès aux services et gérer les organisations et les espaces. |
 |Membre | Un membre peut accéder à son profil, au répertoire d'équipe, aux crédits du compte et aux limites de facturation dans l'en-tête {{site.data.keyword.Bluemix_notm}}. Toutefois, dans la page Répertoire d'équipe, un membre ne peut afficher que les membres d'équipe existants sur le compte. |
-{:caption="Table 1. Account roles and permissions" caption-side="top"}
+{:caption="Tableau 1. Rôles de compte et droits" caption-side="top"}
 
 Les nouveaux membres d'équipe sont ajoutés en tant que membre du compte. Vous pouvez affecter des rôles d'organisation et d'espace aux invités afin
 d'activer des vues et des droits spécifiques dans {{site.data.keyword.Bluemix_notm}}. Les nouveaux membres d'équipe ajoutés à une organisation, sauf dans un
@@ -47,7 +47,7 @@ Les rôles suivants peuvent être affectés au niveau de l'organisation :
 |Responsable de la facturation | Un responsable de la facturation peut afficher des informations sur l'utilisation des contextes d'exécution et des services pour l'organisation dans la page Tableau de bord de l'utilisation.  |
 |Auditeur | Un auditeur de l'organisation peut afficher le contenu des applications et des services dans l'organisation. Il peut également afficher les membres d'équipe dans l'organisation et les rôles qui leur sont affectés, ainsi que le quota pour l'organisation. Ce rôle est affecté à tous les invités par défaut, sauf dans un environnement
 local ou dédié. |
-{:caption="Table 2. Organization roles and permissions" caption-side="top"}
+{:caption="Tableau 2. Rôles d'organisation et droits" caption-side="top"}
 
 Les rôles suivants peuvent être affectés au niveau de l'espace :
 
@@ -56,7 +56,7 @@ Les rôles suivants peuvent être affectés au niveau de l'espace :
 |Responsable | Un responsable de l'espace peut ajouter des membres d'équipe existants et gérer les rôles dans l'espace. Il peut également afficher le nombre d'instances, les liaisons de service et l'utilisation des ressources pour chaque application dans l'espace. |
 |Développeur | Un développeur de l'espace peut créer, supprimer et gérer des applications et des services dans l'espace. Certaines tâches de gestion impliquent le déploiement d'applications, le démarrage ou l'arrêt d'applications, le changement de nom d'une application, la suppression d'une application, le changement de nom d'un espace, la liaison d'un service ou l'annulation de la liaison d'un service à une application ainsi que l'affichage du nombre d'instances, des liaisons de service et de l'utilisation des ressources pour chaque application dans l'espace. De plus, le développeur de l'espace peut associer une adresse URL interne ou externe à une application dans l'espace.   |
 |Auditeur | Un auditeur de l'espace dispose de l'accès en lecture à toutes les informations sur l'espace, telles que le nombre d'instances, les liaisons de service et l'utilisation des ressources pour chaque application dans l'espace. |
-{:caption="Table 3. Space roles and permissions" caption-side="top"}
+{:caption="Tableau 3. Rôles d'espace et droits" caption-side="top"}
 
 **Remarque** : les membres d'équipe qui possèdent le rôle de responsable ou de développeur de l'espace peuvent accéder à la
 variable
