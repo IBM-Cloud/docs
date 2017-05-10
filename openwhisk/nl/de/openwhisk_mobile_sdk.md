@@ -1,7 +1,7 @@
 
 # OpenWhisk Mobile-SDK verwenden
 
-OpenWhisk stellt ein Mobile-SDK für iOS- und watchOS-Geräte bereit, mit dem mobile Apps dazu eingerichtet werden können, ohne großen Aufwand ferne Auslöser zu aktivieren und ferne Aktionen aufzurufen. Gegenwärtig ist keine Version für Android verfügbar. Android-Entwickler können die OpenWhisk-REST-API direkt verwenden. 
+OpenWhisk stellt ein Mobile-SDK für iOS- und watchOS-Geräte bereit, mit dem mobile Apps dazu eingerichtet werden können, ohne großen Aufwand ferne Auslöser zu aktivieren und ferne Aktionen aufzurufen. Gegenwärtig ist keine Version für Android verfügbar. Android-Entwickler können die OpenWhisk-REST-API direkt verwenden.
 
 Das Mobil-SDK wurde in Swift 3.0 geschrieben und unterstützt iOS 10 und höhere Releases. Sie können das Mobil-SDK mithilfe von Xcode 8.0 erstellen. Bisherige Swift 2.2/Xcode 7-Versionen des SDK sind bis 0.1.7 verfügbar, obgleich sie nicht mehr verwendet werden.
 
@@ -29,7 +29,7 @@ end
 Geben Sie über die Befehlszeile den Befehl `pod install` ein. Dieser Befehl installiert das SDK für eine iOS-App mit einer watchOS-Erweiterung.  Verwenden Sie die Arbeitsbereichsdatei, die CocoaPods für Ihre App erstellt, um das Projekt in Xcode zu öffnen. 
 
 Nach der Installation öffnen Sie Ihren Projektarbeitsbereich.  Bei der Erstellung kann folgende Warnmeldung angezeigt werden: `Use Legacy Swift Language Version” (SWIFT_VERSION) is required to be configured correctly for targets which use Swift. Use the [Edit > Convert > To Current Swift Syntax…] menu to choose a Swift version or use the Build Settings editor to configure the build setting directly.`
-Dies geschieht, wenn Cocoapods die Swift-Version im Pods-Projekt nicht aktualisiert. Zur Behebung wählen Sie das Pods-Projekt und das OpenWhisk-Ziel aus. Rufen Sie den Editor zum Erstellen der Einstellungen auf und ändern Sie die Einstellung `Bisherige Swift-Sprachversion verwenden` in `no`. Alternativ können Sie am Ende Ihrer Podfile die folgenden Nachinstallationsschritte hinzufügen:
+Dies geschieht, wenn Cocoapods die Swift-Version im Pods-Projekt nicht aktualisiert.  Zur Behebung wählen Sie das Pods-Projekt und das OpenWhisk-Ziel aus.  Rufen Sie den Editor zum Erstellen der Einstellungen auf und ändern Sie die Einstellung `Bisherige Swift-Sprachversion verwenden` in `no`. Alternativ können Sie am Ende Ihrer Podfile die folgenden Nachinstallationsschritte hinzufügen:
 
 ```
 post_install do |installer|
@@ -48,9 +48,9 @@ Erstellen Sie eine Datei im Projektverzeichnis Ihrer App mit dem Namen 'Cartfile
 github "openwhisk/openwhisk-client-swift.git" ~> 0.2.2 # Oder aktuelle Version
 ```
 
-Geben Sie über die Befehlszeile den Befehl `carthage update --platform ios` ein. Carthage lädt das SDK herunter und führt einen Build durch, erstellt ein Verzeichnis mit dem Namen 'Carthage' im Projektverzeichnis Ihrer App und fügt eine OpenWhisk.framework-Datei in Carthage/build/iOS ein. 
+Geben Sie über die Befehlszeile den Befehl `carthage update --platform ios` ein. Carthage lädt das SDK herunter und führt einen Build durch, erstellt ein Verzeichnis mit dem Namen 'Carthage' im Projektverzeichnis Ihrer App und fügt eine OpenWhisk.framework-Datei in Carthage/build/iOS ein.
 
-Anschließend müssen Sie OpenWhisk.framework den eingebetteten Frameworks in Ihrem Xcode-Projekt hinzufügen. 
+Anschließend müssen Sie OpenWhisk.framework den eingebetteten Frameworks in Ihrem Xcode-Projekt hinzufügen.
 
 ### Aus Quellcode installieren
 
@@ -61,7 +61,7 @@ Erstellen Sie das Projekt (Build) für die Ziele, die Sie benötigen, und fügen
 
 ## Starter-App-Beispiel installieren
 
-Sie können die OpenWhisk-CLI zum Herunterladen von Beispielcode verwenden, der in das OpenWhisk-SDK-Framework eingebettet wird.   
+Sie können die OpenWhisk-CLI zum Herunterladen von Beispielcode verwenden, der in das OpenWhisk-SDK-Framework eingebettet wird.  
 
 Geben Sie den folgenden Befehl ein, um das Starter-App-Beispiel zu installieren:
 ```
@@ -77,7 +77,7 @@ $ pod install
 
 ## Erste Schritte mit dem SDK
 
-Um die Arbeit rasch aufnehmen zu können, erstellen Sie ein Objekt 'WhiskCredentials' mit Ihren OpenWhisk-API-Berechtigungsnachweisen und erstellen eine OpenWhisk-Instanz aus diesem Objekt. 
+Um die Arbeit rasch aufnehmen zu können, erstellen Sie ein Objekt 'WhiskCredentials' mit Ihren OpenWhisk-API-Berechtigungsnachweisen und erstellen eine OpenWhisk-Instanz aus diesem Objekt.
 
 Sie können zum Beispiel folgenden Beispielcode zum Erstellen des Berechtigungsnachweisobjekts verwenden:
 
@@ -183,7 +183,7 @@ whisk.baseURL = "http://localhost:8080"
 
 In diesem Beispiel wird eine Installation verwendet, die unter 'localhost:8080' ausgeführt wird. Wenn Sie den Parameter 'baseUrl' nicht angeben, verwendet das Mobil-SDK die Instanz, die unter https://openwhisk.ng.bluemix.net ausgeführt wird.
 
-Sie können einen angepassten Parameter NSURLSession übergeben, wenn Sie eine besondere Netzverwaltung benötigen. Sie könnten zum Beispiel eine eigene OpenWhisk-Installation haben, die mit selbst signierten Zertifikaten arbeitet: 
+Sie können einen angepassten Parameter NSURLSession übergeben, wenn Sie eine besondere Netzverwaltung benötigen. Sie könnten zum Beispiel eine eigene OpenWhisk-Installation haben, die mit selbst signierten Zertifikaten arbeitet:
 
 ```swift
 // Netzdelegate erstellen, der allen vertraut
@@ -200,7 +200,7 @@ whisk.urlSession = session
 
 ### Unterstützung für qualifizierte Namen
 
-Alle Aktionen und Auslöser haben einen vollständig qualifizierten Namen, der aus einem Namensbereich, einem Paketnamen und einem Aktions- bzw. Auslösernamen besteht. Das SDK kann diese Elemente als Parameter beim Aufruf einer Aktion bzw. Aktivieren eines Auslösers akzeptieren. Das SDK stellt zudem eine Funktion bereit, die einen vollständig qualifizierten Namen akzeptiert, der wie folgt aussieht: `/mynamespace/mypackage/nameOfActionOrTrigger`. Die Zeichenfolge für den qualifizierten Namen unterstützt unbenannte Standardwerte für Namensbereiche und Pakete, die alle OpenWhisk-Benutzer haben, sodass die folgenden Syntaxanalyseregeln gelten: 
+Alle Aktionen und Auslöser haben einen vollständig qualifizierten Namen, der aus einem Namensbereich, einem Paketnamen und einem Aktions- bzw. Auslösernamen besteht. Das SDK kann diese Elemente als Parameter beim Aufruf einer Aktion bzw. Aktivieren eines Auslösers akzeptieren. Das SDK stellt zudem eine Funktion bereit, die einen vollständig qualifizierten Namen akzeptiert, der wie folgt aussieht: `/mynamespace/mypackage/nameOfActionOrTrigger`. Die Zeichenfolge für den qualifizierten Namen unterstützt unbenannte Standardwerte für Namensbereiche und Pakete, die alle OpenWhisk-Benutzer haben, sodass die folgenden Syntaxanalyseregeln gelten:
 
 - qName = "foo" ergibt: Namensbereich = Standard, Paket = Standard, Aktion/Auslöser = "foo"
 - qName = "mypackage/foo" ergibt: Namensbereich = Standard, Paket = mypackage, Aktion/Auslöser = "foo"
