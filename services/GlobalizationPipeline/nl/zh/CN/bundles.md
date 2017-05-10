@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-08-30"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 # 使用束
 {: #globalizationpipeline_workingwithbundles}
 
-*上次更新时间：2016 年 8 月 30 日*
-{: .last-updated}
 
 您所创建的每个束都包含资源文件的键值对，以及生成的完整翻译集。
 {:shortdesc}
