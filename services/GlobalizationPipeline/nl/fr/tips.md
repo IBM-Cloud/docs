@@ -15,8 +15,6 @@ lastupdated: "2016-07-12"
 # Conseils en matière de traduction automatique
 {: #globalizationpipeline_tips}
 
-*Dernière mise à jour : 12 juillet 2016*
-{: .last-updated}
 
 La traduction automatique peut s'avérer efficace lorsqu'il s'agit de proposer une traduction approximative de la signification du texte source. En revanche, la qualité et la pertinence de la traduction automatique varient considérablement selon la langue cible et le moteur de traduction automatique que vous utilisez. La qualité de la traduction automatique repose en grande partie sur la qualité du texte source lui-même. Il est fort probable qu'un texte source contenant beaucoup d'expressions familières, de phrases incomplètes, de ponctuations incorrectes et de termes et d'expressions ambigus ne soit pas traduit correctement.
 {:shortdesc}
