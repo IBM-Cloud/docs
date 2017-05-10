@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-09-09"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 # 開始使用 {{site.data.keyword.GlobalizationPipeline_short}}
 {: #globalizationpipeline}
 
-*前次更新：2016 年 9 月 9 日*
-{: .last-updated}
 
 {{site.data.keyword.GlobalizationPipeline_full}} 是一項服務，提供快速翻譯 Web 或行動使用者介面的機器翻譯和編輯功能。使用其儀表板、RESTful API 以及與您應用程式之 Delivery Pipeline 的整合，您可以發行給全球客戶，而不需要重建或重新部署應用程式。
 {:shortdesc}
