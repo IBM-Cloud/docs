@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-10-14"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # Migración de datos de recursos de la versión beta
 {: #globalizationpipeline_betaresourcedatamigration}
-
-*Última actualización: 14 de octubre de 2016*
-{: .last-updated}
 
 La versión beta de {{site.data.keyword.GlobalizationPipeline_full}} se interrumpirá transcurrido un determinado periodo después del release de la versión GA. Los datos de usuario en instancias beta no se moverán a las instancias de servicio GA. Para conservar los datos después de GA, puede exportar los datos de recursos en los archivos y, a continuación, importar a la instancia nueva. Tenga en cuenta que no puede realizar esta operación utilizando el panel de control del servicio. Además, exportar los datos de recursos en un formato de archivo de recursos no conservará otros metadatos asociados con las entradas de recursos.
 
