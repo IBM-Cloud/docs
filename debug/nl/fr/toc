@@ -1,0 +1,9 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc}
+Débogage
+
+    {: .navgroup id="help"}
+    index.md
+    {: .navgroup-end}
