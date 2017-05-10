@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-08-25"
+lastupdated: "2017-04-25"
 
 ---
 
@@ -38,20 +38,19 @@ solicitações de seu domínio customizado serão roteadas para seu aplicativo n
 
   1. Crie um domínio customizado para sua organização.
 
-	1. Acesse o ícone **{{site.data.keyword.avatar}}** ![ícone Avatar](../icons/i-avatar-icon.svg) &gt; **Gerenciar organizações** &gt;
-**Visualizar detalhes** para a sua organização &gt; **Editar organização** &gt; **Domínios**.
+	1. Acesse **Gerenciar** &gt; **Conta** &gt; **Organizações** &gt; **Visualizar detalhes** para sua organização. Em seguida, clique em **Editar organização** &gt; **Domínios**.
 
-	2. Na guia **DOMÍNIOS**, clique em **INCLUIR DOMÍNIO**, insira o nome do domínio customizado e clique em **SALVAR**.
+	2. Na guia **DOMÍNIOS**, clique em **INCLUIR DOMÍNIO** e insira o nome de domínio customizado e clique em **SALVAR**.
 
-	**Nota**: Por exemplo, é possível usar `mycompany.com` para associar a rota `www.mycompany.com` ao seu
-app. Também é possível usar `example.mycompany.com` para associar a rota `www.example.mycompany.com` ao seu app.
+	**Nota**: Por exemplo, é possível usar `mycompany.com` para associar a rota `www.mycompany.com` ao seu aplicativo. Também é possível usar
+`example.mycompany.com` para associar a rota `www.example.mycompany.com` ao seu aplicativo.
 
   2. Inclua a rota com o domínio customizado para um aplicativo.
 
-    1. Na barra de menus, selecione **Console** a partir do menu suspenso e, em seguida, clique na linha para o aplicativo na qual você deseja incluir a rota. A página
+    1. Clique no ícone **Menu** ![Ícone Menu](../icons/icon_hamburger.svg) &gt; **Painel**, em seguida, clique na linha para o aplicativo no qual você deseja incluir a rota. A página
 **Visão geral** é exibida.
 
-	2. A partir do menu **Visualizar aplicativo**, selecione **Editar rotas e acesso**.
+	2. No menu **Rotas**, selecione **Editar rotas**.
 
 	3. Clique em **Incluir rota** e especifique a rota que você deseja usar para o aplicativo.
 	4. Clique **Salvar.**
@@ -87,7 +86,7 @@ app. Também é possível usar `example.mycompany.com` para associar a rota `www
 
     *mydomain*
 
-    	O nome de seu domínio customizado.
+    	O nome de seu domínio customizado, por exemplo `www.mydomain.mybluemix.net`.
 
     *host_name*
 
@@ -106,6 +105,7 @@ Após configurar o domínio customizado no {{site.data.keyword.Bluemix_notm}}, d
     * US-SOUTH: `secure.us-south.bluemix.net`
     * EU-GB: `secure.eu-gb.bluemix.net`
     * AU-SYD: `secure.au-syd.bluemix.net`
+    * EU-DE: `secure.eu-de.bluemix.net`
 
 Em um navegador ou uma interface de linha de comandos, insira a URL a seguir para acessar o aplicativo myapp:
 
@@ -294,8 +294,7 @@ estiver em vigor.
   ...
   ```
 
-  **Resultado:** O Roteador CF para de enviar tráfego para o app *Azul*. O app *Verde* está respondendo para ambas
-as URLs: `Green.mybluemix.net` e `Blue.mybluemix.net`.
+  **Resultado:** O Roteador CF para de enviar o tráfego para o app *Blue*. O app *Green* está respondendo a ambas as URLs: `Green.mybluemix.net` e `Blue.mybluemix.net`.
 
 5. Remova a rota `Green.mybluemix.net` para o app *Green*.
 
@@ -303,8 +302,7 @@ as URLs: `Green.mybluemix.net` e `Blue.mybluemix.net`.
   cf unmap-route Green mybluemix.net -n Green
   ```
 
-  **Resultado:** O Roteador CF para de enviar tráfego para o app *Azul*. O app *Verde* está respondendo para
-a URL `Blue.mybluemix.net`.
+  **Resultado:** O Roteador CF para de enviar o tráfego para o app *Blue*. O app *Green* está respondendo à URL `Blue.mybluemix.net`.
 
 6. Opcional: se desejar excluir a versão antiga (*Blue*) do aplicativo, use o comando `cf delete`.
 

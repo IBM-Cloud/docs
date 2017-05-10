@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-04-18"
 
 ---
 
@@ -75,7 +75,7 @@ Vous pouvez appliquer un protocole de sécurité pour garantir la confidentialit
 application et empêcher les écoutes clandestines, les altérations et les falsifications de messages
 
 Dans {{site.data.keyword.Bluemix_notm}}, pour chaque organisation dont le propriétaire de compte bénéficie
-d'un plan Paiement à la carte ou Abonnement, vous avez droit à quatre téléchargements de certificat gratuits. Pour chaque organisation dont le propriétaire de compte bénéficie d'un compte d'essai gratuit, vous avez droit à un téléchargement de certificat gratuit.
+d'un plan Paiement à la carte ou Abonnement, vous avez droit à quatre téléchargements de certificat. Pour chaque organisation dont le propriétaire de compte bénéficie d'un compte d'essai gratuit, vous devez mettre à niveau votre compte pour pouvoir télécharger un certificat. 
 
 Pour
 pouvoir télécharger des certificats, vous devez créer une demande de signature de certificat. Voir [Création de demandes de signature de certificat](#ssl_csr).
@@ -86,13 +86,16 @@ d'URL allouée à votre organisation dans Bluemix :
   * Sur des Etats-Unis : secure.us-south.bluemix.net
   * Europe-Royaume-Uni : secure.eu-gb.bluemix.net
   * Australie-Sydney : secure.au-syd.bluemix.net
+  * EUROPE-ALLEMAGNE : secure.eu-de.bluemix.net
 
 
 Pour télécharger un certificat pour votre application, procédez comme suit :
 
-1. Créez une route ou modifiez une route existante en sélectionnant **Editer les routes et l'accès à l'application** dans le menu de l'application.
+1. Accédez à votre tableau de bord.
 
-2. Dans la boîte de dialogue Editer les routes et l'accès à l'application, cliquez sur **Gestion des domaines**.
+2. Sélectionnez le nom de votre application pour ouvrir la vue des détails d'application. 
+
+3. Sélectionnez le menu déroulant **Routes**, puis **Gestion des domaines**.
 
 3. Pour votre domaine personnalisé, cliquez sur **Télécharger le certificat**.
 
@@ -163,4 +166,4 @@ l'option de demande de certificat client, téléchargez un fichier de magasin de
 	  * DER (.der ou .cer )
       * PKCS #7 (p7b, p7r, spc)
 
-Pour supprimer un certificat ou remplacer un certificat existant par un nouveau, accédez à **Gérer les organisations** > **Domaines** > **Afficher le certificat** afin de gérer vos certificats.
+Pour supprimer un certificat ou remplacer un certificat existant par un nouveau, accédez à **Gérer** > **Compte** > **Organisations**. Cliquez ensuite sur **Afficher les détails** > **Editer l'organisation** > **Domaines** pour supprimer ou remplacer un certificat pour un domaine personnalisé. 

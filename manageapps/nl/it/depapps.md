@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-04-11"
 ---
 
 
@@ -31,7 +31,7 @@ due fasi, la preparazione dell'applicazione e il suo avvio.
 Cloud Foundry supporta Diego, che è la nuova architettura di runtime predefinita che fornisce una serie di funzionalità che migliorano l'esperienza di sviluppo dell'applicazione per l'hosting e la messa a punto delle piattaforme cloud. Questo aggiornamento dell'architettura fornisce una miglioramento nelle prestazioni e operazioni generale della piattaforma Cloud Foundry. La nuova architettura fornisce supporto per diverse tecnologie del contenitore dell'applicazione, inclusi Garden e Windows, un pacchetto SSH che permette l'accesso diretto al contenitore dell'applicazione, e altre modifiche innovative. Per ulteriori informazioni sul recente aggiornamento dell'architettura, consulta [{{site.data.keyword.Bluemix_notm}} Cloud Foundry: Diego is live ![icona link esterno](../icons/launch-glyph.svg)](https://www.ibm.com/blogs/bluemix/2017/01/bluemix-cloud-foundry-diego-live/){: new_window}.
 
 
-Tutte le nuove applicazioni che crei saranno eseguite su Diego e devi avviare la migrazione delle tue applicazioni esistenti in esecuzione sui DEA alla nuova architettura Diego.
+Tutte le nuove applicazioni che crei saranno eseguite su Diego e devi migrare le tue applicazioni esistenti in esecuzione sui DEA alla nuova architettura Diego.
 
 **Nota**: l'architettura Diego Cloud Foundry influenza tutti gli ambiente della regione di {{site.data.keyword.Bluemix_notm}} pubblico. Gli ambienti {{site.data.keyword.Bluemix_notm}} dedicato e {{site.data.keyword.Bluemix_notm}} locale saranno aggiornati in una data successiva.
 
@@ -288,7 +288,7 @@ cf push -f appManifest.yml
 |**random-route**	|Un valore booleano per assegnare una rotta casuale all'applicazione. Il valore predefinito è **false**.	|`random-route: true`|
 |**services**	|I servizi di cui eseguire il bind all'applicazione.	|`services:   - mysql_maptest`|
 |**env**	|Le variabili di ambiente personalizzate per l'applicazione.|`env: DEV_ENV: production`|
-{: caption="Table 1. Supported options in the manifest YAML file" caption-side="top"}
+{: caption="Tabella 1. Opzioni supportate nel file YAML manifest" caption-side="top"}
 
 ### Un file manifest.yml di esempio
 
@@ -318,9 +318,7 @@ in {{site.data.keyword.Bluemix_notm}}.
 {: #app_env}
 
 Le variabili di ambiente contengono le informazioni di ambiente
-di un'applicazione distribuita in {{site.data.keyword.Bluemix_notm}}. Oltre alle variabili di ambiente impostate da un * Droplet Execution Agent
-(DEA)* e da pacchetti di build, su {{site.data.keyword.Bluemix_notm}}
-puoi impostare anche variabili di ambiente specifiche dell'applicazione.
+di un'applicazione distribuita in {{site.data.keyword.Bluemix_notm}}. Oltre alle variabili di ambiente impostate da *Diego* e dai pacchetti di build, su {{site.data.keyword.Bluemix_notm}} puoi impostare anche variabili di ambiente specifiche dell'applicazione.
 
 Puoi visualizzare le seguenti variabili di ambiente di
 un'applicazione {{site.data.keyword.Bluemix_notm}} in esecuzione
@@ -380,7 +378,7 @@ esempio:
 
 Puoi accedere anche alle variabili di ambiente impostate dal DEA e dai pacchetti di build.
 
-Le seguenti variabili sono definite dal DEA:
+Le seguenti variabili sono definite da Diego:
 
 <dl>
   <dt><strong>HOME</strong></dt>
@@ -390,16 +388,15 @@ Le seguenti variabili sono definite dal DEA:
 utilizzare. Puoi specificare il valore in un file <span class="ph filepath">manifest.yml</span> di applicazione
 oppure nella riga di comando quando distribuisci l'applicazione.</dd>
   <dt><strong>PORT</strong></dt>
-  <dd>La porta sul DEA per comunicare con l'applicazione. Il
-DEA assegna una porta all'applicazione nel periodo di preparazione.</dd>
+  <dd>La porta su Diego per comunicare con l'applicazione. Diego assegna una porta all'applicazione nella fase di preparazione.</dd>
   <dt><strong>PWD</strong></dt>
   <dd>La directory di lavoro corrente in cui è in esecuzione il pacchetto di build.</dd>
   <dt><strong>TMPDIR</strong></dt>
   <dd>La directory in cui vengono archiviati i file temporanei e di preparazione.</dd>
   <dt><strong>USER</strong></dt>
-  <dd>L'ID utente sotto cui il DEA è in esecuzione.</dd>
+  <dd>L'ID utente sotto cui Diego è in esecuzione.</dd>
   <dt><strong>VCAP_APP_HOST</strong></dt>
-  <dd>L'indirizzo IP dell'host DEA.</dd>
+  <dd>L'indirizzo IP dell'host Diego.</dd>
   <dt><strong>VCAP_APPLICATION</strong></dt>
   <dd>Una stringa JSON che contiene informazioni sull'applicazione distribuita. Le informazioni includono il nome dell'applicazione, gli URI, i limiti di memoria,
 la data e l'ora in cui l'applicazione ha raggiunto lo stato attuale e
@@ -482,10 +479,9 @@ per ogni pacchetto di build. Consulta [Buildpacks ![icona link esterno](../icons
 	  <dt><strong>IBM_JAVA_OPTIONS</strong></dt>
 	  <dd>Le opzioni SDK Java da utilizzare durante l'esecuzione dell'applicazione.</dd>
 	  <dt><strong>IBM_JAVA_COMMAND_LINE</strong></dt>
-	  <dd>Il comando Java per avviare un'istanza del server di profili Liberty nel DEA.</dd>
+	  <dd>Il comando Java per avviare un'istanza del server di profili Liberty in Diego.</dd>
 	  <dt><strong>WLP_USR_DIR</strong></dt>
-	  <dd>L'ubicazione delle risorse e delle definizioni server condivise durante l'avvio di
-un'istanza del server di profili Liberty nel DEA.</dd>
+	  <dd>L'ubicazione delle risorse e delle definizioni server condivise durante l'avvio di un'istanza del server di profili Liberty in Diego.</dd>
 	  <dt><strong>WLP_OUTPUT_DIR</strong></dt>
 	  <dd>L'ubicazione dell'output generato, quali ad esempio file di log e
 directory di lavoro di un'istanza del server di profili Liberty in esecuzione.</dd>
