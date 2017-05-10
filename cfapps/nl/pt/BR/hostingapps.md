@@ -95,7 +95,7 @@ Para implementar seu aplicativo no {{site.data.keyword.Bluemix_notm}} como um ap
 |Eclipse	|Gerencie seu código no Eclipse e use o IBM Eclipse tools for {{site.data.keyword.Bluemix_notm}} para enviar seu aplicativo por push.|
 |Integração Git	|Gerencie seu código no GitHub e Git integrado no {{site.data.keyword.Bluemix_notm}}. É possível colaborar com outros desenvolvedores. Seu aplicativo será implementado no {{site.data.keyword.Bluemix_notm}} automaticamente, quando você confirmar as mudanças no código. Não é necessário enviar o aplicativo por push manualmente.|
 |{{site.data.keyword.Bluemix_notm}} DevOps Delivery Pipeline	|Gerencie seu código no repositório DevOps GitHub e implemente o aplicativo para {{site.data.keyword.Bluemix_notm}} usando o DevOps Delivery Pipeline.|
-{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} tools" caption-side="top"}
+{: caption="Tabela 1. Ferramentas do Bluemix" caption-side="top"}
 
 
 Se a plataforma Cloud Foundry não suportar os requisitos de seu aplicativo, será possível usar um contêiner ou máquina virtual em que o tempo de execução é instalado, configurado e mantido com mais opções customizadas.
@@ -146,7 +146,10 @@ Execute as etapas a seguir para migrar seu aplicativo.
 </li></ol>
 </li>
 
-<li>Opcional: se você mudar seu aplicativo, deverá fazer upload dessas mudanças inserindo o comando cf push novamente. A interface da linha de comandos cf usa as opções anteriores e as respostas aos prompts, para atualizar todas as instâncias em execução de seu aplicativo com os novos bits de código.</li>
+<li>Opcional: se você mudar seu aplicativo, deverá fazer upload dessas mudanças inserindo o comando cf push novamente. A
+interface da linha de comandos cf usa as opções anteriores e as respostas
+aos prompts, para atualizar todas as instâncias em execução de seu aplicativo
+com os novos bits de código.</li>
 </ol>
 
 **Notas:**

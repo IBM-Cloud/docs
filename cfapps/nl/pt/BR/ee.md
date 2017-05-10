@@ -73,8 +73,9 @@ seus problemas.
 ## Ligando um serviço usando a interface com o usuário do {{site.data.keyword.Bluemix_notm}}
 {: #ee_bindui}
 
-Após criar o seu app, você deseja se conectar a um banco de dados com o seu app. Dessa maneira, é possível armazenar e observar os dados do app usando a
-linguagem de consulta de banco de dados. Neste cenário, você decide
+Depois de criar seu app, você deseja utilizá-lo para se conectar
+a um banco de dados. Dessa maneira, é possível armazenar e observar os dados do app
+usando a linguagem de consulta de banco de dados. Neste cenário, você decide
 usar o serviço {{site.data.keyword.cloudant}}
 fornecido pelo {{site.data.keyword.Bluemix_notm}}.
 
@@ -127,8 +128,8 @@ de comandos cf e as ferramentas Eclipse. É possível escolher a interface de li
 
   1. Primeiramente, faça o download e desenvolva o código do app.
 
-    1. Acesse a página de Codificação de início de seu app. Clique no botão **Fazer download do código de início** para fazer o download do
-código de seu app.
+    1. Acesse a página Iniciar codificação do app. Clique no botão **Fazer o download do código de início**
+para fazer o download do código do app.
     2. Extraia o arquivo transferido por download em um diretório, por exemplo, `C:\test`.
     3. Desenvolva o código com seu ambiente de desenvolvimento integrado
 local.
@@ -314,8 +315,8 @@ um estimador e uma calculadora para você ver o custo de seu app. É possível v
 
   * No painel, clique em TestNode. Em seguida, na página Visão geral, clique em **estimar o custo deste app** para ver o preço de tempo de execução e suporte do **SDK for Node.js** e o preço mensal total de seu app.
 
-  * Ou, na página Folha de precificação, digite o uso mensal do tempo de execução e serviços de seu app. Por exemplo, 3 instâncias de **SDK for
-Node.js** com 1 GB de memória para cada instância. O preço mensal é calculado e exibido.
+  * Ou, na página Folha de precificação, digite o uso mensal do tempo de execução e serviços de seu app. Por exemplo, 3 instâncias de **SDK for Node.js** com 1 GB
+de memória para cada instância. O preço mensal é calculado e exibido.
 
 Também é possível calcular seu custo de app manualmente, somando os
 preços de seus tempos de execução e serviços e deduzindo o abono grátis. Para obter mais informações, consulte Calculando seus custos manualmente.
