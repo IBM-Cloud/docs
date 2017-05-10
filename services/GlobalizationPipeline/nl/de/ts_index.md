@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-08-30"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 # {{site.data.keyword.GlobalizationPipeline_short}} - Fehlerbehebung
 {: #globalizationpipelinets}
-
-*Letzte Aktualisierung: 30. August 2016*
-{: .last-updated}
 
 Hier finden Sie einige Antworten auf häufig gestellte Fragen zur Verwendung von {{site.data.keyword.GlobalizationPipeline_short}}. 
 {:shortdesc}
