@@ -53,13 +53,12 @@ erweisen, steht Support zur Verfügung. Die Art des Supports beruht auf der von 
 |Community	|Ein Service, der von einer Open-Source-Community bereitgestellt wird.	|Support für Community-Services wird von der {{site.data.keyword.Bluemix_notm}} Developers Community bereitgestellt. Wenn ein Problem von IBM untersucht wird und sich als Mangel im Community-Service herausstellt, ist IBM nicht verpflichtet, einen Fix zur Verfügung zu stellen.|
 |Beta	|Ein Service, der für die Produktionsumgebung noch nicht einsatzfähig ist und sich in einer Versuchsphase der
 Entwicklungsstufe befindet. Ein Betaservice kann den Entwicklungs- und Marketingteams dabei helfen, den Wert der Services einzuschätzen, bevor sie den Service der Allgemeinheit zur Verfügung stellen.	|Probleme, die sich als Mängel in einem von IBM bereitgestellten Betaservice erweisen, werden unterstützt; jedoch ist IBM nicht verpflichtet, einen Fix zur Verfügung zu stellen. Zusätzlich wird dem Problemticket eine Prioritätsstufe von 3 oder 4 zugeordnet, soweit zutreffend. Informationen zu Prioritätsstufen von Tickets finden Sie unter [Support kontaktieren](/docs/support/index.html#contacting-bluemix-support).|
-{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} services support information" caption-side="top"}
+{: caption="Tabelle 1. Supportinformationen für Bluemix-Services" caption-side="top"}
 
 
 
 
-{{site.data.keyword.Bluemix_notm}}
-stellt darüber hinaus experimentelle Services bereit, die Sie testen können. Um alle verfügbaren experimentellen Services, Boilerplates und Laufzeiten anzuzeigen, melden Sie sich an {{site.data.keyword.Bluemix_notm}} an, blättern Sie zum Ende des Katalogs und klicken Sie anschließend auf **{{site.data.keyword.Bluemix_notm}} Labs-Katalog**.
+{{site.data.keyword.Bluemix_notm}} stellt darüber hinaus experimentelle Services bereit, die Sie testen können. Um alle verfügbaren experimentellen Services, Boilerplates und Laufzeiten anzuzeigen, melden Sie sich an {{site.data.keyword.Bluemix_notm}} an, blättern Sie zum Ende des Katalogs und klicken Sie anschließend auf **{{site.data.keyword.Bluemix_notm}} Labs-Katalog**.
 
 Experimentelle Services sind möglicherweise
 nicht ganz stabil in der Ausführung und können Änderungen aufweisen, die nicht mit früheren
@@ -153,7 +152,7 @@ Services sind für jede {{site.data.keyword.Bluemix_notm}}-Region verfügbar. In
 |{{site.data.keyword.workloadscheduler}}	|Ja		|Ja		|Nein|
 |{{site.data.keyword.xpagesservice_short}}	|Ja		|Ja		|Nein|
 *Tabelle 2. Serviceverfügbarkeit*
-{: caption="Table 2. Service availability" caption-side="top"}
+{: caption="Tabelle 2. Serviceverfügbarkeit" caption-side="top"}
 
 
 
