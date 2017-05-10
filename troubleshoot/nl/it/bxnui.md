@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015, 2016
+  year: 2015, 2016
 
 lastupdated: "2016-11-21" 
 
@@ -1011,7 +1011,7 @@ Rivolgersi all'amministratore di sistema per assistenza nella correzione del com
 ## BXNUI2032E
 **Messaggio**: La risorsa {1} non è stata creata. 
 
-Si è verificato un errore mentre Cloud Foundry stava venendo contattato per creare la risorsa. Messaggio di Cloud Foundry: "{0}." 
+Mentre Cloud Foundry veniva contattato per creare la risorsa, si è verificato un errore. Messaggio di Cloud Foundry: "{0}." 
 
 Per istruzioni relative alla correzione di questo problema, consulta questo [argomento per la risoluzione dei problemi](https://www.{DomainName}/docs/troubleshoot/managingapps.html#tr_servicelimit){: new_window}.
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-3-16"  
+lastupdated: "2017-4-10"  
 
 ---
 
@@ -14,21 +14,23 @@ lastupdated: "2017-3-16"
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock} 
 
+
+
 # Resolução de problemas para acessar o {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
 
-
-Problemas gerais com o acesso ao {{site.data.keyword.Bluemix}} podem incluir um usuário que não foi capaz de efetuar login no {{site.data.keyword.Bluemix_notm}}, uma conta paralisada em um estado pendente etc. No entanto, em vários casos, é possível recuperar-se desses problemas seguindo algumas etapas simples.
+Problemas gerais com o acesso ao {{site.data.keyword.Bluemix}} podem incluir um usuário que não foi capaz de efetuar login no {{site.data.keyword.Bluemix_notm}}, uma conta paralisada em um estado pendente etc. No entanto, em vários casos, é possível recuperar-se desses problemas seguindo algumas etapas simples. 
 {:shortdesc}
 
 ## Não é possível efetuar login no {{site.data.keyword.Bluemix_notm}}
 {: #ts_logintobm}
 
-Deve-se ter um ID IBM e uma senha válidos para efetuar login no {{site.data.keyword.Bluemix_notm}}.
+Deve-se ter um ID IBM e uma senha válidos para efetuar login no
+{{site.data.keyword.Bluemix_notm}}.
 
 
-Ao tentar efetuar conectar ao {{site.data.keyword.Bluemix_notm}}, você verá a mensagem de erro a seguir:
+Ao tentar efetuar conectar ao {{site.data.keyword.Bluemix_notm}}, você verá a mensagem de erro a seguir: 
 {: tsSymptoms} 
 
 `A senha inserida não está correta.`
@@ -45,6 +47,35 @@ Para obter um ID IBM e uma senha válidos, acesse a página Meu perfil IBM e con
   
 **Nota:** Para funcionários IBM, o ID IBM pode ser diferente do ID de login da intranet. 
 
+
+
+<!-- begin STAGING ONLY --> 
+
+## Problema ao acessar website externo
+{: #ts_bmlinkid}
+
+Não é possível efetuar login no {{site.data.keyword.Bluemix_notm}} usando seu ID da Intranet IBM, a menos que vincule seu ID da Intranet com seu ID IBM.
+
+
+Depois de selecionar **Conectar com seu ID da Intranet** na página Conectar do {{site.data.keyword.Bluemix_notm}}, você poderá ver a mensagem de erro a seguir:
+{: tsSymptoms} 
+
+`Problema ao acessar website externo`
+
+
+
+Esse problema ocorre quando você efetua login no {{site.data.keyword.Bluemix_notm}} usando um ID da Intranet IBM que não está vinculado a um ID IBM. Seu ID IBM é o ID que você usa para efetuar login no www.ibm.com.
+{: tsCauses}
+
+
+Como funcionário IBM, para que possa efetuar login no {{site.data.keyword.Bluemix_notm}} usando seu ID da Intranet IBM, deve-se vincular seu ID da intranet com seu ID IBM externo. Para vincular os dois IDs, conclua as etapas a seguir:
+{: tsResolve} 
+
+  1. Na página [Conexão central ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://w3-03.sso.ibm.com/tools/cso/index.jsp){: new_window}, clique em **Minhas conexões**.
+  2. Na página Minhas conexões, clique em **Vincular IDs** e insira seu ID IBM e senha na página Conectar do {{site.data.keyword.Bluemix_notm}}. Depois disso, seu ID da intranet e ID IBM serão automaticamente vinculados.
+  
+
+<!-- end STAGING ONLY -->
 
 
 
@@ -77,7 +108,8 @@ Feche a janela da mensagem e, em seguida, clique no botão **RECONFIGURAR** na �
 ## O failover automático entre regiões do {{site.data.keyword.Bluemix_notm}} não está disponível
 {: #ts_failover}
 
-Não é possível usar failover automático entre regiões do {{site.data.keyword.Bluemix_notm}}. No entanto, é possível usar um provedor de DNS que suporte failover entre vários endereços IP como solução alternativa.
+Não é possível usar failover automático entre regiões do {{site.data.keyword.Bluemix_notm}}. No entanto, é possível usar um provedor de DNS que suporte failover entre vários
+endereços IP como solução alternativa.
  
 
 Quando um região do {{site.data.keyword.Bluemix_notm}} se torna indisponível, os apps em execução nessa região também ficam indisponíveis, ainda que os mesmos apps estejam em execução em outra região do {{site.data.keyword.Bluemix_notm}}.
@@ -91,9 +123,12 @@ O {{site.data.keyword.Bluemix_notm}} ainda não fornece failover automático de 
 É possível usar um provedor de DNS que suporte failover inteligente entre vários endereços de IDs e configurar manualmente as definições de DNS para ativar o failover automático entre regiões do {{site.data.keyword.Bluemix_notm}}. Os provedores de DNS com essa capacidade incluem NSONE, Akamai, Dyn.
 {: tsResolve}
 
-Ao configurar suas definições de DNS, deve-se especificar os endereços IP públicos das regiões do {{site.data.keyword.Bluemix_notm}} em que seu apps estão em execução. Para obter o endereço IP público de uma região do {{site.data.keyword.Bluemix_notm}}, use o comando `nslookup`. Por exemplo, é possível digitar o comando a seguir em uma janela de linha de comandos:
+Ao configurar suas definições de DNS, deve-se especificar os endereços IP públicos das regiões do {{site.data.keyword.Bluemix_notm}} em que seu apps estão em execução. Para obter o endereço IP público
+de uma região do {{site.data.keyword.Bluemix_notm}},
+use o comando `nslookup`. Por exemplo, é possível
+digitar o comando a seguir em uma janela de linha de comandos:
 ```
-nslookup mybluemix.net
+nslookup stage1.mybluemix.net
 ```
 
 
@@ -104,16 +139,19 @@ nslookup mybluemix.net
 Se sua conta estiver pendente, não será possível efetuar login no {{site.data.keyword.Bluemix_notm}}.
 
  
-Depois de registrar em uma conta de avaliação do {{site.data.keyword.Bluemix_notm}}, talvez você não possa efetuar login no {{site.data.keyword.Bluemix_notm}}. Em vez disso, você verá a mensagem a seguir:
+Depois de registrar em uma conta de avaliação do {{site.data.keyword.Bluemix_notm}},
+talvez você não possa efetuar login no {{site.data.keyword.Bluemix_notm}}. Em vez disso, você verá a mensagem a seguir:
 {: tsSymptoms}
 
 <code>Sua conta está pendente. Aguarde até 24 horas pela confirmação por email e verifique também sua pasta de spam. Se você ainda não tiver recebido sua confirmação por e-mail, entre em contato com o <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Suporte do Bluemix <img src="../icons/launch-glyph.svg" alt="Ícone de link externo"></a>.</code>
 
 
-Depois de registrar em uma conta de avaliação do {{site.data.keyword.Bluemix_notm}}, você receberá um email de confirmação. Deve-se clicar no link que está no email de confirmação para concluir o processo de registro.
+Depois de registrar em uma conta de avaliação do {{site.data.keyword.Bluemix_notm}},
+você receberá um email de confirmação. Deve-se clicar no link
+que está no email de confirmação para concluir o processo de registro.
 {: tsCauses} 
 
-O email de confirmação é enviado ao endereço de email fornecido. Verifique sua caixa de entrada e sua pasta de emails não desejados. Se você não tiver recebido o e-mail de confirmação, entre em contato com o [Suporte do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}.  
+O email de confirmação é enviado ao endereço de email fornecido. Verifique sua caixa de entrada e sua pasta de emails não desejados. Se você não tiver recebido o e-mail de confirmação, entre em contato com o [Suporte do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://ibm.biz/bluemixsupport.com){: new_window}.  
 {: tsResolve}
 
 
@@ -121,25 +159,32 @@ O email de confirmação é enviado ao endereço de email fornecido. Verifique s
 ## Não é possível incluir usuários em uma organização
 {: #ts_adduser}
 
-É possível convidar mais de um usuário para trabalhar sob a mesma organização. É possível convidar os usuários para a sua organização somente se você for o proprietário da conta ou se for ambos, um gerente e um membro da organização.
+É possível convidar mais de um usuário para trabalhar sob a mesma organização. É possível convidar os usuários para a sua organização
+somente se você for o proprietário da conta ou se for ambos, um gerente
+e um membro da organização.
  
 
-Não é possível ver o link **Convidar um novo usuário** em sua sessão **Gerenciar organizações**.
+Não é possível ver o link **Convidar um novo usuário** em sua sessão **Gerenciar organizações**. 
 {: tsSymptoms}
 
  
 
-Somente os usuários {{site.data.keyword.Bluemix_notm}} a seguir podem convidar usuários para uma organização:
+Somente os usuários {{site.data.keyword.Bluemix_notm}} a seguir
+podem convidar usuários para uma organização:
 {: tsCauses}
   * O proprietário da conta da organização
   * Os gerenciadores de organização que também são membros, não colaboradores, da organização
   
-No {{site.data.keyword.Bluemix_notm}}, é possível ser um membro ou um colaborador de uma organização:
+No
+{{site.data.keyword.Bluemix_notm}}, é possível ser um membro ou um colaborador de uma organização:
 
 <dl><dt>Colaborador</dt>
-<dd>Você é um colaborador de uma organização, se já tiver uma conta {{site.data.keyword.Bluemix_notm}} e alguém convidá-lo para a organização.</dd>
+<dd>Você é um colaborador de uma organização, se já tiver uma conta
+{{site.data.keyword.Bluemix_notm}} e alguém
+convidá-lo para a organização.</dd>
 <dt>Membro</dt>
-<dd>Você é um membro de uma organização, se não tiver uma conta {{site.data.keyword.Bluemix_notm}}, mas então alguém convidá-lo para a organização e você se inscrever para {{site.data.keyword.Bluemix_notm}} a partir do convite.</dd>
+<dd>Você é um membro de uma organização, se não tiver uma conta {{site.data.keyword.Bluemix_notm}}, mas então
+alguém convidá-lo para a organização e você se inscrever para {{site.data.keyword.Bluemix_notm}} a partir do convite.</dd>
 </dl>
 
 
@@ -149,16 +194,21 @@ Não é possível convidar os usuários para a sua organização, de for um cola
 
  
 
-Se você não conseguir convidar os usuários para sua organização e precisar de uma função diferente para fazer isso, entre em contato com o gerenciador da sua organização para alterar a sua função. Para identificar o gerente da organização, conclua as etapas a seguir:
+Se você não conseguir convidar os usuários para sua organização e precisar de uma função diferente para fazer isso, entre em contato com o gerenciador da sua organização para alterar a sua função. Para identificar o gerente da organização, conclua as
+etapas a seguir:
 {: tsResolve}
 
   1. Acesse o Painel do {{site.data.keyword.Bluemix_notm}}, clique no ícone {{site.data.keyword.avatar}} ![ícone Avatar](images/account_support.svg) na barra de menus e selecione **Gerenciar organizações**.
   2. Acesse sua organização e visualize as informações sobre o gerente da organização na guia **USUÁRIOS**.  
   
-Se você não conseguir convidar os usuários porque é um colaborador e não um membro, deve-se excluir a conta anterior do {{site.data.keyword.Bluemix_notm}} e, em seguida, ser convidado para se associar como um membro da organização. Para excluir sua conta anterior e se associar à conta como um membro, conclua as etapas a seguir: 
+Se você não conseguir convidar os usuários porque é um colaborador e não um membro, deve-se excluir a conta anterior do {{site.data.keyword.Bluemix_notm}} e, em seguida, ser convidado para se associar como um membro da organização. Para excluir sua conta anterior e se associar à conta como um membro,
+conclua as etapas a seguir: 
 
-  1. Entre em contato com o [Suporte do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} para abrir um chamado de suporte e solicitar a exclusão de sua conta. Se houver dados associados à sua conta antiga que você deseja salvar e mover para a nova conta, inclua essas informações em seu email. 
-  2. Após sua conta ser excluída, peça a um usuário com a função de gerenciador de organização para convidá-lo para a organização como um gerenciador de organização. Em seguida, inscreva-se no {{site.data.keyword.Bluemix_notm}} a partir do convite. 
+  1. Entre em contato com o [Suporte do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://ibm.biz/bluemixsupport){: new_window} para abrir um chamado de suporte e solicitar a exclusão de sua conta. Se houver dados associados
+à sua conta antiga que você deseja salvar e mover para a nova conta,
+inclua essas informações em seu email. 
+  2. Após sua conta ser excluída, peça a um usuário com a função de gerenciador
+de organização para convidá-lo para a organização como um gerenciador de organização. Em seguida, inscreva-se no {{site.data.keyword.Bluemix_notm}} a partir do convite. 
 
 
 
@@ -166,14 +216,17 @@ Se você não conseguir convidar os usuários porque é um colaborador e não um
 ## O registro em lote de usuários não é suportado
 {: #ts_batchregistration}
 
-Ao registrar usuários para {{site.data.keyword.Bluemix_notm}}, deve-se registrar cada usuário individualmente.
+Ao
+registrar usuários para {{site.data.keyword.Bluemix_notm}},
+deve-se registrar cada usuário individualmente.
  
 
 O {{site.data.keyword.Bluemix_notm}} não fornece a capacidade para registrar diversos usuários ao mesmo tempo.
 {: tsSymptoms}
  
 
-O {{site.data.keyword.Bluemix_notm}} não suporta registro de lote de usuários. Para registrar usuários para o {{site.data.keyword.Bluemix_notm}}, deve-se registrar cada usuário individualmente.
+O {{site.data.keyword.Bluemix_notm}} não suporta registro de lote de usuários. Para registrar usuários para o {{site.data.keyword.Bluemix_notm}},
+deve-se registrar cada usuário individualmente.
 {: tsCauses}
  
 
@@ -205,14 +258,18 @@ Quando você usa a interface com o usuário do {{site.data.keyword.Bluemix_notm}
 {: tsResolve}
 
   * Atualizar ou reiniciar seu navegador.
-  * Efetuar logout do {{site.data.keyword.Bluemix_notm}} e efetuar login novamente.
+  * Efetuar logout do {{site.data.keyword.Bluemix_notm}} e
+efetuar login novamente.
   * Usar o modo de navegação privada do seu navegador. 
   * Limpar os cookies e o cache do navegador.
-  * Usar um navegador diferente. Para obter informações sobre as versões dos navegadores que são suportadas pelo {{site.data.keyword.Bluemix_notm}}, veja [Pré-requisitos do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}.
+  * Usar um navegador diferente. Para obter informações sobre as versões dos navegadores que são suportadas pelo {{site.data.keyword.Bluemix_notm}}, veja [Pré-requisitos do {{site.data.keyword.Bluemix_notm}}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}.
   * Se você tiver instalado a interface de linha de comandos cf, insira o comando `cf apps` para ver se seu aplicativo está em execução.
   
   
   
+  
+  
+
 
 
 
@@ -299,10 +356,9 @@ Para verificar a versão do Java que o IBM Eclipse Tools for Bluemix executa, co
 
 Se a sua JVM de ambiente de trabalho for IBM JVM 7 ou 8, ou uma versão anterior do Oracle JVM 8, conclua as etapas a seguir para alternar para o Oracle JVM 8:
 
-  1. Faça download e, em seguida, instale o Oracle JVM 8; veja [Downloads do Java SE ![Ícone de link externo](../icons/launch-glyph.svg)](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window} para obter detalhes.
+  1. Faça download e, em seguida, instale o Oracle JVM 8; veja [Downloads do Java SE ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window} para obter detalhes.
   2. Reinicie o Eclipse.
   3. Verifique se a propriedade `eclipse.vm` aponta para sua nova instalação do Oracle JVM 8.
-
 
   
 ## Não é possível reutilizar nomes de aplicativos excluídos
@@ -333,21 +389,18 @@ Execute as etapas a seguir para excluir a rota não utilizada:
      ```
 	 cf delete-route domain_name -n host_name
 	 ```
-	 Por exemplo:
+	 Por
+exemplo:
 	 ```
 	 cf delete-route mybluemix.net -n app001
 	 ```
 
-  
-  
-  
-  
-  
-  
-  
+
+	 
+	 
+
 ## Não é possível recuperar espaços na organização
 {: #ts_retrieve_space}
-
 Não será possível criar um aplicativo ou um serviço se a sua organização atual não tiver um espaço associado com ela.
 
 Ao tentar criar um aplicativo no Bluemix, você vê a mensagem de erro a seguir:
@@ -364,8 +417,7 @@ Certifique-se de que você criou um espaço em sua organização atual.  Para cr
   * Clique no ícone {{site.data.keyword.avatar}} ![ícone Avatar](images/account_support.svg) para abrir o widget Conta e Suporte, selecione a organização na qual você deseja criar o espaço e, em seguida, clique em **Criar um espaço**.
   * Na interface de linha de comandos cf, digite `cf create-space <space_name> -o <organization_name>`.
 
-Tente novamente. Se você vir essa mensagem novamente, acesse a página [Status do Bluemix ![Ícone de link externo](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window} para verificar se um serviço ou componente tem um problema.
-
+Tente novamente. Se você vir essa mensagem novamente, acesse a página [Status do Bluemix ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://ibm.biz/bluemixstatus){: new_window} para verificar se um serviço ou componente tem um problema.
 
 
 
@@ -390,14 +442,12 @@ Você não possui o nível apropriado de autoridade necessário para executar as
 {: tsCauses}
 
   
-
 Para obter o nível de autoridade apropriado, use um dos métodos a seguir: 
 {: tsResolve}
  * Selecione outra organização e outro espaço para os quais tenha a função de desenvolvedor. 
  * Peça ao gerenciador de organização para mudar sua função para desenvolvedor ou para criar um espaço e, em seguida, designar a função de desenvolvedor a você. Veja [Gerenciando organizações e espaços](/docs/admin/orgs_spaces.html) para obter detalhes.
  
 
- 
 
 
 ## Não é possível acessar serviços do {{site.data.keyword.Bluemix_notm}} em razão de erros de autorização
@@ -418,11 +468,11 @@ Em vez de codificar permanentemente as credenciais no app, use parâmetros de co
 ```
 process.env.VCAP_SERVICES
 ```
-Para obter mais informações sobre os comandos que podem ser usados em outras linguagens de programa, veja [Java ![Ícone de link externo](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} e [Ruby ![Ícone de link externo](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}.
+Para obter mais informações sobre os comandos que podem ser usados em outras linguagens de programa, veja [Java ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} e [Ruby ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}. 
+ 
 
-
-
-
+ 
+ 
 
 
 
@@ -439,11 +489,14 @@ Quando uma máscara não suportada é aplicada ao projeto Eclipse, talvez você 
 
  
 
-O IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} mapeia projetos para tempos de execução do {{site.data.keyword.Bluemix_notm}} por máscaras de projeto. As máscaras definem os requisitos para projetos Java EE no Eclipse e são usadas como parte da configuração de tempo de execução para que diferentes tempos de execução sejam associados a diferentes projetos. Se a máscara aplicada ao projeto não for suportada pelo IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, você pode não conseguir implementar seu app usando o IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
+O IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} mapeia projetos para tempos de execução do {{site.data.keyword.Bluemix_notm}} por máscaras de projeto. As máscaras definem os requisitos para
+projetos Java EE no Eclipse e são usadas como parte da configuração de tempo de execução
+para que diferentes tempos de execução sejam associados a diferentes projetos. Se a máscara aplicada ao projeto não for suportada pelo IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, você pode não conseguir implementar seu app usando o IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
 {: tsCauses}
 
 
-Deve-se remover a máscara do projeto Eclipse para que seja possível implementar seu app usando o IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
+Deve-se remover a máscara do projeto Eclipse para que
+seja possível implementar seu app usando o IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
 {: tsResolve} 
 
 Para remover a máscara, no IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, clique em **Projeto>Propriedades>Máscaras de projeto** para o projeto. Em seguida, limpe a caixa de seleção para a máscara não suportada. 
@@ -453,7 +506,9 @@ Para remover a máscara, no IBM Eclipse Tools for {{site.data.keyword.Bluemix_no
 ## Erros 502 Gateway inválido são recebidos
 {: #ts_502_error}
 
-Se você receber os erros 502 Gateway inválido ao interagir com apps no {{site.data.keyword.Bluemix_notm}}, verifique a página de status do {{site.data.keyword.Bluemix_notm}} e, em seguida, execute as ações apropriadas.
+Se você receber os erros 502 Gateway inválido ao interagir com apps no {{site.data.keyword.Bluemix_notm}},
+verifique a página de status do {{site.data.keyword.Bluemix_notm}}
+e, em seguida, execute as ações apropriadas.
 
  
 
@@ -462,22 +517,27 @@ Você recebe mensagens de erro que iniciam com 502 Gateway inválido. Por exempl
 
  
 
-Um erro de Gateway inválido geralmente acontece quando você visita um website que usa um servidor proxy para armazenar e retransmitir os dados do servidor principal que hospeda o site. O servidor principal e o servidor proxy não podem se conectar adequadamente; portanto, você verá o código de status 502 do HTTP em sua janela do navegador. Esse código de status indica que o servidor principal do site não recebeu a implementação HTTP esperada pelo servidor proxy.
+Um
+erro de Gateway inválido geralmente acontece quando você visita um website que usa um servidor proxy para armazenar e
+retransmitir os dados do servidor principal que hospeda o site. O servidor principal e o servidor proxy não podem se conectar adequadamente; portanto, você verá o código de status 502 do HTTP em sua janela do navegador. Esse código de status indica que o servidor principal do site não recebeu a implementação HTTP esperada pelo servidor proxy.
 {: tsCauses}
 
-Outras causas menos comuns de um erro de Gateway inválido são os dropouts do provedor de serviços da Internet (ISP), configurações de firewall inválidas e erros de cache do navegador. 
+Outras causas menos comuns de um erro de Gateway inválido são
+os dropouts do provedor de serviços da Internet (ISP), configurações de firewall inválidas e erros de cache do navegador. 
 
  
 
-Se você suspeitar que um serviço do {{site.data.keyword.Bluemix_notm}} está inativo, verifique primeiramente a página [Status do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window}. Talvez queira usar o serviço em outra região do {{site.data.keyword.Bluemix_notm}} como uma solução alternativa. As informações detalhadas estão disponíveis em [Usando serviços em outra região](/docs/services/reqnsi.html#cross_region_service). Se o status de serviço for normal, tente as etapas a seguir para resolver o problema:
+Se você suspeitar que um serviço {{site.data.keyword.Bluemix_notm}} está inativo, verifique primeiramente a página [Status do {{site.data.keyword.Bluemix_notm}}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://ibm.biz/bluemixstatus){: new_window}. Talvez queira usar o serviço em outra região do {{site.data.keyword.Bluemix_notm}} como uma solução alternativa. As informações detalhadas estão disponíveis em [Usando serviços em outra região](/docs/services/reqnsi.html#cross_region_service). Se o status de serviço for normal, tente as etapas a seguir para resolver o problema: 
 {: tsResolve}
 
   * Tente novamente a ação:
     * Recarregar a página pressionando F5 em seu teclado ou clicando no botão de atualização. Se essa etapa não funcionar, limpe os cookies e o cache do seu navegador e, em seguida, recarregue novamente.
 	* Usar um navegador diferente.
-	* Reinicializar seu roteador, seu modem e seu computador. Reinicializar esses dispositivos pode limpar diversos erros que conduzem ao erro 502. 
-  * Aguardar e tentar novamente mais tarde. Em algumas instâncias, os problemas temporários podem ocorrer com seu provedor de serviços da Internet ou serviços do {{site.data.keyword.Bluemix_notm}}. É possível aguardar até que os problemas temporários sejam resolvidos.
-  * Se o problema ainda existir, entre em contato com o suporte do {{site.data.keyword.Bluemix_notm}}. Veja [Entrando em contato com o Suporte do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../icons/launch-glyph.svg)](/docs/support/index.html#contacting-bluemix-support){: new_window} para obter mais informações. 
+	* Reinicializar seu roteador, seu modem e seu computador. Reinicializar esses dispositivos pode limpar diversos erros
+que conduzem ao erro 502. 
+  * Aguardar e tentar novamente mais tarde. Em algumas instâncias, os problemas temporários podem ocorrer com seu provedor
+de serviços da Internet ou serviços do {{site.data.keyword.Bluemix_notm}}. É possível aguardar até que os problemas temporários sejam resolvidos.
+  * Se o problema ainda existir, entre em contato com o suporte do {{site.data.keyword.Bluemix_notm}}. Veja [Entrando em contato com o Suporte do {{site.data.keyword.Bluemix_notm}}](/docs/support/index.html#contacting-bluemix-support) para obter mais informações. 
 
 
 
@@ -485,11 +545,15 @@ Se você suspeitar que um serviço do {{site.data.keyword.Bluemix_notm}} está i
 ## Cota do disco excedida
 {: #ts_disk_quota}
 
-Se o espaço em disco se esgotar, será possível modificar manualmente a cota do disco para obter mais espaço em disco.
+Se o espaço em disco se esgotar, será possível modificar manualmente a cota do disco para obter mais espaço
+em disco.
 
   
 
-Quando o espaço em disco se esgotar, você poderá ver uma mensagem que indica se a cota do disco foi excedida. Para resolver o problema, você pode ter tentado aumentar a escala de sua instância de app para obter mais espaço em disco. Por exemplo, você pode escalar de 256 MB para 1256 MB, mudando a cota de memória na página de detalhes do app. No entanto, como a cota do disco permaneceu a mesma, você não obteve mais espaço em disco.
+Quando o espaço em disco se esgotar,
+você poderá ver uma mensagem que indica se a cota do disco foi excedida. Para resolver o problema,
+você pode ter tentado aumentar a escala de sua instância de app para obter mais espaço em disco. Por exemplo, você pode
+escalar de 256 MB para 1256 MB, mudando a cota de memória na página de detalhes do app. No entanto, como a cota do disco permaneceu a mesma, você não obteve mais espaço em disco. 
 {: tsSymptoms}
 
 
@@ -497,7 +561,9 @@ A cota padrão do disco que é alocada para um app é de 1 GB. Se você precisar
 {: tsCauses}
 
  
-Use um dos métodos a seguir para especificar sua cota do disco. A cota máxima de disco que você pode especificar é de 2 GB. Se 2 GB ainda não forem suficientes, tente um serviço externo como [Armazenamento de objetos](/docs/services/ObjectStorage/index.html).
+Use um dos métodos a seguir para
+especificar sua cota do disco. A cota máxima de disco que você pode especificar é de 2 GB. Se 2 GB ainda não forem suficientes, tente um serviço externo como
+[Armazenamento de objetos](/docs/services/ObjectStorage/index.html).
 {: tsResolve}
 
   * No arquivo manifest.yml, inclua o item a seguir:
@@ -508,27 +574,21 @@ Use um dos métodos a seguir para especificar sua cota do disco. A cota máxima 
     ```
 	cf push appname -p app_path -k <disk_quota>
 	```
-
 	
-	
-
-
-## Apps Android não podem receber notificações push
+## Apps Android não podem receber {{site.data.keyword.mobilepushshort}}
 {: #ts_push}
 
-Os apps Android em certas regiões em que o Google não está acessível, não podem receber as notificações que você envia através do serviço do IBM Push. Nesse caso, é possível usar os serviços de terceiro como solução alternativa.
+Apps Android em certas regiões em que o Google não está acessível não podem receber as notificações que você envia por meio do serviço IBM {{site.data.keyword.mobilepushshort}}. Nesse caso, é possível usar os serviços de terceiro como solução alternativa.
 
- 
-
-Você liga um serviço de Push ao seu app do Bluemix e envia uma mensagem aos dispositivos registrados. No entanto, os apps que são desenvolvidos na plataforma Android não podem receber suas notificações em certas regiões.
+Você liga um serviço {{site.data.keyword.mobilepushshort}} ao seu app Bluemix e envia uma mensagem aos dispositivos registrados. No entanto, os apps que são desenvolvidos na plataforma Android não podem receber suas notificações em certas regiões. 
 {: tsSymptoms}
 
- 
-O serviço IBM Push usa o serviço Google Cloud Messaging (GCM) para despachar as notificações para apps móveis que são desenvolvidos na plataforma Android. Para ativar o recebimento de notificações em apps Android, o serviço Google Cloud Messaging (GCM) deve estar acessível para apps móveis. Em regiões em que o serviço GCM não pode ser atingido pelos apps Android, os apps Android não conseguem receber notificações push.
+O serviço IBM {{site.data.keyword.mobilepushshort}} usa o serviço Google Cloud Messaging (GCM) para despachar notificações para apps móveis que são desenvolvidos na plataforma Android. Para ativar o recebimento de notificações em apps Android, o serviço
+Google Cloud Messaging (GCM) deve estar acessível para apps móveis. Nas regiões em que o serviço GCM não pode ser atingido pelos apps Android, os apps Android não conseguem receber {{site.data.keyword.mobilepushshort}}.
 {: tsCauses}
 
  
-Use serviços de terceiro que não dependam do serviço GCM como uma solução alternativa, por exemplo, [Pushy ![Ícone de link externo](../icons/launch-glyph.svg)](https://pushy.me){: new_window}, [igetui ![Ícone de link externo](../icons/launch-glyph.svg)](http://www.getui.com/){: new_window} e [jpush ![Ícone de link externo](../icons/launch-glyph.svg)](https://www.jpush.cn/){: new_window}.
+Use serviços de terceiro que não dependam do serviço GCM como uma solução alternativa, por exemplo, [Pushy ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://pushy.me){: new_window}, [igetui ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://www.getui.com/){: new_window} e [jpush ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://www.jpush.cn/){: new_window}.
 {: tsResolve}
 
 
@@ -539,14 +599,17 @@ Use serviços de terceiro que não dependam do serviço GCM como uma solução a
 Se você for um usuário de conta para teste, talvez não possa criar um aplicativo no {{site.data.keyword.Bluemix_notm}} se tiver excedido seu limite de serviços da organização.
  
 
-Ao tentar criar um aplicativo no {{site.data.keyword.Bluemix_notm}}, você verá a mensagem de erro a seguir:
+Ao tentar criar um aplicativo no {{site.data.keyword.Bluemix_notm}}, você verá a mensagem de erro a seguir: 
 {: tsSymptoms}
 
-`BXNUI2032E: O recurso <service_instances> não foi criado. Ocorreu um erro enquanto o Cloud Foundry estava sendo contatado para criar o recurso. Mensagem do Cloud Foundry: "Você excedeu seu limite de serviços da organização."`
+`BXNUI2032E: O recurso <service_instances> não foi criado. Ocorreu um erro enquanto o Cloud Foundry estava sendo contatado para criar o recurso. Mensagem do Cloud Foundry: "Você excedeu seu
+limite de serviços da organização."`
 
 
 
-Esse erro ocorre quando você excede o limite no número de instâncias de serviços que pode ter para sua conta. O número máximo de instâncias de serviços para uma conta para teste é 10.
+Esse erro ocorre quando você excede o limite no
+número de instâncias de serviços que pode ter para sua conta. O
+número máximo de instâncias de serviços para uma conta para teste é 10.
 {: tsCauses} 
 
  
@@ -556,21 +619,24 @@ Exclua todas as instâncias de serviços que não são necessárias, ou remova o
  
   * Para excluir a instância de serviços, é possível usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}} ou a interface com o usuário.
     Para usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}} para excluir uma instância de serviço, conclua as etapas a seguir:
-	  1. No Painel do {{site.data.keyword.Bluemix_notm}}, clique no serviço que você deseja acessar. O quadro do serviço é exibido. 
+	  1. No Painel do {{site.data.keyword.Bluemix_notm}}, clique no serviço que você deseja acessar.  O quadro do serviço é exibido.
 	  2. No quadro do serviço, clique no ícone **Menu**.
-	  3. Clique em **Excluir serviço**. Depois de excluir a instância de serviço, você será solicitado a refazer o estágio no aplicativo ao qual a instância de serviço foi vinculada.
-    Para usar a interface de linha de comandos para excluir uma instância de serviço, conclua as etapas a seguir:
+	  3. Clique em **Excluir serviço**. Depois de excluir a instância de serviço, você será solicitado a refazer o estágio no aplicativo ao qual a instância de serviço foi vinculada. 
+    Para usar a interface de linha de comandos para excluir uma
+instância de serviço, conclua as etapas a seguir:
 	  1. Desvincule a instância de serviço de um aplicativo digitando `cf unbind-service <appname> <service_instance_name>`.
 	  2. Exclua a instância de serviço digitando `cf delete-service <service_instance_name>`.
 	  3. Depois de excluir a instância de serviço, você pode desejar remontar o aplicativo ao qual a instância de serviço foi vinculada digitando `cf restage <appname>`.
-  * Para remover o limite no número de instâncias de serviços que você pode ter, converta sua conta de avaliação em uma conta paga. Para obter informações sobre como converter sua conta para teste para uma conta paga, veja [Como mudar seu plano](/docs/pricing/index.html#changing).
+  * Para remover o limite no número de instâncias de serviços que você pode
+ter, converta sua conta de avaliação em uma conta paga. Para obter informações sobre como converter sua conta para teste para uma conta paga, veja [Como mudar seu plano](/docs/pricing/index.html#changing).
 
   
   
 ## Os executáveis não podem ser executados no {{site.data.keyword.Bluemix_notm}}
 {: #ts_executable}
 
-Talvez você não possa executar os executáveis no {{site.data.keyword.Bluemix_notm}} quando eles forem desenvolvidos e construídos em um ambiente diferente. 
+Talvez você não possa executar os executáveis no {{site.data.keyword.Bluemix_notm}} quando
+eles forem desenvolvidos e construídos em um ambiente diferente. 
 
  
 
@@ -579,27 +645,36 @@ Você não pode executar executáveis no {{site.data.keyword.Bluemix_notm}} quan
 
  
 
-Se o conteúdo que você deseja enviar por push para o {{site.data.keyword.Bluemix_notm}} já for um executável, o conteúdo foi construído anteriormente e não precisa ser construído no {{site.data.keyword.Bluemix_notm}}. Nesse caso, nenhum buildpack é necessário para o executável ser executado no {{site.data.keyword.Bluemix_notm}}. No entanto, você deve indicar explicitamente ao {{site.data.keyword.Bluemix_notm}} que nenhum buildpack é necessário.
+Se o conteúdo que você deseja enviar por push para o {{site.data.keyword.Bluemix_notm}} já
+for um executável, o conteúdo foi construído anteriormente e não
+precisa ser construído no {{site.data.keyword.Bluemix_notm}}. Nesse caso, nenhum buildpack é necessário para o executável ser executado
+no {{site.data.keyword.Bluemix_notm}}. No entanto, você deve indicar explicitamente ao {{site.data.keyword.Bluemix_notm}} que
+nenhum buildpack é necessário.
 {: tsCauses}
 
  
 
-Ao enviar por push o executável para o {{site.data.keyword.Bluemix_notm}}, deve-se especificar um buildpack nulo, o qual indica que nenhum buildpack é necessário. Especifique um buildpack nulo usando a opção **-b** com o comando `cf push`:
+Ao enviar por push o executável para o {{site.data.keyword.Bluemix_notm}},
+deve-se especificar um buildpack nulo, o qual indica que nenhum buildpack
+é necessário. Especifique um buildpack nulo usando a opção **-b**
+com o comando `cf push`:
 {: tsResolve}
 
 ```
-cf push appname -p <app_path> -c <start_command> -b <null-buildpack>
+cf push appname -p app_path -c <start_command> -b <null-buildpack>
 ```
 Por exemplo:
 ```
-cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
+cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
 
 ## O limite de memória da organização foi excedido
 {: #ts_outofmemory}
 
-Se você for um usuário de conta para teste, talvez não consiga implementar um app no {{site.data.keyword.Bluemix_notm}} caso tenha excedido o limite de memória da sua organização. É possível reduzir a memória que seus apps usam ou aumentar a cota de memória de sua conta. 
+Se você for um usuário de conta para teste, talvez não consiga implementar um app no {{site.data.keyword.Bluemix_notm}} caso tenha excedido o limite de memória da sua organização. É possível reduzir a memória que seus apps usam ou aumentar a cota de memória de sua conta. A cota máxima de memória de uma conta para teste é 2 GB e pode ser aumentada somente movendo para uma conta paga.
+
+
 
 
 
@@ -610,7 +685,8 @@ Ao implementar um app no {{site.data.keyword.Bluemix_notm}}, você vê a mensage
 
  
 
-Esse erro ocorre quando a quantia de memória restante para a sua organização é menor que a quantia de memória requerida pelo aplicativo que você deseja implementar. A cota máxima de memória para uma conta de avaliação é 2 GB.
+Esse erro ocorre quando a quantia de memória restante para a sua organização é menor que a quantia de memória requerida pelo aplicativo que você deseja implementar. A cota máxima
+de memória para uma conta de avaliação é 2 GB.
 {: tsCauses}
 
 
@@ -618,12 +694,16 @@ Esse erro ocorre quando a quantia de memória restante para a sua organização 
 É possível aumentar a cota de memória de sua conta ou reduzir a memória que seus apps usam.
 {: tsResolve} 
 
-  * Para aumentar a cota de memória de sua conta, converta sua conta de avaliação em uma conta paga. Para obter informações sobre como converter sua conta para teste para uma conta paga, veja [Contas pagas](/docs/pricing/index.html#pay-accounts). 
+  * Para aumentar a cota de memória de sua conta,
+converta sua conta de avaliação em uma conta paga. Para obter informações sobre como converter sua conta para teste para uma conta paga, veja [Contas pagas](/docs/pricing/index.html#pay-accounts). 
   * Para reduzir a memória que seus apps usam, use a interface com o usuário do {{site.data.keyword.Bluemix_notm}} ou a interface de linha de comandos cf.
     Se você usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}}, conclua as etapas a seguir:
 	  1. No Painel do {{site.data.keyword.Bluemix_notm}}, selecione seu aplicativo. A página de detalhes do app é aberta.
-	  2. Na área de janela de tempo de execução, é possível reduzir o limite máximo de memória ou os números de instâncias do app, ou ambos, para seu app.
-	Se você usar a interface de linha de comandos cf, conclua as seguintes etapas:
+	  2. Na área de janela de tempo de execução, é possível reduzir o limite máximo de memória ou os números de instâncias do app, ou ambos, para seu app. 
+	  
+	Se você usar a interface de linha de comandos cf, conclua as
+seguintes etapas:
+	
 	  1. Verifique quanta memória está sendo usada para seus apps:
 	  ```
 	  cf apps
@@ -631,7 +711,7 @@ Esse erro ocorre quando a quantia de memória restante para a sua organização 
 	     O comando cf apps lista todos os aplicativos que você implementou no espaço atual. O status de cada app também é exibido.
       2. Para reduzir a quantia de memória que é usada por seu app, reduza o número de instâncias do app ou o limite máximo de memória, ou ambos:
 	  ```
-	  cf push <appname> -p <app_path> -i <instance_number> -m <memory_limit>
+	  cf push appname -p app_path -i instance_number -m memory_limit
       ```
 	  3. Reinicie seu app para que as mudanças entrem em vigor.
 
@@ -646,8 +726,7 @@ Um app não é reiniciado automaticamente quando um serviço que você liga ao a
 	  
  
 
-Quando um serviço que você liga a um app trava, problemas como indisponibilidade, exceções e falhas de conexão podem ocorrer no app.
-O {{site.data.keyword.Bluemix_notm}} não reinicia automaticamente o app para recuperar desses problemas.
+Quando um serviço que você liga a um app trava, problemas como indisponibilidade, exceções e falhas de conexão podem ocorrer no app. O {{site.data.keyword.Bluemix_notm}} não reinicia automaticamente o app para recuperar desses problemas.
 {: tsSymptoms}
 
 
@@ -661,9 +740,9 @@ Esse comportamento é de acordo com o design do Cloud Foundry.
 {: tsResolve}
 
 ```
-cf push <appname> -p <app_path>
+cf push appname -p app_path
 ```
-Além disso, é possível codificar o app para identificar e recuperar de problemas como indisponibilidades, exceções e falhas na conexão.
+Além disso, é possível codificar o app para identificar e recuperar de problemas como indisponibilidades, exceções e falhas na conexão. 
 
 	  
 
@@ -683,7 +762,8 @@ As variáveis que você especificou são salvas somente se salvá-las para o arq
 
  
 
-Ao enviar por push um app para o {{site.data.keyword.Bluemix_notm}} a partir do IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, selecione a caixa de seleção **Salvar no arquivo manifest** na página de detalhes do Aplicativo do assistente do Aplicativo. Em seguida, as variáveis que você especificou no assistente são salvas para o arquivo manifest de seu aplicativo. Na próxima vez em que abrir o assistente, as variáveis serão exibidas automaticamente.
+Ao enviar por push um app para o {{site.data.keyword.Bluemix_notm}} a partir do IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, selecione a caixa de seleção **Salvar no arquivo manifest** na página de detalhes do Aplicativo do assistente do Aplicativo. Em seguida,
+as variáveis que você especificou no assistente são salvas para o arquivo manifest de seu aplicativo. Na próxima vez em que abrir o assistente, as variáveis serão exibidas automaticamente.
 {: tsResolve}
 
 
@@ -712,14 +792,55 @@ Use um dos métodos a seguir para resolver o problema:
 {: tsResolve} 
 
   * Se o arquivo `manifest.yml` não estiver armazenado no nível superior de seu projeto, armazene-o lá.
-  * Se seu app estiver armazenado em um subdiretório, especifique o caminho para o subdiretório no arquivo `manifest.yml`.
+  * Se seu app estiver armazenado em um subdiretório, especifique o caminho para o
+subdiretório no arquivo `manifest.yml`.
   ```
    path: path_to_application
    ```
-  * Crie um arquivo `package.json` que esteja no mesmo diretório que seu app.
-  
-  
+  * Crie um arquivo `package.json` que esteja no
+mesmo diretório que seu app.
 
+  
+  
+  
+<!-- begin STAGING ONLY --> 
+
+## O Bluemix Live Sync Debug não é iniciado na linha de comandos
+{: #ts_no_debug}
+
+Você ativou o recurso IBM Bluemix Live Sync Debug para seu app usando a linha
+de comandos, mas não é possível acessar a interface de depuração.  
+  
+ 
+
+Você ativou o recurso de depuração para seu aplicativo configurando a variável de
+ambiente **BLUEMIX_APP_MGMT_ENABLE**. No entanto, não é possível
+acessar a interface com o usuário de depuração em `app_url/bluemix-debug/manage`.
+{: tsSymptoms}
+
+
+
+O recurso de depuração não pode ser ativado nestas situações:
+{: tsCauses} 
+
+  * Quando o `manifest` contém o atributo de comando
+  * Quando você usa a opção **-c** para enviar por push um app
+para o {{site.data.keyword.Bluemix_notm}}
+
+ 
+  
+Use uma das opções a seguir para resolver o problema: 
+{: tsResolve}
+
+  * A prática recomendada é usar o buildpack IBM Node.js para iniciar o app. Para obter mais informações, consulte a seção Comando de inicialização do tópico [Implementando um aplicativo Node.js no {{site.data.keyword.Bluemix_notm}}](/docs/runtimes/nodejs/index.html#nodejs_runtime). 
+  * Desative o comando para seu app existente revisando o atributo de
+comando no `manifest.yml` para o comando: null ou editando seu
+comando push para incluir `-c Null`. 
+  * Remova o atributo de **comando** do `manifest.yml`. Em
+seguida, exclua o app atual do {{site.data.keyword.Bluemix_notm}} e envie por
+push o app novamente.
+  
+<!-- end STAGING ONLY -->  
   
   
 
@@ -735,14 +856,20 @@ Talvez você não consiga localizar sua organização no {{site.data.keyword.Blu
 É possível efetuar login na interface com o usuário do {{site.data.keyword.Bluemix_notm}} com êxito, mas não é possível enviar por push apps usando a interface de linha de comandos cf ou o plug-in do Eclipse.
 {: tsSymptoms}
 
-Ao tentar enviar por push um aplicativo para o {{site.data.keyword.Bluemix_notm}} usando a interface de linha de comandos cf, você vê uma das mensagens de erro a seguir com o nome da organização especificado na mensagem: 
+Ao tentar enviar por push um aplicativo
+para o {{site.data.keyword.Bluemix_notm}}
+usando a interface de linha de comandos cf, você vê uma das mensagens de erro
+a seguir com o nome da organização especificado na mensagem: 
 
 `Erro ao localizar a org.`
 
 `Organização não localizada`
 
 
-Ao tentar enviar por push um aplicativo para o {{site.data.keyword.Bluemix_notm}} usando o Cloud Foundry Eclipse Plugin, você vê a mensagem de erro a seguir:
+Ao tentar
+enviar por push um aplicativo para o {{site.data.keyword.Bluemix_notm}}
+usando o Cloud Foundry Eclipse Plugin, você vê a mensagem de erro
+a seguir:
 
 `Cloudspace não localizado.`
 
@@ -759,7 +886,11 @@ Se você estiver enviando por push seu aplicativo para o {{site.data.keyword.Blu
 ```
 cf api https://api.eu-gb.bluemix.net
 ```
-Se você estiver enviando por push seu aplicativo para {{site.data.keyword.Bluemix_notm}}, usando as ferramentas Eclipse, primeiro deve criar um servidor {{site.data.keyword.Bluemix_notm}} e especificar o terminal da API da região {{site.data.keyword.Bluemix_notm}} em que foi criada a sua organização. Para obter informações adicionais sobre como usar as ferramentas do Eclipse, consulte [Implementando apps com o IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html).  
+Se
+você estiver enviando por push seu aplicativo para {{site.data.keyword.Bluemix_notm}}, usando as ferramentas
+Eclipse, primeiro deve criar um servidor {{site.data.keyword.Bluemix_notm}} e especificar o terminal da
+API da região {{site.data.keyword.Bluemix_notm}} em que foi criada a sua organização. Para obter informações adicionais
+sobre como usar as ferramentas do Eclipse, consulte [Implementando apps com o IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html).  
   
   
 
@@ -778,21 +909,25 @@ Ao implementar um app no {{site.data.keyword.Bluemix_notm}}, você vê a mensage
 
 
 
-Esse problema ocorre se o nome do host especificado já estiver sendo usado.
+Esse problema ocorre se o nome do host especificado
+já estiver sendo usado.
 {: tsCauses} 
 
 
   
-O nome do host especificado deve ser exclusivo no domínio que você estiver usando. Para especificar um nome de host diferente, use um dos métodos a seguir:
+O nome do host especificado deve ser exclusivo no
+domínio que você estiver usando. Para especificar um nome de host diferente, use um
+dos métodos a seguir:
 {: tsResolve} 
 
   * Se você implementar seu aplicativo usando o arquivo `manifest.yml`, especifique o nome do host na opção host.	 
     ```
-    host: <hostname>	
+    host: host_name	
 	```
-  * Se você implementar seu aplicativo a partir do prompt de comandos, use o comando `cf push` com a opção **-n**. 
+  * Se você implementar seu aplicativo a partir do prompt de comandos, use o comando `cf
+push` com a opção **-n**. 
     ```
-    cf push <appname> -p <app_path> -n <hostname>
+    cf push appname -p app_path -n host_name
     ```
 
 
@@ -808,12 +943,13 @@ Ao fazer upload de um app WAR no {{site.data.keyword.Bluemix_notm}} usando o com
 
  
 
-Esse problema poderá ocorrer se o arquivo WAR não for especificado, ou se o caminho para o arquivo WAR não for especificado.
+Esse problema poderá ocorrer se o arquivo WAR não for especificado, ou se o caminho para o arquivo WAR não for especificado. 
 {: tsCauses}
 
  	
 	
-Use a opção **-p** para especificar um arquivo WAR ou inclua o caminho no arquivo WAR. Por exemplo:
+Use a opção **-p** para especificar
+um arquivo WAR ou inclua o caminho no arquivo WAR. Por exemplo:
 {: tsResolve}
 
 ```
@@ -867,7 +1003,9 @@ O problema poderá ocorrer se o suporte Unicode não for configurado corretament
 
 
 
-Ao atualizar um app Node.js ou implementar seu app Node.js no {{site.data.keyword.Bluemix_notm}}, é possível ver uma das mensagens de erro a seguir:
+Ao atualizar um app Node.js ou implementar seu app Node.js
+no {{site.data.keyword.Bluemix_notm}},
+é possível ver uma das mensagens de erro a seguir:
 {: tsSymptoms} 
 
 `Um app não foi detectado com êxito por nenhum buildpack disponível.`
@@ -894,11 +1032,13 @@ Execute as ações a seguir com base na causa que leva ao problema:
 {: tsResolve} 
 
   * Especifique o comando inicial por um dos métodos a seguir: 
-      * Use a interface de linha de comandos cf. Por exemplo: 
+      * Use a interface de linha de comandos cf. Por
+exemplo: 
         ```
 		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
-	  * Use o arquivo [package.json ![Ícone de link externo](../icons/launch-glyph.svg)](https://docs.npmjs.com/json){: new_window}. Por exemplo:
+	  * Use o arquivo [package.json ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://docs.npmjs.com/json){: new_window}. Por
+exemplo:
 	    ```
 		{
       ...
@@ -907,7 +1047,8 @@ Execute as ações a seguir com base na causa que leva ao problema:
  	   }
 	}
 	    ```
-	  * Use o arquivo `manifest.yml`. Por exemplo: 
+	  * Use o arquivo `manifest.yml`. Por
+exemplo: 
 	    ```
 		applications:
   name: MyUniqueNodejs01
@@ -916,7 +1057,10 @@ Execute as ações a seguir com base na causa que leva ao problema:
   ...
         ```
 
-  * Assegure-se de que um arquivo `package.json` exista em seu app Node.js para ativar o buildpack Node.js para reconhecer o app. Além disso, deve-se colocar esse arquivo no diretório-raiz de seu app.	
+  * Assegure-se de que um arquivo `package.json` exista no
+app Node.js para que o buildpack Node.js possa reconhecer o
+app. Além disso, deve-se colocar esse arquivo no diretório-raiz de
+seu app.	
     O exemplo a seguir mostra um arquivo `package.json` simples:  
 	```
 	{
@@ -936,19 +1080,22 @@ Execute as ações a seguir com base na causa que leva ao problema:
  }
     ```
 	
-Para obter mais dicas sobre apps Node.js, veja [Dicas para aplicativos Node.js ![Ícone de link externo ](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.	
+Para mais dicas sobre apps Node.js, veja [Dicas para aplicativos Node.js ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.	
 
 
 
 
-## Erros de configuração aparecem no arquivo `server.xml` depois de importar um app {{site.data.keyword.Bluemix_notm}} Liberty no Eclipse
+## Erros de configuração aparecem no arquivo `server.xml` depois de importar um app
+{{site.data.keyword.Bluemix_notm}} Liberty no Eclipse
 {: #ts_eclipse}
 
-Se ocorrerem erros de configuração no arquivo `server.xml` depois de importar um app {{site.data.keyword.Bluemix_notm}} Liberty no Eclipse, poderá ser necessário remover o arquivo `server.xml` do projeto. 
+Se ocorrerem erros de configuração no arquivo `server.xml` depois de importar um app
+{{site.data.keyword.Bluemix_notm}} Liberty no Eclipse, poderá ser necessário remover o arquivo
+`server.xml` do projeto. 
 
  
 
-Depois de importar um app {{site.data.keyword.Bluemix_notm}} Liberty no Eclipse, ocorrerão erros de configuração no arquivo `server.xml` na visualização Problemas do Eclipse.
+Depois de importar um app {{site.data.keyword.Bluemix_notm}} Liberty no Eclipse, ocorrerão erros de configuração no arquivo `server.xml` na visualização Problemas do Eclipse. 
 {: tsSymptoms}
 
  
@@ -978,7 +1125,7 @@ Esse problema poderá ocorrer se scripts, como o script de detecção, o script 
 
  
 
-É possível usar o comando [git update ![Ícone de link externo](../icons/launch-glyph.svg)](http://git-scm.com/docs/git-update-index){: new_window} para mudar a permissão de cada script para executável. Por exemplo, é possível digitar `git update --chmod=+x script.sh`.
+É possível usar o comando [git update ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://git-scm.com/docs/git-update-index){: new_window} para mudar a permissão de cada script para executável. Por exemplo, é possível digitar `git update --chmod=+x script.sh`.
 {: tsResolve}
 	
 	
@@ -1000,7 +1147,7 @@ Esse problema pode ocorrer porque o DevOps Services requer um arquivo `manifest.
 
  
 
-Para resolver esse problema, você deve criar um arquivo `manifest.yml`. Para obter informações adicionais sobre como criar um arquivo `manifest.yml`, consulte [Manifest do aplicativo](/docs/manageapps/depapps.html#appmanifest).
+Para resolver esse problema, você deve criar um arquivo `manifest.yml`. Para obter mais informações sobre com criar um arquivo `manifest.yml`, veja [Manifest do aplicativo ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/manageapps/depapps.html#appmanifest){: new_window}.
 {: tsResolve}	
 	
 
@@ -1027,11 +1174,15 @@ Esse problema ocorre porque nenhum buildpack integrado é fornecido para apps Me
 Para usar um buildpack customizado para apps Meteor, use um dos métodos a seguir:
 {: tsResolve}
 
-  * Se você implementar seu app usando o arquivo `manifest.yml`, especifique a URL ou o nome de seu buildpack customizado usando a opção buildpack. Por exemplo:
+  * Se você implementar seu app usando o arquivo `manifest.yml`, especifique a URL ou o nome de seu buildpack customizado usando a opção buildpack. Por
+exemplo:
   ```
   buildpack: https://github.com/Sing-Li/bluemix-bp-meteor 
   ```
-  * Se você implementar seu aplicativo a partir do prompt de comandos, use o comando `cf push` e especifique seu buildpack customizado usando a opção **-b**. Por exemplo:
+  * Se você implementar seu aplicativo a partir do prompt de comandos, use o comando `cf
+push` e especifique seu buildpack customizado usando
+a opção **-b**. Por
+exemplo:
     ```
 	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor 
 	```
@@ -1046,7 +1197,9 @@ Se você clicar no botão Implementar ao {{site.data.keyword.Bluemix_notm}} e de
   * [O projeto Bluemix DevOps Services não pode ser criado](#project-cannot-be-created)
   * [O repositório Git não é localizado e não pode ser clonado no DevOps Services](#repo-not-found)
   * [O repositório Git é clonado no DevOps Services, mas o app não é implementado no {{site.data.keyword.Bluemix_notm}}](#repo-cloned-app-not-deployed)
-Para obter mais informações sobre como criar o botão, veja Criando um botão Implementar no {{site.data.keyword.Bluemix_notm}}.
+
+Para obter mais informações sobre como criar o botão, consulte Criando um botão
+Implementar no {{site.data.keyword.Bluemix_notm}}.
 
 ### O projeto Bluemix DevOps Services não pode ser criado
 {: #project-cannot-be-created}
@@ -1059,13 +1212,15 @@ Você clica no botão **Implementar no Bluemix**, mas a etapa "Criando projeto" 
 {: tsSymptoms} 
 
 
-Sua conta do {{site.data.keyword.Bluemix_notm}} pode ter expirado.
+Sua conta do {{site.data.keyword.Bluemix_notm}}
+pode ter expirado.
 {: tsCauses} 
 
 Use um dos métodos a seguir para corrigir o problema:
 {: tsResolve}
 
-  * Efetue login no {{site.data.keyword.Bluemix_notm}} e atualize as informações de sua conta.
+  * Efetue login no {{site.data.keyword.Bluemix_notm}} e
+atualize as informações de sua conta.
   * Clique no botão **Implementar no Bluemix** novamente.
 
 
@@ -1084,12 +1239,15 @@ Esse problema pode ocorrer pelas razões a seguir:
 
   * O repositório Git pode não existir ou estar acessível.
   * Pode existir um problema no HTML ou na redução de preço do fragmento do botão.
-  * Pode existir um problema em que caracteres especiais, parâmetros de consulta ou fragmentos na URL estejam evitando que o repositório Git seja acessado corretamente.
+  * Pode existir um problema em que caracteres especiais, parâmetros de consulta ou
+fragmentos na URL estejam evitando que o repositório Git seja
+acessado corretamente.
 
 Use um dos métodos a seguir para corrigir o problema:
 {: tsResolve}
 
-  * Verifique se seu repositório Git existe, está acessível publicamente e se a URL está correta.
+  * Verifique se seu repositório Git existe, está acessível publicamente
+e se a URL está correta.
   * Verifique se o fragmento não contém erros de HTML ou de redução de preço.
   * Se caracteres especiais, parâmetros de consulta ou fragmentos causarem um problema com a URL do repositório Git, codifique a URL no fragmento do botão.
   
@@ -1109,11 +1267,14 @@ Você clica no botão **Implementar no Bluemix** e o repositório Git é clonado
 Esse problema pode ocorrer pelas razões a seguir:
 {: tsCauses}  
 
-  * Pode não haver espaço suficiente no espaço do {{site.data.keyword.Bluemix_notm}} para implementar um aplicativo. 
+  * Pode não haver espaço suficiente no espaço do {{site.data.keyword.Bluemix_notm}}
+para implementar um aplicativo. 
   * Um serviço necessário pode não estar declarado no arquivo `manifest.yml`.
-  * Um serviço necessário pode estar declarado no arquivo `manifest.yml`, mas o serviço já está no espaço de destino.
+  * Um serviço necessário pode estar declarado no arquivo `manifest.yml`,
+mas o serviço já está no espaço de destino.
   * Pode existir um problema com o código no repositório.
-Para diagnosticar o problema, revise a construção e implemente logs a partir da implementação:
+Para diagnosticar o problema, revise a construção e implemente logs
+a partir da implementação:
   1. Quando a etapa "Implementando no Bluemix" não for concluída com êxito, clique no link na etapa anterior "Configurando pipeline" para abrir o Delivery Pipeline.
   2. Identifique a construção com falha ou o estágio de implementação.
   3. No estágio com falha, clique em **Visualizar logs e histórico**.
@@ -1124,8 +1285,11 @@ Use um dos métodos a seguir para corrigir o problema:
 
   * Se a mensagem de erro indicar que não há espaço suficiente no espaço do {{site.data.keyword.Bluemix_notm}} para implementar o app, destine outro espaço.
   * Se a mensagem de erro indicar que um serviço necessário não está declarado no arquivo `manifest.yml`, notifique o proprietário do repositório de que o serviço necessário deve ser incluído.
-  * Se a mensagem de erro indicar que um serviço necessário já existe no espaço de destino, selecione um espaço diferente para ser usado.
-  * Se a mensagem de erro indicar que existe um problema com a construção, corrija todos os problemas com o código que está evitando que o app seja construído. Para verificar se o código não contém quaisquer problemas, construa o código usando comandos Git:
+  * Se a mensagem de erro indicar que um serviço necessário já existe
+no espaço de destino, selecione um espaço diferente para ser usado.
+  * Se a mensagem de erro indicar que existe um problema com a construção,
+corrija todos os problemas com o código que está evitando que o app seja
+construído. Para verificar se o código não contém quaisquer problemas, construa o código usando comandos Git:
     1. Clone o repositório Git:
     ```
     git clone <git_repository_URL>
@@ -1153,7 +1317,7 @@ Use um dos métodos a seguir para corrigir o problema:
 	```
 	<appname> open
 	```
-
+	
 ## Falha ao implementar um app a partir da barra de execução
 {: #deployinganappfromtherunbarfails}
 
@@ -1198,7 +1362,7 @@ Se você configurou seu projeto GitHub para criar links de itens de trabalho qua
 6. Confirme se não há erros verificando o ícone de status novamente.
    ![Ícone de status sem erros](images/githubResolved_small.png)
 
-Para obter mais informações, veja [Configurando projetos do GitHub para o Bluemix DevOps Services ![Ícone de link externo](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/githubhooks/){: new_window}.
+Para obter mais informações, veja [Configurando o GitHub para projetos Bluemix DevOps Services ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://hub.jazz.net/docs/githubhooks/){: new_window}.
 
 
 # Resolução de problemas para gerenciamento de contas
@@ -1218,7 +1382,8 @@ Não é possível criar um app no {{site.data.keyword.Bluemix_notm}} se a sua co
 Ao tentar criar um app no {{site.data.keyword.Bluemix_notm}}, você vê a mensagem de erro a seguir:
 {: tsSymptoms} 
 
-`BXNUI0096E: O app não foi criado. Sua conta está inativa porque ela foi cancelada ou suspensa.`
+`BXNUI0096E: O app não foi criado. Sua conta está inativa porque ela foi cancelada
+ou suspensa.`
 
 
 O status de sua conta do {{site.data.keyword.Bluemix_notm}} torna-se inativo quando a conta é cancelada ou suspensa.
@@ -1226,7 +1391,7 @@ O status de sua conta do {{site.data.keyword.Bluemix_notm}} torna-se inativo qua
 
  
 
-Para reativar sua conta, entre em contato com o [Suporte do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}. No email, deve-se incluir as informações a seguir:
+Para reativar sua conta, entre em contato com o [Suporte do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://ibm.biz/bluemixsupport.com){: new_window}. No email, deve-se incluir as informações a seguir:
 {: tsResolve}
 
   * O ID IBM que você usa para efetuar login no {{site.data.keyword.Bluemix_notm}}.
@@ -1273,7 +1438,7 @@ Você pode observar que diversos aplicativos compartilham a mesma URL em {{site.
 Esse problema pode ocorrer quando você designa a mesma rota de URL para diferentes aplicativos dentro de um espaço.
 {: tsCauses}
 
-Por exemplo, você envia por push o aplicativo myApp1 para o {{site.data.keyword.Bluemix_notm}} e configura o domínio como "mynewapp.mybluemix.net". Em seguida, você envia por push outro aplicativo myApp2 para o mesmo espaço e configura uma de suas rotas de URL como "mynewapp.mybluemix.net". A rota agora é mapeada para ambos os aplicativos.
+Por exemplo, você envia por push o aplicativo myApp1 para o {{site.data.keyword.Bluemix_notm}} e configura o domínio como "mynewapp.stage1.mybluemix.net". Em seguida, você envia por push outro aplicativo myApp2 para o mesmo espaço e configura uma de suas rotas de URL como "mynewapp.stage1.mybluemix.net". A rota agora é mapeada para ambos os aplicativos.
 
  
 
@@ -1282,7 +1447,35 @@ Esse é o comportamento suportado do {{site.data.keyword.Bluemix_notm}} e é pos
   
 	
 	
+<!-- begin STAGING ONLY --> 
+	
+	
+## Os administradores não podem visualizar todas as organizações usando a interface com o usuário do {{site.data.keyword.Bluemix_notm}}
+{: #ts_ui_org}
 
+Como administrador, quando você utiliza a interface com o usuário do
+{{site.data.keyword.Bluemix_notm}}, não é possível exibir cada organização para
+administrá-las. Você pode exibir e administrar apenas as organizações às quais pertence.
+
+ 
+
+Como administrador, não é possível ver todas as organizações utilizando a interface com o usuário do {{site.data.keyword.Bluemix_notm}}.
+{: tsSymptoms}
+
+ 
+
+Essa é uma limitação da interface com o usuário do {{site.data.keyword.Bluemix_notm}}.
+{: tsCauses}
+
+ 
+
+É possível usar o comando, como `cf orgs`, `cf
+create-org` e `cf delete-org`, a partir da interface de linha
+de comandos cf para gerenciar todas as organizações. Para obter uma lista completa de
+comandos cf, insira `cf help`.
+{: tsResolve}
+	
+<!-- end STAGING ONLY -->
 
 
 
@@ -1308,7 +1501,8 @@ Conclua as etapas a seguir para resolver esse problema:
 {: tsResolve}
 
   1. Na página Incluir cartão de crédito, preencha todos os campos obrigatórios nas seções de informações de contato, endereço de contato e endereço para cobrança.
-  2. Selecione **Eu li e concordo com os Termos e Condições da IBM**, em seguida, clique em **Enviar**. A seção **Selecionar um método de pagamento** é exibida.
+  2. Selecione **Eu li e concordo com os Termos e Condições da IBM**,
+em seguida, clique em **Enviar**. A seção **Selecionar um método de pagamento** é exibida.
   3. Insira seu número do cartão de crédito, a data de expiração de seu cartão e o código de segurança que está em seu cartão. Em seguida, clique em **Enviar**.
 
 
@@ -1326,11 +1520,14 @@ Talvez você tenha problemas ao usar os tempos de execução do IBM® Bluemix™
 {: #ts_loading_bp}
 
 
-Talvez você não consiga usar os componentes de buildpack mais recentes ao enviar um app por push. É possível usar buildpacks que possuem mecanismos integrados para evitar o carregamento de componentes obsoletos ou é possível excluir os conteúdos no diretório de cache de seu app antes de enviar por push ou remontar o app. 
+É possível que você não consiga usar os componentes de buildpack mais recentes
+ao enviar um app por push. É possível usar buildpacks que possuem mecanismos integrados
+para evitar o carregamento de componentes obsoletos ou é possível excluir os conteúdos
+no diretório de cache do app antes de enviar por push ou remontar o app. 
 
  
 
-Ao enviar por push ou remontar um app após a atualização do buildpack, os componentes de buildpack mais recentes não são carregados automaticamente. Como resultado, o seu aplicativo usa os componentes de buildpack obsoletos a partir do cache. As atualizações que foram aplicadas ao buildpack desde a última vez que o app foi enviado por push não são implementadas.
+Ao enviar por push ou remontar um app após a atualização do buildpack, os componentes de buildpack mais recentes não são carregados automaticamente. Como resultado, o seu aplicativo usa os componentes de buildpack obsoletos a partir do cache. As atualizações que foram aplicadas ao buildpack desde a última vez que o app foi enviado por push não são implementadas. 
 {: tsSymptoms}
 
 
@@ -1340,25 +1537,32 @@ Alguns buildpacks não são configurados para fazer download automaticamente de 
 
  
 
-É possível usar buildpacks que possuem mecanismos integrados para evitar o carregamento de componentes obsoletos. Os buildpacks a seguir são dois exemplos:
+É possível usar buildpacks que possuem mecanismos integrados para evitar o carregamento de componentes obsoletos. Os buildpacks a seguir são dois exemplos: 
 {: tsResolve}
 
-  * [Buildpack Java do Cloud Foundry ![Ícone de link externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack){: new_window}. Esse buildpack tem um mecanismo integrado para assegurar que a versão mais recente do buildpack seja usada. Para obter mais informações sobre como esse mecanismo funciona, veja [extending-caches.md ![Ícone de link externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
-  * [Buildpack Node.js do Cloud Foundry ![Ícone de link externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}. Esse buildpack tem funcionalidade semelhante usando variáveis de ambiente. Para que o buildpack Node.js sempre possa fazer download de módulos do nó a partir da Internet, digite o comando a seguir na interface de linha de comandos cf: 	
+  * [Buildpack Java do Cloud Foundry ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/cloudfoundry/java-buildpack){: new_window}. Esse buildpack tem um mecanismo integrado
+para assegurar que a versão mais recente do buildpack seja usada. Para obter mais informações sobre como esse mecanismo funciona, veja [extending-caches.md ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
+  * [Buildpack Node.js do Cloud Foundry ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}. Esse buildpack tem funcionalidade semelhante usando variáveis de ambiente. Para que o buildpack Node.js sempre possa
+fazer download de módulos do nó a partir da Internet, digite o comando
+a seguir na interface de linha de comandos cf: 	
   ```
   set NODE_MODULES_CACHE=false
   ```
 Se o buildpack que você estiver usando não fornecer um mecanismo para carregar os componentes mais recentes automaticamente, será possível excluir manualmente os conteúdos no diretório de cache e enviar por push seu app novamente executando as etapas a seguir:
-  1. Efetue o check-out de uma ramificação de um buildpack nulo, por exemplo, https://github.com/ryandotsmith/null-buildpack. Para obter informações sobre como efetuar check-out de uma ramificação, veja [Conceitos básicos do Git - Obtendo um repositório Git ![Ícone de link externo](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}.  
-  2. Inclua a linha a seguir no arquivo `null-buildpack/bin/compile` e confirme as mudanças. Para obter informações sobre como confirmar mudanças, veja [Conceitos básicos do Git - Registrando mudanças no repositório ![Ícone de link externo](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
+  1. Efetue o check-out de uma ramificação de um buildpack nulo, por exemplo, https://github.com/ryandotsmith/null-buildpack. Para obter informações sobre como verificar uma ramificação, veja [Conceitos básicos do Git - Obtendo um repositório Git ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}.  
+  2. Inclua a linha a seguir no arquivo `null-buildpack/bin/compile`
+e confirme as mudanças. Para obter informações sobre como confirmar mudanças, veja [Conceitos básicos do Git - Registrando mudanças no repositório ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
   ```
   rm -rfv $2/*
   ```
-  3. Envie seu app por push com o buildpack nulo que foi modificado para excluir o cache usando o comando a seguir. Depois de concluir essa etapa, todos os conteúdos no diretório de cache de seu app serão excluídos.
+  3. Envie seu app por push com o buildpack nulo que foi modificado para excluir
+o cache usando o comando a seguir. Depois de concluir essa
+etapa, todos os conteúdos no diretório de cache de seu app serão excluídos.
   ```
   cf push appname -p app_path -b <modified_null_buildpack>
   ```
-  4. Envie seu app por push com o buildpack mais recente que você deseja usar usando o comando a seguir: 
+  4. Envie seu app por push com o buildpack mais recente que você deseja usar
+usando o comando a seguir: 
   ```
   cf push appname -p app_path -b <latest_buildpack>
   ```
@@ -1369,7 +1573,8 @@ Se o buildpack que você estiver usando não fornecer um mecanismo para carregar
 ## Mensagens de AVISO do buildpack PHP
 {: #ts_phplog}
 
-Talvez você veja mensagens que contenham AVISO nos logs. É possível parar a criação de log dessas mensagens alterando o nível de criação de log.	
+Talvez você veja mensagens que contenham AVISO nos logs. É possível parar a criação de log dessas mensagens alterando o
+nível de criação de log.	
 	
  
 
@@ -1385,7 +1590,8 @@ Ao enviar por push um aplicativo para o Bluemix usando um buildpack PHP, você p
 
 
 
-No buildpack PHP, o parâmetro error_log é usado para definir o nível de criação de log. Por padrão, o valor do parâmetro `error_log` é **stderr notice**. O exemplo a seguir mostra a configuração do nível de criação de log padrão no arquivo `nginx-defaults.conf` do buildpack PHP que é fornecido pelo Cloud Foundry. Para obter mais informações, veja [cloudfoundry/php-buildpack ![Ícone de link externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}.
+No buildpack PHP, o parâmetro error_log é usado para definir o nível de criação de log. Por padrão, o valor do parâmetro `error_log`
+é **stderr notice**. O exemplo a seguir mostra a configuração do nível de criação de log padrão no arquivo `nginx-defaults.conf` do buildpack PHP que é fornecido pelo Cloud Foundry. Para obter mais informações, veja [cloudfoundry/php-buildpack ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}.
 {: tsCauses} 
 
 ```
@@ -1396,7 +1602,8 @@ pid @{HOME}/nginx/logs/nginx.pid;
 
  	
 	
-As mensagens `NOTICE` são informativas e não necessariamente indicam que ocorreu um problema. É possível parar a criação de log dessas mensagens mudando o nível de criação de log de aviso de erro padrão para erro padrão no arquivo nginx-defaults.conf de seu buildpack. Por exemplo: 	
+As mensagens `NOTICE` são informativas e não necessariamente indicam que ocorreu um problema. É possível parar a criação de log dessas mensagens mudando o nível de criação de log de aviso de erro padrão para erro padrão no arquivo nginx-defaults.conf de seu buildpack. Por
+exemplo: 	
 {: tsResolve}
 
 ```
@@ -1404,16 +1611,19 @@ daemon off;
 error_log stderr error;
 pid @{HOME}/nginx/logs/nginx.pid;
 ```
-Para obter mais informações sobre como mudar a configuração de criação de log padrão, veja [error_log ![Ícone de link externo](../icons/launch-glyph.svg)](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}.
+Para obter mais informações sobre como mudar a configuração de criação de log padrão, veja [error_log ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}.
 	
 
 ## Impossível importar uma biblioteca Python de terceiro para o {{site.data.keyword.Bluemix_notm}}
 {: #ts_importpylib}
 
-Pode ser que você não consiga importar uma biblioteca Python de terceiros para o {{site.data.keyword.Bluemix_notm}}. É possível resolver o problema incluindo arquivos de configuração no diretório-raiz do aplicativo python.
+Pode ser que você não consiga importar uma biblioteca Python de terceiros
+para o {{site.data.keyword.Bluemix_notm}}. É possível resolver o problema incluindo arquivos de configuração no diretório-raiz do aplicativo python.
 
 
-Ao tentar importar uma biblioteca Python de terceiros, como a biblioteca `web.py`, o comando `cf push` falha.
+Ao tentar importar uma biblioteca Python de terceiros, como
+a biblioteca `web.py`, o comando `cf push`
+falha.
 {: tsSymptoms}
 
 
@@ -1425,19 +1635,22 @@ Esse problema ocorre quando as informações de configuração para o aplicativo
 
  
 
-Para resolver o problema, inclua um arquivo `requirements.txt` e um arquivo `Procfile` no diretório-raiz de seu app Python. As informações a seguir assumem que você esteja importando a biblioteca web.py:
+Para resolver o problema, inclua um arquivo `requirements.txt` e um arquivo `Procfile` no diretório-raiz de seu app Python. As informações a seguir presumem que você está importando a biblioteca web.py:
 {: tsResolve}
 
   1. Inclua um arquivo `requirements.txt` no diretório-raiz de seu app Python.
-     O arquivo `requirements.txt` especifica os pacotes de biblioteca necessários para o seu aplicativo Python e a versão dos pacotes. O exemplo a seguir mostra o conteúdo do arquivo `requirements.txt`, em que `web.py==0.37` indica que a versão da biblioteca `web.py` que será transferida por download é 0,37 e `wsgiref==0.1.2` indica que a versão da interface do gateway do servidor da web que é requerida pela biblioteca web.py é 0.1.2.
+     O arquivo `requirements.txt`
+especifica os pacotes de biblioteca necessários para o aplicativo Python
+e a versão dos pacotes. O exemplo a seguir mostra o conteúdo do arquivo `requirements.txt`, em que `web.py==0.37` indica que a versão da biblioteca `web.py` que será transferida por download é 0,37 e `wsgiref==0.1.2` indica que a versão da interface do gateway do servidor da web que é requerida pela biblioteca web.py é 0.1.2.
 	 ```
 	 web.py==0.37
      wsgiref==0.1.2
 	 ```
-	Para obter mais informações sobre como configurar o arquivo `requirements.txt`, consulte [Arquivos de requisitos](https://pip.readthedocs.org/en/1.1/requirements.html).
-	
+	Para obter mais informações sobre como configurar
+o arquivo `requirements.txt`, consulte [Arquivos de requisitos](https://pip.readthedocs.org/en/1.1/requirements.html). 
+	 
   2. Inclua um arquivo `Procfile` no diretório-raiz de seu aplicativo Python.
-	O arquivo `Procfile` deve conter o comando inicial do aplicativo Python. No comando a seguir, *yourappname* é o nome de seu aplicativo Python e *PORT* é o número da porta que o seu aplicativo Python deve usar para receber solicitações de usuários do app. *$PORT* é opcional. Se você não especificar PORT no comando inicial, o número da porta sob a variável de ambiente `VCAP_APP_PORT` que está dentro do aplicativo será usado em seu lugar. 
+	O arquivo `Procfile` deve conter o comando inicial do aplicativo Python. No comando a seguir, *yourappname* é o nome de seu aplicativo Python e *PORT* é o número da porta que seu aplicativo Python deve usar para receber solicitações de usuários do app. *$PORT* é opcional. Se você não especificar PORT no comando inicial, o número da porta sob a variável de ambiente `VCAP_APP_PORT` que está dentro do aplicativo será usado em seu lugar. 
 	```
 	web: python <yourappname>.py $PORT
 	```
@@ -1464,7 +1677,8 @@ Esse problema ocorre por causa dos seguintes motivos:
 
 
 
-Se o problema for causado por uma versão anterior do buildpack Liberty, reimplemente o aplicativo no {{site.data.keyword.Bluemix_notm}}. Caso contrário, é possível fornecer os arquivos de log do aplicativo do cliente para a equipe de suporte:
+Se o problema for causado por uma versão anterior do buildpack Liberty, reimplemente o aplicativo no {{site.data.keyword.Bluemix_notm}}. Caso contrário, é possível fornecer os
+arquivos de log do aplicativo do cliente para a equipe de suporte:
 {: tsResolve} 
 
   * logs/messages.log
@@ -1501,7 +1715,8 @@ A solução é reinserir o nome de usuário e senha.
 
  
 
-Uma mensagem de erro é exibida quando as operações de rastreio ou dump estão em execução. A mensagem indica que uma instância de destino para um app não está no estado em execução	
+Uma mensagem de erro é exibida quando as operações de rastreio ou dump
+estão em execução. A mensagem indica que uma instância de destino para um app não está no estado em execução	
 {: tsSymptoms}
 
 ```
@@ -1567,7 +1782,8 @@ Você vê a mensagem de erro `Cota do disco excedida` no log de seu app.
 Este problema é causado por um dos motivos a seguir: 
 {: tsCauses} 
 
-  * Os arquivos de dump são gerados com as instâncias do aplicativo em execução e os arquivos usam até a cota de disco alocada. Por padrão, a cota de disco para uma instância do aplicativo é 1 GB. É possível verificar o uso de seu disco clicando em **Painel>Aplicativo>Tempo de Execução do Aplicativo**. O exemplo a seguir mostra as informações de tempo de execução, incluindo uso do disco, para duas instâncias de um aplicativo:
+  * Os arquivos de dump são gerados com as instâncias do aplicativo em execução e os arquivos usam até a cota de disco alocada. Por padrão, a cota de disco para uma instância do aplicativo é 1 GB. É possível verificar o uso de
+seu disco clicando em **Painel>Aplicativo>Tempo de Execução do Aplicativo**. O exemplo a seguir mostra as informações de tempo de execução, incluindo uso do disco, para duas instâncias de um aplicativo:
     ```
     Instance	State	CPU	Memory Usage	Disk Usage
 
@@ -1589,5 +1805,54 @@ Este problema é causado por um dos motivos a seguir:
 	```
 	
 	
+<!-- begin STAGING ONLY --> 
 
+	
+## Os objetos do criador de logs Log4js não são exibidos na janela pop-up Rastreio do Node.js
+{: #ts_logger}
+
+Os objetos do criador de logs log4js não são exibidos na janela pop-up Rastreio do Node.js quando os módulos log4js e ibmbluemix são usados em seu app. 	
+
+ 
+Os objetos do criador de logs log4js não são exibidos na janela pop-up Rastreio do Node.js quando os módulos log4js, winston e ibmbluemix são usados em seu app.
+{: tsSymptoms}
+
+
+Como o módulo ibmbluemix fornece uma API unificada para operações de log que usam os módulos log4js e winston, apenas os objetos do criador de logs ibmbluemix são exibidos na janela pop-up Rastreio do Node.js. Isso tem o objetivo de fazer com que as configurações de nível de log para os objetos do criador de logs ibmbluemix, log4js e winston parem de sobrescrever umas às outras.
+{: tsCauses}
+
+
+Este comportamento é esperado.
+{: tsResolve}
+
+<!-- end STAGING ONLY -->
+
+
+
+
+<!-- begin STAGING ONLY -->
+
+
+## A caixa de seleção Aplicar configuração de rastreio a todas as instâncias do aplicativo está desativada
+{: #ts_bunyan}
+
+A caixa de seleção **Aplicar configuração de rastreio a todas as instâncias do aplicativo** é desmarcada e desativada na janela pop-up Rastreio do Node.js quando os níveis do criador de logs Bunyan são modificados.
+
+
+
+Quando você muda os níveis dos objetos do criador de logs Bunyan, a caixa de seleção **Aplicar configuração de rastreio a todas as instâncias do aplicativo** é desmarcada e desativada na janela pop-up Rastreio do Node.js.
+{: tsSymptoms} 
+
+ 
+
+Quando os níveis de log do Bunyam são modificados, a configuração de rastreio não pode ser aplicada a todas as instâncias de um aplicativo. Isso ocorre porque a biblioteca Bunyam não requer que os nomes ou identificadores dos objetos do criador de logs Bunyam sejam exclusivos. Mais de um dos objetos do criador de logs Bunyam que são usados para especificar níveis nas mensagens de log do seu aplicativo podem ter o mesmo nome ou identificador. Portanto, se a configuração de rastreio estiver ativada para um aplicativo, os níveis de log especificados nas mensagens de log do aplicativo poderão ser imprecisos.
+{: tsCauses}
+
+
+
+
+Este comportamento é esperado.
+{: tsResolve} 
+
+<!-- end STAGING ONLY -->
 

@@ -25,7 +25,10 @@ Potresti riscontrare dei problemi quando utilizzi i runtime {{site.data.keyword.
 ## Pacchetto di build obsoleto utilizzato quando viene eseguito il push di un'applicazione
 {: #ts_loading_bp}
 
-Potresti non essere in grado di utilizzare i componenti di pacchetti di build più recenti quando esegui il push di un'applicazione. Puoi utilizzare i pacchetti di build che hanno dei meccanismi integrati per impedire il caricamento di componenti obsoleti oppure puoi eliminare il contenuto nella directory cache della tua applicazione prima di eseguire il push o di preparare di nuovo l'applicazione. 
+Potresti non essere in grado di utilizzare i componenti di pacchetti di build più recenti
+quando esegui il push di un'applicazione. Puoi utilizzare i pacchetti di build che hanno dei meccanismi integrati
+per impedire il caricamento di componenti obsoleti oppure puoi eliminare il contenuto nella
+directory cache della tua applicazione prima di eseguire il push o di preparare di nuovo l'applicazione. 
 
 Quando esegui il push o prepari di nuovo un'applicazione dopo l'aggiornamento del pacchetto di build, i componenti del pacchetto di build più recenti non vengono caricati automaticamente. Di conseguenza, la tua applicazione utilizza i componenti del pacchetto di build obsoleti dalla cache. Gli aggiornamenti che sono stati applicati al pacchetto di build dall'ultima volta che hai eseguito il push dell'applicazione non vengono implementati. 
 {: tsSymptoms}
