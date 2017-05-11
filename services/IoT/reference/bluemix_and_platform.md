@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+lastupdated: "2017-05-08"
 
 ---
 
@@ -60,5 +60,5 @@ The details for your current pricing plan are displayed.
 * [{{site.data.keyword.Bluemix_notm}} security ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} platform security ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} compliance ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} security ![External link icon](../../../icons/launch-glyph.svg "External link icon")](http://www.softlayer.com/security){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} compliance ![External link icon](../../../icons/launch-glyph.svg "External link icon")](http://www.softlayer.com/compliance){:new_window}
+* [{{site.data.keyword.BluSoftlayer_full}} security ![External link icon](../../../icons/launch-glyph.svg "External link icon")](http://www.softlayer.com/security){:new_window}
+* [{{site.data.keyword.BluSoftlayer_notm}} compliance ![External link icon](../../../icons/launch-glyph.svg "External link icon")](http://www.softlayer.com/compliance){:new_window}
