@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-10"
+lastupdated: "2017-5-11"
 
 ---
 
@@ -73,11 +73,11 @@ To upgrade your project to a toolchain, follow these steps:
 
    In this example, because the project uses a public repo on github.com, the toolchain will be connected to the same GitHub repo. If your project uses a Git repo that is hosted on JazzHub, the contents of that repo will be cloned to a new repo in {{site.data.keyword.gitrepos}}, which is part of {{site.data.keyword.contdelivery_short}}. For full details about how each type of repo is treated, see the following table.
 
-|Project repo |Project type	|Toolchain repo |
-|:----------|:------------------------------|:------------------|
-|github.com 		|Private or public 		|The same github.com repo with {{site.data.keyword.Bluemix_notm}} Public.	|
-|hub.jazz.net/git		|Private or public 		|A new repo in {{site.data.keyword.gitrepos}} with {{site.data.keyword.Bluemix_notm}} Public.	|
-{: caption="Table 1. Project repos mapped to toolchain repos" caption-side="top"}
+   |Project repo |Project type	|Toolchain repo |
+   |:----------|:------------------------------|:------------------|
+   |github.com 		|Private or public 		|The same github.com repo with {{site.data.keyword.Bluemix_notm}} Public.	|
+   |hub.jazz.net/git		|Private or public 		|A new repo in {{site.data.keyword.gitrepos}} with {{site.data.keyword.Bluemix_notm}} Public.	|
+   {: caption="Table 1. Project repos mapped to toolchain repos" caption-side="top"}
 
 2. To customize the toolchain, you can configure a few settings:
 
