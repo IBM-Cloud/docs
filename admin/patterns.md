@@ -252,7 +252,7 @@ You manage and monitor the quota of an account by space and by infrastructure. A
 {: #roles}
 
 You can grant multiple roles to team members in a {{site.data.keyword.Bluemix_notm}} account. These roles define the permissions of the user to manage account and organization resources:
-* You can grant [user roles](/docs/admin/users_roles.html#userrolesinfo "user roles" ) to members of an organization. These roles define the level of access within the organization, and restrict who can access a space and its resources. For example, you can grant users different permissions to different spaces.
+* You can grant [user roles](/docs/iam/users_roles.html#userrolesinfo "user roles" ) to members of an organization. These roles define the level of access within the organization, and restrict who can access a space and its resources. For example, you can grant users different permissions to different spaces.
 * In {{site.data.keyword.Bluemix_notm}} Dedicated and {{site.data.keyword.Bluemix_notm}} Local only, you can grant [administrative roles](/docs/admin/index.html#oc_useradmin "administrative roles" ) to members of an account to manage system information, usage of account resources, reports and logs, catalog services, users, and resource usage per organization.
 
 ### Account owner

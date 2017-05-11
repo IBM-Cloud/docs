@@ -66,7 +66,7 @@
 	}, {
 		"title": "Disponibilidade de serviço",
 		"description": "Aprenda sobre os tipos de serviço e a disponibilidade.",
-		"href": "services/index.html"
+		"href": "services/services_region.html"
 	}, {
 		"title": "Gerenciando apps",
 		"description": "Use o painel na interface com o usuário do Bluemix para visualizar e gerenciar seus aplicativos e serviços.",
@@ -77,6 +77,9 @@
 		"description": "Siga o uso do aplicativo e o fluxo de dados para obter um entendimento melhor da sua implementação.",
 		"img": "homepage/images/monitor_log.svg",
 		"href": "monitor_log/monitoringandlogging.html"
+	}, {
+		"title": "Gerenciando APIs",
+		"href": "apis/management/index.html"
 	}, {
 		"title": "Segurança do Bluemix",
 		"description": "Aprenda com o Bluemix fornece segurança funcional, de infraestrutura, operacional e física.",

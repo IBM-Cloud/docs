@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2017
+  years: 2015, 2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2017-02-14"
 
 
 ---
@@ -16,96 +16,97 @@ lastupdated: "2017-01-12"
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# CLI- und Dev-Tools
+# Downloads
 {: #cli}
 
 Mit {{site.data.keyword.Bluemix_short}} haben Sie Zugriff auf leistungsfähige Tools wie zum Beispiel eine einheitliche Befehlszeilenschnittstelle und CLI-Plug-ins. Alle diese CLI-Downloads werden zur Unterstützung Ihrer Arbeit mit {{site.data.keyword.Bluemix_notm}} zur Verfügung gestellt.
 {:shortdesc}
 
-## ![](./images/CLI.svg) Befehlszeilenschnittstellen
-{: #downloads}
+## ![](./images/CLI.svg) Befehlszeilenschnittstelle (CLI)
+{: #downloads notoc}
 
-Sie können Befehlszeilenschnittstellen herunterladen und installieren, die Sie beim Arbeiten mit {{site.data.keyword.Bluemix_notm}} unterstützen.
+Laden Sie das Befehlszeilentool herunter und installieren Sie es, um Ihre Arbeit in {{site.data.keyword.Bluemix_notm}} zu unterstützen. 
 
-Das Cloud Foundry-Befehlszeilentool 'cf' ist eine Voraussetzung für alle anderen CLI-Tools von {{site.data.keyword.Bluemix_notm}}. Das {{site.data.keyword.Bluemix_notm}}-Befehlszeilentool stellt neben Cloud Foundry-Anwendungen umfassende Erfahrung zur Verwaltung Ihrer {{site.data.keyword.Bluemix_notm}}-Umgebung bereit.
+Die {{site.data.keyword.Bluemix_notm}}-CLI stellt eine Befehlszeilenbedienung zur Verwaltung Ihrer {{site.data.keyword.Bluemix_notm}}-Umgebung bereit. Sie enthält außerdem eine Cloud Foundry-Befehlszeilenschnittstelle (cf) in ihrer Installation, die zur Verwaltung von Cloud Foundry-Anwendungen und -Services verwendet werden kann.  
 
-Beide CLI-Tools verwenden standardmäßig den Port 443. Wenn sich ein HTTP-Proxy zwischen den CLI-Tools und der {{site.data.keyword.Bluemix_notm}}-Umgebung befindet, müssen Sie die Umgebungsvariable `http-proxy` mit der tatsächlichen URL und dem Port (falls vorhanden) des HTTP-Proxys konfigurieren. Details hierzu finden Sie in den Informationen zur [Verwendung der CLI mit einem HTTP-Proxy-Server ![Symbol für externen Link](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window}. 
+Beide CLI-Tools verwenden standardmäßig den Port 443. Wenn sich ein HTTP-Proxy zwischen den CLI-Tools und der {{site.data.keyword.Bluemix_notm}}-Umgebung befindet, müssen Sie die Umgebungsvariable `HTTP_PROXY` mit der tatsächlichen URL und dem Port (falls vorhanden) des HTTP-Proxys konfigurieren. Details hierzu finden Sie in den Informationen zur [Verwendung der CLI mit einem HTTP-Proxy-Server ![Symbol für externen Link](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window}.
 
-
-| *{{site.data.keyword.Bluemix_notm}}: bx* | *Cloud Foundry: cf* |
-|---------------------|---------------|
-| [CLI herunterladen](http://clis.ng.bluemix.net/) <br> [Dokumentation anzeigen](/docs/cli/reference/bluemix_cli/index.html)|  [CLI herunterladen ![Symbol für externen Link](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}  <br> [Dokumentation anzeigen](/docs/cli/reference/cfcommands/index.html) |
-{: caption="Table 1. CLI download" caption-side="top"}
-
+[{{site.data.keyword.Bluemix_notm}}-CLI herunterladen ![Symbol für externen Link](../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/){: new_window} <br> 
+[Dokumentation anzeigen](/docs/cli/reference/bluemix_cli/index.html)
 
 ## ![](./images/CLI_Plugin.svg) Befehlszeilenschnittstelle-Plug-ins
+{: #cliplugins notoc}
 
-Sie können die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle ohne großen Aufwand durch zusätzliche Befehle erweitern. Zugriff auf die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstellen-Plug-ins erhalten Sie über das [Plug-in-Repository für die Bluemix CLI ![Symbol für externen Link](../icons/launch-glyph.svg)](https://plugins.ng.bluemix.net/).
+Sie können die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle ohne großen Aufwand durch zusätzliche Befehle erweitern. Zugriff auf die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstellen-Plug-ins erhalten Sie über das [Plug-in-Repository für die Bluemix CLI ![Symbol für externen Link](../icons/launch-glyph.svg)](https://plugins.ng.bluemix.net/){: new_window}.
 
 ### Erweitern Sie die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle: bx
-{: cli_bluemix_ext}
+{: #cli_bluemix_ext notoc}
 
-* Zum Installieren von {{site.data.keyword.Bluemix_notm}}-CLI-Plug-ins über die {{site.data.keyword.Bluemix_notm}}-Registry müssen Sie den Plug-in-Registry-Endpunkt festlegen:
 
-```
-bluemix plugin repo-add bluemix-bx https://plugins.ng.bluemix.net
-```
-{: codeblock}
-
-* Anschließend führen Sie den folgenden Befehl aus, um ein Plug-in zu installieren:
+Wenn Sie das {{site.data.keyword.Bluemix_notm}}-CLI-Tool installieren, wird das [CLI-Plug-in-Repository ![Symbol für externen Link](../icons/launch-glyph.svg)](https://plugins.ng.bluemix.net/){: new_window} standardmäßig mit dem Repository-Aliasnamen `Bluemix` vorkonfiguriert. Sie können verfügbare Plug-ins direkt installieren. 
 
 ```
-bluemix plugin install plugin_name -r bluemix-bx
+bluemix plugin install Plug-in-Name -r Bluemix
 ```
-{: codeblock}
 
-
-| *{{site.data.keyword.activedeployshort}}-CLI* | *{{site.data.keyword.autoscaling}} CLI* | *IBM Bluemix Container Service*  |
+| *{{site.data.keyword.activedeployshort}}-CLI* | *{{site.data.keyword.autoscaling}}-CLI* | *IBM Bluemix Container Service*  |
 |-----|-----|-----|
-| Plug-in-Name: active-deploy <br> [Dokumentation anzeigen](/docs/services/ActiveDeploy/cli.html#cli) | Plug-in-Name: auto-scaling <br> [Dokumentation anzeigen](/docs/cli/plugins/auto-scaling/index.html) |  Plug-in-Name: container-service  <br> [Dokumentation anzeigen](/docs/containers/cs_cli_devtools.html) |
-{: caption="Table 2. Plug-ins" caption-side="top"}
+| Plug-in-Name: active-deploy <br> [Dokumentation anzeigen](/docs/services/ActiveDeploy/cli.html#cli) | Plug-in-Name: auto-scaling <br> [Dokumentation anzeigen](/docs/cli/plugins/auto-scaling/index.html) | Plug-in-Name: container-service  <br> [Dokumentation anzeigen](/docs/containers/cs_cli_devtools.html) |
+{: caption="Tabelle 2. Plug-ins" caption-side="top"}
 
 |  *Privates Netzpeering* | *VPN*  |
 |-----|-----|
-| Plug-in-Name: private-network-peering  <br> [Dokumentation anzeigen](/docs/cli/plugins/pnp/index.html) |Plug-in-Name: VPN  <br> [Dokumentation anzeigen](/docs/cli/plugins/bx_vpn/index.html) |
-{: caption="Table 3. Plug-ins" caption-side="top"}
+| Plug-in-Name: private-network-peering  <br> [Dokumentation anzeigen](/docs/cli/plugins/pnp/index.html) | Plug-in-Name: VPN  <br> [Dokumentation anzeigen](/docs/cli/plugins/bx_vpn/index.html) |
+{: caption="Tabelle 3. Plug-ins" caption-side="top"}
+
+Sie können außerdem Plug-ins aus anderen Repositorys hinzufügen, die mit der {{site.data.keyword.Bluemix_notm}}-CLI-Architektur konform sind. 
+1. Zum Installieren von {{site.data.keyword.Bluemix_notm}}-CLI-Plug-ins aus einem anderen Repository legen Sie den Plug-in-Registry-Endpunkt fest: 
+```
+bluemix plugin repo-add bluemix-other-repo [repo_url]
+```
+Dabei ist `repo_url` die HTTPS-URL des Plug-in-Repositorys.
+
+2. Führen Sie den folgenden Befehl aus, um ein Plug-in zu installieren: 
+```
+bluemix plugin install Plug-in-Name -r bluemix-other-repo
+```
 
 
-### Erweitern Sie die Cloud Foundry-Befehlszeilenschnittstelle: cf
-{: cli_cf_ext}
+### Erweitern Sie die Cloud Foundry-Befehlszeilenschnittstelle: bx cf
+{: #cli_cf_ext notoc}
+
+Nach der Installation des {{site.data.keyword.Bluemix_notm}}-Befehlszeilentools ist auch eine Cloud Foundry-Befehlszeilenschnittstelle im Bluemix-CLI-Verzeichnis installiert. Führen Sie die Cloud Foundry-CLI-Befehle mit `bluemix cf` aus. 
 
 * Zum Installieren von CLI-Plug-ins über die {{site.data.keyword.Bluemix_notm}}-Registry müssen Sie den Plug-in-Registry-Endpunkt festlegen:
 
 ```
-cf add-plugin-repo bluemix-cf https://plugins.ng.bluemix.net
+bluemix cf add-plugin-repo bluemix-cf-repo https://plugins.ng.bluemix.net
 ```
 {: codeblock}
 
 * Anschließend führen Sie den folgenden Befehl aus, um ein Plug-in zu installieren:
 
 ```
-cf install-plugin plugin_name -r bluemix-cf
+bluemix cf install-plugin Plug-in-Name -r bluemix-cf-repo
 ```
 {: codeblock}
 
-
-| *Active Deploy* | *Admin Console* |
+| *Active Deploy* | *Administrationskonsole* |
 |-----------------|-----------------|
 | Plug-in-Name: active-deploy <br>  [Dokumentation anzeigen](/docs/services/ActiveDeploy/cli.html#cli) |  Plug-in-Name: bluemix-admin <br> [Dokumentation anzeigen](/docs/cli/plugins/bluemix_admin/index.html) |
-{: caption="Table 4. Plug-ins" caption-side="top"}
-
+{: caption="Tabelle 4. Plug-ins" caption-side="top"}
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *VPN* |
 |-----------------|-----------------|
-| Plug-in-Name: ibm-containers <br> [Dokumentation anzeigen](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) | Plug-in-Name: VPN <br> [Dokumentation anzeigen](/docs/cli/plugins/vpn/index.html) |
-{: caption="Table 5. Plug-ins" caption-side="top"}
-
+| Plug-in-Name: ibm-containers <br> [Dokumentation anzeigen ![Symbol für externen Link](../icons/launch-glyph.svg)](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic){: new_window} | Plug-in-Name: VPN <br> [Dokumentation anzeigen](/docs/cli/plugins/vpn/index.html) |
+{: caption="Tabelle 5. Plug-ins" caption-side="top"}
 
 ## ![](./images/Integrated_Dev_Tools.svg) Integrierte Entwicklungstools
+{: #ide notoc}
 
 Sie können Plug-ins herunterladen und installieren, um Ihre bevorzugten {{site.data.keyword.Bluemix_notm}}-Services zu integrieren.
 
-| *{{site.data.keyword.jazzhub_short}}* | *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *Eclipse Tools for Bluemix* |
-|-------------|----------|----------|----------|----------|
-| [Eclipse-Plug-in EGit ![Symbol für externen Link](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_egit){: new_window} <br> [Eclipse-Plug-in RTC ![Symbol für externen Link](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_rtc){: new_window} | [Eclipse-Plug-in Liberty ![Symbol für externen Link](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse-Plug-in ![Symbol für externen Link](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Eclipse-Plug-in Rule Designer ![Symbol für externen Link](../icons/launch-glyph.svg)](/docs/services/rules/index.html#rulov002) | [Eclipse-Plug-in für Bluemix ![Symbol für externen Link](../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){: new_window} |
-{: caption="Table 6. Plug-ins" caption-side="top"}
+| *{{site.data.keyword.jazzhub_short}}* | *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *API Connect* | *Eclipse Tools for Bluemix* |
+|-------------|----------|----------|----------|----------|----------|
+| [Eclipse-Plug-in EGit ![Symbol für externen Link](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_egit){: new_window}  <br> [Eclipse-Plug-in RTC ![Symbol für externen Link](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_rtc){: new_window} | [Eclipse-Plug-in Liberty ![Symbol für externen Link](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse-Plug-in ![Symbol für externen Link](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse Plug-in](../services/rules/index.html#rulov002) | [Developer Toolkit ![Symbol für externen Link](../icons/launch-glyph.svg)](https://nextstage.torolab.ibm.com/apimanagement/getting-started/ ){: new_window} | [Bluemix Eclipse Plug-in](/docs/manageapps/eclipsetools/eclipsetools.html) |
+{: caption="Tabelle 6. Plug-ins" caption-side="top"}

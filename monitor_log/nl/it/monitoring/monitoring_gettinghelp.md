@@ -14,7 +14,7 @@ lastupdated: "2017-03-06"
 {:screen: .screen}
 
 
-# Come ottenere aiuto e supporto 
+# Come ottenere aiuto e supporto per il monitoraggio
 {: #gettinghelp}
 
 In caso di problemi o domande durante l'utilizzo delle funzionalità di monitoraggio in {{site.data.keyword.Bluemix}}, puoi controllare {{site.data.keyword.Bluemix_notm}} o puoi ottenere assistenza attraverso la ricerca di informazioni o facendo domande in un forum. Puoi anche aprire un ticket di supporto.

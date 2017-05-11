@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2017-3-16"
 
 ---
 
@@ -17,10 +18,8 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Ampliación de {{site.data.keyword.deliverypipeline}} 
+# Ampliación de {{site.data.keyword.deliverypipeline}}
 {: #deliverypipeline_extending}
-Última actualización: 16 de noviembre de 2016
-{: .last-updated}
 
 Puede ampliar {{site.data.keyword.deliverypipeline}} configurando los trabajos para que utilicen los servicios soportados. Por ejemplo, los trabajos de prueba pueden ejecutar exploraciones de código estáticas y los trabajos de compilación pueden globalizar series.
 {:shortdesc}
@@ -33,7 +32,7 @@ Las tareas siguientes describen cómo integrar herramientas seleccionadas con un
 
 {: #deliverypipeline_scan}
 
-¿Desea encontrar problemas de seguridad en el código antes de desplegarlo? Cuando utilice IBM® Static Analyzer for Bluemix™ como parte del conducto, puede ejecutar las comprobaciones automatizadas en los archivos binarios de compilación `.war`, `.ear`, `.jar`, o `.class` estáticos de la aplicación Java™.
+¿Desea encontrar problemas de seguridad en el código antes de desplegarlo? Cuando utilice IBM® Static Analyzer for Bluemix™ como parte del conducto, puede ejecutar las comprobaciones automatizadas en los archivos binarios de compilación `.war`, `.ear`, `.jar`, o `.class` estáticos de la app Java™.
 
 Un conducto que utiliza el servicio de Static Analyzer normalmente incluye estas etapas:
 
@@ -46,7 +45,7 @@ Un conducto que utiliza el servicio de Static Analyzer normalmente incluye estas
 
 ### Creación de una exploración de código estático
 
-Antes de empezar, [revise las Condiciones de uso para el servicio](http://www-03.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01).
+Antes de empezar, [revise las Condiciones de uso para el servicio ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://www.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01){: new_window} 
 
 <!-- Use ordered list markup for the step section. Include code examples as needed. -->
 
@@ -72,9 +71,9 @@ Antes de empezar, [revise las Condiciones de uso para el servicio](http://www-03
 
   e. Seleccione o quite la marca del recuadro de selección **Configurar servicio y espacio automáticamente** según sea necesario.
 
-    * Si desea que el conducto compruebe el espacio de Bluemix para el servicio y una aplicación que enlaza el servicio al contenedor, marque el recuadro de selección. Si el servicio o el enlazado de aplicaciones no existe, el conducto añadirá el plan gratuito del servicio a su espacio. El enlazado de aplicaciones creado se denomina `pipeline_bridge_app`. A continuación, el conducto utilizará las credenciales de pipeline_bridge_app para acceder a los servicios enlazados.
+    * Si desea que el conducto compruebe el espacio de Bluemix para el servicio y una app que enlaza el servicio al contenedor, marque el recuadro de selección. Si el servicio o la app enlazada no existen, el conducto añadirá el plan gratuito del servicio a su espacio. La app enlazada que se crea se denomina `pipeline_bridge_app`. A continuación, el conducto utilizará las credenciales de pipeline_bridge_app para acceder a los servicios enlazados.
 
-    * Si ya ha configurado el servicio y ha enlazado la app en el espacio de Bluemix, o si desea [configurar estos requisitos manualmente](https://www.ng.bluemix.net/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline), deje el recuadro de selección sin marcar.
+    * Si ya ha configurado el servicio y ha enlazado la app en el espacio de Bluemix, o si desea [configurar estos requisitos manualmente](/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline){: new_window}, deje el recuadro de selección sin marcar.
 
   f. En el campo **Minutos que se debe esperar para que el análisis se complete**, escriba un valor de 0 a 59 minutos. El valor predeterminado es 5 minutos. Un URL al panel de control de Static Analyzer se encuentra en los registros de consola al final del trabajo.
 
@@ -109,7 +108,7 @@ Ejemplos de salida de la consola:
 **Exploración pendiente**
 ![Exploración pendiente de ejemplo](images/analyzer_pending.png)
 
-Para obtener más información sobre cómo utilizar el servicio de Static Analyzer, [consulte los documentos de servicio de Static Analyzer](https://console.ng.bluemix.net/docs/services/ApplicationSecurityonCloud/index.html).
+Para obtener más información sobre cómo utilizar el servicio de Static Analyzer, consulte la [documentación del servicio Static Analyzer](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}.
 
 <!--
 
@@ -189,7 +188,7 @@ Antes de empezar, cree o copie un URL de WebHook de Slack:
 3. Seleccione un canal y pulse **Añadir integración de WebHooks entrantes**.
 4. Añada un **URL de WebHook** o copie uno existente.
 
-Para obtener más información, [consulte los WebHooks entrantes en la documentación de Slack](https://api.slack.com/incoming-webhooks).
+Para obtener más información, consulte la [documentación de WebHooks entrantes en Slack ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://api.slack.com/incoming-webhooks){: new_window}.
 
 Para crear notificaciones de Slack:
 
@@ -240,7 +239,7 @@ Para crear notificaciones de Slack:
 
 6. Repita estos pasos para enviar notificaciones de Slack para otras etapas que incluyan trabajos de IBM Container Service, IBM Security Analyzer e IBM Globalization.
 
-La notificación de compilación que se visualiza en Slack incluye un enlace al proyecto de DevOps Services y a veces al panel de instrumentos del proyecto. Para que un usuario de Slack abra estos enlaces, el usuario debe estar registrado con DevOps Services y ser miembro del proyecto en el que está configurado el conducto.
+La notificación de compilación que se visualiza en Slack incluye un enlace al proyecto y a veces al panel de control del proyecto. Para que un usuario de Slack abra estos enlaces, el usuario debe estar registrado con Bluemix y ser miembro del proyecto en el que está configurado el conducto.
 
 ## Creación de notificaciones de HipChat para compilaciones en el conducto
 {: #deliverypipeline_hipchat}
@@ -250,7 +249,7 @@ Puede enviar notificaciones sobre los resultados de compilación de IBM Containe
 Antes de empezar, cree o copie una señal existente de HipChat:
 
 1. Vaya a su página de Cuenta de HipChat para el equipo: `https://_nombre_proyecto_.hipchat.com/account/api`
-2. Cree un token nuevo, o bien utilice uno existente.
+2. Cree una señal nueva, o bien utilice una existente.
 
 Para crear notificaciones de HipChat:
 
@@ -329,13 +328,13 @@ Para crear notificaciones de HipChat:
 ## Uso de Active Deploy para el despliegue de tiempo de inactividad cero en el conducto
 {: #deliverypipeline_activedeploy}
 
-Puede automatizar el despliegue continuo de las apps o de los grupos de contenedores mediante el servicio de IBM® Active Deploy en el Bluemix® DevOps Services Delivery Pipeline. Para obtener más información sobre cómo iniciarse, [consulte la documentación de Active Deploy](https://new-console.ng.bluemix.net/docs/services/ActiveDeploy/updatingapps.html#adpipeline).
+Puede automatizar el despliegue continuo de las apps o de los grupos de contenedores mediante el servicio de IBM® Active Deploy en Delivery Pipeline. Para obtener más información sobre cómo empezar, consulte la [documentación de Active Deploy](/docs/services/ActiveDeploy/updatingapps.html#adpipeline){: new_window}.
 
 ## Compilación y despliegue de imágenes del contenedor con el conducto
 {: #deliverypipeline_containers}
 
-Puede automatizar las compilaciones de la app y los despliegues del contenedor en Bluemix® mediante IBM® Continuous Delivery Pipeline for Bluemix. El servicio de Delivery Pipeline en los servicios de DevOps da soporte a:
+Puede automatizar las compilaciones de la app y los despliegues del contenedor en Bluemix mediante IBM Continuous Delivery Pipeline for Bluemix. El servicio de Delivery Pipeline da soporte a:
   - Imágenes de creación de Docker
   - Imágenes de despliegue en contenedores a Bluemix
 
-Para obtener más información sobre cómo iniciarse, consulte [la visión general de Delivery Pipeline y los contenedores](https://new-console.ng.bluemix.net/docs/containers/container_pipeline_ov.html#container_pipeline_ov).
+Para obtener más información sobre cómo empezar, consulte [Visión general de Delivery Pipeline y de los contenedores](/docs/containers/container_pipeline_ov.html#container_pipeline_ov){: new_window}.

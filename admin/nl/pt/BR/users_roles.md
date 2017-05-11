@@ -17,7 +17,8 @@ lastupdated: "2017-03-01"
 
 É possível gerenciar o acesso a serviços do Cloud Foundry designado aos usuários da plataforma
 na página Diretório da equipe para sua conta. É possível gerenciar membros da equipe existentes e suas funções
-em sua organização e espaços.{:shortdesc}
+em sua organização e espaços. 
+{:shortdesc}
 
 É possível acessar o Diretório da equipe para sua conta de um link na parte superior da nova página
 Usuários. Para acessar a página Usuários, no menu do {{site.data.keyword.Bluemix_notm}}, clique
@@ -41,7 +42,7 @@ equipe, o proprietário pode convidar novos membros da equipe e ajustar funçõe
 serviço e gerenciar organizações e espaços. |
 |Membro | Um membro tem acesso ao seu perfil, diretório da equipe, ao seus créditos da conta e limites de faturamento no cabeçalho do {{site.data.keyword.Bluemix_notm}}. No entanto, na página de
 diretório da equipe, um membro pode apenas visualizar os membros da equipe dentro da conta. |
-{:caption="Table 1. Account roles and permissions" caption-side="top"}
+{:caption="Tabela 1. Funções e permissões de conta" caption-side="top"}
 
 Todos os novos membros da equipe são incluídos como um membro da conta. É possível designar funções de organização e espaço para convidados, a fim de ativar visualizações e permissões específicas no
 {{site.data.keyword.Bluemix_notm}}. Novos membros da equipe incluídos em uma organização, exceto em um ambiente local ou dedicado, são designados à função de organização de auditor por padrão. Para um espaço específico, é possível optar por
@@ -58,7 +59,7 @@ gerenciar quem tem acesso à organização e às suas funções na organização
 |Gerenciador de faturamento | Gerenciadores de faturamento podem visualizar informações de uso de tempo de execução e serviço para a organização na página de Painel de uso.  |
 |Auditor | Auditores da organização podem visualizar o conteúdo do aplicativo e do serviço na organização. Auditores também podem visualizar os membros da equipe na organização e as suas funções designadas e a
 cota para a organização. Essa função é designada a todos os convidados, exceto em ambientes locais ou dedicados, por padrão. |
-{:caption="Table 2. Organization roles and permissions" caption-side="top"}
+{:caption="Tabela 2. Funções e permissões de organização" caption-side="top"}
 
 As funções a seguir podem ser designadas no nível de espaço:
 
@@ -71,7 +72,7 @@ aplicativos, renomear um aplicativo, excluir um aplicativo, renomear um espaço,
 para cada aplicativo no espaço. Além disso, o desenvolvedor de espaço pode associar uma URL interna ou externa com um aplicativo no espaço.   |
 |Auditor | Auditores de espaço têm acesso somente leitura a todas as informações sobre o espaço, como informações sobre o número de instâncias, ligações de serviço e uso de recurso para cada aplicativo no
 espaço. |
-{:caption="Table 3. Space roles and permissions" caption-side="top"}
+{:caption="Tabela 3. Funções e permissões de espaço" caption-side="top"}
 
 **Nota**: membros da equipe que são designados com a função de espaço de gerenciador ou desenvolvedor podem acessar a variável de ambiente VCAP_SERVICES. No entanto, um membro da
 equipe designado com a função de auditor não pode acessar VCAP_SERVICES.
@@ -82,14 +83,14 @@ equipe designado com a função de auditor não pode acessar VCAP_SERVICES.
 Os proprietários da conta e os gerenciadores de organização podem editar funções de organização e de espaço
 para membros da equipe existentes na página Diretório da equipe.
 
-1. Localize e selecione o membro da equipe cujas funções deseja editar. 
+1. Localize e selecione o membro da equipe cujas funções deseja editar.
 2. Clique em **Visualizar funções**.
 3. Selecione ou limpe as seleções de função de espaço, para modificar o acesso ao espaço para o membro da equipe.
 4. Clique **Salvar.**
 
 Os gerenciadores de espaço podem editar funções para os membros da equipe em seu espaço.
 
-1. Localize e selecione o membro da equipe cujas funções deseja editar. 
+1. Localize e selecione o membro da equipe cujas funções deseja editar.
 2. Clique em **Visualizar funções**.
 3. Clique em **Visualizar espaços**.
 4. Selecione ou limpe a opção de função de espaço para a função que você deseja incluir ou remover para o membro da equipe.

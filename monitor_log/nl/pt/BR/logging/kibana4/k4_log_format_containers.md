@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-01"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -17,8 +17,7 @@ lastupdated: "2017-03-01"
 # Formato de log do Kibana para contêineres do Docker
 {: #kibana_log_format_containers}
 
-É possível configurar o Kibana para exibição, na página *Descobrir*, dos seguintes campos
-para cada entrada de log:
+É possível configurar o Kibana para exibição, na página *Descobrir*, dos seguintes campos para cada entrada de log:
 {:shortdesc}
 
 | Campo | Descrição |
@@ -30,16 +29,16 @@ para cada entrada de log:
 | \_index | O índice para sua entrada de log. |
 | \_type | O tipo de log; por exemplo, *logs*. |
 | group_id | ID do Grupo <br> * Para um contêiner único, o valor é
-**0000**.<br> * Para um grupo de contêiner, o valor é o GUID do grupo.  |
+**0000**. <br> * Para um grupo de contêiner, o valor é o GUID do grupo.  |
 | host | O nome do host no qual o contêiner é executado. |
 | instância | GUID da instância para um contêiner único. Lista de IDs de instâncias para um grupo de
-contêiner. |
+contêiner.|
 | Posição do Log | Mensagem curta. |
-|  | Mensagem integral. |
+| mensagem | Mensagem integral. |
 | path | Caminho e nome de log no qual o log está localizado dentro do contêiner. |
 | fluxo | Especifica o tipo de log: stdout, stderr |
 | tempo | A data e a hora de quando o evento ocorreu. O registro de data e hora é definido até o milissegundo.|
 | time stamp | A data e a hora do evento registrado. O registro de data e hora é definido até o milissegundo. |
-
+{: caption="Tabela 1. Campos para contêineres do Docker" caption-side="top"}
 
 

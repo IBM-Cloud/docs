@@ -13,12 +13,12 @@ lastupdated: "2017-3-16"
 
 #Textbasierte Pipelines in Beispielprojekten gemeinsam nutzen {: #share-pipeline}
 
-Für Beispielprojekte, die in {{site.data.keyword.Bluemix_notm}} über die Schaltfläche 'In {{site.data.keyword.Bluemix_notm}} bereitstellen' bereitgestellt werden, können Sie Pipelinekonfigurationen als YAML-Dateien definieren. Pipelines, die als Text definiert sind, können gemeinsam genutzt werden, sodass Personen, die über Verzweigungen mit Ihrem Projekt arbeiten, keine eigenen Pipelines konfigurieren müssen. Dieses Feature befindet sich im Entwicklungsstadium: Das YAML-Format und dessen Implementierung können sich zu jedem beliebigen Zeitpunkt ändern. Zurzeit steht dieses Feature nur für Projekte mit Git- und GitHub-Repositorys zur Verfügung, die {{site.data.keyword.Bluemix_notm}} als Ziel verwenden.
+Für Beispielprojekte, die in {{site.data.keyword.Bluemix_notm}} über die Schaltfläche 'In {{site.data.keyword.Bluemix_notm}} bereitstellen' bereitgestellt werden, können Sie Pipelinekonfigurationen als YAML-Dateien definieren. Pipelines, die als Text definiert sind, können gemeinsam genutzt werden, sodass Personen, die über Verzweigungen mit Ihrem Projekt arbeiten, keine eigenen Pipelines konfigurieren müssen. Dieses Feature befindet sich im Entwicklungsstadium: Das YAML-Format und dessen Implementierung können sich zu jedem beliebigen Zeitpunkt ändern. Zurzeit steht dieses Feature nur für Projekte mit Git- und GitHub-Repositorys zur Verfügung, die {{site.data.keyword.Bluemix_notm}} als Ziel verwenden. 
 {: shortdesc} 
 
 Im Stammverzeichnis des Beispielprojekts muss sich ein Ordner mit dem Namen `.bluemix` befinden, der die Datei `pipeline.yml` enthält.
 
-Wenn ein Projekt über die Schaltfläche 'In {{site.data.keyword.Bluemix_notm}} bereitstellen' geklont wird, wird eine Pipeline auf der Basis der Datei `pipeline.yml` erstellt.  
+Wenn ein Projekt über die Schaltfläche 'In {{site.data.keyword.Bluemix_notm}} bereitstellen' geklont wird, wird eine Pipeline auf der Basis der Datei `pipeline.yml` erstellt. 
 
 Beispiel: 
 ``` 
@@ -200,7 +200,7 @@ CF_ORGANIZATION_ID	| Organisations-GUID
 CF_SPACE |	Bereichsname
 CF_SPACE_ID |	Bereichs-GUID
 CF_APP	| App-Name
-{: caption="Table 1. Environment variables" caption-side="top"}
+{: caption="Tabelle 1. Umgebungsvariablen" caption-side="top"}
 
 **YAML-Datei aus einer Pipeline generieren** 
 

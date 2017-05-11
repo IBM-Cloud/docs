@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+lastupdated: "2017-04-25"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -19,7 +18,7 @@ lastupdated: "2017-03-13"
 ## {{site.data.keyword.openwhisk_short}}-CLI einrichten 
 
 Sie können Ihren Namensbereich und Ihren Berechtigungsschlüssel über die {{site.data.keyword.openwhisk_short}}-Befehlszeilenschnittstelle einrichten.
-Navigieren Sie zu [CLI konfigurieren](https://new-console.{DomainName}/openwhisk/cli){: new_window} und gehen Sie gemäß den Anweisungen für die Installation vor.
+Navigieren Sie zu [CLI konfigurieren](https://console.{DomainName}/openwhisk/cli) und gehen Sie gemäß den Anweisungen für die Installation vor.
 
 Zwei erforderliche Eigenschaften müssen für die Verwendung der CLI konfiguriert werden:
 

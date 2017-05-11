@@ -1,30 +1,53 @@
-[Interface de ligne de commande et outils de développement](/docs/cli/index.html)
-    [Téléchargements](index.html)
-        [Initiation à l'interface de ligne de commande Cloud Foundry](https://github.com/cloudfoundry/cli#getting-started)
-        [Initiation à l'interface de ligne de commande Bluemix](./reference/bluemix_cli/index.html)
-    [Référence de l'interface de ligne de commande](clireference.html)
-        [Bluemix](./reference/bluemix_cli/index.html#bluemix_cli)
-        [Cloud Foundry](./reference/cfcommands/index.html)
-    [Plug-in de l'interface de ligne de commande Bluemix](bxplug-in.html)
-        [Active Deploy](../services/ActiveDeploy/cli.html?pos=2#ad-cli-bx)
-        [Auto-Scaling](./plugins/auto-scaling/index.html)
-        [Container Registry](./plugins/registry/index.html)
-        [Container Service (Clusters)](../containers/cs_cli_devtools.html)
-        [Container Service (groupes évolutifs et conteneur unique)](../containers/container_cli_cfic.html)
-        [Developer](../cloudnative/dev_cli.html)
-        [Appairage de réseaux privés](./plugins/pnp/index.html)
-        [IBM SDK Generator](../cloudnative/sdk_cli.html)
-        [IBM VPN](./plugins/bx_vpn/index.html)
-    [Plug-in de l'interface de ligne de commande Cloud Foundry](cliplug-in.html)
-        [Admin Bluemix](./plugins/bluemix_admin/index.html)
-        [Mode développement](./plugins/dev_mode/index.html)
-        [IBM VPN](./plugins/vpn/index.html)
-    integrated_dev_tools.md
-        [Kit d'outils de développement API Connect](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
-        [Bluemix Live Sync](../develop/bluemixlive.html)
-        [Déploiement d'applications avec IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html)
-        [Gestion des applications Liberty et Node.js](../manageapps/app_mng.html#app_management)
-    start_coding.md
-        [Développement avec Eclipse Tools](../starters/deploy_eclipsetools.html)
-        [Déploiement de votre application avec l'interface de ligne de commande](../starters/install_cli.html)
-        [Téléchargement de votre application](../starters/upload_app.html)
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="bluemix-cli" audience="platform" href="/docs/cli/index.html"}
+Interface de ligne de commande et outils de développement
+
+	{: .navgroup id="learn"}
+	index.md
+	[Initiation à CF CLI](https://github.com/cloudfoundry/cli#getting-started)
+	reference/bluemix_cli/index.md
+	
+	{: .topicgroup}
+	Liens connexes
+	    [Interface de ligne de commande Bluemix](http://clis.ng.bluemix.net/ui/home.html)
+	{: .navgroup-end}
+	
+	{: .navgroup id="reference"}
+	reference/bluemix_cli/bx_cli.md
+	reference/cfcommands/index.md
+	reference/cloudcli/index.md
+	
+	{: .topicgroup}
+	Plug-ins d'interface de ligne de commande Bluemix
+		[Active Deploy](../services/ActiveDeploy/cli.html?pos=2#ad-cli-bx)
+		plugins/auto-scaling/index.md
+		plugins/registry/index.md
+		[Service de conteneur (Clusters)](../containers/cs_cli_devtools.html)
+		[Service de conteneur (groupes uniques et évolutifs)](../containers/container_cli_cfic.html)
+		[IBM Developer](../cloudnative/dev_cli.html)
+		plugins/pnp/index.md
+		[IBM SDK Generator](../cloudnative/sdk_cli.html)
+		plugins/softlayer/index.md
+		plugins/bx_vpn/index.md
+	
+	{: .topicgroup}
+	Plug-ins d'interface de ligne de commande Cloud Foundry
+		plugins/bluemix_admin/index.md
+		plugins/dev_mode/index.md
+		plugins/vpn/index.md
+	
+	{: .topicgroup}
+	Outils de développement intégrés
+		[Kit d'outils de développement API Connect](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
+		[Bluemix Live Sync](../develop/bluemixlive.html)
+		[Déploiement d'applications à l'aide d'IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html)
+		[Gestion des applications Liberty et Node.js](../manageapps/app_mng.html#app_management)
+	{: .navgroup-end}
+	
+	{: .navgroup id="howto"}
+	[Développement à l'aide d'outils Eclipse](../starters/deploy_eclipsetools.html)
+	[Déploiement de votre application à l'aide de l'interface de ligne de commande](../starters/install_cli.html)
+	[Téléchargement de votre application](../starters/upload_app.html)
+	{: .navgroup-end}

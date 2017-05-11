@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-2-21"
+lastupdated: "2017-4-24"
 
 ---
 
@@ -67,7 +67,7 @@ Para criar um botão Implementar no {{site.data.keyword.Bluemix_notm}}:
 <li> Copie e modifique um dos modelos de fragmento a seguir e inclua um repositório Git público.
 <p></p>
 <p>
-<strong>Dica</strong>: se você deseja especificar a entrada de construção para um projeto de Serviços DevOps, inclua um parâmetro de ramificação na URL do Git. Ao incluir um parâmetro de ramificação, o repositório Git público original, incluindo todas as suas ramificações, é clonado em um novo projeto privado de Serviços DevOps com um novo repositório Git. A ramificação Git especificada é configurada como a entrada para a tarefa de construção. Se você não especificar uma ramificação, a entrada para a tarefa de compilação será configurada como a ramificação principal por padrão.
+<strong>Dica</strong>: é possível especificar qual ramificação usar incluindo um parâmetro de ramificação na URL do Git. Se você não especificar uma ramificação, a ramificação principal será usada por padrão.
 </p>
 <ul>
 <li>HTML:
@@ -75,13 +75,17 @@ Para criar um botão Implementar no {{site.data.keyword.Bluemix_notm}}:
 Ramificação principal padrão:
 </p>
 <pre class="codeblock">
-&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Implementar no Bluemix"&gt;&lt;/a&gt;
+<code class="hljs">
+&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
+</code>
 </pre>
 <p>
 Ramificação Git especificada:
 </p>
 <pre class="codeblock">
-&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;&branch=&lt;git_branch>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Implementar no Bluemix"&gt;&lt;/a&gt;
+<code class="hljs">
+&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;&branch=&lt;git_branch>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
+</code>
 </pre>
 </li>
 <li>Redução de preço:
@@ -89,12 +93,16 @@ Ramificação Git especificada:
 Ramificação principal padrão:
 </p>
 <pre class="codeblock">
+<code class="hljs">
 [&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&rpar;
+</code>
 </pre>
 <p>Ramificação Git especificada:
 </p>
 <pre class="codeblock">
+<code class="hljs"
 [&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&rpar;
+</code>
 </pre>
 </li>
 </ul>
@@ -199,4 +207,4 @@ para o app, assim como um Dockerfile, conforme descrito anteriormente.</li>
  </ul>
 </ul>
 
-Para obter ajuda com resolução de problemas, consulte [O botão Implementar no Bluemix não implementa um app](/docs/troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}.	
+Para obter ajuda com resolução de problemas, consulte [O botão Implementar no Bluemix não implementa um app](/docs/troubleshoot/ts_apps.html#ts_deploybutton){:new_window}.	

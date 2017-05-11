@@ -7,7 +7,6 @@ lastupdated: "2017-04-04"
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -107,7 +106,7 @@ Cette procédure implémente un déclencheur reposant sur l'interrogation qui n'
 Les deux choix d'architecture précédents sont simples et faciles à implémenter. Cependant, si vous voulez créer un flux dont les performances sont élevées, il n'existe pas d'alternative aux connexions permanentes et à l'interrogation longue, ou à des techniques similaires.
 
 Etant donné que les actions {{site.data.keyword.openwhisk_short}} doivent être de courte durée, une action ne peut pas maintenir une connexion permanente à un tiers. A la place, nous devons utiliser un service distinct
-(hors d'{{site.data.keyword.openwhisk_short}}) qui s'exécute en permanence. Il s'agit de *services fournisseurs*.  Un service fournisseur peut maintenir des connexions à des sources d'événement tierces qui prennent en charge l'interrogation longue ou d'autres notifications reposant sur les connexions.
+(hors d'{{site.data.keyword.openwhisk_short}}) qui s'exécute en permanence.   Il s'agit de *services fournisseurs*.  Un service fournisseur peut maintenir des connexions à des sources d'événement tierces qui prennent en charge l'interrogation longue ou d'autres notifications reposant sur les connexions.
 
 Le service fournisseur doit fournir une API REST qui permet à l'*action de flux* {{site.data.keyword.openwhisk_short}} de contrôler le flux.   Il agit comme un proxy entre le fournisseur d'événements et {{site.data.keyword.openwhisk_short}} ; lorsqu'il reçoit des événements d'un tiers, il les envoie à {{site.data.keyword.openwhisk_short}} en exécutant un déclencheur.
 

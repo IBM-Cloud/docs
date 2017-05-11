@@ -15,7 +15,7 @@ lastupdated: "2017-03-08"
 # Invitation d'utilisateurs, affectation et gestion d'accès
 {: #iamuserinv}
 
-Vous pouvez depuis un emplacement unique inviter des utilisateurs dans des services {{site.data.keyword.Bluemix_notm}}, des applications, et l'infrastructure {{site.data.keyword.Bluemix_notm}} . Vous affectez un accès aux utilisateurs lorsque vous les invitez, leur affectez un rôle, des règles, les comptes ou les organisations (ou les deux) auxquels ils peuvent accéder. Vous pouvez inviter et accorder un accès à des utilisateurs à travers le compte ou l'organisation en fonction des options d'accès que vous êtes habilité à gérer. En tant que propriétaire du compte, vous pouvez affecter des options d'accès au compte à un utilisateur lorsque vous et l'utilisateur êtes tous deux membres du compte, sans considération du rôle.
+Vous pouvez depuis un emplacement unique inviter des utilisateurs dans des services {{site.data.keyword.Bluemix_notm}}, des applications, et l'infrastructure {{site.data.keyword.Bluemix_notm}} . Vous affectez un accès aux utilisateurs lorsque vous les invitez, leur affectez un rôle, des règles, les comptes ou les organisations (ou les deux) auxquels ils peuvent accéder. Vous pouvez inviter et accorder un accès à des utilisateurs à travers le compte ou l'organisation en fonction des options d'accès que vous êtes habilité à gérer. En tant que propriétaire du compte, vous pouvez affecter des options d'accès au compte à un utilisateur lorsque vous et l'utilisateur êtes tous deux membres du compte, sans considération du rôle. 
 {:shortdesc}
 
 Pour inviter des utilisateurs ou gérer les invitations d'utilisateurs dans votre compte, cliquez dans la barre de menu sur **Gérer** &gt; **Compte** &gt; **Utilisateurs**. La fenêtre Utilisateurs affiche une liste d'utilisateurs avec leur adresse électronique et leur statut actuel dans les comptes que vous gérez. 
@@ -42,8 +42,9 @@ Affectez à l'utilisateur l'une des autorisations d'accès suivantes à l'infras
 <dd>Les utilisateurs avec cette autorisation peuvent réaliser toutes les actions disponibles dans le système.</dd>
 </dl>
 **Remarque **: les autorisations concrètes qui sont affectées sont limitées automatiquement au sous-ensemble d'autorisations dont vous bénéficiez.
+
 Si vous octroyez le même accès à plusieurs utilisateurs, vous pouvez sélectionner **Inviter plusieurs utilisateurs** et entrer une liste d'utilisateurs à inviter. Séparez les entrées d'ID utilisateur par des virgules.  
 
-Si vous déterminez qu'un utilisateur n'a pas besoin d'un accès, vous pouvez aussi annuler l'invitation de n'importe quel utilisateur dont l'état indique **En cours de traitement** ou **En attente** dans la colonne **Statut**. Si un utilisateur invité n'a pas reçu l'invitation, vous pouvez également renvoyer l'invitation à n'importe quel utilisateur dont l'état indique **En attente**. Ces options sont disponibles depuis le menu **Actions** dans la fenêtre Utilisateurs pour les utilisateurs avec l'état approprié.
+Si vous déterminez qu'un utilisateur n'a pas besoin d'un accès, vous pouvez aussi annuler l'invitation de n'importe quel utilisateur dont l'état indique **En cours de traitement** ou **En attente** dans la colonne **Statut**. Si un utilisateur invité n'a pas reçu l'invitation, vous pouvez également renvoyer l'invitation à n'importe quel utilisateur dont l'état indique **En attente**.  Ces options sont disponibles depuis le menu **Actions** dans la fenêtre Utilisateurs pour les utilisateurs avec l'état approprié.
 
 Pour des informations spécifiques sur la configuration d'un accès pour les utilisateurs, notamment sur les rôles et les règles, voir [Gestion des comptes utilisateurs et des accès](/docs/admin/iamusermanage.html).

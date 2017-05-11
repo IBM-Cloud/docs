@@ -14,7 +14,7 @@ lastupdated: "2017-03-06"
 {:screen: .screen}
 
 
-# Obtendo Ajuda e Suporte
+# Obtendo ajuda e suporte para criação de log
 {: #gettinghelp}
 
 Se você tiver problemas ou perguntas ao usar recursos de criação de log no
@@ -33,8 +33,7 @@ service_short_name, poste a sua pergunta em
 [Estouro de pilha](http://stackoverflow.com/search?q=logging+ibm-bluemix){:new_window} e
 identifique a sua pergunta com "ibm-bluemix" e "logging".
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
-  * Para perguntas sobre o serviço e instruções de introdução, use o fórum do [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/logging/?smartspace=bluemix){:new_window}. 
-Inclua as tags "logging" e "bluemix".
+  * Para perguntas sobre o serviço e instruções de introdução, use o fórum do [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/logging/?smartspace=bluemix){:new_window}. Inclua as tags "logging" e "bluemix".
 
 Consulte
 [Obtendo

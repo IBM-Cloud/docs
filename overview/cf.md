@@ -20,7 +20,7 @@ When you deploy an app to {{site.data.keyword.Bluemix_notm}} Cloud Foundry, you 
 
 Each execution environment, including both mobile and web, is isolated from the execution environment of other apps. The execution environments are isolated even though these apps are on the same physical machine. The following figure shows the basic flow of how {{site.data.keyword.Bluemix_notm}} Cloud Foundry manages the deployment of apps:
 
-![Deploying an app](images/deploy.png)
+![Deploying an app](images/deploy-diego.png)
 
 Figure 3. Deploying an app
 
@@ -33,7 +33,7 @@ After a virtual server is chosen, an application manager on each virtual server 
 
 The following figure shows the structure of a virtual server, also known as Droplet execution agent (DEA), that has multiple apps deployed to it:
 
-![Design of a virtual server](images/container.png)
+![Design of a virtual server](images/container-diego.png)
 
 Figure 4. Design of a virtual server
 
@@ -41,7 +41,7 @@ In each virtual server, an application manager communicates with the rest of the
 
 When the app is deployed, if it has a web interface (as for a Java web app), or other REST-based services (such as mobile services exposed publicly to the mobile app), users of the app can communicate with it by using normal HTTP requests.
 
-![Invoking a {{site.data.keyword.Bluemix_notm}} app](images/execute.png)
+![Invoking a {{site.data.keyword.Bluemix_notm}} app](images/execute-diego.png)
 
 Figure 5. Invoking a {{site.data.keyword.Bluemix_notm}} app
 
@@ -61,7 +61,7 @@ Clients--which can be mobile apps, apps that run externally, apps that are built
 
 The following figure shows the high-level {{site.data.keyword.Bluemix_notm}} Cloud Foundry architecture.
 
-![{{site.data.keyword.Bluemix_notm}} architecture](images/arch.png)
+![{{site.data.keyword.Bluemix_notm}} architecture](images/arch-diego.png)
 
 Figure 1. {{site.data.keyword.Bluemix_notm}} Cloud Foundry architecture
 

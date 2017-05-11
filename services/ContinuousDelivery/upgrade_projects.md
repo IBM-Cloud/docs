@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-4"
+lastupdated: "2017-5-5"
 
 ---
  
@@ -69,7 +69,7 @@ To upgrade your project to a toolchain, follow these steps:
 
    ![Example of an upgrade page](images/project-upgrade-toolchain.png)
 
-   For an overview of the upgrade process, read the description on that page. In this case, because the project used a public repo on GitHub.com, the toolchain will be connected to the same GitHub repo. If your project used a Git repo that was hosted on JazzHub, the toolchain will clone its contents to a new repo in Git Repos and Issue Tracking, which is part of {{site.data.keyword.contdelivery_short}}. If your project used a private Git repo that was hosted on JazzHub, the new repo in Git Repos and Issue Tracking will be private.
+   For an overview of the upgrade process, read the description on that page. In this case, because the project used a public repo on GitHub.com, the toolchain will be connected to the same GitHub repo. If your project used a Git repo that was hosted on JazzHub, the toolchain will clone its contents to a new repo in {{site.data.keyword.gitrepos}}, which is part of {{site.data.keyword.contdelivery_short}}. If your project used a private Git repo that was hosted on JazzHub, the new repo in {{site.data.keyword.gitrepos}} will be private.
    
    The toolchain will include a new pipeline that contains the same stages and jobs as the project's pipeline. In addition, the toolchain will contain a pointer to the Eclipse Orion {{site.data.keyword.webide}} that runs in {{site.data.keyword.contdelivery_short}}.
 
@@ -143,7 +143,13 @@ When you return to your project, the upgrade message is displayed again, and you
     
 3. Use the tools from your toolchain instead of the tools from your {{site.data.keyword.jazzhub_short}} project. For example, to edit code from a browser, use the Web IDE from your toolchain. 
 
-4. When your toolchain is set up and you have started to use it, consider taking all or any of these steps to ensure that no one uses your project: 
+4. If you are using {{site.data.keyword.gitrepos}}, authenticate by using a personal access token or an SSH key. For more information about SSH keys, see [Creating a personal access token or SSH key for authentication](/docs/services/ContinuousDelivery/git_working.html#git_authentication). To authenticate from an external Git client through https, follow these steps:
+    1. Go to the [Access Tokens page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/profile/personal_access_tokens){:new_window} of your {{site.data.keyword.gitrepos}} user settings.
+    2. Create a personal access token that uses **api** as the scope.
+    3. Go to the [Account page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/profile/account){:new_window} and find your username for {{site.data.keyword.gitrepos}}. Your username is listed in the "Change username" section and it is shown as the first part of the URL for any personal repo that you create.
+    4. To authenticate with {{site.data.keyword.gitrepos}} from an external Git client through https, use your username and your personal access token.
+
+5. When your toolchain is set up and you have started to use it, consider taking all or any of these steps to ensure that no one uses your project: 
     - Add a suffix to your project name to indicate that it must not be used. You might add `_DO_NOT_USE` to the end of the project name.
     - Update the project's description to mention that it is no longer used, and add a pointer to the toolchain.
     - Remove the members from the project.

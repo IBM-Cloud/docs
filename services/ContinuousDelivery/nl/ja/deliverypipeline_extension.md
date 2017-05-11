@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2017-3-16"
 
 ---
 
@@ -17,10 +18,8 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# {{site.data.keyword.deliverypipeline}} の拡張 
+# {{site.data.keyword.deliverypipeline}} の拡張
 {: #deliverypipeline_extending}
-最終更新日: 2016 年 11 月 16 日
-{: .last-updated}
 
 サポートされるサービスを使用するようにジョブを構成することで、{{site.data.keyword.deliverypipeline}} の機能を拡張できます。例えば、テスト・ジョブで静的コード・スキャンを実行し、ビルド・ジョブで文字列をグローバル化できます。{:shortdesc}
 
@@ -45,7 +44,7 @@ Static Analyzer サービスを使用するパイプラインは、通常以下�
 
 ### 静的コード・スキャンの作成
 
-開始する前に、[サービスのご利用条件を確認します](http://www-03.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01)。
+開始する前に、[サービスのご利用条件を確認します![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01){: new_window}。
 
 <!-- Use ordered list markup for the step section. Include code examples as needed. -->
 
@@ -73,7 +72,7 @@ Static Analyzer サービスを使用するパイプラインは、通常以下�
 
     * サービス用の Bluemix のスペースと、サービスをコンテナーにバインドするアプリを、パイプラインで確認する場合は、このチェック・ボックスを選択します。サービスやバインドされたアプリが存在しない場合、パイプラインによって、このサービスの無料プランがご使用のスペースに追加されます。作成されたバインド済みアプリには、`pipeline_bridge_app` という名前が付けられます。その後、パイプラインは、pipeline_bridge_app からの資格情報を使用して、バインド済みサービスにアクセスします。
 
-    * サービスとバインド済みアプリを Bluemix のスペースで構成してある場合、または[これらの要件を手動で構成する](https://www.ng.bluemix.net/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline)場合は、このチェック・ボックスをクリアします。
+    * サービスとバインド済みアプリを Bluemix のスペースで構成してある場合、または[これらの要件を手動で構成する](/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline){: new_window}場合は、このチェック・ボックスをクリアします。
 
   f. **「分析の完了を待機する時間」**フィールドで、0 から 59 分の値を入力します。デフォルト値は 5 分です。ジョブ終了時、Static Analyzer ダッシュボードの URL がコンソール・ログに記録されます。
 
@@ -106,7 +105,7 @@ Static Analyzer サービスを使用するパイプラインは、通常以下�
 **保留中のスキャン**
 ![保留中のスキャンの例](images/analyzer_pending.png)
 
-Static Analyzer サービスの使用について詳しくは、[Static Analyzer サービスの資料](https://console.ng.bluemix.net/docs/services/ApplicationSecurityonCloud/index.html)を参照してください。
+Static Analyzer サービスの使用について詳しくは、[Static Analyzer サービスの資料](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}を参照してください。
 
 <!--
 
@@ -186,7 +185,7 @@ IBM Container Service、IBM Security Static Analyzer、IBM Globalization のビ�
 3. チャネルを選択し、**「着信 WebHook 統合の追加 (Add Incoming WebHooks Integration)」**をクリックします。
 4. **WebHook URL** を追加するか、既存のものをコピーします。
 
-詳しくは、[Slack の Incoming WebHook 資料](https://api.slack.com/incoming-webhooks)を参照してください。
+詳しくは、[Slack の Incoming WebHook 資料![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://api.slack.com/incoming-webhooks){: new_window}を参照してください。
 
 Slack 通知を作成するには、次のようにします。
 
@@ -237,7 +236,7 @@ Slack 通知を作成するには、次のようにします。
 
 6. 上記ステップを繰り返し、IBM Container Service、IBM Security Analyzer、IBM Globalization ジョブが含まれる他のステージについて Slack 通知を送信するようにします。
 
-Slack で表示されるビルド通知には、 DevOps Services プロジェクトへのリンクが含まれます。場合によっては、プロジェクトのダッシュボードへのリンクが含まれることもあります。Slack ユーザーがこれらのリンクを開くには、そのユーザーが DevOps Services に登録されていて、かつパイプラインが構成されているプロジェクトのメンバーでなければなりません。
+Slack で表示されるビルド通知には、プロジェクトへのリンクが含まれます。場合によっては、プロジェクトのダッシュボードへのリンクが含まれることもあります。Slack ユーザーがこれらのリンクを開くには、そのユーザーが Bluemix に登録されていて、かつパイプラインが構成されているプロジェクトのメンバーでなければなりません。
 
 ## パイプラインでのビルドの HipChat 通知の作成
 {: #deliverypipeline_hipchat}
@@ -326,13 +325,13 @@ HipChat 通知を作成するには、次のようにします。
 ## パイプラインでデプロイメントのダウン時間をゼロにする Active Deploy の使用
 {: #deliverypipeline_activedeploy}
 
-Bluemix® DevOps Services Delivery Pipeline で IBM® Active Deploy サービスを使用して、アプリまたはコンテナー・グループの継続デプロイメントを自動化できます。概要について詳しくは、[Active Deploy の資料](https://new-console.ng.bluemix.net/docs/services/ActiveDeploy/updatingapps.html#adpipeline)を参照してください。
+Delivery Pipeline で IBM® Active Deploy サービスを使用して、アプリまたはコンテナー・グループの継続デプロイメントを自動化できます。概要について詳しくは、[Active Deploy の資料](/docs/services/ActiveDeploy/updatingapps.html#adpipeline){: new_window}を参照してください。
 
 ## パイプラインでのコンテナー・イメージのビルドとデプロイ
 {: #deliverypipeline_containers}
 
-IBM® Continuous Delivery Pipeline for Bluemix を使用して、Bluemix® へのアプリのビルドとコンテナーのデプロイメントを自動化できます。DevOps サービスの Delivery Pipeline サービスは以下をサポートします。
+IBM Continuous Delivery Pipeline for Bluemix を使用して、Bluemix へのアプリのビルドとコンテナーのデプロイメントを自動化できます。Delivery Pipeline サービスは以下をサポートします。
   - Docker イメージのビルド
   - Bluemix へのコンテナーのイメージのデプロイ
 
-概要について詳しくは、[Delivery Pipeline とコンテナーの概要](https://new-console.ng.bluemix.net/docs/containers/container_pipeline_ov.html#container_pipeline_ov)を参照してください。
+概要について詳しくは、[Delivery Pipeline とコンテナーの概要](/docs/containers/container_pipeline_ov.html#container_pipeline_ov){: new_window}を参照してください。

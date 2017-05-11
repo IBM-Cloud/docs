@@ -33,7 +33,7 @@ Die Anmeldung an {{site.data.keyword.Bluemix_notm}} mit einer eingebundenen ID i
 |Vorhandene IBMid | Wenn Sie bereits über eine IBMid verfügen, können Sie sich mit Ihren bestehenden Berechtigungsnachweisen für andere IBM Produkte und Services bei {{site.data.keyword.Bluemix_notm}} anmelden. Bei der Anmeldung ist die Eingabe einer Telefonnummer erforderlich. |
 |Neue IBMid | Wenn Sie noch keine IBMid besitzen, können Sie diese erstellen. Mit einer IBMid können Sie sich mit nur einem Benutzernamen für alle IBM Produkte und Services, einschließlich {{site.data.keyword.Bluemix_notm}}, anmelden. Für die neuen Berechtigungsnachweise müssen Sie Ihre persönlichen Daten (Vor- und Nachname, Telefonnummer und Kennwort) eingeben. Sie können sich mit dieser IBMid anmelden, wenn Sie andere IBM Produkte oder Services verwenden.  |
 |Eingebundene ID | Wenn Ihr Unternehmen die Registrierung der Benutzerberechtigungsnachweise für die Unternehmensdomäne bei IBM angefordert hat, können Sie sich mit den Benutzerberechtigungsnachweisen bei {{site.data.keyword.Bluemix_notm}} anmelden, die Sie bereits für die Unternehmensanmeldung verwenden. Bei der Anmeldung ist die Eingabe einer Telefonnummer erforderlich. |
-{:caption="Table 1. Sign up methods" caption-side="top"}
+{:caption="Tabelle 1. Anmeldemethoden" caption-side="top"}
 
 ## Benachrichtigungen einstellen
 {: #notifications}

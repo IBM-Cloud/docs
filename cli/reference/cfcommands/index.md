@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2017
 
-lastupdated: "2017-05-03"
+lastupdated: "2017-05-04"
 
 
 ---
@@ -390,7 +390,7 @@ cf help events
 
 Logs you in to {{site.data.keyword.Bluemix_notm}}. If you are logging in with a [federated ID](/docs/admin/account.html#signup), you must use the single sign-on (SSO) parameter to log in. 
 
-**Note**: You can also use a {{site.data.keyword.Bluemix_notm}} Platform API key to log in. Use the user name `apikey` and your API key value as the password.
+**Note**: You can also use a {{site.data.keyword.Bluemix_notm}} Platform API key to log in. Use the user name `apikey` and your API key value as the password. For more information about creating an API key, see [Managing API keys](/docs/iam/apikeys.html).
 
 ```
 cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s space_name] [--skip-ssl-validation]
@@ -443,6 +443,12 @@ cf login -a https://api.ng.bluemix.net -u user_name
 Log in to {{site.data.keyword.Bluemix_notm}} with a defined endpoint of `https://api.ng.bluemix.net`, a user name of `user_name`, no specified password for security reasons, and an organization name of `org_name` and space name of `space_name`.
 ```
 cf login -a https://api.ng.bluemix.net -u user_name -o org_name -s space_name
+```
+{: codeblock}
+
+Log in to {{site.data.keyword.Bluemix_notm}} with a defined endpoint of `https://api.ng.bluemix.net` using an API key. Use `apikey` as the user name and the actual API key as the password.
+```
+cf login -a https://api.ng.bluemix.net -u apikey -p ThisValueIsYourAPIKey
 ```
 {: codeblock}
 

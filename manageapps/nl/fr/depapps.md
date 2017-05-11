@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-04-11"
 ---
 
 
@@ -25,7 +25,7 @@ Le déploiement d'une application dans {{site.data.keyword.Bluemix_notm}} compor
 Cloud Foundry prend en charge Diego, la nouvelle architecture d'exécution par défaut qui fournit plusieurs fonctions améliorant le développement d'applications pour l'hébergement et la construction de plateformes de cloud. Cette mise à jour de l'architecture améliore le fonctionnement globale et les performances de la plateforme Cloud Foundry. La nouvelle architecture prend en charge plusieurs technologies de conteneur d'applications, notamment Garden et Windows, un SSH qui permet de se connecter directement au conteneur d'applications, ainsi que d'autres modifications innovantes. Pour plus d'informations sur la mise à niveau récente de cette architecture, voir [{{site.data.keyword.Bluemix_notm}} Cloud Foundry: Diego is live ![icône de lien externe](../icons/launch-glyph.svg)](https://www.ibm.com/blogs/bluemix/2017/01/bluemix-cloud-foundry-diego-live/){: new_window}.
 
 
-Toutes les nouvelles applications que vous créez s'exécutent sur Diego, et vous devez commencer à migrer vos applications existantes qui s'exécutent sur des agents DEA vers la nouvelle architecture Diego.
+Toutes les nouvelles applications que vous créez s'exécutent sur Diego, et vous devez faire migrer vos applications existantes qui s'exécutent sur des agents DEA vers la nouvelle architecture Diego.
 
 **Remarque** : l'architecture Diego Cloud Foundry affecte tous les environnements de région {{site.data.keyword.Bluemix_notm}} publics. Les environnements {{site.data.keyword.Bluemix_notm}} dédié et {{site.data.keyword.Bluemix_notm}} local seront mis à jour ultérieurement.
 
@@ -282,7 +282,7 @@ cf push -f appManifest.yml
 |**random-route**	|Valeur booléenne permettant d'affecter une route aléatoire à l'application. La valeur par défaut est **false**.	|`random-route: true`|
 |**services**	|Services à lier à l'application.	|`services:   - mysql_maptest`|
 |**env**	|Variables d'environnement personnalisées pour l'application.|`env: DEV_ENV: production`|
-{: caption="Table 1. Supported options in the manifest YAML file" caption-side="top"}
+{: caption="Tableau 1. Options prises en charge dans le fichier manifest.yml" caption-side="top"}
 
 ### Exemple de fichier manifest.yml
 
@@ -308,7 +308,7 @@ L'exemple ci-dessous illustre un fichier manifeste pour une application Node.js 
 ## Variables d'environnement
 {: #app_env}
 
-Les variables d'environnement contiennent les informations relatives à l'environnement d'une application déployée dans {{site.data.keyword.Bluemix_notm}}. En plus des variables d'environnement définies par un *agent DEA (Droplet Execution Agent)* et les packs de construction, vous pouvez aussi définir des variables d'environnement propres à l'application dans {{site.data.keyword.Bluemix_notm}}.
+Les variables d'environnement contiennent les informations relatives à l'environnement d'une application déployée dans {{site.data.keyword.Bluemix_notm}}. En plus des variables d'environnement définies par *Diego* et les packs de construction, vous pouvez aussi définir des variables d'environnement propres à l'application dans {{site.data.keyword.Bluemix_notm}}.
 
 Vous pouvez afficher les variables d'environnement suivantes d'une application {{site.data.keyword.Bluemix_notm}} en cours d'exécution en utilisant la commande **cf env** ou l'interface utilisateur de {{site.data.keyword.Bluemix_notm}} :
 
@@ -364,7 +364,7 @@ Vous pouvez afficher les variables d'environnement suivantes d'une application {
 
 Vous avez aussi accès aux variables d'environnement qui sont définies par l'agent DEA et les packs de construction.
 
-Les variables suivantes sont définies par l'agent DEA :
+Les variables suivantes sont définies par Diego :
 
 <dl>
   <dt><strong>HOME</strong></dt>
@@ -372,15 +372,15 @@ Les variables suivantes sont définies par l'agent DEA :
   <dt><strong>MEMORY_LIMIT</strong></dt>
   <dd>Quantité de mémoire maximale que chaque instance de votre application peut utiliser. Vous pouvez spécifier la valeur dans un fichier <span class="ph filepath">manifest.yml</span> d'application ou sur la ligne de commande lorsque vous envoyez l'application par commande push.</dd>
   <dt><strong>PORT</strong></dt>
-  <dd>Port sur l'agent DEA pour communication avec l'application. L'agent DEA affecte un port à l'application en phase de constitution.</dd>
+  <dd>Port sur Diego pour communication avec l'application. Diego affecte un port à l'application en phase de constitution. </dd>
   <dt><strong>PWD</strong></dt>
   <dd>Répertoire de travail en cours dans lequel le pack de construction s'exécute.</dd>
   <dt><strong>TMPDIR</strong></dt>
   <dd>Répertoire où sont stockés les fichiers de transfert et temporaires.</dd>
   <dt><strong>USER</strong></dt>
-  <dd>ID utilisateur sous lequel s'exécute l'agent DEA.</dd>
+  <dd>ID utilisateur sous lequel s'exécute Diego.</dd>
   <dt><strong>VCAP_APP_HOST</strong></dt>
-  <dd>Adresse IP de l'hôte DEA.</dd>
+  <dd>Adresse IP de l'hôte Diego.</dd>
   <dt><strong>VCAP_APPLICATION</strong></dt>
   <dd>Chaîne JSON contenant des informations sur l'application déployée. Ces informations incluent le nom de l'application, les URI, les limites de mémoire, l'horodatage auquel l'application est parvenue à son statut en cours, etc. Par exemple :
   <pre class="pre codeblock"><code>
@@ -457,9 +457,9 @@ Les variables définies par les packs de construction sont différentes pour cha
 	  <dt><strong>IBM_JAVA_OPTIONS</strong></dt>
 	  <dd>Options du logiciel SDK Java à utiliser lors de l'exécution de l'application.</dd>
 	  <dt><strong>IBM_JAVA_COMMAND_LINE</strong></dt>
-	  <dd>Commande Java permettant de démarrer une instance de serveur de profil Liberty dans l'agent DEA.</dd>
+	  <dd>Commande Java permettant de démarrer une instance de serveur de profil Liberty dans Diego. </dd>
 	  <dt><strong>WLP_USR_DIR</strong></dt>
-	  <dd>Emplacement des ressources partagées et des définitions de serveur lors du démarrage d'une instance de serveur de profil Liberty dans l'agent DEA.</dd>
+	  <dd>Emplacement des ressources partagées et des définitions de serveur lors du démarrage d'une instance de serveur de profil Liberty dans Diego. </dd>
 	  <dt><strong>WLP_OUTPUT_DIR</strong></dt>
 	  <dd>Emplacement de la sortie générée, par exemple des fichiers journaux et du répertoire de travail d'une instance de serveur de profil Liberty en cours d'exécution.</dd>
 	  </dl>

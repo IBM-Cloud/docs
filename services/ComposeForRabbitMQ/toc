@@ -6,11 +6,11 @@ Compose For RabbitMQ
 
 	{: .navgroup id="learn"}
 	index.md
+	credentials.md
 
 	{: .topicgroup }
 	Related links
 		[Sample Node.js app](https://github.com/IBM-Bluemix/compose-rabbitmq-helloworld-nodejs)
 		[Compose Help](https://help.compose.com)
 		[Compose Articles](https://www.compose.com/articles/)
-
 	{: .navgroup-end}

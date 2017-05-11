@@ -43,7 +43,7 @@ Completa la seguente procedura per aggiungere il repository e installare il plug
 <ol>
 <li>Per aggiungere il repository del plug-in Gestione {{site.data.keyword.Bluemix_notm}}, immetti il seguente comando:<br/><br/>
 <code>
-cf add-plugin-repo BluemixAdmin http://plugins.ng.bluemix.net
+cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli
 </code><br/><br/>
 </li>
 <li>Per installare il plug-in {{site.data.keyword.Bluemix_notm}} Admin CLI, immetti il seguente comando:<br/><br/>

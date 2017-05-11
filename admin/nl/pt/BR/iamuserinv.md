@@ -21,7 +21,8 @@ designa o acesso aos usuários conforme eles são convidados, atribuindo funçõ
 as organizações, ou ambos, que eles possam acessar. Dependendo das opções de acesso que você estiver autorizado
 a gerenciar, é possível convidar e fornecer acesso para usuários na conta ou na organização. Como
 um proprietário da conta, é possível designar opções de acesso à sua conta para um usuário quando você e o
-usuário são membros, independentemente da função.{:shortdesc}
+usuário são membros, independentemente da função. 
+{:shortdesc}
 
 Para convidar usuários ou gerenciar convites de usuários em sua conta, na barra de menus, clique em
 **Gerenciar** &gt; **Conta** &gt; **Usuários**. A
@@ -29,7 +30,7 @@ janela Usuários exibe uma lista de usuários com seus endereços de e-mail e o 
 gerencia. 
 
 Para convidar usuários e gerenciar convites pendentes, deve-se ser um proprietário da conta, um
-gerenciador de organização ou ter permissões de infraestrutura para incluir usuários. É possível convidar
+gerenciador de organização ou ter permissões de infraestrutura para incluir usuários.  É possível convidar
 usuários, cancelar convites e reenviar um convite pendente para um usuário convidado. É possível convidar um
 único usuário ou, se fornece o mesmo acesso para todos os membros em um grupo de usuários,
 é possível convidar múltiplos usuários de uma vez.
@@ -65,7 +66,9 @@ gerenciar dispositivos.</dd>
 <dd>Os usuários com essa permissão podem executar todas as ações disponíveis no sistema.</dd>
 </dl>
 **Nota**: as permissões reais designadas serão limitadas automaticamente ao
-subconjunto de permissões que você possuir.Se estiver fornecendo o mesmo acesso para múltiplos
+subconjunto de permissões que você possuir.
+
+Se estiver fornecendo o mesmo acesso para múltiplos
 usuários, será possível selecionar **Convidar múltiplos usuários** para inserir uma lista de
 usuários para convidar. Separe as entradas ID do usuário com vírgulas.  
 

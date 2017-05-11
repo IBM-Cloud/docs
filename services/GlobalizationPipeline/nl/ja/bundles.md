@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-08-30"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 # バンドルの操作
 {: #globalizationpipeline_workingwithbundles}
-
-*最終更新日: 2016 年 8 月 30 日*
-{: .last-updated}
 
 作成した各バンドルには、リソース・ファイルから取得されたキー/値ペアと、生成されたすべての翻訳セットが含まれています。
 {:shortdesc}

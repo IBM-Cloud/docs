@@ -1,15 +1,17 @@
-[Gestion des applications](/docs/manageapps/mngapps.html)
-    mngapps.md
-    [Ajout d'un service à votre application](../services/reqnsi.html)
-        [Demande de nouvelle instance de service](../services/reqnsi.html#req_instance)
-        [Configuration de votre application pour l'interaction avec un service](../services/reqnsi.html#config)
-        [Utilisation des services Bluemix avec des applications externes](../services/reqnsi.html#accser_external)
-        [Création d'une instance de service fournie par l'utilisateur](../services/reqnsi.html#user_provide_services)
-        [Utilisation des services dans une autre région](../services/reqnsi.html#cross_region_service)
-        [Utilisation des services dans un autre service](../services/reqnsi.html#s2s_binding)
-    depapps.md
-    [Création d'un bouton](../develop/deploy_button.html)
-        [Partage de pipelines de projet Déployer dans Bluemix](../develop/sharetextpipelines.html)
-        [Incorporation d'un flux de trame d'information Déployer dans Bluemix](../develop/deploy_button_embed.html)
-    updapps.md
-    secapps.md
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="bluemix-manage-apps" audience="platform" href="/docs/manageapps/mngapps.html"}
+Gestion des applications
+
+	{: .navgroup id="learn"}
+	mngapps.md
+	{: .navgroup-end}
+	
+	{: .navgroup id="howto"}
+	[Ajout d'un service à votrre application](../services/reqnsi.html)
+	depapps.md
+	[Création d'un déploiement sur Bluemix](../develop/deploy_button.html)
+	updapps.md
+	secapps.md
+	{: .navgroup-end}

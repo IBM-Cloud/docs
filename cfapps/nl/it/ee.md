@@ -129,7 +129,8 @@ e gli strumenti Eclipse. Puoi scegliere l'interfaccia riga di comando cf per ini
 
   1. Innanzitutto, scarica e sviluppa il codice della tua applicazione.
 
-    1. Vai alla pagina Inizia a scrivere codice dell'applicazione. Fai clic sul pulsante **Scarica codice di starter** per scaricare il codice della tua applicazione.
+    1. Vai alla pagina Inizia a scrivere codice della tua applicazione. Fai clic sul pulsante **Scarica codice di starter**
+per scaricare il codice della tua applicazione.
     2. Estrai il file scaricato in una directory, ad esempio `C:\test`.
     3. Sviluppa il codice con il tuo ambiente di sviluppo
 integrato locale.
@@ -311,7 +312,8 @@ una funzione di stima e un calcolatore per consentirti di visualizzare il costo 
 
   * Nel tuo dashboard, fai clic su TestNode. Quindi, nella pagina Panoramica, fai clic su **Stima il costo di questa applicazione** per vedere il prezzo del runtime e del supporto **SDK for Node.js** e il prezzo totale mensile della tua applicazione.
 
-  * In alternativa, nella pagina Listino prezzi, immetti l'utilizzo mensile del runtime e dei servizi della tua applicazione. d esempio 3 istanze di **SDK for Node.js** con 1 GB di memoria per ciascuna istanza. Il prezzo mensile viene calcolato e visualizzato.
+  * In alternativa, nella pagina Listino prezzi, immetti l'utilizzo mensile del runtime e dei servizi della tua applicazione. Ad esempio 3 istanze di **SDK for Node.js** con 1 GB
+di memoria per ciascuna istanza. Il prezzo mensile viene calcolato e visualizzato.
 
 Puoi anche calcolare il costo della tua applicazione manualmente sommando i prezzi dei tuoi runtime e servizi
 e sottraendo la franchigia. Per ulteriori informazioni, vedi Calcolo manuale dei tuoi costi.

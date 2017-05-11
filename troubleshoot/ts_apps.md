@@ -691,21 +691,19 @@ This problem might happen if scripts, such as the detect script, the compile scr
 You can use the [git update ![External link icon](../icons/launch-glyph.svg "External link icon")](http://git-scm.com/docs/git-update-index){: new_window} command to change the permission of each script to executable. For example, you can type `git update --chmod=+x script.sh`.
 {: tsResolve}
 
+## Can't deploy an app from the Delivery Pipeline in IBM Bluemix Continuous Delivery
+ {: #ts_devops_to_bm}
 
-## Can't deploy an app from DevOps Services to Bluemix
-{: #ts_devops_to_bm}
+ You might not be able to deploy your app using the {{site.data.keyword.deliverypipeline}} in {{site.data.keyword.contdelivery_short}} if the `manifest.yml` file isn't present in your app.
 
-You might not be able to push your app from IBM Bluemix DevOps Services to {{site.data.keyword.Bluemix_notm}} if the `manifest.yml` file isn't present in your app.
+ When you deploy an app using the {{site.data.keyword.deliverypipeline}} in {{site.data.keyword.contdelivery_short}}, an error message `Unable to detect a supported application type` might display.
+ {: tsSymptoms}
 
-When you deploy an app from DevOps Services to {{site.data.keyword.Bluemix_notm}}, an error message `Unable to detect a supported application type` might display.
-{: tsSymptoms}
+ This problem might happen because the pipeline requires a `manifest.yml` file to deploy an app to {{site.data.keyword.Bluemix_notm}}.
+ {: tsCauses}
 
-This problem might happen because DevOps Services requires a `manifest.yml` file to deploy an app to {{site.data.keyword.Bluemix_notm}}.
-{: tsCauses}
-
-To resolve this problem, you must create a `manifest.yml` file. For more information about how to create a `manifest.yml` file, see [Application manifest](/docs/manageapps/depapps.html#appmanifest).
-{: tsResolve}
-
+ To resolve this problem, you must create a `manifest.yml` file. For more information about how to create a `manifest.yml` file, see [Application manifest](/docs/manageapps/depapps.html#appmanifest).
+ {: tsResolve}
 
 ## Meteor apps can't be pushed
 {: #ts_meteor}
@@ -730,112 +728,6 @@ To use a custom buildpack for Meteor apps, use one of the following methods:
 	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
 	```
 
-## Deploy to Bluemix button doesn't deploy an app
-{: #ts_deploybutton}
-
-If you click the Deploy to {{site.data.keyword.Bluemix_notm}} button and find that either the Git repository isn't cloned or the app isn't deployed, try the troubleshooting methods for the following issues.
-  * [The Bluemix DevOps Services project can't be created](#ts_project-cant-be-created)
-  * [The Git repository isn't found and can't be cloned in DevOps Services](#ts_repo-not-found)
-  * [The Git repository is cloned in DevOps Services, but the app isn't deployed to {{site.data.keyword.Bluemix_notm}}](#ts_repo-cloned-app-not-deployed)
-
-For more information about how to create the button, see Creating a Deploy to {{site.data.keyword.Bluemix_notm}} button.
-
-### The Bluemix DevOps Services project can't be created
-{: #ts_project-cant-be-created}
-
-If the DevOps Services project can't be created, your IBM {{site.data.keyword.Bluemix_notm}} account might have expired.
-
-You click the **Deploy to Bluemix** button, but the "Creating project" step doesn't complete successfully.
-{: tsSymptoms}
-
-Your {{site.data.keyword.Bluemix_notm}} account might have expired.
-{: tsCauses}
-
-Use one of the following methods:
-{: tsResolve}
-
-  * Log in to {{site.data.keyword.Bluemix_notm}} and update your account information.
-  * Click the **Deploy to Bluemix** button again.
-
-### The Git repository isn't found and can't be cloned in DevOps Services
-{: #ts_repo-not-found}
-
-If you find that the Git repository isn't cloned, an issue might exist with the repository or with the button snippet.
-
-You click the **Deploy to Bluemix** button, but the Git repository isn't found and can't be cloned in DevOps Services. The "Cloning repository" step doesn't complete successfully. Therefore, the app can't be deployed to {{site.data.keyword.Bluemix_notm}}.
-{: tsSymptoms}
-
-This problem might occur for the following reasons:
-{: tsCauses}
-
-  * The Git repository might not exist or be accessible.
-  * An issue might exist in the HTML or markdown for the button snippet.
-  * An issue might exist where special characters, query parameters, or fragments in the URL are preventing the Git repository from being accessed properly.
-
-Use one of the following methods:
-{: tsResolve}
-
-  * Verify that your Git repository exists, is publicly accessible, and that the URL is correct.
-  * Verify that the snippet does not contain any HTML or markdown errors.
-  * If special characters, query parameters, or fragments cause an issue with the Git repository URL, encode the URL in the button snippet.
-
-### The Git repository is cloned in DevOps Services, but the app isn't deployed to Bluemix
-{: #ts_repo-cloned-app-not-deployed}
-
-If the app isn't deployed, issues might exist with the code in the repository.
-
-You click the **Deploy to Bluemix** button and the Git repository is cloned in DevOps Services, but the app isn't deployed to {{site.data.keyword.Bluemix_notm}}. The "Deploying to Bluemix" step doesn't complete successfully.
-{: tsSymptoms}
-
-This problem might occur for the following reasons:
-{: tsCauses}  
-
-  * There might not be enough space in your {{site.data.keyword.Bluemix_notm}} space to deploy an app.
-  * A required service might not be declared in the `manifest.yml` file.
-  * A required service might be declared in the `manifest.yml` file, but the service is already in the target space.
-  * An issue might exist with the code in the repository.
-
-To diagnose the issue, review the build and deploy logs from the deployment:
-  1. When the "Deploying to Bluemix" step doesn't complete successfully, click the link in the previous "Configuring pipeline" step to open the Delivery Pipeline.
-  2. Identify the failed build or deploy stage.
-  3. In the failed stage, click **View logs and history**.
-  4. Locate the error message.
-
-Use one of the following methods:
-{: tsResolve}
-
-  * If the error message indicates that there isn't enough space in the {{site.data.keyword.Bluemix_notm}} space to deploy the app, target another space.
-  * If the error message indicates that a required service isn't declared in the `manifest.yml` file, notify the repository owner that the required service must be added.
-  * If the error message indicates that a required service already exists in the target space, select a different space to use.
-  * If the error message indicates that an issue exists with the build, fix any issues with the code that are preventing the app from being built. To verify that the code doesn't contain any issues, build the code by using Git commands:
-    1. Clone the Git repository:
-    ```
-    git clone <git_repository_URL>
-    ```
-    2. Open the app directory:
-	```
-	cd <appname>
-	```
-    3. Create the app:
-	```
-	<appname> create
-	```
-    4. If necessary, provision add-ons.
-    5. Add any configuration variables that are required.
-    6. Push the code:
-	```
-	git push <appname> master
-	```
-    7. Verify that the app builds correctly.
-    8. If necessary, run the post deployment command:
-	```
-	<appname> run
-	```
-    9. Open the app and verify that it is working correctly:
-	```
-	<appname> open
-	```
-
 ## Can't deploy an app from the run bar
 {: #ts_runbar}
 
@@ -848,49 +740,19 @@ The app that you are deploying has the same route as another app that is running
 Change the route to be unique.
 {: tsResolve}
 
-## Can't find the run bar in Eclipse
+## Can't find the run bar in the Eclipse Orion Web IDE
 {: #ts_runbar-missing}
 
 If you don't see the run bar in the Eclipse Orion {{site.data.keyword.webide}}, one of the following issues occurred:
 {: tsCauses}
 
-* {{site.data.keyword.jazzhub}} doesn't identify your project as a project.
-*  {{site.data.keyword.jazzhub_short}} couldn't determine which folder your app is in.
-* {{site.data.keyword.jazzhub_short}} doesn't detect that your app is a Node.js app.
+* {{site.data.keyword.contdelivery_full}} couldn't determine which folder your app is in.
+* {{site.data.keyword.contdelivery_short}} doesn't detect that your app is a Node.js app.
 
 Use one of the following methods, as appropriate:
 {: tsResolve}  
 
-* If {{site.data.keyword.jazzhub}} doesn't identify your project as a project, create a `project.json` file in your project's root directory.
-* If {{site.data.keyword.jazzhub_short}} couldn't determine which folder your app is in, and your app is not in the project's root directory, use one of the following steps:
+* If {{site.data.keyword.contdelivery_short}} couldn't determine which folder your app is in, and your app is not in the project's root directory, use one of the following steps:
   * Create a `manifest.yml` file in your project's root directory, then edit the file to point to the location of your app. For example, `path: path_to_your_app`.
   * Move your app to your project's root directory.
-* If {{site.data.keyword.jazzhub_short}} doesn't detect that your app is a Node.js app, create a `package.json` file in the app folder of your project.
-
-## GitHub hook isn't working
-{: #ts_githubhookisntworking}
-
-You configured your GitHub project to create work-item links when you push commits and the links aren't working as expected.
-{: tsSymptoms}
-
-Use the following steps to find the problem:
-{: tsResolve}
-
-1. In your GitHub repo, click **Settings**.
-   ![GitHub settings link](images/github_settings.png)
-
-2. Click **Webhooks & services**.
-   ![GitHub web hooks and services link](images/github_webhook.png)
-
-3. To view the message, hover over the {{site.data.keyword.jazzhub}} status icon.
-   ![Error message on service hook](images/github_error.png)
-
-4. Resolve the error according to the GitHub message.
-
-5. To verify that the fix worked, commit and push another change, or go to the service page for {{site.data.keyword.jazzhub_short}} and click **Test service**.
-   ![GitHub Test service button](images/github_test.png)
-
-6. Verify that there are no errors by checking the status icon again.
-   ![Status icon without errors](images/githubResolved_small.png)
-
-For more information, see [Setting up GitHub for Bluemix DevOps Services projects ![External link icon](../icons/launch-glyph.svg "External link icon")](https://hub.jazz.net/docs/githubhooks/){: new_window}.
+* If {{site.data.keyword.contdelivery_short}} doesn't detect that your app is a Node.js app, create a `package.json` file in the app folder of your project.

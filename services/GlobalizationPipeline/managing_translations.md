@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-10-14"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # Managing translations
 {: #globalizationpipeline_managingtranslations}
-
-*Last updated: 14 Oct 2016*
-{: .last-updated}
 
 Once you have created bundles and started generating translations for your application, the machine generated content can be used as is or further modified. You can also choose to use a machine translation other than the default. This section describes how to change the machine translation engine that performs the translations for your bundles, how to perform human post-translation editing, and also how you can assign user roles and access restrictions to the people that will need to access to your translations.
 {:shortdesc}

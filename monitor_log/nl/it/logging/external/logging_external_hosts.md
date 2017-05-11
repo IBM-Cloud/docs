@@ -20,7 +20,7 @@ lastupdated: "2017-02-16"
 {{site.data.keyword.Bluemix_notm}} conserva in memoria una quantità limitata di informazioni di log. Quando si registrano le informazioni, i dati precedenti vengono sostituiti con le informazioni più recenti. Per conservare tutte le informazioni di log, puoi salvare i tuoi log dell'applicazione Cloud Foundry in un log host esterno, quale un servizio di gestione log di terze parti o un altro host.
 {:shortdesc}
 
-Per trasmettere i log dalla tua applicazione CF e dal sistema a un host log esterno, completa la seguente procedura: 
+Per trasmettere i log dalla tua applicazione CF e dal sistema a un host log esterno, completa la seguente procedura:
 
   1. Determina l'endpoint di registrazione.
 

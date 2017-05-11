@@ -37,7 +37,7 @@ di elaborazione della tua applicazione in base alle politiche. Con questo serviz
 |Facoltativo | [{{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} integra {{site.data.keyword.APIM}} e IBM StrongLoop in una singola offerta che fornisce una soluzione completa per creare, eseguire, gestire e implementare API e microservizi. |
 |Facoltativo | [{{site.data.keyword.rules_short}}](/docs/services/rules/rules.html) | {{site.data.keyword.rules_short}} offre un ambiente completo per automatizzare ed eseguire le frequenti decisioni di business basate su regole ripetibili. Consente inoltre agli utenti o sviluppatori di business di modellare rapidamente le decisioni e di testarle a costi più bassi, riducendo la necessità di competenze IT. |
 |Facoltativo | [{{site.data.keyword.cloudant}}](/docs/services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} fornisce l'accesso a un livello di dati JSON NoSQL interamente gestito sempre attivo. Questo servizio è compatibile con CouchDB e accessibile mediante un'interfaccia HTTP di facile utilizzo per i modelli di applicazione web e mobile. |
-|Facoltativo | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | Esegui i contenitori Docker su {{site.data.keyword.Bluemix_dedicated_notm}}. I contenitori sono oggetti software virtuali che includono tutti gli elementi che un'applicazione deve eseguire. Un contenitore presenta i vantaggi dell'isolamento e dell'assegnazione delle risorse, ma offre una maggiore portabilità ed efficienza rispetto, ad esempio, a una macchina virtuale. Per informazioni sui requisiti hardware, vedi [IBM {{site.data.keyword.containershort}} in {{site.data.keyword.Bluemix_dedicated_notm}} e Bluemix locale](/docs/containers/container_dl.html).|
+|Facoltativo | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | Esegui i contenitori Docker su {{site.data.keyword.Bluemix_dedicated_notm}}. I contenitori sono oggetti software virtuali che includono tutti gli elementi che un'applicazione deve eseguire. Un contenitore presenta i vantaggi dell'isolamento e dell'assegnazione delle risorse, ma offre una maggiore portabilità ed efficienza rispetto, ad esempio, a una macchina virtuale. Per informazioni sui requisiti hardware, vedi [IBM {{site.data.keyword.containershort}} in {{site.data.keyword.Bluemix_dedicated_notm}} e Bluemix locale](/docs/containers/container_ov.html#container_dl).|
 | Facoltativo | [{{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery/index.html) | Utilizza {{site.data.keyword.contdelivery_short}} dedicato per automatizzare le build, i test di unità, le distribuzioni e altro. Modifica e trasmetti il codice tramite la IDE basata sul web avanzato. Crea le toolchain per abilitare le integrazioni dello strumento che supportano attività di sviluppo, distribuzione e operative. |
 | Facoltativo | [{{site.data.keyword.dashdbshort}}](/docs/services/dashDB/dashDB.html) | IBM {{site.data.keyword.dashdbshort}} for Analytics è un servizio di database cloud SQL interamente gestito, ottimizzato per i carichi di lavoro di data warehouse e analisi. IBM {{site.data.keyword.dashdbshort}} for Transactions è un servizio di database cloud SQL interamente gestito, ottimizzato per l'uso generale, le applicazioni Web e i carichi di lavoro transazionali. |
 | Facoltativo | [{{site.data.keyword.datacshort}}](/docs/services/DataCache/index.html#data_cache) | Questo servizio fornisce una griglia di dati in memoria
@@ -51,7 +51,7 @@ che supporta scenari di cache distribuita per le tue applicazioni. Include
 |Facoltativo | [{{site.data.keyword.sescashort}}](/docs/services/SessionCache/index.html#session_cache) | Per aumentare la ridondanza, {{site.data.keyword.sescashort}} fornisce una replica di una sessione memorizzata nella cache. Pertanto, nel caso di un'interruzione o di un calo di tensione, la tua applicazione client mantiene l'accesso alla sessione nella cache. Il servizio supporta scenari di memorizzazione di sessioni nella cache per applicazioni Web e mobili. |
 | Facoltativo | [{{site.data.keyword.iot_short}}](/docs/services/IoT/index.html) | Questo servizio consente alle tue applicazioni di comunicare tra loro e utilizzare i dati raccolti dai tuoi dispositivi, sensori e gateway connessi. L'offerta di base consente l'esecuzione di una versione privata di {{site.data.keyword.iot_short}} nell'ambiente dedicato con una capacità di 100,000 applicazioni o dispositivi connessi contemporaneamente e 1.6 TB di scambio dati. |
 | Facoltativo | [{{site.data.keyword.appserver_short}}](/docs/services/ApplicationServeronCloud/index.html) | IBM {{site.data.keyword.appserver_short}} per IBM {{site.data.keyword.Bluemix_notm}} è un servizio che aiuta nella configurazione rapida di un'istanza {{site.data.keyword.appserver_short}} Liberty, Traditional Network Deployment o Traditional WebSphere Java EE preconfigurata in un ambiente cloud ospitato su {{site.data.keyword.Bluemix_notm}}. |
-{: caption="Table 1. Dedicated Services" caption-side="top"}
+{: caption="Tabella 1. Servizi dedicati" caption-side="top"}
 {: #table01}
 
 
@@ -64,7 +64,7 @@ Sono presenti dei componenti facoltativi disponibili per te da acquistare per ri
 |Incremento di 100.000 chiamate API dedicate per {{site.data.keyword.apiconnect_short}} Professional | Un'estensione dell'ambiente {{site.data.keyword.apiconnect_short}} Professional che fornisce una capacità supplementare di 100.000 chiamate API al mese. |
 |25 milioni di chiamate API dedicate per {{site.data.keyword.apiconnect_short}} Enterprise | Un ambiente che consente l'esecuzione di una versione privata di {{site.data.keyword.apiconnect_short}} all'interno dell'ambiente dedicato con una capacità di 25 milioni di chiamate API al mese, destinate a progetti API di tutta l'azienda. |
 |Incremento di 100.000 chiamate API dedicate per {{site.data.keyword.apiconnect_short}} Enterprise | Un'estensione dell'ambiente {{site.data.keyword.apiconnect_short}} Enterprise che fornisce una capacità supplementare di 100.000 chiamate API al mese. |
-|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.rules_short}} 1 Million Rules Decisions | Una decisione di regole è il risultato della chiamata di una serie di regole da un Rule Execution Server. È necessario ottenere i diritti sufficienti per ricoprire il numero totale di decisioni di regole, arrotondato al milione, eseguite o elaborate, durante il periodo di fatturazione. Le decisioni di regole misurate da questo servizio cloud sono le chiamate effettuate al Rule Execution Server per ottenere una decisione. |
+|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.rules_short}} 1 Million Rules Decisions | Una decisione di regole è il risultato della chiamata di una serie di regole da un Rule Execution Server. È necessario ottenere i diritti sufficienti per ricoprire il numero totale di decisioni di regole, arrotondato al milione, eseguite o elaborate, durante il periodo di fatturazione. Le decisioni di regole misurate da questo servizio cloud sono le chiamate effettuate al Rule Execution Server per ottenere una decisione. Le distribuzioni dedicate del servizio cloud hanno una capacità concordata misurata dalla relativa metrica di addebito. L'assegnazione dello spazio predefinita del servizio {{site.data.keyword.rules_short}} sulla piattaforma {{site.data.keyword.Bluemix_dedicated_notm}} è di 16 GB, da cui possono essere richiamate fino a dieci istanze di 1 GB ciascuna per eseguire le decisioni di regole autorizzate. Se superi questo limite di utilizzo, dovrai acquistare ulteriore capacità per ricoprire tale utilizzo. |
 |Incremento della capacità di 16 TB dedicato per {{site.data.keyword.cloudant}} | Include l'esecuzione di una versione privata di {{site.data.keyword.cloudantfull}} nell'ambiente dedicato con una capacità di 1.6 terabyte.  |
 |Incremento della capacità di 50 GB dedicato per {{site.data.keyword.datacshort}} e {{site.data.keyword.sescashort}} | Un ambiente che consente la distribuzione e l'esecuzione di istanze {{site.data.keyword.datacshort}} e {{site.data.keyword.sescashort}} fino a una capacità cumulativa di 50 GB. |
 |Istanza di {{site.data.keyword.contdelivery_short}} dedicato | Una versione privata di {{site.data.keyword.contdelivery_short}} in esecuzione all'interno di un ambiente dedicato. La capacità è determinata dai diritti dell'utente autorizzato di {{site.data.keyword.contdelivery_short}} dedicato. |
@@ -85,7 +85,7 @@ Sono presenti dei componenti facoltativi disponibili per te da acquistare per ri
 |IBM {{site.data.keyword.appserver_short}} per {{site.data.keyword.Bluemix_notm}} - Dedicato Medium| Un'istanza {{site.data.keyword.appserver_short}} Liberty, Traditional Network Deployment o Traditional WebSphere Java EE preconfigurata in un ambiente cloud ospitato su {{site.data.keyword.Bluemix_notm}} con 128 vCore, 256GB RAM e 2TB HDD al mese. |
 |IBM {{site.data.keyword.appserver_short}} per {{site.data.keyword.Bluemix_notm}} - Dedicato Large| Un'istanza {{site.data.keyword.appserver_short}} Liberty, Traditional Network Deployment o Traditional WebSphere Java EE preconfigurata in un ambiente cloud ospitato su {{site.data.keyword.Bluemix_notm}} con 256 vCore, 512GB RAM e 4TB HDD al mese. |
 |IBM {{site.data.keyword.appserver_short}} for {{site.data.keyword.Bluemix_notm}} - Dedicato| Un'istanza {{site.data.keyword.appserver_short}} Liberty, Traditional Network Deployment o Traditional WebSphere Java EE preconfigurata in un ambiente cloud ospitato su {{site.data.keyword.Bluemix_notm}} con HDD Expansion e 1TB al mese. |
-{: caption="Table 2. Optional service components for purchase" caption-side="top"}
+{: caption="Tabella 2. Componenti del servizio facoltativi per l'acquisto" caption-side="top"}
 {: #table02}
 
 
@@ -96,7 +96,7 @@ Sono presenti dei componenti facoltativi disponibili per te da acquistare per ri
 |Capacità di 1 Gbps dedicata per Direct Link | Un link di rete dedicato che si connette direttamente al POP (point of presence) di rete {{site.data.keyword.BluSoftlayer}} designato per i trasferimenti dati fino a 1 Gbps. |
 |Capacità di 10 Gbps dedicata per Direct Link | Un link di rete dedicato che si connette direttamente al POP (point of presence) di rete {{site.data.keyword.BluSoftlayer}} designato per i trasferimenti dati fino a 10 Gbps. |
 |Firewall hardware per IBM Bluemix dedicato - elevata disponibilità | Un firewall hardware di 1 Gbps ridondante configurato per la protezione di uno, alcuni o tutti i server nella stessa VLAN nell'ambiente dedicato. |
-{: caption="Table 3. Optional platform add-on components for purchase" caption-side="top"}
+{: caption="Tabella 3. Componenti aggiuntivi della piattaforma facoltativi per l'acquisto" caption-side="top"}
 {: #table03}
 
 **Nota**: i componenti di {{site.data.keyword.Bluemix_dedicated_notm}} possono indicare una capacità configurata specifica, come ad esempio gigabyte o transazioni al secondo. Poiché la capacità attuale messa in pratica per ogni configurazione del servizio cloud varia in base a molti fattori, la capacità attuale messa in pratica può essere maggiore o inferiore alla capacità configurata.
@@ -159,7 +159,7 @@ Se disponi di un'istanza privata del servizio per il tuo ambiente dedicato, vedi
 |{{site.data.keyword.iot_short}}		|Sì		|Sì		|No|
 |{{site.data.keyword.weather_short}}		|Sì		|Sì		|Sì|
 |{{site.data.keyword.workloadscheduler}}	|Sì		|Sì		|Sì |
-{: caption="Table 4. Services available for syndication from {{site.data.keyword.Bluemix_notm}} Public by region" caption-side="top"}
+{: caption="Tabella 4. Servizi disponibili per la diffusione da Bluemix pubblico per regione" caption-side="top"}
 {: #table04}
 
 **Nota**: i servizi di terze parti non sono inclusi nella tabella. Controlla il tuo catalogo dedicato per le opzioni dei servizi di terze parti.
@@ -357,7 +357,7 @@ La fase di inizio è utilizzata per organizzare l'ambiente {{site.data.keyword.B
 |Controllare l'infrastruttura fisica | Controllare le sedi fisiche che ospitano i componenti della soluzione per individuare eventuali minacce e riesaminare i controlli di sicurezza per proteggere il data center. | Cliente |
 |Ispezionare il software di monitoraggio | Ispezionare i componenti di monitoraggio e gestione, come definito nel piano di escalation e determinazione dei problemi. | Cliente |
 |Ispezionare il sistema operativo | Verificare che l'immagine del sistema operativo rispetti gli standard di conformità. IBM fornisce l'accesso all'immagine del sistema operativo. | Responsabilità condivisa tra IBM e il cliente |
-{: caption="Table 5. Inception phase tasks" caption-side="top"}
+{: caption="Tabella 5. Attività della fase di inizio" caption-side="top"}
 
 
 La fase successiva è quella di avanzamento. La fase di avanzamento descrive il rapporto di collaborazione in corso tra te e IBM Cloud. Gli obiettivi principali per questa fase sono i seguenti:
@@ -382,7 +382,7 @@ La fase successiva è quella di avanzamento. La fase di avanzamento descrive il 
 |Segnalazione dello stato, coordinamento dei controlli e incontri di conformità  | Completare la segnalazione dello stato, il coordinamento del controllo esterno e la rappresentazione negli incontri sullo stato di revisione della conformità. | IBM |
 |Verifica dell'occupazione lavorativa e delle esigenze aziendali | Completare la verifica trimestrale dell'occupazione lavorativa e la verifica delle continue esigenze aziendali per i rappresentanti IBM che hanno accesso all'ambiente del cliente. | IBM |
 |Risoluzione delle vulnerabilità di sicurezza | Risolvere le vulnerabilità di sicurezza segnalate nella piattaforma. | IBM |
-{: caption="Table 6. Progression phase tasks" caption-side="top"}
+{: caption="Tabella 6. Attività della fase di avanzamento" caption-side="top"}
 
 La fase finale di completamento rappresenta la fine del rapporto tra te e IBM {{site.data.keyword.Bluemix_notm}}. Le attività principali per questa fase sono le seguenti:
 
@@ -397,7 +397,7 @@ La fase finale di completamento rappresenta la fine del rapporto tra te e IBM {{
 |Rimuovere le autorizzazioni per l'ambiente | Disattivare l'accesso e le credenziali per l'ambiente. | Responsabilità condivisa tra IBM e il cliente |
 |Rimuovere le connessioni di rete del cliente | Rimuovere le connessioni di rete tra IBM e l'ambiente del cliente. | Responsabilità condivisa tra IBM e il cliente |
 |Riciclare l'infrastruttura | Il tuo ambiente viene riciclato in base ai processi definiti da {{site.data.keyword.BluSoftlayer}}. | IBM |
-{: caption="Table 7. Completion phase tasks" caption-side="top"}
+{: caption="Tabella 7. Attività della fase di completamento" caption-side="top"}
 
 ##Gestione della tua istanza dedicata
 {: #maintaindedicated}

@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-08-30"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 # Gestion des bundles
 {: #globalizationpipeline_workingwithbundles}
 
-*Dernière mise à jour : 30 août 2016*
-{: .last-updated}
 
 Chaque bundle que vous créez contient les paires clé/valeur de votre fichier de ressources et le jeu complet de traductions qui a été généré.
 {:shortdesc}

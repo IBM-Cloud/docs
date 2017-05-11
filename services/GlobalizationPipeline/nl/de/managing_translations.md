@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-10-14"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # Übersetzungen verwalten
 {: #globalizationpipeline_managingtranslations}
-
-*Letzte Aktualisierung: 14. Oktober 2016*
-{: .last-updated}
 
 Sobald Sie Bundle erstellt haben und die Erstellung der Übersetzungen für Ihre Anwendung gestartet wurde, kann der maschinell erstellte Inhalt unverändert oder modifiziert verwendet werden. Sie können auch auswählen, dass Sie eine andere automatische Übersetzung als den Standard verwenden möchten. In diesem Abschnitt wird beschrieben, wie die Engine für automatische Übersetzung, die die Übersetzungen für Ihre Bundles ausführt, geändert werden kann, wie ein Post-Editing durch menschliche Übersetzer durchgeführt wird und auch wie Sie Benutzerrollen und Zugriffsbeschränkungen den Personen zuordnen können, die auf Ihre Übersetzungen zugreifen müssen.
 {:shortdesc}

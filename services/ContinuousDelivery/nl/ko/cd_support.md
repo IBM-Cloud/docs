@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2015, 2017
+lastupdated: "2017-4-11"
 
 ---
 
@@ -14,18 +15,34 @@ copyright:
 # {{site.data.keyword.contdelivery_short}}에 대한 도움 및 지원 받기    
 {: #cd_support}  
 
-마지막 업데이트 날짜: 2016년 11월 18일
-{: .last-updated}
+{{site.data.keyword.contdelivery_full}} 팀에서는 {{site.data.keyword.contdelivery_short}} 서비스 및 DevOps Insights에 대한 질문과 관련하여 Stack Overflow 및 developerWorks 포럼을 적극적으로 모니터합니다.    
 
-{{site.data.keyword.contdelivery_full}} 사용 시 문제점 또는 질문이 있는 경우 정보를 검색하거나 포럼에서 질문하여 도움을 받을 수 있습니다. [지원 티켓 열기(링크가 새 창에서 열림)](https://www.{DomainName}/docs/support/index.html#open-ticket)를 수행할 수도 있습니다.    
-{:shortdesc}
+<table>
+ <td align="center">
+ <strong>Stack Overflow</strong>
+  <p>
+   <a class="xref" href="http://stackoverflow.com/questions/ask?tags=ibm-bluemix,http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="(새 탭이나 창에서 열림)"><img class="image" src="images/ask-a-question.png" alt="Ask a question"/></a></p>
+   <p>
+    <a class="xref" href="http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="(새 탭이나 창에서 열림)">Stack Overflow에 대한 최신 <img class="image" src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services 질문을 표시합니다. </p></td>
+  <td align="center">
+  <strong>dW Answers</strong>
+   <p>
+   <a class="xref" href="https://developer.ibm.com/answers/questions/ask/?topics=devops-services,bluemix" target="_blank" title="(새 탭이나 창에서 열림)"><img class="image" src="images/ask-a-question.png" alt="Ask a question"/></a></p>
+   <p>
+    <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="(새 탭이나 창에서 열림)">dW Answers에 대한 최신 <img class="image" src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services 질문을 표시합니다. </p></td>
+  </table>  
 
-{{site.data.keyword.Bluemix_notm}} 개발 팀과 지원 팀은 Stack Overflow와 dW Answers를 적극적으로 모니터하며 ibm-bluemix, continuous-delivery, bluemix-continuous-delivery 태그가 지정된 질문이 있는지 지켜봅니다. 포럼에서 질문을 작성하는 경우 {{site.data.keyword.Bluemix_notm}} 개발 팀과 지원 팀이 볼 수 있도록 질문에 태그를 지정하십시오.
 
-* Continuous Delivery에 대한 기술적 질문이 있는 경우 [Stack Overflow(링크가 새 창에서 열림)](http://stackoverflow.com/search?q=ibm-bluemix+continuous-delivery){:new_window}에 질문을 게시하고 질문에 "ibm-bluemix"와 "continuous-delivery"로 태그를 지정하십시오.
+## 지원 티켓
 
-* {{site.data.keyword.contdelivery_short}} 서비스에 대한 질문이 있는 경우에는 [IBM developerWorks dW Answers(링크가 새 창에서 열림)](https://developer.ibm.com/answers/topics/bluemix-continuous-delivery/?smartspace=bluemix){:new_window} 포럼에 문의하십시오. "bluemix-continuous-delivery" 태그를 포함하십시오.
+보다 심각한 문제가 있거나 {{site.data.keyword.contdelivery_short}} 서비스에서 문제점이 발견되면 지원 티켓을 여십시오.     
 
-포럼 사용에 대한 자세한 정보는 [도움 받기(링크가 새 창에서 열림)](https://www.{DomainName}/docs/support/index.html#getting-help)의 내용을 참조하십시오.
+1. {{site.data.keyword.Bluemix_notm}}에 로그인하십시오. 
+1. 메뉴 표시줄에서 **지원**을 클릭한 후에 **티켓 추가**를 클릭하십시오. 
+1. 기술 지원이 필요한 항목을 표시하는 양식을 채우십시오. 
 
-IBM 지원 티켓 열기 또는 지원 레벨 및 티켓 심각도에 대한 자세한 정보는 [Contacting support(링크가 새 창에서 열림)](https://www.{DomainName}/docs/support/index.html#contacting-support)를 참조하십시오.
+IBM {{site.data.keyword.Bluemix_notm}} 지원 티켓 열기 또는 지원 레벨과 티켓 심각도에 대한 자세한 정보는 [지원 문의](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)를 참조하십시오. 
+
+
+## Bluemix에 대한 지원
+{{site.data.keyword.Bluemix_notm}} 서비스에 대한 기타 문제점이나 질문이 있으면 [고객 지원 받기](https://www.{DomainName}/docs/support/index.html#getting-customer-support)를 참조하십시오. 

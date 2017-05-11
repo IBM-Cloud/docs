@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-08-30"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 # Integrando-se ao IBM DevOps
 {: #integratingdevops}
 
-*Última atualização: 30 de agosto de 2016*
-{: .last-updated}
 
 É possível integrar o {{site.data.keyword.GlobalizationPipeline_short}} ao {{site.data.keyword.jazzhub_short}} para automatizar a tradução da UI do seu
 aplicativo, economizando tempo e reduzindo operações de gerenciamento de tradução manual. Consulte [este vídeo](https://www.youtube.com/watch?v=sSrIUjRbXYQ) e aprenda

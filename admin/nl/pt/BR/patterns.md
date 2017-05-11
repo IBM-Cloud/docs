@@ -62,7 +62,7 @@ A tabela a seguir fornece um resumo de alguns dos elementos chave.
 || Contém um ou mais membros da equipe. Cada usuário já deve ser um membro da equipe na organização proprietária. Uma ou mais funções podem ser concedidas a cada membro da equipe. |
 | Membro da Equipe   | Pode ser incluído em uma ou mais organizações e espaços entre contas diferentes. |
 || Pode ter mais de uma função dentro da mesma organização, espaço ou ambos. | 
-{:caption="Table 1. Description of key elements" caption-side="top"}
+{:caption="Tabela 1. Descrição de elementos chave" caption-side="top"}
 
 ## Determinando seu ambiente {{site.data.keyword.Bluemix_notm}}
 {: #bpimplementation}

@@ -13,45 +13,46 @@ lastupdated: "2017-02-16"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Logging for CF apps in Dedicated and Local
+# Criação de log para apps CF no Dedicated e Local
 {: #hybrid_apps_logs_ov}
 
-In {{site.data.keyword.Bluemix_dedicated_notm}} and {{site.data.keyword.Bluemix_local_notm}}, Cloud Foundry apps come with built-in logging. You can review the data that is collected from your apps on the {{site.data.keyword.Bluemix_notm}} console.
+No {{site.data.keyword.Bluemix_dedicated_notm}} e {{site.data.keyword.Bluemix_local_notm}}, os apps do Cloud Foundry são fornecidos com a criação de log integrada. É possível revisar os dados que são coletados de seus apps no console do {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
 
-Cloud Foundry apps use Cloud Foundry loggregator to monitor and forward logs from outside of the app. You don't need to install agents inside of the app.
+Os apps do Cloud Foundry usam o loggregator do Cloud Foundry para monitorar e encaminhar logs de fora do app. Não é necessário instalar os agentes dentro do app.
 
-## Hardware requirements
+## requisitos
+de hardware
 
 
-| **Requirement** |    **1 node**     | **3 nodes for high availability** |
+| **Requisitos** |    **1 nó**     | **3 nós para alta disponibilidade** |
 |-----------------|-------------------|-------------------|
 | vCPU | 19 | 57 |
-| Memory | 80 GB | 240 GB |
-| Local storage | 2.98 TB | 8.94 TB |
-{: caption="Table 2. Logging hardware requirements for {{site.data.keyword.Bluemix_local_notm}}" caption-side="top"}
+| Memória | 80 GB | 240 GB |
+| Armazenamento local | 2,98 TB | 8,94 TB |
+{: caption="Tabela 2. Requisitos de hardware de criação de log para {{site.data.keyword.Bluemix_local_notm}}" caption-side="top"}
 
-## Setup
+## Configuração
 
-In {{site.data.keyword.Bluemix_dedicated_notm}} and {{site.data.keyword.Bluemix_local_notm}}, logs are active for all apps by default. To view information about reading standard logs, see [Logging for apps running on Cloud Foundry](../logging_cf_apps.html#logging_bluemix_cf_apps). In addition, advanced logging can be enabled in {{site.data.keyword.Bluemix_dedicated_notm}} and {{site.data.keyword.Bluemix_local_notm}} environments.
+No {{site.data.keyword.Bluemix_dedicated_notm}} e {{site.data.keyword.Bluemix_local_notm}}, os logs estão ativos para todos os apps por padrão. Para visualizar informações sobre leitura de logs padrão, veja [Criação de log para apps em execução no Cloud Foundry](../logging_cf_apps.html#logging_bluemix_cf_apps). Além disso, a criação de log avançada pode ser ativada nos ambientes do {{site.data.keyword.Bluemix_dedicated_notm}} e {{site.data.keyword.Bluemix_local_notm}}.
 
-* To confirm that advanced logging is enabled in your {{site.data.keyword.Bluemix_dedicated_notm}} and {{site.data.keyword.Bluemix_local_notm}} environments, follow the steps in [Viewing logs](#hybrid_apps_logs_dash). If you do not have the **Advanced View** button, then this feature is not enabled.
+* Para confirmar se a criação de log avançada está ativada nos ambientes do {{site.data.keyword.Bluemix_dedicated_notm}} e {{site.data.keyword.Bluemix_local_notm}}, siga as etapas em [Visualizando logs](#hybrid_apps_logs_dash). Se você não tiver o botão **Visualização avançada**, esse recurso não será ativado.
 
-* To add advanced logging to your environment, follow the steps in the [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) or [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local) documentation.
+* Para incluir a criação de log avançada em seu ambiente, siga a etapas na documentação do [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) ou [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local).
 
-## Log retention
+## Retenção de log
 
-In {{site.data.keyword.Bluemix_dedicated_notm}} and {{site.data.keyword.Bluemix_local_notm}} Cloud Foundry apps, log data is stored for 30 days by default.
+Nos apps do Cloud Foundry {{site.data.keyword.Bluemix_dedicated_notm}} e {{site.data.keyword.Bluemix_local_notm}}, os dados do log são armazenados por 30 por padrão.
 
-## Viewing logs for Cloud Foundry apps in Dedicated and Local
+## Visualizando logs para apps Cloud Foundry no Dedicated e Local
 {: #hybrid_apps_logs_dash}
 
-You can review logs for the apps that you are running on {{site.data.keyword.Bluemix_dedicated_notm}} and {{site.data.keyword.Bluemix_local_notm}}.
+É possível revisar os logs para os apps que você está executando no {{site.data.keyword.Bluemix_dedicated_notm}} e {{site.data.keyword.Bluemix_local_notm}}.
 {:shortdesc}
 
-To view your app logs, follow these steps.
-1. Select a running app.
-2. Click **Logs**. In the **Logs** view, you can view logs from your running app..
-4. Click the **Advanced View** button. **Advanced View** shows a more detailed view of the logs by using Kibana, a visualization tool that uses logs and time-stamped data to create custom visualizations. For more information about using the advanced view, see the [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html) documentation.
+Para visualizar os logs de app, siga estas etapas.
+1. Selecione um app em execução.
+2. Clique em **Logs**. Na visualização **Logs**, é possível visualizar os logs de seu app em execução.
+4. Clique no botão **Visualização avançada**. **Visualização avançada** mostra uma visualização mais detalhada dos logs usando o Kibana, uma ferramenta de visualização que usa logs e dados com registro de data e hora para criar visualizações customizadas. Para obter informações adicionais sobre o uso da visualização avançada, consulte a documentação do [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html).
 
-Next, you can customize a Kibana dashboard. See [Analyzing logs in Kibana](../logging_view_kibana3.html#analyzing_logs_Kibana3) for more information.
+Em seguida, é possível customizar um painel do Kibana. Veja [Analisando logs em Kibana](../logging_view_kibana3.html#analyzing_logs_Kibana3) para obter mais informações.

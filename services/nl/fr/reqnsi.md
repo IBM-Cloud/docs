@@ -44,13 +44,12 @@ présente les services de deux façons : par catégorie de services et par type 
 |Tiers	|Service fourni par une société autre qu'IBM.	|Le support des services de tiers est assuré par le fournisseur de service. Si IBM examine un problème et détermine qu'il s'agit d'un défaut d'un service de tiers, elle n'est pas obligée de fournir un correctif. IBM partagera son analyse avec le fournisseur de service de tiers si nécessaire.|
 |Communauté	|Service fourni par une communauté open source.	|Le support des services de communauté est assuré par la communauté des développeurs {{site.data.keyword.Bluemix_notm}}. Si IBM examine un problème et détermine qu'il s'agit d'un défaut d'un service de communauté, elle n'est pas obligée de fournir un correctif.|
 |Bêta	|Service qui n'est pas prêt pour la phase de production et qui se trouve au stade d'essai de développement. Un service bêta peut aider les équipes de développement et marketing à évaluer la valeur d'un service avant de le rendre généralement disponible.	|Les problèmes identifiés comme défauts dans un service bêta fourni par IBM sont pris en charge, mais IBM n'est pas obligée de fournir un correctif. De plus, le ticket de problème sera associé à une gravité de 3 ou 4 si applicable. Pour des informations sur la gravité des tickets, voir [Contacter le service de support](/docs/support/index.html#contacting-bluemix-support).|
-{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} information du service de support" caption-side="top"}
+{: caption="Tableau 1. Informations de support des services Bluemix" caption-side="top"}
 
 
 
 
-{{site.data.keyword.Bluemix_notm}}
-propose également des services expérimentaux que vous pouvez essayer. Pour afficher tous les services expérimentaux, les conteneurs boilerplate et les
+{{site.data.keyword.Bluemix_notm}} propose également des services expérimentaux que vous pouvez essayer. Pour afficher tous les services expérimentaux, les conteneurs boilerplate et les
 contextes d'exécution, connectez-vous à {{site.data.keyword.Bluemix_notm}}, faites défiler le catalogue jusqu'à la fin, puis cliquez sur le
 **catalogue {{site.data.keyword.Bluemix_notm}} Lab**.
 
@@ -120,7 +119,7 @@ services qui sont fournis par IBM.
 |{{site.data.keyword.manda}}			|Oui		|Oui		|Non|
 |{{site.data.keyword.mqa}}			|Oui		|Oui		|Non|
 |{{site.data.keyword.mql}}			|Oui		|Oui		|Non|
-|{{site.data.keyword.nlclassifierlshort}} 	|Oui 		|Oui 		|Oui|
+|{{site.data.keyword.nlclassifiershort}} 	|Oui 		|Oui 		|Oui|
 |{{site.data.keyword.objectstorageshort}}	|Oui		|Non		|Non|
 |{{site.data.keyword.personalityinsightsshort}}	|Oui		|Oui		|Oui|
 |{{site.data.keyword.mobilepush}}		|Oui		|Oui		|Non|
@@ -147,7 +146,7 @@ services qui sont fournis par IBM.
 |{{site.data.keyword.workloadscheduler}}	|Oui		|Oui		|Non|
 |{{site.data.keyword.xpagesservice_short}}	|Oui		|Oui		|Non|
 *Tableau 2. Disponibilité des services*
-{: caption="Table 2. Service availability" caption-side="top"}
+{: caption="Tableau 2. Disponibilité des services" caption-side="top"}
 
 
 
@@ -193,8 +192,7 @@ générer des résultats imprévisibles.
 
 Si vous utilisez l'interface utilisateur {{site.data.keyword.Bluemix_notm}} pour demander une instance de service, procédez comme suit :
 
-1. Dans le **catalogue** {{site.data.keyword.Bluemix_notm}}, cliquez sur la vignette du service à ajouter. La page des détails du
-service s'ouvre.
+1. Dans le **catalogue** {{site.data.keyword.Bluemix_notm}}, cliquez sur la vignette du service à ajouter. La page des détails du service s'ouvre.
 
 2. Dans le panneau Ajout de service, sélectionnez l'application à laquelle lier cette instance de service dans la liste **Appli**.
 

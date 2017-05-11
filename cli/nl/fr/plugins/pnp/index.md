@@ -18,7 +18,7 @@ Utilisez l'interface de ligne de commande d'appairage de réseau privé pour con
 
 Le plug-in d'interface de ligne de commande d'appairage de réseau privé est disponible pour les systèmes d'exploitation Windows, MAC et Linux. Assurez-vous d'utiliser le plug-in qui vous convient.
 
-Avant de commencer, créez des espaces Bluemix. Assurez-vous que chaque conteneur dans un espace dispose d'une adresse IP provenant d'un réseau différent. Pour des détails, voir [Using your own private IP address](https://www.{DomainName}/docs/containers/container_security_network.html#container_cli_ips_byoip).
+Avant de commencer, créez des espaces Bluemix. Assurez-vous que chaque conteneur dans un espace dispose d'une adresse IP provenant d'un réseau différent. Pour des détails, voir [Using your own private IP address](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip).
 
 **Remarque :** si vous avez utilisé l'appairage de réseau privé avec un espace Bluemix et devez supprimer l'espace, supprimez d'abord les connexions d'appairage de réseau privé dans cet espace.
 
@@ -87,7 +87,7 @@ Les commandes ci-après sont prises en charge. Utilisez la commande `bluemix net
 | pnp-create  | Crée une connexion d'appairage de réseau privé   |
 | pnp-delete  | Supprime une connexion d'appairage de réseau privé   |
 | pnp-show    | Répertorie toutes les connexions d'appairage de réseau privé  |
-{: caption="Table 1. Private network peering commands" caption-side="top"}
+{: caption="Tableau 1. Commandes d'appairage de réseau privé" caption-side="top"}
 
 
 ### Syntaxe de la commande

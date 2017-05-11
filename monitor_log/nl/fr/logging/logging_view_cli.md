@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-01"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -39,17 +39,7 @@ Pour afficher les journaux qui vous intéressent ou exclure le contenu que vous 
 * Pour afficher les entrées des journaux d'une application Cloud Foundry qui contiennent des mots clés spécifiques, voir [Affichage d'entrées de journal contenant certains mots clés](logging_view_cli.html#partial_by_keyword_log_cli).
 
 
-## Analyse de journaux de conteneur Docker depuis l'interface CLI
-{: #analyzing_container_logs_cli}
-
-Utilisez la commande `cf ic logs` pour afficher les journaux d'un conteneur dans {{site.data.keyword.Bluemix_notm}}. Vous pouvez, par exemple, utiliser les journaux pour comprendre pourquoi un conteneur s'est arrêté ou pour examiner la sortie du conteneur. 
-
-Pour examiner les erreurs d'application de l'application s'exécutant dans un conteneur via la commande `cf ic logs`, l'application doit consigner ses journaux dans les flux de sortie standard (STDOUT) et d'erreur standard (STDERR). Si vous concevez votre application pour consignation dans ces flux de sortie standard, vous pouvez consulter les journaux via la ligne de commande même si le conteneur est arrêté ou en panne.
-
-Pour plus d'informations sur la commande `cf ic logs`, voir [Commande cf ic logs](/docs/containers/container_cli_reference_cfic.html#container_cli_reference_cfic__logs).
-
-
-## Affichage du journal d'une application Cloud Foundry
+### Affichage du journal d'une application Cloud Foundry
 {: #full_log_cli}
 
 Pour afficher tous les journaux disponibles pour une application Cloud Foundry, procédez comme suit :
@@ -61,7 +51,7 @@ Pour afficher tous les journaux disponibles pour une application Cloud Foundry, 
    <pre class="pre screen"><code>cf logs <var class="keyword varname">nom_app</var></code></pre>
    
    
-## Affichage des dernières entrées de journal d'une application Cloud Foundry
+### Affichage des dernières entrées de journal d'une application Cloud Foundry
 {: #tailing_log_cli}
 
 Pour afficher les derniers journaux disponibles pour une application Cloud Foundry, procédez comme suit :
@@ -75,7 +65,7 @@ Pour afficher les derniers journaux disponibles pour une application Cloud Found
 <div class="note tip"><span class="tiptitle">Astuce :</span> lorsque vous exécutez la commande <span class="keyword cmdname">cf push</span> ou <span class="keyword cmdname">cf start</span> dans une seule fenêtre de ligne de commande, vous pouvez entrer <samp class="ph codeph">cf logs nom_app --recent</samp> dans une autre fenêtre de ligne de commande pour afficher les journaux en temps réel. </div>
 
 
-## Affichage d'une section d'un journal Cloud Foundry
+### Affichage d'une section d'un journal Cloud Foundry
 {: #partial_log_cli}
 
 Pour afficher une partie des journaux disponibles pour une application Cloud Foundry pour une période donnée, procédez comme suit :
@@ -89,7 +79,7 @@ Pour afficher une partie des journaux disponibles pour une application Cloud Fou
     Pour plus d'informations sur l'option **cut**, entrez **cut --help**.
 
 
-## Affichage d'entrées de journal contenant certains mots clés
+### Affichage d'entrées de journal contenant certains mots clés
 {: #partial_by_keyword_log_cli}
 
 Pour afficher les entrées de journal contenant certains mots clés pour une application Cloud Foundry, procédez comme suit :
@@ -108,7 +98,7 @@ Par exemple, pour afficher les entrées de journal contenant le mot clé **APP**
 Pour plus d'informations sur l'option **grep**, entrez **grep --help**.
 
 
-## Journaux des applications Cloud Foundry
+### Journaux des applications Cloud Foundry
 {: #cf_app_logs_cli}
 
 Les journaux suivants sont disponibles pour une application Cloud Foundry après que vous l'avez déployée dans {{site.data.keyword.Bluemix}} :
@@ -131,5 +121,13 @@ Pour consulter ce journal, entrez la commande suivante : `cf files nom_applicati
 
 **Remarque :** pour des informations sur l'activation de la journalisation des applications, voir [Débogage d'erreurs d'exécution](/docs/debug/index.html#debugging-runtime-errors).
 
+## Analyse de journaux de conteneur Docker depuis l'interface CLI
+{: #analyzing_container_logs_cli}
+
+Utilisez la commande `cf ic logs` pour afficher les journaux d'un conteneur dans {{site.data.keyword.Bluemix_notm}}. Vous pouvez, par exemple, utiliser les journaux pour comprendre pourquoi un conteneur s'est arrêté ou pour examiner la sortie du conteneur. 
+
+Pour examiner les erreurs d'application de l'application s'exécutant dans un conteneur via la commande `cf ic logs`, l'application doit consigner ses journaux dans les flux de sortie standard (STDOUT) et d'erreur standard (STDERR). Si vous concevez votre application pour consignation dans ces flux de sortie standard, vous pouvez consulter les journaux via la ligne de commande même si le conteneur est arrêté ou en panne.
+
+Pour plus d'informations sur la commande `cf ic logs`, voir [Commande cf ic logs](/docs/containers/container_cli_reference_cfic.html#container_cli_reference_cfic__logs).
 
 

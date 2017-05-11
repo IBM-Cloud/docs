@@ -17,7 +17,7 @@ lastupdated: "2017-03-16"
 # Raccolta di dati di log non predefiniti da un contenitore
 {: #logging_containers_collect_data}
 
-Per acquisire i dati da ubicazioni log non predefinite in un contenitore, configura la variabile di ambiente **LOG_LOCATIONS** quando crei un contenitore.
+Per acquisire i dati da ubicazioni log non predefinite in un contenitore, configura la variabile di ambiente **LOG_LOCATIONS** quando crei un contenitore. 
 {:shortdesc}
 
 * Aggiungi la variabile di ambiente **LOG_LOCATIONS** con un percorso al file di log quando crei il contenitore. 
@@ -32,7 +32,7 @@ Completa le seguenti istruzioni per raccogliere i dati non predefiniti tramite l
 
     L'elenco di immagini visualizzate include le immagini fornite da {{site.data.keyword.IBM}} e le immagini archiviate nel tuo registro {{site.data.keyword.Bluemix_notm}} privato. 
 
-2. Definisci il tuo contenitore. Scegli il tipo, immetti un nome per il contenitore, selezionane la dimensione e definisci altri attributi come i dettagli dell'indirizzo IP e le porte. Per ulteriori informazioni, consulta [Crea e distribuisci un singolo contenitore tramite la IU {{site.data.keyword.Bluemix_notm}}](/docs/containers/container_single_ui.html). 
+2. Definisci il tuo contenitore. Scegli il tipo, immetti un nome per il contenitore, selezionane la dimensione e definisci altri attributi come i dettagli dell'indirizzo IP e le porte. Per ulteriori informazioni, vedi [Create and deploy a single container through the {{site.data.keyword.Bluemix_notm}} UI](/docs/containers/container_single_ui.html#gui). 
 
 3. Espandi la sezione **Opzioni avanzate** e seleziona **Aggiungi una nuova variabile di ambiente**.
 
@@ -41,9 +41,10 @@ Completa le seguenti istruzioni per raccogliere i dati non predefiniti tramite l
     Ad esempio, quando aggiungi un contenitore che si basa sull'ultima immagine Liberty, per analizzare il file di log *dpkg.log*, imposta il valore dell'ambiente sul seguente valore:
     
     <table>
+      <caption>Tabella 1. Valore di esempio ubicazioni log</caption>
       <tbody>
         <tr>
-          <th align="center">Nome variabile </th>
+          <th align="center">Nome variabile</th>
           <th align="center">Valore</th>
         </tr>
         <tr>
@@ -61,17 +62,18 @@ Viene visualizzato il dashboard del contenitore. Controlla che lo stato del cont
 ## Raccolta di dati di log non predefiniti tramite la CLI
 {: #logging_containers_collect_data_cli}
 
-Completa le seguenti istruzioni per raccogliere i dati di log non predefiniti tramite la CLI: 
+Completa le seguenti istruzioni per raccogliere i dati di log non predefiniti tramite la CLI:
 
 1. Configura un terminale per utilizzare la CLI {{site.data.keyword.containershort}}. Per ulteriori informazioni, consulta [Configurazione della CLI del servizio IBM Bluemix Container](/docs/containers/container_cli_cfic_install.html).
 
 2. Accedi alla CLI Cloud Foundry utilizzando il seguente comando: `cf login`. Immetti i tuoi ID, password, organizzazione e spazio {{site.data.keyword.Bluemix_notm}} quando ti viene richiesto. 
 
-    Per impostazione predefinita, sei collegato dalla regione Stati Uniti Sud o o dall'ultima regione da cui hai eseguito l'accesso.  
+    Per impostazione predefinita, sei collegato dalla regione Stati Uniti Sud o o dall'ultima regione da cui hai eseguito l'accesso. 
     
     Puoi includere l'opzione **–a** per accedere a una regione specifica in {{site.data.keyword.Bluemix_notm}}. Ad esempio, la seguente tabella elenca i comandi per regione:
 
     <table>
+      <caption>Tabella 2. Comandi per regione</caption>
       <tbody>
         <tr>
           <th align="center">Regione</th>
@@ -85,11 +87,11 @@ Completa le seguenti istruzioni per raccogliere i dati di log non predefiniti tr
           <td align="left">Regno Unito</td>
           <td align="left">cf login -a api.eu-gb.bluemix.net</td>
         </tr>
-        <tr>
-          <td align="left">Sydney</td>
-          <td align="left">cf login -a api.au-syd.bluemix.net</td>
+	 <tr>
+          <td align="left">Francoforte</td>
+          <td align="left">cf login -a api.eu-de.bluemix.net</td>
         </tr>
-      </tbody>
+       </tbody>
     </table>
     
 
@@ -104,9 +106,10 @@ Completa le seguenti istruzioni per raccogliere i dati di log non predefiniti tr
     dove
     
      <table>
+      <caption>Tabella 3. Opzioni comando</caption>
       <tbody>
         <tr>
-          <th align="center">Opzione </th>
+          <th align="center">Opzione</th>
           <th align="center">Descrizione</th>
         </tr>
         <tr>
@@ -119,7 +122,7 @@ Completa le seguenti istruzioni per raccogliere i dati di log non predefiniti tr
         </tr>
         <tr>
           <td align="left">--name</td>
-          <td align="left">Definisce il nome del contenitore. </td>
+          <td align="left">Definisce il nome del contenitore.</td>
         </tr>
 	<tr>
           <td align="left">registry.domain_name</td>

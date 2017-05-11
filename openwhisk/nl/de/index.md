@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-21"
+lastupdated: "2017-04-25"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -23,7 +22,7 @@ Die Ausführungszeit wird Ihnen in Millisekunden (aufgerundet auf die nächsten 
 
 Dieses Programmiermodell ist eine perfekte Anpassung an Microservices, mobile Apps, IoT-Apps und viele andere Apps – Sie erhalten sofort nutzbare Auto-Scaling- und Lastverteilungsfunktionen, ohne Cluster, Lastverteilungsfunktionen, HTTP-Plug-ins usw. manuell konfigurieren zu müssen. Wenn Sie dann auch noch in {{site.data.keyword.openwhisk}} arbeiten, haben Sie außerdem den Vorteil, keinen Verwaltungsaufwand treiben zu müssen, da sämtliche Hardware, Netzfunktionalität und Software von IBM gewartet wird. Sie müssen nur noch den Code bereitstellen, den Sie ausführen wollen, und an {{site.data.keyword.openwhisk}} übergeben. Der Rest geht wie von selbst. Eine gute Einführung in das serverunabhängige Programmiermodell finden Sie im [Blog von Martin Fowler](https://martinfowler.com/articles/serverless.html).
 
-Sie können auch den [Apache OpenWHisk-Quellcode](https://github.com/openwhisk/openwhisk) erhalten und das System selbst ausführen.
+Sie können auch den [Apache OpenWhisk-Quellcode](https://github.com/openwhisk/openwhisk) erhalten und das System selbst ausführen. 
 
 Weitere Einzelheiten zur Funktionsweise von {{site.data.keyword.openwhisk_short}} finden Sie unter [Informationen zu {{site.data.keyword.openwhisk_short}}](./openwhisk_about.html).
 
@@ -33,14 +32,14 @@ Beide Komponenten haben ein ähnliches Leistungsspektrum in Hinblick auf die Ent
 ## Im eigenen Browser entwickeln
 {: #openwhisk_start_editor}
 
-Testen Sie {{site.data.keyword.openwhisk_short}} in Ihrem [Browser](https://console.{DomainName}/openwhisk/editor){: new_window}, um Aktionen zu erstellen, Aktionen mit Auslösern zu automatisieren und öffentliche Pakete zu untersuchen. 
-Besuchen Sie die Seite [Weitere Informationen](https://console.{DomainName}/openwhisk/learn){: new_window}, auf der Sie eine Schnelleinführung zur OpenWhisk-Benutzerschnittstelle finden.
+Testen Sie {{site.data.keyword.openwhisk_short}} in Ihrem [Browser](https://console.{DomainName}/openwhisk/editor), um Aktionen zu erstellen, Aktionen mit Auslösern zu automatisieren und öffentliche Pakete zu untersuchen. 
+Besuchen Sie die Seite [Weitere Informationen](https://console.{DomainName}/openwhisk/learn), auf der Sie eine Schnelleinführung zur OpenWhisk-Benutzerschnittstelle finden.
 
 ## Über die CLI entwickeln
 {: #openwhisk_start_configure_cli}
 
 Sie können Ihren Namensbereich und Ihren Berechtigungsschlüssel über die {{site.data.keyword.openwhisk_short}}-Befehlszeilenschnittstelle (CLI) einrichten.
-Navigieren Sie zu [CLI konfigurieren](https://new-console.{DomainName}/openwhisk/cli){: new_window} und gehen Sie gemäß den Anweisungen für die Installation vor.
+Navigieren Sie zu [CLI konfigurieren](https://console.{DomainName}/openwhisk/cli) und gehen Sie gemäß den Anweisungen für die Installation vor.
 
 ## Übersicht
 {: #openwhisk_start_overview}
@@ -123,15 +122,15 @@ Führen Sie die folgenden Schritte aus, um dieses Beispiel zu verwenden:
 
 Sie können darüber hinaus die ereignisgesteuerten Funktionen in {{site.data.keyword.openwhisk_short}} verwenden, um diese Aktion als Reaktion auf Ereignisse aufzurufen. Gehen Sie wie im [Beispiel für den Service Alarm](./openwhisk_packages.html#openwhisk_packages_trigger) beschrieben vor, um eine Ereignisquelle zu konfigurieren, sodass die Aktion `hello` jedes Mal aufgerufen wird, wenn ein regelmäßiges Ereignis generiert wird.
 
-Eine vollständige Liste von [OpenWhisk-Lernprogrammen und -Beispielen finden Sie hier](https://github.com/openwhisk/openwhisk-external-resources#sample-applications). Neben Beispielen enthält dieses Repository auch Links zu Artikeln, Präsentationen, Podcasts, Videos und anderen Ressourcen zu {{site.data.keyword.openwhisk_short}}. 
+Eine vollständige Liste von [OpenWhisk-Lernprogrammen und -Beispielen finden Sie hier](https://github.com/openwhisk/openwhisk-external-resources#sample-applications). Neben Beispielen enthält dieses Repository auch Links zu Artikeln, Präsentationen, Podcasts, Videos und anderen Ressourcen zu {{site.data.keyword.openwhisk_short}}.
 
 ## API-Referenz
 {: #openwhisk_start_api notoc}
 * [REST-API-Dokumentation](./openwhisk_reference.html#openwhisk_ref_restapi)
-* [REST-API](https://new-console.{DomainName}/apidocs/98){:new_window}
+* [REST-API](https://console.{DomainName}/apidocs/98)
 
 ## Zugehörige Links
 {: #general notoc}
-* [Entdecken Sie: {{site.data.keyword.openwhisk_short}}](http://www.ibm.com/cloud-computing/bluemix/openwhisk/){:new_window}
-* [{{site.data.keyword.openwhisk_short}} auf IBM developerWorks](https://developer.ibm.com/openwhisk/){:new_window}
-* [Apache {{site.data.keyword.openwhisk_short}}-Projektwebsite](http://openwhisk.org){:new_window}
+* [Entdecken Sie: {{site.data.keyword.openwhisk_short}}](http://www.ibm.com/cloud-computing/bluemix/openwhisk/)
+* [{{site.data.keyword.openwhisk_short}} auf IBM developerWorks](https://developer.ibm.com/openwhisk/)
+* [Apache {{site.data.keyword.openwhisk_short}}-Projektwebsite](http://openwhisk.org)

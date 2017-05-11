@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-01"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -39,17 +39,7 @@ Per visualizzare i log che ti interessano o per escludere i contenuti che non vu
 * Per visualizzare le voci di log di un'applicazione Cloud Foundry che contengono specifiche parole chiave, vedi [Visualizzazione di voci di log contenenti determinate parole chiave](logging_view_cli.html#partial_by_keyword_log_cli).
 
 
-## Analisi dei log del contenitore Docker dalla CLI 
-{: #analyzing_container_logs_cli}
-
-Utilizza il comando `cf ic logs` per visualizzare i log da un contenitore in {{site.data.keyword.Bluemix_notm}}. Ad esempio, puoi usare i log per analizzare il motivo per cui un contenitore si è arrestato o per rivedere l'aout del contenitore. 
-
-Per visualizzare gli errori dell'applicazione in esecuzione in un contenitore tramite il comando `cf ic logs`, l'applicazione deve scrivere i propri log nei flussi di output dell'output standard (STDOUT) e dell'errore standard (STDERR). Se progetti la tua applicazione per scrivere questi flussi di output standard, puoi visualizzare i log tramite la riga di comando anche se il contenitore viene spento o ha un arresto anomalo.
-
-Per ulteriori informazioni sui comandi `cf ic logs`, consulta [Comando cf ic logs](/docs/containers/container_cli_reference_cfic.html#container_cli_reference_cfic__logs).
-
-
-## Visualizzazione dei log per un'applicazione Cloud Foundry
+### Visualizzazione dei log per un'applicazione Cloud Foundry
 {: #full_log_cli}
 
 Per visualizzare tutti i log disponibili per un'applicazione Cloud Foundry, completa la seguente procedura:
@@ -61,7 +51,7 @@ Per visualizzare tutti i log disponibili per un'applicazione Cloud Foundry, comp
    <pre class="pre screen"><code>cf logs <var class="keyword varname">nomeapplicazione</var></code></pre>
    
    
-## Visualizzazione delle ultime voci di log per un'applicazione Cloud Foundry
+### Visualizzazione delle ultime voci di log per un'applicazione Cloud Foundry
 {: #tailing_log_cli}
 
 Per visualizzare i log più recenti disponibili per un'applicazione Cloud Foundry, completa la seguente procedura:
@@ -78,7 +68,7 @@ logs nomeapplicazione --recent</samp> in un'altra finestra di riga di comando pe
 i log in tempo reale. </div>
 
 
-## Visualizzazione di una sezione di un log Cloud Foundry
+### Visualizzazione di una sezione di un log Cloud Foundry
 {: #partial_log_cli}
 
 Per visualizzare una parte dei log disponibili per un'applicazione Cloud Foundry all'interno di un intervallo di tempo, completa la seguente procedura:
@@ -92,7 +82,7 @@ Per visualizzare una parte dei log disponibili per un'applicazione Cloud Foundry
     Per ulteriori informazioni sull'opzione **cut**, immetti **cut --help**.
 
 
-## Visualizzazione di voci di log contenenti determinate parole chiave
+### Visualizzazione di voci di log contenenti determinate parole chiave
 {: #partial_by_keyword_log_cli}
 
 Per visualizzare le voci di log che contengono determinate parole chiave per un'applicazione Cloud Foundry, completa la seguente procedura:
@@ -112,7 +102,7 @@ Ad esempio, per visualizzare le voci di log che contengono la parola chiave **AP
 Per ulteriori informazioni sull'opzione **grep**, immetti **grep --help**.
 
 
-## Log dell'applicazione Cloud Foundry
+### Log dell'applicazione Cloud Foundry
 {: #cf_app_logs_cli}
 
 I seguenti log sono disponibili per un'applicazione Cloud Foundry dopo averla distribuita in {{site.data.keyword.Bluemix}}:
@@ -139,5 +129,13 @@ Per visualizzare questo log, immetti il seguente comando: `cf files appname logs
 
 **Nota:** per informazioni su come abilitare la registrazione dell'applicazione, vedi [Debug degli errori di runtime](/docs/debug/index.html#debugging-runtime-errors).
 
+## Analisi dei log del contenitore Docker dalla CLI
+{: #analyzing_container_logs_cli}
+
+Utilizza il comando `cf ic logs` per visualizzare i log da un contenitore in {{site.data.keyword.Bluemix_notm}}. Ad esempio, puoi usare i log per analizzare il motivo per cui un contenitore si è arrestato o per rivedere l'aout del contenitore. 
+
+Per visualizzare gli errori dell'applicazione in esecuzione in un contenitore tramite il comando `cf ic logs`, l'applicazione deve scrivere i propri log nei flussi di output dell'output standard (STDOUT) e dell'errore standard (STDERR). Se progetti la tua applicazione per scrivere questi flussi di output standard, puoi visualizzare i log tramite la riga di comando anche se il contenitore viene spento o ha un arresto anomalo.
+
+Per ulteriori informazioni sui comandi `cf ic logs`, consulta [Comando cf ic logs](/docs/containers/container_cli_reference_cfic.html#container_cli_reference_cfic__logs).
 
 

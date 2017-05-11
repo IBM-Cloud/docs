@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2017-04-11"
 
 
 ---
@@ -34,13 +34,13 @@ Além disso, há um conjunto de serviços que estão disponíveis como serviços
 |Incluído | [Tempos de execução do {{site.data.keyword.Bluemix_notm}}](/docs/cfapps/runtimes.html) | Use tempos de execução para colocar seu app funcionando rapidamente, sem necessidade de configurar e gerenciar as máquinas e os sistemas operacionais. Todos os tempos de execução do {{site.data.keyword.Bluemix_notm}} estão disponíveis para uso em sua instância do {{site.data.keyword.Bluemix_notm}} Local.|
 |Incluído | [{{site.data.keyword.autoscaling}}](/docs/services/Auto-Scaling/index.html)| Aumentar ou diminuir dinamicamente a capacidade de cálculo do aplicativo com base em políticas. Com esse serviço, você tem uso ilimitado em seu ambiente do {{site.data.keyword.Bluemix}} Local.|
 |Opcional | [{{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect/index.html) | O {{site.data.keyword.apiconnect_long}} integra o {{site.data.keyword.APIM}} e o IBM StrongLoop em uma única oferta que fornece uma solução abrangente para criar, executar, gerenciar e impingir APIs e microsserviços. |
-|Opcional | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | Execute os contêineres do Docker no {{site.data.keyword.Bluemix_notm}} Local. Contêineres são objetos de software virtuais que incluem todos os elementos que um aplicativo precisa executar. Um contêiner tem os benefícios do isolamento e da alocação de recursos, mas é mais móvel e eficiente do que, por exemplo, uma máquina virtual. Para obter informações sobre requisitos de hardware, consulte [IBM {{site.data.keyword.containershort}} em {{site.data.keyword.Bluemix_notm}} Dedicated e Bluemix Local](/docs/containers/container_dl.html). |
+|Opcional | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | Execute os contêineres do Docker no {{site.data.keyword.Bluemix_notm}} Local. Contêineres são objetos de software virtuais que incluem todos os elementos que um aplicativo precisa executar. Um contêiner tem os benefícios do isolamento e da alocação de recursos, mas é mais móvel e eficiente do que, por exemplo, uma máquina virtual. Para obter informações sobre requisitos de hardware, consulte [IBM {{site.data.keyword.containershort}} em {{site.data.keyword.Bluemix_notm}} Dedicated e Bluemix Local](/docs/containers/container_ov.html#container_dl). |
 |Opcional | [{{site.data.keyword.datacshort}}](/docs/services/DataCache/index.html#data_cache) | Esse serviço fornece uma grade de dados da memória que suporta cenários de armazenamento em cache distribuído para seus apps. Inclui 50 GB de cache na memória. |
 | Opcional (Beta) | [Registro de log](/docs/monitoringandlogging/cfapps_ml_logs_dedicated_ov.html#container_ml_logs_dedicated_ov) | Fornece logs para os aplicativos Cloud Foundry em sua interface com o usuário do {{site.data.keyword.Bluemix_notm}} e logs pesquisáveis e painéis em Kibana. |
 |Opcional | [{{site.data.keyword.mobilepush}}](/docs/services/mobilepush/index.html) | O {{site.data.keyword.mobilepush}} é um serviço que você pode usar para enviar notificações para iOS e dispositivo Android. É possível direcionar notificações para todos os usuários do aplicativo ou para um conjunto específico de usuários e dispositivos usando tags. É possível administrar dispositivos, tags e assinaturas. É possível também usar um SDK (kit de desenvolvimento de software) e interfaces de programação de aplicativo (APIs) Representational State Transfer (REST) para desenvolver ainda mais seus aplicativos cliente. |
 |Opcional | [{{site.data.keyword.sescashort}}](/docs/services/SessionCache/index.html#session_cache) | Para maior redundância, o {{site.data.keyword.sescashort}} fornece uma réplica de uma sessão armazenada no cache. Portanto, no caso de uma indisponibilidade de energia, seu aplicativo cliente manterá acesso à sessão no cache. O serviço suporta cenários de armazenamento em cache de sessão para aplicativos móveis e da web. |
 |Opcional | [{{site.data.keyword.iot_short}}](/docs/services/IoT/index.html) | Esse serviço permite que os apps se comuniquem e consumam dados coletados por seus dispositivos conectados, sensores e gateways. A oferta de base local inclui um ambiente inicial que permite executar uma versão privada do IBM {{site.data.keyword.iot_short}} dentro do ambiente local com uma capacidade de 100.000 dispositivos ou aplicativos conectados simultaneamente e 1.6 TB de troca de dados. |
-{: caption="Table 1. Local services and runtimes" caption-side="top"}
+{: caption="Tabela 1. Serviços locais e tempos de execução" caption-side="top"}
 {: #table01}
 
 
@@ -55,7 +55,7 @@ Há componentes opcionais que estão disponíveis para você comprar para escala
 |Aumento de capacidade de 50 GB de Dados e Sessão do {{site.data.keyword.Bluemix_notm}} | Um ambiente que permite implementar e executar as instâncias de Cache de Dados e Cache de Sessão até uma capacidade acumulativa de 50 GB. |
 |Aumento incremental do {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} Local | Um ambiente adicional para a oferta de serviço de base do {{site.data.keyword.iot_short}} Local, que permite executar uma versão privada do {{site.data.keyword.iot_short}} dentro do ambiente local com uma capacidade de 100.000 dispositivos ou aplicativos conectados simultaneamente e 0.5 TB de troca de dados. |
 |{{site.data.keyword.IBM_notm}} Instância de complemento do {{site.data.keyword.mobilepush}} Local | Um ambiente que permite a implementação e execução da instância do {{site.data.keyword.mobilepush}} com a capacidade para aceitar 300 solicitações adicionais por segundo. |
-{: caption="Table 2. Optional services components for purchase" caption-side="top"}
+{: caption="Tabela 2. Componentes de serviços opcionais para compra" caption-side="top"}
 {: #table02}
 
 | **Nome** | **Descrição** |
@@ -64,7 +64,7 @@ Há componentes opcionais que estão disponíveis para você comprar para escala
 |Tempos de execução do Cloud Foundry local com aumento de 16 GB de capacidade  | Uma extensão do ambiente dos tempos de execução do Cloud Foundry para fornecer uma capacidade extra de 16 GB de tempo de execução. |
 |Aumento de capacidade de 16 GB do {{site.data.keyword.containerlong}} local  | Uma extensão do ambiente do {{site.data.keyword.containerlong}} para fornecer uma capacidade extra de 16 GB. |
 |{{site.data.keyword.containerlong}} local de 64 GB de capacidade  | Ambiente do {{site.data.keyword.containerlong}} com 64 GB de capacidade. |
-{: caption="Table 3. Optional platform add-on components for purchase" caption-side="top"}
+{: caption="Tabela 3. Componentes opcionais de complemento de plataforma para compra" caption-side="top"}
 {: #table03}
 
 **Nota**: Os componentes do {{site.data.keyword.Bluemix_notm}} Local podem indicar uma capacidade configurada específica, como gigabytes ou transações por segundo. Como a capacidade real na prática para qualquer configuração do serviço de nuvem varia dependendo de vários fatores, a capacidade real pode ser mais ou menos que a capacidade configurada.
@@ -126,7 +126,7 @@ Se você tiver uma instância privada de um serviço do {{site.data.keyword.Blue
 |{{site.data.keyword.iot_short}}		|Sim		|Sim		|Não|
 |{{site.data.keyword.weather_short}}		|Sim		|Sim		|Sim|
 |{{site.data.keyword.workloadscheduler}}	|Sim		|Sim		|Sim |
-{: caption="Table 4. Services available for syndication from {{site.data.keyword.Bluemix_notm}} Public by region" caption-side="top"}
+{: caption="Tabela 4. Serviços disponíveis para organização do Bluemix Public por região" caption-side="top"}
 {: #table04}
 
 **Observação**: os serviços de terceiros não são incluídos na tabela. Verifique seu catálogo para obter as opções de serviço de terceiros.
@@ -396,7 +396,7 @@ A fase de concepção é usada para estabelecer o ambiente do {{site.data.keywor
 |Revisar a infraestrutura física | Revisar instalações físicas que hospedam os componentes da solução para ameaças e revisão de controles de segurança para proteger o datacenter. | Cliente |
 |Inspecionar software de monitoramento | Inspecionar componentes de monitoramento e gerenciamento, conforme definido no plano de escalada e de determinação de problema. | Cliente |
 |Inspecionar sistema operacional | Inspecionar para assegurar-se de que a imagem do sistema operacional atenda aos padrões de conformidade. A {{site.data.keyword.IBM_notm}} fornece acesso à imagem do OS. | A {{site.data.keyword.IBM_notm}} e o cliente compartilham a responsabilidade |
-{: caption="Table 5. Inception phase tasks" caption-side="top"}
+{: caption="Tabela 5. Tarefas da fase de concepção" caption-side="top"}
 
 A fase seguinte é a de progressão. A fase de progressão descreve o relacionamento colaborativo em andamento, entre você e a IBM. Os objetivos principais dessa fase incluem os itens a seguir:
 
@@ -419,7 +419,7 @@ A fase seguinte é a de progressão. A fase de progressão descreve o relacionam
 |Relato de status, coordenação de auditoria e reuniões de conformidade  | Concluir relato de status, coordenação de auditoria externa e representação em reuniões de status de revisão de conformidade. | {{site.data.keyword.IBM_notm}} |
 |Verificação de emprego e de necessidade de negócios | Verificação completa do emprego trimestralmente e verificação da necessidade contínua de negócios para representantes {{site.data.keyword.IBM_notm}} que possuem acesso ao ambiente do cliente. | {{site.data.keyword.IBM_notm}} |
 |Resolução de vulnerabilidades de segurança | Resolver vulnerabilidades de segurança relatadas na plataforma. | {{site.data.keyword.IBM_notm}} |
-{: caption="Table 6. Progression phase tasks" caption-side="top"}
+{: caption="Tabela 6. Tarefas da fase de progressão" caption-side="top"}
 
 O estágio final da conclusão representa o término do relacionamento entre você e a {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}}. As tarefas principais dessa fase incluem os itens a seguir:
 
@@ -433,7 +433,7 @@ O estágio final da conclusão representa o término do relacionamento entre voc
 |Ambiente de desatribuição | Encerrar o acesso e as credenciais para o ambiente. | A {{site.data.keyword.IBM_notm}} e o cliente compartilham a responsabilidade |
 |Encerrar a retransmissão | Finalizar a conexão de retransmissão. | {{site.data.keyword.IBM_notm}} |
 |Reciclar a infraestrutura | Reciclar sua infraestrutura de acordo com as diretrizes da empresa. | Cliente |
-{: caption="Table 7. Completion phase tasks" caption-side="top"}
+{: caption="Tabela 7. Tarefas da fase de conclusão" caption-side="top"}
 
 
 ## Requisitos de infraestrutura do {{site.data.keyword.Bluemix_local_notm}}
@@ -452,11 +452,11 @@ Embora existam requisitos para o tipo e o tamanho do hardware disponível, é po
 <dd>
 ESXi é uma camada de virtualização que é executada em servidores físicos e que abstrai o processador, a memória, o armazenamento e os recursos em múltiplas máquinas virtuais. Escolha qualquer combinação que atenda aos totais de recurso a seguir, sob a condição de que a contagem núcleo física mínima por ESXi é oito. As seguintes especificações são apenas para o tempo de execução principal do {{site.data.keyword.Bluemix_notm}}.
 <ul>
-<li>32 núcleos físicos a 2.0 GHz ou mais cada</li>
-<li>512 GB de RAM física</li>
-<li>Tamanho total de armazenamento de dados de 7.5 TB
+<li>40 núcleos físicos a 2.0 GHz ou mais cada</li>
+<li>768 GB de RAM física</li>
+<li>Tamanho total do armazenamento de dados de 10 TB
 <ul>
-<li>Armazenamento de dados de 7 TB para manter {{site.data.keyword.Bluemix_notm}}</li>
+<li>Armazenamento de dados de 9,5 TB para manter o {{site.data.keyword.Bluemix_notm}}</li>
 <li>500 GB de armazenamento de dados para suspender a máquina virtual de concepção</li>
 </ul>
 </li>
@@ -465,8 +465,8 @@ ESXi é uma camada de virtualização que é executada em servidores físicos e 
 </dd>
 <dt>**Alta disponibilidade**</dt>
 <dd>
-Para suportar uma única falha de nó, deve-se ter n+1 ESXi. Por exemplo, se o núcleo 32 e 512 GB de memória for encontrado usando dois núcleos de 16x com servidores ESXi de 256 GB, você precisará de três desses servidores para suportar uma falha completa de um único nó.
-<p><strong>Nota:</strong> O administrador do VMware do cliente pode decidir forçar o failover de alta disponibilidade rigorosa no cluster para garantir os recursos. Se você optar por continuar sem failover de alta disponibilidade, poderá atender ao requisito mínimo de recurso de 32 núcleos e 512 GB.</p>
+Para suportar uma única falha de nó, deve-se ter n+1 ESXi. Por exemplo, se os 40 núcleos e os 768 GB de memória forem atendidos usando dois núcleos de 16x com servidores ESXi de 256 GB, você precisará de três desses servidores para suportar uma falha completa de um único nó.
+<p><strong>Nota:</strong> O administrador do VMware do cliente pode decidir forçar o failover de alta disponibilidade rigorosa no cluster para garantir os recursos. Se você escolher continuar sem failover de alta disponibilidade, será possível atender ao requisito mínimo de recurso de 40 núcleos e 768 GB.</p>
 </dd>
 <dt>**Rede**</dt>
 <dd>
@@ -647,7 +647,7 @@ Para implementar em um segundo local ou em vários locais, deve-se seguir um pro
 
 1. Ative um novo ambiente local para hospedar instâncias adicionais de seus aplicativos. Para criar um novo ambiente, entre em contato com a equipe de vendas da {{site.data.keyword.IBM_notm}} para iniciar o processo. Para obter mais informações sobre a configuração de uma instância local, consulte [Configurando o {{site.data.keyword.Bluemix_local_notm}}](../local/index.html#setuplocal). Deve-se efetuar login separadamente para acessar cada ambiente. Cada local físico dos ambientes hospedados deve ter uma separação mínima de 200 km do local original para assegurar disponibilidade.
 2. Obtenha o nome de domínio exclusivo no qual seu novo app implementado será hospedado. Por exemplo, se o domínio original for *mycompany.caeast.bluemix.net*, será possível criar um novo ambiente local com um novo domínio, como *mycompany.cawest.bluemix.net*, e implementar no novo domínio.
-3. Implemente o novo local sempre que você implementar o seu app original. Para obter mais informações sobre a implementação, consulte [Fazendo upload de seu app](/docs/starters/upload_app.html).
+3. Sempre que você implementar seu app original, implemente no novo local. Para obter mais informações sobre a implementação, consulte [Fazendo upload de seu app](/docs/starters/upload_app.html).
 
 
 #### Ativando um balanceador de carga global para o {{site.data.keyword.Bluemix_local_notm}}

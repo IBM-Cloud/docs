@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-10-14"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 # 從測試版移轉資源資料
 {: #globalizationpipeline_betaresourcedatamigration}
 
-*前次更新：2016 年 10 月 14 日*
-{: .last-updated}
 
 發行 GA 版本後，將於特定期間之後終止 {{site.data.keyword.GlobalizationPipeline_full}} 測試版。測試版實例中的使用者資料不會移至 GA 服務實例。若要保留 GA 之後的資料，您可以將資源資料匯出至檔案，然後匯入至新的實例。請注意，您無法使用服務儀表板來執行此作業。而且，將資源資料匯出至其中一種資源檔格式，將不會保留其他與資源項目相關聯的 meta 資料。
 

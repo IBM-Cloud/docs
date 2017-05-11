@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-16"
+lastupdated: "2017-02-22"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-02-16"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Analyse des journaux dans Kibana
+# Analyse de journaux dans Kibana 3 (obsolète)
 {: #analyzing_logs_Kibana3}
 
 Dans {{site.data.keyword.Bluemix}}, vous pouvez utiliser la plateforme de visualisation et d'analyse open source Kibana pour surveiller, rechercher, analyser et visualiser des données dans différents graphiques, par exemple, des diagrammes et des tableaux. Utilisez Kibana pour effectuer des tâches analytiques avancées.
@@ -25,7 +25,7 @@ Vous pouvez lancer Kibana en procédant de l'une des manières suivantes :
 
     Vous pouvez accéder à vos journaux pour une application CF spécifique dans Kibana, dans le contexte de cette application spécifique.
     
-    La requête utilisée pour filtrer les données affichées dans le tableau de bord extrait des entrées de journal pour l'application Cloud Foundry. Les informations de journal affichées par défaut par le tableau de bord Kibana sont toutes liées à une seule et même application Cloud Foundry et à toutes ses instances. Pour plus d'informations, voir [Accès au tableau de bord Kibana depuis le tableau de bord {{site.data.keyword.Bluemix}}](logging_view_kibana3.html#launch_Kibana_from_bluemix).
+    La requête utilisée pour filtrer les données affichées dans le tableau de bord extrait des entrées de journal pour l'application Cloud Foundry. Les informations de journal affichées par défaut par le tableau de bord Kibana sont toutes liées à une seule et même application Cloud Foundry et à toutes ses instances. Pour plus d'informations, voir [Accès au tableau de bord Kibana depuis le tableau de bord Bluemix](logging_view_kibana3.html#launch_Kibana_from_bluemix).
 
 * A partir d'un lien de navigateur direct
 
@@ -56,7 +56,7 @@ Après avoir personnalisé un tableau de bord, vous pouvez choisir l'une des act
 
 * Vous pouvez incorporer le tableau de bord dans une page Web. Pour pouvoir visualiser un tableau de bord incorporé, un utilisateur doit disposer des droits d'accès nécessaires pour accéder à Kibana.
 
-Pour plus d'informations, voir la documentation [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html).
+Pour plus d'informations, voir la documentation [Kibana ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}. 
 
 **Remarque :** Kibana 3 et Kibana 4 sont pris en charge. La version Kibana 3 est obsolète.
 
@@ -76,7 +76,7 @@ Pour visualiser les journaux d'une application Cloud Foundry dans Kibana, procé
 
 Si vous ne voyez aucun journal, ajustez le sélecteur de période situé dans l'en-tête.
 
-Pour plus d'informations sur la personnalisation d'un tableau de bord Kibana, voir [cet article de blogue](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/) ou la documentation [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html).
+Pour plus d'informations sur la personnalisation d'un tableau de bord Kibana, voir [l'article de blogue ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} ou la documentation [Kibana ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}. 
 
 ##  Accès au tableau de bord Kibana depuis un navigateur Web
 {: #launch_Kibana_from_browser}
@@ -91,7 +91,7 @@ Procédez comme suit pour ouvrir un tableau de bord Kibana depuis un navigateur 
 
 Si vous ne voyez aucun journal, ajustez le sélecteur de période situé dans l'en-tête.
 
-Pour plus d'informations sur la personnalisation d'un tableau de bord Kibana, voir [cet article de blogue](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/) ou la documentation [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html).
+Pour plus d'informations sur la personnalisation d'un tableau de bord Kibana, voir [l'article de blogue ![Icône de lien externe](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} our la documentation [Kibana ![Icône de lien externe](../icons/launch-glyph.svg "External link icon")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}. 
 
 
 

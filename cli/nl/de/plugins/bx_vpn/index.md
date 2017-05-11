@@ -15,19 +15,19 @@ lastupdated: "2016-06-20"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.vpn_short}}-Plug-in für {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle
+# VPN-Plug-in für {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle
 
 *Version:* 1.4.0
 
-Sie können den {{site.data.keyword.vpn_full}}-Service mit der Befehlszeilenschnittstelle konfigurieren und verwalten. Das Plug-in für die {{site.data.keyword.vpn_short}}-Befehlszeilenschnittstelle ist in zwei Versionen verfügbar: für die Verwendung mit dem Plug-in für die Cloud Foundry-Befehlszeilenschnittstelle und für die Verwendung mit dem Plug-in für die {{site.data.keyword.Bluemix}}-Befehlszeilenschnittstelle. Von beiden Versionen des Plug-ins werden dieselben Funktionen bereitgestellt.
+Sie können den {{site.data.keyword.vpn_full}}-Service mit der Befehlszeilenschnittstelle konfigurieren und verwalten. Das CLI-Plug-in für VPN ist in zwei Versionen verfügbar: für die Verwendung mit dem Plug-in für die Cloud Foundry-Befehlszeilenschnittstelle und für die Verwendung mit dem Plug-in für die {{site.data.keyword.Bluemix}}-Befehlszeilenschnittstelle. Von beiden Versionen des Plug-ins werden dieselben Funktionen bereitgestellt.
 {:shortdesc}
 
-Das {{site.data.keyword.vpn_short}}-Plug-in ist für Windows-, MAC- und Linux-Betriebssysteme verfügbar. Stellen Sie sicher, dass Sie das für Sie geeignete Plug-in verwenden.
+Das VPN-Plug-in ist für Windows-, MAC- und Linux-Betriebssysteme verfügbar. Stellen Sie sicher, dass Sie das für Sie geeignete Plug-in verwenden.
 
-Die nachfolgenden Anweisungen sind für das Plug-in für die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle vorgesehen. Informationen zur Verwendung des Plug-ins mit der Plug-in für die Cloud Foundry-Befehlszeilenschnittstelle (cf) finden Sie unter [{{site.data.keyword.vpn_short}}-CLI-Plug-in für cf-Befehlszeilenschnittstelle](../vpn/index.html).
+Die nachfolgenden Anweisungen sind für das Plug-in für die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle vorgesehen. Informationen zur Verwendung des Plug-ins mit der Plug-in für die Cloud Foundry-Befehlszeilenschnittstelle (cf) finden Sie unter [VPN-CLI-Plug-in für cf-Befehlszeilenschnittstelle](../vpn/index.html). 
 
 
-In der nachfolgenden Liste werden alle vom {{site.data.keyword.vpn_short}}-Plug-in für die Bluemix-Befehlszeilenschnittstelle unterstützten Befehle mit Namen, Optionen, Verwendungen, Voraussetzungen, Beschreibungen und Beispielen aufgeführt. Informationen zum Installieren des VPN-Plug-ins finden Sie unter [Bluemix-Befehlszeilenschnittstelle erweitern](../../index.html#cli_bluemix_ext).
+In der nachfolgenden Liste werden alle vom VPN-Plug-in für die Bluemix-Befehlszeilenschnittstelle unterstützten Befehle mit Namen, Optionen, Verwendungen, Voraussetzungen, Beschreibungen und Beispielen aufgeführt. Informationen zum Installieren des VPN-Plug-ins finden Sie unter [Bluemix-Befehlszeilenschnittstelle erweitern](../../index.html#cli_bluemix_ext).
 
 **Hinweis:** Unter *Voraussetzungen* wird aufgelistet, welche Aktionen vor der Verwendung des Befehls ausgeführt werden müssen. Zu den Voraussetzungen könnten eine oder mehrere der folgenden Aktionen gehören:
 <dl>

@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-07-13"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 # 在 {{site.data.keyword.Bluemix_notm}} 外部使用 {{site.data.keyword.GlobalizationPipeline_short}}
 {: #globalizationpipeline_external}
 
-*前次更新：2016 年 7 月 13 日*
-{: .last-updated}
 
 許多 {{site.data.keyword.Bluemix_notm}} 服務（包括 {{site.data.keyword.GlobalizationPipeline_short}}）都可以從內部部署應用程式管理環境或甚至從另一個雲端平台使用，而不需要管理 {{site.data.keyword.Bluemix_notm}} 上的應用程式。
 {:shortdesc}

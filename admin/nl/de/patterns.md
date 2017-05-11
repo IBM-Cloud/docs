@@ -62,7 +62,7 @@ Die folgende Tabelle enthält eine Zusammenfassung einiger Schlüsselelemente.
 || Enthält ein oder mehrere Teammitglieder. Jeder Benutzer muss bereits ein Teammitglied in der Eignerorganisation sein. Jedem Teammitglied können eine oder mehrere Rollen erteilt werden. |
 | Teammitglied   | Kann einer oder mehreren Organisationen und einem oder mehreren Bereichen über verschiedene Konten hinweg hinzugefügt werden. |
 || Kann mehrere Rollen innerhalb derselben Organisation und/oder desselben Bereichs innehaben. | 
-{:caption="Table 1. Description of key elements" caption-side="top"}
+{:caption="Tabelle 1. Beschreibung von Schlüsselelementen" caption-side="top"}
 
 ## {{site.data.keyword.Bluemix_notm}}-Umgebung bestimmen
 {: #bpimplementation}

@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-03-20"
+lastupdated: "2017-04-07"
 
 
 ---
@@ -58,7 +58,7 @@ bx cr api
 
 
 ## bx cr info
-Exibe o nome e a organização do registro no qual você estiver com login efetuado. 
+Exibe o nome e a organização do registro no qual você estiver com login efetuado.
 
 ```
 bx cr info
@@ -79,7 +79,7 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE]
 <dt>--format FORMAT</dt>
 <dd>(Opcional) Formata os elementos de saída usando um modelo Go.</dd>
 <dt>IMAGE</dt>
-<dd>O caminho completo do registro do {{site.data.keyword.Bluemix_short}} para a imagem que deseja inspecionar. Se uma tag não for especificada no caminho da imagem, a imagem identificada como `latest` será inspecionada. É possível inspecionar múltiplas imagens listando cada caminho de registro privado do {{site.data.keyword.Bluemix_short}} no comando com um espaço entre cada caminho.</dd>
+<dd>O caminho completo do registro do {{site.data.keyword.Bluemix_short}} para a imagem que você deseja inspecionar, que está no formato namespace/image:tag. Se uma tag não for especificada no caminho da imagem, a imagem identificada como `latest` será inspecionada. É possível inspecionar múltiplas imagens listando cada caminho de registro privado do {{site.data.keyword.Bluemix_short}} no comando com um espaço entre cada caminho.</dd>
 </dl>
 
 
@@ -105,7 +105,7 @@ Visualiza todas as imagens em sua organização do {{site.data.keyword.Bluemix_s
 
 
 ## bx cr image-rm
-Exclui uma imagem especificada do seu registro.
+Exclui uma imagem especificada de seu registro.
 
 ```
 bx cr image-rm IMAGE [IMAGE]
@@ -115,7 +115,7 @@ bx cr image-rm IMAGE [IMAGE]
 **Parâmetros**
 <dl>
 <dt>IMAGE</dt>
-<dd>O caminho completo do registro do {{site.data.keyword.Bluemix_short}} para a imagem que deseja remover. Se uma tag não for especificada no caminho da imagem, a imagem identificada como `latest` será excluída por padrão. É possível excluir múltiplas imagens listando cada caminho de registro privado do {{site.data.keyword.Bluemix_short}} no comando com um espaço entre cada caminho.</dd>
+<dd>O caminho completo do registro do {{site.data.keyword.Bluemix_short}} para a imagem que você deseja remover, que está no formato namespace/image:tag. Se uma tag não for especificada no caminho da imagem, a imagem identificada como `latest` será excluída por padrão. É possível excluir múltiplas imagens listando cada caminho de registro privado do {{site.data.keyword.Bluemix_short}} no comando com um espaço entre cada caminho.</dd>
 </dl>
 
 
@@ -163,5 +163,5 @@ bx cr namespace-rm NAMESPACE
 **Parâmetros**
 <dl>
 <dt>NAMESPACE</dt>
-<dd>O namespace que deseja remover. </dd>
+<dd>O namespace que deseja remover.</dd>
 </dl>

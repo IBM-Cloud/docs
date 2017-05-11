@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-08"
+lastupdated: "2017-03-27"
 
 ---
 
@@ -34,13 +34,13 @@ Puoi avviare Grafana dalla IU {{site.data.keyword.Bluemix_notm}} o direttamente 
 
 Le informazioni di account di gruppi e convenzioni di Docker sono utilizzate come meccanismo di base per la raccolta di dati di monitoraggio.
 
-**Conservazione delle metriche**
+## Conservazione delle metriche
 
-Viene raccolto fino a un punto dati al minuto. Le metriche del contenitore che non sono state scritte per 7 giorni vengono eliminate. 
+Viene raccolto fino a un punto dati al minuto. Le metriche del contenitore che non sono state scritte per 7 giorni vengono eliminate.
     
-**Ordinamento delle metriche**
+## Ordinamento delle metriche
 
-I dati vengono visualizzati e ordinati in base all'ID contenitore.  
+I dati vengono visualizzati e ordinati in base all'ID contenitore. 
 
 Dalla riga di comando, puoi eseguire il comando `cf ic ps` per visualizzare un elenco di ID del contenitore nel tuo registro delle immagini {{site.data.keyword.Bluemix_notm}} privato.
 

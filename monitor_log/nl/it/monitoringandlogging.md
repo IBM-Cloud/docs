@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-14"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-02-14"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Monitoraggio e registrazione
+# Panoramica
 {: #monitoringandlogging}
 
 {{site.data.keyword.Bluemix}} offre funzionalità di registrazione e di monitoraggio attraverso diversi servizi, come Cloud Foundry e {{site.data.keyword.containershort}}. Puoi sviluppare, eseguire e gestire le applicazioni in ogni runtime senza la complessità della creazione e manutenzione dell'infrastruttura che è tipicamente associata allo sviluppo e al lancio di un applicazione. 
@@ -28,6 +28,7 @@ Le funzionalità di registrazione {{site.data.keyword.Bluemix_notm}} sono integr
 Le funzionalità di monitoraggio e di registrazione sono disponibili nelle seguenti regioni:
 * Stati Uniti Sud
 * Regno Unito
+* Francoforte
 
 
 

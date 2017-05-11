@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -17,13 +17,12 @@ lastupdated: "2017-03-14"
 {:#monitoring_grafana}
 
 Crie um painel do Grafana customizado para exibir métricas para todos os contêineres que forem executados
-em um espaço de sua organização do {{site.data.keyword.Bluemix}}.{:shortdesc}
+em um espaço de sua organização do {{site.data.keyword.Bluemix}}.
+{:shortdesc}
 
 Conclua as etapas a seguir para criar um painel do Grafana:
 
-1. Ative o Grafana em um navegador da web. Para obter mais informações, consulte
-[Acessando o painel do
-Grafana em um navegador da web](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_browser).
+1. Ative o Grafana em um navegador da web. Para obter mais informações, veja [Navegando para o painel do Grafana por meio de um navegador da web](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_browser).
 
 2. Salve o painel padrão.
 
@@ -44,12 +43,11 @@ régua de controle do menu Linha e, em seguida, clique no ícone do menu Linha q
      2. Clique em **Excluir linha** e, em seguida, clique em
 **Sim**.
      
-     Repita estas etapas para remover os Links de Documentação e as linhas do Primeiro Parágrafo.  
+     Repita estas etapas para remover os Links de Documentação e as linhas do Primeiro Parágrafo. 
      
-     No cabeçalho da página, ajuste o selecionador de tempo para assegurar-se de que possa ver dados. 
-O valor padrão é de 6 horas até alguns segundos atrás. Selecione **Últimos 30 dias**.
+     No cabeçalho da página, ajuste o selecionador de tempo para assegurar-se de que possa ver dados. O valor padrão é de 6 horas até alguns segundos atrás. Selecione **Últimos 30 dias**.
      
-6. Inclua uma visualização. 
+6. Inclua uma visualização.
 
     * Para incluir uma visualização de CPU inativa, consulte
 [Incluindo uma visualização de CPU inativa](monitoring_grafana.html#grafana_add_cpu).
@@ -76,7 +74,7 @@ exibida no lado da linha.
 Linha que desliza para fora.
 
 3. Clique em **Incluir painel**. Em seguida, clique em
-**gráfico**. 
+**gráfico**.
 
 4. Clique no título do gráfico para abrir o menu do painel e clique em **Editar**. 
 
@@ -102,7 +100,7 @@ exemplo, se desejar ver métricas apenas de contêineres únicos e excluir grupo
         
     4. Clique em **Selecionar métrica** e **cpu-0**.
         
-    5. Clique em **Selecionar métrica** e em **cpu-idle**.A visualização do gráfico é atualizada para exibir as métricas que correspondem a esta consulta.
+    5. Clique em **Selecionar métrica** e em **cpu-idle**. A visualização do gráfico é atualizada para exibir as métricas que correspondem a esta consulta.
     
 6. Opcional: customize a exibição do gráfico.
     

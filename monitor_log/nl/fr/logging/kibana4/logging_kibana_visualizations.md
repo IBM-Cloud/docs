@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-08"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-03-08"
 # Analyse de journaux dans Kibana à l'aide de visualisations 
 {:#logging_kibana_visualizations}
 
-Utilisez la page *Visualize* (Visualiser) dans Kibana pour créer des visualisations (par exemple, des graphiques et des tableaux) que vous pourrez utiliser pour analyser vos données de journal et comparer les résultats.
+Utilisez la page *Visualize* (Visualiser) dans Kibana pour créer des visualisations (par exemple, des graphiques et des tableaux) que vous pourrez utiliser pour analyser vos données de journal et comparer les résultats. 
 {:shortdesc}
 
 Vous pouvez utiliser une visualisation individuellement pour analyser vos journaux. 
@@ -36,19 +36,20 @@ Le tableau suivant répertorie différents types de visualisation :
 | Metric (métrique) | Affiche le nombre de hits, ou la moyenne exacte d'une zone numérique. |
 | Pie chart (graphique circulaire) | Affiche les différentes valeurs d'une zone. | 
 | Vertical bar chart (graphique à barres verticales) | Affiche des données à base chronologique et non chronologique. Permet de regrouper des données. |
+{: caption="Tableau 1. Types de visualisation" caption-side="top"}
 
 Sur la page Visualize, vous pouvez effectuer n'importe laquelle des tâches suivantes :
 
 | Tâche | Informations sur la tâche |
 |------|------------------|
-| [Create a new visualization (créer une nouvelle visualisation)](logging_kibana_visualizations.html#logging_k4_visualizations_create) | Vous pouvez créer une visualisation depuis une recherche que vous avez définie et sauvegardée depuis la page *Discover* (Reconnaître) ou depuis une nouvelle requête que vous définissez sur la page *Visualize* (Visualiser).  |
-| [Save a visualization (sauvegarder une visualisation)](logging_kibana_visualizations.html#logging_kibana_visualizations_save) | Vous pouvez sauvegarder des visualisations pour les réutiliser plus tard.
- |
+| [Create a new visualization (créer une nouvelle visualisation)](logging_kibana_visualizations.html#logging_k4_visualizations_create) | Vous pouvez créer une visualisation depuis une recherche que vous avez définie et sauvegardée depuis la page *Discover* (Reconnaître) ou depuis une nouvelle requête que vous définissez sur la page *Visualize* (Visualiser). |
+| [Save a visualization (sauvegarder une visualisation)](logging_kibana_visualizations.html#logging_kibana_visualizations_save) | Vous pouvez sauvegarder des visualisations pour les réutiliser plus tard. |
 | [Load a visualization (charger une visualisation)](logging_kibana_visualizations.html#logging_kibana_visualizations_reload) | Vous pouvez charger une visualisation pour mettre à jour ses données, la modifier ou analyser les données. |
 | [Delete a visualization (supprimer une visualisation)](logging_kibana_visualizations.html#logging_kibana_visualizations_delete) | Vous pouvez supprimer les visualisations superflues. |
 | [Export a visualization (exporter une visualisation)](logging_kibana_visualizations.html#logging_kibana_visualizations_export) | Vous pouvez exporter une visualisation sous forme de fichier JSON.  |
 | [Import a visualization (importer une visualisation)](logging_kibana_visualizations.html#logging_kibana_visualizations_import) | Vous pouvez importer une visualisation depuis un fichier JSON.  |
 | [Share a visualization (partager une visualisation)](logging_kibana_visualizations.html#logging_kibana_visualizations_share) | Vous pouvez partager une visualisation via votre source HTML ou via le tableau de bord Kibana.  |
+{: caption="Tableau 2. Tâches de gestion de visualisations" caption-side="top"}
 
 
 ## Création de visualisations depuis des requêtes dans Kibana
@@ -86,28 +87,6 @@ Pour créer une visualisation depuis la page Visualize, procédez comme suit :
 8. Ajoutez des sous-intervalles pour décomposer les données.
 
 Pour plus d'informations sur Kibana, reportez-vous au manuel [Kibana User Guide ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://www.elastic.co/guide/en/kibana/4.1/index.html){: new_window}.
- 
-## Sauvegarde d'une visualisation
-{:#logging_kibana_visualizations_save}
-
-Pour sauvegarder une visualisation sur la page Visualize, procédez comme suit :
-
-1. Dans la barre d'outil de la page Visualize, cliquez sur le bouton **Save Visualization** (Sauvegarder une visualisation) ![Sauvegarder une visualisation](images/k4_visualization_save_icon.jpg "Sauvegarder une visualisation").
-
-2. Indiquez un nom pour la visualisation.
-
-3. Cliquez sur Save (Sauvegarder). 
-
-## Chargement d'une visualisation
-{:#logging_kibana_visualizations_reload}
-
-Pour charger une visualisation sauvegardée, procédez comme suit :
-
-1. Dans la barre d'outil de la page Visualize, cliquez sur le bouton **Load Saved Visualization** (Charger une visualisation sauvegardée) ![Charger une visualisation sauvegardée](images/k4_visualization_open_icon.jpg "Charger une visualisation sauvegardée").
-
-2. Sélectionnez la visualisation que vous désirez charger. 
-
-
 
 ## Suppression d'une visualisation
 {:#logging_kibana_visualizations_delete}
@@ -132,7 +111,7 @@ Pour exporter une visualisation sous forme de fichier JSON, procédez comme suit
 
 3. Cliquez sur **Export** (Exporter).
 
-4. Sauvegardez le fichier. 
+4. Sauvegardez le fichier.
 
 ## Importation d'une visualisation
 {:#logging_kibana_visualizations_import}
@@ -146,6 +125,30 @@ Pour importer une visualisation depuis un fichier JSON, procédez comme suit dan
 3. Sélectionnez un fichier et cliquez sur **Open** (Ouvrir).
 
 La visualisation est ajouté à la liste des visualisations.
+
+
+ 
+## Chargement d'une visualisation
+{:#logging_kibana_visualizations_reload}
+
+Pour charger une visualisation sauvegardée, procédez comme suit :
+
+1. Dans la barre d'outil de la page Visualize, cliquez sur le bouton **Load Saved Visualization** (Charger une visualisation sauvegardée) ![Charger une visualisation sauvegardée](images/k4_visualization_open_icon.jpg "Charger une visualisation sauvegardée").
+
+2. Sélectionnez la visualisation que vous désirez charger. 
+
+
+## Sauvegarde d'une visualisation
+{:#logging_kibana_visualizations_save}
+
+Pour sauvegarder une visualisation sur la page Visualize, procédez comme suit :
+
+1. Dans la barre d'outil de la page Visualize, cliquez sur le bouton **Save Visualization** (Sauvegarder une visualisation) ![Sauvegarder une visualisation](images/k4_visualization_save_icon.jpg "Sauvegarder une visualisation").
+
+2. Indiquez un nom pour la visualisation.
+
+3. Cliquez sur Save (Sauvegarder). 
+
 
 
 ## Partage d'une visualisation

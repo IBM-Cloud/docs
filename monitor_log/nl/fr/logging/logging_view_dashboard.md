@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-27"
 
 ---
 
@@ -29,7 +29,7 @@ Prenez en compte les informations suivantes sur la disponibilité des données d
 
 **Conseil :** pour analyser des données pour une période personnalisée antérieure aux dernières 24 heures, voir [Analyse de journal avancée avec Kibana](logging_analyzing_logs_Kibana.html#analyzing_logs_Kibana). 
 
-##  Obtention des journaux d'une application Cloud Foundry
+##  Accès aux journaux d'une application Cloud Foundry
 {: #launch_logs_tab_bmx_ui_cf}
 
 Pour consulter les journaux de déploiement ou d'exécution d'une application Cloud Foundry, procédez comme suit :
@@ -41,7 +41,7 @@ Pour consulter les journaux de déploiement ou d'exécution d'une application Cl
     Depuis l'onglet **Journaux**, vous pouvez visualiser les journaux récents de votre application ou suivre des journaux en temps réel. De plus, vous pouvez filtrer les journaux par composant (type de journal), par ID d'instance d'application et par erreur.
     
 
-##  Obtention des journaux d'un conteneur Docker
+##  Accès aux journaux d'un conteneur Docker
 {: #launch_logs_tab_bmx_ui_containers}
 
 Pour consulter les journaux de déploiement ou d'exécution d'un conteneur Docker, procédez comme suit :
@@ -52,7 +52,7 @@ Pour consulter les journaux de déploiement ou d'exécution d'un conteneur Docke
 
 3. Sélectionnez l'onglet **Journalisation**.
     
-    Depuis l'onglet **Journalisation**, vous pouvez visualiser les journaux récents de votre conteneur ou suivre des journaux en temps réel.  
+    Depuis l'onglet **Journalisation**, vous pouvez visualiser les journaux récents de votre conteneur ou suivre des journaux en temps réel. 
 
 ## Format de journal d'application CF
 {: #log_format_cf}
@@ -68,7 +68,7 @@ Chaque entrée de journal comporte les zones suivantes :
 | Horodatage | Date et heure de l'instruction de journal. L'horodatage est défini à la milliseconde près. |
 | Composant | Composant qui génère le journal. Pour la liste des différents composants, voir [Sources de journal pour les applications CF](logging_cf_apps.html#logging_bluemix_cf_apps_log_sources). <br> Chaque type de composant est suivi d'une barre oblique et d'un chiffre qui indique l'instance d'application. 0 est le chiffre attribué à la première instance, 1 est le chiffre attribué à la  deuxième instance, etc. |
 | Message | Message émis par le composant. Il varie selon le contexte. |
-
+{: caption="Tableau 1. Zones d'entrée de journal d'une application CF" caption-side="top"}
 
 
 ## Format des journaux de conteneur
@@ -85,5 +85,5 @@ Chaque entrée de journal comporte les zones suivantes :
 | Date/Heure | Date et heure de l'instruction de journal. L'horodatage est défini à la milliseconde près. |
 | Machine | Nom de l'hôte sur lequel s'exécute le conteneur. |
 | Message | Message émis. Varie selon le contexte. |
-
+{: caption="Tableau 2. Zones d'entrée de journal de conteneur Docker" caption-side="top"}
 

@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-03-20"
+lastupdated: "2017-04-07"
 
 
 ---
@@ -77,7 +77,7 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE]
 <dt>--format FORMAT</dt>
 <dd>(Facultatif) Formate la sortie en utilisant un modèle Go.</dd>
 <dt>IMAGE</dt>
-<dd>Chemin de registre {{site.data.keyword.Bluemix_short}} complet vers l'image que vous désirez inspecter. Si aucune balise n'est spécifiée dans le chemin de l'image, celle portant la balise `latest` (dernière) est inspectée. Vous pouvez inspecter plusieurs images en listant dans la commande chaque chemin de registre {{site.data.keyword.Bluemix_short}} privé et en les séparant par un espace.</dd>
+<dd>Chemin de registre {{site.data.keyword.Bluemix_short}} complet vers l'image que vous désirez inspecter, au format namespace/image:tag. Si aucune balise n'est spécifiée dans le chemin de l'image, celle portant la balise `latest` (dernière) est inspectée. Vous pouvez inspecter plusieurs images en listant dans la commande chaque chemin de registre {{site.data.keyword.Bluemix_short}} privé et en les séparant par un espace.</dd>
 </dl>
 
 
@@ -113,7 +113,7 @@ bx cr image-rm IMAGE [IMAGE]
 **Paramètres**
 <dl>
 <dt>IMAGE</dt>
-<dd>Chemin de registre {{site.data.keyword.Bluemix_short}} complet vers l'image que vous désirez supprimer. Si une balise n'est pas spécifiée dans le chemin de l'image,
+<dd>Chemin de registre {{site.data.keyword.Bluemix_short}} complet vers l'image que vous désirez supprimer, au format namespace/image:tag. Si une balise n'est pas spécifiée dans le chemin de l'image,
 celle associée à la balise `latest` (dernière) est supprimée par défaut. Vous pouvez supprimer plusieurs images en listant dans la commande chaque chemin de registre {{site.data.keyword.Bluemix_short}} privé et en les séparant par un espace.</dd>
 </dl>
 
@@ -162,5 +162,5 @@ bx cr namespace-rm ESPACE DE NOM
 **Paramètres**
 <dl>
 <dt>ESPACE DE NOM</dt>
-<dd>Espace de nom que vous désirez supprimer. </dd>
+<dd>Espace de nom que vous désirez supprimer.</dd>
 </dl>

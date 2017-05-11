@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-10-14"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # Gestión de traducciones
 {: #globalizationpipeline_managingtranslations}
-
-*Última actualización: 14 de octubre de 2016*
-{: .last-updated}
 
 Una vez que haya creado paquetes y que haya comenzado a generar traducciones para la aplicación, el contenido generado automáticamente se puede utilizar tal cual o se puede modificar. También puede elegir si desea utilizar una traducción automática que no sea la predeterminada. En esta sección se describe cómo cambiar el motor de traducción automática que realiza las traducciones para los paquetes, cómo realizar la edición humana posterior a la traducción y también cómo puede asignar roles de usuario y restricciones de acceso a las personas que necesitarán acceder a sus traducciones.
 {:shortdesc}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-22"
+lastupdated: "2017-04-13"
 
 ---
 
@@ -32,7 +32,7 @@ Wenn Sie über Administratorzugriff für {{site.data.keyword.Bluemix}} Local ode
 |Berichte und Protokolle prüfen | Klicken Sie auf **Verwaltung &gt; Berichte und Protokolle**, um Sicherheitsberichte und Prüfprotokolle für Ihre Instanz anzuzeigen. Siehe [Berichte anzeigen](/docs/admin/index.html#oc_report). |
 |Systeminformationen anzeigen | Klicken Sie auf **Verwaltung &gt; Systeminformationen**, um Systeminformationen wie anstehende Wartungsaktualisierungen, Name und Version Ihrer Instanz, Region, API-URL, CLI-URL, LDAP-Konfigurationsdetails, Gruppen- und Benutzerzuordnungen, Statistiken und gemeinsam genutzte Domänen anzuzeigen. Siehe [Systeminformationen anzeigen](/docs/admin/index.html#oc_system). |
 |Benachrichtigungen erweitern und Benachrichtigungsabonnements einrichten | Klicken Sie auf **Verwaltung &gt; Systeminformationen &gt; *Anzahl* anstehend**. Sie können Web-Hooks zur Integration in einen Web-Service Ihrer Wahl verwenden, um ein Abonnement für Ereignisbenachrichtigungen für eine Aktualisierung oder einen Vorfall einzurichten. Siehe [Benachrichtigungen und Benachrichtigungsabonnements](/docs/admin/index.html#oc_eventsubscription). |
-{: caption="Table 1. Administrative tasks for managing your {{site.data.keyword.Bluemix_notm}} local or dedicated instance" caption-side="top"}
+{: caption="Tabelle 1. Verwaltungstasks zur Verwaltung Ihrer Bluemix Local oder Dedicated-Instanz" caption-side="top"}
 
 <!-- staging only for WoW start -->
 
@@ -59,7 +59,7 @@ Sie können Benachrichtigungen für Ihre lokale oder dedizierte Umgebung anzeige
 | Kritische Vorfälle | Sie werden über kritische Vorfälle auf der Seite 'Status' benachrichtigt. Klicken Sie auf **Support** &gt; **Status**. Sie können die Benachrichtigungsfunktion erweitern, indem Sie ein Benachrichtigungsabonnement einrichten, das eine E-Mail an einen Empfänger Ihrer Wahl sendet. Sie können auch ein Abonnement einrichten, das die Benachrichtigungen auf der Seite 'Verwaltung' mithilfe von Web-Hooks in einen Web-Service Ihrer Wahl integriert.  |  
 | Schwellenwertereignisse | Sie können ein Benachrichtigungsabonnement einrichten, das eine E-Mail an einen Empfänger Ihrer Wahl sendet, wenn in Ihrer Umgebung Schwellenwerte für Organisationskontingent, physische Platte, physischen Speicher, reservierte Platte oder reservierten Speicher erreicht wurden. Alternativ können Sie ein Abonnement einrichten, das die Benachrichtigungen mithilfe von Web-Hooks in einen Web-Service Ihrer Wahl integriert.  |  
 | {{site.data.keyword.Bluemix_notm}}-Status | Sie können den neuesten Status für die Plattform, die Services und Ihre {{site.data.keyword.Bluemix_notm}}-Instanz immer auf der Seite 'Status' anzeigen. Klicken Sie auf **Support** &gt; **Status**.  |
-{: caption="Table 2. Event types and notifications methods" caption-side="top"}
+{: caption="Tabelle 2. Ereignistypen und Benachrichtigungsmethoden" caption-side="top"}
 
 ### Benachrichtigungsabonnements einrichten
 {: #seteventsub}
@@ -99,7 +99,7 @@ Führen Sie folgende Schritte aus, um ein E-Mail- oder Web-Hook-Abonnement auf d
 | Hauptteil | Geben Sie den Nachrichtentext für die E-Mail ein. Sie können die IBM Nutzdaten verwenden, um relevante Informationen in die E-Mail-Benachrichtigung einzugeben. In der Tabelle [Werte für den Abschnitt 'Nutzdaten zu Wartungen und Vorfällen'](index.html#payload) finden Sie die Werte, die Sie verwenden können. Verwenden Sie zum Strukturieren der E-Mail HTML-Basistags. Dies ist ein erforderliches Feld. |
 | An | Geben Sie die E-Mail-Adresse(n) der Empfänger der E-Mail-Benachrichtigung in Form einer durch Kommas getrennte Liste ein. Erweitern Sie die Optionen "cc" bzw. "bcc", um andere Benutzer auf Kopie zu setzen. Dies ist ein erforderliches Feld. |
 | Beschreibung | Fügen Sie eine eindeutige Beschreibung für das Abonnement hinzu, das Sie erstellen. |
-{: caption="Table 3. Fields for email notification subscriptions about thresholds" caption-side="top"}
+{: caption="Tabelle 3. Felder für E-Mail-Benachrichtigungs-Abonnements für Schwellenwerte" caption-side="top"}
 
 
 {: #emailnottrhesh}
@@ -117,7 +117,7 @@ Führen Sie folgende Schritte aus, um ein E-Mail- oder Web-Hook-Abonnement auf d
 | Betreff | Geben Sie die Betreffzeile für die E-Mail ein. Dies ist ein erforderliches Feld.  |
 | Nachrichtentext | Geben Sie den Nachrichtentext für die E-Mail ein. Sie können die IBM Nutzdaten verwenden, um relevante Informationen in die E-Mail-Benachrichtigung einzugeben. In der Tabelle [Werte für den Abschnitt 'Nutzdaten zu Schwellenwerten'](index.html#threshpayload) finden Sie die Werte, die Sie verwenden können. Verwenden Sie zum Strukturieren der E-Mail HTML-Basistags. Dies ist ein erforderliches Feld. |
 | An | Geben Sie die E-Mail-Adresse(n) der Empfänger der E-Mail-Benachrichtigung in Form einer durch Kommas getrennte Liste ein. Erweitern Sie die Optionen "cc" bzw. "bcc", um andere Benutzer auf Kopie zu setzen. Dies ist ein erforderliches Feld. |
-{: caption="Table 4. Fields for email notification subscriptions about maintenance updates or incidents" caption-side="top"}
+{: caption="Tabelle 4. Felder für E-Mail-Benachrichtigungs-Abonnements für Wartungsaktualisierungen oder Vorfälle" caption-side="top"}
 
 Schwellenwertdaten werden alle 6 Stunden erfasst. Eine Benachrichtigung wird nur einmal gesendet, wenn der Wert den von Ihnen festgelegten Schwellenwert über- oder unterschreitet. Wenn Sie 'aufsteigend' gewählt haben, wird nur dann eine neue Benachrichtigung gesendet, wenn der Wert den Schwellenwert unterschreitet und dann wieder überschreitet. Wenn Sie 'absteigend' gewählt haben, werden Sie entsprechend nur dann benachrichtigt, wenn der Wert den von Ihnen festgelegten Schwellenwert überschreitet und dann wieder unterschreitet. 
 
@@ -147,7 +147,7 @@ Eine Benachrichtigung über einen Organisationskontingentschwellenwert enthält 
 | URL | Geben Sie die URL für die Verbindung mit dem Web-Service ein. |
 | Nutzdaten | Wenn Sie die Methode POST oder PUT ausgewählt haben, geben Sie die Eigenschaften ein, die für den von Ihnen verwendeten Web-Service gelten, gepaart mit den Nutzdatenwerten, die für die IBM Benachrichtigung verwendet werden. In der Tabelle [Werte für den Abschnitt 'Nutzdaten zu Wartungen und Vorfällen'](index.html#payload) finden Sie die Werte, die Sie verwenden können. Wenn Sie in diesem Abschnitt keine Informationen eingeben, empfangen Sie die Benachrichtigung ganz ohne zusätzliche Informationen. |
 | Benachrichtigungen kombinieren | Wählen Sie diese Option aus, um die Benachrichtigungen zu Vorfällen für alle Regionen in einer einzigen Benachrichtigung zu kombinieren. Diese Option ist nur für Vorfälle verfügbar. |
-{: caption="Table 5. Form fields for a webhook notification subscription about maintenance or incidents" caption-side="top"}
+{: caption="Tabelle 5. Formularfelder für ein Abonnement für Web-Hook-Benachrichtigungen über Wartung oder Vorfälle" caption-side="top"}
 
 
 {: #webhooknotthresh}
@@ -167,7 +167,7 @@ Eine Benachrichtigung über einen Organisationskontingentschwellenwert enthält 
 | Kennwort | Wenn Sie die Basisautorisierung ausgewählt haben, geben Sie das Kennwort für Ihren Web-Service ein. |
 | Methode | Wählen Sie **GET**, **POST** oder **PUT** aus. |
 | URL | Geben Sie die URL für die Verbindung mit dem Web-Service ein. |
-{: caption="Table 6. Form fields for a webhook notification subscription about thresholds" caption-side="top"}
+{: caption="Tabelle 6. Formularfelder für ein Abonnement für Web-Hook-Benachrichtigungen über Schwellenwerte" caption-side="top"}
 
 Schwellenwertdaten werden alle 6 Stunden erfasst. Eine Benachrichtigung wird nur einmal gesendet, wenn der Wert den von Ihnen festgelegten Schwellenwert über- oder unterschreitet. Eine neue Benachrichtigung wird nur dann gesendet, wenn Sie 'absteigend' gewählt haben, der Wert den Schwellenwert unterschreitet und dann wieder überschreitet. Wenn Sie 'absteigend' gewählt haben, werden Sie entsprechend nur dann benachrichtigt, wenn der Wert den von Ihnen festgelegten Schwellenwert überschreitet und dann wieder unterschreitet. 
 
@@ -190,7 +190,7 @@ Eine Benachrichtigung über einen Organisationskontingentschwellenwert enthält 
 | {{region}} | Betroffene Region | Wartungsaktualisierung und Vorfall |
 | {{status}} | Status der Aktualisierung | Wartungsaktualisierung |
 | {{type}} | Aktualisierung und Vorfall | Wartungsaktualisierung und Vorfall |
-{: caption="Table 7. Maintenance and incident payload section values" caption-side="top"}
+{: caption="Tabelle 7. Werte im Abschnitt 'payload' für Wartung und Vorfälle" caption-side="top"}
 
 
 {: #threshpayload}
@@ -202,7 +202,7 @@ Eine Benachrichtigung über einen Organisationskontingentschwellenwert enthält 
 | {{content.physical_memory}} | Schwellenwert für physischen Speicher | Schwellenwert |  
 | {{content.reserved_disk}} | Schwellenwert für reservierte Platte | Schwellenwert |
 | {{content.reserved_memory}} | Schwellenwert für reservierten Speicher | Schwellenwert |
-{: caption="Table 8. Threshold payload section values" caption-side="top"}
+{: caption="Tabelle 8. Werte im Abschnitt 'payload' für Schwellenwerte" caption-side="top"}
 
 Nach dem Speichern des Benachrichtigungsabonnements empfangen Sie Benachrichtigungen über die Methode, die Sie eingerichtet haben. Benachrichtigungen werden weiterhin an die folgenden Positionen gesendet:  
  * Für Vorfälle auf der Seite 'Status'
@@ -464,7 +464,7 @@ In der folgenden Tabelle sind Sicherheitsberichte aufgelistet, die für {{site.d
 | Virenschutz | Bericht zum Virenscan | Installierte Virenschutzsoftware. |
 | Software-Fix-Management | Patchanwendungsbericht | Angewendete Software-Fixes. |
 | Verwaltung von Sicherheitsvorfällen | Bericht zur Korrektur von Sicherheitsvorfällen | Nachweis von Sicherheitsvorfällen für die Verwaltung von Sicherheitsvorfällen. |
-{: caption="Table 9. Security report list" caption-side="top"}
+{: caption="Tabelle 9. Liste der Sicherheitsberichte" caption-side="top"}
 
 ## Status anzeigen
 {: #oc_status}
@@ -632,7 +632,7 @@ Mithilfe der folgenden Tabellen können Sie die JSON-Datei füllen.
 |id  | Die ID des Service. Diese ID muss in {{site.data.keyword.Bluemix_notm}} eindeutig und eine global eindeutige ID (GUID; Globally Unique Identifier) sein. Sie können die ID des Service nicht mehr ändern, nachdem Sie den Service mit {{site.data.keyword.Bluemix_notm}} registriert haben. |
 |metadata | Die Metadaten des Serviceplans, die im Katalog und in der Preisliste für {{site.data.keyword.Bluemix_notm}} angezeigt werden. Das Feld für die Metadaten ist ein optionales Feld. Sie können für die Metadaten weitere Felder angeben. Weitere Informationen zu [Metadatenfeldern](index.html#metadatafields) finden Sie in der folgenden Tabelle. |
 |plans | Ein Array von Serviceplandefinitionen. Weitere Informationen zu [Planfeldern](index.html#planfields) finden Sie in der folgenden Tabelle. |
-{: caption="Table 10. JSON fields" caption-side="top"}
+{: caption="Tabelle 10. JSON-Felder" caption-side="top"}
 
 
 {: #metadatafields}
@@ -661,7 +661,7 @@ Mithilfe der folgenden Tabellen können Sie die JSON-Datei füllen.
 |sdkDownloadUrl (optional) | Die URL der Webseite, die geöffnet wird, wenn Sie auf die Schaltfläche 'SDKs herunterladen' klicken. Die Schaltfläche 'SDKs herunterladen' befindet sich in der Service-Kachel auf der Seite mit der Anwendungsübersicht im Dashboard. Die Webseite wird daraufhin in einer neuen Browserregisterkarte geöffnet. |
 |serviceMonitorApi    | Die URL zu einer API, die die JSON-Daten zurückgibt, wie im folgenden Beispiel, das den Servicezustand auflistet. Dazu muss 'serviceMonitorApi' oder 'serviceMonitorApp' in Ihren Servicemetadaten vorhanden sein. Siehe folgendes Codebeispiel. |
 |serviceMonitorApp    | Die URL zu einer Anwendung, die {{site.data.keyword.Bluemix_notm}} bereitgestellt und an einen Service gebunden werden kann, um die spezifische Ausgabe des Servicestatus bereitzustellen. Die Anwendung muss dasselbe JSON-Datenformat wie 'serviceMonitorApi' zurückgeben. Dazu muss 'serviceMonitorApi' oder 'serviceMonitorApp' in Ihren Servicemetadaten vorhanden sein. Siehe folgendes Codebeispiel. |
-{: caption="Table 11. Metadata fields" caption-side="top"}
+{: caption="Tabelle 11. Metadatenfelder" caption-side="top"}
 
 
 ```
@@ -702,7 +702,7 @@ Im folgenden Beispiel wird dargestellt, wie eine JSON-Antwort von 'GET /v2/catal
 |free      | Ein boolescher Wert, der angibt, ob der Serviceplan kostenfrei ist. Der Standardwert ist 'true'. |
 |id       | Die ID des Serviceplans. Die ID muss eindeutig und eine GUID sein.  |
 |metadata (optional)    | Die Metadaten des Serviceplans, die im Katalog und in der Preisliste für {{site.data.keyword.Bluemix_notm}} angezeigt werden. Das Feld für die Metadaten ist ein optionales Feld. Sie können im Metadatenfeld die folgenden Felder angeben: displayName, type (Abonnement, reservierbar, planDetails), bullets, costs (unitId, Einheit, partNumber) und paidOnly. Weitere Informationen zu [Planmetadatenfelder](index.html#planmetadata) finden Sie in der folgenden Tabelle. |
-{: caption="Table 12. Plan fields" caption-side="top"}
+{: caption="Tabelle 12. Planfelder" caption-side="top"}
 
 
 {: #planmetadata}
@@ -714,7 +714,7 @@ Im folgenden Beispiel wird dargestellt, wie eine JSON-Antwort von 'GET /v2/catal
 |bullets                 | Eine Beschreibung der Ressourcen, die mit dem Plan verwendet werden können. Die Beschreibung wird in der Spalte **Features** auf der Seite mit den Servicedetails im Katalog und in der Preisliste angezeigt. |
 |costs                   | Die Informationen zu den Kosten des Service, der in der Spalte 'Preis' auf der Seite mit den Servicedetails im Katalog und in der Preisliste angezeigt  wird. Jedes Array enthält die folgenden Felder: unitId (ID der Einheit; Plural und nur Großbuchstaben verwenden; für kostenlose Pläne ist das Feld optional), unit (die Metrik, die zur Berechnung der Servicegebühren verwendet wird; Wert dieses Felds wird in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle zur Darstellung der Gebührenmetrik verwendet)und partNumber (ID `part_number`, die im Abrechnungssystem verwendet wird; für kostenlose Pläne ist das Feld optional).   |
 |paidOnly (optional)     | Ein boolescher Wert, der angibt, ob der Serviceplan nur für {{site.data.keyword.Bluemix_notm}}-Zahlungskonten verfügbar ist. Der Wert **true** gibt an, dass der Serviceplan nur für Zahlungskonten verfügbar ist und keinen Testkonten hinzugefügt werden kann. Der Wert **false** gibt an, dass der Serviceplan sowohl Zahlungskonten als auch Testkonten hinzugefügt werden kann. Der Standardwert ist **false**.	  |
-{: caption="Table 13. Plan metadata fields" caption-side="top"}
+{: caption="Tabelle 13. Planmetadatenfelder" caption-side="top"}
 
 Im folgenden Beispiel wird dargestellt, wie eine JSON-Antwort von 'GET /v2/catalog' der Seite mit den Servicedetails im {{site.data.keyword.Bluemix_notm}}-Katalog zugeordnet wird. Es wird insbesondere dargestellt, wie die Planmetadatenfelder, die in der Tabelle oben beschrieben werden, der Benutzerschnittstelle zugeordnet werden:
 
@@ -845,7 +845,7 @@ Ein Kontingent stellt die Ressourcengrenzen für die Organisationen in Ihrer Umg
 <dd>Die maximale Anzahl öffentlicher IP-Adressen, die Sie bereichsübergreifend in einer Organisation zuordnen können.</dd>
 </dl>
 <strong>Hinweis:</strong> Wenn in Ihrer Umgebung noch keine Container vorhanden oder konfiguriert sind, wird eine Fehlernachricht angezeigt.
-<p>Weitere Informationen zu Containern finden Sie in den [Informationen zu IBM Containern](/docs/containers/container_ov.html). Weitere Informationen zu Containerkontingenten finden Sie unter [Kontingent und Bluemix-Konten](/docs/containers/container_planning_org_ov.html#container_planning_quota).</p>
+<p>Weitere Informationen zu Containern finden Sie in den [Informationen zu IBM Containern](/docs/containers/container_ov.html). Weitere Informationen zu Containerkontingenten finden Sie unter [Kontingent und Bluemix-Konten](/docs/containers/container_planning.html#container_planning_quota).</p>
 <strong>Hinweis:</strong> In der {{site.data.keyword.Bluemix_notm}}-Region 'Sydney' stehen keine Container zur Verfügung.</li>
 </ul>
 <li>Speichern Sie Ihre Änderungen auf der Seite 'Organisation verwalten', indem Sie auf <strong>Speichern</strong> klicken.</li>
@@ -961,7 +961,7 @@ Den Benutzern können die folgenden Berechtigungen mit bestimmten Zugriffsebenen
 | Catalog | Benutzern mit der Berechtigung **Catalog** kann der Zugriff auf **Lesen** oder **Schreiben** (Ändern) zugewiesen werden, und zwar für die in der lokalen oder dedizierten Instanz verfügbaren Services. Ein Benutzer mit Lesezugriff kann auf die Kachel 'Katalogverwaltung' zugreifen, um verfügbare Services anzuzeigen. Ein Benutzer mit Schreibzugriff kann auf die Kachel [Katalogverwaltung](#oc_catalog) zugreifen, um Services anzuzeigen, die Sichtbarkeit der Services zu bearbeiten, angepasste Services zu registrieren und die Liste für die Buildpack-Priorität zu steuern. |  
 | Reports | Benutzern mit der Berechtigung **Reports** kann für Sicherheitsberichte der Zugriff **Lesen** oder **Schreiben** (Ändern) zugewiesen werden. Ein Benutzer mit Lesezugriff kann auf die Kachel 'Berichte und Protokolle' zugreifen, um Berichte herunterzuladen. Benutzer mit Schreibzugriff können die Kachel [Berichte und Protokolle](#oc_report) anzeigen und mithilfe der Befehlszeilenschnittstelle neue Berichte hochladen sowie neue Kategorien für den Zugriff durch die Benutzer erstellen. |
 | Users | Benutzern mit der Berechtigung **Users** kann der Zugriff **Lesen** (Anzeigen) für die Liste der Benutzer oder **Schreiben** (Hinzufügen oder Entfernen) für Benutzer zugewiesen werden. Diese Berechtigung erlaubt es Ihnen nicht, Berechtigungen für andere Benutzer festzulegen. Benutzer mit Schreibzugriff können neue Benutzer zur Umgebung hinzufügen, Benutzer aus der Umgebung löschen und vorhandene Benutzer zu Organisationen hinzufügen, die in der Umgebung bereits vorhanden sind. Außerdem können Benutzer mit dem Zugriff **Schreiben** neue Organisationen hinzufügen, Organisationen löschen und die Benutzer in den Organisationen bearbeiten. |
-{: caption="Table 14. Permissions" caption-side="top"}
+{: caption="Tabelle 14. Berechtigungen" caption-side="top"}
 
 ## REST-APIs verwenden 
 {: #auth_adminapi}
@@ -1829,7 +1829,7 @@ POST /codi/v1/serviceBrokers
 | auth_password | Kennwort für die Verbindung mit dem Service-Broker. |
 | broker_url | URL für die Verbindung zum Service-Broker. |
 | owningOrganization | Anfangsorganisation, bei der der Service in die Whitelist eingetragen werden soll. |
-{: caption="Table 15. Fields" caption-side="top"}
+{: caption="Tabelle 15. Felder" caption-side="top"}
 
 #### Hauptteil
 {: #registerbody}
@@ -1904,7 +1904,7 @@ Verwenden Sie die folgende API und die folgenden Codebeispiele zum Aktualisieren
 | auth_password | Kennwort für die Verbindung mit dem Service-Broker. |
 | broker_url | URL für die Verbindung zum Service-Broker. |
 | owningOrganization | Anfangsorganisation, bei der der Service in die Whitelist eingetragen werden soll. |
-{: caption="Table 16. Requests" caption-side="top"}
+{: caption="Tabelle 16. Anforderungen" caption-side="top"}
 
 #### Hauptteil
 {: #updatebody}
@@ -1966,7 +1966,7 @@ Verwenden Sie die folgende API und die folgenden Codebeispiele zum Löschen eine
 | **Name** | **Beschreibung** |
 |-----------------|-------------------|
 | name | Name des Service-Brokers. Dieser Name kann in keinen anderen Namen als den Erstellungsnamen des Service geändert werden. |
-{: caption="Table 17. Parameter" caption-side="top"}
+{: caption="Tabelle 17. Parameter" caption-side="top"}
 
 ### Route
 
@@ -1999,17 +1999,17 @@ Content-Type: application/json
 ```
 {: screen}
 
-## Benutzer mit der Befehlszeilenschnittstelle 'cf' verwalten
+### Benutzer mit der Befehlszeilenschnittstelle 'cf' verwalten
 {: #usingadmincli}
 
-Sie können Benutzer für Ihre {{site.data.keyword.Bluemix_notm}}-Umgebung über die Cloud Foundry-Befehlszeilenschnittstelle mit dem {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in verwalten. Sie können Benutzer beispielsweise aus einer LDAP-Registry hinzufügen.
+Sie können Benutzer für Ihre {{site.data.keyword.Bluemix_notm}}-Umgebung über die Cloud Foundry-Befehlszeilenschnittstelle mit dem {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in verwalten. Sie müssen dieses Plug-in für Ihre Cloud Foundry-CLI herunterladen. 
 
 Vor dem Beginn müssen Sie die Befehlszeilenschnittstelle 'cf' installieren. Für das {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in ist cf Version 6.11.2 oder höher erforderlich. [Laden Sie die Cloud Foundry-Befehlszeilenschnittstelle herunter. ![Symbol für externen Link](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
 
 **Einschränkung:** Die
 Cloud Foundry-Befehlszeilenschnittstelle wird nicht von Cygwin unterstützt. Verwenden Sie die Cloud Foundry-Befehlszeilenschnittstelle in einem Befehlszeilenfenster, das sich von dem Befehlszeilenfenster von Cygwin unterscheidet.
 
-### {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in hinzufügen
+#### {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in hinzufügen
 
 Nach der Installation der Befehlszeilenschnittstelle 'cf' können Sie das {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in hinzufügen.
 
@@ -2034,10 +2034,17 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 </li>
 </ol>
 
-Führen Sie den folgenden Befehl aus, um eine Liste der Befehle anzuzeigen:
+Führen Sie den folgenden Befehl aus, um eine Liste der Unterbefehle anzuzeigen, die durch die installierten Plug-ins verfügbar sind: 
 
 ```
 cf plugins
+```
+{: codeblock}
+
+Führen Sie den folgenden Befehl aus, um eine Liste der verfügbaren Befehlsgruppen für das {{site.data.keyword.Bluemix_notm}}-Admin-Plug-in anzuzeigen:
+
+```
+cf ba
 ```
 {: codeblock}
 

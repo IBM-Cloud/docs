@@ -29,8 +29,7 @@ convite e criar sua conta Standard, será possível convidar amigos e colegas pa
 ## Introdução à conta {{site.data.keyword.Bluemix_notm}} Standard
 {: #standardaccount}
 
-Talvez você esteja se perguntando qual é a diferente entre a conta Standard e a conta Trial.
-As tabelas a seguir resumem os principais detalhes sobre a conta {{site.data.keyword.Bluemix_notm}}
+Talvez você esteja se perguntando qual é a diferente entre a conta Standard e a conta Trial. As tabelas a seguir resumem os principais detalhes sobre a conta {{site.data.keyword.Bluemix_notm}}
 Standard. 
 
 |O que há de novo em uma conta Standard? |    
@@ -42,7 +41,7 @@ grátis. |
 mais serviços em breve. |
 | Seus aplicativos serão suspensos se não houver atividade de desenvolvimento por 10 dias. |
 | Suas instâncias de serviço serão excluídas após 30 dias de inatividade. |
-{:caption="Table 1. What's new in a Standard account" caption-side="top"}
+{:caption="Tabela 1. O que há de novo em uma conta Standard" caption-side="top"}
 
 |O que não muda quando uma conta Trial é convertida? | 
 |-----------------|
@@ -52,7 +51,7 @@ Lite para cada um desses serviços pode ser transferida para sua nova conta. |
 |Sua organização, os espaços e as configurações de acesso de membro da equipe associada permanecem
 os mesmos. Uma organização pode ser transferida para a sua nova conta. |
 |O nível do Suporte {{site.data.keyword.Bluemix_notm}} permanece o mesmo. |
-{:caption="Table 2. What's not changing" caption-side="top"}
+{:caption="Tabela 2. O que não muda" caption-side="top"}
 
 **Nota:** se a sua conta Trial não for convertida, será exibida uma mensagem
 explicando o motivo. Talvez você tenha mais de uma organização em sua conta Trial existente ou

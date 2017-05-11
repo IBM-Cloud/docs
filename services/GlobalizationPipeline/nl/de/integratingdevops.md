@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-08-30"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # Integration mit IBM DevOps
 {: #integratingdevops}
-
-*Letzte Aktualisierung: 30. August 2016*
-{: .last-updated}
 
 Sie können {{site.data.keyword.GlobalizationPipeline_short}} mit {{site.data.keyword.jazzhub_short}} zur Automatisierung der Übersetzung Ihrer Anwendungsbenutzerschnittstelle integrieren und so die Zeit einsparen, die für manuelle Übersetzungsmanagementoperationen erforderlich ist. Sehen Sie sich [dieses Video](https://www.youtube.com/watch?v=sSrIUjRbXYQ) an und informieren Sie sich über die Verwendung von {{site.data.keyword.GlobalizationPipeline_short}} mit {{site.data.keyword.jazzhub_short}}.
 

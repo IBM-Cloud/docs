@@ -14,7 +14,6 @@ lastupdated: "2017-02-06"
 
 
 # Filtraggio dei log dell'applicazione Cloud Foundry in base all'ora in Kibana
-<!-- for example, Uploading your data -->
 {: #logging_kibana_time_filter}
 
 
@@ -30,12 +29,12 @@ Completa le seguenti attività per visualizzare e filtrare i log della tua appli
     
     Vengono visualizzati i log della tua applicazione.
 
-2. Accedi al dashboard Kibana per la tua applicazione. Fai clic su **Vista avanzata** ![link Vista avanzata](images/logging_advanced_view.jpg). Viene visualizzato il dashboard Kibana.
+2. Accedi al dashboard Kibana per la tua applicazione. Fai clic su **Vista avanzata** ![link Vista avanzata](images/logging_advanced_view.jpg "Advanced view link"). Viene visualizzato il dashboard Kibana.
 
 
-3. Nel dashboard Kibana, fai clic sull'icona **Filtro temporale**; ![Filtro temporale Kibana](images/logging_kibana_time_filter.jpg) e seleziona **Personalizzato** dal menu a discesa. Viene visualizzata la seguente finestra:
+3. Nel dashboard Kibana, fai clic sull'icona **Filtro temporale** ![Filtro temporale Kibana](images/logging_kibana_time_filter.jpg "Kibana time filter") e seleziona **Personalizzato** dal menu a discesa. Viene visualizzata la seguente finestra:
 
-    ![Filtro temporale personalizzato sul dashboard Kibana](images/logging_custom_time_filter.jpg)
+    ![Filtro temporale personalizzato sul dashboard Kibana](images/logging_custom_time_filter.jpg "Custom time filter on the Kibana dashboard")
 
 4. Fai clic sui campi **Da** e **A** per modificare l'ora di inizio e di fine per il tuo filtro. 
     

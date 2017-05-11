@@ -1,7 +1,8 @@
-﻿---
+---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-07-13"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}}
  外部での{{site.data.keyword.GlobalizationPipeline_short}}の使用
 {: #globalizationpipeline_external}
-
-*最終更新日: 2016 年 7 月 13 日*
-{: .last-updated}
 
 {{site.data.keyword.GlobalizationPipeline_short}}を含め、多くの {{site.data.keyword.Bluemix_notm}} サービスは、オンプレ
 ミスのアプリケーション・ホスト環境から使用できます。{{site.data.keyword.Bluemix_notm}} 上でアプリケーションをホストすることなく、別の

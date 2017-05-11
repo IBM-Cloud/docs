@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-16"
+lastupdated: "2017-02-22"
 
 ---
 
@@ -13,12 +13,10 @@ lastupdated: "2017-02-16"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Analisando logs no Kibana
+# Analisando logs no Kibana 3 (descontinuado)
 {: #analyzing_logs_Kibana3}
 
-No {{site.data.keyword.Bluemix}}, é possível usar o Kibana, uma plataforma de software livre
-para análise de dados e visualização, para monitorar, procurar, analisar e visualizar seus dados em uma
-variedade de gráficos, por exemplo, diagramas e tabelas. Use o Kibana para executar tarefas analíticas avançadas.
+No {{site.data.keyword.Bluemix}}, é possível usar o Kibana, uma plataforma de software livre para análise de dados e visualização, para monitorar, procurar, analisar e visualizar seus dados em uma variedade de gráficos, por exemplo, diagramas e tabelas. Use o Kibana para executar tarefas analíticas avançadas.
 {:shortdesc}
 
 É possível ativar o Kibana de qualquer uma das maneiras a seguir:
@@ -27,7 +25,7 @@ variedade de gráficos, por exemplo, diagramas e tabelas. Use o Kibana para exec
 
     É possível ativar para seus logs específicos do app CF no Kibana, no contexto para esse app específico.
     
-    A consulta que é usada para filtrar os dados que são exibidos no painel recupera entradas de log para o aplicativo Cloud Foundry. As informações de log exibidas por padrão pelo painel do Kibana estão todas relacionadas a um único aplicativo Cloud Foundry e todas as suas instâncias. Para obter mais informações, veja [Acessando o painel do Kibana no painel do {{site.data.keyword.Bluemix}}](logging_view_kibana3.html#launch_Kibana_from_bluemix).
+    A consulta que é usada para filtrar os dados que são exibidos no painel recupera entradas de log para o aplicativo Cloud Foundry. As informações de log exibidas por padrão pelo painel do Kibana estão todas relacionadas a um único aplicativo Cloud Foundry e todas as suas instâncias. Para obter mais informações, consulte [Acessando o painel do Kibana por meio do painel do Bluemix](logging_view_kibana3.html#launch_Kibana_from_bluemix).
 
 * Em um link direto do navegador
 
@@ -58,7 +56,7 @@ Depois de customizar um painel, é possível escolher qualquer uma das ações a
 
 * É possível integrar o painel em uma página da web. Para um usuário ver um painel integrado, esse usuário deve ter permissões para acessar o Kibana.
 
-Para obter mais informações, veja a documentação do [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html).
+Para obter mais informações, veja a documentação do [Kibana ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.
 
 **Nota:** o Kibana 4 e o Kibana 3 são suportados. O Kibana 3 foi descontinuado.
 
@@ -78,7 +76,7 @@ Para ver os logs de um aplicativo Cloud Foundry no Kibana, conclua as etapas a s
 
 Se você não vir nenhum log, ajuste o selecionador de horário no cabeçalho.
 
-Para obter mais informações sobre como customizar um painel do Kibana, veja [esta postagem do blog](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/) ou a documentação do [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html).
+Para obter mais informações sobre como customizar um painel do Kibana, veja [esta postagem do blog ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} ou a documentação do [Kibana ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.
 
 ##  Acessando o painel do Kibana por meio de um navegador da web
 {: #launch_Kibana_from_browser}
@@ -93,7 +91,7 @@ Conclua as etapas a seguir para abrir um painel do Kibana em um navegador:
 
 Se você não vir nenhum log, ajuste o selecionador de horário no cabeçalho.
 
-Para obter mais informações sobre como customizar um painel do Kibana, veja [esta postagem do blog](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/) ou a documentação do [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html).
+Para obter mais informações sobre como customizar um painel do Kibana, veja [esta postagem do blog ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} ou a documentação do [Kibana ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.
 
 
 

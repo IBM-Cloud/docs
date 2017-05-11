@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-04"
+lastupdated: "2017-04-21"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -51,11 +50,11 @@ credenciais. Uma ação da web pode ser chamada usando uma URL que é estruturad
 
 *O nome completo da ação deverá incluir seu nome do pacote, que será `default` se a ação não estiver em um pacote nomeado.*
 
-Um exemplo é `guest/demo/hello`. A última parte do URI chamado `extension` que é geralmente `.http`, embora outros valores sejam permitidos conforme descrito posteriormente. O caminho da API de ação da web pode ser usado com `curl` ou `wget` sem uma chave API. Ele pode até ser inserido diretamente em seu navegador.
+Um exemplo é `guest/demo/hello`. O caminho da API de ação da web pode ser usado com `curl` ou `wget` sem uma chave API. Ele pode até ser inserido diretamente em seu navegador.
 
-Tente abrir [https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.http?name=Jane](https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.http?name=Jane) em seu navegador da web. Ou tente chamar a ação por meio de `curl`:
+Tente abrir [https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello?name=Jane](https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello?name=Jane) em seu navegador da web. Ou tente chamar a ação por meio de `curl`:
 ```
-curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.http?name=Jane
+curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello?name=Jane
 ```
 {: pre}
 
@@ -319,8 +318,7 @@ enquanto atualiza uma ação com a CLI.
 
 ## Manipulação de HTTP bruto
 
-Uma ação da web pode optar por interpretar e processar um corpo HTTP recebido diretamente, sem a promoção de um objeto JSON para as propriedades de primeira classe disponíveis para a entrada de ação (por exemplo, `args.name` versus a análise de `args.__ow_query`). 
-Isso é feito por meio de uma [anotação](annotations.md) `raw-http`. Usando o mesmo exemplo anterior, mas agora como uma ação da web de HTTP "bruto" recebendo `name` como um parâmetro de consulta e como um valor JSON no corpo da solicitação de HTTP:
+Uma ação da web pode optar por interpretar e processar um corpo HTTP recebido diretamente, sem a promoção de um objeto JSON para as propriedades de primeira classe disponíveis para a entrada de ação (por exemplo, `args.name` versus a análise de `args.__ow_query`). Isso é feito por meio de uma [anotação](annotations.md) `raw-http`. Usando o mesmo exemplo anterior, mas agora como uma ação da web de HTTP "bruto" recebendo `name` como um parâmetro de consulta e como um valor JSON no corpo da solicitação de HTTP:
 ```
  curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json?name=Jane -X POST -H "Content-Type: application/json" -d '{"name":"Jane"}' 
 ```
@@ -368,7 +366,8 @@ A desativação de HTTP bruto pode ser realizada transmitindo um valor de `false
 ### Decodificando conteúdo do corpo binário do Base64
 
 Ao usar a manipulação de HTTP bruto, o conteúdo `__ow_body` será codificado em
-Base64 quando o tipo de conteúdo de solicitação for binário. A seguir estão as funções que demonstram como
+Base64 quando o tipo de conteúdo de solicitação for binário.
+A seguir estão as funções que demonstram como
 decodificar o conteúdo do corpo no Nó, Python e Swift. Simplesmente salve um método mostrado abaixo para o
 arquivo, crie uma ação da web de HTTP bruto utilizando o artefato salvo e chame a ação da web.
 

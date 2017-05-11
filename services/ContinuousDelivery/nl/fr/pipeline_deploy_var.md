@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-11-17"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -18,14 +18,20 @@ copyright:
 
 # Propriétés et ressources d'environnement
 {: #deliverypipeline_environment}
-Dernière mise à jour : 17 novembre 2016
-{: .last-updated}
 
 Vous pouvez utiliser des propriétés d'environnement et des
 ressources pré-installées pour interagir avec le service IBM&reg; Bluemix&reg;
-{{site.data.keyword.deliverypipeline}}. Par exemple, vous
-pouvez les utiliser dans un script de travail ou une commande de test.
+{{site.data.keyword.deliverypipeline}}. Par exemple, vous souhaiterez peut-être les intégrer dans un script de travail oui une commande de test.
 {:shortdesc}
+
+Vous pouvez ajouter vos propres propriétés d'environnement à une étape à partir de son onglet **PROPRIETES D'ENVIRONNEMENT**. Des propriétés d'environnement sont disponibles pour chaque travail d'une étape.
+
+Vous pouvez ajouter quatre types de propriété à partir de votre onglet Propriétés d'environnement :
+* **Texte** : Clé de propriété avec une valeur monoligne.
+* **Zone de texte** : Clé de propriété avec une valeur multiligne.
+* **Sécurisé** : Clé de propriété avec une valeur monoligne. La valeur apparaît sous la forme d'astérisques.
+* **Propriétés** : Fichier dans le référentiel du projet. Ce fichier peut contenir plusieurs propriétés. Chaque propriété doit figurer sur sa propre ligne. Pour distinguer des paires clé-valeur, utilisez le signe égal (=).
+
 
 Les propriétés et ressources suivantes sont disponibles par
 défaut dans les environnements de pipeline.

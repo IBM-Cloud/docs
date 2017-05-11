@@ -117,7 +117,7 @@ Um nome curto exclusivo, visível publicamente e usado em clientes de desktop e 
 ### Antiafinidade
 {: #x8888040}
 
-Duas ou mais instâncias do grupo de contêiner que são executadas em nós de rede diferentes para assegurar alta disponibilidade para um app. Consulte também
+Duas ou mais instâncias do grupo de contêiner que são executadas em nós de rede diferentes para assegurar alta disponibilidade para um aplicativo. Consulte também
 [afinidade](#x2149238).
 
 ### API
@@ -941,8 +941,7 @@ A entrega de uma plataforma de computação, incluindo aplicativos, middleware o
 ### biblioteca de pré-produção
 {: #x7290106}
 
-Uma coleção de recursos de teste de app que coletam detalhes sobre questões e problemas com um app. Os recursos de teste identificam o dispositivo e o usuário
-que estão tendo erros para que os desenvolvedores possam obter logs e outras informações para corrigir os problemas. Consulte também [modo de pré-produção](#x7290124).
+Uma coleção de recursos de teste de app que coletam detalhes sobre questões e problemas com um app. Os recursos de teste identificam o dispositivo e o usuário que está tendo erros para que os desenvolvedores possam obter logs e outras informações para corrigir os problemas. Consulte também [modo de pré-produção](#x7290124).
 
 ### modo de pré-produção
 {: #x7290124}

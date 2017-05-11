@@ -117,14 +117,9 @@ données ou au système d'enregistrement qui existent à l'aide du service Cloud
 
 Dans vos applications en cloud, il peut être nécessaire d'accéder aux données ou aux services de back end, par exemple un système d'enregistrement. Dans {{site.data.keyword.Bluemix_notm}}, vous pouvez utiliser le service Secure Gateway afin d'établir un tunnel sécurisé entre une organisation {{site.data.keyword.Bluemix_notm}} et le réseau de back end de l'entreprise. Le service permet aux applications dans {{site.data.keyword.Bluemix_notm}} d'accéder aux données et aux services du réseau de back end. Pour plus de détails, voir [Reaching enterprise backend with Bluemix Secure Gateway via console ![icône de lien externe](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}.
 
-Pour déployer votre application dans {{site.data.keyword.Bluemix_notm}} en tant qu'application Cloud Foundry,
-sélectionnez un contexte d'exécution dans le catalogue {{site.data.keyword.Bluemix_notm}}. Le contexte d'exécution contient une application Hello
-World de démarrage que vous pouvez remplacer par votre propre application. Si vous ne trouvez pas de module de démarrage fournissant le contexte
-d'exécution que vous recherchez, vous pouvez apporter un pack de construction personnalisé compatible avec Cloud Foundry dans {{site.data.keyword.Bluemix_notm}} en spécifiant l'option -b
-dans la commande cf push. Pour des détails, voir [Utilisation de packs de construction de communauté](/docs/cfapps/byob.html).
+Pour déployer votre application dans {{site.data.keyword.Bluemix_notm}} en tant qu'application Cloud Foundry, sélectionnez un contexte d'exécution dans le catalogue {{site.data.keyword.Bluemix_notm}}. Le contexte d'exécution contient une application Hello World de démarrage que vous pouvez remplacer par votre propre application. Si vous ne trouvez pas de module de démarrage fournissant le contexte d'exécution que vous recherchez, vous pouvez apporter un pack de construction personnalisé compatible avec Cloud Foundry dans {{site.data.keyword.Bluemix_notm}} en spécifiant l'option -b dans la commande cf push. Pour des détails, voir [Utilisation de packs de construction de communauté](/docs/cfapps/byob.html).
 
-Vous pouvez utiliser les outils et les services suivants mis à disposition par
-{{site.data.keyword.Bluemix_notm}} :
+Vous pouvez utiliser les outils et les services suivants mis à disposition par {{site.data.keyword.Bluemix_notm}} :
 
 | Outil	| Méthode |
 |:------|:--------|
@@ -132,11 +127,10 @@ Vous pouvez utiliser les outils et les services suivants mis à disposition par
 |Eclipse	|Gérez votre code dans Eclipse et utilisez IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} pour envoyer votre application par commande push.|
 |intégration Git	|Gérez votre code sur GitHub et intégrez Git dans {{site.data.keyword.Bluemix_notm}}. Vous pouvez collaborer avec d'autres développeurs. Votre application est déployée dans {{site.data.keyword.Bluemix_notm}} automatiquement lorsque vous validez les modifications dans le code. Il n'est pas nécessaire d'envoyer manuellement l'application par commande push.|
 |{{site.data.keyword.Bluemix_notm}} DevOps Delivery Pipeline	|Gérez votre code dans le référentiel DevOps GitHub et déployez votre application dans {{site.data.keyword.Bluemix_notm}} à l'aide de DevOps Delivery Pipeline.|
-{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} - outils" caption-side="top"}
+{: caption="Tableau 1. Outils Bluemix" caption-side="top"}
 
 
-Si la plateforme Cloud Foundry ne prend pas en charge les exigences relatives à votre application, vous pouvez utiliser un conteneur ou une machine
-virtuelle où le contexte d'exécution est défini, configuré et géré avec des options personnalisées supplémentaires.
+Si la plateforme Cloud Foundry ne prend pas en charge les exigences relatives à votre application, vous pouvez utiliser un conteneur ou une machine virtuelle où le contexte d'exécution est défini, configuré et géré avec des options personnalisées supplémentaires.
 
 ##Téléchargement de votre applications avec cf cli
 {: #ht_cfcli}

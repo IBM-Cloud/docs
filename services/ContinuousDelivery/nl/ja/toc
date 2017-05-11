@@ -1,0 +1,48 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="ContinuousDelivery" audience="service" href="/docs/services/ContinuousDelivery/index.html"}
+Continuous Delivery
+
+  {: .navgroup id="learn"}
+    index.md
+    cd_about.md
+    garage_method.md
+    limitations_plans.md
+
+  {: .topicgroup}
+    関連リンク
+	    [Learning lab](https://www.ibm.com/devops/method/category/courses)
+		  [IBM Bluemix Continuous Delivery](https://www.ibm.com/devops/method/content/deliver/tool_continuous_delivery/)
+		  [IBM Cloud Garage Method](https://www.ibm.com/devops/method)
+  {: .navgroup-end}
+
+  {: .navgroup id="howto"}
+    upgrade_projects.md
+    
+  {: .topicgroup}
+    Delivery Pipeline
+        pipeline_about.md
+        pipeline_working.md
+        pipeline_build_deploy.md
+        pipeline_composites.md
+        pipeline_deploy_var.md
+        deliverypipeline_extension.md
+        pipeline_deployment_plan.md
+
+  {: .topicgroup}
+    Toolchains
+        toolchains_about.md
+        toolchains_working.md
+        toolchains_using.md
+        toolchains_integrations.md
+
+    git_working.md
+    web_ide.md
+    di_working.md
+  {: .navgroup-end}
+
+  {: .navgroup id="help"}
+    cd_support.md
+    ts_index.md
+  {: .navgroup-end}

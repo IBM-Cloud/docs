@@ -29,7 +29,7 @@ Cloud Foundry-Apps verwenden Cloud Foundry Loggregator, um Protokolle außerhalb
 | vCPU | 19 | 57 |
 | Hauptspeicher | 80 GB | 240 GB |
 | Lokaler Speicher | 2,98 TB | 8,94 TB |
-{: caption="Table 2. Logging hardware requirements for {{site.data.keyword.Bluemix_local_notm}}" caption-side="top"}
+{: caption="Tabelle 2. Hardwarevoraussetzungen für die Protokollierung für {{site.data.keyword.Bluemix_local_notm}}" caption-side="top"}
 
 ## Konfiguration
 

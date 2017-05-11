@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2017-3-16"
 
 ---
 
@@ -17,12 +18,10 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# 扩展 {{site.data.keyword.deliverypipeline}} 
+# 扩展 {{site.data.keyword.deliverypipeline}}
 {: #deliverypipeline_extending}
-上次更新时间：2016 年 11 月 16 日
-{: .last-updated}
 
-通过配置作业使用受支持的服务，您可以扩展 {{site.data.keyword.deliverypipeline}} 功能。例如，测试作业可以运行静态代码扫描，而构建作业可以全球化字符串。
+通过配置作业使用受支持的服务，您可以扩展 {{site.data.keyword.deliverypipeline}} 功能。例如，测试作业可以运行静态代码扫描，而构建作业可以将字符串全球化。
 {:shortdesc}
 
 <!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->
@@ -33,7 +32,7 @@ copyright:
 
 {: #deliverypipeline_scan}
 
-想要在部署代码之前，查找代码中的安全问题？当您使用 IBM® Static Analyzer for Bluemix™ 作为管道的一部分时，您可以针对 Java™ 应用程序的静态 `.war`、`.ear`、`.jar` 或 `.class` 构建二进制文件，来运行自动检查。
+想要在部署代码之前发现代码中的安全问题？当您使用 IBM® Static Analyzer for Bluemix™ 作为管道的一部分时，可针对 Java™ 应用程序的静态 `.war`、`.ear`、`.jar` 或 `.class` 构建二进制文件运行自动检查。
 
 使用 Static Analyzer 服务的管道通常包括以下阶段：
 
@@ -46,7 +45,7 @@ copyright:
 
 ### 创建静态代码扫描
 
-开始之前，请[查看服务的使用条款](http://www-03.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01)。
+开始之前，请[查看服务的使用条款 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://www.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01){: new_window}
 
 <!-- Use ordered list markup for the step section. Include code examples as needed. -->
 
@@ -54,11 +53,11 @@ copyright:
 
   a. 单击**添加阶段**。
 
-  b. 对阶段进行命名，例如 `Processing`。
+  b. 为阶段命名，例如 `Processing`。
 
   c. 对于输入类型，选择**构建工件**。
 
-  d. 对于阶段和作业，验证并更新值（如果需要的话）。
+  d. 对于阶段和作业，验证值并视需要更新值。
 
 2. 在处理阶段中，添加构建作业以运行代码扫描。
 
@@ -68,35 +67,34 @@ copyright:
 
   c. 对于测试程序类型，选择 **IBM Security Static Analyzer**。
 
-  d. 对于组织和空间，验证并更新值（如果需要的话）。
+  d. 对于组织和空间，验证值并视需要更新值。
 
   e. 根据需要，选中或清除**为我设置服务和空间**复选框。
 
-    * 如果您想要管道针对服务和将服务绑定到容器的应用程序，检查 Bluemix 空间，请选中此复选框。如果服务或绑定的应用程序不存在，那么管道会将服务的免费套餐添加到空间。所创建的绑定应用程序名为 `pipeline_bridge_app`。之后，管道会使用 pipeline_bridge_app 中的凭证访问绑定的服务。
+    * 如果要让管道检查 Bluemix 空间中是否有该服务以及将该服务绑定到容器的应用程序，请选中此复选框。如果不存在该服务或绑定的应用程序，那么管道会将该服务的免费套餐添加到空间。所创建的绑定应用程序名为 `pipeline_bridge_app`。之后，管道会使用 pipeline_bridge_app 中的凭证来访问绑定的服务。
 
-    * 如果您已在 Bluemix 空间中配置服务和绑定的应用程序，或者如果您想要[手动配置这些需求](https://www.ng.bluemix.net/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline)，请使该复选框保留清除状态。
+    * 如果您已在 Bluemix 空间中配置该服务和绑定的应用程序，或者如果您想要[手动配置这些需求](/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline){: new_window}，请保持该复选框的未选中状态。
 
-  f. 在**等待分析完成的时间（分钟）**字段中，键入值 0 - 59 分钟。缺省值为 5 分钟。
-Static Analyzer 仪表板的 URL 位于作业结尾的控制台日志中。
+  f. 在**等待分析完成的时间（分钟）**字段中，输入 0 到 59 分钟之间的值。缺省值为 5 分钟。作业结束时 Static Analyzer 仪表板的 URL 会显示在控制台日志中。
 
-     如果在您所指定的时间之前 Static Analyzer 扫描未完成，那么作业会失败。但是，扫描分析会继续运行，而您可以在 Static Analyzer 仪表板上对其进行查看。在 Static Analyzer 扫描完成之后，如果您重新运行该作业，那么不会重新提交扫描请求，而管道作业可以完成。或者，您可以配置在产生成功扫描结果时，不会封锁管道。有关指示信息，请参阅下一步。
+     如果在您指定的时间之前 Static Analyzer 扫描未完成，那么作业会失败。但是，扫描分析会继续运行，而您可以在 Static Analyzer 仪表板上查看分析。在 Static Analyzer 扫描完成后，如果重新运行该作业，就不会重新提交扫描请求，而管道作业可以完成。或者，也可以配置为扫描结果成功时不阻塞管道。有关指示信息，请参阅下一步。
 
-  g. 根据此作业失败或超时时您希望执行的操作，选中或清除**此作业失败时停止运行此阶段**复选框。当漏洞高时，作业可能会失败。
+  g. 根据在此作业失败或超时的情况下您希望执行什么操作，选中或清除**此作业失败时停止运行此阶段**复选框。当漏洞较大时，作业可能会失败。
 
     * 如果您选中该复选框而作业失败，那么该阶段中的后续作业和后续阶段不会运行。
 
-    * 如果您清除该复选框而作业失败，那么该阶段会继续而不会阻止后续作业和阶段。例如，如果您了解报告包含许多问题要处理，那么您可能会配置阶段继续运行，因为扫描可能会花费很长时间。在此情况下，您可能并不希望仅仅因为执行扫描需要很长时间而停止剩余作业和阶段。
+    * 如果您清除该复选框而作业失败，那么该阶段会继续而不会阻止后续作业和阶段。例如，如果您知道该报告包含许多要处理的问题，那么您可能会设置该阶段继续运行，因为扫描可能会花很长时间。在此情况下，您可能不希望仅仅因为扫描需要花很长时间而停止剩余的作业和阶段。
 
   h. 单击**保存**。
 
 3. 作业完成时，单击**查看日志和历史记录**，以查看结果。如果分析成功或超时，那么会在扫描结果中显示 URL。如果扫描状态为暂挂，请等待直到扫描完成，以查看完整结果。
 
-4. 如果在分析完成之前，您需要重新运行处理阶段，那么您可以这样做。但是，在以下情况下，不会重新提交新分析而会使用之前的结果：
+4. 如果在分析完成之前需要重新运行处理阶段，那么您可以这样做。但是，在以下情况下，不会重新提交新分析而会使用之前的结果：
   * 当您启动新分析时，处理阶段仍在运行。
   * 已经提交构建的扫描
   * 新源构建尚未运行
 
-5. 要启动新分析，请完成以下其中一个步骤：
+5. 要启动新分析，请完成以下某个步骤：
   * 运行输入到处理阶段的构建阶段，然后重新运行处理阶段。
   * 打开扫描结果的 URL 并单击**废纸篓**图标。然后，重新运行处理阶段。
 
@@ -108,7 +106,7 @@ Static Analyzer 仪表板的 URL 位于作业结尾的控制台日志中。
 **暂挂扫描**
 ![暂挂扫描示例](images/analyzer_pending.png)
 
-有关使用 Static Analyzer 服务的更多信息，请参阅 [Static Analyzer 服务文档](https://console.ng.bluemix.net/docs/services/ApplicationSecurityonCloud/index.html)。
+有关使用 Static Analyzer 服务的更多信息，请参阅 [Static Analyzer 服务文档](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}。
 
 <!--
 
@@ -188,7 +186,7 @@ For more information about using the Globalization Pipeline service from the Blu
 3. 选择通道，然后单击**添加入局 WebHook 集成**。
 4. 添加 **WebHook URL** 或复制现有 URL。
 
-有关更多信息，请参阅 [Slack 文档中的入局 WebHook](https://api.slack.com/incoming-webhooks)。
+有关更多信息，请参阅 [Slack 文档中的入局 WebHook ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://api.slack.com/incoming-webhooks){: new_window}。
 
 要创建 Slack 通知，请执行以下操作：
 
@@ -212,7 +210,7 @@ For more information about using the Globalization Pipeline service from the Blu
   </tr>
   <tr>
     <td><code>SLACK_COLOR</code></td>
-    <td>可以输入下列其中一个值：<ul><li><code>good</code></li>
+    <td>可以输入下列某个值：<ul><li><code>good</code></li>
       <li><code>warning</code></li>
       <li><code>danger</code></li>
       <li>任何十六进制颜色，如 #439FEO</li></ul></td>
@@ -236,7 +234,7 @@ For more information about using the Globalization Pipeline service from the Blu
 
 6. 重复上述步骤，以针对包含 IBM Container Service、IBM Security Analyzer 和 IBM Globalization 作业的其他阶段，发送 Slack 消息。
 
-在 Slack 中显示的构建通知包括指向 DevOps Services 项目的链接，有时是指向项目仪表板的链接。Slack 用户要想打开这些链接，该用户必须已在 DevOps Services服务中注册，成为管道配置所在的项目的成员。
+在 Slack 中显示的构建通知包括指向项目的链接，有时是指向项目仪表板的链接。Slack 用户要想打开这些链接，该用户必须已在 Bluemix 中注册，并成为在其中配置管道的项目的成员。
 
 ## 针对管道中的构建创建 HipChat 通知
 {: #deliverypipeline_hipchat}
@@ -245,7 +243,7 @@ For more information about using the Globalization Pipeline service from the Blu
 
 开始之前，先创建或复制现有的 HipChat 令牌：
 
-1. 转至适合于您团队的“HipChat 页面”页面：`https://_project_name_.hipchat.com/account/api`
+1. 转至适合于您团队的“HipChat 帐户”页面：`https://_project_name_.hipchat.com/account/api`
 2. 创建新令牌或使用现有令牌。
 
 要创建 HipChat 通知，请执行以下操作：
@@ -290,7 +288,7 @@ For more information about using the Globalization Pipeline service from the Blu
     <td>输入以下某个值：<ul><li><code>good</code></li>
       <li><code>danger</code></li>
       <li><code>info</code></li></ul>
-此变量适用于 HipChat 和 Clack 通知颜色。如果指定
+此变量适用于 HipChat 和 Slack 通知颜色。如果指定
 <code>NOTIFICATION_COLOR</code>，那么不需要指定 <code>HIP_CHAT_COLOR</code> 或
 <code>SLACK_COLOR</code>。</td>
     <td>可选：指定 HipChat 和 Slack 通知的背景色和边框颜色。如果您设置 <code>NOTIFICATION_COLOR</code>，那么在您调用脚本时无需指定颜色。
@@ -322,13 +320,13 @@ For more information about using the Globalization Pipeline service from the Blu
 ## 使用 Active Deploy 在管道中实现零停机时间部署
 {: #deliverypipeline_activedeploy}
 
-您可以使用 Bluemix® DevOps Services Delivery Pipeline 中的 IBM® Active Deploy 服务，自动化应用程序或容器组的连续部署。有关入门的更多信息，请参阅 [Active Deploy 文档](https://new-console.ng.bluemix.net/docs/services/ActiveDeploy/updatingapps.html#adpipeline)。
+您可以使用 Delivery Pipeline 中的 IBM® Active Deploy 服务，实现应用程序或容器组的自动连续部署。有关入门的更多信息，请参阅 [Active Deploy 文档](/docs/services/ActiveDeploy/updatingapps.html#adpipeline){: new_window}。
 
 ## 使用管道构建和部署容器映像
 {: #deliverypipeline_containers}
 
-您可以使用 IBM® Continuous Delivery Pipeline for Bluemix，自动化 Bluemix® 的应用程序构建和容器部署。DevOps Services 中的 Delivery Pipeline 服务支持：
+您可以使用 IBM Continuous Delivery Pipeline for Bluemix，实现到 Bluemix 的应用程序自动构建和容器自动部署。Delivery Pipeline 服务支持：
   - 构建 Docker 映像
-  - 将容器中的映像部署至 Bluemix
+  - 将容器中的映像部署到 Bluemix
 
-有关入门的更多信息，请参阅 [Delivery Pipeline 和容器概述](https://new-console.ng.bluemix.net/docs/containers/container_pipeline_ov.html#container_pipeline_ov)。
+有关入门的更多信息，请参阅 [Delivery Pipeline 和容器概述](/docs/containers/container_pipeline_ov.html#container_pipeline_ov){: new_window}。

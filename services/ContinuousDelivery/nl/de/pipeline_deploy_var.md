@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-11-17"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -18,11 +18,18 @@ copyright:
 
 # Umgebungseigenschaften und Ressourcen
 {: #deliverypipeline_environment}
-Letzte Aktualisierung: 17. November 2016
-{: .last-updated}
 
-Sie können Umgebungseigenschaften und vorinstallierte Ressourcen verwenden, um mit dem Service IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} zu interagieren. Sie können sie beispielsweise in einem Job-Script oder einem Testbefehl verwenden.
+Sie können Umgebungseigenschaften und vorinstallierte Ressourcen verwenden, um mit dem Service IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} zu interagieren. Möglicherweise integrieren Sie diese in ein Job-Script oder einen Testbefehl.
 {:shortdesc}
+
+Sie können auf der Registerkarte **Umgebungseigenschaften** Ihre eigenen Umgebungseigenschaften zu einer Stage hinzufügen. Umgebungseigenschaften stehen für jeden Job in einer Stage zur Verfügung.
+
+Sie können vier Typen von Eigenschaften von der Registerkarte 'Umgebungseigenschaften' hinzufügen:
+* **Text** (Text): Ein Eigenschaftsschlüssel mit einem einzeiligen Wert.
+* **Text Area** (Textbereich): Ein Eigenschaftsschlüssel mit einem mehrzeiligen Wert.
+* **Secure** (Sicher): Ein Eigenschaftsschlüssel mit einem einzeiligen Wert. Der Wert wird in Form von Sternen angezeigt.
+* **Properties** (Eigenschaften): Eine Datei im Projektrepository. Diese Datei kann mehrere Eigenschaften enthalten. Jede Eigenschaft muss in einer eigenen Zeile stehen. Verwenden Sie Gleichheitszeichen (=), um Schlüssel und Werte der Paare zu trennen.
+
 
 Die folgenden Eigenschaften und Ressourcen sind in Pipeline-Umgebungen standardmäßig verfügbar.
 
@@ -45,21 +52,21 @@ Die folgenden Eigenschaften und Ressourcen sind in Pipeline-Umgebungen standardm
 | ARCHIVE_DIR | Das Verzeichnis zum Archivieren bzw. in das Archive herunterladen werden. |
 | BUILD_ID | Die eindeutige ID für die aktuelle Jobausführung.  |
 | BUILD_DISPLAY_NAME | Der Wert für BUILD_ID mit dem Präfix "#". |
-| BUILD_NUMBER | Die inkrementelle Phasen-ID, die in der Benutzerschnittstelle der Pipeline angezeigt wird.  |
+| BUILD_NUMBER | Die inkrementelle Stages-ID, die in der Benutzerschnittstelle der Pipeline angezeigt wird.  |
 | GIT_BRANCH | Der Git-Zweig, den der Job als Eingabe verwendet. Diese Eigenschaft ist nur für Jobs verfügbar, die als Eingabe ein Git-Repository verwenden. |
 | GIT_COMMIT | Die Git-Commitoperation, die der Job als Eingabe verwendet. Diese Eigenschaft ist nur für Jobs verfügbar, die als Eingabe ein Git-Repository verwenden. |
 | GIT_PREVIOUS_COMMIT | Der Git-Commitwert der letzten erfolgreichen Ausführung des Jobs. Diese Eigenschaft ist nur für Jobs verfügbar, die als Eingabe ein Git-Repository verwenden. |
 | GIT_URL | Die Git-Repository-URL, die der Job als Eingabe verwendet. Diese Eigenschaft ist nur für Jobs verfügbar, die als Eingabe ein Git-Repository verwenden. |
 | IDS_JOB_ID | Die eindeutige ID der Jobkonfiguration. |
 | IDS_JOB_NAME | Der Name der Jobkonfiguration. |
-| IDS_OUTPUT_PROPS | Durch Kommas getrennte Namen Ihrer Phasenumgebungseigenschaften. |
+| IDS_OUTPUT_PROPS | Durch Kommas getrennte Namen der Eigenschaften Ihrer Stageumgebung. |
 | IDS_PROJECT_NAME | Der Name des Projekts, z. B. <code>Owner - Project Name</code>. |
-| IDS_STAGE_NAME | Der Name der aktuellen Phase. |
+| IDS_STAGE_NAME | Der Name der aktuellen Stage. |
 | IDS_URL | Die URL der aktuellen Pipeline. |
 | IDS_VERSION | Die Nummer des Builds, der bereitgestellt wird, oder die SCM-ID. Diese Eigenschaft ist nur für Bereitstellungsjobs verfügbar.
 | JOB_NAME | Die eindeutige Job-ID im Kontext der aktuellen Pipeline. |
-| PIPELINE_STAGE_INPUT_JOB_ID | Die ID des Jobs, der als Eingabe für die aktuelle Phase dient. |
-| PIPELINE_STAGE_INPUT_REV | Die Überarbeitung der Eingabe für die aktuelle Phase. |
+| PIPELINE_STAGE_INPUT_JOB_ID | Die ID des Jobs, der als Eingabe für die aktuelle Stage dient. |
+| PIPELINE_STAGE_INPUT_REV | Die Überarbeitung der Eingabe für die aktuelle Stage. |
 | PIPELINE_INITIAL_STAGE_EXECUTION_ID | Die eindeutige ID der Ausführung der Pipeline. |
 | TASK_ID | Die eindeutige ID der aktuellen Jobausführung. |
 | TMPDIR | Eine Verzeichnisposition, an der temporäre Dateien gespeichert werden. |
@@ -81,7 +88,7 @@ Die folgenden Eigenschaften und Ressourcen sind in Pipeline-Umgebungen standardm
 
 | Umgebungseigenschaft | Beschreibung |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| CF_APP | Bei Bereitstellungen der Name der bereitzustellenden App. Diese Eigenschaft ist für die Bereitstellung erforderlich und kann im Script selbst, in der Schnittstelle zur Bereistellung der Jobkonfiguration oder in der Datei `manifest.yml` des Projekts angegeben werden. |
+| CF_APP | Bei Bereitstellungen der Name der bereitzustellenden App. Diese Eigenschaft ist für die Bereitstellung erforderlich und kann im Script selbst, in der Schnittstelle zur Bereitstellung der Jobkonfiguration oder in der Datei `manifest.yml` des Projekts angegeben werden. |
 | CF_ORG | Bei Bereitstellungen der Name der Organisation, für die die Bereitstellung durchgeführt wird. |
 | CF_ORGANIZATION_ID | Bei Bereitstellungen die ID der Organisation, für die Bereitstellung durchgeführt wird. |
 | CF_SPACE | Bei Bereitstellungen der Name des Bereichs, für den die Bereitstellung durchgeführt wird. |
@@ -104,7 +111,7 @@ In jeder Pipeline sind mehrere Laufzeiten, Tools und Node-Module vorinstalliert.
 |Cloud Foundry CLI 6.14 |cf | /opt/IBM/cf |
 |Gradle 1.12|gradle |/opt/IBM/gradle |
 |Gradle 2.9 |gradle2 |/opt/IBM/gradle2 |
-|IBM Java (default)|java |/opt/IBM/java |
+|IBM Java (Standard)|java |/opt/IBM/java |
 |IBM Java 7 x86_64-71 |java7 |/opt/IBM/java7 |
 |IBM Java 8 x86_64-80|java8 |/opt/IBM/java8 |
 |Apache Maven 3.2.1 |maven |/opt/IBM/maven |

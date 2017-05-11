@@ -18,7 +18,7 @@ Sie können die Befehlszeilenschnittstelle (CLI) für privates Netzpeering zum K
 
 Das CLI-Plug-in für privates Netzpeering steht für die Betriebssysteme Windows, MAC und Linux zur Verfügung. Stellen Sie sicher, dass Sie das für Sie geeignete Plug-in verwenden.
 
-Bevor Sie beginnen, erstellen Sie Bluemix-Bereiche. Stellen Sie sicher, dass jeder Container eines Bereichs eine IP-Adresse aus einem anderen Netzwerk besitzt. Details hierzu finden Sie unter [Eigene private IP-Adresse verwenden](https://www.{DomainName}/docs/containers/container_security_network.html#container_cli_ips_byoip).
+Bevor Sie beginnen, erstellen Sie Bluemix-Bereiche. Stellen Sie sicher, dass jeder Container eines Bereichs eine IP-Adresse aus einem anderen Netzwerk besitzt. Details hierzu finden Sie unter [Eigene private IP-Adresse verwenden](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip).
 
 **Hinweis:** Wenn Sie das private Netzpeering mit einem Bluemix-Bereich verwendet haben und den Bereich löschen müssen, dann löschen Sie zuerst die Verbindungen für das private Netzpeering in diesem Bereich.
 
@@ -86,7 +86,7 @@ Folgende Befehle werden unterstützt. Verwenden Sie den Befehl `bluemix network`
 | pnp-create  | Erstellt eine Verbindung für das private Netzpeering.   |
 | pnp-delete  | Löscht eine Verbindung für das private Netzpeering.   |
 | pnp-show    | Listet alle Verbindungen für das private Netzpeering auf.  |
-{: caption="Table 1. Private network peering commands" caption-side="top"}
+{: caption="Tabelle 1. Befehle für das private Netzpeering" caption-side="top"}
 
 
 ### Verwendung der Befehle

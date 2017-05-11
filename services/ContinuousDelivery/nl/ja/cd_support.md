@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2015, 2017
+lastupdated: "2017-4-11"
 
 ---
 
@@ -14,19 +15,34 @@ copyright:
 # {{site.data.keyword.contdelivery_short}} のヘルプとサポートの入手    
 {: #cd_support}  
 
-最終更新日: 2016 年 11 月 18 日
-{: .last-updated}
+{{site.data.keyword.contdelivery_full}} チームは、{{site.data.keyword.contdelivery_short}} サービスおよび DevOps Insights に関する質問について、Stack Overflow と developerWorks のフォーラムをアクティブにモニターしています。   
 
-{{site.data.keyword.contdelivery_full}} の使用時に問題や疑問が生じた場合は、フォーラムで情報を検索するか質問してヘルプを利用できます。[サポート・チケットを開く (新しいウィンドウでリンクが開きます)](https://www.{DomainName}/docs/support/index.html#open-ticket) こともできます。    
-{:shortdesc}
+<table>
+ <td align="center">
+ <strong>Stack Overflow</strong>
+  <p>
+   <a class="xref" href="http://stackoverflow.com/questions/ask?tags=ibm-bluemix,http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="(新しいタブまたはウィンドウで開く)"><img class="image" src="images/ask-a-question.png" alt="質問を投稿する"/></a></p>
+   <p>
+    <a class="xref" href="http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="(新しいタブまたはウィンドウで開く)">Stack Overflow の最新の <img class="image" src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services の質問を表示する。</p></td>
+  <td align="center">
+  <strong>dW Answers</strong>
+   <p>
+   <a class="xref" href="https://developer.ibm.com/answers/questions/ask/?topics=devops-services,bluemix" target="_blank" title="(新しいタブまたはウィンドウで開く)"><img class="image" src="images/ask-a-question.png" alt="質問を投稿する"/></a></p>
+   <p>
+    <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="(新しいタブまたはウィンドウで開く)">dW Answers の最新の <img class="image" src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services の質問を表示する。</p></td>
+  </table>  
 
-{{site.data.keyword.Bluemix_notm}} の開発チームとサ
-ポート・チームは、Stack Overflow と dW Answers を積極的にモニターしており、ibm-bluemix、continuous-delivery、bluemix-continuous-delivery のタグが付いた質問をフォローしています。いずれかのフォーラムで質問を作成する際に、{{site.data.keyword.Bluemix_notm}} の開発チームとサポート・チームがその質問を参照できるように、質問にタグを付けてください。
 
-* 継続的デリバリーについての技術的な質問がある場合、質問を [Stack Overflow (新しいウィンドウでリンクが開きます)](http://stackoverflow.com/search?q=ibm-bluemix+continuous-delivery){:new_window} に投稿し、質問に「ibm-bluemix」や「continuous-delivery」というタグを付けます。
+## サポート・チケット
 
-* {{site.data.keyword.contdelivery_short}} サービスについての技術的な質問がある場合、[IBM developerWorks dW Answers (新しいウィンドウでリンクが開きます)](https://developer.ibm.com/answers/topics/bluemix-continuous-delivery/?smartspace=bluemix){:new_window} フォーラムを使用します。「bluemix-continuous-delivery」というタグを付けます。
+より重大な問題がある場合や {{site.data.keyword.contdelivery_short}} サービスで問題が発生した場合は、サポート・チケットをオープンします。    
 
-フォーラムの使用法について詳しくは、[Getting help (新しいウィンドウでリンクが開きます)](https://www.{DomainName}/docs/support/index.html#getting-help) を参照してください。
+1. {{site.data.keyword.Bluemix_notm}} にログインします。
+1. メニュー・バーで**「サポート」**をクリックし、次に**「チケットの追加」**をクリックします。
+1. フォームに記入して、技術サポートが必要な理由を示します。
 
-IBM サポート・チケットを開く方法や、サポート・レベルとチケットの重大度については、[サポートへのお問い合わせ (新しいウィンドウでリンクが開きます)](https://www.{DomainName}/docs/support/index.html#contacting-support) を参照してください。
+IBM {{site.data.keyword.Bluemix_notm}} サポート・チケットを開く方法や、サポート・レベルとチケットの重大度については、[サポートへのお問い合わせ](https://console.ng.bluemix.net/docs/support/index.html#contacting-support) を参照してください。
+
+
+## Bluemix のサポート
+{{site.data.keyword.Bluemix_notm}} サービスに関するその他の問題またはご質問については、[お客様サポートの入手](https://www.{DomainName}/docs/support/index.html#getting-customer-support)を参照してください。

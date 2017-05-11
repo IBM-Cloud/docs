@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2015, 2017
+lastupdated: "2017-4-11"
 
 ---
 
@@ -14,38 +15,34 @@ copyright:
 # Obtendo ajuda e suporte para o {{site.data.keyword.contdelivery_short}}    
 {: #cd_support}  
 
-Última atualização: 18 de novembro de 2016
-{: .last-updated}
+A equipe do {{site.data.keyword.contdelivery_full}} monitora ativamente os fóruns do Stack Overflow e do developerWorks com relação a perguntas sobre o serviço {{site.data.keyword.contdelivery_short}} e o DevOps Insights.   
 
-Se você tiver problemas ou dúvidas ao usar o
-{{site.data.keyword.contdelivery_full}}, será possível obter ajuda procurando
-informações ou perguntando em um fórum. É possível também
-[abrir um
-chamado de suporte (o link é aberto em uma nova janela)](https://www.{DomainName}/docs/support/index.html#open-ticket).
-{:shortdesc}
+<table>
+ <td align="center">
+ <strong>Stack Overflow</strong>
+  <p>
+   <a class="xref" href="http://stackoverflow.com/questions/ask?tags=ibm-bluemix,http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/ask-a-question.png" alt="Faça uma pergunta"/></a></p>
+   <p>
+    <a class="xref" href="http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="(Abre em uma nova guia ou janela)">Mostrar <img class="image" src="../../icons/launch-glyph.svg" alt="Ícone de link externo"/></a> perguntas recentes do {{site.data.keyword.Bluemix_notm}} DevOps Services no Stack Overflow.</p></td>
+  <td align="center">
+  <strong>dW Answers</strong>
+   <p>
+   <a class="xref" href="https://developer.ibm.com/answers/questions/ask/?topics=devops-services,bluemix" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/ask-a-question.png" alt="Faça uma pergunta"/></a></p>
+   <p>
+    <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="(Abre em uma nova guia ou janela)">Mostrar <img class="image" src="../../icons/launch-glyph.svg" alt="Ícone de link externo"/></a> perguntas recentes do {{site.data.keyword.Bluemix_notm}} DevOps Services no dW Answers.</p></td>
+  </table>  
 
-As equipes de desenvolvimento e suporte do
-{{site.data.keyword.Bluemix_notm}} monitoram ativamente Stack Overflow e dW
-Answers, seguindo as questões que são identificadas com ibm-bluemix,
-continuous-delivery e bluemix-continuous-delivery. Quando você criar uma questão no
-fórum, identifique-a para que as equipes de desenvolvimento e suporte do
-{{site.data.keyword.Bluemix_notm}} a vejam.
 
-* Se você tiver questões técnicas sobre entrega contínua, poste sua questão em
-[Stack
-Overflow (o link é aberto em uma nova janela)](http://stackoverflow.com/search?q=ibm-bluemix+continuous-delivery){:new_window} e marque-a com
-"ibm-bluemix" e "continuous-delivery".
+## Chamados de Suporte
 
-* Se você tiver dúvidas sobre o serviço
-{{site.data.keyword.contdelivery_short}}, use o fórum do
-[IBM
-developerWorks dW Answers (o link é aberto em uma nova janela)](https://developer.ibm.com/answers/topics/bluemix-continuous-delivery/?smartspace=bluemix){:new_window}. Inclua
-a tag "bluemix-continuous-delivery".
+Se você tiver um problema mais sério ou encontrar problemas com o serviço {{site.data.keyword.contdelivery_short}}, abra um chamado de suporte.    
 
-Para obter mais detalhes sobre o uso dos fóruns, consulte
-[Obtendo
-ajuda (o link é aberto em uma nova janela)](https://www.{DomainName}/docs/support/index.html#getting-help).
+1. Efetue login no {{site.data.keyword.Bluemix_notm}}.
+1. Na barra de menus, clique em **Suporte** e, em seguida, clique em **Incluir chamado**.
+1. Conclua o formulário para indicar o que você precisa do suporte técnico.
 
-Para obter informações sobre como abrir um chamado de suporte IBM ou sobre níveis de suporte e severidades de chamado, consulte
-[Entrando em contato com o suporte
-(O link é aberto em uma nova janela)](https://www.{DomainName}/docs/support/index.html#contacting-support).
+Para obter mais informações sobre como abrir um chamado de suporte IBM {{site.data.keyword.Bluemix_notm}} ou sobre os níveis de suporte e severidades de chamado, veja [Entrando em contato com o suporte](https://console.ng.bluemix.net/docs/support/index.html#contacting-support).
+
+
+## Suporte para o Bluemix
+Para outros problemas ou perguntas sobre o serviço {{site.data.keyword.Bluemix_notm}}, veja [Obtendo suporte ao cliente](https://www.{DomainName}/docs/support/index.html#getting-customer-support).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-08-25"
+lastupdated: "2017-04-25"
 
 ---
 
@@ -37,18 +37,17 @@ oppure l'interfaccia riga di comando cf.
 
   1. Crea un dominio personalizzato per la tua organizzazione.
 
-	1. Vai all'icona **{{site.data.keyword.avatar}}** ![icona Avatar](../icons/i-avatar-icon.svg) &gt; **Gestisci organizzazioni** &gt; **Visualizza dettagli** per la tua organizzazione &gt; **Modifica organizzazione** &gt; **Domini**.
+	1. Vai a **Gestisci** &gt; **Account** &gt; **Organizzazioni** &gt; **Visualizza dettagli** per la tua organizzazione. Quindi, fai clic su **Modifica organizzazione** &gt; **Domini**.
 
-	2. Nella scheda **DOMINI**, fai clic su **AGGIUNGI DOMINIO**, immetti il nome
-del tuo dominio personalizzato e fai clic su **SALVA**.
+	2. Nella scheda **DOMINI**, fai clic su **AGGIUNGI DOMINIO**, immetti il nome del tuo dominio personalizzato e fai clic su **SALVA**.
 
 	**Nota**: puoi utilizzare, ad esempio, `mycompany.com` per associare la rotta `www.mycompany.com` alla tua applicazione. Puoi anche utilizzare `example.mycompany.com` per associare la rotta `www.example.mycompany.com` all'applicazione.
 
   2. Aggiungi la rotta con il dominio personalizzato a un'applicazione.
 
-    1. Nella barra dei menu, seleziona **Console** dal menu a discesa, quindi fai clic sulla riga dell'applicazione a cui desideri aggiungere la rotta. Viene visualizzata la pagina **Panoramica**.
+    1. Fai clic sull'icona **Menu** ![icona Menu](../icons/icon_hamburger.svg) &gt; **Dashboard**, quindi fai clic sulla riga dell'applicazione a cui desideri aggiungere la rotta. Viene visualizzata la pagina **Panoramica**.
 
-	2. Dal menu **Visualizza applicazione**, seleziona **Modifica rotte e accesso**.
+	2. Dal menu **Rotte**, seleziona **Modifica rotte**.
 
 	3. Fai clic su **Aggiungi rotta** e specifica la rotta che vuoi utilizzare per l'applicazione.
 	4. Fai clic su **Salva**.
@@ -85,7 +84,7 @@ seguente comando:
 
     *ilmiodominio*
 
-    	Il nome del tuo dominio personalizzato.
+    	Il nome del tuo dominio personalizzato, ad esempio `www.mydomain.mybluemix.net`.
 
     *home_host*
 
@@ -104,6 +103,7 @@ Una volta configurato il dominio personalizzato in {{site.data.keyword.Bluemix_n
     * STATI UNITI SUD: `secure.us-south.bluemix.net`
     * EUROPA REGNO UNITO: `secure.eu-gb.bluemix.net`
     * AU-SYD: `secure.au-syd.bluemix.net`
+    * EU-DE: `secure.eu-de.bluemix.net`
 
 In un browser o nell'interfaccia riga di comando, immetti il seguente URL per accedere all'applicazione myapp:
 

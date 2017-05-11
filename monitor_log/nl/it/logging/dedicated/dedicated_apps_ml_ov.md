@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2017
 
-lastupdated: "2016-10-13"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -34,7 +34,7 @@ Le applicazioni Cloud Foundry utilizzano il  Loggregator per monitorare e inoltr
 vCPU | 19 | 57 |
 Memoria | 80 GB | 240 GB |
 Memoria locale | 2.98 TB | 8.94 TB |
-{: caption="Table 1. Logging hardware requirements for {{site.data.keyword.Bluemix_local_notm:}}" caption-side="top"}
+{: caption="Tabella 1. Registrazione dei requisiti hardware per {{site.data.keyword.Bluemix_local_notm:}}" caption-side="top"}
 
 ## Configurazione
 
@@ -53,8 +53,8 @@ Puoi riesaminare i log delle applicazioni in esecuzione in {{site.data.keyword.B
 Per visualizzare i tuoi log delle applicazioni, segui queste istruzioni.
 1. Seleziona un'applicazione in esecuzione.
 2. Fai clic su **Log**. Nella vista **Log**, puoi visualizzare i log dalla tua applicazione in esecuzione.
-4. Fai clic sul pulsante **Vista avanzata**. **Vista avanzata** mostra una vista più dettagliata dei log utilizzando Kibana, uno strumento di visualizzazione che utilizza i log e i dati con data/ora per creare le visualizzazioni personalizzate. Per ulteriori informazioni sull'utilizzo della vista avanzata, consulta la documentazione di [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html).
+4. Fai clic sul pulsante **Vista avanzata**. **Vista avanzata** mostra una vista più dettagliata dei log utilizzando Kibana, uno strumento di visualizzazione che utilizza i log e i dati con data/ora per creare le visualizzazioni personalizzate. Per ulteriori informazioni sull'utilizzo della vista avanzata, vedi [Kibana User Guide ![icona link esterno](../../../icons/launch-glyph.svg "External link icon")](https://www.elastic.co/guide/en/kibana/4.1/index.html){: new_window}.
 
-Successivamente, puoi personalizzare un dashboard Kibana. Per ulteriori informazioni, consulta [Personalizzazione della visualizzazione del log nel dashboard Kibana](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_dash_logs_custom).
+Successivamente, puoi personalizzare un dashboard Kibana. Per ulteriori informazioni, vedi [Analisi log avanzata con Kibana](../kibana4/analyzing_logs_Kibana.html#analyzing_logs_Kibana).
 
 <!-- audience blue staging only end comment -->

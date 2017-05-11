@@ -37,7 +37,7 @@ aplicativo para abrir o projeto no Xcode.
 Após a instalação, abra a área de trabalho do seu projeto.  É possível obter o seguinte aviso ao construir:
 `Use Legacy Swift Language Version” (SWIFT_VERSION) is required to be configured correctly for targets which use Swift. Use the [Edit > Convert > To Current Swift Syntax…] menu to choose a Swift version or use the Build Settings editor to configure the build setting directly.`
 Isso ocorrerá se o Cocoapods não atualizar a versão do Swift no projeto Pods.  Para corrigir, selecione o
-projeto Pods e o destino OpenWhisk. Acesse Configurações de construção e mude a configuração `Use Legacy Swift Language Version` para `no`. Como alternativa, é possível incluir as seguintes instruções de instalação no final do seu arquivo pod:
+projeto Pods e o destino OpenWhisk.  Acesse Configurações de construção e mude a configuração `Use Legacy Swift Language Version` para `no`. Como alternativa, é possível incluir as seguintes instruções de instalação no final do seu arquivo pod:
 
 ```
 post_install do |installer|
@@ -79,7 +79,8 @@ Para instalar o exemplo do app iniciador, insira o comando a seguir:
 $ wsk sdk install iOS
 ```
 
-Esse comando faz download de um arquivo compactado que contém o app iniciador. Dentro do diretório de projeto há um arquivo pod. 
+Esse comando faz download de um arquivo compactado que contém o app iniciador. Dentro
+do diretório de projeto está um podfile. 
 
 Para instalar o SDK, insira o comando a seguir:
 ```
@@ -143,7 +144,7 @@ do {
 
 No exemplo anterior, você chama a ação `helloConsole` usando o namespace padrão.
 
-## Disparando um acionador do OpenWhisk 
+## Disparando um acionador do OpenWhisk
 
 Para disparar um acionador remoto, é possível chamar o método `fireTrigger`. Passe parâmetros conforme necessário usando um dicionário.
 
@@ -228,8 +229,7 @@ whisk.urlSession = session
 
 Todas as ações e acionadores têm um nome completo composto por um namespace, um pacote e um nome de ação ou de acionador. O
 SDK pode aceitar esses elementos como parâmetros quando você está chamando uma ação ou
-disparando um acionador. O SDK também fornece uma função que aceita um nome completo semelhante a `/mynamespace/mypackage/nameOfActionOrTrigger`. 
-A sequência de nome qualificado suporta valores padrão não denominados para namespaces e pacotes que usuários
+disparando um acionador. O SDK também fornece uma função que aceita um nome completo semelhante a `/mynamespace/mypackage/nameOfActionOrTrigger`. A sequência de nome qualificado suporta valores padrão não denominados para namespaces e pacotes que usuários
 do OpenWhisk têm, de modo que as regras de análise a seguir se aplicam:
 
 - qName = "foo" resulta em namespace = default, package = default, action/trrigger = "foo"
