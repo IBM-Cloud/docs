@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-04-17"
+lastupdated: "2017-05-08"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2017-04-17"
 # How it works
 {: #about}
 
-You can learn about the components, architecture, and request flow that {{site.data.keyword.appid_short_notm}} uses.
+You can learn about the components, architecture, and request flow that {{site.data.keyword.appid_full}} uses.
 {:shortdesc}
 
 
@@ -76,6 +76,6 @@ The following diagram describes how a request flows from the client SDK to your 
 * When the client SDK contacts the service, the server SDK returns the login widget if more than one identity provider is configured. {{site.data.keyword.appid_short_notm}} calls the identity provider and presents the login form for that provider, or returns a grant code that allows them to authenticate if no identity providers are configured.
 * {{site.data.keyword.appid_short_notm}} asks the client app to authenticate by supplying an authentication challenge.
 * If Facebook or Google are configured, and the user logs in, the authentication is handled by the respective identity provider OAuth Flow.
-* If the authentication ends with the same grant code, the code is sent to the token endpoint. The endpoint returns two tokens: an access token and an identity token. From this point on, all requests made with the client SDK have a newly obtained authorization header.
+* If the authentication ends with the same grant code, the code is sent to the token endpoint. The endpoint returns two tokens: an access token and an identity token. From this point on, all requests that are made with the client SDK have a newly obtained authorization header.
 * The client SDK automatically resends the original request that triggered the authorization flow.
 * The server SDK extracts the authorization header from the request, validates the header with the service, and grants access to a back-end resource.

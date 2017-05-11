@@ -30,6 +30,8 @@ App ID
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
+    existing.md
+
     {: .topicgroup}
     Setting up the SDKs and sample app
         developing-apps.md
