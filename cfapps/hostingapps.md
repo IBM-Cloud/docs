@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2016-05-09"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -93,12 +93,16 @@ You can use the following tools and services that {{site.data.keyword.Bluemix_no
 |:------|:--------|
 |Cloud Foundry command line interface (cf cli)	|Manage your code on local client and use Cloud Foundry command line interface to push your application to {{site.data.keyword.Bluemix_notm}} manually. For more information, see [Uploading your apps](/docs/starters/upload_app.html).|
 |Eclipse	|Manage your code in Eclipse and use the IBM Eclipse tools for {{site.data.keyword.Bluemix_notm}} to push your application.|
-|Git integration	|Manage your code on GitHub and integrate Git into {{site.data.keyword.Bluemix_notm}}. You can collaborate with other developers. Your application is deployed to {{site.data.keyword.Bluemix_notm}} automatically when you commit changes in the code. You do not need to push the application manually.|
-|{{site.data.keyword.Bluemix_notm}} DevOps Delivery Pipeline	|Manage your code on DevOps GitHub repository and deploy your application to {{site.data.keyword.Bluemix_notm}} by using the DevOps Delivery Pipeline.|
+|{{site.data.keyword.contdelivery_full}} |    Use {{site.data.keyword.contdelivery_short}} to automate builds, unit tests, deployments, and more. Edit and push code through the rich web based IDE. Create toolchains to enable tool integrations that support your development, deployment, and operation tasks. The Continuous Delivery service includes Delivery Pipeline, the Eclipse Orion Web IDE, and Git Repos and Issue Tracking. For more information, see <a href="/docs/services/ContinuousDelivery/index.html#cd_getting_started">Getting started with Continuous Delivery</a>|
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} tools" caption-side="top"}
 
 
 If the Cloud Foundry platform does not support your application requirements, you can use a container or VM where the runtime is set up, configured, and maintained with more customized options.
+
+##Developing and deploying your apps using toolchains in Continuous Delivery
+{:ht_cd}
+
+Add a <a href="/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_an_app">toolchain to your app</a> and then use the <a href="/docs/services/ContinuousDelivery/toolchains_using.html#toolchains-using">Continuous Delivery toolchain UI</a> to develop and deploy your app.
 
 ##Uploading your apps by using cf cli
 {: #ht_cfcli}
