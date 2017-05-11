@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-04-17"
+lastupdated: "2017-05-08"
 
 ---
 
@@ -57,7 +57,7 @@ You need the following information:
 The {{site.data.keyword.appid_short_notm}} client SDK is distributed with CocoaPods, a dependency manager for Swift and Objective-C Cocoa projects. CocoaPods downloads artifacts, and makes them available to your project.
 
 1. Create an Xcode project, or open an existing project.
-2. Open, or create, the Podfile in the project's directory.
+2. Open, or create, the podfile in the project's directory.
 3. Under your project's target add a dependency for the 'BluemixAppID' pod. Make sure the `use_frameworks!` command is also under your target.
 
   For example:
@@ -70,7 +70,7 @@ The {{site.data.keyword.appid_short_notm}} client SDK is distributed with CocoaP
   ```
   {:pre}
 
-4. To download the `BluemixAppID` dependency, run the following command:
+4. To download the `BluemixAppID` dependency, run the following command.
 
   ```swift
   pod install --repo-update
@@ -84,7 +84,7 @@ The {{site.data.keyword.appid_short_notm}} client SDK is distributed with CocoaP
 ## Initializing the client SDK
 {: #initialize-client-sdk}
 
-1. Add the following import to your `AppDelegate.swift` file:
+1. Add the following import to your `AppDelegate.swift` file.
 
   ```swift
   import BluemixAppID
@@ -113,7 +113,7 @@ The {{site.data.keyword.appid_short_notm}} client SDK is distributed with CocoaP
 ## Authenticate users by using the login widget
 {: #authenticate-login}
 
-After the {{site.data.keyword.appid_short_notm}} client SDK is initialized, you can authenticate your users by running the login widget. The login widget default configuration uses Facebook, Google, or both as authentication options. If you configure only one of them the login widget does not launch and the user is redirected to the configured IDP authentication screen.
+After the {{site.data.keyword.appid_short_notm}} client SDK is initialized, you can authenticate your users by running the login widget. The login widget default configuration uses Facebook, Google, or both as authentication options. If you configure only one identity provider, the login widget does not start and the user is redirected to the configured IDP authentication screen.
 
 
 
@@ -148,7 +148,7 @@ After the {{site.data.keyword.appid_short_notm}} client SDK is initialized, you 
 ## Accessing user attributes
 {: #accessing}
 
-When obtaining an access token, it is possible to gain access to the user protected attributes endpoint. This is done by using the following API methods:
+When obtaining an access token, it is possible to gain access to the user protected attributes endpoint. This is done by using the following API methods.
 
   ```swift
   func setAttribute(key: String, value: String, completionHandler: @escaping(Error?, [String:Any]?) -> Void)
@@ -167,7 +167,7 @@ When obtaining an access token, it is possible to gain access to the user protec
 
 When an access token is not explicitly passed, {{site.data.keyword.appid_short_notm}} uses the last received token.
 
-For example, you can invoke this code to set a new attribute, or override an existing one:
+For example, you can call the following code to set a new attribute, or override an existing one.
 
   ```swift
   AppID.sharedInstance.userAttributeManager?.setAttribute("key", "value", completionHandler: { (error, result) in
@@ -184,7 +184,7 @@ For example, you can invoke this code to set a new attribute, or override an exi
 ### Anonymous login
 {: #anonymous notoc}
 
-With {{site.data.keyword.appid_short_notm}} you can log in [anonymously](/docs/services/appid/user-profile.html#anonymous).
+With {{site.data.keyword.appid_short_notm}}, you can log in [anonymously](/docs/services/appid/user-profile.html#anonymous).
 
   ```swift
   class delegate : AuthorizationDelegate {
@@ -209,14 +209,14 @@ With {{site.data.keyword.appid_short_notm}} you can log in [anonymously](/docs/s
 ### Progressive authentication
 {: #progressive notoc}
 
-When you hold an anonymous access token, the user can become an identified user by passing it to the loginWidget.launch method:
+When you hold an anonymous access token, the user can become an identified user by passing it to the `loginWidget.launch` method.
 
   ```swift
   func launch(accessTokenString: String? , delegate: AuthorizationDelegate)
   ```
   {:pre}
 
-After an anonymous login, progressive authentication occurs even if the login widget is called without passing an access token because the service used the last received token. If you want to clear your stored tokens, run the following command:
+After an anonymous login, progressive authentication occurs even if the login widget is called without passing an access token because the service used the last received token. If you want to clear your stored tokens, run the following command.
 
   ```swift
   var appIDAuthorizationManager = AppIDAuthorizationManager(appid: AppID.sharedInstance)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-04-17"
+lastupdated: "2017-05-08"
 
 ---
 
@@ -21,16 +21,16 @@ You can use the {{site.data.keyword.appid_short}} server SDK to protect resource
 {: #before-you-begin}
 
 * Be familiar with developing Node.js applications on {{site.data.keyword.Bluemix_notm}}.
-* The {{site.data.keyword.appid_short_notm}} server SDK requires that your Node.js server is implemented with the <a href="http://expressjs.com/" target="_blank">Express framework <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>.
+* The {{site.data.keyword.appid_short_notm}} server SDK requires that your Node.js server is implemented with the `<a href="http://expressjs.com/" target="_blank">Express framework <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>`.
 
-**Note**: There are other frameworks that use `Express` frameworks, such as LoopBack. You can use the {{site.data.keyword.appid_short_notm}} server SDK with any of these frameworks.
+**Note**: Other frameworks use `Express` frameworks, such as LoopBack. You can use the {{site.data.keyword.appid_short_notm}} server SDK with any of these frameworks.
 
 
 ## Installing the server SDK
 {: #protecting-resources-serversdk}
 
 1. Using the command line, open the directory with your Node.js app.
-2. Run the following commands:
+2. Run the following commands.
 
   ```
   npm install -save express
@@ -69,7 +69,7 @@ The following snippet demonstrates how to use `APIStrategy` in a simple Express 
   ```
   {:pre}
 
-You can use `WebAppStrategy` to protect web application resources:
+You can use `WebAppStrategy` to protect web application resources.
 
   ```JavaScript
 

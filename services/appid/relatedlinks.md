@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-04-20"
+lastupdated: "2017-05-08"
 
 ---
 
@@ -12,14 +12,13 @@ lastupdated: "2017-04-20"
 
 # Related links
 
-You can use the following related links to learn more and interact with the service.
+You can use the following related links to learn more about and interact with the service.
 {:shortdesc}
 
-<!--- ## Tutorials and samples
-{: #tutorials-samples}
+## Samples
+{: #samples}
 
-* REVIEWER: Links to samples and tutorials here --->
-
+* <a href="https://github.com/mnsn/appid-python-flask-example" target="_blank">Using {{site.data.keyword.appid_short_notm}} with Python <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
 
 ## Videos
 {: #videos}

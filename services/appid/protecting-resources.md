@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-04-17"
+lastupdated: "2017-05-08"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2017-04-17"
 You can access protected resources by using the client SDKs.
 {:shortdesc}
 
-Calling a protected resource launches the login widget, if necessary. If a valid token was already obtained, the login widget is not launched, and the resource is accessed directly.
+Calling a protected resource starts the login widget, if necessary. If a valid token was already obtained, the login widget is not started, and the resource is accessed directly.
 
 
 ## Using the iOS Swift SDK
