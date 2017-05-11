@@ -111,7 +111,7 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 |{{site.data.keyword.manda}}			|Yes		|Yes		|No|
 |{{site.data.keyword.mqa}}			|Yes		|Yes		|No|
 |{{site.data.keyword.mql}}			|Yes		|Yes		|No|
-|{{site.data.keyword.nlclassifierlshort}} 	|Yes 		|Yes 		|Yes|
+|{{site.data.keyword.nlclassifiershort}} 	|Yes 		|Yes 		|Yes|
 |{{site.data.keyword.objectstorageshort}}	|Yes		|No		|No|
 |{{site.data.keyword.personalityinsightsshort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.mobilepush}}		|Yes		|Yes		|No|

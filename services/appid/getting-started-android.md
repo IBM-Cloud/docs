@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-04-17"
+lastupdated: "2017-05-08"
 
 ---
 
@@ -66,7 +66,7 @@ You need the following information:
 3. Open the `build.gradle` file for your application.
 
     **Note**: Be sure to open the file for your app, not the project `build.gradle` file.
-4. Find the dependencies section of the file and add a compile dependency for the {{site.data.keyword.appid_short_notm}} client SDK:
+4. Find the dependencies section of the file and add a compile dependency for the {{site.data.keyword.appid_short_notm}} client SDK.
 
   ```gradle
    dependencies {
@@ -75,7 +75,7 @@ You need the following information:
   ```
   {:pre}
 
-5. Find the defaultConfig section and add the following lines of code:
+5. Find the defaultConfig section and add the following lines of code.
 
   ```gradle
   defaultConfig {
@@ -97,14 +97,14 @@ Initialize the client SDK by passing the context, tenant ID, and region paramete
   ```
   {:pre}
 
-1. Replace "tenantId" with the {{site.data.keyword.appid_short_notm}} service tenantId.
+1. Replace *tenantId* with the {{site.data.keyword.appid_short_notm}} service tenantId.
 2. Replace the AppID.REGION_UK with your {{site.data.keyword.Bluemix_notm}} region.
 
 
 ## Authenticate users by using the login widget
 {: #authenticate-login-widget}
 
-The login widget default configuration requires the use of both Facebook and Google for authentication. If you configure only one of them, the login widget does not launch and the user is redirected to the configured IDP authentication screen.
+The login widget default configuration requires the use of both Facebook and Google for authentication. If you configure only one of them, the login widget does not start and the user is redirected to the configured IDP authentication screen.
 
 After the {{site.data.keyword.appid_short_notm}} client SDK is initialized, you can authenticate your users by running the login widget.
 
@@ -133,7 +133,7 @@ After the {{site.data.keyword.appid_short_notm}} client SDK is initialized, you 
 ## Accessing user attributes
 {: #accessing}
 
-When you obtain an access token, it is possible to gain access to the user protected attributes endpoint. You can gain access by using the following API methods:
+When you obtain an access token, it is possible to gain access to the user protected attributes endpoint. You can gain access by using the following API methods.
 
   ```java
   void setAttribute(@NonNull String name, @NonNull String value, UserAttributeResponseListener listener);
@@ -152,7 +152,7 @@ When you obtain an access token, it is possible to gain access to the user prote
 
 When an access token is not explicitly passed, {{site.data.keyword.appid_short_notm}} uses the last received token.
 
-For example, you can invoke this code to set a new attribute, or override an existing one:
+For example, you can call the following code to set a new attribute, or override an existing one.
 
   ```java
   appId.getUserAttributeManager().setAttribute(name, value, useThisToken,new UserAttributeResponseListener() {
@@ -172,7 +172,7 @@ For example, you can invoke this code to set a new attribute, or override an exi
 ### Anonymous login
 {: #anonymous notoc}
 
-With {{site.data.keyword.appid_short_notm}} you can log in [anonymously](/docs/services/appid/user-profile.html#anonymous).
+With {{site.data.keyword.appid_short_notm}}, you can log in [anonymously](/docs/services/appid/user-profile.html#anonymous).
 
   ```java
   appId.loginAnonymously(getApplicationContext(), new AuthorizationListener() {
@@ -204,7 +204,7 @@ When the user holds an anonymous access token, they can become identified by pas
   ```
   {:pre}
 
-After an anonymous login, progressive authentication occurs even if the login widget is called without passing an access token because the service used the last received token. If you want to clear your stored tokens, run the following command:
+After an anonymous login, progressive authentication occurs even if the login widget is called without passing an access token because the service used the last received token. If you want to clear your stored tokens, run the following command.
 
   ```java
   	appIDAuthorizationManager = new AppIDAuthorizationManager(this.appId);

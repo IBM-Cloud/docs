@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-04-17"
+lastupdated: "2017-05-08"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2017-04-17"
 # Setting up the sample app and SDKs
 {: #developing}
 
-After creating the {{site.data.keyword.appid_short}} service, you can download sample apps for Android, iOS, and Node.js by using the dashboard.
+After you create an instance of the {{site.data.keyword.appid_short}} service, you can download sample apps for Android, iOS, and Node.js by using the dashboard.
 
 1. Click the instance of {{site.data.keyword.appid_short_notm}} that you want to develop.
 2. Follow the instructions on the dashboard to get started with a step-by-step sample.
