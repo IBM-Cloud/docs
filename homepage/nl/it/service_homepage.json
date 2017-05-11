@@ -5,9 +5,9 @@
   [ 
     { 
       "id": 
-      "contenitore tipo", 
+      "boilerplate", 
       "name": "Contenitori tipo", 
-      "tags": "contenitore tipo" 
+      "tags": "boilerplate" 
     } ],
   "items": [{
     "id": "cfApp",
