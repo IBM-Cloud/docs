@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-05-10"
+lastupdated: "2017-05-11"
 
 ---
 
@@ -23,7 +23,7 @@ You assign access for the users as you invite them, assigning roles, policies, a
 You can assign a single service policy when you invite a new user. Once the user has accepted the invitation, you can add additional service policies.
 
 1. From the **Invite users** screen, expand the **Identity and Access enabled services** section.
-2. Select **All Identity and Access enabled services**, or select and individual service. **Note**: If you select the **Automatically grant access when new services are added** option, you are not notified to deselect each new {{site.data.keyword.Bluemix_notm}} service for that user when services are added later.
+2. Select **All Identity and Access enabled services**, or select an individual service. **Note**: If you select the **Automatically grant access when new services are added** option, you are not notified to deselect each new {{site.data.keyword.Bluemix_notm}} service for that user when services are added later.
 3. Select **All current regions** or a specific region.
 4. Select **All current service instances** or select a specific service instance.
 5. Select a role to define the scope of access for the policy.
