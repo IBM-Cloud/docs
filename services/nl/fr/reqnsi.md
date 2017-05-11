@@ -119,7 +119,7 @@ services qui sont fournis par IBM.
 |{{site.data.keyword.manda}}			|Oui		|Oui		|Non|
 |{{site.data.keyword.mqa}}			|Oui		|Oui		|Non|
 |{{site.data.keyword.mql}}			|Oui		|Oui		|Non|
-|{{site.data.keyword.nlclassifierlshort}} 	|Oui 		|Oui 		|Oui|
+|{{site.data.keyword.nlclassifiershort}} 	|Oui 		|Oui 		|Oui|
 |{{site.data.keyword.objectstorageshort}}	|Oui		|Non		|Non|
 |{{site.data.keyword.personalityinsightsshort}}	|Oui		|Oui		|Oui|
 |{{site.data.keyword.mobilepush}}		|Oui		|Oui		|Non|
