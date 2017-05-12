@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2017-01-11"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -26,6 +26,13 @@ You can use the {{site.data.keyword.Bluemix}} user interface, platform, and a se
 {: #ee_start}
 
 Before you can get started, you sign up for an IBMid from [https://console.ng.bluemix.net/ ![External link icon](../icons/launch-glyph.svg)](https://console.ng.bluemix.net/){: new_window}. After that, you log in to {{site.data.keyword.Bluemix_notm}} and start your 30-day free trial. {{site.data.keyword.Bluemix_notm}} provides an allowance of 2 GB runtime memory and 10 service instances for your free trial.
+
+
+## Developing and deploying your apps by using toolchains and the {{site.data.keyword.contdelivery_short}} service
+{: #ee_cd}
+
+<a href="/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_an_app">Add a toolchain</a> that includes the {{site.data.keyword.contdelivery_full}} service to your app. Then, <a href="docs/services/ContinuousDelivery/toolchains_using.html#toolchains-using">use the toolchain</a> to develop and deploy your app.
+
 
 ## Creating your web app by using {{site.data.keyword.Bluemix_notm}} user interface
 {: #ee_appui}

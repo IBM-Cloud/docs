@@ -2,7 +2,7 @@
 
 copyright:
  years: 2017
-lastupdated: "2017-4-11"
+lastupdated: "2017-5-10"
 
 ---
 
@@ -59,6 +59,8 @@ You can assign the parallel pattern to groups when you create the groups. The ex
 
 **Process**: Refers to UrbanCode Deploy application processes. In UrbanCode Deploy, processes define automation activities, such as deploying components. In {{site.data.keyword.uccr_short}}, when you run UrbanCode Deploy tasks, you select the process. You can select the process when you create the task or at run time.
 
+**Tag**: A tag is a label that you can apply to a task or release. When applied to tasks, tags can determine task eligibility for a given deployment. Tags applied to releases are called events and can be tracked on the calendar.
+
 **Task group**: You can combine two or more tasks into a task group. When you form a group, you define the group's execution pattern, either sequential or parallel.
 
 **Version**: Represents an IBM UrbanCode Deploy application snapshot. When you create an UrbanCode Deploy task, versions that belong to the application that is assigned to the task are stored in the deployment plan. You can use the Version tab to select the application versions and environments that are used whenever a task runs.
@@ -75,6 +77,8 @@ When you are ready to run a deployment, you start one of the plan's eligible tas
 
 As you add tasks to a deployment plan, the list of IBM UrbanCode Deploy applications is updated. The list maintains a record of the environments, processes, and versions that are available in the plan. A record of the changes that you make to a plan is also maintained and you can revert to earlier versions if needed.
 
+**Event**: Events are release-related activities that are applied to releases and tracked with the calendar. You can use events to organize your releases and other time-dependent activities, such as holidays and blackouts.
+
 **Task**: Generally, a task represents a business-meaningful activity that has starting and ending points and a measurable duration. Durations are used to estimate deployment times. You add tasks to deployment plans. When you run a deployment, you complete the tasks in the plan.
 
 You can define several types of tasks.
@@ -87,14 +91,18 @@ You can define several types of tasks.
 </li>
 <li>Header tasks provide organizational elements to deployment plans. You can use a header task to identify a task group, or add notes or instructions to a group. Header tasks are auto tasks and end as soon as they start. You cannot define durations for header tasks.
 </li>
+<li>Email tasks send messages to email accounts.
+</li>
+<li>Slack tasks send messages to a user-specified Slack channel.
+</li>
+<li>Continuous Delivery pipeline tasks automate your DevOps workflows. You can manage your pipelines with pipeline tasks.
+</li>
 </ul>
 
 **Release**:
-A release is a container for deployment plans. Generally, a release contains several deployment plans although there is no requirement that a release contain more than one plan. Again, speaking generally, each plan in a release represents a stage in the development lifecycle, such as QA or Production. The stages, or deployment plans, are collectively referred to as the release lifecycle. 
+A release is a container for deployment plans. Generally, a release contains several deployment plans although there is no requirement that a release contain more than one plan. Again, speaking generally, each plan in a release represents a stage in the development lifecycle, such as QA or Production. The stages, or deployment plans, are collectively referred to as the release lifecycle.
 
 <!--
-
-**Event**: Events are trackable items that are associated with a deployment. Events are not defined by tasks. Events include holidays, blackouts, or any other activity that might affect a deployment.
 
 ## Getting help and support for <service_short_name>
 {: #gettinghelp}
@@ -134,5 +142,3 @@ When using the forums to ask a question, tag your question so that it is seen by
 * If you have technical questions about developing or deploying an app with {{site.data.keyword.uccr_short}}, post your question on [Stack Overflow](http://stackoverflow.com/search?q=cloud-continuous-release+ibm-bluemix){:new_window} and tag your question with "ibm-bluemix" and "cloud-continuous-release".
 
 * For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/cloud-continuous-release/?smartspace=bluemix){:new_window} forum. Include the  "cloud-continuous-release" and "bluemix" tags.
-
-See [Getting help](https://www.{DomainName}/docs/support/index.html#getting-help) for more details about using the forums.
