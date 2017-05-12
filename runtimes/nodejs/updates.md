@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-23"
+lastupdated: "2017-05-05"
 
 ---
 
@@ -13,6 +13,11 @@ lastupdated: "2017-03-23"
 {: #latest_updates}
 
 A list of the latest updates in the sdk-for-nodejs buildpack.
+
+## May 5, 2017: Updated Node.js buildpack v3.12
+The SDK for Node.js buildpack v3.12 provides IBM SDK for Node.js versions 0.12.17, 0.12.18, 4.8.0, 4.8.2, 6.10.0 and 6.10.2. The default is now changed from the latest 4.x to latest 6.x, so it is currently 6.10.2. Being a major version change, this could affect apps that are relying on the default. See [Node.js version long-term support and the SDK for Node.js buildpack](https://www.ibm.com/blogs/bluemix/2016/11/node-version-support-and-sdk-buildpack/) for more information about how to avoid any problems.
+
+In addition to the new runtimes, this release contains a buildpack bug fix an issue with the App Management Health Center handler and Node.js versions 6.9.5 and 6.10.0.
 
 ## March 10, 2017: Updated Node.js buildpack v3.11
 This release of the buildpack supports IBM SDK for Node.js runtime versions: 0.10.47, 0.10.48, 0.12.17, 0.12.18, 4.7.3, 4.8.0, 6.9.5, and 6.10.0. The default version now is 4.8.0.
