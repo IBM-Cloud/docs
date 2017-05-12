@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-11"
+lastupdated: "2017-5-12"
 
 ---
 
@@ -57,6 +57,14 @@ When you start the upgrade, the pipeline stages in your project are locked. You 
 
 If your project uses a Git repo that is hosted on JazzHub, after you start the upgrade, the repo is locked to ensure the integrity of the data that is moved to the toolchain. If you revert the upgrade by deleting the toolchain, the repo on JazzHub is unlocked.
 
+For full details about how each type of repo is treated in the upgrade process, see the following table.
+
+|Project repo |Project type	|Toolchain repo |
+|:----------|:------------------------------|:------------------|
+|github.com 		|Private or public 		|The same github.com repo with {{site.data.keyword.Bluemix_notm}} Public.	|
+|hub.jazz.net/git		|Private or public 		|A new repo in {{site.data.keyword.gitrepos}} with {{site.data.keyword.Bluemix_notm}} Public.	|
+{: caption="Table 1. Project repos mapped to toolchain repos" caption-side="top"}
+
 ## Starting the upgrade process
 {: #start_upgrade}
 
@@ -71,13 +79,7 @@ To upgrade your project to a toolchain, follow these steps:
 
    For an overview of the upgrade process, read the description on that page. The toolchain will include a new pipeline that contains the same stages and jobs as the project's pipeline. In addition, the toolchain will contain a pointer to the Eclipse Orion {{site.data.keyword.webide}} that runs in {{site.data.keyword.contdelivery_short}}.
 
-   In this example, because the project uses a public repo on github.com, the toolchain will be connected to the same GitHub repo. If your project uses a Git repo that is hosted on JazzHub, the contents of that repo will be cloned to a new repo in {{site.data.keyword.gitrepos}}, which is part of {{site.data.keyword.contdelivery_short}}. For full details about how each type of repo is treated, see the following table.
-
-   |Project repo |Project type	|Toolchain repo |
-   |:----------|:------------------------------|:------------------|
-   |github.com 		|Private or public 		|The same github.com repo with {{site.data.keyword.Bluemix_notm}} Public.	|
-   |hub.jazz.net/git		|Private or public 		|A new repo in {{site.data.keyword.gitrepos}} with {{site.data.keyword.Bluemix_notm}} Public.	|
-   {: caption="Table 1. Project repos mapped to toolchain repos" caption-side="top"}
+   In this example, because the project uses a public repo on github.com, the toolchain will be connected to the same GitHub repo. If your project uses a Git repo that is hosted on JazzHub, the contents of that repo will be cloned to a new repo in {{site.data.keyword.gitrepos}}, which is part of {{site.data.keyword.contdelivery_short}}.
 
 2. To customize the toolchain, you can configure a few settings:
 
