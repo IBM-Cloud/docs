@@ -2,7 +2,7 @@
 
 copyright:
  years: 2017
-lastupdated: "2017-3-17"
+lastupdated: "2017-5-9"
 
 ---
 
@@ -36,44 +36,25 @@ Some tasks start automatically as soon as they are eligible to run, while other 
 
 Eligible tasks display a **Start Task** button. To start a deployment, you start one of a plan's eligible tasks. Scheduled deployments start automatically at the scheduled time if an eligible task is of a type that can start automatically, such as UrbanCode Deploy.
 
-## Filtering deployment plans
-{: #plan_filter}
-The Deployment Plans page displays the deployment plans created by you and your teams. From the Deployment Plans page, you can do most plan-related activities, such as copying plans. By default, the Deployment Plans page displays all unarchived plans that are managed by your teams. You can filter the display in several ways.
-
-<ul>
-<li>To display the plans that are managed by specific teams, click the **Filter** icon, select **Show Plans for Selected Teams**, and then select the teams. All teams to which you belong are available. You can select multiple teams.
-</li>
-<li>To display all unarchived plans that are managed for the selected teams, select **All**. This option is the default setting.
-</li>
-<li>To display only plans that have deployments in progress, select **In Progress**.
-</li>
-<li>To display only plans without scheduled or completed deployments, select **Drafts**.
-</li>
-<li>To display only plans with deployments scheduled, select **Scheduled**.
-</li>
-<li>To display only plans that are saved as templates, select **Templates**.
-</li>
-<li>To display only plans with completed deployments, select **Done**.
-</li>
-<li>To display only archived plans, select **Archive**. Archived plans can be restored.
-</li>
-</ul>
-
 ## Creating deployment plans
 {: #plan_create}
 You can start with a blank plan that has no defined tasks, or you can copy an existing plan. You can also start with a plan template.  When you copy a plan or use a template, many tasks are already defined.
 
 Complete the following steps to create a deployment plan:
 
-1. On the Deployment Plan page, click **Create Plan**.
+1. On the Releases page or on the Release Detail page, click **Create Deployment Plan**.
 
-2. On the Create Plan dialog box, in the **Name** field, enter the plan name.
+2. On the Create Deployment Plan window, in the **Template** list, specify the template that you want to base the plan on. The default value is **None**.
 
-3. In the **Team** list, select a team to manage the plan. Team members can modify the plan and manage tasks. The UrbanCode Deploy applications that are managed by the team in UrbanCode Deploy are available to assign to UrbanCode Deploy type tasks.
+2. In the **Plan name** field, enter the plan name.
 
-4. To schedule a deployment for the plan, click **Scheduled start**, and then select a date and time for the deployment. Scheduled deployments automatically start at the scheduled time if the plan contains eligible auto tasks. You can schedule a deployment for any future time.
+3. In the **Team** list, select a team to manage the plan. All teams that you are a member of are available. Team members can modify the plan and manage tasks. The UrbanCode Deploy applications that are managed by the team in UrbanCode Deploy are available to assign to UrbanCode Deploy type tasks.
 
-6. Click **Save and View Details**. The plan is displayed in the Deploy Plan Detail page.
+4. To schedule a deployment for the plan, click **Start time**, and then select a date and time for the deployment. Scheduled deployments automatically start at the scheduled time if the plan contains eligible auto tasks. You can schedule a deployment for any future time.
+
+5. In the **Release** list, select the release that you want to add the plan to. Releases that belong to one of your teams are available. If you select a release, the deployment plan is displayed on the Release Detail page.
+
+6. Click **Save**. If you created the plan on a Release Detail page, the plan is part of the selected release.
 
 After you save the plan, click **Edit** to modify plan details.
 

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2017
-lastupdated: "2017-3-7"
+lastupdated: "2017-5-11"
 
 ---
 
@@ -14,83 +14,106 @@ lastupdated: "2017-3-7"
 # Managing events
 {: #events_overview}
 
-An event represents a release-related activity that you manage with the calendar. There are several event types. Some events might effect a single team and last for a few moments, while other events can involve multiple organizations and last for several days.
+An event represents a release-related activity managed with the calendar.
 
 {:shortdesc}
 
-Multi-speed IT. An event can be of one of following types:
+There are several event types, including release events, holidays, and maintenance windows. You can also create your own event types.
 
-<ul>
-<li>**Release** events can represent several types of releases, from major enterprise releases to minor standalone releases.</li>
-<li>**Blackout** events can represent maintenance windows, or financial blackouts.</li>
-<li>**Holiday** events can represent company or national holidays.</li>
-<li>**Milestone** events represent important dates.</li>
-</ul>
+[Events are assigned to releases](UCCR_releases.html#releases_overview). Once an event is assigned, it is represented on the calendar by an icon appropriate for the event type. You can use the icons to filter the Releases page and select releases for any affected date or range of dates.
 
-# Managing the calendar
+## Using the calendar
 {: #events_calendarManage}
 
-Filter date. Today Tomorrow Next 7 Days Next 30
-Filter by status.
-Templates
+The Releases page displays the releases and deployment plans created by you and your teams. From the Releases page, you can do most release-related activities, such as creating releases and deployment plans.
 
-# Creating events
-{: #events_create}
+By default, the Releases page displays releases and deployments scheduled for the next seven days. You can filter the display by time and status. For example, you might restrict the display to releases that are scheduled for tomorrow. You can also use the calendar to filter the display by selecting a specific date or range of dates. The currently selected date range is displayed on the action bar.
 
-When you create an event, .
+To filter items by date, complete one of the following tasks:
+<ul>
+<li>Select a value from the **Dates** list on the action bar. For example, to display items scheduled for the upcoming week, select **Next 7 days**.</li>
+<li>On the calendar, select a date or a range of dates. You can select a range of dates by clicking a date and then shift-clicking another date. When you select dates on the calendar, the **Dates** value on the action bar is set to **Custom**.</li>
+</ul>
 
-Complete the following tasks to create an event:
+Releases and plans that are or were scheduled for the selected dates are displayed.
 
-1. On the Releases page, click **Create an Event**.
+To filter items by status, complete one of the following tasks:
+<ul>
+<li>To display all releases and plans, select **All**. You can use this option to display unscheduled deployments.
+</li>
+<li>To display deployment plans that do not have a status of Complete or Failed, select **Draft**.
+</li>
+<li>To display releases and plans that are scheduled for the selected date range, select **Scheduled**.
+</li>
+<li>To display deployments that are currently in progress, select **In Progress**.
+</li>
+<li>To display deployments that failed, select **Failed**.</li>
+<li>To display finished deployments, select **Complete**.
+</li>
+</li>
+<li>To display releases and deployment plans saved to the archive, select **Archive**. Archived items can be restored.
+</li>
+<li>To display deployment plans that are saved as templates, select **Templates**. You can use templates to create plans. You can revert templates to deployment plans.  
+</li>
+</ul>
 
-1. In the **Name** field, enter a name for the event.
+## Creating event tags
+{: #events_tagCreate}
 
-3. In the **Start Time** field, select a starting date and time.
+Events are represented by tags that you can apply to releases. Events assigned to a release are represented by icons on the calendar. You can select an event icons on the calendar to filter the displayed releases.
 
-3. In the **End Time** field, select an ending date and time.
+There are three event categories: releases, milestones, and holidays. The categories are suggestions. You can order events in any manner you like.
 
-3. In the **Tags** list, attach a tag to the event. You can select multiple tags. To create a tag, type the tag name in list's text field.
+When you create an event tag, graphical styles are automatically applied to the associated icon. Icons are displayed on the calendar where you can select them to filter the items displayed on the releases page. You can change the icon style after you create a event.
 
-5. Click **Save**.
+To create an event, complete the following tasks:
 
-After the event is created, .
+1. On the Releases page, click **Calendar settings** <img class="inline" src="images/cal-set.png"  alt="Calendar settings">.
 
-# Managing release events
-{: #events_releaseManage}
+1. In the Configure calendar page, click **Add event type** <img class="inline" src="images/event-add.png"  alt="Add event type"> for the event type that you want to create.
 
-Complete the following steps to create a release event.
+3. In the text field, enter a name for the event.
 
-1. On the Deployment Plan Detail page, select two or more tasks.
+3. Click **Save**.
 
-1. Depending on the type of group you want to create, complete one of the following steps.
+You can edit and delete event tags.
 
-  <ul>
-  <li>To create a parallel group, click the **Parallel** button <img class="inline" src="images/para-icon.png"  alt="parallel group button">. If you cannot create a parallel group with the selected tasks, the button is disabled. You might not be able to create a parallel group if all the selected tasks are already in a parallel group, for example.
-  </li>
-  <li>To create a sequential group, click the **Sequential** button <img class="inline" src="images/seq-icon.png"  alt="sequential group button">.
-  </li>
-  </ul>
+## Managing event tags
+{: #events_tagEdit}
 
-The group is formed and a **group select bar** is added to the deployment plan. If you selected discontiguous tasks, the tasks form a contiguous list starting with the topmost selected task.
+By default, event icon styles are applied according to the event's category. Styles are applied automatically and randomly according to category.
 
-The following figure shows a parallel group. The **group select bar** identifies the type of group: parallel <img class="inline" src="images/para-select.png"  alt="parallel group select">, or sequential <img class="inline" src="images/seq-select.png"  alt="sequential group select">.
+In the following illustration, the styles on the top two rows are applied to events in the release events category; styles in the third row are applied to maintenance and blackout events; styles in the fourth row are applied to holidays.
 
-(![](images/group-select.png "Typical deployment plan"))
+![](images/event-styles.png "Typical deployment plan")
 
-Figure 2. Parallel group
+Figure 1. Event icon styles
 
-To move a group, select the **group select bar** or click anywhere on the group, and then drag it to a new location.
+To edit an event's style, complete the following steps:
 
-To copy a group, select the group and click **Copy** <img class="inline" src="images/copy-group.png"  alt="copy button">, and then place the cursor where you want to insert the copied group and click **Paste** <img class="inline" src="images/paste-group.png"  alt="paste button">.
+1. On the Releases page, click **Calendar settings**.
 
-To cut a group, select the group and click **Cut** <img class="inline" src="images/cut-group.png"  alt="cut button">.
+2. On the Configure calendar page, click the Edit icon next to the event icon that you want to change, then click **More**.
 
-To ungroup a group, select the group and click the **Ungroup** icon <img class="inline" src="images/ungroup-icon.png"  alt="ungroup icon"> on the **group select bar**.
+3. Select a style. You can select any style regardless of category.
 
-To delete the tasks in a group, select the group and click **Delete** <img class="inline" src="images/trash-group.png"  alt="delete button">. The tasks are removed from the deployment plan.
+To edit an event name, click the Edit icon next to the event name that you want to change, and then edit the name.
+
+To delete an event, click the Delete icon next to the event name.
 
 ## Importing events
 {: #events_importing}
 
-# Managing calendar settings
-{: #events_calendarSettings}
+You can import your own events. Events are defined in a CSV-type file. To import events, complete these steps:
+
+1. On the Releases page, click **Import** <img class="inline" src="images/import-events.png"  alt="Import events">.
+
+2. On the Import from CSV dialog, select the CSV file that contains your events, and then click **Import Events**. The dialog provides a link to download a sample CSV event file.
+
+If the import is successful, the events are displayed in the Calendar configuration page.
+
+The CSV event file has the following format:
+
+`name,description,start,end,team`
+
+Each event must be on a separate row.

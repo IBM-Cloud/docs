@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-4-24"
+lastupdated: "2017-5-5"
 
 ---
 
@@ -28,6 +28,7 @@ Most tasks have a starting and ending point, and a measurable duration.  A task 
 <li>A **Header** task is an organizational element. For example, you might use a header task to identify a task group.</li>
 <li>An **Email** task sends an email message when it runs.</li>
 <li>A **Run another plan** task runs deployments for other deployment plans participating in the same release event. This is an experimental task type.</li>
+<l1>A **Slack** task sends a message to a Slack channel when it runs. </l1>
 </ul>
 
 You can add tasks to deployment plans by creating tasks or you can import tasks from CSV files that are created by IBM UrbanCode Release or another application. You can also copy tasks from other deployment plans. See [Importing tasks](/docs/services/UCCR/UCCR_deployPlan.html#plan_importTasks) for information about the format of the CSV file.
