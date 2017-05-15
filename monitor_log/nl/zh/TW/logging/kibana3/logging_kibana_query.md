@@ -27,9 +27,9 @@ lastupdated: "2017-02-02"
     
     即會顯示應用程式的日誌。
 
-2. 存取應用程式的 Kibana 儀表板。按一下**進階視圖** ![進階視圖鏈結](images/logging_advanced_view.jpg)。即會顯示 Kibana 儀表板。
+2. 存取應用程式的 Kibana 儀表板。按一下**進階視圖** ![「進階視圖」鏈結](images/logging_advanced_view.jpg "「進階視圖」鏈結")。即會顯示 Kibana 儀表板。
 
-3. 在 Kibana 儀表板上按一下**查詢** ![查詢圖示](images/logging_query.jpg)，以顯示欄位。當您從應用程式的**日誌**標籤存取 Kibana 來檢視應用程式日誌時，會建立查詢來顯示應用程式之 application_id 的所有日誌。
+3. 在 Kibana 儀表板上，按一下**查詢** ![「查詢」圖示](images/logging_query.jpg "「查詢」圖示")，以顯示欄位。當您存取 Kibana 以從應用程式的**日誌**標籤檢視應用程式日誌時，會建立查詢來顯示應用程式之 application_id 的所有日誌。
 	
     若要編輯查詢，請按一下**查詢**欄位，並輸入搜尋詞彙。
 
@@ -41,28 +41,28 @@ lastupdated: "2017-02-02"
 
 4. 如果您要比較兩個不同查詢的結果，可以新增另一個查詢詞彙至儀表板。若要新增另一個查詢，請按一下**查詢**欄位結尾的 **+** 圖示。
 
-    ![查詢欄位](images/logging_query_field.jpg)
+    ![查詢欄位](images/logging_query_field.jpg "查詢欄位")
 	
-    即會顯示包含萬用字元 \* 的新建**查詢**欄位。此查詢會要求 Kibana 併入所有項目。
+    即會顯示包含萬用字元 \* 的新建**查詢**欄位。此查詢會要求 Kibana 包含所有項目。
 	
-    ![額外的查詢欄位](images/logging_additional_query_field.jpg)
+    ![其他查詢欄位](images/logging_additional_query_field.jpg "其他查詢欄位")
 	
     您的儀表板已更新，以反映新建查詢的結果。**依時間排列事件**窗格會顯示這兩項查詢的圖形表示法，並且在括弧中顯示各查詢的詞彙數。 
 	
-    ![儀表板，其中顯示這兩項查詢的圖形](images/logging_dashboard_queries.jpg)
+    ![儀表板，其中顯示這兩項查詢的圖形](images/logging_dashboard_queries.jpg "儀表板，其中顯示這兩項查詢的圖形")
 	
 5. 按一下新建**查詢**欄位，以編輯其內容並新增查詢條件，例如 `instance_id:1`。使用**依時間排列事件**窗格來比較查詢的結果。
 
-    ![儀表板，其中顯示這兩項查詢的圖形](images/logging_dashboard_queries2.jpg)
+    ![儀表板，其中顯示這兩項查詢的圖形](images/logging_dashboard_queries2.jpg "儀表板，其中顯示這兩項查詢的圖形")
 
 6. 若要刪除查詢，請將滑鼠移至您要刪除的**查詢**欄位上方，以顯示**刪除**圖示。按一下**刪除**圖示。
 
-    ![顯示刪除圖示的查詢欄位](images/logging_delete_query.jpg)
+    ![含有刪除圖示的查詢欄位](images/logging_delete_query.jpg "含有刪除圖示的查詢欄位")
 
-7. 若要使用可辨識的名稱來儲存此儀表板，請按一下**儲存**圖示 ![儲存圖示](images/logging_save.jpg)，並且為儀表板輸入名稱。 
+7. 若要使用可辨識的名稱來儲存此儀表板，請按一下**儲存**圖示 ![「儲存」圖示](images/logging_save.jpg "「儲存」圖示")，並且為儀表板輸入名稱。 
 
     **附註：**如果您嘗試用來儲存儀表板的名稱包含空格，將不會進行儲存。請輸入不含空格的名稱，然後按一下**儲存**圖示。
 
-    ![儲存儀表板名稱](images/logging_save_dashboard.jpg)
+    ![儲存儀表板名稱](images/logging_save_dashboard.jpg "儲存儀表板名稱")
 
 

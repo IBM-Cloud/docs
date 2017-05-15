@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-01"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -37,6 +37,6 @@ lastupdated: "2017-03-01"
 | stream | 指定日誌類型：stdout、stderr |
 | time | 事件發生時的日期和時間。時間戳記最多定義到毫秒。|
 | timestamp | 所記載事件的日期和時間。時間戳記最多定義到毫秒。 |
-
+{: caption="表 1. Docker 容器的欄位" caption-side="top"}
 
 
