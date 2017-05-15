@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2016
-lastupdated: "2017-05-02"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -61,6 +61,8 @@ The following roles can be assigned at the space level:
 
 Account owners are automatically assigned the administrator role for Identity and access managemement which enables you to assign and manage service policies. This type of access control enables the assignment of policies per service or service instance to allow levels of access for managing resources and users within the assigned context.
 
+### Service policies
+
 A policy assigns a user a role or roles to a set of resources by using a combination of attributes to define the applicable set of resources. When you assign a policy to a user, you first specify the service to assign, including an option to assign all available services. Then, you can also select a role, or roles, to assign. Additional configuration options might be available, depending on the service you select.
 
 You can assign and manage policies if you have the proper role. The following table shows policy management tasks and the role required for each one.
@@ -101,11 +103,10 @@ In addition to the descriptions of the roles provided in the console, the follow
 
 If you have access to assign infrastructure roles, you can set the following permissions for the user: 
 
-<dl>
-<dt>View Only</dt>
-<dd>Users with this permission can only view items within the system.</dd>
-<dt>Basic User</dt>
-<dd>Users with this permission can perform basic actions within the system, such as adding a ticket and managing devices.</dd>
-<dt>Super User</dt>
-<dd>Users with this permission can perform all actions available in the system.</dd>
-</dl>
+| Infrastructure permission | Description of actions |
+|---------------------------|------------------------|
+|View Only | Users with this permission can only view items within the system.|
+|Basic User | Users with this permission can perform basic actions within the system, such as adding a ticket and managing devices. |
+|Super User | Users with this permission can perform all actions available in the system. |
+{:caption="Table 6. Infrastructure permissions" caption-side="top"}
+

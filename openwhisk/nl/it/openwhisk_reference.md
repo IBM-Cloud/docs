@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-04"
+lastupdated: "2017-04-24"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock:.codeblock}
 {:screen:.screen}
 {:pre: .pre}
@@ -58,7 +57,7 @@ Userai questo schema di denominazione quando utilizzi, ad esempio, la CLI {{site
 
 I nomi di tutte le entità, inclusi azioni, trigger, regole, pacchetti e spazi dei nomi, sono una sequenza di caratteri aventi il seguente formato:
 
-* Il primo carattere deve essere un carattere alfanumerico o un carattere di sottolineatura. 
+* Il primo carattere deve essere un carattere alfanumerico o un carattere di sottolineatura.
 * I caratteri successivi possono essere alfanumerici, spazi o i seguenti: `_`, `@`, `.`, `-`.
 * L'ultimo carattere non può essere uno spazio.
 
@@ -231,7 +230,7 @@ function main(args) {
 
 Nota che, indipendentemente dal fatto che un attivazione sia sincrona o asincrona, il richiamo dell'azione può essere bloccante o non bloccante.
 
-### Oggetto whisk globale JavaScript rimosso 
+### Oggetto whisk globale JavaScript rimosso
 
 L'oggetto globale `whisk` è stato rimosso; migra le tue azioni nodejs per utilizzare metodi alternativi.
 Per le funzioni `whisk.invoke()` e `whisk.trigger()` utilizza la libreria client già installata [openwhisk](https://www.npmjs.com/package/openwhisk).
@@ -288,7 +287,7 @@ I seguenti pacchetti sono utilizzabili nell'ambiente Node.js 6.9.1:
 - underscore v1.8.3
 - uuid v3.0.0
 - validator v6.1.0
-- watson-developer-cloud v2.9.0
+- watson-developer-cloud v2.29.0
 - when v3.7.7
 - winston v2.3.0
 - ws v1.1.1
@@ -352,7 +351,7 @@ Le azioni Python possono anche utilizzare i seguenti pacchetti, in aggiunta alle
 
 ### Azioni Python 2
 
-Le azioni Python 2 sono eseguite utilizzando Python 2.7.12. Questo è il runtime predefinito per le azioni Python, a meno che non specifichi l'indicatore `--kind` durante la creazione o l'aggiornamento di un'azione. Per selezionare esplicitamente questo runtime, utilizza `--kind python:2`. Le azioni Python 2 possono anche utilizzare i seguenti pacchetti, in aggiunta alla libreria standard Python 2.7. 
+Le azioni Python 2 sono eseguite utilizzando Python 2.7.12. Questo è il runtime predefinito per le azioni Python, a meno che non specifichi l'indicatore `--kind` durante la creazione o l'aggiornamento di un'azione. Per selezionare esplicitamente questo runtime, utilizza `--kind python:2`. Le azioni Python 2 possono anche utilizzare i seguenti pacchetti, in aggiunta alla libreria standard Python 2.7.
 
 - appdirs v1.4.3
 - asn1crypto v0.21.1
@@ -402,7 +401,7 @@ Le azioni Docker eseguono un file binario fornito dall'utente in un contenitore 
 
 La struttura di base Docker può essere opportunamente utilizzata per la creazione di immagini Docker compatibili con OpenWhisk. Puoi installare la struttura di base con il comando CLI `wsk sdk install docker`.
 
-Il programma binario principale deve trovarsi in `/action/exec` all'interno del contenitore. L'eseguibile riceve gli argomenti di input tramite `stdin` e deve restituire un risultato tramite `stdout`.
+Il programma binario principale deve trovarsi in `/action/exec` all'interno del contenitore. L'eseguibile riceve gli argomenti di input tramite una singola stringa di argomenti della riga di comando che può essere deserializzata come oggetto `JSON`. Deve restituire un risultato tramite `stdout` come stringa a singola riga del `JSON` serializzato.
 
 Puoi includere qualsiasi procedura di compilazione o dipendenza modificando il `Dockerfile` incluso in `dockerSkeleton`.
 
@@ -437,7 +436,7 @@ Sono presenti endpoint per ciascun tipo di entità:
 - `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations/{activationName}`
 
 
-Gli endpoint di spazio dei nomi e attivazione supportano solo le richieste GET. Gli endpoint di azioni, trigger, regole e pacchetti supportano le richieste GET, PUT e DELETE. Gli endpoint di azioni, trigger e regole supportano inoltre le richieste POST, che vengono utilizzate per richiamare azioni e trigger e per abilitare o disabilitare le regole. Per informazioni dettagliate, consulta la [Guida di riferimento API](https://new-console.{DomainName}/apidocs/98).
+Gli endpoint di spazio dei nomi e attivazione supportano solo le richieste GET. Gli endpoint di azioni, trigger, regole e pacchetti supportano le richieste GET, PUT e DELETE. Gli endpoint di azioni, trigger e regole supportano inoltre le richieste POST, che vengono utilizzate per richiamare azioni e trigger e per abilitare o disabilitare le regole. Per informazioni dettagliate, consulta la [Guida di riferimento API](https://console.{DomainName}/apidocs/98).
 
 Tutte le API sono protette tramite autenticazione base HTTP. Le credenziali per l'autenticazione di base si trovano nella proprietà `AUTH` all'interno del file `~/.wskprops`, delimitate da due punti. Puoi richiamarle anche nella [procedura di configurazione della CLI](./index.html#openwhisk_start_configure_cli).
 
@@ -475,7 +474,7 @@ L'API OpenWhisk supporta chiamate di richiesta-risposta dai client web. OpenWhis
 {: #openwhisk_syslimits}
 
 ### Azioni
-{{site.data.keyword.openwhisk_short}} ha dei limiti di sistema, tra cui la quantità di memoria che un'azione può utilizzare e il numero di chiamate di azioni consentite per ciascun mniuto.
+{{site.data.keyword.openwhisk_short}} ha dei limiti di sistema, tra cui la quantità di memoria che un'azione può utilizzare e il numero di chiamate di azioni consentite per ciascun minuto.
 
 La seguente tabella elenca i limiti predefiniti per le azioni.
 
@@ -484,8 +483,8 @@ La seguente tabella elenca i limiti predefiniti per le azioni.
 | timeout | un contenitore non può essere eseguito per più di N millisecondi | per azione |  millisecondi | 60000 |
 | memory | a un contenitore non possono essere assegnati più di N MB di memoria | per azione | MB | 256 |
 | logs | un contenitore non può scrivere più di N MB in stdout | per azione | MB | 10 |
-| concurrent | non possono essere inviate più di N attivazioni per ogni spazio dei nomi in esecuzione o in coda per l'esecuziome  | per spazio dei nomi | numero | 1000 |
-| minuteRate | non possono essere inviate più di N attivazioni per ogni spazio dei nomi al minuto  | per utente | numero | 5000 |
+| concurrent | non possono essere inviate più di N attivazioni per ogni spazio dei nomi in esecuzione o in coda per l'esecuziome | per spazio dei nomi | numero | 1000 |
+| minuteRate | non possono essere inviate più di N attivazioni per ogni spazio dei nomi al minuto | per utente | numero | 5000 |
 | codeSize | la dimensiona massima del codice azione | non configurabile, limite per azione | MB | 48 |
 | parameters | la dimensione massima dei parametri che possono essere collegati | non configurabile, limite per azione/pacchetto/trigger | MB | 1 |
 
@@ -552,7 +551,7 @@ I trigger sono soggetti a una frequenza di attivazione al minuto come indicato n
 
 | limite | descrizione | configurabile | unità | valore predefinito |
 | ----- | ----------- | ------------ | -----| ------- |
-| minuteRate | non possono essere attivati più di N trigger per ogni spazio dei nomi al minuto  | per utente | numero | 5000 |
+| minuteRate | non possono essere attivati più di N trigger per ogni spazio dei nomi al minuto | per utente | numero | 5000 |
 
 ### Trigger al minuto (valore fisso: 5000)
 * Il limite di frequenza N è impostato su 5000 e limita il numero di trigger che possono essere attivati in finestre temporali di un minuto.

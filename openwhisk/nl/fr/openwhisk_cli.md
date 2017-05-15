@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+lastupdated: "2017-04-25"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -19,7 +18,7 @@ lastupdated: "2017-03-13"
 ## Configuration de l'interface de ligne de commande d'{{site.data.keyword.openwhisk_short}} 
 
 Vous pouvez utiliser l'interface de ligne de commande d'{{site.data.keyword.openwhisk_short}} pour configurer votre espace de nom et votre clé d'autorisation.
-Accédez à la page de [configuration de l'interface de ligne de commande](https://new-console.{DomainName}/openwhisk/cli){: new_window} et suivez les instructions d'installation.
+Accédez à la page de [configuration de l'interface de ligne de commande](https://console.{DomainName}/openwhisk/cli) et suivez les instructions d'installation.
 
 La configuration de deux propriétés est requise pour pouvoir utiliser l'interface de ligne de commande :
 

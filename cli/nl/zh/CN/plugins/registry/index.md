@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-03-20"
+lastupdated: "2017-04-07"
 
 
 ---
@@ -76,7 +76,7 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE]
 <dt>--format FORMAT</dt>
 <dd>（可选）使用 Go 模板设置输出元素的格式。</dd>
 <dt>IMAGE</dt>
-<dd>要检查的映像的完整 {{site.data.keyword.Bluemix_short}} 注册表路径。如果未在映像路径中指定标记，那么会检查标记为 `latest` 的映像。可以通过在命令中列出每个专用 {{site.data.keyword.Bluemix_short}} 注册表路径（各路径之间用空格分隔）来检查多个映像。</dd>
+<dd>要检查的映像的完整 {{site.data.keyword.Bluemix_short}} 注册表路径，格式为 namespace/image:tag。如果未在映像路径中指定标记，那么会检查标记为 `latest` 的映像。可以通过在命令中列出每个专用 {{site.data.keyword.Bluemix_short}} 注册表路径（各路径之间用空格分隔）来检查多个映像。</dd>
 </dl>
 
 
@@ -112,7 +112,7 @@ bx cr image-rm IMAGE [IMAGE]
 **参数**
 <dl>
 <dt>IMAGE</dt>
-<dd>要除去的映像的完整 {{site.data.keyword.Bluemix_short}} 注册表路径。如果未在映像路径中指定标记，那么缺省情况下会删除标记为 `latest` 的映像。可以通过在命令中列出每个专用 {{site.data.keyword.Bluemix_short}} 注册表路径（各路径之间用空格分隔）来删除多个映像。</dd>
+<dd>要除去的映像的完整 {{site.data.keyword.Bluemix_short}} 注册表路径，格式为 namespace/image:tag。如果未在映像路径中指定标记，那么缺省情况下会删除标记为 `latest` 的映像。可以通过在命令中列出每个专用 {{site.data.keyword.Bluemix_short}} 注册表路径（各路径之间用空格分隔）来删除多个映像。</dd>
 </dl>
 
 
@@ -150,7 +150,7 @@ bx cr namespace-list
 
 
 ## bx cr namespace-rm
-从您的 {{site.data.keyword.Bluemix_short}} 组织中除去名称空间。除去名称空间时，会删除此名称空间中的映像。
+从 {{site.data.keyword.Bluemix_short}} 组织中除去名称空间。除去名称空间时，会删除此名称空间中的映像。
 
 ```
 bx cr namespace-rm NAMESPACE

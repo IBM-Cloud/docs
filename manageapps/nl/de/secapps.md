@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-04-18"
 
 ---
 
@@ -22,14 +22,9 @@ Sie können Ihre Anwendungen schützen, indem Sie SSL-Zertifikate hochladen und 
 ## Zertifikatssignieranforderungen erstellen
 {: #ssl_csr}
 
-Bevor Sie die SSL-Zertifikate hochladen können, für die Sie in {{site.data.keyword.Bluemix}} berechtigt sind, müssen Sie auf
-Ihrem Server eine Zertifikatssignieranforderung (CSR) erstellen.
+Bevor Sie die SSL-Zertifikate hochladen können, für die Sie in {{site.data.keyword.Bluemix}} berechtigt sind, müssen Sie auf Ihrem Server eine Zertifikatssignieranforderung (CSR) erstellen.
 
-Bei einer CSR handelt es sich um eine Nachricht, die an eine Zertifizierungsstelle
-gesendet wird, um die Signierung eines öffentlichen Schlüssels und der zugehörigen Informationen
-anzufordern. Am häufigsten haben CSRs das Format des PKCS-Standards #10. Die CSR umfasst einen öffentlichen Schlüssel
-sowie einen allgemeinen Namen, eine Organisation, eine Stadt, ein Bundesland, ein Land sowie eine E-Mail-Adresse. SSL-Zertifikatsanforderungen
-werden nur mit einer CSR-Schlüssellänge von 2048 Bits akzeptiert.
+Bei einer CSR handelt es sich um eine Nachricht, die an eine Zertifizierungsstelle gesendet wird, um die Signierung eines öffentlichen Schlüssels und der zugehörigen Informationen anzufordern. Am häufigsten haben CSRs das Format des PKCS-Standards #10. Die CSR umfasst einen öffentlichen Schlüssel sowie einen allgemeinen Namen, eine Organisation, eine Stadt, ein Bundesland, ein Land sowie eine E-Mail-Adresse. SSL-Zertifikatsanforderungen werden nur mit einer CSR-Schlüssellänge von 2048 Bits akzeptiert.
 
 Damit die CSR gültig ist, müssen bei ihrer Generierung die folgenden Angaben gemacht werden:
 
@@ -47,13 +42,11 @@ Damit die CSR gültig ist, müssen bei ihrer Generierung die folgenden Angaben g
 
 **Organisation**
 
-  Der vollständige Name des Geschäfts oder des Unternehmens, das an Ihrem Standort rechtsgültig registriert ist,
-oder ein persönlicher Name. Bei Unternehmen müssen Sie sicherstellen, dass das Registrierungssuffix mit angegeben wird, z. B. Ltd., Inc. oder NV.
+  Der vollständige Name des Geschäfts oder des Unternehmens, das an Ihrem Standort rechtsgültig registriert ist, oder ein persönlicher Name. Bei Unternehmen müssen Sie sicherstellen, dass das Registrierungssuffix mit angegeben wird, z. B. Ltd., Inc. oder NV.
 
 **Organisationseinheit**
 
-  Der Name der Abteilung Ihres Unternehmens, die das Zertifikat anfordert, z. B.
-Buchhaltung oder Marketing.
+  Der Name der Abteilung Ihres Unternehmens, die das Zertifikat anfordert, z. B. Buchhaltung oder Marketing.
 
 **Allgemeiner Name**
 
@@ -73,28 +66,27 @@ Ein Zertifikat wird von einer Zertifizierungsstelle ausgegeben und von dieser Ze
 ##SSL-Zertifikate hochladen
 {: #ssl_certificate}
 
-Sie können ein Sicherheitsprotokoll anwenden, um die Kommunikation für Ihre Anwendung zu schützen und so ein Ausspionieren, Manipulationen und das
-Fälschen von Nachrichten zu verhindern.
+Sie können ein Sicherheitsprotokoll anwenden, um die Kommunikation für Ihre Anwendung zu schützen und so ein Ausspionieren, Manipulationen und das Fälschen von Nachrichten zu verhindern.
 
-Für jede Organisation in {{site.data.keyword.Bluemix_notm}} mit einem Kontoeigner, der einen Plan mit
-nutzungsabhängiger Zahlung oder einen Abonnementplan besitzt, dürfen Sie vier Zertifikate kostenlos hochladen. Für jede Organisation mit einem
-Kontoeigner, der ein Konto für eine kostenlose Testversion besitzt, dürfen Sie ein Zertifikat kostenlos hochladen.
+Für jede Organisation in {{site.data.keyword.Bluemix_notm}} mit einem Kontoeigner, der einen Plan mit nutzungsabhängiger Zahlung oder einen Abonnementplan besitzt, dürfen Sie vier Zertifikate hochladen. Für jede Organisation mit einem Kontoeigner, der ein Konto für eine kostenlose Testversion besitzt, müssen Sie Ihr Konto aktualisieren, um ein Zertifikat hochzuladen. 
 
-Bevor Sie Zertifikate hochladen können,
-müssen Sie eine Zertifikatssignieranforderung erstellen. Siehe [Zertifikatssignieranforderungen erstellen](#ssl_csr).
+Bevor Sie Zertifikate hochladen können, müssen Sie eine Zertifikatssignieranforderung erstellen. Siehe [Zertifikatssignieranforderungen erstellen](#ssl_csr).
 
 Wenn Sie eine angepasste Domäne verwenden, um das SSL-Zertifikat ordnungsgemäß bereitzustellen, müssen Sie die folgenden Regionsendpunkte verwenden, um die URL-Route zur Verfügung zu stellen, die Ihrer Organisation in Bluemix zugeordnet ist.
 
   * US-South: secure.us-south.bluemix.net
   * EU-GB: secure.eu-gb.bluemix.net
   * AU-SYD: secure.au-syd.bluemix.net
+  * EU-DE: secure.eu-de.bluemix.net
 
 
 Um ein Zertifikat für Ihre Anwendung hochzuladen, gehen Sie wie folgt vor:
 
-1. Erstellen Sie eine Route oder bearbeiten Sie eine vorhandene Route, indem Sie **Routen und App-Zugriff bearbeiten** im Anwendungsmenü auswählen.
+1. Wechseln Sie zu Ihrem Dashboard. 
 
-2. Klicken Sie im Dialogfenster 'Routen und App-Zugriff bearbeiten' auf **Domänen verwalten**.
+2. Wählen Sie den Namen für Ihre App aus, um die App-Detailansicht zu öffnen. 
+
+3. Wählen Sie die Dropdown-Liste **Routen** und anschließend die Option **Domänen verwalten** aus. 
 
 3. Klicken Sie für Ihre angepasste Domäne auf **Zertifikat hochladen**.
 
@@ -114,13 +106,9 @@ Um ein Zertifikat für Ihre Anwendung hochzuladen, gehen Sie wie folgt vor:
 
   **Privater Schlüssel**
 
-    Ein algorithmisches Muster, das verwendet wird, um Nachrichten zu verschlüsseln, die nur der zugehörige öffentliche
-Schlüssel entschlüsseln kann. Mit dem privaten Schlüssel werden auch Nachrichten entschlüsselt, die vom entsprechenden öffentlichen Schlüssel
-verschlüsselt wurden. Der private Schlüssel wird im System des Benutzers gespeichert und durch ein Kennwort geschützt.
+    Ein algorithmisches Muster, das verwendet wird, um Nachrichten zu verschlüsseln, die nur der zugehörige öffentliche Schlüssel entschlüsseln kann. Mit dem privaten Schlüssel werden auch Nachrichten entschlüsselt, die vom entsprechenden öffentlichen Schlüssel verschlüsselt wurden. Der private Schlüssel wird im System des Benutzers gespeichert und durch ein Kennwort geschützt.
 
-    Die folgenden Typen von
-privaten Schlüsseln werden in
-{{site.data.keyword.Bluemix_notm}} unterstützt:
+    Die folgenden Typen von privaten Schlüsseln werden in {{site.data.keyword.Bluemix_notm}} unterstützt:
 
     * PEM (pem, .key)
     * PKCS #8 (p8, pk8)
@@ -129,20 +117,13 @@ privaten Schlüsseln werden in
 
   **Zwischenzertifikat**
 
-    Ein untergeordnetes Zertifikat, das von der Zertifizierungsstelle
-für Trusted Roots speziell dafür ausgegeben wird, Serverzertifikate für End-Entitäten auszugeben. Im Ergebnis erhält man eine Zertifikatskette, die mit der
-Zertifizierungsstelle für Trusted Roots beginnt und über das Zwischenzertifikat zum SSL-Zertifikat gelangt, das für die Organisation ausgegeben wird.
+    Ein untergeordnetes Zertifikat, das von der Zertifizierungsstelle für Trusted Roots speziell dafür ausgegeben wird, Serverzertifikate für End-Entitäten auszugeben. Im Ergebnis erhält man eine Zertifikatskette, die mit der Zertifizierungsstelle für Trusted Roots beginnt und über das Zwischenzertifikat zum SSL-Zertifikat gelangt, das für die Organisation ausgegeben wird.
 
-    Sie
-sollten ein Zwischenzertifikat verwenden, um die Authentizität des Hauptzertifikats zu prüfen. Zwischenzertifikate werden normalerweise von einem vertrauenswürdigen
-Dritten angefordert. Möglicherweise benötigen Sie kein Zwischenzertifikat, wenn Sie Ihre Anwendung vor der Bereitstellung für die Produktion
-testen.
+    Sie sollten ein Zwischenzertifikat verwenden, um die Authentizität des Hauptzertifikats zu prüfen. Zwischenzertifikate werden normalerweise von einem vertrauenswürdigen Dritten angefordert. Möglicherweise benötigen Sie kein Zwischenzertifikat, wenn Sie Ihre Anwendung vor der Bereitstellung für die Produktion testen.
 
   **Anforderung eines Clientzertifikats aktivieren**
 
-    Wenn Sie diese Option aktivieren, wird ein Benutzer bei dem Versuch, auf eine durch SSL geschützte Domäne zuzugreifen, aufgefordert, ein clientseitiges Zertifikat anzugeben. Beispiel:
-Wenn in einem Web-Browser ein Benutzer versucht, auf eine SSL-geschützte Domäne zuzugreifen, wird der
-Benutzer im Web-Browser dazu aufgefordert, für die Domäne ein Clientzertifikat bereitzustellen. Verwenden Sie die Option **Truststore für Clientzertifikate** zum Hochladen der Datei, um die clientseitigen Zertifikate zu definieren, die Sie für den Zugriff auf Ihre angepasste Domäne zulassen.
+    Wenn Sie diese Option aktivieren, wird ein Benutzer bei dem Versuch, auf eine durch SSL geschützte Domäne zuzugreifen, aufgefordert, ein clientseitiges Zertifikat anzugeben. Beispiel: Wenn in einem Web-Browser ein Benutzer versucht, auf eine SSL-geschützte Domäne zuzugreifen, wird der Benutzer im Web-Browser dazu aufgefordert, für die Domäne ein Clientzertifikat bereitzustellen. Verwenden Sie die Option **Truststore für Clientzertifikate** zum Hochladen der Datei, um die clientseitigen Zertifikate zu definieren, die Sie für den Zugriff auf Ihre angepasste Domäne zulassen.
 
   **Hinweis:** Die Funktion für angepasste Zertifikate in der {{site.data.keyword.Bluemix_notm}}-Domänenverwaltung hängt von der SNI (Server Name Indication)-Erweiterung des TLS-Protokolls (Transport Layer Security) ab. Deshalb muss der Client-Code, der auf {{site.data.keyword.Bluemix_notm}}-Anwendungen zugreift, die durch angepasste Zertifikate geschützt sind, die SNI-Erweiterung in der TLS-Implementierung unterstützen. Weitere Informationen finden Sie in [Abschnitt 7.4.2 von RFC 4346 ![Symbol für externen Link](../icons/launch-glyph.svg)](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window}.
 
@@ -156,6 +137,4 @@ Benutzer im Web-Browser dazu aufgefordert, für die Domäne ein Clientzertifikat
 	  * DER (.der oder .cer )
       * PKCS #7 (p7b, p7r, spc)
 
-Um ein Zertifikat zu löschen oder ein vorhandenes Zertifikat durch ein neues zu ersetzen, wechseln Sie zu
-**Organisationen verwalten** > **Domänen** > **Zertifikat anzeigen**,
-um Ihre Zertifikate zu verwalten.
+Um ein Zertifikat zu löschen oder ein vorhandenes Zertifikat durch ein neues zu ersetzen, wechseln Sie zu **Verwalten** > **Konto** > **Organisationen**. Klicken Sie anschließend auf **Details anzeigen** > **Organisation bearbeiten** > **Domänen**, um ein Zertifikat für eine angepasste Domäne zu löschen oder zu ersetzen. 

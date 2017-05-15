@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-08"
+lastupdated: "2017-03-27"
 
 ---
 
@@ -18,7 +18,8 @@ lastupdated: "2017-03-08"
 {: #monitoring_bmx_containers_ov}
 
 No {{site.data.keyword.Bluemix}}, as métricas do contêiner são coletadas automaticamente de fora
-do contêiner, sem precisar instalar e manter agentes dentro do contêiner.{:shortdesc}
+do contêiner, sem precisar instalar e manter agentes dentro do contêiner.
+{:shortdesc}
 
 Agentes no contêiner podem ter gastos adicionais e tempos de instalação
 significativos para instâncias da nuvem e grupos de escala automática leves de curta duração, onde os contêineres
@@ -45,11 +46,11 @@ As informações de
 convenções do Docker e de contabilidade de grupos são usadas como o mecanismo básico para a coleção de dados
 de monitoramento.
 
-**Retenção de métricas**
+## Retenção de métricas
 
 Até um ponto de dados por minuto é coletado. As métricas do contêiner que não foram gravadas em sete dias são excluídas.
     
-**Classificação de métricas**
+## Classificação de métricas
 
 Os dados são exibidos e ordenados pelo ID do contêiner. 
 

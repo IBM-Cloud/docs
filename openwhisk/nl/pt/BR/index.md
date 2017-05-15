@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-21"
+lastupdated: "2017-04-25"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -26,7 +25,7 @@ Você é cobrado por milissegundo de tempo de execução (arredondado para os 10
 
 Esse modelo de programação é uma correspondência perfeita para microsserviços, dispositivos móveis, IoT e muitos outros apps – você obtém ajuste automático de escala inerente e balanceamento de carga prontos para utilização, sem precisar configurar manualmente clusters, balanceadores de carga, plug-ins http, etc. Se por acaso você executar no {{site.data.keyword.openwhisk}}, também obterá um benefício de administração zero, o que significa que todo o hardware, rede e software serão mantidos pela IBM. Tudo o que você precisa fazer é fornecer o código que deseja executar e concedê-lo ao {{site.data.keyword.openwhisk}}. O resto é “mágica”. Uma boa introdução para o modelo de programação Serverless está disponível no [blog de Martin Fowler](https://martinfowler.com/articles/serverless.html).
 
-Também é possível obter o [código-fonte do Apache OpenWHisk](https://github.com/openwhisk/openwhisk) e você mesmo executar o sistema.
+Também é possível obter o [Código-fonte do Apache OpenWhisk](https://github.com/openwhisk/openwhisk) e executar o sistema sozinho.
 
 Para obter mais detalhes sobre como o {{site.data.keyword.openwhisk_short}} funciona, consulte [Sobre o {{site.data.keyword.openwhisk_short}}](./openwhisk_about.html).
 
@@ -36,15 +35,15 @@ Ambos têm recursos semelhantes para desenvolver aplicativos; a CLI fornece mais
 ## Desenvolver em seu navegador
 {: #openwhisk_start_editor}
 
-Teste o {{site.data.keyword.openwhisk_short}} e seu [Navegador](https://console.{DomainName}/openwhisk/editor){: new_window} para
+Teste o {{site.data.keyword.openwhisk_short}} e seu [Navegador](https://console.{DomainName}/openwhisk/editor) para
 criar ações, automatizar ações usando acionadores e explorar pacotes públicos. 
-Visite a página [saiba mais](https://console.{DomainName}/openwhisk/learn){: new_window} para um tour rápido da Interface com o Usuário do OpenWhisk.
+Visite a página [saiba mais](https://console.{DomainName}/openwhisk/learn) para um tour rápido da Interface com o Usuário do OpenWhisk.
 
 ## Desenvolver usando a CLI
 {: #openwhisk_start_configure_cli}
 
 É possível usar a interface da linha de comandos (CLI) do {{site.data.keyword.openwhisk_short}} para configurar o namespace e a chave de autorização.
-Acesse [Configurar CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window} e siga as instruções para instalá-la.
+Acesse [Configurar CLI](https://console.{DomainName}/openwhisk/cli) e siga as instruções para instalá-la.
 
 ## Visão geral
 {: #openwhisk_start_overview}
@@ -140,10 +139,11 @@ ao {{site.data.keyword.openwhisk_short}}.
 ## Referência de API
 {: #openwhisk_start_api notoc}
 * [Documentação da API REST](./openwhisk_reference.html#openwhisk_ref_restapi)
-* [API REST](https://new-console.{DomainName}/apidocs/98){:new_window}
+* [REST API
+](https://console.{DomainName}/apidocs/98)
 
 ## Links Relacionados
 {: #general notoc}
-* [Descobrir: {{site.data.keyword.openwhisk_short}}](http://www.ibm.com/cloud-computing/bluemix/openwhisk/){:new_window}
-* [{{site.data.keyword.openwhisk_short}} no IBM developerWorks](https://developer.ibm.com/openwhisk/){:new_window}
-* [Website do projeto Apache {{site.data.keyword.openwhisk_short}}](http://openwhisk.org){:new_window}
+* [Descobrir: {{site.data.keyword.openwhisk_short}}](http://www.ibm.com/cloud-computing/bluemix/openwhisk/)
+* [{{site.data.keyword.openwhisk_short}} no IBM developerWorks](https://developer.ibm.com/openwhisk/)
+* [Website do projeto Apache {{site.data.keyword.openwhisk_short}}](http://openwhisk.org)

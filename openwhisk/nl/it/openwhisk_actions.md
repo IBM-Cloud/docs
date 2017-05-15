@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-  lastupdated: "2017-04-04"
+  lastupdated: "2017-04-21"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -192,7 +191,8 @@ Consulta la procedura e gli esempi di seguito riportati per creare la tua prima 
   }
   ```
 
-  Osserva l'uso dell'opzione `--result` per visualizzare solo il risultato della chiamata.
+  Osserva l'uso dell'opzione `--result`: essa implica una chiamata bloccante in cui la CLI attende il completamento dell'attivazione e poi
+  visualizza solo il risultato. Per comodità, questa opzione può essere utilizzata senza `--blocking` che viene dedotto automaticamente.
 
 ### Impostazione dei parametri predefiniti
 {: #openwhisk_binding_actions}
@@ -540,10 +540,10 @@ Per ulteriori informazioni sul richiamo delle sequenze di azioni con più parame
 
 Il processo di creazione delle azioni Python è simile a quello delle azioni JavaScript. Le seguenti sezioni ti guidano lungo la creazione e la chiamata di una singola azione Python e l'aggiunta di parametri a tale azione.
 
-### Creazione e chiamata di un'azione
+### Creazione e chiamata di un'azione Python
 {: #openwhisk_actions_python_invoke}
 
-Un'azione è semplicemente una funzione Python di livello superiore. Ad esempio, crea un file denominato `hello.py` con il seguente codice di origine: 
+Un'azione è semplicemente una funzione Python di livello superiore. Ad esempio, crea un file denominato `hello.py` con il seguente codice di origine:
 
 ```python
 def main(args):
@@ -578,12 +578,57 @@ wsk action invoke --blocking --result helloPython --param name World
   }
 ```
 
+### Creazione pacchetto di azioni Python in file zip
+{: #openwhisk_actions_python_zip}
+
+Puoi creare un pacchetto di azioni Python e moduli dipendenti in un file zip.
+Il nome del file di origine che contiene il punto di ingresso (ad esempio, `main`) deve essere `__main__.py`.
+Ad esempio, per creare un'azione con un modulo di supporto denominato `helper.py`, crea prima un archivio contenente i tuoi file di origine:
+
+```bash
+$ zip -r helloPython.zip **main**.py helper.py
+```
+
+e poi crea l'azione:
+
+```bash
+$ wsk action create helloPython --kind python:3 helloPython.zip
+```
+
+### Creazione pacchetto di azioni Python con un ambiente virtuale in file zip
+{: #openwhisk_actions_python_virtualenv}
+
+Un altro modo di creare un pacchetto di dipendenze Python è quello di utilizzare un ambiente virtuale (`virtualenv`). Questo ti consente di collegare ulteriori pacchetti
+che possono essere installati, ad esempio, tramite [`pip`](https://packaging.python.org/installing/).
+Per garantire la compatibilità con il contenitore OpenWhisk, le installazioni del pacchetto all'interno di un ambiente virtuale devono essere eseguite nell'ambiente di destinazione.
+È necessario quindi utilizzare l'immagine docker `openwhisk/python2action` o `openwhisk/python3action` per creare una directory virtualenv per la tua azione.
+
+Come per il supporto del file zip di base, il nome del file di origine che contiene il punto di ingresso principale deve essere `__main__.py`. Inoltre, la directory dell'ambiente virtuale deve essere denominata `virtualenv`.
+Di seguito è riportato uno scenario di esempio per installare le dipendenze, crearne dei pacchetti in un ambiente virtuale e creare un'azione OpenWhisk compatibile.
+
+1. Dato un file `requirements.txt` che contiene i moduli `pip` e le versioni da installare, esegui quanto segue per installare le dipendenze e creare un ambiente virtuale utilizzando un'immagine Docker compatibile:
+ ```bash
+ $ docker run --rm -v "$PWD:/tmp" openwhisk/python3action sh \
+   -c "cd tmp; virtualenv virtualenv; source virtualenv/bin/activate; pip install -r requirements.txt;"
+ ```
+
+2. Archivia la directory virtualenv e qualsiasi ulteriore file Python:
+ ```bash
+ $ zip -r helloPython.zip virtualenv **main**.py
+ ```
+
+3. Crea l'azione:
+```bash
+$ wsk action create helloPython --kind python:3 helloPython.zip
+```
+
+Sebbene la procedura precedente sia indicata per Python 3.6, puoi seguirla anche per Python 2.7.
 
 ## Creazione di azioni Swift
 
 Il processo di creazione di azioni Swift è analogo a quello delle azioni JavaScript. Le seguenti sezioni ti guidano lungo la creazione e la chiamata di una singola azione swift e l'aggiunta di parametri a tale azione.
 
-Puoi inoltre utilizzare il [Swift Sandbox](https://swiftlang.ng.bluemix.net) online per testare il tuo codice Swift senza dover installare Xcode sulla tua macchina.
+Puoi inoltre utilizzare il [Swift Sandbox] online (https://swiftlang.ng.bluemix.net) per testare il tuo codice Swift senza dover installare Xcode sulla tua macchina.
 
 ### Creazione e chiamata di un'azione
 
@@ -603,8 +648,8 @@ func main(args: [String:Any]) -> [String:Any] {
 
 Le azioni Swift utilizzano sempre un dizionario e ne producono un altro.
 
-Puoi creare un'azione {{site.data.keyword.openwhisk_short}} denominata `helloSwift` partendo
-da questa funzione:
+Puoi creare un'azione {{site.data.keyword.openwhisk_short}} denominata `helloSwift` partendo da
+questa funzione:
 
 ```
 wsk action create helloSwift hello.swift
@@ -612,7 +657,7 @@ wsk action create helloSwift hello.swift
 {: pre}
 
 Quando utilizzi la riga di comando e un file di origine `.swift`, non devi necessariamente
-specificare che stai creando un'azione Swift (e non un'azione JavaScript),
+specificare che stai creando un'azione Swift (e non un'azione JavaScript)
 poiché lo strumento lo desume dall'estensione del file.
 
 Le azioni Swift vengono richiamate come le azioni JavaScript:
@@ -628,13 +673,13 @@ wsk action invoke --blocking --result helloSwift --param name World
   }
 ```
 
-**Attenzione:** le azioni Swift vengono eseguite in un ambiente Linux. L'uso su Linux è ancora in fase di
-sviluppo e {{site.data.keyword.openwhisk_short}} di solito utilizza la release più recente disponibile, che non è necessariamente stabile. Inoltre, la versione di Swift utilizzata con {{site.data.keyword.openwhisk_short}} potrebbe essere incoerente con le versioni di Swift delle release stabili di XCode su MacOS.
+**Attenzione:** le azioni Swift vengono eseguite in un ambiente Linux. Swift su Linux è ancora in fase di
+sviluppo e {{site.data.keyword.openwhisk_short}} di solito utilizza l'ultima release disponibile, che non è necessariamente stabile. Inoltre, la versione di Swift utilizzata con {{site.data.keyword.openwhisk_short}} potrebbe essere incompatibile con le versioni di Swift delle release stabili di XCode su MacOS.
 
 ### Creazione pacchetto di un'azione come eseguibile Swift
 {: #openwhisk_actions_swift_zip}
 
-Quando crei un'azione OpenWhisk Swift con un file di origine Swift, questo deve essere compilato in un file binario prima che l'azione venga eseguita. Una volta fatto, le successive chiamate all'azione saranno molto più veloci fino a quando il contenitore della tua azione non viene eliminato. Questo ritardo è noto come ritardo di avvio a freddo. 
+Quando crei un'azione OpenWhisk Swift con un file di origine Swift, questo deve essere compilato in un file binario prima che l'azione venga eseguita. Una volta fatto, le successive chiamate all'azione saranno molto più veloci fino a quando il contenitore della tua azione non viene eliminato. Questo ritardo è noto come ritardo di avvio a freddo.
 
 Per evitare il ritardo di avvio a freddo, puoi compilare il file Swift in un file binario e quindi caricarlo in OpenWhisk in un file zip. Poiché hai bisogno della struttura OpenWhisk, il modo più semplice per creare il file binario è quello di costruirlo all'interno dello stesso ambiente in cui verrà eseguito. La procedura è la seguente:
 
@@ -682,7 +727,7 @@ docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
   exit
   ```
   {: pre}
-È stato creato hello.zip nella stessa directory di hello.swift. 
+È stato creato hello.zip nella stessa directory di hello.swift.
 -Caricalo in OpenWhisk con il nome azione helloSwifty:
   ```
   wsk action update helloSwiftly hello.zip --kind swift:3
@@ -694,7 +739,7 @@ docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
   ``` 
   {: pre}
 
-Il tempo impiegato dall'azione per l'esecuzione è la proprietà "duration" e viene confrontato con il tempo per l'esecuzione con una procedura di compilazione nell'azione hello.
+Il tempo impiegato per eseguire l'azione è nella proprietà "duration" e può essere paragonato al tempo impiegato per l'esecuzione con un passo di compilazione nell'azione hello.
 
 ## Creazione di azioni Java
 {: #openwhisk_actions_java}
@@ -741,19 +786,20 @@ jar cvf hello.jar Hello.class
 
 **Nota:** [google-gson](https://github.com/google/gson) deve essere presente nel tuo CLASSPATH Java durante la compilazione del file Java.
 
-Puoi creare un'azione OpenWhisk denominata `helloJava` da questo file JAR nel seguente modo:
+Puoi creare un'azione OpenWhisk denominata `helloJava` da questo file JAR nel
+seguente modo:
 
 ```
 wsk action create helloJava hello.jar --main Hello
 ```
 
 Quando utilizzi la riga di comando e un file di origine `.jar`, non devi necessariamente
-specificare che stai creando un'azione Java;
-lo strumento lo desume dall'estensione del file.
+specificare che stai creando un'azione Java,
+poiché lo strumento lo desume dall'estensione del file.
 
-Devi specificare il nome della classe principale utilizzando `--main`. Una classe principale eleggibile
-è una classe che implementa un metodo `main` statico come descritto qui di seguito. Se la classe
-non è il pacchetto predefinito, utilizza il nome della classe completo,
+Devi specificare il nome della classe principale utilizzando  `--main`. Una classe principale
+idonea è una classe che implementa un metodo `main` statico come descritto sopra. Se la
+classe non si trova nel pacchetto predefinito, utilizza il nome classe Java completo,
 ad esempio, `--main com.example.MyMain`.
 
 Le azioni Java vengono richiamate come le azioni JavaScript e Swift:
@@ -775,7 +821,7 @@ Le azioni {{site.data.keyword.openwhisk_short}} Docker ti permettono di scrivere
 
 Il tuo codice viene compilato in un file binario eseguibile e incorporato in un'immagine Docker. Il programma binario interagisce con il sistema, prendendo l'input proveniente da `stdin` e rispondendo tramite `stdout`.
 
-È necessario, come requisito, disporre di un account Docker Hub.  Per impostare un account e un ID Docker gratuiti, passa a [Docker Hub](https://hub.docker.com){: new_window}.
+È necessario, come requisito, disporre di un account Docker Hub.  Per impostare un account e un ID Docker gratuiti, passa a [Docker Hub](https://hub.docker.com).
 
 Per le seguenti istruzioni, supponiamo che l'ID utente Docker sia `janesmith` e che la password sia `janes_password`.  Supponendo che la CLI sia già configurata, sono richiesti tre passaggi per impostare un file binario personalizzato che venga utilizzato da {{site.data.keyword.openwhisk_short}}. Al termine di questa procedura, l'immagine Docker caricata può essere utilizzata come azione.
 
@@ -784,8 +830,7 @@ Per le seguenti istruzioni, supponiamo che l'ID utente Docker sia `janesmith` e 
   ```
   wsk sdk install docker
   ```
-  ```
-  {: pre}
+ {: pre}
   ```
   La struttura di base Docker è ora installata nella directory corrente.
   ```
@@ -822,9 +867,9 @@ Per le seguenti istruzioni, supponiamo che l'ID utente Docker sia `janesmith` e 
 
   L'eseguibile riceve un singolo argomento dalla riga comandi. Si tratta di una serializzazione della stringa dell'oggetto JSON
   che rappresenta gli argomenti per l'azione. Il programma può accedere a `stdout` o `stderr`.
-  Per convenzione, l'ultima riga dell'output _deve_ essere un oggetto JSON in stringhe che rappresenta il risultato dell'azione.
+  Per convenzione, l'ultima riga dell'output *deve* essere un oggetto JSON in stringhe che rappresenta il risultato dell'azione.
 
-3. Crea l'immagine Docker e caricala attraverso lo script fornito. Devi prima eseguire `docker login` per autenticarti, quindi eseguire lo script con un nome immagine a scelta.
+3. Crea l'immagine Docker e caricala attraverso lo script fornito. Devi prima eseguire `login docker` per autenticarti, quindi eseguire lo script con un nome immagine a scelta.
 
   ```
   docker login -u janesmith -p janes_password
@@ -968,8 +1013,8 @@ Le proprietà sono accessibili tramite l'ambiente del sistema per tutti i runtim
 le azioni Node.js, Python, Swift, Java e Docker quando si utilizza la struttura di base Docker OpenWhisk.
 
 * `__OW_API_HOST` l'host dell'API per la distribuzione OpenWhisk che sta eseguendo questa azione
-* `__OW_API_KEY` la chiave API per l'oggetto che sta richiamando l'azione, questa chiave potrebbe essere una chiave API limitata
-* `__OW_NAMESPACE` lo spazio dei nomi per l'_attivazione_ (potrebbe non essere lo stesso dell'azione)
+* `__OW_API_KEY` la chiave API per l'oggetto che sta richiamando l'azione, questa chiave potrebbe essere una chiave API limitata.
+* `__OW_NAMESPACE` lo spazio dei nomi per l'*attivazione* (potrebbe non essere lo stesso dell'azione)
 * `__OW_ACTION_NAME` il nome completo dell'azione in esecuzione
 * `__OW_ACTIVATION_ID` l'ID di attivazione per l'istanza dell'azione in esecuzione
 * `__OW_DEADLINE` il tempo approssimativo in cui questa azione avrà consumato la propria intera quota di durata (misurato in millisecondi)

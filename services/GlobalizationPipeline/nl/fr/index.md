@@ -1,7 +1,8 @@
-﻿---
+---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-09-09"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 # Initiation à {{site.data.keyword.GlobalizationPipeline_short}}
 {: #globalizationpipeline}
 
-*Dernière mise à jour : 9 septembre 2016*
-{: .last-updated}
 
 {{site.data.keyword.GlobalizationPipeline_full}} est un service qui fournit des fonctions de traduction et d'édition automatiques permettant de traduire rapidement des interfaces utilisateur Web ou mobiles. Grâce à son tableau de bord, son API RESTful et son intégration à la pipeline de distribution de votre application, vous pouvez effectuer une mise en production auprès de clients globaux sans avoir à régénérer ou redéployer votre application.
 {:shortdesc}

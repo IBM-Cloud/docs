@@ -18,4 +18,4 @@ Sie können mehr erreichen mit umfangreichen integrierten Clouddatenbanken und A
 Mehr erstellen | Weiter wachsen | Mehr ausruhen
 ---- | ---- | ----
 Konzentrieren Sie sich auf die angenehmen Dinge .. Neue Apps erstellen, nicht das System verwalten. | Skalieren Sie die Daten in der IBM Cloud. | Lehnen Sie sich zurück -  die IBM Experten kümmern sich rund um die Uhr 7 Tage die Woche um Ihre Daten.
-{: caption="Table 1. Benefits of using the Work with Data console" caption-side="top"}
+{: caption="Tabelle 1. Vorteile der Konsole 'Mit Daten arbeiten'" caption-side="top"}

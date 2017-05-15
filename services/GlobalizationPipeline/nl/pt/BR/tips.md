@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-07-12"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 # Dicas de tradução de máquina
 {: #globalizationpipeline_tips}
 
-*Última atualização: 12 de julho de 2016*
-{: .last-updated}
 
 A tradução de máquina pode ser eficaz em fornecer uma aproximação do significado do texto de origem. Entretanto, a qualidade e utilidade da tradução de máquina varia muito dependendo do idioma de destino e do mecanismo de tradução de máquina que você usa. Um dos principais fatores na qualidade da tradução de máquina é a qualidade da origem em si. Um texto de origem carregado de coloquialismos, sentenças incompletas, pontuação incorreta e palavras e frases ambíguas pode não ser traduzido com precisão.
 {:shortdesc}

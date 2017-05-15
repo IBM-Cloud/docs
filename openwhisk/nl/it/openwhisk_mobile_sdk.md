@@ -11,7 +11,7 @@ Puoi installare l'SDK mobile utilizzando CocoaPods, Carthage oppure dalla direct
 
 ### Installazione utilizzando CocoaPods
 
-L'SDK OpenWhisk per i dispositivi mobili è disponibile per la distribuzione publica tramite CocoaPods. Ponendo che CocoaPods sia installato, inserisci le seguenti righe in un file denominato 'Podfile' all'interno della directory del progetto applicazione starter.
+L'SDK OpenWhisk per i dispositivi mobili è disponibile per la distribuzione pubblica tramite CocoaPods. Ponendo che CocoaPods sia installato, inserisci le seguenti righe in un file denominato 'Podfile' all'interno della directory del progetto applicazione starter.
 
 ```
 install! 'cocoapods', :deterministic_uuids => false

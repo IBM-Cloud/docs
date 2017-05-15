@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-2-21"
+lastupdated: "2017-4-24"
 
 ---
 
@@ -61,29 +61,37 @@ lastupdated: "2017-2-21"
 <ol>
 <li> 复制并修改以下某个片段模板，并在其中加入公共 Git 存储库。<p></p>
 <p>
-<strong>提示</strong>：如果想要为 DevOps Services 项目指定构建输入，请向 Git URL 添加分支参数。添加分支参数后，系统会将原始公共 Git 存储库（包括其所有分支）克隆到带有新 Git 存储库的新专用 DevOps Services 项目中。系统会将指定的 Git 分支设置为构建作业的输入。如果未指定分支，那么缺省情况下，会将构建作业的输入设置为主分支。</p>
+<strong>提示</strong>：可以通过向 Git URL 添加分支参数来指定要使用的分支。如果未指定分支，那么缺省情况下，将使用主分支。</p>
 <ul>
 <li>HTML：<p>
 缺省主分支：</p>
 <pre class="codeblock">
+<code class="hljs">
 &lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL>" # [必需]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="部署到 Bluemix"&gt;&lt;/a&gt;
+</code>
 </pre>
 <p>
 指定的 Git 分支：
 </p>
 <pre class="codeblock">
+<code class="hljs">
 &lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;&branch=&lt;git_branch>" # [必需]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="部署到 Bluemix"&gt;&lt;/a&gt;
+</code>
 </pre>
 </li>
 <li>Markdown：<p>
 缺省主分支：</p>
 <pre class="codeblock">
-[&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&rpar;
+<code class="hljs">
+[&excl;[部署到 Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&rpar;
+</code>
 </pre>
 <p>指定的 Git 分支：
 </p>
 <pre class="codeblock">
-[&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&rpar;
+<code class="hljs"
+[&excl;[部署到 Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&rpar;
+</code>
 </pre>
 </li>
 </ul>
@@ -182,4 +190,4 @@ applications:
  </ul>
 </ul>
 
-有关故障诊断帮助，请参阅[“部署到 Bluemix”按钮不部署应用程序](/docs/troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}。	
+有关故障诊断帮助，请参阅[“部署到 Bluemix”按钮不部署应用程序](/docs/troubleshoot/ts_apps.html#ts_deploybutton){:new_window}。	

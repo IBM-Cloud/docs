@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-04-17"
+lastupdated: "2017-05-08"
 
 ---
 
@@ -46,7 +46,7 @@ You can use the {{site.data.keyword.appid_short}} server SDK to protect resource
 ## Protecting resources in Swift
 {: #protecting}
 
-The Swift SDK provides Kitura Credential Plug-ins that is used for protecting web applications. When using this plug-in, an unauthenticated client receives an HTTP 302 response. The client is redirected to the login page that is hosted by {{site.data.keyword.appid_short_notm}} or to the identity provider's login page, depending on the configuration.
+The Swift SDK provides a Kitura Credential plug-in that is used for protecting web applications. When you are using this plug-in, an unauthenticated client receives an HTTP 302 response. The client is redirected to the login page that is hosted by {{site.data.keyword.appid_short_notm}} or to the identity provider's login page, depending on the configuration.
 
 
 
@@ -55,7 +55,7 @@ The Swift SDK provides Kitura Credential Plug-ins that is used for protecting we
 
 The WebAppKituraCredentialsPlugin is based on the OAuth2 authorization_code grant flow and must be used for web applications that use browsers. The plug-in provides tools to implement authentication and authorization flows. The plug-in also provides mechanisms to detect unauthenticated attempts to access protected resources and automatically redirects a user's browser to the authentication page. After successful authentication, a user is taken to the web application's callback URL, which uses the plug-in to obtain access and identity tokens from {{site.data.keyword.appid_short_notm}}. After obtaining these tokens, the plug-in stores them in an HTTP session under WebAppKituraCredentialsPlugin.AuthContext.
 
-The following code demonstrates how to use WebAppKituraCredentialsPlugin in a Kitura application to protect the /protected endpoint.
+The following code demonstrates how to use WebAppKituraCredentialsPlugin in a Kitura application to protect the `/protected` endpoint.
 
   ```swift
   import Foundation

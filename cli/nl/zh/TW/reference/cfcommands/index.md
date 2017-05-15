@@ -677,7 +677,7 @@ cf ssh
 ```
 <strong>必要條件</strong>：`cf api`、`cf login`、`cf target`
 
-預設會啟用 Diego 應用程式的 SSH 存取。您可以使用 `cf ssh-enabled` 指令，驗證是否已啟用 SSH 存取，或是使用 `cf enable-ssh` 指令來啟用已停用的存取。 
+依預設，會啟用 Diego 應用程式的 SSH 存取。您可以使用 `cf ssh-enabled` 指令，驗證是否已啟用 SSH 存取，或是使用 `cf enable-ssh` 指令來啟用已停用的存取。 
 
 <strong>指令選項</strong>：
 

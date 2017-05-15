@@ -7,7 +7,6 @@ lastupdated: "2017-02-21"
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -86,7 +85,7 @@ nginx 不會對我們的 HTTP 要求進行太多處理，而是將它轉遞給**
 
 「控制器」會先釐清使用者嘗試執行的動作。作法是根據您在 HTTP 要求中使用的 HTTP 方法。根據上述轉換，使用者會對現有的動作發出 POST 要求，而「控制器」會將其轉換為**動作的呼叫**。
 
-提供「控制器」的中央角色（因此得名），下列步驟都會將它併入特定範圍。
+由於「控制器」的中央角色（因此得名），下列步驟全都會有一定程度的相關性。
 
 ### 鑑別及授權：CouchDB
 

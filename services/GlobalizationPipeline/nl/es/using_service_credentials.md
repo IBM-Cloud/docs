@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-07-13"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # Uso de {{site.data.keyword.GlobalizationPipeline_short}} fuera de {{site.data.keyword.Bluemix_notm}}
 {: #globalizationpipeline_external}
-
-*Última actualización: 13 de julio de 2016*
-{: .last-updated}
 
 Muchos servicios de {{site.data.keyword.Bluemix_notm}}, incluyendo {{site.data.keyword.GlobalizationPipeline_short}}, se pueden utilizar desde una aplicación local que aloja entorno o incluso desde otra plataforma de nube sin tener que alojar la aplicación en {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}

@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-03-03"
+lastupdated: "2017-04-24"
 
 ---
 
@@ -22,7 +22,7 @@ para gerenciar quaisquer organizações na qual eles estão configurados como o 
 
 Para gerenciar usuários em sua conta, na barra de menus do {{site.data.keyword.Bluemix_notm}},
 clique em **Gerenciar** &gt; **Conta** &gt;
-**Usuários**.  
+**Usuários**. 
 
 **Observação**: deve-se ser o proprietário de uma conta pay-as-you-go para criar uma organização.
 
@@ -41,16 +41,15 @@ obter informações detalhadas, veja
 <dd>Fornecem a rota na Internet que é alocada para a organização. Uma rota tem um subdomínio e um domínio. Um subdomínio normalmente é o nome do aplicativo. Um
 domínio pode ser um domínio do sistema ou um domínio customizado que você registrou para
 seu aplicativo. Veja [Gerenciando domínios customizados](/docs/admin/orgs_spaces.html#managedomains).<br/>
-<p>**Nota**: Se um domínio customizado for incluído, deve-se configurar seu servidor DNS para resolver seu domínio customizado para apontar para o domínio de sistema {{site.data.keyword.Bluemix_notm}}. Dessa
+<p>**Nota:** se um domínio customizado é incluído, deve-se configurar seu servidor DNS para resolver seu domínio customizado para apontar para o domínio de sistema {{site.data.keyword.Bluemix_notm}}. Dessa
 maneira, quando o
 {{site.data.keyword.Bluemix_notm}}
 receber uma solicitação para o domínio customizado, ele poderá roteá-lo corretamente
 para o aplicativo.</p></dd>
 <dt>Cota</dt>
-<dd>Representa os limites de recurso para a organização, incluindo o número de serviços e a quantia de memória
-que pode ser alocada para uso pela organização. As cotas são designadas quando as organizações são criadas. Qualquer
-aplicativo ou serviço em um espaço da organização contribui para o uso da cota. Com planos de Pagamento por uso ou de Assinatura, é possível ajustar a sua cota para aplicativos e contêineres do Cloud Foundry
-conforme as necessidades de mudança da sua organização. Consulte [Gerenciando cota](/docs/admin/orgs_spaces.html#managequota).</dd>
+<dd>Representa os recursos que estão disponíveis para uma organização, incluindo o número de serviços e a quantia de memória que pode ser alocada para uso pela organização. As cotas são designadas quando as organizações são criadas. Qualquer aplicativo ou serviço em um espaço dentro de uma organização contribui para o uso da cota. Com planos de Pagamento por uso ou de Assinatura, é possível ajustar a sua cota para aplicativos e contêineres do Cloud Foundry
+conforme as necessidades de mudança da sua organização. Consulte [Gerenciando cota](/docs/admin/orgs_spaces.html#managequota). 
+<p>**Nota:** em uma conta da Assinatura, a cota é um limite definido pelo usuário que aciona notificações de gasto.</p></dd>
 </dl>
 
 No {{site.data.keyword.Bluemix_notm}}, é possível usar organizações para permitir a colaboração entre membros da equipe e para facilitar o agrupamento lógico de recursos do projeto das
@@ -67,8 +66,8 @@ criar uma organização, o nome da organização deve ser exclusivo no {{site.da
 Local, então, deverá especificar um novo nome. Depois de criar a organização, você será designado automaticamente com a permissão de
 *Gerenciador de organização*, que permite editar o nome da organização, incluir membros da equipe e criar ou excluir espaços na organização.
 
-Deve-se entrar em contato com o [Suporte do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} para excluir uma organização. Ao solicitar que
-a equipe de suporte exclua uma organização, todos os espaços, aplicativos e serviços dentro da organização são excluídos.
+É possível usar o comando [`bx iam org-delete`](/docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_iam_org_delete) para excluir organizações. Ao excluir uma organização, todos os espaços, aplicativos e serviços
+dentro da organização são excluídos.  
 
 As [funções de usuário](/docs/admin/users_roles.html#userrolesinfo) a seguir podem ser designadas para membros da equipe em uma organização:
 
@@ -138,7 +137,8 @@ Conclua as etapas a seguir para renomear sua organização:
 ## Excluir uma organização ou um espaço existente
 {: #deleteorgs}
 
-Como o proprietário da conta, é possível entrar em contato com o [Suporte do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} para excluir uma organização.
+Como proprietário da conta, é possível excluir uma organização usando a CLI do {{site.data.keyword.Bluemix_notm}}. Use o comando [`bx iam org-delete`](/docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_iam_org_delete) para excluir organizações. Ao excluir uma organização, todos os espaços, aplicativos e serviços
+dentro da organização são excluídos. 
 
 **Nota**: Não é possível inverter operações de exclusão. Você perderá todos os aplicativos e
 serviços que estiverem associados à organização.
@@ -196,11 +196,11 @@ de seu plano de precificação. É possível visualizar os detalhes da cota para
  * MEMÓRIA
  * IP PÚBLICO
  * COMPARTILHAMENTOS DE ARQUIVO
-8. Clique em **Servidores virtuais** para visualizar as máquinas virtuais. 
+8. Clique em **Servidores virtuais** para visualizar as máquinas virtuais.
 
 **Nota:** Os contêineres não estão disponíveis na região de Sydney do {{site.data.keyword.Bluemix_notm}}. 
 
-Para obter mais informações sobre contêineres, consulte [Cota](/docs/containers/container_planning_org_ov.html#container_planning_quota) na
+Para obter mais informações sobre contêineres, consulte [Cota](/docs/containers/container_planning.html#container_planning_quota) na
 documentação de Contêineres.
 Para mudar a cota que está alocada para uma organização, deve-se abrir um chamado de suporte. Para obter mais informações sobre como abrir um chamado de suporte,
 consulte [Obtendo suporte ao cliente](/docs/support/index.html#contacting-support). 

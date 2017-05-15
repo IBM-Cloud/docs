@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-14"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-02-14"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Überwachung und Protokollierung
+# Übersicht
 {: #monitoringandlogging}
 
 {{site.data.keyword.Bluemix}} bietet Protokollierungs- und Überwachungsfunktionen für verschiedene Services an, wie zum Beispiel für den Cloud Foundry-Service und {{site.data.keyword.containershort}}. Sie können Anwendungen in einer beliebigen Laufzeit entwickeln, ausführen und verwalten, ohne dazu über die komplexe Infrastruktur mit dem entsprechenden Verwaltungsaufwand verfügen zu müssen, die in der Regel zum Entwickeln und Starten einer App gehört. 
@@ -23,11 +23,12 @@ lastupdated: "2017-02-14"
 
 Die {{site.data.keyword.Bluemix_notm}}-Protokollierungsfunktionen sind in die Plattform integriert und die Erfassung von Daten wird für Cloudressourcen automatisch aktiviert. {{site.data.keyword.Bluemix_notm}} erfasst standardmäßig Protokolle für Ihre Apps, App-Laufzeiten und Verarbeitungslaufzeiten, in denen diese Apps ausgeführt werden. Weitere Informationen finden Sie unter [Protokollierung](logging/logging_bmx_ov.html#logging_bmx_ov).
 
-{{site.data.keyword.Bluemix_notm}} bietet außerdem eine Infrastrukturüberwachung an, die für jeden Server verfügbar ist, und stellt einfach lesbare Berichte bereit. Weitere Informationen finden Sie unter [Infrastrukturüberwachung & Berichterstellung![Symbol für externen Link](../icons/launch-glyph.svg "Link für externen Link")](https://www.ibm.com/cloud-computing/bluemix/infrastructure-monitoring){: new_window}.
+{{site.data.keyword.Bluemix_notm}} bietet außerdem eine Infrastrukturüberwachung an, die für jeden Server verfügbar ist, und stellt einfach lesbare Berichte bereit. Weitere Informationen finden Sie unter [Infrastrukturüberwachung & Berichterstellung ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud-computing/bluemix/infrastructure-monitoring){: new_window}.
 
 Überwachungs- und Protokollierungsfunktionen sind in den folgenden Regionen verfügbar:
 * Vereinigte Staaten (Süden)
 * Vereintes Königreich
+* Frankfurt
 
 
 

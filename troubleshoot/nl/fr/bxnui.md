@@ -592,7 +592,7 @@ Actualisez la page ultérieurement pour vérifier que le conteneur a été suppr
 Essayez à nouveau ultérieurement. Si ce message réapparaît, ouvrez la [page de statut Bluemix](https://developer.ibm.com/bluemix/support/#status){: new_window} pour déterminer si un service ou un composant présente un problème. Si le problème persiste, rendez-vous sur la page [IBM Bluemix Support](http://ibm.biz/bluemixsupport){: new_window}.
 
 ## BXNUI0129E
-**Message** : Les informations relatives au compte n'ont pas été extraites en raison d'un problème lors du contact du système de service métier. 
+**Message** : Les informations relatives au compte n'ont pas été extraites car un problème est survenu lors du contact du système de service métier. 
 
 Essayez à nouveau ultérieurement. Si ce message réapparaît, ouvrez la [page de statut Bluemix](https://developer.ibm.com/bluemix/support/#status){: new_window} pour déterminer si un service ou un composant présente un problème. Si le problème persiste, rendez-vous sur la page [IBM Bluemix Support](http://ibm.biz/bluemixsupport){: new_window}.
 

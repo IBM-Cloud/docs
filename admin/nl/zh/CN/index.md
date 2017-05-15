@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-22"
+lastupdated: "2017-04-13"
 
 ---
 
@@ -32,7 +32,7 @@ lastupdated: "2017-02-22"
 |查看报告和日志 | 单击**管理 &gt; 报告和日志**可查看针对您实例的安全报告和审计日志。请参阅[查看报告](/docs/admin/index.html#oc_report)。 |
 |查看系统信息 | 单击**管理 &gt; 系统信息**可查看系统信息，例如暂挂维护更新数、实例的名称和版本、区域、API URL、CLI URL、LDAP 配置详细信息、组和用户映射、统计信息以及共享域。请参阅[查看系统信息](/docs/admin/index.html#oc_system)。 |
 |扩展通知和设置通知预订 | 单击**管理 &gt; 系统信息 &gt; *Number* 个暂挂**。可以使用 Webhook 来与所选 Web 服务集成，以设置某个更新或事件的事件通知预订。请参阅[通知和通知预订](/docs/admin/index.html#oc_eventsubscription)。 |
-{: caption="表 1. 用于管理 {{site.data.keyword.Bluemix_notm}} Local 或 Dedicated 实例的管理任务" caption-side="top"}
+{: caption="表 1. 用于管理 Bluemix Local 或 Dedicated 实例的管理任务" caption-side="top"}
 
 <!-- staging only for WoW start -->
 
@@ -100,7 +100,8 @@ lastupdated: "2017-02-22"
 | 主体 | 输入要在电子邮件中发送的消息体文本。您可以使用 IBM 有效内容值，向电子邮件通知填充相关信息。请参阅[维护和事件有效内容部分值](index.html#payload)表，以识别可以使用的值。使用基本 HTML 标记，来构建您的电子邮件。这是必填字段。 |
 | 收件人 | 使用电子邮件通知收件人的逗号分隔列表，输入一个或多个电子邮件地址。展开“抄送”或“密件抄送”选项，将电子邮件抄送给其他人。这是必填字段。 |
 | 描述 | 添加要创建的预订的唯一描述。 |
-{: caption="表 3. 关于阈值的电子邮件通知预订字段" caption-side="top"}
+{: caption="表 3. 关于阈值的电子邮件通知预订的字段" caption-side="top"}
+
 
 {: #emailnottrhesh}
 
@@ -117,7 +118,7 @@ lastupdated: "2017-02-22"
 | 主题 | 输入电子邮件的主题行。这是必填字段。  |
 | 消息体 | 输入要在电子邮件中发送的消息体文本。您可以使用 IBM 有效内容值，向电子邮件通知填充相关信息。请参阅[阈值有效内容部分值](index.html#threshpayload)表，以识别可以使用的值。使用基本 HTML 标记，来构建您的电子邮件。这是必填字段。 |
 | 收件人 | 使用电子邮件通知收件人的逗号分隔列表，输入一个或多个电子邮件地址。展开“抄送”或“密件抄送”选项，将电子邮件抄送给其他人。这是必填字段。 |
-{: caption="表 4. 关于维护更新或事件的电子邮件通知预订字段" caption-side="top"}
+{: caption="表 4. 关于维护更新或事件的电子邮件通知预订的字段" caption-side="top"}
 
 阈值数据每 6 个小时收集一次。当值跨越设置的阈值时，只发送一次通知。如果选择“升序”，那么当值低于阈值，然后再次高于阈值时，才会发送新通知。同样，如果选择“降序”，那么仅当值高于设置的阈值，然后再次低于阈值时，才会向您发送通知。 
 
@@ -641,7 +642,7 @@ lastupdated: "2017-02-22"
 |featuredImageUrl | 特色图像的（64 x 64 像素）的 URL。 |
 |documentationUrl | 有关服务的文档的 URL。 |
 |termsUrl | 包含协议条款的 PDF 文件的 URL。 |
-|media（可选） | 一组元素，用于显示在 {{site.data.keyword.Bluemix_notm}} 用户界面中介绍服务的视频和截屏。media 元素可以包含以下字段：type（image、youtube 或 video）、thumbnailUrl（media 元素的预览图像的 URL）、url（截屏或 YouTube 视频的 URL）、source（未在 YouTube 上托管的视频的来源。视频来源的“类型”必须受 HTML5 支持。对于 video，请包含“type”和“url”。）和 caption（media 元素的文字说明。文字说明有助于身有残疾的人员进行访问以了解 media 元素。）。 |
+|media（可选） | 一组元素，用于显示在 {{site.data.keyword.Bluemix_notm}} 用户界面中介绍服务的视频和截屏。media 元素可以包含以下字段：type（image、youtube 或 video）、thumbnailUrl（media 元素的预览图像的 URL）、url（截屏或 YouTube 视频的 URL）、source（未在 YouTube 上托管的视频的来源。视频来源的“类型”必须受 HTML5 支持。对于 video，请包含“type”和“url”。）和 caption（media 元素的文字说明。文字说明有助于身有残疾的人员进行访问以了解 media 元素。）. |
 |serviceKeysSupported | 布尔值，指示是否支持服务密钥 API。服务密钥 API 用于支持服务在 {{site.data.keyword.Bluemix_notm}} 外部使用。缺省值为 false。 |
 |plan_updateable | 布尔值，指示服务是否支持更改套餐。缺省值为 false。 |
 |embeddableDashboard（可选） | 此字段指示服务仪表板在 {{site.data.keyword.Bluemix_notm}} 用户界面中的显示方式。如果未指定此字段，仪表板将嵌入用户界面中，但限制为宽度不低于 960px，并且仪表板围绕 iFrame 有更多水平内边距。可以使用 true、false、drilldown 或 launch。对于此值，可以使用以下字段：true、false、drilldown 和 launch。  |
@@ -652,7 +653,7 @@ lastupdated: "2017-02-22"
 |sdkDownloadUrl（可选） | 单击“下载 SDK”按钮时打开的 Web 页面的 URL。“下载 SDK”按钮位于“仪表板”中“应用程序概述”页面的服务磁贴上。Web 页面会在新的浏览器选项卡中打开。 |
 |serviceMonitorApi    | 返回 JSON 数据的 API 的 URL，如以下示例中所示，用于报告服务运行状况。必须在服务元数据中具有 serviceMonitorApi 或 serviceMonitorApp。请参阅以下代码样本以获取示例。 |
 |serviceMonitorApp    | 应用程序的 URL，该应用程序可部署到 {{site.data.keyword.Bluemix_notm}} 并绑定服务，以提供特定于服务状态的输出。应用程序返回的 JSON 数据格式必须与 serviceMonitorApi 相同。必须在服务元数据中具有 serviceMonitorApi 或 serviceMonitorApp。请参阅以下代码样本以获取示例。 |
-{: caption="表 11. Metadata 字段" caption-side="top"}
+{: caption="表 11. 元数据字段" caption-side="top"}
 
 
 ```
@@ -693,7 +694,7 @@ lastupdated: "2017-02-22"
 |free      | 布尔值，指示服务套餐是否免费。缺省值为 true。 |
 |id       | 服务套餐的标识。标识必须唯一，并且必须为 GUID。  |
 |metadata（可选）    | 服务套餐元数据，在 {{site.data.keyword.Bluemix_notm}}“目录”和价格表中显示。metadata 字段是可选字段。可以在 metadata 字段内指定以下字段：displayName, type（subscription、reservable 或 planDetails）、bullets、costs（unitId、unit 或 partNumber）和 paidOnly。请参阅下表 [Plan metadata 字段](index.html#planmetadata)，以获取更多信息。 |
-{: caption="表 12. Plan 字段" caption-side="top"}
+{: caption="表 12. 套餐字段" caption-side="top"}
 
 
 {: #planmetadata}
@@ -705,7 +706,7 @@ lastupdated: "2017-02-22"
 |bullets                 | 可用于套餐的资源的描述。描述会显示在“目录”中服务详细信息页面上的**功能**列中以及价格表上。 |
 |costs                   | 有关服务的成本信息，显示在“目录”中服务详细信息页面上的“价格”列中以及价格表上。每组条目都包含以下字段：unitId（单位标识。使用复数形式并且所有字母均大写。对于免费套餐，此字段是可选的。）、unit（用于计算服务费用的度量值。此字段的值在 {{site.data.keyword.Bluemix_notm}} 用户界面中用于表示费用度量值。）和 partNumber（记帐系统使用的 `part_number` 标识。对于免费套餐，此字段是可选的。）.   |
 |paidOnly（可选）     | 布尔值，指示此服务套餐是否只可用于 {{site.data.keyword.Bluemix_notm}} 付费帐户。值为 **true** 表示此服务套餐只可用于付费帐户，不能添加到试用帐户。值为 **false** 表示此服务套餐可以添加到付费帐户和试用帐户。缺省值为 **false**。	  |
-{: caption="表 13. Plan metadata 字段" caption-side="top"}
+{: caption="表 13. 套餐元数据字段" caption-side="top"}
 
 以下示例显示了 GET /v2/catalog 的 JSON 响应如何映射到 {{site.data.keyword.Bluemix_notm}}“目录”中的服务详细信息页面。具体而言，即上表中描述的 plan metadata 字段如何映射到用户界面：
 
@@ -831,7 +832,7 @@ lastupdated: "2017-02-22"
 <dd>可以在组织的所有空间中分配的最大公共 IP 地址数。</dd>
 </dl>
 <strong>注</strong>：如果环境中尚无容器，或者如果在环境中尚未设置容器，那么您将收到错误消息。
-<p>有关容器的更多信息，请参阅[关于 IBM Containers](/docs/containers/container_ov.html)。有关容器配额的更多信息，请参阅[配额和 Bluemix 帐户](/docs/containers/container_planning_org_ov.html#container_planning_quota)。</p>
+<p>有关容器的更多信息，请参阅[关于 IBM Containers](/docs/containers/container_ov.html)。有关容器配额的更多信息，请参阅[配额和 Bluemix 帐户](/docs/containers/container_planning.html#container_planning_quota)。</p>
 <strong>注：</strong>在 {{site.data.keyword.Bluemix_notm}} 悉尼区域中无法使用容器。</li>
 </ul>
 <li>要保存在“管理组织”页面上进行的任何更改，请单击<strong>保存</strong>。</li>
@@ -1981,16 +1982,16 @@ Content-Type: application/json
 ```
 {: screen}
 
-## 使用 cf CLI 管理用户
+### 使用 cf CLI 管理用户
 {: #usingadmincli}
 
-您可以将 Cloud Foundry 命令行界面与 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件一起使用来管理 {{site.data.keyword.Bluemix_notm}} 环境的用户。例如，可以从 LDAP 注册表添加用户。
+您可以将 Cloud Foundry 命令行界面与 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件一起使用来管理 {{site.data.keyword.Bluemix_notm}} 环境的用户。必须为 Cloud Foundry CLI 下载此插件。
 
 开始之前，请安装 cf 命令行界面。{{site.data.keyword.Bluemix_notm}} 管理 CLI 插件需要 cf V6.11.2 或更高版本。[下载 Cloud Foundry 命令行界面 ![外部链接图标](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}。
 
 **限制：**Cygwin 不支持 Cloud Foundry 命令行界面。请在非 Cygwin 命令行窗口中使用 Cloud Foundry 命令行界面。
 
-### 添加 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件
+#### 添加 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件
 
 安装了 cf 命令行界面后，可以添加 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件。
 
@@ -2015,10 +2016,17 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 </li>
 </ol>
 
-要查看命令的列表，请运行以下命令：
+要查看已安装插件中可用子命令的列表，请运行以下命令：
 
 ```
 cf plugins
+```
+{: codeblock}
+
+要查看 {{site.data.keyword.Bluemix_notm}} 管理插件的可用命令组的列表，请运行以下命令：
+
+```
+cf ba
 ```
 {: codeblock}
 

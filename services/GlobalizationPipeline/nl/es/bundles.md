@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-
+  years: 2015, 2017
+lastupdated: "2016-08-30"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +13,6 @@ copyright:
 
 # Cómo trabajar con paquetes
 {: #globalizationpipeline_workingwithbundles}
-
-*Última actualización: 30 de agosto de 2016*
-{: .last-updated}
 
 Cada paquete que cree contiene los pares clave valor del archivo de recursos y el conjunto completo de traducciones que se han generado.
 {:shortdesc}

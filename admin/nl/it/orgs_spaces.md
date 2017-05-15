@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-03-03"
+lastupdated: "2017-04-24"
 
 ---
 
@@ -22,7 +22,7 @@ Per gestire le organizzazioni e gli spazi, dalla barra del menu {{site.data.keyw
 
 **Nota**: per creare un'organizzazione devi essere il proprietario di un account con pagamento a consumo.
 
-## Gestione organizzazioni 
+## Gestione organizzazioni
 {: #orginfo}
 
 Le organizzazioni possono estendersi a più regioni e sono definite dai seguenti elementi:
@@ -36,12 +36,11 @@ consulta [Utenti e ruoli](/docs/admin/users_roles.html#userrolesinfo).</dd>
 <dt>Domini</dt>
 <dd>Fornisci la rotta su internet che è assegnata all'organizzazione. Una rotta ha un dominio secondario e un dominio. Un dominio secondario è di norma il
 nome dell'applicazione. Un dominio può essere un dominio di sistema o un dominio personalizzato che hai registrato per la tua applicazione. Vedi [Gestione dei domini personalizzati](/docs/admin/orgs_spaces.html#managedomains).<br/>
-<p>**Nota**: se aggiungi un dominio personalizzato, devi configurare il server DNS per risolvere il tuo dominio personalizzato per puntare al dominio di sistema {{site.data.keyword.Bluemix_notm}}. In questo modo, quando {{site.data.keyword.Bluemix_notm}} riceve una richiesta per il tuo dominio personalizzato, può correttamente instradarla alla tua applicazione.</p></dd>
+<p>**Nota:** se aggiungi un dominio personalizzato, devi configurare il server DNS per far sì che il tuo dominio personalizzato punti al dominio di sistema {{site.data.keyword.Bluemix_notm}}. In questo modo, quando {{site.data.keyword.Bluemix_notm}} riceve una richiesta per il tuo dominio personalizzato, può correttamente instradarla alla tua applicazione.</p></dd>
 <dt>Quota</dt>
-<dd>Rappresenta i limiti di risorse per l'organizzazione, compreso il numero di servizi
-e la quantità di memoria che può essere assegnata per l'utilizzo da parte dell'organizzazione. Le quote vengono assegnate quando
-vengono create le organizzazioni. Applicazioni o servizi in uno spazio dell'organizzazione contribuiscono tutti
-all'utilizzo della quota. Con i piani Pagamento a consumo o Sottoscrizione, puoi regolare la tua quota per le applicazioni e i contenitori Cloud Foundry in base al variare delle esigenze della tua organizzazione. Vedi [Gestione della quota](/docs/admin/orgs_spaces.html#managequota).</dd>
+<dd>Rappresenta le risorse disponibili per un'organizzazione, incluso il numero di servizi e la quantità di memoria che può essere assegnata per l'utilizzo da parte dell'organizzazione. Le quote vengono assegnate quando
+vengono create le organizzazioni. Qualsiasi applicazione o servizio in uno spazio all'interno dell'organizzazione contribuisce all'utilizzo della quota. Con i piani Pagamento a consumo o Sottoscrizione, puoi regolare la tua quota per le applicazioni e i contenitori Cloud Foundry in base al variare delle esigenze della tua organizzazione. Vedi [Gestione della quota](/docs/admin/orgs_spaces.html#managequota). 
+<p>**Nota:** in un account Sottoscrizione, la quota corrisponde a un limite definito dall'utente che attiva le notifiche di spesa.</p></dd>
 </dl>
 
 In {{site.data.keyword.Bluemix_notm}}, puoi utilizzare le organizzazioni per abilitare la collaborazione tra i membri del team e per facilitare il raggruppamento
@@ -56,7 +55,8 @@ Quando crei
 un'organizzazione, il suo nome deve essere univoco in {{site.data.keyword.Bluemix_notm}}. Se il nome dell'organizzazione è già utilizzato da un altro utente di {{site.data.keyword.Bluemix_notm}} pubblico, dedicato o locale, devi specificare un nuovo nome. Dopo che hai creato l'organizzazione, ti verrà automaticamente assegnata
 l'autorizzazione *Gestore organizzazione*, che ti consente di modificare il nome dell'organizzazione, di aggiungere membri del team e di creare o eliminare spazi nell'organizzazione.
 
-Per eliminare un'organizzazione devi rivolgerti al [Supporto di {{site.data.keyword.Bluemix_notm}} ![icona link esterno](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} per eliminare un'organizzazione. Quando richiedi al team di supporto di eliminare un'organizzazione, vengono eliminati tutti gli spazi, i servizi e le applicazioni al suo interno.
+Puoi utilizzare il comando [`bx iam org-delete`](/docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_iam_org_delete) per eliminare le organizzazioni. Quando elimini un'organizzazione, tutti gli
+spazi e i servizi e tutte le applicazioni al suo interno vengono eliminati.  
 
 I seguenti [ruoli utente](/docs/admin/users_roles.html#userrolesinfo) possono essere assegnati ai membri del team in un'organizzazione:
 
@@ -100,7 +100,7 @@ uno spazio *test* come un ambiente di test e uno
 spazio *production* come un ambiente di produzione. Puoi quindi associare le tue applicazioni agli spazi. Per creare uno spazio, completa la seguente procedura:
 
 1. Fai clic su **Gestione** &gt; **Account** &gt; **Organizzazioni**.
-2. Identifica l'organizzazione a cui vuoi aggiungere uno spazio e seleziona **Visualizza dettagli**. 
+2. Identifica l'organizzazione a cui vuoi aggiungere uno spazio e seleziona **Visualizza dettagli**.
 4. Fai clic su **Aggiungi uno spazio**.
 5. Immetti il nome dello spazio.
 6. Fai clic su **Aggiungi**.
@@ -111,7 +111,7 @@ spazio *production* come un ambiente di produzione. Puoi quindi associare le tue
 Per rinominare la tua organizzazione, completa la seguente procedura:
 
 1. Fai clic su **Gestione** &gt; **Account** &gt; **Organizzazioni**.
-2. Identifica l'organizzazione che vuoi modificare e seleziona **Visualizza dettagli**. 
+2. Identifica l'organizzazione che vuoi modificare e seleziona **Visualizza dettagli**.
 3. Seleziona **Modifica organizzazione**.
 4. Seleziona **Modifica** per il titolo dell'organizzazione.
 5. Immetti il nome della nuova organizzazione.
@@ -120,14 +120,15 @@ Per rinominare la tua organizzazione, completa la seguente procedura:
 ## Eliminazione di un'organizzazione o di uno spazio esistenti
 {: #deleteorgs}
 
-In qualità di proprietario dell'account, puoi rivolgerti al [supporto di {{site.data.keyword.Bluemix_notm}} ![icona link esterno](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} per eliminare un'organizzazione.
+In qualità di proprietario dell'account, puoi eliminare un'organizzazione utilizzando la CLI {{site.data.keyword.Bluemix_notm}}. Usa il comando [`bx iam org-delete`](/docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_iam_org_delete) per eliminare le organizzazioni. Quando elimini un'organizzazione, tutti gli
+spazi e i servizi e tutte le applicazioni al suo interno vengono eliminati. 
 
 **Nota**: le operazioni di eliminazione sono irreversibili. Perdi tutte le applicazioni e tutti i servizi associati all'organizzazione.
 
 Puoi eliminare uno spazio dalla pagina **Gestisci organizzazioni**:
 
 1. Fai clic su **Gestione** &gt; **Account** &gt; **Organizzazioni**.
-2. Identifica l'organizzazione che vuoi modificare e seleziona **Visualizza dettagli**. 
+2. Identifica l'organizzazione che vuoi modificare e seleziona **Visualizza dettagli**.
 3. Identifica lo spazio che vuoi eliminare e seleziona **Modifica spazio**.
 4. Fai clic su **Modifica spazio**.
 
@@ -173,7 +174,7 @@ Per visualizzare la quota utilizzata e assegnata per un'organizzazione, completa
 
 **Nota:** i contenitori non sono disponibili nella regione {{site.data.keyword.Bluemix_notm}} Sydney. 
 
-Per ulteriori informazioni sui contenitori, vedi [Quota](/docs/containers/container_planning_org_ov.html#container_planning_quota) nella documentazione dei contenitori.
+Per ulteriori informazioni sui contenitori, vedi [Quota](/docs/containers/container_planning.html#container_planning_quota) nella documentazione dei contenitori.
 Per modificare la quota assegnata a un'organizzazione, devi aprire un ticket di supporto. Per ulteriori informazioni sull'apertura di un ticket di supporto, vedi [Richiesta di assistenza clienti](/docs/support/index.html#contacting-support). 
 
 ## Gestione dei domini
@@ -182,9 +183,9 @@ Per modificare la quota assegnata a un'organizzazione, devi aprire un ticket di 
 In qualità di proprietario dell'account o di gestore dell'organizzazione, puoi visualizzare il dominio di sistema e aggiungere domini personalizzati per le applicazioni create all'interno di un'organizzazione e dei relativi spazi. In qualità di gestore spazio, la scheda **Domini** per uno spazio è un elenco di sola lettura dei domini assegnati allo spazio.
 
 1. Fai clic su **Gestione** &gt; **Account** &gt; **Organizzazioni**.
-2. Identifica l'organizzazione per cui vuoi visualizzare o modificare i domini. 
+2. Identifica l'organizzazione per cui vuoi visualizzare o modificare i domini.
 3. Seleziona **Visualizza dettagli** per tale organizzazione.
 4. Fai clic su **Modifica organizzazione**.
 5. Fai clic su **DOMINI**.
 
-Se aggiungi un dominio personalizzato, devi configurare il server DNS per risolvere il tuo dominio personalizzato per puntare al dominio di sistema {{site.data.keyword.Bluemix_notm}}. In questo modo, quando {{site.data.keyword.Bluemix_notm}} riceve una richiesta per il tuo dominio personalizzato, può correttamente instradarla alla tua applicazione. Il dominio di sistema è sempre disponibile per uno spazio e a uno spazio è anche possibile assegnare dei domini personalizzati. Le applicazioni create in uno spazio possono utilizzare qualsiasi dominio elencato per tale spazio. Per ulteriori informazioni sulla creazione e l'utilizzo dei domini personalizzati, consulta [Utilizzo di un dominio personalizzato](/docs/manageapps/updapps.html#domain).
+Se aggiungi un dominio personalizzato, devi configurare il server DNS per far sì che il tuo dominio personalizzato punti al dominio di sistema {{site.data.keyword.Bluemix_notm}}. In questo modo, quando {{site.data.keyword.Bluemix_notm}} riceve una richiesta per il tuo dominio personalizzato, può correttamente instradarla alla tua applicazione. Il dominio di sistema è sempre disponibile per uno spazio e a uno spazio è anche possibile assegnare dei domini personalizzati. Le applicazioni create in uno spazio possono utilizzare qualsiasi dominio elencato per tale spazio. Per ulteriori informazioni sulla creazione e l'utilizzo dei domini personalizzati, consulta [Utilizzo di un dominio personalizzato](/docs/manageapps/updapps.html#domain).

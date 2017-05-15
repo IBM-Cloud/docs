@@ -15,19 +15,19 @@ lastupdated: "2016-06-20"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.Bluemix_notm}} CLI의 {{site.data.keyword.vpn_short}} 플러그인
+# {{site.data.keyword.Bluemix_notm}} CLI의 VPN 플러그인
 
 *버전:* 1.4.0
 
-명령행 인터페이스(CLI)를 사용하여 {{site.data.keyword.vpn_full}} 서비스를 구성하고 관리할 수 있습니다. {{site.data.keyword.vpn_short}} CLI 플러그인은 두 개의 버전으로 사용 가능합니다(Cloud Foundry CLI 플러그인으로 사용할 항목 및 {{site.data.keyword.Bluemix}} CLI 플러그인으로 사용할 다른 항목). 두 플러그인 버전 모두 동일한 기능을 제공합니다.
+명령행 인터페이스(CLI)를 사용하여 {{site.data.keyword.vpn_full}} 서비스를 구성하고 관리할 수 있습니다. VPN CLI 플러그인은 두 버전(Cloud Foundry CLI 플러그인에 사용할 버전과 {{site.data.keyword.Bluemix}} CLI 플러그인에 사용할 버전)으로 사용 가능합니다. 두 플러그인 버전 모두 동일한 기능을 제공합니다.
 {:shortdesc}
 
-{{site.data.keyword.vpn_short}} 플러그인은 Windows, MAC 및 Linux 운영 체제에 사용 가능합니다. 사용자에게 적용 가능한 항목을 사용해야 합니다.
+VPN 플러그인은 Windows, MAC 및 Linux 운영 체제에 사용 가능합니다. 사용자에게 적용 가능한 항목을 사용해야 합니다.
 
-뒤따르는 지시사항은 {{site.data.keyword.Bluemix_notm}} CLI 플러그인 작업에 대한 것입니다. Cloud Foundry(cf) CLI 플러그인으로 플러그인을 사용하려면 [cf CLI의 {{site.data.keyword.vpn_short}} CLI 플러그인](../vpn/index.html)을 참조하십시오.
+뒤따르는 지시사항은 {{site.data.keyword.Bluemix_notm}} CLI 플러그인 작업에 대한 것입니다. Cloud Foundry(cf) CLI 플러그인으로 플러그인을 사용하려면 [cf CLI의 VPN CLI 플러그인](../vpn/index.html)을 참조하십시오.
 
 
-뒤따르는 정보는 Bluemix CLI의 {{site.data.keyword.vpn_short}} 플러그인에서 지원되는 모든 명령을 나열하고 해당 이름, 옵션, 사용법, 전제조건, 설명 및 예제를 포함합니다. vpn 플러그인을 설치하는 방법에 대해 [Bluemix 명령행 인터페이스 확장](../../index.html#cli_bluemix_ext)을 참조하십시오.
+다음 정보는 Bluemix CLI의 VPN 플러그인에서 지원하는 모든 명령을 나열하며 해당 이름, 옵션, 사용, 전제조건, 설명 및 예제를 포함합니다. vpn 플러그인을 설치하는 방법에 대해 [Bluemix 명령행 인터페이스 확장](../../index.html#cli_bluemix_ext)을 참조하십시오.
 
 **참고:** *전제조건*에는 명령을 사용하기 전에 필요한 조치가 설명되어 있습니다. 전제조건에는 다음 조치 중 하나 이상이 포함될 수 있습니다.
 <dl>

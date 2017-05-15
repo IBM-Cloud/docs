@@ -311,7 +311,7 @@ une application au conteneur. L'application est liée au service cible et sert d
 conteneur sans utiliser d'application de pont, utilisez CCS_BIND_SRV. Cette liaison permet à Bluemix d'injecter les informations VCAP_SERVICES dans
 l'instance de conteneur en cours d'exécution. Pour répertorier plusieurs services Bluemix, incluez-les dans la même variable d'environnement. |
 | LOG_LOCATIONS=*&lt;chemin_fichier&gt;* | Ajoutez un fichier journal à surveiller dans le conteneur. Incluez la variable d'environnement `LOG_LOCATIONS` avec un chemin d'accès au fichier journal. |
-{: caption="Table 2. Commonly used environment variables" caption-side="top"}
+{: caption="Tableau 2. Variables d'environnement couramment utilisées" caption-side="top"}
 
  <dl>
    <dt>--env-file <i>FICHIER_VARIABLE_ENVIRONNEMENT</i> (facultatif)</dt>
@@ -1140,7 +1140,7 @@ une application au conteneur. L'application est liée au service cible et sert d
 conteneur sans utiliser d'application de pont, utilisez CCS_BIND_SRV. Cette liaison permet à Bluemix d'injecter les informations VCAP_SERVICES dans
 l'instance de conteneur en cours d'exécution. Pour répertorier plusieurs services Bluemix, incluez-les dans la même variable d'environnement. |
 | LOG_LOCATIONS=*&lt;chemin_fichier&gt;* | Ajoutez un fichier journal à surveiller dans le conteneur. Incluez la variable d'environnement `LOG_LOCATIONS` avec un chemin d'accès au fichier journal. |
-{: caption="Table 3. Commonly used environment variables" caption-side="top"}
+{: caption="Tableau 3. Variables d'environnement couramment utilisées" caption-side="top"}
 
 
    <dl>
@@ -1152,15 +1152,13 @@ l'instance de conteneur en cours d'exécution. Pour répertorier plusieurs servi
    <li>ro (facultatif) : La spécification de <i>ro</i> rend le volume accessible en lecture seule, au lieu de le laisser accessible par défaut en lecture/écriture.</li></ul>
    </dd>
    <dt>-n <i>NOM</i>|--name <i>NOM</i> (requis)</dt>
-   <dd>Attribue un nom au conteneur. <br> <strong>Astuce :</strong> le nom de conteneur doit commencer par une lettre. Il peut inclure des lettres majuscules, des
-lettres minuscules, des chiffres, des points, des traits de soulignement (_) ou des traits d'union (-).</dd>
+   <dd>Attribue un nom au conteneur. <br> <strong>Astuce :</strong> le nom de conteneur doit commencer par une lettre. Il peut inclure des lettres majuscules, des lettres minuscules, des chiffres, des points, des traits de soulignement (_) ou des traits d'union (-).</dd>
    <dt>--link <i>NOM</i>:<i>ALIAS</i> (facultatif)</dt>
    <dd>Chaque fois que vous désirez qu'un conteneur communique avec un autre en exécution, vous pouvez le désigner en utilisant un alias pour le nom d'hôte.</dd>
    <dt>-it (facultatif)</dt>
    <dd>Indique d'exécuter le conteneur en mode interactif. Une fois le conteneur créé, l'entrée standard continue d'être affichée. Entrez <i>exit</i> pour quitter.</dd>
    <dt><i>IMAGE</i> (requis)</dt>
-   <dd>Image à inclure dans le conteneur. Vous pouvez spécifier des commandes après l'image, mais n'indiquez pas d'options. Incluez toutes les options avant de spécifier une image. Incluez toutes les options avant de spécifier une image. <br><br>Si vous utilisez une image qui se trouve dans le référentiel {{site.data.keyword.Bluemix_notm}} privé de votre organisation, spécifiez l'image au format <i>registry.ng.bluemix.net/ESPACE_NOM/IMAGE</i>. <br><br>Si
-vous utilisez une image fournie par IBM Containers, spécifiez-la sous le format : <i>registry.ng.bluemix.net/IMAGE</i>. </dd>
+   <dd>Image à inclure dans le conteneur. Vous pouvez spécifier des commandes après l'image, mais n'indiquez pas d'options. Incluez toutes les options avant de spécifier une image. Incluez toutes les options avant de spécifier une image. <br><br>Si vous utilisez une image qui se trouve dans le référentiel {{site.data.keyword.Bluemix_notm}} privé de votre organisation, spécifiez l'image au format <i>registry.ng.bluemix.net/ESPACE_NOM/IMAGE</i>. <br><br>Si vous utilisez une image fournie par IBM Containers, spécifiez-la sous le format : <i>registry.ng.bluemix.net/IMAGE</i>. </dd>
    <dt><i>CMD</i> (facultatif)</dt>
    <dd>Commande et arguments transmis au groupe de conteneurs pour exécution. Cette commande doit être une commande à exécution longue. N'utilisez pas de commande à exécution courte, c'est-à-dire qui ne s'exécute pas très longtemps, comme <i>/bin/date</i>, car elle pourrait entraîner la panne du conteneur.</dd>
    </dl>

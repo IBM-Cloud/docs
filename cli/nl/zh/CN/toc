@@ -1,30 +1,53 @@
-[CLI 和开发工具](/docs/cli/index.html)
-    [下载](index.html)
-        [CF CLI 入门](https://github.com/cloudfoundry/cli#getting-started)
-        [Bluemix CLI 入门](./reference/bluemix_cli/index.html)
-    [CLI 参考](clireference.html)
-        [Bluemix](./reference/bluemix_cli/index.html#bluemix_cli)
-        [Cloud Foundry](./reference/cfcommands/index.html)
-    [Bluemix CLI 插件](bxplug-in.html)
-        [Active Deploy](../services/ActiveDeploy/cli.html?pos=2#ad-cli-bx)
-        [Auto-Scaling](./plugins/auto-scaling/index.html)
-        [Container Registry](./plugins/registry/index.html)
-        [Container Service（集群）](../containers/cs_cli_devtools.html)
-        [Container Service（单个组与可扩展组）](../containers/container_cli_cfic.html)
-        [开发者](../cloudnative/dev_cli.html)
-        [专用网络对等连接](./plugins/pnp/index.html)
-        [IBM SDK Generator](../cloudnative/sdk_cli.html)
-        [IBM VPN](./plugins/bx_vpn/index.html)
-    [Cloud Foundry CLI 插件](cliplug-in.html)
-        [Bluemix Admin](./plugins/bluemix_admin/index.html)
-        [开发方式](./plugins/dev_mode/index.html)
-        [IBM VPN](./plugins/vpn/index.html)
-    integrated_dev_tools.md
-        [API Connect 开发人员工具箱](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
-        [Bluemix Live Sync](../develop/bluemixlive.html)
-        [使用 IBM Eclipse Tools for Bluemix 部署应用程序](../manageapps/eclipsetools/eclipsetools.html)
-        [管理 Liberty 和 Node.js 应用程序](../manageapps/app_mng.html#app_management)
-    start_coding.md
-        [使用 Eclipse Tools 进行开发](../starters/deploy_eclipsetools.html)
-        [使用 CLI 部署应用程序](../starters/install_cli.html)
-        [上传应用程序](../starters/upload_app.html)
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="bluemix-cli" audience="platform" href="/docs/cli/index.html"}
+CLI 和开发工具
+
+	{: .navgroup id="learn"}
+	index.md
+	[CF CLI 入门](https://github.com/cloudfoundry/cli#getting-started)
+	reference/bluemix_cli/index.md
+	
+	{: .topicgroup}
+	相关链接
+	    [bx 工具](http://clis.ng.bluemix.net/ui/home.html)
+	{: .navgroup-end}
+	
+	{: .navgroup id="reference"}
+	reference/bluemix_cli/bx_cli.md
+	reference/cfcommands/index.md
+	reference/cloudcli/index.md
+	
+	{: .topicgroup}
+	Bluemix CLI 插件
+		[Active Deploy](../services/ActiveDeploy/cli.html?pos=2#ad-cli-bx)
+		plugins/auto-scaling/index.md
+		plugins/registry/index.md
+		[Container Service（集群）](../containers/cs_cli_devtools.html)
+		[Container Service （单个组与可扩展组）](../containers/container_cli_cfic.html)
+		[IBM Developer](../cloudnative/dev_cli.html)
+		plugins/pnp/index.md
+		[IBM SDK Generator](../cloudnative/sdk_cli.html)
+		plugins/softlayer/index.md
+		plugins/bx_vpn/index.md
+	
+	{: .topicgroup}
+	Cloud Foundry CLI plug-ins
+		plugins/bluemix_admin/index.md
+		plugins/dev_mode/index.md
+		plugins/vpn/index.md
+	
+	{: .topicgroup}
+	集成开发工具
+		[API Connect 开发者工具箱](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
+		[Bluemix Live Sync](../develop/bluemixlive.html)
+		[使用 IBM Eclipse Tools for Bluemix 部署应用程序](../manageapps/eclipsetools/eclipsetools.html)
+		[管理 Liberty 和 Node.js 应用程序](../manageapps/app_mng.html#app_management)
+	{: .navgroup-end}
+	
+	{: .navgroup id="howto"}
+	[使用 Eclipse Tools 进行开发](../starters/deploy_eclipsetools.html)
+	[使用 CLI 部署应用程序](../starters/install_cli.html)
+	[上传应用程序](../starters/upload_app.html)
+	{: .navgroup-end}

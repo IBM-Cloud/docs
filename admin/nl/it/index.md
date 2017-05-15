@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-22"
+lastupdated: "2017-04-13"
 
 ---
 
@@ -32,7 +32,7 @@ Se disponi dell'accesso come amministratore per {{site.data.keyword.Bluemix}} lo
 |Esaminare report e log | Fai clic su **AMMINISTRAZIONE &gt; REPORT E LOG** per visualizzare i report di sicurezza e i log di controllo relativi alla tua istanza. Vedi [Visualizzazione dei report](/docs/admin/index.html#oc_report). |
 |Visualizzare le informazioni sul sistema. | Fai clic su **AMMINISTRAZIONE &gt; INFORMAZIONI DI SISTEMA** per visualizzare le informazioni di sistema, quali aggiornamenti di manutenzione in sospeso, nome e versione della tua istanza, regione, URL API, URL CLI, dettagli di configurazione LDAP, associazioni di gruppi e utenti, statistiche e domini condivisi. Vedi [Visualizzazione delle informazioni sul sistema](/docs/admin/index.html#oc_system). |
 |Estendere le notifiche e impostare le sottoscrizioni notifica | Fai clic su **AMMINISTRAZIONE &gt; INFORMAZIONI DI SISTEMA &gt; *Numero* in sospeso**. Puoi utilizzare webhook da integrare con un servizio Web a scelta per impostare una sottoscrizione di notifica evento per un aggiornamento o incidente. Vedi [Notifiche e sottoscrizioni di notifica](/docs/admin/index.html#oc_eventsubscription). |
-{: caption="Table 1. Administrative tasks for managing your {{site.data.keyword.Bluemix_notm}} local or dedicated instance" caption-side="top"}
+{: caption="Tabella 1. Attività amministrative per la gestione della tua istanza Bluemix locale o dedicata" caption-side="top"}
 
 <!-- staging only for WoW start -->
 
@@ -59,7 +59,7 @@ Puoi visualizzare le notifiche riguardanti il tuo ambiente locale o dedicato, al
 | Incidenti critici | Vieni avvisato degli incidenti critici sulla pagina Stato. Fai clic su **Supporto** &gt; **Stato**. Puoi estendere la funzionalità di notifica impostando una sottoscrizione di notifica che invia un'e-mail a un destinatario di tua scelta. In alternativa, puoi impostare una sottoscrizione che utilizza dei webhook per integrare le notifiche provenienti dalla pagina Amministrazione con un servizio Web a scelta.  |  
 | Eventi di soglia | Puoi impostare una sottoscrizione di notifica che invia un'e-mail a un destinatario di tua scelta quando nel tuo ambiente vengono raggiunte le soglie per la quota dell'organizzazione, il disco fisico, la memoria fisica o la memoria riservata. In alternativa, puoi impostare una sottoscrizione che utilizza dei webhook per integrare le notifiche con un servizio Web di tua scelta.  |  
 | Stato di {{site.data.keyword.Bluemix_notm}} | In qualsiasi momento puoi visualizzare l'ultimo stato della piattaforma, dei servizi e della tua istanza {{site.data.keyword.Bluemix_notm}} nella pagina Stato. Fai clic su **Supporto** &gt; **Stato**.  |
-{: caption="Table 2. Event types and notifications methods" caption-side="top"}
+{: caption="Tabella 2. Tipi di evento e metodi di notifica" caption-side="top"}
 
 ### Impostazione di sottoscrizioni di notifica
 {: #seteventsub}
@@ -99,7 +99,7 @@ Per creare una sottoscrizione webhook o e-mail dalla pagina **Sottoscrizioni di 
 | Corpo | Immetti il testo del corpo del messaggio da inviare nell'e-mail. Puoi utilizzare i valori payload IBM per inserire nella notifica e-mail informazioni pertinenti. Vedi la tabella [Valori della sezione di payload di manutenzione e incidenti](index.html#payload) per identificare i valori utilizzabili. Utilizza tag HTML di base per strutturare l'e-mail. Questo campo è obbligatorio. |
 | A: | Immetti uno o più indirizzi e-mail tramite elenco separato da virgole per indicare i destinatari della notifica e-mail. Espandi le opzioni "cc" o "bcc" per inviare copia dell'e-mail ad altri destinatari. Questo campo è obbligatorio. |
 | Descrizione | Aggiungi una descrizione univoca della sottoscrizione e stai creando. |
-{: caption="Table 3. Fields for email notification subscriptions about thresholds" caption-side="top"}
+{: caption="Tabella 3. Campi per sottoscrizioni di notifica e-mail per le soglie" caption-side="top"}
 
 
 {: #emailnottrhesh}
@@ -117,7 +117,7 @@ Per creare una sottoscrizione webhook o e-mail dalla pagina **Sottoscrizioni di 
 | Oggetto | Compila la riga oggetto dell'e-mail. Questo campo è obbligatorio.  |
 | Corpo del messaggio | Immetti il testo del corpo del messaggio da inviare nell'e-mail. Puoi utilizzare i valori payload IBM per inserire nella notifica e-mail informazioni pertinenti. Vedi la tabella [Valori della sezione di payload di soglia](index.html#threshpayload) per identificare i valori utilizzabili. Utilizza tag HTML di base per strutturare l'e-mail. Questo campo è obbligatorio. |
 | A: | Immetti uno o più indirizzi e-mail tramite elenco separato da virgole per indicare i destinatari della notifica e-mail. Espandi le opzioni "cc" o "bcc" per inviare copia dell'e-mail ad altri destinatari. Questo campo è obbligatorio. |
-{: caption="Table 4. Fields for email notification subscriptions about maintenance updates or incidents" caption-side="top"}
+{: caption="Tabella 4. Campi per sottoscrizioni di notifica e-mail per gli aggiornamenti di manutenzione o gli incidenti" caption-side="top"}
 
 I dati della soglia vengono raccolti una volta ogni 6 ore. Una notifica viene inviata solo una volta quando il valore supera il valore soglia impostato. Se hai scelto la proprietà crescente, non viene inviata una nuova notifica a meno che il valore non scenda sotto la soglia e quindi la oltrepassi nuovamente. Allo stesso modo, se hai scelto la proprietà decrescente, ricevi una notifica solo se il valore supera la soglia impostata e quindi scende di nuovo sotto la soglia. 
 
@@ -147,7 +147,7 @@ Una notifica per la soglia della Quota organizzazione include solo le organizzaz
 | URL | Immetti l'URL per la connessione al tuo servizio Web. |
 | Payload | Se hai selezionato il metodo POST o PUT, immetti le proprietà specifiche del servizio Web che stai utilizzando insieme i valori di payload utilizzati per la notifica IBM. Vedi la tabella [Valori della sezione di payload di manutenzione e incidenti](index.html#payload) per identificare i valori utilizzabili. Se non immetti informazioni in questa sezione, ricevi una notifica che non contiene informazioni aggiuntive. |
 | Combina notifiche | Seleziona l'opzione per combinare le notifiche di incidente di tutte le regioni in una singola notifica. Questa opzione è disponibile solo per gli incidenti. |
-{: caption="Table 5. Form fields for a webhook notification subscription about maintenance or incidents" caption-side="top"}
+{: caption="Tabella 5. Campi del modulo per una sottoscrizione di notifica webhook per la manutenzione o gli incidenti" caption-side="top"}
 
 
 {: #webhooknotthresh}
@@ -167,7 +167,7 @@ Una notifica per la soglia della Quota organizzazione include solo le organizzaz
 | Password | Se hai scelto l'autorizzazione di base, immetti la tua password per il servizio Web. |
 | Metodo | Seleziona **GET**, **POST** o **PUT**. |
 | URL | Immetti l'URL per la connessione al tuo servizio Web. |
-{: caption="Table 6. Form fields for a webhook notification subscription about thresholds" caption-side="top"}
+{: caption="Tabella 6. Campi del modulo per una sottoscrizione di notifica webhook per le soglie" caption-side="top"}
 
 I dati della soglia vengono raccolti una volta ogni 6 ore. Una notifica viene inviata solo una volta quando il valore supera il valore soglia impostato. Non viene inviata una nuova notifica a meno che il valore non vada al di sotto della soglia (se hai scelto la proprietà crescente) e quindi la risuperi nuovamente. Allo stesso modo, se hai scelto la proprietà decrescente, ricevi una nuova una notifica se il valore supera la soglia impostata e quindi scende di nuovo sotto la soglia. 
 
@@ -190,7 +190,7 @@ Una notifica per la soglia della Quota organizzazione include solo le organizzaz
 | {{region}} | Regione interessata | Aggiornamento di manutenzione e incidente |
 | {{status}} | Stato dell'aggiornamento | Aggiornamento di manutenzione |
 | {{type}} | Aggiornamento o incidente | Aggiornamento di manutenzione e incidente |
-{: caption="Table 7. Maintenance and incident payload section values" caption-side="top"}
+{: caption="Tabella 7. Valori della sezione di payload di manutenzione e incidenti" caption-side="top"}
 
 
 {: #threshpayload}
@@ -202,7 +202,7 @@ Una notifica per la soglia della Quota organizzazione include solo le organizzaz
 | {{content.physical_memory}} | Soglia memoria fisica | Soglia |  
 | {{content.reserved_disk}} | Soglia disco riservato | Soglia |
 | {{content.reserved_memory}} | Soglia memoria riservata | Soglia |
-{: caption="Table 8. Threshold payload section values" caption-side="top"}
+{: caption="Tabella 8. Valori della sezione di payload della soglia" caption-side="top"}
 
 Quando salvi la tua sottoscrizione di notifica, ricevi notifiche attraverso il metodo che hai impostato. Le notifiche vengono ancora pubblicate nelle seguenti posizioni:  
  * Nella pagina Stato per gli incidenti
@@ -466,7 +466,7 @@ La seguente tabella mostra l'elenco dei report di sicurezza generati per {{site.
 | Antivirus | Report di scansione antivirus | Software antivirus in uso. |
 | Gestione delle correzioni software | Report di applicazione patch | Correzioni software applicate. |
 | Gestione degli incidenti di sicurezza | Report di correzione incidenti di sicurezza | Prove di incidenti di sicurezza per consentirne la gestione. |
-{: caption="Table 9. Security report list" caption-side="top"}
+{: caption="Tabella 9. Elenco dei report di sicurezza" caption-side="top"}
 
 ## Visualizzazione dello stato
 {: #oc_status}
@@ -636,7 +636,7 @@ Le seguenti tabelle possono aiutarti a compilare il file JSON.
 |ID  | L'ID del servizio. Questo ID deve essere univoco in {{site.data.keyword.Bluemix_notm}} e deve essere un GUID (Globally Unique Identifier). Dopo aver registrato il servizio con {{site.data.keyword.Bluemix_notm}}, non potrai più modificare l'ID. |
 |metadata | I metadati del piano di servizio visualizzati nel catalogo {{site.data.keyword.Bluemix_notm}} e nel listino prezzi. Il campo dei metadati è facoltativo. Puoi specificare più campi per i metadati. Per ulteriori informazioni, vedi la seguente tabella per i [campi Metadati](index.html#metadatafields). |
 |plans | Un array di definizioni del piano di servizio. Per ulteriori informazioni, vedi la seguente tabella per i [campi Piano](index.html#planfields). |
-{: caption="Table 10. JSON fields" caption-side="top"}
+{: caption="Tabella 10. Campi JSON" caption-side="top"}
 
 
 {: #metadatafields}
@@ -665,7 +665,7 @@ Le seguenti tabelle possono aiutarti a compilare il file JSON.
 |sdkDownloadUrl (facoltativo) | L'URL della pagina Web che si apre quando fai clic sul pulsante Scarica SDK. Il pulsante Scarica SDK si trova nel tile del servizio nella pagina di panoramica dell'applicazione nel Dashboard. La pagina Web si apre in una scheda del browser. |
 |serviceMonitorApi    | L'URL di un'API che restituisce i dati JSON, come mostrato nel seguente esempio, che segnala l'integrità del servizio. Devi avere serviceMonitorApi o serviceMonitorApp nei metadati del servizio. Consulta il seguente codice come esempio. |
 |serviceMonitorApp    | L'URL a un'applicazione che può essere distribuita in {{site.data.keyword.Bluemix_notm}} ed essere associata a un servizio per fornire l'output specifico dello stato del servizio. L'applicazione deve restituire il formato dei dati JSON uguale al serviceMonitorApi. Devi avere serviceMonitorApi o serviceMonitorApp nei metadati del servizio. Consulta il seguente codice come esempio. |
-{: caption="Table 11. Metadata fields" caption-side="top"}
+{: caption="Tabella 11. Campi dei metadati" caption-side="top"}
 
 
 ```
@@ -706,7 +706,7 @@ Il seguente esempio mostra come la risposta JSON di GET /v2/catalog è associata
 |free      | Un valore booleano che indica se il piano di servizio è gratuito. Il valore predefinito è true. |
 |ID       | L'ID del piano di servizio. L'ID deve essere univoco e deve essere un GUID.  |
 |metadata (facoltativo)    | I metadati del piano di servizio visualizzati nel catalogo {{site.data.keyword.Bluemix_notm}} e nel listino prezzi. Il campo dei metadati è facoltativo. Nel campo metadata puoi specificare i seguenti campi: displayName, type (subscription, reservable, planDetails), bullets, costs (unitId, unit, partNumber) e paidOnly. Per ulteriori informazioni, vedi la seguente tabella per i [campi Metadati del piano](index.html#planmetadata). |
-{: caption="Table 12. Plan fields" caption-side="top"}
+{: caption="Tabella 12. Campi del piano" caption-side="top"}
 
 
 {: #planmetadata}
@@ -718,7 +718,7 @@ Il seguente esempio mostra come la risposta JSON di GET /v2/catalog è associata
 |bullets                 | Una descrizione delle risorse che possono essere utilizzate con il piano. La descrizione viene visualizzata nella colonna **Funzioni** nella pagina dei dettagli del servizio del catalogo e nel listino prezzi. |
 |costs                   | Informazioni sui costi del servizio che vengono visualizzate nella colonna Prezzo nella pagina dei dettagli del servizio del catalogo e nel listino prezzi. Ogni voce di array contiene i seguenti campi: unitId (l'ID dell'unità. Utilizza la forma plurale e scrivi in maiuscolo tutte le lettere. Per i piani gratuiti, questo campo è facoltativo), unit (la metrica utilizzata per calcolare gli addebiti del servizio. Il valore di questo campo è utilizzato nell'interfaccia utente {{site.data.keyword.Bluemix_notm}} per rappresentare la metrica di addebito)e partNumber (l'identificativo `part_number` utilizzato dal sistema di fatturazione. Per i piani gratuiti, questo campo è facoltativo).   |
 |paidOnly (facoltativo)     | Un valore booleano che indica se questo piano di servizio è disponibile solo per gli account a pagamento {{site.data.keyword.Bluemix_notm}}. Il valore **true** significa che il piano di servizio è destinato solo agli account a pagamento e non può essere aggiunto agli account di prova. Il valore **false** significa che il piano di servizio può essere aggiunto sia agli account a pagamento che di prova. Il valore predefinito è **false**.	  |
-{: caption="Table 13. Plan metadata fields" caption-side="top"}
+{: caption="Tabella 13. Campi dei metadati del piano" caption-side="top"}
 
 Il seguente esempio mostra come la risposta JSON di GET /v2/catalog è associata alla pagina dei dettagli del servizio nel catalogo {{site.data.keyword.Bluemix_notm}}. In particolare, il modo in cui i campi dei metadati del piano descritti nella tabella precedente vengono associati all'interfaccia utente:
 
@@ -854,7 +854,7 @@ dell'organizzazione, riceverai un messaggio.</p></li>
 <dd>Il numero massimo di indirizzi IP pubblici che puoi assegnare tra tutti gli spazi di un'organizzazione.</dd>
 </dl>
 <strong>Nota</strong>: se non disponi ancora di contenitori nel tuo ambiente o se non li hai ancora configurati, ricevi un messaggio di errore.
-<p>Per ulteriori informazioni sui contenitori, consulta [Informazioni su IBM Containers](/docs/containers/container_ov.html). Per ulteriori informazioni sulle quote del contenitore, consulta [Quota e account Bluemix](/docs/containers/container_planning_org_ov.html#container_planning_quota).</p>
+<p>Per ulteriori informazioni sui contenitori, consulta [Informazioni su IBM Containers](/docs/containers/container_ov.html). Per ulteriori informazioni sulle quote del contenitore, consulta [Quota e account Bluemix](/docs/containers/container_planning.html#container_planning_quota).</p>
 <strong>Nota:</strong> i contenitori non sono disponibili nella regione {{site.data.keyword.Bluemix_notm}} Sydney.</li>
 </ul>
 <li>Per salvare le eventuali modifiche apportate nella pagina Gestisci organizzazione, fai clic su <strong>SALVA</strong>.</li>
@@ -979,7 +979,7 @@ non dispongono di autorizzazioni.
 | Catalogo | Agli utenti con autorizzazione **Catalogo** può essere assegnato l'accesso in **Lettura** o in **Scrittura** (modifica) per i servizi disponibili nell'istanza locale o dedicata. L'accesso in lettura consente all'utente di accedere al tile di gestione del catalogo per visualizzare i servizi disponibili. L'accesso in scrittura consente all'utente di accedere al tile [Gestione catalogo](#oc_catalog) per visualizzare i servizi, modificare la visibilità dei servizi, registrare i servizi personalizzati e controllare l'elenco di priorità del pacchetto di build. |  
 | Report | Agli utenti con autorizzazione **Report** può essere assegnato l'accesso in **Lettura** o in **Scrittura** (modifica) per i report di sicurezza. L'accesso in lettura consente all'utente di accedere al tile Report e log per scaricare i report. L'accesso in scrittura consente agli utenti di visualizzare il tile [Report e log](#oc_report) così come di utilizzare la CLI per caricare nuovi report e creare nuove categorie per l'accesso degli utenti. |
 | Utenti | Agli utenti con autorizzazione **Utenti** può essere assegnato l'accesso in  **Lettura ** (visualizzazione) per l'elenco di utenti o in **Scrittura** (aggiunta o rimozione) per gli utenti. Questa autorizzazione non ti consente di impostare le autorizzazioni per gli altri utenti. L'accesso in scrittura consente all'utente di aggiungere nuovi utenti all'ambiente, eliminare utenti dall'ambiente e aggiungere utenti esistenti all'organizzazione che già esistono nell'ambiente. In aggiunta, l'accesso in **Scrittura** consente agli utenti di aggiungere nuove organizzazioni, eliminare le organizzazioni e modificare gli utenti nelle organizzazioni. |
-{: caption="Table 14. Permissions" caption-side="top"}
+{: caption="Tabella 14. Autorizzazioni" caption-side="top"}
 
 ## Utilizzo delle API REST 
 {: #auth_adminapi}
@@ -1886,7 +1886,7 @@ POST /codi/v1/serviceBrokers
 | auth_password | Password utilizzata per connettersi al broker dei servizi. |
 | broker_url | URL utilizzato per connettersi al broker dei servizi. |
 | owningOrganization | Organizzazione iniziale per cui aggiungere il servizio nell'elenco elementi consentiti. |
-{: caption="Table 15. Fields" caption-side="top"}
+{: caption="Tabella 15. Campi" caption-side="top"}
 
 #### Corpo
 {: #registerbody}
@@ -1961,7 +1961,7 @@ Utilizza i seguenti esempi di API e codice per aggiornare un servizio.
 | auth_password | Password utilizzata per connettersi al broker dei servizi. |
 | broker_url | URL utilizzato per connettersi al broker dei servizi. |
 | owningOrganization | Organizzazione iniziale per cui aggiungere il servizio nell'elenco elementi consentiti. |
-{: caption="Table 16. Requests" caption-side="top"}
+{: caption="Tabella 16. Richieste" caption-side="top"}
 
 #### Corpo
 {: #updatebody}
@@ -2023,7 +2023,7 @@ Utilizza i seguenti esempi di API e codice per eliminare un servizio.
 | **Nome** | **Descrizione** |
 |-----------------|-------------------|
 | name | Nome del broker dei servizi. Questo nome non può essere modificato dal nome con cui è stato creato il servizio. |
-{: caption="Table 17. Parameter" caption-side="top"}
+{: caption="Tabella 17. Parametro" caption-side="top"}
 
 ### Rotta
 
@@ -2056,12 +2056,11 @@ Content-Type: application/json
 ```
 {: screen}
 
-## Gestione degli utenti con la CLI cf
+### Gestione degli utenti con la CLI cf
 {: #usingadmincli}
 
 Puoi gestire gli utenti per il tuo ambiente {{site.data.keyword.Bluemix_notm}}
-utilizzando l'interfaccia riga di comando Cloud Foundry insieme al plug-in {{site.data.keyword.Bluemix_notm}} Admin CLI. Ad
-esempio, puoi aggiungere utenti da un registro LDAP.
+utilizzando l'interfaccia riga di comando Cloud Foundry insieme al plug-in {{site.data.keyword.Bluemix_notm}} Admin CLI. Devi scaricare questo plug-in per la tua CLI Cloud Foundry.
 
 Prima di iniziare, installa l'interfaccia riga di comando cf. Il plug-in {{site.data.keyword.Bluemix_notm}} Admin
 CLI richiede cf versione 6.11.2 o successive. [Scarica Cloud Foundry command line interface ![icona link esterno](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}.
@@ -2070,7 +2069,7 @@ CLI richiede cf versione 6.11.2 o successive. [Scarica Cloud Foundry command lin
 è supportata da Cygwin. Utilizza l'interfaccia riga di comando Cloud Foundry
 in una finestra riga di comando diversa da quella di Cygwin.
 
-### Aggiunta del plug-in {{site.data.keyword.Bluemix_notm}} Admin
+#### Aggiunta del plug-in {{site.data.keyword.Bluemix_notm}} Admin
 CLI
 
 Dopo aver installato l'interfaccia riga di comandi cf, puoi
@@ -2099,11 +2098,18 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 </li>
 </ol>
 
-Per visualizzare un elenco di comandi, immetti il seguente
+Per visualizzare un elenco di sottocomandi disponibili dai plug-in installati, immetti il seguente
 comando:
 
 ```
 cf plugins
+```
+{: codeblock}
+
+Per visualizzare un elenco dei gruppi di comandi disponibili per il plug-in {{site.data.keyword.Bluemix_notm}} Admin, immetti il seguente comando:
+
+```
+cf ba
 ```
 {: codeblock}
 

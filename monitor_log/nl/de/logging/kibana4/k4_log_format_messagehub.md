@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-08"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -30,11 +30,11 @@ Sie können Kibana so konfigurieren, dass für jeden Protokolleintrag die folgen
 | \_type | Der Typ von Protokoll. Beispiel: *syslog*. |
 | loglevel | Die Priorität des protokollierten Ereignisses. Beispiel: **Info**. |
 | module | Dieses Feld ist auf den Wert **MessageHub** gesetzt. |
-
+{: caption="Tabelle 1. Felder für Message Hub-Ereignisse" caption-side="top"}
 
 Beispiel für einen Protokolleintrag:
 
-``` 	
+```
 March 8th 2017, 17:15:16.454	
 
 message:
@@ -49,11 +49,10 @@ module:
     MessageHub
 ALCH_TENANT_ID:
     3d8d2eae-f3f0-44f6-9717-126113a00b51
-_id:
+&#95;id:
     AVqu6vJl1zcfr8KYMI95
-_type:
+&#95;type:
     logs
-_index:
+&#95;index:
     logstash-2017.03.08
-
 ```

@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-01"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -25,17 +25,18 @@ lastupdated: "2017-03-01"
 
     在 Kibana 中，您可以在特定 Docker 容器度量值的環境定義下，啟動至該特定容器的日誌。 
     
-    如需相關資訊，請參閱[從 {{site.data.keyword.Bluemix_notm}} 儀表板進入 Grafana 儀表板](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_bluemix)。
+    如需相關資訊，請參閱 [從 {{site.data.keyword.Bluemix_notm}} 儀表板導覽至 Grafana 儀表板](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_bluemix)。
 
 * 從直接瀏覽器鏈結
 
     您可以啟動 Grafana 以便您看到的資料能從所提供的 {{site.data.keyword.Bluemix_notm}} 空間內的服務聚集日誌。
     
-    如需相關資訊，請參閱[從 Web 瀏覽器進入 Kibana 儀表板](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_browser)。
+    如需相關資訊，請參閱[從 Web 瀏覽器導覽至 Kibana 儀表板](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_browser)。
     
+如需 Grafana 的相關資訊，請參閱 [Grafana User Guide ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](http://docs.grafana.org/guides/getting_started/){: new_window}。
 
 
-##  從 Bluemix 儀表板進入 Grafana 儀表板
+##  從 Bluemix 儀表板導覽至 Grafana 儀表板
 {: #launch_grafana_from_bluemix}
 
 用來過濾 Grafana 顯示資料的查詢，會從您啟動 Kibana 的位置擷取 {{site.data.keyword.Bluemix_notm}} 或容器的資料。 
@@ -48,10 +49,8 @@ lastupdated: "2017-03-01"
     
 3. 按一下**進階視圖**。即會開啟 **Grafana** 儀表板。
 
-如需 Grafana 的相關資訊，請參閱 [Grafana User Guide ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](http://docs.grafana.org/){: new_window}。
 
-
-##  從 Web 瀏覽器進入 Grafana 儀表板
+##  從 Web 瀏覽器導覽至 Grafana 儀表板
 {: #launch_grafana_from_browser}
 
 用來過濾 Grafana 顯示資料的查詢，會擷取 {{site.data.keyword.Bluemix_notm}} 組織中某個空間的資料。Grafana 顯示的度量值資訊，包括部署在您登入之 {{site.data.keyword.Bluemix_notm}} 組織的空間內的所有資源記錄。
@@ -62,4 +61,4 @@ lastupdated: "2017-03-01"
 
 2. 選取 **Grafana**。
      
-如需 Grafana 的相關資訊，請參閱 [Grafana User Guide ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](http://docs.grafana.org/){: new_window}。
+

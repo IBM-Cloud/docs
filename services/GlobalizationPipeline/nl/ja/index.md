@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-09-09"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 # {{site.data.keyword.GlobalizationPipeline_short}}概説
 {: #globalizationpipeline}
-
-*最終更新日: 2016 年 9 月 9 日*
-{: .last-updated}
 
 {{site.data.keyword.GlobalizationPipeline_full}}は、Web またはモバイル UI を素早く翻訳できるように機械翻訳機能や編集機能を提供するサービスです。備えられているダッシュボード、RESTful API、アプリのデリバリー・パイプラインとの統合機能を利用して、アプリのビルドやデプロイをやり直すことなく世界中のお客様にリリースすることができます。
 {:shortdesc}

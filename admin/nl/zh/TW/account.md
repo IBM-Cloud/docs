@@ -33,7 +33,7 @@ lastupdated: "2017-01-09"
 |現有 IBM ID | 如果您已經有 IBM ID，請使用用於其他 IBM 產品及服務的現有認證來註冊 {{site.data.keyword.Bluemix_notm}}。您需要在註冊時輸入電話號碼。 |
 |新的 IBM ID | 如果您還沒有 IBM ID，則可以選擇建立 IBM ID。IBM ID 可讓您將一個登入使用者名稱用於所有使用的 IBM 產品及服務（包括 {{site.data.keyword.Bluemix_notm}}）。您需要輸入個人資訊，包括新認證的名字和姓氏、電話號碼及密碼。使用其他 IBM 產品及服務時，您可以使用此 IBM ID 進行登入。  |
 |聯合 ID | 如果您的公司要求向 IBM 登錄公司網域中的使用者認證，您可以使用已用於公司登入的認證來註冊 {{site.data.keyword.Bluemix_notm}}。您需要在註冊時輸入電話號碼。 |
-{: caption="表 1. 註冊方法" caption-side="top"}
+{:caption="表 1. 註冊方法" caption-side="top"}
 
 ## 設定通知
 {: #notifications}

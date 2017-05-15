@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-21"
+lastupdated: "2017-04-25"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -22,7 +21,7 @@ VM이 유용한 작업을 수행하는지 여부에 관계없이 VM 사용률에
 
 이 프로그래밍 모델은 마이크로서비스, 모바일, IoT 및 기타 많은 앱에 적합합니다. 즉, 클러스터, 로드 밸런서, http 플러그인 등을 수동으로 구성하지 않고도 내재된 Auto-Scaling 및 로드 밸런싱을 바로 사용할 수 있습니다. {{site.data.keyword.openwhisk}}에서 실행하는 경우 IBM에서 모든 하드웨어, 네트워크 및 소프트웨어를 유지보수하므로 관리가 전혀 필요하지 않습니다. 실행할 코드를 제공하고 이 코드를 {{site.data.keyword.openwhisk}}에 전달하기만 하면 됩니다. 나머지는 그냥 이루어집니다. 서버리스(serverless) 프로그래밍 모델에 대한 소개는 [Martin Fowler의 블로그](https://martinfowler.com/articles/serverless.html)에서 볼 수 있습니다.
 
-또한 [Apache OpenWHisk 소스 코드](https://github.com/openwhisk/openwhisk)를 가져와 시스템을 실행할 수도 있습니다.
+또한 [Apache OpenWhisk 소스 코드](https://github.com/openwhisk/openwhisk)를 가져와 시스템을 직접 실행할 수 있습니다.
 
 {{site.data.keyword.openwhisk_short}} 작동 방법에 대한 세부사항은 [{{site.data.keyword.openwhisk_short}} 정보](./openwhisk_about.html)를 참조하십시오.
 
@@ -32,14 +31,14 @@ VM이 유용한 작업을 수행하는지 여부에 관계없이 VM 사용률에
 ## 브라우저에서 개발
 {: #openwhisk_start_editor}
 
-[브라우저](https://console.{DomainName}/openwhisk/editor){: new_window}에서 {{site.data.keyword.openwhisk_short}}를 시도하여 조치를 작성하고, 트리거를 사용해 조치를 자동화하며, 퍼블릭 패키지를 탐색하십시오.
-OpenWhisk 사용자 인터페이스 둘러보기를 보려면 [자세히 보기](https://console.{DomainName}/openwhisk/learn){: new_window} 페이지를 참조하십시오.
+[브라우저](https://console.{DomainName}/openwhisk/editor)에서 {{site.data.keyword.openwhisk_short}}를 시도하여 조치를 작성하고, 트리거를 사용해 조치를 자동화하며, 퍼블릭 패키지를 탐색하십시오.
+OpenWhisk 사용자 인터페이스 둘러보기를 보려면 [자세히 보기](https://console.{DomainName}/openwhisk/learn) 페이지를 참조하십시오.
 
 ## CLI를 사용하여 개발
 {: #openwhisk_start_configure_cli}
 
 {{site.data.keyword.openwhisk_short}} 명령행 인터페이스(CLI)를 사용하여 네임스페이스 및 권한 키를 설정할 수 있습니다.
-[CLI 구성](https://new-console.{DomainName}/openwhisk/cli){: new_window}으로 이동하고 지시사항에 따라 이를 설치하십시오. 
+[CLI 구성](https://console.{DomainName}/openwhisk/cli)으로 이동하고 지시사항에 따라 이를 설치하십시오. 
 
 ## 개요
 {: #openwhisk_start_overview}
@@ -127,10 +126,10 @@ function main(params) {
 ## API 참조
 {: #openwhisk_start_api notoc}
 * [REST API 문서](./openwhisk_reference.html#openwhisk_ref_restapi)
-* [REST API](https://new-console.{DomainName}/apidocs/98){:new_window}
+* [REST API](https://console.{DomainName}/apidocs/98)
 
 ## 관련 링크
 {: #general notoc}
-* [검색: {{site.data.keyword.openwhisk_short}}](http://www.ibm.com/cloud-computing/bluemix/openwhisk/){:new_window}
-* [IBM developerWorks의 {{site.data.keyword.openwhisk_short}}](https://developer.ibm.com/openwhisk/){:new_window}
-* [Apache {{site.data.keyword.openwhisk_short}} 프로젝트 웹 사이트](http://openwhisk.org){:new_window}
+* [검색: {{site.data.keyword.openwhisk_short}}](http://www.ibm.com/cloud-computing/bluemix/openwhisk/)
+* [IBM developerWorks의 {{site.data.keyword.openwhisk_short}}](https://developer.ibm.com/openwhisk/)
+* [Apache {{site.data.keyword.openwhisk_short}} 프로젝트 웹 사이트](http://openwhisk.org)

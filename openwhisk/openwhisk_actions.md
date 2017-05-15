@@ -834,7 +834,6 @@ For the instructions that follow, assume that the Docker user ID is `janesmith` 
   ```
   wsk sdk install docker
   ```
-  ```
   {: pre}
   ```
   The Docker skeleton is now installed at the current directory.

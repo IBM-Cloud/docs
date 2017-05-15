@@ -2,24 +2,23 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+lastupdated: "2017-04-25"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
 
-# {{site.data.keyword.openwhisk_short}} CLI
+# {{site.data.keyword.openwhisk_short}}CLI
 
 {{site.data.keyword.openwhisk_short}} offre una potente interfaccia riga di comando che consente la gestione completa di tutti gli aspetti del sistema.
 
 ## Configurazione della CLI {{site.data.keyword.openwhisk_short}} 
 
 Puoi utilizzare l'interfaccia di riga comando (CLI) {{site.data.keyword.openwhisk_short}} per configurare il tuo spazio dei nomi e la tua chiave di autorizzazione.
-Passa a [Configura CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window} e segui le istruzioni per installarla.
+Passa a [Configura CLI](https://console.{DomainName}/openwhisk/cli) e segui le istruzioni per installarla.
 
 Per utilizzare la CLI, è necessario configurare due proprietà obbligatorie:
 

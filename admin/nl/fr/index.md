@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-22"
+lastupdated: "2017-04-13"
 
 ---
 
@@ -32,7 +32,7 @@ Si vous disposez d'un accès administrateur pour l'environnement {{site.data.key
 |Consulter les rapports et les journaux | Cliquez sur **ADMINISTRATION &gt; RAPPORTS ET JOURNAUX** afin d'afficher des rapports de sécurité et des journaux d'audit pour votre instance. Voir [Affichage des rapports](/docs/admin/index.html#oc_report). |
 |Afficher les informations système | Cliquez sur **ADMINISTRATION &gt; INFORMATIONS SYSTEME** afin d'afficher des informations système, telles que les mises à jour de maintenance en attente, le nom et la version de votre instance, la région, l'adresse URL de l'API, l'adresse URL de l'interface de ligne de commande, les détails de la configuration LDAP, les mappages des groupes et des utilisateurs, des statistiques et les domaines partagés. Voir [Affichage des informations système](/docs/admin/index.html#oc_system). |
 |Etendre des notifications et configurer des abonnements à des notifications | Cliquez sur **ADMINISTRATION &gt; INFORMATIONS SYSTEME &gt; *Nombre* mises à jour en attente**. Vous pouvez utiliser des webhooks pour l'intégration à un service Web de votre choix afin de configurer un abonnement aux notifications d'événement pour une mise à jour ou un incident. Voir [Notifications et abonnements à des notifications](/docs/admin/index.html#oc_eventsubscription). |
-{: caption="Table 1. Administrative tasks for managing your {{site.data.keyword.Bluemix_notm}} - instance locale ou dédiée" caption-side="top"}
+{: caption="Tableau 1. Tâches d'administration pour la gestion de votre instance Bluemix locale ou dédiée" caption-side="top"}
 
 <!-- staging only for WoW start -->
 
@@ -59,7 +59,7 @@ Vous pouvez afficher les notifications pour votre environnement local ou dédié
 | Incidents critiques | Vous êtes prévenu en cas d'incident critique dans la page Statut. Cliquez sur **Support** &gt; **Statut**. Vous pouvez étendre la capacité de notification en configurant un abonnement aux notifications qui envoie un courrier électronique au destinataire de votre choix. Vous pouvez également configurer un abonnement utilisant des webhooks pour intégrer les notifications de la page Administration au service Web de votre choix.  |  
 | Evénements de seuil | Vous pouvez configurer un abonnement de notification qui envoie un courrier électronique au destinataire de votre choix lorsque les seuils pour le quota d'organisation, le disque physique, la mémoire physique, le disque réservé ou la mémoire réservée sont atteints dans votre environnement. Vous pouvez également configurer un abonnement utilisant des webhooks pour intégrer les notifications au service Web de votre choix.  |  
 | Statut {{site.data.keyword.Bluemix_notm}} | Vous pouvez toujours examiner le statut le plus récent de la plateforme, des services et de votre instance {{site.data.keyword.Bluemix_notm}} sur la page Statut. Cliquez sur **Support** &gt; **Statut**.  |
-{: caption="Table 2. Event types and notifications methods" caption-side="top"}
+{: caption="Tableau 2. Types d'événement et méthodes de notification" caption-side="top"}
 
 ### Configuration d'abonnements à des notifications
 {: #seteventsub}
@@ -99,7 +99,7 @@ Pour créer un abonnement par courrier électronique ou webhook depuis la page *
 | Corps | Entrez le texte du corps du message à envoyer dans le message électronique. Vous pouvez utiliser les valeurs de contenu IBM pour alimenter la notification par courrier électronique avec les informations pertinentes. Voir le tableau [Valeurs de la section de contenu de maintenance et d'incident](index.html#payload) pour identifier les valeurs que vous pouvez utiliser. Servez-vous des balises HTML élémentaires pour structurer votre courrier électronique. Cette zone est obligatoire. |
 | A | Entrez l'adresse ou les adresses électroniques des destinataires de la notification par courrier électronique dans une liste séparée par des virgules. Développez les options "cc" ou "bcc" pour ajouter d'autres destinataires au courrier électronique. Cette zone est obligatoire. |
 | Description | Ajoutez une description unique pour l'abonnement que vous créez. |
-{: caption="Table 3. Fields for email notification subscriptions about thresholds" caption-side="top"}
+{: caption="Tableau 3. Zones pour les abonnements à des notifications par courrier électronique sur les seuils" caption-side="top"}
 
 
 {: #emailnottrhesh}
@@ -117,7 +117,7 @@ Pour créer un abonnement par courrier électronique ou webhook depuis la page *
 | Objet | Renseignez la ligne d'objet du courrier électronique. Cette zone est obligatoire.  |
 | Corps du message | Entrez le texte du corps du message à envoyer dans le message électronique. Vous pouvez utiliser les valeurs de contenu IBM pour alimenter la notification par courrier électronique avec les informations pertinentes. Voir le tableau [Valeurs de la section de contenu de seuil](index.html#threshpayload) pour identifier les valeurs que vous pouvez utiliser. Servez-vous des balises HTML élémentaires pour structurer votre courrier électronique. Cette zone est obligatoire. |
 | A | Entrez l'adresse ou les adresses électroniques des destinataires de la notification par courrier électronique dans une liste séparée par des virgules. Développez les options "cc" ou "bcc" pour ajouter d'autres destinataires au courrier électronique. Cette zone est obligatoire. |
-{: caption="Table 4. Fields for email notification subscriptions about maintenance updates or incidents" caption-side="top"}
+{: caption="Tableau 4. Zones pour les abonnements à des notifications par courrier électronique sur les mises à jour de maintenance ou les incidents" caption-side="top"}
 
 Les données de seuil sont collectées toutes les six heures. Une notification n'est envoyée qu'une fois lorsque la valeur dépasse ou passe sous la valeur que vous avez définie. Si vous avez choisi la propriété Croissant, aucune nouvelle notification n'est envoyée sauf si la valeur passe sous le seuil, puis dépasse à nouveau le seuil. De même, si vous avez choisi la propriété Décroissant, vous ne recevez une notification que si la valeur dépasse le seuil que vous avez défini, puis passe à nouveau sous le seuil. 
 
@@ -147,7 +147,7 @@ Une notification de seuil de quota inclut uniquement les organisations qui ont d
 | URL | Entrez l'URL pour connexion à votre service Web. |
 | Contenu | Si vous avez sélectionné la méthode POST ou PUT, entrez les propriétés spécifiques au service Web que vous utilisez, appariées aux valeurs de contenu utilisées pour la notification IBM. Voir le tableau [Valeurs de la section de contenu de maintenance et d'incident](index.html#payload) pour identifier les valeurs que vous pouvez utiliser. Si vous n'entrez pas d'informations dans cette section, vous recevrez une notification ne comportant pas d'information supplémentaire. |
 | Combiner des notifications | Sélectionnez l'option permettant de combiner les notifications relatives aux incidents pour toutes les régions dans une seule notification. Cette option est disponible uniquement pour les incidents. |
-{: caption="Table 5. Form fields for a webhook notification subscription about maintenance or incidents" caption-side="top"}
+{: caption="Tableau 5. Zones de formulaire pour un abonnement aux notifications par webhook sur la maintenance ou les incidents" caption-side="top"}
 
 
 {: #webhooknotthresh}
@@ -167,7 +167,7 @@ Une notification de seuil de quota inclut uniquement les organisations qui ont d
 | Mot de passe | Si vous avez choisi l'autorisation De base, entrez le mot de passe pour votre service Web. |
 | Méthode | Sélectionnez **GET**, **POST** ou **PUT**. |
 | URL | Entrez l'URL pour connexion à votre service Web. |
-{: caption="Table 6. Form fields for a webhook notification subscription about thresholds" caption-side="top"}
+{: caption="Tableau 6. Zones de formulaire pour un abonnement aux notifications par webhook sur les seuils" caption-side="top"}
 
 Les données de seuil sont collectées toutes les six heures. Une notification n'est envoyée qu'une fois lorsque la valeur dépasse ou passe sous la valeur que vous avez définie. Aucune nouvelle notification n'est envoyée sauf si la valeur passe sous le seuil, si vous avez choisi la propriété Croissant, puis dépasse à nouveau le seuil. De même, si vous avez choisi la propriété Décroissant, vous ne recevez de nouvelle notification que si la valeur dépasse le seuil que vous avez défini, puis passe à nouveau sous le seuil. 
 
@@ -190,7 +190,7 @@ Une notification de seuil de quota inclut uniquement les organisations qui ont d
 | {{region}} | Région affectée | Mise à jour de maintenance et incident |
 | {{status}} | Statut de la mise à jour | Mise à jour de maintenance |
 | {{type}} | Mise à jour ou incident | Mise à jour de maintenance et incident |
-{: caption="Table 7. Maintenance and incident payload section values" caption-side="top"}
+{: caption="Tableau 7. Valeurs de la section de contenu de maintenance et d'incident" caption-side="top"}
 
 
 {: #threshpayload}
@@ -202,7 +202,7 @@ Une notification de seuil de quota inclut uniquement les organisations qui ont d
 | {{content.physical_memory}} | Seuil de mémoire physique | Seuil |  
 | {{content.reserved_disk}} | Seuil de disque réservé | Seuil |
 | {{content.reserved_memory}} | Seuil de mémoire réservée | Seuil |
-{: caption="Table 8. Threshold payload section values" caption-side="top"}
+{: caption="Tableau 8. Valeurs de la section de contenu de seuil" caption-side="top"}
 
 Une fois votre abonnement aux notifications sauvegardé, vous recevrez des notifications via la méthode configurée. Les notifications apparaissent toujours aux emplacements suivants :  
  * Dans la page Statut pour les incidents
@@ -462,7 +462,7 @@ Le tableau ci-dessous présente la liste des rapports de sécurité qui sont gé
 | Antivirus | Rapport d'analyse antivirus | Logiciel antivirus installé. |
 | Gestion des correctifs logiciels | Rapport d'application des correctifs | Correctifs logiciels appliqués. |
 | Gestion des incidents de sécurité | Rapport de résolution des incidents de sécurité | Preuve des incidents de sécurité pour la gestion des incidents de sécurité. |
-{: caption="Table 9. Security report list" caption-side="top"}
+{: caption="Tableau 9. Liste des rapports de sécurité" caption-side="top"}
 
 ## Affichage du statut
 {: #oc_status}
@@ -625,7 +625,7 @@ Les tableaux ci-dessous peuvent vous aider à remplir le fichier JSON.
 |id  | ID du service. Il doit être unique dans {{site.data.keyword.Bluemix_notm}} et il doit s'agir d'un identificateur global unique. Vous ne pouvez pas le changer une fois le service enregistré auprès de {{site.data.keyword.Bluemix_notm}}. |
 |metadata | Métadonnées du plan de service qui s'affichent dans le catalogue {{site.data.keyword.Bluemix_notm}} et dans la fiche de prix. La zone metadata est facultative. Vous pouvez spécifier d'autres zones pour les métadonnées. Voir le tableau suivant intitulé [Zones de métadonnées](index.html#metadatafields) pour plus d'informations. |
 |plans | Tableau de définitions de plan de service. Voir le tableau suivant intitulé [Zones de plan](index.html#planfields) pour plus d'informations. |
-{: caption="Table 10. JSON fields" caption-side="top"}
+{: caption="Tableau 10. Zones JSON" caption-side="top"}
 
 
 {: #metadatafields}
@@ -654,7 +654,7 @@ Les tableaux ci-dessous peuvent vous aider à remplir le fichier JSON.
 |sdkDownloadUrl (facultative) | Adresse URL de la page Web qui est ouverte lorsque vous cliquez sur le bouton Télécharger les logiciels SDK. Ce dernier se trouve sur la vignette du service dans la page de présentation des applications dans le	tableau de bord. La page Web est ouverte dans un nouvel onglet de navigateur. |
 |serviceMonitorApi    | Adresse URL d'une API qui renvoie les données JSON indiquant la santé du service, conformément à l'exemple ci-après. La zone serviceMonitorApi ou serviceMonitorApp doit être définie dans vos métadonnées de service. Voir l'exemple de code ci-après. |
 |serviceMonitorApp    | Adresse URL d'une application qui peut être déployée dans {{site.data.keyword.Bluemix_notm}} et liée à un service afin de fournir la sortie spécifique de statut du service. L'application doit renvoyer le même format de données JSON que serviceMonitorApi. La zone serviceMonitorApi ou serviceMonitorApp doit être définie dans vos métadonnées de service. Voir l'exemple de code ci-après. |
-{: caption="Table 11. Metadata fields" caption-side="top"}
+{: caption="Tableau 11. Zones de métadonnées" caption-side="top"}
 
 
 ```
@@ -695,7 +695,7 @@ L'exemple suivant montre comment la réponse JSON de GET /v2/catalog est mappée
 |free      | Valeur booléenne qui indique si le plan de service est gratuit. La valeur par défaut est true. |
 |id       | ID du plan de service. Il doit être unique et il doit s'agir d'un identificateur global unique.  |
 |metadata (facultative)    | Métadonnées du plan de service qui s'affichent dans le catalogue {{site.data.keyword.Bluemix_notm}} et dans la fiche de prix. La zone metadata est facultative. Vous pouvez spécifier les zones suivantes dans la zone metadata : displayName, type (subscription, reservable, planDetails), bullets, costs (unitId, unit, partNumber) et paidOnly. Voir le tableau ci-après intitulé [Zones de métadonnées de plan](index.html#planmetadata) pour plus d'informations. |
-{: caption="Table 12. Plan fields" caption-side="top"}
+{: caption="Tableau 12. Zones de plan" caption-side="top"}
 
 
 {: #planmetadata}
@@ -707,7 +707,7 @@ L'exemple suivant montre comment la réponse JSON de GET /v2/catalog est mappée
 |bullets                 | Description des ressources pouvant être utilisées avec le plan. Elle est affichée dans la colonne **Fonctions** dans la page des détails du service du catalogue et dans la fiche de prix. |
 |costs                   | Informations sur le coût du service qui sont affichées dans la colonne Prix dans la page des détails du service du catalogue et dans la fiche de prix. Chaque entrée de tableau contient les zones suivantes : unitId (ID de l'unité. Utilisez le pluriel et des majuscules seulement. Pour les plans gratuits, cette zone est facultative.), unit (mesure utilisée pour le calcul du prix du service. La valeur de cette zone est utilisée dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}} pour représenter le paramètre de calcul des frais.), et partNumber (identificateur `part_number` utilisé par le système de facturation. Pour les plans gratuits, cette zone est facultative.).   |
 |paidOnly (facultative)     | Valeur booléenne qui indique si ce plan de service est disponible pour les comptes {{site.data.keyword.Bluemix_notm}} payants seulement. Si la valeur est **true**, le plan de service n'est valable que pour les comptes payants et ne peut pas être ajouté à des comptes d'essai. Si la valeur est **false**, le plan de service peut être ajouté à des comptes payants et à des comptes d'essai. La valeur par défaut est **false**.	  |
-{: caption="Table 13. Plan metadata fields" caption-side="top"}
+{: caption="Tableau 13. Zones de métadonnées de plan" caption-side="top"}
 
 L'exemple ci-après montre comment la réponse JSON de GET /v2/catalog est mappée à la page des détails du service dans le catalogue {{site.data.keyword.Bluemix_notm}}. Il illustre notamment comment les zones de métadonnées de plan décrites dans le tableau précédent sont mappées à l'interface utilisateur :
 
@@ -834,7 +834,7 @@ Un quota représente les limites de ressources pour les organisations de votre e
 <dd>Nombre maximal d'adresses IP publiques pouvant être allouées entre tous les espaces d'une organisation.</dd>
 </dl>
 <strong>Remarque</strong> : si vous ne disposez pas encore de conteneurs dans votre environnement, ou si les conteneurs de votre environnement ne sont pas encore configurés, vous obtenez un message d'erreur.
-<p>Pour plus d'informations sur les conteneurs, voir [A propos d'IBM containers](/docs/containers/container_ov.html). Pour plus d'informations sur les quotas de conteneur, voir [Quota et comptes Bluemix](/docs/containers/container_planning_org_ov.html#container_planning_quota).</p>
+<p>Pour plus d'informations sur les conteneurs, voir [A propos d'IBM containers](/docs/containers/container_ov.html). Pour plus d'informations sur les quotas de conteneur, voir [Quota et comptes Bluemix](/docs/containers/container_planning.html#container_planning_quota).</p>
 <strong>Remarque :</strong> Les conteneurs ne sont pas disponibles dans la région {{site.data.keyword.Bluemix_notm}} Sydney.</li>
 </ul>
 <li>Pour sauvegarder les modifications que vous avez apportées dans la page Gérer l'organisation, cliquez sur <strong>SAUVEGARDER</strong>.</li>
@@ -950,7 +950,7 @@ Les droits suivants peuvent être accordés aux utilisateurs avec des niveaux d'
 | Catalogue | Les utilisateurs disposant du droit **Catalogue** peuvent lire (accès **Lecture** ou modifier (accès **Ecriture**) les services disponibles dans l'instance locale ou dédiée. L'accès en lecture permet à l'utilisateur d'accéder à la vignette Gestion du catalogue pour afficher les services disponibles. L'accès en écriture permet à l'utilisateur d'accéder à la vignette [Gestion du catalogue](#oc_catalog) pour afficher les services, éditer la visibilité des services, enregistrer des services personnalisés et contrôler la liste de priorité du pack de construction. |  
 | Rapports | Les utilisateurs disposant du droit **Rapports** peuvent lire (accès **Lecture**) ou modifier (accès **Ecriture**) les rapports de sécurité. L'accès en lecture permet à l'utilisateur d'accéder à la vignette Rapports et journaux pour télécharger des rapports. L'accès en écriture permet à l'utilisateur d'afficher la vignette [Rapports et journaux](#oc_report) et d'utiliser l'interface de ligne de commande pour télécharger de nouveaux rapports et créer de nouvelles catégories auxquelles les utilisateurs pourront accéder. |
 | Utilisateurs | Les utilisateurs disposant du droit **Utilisateurs** peuvent afficher (accès **Lecture**) la liste d'utilisateurs ou ajouter ou retirer des utilisateurs (accès **Ecriture**). Ce droit ne vous permet pas de définir des droits pour d'autres utilisateurs. L'accès en écriture permet à l'utilisateur d'ajouter de nouveaux utilisateurs à l'environnement, de supprimer des utilisateurs de l'environnement et d'ajouter des utilisateurs existants à des organisations qui existent déjà dans l'environnement. De plus, l'accès **Ecriture** permet à l'utilisateur d'ajouter de nouvelles organisations, de supprimer des organisations et d'éditer les utilisateurs des organisations. |
-{: caption="Table 14. Permissions" caption-side="top"}
+{: caption="Tableau 14. Droits" caption-side="top"}
 
 ## Utilisation d'API REST 
 {: #auth_adminapi}
@@ -1241,8 +1241,7 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 <dd class="pd">Spécifie les données, dans ce cas le fichier `user.json`, à envoyer dans la demande POST au serveur HTTP.</dd>
 </dl>
 
-Voici un exemple de sortie pour
-cette commande :
+Voici un exemple de sortie pour cette commande :
 
 ```
 * Connected to localhost (127.0.0.1) port 3000 (#0)
@@ -1281,7 +1280,8 @@ https://<votre_hôte>.ibm.com/codi/v1/users?user_id=<un_id_utilisateur@domaine.c
 <dd class="pd">Spécifie une demande DELETE.</dd>
 </dl>
 
-Voici un exemple de sortie pour cette commande :
+Voici un exemple de sortie pour
+cette commande :
 
 ```
  * connect to ::1 port 3000 failed: Connection refused
@@ -1824,7 +1824,7 @@ POST /codi/v1/serviceBrokers
 | auth_password | Mot de passe utilisé pour se connecter au courtier de services. |
 | broker_url | URL utilisée pour se connecter au courtier de services. |
 | owningOrganization | Organisation initiale avec laquelle enregistrer le service sur la liste blanche. |
-{: caption="Table 15. Fields" caption-side="top"}
+{: caption="Tableau 15. Zones" caption-side="top"}
 
 #### Corps
 {: #registerbody}
@@ -1899,7 +1899,7 @@ Utilisez l'API et les exemples de code suivants pour mettre à jour un service.
 | auth_password | Mot de passe utilisé pour se connecter au courtier de services. |
 | broker_url | URL utilisée pour se connecter au courtier de services. |
 | owningOrganization | Organisation initiale avec laquelle enregistrer le service sur la liste blanche. |
-{: caption="Table 16. Requests" caption-side="top"}
+{: caption="Tableau 16. Demandes" caption-side="top"}
 
 #### Corps
 {: #updatebody}
@@ -1961,7 +1961,7 @@ Utilisez l'API et les exemples de code suivants pour supprimer un service.
 | **Nom** | **Description** |
 |-----------------|-------------------|
 | name | Nom du courtier de services. Ce nom ne peut pas varier du nom avec lequel a été créé le service. |
-{: caption="Table 17. Parameter" caption-side="top"}
+{: caption="Tableau 17. Paramètre" caption-side="top"}
 
 ### Route
 
@@ -1994,16 +1994,16 @@ Content-Type: application/json
 ```
 {: screen}
 
-## Gestion des utilisateurs avec l'interface de ligne de commande cf
+### Gestion des utilisateurs avec l'interface de ligne de commande cf
 {: #usingadmincli}
 
-Vous pouvez gérer les utilisateurs pour votre environnement {{site.data.keyword.Bluemix_notm}} via l'interface de ligne de commande Cloud Foundry, avec le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}. Par exemple, vous pouvez ajouter des utilisateurs depuis un registre LDAP.
+Vous pouvez gérer les utilisateurs pour votre environnement {{site.data.keyword.Bluemix_notm}} via l'interface de ligne de commande Cloud Foundry, avec le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}. Vous devez télécharger ce plug-in pour votre interface de ligne de commande Cloud Foundry.
 
 Avant de commencer, installez l'interface de ligne de commande cf. Le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}} requiert cf version 6.11.2 ou ultérieure. [Télécharger l'interface de ligne de commande Cloud Foundry ![icône de lien externe](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}.
 
 **Restriction :** l'interface de ligne de commande Cloud Foundry n'est pas prise en charge par Cygwin. Utilisez-la dans une fenêtre de ligne de commande autre que Cygwin.
 
-### Ajout du plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}
+#### Ajout du plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}
 
 Une fois l'interface de ligne de commande cf installée, vous pouvez ajouter le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}.
 
@@ -2028,10 +2028,17 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 </li>
 </ol>
 
-Pour afficher la liste des commandes, exécutez la commande suivante :
+Pour afficher la liste des sous-commandes disponibles à partir des plug-ins que vous avez installés, exécutez la commande suivante :
 
 ```
 cf plugins
+```
+{: codeblock}
+
+Pour afficher la liste des groupes de commandes disponibles pour le plug-in d'administration {{site.data.keyword.Bluemix_notm}}, exécutez la commande suivante :
+
+```
+cf ba
 ```
 {: codeblock}
 

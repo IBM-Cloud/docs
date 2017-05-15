@@ -25,8 +25,10 @@ Você pode ter problemas ao usar tempos de execução do {{site.data.keyword.Blu
 ## Buildpack obsoleto usado quando um aplicativo é enviado por push
 {: #ts_loading_bp}
 
-Talvez você não consiga usar os componentes de buildpack mais recentes ao enviar um app por push. É possível usar buildpacks que possuem mecanismos integrados
-para evitar o carregamento de componentes obsoletos ou é possível excluir os conteúdos no diretório de cache de seu app antes de enviar por push ou remontar o app. 
+É possível que você não consiga usar os componentes de buildpack mais recentes
+ao enviar um app por push. É possível usar buildpacks que possuem mecanismos integrados
+para evitar o carregamento de componentes obsoletos ou é possível excluir os conteúdos
+no diretório de cache do app antes de enviar por push ou remontar o app. 
 
 Ao enviar por push ou remontar um app após a atualização do buildpack, os componentes de buildpack mais recentes não são carregados automaticamente. Como resultado, o seu aplicativo usa os componentes de buildpack obsoletos a partir do cache. As atualizações que foram aplicadas ao buildpack desde a última vez que o app foi enviado por push não são implementadas. 
 {: tsSymptoms}
@@ -114,7 +116,8 @@ falha.
 As informações de configuração para o app Python estão ausentes.
 {: tsCauses}
 
-Inclua um arquivo `requirements.txt` e um arquivo `Procfile` no diretório-raiz do app Python. As informações a seguir supõem que você esteja importando a biblioteca `web.py`:
+Inclua um arquivo `requirements.txt` e um arquivo `Procfile` no diretório-raiz de seu app Python. As informações a seguir presumem que você
+esteja importando a biblioteca `web.py`:
 {: tsResolve}
 
  1. Inclua um arquivo `requirements.txt` no diretório-raiz de seu app Python.
@@ -127,8 +130,8 @@ Inclua um arquivo `requirements.txt` e um arquivo `Procfile` no diretório-raiz 
 	 Para obter mais informações sobre como configurar
 o arquivo `requirements.txt`, consulte [Arquivos de requisitos](https://pip.readthedocs.org/en/1.1/requirements.html). 
 	 
- 2. Inclua um arquivo `Procfile` no diretório-raiz do app Python.
-O arquivo `Procfile` deve conter o comando inicial para o app Python. No comando a seguir, *yourappname* é o nome do app Python e *PORT* é o número da porta que o app Python deve usar para receber solicitações de usuários do app. *$PORT* é opcional. Se você não especificar PORT no comando inicial, o número da porta sob a variável de ambiente `VCAP_APP_PORT` que está dentro do app será usado. 
+ 2. Inclua um arquivo `Procfile` no diretório-raiz de seu app Python.
+O arquivo `Procfile` deve conter o comando inicial para seu app Python. No comando a seguir, *yourappname* é o nome de seu app Python e *PORT* é o número da porta que seu app Python deve usar para receber solicitações de usuários do app. *$PORT* é opcional. Se você não especificar PORT no comando inicial, o número da porta sob a variável de ambiente `VCAP_APP_PORT` que está dentro do app será usado. 
 	```
 	web: python <yourappname>.py $PORT
 	```

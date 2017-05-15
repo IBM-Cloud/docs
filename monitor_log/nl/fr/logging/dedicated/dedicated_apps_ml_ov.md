@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2017
 
-lastupdated: "2016-10-13"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -34,7 +34,7 @@ Les applications Cloud Foundry utilisent Cloud Foundry loggregator pour surveill
 UC virtuelle | 19 | 57 |
 Mémoire | 80 Go | 240 Go |
 Stockage local | 2,98 To | 8,94 To |
-{: caption="Table 1. Logging hardware requirements for {{site.data.keyword.Bluemix_local_notm:}}" caption-side="top"}
+{: caption="Tableau 1. Consignation de la configuration matérielle requise pour {{site.data.keyword.Bluemix_local_notm:}}" caption-side="top"}
 
 ## Configuration
 
@@ -53,8 +53,8 @@ Vous pouvez consulter les journaux des applications que vous exécutez sur {{sit
 Pour afficher les journaux de vos applications, procédez comme suit :
 1. Sélectionnez une application en cours d'exécution.
 2. Cliquez sur **Journaux**. La vue **Journaux** contient les journaux de votre application en cours d'exécution.
-4. Cliquez sur le bouton **Vue avancée**. La **Vue avancée** est une vue plus détaillée des journaux ; elle utilise Kibana, un outil de visualisation qui se sert des journaux et des données d'horodatage pour créer des visualisations personnalisées. Pour plus d'informations sur l'utilisation de la vue avancée, voir la documentation [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html).
+4. Cliquez sur le bouton **Vue avancée**. La **Vue avancée** est une vue plus détaillée des journaux ; elle utilise Kibana, un outil de visualisation qui se sert des journaux et des données d'horodatage pour créer des visualisations personnalisées. Pour plus d'informations sur l'utilisation de la vue avancée, voir [Kibana User Guide ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://www.elastic.co/guide/en/kibana/4.1/index.html){: new_window}.
 
-Vous pouvez ensuite personnaliser un tableau de bord Kibana. Pour plus d'informations, voir [Personnalisation de l'affichage des journaux dans le tableau de bord Kibana](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_dash_logs_custom).
+Vous pouvez ensuite personnaliser un tableau de bord Kibana. Pour plus d'informations, voir [Analyse de journal avancée avec Kibana](../kibana4/analyzing_logs_Kibana.html#analyzing_logs_Kibana). 
 
 <!-- audience blue staging only end comment -->

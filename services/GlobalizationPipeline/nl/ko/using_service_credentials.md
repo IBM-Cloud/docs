@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-07-13"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}}의 외부에서 {{site.data.keyword.GlobalizationPipeline_short}} 사용
 {: #globalizationpipeline_external}
 
-*마지막 업데이트 날짜: 2016년 7월 13일*
-{: .last-updated}
 
 다수의 {{site.data.keyword.Bluemix_notm}} 서비스는 {{site.data.keyword.GlobalizationPipeline_short}}을 포함하여 {{site.data.keyword.Bluemix_notm}}에서 애플리케이션을 호스팅할 필요없이 사내 구축형 애플리케이션 호스팅 환경 또는 다른 클라우드 플랫폼에서도 사용할 수 있습니다.
 {:shortdesc}

@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-01"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -20,10 +20,10 @@ In {{site.data.keyword.Bluemix}} können Sie Protokolle über die Befehlszeilens
 {:shortdesc}
 
 Zur Analyse von CF-Anwendungsprotokollen (CF - Cloud Foundry) verwenden Sie den folgenden Befehl: `cf logs`.
-Weitere Informationen finden Sie unter [Cloud Foundry-App-Protokolle über die Befehlszeilenschnittstelle (CLI) analysieren](logging_view_cli.html#analyzing_cf_logs_cli). 
+Weitere Informationen finden Sie unter [Cloud Foundry-App-Protokolle über die Befehlszeilenschnittstelle (CLI) analysieren](logging_view_cli.html#analyzing_cf_logs_cli).
 
 Zur Analyse von Docker-Container-Protokollen verwenden Sie den folgenden Befehl: `cf ic logs`.
-Weitere Informationen finden Sie unter [Docker-Container-Protokollen über die Befehlszeilenschnittstelle (CLI) analysieren](logging_view_cli.html#analyzing_container_logs_cli). 
+Weitere Informationen finden Sie unter [Docker-Container-Protokollen über die Befehlszeilenschnittstelle (CLI) analysieren](logging_view_cli.html#analyzing_container_logs_cli).
 
 
 ## Cloud Foundry-App-Protokolle über die Befehlszeilenschnittstelle (CLI) analysieren
@@ -39,17 +39,7 @@ Zum Anzeigen von für Sie relevanten Protokollen oder zum Ausschließen des Inha
 * Informationen zum Anzeigen der Einträge in den Protokollen für eine Cloud Foundry-App, die bestimmte Schlüsselwörter enthalten: [Protokolleinträge mit bestimmten Schlüsselwörtern anzeigen](logging_view_cli.html#partial_by_keyword_log_cli).
 
 
-## Docker-Container-Protokollen über die Befehlszeilenschnittstelle (CLI) analysieren
-{: #analyzing_container_logs_cli}
-
-Verwenden Sie den Befehl `cf ic logs`, um Protokolle aus einem Container in {{site.data.keyword.Bluemix_notm}} zu analysieren. Sie können die Protokolle zum Beispiel dazu verwenden, die Ursache für das Stoppen eines Containers zu analysieren oder die Containerausgabe zu prüfen.  
-
-Wenn Anwendungsfehler für die App, die in einem Container ausgeführt wird, mit dem Befehl `cf ic logs` angezeigt werden sollen, muss die Anwendung ihre Protokolle in die Datenströme der Standardausgabe (STDOUT) und der Standard-Fehlerausgabe (STDERR) schreiben. Wenn Sie Ihre Anwendung darauf auslegen, in diese Standardausgabedatensröme zu schreiben, können Sie die Protokolle über die Befehlszeile anzeigen, wenn der Container beendet wird oder ausfällt. 
-
-Weitere Informationen zum Befehl `cf ic logs` finden Sie unter [Befehl 'cf ic logs'](/docs/containers/container_cli_reference_cfic.html#container_cli_reference_cfic__logs). 
-
-
-## Protokoll für eine Cloud Foundry-App anzeigen
+### Protokoll für eine Cloud Foundry-App anzeigen
 {: #full_log_cli}
 
 Führen Sie die folgenden Schritte aus, um alle Protokolle anzuzeigen, die für eine Cloud Foundry-App verfügbar sind:
@@ -61,7 +51,7 @@ Führen Sie die folgenden Schritte aus, um alle Protokolle anzuzeigen, die für 
    <pre class="pre screen"><code>cf logs <var class="keyword varname">App-Name</var></code></pre>
    
    
-## Letzte Protokolleinträge für eine Cloud Foundry-App anzeigen
+### Letzte Protokolleinträge für eine Cloud Foundry-App anzeigen
 {: #tailing_log_cli}
 
 Führen Sie die folgenden Schritte aus, um die letzten Protokolle anzuzeigen, die für eine Cloud Foundry-App verfügbar sind:
@@ -75,7 +65,7 @@ Führen Sie die folgenden Schritte aus, um die letzten Protokolle anzuzeigen, di
 <div class="note tip"><span class="tiptitle">Tipp:</span> Wenn Sie den Befehl <span class="keyword cmdname">cf push</span> oder <span class="keyword cmdname">cf start</span> in einem Befehlszeilenfenster ausführen, können Sie <samp class="ph codeph">cf logs App-Name --recent</samp> in einem anderen Befehlszeilenfenster eingeben, um die Protokolle in Echtzeit anzuzeigen. </div>
 
 
-## Abschnitt eines Cloud Foundry-Protokolls anzeigen
+### Abschnitt eines Cloud Foundry-Protokolls anzeigen
 {: #partial_log_cli}
 
 Führen Sie die folgenden Schritte aus, um einen Teil der Protokolle anzuzeigen, die für eine Cloud Foundry-App in einem Zeitraum verfügbar sind:
@@ -89,7 +79,7 @@ Führen Sie die folgenden Schritte aus, um einen Teil der Protokolle anzuzeigen,
     Für weitere Informationen zur Option **cut** geben Sie **cut --help** ein.
 
 
-## Protokolleinträge mit bestimmten Schlüsselwörtern anzeigen
+### Protokolleinträge mit bestimmten Schlüsselwörtern anzeigen
 {: #partial_by_keyword_log_cli}
 
 Führen Sie die folgenden Schritte aus, um Protokolleinträge anzuzeigen, die bestimmte Schlüsselwörter enthalten, für eine Cloud Foundry-App anzuzeigen:
@@ -109,7 +99,7 @@ Protokolleinträge, die das Schlüsselwort **APP** enthalten, können Sie beispi
 Für weitere Informationen zur Option **grep** geben Sie **grep --help** ein.
 
 
-## Cloud Foundry-Anwendungsprotokolle
+### Cloud Foundry-Anwendungsprotokolle
 {: #cf_app_logs_cli}
 
 Die folgenden Protokolle sind für eine Cloud Foundry-Anwendung verfügbar, wenn Sie sie in {{site.data.keyword.Bluemix}} bereitgestellt haben:
@@ -132,5 +122,13 @@ Geben Sie den folgenden Befehl ein, um dieses Protokoll anzuzeigen: `cf files Ap
 
 **Hinweis:** Informationen zur Aktivierung der Anwendungsprotokollierung finden Sie unter [Laufzeitfehler beheben](/docs/debug/index.html#debugging-runtime-errors).
 
+## Docker-Container-Protokollen über die Befehlszeilenschnittstelle (CLI) analysieren
+{: #analyzing_container_logs_cli}
+
+Verwenden Sie den Befehl `cf ic logs`, um Protokolle aus einem Container in {{site.data.keyword.Bluemix_notm}} zu analysieren. Sie können die Protokolle zum Beispiel dazu verwenden, die Ursache für das Stoppen eines Containers zu analysieren oder die Containerausgabe zu prüfen. 
+
+Wenn Anwendungsfehler für die App, die in einem Container ausgeführt wird, mit dem Befehl `cf ic logs` angezeigt werden sollen, muss die Anwendung ihre Protokolle in die Datenströme der Standardausgabe (STDOUT) und der Standard-Fehlerausgabe (STDERR) schreiben. Wenn Sie Ihre Anwendung darauf auslegen, in diese Standardausgabedatensröme zu schreiben, können Sie die Protokolle über die Befehlszeile anzeigen, wenn der Container beendet wird oder ausfällt.
+
+Weitere Informationen zum Befehl `cf ic logs` finden Sie unter [Befehl 'cf ic logs'](/docs/containers/container_cli_reference_cfic.html#container_cli_reference_cfic__logs).
 
 

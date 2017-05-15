@@ -18,7 +18,7 @@ lastupdated: "2017-01-12"
 
 사설 네트워크 피어링 CLI 플러그인은 Windows, MAC 및 Linux 운영 체제에 사용 가능합니다. 사용자에게 적용 가능한 플러그인을 사용해야 합니다.
 
-시작하기 전에 Bluemix 영역을 작성해야 합니다. 영역의 각 컨테이너에 다른 네트워크에서의 IP 주소가 있는지 확인하십시오. 세부사항은 [사용자 소유의 사설 IP 주소 사용](https://www.{DomainName}/docs/containers/container_security_network.html#container_cli_ips_byoip)을 참조하십시오.
+시작하기 전에 Bluemix 영역을 작성해야 합니다. 영역의 각 컨테이너에 다른 네트워크에서의 IP 주소가 있는지 확인하십시오. 세부사항은 [사용자 소유의 사설 IP 주소 사용](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip)을 참조하십시오.
 
 **참고:** Bluemix 영역으로 사설 네트워크 피어링을 사용한 후 영역을 삭제해야 하는 경우, 먼저 해당 영역에서 사설 네트워크 피어링 연결을 삭제하십시오. 
 
@@ -87,7 +87,7 @@ Bluemix 저장소에서 플러그인을 설치하려면 다음 단계를 따르�
 | pnp-create  | 사설 네트워크 피어링 연결을 작성합니다.   |
 | pnp-delete  | 사설 네트워크 피어링 연결을 삭제합니다.   |
 | pnp-show    | 모든 사설 네트워크 피어링 연결을 나열합니다.  |
-{: caption="표 1. 사설 네트워크 피어링 명령" caption-side="top"}
+{: caption="표 1. 개인용 네트워크 피어링 명령" caption-side="top"}
 
 
 ### 명령 사용

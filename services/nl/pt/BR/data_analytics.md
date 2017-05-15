@@ -21,4 +21,4 @@ e analisar seus dados, todos em um local central. Basta clicar em [TRABALHAR COM
 Construa mais | Cresça mais | Dormiria mais
 ---- | ---- | ----
 Fique focado nas coisas divertidas... criando novos apps, não na administração do sistema. | Escale seus dados no IBM Cloud. | Fique tranquilo enquanto os especialistas IBM mantêm seus dados em execução 24 horas por dia, sete dias por semana.
-{: caption="Table 1. Benefits of using the Work with Data console" caption-side="top"}
+{: caption="Tabela 1. Benefícios de usar o console Trabalhar com dados" caption-side="top"}

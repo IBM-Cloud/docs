@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+lastupdated: "2017-04-25"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -18,7 +17,7 @@ lastupdated: "2017-03-13"
 
 ## 设置 {{site.data.keyword.openwhisk_short}} CLI 
 
-可以使用 {{site.data.keyword.openwhisk_short}} 命令行界面 (CLI) 来设置名称空间和授权密钥。转至[配置 CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window}，然后遵循指示信息来进行安装。
+可以使用 {{site.data.keyword.openwhisk_short}} 命令行界面 (CLI) 来设置名称空间和授权密钥。转至[配置 CLI](https://console.{DomainName}/openwhisk/cli)，然后遵循指示信息来进行安装。
 
 要使用 CLI，应配置两个必需属性：
 

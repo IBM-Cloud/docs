@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-01"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -28,7 +28,7 @@ Vous pouvez configurer Kibana pour afficher sur la page *Discover* les zones sui
 | \_id | ID unique de votre document de journal. |
 | \_index | Index de votre entrée de journal. |
 | \_type | Type de journal. Par exemple, *logs*. |
-| group_id | ID du groupe<br> *Pour un conteneur unique, sa valeur est **0000**. <br> * Pour un groupe de conteneurs, sa valeur est l'identificateur global unique (GUID) du groupe.  |
+| group_id | ID du groupe <br> *Pour un conteneur unique, sa valeur est **0000**. <br> * Pour un groupe de conteneurs, sa valeur est l'identificateur global unique (GUID) du groupe.  |
 | hôte | Nom de l'hôte sur lequel le conteneur s'exécute. |
 | instance | GUID de l'instance pour un conteneur unique. Liste des ID d'instance pour un groupe de conteneurs.|
 | log | Message concis. |
@@ -37,6 +37,6 @@ Vous pouvez configurer Kibana pour afficher sur la page *Discover* les zones sui
 | stream | Spécifie le type de journal : stdout, stderr |
 | time | Date et heure à laquelle l'événement s'est produit. L'horodatage est défini à la milliseconde près.|
 | timestamp | Date et heure de consignation de l'événement. L'horodatage est défini à la milliseconde près. |
-
+{: caption="Tableau 1. Zones des conteneurs Docker" caption-side="top"}
 
 

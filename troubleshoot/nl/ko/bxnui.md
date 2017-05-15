@@ -880,7 +880,7 @@ Bluemix에서 로그아웃됩니다.
 ## BXNUI2004E 
 **메시지**: 클라우드 서버의 오류로 인해 앱이 작성되지 않았습니다.
 
-다시 시도하십시오. 문제점이 지속되면 [IBM Bluemix Support](http://ibm.biz/bluemixsupport){: new_window}로 이동하십시오.
+다시 시도하십시오.문제점이 지속되면 [IBM Bluemix Support](http://ibm.biz/bluemixsupport){: new_window}로 이동하십시오.
 
 <!-- BXNUI2005E removed -->
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-2-21"
+lastupdated: "2017-4-24"
 
 ---
 
@@ -65,7 +65,7 @@ Gehen Sie wie folgt vor, um eine Schaltfläche für die Bereitstellung in {{site
 <li> Kopieren und modifizieren Sie eine der folgenden Snippetvorlagen und schließen Sie ein öffentliches Git-Repository ein.
 <p></p>
 <p>
-<strong>Tipp:</strong> Wenn Sie die Buildeingabe für ein DevOps Services-Projekt angeben wollen, fügen Sie der Git-URL einen Zweigparameter (Branch) hinzu. Wenn Sie einen Zweigparameter hinzufügen, wird das ursprüngliche öffentliche Git-Repository, einschließlich aller Zweige, in ein neues, privates DevOps Services-Projekt mit einem neuen Git-Repository geklont. Der angegebene Git-Zweig wird als Eingabe für den Build-Job festgelegt. Wenn Sie keinen Zweig angeben, wird als Eingabe für den Build-Job standardmäßig der Master-Zweig festgelegt.
+<strong>Tipp:</strong> Sie können den Zweig, der verwendet werden soll, angeben, indem Sie der Git-URL einen Parameter 'branch' hinzufügen. Wenn Sie keinen Zweig angeben, wird standardmäßig der Master-Zweig verwendet.
 </p>
 <ul>
 <li>HTML:
@@ -73,13 +73,17 @@ Gehen Sie wie folgt vor, um eine Schaltfläche für die Bereitstellung in {{site
 Standard-Master-Zweig:
 </p>
 <pre class="codeblock">
+<code class="hljs">
 &lt;a href="https://bluemix.net/deploy?repository=&lt;URL des Git-Repositorys>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="In Bluemix bereitstellen"&gt;&lt;/a&gt;
+</code>
 </pre>
 <p>
 Angegebener Git-Zweig:
 </p>
 <pre class="codeblock">
+<code class="hljs">
 &lt;a href="https://bluemix.net/deploy?repository=&lt;URL des Git-Repositorys&gt;&branch=&lt;Git-Zweig>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="In Bluemix bereitstellen"&gt;&lt;/a&gt;
+</code>
 </pre>
 </li>
 <li>Markdown:
@@ -87,12 +91,16 @@ Angegebener Git-Zweig:
 Standard-Master-Zweig:
 </p>
 <pre class="codeblock">
-[&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&rpar;
+<code class="hljs">
+[&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;URL_des_Git-Repositorys> # [required]&rpar;
+</code>
 </pre>
 <p>Angegebener Git-Zweig:
 </p>
 <pre class="codeblock">
-[&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&rpar;
+<code class="hljs"
+[&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;URL des Git-Repositorys> &branch=&lt;Git-Zweig&gt; # [required]&rpar;
+</code>
 </pre>
 </li>
 </ul>
@@ -193,4 +201,4 @@ Mit der Manifestdatei können Sie Folgendes angeben:
  </ul>
 </ul>
 
-Hilfe zur Fehlerbehebung finden Sie unter [Schaltfläche für die Bereitstellung in Bluemix führt nicht zum Bereitstellen einer App](/docs/troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}.	
+Hilfe zur Fehlerbehebung finden Sie unter [Schaltfläche für die Bereitstellung in Bluemix führt nicht zum Bereitstellen einer App](/docs/troubleshoot/ts_apps.html#ts_deploybutton){:new_window}.	

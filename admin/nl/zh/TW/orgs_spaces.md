@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-03-03"
+lastupdated: "2017-04-24"
 
 ---
 
@@ -32,9 +32,9 @@ lastupdated: "2017-03-03"
 <dd>組織及空間中具有基本許可權的角色。您必須先被指派給組織，才能獲授與組織內空間的其他許可權。如需詳細資訊，請參閱[使用者及角色](/docs/admin/users_roles.html#userrolesinfo)。</dd>
 <dt>網域</dt>
 <dd>提供網際網路上配置給組織的路徑。路徑具有一個子網域及一個網域。子網域一般是應用程式名稱。網域可能是系統網域，或您針對應用程式所登錄的自訂網域。請參閱[管理自訂網域](/docs/admin/orgs_spaces.html#managedomains)。<br/>
-<p>**附註**：如果您新增自訂網域，則必須配置 DNS 伺服器來解析自訂網域，以指向 {{site.data.keyword.Bluemix_notm}} 系統網域。使用此方式，{{site.data.keyword.Bluemix_notm}} 接到您的自訂網域的要求時，可以將它適當地遞送至您的應用程式。</p></dd>
+<p>**附註：**如果您新增自訂網域，則必須配置 DNS 伺服器來解析自訂網域，以指向 {{site.data.keyword.Bluemix_notm}} 系統網域。使用此方式，{{site.data.keyword.Bluemix_notm}} 接到您的自訂網域的要求時，可以將它適當地遞送至您的應用程式。</p></dd>
 <dt>配額</dt>
-<dd>代表組織的資源限制，包括可配置供組織使用的服務數目及記憶體量。建立組織時，會指派配額。組織空間中的任何應用程式或服務都會使用配額。使用「隨收隨付制」或「訂閱」方案，您可以在組織需要變更時，調整 Cloud Foundry 應用程式及容器的配額。請參閱[管理配額](/docs/admin/orgs_spaces.html#managequota)。</dd>
+<dd>代表組織可用的資源，包括可配置供組織使用的服務數目及記憶體量。建立組織時，會指派配額。組織空間中的任何應用程式或服務都會使用配額。使用「隨收隨付制」或「訂閱」方案，您可以在組織需要變更時，調整 Cloud Foundry 應用程式及容器的配額。請參閱[管理配額](/docs/admin/orgs_spaces.html#managequota)。<p>**附註：**在「訂閱」帳戶中，配額是觸發消費通知的使用者定義限制。</p></dd>
 </dl>
 
 在 {{site.data.keyword.Bluemix_notm}} 中，您可以使用組織來啟用團隊成員之間的協同作業，以及使用下列方式促進專案資源的邏輯分組：
@@ -47,7 +47,7 @@ lastupdated: "2017-03-03"
 建立組織時，組織名稱在 {{site.data.keyword.Bluemix_notm}} 內必須是唯一的。
 如果另一位 {{site.data.keyword.Bluemix_notm}}「公用」、「專用」或「本端」使用者已在使用組織名稱，則您必須指定新的名稱。建立組織之後，您會自動獲指派*組織管理員* 許可權，這可讓您編輯組織名稱、新增團隊成員，以及在組織中建立或刪除空間。
 
-您必須與 [{{site.data.keyword.Bluemix_notm}} 支援中心 ![外部鏈結圖示](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} 聯絡，以刪除組織。當您要求支援團隊刪除組織時，會刪除組織內的所有空間、應用程式及服務。
+您可以使用 [`bx iam org-delete`](/docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_iam_org_delete) 指令來刪除組織。當您刪除組織時，會刪除組織內的所有空間、應用程式及服務。  
 
 可以將下列[使用者角色](/docs/admin/users_roles.html#userrolesinfo)指派給組織中的團隊成員：
 
@@ -109,7 +109,7 @@ lastupdated: "2017-03-03"
 ## 刪除現有組織或空間
 {: #deleteorgs}
 
-身為帳戶擁有者，您可以與 [{{site.data.keyword.Bluemix_notm}} 支援中心 ![外部鏈結圖示](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} 聯絡，以刪除組織。
+身為帳戶擁有者，您可以使用 {{site.data.keyword.Bluemix_notm}} CLI 來刪除組織。使用 [`bx iam org-delete`](/docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_iam_org_delete) 指令來刪除組織。當您刪除組織時，會刪除組織內的所有空間、應用程式及服務。 
 
 **附註**：刪除作業無法回復。您會遺失與組織相關聯的所有應用程式和服務。
 
@@ -141,7 +141,7 @@ lastupdated: "2017-03-03"
 ## 管理配額
 {: #managequota}
 
-身為 {{site.data.keyword.Bluemix_notm}} 帳戶擁有者或組織管理員，您可以檢視針對組織所使用及配置的配額。此配額代表建立組織時指派給組織的資源限制。根據您具有的是試用帳戶還是可入帳帳戶，組織可用的資源會不同。組織空間中的任何應用程式或服務都會影響已配置配額的使用。
+身為 {{site.data.keyword.Bluemix_notm}} 帳戶擁有者或組織管理員，您可以檢視針對組織所使用及配置的配額。此配額代表建立組織時指派給組織的資源限制。視您具有試用帳戶或計費帳戶而定，組織可用的資源會不同。組織空間中的任何應用程式或服務都會影響已配置配額的使用。
 
 若要檢視針對組織所使用及配置的配額，請完成下列步驟：
 
@@ -150,12 +150,12 @@ lastupdated: "2017-03-03"
 3. 按一下**編輯組織**。
 4. 如果您的空間定義在多個地區中，請選取您要檢視的特定地區。
 5. 按一下**配額**。 
-6. 預設會開啟 **Cloud Foundry** 配額頁面。您可以檢視下列資源的配額詳細資料：
+6. 依預設，會開啟 **Cloud Foundry** 配額頁面。您可以檢視下列資源的配額詳細資料：
  * 記憶體
  * 服務
  * 方案
  * 價格
-7. 按一下**容器**，以檢視已使用及可用的容器配額配置。容器配置會根據定價方案而不同。您可以檢視下列資源的配額詳細資料：
+7. 按一下**容器**，以檢視已使用及可用的容器配額配置。容器配置會視定價方案而改變。您可以檢視下列資源的配額詳細資料：
  * 記憶體
  * 公用 IP
  * 檔案共用
@@ -163,7 +163,7 @@ lastupdated: "2017-03-03"
 
 **附註：**{{site.data.keyword.Bluemix_notm}} 雪梨地區尚無法使用容器。 
 
-如需容器的相關資訊，請參閱「容器」文件中的[配額](/docs/containers/container_planning_org_ov.html#container_planning_quota)。
+如需容器的相關資訊，請參閱「容器」文件中的[配額](/docs/containers/container_planning.html#container_planning_quota)。
 若要變更配置給組織的配額，您必須開啟支援問題單。如需開啟支援問題單的相關資訊，請參閱[取得客戶支援](/docs/support/index.html#contacting-support)。 
 
 ## 管理網域

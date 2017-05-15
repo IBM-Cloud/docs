@@ -66,7 +66,7 @@
 	}, {
 		"title": "서비스 가용성",
 		"description": "서비스 유형 및 가용성에 대해 학습합니다.",
-		"href": "services/index.html"
+		"href": "services/services_region.html"
 	}, {
 		"title": "앱 관리",
 		"description": "Bluemix 사용자 인터페이스의 대시보드를 사용하여 앱과 서비스를 보고 관리할 수 있습니다.",
@@ -77,6 +77,9 @@
 		"description": "애플리케이션 사용량과 데이터 플로우 정보를 통해 배치 상태를 더 잘 이해할 수 있습니다.",
 		"img": "homepage/images/monitor_log.svg",
 		"href": "monitor_log/monitoringandlogging.html"
+	}, {
+		"title": "API 관리",
+		"href": "apis/management/index.html"
 	}, {
 		"title": "Bluemix 보안",
 		"description": "Bluemix가 어떻게 기능, 인프라, 운영 및 물리적 보안을 제공하는지 알아봅니다.",
@@ -118,4 +121,6 @@
 
     }]
   }
+
+
 

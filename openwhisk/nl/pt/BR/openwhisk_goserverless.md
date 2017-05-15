@@ -7,7 +7,6 @@ lastupdated: "2017-03-16"
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -18,10 +17,10 @@ lastupdated: "2017-03-16"
 O [Serverless Framework](https://serverless.com/) é uma estrutura de software livre
 para construir aplicativos sem servidor. Usando um arquivo manifest simples, os desenvolvedores podem
 definir funções sem servidor, conectá-las a origens de eventos e declarar serviços em nuvem necessários pelo seu
-aplicativo. A estrutura manipula a implementação desses aplicativos sem servidor nos provedores em nuvem.
-Ela também permite que os desenvolvedores monitorem serviços em produção, atualizações de apresentação e
+aplicativo. A estrutura manipula a implementação desses aplicativos sem servidor nos provedores em nuvem. Ela também permite que os desenvolvedores monitorem serviços em produção, atualizações de apresentação e
 ajudem nos problemas de depuração. Ela também possui um ecossistema vibrante de plug-ins de terceiros para
-estender a funcionalidade da estrutura. É aí que entra o OpenWhisk. {:shortdesc}
+estender a funcionalidade da estrutura. É aí que entra o OpenWhisk. 
+{:shortdesc}
 
 O OpenWhisk tem [seu próprio
 plug-in de provedor para o Serverless Framework](https://github.com/serverless/serverless-openwhisk). Os desenvolvedores que usam o Serverless

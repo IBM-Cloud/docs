@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2017
 
-lastupdated: "2016-10-13"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -34,15 +34,15 @@ Cloud Foundry 應用程式會使用 Cloud Foundry 日誌聚集器，從應用程
 vCPU | 19 | 57 |
 記憶體 | 80 GB | 240 GB |
 本端儲存空間 | 2.98 TB | 8.94 TB |
-{: caption="表 1. {{site.data.keyword.Bluemix_local_notm}} 的記載硬體需求" caption-side="top"}
+{: caption="表 1. {{site.data.keyword.Bluemix_local_notm:}} 的記載硬體需求" caption-side="top"}
 
 ## 設定
 
-在「{{site.data.keyword.Bluemix}} 專用」和「{{site.data.keyword.Bluemix}} 本端」中，對於所有應用程式，日誌預設為作用中。若要檢視讀取標準日誌的相關資訊，請參閱「Cloud Foundry 上執行之應用程式的記載」。此外，也可在「{{site.data.keyword.Bluemix}} 專用」和「{{site.data.keyword.Bluemix}} 本端」環境中啟用進階記載。
+在「{{site.data.keyword.Bluemix}} 專用」和「{{site.data.keyword.Bluemix}} 本端」中，對於所有應用程式，日誌依預設為作用中。若要檢視讀取標準日誌的相關資訊，請參閱「Cloud Foundry 上執行之應用程式的記載」。此外，也可在「{{site.data.keyword.Bluemix}} 專用」和「{{site.data.keyword.Bluemix}} 本端」環境中啟用進階記載。
 
 ## 日誌保留
 
-在「{{site.data.keyword.Bluemix}} 專用」和「{{site.data.keyword.Bluemix}} 本端」的 Cloud Foundry 應用程式中，日誌資料預設會儲存 30 天。
+在「{{site.data.keyword.Bluemix}} 專用」和「{{site.data.keyword.Bluemix}} 本端」的 Cloud Foundry 應用程式中，日誌資料依預設會儲存 30 天。
 
 ## 檢視 {{site.data.keyword.Bluemix}} 專用和 {{site.data.keyword.Bluemix}} 本端中 Cloud Foundry 應用程式的日誌
 {: #dedicated_apps_ml_logs_dash}
@@ -53,8 +53,8 @@ vCPU | 19 | 57 |
 若要檢視您的應用程式日誌，請遵循下列步驟。
 1. 選取執行中應用程式。
 2. 按一下**日誌**。在**日誌**視圖中，您可以檢視來自執行中應用程式的日誌。
-4. 按一下**進階視圖**按鈕。**進階視圖**會使用 Kibana 顯示更詳細的日誌視圖。Kibana 是一種視覺化工具，其會使用日誌及時間戳記資料來建立自訂視覺化。如需使用進階視圖的相關資訊，請參閱 [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html) 文件。
+4. 按一下**進階視圖**按鈕。**進階視圖**會使用 Kibana 顯示更詳細的日誌視圖。Kibana 是一種視覺化工具，其會使用日誌及時間戳記資料來建立自訂視覺化。如需使用進階視圖的相關資訊，請參閱 [Kibana User Guide ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.elastic.co/guide/en/kibana/4.1/index.html){: new_window}。
 
-接下來，您可以自訂 Kibana 儀表板。如需相關資訊，請參閱[自訂 Kibana 儀表板中的日誌顯示方式](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_dash_logs_custom)。
+接下來，您可以自訂 Kibana 儀表板。如需相關資訊，請參閱[使用 Kibana 執行進階日誌分析](../kibana4/analyzing_logs_Kibana.html#analyzing_logs_Kibana)。
 
 <!-- audience blue staging only end comment -->

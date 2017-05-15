@@ -66,7 +66,7 @@
 	}, {
 		"title": "Serviceverfügbarkeit",
 		"description": "Informationen zu Servicetypen und Serviceverfügbarkeit.",
-		"href": "services/index.html"
+		"href": "services/services_region.html"
 	}, {
 		"title": "Apps verwalten",
 		"description": "Verwenden Sie das Dashboard in der Bluemix-Benutzerschnittstelle zum Anzeigen und Verwalten Ihrer Apps und Services.",
@@ -77,6 +77,9 @@
 		"description": "Befolgen Sie die Anwendungsnutzung und den Datenfluss, um ein besseres Verständnis Ihrer Implementierung zu erlangen.",
 		"img": "homepage/images/monitor_log.svg",
 		"href": "monitor_log/monitoringandlogging.html"
+	}, {
+		"title": "APIs verwalten",
+		"href": "apis/management/index.html"
 	}, {
 		"title": "Bluemix-Sicherheit",
 		"description": "Erfahren Sie, wie Bluemix funktionelle, Infrastruktur-, Betriebs- und physische Sicherheit bereitstellt.",

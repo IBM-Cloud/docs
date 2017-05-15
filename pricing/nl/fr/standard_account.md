@@ -44,7 +44,7 @@ essentielles liées au compte standard {{site.data.keyword.Bluemix_notm}}.
 | Vous pouvez accéder aux plans Lite gratuits pour Cloudant NoSQL DB et Internet of Things Platform, avec davantage de services à venir. |
 | Vos applications passent en veille au bout de dix jours d'inactivité en termes de développement. |
 | Vos instances de service sont supprimées au bout de 30 jours d'inactivité. |
-{:caption="Table 1. What's new in a Standard account" caption-side="top"}
+{:caption="Tableau 1. Quelles sont les nouveautés du compte standard ?" caption-side="top"}
 
 |Qu'est-ce qui ne change pas quand un compte d'évaluation est converti ? | 
 |-----------------|
@@ -52,7 +52,7 @@ essentielles liées au compte standard {{site.data.keyword.Bluemix_notm}}.
 |Les instances Lite de Cloudant NoSQL DB et d'Internet of Things Platform. Il est possible de transférer une instance Lite pour chacun de ces services vers votre nouveau compte. |
 |Votre organisation, vos espaces et les paramètres d'accès des membres d'équipe associés restent les mêmes. Vous pouvez transférer une organisation vers votre nouveau compte. |
 |Le niveau de support {{site.data.keyword.Bluemix_notm}} reste le même. |
-{:caption="Table 2. What's not changing" caption-side="top"}
+{:caption="Tableau 2. Qu'est-ce qui ne change pas ?" caption-side="top"}
 
 **Remarque :** si votre compte d'évaluation n'est pas converti, un message d'explication s'affiche. Votre compte d'évaluation comporte peut-être plusieurs organisations ou des applications qui ne peuvent pas être
 transférées. Effectuez l'action appropriée, puis faites une nouvelle tentative

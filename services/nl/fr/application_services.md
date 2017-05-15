@@ -26,4 +26,4 @@ aux applications précisément et réévaluez automatiquement la charge de trava
 fonctions d'application dans des clouds et sur des plateformes sur site en conservant des services cohérents. | Créez la logique métier séparément de l'application afin de faciliter la modification des règles métier et de la logique, et permettre la capture codifiée des
 règles métier, des pratiques et des réglementations. Exprimez facilement la logique métier à l'aide de règles métier afin d'automatiser les décisions tout en
 conservant l'expertise de domaine.
-{: caption="Table 1. Options for using application services" caption-side="top"}
+{: caption="Tableau 1. Options d'utilisation des services d'application" caption-side="top"}

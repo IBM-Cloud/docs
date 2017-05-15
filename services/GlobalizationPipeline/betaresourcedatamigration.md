@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-10-14"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # Migrating resource data from beta version
 {: #globalizationpipeline_betaresourcedatamigration}
-
-*Last updated: 14 Oct 2016*
-{: .last-updated}
 
 The beta version of {{site.data.keyword.GlobalizationPipeline_full}} will be terminated after a certain period after the release of the GA version. User data in beta instances will not be moved to GA service instances. To keep the data after GA, you can export resource data into files, then import to the new instance. Please note that you cannot perform this operation using the service dashboard. Also, exporting resource data into one of resource file format will not preserve other metadata associated with the resource entries.
 

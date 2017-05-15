@@ -2,7 +2,7 @@
 
 copyright:
   years:  2017
-lastupdated: "2017-04-17"
+lastupdated: "2017-05-08"
 
 ---
 {:new_window: target="_blank"}
@@ -27,7 +27,7 @@ To use {{site.data.keyword.appid_short_notm}} with a local development server, y
 * APIStrategy: `oauthServerUrl`
 * WebAppStrategy: tenantId, clientId, secret, oauthServerUrl, redirectUri
 
-Set your 'redirectUri' attribute to your localhost app port with the callback path, i.e.: `http://localhost:<port>/callback`. The callback endpoint finishes the authorization process.
+Set your 'redirectUri' attribute to your localhost app port with the callback path. For example: `http://localhost:<port>/callback`. The callback endpoint finishes the authorization process.
 
 To get your service credentials, complete the following steps:
 

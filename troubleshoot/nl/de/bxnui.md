@@ -20,8 +20,7 @@ Wenn Sie eine Fehlernachricht von {{site.data.keyword.Bluemix}} empfangen, könn
 {:shortdesc}
 
 ## BXNUI0001E
-**Nachricht**: Die Seite wurde nicht geladen, weil von
-Bluemix nicht erkannt wurde, ob eine Sitzung vorhanden ist. 
+**Nachricht**: Die Seite wurde nicht geladen, weil von Bluemix nicht erkannt wurde, ob eine Sitzung vorhanden ist. 
 
 Anweisungen zum Beheben dieses Problems finden Sie im [Thema zur Fehlerbehebung](https://www.{DomainName}/docs/troubleshoot/accessing.html#tr_err){: new_window}.
 <!-- BXNUI0002E to be deleted -->
@@ -30,17 +29,12 @@ Anweisungen zum Beheben dieses Problems finden Sie im [Thema zur Fehlerbehebung]
 ## BXNUI0004E
 **Nachricht**: Die App '{0}' wurde nicht gelöscht, da beim Kontaktieren von Cloud Foundry ein Problem auftrat. 
 
-Versuchen Sie es später erneut. Wird diese Nachricht erneut angezeigt, rufen Sie die [Bluemix-Statusseite](https://developer.ibm.com/bluemix/support/#status){: new_window} auf, um zu prüfen, ob für einen Service oder eine Komponente ein Problem vorliegt. Wenn
-das Problem bestehen bleibt, wenden Sie
-sich an den [IBM
-Bluemix Support](http://ibm.biz/bluemixsupport){: new_window}.
+Versuchen Sie es später erneut. Wird diese Nachricht erneut angezeigt, rufen Sie die [Bluemix-Statusseite](https://developer.ibm.com/bluemix/support/#status){: new_window} auf, um zu prüfen, ob für einen Service oder eine Komponente ein Problem vorliegt. Wenn das Problem bestehen bleibt, wenden Sie sich an den [IBM Bluemix Support](http://ibm.biz/bluemixsupport){: new_window}.
 
 ## BXNUI0005E
 **Nachricht**: Die App '{0}' wurde nicht erstellt, da beim Kontaktieren von Cloud Foundry ein Problem auftrat. 
 
-Versuchen Sie es später erneut. Wird diese Nachricht erneut angezeigt, rufen Sie die [Bluemix-Statusseite](https://developer.ibm.com/bluemix/support/#status){: new_window} auf, um zu prüfen, ob für einen Service oder eine Komponente ein Problem vorliegt. Wenn das Problem bestehen bleibt, wenden Sie sich an den
-[IBM Bluemix
-Support](http://ibm.biz/bluemixsupport){: new_window}.
+Versuchen Sie es später erneut. Wird diese Nachricht erneut angezeigt, rufen Sie die [Bluemix-Statusseite](https://developer.ibm.com/bluemix/support/#status){: new_window} auf, um zu prüfen, ob für einen Service oder eine Komponente ein Problem vorliegt. Wenn das Problem bestehen bleibt, wenden Sie sich an den [IBM Bluemix Support](http://ibm.biz/bluemixsupport){: new_window}.
 
 ## BXNUI0006E
 **Nachricht**: Die App '{0}' wurde nicht gestoppt, da beim Kontaktieren von Cloud Foundry ein Problem auftrat. 

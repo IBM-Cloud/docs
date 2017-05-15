@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-10-14"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # 베타 버전에서 리소스 데이터 마이그레이션
 {: #globalizationpipeline_betaresourcedatamigration}
-
-*마지막 업데이트 날짜: 2016년 10월 14일*
-{: .last-updated}
 
 {{site.data.keyword.GlobalizationPipeline_full}}의 베타 버전은 GA 버전의 릴리스 이후 일정 기간이 지나면 종료됩니다. 베타 인스턴스의 사용자 데이터는 GA 서비스 인스턴스로 이동하지 않습니다. GA 이후 데이터를 보관하려면 리소스 데이터를 파일로 내보낸 후 새 인스턴스로 가져올 수 있습니다. 참고로, 서비스 대시보드를 통해 이 오퍼레이션을 수행할 수 없습니다. 또한 리소스 데이터를 리소스 파일 형식 중 하나로 내보내도 리소스 항목과 연관된 다른 메타데이터가 유지되지 않습니다.
 

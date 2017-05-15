@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-04-17"
+lastupdated: "2017-05-08"
 
 ---
 {:new_window: target="_blank"}
@@ -22,6 +22,6 @@ When the {{site.data.keyword.appid_short}} service is configured with two or mor
 2. Select the **Login Customization** section, where you can modify the appearance of the login widget to align with your company's brand.
 3. Upload your company's logo by selecting a PNG or JPG file from your local system. The recommended image size is 320 x 320 pixels. The maximum file size is 100 Kb.
 4. Select a header color for the widget from the color picker, or enter the hex code for another color.
-5. Inspect the preview pane on the right of the screen, and click **Save Changes** when you are happy with your customizations. A confirmation message is displayed.
+5. Inspect the preview pane, and click **Save Changes** when you are happy with your customizations. A confirmation message is displayed.
 
 You are not required to rebuild your application. The image is stored in the {{site.data.keyword.appid_short}} database and is displayed at the next login.

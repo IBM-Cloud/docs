@@ -15,19 +15,19 @@ lastupdated: "2016-06-20"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# 適用於 {{site.data.keyword.Bluemix_notm}} CLI 的 {{site.data.keyword.vpn_short}} 外掛程式
+# 適用於 {{site.data.keyword.Bluemix_notm}} CLI 的 VPN 外掛程式
 
 *版本：*1.4.0
 
-您可以使用指令行介面 (CLI) 來配置及管理 {{site.data.keyword.vpn_full}} 服務。{{site.data.keyword.vpn_short}} CLI 外掛程式有兩個版本：一個適用於 Cloud Foundry CLI 外掛程式，另一個適用於 {{site.data.keyword.Bluemix}} CLI 外掛程式。這兩個版本的外掛程式都提供相同的功能。
+您可以使用指令行介面 (CLI) 來配置及管理 {{site.data.keyword.vpn_full}} 服務。VPN CLI 外掛程式有兩個可用的版本：一個是與 Cloud Foundry CLI 外掛程式搭配使用，另一個是與 {{site.data.keyword.Bluemix}} CLI 外掛程式搭配使用。這兩個版本的外掛程式都提供相同的功能。
 {:shortdesc}
 
-{{site.data.keyword.vpn_short}} 外掛程式適用於 Windows、MAC 和 Linux 作業系統。請確定您是使用適用的版本。
+VPN 外掛程式適用於 Windows、MAC 及 Linux 作業系統。請確定您是使用適用的版本。
 
-下列指示適用於 {{site.data.keyword.Bluemix_notm}} CLI 外掛程式。若要將此外掛程式與 Cloud Foundry (cf) CLI 外掛程式搭配使用，請參閱[適用於 cf CLI 的 {{site.data.keyword.vpn_short}} CLI 外掛程式](../vpn/index.html)。
+下列指示適用於 {{site.data.keyword.Bluemix_notm}} CLI 外掛程式。若要將此外掛程式與 Cloud Foundry (cf) CLI 外掛程式搭配使用，請參閱[適用於 cf CLI 的 VPN CLI 外掛程式](../vpn/index.html)。
 
 
-下列資訊列出 Bluemix CLI {{site.data.keyword.vpn_short}} 外掛程式支援的所有指令，並包含其名稱、選項、用法、必要條件、說明及範例。請參閱[延伸您的 Bluemix 指令行介面](../../index.html#cli_bluemix_ext)，以瞭解如何安裝 VPN 外掛程式。
+下列資訊列出 Bluemix CLI VPN 外掛程式支援的所有指令，並且包括其名稱、選項、用法、必要條件、說明及範例。請參閱[延伸您的 Bluemix 指令行介面](../../index.html#cli_bluemix_ext)，以瞭解如何安裝 VPN 外掛程式。
 
 **附註：***必要條件* 列出使用指令之前需要哪些動作。必要條件可能包括下列一個以上的動作：
 <dl>

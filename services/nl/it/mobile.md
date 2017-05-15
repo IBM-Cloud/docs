@@ -20,4 +20,4 @@ multipiattaforma, native o ibride.
 Informazioni approfondite senza precedenti sulle esperienze degli utenti | Preserva la sicurezza delle applicazioni | Ridimensiona e sincronizza i dati
 ---- | ---- | ----
 Ottieni un feedback articolato e dettagliato con la riproduzione delle operazioni eseguite dall'utente. Migliora continuamente le applicazioni con le attività di analisi sulle prestazioni in tempo reale. | Identifica i problemi di sicurezza prima che lo facciano gli utenti. Gestisci l'accesso degli utenti. Assicurati che le comunicazioni con i sistemi aziendali siano protette. | Mantieni sincronizzati i dati di tutti i tuoi dispositivi e tienili offline. Non è necessario ottimizzare il database. Funziona.
-{: caption="Table 1. Benefits of using mobile services" caption-side="top"}
+{: caption="Tabella 1. Vantaggi dell'utilizzo dei servizi mobili" caption-side="top"}

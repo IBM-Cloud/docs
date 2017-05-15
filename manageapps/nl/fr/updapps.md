@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-08-25"
+lastupdated: "2017-04-25"
 
 ---
 
@@ -37,23 +37,18 @@ l'interface utilisateur {{site.data.keyword.Bluemix_notm}} ou l'interface de lig
 
   1. Créez un domaine personnalisé pour votre organisation.
 
-	1. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![Icône Avatar](../icons/i-avatar-icon.svg)
-&gt; **Gérer les organisations** &gt; **Afficher les détails** pour votre organisation &gt;
-**Editer l'organisation** &gt;
-**Domaines**.
+	1. Accédez à **Gérer** &gt; **Compte** &gt; **Organisations** &gt; **Afficher les détails** pour votre organisation, puis cliquez sur **Editer l'organisation** &gt; **Domaines**.
 
-	2. Dans l'onglet **Domaines**, cliquez sur **Ajouter un domaine**, entrez votre nom de domaine personnalisé et
-cliquez sur **Sauvegarder**.
+	2. Sur l'onglet **Domaines**, cliquez sur **Ajouter un domaine**, entrez votre nom de domaine personnalisé, puis cliquez sur **Sauvegarder**.
 
 	**Remarque** : Par exemple, vous pouvez utiliser `mon_entreprise.com` pour associer la route `www.mon_entreprise.com` à votre application.
 Vous pouvez aussi utiliser `exemple.mon_entreprise.com` pour associer la route `www.exemple.mon_entreprise.com` à votre application.
 
   2. Ajoutez la route avec le domaine personnalisé à une application.
 
-    1. Dans la barre de menu, sélectionnez **Console** dans le menu déroulant, puis cliquez sur la ligne de l'application à
-laquelle ajouter la route. La page **Vue d'ensemble** s'affiche.
+    1. Cliquez sur l'icône **Menu** ![Icône de menu](../icons/icon_hamburger.svg) &gt; **Tableau de bord**, puis cliquez sur la ligne de l'application à laquelle ajouter la route. La page **Vue d'ensemble** s'affiche.
 
-	2. Dans le menu **Afficher l'application**, sélectionnez **Editer les routes et l'accès**.
+	2. Dans le menu **Routes**, sélectionnez **Editer les routes**.
 
 	3. Cliquez sur **Ajouter une route** et spécifiez la route à utiliser pour l'application.
 	4. Cliquez sur **Sauvegarder**.
@@ -89,7 +84,7 @@ laquelle ajouter la route. La page **Vue d'ensemble** s'affiche.
 
     *mon_domaine*
 
-    	Nom de votre domaine personnalisé
+    	Nom de votre domaine personnalisé, par exemple, `www.mydomain.mybluemix.net`.
 
     *nom_hôte*
 
@@ -112,6 +107,7 @@ votre application. Utilisez les noeuds finaux de région suivants pour fournir l
     * SUD DES ETATS-UNIS : `secure.us-south.bluemix.net`
     * EUROPE-ROYAUME-UNI : `secure.eu-gb.bluemix.net`
     * AUSTRALIE-SYDNEY : `secure.au-syd.bluemix.net`
+    * EUROPE-ALLEMAGNE : `secure.eu-de.bluemix.net`
 
 Depuis un navigateur ou l'interface de ligne de commande, entrez l'adresse URL suivante pour accéder à l'application mon_app :
 

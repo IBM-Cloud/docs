@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-04"
+lastupdated: "2017-04-21"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -32,7 +31,7 @@ function main({name}) {
 ```
 {: codeblock}  
 
-Sie können nun eine *Webaktion* `hello` im Paket `demo` für den Namensbereich `guest` mithilfe des CLI-Flags `--web` mit dem Wert `true` oder `yes` erstellen: 
+Sie können nun eine *Webaktion* `hello` im Paket `demo` für den Namensbereich `guest` mithilfe des CLI-Flags `--web` mit dem Wert `true` oder `yes` erstellen:
 ```
 wsk package create demo
 ```
@@ -48,11 +47,11 @@ Berechtigungsnachweise erfordert. Eine Webaktion kann mit einer URL aufgerufen w
 
 *Der vollständig qualifizierte Name der Aktion muss den entsprechenden Paketnamen enthalten, der 'default' lautet, wenn die Aktion nicht in einem benannten Paket enthalten ist.*
 
-Ein Beispiel ist `guest/demo/hello`. Der letzte Teil des URI wird als `Erweiterung` bezeichnet und ist in der Regel `.http`, obwohl auch andere Werte zulässig sind, wie später erläutert wird. Der API-Pfad für die Webaktion kann mit `curl` oder `wget` ohne API-Schlüssel verwendet werden. Er kann sogar direkt in den Browser eingegeben werden.
+Ein Beispiel ist `guest/demo/hello`. Der API-Pfad für die Webaktion kann mit `curl` oder `wget` ohne API-Schlüssel verwendet werden. Er kann sogar direkt in den Browser eingegeben werden.
 
-Probieren Sie den API-Pfad [https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.http?name=Jane](https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.http?name=Jane) in Ihrem Web-Browser aus. Oder versuchen Sie, die Aktion über `curl` aufzurufen:
+Versuchen Sie, den Pfad [https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello?name=Jane](https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello?name=Jane) in Ihrem Web-Browser zu öffnen. Oder versuchen Sie, die Aktion über `curl` aufzurufen:
 ```
-curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.http?name=Jane
+curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello?name=Jane
 ```
 {: pre}
 
@@ -92,9 +91,9 @@ function main() {
 ```
 {: codeblock}  
 
-Oder `application/json`:
+Or returns `application/json`:
 ```javascript
-function main(params) {
+function main(params) { 
     return {
         statusCode: 200,
         headers: { 'Content-Type': 'application/json' },
@@ -104,7 +103,7 @@ function main(params) {
 ```
 {: codeblock}  
 
-Es ist wichtig, die [Antwortgrößenbegrenzung](./openwhisk_reference.html) für Aktionen zu beachten, da eine Antwort, die die vordefinierten Systembegrenzungen überschreitet, fehlschlägt. Große Objekte sollten nicht inline über OpenWhisk gesendet werden, sondern zum Beispiel in einen Objektspeicher verlagert werden.
+It is important to be aware of the [Antwortgrößenbegrenzung](./openwhisk_reference.html) für Aktionen zu beachten, da eine Antwort, die die vordefinierten Systembegrenzungen überschreitet, fehlschlägt. Große Objekte sollten nicht inline über OpenWhisk gesendet werden, sondern zum Beispiel in einen Objektspeicher verlagert werden.
 
 ## HTTP-Anforderungen mit Aktionen verarbeiten
 {: #openwhisk_webactions_http}
@@ -290,7 +289,7 @@ Für den Aufruf einer Webaktion ist generell eine Inhaltserweiterung erforderlic
 
 ## Geschützte Parameter
 
-Aktionsparameter werden geschützt und als unveränderlich behandelt. Parameter werden automatisch als endgültig festgelegt, wenn Webaktionen aktiviert werden. 
+Aktionsparameter werden geschützt und als unveränderlich behandelt. Parameter werden automatisch als endgültig festgelegt, wenn Webaktionen aktiviert werden.
 
 ```
  wsk action create /guest/demo/hello hello.js \
@@ -302,7 +301,7 @@ Das Ergebnis dieser Änderungen besteht darin, dass das Element `name` an `Jane`
 
 ## Webaktionen inaktivieren
 
-Zum Inaktivieren einer Webaktion, sodass sie nicht mehr über die Web-API (`https://openwhisk.ng.bluemix.net/api/v1/web/`) aufgerufen werden kann, übergeben Sie den Wert `false` oder `no` an das Flag `--web`, wenn Sie eine Aktion über die Befehlszeilenschnittstelle aktualisieren. 
+Zum Inaktivieren einer Webaktion, sodass sie nicht mehr über die Web-API (`https://openwhisk.ng.bluemix.net/api/v1/web/`) aufgerufen werden kann, übergeben Sie den Wert `false` oder `no` an das Flag `--web`, wenn Sie eine Aktion über die Befehlszeilenschnittstelle aktualisieren.
 
 ```
  wsk action update /guest/demo/hello hello.js --web false
@@ -340,7 +339,7 @@ In diesem Fall ist zu beachten, dass der JSON-Inhalt mit Base64 codiert ist, wei
 
 ### Verarbeitung von unaufbereiteten HTTP-Anforderungen aktivieren
 
-Webaktionen für unaufbereitete HTTP-Anforderungen werden über das Flag `--web` mit dem Wert `raw` aktiviert. 
+Webaktionen für unaufbereitete HTTP-Anforderungen werden über das Flag `--web` mit dem Wert `raw` aktiviert.
 
 ```
  wsk action create /guest/demo/hello hello.js --web raw
@@ -348,7 +347,7 @@ Webaktionen für unaufbereitete HTTP-Anforderungen werden über das Flag `--web`
 
 ### Verarbeitung von unaufbereiteten HTTP-Anforderungen inaktivieren
 
-Die Verarbeitung von unaufbereiteten HTTP-Anforderungen kann inaktiviert werden, indem der Wert `false` oder `no` an das Flag `--web` übergeben wird. 
+Die Verarbeitung von unaufbereiteten HTTP-Anforderungen kann inaktiviert werden, indem der Wert `false` oder `no` an das Flag `--web` übergeben wird.
 
 ```
  wsk update create /guest/demo/hello hello.js --web false
@@ -358,7 +357,7 @@ Die Verarbeitung von unaufbereiteten HTTP-Anforderungen kann inaktiviert werden,
 
 Wenn die Verarbeitung von unaufbereiteten HTTP-Anforderungen verwendet wird, wird Hauptteilinhalt von `__ow_body` in Base64-Codierung codiert, wenn die Inhaltstyp der Anforderung binär ist.
 Die nachfolgenden Beispiele für Funktionen demonstrieren, wie der Hauptteilteilinhalt in Node, Python und Swift decodiert werden kann. Speichern Sie einfach die unten gezeigte
-Methode in einer Datei, erstellen Sie eine Webaktion mit Verarbeitung von unaufbereiteten HTTP-Anforderungen unter Verwendung des gespeicherten Artefakts und rufen Sie die Webaktion auf. 
+Methode in einer Datei, erstellen Sie eine Webaktion mit Verarbeitung von unaufbereiteten HTTP-Anforderungen unter Verwendung des gespeicherten Artefakts und rufen Sie die Webaktion auf.
 
 #### Node
 
@@ -407,7 +406,7 @@ func main(args: [String:Any]) -> [String:Any] {
 ```
 {: codeblock}
 
-Beispiel: Speichern Sie die Node-Funktion in einer Datei mit dem Namen `decode.js` und führen Sie die folgenden Befehle aus: 
+Beispiel: Speichern Sie die Node-Funktion in einer Datei mit dem Namen `decode.js` und führen Sie die folgenden Befehle aus:
 ```
  wsk action create decode decode.js --web raw
 ```

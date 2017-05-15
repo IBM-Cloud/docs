@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-04-18"
 
 ---
 
@@ -78,11 +78,7 @@ essa autoridade. Depois de criar o CSR, é possível gerar seu certificado SSL e
 comunicação a seu aplicativo a fim de evitar espionagem, violação e falsificação de
 mensagens.
 
-Para cada organização no {{site.data.keyword.Bluemix_notm}} com
-um proprietário da conta que possua um plano Pague à medida que usar ou de Assinatura ativo,
-você tem permissão para fazer quatro uploads de certificado grátis. Para cada organização
-com um proprietário da conta que possua uma conta para teste grátis, você tem permissão
-para fazer um upload de certificado grátis.
+Para cada organização no {{site.data.keyword.Bluemix_notm}} com um proprietário da conta que tem um plano Pague à medida que usar ou de Assinatura, você tem permissão para quatro uploads de certificado. Para cada organização com um proprietário da conta que possua uma conta para teste grátis, deve-se fazer upgrade de sua conta para fazer upload de um certificado.
 
 Antes que seja possível fazer upload dos certificados, deve-se criar uma
 solicitação de assinatura de certificado. Consulte [Criando certificate signing requests](#ssl_csr).
@@ -92,14 +88,16 @@ Quando você usa um domínio customizado, para entregar o certificado SSL, use o
   * US-South: secure.us-south.bluemix.net
   * EU-GB: secure.eu-gb.bluemix.net
   * AU-SYD: secure.au-syd.bluemix.net
+  * EU-DE: secure.eu-de.bluemix.net
 
 
 Para fazer upload de um certificado para seu aplicativo:
 
-1. Crie uma rota ou edite uma rota existente selecionando **Editar
-rotas e acesso de app** no menu do aplicativo.
+1. Acesse seu Painel.
 
-2. No diálogo Editar rotas e acesso de app, clique em **Gerenciar domínios**.
+2. Selecione o nome para seu app para abrir a visualização de detalhes do app.
+
+3. Selecione o menu suspenso **Rotas** e, em seguida, selecione **Gerenciar domínios**.
 
 3. Para seu domínio customizado, clique em **Fazer upload de
 certificado**.
@@ -173,4 +171,4 @@ tipos de certificados a seguir são suportados no
 	  * DER (.der ou .cer )
       * PKCS #7 (p7b, p7r, spc)
 
-Para excluir um certificado ou substituir um certificado existente por um novo, acesse **Gerenciar organizações** > **Domínios** > **Visualizar certificado** para gerenciar seus certificados.
+Para excluir um certificado ou substituir um certificado existente por um novo, acesse **Gerenciar** > **Conta** > **Organizações**. Em seguida, clique em **Visualizar detalhes** > **Editar** > **Domínios** para excluir ou substituir um certificado para um domínio customizado.

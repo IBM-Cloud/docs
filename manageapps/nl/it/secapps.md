@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-04-18"
 
 ---
 
@@ -79,11 +79,7 @@ Puoi applicare un protocollo di sicurezza per garantire la riservatezza
 delle comunicazioni della tua applicazione in modo da prevenire l'intercettazione delle comunicazioni,
 la manomissione e la falsificazione dei messaggi.
 
-Per ogni organizzazione in {{site.data.keyword.Bluemix_notm}} con
-un proprietario di account che dispone di un piano di pagamento a consumo o di abbonamento, hai diritto
-al caricamento di quattro certificati gratuiti. Per ogni organizzazione
-con un proprietario di account che dispone di un account di prova gratuita, hai diritto al
-caricamento di un certificato gratuito.
+Per ogni organizzazione in {{site.data.keyword.Bluemix_notm}} con un proprietario di account che dispone di un piano di pagamento a consumo o di abbonamento, hai diritto al caricamento di quattro certificati. Per ogni organizzazione con un proprietario di account che dispone di un account di prova gratuita, devi aggiornare il tuo account per poter caricare un certificato.
 
 Prima di poter caricare i certificati, devi creare una
 richiesta di firma del certificato. Vedi [Creazione di richieste di firma del certificato](#ssl_csr).
@@ -93,14 +89,16 @@ Quando utilizzi un dominio personalizzato, per servire il certificato SSL, utili
   * Stati Uniti Sud: secure.us-south.bluemix.net
   * EUROPA-REGNO UNITO: secure.eu-gb.bluemix.net
   * AUSTRALIA-SYDNEY: secure.au-syd.bluemix.net
+  * EU-DE: secure.eu-de.bluemix.net
 
 
 Per caricare un certificato per la tua applicazione:
 
-1. Crea una rotta oppure modificane una esistente selezionando **Modifica
-rotta e accesso all'applicazione** dal menu dell'applicazione.
+1. Vai al Dashboard.
 
-2. Nella finestra di dialogo Modifica rotte e accesso all'applicazione, fai clic su **Gestisci domini**.
+2. Seleziona il nome della tua applicazione per visualizzarne la pagina dei dettagli.
+
+3. Seleziona l'elenco a discesa **Rotte** e fai clic su **Gestisci domini**.
 
 3. Per il tuo dominio personalizzato, fai clic su **Carica certificato**.
 
@@ -164,4 +162,4 @@ TLS. Per ulteriori informazioni, vedi la [sezione 7.4.2 del RFC 4346 ![icona lin
 	  * DER (.der o .cer )
       * PKCS #7 (p7b, p7r, spc)
 
-Per eliminare un certificato oppure sostituirne uno esistente con uno nuovo, vai in **Gestisci organizzazioni** > **Domini** > **Visualizza certificato** per gestire i tuoi certificati.
+Per eliminare un certificato oppure sostituirne uno esistente con uno nuovo, vai in **Gestisci** > **Account** > **Organizzazioni**. Fai quindi clic su **Visualizza dettagli** > **Modifica organizzazione** > **Domini** per eliminare o sostituire un certificato per un dominio personalizzato.

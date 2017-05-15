@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2017-04-11"
 
 
 ---
@@ -34,13 +34,13 @@ Par ailleurs, un éventail de services est disponible en tant que services de {{
 |Inclus | [Contextes d'exécution {{site.data.keyword.Bluemix_notm}}](/docs/cfapps/runtimes.html) | Utilisez des contextes d'exécution pour que votre application soit opérationnelle rapidement, sans qu'il soit nécessaire de configurer et de gérer des machines et des systèmes d'exploitation. Vous pouvez utiliser tous les contextes d'exécution {{site.data.keyword.Bluemix_notm}} dans votre instance {{site.data.keyword.Bluemix_notm}} locale.|
 |Inclus | [{{site.data.keyword.autoscaling}}](/docs/services/Auto-Scaling/index.html)| Augmentez ou diminuez dynamiquement la capacité de traitement de votre application en fonction de règles. Avec ce service, vous bénéficiez d'une utilisation illimitée dans votre environnement {{site.data.keyword.Bluemix}} local.|
 |Facultatif | [{{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} intègre {{site.data.keyword.APIM}} et IBM StrongLoop dans une offre unique qui fournit une solution complète pour la création, l'exécution, la gestion et l'application d'API et de microservices. |
-|Facultatif | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | Conteneurs Run Docker dans l'environnement {{site.data.keyword.Bluemix_notm}} local. Les conteneurs sont des objets logiciels virtuels qui incluent tous les éléments qu'une application a besoin d'exécuter. Un conteneur tire parti de l'isolation et de l'allocation des ressources, mais est plus portable et efficace que, par exemple, une machine virtuelle. Pour des informations sur la configuration matérielle requise, voir [IBM {{site.data.keyword.containershort}} dans les environnements {{site.data.keyword.Bluemix_notm}} dédié et local](/docs/containers/container_dl.html). |
+|Facultatif | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | Conteneurs Run Docker dans l'environnement {{site.data.keyword.Bluemix_notm}} local. Les conteneurs sont des objets logiciels virtuels qui incluent tous les éléments qu'une application a besoin d'exécuter. Un conteneur tire parti de l'isolation et de l'allocation des ressources, mais est plus portable et efficace que, par exemple, une machine virtuelle. Pour des informations sur la configuration matérielle requise, voir [IBM {{site.data.keyword.containershort}} dans les environnements {{site.data.keyword.Bluemix_notm}} dédié et local](/docs/containers/container_ov.html#container_dl). |
 |Facultatif | [{{site.data.keyword.datacshort}}](/docs/services/DataCache/index.html#data_cache) | Ce service fournit une grille de données en mémoire qui prend en charge des scénarios de mise en cache distribuée pour vos applications. Il inclut 50 Go de mémoire cache interne. |
 | Facultatif (bêta) | [Logging](/docs/monitoringandlogging/cfapps_ml_logs_dedicated_ov.html#container_ml_logs_dedicated_ov) | Fournit des journaux pour vos applications Cloud Foundry dans votre interface utilisateur {{site.data.keyword.Bluemix_notm}} et des journaux permettant une recherche et des tableaux de bord dans Kibana. |
 |Facultatif | [{{site.data.keyword.mobilepush}}](/docs/services/mobilepush/index.html) | {{site.data.keyword.mobilepush}} est un service que vous pouvez utiliser pour envoyer des notifications à un périphérique iOS ou Android. Les notifications peuvent être ciblées pour tous les utilisateurs d'application ou pour un ensemble spécifique d'utilisateurs et de périphériques à l'aide d'étiquettes. Vous pouvez administrer des périphériques, des étiquettes et des abonnements. Vous pouvez aussi utiliser un logiciel SDK (kit de développement de logiciels) et des API (interfaces de programme d'application) REST (Representational State Transfer) pour développer plus en détail vos applications client. |
 |Facultatif | [{{site.data.keyword.sescashort}}](/docs/services/SessionCache/index.html#session_cache) | Pour augmenter la redondance, {{site.data.keyword.sescashort}} fournit une réplique d'une session qu'il stocke en cache. Par conséquent, en cas de microcoupure ou d'indisponibilité, votre application client peut continuer à accéder à la session en cache. Le service prend en charge des scénarios de mise en cache de session pour les applications Web et mobiles. |
 |Facultatif | [{{site.data.keyword.iot_short}}](/docs/services/IoT/index.html) | Ce service permet à vos applications de communiquer et de consommer les données collectées par vos périphériques connectés, capteurs et passerelles. L'offre de base locale inclut un environnement initial permettant l'exécution d'une version privée d'IBM {{site.data.keyword.iot_short}} dans l'environnement local, avec une capacité de 100000 périphériques ou applications connectés simultanément et 1,6 To d'échange de données. |
-{: caption="Table 1. Local services and runtimes" caption-side="top"}
+{: caption="Tableau 1. Services et contextes d'exécution locaux" caption-side="top"}
 {: #table01}
 
 
@@ -55,7 +55,7 @@ Vous pouvez acquérir des composants facultatifs pour élargir la capacité de v
 |{{site.data.keyword.Bluemix_notm}} Data & Session Cache 50 GB capacity increase | Environnement permettant le déploiement et l'exécution d'instances Data Cache et Session Cache jusqu'à une capacité cumulée de 50 Go. |
 |{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} Local incremental increase | Environnement s'ajoutant à l'offre de service de base {{site.data.keyword.iot_short}} Local et permettant l'exécution d'une version privée d'{{site.data.keyword.iot_short}} dans l'environnement local, avec une capacité de 100000 périphériques ou applications connectés simultanément et 0,5 To d'échange de données. |
 |{{site.data.keyword.IBM_notm}} {{site.data.keyword.mobilepush}} Local add-on instance | Environnement permettant le déploiement et l'exécution d'une instance {{site.data.keyword.mobilepush}} avec la possibilité d'accepter 300 demandes supplémentaires par seconde. |
-{: caption="Table 2. Optional services components for purchase" caption-side="top"}
+{: caption="Tableau 2. Composants de services facultatifs pour achat" caption-side="top"}
 {: #table02}
 
 | **Nom ** | **Description** |
@@ -64,7 +64,7 @@ Vous pouvez acquérir des composants facultatifs pour élargir la capacité de v
 |Local Cloud Foundry runtimes 16 GB capacity increase  | Extension de l'environnement de contextes d'exécution Cloud Foundry pour fournir une capacité d'exécution supplémentaire de 16 Go. |
 |Local {{site.data.keyword.containerlong}} 16 GB capacity increase  | Extension de l'environnement {{site.data.keyword.containerlong}} pour fournir une capacité supplémentaire de 16 Go. |
 |Local {{site.data.keyword.containerlong}} 64 GB capacity  | Environnement {{site.data.keyword.containerlong}} avec capacité de 64 Go. |
-{: caption="Table 3. Optional platform add-on components for purchase" caption-side="top"}
+{: caption="Tableau 3. Composants de module complémentaire de plateforme facultatifs pour achat" caption-side="top"}
 {: #table03}
 
 **Remarque **: les composants {{site.data.keyword.Bluemix_notm}} Local peuvent indiquer une capacité configurée spécifique, par exemple en gigaoctets ou transactions par seconde. Comme la capacité effective concrète pour chaque configuration du service de cloud varie en fonction de nombreux facteurs, elle peut être supérieure ou inférieure à la capacité configurée.
@@ -126,7 +126,7 @@ Si vous disposez d'une instance privée d'un service {{site.data.keyword.Bluemix
 |{{site.data.keyword.iot_short}}		|Oui		|Oui		|Non|
 |{{site.data.keyword.weather_short}}		|Oui		|Oui		|Oui|
 |{{site.data.keyword.workloadscheduler}}	|Oui		|Oui		|Oui |
-{: caption="Table 4. Services available for syndication from {{site.data.keyword.Bluemix_notm}} Public par région" caption-side="top"}
+{: caption="Tableau 4. Services disponibles pour la syndication à partir de Bluemix Public par région" caption-side="top"}
 {: #table04}
 
 **Remarque** : les services tiers ne sont pas répertoriés dans le tableau. Consultez votre catalogue pour prendre connaissance des services tiers disponibles.
@@ -420,7 +420,7 @@ La phase de création permet d'établir l'environnement {{site.data.keyword.Blue
 |Réviser l'infrastructure physique | Réviser les locaux physiques qui hébergent les composants de la solution afin d'identifier d'éventuelles menaces et réviser les contrôles de sécurité pour la protection du centre de données. | Client |
 |Inspecter le logiciel de surveillance | Inspecter les composants de surveillance et de gestion tels que définis dans le plan d'escalade et d'identification des problèmes. | Client |
 |Inspecter le système d'exploitation | Vérifier que l'image de système d'exploitation satisfait les normes de conformité. {{site.data.keyword.IBM_notm}} fournit l'accès à l'image de système d'exploitation. | {{site.data.keyword.IBM_notm}} et le client partagent la responsabilité |
-{: caption="Table 5. Inception phase tasks" caption-side="top"}
+{: caption="Tableau 5. Tâches de la phase de lancement" caption-side="top"}
 
 Ensuite vient la phase de progression. Elle décrit la relation de collaboration qui existe entre vous et IBM. Les objectifs principaux de cette phase sont les suivants :
 
@@ -443,7 +443,7 @@ Ensuite vient la phase de progression. Elle décrit la relation de collaboration
 |Génération de rapports sur le statut, coordination de l'audit et réunions sur la conformité  | Assurer la génération de rapports sur le statut, la coordination d'audit externe et la représentation dans des réunions sur le statut des examens de conformité. | {{site.data.keyword.IBM_notm}} |
 |Attestation d'emploi et vérification des besoins d'affaires | Effectuer l'attestation d'emploi trimestrielle et la vérification des besoins d'affaires continus pour les interlocuteurs {{site.data.keyword.IBM_notm}} qui ont accès à l'environnement client. | {{site.data.keyword.IBM_notm}} |
 |Résolution des vulnérabilités en matière de sécurité | Résoudre les vulnérabilités signalées en matière de sécurité sur la plateforme. | {{site.data.keyword.IBM_notm}} |
-{: caption="Table 6. Progression phase tasks" caption-side="top"}
+{: caption="Tableau 6. Tâches de la phase de progression" caption-side="top"}
 
 L'étape finale d'achèvement représente la fin de la relation entre vous et {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}}. Les tâches principales de cette phase sont les suivantes :
 
@@ -457,7 +457,7 @@ L'étape finale d'achèvement représente la fin de la relation entre vous et {{
 |Mettre l'environnement hors service | Désactiver l'accès à l'environnement et les données d'identification. | {{site.data.keyword.IBM_notm}} et le client partagent la responsabilité |
 |Arrêter le relais | Mettre fin à la connexion de relais. | {{site.data.keyword.IBM_notm}} |
 |Recycler l'infrastructure | Recycler votre infrastructure en fonction du guide de bonnes pratiques de la société. | Client |
-{: caption="Table 7. Completion phase tasks" caption-side="top"}
+{: caption="Tableau 7. Tâches de la phase d'achèvement" caption-side="top"}
 
 
 ## Exigences de l'infrastructure {{site.data.keyword.Bluemix_local_notm}}
@@ -476,11 +476,11 @@ Vous trouverez ci-après les exigences relatives au type et à la taille du mat�
 <dd>
 ESXi est une couche de virtualisation qui s'exécute sur des serveurs physiques et qui permet l'abstraction du processeur, de la mémoire, du stockage et des ressources en plusieurs machines virtuelles. Choisissez la combinaison qui correspond aux nombres totaux de ressources ci-dessous, à la condition que le nombre minimal de coeurs physiques par couche ESXi soit huit. Les spécifications suivantes s'appliquent au contexte d'exécution {{site.data.keyword.Bluemix_notm}} de base seulement :
 <ul>
-<li>32 coeurs physiques à 2 Ghz ou plus chacun</li>
-<li>512 Go de mémoire RAM physique</li>
-<li>Taille totale de magasin de données de 7,5 To
+<li>10 coeurs physiques à 2 Ghz ou plus chacun</li>
+<li>768 Go de mémoire RAM physique</li>
+<li>Taille totale de magasin de données de 10 To
 <ul>
-<li>Magasin de données de 7 To pour le stockage de {{site.data.keyword.Bluemix_notm}}</li>
+<li>Magasin de données de 9,5 To pour le stockage de {{site.data.keyword.Bluemix_notm}}</li>
 <li>Magasin de données de 500 Go pour le stockage de la machine virtuelle de création</li>
 </ul>
 </li>
@@ -489,8 +489,8 @@ ESXi est une couche de virtualisation qui s'exécute sur des serveurs physiques 
 </dd>
 <dt>**Haute disponibilité**</dt>
 <dd>
-Pour pouvoir prendre en charge une défaillance de noeud unique, vous devez disposer de n+1 couches ESXi. Par exemple, si les 32 coeurs et les 512 Go de mémoire sont obtenus à l'aide de deux coeurs 16x et serveurs ESXi 256 Go, vous avez besoin de ces trois de ces serveurs pour prendre en charge la panne totale d'un seul noeud.
-<p><strong>Remarque :</strong> l'administrateur VMware du client peut décider d'appliquer une reprise en ligne à haute disponibilité stricte dans le cluster afin de garantir les ressources. Si vous choisissez de poursuivre sans la reprise à haute disponibilité, vous pouvez répondre aux exigences de ressource minimum de 32 coeurs et 512 Go.</p>
+Pour pouvoir prendre en charge une défaillance de noeud unique, vous devez disposer de n+1 couches ESXi. Par exemple, si les 40 coeurs et les 768 Go de mémoire sont obtenus à l'aide de deux coeurs 16x et serveurs ESXi 256 Go, vous avez besoin de trois de ces serveurs pour prendre en charge la panne totale d'un seul noeud.
+<p><strong>Remarque :</strong> l'administrateur VMware du client peut décider d'appliquer une reprise en ligne à haute disponibilité stricte dans le cluster afin de garantir les ressources. Si vous choisissez de poursuivre sans la reprise à haute disponibilité, vous pouvez répondre aux exigences de ressource minimum de 40 coeurs et 768 Go.</p>
 </dd>
 <dt>**Réseau**</dt>
 <dd>

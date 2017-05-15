@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-03-20"
+lastupdated: "2017-04-07"
 
 
 ---
@@ -79,7 +79,7 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE]
 <dt>--format FORMAT</dt>
 <dd>(선택사항) Go 템플리트를 사용하여 출력 요소를 형식화합니다.</dd>
 <dt>IMAGE</dt>
-<dd>검사하려는 이미지의 전체 {{site.data.keyword.Bluemix_short}} 레지스트리 경로입니다. 이미지 경로에 태그가 지정되지 않은 경우 `latest` 태그가 지정된 이미지를 검사합니다. 각 경로를 공백으로 구분하여 명령에 각 개인용 {{site.data.keyword.Bluemix_short}} 레지스트리 경로를 나열하여 여러 이미지를 검사할 수 있습니다. </dd>
+<dd>검사할 이미지에 대한 전체 {{site.data.keyword.Bluemix_short}} 레지스트리 경로이며, 형식은 namespace/image:tag입니다. 이미지 경로에 태그가 지정되지 않은 경우 `latest` 태그가 지정된 이미지를 검사합니다. 각 경로를 공백으로 구분하여 명령에 각 개인용 {{site.data.keyword.Bluemix_short}} 레지스트리 경로를 나열하여 여러 이미지를 검사할 수 있습니다. </dd>
 </dl>
 
 
@@ -115,7 +115,7 @@ bx cr image-rm IMAGE [IMAGE]
 **매개변수**
 <dl>
 <dt>IMAGE</dt>
-<dd>제거하려는 이미지의 전체 {{site.data.keyword.Bluemix_short}} 레지스트리 경로입니다. 이미지 경로에 태그가 지정되지 않은 경우 `latest` 태그가 지정된 이미지가 기본적으로 삭제됩니다. 각 경로를 공백으로 구분하여 명령에 각 개인용 {{site.data.keyword.Bluemix_short}} 레지스트리 경로를 나열하여 여러 이미지를 삭제할 수 있습니다. </dd>
+<dd>제거할 이미지에 대한 전체 {{site.data.keyword.Bluemix_short}} 레지스트리 경로이며, 형식은 namespace/image:tag입니다. 이미지 경로에 태그가 지정되지 않은 경우 `latest` 태그가 지정된 이미지가 기본적으로 삭제됩니다. 각 경로를 공백으로 구분하여 명령에 각 개인용 {{site.data.keyword.Bluemix_short}} 레지스트리 경로를 나열하여 여러 이미지를 삭제할 수 있습니다. </dd>
 </dl>
 
 

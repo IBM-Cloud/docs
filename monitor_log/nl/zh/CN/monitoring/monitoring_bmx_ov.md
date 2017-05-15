@@ -22,7 +22,7 @@ lastupdated: "2017-03-06"
 
 您可以使用 {{site.data.keyword.Bluemix_notm}} 中的监视功能从环境和应用程序自动收集并度量关键度量值。无需进行特殊检测，即可收集度量值。例如，可以使用性能度量值提供的信息来监视服务在云中的运行情况，检测资源瓶颈，并密切关注服务级别协议 (SLA)。分析服务的性能数据时，可以检测会导致资源瓶颈并因而影响客户的服务 SLA 的情况。通过及早采取措施，可以避免会对业务造成负面影响的情况。  
 
-您还可以配置并监视更多性能度量值。您可以在 {{site.data.keyword.Bluemix_notm}} 外部可视化和分析这些度量值。例如，在 {{site.data.keyword.containershort}} 中运行应用程序时，可以使用 Grafana 来监视更多度量值。可以按要可视化和分析性能数据的容器实例或空间来定制仪表板。
+您还可以配置并监视更多性能度量值。您可以在 {{site.data.keyword.Bluemix_notm}} 外部对这些度量值进行可视化和分析。例如，在 {{site.data.keyword.containershort}} 中运行应用程序时，可以使用 Grafana 来监视更多度量值。您可以按要可视化和分析性能数据的空间或容器实例来定制仪表板。
 
 ![在 {{site.data.keyword.Bluemix_notm}} 中运行的容器的 Grafana 监视视图](images/monitoring_default_container_grafana_view.jpg "在 Bluemix 中运行的容器的 Grafana 监视视图")
 

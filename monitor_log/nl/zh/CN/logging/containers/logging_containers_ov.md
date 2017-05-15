@@ -22,11 +22,31 @@ lastupdated: "2017-03-16"
 
 容器日志使用搜寻器从容器外部进行监视和转发。搜寻器会将数据发送到 {{site.data.keyword.Bluemix_notm}} 中的多租户 Elasticsearch。
 
+**注：**可以在 {{site.data.keyword.Bluemix_notm}} 中分析部署在 {{site.data.keyword.IBM}} 管理的云基础架构中的 Docker 容器的容器日志。
+
 下图显示了 {{site.data.keyword.containershort}} 的日志记录的高级别视图：
 
 ![容器的高级别组件概览图](images/logging_containers_ov.jpg "容器的高级别组件概览图")
 
 在 {{site.data.keyword.Bluemix_notm}} 中部署容器时，会自动启用对相应容器的日志记录。
+
+
+## 用于分析容器日志的方法
+{: #logging_containers_ov_methods}
+ 
+可以选择以下任一方法来分析容器的日志：
+
+* 在 {{site.data.keyword.Bluemix_notm}} 中分析日志以查看容器的最新活动。
+    
+    可以通过可用于每个容器的**监视和日志**选项卡来查看、过滤和分析日志。有关更多信息，请参阅[通过 Bluemix 仪表板分析日志](../logging_view_dashboard.html#analyzing_logs_bmx_ui)。
+    
+* 在 Kibana 中分析日志以执行高级分析任务。
+    
+    可以使用 Kibana（一种开放式源代码分析和可视化平台）通过各种图形（例如，图表和表）来对数据进行监视、搜索、分析和可视化。有关更多信息，请参阅[在 Kibana 中分析日志](../kibana4/logging_analyzing_logs_Kibana.html#analyzing_logs_Kibana)。
+
+* 通过 CLI 分析日志可使用命令以编程方式管理日志。
+    
+    可以通过命令行界面使用 **cf ic logs** 命令来查看、过滤和分析日志。有关更多信息，请参阅[通过命令行界面分析日志](../logging_view_cli.html#analyzing_logs_cli)。
 
 ## 为容器收集的日志
 {: #logging_containers_ov_logs_collected}
@@ -34,6 +54,7 @@ lastupdated: "2017-03-16"
 缺省情况下，将收集以下日志：
 
 <table>
+  <caption>表 1. 日志</caption>
   <tbody>
     <tr>
       <th align="center">日志</th>
@@ -52,23 +73,6 @@ lastupdated: "2017-03-16"
 
 要收集其他日志，请在创建容器时添加带有日志文件路径的 **LOG_LOCATIONS** 环境变量。可以添加多个日志文件，各文件之间用逗号分隔。有关更多信息，请参阅[从容器收集非缺省日志数据](logging_containers_other_logs.html#logging_containers_collect_data)。
 
-
-## 用于分析容器日志的方法
-{: #logging_containers_ov_methods}
- 
-可以选择以下任一方法来分析容器的日志：
-
-* 在 {{site.data.keyword.Bluemix_notm}} 中分析日志以查看容器的最新活动。
-    
-    可以通过可用于每个容器的**监视和日志**选项卡来查看、过滤和分析日志。有关更多信息，请参阅[通过 Bluemix 仪表板分析日志](../logging_view_dashboard.html#analyzing_logs_bmx_ui)。
-    
-* 在 Kibana 中分析日志以执行高级分析任务。
-    
-    可以使用 Kibana（一种开放式源代码分析和可视化平台）通过各种图形（例如，图表和表）来监视、搜索、分析和可视化数据。有关更多信息，请参阅[在 Kibana 中分析日志](../kibana4/logging_analyzing_logs_Kibana.html#analyzing_logs_Kibana)。
-
-* 通过 CLI 分析日志可使用命令以编程方式管理日志。
-    
-    可以通过命令行界面使用 **cf ic logs** 命令来查看、过滤和分析日志。有关更多信息，请参阅[通过命令行界面分析日志](../logging_view_cli.html#analyzing_logs_cli)。
 
 
 ## 日志保留时间

@@ -19,4 +19,4 @@ Mit den mobilen Services können Sie Anwendungen für mehrere Plattformen, nativ
 Beispiellose Einblicke in die Benutzererfahrung | Apps schützen | Daten skalieren und synchronisieren
 ---- | ---- | ----
 Bei jedem Schritt Feedback durch die Benutzerwiedergabe bekommen. Apps fortlaufend durch Analysen zur echtzeitorientierten Leistung verbessern. | Ermitteln von Sicherheitsproblemen vor den Benutzern. Verwalten von Benutzerzugriff. Sicherstellen der Sicherheit der Kommunikation mit Unternehmenssystemen. | Daten auf allen Ihren Geräten synchron halten und Daten offline stellen. Keine Optimierung der Datenbank erforderlich. Es funktioniert einfach so.
-{: caption="Table 1. Benefits of using mobile services" caption-side="top"}
+{: caption="Tabelle 1. Vorteile der Verwendung mobiler Services" caption-side="top"}
