@@ -247,14 +247,14 @@ bx cr token-list --format FORMAT
 Remove one or more specified tokens.
 
 ```
-bx cr token-rm TOKEN
+bx cr token-rm TOKEN [TOKEN]
 ```
 {: codeblock}
 
 **Parameters**
 <dl>
 <dt>TOKEN</dt>
-<dd>(Optional) TOKEN can be either the token itself, or the unique identifier of the token, as shown in `bx cr token-list`. Mutliple tokens can be specified and they must be separated by a space.</dd>
+<dd>(Optional) TOKEN can be either the token itself, or the unique identifier of the token, as shown in `bx cr token-list`. Multiple tokens can be specified and they must be separated by a space.</dd>
 </dl>
 
 
