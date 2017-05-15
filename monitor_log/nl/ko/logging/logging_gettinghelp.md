@@ -14,7 +14,7 @@ lastupdated: "2017-03-06"
 {:screen: .screen}
 
 
-# 도움말 및 지원 받기
+# 로깅에 대한 도움 및 지원 받기
 {: #gettinghelp}
 
 {{site.data.keyword.Bluemix}}에서 로깅 기능을 사용할 때 문제점이나 질문이 있으면 정보를 검색하거나 포럼을 통해 질문하여 도움을 받거나 {{site.data.keyword.Bluemix_notm}}를 확인할 수 있습니다. 또한 지원 티켓을 열 수도 있습니다.

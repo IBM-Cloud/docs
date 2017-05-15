@@ -27,9 +27,9 @@ lastupdated: "2017-02-02"
     
     这将显示应用程序的日志。
 
-2. 访问应用程序的 Kibana 仪表板。单击**高级视图** ![“高级视图”链接](images/logging_advanced_view.jpg)。这将显示 Kibana 仪表板。
+2. 访问应用程序的 Kibana 仪表板。单击**高级视图** ![“高级视图”链接](images/logging_advanced_view.jpg "“高级视图”链接")。这将显示 Kibana 仪表板。
 
-3. 在 Kibana 仪表板上，单击**查询** ![“查询”图标](images/logging_query.jpg) 以显示该字段。访问 Kibana 以从应用程序的**日志**选项卡查看应用程序日志时，将创建查询来为您应用程序的 application_id 显示所有日志。
+3. 在 Kibana 仪表板上，单击**查询** ![“查询”图标](images/logging_query.jpg "“查询”图标") 以显示该字段。访问 Kibana 以从应用程序的**日志**选项卡查看应用程序日志时，将创建查询来显示您应用程序 application_id 的所有日志。
 	
     要编辑查询，请单击**查询**字段并输入搜索项。
 
@@ -41,28 +41,28 @@ lastupdated: "2017-02-02"
 
 4. 如果要比较两个不同查询的结果，可以向仪表板再添加一个查询项。要再添加一个查询，请单击**查询**字段末尾的 **+** 图标。
 
-    ![“查询”字段](images/logging_query_field.jpg)
+    ![“查询”字段](images/logging_query_field.jpg "“查询”字段")
 	
     这将显示新的**查询**字段，其中包含通配符 *。此查询将指示 Kibana 包含所有条目。
 	
-    ![另一个“查询”字段](images/logging_additional_query_field.jpg)
+    ![另一个“查询”字段](images/logging_additional_query_field.jpg "另一个“查询”字段")
 	
     您的仪表板会使用新查询的结果进行更新。**按时间列出的事件**窗格会显示这两个查询的图形表示法，并在括号中显示每个查询的项数。 
 	
-    ![显示这两个查询的图形的仪表板](images/logging_dashboard_queries.jpg)
+    ![显示这两个查询的图形的仪表板](images/logging_dashboard_queries.jpg "显示这两个查询的图形的仪表板")
 	
 5. 单击新的**查询**字段以编辑其内容并添加查询条件；例如，`instance_id:1`。使用**按时间列出的事件**窗格以比较查询的结果。
 
-    ![显示这两个查询的图形的仪表板](images/logging_dashboard_queries2.jpg)
+    ![显示这两个查询的图形的仪表板](images/logging_dashboard_queries2.jpg "显示这两个查询的图形的仪表板")
 
 6. 要删除查询，请将鼠标移至要删除的**查询**字段上方以显示**删除**图标。单击**删除**图标。
 
-    ![具有“删除”图标的“查询”字段](images/logging_delete_query.jpg)
+    ![具有“删除”图标的“查询”字段](images/logging_delete_query.jpg "具有“删除”图标的“查询”字段")
 
-7. 要使用可识别的名称保存此仪表板，请单击**保存**图标 ![“保存”图标](images/logging_save.jpg)，然后输入仪表板的名称。 
+7. 要使用可识别的名称保存此仪表板，请单击**保存**图标 ![“保存”图标](images/logging_save.jpg "“保存”图标")，然后输入仪表板的名称。 
 
     **注：**如果尝试使用包含空格的名称来保存仪表板，那么不会保存该仪表板。请输入不包含空格的名称，然后单击**保存**图标。
 
-    ![保存仪表板名称](images/logging_save_dashboard.jpg)
+    ![保存仪表板名称](images/logging_save_dashboard.jpg "保存仪表板名称")
 
 

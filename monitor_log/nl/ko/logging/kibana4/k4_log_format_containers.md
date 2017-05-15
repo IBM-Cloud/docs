@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-01"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -37,6 +37,6 @@ lastupdated: "2017-03-01"
 | stream | 로그의 유형을 지정합니다(stdout, stderr). |
 | time | 이벤트 발생 날짜 및 시간입니다. 시간소인은 밀리초 단위까지 정의됩니다. |
 | timestamp | 로깅된 이벤트의 날짜 및 시간입니다. 시간소인은 밀리초 단위까지 정의됩니다.  |
-
+{: caption="표 1. Docker 컨테이너의 필드" caption-side="top"}
 
 

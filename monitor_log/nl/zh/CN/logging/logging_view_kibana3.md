@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-16"
+lastupdated: "2017-02-22"
 
 ---
 
@@ -13,10 +13,10 @@ lastupdated: "2017-02-16"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# 在 Kibana 中分析日志
+# 在 Kibana 3 中分析日志（不推荐）
 {: #analyzing_logs_Kibana3}
 
-在 {{site.data.keyword.Bluemix}} 中，可以使用 Kibana（一种开放式源代码分析和可视化平台）通过各种图形（例如，图表和表）来监视、搜索、分析和可视化数据。使用 Kibana 可执行高级分析任务。
+在 {{site.data.keyword.Bluemix}} 中，可以使用 Kibana（一种开放式源代码分析和可视化平台）通过各种图形（例如，图表和表）来对数据进行监视、搜索、分析和可视化。使用 Kibana 可执行高级分析任务。
 {:shortdesc}
 
 您可以使用以下任何一种方法来启动 Kibana：
@@ -25,7 +25,7 @@ lastupdated: "2017-02-16"
 
     可以在 Kibana 中特定 CF 应用程序的上下文中启动到该特定应用程序的日志。
     
-    用于过滤仪表板中所显示数据的查询会检索 Cloud Foundry 应用程序的日志条目。Kibana 仪表板缺省显示的日志信息全部与单个 Cloud Foundry 应用程序及其所有实例相关联。有关更多信息，请参阅[通过 {{site.data.keyword.Bluemix}} 仪表板访问 Kibana 仪表板](logging_view_kibana3.html#launch_Kibana_from_bluemix)。
+    用于过滤仪表板中所显示数据的查询会检索 Cloud Foundry 应用程序的日志条目。Kibana 仪表板缺省显示的日志信息全部与单个 Cloud Foundry 应用程序及其所有实例相关联。有关更多信息，请参阅[通过 Bluemix 仪表板访问 Kibana 仪表板](logging_view_kibana3.html#launch_Kibana_from_bluemix)。
 
 * 通过直接浏览器链接
 
@@ -46,7 +46,7 @@ Kibana 仪表板显示的数据由该查询进行控制。要修改仪表板中�
 
 您还可以通过日志字段（例如，message_type 和 instance_ID）来配置过滤器。有关更多信息，请参阅 [Kibana 日志格式](logging_view_kibana3.html#kibana_log_format_cf)。您可以动态启用或禁用这些过滤器。仪表板将显示满足所启用的查询和过滤条件的日志条目。有关更多信息，请参阅[在 Kibana 仪表板中过滤数据](logging_view_kibana3.html#filter_data_kibana_dashboard)。
 
-要可视化数据，可以配置面板。Kibana 包含可用于分析信息的不同面板，如表、趋势和直方图。可以在仪表板中添加、除去和重新排列面板。每个面板的用途各不相同。一些面板组织成行，用于提供一个或多个查询的结果。另一些面板则显示文档或定制信息。有关更多信息，请参阅[定制 Kibana 仪表板](logging_view_kibana3.html#customize_kibana_dashboard)。
+要将数据可视化，可以配置面板。Kibana 包含可用于分析信息的不同面板，如表、趋势和直方图。可以在仪表板中添加、除去和重新排列面板。每个面板的用途各不相同。一些面板组织成行，用于提供一个或多个查询的结果。另一些面板则显示文档或定制信息。有关更多信息，请参阅[定制 Kibana 仪表板](logging_view_kibana3.html#customize_kibana_dashboard)。
 
 定制仪表板后，可以从以下任何操作中进行选择：
 
@@ -56,7 +56,7 @@ Kibana 仪表板显示的数据由该查询进行控制。要修改仪表板中�
 
 * 可以在 Web 页面中嵌入仪表板。要使用户能够查看嵌入的仪表板，该用户必须具有访问 Kibana 的许可权。
 
-有关更多信息，请参阅 [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html) 文档。
+有关更多信息，请参阅 [Kibana ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window} 文档。
 
 **注：**支持 Kibana 4 和 Kibana 3。但不推荐使用 Kibana 3。
 
@@ -76,7 +76,7 @@ Kibana 仪表板显示的数据由该查询进行控制。要修改仪表板中�
 
 如果未看到任何日志，请调整标题中的时间选取器。
 
-有关定制 Kibana 仪表板的更多信息，请参阅[此博客帖子](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/)或 [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html) 文档。
+有关定制 Kibana 仪表板的更多信息，请参阅[此博客帖子 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} 或 [Kibana ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window} 文档。
 
 ##  通过 Web 浏览器访问 Kibana 仪表板
 {: #launch_Kibana_from_browser}
@@ -91,7 +91,7 @@ Kibana 仪表板显示的数据由该查询进行控制。要修改仪表板中�
 
 如果未看到任何日志，请调整标题中的时间选取器。
 
-有关定制 Kibana 仪表板的更多信息，请参阅[此博客帖子](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/)或 [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html) 文档。
+有关定制 Kibana 仪表板的更多信息，请参阅[此博客帖子 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} 或 [Kibana ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window} 文档。
 
 
 
@@ -116,13 +116,13 @@ Kibana 仪表板显示的数据由该查询进行控制。要修改仪表板中�
 ## 定制 Kibana 仪表板
 {: #customize_kibana_dashboard}
 
-可定制不同类型的仪表板以可视化并分析数据，例如：
+可定制不同类型的仪表板来对数据进行可视化和分析，例如：
 * 单 CF 应用程序仪表板：此仪表板用于显示单个 Cloud Foundry 应用程序的信息。  
 * 多 CF 应用程序仪表板：此仪表板用于显示同一 {{site.data.keyword.Bluemix}} 空间内部署的所有 Cloud Foundry 应用程序的信息。 
 
 定制仪表板后，可以配置查询和过滤器以选择要通过仪表板显示的日志数据子集。
 
-要可视化数据，可以配置面板。Kibana 包含可用于分析信息的不同面板，如表、趋势和直方图。可以在仪表板中添加、除去和重新排列面板。每个面板的用途各不相同。一些面板组织成行，用于提供一个或多个查询的结果。另一些面板则显示文档或定制信息。例如，可以配置条形图、饼图或表来对数据进行可视化和分析。  
+要将数据可视化，可以配置面板。Kibana 包含可用于分析信息的不同面板，如表、趋势和直方图。可以在仪表板中添加、除去和重新排列面板。每个面板的用途各不相同。一些面板组织成行，用于提供一个或多个查询的结果。另一些面板则显示文档或定制信息。例如，可以配置条形图、饼图或表来对数据进行可视化和分析。  
 
 
 ## 保存 Kibana 仪表板
@@ -157,7 +157,7 @@ Kibana 仪表板显示的数据由该查询进行控制。要修改仪表板中�
 
 仪表板中的图形和图表将显示数据。可以使用仪表板中的图形和图表来监视数据。 
 
-例如，单 CF 应用程序仪表板中包含有关一个 Cloud Foundry 应用程序的信息。可以进行可视化和分析的数据仅限于该应用程序。您可以使用此仪表板来分析该应用程序的所有实例的数据。可以比较实例。也可以按实例标识来过滤信息。 
+例如，单 CF 应用程序仪表板中包含有关一个 Cloud Foundry 应用程序的信息。可进行可视化和分析的数据仅限于该应用程序。您可以使用此仪表板来分析该应用程序的所有实例的数据。可以比较实例。也可以按实例标识来过滤信息。 
 
 可以定义每个实例标识的查询并在仪表板中将其置顶。 
 

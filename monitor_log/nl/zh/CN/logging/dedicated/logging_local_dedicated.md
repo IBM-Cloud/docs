@@ -52,6 +52,6 @@ Cloud Foundry 应用程序使用 Cloud Foundry loggregator 从应用程序外部
 要查看应用程序日志，请执行以下步骤。
 1. 选择正在运行的应用程序。
 2. 单击**日志**。在**日志**视图中，可以查看正在运行的应用程序的日志。
-4. 单击**高级视图**按钮。**高级视图**将使用 Kibana 来显示日志的更详细视图；Kibana 是使用日志和带时间戳记的数据来创建定制可视化的可视化工具。有关使用高级视图的更多信息，请参阅 [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html) 文档。
+4. 单击**高级视图**按钮。**高级视图**将使用 Kibana 来显示日志的更详细视图；Kibana 是使用日志和带时间戳记的数据来创建定制可视化项的可视化工具。有关使用高级视图的更多信息，请参阅 [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html) 文档。
 
 接下来，可以定制 Kibana 仪表板。有关更多信息，请参阅[在 Kibana 中分析日志](../logging_view_kibana3.html#analyzing_logs_Kibana3)。

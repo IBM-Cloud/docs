@@ -14,7 +14,7 @@ lastupdated: "2017-03-06"
 {:screen: .screen}
 
 
-# 获取帮助和支持
+# 获取日志记录的帮助和支持
 {: #gettinghelp}
 
 如果在 {{site.data.keyword.Bluemix}} 中使用日志记录功能时遇到问题或有疑问，您可以检查 {{site.data.keyword.Bluemix_notm}} 或通过在论坛中搜索信息或提问来获取帮助。您还可以开具支持凭单。
