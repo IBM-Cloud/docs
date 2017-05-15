@@ -837,7 +837,6 @@ In den nachfolgenden Anweisungen wird die Docker-Benutzer-ID `janesmith` und das
   ```
   wsk sdk install docker
   ```
-  ```
   {: pre}
   ```
   The Docker skeleton is now installed at the current directory.

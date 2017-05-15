@@ -812,7 +812,6 @@ wsk action invoke --blocking --result helloJava --param name World
   ```
   wsk sdk install docker
   ```
-  ```
   {: pre}
   ```
   现在，Docker 框架已安装在当前目录中。

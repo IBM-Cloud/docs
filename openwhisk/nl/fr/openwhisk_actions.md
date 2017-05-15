@@ -814,7 +814,6 @@ Dans les instructions qui suivent, l'ID utilisateur Docker est `janesmith` et le
   ```
   wsk sdk install docker
   ```
-  ```
   {: pre}
   ```
   A présent, le squelette Docker est installé dans le répertoire en cours.

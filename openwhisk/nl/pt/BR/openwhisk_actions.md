@@ -839,7 +839,6 @@ Para as instruções a seguir, suponha que o ID do usuário do Docker seja `jane
   ```
   wsk sdk install docker
   ```
-  ```
   {: pre}
   ```
   A estrutura básica do Docker agora está instalada no diretório atual.

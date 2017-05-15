@@ -828,8 +828,7 @@ wsk action invoke --blocking --result helloJava --param name World
   ```
   wsk sdk install docker
   ```
-  ```
-  {: pre}
+ {: pre}
   ```
   The Docker skeleton is now installed at the current directory.
   ```
