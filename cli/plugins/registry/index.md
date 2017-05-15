@@ -94,6 +94,7 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE]
 
 </dd>
 <dt>IMAGE</dt>
+<dd>The full {{site.data.keyword.Bluemix_short}} registry path to the image that you want to inspect, which is in the format `namespace/image:tag`. If a tag is not specified in the image path, the image tagged `latest` is inspected. You can inspect multiple images by listing each private {{site.data.keyword.Bluemix_short}} registry path in the command with a space between each path.</dd>
 </dl>
 
 
