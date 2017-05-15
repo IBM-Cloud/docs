@@ -3,7 +3,7 @@
 copyright:
 
 years: 2017
-lastupdated: "2017-04-17"
+lastupdated: "2017-05-15"
 
 ---
 
@@ -46,8 +46,7 @@ API                     | Use to ...
 [The Weather Company ![External link icon](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html#!/Device_Location_Weather){: new_window} | Integrate data from The Weather Company with your existing devices.
 [Device Management ![External link icon](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html){: new_window} | Interact with managed devices by using the device management protocol.
 [Messaging ![External link icon](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}   | Publish events and send commands by using HTTP.
-
-
+[Risk Management ![External link icon](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/riskmgmt.html){: new_window}   | Manage the Risk Management policies and reports.
 
 ## Extension HTTP APIs
 {: #api_extension}
