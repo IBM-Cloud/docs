@@ -36,7 +36,7 @@ lastupdated: "2017-02-20"
 <ol>
 <li>若要新增 {{site.data.keyword.Bluemix_notm}} 管理外掛程式儲存庫，請執行下列指令：<br/><br/>
 <code>
-cf add-plugin-repo BluemixAdmin http://plugins.ng.bluemix.net
+cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli
 </code><br/><br/>
 </li>
 <li>若要安裝 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式，請執行下列指令：<br/><br/>
@@ -556,7 +556,7 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 ### 移除組織的服務可見性
 {: #admin_remvis_service_org}
 
-您可以從組織清單移除可在 {{site.data.keyword.Bluemix_notm}}「型錄」中看見特定服務的組織。若要針對組織移除 {{site.data.keyword.Bluemix_notm}}「型錄」中的服務可見性，請使用下列指令：
+您可以從可在 {{site.data.keyword.Bluemix_notm}}「型錄」看見特定服務的組織清單移除某個組織。若要針對組織移除 {{site.data.keyword.Bluemix_notm}}「型錄」中的服務可見性，請使用下列指令：
 
 ```
 cf ba remove-service-plan-visibility <plan_identifier> <organization>
@@ -662,7 +662,7 @@ cf ba retrieve-report <search>
 ## 檢視資源度量值資訊
 {: #cliresourceusage}
 
-您可以檢視資源度量值資訊（包括記憶體用量、磁碟用量及 CPU 用量）。您可以查看可用的實體資源與保留資源的摘要，以及實體資源與保留資源用量的摘要。您也可以查看 Droplet Execution Agent (DEA) 及 Cell（Diego 架構）用量資料以及歷程記憶體和磁碟用量。預設會以遞減順序顯示每週的記憶體及磁碟用量歷程資料。若要檢視資源度量值資訊，請使用下列指令：
+您可以檢視資源度量值資訊（包括記憶體用量、磁碟用量及 CPU 用量）。您可以查看可用的實體資源與保留資源的摘要，以及實體資源與保留資源用量的摘要。您也可以查看 Droplet Execution Agent (DEA) 及 Cell（Diego 架構）用量資料以及歷程記憶體和磁碟用量。依預設，會以遞減順序顯示每週的記憶體及磁碟用量歷程資料。若要檢視資源度量值資訊，請使用下列指令：
 
 ```
 cf ba resource-metrics <monthly> <weekly>

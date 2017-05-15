@@ -147,7 +147,7 @@ bluemix ic attach [--no-stdin] [--sig-proxy] CONTAINER
    <dt>--no-stdin（選用）</dt>
    <dd>不要包含標準輸入。</dd>
    <dt>--sig-proxy（選用）</dt>
-   <dd>將所有接收到的信號 Proxy 到處理程序。預設值為 <i>true</i>。</dd>
+   <dd>將所有收到的信號 Proxy 到處理程序。預設值為 <i>true</i>。</dd>
    <dt><i>CONTAINER</i>（必要）</dt>
    <dd>容器名稱或 ID。</dd>
     </dl>
@@ -292,7 +292,7 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
 <strong>指令選項</strong>：
    <dl>
     <dt><i>IMAGE_NAME</i>（必要）</dt>
-   <dd>要包含在容器群組中之每個容器實例的映像檔。您可以在映像檔之後列出指令，但不能在映像檔之後放置任何選項。請在指定映像檔之前併入所有選項。<br><br>如果您使用組織專用 {{site.data.keyword.Bluemix_notm}} 儲存庫中的映像檔，請以下列格式指定映像檔：<i>registry.ng.bluemix.net/NAMESPACE/IMAGE</i>。<br><br>如果您使用 IBM Containers 所提供的映像檔，請不要併入您組織的名稱空間。請以下列格式指定映像檔：<i>registry.ng.bluemix.net/IMAGE</i>。</dd>
+   <dd>要包含在容器群組中之每個容器實例的映像檔。您可以在映像檔之後列出指令，但不能在映像檔之後放置任何選項。請在指定映像檔之前包含所有選項。<br><br>如果您使用組織專用 {{site.data.keyword.Bluemix_notm}} 儲存庫中的映像檔，請以下列格式指定映像檔：<i>registry.ng.bluemix.net/NAMESPACE/IMAGE</i>。<br><br>如果您使用 IBM Containers 所提供的映像檔，請不要包含您組織的名稱空間。請以下列格式指定映像檔：<i>registry.ng.bluemix.net/IMAGE</i>。</dd>
    <dt>--name <i>GROUP_NAME</i>（必要）</dt>
    <dd>將名稱指派給群組。<i>-n</i> 已淘汰。<br>
    <strong>提示：</strong>容器名稱必須以字母開頭。名稱可以包含大寫字母、小寫字母、數字、句點 .、底線 _ 或連字號 -。</dd>
@@ -310,8 +310,8 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
 |  環境變數                              |     說明                            |
 | :----------------------------- | :------------------------------ |
 | CCS_BIND_APP=*&lt;appname&gt;*       | 將服務連結至容器。請使用 `CCS_BIND_APP` 環境變數，將應用程式連結至容器。應用程式會連結至目標服務，並作為橋接器，以容許 {{site.data.keyword.Bluemix_notm}} 將您橋接應用程式的 `VCAP_SERVICES` 資訊帶入執行中容器實例。如需建立橋接應用程式的相關資訊，請參閱[將服務連結至容器](../../../containers/container_integrations_binding.html){: new_window}。 |
-| CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 若要將 Bluemix 服務直接連結至容器，而不使用橋接應用程式，請使用 CCS_BIND_SRV。此連結容許 Bluemix 將 VCAP_SERVICES 資訊注入執行中容器實例。若要列出多個 Bluemix 服務，請將它們併入為相同環境變數的一部分。 |
-| LOG_LOCATIONS=*&lt;path_to_file&gt;* | 新增要在容器中監視的日誌檔。包括含有日誌檔路徑的 `LOG_LOCATIONS` 環境變數。 |
+| CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 若要將 Bluemix 服務直接連結至容器，而不使用橋接應用程式，請使用 CCS_BIND_SRV。此連結容許 Bluemix 將 VCAP_SERVICES 資訊注入執行中容器實例。若要列出多個 Bluemix 服務，請將它們包含為相同環境變數的一部分。 |
+| LOG_LOCATIONS=*&lt;path_to_file&gt;* | 新增要在容器中監視的日誌檔。請包含 `LOG_LOCATIONS` 環境變數與日誌檔路徑。 |
 {: caption="表 2. 常用環境變數" caption-side="top"}
 
  <dl>
@@ -851,7 +851,7 @@ bluemix ic pause proxy
 
 ## bluemix ic ps
 {: #bluemix_ic_ps}
-檢視已登入使用者之名稱空間中的執行中容器清單。此指令預設只會顯示執行中容器。如需相關資訊，請參閱 Docker 說明中的 [ps ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/ps/){: new_window} 指令。
+檢視已登入使用者之名稱空間中的執行中容器清單。依預設，此指令只會顯示執行中容器。如需相關資訊，請參閱 Docker 說明中的 [ps ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/ps/){: new_window} 指令。
 
 ```
 bluemix ic ps [-a|--all] [--filter env=SEARCH_CRITERIA] [-s|--size] [-l NUM|--limit NUM] [-q|--quiet]
@@ -1019,7 +1019,7 @@ bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
    <dt>-R <i>REGISTRY</i>|--registry <i>REGISTRY</i>（選用）</dt>
    <dd>變更登錄主機。預設值為使用您在 <i>bluemix ic init</i> 指令中指定的登錄。</dd>
    <dt><i>IMAGE</i>（必要）</dt>
-   <dd>您要移除之映像檔的名稱。如果映像檔名稱中未指定標籤，則預設會刪除標記為 <i>latest</i> 的映像檔。</dd>
+   <dd>您要移除之映像檔的名稱。如果映像檔名稱中未指定標籤，則依預設會刪除標記為 <i>latest</i> 的映像檔。</dd>
    </dl>
 
 <strong>回應</strong>：
@@ -1130,15 +1130,15 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
    <dt>-m <i>MEMORY</i>|--memory <i>MEMORY</i>（選用）</dt>
    <dd>將記憶體限制指派給群組 (MB)。從 CLI 建立容器群組時，每個容器實例的預設值都是 64 MB。從「{{site.data.keyword.Bluemix_notm}} 儀表板」建立容器群組時，每個實例的預設值都是 256 MB。接受值為 64、256、512、1024 和 2048。指派記憶體限制之後，即無法變更其值。</dd>
    <dt>-e <i>ENV</i>|--env <i>ENV</i>（選用）</dt>
-   <dd>設定環境變數，其中 <i>ENV</i> 是 key=value 配對。個別列出多個索引鍵。如果您併入引號，請用它們括住環境變數名稱及值。例如：-e "key1=value1" -e "key2=value2" -e "key3=value3"。下表顯示一些您可以指定的常用環境變數：</dd>
+   <dd>設定環境變數，其中 <i>ENV</i> 是 key=value 配對。個別列出多個索引鍵。如果您包含引號，請用它們括住環境變數名稱及值。例如：-e "key1=value1" -e "key2=value2" -e "key3=value3"。下表顯示一些您可以指定的常用環境變數：</dd>
    </dl>
 
 
 |      環境變數                          |   說明                              |
 | :----------------------------- | :------------------------------ |
 | CCS_BIND_APP=*&lt;appname&gt;*       | 將服務連結至容器。請使用 `CCS_BIND_APP` 環境變數，將應用程式連結至容器。應用程式會連結至目標服務，並作為橋接器，以容許 {{site.data.keyword.Bluemix_notm}} 將您橋接應用程式的 `VCAP_SERVICES` 資訊帶入執行中容器實例。如需建立橋接應用程式的相關資訊，請參閱[將服務連結至容器](../../../containers/container_integrations_binding.html){: new_window}。 |
-| CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 若要將 Bluemix 服務直接連結至容器，而不使用橋接應用程式，請使用 CCS_BIND_SRV。此連結容許 Bluemix 將 VCAP_SERVICES 資訊注入執行中容器實例。若要列出多個 Bluemix 服務，請將它們併入為相同環境變數的一部分。 |
-| LOG_LOCATIONS=*&lt;path_to_file&gt;* | 新增要在容器中監視的日誌檔。包括含有日誌檔路徑的 `LOG_LOCATIONS` 環境變數。 |
+| CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 若要將 Bluemix 服務直接連結至容器，而不使用橋接應用程式，請使用 CCS_BIND_SRV。此連結容許 Bluemix 將 VCAP_SERVICES 資訊注入執行中容器實例。若要列出多個 Bluemix 服務，請將它們包含為相同環境變數的一部分。 |
+| LOG_LOCATIONS=*&lt;path_to_file&gt;* | 新增要在容器中監視的日誌檔。請包含 `LOG_LOCATIONS` 環境變數與日誌檔路徑。 |
 {: caption="表 3. 常用環境變數" caption-side="top"}
 
 
@@ -1157,7 +1157,7 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
    <dt>-it（選用）</dt>
    <dd>以互動模式執行容器。建立容器之後，請持續顯示標準輸入。鍵入 <i>exit</i> 以結束。</dd>
    <dt><i>IMAGE</i>（必要）</dt>
-   <dd>要併入容器中的映像檔。您可以在映像檔之後列出指令，但不能在映像檔之後放置任何選項。請在指定映像檔之前併入所有選項。請在指定映像檔之前併入所有選項。<br><br>如果您使用組織專用 {{site.data.keyword.Bluemix_notm}} 儲存庫中的映像檔，請以下列格式指定映像檔：<i>registry.ng.bluemix.net/NAMESPACE/IMAGE</i>。<br><br>如果您使用 IBM Containers 所提供的映像檔，請以下列格式指定映像檔：<i>registry.ng.bluemix.net/IMAGE</i>。</dd>
+   <dd>要包含在容器中的映像檔。您可以在映像檔之後列出指令，但不能在映像檔之後放置任何選項。請在指定映像檔之前包含所有選項。請在指定映像檔之前包含所有選項。<br><br>如果您使用組織專用 {{site.data.keyword.Bluemix_notm}} 儲存庫中的映像檔，請以下列格式指定映像檔：<i>registry.ng.bluemix.net/NAMESPACE/IMAGE</i>。<br><br>如果您使用 IBM Containers 所提供的映像檔，請以下列格式指定映像檔：<i>registry.ng.bluemix.net/IMAGE</i>。</dd>
    <dt><i>CMD</i>（選用）</dt>
    <dd>傳遞給容器群組執行的指令及引數。這個指令必須是長時間執行的指令。請不要使用不會執行很久的短期指令（例如，<i>/bin/date</i>），因為短期指令可能會導致容器損毀。</dd>
    </dl>
