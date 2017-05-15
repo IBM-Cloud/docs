@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-03-03"
+lastupdated: "2017-04-24"
 
 ---
 
@@ -32,9 +32,9 @@ lastupdated: "2017-03-03"
 <dd>조직과 영역에 대한 기본 권한이 있는 역할입니다. 먼저 관리자가 조직에 지정되어 있어야 조직 내의 영역에 대한 다른 권한을 부여받을 수 있습니다. 자세한 정보는  [사용자 및 역할](/docs/admin/users_roles.html#userrolesinfo)을 참조하십시오.</dd>
 <dt>도메인</dt>
 <dd>조직에 할당된 인터넷 라우트를 제공합니다. 라우트는 하위 도메인과 도메인으로 구성됩니다. 하위 도메인은 보통 애플리케이션 이름입니다. 도메인은 애플리케이션에 대해 등록한 사용자 정의 도메인 또는 시스템 도메인일 수 있습니다. [사용자 정의 도메인 관리](/docs/admin/orgs_spaces.html#managedomains)를 참조하십시오.<br/>
-<p>**참고**: 사용자 정의 도메인을 추가하는 경우, 사용자 정의 도메인을 분석하여 {{site.data.keyword.Bluemix_notm}} 시스템 도메인을 가리키도록 DNS 서버를 구성해야 합니다. 이런 방법으로 {{site.data.keyword.Bluemix_notm}}에서 사용자 정의 도메인에 대한 요청을 수신하면 이 요청을 적절하게 애플리케이션에 전달할 수 있습니다. </p></dd>
+<p>**참고:** 사용자 정의 도메인을 추가하는 경우 {{site.data.keyword.Bluemix_notm}} 시스템 도메인을 가리키는 사용자 정의 도메인을 분석하도록 DNS 서버를 구성해야 합니다. 이런 방법으로 {{site.data.keyword.Bluemix_notm}}에서 사용자 정의 도메인에 대한 요청을 수신하면 이 요청을 적절하게 애플리케이션에 전달할 수 있습니다. </p></dd>
 <dt>할당량</dt>
-<dd>조직에서 사용하기 위해 할당할 수 있는 서비스의 수와 메모리 양을 비롯한 조직의 리소스 한계를 나타냅니다. 조직이 작성되면 할당량이 지정됩니다. 조직의 영역에 있는 모든 애플리케이션이나 서비스가 할당량의 사용에 영향을 미칩니다. 종량과금제 또는 구독 플랜을 사용하면 조직의 요구가 변경되는 대로 Cloud Foundry 애플리케이션 및 컨테이너에 대한 할당량을 조정할 수 있습니다. [할당량 관리](/docs/admin/orgs_spaces.html#managequota)를 참조하십시오.</dd>
+<dd>조직에서 사용하기 위해 할당할 수 있는 메모리 양과 서비스 수를 포함해, 조직에서 사용 가능한 리소스를 나타냅니다. 조직이 작성되면 할당량이 지정됩니다. 조직의 영역에 있는 모든 애플리케이션이나 서비스가 할당량의 사용에 영향을 미칩니다. 종량과금제 또는 구독 플랜을 사용하면 조직의 요구가 변경되는 대로 Cloud Foundry 애플리케이션 및 컨테이너에 대한 할당량을 조정할 수 있습니다. [할당량 관리](/docs/admin/orgs_spaces.html#managequota)를 참조하십시오.<p>**참고:** 구독 계정에서 할당량은 지출 알림을 트리거하는 사용자 정의 한계입니다.</p></dd>
 </dl>
 
 {{site.data.keyword.Bluemix_notm}}에서 조직을 사용하여 팀 구성원 간 협업을 지원하고 다음과 같은 방식으로 프로젝트 리소스의 논리적 그룹화를 손쉽게 수행할 수 있습니다.
@@ -46,7 +46,7 @@ lastupdated: "2017-03-03"
 
 조직을 작성하는 경우 조직 이름은 {{site.data.keyword.Bluemix_notm}}에서 고유해야 합니다. 다른 {{site.data.keyword.Bluemix_notm}} 퍼블릭, 데디케이티드 또는 로컬 사용자가 조직 이름을 이미 사용 중인 경우 새 이름을 지정해야 합니다. 조직을 작성한 사용자에게 자동으로 *조직 관리자* 권한이 지정되므로 조직 이름 편집, 팀 구성원 추가, 조직에 영역 작성 또는 삭제를 수행할 수 있습니다.
 
-조직을 삭제하려면 [{{site.data.keyword.Bluemix_notm}} 지원 ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window}에 문의해야 합니다. 지원 팀에 조직을 삭제하도록 요청하면 조직 내의 모든 영역, 애플리케이션 및 서비스가 삭제됩니다.
+[`bx iam org-delete`](/docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_iam_org_delete) 명령을 사용하여 조직을 삭제할 수 있습니다. 조직을 삭제하면 조직 내 모든 영역, 애플리케이션 및 서비스가 삭제됩니다.  
 
 다음과 같은 [사용자 역할](/docs/admin/users_roles.html#userrolesinfo)을 조직의 팀 구성원에게 지정할 수 있습니다.
 
@@ -106,7 +106,7 @@ lastupdated: "2017-03-03"
 ## 기존 조직 또는 영역 삭제
 {: #deleteorgs}
 
-계정 소유자는 [{{site.data.keyword.Bluemix_notm}} 지원 ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window}에 문의하여 조직을 삭제할 수 있습니다. 
+계정 소유자는 {{site.data.keyword.Bluemix_notm}} CLI를 사용하여 조직을 삭제할 수 있습니다. 조직을 삭제하려면 [`bx iam org-delete`](/docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_iam_org_delete) 명령을 사용하십시오. 조직을 삭제하면 조직 내 모든 영역, 애플리케이션 및 서비스가 삭제됩니다. 
 
 **참고**: 삭제 오퍼레이션은 되돌릴 수 없습니다. 조직과 연관된 애플리케이션 및 서비스가 모두 손실됩니다.
 
@@ -159,7 +159,7 @@ lastupdated: "2017-03-03"
 
 **참고:** {{site.data.keyword.Bluemix_notm}} 시드니 지역에서는 컨테이너를 사용할 수 없습니다. 
 
-컨테이너에 대한 자세한 정보는 컨테이너 문서에서 [할당량](/docs/containers/container_planning_org_ov.html#container_planning_quota)을 참조하십시오.
+컨테이너에 대한 자세한 정보는 컨테이너 문서에서 [할당량](/docs/containers/container_planning.html#container_planning_quota)을 참조하십시오.
 조직에 할당된 할당량을 변경하려면 지원 티켓을 열어야 합니다. 지원 티켓 열기에 대한 자세한 정보는 [고객 지원 받기](/docs/support/index.html#contacting-support)를 참조하십시오. 
 
 ## 도메인 관리

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-22"
+lastupdated: "2017-04-13"
 
 ---
 
@@ -32,7 +32,7 @@ lastupdated: "2017-02-22"
 |보고서 및 로그 검토 | 인스턴스에 대한 보안 보고서 및 감사 로그를 보려면 **관리 &gt; 보고서 및 로그**를 클릭하십시오. [보고서 보기](/docs/admin/index.html#oc_report)를 참조하십시오. |
 |시스템 정보 보기 | 보류 중인 업데이트, 인스턴스의 이름 및 버전, 지역, API URL, CLI URL, LDAP 구성 세부사항, 그룹 맵핑과 사용자 맵핑, 통계, 공유 도메인 등의 시스템 정보를 보려면 **관리 &gt; 시스템 정보**를 클릭하십시오. [시스템 정보 보기](/docs/admin/index.html#oc_system)를 참조하십시오. |
 |알림 확장 및 알림 구독 설정 | **관리 &gt; 시스템 정보 &gt; 보류 중인 *수***를 클릭하십시오. 웹훅을 사용해서 선택한 웹 서비스와 통합하여 업데이트 또는 인시던트에 대한 이벤트 알림 구독을 설정할 수 있습니다. [알림 구독](/docs/admin/index.html#oc_eventsubscription)을 참조하십시오. |
-{: caption="표 1. {{site.data.keyword.Bluemix_notm}} 로컬 또는 데디케이티드 인스턴스 관리를 위한 관리 태스크" caption-side="top"}
+{: caption="표 1. Bluemix 로컬 또는 데디케이티드 인스턴스 관리를 위한 관리 태스크" caption-side="top"}
 
 <!-- staging only for WoW start -->
 
@@ -117,7 +117,7 @@ lastupdated: "2017-02-22"
 | 제목 | 이메일의 제목 행을 입력하십시오.  이는 필수 필드입니다.   |
 | 메시지 본문 | 이메일에서 발송되는 메시지 본문 텍스트를 입력하십시오. IBM 페이로드 값을 사용하여 관련 정보로 이메일 알림을 채울 수 있습니다. 사용할 수 있는 값을 식별하려면 [임계값 페이로드 섹션 값](index.html#threshpayload) 표를 참조하십시오. 기본 HTML 태그를 사용하여 이메일을 구성하십시오.  이는 필수 필드입니다.  |
 | 수신 | 이메일 알림의 수신인에 대해 쉼표로 분리된 목록을 사용하여 이메일 주소를 입력하십시오. 이메일에서 다른 사용자를 복사하려면 "참조" 또는 "숨은 참조" 옵션을 펼치십시오.  이는 필수 필드입니다.  |
-{: caption="표 4. 유지보수 업데이트 또는 인시던트에 대한 이메일 알림 구독의 필드" caption-side="top"}
+{: caption="표 4. 유지 보수 업데이트 또는 인시던트에 대한 이메일 알림 구독의 필드" caption-side="top"}
 
 임계값 데이터가 6시간마다 한 번씩 수집됩니다. 값이 설정한 임계값을 벗어나면 알림이 한 번만 전송됩니다. 오름차순을 선택하면 값이 임계값 아래로 감소한 후 임계값을 다시 초과하는 경우 새 알림이 전송됩니다. 마찬가지로, 내림차순을 선택하면 사용자가 설정한 값을 초과한 후 다시 임계값 아래로 감소하는 경우에만 알림이 전송됩니다. 
 
@@ -849,7 +849,7 @@ DEA의 메모리, 디스크 또는 CPU 사용량을 보려면 **사용 명세**�
 <dd>조직의 모든 영역에서 할당할 수 있는 최대 공인 IP 주소 수입니다. </dd>
 </dl>
 <strong>참고</strong>: 환경에 아직 컨테이너가 없거나 환경 설정에 아직 컨테이너가 없는 경우에는 오류 메시지가 발생합니다.
-<p>컨테이너에 대한 자세한 정보는 [IBM 컨테이너 정보](/docs/containers/container_ov.html)를 참조하십시오. 컨테이너 할당량에 대한 자세한 정보는 [할당량 및 Bluemix 계정](/docs/containers/container_planning_org_ov.html#container_planning_quota)을 참조하십시오. </p>
+<p>컨테이너에 대한 자세한 정보는 [IBM 컨테이너 정보](/docs/containers/container_ov.html)를 참조하십시오. 컨테이너 할당량에 대한 자세한 정보는 [할당량 및 Bluemix 계정](/docs/containers/container_planning.html#container_planning_quota)을 참조하십시오. </p>
 <strong>참고:</strong> {{site.data.keyword.Bluemix_notm}} 시드니 지역에서는 컨테이너를 사용할 수 없습니다. </li>
 </ul>
 <li>조직 관리 페이지에서 변경한 사항을 저장하려면 <strong>저장</strong>을 클릭하십시오. </li>
@@ -2044,14 +2044,13 @@ Content-Type: application/json
 ```
 {: screen}
 
-## cf CLI를 사용하여 사용자 관리
+### cf CLI를 사용하여 사용자 관리
 {: #usingadmincli}
 
 {{site.data.keyword.Bluemix_notm}} 관리
 CLI 플러그인과 함께 Cloud Foundry 명령행 인터페이스를 사용하여
 {{site.data.keyword.Bluemix_notm}} 환경의 사용자를
-관리할 수 있습니다. 예를 들어,
-LDAP 레지스트리에서 사용자를 추가할 수 있습니다.
+관리할 수 있습니다. Cloud Foundry CLI의 플러그인을 다운로드해야 합니다.
 
 시작하기 전에 cf 명령행 인터페이스를 설치하십시오.
 {{site.data.keyword.Bluemix_notm}} 관리
@@ -2061,7 +2060,7 @@ CLI 플러그인에는 cf 버전 6.11.2 이상이 필요합니다. [Cloud Foundr
 Cygwin에서는 지원되지 않습니다. Cygwin 명령행 창 외의
 명령행 창에서 Cloud Foundry 명령행 인터페이스를 사용하십시오.
 
-### {{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인 추가
+#### {{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인 추가
 
 cf 명령행 인터페이스가 설치된 후에
 {{site.data.keyword.Bluemix_notm}} 관리
@@ -2088,11 +2087,18 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 </li>
 </ol>
 
-명령 목록을 보려면 다음 명령을
+설치한 플러그인에서 사용 가능한 하위 명령 목록을 보려면 다음 명령을
 실행하십시오.
 
 ```
 cf plugins
+```
+{: codeblock}
+
+{{site.data.keyword.Bluemix_notm}} 관리 플러그인에 사용 가능한 명령 그룹 목록을 보려면 다음 명령을 실행하십시오.
+
+```
+cf ba
 ```
 {: codeblock}
 
