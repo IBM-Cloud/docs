@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-08-25"
+lastupdated: "2017-04-25"
 
 ---
 
@@ -32,7 +32,7 @@ lastupdated: "2016-08-25"
 
   1. 为组织创建定制域。
 
-	1. 转至 **{{site.data.keyword.avatar}}** 图标 ![“头像”图标](../icons/i-avatar-icon.svg) &gt; **管理组织** &gt; **查看组织详细信息** &gt; **编辑组织** &gt; **域**.
+	1. 转至**管理** &gt; **帐户** &gt; **组织** &gt; **查看详细信息**（针对您的组织）。然后，单击**编辑组织** &gt; **域**。
 
 	2. 在**域**选项卡上，单击**添加域**，输入定制域名，然后单击**保存**。
 
@@ -40,9 +40,9 @@ lastupdated: "2016-08-25"
 
   2. 将包含定制域的路径添加到应用程序。
 
-    1. 在菜单栏上，从下拉菜单中选择**控制台**，然后单击要添加路径的应用程序所在行。这将显示“**概述**”页面。
+    1. 单击**菜单**图标 ![“菜单”图标](../icons/icon_hamburger.svg) &gt; **仪表板**，然后单击要将路径添加到的应用程序所在行。这将显示“**概述**”页面。
 
-	2. 从**查看应用程序**菜单中，选择**编辑路径和访问权**。
+	2. 在**路径**菜单中，选择**编辑路径**。
 
 	3. 单击**添加路径**，然后指定要用于应用程序的路径。
 	4. 单击**保存**。
@@ -78,7 +78,7 @@ cf map-route myapp mydomain -n host_name
 
     *mydomain*
 
-    	定制域的名称。
+    	定制域的名称，例如 `www.mydomain.mybluemix.net`。
 
     *host_name*
 
@@ -97,6 +97,7 @@ cf map-route myapp mydomain -n host_name
     * US-SOUTH：`secure.us-south.bluemix.net`
     * EU-GB：`secure.eu-gb.bluemix.net`
     * AU-SYD：`secure.au-syd.bluemix.net`
+    * EU-DE：`secure.eu-de.bluemix.net`
 
 在浏览器或命令行界面中，输入以下 URL 来访问 myapp 应用程序：
 
