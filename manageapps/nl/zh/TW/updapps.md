@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-08-25"
+lastupdated: "2017-04-25"
 
 ---
 
@@ -32,17 +32,17 @@ lastupdated: "2016-08-25"
 
   1. 建立組織的自訂網域。
 
-	1. 移至**{{site.data.keyword.avatar}}**圖示 ![「虛擬人像」圖示](../icons/i-avatar-icon.svg) &gt; **管理組織** &gt; **檢視詳細資料**（針對您的組織）&gt; **編輯組織** &gt; **網域**。
+	1. 移至**管理** &gt; **帳戶** &gt; **組織** &gt; **檢視詳細資料**（針對您的組織）。然後，按一下**編輯組織** &gt; **網域**。
 
-	2. 在**網域**標籤中，按一下**新增網域**，輸入自訂網域名稱，然後按一下**儲存**。
+	2. 在**網域**標籤上，按一下**新增網域**，輸入自訂網域名稱，然後按一下**儲存**。
 
 	**附註**：例如，您可以使用 `mycompany.com` 來建立路徑 `www.mycompany.com` 與您應用程式的關聯。您也可以使用 `example.mycompany.com` 來建立路徑 `www.example.mycompany.com` 與您應用程式的關聯。
 
   2. 新增含有自訂網域的路徑至應用程式。
 
-    1. 在功能表列上，從下拉功能表中選取**主控台**，然後按一下您要新增路徑的應用程式列。即會顯示**概觀**頁面。
+    1. 按一下**功能表**圖示 ![「功能表」圖示](../icons/icon_hamburger.svg) &gt; **儀表板**，然後按一下您要新增路徑的應用程式列。即會顯示**概觀**頁面。
 
-	2. 從**檢視應用程式**功能表中，選取**編輯路徑及存取權**。
+	2. 從**路徑**功能表中，選取**編輯路徑**。
 
 	3. 按一下**新增路徑**，然後指定您要用於應用程式的路徑。
 	4. 按一下**儲存**。
@@ -78,7 +78,7 @@ cf map-route myapp mydomain -n host_name
 
     *mydomain*
 
-    	自訂網域的名稱。
+    	自訂網域的名稱，例如 `www.mydomain.mybluemix.net`。
 
     *host_name*
 
@@ -91,12 +91,13 @@ cf map-route myapp mydomain -n host_name
 
 在 {{site.data.keyword.Bluemix_notm}} 中配置自訂網域之後，您必須將自訂網域對映至已登錄 DNS 伺服器上的 {{site.data.keyword.Bluemix_notm}} 系統網域：
 
-  1. 在 DNS 伺服器上，設定自訂網域名稱的 'CNAME' 記錄。根據您的 DNS 提供者，設定 CNAME 記錄的步驟有所不同。例如，如果您是使用 GoDaddy，請遵循 GoDaddy 的[網域說明 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} 指引。
+  1. 在 DNS 伺服器上，設定自訂網域名稱的 'CNAME' 記錄。視您的 DNS 提供者而定，設定 CNAME 記錄的步驟有所不同。例如，如果您是使用 GoDaddy，請遵循 GoDaddy 的[網域說明 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} 指引。
   2. 將自訂網域名稱對映至應用程式執行所在的 {{site.data.keyword.Bluemix_notm}} 地區的安全端點。使用下列地區端點，提供在 {{site.data.keyword.Bluemix_notm}} 中配置給組織的 URL 路徑：
 
     * US-SOUTH：`secure.us-south.bluemix.net`
     * EU-GB：`secure.eu-gb.bluemix.net`
     * AU-SYD：`secure.au-syd.bluemix.net`
+    * EU-DE：`secure.eu-de.bluemix.net`
 
 在瀏覽器或指令行介面中，輸入下列 URL 以存取 myapp 應用程式：
 

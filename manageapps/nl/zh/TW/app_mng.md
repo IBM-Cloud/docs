@@ -135,7 +135,7 @@ $ cf ssh -N -T -L 5000:127.0.0.1:5000 <appName>
 
 針對 Node.js 6.3.0 版及以上版本，*inspector* 會使用 [V8 Inspector Integration for Node.js ![外部鏈結圖示](../icons/launch-glyph.svg)](https://nodejs.org/dist/latest-v6.x/docs/api/debugger.html#debugger_v8_inspector_integration_for_node_js){:new_window}。
 
-inspector 公用程式預設會啟動 *proxy*，但遠端除錯的方式取決於 Node.js 版本以及是使用 *proxy* 還是 *noproxy*。下表顯示在各種情境下如何存取遠端除錯。
+依預設，inspector 公用程式會啟動 *proxy*，但遠端除錯的方式取決於 Node.js 版本以及是使用 *proxy* 還是 *noproxy*。下表顯示在各種情境下如何存取遠端除錯。
 
 | | proxy | noproxy |
 |---|---|---|
