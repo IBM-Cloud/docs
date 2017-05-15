@@ -15,19 +15,19 @@ lastupdated: "2016-06-20"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.Bluemix_notm}} CLI 的 {{site.data.keyword.vpn_short}} 插件
+# {{site.data.keyword.Bluemix_notm}} CLI 的 VPN 插件
 
 *版本：*1.4.0
 
-您可以使用命令行界面 (CLI) 来配置和管理 {{site.data.keyword.vpn_full}} 服务。{{site.data.keyword.vpn_short}} CLI 插件提供两个版本：一个用于与 Cloud Foundry CLI 插件一起使用，另一个用于与 {{site.data.keyword.Bluemix}} CLI 插件一起使用。这两个版本的插件提供相同的功能。
+您可以使用命令行界面 (CLI) 来配置和管理 {{site.data.keyword.vpn_full}} 服务。VPN CLI 插件提供两个版本：一个用于与 Cloud Foundry CLI 插件一起使用，另一个用于与 {{site.data.keyword.Bluemix}} CLI 插件一起使用。这两个版本的插件提供相同的功能。
 {:shortdesc}
 
-{{site.data.keyword.vpn_short}} 插件可用于 Windows、MAC 和 Linux 操作系统。请确保使用适合于您的插件。
+VPN 插件可用于 Windows、MAC 和 Linux 操作系统。请确保使用适合于您的插件。
 
-以下指示信息适用于使用 {{site.data.keyword.Bluemix_notm}} CLI 插件。要将该插件与 Cloud Foundry (cf) CLI 插件一起使用，请参阅 [cf CLI 的 {{site.data.keyword.vpn_short}} CLI 插件](../vpn/index.html)。
+以下指示信息适用于使用 {{site.data.keyword.Bluemix_notm}} CLI 插件。要将该插件与 Cloud Foundry (cf) CLI 插件一起使用，请参阅 [cf CLI 的 VPN CLI 插件](../vpn/index.html)。
 
 
-以下信息列出了 Bluemix CLI 的 {{site.data.keyword.vpn_short}} 插件支持的所有命令，并包含命令名称、选项、用法、先决条件、描述和示例。请参阅[扩展 Bluemix 命令行界面](../../index.html#cli_bluemix_ext)，以了解如何安装 vpn 插件。
+以下信息列出了 Bluemix CLI 的 VPN 插件支持的所有命令，并包含命令名称、选项、用法、先决条件、描述和示例。请参阅[扩展 Bluemix 命令行界面](../../index.html#cli_bluemix_ext)，以了解如何安装 vpn 插件。
 
 **注：***先决条件*列出使用命令前必须执行的操作。先决条件可能会包含以下一个或多个操作：
 <dl>

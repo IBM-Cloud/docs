@@ -2,7 +2,7 @@
 
 copyright:
  years: 2017
-lastupdated: "2017-4-6"
+lastupdated: "2017-5-8"
 
 ---
 
@@ -34,7 +34,7 @@ The {{site.data.keyword.uccr_full}} service on IBM {{site.data.keyword.Bluemix_s
 
   * [Create a plan](/docs/services/UCCR/UCCR_deployPlan.html#plan_create) and assign it to one of your teams. Any team member can run the tasks in the deployment plan. You can modify this behavior by assigning tasks to groups or specific team members.
 
-  * [Add tasks to the deployment plan](/docs/services/UCCR/UCCR_tasks.html#tasks_create). Each task is listed on a separate row in the deployment plan. Try adding different types of tasks: manual, UrbanCode Deploy, delay, and note.
+  * [Add tasks to the deployment plan](/docs/services/UCCR/UCCR_tasks.html#tasks_create). Each task is listed on a separate row in the deployment plan. Try adding different types of tasks: manual, UrbanCode Deploy, Continuous Delivery pipeline, delay, Email, and Slack.
 
   * You can modify the list of tasks in the plan in various ways. You can reposition tasks, copy tasks, and delete them.
 
@@ -42,9 +42,9 @@ The {{site.data.keyword.uccr_full}} service on IBM {{site.data.keyword.Bluemix_s
 
   * [You run a deployment by resolving the tasks in a deployment plan](/docs/services/UCCR/UCCR_deployRun.html). Resolve tasks by starting them and then changing their status to `Complete`, `Fail`, or `Skipped`. After all the tasks in a deployment plan are resolved, the deployment has a status of Done.
 
-  * Tasks can be started when they are eligible to start. Eligibility is determined by the plan's execution pattern. By default, a plan's execution pattern is sequential. Initially, the first, or topmost, task is eligible to start. You can modify the execution pattern by grouping tasks together. A task group can have a parallel execution pattern, which means that the group's tasks can be started in any order. A deployment plan can have multiple groups and groups nested within other groups.
+  * Tasks can be started when they are eligible to start. Eligibility is determined by the plan's execution pattern. By default, a plan's execution pattern is sequential. Initially, the first, or topmost, task is eligible to start. You can modify the execution pattern by grouping tasks. A task group can have a parallel execution pattern, which means that the group's tasks can be started in any order and can run simultaneously. A deployment plan can have multiple groups and groups nested within other groups.
 
-  * Some tasks, called auto tasks, start automatically as soon as they are eligible to run. UrbanCode Deploy type tasks, start as soon as they are eligible, without manual intervention. Auto tasks also update their status without manual intervention.  
+  * Some tasks, called auto tasks, start automatically as soon as they are eligible to run. UrbanCode Deploy and Continuous Delivery pipeline type tasks start as soon as they are eligible, without manual intervention. Auto tasks also update their status without manual intervention.  
 
 ## Installing and configuring DevOps Connect
 {: #gs_install_dc}
@@ -103,34 +103,3 @@ IBM Bluemix DevOps Connect coordinates communication between your on-premises IB
     1.  On the integration page, click **Run**. DevOps Connect connects to the UrbanCode Deploy instance specified in the **Server URI** field. DevOps Connect is authorized by the token that is pasted in the **Authentication Token** field.
 
     1.  In {{site.data.keyword.uccr_short}}, confirm that the integration is successful by creating an UrbanCode Deploy type task. If you can select an UrbanCode Deploy application, the integration is successful. The {{site.data.keyword.uccr_short}} instance uses the DevOps Connect login and startup parameters to identify the UrbanCode Deploy applications.  
-
-# Related Links
-{: #rellinks}
-
-## Tutorials and Samples
-{: #samples}
-
-* [Sample deployment plan. You can import this CSV-type file into a deployment plan.](http://public.dhe.ibm.com/cloud/bluemix/uccr/){:new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
-
-<!--
-
-## SDK
-{: #sdk}
-
-## API Reference
-{: #api}
-
-## Compatible Runtimes
-{: #buildpacks}
-
--->
-
-## Related Links
-{: #general}
-
-* [{{site.data.keyword.uccr_short}} Bluemix service](https://console.ng.bluemix.net/catalog/services/continuous-release/){:new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
-* [Download DevOps Connect](https://developer.ibm.com/urbancode/plugin/ibm-urbancode-sync-plugin-example/){:new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
-* [DevOps Connect documentation](https://developer.ibm.com/urbancode/plugindoc/urbancode-sync/ibm-urbancode-sync-utility/1-2/){:new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
-* [Overview of DevOps Connect architecture](https://developer.ibm.com/urbancode/docs/overview-of-ibm-urbancode-cloud-security/){:new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
-* [Continuous Delivery Bluemix service](https://console.ng.bluemix.net/catalog/services/continuous-delivery/){:new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
-* [Continuous Delivery documentation](https://console.stage1.ng.bluemix.net/docs/services/ContinuousDelivery/index.html?pos=2){:new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")

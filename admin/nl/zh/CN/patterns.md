@@ -60,7 +60,7 @@ lastupdated: "2017-02-22"
 || 包含一个或多个团队成员。每个用户必须已经是所属组织中的团队成员。可以向每个团队成员授予一个或多个角色。 |
 | 团队成员   | 可以添加到跨不同帐户的一个或多个组织和空间。 |
 || 可以向其指定同一组织和/或空间内的多个角色。 | 
-{:caption="表 1. 关键元素的描述" caption-side="top"}
+{:caption="表 1. 关键元素描述" caption-side="top"}
 
 ## 确定 {{site.data.keyword.Bluemix_notm}} 环境
 {: #bpimplementation}
