@@ -41,7 +41,7 @@ lastupdated: "2017-01-11"
 |第三方	|非 IBM 公司提供的服务。	|对第三方服务的支持由服务提供者提供。如果 IBM 调查的某个问题确定为第三方服务中的缺陷，那么 IBM 没有义务提供修订。如果需要，IBM 将与第三方服务提供者共享分析。|
 |社区	|开放式源代码社区提供的服务。	|对社区服务的支持由 {{site.data.keyword.Bluemix_notm}} 开发者社区提供。如果 IBM 调查的某个问题确定为社区服务中的缺陷，那么 IBM 没有义务提供修订。|
 |Beta	|尚不可用于生产、目前处于开发试用阶段的服务。Beta 服务可帮助开发和市场营销团队先评估服务价值，再使服务普遍可用。	|如果问题确定为 IBM 提供的 beta 服务中的缺陷，那么将受支持，但 IBM 没有义务提供修订。此外，将在适当的情况下为问题凭单分配严重性 3 或 4。有关凭单严重性的信息，请参阅[联系支持人员](/docs/support/index.html#contacting-bluemix-support)。|
-{: caption="表 1. {{site.data.keyword.Bluemix_notm}} 服务支持信息" caption-side="top"}
+{: caption="表 1. Bluemix 服务支持信息" caption-side="top"}
 
 
 
