@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2017-04-11"
 
 
 ---
@@ -34,7 +34,7 @@ IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 �
 |포함 | [{{site.data.keyword.Bluemix_notm}} 런타임](/docs/cfapps/runtimes.html) | 시스템 및 운영 체제를 설정하고 관리할 필요 없이 신속하게 앱을 시작하고 실행하려면 런타임을 사용하십시오. 모든 {{site.data.keyword.Bluemix_notm}} 런타임은 {{site.data.keyword.Bluemix_notm}} 로컬 인스턴스에서 사용자에게 사용 가능합니다.|
 |포함 | [{{site.data.keyword.autoscaling}}](/docs/services/Auto-Scaling/index.html)| 정책에 따라 애플리케이션의 컴퓨팅 용량을 동적으로 늘리거나 줄입니다. 이 서비스를 사용하면 {{site.data.keyword.Bluemix}} 로컬 환경에서 무제한 사용이 가능합니다.|
 |선택사항 | [{{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}}는 {{site.data.keyword.APIM}}와 IBM StrongLoop를 API 및 마이크로서비스를 작성, 실행, 관리 및 적용하기 위한 포괄적 솔루션을 제공하는 단일 오퍼링으로 통합합니다. |
-|선택사항 | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | {{site.data.keyword.Bluemix_notm}} 로컬에서 Docker 컨테이너를 실행합니다. 컨테이너는 앱에서 실행해야 하는 모든 요소를 포함하는 가상 소프트웨어 오브젝트입니다. 컨테이너는 리소스 격리와 할당의 이점이 있으며 가상 머신 등보다 휴대가 간편하고 효율적입니다.하드웨어 요구사항에 대한 정보는 [{{site.data.keyword.Bluemix_notm}} 데디케이티드 및 Bluemix 로컬의 IBM {{site.data.keyword.containershort}}](/docs/containers/container_dl.html)를 참조하십시오. |
+|선택사항 | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | {{site.data.keyword.Bluemix_notm}} 로컬에서 Docker 컨테이너를 실행합니다. 컨테이너는 앱에서 실행해야 하는 모든 요소를 포함하는 가상 소프트웨어 오브젝트입니다. 컨테이너는 리소스 격리와 할당의 이점이 있으며 가상 머신 등보다 휴대가 간편하고 효율적입니다. 하드웨어 요구사항에 대한 정보는 [{{site.data.keyword.Bluemix_notm}} 데디케이티드 및 Bluemix 로컬의 IBM {{site.data.keyword.containershort}}](/docs/containers/container_ov.html#container_dl)를 참조하십시오. |
 |선택사항 | [{{site.data.keyword.datacshort}}](/docs/services/DataCache/index.html#data_cache) | 이 서비스는 앱에 대한 분산 캐싱 시나리오를 지원하는 인메모리 데이터 그리드를 제공합니다. 50GB의 인메모리 캐시가 포함됩니다. |
 | 선택사항(베타) | [Logging](/docs/monitoringandlogging/cfapps_ml_logs_dedicated_ov.html#container_ml_logs_dedicated_ov) | Kibana의 검색 가능한 로그 및 대시보드와 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스의 Cloud Foundry 앱에 대한 로그를 제공합니다. |
 |선택사항 | [{{site.data.keyword.mobilepush}}](/docs/services/mobilepush/index.html) | {{site.data.keyword.mobilepush}}는 iOS 및 Android 디바이스에 알림을 보내는 데 사용할 수 있는 서비스입니다. 알림은 모든 애플리케이션 사용자와 태그를 사용하는 특정 디바이스 및 사용자 세트를 대상으로 할 수 있습니다. 디바이스, 태그 및 구독을 관리할 수 있습니다. SDK(Software Development Kit) 및 REST(Representational State Transfer) API(Application Program Interface)를 사용하여 클라이언트 애플리케이션을 추가적으로 개발할 수도 있습니다. |
@@ -126,7 +126,7 @@ IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 �
 |{{site.data.keyword.iot_short}}		|예		|예		|아니오|
 |{{site.data.keyword.weather_short}}		|예		|예		|예|
 |{{site.data.keyword.workloadscheduler}}	|예		|예		|예 |
-{: caption="표 4. 지역별 {{site.data.keyword.Bluemix_notm}} 퍼블릭 신디케이션 가능 서비스" caption-side="top"}
+{: caption="표 4. 지역별 Bluemix 공용에서 신디케이션에 사용 가능한 서비스" caption-side="top"}
 {: #table04}
 
 **참고**: 표에 써드파티 서비스가 포함되어 있지 않습니다. 써드파티 서비스 옵션에 대한 카탈로그를 확인하십시오. 
@@ -396,7 +396,7 @@ Cloud Foundry 및 {{site.data.keyword.Bluemix_notm}} 애플리케이션은 로�
 |실제 인프라 검토 | 위협에 대비한 솔루션 컴포넌트를 호스팅하는 실제 구내와 데이터 센터를 보호하기 위한 보안 제어를 검토합니다. | 고객 |
 |모니터링 소프트웨어 검사 | 단계적 확대 및 문제점 판별 플랜에 정의된 대로 모니터링 및 관리 컴포넌트를 검사합니다. | 고객 |
 |OS 검사 | 운영 체제 이미지가 규제 준수 표준에 부합하는지 검사합니다. {{site.data.keyword.IBM_notm}}이 OS 이미지에 대한 액세스를 제공합니다. | {{site.data.keyword.IBM_notm}} 및 고객 책임 공유 |
-{: caption="표 5. 도입/인식(Inception) 단계 태스크" caption-side="top"}
+{: caption="표 5. 도입/인식(Inception) 단계(Phase) 태스크" caption-side="top"}
 
 다음은 진행 단계입니다. 진행 단계에서 사용자와 IBM 사이의 지속적 협력 관계를 기술합니다. 이 단계의 1차 목표에는 다음이 포함됩니다.
 
@@ -419,7 +419,7 @@ Cloud Foundry 및 {{site.data.keyword.Bluemix_notm}} 애플리케이션은 로�
 |상태 보고, 감사 조정 및 규제 준수 미팅  | 규제 준수 검토 상태 미팅에서 상태 보고, 외부 감사 조정 및 표시를 완료합니다. | {{site.data.keyword.IBM_notm}} |
 |채용 및 비즈니스 수요 검증 | 고객 환경에 액세스하는 {{site.data.keyword.IBM_notm}} 담당자를 위해 분기별 채용 확인 및 지속적 비즈니스 수요에 대한 확인을 완료합니다. | {{site.data.keyword.IBM_notm}} |
 |보안 취약점 해결 | 플랫폼에서 보고된 보안 취약점을 해결합니다. | {{site.data.keyword.IBM_notm}} |
-{: caption="표 6. 진행 단계 태스크" caption-side="top"}
+{: caption="표 6. 진행 단계(Phase) 태스크" caption-side="top"}
 
 최종 완료 단계는 사용자와 {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} 사이의 관계 종료를 나타냅니다. 이 단계의 1차 태스크에는 다음이 포함됩니다.
 
@@ -433,7 +433,7 @@ Cloud Foundry 및 {{site.data.keyword.Bluemix_notm}} 애플리케이션은 로�
 |환경에 대한 커미션 해지 | 환경에 대한 액세스 권한과 신임 정보를 종료합니다. | {{site.data.keyword.IBM_notm}} 및 고객 책임 공유 |
 |Relay 종료 | Relay 연결을 종료합니다. | {{site.data.keyword.IBM_notm}} |
 |인프라 재사용 | 회사 가이드라인에 따라 인프라를 재사용합니다. | 고객 |
-{: caption="표 7. 완료 단계 태스크" caption-side="top"}
+{: caption="표 7. 완료 단계(Phase) 태스크" caption-side="top"}
 
 
 ## {{site.data.keyword.Bluemix_local_notm}} 인프라 요구사항
@@ -452,11 +452,11 @@ Cloud Foundry 및 {{site.data.keyword.Bluemix_notm}} 애플리케이션은 로�
 <dd>
 ESXi는 실제 서버에서 실행되고 프로세서, 메모리, 스토리지 및 리소스를 다중 가상 머신으로 추상화하는 가상화 계층입니다. ESXi당 최소 실제 코어 수가 8인 조건에 대해 다음 리소스 총계를 충족하는 임의 조합을 선택하십시오. 다음 사양은 {{site.data.keyword.Bluemix_notm}} 코어 런타임 전용입니다.
 <ul>
-<li>각각 2.0GHz 이상인 32개의 실제 코어</li>
-<li>512GB의 실제 RAM</li>
-<li>7.5TB의 총 데이터 저장소 크기
+<li>각각 2.0GHz 이상인 40개의 실제 코어</li>
+<li>768GB의 실제 RAM</li>
+<li>10TB의 총 데이터 저장소 크기
 <ul>
-<li>{{site.data.keyword.Bluemix_notm}}를 보유할 7TB의 데이터 저장소</li>
+<li>{{site.data.keyword.Bluemix_notm}}를 보유하는 9.5TB 데이터 저장소</li>
 <li>도입/인식(Inception) 가상 머신을 보유할 500GB의 데이터 저장소</li>
 </ul>
 </li>
@@ -465,8 +465,8 @@ ESXi는 실제 서버에서 실행되고 프로세서, 메모리, 스토리지 �
 </dd>
 <dt>**고가용성**</dt>
 <dd>
-단일 노드 장애를 지원하려면 n+1 ESXi가 있어야 합니다. 예를 들어, 두 개의 16x 코어와 256GB ESXi 서버를 사용하여 32개 코어와 512GB의 메모리가 충족된 경우 단일 노드의 전체 장애를 지원하려면 이와 같은 서버가 세 개 필요합니다.
-<p><strong>참고:</strong> 고객의 VMware 관리자는 클러스터에서 고가용성 장애 복구를 엄격하게 적용하여 리소스를 보장하기로 결정할 수 있습니다. 고가용성 장애 복구 없이 진행하도록 선택하는 경우 최소 32개 코어와 512GB의 리소스 요구사항을 충족할 수 있습니다. </p>
+단일 노드 장애를 지원하려면 n+1 ESXi가 있어야 합니다. 예를 들어, 두 개의 16x 코어와 256GB ESXi 서버를 사용하여 40개 코어와 768GB의 메모리가 충족된 경우 단일 노드의 전체 장애를 지원하려면 이와 같은 서버가 세 개 필요합니다.
+<p><strong>참고:</strong> 고객의 VMware 관리자는 클러스터에서 고가용성 장애 복구를 엄격하게 적용하여 리소스를 보장하기로 결정할 수 있습니다. 고가용성 장애 복구 없이 진행하도록 선택하는 경우 최소 40개 코어와 768GB의 리소스 요구사항을 충족할 수 있습니다.</p>
 </dd>
 <dt>**네트워크**</dt>
 <dd>
