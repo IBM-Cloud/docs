@@ -575,6 +575,7 @@ wsk action invoke --blocking --result helloPython --param name World
   {
       "greeting": "Hello World!"
   }
+```
 
 ### zip 파일에 Python 조치 패키징
 {: #openwhisk_actions_python_zip}
