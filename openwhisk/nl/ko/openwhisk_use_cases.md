@@ -7,7 +7,6 @@ lastupdated: "2017-03-15"
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -57,7 +56,7 @@ IoT(Internet of Things) 시나리오는 주로 거의 센서 구동입니다. �
 
 서버리스(serverless) 컴퓨팅 플랫폼은 개발자에게 서버 없이 API를 빠르게 빌드하는 방법을 제공합니다. {{site.data.keyword.openwhisk_short}}는 조치를 위한 REST API의 자동 생성을 지원합니다. {{site.data.keyword.openwhisk_short}}의 [시범 기능](./apigateway.md)을 사용하면 {{site.data.keyword.openwhisk_short}} API Gateway를 통해 조치의 권한 부여 API 키 없이, POST가 아닌 HTTP 메소드를 사용하여 조치를 호출할 수 있습니다. 이 기능은 외부 이용자에게 API를 노출하고 마이크로서비스 애플리케이션을 빌드하는 데 도움이 됩니다.
 
-또한 {{site.data.keyword.openwhisk_short}} 조치를 선택한 API 관리 도구(예: [IBM API Connect](https://www-03.ibm.com/software/products/en/api-connect) 등)에 연결할 수 있습니다. 다른 유스 케이스와 유사하게 확장성 및 기타 서비스 품질(QoS)에 대한 모든 고려사항이 적용됩니다. 
+또한 {{site.data.keyword.openwhisk_short}} 조치를 선택한 API Management 도구(예: [IBM API Connect](https://www-03.ibm.com/software/products/en/api-connect) 등)에 연결할 수 있습니다. 다른 유스 케이스와 유사하게 확장성 및 기타 서비스 품질(QoS)에 대한 모든 고려사항이 적용됩니다. 
 
 [Emoting](https://github.com/l2fprod/openwhisk-emoting)은 REST API를 통해 {{site.data.keyword.openwhisk_short}} 조치를 사용하는 샘플 앱입니다.
 

@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-04"
+lastupdated: "2017-04-21"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -46,11 +45,11 @@ wsk action create /guest/demo/hello hello.js --web true
 
 *操作的标准名称必须包含其包名，如果操作不在指定的包中，那么包名为“default”。*
 
-例如，`guest/demo/hello`。URI 的最后一个部分是`扩展名`，通常为 `.http`，但也允许使用其他值，如后文所述。Web 操作 API 路径可与 `curl` 或 `wget` 配合使用，而不使用 API 密钥。甚至可以直接在浏览器中进行输入。
+例如，`guest/demo/hello`。Web 操作 API 路径可与 `curl` 或 `wget` 配合使用，而不使用 API 密钥。甚至可以直接在浏览器中进行输入。
 
-尝试在 Web 浏览器中打开 [https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.http?name=Jane](https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.http?name=Jane)。或者，尝试通过 `curl` 调用该操作：
+尝试在 Web 浏览器中打开 [https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello?name=Jane](https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello?name=Jane)。或者，尝试通过 `curl` 调用该操作：
 ```
-curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.http?name=Jane
+curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello?name=Jane
 ```
 {: pre}
 
@@ -90,9 +89,9 @@ function main() {
 ```
 {: codeblock}  
 
-或者，返回 `application/json`:
+Or returns `application/json`:
 ```javascript
-function main(params) {
+function main(params) { 
     return {
         statusCode: 200,
         headers: { 'Content-Type': 'application/json' },
@@ -102,7 +101,7 @@ function main(params) {
 ```
 {: codeblock}  
 
-知道操作的[响应大小限制](./openwhisk_reference.html)很重要，因为超过预定义系统限制的响应将失败。例如，大对象不应通过 OpenWhisk 内嵌发送，而是应转移到对象存储。
+It is important to be aware of the [响应大小限制](./openwhisk_reference.html)很重要，因为超过预定义系统限制的响应将失败。例如，大对象不应通过 OpenWhisk 内嵌发送，而是应转移到对象存储。
 
 ## 使用操作处理 HTTP 请求
 {: #openwhisk_webactions_http}
