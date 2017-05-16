@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-04-11"
+lastupdated: "2017-05-15"
 
 ---
 
@@ -70,7 +70,7 @@ Use the following example scenario to set up your own interfaces environment.
 {: #add_device}  
 In this scenario, two device types and four device instances are used. Device instances *temperatureSensor1* and *temperatureSensor2* are associated with device type *Thermometer*. Device instances *humiditySensor1* and *humiditySensor2* are associated with device type *Hygrometer*.
 
-For information about using REST APIs to add a device type, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofThings.ibmcloud.com/swagger/v0002.html#!/Device_Types) documentation.  
+For more information about using REST APIs to add a device type, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Configuration) documentation.  
 
 ## Step 1: Create a composition schema file.  
 {: #crt_composition_file}  
