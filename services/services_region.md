@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-04-03"
+lastupdated: "2017-05-16"
 
 ---
 
@@ -50,6 +50,7 @@ Not all services are available for purchase in every {{site.data.keyword.Bluemix
 |{{site.data.keyword.composeForRethinkDB}} | Hosted in Dallas,US | Hosted in London,UK | Hosted in Sydney,AU | Hosted in Frankfurt,DE |
 |{{site.data.keyword.composeForScyllaDB}} | Hosted in Dallas,US | Hosted in London,UK | Hosted in Sydney,AU | Hosted in Frankfurt,DE |
 |{{site.data.keyword.conceptinsightsshort}}	| Hosted in Dallas,US	| Hosted in Dallas,US	| Hosted in Dallas,US | Not available in region |
+|{{site.data.keyword.contdelivery_short}} | Hosted in Dallas,US | Not available in region | Not available in region | Not available in region |
 |{{site.data.keyword.dashdbshort}} | Hosted in Dallas,US | Hosted in London,UK | Hosted in Sydney | Hosted in Frankfurt,DE |
 |{{site.data.keyword.datacshort}}	| Hosted in Dallas,US	| Hosted in London,UK	| Hosted in Sydney,AU | Not available in region |
 |{{site.data.keyword.DB2OnCloud_short}}	| Hosted in Dallas,US	| Hosted in Dallas,US	| Hosted in Sydney,AU | Not available in region |
