@@ -46,6 +46,32 @@ The log level and other trace options can be set through the Liberty configurati
 
 The Liberty tracing configuration can be adjusted for a running application directly from the IBM Bluemix console. The console also provides capability for requesting and downloading thread and heap dumps. In order to adjust the tracing configuration or request a dump, select a Liberty application in the Bluemix console and choose the `Runtime` menu in the navigation. In the `Runtime` view, select an instance and press the *TRACE* or *DUMP* button. If adjusting the trace level, see [Liberty profile: Trace and logging](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html) for the details of the syntax of the trace specification.
 
+### Diego: change tracing configuration via SSH
+
+For an application running in a Diego cell, it is also possible to change tracing configuration via CF CLI using the SSH feature. For example:
+   
+1. SSH to app 
+    
+    ```
+      $ cf app <appname> 
+    ```
+    {: codeblock}
+
+2. Update ```<logging traceSpecification="xxxx"/>``` to change tracing configuration in server.xml
+       
+    ```
+      $ vi /app/wlp/usr/servers/defaultServer/server.xml 
+    ```
+    {: codeblock}
+
+
+######Precondition:
+In your app's server.xml, applicationMonitor must be polled trigger, such as 
+```
+<applicationMonitor updateTrigger="polled" pollingRate="500ms" dropins="dropins" dropinsEnabled="true"/>
+```
+otherwise your change to tracing configure will not be polled and not take effective. see [Controlling dynamic updates](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_8.5.5/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html) for details.    
+
 ### Diego: triggering dumps via SSH
 
 For an application running in a Diego cell, it is also possible to trigger a thread and heap dump via CF CLI using the SSH feature. For example:
@@ -115,4 +141,5 @@ It is also possible to use `scp` and other similar tools to view and download th
 {: #general notoc}
 * [Liberty runtime](index.html)
 * [Liberty Profile Overview](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+
 
