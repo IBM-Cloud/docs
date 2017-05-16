@@ -24,7 +24,7 @@ You define policies in {{site.data.keyword.DRA_short}}. Policies are created in 
 
 To create a policy:
 
-1. From the left navigation, click **Settings**.
+1. From the {{site.data.keyword.DRA_short}} navigation menu, click **Settings**.
 
 2. Click **Policies**.
 

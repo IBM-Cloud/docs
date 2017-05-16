@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-07"
+lastupdated: "2017-05-11"
 
 ---
 
@@ -12,9 +12,9 @@ lastupdated: "2017-04-07"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Integrating with Jenkins
+# Integrating with freeform Jenkins projects
 
-After you add {{site.data.keyword.DRA_full}} to an open toolchain and define the policies that it monitors, you can integrate it with your Jenkins project. 
+After you add {{site.data.keyword.DRA_full}} to an open toolchain and define the policies that it monitors, you can integrate it with your freeform Jenkins project. Freeform Jenkins projects are configured and administered from the Jenkins web interface. 
 
 The IBM Cloud DevOps plugin for Jenkins integrates Jenkins projects with toolchains. A _toolchain_ is a set of tool integrations that support development, deployment, and operations tasks. The collective power of a toolchain is greater than the sum of its individual tool integrations. Open toolchains are part of the {{site.data.keyword.contdelivery_full}} service. To learn more about the {{site.data.keyword.contdelivery_short}} service, see [its documentation](https://console.ng.bluemix.net/docs/services/ContinuousDelivery/cd_about.html).
 
@@ -39,18 +39,16 @@ Before you can integrate {{site.data.keyword.DRA_short}} with a Jenkins project,
 ## Installing the plugin
 {: #jenkins_install}
 
-First, download the plugin from {{site.data.keyword.DRA_short}}.  
+First, install the plugin on your Jenkins server. Open the server interface, and then:
 
-1. From the toolchain's Overview page, click **DevOps Insights**.
-2. Click **Settings**, then **Jenkins Plugin Setup**.
-3. Follow the instructions on the page to download the plugin.
+1. Click **Manage Jenkins**.
+2. Click **Manage Plugins**. 
+3. Click the **Available** tab
+4. Filter for `IBM Cloud DevOps`. 
+5. Select IBM Cloud DevOps.
+6. Click **Download now and install after restart**. 
 
-Then, on your Jenkins server, install the plugin.
-
-1. Click **Manage Jenkins &gt; Manage Plugins** and click the **Advanced** tab.
-2. Click **Choose File** and select the IBM Cloud DevOps plugin installation file. 
-3. Click **Upload**.
-4. Restart Jenkins and verify that the plugin was installed.
+The plugin is available after the server restarts.  
 
 ## Configuring Jenkins jobs for the Deployment Risk dashboard
 {: #jenkins_configure}
@@ -104,9 +102,3 @@ The Deployment Risk dashboard relies on the presence of a gate after a staging d
 {: #jenkins_notifications}
 
 You can configure your Jenkins jobs to send notifications to tools like Slack or PagerDuty by following the instructions in the [Bluemix Docs](https://console.ng.bluemix.net/docs/services/ContinuousDelivery/toolchains_integrations.html#jenkins).
-
-This example shows how to configure `ICD_WEBHOOK_URL` for job configurations: 
-![Set ICD_WEBHOOK_URL Parameter](images/Set-Parameterized-Webhook.png "Set Parameterized WebHook")
-
-This example shows how to configure post-build actions for job notifications: 
-![Post-build Actions for WebHook notification](images/PostBuild-WebHookNotification.png "Configure WebHook Notification in Post-build Actions")

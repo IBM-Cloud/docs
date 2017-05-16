@@ -15,11 +15,12 @@ IBM Cloud DevOps Insights
     Related links
         [About toolchains](../ContinuousDelivery/toolchains_about.html)
         [Getting started with Delivery Pipeline](../DeliveryPipeline/index.html)
-        [IBM Cloud DevOps Insights on the IBM Cloud Garage Method](https://www.ibm.com/devops/method/content/deliver/tool_deployment_risk_analytics/)
+        [IBM Cloud DevOps Insights on the IBM Cloud Garage Method](https://www.ibm.com/devops/method/content/learn/tool_devops_insights/)
   {: .navgroup-end}
 
   {: .navgroup id="howto"}
     risk_cd.md
+    jenkins_pipeline.md
     risk_jenkins.md
     uc_insights_connect_ucd.md
     risk_policies.md

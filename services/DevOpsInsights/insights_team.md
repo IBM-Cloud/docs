@@ -12,7 +12,7 @@ lastupdated: "2017-03-16"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Team Dynamics (Experimental)
+# Team Dynamics
 {: #gettingstarted}
 
 {{site.data.keyword.DRA_full}} Team Dynamics employs social coding analysis to identify the level of interaction between team members so that the team can fix unproductive practices. 
