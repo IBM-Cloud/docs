@@ -15,7 +15,7 @@ lastupdated: "2017-05-11"
 # Assigning user access
 {: #assignaccess}
 
-You assign access for the users as you invite them, assigning roles, policies, and the accounts or organizations, or both, that they can access. Depending on the access options that you are authorized to manage, you can invite and provide access for users across the account or organization. As an account owner, you can assign access options to your account for a user when you and the user are both members, regardless of the role. The following sections describe the three types of access that can be assigned to an invited user.
+You assign access for the users as you invite them, assigning roles, policies, and the accounts or organizations, or both, that they can access. Depending on the access options that you are authorized to manage, you can invite and provide access for users across the account, organization, space, and service instances. As an account owner, you can assign access options to your account for a user when you and the user are both members, regardless of the role. The following sections describe the three types of access that can be assigned to an invited user.
 {:shortdesc}
 
 ## Identity and access enabled services
@@ -33,7 +33,7 @@ See [Identity and access management policies and roles](/docs/iam/users_roles.ht
 
 ## Cloud Foundry access
 
-All users are granted the auditor organization role by default. You can update this role to billing manager or organization manager after the user accepts the invitation. During the invite process, you can add multiple space roles, one at a time.
+All users are granted the auditor organization role by default. You can update this role to billing manager, organization manager, or no organization role after the user accepts the invitation. During the invite process, you can add multiple space roles, one at a time.
 
 1. From the **Invite users** screen, expand the **Cloud Foundry access** section.
 2. Select an organization to add the user to.
