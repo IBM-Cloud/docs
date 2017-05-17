@@ -35,7 +35,7 @@ lastupdated: "2017-02-09"
 | Cloudant NoSQL DB および Internet of Things Platform の無料ライト・プランにアクセスでき、近い将来さらに多くのサービスが加わります。 |
 | アプリケーションは、開発アクティビティーが 10 日間ない場合はスリープ状態になります。 |
 | サービス・インスタンスは、非アクティブな状態が 30 日間続くと削除されます。 |
-{:caption="Table 1. What's new in a Standard account" caption-side="top"}
+{:caption="表 1. 標準アカウントの新しい点" caption-side="top"}
 
 |トライアル・アカウントから移行しても変わらない点 | 
 |-----------------|
@@ -43,7 +43,7 @@ lastupdated: "2017-02-09"
 |Cloudant NoSQL DB および Internet of Things Platform のライト版のすべてのインスタンス。これらのサービスのそれぞれについて 1 つのライト版インスタンスを新規アカウントに移行できます。 |
 |組織、スペース、および関連付けられたチーム・メンバーのアクセス設定は変わりません。1 つの組織を新規アカウントに移行できます。 |
 |{{site.data.keyword.Bluemix_notm}} サポートのレベルは変わりません。 |
-{:caption="Table 2. What's not changing" caption-side="top"}
+{:caption="表 2. 変わらない点" caption-side="top"}
 
 **注:** トライアル・アカウントから移行されない場合、その理由を説明するメッセージが表示されます。既存のトライアル・アカウントに複数の組織があるか、移行できないアプリケーションがある可能性があります。適切な処置を行った後、アカウントの変換を再試行してください。
 
