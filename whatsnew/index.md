@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-05-03" 
+lastupdated: "2017-05-17" 
 
 ---
 
@@ -105,6 +105,13 @@ Visit the following pages for a cumulative list of the latest updates:
 * [Latest Updates to the ASP.NET Core buildpack](/docs/runtimes/dotnet/updates.html#latest_updates)
 * [Latest updates to the IBM XPages for {{site.data.keyword.Bluemix_notm}} buildpack](/docs/starters/xpages/index.html#updates)
 
+### New SDK for Node.js buildpack v3.12
+New as of: 16 May 2017
+
+The SDK for Node.js buildpack v3.12 provides IBM SDK for Node.js versions 0.12.17, 0.12.18, 4.8.0, 4.8.2, 6.10.0 and 6.10.2. The default is now changed from the latest 4.x to the latest 6.x, so it is currently 6.10.2. Being a major version change, this could affect apps that are relying on the default. See [Node.js version long-term support and the SDK for Node.js buildpack](https://www.ibm.com/blogs/bluemix/2016/11/node-version-support-and-sdk-buildpack/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") for more information about how to avoid any problems.
+
+In addition to the new runtimes, this release contains a buildpack bug fix an issue with the App Management Health Center handler and Node.js versions 6.9.5 and 6.10.0.
+
 ### New Liberty for Java buildpack v3.9
 New as of: 27 April 2017
 
@@ -117,6 +124,17 @@ The Liberty buildpack v3.8 provides new default and monthly Liberty runtime vers
 
 ## Services
 {: #services_category}
+
+### {{site.data.keyword.streaminganalyticsfull}} service updates: Develop Streams applications in your Python development environment
+New as of: 13 April 2017
+
+In the past, you had to install a local version of IBM Streams to develop Python applications. That’s no longer the case. Now you can develop applications with Python in your favorite development environment or in a Jupyter interactive notebook.
+
+You can use the STREAMING_ANALYTICS_SERVICE context to submit a Python application to the {{site.data.keyword.streaminganalyticsshort}} service. The {{site.data.keyword.streaminganalyticsshort}} service requires Python 3.5.
+
+You can create sample Python applications using Jupyter notebooks in IBM Data Science Experience (DSX), and submit these applications to the {{site.data.keyword.streaminganalyticsshort}} instance directly from DSX. Check out the sample stream-processing Python applications in notebooks on the [DSX community page](https://datascience.ibm.com/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+
+For more information about the {{site.data.keyword.streaminganalyticsshort}} service updates, see [{{site.data.keyword.streaminganalyticsshort}} updates: DSX integration and easier Python development](https://www.ibm.com/blogs/bluemix/2017/05/streaming-analytics-updates-dsx-integration-easier-python-development/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
 ### {{site.data.keyword.sparks}} updates: Apache Spark 2.1 is supported now
 New as of: 21 April 2017

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-04-11"
 ---
 
 
@@ -26,7 +26,7 @@ Cloud Foundry は、新しいデフォルトのランタイム・アーキテク
 このアーキテクチャー更新によって、Cloud Foundry プラットフォームの全体的な運用およびパフォーマンスが向上します。この新規アーキテクチャーは、いくつかのアプリケーション・コンテナー・テクノロジー (Garden や Windows など)、アプリケーション・コンテナーへの直接ログインを可能にする SSH パッケージ、およびその他の革新的な変更をサポートします。アーキテクチャーの最近のアップグレードについて詳しくは、[{{site.data.keyword.Bluemix_notm}} Cloud Foundry: Diego is live ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://www.ibm.com/blogs/bluemix/2017/01/bluemix-cloud-foundry-diego-live/){: new_window} を参照してください。
 
 
-作成する新規アプリケーションはすべて Diego 上で実行されるため、DEA 上で実行する既存アプリケーションをこの新しい Diego アーキテクチャーへマイグレーションする作業を開始する必要があります。
+作成する新規アプリケーションはすべて Diego 上で実行されるため、DEA 上で実行する既存アプリケーションをこの新しい Diego アーキテクチャーへマイグレーションする必要があります。
 
 **注:** Cloud Foundry Diego アーキテクチャーは、すべての {{site.data.keyword.Bluemix_notm}} Public 地域環境に影響します。{{site.data.keyword.Bluemix_notm}} Dedicated 環境および {{site.data.keyword.Bluemix_notm}} Local 環境は、後日更新されます。
 
@@ -171,7 +171,7 @@ for Java」](/docs/runtimes/liberty/index.html)を参照してください。
                 "jade": ">=1.1.4"
         },
         "scripts": {
-                  "start": "node app.js"
+                "start": "node app.js"
         },
         "engines": {
                 "node": ">=0.10.0"
@@ -238,7 +238,7 @@ cf push -f appManifest.yml
 |**random-route**	|アプリケーションにランダムな経路を割り当てるブール値。デフォルト値は **false** です。	|`random-route: true`|
 |**services**	|アプリケーションにバインドするサービス。	|`services: - mysql_maptest`|
 |**env**	|アプリケーションのカスタム環境変数。|`env: DEV_ENV: production`|
-{: caption="Table 1. Supported options in the manifest YAML file" caption-side="top"}
+{: caption="表 1. マニフェスト YAML ファイルでサポートされるオプション" caption-side="top"}
 
 ### サンプル manifest.yml ファイル
 
@@ -265,7 +265,7 @@ cf push -f appManifest.yml
 ## 環境変数
 {: #app_env}
 
-環境変数には、{{site.data.keyword.Bluemix_notm}} にデプロイされたアプリケーションの環境情報が含まれています。*Droplet Execution Agent (DEA)* およびビルドパックによって設定される環境変数に加えて、{{site.data.keyword.Bluemix_notm}} 上のアプリケーション用にアプリケーション固有の環境変数を設定することも可能です。
+環境変数には、{{site.data.keyword.Bluemix_notm}} にデプロイされたアプリケーションの環境情報が含まれています。*Diego* およびビルドパックによって設定される環境変数に加えて、{{site.data.keyword.Bluemix_notm}} 上のアプリケーション用にアプリケーション固有の環境変数を設定することも可能です。
 
 **cf env** コマンドを使用するか、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースから、実行中の {{site.data.keyword.Bluemix_notm}} アプリケーションの以下の環境変数を表示できます。
 
@@ -321,7 +321,7 @@ cf push -f appManifest.yml
 
 DEA およびビルドパックによって設定された環境変数にもアクセスできます。
 
-DEA によって定義された変数を以下に示します。
+Diego によって定義された変数を以下に示します。
 
 <dl>
   <dt><strong>HOME</strong></dt>
@@ -329,15 +329,15 @@ DEA によって定義された変数を以下に示します。
   <dt><strong>MEMORY_LIMIT</strong></dt>
   <dd>アプリケーションの各インスタンスが使用できるメモリーの最大量。この値は、アプリケーションの <span class="ph filepath">manifest.yml</span> ファイル内で、またはアプリケーションをプッシュする際はコマンド・ラインで指定できます。</dd>
   <dt><strong>PORT</strong></dt>
-  <dd>アプリケーションとの通信のための、DEA 上のポート。DEA はステージング時にポートをアプリケーションに割り振ります。</dd>
+  <dd>アプリケーションとの通信のための、Diego 上のポート。Diego はステージング時にポートをアプリケーションに割り振ります。</dd>
   <dt><strong>PWD</strong></dt>
   <dd>ビルドパックが実行中の現行作業ディレクトリー。</dd>
   <dt><strong>TMPDIR</strong></dt>
   <dd>一時ファイルおよびステージング・ファイルが保管されているディレクトリー。</dd>
   <dt><strong>USER</strong></dt>
-  <dd>DEA の実行に使用されるユーザー ID。</dd>
+  <dd>Diego の実行に使用されるユーザー ID。</dd>
   <dt><strong>VCAP_APP_HOST</strong></dt>
-  <dd>DEA ホストの IP アドレス。</dd>
+  <dd>Diego ホストの IP アドレス。</dd>
   <dt><strong>VCAP_APPLICATION</strong></dt>
   <dd>デプロイ済みアプリケーションについての情報が含まれた JSON ストリング。この情報にはアプリケーション名、URI、メモリー制限、アプリケーションが現在の状態になった時点のタイム・スタンプなどが含まれます。以下に例を示します。
 <pre class="pre codeblock"><code>
@@ -414,9 +414,9 @@ DEA によって定義された変数を以下に示します。
 	  <dt><strong>IBM_JAVA_OPTIONS</strong></dt>
 	  <dd>アプリケーションの実行時に使用する Java SDK オプション。</dd>
 	  <dt><strong>IBM_JAVA_COMMAND_LINE</strong></dt>
-	  <dd>DEA で Liberty プロファイルのサーバー・インスタンスを開始するための Java コマンド。</dd>
+	  <dd>Diego で Liberty プロファイルのサーバー・インスタンスを開始するための Java コマンド。</dd>
 	  <dt><strong>WLP_USR_DIR</strong></dt>
-	  <dd>DEA で Liberty プロファイルのサーバー・インスタンスを開始する際の共有リソースとサーバー定義のロケーション。</dd>
+	  <dd>Diego で Liberty プロファイルのサーバー・インスタンスを開始する際の共有リソースとサーバー定義のロケーション。</dd>
 	  <dt><strong>WLP_OUTPUT_DIR</strong></dt>
 	  <dd>実行中の Liberty プロファイルのサーバー・インスタンスのログ・ファイルや作業ディレクトリーなど、生成された出力のロケーション。</dd>
 	  </dl>

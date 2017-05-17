@@ -7,7 +7,6 @@ lastupdated: "2017-02-21"
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -55,7 +54,7 @@ cron 구문 사용에 대한 세부사항은 http://crontab.org를 참조하십�
 생성된 각 이벤트는 `trigger_payload` 값에서 지정된 값을 매개변수로 포함합니다. 이 경우, 각 트리거 이벤트는 `name=Odin` 및 `place=Asgard` 매개변수를 갖게 됩니다.
 
 **참고**: `cron` 매개변수도 여섯 개 필드의 사용자 정의 구문을 지원합니다. 여기서, 첫 번째 필드는 초를 나타냅니다.
-이 사용자 정의 cron 구문 사용에 대한 세부사항은 다음을 참조하십시오. https://github.com/ncb000gt/node-cron
+이 사용자 정의 cron 구문 사용에 대한 세부사항은 다음을 참조하십시오. https://github.com/ncb000gt/node-cron.
 다음은 여섯 개 필드를 사용한 표기법의 예입니다.
   - `*/30 * * * * *`: 30초마다.
 

@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2017
 
-lastupdated: "2016-10-13"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -53,8 +53,8 @@ vCPU | 19 | 57 |
 앱 로그를 보려면 다음 단계를 수행하십시오.
 1. 실행 중인 앱을 선택하십시오. 
 2. **로그**를 클릭하십시오. **로그** 보기의 실행 중인 앱에서 로그를 볼 수 있습니다. 
-4. **고급 보기** 단추를 클릭하십시오. **고급 보기**는 로그 및 시간소인이 있는 데이터를 사용하여 사용자 정의 시각화를 작성하는 시각화 도구인 Kibana를 사용하여 로그에 대한 자세한 보기를 보여줍니다. 고급 보기 사용에 대한 자세한 정보는 [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html) 문서를 참조하십시오.
+4. **고급 보기** 단추를 클릭하십시오. **고급 보기**는 로그 및 시간소인이 있는 데이터를 사용하여 사용자 정의 시각화를 작성하는 시각화 도구인 Kibana를 사용하여 로그에 대한 자세한 보기를 보여줍니다. 고급 보기 사용에 대한 자세한 정보는 [Kibana 사용자 안내서 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.elastic.co/guide/en/kibana/4.1/index.html){: new_window}를 참조하십시오.
 
-다음으로, Kibana 대시보드를 사용자 정의할 수 있습니다. 자세한 정보는 [Kibana 대시보드에서 로그 표시 사용자 정의](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_dash_logs_custom)를 참조하십시오.
+다음으로, Kibana 대시보드를 사용자 정의할 수 있습니다. 자세한 정보는 [Kibana의 고급 로그 분석](../kibana4/analyzing_logs_Kibana.html#analyzing_logs_Kibana)을 참조하십시오.
 
 <!-- audience blue staging only end comment -->

@@ -388,7 +388,7 @@ Try again later. If you see this message again, go to the [Bluemix status page](
 請稍後再重試。如果問題繼續發生，請移至 [IBM Bluemix 支援中心](http://ibm.biz/bluemixsupport){: new_window}。
 
 ## BXNUI0085E
-**訊息**：未擷取容器的使用情形資料。 
+**訊息**：未擷取容器的用量資料。 
 
 容器可能會暫時無法運作。 
 

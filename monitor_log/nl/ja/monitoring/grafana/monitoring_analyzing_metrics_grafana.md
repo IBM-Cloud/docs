@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-01"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -26,17 +26,18 @@ Grafana は以下のどの方法でも起動できます。
     Grafana では特定の Docker コンテナーのメトリックをその特定のコンテナーに応じて起動できます。 
     
     詳しくは、[{{site.data.keyword.Bluemix_notm}} ダッシュボードから
-    Grafana ダッシュボードへの移動](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_bluemix)を参照してください。
+    Grafana ダッシュボードへのナビゲート](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_bluemix)を参照してください。
 
 * ブラウザーの直接リンクから
 
     Grafana を起動して、用意されている {{site.data.keyword.Bluemix_notm}} スペース内のサービスのログを、表示データで集約することができます。
     
-    詳しくは、『[Web ブラウザーから Kibana ダッシュボードへの移動](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_browser)』を参照してください。
+    詳しくは、『[Web ブラウザーから Kibana ダッシュボードへのナビゲート](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_browser)』を参照してください。
     
+Grafana について詳しくは、[Grafana のユーザー・ガイド ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://docs.grafana.org/guides/getting_started/){: new_window} を参照してください。
 
 
-##  Bluemix ダッシュボードから Grafana ダッシュボードへの移動
+##  Bluemix ダッシュボードから Grafana ダッシュボードへのナビゲート
 {: #launch_grafana_from_bluemix}
 
 Grafana に表示されるデータをフィルター操作するために使用される照会によって、Kibana を起動した場所から {{site.data.keyword.Bluemix_notm}} コンテナーのデータが取り出されます。 
@@ -49,10 +50,8 @@ Docker コンテナーのメトリックを Grafana で表示するには、以�
     
 3. **「拡張ビュー」**をクリックします。**「Grafana」**ダッシュボードが開きます。
 
-Grafana について詳しくは、[Grafana のユーザー・ガイド ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://docs.grafana.org/){: new_window} を参照してください。
 
-
-##  Web ブラウザーから Grafana ダッシュボードへの移動
+##  Web ブラウザーから Grafana ダッシュボードへのナビゲート
 {: #launch_grafana_from_browser}
 
 Grafana に表示されるデータをフィルター操作するために使用される照会によって、{{site.data.keyword.Bluemix_notm}} 組織内のスペースのデータが取り出されます。Grafana に表示されるメトリック情報には、ログインしている {{site.data.keyword.Bluemix_notm}} 組織のスペース内にデプロイされているすべてのリソースに関するレコードが含まれます。
@@ -63,4 +62,4 @@ Grafana に表示されるデータをフィルター操作するために使用
 
 2. **「Grafana」**を選択します。
      
-Grafana について詳しくは、[Grafana のユーザー・ガイド ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://docs.grafana.org/){: new_window} を参照してください。
+

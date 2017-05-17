@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-04"
+lastupdated: "2017-04-24"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock:.codeblock}
 {:screen:.screen}
 {:pre: .pre}
@@ -286,7 +285,7 @@ JavaScript 조치는 기본적으로 Node.js 버전 6.9.1 환경에서 실행됩
 - underscore v1.8.3
 - uuid v3.0.0
 - validator v6.1.0
-- watson-developer-cloud v2.9.0
+- watson-developer-cloud v2.29.0
 - when v3.7.7
 - winston v2.3.0
 - ws v1.1.1
@@ -400,7 +399,7 @@ Docker 조치는 Docker 컨테이너 내의 사용자 제공 바이너리를 실
 
 Docker 스켈레톤은 OpenWhisk 호환 가능 Docker 이미지를 빌드하는 편리한 방법입니다. `wsk sdk install docker` CLI 명령을 사용하여 스켈레톤을 설치할 수 있습니다.
 
-기본 바이너리 프로그램은 컨테이너 내부(`/action/exec`)에 있어야 합니다. 실행 파일은 `stdin`을 통해 입력 인수를 수신하고 `stdout`를 통해 결과를 리턴해야 합니다.
+기본 바이너리 프로그램은 컨테이너 내부(`/action/exec`)에 있어야 합니다. 실행 파일은 `JSON` 오브젝트로 역직렬화할 수 있는 단일 명령행 인수 문자열을 통해 입력 인수를 수신합니다. `stdout`을 통해 결과를 직렬화된 `JSON`의 단일행 문자열로 리턴해야 합니다.
 
 `dockerSkeleton`에 포함된 `Dockerfile`을 수정하여 모든 컴파일 단계 또는 종속 항목을 포함시킬 수 있습니다. 
 
@@ -435,7 +434,7 @@ REST API를 통해 시스템의 모든 기능을 사용할 수 있습니다. 조
 - `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations/{activationName}`
 
 
-네임스페이스 엔드포인트와 활성화 엔드포인트는 GET 요청만 지원합니다. 조치 엔드포인트, 트리거 엔드포인트, 규칙 엔드포인트, 패키지 엔드포인트는 GET, PUT, DELETE 요청을 지원합니다. 조치, 트리거, 규칙의 엔드포인트는 POST 요청도 지원하며 이 요청은 조치와 트리거를 호출하고 규칙을 사용 또는 사용 안함으로 설정하는 데 사용됩니다. 세부사항은 [API 참조](https://new-console.{DomainName}/apidocs/98)를 참조하십시오. 
+네임스페이스 엔드포인트와 활성화 엔드포인트는 GET 요청만 지원합니다. 조치 엔드포인트, 트리거 엔드포인트, 규칙 엔드포인트, 패키지 엔드포인트는 GET, PUT, DELETE 요청을 지원합니다. 조치, 트리거, 규칙의 엔드포인트는 POST 요청도 지원하며 이 요청은 조치와 트리거를 호출하고 규칙을 사용 또는 사용 안함으로 설정하는 데 사용됩니다. 세부사항은 [API 참조](https://console.{DomainName}/apidocs/98)를 참조하십시오. 
 
 모든 API는 HTTP 기본 인증으로 보호됩니다. 기본 인증 신임 정보는 `~/.wskprops` 파일의 `AUTH` 특성에 있으며 콜론으로 구분됩니다. [CLI 구성 단계](./index.html#openwhisk_start_configure_cli)에서 이 신임 정보를 검색할 수도 있습니다. 
 

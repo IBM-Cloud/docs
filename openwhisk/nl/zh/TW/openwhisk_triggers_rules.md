@@ -7,7 +7,6 @@ lastupdated: "2017-02-23"
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -167,7 +166,7 @@ wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   }
   ```
 
-  您看到 hello 動作接收到事件有效負載並傳回預期字串。
+  您看到 hello 動作收到事件有效負載並傳回預期字串。
 
 您可以建立多個規則，來建立相同觸發程式與不同動作的關聯。觸發程式及規則不能屬於套件。不過，規則可能與屬於套件的動作相關聯，例如：
   ```

@@ -95,7 +95,7 @@ lastupdated: "2016-05-09"
 |Eclipse	|在 Eclipse 中管理代码，并使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 来推送应用程序。|
 |Git 集成	|在 GitHub 上管理代码，并将 Git 集成到 {{site.data.keyword.Bluemix_notm}} 中。您可以与其他开发者进行协作。落实代码中的更改时，应用程序将自动部署到 {{site.data.keyword.Bluemix_notm}}。无需手动推送应用程序。|
 |{{site.data.keyword.Bluemix_notm}} DevOps Delivery Pipeline	|在 DevOps GitHub 存储库上管理代码，并通过 DevOps Delivery Pipeline 将应用程序部署到 {{site.data.keyword.Bluemix_notm}}。|
-{: caption="表 1. {{site.data.keyword.Bluemix_notm}} 工具" caption-side="top"}
+{: caption="表 1. Bluemix 工具" caption-side="top"}
 
 
 如果 Cloud Foundry 平台不支持应用程序需求，那么可以使用可通过更多定制选项来设置、配置和维护运行时的容器或 VM。

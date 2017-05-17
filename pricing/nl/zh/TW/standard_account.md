@@ -35,7 +35,7 @@ lastupdated: "2017-02-09"
 | 您可以存取免費的 Cloudant NoSQL DB 和 Internet of Things Platform 精簡方案，並且即將推出更多服務。 |
 | 如果長達 10 天沒有開發活動，您的應用程式將會休眠。 |
 | 您的服務實例會在 30 天無活動之後刪除。 |
-{: caption="表 1. 標準帳戶的新增功能" caption-side="top"}
+{:caption="表 1. 標準帳戶的新增功能" caption-side="top"}
 
 |試用帳戶轉換時有哪些事情維持不變？ | 
 |-----------------|
@@ -43,7 +43,7 @@ lastupdated: "2017-02-09"
 |Cloudant NoSQL DB 和 Internet of Things Platform 的任何精簡實例。這些服務每一項都可以有一個精簡實例轉移到您的新帳戶。 |
 |您的組織、空間及相關聯的團隊成員存取設定會維持相同。可以有一個組織轉移到您的新帳戶。 |
 |{{site.data.keyword.Bluemix_notm}} 支援層次維持相同。 |
-{: caption="表 2. 有哪些事情維持不變？" caption-side="top"}
+{:caption="表 2. 未變更的內容" caption-side="top"}
 
 **附註：**如果您的試用帳戶未轉換，您會看到解釋原因的訊息。您的現有試用帳戶中可能有多個組織，或是無法轉移的應用程式。您可以採取適當的動作，然後嘗試重新轉換帳戶。
 
@@ -61,7 +61,7 @@ lastupdated: "2017-02-09"
 <li>已佈建的傳輸容量。</li>
 </ul> 
 
-在標準帳戶中，您可以使用 {{site.data.keyword.Bluemix_notm}} 型錄中有精簡方案的所有項目。精簡方案很容易找。根據預設值，當您開啟型錄時，具有精簡方案的所有服務會顯示，並標示精簡標記 ![精簡標記](../icons/Lite.svg)。請選取服務，以檢視相關聯精簡方案的詳細資料。
+在標準帳戶中，您可以使用 {{site.data.keyword.Bluemix_notm}} 型錄中有精簡方案的所有項目。精簡方案很容易找。依預設，當您開啟型錄時，具有精簡方案的所有服務會顯示，並標示精簡標記 ![精簡標記](../icons/Lite.svg)。請選取服務，以檢視相關聯精簡方案的詳細資料。
 
 ## 標準帳戶的可用功能
 {: #whatsavailable}

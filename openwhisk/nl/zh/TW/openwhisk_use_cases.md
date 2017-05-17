@@ -7,7 +7,6 @@ lastupdated: "2017-03-15"
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -25,7 +24,7 @@ lastupdated: "2017-03-15"
 
 {{site.data.keyword.openwhisk_short}} 的模組及固有的可擴充本質，讓它適用於實作動作中邏輯的精細部分。{{site.data.keyword.openwhisk_short}} 動作彼此無關，因此可以使用 {{site.data.keyword.openwhisk_short}} 所支援的各種不同語言進行實作，以及存取各種後端系統。每一個動作都可以個別進行部署及管理，與其他動作分開進行擴充。動作之間的交互連線是由 {{site.data.keyword.openwhisk_short}} 透過規則、序列及命名慣例形式所提供。這十分適用於微服務型應用程式。
 
-支持 {{site.data.keyword.openwhisk_short}} 的另一個重要論點，就是災難回復配置中的系統成本。我們將使用 PaaS 或 CaaS 的微服務與使用 {{site.data.keyword.openwhisk_short}} 進行比較。假設我們有 10 個使用容器或 CloudFoundry 運行環境的微服務，單一可用性區域中有 10 個持續執行且可入帳的處理程序，跨 2 個 AZ 執行時就有 20 個處理程序，跨 2 個地區且各有 2 個區域執行時就有 40 個處理程序。在 {{site.data.keyword.openwhisk_short}} 中執行微服務來進行相同的作業時，您要跨多少 AZ 和地區來執行微服務都可以，而且不需要額外支付任何成本。
+支持 {{site.data.keyword.openwhisk_short}} 的另一個重要論點，就是災難回復配置中的系統成本。我們將使用 PaaS 或 CaaS 的微服務與使用 {{site.data.keyword.openwhisk_short}} 進行比較。假設我們有 10 個使用容器或 CloudFoundry 運行環境的微服務，單一可用性區域中有 10 個持續執行且計費的處理程序，跨 2 個 AZ 執行時就有 20 個處理程序，跨 2 個地區且各有 2 個區域執行時就有 40 個處理程序。在 {{site.data.keyword.openwhisk_short}} 中執行微服務來進行相同的作業時，您要跨多少 AZ 和地區來執行微服務都可以，而且不需要額外支付任何成本。
 
 [Logistics Wizard](https://www.ibm.com/blogs/bluemix/2017/02/microservices-multi-compute-approach-using-cloud-foundry-openwhisk/) 是企業級範例應用程式，其運用 {{site.data.keyword.openwhisk_short}} 和 Cloud Foundry 來建置 12 因素樣式的應用程式。這是一個智慧型供應鏈管理解決方案，其目的是要模擬執行 ERP 系統的環境。它會為此 ERP 系統增加應用程式，以提升供應鏈管理員的可見性和靈活性。
 
@@ -89,6 +88,6 @@ Internet of Things 情境本質上經常是由感應器所驅動。例如，如�
 
 ## 使用 Kafka 或 Message Hub 來處理事件 
 
-{{site.data.keyword.openwhisk_short}} 非常適合與 Kafka、IBM Message Hub 服務（以 Kafka 為基礎）及其他傳訊系統組合使用。這些系統的事件導向本質需要有事件導向的運行環境才能處理訊息，並將商業邏輯套用至那些訊息，這其實就是 {{site.data.keyword.openwhisk_short}} 以其資訊來源、觸發程式、動作等等提供的功能。Kafka 和 Message Hub 通常會用於非常大且無法預期的工作量，需要那些訊息的消費者一接到通知就能擴充，而這又是 {{site.data.keyword.openwhisk_short}} 的一大優點。{{site.data.keyword.openwhisk_short}} 具有內建功能，可以耗用訊息，也可以發佈 [openwhisk-package-kafka](https://github.com/openwhisk/openwhisk-package-kafka) 套件中提供的訊息。
+{{site.data.keyword.openwhisk_short}} 非常適合與 Kafka、IBM Message Hub 服務（以 Kafka 為基礎）及其他傳訊系統組合使用。這些系統的事件導向本質需要有事件導向的運行環境才能處理訊息，並將商業邏輯套用至那些訊息，這其實就是 {{site.data.keyword.openwhisk_short}} 以其資訊來源、觸發程式、動作等等提供的功能。Kafka 和 Message Hub 通常會用於非常大且無法預期的工作負載，需要那些訊息的消費者一接到通知就能擴充，而這又是 {{site.data.keyword.openwhisk_short}} 的一大優點。{{site.data.keyword.openwhisk_short}} 具有內建功能，可以耗用訊息，也可以發佈 [openwhisk-package-kafka](https://github.com/openwhisk/openwhisk-package-kafka) 套件中提供的訊息。
 
 這裡有一個[實作事件處理程序情境的應用程式範例](https://github.com/IBM/openwhisk-data-processing-message-hub)，搭配使用 {{site.data.keyword.openwhisk_short}}、Message Hub 及 Kafka。

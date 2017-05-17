@@ -51,7 +51,7 @@ IBM ID 是您用來登入 {{site.data.keyword.Bluemix_notm}} 帳戶以便使用�
 ## 分析追蹤設定
 {: #tracking}
 
-預設會追蹤 {{site.data.keyword.Bluemix_notm}} 使用者介面中的動作。追蹤可讓 {{site.data.keyword.Bluemix_notm}} 團隊為您建置更好的經驗，並提供更好的支援。所收集的資料不會針對其他用途而使用或分享。
+依預設，會追蹤 {{site.data.keyword.Bluemix_notm}} 使用者介面中的動作。追蹤可讓 {{site.data.keyword.Bluemix_notm}} 團隊為您建置更好的經驗，並提供更好的支援。所收集的資料不會針對其他用途而使用或分享。
 
 如果您選擇停用追蹤，則可能無法使用 {{site.data.keyword.Bluemix_notm}} 中的某些特性，例如會談通訊。
 

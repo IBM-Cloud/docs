@@ -33,7 +33,7 @@ lastupdated: "2017-01-09"
 |既存の IBM ID | IBM ID を既にお持ちの場合は、IBM の他の製品やサービスに使用する既存の資格情報で {{site.data.keyword.Bluemix_notm}} に登録します。登録の際には、電話番号の入力が必要です。 |
 |新しい IBM ID | IBM ID をまだお持ちではない場合は、その作成を選択できます。IBM ID により、1 つのログイン・ユーザー名を、お客様が使用する IBM のすべての製品やサービス ({{site.data.keyword.Bluemix_notm}} を含む) に使用することが可能になります。氏名や電話番号などの個人情報と、新しい資格情報のパスワードの入力が必要です。IBM の他の製品やサービスを使用する際に、この IBM ID でログインできます。  |
 |フェデレーテッド ID | お客様の会社が、そのドメインのユーザー資格情報を IBM に登録するための申請を完了している場合は、会社のログインに既に使用している資格情報で {{site.data.keyword.Bluemix_notm}} へのアカウント登録を行えます。登録の際には、電話番号の入力が必要です。 |
-{:caption="Table 1. Sign up methods" caption-side="top"}
+{:caption="表 1. 登録方法" caption-side="top"}
 
 ## 通知の設定
 {: #notifications}

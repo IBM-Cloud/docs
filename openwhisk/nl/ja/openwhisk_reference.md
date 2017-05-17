@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-04"
+lastupdated: "2017-04-24"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock:.codeblock}
 {:screen:.screen}
 {:pre: .pre}
@@ -288,7 +287,7 @@ Node.js 6.9.1 環境では、以下のパッケージを使用できます。
 - underscore v1.8.3
 - uuid v3.0.0
 - validator v6.1.0
-- watson-developer-cloud v2.9.0
+- watson-developer-cloud v2.29.0
 - when v3.7.7
 - winston v2.3.0
 - ws v1.1.1
@@ -402,7 +401,7 @@ Docker アクションは、Docker コンテナーでユーザー提供バイナ
 
 Docker スケルトンは、OpenWhisk 互換の Docker イメージをビルドするための便利な方法です。`wsk sdk install docker` CLI コマンドでスケルトンをインストールできます。
 
-メイン・バイナリー・プログラムはコンテナー内部の `/action/exec` に置かれる必要があります。実行可能バイナリーは入力引数を `stdin` を介して受け取り、結果を `stdout` を介して返さなければなりません。
+メイン・バイナリー・プログラムはコンテナー内部の `/action/exec` に置かれる必要があります。実行可能バイナリーは、`JSON` オブジェクトとしてデシリアライズ可能な単一コマンド・ライン引数ストリングを介して、入力引数を受け取ります。また、シリアライズされた `JSON` の単一行ストリングとして、`stdout` を介して結果を返す必要があります。
 
 `dockerSkeleton` 内に含まれている `Dockerfile` を変更して、コンパイル・ステップや依存関係を組み込むこともできます。
 
@@ -441,7 +440,7 @@ Docker スケルトンは、OpenWhisk 互換の Docker イメージをビルド�
 
 名前空間とアクティベーション・エンドポイントのみが GET 要求をサポートします。アクション、トリガー、ルール、およびパッケージのエンドポイントは、GET、PUT、および DELETE 要求をサポートします。アクション、トリガー、およびルールのエンドポイントも POST 要求をサポートします。これは、アクションとトリガーを起動し、ルールを使用可能または使用不可にするために使用されます。詳しくは、
 [
-『API 資料』](https://new-console.{DomainName}/apidocs/98)を参照してください。
+『API 資料』](https://console.{DomainName}/apidocs/98)を参照してください。
 
 すべての API は、HTTP 基本認証で保護さ
 れています。基本認証の資格情報は `~/.wskprops` ファイルの `AUTH` プロパティーにあり、コロンで区切られています。この資格情報は、[CLI 構成手順](./index.html#openwhisk_start_configure_cli)でも

@@ -1,46 +1,82 @@
-[监视和日志记录](index.html)
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="bluemix-monitor-log" audience="platform" href="/docs/monitor_log/monitoringandlogging.html"}
+监视和日志记录
+
+    {: .navgroup id="learn"}
     monitoringandlogging.md
-    monitoring/monitoring_bmx_ov.md
+    
+    {: .topicgroup}
+    关于日志记录
+        logging/logging_bmx_ov.md
+        logging/cfapps/logging_cf_apps.md
+        logging/containers/logging_containers_ov.md
+        logging/kibana4/analyzing_logs_Kibana.md
+        logging/dedicated/logging_local_dedicated.md
+        
+    {: .topicgroup}
+    关于监视
+        monitoring/monitoring_bmx_ov.md
         monitoring/cf/monitoring_cf_apps.md
         monitoring/containers/monitoring_containers_ov.md
-        monitoring/grafana/monitoring_analyzing_metrics_grafana.md
-        monitoring/grafana/monitoring_grafana.md
-        monitoring/monitoring_gettinghelp.md
-    logging/logging_bmx_ov.md
-        logging/logging_cf_apps.md
-        logging/containers/logging_containers_ov.md
-            logging/containers/logging_containers_other_logs.md
-        logging/cfapps/logging_writing_to_log_from_cf_app.md
-        logging/logging_view_dashboard.md
-        logging/logging_view_cli.md
-        logging/kibana4/logging_analyzing_logs_Kibana.md
-            logging/kibana4/k4_log_format_cf.md
-            logging/kibana4/k4_log_format_containers.md
-            logging/kibana4/k4_log_format_messagehub.md
+    
+    {: .topicgroup}
+    相关链接
+        [了解有关 Kibana 的更多信息](https://www.elastic.co/guide/en/kibana/4.1/index.html){: new_window}
+        [Apache Lucene - Query Parser Syntax](https://lucene.apache.org/core/2_9_4/queryparsersyntax.html){: new_window}
+        [Grafana 用户指南](http://docs.grafana.org/guides/getting_started/){: new_window}
+    {: .navgroup-end}
+    
+    {: .navgroup id="howto"}
+    logging/logging_view_dashboard.md
+    logging/logging_view_cli.md
+    
+    {: .topicgroup}
+    高级日志分析 (Kibana)
         logging/kibana4/logging_kibana_analize_logs_interactively.md
-        logging/kibana4/logging_kibana_filtering_logs.md
-            logging/kibana4/logging_kibana_set_time_filter.md
-            logging/kibana4/k4_filter_queries.md
-            logging/kibana4/k4_filter_logs_spec_text.md
-            logging/kibana4/k4_filter_logs_spec_field.md
-            logging/kibana4/k4_add_filter_out_value.md
-            logging/kibana4/k4_filter_logs_by_log_type.md
-            logging/kibana4/k4_filter_logs_by_instance_id.md
-            logging/kibana4/k4_filter_logs_by_source.md
-            logging/kibana4/k4_filter_cf_logs_by_msg_type.md
         logging/kibana4/logging_kibana_visualizations.md
         logging/kibana4/logging_kibana_analize_logs_dashboard.md
-        logging/logging_view_kibana3.md
-            logging/kibana3/logging_kibana_query.md
-            logging/kibana3/logging_kibana_filter_by_component.md
-            logging/kibana3/logging_kibana_filter_by_time_period.md
-            logging/kibana3/logging_kibana_filter_by_instance_id.md
-            logging/kibana3/logging_kibana_filter_by_known_application_id.md
-            logging/kibana3/logging_kibana_filter_by_message_type.md
-            logging/kibana3/logging_kibana_tables_graphs.md
-            logging/kibana3/logging_kibana_export_share_dashboard.md
-        logging/external/logging_external_hosts.md
-        logging/dedicated/logging_local_dedicated.md
-        logging/qa/logging_qa.md
-        logging/logging_gettinghelp.md
+        logging/kibana4/k4_define_search.md
+        logging/kibana4/k4_filter_logs.md
+        logging/kibana4/k4_launch.md
+    
+    {: .topicgroup}
+    CF 应用程序
+        logging/cfapps/logging_writing_to_log_from_cf_app.md
 
+    {: .topicgroup}
+    Docker 容器
+        logging/containers/logging_containers_other_logs.md
+        
+    {: .topicgroup}
+    Grafana
+        monitoring/grafana/monitoring_analyzing_metrics_grafana.md
+        monitoring/grafana/monitoring_grafana.md
+        
+    {: .topicgroup}
+    不推荐使用的日志分析 (Kibana 3)
+        logging/logging_view_kibana3.md
+        logging/kibana3/logging_kibana_query.md
+        logging/kibana3/logging_kibana_filter_by_component.md
+        logging/kibana3/logging_kibana_filter_by_time_period.md
+        logging/kibana3/logging_kibana_filter_by_instance_id.md
+        logging/kibana3/logging_kibana_filter_by_known_application_id.md
+        logging/kibana3/logging_kibana_filter_by_message_type.md
+        logging/kibana3/logging_kibana_tables_graphs.md
+        logging/kibana3/logging_kibana_export_share_dashboard.md
+
+    {: .topicgroup}
+    日志流式传输
+        logging/external/logging_external_hosts.md
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    logging/logging_gettinghelp.md
+    monitoring/monitoring_gettinghelp.md
+    
+    {: .topicgroup}
+    常见问题
+        logging/qa/logging_qa_kibana.md
+        logging/qa/kibana_formats.md
+    {: .navgroup-end}

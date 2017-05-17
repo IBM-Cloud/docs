@@ -1,0 +1,24 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="bluemix-overview" audience="platform" href="/docs/overview/whatisbluemix.html"}
+Bluemix とは
+  
+    {: .navgroup id="learn"}
+    whatisbluemix.md
+    bluemixoverviewui.md
+    cf.md
+    prereqs.md
+    
+    {: .topicgroup}
+    関連リンク
+        [Bluemix とは](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){: new_window}
+        [使用を開始するには](http://www.ibm.com/cloud-computing/bluemix/getting-started/){: new_window}
+        [ハイブリッド・モデルについて](http://www.ibm.com/cloud-computing/bluemix/hybrid/){: new_window}
+    {: .navgroup-end}
+    
+    {: .navgroup id="reference"}
+    [特記事項およびご利用条件](../navigation/notices.html)
+    glossary/index.md
+    [新機能](../whatsnew/index.html)
+    {: .navgroup-end}

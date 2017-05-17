@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-14"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-02-14"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# 監視及記載
+# 概觀
 {: #monitoringandlogging}
 
 {{site.data.keyword.Bluemix}} 提供不同服務的記載及監視功能，例如 Cloud Foundry 及 {{site.data.keyword.containershort}}。您可以在任何運行環境中開發、執行及管理應用程式，而沒有一般與開發及啟動應用程式相關聯的建置及維護基礎架構的複雜性。
@@ -30,6 +30,7 @@ lastupdated: "2017-02-14"
 下列地區提供監視及記載功能：
 * 美國南部
 * 英國
+* 法蘭克福
 
 
 

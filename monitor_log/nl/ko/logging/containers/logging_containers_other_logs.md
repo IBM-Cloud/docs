@@ -32,7 +32,7 @@ lastupdated: "2017-03-16"
 
     표시된 이미지 목록에는 {{site.data.keyword.IBM}}에서 제공한 이미지와 사설 {{site.data.keyword.Bluemix_notm}} 레지스트리에 저장된 이미지가 포함됩니다. 
 
-2. 컨테이너를 정의하십시오. 유형을 선택하고 컨테이너의 이름을 입력하며 크기를 선택하고 IP 주소 세부사항 및 포트와 같은 기타 속성을 정의하십시오. 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} UI를 통해 단일 컨테이너 작성 및 배포](/docs/containers/container_single_ui.html)를 참조하십시오. 
+2. 컨테이너를 정의하십시오. 유형을 선택하고 컨테이너의 이름을 입력하며 크기를 선택하고 IP 주소 세부사항 및 포트와 같은 기타 속성을 정의하십시오. 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} UI를 통한 단일 컨테이너 작성 및 배치](/docs/containers/container_single_ui.html#gui)를 참조하십시오. 
 
 3. **고급 옵션** 섹션을 펼치고 **새로운 환경 변수 추가**를 선택하십시오.
 
@@ -41,6 +41,7 @@ lastupdated: "2017-03-16"
     예를 들어, 최신 Liberty 이미지를 기반으로 하는 컨테이너를 추가할 때 *dpkg.log* 로그 파일을 분석하려면 환경 변수를 다음 값으로 설정하십시오.
     
     <table>
+      <caption>표 1. 로그 위치 샘플 값</caption>
       <tbody>
         <tr>
           <th align="center">변수 이름</th>
@@ -72,6 +73,7 @@ CLI를 통해 기본이 아닌 데이터를 수집하려면 다음 단계를 완
     {{site.data.keyword.Bluemix_notm}}의 특정 지역에 로그인하려면 **–a** 옵션을 포함할 수 있습니다. 예를 들어 다음 표는 지역별 명령을 나열합니다.
 
     <table>
+      <caption>표 2. 지역에 따른 명령</caption>
       <tbody>
         <tr>
           <th align="center">지역</th>
@@ -85,11 +87,11 @@ CLI를 통해 기본이 아닌 데이터를 수집하려면 다음 단계를 완
           <td align="left">영국</td>
           <td align="left">cf login -a api.eu-gb.bluemix.net</td>
         </tr>
-        <tr>
-          <td align="left">시드니</td>
-          <td align="left">cf login -a api.au-syd.bluemix.net</td>
+	 <tr>
+          <td align="left">프랑크푸르트</td>
+          <td align="left">cf login -a api.eu-de.bluemix.net</td>
         </tr>
-      </tbody>
+       </tbody>
     </table>
     
 
@@ -104,6 +106,7 @@ CLI를 통해 기본이 아닌 데이터를 수집하려면 다음 단계를 완
     여기서,
     
      <table>
+      <caption>표 3. 명령 옵션</caption>
       <tbody>
         <tr>
           <th align="center">옵션</th>

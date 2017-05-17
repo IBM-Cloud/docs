@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-01"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -39,17 +39,7 @@ Docker コンテナー・ログを分析するには、コマンド `cf ic logs`
 * 特定のキーワードを含む Cloud Foundry アプリのログ項目を表示する場合は、『[特定のキーワードを含むログ項目の表示](logging_view_cli.html#partial_by_keyword_log_cli)』を参照してください。
 
 
-## CLI からの Docker コンテナー・ログの分析
-{: #analyzing_container_logs_cli}
-
-`cf ic logs` コマンドを使用して、{{site.data.keyword.Bluemix_notm}} 内のコンテナーからのログを表示します。例えば、ログを使用して、コンテナーが停止した理由を分析したり、コンテナー出力を確認したりすることができます。 
-
-`cf ic logs` コマンドによって、コンテナーで実行されるアプリのアプリケーション・エラーを表示するには、アプリケーションでログを標準出力 (STDOUT) および標準エラー(STDERR) 出力ストリームに書き込む必要があります。これらの標準出力ストリームに書き込むようにアプリケーションを設計した場合、コンテナーがシャットダウンまたは異常終了した場合でも、コマンド・ラインでログを参照できます。
-
-`cf ic logs` コマンドについて詳しくは、[cf ic logs コマンド](/docs/containers/container_cli_reference_cfic.html#container_cli_reference_cfic__logs)を参照してください。
-
-
-## Cloud Foundry アプリのログの表示
+### Cloud Foundry アプリのログの表示
 {: #full_log_cli}
 
 特定の Cloud Foundry アプリの使用可能なすべてのログを表示するには、以下の手順を実行します。
@@ -61,7 +51,7 @@ Docker コンテナー・ログを分析するには、コマンド `cf ic logs`
    <pre class="pre screen"><code>cf logs <var class="keyword varname">appname</var></code></pre>
    
    
-## Cloud Foundry アプリの最新ログ項目の表示
+### Cloud Foundry アプリの最新ログ項目の表示
 {: #tailing_log_cli}
 
 特定の Cloud Foundry アプリの使用可能な最新ログを表示するには、以下の手順を実行します。
@@ -76,7 +66,7 @@ Docker コンテナー・ログを分析するには、コマンド `cf ic logs`
 </div>
 
 
-## Cloud Foundry ログの一部の表示
+### Cloud Foundry ログの一部の表示
 {: #partial_log_cli}
 
 特定の Cloud Foundry アプリの使用可能なログのうち、特定の時刻範囲内にある部分を表示するには、以下の手順を実行します。
@@ -90,7 +80,7 @@ Docker コンテナー・ログを分析するには、コマンド `cf ic logs`
     **cut** オプションについて詳しくは、**cut --help** と入力してください。
 
 
-## 特定のキーワードを含むログ項目の表示
+### 特定のキーワードを含むログ項目の表示
 {: #partial_by_keyword_log_cli}
 
 特定のキーワードが含まれている、Cloud Foundry アプリのログ項目を表示するには、以下の手順を実行します。
@@ -110,7 +100,7 @@ Docker コンテナー・ログを分析するには、コマンド `cf ic logs`
 **grep** オプションについて詳しくは、**grep --help** と入力してください。
 
 
-## Cloud Foundry アプリケーション・ログ
+### Cloud Foundry アプリケーション・ログ
 {: #cf_app_logs_cli}
 
 {{site.data.keyword.Bluemix}} にデプロイした後の Cloud Foundry アプリケーションには、以下のログがあります。
@@ -133,5 +123,13 @@ Docker コンテナー・ログを分析するには、コマンド `cf ic logs`
 
 **注:** アプリケーションのロギングを有効にする方法については、『[ランタイム・エラーのデバッグ](/docs/debug/index.html#debugging-runtime-errors)』を参照してください。
 
+## CLI からの Docker コンテナー・ログの分析
+{: #analyzing_container_logs_cli}
+
+`cf ic logs` コマンドを使用して、{{site.data.keyword.Bluemix_notm}} 内のコンテナーからのログを表示します。例えば、ログを使用して、コンテナーが停止した理由を分析したり、コンテナー出力を確認したりすることができます。 
+
+`cf ic logs` コマンドによって、コンテナーで実行されるアプリのアプリケーション・エラーを表示するには、アプリケーションでログを標準出力 (STDOUT) および標準エラー(STDERR) 出力ストリームに書き込む必要があります。これらの標準出力ストリームに書き込むようにアプリケーションを設計した場合、コンテナーがシャットダウンまたは異常終了した場合でも、コマンド・ラインでログを参照できます。
+
+`cf ic logs` コマンドについて詳しくは、[cf ic logs コマンド](/docs/containers/container_cli_reference_cfic.html#container_cli_reference_cfic__logs)を参照してください。
 
 

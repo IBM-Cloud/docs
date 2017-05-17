@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-01"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -37,6 +37,6 @@ lastupdated: "2017-03-01"
 | stream | ログのタイプ (stdout、stderr) を指定します。 |
 | time | イベント発生日時。タイム・スタンプは、ミリ秒単位まで定義されます。|
 | timestamp | ログに記録されたイベントの日時。タイム・スタンプは、ミリ秒単位まで定義されます。 |
-
+{: caption="表 1. Docker コンテナー用のフィールド" caption-side="top"}
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-2-21"
+lastupdated: "2017-4-24"
 
 ---
 
@@ -65,7 +65,7 @@ lastupdated: "2017-2-21"
 <li> 다음 스니펫 템플리트 중 하나를 복사하여 수정한 다음 올바른 공용 Git 저장소를 포함시키십시오.
 <p></p>
 <p>
-<strong>팁</strong>: DevOps 서비스 프로젝트에 대한 빌드 입력 항목을 지정하려는 경우, 분기 매개변수를 Git URL에 추가하십시오. 분기 매개변수를 추가하면 모든 분기를 포함하여 원래 공용 Git 저장소가 새 개인용 DevOps 서비스 오브젝트에 새 Git 저장소로 복제됩니다. 지정된 Git 분기가 빌드 작업을 위한 입력 항목으로 설정됩니다. 분기를 지정하지 않으면 빌드 작업의 입력 항목이 기본적으로 마스터 분기로 설정됩니다.
+<strong>팁</strong>: Git URL에 분기 매개변수를 추가하여 사용할 분기를 지정할 수 있습니다. 분기를 지정하지 않은 경우 기본적으로 마스터 분기가 사용됩니다.
 </p>
 <ul>
 <li>HTML:
@@ -73,13 +73,17 @@ lastupdated: "2017-2-21"
 기본 마스터 분기:
 </p>
 <pre class="codeblock">
+<code class="hljs">
 &lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
+</code>
 </pre>
 <p>
 지정된 Git 분기:
 </p>
 <pre class="codeblock">
+<code class="hljs">
 &lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;&branch=&lt;git_branch>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
+</code>
 </pre>
 </li>
 <li>마크다운:
@@ -87,12 +91,16 @@ lastupdated: "2017-2-21"
 기본 마스터 분기:
 </p>
 <pre class="codeblock">
+<code class="hljs">
 [&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&rpar;
+</code>
 </pre>
 <p>지정된 Git 분기:
 </p>
 <pre class="codeblock">
+<code class="hljs"
 [&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&rpar;
+</code>
 </pre>
 </li>
 </ul>
@@ -193,4 +201,4 @@ Manifest 파일을 사용하여 다음을 지정할 수 있습니다.
  </ul>
 </ul>
 
-문제점 해결 도움말은 [Bluemix에 배치 단추로 앱이 배치되지 않는 경우](/docs/troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}를 참조하십시오.	
+문제점 해결 도움말은 [Bluemix에 배치 단추로 앱이 배치되지 않는 경우](/docs/troubleshoot/ts_apps.html#ts_deploybutton){:new_window}를 참조하십시오.	

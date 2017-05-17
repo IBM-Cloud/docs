@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-03-03"
+lastupdated: "2017-04-24"
 
 ---
 
@@ -34,7 +34,7 @@ lastupdated: "2017-03-03"
 <dd>在分配给组织的因特网上提供路径。路径具有子域和域。子域通常是应用程序名称。域可能是系统域，或者为应用程序注册的定制域。请参阅[管理定制域](/docs/admin/orgs_spaces.html#managedomains)。<br/>
 <p>**注**：添加定制域时，必须将 DNS 服务器配置为解析您的定制域，以指向 {{site.data.keyword.Bluemix_notm}} 系统域。这样，当 {{site.data.keyword.Bluemix_notm}} 接收到定制域的请求时，它可以将其正确路由到您的应用程序。</p></dd>
 <dt>配额</dt>
-<dd>表示组织的资源限制，包括可分配供组织使用的服务数和内存量。创建组织时会分配配额。组织的空间中任何应用程序或服务都会使用一定的配额。通过“现买现付”或“预订”套餐，可以根据您组织的需求变化来调整 Cloud Foundry 应用程序和容器的配额。请参阅[管理配额](/docs/admin/orgs_spaces.html#managequota)。</dd>
+<dd>表示组织可用的资源，包括可分配供组织使用的服务数和内存量。创建组织时会分配配额。组织的空间中的任何应用程序或服务都会使用一定的配额。通过“现买现付”或“预订”套餐，可以根据您组织的需求变化来调整 Cloud Foundry 应用程序和容器的配额。请参阅[管理配额](/docs/admin/orgs_spaces.html#managequota)。<p>**注**：在预订帐户中，配额是用户定义的限制，用于触发花费通知。</p></dd>
 </dl>
 
 在 {{site.data.keyword.Bluemix_notm}} 中，您可以通过以下方式，使用组织来启用团队成员间的协作并促进项目资源的逻辑分组：
@@ -46,7 +46,7 @@ lastupdated: "2017-03-03"
 
 当您创建组织时，组织名称在 {{site.data.keyword.Bluemix_notm}} 中必须是唯一的。如果组织名称已经由其他 {{site.data.keyword.Bluemix_notm}} Public、Dedicated 或 Local 用户使用，那么必须指定新名称。创建组织之后，系统会自动为您分配*组织管理员*许可权，该许可权允许您编辑组织名称、添加团队成员以及在组织中创建或删除空间。
 
-您必须联系 [{{site.data.keyword.Bluemix_notm}} 支持 ![外部链接图标](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} 来删除组织。请求支持团队删除组织时，会删除该组织内的所有空间、应用程序和服务。
+可以使用 [`bx iam org-delete`](/docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_iam_org_delete) 命令来删除组织。删除组织时，会删除该组织内的所有空间、应用程序和服务。  
 
 以下[用户角色](/docs/admin/users_roles.html#userrolesinfo)可以分配给组织中的团队成员：
 
@@ -106,7 +106,7 @@ lastupdated: "2017-03-03"
 ## 删除现有组织或空间
 {: #deleteorgs}
 
-作为帐户所有者，您可以联系 [{{site.data.keyword.Bluemix_notm}} 支持 ![外部链接图标](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} 来删除组织。
+作为帐户所有者，您可以使用 {{site.data.keyword.Bluemix_notm}} CLI 来删除组织。使用 [`bx iam org-delete`](/docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_iam_org_delete) 命令来删除组织。删除组织时，会删除该组织内的所有空间、应用程序和服务。 
 
 **注**：删除操作不可撤销。您会失去与该组织相关联的所有应用程序和服务。
 
@@ -161,7 +161,7 @@ lastupdated: "2017-03-03"
 
 **注：**在 {{site.data.keyword.Bluemix_notm}} 悉尼区域中无法使用容器。 
 
-有关容器的更多信息，请参阅“容器”文档中的[配额](/docs/containers/container_planning_org_ov.html#container_planning_quota)。
+有关容器的更多信息，请参阅“容器”文档中的[配额](/docs/containers/container_planning.html#container_planning_quota)。
 要更改为组织所分配的配额，必须开具支持凭单。有关开具支持凭单的更多信息，请参阅[获取客户支持](/docs/support/index.html#contacting-support)。 
 
 ## 管理域

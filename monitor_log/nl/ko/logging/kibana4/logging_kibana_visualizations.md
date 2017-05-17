@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-08"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -36,6 +36,7 @@ Kibana의 *시각화* 페이지를 사용하여 로그 데이터를 분석하고
 | 메트릭 | 히트 계수 또는 정확한 평균을 숫자 필드에 표시하는 데 사용합니다. |
 | 원형 차트 | 여러 다른 필드 값을 표시하는 데 사용합니다. | 
 | 세로 막대 차트 | 시간 기반 데이터와 시간 기반이 아닌 데이터를 표시합니다. 데이터를 그룹화하는 데 사용합니다. |
+{: caption="표 1. 시각화 유형" caption-side="top"}
 
 시각화 페이지에서 다음 태스크를 수행할 수 있습니다.
 
@@ -48,6 +49,7 @@ Kibana의 *시각화* 페이지를 사용하여 로그 데이터를 분석하고
 | [시각화 내보내기](logging_kibana_visualizations.html#logging_kibana_visualizations_export) | JSON 파일로 시각화를 내보낼 수 있습니다.  |
 | [시각화 가져오기](logging_kibana_visualizations.html#logging_kibana_visualizations_import) | JSON 파일로 시각화를 가져올 수 있습니다.  |
 | [시각화 공유](logging_kibana_visualizations.html#logging_kibana_visualizations_share) | HTML 소스 또는 Kibana 대시보드를 통해 시각화를 공유할 수 있습니다.  |
+{: caption="표 2. 시각화에 대한 작업을 수행하는 태스크" caption-side="top"}
 
 
 ## Kibana의 조회에서 시각화 작성
@@ -85,28 +87,6 @@ Kibana의 *시각화* 페이지를 사용하여 로그 데이터를 분석하고
 8. 하위 버킷을 추가하여 데이터를 분류하십시오.
 
 Kibana에 대한 자세한 정보는 [Kibana 사용자 안내서 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.elastic.co/guide/en/kibana/4.1/index.html){: new_window}를 참조하십시오.
- 
-## 시각화 저장
-{:#logging_kibana_visualizations_save}
-
-시각화 페이지에서 시각화를 저장하려면 다음 단계를 완료하십시오.
-
-1. 시각화 페이지의 도구 모음에서 **시각화 저장** 단추 ![시각화 저장](images/k4_visualization_save_icon.jpg "시각화 저장")를 클릭하십시오.
-
-2. 시각화의 이름을 입력하십시오.
-
-3. 저장을 클릭하십시오. 
-
-## 시각화 로드
-{:#logging_kibana_visualizations_reload}
-
-저장된 시각화를 로드하려면 다음 단계를 완료하십시오.
-
-1. 시각화 페이지의 도구 모음에서 **저장된 시각화 로드** 단추 ![저장된 시각화 로드](images/k4_visualization_open_icon.jpg "저장된 시각화 로드")를 클릭하십시오.
-
-2. 로드하려는 시각화를 선택하십시오. 
-
-
 
 ## 시각화 삭제
 {:#logging_kibana_visualizations_delete}
@@ -145,6 +125,30 @@ JSON 파일로 시각화를 가져오려면 설정 페이지에서 다음 단계
 3. 파일을 선택하고 **열기**를 클릭하십시오.
 
 시각화 목록에 시각화가 추가됩니다.
+
+
+ 
+## 시각화 로드
+{:#logging_kibana_visualizations_reload}
+
+저장된 시각화를 로드하려면 다음 단계를 완료하십시오.
+
+1. 시각화 페이지의 도구 모음에서 **저장된 시각화 로드** 단추 ![저장된 시각화 로드](images/k4_visualization_open_icon.jpg "저장된 시각화 로드")를 클릭하십시오.
+
+2. 로드하려는 시각화를 선택하십시오. 
+
+
+## 시각화 저장
+{:#logging_kibana_visualizations_save}
+
+시각화 페이지에서 시각화를 저장하려면 다음 단계를 완료하십시오.
+
+1. 시각화 페이지의 도구 모음에서 **시각화 저장** 단추 ![시각화 저장](images/k4_visualization_save_icon.jpg "시각화 저장")를 클릭하십시오.
+
+2. 시각화의 이름을 입력하십시오.
+
+3. 저장을 클릭하십시오. 
+
 
 
 ## 시각화 공유

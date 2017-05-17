@@ -66,7 +66,7 @@
 	}, {
 		"title": "服务可用性",
 		"description": "了解服务类型和可用性。",
-		"href": "services/index.html"
+		"href": "services/services_region.html"
 	}, {
 		"title": "管理应用程序",
 		"description": "使用 Bluemix 用户界面中的“仪表板”可查看和管理应用程序和服务。",
@@ -77,6 +77,9 @@
 		"description": "跟进应用程序的使用情况和数据流，从而更好地了解部署情况。",
 		"img": "homepage/images/monitor_log.svg",
 		"href": "monitor_log/monitoringandlogging.html"
+	}, {
+		"title": "管理 API",
+		"href": "apis/management/index.html"
 	}, {
 		"title": "Bluemix 安全性",
 		"description": "了解 Bluemix 如何提供功能性、基础架构、操作和物理安全。",

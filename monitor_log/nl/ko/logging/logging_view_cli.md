@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-01"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -39,17 +39,7 @@ Docker 컨테이너 로그를 분석하려면 `cf ic logs` 명령을 사용하�
 * 특정 키워드가 포함된 Cloud Foundry 앱에 대한 로그에서 항목을 보려면 [특정 키워드가 포함된 로그 항목 보기](logging_view_cli.html#partial_by_keyword_log_cli)를 참조하십시오.
 
 
-## CLI에서 Docker 컨테이너 로그 분석
-{: #analyzing_container_logs_cli}
-
-`cf ic logs` 명령을 사용하여 {{site.data.keyword.Bluemix_notm}}의 컨테이너에서 로그를 표시하십시오. 예를 들어 로그를 사용하여 컨테이너가 중지된 이유를 분석하고 컨테이너 출력을 검토할 수 있습니다. 
-
-`cf ic logs` 명령을 통해 컨테이너에서 실행되는 앱의 애플리케이션 오류를 보려면 애플리케이션에서 표준 출력(STDOUT) 및 표준 오류(STDERR) 출력 스트림에 로그를 써야 합니다. 이러한 표준 출력 스트림에 쓰도록 애플리케이션을 디자인하는 경우 컨테이너가 종료되거나 충돌하는 경우에도 명령행을 통해 로그를 볼 수 있습니다.
-
-`cf ic logs` 명령에 대한 자세한 정보는 [cf ic logs 명령](/docs/containers/container_cli_reference_cfic.html#container_cli_reference_cfic__logs)을 참조하십시오.
-
-
-## Cloud Foundry 앱에 대한 로그 보기
+### Cloud Foundry 앱에 대한 로그 보기
 {: #full_log_cli}
 
 Cloud Foundry 앱에 사용 가능한 모든 로그를 보려면 다음 단계를 수행하십시오.
@@ -61,7 +51,7 @@ Cloud Foundry 앱에 사용 가능한 모든 로그를 보려면 다음 단계�
    <pre class="pre screen"><code>cf logs <var class="keyword varname">appname</var></code></pre>
    
    
-## Cloud Foundry 앱에 대한 최신 로그 항목 보기
+### Cloud Foundry 앱에 대한 최신 로그 항목 보기
 {: #tailing_log_cli}
 
 Cloud Foundry 앱에 사용 가능한 최신 로그를 보려면 다음 단계를 수행하십시오.
@@ -78,7 +68,7 @@ Cloud Foundry 앱에 사용 가능한 최신 로그를 보려면 다음 단계�
 확인할 수 있습니다. </div>
 
 
-## Cloud Foundry 로그 섹션 보기
+### Cloud Foundry 로그 섹션 보기
 {: #partial_log_cli}
 
 시간 범위 내에서 Cloud Foundry 앱에 사용할 수 있는 로그의 일부를 보려면 다음 단계를 수행하십시오.
@@ -92,7 +82,7 @@ Cloud Foundry 앱에 사용 가능한 최신 로그를 보려면 다음 단계�
     **cut** 옵션에 대한 자세한 정보는 **cut --help**를 입력하십시오.
 
 
-## 특정 키워드가 포함된 로그 항목 보기
+### 특정 키워드가 포함된 로그 항목 보기
 {: #partial_by_keyword_log_cli}
 
 Cloud Foundry 앱에 대한 특정 키워드가 포함된 로그 항목을 표시하려면 다음 단계를 수행하십시오.
@@ -116,7 +106,7 @@ Cloud Foundry 앱에 대한 특정 키워드가 포함된 로그 항목을 표�
 
 
 
-## Cloud Foundry 애플리케이션 로그
+### Cloud Foundry 애플리케이션 로그
 {: #cf_app_logs_cli}
 
 Cloud Foundry 애플리케이션을 {{site.data.keyword.Bluemix}}에 배치한 후 이 애플리케이션에서 다음 로그가 사용 가능합니다.
@@ -142,5 +132,13 @@ Cloud Foundry 애플리케이션을 {{site.data.keyword.Bluemix}}에 배치한 �
 
 **참고:** 애플리케이션 로깅 사용 방법에 대한 정보는 [런타임 오류 디버깅](/docs/debug/index.html#debugging-runtime-errors)을 참조하십시오. 
 
+## CLI에서 Docker 컨테이너 로그 분석
+{: #analyzing_container_logs_cli}
+
+`cf ic logs` 명령을 사용하여 {{site.data.keyword.Bluemix_notm}}의 컨테이너에서 로그를 표시하십시오. 예를 들어 로그를 사용하여 컨테이너가 중지된 이유를 분석하고 컨테이너 출력을 검토할 수 있습니다. 
+
+`cf ic logs` 명령을 통해 컨테이너에서 실행되는 앱의 애플리케이션 오류를 보려면 애플리케이션에서 표준 출력(STDOUT) 및 표준 오류(STDERR) 출력 스트림에 로그를 써야 합니다. 이러한 표준 출력 스트림에 쓰도록 애플리케이션을 디자인하는 경우 컨테이너가 종료되거나 충돌하는 경우에도 명령행을 통해 로그를 볼 수 있습니다.
+
+`cf ic logs` 명령에 대한 자세한 정보는 [cf ic logs 명령](/docs/containers/container_cli_reference_cfic.html#container_cli_reference_cfic__logs)을 참조하십시오.
 
 

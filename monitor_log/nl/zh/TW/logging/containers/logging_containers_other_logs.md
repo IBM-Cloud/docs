@@ -32,7 +32,7 @@ lastupdated: "2017-03-16"
 
     所顯示的映像檔清單包括 {{site.data.keyword.IBM}} 所提供的映像檔，以及儲存在專用 {{site.data.keyword.Bluemix_notm}} 登錄中的映像檔。 
 
-2. 定義您的容器。選擇類型，輸入容器的名稱，選取其大小，並定義 IP 位址詳細資料和埠等其他屬性。如需相關資訊，請參閱[透過 {{site.data.keyword.Bluemix_notm}} 使用者介面來建立及部署單一容器](/docs/containers/container_single_ui.html)。 
+2. 定義您的容器。選擇類型、輸入容器的名稱、選取其大小，然後定義 IP 位址詳細資料和埠等其他屬性。如需相關資訊，請參閱[透過 {{site.data.keyword.Bluemix_notm}} 使用者介面來建立及部署單一容器](/docs/containers/container_single_ui.html#gui)。 
 
 3. 展開**進階選項**區段，然後選取**新增環境變數**。
 
@@ -41,6 +41,7 @@ lastupdated: "2017-03-16"
     例如，當您新增以最新 Liberty 映像檔為基礎的容器時，若要分析日誌檔 *dpkg.log*，請將環境值設定為下列值：
     
     <table>
+      <caption>表 1. 日誌位置範例值</caption>
       <tbody>
         <tr>
           <th align="center">變數名稱</th>
@@ -69,9 +70,10 @@ lastupdated: "2017-03-16"
 
     依預設，您會登入美國南部地區，或是您前次登入的地區。 
     
-    您可以併入 **–a** 選項，以登入 {{site.data.keyword.Bluemix_notm}} 中的特定地區。例如，下表列出每個地區的指令：
+    您可以包含 **-a** 選項，以登入 {{site.data.keyword.Bluemix_notm}} 中的特定地區。例如，下表列出每個地區的指令：
 
     <table>
+      <caption>表 2. 每個地區的指令</caption>
       <tbody>
         <tr>
           <th align="center">地區</th>
@@ -85,17 +87,17 @@ lastupdated: "2017-03-16"
           <td align="left">英國</td>
           <td align="left">cf login -a api.eu-gb.bluemix.net</td>
         </tr>
-        <tr>
-          <td align="left">雪梨</td>
-          <td align="left">cf login -a api.au-syd.bluemix.net</td>
+	 <tr>
+          <td align="left">法蘭克福</td>
+          <td align="left">cf login -a api.eu-de.bluemix.net</td>
         </tr>
-      </tbody>
+       </tbody>
     </table>
     
 
 3. 使用下列指令來登入 {{site.data.keyword.containershort}}：`cf ic login`
 
-4. 從映像檔建立單一容器。併入 LOG_LOCATIONS 環境變數，以包括非預設日誌位置。  
+4. 從映像檔建立單一容器。包含 LOG_LOCATIONS 環境變數，以包含非預設日誌位置。  
 
     若要新增自訂位置，讓您能夠在 Kibana 中檢視該日誌資訊，請在建立容器時，新增 **LOG_LOCATIONS** 環境變數。請輸入下列指令：
     
@@ -104,6 +106,7 @@ lastupdated: "2017-03-16"
     其中
     
      <table>
+      <caption>表 3. 指令選項</caption>
       <tbody>
         <tr>
           <th align="center">選項</th>
@@ -115,7 +118,7 @@ lastupdated: "2017-03-16"
         </tr>
         <tr>
           <td align="left">-e</td>
-          <td align="left">設定環境變數。<br> 您可以個別列出多個索引鍵。請用引號括住環境變數名稱及值。<br> 若要新增要在容器中監視的日誌檔，請包括具有日誌檔路徑的 LOG_LOCATIONS 環境變數。</td>
+          <td align="left">設定環境變數。<br> 您可以個別列出多個索引鍵。請用引號括住環境變數名稱及值。<br> 若要新增要在容器中監視的日誌檔，請包含 LOG_LOCATIONS 環境變數與日誌檔路徑。</td>
         </tr>
         <tr>
           <td align="left">--name</td>

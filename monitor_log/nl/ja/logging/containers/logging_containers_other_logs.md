@@ -32,7 +32,7 @@ lastupdated: "2017-03-16"
 
     表示されるイメージのリストには、{{site.data.keyword.IBM}} で提供されているイメージ、およびプライベート {{site.data.keyword.Bluemix_notm}} レジストリー内に保管されているイメージが含まれています。 
 
-2. コンテナーを定義します。タイプを選択し、コンテナーの名前を入力し、そのサイズを選択し、IP アドレス詳細やポートなどの他の属性を定義します。詳しくは、[{{site.data.keyword.Bluemix_notm}} UI を使用した単一コンテナーの作成およびデプロイ](/docs/containers/container_single_ui.html)に関する資料を参照してください。 
+2. コンテナーを定義します。タイプを選択し、コンテナーの名前を入力し、そのサイズを選択し、IP アドレス詳細やポートなどの他の属性を定義します。詳しくは、[{{site.data.keyword.Bluemix_notm}} UI を使用した単一コンテナーの作成およびデプロイ](/docs/containers/container_single_ui.html#gui)に関する資料を参照してください。 
 
 3. **「詳細オプション」**セクションを展開し、**「新規環境変数の追加」**を選択します。
 
@@ -41,6 +41,7 @@ lastupdated: "2017-03-16"
     例えば、最新の Liberty イメージに基づいたコンテナーを追加した場合、ログ・ファイル *dpkg.log* を分析するには、環境値を以下の値に設定します。
     
     <table>
+      <caption>表 1. ログ・ロケーションのサンプル値</caption>
       <tbody>
         <tr>
           <th align="center">変数名</th>
@@ -72,6 +73,7 @@ lastupdated: "2017-03-16"
     {{site.data.keyword.Bluemix_notm}} の特定の地域にログインするために、**–a** オプションを含めることができます。例えば、以下の表では、地域ごとのコマンドをリストします。
 
     <table>
+      <caption>表 2. 地域別のコマンド</caption>
       <tbody>
         <tr>
           <th align="center">地域</th>
@@ -85,11 +87,11 @@ lastupdated: "2017-03-16"
           <td align="left">英国</td>
           <td align="left">cf login -a api.eu-gb.bluemix.net</td>
         </tr>
-        <tr>
-          <td align="left">シドニー</td>
-          <td align="left">cf login -a api.au-syd.bluemix.net</td>
+	 <tr>
+          <td align="left">フランクフルト</td>
+          <td align="left">cf login -a api.eu-de.bluemix.net</td>
         </tr>
-      </tbody>
+       </tbody>
     </table>
     
 
@@ -98,13 +100,13 @@ lastupdated: "2017-03-16"
 4. イメージから単一コンテナーを作成します。LOG_LOCATIONS 環境変数を組み込み、非デフォルト・ログ・ロケーションを含めます。  
 
     そのログ情報を Kibana で表示できるようにカスタム・ロケーションを追加するために、コンテナーの作成時に **LOG_LOCATIONS** 環境変数を追加します。次のコマンドを入力します。
-
     
     `docker run -p portNumber -e "LOG_LOCATIONS=log1,log2" --name containerName registry.domain_name/imageName:imageTag`
     
     各部分の説明:
     
      <table>
+      <caption>表 3. コマンド・オプション</caption>
       <tbody>
         <tr>
           <th align="center">オプション</th>

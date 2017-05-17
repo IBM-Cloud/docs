@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2017-04-11"
 
 
 ---
@@ -34,13 +34,13 @@ IBM® 使用云操作即服务来监视和维护您的环境，让您可以专�
 |已包含 | [{{site.data.keyword.Bluemix_notm}} 运行时](/docs/cfapps/runtimes.html) | 使用运行时可快速启动并运行应用程序，无需设置和管理计算机与操作系统。所有 {{site.data.keyword.Bluemix_notm}} 运行时都可供您在 {{site.data.keyword.Bluemix_notm}} Local 实例中使用。|
 |已包含 | [{{site.data.keyword.autoscaling}}](/docs/services/Auto-Scaling/index.html)| 根据策略，动态增大或减小应用程序的计算容量。通过此服务，您在 {{site.data.keyword.Bluemix}} Local 环境中的使用不受限制。|
 |可选 | [{{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} 将 {{site.data.keyword.APIM}} 和 IBM StrongLoop 集成到单个产品中，以提供一个综合解决方案来创建、运行、管理和强制执行 API 与微服务。 |
-|可选 | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | 在 {{site.data.keyword.Bluemix_notm}} Local 上运行 Docker 容器。容器是包含应用程序运行所需的所有元素的虚拟软件对象。容器不仅具有资源隔离和分配的好处，而且还比虚拟机器（举例来说）的可移植性更好，且更有效率。有关硬件需求的信息，请参阅 [{{site.data.keyword.Bluemix_notm}} Dedicated 和 Bluemix Local 中的 IBM {{site.data.keyword.containershort}}](/docs/containers/container_dl.html)。 |
+|可选 | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | 在 {{site.data.keyword.Bluemix_notm}} Local 上运行 Docker 容器。容器是包含应用程序运行所需的所有元素的虚拟软件对象。容器不仅具有资源隔离和分配的好处，而且还比虚拟机器（举例来说）的可移植性更好，且更有效率。有关硬件需求的信息，请参阅 [{{site.data.keyword.Bluemix_notm}} Dedicated 和 Bluemix Local 中的 IBM {{site.data.keyword.containershort}}](/docs/containers/container_ov.html#container_dl)。 |
 |可选 | [{{site.data.keyword.datacshort}}](/docs/services/DataCache/index.html#data_cache) | 此服务提供内存中数据网格，支持应用程序使用分布式高速缓存方案。包含 50 GB 内存中高速缓存。 |
 | 可选 (Beta) | [日志记录](/docs/monitoringandlogging/cfapps_ml_logs_dedicated_ov.html#container_ml_logs_dedicated_ov) | 为 {{site.data.keyword.Bluemix_notm}} 用户界面中的 Cloud Foundry 应用程序和 Kibana 中的可搜索日志和仪表板提供日志。 |
 |可选 | [{{site.data.keyword.mobilepush}}](/docs/services/mobilepush/index.html) | {{site.data.keyword.mobilepush}} 是可用于向 iOS 和 Android 设备发送通知的服务。通知可以针对所有应用程序用户发送，也可以针对一组使用标记的特定用户和设备发送。您可以管理设备、标记和预订。还可以使用 SDK（软件开发包）和具象状态传输 (REST) 应用程序编程接口 (API) 来进一步开发您的客户机应用程序。 |
 |可选 | [{{site.data.keyword.sescashort}}](/docs/services/SessionCache/index.html#session_cache) | 为了提高冗余度，{{site.data.keyword.sescashort}} 提供了高速缓存中存储的会话的副本。因此，万一发生掉线或中断，客户机应用程序能够继续访问高速缓存中的会话。此服务支持 Web 和移动应用程序的会话高速缓存场景。 |
 |可选 | [{{site.data.keyword.iot_short}}](/docs/services/IoT/index.html) | 此服务允许应用程序与连接的设备、传感器和网关进行通信，以及使用这些设备、传感器和网关收集的数据。本地基本产品包括初始环境，允许在本地环境中运行 IBM {{site.data.keyword.iot_short}} 的专用版本，容量为 100,000 个并行连接设备或应用程序，数据交换量为 1.6 TB。 |
-{: caption="表 1. 本地服务和运行时" caption-side="top"}
+{: caption="表 1. Local 服务和运行时" caption-side="top"}
 {: #table01}
 
 
@@ -55,7 +55,7 @@ IBM® 使用云操作即服务来监视和维护您的环境，让您可以专�
 |{{site.data.keyword.Bluemix_notm}} Data & Session Cache 增加 50 GB 容量 | 此环境允许部署和运行 Data Cache 和 Session Cache 实例，最高累计容量为 50 GB。 |
 |{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} Local 递增增加 | 除允许在本地环境中运行 {{site.data.keyword.iot_short}} 专用版本的 {{site.data.keyword.iot_short}} Local 基本服务产品以外的环境，容量为 100,000 个并行连接设备或应用程序，数据交换量为 0.5 TB。 |
 |{{site.data.keyword.IBM_notm}} {{site.data.keyword.mobilepush}} Local 附加组件实例 | 此环境允许部署和运行 {{site.data.keyword.mobilepush}} 实例，每秒能额外接受 300 个请求。 |
-{: caption="表 2. 可选择采购的服务组件" caption-side="top"}
+{: caption="表 2. 可购买的可选服务组件" caption-side="top"}
 {: #table02}
 
 | **名称** | **描述** |
@@ -64,7 +64,7 @@ IBM® 使用云操作即服务来监视和维护您的环境，让您可以专�
 |本地 Cloud Foundry 运行时增加 16 GB 容量  | 扩展 Cloud Foundry 运行时环境，以额外提供 16 GB 运行时容量。 |
 |本地 {{site.data.keyword.containerlong}} 增加 16 GB 容量  | 扩展 {{site.data.keyword.containerlong}} 环境，以额外提供 16 GB 容量。 |
 |本地 {{site.data.keyword.containerlong}} 64 GB 容量  | {{site.data.keyword.containerlong}} 环境，具有 64 GB 容量。 |
-{: caption="表 3. 可选择采购的平台附加组件" caption-side="top"}
+{: caption="表 3. 可购买的可选平台附加组件" caption-side="top"}
 {: #table03}
 
 **注**：{{site.data.keyword.Bluemix_notm}} Local 组件可能指示特定配置的容量，例如千兆字节或每秒事务数。由于现实中云服务的任何配置的实际容量根据多种因素而变化，因此现实中的实际容量可能大于或小于配置的容量。
@@ -126,7 +126,7 @@ IBM® 使用云操作即服务来监视和维护您的环境，让您可以专�
 |{{site.data.keyword.iot_short}}		|是		|是		|否|
 |{{site.data.keyword.weather_short}}		|是		|是		|是|
 |{{site.data.keyword.workloadscheduler}}	|是		|是		|是 |
-{: caption="表 4. 按区域为 {{site.data.keyword.Bluemix_notm}} Public 联合提供的服务" caption-side="top"}
+{: caption="表 4. 按区域为 Bluemix Public 联合提供的服务" caption-side="top"}
 {: #table04}
 
 **注**：此表中未包含第三方服务。请检查目录以获取第三方服务选项。
@@ -431,6 +431,7 @@ Cloud Foundry 和 {{site.data.keyword.Bluemix_notm}} 应用程序访问本地环
 |回收基础架构 | 根据公司准则回收基础架构。 | 客户 |
 {: caption="表 7. 完成阶段任务" caption-side="top"}
 
+
 ## {{site.data.keyword.Bluemix_local_notm}} 基础架构需求
 {: #localinfra}
 
@@ -447,10 +448,10 @@ Cloud Foundry 和 {{site.data.keyword.Bluemix_notm}} 应用程序访问本地环
 <dd>
 ESXi 是一种在物理服务器上运行的虚拟化层，可将处理器、内存、存储器和资源抽取到多个虚拟机中。选择满足以下资源总数的任意组合，但条件是每个 ESXi 的最小物理核心计数为 8。以下规范仅适用于 {{site.data.keyword.Bluemix_notm}} 核心运行时。
 <ul>
-<li>32 个物理核心，每个核心 2.0 GHz 或更高</li>
-<li>512 GB 物理 RAM</li>
-<li>数据存储总大小为 7.5 TB <ul>
-<li>7 TB 数据存储，用于容纳 {{site.data.keyword.Bluemix_notm}}</li>
+<li>40 个物理核心，每个核心 2.0 GHz 或更高</li>
+<li>768 GB 物理 RAM</li>
+<li>数据存储总大小为 10 TB<ul>
+<li>9.5 TB 数据存储，用于容纳 {{site.data.keyword.Bluemix_notm}}</li>
 <li>500 GB 数据存储，用于容纳先启虚拟机</li>
 </ul>
 </li>
@@ -459,8 +460,8 @@ ESXi 是一种在物理服务器上运行的虚拟化层，可将处理器、内
 </dd>
 <dt>**高可用性**</dt>
 <dd>
-为了针对单节点故障提供支持，必须有 n+1 个 ESXi。例如，如果使用两个 16x 核心 256 GB ESXi 的服务器满足 32 核心和 512 GB 的内存，那么您需要三个这样的服务器，以针对单节点的完全故障提供支持。
-<p><strong>注：</strong>客户的 VMware 管理员可以决定是否在集群中强制执行严格的高可用性故障转移以保证有足够的资源。如果选择继续而没有高可用性故障转移，那么您可以满足最低 32 核心和 512 GB 的资源需求。</p>
+为了针对单节点故障提供支持，必须有 n+1 个 ESXi。例如，如果使用带有两个 16x 核心和 256 GB 的 ESXi 服务器来满足 40 核心和 768 GB 的内存，那么您需要三个这样的服务器，才能针对单节点的完全故障提供支持。
+<p><strong>注：</strong>客户的 VMware 管理员可以决定是否在集群中强制执行严格的高可用性故障转移以保证有足够的资源。如果选择继续而不实施高可用性故障转移，那么您可以满足 40 核心和 768 GB 的最低资源需求。</p>
 </dd>
 <dt>**网络**</dt>
 <dd>

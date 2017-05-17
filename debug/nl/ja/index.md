@@ -31,10 +31,7 @@ lastupdated: "2017-01-11"
 {{site.data.keyword.Bluemix_notm}} でアプリケーションをステージングする際に問題が発生する場合があります。
 アプリケーションがステージングに失敗した場合、ステージング (STG)・ログ
 を検索およびレビューして、アプリケーションのデプロイ中に発生したこと
-を究明し、問題から復旧することができます。Bluemix アプリケーションのログの表示方法につい
-て詳しくは、
-[『ロ
-グの表示』](/docs/monitor_log/monitoringandlogging.html#viewing_logs)を参照してください。
+を究明し、問題から復旧することができます。Bluemix アプリケーションのログの表示方法について詳しくは、[『ログの表示』](/docs/monitor_log/monitoringandlogging.html#viewing_logs)を参照してください。  
 
 {{site.data.keyword.Bluemix_notm}} 上でアプリが失敗する
 場合の原因を理解するには、アプリがどのように

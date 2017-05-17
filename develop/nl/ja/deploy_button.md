@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-2-21"
+lastupdated: "2017-4-24"
 
 ---
 
@@ -65,7 +65,7 @@ lastupdated: "2017-2-21"
 <li> 以下のスニペット・テンプレートのいずれかをコピーして変更し、パブリック Git リポジトリーを含めます。
 <p></p>
 <p>
-<strong>ヒント</strong>: DevOps サービス・プロジェクト用のビルド入力を指定する場合は、Git URL にブランチ・パラメーターを追加します。ブランチ・パラメーターを追加すると、元のパブリック Git リポジトリーが、そのすべてのブランチを含め、新しい Git リポジトリーを使用する新しいプライベート DevOps サービス・プロジェクトに複製されます。指定された Git ブランチは、ビルド・ジョブの入力として設定されます。ブランチを指定しないと、ビルド・ジョブの入力はデフォルトでマスター・ブランチに設定されます。
+<strong>ヒント</strong>: Git URL にブランチ・パラメーターを追加することで、使用するブランチを指定できます。ブランチを指定しない場合、デフォルトでマスター・ブランチが使用されます。
 </p>
 <ul>
 <li>HTML:
@@ -73,13 +73,17 @@ lastupdated: "2017-2-21"
 デフォルト・マスター・ブランチ:
 </p>
 <pre class="codeblock">
+<code class="hljs">
 &lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
+</code>
 </pre>
 <p>
 指定された Git ブランチ:
 </p>
 <pre class="codeblock">
+<code class="hljs">
 &lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;&branch=&lt;git_branch>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
+</code>
 </pre>
 </li>
 <li>Markdown:
@@ -87,12 +91,16 @@ lastupdated: "2017-2-21"
 デフォルト・マスター・ブランチ:
 </p>
 <pre class="codeblock">
+<code class="hljs">
 [&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&rpar;
+</code>
 </pre>
 <p>指定された Git ブランチ:
 </p>
 <pre class="codeblock">
+<code class="hljs"
 [&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&rpar;
+</code>
 </pre>
 </li>
 </ul>
@@ -194,4 +202,4 @@ lastupdated: "2017-2-21"
  </ul>
 </ul>
 
-トラブルシューティングのヘルプについては、[「Bluemix にデプロイ」ボタンでアプリがデプロイされない](/docs/troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}を参照してください。	
+トラブルシューティングのヘルプについては、[「Bluemix にデプロイ」ボタンでアプリがデプロイされない](/docs/troubleshoot/ts_apps.html#ts_deploybutton){:new_window}を参照してください。	

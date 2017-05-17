@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-08"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -41,7 +41,6 @@ lastupdated: "2017-03-08"
 | source_id | 로그를 생성하는 컴포넌트. <br> 다음 목록에서는 각 컴포넌트의 로그에 대해 설명합니다.<br> * **API**: 앱 상태 변경을 요청하는 API 호출에 대해 로깅된 응답니다. <br> * **APP**: 앱에서 로깅된 응답니다. <br> * **CELL**: 앱이 시작, 중지 또는 충돌한 시기를 표시하는 Diego 셀의 로깅된 응답입니다. <br> * **LGR**: 로깅 프로세스의 문제점을 표시하는 loggregator의 로깅된 응답입니다. <br> * **RTR**: HTTP 요청을 앱에 라우팅할 때 라우터에서 로깅된 응답입니다. <br> * **SSH**: `cf ssh` 명령을 사용하여 앱 컨테이너에 액세스할 때 Diego 셀에서 로깅된 응답입니다. <br> * **STG**: 앱이 스테이징되거나 다시 스테이징될 때 DEA(Droplet Execution Agent) 또는 Diego 셀에서 로그된 응답입니다. |
 | space_name | 앱이 스테이징된 {{site.data.keyword.Bluemix_notm}} 영역의 이름입니다. |
 | timestamp | 로그된 이벤트의 시간입니다. 시간소인은 밀리초 단위까지 정의됩니다.  |
-
-
+{: caption="표 1. CF 앱의 필드" caption-side="top"}
 
 

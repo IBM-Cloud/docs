@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-  lastupdated: "2017-04-04"
+  lastupdated: "2017-04-21"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -193,9 +192,7 @@ copyright:
   }
   ```
 
-  请注意，使用 `--result` 选项将仅显示调用结果。
-
-
+  使用 `--result` 选项时请注意：此选项暗含 CLI 等待激活完成并随后仅显示激活结果的阻塞性调用。为了方便起见，使用此选项时可不带 `--blocking`，系统会自动推断出阻塞性。
 
 ### 设置缺省参数
 {: #openwhisk_binding_actions}
@@ -545,7 +542,7 @@ exports.main = myAction;
 
 创建 Python 操作的过程与创建 JavaScript 操作的过程类似。以下各部分将指导您创建并调用单个 Python 操作，然后向该操作添加参数。
 
-### 创建并调用操作
+### 创建并调用 Python 操作
 {: #openwhisk_actions_python_invoke}
 
 操作其实就是顶级 Python 函数。例如，创建名为 `hello.py` 的文件并包含以下源代码：
@@ -581,16 +578,57 @@ wsk action invoke --blocking --result helloPython --param name World
   }
 ```
 
+### 将 Python 操作打包成 zip 文件
+{: #openwhisk_actions_python_zip}
 
+您可以将 Python 操作和从属模块打包成 zip 文件。
+包含入口点（例如，“main”）的源文件的文件名必须为“__main__.py”。
+例如，要创建具有名为“helper.py”的帮助程序模块的操作，请先创建包含源文件的归档：
+
+```bash
+$ zip -r helloPython.zip **main**.py helper.py
+```
+
+然后，创建操作：
+
+```bash
+$ wsk action create helloPython --kind python:3 helloPython.zip
+```
+
+### 使用虚拟环境将 Python 操作打包成 zip 文件
+{: #openwhisk_actions_python_virtualenv}
+
+另一种打包 Python 依赖项的方法是使用虚拟环境（“virtualenv”）。这允许您链接其他包，例如可能通过 [“pip”](https://packaging.python.org/installing/) 安装的包。
+要确保与 OpenWhisk 容器的兼容性，virtualenv 内部的包安装必须在目标环境中完成。
+所以，应该使用 Docker 映像“openwhisk/python2action”或“openwhisk/python3action”来为操作创建 virtualenv 目录。
+与基本 zip 文件支持一样，包含主入口点的源文件的名称必须为“__main__.py”。此外，virtualenv 目录必须命名为“virtualenv”。
+下面是安装依赖项、将其打包在 virtualenv 中并创建兼容 OpenWhisk 操作的示例场景。
+
+1. 假设“requirements.txt”文件中包含要安装的“pip”模块和版本，请运行以下命令以安装依赖项，并使用兼容 Docker 映像创建 virtualenv：
+ ```bash
+ $ docker run --rm -v "$PWD:/tmp" openwhisk/python3action sh \
+   -c "cd tmp; virtualenv virtualenv; source virtualenv/bin/activate; pip install -r requirements.txt;"
+ ```
+
+2. 归档 virtualenv 目录及其他任何 Python 文件：
+ ```bash
+ $ zip -r helloPython.zip virtualenv **main**.py
+ ```
+
+3. 创建操作：
+```bash
+$ wsk action create helloPython --kind python:3 helloPython.zip
+```
+
+虽然上面显示的步骤是针对 Python 3.6 的，但也同样适用于 Python 2.7。
 ## 创建 Swift 操作
 
-创建 Swift 操作的过程与创建 JavaScript 操作的过程类似。以下各部分将指导您创建并调用单个 Swift 操作，然后向该操作添加参数。
-
-您还可以使用在线 [Swift Sandbox](https://swiftlang.ng.bluemix.net) 来测试 Swift 代码，而不必在您的计算机上安装 Xcode。
+创建 Swift 操作的过程与创建 JavaScript 操作的过程类似。以下各部分将指导您创建并调用单个 Swift 操作，然后向该操作添加参数。您还可以使用在线 [Swift Sandbox](https://swiftlang.ng.bluemix.net) 来测试 Swift 代码，而不必在您的计算机上安装 Xcode。
 
 ### 创建并调用操作
 
-操作仅仅是顶级 Swift 函数。例如，创建名为 `hello.swift` 的文件并包含以下内容：
+操作仅仅是顶级 Swift 函数。例如，创建名为
+“hello.swift”的文件并包含以下内容：
 
 ```swift
 func main(args: [String:Any]) -> [String:Any] {
@@ -605,14 +643,14 @@ return [ "greeting" : "Hello stranger!" ]
 
 Swift 操作始终会使用一个字典并生成一个字典。
 
-可以通过此函数创建名为 `helloSwift` 的 {{site.data.keyword.openwhisk_short}} 操作，如下所示：
+可以通过此函数创建名为“helloSwift”的 {{site.data.keyword.openwhisk_short}} 操作，如下所示：
 
 ```
 wsk action create helloSwift hello.swift
 ```
 {: pre}
 
-使用命令行和 `.swift` 源文件时，无需指定您要创建 Swift 操作（与 JavaScript 操作相反）；该工具会根据文件扩展名来进行确定。
+使用命令行和“.swift”源文件时，无需指定您要创建 Swift 操作（与 JavaScript 操作相反）；该工具会根据文件扩展名来进行确定。
 
 Swift 操作的操作调用与 JavaScript 操作的操作调用相同：
 
@@ -627,14 +665,13 @@ wsk action invoke --blocking --result helloSwift --param name World
   }
 ```
 
-**注意：**Swift 操作在 Linux 环境中运行。Swift on Linux 仍在开发中；{{site.data.keyword.openwhisk_short}} 通常会使用最新可用发行版，但此版本不一定稳定。此外，用于 {{site.data.keyword.openwhisk_short}} 的 Swift 版本可能与 Mac OS 上 Xcode 的稳定发行版中的 Swift 版本不一致。
+**注意：** Swift 操作在 Linux 环境中运行。Swift on Linux 仍在开发中；{{site.data.keyword.openwhisk_short}} 通常会使用最新可用发行版，但此版本不一定稳定。此外，用于 {{site.data.keyword.openwhisk_short}} 的 Swift 版本可能与 Mac OS 上 Xcode 的稳定发行版中的 Swift 版本不一致。
 
-### 将操作包装为 Swift 可执行文件
+### 将操作打包成 Swift 可执行文件
 {: #openwhisk_actions_swift_zip}
 
-使用 Swift 源文件创建 OpenWhisk Swift 操作后，必须先将该文件编译为二进制文件，才能运行该操作。一旦这样做后，对该操作的后续调用会快得多，直到清除保留该操作的容器为止。此延迟称为冷启动延迟。
+使用 Swift 源文件创建 OpenWhisk Swift 操作后，必须先将该文件编译为二进制文件，才能运行该操作。一旦这样做后，对该操作的后续调用会快得多，直到清除保留该操作的容器为止。此延迟称为冷启动延迟。要避免冷启动延迟，可以将 Swift 文件编译为二进制文件，然后将其以 zip 文件格式上传到 OpenWhisk。在需要 OpenWhisk 脚手架时，创建二进制文件最简单的方法是在与其将运行的环境相同的环境中进行构建。下面是具体步骤：
 
-要避免冷启动延迟，可以将 Swift 文件编译为二进制文件，然后将其以 zip 文件格式上传到 OpenWhisk。在需要 OpenWhisk 脚手架时，创建二进制文件最简单的方法是在与其将运行的环境相同的环境中进行构建。下面是具体步骤：
 
 - 运行交互式 Swift 操作容器。
 ```
@@ -644,15 +681,14 @@ docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
 
     这会将您置于 Docker 容器内的 Bash shell 中。在其中执行以下命令：
 
-
-- 为了方便起见，请安装 zip，以用于包装二进制文件
+- 为了方便起见，请安装 zip，以用于打包二进制文件
   ```
   apt-get install -y zip
   ```
   {: pre}
 - 复制源代码并准备对其进行构建
   ```
-  cp /owexec/hello.swift /swift3Action/spm-build/main.swift 
+  cp /owexec/hello.swift /swift3Action/spm-build/main.swift
   ```
   {: pre}
   ```
@@ -687,31 +723,29 @@ docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
   wsk action update helloSwiftly hello.zip --kind swift:3
   ```
   {: pre}
-- 要检查其运行速度提高了多少，请运行 
+- 要检查其运行速度提高了多少，请运行
   ```
   wsk action invoke helloSwiftly --blocking
   ``` 
   {: pre}
 
-操作运行所用的时间等于“持续时间”属性中的值，并会与运行 hello 操作中编译步骤所用的时间进行比较。
+操作运行所用的时间会填写在“duration”属性中，并会与运行 hello 操作中编译步骤所用的时间进行比较。
 
 ## 创建 Java 操作
 {: #openwhisk_actions_java}
 
-创建 Java 操作的过程与创建 JavaScript 和 Swift 操作的过程类似。以下各部分将指导您创建并调用单个 Java 操作，然后向该操作添加参数。
-
-为了编译、测试和归档 Java 文件，您必须在本地安装 [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html)。
+创建 Java 操作的过程与创建 JavaScript 和 Swift 操作的过程类似。以下各部分将指导您创建并调用单个 Java 操作，然后向该操作添加参数。为了编译、测试和归档 Java 文件，您必须在本地安装 [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html)。
 
 ### 创建并调用操作
 {: #openwhisk_actions_java_invoke}
 
-Java 操作是包含名为 `main` 的方法的 Java 程序，该方法的特征符与以下内容完全一样：
+Java 操作是包含名为“main”的方法的 Java 程序，该方法的特征符与以下内容完全一样：
 ```java
 public static com.google.gson.JsonObject main(com.google.gson.JsonObject);
 ```
 {: codeblock}
 
-例如，创建名为 `Hello.java` 的 Java 文件并包含以下内容：
+例如，创建名为“Hello.java”的 Java 文件并包含以下内容：
 
 ```java
 import com.google.gson.JsonObject;
@@ -728,7 +762,7 @@ public class Hello {
 ```
 {: codeblock}
 
-然后，将 `Hello.java` 编译成 JAR 文件 `hello.jar`，如下所示：
+然后，将“Hello.java”编译成 JAR 文件“hello.jar”，如下所示：
 ```
 javac Hello.java
 ```
@@ -738,17 +772,18 @@ jar cvf hello.jar Hello.class
 ```
 {: pre}
 
-**注：**编译 Java 文件时，[google-gson](https://github.com/google/gson) 必须存在于 Java CLASSPATH 中。
 
-可以按如下所示从此 JAR 文件创建名为 `helloJava` 的 OpenWhisk 操作：
+**注：** 编译 Java 文件时，[google-gson](https://github.com/google/gson) 必须存在于 Java CLASSPATH 中。
+
+可以按如下所示从此 JAR 文件创建名为“helloJava”的 OpenWhisk 操作：
 
 ```
 wsk action create helloJava hello.jar --main Hello
 ```
 
-使用命令行和 `.jar` 源文件时，无需指定您要创建 Java 操作；该工具会根据文件扩展名来进行确定。
+使用命令行和“.jar”源文件时，无需指定您要创建 Java 操作；该工具会根据文件扩展名来进行确定。
 
-您需要使用 `--main` 来指定主类的名称。符合要求的主类是实现了如上所述静态 `main` 方法的主类。如果该类不在缺省包中，请使用 Java 标准类名，例如 `--main com.example.MyMain`。
+您需要使用“--main”来指定主类的名称。符合要求的主类是实现了如上所述静态“main”方法的主类。如果该类不在缺省包中，请使用 Java 标准类名，例如“--main com.example.MyMain”。
 
 Java 操作的操作调用与 Swift 和 JavaScript 操作的操作调用相同：
 
@@ -767,34 +802,33 @@ wsk action invoke --blocking --result helloJava --param name World
 
 通过 {{site.data.keyword.openwhisk_short}} Docker 操作，可以使用任何语言编写操作。
 
-您的代码会编译为可执行二进制文件，并嵌入到 Docker 映像中。二进制程序通过采用来自 `stdin` 的输入并通过 `stdout` 进行回复，从而与系统进行交互。
+您的代码会编译为可执行二进制文件，并嵌入到 Docker 映像中。二进制程序通过采用来自“stdin”的输入并通过“stdout”进行回复，从而与系统进行交互。
 
-作为先决条件，您必须拥有 Docker Hub 帐户。要设置免费 Docker 标识和帐户，请转至 [Docker Hub](https://hub.docker.com){: new_window}。
+作为先决条件，您必须拥有 Docker Hub 帐户。要设置免费 Docker 标识和帐户，请转至 [Docker Hub](https://hub.docker.com)。
 
-对于后续指示信息，假定 Docker 用户标识为 `janesmith`，密码为 `janes_password`。假定已设置 CLI，必须执行三个步骤来设置定制二进制文件以供 {{site.data.keyword.openwhisk_short}} 使用。在此之后，上传的 Docker 映像即可用作操作。
+对于后续指示信息，假定 Docker 用户标识为“janesmith”，密码为“janes_password”。假定已设置 CLI，必须执行三个步骤来设置定制二进制文件以供 {{site.data.keyword.openwhisk_short}} 使用。在此之后，上传的 Docker 映像即可用作操作。
 
 1. 下载 Docker 框架。可以使用 CLI 进行下载，如下所示：
 
   ```
-wsk sdk install docker
-  ```
+  wsk sdk install docker
   ```
   {: pre}
   ```
-现在，Docker 框架已安装在当前目录中。
-```
+  现在，Docker 框架已安装在当前目录中。
+  ```
 
   ```
-ls dockerSkeleton/
+  ls dockerSkeleton/
   ```
   {: pre}
   ```
   Dockerfile      README.md       buildAndPush.sh example.c
   ```
 
-框架是一种 Docker 容器模板，可以在其中以定制二进制文件的形式插入代码。
+  框架是一种 Docker 容器模板，可以在其中以定制二进制文件的形式插入代码。 
 
-2. 在黑匣框架中设置定制二进制文件。该框架已经包含可以使用的 C 程序。
+2. 在 Docker 框架中设置定制二进制文件。该框架已经包含可以使用的 C 程序。
 
   ```
   cat dockerSkeleton/example.c
@@ -803,18 +837,18 @@ ls dockerSkeleton/
   ```c
   #include <stdio.h>
   int main(int argc, char *argv[]) {
-      printf("This is an example log message from an arbitrary C program!\n");
+            printf("This is an example log message from an arbitrary C program!\n");
       printf("{ \"msg\": \"Hello from arbitrary C program!\", \"args\": %s }",
              (argc == 1) ? "undefined" : argv[1]);
   }
   ```
   {: codeblock}
 
-  可以根据需要修改此文件，或者向 Docker 映像添加其他代码和依赖关系。对于后者，可能需要按需对“Dockerfile”进行调整，才能构建可执行文件。二进制文件必须位于容器内的“/action/exec”中。
+  可以根据需要修改此文件，或者向 Docker 映像添加其他代码和依赖关系。对于后者，可能需要根据需要对 `Dockerfile` 进行调整，才能构建可执行文件。二进制文件必须位于容器内的 `/action/exec` 中。
 
-  可执行文件会从命令行接收单个自变量。该自变量是字符串序列化的 JSON 对象，表示操作的自变量。程序可能会记录到“stdout”或“stderr”。根据约定，输出的最后一行“必须”是字符串化的 JSON 对象，用于表示操作结果。
+  可执行文件会从命令行接收单个自变量。该自变量是字符串序列化的 JSON 对象，表示操作的自变量。程序可能会记录到 `stdout` 或 `stderr`。根据约定，输出的最后一行*必须*是字符串化的 JSON 对象，用于表示操作结果。
 
- 3. 使用提供的脚本来构建 Docker 映像并进行上传。必须首先运行“docker login”以进行认证，然后使用所选映像名称来运行脚本。
+3. 使用提供的脚本来构建 Docker 映像并进行上传。必须首先运行 `docker login` 以进行认证，然后使用所选映像名称来运行脚本。
 
   ```
   docker login -u janesmith -p janes_password
@@ -829,14 +863,16 @@ ls dockerSkeleton/
   ```
   {: pre}
 
-  请注意，在 Docker 映像构建过程中，会对 example.c 文件中的部分内容进行编译，所以无需在您的计算机上进行 C 编译。事实上，除非要在兼容主机上编译二进制文件，否则其不会在容器内部运行，因为格式不匹配。现在，Docker 容器可用作 {{site.data.keyword.openwhisk_short}} 操作。
+  请注意，在 Docker 映像构建过程中，会对 example.c 文件中的部分内容进行编译，所以无需在您的计算机上对 C 程序进行编译。事实上，除非要在兼容主机上编译二进制文件，否则其不会在容器内部运行，因为格式不匹配。
+
+  现在，Docker 容器可用作 {{site.data.keyword.openwhisk_short}} 操作。
 
   ```
   wsk action create --docker example janesmith/blackboxdemo
   ```
   {: pre}
 
-  请注意，创建操作时使用“--docker”。目前，假定所有 Docker 映像都在 Docker Hub 上进行托管。该操作可能会作为其他任何 {{site.data.keyword.openwhisk_short}} 操作进行调用。
+  请注意，创建操作时使用 `--docker`。目前，假定所有 Docker 映像都在 Docker Hub 上进行托管。该操作可能会作为其他任何 {{site.data.keyword.openwhisk_short}} 操作进行调用。
 
   ```
   wsk action invoke --blocking --result example --param payload Rey
@@ -844,14 +880,16 @@ ls dockerSkeleton/
   {: pre}
   ```json
   {
-      "args": {
+    "args": {
           "payload": "Rey"
       },
       "msg": "Hello from arbitrary C program!"
   }
   ```
 
-要更新 Docker 操作，请运行 buildAndPush.sh 以将最新的映像上传到 Docker Hub。这将允许系统在下次运行操作的代码时，拉取新的 Docker 映像。如果没有运行中的容器，那么任何新调用都将使用新的 Docker 映像。但是，如果有使用前版 Docker 映像的运行中容器，那么除非运行“wsk action update”，否则任何新调用都将继续使用该映像。这将指示系统对于任何新调用，都应该执行 docekr pull 来获取新的 Docker 映像。
+  要更新 Docker 操作，请运行 buildAndPush.sh 以将最新的映像上传到 Docker Hub。这将允许系统在下次运行操作的代码时，拉取新的 Docker 映像。如果没有运行中的容器，那么任何新调用都将使用新的 Docker 映像。但是，如果有使用前版 Docker 映像的运行中容器，那么除非运行 `wsk action update`，否则任何新调用都将继续使用该映像。这将指示系统对于任何新调用，都应该执行 docekr pull 来获取新的 Docker 映像。
+
+  
 
   ```
   ./buildAndPush.sh janesmith/blackboxdemo
@@ -863,12 +901,14 @@ ls dockerSkeleton/
   ```
   {: pre}
 
-  您可以在 [参考](./openwhisk_reference.html#openwhisk_ref_docker) 部分中找到有关创建 Docker 操作的更多信息。
+  您可以在[参考](./openwhisk_reference.html#openwhisk_ref_docker)部分中找到有关创建 Docker 操作的更多信息。
 
 ## 监视操作输出
 {: #openwhisk_actions_polling}
 
-{{site.data.keyword.openwhisk_short}} 操作可能会由其他用户调用，以响应各种事件或作为操作序列的组成部分。在此类情况下，监视调用会非常有用。可以使用 {{site.data.keyword.openwhisk_short}} CLI 在调用操作时监视其输出。
+{{site.data.keyword.openwhisk_short}} 操作可能会由其他用户调用，以响应各种事件或作为操作序列的组成部分。在此类情况下，监视调用会非常有用。
+
+可以使用 {{site.data.keyword.openwhisk_short}} CLI 在调用操作时监视其输出。
 
 1. 在 shell 中发出以下命令：
   ```
@@ -895,7 +935,10 @@ ls dockerSkeleton/
     2016-02-11T16:46:56.842065025Z stdout: hello bob!
   ```
 
-  与此类似，每当运行轮询实用程序时，都会实时看到 OpenWhisk 中代表您运行的任何操作的日志。
+    与此类似，每当运行轮询实用程序时，都会实时看到 OpenWhisk 中代表您运行的任何操作的日志。
+
+
+
 
 
 ## 列出操作
@@ -908,7 +951,9 @@ wsk action list
 ```
 {: pre}
 
-随着您编写更多操作，此列表会变长，因此将相关操作分组成 [包](./openwhisk_packages.html) 会很有用。要过滤操作列表以只列出特定包中的操作，可以使用以下命令：
+随着您编写更多操作，此列表会变长，因此将相关操作分组成[包](./openwhisk_packages.html)会很有用。要过滤操作列表以只列出特定包中的操作，可以使用以下命令：
+
+ 
 
 ```
 wsk action list [PACKAGE NAME]
@@ -943,10 +988,11 @@ wsk action list [PACKAGE NAME]
 ## 访问操作体中的操作元数据
 {: #openwhisk_action_metadata}
 
-操作环境包含多个特定于运行中操作的属性。
-这些属性允许操作以编程方式通过 REST API 来使用 OpenWhisk 资产，或者允许设置在操作即将耗尽其分配的时间预算时发出内部警报。使用 OpenWhisk Docker 框架时，这些属性可通过所有受支持运行时的系统环境进行访问：Node.js、Python、Swift、Java 和 Docker 操作。*“__OW_API_HOST”：运行此操作的 OpenWhisk 部署的 API 主机
-*“__OW_API_KEY”：调用操作的主体的 API 密钥，此密钥可能为限制性 API 密钥
-*“__OW_NAMESPACE”：“激活”的名称空间（这不能与操作的名称空间相同）
-*“__OW_ACTION_NAME”：运行中操作的标准名称
-*“__OW_ACTIVATION_ID”：此运行中操作实例的激活标识
-*“__OW_DEADLINE”：此操作将耗用完其整个持续时间配额的近似时间（以戳记毫秒为度量单位）
+操作环境包含多个特定于运行中操作的属性。这些属性允许操作以编程方式通过 REST API 来使用 OpenWhisk 资产，或者允许设置在操作即将耗尽其分配的时间预算时发出内部警报。使用 OpenWhisk Docker 框架时，这些属性可通过所有受支持运行时的系统环境进行访问：Node.js、Python、Swift、Java 和 Docker 操作。
+
+* `__OW_API_HOST`：运行此操作的 OpenWhisk 部署的 API 主机
+* `__OW_API_KEY`：调用此操作的主体的 API 密钥，此密钥可能是受限制的 API 密钥
+* `__OW_NAMESPACE`：*激活*的名称空间（这可能与操作的名称空间不同）
+* `__OW_ACTION_NAME`：运行中操作的标准名称
+* `__OW_ACTIVATION_ID`：此运行中操作实例的激活标识
+* `__OW_DEADLINE`：此操作将耗尽整个持续时间配额时的近似时间（以戳记毫秒为度量单位）

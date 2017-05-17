@@ -33,7 +33,7 @@ Cloud Foundry 應用程式會使用 Cloud Foundry 日誌聚集器，從應用程
 
 ## 設定
 
-在 {{site.data.keyword.Bluemix_dedicated_notm}} 及 {{site.data.keyword.Bluemix_local_notm}} 中，對於所有應用程式，日誌預設為作用中。若要檢視讀取標準日誌的相關資訊，請參閱 [Cloud Foundry 上執行之應用程式的記載](../logging_cf_apps.html#logging_bluemix_cf_apps)。此外，也可在 {{site.data.keyword.Bluemix_dedicated_notm}} 及 {{site.data.keyword.Bluemix_local_notm}} 環境中啟用進階記載。
+在 {{site.data.keyword.Bluemix_dedicated_notm}} 及 {{site.data.keyword.Bluemix_local_notm}} 中，對於所有應用程式，日誌依預設為作用中。若要檢視讀取標準日誌的相關資訊，請參閱 [Cloud Foundry 上執行之應用程式的記載](../logging_cf_apps.html#logging_bluemix_cf_apps)。此外，也可在 {{site.data.keyword.Bluemix_dedicated_notm}} 及 {{site.data.keyword.Bluemix_local_notm}} 環境中啟用進階記載。
 
 * 若要確認在 {{site.data.keyword.Bluemix_dedicated_notm}} 及 {{site.data.keyword.Bluemix_local_notm}} 環境中啟用進階記載，請遵循[檢視日誌](#hybrid_apps_logs_dash)中的步驟。如果沒有**進階視圖**按鈕，則表示未啟用此特性。
 
@@ -41,7 +41,7 @@ Cloud Foundry 應用程式會使用 Cloud Foundry 日誌聚集器，從應用程
 
 ## 日誌保留
 
-在 {{site.data.keyword.Bluemix_dedicated_notm}} 及 {{site.data.keyword.Bluemix_local_notm}} 的 Cloud Foundry 應用程式中，日誌資料預設會儲存 30 天。
+在 {{site.data.keyword.Bluemix_dedicated_notm}} 及 {{site.data.keyword.Bluemix_local_notm}} 的 Cloud Foundry 應用程式中，日誌資料依預設會儲存 30 天。
 
 ## 檢視專用及本端版本中的 Cloud Foundry 應用程式日誌
 {: #hybrid_apps_logs_dash}

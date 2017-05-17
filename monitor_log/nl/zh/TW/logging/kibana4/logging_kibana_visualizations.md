@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-08"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -35,6 +35,7 @@ lastupdated: "2017-03-08"
 | 度量值 | 可用來顯示相符數，或是數值欄位的確切平均值。 |
 | 圓餅圖 | 可用來顯示欄位的不同值。 | 
 | 垂直長條圖 | 顯示時間型資料，以及非時間型資料。可用來將資料分組。 |
+{: caption="表 1. 視覺化類型" caption-side="top"}
 
 在「視覺化」頁面中，您可以執行下列任何作業：
 
@@ -47,6 +48,7 @@ lastupdated: "2017-03-08"
 | [匯出視覺化](logging_kibana_visualizations.html#logging_kibana_visualizations_export) | 您可以將視覺化匯出成 JSON 檔案。  |
 | [匯入視覺化](logging_kibana_visualizations.html#logging_kibana_visualizations_import) | 您可以將視覺化匯入成 JSON 檔案。  |
 | [共用視覺化](logging_kibana_visualizations.html#logging_kibana_visualizations_share) | 您可以透過 HTML 原始檔或透過 Kibana 儀表板來共用視覺化。  |
+{: caption="表 2. 使用視覺化的作業" caption-side="top"}
 
 
 ## 在 Kibana 中從查詢建立視覺化
@@ -83,29 +85,7 @@ lastupdated: "2017-03-08"
   
 8. 新增子儲存區來分解資料。
 
-如需 Kibana 的相關資訊，請參閱 [Kibana 使用手冊 ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.elastic.co/guide/en/kibana/4.1/index.html){: new_window}。
- 
-## 儲存視覺化
-{:#logging_kibana_visualizations_save}
-
-請完成下列步驟，以在「視覺化」頁面中儲存視覺化：
-
-1. 在「視覺化」頁面的工具列中，按一下**儲存視覺化**按鈕 ![儲存視覺化](images/k4_visualization_save_icon.jpg "儲存視覺化")。
-
-2. 輸入視覺化的名稱。
-
-3. 按一下「儲存」。 
-
-## 載入視覺化
-{:#logging_kibana_visualizations_reload}
-
-請完成下列步驟，以載入已儲存的視覺化：
-
-1. 在「視覺化」頁面的工具列中，按一下**載入已儲存的視覺化**按鈕 ![載入已儲存的視覺化](images/k4_visualization_open_icon.jpg "載入已儲存的視覺化")。
-
-2. 選取您要載入的視覺化。 
-
-
+如需 Kibana 的相關資訊，請參閱 [Kibana User Guide ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.elastic.co/guide/en/kibana/4.1/index.html){: new_window}。
 
 ## 刪除視覺化
 {:#logging_kibana_visualizations_delete}
@@ -144,6 +124,30 @@ lastupdated: "2017-03-08"
 3. 選取檔案，然後按一下**開啟**。
 
 該視覺化即會新增至視覺化清單中。
+
+
+ 
+## 載入視覺化
+{:#logging_kibana_visualizations_reload}
+
+請完成下列步驟，以載入已儲存的視覺化：
+
+1. 在「視覺化」頁面的工具列中，按一下**載入已儲存的視覺化**按鈕 ![載入已儲存的視覺化](images/k4_visualization_open_icon.jpg "載入已儲存的視覺化")。
+
+2. 選取您要載入的視覺化。 
+
+
+## 儲存視覺化
+{:#logging_kibana_visualizations_save}
+
+請完成下列步驟，以在「視覺化」頁面中儲存視覺化：
+
+1. 在「視覺化」頁面的工具列中，按一下**儲存視覺化**按鈕 ![儲存視覺化](images/k4_visualization_save_icon.jpg "儲存視覺化")。
+
+2. 輸入視覺化的名稱。
+
+3. 按一下「儲存」。 
+
 
 
 ## 共用視覺化

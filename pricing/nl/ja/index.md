@@ -221,7 +221,7 @@ SoftLayer DirectLink やプレミアム・サポートのオプションなど�
 | 階層 3: 2001 - 3000                  |   $0.75 (米ドル)                       |
 | 階層 4: 3001 - 4000           |      $0.60 (米ドル)                    |
 |階層 5: &gt; 4000 | $0.40 (米ドル) | 
-{:caption="Table 1. Simple tier pricing table" caption-side="top"}
+{:caption="表 1. 単純階層の価格表" caption-side="top"}
 
 次の表は、単純階層の価格モデルに基づくプランの場合にユーザーが支払う金額について説明しています。
 
@@ -232,7 +232,7 @@ SoftLayer DirectLink やプレミアム・サポートのオプションなど�
 |2500 |	2500 × 0.75 = 1875 |	$1875 (米ドル)|
 |... |	... |	...|
 |5200 |	5200 × 0.40 = 2080 |$2080 (米ドル)|
-{:caption="Table 2. Charge calculation by using the simple tier pricing model" caption-side="top"}
+{:caption="表 2. 単純階層の価格モデルを使用した料金計算" caption-side="top"}
 
 ####累進階層
 {: #graduated_tier}
@@ -246,7 +246,7 @@ SoftLayer DirectLink やプレミアム・サポートのオプションなど�
 |    階層 3: 2001 - 3000 |	$0.75 (米ドル) |
 |    階層 4: 3001 - 4000 |	$0.60 (米ドル) |
 |    階層 5: &gt; 4000 |	$0.40 (米ドル) |
-{:caption="Table 3. Graduated tier pricing table" caption-side="top"}
+{:caption="表 3. 累進階層の価格表" caption-side="top"}
 
 次の表は、累進階層の価格モデルに基づくプランの場合にユーザーが支払う金額について説明しています。
 
@@ -257,7 +257,7 @@ SoftLayer DirectLink やプレミアム・サポートのオプションなど�
 |2500 |	(1000 × 1 (階層 1 の単価)) + (1000 × 0.90 (階層 2 の単価)) + (500 × 0.75 (階層 3 の単価)) = 2275 |	$2275 (米ドル) |
 |... |	... |	...|
 |5200 |	(1000 × 1 (階層 1 の単価)) + (1000 × 0.90 (階層 2 の単価)) + (1000 × 0.75 (階層 3 の単価)) + (1000 × 0.60 (階層 4 の単価)) + (1200 × 0.40 (階層 5 の単価)) = 3730 |	$3730 (米ドル)|
-{:caption="Table 4. Charge calculation by using the graduated tier pricing model" caption-side="top"}
+{:caption="表 4. 累進階層の価格モデルを使用した料金計算" caption-side="top"}
 
 ####ブロック階層
 {: #block_tier}
@@ -271,7 +271,7 @@ SoftLayer DirectLink やプレミアム・サポートのオプションなど�
 | 階層 3: &lt;= 3000 |	$2800 (米ドル)|
 | 階層 4: &lt;= 4000 |	$3500 (米ドル)|
 | 階層 5: &lt;= 10000 |	$5000 (米ドル)|
-{:caption="Table 5. Block tier pricing table" caption-side="top"}
+{:caption="表 5. ブロック階層の価格表" caption-side="top"}
 
 次の表は、ブロック階層の価格モデルに基づくプランの場合にユーザーが支払う金額について説明しています。
 
@@ -281,7 +281,7 @@ SoftLayer DirectLink やプレミアム・サポートのオプションなど�
 |1500 |	アイテムの数量は階層 2 に該当するため、合計額は $1900 (米ドル) となる。 |	$1900 (米ドル)|
 |... |	... |	...|
 |5200 |	アイテムの数量は階層 5 に該当するため、合計額は $5000 (米ドル) となる。 |	$5000 (米ドル)|
-{:caption="Table 6. Charge calculation by using the block tier pricing model" caption-side="top"}
+{:caption="表 6. ブロック階層の価格モデルを使用した料金計算" caption-side="top"}
 
 ##コスト見積もり方法
 {: #cost}
@@ -337,7 +337,7 @@ SoftLayer DirectLink やプレミアム・サポートのオプションなど�
 <br/>1 月あたり 10,000 回の無料高負荷 API 呼び出し | $1.00 (米ドル)/GB
 <br/>$0.03 (米ドル)/軽負荷 API 呼び出し 1000 回
 <br/>$0.15 (米ドル)/高負荷 API 呼び出し 1000 回 |
-{:caption="Table 7. Pricing sheet" caption-side="top"}
+{:caption="表 7. 価格設定シート" caption-side="top"}
 
 ###アプリケーション価格の計算
 
@@ -399,7 +399,7 @@ GB 数を合計して、2 GB の無料枠を減算します。1 月あたり 148
 |SEK |	  スウェーデン・クローネ|
 |USD |    米国ドル|
 |ZAR |	  南アフリカ共和国ランド|
-{:caption="Table 8. Supported currencies" caption-side="top"}
+{:caption="表 8. サポートされている通貨" caption-side="top"}
 
 **注:** {{site.data.keyword.Bluemix_notm}} と SoftLayer のアカウントをリンクした場合、受け取る単一の請求書は、米国ドル (USD) 単位のもののみになります。  
 
@@ -444,9 +444,8 @@ GB 数を合計して、2 GB の無料枠を減算します。1 月あたり 148
 
 |サービス |	情報|
 |--------|-------------|
-|Presence Insights 	|ライト・プランを選択していて無料枠を超えた場合、ユーザーが権限を失ったことを示す 403 メッセージが表示されるかログに記録され、サービス・インスタンスが使用不可になります。さらに、POST
-REST API 呼び出しが 403 応答で拒否されます。<br/><br/>無料枠を超えたことが原因でサービスが使用不可になった場合は、無料の Lite プランから有料プランにアップグレードすることができます。サービスは 2 時間以内に再び使用可能になります。<br/><br/>有料プランを選択している場合、イベントおよびストレージ全体の使用量が Lite プラン枠内に収まっているのであれば、ご使用のプランを Lite プランに下げることもできます。<br/><br/>プランのアップグレードまたは縮小を行っても、アプリの再ステージや再始動は必要ありません。|
-{:caption="Table 9. Next steps for changing your plan" caption-side="top"}
+|Presence Insights 	|ライト・プランを選択していて無料枠を超えた場合、ユーザーが権限を失ったことを示す 403 メッセージが表示されるかログに記録され、サービス・インスタンスが使用不可になります。さらに、POST REST API 呼び出しが 403 応答で拒否されます。<br/><br/>無料枠を超えたことが原因でサービスが使用不可になった場合は、無料の Lite プランから有料プランにアップグレードすることができます。サービスは 2 時間以内に再び使用可能になります。<br/><br/>有料プランを選択している場合、イベントおよびストレージ全体の使用量が Lite プラン枠内に収まっているのであれば、ご使用のプランを Lite プランに下げることもできます。<br/><br/>プランのアップグレードまたは縮小を行っても、アプリの再ステージや再始動は必要ありません。|
+{:caption="表 9. プラン変更のための次のステップ" caption-side="top"}
 
 ###コマンド・ライン・インターフェースによるプラン変更方法
 
@@ -454,11 +453,11 @@ REST API 呼び出しが 403 応答で拒否されます。<br/><br/>無料枠�
 ```
 cf update-service <service_name> [-p <new_plan>]
 ```
-# rellinks
+# 関連リンク
 {: rellinks}
-## general
+## 一般
 {: general} 
 * [{{site.data.keyword.Bluemix_notm}} 価格設定シート](https://console.{DomainName}/pricing/)
-* [{{site.data.keyword.Bluemix_notm}} Developers Community Forum ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/){: new_window}
+* [{{site.data.keyword.Bluemix_notm}} Developers Community Forum ![外部リンク・アイコン](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/){: new_window}
 * [オンライン・ヘルプの表示 (Getting online help)](https://www.{DomainName}/docs/troubleshoot/getting_customer_support.html#online_help)
 * [お問い合わせ](https://console.{DomainName}/#/contactUs/cloudOEPaneId=contactUs)
