@@ -66,7 +66,7 @@
 	}, {
 		"title": "サービス可用性",
 		"description": "サービス・タイプと可用性について説明します。",
-		"href": "services/index.html"
+		"href": "services/services_region.html"
 	}, {
 		"title": "アプリの管理",
 		"description": "Bluemix ユーザー・インターフェースのダッシュボードを使用して、アプリケーションおよびサービスの表示と管理を行うことができます。",
@@ -77,6 +77,9 @@
 		"description": "アプリケーション使用およびデータ・フローをたどって、デプロイメントの理解を深めることができます。",
 		"img": "homepage/images/monitor_log.svg",
 		"href": "monitor_log/monitoringandlogging.html"
+	}, {
+		"title": "API の管理",
+		"href": "apis/management/index.html"
 	}, {
 		"title": "Bluemix のセキュリティー",
 		"description": "機能、インフラストラクチャー、運用のセキュリティーと、物理的セキュリティーを Bluemix がどのように提供するのかを理解できます。",
