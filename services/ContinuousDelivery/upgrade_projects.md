@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-12"
+lastupdated: "2017-5-16"
 
 ---
 
@@ -173,3 +173,28 @@ When you return to your project, the upgrade message is displayed again, and you
 {: #upgrade_troubleshoot}
 
 If you have questions or problems, go to the [support forum](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services). In your forum post, include the URLs to your {{site.data.keyword.jazzhub_short}} project and your {{site.data.keyword.contdelivery_short}} toolchain, and tag your post with the `devops-services` tag.
+   
+## Frequently asked questions
+{: #upgrade_faq}
+
+### I see that when my project is upgraded to a toolchain, the toolchain will be in the US South region. What if I want to deploy to a different region?
+
+Projects at hub.jazz.net and toolchains are both hosted in the US South region. If your project was configured to deploy apps to a different region, it will still deploy apps to that region after it is upgraded to a toolchain.
+
+### What will happen to Track &amp; Plan?
+
+The {{site.data.keyword.contdelivery_short}} service provides issue-tracking capabilities through {{site.data.keyword.gitrepos}}, which is hosted by IBM and based on GitLab Community Edition. {{site.data.keyword.contdelivery_short}} also supports integrations with other planning and issue-tracking tools, such as GitHub Issues and JIRA.
+
+Both GitHub Issues and {{site.data.keyword.gitrepos}} provide kanban boards and issue tracking for planning. To learn more about Issue Boards, which is the kanban feature in Git Repos and Issue Tracking, see [Issue board ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/help/user/project/issue_board.md){: new_window}.
+
+### What will happen to my repo when I upgrade?
+
+If your project uses a public repo on github.com, the toolchain will be connected to the same GitHub repo. If your project uses a Git repo that is hosted on JazzHub, the contents of that repo will be cloned to a new repo in {{site.data.keyword.gitrepos}}, which is part of {{site.data.keyword.contdelivery_short}}.
+
+For full details about how each type of repo is treated in the upgrade process, see the following table.
+
+|Project repo |Project type	|Toolchain repo |
+|:----------|:------------------------------|:------------------|
+|github.com 		|Private or public 		|The same github.com repo with {{site.data.keyword.Bluemix_notm}} Public.	|
+|hub.jazz.net/git		|Private or public 		|A new repo in {{site.data.keyword.gitrepos}} with {{site.data.keyword.Bluemix_notm}} Public.	|
+{: caption="Table 1. Project repos mapped to toolchain repos" caption-side="top"}
