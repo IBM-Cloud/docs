@@ -42,7 +42,7 @@ After your app is created, you have a few options for continuing to add services
 <dd>Use the cf command line interface to update your application, create a service instance, or bind the service to your application. You can also use the cloud-cli command line interface to create, update, and delete service offerings.</dd>
 <dt>{{site.data.keyword.Bluemix_notm}} user interface</dt>
 <dd>Use the {{site.data.keyword.Bluemix_notm}} user interface to build your application, including picking which services and runtimes to combine to solve your business problem.</dd>
-<dt>{{{site.data.keyword.contdelivery_full}}</dt>
+<dt>{{site.data.keyword.contdelivery_full}}</dt>
 <dd>Use {{site.data.keyword.contdelivery_short}} to automate builds, unit tests, deployments, and more. Edit and push code through the rich web based IDE. Create toolchains to enable tool integrations that support your development, deployment, and operation tasks. The Continuous Delivery service includes Delivery Pipeline, Eclipse Orion Web IDE, and Git Repos and Issue Tracking. For more information, see <https://console.ng.bluemix.net/docs/services/ContinuousDelivery/index.html#cd_getting_started>Getting started with Continuous Delivery</a>
 </dd>
 </dl>
