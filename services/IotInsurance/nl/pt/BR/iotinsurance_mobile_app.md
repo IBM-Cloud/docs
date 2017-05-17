@@ -22,7 +22,9 @@ lastupdated: "2017-03-08"
 O app móvel de amostra do {{site.data.keyword.iotinsurance_full}} é uma implementação de referência para um cliente móvel do {{site.data.keyword.iotinsurance_short}}. É possível usar o aplicativo para registrar novos dispositivos no sistema e receber alertas para os dispositivos.
 {:shortdesc}
 
-**Nota**: o {{site.data.keyword.iotinsurance_short}} não implementa mais o {{site.data.keyword.amafull}} nem o {{site.data.keyword.mobilepushfull}}. Versões anteriores do {{site.data.keyword.iotinsurance_short}} usavam o serviço {{site.data.keyword.amashort}} para processar as respostas do app móvel. Esse processo continua a funcionar para todas as instâncias existentes do {{site.data.keyword.iotinsurance_short}}. Entretanto, deve-se criar um processo de autenticação customizado para usar o app móvel com novas instâncias do
+**Nota**: o {{site.data.keyword.iotinsurance_short}} não implementa mais o {{site.data.keyword.amafull}} nem o {{site.data.keyword.mobilepushfull}}. Versões
+anteriores do {{site.data.keyword.iotinsurance_short}} usavam o serviço {{site.data.keyword.amashort}} para processar as respostas do app móvel. Esse processo
+continua a funcionar para todas as instâncias existentes do {{site.data.keyword.iotinsurance_short}}. Entretanto, deve-se criar um processo de autenticação customizado para usar o app móvel com novas instâncias do
 {{site.data.keyword.iotinsurance_short}}. Opcionalmente, também é possível [criar uma instância do {{site.data.keyword.mobilepushshort}}](../mobilepush/index.html), configurá-la e vinculá-la à API {{site.data.keyword.iotinsurance_short}}.
 
 **Pré-requisitos:** antes de iniciar, assegure-se de que os pré-requisitos a seguir estejam adequados:

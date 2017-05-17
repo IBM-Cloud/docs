@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-27"
+lastupdated: "2017-04-25"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -61,7 +61,7 @@ var config = module.exports = {
 
 메소드: POST   
 API: /shield  
-https://iot4i-docs-api.mybluemix.net/dist/#!/shield/addShield
+https://iot4i-api-docs.mybluemix.net/#!/shield/addShield
 
 createShield.js 파일에 실드 정의를 작성하십시오. 다음 예에서는 누수를 발견하는 단순 실드를 보여줍니다. 
 
@@ -160,7 +160,7 @@ var shieldCode = {
 
 메소드: POST   
 API: /user  
-https://iot4i-docs-api.mybluemix.net/dist/#!/user/addUser
+https://iot4i-api-docs.mybluemix.net/#!/user/addUser
 
 createUser.js 파일에 사용자를 작성하십시오. 다음 예에서는 단일 사용자 작성 방법을 보여줍니다. 
 
@@ -195,7 +195,7 @@ var user = {
 
 메소드: POST   
 API: /user  
-https://iot4i-docs-api.mybluemix.net/dist/#!/shieldassociation/addShieldAssociation
+https://iot4i-api-docs.mybluemix.net/#!/shieldassociation/addShieldAssociation
 
 실드를 createUserShieldAssociation.js의 사용자와 연결하는 실드 연관을 작성합니다.
 
@@ -217,7 +217,7 @@ var userShield = {
 
 메소드: POST   
 API: /sendPayloadToMQTT  
-https://iot4i-docs-api.mybluemix.net/dist/#!/global/sendPayloadToMQTT
+https://iot4i-api-docs.mybluemix.net/#!/global/sendPayloadToMQTT
 
 시뮬레이션된 위험 페이로드를 작성하여 실드를 테스트할 수 있습니다. 
 

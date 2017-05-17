@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-04"
+lastupdated: "2017-05-02"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -26,7 +26,7 @@ Per essere operativo con questo servizio, devi distribuire i servizi e le applic
 
 **Prerequisiti:** prima di iniziare, assicurati che siano implementati i seguenti prerequisiti:
 - Deve esistere un'istanza del [ servizio {{site.data.keyword.iotinsurance_short}}](https://console.ng.bluemix.net/catalog/services/iot-for-insurance/) nel tuo spazio {{site.data.keyword.Bluemix_notm}}.
-- Devono essere disponibili almeno 2 GB di memoria nella tua organizzazione {{site.data.keyword.Bluemix_notm}} per abilitare la funzione di distribuzione.
+- Devono essere disponibili almeno 2 GB di memoria nella tua organizzazione {{site.data.keyword.Bluemix_notm}} per abilitare la funzione di distribuzione. Se esegui l'aggiornamento da una versione precedente, devi disporre di almeno 2,5 GB.
 
 ## Distribuzione delle applicazioni e dei servizi richiesti
 {: #deploying_services}
@@ -36,6 +36,8 @@ Per essere operativo con questo servizio, devi distribuire i servizi e le applic
   {{site.data.keyword.iotinsurance_short}} distribuisce tutti i servizi e le applicazioni Node.js necessarie. Esegue automaticamente il bind delle applicazioni ai servizi.
 
   Ogni istanza del servizio utilizza il piano del servizio predefinito. Puoi eseguire l'upgrade di ogni piano del servizio in un secondo momento andando nella console del servizio. Puoi anche utilizzare un'istanza esistente di un servizio eliminando la nuova istanza e eseguendo il bind manualmente dell'istanza esistente al servizio {{site.data.keyword.iotinsurance_short}}. Per ulteriori informazioni sulle applicazioni, consulta [Informazioni su {{site.data.keyword.iotinsurance_short}}](iotinsurance_overview.html).
+
+  **Importante:**  quando distribuisci la versione di prova di {{site.data.keyword.iotinsurance_short}}, tieni presente che le versioni gratuite degli altri servizi e applicazioni che vengono distribuiti hanno una funzionalità limitata. {{site.data.keyword.iot_short_notm}} è limitato a un massimo di 500 dispositivi e {{site.data.keyword.cloudant_short_notm}} è limitato a un GB di dati e ha capacità di lettura-scrittura limitate.
 
   **Nota**: {{site.data.keyword.iotinsurance_short}} non distribuisce più {{site.data.keyword.amafull}} o {{site.data.keyword.mobilepushfull}}. Le versioni precedenti di {{site.data.keyword.iotinsurance_short}} utilizzano il servizio {{site.data.keyword.amashort}} per elaborare le risposte dall'applicazione mobile. Questo processo continua a funzionare per tutte le istanze esistenti di {{site.data.keyword.iotinsurance_short}}. Tuttavia, devi creare un processo di autenticazione personalizzato per utilizzare l'applicazione mobile con le nuove istanze di
   {{site.data.keyword.iotinsurance_short}}. Puoi anche facoltativamente [creare un'istanza di {{site.data.keyword.mobilepushshort}}](https://console.ng.bluemix.net/docs/services/mobilepush/index.html), configurarla e associarla all'API {{site.data.keyword.iotinsurance_short}}.
@@ -77,7 +79,8 @@ Per essere operativo con questo servizio, devi distribuire i servizi e le applic
 
 ## Creazione e configurazione di {{site.data.keyword.mobilepushshort}}
 {: #config_push}
-Per abilitare le notifiche push per un'applicazione mobile esistente, puoi facoltativamente creare un'istanza del servizio {{site.data.keyword.mobilepushshort}}, associarla all'API {{site.data.keyword.iotinsurance_short}} e aggiungere il file Public Key Cryptography Standards (PKCS) 12. Per informazioni sull'applicazione mobile, consulta [Installazione e collegamento dell'applicazione mobile di esempio](iotinsurance_mobile_app.html). Per informazioni su {{site.data.keyword.mobilepushshort}}, consulta [Getting started with Push Notifications](https://console.ng.bluemix.net/docs/services/mobilepush/index.html).
+
+(Facoltativo) Per abilitare le notifiche push per un'applicazione mobile esistente, puoi facoltativamente creare un'istanza del servizio {{site.data.keyword.mobilepushshort}}, eseguirne il bind all'API {{site.data.keyword.iotinsurance_short}} e aggiungere il file Public Key Cryptography Standards (PKCS) 12. Per informazioni sull'applicazione mobile, consulta [Installazione e collegamento dell'applicazione mobile di esempio](iotinsurance_mobile_app.html). Per informazioni su {{site.data.keyword.mobilepushshort}}, consulta [Getting started with Push Notifications](https://console.ng.bluemix.net/docs/services/mobilepush/index.html).
 
 Per configurare il servizio dopo la creazione, esegui la seguente procedura:
 
@@ -85,6 +88,12 @@ Per configurare il servizio dopo la creazione, esegui la seguente procedura:
   2. Fai clic su **Configura**.
   3. Nella sezione Apple Push Notifications Certificate, carica il file PKCS 12 per la tua applicazione mobile e immetti la password.
 
+## Utilizzo dei dati Weather Company
+{: #weather_company}
+
+(Facoltativo) {{site.data.keyword.iotinsurance_short}} fornisce una serie di dati statici provenienti da Weather Company che puoi visualizzare a scopo dimostrativo. Facoltativamente, puoi anche accedere ai dati live di Weather Company creando un'istanza del [servizio {{site.data.keyword.weatherfull}}](../Weather/index.html) ed eseguendone il bind all'applicazione meteo  {{site.data.keyword.iotinsurance_short}}.
+
+**Importante:** la versione gratuita del servizio {{site.data.keyword.weather_short}} è limitata a 10.000 richieste. Se hai bisogno di più richieste, puoi effettuare l'aggiornamento a una versione a pagamento.
 
 Operazioni successive
 {: #whats_next}
@@ -92,24 +101,4 @@ Impara cosa puoi fare con {{site.data.keyword.iotinsurance_short}}.
 
 - Utilizza le istruzioni e le API nel toolkit dello scudo per creare [un'associazione scudo e un utente](iotinsurance_shield_toolkit.html).
 <!-- - Install and connect the [sample mobile app](iotinsurance_mobile_app.html). -->
-- Scarica o visualizza tutte le [API sul sito GitHub![icona link esterno](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}.
-
-# Link correlati
-{: #rellinks}
-
-## Esercitazioni ed esempi
-{: #samples}
-* [{{site.data.keyword.iotinsurance_short}} shields library ![icona link esterno](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-shields){: new_window}
-* [Sample mobile app code on GitHub ![icona link esterno](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## Riferimento API
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API ![icona link esterno](../../icons/launch-glyph.svg)](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API Examples ![icona link esterno](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-
-## Link correlati
-{: #general}
-* [Documentazione {{site.data.keyword.iot_full}}](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [Developer support forum ![icona link esterno](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix]){:new_window}
-* [Stack overflow support forum ![icona link esterno](../../icons/launch-glyph.svg)](http://stackoverflow.com/questions/tagged/ibm-bluemix){:new_window}
+- Scarica o visualizza tutti gli [esempi di API sul sito GitHub ![icona link esterno](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}.

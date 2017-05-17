@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-07"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -29,8 +29,9 @@ Avant de commencer, vous devez déployer une instance d'{{site.data.keyword.iote
 Pour commencer, effectuez les tâches suivantes :
 
 1. [Créez des appareils simulés](iot4ecreatingappliances.html) à l'aide de l'application Web de démarrage
-{{site.data.keyword.iotelectronics}}. Comme exemple, des machines à laver sont utilisées en tant qu'appareils simulés dans le module de démarrage {{site.data.keyword.iotelectronics}}. Vous pouvez connecter comme appareil tout type de terminal électronique intelligent.
-2. [Téléchargez et connectez](iotelectronics_config_mobile.html) le modèle d'application mobile.
+{{site.data.keyword.iotelectronics}}. Comme exemple, des machines à laver sont utilisées en tant qu'appareils simulés dans le module de démarrage {{site.data.keyword.iotelectronics}}. Vous pouvez connecter comme appareil tout type de périphérique électronique intelligent.
+2. (Facultatif) [Configurez des options de connexion mobiles avec {{site.data.keyword.appid_full}}](https://console.ng.bluemix.net/docs/services/appid/index.html). Vous pouvez personnaliser l'apparence de l'écran de connexion qui s'affiche dans l'application mobile. Vous pouvez également activer ou désactiver l'utilisation des données d'identification de login social. Par défaut, {{site.data.keyword.appid_short_notm}} active l'autorisation par Facebook et Google+, et les utilisateurs d'applications mobiles peuvent utiliser leurs propres données d'identification de login social ou ignorer le processus de connexion et essayer l'application sans se connecter. 
+3. [Téléchargez et connectez](iotelectronics_config_mobile.html) le modèle d'application mobile.
 
 
 ## Etapes suivantes
@@ -40,23 +41,3 @@ Découvrez ce que vous pouvez faire avec {{site.data.keyword.iotelectronics}}.
 - [Explorez le modèle d'application mobile](iotelectronics_config_mobile.html) pour découvrir comment les propriétaires d'appareil peuvent enregistrer leurs appareils et interagir avec eux.
 - [Explorez et gérez des données](iotelectronics_dashboard.html) pour vos appareils enregistrés dans {{site.data.keyword.iot_short_notm}}.
 - [Explorez les API ![Icône de lien externe](../../icons/launch-glyph.svg)](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html){:new_window} pour voir comment vous pouvez personnaliser et développer vos propres applications {{site.data.keyword.iotelectronics}}.
-
-# Liens connexes
-{: #rellinks}
-<!-- Related Links last updated 23 October 2016 - new API source -->
-## Documentation sur les API
-{: #api}
-* [API {{site.data.keyword.iotelectronics}} ![Icône de lien externe](../../icons/launch-glyph.svg)](https://broker-uss-iot4e.electronics.internetofthings.ibmcloud.com/public/iot4eregistrationapi.html){:new_window}
-* [API {{site.data.keyword.iot_short}} ![Icône de lien externe](../../icons/launch-glyph.svg)](https://developer.ibm.com/iotfoundation/recipes/api-documentation/){:new_window}
-* [IBM Watson IoT Service Health Dashboard ![Icône de lien externe](../../icons/launch-glyph.svg)](https://status.internetofthings.ibmcloud.com){: new_window}
-
-## Composants
-{: #general}
-
-* [Documentation d'{{site.data.keyword.iotelectronics}}](iotelectronics_overview.html){:new_window}
-* [Documentation d'{{site.data.keyword.iot_full}}](https://console.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
-* [Documentation d'{{site.data.keyword.sdk4nodefull}}](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime){:new_window}
-
-## Exemples
-{: #samples}
-* [Application mobile exemple](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html){:new_window}

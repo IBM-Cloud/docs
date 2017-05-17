@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -50,5 +50,7 @@ Der **{{site.data.keyword.iotelectronics}}-Service** unterstützt die Benutzer- 
 Mit **{{site.data.keyword.iot_full}}** können Ihre Apps mit Ihren verbundenen Appliances, Sensoren und Gateways kommunizieren und Daten verarbeiten, die über diese Komponenten erfasst werden.
 
 Mit **{{site.data.keyword.sdk4nodefull}}** können Sie serverseitige JavaScript&reg;-Apps entwickeln, bereitstellen und skalieren; außerdem bietet Ihnen diese Software erweiterte Leistung, Sicherheit und Funktionsfähigkeit.
+
+**{{site.data.keyword.appid_full}}** fügt eine Authentifizierung zu Ihren mobilen Apps und Web-Apps hinzu und schützt die verwendeten Back-End-Systeme. 
 
 Mit dem **Beispiel für eine mobile App** können Sie über Ihr Mobilgerät wie ein Smartphone oder ein Tablet den Status einer simulierten Appliance anzeigen und mit einer solchen kommunizieren. Unter [Verwenden der mobilen App](iotelectronics_config_mobile.html) finden Sie heraus, wie Sie die mobile App abrufen können.

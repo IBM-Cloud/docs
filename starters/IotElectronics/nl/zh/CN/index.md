@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-12"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -22,7 +22,8 @@ lastupdated: "2017-03-15"
 要开始使用 {{site.data.keyword.iotelectronics}}，请完成以下任务：
 
 1. 使用 {{site.data.keyword.iotelectronics}} Starter Web 应用程序[创建模拟设备](https://console.ng.bluemix.net/docs/starters/IotElectronics/iot4ecreatingappliances.html)。出于演示目的，洗衣机将用作 {{site.data.keyword.iotelectronics}} Starter 内的模拟设备。选择连接的设备可以是任何类型的智能电子设备。
-2. [下载并连接](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html)样本移动应用程序。
+2. （可选）[为 {{site.data.keyword.appid_full}}](https://console.ng.bluemix.net/docs/services/appid/index.html) 配置移动登录选项。您可以定制显示在移动应用程序中的登录屏幕的外观。还可以选择启用或禁用社交登录凭证的使用。缺省情况下，{{site.data.keyword.appid_short_notm}} 会启用 Facebook 和 Google+ 的授权，移动应用程序用户可以使用他们自己的社交凭证，也可以跳过登录过程，不登录即可试用应用程序。
+3. [下载并连接](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html)样本移动应用程序。
 
 
 ## 后续工作

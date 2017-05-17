@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -50,5 +50,7 @@ lastupdated: "2017-03-15"
 **{{site.data.keyword.iot_full}}** 允许应用程序与连接的设备、传感器和网关进行通信，以及使用这些对象收集的数据。
 
 **{{site.data.keyword.sdk4nodefull}}** 使您能够开发、部署和扩展服务器端 JavaScript&reg; 应用程序，并提供增强的性能、安全性和可维护性。
+
+**{{site.data.keyword.appid_full}}** 会向您的移动应用程序和 Web 应用程序添加认证，从而保护后端系统。
 
 **样本移动应用程序**允许您使用移动设备（如智能手机或平板电脑）查看模拟设备的状态，并与模拟设备进行通信。在[使用移动应用程序](iotelectronics_config_mobile.html)中找到如何获取移动应用程序。

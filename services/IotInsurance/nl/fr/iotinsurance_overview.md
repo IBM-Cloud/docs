@@ -102,23 +102,3 @@ informations. Vous pouvez utiliser ou modifier les boucliers inclus dans la bibl
 Le moteur des actions détermine les actions à exécuter à partir des informations spécifiées dans le bouclier.
 
 Vous pouvez créer des boucliers dans JavaScript à l'aide de l'API {{site.data.keyword.iotinsurance_short}}.
-
-
-
-# Liens connexes
-{: #rellinks}
-
-## Tutoriels et exemples
-{: #samples}
-* [Code du modèle d'application mobile dans GitHub![Icône de lien externe](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## Référence d'API
-{: #api}
-* [API {{site.data.keyword.iotinsurance_short}} ![Icône de lien externe](../../icons/launch-glyph.svg)](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [Exemples d'API {{site.data.keyword.iotinsurance_short}} ![Icône de lien externe](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## Liens connexes
-{: #general}
-* [Documentation d'{{site.data.keyword.iot_full}}](https://console.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
-* [Forum de support des développeurs ![Icône de lien externe](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix]){:new_window}
-* [Forum de support Stack Overflow ![Icône de lien externe](../../icons/launch-glyph.svg)](http://stackoverflow.com/questions/tagged/ibm-bluemix){:new_window}

@@ -2,18 +2,19 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+
 # Utilizzo dell'applicazione starter
-Crea delle applicazioni simulate nell'applicazione starter {{site.data.keyword.iotelectronics_full}}. Vedi in che modo un produttore aziendale può monitorare le applicazioni collegate a {{site.data.keyword.iot_short_notm}}. Interagisci manualmente con l'elettrodomestico simulato per attivare avvisi, notifiche e azioni.
+Crea elettrodomestici simulati nell'applicazione starter {{site.data.keyword.iotelectronics_full}}. Prova come un produttore aziendale può monitorare gli elettrodomestici collegati a {{site.data.keyword.iot_short_notm}}. Interagisci manualmente con l'elettrodomestico simulato per attivare avvisi, notifiche e azioni.
 {:shortdesc}
 
 
@@ -46,25 +47,3 @@ Nell'applicazione starter, puoi creare e controllare gli elettrodomestici simula
 3. Per visualizzare i dettagli della tua lavatrice fai clic su una lavatrice. Nel pannello di controllo e comando, avvia la lavatrice o fai clic su tipi diversi di errori per visualizzare le modifiche dello stato. Puoi anche visualizzare le modifiche dello stato e controllare la lavatrice dalla tua applicazione mobile.
 
   ![Dettagli stato lavatrice.](images/IoT4E_washer_control.svg "Dettagli stato lavatrice")
-
-
-# Link correlati
-{: #rellinks}
-
-## Documentazione API
-{: #api}
-* [{{site.data.keyword.iotelectronics}} API](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)
-* [{{site.data.keyword.iot_short}} API](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)
-
-
-## Componenti
-{: #general}
-
-* [{{site.data.keyword.iotelectronics}} documentation](iotelectronics_overview.html)
-* [{{site.data.keyword.iot_full}} documentation](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-*  [{{site.data.keyword.amashort}} documentation](https://console.ng.bluemix.net/docs/services/mobileaccess/overview.html)
-* [{{site.data.keyword.sdk4nodefull}} documentation](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
-
-## Esempi
-{: #samples}
-* [Applicazione mobile di esempio](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html)

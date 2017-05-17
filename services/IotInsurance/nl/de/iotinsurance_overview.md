@@ -77,23 +77,3 @@ Shields werden in der {{site.data.keyword.iotinsurance_short}}-Analyseengine aus
 Mit der Aktionsengine werden die Aktionen bestimmt, die auf Basis der in dem Shield angegebenen Informationen auszuführen sind.
 
 Mithilfe der {{site.data.keyword.iotinsurance_short}}-API können Sie neue Shields in JavaScript erstellen.
-
-
-
-# Zugehörige Links
-{: #rellinks}
-
-## Lernprogramme und Beispiele
-{: #samples}
-* [Code einer mobilen Beispiel-App unter GitHub ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## API-Referenz
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}}-API ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}}-API-Beispiele ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## Zugehörige Links
-{: #general}
-* [{{site.data.keyword.iot_full}}-Dokumentation](https://console.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
-* [Unterstützungsforum für Entwickler ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix]){:new_window}
-* [Stack Overflow-Unterstützungsforum ![Symbol für externen Link](../../icons/launch-glyph.svg)](http://stackoverflow.com/questions/tagged/ibm-bluemix){:new_window}
