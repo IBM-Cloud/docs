@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -50,5 +50,7 @@ iOS 또는 Android 모바일 디바이스를 사용하여 어플라이언스 소
 **{{site.data.keyword.iot_full}}**을 통해 앱은 연결된 어플라이언스, 센서 및 게이트웨이와 통신하고 여기서 수집한 데이터를 사용할 수 있습니다. 
 
 **{{site.data.keyword.sdk4nodefull}}**를 통해 서버 측 JavaScript&reg; 앱을 개발, 배치 및 확장할 수 있으며 사용자에게 향상된 성능, 보안 및 서비스 가능성을 제공합니다. 
+
+**{{site.data.keyword.appid_full}}**는 모바일 및 웹 앱에 인증을 추가하여 백엔드 시스템을 보호합니다. 
 
 **샘플 모바일 앱**을 통해 사용자는 스마트폰이나 태블릿과 같은 모바일 디바이스를 사용하여 시뮬레이션된 어플라이언스의 상태를 확인하고 통신할 수 있습니다. 모바일 앱을 가져오는 방법은 [모바일 앱 사용](iotelectronics_config_mobile.html)을 참조하십시오. 

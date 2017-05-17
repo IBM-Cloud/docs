@@ -79,23 +79,3 @@ Weather Company 应用程序会将 Weather Company 数据服务的相关天气�
 操作引擎根据保障中指定的信息确定要采取的操作。
 
 您可以使用 {{site.data.keyword.iotinsurance_short}} API 在 JavaScript 中创建新保障。
-
-
-
-# 相关链接
-{: #rellinks}
-
-## 教程和样本
-{: #samples}
-* [GitHub 上的样本移动应用程序代码 ![外部链接图标](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## API 参考
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API ![外部链接图标](../../icons/launch-glyph.svg)](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}}API 示例 ![外部链接图标](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## 相关链接
-{: #general}
-* [{{site.data.keyword.iot_full}}文档](https://console.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
-* [开发人员支持论坛 ![外部链接图标](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix]){:new_window}
-* [堆栈溢出支持论坛 ![外部链接图标](../../icons/launch-glyph.svg)](http://stackoverflow.com/questions/tagged/ibm-bluemix){:new_window}

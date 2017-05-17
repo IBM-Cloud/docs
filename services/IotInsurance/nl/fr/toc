@@ -1,7 +1,8 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="iot-insurance" audience="service"}
+
+{: .toc subcollection="iot-insurance" audience="service"  href="/docs/services/IotInsurance/index.html"}
 IoT for Insurance
 
   {: .navgroup id="learn"}
@@ -18,6 +19,9 @@ IoT for Insurance
         iotinsurance_extending_service.md
         [API IoT for Insurance](https://iot4i-api-docs.mybluemix.net/)
         [Exemples d'API IoT for Insurance](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples)
+
+    [bibliothèque de boucliers d'IoT for Insurance](https://github.com/ibm-watson-iot/ioti-shields)
+    [code de modèle d'application mobile d'IoT for Insurance](https://github.com/ibm-watson-iot/ioti-mobile)
   {: .navgroup-end}
 
   {: .navgroup id="howto"}
@@ -27,6 +31,7 @@ IoT for Insurance
     iotinsurance_optimizing_performance.md
     iotinsurance_upgrading.md
     iotinsurance_data_backup.md
+    iotinsurance_sms_voice_integration.md
   {: .navgroup-end}
 
   {: .navgroup id="help"}

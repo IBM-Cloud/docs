@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -30,7 +30,7 @@ Le module de démarrage {{site.data.keyword.iotelectronics}} se trouve dans la [
 Découvrez rapidement les fonctions de la solution {{site.data.keyword.iotelectronics}} à l'aide d'appareils et de données simulés.
 
 ### Connectez des appareils simulés
-Créez des appareils simulés et connectez-les à la plateforme pour visualiser des flux de données en continu actifs. Utilisez une application Web pour simuler la réception de commandes et l'exécution d'opérations par un appareil. Imitez des échecs pour générer des détections et des alertes. Comme exemple, des machines à laver sont utilisées en tant qu'appareils simulés dans le module de démarrage {{site.data.keyword.iotelectronics}}. Vous pouvez connecter comme appareil tout type de terminal électronique intelligent.
+Créez des appareils simulés et connectez-les à la plateforme pour visualiser des flux de données en continu actifs. Utilisez une application Web pour simuler la réception de commandes et l'exécution d'opérations par un appareil. Imitez des échecs pour générer des détections et des alertes. Comme exemple, des machines à laver sont utilisées en tant qu'appareils simulés dans le module de démarrage {{site.data.keyword.iotelectronics}}. Vous pouvez connecter comme appareil tout type de périphérique électronique intelligent.
 
 ### Essayez une application mobile de consommateur exemple
 Utilisez votre périphérique mobile iOS ou Android pour découvrir comment le propriétaire d'un appareil peut interagir avec ce dernier. Envoyez des commandes à l'appareil et recevez les mises à jour de l'appareil à l'aide de la plateforme et de {{site.data.keyword.Bluemix_notm}}. Imitez des échecs et affichez les résultats dans l'application mobile.
@@ -51,5 +51,7 @@ Le module de démarrage {{site.data.keyword.iotelectronics}} utilise le service 
 **{{site.data.keyword.iot_full}}** permet à vos applications de communiquer avec vos appareils, capteurs et passerelles connectés et d'utiliser les données que ces derniers collectent.
 
 **{{site.data.keyword.sdk4nodefull}}** vous permet de développer, déployer et mettre à l'échelle des applications JavaScript&reg; côté serveur et fournit des performances, une sécurité et une serviçabilité améliorées.
+
+**{{site.data.keyword.appid_full}}** ajoute l'authentification à vos applications mobiles et Web et protège vos systèmes de back end.
 
 Le **modèle d'application mobile** vous permet d'afficher le statut d'un appareil simulé et de communiquer avec cet appareil simulé à l'aide de votre périphérique mobile, par exemple votre smartphone ou votre tablette. Découvrez comment obtenir l'application mobile dans [Utilisation de l'application mobile](iotelectronics_config_mobile.html).

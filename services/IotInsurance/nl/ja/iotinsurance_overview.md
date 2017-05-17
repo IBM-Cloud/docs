@@ -78,23 +78,3 @@ Weather Company アプリケーションは、Weather Company データ・サー
 アクション・エンジンは、シールドで指定されている情報に基づいて、実行するアクションを決定します。
 
 {{site.data.keyword.iotinsurance_short}} API を使用すると、新規シールドを JavaScript で作成できます。
-
-
-
-# 関連リンク
-{: #rellinks}
-
-## チュートリアルとサンプル
-{: #samples}
-* [GitHub のサンプル・モバイル・アプリ・コード ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## API リファレンス
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API サンプル ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## 関連リンク
-{: #general}
-* [{{site.data.keyword.iot_full}} 資料](https://console.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
-* [開発者サポート・フォーラム ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix]){:new_window}
-* [Stack overflow サポート・フォーラム ![外部リンク・アイコン](../../icons/launch-glyph.svg)](http://stackoverflow.com/questions/tagged/ibm-bluemix){:new_window}

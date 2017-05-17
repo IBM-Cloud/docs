@@ -1,7 +1,8 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="iot-insurance" audience="service"}
+
+{: .toc subcollection="iot-insurance" audience="service"  href="/docs/services/IotInsurance/index.html"}
 IoT for Insurance
 
   {: .navgroup id="learn"}
@@ -16,8 +17,11 @@ IoT for Insurance
     {: .topicgroup}
     APIs
         iotinsurance_extending_service.md
-        [IoT para API de seguro](https://iot4i-api-docs.mybluemix.net/)
-        [IoT para exemplos de APIs de seguro](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples)
+        [API do IoT for Insurance](https://iot4i-api-docs.mybluemix.net/)
+        [Exemplos de API do IoT for Insurance](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples)
+
+    [Biblioteca de blindagens do IoT for Insurance](https://github.com/ibm-watson-iot/ioti-shields)
+    [C贸digo do aplicativo m贸vel de amostra IoT for Insurance](https://github.com/ibm-watson-iot/ioti-mobile)
   {: .navgroup-end}
 
   {: .navgroup id="howto"}
@@ -27,10 +31,11 @@ IoT for Insurance
     iotinsurance_optimizing_performance.md
     iotinsurance_upgrading.md
     iotinsurance_data_backup.md
+    iotinsurance_sms_voice_integration.md
   {: .navgroup-end}
 
   {: .navgroup id="help"}
     iotinsurance_troubleshooting.md
-    [Fum de suporte do desenvolvedor](https://www.ibm.com/developerworks/connect/iot/)
-    [Fum de suporte para estouro da capacidade](http://stackoverflow.com/questions/tagged/ibm-bluemix)
+    [F贸rum de suporte do desenvolvedor](https://www.ibm.com/developerworks/connect/iot/)
+    [F贸rum de suporte a estouro da capacidade](http://stackoverflow.com/questions/tagged/ibm-bluemix)
   {: .navgroup-end}

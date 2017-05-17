@@ -78,23 +78,3 @@ Weather Company 應用程式會將來自 Weather Company Data Service 的相關�
 「動作引擎」會根據防護中指定的資訊來判斷要採取的動作。
 
 您可以使用 {{site.data.keyword.iotinsurance_short}} API 在 JavaScript 中建立新防護。
-
-
-
-# 相關鏈結
-{: #rellinks}
-
-## 指導教學及範例
-{: #samples}
-* [GitHub 上的範例行動應用程式碼 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## API 參考資料
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API 範例 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## 相關鏈結
-{: #general}
-* [{{site.data.keyword.iot_full}} 文件](https://console.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
-* [開發人員支援討論區 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix]){:new_window}
-* [Stack Overflow 支援討論區 ![外部鏈結圖示](../../icons/launch-glyph.svg)](http://stackoverflow.com/questions/tagged/ibm-bluemix){:new_window}

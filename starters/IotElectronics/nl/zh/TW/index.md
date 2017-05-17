@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-12"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -22,7 +22,8 @@ lastupdated: "2017-03-15"
 若要開始使用 {{site.data.keyword.iotelectronics}}，請完成下列作業：
 
 1. 使用 {{site.data.keyword.iotelectronics}} 入門範本 Web 應用程式，以[建立模擬應用裝置](https://console.ng.bluemix.net/docs/starters/IotElectronics/iot4ecreatingappliances.html)。會使用洗衣機作為 {{site.data.keyword.iotelectronics}} 入門範本內的模擬應用裝置，來進行示範。您選擇連接的應用裝置可以是任何類型的智慧型電子裝置。
-2. [下載及連接](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html)範例行動應用程式。
+2. （選用性）[使用 {{site.data.keyword.appid_full}} 配置行動登入選項](https://console.ng.bluemix.net/docs/services/appid/index.html)。您可以自訂行動應用程式中呈現的登入畫面外觀。您也可以選擇性地啟用或停用社交登入認證的使用。根據預設值，{{site.data.keyword.appid_short_notm}} 會啟用 Facebook 和 Google+ 授權，行動應用程式使用者可以使用自己的社交認證，或者他們可以跳過登入處理程序，試用應用程式而不登入。
+3. [下載及連接](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html)範例行動應用程式。
 
 
 ## 下一步為何？

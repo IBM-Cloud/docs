@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-04"
+lastupdated: "2017-05-02"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -26,7 +26,7 @@ lastupdated: "2017-04-04"
 
 **必要條件：**開始之前，請確定已具有下列必要條件：
 - [{{site.data.keyword.iotinsurance_short}} 服務](https://console.ng.bluemix.net/catalog/services/iot-for-insurance/)實例必須存在於 {{site.data.keyword.Bluemix_notm}} 空間中。
-- 您的 {{site.data.keyword.Bluemix_notm}} 組織必須有至少 2 GB 的可用記憶體，才能啟用「部署」功能。
+- 您的 {{site.data.keyword.Bluemix_notm}} 組織必須有至少 2 GB 的可用記憶體，才能啟用「部署」功能。如果您是升級自舊版本，則應該有至少 2.5 GB。
 
 ## 部署必要服務及應用程式
 {: #deploying_services}
@@ -36,6 +36,8 @@ lastupdated: "2017-04-04"
   {{site.data.keyword.iotinsurance_short}} 部署它所需的所有服務及 Node.js 應用程式。它會將應用程式自動連結至服務。
 
   每一個服務實例都會使用預設服務方案。您稍後可以移至服務主控台，以升級任何服務方案。您也可以刪除新實例，並將現有實例手動連結至 {{site.data.keyword.iotinsurance_short}} 服務，以使用現有服務實例。如需應用程式的相關資訊，請參閱[關於 {{site.data.keyword.iotinsurance_short}}](iotinsurance_overview.html)。
+
+  **重要事項：**當您部署 {{site.data.keyword.iotinsurance_short}} 試用版時，請注意同時部署之其他服務及應用程式的免費版本，其功能有所限制。{{site.data.keyword.iot_short_notm}} 最多只能有 500 個裝置，而 {{site.data.keyword.cloudant_short_notm}} 只能有 1 GB 的資料，並且具有有限的讀寫執行緒作業功能。
 
   **附註**：{{site.data.keyword.iotinsurance_short}} 不再部署 {{site.data.keyword.amafull}} 或 {{site.data.keyword.mobilepushfull}}。較舊版的 {{site.data.keyword.iotinsurance_short}} 使用 {{site.data.keyword.amashort}} 服務來處理來自行動應用程式的回應。這個處理程序仍然適用於所有現有的 {{site.data.keyword.iotinsurance_short}} 實例。不過，您必須建立自訂鑑別處理程序，才能使用行動應用程式搭配新的
 {{site.data.keyword.iotinsurance_short}} 實例。您也可以選擇性地[建立 {{site.data.keyword.mobilepushshort}} 實例](https://console.ng.bluemix.net/docs/services/mobilepush/index.html)、配置它，然後將它連結至 {{site.data.keyword.iotinsurance_short}} API。
@@ -77,7 +79,8 @@ lastupdated: "2017-04-04"
 
 ## 建立及配置 {{site.data.keyword.mobilepushshort}}
 {: #config_push}
-若要啟用現有行動應用程式的推送通知，您可以選擇性地建立 {{site.data.keyword.mobilepushshort}} 服務的實例、將它連結至 {{site.data.keyword.iotinsurance_short}} API，並新增「公開金鑰密碼化標準 (PKCS) 12」檔案。如需行動應用程式的相關資訊，請參閱[安裝及連接範例行動應用程式](iotinsurance_mobile_app.html)。如需 {{site.data.keyword.mobilepushshort}} 的相關資訊，請參閱[開始使用推送通知](https://console.ng.bluemix.net/docs/services/mobilepush/index.html)。
+
+（選用）若要啟用現有行動應用程式的推送通知，您可以選擇性地建立 {{site.data.keyword.mobilepushshort}} 服務的實例、將它連結至 {{site.data.keyword.iotinsurance_short}} API，並新增「公開金鑰密碼化標準 (PKCS) 12」檔案。如需行動應用程式的相關資訊，請參閱[安裝及連接範例行動應用程式](iotinsurance_mobile_app.html)。如需 {{site.data.keyword.mobilepushshort}} 的相關資訊，請參閱[開始使用推送通知](https://console.ng.bluemix.net/docs/services/mobilepush/index.html)。
 
 若要在建立之後配置服務，請執行下列步驟：
 
@@ -85,6 +88,12 @@ lastupdated: "2017-04-04"
   2. 按一下**配置**。
   3. 在「Apple Push Notifications 憑證」區段中，上傳行動應用程式的 PKCS 12 檔案，然後輸入密碼。
 
+## 使用 Weather Company data
+{: #weather_company}
+
+（選用）{{site.data.keyword.iotinsurance_short}} 提供來自 Weather Company 的一組靜態資料，而您可以基於示範用途進行檢視。您也可以選擇性地存取來自 Weather Company 的現用資料，方法是建立 [{{site.data.keyword.weatherfull}} 服務](../Weather/index.html)的實例，並將它連結至 {{site.data.keyword.iotinsurance_short}} 天氣應用程式。
+
+**重要事項：**{{site.data.keyword.weather_short}} 服務的免費版本只能有 10,000 個要求。如果您需要更多要求，則可以升級至付費版本。
 
 下一步
 {: #whats_next}
@@ -92,24 +101,4 @@ lastupdated: "2017-04-04"
 
 - 使用「防護工具箱」中的指示及 API 來建立[使用者及防護關聯](iotinsurance_shield_toolkit.html)。
 <!-- - Install and connect the [sample mobile app](iotinsurance_mobile_app.html). -->
-- 下載或檢視 [GitHub 網站上的所有 API ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}。
-
-# 相關鏈結
-{: #rellinks}
-
-## 指導教學及範例
-{: #samples}
-* [{{site.data.keyword.iotinsurance_short}} 防護程式庫 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-shields){: new_window}
-* [GitHub 上的範例行動應用程式碼 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## API 參考資料
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API 範例 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-
-## 相關鏈結
-{: #general}
-* [{{site.data.keyword.iot_full}} 文件](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [開發人員支援討論區 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix]){:new_window}
-* [Stack Overflow 支援討論區 ![外部鏈結圖示](../../icons/launch-glyph.svg)](http://stackoverflow.com/questions/tagged/ibm-bluemix){:new_window}
+- 下載或檢視 [GitHub 網站上的所有 API 範例 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}。

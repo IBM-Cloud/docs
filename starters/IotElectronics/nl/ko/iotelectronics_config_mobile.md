@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-07"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -51,7 +51,7 @@ iOS 또는 Android 모바일 디바이스용 모바일 앱을 가져올 수 있�
 
   ![연결 QR 코드.](images/iot4e_mobile_connect_QR.svg "{{site.data.keyword.iotelectronics}} 연결 QR 코드")
 
-5. 모바일 디바이스에 로그인 신임 정보를 입력하십시오. 사용자 ID와 비밀번호는 길이 제한이 없습니다. 이후 세션을 위해 로그인 신임 정보를 기억하십시오. 이제 모바일 디바이스가 {{site.data.keyword.iotelectronics}} 환경에 등록되었으므로 개별 어플라이언스를 등록할 수 있습니다. 
+5. 모바일 디바이스에서 선택적으로 Facebook 또는 Google+ 신임 정보를 사용하여 로그인하십시오. 로그인 프로세스를 생략하고 로그인 없이 앱을 사용해 볼 수도 있습니다. 
 
 6. 사용자의 컴퓨터에서, 시뮬레이션된 세탁기까지 스크롤하고 세탁기 데이터 및 어플라이언스 QR 코드를 표시하려면 해당 세탁기를 클릭하십시오. 
 
