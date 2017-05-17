@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-26"
+lastupdated: "2017-5-16"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-4-26"
 # Using toolchains
 {: #toolchains-using}
 
-Open toolchains are available in the Public and Dedicated environments on {{site.data.keyword.Bluemix}}. You can use a toolchain to be productive in your daily development, deployment, and operations work. After you set up a toolchain, you can add, delete, or configure tool integrations and manage access to the toolchain. 
+Open toolchains are available in the Public and Dedicated environments on {{site.data.keyword.Bluemix}}. You can use a toolchain to be productive in your daily development, deployment, and operations work. After you set up a toolchain, you can add, delete, or configure tool integrations and manage access to the toolchain.
 {: shortdesc}
 
 ## Configuring a tool integration
@@ -33,7 +33,7 @@ If you deferred the configuration of a tool integration when you created a toolc
 
  **Tip**: A few of the tool integrations are preconfigured and don't require any configuration parameters. You can update the configuration settings for only the tool integrations that you configured.
 
- When you are finished updating the settings, click **Save Integration**.
+ When you are finished updating the settings, click **Save Integration**. For more information about configuring specific tool integrations, see [Configuring tool integrations](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
 
 ## Adding a tool integration
 {: #adding_a_tool_integration}
@@ -80,17 +80,17 @@ If you are using {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.ke
    a. From the menu bar, click **Manage > Account > Organizations**.
 
    b. Click **Invite Team Members**.
-   
+
    c. Select the org that you want to invite the user to and click **Next**.
-   
+
    d. Select the spaces that you want to allow the user to access.
-   
-   e. Select the role to assign for the selected spaces in the org. 
-   
-     **Note**: By default, org managers have full admin privileges for all of the toolchains that are associated with the org. To grant full admin privileges to the user, select the **Manager** role. The Billing Manager and Auditor roles do not affect toolchain access. You can change the roles later on the Team Directory page. For more information, see [Managing team members and roles](/docs/admin/users_roles.html){: new_window}.
-   
+
+   e. Select the role to assign for the selected spaces in the org.
+
+     **Note:** By default, org managers have full admin privileges for all of the toolchains that are associated with the org. To grant full admin privileges to the user, select the **Manager** role. The Billing Manager and Auditor roles do not affect toolchain access. You can change the roles later on the Team Directory page. For more information, see [Managing team members and roles](/docs/admin/users_roles.html){: new_window}.
+
    f. Select the option to confirm that you take financial responsibility for all charges that are incurred on the account.
-   
+
    g. Enter the email address of the user that you want to invite and click **Send**.
 
    h. After the user is a member of the org, return to the toolchain's Manage page and add the user to the toolchain.  
@@ -103,7 +103,7 @@ You can delete a toolchain and specify which of the associated tool integrations
 
 1. On the DevOps dashboard, on the **Toolchains** page, click the toolchain to delete. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain**.
 1. Click the **More Actions** menu, which is next to **View app**.
-1. Click **Delete** and review or adjust the tool integrations that you are deleting.
+1. Click **Delete**. Deleting a toolchain removes all of its tool integrations, which might delete resources that are managed by those integrations.
 1. Confirm the deletion by typing the name of the toolchain and clicking **Delete**.  
 
- **Tip**: When you delete a GitHub, {{site.data.keyword.ghe_short}}, or Git Repos and Issue Tracking tool integration, the associated repo is not deleted from GitHub, {{site.data.keyword.ghe_short}}, or Git Repos and Issue Tracking. You must manually remove the repo.
+ **Tip**: When you delete a GitHub, {{site.data.keyword.ghe_short}}, or {{site.data.keyword.gitrepos}} tool integration, the associated repo is not deleted from GitHub, {{site.data.keyword.ghe_short}}, or {{site.data.keyword.gitrepos}}. You must manually remove the repo.
