@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-22"
+lastupdated: "2017-04-13"
 
 ---
 
@@ -32,7 +32,7 @@ lastupdated: "2017-02-22"
 |レポートおよびログのレビュー | ユーザーのインスタンスのセキュリティー・レポートおよび監査ログを表示するには、**「管理」&gt;「レポートおよびログ」**をクリックします。『[レポートの表示](/docs/admin/index.html#oc_report)』を参照してください。 |
 |システム情報の表示 | 保留中の保守更新、インスタンスの名前とバージョン、地域、API URL、CLI URL、LDAP 構成の詳細、グループとユーザーのマッピング、統計、および共有ドメインなどのシステム情報を表示するには、**「管理」&gt;「システム情報」**をクリックします。『[システム情報の表示](/docs/admin/index.html#oc_system)』を参照してください。 |
 |通知の拡張および通知サブスクリプションのセットアップ | **「管理」&gt;「システム情報」&gt;「*数値* 件保留中 (*Number* pending)」**をクリックします。Web フックを使用して、選択した Web サービスと統合し、更新またはインシデントに関するイベント通知サブスクリプションをセットアップできます。『[通知および通知サブスクリプション](/docs/admin/index.html#oc_eventsubscription)』を参照してください。 |
-{: caption="Table 1. Administrative tasks for managing your {{site.data.keyword.Bluemix_notm}} local or dedicated instance" caption-side="top"}
+{: caption="表 1. Bluemix Local または Dedicated のインスタンスを管理するための管理用タスク" caption-side="top"}
 
 <!-- staging only for WoW start -->
 
@@ -59,7 +59,7 @@ lastupdated: "2017-02-22"
 | 重大なインシデント | 重大なインシデントに関するアラートは「状況」ページで受け取ります。**「サポート」** &gt; **「状況」**をクリックします。E メールを任意の受信者に送信する通知サブスクリプションをセットアップすることで、通知機能を拡張できます。あるいは、Web フックを使用して、「管理」ページの通知を任意の Web サービスと統合するサブスクリプションをセットアップできます。  |  
 | しきい値イベント | ご使用の環境で組織割り当て量、物理ディスク、物理メモリー、予約済みディスク、または予約済みメモリーのしきい値に達したときに、選択した受信者に E メールを送信する通知サブスクリプションをセットアップできます。あるいは、Web フックを使用して、通知を任意の Web サービスと統合するサブスクリプションをセットアップできます。  |  
 | {{site.data.keyword.Bluemix_notm}} 状況 | いつでも、「状況」ページでプラットフォーム、サービス、および {{site.data.keyword.Bluemix_notm}} インスタンスの最新状況を表示できます。**「サポート」** &gt; **「状況」**をクリックします。  |
-{: caption="Table 2. Event types and notifications methods" caption-side="top"}
+{: caption="表 2. イベント・タイプと通知方法" caption-side="top"}
 
 ### 通知サブスクリプションのセットアップ
 {: #seteventsub}
@@ -100,7 +100,7 @@ lastupdated: "2017-02-22"
 | 本文 | E メールで送信するメッセージ本文のテキストを入力します。IBM ペイロード値を使用して、E メール通知に関連情報を取り込むことができます。使用できる値を識別するには、表『[保守およびインシデントのペイロード・セクションの値 ](index.html#payload)』を参照してください。基本 HTML タグを使用して、E メールを構造化します。これは必須フィールドです。 |
 | 宛先 | メール通知の受信者の E メール・アドレス (複数の場合はコンマ区切りリストを使用する) を入力します。E メールを他のユーザーに複製送信するには、「cc」オプションまたは「bcc」オプションを展開します。これは必須フィールドです。 |
 | 説明 | 作成するサブスクリプションの固有の説明を追加します。 |
-{: caption="Table 3. Fields for email notification subscriptions about thresholds" caption-side="top"}
+{: caption="表 3. しきい値に関する E メール通知サブスクリプション用のフィールド" caption-side="top"}
 
 
 {: #emailnottrhesh}
@@ -118,7 +118,7 @@ lastupdated: "2017-02-22"
 | サブジェクト | E メールの件名を入力します。これは必須フィールドです。  |
 | メッセージ本文 | E メールで送信するメッセージ本文のテキストを入力します。IBM ペイロード値を使用して、E メール通知に関連情報を取り込むことができます。使用できる値を識別するには、表『[しきい値のペイロード・セクションの値](index.html#threshpayload)』を参照してください。基本 HTML タグを使用して、E メールを構造化します。これは必須フィールドです。 |
 | 宛先 | メール通知の受信者の E メール・アドレス (複数の場合はコンマ区切りリストを使用する) を入力します。E メールを他のユーザーに複製送信するには、「cc」オプションまたは「bcc」オプションを展開します。これは必須フィールドです。 |
-{: caption="Table 4. Fields for email notification subscriptions about maintenance updates or incidents" caption-side="top"}
+{: caption="表 4. 保守更新またはインシデントに関する E メール通知サブスクリプション用のフィールド" caption-side="top"}
 
 しきい値データは 6 時間おきに収集されます。  通知は、値が設定したしきい値をまたがったときに一度だけ送信されます。昇を選択した場合、値がしきい値を下回り、その後またしきい値を上回らない限り、新しい通知は送信されません。同様に、降を選択した場合、通知を受けるのは、値が設定したしきい値を上回り、その後またしきい値を下回った場合のみです。 
 
@@ -148,7 +148,7 @@ lastupdated: "2017-02-22"
 | URL | Web サービスに接続するための URL を入力します。 |
 | ペイロード | POST または PUT 方式を選択した場合は、使用する Web サービスに固有のプロパティーを、IBM 通知に使用されるペイロード値とペアにして入力します。使用できる値を識別するには、表『[保守およびインシデントのペイロード・セクションの値 ](index.html#payload)』を参照してください。このセクションに情報を入力しないと、追加情報が何もない通知を受け取ります。 |
 | 通知の結合 | すべての地域のインシデント通知を 1 つの通知に結合するオプションを選択します。このオプションは、インシデントだけに使用可能です。 |
-{: caption="Table 5. Form fields for a webhook notification subscription about maintenance or incidents" caption-side="top"}
+{: caption="表 5. 保守またはインシデントに関する Web フック通知サブスクリプション用のフォーム・フィールド" caption-side="top"}
 
 
 {: #webhooknotthresh}
@@ -168,7 +168,7 @@ lastupdated: "2017-02-22"
 | パスワード | 基本許可を選択した場合、Web サービスのパスワードを入力します。 |
 |  方法  | **「GET」**、**「POST」**、または**「PUT」**を選択します。 |
 | URL | Web サービスに接続するための URL を入力します。 |
-{: caption="Table 6. Form fields for a webhook notification subscription about thresholds" caption-side="top"}
+{: caption="表 6. しきい値に関する Web フック通知サブスクリプション用のフォーム・フィールド" caption-side="top"}
 
 しきい値データは 6 時間おきに収集されます。  通知は、値が設定したしきい値をまたがったときに一度だけ送信されます。昇を選択した場合、値がしきい値を下回り、その後またしきい値を上回らない限り、新しい通知は送信されません。同様に、降を選択した場合、再び通知を受けるのは、値が設定したしきい値を上回り、その後またしきい値を下回った場合のみです。 
 
@@ -191,7 +191,7 @@ lastupdated: "2017-02-22"
 | {{region}} | 影響を受ける地域 | 保守更新およびインシデント |
 | {{status}} | 更新の状況 | 保守更新 |
 | {{type}} | 更新またはインシデント | 保守更新およびインシデント |
-{: caption="Table 7. Maintenance and incident payload section values" caption-side="top"}
+{: caption="表 7. 保守およびインシデントのペイロード・セクションの値" caption-side="top"}
 
 
 {: #threshpayload}
@@ -203,7 +203,7 @@ lastupdated: "2017-02-22"
 | {{content.physical_memory}} | 物理メモリーメモリーしきい値 | しきい値 |  
 | {{content.reserved_disk}} | 予約済みディスクしきい値 | しきい値 |
 | {{content.reserved_memory}} | 予約済みメモリーしきい値 | しきい値 |
-{: caption="Table 8. Threshold payload section values" caption-side="top"}
+{: caption="表 8. しきい値のペイロード・セクションの値" caption-side="top"}
 
 通知サブスクリプションを保存すると、セットアップした方式を使用して通知を受け取ります。通知は、従来どおり次の場所に表示されます。  
  * インシデントについては、「状況」ページに
@@ -329,7 +329,7 @@ Superuser 許可 (`ops.admin`) を持っている場合、**「管理」&gt;「�
 
 - リソース情報 (ディスク・スペース、CPU 使用量、ネットワーク使用量、および平均応答時間を含む)。『[リソース使用量](index.html#resourceusage)』を参照してください。
 - 組織ごとのアカウント使用 (ランタイム・アプリ数と使用量、ランタイム GB 時間の合計数、およびサービス・インスタンス数と使用量を含む)。『[アカウント使用量](index.html#accountusage)』を参照してください。
-- 組織のメモリー割り当て量の使用量、合計使用済みメモリー割り当て量に基づいて割り振られたアプリ・メモリー、および特定の組織のアプリごとの GB 時間使用量の表示。また、「組織管理」ページの**「割り当て量のモニター」**セクションに、すべての組織の割り当て量の使用状況を表示することもできます。『[組織管理](../admin/index.html#orgusage)』を参照してください。
+- 組織のメモリー割り当て量の使用状況、合計使用済みメモリー割り当て量に基づいて割り振られたアプリ・メモリー、および特定の組織のアプリごとの GB 時間使用量の表示。また、「組織管理」ページの**「割り当て量のモニター」**セクションに、すべての組織の割り当て量の使用状況を表示することもできます。『[組織管理](../admin/index.html#orgusage)』を参照してください。
 
 
 ### リソース使用量
@@ -463,7 +463,7 @@ DEA 別のメモリー、ディスク、CPU の使用量を表示するには、
 | アンチウィルス | アンチウィルス・スキャン・レポート | 配置されているアンチウィルス・ソフトウェア。 |
 | ソフトウェア・フィックス管理 | パッチ適用レポート | 適用されたソフトウェア・フィックス。 |
 | セキュリティー・インシデント管理 | セキュリティー・インシデント修復レポート | セキュリティー・インシデント管理のセキュリティー・インシデントのエビデンス。 |
-{: caption="Table 9. Security report list" caption-side="top"}
+{: caption="表 9. セキュリティー・レポートのリスト" caption-side="top"}
 
 ## 状況の表示
 {: #oc_status}
@@ -627,7 +627,7 @@ JSON ファイルを埋めるのに役立つ表を以下に示します。
 |id  | サービスの ID。この ID は、{{site.data.keyword.Bluemix_notm}} 内で固有でなければならず、GUID (Globally Unique Identifier) である必要があります。サービスを {{site.data.keyword.Bluemix_notm}} に登録した後でサービスの ID を変更することはできません。 |
 |metadata | {{site.data.keyword.Bluemix_notm}} カタログおよび価格設定シートに表示される、サービス・プランのメタデータ。metadata フィールドはオプションです。メタデータに関する追加フィールドを指定できます。詳しくは、『[メタデータのフィールド](index.html#metadatafields)』表を参照してください。 |
 |plans | 一連のサービス・プラン定義。詳しくは、『[プランのフィールド](index.html#planfields)』表を参照してください。 |
-{: caption="Table 10. JSON fields" caption-side="top"}
+{: caption="表 10. JSON フィールド" caption-side="top"}
 
 
 {: #metadatafields}
@@ -656,7 +656,7 @@ JSON ファイルを埋めるのに役立つ表を以下に示します。
 |sdkDownloadUrl (オプション) | 「SDK のダウンロード」ボタンをクリックすると開く Web ページの URL。「SDK のダウンロード」ボタンは、「ダッシュボード」内のアプリケーション概要ページのサービス・タイルに配置されています。この Web ページは、新規ブラウザー・タブで開きます。 |
 |serviceMonitorApi    | サービスの正常性をレポートする JSON データ (下の例を参照) を返す API への URL。サービスの metadata 中に serviceMonitorApi または serviceMonitorApp がある必要があります。次のコード例を参照してください。 |
 |serviceMonitorApp    | {{site.data.keyword.Bluemix_notm}} にデプロイでき、サービスにバインドしてサービス状況固有の出力を提供することのできるアプリケーションへの URL。このアプリケーションは、serviceMonitorApi と同じ JSON データ・フォーマットを返さなければなりません。サービスの metadata 中に serviceMonitorApi または serviceMonitorApp がある必要があります。次のコード例を参照してください。 |
-{: caption="Table 11. Metadata fields" caption-side="top"}
+{: caption="表 11. メタデータ・フィールド" caption-side="top"}
 
 
 ```
@@ -697,7 +697,7 @@ JSON ファイルを埋めるのに役立つ表を以下に示します。
 |free      | サービス・プランが無料かどうかを示すブール値。デフォルト値は true です。 |
 |id       | サービス・プランの ID。この ID は固有でなければならず、GUID でなければなりません。  |
 |metadata (オプション)    | {{site.data.keyword.Bluemix_notm}} カタログおよび価格設定シートに表示される、サービス・プランのメタデータ。metadata フィールドはオプションです。metadata フィールドの内部には、displayName、type (subscription、reservable、planDetails)、bullets、costs (unitId、unit、partNumber)、および paidOnly の各フィールドを指定できます。詳しくは、次の『[プランのメタデータのフィールド](index.html#planmetadata)』表を参照してください。 |
-{: caption="Table 12. Plan fields" caption-side="top"}
+{: caption="表 12. プランのフィールド" caption-side="top"}
 
 
 {: #planmetadata}
@@ -709,7 +709,7 @@ JSON ファイルを埋めるのに役立つ表を以下に示します。
 |bullets                 | このプランで使用できるリソースの説明。この説明は、カタログのサービス詳細ページおよび価格設定シートの**「フィーチャー」**列に表示されます。 |
 |costs                   | カタログのサービス詳細ページおよび価格設定シートの「価格」列に表示される、サービスのコスト情報。一連の項目のそれぞれには次のフィールドが含まれます: unitId (ユニットの ID。複数形を使用し、すべての文字を大文字にしてください。無料プランの場合、このフィールドはオプションです)、unit (サービスの課金計算に使用されるメトリック。このフィールドの値は、課金メトリックを表すために {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースで使用されます)、および partNumber (請求システムで使用される `part_number` ID。無料プランの場合、このフィールドはオプションです).   |
 |paidOnly (オプション)     | このサービス・プランが {{site.data.keyword.Bluemix_notm}} 有料アカウントにのみ使用可能であるかどうかを示すブール値。値 **true** は、このサービス・プランが有料アカウントのみを対象にしていて、トライアル・アカウントに追加できないことを意味します。値 **false** は、このサービス・プランを有料アカウントとトライアル・アカウントの両方に追加できることを意味します。デフォルト値は **false** です。	  |
-{: caption="Table 13. Plan metadata fields" caption-side="top"}
+{: caption="表 13. プランのメタデータ・フィールド" caption-side="top"}
 
 次の例は、GET /v2/catalog の JSON 応答が {{site.data.keyword.Bluemix_notm}} カタログのサービス詳細ページにどのようにマップされるのかを示します。具体的には、上の表で説明されているプランのメタデータの各フィールドがユーザー・インターフェースにどのようにマップされるのかを示しています。
 
@@ -836,7 +836,7 @@ JSON ファイルを埋めるのに役立つ表を以下に示します。
 <dd>組織のすべてのスペースで割り振ることのできるパブリック IP アドレスの最大数。</dd>
 </dl>
 <strong>注:</strong> 環境にまだコンテナーがない場合、または、環境内のコンテナーをまだセットアップしていない場合は、エラー・メッセージが出されます。
-<p>コンテナーについて詳しくは、『[IBM コンテナーについて](/docs/containers/container_ov.html)』を参照してください。コンテナー割り当て量について詳しくは、『[割り当て量および Bluemix アカウント](/docs/containers/container_planning_org_ov.html#container_planning_quota)』を参照してください。</p>
+<p>コンテナーについて詳しくは、『[IBM コンテナーについて](/docs/containers/container_ov.html)』を参照してください。コンテナー割り当て量について詳しくは、『[割り当て量および Bluemix アカウント](/docs/containers/container_planning.html#container_planning_quota)』を参照してください。</p>
 <strong>注:</strong> {{site.data.keyword.Bluemix_notm}} シドニー地域ではコンテナーを使用できません。</li>
 </ul>
 <li>「組織の管理」ページで行った変更を保存するには、<strong>「保存」</strong>をクリックします。</li>
@@ -952,7 +952,7 @@ JSON ファイルを埋めるのに役立つ表を以下に示します。
 | Catalog | **Catalog** 許可を持つユーザーには、ローカル・インスタンスまたは専用インスタンスで利用できるサービスを **Read** または **Write** (modify) するアクセス権限を割り当てることができます。読み取りアクセスでは、ユーザーは「カタログ管理」タイルにアクセスして、利用可能なサービスを表示することができます。書き込みアクセスでは、ユーザーは[「カタログ管理」](#oc_catalog)タイルにアクセスして、サービスの表示、サービスの表示可能性の編集、カスタム・サービスの登録、およびビルドパック優先順位リストの制御を行うことができます。 |  
 | Reports | **Reports** 許可を持つユーザーには、セキュリティー・レポートを **Read** または **Write** (modify) するアクセス権限を割り当てることができます。「読み取り」のアクセス権限により、ユーザーは「レポートおよびログ」タイルにアクセスして、レポートをダウンロードできます。書き込みアクセスでは、ユーザーは[「レポートおよびログ」](#oc_report)タイルを表示できる他に、CLI を使用して、新規レポートのアップロードおよびユーザーがアクセスする新規カテゴリーの作成も行えます。 |
 | Users | **Users** 許可を持つユーザーには、ユーザーのリストを **Read** (表示) する権限、およびユーザーを **Write** (追加または削除) する権限を割り当てることができます。この許可では、他のユーザーの許可を設定することはできません。書き込みアクセスでは、ユーザーは環境への新規ユーザーの追加、環境からのユーザーの削除、および環境内にすでに存在する組織への既存のユーザーの追加を行うことができます。さらに、**Write** アクセスでは、ユーザーは新規組織の追加、組織の削除、および組織内のユーザーの編集を行うことができます。 |
-{: caption="Table 14. Permissions" caption-side="top"}
+{: caption="表 14. 許可" caption-side="top"}
 
 ## REST API の使用 
 {: #auth_adminapi}
@@ -1828,7 +1828,7 @@ POST /codi/v1/serviceBrokers
 | auth_password | サービス・ブローカーとの接続に使用されるパスワード。 |
 | broker_url | サービス・ブローカーとの接続に使用される URL。 |
 | owningOrganization | サービスをホワイトリスト登録する初期組織。 |
-{: caption="Table 15. Fields" caption-side="top"}
+{: caption="表 15. フィールド" caption-side="top"}
 
 #### 本文
 {: #registerbody}
@@ -1903,7 +1903,7 @@ Content-Type: application/json
 | auth_password | サービス・ブローカーとの接続に使用されるパスワード。 |
 | broker_url | サービス・ブローカーとの接続に使用される URL。 |
 | owningOrganization | サービスをホワイトリスト登録する初期組織。 |
-{: caption="Table 16. Requests" caption-side="top"}
+{: caption="表 16. 要求" caption-side="top"}
 
 #### 本文
 {: #updatebody}
@@ -1965,7 +1965,7 @@ Content-Type: application/json
 | **名前** | **説明** |
 |-----------------|-------------------|
 | name | サービス・ブローカーの名前。 この名前は、サービスを作成するために使用した名前から変更できません。 |
-{: caption="Table 17. Parameter" caption-side="top"}
+{: caption="表 17. パラメーター" caption-side="top"}
 
 ### 経路
 
@@ -1998,16 +1998,16 @@ Content-Type: application/json
 ```
 {: screen}
 
-## CF CLI を使用したユーザーの管理
+### CF CLI を使用したユーザーの管理
 {: #usingadmincli}
 
-Cloud Foundry コマンド・ライン・インターフェースと {{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインを使用することで、{{site.data.keyword.Bluemix_notm}} 環境のユーザーを管理できます。例えば、LDAP レジストリーからユーザーを追加できます。
+Cloud Foundry コマンド・ライン・インターフェースと {{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインを使用することで、{{site.data.keyword.Bluemix_notm}} 環境のユーザーを管理できます。Cloud Foundry CLI 用のこのプラグインをダウンロードする必要があります。
 
 最初に、CF コマンド・ライン・インターフェースをインストールします。{{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインを使用する場合、CF バージョン 6.11.2 以降が必要です。[Cloud Foundry コマンド・ライン・インターフェースのダウンロード ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window} を実行します。
 
 **制限:** Cloud Foundry コマンド・ライン・インターフェースは、Cygwin ではサポートされていません。Cloud Foundry コマンド・ライン・インターフェースは Cygwin コマンド・ライン・ウィンドウ以外のコマンド・ライン・ウィンドウで使用してください。
 
-### {{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインの追加
+#### {{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインの追加
 
 CF コマンド・ライン・インターフェースをインストール後、{{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインを追加できます。
 
@@ -2035,11 +2035,17 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 </li>
 </ol>
 
-コマンドのリストを表示するには、次のコマンドを実行します。
-
+インストールしたプラグインから使用可能なサブコマンドのリストを表示するには、次のコマンドを実行します。
 
 ```
 cf plugins
+```
+{: codeblock}
+
+{{site.data.keyword.Bluemix_notm}} 管理プラグインに使用可能なコマンド・グループのリストを表示するには、次のコマンドを実行します。
+
+```
+cf ba
 ```
 {: codeblock}
 

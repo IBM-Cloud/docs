@@ -62,7 +62,7 @@ lastupdated: "2017-02-22"
 || 1 人以上のチーム・メンバーを含みます。各ユーザーは、所有している組織で既にチーム・メンバーでなければなりません。各チーム・メンバーに、1 つ以上の役割を付与できます。 |
 | チーム・メンバー   | 異なるアカウントをまたがって 1 つ以上の組織およびスペースに追加可能です。 |
 || 同じ組織またはスペース、あるいはその両方の中で複数の役割を付与されることが可能です。 | 
-{:caption="Table 1. Description of key elements" caption-side="top"}
+{:caption="表 1. 主な要素の説明" caption-side="top"}
 
 ## {{site.data.keyword.Bluemix_notm}} 環境の決定
 {: #bpimplementation}

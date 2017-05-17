@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-03-03"
+lastupdated: "2017-04-24"
 
 ---
 
@@ -38,12 +38,11 @@ and roles)](/docs/admin/users_roles.html#userrolesinfo)』を参照してくだ�
 経路にはサブドメインとドメインがあります。サブドメインは通常アプリケーション名です。
 ドメインは、システム・ドメイン、またはアプリケーション用に登録した
 カスタム・ドメインの場合があります。『[カスタム・ドメインの管理](/docs/admin/orgs_spaces.html#managedomains)』を参照してください。<br/>
-<p>**注**: カスタム・ドメインを追加する場合、そのカスタム・ドメインが {{site.data.keyword.Bluemix_notm}} システム・ドメインを指すように解決されるよう、DNS サーバーを構成する必要があります。この方法では、{{site.data.keyword.Bluemix_notm}}
+<p>**注:** カスタム・ドメインを追加する場合、そのカスタム・ドメインが {{site.data.keyword.Bluemix_notm}} システム・ドメインを指すように解決されるよう、DNS サーバーを構成する必要があります。 この方法では、{{site.data.keyword.Bluemix_notm}}
 はカスタム・ドメインの要求を受け取ると、ご使用のアプリケーションに適切に経路指定することができます。
 </p></dd>
 <dt>割り当て量</dt>
-<dd>組織による使用に割り振ることが可能なサービス数およびメモリー容量を含む、組織のリソース限度を示します。割り当て量は、組織の作成時に割り当てられます。組織のスペースにおけるアプリケーションまたはサービスはすべて、
-割り当て量の使用に寄与します。従量課金 (PAYG) プランまたはサブスクリプション・プランの場合、組織変更による必要に応じて、Cloud Foundry のアプリケーションおよびコンテナーの割り当て量を調整できます。『[割り当て量の管理](/docs/admin/orgs_spaces.html#managequota)』を参照してください。</dd>
+<dd>組織による使用に割り振ることが可能なサービス数およびメモリー容量を含む、組織で使用可能なリソースを示します。割り当て量は、組織の作成時に割り当てられます。組織内のスペースにおけるアプリケーションまたはサービスはすべて、割り当て量の使用に算入されます。従量課金 (PAYG) プランまたはサブスクリプション・プランの場合、組織変更による必要に応じて、Cloud Foundry のアプリケーションおよびコンテナーの割り当て量を調整できます。『[割り当て量の管理](/docs/admin/orgs_spaces.html#managequota)』を参照してください。<p>**注:** サブスクリプション・アカウントでは、割り当て量は、消費量の通知をトリガーするユーザー定義の制限です。</p></dd>
 </dl>
 
 {{site.data.keyword.Bluemix_notm}} では、組織を使用してチーム・メンバー間のコラボレーションを可能にし、以下の方法でプロジェクト・リソースの論理的なグループ化を容易にすることができます。
@@ -57,7 +56,8 @@ and roles)](/docs/admin/users_roles.html#userrolesinfo)』を参照してくだ�
 組織名は {{site.data.keyword.Bluemix_notm}} で固有にする必要があります。
 組織名が別の {{site.data.keyword.Bluemix_notm}} Public、Dedicated、または Local のユーザーによって既に使用されている場合は、新規名を指定する必要があります。組織を作成したユーザーには、自動的に*組織管理者*許可が割り当てられ、組織名の編集、チーム・メンバーの追加、および組織内のスペースの作成または削除が可能になります。
 
-組織を削除するには、[{{site.data.keyword.Bluemix_notm}} サポート ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} に連絡する必要があります。サポート・チームに組織の削除を要求すると、組織内のすべてのスペース、アプリケーション、およびサービスが削除されます。
+[`bx iam org-delete`](/docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_iam_org_delete) コマンドを使用して、組織を削除できます。組織を削除すると、組織内のすべてのスペース、アプリケーション、およびサービスが削除されます。
+  
 
 以下の[ユーザー役割](/docs/admin/users_roles.html#userrolesinfo)を組織内のチーム・メンバーに割り当てることができます。
 
@@ -117,7 +117,8 @@ and roles)](/docs/admin/users_roles.html#userrolesinfo)』を参照してくだ�
 ## 既存の組織またはスペースの削除
 {: #deleteorgs}
 
-アカウント所有者は、[{{site.data.keyword.Bluemix_notm}} サポート ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} に連絡して組織を削除できます。
+アカウント所有者は、{{site.data.keyword.Bluemix_notm}} CLI を使用して組織を削除できます。組織を削除するには、[`bx iam org-delete`](/docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_iam_org_delete) コマンドを使用します。組織を削除すると、組織内のすべてのスペース、アプリケーション、およびサービスが削除されます。
+ 
 
 **注**: 削除操作は元に戻せません。組織を削除すると、その組織に関連付けられたすべてのアプリケーションとサービスが失われます。
 
@@ -170,7 +171,7 @@ and roles)](/docs/admin/users_roles.html#userrolesinfo)』を参照してくだ�
 
 **注:** {{site.data.keyword.Bluemix_notm}} シドニー地域ではコンテナーを使用できません。 
 
-コンテナーについて詳しくは、コンテナーの資料の[割り当て量](/docs/containers/container_planning_org_ov.html#container_planning_quota)を参照してください。
+コンテナーについて詳しくは、コンテナーの資料の[割り当て量](/docs/containers/container_planning.html#container_planning_quota)を参照してください。
 組織に割り振られている割り当て量を変更するには、サポート・チケットをオープンする必要があります。サポート・チケットのオープンについて詳しくは、[お客様サポートの利用](/docs/support/index.html#contacting-support)を参照してください。 
 
 ## ドメインの管理
