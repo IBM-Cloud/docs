@@ -571,6 +571,7 @@ wsk action invoke --blocking --result helloPython --param name World
   {
       "greeting": "Hello World!"
   }
+```
 
 ### zip ファイルでの Python アクションのパッケージ化
 {: #openwhisk_actions_python_zip}
@@ -806,7 +807,7 @@ wsk action invoke --blocking --result helloJava --param name World
   ```
   wsk sdk install docker
   ```
-  ```
+
   {: pre}
   ```
   Docker スケルトンが現在のディレクトリーにインストールされました。
