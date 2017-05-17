@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -67,6 +67,8 @@ conectados.
 
 **{{site.data.keyword.sdk4nodefull}}** permite desenvolver, implementar e ajustar a escala de aplicativos
 JavaScript&reg; do lado do servidor e fornece desempenho, segurança e capacidade de manutenção aprimorados.
+
+O **{{site.data.keyword.appid_full}}** inclui a autenticação para o seu dispositivo móvel e apps da web e protege os seus sistemas de backend.
 
 O **App móvel de amostra** permite visualizar o status e se comunicar com um dispositivo simulado usando seu dispositivo móvel, como um telefone inteligente ou tablet. Descubra como conseguir o aplicativo móvel em
 [Usando o aplicativo móvel](iotelectronics_config_mobile.html).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-07"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -51,7 +51,7 @@ lastupdated: "2017-03-15"
 
   ![连接 QR 代码。](images/iot4e_mobile_connect_QR.svg "{{site.data.keyword.iotelectronics}} 连接 QR 代码")
 
-5. 在移动设备上，输入登录凭证。用户标识和密码可为任意长度。请记住您的登录凭证，以供未来会话使用。现在您的移动设备已注册到 {{site.data.keyword.iotelectronics}} 环境，您可随时注册单个设备。
+5. 在移动设备上，您可以选择使用 Facebook 还是 Google+ 凭证进行登录。可以跳过登录过程，不登录即可试用应用程序。
 
 6. 在您的计算机上，滚动到模拟洗衣机，然后单击它，以显示其数据和设备 QR 码。
 

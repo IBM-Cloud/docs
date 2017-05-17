@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-07"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -51,7 +51,7 @@ Para conectar la app para móvil a su entorno y registrar sus dispositivos, real
 
   ![Código QR de conexión.](images/iot4e_mobile_connect_QR.svg "Código QR de conexión {{site.data.keyword.iotelectronics}}")
 
-5. En el dispositivo móvil, escriba sus credenciales de inicio de sesión. El ID de usuario y la contraseña pueden tener cualquier longitud. Recuerde las credenciales de inicio de sesión para sesiones futuras. Ahora su dispositivo móvil está registrado en el entorno de {{site.data.keyword.iotelectronics}} y puede registrar dispositivos individuales.
+5. En su dispositivo móvil, opcionalmente inicie la sesión utilizando sus credenciales de Facebook o Google+. También puede omitir el proceso de inicio de sesión y probar la app sin iniciar la sesión.
 
 6. En el sistema, desplácese hasta una lavadora simulada y púlsela para visualizar sus datos y el código QR de dispositivo.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -50,5 +50,7 @@ lastupdated: "2017-03-15"
 **{{site.data.keyword.iot_full}}** 可讓您的應用程式與已連接的應用裝置、感應器及閘道通訊，並且使用它們所收集的資料。
 
 **{{site.data.keyword.sdk4nodefull}}** 讓您能開發、部署及調整伺服器端的 JavaScript&reg; 應用程式，並提供加強的效能、安全及服務功能。
+
+**{{site.data.keyword.appid_full}}** 為您的行動及 Web 應用程式新增鑑別，並且保護您的後端系統。
 
 **範例行動應用程式**可讓您使用行動裝置（例如智慧型手機或平板電腦）來檢視模擬應用裝置的狀態並與其通訊。請參閱[使用行動應用程式](iotelectronics_config_mobile.html)，以瞭解如何取得行動應用程式。

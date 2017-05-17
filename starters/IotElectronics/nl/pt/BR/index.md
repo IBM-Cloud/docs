@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-12"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -23,9 +23,9 @@ controlar esses dispositivos a partir do seu dispositivo móvel.
 
 Para a introdução ao {{site.data.keyword.iotelectronics}}, conclua as tarefas a seguir:
 
-1. [Crie dispositivos simulados](https://console.ng.bluemix.net/docs/starters/IotElectronics/iot4ecreatingappliances.html) usando o aplicativo da web iniciador do {{site.data.keyword.iotelectronics}}. Para fins de demonstração, as arruelas são usadas como o dispositivo simulado dentro do iniciador do {{site.data.keyword.iotelectronics}}. O dispositivo
-que você optar por conectar poderia ser qualquer tipo de dispositivo eletrônico inteligente.
-2. [Faça download e conecte](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html) o app móvel de amostra.
+1. [Crie dispositivos simulados](https://console.ng.bluemix.net/docs/starters/IotElectronics/iot4ecreatingappliances.html) usando o aplicativo da web iniciador do {{site.data.keyword.iotelectronics}}. Para fins de demonstração, as arruelas são usadas como o dispositivo simulado dentro do iniciador do {{site.data.keyword.iotelectronics}}. O aplicativo que você escolhe para se conectar pode ser qualquer tipo de dispositivo eletrônico inteligente.
+2. (Opcional) [Configure as opções de login do dispositivo móvel com {{site.data.keyword.appid_full}}](https://console.ng.bluemix.net/docs/services/appid/index.html). É possível customizar a aparência da tela de login apresentada no app móvel. Também é possível ativar ou desativar o uso das credenciais de login social de forma opcional. Por padrão, o {{site.data.keyword.appid_short_notm}} ativa autorizações pelo Facebook e pelo Google+, e os usuários do app móvel podem usar suas próprias credenciais sociais ou podem ignorar o processo de login e testar o app sem fazer login.
+3. [Faça download e conecte](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html) o app móvel de amostra.
 
 
 ## O que vem a seguir

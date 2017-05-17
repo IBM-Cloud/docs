@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-12"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -21,8 +21,9 @@ lastupdated: "2017-03-15"
 
 Pour vous initier à {{site.data.keyword.iotelectronics}}, effectuez les tâches suivantes :
 
-1. [Créez des appareils simulés](https://console.ng.bluemix.net/docs/starters/IotElectronics/iot4ecreatingappliances.html) à l'aide de l'application Web de démarrage {{site.data.keyword.iotelectronics}}. Comme exemple, des machines à laver sont utilisées en tant qu'appareils simulés dans le module de démarrage {{site.data.keyword.iotelectronics}}. Vous pouvez connecter comme appareil tout type de terminal électronique intelligent.
-2. [Téléchargez et connectez](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html) le modèle d'application mobile.
+1. [Créez des appareils simulés](https://console.ng.bluemix.net/docs/starters/IotElectronics/iot4ecreatingappliances.html) à l'aide de l'application Web de démarrage {{site.data.keyword.iotelectronics}}. Comme exemple, des machines à laver sont utilisées en tant qu'appareils simulés dans le module de démarrage {{site.data.keyword.iotelectronics}}. Vous pouvez connecter comme appareil tout type de périphérique électronique intelligent.
+2. (Facultatif) [Configurez des options de connexion mobiles avec {{site.data.keyword.appid_full}}](https://console.ng.bluemix.net/docs/services/appid/index.html). Vous pouvez personnaliser l'apparence de l'écran de connexion qui s'affiche dans l'application mobile. Vous pouvez également activer ou désactiver l'utilisation des données d'identification de login social. Par défaut, {{site.data.keyword.appid_short_notm}} active l'autorisation par Facebook et Google+, et les utilisateurs d'applications mobiles peuvent utiliser leurs propres données d'identification de login social ou ignorer le processus de connexion et essayer l'application sans se connecter. 
+3. [Téléchargez et connectez](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html) le modèle d'application mobile.
 
 
 ## Etapes suivantes

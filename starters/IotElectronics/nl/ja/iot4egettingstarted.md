@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-07"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -30,7 +30,8 @@ lastupdated: "2017-03-15"
 開始するには、次のタスクを完了してください。
 
 1. {{site.data.keyword.iotelectronics}} スターター Web アプリケーションを使用して、[シミュレート電気製品を作成します](iot4ecreatingappliances.html)。{{site.data.keyword.iotelectronics}} Starter 内では、デモンストレーション用のシミュレート電気製品として、洗濯機が使用されます。接続先に選択する電気製品は、どのタイプのスマート電子デバイスでもかまいません。
-2. サンプル・モバイル・アプリを[ダウンロードして接続します](iotelectronics_config_mobile.html)。
+2. (オプション) {{site.data.keyword.appid_full}} を使用して、[モバイル・ログイン・オプションを構成します](https://console.ng.bluemix.net/docs/services/appid/index.html)。 モバイル・アプリに表示されるログイン画面の外観をカスタマイズできます。オプションで、ソーシャル・ログイン資格情報の使用を有効または無効にすることもできます。デフォルトでは、{{site.data.keyword.appid_short_notm}} は Facebook および Google+ による権限を許可しており、モバイル・アプリ・ユーザーは独自のソーシャル資格情報を使用することも、ログイン・プロセスをスキップして、ログインなしでアプリを試用することもできます。
+3. サンプル・モバイル・アプリを[ダウンロードして接続します](iotelectronics_config_mobile.html)。
 
 
 ## 次に行うこと
@@ -40,23 +41,3 @@ lastupdated: "2017-03-15"
 - [サンプル・モバイル・アプリを操作して、](iotelectronics_config_mobile.html)電気製品の所有者が電気製品の登録および電気製品とのやり取りをどのように行うことができるのか体験します。
 - {{site.data.keyword.iot_short_notm}} で登録済み電気製品の[データを操作して管理します](iotelectronics_dashboard.html)。
 - [API を操作して ![外部リンクのアイコン](../../icons/launch-glyph.svg)](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html){:new_window}、独自の {{site.data.keyword.iotelectronics}} アプリをカスタマイズして展開する方法を確認します。
-
-# 関連リンク
-{: #rellinks}
-<!-- Related Links last updated 23 October 2016 - new API source -->
-## API 資料
-{: #api}
-* [{{site.data.keyword.iotelectronics}} API ![外部リンクのアイコン](../../icons/launch-glyph.svg)](https://broker-uss-iot4e.electronics.internetofthings.ibmcloud.com/public/iot4eregistrationapi.html){:new_window}
-* [{{site.data.keyword.iot_short}} API ![外部リンクのアイコン](../../icons/launch-glyph.svg)](https://developer.ibm.com/iotfoundation/recipes/api-documentation/){:new_window}
-* [IBM Watson IoT Service Health ダッシュボード ![外部リンクのアイコン](../../icons/launch-glyph.svg)](https://status.internetofthings.ibmcloud.com){: new_window}
-
-## コンポーネント
-{: #general}
-
-* [{{site.data.keyword.iotelectronics}} の資料](iotelectronics_overview.html){:new_window}
-* [{{site.data.keyword.iot_full}} の資料](https://console.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
-* [{{site.data.keyword.sdk4nodefull}} の資料](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime){:new_window}
-
-## サンプル
-{: #samples}
-* [サンプル・モバイル・アプリ](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html){:new_window}
