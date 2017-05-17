@@ -13,12 +13,19 @@ lastupdated: "2017-04-06"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
+# Kibana ログ・フォーマット
+{: #kibana_formats}
 
-# Cloud Foundry アプリケーションの Kibana ログ・フォーマット
+ログ項目ごとに異なるフィールドを「*Discover*」ページで表示するように Kibana を構成できます。
+{:shortdesc}
+
+
+
+## Cloud Foundry アプリケーションの Kibana ログ・フォーマット
 {: #kibana_log_format_cf}
 
 各ログ項目の以下のフィールドを「*Discover*」ページで表示するように Kibana を構成できます。
-{:shortdesc}
+
 
 | フィールド | 説明 |
 |-------|-------------|
@@ -44,3 +51,72 @@ lastupdated: "2017-04-06"
 {: caption="表 1. CF アプリ用のフィールド" caption-side="top"}
 
 
+
+## Docker コンテナーの Kibana ログ・フォーマット
+{: #kibana_log_format_containers}
+
+各ログ項目の以下のフィールドを「*Discover*」ページで表示するように Kibana を構成できます。
+
+
+| フィールド | 説明 |
+|-------|-------------|
+| @timestamp | `yyyy-MM-ddTHH:mm:ss:SS-0500`  <br> ログに記録されたイベントの時刻。<br> タイム・スタンプは、ミリ秒単位まで定義されます。 |
+| @version | イベントのバージョン。 |
+| ALCH_TENANT_ID | {{site.data.keyword.Bluemix_notm}} スペースの ID。 |
+| \_id | ログ文書の固有 ID。 |
+| \_index | ログ項目のインデックス。 |
+| \_type | ログのタイプ (例、*logs*)。 |
+| group_id | グループ ID<br> *単一コンテナーの場合、値は **0000** です。<br> * コンテナー・グループの場合、値はグループの GUID です。  |
+| ホスト (host) | コンテナーが実行されるホスト名。 |
+| インスタンス (instance) | 単一コンテナーのインスタンスの GUID。コンテナー・グループのインスタンス ID のリスト。|
+| log | 簡略メッセージ。 |
+| message | 完全なメッセージ。 |
+| path | ログがコンテナー内にある場所のパスとログ名。 |
+| stream | ログのタイプ (stdout、stderr) を指定します。 |
+| time | イベント発生日時。タイム・スタンプは、ミリ秒単位まで定義されます。|
+| timestamp | ログに記録されたイベントの日時。タイム・スタンプは、ミリ秒単位まで定義されます。 |
+{: caption="表 1. Docker コンテナー用のフィールド" caption-side="top"}
+
+
+## Message Hub の Kibana ログ・フォーマット
+{: #kibana_log_format_messagehub}
+
+各ログ項目の以下のフィールドを「*Discover*」ページで表示するように Kibana を構成できます。
+
+
+| フィールド | 説明 |
+|-------|-------------|
+| @timestamp | `yyyy-MM-ddTHH:mm:ss:SS-0500`  <br> ログに記録されたイベントの時刻。<br> タイム・スタンプは、ミリ秒単位まで定義されます。 |
+| @version | イベントのバージョン。 |
+| ALCH_TENANT_ID | {{site.data.keyword.Bluemix_notm}} スペースの ID。 |
+| \_id | ログ文書の固有 ID。 |
+| \_index | ログ項目のインデックス。 |
+| \_type | ログのタイプ (例: *syslog*)。 |
+| loglevel | ログに記録するイベントの重大度 (例えば、**Info**)。 |
+| module | このフィールドは、**MessageHub** に設定されます。 |
+{: caption="表 1. メッセージング・ハブ・イベント用のフィールド" caption-side="top"}
+
+ログ項目の例:
+
+```
+March 8th 2017, 17:15:16.454	
+
+message:
+    Creating topic ABC
+@version:
+    1
+@timestamp:
+    March 8th 2017, 17:15:16.454
+loglevel:
+    Info
+module:
+    MessageHub
+ALCH_TENANT_ID:
+    3d8d2eae-f3f0-44f6-9717-126113a00b51
+&#95;id:
+    AVqu6vJl1zcfr8KYMI95
+&#95;type:
+    logs
+&#95;index:
+    logstash-2017.03.08
+```

@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2017-03-14"
 
 以下のステップを実行して Grafana ダッシュボードを作成します。
 
-1. Web ブラウザーから Grafana を起動します。詳しくは、『[Web ブラウザーから Grafana ダッシュボードへの移動](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_browser)』を参照してください。
+1. Web ブラウザーから Grafana を起動します。詳しくは、『[Web ブラウザーから Grafana ダッシュボードへのナビゲート](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_browser)』を参照してください。
 
 2. デフォルト・ダッシュボードを保存します。
 

@@ -14,7 +14,6 @@ lastupdated: "2017-02-06"
 
 
 # Kibana での時間による Cloud Foundry アプリ・ログのフィルタリング
-<!-- for example, Uploading your data -->
 {: #logging_kibana_time_filter}
 
 
@@ -30,12 +29,12 @@ Kibana ダッシュボードで Cloud Foundry アプリ・ログを表示して�
     
     アプリのログが表示されます。
 
-2. アプリの Kibana ダッシュボードにアクセスします。**「詳細ビュー」** ![「詳細ビュー」リンク](images/logging_advanced_view.jpg) をクリックします。Kibana ダッシュボードが表示されます。
+2. アプリの Kibana ダッシュボードにアクセスします。**「詳細ビュー」** ![「詳細ビュー」リンク](images/logging_advanced_view.jpg "「詳細ビュー」リンク") をクリックします。Kibana ダッシュボードが表示されます。
 
 
-3. Kibana ダッシュボードで、**「Time Filter」** ![Kibana 時間フィルター](images/logging_kibana_time_filter.jpg) をクリックして、ドロップダウン・メニューから**「Custom」**を選択します。次のウィンドウが表示されます。
+3. Kibana ダッシュボードで、**「Time Filter」** ![Kibana 時間フィルター](images/logging_kibana_time_filter.jpg "Kibana 時間フィルター") をクリックして、ドロップダウン・メニューから**「Custom」**を選択します。次のウィンドウが表示されます。
 
-    ![Kibana ダッシュボードのカスタム時間フィルター](images/logging_custom_time_filter.jpg)
+    ![Kibana ダッシュボードのカスタム時間フィルター](images/logging_custom_time_filter.jpg "Kibana ダッシュボードのカスタム時間フィルター")
 
 4. **「From」**フィールドと**「To」**フィールドをクリックし、フィルターの開始時刻と終了時刻を編集します。 
     

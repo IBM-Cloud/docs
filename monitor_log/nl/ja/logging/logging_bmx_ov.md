@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-16"
+lastupdated: "2017-03-29"
 
 ---
 
@@ -24,11 +24,6 @@ lastupdated: "2017-02-16"
 アプリをクラウドで実行する場合、ログにアクセスするためにアプリが実行されているインフラストラクチャーに入る際に SSH または
 FTP を使用できないことがあります (例えば、アプリケーションが Cloud Foundry で実行している場合など)。一方、{{site.data.keyword.Bluemix_notm}} で使用可能な別の計算ランタイムである {{site.data.keyword.containershort}} でアプリを実行することができ、そこでは SSH を使用し、ログにアクセスすることができます。計算ランタイムに関係なく、ログへのアクセスは重要であり、{{site.data.keyword.Bluemix_notm}} は、ご使用のクラウド・プラットフォームでのログの視覚化と分析のための一般的なエクスペリエンスを提供します。
 
-{{site.data.keyword.Bluemix_notm}} は、Cloud Foundry プラットフォームによって生成されるログ・データ、および Cloud Foundry アプリケーションによって生成されるログ・データを記録します。ログでは、アプリに対して生成されたエラー、警告、および情報の各メッセージを表示できます。Cloud Foundry でのロギングについて詳しくは、『[Bluemix での Cloud Foundry アプリのロギング](logging_cf_apps.html#logging_bluemix_cf_apps)』を参照してください。
-
-{{site.data.keyword.Bluemix_notm}} は、{{site.data.keyword.containershort}} によって生成されるログ・データを記録します。{{site.data.keyword.containershort}} でのロギングについて詳しくは、『[IBM Bluemix Container Service のロギング](containers/logging_containers_ov.html#logging_containers_ov)』を参照してください。   
-
-
 {{site.data.keyword.Bluemix_notm}} が提供するロギング機能を使用することによって、以下を行うことができます。
 
 * クラウド・リソースおよびそれらの実行状況を把握する。
@@ -41,3 +36,31 @@ FTP を使用できないことがあります (例えば、アプリケーシ�
 * アプリの脆弱性を特定する。
 * インフラストラクチャーの問題を検出する。
 * アプリ・ランタイムの問題を検出する。
+
+## CF アプリのロギング
+{: #logging_bmx_ov_cf}
+
+{{site.data.keyword.Bluemix_notm}} は、Cloud Foundry プラットフォームによって生成されるログ・データ、および Cloud Foundry アプリケーションによって生成されるログ・データを記録します。ログでは、アプリに対して生成されたエラー、警告、および情報の各メッセージを表示できます。Cloud Foundry でのロギングについて詳しくは、『[Bluemix での Cloud Foundry アプリのロギング](cfapps/logging_cf_apps.html#logging_bluemix_cf_apps)』を参照してください。
+
+## コンテナーのロギング
+{: #logging_bmx_ov_containers}
+
+{{site.data.keyword.Bluemix_notm}} は、{{site.data.keyword.containershort}} によって生成されるログ・データを記録します。{{site.data.keyword.containershort}} でのロギングについて詳しくは、『[IBM Bluemix Container Service のロギング](containers/logging_containers_ov.html#logging_containers_ov)』を参照してください。  
+
+**注:** {{site.data.keyword.IBM}} 管理のクラウド・インフラストラクチャーにデプロイされている Docker コンテナーのコンテナー・ログは {{site.data.keyword.Bluemix_notm}} で分析できます。
+
+## Bluemix でのログ分析
+{: #logging_bmx_ov_ui}
+
+{{site.data.keyword.Bluemix_notm}} では、アプリの最近のログを表示したり、リアルタイムでログを追尾したりできます。
+
+* ログの表示、フィルター操作、および分析を UI を介して行うことができます。詳しくは、『[Bluemix コンソールからのログの分析](logging_view_dashboard.html#analyzing_logs_bmx_ui)』を参照してください。
+
+* コマンド・ラインを使用して、ログの表示、フィルター操作、および分析を行い、ログをプログラムで管理できます。詳しくは、『[CLI からのログの分析](logging_view_cli.html#analyzing_logs_cli)』を参照してください。
+
+## Kibana での高度なログ分析
+{: #logging_bmx_ov_kibana}
+
+{{site.data.keyword.Bluemix_notm}} では、分析および視覚化のためのオープン・ソース・プラットフォームである Kibana を使用して、さまざまなグラフ (図表や表など) でデータのモニター、検索、分析、および視覚化を行うことができます。詳しくは、『[Kibana での高度なログ分析](kibana4/analyzing_logs_Kibana.html#analyzing_logs_Kibana)』を参照してください。
+
+
