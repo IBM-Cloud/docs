@@ -2,7 +2,7 @@
 
 copyright:
  years: 2017
-lastupdated: "2017-5-11"
+lastupdated: "2017-5-16"
 
 ---
 
@@ -18,18 +18,18 @@ A release is a container for deployment plans and events.
 
 {:shortdesc}
 
-Releases can be scaled for any software development lifecycle. You can add multiple deployment plans and multiple teams to a release.
+Releases can be scaled for any software development lifecycle. You can add multiple deployment plans, events, and teams to a release.
 
-Typically, the deployment plans that belong to a release are related in some business-meaningful way. For example, the plans might represent the phases in a software development lifecycle, such as development, QA, and production.
+Typically, the deployment plans and events that belong to a release are related in some business-meaningful way. For example, the deployment plans might represent the phases in a software development lifecycle, such as development, QA, and production.
 
-If you add events to a release, you can use the Calendar to find events and filter the Releases page.
+If you add events to a release, you can use the Calendar to filter the Releases page to display releases, plans, and events.
 
 ## Creating releases
 {: #releases_create}
 
 To create a release, complete the following steps:
 
-1. On the Releases page, click **Create release event**. If this is the first time that you are creating a release, click **Define a release to coordinate work**.
+1. On the Releases page, click **Create release event**. If this is your first time creating a release, click **Define a release to coordinate work**.
 
 1. In the Create Release Event window, in the **Name** field, enter a name for the release.
 
@@ -39,7 +39,7 @@ To create a release, complete the following steps:
 
 3. In the **End Time** field, select an ending date and time.
 
-3. In the **Tags** list, select an event. You can select multiple events. To create a tag, type the tag name in list field. Tags that you create with the Create Release Event window are not displayed on the calendar, which can help prevent calendar clutter. If you want your tag to appear on the calendar, [select a tag that is created on the Configure Calendar page](UCCR_events.html#events_tagCreate).
+3. In the **Tags** list, select an event. You can select multiple events. To create a tag, type the tag name in list field. Tags that you create with the Create Release Event window are not displayed on the calendar, which can help prevent calendar clutter. If you want your event to appear on the calendar, [select an event that is created on the Configure Calendar page](UCCR_events.html#events_tagCreate).
 
 5. Click **Save**.
 
@@ -67,16 +67,18 @@ To add existing deployment plans to a release, complete the following steps:
 
 You manage a release with the Release Detail page. To manage a release, open the Release Detail page and then complete one of the following tasks:
 <ul>
-<li>To modify the release, click **Edit**.
+<li>Click **Edit** to modify the release definition.
 </li>
-<li>To edit a deployment plan, select **Edit this plan**. The Edit Deployment Plan window is displayed.
+<li>Select **Edit this plan** to edit a deployment plan. The Edit Deployment Plan window is displayed.
 </li>
-<li>To modify a deployment plan's schedule, select **Reschedule this plan**.
+<li>Select **Reschedule this plan** to change a deployment plan's scheduled start and end times.
 </li>
-<li>To copy a deployment plan, select **Copy this plan**. A copy of the selected plan is added to the release.</li>
-<li>To remove the deployment plan from the release, select **Remove from release**. Removed plans are not deleted.
+<li>Select **Copy this plan** to copy a deployment plan. A copy of the selected plan is added to the release.</li>
+<li>Select **Remove from release** to remove the deployment plan from the release. Removed plans are not deleted and can be added to another release.
 </li>
 </li>
-<li>To remove a deployment plan and save it in the archive, select **Archive this plan**. Archived items can be restored.
+<li>Select **Archive this plan** to save it in the archive. Archived items can be restored.
 </li>
 </ul>
+
+To start a deployment with a deployment plan in a release, [see Running deployments.](UCCR_deployRun.html#deployment_run)
