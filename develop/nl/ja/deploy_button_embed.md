@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-2-21"
+lastupdated: "2017-4-7"
 
 ---
 
@@ -73,7 +73,7 @@ Bluemix D2BM iFrame サンプル <img class="image" src="../icons/launch-glyph.s
 <dd class="pd">デフォルトのターゲット地域の ID。例えば <code>ibm:yp:us-south</code> です。この値はオプションです。</dd>
 
 <dt class="pt dlterm">organization_guid</dt>
-<dd class="pd">デフォルトのターゲット組織の GUID。この値を見つけるには、<strong>「組織の管理」</strong> >「<i>organization_name</i>」をクリックします。その組織の URL に組織の GUID が含まれています。この値はオプションです。</dd>
+<dd class="pd">デフォルトのターゲット組織の GUID。この値を見つけるには、<strong>「組織の管理」</strong>>「<i>organization_name</i>」をクリックします。その組織の URL に組織の GUID が含まれています。この値はオプションです。</dd>
 
 <dt class="pt dlterm">space_guid</dt>
 <dd class="pd">デフォルトのターゲット・スペースの GUID。この値を見つけるには、<strong>「組織の管理」</strong> > 「<i>space_name</i>」をクリックします。そのスペースの URL にスペースの GUID が含まれています。この値はオプションです。</dd>

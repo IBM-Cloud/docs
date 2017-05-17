@@ -199,7 +199,7 @@ CF_SPACE |	スペース名
 CF_SPACE_ID |	スペース GUID
 CF_APP	| アプリ名
 
-{: caption="Table 1. Environment variables" caption-side="top"}
+{: caption="表 1. 環境変数" caption-side="top"}
 
 **パイプラインからの YAML ファイルの生成** 
 
