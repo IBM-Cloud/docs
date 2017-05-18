@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-04-13"
 
 ---
 
-<!-- Attribute definitions --> 
+<!-- Attribute definitions -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -16,7 +16,7 @@ lastupdated: "2017-02-09"
 #Tableau de bord du service
 {: #dashboard}
 
-Vous pouvez accéder à votre service {{site.data.keyword.streaminganalyticsshort}} depuis le tableau de bord de service {{site.data.keyword.Bluemix_short}}. 
+Vous pouvez accéder à votre service {{site.data.keyword.streaminganalyticsshort}} depuis le tableau de bord de service {{site.data.keyword.Bluemix_short}}.
 {:shortdesc}
 
 Depuis le tableau de bord de service, vous pouvez :

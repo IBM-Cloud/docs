@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-04-13"
 
 ---
 
-<!-- Attribute definitions --> 
-{:tsSymptoms: .tsSymptoms} 
-{:tsCauses: .tsCauses} 
-{:tsResolve: .tsResolve} 
+<!-- Attribute definitions -->
+{:tsSymptoms: .tsSymptoms}
+{:tsCauses: .tsCauses}
+{:tsResolve: .tsResolve}
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -37,3 +37,17 @@ L'infrastructure de service a été mise à jour et le cache de votre navigateur
 Effacez le cache de votre navigateur pour être sûr d'obtenir la dernière version de la console de service.
 {: tsResolve}
 
+##Mon application est défaillante
+{: #app_unhealthy}
+
+Vous ne pouvez exécuter correctement votre application si son état de santé est `défaillant`.
+{:shortdesc}
+
+Vous soumettez une application à l'instance de service, l'application démarre puis échoue immédiatement après, avec un état de santé à `défaillant`. L'erreur suivante apparaît dans le fichier journal : `/lib64/libc.so.6: version GLIBC_2.14 not found`.
+{: tsSymptoms}
+
+Vous n'avez pas compilé l'application en utilisant le système d'exploitation RHEL 6.5 ou une version CentOS équivalente.
+{: tsCauses}
+
+Vous devez recompiler votre application sous Red Hat Enterprise Linux (RHEL) 6.5 ou une version CentOS équivalente, utilisant des processeurs Intel.Soumettez à nouveau votre application à votre instance de service.
+{: tsResolve}

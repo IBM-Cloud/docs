@@ -2,10 +2,10 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-04-13"
 ---
 
-<!-- Attribute definitions --> 
+<!-- Attribute definitions -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -20,6 +20,7 @@ Un kit d'outils est un ensemble d'artefacts, qui sont organisés dans un package
 {:shortdesc}
 
 ##Internet Toolkit
+{: #internet notoc}
 
 Le kit d'outils Internet Toolkit (com.ibm.streamsx.inet) fournit une prise en charge pour les protocoles Internet courants. Cet kit d'outils est intégré à {{site.data.keyword.streamsshort}} et est disponible dans votre environnement de développement {{site.data.keyword.streamsshort}}.
 
@@ -46,6 +47,7 @@ Pour plus d'informations sur les opérateurs compatibles avec le kit d'outils In
 Vous pouvez télécharger des versions plus récentes du kit d'outils qui comportent des améliorations et des opérateurs supplémentaires, depuis [IBMStreams on GitHub](https://github.com/IBMStreams){:new_window}. Une fois que vous avez téléchargé le kit d'outils, compilez-le (si nécessaire) et installez-le dans votre environnement de développement {{site.data.keyword.streamsshort}}.
 
 ##IoT Integration Toolkit
+{: #iot notoc}
 
 Le kit d'outils IoT Integration Toolkit (com.ibm.streamsx.iot) fournit une connectivité avec {{site.data.keyword.iot_full}}. Les applications {{site.data.keyword.streamsshort}} peuvent utiliser ce kit d'outils pour fournir une application en temps réel face à tous les événements pouvant provenir de milliers de périphériques, incluant l'envoi de commandes vers des périphériques spécifiques au sujet de cette analyse.
 
@@ -70,8 +72,9 @@ Le tableau ci-après répertorie les opérateurs fournis par le kit d'outils IoT
 Pour plus d'informations sur les opérateurs compatibles avec le kit d'outils IoT Integration, voir [Operators: com.ibm.streamsx.iot](http://www.ibm.com/support/knowledgecenter/SSCRJU_4.2.0/com.ibm.streams.toolkits.doc/spldoc/dita/tk$com.ibm.streamsx.iot/ix$Operator.html?lang=en){:new_window} dans la documentation produit {{site.data.keyword.streamsshort}}.
 
 ##Messaging Toolkit
+{: #messaging notoc}
 
-Le projet Messaging Toolkit (com.ibm.streamsx.messaging) est un projet de kit d'outils {{site.data.keyword.streamsshort}} open source. Il se concentre sur le développement d'opérateurs et de fonctions qui vous aident à utiliser {{site.data.keyword.streamsshort}} pour interagir avec des systèmes de messagerie tels que Kafka, JMS, XMS et MQTT. 
+Le projet Messaging Toolkit (com.ibm.streamsx.messaging) est un projet de kit d'outils {{site.data.keyword.streamsshort}} open source. Il se concentre sur le développement d'opérateurs et de fonctions qui vous aident à utiliser {{site.data.keyword.streamsshort}} pour interagir avec des systèmes de messagerie tels que Kafka, JMS, XMS et MQTT.
 
 Cet kit d'outils est intégré à {{site.data.keyword.streamsshort}} et est disponible dans votre environnement de développement {{site.data.keyword.streamsshort}}.
 
@@ -94,7 +97,7 @@ Vous pouvez télécharger des versions plus récentes du kit d'outils qui compor
 
 Pour plus d'informations sur les restrictions de kit d'outils, voir [Restrictions concernant les kits d'outils spécialisés d'{{site.data.keyword.streamsshort}}](http://www.ibm.com/support/knowledgecenter/SSCRJU_4.2.0/com.ibm.streams.install.doc/doc/ibminfospherestreams-install-toolkit-restrictions.html){:new_window}.
 
-**Remarque** : Pour utiliser JMSSource, JMSSink, XMSSource, XMSSink avec WebSphere MQ, effectuez la procédure ci-dessous dans votre environnement de développement : 
+**Remarque** : Pour utiliser JMSSource, JMSSink, XMSSource, XMSSink avec WebSphere MQ, effectuez la procédure ci-dessous dans votre environnement de développement :
 
 1. Accédez à [IBMStreams on GitHub](https://github.com/IBMStreams){:new_window} et téléchargez le kit d'outils Messaging Toolkit (com.ibm.streamsx.messaging) version 3.0.0 ou ultérieure dans votre environnement de développement.
 2. Utilisez la version 5.1.0 du kit d'outils ou une version ultérieure pour générer votre application.
