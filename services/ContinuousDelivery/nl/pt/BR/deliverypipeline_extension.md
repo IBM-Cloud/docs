@@ -89,7 +89,7 @@ vinculados.
     * Se você já tiver configurado o serviço e ligado o app em seu espaço do
 Bluemix ou se desejar
 [configurar
-esses requisitos manualmente](/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline){: new_window}, deixe a caixa de seleção desmarcada.
+esses requisitos manualmente](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}, deixe a caixa de seleção desmarcada.
 
   f. No campo **Minutos para aguardar a análise ser concluída**,
 digite um valor de 0 a 59 minutos. O valor padrão é de 5 minutos. Uma URL para o painel
@@ -197,7 +197,7 @@ To create the globalization stage and job:
 
     * If you want the pipeline to check your Bluemix space for the service and an app that binds the service to the container, select this check box. If the service or bound app does not exist, the pipeline adds the free plan of the service to your space for you. The bound app that is created is named `pipeline_bridge_app`. Then, the pipeline uses the credentials from pipeline_bridge_app to access the bound services.
 
-    * If you configured the service and bound app in your Bluemix space already or if you want to [configure these requirements manually](https://www.ng.bluemix.net/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline), leave this check box cleared.
+    * If you configured the service and bound app in your Bluemix space already or if you want to [configure these requirements manually](/docs/containers/container_integrations.html#container_binding_pipeline), leave this check box cleared.
 
   g. For the Globalization bundle prefix, enter a prefix for the bundle name, which is structured in this format: `<globalization_bundle_prefix>.path.to.source.file`. The pipeline job creates this Globalization bundle for you in the Globalization Pipeline service.
 
@@ -406,4 +406,4 @@ Globalization.
   - Compilando imagens do Docker
   - Implementando imagens em contêineres no Bluemix
 
-Para obter mais informações sobre introdução, veja a [visão geral do Delivery Pipeline e de contêineres](/docs/containers/container_pipeline_ov.html#container_pipeline_ov){: new_window}.
+Para obter mais informações sobre introdução, veja a [visão geral do Delivery Pipeline e de contêineres](/docs/containers/container_integrations.html#container_pipeline_ov){: new_window}.

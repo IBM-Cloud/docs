@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-6"
+lastupdated: "2017-4-28"
 
 ---
 
@@ -36,7 +36,7 @@ lastupdated: "2017-4-6"
 기존 애플리케이션에 맞게 {{site.data.keyword.deliverypipeline}}을 설정하려면 다음 단계를 완료하십시오. 
 
 1. {{site.data.keyword.Bluemix_notm}} 앱 대시보드에서 앱을 클릭하십시오.
-1. {{site.data.keyword.Bluemix_notm}} 메뉴 표시줄의 햄버거 메뉴에서 **서비스**를 클릭한 후 **DevOps**를 클릭하십시오.
+1. {{site.data.keyword.Bluemix_notm}} 메뉴 표시줄의 메뉴에서 **서비스**를 클릭한 후 **DevOps**를 클릭하십시오.
 1. **파이프라인**을 클릭한 후 **파이프라인 작성**을 클릭하십시오.
 
 Cloud Foundry 애플리케이션을 배치하도록 구성된 [파이프라인 작성 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window}을 수행하려면 다음 단계를 따르십시오. 

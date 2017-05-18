@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-17"
+lastupdated: "2017-4-11"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -31,7 +31,7 @@ lastupdated: "2016-11-17"
 * **內容**：專案儲存庫中的檔案。此檔案可以包含多個內容。每一個內容都必須單獨一行。若要區隔索引鍵值組，請使用等號 (=)。
 
 
-依預設，下列內容及資源可用於管線環境中。
+根據預設值，下列內容及資源可用於管線環境中。
 
 <!--##Contents
 * [Environment properties](#env)
@@ -120,11 +120,9 @@ lastupdated: "2016-11-17"
 
 64 位元版本的 IBM Node 0.10、0.10.48、0.12、0.12.17、4.2、4.4.5、4.6.0、6.2.2 及 6.7.0 可用於管線環境。若要選擇版本，請使用 export 指令。
 
-例如，若要使用 Node 0.12.7，請輸入下列指令：
-`export PATH=/opt/IBM/node-v0.12/bin:$PATH`
+例如，若要使用 Node 0.12.7，請輸入下列指令：`export PATH=/opt/IBM/node-v0.12/bin:$PATH`
 
-若要使用 Node 4.2.2，請輸入下列指令：
-`export PATH=/opt/IBM/node-v4.2/bin:$PATH`
+若要使用 Node 4.2.2，請輸入下列指令：`export PATH=/opt/IBM/node-v4.2/bin:$PATH`
 
 ### Node 模組
 

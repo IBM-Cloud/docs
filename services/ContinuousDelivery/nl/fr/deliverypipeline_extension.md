@@ -75,7 +75,7 @@ conditions d'utilisation du service ![Icône de lien externe](../../icons/launch
     * Si vous souhaitez que le pipeline vérifie dans votre espace Bluemix l'existence du service et d'une application qui établit une liaison entre le service et le conteneur, sélectionnez la case à cocher. Si le service ou l'application liée n'existe pas, il est créé par le pipeline pour ajouter le forfait gratuit du service à votre espace. L'application liée est créée avec le nom `pipeline_bridge_app`. Ensuite, le pipeline utilise les données d'identification de pipeline_bridge_app pour accéder aux services liés.
 
     * Si vous avez déjà configuré le service et lié l'application dans votre espace Bluemix, ou si vous désirez
-[configurer manuellement ces exigences](/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline){: new_window},
+[configurer manuellement ces exigences](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window},
 ne cochez pas cette case.
 
   f. Dans la zone **Minutes to wait for analysis to complete**, tapez une valeur comprise entre 0 et 59 minutes. La valeur par défaut est 5 minutes. Une URL vers le tableau de bord Static Analyzer figure dans les journaux de console à la fin du travail.
@@ -159,7 +159,7 @@ To create the globalization stage and job:
 
     * If you want the pipeline to check your Bluemix space for the service and an app that binds the service to the container, select this check box. If the service or bound app does not exist, the pipeline adds the free plan of the service to your space for you. The bound app that is created is named `pipeline_bridge_app`. Then, the pipeline uses the credentials from pipeline_bridge_app to access the bound services.
 
-    * If you configured the service and bound app in your Bluemix space already or if you want to [configure these requirements manually](https://www.ng.bluemix.net/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline), leave this check box cleared.
+    * If you configured the service and bound app in your Bluemix space already or if you want to [configure these requirements manually](/docs/containers/container_integrations.html#container_binding_pipeline), leave this check box cleared.
 
   g. For the Globalization bundle prefix, enter a prefix for the bundle name, which is structured in this format: `<globalization_bundle_prefix>.path.to.source.file`. The pipeline job creates this Globalization bundle for you in the Globalization Pipeline service.
 
@@ -344,4 +344,4 @@ Vous pouvez automatiser vos générations d'application et vos déploiements de 
   - La génération d'images Docker
   - Le déploiement d'images de conteneurs sur Bluemix
 
-Pour plus d'informations sur la mise en route, voir la [présentation de Delivery Pipeline et des conteneurs](/docs/containers/container_pipeline_ov.html#container_pipeline_ov){: new_window}.
+Pour plus d'informations sur la mise en route, voir la [présentation de Delivery Pipeline et des conteneurs](/docs/containers/container_integrations.html#container_pipeline_ov){: new_window}.

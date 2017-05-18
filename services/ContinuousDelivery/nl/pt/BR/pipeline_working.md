@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-6"
+lastupdated: "2017-4-28"
 
 ---
 
@@ -47,9 +47,7 @@ organização, será possível acessar o catálogo, clicar em
 Conclua estas etapas para configurar um {{site.data.keyword.deliverypipeline}} para um aplicativo existente.
 
 1. No Painel do app {{site.data.keyword.Bluemix_notm}}, clique em seu app.
-1. No menu de hamburger da barra de menus do
-{{site.data.keyword.Bluemix_notm}}, clique em **Serviços** e,
-em seguida, clique em **DevOps**.
+1. No menu da barra de menus do {{site.data.keyword.Bluemix_notm}}, clique em **Serviços** e, em seguida, clique em **DevOps**.
 1. Clique em **Pipelines** e depois clique em **Criar um pipeline**.
 
 Para [criar um pipeline ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} que esteja configurado para implementar um aplicativo Cloud Foundry, siga estas etapas:

@@ -77,7 +77,7 @@ Puoi includere le proprietà dell'ambiente nei comandi shell di creazione del la
 
 ### Lavori di distribuzione
 
-I lavori di distribuzione caricano il tuo progetto in Bluemix come un'applicazione e sono accessibili da un URL. Dopo che il progetto è stato distribuito, puoi trovare l'applicazione distribuita nel tuo dashboard Bluemix. 
+I lavori di distribuzione caricano il tuo progetto in Bluemix come un'applicazione e sono accessibili da un URL. Dopo che il progetto è stato distribuito, puoi trovare l'applicazione distribuita nel tuo dashboard Bluemix.
 
 I lavori di distribuzione possono distribuire nuove applicazioni o aggiornare applicazioni esistenti. Anche se hai prima distribuito un'applicazione utilizzando un altro metodo, come l'interfaccia della riga di comando Cloud Foundry o la barra di esecuzione nell'IDE web, puoi aggiornare l'applicazione utilizzando un lavoro di distribuzione. Per aggiornare un'applicazione, nel lavoro di distribuzione, utilizza il nome dell'applicazione.
 
@@ -88,7 +88,7 @@ Puoi eseguire la distribuzione a uno o più regioni e servizi. Ad esempio, puoi 
 Puoi includere le proprietà dell'ambiente in uno script di distribuzione del lavoro di distribuzione. Queste proprietà forniscono l'accesso alle informazioni sull'ambiente di esecuzione del lavoro. Per ulteriori informazioni, consulta [Risorse e proprietà dell'ambiente per il servizio {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).
 
 ### Lavori di verifica
-Se desideri richiedere che vengano rispettate le condizioni, includi i lavori di verifica prima o dopo i tuoi lavori di distribuzione o di creazione. Puoi personalizzare i lavori di verifica in modo che siano semplici o complessi a secondo dei tuoi bisogni. Ad esempio, puoi immettere un comando cURL e attendere una risposta particolare. Puoi anche eseguire una suite di verifiche dell'unità o di verifiche funzionali dell'esecuzione con servizi di verifica di terze parti, come ad esempio Sauce Labs. 
+Se desideri richiedere che vengano rispettate le condizioni, includi i lavori di verifica prima o dopo i tuoi lavori di distribuzione o di creazione. Puoi personalizzare i lavori di verifica in modo che siano semplici o complessi a secondo dei tuoi bisogni. Ad esempio, puoi immettere un comando cURL e attendere una risposta particolare. Puoi anche eseguire una suite di verifiche dell'unità o di verifiche funzionali dell'esecuzione con servizi di verifica di terze parti, come ad esempio Sauce Labs.
 
 Se le tue verifiche producono dei file dei risultati nel formato XML JUnit, viene visualizzato un report che si basa sui file dei risultati nella scheda **Tests** per ogni pagina del risultato della verifica. Se una verifica ha esito negativo, anche il lavoro ha esito negativo.
 
@@ -113,7 +113,7 @@ Per utilizzare gli argomenti del comando `cf push`, apri le impostazioni di conf
 Una pipeline di esempio può contenere tre fasi:
 
 1. Una fase di build che compila ed esegue i processi di creazione su un'applicazione.
-2. Una fase di verifica che distribuisce un'istanza di un'applicazione e successivamente esegue le verifiche su di essa.
+2. Una fase di verifica che distribuisce un'istanza dell'applicazione e successivamente esegue le verifiche su di essa.
 3. Una fase di produzione che distribuisce un'istanza di produzione dell'applicazione verificata.
 
 Questa pipeline viene mostrata nel seguente diagramma concettuale:
@@ -122,4 +122,4 @@ Questa pipeline viene mostrata nel seguente diagramma concettuale:
 
 *Un modello concettuale di una pipeline a tre fasi*
 
-Le fasi ricevono i loro input dai repository e dai lavori di creazione e i lavori all'interno di una fase eseguono in sequenza e indipendentemente ogni lavoro. Nella pipeline di esempio, le fasi saranno eseguite in sequenza, anche se le fasi di verifica e produzione prendono entrambe l'output della fase di build come proprio input.
+Le fasi ricevono i loro input dai repository e dai lavori di creazione e i lavori all'interno di una fase eseguono in sequenza e indipendentemente ogni lavoro. Nella pipeline di esempio, le fasi sono eseguite in sequenza, anche se le fasi di verifica e produzione prendono entrambe l'output della fase di build come proprio input.

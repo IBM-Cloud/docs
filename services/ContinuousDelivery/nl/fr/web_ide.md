@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-31"
+lastupdated: "2017-4-25"
+
 ---
 
 {:new_window: target="_blank"}
@@ -11,7 +12,7 @@ lastupdated: "2017-3-31"
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# Edition de code avec l'interface Eclipse Orion IDE
+# Développement avec l'interface Eclipse Orion Web IDE
 {: #web_ide}
 
 Eclipse Orion {{site.data.keyword.webide}} est un environnement de développement basé navigateur dans lequel vous pouvez faire du développement pour le Web. Vous pouvez développer en JavaScript, HTML et CSS en vous aidant de l'assistant de contenu, de la validation de code et du contrôle des erreurs. L'interface {{site.data.keyword.webide}} fonctionne avec quasiment toutes les langues et propose la mise en évidence de syntaxe pour la plupart des types de fichier. Le contrôle des sources est intégré et vous pouvez déployer le code en local afin de tester et déboguer vos applications.
@@ -19,19 +20,20 @@ Eclipse Orion {{site.data.keyword.webide}} est un environnement de développemen
 
 Mais surtout, {{site.data.keyword.webide}} est basé sur le Web. Vous n'avez rien à installer, rien à gérer ni rien à mettre à l'échelle. Vous pouvez faire du développement depuis n'importe quel endroit, dans la mesure où vous disposez d'une connexion Internet.
 
-## Configuration de l'éditeur
+## Configuration de l'interface IDE
 {: #editorsetup}
 
 {{site.data.keyword.webide}} est personnalisable : vous pouvez choisir les schémas de couleurs, les outils techniques et les paramètres correspondant à vos besoins de développement. Pour afficher et modifier les paramètres, dans le menu de gauche, cliquez sur l'icône **Paramètres**
-<img class="inline" src="images/webide_settings_icon_light_small.png"  alt="The settings icon">.
+<img class="inline" src="images/webide_settings_icon_light_small.png"  alt="Icône des paramètres">.
 
-Si vous changez souvent certains paramètres au cours de l'édition, vous pouvez accéder à ces paramètres rapidement via l'icône **Paramètres de l'éditeur local** <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="Local Editor Settings icon">. 
+Si vous changez souvent certains paramètres au cours de l'édition, vous pouvez accéder à ces paramètres rapidement via l'icône **Paramètres de l'éditeur local**
+<img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="Icône Paramètres de l'éditeur local">. 
 
 ![Paramètres de l'éditeur local](images/webide_local_editor_settings_light.png)
 
 Par défaut, les paramètres de style et de taille de police de l'éditeur sont toujours affichés. Pour inclure d'autres paramètres de l'éditeur dans le menu, procédez comme suit :
 
-1. Cliquez sur l'icône **Paramètres de l'éditeur local** <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="Local Editor Settings icon">.
+1. Cliquez sur l'icône **Paramètres de l'éditeur local** <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="Icône Paramètres de l'éditeur local">.
 
 2. Cliquez sur **Paramètres de l'éditeur**.
 
@@ -45,14 +47,15 @@ Par défaut, les paramètres de style et de taille de police de l'éditeur sont 
 
 {{site.data.keyword.webide}} comporte deux sections principales. La première section correspond au navigateur de fichiers, qui affiche vos fichiers de projet dans une structure arborescente. Depuis le navigateur de fichiers, vous pouvez créer, renommer, supprimer et gérer vos fichiers et dossiers.
 
-**Conseil :** Pour télécharger des fichiers dans le navigateur de fichiers, faites-les glisser depuis votre ordinateur vers le navigateur.
+**Astuce :** pour télécharger des fichiers dans le navigateur de fichiers, faites-les glisser depuis votre ordinateur vers le navigateur.
 
 La seconde section correspond à la sous-fenêtre de l'éditeur. L'éditeur fournit plusieurs fonctions de codage, notamment l'assistant de contenu et la validation de la syntaxe.
 
 ![Web IDE](images/webide_light.png)
 
 ### Utilisation de plusieurs fichiers
-1. Pour utiliser deux fichiers en même temps, cliquez sur l'icône **Changer le mode de fractionnement de l'éditeur** <img class="inline" src="images/webide_split_editor_icon_light_small.png"  alt="Split Editor icon">.
+1. Pour utiliser deux fichiers en même temps, cliquez sur l'icône **Changer le mode de fractionnement de l'éditeur**
+<img class="inline" src="images/webide_split_editor_icon_light_small.png"  alt="Icône de fractionnement de l'éditeur">.
 2. Dans le menu qui s'ouvre, sélectionnez une vue.
 
  Une fois que vous avez sélectionné une vue, si un fichier était déjà ouvert dans l'éditeur, il s'affiche dans les deux vues.
@@ -69,9 +72,11 @@ Pour afficher la liste des raccourcis-clavier dans l'éditeur, appuyez sur Alt+M
 ## Gestion du code source
 {: #sourcecontrol}
 
-{{site.data.keyword.webide}} est intégré aux outils de gestion du code source. Pour utiliser votre référentiel Git, cliquez sur l'icône **Référentiel Git** <img class="inline" src="images/webide_git_icon_light_small.png"  alt="The Git Repository icon">. 
+{{site.data.keyword.webide}} est intégré aux outils de gestion du code source. Pour utiliser votre référentiel Git, cliquez sur l'icône **Référentiel Git**
+<img class="inline" src="images/webide_git_icon_light_small.png"  alt="Icone Référentiel Git">. 
 
- **Conseil** : Si vous utilisez l'interface {{site.data.keyword.webide}} avec des chaînes d'outils ouvertes, votre espace de travail est prérempli avec vos référentiels GitHub, {{site.data.keyword.ghe_short}} ou Git Repos and Issue Tracking. Les référentiels associés à votre chaîne d'outils en cours sont mis en évidence.
+ **Astuce** : si vous utilisez l'interface {{site.data.keyword.webide}} avec des chaînes d'outils ouvertes, votre espace de travail est prérempli avec vos
+référentiels GitHub, {{site.data.keyword.ghe_short}} ou Git Repos and Issue Tracking. Les référentiels associés à votre chaîne d'outils en cours sont mis en évidence.
 
 
 ## Déploiement d'une application depuis votre espace de travail
@@ -79,7 +84,7 @@ Pour afficher la liste des raccourcis-clavier dans l'éditeur, appuyez sur Alt+M
 
 1. Pour déployer votre application, depuis la barre d'exécution, sélectionnez ou créez une configuration de lancement.
 1. Cliquez sur l'icône de déploiement <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="Icône de déploiement">. Une instance de votre application est déployée à l'aide du contenu actuel de votre espace de travail et de l'environnement défini dans votre configuration de lancement. 
-2. Une fois voter application déployée, vous pouvez utiliser la barre d'exécution pour arrêter, redémarrer ou déboguer votre application, consulter des journaux, etc.
+2. Une fois votre application déployée, vous pouvez utiliser la barre d'exécution pour arrêter, redémarrer ou déboguer votre application, consulter des journaux, etc.
 ![ Barre d'exécution](images/webide_runbar_light.png)    
 
 <!-- 3/6/2016: bl commands don't work with V2/CD 
