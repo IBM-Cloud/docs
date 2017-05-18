@@ -2,10 +2,10 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-04-13"
 ---
 
-<!-- Attribute definitions --> 
+<!-- Attribute definitions -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -20,6 +20,7 @@ lastupdated: "2017-02-09"
 {:shortdesc}
 
 ##Internet Toolkit
+{: #internet notoc}
 
 Internet Toolkit (com.ibm.streamsx.inet) 提供常用因特网协议的支持。此工具箱嵌入 {{site.data.keyword.streamsshort}}，在 {{site.data.keyword.streamsshort}} 开发环境中提供。
 
@@ -48,6 +49,7 @@ Internet Toolkit (com.ibm.streamsx.inet) 提供常用因特网协议的支持。
 
 
 ##IoT Integration Toolkit
+{: #iot notoc}
 
 IoT Integration Toolkit (com.ibm.streamsx.iot) 提供与 {{site.data.keyword.iot_full}} 的连接。{{site.data.keyword.streamsshort}} 应用程序使用此工具箱，针对来自可能成百上千个设备的所有事件（包括基于分析，发送命令到特定设备），来提供实时分析。
 
@@ -73,8 +75,9 @@ IoT Integration Toolkit (com.ibm.streamsx.iot) 提供与 {{site.data.keyword.iot
 有关 IoT Integration Toolkit 兼容操作程序的更多信息，请参阅 {{site.data.keyword.streamsshort}} 产品文档中的[操作程序：com.ibm.streamsx.iot 工具箱](http://www.ibm.com/support/knowledgecenter/SSCRJU_4.2.0/com.ibm.streams.toolkits.doc/spldoc/dita/tk$com.ibm.streamsx.iot/ix$Operator.html?lang=en){:new_window}。
 
 ##Messaging Toolkit
+{: #messaging notoc}
 
-Messaging Toolkit (com.ibm.streamsx.messaging) 项目是开放式源代码 {{site.data.keyword.streamsshort}} 工具箱项目。它重点在于开发操作程序和功能，帮助您使用 {{site.data.keyword.streamsshort}}，与消息传递系统（如 Kafka、JMS、XMS 和 MQTT）交互。 
+Messaging Toolkit (com.ibm.streamsx.messaging) 项目是开放式源代码 {{site.data.keyword.streamsshort}} 工具箱项目。它重点在于开发操作程序和功能，帮助您使用 {{site.data.keyword.streamsshort}}，与消息传递系统（如 Kafka、JMS、XMS 和 MQTT）交互。
 
 此工具箱嵌入 {{site.data.keyword.streamsshort}}，在 {{site.data.keyword.streamsshort}} 开发环境中提供。
 
@@ -100,7 +103,7 @@ Messaging Toolkit (com.ibm.streamsx.messaging) 项目是开放式源代码 {{sit
 有关工具箱限制的更多信息，请参阅 [{{site.data.keyword.streamsshort}} 专业工具箱的限制](http://www.ibm.com/support/knowledgecenter/SSCRJU_4.2.0/com.ibm.streams.install.doc/doc/ibminfospherestreams-install-toolkit-restrictions.html){:new_window}。
 
 **注**：要使用 JMSSource、JMSSink、XMSSource、XMSSink 与 WebSphere MQ，请在您的开发环境中完成以下所需步骤：
- 
+
 
 1. 转至 [IBMStreams on GitHub](https://github.com/IBMStreams){:new_window} 并在您的开发环境中下载 Messaging Toolkit (com.ibm.streamsx.messaging) V3.0.0 或更高版本。
 2. 使用 V5.1.0 或更高版本的工具箱来构建应用程序。

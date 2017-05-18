@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-04-13"
 
 ---
 
-<!-- Attribute definitions --> 
+<!-- Attribute definitions -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -32,16 +32,20 @@ lastupdated: "2017-02-09"
         <li><a href="/docs/services/StreamingAnalytics/c_compatible_adapters.html" target="_blank">兼容的适配器</a><br></li>
         <li><a href="/docs/services/StreamingAnalytics/c_analytics_utilities.html" target="_blank">兼容的分析和实用程序</a><br></li>
         <li><a href="/docs/services/StreamingAnalytics/r_vcap_services.html#r_vcap_services" target="_blank">服务凭证和 VCAP_SERVICES 环境变量</a><br></li>
+         <li><a href="https://github.com/IBMStreams" target="_blank">IBMStreams on
+GitHub</a><br></li>
       </ul>    
     </td>
     <td>
       <ul>
         <li><a href="https://developer.ibm.com/streamsdev/docs/bluemix-streaming-analytics-development-guide/" target="_blank">Streaming Analytics Development Guide</a><br></li>
+        <li><a href="https://www.ibm.com/blogs/bluemix/2017/02/connecting-to-streams/" target="_blank">连接 Streams：需要了解的内容</a><br></li>
         <li><a href="/docs/services/StreamingAnalytics/index.html" target="_blank">Streaming Analytics 入门</a><br></li>
         <li><a href="https://developer.ibm.com/streamsdev/docs/getting-spl-application-ready-cloud" target="_blank">使 SPL 应用程序为云做好准备</a><br></li>
-        <li><a href="https://github.com/IBMStreams" target="_blank">IBMStreams on
-GitHub</a><br></li>
+        <li><a href="/docs/services/StreamingAnalytics/t_develop_apps_python.html#t_develop_apps_python" target="_blank">开发针对 Streaming Analytics 的 Python 应用程序</a><br></li>
       </ul>    
     </td>
   </tr>
 </table>
+
+*表 1. {{site.data.keyword.streaminganalyticsshort}} 工具和资源*
