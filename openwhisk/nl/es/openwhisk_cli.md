@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+lastupdated: "2017-04-25"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -19,7 +18,7 @@ lastupdated: "2017-03-13"
 ## Configuración de la CLI de {{site.data.keyword.openwhisk_short}} 
 
 Puede utilizar la interfaz de línea de mandatos (CLI) de {{site.data.keyword.openwhisk_short}} para configurar su espacio de nombres y clave de autorización.
-Acceda a [Configurar CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window} y
+Acceda a [Configurar CLI](https://console.{DomainName}/openwhisk/cli) y
 siga las instrucciones para instalarlo.
 
 Hay dos propiedades que se deben configurar para poder utilizar la interfaz de línea de mandatos:

@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-04"
+lastupdated: "2017-04-21"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -32,7 +31,7 @@ function main({name}) {
 ```
 {: codeblock}  
 
-Puede crear una *acción de la web* `hello` en el paquete `demo` para el espacio de nombres `guest` utilizando el distintivo `--web` de la CLI con el valor `true` o `yes`: 
+Puede crear una *acción de la web* `hello` en el paquete `demo` para el espacio de nombres `guest` utilizando el distintivo `--web` de la CLI con el valor `true` o `yes`:
 ```
 wsk package create demo
 ```
@@ -47,11 +46,11 @@ Si especifica el distintivo `--web` con el valor `true` o `yes`, se puede accede
 
 *El nombre completo de la acción debe incluir el nombre de su paquete, que es 'default' si la acción no está en un paquete con nombre.*
 
-Un ejemplo es `guest/demo/hello`. La última parte del URI se denomina `extensión`, que normalmente es `.http` aunque se permiten otros valores, tal como se describe a continuación. La vía de acceso a la API de la acción de la web se puede utilizar con `curl` o `wget` sin una clave de API. Incluso se puede escribir directamente en el navegador.
+Un ejemplo es `guest/demo/hello`. La vía de acceso a la API de la acción de la web se puede utilizar con `curl` o `wget` sin una clave de API. Incluso se puede escribir directamente en el navegador.
 
-Intente abrir [https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.http?name=Jane](https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.http?name=Jane) en su navegador web. O intente invocar la acción a través de `curl`:
+Intente abrir [https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello?name=Jane](https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello?name=Jane) en su navegador web. O intente invocar la acción a través de `curl`:
 ```
-curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.http?name=Jane
+curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello?name=Jane
 ```
 {: pre}
 
@@ -289,7 +288,7 @@ Generalmente se necesita una extensión de contenido cuando se invoca una acció
 
 ## Parámetros protegidos
 
-Los parámetros de la acción están protegidos y se tratan como inalterables. Los parámetros finalizan automáticamente cuando se habilitan las acciones web. 
+Los parámetros de la acción están protegidos y se tratan como inalterables. Los parámetros finalizan automáticamente cuando se habilitan las acciones web.
 
 ```
  wsk action create /guest/demo/hello hello.js \
@@ -301,7 +300,7 @@ El resultado de estos cambios es que `name` se vincula a `Jane` y no lo pueden m
 
 ## Inhabilitación de acciones de la web
 
-Para inhabilitar la invocación de una acción web mediante la API web (`https://openwhisk.ng.bluemix.net/api/v1/web/`), pase el valor `false` o `no` al distintivo `--web` cuando actualice una acción con la CLI. 
+Para inhabilitar la invocación de una acción web mediante la API web (`https://openwhisk.ng.bluemix.net/api/v1/web/`), pase el valor `false` o `no` al distintivo `--web` cuando actualice una acción con la CLI.
 
 ```
  wsk action update /guest/demo/hello hello.js --web false
@@ -347,7 +346,7 @@ Las acciones HTTP web sin procesar se habilitan asignando al distintivo `--web` 
 
 ### Inhabilitación del manejo de HTTP sin procesar
 
-La inhabilitación de HTTP sin procesar se consigue pasando el valor `false` o `no` al distintivo `--web`. 
+La inhabilitación de HTTP sin procesar se consigue pasando el valor `false` o `no` al distintivo `--web`.
 
 ```
  wsk update create /guest/demo/hello hello.js --web false
@@ -357,7 +356,7 @@ La inhabilitación de HTTP sin procesar se consigue pasando el valor `false` o `
 
 Si se utiliza el manejo de HTTP sin procesar, el contenido `__ow_body` se decodificará en Base64 cuando la solicitud content-type sea binaria.
 A continuación encontrará funciones que muestran cómo decodificar el contenido del cuerpo en Node, Python y Swift. Simplemente guarde el método que se muestra bajo el archivo, cree una nueva acción
-web HTTP sin procesar utilizando el artefacto guardado e invoque la acción web. 
+web HTTP sin procesar utilizando el artefacto guardado e invoque la acción web.
 
 #### Node
 
@@ -406,7 +405,7 @@ func main(args: [String:Any]) -> [String:Any] {
 ```
 {: codeblock}
 
-Como ejemplo, guarde la función Node como `decode.js` y ejecute los mandatos siguientes: 
+Como ejemplo, guarde la función Node como `decode.js` y ejecute los mandatos siguientes:
 ```
  wsk action create decode decode.js --web raw
 ```
