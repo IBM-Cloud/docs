@@ -62,7 +62,7 @@ En la tabla siguiente se proporciona un resumen de algunos de los elementos clav
 || Contiene uno o varios miembros del equipo. Cada usuario ya debe ser un miembro del equipo en la organización de su propiedad. A cada miembro del equipo se le puede otorgar uno o varios roles. |
 | Miembro de equipo   | Puede añadirse a una o varias organizaciones y espacios en distintas cuentas. |
 || Se le puede dar más de un rol en la misma organización, espacio, o ambos. | 
-{:caption="Table 1. Description of key elements" caption-side="top"}
+{:caption="Tabla 1. Descripción de elementos clave" caption-side="top"}
 
 ## Determinación de su entorno de {{site.data.keyword.Bluemix_notm}}
 {: #bpimplementation}

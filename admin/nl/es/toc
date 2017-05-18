@@ -1,7 +1,7 @@
 {: .toc}
-Cloud Foundry Apps  
+Apps de Cloud Foundry  
 
-    [Setting up your account](/docs/admin/adminpublic.html)
+    [Configuración de su cuenta](/docs/admin/adminpublic.html)
         adminpublic.md
         profile.md
         account.md
@@ -12,4 +12,3 @@ Cloud Foundry Apps
         apikeys.md
         patterns.md
         softlayerlink.md
-    
