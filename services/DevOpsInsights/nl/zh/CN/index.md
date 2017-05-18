@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-11"
+  years: 2016, 2017
+lastupdated: "2017-04-07"
 
 ---
 
@@ -12,48 +12,65 @@ lastupdated: "2016-11-11"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# {{site.data.keyword.DRA_short}} 入门（试验性）
+# DevOps Insights 入门 (Beta)
 {: #gettingstarted}
 
-使用 {{site.data.keyword.DRA_full}} 识别构建和部署的风险。
+{{site.data.keyword.DRA_full}} 将开发者、团队和部署分析应用于您最繁忙的 DevOps 项目。使用 DevOps Insights 可了解团队在多大程度上遵循 DevOps 和开发者实践，也可管理代码库中的风险，以及在 Continuous Delivery 项目中自动强制实施质量标准。
 {:shortdesc}
 
-{{site.data.keyword.DRA_short}} 聚集和分析单元测试、功能测试和代码覆盖工具的结果，以确定在部署过程中，您的代码是否满足指定检测点的预定义策略。如果您的代码不满足或超出策略，那么会暂停部署以防止发布有风险的更改。您可以使用 {{site.data.keyword.DRA_short}} 作为持续交付环境的安全网、作为随时间实现和提高质量标准的方法，以及作为帮助您了解项目运行状况的数据可视化工具。
+{{site.data.keyword.DRA_short}} 由多组功能构成：
 
-{{site.data.keyword.DRA_short}} 是试验性产品，按原样提供仅用于开发和试验。要使用 {{site.data.keyword.DRA_short}}，请将其添加到使用 {{site.data.keyword.deliverypipeline}} 的任何工具链中。
+   * Developer Insights 提供了一种探索项目开发成熟度的综合性方法。您可以识别易出错性高的文件，并可获取基于开发者实践的项目合规视图。
 
+
+   * Team Dynamics 使用社交编码分析来帮助您了解团队的协作程度以及如何改进团队工作。
+
+   * Deployment Risk 就像一张持续交付安全网。它分析单元测试、功能测试、应用程序扫描和代码覆盖工具在部署过程中指定检测点生成的结果，并阻止发布有风险的更改。
+
+   * Delivery Insights 显示部署统计信息、度量以及有关 IBM UrbanCode Deploy 安装的其他信息。例如，可以显示部署持续时间、成功次数和失败次数的图表，所有数据均按以逻辑方式分组的环境排序。请参阅[集成 DevOps Insights 与 IBM UrbanCode Deploy](/docs/services/DevOpsInsights/uc_insights_overview.html)。
+
+{{site.data.keyword.DRA_short}} 是 Bluemix 开放工具链目录中的一个集成。有关工具链的更多信息，请参阅[使用工具链](/docs/services/ContinuousDelivery/toolchains_working.html)。
+
+要使用 {{site.data.keyword.DRA_short}}，必须将其添加到工具链。许多工具链模板已经包含 {{site.data.keyword.DRA_short}}。另外，确保[将 DevOps Insights 作为服务添加到 {{site.data.keyword.Bluemix_notm}} 组织](/docs/services/reqnsi.html)，这样才能在 {{site.data.keyword.Bluemix_notm}}“仪表板”中查看有关 {{site.data.keyword.DRA_short}} 的信息，并访问包含 DevOps Insight 的某些工具链模板。  
+
+## 将 DevOps Insights 添加到工具链
 {: #catalog}
-要访问 {{site.data.keyword.DRA_short}} UI，请从现有工具链完成以下步骤：
 
-1. 单击**添加工具**按钮。
+{{site.data.keyword.DRA_short}} 是 {{site.data.keyword.contdelivery_short}} 的一部分。通过从工具集成目录中选择 {{site.data.keyword.DRA_short}}，可以将其添加到任何工具链。
 
-2. 单击 **{{site.data.keyword.DRA_short}}**
-。
+{{site.data.keyword.DRA_short}} 也是许多工具链模板的一部分。如果要通过包含 {{site.data.keyword.DRA_short}} 的模板创建工具链，请确保 {{site.data.keyword.DRA_short}} 设置为**高级**。然后，创建工具链，并跳至[使用 Insights](/docs/services/DevOpsInsights/index.html#using)。
 
-3. 单击**创建集成**。
+要将 {{site.data.keyword.DRA_short}} 添加到工具链，请执行以下操作：
 
-4. 单击 **{{site.data.keyword.DRA_short}}** 磁贴。
+1. 单击**添加工具**。
 
-5. 完成其余任务的设置：
+2. 单击 **{{site.data.keyword.DRA_short}}** 。
 
-	1. [配置 {{site.data.keyword.deliverypipeline}} 集成](./pipeline_integration.html)。
-	2. 运行管道并[复查 {{site.data.keyword.deliverypipeline}} 仪表板](./pipeline_decision_reports.html)。
-	3. 为要管理的 {{site.data.keyword.DRA_short}} [定义策略](./create_criteria.html)。
-	4. 再次运行管道以验证项目通过策略。
+3. 要将 {{site.data.keyword.DRA_short}} 的所有功能添加到工具链，请选择**高级**，并确保选中**启用 Developer Insights** 复选框。要仅添加 Deployment Risk，请选择**缺省项**。 
 
+4. 单击**创建集成**。
 
-# 相关链接
-{: #rellinks}
+现在，{{site.data.keyword.DRA_short}} 在工具链的“概述”页面上可用。
 
-## 教程和样本
-{: #samples}
+## 使用 DevOps Insights
+{: #using}
 
-* [使用 Analytics 建议成功部署的可能性](https://www.ibm.com/devops/method/content/deliver/tool_deployment_risk_analytics/){:new_window}
+如果工具链包含 GitHub、GitLab 或 JIRA，那么在一些初始数据收集和分析后，{{site.data.keyword.DRA_short}} 会自动提供有关您代码库和团队的信息。如果工具链不包含其中任何集成，请添加其中一个集成，然后执行以下步骤：
 
-## 相关链接
-{: #general}
+1. 在工具链的“概述”页面中，单击 **{{site.data.keyword.DRA_short}}**。
 
-* [工具链入门](https://new-console.ng.bluemix.net/docs/toolchains/toolchains_overview.html){:new_window}
-* [Delivery Pipeline 入门](https://new-console.ng.bluemix.net/docs/services/DeliveryPipeline/index.html){:new_window}
-* [IBM Bluemix 价格表](https://new-console.ng.bluemix.net/pricing/){:new_window}
-* [IBMBluemix 先决条件](https://developer.ibm.com/bluemix/support/?cm_mc_uid=96503159749414585876298&cm_mc_sid_50200000=1462802909#prereqs){:new_window}
+2. 在左侧导航中，单击 **Team Dynamics** 或 **Developer Insights**，然后选择数据类别。
+
+3. 通过查看该数据类别中的仪表板，探索项目数据。如果要了解有关图或可使用图中信息执行哪些操作的更多信息，请单击**信息**或**指导**。
+
+探索 Team Dynamics 和 Developer Insights 后，请[配置 Deployment Risk](/docs/services/DevOpsInsights/insights_risk.html) 以帮助您强制实施代码质量。Deployment Risk 与 {{site.data.keyword.contdelivery_short}} Pipeline和 Jenkins 兼容。   
+
+缺省情况下，{{site.data.keyword.DRA_short}} 不包含 Developer Insights 或 Team Dynamics。要在配置工具链后将这些功能添加到工具链，请执行以下操作：
+
+1. 转至工具链的“概述”页面。
+2. 在 {{site.data.keyword.DRA_short}} 卡上，单击**操作**菜单。
+3. 单击**配置**。
+4. 对于类型，选择**高级**并选中相应复选框。
+5. 单击**保存集成**。
+
+保存配置后，Developer Insights 和 Team Dynamics 会自动扫描存储库和问题跟踪系统。
