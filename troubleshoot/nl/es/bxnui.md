@@ -194,7 +194,7 @@ Vuelva a intentarlo más tarde. Si vuelve a ver este mensaje, vaya a la [página
 ## BXNUI0039E
 **Mensaje**: Las asociaciones de ruta para el dominio '{0}' se deben suprimir. 
 
-En la página Visión general de la aplicación, pulse el desplegable **Rutas y dominios** y seleccione **Editar rutas**.
+En la página Visión general de la app, pulse el desplegable **Rutas y dominios** y seleccione **Editar rutas**.
 
 ## BXNUI0040E
 **Mensaje**: Los enlaces de servicios no se han recuperado porque se ha producido un problema al ponerse en contacto con Cloud Foundry. 
@@ -1049,7 +1049,7 @@ del contenedor modelo no está accesible.
 Vaya a [Soporte de IBM Bluemix](http://ibm.biz/bluemixsupport){: new_window}.
 
 ## BXNUI2040E
-**Mensaje**: Los metadatos para el Id. del iniciador, "{0}", no se han podido registrar. 
+**Mensaje**: Los metadatos para el ID del iniciador, "{0}", no se han podido registrar. 
 
 Vaya a [Soporte de IBM Bluemix](http://ibm.biz/bluemixsupport){: new_window}.
 
