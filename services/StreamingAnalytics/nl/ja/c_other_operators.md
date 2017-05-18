@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-04-13"
 
 ---
 
-<!-- Attribute definitions --> 
+<!-- Attribute definitions -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -16,7 +16,7 @@ lastupdated: "2017-02-09"
 #その他の演算子
 {: #c_other_operators}
 
-その他の演算子 (ユーザー独自のニーズのために開発されたツールキットの演算子を含む) も、 {{site.data.keyword.streaminganalyticsshort}} と互換性がある場合があります。
+その他の演算子 (ユーザー独自のニーズのために開発されたツールキットの演算子を含む) も、{{site.data.keyword.streaminganalyticsshort}} と互換性がある場合があります。
 {:shortdesc}
 
 {{site.data.keyword.streaminganalyticsshort}} と互換性があるためには、ツールキットは以下の基準を満たしている必要があります。

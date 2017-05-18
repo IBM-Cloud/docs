@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//IBM//DTD DITA IBM Map//EN"
+ "ibm-map.dtd">
+
+
+<map xml:lang="ja-jp">
+	<title>Streaming Analytics の概説</title>
+	
+	<!--About information-->
+	
+	<topicref href="index.html#gettingstarted" navtitle="Streaming Analytics" format="html" scope="peer">
+		<topicref href="index.html#gettingstarted" navtitle="開始" format="html" scope="peer"/>
+		<topicref href="StreamingAnalytics.html#about" navtitle="概要" format="html" scope="peer" chunk="to-content">
+			<topicref href="r_integrating_cloudant_rest.html#tutorials" format="html" navtitle="他のサービスとの統合" scope="peer"/>
+			<topicref href="c_streams_console.html#console" navtitle="Streaming Analytics コンソール" format="html" scope="peer"/>
+			<topicref href="r_service_dashboard.html#dashboard" navtitle="サービス・ダッシュボード" format="html" scope="peer"/>
+			<topicref href="c_ha.html#c_ha" navtitle="Streaming Analytics の高可用性" format="html" scope="peer"/>
+		</topicref>
+		
+		<!--Starter applications-->
+		<topicref href="c_starterapps.html#starterapps" navtitle="スターター・アプリケーションの使用" format="html" scope="peer" chunk="to-content">
+			<topicref href="t_starter_app_deploy.html#starterapps_deploy" format="html" scope="peer" navtitle="スターター・アプリケーションのデプロイ">
+			</topicref>
+		</topicref>
+		
+		<!--Deploying and developing-->
+		<topicref href="c_getting_app_bluemix.html#c_getting_app_bluemix" format="html" scope="peer" navtitle="アプリケーションのデプロイおよび開発" chunk="to-content">
+<topicref href="t_deploytocloud.html#t_deploytocloud" format="html"
+navtitle="クラウドへのアプリケーションのデプロイ" scope="peer"/>
+			<topicref href="t_develop_apps_python.html#t_develop_apps_python" format="html"
+navtitle="Python アプリケーションの開発" scope="peer"/>
+			<topicref href="c_beta_adapters.html#c_beta_adapters" navtitle="サポートされるオペレーター" format="html" scope="peer">
+				<topicref href="c_compatible_adapters.html#c_compatible_adapters" navtitle="互換性のあるアダプター" format="html" scope="peer"/>
+				<topicref href="c_analytics_utilities.html#c_analytics_utilities" navtitle="互換性のある分析およびユーティリティー" format="html" scope="peer"/>
+				<topicref href="c_other_operators.html#c_other_operators" navtitle="その他の演算子" format="html" scope="peer"/>
+			</topicref>
+			<topicref navtitle="開発ツール" href="c_beta_tooling.html#c_beta_tooling" format="html" scope="peer"/>
+			<topicref href="r_vcap_services.html#vcap_services" navtitle="VCAP_SERVICES の情報" format="html" scope="peer"/>
+		</topicref>
+
+		<!--REST API docs-->
+		<topicref href="https://console.ng.bluemix.net/apidocs/220" format="html" navtitle="Streaming Analytics REST API" scope="external"/>
+
+		<!--Troubleshooting-->
+		<topicref href="ts_StreamingAnalytics.html#ts_StreamingAnalytics" format="html" navtitle="トラブルシューティング" scope="peer">
+		</topicref>
+
+		<!--Related Links-->
+		<topicref href="related_links.html#related_links" format="html" navtitle="関連リンク" scope="peer">
+		</topicref>
+	</topicref>
+	
+</map>
+
