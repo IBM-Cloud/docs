@@ -2,18 +2,18 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-04-13"
 
 ---
 
-<!-- Attribute definitions --> 
+<!-- Attribute definitions -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
 
-#{{site.data.keyword.streaminganalyticsshort}} 콘솔
+# {{site.data.keyword.streaminganalyticsshort}} 콘솔
 {: #console}
 
 {{site.data.keyword.streaminganalyticsshort}} 콘솔에서 {{site.data.keyword.streamsshort}} 애플리케이션을 {{site.data.keyword.streaminganalyticsshort}} 서비스 인스턴스에 직접 제출할 수 있습니다.
@@ -28,3 +28,5 @@ lastupdated: "2017-02-09"
 * 사용자가 정의한 환경 변수에 따라 인스턴스 로그를 보기
 
 서비스 대시보드에서 {{site.data.keyword.streaminganalyticsshort}} 콘솔에 액세스할 수 있습니다. 
+
+<!--The {{site.data.keyword.streaminganalyticsshort}} console is translated into the following languages: Brazilian Portuguese, French, German, Italian, Japanese, Korean, Simplified Chinese, Spanish, Traditional Chinese. Change the language setting in your browser to view the console in your preferred language. -->
