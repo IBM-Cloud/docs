@@ -223,7 +223,7 @@ total es su cantidad multiplicado por el precio unitario de dicho nivel. Por eje
 | Nivel 3: 2001 - 3000                  |   $0,75 USD                       |
 | Nivel 4: 3001 - 4000           |      $0,60 USD                    |
 |Nivel 5: &gt; 4000 | $0,40 USD | 
-{:caption="Table 1. Simple tier pricing table" caption-side="top"}
+{:caption="Tabla 1. Tabla de preciso de nivel sencillo" caption-side="top"}
 
 En la tabla siguiente se muestra lo que
 se pagaría con un plan basado en un modelo de precios de nivel sencillo:
@@ -235,7 +235,7 @@ se pagaría con un plan basado en un modelo de precios de nivel sencillo:
 |2500 |	2500 × 0,75 = 1875 |	$1875 USD|
 |... |	... |	...|
 |5200 |	5200 × 0,40 = 2080 |$2080 USD|
-{:caption="Table 2. Charge calculation by using the simple tier pricing model" caption-side="top"}
+{:caption="Tabla 2. Cálculo de cargos usando el modelo de precios del nivel sencillo " caption-side="top"}
 
 ####Nivel graduado
 {: #graduated_tier}
@@ -252,7 +252,7 @@ de dicho nivel. Por ejemplo:
 |    Nivel 3: 2001 - 3000 |	$0,75 USD |
 |    Nivel 4: 3001 - 4000 |	$0,60 USD |
 |    Nivel 5: &gt; 4000 |	$0,40 USD |
-{:caption="Table 3. Graduated tier pricing table" caption-side="top"}
+{:caption="Tabla 3. Tabla de precios del nivel graduado " caption-side="top"}
 
 En la tabla siguiente se muestra lo que
 se pagaría con un plan basado en un modelo de precios de nivel graduado:
@@ -264,7 +264,7 @@ se pagaría con un plan basado en un modelo de precios de nivel graduado:
 |2500 |	(1000 × 1 (precio unitario para Nivel 1)) + (1000 × 0,90 (precio unitario para Nivel 2)) + (500 × 0,75 (precio unitario para Nivel 3)) = 2275 |	$2275 USD |
 |... |	... |	...|
 |5200 |	(1000 × 1 (precio unitario para Nivel 1)) + (1000 × 0,90 (precio unitario para Nivel 2)) + (1000 × 0,75 (precio unitario para Nivel 3)) + (1000 × 0,60 (precio unitario para Nivel 4)) + (1200 × 0,40 (precio unitario para Nivel 5)) = 3730 |	$3730 USD|
-{:caption="Table 4. Charge calculation by using the graduated tier pricing model" caption-side="top"}
+{:caption="Tabla 4. Cálculo de cargos usando el modelo de precios del nivel graduado  " caption-side="top"}
 
 ####Nivel Bloque
 {: #block_tier}
@@ -281,7 +281,7 @@ sucesivo proporciona una tasa menor entre precio y cantidad. Por ejemplo:
 | Nivel 3: &lt;= 3000 |	$2800 USD|
 | Nivel 4: &lt;= 4000 |	$3500 USD|
 | Nivel 5: &lt;= 10000 |	$5000 USD|
-{:caption="Table 5. Block tier pricing table" caption-side="top"}
+{:caption="Tabla 5. Tabla de precios del nivel por bloques " caption-side="top"}
 
 En la tabla siguiente se muestra lo que
 se pagaría con un plan basado en un modelo de precios de nivel por bloque:
@@ -292,7 +292,7 @@ se pagaría con un plan basado en un modelo de precios de nivel por bloque:
 |1500 |	El número de elementos cae en el Nivel 2, por lo que el precio total es $1900 USD. |	$1900 USD|
 |... |	... |	...|
 |5200 |	El número de elementos cae en el Nivel 5, por lo que el precio total es $5000 USD. |	$5000 USD|
-{:caption="Table 6. Charge calculation by using the block tier pricing model" caption-side="top"}
+{:caption="Tabla 6. Cálculo de cargos usando el modelo de precios del nivel por bloque " caption-side="top"}
 
 ##Cómo estimar sus costes
 {: #cost}
@@ -343,7 +343,7 @@ Para dar un ejemplo sencillo, suponga que los precios en la tabla siguiente no f
 |Memoria caché de datos - Estándar |	5 GB de memoria caché y una réplica |	155,00 USD/instancia |
 |Memoria caché de datos - Premium |	25 GB de memoria caché y una réplica |	505,00 USD/instancia|
 |IBM Cloudant® NoSQL DB para {{site.data.keyword.Bluemix_notm}} |	2 GB de almacenamiento gratuito de datos<br/>50.000 llamadas de API ligeras gratuitas al mes<br/>10.000 llamadas de API pesadas gratuitas al mes | 1,00 USD/GB<br/>0,03 USD/1000 llamadas de API ligeras<br/>0,15 USD/1000 llamadas de API pesadas |
-{:caption="Table 7. Pricing sheet" caption-side="top"}
+{:caption="Tabla 7. Hoja de precios " caption-side="top"}
 
 ###Cálculo del precio de la app
 
@@ -404,7 +404,7 @@ Aunque el dólar estadounidense (USD) se utiliza en los ejemplos de precios, tam
 |SEK |	  Corona sueca|
 |USD |    Dólar estadounidense|
 |ZAR |	  Rand sudafricano|
-{:caption="Table 8. Supported currencies" caption-side="top"}
+{:caption="Tabla 8. Monedas soportadas" caption-side="top"}
 
 **Nota:** Si ha enlazado las cuentas de {{site.data.keyword.Bluemix_notm}} y SoftLayer, la única factura que recibirá estará en dólares de Estados Unidos (USD).  
 
@@ -454,7 +454,7 @@ y busque la app a la que está vinculado el servicio. En el menú de la app, sel
 |Presence Insights 	|Si tiene un plan Lite y supera el permitido gratis, se mostrará un mensaje 403 o se registra para indicar que ya no tiene autorización, y su instancia de servicio se inhabilita. Además, las llamadas POST
 REST API se rechazan con la respuesta 403.<br/><br/>Si su servicio está inhabilitado porque ha excedido el periodo de permiso gratuito, puede actualizar de un plan Lite a un plan de pago. Su servicio se vuelve a habilitar en 2 horas.<br/><br/>Si tiene un plan de pago, puede reducirlo al plan Lite, siempre que su uso permanezca dentro de lo permitido en el
 plan Lite para sucesos y almacenamiento total.<br/><br/>Cuando actualiza o reduce su plan, no necesita volver a transferir o reiniciar sus apps.|
-{:caption="Table 9. Next steps for changing your plan" caption-side="top"}
+{:caption="Tabla 9. Pasos siguientes para cambiar su plan" caption-side="top"}
 
 ###Cómo cambiar el plan por medio de la interfaz de línea de mandatos
 
