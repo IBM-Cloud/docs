@@ -1,5 +1,5 @@
 {
-  "id": "homepage",
+  "id": "página de inicio",
 	"items": [{
     "id": "docs_homepage_runtimes",
     "title": "Empiece desplegando la primera app",
@@ -66,7 +66,7 @@
 	}, {
 		"title": "Disponibilidad del servicio",
 		"description": "Obtenga información sobre los tipos de servicio y su disponibilidad.",
-		"href": "services/index.html"
+		"href": "services/services_region.html"
 	}, {
 		"title": "Gestión de apps",
 		"description": "Utilice el panel de control en la interfaz de usuario de Bluemix para ver y gestionar las apps y los servicios.",
@@ -77,6 +77,9 @@
 		"description": "Seguir el flujo de datos y uso de aplicaciones para comprender mejor su despliegue.",
 		"img": "homepage/images/monitor_log.svg",
 		"href": "monitor_log/monitoringandlogging.html"
+	}, {
+		"title": "Gestión de API",
+		"href": "apis/management/index.html"
 	}, {
 		"title": "Seguridad de Bluemix",
 		"description": "Aprender cómo Bluemix proporciona seguridad funcional, de infraestructura, operativa y física.",
