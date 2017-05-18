@@ -2,18 +2,18 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-04-13"
 
 ---
 
-<!-- Attribute definitions --> 
+<!-- Attribute definitions -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
 
-#Credenziali del servizio e variabile di ambiente VCAP_SERVICES
+# Credenziali del servizio e variabile di ambiente VCAP_SERVICES
 {: #vcap_services}
 
 Le credenziali del servizio {{site.data.keyword.streaminganalyticsshort}}
@@ -44,6 +44,7 @@ e la variabile di ambiente VCAP_SERVICES includono informazioni come sono presen
       "plan": "Standard",
       "credentials": {
         "status_path": "/jax-rs/streams/status/service_instances/9e86b8e6-f606-4a1a-9800-26b96d2bc923/service_bindings/83c9d52e-3069-46bf-a1e3-655cf95fb627",
+        "size_path": "/jax-rs/streams/size/service_instances/0fb17393-90eb-4066-96b6-df1ac9860743/service_bindings/b37b89df-b0d7-464e-b7d9-3db607a26550",
         "start_path": "/jax-rs/streams/start/service_instances/9e86b8e6-f606-4a1a-9800-26b96d2bc923/service_bindings/83c9d52e-3069-46bf-a1e3-655cf95fb627",
         "stop_path": "/jax-rs/streams/stop/service_instances/9e86b8e6-f606-4a1a-9800-26b96d2bc923/service_bindings/83c9d52e-3069-46bf-a1e3-655cf95fb627",
         "resources_path": "/jax-rs/resources/service_instances/9e86b8e6-f606-4a1a-9800-26b96d2bc923/service_bindings/83c9d52e-3069-46bf-a1e3-655cf95fb627",
@@ -59,4 +60,4 @@ e la variabile di ambiente VCAP_SERVICES includono informazioni come sono presen
 }	  
 </code></pre>
 
-Per ulteriori informazioni sull'API REST, vedi la [Documentazione API REST {{site.data.keyword.streaminganalyticsshort}}](https://console.ng.bluemix.net/apidocs/220). 
+Per ulteriori informazioni sull'API REST, vedi la [Documentazione API REST {{site.data.keyword.streaminganalyticsshort}}](https://console.ng.bluemix.net/apidocs/220).
