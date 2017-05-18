@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-04-13"
 
 ---
 
-<!-- Attribute definitions --> 
+<!-- Attribute definitions -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -26,7 +26,7 @@ lastupdated: "2017-02-09"
   </tr>
   <tr>
     <td colspan="3">Event Detection 應用程式是透過 <a href="https://console.ng.bluemix.net/catalog/starters/sdk-for-nodejs/?cm_mmc=dw-_-bluemix-_-ba-bluemix-detect-complex-events-from-data-stream-trs-_-article">{{site.data.keyword.sdk4node}}</a> 運行環境實作。
-此應用程式提供簡單的 Web 使用者介面，來顯示分析的狀態和結果。Node.js 應用程式已連結至 {{site.data.keyword.streaminganalyticsshort}} 服務實例。此應用程式透過 {{site.data.keyword.streaminganalyticsshort}} REST API 來控制服務。<p>您可以執行入門範本應用程式，而不需要進行修改。如果您要進一步實驗服務，也可以修改程式碼，並將變更推送回 {{site.data.keyword.Bluemix_short}} 環境。</p> 
+此應用程式提供簡單的 Web 使用者介面，來顯示分析的狀態和結果。Node.js 應用程式已連結至 {{site.data.keyword.streaminganalyticsshort}} 服務實例。此應用程式透過 {{site.data.keyword.streaminganalyticsshort}} REST API 來控制服務。<p>您可以執行入門範本應用程式，而不需要進行修改。如果您要進一步實驗服務，也可以修改程式碼，並將變更推送回 {{site.data.keyword.Bluemix_short}} 環境。</p>
 </td>
   </tr>
   <tr>
@@ -35,6 +35,8 @@ lastupdated: "2017-02-09"
     <td><a href="https://hub.jazz.net/git/streamscloud/EventDetection/" target="_blank">下載</a></td>
   </tr>
 </table>
+
+*表 1. Event Detection 範例應用程式*
 
 <table summary="此表格的第一列說明 New York Traffic 範例應用程式。表格第二列包含：
 1. 在第一欄中，如何部署 New York Traffic 範例應用程式的指示鏈結。2. 在第二欄中，如何使用 New York Traffic 範例應用程式的指導教學鏈結。3. 在第三欄中，直接下載 New York Traffic 範例應用程式的鏈結。">
@@ -51,3 +53,5 @@ lastupdated: "2017-02-09"
     <td><a href="https://hub.jazz.net/git/streamscloud/NYCTraffic/" target="_blank">下載</a></td>
   </tr>
 </table>
+
+*表 2. NYC Traffic 範例應用程式*
