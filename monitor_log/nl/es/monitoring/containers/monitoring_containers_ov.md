@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-08"
+lastupdated: "2017-03-27"
 
 ---
 
@@ -36,14 +36,14 @@ Puede iniciar Grafana desde la IU de {{site.data.keyword.Bluemix_notm}} o direct
 
 La información de contabilidad de grupos y los convenios de Docker sirven como mecanismo básico para recopilar datos de supervisión.
 
-**Retención de métricas**
+## Retención de métricas
 
 Se recopila hasta un punto de datos por minuto. Las métricas de contenedor que no se hayan grabado en
-un plazo de 7 días se suprimirán. 
+un plazo de 7 días se suprimirán.
     
-**Ordenación de métricas**
+## Ordenación de métricas
 
-Los datos se muestran y ordenan según el ID del contenedor.  
+Los datos se muestran y ordenan según el ID del contenedor. 
 
-Desde la línea de mandatos, puede ejecutar el mandato `cf ic ps` para ver una lista de los ID de contenedor de los contenedores del registro de imágenes privado de {{site.data.keyword.Bluemix_notm}}. 
+Desde la línea de mandatos, puede ejecutar el mandato `cf ic ps` para ver una lista de los ID de contenedor de los contenedores del registro de imágenes privado de {{site.data.keyword.Bluemix_notm}}.
 
