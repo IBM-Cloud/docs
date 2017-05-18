@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-08-25"
+lastupdated: "2017-04-25"
 
 ---
 
@@ -32,17 +32,17 @@ Para crear y utilizar un dominio personalizado en {{site.data.keyword.Bluemix_no
 
   1. Cree un dominio personalizado para la organización.
 
-	1. Vaya al icono **{{site.data.keyword.avatar}}** ![icono Avatar](../icons/i-avatar-icon.svg) &gt; **Gestionar organizaciones** &gt; **Ver detalles** de la organización &gt; **Editar organización** &gt; **Dominios**.
+	1. Vaya a **Gestionar** &gt; **Cuenta** &gt; **Organizaciones** &gt; **Ver detalles** para su organización. A continuación, pulse **Editar organización** &gt; **Dominios**.
 
-	2. En el separador **DOMINIOS**, **AÑADIR DOMINIO**, escriba el nombre del dominio personalizado y pulse **GUARDAR**.
+	2. En el separador **DOMINIOS**, pulse **AÑADIR DOMINIO** y escriba el nombre del dominio personalizado y pulse **GUARDAR**.
 
 	**Nota**: por ejemplo, puede utilizar `mycompany.com` para asociar la ruta `www.mycompany.com` a su app. También puede utilizar `example.mycompany.com` para asociar la ruta `www.example.mycompany.com` a su app.
 
   2. Añada la ruta con el dominio personalizado a una aplicación.
 
-    1. En la barra de menús, seleccione **Consola** en el menú desplegable y pulse la fila de la aplicación a la que desee añadir la ruta. Se muestra la página **Visión general**.
+    1. Pulse el icono **Menú** ![Icono Menú](../icons/icon_hamburger.svg) &gt; **Panel de control** y pulse la fila de la aplicación a la que desee añadir la ruta. Se muestra la página **Visión general**.
 
-	2. En el menú **Ver app**, seleccione **Editar rutas y acceso**.
+	2. Desde el menú **Rutas**, seleccione **Editar rutas**.
 
 	3. Pulse **Añadir ruta** y especifique la ruta que desea utilizar para la aplicación.
 	4. Pulse **Guardar**.
@@ -78,7 +78,7 @@ Para crear y utilizar un dominio personalizado en {{site.data.keyword.Bluemix_no
 
     *midominio*
 
-    	El nombre del dominio personalizado.
+    	El nombre de su dominio personalizado como, por ejemplo, `www.mydomain.mybluemix.net`.
 
     *nombre_host*
 
@@ -98,6 +98,7 @@ dominio del sistema {{site.data.keyword.Bluemix_notm}} en su servidor DNS regist
     * US-SOUTH: `secure.us-south.bluemix.net`
     * EU-GB: `secure.eu-gb.bluemix.net`
     * AU-SYD: `secure.au-syd.bluemix.net`
+    * EU-DE: `secure.eu-de.bluemix.net`
 
 En un navegador o interfaz de línea de mandatos, escriba el siguiente URL para acceder a la aplicación miapp:
 
