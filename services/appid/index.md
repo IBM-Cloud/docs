@@ -13,7 +13,7 @@ lastupdated: "2017-05-08"
 {: #gettingstarted}
 
 {{site.data.keyword.appid_full}} helps you to add authentication to your mobile and web apps and protects your back-end systems.
-{:shortdesc}
+{: shortdesc}
 
 **Note:** The {{site.data.keyword.appid_short_notm}} service was formerly known as {{site.data.keyword.amafull}}.
 
