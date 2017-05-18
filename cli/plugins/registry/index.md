@@ -26,7 +26,7 @@ The {{site.data.keyword.registrylong}} CLI is a plug-in to manage your registry 
  with the `bx login` command to generate a {{site.data.keyword.Bluemix_short}}
  access token and authenticate your session.
 
-To find out about how to use the {{site.data.keyword.registrylong}} CLI, see [IBM Bluemix Container Registry overvie](https://console.ng.bluemix.net/docs/services/Registry/registry_setup.html#registry_setup).
+To find out about how to use the {{site.data.keyword.registrylong}} CLI, see [IBM Bluemix Container Registry overview](https://console.ng.bluemix.net/docs/services/Registry/registry_setup.html#registry_setup).
 
 <table summary="Manage your Containers Registry">
 <caption>Table 1. Commands for managing {{site.data.keyword.registryshort}} on {{site.data.keyword.Bluemix_short}}
