@@ -1,24 +1,17 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-09"
+  years: 2016,2017
+lastupdated: "2017-04-27"
 ---
-<!-- Copyright info at top of file: REQUIRED
-    The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
-    It must be --- surrounded by 3 dashes ---
-    The value "years" can contain just one year or a two years separated by a comma. (years: 2014, 2016)
-    Indentation as per the previous template must be preserved.
--->
 
-<!-- Common attributes used in the template are defined as follows: -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Introdução ao {{site.data.keyword.composeForPostgreSQL}}
+# Introdução ao Compose for PostgreSQL
 {: #getting-started-with-compose-for-postgreSQL}
 
 O {{site.data.keyword.composeForPostgreSQL}} fornece um poderoso banco
@@ -49,8 +42,7 @@ serviço é provisionado. Os diversos valores de credenciais são listados na se
 
 2. Conecte-se ao seu serviço do {{site.data.keyword.composeForPostgreSQL}}.
 
-  Para conectar um app ao seu serviço, use as credenciais que são criadas com o
-serviço. O app de amostra demonstra como usar o Node.js para se conectar a um serviço do
+  Para conectar um app ao seu serviço, use as [credenciais](./credentials.html) que são criadas com o serviço. O app de amostra demonstra como usar o Node.js para se conectar a um serviço do
 {{site.data.keyword.composeForPostgreSQL}}.
 
   Faça download do app de amostra
@@ -58,37 +50,3 @@ serviço. O app de amostra demonstra como usar o Node.js para se conectar a um s
 e siga as instruções no arquivo leia-me. Em seguida, na página de detalhes do aplicativo
 no Bluemix, clique em **Visualizar APP** para visualizar o conteúdo da
 tabela de *exemplos*.
-
-## Credenciais disponíveis
-
-Campo de nome|Descrição
-----------|-----------
-`uri`|O URI a ser usado na conexão com o serviço. Inclui o esquema
-(`postgres:`), o nome do usuário administrativo e a senha, o nome do
-host do servidor, o número da porta à qual se conectar, o nome do banco de dados e
-"?ssl=true" para ativar conexões SSL.
-`uri_cli`|Uma linha de comando shell `psql` que se conecta à instância de banco de dados.
-`ca_certificate_base64`|Um certificado autoassinado que é usado para
-confirmar se um aplicativo está se conectando ao servidor apropriado. Isso é codificado
-em base64. É preciso decodificar
-a chave antes de usá-la, conforme mostrado no aplicativo de amostra.
-`deployment_id`|Um identificador interno para o serviço conforme criado
-no Compose.
-`db_type`|O tipo de banco de dados que é oferecido pelo serviço; nesse
-caso, `postgresql`.
-`name`|O nome da implementação do banco de dados.
-{: caption="Table 1. {{site.data.keyword.composeForPostgreSQL}} credentials" caption-side="top"}
-
-# Links Relacionados
-{: #rellinks}
-
-* [Compose](https://www.compose.com){:new_window}
-* [Artigos do Compose](https://www.compose.com/articles/){:new_window}
-
-## Tutoriais e amostras
-{: #samples}
-* [compose-postgresql-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-postgresql-helloworld-nodejs){:new_window}
-
-## Links Relacionados
-{: #general}
-* [Ajuda do Compose](https://help.compose.com/docs){:new_window}

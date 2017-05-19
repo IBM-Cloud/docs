@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-09"
+  years: 2016,2017
+lastupdated: "2017-04-27"
 ---
 
 {:new_window: target="_blank"}
@@ -27,33 +27,6 @@ Completa questa procedura per iniziare ad utilizzare {{site.data.keyword.compose
 
 2. Collega il tuo servizio {{site.data.keyword.composeForMongoDB}}.
 
-   Per collegare un'applicazione al tuo servizio, utilizza le credenziali create insieme al servizio. L'applicazione di esempio illustra come utilizzare Node.js per il collegamento a un servizio {{site.data.keyword.composeForMongoDB}}.
+   Per collegare un'applicazione al tuo servizio, utilizza le [credenziali](./credentials.html) create insieme al servizio. L'applicazione di esempio illustra come utilizzare Node.js per il collegamento a un servizio {{site.data.keyword.composeForMongoDB}}.
 
    Scarica l'applicazione di esempio [compose-mongodb-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-mongodb-helloworld-nodejs) e segui le istruzioni nel file readme. In seguito, nella pagina dei dettagli della tua applicazione in Bluemix, fai clic su **Visualizza applicazione**.
-
-
-## Credenziali disponibili
-
-Nome campo|Descrizione
-----------|-----------
-`uri`|L'URI da utilizzare durante il collegamento al servizio. `uri` include lo schema (`mongodb:`), il nome utente e la password amministratore, il nome host del server, il numero di porta a cui collegarsi, il nome del database e `?ssl=true` per abilitare le connessioni SSL.
-`uri_cli`|Una riga di comando shell `mongo` che esegue il collegamento all'istanza del database.
-`ca_certificate_base64`|Un certificato auto-firmato che viene utilizzato per confermare che un'applicazione sia collegata al server corretto. Il certificato si basa su codifica base64. Devi decodificare la chiave prima di utilizzarla, come mostrato nell'applicazione di esempio.
-`deployment_id`|Un identificativo interno per il servizio come creato in Compose.
-`db_type`|Il tipo di database offerto dal servizio: in questo caso, `mongodb`.
-`name`|Il nome di distribuzione del database.
-{: caption="Table 1. {{site.data.keyword.composeForMongoDB}} credentials" caption-side="top"}
-
-# Link correlati
-{: #rellinks}
-
-* [Compose](https://www.compose.com){:new_window}
-* [Compose Articles](https://www.compose.com/articles/){:new_window}
-
-## Esercitazioni ed esempi
-{: #samples}
-* [compose-mongodb-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-mongodb-helloworld-nodejs){:new_window}
-
-## Link correlati
-{: #general}
-* [Compose Help](https://help.compose.com/docs){:new_window}

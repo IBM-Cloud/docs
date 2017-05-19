@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-09"
+  years: 2016,2017
+lastupdated: "2017-04-27"
 ---
 
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2016-12-09"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Einführung in {{site.data.keyword.composeForEtcd}}
+# Einführung in Compose for etcd
 {: #getting-started-with-compose-for-etcd}
 
 "etcd" ist ein Schlüssel/Wert-Speicher mit den immer korrekten Daten, die Sie zum Koordinieren und Verwalten Ihres Server-Clusters für die Konfigurationsverwaltung für verteilte Server benötigen. "etcd" verwendet den RAFT-Datenkonsistenzalgorithmus zur Sicherstellung der Konsistenz in Ihrem Cluster. Er erzwingt die Reihenfolge der Operationen an den Daten, sodass jeder Knoten im Cluster auf demselben Weg zum selben Ergebnis kommt. {{site.data.keyword.composeForEtcd_full}} fügt automatische Sicherungen Ihrer Konfigurationsdaten durch, die in "etcd" gespeichert sind. Über eine intuitive Verwaltungsschnittstelle können Sie Ihre Bereitstellung mit Leichtigkeit überwachen, skalieren und verwalten.
@@ -27,31 +27,6 @@ Führen Sie zum Einstieg in {{site.data.keyword.composeForEtcd}} die folgenden S
 
 2. Stellen Sie eine Verbindung zu Ihrem {{site.data.keyword.composeForEtcd}}-Service her.
 
-Um eine App mit Ihrem Service zu verbinden, verwenden Sie die Berechtigungsnachweise, die zusammen mit dem Service erstellt wurden. Die Beispiel-App veranschaulicht die Verwendung von Node.js zur Verbindung mit einem {{site.data.keyword.composeForEtcd}}-Service.
+Zur Herstellung einer Verbindung von einer App zu Ihrem Service verwenden Sie die [Berechtigungsnachweise](./credentials.html), die zusammen mit dem Service erstellt werden. Die Beispiel-App veranschaulicht die Verwendung von Node.js zur Verbindung mit einem {{site.data.keyword.composeForEtcd}}-Service.
 
 Laden Sie die Beispiel-App [compose-etcd-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-etcd-helloworld-nodejs) herunter und befolgen Sie die Anweisungen in der Readme-Datei. Anschließend klicken Sie auf der Detailseite für die Anwendung in Bluemix auf **App anzeigen**, um den Inhalt von *examples* anzuzeigen.
-
-## Verfügbare Berechtigungsnachweise
-
-Feldname|Beschreibung
-----------|-----------
-`ca_certificate_base64`|Ein selbst signiertes Zertifikat, mit dem bestätigt wird, dass eine App eine Verbindung zum geeigneten Server herstellt. Das Zertifikat ist base64-codiert. Vor seiner Verwendung muss der Schlüssel decodiert werden, wie in der Beispiel-App gezeigt.
-`deployment_id`|Eine interne ID für den Service, wie in Compose erstellt.
-`db_type`|Der Datenbanktyp, der vom Service angeboten wird, in diesem Fall `etcd`.
-`name`|Der Name der Datenbankimplementierung.
-`uri`|Der URI, der bei der Verbindungsherstellung zum Service verwendet werden soll. `uri` enthält das Schema (`amqps:), Administrator-Benutzernamen und Kennwort, den Hostnamen des Servers, die Nummer des Ports, zu dem die Verbindung hergestellt werden soll, sowie den Namen des `virtuellen Hosts.
-{: caption="Table 1. {{site.data.keyword.composeForEtcd}} - Berechtigungsnachweise" caption-side="top"}
-
-# Zugehörige Links
-{: #rellinks}
-
-* [Compose](https://www.compose.com){:new_window}
-* [Compose-Artikel](https://www.compose.com/articles/){:new_window}
-
-## Lernprogramme und Beispiele
-{: #samples}
-* [compose-etcd-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-etcd-helloworld-nodejs){:new_window}
-
-## Zugehörige Links
-{: #general}
-* [Compose-Hilfe](https://help.compose.com/docs){:new_window}
