@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-11"
+lastupdated: "2017-05-19"
 
 ---
 
@@ -23,7 +23,7 @@ After you install the IBM Cloud DevOps plugin, you can configure your Jenkins pr
 
 The plugin provides post-build actions and CLIs to support the integration. {{site.data.keyword.DRA_short}} aggregates and analyzes the results from unit tests, functional tests, code coverage tools, static security code scans, and dynamic security code scans to determine whether your code meets predefined policies at gates in your deployment process. If your code does not meet or exceed a policy, the deployment is halted, preventing risky changes from being released. You can use {{site.data.keyword.DRA_short}} as a safety net for your continuous delivery environment, a way to implement and improve quality standards over time, and a data visualization tool to help you understand your project's health.
 
-This topic assumes that you are at least somewhat familiar with Jenkins Pipeline. If you are not, [see the Jenkins Pipeline documentation](https://jenkins.io/doc/book/pipeline/) before continuing.
+If you are familiar with Jenkins Pipeline, read on. Otherwise, [see the Jenkins Pipeline documentation](https://jenkins.io/doc/book/pipeline/) before you continue.
 
 ## Prerequisites
 {: #jenkins_prerequisites}
@@ -42,13 +42,13 @@ Before you can integrate {{site.data.keyword.DRA_short}} with a Jenkins project,
 ## Installing the plugin
 {: #jenkins_install}
 
-First, install the plugin on your Jenkins server. Open the server interface, and then:
+Install the plugin on your Jenkins server by opening the server interface and following these steps:
 
 1. Click **Manage Jenkins**.
 2. Click **Manage Plugins**. 
 3. Click the **Available** tab
 4. Filter for `IBM Cloud DevOps`. 
-5. Select IBM Cloud DevOps.
+5. Select **IBM Cloud DevOps**.
 6. Click **Download now and install after restart**. 
 
 The plugin is available after the server restarts.  
@@ -56,29 +56,29 @@ The plugin is available after the server restarts.
 ## Creating a pipeline
 {: #jenkinsfile_create}
 
-You define pipelines either in the Jenkins project configuration menu or in a Jenkinsfile in your repository. To proceed, create or open an existing script or Jenkinsfile to use with {{site.data.keyword.DRA_short}}. You can follow the [declarative](https://jenkins.io/doc/book/pipeline/syntax/#declarative-pipeline) or [scripted](https://jenkins.io/doc/book/pipeline/syntax/#scripted-pipeline) formats.
+You define pipelines either in the Jenkins project configuration menu or in a Jenkinsfile in your repository. To proceed, create or open a script or Jenkinsfile to use with {{site.data.keyword.DRA_short}}. You can follow the [declarative](https://jenkins.io/doc/book/pipeline/syntax/#declarative-pipeline) or [scripted](https://jenkins.io/doc/book/pipeline/syntax/#scripted-pipeline) formats.
 
 ## Exposing required environment variables
 
-Next, open the pipeline definition. 
+Open the pipeline definition. 
 
 In the definition, add the following environment variables. These variables are required for the pipeline to integrate with {{site.data.keyword.DRA_short}}.
 
 | Environment variable        | Definition    |
 | ----------------------------|---------------|
-| `IBM_CLOUD_DEVOPS_CREDS`    | Bluemix credentials that you define in Jenkins by using the `credentials` command. For example, `IBM_CLOUD_DEVOPS_CREDS = credentials('BM_CRED')`. Setting the variable with this command sets two additional environment variables automatically: `IBM_CLOUD_DEVOPS_CREDS_USR` and `IBM_CLOUD_DEVOPS_CREDS_PSW` for the user name and password, respectively.  |
+| `IBM_CLOUD_DEVOPS_CREDS`    | Bluemix credentials that you define in Jenkins by using the `credentials` command. For example, `IBM_CLOUD_DEVOPS_CREDS = credentials('BM_CRED')`. Setting the variable with this command sets two more environment variables automatically: `IBM_CLOUD_DEVOPS_CREDS_USR` and `IBM_CLOUD_DEVOPS_CREDS_PSW` for the user name and password.  |
 | `IBM_CLOUD_DEVOPS_ORG`      | The Bluemix organization that your toolchain belongs to.     |
 | `IBM_CLOUD_DEVOPS_APP_NAME` | The name of the application that your toolchain deploys.   |
 | `IBM_CLOUD_DEVOPS_TOOCLHAIN_ID` | The ID of your toolchain. Open the toolchain Overview and see the URL to determine the ID. The toolchain URL format is `https://console.ng.bluemix.net/devops/toolchains/[YOUR_TOOLCHAIN_ID]`.   |
 | `IBM_CLOUD_DEVOPS_WEBHOOKURL` | The webhook that you were provided when you added Jenkins to your toolchain.   |
 
-See the [Jenkins pipeline documentation](https://jenkins.io/doc/pipeline/tour/environment/#credentials-in-the-environment) for more information about the `credentials` command. 
+For more information about the `credentials` command, see the [Jenkins pipeline documentation](https://jenkins.io/doc/pipeline/tour/environment/#credentials-in-the-environment). 
 {: tip}
 
-If you are using the the scripted pipeline format, set your credentials with `withCredentials` and your environment with `withEnv` instead of `credentials` and `environment`, which are used in the example below. See [the Jenkins documentation](https://jenkins.io/doc/pipeline/steps/credentials-binding/) for more about `withCredentials`.
+If you are using the scripted pipeline format, set your credentials with `withCredentials` and your environment with `withEnv` instead of `credentials` and `environment`, which are used in the following example. For more information about `withCredentials`, see [the Jenkins documentation](https://jenkins.io/doc/pipeline/steps/credentials-binding/).
 {: tip} 
 
-These environment variables and credentials are used by the IBM Cloud DevOps plugin to interact with DevOps Insights. Here is an example of setting them in the declarative pipeline format. 
+These environment variables and credentials are used by the IBM Cloud DevOps plugin to interact with DevOps Insights. In this example, they are set in the declarative pipeline format. 
 
 ```
 environment {
@@ -99,7 +99,7 @@ The Cloud DevOps plugin adds four steps to Jenkins pipelines for you to use. Use
 * `publishDeployRecord`, which publishes deployment records to DevOps Insights
 * `evaluateGate`, which enforces DevOps Insights policies 
 
-Add these steps to your pipeline definition wherever you need them to run. For example, you might upload test results after running a test, and then evaluate those results at a gate after they are uploaded. 
+Add these steps to your pipeline definition wherever you need them to run. For example, you might upload test results after you run a test and then evaluate those results at a gate after they are uploaded. 
 
 ### Publishing build records
 
@@ -110,9 +110,9 @@ Publish build records with the `publishBuildRecord` step. This step requires fou
 | `gitBranch`    | The name of the Git Branch that the build uses.  |
 | `gitCommit`      | The Git commit ID that the build uses.    |
 | `gitRepo` | The URL of the Git repository.   |
-| `result` | The result of the build stage. The value should be `SUCCESS` or `FAIL`.   |
+| `result` | The result of the build stage. The value is `SUCCESS` or `FAIL`.   |
 
-Here are the parameters in an example command:
+This example shows these parameters in a command:
 
 ```
 publishBuildRecord gitBranch: "${GIT_MASTER}", gitCommit: "${GIT_COMMIT}", gitRepo: "https://github.com/username/reponame", result:"SUCCESS"
@@ -129,7 +129,7 @@ Publish build records with the `publishTestResult` step. This step requires two 
 | `type`    | The type of test result. The value of this must be `unittest` for unit tests, `fvt` for functional verification tests, or `code` for code coverage tests.  |
 | `fileLocation`      | The test result file's location.    |
 
-Here are the parameters in example commands. The first command publishes Mocha unit test results, and the second command publishes code coverage test results. 
+The following example shows these parameters in commands. The first command publishes Mocha unit test results. The second command publishes code coverage test results. 
 
 ```
 publishTestResult type:'unittest', fileLocation: './mochatest.json'
@@ -146,7 +146,7 @@ Publish deployment records with the `publishDeployRecord` step. This step requir
 | `result`      | The result of the build stage. The value should be `SUCCESS` or `FAIL`.    |
 | `appUrl`      | _Optional_: The URL used to access your application.    |
 
-Here are the parameters in example commands. The first command publishes the deployment record for a staging environment; the second command publishes the deployment record for a production environment.
+The following example shows these parameters in commands. The first command publishes the deployment record for a staging environment. The second command publishes the deployment record for a production environment.
 
 ```
 publishDeployRecord environment: "STAGING", appUrl: "http://staging-Weather-App.mybluemix.net", result:"SUCCESS"
@@ -157,14 +157,14 @@ publishDeployRecord environment: "PRODUCTION", appUrl: "http://Weather-App.myblu
 
 Add gates to your pipeline by using the `evaluateGate` command. Gates enforce DevOps Insights policies, which set test requirements for build promotion. 
 
-This step requires one parameters. It can also accept one optional parameter. 
+This step requires one parameter. It can also accept one optional parameter. 
 
 | Parameter        | Definition    |
 | ----------------------------|---------------|
 | `policy`    | The name of the policy that the gate implements. The policy's name is defined in DevOps Insights. |
 | `forceDecision`      | _Optional_: Whether or not the pipeline stops depending on the gate's decision. Set this parameter to `true` to stop the pipeline from running if the gate fails. Set it to `false` to allow the pipeline to continue after a gate failure. By default, the value is `false`.     |
 
-Here are the parameters in an example command. In this command, the pipeline will continue running regardless of the gate's decision. 
+The following example shows these parameters in a command. In this command, the pipeline continues to run regardless of the gate's decision. 
 
 ```
 evaluateGate policy: 'Weather App Policy', forceDecision: 'true'
@@ -174,7 +174,7 @@ evaluateGate policy: 'Weather App Policy', forceDecision: 'true'
 
 Send pipeline status to Bluemix toolchains by using the `notifyOTC` command. To learn more about integrating Jenkins with toolchains, [see the documentation](https://console.ng.bluemix.net/docs/services/ContinuousDelivery/toolchains_integrations.html#jenkins). You can disregard steps 6d through 6f, as they only apply to freeform Jenkins projects.
 
-This step requires two parameters and can take an additional optional one. 
+This step requires two parameters and can also take an optional one. 
 
 | Parameter        | Definition    |
 | ----------------------------|---------------|
@@ -182,9 +182,9 @@ This step requires two parameters and can take an additional optional one.
 | `status`    | The current pipeline stage's status. Using `SUCCESS`, `FAILURE`, or `ABORTED` will automatically trigger color highlighting in Slack.  |
 | `webhookUrl`      | _Optional_: The webhook URL that is shown on your toolchain's Jenkins tile. If you include this parameter, its value overrides that of the `IBM_CLOUD_DEVOPS_WEBHOOKURL` environment variable.   |
 
-Here are examples of using the `notifyOTC` step in both declarative and scripted pipeline defintions:
+The following examples illustrate how to use the `notifyOTC` step in both declarative and scripted pipeline definitions.
 
-#### Declarative Pipeline Example:
+#### Declarative pipeline
 ```
 stage('Deploy') {
     steps {
@@ -202,7 +202,7 @@ stage('Deploy') {
 }
 ```
 
-#### Scripted Pipeline Example:
+#### Scripted pipeline
 ```
 stage('Deploy') {
   try {
@@ -216,15 +216,15 @@ stage('Deploy') {
 }
 ```
 
-In both of the examples, note that the toolchain webhook URL is overrided only in case of failure. 
+In both of the examples, the toolchain webhook URL is overridden only in case of failure. 
 
 ## Ensuring traceability across toolchain integrations
 
-Configure your Jenkins environment to integrate with your Bluemix toolchain by following the instructions in [the Bluemix Docs](https://console.ng.bluemix.net/docs/services/ContinuousDelivery/toolchains_integrations.html#jenkins). You can disregard steps 6d through 6f, as they only apply to freeform Jenkins projects.
+Configure your Jenkins environment to integrate with your Bluemix toolchain by following the instructions in [the Bluemix Docs](https://console.ng.bluemix.net/docs/services/ContinuousDelivery/toolchains_integrations.html#jenkins). You can disregard steps 6d through 6f, as they apply only to freeform Jenkins projects.
 
-Integrating with a toolchain gives you end to end traeceability and deployment mapping. After you follow the integration instructions, add the command `cf icd --create-connection $IBM_CLOUD_DEVOPS_WEBHOOK_URL $CF_APP_NAME` after your deployment steps. This command connects your Jenkins integration to an app that is running on Bluemix. 
+Integrating with a toolchain gives you end to end traceability and deployment mapping. After you follow the integration instructions, add the command `cf icd --create-connection $IBM_CLOUD_DEVOPS_WEBHOOK_URL $CF_APP_NAME` after your deployment steps. This command connects your Jenkins integration to an app that is running on Bluemix. 
 
-Here is an example of a deployment step in full. Note that the last command is `cf icd --create-connection`. 
+This example shows a deployment step in full. The last command is `cf icd --create-connection`. 
 
 <pre>
 sh '''
@@ -239,11 +239,11 @@ sh '''
 '''
 </pre>
 
-As described in the Jenkins integration documentation, you must have the CloudFoundry CLI and CloudFoundry ICD plugins installed on your Jenkins server. You also need to log in to Bluemix from the server to connect with it.
+As described in the Jenkins integration documentation, the CloudFoundry CLI and CloudFoundry ICD plugins must be installed on your Jenkins server. You also need to log in to Bluemix from the server to connect with it.
 
-## An example declarative pipeline
+## Example of a declarative pipeline
 
-As an example, here is a complete pipeline defined as a declarative Jenkinsfile. 
+This example shows a complete pipeline that is defined as a declarative Jenkinsfile. 
 
 ```
 #!groovy
