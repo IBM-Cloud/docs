@@ -50,7 +50,7 @@ The Liberty tracing configuration can be adjusted for a running application dire
 
 For an application running in a Diego cell, it is also possible to change tracing configuration via CF CLI using the SSH feature. 
 
-But this requires the application pushed with a server.xml and the updateTrigger in server.xml needs to be set with value "polled", then the change to tracing specification in server.xml will be detected and applied by runtime environment. The server.xml change would be lost on a restage/restart and only be for 1 instance if it is a multi-instance application. see [Controlling Dynamic Updates](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_8.5.5/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html) for details. 
+But this requires the application pushed with a server.xml and the updateTrigger in server.xml needs to be set with value "polled", then the change to tracing specification in server.xml will be detected and applied by runtime environment. See [Controlling Dynamic Updates](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_8.5.5/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html) for details. 
 
 To change tracing configuration, see below steps:
    
@@ -68,7 +68,9 @@ To change tracing configuration, see below steps:
     ```
     {: codeblock}
 
-see [Liberty profile: Trace and logging](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html) for the details of the syntax of the trace specification.
+Note: The server.xml change would be lost on a restage/restart and only be for 1 instance if it is a multi-instance application.
+
+See [Liberty profile: Trace and logging](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html) for the details of the syntax of the trace specification.
 
 ### Diego: triggering dumps via SSH
 
