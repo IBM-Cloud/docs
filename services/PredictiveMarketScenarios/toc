@@ -1,0 +1,9 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="PredictiveMarketScenarios" audience="service" href="/docs/services/PredictiveMarketScenarios/index.html"}
+Predictive Market Scenarios
+
+    {: .navgroup id="learn"}
+    index.md
+    {: .navgroup-end}
