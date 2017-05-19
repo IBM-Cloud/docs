@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-09"
+  years: 2016,2017
+lastupdated: "2017-04-27"
 ---
 
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2016-12-09"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Introdução ao {{site.data.keyword.composeForEtcd}}
+# Introdução ao Compose for etcd
 {: #getting-started-with-compose-for-etcd}
 
 etcd é um armazenamento de valores de chave que contém os dados sempre corretos necessários para coordenar e gerenciar seu cluster de servidores para gerenciamento de
@@ -43,8 +43,7 @@ serviço é provisionado. Os diversos valores de credenciais são listados na se
 
 2. Conecte-se ao seu serviço do {{site.data.keyword.composeForEtcd}}.
 
-Para conectar um app ao seu serviço, use as credenciais que são criadas com o
-serviço. O app de amostra demonstra como usar o Node.js para se conectar a um serviço do
+Para conectar um app ao seu serviço, use as [credenciais](./credentials.html) que são criadas com o serviço. O app de amostra demonstra como usar o Node.js para se conectar a um serviço do
 {{site.data.keyword.composeForEtcd}}.
 
 Faça download do app de amostra
@@ -52,33 +51,3 @@ Faça download do app de amostra
 e siga as instruções no arquivo leia-me. Em seguida, na página de detalhes do aplicativo
 no Bluemix, clique em **Visualizar APP** para visualizar o conteúdo
 dos *exemplos*.
-
-## Credenciais disponíveis
-
-Campo de nome|Descrição
-----------|-----------
-`ca_certificate_base64`|Um certificado autoassinado que é usado para
-confirmar se um app está se conectando ao servidor apropriado. O certificado é codificado
-em base64. Deve-se decodificar a chave antes de usá-la, conforme mostrado no aplicativo de amostra.
-`deployment_id`|Um identificador interno para o serviço conforme criado
-no Compose.
-`db_type`|O tipo de banco de dados que é oferecido pelo serviço; nesse caso, `etcd`.
-`name`|O nome da implementação do banco de dados.
-`uri`|O URI a ser usado na conexão com o serviço. `uri`
-inclui o esquema (`amqps:), o nome do usuário administrativo e a senha, o nome do
-host do servidor, o número da porta à qual se conectar e o `nome do vhost.
-{: caption="Table 1. {{site.data.keyword.composeForEtcd}} credentials" caption-side="top"}
-
-# Links Relacionados
-{: #rellinks}
-
-* [Compose](https://www.compose.com){:new_window}
-* [Artigos do Compose](https://www.compose.com/articles/){:new_window}
-
-## Tutoriais e amostras
-{: #samples}
-* [compose-etcd-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-etcd-helloworld-nodejs){:new_window}
-
-## Links Relacionados
-{: #general}
-* [Ajuda do Compose](https://help.compose.com/docs){:new_window}

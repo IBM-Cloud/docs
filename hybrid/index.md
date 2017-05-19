@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-05-18"
 
 ---
 
@@ -190,6 +190,7 @@ An Organization Quota threshold notification includes only the organizations tha
 | {{region}} | Affected region | Maintenance update and incident |
 | {{status}} | Status of the update | Maintenance update |
 | {{type}} | Update or incident | Maintenance update and incident |
+| {{workitem}} | Work item number | Maintenance update and incident |
 {: caption="Table 7. Maintenance and incident payload section values" caption-side="top"}
 
 

@@ -14,7 +14,7 @@ lastupdated: "2017-05-08"
 
 # Adding {{site.data.keyword.appid_short_notm}} to an existing app
 
-You can use App ID with your existing application to authenticate and store profile information about your users.
+You can use {{site.data.keyword.appid_full}} with your existing application to authenticate and store profile information about your users.
 
 
 ## Prerequisites

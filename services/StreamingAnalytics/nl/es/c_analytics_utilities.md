@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-04-13"
 
 ---
 
-<!-- Attribute definitions --> 
+<!-- Attribute definitions -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -22,6 +22,7 @@ Los siguientes kits de herramientas y programas de utilidad de análisis son com
 {:shortdesc}
 
 ##SPSS Analytics Toolkit
+{: #spss notoc}
 
 El kit SPSS Analytics Toolkit contiene operadores de {{site.data.keyword.streamsshort}} que se integran con los productos SPSS
 Modeler y SPSS Collaboration and Deployment Services para implementar varios aspectos del análisis predictivo de SPSS
@@ -35,27 +36,29 @@ La tabla siguiente contiene los operadores que proporciona el kit de herramienta
 | ***Operadores compatibles*** |
 | ---------------------------|
 | `SPSSScoring` 	   		     |
-| `SPSSPublish`	     	 	     | 
+| `SPSSPublish`	     	 	     |
 | `SPSSRepository`			     |
 
 *Tabla 1. Operadores que son compatibles con el kit de herramientas de SPSS Analytics*
 
 
 ##Complex Event Processing Toolkit
+{: #cep notoc}
 
 Complex Event Processing Toolkit (com.ibm.streams.cep) proporciona el operador MatchRegex para llevar a cabo procesos de sucesos complejos.
 
 Para obtener más información, consulte [Operador MatchRegex](http://www.ibm.com/support/knowledgecenter/SSCRJU_4.2.0/com.ibm.streams.toolkits.doc/spldoc/dita/tk$com.ibm.streams.cep/op$com.ibm.streams.cep$MatchRegex.html?lang=en){:new_window} en la documentación del producto {{site.data.keyword.streamsshort}}.
 
-Complex Event Processing (CEP) utiliza patrones para detectar sucesos compuestos en secuencias de tuplas. Por ejemplo, se puede utilizar CEP para detectar patrones en los precios de la bolsa, patrones de rutas en aplicaciones de transporte o patrones de comportamiento de los usuarios en parámetros de comercio web. 
+Complex Event Processing (CEP) utiliza patrones para detectar sucesos compuestos en secuencias de tuplas. Por ejemplo, se puede utilizar CEP para detectar patrones en los precios de la bolsa, patrones de rutas en aplicaciones de transporte o patrones de comportamiento de los usuarios en parámetros de comercio web.
 
 ##TimeSeries Toolkit
+{: #timeseries notoc}
 
-Los operadores y funciones de TimeSeries Toolkit (com.ibm.streams.timeseries) condicionan, analizan y modelan datos de series de tiempo. 
+Los operadores y funciones de TimeSeries Toolkit (com.ibm.streams.timeseries) condicionan, analizan y modelan datos de series de tiempo.
 
 Una serie de datos es una secuencia de datos numéricos que representa el valor de un objeto o varios objetos a lo largo del tiempo. Por ejemplo, puede tener series de tiempo que contengan: el uso de electricidad mensual recopilado de medidores inteligentes, precios de la bolsa diarios y volúmenes de operaciones, registros ECG, sismógrafos o registros de rendimiento de red. Las series de tiempo tienen un orden temporal, que es la base de todos los algoritmos de análisis de series temporales.
 
-El kit de herramientas también proporciona un conjunto de funciones que se pueden ver para generar series de tiempo con finalidades de pruebas y validación. 
+El kit de herramientas también proporciona un conjunto de funciones que se pueden ver para generar series de tiempo con finalidades de pruebas y validación.
 
 La tabla siguiente contiene los operadores que proporciona el kit de herramientas de TimeSeries.
 
@@ -70,7 +73,7 @@ La tabla siguiente contiene los operadores que proporciona el kit de herramienta
 | `DWT2`     	 			         | 	`Normalize`		 		 	         |
 | `Distribution`      			 |	`PSAX`		 				           |
 | `FFT` 	   	 			         |	`RLSFilter`		 		        	 | 	
-| `FMPFilter`    	 		       |	`ReSample`		         			 | 
+| `FMPFilter`    	 		       |	`ReSample`		         			 |
 | `GAMLearner`		 	 	       |	`STD2`			           			 |
 | `GAMScorer` 	   			     |	`TSWindowing`	        	 		 |
 | `GMM`     	 			         | 	`VAR2`			 	          		 |
@@ -82,13 +85,14 @@ Para obtener una lista detallada de operadores de TimeSeries Toolkit compatibles
 Para obtener información sobre las restricciones del kit de herramientas, consulte [Restricciones de los kits de herramientas especializados de {{site.data.keyword.streamsshort}}](http://www.ibm.com/support/knowledgecenter/SSCRJU_4.2.0/com.ibm.streams.install.doc/doc/ibminfospherestreams-install-toolkit-restrictions.html){:new_window}.
 
 ##Geospatial Toolkit
+{: #geospatial notoc}
 
 Geospatial Toolkit (com.ibm.streams.geospatial) incluye operadores y funciones que facilitan el procesamiento y la indexación eficientes de datos de ubicación. Por ejemplo, con datos de ubicación GPS, puede rastrear el movimiento de entidades relacionadas con un área de interés o calcular relaciones espaciales entre distintas funciones globales.
 
 
 La tabla siguiente contiene los operadores que proporciona el kit de herramientas de Geospatial.
 
-  
+
 | ***Operadores compatibles*** | 						              		 |
 | ---------------------------| ------------------------------|
 | `GeoFence` 	   			       |	`OSMXMLGeometrySource`	 	   | 	 		
@@ -101,6 +105,7 @@ La tabla siguiente contiene los operadores que proporciona el kit de herramienta
 Para obtener más información, consulte [Operadores: com.ibm.streams.geospatial](http://www.ibm.com/support/knowledgecenter/SSCRJU_4.2.0/com.ibm.streams.toolkits.doc/spldoc/dita/tk$com.ibm.streams.geospatial/ix$Operator.html?lang=en){:new_window} en la documentación del producto {{site.data.keyword.streamsshort}}.
 
 ##Kit de herramientas de HDFS for {{site.data.keyword.Bluemix_short}}
+{: #hdfs notoc}
 
 El kit de herramientas HDFS for {{site.data.keyword.Bluemix_short}} (com.ibm.streamsx.hdfs.bluemix) es una versión especial del kit de herramientas HDFS que añade soporte para conectarse a IBM BigInsights for Apache Hadoop for {{site.data.keyword.Bluemix_short}}.
 
@@ -110,7 +115,7 @@ La tabla siguiente contiene los operadores que proporciona el kit de herramienta
 | ***Operadores compatibles*** |
 | ---------------------------|
 | `HDFS2FileSource` 	     	 |
-| `HDFS2FileSink`     	   	 | 
+| `HDFS2FileSink`     	   	 |
 | `HDFS2DirectoryScan`	  	 |
 
 *Tabla 4. Operadores que son compatibles con el kit de herramientas de HDFS*
@@ -118,8 +123,9 @@ La tabla siguiente contiene los operadores que proporciona el kit de herramienta
 Para obtener más información sobre cómo usar este kit de herramientas, consulte [Iniciación a {{site.data.keyword.streaminganalyticsshort}} y BigInsights en {{site.data.keyword.Bluemix_short}} utilizando HDFS](https://developer.ibm.com/bluemix/2016/02/26/streaming-analytics-and-biginsights-using-hdfs/){:new_window}.
 
 ##Kit de herramientas de JSON
+{: #json notoc}
 
-El kit de herramientas de JSON (com.ibm.streamsx.json) proporciona soporte de JSON para SPL y transformaciones estándares entre valores de SPL u objetos JSON. 
+El kit de herramientas de JSON (com.ibm.streamsx.json) proporciona soporte de JSON para SPL y transformaciones estándares entre valores de SPL u objetos JSON.
 
 La tabla siguiente contiene los operadores que proporciona el kit de herramientas de JSON.
 
@@ -127,7 +133,7 @@ La tabla siguiente contiene los operadores que proporciona el kit de herramienta
 | ***Operadores compatibles*** |
 | ---------------------------|
 | `JSONToTuple` 	   		     |
-| `TupleToJSON`      		     | 
+| `TupleToJSON`      		     |
 
 *Tabla 5. Operadores que son compatibles con el kit de herramientas de JSON*
 
@@ -135,12 +141,14 @@ La tabla siguiente contiene los operadores que proporciona el kit de herramienta
 Para obtener más información, consulte [com.ibm.streamsx.json](http://www.ibm.com/support/knowledgecenter/en/SSCRJU_4.2.0/com.ibm.streams.toolkits.doc/spldoc/dita/tk$com.ibm.streamsx.json/tk$com.ibm.streamsx.json.html){:new_window} en la documentación del producto {{site.data.keyword.streamsshort}}.
 
 ##Kit de herramientas de JDBC
+{: #jdbc notoc}
 
 El kit de herramientas de JDBC (com.ibm.streams.jdbc) permite a {{site.data.keyword.streaminganalyticsshort}} comunicarse con más servicios de base de datos de {{site.data.keyword.Bluemix_short}} como SQL Database, dashDB, etc.
 
 El kit de herramientas incluye el operador JDBCRun. Para obtener más información, consulte [Uso de {{site.data.keyword.streaminganalyticsshort}} con {{site.data.keyword.Bluemix_short}}](https://developer.ibm.com/bluemix/2016/01/26/streaming-analytics-with-jdbc-enabled-databases/){:new_window} con JDBC habilitado y [com.ibm.streamsx.jdbc](http://www.ibm.com/support/knowledgecenter/en/SSCRJU_4.2.0/com.ibm.streams.toolkits.doc/spldoc/dita/tk$com.ibm.streamsx.jdbc/tk$com.ibm.streamsx.jdbc.html){:new_window} en la documentación del producto {{site.data.keyword.streamsshort}}.
 
 ##R-project Toolkit
+{: #rproject notoc}
 
 R-project Toolkit (com.ibm.streams.rproject) incluye el operador RScript, que se puede utilizar para ejecutar mandatos R y aplicar algoritmos de minería de datos complejos para detectar patrones de interés en secuencias de datos.
 
@@ -148,12 +156,14 @@ Para obtener más información, consulte [Operador RScript](http://www.ibm.com/s
 
 
 ##Rules compiler
+{: #rulescompiler notoc}
 
-El kit de herramientas del Rules compiler (com.ibm.streams.rulescompiler) da soporte a la conversión de reglas empresariales escritas en ODM en SPL que se pueden utilizar en aplicaciones {{site.data.keyword.streamsshort}}.
+El kit de herramientas Rules compiler (com.ibm.streams.rulescompiler) da soporte a la conversión de reglas empresariales escritas en ODM en SPL que se pueden utilizar en aplicaciones {{site.data.keyword.streamsshort}}.
 
 Para obtener más información, consulte [Operadores: com.ibm.streams.rulescompiler](http://www.ibm.com/support/knowledgecenter/SSCRJU_4.2.0/com.ibm.streams.toolkits.doc/spldoc/dita/tk$com.ibm.streams.rulescompiler/ix$Operator.html){:new_window} en la documentación del producto {{site.data.keyword.streamsshort}}.
 
 ##Text Toolkit
+{: #text notoc}
 
 Text Toolkit (com.ibm.streams.text) incluye `TextExtract` y `SentimentExtractoroperator`, que extrae información de datos de texto.
 
@@ -162,6 +172,7 @@ Para obtener más información, consulte [Operador TextExtract](http://www.ibm.c
 Para obtener información sobre las restricciones del kit de herramientas, consulte [Restricciones de los kits de herramientas especializados de {{site.data.keyword.streamsshort}}](http://www.ibm.com/support/knowledgecenter/SSCRJU_4.2.0/com.ibm.streams.install.doc/doc/ibminfospherestreams-install-toolkit-restrictions.html){:new_window}.
 
 ##Mining Toolkit
+{: #mining notoc}
 
 Mining Toolkit (com.ibm.streams.mining) incluye operadores que se pueden utilizar para extraer secuencias de datos mediante la aplicación de modelos. La extracción de secuencias de datos para extraer información o inteligencia relevante es fundamental para la mayoría de aplicaciones de procesamiento de secuencias que van desde la detección de fraudes hasta la segmentación de clientes, pasando por la renovación o prevención de intrusión.
 
@@ -171,7 +182,7 @@ La tabla siguiente contiene los operadores que proporciona el kit de herramienta
 | ***Operadores compatibles*** |
 | ---------------------------|
 | `Asociaciones` 		      	 |
-| `Clasificación`       	 	 | 
+| `Clasificación`       	 	 |
 | `Agrupación en clúster`			       	 |
 | `Regresión`			       	 |
 
@@ -182,6 +193,7 @@ Para obtener más información, consulte [Operadores: com.ibm.streams.mining](ht
 Para obtener información sobre las restricciones del kit de herramientas, consulte [Restricciones de los kits de herramientas especializados de {{site.data.keyword.streamsshort}}](http://www.ibm.com/support/knowledgecenter/SSCRJU_4.2.0/com.ibm.streams.install.doc/doc/ibminfospherestreams-install-toolkit-restrictions.html){:new_window}.
 
 ##Telecommunications Event Data Analytics (TEDA) Toolkit
+{: #teda notoc}
 
 Telecommunications Event Data Analytics (TEDA) Toolkit (com.ibm.streams.teda) proporciona un conjunto de operadores genéricos que se utilizan en aplicaciones de telecomunicaciones y que también proporcionan una infraestructura de aplicación para configurar nuevas aplicaciones de archivo a archivo. Estas aplicaciones se basan en plantillas de código y soportan la personalización, el procesamiento paralelo configurable, el cierre estable de aplicaciones y el procesamiento fiable de archivos.
 
@@ -203,13 +215,14 @@ Para obtener más información, consulte [Operadores: com.ibm.streams.teda](http
 
 
 ##Kit de herramientas Topology
+{: #topology notoc}
 
 El kit de herramientas Topology ofrece soporte para crear aplicaciones {{site.data.keyword.streamsshort}} en los siguientes lenguajes de programación:
 
 * Python: la API de aplicaciones Python es un módulo que permite definir y ejecutar aplicaciones en modalidad continua implementadas en
 Python. Las aplicaciones utilizan código Python para procesar tuplas (objetos Python).
 * Java: la API de aplicaciones Java es una biblioteca que permite definir y ejecutar aplicaciones en modalidad continua implementadas en
-Java. 
+Java.
 * Soporte de Scala: la API de aplicación Java proporcionada da soporte a las aplicaciones escritas en Scala.
 * SPL: los operadores Publish y Subscribe ofrecen el mecanismo para intercambiar corrientes entre aplicaciones, independientemente del lenguaje de implementación del nivel. Los tipos SPL permiten el intercambio con aplicaciones implementadas en otros lenguajes.
 
@@ -219,7 +232,7 @@ La tabla siguiente contiene los operadores que proporciona el kit de herramienta
 | ***Operadores compatibles*** |
 | ---------------------------|
 | `FilteredSubscribe`      	 |
-| `Publish`     		      	 | 
+| `Publish`     		      	 |
 | `Subscribe`		        		 |
 
 *Tabla 8. Operadores que son compatibles con el kit de herramientas de Topology*

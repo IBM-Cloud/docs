@@ -1,24 +1,17 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-09"
+  years: 2016,2017
+lastupdated: "2017-04-27"
 ---
-<!-- Copyright info at top of file: REQUIRED
-    The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
-    It must be --- surrounded by 3 dashes ---
-    The value "years" can contain just one year or a two years separated by a comma. (years: 2014, 2016)
-    Indentation as per the previous template must be preserved.
--->
 
-<!-- Common attributes used in the template are defined as follows: -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Einführung in {{site.data.keyword.composeForPostgreSQL}}
+# Einführung in Compose for PostgreSQL
 {: #getting-started-with-compose-for-postgreSQL}
 
 {{site.data.keyword.composeForPostgreSQL}} bietet eine leistungsfähige objektbezogene Open-Source-Datenbank mit hoher Anpassbarkeit. Postgres ermöglicht die schnelle und leicht skalierbare Entwicklung. Die Entwicklung kann in einer Sprache erfolgen, mit der Sie vertraut sind, z. B. C/C++, Perl, Python, TCL/TK, Delphi/Kylix, VB, PHP, ASP oder Java. Sie erhalten eine mit vielen Funktionen ausgestattete Unternehmensdatenbank mit JSON-Unterstützung, mit der Sie das beste aus den zwei Welten SQL und NoSQL bekommen.
@@ -34,32 +27,6 @@ Führen Sie zum Einstieg in Compose for PostgreSQL die folgenden Schritte aus:
 
 2. Stellen Sie eine Verbindung zu Ihrem {{site.data.keyword.composeForPostgreSQL}}-Service her.
 
-  Um eine App mit Ihrem Service zu verbinden, verwenden Sie die Berechtigungsnachweise, die zusammen mit dem Service erstellt wurden. Die Beispiel-App veranschaulicht die Verwendung von Node.js zur Verbindung mit einem {{site.data.keyword.composeForPostgreSQL}}-Service.
+  Zur Herstellung einer Verbindung von einer App zu Ihrem Service verwenden Sie die [Berechtigungsnachweise](./credentials.html), die zusammen mit dem Service erstellt werden. Die Beispiel-App veranschaulicht die Verwendung von Node.js zur Verbindung mit einem {{site.data.keyword.composeForPostgreSQL}}-Service.
 
   Laden Sie die Beispiel-App [compose-postgresql-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-postgresql-helloworld-nodejs) herunter und befolgen Sie die Anweisungen in der Readme-Datei. Anschließend klicken Sie auf der Detailseite für die Anwendung in Bluemix auf **App anzeigen**, um den Inhalt der Tabelle *examples* anzuzeigen.
-
-## Verfügbare Berechtigungsnachweise
-
-Feldname|Beschreibung
-----------|-----------
-`uri`|Der URI, der bei der Verbindungsherstellung zum Service verwendet werden soll. Enthält das Schema (`postgres:`), Administrator-Benutzernamen und Kennwort, den Hostnamen des Servers, die Nummer des Ports, zu dem die Verbindung hergestellt werden soll, den Datenbanknamen sowie "?ssl=true" zur Ermöglichung von SSL-Verbindungen.
-`uri_cli`|Eine `psql`-Shellbefehlszeile, die eine Verbindung zur Datenbankinstanz herstellt.
-`ca_certificate_base64`|Ein selbst signiertes Zertifikat, mit dem bestätigt wird, dass eine Anwendung eine Verbindung zum geeigneten Server herstellt. Dieses ist base64-codiert. Vor seiner Verwendung muss es decodiert werden, wie in der Beispielanwendung gezeigt.
-`deployment_id`|Eine interne ID für den Service, wie in Compose erstellt.
-`db_type`|Der Datenbanktyp, der vom Service angeboten wird, in diesem Fall `postgresql`.
-`name`|Der Name der Datenbankimplementierung.
-{: caption="Table 1. {{site.data.keyword.composeForPostgreSQL}} - Berechtigungsnachweise" caption-side="top"}
-
-# Zugehörige Links
-{: #rellinks}
-
-* [Compose](https://www.compose.com){:new_window}
-* [Compose-Artikel](https://www.compose.com/articles/){:new_window}
-
-## Lernprogramme und Beispiele
-{: #samples}
-* [compose-postgresql-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-postgresql-helloworld-nodejs){:new_window}
-
-## Zugehörige Links
-{: #general}
-* [Compose-Hilfe](https://help.compose.com/docs){:new_window}

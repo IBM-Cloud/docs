@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-11"
+  years: 2016, 2017
+lastupdated: "2017-02-13"
 
 ---
 
@@ -56,12 +56,12 @@ La page **Build Verification** contient trois graphiques d'informations sur la s
 ## Affichage de rapports de décision    
 {: #DI_decision_reports}
 
-Après l'exécution d'un pipeline, {{site.data.keyword.DRA_short}} commence à collecter et à analyser les résultats de test correspondants pour établir une base de référence. Les données de chaque exécution ultérieure sont collectées et comparées aux résultats précédents. Des points de contrôle de décision utilisent ces données pour déterminer le moment auquel un déploiement doit être arrêté. 
+Après l'exécution d'un pipeline, {{site.data.keyword.DRA_short}} commence à collecter et à analyser les résultats de test correspondants pour établir une base de référence. Les données de chaque exécution ultérieure sont collectées et comparées aux résultats précédents. Des jalons de décision utilisent ces données pour déterminer le moment auquel un déploiement doit être arrêté. 
 
-Pour afficher le rapport de décision pour un point de contrôle du pipeline, procédez comme suit :
+Pour afficher le rapport de décision pour un jalon du pipeline, procédez comme suit :
 
-   1. A l'étape qui contient le point de contrôle à vérifier, cliquez sur **Afficher les journaux et l'historique**.
+   1. A l'étape qui contient le jalon à vérifier, cliquez sur **Afficher les journaux et l'historique**.
 
-   2. Dans la fenêtre de travaux de l'étape, cliquez sur le nom du point de contrôle.
+   2. Dans la fenêtre de travaux de l'étape, cliquez sur le nom du jalon.
 
    3. Dans la vue du journal, recherchez le message 'Check {{site.data.keyword.DRA_short}} report here' et cliquez sur le lien fourni pour ouvrir le rapport.

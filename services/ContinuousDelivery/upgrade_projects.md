@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-16"
+lastupdated: "2017-5-19"
 
 ---
 
@@ -16,6 +16,12 @@ lastupdated: "2017-5-16"
 
 You can upgrade your project or wait for it to be automatically upgraded. For the best experience, make sure that you meet the [prerequisites](#upgrade_prereqs) and upgrade your project as soon as possible so that you can control what your toolchain's name is and which organization it is created in.
 {: shortdesc}
+
+**Frequently asked questions**
+
+- [My JazzHub project is associated with the UK region, but my toolchain will be in the US South region. How will this work?](#faq_region)
+- [What will happen to my work items and dashboards in Track &amp; Plan when I upgrade?](#faq_tp)
+- [What will happen to my code repo when I upgrade?](#faq_repo)
 
 ## Toolchains
 {: #compare_toolchains}
@@ -173,28 +179,37 @@ When you return to your project, the upgrade message is displayed again, and you
 {: #upgrade_troubleshoot}
 
 If you have questions or problems, go to the [support forum](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services). In your forum post, include the URLs to your {{site.data.keyword.jazzhub_short}} project and your {{site.data.keyword.contdelivery_short}} toolchain, and tag your post with the `devops-services` tag.
-   
+
 ## Frequently asked questions
 {: #upgrade_faq}
 
-### I see that when my project is upgraded to a toolchain, the toolchain will be in the US South region. What if I want to deploy to a different region?
+### My JazzHub project is associated with the UK region, but my toolchain will be in the US South region. How will this work?
+{: #faq_region}
 
-Projects at hub.jazz.net and toolchains are both hosted in the US South region. If your project was configured to deploy apps to a different region, it will still deploy apps to that region after it is upgraded to a toolchain.
+Projects at hub.jazz.net and toolchains are both hosted in the US South region. If your project was configured to deploy apps to a different region, such as the UK region, it will still deploy apps to that region after it is upgraded to a toolchain. Therefore, nothing is really changing with respect to where the data is hosted. Toolchains will be available in more regions in the future.
 
-### What will happen to Track &amp; Plan?
+### What will happen to my work items and dashboards in Track &amp; Plan when I upgrade?
+{: #faq_tp}
 
 The {{site.data.keyword.contdelivery_short}} service provides issue-tracking capabilities through {{site.data.keyword.gitrepos}}, which is hosted by IBM and based on GitLab Community Edition. {{site.data.keyword.contdelivery_short}} also supports integrations with other planning and issue-tracking tools, such as GitHub Issues and JIRA.
 
-Both GitHub Issues and {{site.data.keyword.gitrepos}} provide kanban boards and issue tracking for planning. To learn more about Issue Boards, which is the kanban feature in Git Repos and Issue Tracking, see [Issue board ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/help/user/project/issue_board.md){: new_window}.
+During the upgrade process, you can choose to migrate your Track &amp; Plan work items to Git Issues. Both GitHub Issues and {{site.data.keyword.gitrepos}} provide kanban boards and issue tracking for planning. To learn more about Issue Boards, which is the kanban feature in Git Repos and Issue Tracking, see [Issue board ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/help/user/project/issue_board.md){: new_window}.
 
-### What will happen to my repo when I upgrade?
+### What will happen to my code repo when I upgrade?
+{: #faq_repo}
 
-If your project uses a public repo on github.com, the toolchain will be connected to the same GitHub repo. If your project uses a Git repo that is hosted on JazzHub, the contents of that repo will be cloned to a new repo in {{site.data.keyword.gitrepos}}, which is part of {{site.data.keyword.contdelivery_short}}.
+If your project uses a public repo on github.com, the toolchain will be connected to the same GitHub repo. If your project uses a Git repo that is hosted on JazzHub, the contents of that repo will be cloned to a new repo in {{site.data.keyword.gitrepos}}, which is part of {{site.data.keyword.contdelivery_short}} and hosted by IBM.
 
 For full details about how each type of repo is treated in the upgrade process, see the following table.
 
 |Project repo |Project type	|Toolchain repo |
 |:----------|:------------------------------|:------------------|
 |github.com 		|Private or public 		|The same github.com repo with {{site.data.keyword.Bluemix_notm}} Public.	|
-|hub.jazz.net/git		|Private or public 		|A new repo in {{site.data.keyword.gitrepos}} with {{site.data.keyword.Bluemix_notm}} Public.	|
+|hub.jazz.net/git		|Private or public 		|A new private or public repo in {{site.data.keyword.gitrepos}} with {{site.data.keyword.Bluemix_notm}} Public.	|
 {: caption="Table 1. Project repos mapped to toolchain repos" caption-side="top"}
+
+### What will happen to my build definitions in my project when I upgrade to a toolchain?
+
+If you're building your source code by using Jazz instead of Delivery Pipeline, you must manually migrate your build definitions to Delivery Pipeline in your toolchain.
+
+If you're using Jazz SCM as a source repo and using Delivery Pipeline to build your code, the source in Jazz SCM will be automatically moved to a Git repo. Your Delivery Pipeline configuration will remain the same except it will consume the source from the Git repo instead of the source from Jazz SCM.

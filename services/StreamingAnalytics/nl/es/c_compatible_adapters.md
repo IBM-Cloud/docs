@@ -2,10 +2,10 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-04-13"
 ---
 
-<!-- Attribute definitions --> 
+<!-- Attribute definitions -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -20,6 +20,7 @@ Un kit de herramientas es un conjunto de artefactos, organizados en un paquete. 
 {:shortdesc}
 
 ##Internet Toolkit
+{: #internet notoc}
 
 Internet Toolkit (com.ibm.streamsx.inet) proporciona soporte para protocolos de Internet comunes. Este kit de herramientas está incrustado en {{site.data.keyword.streamsshort}} y está disponible en el entorno de desarrollo de {{site.data.keyword.streamsshort}}.
 
@@ -46,6 +47,7 @@ Para obtener más información sobre operadores compatibles de Internet Toolkit,
 Puede descargar versiones más recientes del kit de herramientas, con mejoras y operadores adicionales desde [IBMStreams on GitHub](https://github.com/IBMStreams){:new_window}. Una vez descargado el kit de herramientas, créelo (si es necesario) e instálelo en el entorno de desarrollo de {{site.data.keyword.streamsshort}}.
 
 ##IoT Integration Toolkit
+{: #iot notoc}
 
 IoT Integration Toolkit (com.ibm.streamsx.iot) ofrece conectividad con {{site.data.keyword.iot_full}}. Las aplicaciones {{site.data.keyword.streamsshort}} pueden utilizar este kit de herramientas para ofrecer analíticas en tiempo real sobre todos los sucesos procedentes de miles de dispositivos, incluido el envío de mandatos a dispositivos determinados en función de las analíticas.
 
@@ -70,8 +72,9 @@ La tabla siguiente contiene los operadores que proporciona el kit de herramienta
 Para obtener más información sobre los operadores compatibles con IoT Integration Toolkit, consulte el apartado [Operadores: com.ibm.streamsx.iot Toolkit](http://www.ibm.com/support/knowledgecenter/SSCRJU_4.2.0/com.ibm.streams.toolkits.doc/spldoc/dita/tk$com.ibm.streamsx.iot/ix$Operator.html?lang=en){:new_window} en la documentación del producto {{site.data.keyword.streamsshort}}.
 
 ##Messaging Toolkit
+{: #messaging notoc}
 
-El proyecto Messaging Toolkit (com.ibm.streamsx.messaging) es un proyecto de kit de herramientas de {{site.data.keyword.streamsshort}} de origen abierto. Se centra en el desarrollo de operadores y funciones que le ayudan a utilizar {{site.data.keyword.streamsshort}} para interactuar con sistemas de mensajería como Kafka, JMS, XMS y MQTT. 
+El proyecto Messaging Toolkit (com.ibm.streamsx.messaging) es un proyecto de kit de herramientas de {{site.data.keyword.streamsshort}} de origen abierto. Se centra en el desarrollo de operadores y funciones que le ayudan a utilizar {{site.data.keyword.streamsshort}} para interactuar con sistemas de mensajería como Kafka, JMS, XMS y MQTT.
 
 Este kit de herramientas está incrustado en {{site.data.keyword.streamsshort}} y está disponible en el entorno de desarrollo de {{site.data.keyword.streamsshort}}.
 
@@ -94,7 +97,7 @@ Puede descargar versiones más recientes del kit de herramientas, con mejoras y 
 
 Para obtener información sobre las restricciones del kit de herramientas, consulte [Restricciones de los kits de herramientas especializados de {{site.data.keyword.streamsshort}}](http://www.ibm.com/support/knowledgecenter/SSCRJU_4.2.0/com.ibm.streams.install.doc/doc/ibminfospherestreams-install-toolkit-restrictions.html){:new_window}.
 
-**Nota**: Para utilizar JMSSource, JMSSink, XMSSource, XMSSink con WebSphere MQ, complete estos pasos obligatorios en el entorno de desarrollo: 
+**Nota**: Para utilizar JMSSource, JMSSink, XMSSource, XMSSink con WebSphere MQ, complete estos pasos obligatorios en el entorno de desarrollo:
 
 1. Vaya a [IBMStreams on GitHub](https://github.com/IBMStreams){:new_window} y descargue Messaging Toolkit (com.ibm.streamsx.messaging) versión 3.0.0 o posterior en el entorno de desarrollo.
 2. Utilice la versión 5.1.0 o una versión posterior del kit de herramientas para crear su aplicación.

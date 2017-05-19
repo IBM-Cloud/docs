@@ -1,7 +1,8 @@
 ---
+
 copyright:
-  years: 2016
-lastupdated: "2016-12-09"
+  years: 2016,2017
+lastupdated: "2017-04-27"
 ---
 
 {:new_window: target="_blank"}
@@ -26,36 +27,8 @@ Führen Sie zum Einstieg in {{site.data.keyword.composeForMySQL}} die folgenden 
 
 2. Stellen Sie eine Verbindung zu Ihrem {{site.data.keyword.composeForMySQL}}-Service her.
 
-  Um eine Anwendung mit Ihrem Service zu verbinden, verwenden Sie die Berechtigungsnachweise, die zusammen mit dem Service erstellt wurden.
+  Zur Herstellung einer Verbindung von einer Anwendung zu Ihrem Service verwenden Sie die [Berechtigungsnachweise](./credentials.html), die zusammen mit dem Service erstellt werden. 
 
   Laden Sie die Beispielanwendung [compose-mysql-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-mysql-helloworld-nodejs) herunter und befolgen Sie die Anweisungen in der Readme-Datei. Anschließend klicken Sie auf der Detailseite für die Anwendung der Bluemix-Konsole auf **App anzeigen**.
 
   Die Beispielanwendung veranschaulicht die Verwendung von Node.js zur Verbindung mit einem {{site.data.keyword.composeForMySQL}}-Service.
-
-
-## Verfügbare Berechtigungsnachweise
-
-Feldname|Beschreibung
-----------|-----------
-`db_type`|Der Datenbanktyp, der vom Service angeboten wird, in diesem Fall `mysql`.
-`name`|Der Name der Datenbankimplementierung.
-`uri_cli`|Eine `mysql`-Shellbefehlszeile, die eine Verbindung zur Datenbankinstanz herstellt.
-`ca_certificate_base64`|Ein selbst signiertes Zertifikat, mit dem bestätigt wird, dass eine Anwendung eine Verbindung zum geeigneten Server herstellt. Das Zertifikat ist base64-codiert.
-`deployment_id`|Eine interne ID für den Service entsprechend der Erstellung in Compose.
-`uri`|Die bei der Herstellung einer Verbindung zum Service verwendete URI, die Folgendes enthält: Schema (`mysql:`), Benutzername und Kennwort des Administrators, Hostname des Servers sowie die Nummer des Ports, zu dem die Verbindung hergestellt werden soll, und der vhost-Name.
-{: caption="Table 1. {{site.data.keyword.composeForMySQL}} - Berechtigungsnachweise" caption-side="top"}
-
-
-# Zugehörige Links
-{: #rellinks}
-
-* [Compose](https://www.compose.com){:new_window}
-* [Compose-Artikel](https://www.compose.com/articles/){:new_window}
-
-## Lernprogramme und Beispiele
-{: #samples}
-* [compose-mysql-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-mysql-helloworld-nodejs){:new_window}
-
-## Zugehörige Links
-{: #general}
-* [Compose-Hilfe](https://help.compose.com/docs){:new_window}

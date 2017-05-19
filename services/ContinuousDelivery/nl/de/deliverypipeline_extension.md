@@ -73,7 +73,7 @@ Bevor Sie mit den nachfolgenden Schritten beginnen, lesen Sie zunächst die [Nut
 
     * Wenn Sie möchten, dass die Pipeline Ihren Bluemix-Bereich auf den Service und eine App überprüft, die den Service an den Container bindet, wählen Sie das Kontrollkästchen aus. Wenn der Service oder die gebundene App nicht vorhanden sind, fügt die Pipeline den freien Plan des Service zu Ihrem Bereich hinzu. Die gebundene App, die erstellt wird, hat den Namen `pipeline_bridge_app`. Anschließend verwendet die Pipeline die Berechtigungsnachweise von der Datei 'pipeline_bridge_app', um auf die gebundenen Services zuzugreifen.
 
-    * Wenn Sie den Service und die gebundene App in Ihrem Bluemix-Bereich konfiguriert haben, oder wenn Sie [diese Anforderungen manuell konfigurieren](/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline){: new_window} möchten, heben Sie die Markierung für das Kontrollkästchen auf.
+    * Wenn Sie den Service und die gebundene App in Ihrem Bluemix-Bereich konfiguriert haben, oder wenn Sie [diese Anforderungen manuell konfigurieren](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window} möchten, heben Sie die Markierung für das Kontrollkästchen auf.
 
   f. Geben Sie im Feld **Anzahl der Minuten für die Durchführung der Analyse** einen Wert zwischen 0 und 59 Minuten ein. Der Standardwert beträgt 5 Minuten. Eine URL zu dem Dashboard von Static Analyzer befindet sich in den Konsolenprotokollen am Ende des Jobs.
 
@@ -154,7 +154,7 @@ To create the globalization stage and job:
 
     * If you want the pipeline to check your Bluemix space for the service and an app that binds the service to the container, select this check box. If the service or bound app does not exist, the pipeline adds the free plan of the service to your space for you. The bound app that is created is named `pipeline_bridge_app`. Then, the pipeline uses the credentials from pipeline_bridge_app to access the bound services.
 
-    * If you configured the service and bound app in your Bluemix space already or if you want to [configure these requirements manually](https://www.ng.bluemix.net/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline), leave this check box cleared.
+    * If you configured the service and bound app in your Bluemix space already or if you want to [configure these requirements manually](/docs/containers/container_integrations.html#container_binding_pipeline), leave this check box cleared.
 
   g. For the Globalization bundle prefix, enter a prefix for the bundle name, which is structured in this format: `<globalization_bundle_prefix>.path.to.source.file`. The pipeline job creates this Globalization bundle for you in the Globalization Pipeline service.
 
@@ -186,7 +186,7 @@ Bevor Sie damit beginnen, erstellen oder kopieren Sie eine Slack-WebHook-URL:
 3. Wählen Sie einen Kanal aus und klicken Sie auf **Integration eingehender WebHooks hinzufügen**.
 4. Fügen Sie eine **WebHook-URL** hinzu oder kopieren Sie eine vorhandene.
 
-Weitere Informationen enthält die [Dokumentation von Slack zu eingehenden Webhooks ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://api.slack.com/incoming-webhooks){: new_window}. 
+Weitere Informationen enthält die [Dokumentation von Slack zu eingehenden Web-Hooks ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://api.slack.com/incoming-webhooks){: new_window}.
 
 Gehen Sie wie folgt vor, um Slack-Benachrichtigungen zu erstellen:
 
@@ -237,7 +237,7 @@ Gehen Sie wie folgt vor, um Slack-Benachrichtigungen zu erstellen:
 
 6. Wiederholen Sie diese Schritte und senden Sie Slack-Benachrichtigungen für andere Stages, die Jobs von IBM Container Service, IBM Security Analyzer und IBM Globalization umfassen.
 
-Die Buildbenachrichtigung, die in Slack angezeigt wird, enthält einen Link zum Projekt und gelegentlich einen Link zum Dashboard des Projekts. Damit Slack-Benutzer diese Links öffnen können, müssen sie bei Bluemix registriert und Mitglied des Projekts sein, in dem die Pipeline konfiguriert ist. 
+Die Buildbenachrichtigung, die in Slack angezeigt wird, enthält einen Link zum Projekt und gelegentlich einen Link zum Dashboard des Projekts. Damit Slack-Benutzer diese Links öffnen können, müssen sie bei Bluemix registriert und Mitglied des Projekts sein, in dem die Pipeline konfiguriert ist.
 
 ## HipChat-Benachrichtigungen für Builds in der Pipeline erstellen
 {: #deliverypipeline_hipchat}
@@ -331,8 +331,8 @@ Sie können die kontinuierliche Bereitstellung von Ihren Apps oder Containergrup
 ## Containerimages mit der Pipeline erstellen und bereitstellen
 {: #deliverypipeline_containers}
 
-Sie können Ihre App-Builds und Containerbereitstellungen in Bluemix mithilfe von IBM Continuous Delivery Pipeline for Bluemix automatisieren. Der Service Delivery Pipeline unterstützt Folgendes: 
+Sie können Ihre App-Builds und Containerbereitstellungen in Bluemix mithilfe von IBM Continuous Delivery Pipeline for Bluemix automatisieren. Der Service Delivery Pipeline unterstützt Folgendes:
   - Erstellen von Docker-Images
   - Bereitstellen von Images in Containern für Bluemix
 
-Weitere Informationen zu den ersten Schritten enthält die [Übersicht über Delivery Pipeline und Container](/docs/containers/container_pipeline_ov.html#container_pipeline_ov){: new_window}.
+Weitere Informationen zu den ersten Schritten enthält die [Übersicht über Delivery Pipeline und Container](/docs/containers/container_integrations.html#container_pipeline_ov){: new_window}.

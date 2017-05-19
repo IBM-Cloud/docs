@@ -2,26 +2,40 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-04-13"
 
 ---
 
-<!-- Attribute definitions --> 
+<!-- Attribute definitions -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
 
-#Desarrollo de aplicaciones de {{site.data.keyword.streamsshort}} en Python
+# Desarrollo de aplicaciones Python para {{site.data.keyword.streaminganalyticsshort}}
 {: #t_develop_apps_python}
 
- 
-
-La API de aplicación Python de {{site.data.keyword.streamsshort}}, que se incluye en el kit de herramientas de Topology, permite crear aplicaciones de procesamiento de secuencias utilizando clases o funciones de Python que se pueden llamar. Entonces, puede ejecutar sus aplicaciones Python en la nube.
+Ahora puede desarrollar aplicaciones Python en IBM Data Science Experience (DSX) o en un entorno de desarrollo Python local y desplegarlas en {{site.data.keyword.streaminganalyticsshort}}.
 {:shortdesc}
 
-Para ejecutar aplicaciones de {{site.data.keyword.streamsshort}} de Python en la nube:
+Desarrolle y despliegue sus aplicaciones Python en la nube de {{site.data.keyword.Bluemix_short}} utilizando el servicio {{site.data.keyword.streaminganalyticsshort}} y uno de estos métodos: 
 
-1. Asegúrese de que el entorno de desarrollo local de {{site.data.keyword.streamsshort}} tenga instalado Anaconda 3 en /disk1/opt/Anaconda3. Siga la [guía de desarrollo de {{site.data.keyword.streamsshort}} Python](http://ibmstreams.github.io/streamsx.documentation/docs/latest/python/python-appapi-devguide/){:new_window} para empezar. 
-2. Escriba, compile y pruebe su aplicación Python de {{site.data.keyword.streamsshort}} en su entorno local de {{site.data.keyword.streamsshort}}. A continuación, puede enviar el paquete de aplicación (archivo .sab) mediante la consola de {{site.data.keyword.streaminganalyticsshort}} o la API REST. 
+
+## Desarrollo de aplicaciones Streams Python en DSX
+{: #t_develop_python_dsx}
+
+Si no dispone de un entorno de desarrollo Python, el modo más sencillo de comenzar consiste en utilizar nuestros cuadernos en DSX y crear aplicaciones Python para el servicio {{site.data.keyword.streaminganalyticsshort}}. Estos cuadernos muestran los pasos a seguir y ejemplos de código para crear y desplegar aplicaciones Python de ejemplo para el servicio {{site.data.keyword.streaminganalyticsshort}} dentro del entorno DSX Python: 
+
+* [Hello World!](https://apsportal.ibm.com/exchange/public/entry/view/9fc33ce7301f10e21a9f92039ca9c6e8): Cree una sencilla aplicación Hello World! para empezar a trabajar y desplegar la aplicación en una instancia del servicio {{site.data.keyword.streaminganalyticsshort}}. 
+
+* [Healthcare Demo](https://apsportal.ibm.com/exchange/public/entry/view/9fc33ce7301f10e21a9f92039cad29a6): Cree una aplicación que ingiera y analice datos de secuencias (streaming) desde un canal de información y luego visualice los datos en el cuaderno. Finalmente, envíe esta aplicación a la instancia del servicio {{site.data.keyword.streaminganalyticsshort}}. 
+
+* [Neural Net Demo](https://apsportal.ibm.com/exchange/public/entry/view/9fc33ce7301f10e21a9f92039ca60bb7): Cree un conjunto de datos de ejemplo, cree un modelo para los datos de ejemplo, utilice dicho modelo en una aplicación de streaming, visualice los datos de streaming y finalmente envíe la aplicación streaming al servicio {{site.data.keyword.streaminganalyticsshort}}. 
+
+## Desarrollo de aplicaciones en el entorno Python local
+ {: #t_develop_python_api}
+
+ La [API de aplicación de {{site.data.keyword.streamsshort}} Python](http://ibmstreams.github.io/streamsx.documentation/docs/python/python-appapi-devguide/#50-api-features), que se incluye en el paquete streamsx, le permite crear aplicaciones de proceso de secuencias utilizando clases y funciones que se pueden llamar desde Python. Utilice la API de aplicación de Python y luego defina y envíe la aplicación al servicio. 
+
+Comience siguiendo los pasos de la guía de aprendizaje [Desarrollo para el servicio {{site.data.keyword.streaminganalyticsshort}}](http://ibmstreams.github.io/streamsx.documentation/docs/python/1.6/python-appapi-devguide-2a/index.html) para crear una aplicación de ejemplo en el entorno Python local y despliéguela en el servicio {{site.data.keyword.streaminganalyticsshort}}. 
