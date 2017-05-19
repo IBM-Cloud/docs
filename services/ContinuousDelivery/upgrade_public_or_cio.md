@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-18"
+lastupdated: "2017-5-19"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2017-5-18"
 When your project is ready to be upgraded, a message is displayed on its Overview page. You can then upgrade the project to a toolchain on {{site.data.keyword.Bluemix_notm}} Public. The toolchain will include a Whitewater {{site.data.keyword.ghe_short}} repository (repo) for your source code. Whitewater {{site.data.keyword.ghe_short}} is provided to IBM teams to promote and enable social coding within IBM. 
 {: shortdesc}
 
-**Toolchains are approved for IBM Confidential material when they are used with Whitewater {{site.data.keyword.ghe_short}}.** Delivery Pipelines that receive input from Whitewater {{site.data.keyword.ghe_short}} repos can deploy to staging (YS1) and public (YP) environments.
+**{{site.data.keyword.contdelivery_short}} toolchains are approved for IBM Confidential material when they are used with Whitewater {{site.data.keyword.ghe_short}}.** Delivery Pipelines that receive input from Whitewater {{site.data.keyword.ghe_short}} repos can deploy to staging (YS1) and public (YP) environments.
 
 During the upgrade, you will be prompted to authorize {{site.data.keyword.contdelivery_short}} to access Whitewater {{site.data.keyword.ghe_short}} on your behalf.
 
