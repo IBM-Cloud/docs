@@ -179,18 +179,6 @@ When you return to your project, the upgrade message is displayed again, and you
 {: #upgrade_troubleshoot}
 
 If you have questions or problems, go to the [support forum](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services). In your forum post, include the URLs to your {{site.data.keyword.jazzhub_short}} project and your {{site.data.keyword.contdelivery_short}} toolchain, and tag your post with the `devops-services` tag.
-
-### Pre-upgrade validation errors
-
-- `Project is already upgraded to toolchain.`
-
-   - **What happened:** This message indicates that the project is already upgraded.
-   - **How you can fix it:** Refresh the project's Overview page to view the latest banner message.
-
-- `Upgrade to toolchain failed because the following services that are used in the pipeline are deprecated.`
-
-   - **What happened:** This message indicates that the pipeline in the JazzHub project uses services that are no longer available. For example, your pipeline might use a builder type that is no longer available, such as `ibm.devops.services.pipeline.globalization.builder`.
-   - **How you can fix it:** In your project on hub.jazz.net, open the pipeline stages, save them, and upgrade again. In the example where the pipeline uses `ibm.devops.services.pipeline.globalization.builder` as the builder type, make sure that IBM Globalization Pipeline is selected as the builder type for that stage in both your project's pipeline and your toolchain's pipeline.
    
 ## Frequently asked questions
 {: #upgrade_faq}
@@ -228,4 +216,4 @@ Yes. {{site.data.keyword.gitrepos}} will be available as a full release by the d
 
 If you're building your source code by using Jazz instead of Delivery Pipeline, you must manually migrate your build definitions to Delivery Pipeline in your toolchain. 
 
-If you're using Jazz SCM as a source repo and using Delivery Pipeline to build your code, the source in Jazz SCM will be automatically moved to a Git repo. Your Delivery Pipeline configuration will remain the same except for the fact that it will consume the source from the Git repo instead of the source from Jazz SCM. 
+If you're using Jazz SCM as a source repo and using Delivery Pipeline to build your code, the source in Jazz SCM will be automatically moved to a Git repo. Your Delivery Pipeline configuration will remain the same except it will consume the source from the Git repo instead of the source from Jazz SCM. 
