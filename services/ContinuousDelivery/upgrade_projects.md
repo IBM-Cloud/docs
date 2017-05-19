@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-18"
+lastupdated: "2017-5-19"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2017-5-18"
 You can upgrade your project or wait for it to be automatically upgraded. For the best experience, make sure that you meet the [prerequisites](#upgrade_prereqs) and upgrade your project as soon as possible so that you can control what your toolchain's name is and which organization it is created in.
 {: shortdesc}
 
-### Frequently asked questions
+**Frequently asked questions**
 
 - [My JazzHub project is associated with the UK region, but my toolchain will be in the US South region. How will this work?](#faq_region)
 - [What will happen to my work items and dashboards in Track &amp; Plan when I upgrade?](#faq_tp)
@@ -179,6 +179,18 @@ When you return to your project, the upgrade message is displayed again, and you
 {: #upgrade_troubleshoot}
 
 If you have questions or problems, go to the [support forum](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services). In your forum post, include the URLs to your {{site.data.keyword.jazzhub_short}} project and your {{site.data.keyword.contdelivery_short}} toolchain, and tag your post with the `devops-services` tag.
+
+### Pre-upgrade validation errors
+
+- `Project is already upgraded to toolchain.`
+
+   - **What happened:** This message indicates that the project is already upgraded.
+   - **How you can fix it:** Refresh the project's Overview page to view the latest banner message.
+
+- `Upgrade to toolchain failed because the following services that are used in the pipeline are deprecated.`
+
+   - **What happened:** This message indicates that the pipeline in the JazzHub project uses services that are no longer available. For example, your pipeline might use a builder type that is no longer available, such as `ibm.devops.services.pipeline.globalization.builder`.
+   - **How you can fix it:** In your project on hub.jazz.net, open the pipeline stages, save them, and upgrade again. In the example where the pipeline uses `ibm.devops.services.pipeline.globalization.builder` as the builder type, make sure that IBM Globalization Pipeline is selected as the builder type for that stage in both your project's pipeline and your toolchain's pipeline.
    
 ## Frequently asked questions
 {: #upgrade_faq}
@@ -205,7 +217,7 @@ For full details about how each type of repo is treated in the upgrade process, 
 |Project repo |Project type	|Toolchain repo |
 |:----------|:------------------------------|:------------------|
 |github.com 		|Private or public 		|The same github.com repo with {{site.data.keyword.Bluemix_notm}} Public.	|
-|hub.jazz.net/git		|Private or public 		|A new repo in {{site.data.keyword.gitrepos}} with {{site.data.keyword.Bluemix_notm}} Public.	|
+|hub.jazz.net/git		|Private or public 		|A new private or public repo in {{site.data.keyword.gitrepos}} with {{site.data.keyword.Bluemix_notm}} Public.	|
 {: caption="Table 1. Project repos mapped to toolchain repos" caption-side="top"}
 
 ### I see that {{site.data.keyword.gitrepos}} is currently a beta release. Will it be available as a full release by the deadline to upgrade my project?
@@ -216,4 +228,4 @@ Yes. {{site.data.keyword.gitrepos}} will be available as a full release by the d
 
 If you're building your source code by using Jazz instead of Delivery Pipeline, you must manually migrate your build definitions to Delivery Pipeline in your toolchain. 
 
-If you're using Jazz SCM as a source repo and using Delivery Pipeline to build your code, the source in Jazz SCM will be automatically moved to a Git repo. Your Delivery Pipeline configuration will remain the same and will be run against the Git repo. 
+If you're using Jazz SCM as a source repo and using Delivery Pipeline to build your code, the source in Jazz SCM will be automatically moved to a Git repo. Your Delivery Pipeline configuration will remain the same except for the fact that it will consume the source from the Git repo instead of the source from Jazz SCM. 
