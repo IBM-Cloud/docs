@@ -2,18 +2,18 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-04-13"
 
 ---
 
-<!-- Attribute definitions --> 
+<!-- Attribute definitions -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
 
-#Despliegue de aplicaciones de inicio en {{site.data.keyword.Bluemix_short}}
+# Despliegue de aplicaciones de inicio en {{site.data.keyword.Bluemix_short}}
 {: #starterapps_deploy}
 
 Puede enviar y desplegar una de las aplicaciones de inicio de {{site.data.keyword.streaminganalyticsshort}} en la nube de {{site.data.keyword.Bluemix_short}}.
@@ -28,28 +28,32 @@ Antes de empezar, prepare {{site.data.keyword.Bluemix_short}} para desplegar las
 
 Recuerde el nombre que asigna a la aplicación; lo necesitará más adelante.
 
-{{site.data.keyword.streaminganalyticsshort}} proporciona dos aplicaciones de ejemplo para que empiece a utilizar el servicio. 
+{{site.data.keyword.streaminganalyticsshort}} proporciona dos aplicaciones de ejemplo para que empiece a utilizar el servicio.
 
 La aplicación de inicio Detección de suceso analiza los datos relacionados con el tiempo en una secuencia en tiempo real y muestra el estado y los resultados del análisis. La aplicación se escribe en {{site.data.keyword.sdk4node}}. Para obtener más información sobre cómo utilizar la app de inicio Detección de suceso, consulte [Detección de sucesos complejos en una secuencia de datos en tiempo real](https://www.ibm.com/developerworks/library/ba-bluemix-detect-complex-events-from-data-stream-trs/index.html).
 
-La aplicación de inicio Tráfico en Nueva York lee y analiza datos de tráfico desde un sitio web público. La aplicación se escribe en Liberty for Java™. Para obtener más información sobre cómo utilizar la app de inicio Tráfico en Nueva York, consulte [Aplicación de inicio de {{site.data.keyword.streaminganalyticsfull}}](https://developer.ibm.com/streamsdev/docs/bluemix-streaming-analytics-starter-application/). 
+La aplicación de inicio Tráfico en Nueva York lee y analiza datos de tráfico desde un sitio web público. La aplicación se escribe en Liberty for Java™. Para obtener más información sobre cómo utilizar la app de inicio Tráfico en Nueva York, consulte [Aplicación de inicio de {{site.data.keyword.streaminganalyticsfull}}](https://developer.ibm.com/streamsdev/docs/bluemix-streaming-analytics-starter-application/).
 
 Para descargar y desplegar la aplicación de inicio en {{site.data.keyword.Bluemix_short}}:
 
 1. Descargue la aplicación de inicio [Detección de suceso](https://hub.jazz.net/project/streamscloud/EventDetection/overview) o [Tráfico en Nueva York](https://hub.jazz.net/project/streamscloud/NYCTraffic/overview).
 2. En la línea de mandatos, vaya al directorio del proyecto.
   <pre><code>cd myapp</code></pre>
- 
+  {:pre}
+
 3. Renombre el directorio del proyecto para que coincida con el nombre asignado a la aplicación en {{site.data.keyword.Bluemix_short}}.
 4. Conéctese a {{site.data.keyword.Bluemix_short}}:
   <pre><code>cf api https://api.DomainName</code></pre>
-   
+  {:pre}
+
 5. Inicie sesión en {{site.data.keyword.Bluemix_short}} y defina la organización de destino cuando se solicite:
-   <pre><code>cf login</code></pre>
-    
+  <pre><code>cf login</code></pre>
+  {:pre}
+
 6. Despliegue la aplicación:
   <pre><code>cf push myapp</code></pre>
-   
+  {:pre}
+
 7. Vaya a la página de visión general de la aplicación, a la que puede acceder desde el panel de control de {{site.data.keyword.Bluemix_short}}, para comprobar que la aplicación se ha iniciado correctamente.
 8. Inicie la aplicación para verla en el navegador. Encontrará el URL de la aplicación (o "ruta") en la página de visión general de la aplicación.
 
