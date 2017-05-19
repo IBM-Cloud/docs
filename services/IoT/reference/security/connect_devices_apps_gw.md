@@ -88,7 +88,7 @@ certificate, the cipher suites that are supported depend on the certificate that
 
 ### TLS requirements for HTTP connections
 
-If you are using the default server certificate, {{site.data.keyword.iot_short_notm}} requires TLS v1, TLS v1.1, or TLS v1.2 and the following cipher suites:
+If you are using the default server certificate, {{site.data.keyword.iot_short_notm}} requires TLS v1.1 or TLS v1.2 and the following cipher suites:
 
 
 - TLS_RSA_WITH_AES_128_CBC_SHA
