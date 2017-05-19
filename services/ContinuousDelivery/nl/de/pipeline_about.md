@@ -45,7 +45,7 @@ Jobs werden in diskreten Arbeitsverzeichnissen innerhalb von Docker-Containern a
 
 Wenn Sie einen Job konfigurieren, können Sie mit Ausnahme von Buildjobs vom einfachen Typ (Simple), UNIX-Shell-Scripts einbeziehen, die Build-, Test- oder Bereitstellungsbefehle einschießen. Da Jobs in Ad-hoc-Containern ausgeführt werden, können die Aktionen eines Jobs nicht die Ausführungsumgebungen anderer Jobs beeinflussen, selbst wenn diese Jobs Teil derselben Stage sind.
 
-Darüber hinaus können Pipeline-Jobs nur die folgenden Befehle als `sudo` ausführen: 
+Darüber hinaus können Pipeline-Jobs nur die folgenden Befehle als `sudo` ausführen:
   * `/usr/sbin/service`
   * `/usr/bin/apt-get`
   * `/usr/bin/apt-key`
@@ -77,7 +77,7 @@ Sie können Umgebungseigenschaften innerhalb der Buildshellbefehle eines Buildjo
 
 ### Bereitstellungsjobs
 
-Bereitstellungsjobs laden Ihr Projekt als eine App in Bluemix hoch und sind über eine URL zugänglich. Nach der Bereitstellung eines Projekts finden Sie die bereitgestellte App in Ihrem Bluemix-Dashboard. 
+Bereitstellungsjobs laden Ihr Projekt als eine App in Bluemix hoch und sind über eine URL zugänglich. Nach der Bereitstellung eines Projekts finden Sie die bereitgestellte App in Ihrem Bluemix-Dashboard.
 
 Bereitstellungsjobs können neue Apps bereitstellen oder vorhandene Apps aktualisieren. Auch wenn Sie eine App zuerst mit einer anderen Methode wie beispielsweise über die Cloud Foundry-Befehlszeilenschnittstelle oder die Ausführungsleiste in der Web IDE bereitgestellt haben, können Sie die App mithilfe eines Bereitstellungsjobs aktualisieren. Verwenden Sie den Namen der App, um eine App in einem Bereitstellungsjob zu aktualisieren.
 
@@ -88,7 +88,7 @@ Es ist eine Bereitstellung für eine oder mehrere Regionen bzw. einen oder mehre
 Sie können Umgebungseigenschaften innerhalb eines Bereitstellungsscripts eines Bereitstellungsjobs einbeziehen. Diese Eigenschaften bieten Zugriff auf Informationen über die Ausführungsumgebung des Jobs. Weitere Informationen finden Sie unter [Umgebungseigenschaften und Ressourcen für den {{site.data.keyword.deliverypipeline}}-Service](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).
 
 ### Testjobs
-Wenn Bedingungen eingehalten werden sollen, schließen Sie Testjobs vor oder nach Ihren Build- und Bereitstellungsjobs ein. Sie können Testjobs anpassen, damit diese so einfach oder so komplex wie erforderlich sind. Möglicherweise erwarten Sie eine bestimmte Antwort auf die Ausgabe eine cURL-Befehls. Möglicherweise möchten Sie eine Reihe von Komponententests ausführen oder Funktionstests mit Testservices Dritter wie beispielsweise Sauce Labs ausführen. 
+Wenn Bedingungen eingehalten werden sollen, schließen Sie Testjobs vor oder nach Ihren Build- und Bereitstellungsjobs ein. Sie können Testjobs anpassen, damit diese so einfach oder so komplex wie erforderlich sind. Möglicherweise erwarten Sie eine bestimmte Antwort auf die Ausgabe eine cURL-Befehls. Möglicherweise möchten Sie eine Reihe von Komponententests ausführen oder Funktionstests mit Testservices Dritter wie beispielsweise Sauce Labs ausführen.
 
 Wenn Ihre Tests Ergebnisdateien im JUnit XML-Format erzeugen, wird ein Bericht auf Grundlage der Ergebnisdateien auf der Registerkarte **Tests** jeder Seite mit Testergebnissen angezeigt. Wenn ein Test fehlschlägt, schlägt der Job ebenfalls fehl.
 
@@ -110,11 +110,11 @@ Um Konflikte zu vermeiden, können Sie eine Route mithilfe von `cf push` gefolgt
 ## Eine Beispielpipeline
 {: #deliverypipeline_example}
 
-Eine einfache Pipeline enthält vielleicht drei Stages:
+Eine einfache Pipeline kann drei Stages enthalten: 
 
-1. Eine Stage für den Build, der Erstellungsprozesse auf einer App kompiliert und einen Build ausführt.
-2. Eine Stage für den Test, der eine Instanz der App bereitstellt und auf dieser Tests ausführt.
-3. Eine Stage für die Produktion, der eine Produktionsinstanz der getesteten App bereitstellt.
+1. Eine Stage für den Build, die Erstellungsprozesse auf einer App kompiliert und einen Build ausführt. 
+2. Eine Stage für den Test, die eine Instanz der App bereitstellt und in dieser Instanz anschließend Tests ausführt. 
+3. Eine Stage für die Produktion, die eine Produktionsinstanz der getesteten App bereitstellt. 
 
 Diese Pipeline wird im folgenden Konzeptionsdiagramm dargestellt:
 
@@ -122,4 +122,5 @@ Diese Pipeline wird im folgenden Konzeptionsdiagramm dargestellt:
 
 *Ein konzeptionelles Modell einer Pipeline mit drei Stages*
 
-Stages bekommen Ihre Eingaben von Repositorys und Buildjobs. Jobs innerhalb einer Stage werden nacheinander und unabhängig voneinander ausgeführt. In der Beispielpipeline werden die Stages nacheinander ausgeführt, obwohl die Stages für den Test und die Produktion beide die Ausgabe des Stage für den Build als Eingabe verwenden.
+Stages bekommen Ihre Eingaben von Repositorys und Buildjobs. Jobs innerhalb einer Stage werden nacheinander und unabhängig voneinander ausgeführt. In der Beispielpipeline werden die Stages nacheinander ausgeführt, obwohl die Stages für den Test und die Produktion beide die Ausgabe
+der Stage für den Build als Eingabe verwenden. 
