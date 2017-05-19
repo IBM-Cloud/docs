@@ -49,7 +49,8 @@ Você cria pipelines compostos para gerenciar os apps em uma cadeia de ferrament
 
 Os estágios configurados são mapeados automaticamente para o espaço apropriado em sua organização e um plano de implementação é criado para o pipeline composto.
 
-Se você tiver criado o pipeline composto para uma cadeia de ferramentas que contém pipelines de entrega, os apps para todos os pipelines na cadeia de ferramentas serão incluídos no pipeline composto. Os estágios configurados nos pipelines de entrega são mapeados automaticamente para os espaços apropriados em sua organização e seu status é exibido. Para visualizar o status de cada tarefa em um app, expanda o app.
+Se você tiver criado o pipeline composto para uma cadeia de ferramentas que contém pipelines de entrega, os apps para todos os pipelines na cadeia de ferramentas serão incluídos no pipeline composto. Os estágios configurados nos pipelines de entrega são mapeados automaticamente para os espaços apropriados em sua organização e seu status é exibido.
+Para visualizar o status de cada tarefa em um app, expanda o app.
 
 Um plano de implementação também é criado para o pipeline composto. Por padrão, as tarefas para todos os apps são executadas em paralelo para um espaço, mas é possível mudar a ordem de implementação dos apps no plano.
 
@@ -161,7 +162,7 @@ Se a sua integração tiver sido bem-sucedida, será possível incluir apps IBM 
 ## Incluindo apps do IBM UrbanCode Deploy
 {: #compositepipeline_add_apps}
 
-Se você for membro de uma organização que tenha se integrado ao IBM UrbanCode Deploy usando o DevOps Connect, será possível incluir os apps que podem ser acessados no IBM UrbanCode Deploy no pipeline composto. Para obter instruções de instalação, veja [Usando o IBM Bluemix DevOps Connect para se integrar ao IBM UrbanCode Deploy](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect).
+Se você for membro de uma organização integrada ao IBM UrbanCode Deploy usando o DevOps Connect, será possível incluir os apps que você pode acessar no IBM UrbanCode Deploy no pipeline composto. Para obter instruções de instalação, veja [Usando o IBM Bluemix DevOps Connect para se integrar ao IBM UrbanCode Deploy](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect).
 
 Quando você for membro de uma organização que esteja conectada ao IBM UrbanCode Deploy, será possível incluir apps IBM UrbanCode Deploy aos pipeline compostos, selecionar os processos de app para incluir no plano de implementação e customizar a implementação dos apps.
 

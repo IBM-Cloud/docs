@@ -11,10 +11,10 @@ lastupdated: "2017-4-11"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# 使用 Git Repos and Issue Tracking（试验性）
+# Git Repos and Issue Tracking (Beta)
 {: #git_working}
 
-与您的团队协作，并使用由 IBM 托管且在 [GitLab Community Edition ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://about.gitlab.com/){:new_window} 上构建的 Git 存储库和问题跟踪程序，来管理源代码。
+与您的团队协作，并使用由 IBM 托管且在 [GitLab Community Edition ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://about.gitlab.com/){:new_window} 上构建的 Git 存储库和问题跟踪程序来管理源代码。
 {: shortdesc}
 
 Git Repos and Issue Tracking 工具集成支持团队以多种方式管理代码并协作：
@@ -30,12 +30,13 @@ Git Repos and Issue Tracking 工具集成支持团队以多种方式管理代码
 
 文件严格限制为 100 MB。建议的存储库大小限制为 1 GB。如果您的存储库超过 1 GB，那么您可能会收到电子邮件，其中包括减少存储库大小的请求。
 
-## 创建个人访问令牌或 SSH 密钥以进行认证    
+## 在本地使用 Git Repos and Issue Tracking
 {: #git_authentication}
 
+可以在本地访问存储在 Git Repos and Issue Tracking 中的 Git 存储库。有关在本地设置 Git 的指示信息，请参阅[开始在命令行上使用 Git ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window}。
+
+### 创建个人访问令牌或 SSH 密钥以进行认证  
 要从本地 Git 存储库完成远程 Git 操作（如 `clone` 或 `push`），您必须使用个人访问令牌或 SSH 密钥，以通过 GitLab 进行认证。
 
 * 要设置个人访问令牌，请参阅[个人访问令牌 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git.ng.bluemix.net/help/api/README.html#personal-access-tokens){:new_window}。
 * 要设置 SSH 密钥，请参阅 [SSH ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git.ng.bluemix.net/help/ssh/README){:new_window} 或[如何创建 SSH 密钥 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git.ng.bluemix.net/help/gitlab-basics/create-your-ssh-keys){:new_window}。通过 SSH 认证访问存储库可能需要对代理和防火墙进行额外的配置。
-
-**注：**要使用个人访问令牌或 SSH 密钥进行认证，您必须在本地设置 Git。有关指示信息，请参阅[开始在命令行上使用 Git ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window}。

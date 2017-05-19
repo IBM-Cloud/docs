@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-31"
+lastupdated: "2017-4-25"
+
 ---
 
 {:new_window: target="_blank"}
@@ -11,7 +12,7 @@ lastupdated: "2017-3-31"
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# 使用 Eclipse Orion IDE 編輯程式碼
+# 使用 Eclipse Orion Web IDE 開發
 {: #web_ide}
 
 Eclipse Orion {{site.data.keyword.webide}} 是一種您可以針對 Web 進行開發的瀏覽器型開發環境。有了內容輔助、程式碼完成及錯誤檢查的協助，您就可以使用 JavaScript、HTML 及 CSS 進行開發。{{site.data.keyword.webide}} 幾乎可以搭配任何語言一起使用，並且提供大部分檔案類型的語法強調顯示。來源控制是內建的，而且您可以在本端部署程式碼來測試及除錯應用程式。
@@ -19,7 +20,7 @@ Eclipse Orion {{site.data.keyword.webide}} 是一種您可以針對 Web 進行�
 
 最好的一點是，{{site.data.keyword.webide}} 採用 Web 技術。您不必進行任何安裝、維護和擴充。您可以在具有網際網路連線的任何位置進行開發。
 
-## 設定編輯器
+## 設定 IDE
 {: #editorsetup}
 
 {{site.data.keyword.webide}} 可進行自訂，以選擇色系、技術工具，以及符合開發需求的設定。若要檢視及修改設定，請從左邊的功能表中，按一下**設定**圖示 <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="「設定」圖示">。
@@ -28,13 +29,13 @@ Eclipse Orion {{site.data.keyword.webide}} 是一種您可以針對 Web 進行�
 
 ![本端編輯器設定](images/webide_local_editor_settings_light.png)
 
-預設一律會顯示編輯器樣式及字型大小的設定。若要在功能表中包括其他編輯器設定，請遵循下列步驟：
+根據預設值，一律會顯示編輯器樣式及字型大小的設定。若要在功能表中包含其他編輯器設定，請遵循下列步驟：
 
 1. 按一下**本端編輯器設定**圖示 <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="「本端編輯器設定」圖示">。
 
 2. 按一下**編輯器設定**。
 
-3. 若要從**本端編輯器設定**功能表中包括或排除設定，請按一下每一個設定旁的星星。
+3. 若要在**本端編輯器設定**功能表包含或排除設定，請按一下每一個設定旁的星星。
 
 ![「編輯器設定」切換](images/webide_editor_settings_toggle_light.png)
 
@@ -46,7 +47,7 @@ Eclipse Orion {{site.data.keyword.webide}} 是一種您可以針對 Web 進行�
 
 **提示：**若要將檔案上傳至檔案導覽器，請將它們從您的電腦拖曳至檔案導覽器。
 
-第二個區段是編輯器窗格。編輯器提供數個程式碼特性（包括內容輔助及語法驗證）。
+第二個區段是編輯器窗格。編輯器提供數個程式碼特性，包括內容輔助及語法驗證。
 
 ![Web IDE](images/webide_light.png)
 
@@ -70,14 +71,14 @@ Eclipse Orion {{site.data.keyword.webide}} 是一種您可以針對 Web 進行�
 
 {{site.data.keyword.webide}} 是與原始碼管理工具整合。若要使用 Git 儲存庫，請按一下 **Git 儲存庫**圖示 <img class="inline" src="images/webide_git_icon_light_small.png"  alt="「Git 儲存庫」圖示">。 
 
- **提示**：如果您要搭配使用 {{site.data.keyword.webide}} 與開放式工具鏈，則工作區會預先移入 GitHub、{{site.data.keyword.ghe_short}} 或「Git 儲存庫及問題追蹤」儲存庫。會強調顯示與現行工具鏈相關聯的儲存庫。
+ **提示**：如果您要搭配使用 {{site.data.keyword.webide}} 與開放式工具鏈，則工作區會預先移入 GitHub、{{site.data.keyword.ghe_short}} 或 Git Repos and Issue Tracking 儲存庫。會強調顯示與現行工具鏈相關聯的儲存庫。
 
 
 ## 從工作區部署應用程式
 {: #deploy}
 
 1. 若要部署應用程式，請從執行列中選取或建立啟動配置。
-1. 按一下部署圖示 <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="部署圖示">。使用您工作區的現行內容以及啟動配置中所定義的環境，即可部署您應用程式的實例。 
+1. 按一下部署圖示 <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="「部署」圖示">。使用您工作區的現行內容以及啟動配置中所定義的環境，即可部署您應用程式的實例。 
 2. 部署應用程式之後，即可使用執行列來停止、重新啟動或除錯應用程式、檢視日誌，以及執行其他作業。
 ![執行列](images/webide_runbar_light.png)    
 

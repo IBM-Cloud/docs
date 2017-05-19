@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-4"
+lastupdated: "2017-4-28"
 
 ---
 
@@ -46,6 +46,8 @@ lastupdated: "2017-4-4"
 
 {{site.data.keyword.contdelivery_short}}는 {{site.data.keyword.Bluemix_notm}} 퍼블릭과 {{site.data.keyword.Bluemix_notm}} 데디케이티드에서 사용 가능합니다. 도구 체인은 사용자가 {{site.data.keyword.contdelivery_short}}를 {{site.data.keyword.Bluemix_notm}} 퍼블릭에서 또는 {{site.data.keyword.Bluemix_notm}} 데디케이티드에서 사용하는지 여부에 따라 다릅니다. 
 
+**팁**: 도구 체인은 미국 남부 지역에서 호스팅됩니다. 앱을 다른 지역에 배치하도록 도구 체인이 구성된 경우 여전히 해당 지역에 앱을 배치합니다.
+
 |도구 체인 |{{site.data.keyword.Bluemix_notm}} 퍼블릭	|{{site.data.keyword.Bluemix_notm}} 데디케이티드 |
 |:----------|:------------------------------|:------------------|
 |도구 통합 		|지원되는 도구 통합의 목록은 [도구 통합 구성](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}을 참조하십시오.  		|사용 가능한 도구 통합은 {{site.data.keyword.contdelivery_short}}가 사용자 환경에서 설정된 방법에 따라 다릅니다. 			|
@@ -53,7 +55,7 @@ lastupdated: "2017-4-4"
 |앱에서 도구 체인 작성		|앱 스타터 코드로 채워진 새 GitHub 저장소에서 지속적 딜리버리를 위해 앱이 구성됩니다. 		|앱 스타터 코드로 채워진 새 GitHub 또는 GitHub Enterprise 저장소에서 지속적 딜리버리를 위해 앱이 구성됩니다. 		|  
 |딜리버리 파이프라인 배치 지역		|모든 {{site.data.keyword.Bluemix_notm}} 퍼블릭 지역이 Cloud Foundry 배치 작업에 사용 가능합니다.  		|{{site.data.keyword.Bluemix_notm}} 데디케이티드 지역이 사용 가능합니다. 또한 동일한 고객 계정 내의 기타 데디케이티드 또는 로컬 지역도 특정 환경에서 {{site.data.keyword.contdelivery_short}}가 설정된 방법에 따라 사용이 가능합니다. 		|
 |딜리버리 파이프라인 배치 작업		|모든 [작업 유형](/docs/services/ContinuousDelivery/pipeline_about.html#deliverypipeline_jobs)이 사용 가능합니다. 		|데디케이티드 환경에 설치되지 않은 {{site.data.keyword.Bluemix_notm}} 서비스에 의존하는 작업 유형은 사용 가능하지 않습니다. 예를 들어, 컨테이너 빌드 및 배치 작업 유형은 {{site.data.keyword.Bluemix_notm}} Container 서비스가 없는 환경에서는 사용 가능하지 않습니다. 	|
-{: caption="Table 1. Differences between toolchains on {{site.data.keyword.Bluemix_notm}} 데디케이티드 및 {{site.data.keyword.Bluemix_notm}} 퍼블릭" caption-side="top"}
+{: caption="표 1: Bluemix 데디케이티드 및 Bluemix 퍼블릭의 도구 체인 간 차이점" caption-side="top"}
 
 
 ## 도구 체인 템플리트
@@ -81,4 +83,4 @@ lastupdated: "2017-4-4"
 |[GitHub 및 Jenkins를 사용하는 Deployment Risk Analytics ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.ng.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevopsinsights-toolchain){:new_window}		|이 도구 체인으로 사용자는 지속적 통합 및 딜리버리를 위한 Jenkins 프로세스에 대한 통찰을 얻을 수 있습니다. Jenkins에서 작업을 실행할 때 {{site.data.keyword.DRA_short}}에 데이터를 전송하도록 Jenkins 서버를 구성할 수 있습니다. 또한 정책에 따라 배치를 차단할 수 있도록 품질 게이트를 구현할 수도 있습니다. 사용자는 {{site.data.keyword.DRA_short}}의 배치 위험성 대시보드에서 결과를 볼 수 있습니다. Jenkins에서 사용하는 소스 저장소를 표시하도록 GitHub 저장소를 구성하는 경우에는 변경 추적성을 사용할 수 있습니다.   		|
 |[GitHub 및 JIRA를 사용하는 Developer Insights 및 Team Dynamics ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.ng.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevteaminsights-toolchain){:new_window}		|이 도구 체인으로 사용자는 프로젝트의 개발 위험성을 탐색하고 소셜 코딩 분석을 사용하여 개발자 간의 상호작용 패턴을 파악할 수 있습니다. 사용자는 GitHub 문제, JIRA 문제 또는 둘 모두와 함께 GitHub 소스 코드를 분석할 수 있습니다. Developer Insights를 사용하면 오류 발생 가능성이 높은 파일을 식별하고 프로젝트가 DevOps 사례를 준수하는 방법을 파악할 수 있습니다. Team Dynamics의 소셜 코딩 분석이 팀 구성원 간의 상호작용 레벨을 식별하므로, 팀은 비생산적인 사례를 수정할 수 있습니다.  		|
 |[사용자 자체 도구 체인 빌드 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.ng.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fempty-toolchain){:new_window}		|이 도구 체인에는 사전 구성된 도구가 없습니다. 도구 체인에 이미 익숙한 경우 사용자 자체 도구 체인을 설정할 수 있습니다.  		|
-{: caption="Table 2. Toolchain templates" caption-side="top"}
+{: caption="표 2. 도구 체인 템플리트" caption-side="top"}

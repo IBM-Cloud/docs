@@ -11,7 +11,7 @@ lastupdated: "2017-4-11"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Trabalhando com o Git Repos and Issue Tracking (Experimental)
+# Git Repos and Issue Tracking (Beta)
 {: #git_working}
 
 Colabore com a sua equipe e gerencie seu código-fonte com um repositório (repo) Git e um rastreador de problemas que seja hospedado pela IBM e construído no [GitLab Community Edition ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://about.gitlab.com/){:new_window}.
@@ -30,12 +30,13 @@ A integração de ferramenta Git Repos and Issue Tracking suporta que as equipes
 
 Os arquivos são estritamente limitados a 100 MB. O limite de tamanho sugerido do repositório é 1 GB. Se o seu repositório excede 1 GB, talvez você receba um e-mail com uma solicitação para reduzir o tamanho do repositório.
 
-## Criando um token de acesso pessoal ou chave SSH para autenticação    
+## Usando o Repos and Issue Tracking localmente
 {: #git_authentication}
 
+Você pode acessar localmente os repositórios Git que estão armazenados no Git Repos and Issue Tracking. Para obter instruções de como configurar o Git localmente, consulte [Iniciar o uso do Git na linha de comandos ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window}.
+
+### Criando um token de acesso pessoal ou chave SSH para autenticação  
 Para concluir operações Git remotas, como `clonar` ou `enviar por push` no repositório Git local, deve-se usar um token de acesso pessoal ou uma chave SSH para se autenticar no GitLab.
 
 * Para configurar um token de acesso pessoal, veja [Tokens de acesso pessoal![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git.ng.bluemix.net/help/api/README.html#personal-access-tokens){:new_window}.
 * Para configurar uma chave SSH, veja [SSH ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git.ng.bluemix.net/help/ssh/README){:new_window} ou [Como criar suas chaves SSH ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git.ng.bluemix.net/help/gitlab-basics/create-your-ssh-keys){:new_window}. O acesso aos repositórios com autenticação SSH pode requerer configuração adicional para proxies e firewalls.
-
-**Nota:** para usar um token de acesso pessoal ou chave SSH para autenticação, deve-se configurar o Git localmente. Para obter instruções, veja [Iniciar o uso do Git na linha de comandos ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window}.

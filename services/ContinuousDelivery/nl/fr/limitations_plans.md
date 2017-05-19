@@ -22,13 +22,13 @@ lastupdated: "2017-2-16"
 
 L'utilisation d'{{site.data.keyword.contdelivery_full}} est limitée à la génération, au déploiement, au test et aux opérations en cours des applications sur la plateforme {{site.data.keyword.Bluemix_notm}} ou toute autre plateforme ou infrastructure en tant que service compatible.
 
-Les comportements acceptables en matière d'utilisation sont les suivants, sans s'y limiter : 
+Les comportements acceptables en matière d'utilisation sont les suivants, sans s'y limiter :
 
 * La compilation et l'assemblage d'artefacts pour les langages de programmation pris en charge
 * Le déploiement automatisé d'artefacts d'application, de configurations et de ressources ou services pertinents
 * Le test, la validation et tout autre comportement généré par un événement de développement déclenché dans le cadre d'un processus de développement
 
-Les comportements non autorisés en matière d'utilisation sont les suivants, sans s'y limiter : 
+Les comportements non autorisés en matière d'utilisation sont les suivants, sans s'y limiter :
 
 * L'utilisation de travaux ou d'agents de pipeline pour des comportements de calcul généraux, tels que le minage de Bitcoin, les attaques par refus de service distribuées et un comportement malveillant ou offensant envers d'autres clients ou utilisateurs de la plateforme IBM Cloud ou des utilisateurs généraux d'Internet
 * L'utilisation dans le processus de développement normal de sites ou de services faisant la promotion d'un discours haineux ou d'autres activités violant les Principes de conduite dans les affaires d'IBM

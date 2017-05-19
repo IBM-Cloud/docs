@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-7"
+lastupdated: "2017-4-28"
 
 ---
 
@@ -17,7 +17,7 @@ poder coletivo de uma cadeia de ferramentas é maior que a soma de suas integra�
 {: shortdesc}
 
 As cadeias de ferramentas abertas estão disponíveis nos ambientes Public e Dedicated no {{site.data.keyword.Bluemix}}. É possível criar uma cadeia de ferramentas de duas formas: usar um modelo para criar uma cadeia de ferramentas ou criar uma cadeia de
-ferramentas a partir de um app. No {{site.data.keyword.Bluemix_notm}} Public, cadeias de ferramentas estão disponíveis somente na região sul dos EUA.
+ferramentas a partir de um app.
 
 Cada cadeia de ferramentas é associada a uma organização específica (org) e qualquer usuário que seja membro dessa organização poderá ser incluído na lista de controle de acesso de qualquer uma de suas cadeias de ferramentas associadas. Para obter mais informações sobre o controle de acesso de cadeias de ferramentas, veja [Gerenciando o acesso](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}. Antes de
 você criar uma cadeia de ferramentas, certifique-se de estar trabalhando na organização na qual deseja criar a cadeia de ferramentas. A organização na qual você está trabalhando é exibida na barra de menus. Para alternar para outra organização, clique na organização na barra de menus e selecione a organização para a qual você deseja alternar.
@@ -30,7 +30,7 @@ você criar uma cadeia de ferramentas, certifique-se de estar trabalhando na org
 
 1. Se você usar o {{site.data.keyword.Bluemix_notm}} Public, efetue login no [{{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://console.ng.bluemix.net){:new_window}.
 1. Se você usar o {{site.data.keyword.Bluemix_notm}} Dedicated, efetue login no ambiente Dedicated no {{site.data.keyword.Bluemix_notm}}.
-1. No menu de hambúrguer, clique em **Serviços** e, em seguida, clique em **DevOps**.
+1. No menu da barra de menus do {{site.data.keyword.Bluemix_notm}}, clique em **Serviços** e, em seguida, clique em **DevOps**.
 1. No painel DevOps, na página **Cadeias de ferramentas**, clique em **Criar uma cadeia de ferramentas**.
 1. Na página **Criar uma cadeia de ferramentas**, clique em um
 modelo de cadeia de ferramentas.
