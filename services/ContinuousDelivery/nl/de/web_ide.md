@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-31"
+lastupdated: "2017-4-25"
+
 ---
 
 {:new_window: target="_blank"}
@@ -11,7 +12,7 @@ lastupdated: "2017-3-31"
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# Code mit der IDE für Eclipse Orion bearbeiten
+# Mit der Eclipse Orion-Web-IDE entwickeln 
 {: #web_ide}
 
 Die Eclipse Orion-{{site.data.keyword.webide}} ist eine browserbasierte Entwicklungsumgebung, in der Sie Anwendungen für das Web entwickeln können. Für die Entwicklung in JavaScript, HTML und CSS stehen Content-Assist-Funktionen, Codevervollständigung und Fehlerprüfung zur Verfügung. Die {{site.data.keyword.webide}} ist mit nahezu jeder Programmiersprache verwendbar und bietet Syntaxhervorhebung für die meisten Dateitypen. Die Quellcodeverwaltung ist integriert und Sie können Code lokal bereitstellen, um Ihre Apps zu testen und zu debuggen.
@@ -19,7 +20,7 @@ Die Eclipse Orion-{{site.data.keyword.webide}} ist eine browserbasierte Entwickl
 
 Als weiterer wesentlicher Vorteil kommt hinzu, dass {{site.data.keyword.webide}} auf der Webtechnologie basiert. Es entsteht keinerlei Installations-, Wartungs- und Skalierungsaufwand. Für die Codeentwicklung benötigen Sie lediglich einen Internetanschluss.
 
-## Editor einrichten
+## IDE einrichten
 {: #editorsetup}
 
 Die {{site.data.keyword.webide}} ist konfigurierbar, d. h. Sie können Farbschemen, technische Tools und Einstellungen wählen, die Ihren Entwicklungsanforderungen entsprechen. Um die Einstellungen anzuzeigen und zu ändern, klicken Sie links im Menü auf das Symbol **Einstellungen** <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="Symbol 'Einstellungen'">.
@@ -51,7 +52,7 @@ Der zweite Abschnitt ist das Editorteilfenster. Der Editor bietet verschiedene C
 ![Web-IDE](images/webide_light.png)
 
 ### Mit mehreren Dateien arbeiten
-1. Um mit zwei Dateien gleichzeitig zu arbeiten, klicken Sie auf das Symbol **Teilungsmodus des Editors ändern** <img class="inline" src="images/webide_split_editor_icon_light_small.png"  alt="Symbol 'Geteilter Editor'">. 
+1. Um mit zwei Dateien gleichzeitig zu arbeiten, klicken Sie auf das Symbol **Teilungsmodus des Editors ändern** <img class="inline" src="images/webide_split_editor_icon_light_small.png"  alt="Symbol 'Geteilter Editor'">.
 2. Wählen Sie in dem geöffneten Menü eine Ansicht aus.
 
  Wenn bereits eine Datei im Editor geöffnet war, wird sie nach Auswahl einer Ansicht in beiden Editoransichten angezeigt.
@@ -76,7 +77,7 @@ Die {{site.data.keyword.webide}} ist mit Quellcodeverwaltungstools integriert. U
 ## App vom Arbeitsbereich aus bereitstellen
 {: #deploy}
 
-1. Um die App bereitzustellen, wählen Sie in der Ausführungsleiste entweder eine Startkonfiguration aus oder erstellen Sie ein solche. 
+1. Um die App bereitzustellen, wählen Sie in der Ausführungsleiste entweder eine Startkonfiguration aus oder erstellen Sie ein solche.
 1. Klicken Sie auf das Symbol für die Bereitstellung <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="Symbol 'Bereitstellung'">. Bei der Bereitstellung einer Instanz Ihrer App werden der aktuelle Inhalt Ihres Arbeitsbereichs und die Umgebung verwendet, die in Ihrer Startkonfiguration definiert sind. 
 2. Wenn Ihre App bereitgestellt wurde, können Sie die Ausführungsleiste verwenden, um Ihre App zu stoppen, erneut zu starten oder zu debuggen, um Protokolle anzuzeigen usw.
 ![Ausführungsleiste](images/webide_runbar_light.png)    
