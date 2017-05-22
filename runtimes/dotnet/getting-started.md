@@ -29,8 +29,7 @@ You'll need the following:
 * [{{site.data.keyword.Bluemix_notm}} account](https://console.ng.bluemix.net/registration/)
 * [Cloud Foundry CLI ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/cli#downloads){: new_window}
 * [Git ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/downloads){: new_window}
-* Install .NET Core 1.0.0-preview4-004233 SDK from the [preview4 download page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/dotnet/core/blob/master/release-notes/download-archives/preview4-download.md) instructions.
-* Install the latest .NET Core Runtime from the [dot.net website ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.microsoft.com/net/download/core#/runtime)
+* Install .NET Core SDK v1.0.4 from the [dot.net website ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.microsoft.com/net/download/core) instructions.
 
 ## 1. Clone the sample app
 {: #clone}
@@ -76,7 +75,7 @@ Open the manifest.yml file, and change the `name` from `GetStartedDotnet` to you
  applications:
  - name: GetStartedDotnet
    random-route: true
-   memory: 256M
+   memory: 512M
   ```
   {: codeblock}
 
@@ -105,6 +104,7 @@ Replace the *API-endpoint* in the command with an API endpoint from the followin
 |URL                             |Region          |
 |:-------------------------------|:---------------|
 | https://api.ng.bluemix.net     | US South       |
+| https://api.eu-de.bluemix.net  | Germany        |
 | https://api.eu-gb.bluemix.net  | United Kingdom |
 | https://api.au-syd.bluemix.net | Sydney         |
 
