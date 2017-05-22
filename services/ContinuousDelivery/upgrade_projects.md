@@ -179,7 +179,7 @@ When you return to your project, the upgrade message is displayed again, and you
 {: #upgrade_troubleshoot}
 
 If you have questions or problems, go to the [support forum](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services). In your forum post, include the URLs to your {{site.data.keyword.jazzhub_short}} project and your {{site.data.keyword.contdelivery_short}} toolchain, and tag your post with the `devops-services` tag.
-   
+
 ## Frequently asked questions
 {: #upgrade_faq}
 
@@ -208,12 +208,8 @@ For full details about how each type of repo is treated in the upgrade process, 
 |hub.jazz.net/git		|Private or public 		|A new private or public repo in {{site.data.keyword.gitrepos}} with {{site.data.keyword.Bluemix_notm}} Public.	|
 {: caption="Table 1. Project repos mapped to toolchain repos" caption-side="top"}
 
-### I see that {{site.data.keyword.gitrepos}} is currently a beta release. Will it be available as a full release by the deadline to upgrade my project?
-
-Yes. {{site.data.keyword.gitrepos}} will be available as a full release by the deadline to upgrade.
-
 ### What will happen to my build definitions in my project when I upgrade to a toolchain?
 
-If you're building your source code by using Jazz instead of Delivery Pipeline, you must manually migrate your build definitions to Delivery Pipeline in your toolchain. 
+If you're building your source code by using Jazz instead of Delivery Pipeline, you must manually migrate your build definitions to Delivery Pipeline in your toolchain.
 
-If you're using Jazz SCM as a source repo and using Delivery Pipeline to build your code, the source in Jazz SCM will be automatically moved to a Git repo. Your Delivery Pipeline configuration will remain the same except it will consume the source from the Git repo instead of the source from Jazz SCM. 
+If you're using Jazz SCM as a source repo and using Delivery Pipeline to build your code, the source in Jazz SCM will be automatically moved to a Git repo. Your Delivery Pipeline configuration will remain the same except it will consume the source from the Git repo instead of the source from Jazz SCM.
