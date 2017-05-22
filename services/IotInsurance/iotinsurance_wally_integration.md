@@ -47,7 +47,7 @@ Use environment variables to configure the {{site.data.keyword.iotinsurance_shor
 <td>(Required) The name of the Wally organization to use, provided by Wally.</td>
 </tr>
 <tr>
-<td>WALLY_SECURITY_TOKEN</td>
+<td>WALLY_TOKEN</td>
 <td>string</td>
 <td>(Required) The security token that is used to access the data, provided by Wally.</td>
 </tr>
