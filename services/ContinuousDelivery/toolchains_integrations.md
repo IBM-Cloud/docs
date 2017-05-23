@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-17"
+lastupdated: "2017-5-18"
 
 ---
 
@@ -501,17 +501,17 @@ Configure Jenkins to automate the continuous building, testing, and deployment o
 
   * Select the **This project is parameterized** check box.
 
-  * Add the `ICD_WEBHOOK_URL` string parameter.
+  * Add the `IBM_CLOUD_DEVOPS_WEBHOOK_URL` string parameter.
 
   * Paste the generated toolchain webhook.
  ![Webhook URL](images/jenkins_webhook_url.png)
 
-  * Add a post-build action for IBM Cloud DevOps - Webhook Notification and select the **Job Completed** check box.
+  * Add a post-build action for Notify OTC and select the **Job Completed** check box.
  ![Post-build action](images/jenkins_postbuild_action.png)  
 
  e. In your deploy jobs, complete these steps:
 
-  * Add the `ICD_WEBHOOK_URL`, `CF_API`, `CF_ORG`, `CF_SPACE`, and `CF_APP` string parameters. These examples show how to add each of the string parameters.
+  * Add the `IBM_CLOUD_DEVOPS_WEBHOOK_URL`, `CF_API`, `CF_ORG`, `CF_SPACE`, and `CF_APP` string parameters. These examples show how to add each of the string parameters.
  ![Webhook URL string parameter](images/jenkins_set_webhook_url.png)
  ![CFI API string parameter](images/jenkins_set_cfapi.png)
  ![CFI ORG string parameter](images/jenkins_set_cforg.png)
@@ -524,7 +524,7 @@ Configure Jenkins to automate the continuous building, testing, and deployment o
   * In the **Build** field, enter these commands to log in and use the IBM Cloud DevOps Cloud Foundry plug-in to send the application deployable mappings, with Git commit traceability, to your toolchain:
  ![Build commands](images/jenkins_build_commands.png)    
 
-  * In the **Build** field, enter the `cf icd --create-connection $ICD_WEBHOOK_URL $CF_APP` command to send the application deployable mappings to the toolchain.    
+  * In the **Build** field, enter the `cf icd --create-connection $IBM_CLOUD_DEVOPS_WEBHOOK_URL $CF_APP` command to send the application deployable mappings to the toolchain.    
 
  f. Save your changes and return to the Configure the Integration page for the Jenkins tool integration.
 
