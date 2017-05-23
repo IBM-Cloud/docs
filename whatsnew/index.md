@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-05-17" 
+lastupdated: "2017-05-23" 
 
 ---
 
@@ -21,6 +21,13 @@ Stay up-to-date with the new features and services that are available in {{site.
 
 ## {{site.data.keyword.Bluemix_notm}} platform
 {: #platform_category}
+
+### {{site.data.keyword.Bluemix_notm}} console updates
+New as of: 23 May 2017
+
+You can now manage your public regions from a single location through the updated {{site.data.keyword.Bluemix_notm}} console. The region selector offers you streamlined access to your resources, and other enhancements include higher availability and improved performance.
+
+For more information about this update, check out [New Global Bluemix UI for Higher Availability and More](https://www.ibm.com/blogs/bluemix/2017/05/new-global-bluemix-ui-higher-availability/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
 ### Identity and access management
 New as of: 01 May 2017
