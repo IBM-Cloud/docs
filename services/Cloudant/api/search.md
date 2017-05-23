@@ -784,6 +784,14 @@ you can run a query with `~` to find terms like the search term.
 For instance,
 `look~` finds the terms `book` and `took`.
 
+>   **Note**: If the lower and upper bounds of a range 
+> query are both strings that contain only numeric digits, 
+> the bounds are treated as numbers not as strings.
+> 
+> For example, this search: 
+> mod_date:["20170101" TO "20171231"]
+> returns documents for which mod_date is between 20170101 and 20171231 (not between "20170101" and "20171231").
+
 You can alter the importance of a search term by adding `^` and a positive number.
 This alteration makes matches containing the term more or less relevant,
 proportional to the power of the boost value.
