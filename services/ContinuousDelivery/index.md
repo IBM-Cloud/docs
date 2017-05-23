@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-18"
+lastupdated: "2017-5-19"
 
 ---
 
@@ -34,7 +34,7 @@ The {{site.data.keyword.contdelivery_short}} service supports your DevOps workfl
 
  * You can create integrated DevOps open [toolchains](/docs/services/ContinuousDelivery/toolchains_about.html){: new_window} to enable tool integrations that support your development, deployment, and operations tasks.
 
-  A toolchain is an integrated set of tools that you can use to collaboratively develop, build, deploy, test, and manage applications. You can create toolchains that include {{site.data.keyword.Bluemix_notm}} services, open source tools, and third-party tools, such as GitHub, PagerDuty, and Slack, that make development and operations repeatable and easier to manage.
+  A toolchain is an integrated set of tools that you can use to collaboratively develop, build, deploy, test, and manage applications and make operations repeatable and easier to manage. Toolchains can include open source tools, {{site.data.keyword.Bluemix_notm}} services, such as [{{site.data.keyword.DRA_full}}](/docs/services/ContinuousDelivery/di_working.html){: new_window}, and third-party tools, such as GitHub, PagerDuty, and Slack. 
 
  * Deliver continuously by using automated [pipelines](/docs/services/ContinuousDelivery/pipeline_about.html){: new_window}.
 
@@ -47,10 +47,6 @@ The {{site.data.keyword.contdelivery_short}} service supports your DevOps workfl
  * Collaborate with your team and manage your source code with a [Git repository (repos) and issue tracker](/docs/services/ContinuousDelivery/git_working.html#git_working){: new_window} that is hosted by IBM and built on GitLab Community Edition.
 
   Manage Git repos through fine-grained access controls that keep code secure. Review code and enhance collaboration through merge requests. Track issues and share ideas through the issue tracker. Document projects on the wiki system.
-
- * Improve quality through [{{site.data.keyword.DRA_short}}](/docs/services/ContinuousDelivery/di_working.html){: new_window}.
-
-  Understand the dynamics of your team as it develops and delivers code. Learn how users interact with your application. Review data to help you manage your application's operations.
 
 ##Starting with a pipeline
 {: #starting_with_a_pipeline}
