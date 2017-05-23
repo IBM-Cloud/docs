@@ -38,9 +38,5 @@ Docker conventions and groups accounting information are used as the basic mecha
 
 Up to one data point per minute is collected. Container metrics that have not been written to in 7 days are deleted.
     
-## Metrics sorting
 
-The data is displayed and ordered by container ID. 
-
-From the command line, you can run the `cf ic ps` command to view a list of the container IDs for the containers in your private {{site.data.keyword.Bluemix_notm}} images registry.
 
