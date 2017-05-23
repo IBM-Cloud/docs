@@ -20,8 +20,8 @@ Monitoring and Logging
         monitoring/monitoring_bmx_ov.md
         monitoring/cf/monitoring_cf_apps.md
         monitoring/containers/monitoring_containers_ov.md
-		
-	{: .topicgroup}
+
+    {: .topicgroup}
     Tutorials
         logging/containers/tutorials/kibana_tutorial_1.md
         
