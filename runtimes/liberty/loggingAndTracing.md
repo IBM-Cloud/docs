@@ -52,7 +52,7 @@ For a Liberty application running in a Diego cell, it is also possible to change
 
 This requires the application pushed with a server.xml and the updateTrigger in server.xml needs to be set with value "polled", then the change to tracing specification in server.xml will be detected and applied by runtime environment. 
 
-See [push Liberty apps with server.xml] (https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing) for options to push Liberty apps with a customized sever.xml
+See [push Liberty apps with server.xml](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing) for options to push Liberty apps with a customized sever.xml
 
 See [Controlling Dynamic Updates](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_8.5.5/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html) for how to set up dynamic update in server.xml. 
 
