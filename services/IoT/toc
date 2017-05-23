@@ -21,6 +21,8 @@ Internet of Things Platform
         information_management/im_index_scenario_thing.md
         gateways/gateway-access-control.md
         gateways/gw_intro_api.md
+        [Custom domains (Beta)](reference/security/set_up_certificates.html#custom_domains)
+        [Drill-down reporting (Beta)](reference/security/RM_security.html#drill_down)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
