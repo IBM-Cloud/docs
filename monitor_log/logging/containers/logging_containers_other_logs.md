@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-16"
+lastupdated: "2017-05-18"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2017-03-16"
 # Collecting non-default log data from a container
 {: #logging_containers_collect_data}
 
-To capture data from non-default log locations inside a container, set the environment variable **LOG_LOCATIONS** when you create a container. 
+To capture data from non-default log locations inside a container that is deployed in the {{site.data.keyword.Bluemix_notm}}-managed cloud  infrastructure, set the environment variable **LOG_LOCATIONS** when you create a container. 
 {:shortdesc}
 
 * Add the **LOG_LOCATIONS** environment variable with a path to the log file when you create the container. 
