@@ -6,20 +6,19 @@ Internet of Things Platform
 
     {: .navgroup id="learn"}
     {: .topicgroup}
-    About
+    關於
         iotplatform_overview.md
         feature_overview.md
         reference/standards_and_requirements.md
         reference/bluemix_and_platform.md
-        [IoT pricing calculator](http://iot-cost-calculator.ng.bluemix.net/)
+        [IoT 定價計算機](http://iot-cost-calculator.ng.bluemix.net/)
 
     {: .topicgroup}
-    Beta features
+    測試版特性
         information_management/im_index.md
         information_management/im_index_split.md
         information_management/im_index_scenario.md
         information_management/im_index_scenario_thing.md
-        gateways/gateway-access-control.md
         gateways/gw_intro_api.md
     {: .navgroup-end}
 
@@ -27,7 +26,7 @@ Internet of Things Platform
     reference/api.md
 
     {: .topicgroup}
-    Watson IoT Platform security
+    Watson IoT Platform 安全
         reference/security/index.md
         reference/security/custom_cards_server.md
         reference/security/RM_security.md
@@ -35,18 +34,18 @@ Internet of Things Platform
         reference/security/set_up_policies.md
 
     {: .topicgroup}
-    Bluemix security
-        [Bluemix security](https://console.ng.bluemix.net/docs/security/index.html#security)
-        [Bluemix platform security](https://console.ng.bluemix.net/docs/security/index.html#platform-security)
-        [Bluemix compliance](https://console.ng.bluemix.net/docs/security/index.html#compliance)
-        [Bluemix Infrastructure (SoftLayer) security](http://www.softlayer.com/security)
-        [Bluemix Infrastructure (SoftLayer) compliance](http://www.softlayer.com/compliance)
+    Bluemix 安全
+        [Bluemix 安全](https://console.ng.bluemix.net/docs/security/index.html#security)
+        [Bluemix 平台安全](https://console.ng.bluemix.net/docs/security/index.html#platform-security)
+        [Bluemix 規範](https://console.ng.bluemix.net/docs/security/index.html#compliance)
+        [Bluemix 基礎架構 (SoftLayer) 安全](http://www.softlayer.com/security)
+        [Bluemix 基礎架構 (SoftLayer) 規範](http://www.softlayer.com/compliance)
 
     reference/mqtt/index.md
     reference/device_model.md
 
     {: .topicgroup}
-    Client libraries
+    用戶端程式庫
         [C++](https://github.com/ibm-watson-iot/iot-cpp)
         [C#](https://github.com/ibm-watson-iot/iot-csharp)
         [Embedded C](https://github.com/ibm-watson-iot/iot-embeddedc)
@@ -60,14 +59,14 @@ Internet of Things Platform
     index.md
 
     {: .topicgroup}
-    Connecting to Watson IoT Platform
+    連接至 Watson IoT Platform
         iotplatform_task.md
         gateways/dashboard.md
         platform_authorization.md
         reference/security/connect_devices_apps_gw.md
 
     {: .topicgroup}
-    Managing Watson IoT Platform
+    管理 Watson IoT Platform
         reference/extensions/index.md
         cloudant_connector.md
         message_hub.md
@@ -75,7 +74,7 @@ Internet of Things Platform
         bl_blockchain_integration.md
 
     {: .topicgroup}
-    Accessing Watson IoT Platform
+    存取 Watson IoT Platform
         add_users.md
         singlesignon.md
         roles_index.md
@@ -86,7 +85,7 @@ Internet of Things Platform
         reference/gateway_roles_access.md
 
     {: .topicgroup}
-    Analyzing real-time IoT data
+    分析即時 IoT 資料
         analytics.md
         data_visualization.md
         im_schemas.md
@@ -96,19 +95,19 @@ Internet of Things Platform
         edge_analytics.md
 
     {: .topicgroup}
-    Using IoT samples
+    使用 IoT 範例
         nodereddevice_sample.md
         visualizingdata_sample.md
         getting_started/quickstart/index.md
 
     {: .topicgroup}
-    Developing for Watson IoT Platform
+    針對 Watson IoT Platform 開發
         developer_doc_overview.md
         iot_platform_client_lib.md
         applications/dev_nodered.md
 
     {: .topicgroup}
-    Developing applications
+    開發應用程式
         applications/app_dev_index.md
         applications/api.md
         reference/mqtt/index.md
@@ -119,7 +118,7 @@ Internet of Things Platform
         applications/libraries/c_sharp.md
 
     {: .topicgroup}
-    Developing devices
+    開發裝置
         devices/device_dev_index.md
         devices/api.md
         reference/mqtt/index.md
@@ -135,18 +134,19 @@ Internet of Things Platform
         devices/libraries/mbedcpp.md
 
     {: .topicgroup}
-    Developing gateways
+    開發閘道
         gateways/gw_dev_index.md
         gateways/gw_api.md
         reference/mqtt/index.md
         gateways/mqtt.md
         gateways/libraries/java_cli_gw.md
         gateways/libraries/java_cli_managed_gw.md
+        gateways/gateway-access-control.md
 
     blockchain/dev_blockchain.md
 
     {: .topicgroup}
-    Recipes
+    秘訣
         [Recipes for connecting your devices](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/)
         [Watson IoT Platform Play organization](https://play.internetofthings.ibmcloud.com/)
         [Connecting an Intel Galileo to the Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/connect-an-intel-galileo-to-the-internet-of-things-foundation-connect/)
