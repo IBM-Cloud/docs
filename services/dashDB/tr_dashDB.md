@@ -69,7 +69,6 @@ To resolve the problem, choose one of the following options:
 {: tsResolve}
 
 * From the drop-down list in the Cloudant dashboard, select the {{site.data.keyword.Bluemix_notm}} organization in which you want the {{site.data.keyword.dashdbshort_notm}} instance to be created. After you select the organization, select the appropriate space from the secondary drop-down list.
-
 * Manually provision a {{site.data.keyword.dashdbshort_notm}} instance directly in {{site.data.keyword.Bluemix_notm}} and select the created {{site.data.keyword.dashdbshort_notm}} service instance from the drop-down list in the Cloudant dashboard.
 
 
@@ -86,7 +85,6 @@ If the user’s {{site.data.keyword.Bluemix_notm}} account is in a different reg
 {: tsCauses}
 
 1. Log in to the {{site.data.keyword.Bluemix_notm}} dashboard and switch to your expected region. Follow any prompts to complete the onboarding in that region. As an alternative, create a {{site.data.keyword.Bluemix_notm}} account in the appropriate region.
-
 2. Log in to the Cloudant dashboard to repeat the {{site.data.keyword.dashdbshort_notm}} service instance selection.
 {: tsResolve}
 
@@ -106,7 +104,6 @@ To resolve the problem, choose one of the following options:
 {: tsResolve}
 
 * To free up resources, drop services in your {{site.data.keyword.Bluemix_notm}} dashboard that you no longer use. Retry the provisioning request for a new {{site.data.keyword.dashdbshort_notm}} instance.
-    
 * Use the {{site.data.keyword.Bluemix_notm}} dashboard to manually provision a {{site.data.keyword.dashdbshort_notm}} instance in an appropriate organization or space that does not have service limits. Select that instance from the Cloudant dashboard.
 
 
@@ -126,12 +123,12 @@ You can determine the status of the {{site.data.keyword.dashdbshort_notm}} servi
 {: tsResolve}
 
 * [{{site.data.keyword.Bluemix_notm}} Support ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/bluemix/support/#status){:new_window}
-
 * Status monitoring:
-
-  * [US South region ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://estado.ng.bluemix.net/internalstatus){:new_window}
-
-  * [Europe United Kingdom region ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://estado.eu-gb.bluemix.net/internalstatus){:new_window}
+  * [All regions ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.eu-gb.bluemix.net/status?tags=platform,runtimes,services,ibm:yp:eu-gb,ibm:yp:eu-de,ibm:yp:us-south,ibm:yp:au-syd){:new_window}
+  <!--[US - South region ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://estado.ng.bluemix.net/internalstatus){:new_window}
+  [Europe - United Kingdom region ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://estado.eu-gb.bluemix.net/internalstatus){:new_window}
+  [Europe - Germany region ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://estado.eu-de.bluemix.net/internalstatus){:new_window}
+  [Australia - Sydney region ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://estado.au-syd.bluemix.net/internalstatus){:new_window}-->
 
 
 ##Getting help and support for dashDB
@@ -143,7 +140,6 @@ If you have problems or questions when using {{site.data.keyword.dashdbshort_not
 When using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.Bluemix}} development teams.
 
 * If you have technical questions about developing or deploying an app with {{site.data.keyword.dashdbshort_notm}}, post your question on [Stack Overflow ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/search?q=dashdb+bluemix){:new_window} and tag your question with "bluemix" and "dashdb".
-
 * For questions about the service and getting started instructions, use the [IBM developerWorks® dW Answers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/dashdb/?smartspace=bluemix){:new_window} forum. Include the "bluemix" and "dashdb" tags.
 
 See [Getting help](/docs/support/index.html#getting-help){:new_window} for more details about using the forums.
