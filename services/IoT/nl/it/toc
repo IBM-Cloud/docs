@@ -19,7 +19,6 @@ Internet of Things Platform
         information_management/im_index_split.md
         information_management/im_index_scenario.md
         information_management/im_index_scenario_thing.md
-        gateways/gateway-access-control.md
         gateways/gw_intro_api.md
     {: .navgroup-end}
 
@@ -142,6 +141,7 @@ Internet of Things Platform
         gateways/mqtt.md
         gateways/libraries/java_cli_gw.md
         gateways/libraries/java_cli_managed_gw.md
+        gateways/gateway-access-control.md
 
     blockchain/dev_blockchain.md
 
