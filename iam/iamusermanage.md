@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-05-17"
+lastupdated: "2017-05-24"
 
 ---
 
@@ -34,6 +34,8 @@ If you need to review your assigned access in an account that you have been adde
 3. Review your assigned roles.
 
 If you need your role or service policy changed, you must contact the organization manager or account owner to update the Cloud Foundry role or the administrator for the service or service instance to update the service policy.
+
+For details on the CLI commands that are used to manage accounts, orgs, and spaces, see [Commands for managing accounts, orgs, and roles](https://console.ng.bluemix.net/docs/cli/reference/bluemix_cli/bx_cli.html#bx_commands_acctorg).
 
 ## Cloud Foundry access
 {: #iammancfser}
