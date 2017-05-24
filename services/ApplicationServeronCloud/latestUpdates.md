@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2017-04-07"
+  years: 2016, 2017
+lastupdated: "2017-04-21"
 
 ---
 
@@ -14,6 +14,14 @@ lastupdated: "2017-04-07"
 {: #latest_updates}
 
 A list of the latest updates to the service.
+
+## April 21, 2017: Updated WebSphere Application Server in {{site.data.keyword.Bluemix_notm}}
+
+* Integrated miscellaneous service maintenance.
+* Addressed [several security vulnerabilities](http://www-01.ibm.com/support/docview.wss?uid=swg22000834){: new_window} in WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} including:
+  * A potential security vulnerability with the WebSphere Application Server MQ JCA Resource adapter.
+  * An unspecified vulnerability related to the Libraries component which could allow a remote attacker to obtain sensitive information resulting in a high confidentiality impact using unknown attack vectors.
+
 
 ## March 15, 2017: Updated WebSphere Application Server in {{site.data.keyword.Bluemix_notm}}
 
