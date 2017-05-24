@@ -19,7 +19,7 @@ Entrega Contínua
 
   {: .navgroup id="howto"}
     upgrade_projects.md
-    
+
   {: .topicgroup}
     Delivery Pipeline
         pipeline_about.md
@@ -37,8 +37,12 @@ Entrega Contínua
         toolchains_using.md
         toolchains_integrations.md
 
+  {: .topicgroup}
+    Eclipse Orion Web IDE
+        web_ide.md
+        git_web_ide.md
+
     git_working.md
-    web_ide.md
     di_working.md
   {: .navgroup-end}
 

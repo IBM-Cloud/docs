@@ -21,7 +21,9 @@ https://help.github.com/articles/github-flow-in-the-browser/
 
 
 ## Authoring Bluemix content in Markdown
-===============
+
+
+===========
 
 Purpose
 -----------
@@ -36,10 +38,10 @@ Bluemix has designed a parser that transforms Markdown into HTML5. Because the s
 Before you begin
 -----------
 
-###Markdown Editors
+### Markdown Editors
 There are many free Markdown editors available, however, not all editors will honor the syntax used by Bluemix extensions. Notepad ++ is free, compatible, and also supports YAML, which is used to define content reference keywords.
 
-#Mappings between DITA, MarkDown, and HTML 5
+# Mappings between DITA, MarkDown, and HTML 5
 
 |     Element     |   XDITA   |   HDITA     | MarkDown (Git flavored)  |   HTML 5      |
 |-----------------|-----------|-------------|--------------------------|---------------|
@@ -72,7 +74,7 @@ There are many free Markdown editors available, however, not all editors will ho
 | **comments** |  |  | `<!-– comment -->` | `<!-– comment -->` |	
 | **mdash** |  |  | `no equivalent` | `&mdash;` |	
 
-#Mappings for how to code in DITA vs Markdown
+# Mappings for how to code in DITA vs Markdown
 
 |  Dita Element     |   HTML 5 output from Dita  |   How to code in Markdown    | HTML 5 output from Markdown  |
 |-----------------|-----------|-------------|-------------------|
@@ -93,7 +95,7 @@ There are many free Markdown editors available, however, not all editors will ho
 | **shortdesc**    | `<shortdesc>	<p class="shortdesc">	` | This is a shortdesc paragraph<br>`{: shortdesc} `<br>**Note:** This requires the following attribute definition available in the attribute definition template: `{:shortdesc: .shortdesc}` | `<p class="shortdesc">`|
 | **term**    | `<span class="ph term">term</span>` |`*term*` | `<em>term</em>`|
 
-#Bluemix special mappings for how to code in DITA vs Markdown
+# Bluemix special mappings for how to code in DITA vs Markdown
 
 |  Dita Element     |   HTML 5 output from Dita  |   How to code in Markdown    | HTML 5 output from Markdown  |
 |-----------------|-----------|-------------|-------------------|
@@ -236,7 +238,7 @@ The Anchor ID is bound to a header by default, and it always uses the text of th
 Example of default anchor bound to a header:
 
 Mardown source:
-`##Visualizing your data sample`
+`## Visualizing your data sample`
 
 HTML5 output:
 `<h2 id="visualizing-your-data-sample">Visualizing your data sample</h2>`
@@ -245,7 +247,7 @@ Example of remapping using a simple attribute (we use the ID attribute, which is
 
 Markdown source:
 ```
-##Visualizing your data sample
+## Visualizing your data sample
   {: #my-renamed-anchor}
 ```
 
@@ -256,7 +258,7 @@ HTML5 output:
 ```
 {:myanchor: #my-renamed-anchor}
 
-##Visualizing your data sample
+## Visualizing your data sample
   {: myanchor}
 ```
 
@@ -267,15 +269,15 @@ You can link directly to a header within a file using the header anchor ID. You 
 ```
 Headings and user-defined header anchors for my file:
 
-#Bluemix
+# Bluemix
 {: #bluemix}
 
 My short description links to the [Applications heading](filename.html#header_id).
 
-##Services
+## Services
 {: #services}
 
-##Applications
+## Applications
 {: #applications}
 
 I want to create a link within my short description that links to the second sub-heading, Applications. 

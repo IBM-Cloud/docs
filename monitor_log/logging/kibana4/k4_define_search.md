@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-13"
+lastupdated: "2017-05-22"
 
 ---
 
@@ -21,18 +21,21 @@ In the search bar of the Discover page, you can define and save search queries b
 
 Complete the following tasks to define a custom search:
 
-1. Access the **Logs** tab of your Cloud Foundry (CF) app or container. 
+1. Launch Kibana.
 
-    1. Click the app name or container in the {{site.data.keyword.Bluemix}} dashboard.
-    2. For CF applications, click the **Logs** tab. For containers, click **Monitoring and logs**, and then select the **Logging** tab.
+    For Cloud Foundry (CF) apps or containers that run in the {{site.data.keyword.Bluemix}}-managed cloud infrastructure, complete the following steps:
     
-    The logs are displayed.
+    1. Access the **Logs** tab of your Cloud Foundry (CF) app or container. 
 
-2. Access Kibana. Click **Advanced View** ![Advanced view link](images/logging_advanced_view.jpg "Advanced view link"). The Kibana dashboard is displayed.
+        Click the app name or container in the {{site.data.keyword.Bluemix_notm}} dashboard. Then, for CF applications, click the **Logs** tab; for containers click **Monitoring and logs**, and then select the **Logging** tab. The logs are displayed.
 
+    2. Access Kibana. Click **Advanced View** ![Advanced view link](images/logging_advanced_view.jpg "Advanced view link"). The Kibana dashboard is displayed.
+    
+    For containers that run in a Kubernetes cluster, [launch Kibana from the browser](k4_launch.html#launch_Kibana_from_browser). 
+    
     When you access Kibana, the default search is applied. You can see the logs for the list of instances of the resource you launched Kibana for. You can filter the logs for any or all of the {{site.data.keyword.Bluemix_notm}} resources in that space.
 
-3. Look at the Discover page to see what subset of your data it displays. For more information, see [Identifying the data that is displayed in your Kibana Discover page](logging_kibana_analize_logs_interactively.html#k4_identify_data). Then, modify the default query to filter entries.
+2. Look at the Discover page to see what subset of your data it displays. For more information, see [Identifying the data that is displayed in your Kibana Discover page](logging_kibana_analize_logs_interactively.html#k4_identify_data). Then, modify the default query to filter entries.
 
     **Note:** Use the Lucene query language to define your custom query. For more information, see [Apache Lucene - Query Parser Syntax  ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://lucene.apache.org/core/2_9_4/queryparsersyntax.html){: new_window}
     
@@ -46,7 +49,7 @@ Complete the following tasks to define a custom search:
 
      For example, for a CF app, you can create a query `application_id:9d222152-8834-4bab-8685-3036cd25931a AND instance_id:["0" TO "1"]`  that only lists entries for instances *0* and *1*. 
 
-4. Save the query so you can reuse it later. For more information, see [Saving a search](logging_kibana_filtering_logs.html#k4_save_search). 
+3. Save the query so you can reuse it later. For more information, see [Saving a search](logging_kibana_filtering_logs.html#k4_save_search). 
 
 **Note:** If you need to delete a query, see [Deleting a search](logging_kibana_filtering_logs.html#k4_delete_search).
 

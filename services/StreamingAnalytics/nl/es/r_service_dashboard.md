@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-04-13"
 
 ---
 
-<!-- Attribute definitions --> 
+<!-- Attribute definitions -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -16,7 +16,7 @@ lastupdated: "2017-02-09"
 #Panel de control del servicio
 {: #dashboard}
 
-Puede acceder al servicio {{site.data.keyword.streaminganalyticsshort}} desde el panel de control del servicio {{site.data.keyword.Bluemix_short}}. 
+Puede acceder al servicio {{site.data.keyword.streaminganalyticsshort}} desde el panel de control del servicio {{site.data.keyword.Bluemix_short}}.
 {:shortdesc}
 
 Desde el panel de control del servicio puede:

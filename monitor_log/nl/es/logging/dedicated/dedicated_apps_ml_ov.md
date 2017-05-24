@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2017
 
-lastupdated: "2016-10-13"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -34,7 +34,7 @@ Las apps Cloud Foundry utilizan loggregator de Cloud Foundry para supervisar los
 vCPU | 19 | 57 |
 Memoria | 80 GB | 240 GB |
 Almacenamiento local | 2,98 TB | 8,94 TB |
-{: caption="Table 1. Logging hardware requirements for {{site.data.keyword.Bluemix_local_notm:}}" caption-side="top"}
+{: caption="Tabla 1. Requisitos de hardware para la creación de registros para {{site.data.keyword.Bluemix_local_notm:}}" caption-side="top"}
 
 ## Instalación
 
@@ -53,8 +53,8 @@ Puede revisar los registros de las apps que se ejecutan en {{site.data.keyword.B
 Para ver los registros de una app, siga estos pasos:
 1. Seleccione una app en ejecución.
 2. Pulse **Registros**. En la vista **Registros** puede ver los registros de la app en ejecución.
-4. Pulse el botón **Vista avanzada**. **Vista avanzada** muestra una vista más detallada de los registros mediante Kibana, una herramienta de visualización que utiliza registros y datos con indicación de hora para crear visualizaciones personalizadas. Para obtener más información sobre cómo utilizar la vista avanzada, consulte la documentación de [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html).
+4. Pulse el botón **Vista avanzada**. **Vista avanzada** muestra una vista más detallada de los registros mediante Kibana, una herramienta de visualización que utiliza registros y datos con indicación de hora para crear visualizaciones personalizadas. Para obtener más información sobre la utilización de la vista avanzada, consulte la [Guía del usuario de Kibana ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.elastic.co/guide/en/kibana/4.1/index.html){: new_window}.
 
-Luego puede personalizar un panel de instrumentos de Kibana. Consulte [Personalización de la visualización de registros en un panel de control de Kibana](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_dash_logs_custom) para obtener más información.
+Luego puede personalizar un panel de instrumentos de Kibana. Consulte [Análisis avanzado de registros con Kibana](../kibana4/analyzing_logs_Kibana.html#analyzing_logs_Kibana) para obtener más información. 
 
 <!-- audience blue staging only end comment -->

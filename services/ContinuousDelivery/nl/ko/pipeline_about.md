@@ -73,20 +73,20 @@ IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} 서비스(파이프
 **참고**: 빌드 작업에 **단순** 빌더 유형을 선택하는 경우 빌드 프로세스를 건너뜁니다. 이 경우에는 코드가 컴파일되지 않지만 있는 그대로 배치 단계에 전송됩니다. 빌드 및 배치 모두에 대해 **단순** 이외의 빌더 유형을 선택하십시오.
 
 #### 빌드 스크립트의 환경 특성
-빌드 작업의 빌드 쉘 명령 내에 환경 특성을 포함시킬 수 있습니다. 이러한 특성을 통해 작업 실행 환경에 대한 정보에 액세스할 수 있습니다. 자세한 정보는 [{{site.data.keyword.deliverypipeline}} 서비스의 환경 특성 및 자원](/docs/services/ContinuousDelivery/pipeline_deploy_var.html)을 참조하십시오. 
+빌드 작업의 빌드 쉘 명령 내에 환경 특성을 포함시킬 수 있습니다. 이러한 특성을 통해 작업 실행 환경에 대한 정보에 액세스할 수 있습니다. 자세한 정보는 [{{site.data.keyword.deliverypipeline}} 서비스의 환경 특성 및 리소스](/docs/services/ContinuousDelivery/pipeline_deploy_var.html)를 참조하십시오. 
 
 ### 배치 작업
 
 배치 작업은 프로젝트를 하나의 앱으로 Bluemix에 업로드하며 URL에서 액세스할 수 있습니다. 프로젝트가 배치되면 Bluemix 대시보드에서 배치된 앱을 찾을 수 있습니다. 
 
-배치 작업은 새 앱을 배치하거나 기존 앱을 업데이트할 수 있습니다. 처음에 다른 방법(예: Cloud Foundry 명령 인터페이스 또는 Web IDE의 run bar)을 사용하여 앱을 배치한 경우에도 배치 작업을 사용하여 앱을 업데이트할 수 있습니다. 앱을 업데이트하려면 배치 작업에서 해당 앱의 이름을 사용하십시오.
+배치 작업은 새 앱을 배치하거나 기존 앱을 업데이트할 수 있습니다. 처음에 다른 방법(예: Cloud Foundry 명령 인터페이스 또는 Web IDE의 실행 표시줄)을 사용하여 앱을 배치한 경우에도 배치 작업을 사용하여 앱을 업데이트할 수 있습니다. 앱을 업데이트하려면 배치 작업에서 해당 앱의 이름을 사용하십시오.
 
 하나 또는 다수의 지역과 서비스에 배치할 수 있습니다. 예를 들면, {{site.data.keyword.deliverypipeline}}이 하나 이상의 서비스를 사용하고 한 지역에서 테스트되며 여러 지역의 프로덕션에 배치되도록 설정할 수 있습니다. 자세한 정보는
 				[지역](/docs/overview/whatisbluemix.html#ov_intro_reg){: new_window}을 참조하십시오.
 
 #### 배치 스크립트의 환경 특성
 
-배치 작업의 배치 스크립트 내에 환경 특성을 포함시킬 수 있습니다. 이러한 특성을 통해 작업 실행 환경에 대한 정보에 액세스할 수 있습니다. 자세한 정보는 [{{site.data.keyword.deliverypipeline}} 서비스의 환경 특성 및 자원](/docs/services/ContinuousDelivery/pipeline_deploy_var.html)을 참조하십시오. 
+배치 작업의 배치 스크립트 내에 환경 특성을 포함시킬 수 있습니다. 이러한 특성을 통해 작업 실행 환경에 대한 정보에 액세스할 수 있습니다. 자세한 정보는 [{{site.data.keyword.deliverypipeline}} 서비스의 환경 특성 및 리소스](/docs/services/ContinuousDelivery/pipeline_deploy_var.html)를 참조하십시오. 
 
 ### 테스트 작업
 조건이 충족되도록 하려면 빌드 및 배치 작업의 앞이나 뒤에 테스트 작업을 포함시키십시오. 필요에 따라 단순하거나 복잡하도록 테스트 작업을 사용자 정의할 수 있습니다. 예를 들어, cURL 명령을 실행하고 특정 응답을 예상할 수 있습니다. 또한 단위 테스트 스위트를 실행하거나 써드파티 서비스(예: Sauce Labs)로 기능 테스트를 실행할 수도 있습니다. 
@@ -95,7 +95,7 @@ IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} 서비스(파이프
 
 #### 테스트 스크립트의 환경 특성
 
-테스트 작업의 스크립트에 환경 특성을 포함시킬 수 있습니다. 이러한 특성을 통해 작업 실행 환경에 대한 정보에 액세스할 수 있습니다. 자세한 정보는 [{{site.data.keyword.deliverypipeline}} 서비스의 환경 특성 및 자원](/docs/services/ContinuousDelivery/pipeline_deploy_var.html)을 참조하십시오. 
+테스트 작업의 스크립트에 환경 특성을 포함시킬 수 있습니다. 이러한 특성을 통해 작업 실행 환경에 대한 정보에 액세스할 수 있습니다. 자세한 정보는 [{{site.data.keyword.deliverypipeline}} 서비스의 환경 특성 및 리소스](/docs/services/ContinuousDelivery/pipeline_deploy_var.html)를 참조하십시오. 
 
 ## Manifest 파일
 {: #deliverypipeline_manifest}

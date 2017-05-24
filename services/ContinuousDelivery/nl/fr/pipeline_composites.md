@@ -19,9 +19,10 @@ lastupdated: "2017-4-5"
 # Utilisation de pipelines composites (expérimental)
 {: #deliverypipeline_create_composite}
 
-La fonction de pipeline composite pour {{site.data.keyword.deliverypipeline}} vous permet de gérer des processus reproductibles d'intégration continue et de distribution continue pour des applications logicielles connexes. {:shortdesc}
+La fonction de pipeline composite pour {{site.data.keyword.deliverypipeline}} vous permet de gérer des processus reproductibles d'intégration continue et de distribution continue pour des applications logicielles connexes.
+{:shortdesc}
 
-Vous pouvez créer des pipelines composites pour gérer les applications dans une chaîne d'outils. Si votre chaîne d'outils contient des applications déployées par {{site.data.keyword.deliverypipeline}}, elle est mise à jour dynamiquement lorsque vous lui ajoutez des pipelines de distribution ou que vous en supprimez. Vous pouvez également ajouter des applications au pipeline composite à partir de sources externes. 
+Vous pouvez créer des pipelines composites pour gérer les applications dans une chaîne d'outils. Si votre chaîne d'outils contient des applications déployées par {{site.data.keyword.deliverypipeline}}, elle est mise à jour dynamiquement lorsque vous lui ajoutez des pipelines de distribution ou que vous en supprimez. Vous pouvez également ajouter des applications au pipeline composite à partir de sources externes.
 
 ## Création d'un pipeline composite
 {: #compositepipeline_create_for_toolchain}
@@ -30,7 +31,7 @@ Vous pouvez créer des pipelines composites pour gérer les applications dans un
 
 1. Dans la barre de navigation de gauche, cliquez sur **Pipelines**.
 
-2. Activez la fonction de pipeline composite en cliquant sur **En savoir plus**, puis sur **Activer**. Le pipeline composite étant activé pour chaque utilisateur, seuls les membres de votre organisation (org) qui ont adhéré à la fonction expérimentale voient les pipelines composites que vous créez. 
+2. Activez la fonction de pipeline composite en cliquant sur **En savoir plus**, puis sur **Activer**. Le pipeline composite étant activé pour chaque utilisateur, seuls les membres de votre organisation (org) qui ont adhéré à la fonction expérimentale voient les pipelines composites que vous créez.
 
 2. Cliquez sur **Créer** > **Pipeline composite**.
 
@@ -48,11 +49,12 @@ Vous pouvez créer des pipelines composites pour gérer les applications dans un
 
 Les étapes que vous avez configurées sont automatiquement mappées à l'espace approprié dans votre organisation et un plan de déploiement est créé pour le pipeline composite.
 
-Si vous avez créé le pipeline composite pour une chaîne d'outils contenant des pipelines de distribution, les applications pour tous les pipelines de la chaîne d'outils sont ajoutées au pipeline composite. Les étapes que vous avez configurées dans les pipelines de distribution sont automatiquement mappées aux espaces appropriés dans votre organisation et leur statut s'affiche. Pour visualiser le statut de chaque travail dans une application, développez l'application.
+Si vous avez créé le pipeline composite pour une chaîne d'outils contenant des pipelines de distribution, les applications pour tous les pipelines de la chaîne d'outils sont ajoutées au pipeline composite. Les étapes que vous avez configurées dans les pipelines de distribution sont automatiquement mappées aux espaces appropriés dans votre organisation et leur statut s'affiche.
+Pour visualiser le statut de chaque travail dans une application, développez l'application.
 
 Un plan de déploiement est également créé pour le pipeline composite. Par défaut, les travaux de toutes les applications s'exécutent en parallèle pour un espace, mais vous pouvez modifier l'ordre de déploiement de vos applications dans le plan.
 
-Si vous avez créé le pipeline composite pour une nouvelle chaîne d'outils, un plan de déploiement est créé pour que vous le personnalisiez. 
+Si vous avez créé le pipeline composite pour une nouvelle chaîne d'outils, un plan de déploiement est créé pour que vous le personnalisiez.
 
 ![Développez chaque application pour visualiser chaque travail dans son pipeline](images/composite_view.png "expand each app")
 
@@ -85,7 +87,7 @@ Vous pouvez modifier des pipelines individuels à partir du pipeline composite.
 ## Exécution de travaux dans un pipeline composite
 {: #compositepipeline_run_jobs}
 
-Après avoir développé une application pour afficher ses travaux, vous pouvez exécuter manuellement tous ses travaux dans une étape. Cliquez sur l'icône **Déployer dans *étape*** dans l'espace d'une application. 
+Après avoir développé une application pour afficher ses travaux, vous pouvez exécuter manuellement tous ses travaux dans une étape. Cliquez sur l'icône **Déployer dans *étape*** dans l'espace d'une application.
 
 ![Exécution d'une étape dans une seule application](images/composite_run_stage.png)
 
@@ -134,7 +136,7 @@ Pour utiliser DevOps Connect pour l'intégration à IBM UrbanCode Deploy, procé
   1.  Sur l'ordinateur où vous avez placé DevOps Connect, utilisez un navigateur Web pour ouvrir le tableau de bord DevOps Connect. L'URL par défaut est https://localhost:8443. Pour modifier l'URL et en savoir plus sur les autres options de démarrage, consultez la [documentation DevOps Connect ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/urbancode/plugindoc/urbancode-sync/ibm-urbancode-sync-utility/1-2/){:new_window}.
 
 
-1. Sur la page "Sign-in to IBM", saisissez votre IBMid et votre mot de passe, puis cliquez sur **Sign In**. Vous vous connectez chaque fois que vous démarrez DevOps Connect. 
+1. Sur la page "Sign-in to IBM", saisissez votre IBMid et votre mot de passe, puis cliquez sur **Sign In**. Vous vous connectez chaque fois que vous démarrez DevOps Connect.
 
 1. Avec DevOps Connect, utilisez le plug-in IBM UrbanCode Deploy for DevOps Connect pour créer une intégration entre votre organisation et IBM UrbanCode Deploy.
 
@@ -150,7 +152,7 @@ Pour utiliser DevOps Connect pour l'intégration à IBM UrbanCode Deploy, procé
 
     1. Dans la zone **Admin User Email**, saisissez votre adresse électronique.
 
-    1. Pour confirmer que l'intégration a abouti, cliquez sur **Run Integration**. DevOps Connect se connecte à l'instance IBM UrbanCode Deploy qui est spécifiée dans la zone **Server URI**. DevOps Connect est autorisé par le jeton qui est collé dans la zone **Authentication Token**. 
+    1. Pour confirmer que l'intégration a abouti, cliquez sur **Run Integration**. DevOps Connect se connecte à l'instance IBM UrbanCode Deploy qui est spécifiée dans la zone **Server URI**. DevOps Connect est autorisé par le jeton qui est collé dans la zone **Authentication Token**.
 
     1. Cliquez sur **Save**.
 
@@ -160,17 +162,17 @@ Si votre intégration a abouti, vous pouvez ajouter des applications IBM UrbanCo
 ## Ajout d'applications à partir d'IBM UrbanCode Deploy
 {: #compositepipeline_add_apps}
 
-Si vous êtes membre d'une organisation qui a été intégrée à IBM UrbanCode Deploy à l'aide de DevOps Connect, vous pouvez ajouter les applications auxquelles vous pouvez accéder dans IBM UrbanCode Deploy au pipeline composite. Pour obtenir des instructions d'installation, voir [Utilisation d'IBM Bluemix DevOps Connect pour l'intégration à IBM UrbanCode Deploy](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect).
+Si vous êtes membre d'une organisation intégrée à IBM UrbanCode Deploy via DevOps Connect, vous pouvez ajouter les applications auxquelles vous pouvez accéder dans IBM UrbanCode Deploy au pipeline composite. Pour obtenir des instructions d'installation, voir [Utilisation d'IBM Bluemix DevOps Connect pour l'intégration à IBM UrbanCode Deploy](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect).
 
 Si vous êtes membre d'une organisation qui est connectée à IBM UrbanCode Deploy, vous pouvez ajouter des applications UrbanCode Deploy à des pipelines composites, sélectionner les processus d'application à inclure dans le plan de déploiement et personnaliser le déploiement des applications.
 
-1. A partir du pipeline composite, cliquez sur **Ajouter une application**. 
+1. A partir du pipeline composite, cliquez sur **Ajouter une application**.
 
-2. Dans la liste **Gérée par**, sélectionnez **IBM UrbanCode Deploy**. Si vous avez intégré {{site.data.keyword.contdelivery_short}} récemment à IBM UrbanCode Deploy, vous devrez peut-être actualiser votre navigateur pour voir votre serveur. 
+2. Dans la liste **Gérée par**, sélectionnez **IBM UrbanCode Deploy**. Si vous avez intégré {{site.data.keyword.contdelivery_short}} récemment à IBM UrbanCode Deploy, vous devrez peut-être actualiser votre navigateur pour voir votre serveur.
 
-3. Sélectionnez les applications à ajouter et cliquez sur **Continuer**. Tous les processus d'application qui sont disponibles pour les applications IBM UrbanCode Deploy sont affichés. Les entrées permettant d'exécuter les processus que vous avez sélectionnés sont ajoutées au plan de déploiement. 
+3. Sélectionnez les applications à ajouter et cliquez sur **Continuer**. Tous les processus d'application qui sont disponibles pour les applications IBM UrbanCode Deploy sont affichés. Les entrées permettant d'exécuter les processus que vous avez sélectionnés sont ajoutées au plan de déploiement.
 
-4. Sélectionnez les processus d'application à utiliser pour les applications. Utilisez les options de recherche et de filtrage pour localiser les processus. 
+4. Sélectionnez les processus d'application à utiliser pour les applications. Utilisez les options de recherche et de filtrage pour localiser les processus.
 
 5. Cliquez sur **Sauvegarder**. Chaque application IBM UrbanCode Deploy que vous avez sélectionnée s'affiche sous forme d'appli dans le pipeline composite.
 
@@ -180,7 +182,7 @@ Si vous êtes membre d'une organisation qui est connectée à IBM UrbanCode Depl
 
     ![Sélection de l'option Gérer les environnements logiques](images/composite_logical_env.png)
 
-    2. Pour chaque application du pipeline composite, sélectionnez les environnements que vous avez définis dans IBM UrbanCode Deploy. Les processus d'application que vous avez sélectionnés s'exécutent uniquement dans les environnements de cette application. 
+    2. Pour chaque application du pipeline composite, sélectionnez les environnements que vous avez définis dans IBM UrbanCode Deploy. Les processus d'application que vous avez sélectionnés s'exécutent uniquement dans les environnements de cette application.
 
     3. Cliquez sur **Sauvegarder**.
 

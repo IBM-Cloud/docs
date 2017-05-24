@@ -27,7 +27,7 @@ lastupdated: "2017-4-5"
 ## 建立複合管線
 {: #compositepipeline_create_for_toolchain}
 
-1. 從接近 Bluemix 標誌的功能表中，按一下**服務 > DevOps**
+1. 從 Bluemix 標誌附近的功能表，按一下**服務 > DevOps**
 
 1. 從左導覽中，按一下**管線**。
 
@@ -52,7 +52,7 @@ lastupdated: "2017-4-5"
 如果您已建立包含交付管線之工具鏈的複合管線，則會將工具鏈中所有管線的應用程式新增至複合管線。您在交付管線中所配置的階段會自動對映至組織中的適當空間，並顯示其狀態。
 若要檢視應用程式中每一個工作的狀態，請展開應用程式。
 
-也會建立複合管線的部署方案。空間中所有應用程式的工作預設都會平行執行，但您可以變更方案中應用程式的部署順序。
+也會建立複合管線的部署方案。根據預設值，空間中所有應用程式的工作會平行執行，但您可以變更方案中應用程式的部署順序。
 
 如果您已建立新工具鏈的複合管線，則會建立一個部署方案，供您自訂。
 
@@ -61,7 +61,7 @@ lastupdated: "2017-4-5"
 ## 修改部署方案
 {: #compositepipeline_modify_dp}
 
-預設會建立複合管線的部署方案。此部署方案會擷取工具鏈之任何 Delivery Pipeline 中各階段的所有資訊。您可以檢視及修改每一個階段的部署方案。
+根據預設值，會建立複合管線的部署方案。此部署方案會擷取工具鏈之任何 Delivery Pipeline 中各階段的所有資訊。您可以檢視及修改每一個階段的部署方案。
 
 在您要修改其部署方案的階段中，按一下功能表，然後按一下**部署方案**。
 
@@ -121,7 +121,7 @@ IBM Bluemix DevOps Connect 會協調內部部署 IBM&reg; UrbanCode&reg; Deploy 
 
   1. 在複合管線中，按一下**新增應用程式**。從**管理者**清單中，選取 **IBM UrbanCode Deploy**。
 
-  1. 顯示整合步驟。如果您看到應用程式清單，請先依**應用程式**按一下資訊圖示 (![資訊圖示](/images/info.png))，然後按一下**配置此組織的 IBM UrbanCode Deploy**。
+  1. 顯示整合步驟。如果您看到應用程式清單，請先依**應用程式**按一下資訊圖示 (![「資訊」圖示](/images/info.png))，然後按一下**配置此組織的 IBM UrbanCode Deploy**。
 
   1. 在「配置 UrbanCode Deploy 整合」視窗中，按一下**下載**來下載 DevOps Connect。請將 JAR 檔放在可存取 IBM UrbanCode Deploy 的電腦上。
 
@@ -162,9 +162,9 @@ IBM Bluemix DevOps Connect 會協調內部部署 IBM&reg; UrbanCode&reg; Deploy 
 ## 從 IBM UrbanCode Deploy 新增應用程式
 {: #compositepipeline_add_apps}
 
-如果您是使用 DevOps Connect 來與 IBM UrbanCode Deploy 整合之組織的成員，則可以將可在 IBM UrbanCode Deploy 中存取的應用程式新增至複合管線。如需安裝指示，請參閱[使用 IBM Bluemix DevOps Connect 以與 IBM UrbanCode Deploy 整合](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect)。
+如果您是使用 DevOps Connect 而與 IBM UrbanCode Deploy 整合之組織的成員，則可以將可在 IBM UrbanCode Deploy 中存取的應用程式新增至複合管線。如需安裝指示，請參閱[使用 IBM Bluemix DevOps Connect 以與 IBM UrbanCode Deploy 整合](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect)。
 
-若您是連接至 IBM UrbanCode Deploy 之組織的成員，則可以將 UrbanCode Deploy 應用程式新增至複合管線、選取要併入部署方案中的應用程式處理程序，以及自訂應用程式的部署。
+若您是連接至 IBM UrbanCode Deploy 之組織的成員，則可以將 UrbanCode Deploy 應用程式新增至複合管線、選取要包含在部署方案中的應用程式處理程序，以及自訂應用程式的部署。
 
 1. 從複合管線中，按一下**新增應用程式**。
 

@@ -72,13 +72,13 @@ lastupdated: "2017-3-31"
 1. 在**创建工具链**页面上，单击工具链模板。  
 1. 复查您要创建的工具链的图。该图按生命周期阶段显示工具链中的每一个工具集成。
 
- **提示**：有一些工具链模板具有工具集成的多个实例。例如，{{site.data.keyword.Bluemix_notm}} Public 上的微型服务工具链模板包含三个 GitHub 实例和三个 Delivery Pipeline 实例，三个微型服务每个一个实例。
+ **提示**：有一些工具链模板具有工具集成的多个实例。例如，{{site.data.keyword.Bluemix_notm}} Public 上的微服务工具链模板包含三个 GitHub 实例和三个 Delivery Pipeline 实例，每个实例都对应于三个微服务中的一个。
 
  以下图像中的图是示例。创建工具链时，该图显示属于工具链的每一个工具集成。
 ![Toolchain_diagram](images/toolchain_diagram.png)
 1. 复查工具链设置的缺省信息。工具链的名称在 {{site.data.keyword.Bluemix_notm}} 中起到标识符的作用。如果要使用其他名称，请更改工具链的名称。
 1. 在“工具集成”部分中，选择要为工具链配置的每一个工具集成。有些工具集成无需进行配置。有关配置工具集成的信息，请参阅[配置工具集成](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}。
-1. 单击**创建**。此时将自动运行数个步骤，以设置工具链。设置的工具集成根据您所选的工具链模板以及您使用的是 {{site.data.keyword.Bluemix_notm}} Public 还是 {{site.data.keyword.Bluemix_notm}} Dedicated 而有所不同。例如，当您在 {{site.data.keyword.Bluemix_notm}} Public 上创建微型服务工具链时，会运行以下步骤：
+1. 单击**创建**。此时将自动运行数个步骤，以设置工具链。设置的工具集成根据您所选的工具链模板以及您使用的是 {{site.data.keyword.Bluemix_notm}} Public 还是 {{site.data.keyword.Bluemix_notm}} Dedicated 而有所不同。例如，当您在 {{site.data.keyword.Bluemix_notm}} Public 上创建微服务工具链时，会运行以下步骤：
 
  * 将创建工具链。
  * 如果已配置 Delivery Pipeline，那么会创建并运行管道。

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-2-21"
+lastupdated: "2017-4-24"
 
 ---
 
@@ -74,34 +74,41 @@ Para crear el botón Desplegar en {{site.data.keyword.Bluemix_notm}}:
 <li> Copie y modifique una de las siguientes plantillas de fragmento de código con un repositorio Git público válido.
 <p></p>
 <p>
-<strong>Consejo</strong>: Si desea especificar la entrada de compilación para un proyecto de DevOps Services, añada un parámetro de ramificación en el URL de Git. Al añadir un parámetro de ramificación, el repositorio de Git público original, incluidas todas sus ramificaciones, se clonará en un nuevo proyecto privado de DevOps Services con un nuevo repositorio de Git. La ramificación de Git especificada se establece como la entrada para el trabajo de compilación. Si no especifica una ramificación, la entrada para el trabajo de compilación se establecerá en la rama maestra de forma predeterminada.
+<strong>Consejo</strong>: Puede especificar la rama a utilizar añadiendo un parámetro de rama al URL del Git. Si no especifica una rama, de forma predeterminada se utilizará la ramificación maestra.
 </p>
 <ul>
 <li>HTML:
 <p>
-Default master branch:
+Rama maestra predeterminada:
 </p>
 <pre class="codeblock">
+<code class="hljs">
 &lt;a href="https://bluemix.net/deploy?repository=&lt;URL_repositorio_git>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
+</code>
 </pre>
 <p>
-Specified Git branch:
+Rama de Git especificada:
 </p>
 <pre class="codeblock">
-&lt;a href="https://bluemix.net/deploy?repository=&lt;URL_repositorio_git&gt;&branch=&lt;rama_git>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
+<code class="hljs">
+&lt;a href="https://bluemix.net/deploy?repository=&lt;URL_repositorio_git&gt;&branch=&lt;rama_git>" # [obligatorio]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
+</code>
 </pre>
 </li>
 <li>Markdown:
 <p>
-Default master branch:
+Rama maestra predeterminada:
 </p>
 <pre class="codeblock">
-[&excl;[Desplegar en Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&rpar;
+<code class="hljs">
+[&excl;[Desplegar en Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;URL_repositorio_git> # [obligatorio]&rpar; </code>
 </pre>
-<p>Specified Git branch:
+<p>Rama de Git especificada:
 </p>
 <pre class="codeblock">
-[&excl;[Desplegar en Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&rpar;
+<code class="hljs"
+[&excl;[Desplegar en Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;URL_repositorio_git> &branch=&lt;rama_git&gt; # [obligatorio]&rpar;
+</code>
 </pre>
 </li>
 </ul>
@@ -204,4 +211,4 @@ En el archivo de manifiesto puede especificar:
  </ul>
 </ul>
 
-Para la resolución de problemas, consulte [El botón Despliegue en Bluemix no se despliega en la app](/docs/troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}.	
+Para la resolución de problemas, consulte [El botón Despliegue en Bluemix no se despliega en la app](/docs/troubleshoot/ts_apps.html#ts_deploybutton){:new_window}.	

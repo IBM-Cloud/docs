@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-12-14"
+lastupdated: "2017-05-03"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2016-12-14"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Utilisation de {{site.data.keyword.DRA_short}} (expérimental)
+# Utilisation de {{site.data.keyword.DRA_short}} (version bêta)
 {: #di_working}
 
 {{site.data.keyword.DRA_full}} vous permet d'assurer la maintenance et d'améliorer la qualité de votre code dans
@@ -21,4 +21,4 @@ lastupdated: "2016-12-14"
 
 {{site.data.keyword.DRA_short}} collecte et analyse les résultats provenant de tests unitaires, de tests fonctionnels et d'outils de couverture de code afin de déterminer si votre code satisfait les règles prédéfinies à des stades spécifiques de votre processus de déploiement. Si votre code ne satisfait pas ou dépasse une règle, le déploiement est interrompu afin de prévenir tout risque. Vous pouvez utiliser {{site.data.keyword.DRA_short}} comme filet de sécurité pour votre environnement de distribution continue ou comme moyen d'implémenter et d'améliorer les normes qualité. 
 
-Pour plus d'informations, voir [Initiation à {{site.data.keyword.DRA_short}} (expérimental)](/docs/services/DevOpsInsights/index.html).
+Pour plus d'informations, voir [Initiation à {{site.data.keyword.DRA_short}} (version bêta)](/docs/services/DevOpsInsights/index.html).

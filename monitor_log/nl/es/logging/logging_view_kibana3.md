@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-16"
+lastupdated: "2017-02-22"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-02-16"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Análisis de registros en Kibana
+# Análisis de registros en Kibana 3 (en desuso)
 {: #analyzing_logs_Kibana3}
 
 En {{site.data.keyword.Bluemix}}, puede utilizar Kibana, una plataforma de visualización y análisis de código abierto, para supervisar, buscar, analizar y visualizar datos en diversos gráficos, como diagramas y tablas. Utilice Kibana para realizar tareas avanzadas de análisis.
@@ -25,7 +25,7 @@ Puede iniciar Kibana de cualquiera de estas formas:
 
     Puede iniciar los registros específicos de la app CF en Kibana, en el contexto de la app específica.
     
-    La consulta que se utiliza para filtrar los datos que aparecen en el panel de control recupera las entradas de registro de la aplicación Cloud Foundry. La información de registro que muestra el panel de control de Kibana está relacionada con una sola aplicación Cloud Foundry y todas sus instancias. Para obtener más información, consulte [Cómo ir al panel de control de Kibana desde el panel de control de {{site.data.keyword.Bluemix}}](logging_view_kibana3.html#launch_Kibana_from_bluemix).
+    La consulta que se utiliza para filtrar los datos que aparecen en el panel de control recupera las entradas de registro de la aplicación Cloud Foundry. La información de registro que muestra el panel de control de Kibana está relacionada con una sola aplicación Cloud Foundry y todas sus instancias. Para obtener más información, consulte [Cómo ir al panel de control de Kibana desde el panel de control de Bluemix](logging_view_kibana3.html#launch_Kibana_from_bluemix).
 
 * Desde un enlace directo del navegador
 
@@ -56,7 +56,7 @@ Después de personalizar un panel de control, puede elegir entre cualquiera de l
 
 * Puede incluir el panel de control en una página web. Para que un usuario vea un panel de control incorporado, dicho usuario debe tener permisos para acceder a Kibana.
 
-Para obtener más información, consulte la documentación de [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html).
+Para obtener más información, consulte la documentación de [Kibana ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}. 
 
 **Nota:** Kibana 4 y Kibana 3 reciben soporte. Kibana 3 está en desuso.
 
@@ -76,7 +76,7 @@ Para ver los registros de una aplicación Cloud Foundry en Kibana, siga los paso
 
 Si no ve ningún registro, ajuste el selector de tiempo de la cabecera.
 
-Para obtener más información sobre cómo personalizar un panel de control de Kibana, consulte [esta publicación del blog](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/) o la documentación de [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html).
+Para obtener más información sobre cómo personalizar el panel de control de Kibana, consulte [este artículo en el blog ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} o la documentación de [Kibana ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.  
 
 ##  Cómo ir al panel de control de Kibana desde un navegador web
 {: #launch_Kibana_from_browser}
@@ -91,7 +91,7 @@ Siga los pasos siguientes para abrir un panel de control de Kibana desde un nave
 
 Si no ve ningún registro, ajuste el selector de tiempo de la cabecera.
 
-Para obtener más información sobre cómo personalizar un panel de control de Kibana, consulte [esta publicación del blog](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/) o la documentación de [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html).
+Para obtener más información sobre cómo personalizar el panel de control de Kibana, consulte [este artículo en el blog ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} o la documentación de [Kibana ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.  
 
 
 

@@ -47,7 +47,7 @@ Complete las tareas siguientes para crear y configurar un conducto.
 ## Ejecución de una etapa
 {: #deliverypipeline_run_stage}
 
-Puede ejecutar de manera manual una etapa pulsando el icono **Run Stage** en la página Conducto. 
+Puede ejecutar de manera manual una etapa pulsando el icono **Run Stage** en la página Conducto.
 
 ![Al pulsar el icono Run Stage en una etapa](images/RunStage.png)
 
@@ -64,7 +64,7 @@ Para cancelar una etapa de ejecución, en la etapa, pulse **Ver registros e hist
 Un trabajo de despliegue configurado correctamente despliega la app al destino siempre que se ejecute el trabajo. Para ejecutar manualmente un trabajo de despliegue, pulse el icono **Etapa de ejecución** de la etapa en la que se encuentra el trabajo.
 
 ###Revisiones de entrada
-Al ejecutar una etapa manualmente, o si la ejecuta porque la etapa anterior se ha completado, la etapa de ejecución selecciona su revisión de entrada. Normalmente, la revisión de entrada es un número de compilación. Para seleccionar la revisión de entrada, la etapa seguirá estas condiciones: 
+Al ejecutar una etapa manualmente, o si la ejecuta porque la etapa anterior se ha completado, la etapa de ejecución selecciona su revisión de entrada. Normalmente, la revisión de entrada es un número de compilación. Para seleccionar la revisión de entrada, la etapa seguirá estas condiciones:
 
 * Si se selecciona una revisión específica, utilícela.
 * Si no se especifica una revisión específica, busque etapas anteriores hasta que se encuentre una etapa que utilice la misma entrada. Busque y utilice la última revisión de ejecución correcta de dicha entrada.

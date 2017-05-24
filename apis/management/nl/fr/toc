@@ -10,9 +10,9 @@ Gestion d'API
 
 	{: topicgroup}
 	Liens connexes 	
-[IBM Knowledge Center : Initiation à IBM API Connect for Bluemix](https://www.ibm.com/support/knowledgecenter/SSFS6T/mapfiles/getting_started_bluemix.html){: new_window}
-[IBM Knowledge Center : Page d'arrivée d'IBM API Connect version 5.0](https://www.ibm.com/support/knowledgecenter/SSMNED_5.0.0/mapfiles/getting_started.html){: new_window}
-[/apimanagement](https://apim.ibmcloud.com/){: new_window}
+	    [IBM Knowledge Center : Initiation à IBM API Connect for Bluemix](https://www.ibm.com/support/knowledgecenter/SSFS6T/mapfiles/getting_started_bluemix.html){: new_window}
+	    [IBM Knowledge Center : Page d'arrivée d'IBM API Connect version 5.0](https://www.ibm.com/support/knowledgecenter/SSMNED_5.0.0/mapfiles/getting_started.html){: new_window}
+	    [/apimanagement](https://apim.ibmcloud.com/){: new_window}
     {: .navgroup-end}
 
     {: .navgroup id="howto"}

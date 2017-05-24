@@ -20,4 +20,4 @@ Con estos servicios de seguridad, puede proteger el acceso a app y cargas de tra
 Proteger el acceso a las apps y cargas de trabajo | Explorar las apps en busca de puntos vulnerables | Proteger los datos
 ---- | ---- | ----
 Incorpore fácilmente un sistema de autenticación de usuarios y prestaciones de inicio de sesión único en apps móviles y de web que se ejecutan en Bluemix. Las interfaces de autenticación basadas en políticas permiten crear rápidamente un sistema de autenticación de varios factores. | Evalúe la vulnerabilidad de las apps móviles y de web, potenciando la seguridad y la conformidad con la normativa. Al explorar las apps antes del despliegue, puede identificar problemas, generar informes e implementar las correcciones recomendadas. | Utilice los controles de seguridad y privacidad incorporados en los servicios de gestión de datos y de Big Data, que incluyen enmascaramiento de datos, descubrimiento y auditoría.
-{: caption="Table 1. Benefits of using security services" caption-side="top"}
+{: caption="Tabla 1. Ventajas de utilizar servicios de seguridad" caption-side="top"}

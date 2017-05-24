@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-31"
+lastupdated: "2017-4-25"
+
 ---
 
 {:new_window: target="_blank"}
@@ -11,7 +12,7 @@ lastupdated: "2017-3-31"
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# 使用 Eclipse Orion IDE 编辑代码
+# 使用 Eclipse Orion Web IDE 进行开发
 {: #web_ide}
 
 Eclipse Orion {{site.data.keyword.webide}} 是基于浏览器的开发环境，可在其中针对 Web 进行开发。您可以借助内容辅助、代码完成和错误检查功能，在 JavaScript、HTML 和 CSS 中进行开发。{{site.data.keyword.webide}} 使用几乎任何语言并为大部分文件类型提供语法突出显示。源代码控制功能内置其中，因此您可以在本地部署代码并调试应用程序。
@@ -19,7 +20,7 @@ Eclipse Orion {{site.data.keyword.webide}} 是基于浏览器的开发环境，�
 
 最重要的是，{{site.data.keyword.webide}} 由 Web 提供支持。您无需进行任何安装、维护和扩展。您可以在具有因特网连接的任何地方进行开发。
 
-## 设置编辑器
+## 设置 IDE
 {: #editorsetup}
 
 {{site.data.keyword.webide}} 可进行定制，因此您可以选择满足开发需要的颜色方案、技术工具和设置。要查看和修改设置，请从左侧菜单中，单击**设置**图标 <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="“设置”图标">。

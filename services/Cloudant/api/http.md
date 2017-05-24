@@ -239,6 +239,8 @@ The meaning of different status codes for specific request types are provided in
 
 <div id="400"></div>
 
+<div id="403"></div>
+
 <div id="404"></div>
 
 <div id="405"></div>

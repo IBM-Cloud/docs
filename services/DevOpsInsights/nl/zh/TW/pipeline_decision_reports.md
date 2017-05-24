@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-11"
+  years: 2016, 2017
+lastupdated: "2017-02-13"
 
 ---
 
@@ -60,8 +60,8 @@ lastupdated: "2016-11-11"
 
 若要從管線檢視閘道的決策報告，請完成下列步驟：
 
-   1. 在包含要檢查之閘道的階段上，按一下**檢視日誌及歷程**。
+   1. 在包含要檢查之閘道的階段上，按一下 **View logs and history**。
 
    2. 從階段的工作視窗中，按一下閘道的名稱。
 
-   3. 在日誌視圖中，尋找「在這裡檢查 {{site.data.keyword.DRA_short}} 報告」訊息，然後按一下提供的鏈結來開啟報告。
+   3. 在日誌視圖中，尋找 `Check {{site.data.keyword.DRA_short}} report here` 訊息，然後按一下提供的鏈結來開啟報告。

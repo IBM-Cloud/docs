@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-17"
+lastupdated: "2017-4-11"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -58,7 +58,8 @@ défaut dans les environnements de pipeline.
 | BUILD_NUMBER | ID d'étape incrémentielle qui est affiché dans l'interface utilisateur du pipeline.  |
 | GIT_BRANCH | Branche Git utilisée par le travail en entrée. Cette propriété est uniquement disponible dans les travaux qui utilisent un référentiel Git en entrée. |
 | GIT_COMMIT | Validation Git utilisée par le travail en entrée. Cette propriété est uniquement disponible dans les travaux qui utilisent un référentiel Git en entrée. |
-| GIT_PREVIOUS_COMMIT | Valeur de validation Git de la dernière exécution réussie du travail. Cette propriété est uniquement disponible dans les travaux qui utilisent un référentiel Git en entrée. |
+| GIT_PREVIOUS_COMMIT | Valeur de validation Git de la dernière exécution réussie du travail. Cette propriété est uniquement disponible dans les travaux qui utilisent un référentiel Git comme
+entrée. |
 | GIT_URL | URL de référentiel Git utilisée par le travail en entrée. Cette propriété est uniquement disponible dans les travaux qui utilisent un référentiel Git en entrée. |
 | IDS_JOB_ID | ID unique de la configuration du travail. |
 | IDS_JOB_NAME | Nom de la configuration du travail. |

@@ -25,28 +25,29 @@ Après avoir créé une instance de {{site.data.keyword.contdelivery_short}} en 
  * Si vous disposez déjà de chaînes d'outils, dans la section "Démarrage depuis un modèle de chaîne d'outils", cliquez sur **Afficher vos chaînes
 d'outils**. Pour plus d'informations sur l'utilisation des chaînes d'outils, voir [Utilisation de chaînes d'outils](/docs/services/ContinuousDelivery/toolchains_using.html){: new_window}.
 
-**Astuce** : Les pipelines sont gérés par des chaînes d'outils. Vous pouvez ajouter un pipeline à une chaîne d'outils existante. Si vous créez un pipeline et qu'il n'existe pas de chaînes d'outils, une chaîne d'outils avec un nom par défaut est automatiquement créée. Grâce à la chaîne d'outils, vous pouvez développer les capacités de votre pipeline par une intégration avec d'autres outils et services. 
+**Astuce** : Les pipelines sont gérés par des chaînes d'outils. Vous pouvez ajouter un pipeline à une chaîne d'outils existante. Si vous créez un pipeline et qu'il n'existe pas de chaînes d'outils, une chaîne d'outils avec un nom par défaut est automatiquement créée. Grâce à la chaîne d'outils, vous pouvez développer les capacités de votre pipeline par une intégration avec d'autres outils et services.
 
 ##Démarrage avec un pipeline
 {: #starting_with_a_pipeline}
 
-Les pipelines automatisent les générations, les déploiements, etc. Pour commencer avec un pipeline automatisé, sélectionnez un modèle et indiquez l'emplacement de votre référentiel GitHub. 
+Les pipelines automatisent les générations, les déploiements, etc. Pour commencer avec un pipeline automatisé, sélectionnez un modèle et indiquez l'emplacement de votre référentiel GitHub (repo).
 
-Pour [créer un pipeline ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){:new_window} configuré pour déployer une application Cloud Foundry, procédez comme suit : 
+Pour [créer un pipeline ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){:new_window} configuré pour déployer une application Cloud Foundry, procédez comme suit :
 
 1. Cliquez sur **Cloud Foundry**.
 1. Si vous désirez utiliser un nom différent pour le pipeline, modifiez son nom par défaut. Le nom du pipeline l'identifie dans {{site.data.keyword.Bluemix_notm}}.
 1. Si vous désirez utiliser un nom différent pour l'application, modifiez son nom par défaut. Le nom de l'application l'identifie dans {{site.data.keyword.Bluemix_notm}}. Ce nom est celui de l'application où est déployé le pipeline.
 1. Si vous n'avez pas de chaînes d'outils, une chaîne d'outils portant le nom par défaut est créée pour vous. Si vous désirez utiliser un autre nom pour la chaîne d'outils, modifiez son nom. Les pipelines sont gérés par des chaînes d'outils. Grâce à la chaîne d'outils, vous pouvez étendre les capacités de votre pipeline par une intégration avec d'autres outils et services.
 
- **Conseil **: les pipelines et les chaînes d'outils appartiennent à des organisations (orgs). Si vous appartenez à une organisation disposant de chaînes d'outils, vous pouvez utiliser ces chaînes d'outils même si vous ne les avez pas créées.
+ **Astuce **: les pipelines et les chaînes d'outils appartiennent à des organisations. Si vous appartenez à une organisation disposant de chaînes d'outils, vous pouvez utiliser ces chaînes d'outils même si vous ne les avez pas créées.
 
 1. Sélectionnez la chaîne d'outils que vous désirez utiliser ou entrez le nom de la nouvelle chaîne d'outils à créer.
 1. Sélectionnez votre fournisseur Git.
 
- **Conseil **: Si vous n'avez pas autorisé {{site.data.keyword.Bluemix_notm}} à accéder à GitHub, vous êtes invité à cliquer sur **Autoriser** pour accéder au site Web GitHub. Si vous n'avez pas de session GitHub active, vous êtes invité à vous connecter. Cliquez sur **Authorize Application** pour autoriser {{site.data.keyword.Bluemix_notm}} à accéder à votre compte GitHub. Si vous disposez d'une session GitHub active mais n'avez pas saisi votre mot de passe récemment, vous êtes invité à entrer votre mot de passe GitHub pour confirmation.
+ **Astuce **: si vous n'avez pas autorisé {{site.data.keyword.Bluemix_notm}} à accéder à GitHub, vous êtes invité à cliquer sur
+**Autoriser** pour accéder au site Web de GitHub. Si vous n'avez pas de session GitHub active, vous êtes invité à vous connecter. Cliquez sur **Authorize Application** pour autoriser {{site.data.keyword.Bluemix_notm}} à accéder à votre compte GitHub. Si vous disposez d'une session GitHub active mais n'avez pas saisi votre mot de passe récemment, vous êtes invité à entrer votre mot de passe GitHub pour confirmation.
 
- Si vous n'êtes pas autorisé à accéder au référentiel {{site.data.keyword.ghe_short}}, une personne disposant de droits d'administrateur pour le référentiel doit vous ajouter. Pour obtenir des instructions sur une autorisation avec {{site.data.keyword.Bluemix_notm}} Dédié pour {{site.data.keyword.ghe_short}}, voir [Initiation à {{site.data.keyword.Bluemix_notm}} Dédié pour {{site.data.keyword.ghe_short}}](/docs/services/ghededicated/index.html){: new_window}. Si vous devez accorder l'autorisation avec votre propre version gérée de {{site.data.keyword.ghe_short}}, suivez vos procédures internes. 
+ Si vous n'êtes pas autorisé à accéder au référentiel {{site.data.keyword.ghe_short}}, une personne disposant de droits d'administrateur pour le référentiel doit vous ajouter. Pour obtenir des instructions sur une autorisation avec {{site.data.keyword.Bluemix_notm}} Dédié pour {{site.data.keyword.ghe_short}}, voir [Initiation à {{site.data.keyword.Bluemix_notm}} Dédié pour {{site.data.keyword.ghe_short}}](/docs/services/ghededicated/index.html){: new_window}. Si vous devez accorder l'autorisation avec votre propre version gérée de {{site.data.keyword.ghe_short}}, suivez vos procédures internes.
 
    * Si vous disposez d'un référentiel et désirez l'utiliser, sélectionnez **Lien** pour le type de référentiel. Recherchez l'emplacement du référentiel ou sélectionnez le référentiel dans la liste des référentiels disponibles.
 
@@ -82,10 +83,10 @@ Pour créer et configurer une chaîne d'outils de distribution continue depuis u
  ![Diagramme de chaîne d'outils](images/toolchain_diagram.png)
 1. Passez en revue les informations par défaut des paramètres de chaîne d'outils. Le nom de la chaîne d'outils l'identifie dans {{site.data.keyword.Bluemix_notm}}. Si vous désirez utiliser un nom différent, modifiez le nom de la chaîne d'outils.
 1. Dans la section Intégrations d'outils, sélectionnez chaque intégration d'outils à configurer pour votre chaîne d'outils. Quelques intégrations d'outils ne nécessitent pas de configuration. Pour des informations sur la configuration des intégrations d'outils, voir [Configuration d'intégrations d'outils](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
-1. Cliquez sur **Créer**. Plusieurs étapes s'exécutent automatiquement pour configurer votre chaîne d'outils. Les intégrations d'outils configurées varient en fonction du modèle de chaîne d'outils que vous avez sélectionné et selon que vous utilisez {{site.data.keyword.Bluemix_notm}} Public ou {{site.data.keyword.Bluemix_notm}} Dédié. Par exemple, lorsque vous créez une chaîne d'outils Microservices sur {{site.data.keyword.Bluemix_notm}} Public, les étapes suivantes sont exécutées : 
+1. Cliquez sur **Créer**. Plusieurs étapes s'exécutent automatiquement pour configurer votre chaîne d'outils. Les intégrations d'outils configurées varient en fonction du modèle de chaîne d'outils que vous avez sélectionné et selon que vous utilisez {{site.data.keyword.Bluemix_notm}} Public ou {{site.data.keyword.Bluemix_notm}} Dédié. Par exemple, lorsque vous créez une chaîne d'outils Microservices sur {{site.data.keyword.Bluemix_notm}} Public, les étapes suivantes sont exécutées :
 
  * La chaîne d'outils est créée.
- * Si vous avez configuré Delivery Pipeline, les pipelines sont créés et exécutés. 
+ * Si vous avez configuré Delivery Pipeline, les pipelines sont créés et exécutés.
  * Si vous avez configuré Sauce Labs, la chaîne d'outils est configurée pour ajouter des travaux de test Sauce Labs aux pipelines.
  * Si vous avez configuré PagerDuty, la chaîne d'outils est configurée pour envoyer des notifications d'alerte au service PagerDuty que vous avez indiqué.
  * Si vous avez configuré Slack, la chaîne d'outils est configurée pour envoyer au canal Slack que vous avez spécifié des notifications sur le statut de déploiement.

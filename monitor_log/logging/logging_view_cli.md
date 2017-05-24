@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-04-06"
+lastupdated: "2017-05-22"
 
 ---
 
@@ -23,7 +23,7 @@ To analyze Cloud Foundry (CF) application logs, use the following command: `cf l
 For more information, see [Analyzing CF app logs from the CLI](logging_view_cli.html#analyzing_cf_logs_cli).
 
 To analyze Docker container logs, use the following command: `cf ic logs`
-For more information, see [Analyzing Docker container logs from the CLI](logging_view_cli.html#analyzing_container_logs_cli).
+For more information, see [Analyzing Docker container logs from the CLI](logging_view_cli.html#analyzing_container_logs_cli). This feature applies only to containers that are deployed in the {{site.data.keyword.Bluemix_notm}}-managed Cloud infrastructure.
 
 
 ## Analyzing CF app logs from the CLI
@@ -124,6 +124,8 @@ To view this log, enter the following command: `cf files appname logs/staging_ta
 
 ## Analyzing Docker container logs from the CLI
 {: #analyzing_container_logs_cli}
+
+**Note:** This feature applies only to containers that are deployed in the {{site.data.keyword.Bluemix_notm}}-managed Cloud infrastructure.
 
 Use the `cf ic logs` command to display logs from a container in {{site.data.keyword.Bluemix_notm}}. For example, you can use the logs to analyze why a container has stopped or for reviewing the container output. 
 

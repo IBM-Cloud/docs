@@ -45,7 +45,7 @@ Un conducto que utiliza el servicio de Static Analyzer normalmente incluye estas
 
 ### Creación de una exploración de código estático
 
-Antes de empezar, [revise las Condiciones de uso para el servicio ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://www.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01){: new_window} 
+Antes de empezar, [revise las Condiciones de uso para el servicio ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://www.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01){: new_window}
 
 <!-- Use ordered list markup for the step section. Include code examples as needed. -->
 
@@ -73,7 +73,7 @@ Antes de empezar, [revise las Condiciones de uso para el servicio ![Icono de enl
 
     * Si desea que el conducto compruebe el espacio de Bluemix para el servicio y una app que enlaza el servicio al contenedor, marque el recuadro de selección. Si el servicio o la app enlazada no existen, el conducto añadirá el plan gratuito del servicio a su espacio. La app enlazada que se crea se denomina `pipeline_bridge_app`. A continuación, el conducto utilizará las credenciales de pipeline_bridge_app para acceder a los servicios enlazados.
 
-    * Si ya ha configurado el servicio y ha enlazado la app en el espacio de Bluemix, o si desea [configurar estos requisitos manualmente](/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline){: new_window}, deje el recuadro de selección sin marcar.
+    * Si ya ha configurado el servicio y ha enlazado la app en el espacio de Bluemix, o si desea [configurar estos requisitos manualmente](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}, deje el recuadro de selección sin marcar.
 
   f. En el campo **Minutos que se debe esperar para que el análisis se complete**, escriba un valor de 0 a 59 minutos. El valor predeterminado es 5 minutos. Un URL al panel de control de Static Analyzer se encuentra en los registros de consola al final del trabajo.
 
@@ -156,7 +156,7 @@ To create the globalization stage and job:
 
     * If you want the pipeline to check your Bluemix space for the service and an app that binds the service to the container, select this check box. If the service or bound app does not exist, the pipeline adds the free plan of the service to your space for you. The bound app that is created is named `pipeline_bridge_app`. Then, the pipeline uses the credentials from pipeline_bridge_app to access the bound services.
 
-    * If you configured the service and bound app in your Bluemix space already or if you want to [configure these requirements manually](https://www.ng.bluemix.net/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline), leave this check box cleared.
+    * If you configured the service and bound app in your Bluemix space already or if you want to [configure these requirements manually](/docs/containers/container_integrations.html#container_binding_pipeline), leave this check box cleared.
 
   g. For the Globalization bundle prefix, enter a prefix for the bundle name, which is structured in this format: `<globalization_bundle_prefix>.path.to.source.file`. The pipeline job creates this Globalization bundle for you in the Globalization Pipeline service.
 
@@ -337,4 +337,4 @@ Puede automatizar las compilaciones de la app y los despliegues del contenedor e
   - Imágenes de creación de Docker
   - Imágenes de despliegue en contenedores a Bluemix
 
-Para obtener más información sobre cómo empezar, consulte [Visión general de Delivery Pipeline y de los contenedores](/docs/containers/container_pipeline_ov.html#container_pipeline_ov){: new_window}.
+Para obtener más información sobre cómo empezar, consulte [Visión general de Delivery Pipeline y de los contenedores](/docs/containers/container_integrations.html#container_pipeline_ov){: new_window}.

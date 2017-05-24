@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-03-20"
+lastupdated: "2017-04-07"
 
 
 ---
@@ -47,7 +47,7 @@ La CLI de {{site.data.keyword.registrylong}} es un plugin que le permite gestion
 
 
 ## bx cr api
-Devuelve los detalles sobre el punto final de la API de registro sobre el que se ejecutan los mandatos. 
+Devuelve los detalles sobre el punto final de la API de registro sobre el que se ejecutan los mandatos.
 
 ```
 bx cr api
@@ -56,7 +56,7 @@ bx cr api
 
 
 ## bx cr info
-Muestra el nombre y la organización del registro en el que ha iniciado la sesión. 
+Muestra el nombre y la organización del registro en el que ha iniciado la sesión.
 
 ```
 bx cr info
@@ -65,7 +65,7 @@ bx cr info
 
 
 ## bx cr image-inspect
-Ver detalles sobre una determinada imagen. 
+Ver detalles sobre una determinada imagen.
 
 ```
 bx cr image-inspect [--format FORMAT] IMAGE [IMAGE]
@@ -75,14 +75,14 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE]
 **Parámetros**
 <dl>
 <dt>--format FORMAT</dt>
-<dd>(Opcional) Formatear los elementos de salida mediante una plantilla de Go. </dd>
+<dd>(Opcional) Formatear los elementos de salida mediante una plantilla de Go.</dd>
 <dt>IMAGE</dt>
-<dd>La vía de acceso completa del registro de {{site.data.keyword.Bluemix_short}} a la imagen que desea examinar. Si no se especifica ninguna etiqueta en la vía de acceso de imagen, se examina la imagen etiquetada como `latest`. Puede examinar varias imágenes creando una lista de cada vía de acceso privada al registro de {{site.data.keyword.Bluemix_short}} en el mandato con un espacio entre cada vía de acceso.</dd>
+<dd>La vía de acceso completa del registro de {{site.data.keyword.Bluemix_short}} a la imagen que desea examinar, que se encuentra en formato namespace/image:tag. Si no se especifica ninguna etiqueta en la vía de acceso de imagen, se examina la imagen etiquetada como `latest`. Puede examinar varias imágenes creando una lista de cada vía de acceso privada al registro de {{site.data.keyword.Bluemix_short}} en el mandato con un espacio entre cada vía de acceso.</dd>
 </dl>
 
 
 ## bx cr image-list
-Ver todas las imágenes de la organización de {{site.data.keyword.Bluemix_short}}. 
+Ver todas las imágenes de la organización de {{site.data.keyword.Bluemix_short}}.
 
 ```
  bx cr image-list [--no-trunc] [-q, --quiet] [--include-ibm] [--format FORMAT]
@@ -96,14 +96,14 @@ Ver todas las imágenes de la organización de {{site.data.keyword.Bluemix_short
 <dt>-q, --quiet</dt>
 <dd>(Opcional) Muestra un identificador exclusivo de la imagen en el formato: 'repository:tag'.</dd>
 <dt>--include-ibm</dt>
-<dd>(Opcional) Incluye en la salida las imágenes públicas proporcionadas por IBM. Sin esta opción, solo se muestran en la lista las imágenes privadas. </dd>
+<dd>(Opcional) Incluye en la salida las imágenes públicas proporcionadas por IBM. Sin esta opción, solo se muestran en la lista las imágenes privadas.</dd>
 <dt>--format FORMAT</dt>
-<dd>(Opcional) Formatear los elementos de salida mediante una plantilla de Go. </dd>
+<dd>(Opcional) Formatear los elementos de salida mediante una plantilla de Go.</dd>
 </dl>
 
 
 ## bx cr image-rm
-Suprimir del registro una imagen especificada. 
+Suprime del registro una imagen especificada. 
 
 ```
 bx cr image-rm IMAGE [IMAGE]
@@ -113,7 +113,7 @@ bx cr image-rm IMAGE [IMAGE]
 **Parámetros**
 <dl>
 <dt>IMAGE</dt>
-<dd>La vía de acceso completa del registro de {{site.data.keyword.Bluemix_short}} a la imagen que desea eliminar. Si no se especifica ninguna etiqueta en la vía de acceso de la imagen, de forma predeterminada se suprime la imagen etiquetada como `latest`. Puede suprimir varias imágenes creando una lista de cada vía de acceso privada al registro de {{site.data.keyword.Bluemix_short}} en el mandato con un espacio entre cada vía de acceso.</dd>
+<dd>La vía de acceso completa del registro de {{site.data.keyword.Bluemix_short}} a la imagen que desea eliminar, que se encuentra en formato namespace/image:tag. Si no se especifica ninguna etiqueta en la vía de acceso de la imagen, de forma predeterminada se suprime la imagen etiquetada como `latest`. Puede suprimir varias imágenes creando una lista de cada vía de acceso privada al registro de {{site.data.keyword.Bluemix_short}} en el mandato con un espacio entre cada vía de acceso.</dd>
 </dl>
 
 
@@ -127,7 +127,7 @@ bx cr login
 
 
 ## bx cr namespace-add
-Añade un espacio de nombres a la organización de Bluemix.  
+Añade un espacio de nombres a la organización de Bluemix. 
 
 ```
 bx cr namespace-add NAMESPACE
@@ -137,12 +137,12 @@ bx cr namespace-add NAMESPACE
 **Parámetros**
 <dl>
 <dt>NAMESPACE</dt>
-<dd>El espacio de nombres que desea añadir. El espacio de nombres debe ser exclusivo entre todas las organizaciones de {{site.data.keyword.Bluemix_short}}. </dd>
+<dd>El espacio de nombres que desea añadir. El espacio de nombres debe ser exclusivo entre todas las organizaciones de {{site.data.keyword.Bluemix_short}}.</dd>
 </dl>
 
 
 ## bx cr namespace-list
-Ver todos los espacios de nombres de su organización de {{site.data.keyword.Bluemix_short}}. 
+Ver todos los espacios de nombres de su organización de {{site.data.keyword.Bluemix_short}}.
 
 ```
 bx cr namespace-list
@@ -151,7 +151,7 @@ bx cr namespace-list
 
 
 ## bx cr namespace-rm
-Elimina un espacio de nombres de la organización de {{site.data.keyword.Bluemix_short}}. Las imágenes de este espacio de nombres se suprimen cuando se elimina el espacio de nombres. 
+Elimina un espacio de nombres de la organización de {{site.data.keyword.Bluemix_short}}. Las imágenes de este espacio de nombres se suprimen cuando se elimina el espacio de nombres.
 
 ```
 bx cr namespace-rm NAMESPACE
@@ -161,5 +161,5 @@ bx cr namespace-rm NAMESPACE
 **Parámetros**
 <dl>
 <dt>NAMESPACE</dt>
-<dd>El espacio de nombres que desea eliminar. </dd>
+<dd>El espacio de nombres que desea eliminar.</dd>
 </dl>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-04-06"
+lastupdated: "2017-05-12"
 ---
 
 {:shortdesc: .shortdesc}
@@ -47,19 +47,21 @@ This buildpack supports the following versions, those marked as deprecated will 
 
 | .NET SDK version        | Default |
 |-------------------------|---------|
-| 1.0.0-preview4-004233   |   No    |
-| 1.0.1                   |   Yes   |
+| 1.0.3                   |   No    |
+| 1.0.4                   |   Yes   |
 
 #### .NET Core runtime versions
 
 | .NET Core runtime version | Release type | Default |
 |---------------------------|--------------|---------|
-| 1.0.0                     | LTS          |   No    |
-| 1.0.1                     | LTS          |   No    |
-| 1.0.3                     | LTS          |   No    |
-| 1.0.4                     | LTS          |   Yes   |
-| 1.1.0                     | Current      |   No    |
+| 1.0.0 (deprecated)        | LTS          |   No    |
+| 1.0.1 (deprecated)        | LTS          |   No    |
+| 1.0.3 (deprecated)        | LTS          |   No    |
+| 1.0.4                     | LTS          |   No    |
+| 1.0.5                     | LTS          |   Yes   |
+| 1.1.0 (deprecated)        | Current      |   No    |
 | 1.1.1                     | Current      |   No    |
+| 1.1.2                     | Current      |   No    |
 
 ### Specifying the .NET SDK version
 
@@ -147,57 +149,6 @@ In this example, the buildpack would automatically compile the *MyApp.DAL* and *
 
 ## Application Configuration
 {: #application_configuration}
-
-### Configuring your application to listen on the proper port
-{: #configuring_listen_proper_port}
-
-The buildpack will run your application with the *dotnet run* command and pass the command-line argument that follows
-```
-  --server.urls http://0.0.0.0:${PORT}
-```
-{: codeblock}
-
-Your application will need to pass this argument to kestrel to ensure that kestrel is listening on the correct port.
-
-To implement the passing of this argument, the samples provided in the cli-samples repository and the templates provided by Visual Studio will
-require slight modifications before deploying to Bluemix.
-
-Modifications are required to the Main method as noted by the comments in the example below:
-
-<pre>
-  public static void Main(string[] args)
-  {
-    var config = new ConfigurationBuilder() //ADD THESE 3 LINES AT THE TOP OF THE MAIN METHOD
-        .AddCommandLine(args)
-        .Build();
-
-    var host = new WebHostBuilder()
-        .UseKestrel()
-        .UseConfiguration(config) //ADD THIS LINE BEFORE 'UseStartup'
-        .UseStartup&lt;Startup&gt;()
-        .Build();
-    host.Run();
-}
-</pre>
-{: codeblock}
-
-For project.json tooling, add this line to your project.json file:
-```
-  "Microsoft.Extensions.Configuration.CommandLine": "1.0.1",
-```
-{: codeblock}
-
-For MSBuild tooling, add this line to your .csproj file:
-```
-  <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="1.0.1" />
-```
-{:codeblock}
-
-Add a *using* statement to the file which contains your Main method:
-```
-  using Microsoft.Extensions.Configuration;
-```
-{: codeblock}
 
 ### Ensure your application has all of the files needed in the build output folder
 {: #configure_output_files}

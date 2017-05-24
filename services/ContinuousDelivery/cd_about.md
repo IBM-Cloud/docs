@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-15"
+lastupdated: "2017-5-16"
 
 ---
 
@@ -12,32 +12,13 @@ lastupdated: "2017-5-15"
 {:codeblock:.codeblock}
 
 
-# About Continuous Delivery  
+# Toolchain availability and templates  
 {: #cd_about}  
 
-With {{site.data.keyword.contdelivery_full}}, you can build, test, and deliver applications by using DevOps practices and industry-leading tools.
+Toolchains are available on {{site.data.keyword.Bluemix_notm}} Public and Dedicated. You can use a template as a starting point to create a toolchain.
 {:shortdesc}
 
-The {{site.data.keyword.contdelivery_short}} service supports your DevOps workflows:
-
- * You can create integrated DevOps open [toolchains](/docs/services/ContinuousDelivery/toolchains_about.html){: new_window} to enable tool integrations that support your development, deployment, and operations tasks.
-
-  A toolchain is an integrated set of tools that you can use to collaboratively develop, build, deploy, test, and manage applications. You can create toolchains that include {{site.data.keyword.Bluemix_notm}} services, open source tools, and third-party tools, such as GitHub, PagerDuty, and Slack, that make development and operations repeatable and easier to manage.
-
- * Deliver continuously by using automated [pipelines](/docs/services/ContinuousDelivery/pipeline_about.html){: new_window}.
-
-  Automate builds, unit tests, deployments, and more. Build, test, and deploy in a repeatable way with minimal human intervention. Be ready to release into production at any time.
-
- * Edit and push your code from anywhere by using the [web-based IDE](/docs/services/ContinuousDelivery/web_ide.html){: new_window}.
-
-  Create, edit, run, and debug, and complete source-control tasks in GitHub. Seemlessly move from editing your code to deploying it to production.
-
- * Improve quality through [{{site.data.keyword.DRA_short}}](/docs/services/ContinuousDelivery/di_working.html){: new_window}.
-
-  Understand the dynamics of your team as it develops and delivers code. Learn how users interact with your application. Review data to help you manage your application's operations.
-
-
-## Toolchain availability on Bluemix Public compared to Bluemix Dedicated
+## Toolchain availability on {{site.data.keyword.Bluemix_notm}} Public compared to {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #public_and_dedicated}
 
 {{site.data.keyword.Bluemix_notm}} Public is an open-standards, cloud-based platform where you can build, run, and manage applications that are accessed by [http://bluemix.net ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://bluemix.net){:new_window}. {{site.data.keyword.Bluemix_notm}} Dedicated provides the capabilities of {{site.data.keyword.Bluemix_notm}} in a dedicated SoftLayer environment that is securely connected to both the {{site.data.keyword.Bluemix_notm}} Public environment and your network. Your company's {{site.data.keyword.Bluemix_notm}} Dedicated environment might not contain the same tool integrations as the {{site.data.keyword.Bluemix_notm}} Public site.

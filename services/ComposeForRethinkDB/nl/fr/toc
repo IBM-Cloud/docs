@@ -1,0 +1,16 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="compose-for-rethinkdb" audience="service" href="/docs/services/ComposeForRethinkDB/index.html"}
+Compose For RethinkDB
+
+	{: .navgroup id="learn"}
+	index.md
+	credentials.md
+
+	{: .topicgroup }
+	Liens connexes
+		[Modèle
+d'application Node.js](https://github.com/IBM-Bluemix/compose-rethinkdb-helloworld-nodejs) 		[Aide de
+Compose](https://help.compose.com) 		[Articles relatifs à
+Compose](https://www.compose.com/articles/) 	{: .navgroup-end}

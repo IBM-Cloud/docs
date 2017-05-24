@@ -16,7 +16,7 @@ Adote uma abordagem DevOps usando o {{site.data.keyword.contdelivery_full}}, que
 {: shortdesc}
 
 Depois de criar uma instância do {{site.data.keyword.contdelivery_short}} selecionando-o no catálogo do {{site.data.keyword.Bluemix_notm}}, será possível escolher como você deseja começar a usar o serviço.
-![Página de boas-vindas da Entrega contínua](images/cd_landing_page.png)
+ ![Página de boas-vindas da Entrega contínua](images/cd_landing_page.png)
 
  * Para iniciar rapidamente e implementar seu aplicativo usando um pipeline
 automatizado, na seção "Iniciando com um pipeline", clique em

@@ -35,7 +35,7 @@ Puede que se pregunte sobre qué diferencia hay entre la cuenta Estándar y la c
 | Puede acceder a planes Lite gratuitos para Cloudant NoSQL DB y a la Plataforma Internet de las cosas con más servicios gratuitos disponibles muy pronto. |
 | Sus aplicaciones entrarán en suspensión si no hay actividad de desarrollo durante 10 días. |
 | Las instancias de servicio se suprimirán tras 30 días de inactividad. |
-{:caption="Table 1. What's new in a Standard account" caption-side="top"}
+{:caption="Tabla 1. Novedades en una cuenta estándar" caption-side="top"}
 
 |¿Qué es lo que no cambia cuando se convierte una cuenta de prueba? | 
 |-----------------|
@@ -43,7 +43,7 @@ Puede que se pregunte sobre qué diferencia hay entre la cuenta Estándar y la c
 |Cualquier instancia Lite de Cloudant NoSQL DB y de la Plataforma Internet de las cosas. Se puede transferir a su nueva cuenta una instancia de Lite para cada uno de estos servicios. |
 |Los valores de acceso de su organización, espacios y miembros de equipo asociados siguen siendo los mismos. Se puede transferir una organización a su cuenta nueva. |
 |El nivel de soporte de {{site.data.keyword.Bluemix_notm}} sigue siendo el mismo. |
-{:caption="Table 2. What's not changing" caption-side="top"}
+{:caption="Tabla 2. Qué es lo que no cambia" caption-side="top"}
 
 **Nota:** Si la cuenta de prueba no se convierte, verá un mensaje que le dirá el motivo. Puede que tenga más de una organización en la cuenta de prueba existente o apps que no se puedan transferir. Puede realizar la acción apropiada y volver a intentar convertir la cuenta.
 

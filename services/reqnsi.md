@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-16"
+lastupdated: "2017-05-23"
 
 ---
 
@@ -255,14 +255,14 @@ If you have a service instance that is created and bound to apps in one region, 
 
 	Assume that you are starting in the region where you want to use the service instance. To use a service instance that exists in another region, complete the following steps:
 
-      1. Switch to the region where the service instance exists. In the {{site.data.keyword.Bluemix_notm}} menu bar, expand **Region** or click the **Region** icon, and then select the region where the service instance exists.
+      1. Switch to the region where the service instance exists. In the {{site.data.keyword.Bluemix_notm}} menu bar, expand the **Region** menu, and then select the region where the service instance exists.
 
       2. Retrieve the credentials and the connection parameters from the VCAP_SERVICES environment variable of the service instance in the region where the service exists. Complete the following steps:
 
 	       1. In the {{site.data.keyword.Bluemix_notm}} Dashboard, click your application tile. The Overview page is displayed.
 	       2. In the navigation pane, click **Environment Variables**. The *VCAP_SERVICES* environment variable details are displayed. Record the JSON content for the service instance.
 
-      3. Switch to the region where you want to use the service instance. In the {{site.data.keyword.Bluemix_notm}} menu bar, expand **Region** or click the **Region** icon, and then select the region where you want to use the service instance.
+      3. Switch to the region where you want to use the service instance. In the {{site.data.keyword.Bluemix_notm}} menu bar, expand the **Region** menu, and then select the region where you want to use the service instance.
 
       4. Create a user-provided service instance by using the credentials and connection parameters that you recorded from the *VCAP_SERVICES* environment variable. For information about how to create a user-provided service instance, see [Creating a user-provided service instance](#user_provide_services).
 
@@ -290,12 +290,3 @@ To use a service instance from another service, complete the following steps:
 the tile for the service that you want to access. The dashboard for the service is displayed.
 2. In the navigation pane, click **Manage** to authorize the binding from other service instances by using the console of the service instance.
 3. If you want to deny other services access to the service instance, click **Service Access Authorization** in the navigation pane and then use **Revoke** to remove the service binding.
-
-# rellinks
-{: #rellinks}
-
-## general
-{: #general}
-
-* [Binding a service by using {{site.data.keyword.Bluemix_notm}} user interface](/docs/cfapps/ee.html#ee_bindui)
-* [Retrieving VCAP_SERVICES](/docs/cli/vcapsvc.html#retrieving)

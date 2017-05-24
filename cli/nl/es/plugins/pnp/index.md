@@ -18,7 +18,7 @@ Utilice la interfaz de línea de mandatos (CLI) de igualdad de red privada para 
 
 El plug-in de la CLI de igualdad de red privada está disponible para los sistemas operativos Windows, MAC y Linux. Asegúrese de utilizar el plug-in aplicable a su caso.
 
-Antes de empezar, cree los espacios de Bluemix. Asegúrese de que cada contenedor de un espacio tenga una dirección IP desde una red distinta. Para obtener detalles, consulte [Utilización de su propia dirección IP privada](https://www.{DomainName}/docs/containers/container_security_network.html#container_cli_ips_byoip)
+Antes de empezar, cree los espacios de Bluemix. Asegúrese de que cada contenedor de un espacio tenga una dirección IP desde una red distinta. Para obtener detalles, consulte [Utilización de su propia dirección IP privada](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip)
 
 **Nota:** después de utilizar la igualdad de red privada con un espacio de Bluemix, si necesita suprimir el espacio, suprima en primer lugar las conexiones de la igualdad de red privada en dicho espacio.
 
@@ -87,7 +87,7 @@ Se da soporte a los mandatos siguientes. Utilice el mandato `bluemix network` pa
 | pnp-create  | Crea una conexión de igualdad de red privada   |
 | pnp-delete  | Suprime una conexión de igualdad de red privada   |
 | pnp-show    | Lista todas las conexiones de igualdad de red privada  |
-{: caption="Table 1. Private network peering commands" caption-side="top"}
+{: caption="Tabla 1. Mandatos de conexión de igualdad de red" caption-side="top"}
 
 
 ### Utilización del mandato
