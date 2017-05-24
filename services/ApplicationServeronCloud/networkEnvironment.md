@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016, 2017
 lastupdated: "2017-05-24"
 
 ---
@@ -39,7 +39,11 @@ In most cases, you need only a single VPN configuration that you can download by
 
 If your VPN configurations are compromised or expired, you can revoke VPN configuration by using the advanced VPN management page. Additionally, from an audit perspective, you can view a history of all VPN management activity and download active VPN configurations that were created previously from the advanced VPN management page.
 
+<!-- Commenting out until iteration 17.10
+
 All the features available from the Service Dashboard in the {{site.data.keyword.Bluemix_notm}} UI can also be scripted by using our REST APIs. For more information, see the WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} [REST API Documentation](https://wasaas-broker.ng.bluemix.net/wasaas-broker/api#/){: new_window}.
+
+-->
 
 **Note:** Currently, the **Advanced VPN Management** feature is only available in the Frankfurt region.
 
