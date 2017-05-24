@@ -22,6 +22,9 @@ https://help.github.com/articles/github-flow-in-the-browser/
 
 ## Authoring Bluemix content in Markdown
 
+
+===========
+
 Purpose
 -----------
 Markdown is a lightweight markup language with plain text formatting syntax designed so that it can be converted to HTML.
