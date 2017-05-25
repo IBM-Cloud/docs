@@ -21,6 +21,7 @@ Internet of Things Platform
         information_management/im_index_scenario_thing.md
         gateways/gateway-access-control.md
         gateways/gw_intro_api.md
+        devices/device_cmd_api.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
