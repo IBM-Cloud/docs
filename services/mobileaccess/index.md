@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-04-06"
+lastupdated: "2017-05-10"
 
 ---
 {:new_window: target="_blank"}
@@ -16,28 +16,29 @@ lastupdated: "2017-04-06"
 {: #gettingstarted}
 
 
-**The {{site.data.keyword.amafull}} service is replaced with the [{{site.data.keyword.appid_full}} service](/docs/services/appid/index.html).** For more details, see the <a href="https://www.ibm.com/blogs/bluemix/2017/03/introducing-ibm-bluemix-app-id-authentication-profiles-service-app-developers/" target="_blank">{{site.data.keyword.appid_short_notm}} announcement <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>.
+The {{site.data.keyword.amafull}} service is replaced with the [{{site.data.keyword.appid_full}} service](/docs/services/appid/index.html). For more information, see the <a href="https://www.ibm.com/blogs/bluemix/2017/03/introducing-ibm-bluemix-app-id-authentication-profiles-service-app-developers/" target="_blank">{{site.data.keyword.appid_short_notm}} announcement <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>.
 {:shortdesc}
 
 
-{{site.data.keyword.amashort}} provided security to your mobile app: client authorization for accessing protected back-end resources from identity providers (Google and Facebook) or custom identities to authenticate users and grant access to protected back-end resources and Web apps.
+{{site.data.keyword.amashort}} provided security to your mobile app: client authorization for accessing protected back-end resources from identity providers (Google and Facebook) or custom identities to authenticate users and grant access to protected back-end resources and web apps.
 
-**Note:** The {{site.data.keyword.amashort}} service was previously known as Advanced Mobile Access.
+With {{site.data.keyword.appid_short_notm}}, you can authenticate your application users and store information in a profile linked to their identity. You can use that information to customize their user experience.
 
 
 ## Migrating to {{site.data.keyword.appid_short_notm}}
 
-With {{site.data.keyword.appid_short_notm}}, you can secure your mobile applications by using identity providers (Google and Facebook). You can also protect back-end resources with client authorization.
+**Note**:  With {{site.data.keyword.appid_short_notm}}, you can configure Facebook, Google, or both as identity providers. If you are using custom authentication in the MCA service, you are unable to migrate currently. Contact our support team for more information on your migration.
 
-1. Provision your service instance from the {{site.data.keyword.Bluemix_notm}} catalog. Configure your instance and click **Create**.
-2. In your service instance dashboard, use the step-by-step samples to get started with {{site.data.keyword.appid_short_notm}}.
-3. Download the {{site.data.keyword.appid_short_notm}} SDKs and set up your application by using either [the Android SDK](/docs/services/appid/getting-started-android.html#android-sdk), or [the iOS Swift SDK](/docs/services/appid/getting-started-ios-swift-sdk.html#getting-started-ios).
-4. Configure your [identity providers](/docs/services/appid/identity-providers.html).
-5. Customize your [login widget](/docs/services/appid/login-widget.html).
-6. Verify that your app is working correctly.
-    * Check your service dashboard to ensure your app is running.
+1. Provision an <a href="https://console.ng.bluemix.net/catalog/?category=services&taxonomyNavigation=services&env_id=ibm:yp:us-south&search=app%20id" target="_blank">instance of {{site.data.keyword.appid_short_notm}} <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> from the {{site.data.keyword.Bluemix_notm}} catalog. Configure your instance and click **Create**.
+2. In your service instance dashboard, open the **Identity Providers** tab and click **Edit** for either Facebook or Google. A dialog box opens.
+3. Input the information for your <a href="https://console.developers.google.com/apis/library" target="_blank">Google <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> or <a href="https://developers.facebook.com/" target="_blank">Facebook <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> application and click **Save**.
+4. If you use {{site.data.keyword.amashort}} with a web app, add the redirect URL from your {{site.data.keyword.amashort}} dashboard to the **Web Redirect URL** on the **Identity Providers** tab.
+5. Replace the {{site.data.keyword.amashort}} SDKs with the {{site.data.keyword.appid_short_notm}} SDKs by using either the [Android SDK](/docs/services/appid/getting-started-android.html#android-sdk) or the [iOS Swift SDK](/docs/services/appid/getting-started-ios-swift-sdk.html#getting-started-ios).
+6. **Optional**: Customize your [login widget](/docs/services/appid/login-widget.html). When you configure both Facebook and Google, your users see a customizable login page.
+7. Verify that your app is working correctly.
+    * Check your service dashboard to ensure that your app is running.
     * In your service dashboard, view **recent activity** to monitor any ongoing authentication.
-7. Deprovision and remove your instances of {{site.data.keyword.amashort}}.
+8. Unbind and delete your instances of {{site.data.keyword.amashort}}.
 
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-04-06"
+lastupdated: "2017-05-09"
 
 ---
 
@@ -60,6 +60,8 @@ After you have your Facebook App ID and App Secret, and your Facebook for Develo
 ## Implementing the {{site.data.keyword.amashort}} authorization flow using Facebook as identity provider
 {: #facebook-auth-flow}
 
+**Important**: The `VCAP_SERVICES` environment variable was updated. If you're getting an error, update your variable and redeploy your application to pick up the change.
+
 The `VCAP_SERVICES` environment variable is created automatically for each {{site.data.keyword.amashort}} service instance and contains properties necessary for the authorization process. It consists of a JSON object and can be viewed in the  **Service Credentials** tab on the {{site.data.keyword.amashort}} service dashboard.
 
 To start the process of authorization:
@@ -86,7 +88,7 @@ To start the process of authorization:
 
 3. Redirect from your Web app to the generated URI.
 
-	The following example retrieves the parameters from the `VCAP_SERVICES` variable, building the URL, and sending the redirect request.
+	The following example retrieves the parameters from the `VCAP_SERVICES` variable, building the URL, and sending the redirect request. The `VCAP_SERVICES` environment variable was updated. If you're getting an error, update your variable and redeploy your application to pick up the change.
 
 	```Java
 	var cfEnv = require("cfenv");
@@ -103,7 +105,7 @@ To start the process of authorization:
 			next()  
 		} else {   
 			// If not - redirect to authorization server   
-			var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;   
+			var mcaCredentials = cfEnv.getAppEnv().services.AppID[0].credentials;   
 			var authorizationEndpoint = mcaCredentials.authorizationEndpoint;   
 			var clientId = mcaCredentials.clientId;   
 			var redirectUri = "http://some-server/oauth/callback";
@@ -156,7 +158,7 @@ The next step is to obtain the access and identity tokens using the previously r
 	var request = require('request');
 
 	app.get("/oauth/callback", function(req, res, next) {
-		var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
+		var mcaCredentials = cfEnv.getAppEnv().services.AppID[0].credentials;
 		var tokenEndpoint = mcaCredentials.tokenEndpoint;
 		var formData = {
 			grant_type: "authorization_code",

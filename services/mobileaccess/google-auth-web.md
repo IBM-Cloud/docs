@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-04-06"
+lastupdated: "2017-05-09"
 
 ---
 
@@ -60,15 +60,17 @@ After you have a Google Application ID and Secret, you can enable Google authent
 ## Implementing the Mobile Client Access authorization flow using Google as identity provider
 {: #google-auth-flow}
 
+**Important**: The `VCAP_SERVICES` environment variable was updated. If you're getting an error, update your variable and redeploy your application to pick up the change.
+
 The `VCAP_SERVICES` environment variable is created automatically for each {{site.data.keyword.amashort}} service instance and contains properties necessary for the authorization process. It consists of a JSON object and can be viewed by clicking  **Service Credentials**  tab in the {{site.data.keyword.amashort}} service dashboard.
 
 To start the process of authorization:
 
-1. Retrieve the authorization endpoint (`authorizationEndpoint`) and clientId (`clientId`) from the service credentials stored in the `VCAP_SERVICES` environment variable.
+1. Retrieve the authorization endpoint (`authorizationEndpoint`) and clientId (`clientId`) from the service credentials stored in the `VCAP_SERVICES` environment variable. The `VCAP_SERVICES` environment variable was updated. If you're getting an error, update your variable and redeploy your application to pick up the change.
 
 	`var cfEnv = require("cfenv");`
 
-	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;`
+	`var mcaCredentials = cfEnv.getAppEnv().services.AppID[0].credentials;`
 
 	**Note:** If you added the {{site.data.keyword.amashort}} service to your application prior to adding Web support, you might not have token endpoint in service credentials. Instead, use the following URLs, depending on your {{site.data.keyword.Bluemix_notm}} region:
 
@@ -102,7 +104,7 @@ To start the process of authorization:
 			next()
 		} else {
 			// If not - redirect to authorization server
-			var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
+			var mcaCredentials = cfEnv.getAppEnv().services.AppID[0].credentials;
 			var authorizationEndpoint = mcaCredentials.authorizationEndpoint;
 			var clientId = mcaCredentials.clientId;
 			var redirectUri = "http://some-server/oauth/callback"; // Your Web application redirect URI
@@ -150,7 +152,7 @@ The next step is to obtain access token and identity tokens using the previously
 	var request = require('request');
 
 	app.get("/oauth/callback", function(req, res, next) {
-		var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
+		var mcaCredentials = cfEnv.getAppEnv().services.AppID[0].credentials;
 		var tokenEndpoint = mcaCredentials.tokenEndpoint;
 		var formData = {
 			grant_type: "authorization_code",

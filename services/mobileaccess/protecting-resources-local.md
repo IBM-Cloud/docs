@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-04-06"
+lastupdated: "2017-05-08"
 
 ---
 {:new_window: target="_blank"}
@@ -31,6 +31,8 @@ You must have:
 
 ## Setting up the server SDK
 {: #serversetup}
+
+**Important**: The `VCAP_SERVICES` environment variable was updated. If you're getting an error, update your variable and redeploy your application to pick up the change.
 
 The {{site.data.keyword.amashort}} server SDK requires that two environment variables be set. When you are developing server-side code on {{site.data.keyword.Bluemix_notm}}, these variables are supplied by {{site.data.keyword.Bluemix_notm}} infrastructure.
 
@@ -64,7 +66,7 @@ var vcapApplication = {
 };
 
 var vcapServices = {
-	"AdvancedMobileAccess": [
+	"AppID": [
 		{
 			"credentials": {
 				"admin_url": "https://mobile.ng.bluemix.net/imfmobileplatformdashboard/?appGuid=appGUID",
