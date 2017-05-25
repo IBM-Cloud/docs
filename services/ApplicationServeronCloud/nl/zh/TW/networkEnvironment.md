@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-28"
+lastupdated: "2017-02-24"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2016-10-28"
 # 網路環境
 {: #networkEnvironment}
 
-WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 服務實例佈建之後，您可以用數種方式存取 VM。您可以透過安全的虛擬私密網路 (VPN) 連接，以便取得 VM 的 SSH、傳統 WebSphere 管理主控台及應用程式存取。您也可以使用公用 IP 位址將 VM 連接至網際網路。
+佈建 WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} 服務實例之後，您可以使用數種方式存取 VM。您可以透過安全的虛擬私密網路 (VPN) 連接，以便取得 VM 的 SSH、傳統 WebSphere 管理主控台及應用程式存取。您也可以使用公用 IP 位址將 VM 連接至網際網路。
 
 下圖顯示這些網路路徑：
 
@@ -24,12 +24,12 @@ WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 服務實例
 ## VPN 存取
 {: #vpnAccess}
 
-在 {{site.data.keyword.Bluemix_notm}} 使用者介面中，從「服務儀表板」佈建 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 服務實例之後，您可以下載 VPN 認證並建立 OpenVPN 連線。接著可以透過 SSH 存取 VM。您也可以存取「Liberty 管理中心」、傳統「WebSphere 管理主控台」，以及應用程式。
+在 {{site.data.keyword.Bluemix_notm}} 使用者介面中，從「服務儀表板」佈建 WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} 服務實例之後，您可以下載 VPN 認證，並建立 OpenVPN 連線。接著可以透過 SSH 存取 VM。您也可以存取「Liberty 管理中心」、傳統「WebSphere 管理主控台」，以及應用程式。
 
 ## 公用網際網路存取
 {: #publicInternetAccess}
 
-您可以選擇性地為 WebSphere 伺服器 VM 要求公用 IP 位址，方法是在 {{site.data.keyword.Bluemix_notm}} 使用者介面的「服務儀表板」按一下**管理公用 IP**，然後要求公用 IP。這個處理程序會為這部伺服器保留 IP 位址。然後，按一下**開啟 IP**，以開啟從網際網路到 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 服務實例的連線。
+您可以選擇性地為 WebSphere 伺服器 VM 要求公用 IP 位址，方法是在 {{site.data.keyword.Bluemix_notm}} 使用者介面的「服務儀表板」按一下**管理公用 IP**，然後要求公用 IP。這個處理程序會為這部伺服器保留 IP 位址。然後，按一下**開啟 IP**，以開啟從網際網路到 WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} 服務實例的連線。
 
 ## 公用 IP 埠
 {: #publicIPports}

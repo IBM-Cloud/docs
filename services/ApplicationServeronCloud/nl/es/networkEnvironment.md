@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-28"
+lastupdated: "2017-02-24"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2016-10-28"
 # Entorno de red
 {: #networkEnvironment}
 
-Una vez suministrada la instancia de servicio de WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}, puede acceder a VM de varias formas. Puede conectarse sobre una VPN segura para obtener SSH, puede utilizar la consola de administración de WebSphere tradicional y puede acceder por aplicación a VM. También puede conectar VM a Internet con una dirección IP pública. 
+Una vez suministrada la instancia de servicio de WebSphere Application Server en {{site.data.keyword.Bluemix_notm}}, puede acceder a VM de varias formas. Puede conectarse sobre una VPN segura para obtener SSH, puede utilizar la consola de administración de WebSphere tradicional y puede acceder por aplicación a VM. También puede conectar VM a Internet con una dirección IP pública. 
 
 En el siguiente diagrama se muestran estos métodos de red: 
 
@@ -24,12 +24,12 @@ Figura 1. Vista de cliente con red multiarrendatario con IP pública
 ## Acceso VPN
 {: #vpnAccess}
 
-Después de suministrar una instancia de servicio de WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} desde el panel de control de servicio de la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, puede descargar las credenciales VPN y establecer una conexión OpenVPN. Luego puede acceder a VM a través de SSH. También puede acceder a Liberty Admin Center, a la consola de administración de WebSphere tradicional y a las aplicaciones. 
+Después de suministrar una instancia de servicio de WebSphere Application Server en {{site.data.keyword.Bluemix_notm}} desde el panel de control de servicio de la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, puede descargar las credenciales VPN y establecer una conexión OpenVPN. Luego puede acceder a VM a través de SSH. También puede acceder a Liberty Admin Center, a la consola de administración de WebSphere tradicional y a las aplicaciones. 
 
 ## Acceso a Internet pública
 {: #publicInternetAccess}
 
-Si lo desea, puede solicitar una dirección IP pública para VM del servidor WebSphere pulsando **Gestionar IP pública** en el panel de control de servicio de la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} y solicitando una IP pública. Este proceso reserva la dirección IP para este servidor. A continuación, pulse **Abrir IP** para abrir la conexión entre Internet y la instancia de servicio de WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}. 
+Si lo desea, puede solicitar una dirección IP pública para VM del servidor WebSphere pulsando **Gestionar IP pública** en el panel de control de servicio de la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} y solicitando una IP pública. Este proceso reserva la dirección IP para este servidor. A continuación, pulse **Abrir IP** para abrir la conexión entre Internet y la instancia de servicio de WebSphere Application Server en {{site.data.keyword.Bluemix_notm}}. 
 
 ## Puertos IP públicos
 {: #publicIPports}

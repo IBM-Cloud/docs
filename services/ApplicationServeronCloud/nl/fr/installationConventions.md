@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-28"
+lastupdated: "2017-02-24"
 
 ---
 
@@ -16,8 +16,7 @@ lastupdated: "2016-10-28"
 ## Conventions d'installation de la cellule
 {: cell_installation_conventions}
 
-Une cellule WebSphere Application Server for Bluemix doit être installée et configurée conformément à une structure de répertoire normalisée. La liste suivante
-répertorie quelques-uns des paramètres importants.  Pour la liste complète des paramètres, voir /etc/virtualimage.properties.
+Une cellule WebSphere Application Server in Bluemix doit être installée et configurée conformément à une structure de répertoire normalisée. La liste suivante répertorie quelques-uns des paramètres importants. Pour la liste complète des paramètres, voir /etc/virtualimage.properties.
 
 * IHS_HOME=/opt/IBM/WebSphere/HTTPServer
 * IHS_INSTALL_ROOT=/opt/IBM/WebSphere/HTTPServer
@@ -29,8 +28,7 @@ répertorie quelques-uns des paramètres importants.  Pour la liste complète de
 
 ## Conventions d'installation de la collectivité Liberty
 
-Une collectivité Liberty est installée et configurée conformément à une structure de répertoire normalisée. La liste suivante répertorie quelques-uns des
-paramètres importants.  Pour la liste complète des paramètres, voir /etc/virtualimage.properties.
+Une collectivité Liberty est installée et configurée conformément à une structure de répertoire normalisée. La liste suivante répertorie quelques-uns des paramètres importants. Pour la liste complète des paramètres, voir /etc/virtualimage.properties.
 
 * IHS_HOME=/opt/IBM/WebSphere/HTTPServer
 * IHS_INSTALL_ROOT=/opt/IBM/WebSphere/HTTPServer
@@ -39,9 +37,5 @@ paramètres importants.  Pour la liste complète des paramètres, voir /etc/virt
 * WLP_HOME=/opt/IBM/WebSphere/Liberty
 
 **Remarque **:
-* Vous pouvez appliquer la maintenance via l'utilitaire
-[Installation Manager](http://www.ibm.com/support/knowledgecenter/SSDV2W_1.8.3/com.ibm.cic.agent.ui.doc/helpindex_imic.html){: new_window}
-installé sous le répertoire /home/virtuser/IBM/Installation Manager. Etant donné que les fichiers binaires sous-jacents sont installés en tant que virtuser,
-prenez soin d'installer tous les groupes de correctifs et tous les correctifs temporaires en tant que virtuser.
-* Prenez soin de démarrer et d'arrêter les serveurs depuis la ligne de commande en utilisant l'ID de l'administrateur WebSphere, et non pas en
-tant que virtuser
+* Vous pouvez appliquer la maintenance via l'utilitaire [Installation Manager](http://www.ibm.com/support/knowledgecenter/SSDV2W_1.8.3/com.ibm.cic.agent.ui.doc/helpindex_imic.html){: new_window} installé sous le répertoire /home/virtuser/IBM/Installation Manager. Etant donné que les fichiers binaires sous-jacents sont installés en tant que virtuser, prenez soin d'installer tous les groupes de correctifs et tous les correctifs temporaires en tant que virtuser.
+* Prenez soin de démarrer et d'arrêter les serveurs depuis la ligne de commande en utilisant l'ID de l'administrateur WebSphere, et non pas en tant que virtuser

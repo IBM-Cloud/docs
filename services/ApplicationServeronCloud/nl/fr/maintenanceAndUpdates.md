@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-28"
+lastupdated: "2017-02-24"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2016-10-28"
 ## Stratégie de maintenance
 {: #maintenance_strategy}
 
-IBM WebSphere Application Server for Bluemix est mis à jour régulièrement de sorte à garantir que les nouvelles instances de service soient créées avec les groupes de correctifs et les correctifs les plus récents. Le cloud met à la disposition des équipes de gestion du middleware de nouvelles instances de service facilement et rapidement. En général, de nombreux consommateurs procèdent à la mise à niveau vers une nouvelle instance de service lorsqu'ils veulent assurer la maintenance. Pour les consommateurs qui veulent conserver des instances de service à longue durée de vie, des référentiels de maintenance sont disponibles pour le middleware et l'invité du système d'exploitation sous-jacent. Ceux-ci permettent aux utilisateurs d'assurer la maintenance de leur environnement comme ils le feraient sur site.
+IBM WebSphere Application Server in Bluemix est mis à jour régulièrement de sorte à garantir que les nouvelles instances de service soient créées avec les groupes de correctifs et les correctifs les plus récents. Le cloud met à la disposition des équipes de gestion du middleware de nouvelles instances de service facilement et rapidement. En général, de nombreux consommateurs procèdent à la mise à niveau vers une nouvelle instance de service lorsqu'ils veulent assurer la maintenance. Pour les consommateurs qui veulent conserver des instances de service à longue durée de vie, des référentiels de maintenance sont disponibles pour le middleware et l'invité du système d'exploitation sous-jacent. Ceux-ci permettent aux utilisateurs d'assurer la maintenance de leur environnement comme ils le feraient sur site.
 
 ## Mises à jour des machines virtuelles
 
