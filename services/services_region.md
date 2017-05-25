@@ -14,6 +14,9 @@ lastupdated: "2017-05-16"
 # Services by region
 {: #services_region}
 
+{{site.data.keyword.Bluemix}} makes it easy for you to implement, host, and scale services and apps. You can focus on your application logic and application design. 
+{:shortdesc}
+
 Not all services are available for purchase in every {{site.data.keyword.Bluemix_notm}} region. And, even if the service is available to purchase in that region, the service might be hosted in a different location. The following table shows the services that are provided by IBM.
 
 
