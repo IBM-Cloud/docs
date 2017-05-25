@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-05-23" 
+lastupdated: "2017-05-25" 
 
 ---
 
@@ -131,6 +131,22 @@ The Liberty buildpack v3.8 provides new default and monthly Liberty runtime vers
 
 ## Services
 {: #services_category}
+
+### New Updates to  {{site.data.keyword.mobilepush}} service on {{site.data.keyword.Bluemix_notm}}
+New as of: 24 May 2017
+
+The following are the new updates available for {{site.data.keyword.mobilepush}} service on {{site.data.keyword.Bluemix_notm}}
+
+**Lite Plan**: We are introducing a new Lite Plan in addition to the existing Basic Plan for {{site.data.keyword.mobilepush}} service. As per the new plan the users can send upto hundred thousand digital messages for free per month. With this introduction, {{site.data.keyword.mobilepush}} service is now a part of the {{site.data.keyword.Bluemix_notm}} Standard account model where users can use included services without the restriction of 30 days for trial account, but up to the monthly specified limit
+
+**Monitoring**: You can now get insights on notifications sent and devices registered in the {{site.data.keyword.mobilepush}} Service Console. You can also use REST API's for message level tracking. From message delivery to message dispatching to message receipt, the details can be obtained by configuring webhooks.  See [Monitoring for {{site.data.keyword.mobilepush}}](/docs/services/mobilepush/t_push_monitoring.html#monitor-notifications).
+
+**Web Notifications**: You can now send notifications to Safari Web browsers.
+
+### Secure Gateway Updates
+New as of: 24 May 2017
+
+The latest Secure Gateway maintenance update includes minor bug fixes in the UI and API manager, updated documentation, and the client has been updated to version 1.7.1. The Secure Gateway client is now available on AIX 7.1+ and supports connecting outbound through a squid proxy.
 
 ### {{site.data.keyword.streaminganalyticsfull}} service updates: Develop Streams applications in your Python development environment
 New as of: 13 April 2017
