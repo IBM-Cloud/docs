@@ -107,7 +107,7 @@ Lo spazio argomenti in cui operano i dispositivi e le applicazioni ha come ambit
 {: #general}
 * [Introduzione a {{site.data.keyword.iot_short_notm}}](https://console.ng.bluemix.net/docs/services/IoT/index.html)
 * [{{site.data.keyword.Bluemix_notm}} security ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
-* [{{site.data.keyword.Bluemix_notm}} platform security ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
-* [{{site.data.keyword.Bluemix_notm}} compliance](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} security ![Icona link esterno](../../../../icons/launch-glyph.svg "External link icon")](http://www.softlayer.com/security){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} compliance ![Icona link esterno](../../../../icons/launch-glyph.svg "External link icon")](http://www.softlayer.com/compliance){:new_window}
+* [Sicurezza della piattaforma {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
+* [Conformità {{site.data.keyword.Bluemix_notm}} ](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
+* [Sicurezza {{site.data.keyword.BluSoftlayer}} ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](http://www.softlayer.com/security){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} compliance ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](http://www.softlayer.com/compliance){:new_window}

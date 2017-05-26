@@ -164,14 +164,14 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1019"
+     inkscape:window-height="1027"
      id="namedview67"
      showgrid="false"
      inkscape:zoom="1.64"
      inkscape:cx="259.35857"
      inkscape:cy="191.22739"
-     inkscape:window-x="-9"
-     inkscape:window-y="1071"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2"
      fit-margin-top="0"
@@ -214,11 +214,11 @@
        sodipodi:role="line"
        x="55.809902"
        y="74.806244"
-       id="tspan5620">Temperature</tspan><tspan
+       id="tspan4321">Sensore di </tspan><tspan
        sodipodi:role="line"
        x="55.809902"
        y="88.556244"
-       id="tspan4321">Sensor 1</tspan><tspan
+       id="tspan3443">temperatura 1</tspan><tspan
        sodipodi:role="line"
        x="55.809902"
        y="102.30624"
@@ -258,7 +258,7 @@
        sodipodi:role="line"
        x="664.01202"
        y="164.74066"
-       id="tspan6913-6">Application</tspan></text>
+       id="tspan6913-6">Applicazione</tspan></text>
 <g
      id="g5240-2-8"
      transform="matrix(0.09339234,0,0,0.09339234,601.40436,138.54859)"
@@ -330,7 +330,7 @@
        sodipodi:role="line"
        id="tspan266400-5"
        x="250.80249"
-       y="8.625">Device type: EnvSensor1</tspan><tspan
+       y="8.625">Tipo di dispositivo: EnvSensor1</tspan><tspan
        sodipodi:role="line"
        x="250.80249"
        y="23.625"
@@ -355,7 +355,7 @@
        y="272.34186"
        x="-139.198"
        sodipodi:role="line"
-       id="tspan6445-3-0-1-4">Physical  Interface</tspan></text>
+       id="tspan6445-3-0-1-4">Interfaccia fisica</tspan></text>
 <rect
      ry="0"
      rx="0"
@@ -376,7 +376,7 @@
        y="480.92456"
        x="-222.7049"
        sodipodi:role="line"
-       id="tspan6445-3-0-1-4-7">Application  Interface</tspan></text>
+       id="tspan6445-3-0-1-4-7">Interfaccia applicazione</tspan></text>
 <rect
      ry="0"
      rx="0"
@@ -395,23 +395,23 @@
        y="62.173744"
        x="294.48419"
        sodipodi:role="line"
-       id="tspan6445-3-0-7">Validation and</tspan><tspan
+       id="tspan4713">Convalida e </tspan><tspan
        y="75.923744"
        x="294.48419"
        sodipodi:role="line"
-       id="tspan4461">mapping to </tspan><tspan
+       id="tspan3463">associazione </tspan><tspan
        y="89.673744"
        x="294.48419"
        sodipodi:role="line"
-       id="tspan5252">application </tspan><tspan
+       id="tspan3465">all'interfaccia </tspan><tspan
        y="103.42374"
        x="294.48419"
        sodipodi:role="line"
-       id="tspan4710">interface: </tspan><tspan
+       id="tspan3467">applicazione </tspan><tspan
        y="117.17374"
        x="294.48419"
        sodipodi:role="line"
-       id="tspan4713">{ &quot;temperature&quot; }</tspan></text>
+       id="tspan3469">{&quot;temperatura&quot;}</tspan></text>
 <path
      style="opacity:1;fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM-1-5-2);marker-end:url(#TriangleOutM-3-4-3-3)"
      d="m 501.79026,162.79713 91.75413,0"
@@ -435,7 +435,7 @@
        y="178.71419"
        x="506.34467"
        id="tspan3435-7"
-       sodipodi:role="line">{ &quot;temperature&quot;}</tspan></text>
+       sodipodi:role="line">{ &quot;temperatura&quot;}</tspan></text>
 <path
      style="opacity:1;fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-3-4-3-0)"
      d="m 150.68062,248.17604 91.75413,0"
@@ -462,11 +462,11 @@
        sodipodi:role="line"
        x="55.520477"
        y="238.36305"
-       id="tspan8202-7">Temperature </tspan><tspan
+       id="tspan5620-8">Sensore di </tspan><tspan
        sodipodi:role="line"
        x="55.520477"
        y="252.11305"
-       id="tspan5620-8">Sensor 2</tspan><tspan
+       id="tspan3447">temperatura 2</tspan><tspan
        sodipodi:role="line"
        x="55.520477"
        y="265.86304"
@@ -507,11 +507,11 @@
        y="136.5788"
        x="512.54572"
        id="tspan3435-3-9"
-       sodipodi:role="line">State request: </tspan><tspan
+       sodipodi:role="line">Richiesta stato: </tspan><tspan
        y="150.3288"
        x="512.54572"
        sodipodi:role="line"
-       id="tspan5272">ID D1 or D2</tspan></text>
+       id="tspan5272">ID D1 o D2</tspan></text>
 <text
      sodipodi:linespacing="125%"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:ArialMT;-inkscape-font-specification:'ArialMT, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
@@ -522,7 +522,7 @@
        x="-0.53579706"
        sodipodi:role="line"
        id="tspan5272-7"
-       style="font-weight:bold">Registered devices</tspan></text>
+       style="font-weight:bold">Dispositivi registrati</tspan></text>
 <rect
      ry="0"
      rx="0"
@@ -541,7 +541,7 @@
        sodipodi:role="line"
        id="tspan266400-5-7"
        x="250.55789"
-       y="174.34784">Device type: EnvSensor2</tspan><tspan
+       y="174.34784">Tipo di dispositivo: EnvSensor2</tspan><tspan
        sodipodi:role="line"
        x="250.55789"
        y="189.34784"
@@ -566,7 +566,7 @@
        y="272.09726"
        x="-304.92084"
        sodipodi:role="line"
-       id="tspan6445-3-0-1-4-0">Physical  Interface</tspan></text>
+       id="tspan6445-3-0-1-4-0">Interfaccia fisica</tspan></text>
 <path
      style="opacity:1;fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-3-4-3-2)"
      d="m 387.1665,129.97503 71.30811,0"
@@ -585,15 +585,11 @@
        sodipodi:role="line"
        id="tspan266400-5-5"
        x="462.18744"
-       y="82.340347">Application interface: </tspan><tspan
+       y="82.340347">Interfaccia applicazione: </tspan><tspan
        sodipodi:role="line"
        x="462.18744"
        y="97.340347"
-       id="tspan4708">Thermometer</tspan><tspan
-       sodipodi:role="line"
-       x="462.18744"
-       y="112.34035"
-       id="tspan266402-8-2" /></text>
+       id="tspan266402-8-2">Termometro</tspan></text>
 <rect
      ry="0"
      rx="0"
@@ -612,21 +608,21 @@
        y="227.16879"
        x="294.48419"
        sodipodi:role="line"
-       id="tspan6445-3-0-7-2">Validation and</tspan><tspan
+       id="tspan4713-6">Convalida e </tspan><tspan
        y="240.91879"
        x="294.48419"
        sodipodi:role="line"
-       id="tspan4461-4">mapping to </tspan><tspan
+       id="tspan3485">associazione </tspan><tspan
        y="254.66879"
        x="294.48419"
        sodipodi:role="line"
-       id="tspan5252-2">application </tspan><tspan
+       id="tspan3487">all'interfaccia </tspan><tspan
        y="268.41879"
        x="294.48419"
        sodipodi:role="line"
-       id="tspan4710-0">interface: </tspan><tspan
+       id="tspan3489">applicazione </tspan><tspan
        y="282.16879"
        x="294.48419"
        sodipodi:role="line"
-       id="tspan4713-6">{ &quot;temperature&quot; }</tspan></text>
+       id="tspan3491">{&quot;temperatura&quot;}</tspan></text>
 </svg>

@@ -780,7 +780,7 @@ Quando il gateway riceve il messaggio dell'azione personalizzata, completa l'azi
 action.setStatus(Status.OK);
 ```
 
-Per ulteriori informazioni sulla DME, vedi [Extending Device management requests ![icona link esterno](../../../../icons/launch-glyph.svg "External link icon")](../../devices/device_mgmt/custom_actions.html){: new_window}.
+Per ulteriori informazioni sulla DME, vedi [Extending Device management requests ![icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](../../devices/device_mgmt/custom_actions.html){: new_window}.
 
 ## Restare in ascolto per le modifiche dell'attributo del dispositivo
 {: #listen_device_attributes}

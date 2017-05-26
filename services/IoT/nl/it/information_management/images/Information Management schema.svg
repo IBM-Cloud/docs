@@ -114,9 +114,9 @@
      inkscape:window-height="994"
      id="namedview5445"
      showgrid="false"
-     inkscape:zoom="1.5099772"
-     inkscape:cx="187.50421"
-     inkscape:cy="73.734291"
+     inkscape:zoom="2.1354302"
+     inkscape:cx="365.84813"
+     inkscape:cy="113.19114"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -144,7 +144,7 @@
        sodipodi:role="line"
        x="634.20691"
        y="87.619629"
-       id="tspan6913-6">Application</tspan></text>
+       id="tspan6913-6">Applicazione</tspan></text>
   <g
      id="g5240-2-8"
      transform="matrix(0.09339234,0,0,0.09339234,568.89652,60.861417)"
@@ -206,11 +206,12 @@
      style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
   <text
      sodipodi:linespacing="125%"
-     y="60.702793"
-     x="76.888855"
+     y="55.553158"
+     x="85.025826"
      font-size="12"
      id="text56820"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">Device type</text>
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.06683254px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1"
+     transform="scale(0.91516643,1.0926974)">Tipo di dispositivo</text>
   <rect
      ry="0"
      rx="0"
@@ -226,7 +227,7 @@
      x="33.711861"
      font-size="11"
      id="text56922"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Device</text>
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Dispositivo</text>
   <g
      id="g5278-5"
      transform="matrix(0.7799818,0,0,0.72791181,6.4209107,41.377822)">
@@ -258,7 +259,7 @@
        sodipodi:role="line"
        x="-85.131683"
        y="370.56229"
-       id="tspan7573-7">Mapping</tspan></text>
+       id="tspan7573-7">Associazione</tspan></text>
   <rect
      style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none"
      id="rect6559"
@@ -288,7 +289,7 @@
        sodipodi:role="line"
        id="tspan3449"
        x="214.96869"
-       y="33.045166">Physical interface definition</tspan></text>
+       y="33.045166">Definizione interfaccia fisica</tspan></text>
   <text
      sodipodi:linespacing="125%"
      id="text13959-6"
@@ -299,7 +300,7 @@
        id="tspan13963-4"
        y="64.980133"
        x="223.97063"
-       sodipodi:role="line">Event type</tspan></text>
+       sodipodi:role="line">Tipo di evento</tspan></text>
   <flowRoot
      xml:space="preserve"
      id="flowRoot7760"
@@ -417,7 +418,7 @@
        sodipodi:role="line"
        x="480.23151"
        y="50.076233"
-       id="tspan7758-4">Application interface</tspan></text>
+       id="tspan7758-4">Interfaccia applicazione</tspan></text>
   <flowRoot
      xml:space="preserve"
      id="flowRoot7909"

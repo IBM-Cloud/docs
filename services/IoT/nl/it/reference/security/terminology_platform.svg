@@ -707,13 +707,13 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.47"
      inkscape:cx="568.54537"
-     inkscape:cy="102.54291"
+     inkscape:cy="184.17556"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="in"
-     inkscape:window-width="1280"
-     inkscape:window-height="667"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -942,7 +942,7 @@
          sodipodi:role="line"
          x="42.015415"
          y="464.11569"
-         id="tspan8202">IoT Devices</tspan><tspan
+         id="tspan8202">Dispositivi IoT</tspan><tspan
          sodipodi:role="line"
          x="42.015415"
          y="477.86569"
@@ -969,14 +969,14 @@
        x="288.40372"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
-         id="tspan44239-7"
          y="480.93506"
          x="288.40372"
-         sodipodi:role="line">Rest &amp; </tspan><tspan
+         sodipodi:role="line"
+         id="tspan7973">API Rest &amp; </tspan><tspan
          y="494.68506"
          x="288.40372"
          sodipodi:role="line"
-         id="tspan7973">Real-time APIs</tspan><tspan
+         id="tspan3705">in tempo reale</tspan><tspan
          y="508.43506"
          x="288.40372"
          sodipodi:role="line"
@@ -1004,7 +1004,7 @@
          sodipodi:role="line"
          x="40.151447"
          y="391.96463"
-         id="tspan8202-7">IoT Gateways</tspan><tspan
+         id="tspan8202-7">Gateway IoT</tspan><tspan
          sodipodi:role="line"
          x="40.151447"
          y="405.71463"
@@ -1034,7 +1034,7 @@
          sodipodi:role="line"
          id="tspan3695"
          x="276.63895"
-         y="442.55804"></tspan></text>
+         y="442.55804" /></text>
     <text
        sodipodi:linespacing="125%"
        y="348.52588"
@@ -1080,7 +1080,7 @@
          sodipodi:role="line"
          id="tspan266400-6"
          x="339.36612"
-         y="556.00507">Applications</tspan><tspan
+         y="556.00507">Applicazioni</tspan><tspan
          sodipodi:role="line"
          x="339.36612"
          y="571.00507"
@@ -1104,15 +1104,15 @@
          sodipodi:role="line"
          x="297.71616"
          y="656.51544"
-         id="tspan44245">Watson IoT </tspan><tspan
+         id="tspan9810">Dashboard</tspan><tspan
          sodipodi:role="line"
          x="297.71616"
          y="670.26544"
-         id="tspan5792">Platform</tspan><tspan
+         id="tspan3719">Watson IoT </tspan><tspan
          sodipodi:role="line"
          x="297.71616"
          y="684.01544"
-         id="tspan9810">Dashboard</tspan></text>
+         id="tspan3721">Platform</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path11965"
@@ -1156,7 +1156,7 @@
          sodipodi:role="line"
          x="43.057407"
          y="536.01312"
-         id="tspan6913-6">Applications</tspan></text>
+         id="tspan6913-6">Applicazioni</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path8199"
@@ -1381,7 +1381,7 @@
          sodipodi:role="line"
          x="393.62695"
          y="589.90631"
-         id="tspan6913-6-2">Applications</tspan></text>
+         id="tspan6913-6-2">Applicazioni</tspan></text>
     <g
        id="g5240-2"
        transform="matrix(0.09339235,0,0,0.09339235,341.33389,565.18965)"
@@ -1586,20 +1586,20 @@
        id="text4681"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan4683"
          x="201.75475"
          y="706.19281"
-         style="font-size:12.50000191px">MANAGE your organizations </tspan><tspan
+         style="font-size:12.50000191px"
+         id="tspan4687">GESTISCI le tue organizzazioni tramite</tspan><tspan
          sodipodi:role="line"
          x="201.75475"
          y="721.81781"
          style="font-size:12.50000191px"
-         id="tspan4685">through the Watson IoT Platform </tspan><tspan
+         id="tspan3728">la console web di Watson IoT Platform </tspan><tspan
          sodipodi:role="line"
          x="201.75475"
          y="737.44281"
          style="font-size:12.50000191px"
-         id="tspan4687">web console or through the REST APIs.</tspan></text>
+         id="tspan3730">o tramite le API REST. </tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1611,17 +1611,22 @@
          x="-282.9223"
          y="454.43649"
          style="font-size:12.50000191px"
-         id="tspan4687-2">DEVICES are the &quot;things&quot; in the </tspan><tspan
+         id="tspan4744">I DISPOSITIVI sono &quot;oggetti&quot; in </tspan><tspan
          sodipodi:role="line"
          x="-282.9223"
          y="470.06149"
          style="font-size:12.50000191px"
-         id="tspan4742">Internet of Things. Devices might </tspan><tspan
+         id="tspan3665">Internet of Things. I dispositivi possono</tspan><tspan
          sodipodi:role="line"
          x="-282.9223"
          y="485.68649"
          style="font-size:12.50000191px"
-         id="tspan4744">be sensors, white goods, or cell phones.</tspan></text>
+         id="tspan3667">essere sensori, elettrodomestici o</tspan><tspan
+         sodipodi:role="line"
+         x="-282.9223"
+         y="501.31149"
+         style="font-size:12.50000191px"
+         id="tspan3669">telefoni cellulari.</tspan></text>
     <rect
        ry="0"
        rx="0"
@@ -1647,18 +1652,14 @@
        x="488.0679"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
-         id="tspan44239-7-8"
          y="480.35178"
          x="488.0679"
-         sodipodi:role="line">Rest &amp; </tspan><tspan
+         sodipodi:role="line"
+         id="tspan6445-3-5">API Rest &amp; </tspan><tspan
          y="494.10178"
          x="488.0679"
          sodipodi:role="line"
-         id="tspan7973-9">Real-time APIs</tspan><tspan
-         y="507.85178"
-         x="488.0679"
-         sodipodi:role="line"
-         id="tspan6445-3-5" /></text>
+         id="tspan3712">in tempo reale</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.25000191px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
@@ -1844,49 +1845,49 @@
          x="-88.402412"
          y="620.59686"
          style="font-size:12.50000191px"
-         id="tspan4744-3">APPLICATIONS run in your enterprise </tspan><tspan
+         id="tspan4926">Le APPLICAZIONI vengono eseguite nella</tspan><tspan
          sodipodi:role="line"
          x="-88.402412"
          y="636.22186"
          style="font-size:12.50000191px"
-         id="tspan4920">or on Bluemix. They perform analytics </tspan><tspan
+         id="tspan3685">azienda o su Bluemix. Eseguono analisi </tspan><tspan
          sodipodi:role="line"
          x="-88.402412"
          y="651.84686"
          style="font-size:12.50000191px"
-         id="tspan4922">on live device data, inspect historical </tspan><tspan
+         id="tspan3687">dei dati del dispositivo live, controllano i </tspan><tspan
          sodipodi:role="line"
          x="-88.402412"
          y="667.47186"
          style="font-size:12.50000191px"
-         id="tspan4924">device data through REST APIs </tspan><tspan
+         id="tspan3690">dati del dispositivo cronologici tramite</tspan><tspan
          sodipodi:role="line"
          x="-88.402412"
          y="683.09686"
          style="font-size:12.50000191px"
-         id="tspan4926">and send commands to devices.</tspan></text>
+         id="tspan3692">API REST e inviano comandi ai dispositivi.</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="230.2204"
+       x="210.2204"
        y="289.84158"
        id="text4681-5-2-0"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="230.2204"
+         x="210.2204"
          y="289.84158"
          style="font-size:12.50000191px"
-         id="tspan4926-4">Watson IoT Platform ORGANIZATIONS are how you can group </tspan><tspan
+         id="tspan4974">Le ORGANIZZAZIONI di Watson IoT Platform sono il modo in cui puoi </tspan><tspan
          sodipodi:role="line"
-         x="230.2204"
+         x="210.2204"
          y="305.46658"
          style="font-size:12.50000191px"
-         id="tspan4972">common devices and applications. Devices and applications </tspan><tspan
+         id="tspan3699">raggruppare applicazioni e dispositivi comuni. I dispositivi e le  </tspan><tspan
          sodipodi:role="line"
-         x="230.2204"
+         x="210.2204"
          y="321.09158"
          style="font-size:12.50000191px"
-         id="tspan4974">in the same organization work easily together.</tspan></text>
+         id="tspan3701">applicazioni nella stessa organizzazione funzionano più facilmente tra loro.</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.25000191px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
@@ -1901,6 +1902,6 @@
          sodipodi:role="line"
          id="tspan3691"
          x="340.83038"
-         y="383.8399"></tspan></text>
+         y="383.8399" /></text>
   </g>
 </svg>

@@ -24,7 +24,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -354,14 +354,14 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1053"
+     inkscape:window-height="1027"
      id="namedview5445"
      showgrid="false"
      inkscape:zoom="1.256979"
-     inkscape:cx="533.35089"
-     inkscape:cy="269.0236"
-     inkscape:window-x="1911"
-     inkscape:window-y="-9"
+     inkscape:cx="548.43598"
+     inkscape:cy="273.12092"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg5443"
      fit-margin-top="0"
@@ -387,7 +387,7 @@
        sodipodi:role="line"
        x="977.63812"
        y="280.64664"
-       id="tspan6913-6">Application</tspan></text>
+       id="tspan6913-6">Applicazione</tspan></text>
   <g
      id="g5240-2-8"
      transform="matrix(0.09339234,0,0,0.09339234,912.32788,253.88841)"
@@ -453,7 +453,7 @@
      x="80.121696"
      font-size="12"
      id="text56820"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">Device 2</text>
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">Dispositivo 2</text>
   <g
      id="g5278-5"
      transform="matrix(0.7799818,0,0,0.72791181,9.6537616,249.96274)">
@@ -485,7 +485,7 @@
        sodipodi:role="line"
        x="-139.8709"
        y="318.35886"
-       id="tspan7573-7">Mapping</tspan></text>
+       id="tspan7573-7">Associazione</tspan></text>
   <rect
      style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none"
      id="rect6559"
@@ -505,7 +505,7 @@
        sodipodi:role="line"
        x="218.16005"
        y="247.40448"
-       id="tspan7758">Physical interface 2</tspan></text>
+       id="tspan7758">Interfaccia fisica 2</tspan></text>
   <flowRoot
      xml:space="preserve"
      id="flowRoot7760"
@@ -537,11 +537,11 @@
        sodipodi:role="line"
        x="444.02805"
        y="111.4442"
-       id="tspan5361">Device type 1</tspan><tspan
+       id="tspan5361">Tipo di dispositivo 1</tspan><tspan
        sodipodi:role="line"
        x="444.02805"
        y="125.1942"
-       id="tspan4603">Application interface</tspan></text>
+       id="tspan4603">Interfaccia applicazione</tspan></text>
   <flowRoot
      xml:space="preserve"
      id="flowRoot7909"
@@ -683,13 +683,13 @@
        sodipodi:role="line"
        x="225.95059"
        y="25.315674"
-       id="tspan7758-7"
-       style="text-align:start;text-anchor:start">Maps the incoming state event </tspan><tspan
+       id="tspan8336"
+       style="text-align:start;text-anchor:start">Associa le proprietà dell'evento di stato </tspan><tspan
        sodipodi:role="line"
        x="225.95059"
        y="39.065674"
-       id="tspan8336"
-       style="text-align:start;text-anchor:start">properties to the application interface.</tspan><tspan
+       style="text-align:start;text-anchor:start"
+       id="tspan3673">in entrata all'interfaccia dell'applicazione.</tspan><tspan
        sodipodi:role="line"
        x="225.95059"
        y="52.815678"
@@ -705,18 +705,18 @@
        sodipodi:role="line"
        x="160.6884"
        y="385.40256"
-       id="tspan8330-6"
-       style="text-align:start;text-anchor:start">Defines which events </tspan><tspan
+       style="text-align:start;text-anchor:start"
+       id="tspan8402">Definisce quali eventi</tspan><tspan
        sodipodi:role="line"
        x="160.6884"
        y="399.15256"
        style="text-align:start;text-anchor:start"
-       id="tspan8400">and event properties </tspan><tspan
+       id="tspan3706">e proprietà evento </tspan><tspan
        sodipodi:role="line"
        x="160.6884"
        y="412.90256"
        style="text-align:start;text-anchor:start"
-       id="tspan8402">are processed.</tspan><tspan
+       id="tspan3708">vengono elaborati.</tspan><tspan
        sodipodi:role="line"
        x="160.6884"
        y="426.65256"
@@ -733,22 +733,22 @@
        x="396.93118"
        y="386.83585"
        style="text-align:start;text-anchor:start"
-       id="tspan5541">Properties format </tspan><tspan
+       id="tspan4862">Formato proprietà</tspan><tspan
        sodipodi:role="line"
        x="396.93118"
        y="400.58585"
        style="text-align:start;text-anchor:start"
-       id="tspan5548">defined by the </tspan><tspan
+       id="tspan3719">definito dallo schema e </tspan><tspan
        sodipodi:role="line"
        x="396.93118"
        y="414.33585"
        style="text-align:start;text-anchor:start"
-       id="tspan5543">application interface </tspan><tspan
+       id="tspan3721">dall'associazione </tspan><tspan
        sodipodi:role="line"
        x="396.93118"
        y="428.08585"
        style="text-align:start;text-anchor:start"
-       id="tspan4862">schema and mapping..</tspan></text>
+       id="tspan3723">dell'interfaccia applicazione.</tspan></text>
   <rect
      ry="0"
      rx="0"
@@ -764,7 +764,7 @@
      x="80.760094"
      font-size="12"
      id="text56820-0"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">Device 1</text>
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">Dispositivo 1</text>
   <g
      id="g5278-5-4"
      transform="matrix(0.7799818,0,0,0.72791181,10.292162,131.60702)">
@@ -803,18 +803,18 @@
        sodipodi:role="line"
        x="217.07065"
        y="112.98499"
-       id="tspan7758-2">Physical interface 1</tspan></text>
+       id="tspan7758-2">Interfaccia fisica 1</tspan></text>
   <text
      sodipodi:linespacing="125%"
      id="text13959-6-0"
      y="136.84004"
-     x="198.10368"
+     x="204.10368"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
      xml:space="preserve"><tspan
        id="tspan13963-4-6"
        y="136.84004"
-       x="198.10368"
-       sodipodi:role="line">Event type</tspan></text>
+       x="204.10368"
+       sodipodi:role="line">Tipo di evento</tspan></text>
   <path
      inkscape:connector-curvature="0"
      id="path8199-4-90-6"
@@ -841,7 +841,7 @@
        sodipodi:role="line"
        x="-272.54526"
        y="318.83829"
-       id="tspan7573-7-0">Mapping</tspan></text>
+       id="tspan7573-7-0">Associazione</tspan></text>
   <path
      inkscape:connector-curvature="0"
      id="path8199-4-90-8-7-6-2"
@@ -869,16 +869,16 @@
      transform="matrix(0,-1,1,0,0,0)" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
-     x="-262.25748"
-     y="702.59998"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.2542429px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     x="-276.83826"
+     y="654.96649"
      id="text7210-2-9-3"
      sodipodi:linespacing="125%"
-     transform="matrix(0,-1,1,0,0,0)"><tspan
+     transform="matrix(0,-0.9322039,1.0727267,0,0,0)"><tspan
        sodipodi:role="line"
-       x="-262.25748"
-       y="702.59998"
-       id="tspan7573-7-0-1">Mapping</tspan></text>
+       x="-276.83826"
+       y="654.96649"
+       id="tspan7573-7-0-1">Associazione</tspan></text>
   <g
      id="g56426-9"
      transform="matrix(0,1,1.3574838,0,-125.02437,49.869821)"
@@ -910,34 +910,40 @@
      style="fill:none;stroke:#83827f;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
-     x="660.08295"
-     y="387.06293"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.75975418px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     x="645.66632"
+     y="395.35568"
      id="text5543-4-64"
-     sodipodi:linespacing="125%"><tspan
+     sodipodi:linespacing="125%"
+     transform="scale(1.0223283,0.9781594)"><tspan
        sodipodi:role="line"
-       x="660.08295"
-       y="387.06293"
+       x="645.66632"
+       y="395.35568"
        style="text-align:start;text-anchor:start"
-       id="tspan4986">Maps the properties </tspan><tspan
+       id="tspan4996">Associa le proprietà </tspan><tspan
        sodipodi:role="line"
-       x="660.08295"
-       y="400.81293"
+       x="645.66632"
+       y="408.80539"
        style="text-align:start;text-anchor:start"
-       id="tspan4990">of the thing type </tspan><tspan
+       id="tspan3760">della composizione </tspan><tspan
        sodipodi:role="line"
-       x="660.08295"
-       y="414.56293"
+       x="645.66632"
+       y="422.25507"
        style="text-align:start;text-anchor:start"
-       id="tspan4988">composition to the </tspan><tspan
+       id="tspan3762">del tipo di oggetto </tspan><tspan
        sodipodi:role="line"
-       x="660.08295"
-       y="428.31293"
+       x="645.66632"
+       y="435.70477"
        style="text-align:start;text-anchor:start"
-       id="tspan4996">application interface .</tspan><tspan
+       id="tspan3764">all'interfaccia </tspan><tspan
        sodipodi:role="line"
-       x="660.08295"
-       y="442.06293"
+       x="645.66632"
+       y="449.15445"
+       style="text-align:start;text-anchor:start"
+       id="tspan3766">dell'applicazione.</tspan><tspan
+       sodipodi:role="line"
+       x="645.66632"
+       y="462.60416"
        id="tspan8330-93"
        style="text-align:start;text-anchor:start" /></text>
   <path
@@ -977,13 +983,13 @@
      id="text5543-1-2"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       x="818.74048"
+       x="817.21509"
        y="242.18192"
-       id="tspan7758-4-5">Thing type 1 </tspan><tspan
+       id="tspan7758-4-5">Tipo di oggetto 1</tspan><tspan
        sodipodi:role="line"
        x="817.21509"
        y="255.93192"
-       id="tspan5226">Application interface</tspan></text>
+       id="tspan5226">Interfaccia applicazione</tspan></text>
   <path
      inkscape:connector-curvature="0"
      id="path8199-4-90-8-7-6-6-3"
@@ -1033,22 +1039,22 @@
        x="-0.13427736"
        y="40.177254"
        style="text-align:start;text-anchor:start"
-       id="tspan8398-3">Devices registered with </tspan><tspan
+       id="tspan5423">I dispositivi registrati con Watson </tspan><tspan
        sodipodi:role="line"
        x="-0.13427736"
        y="53.927254"
        style="text-align:start;text-anchor:start"
-       id="tspan4880">Watson IoT Platform send </tspan><tspan
+       id="tspan3665">Iot Platform inviano i payload </tspan><tspan
        sodipodi:role="line"
        x="-0.13427736"
        y="67.677254"
        style="text-align:start;text-anchor:start"
-       id="tspan5419">message payloads </tspan><tspan
+       id="tspan3667">dei messaggi in forma di eventi </tspan><tspan
        sodipodi:role="line"
        x="-0.13427736"
        y="81.427254"
        style="text-align:start;text-anchor:start"
-       id="tspan5423">in the form of state events.</tspan></text>
+       id="tspan3669">di stato.</tspan></text>
   <g
      id="g8241-7"
      transform="translate(336.95232,239.7652)">
@@ -1092,23 +1098,23 @@
        sodipodi:role="line"
        x="775.60327"
        y="385.4169"
-       id="tspan8330-9-2"
-       style="text-align:start;text-anchor:start">External properties  </tspan><tspan
+       style="text-align:start;text-anchor:start"
+       id="tspan4872">Formato proprietà esterno </tspan><tspan
        sodipodi:role="line"
        x="775.60327"
        y="399.1669"
        style="text-align:start;text-anchor:start"
-       id="tspan8418-1">format defined by the </tspan><tspan
+       id="tspan3775">definito dallo schema e </tspan><tspan
        sodipodi:role="line"
        x="775.60327"
        y="412.9169"
        style="text-align:start;text-anchor:start"
-       id="tspan5197-4">thing type schema and </tspan><tspan
+       id="tspan3777">dall'associazione del tipo </tspan><tspan
        sodipodi:role="line"
        x="775.60327"
        y="426.6669"
        style="text-align:start;text-anchor:start"
-       id="tspan4872">mapping.</tspan></text>
+       id="tspan3779">di oggetto.</tspan></text>
   <g
      id="g8248-0-0"
      transform="matrix(1.2943531,0,0,-0.99599658,650.26015,253.74229)"
@@ -1146,40 +1152,40 @@
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
-     x="870.91461"
+     x="864.91461"
      y="7.8740239"
      id="text5543-4-8-2-5"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       x="870.91461"
+       x="864.91461"
        y="7.8740239"
        style="text-align:start;text-anchor:start"
-       id="tspan5524">Applications consume the state property </tspan><tspan
+       id="tspan5534">Le applicazioni consumano i dati della </tspan><tspan
        sodipodi:role="line"
-       x="870.91461"
+       x="864.91461"
        y="21.624025"
        style="text-align:start;text-anchor:start"
-       id="tspan5528">data as defined by application </tspan><tspan
+       id="tspan3797">proprietà stato come definito dalle </tspan><tspan
        sodipodi:role="line"
-       x="870.91461"
+       x="864.91461"
        y="35.374027"
        style="text-align:start;text-anchor:start"
-       id="tspan4878">interfaces associated with device types</tspan><tspan
+       id="tspan3799">interfacce applicazione associate ai </tspan><tspan
        sodipodi:role="line"
-       x="870.91461"
+       x="864.91461"
        y="49.124027"
        style="text-align:start;text-anchor:start"
-       id="tspan5006">or with thing types. </tspan><tspan
+       id="tspan3801">tipi di dispositivo o ai tipi di oggetto. </tspan><tspan
        sodipodi:role="line"
-       x="870.91461"
+       x="864.91461"
        y="62.874027"
        style="text-align:start;text-anchor:start"
-       id="tspan5532">No need to &quot;understand&quot; the underlying </tspan><tspan
+       id="tspan3803">Non è necessario &quot;comprendere&quot; il </tspan><tspan
        sodipodi:role="line"
-       x="870.91461"
+       x="864.91461"
        y="76.624031"
        style="text-align:start;text-anchor:start"
-       id="tspan5534">device and its properties.</tspan></text>
+       id="tspan3805">dispositivo sottostante e le sue proprietà.</tspan></text>
   <rect
      style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none"
      id="rect6559-6"
@@ -1206,9 +1212,9 @@
      id="text5543-3"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       x="596.52301"
+       x="594.99762"
        y="248.28903"
-       id="tspan5547-1">Composition </tspan><tspan
+       id="tspan5547-1">Composizione</tspan><tspan
        sodipodi:role="line"
        x="594.99762"
        y="262.03903"
@@ -1217,13 +1223,13 @@
      sodipodi:linespacing="125%"
      id="text13959-6-00"
      y="272.45999"
-     x="574.86572"
+     x="582.86572"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
      xml:space="preserve"><tspan
        id="tspan13963-4-1"
        y="272.45999"
-       x="574.86572"
-       sodipodi:role="line">Thing type</tspan></text>
+       x="582.86572"
+       sodipodi:role="line">Tipo di oggetto</tspan></text>
   <g
      id="g8248-9"
      transform="matrix(1,0,0,-1,336.84228,354.56527)">
@@ -1268,12 +1274,12 @@
        x="522.67542"
        y="162.32452"
        style="text-align:start;text-anchor:start"
-       id="tspan4598">Defines the application interfaces </tspan><tspan
+       id="tspan4870">Definisce le interfacce dell'applicazione</tspan><tspan
        sodipodi:role="line"
        x="522.67542"
        y="176.07452"
        style="text-align:start;text-anchor:start"
-       id="tspan4870">to include with a thing type.</tspan></text>
+       id="tspan3727">da includere con un tipo di oggetto.</tspan></text>
   <path
      inkscape:connector-curvature="0"
      id="path8199-4-90-8-7-6-2-6"
@@ -1306,11 +1312,11 @@
      y="80.588417" />
   <text
      sodipodi:linespacing="125%"
-     y="92.129707"
+     y="88.129707"
      x="195.74684"
      font-size="12"
      id="text56820-0-8"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">Device type 1</text>
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">Tipo di dispositivo 1</text>
   <rect
      style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#848282;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.6997549"
      id="rect4538-5"
@@ -1327,11 +1333,11 @@
      y="210.99428" />
   <text
      sodipodi:linespacing="125%"
-     y="222.30028"
+     y="218.30028"
      x="196.22307"
      font-size="12"
      id="text56820-0-8-1"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">Device type 2</text>
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">Tipo di dispositivo 2</text>
   <rect
      style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#848282;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.6997549"
      id="rect4538-5-9"
@@ -1348,11 +1354,11 @@
      y="213.4136" />
   <text
      sodipodi:linespacing="125%"
-     y="223.89616"
-     x="575.16174"
+     y="219.89616"
+     x="581.16174"
      font-size="12"
      id="text56820-0-8-1-4"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">Thing type1</text>
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">Tipo di oggetto 1</text>
   <rect
      ry="0"
      rx="0"
@@ -1372,7 +1378,7 @@
        sodipodi:role="line"
        x="977.56812"
        y="148.37404"
-       id="tspan6913-6-6">Application</tspan></text>
+       id="tspan6913-6-6">Applicazione</tspan></text>
   <g
      id="g5240-2-8-1"
      transform="matrix(0.09339234,0,0,0.09339234,912.25785,121.61581)"
@@ -1469,11 +1475,11 @@
        sodipodi:role="line"
        x="229.91718"
        y="164.05727"
-       id="tspan4603-2">Event</tspan><tspan
+       id="tspan4679">Schema</tspan><tspan
        sodipodi:role="line"
        x="229.91718"
        y="177.80727"
-       id="tspan4679">schema</tspan></text>
+       id="tspan3677"> evento</tspan></text>
   <rect
      ry="0"
      rx="0"
@@ -1487,13 +1493,13 @@
      sodipodi:linespacing="125%"
      id="text13959-6-0-5"
      y="267.83951"
-     x="197.1244"
+     x="203.1244"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
      xml:space="preserve"><tspan
        id="tspan13963-4-6-9"
        y="267.83951"
-       x="197.1244"
-       sodipodi:role="line">Event type</tspan></text>
+       x="203.1244"
+       sodipodi:role="line">Tipo di evento</tspan></text>
   <g
      id="g60812-9-7"
      transform="translate(173.2529,281.45833)"
@@ -1533,13 +1539,13 @@
      id="text5543-1-29-0"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       x="228.93788"
+       x="230.46327"
        y="295.05673"
-       id="tspan4603-2-4">Event</tspan><tspan
+       id="tspan4679-7">Schema </tspan><tspan
        sodipodi:role="line"
        x="228.93788"
        y="308.80673"
-       id="tspan4679-7">schema</tspan></text>
+       id="tspan3690">evento</tspan></text>
   <g
      id="g60812-9-9"
      transform="translate(399.45825,137.77432)"
@@ -1579,17 +1585,17 @@
      id="text5543-1-29-1"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       x="467.09885"
+       x="468.62424"
        y="144.16832"
-       id="tspan4603-2-45">Application</tspan><tspan
+       id="tspan4679-6">Schema </tspan><tspan
        sodipodi:role="line"
-       x="467.09885"
+       x="468.62424"
        y="157.91832"
-       id="tspan4762">interface</tspan><tspan
+       id="tspan3684">interfaccia </tspan><tspan
        sodipodi:role="line"
        x="467.09885"
        y="171.66832"
-       id="tspan4679-6">schema</tspan></text>
+       id="tspan3686">applicazione</tspan></text>
   <rect
      style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none"
      id="rect6559-2-2"
@@ -1609,11 +1615,11 @@
        sodipodi:role="line"
        x="443.11871"
        y="240.87715"
-       id="tspan5361-7">Device type 2</tspan><tspan
+       id="tspan5361-7">Tipo di dispositivo 2</tspan><tspan
        sodipodi:role="line"
        x="443.11871"
-       y="254.62717"
-       id="tspan4603-5">Application interface</tspan></text>
+       y="254.62715"
+       id="tspan4603-5">Interfaccia applicazione</tspan></text>
   <g
      id="g60812-9-9-6"
      transform="translate(401.73115,263.22947)"
@@ -1653,17 +1659,17 @@
      id="text5543-1-29-1-7"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       x="465.39395"
+       x="466.91934"
        y="270.41904"
-       id="tspan4603-2-45-9">Application</tspan><tspan
+       id="tspan4679-6-9">Schema </tspan><tspan
        sodipodi:role="line"
-       x="465.39395"
+       x="466.91934"
        y="284.16904"
-       id="tspan4762-9">interface</tspan><tspan
+       id="tspan3697">interfaccia </tspan><tspan
        sodipodi:role="line"
        x="465.39395"
        y="297.91904"
-       id="tspan4679-6-9">schema</tspan></text>
+       id="tspan3699">applicazione</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1674,7 +1680,7 @@
        sodipodi:role="line"
        id="tspan4817"
        x="475.52786"
-       y="242.08128"></tspan></text>
+       y="242.08128" /></text>
   <g
      id="g60812-9-9-6-9"
      transform="translate(551.32179,283.88557)"
@@ -1714,17 +1720,17 @@
      id="text5543-1-29-1-7-7"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       x="611.00677"
+       x="612.53217"
        y="289.48404"
-       id="tspan4603-2-45-9-5">Thing</tspan><tspan
+       id="tspan4679-6-9-4">Schema </tspan><tspan
        sodipodi:role="line"
-       x="611.00677"
+       x="612.53217"
        y="303.23404"
-       id="tspan4762-9-8">type</tspan><tspan
+       id="tspan3736">del tipo </tspan><tspan
        sodipodi:role="line"
        x="611.00677"
        y="316.98404"
-       id="tspan4679-6-9-4">schema</tspan></text>
+       id="tspan3740">di oggetto</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
@@ -1736,55 +1742,49 @@
        x="913.65881"
        y="183.57611"
        id="tspan7758-4-5-9"
-       style="text-align:start;text-anchor:start">Get <tspan
-   style="-inkscape-font-specification:'Arial Italic';font-family:Arial;font-weight:normal;font-style:italic;font-stretch:normal;font-variant:normal"
-   id="tspan5484">A</tspan> state by:</tspan><tspan
+       style="text-align:start;text-anchor:start">Ottieni lo stato A per:</tspan><tspan
        sodipodi:role="line"
        x="913.65881"
        y="197.32611"
        id="tspan5056"
-       style="text-align:start;text-anchor:start">- Device type</tspan><tspan
+       style="text-align:start;text-anchor:start">- Tipo di dispositivo</tspan><tspan
        sodipodi:role="line"
        x="913.65881"
        y="211.07611"
        id="tspan5226-6"
-       style="text-align:start;text-anchor:start">- Device ID</tspan><tspan
+       style="text-align:start;text-anchor:start">- ID dispositivo</tspan><tspan
        sodipodi:role="line"
        x="913.65881"
        y="224.82611"
        id="tspan5062"
-       style="text-align:start;text-anchor:start">- Application interface ID</tspan></text>
+       style="text-align:start;text-anchor:start">- ID interfaccia applicazione</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
-     x="911.05054"
+     x="909.05054"
      y="315.48648"
      id="text5543-1-2-6-4"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       x="911.05054"
+       x="909.05054"
        y="315.48648"
        id="tspan7758-4-5-9-6"
-       style="text-align:start;text-anchor:start">Get <tspan
-   style="-inkscape-font-specification:'Arial Italic';font-family:Arial;font-weight:normal;font-style:italic;font-stretch:normal;font-variant:normal"
-   id="tspan5546">Alpha</tspan> and <tspan
-   style="-inkscape-font-specification:'Arial Italic';font-family:Arial;font-weight:normal;font-style:italic;font-stretch:normal;font-variant:normal"
-   id="tspan5549">Beta</tspan> states by:</tspan><tspan
+       style="text-align:start;text-anchor:start">Ottieni gli stati Alpha e Beta per:</tspan><tspan
        sodipodi:role="line"
-       x="911.05054"
+       x="909.05054"
        y="329.23648"
        id="tspan5056-7"
-       style="text-align:start;text-anchor:start">- Thing type</tspan><tspan
+       style="text-align:start;text-anchor:start">- Tipo di oggetto</tspan><tspan
        sodipodi:role="line"
-       x="911.05054"
+       x="909.05054"
        y="342.98648"
        id="tspan5226-6-6"
-       style="text-align:start;text-anchor:start">- Thing ID</tspan><tspan
+       style="text-align:start;text-anchor:start">- ID oggetto</tspan><tspan
        sodipodi:role="line"
-       x="911.05054"
+       x="909.05054"
        y="356.73648"
        id="tspan5062-9"
-       style="text-align:start;text-anchor:start">- Application interface ID</tspan></text>
+       style="text-align:start;text-anchor:start">- ID interfaccia applicazione</tspan></text>
   <rect
      ry="0"
      rx="0"
@@ -1800,7 +1800,7 @@
      x="611.15729"
      font-size="12"
      id="text56820-0-1"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">Thing 1</text>
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">Oggetto 1</text>
   <g
      id="g5278-5-4-1"
      transform="matrix(0.7799818,0,0,0.72791181,540.68933,362.07082)">
@@ -1855,17 +1855,17 @@
      id="text5543-1-29-1-78"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       x="827.61456"
+       x="829.13995"
        y="269.11392"
-       id="tspan4603-2-45-3">Application</tspan><tspan
+       id="tspan4679-6-98">Schema </tspan><tspan
        sodipodi:role="line"
-       x="827.61456"
+       x="829.13995"
        y="282.86392"
-       id="tspan4762-4">interface</tspan><tspan
+       id="tspan3747">interfaccia </tspan><tspan
        sodipodi:role="line"
        x="827.61456"
        y="296.61392"
-       id="tspan4679-6-98">schema</tspan></text>
+       id="tspan3749">applicazione</tspan></text>
   <text
      sodipodi:linespacing="125%"
      y="158.47548"
@@ -1912,28 +1912,29 @@
      x="314.89871"
      font-size="12"
      id="text56820-0-8-4-6-1"
-     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Italic';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">a to A</text>
+     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Italic';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">da a ad A</text>
   <text
      sodipodi:linespacing="125%"
      y="316.3884"
      x="316.67245"
      font-size="12"
      id="text56820-0-8-4-6-1-8"
-     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Italic';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">b to B</text>
+     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Italic';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">da b a B</text>
   <text
      sodipodi:linespacing="125%"
-     y="300.49945"
-     x="698.15375"
+     y="276.8699"
+     x="759.58978"
      font-size="12"
      id="text56820-0-8-4-6-1-5"
-     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Italic';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">A to Alpha</text>
+     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.13502407px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Italic';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1"
+     transform="scale(0.92136574,1.0853453)">da A ad Alpha</text>
   <text
      sodipodi:linespacing="125%"
      y="314.1554"
      x="698.36786"
      font-size="12"
      id="text56820-0-8-4-6-1-5-6"
-     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Italic';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">B to Beta</text>
+     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Italic';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">da B a Beta</text>
   <text
      sodipodi:linespacing="125%"
      y="317.35983"
@@ -1942,9 +1943,6 @@
      id="text56820-0-8-4-6-4"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">Prop: <tspan
    style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Italic'"
-   id="tspan5434-5">Alpha <tspan
-   style="-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
-   id="tspan5544">and</tspan>
- Beta</tspan>
+   id="tspan5434-5">Alpha e Beta</tspan>
 </text>
 </svg>

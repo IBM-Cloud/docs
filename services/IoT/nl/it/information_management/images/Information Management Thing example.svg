@@ -21,7 +21,7 @@
    height="336.1886"><metadata
      id="metadata71"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
      id="defs69"><marker
        style="overflow:visible"
        id="TriangleInM-1-5-2"
@@ -197,14 +197,14 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1053"
+     inkscape:window-height="1027"
      id="namedview67"
      showgrid="false"
-     inkscape:zoom="1.21"
-     inkscape:cx="392.71527"
-     inkscape:cy="80.53727"
-     inkscape:window-x="393"
-     inkscape:window-y="-9"
+     inkscape:zoom="1.7111984"
+     inkscape:cx="437.20951"
+     inkscape:cy="140.21727"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2"
      fit-margin-top="0"
@@ -251,11 +251,11 @@
        sodipodi:role="line"
        x="55.520473"
        y="77.11409"
-       id="tspan8202">Temperature </tspan><tspan
+       id="tspan5620">Sensore</tspan><tspan
        sodipodi:role="line"
        x="55.520473"
        y="90.86409"
-       id="tspan5620">sensor 1</tspan><tspan
+       id="tspan3514">temperatura 1</tspan><tspan
        sodipodi:role="line"
        x="55.520473"
        y="104.61409"
@@ -299,11 +299,11 @@
        sodipodi:role="line"
        x="55.439907"
        y="248.14659"
-       id="tspan8202-9">Humidity  </tspan><tspan
+       id="tspan5622">Sensore</tspan><tspan
        sodipodi:role="line"
        x="55.439907"
        y="261.89661"
-       id="tspan5622">sensor 3</tspan><tspan
+       id="tspan3518">umidità 3</tspan><tspan
        sodipodi:role="line"
        x="55.439907"
        y="275.64661"
@@ -347,7 +347,7 @@
        sodipodi:role="line"
        x="854.97552"
        y="174.55141"
-       id="tspan6913-6">Application</tspan></text>
+       id="tspan6913-6">Applicazione</tspan></text>
 <g
      id="g5240-2-8"
      transform="matrix(0.09339234,0,0,0.09339234,792.36783,148.35933)"
@@ -419,7 +419,7 @@
        sodipodi:role="line"
        id="tspan266400-5"
        x="250.96303"
-       y="8.5898438">Device type: Thermometer</tspan><tspan
+       y="8.5898438">Tipo di dispositivo: Termometro</tspan><tspan
        sodipodi:role="line"
        x="250.96303"
        y="23.589844"
@@ -444,7 +444,7 @@
        y="272.05243"
        x="-139.50584"
        sodipodi:role="line"
-       id="tspan6445-3-0-1-4">Physical  Interface</tspan></text>
+       id="tspan6445-3-0-1-4">Interfaccia fisica</tspan></text>
 <rect
      ry="0"
      rx="0"
@@ -465,7 +465,7 @@
        y="412.41034"
        x="-139.9323"
        sodipodi:role="line"
-       id="tspan6445-3-0-1-4-7">Application  Interface</tspan></text>
+       id="tspan6445-3-0-1-4-7">Interfaccia applicazione</tspan></text>
 <rect
      ry="0"
      rx="0"
@@ -477,24 +477,23 @@
      style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none" /><text
      sodipodi:linespacing="125%"
      id="text44235-7-0-7"
-     y="76.125404"
-     x="292.68042"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-     xml:space="preserve"><tspan
-       y="76.125404"
-       x="292.68042"
+     y="70.771378"
+     x="314.88043"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.22635174px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+     xml:space="preserve"
+     transform="scale(0.92966834,1.0756524)"><tspan
+       y="70.771378"
+       x="314.88043"
        sodipodi:role="line"
-       id="tspan6445-3-0-7">Validation and</tspan><tspan
-       y="89.875404"
-       x="292.68042"
+       id="tspan4738">Convalida e </tspan><tspan
+       y="84.521378"
+       x="314.88043"
        sodipodi:role="line"
-       id="tspan4461">mapping to </tspan><tspan
-       y="103.6254"
-       x="292.68042"
+       id="tspan3525">associazione </tspan><tspan
+       y="98.271378"
+       x="314.88043"
        sodipodi:role="line"
-       id="tspan4738">event: <tspan
-   style="font-style:italic"
-   id="tspan4736">tevent</tspan></tspan></text>
+       id="tspan3527">all'evento: tevent</tspan></text>
 <rect
      ry="0"
      rx="0"
@@ -513,7 +512,7 @@
        sodipodi:role="line"
        id="tspan266400-5-3"
        x="249.21837"
-       y="183.17638">Device type: Hygrometer</tspan><tspan
+       y="183.17638">Tipo di dispositivo: Igrometro</tspan><tspan
        sodipodi:role="line"
        x="249.21837"
        y="198.17638"
@@ -538,7 +537,7 @@
        y="270.15778"
        x="-313.97803"
        sodipodi:role="line"
-       id="tspan6445-3-0-1-4-8">Physical  Interface</tspan></text>
+       id="tspan6445-3-0-1-4-8">Interfaccia fisica</tspan></text>
 <rect
      ry="0"
      rx="0"
@@ -559,7 +558,7 @@
        y="412.41034"
        x="-314.40448"
        sodipodi:role="line"
-       id="tspan6445-3-0-1-4-7-0">Application  Interface</tspan></text>
+       id="tspan6445-3-0-1-4-7-0">Interfaccia applicazione</tspan></text>
 <rect
      ry="0"
      rx="0"
@@ -578,7 +577,7 @@
        sodipodi:role="line"
        id="tspan266400-5-8"
        x="529.38928"
-       y="92.758682">Thing type: Room</tspan><tspan
+       y="92.758682">Tipo di oggetto: Stanza</tspan><tspan
        sodipodi:role="line"
        x="529.38928"
        y="107.75868"
@@ -603,7 +602,7 @@
        y="550.92871"
        x="-223.33168"
        sodipodi:role="line"
-       id="tspan6445-3-0-1-4-2">Composition</tspan></text>
+       id="tspan6445-3-0-1-4-2">Composizione</tspan></text>
 <rect
      ry="0"
      rx="0"
@@ -624,7 +623,7 @@
        y="692.09985"
        x="-225.8161"
        sodipodi:role="line"
-       id="tspan6445-3-0-1-4-7-3">Application  Interface</tspan></text>
+       id="tspan6445-3-0-1-4-7-3">Interfaccia applicazione</tspan></text>
 <g
      id="Page-1_1_-3-9"
      transform="matrix(1.0023432,0,0,0.84790301,562.17117,100.04648)"><g
@@ -714,7 +713,7 @@
        y="111.47333"
        x="438.45221"
        id="tspan3435-7"
-       sodipodi:role="line">{ &quot;Temperature&quot;}</tspan></text>
+       sodipodi:role="line">{&quot;Temperatura&quot;}</tspan></text>
 <text
      sodipodi:linespacing="125%"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:ArialMT;-inkscape-font-specification:'ArialMT, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
@@ -724,7 +723,7 @@
        y="211.58852"
        x="438.45221"
        id="tspan3435-7-5"
-       sodipodi:role="line">{ &quot;Humidity&quot;}</tspan></text>
+       sodipodi:role="line">{&quot;Umidità&quot;}</tspan></text>
 <text
      sodipodi:linespacing="125%"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:ArialMT;-inkscape-font-specification:'ArialMT, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
@@ -734,7 +733,7 @@
        y="114.27429"
        x="718.31561"
        id="tspan3435-7-8"
-       sodipodi:role="line">{ &quot;Room Temperature&quot;}</tspan></text>
+       sodipodi:role="line">{&quot;Temperatura stanza&quot;}</tspan></text>
 <text
      sodipodi:linespacing="125%"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:ArialMT;-inkscape-font-specification:'ArialMT, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
@@ -744,7 +743,7 @@
        y="130.78534"
        x="718.31561"
        id="tspan3435-7-5-2"
-       sodipodi:role="line">{ &quot;Room Humidity&quot;}</tspan></text>
+       sodipodi:role="line">{&quot;Umidità stanza&quot;}</tspan></text>
 <text
      sodipodi:linespacing="125%"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:ArialMT;-inkscape-font-specification:'ArialMT, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
@@ -755,7 +754,7 @@
        x="1.8197289"
        sodipodi:role="line"
        id="tspan5272-7"
-       style="font-weight:bold">Registered devices in room ID R1</tspan></text>
+       style="font-weight:bold">Dispositivi registrati nella stanza ID R1</tspan></text>
 <rect
      ry="0"
      rx="0"
@@ -786,7 +785,7 @@
        sodipodi:role="line"
        x="591.09735"
        y="300.63867"
-       id="tspan5620-3">Room 1</tspan><tspan
+       id="tspan5620-3">Stanza 1</tspan><tspan
        sodipodi:role="line"
        x="591.09735"
        y="314.38867"
@@ -818,7 +817,7 @@
        x="536.29211"
        sodipodi:role="line"
        id="tspan5272-7-5"
-       style="font-weight:bold">Room type thing instances</tspan></text>
+       style="font-weight:bold">Istanze di oggetti di tipo stanza</tspan></text>
 <text
      sodipodi:linespacing="125%"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:ArialMT;-inkscape-font-specification:'ArialMT, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
@@ -828,21 +827,17 @@
        y="62.738926"
        x="166.98334"
        id="tspan3435-3"
-       sodipodi:role="line">Event: <tspan
-   style="font-style:italic"
-   id="tspan5274">tevent</tspan></tspan></text>
+       sodipodi:role="line">Evento: tevent</tspan></text>
 <text
      sodipodi:linespacing="125%"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:ArialMT;-inkscape-font-specification:'ArialMT, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
      y="231.86263"
-     x="166.98334"
+     x="162.98334"
      id="text52-6-5"><tspan
        y="231.86263"
-       x="166.98334"
+       x="162.98334"
        id="tspan3435-3-3"
-       sodipodi:role="line">Event: <tspan
-   style="font-style:italic"
-   id="tspan4581">hevent</tspan></tspan></text>
+       sodipodi:role="line">Evento: hevent</tspan></text>
 <text
      sodipodi:linespacing="125%"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:ArialMT;-inkscape-font-specification:'ArialMT, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
@@ -852,7 +847,7 @@
        y="85.570496"
        x="718.1286"
        id="tspan3435-3-9-6"
-       sodipodi:role="line">State request:</tspan><tspan
+       sodipodi:role="line">Richiesta stato:</tspan><tspan
        y="99.320496"
        x="718.1286"
        sodipodi:role="line"
@@ -872,24 +867,23 @@
      style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none" /><text
      sodipodi:linespacing="125%"
      id="text44235-7-0-7-0"
-     y="245.76765"
-     x="292.68042"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-     xml:space="preserve"><tspan
-       y="245.76765"
-       x="292.68042"
+     y="226.39215"
+     x="317.79446"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.13279629px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+     xml:space="preserve"
+     transform="scale(0.92116333,1.0855838)"><tspan
+       y="226.39215"
+       x="317.79446"
        sodipodi:role="line"
-       id="tspan6445-3-0-7-3">Validation and</tspan><tspan
-       y="259.51764"
-       x="292.68042"
+       id="tspan4738-8">Convalida e </tspan><tspan
+       y="240.14215"
+       x="317.79446"
        sodipodi:role="line"
-       id="tspan4461-8">mapping to </tspan><tspan
-       y="273.26764"
-       x="292.68042"
+       id="tspan3534">associazione </tspan><tspan
+       y="253.89215"
+       x="317.79446"
        sodipodi:role="line"
-       id="tspan4738-8">event: <tspan
-   style="font-style:italic"
-   id="tspan4771">hevent</tspan></tspan></text>
+       id="tspan3536">all'evento: hevent</tspan></text>
 <rect
      ry="0"
      rx="0"
@@ -901,32 +895,35 @@
      style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none" /><text
      sodipodi:linespacing="125%"
      id="text44235-7-0-7-0-0"
-     y="155.11275"
-     x="573.31592"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-     xml:space="preserve"><tspan
-       y="155.11275"
-       x="573.31592"
+     y="164.35394"
+     x="537.71851"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.31700611px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+     xml:space="preserve"
+     transform="scale(1.0662008,0.93790965)"><tspan
+       y="164.35394"
+       x="537.71851"
        sodipodi:role="line"
-       id="tspan6445-3-0-7-3-5">Validation and</tspan><tspan
-       y="168.86275"
-       x="573.31592"
+       id="tspan4805">Convalida e </tspan><tspan
+       y="178.10394"
+       x="537.71851"
        sodipodi:role="line"
-       id="tspan4461-8-8">mapping to </tspan><tspan
-       y="182.61275"
-       x="573.31592"
+       id="tspan3547">associazione </tspan><tspan
+       y="191.85394"
+       x="537.71851"
        sodipodi:role="line"
-       id="tspan4803">room type </tspan><tspan
-       y="196.36275"
-       x="573.31592"
+       id="tspan3549">alle istanze di </tspan><tspan
+       y="205.60394"
+       x="537.71851"
        sodipodi:role="line"
-       id="tspan4805">thing instances. </tspan><tspan
-       y="196.36275"
-       x="573.31592"
+       id="tspan3551">oggetti di tipo </tspan><tspan
+       y="219.35394"
+       x="537.71851"
        sodipodi:role="line"
-       id="tspan4738-8-2"><tspan
-         style="font-style:italic"
-         id="tspan4771-0" /></tspan></text>
+       id="tspan3553">stanza. </tspan><tspan
+       y="233.10394"
+       x="537.71851"
+       sodipodi:role="line"
+       id="tspan4738-8-2" /></text>
 <flowRoot
      xml:space="preserve"
      id="flowRoot4807"

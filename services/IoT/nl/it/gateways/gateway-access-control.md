@@ -32,7 +32,7 @@ Per assegnare un ruolo a un gateway, utilizza la seguente API:
 PUT /authorization/devices/{deviceId}/roles
 ```
 
-Per i dettagli sullo schema della richiesta, consulta la [documentazione API {{site.data.keyword.iot_full}} Limited Gateway ![icona link esterno](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_authorization_devices_deviceId_roles){: new_window}.
+Per i dettagli sullo schema della richiesta, consulta la [documentazione API {{site.data.keyword.iot_full}} Limited Gateway ![icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_authorization_devices_deviceId_roles){: new_window}.
 
 ## Aggiunta dei dispositivi e loro rimozione da un gruppo di risorse.
 {: #devices_groups}
@@ -43,7 +43,7 @@ Prima che un gateway con il ruolo *Gateway standard* possa agire al posto di un 
  PUT /bulk/devices/{groupId}/add
 ```
 
-Il gruppo a cui aggiungere i dispositivi deve essere specificato nel percorso della richiesta e i dispositivi da aggiungere devono essere specificati nel corpo della richiesta. Per ulteriori informazioni sullo schema della richiesta e sulle risposte, consulta la [documentazione API {{site.data.keyword.iot_short_notm}} Limited Gateway ![icona link esterno](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_add){: new_window}.
+Il gruppo a cui aggiungere i dispositivi deve essere specificato nel percorso della richiesta e i dispositivi da aggiungere devono essere specificati nel corpo della richiesta. Per ulteriori informazioni sullo schema della richiesta e sulle risposte, consulta la [documentazione API {{site.data.keyword.iot_short_notm}} Limited Gateway ![icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_add){: new_window}.
 
 Per rimuovere più dispositivi da un gruppo di risorse, utilizza la seguente API:
 
@@ -51,7 +51,7 @@ Per rimuovere più dispositivi da un gruppo di risorse, utilizza la seguente API
 PUT /bulk/devices/{groupId}/remove
 ```
 
-I dispositivi specificati nel corpo della richiesta saranno rimossi dal gruppo specificato nel percorso della richiesta. Per ulteriori informazioni sullo schema della richiesta e sulla risposta, consulta la [documentazione API {{site.data.keyword.iot_short_notm}} Limited Gateway ![icona link esterno](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_remove){: new_window}.
+I dispositivi specificati nel corpo della richiesta saranno rimossi dal gruppo specificato nel percorso della richiesta. Per ulteriori informazioni sullo schema della richiesta e sulla risposta, consulta la [documentazione API {{site.data.keyword.iot_short_notm}} Limited Gateway ![icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_remove){: new_window}.
 
 ## Ricerca di un gruppo di risorse
 {: #finding_groups}
@@ -70,7 +70,7 @@ Questa API restituisce i gruppi di risorse associati alla tag di ricerca utilizz
 GET /authorization/devices/{deviceId}
 ```
 
-Questa API restituisce l'identificativo univoco dei gruppi di risorse di cui questo dispositivo è membro. Ulteriori informazioni su questa API possono essere trovate nella [documentazione API {{site.data.keyword.iot_short_notm}} Limited Gateway ![icona link esterno](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_authorization_devices_deviceId){: new_window}.
+Questa API restituisce l'identificativo univoco dei gruppi di risorse di cui questo dispositivo è membro. Ulteriori informazioni su questa API possono essere trovate nella [documentazione API {{site.data.keyword.iot_short_notm}} Limited Gateway ![icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_authorization_devices_deviceId){: new_window}.
 
 
 ## Query di un gruppo di risorse
@@ -84,7 +84,7 @@ Per restituire le proprietà complete di tutti i dispositivi nel gruppo di risor
 GET /bulk/devices/{groupId}
 ```
 
-Questa API restituisce l'elenco delle proprietà complete di tutti i membri del gruppo di risorse specificato. Per ulteriori informazioni sullo schema della richiesta, sulle risposte e su come sfogliare i risultati, consulta la [documentazione API {{site.data.keyword.iot_short_notm}} Limited Gateway ![icona link esterno](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_bulk_devices_groupId){: new_window}.
+Questa API restituisce l'elenco delle proprietà complete di tutti i membri del gruppo di risorse specificato. Per ulteriori informazioni sullo schema della richiesta, sulle risposte e su come sfogliare i risultati, consulta la [documentazione API {{site.data.keyword.iot_short_notm}} Limited Gateway ![icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_bulk_devices_groupId){: new_window}.
 
 Per restituire solo gli identificativi univoci dei membri del gruppo di risorse, utilizza la la seguente API:
 
