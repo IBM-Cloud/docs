@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-04-06"
+lastupdated: "2017-05-26"
 
 ---
 
@@ -23,7 +23,7 @@ When you run your apps in a cloud platform-as-a-service (PaaS) like Cloud Foundr
 
 The following figure shows a high level view of logging Cloud Foundry apps in {{site.data.keyword.Bluemix_notm}}:
 
-![High level component overview for CF apps](../images/logging_cf_apps_ov.jpg "High level component overview for CF apps")
+![High level component overview for CF apps](../images/logging_cf_apps_ov.gif "High level component overview for CF apps")
  
 Logging of Cloud Foundry apps is automatically enabled when you use the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. To view Cloud Foundry runtime logs, you must write your logs to STDOUT and STDERR. For more information, see [Runtime application logging through CF apps](logging_writing_to_log_from_cf_app.html#logging_writing_to_log_from_cf_app).
 
