@@ -24,7 +24,7 @@ lastupdated: "2017-03-13"
 {: #watsoniotplatform_architecture}
 ![Architettura IBM Watson IoT Platform](images/architecture_platform.svg "Architettura Watson IoT Platform")
 
-**Importante:** le funzioni di analisi vengono unite dal servizio {{site.data.keyword.iotrtinsights_full}} Se la tua organizzazione {{site.data.keyword.iot_short_notm}} viene utilizzata come origine dati per un'istanza {{site.data.keyword.iotrtinsights_short}} esistente, Cloud and Edge Analytics non è abilitato finché non siano state migrate le istanze {{site.data.keyword.iotrtinsights_short}} esistenti. Continuare ad utilizzare il dashboard {{site.data.keyword.iotrtinsights_short}} per le tue analisi finché non viene completata la migrazione. Per ulteriori informazioni, consulta il blog [IBM Watson IoT Platform blog ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} in IBM developerWorks e i tuoi dashboard dell'istanza {{site.data.keyword.iotrtinsights_short}} esistenti.  
+**Importante:** le funzioni di analisi vengono unite dal servizio {{site.data.keyword.iotrtinsights_full}} Se la tua organizzazione {{site.data.keyword.iot_short_notm}} viene utilizzata come origine dati per un'istanza {{site.data.keyword.iotrtinsights_short}} esistente, Cloud and Edge Analytics non è abilitato finché non siano state migrate le istanze {{site.data.keyword.iotrtinsights_short}} esistenti. Continuare ad utilizzare il dashboard {{site.data.keyword.iotrtinsights_short}} per le tue analisi finché non viene completata la migrazione. Per ulteriori informazioni, consulta il blog [IBM Watson IoT Platform blog ![Icona link esterno](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} in IBM developerWorks e i tuoi dashboard dell'istanza {{site.data.keyword.iotrtinsights_short}} esistenti.  
 
 {{site.data.keyword.iot_short_notm}} comunica con le tue applicazioni e dispositivi utilizzando l'API {{site.data.keyword.iot_short_notm}} e il protocollo di messaggistica {{site.data.keyword.iot_short_notm}}. Il dashboard {{site.data.keyword.iot_short_notm}} si collega a un'interfaccia utente di front-end per semplificare le operazioni nella piattaforma. I dati del dispositivo possono essere archiviati o utilizzati con le soluzioni di analisi.
 
@@ -36,6 +36,8 @@ lastupdated: "2017-03-13"
 Quando ti registri con {{site.data.keyword.iot_short_notm}}, ti viene fornito un ID dell'organizzazione. Il tuo ID dell'organizzazione è un identificativo a sei caratteri univoco per il tuo account. Le organizzazioni assicurano che è possibile accedere ai tuoi dati soltanto dai tuoi dispositivi e applicazioni. Dopo la registrazione, i dispositivi e le chiavi API vengono associati a una sola organizzazione. Quando un'applicazione si collega al servizio utilizzando una chiave API, sarà registrata nell'organizzazione associata alla chiave API utilizzata.
 
 Per la tua sicurezza, è impossibile la comunicazione tra le organizzazioni. L'unico modo per trasmettere dati tra due organizzazioni è di creare un'applicazione in ognuna delle organizzazioni che comunicherà con le applicazioni in altre organizzazioni.
+
+**Nota:** il tuo ID organizzazione {{site.data.keyword.iot_short_notm}} è diverso dal tuo ID [organizzazione Bluemix](../../docs/admin/orgs_spaces.html#orginfo).
 
 ### Dispositivi
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-05-03"
 
 ---
 
@@ -34,7 +34,7 @@ lastupdated: "2017-03-17"
 
    |   서비스가 배치됨 | 서비스가 배치되지 않음
   ------------- | -------------
-  **연결할 디바이스가 있음** | [{{site.data.keyword.iot_short_notm}}에 디바이스 연결](iotplatform_task.html#iotplatform_task).| [조직 데모 재생 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}에서 디바이스 연결을 탐색합니다.
+  **연결할 디바이스가 있음** | [{{site.data.keyword.iot_short_notm}}에 디바이스 연결](iotplatform_task.html#iotplatform_task).| [재생 조직 데모 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}에서 디바이스 연결을 탐색합니다.
   **연결할 디바이스가 없음** | [Node-RED 디바이스 시뮬레이터 작성 및 연결](nodereddevice_sample.html){:new_window}. | [Watson IoT Platform 스타터](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html)를 시작합니다.
 특정 디바이스 유형을 {{site.data.keyword.iot_short_notm}}에 연결하는 방법에 대한 자세한 정보는 [developerWorks 레시피 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}를 참조하십시오.   
 
@@ -62,23 +62,3 @@ lastupdated: "2017-03-17"
 - [애플리케이션 개발자 문서](applications/api.html) 및 [{{site.data.keyword.iot_short_notm}} API 문서](reference/api.html)를 탐색하십시오.
 - 디바이스와 애플리케이션을 통합하고 연결하는 코드를 빌드하고 개발하기 위한 도구와 파일을 제공하는 [{{site.data.keyword.iot_short_notm}} 클라이언트 라이브러리](iot_platform_client_lib.html)를 탐색합니다.
 - [히스토리 디바이스 데이터를 저장하기 위해 {{site.data.keyword.cloudantfull}} 서비스](cloudant_connector.html)를 {{site.data.keyword.iot_short_notm}}에 연결합니다.
-
-
-
-
-# 관련 링크
-{: #rellinks}
-* [IBM Watson IoT 서비스 상태 대시보드](https://status.internetofthings.ibmcloud.com){:new_window}
-
-## 튜토리얼 및 샘플
-{: #samples}
-* [디바이스 연결을 위한 레시피 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}
-* [{{site.data.keyword.iot_short_notm}} 재생 조직 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://play.internetofthings.ibmcloud.com/){:new_window}
-* [{{site.data.keyword.iot_short_notm}}에 Intel Galileo 연결 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/connect-an-intel-galileo-to-the-internet-of-things-foundation-connect/){:new_window}
-* [ARM® mbed™ IoT Starter Kit 연결 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/arm-mbed-iot-starter-kit-part-1/){:new_window}
-* [{{site.data.keyword.iot_short_notm}}에 Raspberry Pi 연결 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/raspberry-pi-4/){:new_window}
-
-## API 참조서
-{: #api}
-* [{{site.data.keyword.iot_short_notm}} API 문서](../reference/api.html)
-* [개발자 문서](developer_doc_overview.html)

@@ -12,7 +12,7 @@ lastupdated: "2017-03-13"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Conexão do Aplicativo
+# Conectando aplicativos
 
 Para conectar seu aplicativo ao {{site.data.keyword.iot_full}}, deve-se conectar usando chaves API (interface de programação de aplicativos) e tokens ou fazendo a ligação de seu aplicativo diretamente com o {{site.data.keyword.iot_short_notm}} no {{site.data.keyword.Bluemix_notm}}. O painel de acesso é usado para conceder acesso.
 {:shortdesc}

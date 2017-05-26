@@ -705,15 +705,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.3309692"
-     inkscape:cx="316.5918"
-     inkscape:cy="125.18511"
+     inkscape:zoom="1.1654846"
+     inkscape:cx="392.34487"
+     inkscape:cy="203.01142"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="in"
-     inkscape:window-width="1920"
-     inkscape:window-height="1027"
+     inkscape:window-width="1280"
+     inkscape:window-height="667"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -929,7 +929,7 @@
          sodipodi:role="line"
          x="42.015415"
          y="464.11569"
-         id="tspan8202">Dispositivi IoT</tspan><tspan
+         id="tspan8202">IoT Devices</tspan><tspan
          sodipodi:role="line"
          x="42.015415"
          y="477.86569"
@@ -956,14 +956,14 @@
        x="288.40372"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
+         id="tspan44239-7"
          y="484.93506"
          x="288.40372"
-         sodipodi:role="line"
-         id="tspan7973">API Rest &amp; </tspan><tspan
+         sodipodi:role="line">Rest &amp; </tspan><tspan
          y="498.68506"
          x="288.40372"
          sodipodi:role="line"
-         id="tspan3615">in tempo reale</tspan><tspan
+         id="tspan7973">Real-time APIs</tspan><tspan
          y="512.43506"
          x="288.40372"
          sodipodi:role="line"
@@ -991,7 +991,7 @@
          sodipodi:role="line"
          x="40.151447"
          y="391.96463"
-         id="tspan8202-7">Gateway IoT</tspan><tspan
+         id="tspan8202-7">IoT Gateways</tspan><tspan
          sodipodi:role="line"
          x="40.151447"
          y="405.71463"
@@ -1068,15 +1068,15 @@
          sodipodi:role="line"
          x="303.71616"
          y="588.51544"
-         id="tspan9810">Dashboard</tspan><tspan
+         id="tspan44245">Watson IoT </tspan><tspan
          sodipodi:role="line"
          x="303.71616"
          y="602.26544"
-         id="tspan3623">Watson IoT </tspan><tspan
+         id="tspan5792">Platform</tspan><tspan
          sodipodi:role="line"
          x="303.71616"
          y="616.01544"
-         id="tspan3625">Platform</tspan></text>
+         id="tspan9810">Dashboard</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path11965"
@@ -1120,7 +1120,7 @@
          sodipodi:role="line"
          x="43.057407"
          y="536.01312"
-         id="tspan6913-6">Applicazioni</tspan></text>
+         id="tspan6913-6">Applications</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path8199"
@@ -1426,17 +1426,18 @@
            y="-62.752552" /></flowRegion><flowPara
          id="flowPara5808" /></flowRoot>    <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:37.13201141px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="253.97842"
-       y="592.43457"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="235.75475"
+       y="638.19281"
        id="text4681"
-       sodipodi:linespacing="125%"
-       transform="scale(0.92830029,1.0772376)"><tspan
+       sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="253.97842"
-         y="592.43457"
-         style="font-size:11.603755px"
-         id="tspan4687">Autenticazione tramite ID IBM</tspan></text>
+         x="235.75475"
+         y="638.19281"
+         style="font-size:12.50000191px"
+         id="tspan4687">Authenticate via <tspan
+   style="font-weight:bold"
+   id="tspan5809">IBMid</tspan>.</tspan></text>
     <rect
        x="152.64145"
        y="527.10138"
@@ -1466,7 +1467,7 @@
        x="448.8215"
        font-size="11"
        id="text66234"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Chiavi API</text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">API keys</text>
     <g
        id="g60743"
        transform="translate(410.82015,410.5848)"
@@ -1504,7 +1505,7 @@
        x="448.00958"
        font-size="11"
        id="text66234-4"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Dispositivi</text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Devices</text>
     <g
        id="g60743-7"
        transform="translate(410.00818,474.72881)"
@@ -1538,17 +1539,19 @@
          x="-27.655277"
          y="591.38055"
          style="font-size:12.50000191px"
-         id="tspan11042">Utilizza le  chiavi API</tspan><tspan
+         id="tspan4687-8">Use <tspan
+   style="font-weight:bold"
+   id="tspan5838"> API keys</tspan></tspan><tspan
          sodipodi:role="line"
          x="-27.655277"
          y="607.00555"
          style="font-size:12.50000191px"
-         id="tspan3608">per effettuare chiamate </tspan><tspan
+         id="tspan5834">to make authenticated </tspan><tspan
          sodipodi:role="line"
          x="-27.655277"
          y="622.63055"
          style="font-size:12.50000191px"
-         id="tspan3610">REST autenticate</tspan><tspan
+         id="tspan11042">REST calls </tspan><tspan
          sodipodi:role="line"
          x="-27.655277"
          y="638.25555"
@@ -1565,7 +1568,7 @@
        x="413.8291"
        font-size="11"
        id="text65450"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Utente con ID IBM</text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">User with IBMid</text>
     <g
        transform="translate(-1540.5459,252.77424)"
        id="g14242"

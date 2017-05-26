@@ -1,0 +1,24 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="bluemix-overview" audience="platform" href="/docs/overview/whatisbluemix.html"}
+什麼是 Bluemix
+  
+    {: .navgroup id="learn"}
+    whatisbluemix.md
+    bluemixoverviewui.md
+    cf.md
+    prereqs.md
+    
+    {: .topicgroup}
+    相關鏈結
+        [什麼是 Bluemix？](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){: new_window}
+        [開始使用](http://www.ibm.com/cloud-computing/bluemix/getting-started/){: new_window}
+        [瞭解混合式模型](http://www.ibm.com/cloud-computing/bluemix/hybrid/){: new_window}
+    {: .navgroup-end}
+    
+    {: .navgroup id="reference"}
+    [注意事項及使用條款](../navigation/notices.html)
+    glossary/index.md
+    [新增功能](../whatsnew/index.html)
+    {: .navgroup-end}

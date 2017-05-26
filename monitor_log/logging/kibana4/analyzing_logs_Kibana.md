@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-04-06"
+lastupdated: "2017-05-19"
 
 ---
 
@@ -50,9 +50,9 @@ You can launch Kibana in any of the following ways:
 
 * From {{site.data.keyword.Bluemix_notm}}
 
-    You can launch to your specific CF app logs in Kibana, in context to that specific App.
+    You can launch to your specific CF app logs in Kibana, within the context of that specific App.
     
-    You can launch to your specific Docker container logs in Kibana, in context to that specific container. 
+    You can launch to your specific Docker container logs in Kibana, within the context of that specific container. This feature applies only to containers that are deployed in the {{site.data.keyword.Bluemix_notm}}-managed Cloud infrastructure.
     
     For CF apps, the query that is used to filter the data that is available for analysis in Kibana retrieves log entries for the Cloud Foundry application. The log information that Kibana displays by default is all related to a single Cloud Foundry application and all its instances. 
     

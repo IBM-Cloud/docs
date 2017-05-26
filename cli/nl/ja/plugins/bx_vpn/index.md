@@ -15,19 +15,19 @@ lastupdated: "2016-06-20"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.Bluemix_notm}} CLI 用の {{site.data.keyword.vpn_short}} プラグイン
+# VPN CLI 用の {{site.data.keyword.Bluemix_notm}} プラグイン
 
 *バージョン:* 1.4.0
 
-コマンド・ライン・インターフェース (CLI) を使用して、{{site.data.keyword.vpn_full}} サービスの構成と管理を行うことができます。 {{site.data.keyword.vpn_short}} CLI プラグインには、2 つのバージョンがあります。1 つは Cloud Foundry CLI プラグインで使用するためのものであり、もう 1 つは {{site.data.keyword.Bluemix}} CLI プラグインで使用するためのものです。どちらのバージョンのプラグインも同じ機能を提供します。
+コマンド・ライン・インターフェース (CLI) を使用して、{{site.data.keyword.vpn_full}} サービスの構成と管理を行うことができます。VPN CLI プラグインには、2 つのバージョンがあります。1 つは Cloud Foundry CLI プラグインで使用するためのものであり、もう 1 つは {{site.data.keyword.Bluemix}} CLI プラグインで使用するためのものです。どちらのバージョンのプラグインも同じ機能を提供します。
 {:shortdesc}
 
-{{site.data.keyword.vpn_short}} プラグインには、Windows、MAC、および Linux オペレーティング・システム用があります。環境に適したものを使用してください。
+VPN プラグインには、Windows、MAC、および Linux オペレーティング・システム用があります。環境に適したものを使用してください。
 
-以下の手順は、{{site.data.keyword.Bluemix_notm}} CLI プラグインで使用する場合の説明です。Cloud Foundry (cf) CLI プラグインでプラグインを使用する場合は、『[{{site.data.keyword.vpn_short}} CLI plug-in for cf CLI](../vpn/index.html)』を参照してください。
+以下の手順は、{{site.data.keyword.Bluemix_notm}} CLI プラグインで使用する場合の説明です。Cloud Foundry (cf) CLI プラグインでプラグインを使用する場合は、『[VPN CLI plug-in for cf CLI](../vpn/index.html)』を参照してください。
 
 
-以下の説明では、Bluemix CLI 用 {{site.data.keyword.vpn_short}} プラグインでサポートされるすべてのコマンドをリストし、それぞれの名前、オプション、使用法、前提条件、説明、および例を示します。VPN プラグインのインストール方法については、『[Extend your Bluemix command line interface](../../index.html#cli_bluemix_ext)』を参照してください。
+以下の説明では、Bluemix CLI 用 VPN プラグインでサポートされるすべてのコマンドをリストし、それぞれの名前、オプション、使用法、前提条件、説明、および例を示します。VPN プラグインのインストール方法については、『[Extend your Bluemix command line interface](../../index.html#cli_bluemix_ext)』を参照してください。
 
 **注:** *前提条件*には、コマンドを使用する前に必要なアクションがリストされています。前提条件には、以下のアクションの 1 つ以上が含まれる場合があります。
 <dl>

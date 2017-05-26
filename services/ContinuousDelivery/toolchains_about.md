@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-31"
+lastupdated: "2017-5-15"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-3-31"
 {:codeblock:.codeblock}
 
 
-# About toolchains    
+# Toolchains overview   
 {: #toolchains_about}  
 
 Open toolchains are available in the Public and Dedicated environments on {{site.data.keyword.Bluemix}}. You can create a toolchain in two ways: use a template to create a toolchain or create a toolchain from an app. As a starting point, you can use a toolchain template. Depending on the template that you use, you can create a toolchain that has a specific set of tool integrations or an empty toolchain that you can add tool integrations to.    

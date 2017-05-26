@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-11-17"
+lastupdated: "2017-03-21"
 
 ---
 
@@ -59,7 +59,7 @@ MQTT 認証を有効にするには、MQTT 接続を行う際にユーザー名�
 
 デバイスは、以下の形式でイベント・トピックにパブリッシュします。
 
-<pre class="pre">iot-2/evt/<var class="keyword varname">event_id</var>/fmt/<var class="keyword varname">format_string</var></pre>
+<pre class="pre"><code class="hljs">iot-2/evt/<var class="keyword varname">event_id</var>/fmt/<var class="keyword varname">format_string</var></code></pre>
 {: codeblock}
 
 説明
@@ -78,7 +78,7 @@ MQTT 認証を有効にするには、MQTT 接続を行う際にユーザー名�
 
 デバイスは、以下の形式でコマンド・トピックにサブスクライブできます。
 
-<pre class="pre">iot-2/cmd/<var class="keyword varname">command_id</var>/fmt/<var class="keyword varname">format_string</var></pre>
+<pre class="pre"><code class="hljs">iot-2/cmd/<var class="keyword varname">command_id</var>/fmt/<var class="keyword varname">format_string</var></code></pre>
 {: codeblock}
 
 説明
@@ -125,7 +125,7 @@ iotdm-1/#
 **要求**  
 要求は、以下のコード・サンプルで示されるように形式設定されます。
 
-<pre class="pre">{  "d": {...}, "<var class="keyword varname">reqId</var>": "b53eb43e-401c-453c-b8f5-94b73290c056" }</pre>
+<pre class="pre"><code class="hljs">{  "d": {...}, "<var class="keyword varname">reqId</var>": "b53eb43e-401c-453c-b8f5-94b73290c056" }</code></pre>
 {: codeblock}
 
 説明:

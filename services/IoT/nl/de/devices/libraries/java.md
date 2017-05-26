@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-03-21"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -296,7 +296,7 @@ Zusätzlich zur Verwendung von MQTT können Sie Ihre Geräte auch so konfigurier
 2. Erstellen Sie ein Ereignis, das publiziert werden soll.
 3. Geben Sie den Ereignisnamen an und publizieren Sie das Ereignis anschließend mithilfe der Methode `publishEventOverHTTP()`, wie im folgenden Codebeispiel gezeigt:
 
-``` sourceCode
+``` 
 DeviceClient myClient = new DeviceClient(deviceProps);
 
 JsonObject event = new JsonObject();
@@ -307,7 +307,7 @@ event.addProperty("mem",  70);
 boolean response  = myClient.api().publishDeviceEventOverHTTP("blink", event, ContentType.json);
 ```
 
-Zum Lesen des gesamten Codes zeigen Sie das Gerätebeispiel [HttpDeviceEventPublish] an.
+Zum Lesen des gesamten Codes rufen Sie das Gerätebeispiel [HttpDeviceEventPublish ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")] auf.{: new_window}
 
 Je nach den Einstellungen in der Eigenschaftendatei wird das Ereignis mit der Methode `publishEventOverHTTP()` entweder im Quickstart-Modus oder im Modus des registrierten Ablaufs publiziert. Wenn als Organisations-ID in der Eigenschaftendatei `quickstart` festgelegt ist, publiziert die Methode `publishEventOverHTTP()` das Ereignis an den Quickstart-Service des Gerätebeispiels und publiziert das Ereignis im einfachen HTTP-Format. Wenn in der Eigenschaftendatei eine gültige registrierte Organisation angegeben ist, werden Ereignisse sicher mithilfe von HTTPS publiziert.
 
@@ -329,7 +329,7 @@ Die Nachrichten werden als Instanz der Klasse `Command` (Befehl) zurückgegeben,
 |`timestamp`   |org.joda.time.DateTime|Das Datum und die Uhrzeit des Ereignisses.|
 
 
-``` sourceCode
+```
 package com.ibm.iotf.sample.client.device;
 
 import java.util.Properties;

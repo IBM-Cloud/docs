@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-07"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -51,7 +51,7 @@ lastupdated: "2017-03-15"
 
   ![連線 QR Code。](images/iot4e_mobile_connect_QR.svg "{{site.data.keyword.iotelectronics}} 連線 QR Code")
 
-5. 在行動裝置上，輸入登入認證。您的使用者 ID 和密碼可以是任意長度。請記住您的登入認證，以供未來的階段作業使用。您的行動裝置現在已登錄至 {{site.data.keyword.iotelectronics}} 環境，並且您已準備好登錄個別應用裝置。
+5. 在行動裝置上，選擇性地使用 Facebook 或 Google+ 認證登入。您也可以跳過登入處理程序，試用應用程式而不登入。
 
 6. 在電腦上，捲動至模擬洗衣機並按一下它，以顯示其資料和應用裝置 QR Code。
 

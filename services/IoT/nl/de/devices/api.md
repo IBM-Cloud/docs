@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-14"
+lastupdated: "2017-03-21"
 ---
 
 {:new_window: target="blank"}
@@ -48,7 +48,7 @@ Verwenden Sie eine der folgenden URLs, um eine `POST`-Anforderung von einem Ger�
 
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">Organisations-ID</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">Typ-ID</var>/devices/<var class="keyword varname">Geräte-ID</var>/events/<var class="keyword varname">Ereignis-ID</var></code></pre>
 
-**Hinweis: **Port 443, der SSL-Standardport, kann auch für sichere HTTP-API-Aufrufe angegeben werden.
+**Hinweis:** Port 443, der SSL-Standardport, kann auch für sichere HTTP-API-Aufrufe angegeben werden.
 
 Wenn Sie eine Verbindung zwischen einem Gerät oder einer Anwendung und dem Quickstart-Service herstellen, verwenden Sie stattdessen eine der folgenden URLs:
 

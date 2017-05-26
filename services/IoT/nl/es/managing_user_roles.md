@@ -20,7 +20,7 @@ Los roles de usuario determinan las operaciones que el usuario tiene permiso par
 
 1. Desde el panel de instrumentos de {{site.data.keyword.iot_short_notm}}, seleccione **Acceso** > **Miembros** en la barra de navegación de la izquierda.
 2. Pulse el icono **Editar** que se encuentra junto al usuario que desea actualizar.
-3. Seleccione un rol y, a continuación, pulse **Terminado**.
+3. Seleccione un rol y, a continuación, pulse **Listo**.
 
 <!--
 ## Changing a user role by using the API

@@ -36,18 +36,20 @@ Todas las solicitudes deben incluir una cabecera de autorización. La autenticac
 |Nombre de usuario| `g/{orgId}/{gwType}/{gwDevId}`
 |Contraseña| La señal de autenticación que se ha generado automáticamente o que se ha especificado manualmente al registrar el dispositivo de pasarela.
 
-
 donde:
 
-**_orgId_**   
-- Es el nombre de la organización, que debe coincidir con el nombre que se especifica en la cabecera de host.
+<dl>
+<dt>orgId</dt>  
+<dd>El nombre de organización, que debe coincidir con el nombre que el especificado en la cabecera de host.</dd>
 
-**_gwType_**
-- Es el tipo de pasarela.
+<p></p>
+<dt>gwType</dt>  
+<dd>El tipo de pasarela. </dd>
+<p></p>
+<dt>gwDevId</dt>  
+<dd>El identificador de dispositivo de la pasarela. </dd>
+</dl>
 
-**_gwDevId_**
-
-- Es el identificador de dispositivo de la pasarela.
 
 ### Cabeceras de solicitud Content-Type
 

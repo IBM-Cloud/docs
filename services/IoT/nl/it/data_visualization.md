@@ -73,7 +73,7 @@ Seleziona il tipo e la dimensione di visualizzazione che vuoi utilizzare.  Alcun
 <tbody>
 <tr>
 <td>Tipi di dispositivo</td>
-<td>Un grafico a torta che visualizza il numero di dispositivi per tipo di dispositivo.</td>
+<td>Un grafico a torta che visualizza il numero di dispositivi per tipo dispositivo.</td>
 </tr><tr>
 <td>Dati trasferiti</td>
 <td>Le statistiche di utilizzo per i dati trasferiti per la tua organizzazione.</td>

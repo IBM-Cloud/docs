@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-27"
+lastupdated: "2017-04-25"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -61,7 +61,7 @@ var config = module.exports = {
 
 Methode: POST  
 API: /shield  
-https://iot4i-docs-api.mybluemix.net/dist/#!/shield/addShield
+https://iot4i-api-docs.mybluemix.net/#!/shield/addShield
 
 Erstellen Sie in der Datei createShield.js eine Shield-Definition.  Das folgende Beispiel stellt ein einfaches Shield dar, das einen Wasserleitungsschaden erkennt.
 
@@ -160,7 +160,7 @@ Jeder Shield-Code enthält Ressourcen, die in den resource/shield.js-Anweisungen
 
 Methode: POST  
 API: /user  
-https://iot4i-docs-api.mybluemix.net/dist/#!/user/addUser
+https://iot4i-api-docs.mybluemix.net/#!/user/addUser
 
 Erstellen Sie in der Datei createUser.js einen Benutzer. Im folgenden Beispiel sehen Sie, wie ein einzelner Benutzer erstellt wird.
 
@@ -195,7 +195,7 @@ Dabei gilt Folgendes:
 
 Methode: POST  
 API: /user  
-https://iot4i-docs-api.mybluemix.net/dist/#!/shieldassociation/addShieldAssociation
+https://iot4i-api-docs.mybluemix.net/#!/shieldassociation/addShieldAssociation
 
 Erstellen Sie in der Datei createUserShieldAssociation.js eine Shield-Zuordnung, bei der das Shield mit dem Benutzer verknüpft wird.
 
@@ -217,7 +217,7 @@ var userShield = {
 
 Methode: POST  
 API: /sendPayloadToMQTT  
-https://iot4i-docs-api.mybluemix.net/dist/#!/global/sendPayloadToMQTT
+https://iot4i-api-docs.mybluemix.net/#!/global/sendPayloadToMQTT
 
 Sie können Nutzdaten für eine simulierte Gefahr erstellen, um Ihre Shields zu testen.
 

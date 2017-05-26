@@ -15,8 +15,7 @@ lastupdated: "2017-03-14"
 # {{site.data.keyword.iot_short_notm}}에서 게이트웨이 개발
 {: #gw_dev_index}
 
-디바이스에서 인터넷에 직접 연결할 수 없으면 게이트웨이 디바이스를 빌드하여 데이터를 검색하고 {{site.data.keyword.iot_full}} 조직의 애플리케이션에 보낼 수 있습니다.
-{{site.data.keyword.iot_short_notm}} 조직 및 애플리케이션에 디바이스 게이트웨이를 연결하는 데 도움이 되는 클라이언트 라이브러리, 샘플 및 정보가 제공됩니다.
+디바이스에서 인터넷에 직접 연결할 수 없으면 게이트웨이 디바이스를 빌드하여 데이터를 검색하고 {{site.data.keyword.iot_full}} 조직의 애플리케이션에 보낼 수 있습니다. {{site.data.keyword.iot_short_notm}} 조직 및 애플리케이션에 디바이스 게이트웨이를 연결하는 데 도움이 되는 클라이언트 라이브러리, 샘플 및 정보가 제공됩니다.
 {:shortdesc}
 
 ## 연결 프로토콜

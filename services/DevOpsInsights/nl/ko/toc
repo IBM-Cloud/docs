@@ -1,0 +1,34 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="DevOpsInsights" audience="service" href="/docs/services/DevOpsInsights/index.html"}
+IBM Cloud DevOps Insights
+
+  {: .navgroup id="learn"}
+    index.md
+    about_risk.md
+    about_team.md
+    about_dev.md
+
+  {:topicgroup}
+    Delivery Insights
+        uc_insights_overview.md
+        uc_insights_prereqs.md
+        uc_insights_connect_ucd.md
+        uc_insights_creating.md
+        uc_insights_mapping.md
+
+  {: .topicgroup}
+    관련 링크
+        [도구 체인 정보](../ContinuousDelivery/toolchains_about.html)
+        [Delivery Pipeline 시작하기](../DeliveryPipeline/index.html)
+        [IBM Cloud DevOps Insights on the IBM Cloud Garage Method](https://www.ibm.com/devops/method/content/deliver/tool_deployment_risk_analytics/)
+  {: .navgroup-end}
+
+  {: .navgroup id="howto"}
+    risk_cd.md
+    jenkins_pipeline.md
+    risk_jenkins.md
+    risk_policies.md
+    results.md
+  {: .navgroup-end}

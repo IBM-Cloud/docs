@@ -35,11 +35,11 @@ El equipo de {{site.data.keyword.contdelivery_full}} supervisa activamente los f
 
 ## Incidencias de soporte
 
-Si tiene un problema más serio o encuentra problemas con el servicio {{site.data.keyword.contdelivery_short}}, abra una incidencia de soporte.     
+Si tiene un problema más serio o encuentra problemas con el servicio {{site.data.keyword.contdelivery_short}}, abra una incidencia de soporte.    
 
 1. Inicie una sesión en {{site.data.keyword.Bluemix_notm}}.
 1. En el menú de la barra de menús, pulse **Soporte** y luego pulse **Añadir incidencia**.
-1. Rellene el formulario para indicar el tipo de soporte técnico que necesita. 
+1. Rellene el formulario para indicar el tipo de soporte técnico que necesita.
 
 Para obtener información sobre cómo abrir una incidencia de soporte de IBM {{site.data.keyword.Bluemix_notm}}, o sobre los niveles de soporte y las gravedades de las incidencias, consulte [Cómo contactar con el servicio de soporte](https://console.ng.bluemix.net/docs/support/index.html#contacting-support).
 

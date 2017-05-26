@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-20"
 
 ---
 
@@ -231,7 +231,7 @@ System.err.println("Failed to update the location!");
 
 ### 연결된 디바이스 위치 업데이트 전송
 
-게이트웨이는 대응되는 `updateDeviceLocation()` 디바이스 메소드를 호출하여 연결된 디바이스의 위치를 업데이트할 수 있습니다. 오버로드된 메소드는 `measuredDateTime` 메소드를 지정하는 데 사용될 수 있습니다.   
+게이트웨이는 대응되는 `updateDeviceLocation()` 디바이스 메소드를 호출하여 연결된 디바이스의 위치를 업데이트할 수 있습니다. 오버로드된 메소드는 `measuredDateTime` 메소드를 지정하는 데 사용될 수 있습니다. 
 
 ```java
 // update the location of the attached device with latitude, longitude, and elevation
@@ -338,7 +338,7 @@ DeviceFirmware firmware = new DeviceFirmware.Builder().
 			name("Firmware.name").
 			url("Firmware.url").
 			verifier("Firmware.verifier").
-			state(FirmwareState.IDLE).				
+			state(FirmwareState.IDLE).
 			build();
 
 DeviceData deviceData = new DeviceData.Builder().
@@ -649,6 +649,138 @@ mgdGateway.addDeviceActionHandler(actionHandler);
 ```
 
 디바이스 조치에 대한 자세한 정보는 [디바이스 관리 요청 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](../../devices/device_mgmt/requests.html#/device-actions-reboot#device-actions-reboot){: new_window}을 참조하십시오. 
+
+## 디바이스 관리 확장 패키지
+{: #dme}
+
+디바이스 관리 확장(DME) 패키지는 사용자 정의 디바이스 관리 조치 세트를 정의하는 JSON 문서입니다. 조치는 해당 조치를 지원하는 하나 이상의 디바이스에서 시작될 수 있습니다. 조치는 {{site.data.keyword.iot_short}} 대시보드 또는 디바이스 관리 REST API를 사용하여 시작됩니다. 
+
+DME 패키지 형식에 대한 자세한 정보는 [디바이스 관리 확장](../../devices/device_mgmt/custom_actions.html)을 참조하십시오. 
+
+### 사용자 정의 디바이스 관리 조치 지원
+
+확장 패키지에 정의된 디바이스 관리 조치는 해당 조치를 지원하는 연결된 디바이스 또는 게이트웨이에서 시작될 수 있습니다. 
+
+디바이스는 {{site.data.keyword.iot_short}}에 관리 요청을 공개할 때 지원되는 조치의 유형을 지정합니다. 특정 확장 패키지에 정의된 사용자 정의 조치를 디바이스가 수신하도록 허용하려면 디바이스가 관리 요청을 공개할 때 지원 오브젝트에서 해당 확장의 번들 ID를 지정해야 합니다. 
+
+게이트웨이는 번들 ID의 목록으로 `manage()` API를 호출하여 게이트웨이 또는 연결된 디바이스가 관리 요청에 있는 번들 ID의 제공된 목록에 대해 DME 조치를 지원함을 {{site.data.keyword.iot_short}}에 알릴 수 있습니다. 
+
+다음의 코드 스니펫을 사용하여 관리 요청을 공개함으로써 이 게이트웨이가 DME 조치를 지원함을 {{site.data.keyword.iot_short}}에 알릴 수 있습니다. 
+
+```java
+List<String> bundleIds = new ArrayList<String>();
+bundleIds.add("example-dme-actions-v1");
+
+mgdGateway.sendGatewayManageRequest(0, false, false, bundleIds);
+```
+
+마지막 매개변수는 디바이스가 지원하는 사용자 정의 조치를 지정합니다. 
+
+이와 유사하게, 게이트웨이는 대응되는 디바이스 메소드를 호출하여 연결된 디바이스의 DME 조치 지원을 알릴 수 있습니다. 
+
+```java
+List<String> bundleIds = new ArrayList<String>();
+bundleIds.add("example-dme-actions-v1");
+
+mgdGateway.sendDeviceManageRequest(typeId, deviceId, 0, false, false, bundleIds);
+```
+
+### 사용자 정의 디바이스 관리 조치 처리
+
+{{site.data.keyword.iot_short}}에 연결된 디바이스 또는 게이트웨이에서 사용자 정의 조치가 시작되면 MQTT 메시지가 게이트웨이에 공개됩니다. 메시지에는 요청의 일부로서 지정된 매개변수가 포함됩니다. 게이트웨이는 메시지의 수신과 처리를 위해 CustomActionHandler를 추가해야 합니다. 메시지는 다음 특성을 보유하는 `CustomAction` 클래스의 인스턴스로서 리턴됩니다. 
+
+| 특성     | 데이터 유형     | 설명  |
+|----------------|----------------|----------------|
+|`bundleId` |문자열 | DME에 대한 고유 ID입니다. |
+|`actionId` |문자열|시작된 사용자 정의 조치입니다. |
+|`typeId` |문자열|사용자 정의 조치가 시작된 디바이스 유형입니다. |
+|`deviceId` |문자열|사용자 정의 조치가 시작된 디바이스입니다. |
+|`payload` |문자열|JSON 형식의 매개변수 목록이 포함된 실제 메시지입니다. |
+|`reqId` |문자열|사용자 정의 조치 요청에 응답하는 데 사용되는 요청 ID입니다. |
+
+다음 코드는 `CustomActionHandler`의 샘플 구현입니다. 
+
+```java
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.ibm.iotf.client.CustomAction;
+import com.ibm.iotf.client.CustomAction.Status;
+import com.ibm.iotf.devicemgmt.CustomActionHandler;
+
+public class MyCustomActionHandler extends CustomActionHandler implements Runnable {
+
+	// A queue to hold & process the commands for smooth handling of MQTT messages
+	private BlockingQueue<CustomAction> queue = new LinkedBlockingQueue<CustomAction>();
+	// A map to hold the publish interval time for each device
+	private Map<String, Long> intervalMap = new HashMap<String, Long>();
+
+	@Override
+	public void run() {
+		while(true) {
+			CustomAction action = null;
+			try {
+				action = queue.take();
+				System.out.println(" "+action.getActionId()+ " "+action.getPayload());
+				JsonArray fields = action.getPayload().get("d").getAsJsonObject().get("fields").getAsJsonArray();
+				for(JsonElement field : fields) {
+					JsonObject fieldObj = field.getAsJsonObject();
+					if("PublishInterval".equals(fieldObj.get("field").getAsString())) {
+						long val = fieldObj.get("value").getAsLong();
+						String key = action.getTypeId() + ":" + action.getDeviceId();
+						long publishInterval = val * 1000;
+						intervalMap.put(key, publishInterval);
+						System.out.println("Updated the publish interval to "+val);
+					}
+				}
+				action.setStatus(Status.OK);
+
+			} catch (InterruptedException e) {}
+		}
+	}
+
+	public long getPublishInterval(String deviceType, String deviceId) {
+		String key = deviceType + ":" + deviceId;
+		Long val = intervalMap.get(key);
+		if(val == null) {
+			return 1000; // default is 1 second
+		} else {
+			return val.longValue();
+		}
+	}
+
+	@Override
+	public void handleCustomAction(CustomAction action) {
+		try {
+			queue.put(action);
+			} catch (InterruptedException e) {
+		}
+
+	}
+}
+```
+
+`CustomActionHandler`가 `ManagedGateway` 인스턴스에 추가되면 애플리케이션이 사용자 정의 조치를 시작할 때마다 `handleCustomAction()` 메소드가 호출됩니다. 
+
+다음 코드 샘플은 `CustomActionHandler`를 `ManagedGateway` 인스턴스에 추가하는 방법을 간략하게 설명합니다. 
+
+```java
+MyCustomActionHandler handler = new MyCustomActionHandler();
+mgdGateway.addCustomActionHandler(handler);
+```
+
+게이트웨이가 사용자 정의 조치 메시지를 수신하는 경우, 게이트웨이는 조치를 완료하거나 조치를 완료할 수 없음을 표시하는 오류 코드로 응답합니다. 게이트웨이는 *setStatus()* 메소드를 사용하여 조치의 상태를 설정해야 합니다. 
+
+```java
+action.setStatus(Status.OK);
+```
+
+DME에 대한 자세한 정보는 [디바이스 관리 확장 요청 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](../../devices/device_mgmt/custom_actions.html){: new_window}을 참조하십시오. 
 
 ## 디바이스 속성 변경사항 청취
 {: #listen_device_attributes}

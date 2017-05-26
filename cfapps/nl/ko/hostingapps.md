@@ -95,7 +95,7 @@ lastupdated: "2016-05-09"
 |Eclipse	|Eclipse에서 코드를 관리하고 {{site.data.keyword.Bluemix_notm}}용 IBM Eclipse 도구를 사용하여 애플리케이션을 푸시하십시오.|
 |Git 통합	|GitHub에서 코드를 관리하고 Git를 {{site.data.keyword.Bluemix_notm}}로 통합하십시오. 다른 개발자과 협업할 수 있습니다. 애플리케이션은 코드의 변경사항을 커미트할 때 {{site.data.keyword.Bluemix_notm}}에 자동으로 배치됩니다. 애플리케이션을 수동으로 푸시할 필요가 없습니다. |
 |{{site.data.keyword.Bluemix_notm}} DevOps Delivery Pipeline	|DevOps GitHub 저장소에서 코드를 관리하고 DevOps Delivery Pipeline을 사용하여 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에 배치하십시오. |
-{: caption="표 1. {{site.data.keyword.Bluemix_notm}} 도구" caption-side="top"}
+{: caption="표 1. Bluemix 도구" caption-side="top"}
 
 
 Cloud Foundry 플랫폼이 애플리케이션 요구사항을 충족하지 않는 경우에는 보다 사용자 정의된 옵션으로 런타임이 설정, 구성되고 유지보수되는 VM 또는 컨테이너를 사용할 수 있습니다. 

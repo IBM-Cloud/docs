@@ -14,7 +14,7 @@ lastupdated: "2017-03-06"
 {:screen: .screen}
 
 
-# Obtención de ayuda y soporte
+# Obtención de ayuda y soporte para la creación de registros
 {: #gettinghelp}
 
 Si tiene problemas o preguntas al utilizar las funciones de registro de {{site.data.keyword.Bluemix}}, puede consultar {{site.data.keyword.Bluemix_notm}} o puede obtener ayuda buscando información o formulando preguntas en un foro. También puede abrir una incidencia de soporte.

@@ -46,8 +46,8 @@ Lancer une action de gestion des terminaux|X|X
 Afficher des actions de gestion des terminaux|X|X
 Effacer des actions de gestion des terminaux|-|-
 Gérer les regroupements d'actions de gestion des terminaux|-|X
-Créer, mettre à jour ou supprimer des types de terminal|-|-
-Afficher des types de terminal|X|X
+Créer, mettre à jour ou supprimer des types de terminaux|-|-
+Afficher des types de terminaux|X|X
 Gérer des journaux de diagnostic|-|-
 Afficher des journaux de diagnostic|-|-
 

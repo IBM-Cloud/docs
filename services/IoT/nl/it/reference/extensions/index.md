@@ -336,7 +336,7 @@ Per utilizzare la funzione di invito email, deve essere configurata un'estension
 
 ### Servizio online SendGrid
 
-Per configurare l'estensione email per l'utilizzo con il servizio online SendGrid, segui questi passi: 
+Per configurare l'estensione email per l'utilizzo con il servizio online SendGrid, segui questi passi:
 
 1. Richiama la chiave API autorizzata dal tuo account online SendGrid:
 2. Nel tuo dashboard {{site.data.keyword.iot_short_notm}}, fai clic su **Extensions** dalla barra di navigazione.
@@ -346,7 +346,7 @@ Per configurare l'estensione email per l'utilizzo con il servizio online SendGri
 
 ### Servizio SMTP
 
-Per configurare l'estensione email per l'utilizzo con il servizio SMTP, segui questi passi: 
+Per configurare l'estensione email per l'utilizzo con il servizio SMTP, segui questi passi:
 
 1. Nel tuo dashboard {{site.data.keyword.iot_short_notm}}, fai clic su **Extensions** dalla barra di navigazione.
 2. Nella sezione **Email**, fai clic su **Setup**.
@@ -358,7 +358,7 @@ Per configurare l'estensione email per l'utilizzo con il servizio SMTP, segui qu
 Per configurare l'estensione email per l'utilizzo con l'applicazione {{site.data.keyword.Bluemix_notm}} SendGrid, segui questi passi:
 
 1. Crea un'applicazione fittizia e associa il servizio SendGrid.  
-Per poter richiamare le credenziali di configurazione, aggiungi e associa il servizio SendGrid a un'applicazione fittizia. 
+Per poter richiamare le credenziali di configurazione, aggiungi e associa il servizio SendGrid a un'applicazione fittizia.
 
  1. Dal tuo dashboard {{site.data.keyword.Bluemix_notm}}, fai clic su **Create Service**.
  2. Seleziona il servizio SendGrid dal catalogo e fai clic su **Create**.
@@ -371,7 +371,7 @@ Per poter richiamare le credenziali di configurazione, aggiungi e associa il ser
  1. Fai clic sull'applicazione {{site.data.keyword.sdk4nodefull}} dal dashboard {{site.data.keyword.Bluemix_notm}}.
  2. Fai clic su **Environment Variables** dalla barra di navigazione.
  3. Copia il JSON visualizzato in un file di testo temporaneo.  
-Il JSON deve essere nel seguente formato: 
+ Il JSON deve essere nel seguente formato:
 ```
 {
   "name": "SendGridServiceName",
@@ -388,5 +388,5 @@ Il JSON deve essere nel seguente formato:
  2. Fai clic su **Extensions** dalla barra di navigazione.
  3. Fai clic su **Setup** sotto l'icona **Email**.
  4. Seleziona **SendGrid with username**.
- 5. Immetti i dati di configurazione dal file di testo temporaneo. 
+ 5. Immetti i dati di configurazione dal file di testo temporaneo.
  6. Fai clic su **Done**.

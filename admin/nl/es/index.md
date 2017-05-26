@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-22"
+lastupdated: "2017-04-13"
 
 ---
 
@@ -32,7 +32,7 @@ Si tiene acceso de administrador para {{site.data.keyword.Bluemix}} Local o {{si
 |Revisar informes y registros | Pulse **ADMINISTRACIÓN &gt; INFORMES Y REGISTROS** para ver informes de seguridad y registros de auditoría para su instancia. Ver [Visualización de informes](/docs/admin/index.html#oc_report). |
 |Ver información del sistema | Pulse **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA** para ver información del sistema como actualizaciones de mantenimiento pendientes, el nombre y la versión de la instancia, la región, el URL de API, el URL de CLI, los detalles de configuración de LDAP, las correlaciones de usuario y de grupo, las estadísticas y los dominios compartidos. Consulte [Visualización de información del sistema](/docs/admin/index.html#oc_system). |
 |Ampliar notificaciones y configurar suscripciones de notificaciones | Pulse **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA &gt; *Number* pendientes**. Puede usar webhooks para integrar con el servicio web que quiera para configurar la suscripción a notificación de sucesos para una actualización o incidencia. Consulte [Suscripción de notificaciones](/docs/admin/index.html#oc_eventsubscription). |
-{: caption="Table 1. Administrative tasks for managing your {{site.data.keyword.Bluemix_notm}} local or dedicated instance" caption-side="top"}
+{: caption="Tabla 1. Tareas administrativas para gestionar la instancia local o dedicada de Bluemix" caption-side="top"}
 
 <!-- staging only for WoW start -->
 
@@ -61,7 +61,7 @@ tabla siguiente para obtener información sobre los distintos tipos de notificac
 | Incidencias críticas | Se alerta sobre incidencias críticas en la página Estado. Pulse **Soporte** &gt; **Estado**. Puede ampliar la capacidad de notificación configurando una suscripción a una notificación que envíe un mensaje de correo electrónico a los destinatarios que usted elija. También puede configurar una suscripción que utilice a webhooks para integrar las notificaciones de la página de administración con el servicio de su elección.  |  
 | Sucesos de umbral | Puede configurar una suscripción de notificación que envía un mensaje de correo electrónico a un destinatario de su elección cuando se alcancen en el entorno los umbrales para la cuota de organización, el disco físico, la memoria física, el disco reservado o la memoria reservada. O bien, puede configurar una suscripción que utilice a webhooks para integrar las notificaciones con el servicio de su elección.  |  
 | Estado de {{site.data.keyword.Bluemix_notm}} | Siempre puede ver el estado más reciente de la plataforma, servicios y de su instancia {{site.data.keyword.Bluemix_notm}} en la página Estado. Pulse **Soporte** &gt; **Estado**.  |
-{: caption="Table 2. Event types and notifications methods" caption-side="top"}
+{: caption="Tabla 2. Tipos de sucesos y métodos de notificación" caption-side="top"}
 
 ### Configuración de suscripciones de notificaciones
 {: #seteventsub}
@@ -102,7 +102,7 @@ Para crear una suscripción de correo electrónico o webhook desde la página **
 | Cuerpo | Especifique el texto del cuerpo del mensaje que se debe enviar en el correo electrónico. Puede utilizar los valores de carga útil de IBM para rellenar la notificación por correo electrónico con información pertinente. Consulte la tabla [Valores de la sección de carga útil de mantenimiento e incidentes](index.html#payload) para identificar qué valores puede utilizar. Utilice etiquetas HTML básicas para estructurar el correo electrónico. Este campo es necesario. |
 | Para | Especifique la dirección o direcciones de correo electrónico utilizando una lista separada por comas de los destinatarios de notificación por correo electrónico. Expanda las opciones "C/o" o "C/co" para enviar una copia del mensaje a otros destinatarios. Este campo es necesario. |
 | Descripción | Añada una descripción única para la suscripción que está creando. |
-{: caption="Table 3. Fields for email notification subscriptions about thresholds" caption-side="top"}
+{: caption="Tabla 3. Campos para suscripciones a notificaciones por correo electrónico sobre los umbrales " caption-side="top"}
 
 
 {: #emailnottrhesh}
@@ -120,7 +120,8 @@ Para crear una suscripción de correo electrónico o webhook desde la página **
 | Asunto | Especifique la línea de asunto del correo electrónico. Este campo es necesario.  |
 | Cuerpo de mensaje | Especifique el texto del cuerpo del mensaje que se debe enviar en el correo electrónico. Puede utilizar los valores de carga útil de IBM para rellenar la notificación por correo electrónico con información pertinente. Consulte la tabla [Valores de la sección de carga útil](index.html#threshpayload) para identificar qué valores puede utilizar. Utilice etiquetas HTML básicas para estructurar el correo electrónico. Este campo es necesario. |
 | Para | Especifique la dirección o direcciones de correo electrónico utilizando una lista separada por comas de los destinatarios de notificación por correo electrónico. Expanda las opciones "C/o" o "C/co" para enviar una copia del mensaje a otros destinatarios. Este campo es necesario. |
-{: caption="Table 4. Fields for email notification subscriptions about maintenance updates or incidents" caption-side="top"}
+{: caption="Tabla 4. Campos para suscripciones a notificaciones por correo electrónico sobre las actualizaciones o los incidentes de mantenimiento" caption-side="top"}
+
 
 Los datos del umbral se recopilan una vez cada 6 horas. Solamente se enviará una notificación una vez cuando el valor sobrepase el valor de umbral que haya establecido. Si elige ascendente, no se envía una nueva notificación a menos que el valor caiga por debajo del umbral y, a continuación, aumente de nuevo por encima del umbral. Del mismo modo, si ha elegido descendente, sólo se le notificará si el valor sube por encima del umbral establecido y, a continuación, cae por debajo del umbral de nuevo. 
 
@@ -150,7 +151,8 @@ Una notificación de umbral de Cuota de organización incluye sólo las organiza
 | URL | Especificar el URL al que conectar su servicio web. |
 | Carga útil | Si ha seleccionado el método POST o PUT, especifique las propiedades específicas del servicio web que usa, junto con los valores de carga útil utilizados para la notificación a IBM. Consulte la tabla [Valores de la sección de carga útil de mantenimiento e incidentes](index.html#payload) para identificar qué valores puede utilizar. Si no especifica información en esta sección, recibirá una notificación que no tiene información adicional. |
 | Combinar notificaciones | Seleccione la opción para combinar las notificaciones de incidencias de todas las regiones en una única notificación. Esta opción solo está disponible para incidencias. |
-{: caption="Table 5. Form fields for a webhook notification subscription about maintenance or incidents" caption-side="top"}
+{: caption="Tabla 5. Campos de formulario para una suscripción a notificaciones de webhook sobre el mantenimiento o los incidentes" caption-side="top"}
+
 
 
 {: #webhooknotthresh}
@@ -170,7 +172,8 @@ Una notificación de umbral de Cuota de organización incluye sólo las organiza
 | Contraseña | Si elige la autorización básica, especifique la contraseña para el servicio web. |
 | Método | Seleccione **GET**, **POST** o **PUT**. |
 | URL | Especificar el URL al que conectar su servicio web. |
-{: caption="Table 6. Form fields for a webhook notification subscription about thresholds" caption-side="top"}
+{: caption="Tabla 6. Campos de formulario para una suscripción a notificaciones de webhook sobre umbrales" caption-side="top"}
+
 
 Los datos del umbral se recopilan una vez cada 6 horas. Solamente se enviará una notificación una vez cuando el valor sobrepase el valor de umbral que haya establecido. No se enviará una notificación nueva a menos que el valor caiga por debajo del umbral, si ha elegido ascendente y, a continuación, aumenta por encima del umbral de nuevo. Del mismo modo, si ha elegido descendente, sólo se le volverá a notificar si el valor sube por encima del umbral establecido y, a continuación, cae por debajo del umbral de nuevo. 
 
@@ -193,7 +196,8 @@ Una notificación de umbral de Cuota de organización incluye sólo las organiza
 | {{region}} | Región afectada | Actualización de mantenimiento e incidencia |
 | {{status}} | Estado de la actualización | Actualización de mantenimiento |
 | {{type}} | Actualización o incidencia | Actualización de mantenimiento e incidencia |
-{: caption="Table 7. Maintenance and incident payload section values" caption-side="top"}
+{: caption="Tabla 7. Valores de la sección de carga útil de incidencia y de mantenimiento" caption-side="top"}
+
 
 
 {: #threshpayload}
@@ -205,7 +209,8 @@ Una notificación de umbral de Cuota de organización incluye sólo las organiza
 | {{content.physical_memory}} | Umbral de memoria física | Umbral |  
 | {{content.reserved_disk}} | Umbral de disco reservado | Umbral |
 | {{content.reserved_memory}} | Umbral de memoria reservada | Umbral |
-{: caption="Table 8. Threshold payload section values" caption-side="top"}
+{: caption="Tabla 8. Valores de la sección de carga útil del umbral" caption-side="top"}
+
 
 Cuando se guarda su suscripción de notificaciones, recibe notificaciones a través del método que haya configurado. Las notificaciones se siguen publicando en las siguientes ubicaciones:  
  * En la página Estado para incidencias
@@ -482,7 +487,7 @@ La tabla siguiente muestra la lista de los informes de seguridad generados para 
 | Antivirus | Informe de exploración de antivirus | Software antivirus vigente. |
 | Gestión de arreglos de software | Informe de app de parches | Arreglos de software aplicados. |
 | Gestión de incidentes de seguridad | Informe de solución de incidentes de seguridad | Pruebas de incidentes de seguridad para la gestión de incidentes de seguridad. |
-{: caption="Table 9. Security report list" caption-side="top"}
+{: caption="Tabla 9. Lista de informes de seguridad" caption-side="top"}
 
 ## Visualización del estado
 {: #oc_status}
@@ -653,7 +658,7 @@ Las siguientes tablas pueden ayudarle a rellenar el archivo JSON.
 |id  | El ID del servicio. El ID debe ser exclusivo en {{site.data.keyword.Bluemix_notm}} y debe ser un GUID (identificador exclusivo global). No se puede cambiar el ID del servicio una vez registrado el servicio con {{site.data.keyword.Bluemix_notm}}. |
 |metadata | Los metadatos del plan del servicio que se muestran en el catálogo de {{site.data.keyword.Bluemix_notm}} y en la hoja de precios. El campo Metadatos es un campo opcional. Puede especificar campos adicionales para los metadatos. Consulte la tabla [Campos de metadatos](index.html#metadatafields) para obtener más información. |
 |plans | Una matriz de definiciones del plan de servicio. Consulte la tabla [Campos de plan](index.html#planfields) para obtener más información. |
-{: caption="Table 10. JSON fields" caption-side="top"}
+{: caption="Tabla 10. Campos JSON" caption-side="top"}
 
 
 {: #metadatafields}
@@ -682,7 +687,7 @@ Las siguientes tablas pueden ayudarle a rellenar el archivo JSON.
 |sdkDownloadUrl (opcional) | El URL de la página web que se abre cuando se pulsa el botón Descargar SDK. El botón Descargar SDK está en el mosaico de servicio de la página de visión general de la aplicación en el Panel de control. La página web se abre en un nuevo separador del navegador. |
 |serviceMonitorApi    | El URL a una API que devuelve los datos JSON, tal como se muestra en el siguiente ejemplo, que informa del estado del servicio. Debe tener serviceMonitorApi o serviceMonitorApp en los metadatos de servicio. Consulte el siguiente ejemplo de código para ver un ejemplo. |
 |serviceMonitorApp    | El URL a una aplicación que se puede desplegar en {{site.data.keyword.Bluemix_notm}} y enlazarse a un servicio para proporcionar la salida específica del estado del servicio. La aplicación debe devolver el mismo formato de datos JSON que serviceMonitorApi. Debe tener serviceMonitorApi o serviceMonitorApp en los metadatos de servicio. Consulte el siguiente ejemplo de código para ver un ejemplo. |
-{: caption="Table 11. Metadata fields" caption-side="top"}
+{: caption="Tabla 11. Campos de metadatos" caption-side="top"}
 
 
 ```
@@ -723,7 +728,7 @@ El siguiente ejemplo muestra cómo la respuesta JSON de GET /v2/catalog está co
 |gratuito      | Un valor booleano que indica si el plan del servicio es gratuito. El valor predeterminado es true. |
 |id       | El ID del plan del servicio. El ID debe ser exclusivo y debe ser un GUID.  |
 |metadatos (opcional)    | Los metadatos del plan del servicio que se muestran en el catálogo de {{site.data.keyword.Bluemix_notm}} y en la hoja de precios. El campo Metadatos es un campo opcional. Puede especificar los siguientes campos en el campo de metadatos: displayName, type (subscription, reservable, planDetails), bullets, costs (unitId, unit, partNumber) y paidOnly. Consulte la tabla [Campos de metadatos de plan](index.html#planmetadata) para obtener más información. |
-{: caption="Table 12. Plan fields" caption-side="top"}
+{: caption="Tabla 12. Campos del plan" caption-side="top"}
 
 
 {: #planmetadata}
@@ -735,7 +740,7 @@ El siguiente ejemplo muestra cómo la respuesta JSON de GET /v2/catalog está co
 |bullets                 | Una descripción de los recursos que se pueden utilizar con el plan. La descripción se muestra en la columna **Características** de la página de detalles de servicio del catálogo y en la hoja de precios. |
 |costs                   | La información del coste del servicio se muestra en la columna Precio de la página de detalles del servicio del catálogo y en la hoja de precios. Cada entrada de matriz contiene los siguientes campos: unitId (el ID de la unidad. Utilice la forma en plural y escriba todas las letras en mayúsculas. Para los planes gratuitos, este campo es opcional), unit (la métrica utilizada para calcular los costes del servicio. El valor de este campo se utiliza en la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} para representar la métrica de cargos)y partNumber (el identificador `part_number` que utiliza el sistema de facturación. Para los planes gratuitos, este campo es opcional).   |
 |paidOnly (opcional)     | Un valor booleano que indica si este plan de servicio está disponible solo para cuentas de pago de {{site.data.keyword.Bluemix_notm}}. Un valor de **true** significa que el plan de servicio solo es para cuentas de pago y no se puede añadir a las cuentas de prueba. Un valor **false** significa que el plan de servicio se puede añadir tanto a la cuenta de pago como a la cuenta de prueba. El valor predeterminado es **false**.	  |
-{: caption="Table 13. Plan metadata fields" caption-side="top"}
+{: caption="Tabla 13. Campos de metadatos de plan" caption-side="top"}
 
 El siguiente ejemplo muestra cómo la respuesta JSON de GET /v2/catalog está correlacionada con la página de información de servicio en el catálogo de {{site.data.keyword.Bluemix_notm}}. Específicamente, el funcionamiento de los campos de metadatos del plan descritos en el mapa de la tabla anterior a la interfaz de usuario:
 
@@ -864,7 +869,7 @@ Una cuota representa los límites de recursos para las organizaciones del entorn
 <dd>El número máximo de direcciones IP públicas que puede asignar entre todos los espacios de una organización.</dd>
 </dl>
 <strong>Nota</strong>: si aún no tiene contenedores en su entorno o si aún no tiene los contenedores del entorno configurados, recibirá un mensaje de error.
-<p>Para obtener más información sobre contenedores, consulte [Acerca de los contenedores de IBM](/docs/containers/container_ov.html). Para obtener más información sobre cuotas de contenedor, consulte [Cuota y cuentas de Bluemix](/docs/containers/container_planning_org_ov.html#container_planning_quota).</p>
+<p>Para obtener más información sobre contenedores, consulte [Acerca de los contenedores de IBM](/docs/containers/container_ov.html). Para obtener más información sobre cuotas de contenedor, consulte [Cuota y cuentas de Bluemix](/docs/containers/container_planning.html#container_planning_quota).</p>
 <strong>Nota:</strong> Los contenedores no están disponibles en la región Sídney de {{site.data.keyword.Bluemix_notm}}.</li>
 </ul>
 <li>Para guardar los cambios que haya efectuado en la página Gestionar
@@ -994,7 +999,7 @@ Es posible asignar a los usuarios los permisos siguientes con niveles de acceso 
 | Catalog | A los usuarios con el permiso **Catalog** se les puede asignar el acceso de **Lectura** o **Escritura** (modificar) los servicios que están disponibles en la instancia local o dedicada. El acceso de lectura permite que el usuario pueda acceder al mosaico Gestión de catálogos para ver los servicios disponibles. El acceso de escritura permite que el usuario pueda acceder al mosaico [Gestión de catálogos](#oc_catalog) para ver servicios, editar la visibilidad de los servicios, registrar servicios personalizados y controlar la lista de prioridades del paquete de compilación. |  
 | Reports | A los usuarios con el permiso **Reports** se les puede asignar acceso **Lectura** o **Escritura** (modificar) sobre los informes de seguridad. El acceso de lectura permite que el usuario pueda acceder al mosaico Informes y registros para descargar informes. El acceso de escritura permite que el usuario pueda ver el mosaico [Informes y registros](#oc_report), así como utilizar la CLI para cargar nuevos informes y crear nuevas categorías para que los usuarios accedan a ellas. |
 | Users | A los usuarios con el permiso **Users** se les puede asignar el acceso de **Lectura** (ver) sobre la lista de usuarios o de **Escritura** (añadir o eliminar) sobre los usuarios. Este permiso no le permite definir permisos para otros usuarios. El acceso de escritura permite que el usuario pueda añadir nuevos usuarios al entorno, suprimir usuarios del entorno y añadir usuarios existentes a las organizaciones que ya existen en el entorno. Además, el acceso de **Escritura** permite que el usuario pueda añadir nuevas organizaciones, suprimir organizaciones y editar los usuarios dentro de las organizaciones. |
-{: caption="Table 14. Permissions" caption-side="top"}
+{: caption="Tabla 14. Permisos" caption-side="top"}
 
 ## Utilización de API REST 
 {: #auth_adminapi}
@@ -1876,7 +1881,7 @@ POST /codi/v1/serviceBrokers
 | auth_password | Contraseña utilizada para conectarse con el intermediario de servicio. |
 | broker_url | URL utilizada para conectarse al intermediario de servicio. |
 | owningOrganization | Organización inicial con la que incluir en la lista blanca el servicio. |
-{: caption="Table 15. Fields" caption-side="top"}
+{: caption="Tabla 15. Campos" caption-side="top"}
 
 #### Cuerpo
 {: #registerbody}
@@ -1951,7 +1956,7 @@ Utilice la siguiente API y ejemplos de código para actualizar un servicio.
 | auth_password | Contraseña utilizada para conectarse con el intermediario de servicio. |
 | broker_url | URL utilizada para conectarse al intermediario de servicio. |
 | owningOrganization | Organización inicial con la que incluir en la lista blanca el servicio. |
-{: caption="Table 16. Requests" caption-side="top"}
+{: caption="Tabla 16. Solicitudes" caption-side="top"}
 
 #### Cuerpo
 {: #updatebody}
@@ -2013,7 +2018,7 @@ Utilice la siguiente API y ejemplos de código para suprimir un servicio.
 | **Nombre** | **Descripción** |
 |-----------------|-------------------|
 | name | Nombre del intermediario de servicio. Este nombre no puede modificarse a partir del nombre con el que se ha creado el servicio. |
-{: caption="Table 17. Parameter" caption-side="top"}
+{: caption="Tabla 17. Parámetro" caption-side="top"}
 
 ### Ruta
 
@@ -2046,14 +2051,13 @@ Content-Type: application/json
 ```
 {: screen}
 
-## Gestión de usuarios con la CLI cf
+### Gestión de usuarios con la CLI cf
 {: #usingadmincli}
 
 Puede gestionar usuarios del entorno de
 {{site.data.keyword.Bluemix_notm}} mediante la interfaz
 de línea de mandatos de Cloud Foundry con el plug-in CLI de
-administración de {{site.data.keyword.Bluemix_notm}}. Por ejemplo, puede añadir usuarios de un registro
-de LDAP.
+administración de {{site.data.keyword.Bluemix_notm}}. Debe descargar este plugin para su interfaz de línea de mandatos de Cloud Foundry. 
 
 Antes de empezar, instale la interfaz de línea de mandatos cf. El plug-in CLI de administración de {{site.data.keyword.Bluemix_notm}} necesita
 cf versión 6.11.2 o posterior. [Descargue la interfaz de línea de mandatos
@@ -2061,7 +2065,7 @@ de Cloud Foundry ![icono de enlace externo](../icons/launch-glyph.svg)](https://
 
 **Restricción:** Cygwin no admite la interfaz de línea de mandatos de Cloud Foundry. Utilice esta interfaz en una ventana de línea de mandatos que no sea la ventana de Cygwin.
 
-### Adición del plug-in CLI de administración de {{site.data.keyword.Bluemix_notm}}
+#### Adición del plug-in CLI de administración de {{site.data.keyword.Bluemix_notm}}
 
 Una vez instalada la interfaz de línea de mandatos cf, puede añadir el plug-in CLI de administración de {{site.data.keyword.Bluemix_notm}}.
 
@@ -2088,10 +2092,17 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 </li>
 </ol>
 
-Para ver una lista de mandatos, ejecute el mandato siguiente:
+Para ver una lista de submandatos disponibles de los plugins que tiene instalados, ejecute el siguiente mandato:
 
 ```
 cf plugins
+```
+{: codeblock}
+
+Para ver una lista de los grupos de mandatos disponibles para el plugin {{site.data.keyword.Bluemix_notm}} Admin, ejecute el siguiente mandato: 
+
+```
+cf ba
 ```
 {: codeblock}
 

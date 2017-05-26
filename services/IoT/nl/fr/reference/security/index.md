@@ -71,7 +71,7 @@ Les terminaux se connectent à l'aide d'un ID client et/ou du jeton d'authentifi
 
 ![image](connectivity_platform.svg)
 
-Pour plus d'informations sur les exigences relatives à TLS et aux suites de chiffrement, voir la section [Exigences TLS](connect_devices_apps_gw.html#tls_requirements) section dans la documentation `Connexions d'application, de terminal et de passerelle à Watson IoT Platform`. 
+Pour plus d'informations sur les exigences relatives à TLS et aux suites de chiffrement, voir la section [Exigences TLS](connect_devices_apps_gw.html#tls_requirements) section dans la documentation `Connexions d'application, de terminal et de passerelle à Watson IoT Platform`.
 
 Vous pouvez utiliser des certificats et des règles de sécurité pour améliorer la sécurité des connexions de terminal. Les règles de sécurité peuvent être définies pour autoriser des connexions non chiffrées, pour appliquer uniquement les connexions de sécurité de couche de transport (TLS) et pour permettre aux terminaux de s'authentifier avec des certificats côté client. Des listes noires peuvent être utilisées pour spécifier les terminaux qui ne sont pas autorisés à se connecter, ou des listes blanches peuvent être utilisées pour autoriser certains terminaux à se connecter. Pour plus d'informations sur la sécurité améliorée, voir [Gestion des risques et de la sécurité](RM_security.html).
 

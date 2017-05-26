@@ -183,7 +183,7 @@ See [code completion](#x7344030).
 ### availability zone
 {: #x7018171}
 
-A location within a region that IBM Containers runs in.
+A location within a region that {{site.data.keyword.containerlong}} runs in.
 
 
 ## B
@@ -532,7 +532,7 @@ A piece of code that configures an external event source to fire trigger events.
 ### file share
 {: #x2022902}
 
-In the IBM cloud environment, a persistent storage system where users store and share files. In IBM Containers, users can mount Docker volumes on file shares.
+In the IBM cloud environment, a persistent storage system where users store and share files. In {{site.data.keyword.containerlong}}, users can mount Docker volumes on file shares.
 
 ### fire
 {: #x2239904}

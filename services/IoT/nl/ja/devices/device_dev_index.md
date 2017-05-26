@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-03"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2017-03-14"
 デバイスをはじめ、主要な概念について詳しくは、[About Watson IoT Platform](https://console.ng.bluemix.net/docs/services/IoT/iotplatform_overview.html#watsoniotplatform_importantconcepts) を参照してください。
 
 
-# {{site.data.keyword.iot_short_notm}} へのデバイスの接続
+## {{site.data.keyword.iot_short_notm}} へのデバイスの接続
 {: #device_connect}
 HTTP プロトコルまたは MQTT プロトコルを使用して、デバイスを {{site.data.keyword.iot_short_notm}} に接続できます。購入を行い、確認応答を受け取る、というような要求/応答シナリオを構成する場合は、HTTP を使用します。玄関のベルが鳴るとモバイル・デバイスのアラートがトリガーされる、というようなイベント・シナリオを構成する場合は、MQTT を使用します。
 
@@ -35,7 +35,7 @@ HTTP プロトコルを使用した {{site.data.keyword.iot_short_notm}} への�
 MQTT プロトコルを使用した {{site.data.keyword.iot_short_notm}} へのデバイスの接続について詳しくは、[デバイスの MQTT 接続](https://console.ng.bluemix.net/docs/services/IoT/devices/mqtt.html)を参照してください。
 
 
-# デバイス開発の概説
+## デバイス開発の概説
 {: #get_started}
 既に {{site.data.keyword.iot_short_notm}} に対して使用可能になっているデバイスは、すぐに使い始めることができます。
 

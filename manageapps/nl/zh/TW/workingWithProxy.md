@@ -24,7 +24,7 @@ lastupdated: "2016-07-20"
   * [https_proxy](https://docs.cloudfoundry.org/buildpacks/proxy-usage.html)
   * [no_proxy](http://www.gnu.org/software/wget/manual/html_node/Proxies.html)
 
-您可以使用 *cf se* 或透過 *manifest.yml* 檔案來設定這些環境變數。如果您的應用程式需要在編譯打包期間從網際網路下載資源，並且已設定 Proxy 環境變數，則會根據 Proxy 環境變數的配置方式，透過所配置的 Proxy 來下載資源。
+您可以使用 *cf se* 或透過 *manifest.yml* 檔案來設定這些環境變數。如果您的應用程式需要在編譯打包期間從網際網路下載資源，並且已設定 Proxy 環境變數，則會視 Proxy 環境變數的配置方式而定，透過所配置的 Proxy 來下載資源。
 
 例如，假設您有 nodejs 應用程式，並且在 *http_proxy* 設為 *yourProxyURL* 的環境中執行。此外，假設您要容許 npm 從網際網路下載 node 模組。作法是將 *no_proxy* 設為 *npmjs.org*。
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-14"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-02-14"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Supervisión y registro
+# Visión general
 {: #monitoringandlogging}
 
 {{site.data.keyword.Bluemix}} ofrece funciones de registro y supervisión entre distintos servicios, como Cloud Foundry y {{site.data.keyword.containershort}}. Puede desarrollar, ejecutar y gestionar aplicaciones en cualquier entorno de ejecución sin la complejidad de tener que crear y mantener la infraestructura que se suele asociar con el desarrollo e inicio de lanzar una app. 
@@ -28,6 +28,7 @@ Las funciones de registro de {{site.data.keyword.Bluemix_notm}} están integrada
 Las funciones de supervisión y registro están disponibles en las siguientes regiones:
 * EE.UU. sur
 * Reino Unido
+* Frankfurt
 
 
 

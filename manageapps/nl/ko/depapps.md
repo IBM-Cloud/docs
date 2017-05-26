@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-04-11"
 ---
 
 
@@ -25,7 +25,7 @@ lastupdated: "2017-01-11"
 Cloud Foundry는 Diego를 지원합니다. Diego는 클라우드 플랫폼의 호스팅 및 구성을 위한 애플리케이션 개발 경험을 개선하는 기능 세트를 제공하는 새로운 기본 런타임 아키텍처입니다. 이 아키텍처 업데이트는 Cloud Foundry 플랫폼의 전반적 운영 및 성능을 향상시킵니다. 새 아키텍처는 Garden 및 Windows를 포함하여 여러 가지 애플리케이션 컨테이너 기술을 지원하고, 애플리케이션 컨테이너에 직접 로그인할 수 있는 SSH 패키지 및 기타 혁신적 변경사항을 제공합니다. 최신 아키텍처 업그레이드에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} Cloud Foundry: Diego is live ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://www.ibm.com/blogs/bluemix/2017/01/bluemix-cloud-foundry-diego-live/){: new_window}를 참조하십시오. 
 
 
-사용자가 작성하는 모든 새 애플리케이션은 Diego에서 실행되며, 사용자는 DEA에서 실행되는 기존 애플리케이션을 새 Diego 아키텍처로 마이그레이션하는 작업을 시작해야 합니다. 
+작성하는 모든 새 애플리케이션은 Diego에서 실행되며 DEA에서 실행되는 기존 애플리케이션을 새 Diego 아키텍처로 마이그레이션해야 합니다.
 
 **참고**: Cloud Foundry Diego 아키텍처는 모든 {{site.data.keyword.Bluemix_notm}} 퍼블릭 지역 환경에 영향을 줍니다. {{site.data.keyword.Bluemix_notm}} 데디케이티드 및 {{site.data.keyword.Bluemix_notm}} 로컬 환경은 나중에 업데이트됩니다. 
 
@@ -237,7 +237,7 @@ cf push -f appManifest.yml
 |**random-route**	|애플리케이션에 랜덤 라우트를 지정하는 부울 값입니다. 기본값은 **false**입니다.	|`random-route: true`|
 |**services**	|애플리케이션에 바인딩할 서비스입니다.	|`services: - mysql_maptest`|
 |**env**	|애플리케이션에 대한 사용자 정의 환경 변수입니다.|`env: DEV_ENV: production`|
-{: caption="표 1. Manifest YAML 파일에서 지원되는 옵션" caption-side="top"}
+{: caption="표 1. Manifest YAML 파일의 지원되는 옵션" caption-side="top"}
 
 ### 샘플 manifest.yml 파일
 
@@ -264,7 +264,7 @@ cf push -f appManifest.yml
 ## 환경 변수
 {: #app_env}
 
-환경 변수에는 {{site.data.keyword.Bluemix_notm}}에 배치된 애플리케이션의 환경 정보가 포함되어 있습니다. *DEA(Droplet Execution Agent)* 및 빌드팩을 통해 설정된 환경 변수 이외에도, {{site.data.keyword.Bluemix_notm}}에서 애플리케이션에 대해 애플리케이션별 환경 변수를 설정할 수도 있습니다.
+환경 변수에는 {{site.data.keyword.Bluemix_notm}}에 배치된 애플리케이션의 환경 정보가 포함되어 있습니다. *Diego* 및 빌드팩에서 설정한 환경 변수 외에 {{site.data.keyword.Bluemix_notm}}에서 애플리케이션의 애플리케이션 특정 환경 변수를 설정할 수 있습니다.
 
 **cf env** 명령을 사용하거나 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 통해 실행 중인 {{site.data.keyword.Bluemix_notm}} 애플리케이션의 다음 환경 변수를 확인할 수도 있습니다.
 
@@ -320,7 +320,7 @@ cf push -f appManifest.yml
 
 DEA 및 빌드팩을 통해 설정된 환경 변수에 액세스할 수도 있습니다.
 
-DEA를 통해 정의된 변수는 다음과 같습니다. 
+Diego를 통해 정의된 변수는 다음과 같습니다.
 
 <dl>
   <dt><strong>HOME</strong></dt>
@@ -328,15 +328,15 @@ DEA를 통해 정의된 변수는 다음과 같습니다.
   <dt><strong>MEMORY_LIMIT</strong></dt>
   <dd>애플리케이션의 각 인스턴스가 사용할 수 있는 최대 메모리 양입니다. 애플리케이션을 푸시할 때 애플리케이션의 <span class="ph filepath">manifest.yml</span> 파일 또는 명령행에 값을 지정할 수 있습니다.</dd>
   <dt><strong>PORT</strong></dt>
-  <dd>애플리케이션과 통신하는 데 필요한 DEA의 포트입니다. DEA는 스테이징 시 애플리케이션에 포트를 할당합니다.</dd>
+  <dd>애플리케이션과의 통신을 위한 Diego의 포트입니다. Diego는 스테이징 시 애플리케이션에 포트를 할당합니다.</dd>
   <dt><strong>PWD</strong></dt>
   <dd>빌드팩이 실행 중인 현재 작업 디렉토리입니다.</dd>
   <dt><strong>TMPDIR</strong></dt>
   <dd>임시 파일과 스테이징 파일이 저장되는 디렉토리입니다.</dd>
   <dt><strong>USER</strong></dt>
-  <dd>DEA가 실행될 때 사용되는 사용자 ID입니다.</dd>
+  <dd>Diego가 실행되는 사용자 ID입니다.</dd>
   <dt><strong>VCAP_APP_HOST</strong></dt>
-  <dd>DEA 호스트의 IP 주소입니다.</dd>
+  <dd>Diego 호스트의 IP 주소입니다.</dd>
   <dt><strong>VCAP_APPLICATION</strong></dt>
   <dd>배치된 애플리케이션에 대한 정보가 포함된 JSON 문자열입니다. 애플리케이션 이름, URI, 메모리 한계, 애플리케이션이 현재 상태가 된 시간소인 등이 이러한 정보에 포함됩니다. 예:
   <pre class="pre codeblock"><code>
@@ -413,9 +413,9 @@ DEA를 통해 정의된 변수는 다음과 같습니다.
 	  <dt><strong>IBM_JAVA_OPTIONS</strong></dt>
 	  <dd>애플리케이션을 실행할 때 사용할 Java SDK 옵션입니다.</dd>
 	  <dt><strong>IBM_JAVA_COMMAND_LINE</strong></dt>
-	  <dd>DEA에서 Liberty 프로파일 서버 인스턴스를 시작하는 Java 명령입니다.</dd>
+	  <dd>Diego에서 Liberty 프로파일 서버 인스턴스를 시작하는 Java 명령입니다.</dd>
 	  <dt><strong>WLP_USR_DIR</strong></dt>
-	  <dd>DEA에서 Liberty 프로파일 서버 인스턴스를 시작할 때 공유 리소스 및 서버 정의의 위치입니다.</dd>
+	  <dd>Diego에서 Liberty 프로파일 서버 인스턴스를 시작할 때 공유 리소스 및 서버 정의의 위치입니다.</dd>
 	  <dt><strong>WLP_OUTPUT_DIR</strong></dt>
 	  <dd>실행 중인 Liberty 프로파일 서버 인스턴스의 로그 파일 및 작업 디렉토리와 같은 생성된 출력의 위치입니다.</dd>
 	  </dl>

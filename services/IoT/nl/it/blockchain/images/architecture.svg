@@ -258,15 +258,15 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.57"
      inkscape:cx="387.61773"
-     inkscape:cy="118.09943"
+     inkscape:cy="92.62172"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="in"
      inkscape:window-width="1920"
-     inkscape:window-height="1027"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-height="1019"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -377,7 +377,7 @@
          sodipodi:role="line"
          x="195.16623"
          y="421.15582"
-         id="tspan4323">con IoT Blockchain</tspan><tspan
+         id="tspan4323">with IoT Blockchain</tspan><tspan
          sodipodi:role="line"
          x="195.16623"
          y="436.15582"
@@ -538,11 +538,7 @@
          sodipodi:role="line"
          x="250.21838"
          y="627.85205"
-         id="tspan6913">Simulatore </tspan><tspan
-         sodipodi:role="line"
-         x="250.21838"
-         y="641.60205"
-         id="tspan3531">dispositivo</tspan></text>
+         id="tspan6913">Device Simulator</tspan></text>
     <g
        id="g6940"
        transform="matrix(0.06176845,0,0,0.06559102,215.54778,564.56484)">
@@ -581,11 +577,11 @@
          sodipodi:role="line"
          id="tspan266400-6"
          x="426.27188"
-         y="407.00714">Fabric IBM Blockchain</tspan><tspan
+         y="407.00714">IBM Blockchain fabric </tspan><tspan
          sodipodi:role="line"
          x="426.27188"
          y="422.00714"
-         id="tspan6717">(fornito da IBM)</tspan><tspan
+         id="tspan6717">(Provided by IBM)</tspan><tspan
          sodipodi:role="line"
          x="426.27188"
          y="437.00714"
@@ -649,7 +645,7 @@
        x="503.65186"
        font-size="11"
        id="text56834-0-3"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Convalida</text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Validate</text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot6453"
@@ -707,11 +703,15 @@
          sodipodi:role="line"
          id="tspan18191-9-6"
          x="483.65396"
-         y="701.80188">IU di monitoraggio</tspan><tspan
+         y="701.80188">IoT Blockchain</tspan><tspan
          sodipodi:role="line"
          x="483.65396"
          y="715.55188"
-         id="tspan18193-1-8">IoT Blockchain</tspan></text>
+         id="tspan6878-4-2">Monitoring UI</tspan><tspan
+         sodipodi:role="line"
+         x="483.65396"
+         y="729.30188"
+         id="tspan18193-1-8" /></text>
     <rect
        x="135.59711"
        y="458.25388"
@@ -901,7 +901,7 @@
        x="259.10245"
        font-size="11"
        id="text56834"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Proxy Blockchain</text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Blockchain proxy</text>
     <path
        inkscape:connector-curvature="0"
        id="path13579-8"
@@ -948,8 +948,18 @@
          sodipodi:role="line"
          x="24.11994"
          y="627.10974"
+         id="tspan6808-9"
+         style="font-size:7.5px">Flow editor</tspan><tspan
+         sodipodi:role="line"
+         x="24.11994"
+         y="636.48474"
+         id="tspan6878-8-3"
+         style="font-size:7.5px" /><tspan
+         sodipodi:role="line"
+         x="24.11994"
+         y="645.85974"
          id="tspan18193-4-9"
-         style="font-size:7.5px">Editor del flusso</tspan></text>
+         style="font-size:7.5px" /></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:1.63913596;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 125.07359,619.77411 84.1033,0"
@@ -1016,15 +1026,15 @@
          sodipodi:role="line"
          x="33.287354"
          y="455.34439"
-         id="tspan44245">Dashboard</tspan><tspan
+         id="tspan44245">Watson IoT </tspan><tspan
          sodipodi:role="line"
          x="33.287354"
          y="469.09439"
-         id="tspan3523">Watson IoT </tspan><tspan
+         id="tspan5792">Platform</tspan><tspan
          sodipodi:role="line"
          x="33.287354"
          y="482.84439"
-         id="tspan9810">Platform</tspan></text>
+         id="tspan9810">Dashboard</tspan></text>
     <g
        id="g6940-3"
        transform="matrix(0.06176845,0,0,0.06559102,-17.490542,564.89954)">

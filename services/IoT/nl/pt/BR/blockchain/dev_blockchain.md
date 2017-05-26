@@ -13,7 +13,7 @@ lastupdated: "2017-03-14"
 {:pre: .pre}
 
 
-# Desenvolvendo contratos inteligentes para integração de blockchain ao {{site.data.keyword.iot_short_notm}}
+# Desenvolvendo contratos inteligentes do blockchain
 {: #iotblockchain_link}
 
 Use o {{site.data.keyword.blockchainfull}} e o ambiente de desenvolvimento do Hyperledger para criar e testar seus próprios contratos inteligentes derivados dos contratos de amostra fornecidos pela IBM.

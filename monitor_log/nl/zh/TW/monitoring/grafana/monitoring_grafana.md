@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2017-03-14"
 
 請完成下列步驟，以建立 Grafana 儀表板：
 
-1. 從 Web 瀏覽器啟動 Grafana。如需相關資訊，請參閱[從 Web 瀏覽器進入 Grafana 儀表板](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_browser)。
+1. 從 Web 瀏覽器啟動 Grafana。如需相關資訊，請參閱[從 Web 瀏覽器導覽至 Grafana 儀表板](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_browser)。
 
 2. 儲存預設儀表板。
 

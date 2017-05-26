@@ -73,7 +73,7 @@ Prima di iniziare, [riesamina i Termini di utilizzo per il servizio ![Icona link
 
     * Se desideri che la pipeline verifichi il tuo spazio Bluemix per il servizio e che un'applicazione associ il servizio al contenitore, seleziona la casella di spunta. Se il servizio o l'applicazione associata non esistono, la pipeline aggiunge il piano gratuito del servizio al tuo spazio. L'applicazione associata che viene creata è denominata `pipeline_bridge_app`. Quindi, la pipeline utilizza le credenziali da pipeline_bridge_app per accedere ai servizi associati.
 
-    * Se hai già configurato il servizio e associato l'applicazione nel tuo spazio Bluemix o se vuoi [configurare questi requisiti manualmente](/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline){: new_window}, lascia deselezionata la casella di spunta.
+    * Se hai già configurato il servizio e associato l'applicazione nel tuo spazio Bluemix o se vuoi [configurare questi requisiti manualmente](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}, lascia deselezionata la casella di spunta.
 
   f. Nel campo **Minuti di attesa per il completamento dell'analisi**, immetti un valore compreso tra 0 e 59 minuti. Il valore predefinito è 5 minuti. Un URL al dashboard di Static Analyzer è presente nei log della console alla fine del lavoro.
 
@@ -154,7 +154,7 @@ To create the globalization stage and job:
 
     * If you want the pipeline to check your Bluemix space for the service and an app that binds the service to the container, select this check box. If the service or bound app does not exist, the pipeline adds the free plan of the service to your space for you. The bound app that is created is named `pipeline_bridge_app`. Then, the pipeline uses the credentials from pipeline_bridge_app to access the bound services.
 
-    * If you configured the service and bound app in your Bluemix space already or if you want to [configure these requirements manually](https://www.ng.bluemix.net/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline), leave this check box cleared.
+    * If you configured the service and bound app in your Bluemix space already or if you want to [configure these requirements manually](/docs/containers/container_integrations.html#container_binding_pipeline), leave this check box cleared.
 
   g. For the Globalization bundle prefix, enter a prefix for the bundle name, which is structured in this format: `<globalization_bundle_prefix>.path.to.source.file`. The pipeline job creates this Globalization bundle for you in the Globalization Pipeline service.
 
@@ -237,7 +237,7 @@ Per creare le notifiche Slack:
 
 6. Ripeti questi passi per inviare le notifiche Slack per altre fasi che includono i lavori di IBM Container Service, IBM Security Analyzer e IBM Globalization.
 
-La notifica di build che viene visualizzata in Slack include un link al progetto e alcune volte al dashboard del progetto. Per aprire questi link un utente Slack deve essere registrato a Bluemix ed essere membro del progetto in cui è configurata la pipeline. 
+La notifica di build che viene visualizzata in Slack include un link al progetto e alcune volte al dashboard del progetto. Per aprire questi link un utente Slack deve essere registrato a Bluemix ed essere membro del progetto in cui è configurata la pipeline.
 
 ## Creazione di notifiche HipChat per le build nella pipeline
 {: #deliverypipeline_hipchat}
@@ -331,8 +331,8 @@ Puoi automatizzare la fornitura continua delle tue applicazioni o gruppi di cont
 ## Creazione e distribuzione delle immagini del contenitore con la pipeline
 {: #deliverypipeline_containers}
 
-Puoi automatizzare le tue build dell'applicazione e le tue distribuzioni del contenitore a Bluemix utilizzando IBM Continuous Delivery Pipeline for Bluemix. Il servizio Delivery Pipeline supporta: 
+Puoi automatizzare le tue build dell'applicazione e le tue distribuzioni del contenitore a Bluemix utilizzando IBM Continuous Delivery Pipeline for Bluemix. Il servizio Delivery Pipeline supporta:
   - La creazione di immagini Docker
   - La distribuzione di immagini nei contenitori a Bluemix
 
-Per ulteriori informazioni sulle istruzioni introduttive, consulta la [panoramica su Delivery Pipeline e i contenitori](/docs/containers/container_pipeline_ov.html#container_pipeline_ov){: new_window}.
+Per ulteriori informazioni sulle istruzioni introduttive, consulta la [panoramica su Delivery Pipeline e i contenitori](/docs/containers/container_integrations.html#container_pipeline_ov){: new_window}.

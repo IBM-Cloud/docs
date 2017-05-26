@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-19"
+lastupdated: "2017-04-05"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-01-19"
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# Conexión de aplicaciones, dispositivos y pasarelas a {{site.data.keyword.iot_short_notm}}
+# Conexión de aplicaciones, dispositivos y pasarelas utilizando la API
 {: #connect_devices_apps_gw}
 
 Puede conectar aplicaciones, dispositivos y pasarelas a {{site.data.keyword.iot_full}} mediante el protocolo de MQTT. También puede utilizar la API REST HTTP para conectar dispositivos a {{site.data.keyword.iot_short_notm}}.
@@ -31,7 +31,7 @@ Para conectar clientes de dispositivos, aplicaciones y pasarelas a la instancia 
 
 ### URL de conexión de la API REST de HTTP
 
-<pre class="pre">https://<var class="keyword varname">orgId</var>.internetofthings.ibmcloud.com/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.internetofthings.ibmcloud.com/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 {: codeblock}
 
 **Notas**

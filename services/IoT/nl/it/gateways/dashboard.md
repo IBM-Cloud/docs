@@ -19,7 +19,7 @@ lastupdated: "2017-03-16"
 # Connessione ai gateway
 {: #IoT_connectGateway}
 
-Prima di poter iniziare a ricevere i dati dai dispositivi collegati ai tuoi gateway, devi collegare il gateway a {{site.data.keyword.iot_full}}. Il collegamento di un gateway a {{site.data.keyword.iot_short_notm}} implica la creazione di un tipo di dispositivo gateway e la registrazione del gateway con {{site.data.keyword.iot_short_notm}}. Puoi quindi utilizzare le informazioni registrate per collegare il gateway a {{site.data.keyword.iot_short_notm}}.
+Prima di poter iniziare a ricevere i dati dai dispositivi collegati ai tuoi gateway, devi collegare il gateway a {{site.data.keyword.iot_full}}. Il collegamento di un gateway a {{site.data.keyword.iot_short_notm}} implica la creazione di un tipo dispositivo gateway e la registrazione del gateway con {{site.data.keyword.iot_short_notm}}. Puoi quindi utilizzare le informazioni registrate per collegare il gateway a {{site.data.keyword.iot_short_notm}}.
 {:shortdesc}
 
 I gateway sono una classe specializzata di dispositivi in {{site.data.keyword.iot_short_notm}}. I gateway sono utilizzati come punti di accesso a {{site.data.keyword.iot_short_notm}} per altri dispositivi.
@@ -49,11 +49,11 @@ Per aggiungere un gateway dal dashboard {{site.data.keyword.iot_short_notm}}:
 
 1. Nel dashboard {{site.data.keyword.iot_short_notm}}, seleziona **Devices**.
 2. Fai clic su **Add Device**.
-3. Seleziona o crea un tipo di dispositivo per il dispositivo che stai aggiungendo.  
-Ogni dispositivo collegato a {{site.data.keyword.iot_short_notm}} deve essere associato a un tipo di dispositivo. I tipi di dispositivo sono gruppi di dispositivi che condividono caratteristiche comuni.  
+3. Seleziona o crea un tipo dispositivo per il dispositivo che stai aggiungendo.  
+Ogni dispositivo collegato a {{site.data.keyword.iot_short_notm}} deve essere associato a un tipo dispositivo. I tipi di dispositivo sono gruppi di dispositivi che condividono caratteristiche comuni.  
  1. Fai clic su **Create device type** quindi su **Create gateway type**.
- 2. Immetti un nome del tipo di dispositivo come ad esempio `my_gateway_type` e una descrizione per il tipo di gateway.   
- **Importante:** il nome del tipo di dispositivo non deve essere più lungo di 36 caratteri e può contenere solo:
+ 2. Immetti un nome del tipo dispositivo come ad esempio `my_gateway_type` e una descrizione per il tipo di gateway.   
+ **Importante:** il nome del tipo dispositivo non deve essere più lungo di 36 caratteri e può contenere solo:
  <ul>
   <li>Caratteri alfanumerici (a-z, A-Z, 0-9)</li>
   <li>Trattini (-)</li>
@@ -65,7 +65,7 @@ Ogni dispositivo collegato a {{site.data.keyword.iot_short_notm}} deve essere as
 10. Fai clic su **Next** per avviare il processo di aggiunta del tuo dispositivo gateway con il tipo di gateway selezionato.
 11. Immetti un ID dispositivo, come ad esempio `my_gateway_device`.  
 L'ID dispositivo viene utilizzato per identificare il dispositivo gateway nel dashboard {{site.data.keyword.iot_short_notm}} ed è anche un parametro obbligatorio per la connessione del tuo dispositivo gateway a {{site.data.keyword.iot_short_notm}}.  
-**Importante:** l'ID del tipo di dispositivo non deve essere più lungo di 36 caratteri e può contenere solo:
+**Importante:** l'ID del tipo dispositivo non deve essere più lungo di 36 caratteri e può contenere solo:
  <ul>
  <li>Caratteri alfanumerici (a-z, A-Z, 0-9)</li>
  <li>Trattini (-)</li>
@@ -86,7 +86,7 @@ L'ID dispositivo viene utilizzato per identificare il dispositivo gateway nel da
  - ID del dispositivo. **Suggerimento:** per i dispositivi collegati alla rete, questo può essere ad esempio l'indirizzo MAC senza i due punti di separazione.
  - Metodo di autenticazione, come ad esempio `token`
  - Token di autenticazione, come ad esempio `PtBVriRqIg4uh)_-Kl`  
-  **Suggerimento:** hai bisogno dell'ID organizzazione, del token di autenticazione, del tipo di dispositivo e dell'ID del dispositivo per configurare il tuo dispositivo per il collegamento a {{site.data.keyword.iot_short_notm}}.  
+  **Suggerimento:** hai bisogno dell'ID organizzazione, del token di autenticazione, del tipo dispositivo e dell'ID del dispositivo per configurare il tuo dispositivo per il collegamento a {{site.data.keyword.iot_short_notm}}.  
 
 Congratulazioni, hai registrato il tuo dispositivo gateway. Ora puoi configurare il tuo dispositivo gateway per collegarsi a {{site.data.keyword.iot_short_notm}}
 
@@ -106,7 +106,7 @@ Per informazioni sulla connessione de tuo gateway a  {{site.data.keyword.iot_sho
 ## Passo 3: collegamento dei dispositivi tramite il gateway
 {: #gateway_devices}
 
-I dispositivi collegati al gateway vengono automaticamente aggiunti a {{site.data.keyword.iot_short_notm}} quando il gateway pubblica i messaggi dal dispositivo. Vengono automaticamente creati il tipo di dispositivo e il dispositivo stesso quando il gateway pubblica un messaggio per una combinazione del tipo di dispositivo e dell'ID del dispositivo che non esiste ancora.
+I dispositivi collegati al gateway vengono automaticamente aggiunti a {{site.data.keyword.iot_short_notm}} quando il gateway pubblica i messaggi dal dispositivo. Vengono automaticamente creati il tipo dispositivo e il dispositivo stesso quando il gateway pubblica un messaggio per una combinazione del tipo dispositivo e dell'ID del dispositivo che non esiste ancora.
 
 Per informazioni sulla registrazione e sulla pubblicazione automatica del dispositivo e la ricezione dei dati per i dispositivi collegati, consulta [Connettività MQTT per i gateway](mqtt.html).
 
@@ -130,8 +130,8 @@ Per installare EAA sul tuo gateway:
 1. Nel dashboard {{site.data.keyword.iot_short}}, passa a **Rules**.
 2. Fai clic su **Download Edge Agent** per andare alla [IBM Edge Analytics community ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true){:new_window}.
 3. Passa alla sezione **Files** e scarica le directory compresse appropriate per il tuo tipo di gateway.  
-La soluzione Edge Analytics è disponibile come una SDK per i dispositivi che supportano Java o come un DSLink per i dispositiv gateway Cisco.
-4. Per informazioni su come installare e configurare il componente software EAA nel tuo gateway, consulta le seguenti informazioni: 
+La soluzione Edge Analytics è disponibile come una SDK per i dispositivi che supportano Java o come un DSLink per i dispositivi gateway Cisco.
+4. Per informazioni su come installare e configurare il componente software EAA nel tuo gateway, consulta le seguenti informazioni:
  - SDK  
  Consulta il file readme e il PDF e i link dei video disponibili nella community.  
  Ricetta [Edge Recipe for SDK - Getting Started (SDK) ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/getting-started-with-the-ibm-edge-analytics-sdk-in-watson-iot-platform/){:new_window}.

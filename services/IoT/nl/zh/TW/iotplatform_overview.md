@@ -37,6 +37,8 @@ lastupdated: "2017-03-13"
 
 基於安全考量，無法進行跨組織通訊。若要在兩個組織之間傳輸資料，唯一的方法是在每個組織中各建立一個應用程式，用來與另一個組織中的應用程式通訊。
 
+**附註：**您的 {{site.data.keyword.iot_short_notm}} 組織 ID 與 [Bluemix 組織](../../docs/admin/orgs_spaces.html#orginfo)不同。
+
 ### 裝置
 
 裝置具有網際網路連線，並且可將資料推送至雲端。不過，裝置無法直接與其他裝置通訊，而是要接受應用程式的指令，並且將事件傳送至應用程式。{{site.data.keyword.iot_short_notm}} 中的裝置會以唯一的鑑別記號來識別。裝置必須先登錄，才能連接至 {{site.data.keyword.iot_short_notm}}。

@@ -180,8 +180,8 @@ cf bind-service TestNode cloudant100
 
   例えば、Node.js アプリはこの情報に次のようにアクセスします。
   ```
-if (process.env.VCAP_SERVICES) {
-var env = JSON.parse(process.env.VCAP_SERVICES);
+  if (process.env.VCAP_SERVICES) {
+        var env = JSON.parse(process.env.VCAP_SERVICES);
         var cloudant = env['cloudantNoSQLDB'][0].credentials;
   } else {
         var cloudant = {

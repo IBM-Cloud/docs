@@ -44,7 +44,7 @@ lastupdated: "2017-03-16"
 注册网关涉及将设备分类为网关类型，为网关命名，以及提供网关信息。然后，提供连接令牌，或接受 {{site.data.keyword.iot_short_notm}} 生成的令牌。
 
 
-**提示：**可以在 {{site.data.keyword.iot_short_notm}} 仪表板中一次添加一个网关，也可以使用[组织管理 API ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window}  一次添加一个或多个网关。
+**提示：**可以在 {{site.data.keyword.iot_short_notm}} 仪表板中一次添加一个网关，也可以使用[组织管理 API ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window} 一次添加一个或多个网关。
 
 要在 {{site.data.keyword.iot_short_notm}} 仪表板中添加网关，请执行以下操作：
 

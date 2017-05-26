@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-03-13"
+lastupdated: "2017-03-21"
 
 ---
 
@@ -22,10 +22,11 @@ API를 사용하여 업데이트 위치 요청이 작성되었거나 디바이�
 
 **중요:** 관리 디바이스만 고유 위치를 설정할 수 있습니다. 모든 비관리 디바이스에 API를 사용하여 수동으로 설정된 위치가 있어야 합니다. 디바이스 위치 설정에 대한 자세한 정보는 [위치 찾기 요청](../../devices/device_mgmt/index.html#update-location)을 참조하십시오.
 
-### The Weather Company용 REST API
-The Weather Company용 REST API에 액세스하려면 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![외부 링크 아이콘](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather){: new_window} 문서의 디바이스 위치 날씨 절을 참조하십시오. 
+## The Weather Company용 REST API
+The Weather Company용 REST API에 액세스하려면
+[{{site.data.keyword.iot_short_notm}} HTTP REST API ![외부 링크 아이콘](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather){: new_window} 문서의 디바이스 위치 날씨 절을 참조하십시오. 
 
-### 날씨 데이터 보기
+## 날씨 데이터 보기
 
 디바이스 위치에 대해 검색된 날씨 데이터를 보려면 다음을 수행하십시오. 
 1. **디바이스** 분할창에서 디바이스를 클릭하십시오. 

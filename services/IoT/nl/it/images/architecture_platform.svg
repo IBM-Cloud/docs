@@ -775,17 +775,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.3758788"
-     inkscape:cx="295.3906"
-     inkscape:cy="164.89702"
+     inkscape:zoom="1.68"
+     inkscape:cx="240.20471"
+     inkscape:cy="159.72601"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="in"
      inkscape:window-width="1920"
-     inkscape:window-height="1027"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-height="1019"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -799,7 +799,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1019,8 +1019,17 @@
          sodipodi:role="line"
          x="42.015415"
          y="464.11569"
+         id="tspan8202">IoT Devices</tspan><tspan
+         sodipodi:role="line"
+         x="42.015415"
+         y="477.86569"
+         id="tspan6878-8"
+         style="font-size:7.5px;stroke:none" /><tspan
+         sodipodi:role="line"
+         x="42.015415"
+         y="491.61569"
          id="tspan18193-4"
-         style="font-size:11px;stroke:none">Dispositivi IoT</tspan></text>
+         style="font-size:7.5px;stroke:none" /></text>
     <rect
        ry="0"
        rx="0"
@@ -1040,11 +1049,11 @@
          y="576.93506"
          x="270.40372"
          sodipodi:role="line"
-         id="tspan6445-3">Integrazione</tspan><tspan
+         id="tspan6445-3">Blockchain</tspan><tspan
          y="590.68506"
          x="270.40372"
          sodipodi:role="line"
-         id="tspan4781">Blockchain</tspan></text>
+         id="tspan4781">integration</tspan></text>
     <rect
        ry="0"
        rx="0"
@@ -1068,8 +1077,22 @@
          sodipodi:role="line"
          x="42.015415"
          y="531.6109"
+         id="tspan8202-7">IoT Gateways</tspan><tspan
+         sodipodi:role="line"
+         x="42.015415"
+         y="545.3609"
+         id="tspan6808-9"
+         style="font-size:7.5px" /><tspan
+         sodipodi:role="line"
+         x="42.015415"
+         y="559.1109"
+         id="tspan6878-8-3"
+         style="font-size:7.5px" /><tspan
+         sodipodi:role="line"
+         x="42.015415"
+         y="572.8609"
          id="tspan18193-4-9"
-         style="font-size:11px">Gateway IoT</tspan></text>
+         style="font-size:7.5px" /></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
@@ -1172,9 +1195,13 @@
        id="text266398-0"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
+         id="tspan266400-6"
          x="440.41376"
-         y="430.50845"
-         id="tspan266402-0">Applicazioni e servizi</tspan></text>
+         y="430.50845">Apps and Services</tspan><tspan
+         sodipodi:role="line"
+         x="440.41376"
+         y="445.50845"
+         id="tspan266402-0" /></text>
     <rect
        ry="0"
        rx="0"
@@ -1194,15 +1221,15 @@
          sodipodi:role="line"
          x="54.029083"
          y="588.73309"
-         id="tspan44245">Dashboard</tspan><tspan
+         id="tspan44245">Watson IoT </tspan><tspan
          sodipodi:role="line"
          x="54.029083"
          y="602.48309"
-         id="tspan3640">Watson IoT </tspan><tspan
+         id="tspan5792">Platform</tspan><tspan
          sodipodi:role="line"
          x="54.029083"
          y="616.23309"
-         id="tspan9810">Platform</tspan></text>
+         id="tspan9810">Dashboard</tspan></text>
     <rect
        ry="0"
        rx="0"
@@ -1240,7 +1267,7 @@
          sodipodi:role="line"
          x="43.057407"
          y="394.01312"
-         id="tspan6913-6">Applicazioni</tspan></text>
+         id="tspan6913-6">Applications</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path8199"
@@ -1513,7 +1540,7 @@
          sodipodi:role="line"
          x="494.67459"
          y="464.4097"
-         id="tspan6913-6-2">Applicazioni</tspan></text>
+         id="tspan6913-6-2">Applications</tspan></text>
     <g
        id="g5240-2"
        transform="matrix(0.09339235,0,0,0.09339235,442.38152,439.69303)"
@@ -1663,11 +1690,15 @@
          id="tspan44239-7-2"
          y="464.08423"
          x="270.03796"
-         sodipodi:role="line">API Rest &amp; </tspan><tspan
+         sodipodi:role="line">Rest &amp; </tspan><tspan
          y="477.83423"
          x="270.03796"
          sodipodi:role="line"
-         id="tspan6445-3-0">in tempo reale</tspan></text>
+         id="tspan7973-8">Real-time APIs</tspan><tspan
+         y="491.58423"
+         x="270.03796"
+         sodipodi:role="line"
+         id="tspan6445-3-0" /></text>
     <rect
        style="opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:1.00000012;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4785-5"

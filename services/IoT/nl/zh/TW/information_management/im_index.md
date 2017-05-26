@@ -2,11 +2,11 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-25"
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -15,969 +15,150 @@ lastupdated: "2017-03-14"
 # 使用介面來對映裝置資料（測試版）
 {: #im_index}
 
-使用 {{site.data.keyword.iot_full}} 的介面對映特性，來組織和整合送入及送出裝置資料。
+應用程式介面可擴充[裝置類型](#resources)概念來更妥善地控制流過 {{site.data.keyword.iot_short_notm}} 的資料，以及提供 IoT 視圖的不限制裝置視圖。
 {:shortdesc}
 
-**重要事項：**介面對映特性目前只能當作「測試版」特性使用。在最終版本之前，「測試版」更新可能會包含與現行版本不相容的變更。除非是最終發行版本，否則強烈建議不要在正式作業應用程式中使用「測試版」特性。若要接收其他資訊，以及提供對此「測試版」的意見，請[登錄 IM Beta 程式 ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/software/support/trial/cst/forms/nomination.wss?id=7050){: new_window}，讓我們知道您的想法。
+**重要事項：**介面對映特性是測試版特性。進行中的測試版更新以及最終版本可能會包含與現行版本不相容的變更。除非是最終版本，否則強烈建議不要在正式作業應用程式中使用測試版特性。若要接收其他資訊，以及提供對此測試版的意見，您可以[登錄資訊管理測試版程式 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://www.ibm.com/software/support/trial/cst/forms/nomination.wss?id=7050){:new_window}。
+
 
 ## 概觀
 {: #overview}
 
-您可以使用介面對映特性來開發應用程式的介面。您可能有不同類型、品牌或型號的裝置或感應器要連接至 {{site.data.keyword.iot_short_notm}}，而且這些裝置可能會以不同的格式來發佈資料。使用介面對映特性來正規化送入資料，並將應用程式與特定裝置連接方式的複雜性取消連結，以簡化應用程式。
+使用應用程式介面來建立裝置及事物的共用抽象化，以改善重複使用和維護，以及管理 IoT 生態系統的複雜性，同時隔離應用程式與資料變更。應用程式介面已與裝置與 {{site.data.keyword.iot_short_notm}} 進行通訊的訊息資料變異取消連結。
 
-例如，您有兩個溫度感應器。一個感應器測量攝氏度數的溫度，一個感應器則測量華氏度數的溫度。
+透過應用程式介面，應用程式可以存取裝置及事物的現行狀態。狀態包含應用程式介面所定義的一組狀態內容。裝置傳送狀態變更事件時，這些內容的最新值會儲存在 {{site.data.keyword.iot_short_notm}} 中，而且使用 HTTP API 即可在要求時供應用程式使用。
+
+使用應用程式介面，您可以：
+- 將狀態內容對映至事件訊息資料
+- 定義您喜好的資料結構
+- 定義裝置狀態的多個表示法或視圖
+- 訂閱裝置狀態，或隨時透過 HTTP API 進行查詢
+
+應用程式介面的一些常見使用案例包括：
+- 提供一致的介面，讓應用程式開發人員透過 REST 類似方式來存取事件驅動的裝置資料。
+- 正規化不同廠牌或型號之裝置的資料，而這些裝置會以不同的格式來發佈資料。
+- 合併來自數個不同裝置類型的事件資料，以建立任何給定 IoT 事物的模型。
+- 修改及轉換資料格式，使其符合您的應用程式模型。  
+
+如需介面 API 文件（測試版），請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html){: new_window}。   
+
+## 範例
+{: #examples}
+下列介面範例說明兩個可能的解決方案。
+
+### 範例 1：將異質溫度感應器對映至應用程式介面
+{: #device-type-example}
+在此範例中，所建立的應用程式介面會以某種格式提供同質溫度狀態資料，而不論實際裝置事件訊息有效負載格式為何。TemperatureSensor1 會將 `{ "t" : 34.5 }` 的攝氏溫度讀數發佈至 {{site.data.keyword.iot_short_notm}}。TemperatureSensor2 會發佈華氏溫度讀數 `{ "temp" : 72.55 }`。溫度讀數會發佈為個別事件。
+
+如需可說明此範例的詳細完整情境，請參閱[應用程式介面情境 1](im_index_scenario.html)。
 
 ![{{site.data.keyword.iot_short_notm}} 上溫度感應器裝置與應用程式之間的對映。](images/Information "{{site.data.keyword.iot_short_notm}} 上溫度感應器裝置與應用程式之間的對映")
 
-溫度感應器 1 會將 `{ "t" : 34.5 }` 的溫度讀數發佈至 {{site.data.keyword.iot_short_notm}}。這是攝氏值的溫度讀數。溫度感應器 2 會將 `{ "temp" : 72.55 }` 的溫度讀數發佈至 {{site.data.keyword.iot_short_notm}}。這是不同類型的溫度感應器，其讀數為華氏值。溫度讀數會以個別事件形式發佈至 {{site.data.keyword.iot_short_notm}}。
+在執行應用程式介面資料流程時，您可以對送入的資料執行計算，以將這些讀數正規化為一致形式來進行處理。這表示您不需要撰寫應用程式，即可瞭解或轉換不同的溫標。應用程式會接收單一正規化狀態，並使用 **temperature** 狀態內容，而非裝置特定 **t** 及 **temp** 內容。
 
-使用介面對映特性，即可將這些讀數正規化成一致形式來進行處理。您不需要撰寫應用程式，即可瞭解或轉換不同的溫標。應用程式會接收單一正規化視圖，而且可以連接至 **temperature**，而非連接至 **t** 和 **temp**。
+### 範例 2：將多個氣候裝置對映至一個事物類型應用程式介面
+{: #thing-type-example}  
+在此範例中，我們會以不同濕度計裝置的形式新增一組濕度感應器，來展開裝置類型範例。使用事物類型應用程式介面，即可順暢地將不同裝置類型的資料合併成一個代表某會議室內所有裝置及感應器的應用程式介面。應用程式現在可以連接至會議室事物應用程式介面，來取得針對某會議室收集到的氣候資料。
 
-## 裝置與應用程式之間的資料流程
-{: #mapping}
+如需可說明此範例的詳細完整情境，請參閱[應用程式介面情境 2](im_index_scenario_thing.html)。
 
-下列流程圖顯示如何在介面對映特性中使用不同的資源：
+![{{site.data.keyword.iot_short_notm}} 上溫度及濕度事物與應用程式之間的對映。](images/Information "{{site.data.keyword.iot_short_notm}} 上某會議室的多個環境感應器與應用程式之間的對映")
 
-![{{site.data.keyword.iot_short_notm}} 上裝置與應用程式之間的流程。](images/Information "{{site.data.keyword.iot_short_notm}} 上裝置與應用程式之間的流程")
+溫度感應器 1 及濕度感應器 3 會發佈在會議室 R1 收集到的環境資料。溫度及濕度感應器資料分別對映至兩個裝置類型應用程式介面，而根據前一個範例，一個是用於溫度計裝置類型，一個則是用於濕度計裝置類型。我們現在要建立稱為 Room 的事物類型，並實例化兩個會議室事物實例（R1 及 R2）。
 
-下圖說明如何在此流程中使用綱目：
+我們現在可以設定包括溫度計及濕度計應用程式介面的組合，然後將正確的環境感應器對映至每一個會議室實例（例如，D1 及 D3 對映至 R1）。一般使用者應用程式現在可以要求特定會議室事物 ID 的狀態，以及取得會議室溫度及濕度狀態，而不需要知道基礎裝置架構。
 
-![{{site.data.keyword.iot_short_notm}} 上裝置與應用程式之間的流程。](images/Information "{{site.data.keyword.iot_short_notm}} 上裝置與應用程式之間的流程")
-
-JSON 綱目是用來定義與驗證送入事件格式及[裝置狀態](#key_concepts)。如需這些綱目的相關資訊，請參閱[綱目](#resources)。
-
-## 主要概念
-{: #key_concepts}
-
-介面對映特性藉由新增實體介面資源及應用程式介面資源，更適當地控制流過 {{site.data.keyword.iot_short_notm}} 的資料，來擴充[裝置類型](#resources)的現行概念。
-
-下圖使用[資源](#resources)來說明 {{site.data.keyword.iot_short_notm}} 上裝置與應用程式之間的邏輯對映：
-
-![{{site.data.keyword.iot_short_notm}} 上裝置與應用程式之間的邏輯對映。](images/im_mapping.svg "{{site.data.keyword.iot_short_notm}} 上裝置與應用程式之間的邏輯對映")
-
-介面對映是指裝置狀態的概念。裝置狀態包含應用程式介面所定義的一組內容。這些內容的最新值儲存在 {{site.data.keyword.iot_short_notm}} 中，而且使用 HTTP API 即可在要求時供應用程式使用。
-
-若要處理來自入埠事件的資料，並將入埠事件中的內容對映至應用程式介面上的內容，則必須配置下列資訊：
-
-- 一個以上入埠事件的結構。事件綱目定義此資訊。每一個事件綱目都定義一個入埠事件的結構，並且與一種事件類型相關聯。實體介面可將一種以上的事件類型群組在一起。
-
-    入埠裝置事件內所含資料的結構及格式是透過 JSON 綱目格式的事件綱目檔所定義。您可以使用 POST 方法建立具名綱目資源，以將事件綱目檔上傳至 {{site.data.keyword.iot_short_notm}}。若為測試版，所有入埠事件都必須為 JSON 格式。
-
-- 所需裝置狀態的結構。應用程式介面綱目定義此資訊。
-
-    裝置狀態會呈現資料結構，以及呈現配置應用程式所接收的資料，而資料來自裝置。裝置狀態中所儲存的內容值會進行更新，以回應入埠裝置事件。使用 HTTP API，即可在要求時將最新裝置狀態值提供給應用程式。
-
-- 如何將入埠事件對映至偏好裝置狀態的相關資訊。對映定義此資訊。
-
-    若要將入埠事件內容中所含的資料對映至應用程式介面上的適當內容，則需要建立對映。此對映說明如何更新特定應用程式介面所定義的內容，以回應來自裝置的入埠事件。
-
-
-## 資源
+## 定義及資源
 {: #resources}
 
-您可以使用 REST API 來管理先前圖表中所說明的資源。如需 REST API 的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html){: new_window} 文件。
+下列各圖說明在使用應用程式介面時，{{site.data.keyword.iot_short_notm}} 上裝置與應用程式之間的邏輯對映。
 
-資源                        | 說明       
+![{{site.data.keyword.iot_short_notm}} 上裝置與應用程式之間的邏輯對映。](images/im_resources.svg "{{site.data.keyword.iot_short_notm}} 上裝置、事物與應用程式之間的對映")
+
+### 概念
+
+概念                        | 說明       
 ------------- | ------------- | -------------  
-綱目                         | JSON 綱目是用來定義從裝置發佈至 {{site.data.keyword.iot_short_notm}} 之入埠事件的結構，以及所需的裝置狀態。如需「JSON 綱目」的相關資訊，請參閱 [JSON 綱目 ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](http://json-schema.org/){: new_window}。在介面對映中，參照兩個 JSON 綱目：事件綱目及應用程式介面綱目。事件綱目是用來定義裝置發佈至 {{site.data.keyword.iot_short_notm}} 之事件的結構。應用程式介面綱目是供應用程式介面所參照，並且用來定義儲存在 {{site.data.keyword.iot_short_notm}} 之[裝置狀態](#key_concepts)的結構。
-事件類型                         | 您必須在組織內建立事件類型，讓 {{site.data.keyword.iot_short_notm}} 可以處理特定事件內所含的資料。所有事件類型都必須參照事件綱目。若為測試版，所有入埠事件都必須為 JSON 格式。   
-實體介面                         | 實體介面可以與一種以上的事件類型相關聯，並定義與裝置類型相關聯的事件類型。  
-裝置類型                         | 每個連接至 Watson IoT Platform 的裝置都會與一種裝置類型相關聯。裝置類型是共用性質或行為的裝置群組。在介面對映中，裝置類型會擴充成包括裝置的實體介面以及可用來擷取裝置狀態的應用程式介面。一種裝置類型可以配置多個應用程式介面。如需裝置類型的相關資訊，請參閱[裝置機型](../reference/device_model.html#id_and_device_types)中的「ID 及裝置類型」小節。
-應用程式介面                         | 應用程式介面必須參照應用程式介面綱目。在應用程式介面內，您可以定義儲存為裝置狀態之資料的結構。裝置狀態會呈現資料結構，以及呈現配置應用程式所接收的資料，而資料來自裝置。至少一個應用程式介面必須先與裝置類型相關聯，才能定義任何對映。
-對映                         | 對映可定義如何將與入埠事件相關聯的內容對映至特定應用程式介面上所定義的內容。對映必須指定套用它的應用程式介面 ID，而且該應用程式介面必須與將新增該對映的裝置類型相關聯。
+事件 | 事件是裝置用來將資料發佈至 {{site.data.keyword.iot_short_notm}} 的機制。裝置會控制事件的內容，並指派名稱給它傳送的每個事件。內容 | 帶有裝置事件有效負載一部分的資料。
+狀態 | 已對映狀態內容的最新值。
+組合                         | 定義與事物類型相關聯之應用程式介面的邏輯建構。組合是透過事物類型綱目所指定。   
 
+### 資訊管理資源
+您可以使用 REST API 來管理資源。如需 REST API 的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html) 文件。
+
+類型資源                        | 說明       
+------------- | ------------- | -------------  
+事件類型                         | 程式化建構，可將實體介面連接至事件綱目。</br>**重要事項：**若為測試版，所有要在應用程式介面中使用的入埠事件都必須為 JSON 格式。   
+裝置類型                         |  程式化建構，可讓您將共用性質或行為的裝置群組在一起。在介面對映中，裝置類型會擴充成包括裝置的一個實體介面以及一個以上用來擷取裝置狀態的應用程式介面。</br>如需相關資訊，請參閱[裝置機型](../reference/device_model.html#id_and_device_types)主題中的「ID 及裝置類型」小節。
+事物類型                         | 程式化建構，可代表一或多個不同裝置類型及（或）事物類型的集合。</br>**重要事項：**測試版支援三個層次的事物類型應用程式介面巢狀處理。
+綱目資源                         |  程式化建構，可定義裝置類型實體介面、事物類型組合及送出應用程式介面的資料結構。會使用下列 [JSON 綱目 ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](http://json-schema.org/){:new_window}：<ul><li>*事件綱目* 定義裝置發佈至 {{site.data.keyword.iot_short_notm}} 之事件的結構。每一個事件綱目都定義一個入埠事件的結構，並且與一種事件類型相關聯。<li>*事物類型綱目* 定義事物類型作為輸入來源的應用程式介面。每一個事物類型綱目都會定義一個以上事物類型應用程式介面的結構。<li>*應用程式介面綱目* 定義 {{site.data.keyword.iot_short_notm}} 上所儲存之[裝置狀態](#key_concepts)的結構。</ul>.
+
+介面資源                        | 說明       
+------------- | ------------- | -------------  
+應用程式介面 | 程式化建構，您的應用程式可連接或訂閱以查看裝置或事物的狀態。應用程式介面是透過形成儲存為裝置或事物狀態之狀態資料結構的應用程式介面綱目所定義。會更新狀態，以回應入埠狀態事件。與裝置類型相關聯的應用程式介面可以有一個實體介面當成輸入。與事物類型相關聯的應用程式介面可以有一個以上的應用程式介面當成輸入。
+
+實例資源                        | 說明       
+------------- | ------------- | -------------  
+裝置                         | 程式化建構，可代表向 {{site.data.keyword.iot_short_notm}} 登錄並以事件形式傳送 IoT 資料的資產、系統或元件。  
+事物                         | 程式化建構，可邏輯地代表事物類型的唯一實例。事物實例所提供的用途與裝置類型的已登錄裝置相同。
+
+
+支援資源                        | 說明       
+------------- | ------------- | -------------  
+實體介面                         | 程式化建構，可定義事件類型，以及與單一裝置類型相關聯的相關聯裝置內容。實體介面是透過事件綱目所定義。   
+對映                         | 程式化建構，可定義如何將與入埠事件相關聯的內容對映至應用程式介面上所定義的內容。</br>**重要事項：**至少一個應用程式介面必須先與裝置類型相關聯，才能定義任何對映。
 
 ## 高階工作流程
 {: #workflow}
 
-
-
-### 關於此作業
-
 使用下列步驟，可協助您使用介面來配置開始對映裝置資料所需的資源。
 
-如需 API 的詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html){: new_window} 文件。如需每一個步驟的其他詳細資訊，請參閱[範例情境](#scenario)，或使用鏈結直接移至範例情境內的特定步驟。
-
-### 配置環境，開始使用介面來對映裝置資料
-
-1.  必要的話，新增「裝置類型」及「裝置」
-
-  1. 搭配使用 REST API POST 方法與下列 URI，以建立裝置類型：
-      ```
-      https://**orgId**.internetofthings.ibmcloud.com/api/v0002/device/types
-      ```
-  2.  必要的話，新增裝置。  
-如需新增裝置類型及裝置的相關資訊，請參閱[連接裝置](../iotplatform_task.html#devices)。
-
-2. 建立實體介面
-
-  1. [建立事件綱目檔](#step1)。事件綱目檔是定義入埠事件結構及格式的本端 .JSON 檔案。
-
-  2. 搭配使用 REST API POST 方法與下列 URI，以[建立事件類型的事件綱目資源](#step2)：
-      ```
-      https://**orgId**.internetofthings.ibmcloud.com/api/v0002/schemas
-      ```  
-
-  3. 搭配使用 REST API POST 方法與下列 URI，以[建立參照事件綱目的事件類型](#step3)：
-      ```
-      https://**orgId**.internetofthings.ibmcloud.com/api/v0002/event/types
-      ```
-      將事件類型新增至事件綱目，方法是使用用來建立事件綱目資源的 POST 方法回應中所傳回的綱目 ID。
-
-  4. 搭配使用 REST API POST 方法與下列 URI，以[建立實體介面](#step7)：
-        ```
-        https://**orgId**.internetofthings.ibmcloud.com/api/v0002/physicalinterfaces
-        ```
-
-   5. 搭配使用 REST API POST 方法與下列 URI，以[將事件類型新增至實體介面](#step8)：
-        ```
-        https://**orgId**.internetofthings.ibmcloud.com/api/v0002/physicalinterfaces/{physicalInterfaceId}/events
-        ```
-
-       將事件類型新增至實體介面，方法是使用主題中的 *eventId* 以及用來建立事件類型的 POST 方法回應中所傳回的事件類型 ID *eventTypeId*。       
-
-3. 將實體介面新增至裝置類型       
-
-      搭配使用 REST API PUT 方法與下列 URI，以[更新裝置類型以連接實體介面](#step9)：
-     ```
-      https://**orgId**.internetofthings.ibmcloud.com/api/v0002/device/types/{typeId}
-     ```
-
-4. 建立應用程式介面
-
-  1. [建立應用程式介面綱目檔](#step4)。應用程式介面綱目檔是定義裝置狀態的本端 .JSON 檔案。
-
-  2. 搭配使用 REST API POST 方法與下列 URI，以[建立應用程式介面綱目資源](#step5)：
-        ```
-        https://**orgId**.internetofthings.ibmcloud.com/api/v0002/schemas
-        ```     
-
-  3. 搭配使用 REST API POST 方法與下列 URI，以[建立參照應用程式介面綱目的應用程式介面](#step6)：
-         ```
-         https://**orgId**.internetofthings.ibmcloud.com/api/v0002/applicationinterfaces
-         ```  
-
-        應用程式介面參照應用程式介面綱目，方法是使用用來建立應用程式介面綱目資源的 POST 方法回應中所傳回的綱目 ID。
-
-  4. 搭配使用 REST API POST 方法與下列 URI，以[將應用程式介面新增至裝置類型](#step10)：
-        ```
-        https://**orgId**.internetofthings.ibmcloud.com/api/v0002/types/{typeId}/applicationinterfaces
-        ```
-
-        將應用程式介面新增至裝置類型，方法是使用用來建立應用程式介面的 POST 方法的回應。
-
-5. 定義裝置類型的對映
-
-  搭配使用 REST API POST 方法與下列 URI，以[定義對映，將入埠事件中的內容對映至應用程式介面中的內容](#step11)：       
-      ```
-      https://**orgId**.internetofthings.ibmcloud.com/api/v0002/device/types/{typeId}/mappings/{applicationInterfaceId}
-      ```
-
-6. 部署與裝置類型相關聯的配置
-
-  搭配使用 REST API PATCH 方法與下列 URI，以[部署配置](#step15)至 {{site.data.keyword.iot_short_notm}}：
-      ```
-      https://**orgId**.internetofthings.ibmcloud.com/api/v0002/device/types/{typeId}
-      ```
-
-7. 驗證對映的裝置事件已發佈至應用程式介面
-
-  1. [發佈入埠裝置事件](#step12)。
-
-  2. 搭配使用 REST API GET 方法與下列 URI，以[確認裝置狀態已變更](#step13)：
-        ```
-        https://**orgId**.internetofthings.ibmcloud.com/api/v0002/device/types/{typeId}/devices/{deviceId}/state/{applicationInterfaceId}
-        ```
-
-## 範例情境
-{: #scenario}
-
-使用下列資訊，以建立兩個溫度感應器將事件發佈至 {{site.data.keyword.iot_short_notm}} 的情境。一個感應器測量攝氏度數的溫度。另一個感應器則測量華氏度數的溫度。這些讀數都會對映成攝氏度數的單一溫度讀數。這些裝置發佈新的溫度讀數時，與裝置狀態相關聯之內容的值就會變更。
-
-### 必要條件
-
-您必須有 {{site.data.keyword.iot_short_notm}} 組織實例以及該組織的 API 金鑰或記號。如需 API 金鑰及記號的相關資訊，請參閱[應用程式的 HTTP REST API](../applications/api.html#authentication)。
-
-### 關於此情境
-
-在此情境下，會配置兩個裝置。
-
-一個裝置稱為 *TemperatureSensor1*。此裝置會發佈以攝氏度數測量的溫度事件。溫度事件發佈於主題 `iot-2/evt/tevt/fmt/json`，並且具有下列範例有效負載：
-```
-{
-  "t" : 34.5
-}
-```
-
-**附註：**事件 ID 是 *tevt*。將這類型的溫度事件新增至實體介面時，以及定義對映以將與這類型入埠事件相關聯的內容對映至應用程式介面中的內容時，需要此 ID。在此情境下，應用程式介面中所定義的內容稱為 **temperature**。
-
-另一個裝置稱為 *TemperatureSensor2*。此裝置會發佈以華氏度數測量的溫度事件。溫度事件發佈於主題 `iot-2/evt/tempevt/fmt/json`，並且具有下列範例有效負載：
-```
-{
-  "temp" : 72.55
-}
-```
-
-**附註：**事件 ID 是 *tempevt*。將這類型的溫度事件新增至實體介面時，以及定義對映以將與這類型入埠事件相關聯的內容對映至應用程式介面中的內容時，需要此 ID。在此情境下，應用程式介面中所定義的內容稱為 **temperature**。
-
-也會配置應用程式介面。此應用程式介面以下列結構呈現這類型裝置的狀態：
-```
-{
-  "temperature" : <current temperature value in Celsius>
-  }
-```
-此配置表示您可以配置應用程式來處理與 **temperature** 相關聯的值，而不是配置應用程式來處理與 **t** 相關聯的值，以及在將與 **temp** 相關聯的值轉換成攝氏度數之後處理該值。
-
-## 步驟
-
-使用下列資訊，以使用介面來配置範例情境。
-
-### 必要的話，新增「裝置類型」及「裝置」
-{: #step14}
-
-在此情境下，假設兩種裝置類型及兩個裝置實例。裝置實例 *TemperatureSensor1* 與裝置類型 *EnvSensor1* 相關聯。裝置實例 *TemperatureSensor2* 與裝置類型 *EnvSensor2* 相關聯。
-
-如需使用 HTTP API 來新增裝置類型的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Type_Configuration){: new_window} 文件。
-
-### 建立事件綱目檔
-{: #step1}
-
-在此情境中，建立兩個事件綱目檔，以定義每一個入埠溫度事件的結構。
-
-下列範例顯示如何建立稱為 *tEventSchema.json* 的綱目檔。此檔案定義以攝氏度數測量溫度的溫度感應器的入埠事件結構：
-
-```
-{
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "type" : "object",
-  "title" : "EnvSensor1 tEvent Schema",
-  "description" : "defines the structure of a temperature event in degrees Celsius",
-  "properties" : {
-    "t" : {
-      "description" : "temperature in degrees Celsius",
-      "type" : "number",
-      "minimum" : -273.15,
-      "default" : 0.0
-    }
-  },
-  "required" : ["t"]
-}
-  ```
-
-建立事件類型的事件綱目資源時，會使用綱目檔名稱 *tEventSchema*。
-
-下列範例顯示如何建立稱為 *tempEventSchema.json* 的綱目檔。此檔案定義以華氏度數測量溫度的溫度感應器的入埠事件結構：
-
-```
-{
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "type" : "object",
-  "title" : "EnvSensor2 tempEvent Schema",
-  "description" : "defines the structure of a temperature event in degrees Fahrenheit",
-  "properties" : {
-    "temp" : {
-      "description" : "temperature in degrees Fahrenheit",
-      "type" : "number",
-      "minimum" : −459.67,
-      "default" : 0.0
-    }
-  },
-  "required" : ["temp"]
-}
-  ```
-建立事件類型的事件綱目資源時，會使用綱目檔名稱 *tempEventSchema*。   
-
-### 建立事件類型的事件綱目資源
-{: #step2}
-
-若要建立事件綱目資源，請使用下列 API：
-
-```
-POST /schemas
-```
-如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Schemas){: new_window} 文件。下列範例顯示如何使用 cURL 來建立事件綱目資源 *tEventSchema.json*：
-
-```
-curl --request POST \
-  --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/schemas \
-  --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
-  --header 'content-type: multipart/form-data' \
-  --form name=tEventSchema \
-  --form 'schemaFile=@"/Users/ANOther/Documents/IoT/DeviceState/deviceStateDemo/setup/schemas/tEventSchema.json'
-```
-
-下列範例顯示 POST 方法的回應：
-
-```
-{
-  "name" : "tEventSchema",
-  "createdBy" : "a-8x7nmj-9iqt56kfil",
-  "contentType" : "application/octet-stream",
-  "updated" : "2016-12-06T14:38:52Z",
-  "schemaFileName" : "tEventSchema.json",
-  "created" : "2016-12-06T14:38:52Z",
-  "id" : "5846cd7c6522050001db0e0d",
-  "refs" : {
-      "content" : "/schemas/5846cd7c6522050001db0e0d/content"
-  },
-  "schemaType" : "json-schema",
-  "updatedBy" : "a-8x7nmj-9iqt56kfil"
-}
-```
-將事件綱目新增至事件類型時，需要 POST 方法回應中所傳回的綱目 ID *5846cd7c6522050001db0e0d*。
-
-下列範例顯示如何使用 cURL 來建立事件綱目資源 *tempEventSchema.json*：
-
-```
-curl --request POST \
-  --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/schemas \
-  --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=‘ \
-  --header 'content-type: multipart/form-data’ \
-  --form name=tempEventSchema \
-  --form 'schemaFile=@"/Users/ANOther/Documents/IoT/DeviceState/deviceStateDemo/setup/schemas/tempEventSchema.json"'
-```
-
-下列範例顯示 POST 方法的回應：
-
-```
-{
-  "schemaType" : "json-schema",
-  "schemaFileName" : "tempEventSchema.json",
-  "updated" : "2016-12-06T14:44:51Z",
-  "name" : "tempEventSchema",
-  "updatedBy" : "a-8x7nmj-9iqt56kfil",
-  "created" : "2016-12-06T14:44:51Z",
-  "id" : "5846cee36522050001db0e0e",
-  "refs" : {
-      "content" : "/schemas/5846cee36522050001db0e0e/content"
-  },
-  "contentType" : "application/octet-stream",
-  "createdBy" : "a-8x7nmj-9iqt56kfil"
-}
-```
-將事件綱目新增至事件類型時，需要 POST 方法回應中所傳回的綱目 ID *5846cee36522050001db0e0e*。
-
-### 建立參照事件綱目的事件類型
-{: #step3}
-
-每一種事件類型都會參照前一個範例中所建立的相關事件綱目，方法是使用用來建立事件綱目資源的 POST 方法回應中所傳回的綱目 ID。
-
-若要建立事件類型，請使用下列 API：
-
-```
-POST /event/types
-```
-
-如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Event_Types){: new_window} 文件。
-
-
-下列範例顯示如何使用 cURL 來建立以攝氏度數測量的溫度事件的事件類型：
-
-```
-curl --request POST \
-  --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/event/types \
-  --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
-  --header 'content-type: application/json' \
-  --data '{"name" : "tEvent", "schemaId" : "5846cd7c6522050001db0e0d"}'
-```
-
-綱目 ID *5846cd7c6522050001db0e0d* 是用來將事件綱目新增至事件類型。此 ID 是在用來建立事件綱目資源 *tEventSchema.json* 的 POST 方法回應中所傳回。
-
-下列範例顯示 POST 方法的回應：
-
-```
-{
-  "updated" : "2016-12-06T14:53:49Z",
-  "schemaId" : "5846cd7c6522050001db0e0d",
-  "refs" : {
-    "schema" : "/schemas/5846cd7c6522050001db0e0d"
-  },
-  "name" : "tEvent",
-  "created" : "2016-12-06T14:53:49Z",
-  "updatedBy" : "a-8x7nmj-9iqt56kfil",
-  "id" : "5846d0fd6522050001db0e0f",
-  "createdBy" : "a-8x7nmj-9iqt56kfil"
-}
-```
-
-POST 方法回應中所傳回的事件類型 ID *5846d0fd6522050001db0e0f* 是用來將事件類型新增至實體介面。
-
-下列範例顯示如何使用 cURL 來建立以華氏度數測量的溫度事件的事件類型：
-
-```
-curl --request POST \
-  --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/event/types \
-  --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
-  --header 'content-type: application/json' \
-  --data '{"name" : "tempEvent", "schemaId" : "5846cee36522050001db0e0e"}'
-```
-綱目 ID *5846cee36522050001db0e0e* 是用來將事件綱目新增至事件類型。此 ID 是在用來建立事件綱目資源 *tempEventSchema.json* 的 POST 方法回應中所傳回。
-
-下列範例顯示 POST 方法的回應：
-
-```
-{
-  "createdBy" : "a-8x7nmj-9iqt56kfil",
-  "schemaId" : "5846cee36522050001db0e0e",
-  "created" : "2016-12-06T15:00:20Z",
-  "id" : "5846d2846522050001db0e10",
-  "updated" : "2016-12-06T15:00:20Z",
-  "name" : "tempEvent",
-  "refs" : {
-    "schema" : "/schemas/5846cee36522050001db0e0e"
-  },
-  "updatedBy" : "a-8x7nmj-9iqt56kfil"
-}
-```
-POST 方法回應中所傳回的事件類型 ID *5846d2846522050001db0e10* 是用來將事件類型新增至實體介面。
-
-### 建立實體介面
-{: #step7}
-
-若要建立實體介面，請使用下列 API：
-
-```
-POST /physicalinterfaces
-```
-如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Physical_Interfaces){: new_window} 文件。在此情境下，我們需要兩個實體介面 - 一種事件類型一個。
-
-下列範例顯示如何使用 cURL 來建立第一個實體介面：
-
-```
-curl --request POST \
-  --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/physicalinterfaces \
-  --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=‘ \
-  --header 'content-type: application/json’ \
-  --data '{"name" : "Env sensor physical interface 1"}'
-```
-
-下列範例顯示 POST 方法的回應：
-
-```
-{
-  "updatedBy" : "a-8x7nmj-9iqt56kfil",
-  "refs" : {
-    "events" : "/physicalinterfaces/5847d1df6522050001db0e1a/events"
-  },
-  "id" : "5847d1df6522050001db0e1a",
-  "name" : "Env sensor physical interface 1",
-  "created" : "2016-12-07T09:09:51Z",
-  "updated" : "2016-12-07T09:09:51Z",
-  "createdBy" : "a-8x7nmj-9iqt56kfil"
-}
-```
-
-回應中所傳回的實體介面 ID *5847d1df6522050001db0e1a* 是用於呼叫以將以攝氏度數測量的溫度事件新增至實體介面的 POST 方法的 URL 中。
-
-下列範例顯示如何使用 cURL 來建立第二個實體介面：
-
-```
-curl --request POST \
-  --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/physicalinterfaces \
-  --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=‘ \
-  --header 'content-type: application/json’ \
-  --data '{"name" : "Env sensor physical interface 2"}'
-```
-
-下列範例顯示 POST 方法的回應：
-
-```
-{
-  "updatedBy" : "a-8x7nmj-9iqt56kfil",
-  "refs" : {
-    "events" : "/physicalinterfaces/5847d1df6522050001db0e1b/events"
-  },
-  "id" : "5847d1df6522050001db0e1b",
-  "name" : "Env sensor physical interface 2",
-  "created" : "2016-12-07T09:19:51Z",
-  "updated" : "2016-12-07T09:19:51Z",
-  "createdBy" : "a-8x7nmj-9iqt56kfil"
-}
-```
-
-回應中所傳回的實體介面 ID *5847d1df6522050001db0e1b* 是用於呼叫以將以華氏度數測量的溫度事件新增至實體介面的 POST 方法的 URL 中。   
-
-### 將事件類型新增至實體介面
-{: #step8}
-
-若要將事件類型新增至實體介面，請使用下列 API：
-
-```
-POST /physicalinterfaces/{physicalInterfaceId}/events
-```
-如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Physical_Interfaces){: new_window} 文件。在此情境下，下列事件類型會新增至指定的實體介面：
-- 攝氏溫度事件 *tevt* 會新增至 ID 為 *5847d1df6522050001db0e1a* 的實體介面，方法是使用主題中的 *eventId* 以及建立事件綱目資源的 *eventTypeId*。
-- 華氏溫度事件 *tempevt* 會新增至 ID 為 *5847d1df6522050001db0e1b* 的實體介面，方法是使用主題中的 *eventId* 以及建立事件綱目資源的 *eventTypeId*。
-
-
-下列範例顯示如何使用 cURL 以將溫度事件 *tevt* 新增至 ID 為 *5847d1df6522050001db0e1a* 的實體介面：
-
-```
-curl --request POST \
-  --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/physicalinterfaces/5847d1df6522050001db0e1a/events \
-  --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
-  --header 'content-type: application/json' \
-  --data '{"eventId" : "tevt", "eventTypeId" : "5846d0fd6522050001db0e0f"}'
-```
-
-下列範例顯示 POST 方法的回應：
-
-```
-{
-  "eventTypeId" : "5846d0fd6522050001db0e0f",
-  "eventId" : "tevt"
-}
-```
-
-下列範例顯示如何使用 cURL 以將溫度事件 *tempevt* 新增至 ID 為 *5847d1df6522050001db0e1b* 的實體介面：
-
-```
-curl --request POST \
-  --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/physicalinterfaces/5847d1df6522050001db0e1b/events \
-  --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
-  --header 'content-type: application/json' \
-  --data '{"eventId" : "tempevt", "eventTypeId" : "5846d2846522050001db0e10"}'
-```
-
-下列範例顯示 POST 方法的回應：
-
-```
-{
-  "eventTypeId" : "5846d2846522050001db0e10",
-  "eventId" : "tempevt"
-}
-```
-
-### 更新裝置類型以連接實體介面
-{: #step9}
-
-若要更新裝置類型，請使用下列 API：
-
-```
-PUT /device/types/{typeId}
-```
-
-如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types){: new_window} 文件。
-
-在此情境下，會更新裝置類型 *EnvSensor1* 以連接至實體介面 *5847d1df6522050001db0e1a*，以及更新裝置類型 *EnvSensor2* 以連接至實體介面 *5847d1df6522050001db0e1b*。
-
-下列範例顯示如何使用 cURL 來更新裝置類型 *EnvSensor1*：
-
-```
-curl --request PUT \
---url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/device/types/EnvSensor1 \
-  --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
-  --header 'content-type: application/json' \
-  --data '{"description" : "an environment sensor","deviceInfo" : {},"metadata" : {}, "physicalInterfaceId" : "5847d1df6522050001db0e1a"}’
-```
-
-下列範例顯示 POST 方法的回應：
-
-```
-{
-  "deviceInfo" : {},
-  "physicalInterfaceId" : "5847d1df6522050001db0e1a",
-  "updatedDateTime" : "2016-12-07T09:49:52+00:00",
-  "refs" : {
-    "mappings" : "/device/types/EnvSensor1/mappings",
-    "applicationInterfaces" : "/device/types/EnvSensor1/applicationinterfaces",
-    "physicalInterface" : "/physicalinterfaces/5847d1df6522050001db0e1a"
-   },
-  "id" : "EnvironmentSensor",
-  "description" : "an environment sensor",
-  "metadata" : {},
-  "classId" : "Device",
-  "createdDateTime" : "2016-12-07T09:49:52+00:00"
-}
-```
-新增實體介面及應用程式介面時，需要裝置 ID *EnvSensor1*。
-
-下列範例顯示如何使用 cURL 來更新裝置類型 *EnvSensor2*：
-
-```
-curl --request PUT \
---url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/device/types/EnvSensor2 \
-  --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
-  --header 'content-type: application/json' \
-  --data '{"description" : "an env sensor","deviceInfo" : {},"metadata" : {}, "physicalInterfaceId" : "5847d1df6522050001db0e1b"}’
-```
-
-下列範例顯示 POST 方法的回應：
-
-```
-{
-  "deviceInfo" : {},
-  "physicalInterfaceId" : "5847d1df6522050001db0e1b",
-  "updatedDateTime" : "2016-12-07T09:59:52+00:00",
-  "refs" : {
-    "mappings" : "/device/types/EnvSensor2/mappings",
-    "applicationInterfaces" : "/device/types/EnvSensor2/applicationinterfaces",
-    "physicalInterface" : "/physicalinterfaces/5847d1df6522050001db0e1b"
-   },
-  "id" : "EnvironmentSensor",
-  "description" : "an environment sensor",
-  "metadata" : {},
-  "classId" : "Device",
-  "createdDateTime" : "2016-12-07T09:49:52+00:00"
-}
-```
-新增實體介面及應用程式介面時，需要裝置 ID *EnvSensor2*。
-
-
-
-### 建立應用程式介面綱目檔
-{: #step4}
-
-下列範例顯示如何建立稱為 *envSensor.json* 的應用程式介面綱目檔。
-
-```
-{
-  "$schema": "http://json-schema.org/draft-04/schema#",
-    "type" : "object",
-    "title" : "Environment Sensor Schema",
-    "description" : "Schema to represent a canonical environment sensor device",
-    "properties" : {
-        "temperature" : {
-            "description" : "temperature in degrees Celsius",
-            "type" : "number",
-            "minimum" : -273.15,
-            "default" : 0.0
-        }
-    },
-    "required" : ["temperature"]
-}
-```
-
-### 建立應用程式介面綱目資源
-{: #step5}
-
-若要建立應用程式介面綱目資源，請使用下列 API：
-
-```
-POST /schemas
-```
-如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Schemas){: new_window} 文件。下列範例顯示如何使用 cURL 來建立應用程式介面綱目：
-
-```
-curl --request POST \
-  --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/schemas \
-  --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
-  --header 'content-type: multipart/form-data' \
-  --form name=temperatureEventSchema \
-  --form 'schemaFile=@"/Users/ANOther/Documents/IoT/DeviceState/deviceStateDemo/setup/schemas/envSensor.json"'
-```
-
-下列範例顯示 POST 方法的回應：
-
-```
-{
-  "created" : "2016-12-06T16:51:14Z",
-  "name" : "temperatureEventSchema",
-  "createdBy" : "a-8x7nmj-9iqt56kfil",
-  "updated" : "2016-12-06T16:51:14Z",
-  "updatedBy" : "a-8x7nmj-9iqt56kfil",
-  "schemaType" : "json-schema",
-  "contentType" : "application/octet-stream",
-  "schemaFileName" : "envSensor.json",
-  "refs" : {
-    "content" : "/schemas/5846ec826522050001db0e11/content"
-  },
-  "id" : "5846ec826522050001db0e11"
-}
-```
-使用 POST 方法回應中所傳回的綱目 ID *5846ec826522050001db0e11*，以將應用程式介面綱目新增至應用程式介面。
-
-### 建立參照應用程式介面綱目的應用程式介面
-{: #step6}
-
-若要建立應用程式介面，請使用下列 API：
-
-```
-POST /applicationinterfaces
-```
-如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Application_Interfaces){: new_window} 文件。在此情境下，使用前一個回應中所傳回的綱目 ID *5846ec826522050001db0e11*，以將應用程式介面綱目新增至應用程式介面。
-
-下列範例顯示如何使用 cURL 來建立應用程式介面：
-
-```
-curl --request POST \
-  --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/applicationinterfaces \
-  --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
-  --header 'content-type: application/json' \
-  --data '{"name" : "environment sensor interface", "schemaId" : "5846ec826522050001db0e11"}'
-```
-
-下列範例顯示 POST 方法的回應：
-
-```
-{
-  "createdBy" : "a-8x7nmj-9iqt56kfil",
-  "refs" : {
-      "schema" : "/schemas/5846ec826522050001db0e11"
-  },
-  "schemaId" : "5846ec826522050001db0e11",
-  "created" : "2016-12-06T16:53:27Z",
-  "updatedBy" : "a-8x7nmj-9iqt56kfil",
-  "id" : "5846ed076522050001db0e12",
-  "updated" : "2016-12-06T16:53:27Z",
-  "name" : "environment sensor interface"
-}
-```
-在此情境下，使用 POST 方法回應中所傳回的應用程式介面 ID *5846ed076522050001db0e12*，以將應用程式介面新增至裝置類型。您也可以使用此 ID，以將入埠裝置事件對映至應用程式介面所定義的內容。
-
-### 將應用程式介面新增至裝置類型
-{: #step10}
-
-若要將應用程式介面新增至裝置類型，請使用下列 API：
-
-```
-POST /device/types/{typeId}/applicationinterfaces
-```
-如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types){: new_window} 文件。在此情境下，應用程式介面會與裝置類型 *EnvSensor1* 和裝置類型 *EnvSensor2* 相關聯。
-
-下列範例顯示如何使用 cURL 以將參照應用程式綱目 ID *5846ec826522050001db0e11* 的應用程式介面 *5846ed076522050001db0e12* 新增至裝置類型 *EnvSensor1*：
-
-```
-curl --request POST \
---url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/device/types/EnvSensor1/applicationinterfaces \
---header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
---header 'content-type: application/json' \
---data '{"createdBy" : "a-8x7nmj-9iqt56kfil", \
-          "refs" : {
-              "schema" : "/schemas/5846ec826522050001db0e11"
-          },
-          "schemaId" : "5846ec826522050001db0e11", "created" : "2016-12-06T16:53:27Z", \
-          "updatedBy" : "a-8x7nmj-9iqt56kfil","id" : "5846ed076522050001db0e12","updated" : "2016-12-06T16:53:27Z","name" : "environment sensor interface"
-        }'
-```
-
-下列範例顯示 POST 方法的回應：
-
-```
-{
-  "refs" : {
-      "schema" : "/schemas/5846ec826522050001db0e11"
-  },
-  "updated" : "2016-12-06T16:53:27Z",
-  "updatedBy" : "a-8x7nmj-9iqt56kfil",
-  "createdBy" : "a-8x7nmj-9iqt56kfil",
-  "name" : "environment sensor interface",
-  "created" : "2016-12-06T16:53:27Z",
-  "id" : "5846ed076522050001db0e12",
-  "schemaId" : "5846ec826522050001db0e11"
-}
-```
-
-下列範例顯示如何使用 cURL 以將與應用程式綱目 ID *5846ec826522050001db0e11* 相關聯的應用程式介面 *5846ed076522050001db0e12* 新增至裝置類型 *EnvSensor2*：
-
-```
-curl --request POST \
---url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/device/types/EnvSensor2/applicationinterfaces \
---header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
---header 'content-type: application/json' \
---data '{"createdBy" : "a-8x7nmj-9iqt56kfil", \
-          "refs" : {
-              "schema" : "/schemas/5846ec826522050001db0e11"
-          },
-          "schemaId" : "5846ec826522050001db0e11", "created" : "2016-12-06T16:53:27Z", \
-          "updatedBy" : "a-8x7nmj-9iqt56kfil","id" : "5846ed076522050001db0e12","updated" : "2016-12-06T16:53:27Z","name" : "environment sensor interface"
-        }'
-```
-
-
-下列範例顯示 POST 方法的回應：
-
-```
-{
-  "refs" : {
-      "schema" : "/schemas/5846ec826522050001db0e11"
-  },
-  "updated" : "2016-12-06T16:53:27Z",
-  "updatedBy" : "a-8x7nmj-9iqt56kfil",
-  "createdBy" : "a-8x7nmj-9iqt56kfil",
-  "name" : "environment sensor interface",
-  "created" : "2016-12-06T16:53:27Z",
-  "id" : "5846ed076522050001db0e12",
-  "schemaId" : "5846ec826522050001db0e11"
-}
-```
-
-### 定義對映，將入埠事件中的內容對映至應用程式介面中的內容
-{: #step11}
-
-若要對映事件，請使用下列 API：
-
-```
-POST /device/types/{typeId}/mappings
-```
-如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types){: new_window} 文件。在此情境下，我們定義裝置類型 *EnvSensor1* 的對映，以將入埠事件 *tevt* 中的 **t** 內容對映至應用程式介面上的 **temperature** 內容。我們還會定義裝置類型 *EnvSensor2* 的對映，以將入埠事件 *tempevt* 中的 **temp** 內容對映至應用程式介面上的 **temperature** 內容。
-
-下列範例顯示如何使用 cURL 以將對映新增至裝置類型 *EnvSensor1*：
-
-```
-curl --request POST \
-  --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/device/types/EnvSensor1/mappings \
-  --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
-  --header 'content-type: application/json' \
-  --data '{"applicationInterfaceId" : "5846ed076522050001db0e12","propertyMappings" : {
-              "tevt" : {
-                  "temperature" : "$event.t"
-              }
-            }
-          }'
-```
-
-指定用來建立應用程式介面及裝置類型 *EnvSensor1* 的 POST 方法回應中所傳回的應用程式介面 ID *5846ed076522050001db0e12*。
-
-下列範例顯示 POST 方法的回應：
-
-```
-{
-  "propertyMappings" : {
-      "tevt" : {
-       "temperature" : "$event.t"
-    }
-  },
-  "applicationInterfaceId" : "5846ed076522050001db0e12"
-}
-```
-下列範例顯示如何使用 cURL 以將對映新增至裝置類型 *EnvSensor2*：
-
-```
-curl --request POST \
-  --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/device/types/EnvSensor2/mappings \
-  --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
-  --header 'content-type: application/json' \
-  --data '{"applicationInterfaceId" : "5846ed076522050001db0e12","propertyMappings" : {
-              "tempevt" : {
-                  "temperature" : "($event.temp - 32) / 1.8"
-              }
-            }
-          }'
-```
-
-指定用來建立應用程式介面及裝置類型 *EnvSensor2* 的 POST 方法回應中所傳回的應用程式介面 ID *5846ed076522050001db0e12*。
-套用轉換，以將值從華氏度數測量變更為攝氏度數測量。
-
-
-下列範例顯示 POST 方法的回應：
-
-```
-{
-  "propertyMappings" : {
-    "tempevt" : {
-      "temperature" : "($event.temp - 32) / 1.8"
-    }
-  },
-  "applicationInterfaceId" : "5846ed076522050001db0e12"
-}
-```
-
-### 部署配置
-{: #step15}
-
-部署與每一種裝置類型的裝置狀態更新相關的配置。此配置包括您的綱目、事件類型、實體介面、應用程式介面及對映。
-
-若要部署裝置類型配置，請使用下列 API：
-
-```
-PATCH /device/types/{typeId}
-```
-如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types){: new_window} 文件。在此情境下，我們需要部署兩種裝置類型的配置。
-
-下列範例顯示如何使用 cURL 來部署裝置類型 *EnvSensor1* 的配置：
-
-```
-curl --request PATCH \
-  --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/device/types/EnvSensor1 \
-  --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
-  --header 'content-type: application/json' \
-  --data '{
-            "operation" : "deploy"
-          }'
-```
-
-下列範例顯示 PATCH 方法的回應：
-
-```
-{
- "message": "CUDRS0520I: State update configuration for device type 'EnvSensor1' has been successfully submitted for deployment",
-  "details": {
-    "id": "CUDRS0520I",
-    "properties": ["EnvSensor1"]
-  },
- "failures": []
-}
-```
-
-下列範例顯示如何使用 cURL 來部署裝置類型 *EnvSensor2* 的配置：
-
-```
-curl --request PATCH \
-  --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/device/types/EnvSensor2 \
-  --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
-  --header 'content-type: application/json' \
-  --data '{
-            "operation" : "deploy"
-          }'
-```
-
-下列範例顯示 PATCH 方法的回應：
-
-```
-{
- "message": "CUDRS0520I: State update configuration for device type 'EnvSensor2' has been successfully submitted for deployment",
-  "details": {
-    "id": "CUDRS0520I",
-    "properties": ["EnvSensor2"]
-  },
- "failures": []
-}
-```
-
-### 發佈入埠裝置事件
-{: #step12}
-
-將來自 *TemperatureSensor1* 的溫度事件發佈於主題 `iot-2/evt/tevt/fmt/json`，並將來自 *TemperatureSensor2* 的溫度事件發佈於主題 `iot-2/evt/tempevt/fmt/json`。
-
-如需發佈來自裝置的入埠事件的相關資訊，請參閱[應用程式的 MQTT 連線功能](../applications/mqtt.html#publishing_device_events)。
-
-
-### 確認裝置狀態已變更
-{: #step13}
-
-若要檢查裝置狀態，請使用下列 API：
-```
-GET /device/types/{typeId}/devices/{deviceId}/state/{applicationInterfaceId}
-```
-如需詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types){: new_window} 文件。下列範例顯示如何使用 cURL 以參照所建立應用程式介面的 ID 來擷取 *TemperatureSensor1* 的現行狀態：
-```
-curl --request GET \
-  --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/device/types/EnvSensor1/devices/TemperatureSensor1/state/5846ed076522050001db0e12 \
-  --header 'authorization: Basic TGS04NXg5dHotKNBzbGZ5eWdiaToxX543S0lKOmE3Tk5Mc0xMu6n='
-```
-
-應用程式介面 ID *5846ed076522050001db0e12* 用於 GET 方法中。此 ID 是在用來建立應用程式介面的 POST 方法回應中所傳回。
-下列範例顯示 GET 方法的回應：
-```
-{
-  "temperature":34.5
-}
-```
-下列範例顯示如何使用 cURL 以參照所建立應用程式介面的 ID 來擷取 *TemperatureSensor2* 的現行狀態：
-```
-curl --request GET \
-  --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/device/types/EnvSensor2/devices/TemperatureSensor2/state/5846ed076522050001db0e12 \
-  --header 'authorization: Basic TGS04NXg5dHotKNBzbGZ5eWdiaToxX543S0lKOmE3Tk5Mc0xMu6n='
-```
-
-應用程式介面 ID *5846ed076522050001db0e12* 用於 GET 方法中。此 ID 是在用來建立應用程式介面的 POST 方法回應中所傳回。
-下列範例顯示 GET 方法的回應：
-```
-{
-  "temperature":22.5
-}
-```
-請注意，傳回的溫度讀數是攝氏度數，而非華氏度數。
-
-您的應用程式可以處理此正規化資料，而且不需要配置即可瞭解或轉換不同的溫標。
+如需 API 的詳細資料，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html){:new_window} 文件。
+
+**提示：**如需每一個步驟的其他詳細資訊，請參閱範例情境，或使用鏈結直接移至範例情境中的特定步驟。[範例情境 1](im_index_scenario.html#scenario) 會逐步執行如何建立異質溫度計裝置之裝置類型應用程式介面的步驟，[範例情境 2](im_index_scenario_thing.html#scenario) 則是進一步進行建置，方法是說明如何建置應用程式介面，以讓您使用合併為會議室類型事物之兩個不同氣候裝置類型的資料。
+
+根據建立與裝置類型還是事物類型相關聯的應用程式介面，建立及使用應用程式介面的處理程序會有些不同。
+
+### 開始之前
+若要建立與裝置類型相關聯的應用程式介面，您必須有[至少一個向 {{site.data.keyword.iot_short_notm}}](im_index_scenario.html#step14) 登錄並傳送含狀態內容之事件的裝置。  
+若要建立與事物類型相關聯的應用程式介面，您必須有至少一個與所建立裝置類型相關聯的應用程式介面。
+
+### 步驟
+
+1. 	定義送入的狀態內容。  
+請先定義要讓應用程式介面可供應用程式使用的送入狀態內容。  
+根據所建立的應用程式介面，執行下列兩項之一：
+<dl>
+<dt>裝置類型：建立實體介面。</dt>
+<dd>
+<ol>
+<li>[建立事件綱目檔](im_index_scenario.html#step1)。事件綱目檔是定義入埠事件結構及格式的本端 .JSON 檔案。<li>[建立事件類型的事件綱目資源](im_index_scenario.html#step2)。事件綱目資源是 {{site.data.keyword.iot_short_notm}} 所使用的程式化建構。
+<li>[建立參照事件綱目的事件類型](im_index_scenario.html#step3)。{{site.data.keyword.iot_short_notm}} 使用事件類型，以將一個以上的事件綱目資源對映至實體介面。
+<li>[建立實體介面](im_index_scenario.html#step7)。
+<li>[將事件類型新增至實體介面](im_index_scenario.html#step8)。
+<li>[將實體介面新增至裝置類型](im_index_scenario.html#step9)。
+</ol>
+</dd>
+<dt>事物類型：定義組合。</dt>
+<dd>
+<ol>
+<li>[建立組合綱目檔](im_index_scenario_thing.html#crt_composition_file)。  
+事物類型組合綱目檔是定義事物類型組合的本端 .JSON 檔案，方法是指向現有應用程式介面。
+<li>[建立組合綱目資源](im_index_scenario_thing.html#crt_composition_resource)。  
+請將本端 .JSON 檔案上傳至 {{site.data.keyword.iot_short_notm}}。
+<li>[建立事物類型](im_index_scenario_thing.html#crt_thing_type)。</br>事物類型所提供的用途與裝置類型相同，在於它代表事物的類別。
+</ol>
+</dd>
+</dl>
+4. 	建立應用程式介面。
+ 1. 	建立[裝置類型](im_index_scenario.html#step4)或[事物類型](im_index_scenario_thing.html#crt_ai_schema_file)的應用程式介面綱目檔。  
+應用程式介面綱目檔是定義裝置狀態以供應用程式使用的本端 .JSON 檔案。
+ 2. 	建立[裝置類型](im_index_scenario.html#step5)或[事物類型](im_index_scenario_thing.html#crt_ai_schema_resource)的應用程式介面綱目資源。
+ 3.	建立[裝置類型](im_index_scenario.html#step6)或[事物類型](im_index_scenario_thing.html#crt_thing_ai)的應用程式介面。
+ 4.	將應用程式介面新增至[裝置類型](im_index_scenario.html#step10)或[事物類型](im_index_scenario_thing.html#add_thing_ai)。
+5. 	定義[裝置類型](im_index_scenario.html#step11)或[事物類型](im_index_scenario_thing.html#define_Thing_type_mappings)的對映。   
+對映可將入埠內容對映至應用程式介面中的內容。
+6. 	部署與[裝置類型](im_index_scenario.html#step15)或[事物類型](im_index_scenario_thing.html#deploy_Thing_config)相關聯的配置。
+7. 	**事物類型：**[建立事物類型實例](im_index_scenario_thing.html#create_Thing_instances)。
+8. 	確認[裝置](im_index_scenario.html#step13)或[事物](im_index_scenario_thing.html#verify_Thing_state)更新的狀態。  
+請確認訂閱顯示已更新的裝置資料，或使用 REST-call 傳回已更新的裝置資料。

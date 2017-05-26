@@ -21,7 +21,7 @@ Le tableau de bord des membres vous permet de contrôler et gérer les accès à
 ## Ajout d'utilisateurs
 {: #adding-new-users}
 
-Sur l'onglet **Membres** du tableau de bord, vous pouvez ajouter des membres individuels en utilisant les fonctions<!--Add, Invite, or Register-->  Ajouter ou Inviter. Vous pouvez également <!--add, invite, or register-->ajouter ou inviter plusieurs membres simultanément en utilisant la fonction Importer. 
+Sur l'onglet **Membres** du tableau de bord, vous pouvez ajouter des membres individuels en utilisant les fonctions<!--Add, Invite, or Register-->  Ajouter ou Inviter. Vous pouvez également <!--add, invite, or register-->ajouter ou inviter plusieurs membres simultanément en utilisant la fonction Importer.
 
 Par défaut, les comptes des membres n'arrivent jamais à expiration. Lorsque vous ajoutez des utilisateurs à votre organisation {{site.data.keyword.iot_short_notm}}, vous pouvez éventuellement définir une date d'expiration pour leur compte.
 
@@ -39,24 +39,24 @@ Pour ajouter un membre à votre organisation {{site.data.keyword.iot_short_notm}
 
 Pour ajouter plusieurs membres en même temps, vous devez télécharger un fichier `.csv` contenant l'IBMid, le rôle et la date d'expiration facultative de chaque membre. Pour plus d'informations, voir [Construction de votre fichier CSV](#constructing-your-csv).
 1. Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, accédez à **Membres**.
-2. Cliquez sur **Ajouter des membres** et sélectionnez l'onglet **Importer**. 
-3. Recherchez vos fichiers ou faites glisser le fichier `.csv` dans la fenêtre **Télécharger le fichier CSV**. 
-4. Sélectionnez un rôle par défaut à utiliser si un rôle indiqué dans le fichier CSV n'est pas reconnu. 
-5. Mappez les membres de colonne de votre fichier CSV aux entrées d'IBMid, de rôle et, le cas échéant, de date d'expiration correspondantes. 
-6. Sélectionnez le séparateur de colonne virgule ou point-virgule approprié selon le séparateur utilisé dans votre fichier `.csv`. 
-7. Cliquez sur **Importer** pour importer les IBMid et créez les membres. 
+2. Cliquez sur **Ajouter des membres** et sélectionnez l'onglet **Importer**.
+3. Recherchez vos fichiers ou faites glisser le fichier `.csv` dans la fenêtre **Télécharger le fichier CSV**.
+4. Sélectionnez un rôle par défaut à utiliser si un rôle indiqué dans le fichier CSV n'est pas reconnu.
+5. Mappez les membres de colonne de votre fichier CSV aux entrées d'IBMid, de rôle et, le cas échéant, de date d'expiration correspondantes.
+6. Sélectionnez le séparateur de colonne virgule ou point-virgule approprié selon le séparateur utilisé dans votre fichier `.csv`.
+7. Cliquez sur **Importer** pour importer les IBMid et créez les membres.
 
 
 ### Invitation de membres dans votre organisation {{site.data.keyword.iot_short_notm}}
 
 Lorsque vous invitez un utilisateur à devenir un membre de votre organisation {{site.data.keyword.iot_short_notm}}, il reçoit un courrier électronique contenant un lien d'invitation. Les liens d'invitation expirent 48 heures après avoir été envoyés. Si un lien d'invitation n'est pas utilisé dans les 48 heures, l'utilisateur doit être de nouveau invité pour recevoir un nouveau lien d'invitation.
 
-**Important :** La fonction Inviter nécessite un service de messagerie configuré. Pour plus d'informations, voir la section Courrier électronique de la rubrique [Intégrations de service externe](reference/extensions/index.html#email). 
+**Important :** La fonction Inviter nécessite un service de messagerie configuré. Pour plus d'informations, voir la section Courrier électronique de la rubrique [Intégrations de service externe](reference/extensions/index.html#email).
 
 Pour inviter un membre dans votre organisation {{site.data.keyword.iot_short_notm}} :
 1. Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, accédez à **Membres**.
-2. Sélectionnez l'onglet **Invitations**. 
-2. Cliquez sur **Inviter des membres** et sélectionnez l'onglet **Inviter**. 
+2. Sélectionnez l'onglet **Invitations**.
+2. Cliquez sur **Inviter des membres** et sélectionnez l'onglet **Inviter**.
 3. Entrez l'adresse électronique du membre.
 4. Sélectionnez un rôle pour ce membre.
 5. Facultatif : Définissez une date d'expiration pour le membre.
@@ -64,12 +64,12 @@ Pour inviter un membre dans votre organisation {{site.data.keyword.iot_short_not
 
 Pour inviter plusieurs membres en même temps, vous devez télécharger un fichier `.csv` contenant l'adresse électronique, le rôle et la date d'expiration facultative de chaque membre. Pour plus d'informations, voir [Construction de votre fichier CSV](#constructing-your-csv).
 1. Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, accédez à **Membres**.
-2. Sélectionnez l'onglet **Invitations**. 
-2. Cliquez sur **Inviter des membres** et sélectionnez l'onglet **Importer**. 
-3. Recherchez vos fichiers ou faites glisser le fichier `.csv` dans la fenêtre **Télécharger le fichier CSV**. 
-4. Sélectionnez un rôle par défaut à utiliser si un rôle indiqué dans le fichier CSV n'est pas reconnu. 
-5. Mappez les membres de colonne de votre fichier CSV aux entrées d'adresse électronique, de rôle et, le cas échéant, de date d'expiration correspondantes. 
-6. Sélectionnez le séparateur de colonne virgule ou point-virgule approprié selon le séparateur utilisé dans votre fichier `.csv`. 
+2. Sélectionnez l'onglet **Invitations**.
+2. Cliquez sur **Inviter des membres** et sélectionnez l'onglet **Importer**.
+3. Recherchez vos fichiers ou faites glisser le fichier `.csv` dans la fenêtre **Télécharger le fichier CSV**.
+4. Sélectionnez un rôle par défaut à utiliser si un rôle indiqué dans le fichier CSV n'est pas reconnu.
+5. Mappez les membres de colonne de votre fichier CSV aux entrées d'adresse électronique, de rôle et, le cas échéant, de date d'expiration correspondantes.
+6. Sélectionnez le séparateur de colonne virgule ou point-virgule approprié selon le séparateur utilisé dans votre fichier `.csv`.
 7. Cliquez sur **Importer** pour envoyer les invitations.
 
 <!-- ### Registering a member with your {{site.data.keyword.iot_short_notm}} organization
@@ -99,7 +99,7 @@ To register multiple members simultaneously, you must upload a CSV (`.csv`) file
 {: #constructing-your-csv}
 
 Lorsque vous construisez un fichier CSV pour importer des membres dans votre organisation, prenez soin d'inclure les informations requises pour la méthode que vous utilisez. Utilisez des virgules ou des points-virgule pour séparer les colonnes.  
-**Important :** Lorsque vous téléchargez le fichier CSV, sous **Paramètres CSV**, prenez soin de sélectionner le séparateur de colonne approprié. 
+**Important :** Lorsque vous téléchargez le fichier CSV, sous **Paramètres CSV**, prenez soin de sélectionner le séparateur de colonne approprié.
 
 Exemple de fichier CSV avec une délimitation à l'aide d'une virgule :  
 ```
@@ -109,9 +109,9 @@ user3@sample.com,PD_ADMIN_USER,1489505652152
 ```
 
 Où les entrées de colonne suivantes sont utilisées :  
-- Colonne 1 : adresse électronique de l'utilisateur.   
-Si vous ajoutez des membres, prenez soin d'utiliser l'adresse électronique correspondant à un IBMid valide. Si vous invitez des membres, vous pouvez utiliser n'importe quelle adresse électronique valide. 
-- Colonne 2 : rôle à affecter à l'utilisateur.   
+- Colonne 1 : adresse électronique de l'utilisateur.  
+Si vous ajoutez des membres, prenez soin d'utiliser l'adresse électronique correspondant à un IBMid valide. Si vous invitez des membres, vous pouvez utiliser n'importe quelle adresse électronique valide.
+- Colonne 2 : rôle à affecter à l'utilisateur.  
 Entrez l'un des rôles suivants :
  - PD_ADMIN_USER
  - PD_OPERATOR_USER
@@ -119,7 +119,7 @@ Entrez l'un des rôles suivants :
  - PD_ANALYST_USER
  - PD_READER_USER  
  Pour plus d'informations sur les rôles utilisateur, voir [Rôles d'utilisateur, d'application et de passerelle](roles_index.html#user_roles).
-- Colonne 3: Horodatage Unix (exprimé en millisecondes depuis le 1er janvier 1970, 00:00 UTC) correspondant à la date d'expiration de l'utilisateur. 
+- Colonne 3: Horodatage Unix (exprimé en millisecondes depuis le 1er janvier 1970, 00:00 UTC) correspondant à la date d'expiration de l'utilisateur.
 
 ## Edition d'utilisateurs
 {: #editing-users}

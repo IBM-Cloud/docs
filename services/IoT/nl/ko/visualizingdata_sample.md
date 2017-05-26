@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-06-29"
+lastupdated: "2017-03-20"
 
 ---
 
@@ -25,7 +25,7 @@ lastupdated: "2016-06-29"
 
 - {{site.data.keyword.iot_short_notm}} 조직에 디바이스를 등록합니다.
 - 디바이스에서 {{site.data.keyword.iot_short_notm}}에 이벤트를 전송하는지 확인합니다.
-- github 저장소에서 [시각화 샘플 다운로드](https://github.com/ibm-messaging/iot-visualization/archive/v0.2.0.zip)를 수행하고 .zip 파일의 압축을 풉니다.
+- github 저장소에서 [시각화 샘플 다운로드](https://github.com/ibm-watson-iot/rickshaw4iot/archive/master.zip)를 수행하고 .zip 파일의 압축을 풉니다.
 - {{site.data.keyword.Bluemix_notm}}에서 [cf 명령행 도구 설치](../../starters/install_cli.html)를 수행합니다.
 
 ## {{site.data.keyword.Bluemix_notm}}에서 샘플 실행
@@ -106,13 +106,4 @@ http://<your_application_name>.mybluemix.net
 
 디바이스 이벤트는 그래프를 작성하기 위해 `realtimeGraph.js` 파일에 전달됩니다.
 
-## 히스토리 데이터 표시 사용자 정의
-{: #customize_historical_display}
-
-히스토리 디바이스 데이터의 그래픽 시각화 코드를 포함하는 디렉토리는 `public/js/historian`입니다. 그래프 작성 로직은 `public/js/historian/historianGraph.js`를 편집하여 사용자 정의할 수 있습니다.
-
-히스토리 디바이스 데이터를 수집하기 위해 ReST API 호출을 제어하는 파일은 `public/js/historian/historian.js`입니다.
-
-히스토리 데이터는 그래프를 작성하기 위해 `historianGraph.js` 파일에 전달됩니다.
-
-자세한 개발자 안내서는 Github iot-visualization 위키에 있습니다.
+자세한 개발자 안내서는 [Github 위키 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/rickshaw4iot/wiki){:new_window}에서 사용 가능합니다. 

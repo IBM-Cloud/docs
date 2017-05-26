@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-04-13"
 
 ---
 
-<!-- Attribute definitions --> 
+<!-- Attribute definitions -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -16,7 +16,7 @@ lastupdated: "2017-02-09"
 #Service-Dashboard
 {: #dashboard}
 
-Sie können auf Ihren {{site.data.keyword.streaminganalyticsshort}}-Service vom {{site.data.keyword.Bluemix_short}}-Service-Dashboard zugreifen. 
+Sie können auf Ihren {{site.data.keyword.streaminganalyticsshort}}-Service vom {{site.data.keyword.Bluemix_short}}-Service-Dashboard zugreifen.
 {:shortdesc}
 
 Über das Service-Dashboard haben Sie folgende Möglichkeiten:

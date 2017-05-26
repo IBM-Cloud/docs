@@ -12,7 +12,7 @@ lastupdated: "2017-03-13"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# アプリケーション接続
+# アプリケーションの接続
 
 アプリケーションを {{site.data.keyword.iot_full}} に接続するには、API キーとトークンを使用することにより、または {{site.data.keyword.Bluemix_notm}} でアプリケーションを直接 {{site.data.keyword.iot_short_notm}} にバインドすることにより、接続する必要があります。アクセス・ダッシュボードを使用して、アクセス権限を付与します。
 {:shortdesc}

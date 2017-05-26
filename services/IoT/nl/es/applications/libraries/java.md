@@ -123,7 +123,7 @@ Una vez que los clientes de la aplicación se hayan conectado correctamente al s
 ## Suscripción a sucesos de dispositivos
 {: #subscribing_device_events}
 
-Los sucesos son el mecanismo por el que los dispositivos publican datos a {{site.data.keyword.iot_short_notm}}. El dispositivo controla el contenido del suceso y asigna un nombre a cada suceso que envía.
+Los sucesos son el mecanismo por el que los dispositivos publican datos en {{site.data.keyword.iot_short_notm}}. El dispositivo controla el contenido del suceso y asigna un nombre a cada suceso que envía.
 
 Cuando una instancia de {{site.data.keyword.iot_short_notm}} recibe un suceso, las credenciales del suceso recibido identifican el dispositivo de envío, lo que significa que un dispositivo no puede suplantar a otro dispositivo.
 

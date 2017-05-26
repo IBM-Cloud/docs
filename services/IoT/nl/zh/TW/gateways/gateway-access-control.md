@@ -2,16 +2,18 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-04-20"
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
-# 閘道存取控制（測試版）
-
-**重要事項**：此特性目前是受限測試版的一部分。
+# 閘道存取控制
+{: #gateway-access-control}
 
 閘道裝置獲授權可代表其他裝置作業。閘道資源群組定義組織內每一個閘道都可以代表作業的裝置。閘道可獲指派*標準閘道* 角色。標準閘道只能代表其資源群組中的裝置來發佈或訂閱訊息。
 {: #shortdesc}
@@ -30,7 +32,7 @@ lastupdated: "2017-03-16"
 PUT /authorization/devices/{deviceId}/roles
 ```
 
-如需要求綱目的詳細資訊，請參閱 [{{site.data.keyword.iot_full}} API 文件 ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_authorization_devices_deviceId_roles){: new_window}。
+如需要求綱目的詳細資料，請參閱 [{{site.data.keyword.iot_full}} Limited Gateway API 文件 ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_authorization_devices_deviceId_roles){: new_window}。
 
 ## 將裝置新增至某資源群組以及從中移除裝置
 {: #devices_groups}
@@ -41,7 +43,7 @@ PUT /authorization/devices/{deviceId}/roles
  PUT /bulk/devices/{groupId}/add
 ```
 
-要在其中新增裝置的群組必須指定於要求路徑中，而且要新增的裝置必須指定於要求主體中。如需要求綱目及回應的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} API 文件 ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_add){: new_window}。
+要在其中新增裝置的群組必須指定於要求路徑中，而且要新增的裝置必須指定於要求主體中。如需要求綱目及回應的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} Limited Gateway API 文件 ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_add){: new_window}。
 
 若要移除資源群組中的多個裝置，請使用下列 API：
 
@@ -49,7 +51,7 @@ PUT /authorization/devices/{deviceId}/roles
 PUT /bulk/devices/{groupId}/remove
 ```
 
-將會從要求路徑中所指定的群組中，移除要求主體所指定的裝置。如需要求綱目及回應的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}}API 文件 ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_remove){: new_window}。
+將會從要求路徑中所指定的群組中，移除要求主體所指定的裝置。如需要求綱目及回應的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} Limited Gateway API 文件 ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_remove){: new_window}。
 
 ## 尋找資源群組
 {: #finding_groups}
@@ -68,7 +70,7 @@ GET /groups
 GET /authorization/devices/{deviceId}
 ```
 
-此 API 會傳回此裝置所屬之資源群組的唯一 ID。您可以在 [{{site.data.keyword.iot_short_notm}} API 文件![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_authorization_devices_deviceId){: new_window} 中找到此 API 的相關資訊。
+此 API 會傳回此裝置所屬之資源群組的唯一 ID。您可以在 [{{site.data.keyword.iot_short_notm}} Limited Gateway API 文件 ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_authorization_devices_deviceId){: new_window} 中找到此 API 的相關資訊。
 
 
 ## 查詢資源群組
@@ -82,7 +84,7 @@ GET /authorization/devices/{deviceId}
 GET /bulk/devices/{groupId}
 ```
 
-此 API 會傳回所指定資源群組的所有成員的完整內容清單。如需要求綱目、回應以及如何翻看結果的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} API 文件![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_bulk_devices_groupId){: new_window}。
+此 API 會傳回所指定資源群組的所有成員的完整內容清單。如需要求綱目、回應以及如何翻看結果的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} Limited Gateway API 文件 ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_bulk_devices_groupId){: new_window}。
 
 若只要傳回資源群組成員的唯一 ID，請使用下列 API：
 
@@ -131,7 +133,7 @@ DELETE /groups/{groupId}
 有數種方法可以使用 API 來擷取裝置內容，而每一個 API 都會傳回不同的資訊。若要擷取所有連接至 {{site.data.keyword.iot_short_notm}} 組織的裝置的裝置內容，請使用下列 API：
 
 ```
-GET /authorization/devices:
+GET /authorization/devices
 
 ```
 
@@ -148,7 +150,7 @@ GET /authorization/devices/{deviceId}
 若要擷取特定裝置的存取控制資訊，請使用下列 API：
 
 ```
-GET /authorization/devices/{deviceId}/roles:
+GET /authorization/devices/{deviceId}/roles
 ```
 
 此 API 會擷取指定裝置的存取控制相關資訊，而不傳回其他裝置內容。<!-- For more information on the request schema and responses, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
@@ -166,7 +168,7 @@ PUT /authorization/devices/{deviceId}
 若只要更新指定裝置的存取控制內容，請使用下列 API：
 
 ```
-PUT /authorization/devices/{deviceId}/withroles:
+PUT /authorization/devices/{deviceId}/withroles
 ```
 
 此 API 只會更新指定裝置的存取控制內容。<!-- For more information on the request schema, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->

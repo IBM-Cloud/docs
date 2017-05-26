@@ -2,16 +2,18 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-04-20"
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
-# Gateway Access Control (Beta)
-
-**Wichtig**: Diese Funktion ist momentan als begrenzte Betaversion verfügbar.
+# Gateway-Zugriffssteuerung
+{: #gateway-access-control}
 
 Gateway-Geräte sind berechtigt, im Namen anderer Geräte zu handeln. Gateway-Ressourcengruppen definieren, im Namen welcher Geräte innerhalb einer Organisation jedes Gateway handeln kann. Gateways kann die Rolle *Standardgateway* zugeordnet werden. Standardgateways können nur im Namen der Geräte aus der zugehörigen Ressourcengruppe Nachrichten publizieren oder subskribieren.
 {: #shortdesc}
@@ -30,7 +32,7 @@ Verwenden Sie die folgende API, um einem Gateway eine Rolle zuzuordnen:
 PUT /authorization/devices/{deviceId}/roles
 ```
 
-Details zu dem Anforderungsschema finden Sie in der Dokumentation für die [{{site.data.keyword.iot_full}}-API ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_authorization_devices_deviceId_roles){: new_window}.
+Details zu dem Anforderungsschema finden Sie in der Dokumentation für die [{{site.data.keyword.iot_full}} Limited Gateway-API ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_authorization_devices_deviceId_roles){: new_window}.
 
 ## Geräte in einer Ressourcengruppe hinzufügen und entfernen
 {: #devices_groups}
@@ -41,7 +43,7 @@ Damit ein Gateway mit der Rolle *Standardgateway* im Namen eines Geräts handeln
  PUT /bulk/devices/{groupId}/add
 ```
 
-Die Gruppe, der Geräte hinzugefügt werden sollen, muss im Pfad der Anforderung angegeben werden, und die Geräte, die hinzugefügt werden sollen, müssen im Hauptteil der Anforderung angegeben werden. Weitere Informationen zu dem Anforderungsschema und den Antworten finden Sie in der Dokumentation für die [{{site.data.keyword.iot_short_notm}}-API ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_add){: new_window}.
+Die Gruppe, der Geräte hinzugefügt werden sollen, muss im Pfad der Anforderung angegeben werden, und die Geräte, die hinzugefügt werden sollen, müssen im Hauptteil der Anforderung angegeben werden. Weitere Informationen zu dem Anforderungsschema und den Antworten finden Sie in der Dokumentation für die [{{site.data.keyword.iot_short_notm}} Limited Gateway-API ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_add){: new_window}.
 
 Verwenden Sie die folgende API, um mehrere Geräte aus einer Ressourcengruppe zu entfernen:
 
@@ -49,7 +51,7 @@ Verwenden Sie die folgende API, um mehrere Geräte aus einer Ressourcengruppe zu
 PUT /bulk/devices/{groupId}/remove
 ```
 
-Die im Hauptteil der Anforderung angegebenen Geräte werden aus der Gruppe entfernt, die im Pfad der Anforderung angegeben ist. Weitere Informationen zu dem Anforderungsschema und der Antwort finden Sie in der Dokumentation für die [{{site.data.keyword.iot_short_notm}}-API ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_remove){: new_window}.
+Die im Hauptteil der Anforderung angegebenen Geräte werden aus der Gruppe entfernt, die im Pfad der Anforderung angegeben ist. Weitere Informationen zu dem Anforderungsschema und der Antwort finden Sie in der Dokumentation für die [{{site.data.keyword.iot_short_notm}} Limited Gateway-API ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_remove){: new_window}.
 
 ## Ressourcengruppe suchen
 {: #finding_groups}
@@ -68,7 +70,7 @@ Die ID einer Ressourcengruppe kann mithilfe der folgenden API gefunden werden:
 GET /authorization/devices/{deviceId}
 ```
 
-Diese API gibt die eindeutige Kennung der Ressourcengruppe(n) zurück, der bzw. denen dieses Gerät als Mitglied zugeordnet ist. Weitere Informationen zu dieser API finden Sie in der Dokumentation für die [{{site.data.keyword.iot_short_notm}}-API ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_authorization_devices_deviceId){: new_window}.
+Diese API gibt die eindeutige Kennung der Ressourcengruppe(n) zurück, der bzw. denen dieses Gerät als Mitglied zugeordnet ist. Weitere Informationen zu dieser API finden Sie in der Dokumentation für die [{{site.data.keyword.iot_short_notm}} Limited Gateway-API ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_authorization_devices_deviceId){: new_window}.
 
 
 ## Ressourcengruppe abfragen
@@ -82,7 +84,7 @@ Verwenden Sie die folgende API, um die vollständigen Eigenschaften für alle Ge
 GET /bulk/devices/{groupId}
 ```
 
-Diese API gibt die vollständige Liste der Eigenschaften für alle Mitglieder der angegebenen Ressourcengruppe zurück. Weitere Informationen zum Anforderungsschema, zu den Antworten und zum Durchblättern der Ergebnisse finden Sie in der Dokumentation für die [{{site.data.keyword.iot_short_notm}}-API ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_bulk_devices_groupId){: new_window}.
+Diese API gibt die vollständige Liste der Eigenschaften für alle Mitglieder der angegebenen Ressourcengruppe zurück. Weitere Informationen zum Anforderungsschema, zu den Antworten und zum Durchblättern der Ergebnisse finden Sie in der Dokumentation für die [{{site.data.keyword.iot_short_notm}} Limited Gateway-API ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_bulk_devices_groupId){: new_window}.
 
 Verwenden Sie die folgende API, um nur die eindeutigen Kennungen der Mitglieder der Ressourcengruppe zurückzugeben:
 
@@ -131,7 +133,7 @@ Diese API löscht die angegebene Ressourcengruppe. Geräte, die Mitglieder der G
 Mit der API können Geräteeigenschaften auf verschiedene Arten abgerufen werden. Dabei gibt jede API andere Informationen zurück. Verwenden Sie die folgende API, um die Geräteeigenschaften für alle Geräte abzurufen, die mit Ihrer {{site.data.keyword.iot_short_notm}}-Organisation verbunden sind:
 
 ```
-GET /authorization/devices:
+GET /authorization/devices
 
 ```
 
@@ -148,7 +150,7 @@ Diese API gibt alle Geräteeigenschaften für das angegebene Geräte ohne die Zu
 Verwenden Sie die folgende API, um die Zugriffssteuerungsinformationen für ein bestimmtes Gerät abzurufen:
 
 ```
-GET /authorization/devices/{deviceId}/roles:
+GET /authorization/devices/{deviceId}/roles
 ```
 
 Diese API gibt die zugehörigen Informationen für die Zugriffssteuerung des angegebenen Geräts ohne die übrigen Geräteeigenschaften zurück. <!-- For more information on the request schema and responses, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
@@ -166,7 +168,7 @@ Diese API aktualisiert nur Geräteeigenschaften, die nicht der Zugriffssteuerung
 Verwenden Sie die folgende API, um nur die Zugriffssteuerungseigenschaften für das angegebene Gerät zu aktualisieren:
 
 ```
-PUT /authorization/devices/{deviceId}/withroles:
+PUT /authorization/devices/{deviceId}/withroles
 ```
 
 Diese API aktualisiert nur die Zugriffssteuerungseigenschaften für das angegebene Gerät. <!-- For more information on the request schema, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->

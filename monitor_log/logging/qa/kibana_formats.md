@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-04-06"
+lastupdated: "2017-05-23"
 
 ---
 
@@ -51,7 +51,7 @@ You can configure Kibana to display in the *Discover* page the following fields 
 
 
 
-## Kibana log format for Docker containers
+## Kibana log format for Docker containers that are deployed in a Bluemix-managed infrastructure
 {: #kibana_log_format_containers}
 
 You can configure Kibana to display in the *Discover* page the following fields for each log entry:
@@ -73,7 +73,38 @@ You can configure Kibana to display in the *Discover* page the following fields 
 | stream | Specifies the type of log: stdout, stderr |
 | time | The date and time of the event when it happened. The timestamp is defined up to the millisecond.|
 | timestamp | The date and time of the logged event. The timestamp is defined up to the millisecond. |
-{: caption="Table 1. Fields for Docker containers" caption-side="top"}
+{: caption="Table 2. Fields for Docker containers" caption-side="top"}
+
+## Kibana log format for Docker containers that are deployed in a Kubernetes cluster
+{: #kibana_log_format_containers_kubernetes}
+
+You can configure Kibana to display in the *Discover* page the following fields for each log entry. These fields are set by {{site.data.keyword.IBM}} and include your message data. 
+
+| Field | Description | Other information |
+|-------|-------------|---------------------------|
+| @timestamp | `yyyy-MM-ddTHH:mm:ss:SS-0500`  <br> The time of the logged event. <br> The timestamp is defined up to the millisecond. | |
+| @version | Version of the event. | |
+| ALCH_TENANT_ID | ID of the {{site.data.keyword.Bluemix_notm}} space. | |
+| \_id | The unique ID for your log document. | |
+| \_index | The index for your log entry. | |
+| \_score |  |  |
+| \_type | The type of log; for example, *logs*. | |
+| crn_str | Information about the source of the log. | By default, this field is set by {{site.data.keyword.IBM_notm}}. <br> **Note**: If you send the log message in valid JSON format, and one of the fields is named `crn`, the value of the field is overwritten with the value that is set in the message.  |  
+| docker.container_id_str | GUID of the container running in a pod. | |
+| ibm-containers.account_str | GUID of the {{site.data.keyword.Bluemix_notm}} account.  |  |
+| ibm-containers.cluster_id_str | GUID of the Kubernetes cluster.  |  |
+| ibm-containers.cluster_type_str |  | Value reserved for {{site.data.keyword.IBM_notm}} internal use. |
+| ibm-containers.region_str | Region in {{site.data.keyword.Bluemix_notm}}.  |  |
+| kubernetes.container_name_str | Name of the container where an app is deployed.  |  |
+| kubernetes.host | Public IP address of the worker where the container is running. |  |
+| kubernetes.labels.*example_label_name*\_str | Key-value pair that you attach to a Kubernetes object such as a pod. | Each label that you attach to a Kubernetes object is listed as a field in the log entry displayed in Kibana. <br> You can have 0 or more labels. |
+| kubernetes.namespace_name_str | Kubernetes namespace where the container is deployed. |  |
+| kubernetes.pod_id_str | GUID of the pod where the container is deployed. |  |
+| kubernetes.pod_name_str | Name of the pod. |  |
+| message | Full message. | If you send a valid JSON formatted message, each field is individually parsed and displayed in Kibana.  |
+| stream_str |  | Value reserved for {{site.data.keyword.IBM_notm}} internal use. |
+|tag_str |  | Value reserved for {{site.data.keyword.IBM_notm}} internal use. |
+{: caption="Table 3. Fields for Docker containers" caption-side="top"}
 
 
 ## Kibana log format for Message Hub
@@ -91,7 +122,7 @@ You can configure Kibana to display in the *Discover* page the following fields 
 | \_type | The type of log; for example, *syslog*. |
 | loglevel | The severity of the logged event, for example, **Info**. |
 | module | This field is set to **MessageHub**. |
-{: caption="Table 1. Fields for Message Hub events" caption-side="top"}
+{: caption="Table 4. Fields for Message Hub events" caption-side="top"}
 
 Example of a log entry:
 

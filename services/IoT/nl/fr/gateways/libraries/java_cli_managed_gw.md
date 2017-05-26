@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-20"
 
 ---
 
@@ -231,7 +231,7 @@ System.err.println("Failed to update the location!");
 
 ### Envoi de mises à jour d'emplacement de terminal connecté
 
-La passerelle peut appeler la méthode de terminal `updateDeviceLocation()` correspondante pour mettre à jour l'emplacement des terminaux connectés. La méthode surchargée peut être utilisée pour spécifier la méthode `measuredDateTime`.  
+La passerelle peut appeler la méthode de terminal `updateDeviceLocation()` correspondante pour mettre à jour l'emplacement des terminaux connectés. La méthode surchargée peut être utilisée pour spécifier la méthode `measuredDateTime`.
 
 ```java
 // update the location of the attached device with latitude, longitude, and elevation
@@ -338,7 +338,7 @@ DeviceFirmware firmware = new DeviceFirmware.Builder().
 			name("Firmware.name").
 			url("Firmware.url").
 			verifier("Firmware.verifier").
-			state(FirmwareState.IDLE).				
+			state(FirmwareState.IDLE).
 			build();
 
 DeviceData deviceData = new DeviceData.Builder().
@@ -649,6 +649,156 @@ mgdGateway.addDeviceActionHandler(actionHandler);
 ```
 
 Pour plus d'informations sur les actions sur les terminaux, voir [Demande de gestion des terminaux ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](../../devices/device_mgmt/requests.html#/device-actions-reboot#device-actions-reboot){: new_window}.
+
+## Packages d'extension de gestion des terminaux
+{: #dme}
+
+Un package d'extension de gestion des terminaux (DME, Device Management Extension) est un document JSON qui définit un ensemble d'actions personnalisées de gestion de terminaux. Les actions
+peuvent être initiées sur un ou plusieurs terminaux qui les acceptent. Les actions sont initiées soit à l'aide du tableau de bord {{site.data.keyword.iot_short}}, soit par l'intermédiaire
+des API REST de gestion des terminaux. 
+
+Pour plus d'informations sur les formats de package DME, référez-vous à [Extension de la gestion des terminaux](../../devices/device_mgmt/custom_actions.html).
+
+### Prise en charge des actions de gestion des terminaux personnalisées
+
+Les actions de gestion des terminaux qui sont définies dans un package
+d'extension peuvent être lancées sur une passerelle ou par des terminaux connectés qui les acceptent. 
+
+Un terminal spécifie les types d'actions qu'il accepte lorsqu'il publie une demande de gestion sur {{site.data.keyword.iot_short}}. 
+Pour que le terminal puisse recevoir des actions personnalisées définies dans un package d'extension particulier,
+il doit spécifier l'identificateur du bundle (regroupement) de cette extension dans l'objet supports en même temps qu'il publie une
+demande de gestion.
+
+
+La passerelle peut appeler l'API `manage()` avec la liste
+des ID de bundle pour informer {{site.data.keyword.iot_short}} qu'elle-même ou
+les terminaux connectés supportent les actions DME pour cette liste d'ID de bundle.
+
+
+Le fragment de code suivant est utilisé pour publier une demande de gestion afin de faire savoir à
+{{site.data.keyword.iot_short}} que cette passerelle supporte une action DME :
+
+
+```java
+List<String> bundleIds = new ArrayList<String>();
+bundleIds.add("example-dme-actions-v1");
+
+mgdGateway.sendGatewayManageRequest(0, false, false, bundleIds);
+```
+
+Le dernier paramètre spécifie l'action personnalisée que le terminal supporte.
+
+De même, une passerelle peut appeler la méthode de terminal correspondante pour faire connaître le support d'actions DME par les terminaux connectés : 
+
+```java
+List<String> bundleIds = new ArrayList<String>();
+bundleIds.add("example-dme-actions-v1");
+
+mgdGateway.sendDeviceManageRequest(typeId, deviceId, 0, false, false, bundleIds);
+```
+
+### Traitement des actions de gestion des terminaux personnalisées
+
+Lorsqu'une action personnalisée est initiée sur une passerelle ou un terminal connecté à {{site.data.keyword.iot_short}},
+un message MQTT est publié à destination de la passerelle.
+Ce message contient les paramètres qui ont été spécifiés dans le cadre de la demande. La passerelle doit ajouter un CustomActionHandler pour permettre la réception et le traitement du message. Le message est retourné en
+tant qu'instance de la classe `CustomAction`, dont les propriétés sont les suivantes :
+
+
+| Propriété     | Type de données     | Description |
+|----------------|----------------|----------------|
+|`bundleId` |Chaîne | Un identificateur unique pour le package DME.|
+|`actionId` |Chaîne|L'action personnalisée qui est lancée.|
+|`typeId` |Chaîne|Le type de terminal sur lequel l'action personnalisée est lancée.|
+|`deviceId` |Chaîne|Le terminal sur lequel l'action personnalisée est lancée.|
+|`payload` |Chaîne|Le message proprement dit, contenant la liste des paramètres au format JSON.|
+|`reqId` |Chaîne|L'ID de demande utilisé pour répondre à la demande d'action personnalisée.|
+
+Le code suivant est un exemple d'implémentation d'un `CustomActionHandler` :
+
+```java
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.ibm.iotf.client.CustomAction;
+import com.ibm.iotf.client.CustomAction.Status;
+import com.ibm.iotf.devicemgmt.CustomActionHandler;
+
+public class MyCustomActionHandler extends CustomActionHandler implements Runnable {
+
+	// A queue to hold & process the commands for smooth handling of MQTT messages
+	private BlockingQueue<CustomAction> queue = new LinkedBlockingQueue<CustomAction>();
+	// A map to hold the publish interval time for each device
+	private Map<String, Long> intervalMap = new HashMap<String, Long>();
+
+	@Override
+	public void run() {
+		while(true) {
+			CustomAction action = null;
+			try {
+				action = queue.take();
+				System.out.println(" "+action.getActionId()+ " "+action.getPayload());
+				JsonArray fields = action.getPayload().get("d").getAsJsonObject().get("fields").getAsJsonArray();
+				for(JsonElement field : fields) {
+					JsonObject fieldObj = field.getAsJsonObject();
+					if("PublishInterval".equals(fieldObj.get("field").getAsString())) {
+						long val = fieldObj.get("value").getAsLong();
+						String key = action.getTypeId() + ":" + action.getDeviceId();
+						long publishInterval = val * 1000;
+						intervalMap.put(key, publishInterval);
+						System.out.println("Updated the publish interval to "+val);
+					}
+				}
+				action.setStatus(Status.OK);
+
+			} catch (InterruptedException e) {}
+		}
+	}
+
+	public long getPublishInterval(String deviceType, String deviceId) {
+		String key = deviceType + ":" + deviceId;
+		Long val = intervalMap.get(key);
+		if(val == null) {
+			return 1000; // default is 1 second
+		} else {
+			return val.longValue();
+		}
+	}
+
+	@Override
+	public void handleCustomAction(CustomAction action) {
+		try {
+			queue.put(action);
+			} catch (InterruptedException e) {
+		}
+
+	}
+}
+```
+
+Lorsque le `CustomActionHandler` est ajouté à l'instance de `ManagedGateway`,
+la méthode `handleCustomAction()` est appelée chaque fois qu'une action personnalisée est initiée par l'application.
+
+L'exemple de code suivant montre comment ajouter le `CustomActionHandler` à l'instance de `ManagedGateway`.
+
+```java
+MyCustomActionHandler handler = new MyCustomActionHandler();
+mgdGateway.addCustomActionHandler(handler);
+```
+
+Lorsque la passerelle reçoit le message d'action personnalisée, elle exécute l'action ou répond avec un code d'erreur indiquant la raison pour laquelle elle ne peut pas exécuter l'action.
+La passerelle doit utiliser la méthode *setStatus()* pour fixer l'état de l'action : 
+
+```java
+action.setStatus(Status.OK);
+```
+
+Pour plus d'informations sur DME, consultez [Extension des demandes de gestion de terminal ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](../../devices/device_mgmt/custom_actions.html){: new_window}.
 
 ## Ecoute des modifications d'attribut de terminal
 {: #listen_device_attributes}

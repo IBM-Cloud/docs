@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-27"
+lastupdated: "2017-04-25"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -61,7 +61,7 @@ var config = module.exports = {
 
 Metodo: POST  
 API: /shield  
-https://iot4i-docs-api.mybluemix.net/dist/#!/shield/addShield
+https://iot4i-api-docs.mybluemix.net/#!/shield/addShield
 
 Crea una definizione scudo nel file createShield.js.  Il seguente esempio mostra uno scudo semplice che rileva una fuoriuscita d'acqua.
 
@@ -160,7 +160,7 @@ Ogni codice scudo contiene le risorse definite nelle istruzioni resource/shield.
 
 Metodo: POST  
 API: /user  
-https://iot4i-docs-api.mybluemix.net/dist/#!/user/addUser
+https://iot4i-api-docs.mybluemix.net/#!/user/addUser
 
 Crea un utente nel file createUser.js. Il seguente esempio mostra come creare un solo utente.
 
@@ -195,7 +195,7 @@ dove:
 
 Metodo: POST  
 API: /user  
-https://iot4i-docs-api.mybluemix.net/dist/#!/shieldassociation/addShieldAssociation
+https://iot4i-api-docs.mybluemix.net/#!/shieldassociation/addShieldAssociation
 
 Crea un'associazione dello scudo che collega lo scudo all'utente in createUserShieldAssociation.js.
 
@@ -217,7 +217,7 @@ var userShield = {
 
 Metodo: POST  
 API: /sendPayloadToMQTT  
-https://iot4i-docs-api.mybluemix.net/dist/#!/global/sendPayloadToMQTT
+https://iot4i-api-docs.mybluemix.net/#!/global/sendPayloadToMQTT
 
 Puoi creare un payload di pericolo simulato per verificare i tuoi scudi.
 

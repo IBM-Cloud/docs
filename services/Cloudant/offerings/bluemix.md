@@ -267,6 +267,8 @@ you can choose from the following Bluemix Public regions:
 -   US South
 -   United Kingdom
 -   Sydney
+-   Germany
+
 
 #### Security, Encryption, and Compliance
 

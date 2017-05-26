@@ -1,16 +1,19 @@
 {
   "id": "docs_homepage_services",
   "title": "컴퓨팅 및 서비스",
+  "categories": 
+  [ 
+    { 
+      "id": 
+      "boilerplate", 
+      "name": "Boilerplates", 
+      "tags": "boilerplate" 
+    } ],
   "items": [{
     "id": "cfApp",
     "title": "Cloud Foundry 애플리케이션",
     "img": "homepage/images/cloud-foundry.svg",
     "href": "cfapps/index.html",
-    "category_id": "compute"
-  }, {
-    "title": "표준 유형",
-    "img": "homepage/images/Bluemix-logo.svg",
-    "href": "cfapps/boilerplates.html",
     "category_id": "compute"
   }, {
     "id": "whisk-rt",
@@ -24,6 +27,66 @@
     "img": "homepage/images/containerServiceIcon.svg",
     "href": "containers/container_index.html",
     "category_id": "compute"
+  }, {
+    "title": "Analytics for Apache Spark 스타터",
+    "img": "homepage/images/Bluemix-logo.svg",
+    "href": "starters/AnalyticsApacheSpark/index.html",
+    "category_id": "boilerplate"
+  }, {
+    "title": "Conversational Agent 스타터",
+    "img": "homepage/images/Bluemix-logo.svg",
+    "href": "starters/ConversationalAgentStarter/index.html",
+    "category_id": "boilerplate"
+  }, {
+    "title": "Watson IoT Platform 스타터",
+    "img": "homepage/images/Bluemix-logo.svg",
+    "href": "starters/IoT/iot500.html",
+    "category_id": "boilerplate"
+  }, {
+    "title": "IoT for Electronics 스타터",
+    "img": "homepage/images/Bluemix-logo.svg",
+    "href": "starters/IotElectronics/iot4egettingstarted.html",
+    "category_id": "boilerplate"
+  }, {
+    "title": "Java Cloudant 웹 스타터",
+    "img": "homepage/images/Bluemix-logo.svg",
+    "href": "starters/java-cloudant/index.html",
+    "category_id": "boilerplate"
+  }, {
+    "title": "LoopBack 스타터",
+    "img": "homepage/images/Bluemix-logo.svg",
+    "href": "starters/LoopBack/index.html",
+    "category_id": "boilerplate"
+  }, {
+    "title": "Node.js Cloudant DB 웹 스타터",
+    "img": "homepage/images/Bluemix-logo.svg",
+    "href": "starters/node-cloudant/index.html",
+    "category_id": "boilerplate"
+  }, {
+    "title": "Node-RED 스타터",
+    "img": "homepage/images/Bluemix-logo.svg",
+    "href": "starters/Node-RED/nodered.html",
+    "category_id": "boilerplate"
+  }, {
+    "title": "Ruby Sinatra 스타터",
+    "img": "homepage/images/Bluemix-logo.svg",
+    "href": "starters/rubysinatra/index.html",
+    "category_id": "boilerplate"
+  }, {
+    "title": "StrongLoop Arc 스타터",
+    "img": "homepage/images/Bluemix-logo.svg",
+    "href": "starters/StrongLoopArc/index.html",
+    "category_id": "boilerplate"
+  }, {
+    "title": "Java Workload Scheduler 웹 스타터",
+    "img": "homepage/images/Bluemix-logo.svg",
+    "href": "starters/workloadscheduler/index.html",
+    "category_id": "boilerplate"
+  }, {
+    "title": "IBM XPages 웹 스타터",
+    "img": "homepage/images/Bluemix-logo.svg",
+    "href": "starters/XPagesStarter/index.html",
+    "category_id": "boilerplate"
   }, {
     "type": "extra",
     "title": "데이터 작업",
@@ -46,4 +109,6 @@
     "category_id": "mobile"
   }]
 }
+
+
 

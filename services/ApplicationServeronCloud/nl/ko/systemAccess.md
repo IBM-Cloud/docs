@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-26"
+lastupdated: "2017-02-24"
 
 ---
 
@@ -18,15 +18,15 @@ lastupdated: "2016-10-26"
 {: shortdesc}
 
 
-## WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}에서 REST API 사용
+## WebSphere Application Server in {{site.data.keyword.Bluemix_notm}}에서 REST API 사용
 {: #restapi_usage}
 
-WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}의 인스턴스가 다음 방법 중 하나로 작성, 프로비저닝, 관리 및 삭제됩니다. 
+WebSphere Application Server in {{site.data.keyword.Bluemix_notm}}의 인스턴스는 다음 방법 중 하나로 작성, 프로비저닝, 관리 및 삭제됩니다. 
 
 * {{site.data.keyword.Bluemix_notm}} UI의 {{site.data.keyword.Bluemix_notm}} 카탈로그 및 서비스 대시보드에서.
 * RESTful API를 사용하는 애플리케이션 또는 스크립트의 작성에서.
 
-Swagger 2.0 호환 REST API를 사용하여 클라이언트는 포털과 대시보드를 통해 제공된 것과 동일한 기능에 액세스합니다. 지원되는 REST API 및 리소스에 대한 추가 정보는 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [REST API 문서](https://wasaas-broker.ng.bluemix.net/wasaas-broker/api#/){: new_window}를 참조하십시오. REST API의 사용을 보여주는 샘플 코드의 경우, {{site.data.keyword.Bluemix_notm}} [REST API 샘플](https://github.com/IBM-Bluemix/WebSphere-for-Bluemix-API-Usage){: new_window}용으로 Git 호스팅된 WebSphere Application Server를 다운로드하십시오.
+Swagger 2.0 호환 REST API를 사용하여 클라이언트는 포털과 대시보드를 통해 제공된 것과 동일한 기능에 액세스합니다. 지원되는 REST API 및 리소스에 대한 추가 정보는 WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} [REST API 문서](https://wasaas-broker.ng.bluemix.net/wasaas-broker/api#/){: new_window}를 참조하십시오. REST API를 사용하는 예를 보여주는 샘플 코드를 가져오려면 Git 호스팅 WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} [REST API 샘플](https://github.com/IBM-Bluemix/WebSphere-for-Bluemix-API-Usage){: new_window}을 다운로드하십시오. 
 
 **참고:** 서비스 인스턴스를 작성한 후 작성된 Tee-Shirt 크기에 따라 서비스를 즉각 사용하지 못할 수도 있습니다. 서비스 인스턴스의 현재 상태를 판별하도록 리턴된 JSON의 **상태** 필드를 조회할 것을 권장합니다.
 
@@ -36,9 +36,10 @@ Swagger 2.0 호환 REST API를 사용하여 클라이언트는 포털과 대시�
 
 | **지역 이름** | **지리적 위치** | **지역 접두부** | **API 엔드포인트 URL** |       
 |:-------------:|:----------:|:--------------:|:-------------:|
-| 미국 남부 지역 | 댈러스, 텍사스, 미국 | ng | https://wasaas-broker.ng.bluemix.net/wasaas-broker/api  |
-| 영국 지역 | 런던, 영국 | eu-gb | https://wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api  |
-| 시드니 지역 | 시드니, 호주 | au-syd | https://wasaas-broker.au-syd.bluemix.net/wasaas-broker/api  |
+| 미국 남부 | 댈러스, 텍사스, 미국 | ng | https://wasaas-broker.ng.bluemix.net/wasaas-broker/api  |
+| 영국 | 런던, 영국 | eu-gb | https://wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api  |
+| 시드니 | 시드니, 호주 | au-syd | https://wasaas-broker.au-syd.bluemix.net/wasaas-broker/api  |
+| 프랑크푸르트 | 프랑크푸르트, 독일 | eu-de | https://wasaas-broker.eu-de.bluemix.net/wasaas-broker/api  |
 
 
 
@@ -60,10 +61,10 @@ Swagger 2.0 호환 REST API를 사용하여 클라이언트는 포털과 대시�
 **참고**: 특정 양의 컴퓨팅, 메모리 및 입출력 리소스로 인해, 클라이언트가 5% 감소 비율로 중지된 상태의 누적 VM에 대해 청구됩니다. 클라이언트는 10개 이하의 IP 주소 또는 64GB 이하 메모리를 사용하는 고정된 수의 중지된 인스턴스에 관리됩니다. 
 
 
-## WebSphere Application Server for Bluemix 인스턴스의 openVPN 설정
+## WebSphere Application Server in Bluemix 인스턴스의 openVPN 설정
 {: #setup_openvpn}
 
-OpenVPN은 Bluemix 가상 머신의 WebSphere Application Server에 액세스하는 데 필요합니다. 관리자 권한으로 설치하고 실행 중이어야 합니다.
+OpenVPN은 WebSphere Application Server in Bluemix 가상 머신에 액세스하는 데 필요합니다. 관리자 권한으로 설치하고 실행 중이어야 합니다.
 
 ### 다음 지시사항을 사용하여 Windows에서 openVPN을 설정하십시오. 
 
@@ -71,7 +72,7 @@ OpenVPN은 Bluemix 가상 머신의 WebSphere Application Server에 액세스하
   * 64비트의 경우, [openvpn-install-2.3.4-I001-x86_64.exe](https://swupdate.openvpn.org/community/releases/openvpn-install-2.3.4-I001-x86_64.exe){: new_window} 또는
   * 32비트의 경우, [openvpn-install-2.3.4-I001-i686.exe](https://swupdate.openvpn.org/community/releases/openvpn-install-2.3.4-I001-i686.exe){: new_window}
 2. 반드시 [Windows 관리자로 실행](https://technet.microsoft.com/en-us/magazine/ff431742.aspx){: new_window}하고 openVPN이 설치되어 있어야 합니다.
-3. 서비스 대시보드에 있는 WebSphere Application Server for Bluemix 인스턴스의 OpenVPN 다운로드 링크에서 VPN 구성 파일을 다운로드하십시오. 압축 파일의 네 개 파일을 모두 **{OpenVPN home}\config** 디렉토리에 추출하십시오. 예: 
+3. 서비스 대시보드의 WebSphere Application Server in Bluemix 인스턴스의 OpenVPN 다운로드 링크에서 VPN 구성 파일을 다운로드하십시오. 압축 파일의 네 개 파일을 모두 **{OpenVPN home}\config** 디렉토리에 추출하십시오. 예: 
 
   <pre>  
     C:\Program Files\OpenVPN\Config
@@ -83,7 +84,7 @@ OpenVPN은 Bluemix 가상 머신의 WebSphere Application Server에 액세스하
 ### 다음 지시사항을 사용하여 Linux에서 openVPN을 설정하십시오. 
 1. openVPN을 설치하려면 [지시사항](https://openvpn.net/index.php/access-server/docs/admin-guides/182-how-to-connect-to-access-server-with-linux-clients.html){: new_window}을 따르십시오.
   * RPM Package Manager를 수동으로 다운로드하고 설치해야 하는 경우 [openVPN Unix/Linux 다운로드](https://openvpn.net/index.php/access-server/download-openvpn-as-sw.html){: new_window}로 이동하십시오. Linux 관리자의 도움이 필요할 수 있습니다.
-3. 서비스 대시보드에 있는 WebSphere Application Server for Bluemix 인스턴스의 OpenVPN 다운로드 링크에서 VPN 구성 파일을 다운로드하십시오. openVPN 클라이언트를 시작하려는 디렉토리에 파일의 압축을 푸십시오. 네 파일이 모두 같은 디렉토리에 있어야 합니다.
+3. 서비스 대시보드의 WebSphere Application Server in Bluemix 인스턴스의 OpenVPN 다운로드 링크에서 VPN 구성 파일을 다운로드하십시오. openVPN 클라이언트를 시작하려는 디렉토리에 파일의 압축을 푸십시오. 네 파일이 모두 같은 디렉토리에 있어야 합니다.
 3. openVPN 클라이언트 프로그램을 시작하십시오. 터미널 창을 열고 구성 파일이 포함된 디렉토리로 이동하십시오. 루트로 다음 명령을 실행하십시오. 
 
   <pre>
@@ -97,7 +98,7 @@ OpenVPN은 Bluemix 가상 머신의 WebSphere Application Server에 액세스하
 3. VPN 네트워크에 연결하고 나서 가상 머신에 액세스할 수 있습니다. 사용자가 처음 액세스한 후에 Tunnelblick에서 구성을 캐시하면 [Tunnelblick](https://tunnelblick.net/){: new_window}에서 연결할 수 있습니다. 쉽게 액세스하려면 맨 위 메뉴 표시줄에 아이콘을 둘 수 있습니다.
 
 
-## SSH를 사용하여 WebSphere Application Server for Bluemix VM에 액세스
+## SSH를 사용하여 WebSphere Application Server in Bluemix VM에 액세스
 {: #using_ssh}
 
 이러한 지시사항에서는 OpenSSH를 클라이언트로 사용한다고 가정합니다. OpenSSH는 일반적으로 Linux 또는 Windows에서 실행 중인 Cygwin에서 사용할 수 있습니다. Windows 명령 프롬프트에서 실행하도록 설치할 수도 있습니다.
@@ -114,7 +115,7 @@ OpenSSH의 설치를 확인하려면 다음 명령을 입력하십시오.
   ```
   {: codeblock}
 
-다음 지시사항을 사용하여 WebSphere Application Server for Bluemix VM에 대한 SSH 액세스를 설정하십시오. 
+다음 지시사항을 사용하여 WebSphere Application Server in Bluemix VM에 대한 SSH 액세스를 설정하십시오. 
 
 1. 사용자가 처음 연결할 때 표시되는 경고 메시지, "호스트 x.x.x.x의 인증을 확립할 수 없습니다."를 검토하십시오. 이 메시지는 정상입니다. 프롬프트가 표시되면 예를 선택하십시오. 공개 키가 이제 사용자 virtuser에 대해 VM에 설치되었습니다.
 2. 개인 키를 사용하여 virtuser에 로그인하십시오. 최상의 결과를 위해서는 개인 키 인증 메소드를 사용하십시오.
@@ -176,8 +177,8 @@ Admin Center 또는 Admin Console에 대한 링크를 클릭하면 *신뢰할 �
 {: #firewall_ports}
 
 애플리케이션과 데이터베이스에 액세스 가능하도록 방화벽에서 포트를 열어야 할 수도 있습니다. 
-  * 각 WebSphere Application Server for Bluemix 노드에서 WAS_HOME/virtual/bin 디렉토리에 openFirewallPorts.sh 스크립트가 있습니다. 
-  * 각 Liberty Collective 호스트에서 WAS_HOME/virtual/bin 디렉토리에 openFirewallPorts.sh 스크립트가 있습니다.
+  * 각 WebSphere Application Server in Bluemix 노드에서 WAS_HOME/virtual/bin 디렉토리의 openFirewallPorts.sh 스크립트를 찾습니다. 
+  * 각 Liberty Collective 호스트에서 WAS_HOME/virtual/bin 디렉토리의 openFirewallPorts.sh 스크립트를 찾습니다. 
 
 사용법:
   ```
@@ -210,7 +211,7 @@ Admin Center 또는 Admin Console에 대한 링크를 클릭하면 *신뢰할 �
 
 * 로컬 Windows, Linux 또는 MAC 환경에 [openVPN](systemAccess.html#setup_openvpn)이 구성, 시작되었으며 사용자가 적합한 지역에 연결되었는지 확인하십시오.
 
-* WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 서비스 대시보드에서 **Admin Console 열기**를 클릭해서 wsadmin 및 서비스 대시보드에 제공된 관리자 비밀번호로 로그인하십시오. 
+* WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} 서비스 대시보드에서 **관리자 콘솔 열기**를 클릭하고 wsadmin 및 서비스 대시보드에 제공된 관리자 비밀번호로 로그인하십시오. 
 
 * Admin Console에서 배치 관리자가 비어 있는 사용자 정의 노드와 연합되어 있으므로 애플리케이션 서버(예: ***server1***)를 작성하십시오. 
 
@@ -258,4 +259,34 @@ Admin Center 또는 Admin Console에 대한 링크를 클릭하면 *신뢰할 �
 
 **참고:** 제공된 단계는 웹 서버를 구성하려고 할 때 많은 경로 중 하나를 표시합니다. 추가적인 지원이 필요하면 [IBM Knowledge Center](https://www.ibm.com/support/knowledgecenter/search/configure%20web%20server?scope=SSAW57_9.0.0){: new_window}를 참조하십시오.
 
-**참고:** 애플리케이션에 액세스할 수 없는 경우, 방화벽에 포트 액세스 문제가 있을 수 있습니다. 따라서 애플리케이션 서버, 노드 에이전트, 웹 서버 및 배치 관리자 중에서 다시 시작해야 할 수 있습니다. 추가적으로 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 서비스 대시보드에 액세스해서 각 가상 머신을 다시 시작해야 할 수 있습니다. 
+**참고:** 애플리케이션에 액세스할 수 없는 경우, 방화벽에 포트 액세스 문제가 있을 수 있습니다. 따라서 애플리케이션 서버, 노드 에이전트, 웹 서버 및 배치 관리자 중에서 다시 시작해야 할 수 있습니다. 또한 WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} 서비스 대시보드에 액세스하여 각각의 가상 머신을 다시 시작해야 할 수 있습니다. 
+
+## SSL 구성
+{: #ssl_configuration}
+
+Traditional WebSphere Application Server 및 Liberty 프로파일은 [SSL_TLSv2](https://www.ibm.com/support/knowledgecenter/en/SSYKE2_8.0.0/com.ibm.java.security.component.80.doc/security-component/jsse2Docs/protocols.html){: new_window} 프로토콜로 구성되어 있습니다. 프로토콜을 변경하려면 다음 파일을 수정하십시오. 
+
+Traditional WebSphere Application Server의 경우:
+
+1. /opt/IBM/WebSphere/Profiles/*profile_name*/config/cell/*cell_name*의 **security.xml**을 편집하고 다음 행을 수정하십시오. 
+
+  ```
+  sslProtocol="SSL_TLSv2"
+  ```
+{: codeblock}
+
+2. /opt/IBM/WebSphere/Profiles/*profile_name*/properties의 **ssl.client.props**를 편집하고 다음 행을 수정하십시오. 
+
+  ```
+  com.ibm.ssl.protocol=SSL_TLSv2
+  ```
+{: codeblock}
+
+Liberty 프로파일의 경우: 
+
+1.   /opt/IBM/WebSphere/Profiles/Liberty/servers/server1의 **server.xml**을 편집하고 defaultSSLConfig ssl 구성 요소에 있는 다음 행을 수정하십시오. 
+
+  ```
+  sslProtocol="SSL_TLSv2"
+  ```
+{: codeblock}

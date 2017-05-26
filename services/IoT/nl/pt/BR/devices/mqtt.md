@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-11-17"
+lastupdated: "2017-03-21"
 
 ---
 
@@ -59,7 +59,7 @@ A senha para cada dispositivo é o token de autenticação exclusivo que foi ger
 
 Os dispositivos publicam nos tópicos de eventos no formato a seguir:
 
-<pre class="pre">iot-2/evt/<var class="keyword varname">event_id</var>/fmt/<var class="keyword varname">format_string</var></pre>
+<pre class="pre"><code class="hljs">iot-2/evt/<var class="keyword varname">event_id</var>/fmt/<var class="keyword varname">format_string</var></code></pre>
 {: codeblock}
 
 Em que
@@ -78,7 +78,7 @@ As organizações do {{site.data.keyword.iot_short_notm}} não estão autorizada
 
 Os dispositivos podem assinar tópicos de comando no formato a seguir:
 
-<pre class="pre">iot-2/cmd/<var class="keyword varname">command_id</var>/fmt/<var class="keyword varname">format_string</var></pre>
+<pre class="pre"><code class="hljs">iot-2/cmd/<var class="keyword varname">command_id</var>/fmt/<var class="keyword varname">format_string</var></code></pre>
 {: codeblock}
 
 Em que
@@ -126,7 +126,7 @@ Todas as mensagens são enviadas no formato JSON.
 **Solicitações**  
 Solicitações são formatadas conforme mostrado na amostra de código a seguir:
 
-<pre class="pre">{  "d": {...}, "<var class="keyword varname">reqId</var>": "b53eb43e-401c-453c-b8f5-94b73290c056" }</pre>
+<pre class="pre"><code class="hljs">{  "d": {...}, "<var class="keyword varname">reqId</var>": "b53eb43e-401c-453c-b8f5-94b73290c056" }</code></pre>
 {: codeblock}
 
 Em que:

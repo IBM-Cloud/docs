@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-20"
 
 ---
 
@@ -230,7 +230,7 @@ System.err.println("Failed to update the location!");
 
 ### 傳送連接的裝置位置更新
 
-閘道可以呼叫對應的 `updateDeviceLocation()` 裝置方法來更新連接的裝置的位置。超載方法可以用來指定 `measuredDateTime` 方法。  
+閘道可以呼叫對應的 `updateDeviceLocation()` 裝置方法來更新連接的裝置的位置。超載方法可以用來指定 `measuredDateTime` 方法。
 
 ```java
 // update the location of the attached device with latitude, longitude, and elevation
@@ -648,6 +648,138 @@ mgdGateway.addDeviceActionHandler(actionHandler);
 ```
 
 如需裝置動作的相關資訊，請參閱[裝置管理要求 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](../../devices/device_mgmt/requests.html#/device-actions-reboot#device-actions-reboot){: new_window}。
+
+## 裝置管理延伸規格套件
+{: #dme}
+
+裝置管理延伸規格 (DME) 套件是定義一組自訂裝置管理動作的 JSON 文件。在支援這些動作的一個以上裝置上，可以起始這些動作。使用 {{site.data.keyword.iot_short}} 儀表板或裝置管理 REST API，以起始動作。
+
+如需 DME 套件格式的相關資訊，請參閱[擴充裝置管理](../../devices/device_mgmt/custom_actions.html)。
+
+### 支援自訂裝置管理動作
+
+在支援延伸規格套件中所定義之裝置管理動作的閘道或連接裝置上，可以起始這些動作。
+
+裝置指定將管理要求發佈至 {{site.data.keyword.iot_short}} 時所支援動作的類型。若要容許裝置接收特定延伸規格套件中所定義的自訂動作，則在發佈管理要求時，裝置必須在支援物件中指定該延伸規格的軟體組 ID。
+
+閘道可以使用軟體組 ID 清單來呼叫 `manage()` API，以通知 {{site.data.keyword.iot_short}}：閘道或連接裝置支援管理要求中所提供軟體組 ID 清單的 DME 動作。
+
+下列程式碼 Snippet 是用來發佈管理要求，以與此閘道所支援「DME 動作」的 {{site.data.keyword.iot_short}} 進行通訊：
+
+```java
+List<String> bundleIds = new ArrayList<String>();
+bundleIds.add("example-dme-actions-v1");
+
+mgdGateway.sendGatewayManageRequest(0, false, false, bundleIds);
+```
+
+最後一個參數指定裝置所支援的自訂動作。
+
+同樣地，閘道可以呼叫對應的裝置方法來溝通連接裝置的 DME 動作支援：
+
+```java
+List<String> bundleIds = new ArrayList<String>();
+bundleIds.add("example-dme-actions-v1");
+
+mgdGateway.sendDeviceManageRequest(typeId, deviceId, 0, false, false, bundleIds);
+```
+
+### 處理自訂裝置管理動作
+
+在閘道或連接至 {{site.data.keyword.iot_short}} 的裝置上起始自訂動作時，會將 MQTT 訊息發佈至閘道。此訊息包含已指定為要求一部分的參數。閘道必須新增 CustomActionHandler 來接收及處理訊息。會以包含下列內容的 `CustomAction` 類別實例傳回訊息：
+
+| 內容     | 資料類型     | 說明 |
+|----------------|----------------|----------------|
+|`bundleId` |字串 | DME 的唯一 ID。|
+|`actionId` |字串|已起始的自訂動作。|
+|`typeId` |字串|在其上起始自訂動作的裝置類型。|
+|`deviceId` |字串|在其上起始自訂動作的裝置。|
+|`payload` |字串|包含參數清單的實際訊息，格式為 JSON。|
+|`reqId` |字串|用來回應自訂動作要求的要求 ID。|
+
+下列程式碼是 `CustomActionHandler` 的範例實作：
+
+```java
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.ibm.iotf.client.CustomAction;
+import com.ibm.iotf.client.CustomAction.Status;
+import com.ibm.iotf.devicemgmt.CustomActionHandler;
+
+public class MyCustomActionHandler extends CustomActionHandler implements Runnable {
+
+	// A queue to hold & process the commands for smooth handling of MQTT messages
+	private BlockingQueue<CustomAction> queue = new LinkedBlockingQueue<CustomAction>();
+	// A map to hold the publish interval time for each device
+	private Map<String, Long> intervalMap = new HashMap<String, Long>();
+
+	@Override
+	public void run() {
+		while(true) {
+			CustomAction action = null;
+			try {
+				action = queue.take();
+				System.out.println(" "+action.getActionId()+ " "+action.getPayload());
+				JsonArray fields = action.getPayload().get("d").getAsJsonObject().get("fields").getAsJsonArray();
+				for(JsonElement field : fields) {
+					JsonObject fieldObj = field.getAsJsonObject();
+					if("PublishInterval".equals(fieldObj.get("field").getAsString())) {
+						long val = fieldObj.get("value").getAsLong();
+						String key = action.getTypeId() + ":" + action.getDeviceId();
+						long publishInterval = val * 1000;
+						intervalMap.put(key, publishInterval);
+						System.out.println("Updated the publish interval to "+val);
+					}
+				}
+				action.setStatus(Status.OK);
+
+			} catch (InterruptedException e) {}
+		}
+	}
+
+	public long getPublishInterval(String deviceType, String deviceId) {
+		String key = deviceType + ":" + deviceId;
+		Long val = intervalMap.get(key);
+		if(val == null) {
+			return 1000; // default is 1 second
+		} else {
+			return val.longValue();
+		}
+	}
+
+	@Override
+	public void handleCustomAction(CustomAction action) {
+		try {
+			queue.put(action);
+			} catch (InterruptedException e) {
+		}
+
+	}
+}
+```
+
+將 `CustomActionHandler` 新增至 `ManagedGateway` 實例時，只要應用程式起始任何自訂動作，就會呼叫 `handleCustomAction()` 方法。
+
+下列程式碼範例概述如何將 `CustomActionHandler` 新增至 `ManagedGateway` 實例。
+
+```java
+MyCustomActionHandler handler = new MyCustomActionHandler();
+mgdGateway.addCustomActionHandler(handler);
+```
+
+閘道會在接收到自訂動作訊息時完成動作，或回應錯誤碼，指出無法完成動作。閘道必須使用 *setStatus()* 方法來設定動作的狀態：
+
+```java
+action.setStatus(Status.OK);
+```
+
+如需 DME 的相關資訊，請參閱[擴充裝置管理要求 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](../../devices/device_mgmt/custom_actions.html){: new_window}。
 
 ## 接聽裝置屬性變更
 {: #listen_device_attributes}

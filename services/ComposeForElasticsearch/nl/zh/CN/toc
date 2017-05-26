@@ -1,0 +1,16 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="compose-for-elasticsearch" audience="service" href="/docs/services/ComposeForElasticsearch/index.html"}
+Compose For Elasticsearch
+
+	{: .navgroup id="learn"}
+	index.md
+	credentials.md
+
+	{: .topicgroup }
+	相关链接
+		[样本 Node.js 应用程序](https://github.com/IBM-Bluemix/compose-elasticsearch-helloworld-nodejs)
+		[Compose 帮助](https://help.compose.com)
+		[Compose 文章](https://www.compose.com/articles/)
+	{: .navgroup-end}

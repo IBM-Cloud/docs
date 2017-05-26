@@ -91,18 +91,18 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.6357368"
-     inkscape:cx="444.56557"
-     inkscape:cy="172.96587"
+     inkscape:zoom="1.1566406"
+     inkscape:cx="444.2897"
+     inkscape:cy="191.71797"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g6488"
      showgrid="false"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1920"
-     inkscape:window-height="1027"
+     inkscape:window-width="1280"
+     inkscape:window-height="667"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1" />
@@ -149,7 +149,7 @@
            id="tspan8202-0"
            y="490.15338"
            x="-46.40633"
-           sodipodi:role="line">Dispositivo IoT A</tspan><tspan
+           sodipodi:role="line">IoT Device A</tspan><tspan
            style="font-size:7.5px;stroke:none"
            id="tspan6878-8-8"
            y="503.90338"
@@ -197,7 +197,7 @@
            id="tspan8202-4"
            y="612.05817"
            x="-31.708599"
-           sodipodi:role="line">Dispositivo IoT C</tspan><tspan
+           sodipodi:role="line">IoT Device C</tspan><tspan
            style="font-size:7.5px;stroke:none"
            id="tspan6878-8-5"
            y="625.80817"
@@ -241,7 +241,7 @@
            id="tspan6913-6-9"
            y="448.98209"
            x="379.96921"
-           sodipodi:role="line">Applicazione 1</tspan></text>
+           sodipodi:role="line">Application 1</tspan></text>
       <g
          style="stroke-width:10.70751572;stroke-miterlimit:4;stroke-dasharray:none"
          transform="matrix(0.09339234,0,0,0.09339234,326.14531,420.95347)"
@@ -315,7 +315,7 @@
            id="tspan6913-6"
            y="621.03198"
            x="369.59439"
-           sodipodi:role="line">Applicazione 2</tspan></text>
+           sodipodi:role="line">Application 2</tspan></text>
       <g
          style="stroke-width:10.70751572;stroke-miterlimit:4;stroke-dasharray:none"
          transform="matrix(0.09339234,0,0,0.09339234,315.77053,593.00349)"
@@ -398,7 +398,7 @@
            y="286.15955"
            x="151.48978"
            id="tspan266400"
-           sodipodi:role="line" /><tspan
+           sodipodi:role="line"> </tspan><tspan
            id="tspan4887"
            y="301.15955"
            x="151.48978"
@@ -594,44 +594,42 @@
          ry="0" />
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.21430206px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-         x="155.90417"
-         y="467.13052"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         x="144.77061"
+         y="503.06281"
          id="text44235-7-4"
-         sodipodi:linespacing="125%"
-         transform="scale(0.92857295,1.0769213)"><tspan
+         sodipodi:linespacing="125%"><tspan
+           id="tspan13797"
+           sodipodi:role="line"
+           x="144.77061"
+           y="503.06281">Topic space: f9gh4b</tspan><tspan
+           id="tspan14869"
+           sodipodi:role="line"
+           x="144.77061"
+           y="516.81281">Device C</tspan><tspan
            id="tspan14877"
            sodipodi:role="line"
-           x="155.90417"
-           y="467.13052">Spazio argomento: f9gh4b</tspan><tspan
-           sodipodi:role="line"
-           x="155.90417"
-           y="480.88052"
-           id="tspan3476">Dispositivo C</tspan><tspan
-           sodipodi:role="line"
-           x="155.90417"
-           y="494.63052"
-           id="tspan3478">Applicazione 2</tspan></text>
+           x="144.77061"
+           y="530.56281">Application 2</tspan></text>
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.11853981px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-         x="151.16699"
-         y="312.00452"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         x="139.05605"
+         y="339.18427"
          id="text44235-7-4-7"
-         sodipodi:linespacing="125%"
-         transform="scale(0.91986729,1.0871133)"><tspan
+         sodipodi:linespacing="125%"><tspan
+           id="tspan13797-0"
+           sodipodi:role="line"
+           x="139.05605"
+           y="339.18427">Topic space: q1bc3a</tspan><tspan
+           id="tspan14867"
+           sodipodi:role="line"
+           x="139.05605"
+           y="352.93427">Device A</tspan><tspan
            id="tspan14871"
            sodipodi:role="line"
-           x="151.16699"
-           y="312.00452">Spazio argomento: q1bc3a</tspan><tspan
-           sodipodi:role="line"
-           x="151.16699"
-           y="325.75452"
-           id="tspan3467">Dispositivo A</tspan><tspan
-           sodipodi:role="line"
-           x="151.16699"
-           y="339.50452"
-           id="tspan3469">Applicazione 1</tspan></text>
+           x="139.05605"
+           y="366.68427">Application 1</tspan></text>
       <text
          sodipodi:linespacing="125%"
          id="text266398-1"
@@ -718,10 +716,10 @@
     <text
        sodipodi:linespacing="125%"
        y="438.37378"
-       x="70.233276"
+       x="84.233276"
        font-size="11"
        id="text56834-0-4-8-0-89-9"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Nessun comando per A</text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">No command for A</text>
     <rect
        style="opacity:1;fill:#000000;fill-opacity:0;stroke:none;stroke-width:0.90653205;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect6906"
@@ -743,12 +741,11 @@
        style="opacity:1;fill:#ffffff" />
     <text
        sodipodi:linespacing="125%"
-       y="348.52701"
-       x="539.48041"
+       y="437.28076"
+       x="435.67786"
        font-size="11"
        id="text56834-0-4-8-0-89-9-0-1"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.76735878px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
-       transform="scale(0.7970326,1.2546538)">Nessun messaggio per l'applicazione 1</text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">No message for app 1</text>
     <path
        inkscape:connector-curvature="0"
        id="path8199-4-1"
@@ -763,12 +760,11 @@
        style="opacity:1;fill:#ffffff" />
     <text
        sodipodi:linespacing="125%"
-       y="548.44348"
-       x="81.852432"
+       y="611.26819"
+       x="85.28064"
        font-size="11"
        id="text56834-0-4-8-0-89-9-4"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.86944675px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
-       transform="scale(0.8972224,1.1145509)">Messaggio per l'applicazione 1</text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Message for app 1</text>
     <path
        inkscape:connector-curvature="0"
        id="path8199-4-1-7"
@@ -787,6 +783,6 @@
        x="450.69543"
        font-size="11"
        id="text56834-0-4-8-0-89-9-2"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Comando per A</text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Command for A</text>
   </g>
 </svg>

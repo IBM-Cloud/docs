@@ -13,7 +13,7 @@ lastupdated: "2017-03-14"
 {:pre: .pre}
 
 
-# Sviluppo degli smart contract per l'integrazione blockchain {{site.data.keyword.iot_short_notm}}
+# Sviluppo degli smart contract blockchain
 {: #iotblockchain_link}
 
 Utilizza {{site.data.keyword.blockchainfull}} e l'ambiente di sviluppo Hyperledger per creare e verificare i tuoi propri smart contract derivati dai contratti semplici forniti da IBM.
@@ -241,7 +241,7 @@ Per scaricare i contratti di esempio:
 
   </ul>
   3. Distribuisci il contratto al peer.  
-  Per ulteriori informazioni sulla chiamata di disatribuzione, consulta [POST/chaincode API documentation ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/hyperledger/fabric/blob/v0.6/docs/API/CoreAPI.md#chaincode){: new_window}.  
+  Per ulteriori informazioni sulla chiamata di distribuzione, consulta [POST/chaincode API documentation ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/hyperledger/fabric/blob/v0.6/docs/API/CoreAPI.md#chaincode){: new_window}.  
   Utilizza le seguenti informazioni durante la distribuzione:  
   <ul>
   <li>URL: `http://api_host:api_port_tls/chaincode`
@@ -279,7 +279,7 @@ Per scaricare i contratti di esempio:
    4. Fai clic su **Launch** per aprire il dashboard {{site.data.keyword.iot_short_notm}}.
    5. Seleziona **Blockchain**  facendo clic su ![Blockchain.](images/platform_blockchain.png "Blockchain") nella barra laterale del menu.
    6. Fai clic su **Map Device Data**.
-   7. Seleziona il tipo di dispositivo per cui desideri archiviare i dati nel blockchain e il nome dell'evento che desideri archiviare. Fai clic su **Avanti**.
+   7. Seleziona il tipo dispositivo per cui desideri archiviare i dati nel blockchain e il nome dell'evento che desideri archiviare. Fai clic su **Avanti**.
    8. Seleziona il nome del fabric per il fabric che hai precedentemente creato. Fai clic su **Avanti**.
    9. Immetti le seguenti informazioni e fai clic su **Avanti**:
      - ID contratto - Incolla l'ID del contratto di 128 caratteri che hai salvato quando hai distribuito il contratto.

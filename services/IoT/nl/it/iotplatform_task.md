@@ -33,7 +33,7 @@ Completa la seguente procedura per collegare il tuo dispositivo a {{site.data.ke
 ## Passo 1: registrazione del tuo dispositivo con {{site.data.keyword.iot_short_notm}}  
 {: #iotplatform_subtask1}
 
-La registrazione di un dispositivo implica la classificazione del dispositivo come un tipo di dispositivo, dando al dispositivo un nome e fornendo le informazioni sul dispositivo. Quindi fornisci un token di connessione o accetta un token generato da {{site.data.keyword.iot_short_notm}}.
+La registrazione di un dispositivo implica la classificazione del dispositivo come un tipo dispositivo, dando al dispositivo un nome e fornendo le informazioni sul dispositivo. Quindi fornisci un token di connessione o accetta un token generato da {{site.data.keyword.iot_short_notm}}.
 
 Puoi aggiungere un dispositivo alla volta dal dashboard {{site.data.keyword.iot_short_notm}} o puoi utilizzare l'API [{{site.data.keyword.iot_short_notm}} ![icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Bulk_Configuration){: new_window} per aggiungere uno o più dispositivi contemporaneamente.
 
@@ -41,7 +41,7 @@ Per aggiungere un dispositivo dal dashboard {{site.data.keyword.iot_short_notm}}
 
 1. Fai clic sul tile del servizio {{site.data.keyword.iot_short_notm}} nel tuo dashboard {{site.data.keyword.Bluemix}}.
 
-2. Nella pagina del servizio, fai clic su **Launch** per avviare la gestione della tua organizzazione {{site.data.keyword.iot_short_notm}}. 
+2. Nella pagina del servizio, fai clic su **Launch** per avviare la gestione della tua organizzazione {{site.data.keyword.iot_short_notm}}.
 
   Si apre la console web {{site.data.keyword.iot_short_notm}} in una nuova scheda del browser al seguente URL:
 
@@ -52,25 +52,25 @@ Per aggiungere un dispositivo dal dashboard {{site.data.keyword.iot_short_notm}}
     Dove *org_id* è l'ID della [tua {{site.data.keyword.iot_short_notm}} organizzazione](iotplatform_overview.html#organizations){: new_window}.
 
 3. Nel dashboard della panoramica, dal pannello del menu, seleziona **Devices** e fai clic su **Add Device**.
-5. Seleziona o crea un tipo di dispositivo per il dispositivo che stai aggiungendo.  
-Ogni dispositivo collegato a {{site.data.keyword.iot_short_notm}} deve essere associato a un tipo di dispositivo. I tipi di dispositivo sono gruppi di dispositivi che condividono caratteristiche comuni.  
-Quando aggiungi il tuo primo dispositivo alla tua organizzazione {{site.data.keyword.iot_short_notm}}, non è disponibile alcun tipo di dispositivo nel menu **Device type**. Devi prima creare un tipo di dispositivo:
+5. Seleziona o crea un tipo dispositivo per il dispositivo che stai aggiungendo.  
+Ogni dispositivo collegato a {{site.data.keyword.iot_short_notm}} deve essere associato a un tipo dispositivo. I tipi di dispositivo sono gruppi di dispositivi che condividono caratteristiche comuni.  
+Quando aggiungi il tuo primo dispositivo alla tua organizzazione {{site.data.keyword.iot_short_notm}}, non è disponibile alcun tipo dispositivo nel menu **Device type**. Devi prima creare un tipo dispositivo:
  1. Fai clic su **Create device type**.
- 2. Immetti un nome del tipo di dispositivo come ad esempio `my_device_type` e una descrizione per il tipo di dispositivo.   
- **Importante:** il nome del tipo di dispositivo non deve essere più lungo di 36 caratteri e può contenere solo:
+ 2. Immetti un nome del tipo dispositivo come ad esempio `my_device_type` e una descrizione per il tipo dispositivo.   
+ **Importante:** il nome del tipo dispositivo non deve essere più lungo di 36 caratteri e può contenere solo:
  <ul>
   <li>Caratteri alfanumerici (a-z, A-Z, 0-9)</li>
   <li>Trattini (-)</li>
   <li>Caratteri di sottolineatura (&lowbar;)</li>
   <li>Punti (.)</li>
   </ul>
- 3. Facoltativo: immetti i metadati e gli attributi per il tipo di dispositivo.    
+ 3. Facoltativo: immetti i metadati e gli attributi per il tipo dispositivo.    
  **Suggerimento:** puoi aggiungere e modificare gli attributi e i metadati successivamente.
- 4. Fai clic su **Create** per aggiungere il nuovo tipo di dispositivo.
-10. Fai clic su **Next** per avviare il processo di aggiunta del tuo dispositivo. con il tipo di dispositivo.
+ 4. Fai clic su **Create** per aggiungere il nuovo tipo dispositivo.
+10. Fai clic su **Next** per avviare il processo di aggiunta del tuo dispositivo. con il tipo dispositivo.
 11. Immetti un ID dispositivo, come ad esempio `my_first_device`.  
 L'ID dispositivo viene utilizzato per identificare il dispositivo nel dashboard {{site.data.keyword.iot_short_notm}} ed è anche un parametro obbligatorio per la connessione del tuo dispositivo a {{site.data.keyword.iot_short_notm}}.  
-**Importante:** l'ID del tipo di dispositivo non deve essere più lungo di 36 caratteri e può contenere solo:
+**Importante:** l'ID del tipo dispositivo non deve essere più lungo di 36 caratteri e può contenere solo:
  <ul>
  <li>Caratteri alfanumerici (a-z, A-Z, 0-9)</li>
  <li>Trattini (-)</li>
@@ -104,7 +104,7 @@ Se scegli di creare il tuo proprio token, assicurati che sia compreso tra 8 e 36
  - ID del dispositivo, come ad esempio `my_first_device`
  - Metodo di autenticazione, come ad esempio `token`
  - Token di autenticazione, come ad esempio `PtBVriRqIg4uh)_-Kl`  
-  **Suggerimento:** hai bisogno dell'ID organizzazione, del token di autenticazione, del tipo di dispositivo e dell'ID del dispositivo per configurare il tuo dispositivo per il collegamento a {{site.data.keyword.iot_short_notm}}.  
+  **Suggerimento:** hai bisogno dell'ID organizzazione, del token di autenticazione, del tipo dispositivo e dell'ID del dispositivo per configurare il tuo dispositivo per il collegamento a {{site.data.keyword.iot_short_notm}}.  
 
 Congratulazioni, hai registrato il tuo dispositivo. Ora puoi configurare il tuo dispositivo per collegarsi a {{site.data.keyword.iot_short_notm}}
 
@@ -114,7 +114,7 @@ Congratulazioni, hai registrato il tuo dispositivo. Ora puoi configurare il tuo 
 Dopo aver registrato il dispositivo con {{site.data.keyword.iot_short_notm}}, puoi utilizzare le informazioni registrate per collegare il dispositivo e avviare la ricezione dei dati.
 
 {{site.data.keyword.iot_short_notm}} supporta molti tipi di dispositivo. Il processo di base per connettersi a un dispositivo di solito include le seguenti operazioni:
-- Configurazione del tuo dispositivo alla messaggistica MQTT e all'utilizzo dell'ID organizzazione, del token di autenticazione, del tipo di dispositivo e dell'ID del dispositivo per l'autenticazione.  
+- Configurazione del tuo dispositivo alla messaggistica MQTT e all'utilizzo dell'ID organizzazione, del token di autenticazione, del tipo dispositivo e dell'ID del dispositivo per l'autenticazione.  
 - Invio dei messaggi del dispositivo alla tua organizzazione {{site.data.keyword.iot_short_notm}} utilizzando il protocollo MQTT.
 
 **Suggerimento:** molte ricette di connessione sono disponibili per i dispositivi comunemente utilizzati. Per un elenco delle ricette, consulta le

@@ -1,8 +1,8 @@
 ---
 
-Copyright:
-  Jahre: 2015, 2016
-Letzte Aktualisierung: 28.10.2016
+copyright:
+  years: 2015, 2016
+lastupdated: "2017-02-24"
 
 ---
 
@@ -16,7 +16,7 @@ Letzte Aktualisierung: 28.10.2016
 ## Konventionen für die Installation von Zellen
 {: cell_installation_conventions}
 
-WebSphere Application Server for Bluemix-Zellen werden unter Verwendung einer standardisierten Verzeichnisstruktur installiert und konfiguriert. Die folgende Liste enthält die wichtigsten Einstellungen.  Eine vollständige Liste der Einstellungen finden Sie in der Datei /etc/virtualimage.properties.
+WebSphere Application Server in Bluemix-Zellen werden unter Verwendung einer standardisierten Verzeichnisstruktur installiert und konfiguriert. Die folgende Liste enthält die wichtigsten Einstellungen.  Eine vollständige Liste der Einstellungen finden Sie in der Datei /etc/virtualimage.properties.
 
 * IHS_HOME=/opt/IBM/WebSphere/HTTPServer
 * IHS_INSTALL_ROOT=/opt/IBM/WebSphere/HTTPServer

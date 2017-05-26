@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2016
-lastupdated: "2017-05-10"
+lastupdated: "2017-05-17"
 
 ---
 
@@ -19,6 +19,8 @@ You can manage users across the {{site.data.keyword.Bluemix_notm}} Platform and 
 {:shortdesc}
 
 To access the Users page, from the {{site.data.keyword.Bluemix_notm}} menu, click **Manage** &gt; **Account** &gt; **Users**. Account owners perform all operations on organizations and spaces, including managing users and their assigned roles. Organization managers and space managers also have access to manage roles. 
+
+If you are a user added to another person's account, and you want to view your assigned roles and permissions, go to **Manage** &gt; **Security** &gt; **Identity & Access** &gt; **Users**, and click on your name.
 
 ## Account roles
 {: #userrolesinfo}
@@ -59,7 +61,7 @@ The following roles can be assigned at the space level:
 ## Identity and access management policies and roles
 {: #iamusermanpol}
 
-Account owners are automatically assigned the administrator role for Identity and access managemement which enables you to assign and manage service policies. This type of access control enables the assignment of policies per service or service instance to allow levels of access for managing resources and users within the assigned context.
+Account owners are automatically assigned the account access administrator role for Identity and access managemement which enables you to assign and manage service policies. This type of access control enables the assignment of policies per service or service instance to allow levels of access for managing resources and users within the assigned context.
 
 ### Service policies
 
@@ -82,12 +84,9 @@ You can assign and manage policies if you have the proper role. The following ta
 ### Service policy roles
 {: #iamusermanrol}
 
-Roles are a collection of actions; the actions that are mapped to these roles are service specific. 
-Because actions are grouped as roles, you can use a small set of defined roles to support any actions for any services and any resource. For example, if you need an administrator for virtual machines, storage, and networking, you can set the user as the administrator for all three by changing the target of the policy. So you would set the policy to include the administrator of virtual machines, the administrator of storage, and the administrator of networking.
+Roles are a collection of actions; the actions that are mapped to these roles are service specific. Refer to the documentation for the selected service for additional details about what types of actions each role allows.
 
-Resources are not built into the roles so that new role names are not created for every type of resource that is introduced in the system. For example, you do not need a virtual machine administrator role, a storage administrator role, and a network administrator role to cover administration for resources of virtual machines, storage, and network.
-
-In addition to the descriptions of the roles provided in the console, the following table provides examples of some of the tasks that users assigned each role might be able to do depending on the selected service. Refer to the documentation for the selected service for additional details about what types of actions each role allows.
+In addition to the descriptions of the roles provided in the console, the following table provides examples of some of the tasks that users assigned each role might be able to do depending on the selected service. 
 
 {: #iamui_table2}
 

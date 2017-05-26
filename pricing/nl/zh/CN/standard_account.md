@@ -35,7 +35,7 @@ lastupdated: "2017-02-09"
 | 您可以使用即将推出的更多服务，访问 Cloudant NoSQL DB 和 Internet of Things Platform 的免费 Lite 套餐。 |
 | 如果超过 10 天没有任何开发活动，那么您的应用程序将休眠。 |
 | 您的服务实例将在处于不活动状态 30 天后删除。 |
-{:caption="表 1. 标准帐户中的新增内容" caption-side="top"}
+{:caption="表 1. 标准帐户中的新增功能" caption-side="top"}
 
 |转换试用帐户时未发生更改的内容？ | 
 |-----------------|

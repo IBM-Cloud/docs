@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-16"
+lastupdated: "2017-03-29"
 
 ---
 
@@ -23,11 +23,6 @@ Puede utilizar las funciones de registro de {{site.data.keyword.Bluemix_notm}} p
 
 Cuando ejecuta sus apps en la nube, es posible que no pueda utilizar SSH ni FTP en la infraestructura en la que se ejecutan las apps para acceder a los registros, por ejemplo si ejecuta apps en Cloud Foundry. Por otro lado, puede ejecutar la app en {{site.data.keyword.containershort}}, otro tiempo de ejecución de cálculo disponible en {{site.data.keyword.Bluemix_notm}}, donde puede ejecutar SSH y acceder a los registros. Independientemente del tiempo de ejecución de cálculo, el acceso a los registros resulta crucial y {{site.data.keyword.Bluemix_notm}} proporciona una experiencia común para visualizar y analizar registros en la plataforma en la nube.
 
-{{site.data.keyword.Bluemix_notm}} registra los datos de registro que genera la plataforma Cloud Foundry y las aplicaciones de Cloud Foundry. En los registros puede ver los errores, avisos y mensajes informativos que se generan para la app. Para obtener más información sobre el registro en Cloud Foundry, consulte [Registro de apps de Cloud Foundry en Bluemix](logging_cf_apps.html#logging_bluemix_cf_apps).
-
-{{site.data.keyword.Bluemix_notm}} registra los datos de registro que genera {{site.data.keyword.containershort}}. Para obtener más información sobre el registro en {{site.data.keyword.containershort}}, consulte [Registro correspondiente al servicio IBM Bluemix Container](containers/logging_containers_ov.html#logging_containers_ov).   
-
-
 Con la función de registro que proporciona {{site.data.keyword.Bluemix_notm}}, puede:
 
 * Obtener una perspectiva de los recursos de la nube y sobre su rendimiento y ejecución.
@@ -40,3 +35,31 @@ Con la función de registro que proporciona {{site.data.keyword.Bluemix_notm}}, 
 * Identificar vulnerabilidades de una app.
 * Detectar problemas de la infraestructura.
 * Detectar problemas del tiempo de ejecución de una app.
+
+## Creación de registros para apps de CF
+{: #logging_bmx_ov_cf}
+
+{{site.data.keyword.Bluemix_notm}} registra los datos de registro que genera la plataforma Cloud Foundry y las aplicaciones de Cloud Foundry. En los registros puede ver los errores, avisos y mensajes informativos que se generan para la app. Para obtener más información sobre la creación de registros en Cloud Foundry, consulte [Creación de registros para apps de Cloud Foundry en Bluemix](cfapps/logging_cf_apps.html#logging_bluemix_cf_apps). 
+
+## Creación de registros para contenedores
+{: #logging_bmx_ov_containers}
+
+{{site.data.keyword.Bluemix_notm}} registra los datos de registro que genera {{site.data.keyword.containershort}}. Para obtener más información sobre el registro en {{site.data.keyword.containershort}}, consulte [Registro correspondiente al servicio IBM Bluemix Container](containers/logging_containers_ov.html#logging_containers_ov).  
+
+**Nota:** Tiene la posibilidad de analizar los registros de contenedores Docker en {{site.data.keyword.Bluemix_notm}} que se despliegan en la infraestructura de nube gestionada de {{site.data.keyword.IBM}}. 
+
+## Análisis de registro en Bluemix
+{: #logging_bmx_ov_ui}
+
+En {{site.data.keyword.Bluemix_notm}}, puede ver los registros recientes para su app o la parte más reciente de los registros en tiempo real. 
+
+* Puede ver, filtrar y analizar registros a través de la interfaz de usuario. Para obtener más información, consulte [Análisis de registros desde la consola de Bluemix](logging_view_dashboard.html#analyzing_logs_bmx_ui).
+
+* Puede ver, filtrar y analizar registros mediante la línea de mandatos para gestionar registros mediante programación. Para obtener más información, consulte [Análisis de registros desde la interfaz de línea de mandatos](logging_view_cli.html#analyzing_logs_cli).
+
+## Análisis avanzado de registros con Kibana
+{: #logging_bmx_ov_kibana}
+
+En {{site.data.keyword.Bluemix_notm}}, puede utilizar Kibana, una plataforma de visualización y análisis de código abierto, para supervisar, buscar, analizar y visualizar datos en diversos gráficos, como diagramas y tablas. Para obtener más información, consulte [Análisis avanzado de registros con Kibana](kibana4/analyzing_logs_Kibana.html#analyzing_logs_Kibana).
+
+

@@ -1,0 +1,24 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="bluemix-overview" audience="platform" href="/docs/overview/whatisbluemix.html"}
+What is Bluemix
+  
+    {: .navgroup id="learn"}
+    whatisbluemix.md
+    bluemixoverviewui.md
+    cf.md
+    prereqs.md
+    
+    {: .topicgroup}
+    관련 링크
+        [Bluemix의 개념](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){: new_window}
+        [시작하기](http://www.ibm.com/cloud-computing/bluemix/getting-started/){: new_window}
+        [하이브리드 모델 알아보기](http://www.ibm.com/cloud-computing/bluemix/hybrid/){: new_window}
+    {: .navgroup-end}
+    
+    {: .navgroup id="reference"}
+    [주의사항 및 이용 약관](../navigation/notices.html)
+    glossary/index.md
+    [새로운 기능](../whatsnew/index.html)
+    {: .navgroup-end}

@@ -26,7 +26,7 @@ Puoi utilizzare Java™ per creare e personalizzare le applicazioni che interagi
 Ultimo aggiornamento: 25 ottobre 2016
 {: .last-updated}
 
-Per accedere agli esempi e alle librerie client Java per {{site.data.keyword.iot_short_notm}}, vai al repository [iot-java ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/iot-java){: new_window} in GitHub e completa le istruzioni di installazione.
+Per accedere agli esempi e alle librerie client Java per {{site.data.keyword.iot_short_notm}}, vai al repository [iot-java ![Icona link esterno](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-java){: new_window} in GitHub e completa le istruzioni di installazione.
 
 
 ## Constructor
@@ -128,7 +128,7 @@ Gli eventi sono meccanismi con cui i dispositivi pubblicano i dati in {{site.dat
 Quando viene ricevuto un evento dall'istanza {{site.data.keyword.iot_short_notm}}, le credenziali dell'evento ricevuto identificano il dispositivo di invio, il che significa che un dispositivo non può impersonare un altro dispositivo.
 
 
-Per impostazione predefinita, le applicazioni si sottoscrivono a tutti gli eventi da tutti i dispositivi collegati. Utilizza i parametri tipo di dispositivo, ID dispositivo e formato del messaggio per controllare l'ambito della sottoscrizione. I seguenti esempi di codice mostrano come puoi utilizzare questi parametri per definire l'ambito di una sottoscrizione:
+Per impostazione predefinita, le applicazioni si sottoscrivono a tutti gli eventi da tutti i dispositivi collegati. Utilizza i parametri tipo dispositivo, ID dispositivo e formato del messaggio per controllare l'ambito della sottoscrizione. I seguenti esempi di codice mostrano come puoi utilizzare questi parametri per definire l'ambito di una sottoscrizione:
 
 ### Sottoscrizione a tutti gli eventi provenienti da tutti i dispositivi
 
@@ -181,8 +181,8 @@ Per elaborare gli eventi ricevuti dalle tue sottoscrizioni, registra un metodo d
 |Parametro|Tipo di dati|Descrizione|
 |:---|:---|
 |`event.device`|Stringa|Identifica univocamente il dispositivo tra tutti i tipi di dispositivi nell'organizzazione.|
-|`event.deviceType`|Stringa|Identifica il tipo di dispositivo. Generalmente, il deviceType è un raggruppamento di dispositivi che esegue un'attività specifica, ad esempio, "weatherballoon" può essere un tipo di dispositivo.|
-|`event.deviceId`|Stringa|Rappresenta l'ID del dispositivo. Generalmente, per un tipo di dispositivo specifico, il deviceId è un identificativo univoco di tale dispositivo, ad esempio un numero seriale o un indirizzo MAC.|
+|`event.deviceType`|Stringa|Identifica il tipo dispositivo. Generalmente, il deviceType è un raggruppamento di dispositivi che esegue un'attività specifica, ad esempio, "weatherballoon" può essere un tipo dispositivo.|
+|`event.deviceId`|Stringa|Rappresenta l'ID del dispositivo. Generalmente, per un di tipo dispositivo specifico, il deviceId è un identificativo univoco di tale dispositivo, ad esempio un numero seriale o un indirizzo MAC.|
 |`event.event`|Stringa|Solitamente viene utilizzato per raggruppare gli eventi specifici, ad esempio "status", "warning" e "data".|
 |`event.format`|Stringa|Il formato può essere qualsiasi stringa, ad esempio JSON.  |
 |`event.data`|Dizionario|I dati per il payload del messaggio. La lunghezza massima è di 131072 byte.|
@@ -263,7 +263,7 @@ I metodi overloaded sono disponibili per controllare la sottoscrizione ai comand
 ## Sottoscrizione agli stati del dispositivo
 {: #subscribing_device_status}
 
-In modo simile alla sottoscrizione agli eventi del dispositivo, le applicazioni possono sottoscriversi allo stato del dispositivo, come ad esempio una connessione e disconnessione a {{site.data.keyword.iot_short_notm}}. Per impostazione predefinita, questa è una sottoscrizione agli aggiornamenti dello stato per tutti i dispositivi collegati. Utilizza i parametri tipo di dispositivo e ID dispositivo per controllare l'ambito della sottoscrizione. I seguenti esempi di codice mostrano come puoi utilizzare questi parametri per definire l'ambito di una sottoscrizione:
+In modo simile alla sottoscrizione agli eventi del dispositivo, le applicazioni possono sottoscriversi allo stato del dispositivo, come ad esempio una connessione e disconnessione a {{site.data.keyword.iot_short_notm}}. Per impostazione predefinita, questa è una sottoscrizione agli aggiornamenti dello stato per tutti i dispositivi collegati. Utilizza i parametri tipo dispositivo e ID dispositivo per controllare l'ambito della sottoscrizione. I seguenti esempi di codice mostrano come puoi utilizzare questi parametri per definire l'ambito di una sottoscrizione:
 
 ### Sottoscrizione agli aggiornamenti dello stato per tutti i dispositivi
 
@@ -414,7 +414,7 @@ In aggiunta all'utilizzo di MQTT, puoi anche configurare le tue applicazioni in 
 
 1. Crea l'istanza ApplicationClient utilizzando il file delle proprietà.
 2. Crea l'evento che deve essere pubblicato.
-3. Specifica il nome dell'evento, il tipo di dispositivo e l'ID del dispositivo.
+3. Specifica il nome dell'evento, il tipo dispositivo e l'ID del dispositivo.
 4. Pubblica l'evento utilizzando il metodo `publishEventOverHTTP`(), come mostrato nel seguente esempio di codice:
 
 ```
@@ -460,7 +460,7 @@ In aggiunta all'utilizzo di MQTT, puoi anche configurare le tue applicazioni in 
 
 1. Crea l'istanza ApplicationClient utilizzando il file delle proprietà
 2. Crea il comando che deve essere pubblicato
-3. Specifica il nome del comando, il tipo di dispositivo e l'ID del dispositivo
+3. Specifica il nome del comando, il tipo dispositivo e l'ID del dispositivo
 4. Pubblica il comando utilizzando il metodo `publishCommandOverHTTP`(), come mostrato nel seguente codice:
 
 ```

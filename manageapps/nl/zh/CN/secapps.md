@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-04-18"
 
 ---
 
@@ -68,7 +68,7 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
 
 您可以应用安全协议来为应用程序提供通信隐私，以防止窃听、篡改和消息伪造。
 
-对于 {{site.data.keyword.Bluemix_notm}} 中帐户所有者已具有适当“现买现付”或“预订”套餐的每个组织，可以免费上传证书四次。对于帐户所有者具有免费试用帐户的每个组织，可以免费上传证书一次。
+对于 {{site.data.keyword.Bluemix_notm}} 中帐户所有者已具有适当“现买现付”或“预订”套餐的每个组织，可以上传证书四次。对于帐户所有者具有免费试用帐户的每个组织，必须升级帐户后才能上传证书。
 
 在上传证书之前，必须创建证书签名请求。请参阅[创建证书签名请求](#ssl_csr)。
 
@@ -77,13 +77,16 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
   * US-South：secure.us-south.bluemix.net
   * EU-GB：secure.eu-gb.bluemix.net
   * AU-SYD：secure.au-syd.bluemix.net
+  * EU-DE：secure.eu-de.bluemix.net
 
 
 要上传应用程序的证书，请执行以下操作：
 
-1. 通过从应用程序菜单中选择**编辑路径和应用程序访问权**，创建路径或编辑现有路径。
+1. 转至“仪表板”。
 
-2. 在“编辑路径和应用程序访问权”对话框中，单击**管理域**。
+2. 选择应用程序的名称以打开应用程序详细信息视图。
+
+3. 选择**路径**下拉列表，然后选择**管理域**。
 
 3. 对于定制域，单击**上传证书**。
 
@@ -135,4 +138,4 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
 	  * DER（.der 或 .cer）
       * PKCS #7（p7b、p7r 和 spc）
 
-要删除证书或将现有证书替换为新证书，请转至**管理组织** > **域** > **查看证书**来管理您的证书。
+要删除证书或将现有证书替换为新证书，请转至**管理** > **帐户** > **组织**。然后，单击**查看详细信息** > **编辑组织** > **域**以删除或替换定制域的证书。

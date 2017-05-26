@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-04"
+lastupdated: "2017-04-24"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock:.codeblock}
 {:screen:.screen}
 {:pre: .pre}
@@ -277,7 +276,7 @@ JavaScript 操作缺省情况下在 Node.js V6.9.1 环境中执行。如果在�
 - underscore v1.8.3
 - uuid v3.0.0
 - validator v6.1.0
-- watson-developer-cloud v2.9.0
+- watson-developer-cloud v2.29.0
 - when v3.7.7
 - winston v2.3.0
 - ws v1.1.1
@@ -391,7 +390,7 @@ Docker 操作在 Docker 容器中运行用户提供的二进制文件。该二�
 
 通过 Docker 框架，可以方便地构建兼容 OpenWhisk 的 Docker 映像。可以使用 `wsk sdk install docker` CLI 命令安装该框架。
 
-主二进制程序必须位于容器内的 `/action/exec` 中。可执行文件通过 `stdin` 接收输入自变量，并且必须通过 `stdout` 返回结果。
+主二进制程序必须位于容器内的 `/action/exec` 中。可执行文件通过可以反序列化为 `JSON` 对象的单个命令行自变量字符串来接收输入自变量。该文件必须通过 `stdout` 以单行序列化 `JSON` 字符串形式返回结果。
 
 您可以通过修改 `dockerSkeleton` 中包含的 `Dockerfile` 来包含任何编译步骤或依赖关系。
 
@@ -425,7 +424,7 @@ Docker 操作在 Docker 容器中运行用户提供的二进制文件。该二�
 - `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations/{activationName}`
 
 
-名称空间和激活端点仅支持 GET 请求。操作、触发器、规则和包端点支持 GET、PUT 和 DELETE 请求。操作、触发器和规则的端点还支持 POST 请求，其用于调用操作和触发器，以及启用或禁用规则。有关详细信息，请参阅 [API参考](https://new-console.{DomainName}/apidocs/98)。
+名称空间和激活端点仅支持 GET 请求。操作、触发器、规则和包端点支持 GET、PUT 和 DELETE 请求。操作、触发器和规则的端点还支持 POST 请求，其用于调用操作和触发器，以及启用或禁用规则。有关详细信息，请参阅 [API参考](https://console.{DomainName}/apidocs/98)。
 
 所有 API 都通过 HTTP 基本认证进行保护。基本认证凭证位于 `~/.wskprops` 文件的 `AUTH` 属性中，以冒号分隔。您还可以在 [CLI 配置步骤](./index.html#openwhisk_start_configure_cli)中，对这些凭证进行检索。
 

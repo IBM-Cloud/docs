@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-16"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -28,6 +28,7 @@ lastupdated: "2017-03-16"
 | CF アプリケーション   | `application_id:<app_GUID>`    |
 | 単一 Docker コンテナー | `instance:<instance_GUID>`    |
 | 2 つのインスタンスが含まれたコンテナー・グループ | `instance:<instance_GUID> OR instance:<instance_GUID>` |
+{: caption="表 1. デフォルトの検索照会" caption-side="top"}
 
 **注:** 
 * {{site.data.keyword.Bluemix_notm}} UI から Kibana を起動するたびに、表示できるデータは、デフォルトで事前定義されていて、索引パターンに基づいた照会に対応します。
@@ -47,6 +48,7 @@ lastupdated: "2017-03-16"
 | [フィールド列の削除](logging_kibana_analize_logs_interactively.html#kibana_discover_remove_fields_from_table) | 分析用にビュー内で不要になったフィールドを削除します。 |
 | [索引フィールドの値による項目の配列](logging_kibana_analize_logs_interactively.html#kibana_discover_sort_by_table) | 分析しやすいように項目を再配列します。 |
 | [データの自動最新表示](logging_kibana_analize_logs_interactively.html#kibana_discover_view_refresh_interval) | 最新の項目を使用して、表内に表示されるデータを最新表示します。デフォルトでは、最新表示は **OFF** です。 |
+{: caption="表 2. 表をカスタマイズするタスク" caption-side="top"}
 
 <br>
 
@@ -60,7 +62,7 @@ lastupdated: "2017-03-16"
 
 * フィールド・フィルターを適用して、表示できるデータ・セットを詳細化します。各フィルターを切り替えたり、ページにピン留めしたり、必要に応じて有効または無効にしたり、値を含める/除外するように構成できます。詳しくは、『[Kibana でのログのフィルタリング](logging_kibana_filtering_logs.html#kibana_filtering_logs)』を参照してください。
 
-    **ヒント:** 「Discover」ページで、表示されるはずのフィールドが*フィールド・リスト* で見つからない場合、またはリストされているフィールドの横にある拡大鏡が無効になっている場合は、「Settings」ページで索引パターンを最新表示することで、フィールドのリストを再ロードしてください。詳しくは、『[フィールド・リストの再ロード](logging_kibana_analize_logs_interactively.html#kibana_discover_add_reload_fields)』を参照してください。
+    **ヒント:** 「Discover」ページで、表示されるはずのフィールドが*フィールド・リスト* で見つからない場合、またはリストされているフィールドの横にある拡大鏡が無効になっている場合は、「Settings」ページで索引パターンを最新表示することで、フィールドのリストを再ロードしてください。詳しくは、『[フィールド・リストの再ロード](logging_kibana_analize_logs_interactively.html#kibana_discover_view_reload_fields)』を参照してください。
 
     例えば、CF アプリに複数のインスタンスが含まれている場合、特定の 1 つのインスタンスのデータを分析したいことがあります。分析する特定のインスタンス ID 値のフィールド・フィルターを定義できます。 
     
@@ -78,6 +80,7 @@ lastupdated: "2017-03-16"
 | [検索の再ロード](logging_kibana_filtering_logs.html#k4_reload_search)  | データ・セットを分析するために既存の検索を再度アップロードします。 |
 | [検索のデータの最新表示](logging_kibana_filtering_logs.html#k4_refresh_search) | 検索で表示されるデータの自動最新表示を構成します。  |
 | [検索のインポート](logging_kibana_filtering_logs.html#k4_import_search) | 検索をインポートします。  |
+{: caption="表 3. 検索を操作するタスク" caption-side="top"}
 
 <br>
 
@@ -88,6 +91,60 @@ lastupdated: "2017-03-16"
 詳しくは、『[フィールド・データ統計の表示](logging_kibana_analize_logs_interactively.html#kibana_discover_view_fields_stats)』を参照してください。
 
 **注:** 表およびヒストグラムで表示されるデータは、静的です。最新の項目を表示し続ける場合は、最新表示間隔を設定する必要があります。 
+
+
+## 表へのフィールド列の追加
+{: #kibana_discover_add_fields_to_table}
+
+デフォルトでは、「Discover」ページでデータを分析するために使用可能な表には、以下のフィールドが含まれています。
+* **time:** このフィールドは、項目がいつ {{site.data.keyword.Bluemix_notm}} でキャプチャーおよび記録されたのかを示します。
+* **_source:** このフィールドには、項目の元データが含まれます。
+
+以下のいずれかのオプションを選択して、フィールド列を表に追加できます。
+
+* ページで使用可能なフィールド・リストからフィールド列を追加します。
+
+    1. 「Discover」ページで、`「Selected Fields」`セクションでフィールドを識別します。
+    2. フィールド・リスト内のフィールドの上にマウスを移動します。
+    
+        ![表ビューからのフィールドの追加](images/k4_add_field_column_hover.jpg "表ビューからのフィールドの追加")
+    
+    3. フィールドを追加するには、**「Add」**をクリックします。
+    
+ * 展開された項目の表ビューからフィールド列を追加します。
+
+    1. 表内の項目を展開します。
+    2. 表ビューで、追加するフィールドを識別します。
+    
+        ![表ビューからのフィールドの追加](images/k4_add_field_column.jpg "表ビューからのフィールドの追加")
+    
+    3. **「Toggle Column in table」**アイコン ![表内の列の切り替え](images/k4_toggle_field_icon.jpg) をクリックします。
+    
+
+**注:** 1 つのフィールド列を表に初めて追加すると、表で表示される *_source* フィールド列は非表示です。*_source* フィールドでは、各ログ項目の各フィールドの値が表示されます。列を表に追加した後に表内のログ項目の他のフィールド値を表示するには、各項目の表ビュー・タブまたは JSON タブを表示します。
+
+例えば、*application_id* フィールドを表に追加した場合、表は以下のように変更されます。
+
+![新規フィールドを追加した後の表ビュー](images/k4_add_field_filter_new_table_look.jpg "新規フィールドを追加した後の表ビュー")
+
+
+## データの自動最新表示
+{: #kibana_discover_view_refresh_interval}
+
+デフォルトでは、{{site.data.keyword.Bluemix_notm}} において*自動最新表示* の期間は **OFF** に設定されており、Kibana で表示できるデータは、Kibana の起動後の過去 15 分間に対応します。15 分間は、事前構成されている時間フィルターに対応しています。これは、別の期間を設定することで変更できます。詳しくは、『[時間フィルターの設定](logging_kibana_set_time_filter.html#set_time_filter)』を参照してください。
+
+*自動最新表示* の期間を設定するには、以下のステップを実行します。
+
+1. 「Discover」ページのメニュー・バーで時間ピッカー ![時間ピッカー](images/k4_time_picker_icon.jpg "時間ピッカー") をクリックします。
+
+2. 自動最新表示ボタン ![自動最新表示ボタン](images/k4_auto_refresh_icon.jpg "自動最新表示ボタン") を選択します。
+
+3. 最新表示間隔を選択します。
+
+    ![自動最新表示時間を設定するためのオプション](images/k4_change_autorefresh.jpg "自動最新表示時間を設定するためのオプション")
+
+
+一時停止ボタン ![一時停止ボタン](images/k4_auto_refresh_pause_icon.jpg "一時停止") をクリックして、最新表示間隔を一時停止できます。 
 
 
 ## 「Discover」ページで表示されているデータの識別
@@ -126,73 +183,6 @@ Kibana を使用して {{site.data.keyword.Bluemix_notm}} ログを分析した�
     フィールドの値に基づいて項目を切り替える 0 個以上のフィールド・フィルターを定義できます。例えば、フィールド・フィルターが有効になっている場合、表示できる項目は、そのフィールドの値が一致している項目に対応します。
     
 
-## 表へのフィールド列の追加
-{: #kibana_discover_add_fields_to_table}
-
-デフォルトでは、「Discover」ページでデータを分析するために使用可能な表には、以下のフィールドが含まれています。
-* **time:** このフィールドは、項目がいつ {{site.data.keyword.Bluemix_notm}} でキャプチャーおよび記録されたのかを示します。
-* **_source:** このフィールドには、項目の元データが含まれます。
-
-以下のいずれかのオプションを選択して、フィールド列を表に追加できます。
-
-* ページで使用可能なフィールド・リストからフィールド列を追加します。
-
-    1. 「Discover」ページで、`「Selected Fields」`セクションでフィールドを識別します。
-    2. フィールド・リスト内のフィールドの上にマウスを移動します。
-    
-        ![表ビューからのフィールドの追加](images/k4_add_field_column_hover.jpg "表ビューからのフィールドの追加")
-    
-    3. フィールドを追加するには、**「Add」**をクリックします。
-    
- * 展開された項目の表ビューからフィールド列を追加します。
-
-    1. 表内の項目を展開します。
-    2. 表ビューで、追加するフィールドを識別します。
-    
-        ![表ビューからのフィールドの追加](images/k4_add_field_column.jpg "表ビューからのフィールドの追加")
-    
-    3. **「Toggle Column in table」**アイコン ![表内の列の切り替え](images/k4_toggle_field_icon.jpg) をクリックします。
-    
-
-**注:** 1 つのフィールド列を表に初めて追加すると、表で表示される *_source* フィールド列は非表示です。*_source* フィールドでは、各ログ項目の各フィールドの値が表示されます。列を表に追加した後に表内のログ項目の他のフィールド値を表示するには、各項目の表ビュー・タブまたは JSON タブを表示します。
-
-例えば、*application_id* フィールドを表に追加した場合、表は以下のように変更されます。
-
-![新規フィールドを追加した後の表ビュー](images/k4_add_field_filter_new_table_look.jpg "新規フィールドを追加した後の表ビュー")
-
-
-## 表内のフィールド列の並べ替え
-{: #kibana_discover_rearrange_fields_in_table}
-
-表内のフィールド列を並べ替えることができます。移動する列のヘッダーの上にマウスを移動し、**「Move column to the left」**ボタンまたは**「Move column to the right」**ボタンをクリックします。
-<br>
-![表内のフィールドの移動](images/k4_add_field_filter_new_table_look.jpg "表内のフィールドの移動")
-
-
-## 表からのフィールド列の削除
-{: #kibana_discover_remove_fields_from_table}
-
-表からフィールドを削除する場合は、以下のステップを実行します。
-
-1. 表で、表ビューから削除するフィールドを識別します。
-2. **「Remove column」**をクリックします。
-    
-    ![表ビューからのフィールドの削除](images/k4_remove_field_column.jpg)
-
-
-## 表内の項目の表示
-{: #kibana_discover_view_entry_in_table}
-
-表内の項目のデータを表示するには、分析する項目の展開ボタン ![展開ボタン・アイコン](images/k4_expand_icon.jpg "展開ボタン・アイコン") をクリックします。 
-
-![Kibana の「Discover」ページの表](images/k4_table_discover.jpg "Kibana の「Discover」ページの表") 	
-
-次に、以下のいずれかのオプションを選択してデータを表示します。
-
-* 表形式でデータを表示するには、**「Table」**をクリックします。表形式の分析用に使用可能な各フィールドの値を表示できます。フィールドごとに、フィルター・ボタンおよび切り替えボタンもあります。
-* データを JSON 形式で表示するには、**「JSON」**をクリックします。
-
-
 ## 索引フィールドの値による項目の配列 
 {: #kibana_discover_sort_by_table}
 
@@ -220,23 +210,14 @@ Kibana を使用して {{site.data.keyword.Bluemix_notm}} ログを分析した�
 
 **注:** 時間フィールドでソートした場合、デフォルトでは、項目は、日時の降順にソートされます。最も新しい項目が最初に表示されます。
 
-## データの自動最新表示
-{: #kibana_discover_view_refresh_interval}
 
-デフォルトでは、{{site.data.keyword.Bluemix_notm}} において*自動最新表示* の期間は **OFF** に設定されており、Kibana で表示できるデータは、Kibana の起動後の過去 15 分間に対応します。15 分間は、事前構成されている時間フィルターに対応しています。これは、別の期間を設定することで変更できます。詳しくは、『[時間フィルターの設定](logging_kibana_set_time_filter.html#set_time_filter)』を参照してください。
+## 表内のフィールド列の並べ替え
+{: #kibana_discover_rearrange_fields_in_table}
 
-*自動最新表示* の期間を設定するには、以下のステップを実行します。
+表内のフィールド列を並べ替えることができます。移動する列のヘッダーの上にマウスを移動し、**「Move column to the left」**ボタンまたは**「Move column to the right」**ボタンをクリックします。
+<br>
+![表内のフィールドの移動](images/k4_add_field_filter_new_table_look.jpg "表内のフィールドの移動")
 
-1. 「Discover」ページのメニュー・バーで時間ピッカー ![時間ピッカー](images/k4_time_picker_icon.jpg "時間ピッカー") をクリックします。
-
-2. 自動最新表示ボタン ![自動最新表示ボタン](images/k4_auto_refresh_icon.jpg "自動最新表示ボタン") を選択します。
-
-3. 最新表示間隔を選択します。
-
-    ![自動最新表示時間を設定するためのオプション](images/k4_change_autorefresh.jpg "自動最新表示時間を設定するためのオプション")
-
-
-一時停止ボタン ![一時停止ボタン](images/k4_auto_refresh_pause_icon.jpg "一時停止") をクリックして、最新表示間隔を一時停止できます。 
 
 ## フィールド・リストの再ロード
 {: #kibana_discover_view_reload_fields}
@@ -252,6 +233,30 @@ Kibana で表示されるフィールドのリストを再ロードするには�
 3. *「Reload field list」*ボタン ![フィールド・リストの再ロード](images/k4_reload_field_list_icon.jpg "フィールド・リストの再ロード") をクリックして、索引パターン・フィールドを再ロードします。 
 
 フィールドのリストが取得されます。
+
+
+## 表からのフィールド列の削除
+{: #kibana_discover_remove_fields_from_table}
+
+表からフィールドを削除する場合は、以下のステップを実行します。
+
+1. 表で、表ビューから削除するフィールドを識別します。
+2. **「Remove column」**をクリックします。
+    
+    ![表ビューからのフィールドの削除](images/k4_remove_field_column.jpg "表ビューからのフィールドの削除")
+
+
+## 表内の項目の表示
+{: #kibana_discover_view_entry_in_table}
+
+表内の項目のデータを表示するには、分析する項目の展開ボタン ![展開ボタン・アイコン](images/k4_expand_icon.jpg "展開ボタン・アイコン") をクリックします。 
+
+![Kibana の「Discover」ページの表](images/k4_table_discover.jpg "Kibana の「Discover」ページの表") 	
+
+次に、以下のいずれかのオプションを選択してデータを表示します。
+
+* 表形式でデータを表示するには、**「Table」**をクリックします。表形式の分析用に使用可能な各フィールドの値を表示できます。フィールドごとに、フィルター・ボタンおよび切り替えボタンもあります。
+* データを JSON 形式で表示するには、**「JSON」**をクリックします。
 
 ## フィールド・データ統計の表示
 {: #kibana_discover_view_fields_stats}

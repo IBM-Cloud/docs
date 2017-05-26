@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-25"
+lastupdated: "2017-04-10"
 
 ---
 
@@ -157,10 +157,10 @@ Dabei gilt:
 - Andere Clients, die Teil der skalierbaren Anwendung sind, müssen dieselbe Client-ID verwenden.
 - Der Sitzungsbereinigungswert für nicht permanente Subskriptionen muss auf 'false' (0) festgelegt werden.
 
-### Gemeinsam genutzte Subskriptionen mit variabler Permanenz (Beta)
+### Gemeinsam genutzte Subskriptionen mit variabler Permanenz
 {: #shared_sub_mixed}
 
-Der {{site.data.keyword.iot_short_notm}}-Service erweitert die Spezifikation des Nachrichtenprotokolls von MQTT V3.1.1, um einen Beta-Test für gemeinsam genutzte Subskriptionen mit variabler Permanenz zu unterstützen. Gemeinsam genutzte Subskriptionen stellen für Anwendungen Funktionen für den Lastausgleich zur Verfügung. Eine gemeinsam genutzte Subskription ist möglicherweise erforderlich, wenn eine Back-End-Unternehmensanwendung den Umfang der Nachrichten, die in einem bestimmten Topic-Bereich publiziert werden sollen, nicht verarbeiten kann. Wenn beispielsweise viele Geräte Nachrichten publizieren, die von einer einzigen Anwendung verarbeitet werden, ist es möglicherweise erforderlich, die Lastausgleichsfunktion einer gemeinsam genutzten Subskription zu verwenden.
+Der {{site.data.keyword.iot_short_notm}}-Service erweitert die Spezifikation des Nachrichtenprotokolls von MQTT V3.1.1, um gemeinsam genutzte Subskriptionen mit variabler Permanenz zu unterstützen. Gemeinsam genutzte Subskriptionen stellen für Anwendungen Funktionen für den Lastausgleich zur Verfügung. Eine gemeinsam genutzte Subskription ist möglicherweise erforderlich, wenn eine Back-End-Unternehmensanwendung den Umfang der Nachrichten, die in einem bestimmten Topic-Bereich publiziert werden sollen, nicht verarbeiten kann. Wenn beispielsweise viele Geräte Nachrichten publizieren, die von einer einzigen Anwendung verarbeitet werden, ist es möglicherweise erforderlich, die Lastausgleichsfunktion einer gemeinsam genutzten Subskription zu verwenden.
 
 Stellen Sie bei gemeinsam genutzten Subskriptionen mit variabler Permanenz sicher, dass die Client-ID in der Subskription mit dem folgenden Format übereinstimmt:
 
@@ -176,7 +176,6 @@ Dabei gilt:
    - Punkte (.)
 
 **Wichtig:**
-- Unterstützung für gemeinsam genutzte Subskriptionen mit variabler Permanenz wird nur als Betafunktion bereitgestellt. Implementieren Sie Betafunktionen nicht in Produktionsanwendungen.
 - Der Wert für bereinigte Sitzung kann in gemeinsam genutzten Subskriptionen mit variabler Permanenz auf 'true' (1) oder 'false' (0) gesetzt werden.
 - Clients, die Verbindungen mit der Instanz-ID herstellen, verwenden andere Subskriptionen als Clients, die Verbindungen ohne die Instanz-ID herstellen. Wenn mehrere Clients Verbindungen in einer gemeinsam genutzten Subskription mit variabler Permanenz herstellen sollen, müssen Sie daher die Instanz-ID in allen Subskriptionen angeben.
 

@@ -104,7 +104,7 @@ lastupdated: "2017-03-02"
 
 **附註：**如果您是直接以 IBM ID 來建立您的 IBM ID，您會收到兩封要處理的電子郵件；一封來自 IBM ID 登錄，另一封來自 Softlayer。請務必遵循這兩封電子郵件中的動作。
 
-根據帳戶的設定方式，您可能可以使用其中一些登入選項： 
+視帳戶的設定方式而定，您可能可以使用其中一些登入選項： 
  * 具有 SoftLayer ID 的 SoftLayer 使用者必須透過[客戶入口網站](https://control.softlayer.com)登入。
  * 具有 IBM ID 並且具有（或沒有）已鏈結 Bluemix 帳戶的 SoftLayer 使用者，可以透過[客戶入口網站](https://control.softlayer.com)登入，以開啟「SoftLayer 客戶入口網站」，或透過 [Bluemix 主控台](https://console.{DomainName})來開啟「基礎架構」儀表板。 
 
@@ -123,7 +123,7 @@ lastupdated: "2017-03-02"
 若要建立 {{site.data.keyword.Bluemix_notm}} 帳戶，請遵循註冊處理程序。
 {: tsResolve}
 
-根據帳戶的設定方式，您可能可以使用其中一些登入選項： 
+視帳戶的設定方式而定，您可能可以使用其中一些登入選項： 
  * 沒有已鏈結 SoftLayer 帳戶的 Bluemix 使用者必須透過 Bluemix 主控台登入。
  * 具有已鏈結 SoftLayer 帳戶的 Bluemix 使用者可以透過 [Bluemix 主控台](https://console.{DomainName})或[客戶入口網站](https://control.softlayer.com)登入。
  

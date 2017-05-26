@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-14"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-02-14"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# 모니터링 및 로깅
+# 개요
 {: #monitoringandlogging}
 
 {{site.data.keyword.Bluemix}}는 Cloud Foundry 및 {{site.data.keyword.containershort}}와 같은 여러 서비스에서 로깅 및 모니터링 기능을 제공합니다. 일반적으로 앱 개발 및 실행과 연관된 인프라를 빌드하고 유지보수하지 않고도 모든 런타임에서 애플리케이션을 개발하고 실행하고 관리할 수 있습니다.
@@ -28,6 +28,7 @@ lastupdated: "2017-02-14"
 모니터링 및 로깅 기능은 다음 지역에서 사용 가능합니다.
 * 미국 남부
 * 영국
+* 프랑크푸르트
 
 
 

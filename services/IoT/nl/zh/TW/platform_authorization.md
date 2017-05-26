@@ -12,7 +12,7 @@ lastupdated: "2017-03-13"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 應用程式連線
+# 連接應用程式
 
 若要將應用程式連接至 {{site.data.keyword.iot_full}}，您必須使用 API 金鑰和記號來連接，或在 {{site.data.keyword.Bluemix_notm}} 中直接將應用程式連結至 {{site.data.keyword.iot_short_notm}}。您可以使用存取儀表板來授與存取權。
 {:shortdesc}

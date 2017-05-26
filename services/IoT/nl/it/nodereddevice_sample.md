@@ -53,10 +53,10 @@ Segui queste istruzioni per collegare il dispositivo di esempio Node-RED:
  5. Seleziona **Devices**
  6. Fai clic su **Add Device**
  7. Fai clic su **Create device type**.
- 9. Immetti un nome descrittivo e una descrizione per il tipo di dispositivo, come ad esempio `sample_device`.
- 10. Facoltativo: immetti gli attributi per il tipo di dispositivo.
- 11. Facoltativo: immetti i metadati per il tipo di dispositivo.
- 12. Fai clic su **Create** per aggiungere il nuovo tipo di dispositivo.
+ 9. Immetti un nome descrittivo e una descrizione per il tipo dispositivo, come ad esempio `sample_device`.
+ 10. Facoltativo: immetti gli attributi per il tipo dispositivo.
+ 11. Facoltativo: immetti i metadati per il tipo dispositivo.
+ 12. Fai clic su **Create** per aggiungere il nuovo tipo dispositivo.
  13. Fai clic su **Next** per aggiungere il tuo dispositivo.
  14. Immetti un ID dispositivo, come ad esempio `Device001`.
  15. Facoltativo: immetti i metadati per il dispositivo.
@@ -70,7 +70,7 @@ Segui queste istruzioni per collegare il dispositivo di esempio Node-RED:
   <li> Metodo di autenticazione
   <li> Token di autenticazione
   </ul>
-  **Suggerimento:** hai bisogno dell'ID organizzazione, del token di autenticazione, del tipo di dispositivo e dell'ID del dispositivo nei successivi pochi passi per finalizzare la configurazione dell'applicazione Node-RED per completare la connessione.
+  **Suggerimento:** hai bisogno dell'ID organizzazione, del token di autenticazione, del tipo dispositivo e dell'ID del dispositivo nei successivi pochi passi per finalizzare la configurazione dell'applicazione Node-RED per completare la connessione.
 
 2. Collega il tuo dispositivo a {{site.data.keyword.iot_short_notm}}  
  1. Apri l'editor del flusso Node-RED.
@@ -82,7 +82,7 @@ Segui queste istruzioni per collegare il dispositivo di esempio Node-RED:
  {organization_ID}.messaging.internetofthings.ibmcloud.com
  ```  
  Dove {organization_ID} è l'*ID organizzazione* che hai salvato precedentemente.
- 6. Aggiorna l'ID client con i tuoi ID organizzazione, tipo di dispositivo e ID del dispositivo:
+ 6. Aggiorna l'ID client con i tuoi ID organizzazione, tipo dispositivo e ID del dispositivo:
  ```
  d:{organization_ID}:{device_type}:{device_ID}
    ```  

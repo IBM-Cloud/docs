@@ -26,7 +26,7 @@ Vous pouvez créer et personnaliser des applications qui interagissent avec votr
 Dernière mise à jour : 25 octobre 2016
 {: .last-updated}
 
-Pour accéder aux bibliothèques et exemples client Java pour {{site.data.keyword.iot_short_notm}}, accédez au référentiel [iot-java ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-java){: new_window} dans GitHub et exécutez des instructions d'installation. 
+Pour accéder aux bibliothèques et exemples client Java pour {{site.data.keyword.iot_short_notm}}, accédez au référentiel [iot-java ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-java){: new_window} dans GitHub et exécutez des instructions d'installation.
 
 
 ## Constructeur
@@ -180,7 +180,7 @@ Pour traiter les événements reçus par vos abonnements, enregistrez une métho
 
 |Paramètre|Type de données|Description|
 |:---|:---|
-|`event.device`|Chaîne|Identifie le terminal de manière unique parmi tous les types de terminal dans l'organisation.|
+|`event.device`|Chaîne|Identifie le terminal de manière unique parmi tous les types de terminaux dans l'organisation.|
 |`event.deviceType`|Chaîne|Identifie le type de terminal. Généralement, deviceType regroupe des terminaux qui effectuent une tâche spécifique, par exemple, "weatherballoon".|
 |`event.deviceId`|Chaîne|Représente l'ID du terminal. Généralement, pour un type de terminal donné, deviceId est un identificateur unique, par exemple, un numéro de série ou une adresse MAC.|
 |`event.event`|Chaîne|Utilisé généralement pour regrouper des événements spécifiques, par exemple, "status", "warning" et "data".|
@@ -428,7 +428,7 @@ Outre l'utilisation de MQTT, vous pouvez également configurer vos applications 
     	boolean status = myClient.publishApplicationEventforDeviceOverHTTP(deviceId, deviceType, "blink", event, ContentType.json);
 ```
 
-Pour afficher la totalité de l'exemple de code, voir l'exemple d'application [HttpApplicationDeviceEventPublish ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpApplicationDeviceEventPublish.java){: new_window}. 
+Pour afficher la totalité de l'exemple de code, voir l'exemple d'application [HttpApplicationDeviceEventPublish ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpApplicationDeviceEventPublish.java){: new_window}.
 
 En fonction des paramètres définis dans le fichier de propriétés, la méthode `publishEventOverHTTP()` publie l'événement en mode Quickstart ou en mode de flux enregistré. Lorsque `quickstart` est spécifié comme ID d'organisation dans le fichier de propriétés, la méthode `publishEventOverHTTP()` publie l'événement sur le service Quickstart de {{site.data.keyword.iot_short_notm}} au format HTTP normal. Lorsqu'une organisation enregistrée valide est spécifiée dans le fichier de propriétés, l'événement est toujours publié à l'aide de HTTPS de sorte que toutes les communications soient sécurisées.
 
@@ -474,7 +474,7 @@ Outre l'utilisation de MQTT, vous pouvez également configurer vos applications 
 	boolean response = myClient.publishCommandOverHTTP("execute", event);
 ```
 
-Pour afficher la totalité de l'exemple de code, voir l'exemple d'application [HttpCommandPublish ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpCommandPublish.java){: new_window}. 
+Pour afficher la totalité de l'exemple de code, voir l'exemple d'application [HttpCommandPublish ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpCommandPublish.java){: new_window}.
 
 Le protocole HTTP fournit une distribution de type 'une fois tout au plus', semblable au niveau de qualité de service 'une fois tout au plus' (QoS 0) du protocole MQTT. Lorsque vous utilisez la distribution de type 'une fois tout au plus' pour publier des commandes, l'application doit implémenter une logique de relance au cas où une erreur se produirait. Pour plus d'informations, voir [API REST HTTP pour les applications](../api.html).
 
@@ -482,8 +482,8 @@ Le protocole HTTP fournit une distribution de type 'une fois tout au plus', semb
 ## Exemples
 {: #samples}
 
--  [MQTTApplicationDeviceEventPublish ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/MQTTApplicationDeviceEventPublish.java){: new_window} - Exemple d'application qui vous montre comment publier des événements de terminal. 
--   [RegisteredApplicationCommandPublish ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationCommandPublish.java){: new_window} - Exemple d'application qui vous montre comment publier une commande sur un terminal. 
--  [RegisteredApplicationSubscribeSample ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationSubscribeSample.java){: new_window} - Exemple d'application qui vous montre comment vous abonner à différents événements, tels que des événements sur des terminaux, des commandes de terminal, des statuts de terminal et desstatutsd'application. 
--   [SharedSubscriptionSample ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/SharedSubscriptionSample.java){: new_window} - Exemple d'application qui vous montre comment générer une application évolutive qui équilibre la charge des messages sur plusieurs instances de l'application. 
--  [Backup-restore-sample ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-backup-restore-sample){: new_window} - Exemple qui vous montre comment sauvegarder et restaurer la configuration de terminal dans {{site.data.keyword.cloudant}}.  
+-  [MQTTApplicationDeviceEventPublish ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/MQTTApplicationDeviceEventPublish.java){: new_window} - Exemple d'application qui vous montre comment publier des événements de terminal.
+-   [RegisteredApplicationCommandPublish ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationCommandPublish.java){: new_window} - Exemple d'application qui vous montre comment publier une commande sur un terminal.
+-  [RegisteredApplicationSubscribeSample ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationSubscribeSample.java){: new_window} - Exemple d'application qui vous montre comment vous abonner à différents événements, tels que des événements sur des terminaux, des commandes de terminal, des statuts de terminal et desstatutsd'application.
+-   [SharedSubscriptionSample ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/SharedSubscriptionSample.java){: new_window} - Exemple d'application qui vous montre comment générer une application évolutive qui équilibre la charge des messages sur plusieurs instances de l'application.
+-  [Backup-restore-sample ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-backup-restore-sample){: new_window} - Exemple qui vous montre comment sauvegarder et restaurer la configuration de terminal dans {{site.data.keyword.cloudant}}.

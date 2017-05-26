@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-05-03"
 
 ---
 
@@ -62,23 +62,3 @@ lastupdated: "2017-03-17"
 - 浏览[应用程序开发者文档](applications/api.html)和 [{{site.data.keyword.iot_short_notm}} API 文档](reference/api.html)。
 - 浏览 [{{site.data.keyword.iot_short_notm}} 客户机库](iot_platform_client_lib.html)，此库提供了工具和文件来构建和开发代码，从而集成和连接设备及应用程序。
 - [连接 {{site.data.keyword.cloudantfull}} 服务](cloudant_connector.html)到 {{site.data.keyword.iot_short_notm}} 以存储历史设备数据。
-
-
-
-
-# 相关链接
-{: #rellinks}
-* [IBM Watson IoT Service Health Dashboard](https://status.internetofthings.ibmcloud.com){:new_window}
-
-## 教程和样本
-{: #samples}
-* [连接设备的诀窍 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}
-* [{{site.data.keyword.iot_short_notm}} 播放组织 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://play.internetofthings.ibmcloud.com/){:new_window}
-* [Connecting an Intel Galileo to the {{site.data.keyword.iot_short_notm}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/connect-an-intel-galileo-to-the-internet-of-things-foundation-connect/){:new_window}
-* [Connecting an ARM® mbed™ IoT Starter Kit ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/arm-mbed-iot-starter-kit-part-1/){:new_window}
-* [Connecting a Raspberry Pi to {{site.data.keyword.iot_short_notm}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/raspberry-pi-4/){:new_window}
-
-## API 参考
-{: #api}
-* [{{site.data.keyword.iot_short_notm}} API 文档](../reference/api.html)
-* [开发者文档](developer_doc_overview.html)

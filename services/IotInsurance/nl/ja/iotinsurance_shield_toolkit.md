@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-27"
+lastupdated: "2017-04-25"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -63,7 +63,7 @@ var config = module.exports = {
 
 メソッド: POST  
 API: /shield  
-https://iot4i-docs-api.mybluemix.net/dist/#!/shield/addShield
+https://iot4i-api-docs.mybluemix.net/#!/shield/addShield
 
 createShield.js ファイルの中にシールド定義を作成します。水漏れを検出する簡単なシールドを、以下の例に示します。
 
@@ -162,7 +162,7 @@ var shieldCode = {
 
 メソッド: POST  
 API: /user  
-https://iot4i-docs-api.mybluemix.net/dist/#!/user/addUser
+https://iot4i-api-docs.mybluemix.net/#!/user/addUser
 
 createUser.js ファイルの中でユーザーを作成します。単一のユーザーを作成する方法を、以下の例に示します。
 
@@ -197,7 +197,7 @@ var user = {
 
 メソッド: POST  
 API: /user  
-https://iot4i-docs-api.mybluemix.net/dist/#!/shieldassociation/addShieldAssociation
+https://iot4i-api-docs.mybluemix.net/#!/shieldassociation/addShieldAssociation
 
 createUserShieldAssociation.js の中でシールドをユーザーにリンクするシールド関連付けを作成します。
 
@@ -219,7 +219,7 @@ var userShield = {
 
 メソッド: POST  
 API: /sendPayloadToMQTT  
-https://iot4i-docs-api.mybluemix.net/dist/#!/global/sendPayloadToMQTT
+https://iot4i-api-docs.mybluemix.net/#!/global/sendPayloadToMQTT
 
 シールドをテストするためのハザード・シミュレーション・ペイロードを作成することができます。
 

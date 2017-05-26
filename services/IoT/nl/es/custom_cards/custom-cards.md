@@ -69,7 +69,7 @@ Si se está conectando a su propio servidor, especifique el URL de dicho servido
 **Consejo:** El URL del servidor de tarjetas de ejemplo de IBM es: `https://customcards.mybluemix.net`  
  6. Pulse **Recuperar certificado** para conectarse al servidor de tarjetas personalizadas y recuperar la información de certificados de seguridad para el servidor.  
  **Importante:** Utilice la información de certificado para verificar que se está conectando al servidor de tarjetas personalizadas protegido y conocido.
- 4. Pulse **Terminado** para añadir la conexión del servidor.
+ 4. Pulse **Listo** para añadir la conexión del servidor.
 5. Cree una tarjeta nueva que se base en las tarjetas de ejemplo.
  1. En el panel de control de {{site.data.keyword.iot_short_notm}}, vaya a **Paneles**.
  2. Pulse **Crear nuevo panel**.  
@@ -120,7 +120,7 @@ Enlace el servidor de tarjetas personalizadas recién desplegado a {{site.data.k
  2. En el mosaico **Tarjeta personalizada**, pulse el icono de engranaje para actualizar la configuración.
  4. En la sección Configurar tarjetas personalizadas, pulse **Añadir** y especifique el URL seguro (HTTPS) para el servidor de tarjetas personalizado en el campo de servidor.  
 **Importante:** Verifique que se está conectando al servidor de tarjetas personalizadas protegido y conocido.
-4. Pulse **Terminado** para añadir la conexión del servidor.
+4. Pulse **Listo** para añadir la conexión del servidor.
 10. La tarjeta personalizada HelloWorld ahora está disponible para utilizarse con los paneles.
 
 Todo correcto. Ha configurado correctamente un servidor de tarjetas y ha desplegado su primera tarjeta de ejemplo. Felicidades. Sin embargo, toda la idea de las tarjetas personalizadas es permitirle configurar tarjetas y paneles exactamente como las quiere. Es hora de empezar a modificar ejemplos para crear sus propias tarjetas.

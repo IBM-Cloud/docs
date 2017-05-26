@@ -191,7 +191,7 @@ Gli eventi sono meccanismi con cui i dispositivi pubblicano i dati nell'istanza 
 Quando viene ricevuto un evento dall'istanza {{site.data.keyword.iot_short_notm}}, le credenziali dell'evento ricevuto identificano il dispositivo di invio, il che significa che un dispositivo non può impersonare un altro dispositivo.
 
 
-Per impostazione predefinita, le applicazioni si sottoscrivono a tutti gli eventi da tutti i dispositivi collegati. Utilizza i parametri tipo di dispositivo, ID dispositivo e formato del messaggio per controllare l'ambito della sottoscrizione. I seguenti esempi di codice mostrano come puoi utilizzare questi parametri per definire l'ambito di una sottoscrizione:
+Per impostazione predefinita, le applicazioni si sottoscrivono a tutti gli eventi da tutti i dispositivi collegati. Utilizza i parametri tipo dispositivo, ID dispositivo e formato del messaggio per controllare l'ambito della sottoscrizione. I seguenti esempi di codice mostrano come puoi utilizzare questi parametri per definire l'ambito di una sottoscrizione:
 
 ### Sottoscrizione a tutti gli eventi provenienti da tutti i dispositivi
 
@@ -466,8 +466,8 @@ La seguente tabella descrive i parametri utilizzati nelle funzioni descritte in 
 
 |Parametro|Tipo di dati|Descrizione|
 |:---|:---|
-|`deviceType`|Stringa|Il tipo di dispositivo. Generalmente, il deviceType è un raggruppamento di dispositivi che esegue un'attività specifica, ad esempio "weatherballoon".|
-|`deviceId`|Stringa|L'ID del dispositivo. Generalmente, per determinato tipo di dispositivo, il deviceId è un identificativo univoco di tale dispositivo, ad esempio un numero seriale o un indirizzo MAC.|
+|`deviceType`|Stringa|Il tipo dispositivo. Generalmente, il deviceType è un raggruppamento di dispositivi che esegue un'attività specifica, ad esempio "weatherballoon".|
+|`deviceId`|Stringa|L'ID del dispositivo. Generalmente, per un determinato tipo di dispositivo, il deviceId è un identificativo univoco di tale dispositivo, ad esempio un numero seriale o un indirizzo MAC.|
 |`eventType`|Stringa|Un gruppo di eventi specifici, ad esempio "status", "warning" e "data".|
 |`format`|Stringa|Il formato può essere qualsiasi stringa, ad esempio JSON.  |
 |`data`|Dizionario|I dati per il payload del messaggio. La lunghezza massima è di 131072 byte.|

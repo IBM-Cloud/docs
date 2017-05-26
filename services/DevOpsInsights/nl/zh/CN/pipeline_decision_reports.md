@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-11"
+  years: 2016, 2017
+lastupdated: "2017-02-13"
 
 ---
 
@@ -64,4 +64,4 @@ lastupdated: "2016-11-11"
 
    2. 从阶段的作业窗口，单击检测点的名称。
 
-   3. 在日志视图中，找到“在此处检查 {{site.data.keyword.DRA_short}} 报告”消息并单击所提供的链接，以打开报告。
+   3. 在日志视图中，找到“在此处检查 {{site.data.keyword.DRA_short}} 报告”消息并单击所提供的链接以打开报告。

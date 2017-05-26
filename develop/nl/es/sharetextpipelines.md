@@ -11,7 +11,7 @@ lastupdated: "2017-3-16"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#Compartición de conductos basados en texto en proyectos de ejemplo{: #share-pipeline}
+#Compartición de conductos basados en texto en proyectos de ejemplo {: #share-pipeline}
 
 Para proyectos de ejemplo desplegados en {{site.data.keyword.Bluemix_notm}} por medio del botón Desplegar en {{site.data.keyword.Bluemix_notm}}, puede definir las configuraciones de interconexión (conductos) como archivos YAML. Los conductos definidos como texto se pueden compartir, de forma que las personas que bifurcan (fork) su proyecto no tengan que configurar sus propios conductos. Esta característica está en desarrollo: el formato de YAML y la implementación podrían cambiar en cualquier momento. Actualmente, esta característica solo está disponible para proyectos con repositorios Git y GitHub cuyo objetivo sea {{site.data.keyword.Bluemix_notm}}. 
 {: shortdesc} 
@@ -197,7 +197,7 @@ CF_ORGANIZATION_ID	| GUID de org.
 CF_SPACE |	Nombre de espacio
 CF_SPACE_ID |	GUID de espacio
 CF_APP	| Nombre de app
-{: caption="Table 1. Environment variables" caption-side="top"}
+{: caption="Tabla 1. Variables de entorno" caption-side="top"}
 
 **GENERACIÓN DE UN ARCHIVO YAML DESDE UN CONDUCTO** 
 

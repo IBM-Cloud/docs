@@ -39,15 +39,18 @@ Todas as solicitações devem incluir um cabeçalho de autorização. Autentica�
 em
 que:
 
-**_orgId_**   
-- É o nome da organização, que deve corresponder ao nome especificado no cabeçalho do host.
+<dl>
+<dt>orgId</dt>  
+<dd>O nome da organização, que deve corresponder ao nome especificado no cabeçalho do host.</dd>
 
-**_gwType_**
-- É o tipo de gateway.
+<p></p>
+<dt>gwType</dt>  
+<dd>O tipo de gateway. </dd>
+<p></p>
+<dt>gwDevId</dt>  
+<dd>O identificador de dispositivo de gateway. </dd>
+</dl>
 
-**_gwDevId_**
-
-- É o identificador de dispositivo de gateway.
 
 ### Cabeçalhos de solicitação Content-Type
 

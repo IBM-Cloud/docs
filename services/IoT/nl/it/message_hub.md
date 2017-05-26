@@ -45,7 +45,7 @@ Vengono elencati tutti i servizi {{site.data.keyword.messagehub}} disponibili ne
  4. Facoltativo: configura gli argomenti.  
  Per creare gli argomenti con più di due partizioni predefinite, puoi specificare la configurazione della partizione.
  5. Fai clic su **Done**.
-5. Fare clic su **Authorize**.
+5. Fai clic su **Authorize**.
 6. Nella finestra di dialogo dell'autorizzazione, fai clic su **Confirm**.
 
 I tuoi dati del dispositivo sono ora archiviati nel tuo {{site.data.keyword.messagehub}}.

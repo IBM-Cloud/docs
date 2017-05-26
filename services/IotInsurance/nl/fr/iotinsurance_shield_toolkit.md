@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-27"
+lastupdated: "2017-04-25"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -64,7 +64,7 @@ var config = module.exports = {
 
 Méthode : POST  
 API : /shield  
-https://iot4i-docs-api.mybluemix.net/dist/#!/shield/addShield
+https://iot4i-api-docs.mybluemix.net/#!/shield/addShield
 
 Créez une définition de bouclier dans le fichier createShield.js.  L'exemple suivant illustre un bouclier simple qui détecte une fuite d'eau.
 
@@ -163,7 +163,7 @@ Chaque code de bouclier contient des ressource qui sont définies dans les instr
 
 Méthode : POST  
 API : /user  
-https://iot4i-docs-api.mybluemix.net/dist/#!/user/addUser
+https://iot4i-api-docs.mybluemix.net/#!/user/addUser
 
 Créez un utilisateur dans le fichier createUser.js. L'exemple suivant montre comment créer un seul utilisateur :
 
@@ -198,7 +198,7 @@ où :
 
 Méthode : POST  
 API : /user  
-https://iot4i-docs-api.mybluemix.net/dist/#!/shieldassociation/addShieldAssociation
+https://iot4i-api-docs.mybluemix.net/#!/shieldassociation/addShieldAssociation
 
 Créez dans le fichier createUserShieldAssociation.js une association de bouclier qui lie le bouclier à l'utilisateur.
 
@@ -220,7 +220,7 @@ var userShield = {
 
 Méthode : POST  
 API : /sendPayloadToMQTT  
-https://iot4i-docs-api.mybluemix.net/dist/#!/global/sendPayloadToMQTT
+https://iot4i-api-docs.mybluemix.net/#!/global/sendPayloadToMQTT
 
 Vous pouvez créer un contenu de risque simulé pour tester vos boucliers.
 

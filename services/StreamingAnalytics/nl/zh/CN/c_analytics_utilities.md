@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-04-13"
 
 ---
 
-<!-- Attribute definitions --> 
+<!-- Attribute definitions -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -22,6 +22,7 @@ lastupdated: "2017-02-09"
 {:shortdesc}
 
 ##SPSS Analytics Toolkit
+{: #spss notoc}
 
 SPSS Analytics Toolkit 包含与 SPSS Modeler 和 SPSS Collaboration and Deployment Services 产品集成的 {{site.data.keyword.streamsshort}} 操作程序，可在您的 {{site.data.keyword.streamsshort}} 应用程序中，实现 SPSS Modeler 预测性分析的各个方面。
 
@@ -33,13 +34,14 @@ SPSS Analytics Toolkit 包含与 SPSS Modeler 和 SPSS Collaboration and Deploym
 | ***兼容的操作程序*** |
 | ---------------------------|
 | `SPSSScoring` 	   		     |
-| `SPSSPublish`	     	 	     | 
+| `SPSSPublish`	     	 	     |
 | `SPSSRepository`			     |
 
 *表 1. 与 SPSS Analytics Toolkit 兼容的操作程序*
 
 
 ##Complex Event Processing Toolkit
+{: #cep notoc}
 
 Complex Event Processing Toolkit (com.ibm.streams.cep) 提供 MatchRegex 操作程序，以执行复杂事件处理。
 
@@ -47,11 +49,12 @@ Complex Event Processing Toolkit (com.ibm.streams.cep) 提供 MatchRegex 操作�
 
 复杂事件处理 (CEP) 使用模式在元组流中检测组合事件。
 例如，CEP 可用于检测股价模式、运输应用程序中的路线模式或 Web 商业设置中的用户行为模式。
- 
+
 
 ##TimeSeries Toolkit
+{: #timeseries notoc}
 
-TimeSeries Toolkit (com.ibm.streams.timeseries) 中的操作程序和功能可决定、分析时间序列数据，并对该数据进行建模。 
+TimeSeries Toolkit (com.ibm.streams.timeseries) 中的操作程序和功能可决定、分析时间序列数据，并对该数据进行建模。
 
 时间序列是数值数据的序列，代表一段时间内一个或多个对象的值。
 例如，您的时间序列可以包含：从智能计量表收集的每月用电量；每日股价和交易量；ECG 记录；地震记录；或网络性能记录。
@@ -59,7 +62,7 @@ TimeSeries Toolkit (com.ibm.streams.timeseries) 中的操作程序和功能可�
 
 
 该工具箱还提供一组功能，您可以查看这些功能，以生成用于测试和验证的时间序列。
- 
+
 
 下表列出 TimeSeries Toolkit 提供的操作程序。
 
@@ -74,7 +77,7 @@ TimeSeries Toolkit (com.ibm.streams.timeseries) 中的操作程序和功能可�
 | `DWT2`     	 			         | 	`Normalize`		 		 	         |
 | `Distribution`      			 |	`PSAX`		 				           |
 | `FFT` 	   	 			         |	`RLSFilter`		 		        	 | 	
-| `FMPFilter`    	 		       |	`ReSample`		         			 | 
+| `FMPFilter`    	 		       |	`ReSample`		         			 |
 | `GAMLearner`		 	 	       |	`STD2`			           			 |
 | `GAMScorer` 	   			     |	`TSWindowing`	        	 		 |
 | `GMM`     	 			         | 	`VAR2`			 	          		 |
@@ -86,6 +89,7 @@ TimeSeries Toolkit (com.ibm.streams.timeseries) 中的操作程序和功能可�
 有关工具箱限制的更多信息，请参阅 [{{site.data.keyword.streamsshort}} 专业工具箱的限制](http://www.ibm.com/support/knowledgecenter/SSCRJU_4.2.0/com.ibm.streams.install.doc/doc/ibminfospherestreams-install-toolkit-restrictions.html){:new_window}。
 
 ##Geospatial Toolkit
+{: #geospatial notoc}
 
 Geospatial Toolkit (com.ibm.streams.geospatial) 包括可促进有效处理位置数据并建立索引的操作程序和功能。例如，使用全球定位系统 (GPS) 位置数据，您可以跟踪感兴趣区域中或周围实体的移动，或者计算地球上不同特征之间的空间关系。
 
@@ -93,7 +97,7 @@ Geospatial Toolkit (com.ibm.streams.geospatial) 包括可促进有效处理位�
 
 下表列出 Geospatial Toolkit 提供的操作程序。
 
-  
+
 | ***兼容的操作程序*** | 						              		 |
 | ---------------------------| ------------------------------|
 | `GeoFence` 	   			       |	`OSMXMLGeometrySource`	 	   | 	 		
@@ -106,6 +110,7 @@ Geospatial Toolkit (com.ibm.streams.geospatial) 包括可促进有效处理位�
 有关更多信息，请参阅 {{site.data.keyword.streamsshort}} 产品文档中的[操作程序：com.ibm.streams.geospatial](http://www.ibm.com/support/knowledgecenter/SSCRJU_4.2.0/com.ibm.streams.toolkits.doc/spldoc/dita/tk$com.ibm.streams.geospatial/ix$Operator.html?lang=en){:new_window}。
 
 ##HDFS for {{site.data.keyword.Bluemix_short}} Toolkit
+{: #hdfs notoc}
 
 HDFS for {{site.data.keyword.Bluemix_short}} Toolkit (com.ibm.streamsx.hdfs.bluemix) 是 HDFS Toolkit 的特殊版本，可添加连接到 IBM BigInsights for Apache Hadoop for {{site.data.keyword.Bluemix_short}} 的支持。
 
@@ -115,7 +120,7 @@ HDFS for {{site.data.keyword.Bluemix_short}} Toolkit (com.ibm.streamsx.hdfs.blue
 | ***兼容的操作程序*** |
 | ---------------------------|
 | `HDFS2FileSource` 	     	 |
-| `HDFS2FileSink`     	   	 | 
+| `HDFS2FileSink`     	   	 |
 | `HDFS2DirectoryScan`	  	 |
 
 *表 4. 与 HDFS Toolkit 兼容的操作程序*
@@ -123,8 +128,9 @@ HDFS for {{site.data.keyword.Bluemix_short}} Toolkit (com.ibm.streamsx.hdfs.blue
 有关如何使用此工具箱的更多信息，请参阅[在 {{site.data.keyword.Bluemix_short}} 上利用 HDFS 开始使用 {{site.data.keyword.streaminganalyticsshort}} 和 BigInsights](https://developer.ibm.com/bluemix/2016/02/26/streaming-analytics-and-biginsights-using-hdfs/){:new_window}。
 
 ##JSON Toolkit
+{: #json notoc}
 
-JSON Toolkit (com.ibm.streamsx.json) 提供 SPL 的 JSON 支持，以及 SPL 值与 JSON 对象之间的标准转换。 
+JSON Toolkit (com.ibm.streamsx.json) 提供 SPL 的 JSON 支持，以及 SPL 值与 JSON 对象之间的标准转换。
 
 下表列出 JSON Toolkit 提供的操作程序。
 
@@ -132,7 +138,7 @@ JSON Toolkit (com.ibm.streamsx.json) 提供 SPL 的 JSON 支持，以及 SPL 值
 | ***兼容的操作程序*** |
 | ---------------------------|
 | `JSONToTuple` 	   		     |
-| `TupleToJSON`      		     | 
+| `TupleToJSON`      		     |
 
 *表 5. 与 JSON Toolkit 兼容的操作程序*
 
@@ -140,12 +146,14 @@ JSON Toolkit (com.ibm.streamsx.json) 提供 SPL 的 JSON 支持，以及 SPL 值
 有关更多信息，请参阅 {{site.data.keyword.streamsshort}} 产品文档中的 [com.ibm.streamsx.json](http://www.ibm.com/support/knowledgecenter/en/SSCRJU_4.2.0/com.ibm.streams.toolkits.doc/spldoc/dita/tk$com.ibm.streamsx.json/tk$com.ibm.streamsx.json.html){:new_window}。
 
 ##JDBC Toolkit
+{: #jdbc notoc}
 
 通过 JDBC Toolkit (com.ibm.streams.jdbc) 可使 {{site.data.keyword.streaminganalyticsshort}} 与更多 {{site.data.keyword.Bluemix_short}} 数据库服务（如 SQL Database、dashDB 等）进行通信。
 
 该工具箱包括 JDBCRun 操作程序。有关更多信息，请参阅 {{site.data.keyword.streamsshort}} 产品文档中的[使用 {{site.data.keyword.streaminganalyticsshort}} 与启用 JDBC 的 {{site.data.keyword.Bluemix_short}}](https://developer.ibm.com/bluemix/2016/01/26/streaming-analytics-with-jdbc-enabled-databases/){:new_window} 和 [com.ibm.streamsx.jdbc](http://www.ibm.com/support/knowledgecenter/en/SSCRJU_4.2.0/com.ibm.streams.toolkits.doc/spldoc/dita/tk$com.ibm.streamsx.jdbc/tk$com.ibm.streamsx.jdbc.html){:new_window}。
 
 ##R-project Toolkit
+{: #rproject notoc}
 
 R-project Toolkit (com.ibm.streams.rproject) 包括 RScript 操作程序，您可以使用该操作程序来运行 R 命令，并应用复杂的数据挖掘算法，以检测对数据流感兴趣的模式。
 
@@ -154,12 +162,14 @@ R-project Toolkit (com.ibm.streams.rproject) 包括 RScript 操作程序，您�
 
 
 ##Rules Compiler
+{: #rulescompiler notoc}
 
 Rules Compiler (com.ibm.streams.rulescompiler) 支持将以 ODM 撰写的业务规则转换为可在 {{site.data.keyword.streamsshort}} 应用程序中使用的 SPL。
 
 有关更多信息，请参阅 {{site.data.keyword.streamsshort}} 产品文档中的[操作程序：com.ibm.streams.rulescompile](http://www.ibm.com/support/knowledgecenter/SSCRJU_4.2.0/com.ibm.streams.toolkits.doc/spldoc/dita/tk$com.ibm.streams.rulescompiler/ix$Operator.html){:new_window}。
 
 ##Text Toolkit
+{: #text notoc}
 
 Text Toolkit (com.ibm.streams.text) 包括 `TextExtract` 和 `SentimentExtractor` 操作程序，其可从文本数据抽取信息。
 
@@ -168,6 +178,7 @@ Text Toolkit (com.ibm.streams.text) 包括 `TextExtract` 和 `SentimentExtractor
 有关工具箱限制的更多信息，请参阅 [{{site.data.keyword.streamsshort}} 专业工具箱的限制](http://www.ibm.com/support/knowledgecenter/SSCRJU_4.2.0/com.ibm.streams.install.doc/doc/ibminfospherestreams-install-toolkit-restrictions.html){:new_window}。
 
 ##Mining Toolkit
+{: #mining notoc}
 
 Mining Toolkit (com.ibm.streams.mining) 包括您可用于通过应用模型进行数据流挖掘的操作程序。对数据流进行挖掘以抽取相关信息或情报对大部分流处理应用程序来说至关重要，其中包括从欺诈检测到客户细分乃至流失或侵入防护等应用程序。
 
@@ -178,7 +189,7 @@ Mining Toolkit (com.ibm.streams.mining) 包括您可用于通过应用模型进�
 | ***兼容的操作程序*** |
 | ---------------------------|
 | `Associations` 		      	 |
-| `Classification`       	 	 | 
+| `Classification`       	 	 |
 | `Clustering`			       	 |
 | `Regression`			       	 |
 
@@ -189,6 +200,7 @@ Mining Toolkit (com.ibm.streams.mining) 包括您可用于通过应用模型进�
 有关工具箱限制的更多信息，请参阅 [{{site.data.keyword.streamsshort}} 专业工具箱的限制](http://www.ibm.com/support/knowledgecenter/SSCRJU_4.2.0/com.ibm.streams.install.doc/doc/ibminfospherestreams-install-toolkit-restrictions.html){:new_window}。
 
 ##Telecommunications Event Data Analytics (TEDA) Toolkit
+{: #teda notoc}
 
 Telecommunications Event Data Analytics (TEDA) Toolkit (com.ibm.streams.teda) 提供一组在电信应用程序中使用的通用操作程序，它还提供一种应用程序框架，可设置新的文件到文件应用程序。
 这些应用程序基于代码模板，并支持定制、可配置的并行处理、正常应用程序关闭和可靠的文件处理。
@@ -213,12 +225,13 @@ Telecommunications Event Data Analytics (TEDA) Toolkit (com.ibm.streams.teda) �
 
 
 ##Topology Toolkit
+{: #topology notoc}
 
 Topology Toolkit 提供以下列编程语言构建 {{site.data.keyword.streamsshort}} 应用程序的支持：
 
 * Python：Python 应用程序 API 是一个模块，允许定义和执行在 Python 中实现的流式应用程序。应用程序使用 Python 代码处理元组（Python 对象）。
 
-* Java：Java 应用程序 API 是一个库，允许定义和执行在 Java 中实现的流式应用程序。 
+* Java：Java 应用程序 API 是一个库，允许定义和执行在 Java 中实现的流式应用程序。
 * Scala 支持：所提供的 Java 应用程序 API 支持以 Scala 编写的应用程序。
 * SPL：Publish 和 Subscribe 操作程序提供在应用程序之间交换数据流的机制，而不管层实现语言。
 SPL 类型允许与使用其他语言实现的应用程序进行交换。
@@ -230,7 +243,7 @@ SPL 类型允许与使用其他语言实现的应用程序进行交换。
 | ***兼容的操作程序*** |
 | ---------------------------|
 | `FilteredSubscribe`      	 |
-| `Publish`     		      	 | 
+| `Publish`     		      	 |
 | `Subscribe`		        		 |
 
 *表 8. 与 Topology Toolkit 兼容的操作程序*

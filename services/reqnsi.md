@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-05-23"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2017-01-11"
 #Services
 {: #services}
 
-You can find available services in the **Catalog** under **Services** in the {{site.data.keyword.Bluemix}} user interface.
+You can find available services in the **Catalog** under **Services** in the {{site.data.keyword.Bluemix}} console.
 {:shortdesc}
 
 
@@ -52,95 +52,13 @@ Predefined services are available in {{site.data.keyword.Bluemix_notm}} for mobi
 
 Experimental services might not be stable and can change in ways that are not compatible with earlier versions. These services are not recommended for use in production environments. Support for experimental services is provided through the {{site.data.keyword.Bluemix_notm}} Developers Community. If a problem is investigated by IBM and the problem is determined to be a defect in an experimental service, IBM is not obligated to provide a fix.
 
-To use a service in the {{site.data.keyword.Bluemix_notm}} user interface, cf command line interface, IBM {{site.data.keyword.Bluemix_notm}} DevOps Services, or any supported tools, take the following steps:
+To use a service in the {{site.data.keyword.Bluemix_notm}} console, cf command line interface, IBM {{site.data.keyword.Bluemix_notm}} DevOps Services, or any supported tools, take the following steps:
 
 1. Create an instance of the service. In most cases, the service instance can be created when you create the application.
 
 2. Identify the application that uses the new service instance. For web applications, you can specify more than one application to use the same service instance, typically for data sharing.
 
 3. Write your own code in your application to interact with the service.
-
-##Services by region
-
-Not all services are available in every {{site.data.keyword.Bluemix_notm}} region. The following table shows the services that are provided by IBM.
-
-
-
-|Service	|Available in US South region	|Available in Europe United Kingdom region |Available in Australian Sydney region|
-|:----------|:------------------------------|:------------------|:------------------|
-|{{site.data.keyword.activedeployshort}}	|Yes		|Yes		|No|
-|{{site.data.keyword.alchemyapishort}} 		|Yes	   	|Yes  		|Yes|
-|{{site.data.keyword.appsecshort}}		|Yes		|No		|No|
-|{{site.data.keyword.alertnotificationshort}}|Yes		|No			|No		|
-|{{site.data.keyword.APS_DA}}			|Yes		|No		|No|
-|{{site.data.keyword.APS_MA}}			|Yes		|No		|No|
-|{{site.data.keyword.amashort}}			|Yes		|Yes		|Yes|
-|{{site.data.keyword.hadoopst}}			|Yes		|No		|No|
-|{{site.data.keyword.APIM}}			|Yes		|Yes		|No|
-|{{site.data.keyword.autoscaling}}		|Yes		|Yes		|Yes|
-|{{site.data.keyword.bigicloudst}}		|Yes		|No		|No|
-|{{site.data.keyword.blockstorageshort}}        |No             |Yes            |No |
-|{{site.data.keyword.rules_short}}		|Yes		|Yes		|No|
-|{{site.data.keyword.cloudint}}			|Yes		|Yes		|No|
-|{{site.data.keyword.cloudant}}			|Yes		|Yes		|No|
-|{{site.data.keyword.conceptexpansionshort}}	|Yes		|Yes		|Yes|
-|{{site.data.keyword.conceptinsightsshort}}	|Yes		|Yes		|Yes|
-|{{site.data.keyword.dashdbshort}}		|Yes		|Yes		|No|
-|{{site.data.keyword.datacshort}}		|Yes		|Yes		|Yes|
-|{{site.data.keyword.DB2OnCloud_short}}		|Yes		|Yes		|Yes|
-|{{site.data.keyword.deliverypipeline}}		|Yes		|Yes		|No|
-|{{site.data.keyword.dialogshort}}		|Yes		|Yes		|Yes|
-|{{site.data.keyword.documentconversionshort}}	|Yes		|Yes		|Yes|
-|{{site.data.keyword.creshort}}			|Yes		|No		|No|
-|{{site.data.keyword.game}}			|Yes		|Yes		|Yes|
-|{{site.data.keyword.geospatialshort_Geospatial}}	|Yes	|Yes		|No|
-|{{site.data.keyword.globalizationshort}}	|Yes		|No		|No|
-|{{site.data.keyword.dataworks_short}}		|Yes		|Yes		|No|
-|{{site.data.keyword.twittershort}}		|Yes		|Yes		|Yes|
-|{{site.data.keyword.weather_short}}		|Yes		|Yes		|Yes|
-|{{site.data.keyword.IntegrationTestingshort}}	|Yes		|Yes		|No|
-|{{site.data.keyword.iot_short}}		|Yes		|No		|No|
-|{{site.data.keyword.keymanagementserviceshort}}|No		|Yes		|No|
-|{{site.data.keyword.languagetranslationshort}}	|Yes		|Yes		|No|
-|{{site.data.keyword.messagehub}}		|Yes		|Yes		|No|
-|{{site.data.keyword.messageresonanceshort}}	|Yes		|Yes		|No|
-|{{site.data.keyword.APS_MAiOS}} 		|Yes		|No		|No|
-|{{site.data.keyword.macm_short}}		|Yes		|Yes		|Yes|
-|{{site.data.keyword.mobilemam}}		|Yes		|Yes		|No|
-|{{site.data.keyword.mobiledata}}		|Yes		|Yes		|No|
-|{{site.data.keyword.manda}}			|Yes		|Yes		|No|
-|{{site.data.keyword.mqa}}			|Yes		|Yes		|No|
-|{{site.data.keyword.mql}}			|Yes		|Yes		|No|
-|{{site.data.keyword.nlclassifiershort}} 	|Yes 		|Yes 		|Yes|
-|{{site.data.keyword.objectstorageshort}}	|Yes		|No		|No|
-|{{site.data.keyword.personalityinsightsshort}}	|Yes		|Yes		|Yes|
-|{{site.data.keyword.mobilepush}}		|Yes		|Yes		|No|
-|Push for iOS 8					|Yes		|Yes		|No|
-|{{site.data.keyword.questionandanswershort}}	|Yes		|Yes		|Yes|
-|{{site.data.keyword.rapidApps}}		|Yes		|Yes		|No|
-|{{site.data.keyword.relationshipextractionshort}}	|Yes	|Yes		|Yes|
-|{{site.data.keyword.retrieveandrankshort}}	|Yes 		|Yes 		|Yes|
-|{{site.data.keyword.SecureGateway}}		|Yes		|Yes		|No|
-|{{site.data.keyword.sescashort}}		|Yes		|Yes		|Yes|
-|{{site.data.keyword.ssofull}}			|Yes		|No		|No|
-|{{site.data.keyword.speechtotextshort}}	|Yes 		|Yes	 	|Yes|
-|{{site.data.keyword.sqldb}}			|Yes		|Yes		|No|
-|{{site.data.keyword.staticanalyzershort}}	|Yes		|Yes		|No|
-|{{site.data.keyword.streaminganalyticsshort}}	|Yes		|No		|No|
-|{{site.data.keyword.texttospeechshort}} 	|Yes 		|Yes	 	|Yes|
-|{{site.data.keyword.times}}			|Yes		|Yes		|No|
-|{{site.data.keyword.toneanalyzershort}} 	|Yes 		|Yes 		|Yes|
-|{{site.data.keyword.trackplan}}		|Yes		|Yes		|No|
-|{{site.data.keyword.tradeoffanalyticsshort}}	|Yes		|Yes		|Yes|
-|{{site.data.keyword.visualinsightsshort}}	|Yes		|Yes		|Yes|
-|{{site.data.keyword.visualizationrenderingshort}} |Yes		|Yes		|No|
-|{{site.data.keyword.workflow}}			|Yes		|Yes		|No|
-|{{site.data.keyword.workloadscheduler}}	|Yes		|Yes		|No|
-|{{site.data.keyword.xpagesservice_short}}	|Yes		|Yes		|No|
-*Table 2. Service availability*
-{: caption="Table 2. Service availability" caption-side="top"}
-
-
 
 # Adding a service to your application
 {: #add_service}
@@ -165,11 +83,11 @@ You can also use services that are hosted in other regions if those services are
 ## Requesting a new service instance
 {: #req_instance}
 
-To request a new service instance, you must use the {{site.data.keyword.Bluemix_notm}} user interface or the cf command line interface.
+To request a new service instance, you must use the {{site.data.keyword.Bluemix_notm}} console or the cf command line interface.
 
 **Note:** When you specify the service name, avoid using characters other than alphabetic or numeric characters, because results might be unpredictable.
 
-If you use the {{site.data.keyword.Bluemix_notm}} user interface to request a service instance, complete the following steps:
+If you use the {{site.data.keyword.Bluemix_notm}} console to request a service instance, complete the following steps:
 
 1. In the {{site.data.keyword.Bluemix_notm}} **Catalog**, click the tile for the service that you want to add. The service details page opens.
 
@@ -337,14 +255,14 @@ If you have a service instance that is created and bound to apps in one region, 
 
 	Assume that you are starting in the region where you want to use the service instance. To use a service instance that exists in another region, complete the following steps:
 
-      1. Switch to the region where the service instance exists. In the {{site.data.keyword.Bluemix_notm}} menu bar, expand **Region** or click the **Region** icon, and then select the region where the service instance exists.
+      1. Switch to the region where the service instance exists. In the {{site.data.keyword.Bluemix_notm}} menu bar, expand the **Region** menu, and then select the region where the service instance exists.
 
       2. Retrieve the credentials and the connection parameters from the VCAP_SERVICES environment variable of the service instance in the region where the service exists. Complete the following steps:
 
 	       1. In the {{site.data.keyword.Bluemix_notm}} Dashboard, click your application tile. The Overview page is displayed.
 	       2. In the navigation pane, click **Environment Variables**. The *VCAP_SERVICES* environment variable details are displayed. Record the JSON content for the service instance.
 
-      3. Switch to the region where you want to use the service instance. In the {{site.data.keyword.Bluemix_notm}} menu bar, expand **Region** or click the **Region** icon, and then select the region where you want to use the service instance.
+      3. Switch to the region where you want to use the service instance. In the {{site.data.keyword.Bluemix_notm}} menu bar, expand the **Region** menu, and then select the region where you want to use the service instance.
 
       4. Create a user-provided service instance by using the credentials and connection parameters that you recorded from the *VCAP_SERVICES* environment variable. For information about how to create a user-provided service instance, see [Creating a user-provided service instance](#user_provide_services).
 
@@ -372,12 +290,3 @@ To use a service instance from another service, complete the following steps:
 the tile for the service that you want to access. The dashboard for the service is displayed.
 2. In the navigation pane, click **Manage** to authorize the binding from other service instances by using the console of the service instance.
 3. If you want to deny other services access to the service instance, click **Service Access Authorization** in the navigation pane and then use **Revoke** to remove the service binding.
-
-# rellinks
-{: #rellinks}
-
-## general
-{: #general}
-
-* [Binding a service by using {{site.data.keyword.Bluemix_notm}} user interface](/docs/cfapps/ee.html#ee_bindui)
-* [Retrieving VCAP_SERVICES](/docs/cli/vcapsvc.html#retrieving)

@@ -775,17 +775,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.631153"
-     inkscape:cx="295.73711"
-     inkscape:cy="154.6939"
+     inkscape:zoom="1.3155765"
+     inkscape:cx="429.6939"
+     inkscape:cy="111.03025"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="in"
-     inkscape:window-width="1920"
-     inkscape:window-height="1027"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-width="1680"
+     inkscape:window-height="1023"
+     inkscape:window-x="528"
+     inkscape:window-y="-9"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -799,7 +799,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -992,8 +992,17 @@
          sodipodi:role="line"
          x="-146.30577"
          y="463.26898"
+         id="tspan8202">IoT Devices</tspan><tspan
+         sodipodi:role="line"
+         x="-146.30577"
+         y="477.01898"
+         id="tspan6878-8"
+         style="font-size:7.5px;stroke:none" /><tspan
+         sodipodi:role="line"
+         x="-146.30577"
+         y="490.76898"
          id="tspan18193-4"
-         style="font-size:11px;stroke:none">Dispositivi IoT</tspan></text>
+         style="font-size:7.5px;stroke:none" /></text>
     <rect
        ry="0"
        rx="0"
@@ -1013,11 +1022,15 @@
          id="tspan44239-7"
          y="462.93506"
          x="270.40372"
-         sodipodi:role="line">API Rest &amp; </tspan><tspan
+         sodipodi:role="line">Rest &amp; </tspan><tspan
          y="476.68506"
          x="270.40372"
          sodipodi:role="line"
-         id="tspan6445-3">in tempo reale</tspan></text>
+         id="tspan7973">Real-time APIs</tspan><tspan
+         y="490.43506"
+         x="270.40372"
+         sodipodi:role="line"
+         id="tspan6445-3" /></text>
     <rect
        ry="0"
        rx="0"
@@ -1041,7 +1054,7 @@
          sodipodi:role="line"
          x="42.015415"
          y="483.6109"
-         id="tspan8202-7">Gateway IoT</tspan><tspan
+         id="tspan8202-7">IoT Gateways</tspan><tspan
          sodipodi:role="line"
          x="42.015415"
          y="497.3609"
@@ -1144,15 +1157,15 @@
          sodipodi:role="line"
          x="52.029083"
          y="578.73309"
-         id="tspan44245">Dashboard</tspan><tspan
+         id="tspan44245">Watson IoT </tspan><tspan
          sodipodi:role="line"
          x="52.029083"
          y="592.48309"
-         id="tspan3629">Watson IoT </tspan><tspan
+         id="tspan5792">Platform</tspan><tspan
          sodipodi:role="line"
          x="52.029083"
          y="606.23309"
-         id="tspan9810">Platform</tspan></text>
+         id="tspan9810">Dashboard</tspan></text>
     <rect
        ry="0"
        rx="0"
@@ -1190,7 +1203,7 @@
          sodipodi:role="line"
          x="43.057407"
          y="420.01312"
-         id="tspan6913-6">Applicazioni</tspan></text>
+         id="tspan6913-6">Applications</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path8199"
@@ -1544,8 +1557,17 @@
          sodipodi:role="line"
          x="-146.67493"
          y="543.3512"
+         id="tspan8202-2">IoT Devices</tspan><tspan
+         sodipodi:role="line"
+         x="-146.67493"
+         y="557.1012"
+         id="tspan6878-8-9"
+         style="font-size:7.5px;stroke:none" /><tspan
+         sodipodi:role="line"
+         x="-146.67493"
+         y="570.8512"
          id="tspan18193-4-6"
-         style="font-size:11px;stroke:none">Dispositivi IoT</tspan></text>
+         style="font-size:7.5px;stroke:none" /></text>
     <g
        id="g5278-5"
        transform="translate(-199.22146,515.84599)">
@@ -1577,12 +1599,12 @@
          x="-16.57482"
          y="541.54181"
          id="tspan18193-4-9-9"
-         style="font-size:10px">Gateway abilitati Edge analytics</tspan><tspan
+         style="font-size:10px">Edge analytics enabled gateways </tspan><tspan
          sodipodi:role="line"
          x="-16.57482"
          y="554.04181"
          style="font-size:10px"
-         id="tspan5587">con EAA (Edge Analytics Agent). </tspan></text>
+         id="tspan5587">with Edge Analytics Agent (EAA). </tspan></text>
     <rect
        ry="0"
        rx="0"
@@ -1602,11 +1624,11 @@
          y="574.03876"
          x="270.3317"
          sodipodi:role="line"
-         id="tspan6445-3-5">Integrazione</tspan><tspan
+         id="tspan6445-3-5">Blockchain</tspan><tspan
          y="587.78876"
          x="270.3317"
          sodipodi:role="line"
-         id="tspan4781">Blockchain</tspan></text>
+         id="tspan4781">integration</tspan></text>
     <rect
        ry="0"
        rx="0"

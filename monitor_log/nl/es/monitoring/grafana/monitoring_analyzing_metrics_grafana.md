@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-01"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -23,35 +23,34 @@ Puede iniciar Grafana de cualquiera de estas formas:
 
 * Desde {{site.data.keyword.Bluemix_notm}}
 
-    Puede iniciar métricas de contenedor Docker específicas en Grafana, en el contexto de dicho contenedor en concreto.  
+    Puede iniciar métricas de contenedor Docker específicas en Grafana, en el contexto de dicho contenedor en concreto. 
     
-    Para obtener más información, consulte [Cómo ir al panel de control de Grafana desde el panel de control de {{site.data.keyword.Bluemix_notm}}](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_bluemix).
+    Para obtener más información, consulte [Navegación al panel de control de Grafana desde el panel de control de {{site.data.keyword.Bluemix_notm}}](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_bluemix).
 
 * Desde un enlace directo del navegador
 
     Puede iniciar Grafana para que los datos que ve agreguen registros de servicios de un espacio de {{site.data.keyword.Bluemix_notm}} especificado.
     
-    Para obtener más información, consulte [Cómo ir al panel de control de Kibana desde un navegador web](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_browser).
+    Para obtener más información, consulte [Navegación al panel de control de Kibana desde un navegador web](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_browser).
     
+Para obtener más información sobre Grafana, consulte la [Guía del usuario de Grafana![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](http://docs.grafana.org/guides/getting_started/){: new_window}.
 
 
-##  Cómo ir al panel de control de Grafana desde el panel de control de Bluemix
+##  Navegación al panel de control de Grafana desde el panel de control de Bluemix
 {: #launch_grafana_from_bluemix}
 
-La consulta que se utiliza para filtrar los datos que aparecen en Grafana recupera los datos correspondientes al contenedor de {{site.data.keyword.Bluemix_notm}} desde el que ha iniciado Kibana.  
+La consulta que se utiliza para filtrar los datos que aparecen en Grafana recupera los datos correspondientes al contenedor de {{site.data.keyword.Bluemix_notm}} desde el que ha iniciado Kibana. 
 
 Para ver las métricas de un contenedor Docker en Grafana, siga los pasos siguientes:
 
-1. Inicie una sesión en {{site.data.keyword.Bluemix_notm}} y pulse el contenedor en el panel de control de {{site.data.keyword.Bluemix_notm}}.  
+1. Inicie una sesión en {{site.data.keyword.Bluemix_notm}} y pulse el contenedor en el panel de control de {{site.data.keyword.Bluemix_notm}}. 
     
-2. En la barra de navegación, pulse **Supervisión y registros**. Se abre el separador de supervisión.  
+2. En la barra de navegación, pulse **Supervisión y registros**. Se abre el separador de supervisión. 
     
 3. Pulse **Vista avanzada**. Se abre el panel de control de **Grafana**.
 
-Para obtener más información sobre Grafana, consulte la [Guía del usuario de Grafana![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](http://docs.grafana.org/){: new_window}.
 
-
-##  Cómo ir al panel de control de Grafana desde un navegador web
+##  Navegación al panel de control de Grafana desde un navegador web
 {: #launch_grafana_from_browser}
 
 La consulta que se utiliza para filtrar los datos que aparecen en Grafana recupera datos de un espacio de la organización {{site.data.keyword.Bluemix_notm}}. La información de métricas que muestra Grafana incluye registros correspondientes a todos los recursos desplegados dentro del espacio de la organización {{site.data.keyword.Bluemix_notm}} en la que ha iniciado la sesión.
@@ -62,4 +61,4 @@ Siga los pasos siguientes para iniciar Grafana desde un navegador:
 
 2. Seleccione **Grafana**.
      
-Para obtener más información sobre Grafana, consulte la [Guía del usuario de Grafana![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](http://docs.grafana.org/){: new_window}.
+

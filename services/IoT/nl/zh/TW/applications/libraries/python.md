@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-04"
 
 ---
 
@@ -376,7 +376,7 @@ except IoTFCReSTException as e:
     print("ERROR [" + e.httpcode + "] " + e.message)
 ```
 
-如需要求和回應模型以及 HTTP 狀態碼的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} API ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} 的 Organization Configuration 小節。
+如需要求和回應模型以及 HTTP 狀態碼的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} API ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} 的 Organization Configuration 小節。
 
 
 ## 大量裝置作業
@@ -384,7 +384,7 @@ except IoTFCReSTException as e:
 
 您的應用程式可以使用大量作業，以同時取得、新增或移除多個裝置。
 
-如需查詢參數清單、要求和回應模型以及 HTTP 狀態碼的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} API ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/){: new_window} 的 Bulk Operations 小節。
+如需查詢參數清單、要求和回應模型以及 HTTP 狀態碼的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} API ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} 的 Bulk Operations 小節。
 
 
 ### 擷取裝置資訊
@@ -600,7 +600,7 @@ except IoTFCReSTException as e:
 
 API 中可用的裝置作業，包括針對 {{site.data.keyword.iot_short_notm}} 組織中裝置的裝置進行列出、新增、移除、檢視、更新、檢視位置，以及檢視管理資訊。
 
-如需查詢參數、要求和回應模型以及 HTTP 狀態碼的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} API ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} 的 Devices 小節。
+如需查詢參數、要求和回應模型以及 HTTP 狀態碼的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} API 文件 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} 的 Devices 小節。
 
 
 ### 擷取特定裝置類型的裝置
@@ -753,7 +753,7 @@ apiCli.getDeviceManagementInformation("iotsample-arduino", "00aabbccde03")
 - 擷取裝置錯誤碼
 - 新增錯誤碼
 
-如需查詢和回應模型、回應碼以及查詢參數的相關資訊，請參閱 [API 文件 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} {{site.data.keyword.iot_short_notm}} API 文件。
+如需查詢和回應模型、回應碼以及查詢參數的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}}API 文件 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}。
 
 ### 取得診斷日誌
 

@@ -118,7 +118,7 @@ Insira uma das funções a seguir:
  - PD_DEVELOPER_USER
  - PD_ANALYST_USER
  - PD_READER_USER  
-Para obter mais informações sobre as funções de usuário, veja [Funções de usuário, aplicativo e gateway](roles_index.html#user_roles).
+ Para obter mais informações sobre as funções de usuário, veja [Funções de usuário, aplicativo e gateway](roles_index.html#user_roles).
 - Coluna 3: o registro de data e hora do Unix (em milissegundos desde 1 de janeiro de 1970 às 00h UTC) que corresponde à data de validade do usuário.
 
 ## Editando usuários

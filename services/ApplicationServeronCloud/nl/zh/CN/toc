@@ -1,0 +1,27 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="wasaas" audience="service"}
+WebSphere Application Server in Bluemix
+
+    {: .navgroup id="learn"}
+    index.md
+    networkEnvironment.md
+    maintenanceAndUpdates.md
+    {: .navgroup-end}
+
+    {: .topicgroup}
+    相关链接
+        [WASdev](https://developer.ibm.com/wasdev/)
+        [WebSphere Application Server V9 文档](http://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.0/as_ditamaps/was900_welcome_base.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    systemAccess.md
+    installationConventions.md
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    reportingIssues.md
+    latestUpdates.md
+    {: .navgroup-end}

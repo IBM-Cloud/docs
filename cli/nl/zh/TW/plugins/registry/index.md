@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-03-20"
+lastupdated: "2017-04-07"
 
 
 ---
@@ -76,7 +76,7 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE]
 <dt>--format FORMAT</dt>
 <dd>（選用）使用 Go 範本將輸出元素格式化。</dd>
 <dt>IMAGE</dt>
-<dd>您要檢查之映像檔的完整 {{site.data.keyword.Bluemix_short}} 登錄路徑。如果映像檔路徑中未指定標籤，則會檢查以 `latest` 標記的映像檔。若要檢查多個映像檔，您可以在指令中列出每一個專用 {{site.data.keyword.Bluemix_short}} 登錄路徑，每一個路徑之間以空格隔開。</dd>
+<dd>您要檢查之映像檔的完整 {{site.data.keyword.Bluemix_short}} 登錄路徑，格式為 namespace/image:tag。如果映像檔路徑中未指定標籤，則會檢查以 `latest` 標記的映像檔。若要檢查多個映像檔，您可以在指令中列出每一個專用 {{site.data.keyword.Bluemix_short}} 登錄路徑，每一個路徑之間以空格隔開。</dd>
 </dl>
 
 
@@ -95,7 +95,7 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE]
 <dt>-q、--quiet</dt>
 <dd>（選用）以下列格式顯示映像檔的唯一 ID：'repository:tag'。</dd>
 <dt>--include-ibm</dt>
-<dd>（選用）將 IBM 提供的公用映像檔併入輸出中。若不使用此選項，則只會列出專用映像檔。</dd>
+<dd>（選用）將 IBM 提供的公用映像檔包含在輸出中。若不使用此選項，則只會列出專用映像檔。</dd>
 <dt>--format FORMAT</dt>
 <dd>（選用）使用 Go 範本將輸出元素格式化。</dd>
 </dl>
@@ -112,7 +112,7 @@ bx cr image-rm IMAGE [IMAGE]
 **參數**
 <dl>
 <dt>IMAGE</dt>
-<dd>您要移除之映像檔的完整 {{site.data.keyword.Bluemix_short}} 登錄路徑。如果映像檔路徑中未指定標籤，則預設會刪除以 `latest` 標記的映像檔。若要刪除多個映像檔，您可以在指令中列出每一個專用 {{site.data.keyword.Bluemix_short}} 登錄路徑，每一個路徑之間以空格隔開。</dd>
+<dd>您要移除之映像檔的完整 {{site.data.keyword.Bluemix_short}} 登錄路徑，格式為 namespace/image:tag。如果映像檔路徑中未指定標籤，則依預設會刪除以 `latest` 標記的映像檔。若要刪除多個映像檔，您可以在指令中列出每一個專用 {{site.data.keyword.Bluemix_short}} 登錄路徑，每一個路徑之間以空格隔開。</dd>
 </dl>
 
 

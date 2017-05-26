@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-3-16"  
+lastupdated: "2017-4-10"  
 
 ---
 
@@ -14,9 +14,10 @@ lastupdated: "2017-3-16"
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock} 
 
+
+
 # {{site.data.keyword.Bluemix_notm}} へのアクセスに関するトラブルシューティング 
 {: #accessing}
-
 
 
 {{site.data.keyword.Bluemix}} へのアクセスに関する一般的な問題には、{{site.data.keyword.Bluemix_notm}} へのログインができないユーザー、保留状態で使用できないアカウントなどが含まれます。しかし多くの場合、いくつかの簡単なステップを実行することで、これらの問題から復旧することが可能です。
@@ -45,6 +46,35 @@ lastupdated: "2017-3-16"
   
 **注:** IBM の従業員の場合、IBM ID はイントラネット・ログイン ID とは異なる可能性があります。 
 
+
+
+<!-- begin STAGING ONLY --> 
+
+## 外部 Web サイトへのアクセスの問題
+{: #ts_bmlinkid}
+
+IBM イントラネット ID を IBM ID にリンクしない限り、イントラネット ID を使用して {{site.data.keyword.Bluemix_notm}} にログインすることはできません。
+
+
+{{site.data.keyword.Bluemix_notm}} の「サインイン (Sign in)」ページで**「イントラネット ID を使用してサインイン (Sign in with your intranet ID)」**を選択すると、以下のエラー・メッセージが表示されることがあります。
+{: tsSymptoms} 
+
+`外部 Web サイトへのアクセス時の問題 (Problem Accessing External Website)`
+
+
+
+この問題は、IBM ID にリンクされていない IBM イントラネット ID を使用して {{site.data.keyword.Bluemix_notm}} にログインした場合に発生します。IBM ID は、www.ibm.com へのログインに使用する ID です。
+{: tsCauses}
+
+
+IBM 従業員が自分の IBM イントラネット ID を使用して {{site.data.keyword.Bluemix_notm}} にログインするには、その前にそのイントラネット ID を外部の IBM ID にリンクしておく必要があります。2 つの ID をリンクするには、以下のステップを実行します。
+{: tsResolve} 
+
+  1. [Central Sign-on ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://w3-03.sso.ibm.com/tools/cso/index.jsp){: new_window} ページで、**「マイ・サインオン (My Sign-ons)」**をクリックします。
+  2. 「マイ・サインオン (My Sign-ons)」ページで、**「ID のリンク (Link IDs)」**をクリックして、{{site.data.keyword.Bluemix_notm}} の「サインイン (Sign in)」ページで自分の IBM ID とパスワードを入力します。その後、イントラネット ID と IBM ID が自動的にリンクされます。
+  
+
+<!-- end STAGING ONLY -->
 
 
 
@@ -93,7 +123,7 @@ lastupdated: "2017-3-16"
 
 DNS 設定を構成する場合、アプリが実行されている {{site.data.keyword.Bluemix_notm}} 領域のパブリック IP アドレスを指定する必要があります。{{site.data.keyword.Bluemix_notm}} 領域のパブリック IP アドレスを取得するには、`nslookup` コマンドを使用します。例えば、次のコマンドをコマンド・ライン・ウィンドウに入力できます。
 ```
-nslookup mybluemix.net
+nslookup stage1.mybluemix.net
 ```
 
 
@@ -113,7 +143,7 @@ nslookup mybluemix.net
 {{site.data.keyword.Bluemix_notm}} トライアル・アカウントに登録した後、確認の E メールが届きます。その確認 E メールに記載されたリンクをクリックして、登録プロセスを完了する必要があります。
 {: tsCauses} 
 
-確認の E メールは、ユーザーが入力した E メール・アドレス宛に送信されます。受信ボックスとジャンク・メール・フォルダーを確認してください。確認の E メールが届かない場合は、[{{site.data.keyword.Bluemix_notm}} サポート ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window} にお問い合わせください。  
+確認の E メールは、ユーザーが入力した E メール・アドレス宛に送信されます。受信ボックスとジャンク・メール・フォルダーを確認してください。確認の E メールが届かない場合は、[{{site.data.keyword.Bluemix_notm}} サポート![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](http://ibm.biz/bluemixsupport.com){: new_window}にお問い合わせください。  
 {: tsResolve}
 
 
@@ -157,7 +187,7 @@ nslookup mybluemix.net
   
 自分がコラボレーターでありメンバーではないためにユーザーを招待できない場合、古い {{site.data.keyword.Bluemix_notm}} アカウントを削除してから、招待を受けて組織のメンバーとしてアカウントに参加する必要があります。古いアカウントを削除してメンバーとしてアカウントに参加するには、以下のステップを実行してください。 
 
-  1. [{{site.data.keyword.Bluemix_notm}} サポート ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} に連絡して、サポート・チケットをオープンし、アカウントの削除を要請します。古いアカウントに関連付けられているデータで、保存して新規アカウントに移行したいものがあれば、その情報を E メールに記載してください。 
+  1. [{{site.data.keyword.Bluemix_notm}} サポート![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](http://ibm.biz/bluemixsupport){: new_window}に連絡してサポート・チケットをオープンし、アカウントの削除を依頼します。古いアカウントに関連付けられているデータで、保存して新規アカウントに移行したいものがあれば、その情報を E メールに記載してください。 
   2. 自分のアカウントが削除された後、組織の管理者の役割を持つユーザーに、自分を組織の管理者として組織に招待してもらいます。その後、招待から {{site.data.keyword.Bluemix_notm}} に登録します。 
 
 
@@ -208,11 +238,14 @@ nslookup mybluemix.net
   * {{site.data.keyword.Bluemix_notm}} をいったんログアウトしてから、再度ログインします。
   * ブラウザーのプライベート表示モードを使用します。 
   * ブラウザーの Cookie およびキャッシュをクリアします。
-  * 異なるブラウザーを使用します。{{site.data.keyword.Bluemix_notm}} でサポートされているブラウザーのバージョンについて詳しくは、[{{site.data.keyword.Bluemix_notm}} の前提条件 ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/support/#prereqs){: new_window} を参照してください。
+  * 異なるブラウザーを使用します。{{site.data.keyword.Bluemix_notm}} でサポートされるブラウザーのバージョンについては、[{{site.data.keyword.Bluemix_notm}} の前提条件 ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://developer.ibm.com/bluemix/support/#prereqs){: new_window} を参照してください。
   * cf コマンド・ライン・インターフェースがインストール済みであれば、`cf apps` コマンドを入力してアプリケーションが実行中であるかどうか確認します。
   
   
   
+  
+  
+
 
 
 
@@ -299,10 +332,9 @@ IBM Eclipse Tools for Bluemix が稼働している Java のバージョンを�
 
 ワークベンチの JVM が、IBM JVM 7 または 8、あるいは Oracle JVM 8 より前のバージョンである場合は、以下の手順を実行して、Oracle JVM 8 に切り替えます。
 
-  1. Oracle JVM 8 をダウンロードし、インストールします。詳しくは、[Java SE Downloads ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window} を参照してください。
+  1. Oracle JVM 8 をダウンロードし、インストールします。詳しくは、[Java SE Downloads ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window} を参照してください。
   2. Eclipse を再始動します。
   3. `eclipse.vm` プロパティーが、Oracle JVM 8 の新しいインストール先を指しているかどうかを確認します。
-
 
   
 ## 削除したアプリの名前を再使用できない
@@ -334,20 +366,16 @@ IBM Eclipse Tools for Bluemix が稼働している Java のバージョンを�
 	 cf delete-route domain_name -n host_name
 	 ```
 	 例:
-```
+	    ```
 	 cf delete-route mybluemix.net -n app001
 	 ```
 
-  
-  
-  
-  
-  
-  
-  
+
+	 
+	 
+
 ## 組織のスペースを取得できない
 {: #ts_retrieve_space}
-
 現行組織に関連付けられたスペースがない場合、アプリまたはサービスを作成できません。
 
 Bluemix でアプリを作成しようとすると、以下のエラー・メッセージが表示されます。
@@ -366,8 +394,7 @@ Bluemix でアプリを作成しようとすると、以下のエラー・メッ
 -o <organization_name>` と入力します。
 
 やり直してください。
-このメッセージが再び表示される場合は、[Bluemix 状況 ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window} ページにアクセスして、サービスまたはコンポーネントに問題があるかを確認してください。
-
+このメッセージが再び表示される場合は、[Bluemix 状況 ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](http://ibm.biz/bluemixstatus){: new_window} ページにアクセスして、サービスまたはコンポーネントに問題があるかどうかを確認してください。
 
 
 
@@ -392,14 +419,12 @@ Bluemix でアプリを作成しようとすると、以下のエラー・メッ
 {: tsCauses}
 
   
-
 適切な権限レベルを取得するには、以下のいずれかの方法を使用します。
 {: tsResolve}
  * 開発者役割を備えている別の組織およびスペースを選択します。 
  * 自分の役割を開発者に変更するように、またはスペースを作成して自分に開発者役割を割り当てるように組織マネージャーに依頼します。詳しくは、『[組織とスペースの管理](/docs/admin/orgs_spaces.html)』を参照してください。
  
 
- 
 
 
 ## 許可エラーのため、{{site.data.keyword.Bluemix_notm}} サービスにアクセスできない
@@ -420,15 +445,7 @@ Bluemix でアプリを作成しようとすると、以下のエラー・メッ
 ```
 process.env.VCAP_SERVICES
 ```
-他のプログラム言語で使用できるコマンドについて詳しくは、[Java ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} および [Ruby ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} を参照してください。
-
-
-
-
-
-
-
-
+他のプログラミング言語で使用できるコマンドについて詳しくは、[Java![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} および [Ruby![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} を参照してください。
 ## IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} を使用してアプリをデプロイできない
 {: #ts_bm_tools_facet}
 
@@ -471,7 +488,7 @@ Bad Gateway エラーは通常、Web サイトをホストするメイン・サ�
 
  
 
-ダウンしている {{site.data.keyword.Bluemix_notm}} サービスがあると疑われる場合は、まず、[{{site.data.keyword.Bluemix_notm}} 状況 ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window} ページを確認してください。回避策として、別の {{site.data.keyword.Bluemix_notm}} 地域でそのサービスを使用することもできます。『[サービスを別の地域で使用](/docs/services/reqnsi.html#cross_region_service)』に詳しい説明があります。サービスの状況が正常の場合には、以下のステップで問題を解決してください。
+{{site.data.keyword.Bluemix_notm}} サービスがダウンしていると疑われる場合は、まず [{{site.data.keyword.Bluemix_notm}} 状況![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://ibm.biz/bluemixstatus){: new_window}ページを確認してください。回避策として、別の {{site.data.keyword.Bluemix_notm}} 地域でそのサービスを使用することもできます。『[サービスを別の地域で使用](/docs/services/reqnsi.html#cross_region_service)』に詳しい説明があります。サービスの状況が正常の場合には、以下のステップで問題を解決してください。
 {: tsResolve}
 
   * アクションを再試行します。
@@ -479,7 +496,7 @@ Bad Gateway エラーは通常、Web サイトをホストするメイン・サ�
 	* 異なるブラウザーを使用します。
 	* ルーター、モデム、およびコンピューターをリブートします。これらのデバイスをリブートすると、エラー 502 につながる各種エラーが解消する可能性があります。 
   * 時間をおいて、後で再試行します。場合によっては、インターネット・サービス・プロバイダーまたは {{site.data.keyword.Bluemix_notm}} サービスで一時的な問題が発生していることがあります。一時的な問題が解決されるまで待ちます。
-  * 問題が解決しない場合は、{{site.data.keyword.Bluemix_notm}} サポートに連絡してください。詳しくは、[{{site.data.keyword.Bluemix_notm}} サポートへのお問い合わせ ![「外部リンク」アイコン](../icons/launch-glyph.svg)](/docs/support/index.html#contacting-bluemix-support){: new_window} を参照してください。 
+  * 問題が解決しない場合は、{{site.data.keyword.Bluemix_notm}} サポートに連絡してください。詳しくは、『[Contacting {{site.data.keyword.Bluemix_notm}} サポートへのお問い合わせ](/docs/support/index.html#contacting-bluemix-support)』を参照してください。 
 
 
 
@@ -512,27 +529,20 @@ Bad Gateway エラーは通常、Web サイトをホストするメイン・サ�
     ```
 	cf push appname -p app_path -k <disk_quota>
 	```
-
 	
-	
-
-
-## Android アプリがプッシュ通知を受信できない
+## Android アプリが {{site.data.keyword.mobilepushshort}} を受信できない
 {: #ts_push}
 
-Google にアクセス不能な特定地域の Android アプリは、IBM Push サービスで送信した通知を受信できません。この場合には、回避策としてサード・パーティー・サービスを使用できます。
+Google にアクセス不能な特定地域の Android アプリは、IBM {{site.data.keyword.mobilepushshort}} サービスで送信した通知を受信できません。この場合には、回避策としてサード・パーティー・サービスを使用できます。
 
- 
-
-Bluemix アプリに Push サービスをバインドして、登録デバイスにメッセージを送信します。ただし、Android プラットフォームで開発されたアプリは、特定の地域で通知を受信できません。
+Bluemix アプリに {{site.data.keyword.mobilepushshort}} サービスをバインドして、登録デバイスにメッセージを送信します。ただし、Android プラットフォームで開発されたアプリは、特定の地域で通知を受信できません。
 {: tsSymptoms}
 
- 
-IBM Push サービスは、 Google Cloud Messaging (GCM) サービスを使用して、Android プラットフォームで開発されたモバイル・アプリに通知を送ります。Android アプリが通知を受信できるようにするには、Google Cloud Messaging (GCM) サービスがモバイル・アプリからアクセス可能でなければなりません。GCM サービスが Android アプリから到達不能の地域では、Android アプリはプッシュ通知を受信できません。
+IBM {{site.data.keyword.mobilepushshort}} サービスは、Google Cloud Messaging (GCM) サービスを使用して、Android プラットフォームで開発されたモバイル・アプリに通知を送ります。Android アプリが通知を受信できるようにするには、Google Cloud Messaging (GCM) サービスがモバイル・アプリからアクセス可能でなければなりません。GCM サービスが Android アプリから到達不能の地域では、Android アプリは{{site.data.keyword.mobilepushshort}}を受信できません。
 {: tsCauses}
 
  
-回避策としては、GCM サービスに依存しないサード・パーティー・サービス (例えば、[Pushy ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://pushy.me){: new_window}、[igetui ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://www.getui.com/){: new_window}、[jpush ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://www.jpush.cn/){: new_window} など) を使用します。
+回避策として、GCM サービスに依存しないサード・パーティーのサービス (例えば、[Pushy ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://pushy.me){: new_window}、[igetui ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](http://www.getui.com/){: new_window}、および [jpush ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://www.jpush.cn/){: new_window}) を使用してください。
 {: tsResolve}
 
 
@@ -560,7 +570,7 @@ IBM Push サービスは、 Google Cloud Messaging (GCM) サービスを使用�
  
   * サービス・インスタンスを削除するには、 {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースか、またはコマンド・ライン・インターフェースが使用できます。
 {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースを使用してサービス・インスタンスを削除するには、以下の手順を実行します。
-	  1. {{site.data.keyword.Bluemix_notm}} ダッシュボードで、削除するサービスをクリックします。サービス・タイルが表示されます。 
+	  1. {{site.data.keyword.Bluemix_notm}} ダッシュボードで、削除するサービスをクリックします。サービス・タイルが表示されます。
 	  2. サービス・タイル上で**「メニュー (Menu)」**アイコンをクリックします。
 	  3. **「サービスの削除 (Delete Service)」**をクリックします。サービス・インスタンスを削除すると、その後、そのサービス・インスタンスがバインドされていたアプリケーションを再ステージングするようプロンプトが出ます。
 コマンド・ライン・インターフェースを使用してサービス・インスタンスを削除するには、以下の手順を実行します。
@@ -592,18 +602,20 @@ IBM Push サービスは、 Google Cloud Messaging (GCM) サービスを使用�
 {: tsResolve}
 
 ```
-cf push appname -p <app_path> -c <start_command> -b <null-buildpack>
+cf push appname -p app_path -c <start_command> -b <null-buildpack>
 ```
 以下に例を示します。
 ```
-cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
+cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
 
 ## 組織のメモリー上限を超過
 {: #ts_outofmemory}
 
-トライアル・アカウントのユーザーの場合、組織のメモリー上限を超過すると、アプリを {{site.data.keyword.Bluemix_notm}} にデプロイできない場合があります。ユーザーにできるのは、自分のアプリが使用するメモリーを削減すること、あるいは自分のアカウントのメモリー割り当て量を増やすことです。 
+トライアル・アカウントのユーザーの場合、組織のメモリー上限を超過すると、アプリを {{site.data.keyword.Bluemix_notm}} にデプロイできない場合があります。ユーザーにできるのは、自分のアプリが使用するメモリーを削減すること、あるいは自分のアカウントのメモリー割り当て量を増やすことです。トライアル・アカウントの最大メモリー割り当て量は 2 GB で、支払アカウントに移行することでのみ増やすことができます。
+
+
 
 
 
@@ -626,8 +638,10 @@ cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/n
   * アプリが使用するメモリーを削減するには、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースまたは cf コマンド・ライン・インターフェースのいずれかを使用します。
 {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースを使用する場合、以下のステップを実行してください。
 	  1. {{site.data.keyword.Bluemix_notm}} ダッシュボードで、アプリケーションを選択します。アプリ詳細ページが開きます。
-	  2. 「ランタイム」ペインで、そのアプリの最大メモリー上限またはアプリ・インスタンス数のいずれか、あるいはその両方を減らすことができます。
-cf コマンド・ライン・インターフェースを使用する場合は、以下の手順を実行します。
+	  2. 「ランタイム」ペインで、そのアプリの最大メモリー上限またはアプリ・インスタンス数のいずれか、あるいはその両方を減らすことができます。 
+	  
+	cf コマンド・ライン・インターフェースを使用する場合は、以下の手順を実行します。
+	
 	  1. アプリで使用しているメモリー量を調べます。
 	  ```
 	  cf apps
@@ -635,7 +649,7 @@ cf コマンド・ライン・インターフェースを使用する場合は�
 	     cf apps コマンドで、自分が現行スペースにデプロイしたアプリがすべてリストされます。各アプリの状況も表示されます。
       2. アプリが使用するメモリー量を削減するには、アプリ・インスタンス数または最大メモリー上限のいずれか、あるいはその両方を減らします。
 	  ```
-	  cf push <appname> -p <app_path> -i <instance_number> -m <memory_limit>
+	  cf push appname -p app_path -i instance_number -m memory_limit
       ```
 	  3. アプリを再始動して、変更を有効にします。
 
@@ -664,7 +678,7 @@ cf コマンド・ライン・インターフェースを使用する場合は�
 {: tsResolve}
 
 ```
-cf push <appname> -p <app_path>
+cf push appname -p app_path
 ```
 さらに、停止、例外、接続障害といった問題を見つけて、そのような問題から復旧するようにアプリをコーディングすることもできます。  
 
@@ -719,9 +733,40 @@ Web IDE で Node.js アプリを編集するときは、{{site.data.keyword.Blue
 path: path_to_application
    ```
   * アプリと同じディレクトリーに `package.json` ファイルを作成します。
-  
-  
 
+  
+  
+  
+<!-- begin STAGING ONLY --> 
+
+## Bluemix Live Sync Debug がコマンド・ラインから開始しない
+{: #ts_no_debug}
+
+コマンド・ラインを使用して IBM Bluemix Live Sync Debug フィーチャーをアプリに対して使用可能にしたが、デバッグ・インターフェースにアクセスできません。  
+  
+ 
+
+**BLUEMIX_APP_MGMT_ENABLE** 環境変数を設定し、アプリにデバッグ・フィーチャーを使用可能にしました。しかし、`app_url/bluemix-debug/manage` でデバッグ・ユーザー・インターフェースにアクセスできません。
+{: tsSymptoms}
+
+
+
+以下の状況では、デバッグ・フィーチャーを使用可能にすることができません。
+{: tsCauses} 
+
+  * `manifest.yml` に command 属性が含まれる場合
+  * **-c** オプションを使用してアプリを {{site.data.keyword.Bluemix_notm}} にプッシュする場合
+
+ 
+  
+以下のいずれかのオプションを使用して問題を解決します。
+{: tsResolve}
+
+  * 推奨されるのは、IBM Node.js ビルドパックを使用してアプリを開始する方法です。詳しくは、『[{{site.data.keyword.Bluemix_notm}} への Node.js アプリケーションのデプロイ](/docs/runtimes/nodejs/index.html#nodejs_runtime)』トピックの「開始コマンド (Startup command)」セクションを参照してください。 
+  * `manifest.yml` の command 属性を command: null に修正するか、push コマンドを編集して `-c null` を組み込むことで、既存アプリにコマンドを使用不可にします。 
+  * `manifest.yml` から **command** 属性を削除します。その後、{{site.data.keyword.Bluemix_notm}} から現行アプリを削除し、アプリを再びプッシュします。
+  
+<!-- end STAGING ONLY -->  
   
   
 
@@ -791,12 +836,12 @@ Eclipse ツールを使用してアプリケーションを {{site.data.keyword.
   * `manifest.yml` ファイルを使用してアプリケーションをデプロイする場合は、host オプションでホスト名を指定します。
 	 
     ```
-host: <hostname>	
+    host: host_name	
 	```
   * コマンド・プロンプトからアプリケーションをデプロイする場合は、`cf
 push` コマンドを **-n** オプションで使用します。 
     ```
-cf push <appname> -p <app_path> -n <hostname>
+    cf push appname -p app_path -n host_name
     ```
 
 
@@ -902,7 +947,7 @@ Node.js アプリを更新する際、または Node.js アプリを {{site.data
         ```
 		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
-	  * [package.json ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://docs.npmjs.com/json){: new_window} ファイルを使用します。例えば次のようにします。
+	  * [package.json ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://docs.npmjs.com/json){: new_window} ファイルを使用します。例えば次のようにします。
 	    ```
 		{
       ...
@@ -939,7 +984,7 @@ Node.js アプリを更新する際、または Node.js アプリを {{site.data
  }
     ```
 	
-Node.js アプリについてさらにヒントを見るには、[Node.js アプリケーションに関するヒント (Tips for Node.js Applications) ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window} を参照してください。	
+Node.js アプリについてさらにヒントを見るには、[Tips for Node.js Applications ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window} を参照してください。	
 
 
 
@@ -981,7 +1026,7 @@ server.xml ファイルをプロジェクトから削除することで、この
 
  
 
-[git update ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://git-scm.com/docs/git-update-index){: new_window} コマンドを使用すると、各スクリプトの許可を「実行可能」に変更できます。例えば、`git update --chmod=+x script.sh` と入力できます。
+[git update![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](http://git-scm.com/docs/git-update-index){: new_window} コマンドを使用して、各スクリプトのアクセス権を実行可能に変更できます。例えば、`git update --chmod=+x script.sh` と入力できます。
 {: tsResolve}
 	
 	
@@ -1003,7 +1048,7 @@ DevOps Services から {{site.data.keyword.Bluemix_notm}} にアプリをデプ�
 
  
 
-この問題を解決するには、`manifest.yml` ファイルを作成する必要があります。`manifest.yml` ファイルの作成方法について詳しくは、『[アプリケーション・マニフェスト](/docs/manageapps/depapps.html#appmanifest)』を参照してください。
+この問題を解決するには、`manifest.yml` ファイルを作成する必要があります。`manifest.yml` ファイルの作成方法について詳しくは、[アプリケーション・マニフェスト ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](/docs/manageapps/depapps.html#appmanifest){: new_window} を参照してください。
 {: tsResolve}	
 	
 
@@ -1048,8 +1093,9 @@ buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
 「{{site.data.keyword.Bluemix_notm}} へのデプロイ (Deploy to Bluemix)」ボタンをクリックしても、Git リポジトリーが複製されない場合、あるいはアプリがデプロイされない場合は、以下の問題に対するトラブルシューティング方法を試してください。
   * [Bluemix DevOps Services プロジェクトが作成できない](#project-cannot-be-created)
   * [Git リポジトリーが見つからず、DevOps Services で複製できない](#repo-not-found)
-  * [Git リポジトリーは DevOps Services で複製されるが、アプリが {{site.data.keyword.Bluemix_notm}} にデプロイされない](#repo-cloned-app-not-deployed)
-当該ボタンの作成方法について詳しくは、『「{{site.data.keyword.Bluemix_notm}} へのデプロイ」ボタンの作成』を参照してください。
+  * [Git リポジトリーは DevOps Services で複製されるが、アプリが {{site.data.keyword.Bluemix_notm}}](#repo-cloned-app-not-deployed) にデプロイされない
+
+ボタンの作成方法について詳しくは、『「{{site.data.keyword.Bluemix_notm}} へのデプロイ (Deploy to Bluemix)」ボタンの作成』を参照してください。
 
 ### Bluemix DevOps Services プロジェクトが作成できない
 {: #project-cannot-be-created}
@@ -1156,7 +1202,7 @@ Git リポジトリーが複製されない場合は、リポジトリーまた�
 	```
 	<appname> open
 	```
-
+	
 ## 実行バーからアプリをデプロイできない
 {: #deployinganappfromtherunbarfails}
 
@@ -1201,7 +1247,7 @@ Eclipse Orion {{site.data.keyword.webide}} に実行バーが見つからない�
 6. 状況アイコンを再びチェックして、エラーがないことを確認します。
    ![エラーのない状況アイコン](images/githubResolved_small.png)
 
-詳しくは、[Setting up GitHub for Bluemix DevOps Services projects ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/githubhooks/){: new_window} を参照してください。
+詳しくは、[『Bluemix DevOps Services プロジェクトのための GitHub のセットアップ (Setting up GitHub for Bluemix DevOps Services projects)』![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://hub.jazz.net/docs/githubhooks/){: new_window}を参照してください。
 
 
 # アカウントの管理に関するトラブルシューティング
@@ -1229,7 +1275,7 @@ Eclipse Orion {{site.data.keyword.webide}} に実行バーが見つからない�
 
  
 
-アカウントを再アクティブ化するには、[{{site.data.keyword.Bluemix_notm}} サポート ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window} にお問い合わせください。E メールには、以下の情報を含めてください。
+アカウントを再アクティブ化する場合は、[{{site.data.keyword.Bluemix_notm}} サポート![「外部リンク」アイコン](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixsupport.com){: new_window}に連絡してください。E メールには、以下の情報を含めてください。
 {: tsResolve}
 
   * {{site.data.keyword.Bluemix_notm}} へのログインに使用している IBM ID。
@@ -1277,10 +1323,7 @@ Eclipse Orion {{site.data.keyword.webide}} に実行バーが見つからない�
 この問題は、同じスペース内の異なるアプリケーションに対して同一の URL 経路を指定した場合に発生する可能性があります。
 {: tsCauses}
 
-例えば、myApp1 アプリケーションを
-{{site.data.keyword.Bluemix_notm}} にプッシュし、そのドメイ
-ンを「mynewapp.mybluemix.net」に設定します。次に、別の myApp2 アプリケーションを
-同じスペースにプッシュし、その URL 経路の 1 つを「mynewapp.mybluemix.net」に設定します。この経路は、この時点で両方のアプリケーションにマップされています。
+例えば、myApp1 アプリケーションを {{site.data.keyword.Bluemix_notm}} にプッシュし、そのドメインを「mynewapp.stage1.mybluemix.net」に設定します。次に、別の myApp2 アプリケーションを同じスペースにプッシュし、その URL 経路の 1 つを「mynewapp.stage1.mybluemix.net」に設定します。この経路は、この時点で両方のアプリケーションにマップされています。
 
  
 
@@ -1289,7 +1332,30 @@ Eclipse Orion {{site.data.keyword.webide}} に実行バーが見つからない�
   
 	
 	
+<!-- begin STAGING ONLY --> 
+	
+	
+## 管理者が {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースを使用してすべての組織を表示できない
+{: #ts_ui_org}
 
+管理者として {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースを使用したときに、管理のためにすべての組織を表示することはできません。自分が所属する組織のみを表示して管理することができます。
+
+ 
+
+管理者として、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースを使用してすべての組織を表示することはできません。
+{: tsSymptoms}
+
+ 
+
+これは、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースの制限です。
+{: tsCauses}
+
+ 
+
+すべての組織を管理するには、cf コマンド・ライン・インターフェースから `cf orgs`、`cf create-org`、`cf delete-org` などのコマンドを使用できます。cf コマンドの全リストを表示するには、`cf help` と入力してください。
+{: tsResolve}
+	
+<!-- end STAGING ONLY -->
 
 
 
@@ -1350,14 +1416,14 @@ IBM® Bluemix™ ランタイムを使用すると問題が発生することが
 組み込みメカニズムを備えたビルドパックを使用して、使用できないコンポーネントをロードしないようにすることができます。以下に 2 つのビルドパックの例を示します。
 {: tsResolve}
 
-  * [Cloud Foundry Java ビルドパック ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack){: new_window}。 このビルドパックには、最新バージョンのビルドパックが使用されるように組み込みメカニズムが装備されています。このメカニズムがどのように機能するのかについて詳しくは、[extending-caches.md ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window} を参照してください。 
-  * [Cloud Foundry Node.js ビルドパック ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}。 このビルドパックは、環境変数を使用して同様の機能を提供します。この Node.js ビルドパックを有効にして、毎回インターネットからノード・モジュールをダウンロードするには、cf コマンド・ライン・インターフェースに次のコマンドを入力します。 	
+  * [Cloud Foundry Java ビルドパック![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/cloudfoundry/java-buildpack){: new_window}。このビルドパックには、最新バージョンのビルドパックが使用されるように組み込みメカニズムが装備されています。このメカニズムによる処理方法について詳しくは、[extending-caches.md ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}を参照してください。 
+  * [Cloud Foundry Node.js ビルドパック![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}。このビルドパックは、環境変数を使用して同様の機能を提供します。この Node.js ビルドパックを有効にして、毎回インターネットからノード・モジュールをダウンロードするには、cf コマンド・ライン・インターフェースに次のコマンドを入力します。 	
   ```
 set NODE_MODULES_CACHE=false
 ```
 使用中のビルドパックが最新のコンポーネントを自動的にロードするメカニズムを提供していない場合は、以下のステップに従って手動でキャッシュ・ディレクトリー内のコンテンツを削除し、アプリを再度プッシュします。
-  1. ヌル・ビルドパックのブランチ (例えば https://github.com/ryandotsmith/null-buildpack) をチェックアウトします。ブランチをチェックアウトする方法については、[Git Basics - Getting a Git Repository ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window} を参照してください。  
-  2. `null-buildpack/bin/compile` ファイルに以下の行を追加して変更をコミットします。変更をコミットする方法については、[Git Basics - Recording Changes to the Repository ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window} を参照してください。
+  1. ヌル・ビルドパックのブランチ (例えば https://github.com/ryandotsmith/null-buildpack) をチェックアウトします。ブランチをチェックアウトする方法については、[Git Basics - Getting a Git Repository![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window} を参照してください。  
+  2. `null-buildpack/bin/compile` ファイルに以下の行を追加して変更をコミットします。変更をコミットする方法については、[Git Basics - Recording Changes to the Repository ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window} を参照してください。
   ```
 rm -rfv $2/*
   ```
@@ -1392,7 +1458,7 @@ PHP ビルドパックを使用してアプリケーションを Bluemix にプ�
 
 
 
-PHP ビルドパックでは、ロギング・レベルを定義するために error_log パラメーターを使用しています。デフォルトでは、`error_log` パラメーターの値は **stderr notice** です。以下の例には、Cloud Foundry で提供されている PHP ビルドパックの `nginx-defaults.conf` ファイルに含まれる、デフォルトのロギング・レベル構成が示されています。詳しくは、[cloudfoundry/php-buildpack ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window} を参照してください。
+PHP ビルドパックでは、ロギング・レベルを定義するために error_log パラメーターを使用しています。デフォルトでは、`error_log` パラメーターの値は **stderr notice** です。以下の例には、Cloud Foundry で提供されている PHP ビルドパックの `nginx-defaults.conf` ファイルに含まれる、デフォルトのロギング・レベル構成が示されています。詳しくは、[cloudfoundry/php-buildpack ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window} を参照してください。
 {: tsCauses} 
 
 ```
@@ -1411,7 +1477,7 @@ daemon off;
 error_log stderr error;
 pid @{HOME}/nginx/logs/nginx.pid;
 ```
-デフォルトのロギング構成を変更する方法について詳しくは、[error_log ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window} を参照してください。
+デフォルトのロギング構成を変更する方法について詳しくは、『[error_log ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}』を参照してください。
 	
 
 ## サード・パーティーの Python ライブラリーを {{site.data.keyword.Bluemix_notm}} にインポートできない
@@ -1597,5 +1663,54 @@ pid @{HOME}/nginx/logs/nginx.pid;
 ```
 	
 	
+<!-- begin STAGING ONLY --> 
 
+	
+## Log4js ロガー・オブジェクトが Node.js トレースのポップアップ・ウィンドウに表示されない
+{: #ts_logger}
+
+log4js と ibmbluemix のモジュールがともにアプリで使用されている場合に、log4js ロガー・オブジェクトが Node.js トレースのポップアップ・ウィンドウに表示されません。 	
+
+ 
+log4js、winston、および ibmbluemix のモジュールがともにアプリで使用されている場合に、log4js ロガー・オブジェクトが Node.js トレースのポップアップ・ウィンドウに表示されません。
+{: tsSymptoms}
+
+
+log4js と winston のモジュールを使用するログ操作の統合 API を ibmbluemix モジュールが提供しているため、Node.js トレースのポップアップ・ウィンドウには ibmbluemix ロガー・オブジェクトのみが表示されます。これにより、ibmbluemix、log4js、および winston のロガー・オブジェクトのログ・レベル設定が相互に上書きすることを防ぎます。
+{: tsCauses}
+
+
+この動作は予期されたものです。
+{: tsResolve}
+
+<!-- end STAGING ONLY -->
+
+
+
+
+<!-- begin STAGING ONLY -->
+
+
+## 「アプリケーションのすべてのインスタンスにトレース設定を適用 (Apply trace setting to all instances of the application)」チェック・ボックスが無効
+{: #ts_bunyan}
+
+Bunyan ロガー・レベルが変更されたときに Node.js トレースのポップアップ・ウィンドウで**「アプリケーションのすべてのインスタンスにトレース設定を適用 (Apply trace setting to all instances of the application)」**のチェック・ボックスがチェックされず、無効になっています。
+
+
+
+Bunyan ロガー・オブジェクトのレベルを変更したときに、Node.js トレースのポップアップ・ウィンドウで**「アプリケーションのすべてのインスタンスにトレース設定を適用 (Apply trace setting to all instances of the application)」**のチェック・ボックスがチェックされず、無効になっています。
+{: tsSymptoms} 
+
+ 
+
+複数の Bunyan ログ・レベルが変更されたとき、アプリケーションのすべてのインスタンスにトレース設定を適用できません。これは、Bunyan ライブラリーでは、Bunyan ロガー・オブジェクトの名前や ID が固有である必要がないためです。アプリケーションのログ・メッセージのレベルを指定するために使用される複数の Bunyan ロガー・オブジェクトで、名前または ID が同じであることが可能です。そのため、アプリケーションのトレース設定が有効であると、アプリケーションのログ・メッセージで指定されるログ・レベルが不正確になる可能性があります。
+{: tsCauses}
+
+
+
+
+この動作は予期されたものです。
+{: tsResolve} 
+
+<!-- end STAGING ONLY -->
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-07"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -40,8 +40,8 @@ instale.
 
 Para conectar o aplicativo móvel ao seu ambiente e registrar os seus dispositivos, execute as tarefas a seguir:
 
-1. Abra seu app iniciador do {{site.data.keyword.iotelectronics}}. Para obter instruções, consulte
-[Abrindo o app iniciador](iot4ecreatingappliances.html#iot4e_openAppMain).
+1. Abra o seu aplicativo iniciador {{site.data.keyword.iotelectronics}}. Para obter instruções, consulte [Abrindo o aplicativo
+iniciador](iot4ecreatingappliances.html#iot4e_openAppMain).
 
 2. Selecione **Controlar remotamente seus dispositivos conectados**.
 
@@ -57,8 +57,7 @@ iniciador do {{site.data.keyword.iotelectronics}}](images/IoT4E_remotely_option.
 
   ![Código Quick Response de conexão.](images/iot4e_mobile_connect_QR.svg "{{site.data.keyword.iotelectronics}} Connection QR code")
 
-5. Em seu dispositivo móvel, insira as credenciais de login. Sua identificação de usuário e senha podem ter qualquer comprimento. Lembre-se de suas credenciais de login para sessões futuras. O seu
-dispositivo móvel agora está registrado em seu ambiente do {{site.data.keyword.iotelectronics}} e você está pronto para registrar os dispositivos individuais.
+5. No seu dispositivo móvel, como opção, efetue login usando suas credenciais do Facebook ou do Google+. Também é possível ignorar o processo de login e testar o app sem fazer login.
 
 6. Em seu computador, role até uma lavadora simulada e clique nela para exibir seus dados e código QR do Dispositivo.
 

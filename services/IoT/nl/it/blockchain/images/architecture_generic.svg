@@ -462,17 +462,15 @@
    fit-margin-left="0"
    fit-margin-right="0"
    fit-margin-bottom="0"
-   inkscape:zoom="1.9233304"
-   inkscape:cx="392.79546"
-   inkscape:cy="173.47883"
+   inkscape:zoom="1.36"
+   inkscape:cx="417.2305"
+   inkscape:cy="206.17199"
    inkscape:window-width="1920"
-   inkscape:window-height="1027"
-   inkscape:window-x="-8"
-   inkscape:window-y="-8"
+   inkscape:window-height="1019"
+   inkscape:window-x="-9"
+   inkscape:window-y="1041"
    inkscape:window-maximized="1"
    inkscape:current-layer="svg5645" />
-
-
 
 
 
@@ -509,7 +507,7 @@
       <dc:format>image/svg+xml</dc:format>
       <dc:type
          rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-      <dc:title />
+      <dc:title></dc:title>
     </cc:Work>
   </rdf:RDF>
 </metadata>
@@ -794,7 +792,11 @@
      sodipodi:role="line"
      x="464.91357"
      y="44.784241"
-     id="tspan266402-8-8">Fabric IBM Blockchain</tspan></text>
+     id="tspan6717-0">IBM Blockchain fabric </tspan><tspan
+     sodipodi:role="line"
+     x="464.91357"
+     y="59.784241"
+     id="tspan266402-8-8" /></text>
 <image
    y="64.350403"
    x="466.2005"
@@ -821,7 +823,7 @@
    x="542.29352"
    font-size="11"
    id="text56834-0-3"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Convalida</text>
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Validate</text>
 <text
    sodipodi:linespacing="125%"
    y="289.89551"
@@ -877,11 +879,15 @@
      sodipodi:role="line"
      x="517.93188"
      y="324.27954"
-     id="tspan5855">IU di monitoraggio</tspan><tspan
+     id="tspan5855">IoT Blockchain</tspan><tspan
      sodipodi:role="line"
      x="517.93188"
      y="338.02954"
-     id="tspan18193-1-8">Blockchain IoT</tspan></text>
+     id="tspan6878-4-2">Monitoring UI</tspan><tspan
+     sodipodi:role="line"
+     x="517.93188"
+     y="351.77954"
+     id="tspan18193-1-8" /></text>
 <g
    id="g18195-6"
    transform="translate(-726.78827,189.31799)"
@@ -1092,8 +1098,6 @@
 
 
 
-
-
     image
        y=&quot;504.73132&quot;
        x=&quot;627.01056&quot;
@@ -1116,7 +1120,7 @@
      sodipodi:role="line"
      x="235.86133"
      y="54.842865"
-     id="tspan4323">con Blockchain IoT</tspan><tspan
+     id="tspan4323">with IoT Blockchain</tspan><tspan
      sodipodi:role="line"
      x="235.86133"
      y="69.842865"
@@ -1166,17 +1170,15 @@
      sodipodi:role="line"
      x="71.955322"
      y="87.296356"
-     id="tspan44245">Dashboard</tspan><tspan
+     id="tspan44245">Watson IoT </tspan><tspan
      sodipodi:role="line"
      x="71.955322"
      y="101.04636"
-     id="tspan3544">Watson IoT </tspan><tspan
+     id="tspan5792">Platform</tspan><tspan
      sodipodi:role="line"
      x="71.955322"
      y="114.79636"
-     id="tspan9810">Platform</tspan></text>
-
-
+     id="tspan9810">Dashboard</tspan></text>
 
 
 
@@ -1226,8 +1228,17 @@
      sodipodi:role="line"
      x="69.512451"
      y="166.2999"
+     id="tspan8202">IoT Devices</tspan><tspan
+     sodipodi:role="line"
+     x="69.512451"
+     y="180.0499"
+     id="tspan6878-8"
+     style="font-size:7.5px;stroke:none" /><tspan
+     sodipodi:role="line"
+     x="69.512451"
+     y="193.7999"
      id="tspan18193-4"
-     style="font-size:11px;stroke:none">Dispositivi IoT</tspan></text>
+     style="font-size:7.5px;stroke:none" /></text>
 <path
    inkscape:connector-curvature="0"
    id="path8199-4-4"
@@ -1278,13 +1289,11 @@
      sodipodi:role="line"
      x="301.34351"
      y="140.62759"
-     id="tspan18193-1-8-5">Proxy</tspan><tspan
+     id="tspan18193-1-8-5">Blockchain</tspan><tspan
      sodipodi:role="line"
      x="301.34351"
      y="154.37759"
-     id="tspan5893">Blockchain</tspan></text>
-
-
+     id="tspan5893">Proxy</tspan></text>
 
 
 

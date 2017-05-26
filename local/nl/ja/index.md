@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2017-04-11"
 
 
 ---
@@ -34,13 +34,13 @@ IBM® はクラウド操作をサービスとして使用してお客様の環�
 |組み込み | [{{site.data.keyword.Bluemix_notm}} ランタイム](/docs/cfapps/runtimes.html) | ランタイムはアプリを素早く立ち上げて実行するために使用します。マシンとオペレーティング・システムのセットアップと管理は不要です。すべての {{site.data.keyword.Bluemix_notm}} ランタイムが、{{site.data.keyword.Bluemix_notm}} Local インスタンスで使用可能です。|
 |組み込み | [{{site.data.keyword.autoscaling}}](/docs/services/Auto-Scaling/index.html)| ポリシーに基づいて、アプリケーションの計算能力を動的に増減します。このサービスを使用することで、{{site.data.keyword.Bluemix}} Local 環境で使用量が無制限になります。|
 |オプション | [{{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} は、{{site.data.keyword.APIM}} と IBM StrongLoop を単一のオファリングに統合し、API とマイクロサービスを作成、実行、管理、および強化する包括的な解決策を提供します。 |
-|オプション | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | {{site.data.keyword.Bluemix_notm}} Local で Docker コンテナーを実行します。コンテナーは、アプリが実行のために必要とするすべてのエレメントを含む仮想ソフトウェア・オブジェクトです。コンテナーには、リソースの分離と割り振りの利点がありますが、例えば仮想マシンなどよりも、移植可能性と効率性が高まっています。ハードウェア要件については、『[{{site.data.keyword.Bluemix_notm}} Dedicated および Bluemix Local における IBM {{site.data.keyword.containershort}}](/docs/containers/container_dl.html)』を参照してください。 |
+|オプション | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | {{site.data.keyword.Bluemix_notm}} Local で Docker コンテナーを実行します。コンテナーは、アプリが実行のために必要とするすべてのエレメントを含む仮想ソフトウェア・オブジェクトです。コンテナーには、リソースの分離と割り振りの利点がありますが、例えば仮想マシンなどよりも、移植可能性と効率性が高まっています。ハードウェア要件については、『[{{site.data.keyword.Bluemix_notm}} Dedicated および Bluemix Local における IBM {{site.data.keyword.containershort}}](/docs/containers/container_ov.html#container_dl)』を参照してください。 |
 |オプション | [{{site.data.keyword.datacshort}}](/docs/services/DataCache/index.html#data_cache) | このサービスは、アプリで分散キャッシュ・シナリオをサポートするメモリー内データ・グリッドを提供します。50 GB のメモリー内キャッシュが含まれます。 |
 | オプション (ベータ版) | [ロギング](/docs/monitoringandlogging/cfapps_ml_logs_dedicated_ov.html#container_ml_logs_dedicated_ov) | {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースで Cloud Foundry アプリのログおよび Kibana で検索可能なログとダッシュボードを提供します。 |
 |オプション | [{{site.data.keyword.mobilepush}}](/docs/services/mobilepush/index.html) | {{site.data.keyword.mobilepush}} は、通知を iOS および Android デバイスに送信するために使用することができるサービスです。通知は、すべてのアプリケーション・ユーザー、またはタグを使用して特定のユーザーとデバイスのセットを対象にすることができます。デバイス、タグ、およびサブスクリプションを管理することができます。SDK (Software Development Kit) および　Representational State Transfer (REST) アプリケーション・プログラム・インターフェース (API) を使用して、さらにクライアント・アプリケーションを開発することも可能です。 |
 |オプション | [{{site.data.keyword.sescashort}}](/docs/services/SessionCache/index.html#session_cache) | 冗長性を高めるために、{{site.data.keyword.sescashort}} は、キャッシュに保管されたセッションのレプリカを提供します。これにより、ブラウンアウトまたは障害が発生した場合、クライアント・アプリケーションはキャッシュ内のセッションへのアクセスを維持できます。サービスでは、Web アプリケーションとモバイル・アプリケーションのセッション・キャッシュ・シナリオがサポートされます。 |
 |オプション | [{{site.data.keyword.iot_short}}](/docs/services/IoT/index.html) | このサービスにより、アプリは、接続されたデバイス、センサー、およびゲートウェイが収集したデータと通信して、それらのデータを取り込むことができます。Local の基本オファリングには、初期環境が含まれます。初期環境では、100,000 個の同時接続されたデバイスまたはアプリケーションと 1.6 TB のデータ交換の容量を備えたローカル環境内で {{site.data.keyword.iot_short}} の専用バージョンを実行できます。 |
-{: caption="Table 1. Local services and runtimes" caption-side="top"}
+{: caption="表 1. Local サービスおよびランタイム" caption-side="top"}
 {: #table01}
 
 
@@ -55,7 +55,7 @@ IBM® はクラウド操作をサービスとして使用してお客様の環�
 |{{site.data.keyword.Bluemix_notm}} データ & セッション・キャッシュの 50 GB の容量増加 | 最大 50 GB の累積容量まで「データ・キャッシュ」および「セッション・キャッシュ」のインスタンスをデプロイして実行できる環境。 |
 |{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} Local の増分式の拡張 | {{site.data.keyword.iot_short}} Local 基本サービス・オファリングに追加される環境。この追加環境では、100,000 個の同時接続されたデバイスまたはアプリケーションと 0.5 TB のデータ交換の容量を備えたローカル環境内で {{site.data.keyword.iot_short}} の専用バージョンを実行できます。 |
 |{{site.data.keyword.IBM_notm}} {{site.data.keyword.mobilepush}} Local アドオン・インスタンス | {{site.data.keyword.mobilepush}} インスタンスをデプロイして実行できる環境であり、1 秒当たりさらに 300 個の要求を受け入れる能力を持つ。 |
-{: caption="Table 2. Optional services components for purchase" caption-side="top"}
+{: caption="表 2. 購入用のオプションのサービス・コンポーネント" caption-side="top"}
 {: #table02}
 
 | **名前** | **説明** |
@@ -64,7 +64,7 @@ IBM® はクラウド操作をサービスとして使用してお客様の環�
 |Local Cloud Foundry ランタイム 16 GB キャパシティー追加  | 追加の 16 GB のランタイム・キャパシティーを備えた Cloud Foundry ランタイム環境の拡張。 |
 |Local {{site.data.keyword.containerlong}} 16 GB キャパシティー追加  | 追加の 16 GB のキャパシティーを備えた {{site.data.keyword.containerlong}} 環境の拡張。 |
 |Local {{site.data.keyword.containerlong}} 64 GB キャパシティー  | 64 GB のキャパシティーを備えた {{site.data.keyword.containerlong}} 環境。 |
-{: caption="Table 3. Optional platform add-on components for purchase" caption-side="top"}
+{: caption="表 3. 購入用のオプションのプラットフォーム・アドオン・コンポーネント" caption-side="top"}
 {: #table03}
 
 **注**: {{site.data.keyword.Bluemix_notm}} Local のコンポーネントは、構成された特定の容量 (ギガバイト数や、1 秒当たりのトランザクション数など) で示される場合があります。どんな構成でも、クラウド・サービスで実際に使用される容量は、さまざまな要因によって異なるため、実際に使用される容量は、構成された容量より増減する可能性があります。
@@ -126,7 +126,7 @@ IBM® はクラウド操作をサービスとして使用してお客様の環�
 |{{site.data.keyword.iot_short}}		|はい		|はい		|いいえ|
 |{{site.data.keyword.weather_short}}		|はい		|はい		|はい|
 |{{site.data.keyword.workloadscheduler}}	|はい		|はい		|はい |
-{: caption="Table 4. Services available for syndication from {{site.data.keyword.Bluemix_notm}} Public by region" caption-side="top"}
+{: caption="表 4. Bluemix パブリックからのシンジケーションに使用可能な、地域別のサービス" caption-side="top"}
 {: #table04}
 
 **注**: サード・パーティー・サービスは表に含まれていません。サード・パーティー・サービス・オプションについては、カタログを確認してください。
@@ -399,7 +399,7 @@ Success Manager (CSM) と連携できます。異なるサポート層につい�
 |物理的インフラストラクチャーのレビュー | データ・センターを保護するセキュリティー制御の脅威および審査のためのソリューション・コンポーネントをホストする物理的プレミスをレビューします。 | お客様 |
 |モニタリング・ソフトウェアの検査 | エスカレーションおよび問題判別の計画で定義したモニターおよび管理コンポーネントを検査します。 | お客様 |
 |OS の検査 | オペレーティング・システム・イメージがコンプライアンス規格に合っていることを確認するための検査を行います。{{site.data.keyword.IBM_notm}} が OS イメージにアクセスできるようにします。 | {{site.data.keyword.IBM_notm}} とお客様の共同の責任 |
-{: caption="Table 5. Inception phase tasks" caption-side="top"}
+{: caption="表 5. 方向付けフェーズのタスク" caption-side="top"}
 
 次に、進行フェーズについて説明します。進行フェーズとは、お客様と IBM との間における協力的な進行中の関係を指します。このフェーズの主な目標には、以下のものがあります。
 
@@ -422,7 +422,7 @@ Success Manager (CSM) と連携できます。異なるサポート層につい�
 |状況レポート作成、監査調整、およびコンプライアンス会議  | 状況レポート作成、外部監査調整、およびコンプライアンス・レビュー状況会議での説明を実施します。 | {{site.data.keyword.IBM_notm}} |
 |雇用とビジネス・ニーズの確認 | 四半期ごとに、顧客環境にアクセスできる {{site.data.keyword.IBM_notm}} 担当者について、雇用の確認およびビジネス・ニーズが継続していることの確認を行います。 | {{site.data.keyword.IBM_notm}} |
 |セキュリティー脆弱性の解決 | プラットフォームで報告されたセキュリティー脆弱性を解決します。 | {{site.data.keyword.IBM_notm}} |
-{: caption="Table 6. Progression phase tasks" caption-side="top"}
+{: caption="表 6. 進行フェーズのタスク" caption-side="top"}
 
 最終の完了ステージは、お客様と {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} 間の関係の終了を表します。このフェーズの主なタスクには、以下のものがあります。
 
@@ -436,7 +436,7 @@ Success Manager (CSM) と連携できます。異なるサポート層につい�
 |環境の廃止 | 環境へのアクセスおよび環境の資格情報をシャットダウンします。 | {{site.data.keyword.IBM_notm}} とお客様の共同の責任 |
 |リレーのシャットダウン | リレー接続を終了します。 | {{site.data.keyword.IBM_notm}} |
 |インフラストラクチャーのリサイクル | 会社のガイドラインに従って、インフラストラクチャーをリサイクルします。 | お客様 |
-{: caption="Table 7. Completion phase tasks" caption-side="top"}
+{: caption="表 7. 完了フェーズのタスク" caption-side="top"}
 
 
 ## {{site.data.keyword.Bluemix_local_notm}} のインフラストラクチャー要件
@@ -455,11 +455,11 @@ Success Manager (CSM) と連携できます。異なるサポート層につい�
 <dd>
 ESXi は、物理サーバーで実行され、プロセッサー、メモリー、ストレージ、およびリソースを複数の仮想マシンに抽出する仮想化層です。ESXi ごとの最小物理コア数が 8 という条件の下で、以下のリソース合計を満たす任意の組み合わせを選択できます。以下の仕様は、{{site.data.keyword.Bluemix_notm}} コア・ランタイム専用です。
 <ul>
-<li>32 個の物理コア (各 2.0 GHz 以上)</li>
-<li>512 GB の物理 RAM</li>
-<li>合計データ・ストア・サイズ 7.5 TB
+<li>40 個の物理コア (各 2.0 GHz 以上)</li>
+<li>768 GB の物理 RAM</li>
+<li>合計データ・ストア・サイズ 10 TB
 <ul>
-<li>{{site.data.keyword.Bluemix_notm}} を保持するための 7 TB のデータ・ストア</li>
+<li>{{site.data.keyword.Bluemix_notm}} を保持するための 9.5 TB のデータ・ストア</li>
 <li>開始仮想マシンを保持するための 500 GB のデータ・ストア</li>
 </ul>
 </li>
@@ -468,8 +468,8 @@ ESXi は、物理サーバーで実行され、プロセッサー、メモリー
 </dd>
 <dt>**高可用性**</dt>
 <dd>
-単一ノードの障害に対応するためには、n+1 個の ESXi が必要です。例えば、32 個のコアと 512 GB のメモリーが、16 個のコアと 256 GB のメモリーによる ESXi サーバー 2 つを使用して満たされる場合、単一ノードの完全障害に対応するには、これらのサーバーが 3 つ必要です。
-<p><strong>注:</strong> お客様の VMware 管理者が、リソースを保証するためにクラスター内に厳格な高可用性フェイルオーバーを適用するかどうかを決定できます。高可用性フェイルオーバーを構築しないことにした場合は、32 コア、512 GB の最小リソース要件を満たすことで構いません。</p>
+単一ノードの障害に対応するためには、n+1 個の ESXi が必要です。例えば、40 個のコアと 768 GB のメモリーが、16 個のコアと 256 GB のメモリーによる ESXi サーバー 2 つを使用して満たされる場合、単一ノードの完全障害に対応するには、これらのサーバーが 3 つ必要です。
+<p><strong>注:</strong> お客様の VMware 管理者が、リソースを保証するためにクラスター内に厳格な高可用性フェイルオーバーを適用するかどうかを決定できます。高可用性フェイルオーバーを構築しないことにした場合は、40 コア、768 GB の最小リソース要件を満たすことで構いません。</p>
 </dd>
 <dt>**ネットワーク**</dt>
 <dd>
@@ -753,9 +753,9 @@ Akamai や Dyn などのグローバル・ロード・バランサーを選択�
 <li>リストアが必要な場合には、{{site.data.keyword.IBM_notm}} 管理者にバックアップ・ファイルを提供する。</li>
 </ul>
 
-# rellinks
+# 関連リンク
 {: rellinks}
-## general
+## 一般
 {: general}
 * [{{site.data.keyword.Bluemix_local_notm}} ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/hybrid/local/){: new_window}
 * [{{site.data.keyword.Bluemix_notm}} の新機能](/docs/whatsnew/index.html)

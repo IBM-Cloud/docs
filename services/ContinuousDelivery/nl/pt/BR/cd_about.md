@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-4"
+lastupdated: "2017-4-28"
 
 ---
 
@@ -56,14 +56,18 @@ Para gerenciamento de código fonte e rastreamento de problemas, o {{site.data.k
 
 O {{site.data.keyword.contdelivery_short}} está disponível no {{site.data.keyword.Bluemix_notm}} Public e no {{site.data.keyword.Bluemix_notm}} Dedicated. As cadeias de ferramentas são diferentes, dependendo de se você usa o {{site.data.keyword.contdelivery_short}} no {{site.data.keyword.Bluemix_notm}} Public ou no {{site.data.keyword.Bluemix_notm}} Dedicated.
 
+**Dica**: As cadeias de ferramentas são hospedadas na
+região sul dos EUA. Se sua cadeia de ferramentas estiver configurada para implementar
+apps em uma região diferente, ela ainda implementará apps nessa região.
+
 |Cadeias de ferramentas |{{site.data.keyword.Bluemix_notm}} Public	|{{site.data.keyword.Bluemix_notm}} Dedicated |
 |:----------|:------------------------------|:------------------|
 |Integrações de ferramenta 		|Para obter uma lista de integrações de ferramentas suportadas, veja [Configurando integrações de ferramentas](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}. 		|As integrações de ferramentas que estão disponíveis dependem de como o {{site.data.keyword.contdelivery_short}} foi configurado em seu ambiente.			|
 |Criando uma cadeia de ferramentas com base em um modelo		|Efetue login no [{{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://console.ng.bluemix.net/devops){:new_window}		|Efetue login no ambiente Dedicated no {{site.data.keyword.Bluemix_notm}}.			|
 |Criando uma cadeia de ferramentas com base em um aplicativo		|O app é configurado para entrega contínua por meio de um novo repositório GitHub que é preenchido com o código de início do app.		|O app é configurado para entrega contínua por meio de um novo repositório GitHub ou GitHub Enterprise que é preenchido com o código de início do app.		|  
 |Regiões de implementação do pipeline de entrega		|Todas as regiões do {{site.data.keyword.Bluemix_notm}} Public estão disponíveis para as tarefas de implementação do Cloud Foundry. 		|A região do {{site.data.keyword.Bluemix_notm}} Dedicated está disponível. Outras regiões Dedicated ou Local na mesma conta de cliente também poderão estar disponíveis, dependendo de como o {{site.data.keyword.contdelivery_short}} tiver sido configurado em seu ambiente específico.		|
-|Tarefas de implementação do pipeline de entrega		|Todos os [tipos de tarefas](/docs/services/ContinuousDelivery/pipeline_about.html#deliverypipeline_jobs) estão disponíveis.		|Os tipos de tarefas que dependem de serviços do {{site.data.keyword.Bluemix_notm}} que não estão instalados no ambiente Dedicated podem não estar disponíveis. Por exemplo, os tipos de tarefas de construção e implementação do contêiner podem não estar disponíveis em ambientes que não possuem o serviço {{site.data.keyword.Bluemix_notm}} Container.	|
-{: caption="Table 1. Differences between toolchains on {{site.data.keyword.Bluemix_notm}} Dedicated and {{site.data.keyword.Bluemix_notm}} Public" caption-side="top"}
+|Tarefas de implementação do pipeline de entrega		|Todos os [tipos de tarefas](/docs/services/ContinuousDelivery/pipeline_about.html#deliverypipeline_jobs) estão disponíveis.		|Os tipos de tarefas que dependem de serviços do {{site.data.keyword.Bluemix_notm}} que não estão instalados no ambiente Dedicated podem não estar disponíveis.	Por exemplo, os tipos de tarefas de construção e implementação do contêiner podem não estar disponíveis em ambientes que não possuem o serviço {{site.data.keyword.Bluemix_notm}} Container.	|
+{: caption="Tabela 1. Diferenças entre cadeias de ferramentas no Bluemix Dedicated e Bluemix Public" caption-side="top"}
 
 
 ## Modelos de cadeias de ferramentas
@@ -91,4 +95,4 @@ Os modelos de cadeias de ferramentas de microsserviços implementam um app com A
 |[Deployment Risk Analytics com GitHub e Jenkins ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevopsinsights-toolchain){:new_window}		|Com essa cadeia de ferramentas, é possível obter insights sobre seu processo Jenkins para integração e entrega contínuas. É possível configurar o servidor Jenkins para enviar dados para o {{site.data.keyword.DRA_short}} quando as tarefas são executadas por Jenkins. É possível também implementar portas de qualidade para bloquear implementações com base em políticas. É possível visualizar resultados no painel do Deployment Risk no {{site.data.keyword.DRA_short}}. Se você configurar um repositório GitHub para indicar o repositório de origem usado por Jenkins, a rastreabilidade de mudança ficará disponível.  		|
 |[Developer Insights e Team Dynamics com GitHub e JIRA ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevteaminsights-toolchain){:new_window}		|Com essa cadeia de ferramentas, é possível explorar o risco de desenvolvimento de seu projeto e usar a análise de codificação social para entender os padrões de interação entre os desenvolvedores. É possível analisar o código-fonte do GitHub em conjunto com os problemas do GitHub e/ou do JIRA. Use o Developer Insights para identificar arquivos que são altamente propensos a erros e ver como o projeto obedece às práticas do DevOps. A análise de codificação social no Team Dynamics identifica o nível de interação entre os membros da equipe para que a equipe possa corrigir práticas não produtivas. 		|
 |[Construir sua própria cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fempty-toolchain){:new_window}		|Essa cadeia de ferramentas não possui ferramentas pré-configuradas. Se você já estiver familiarizado com as cadeias de ferramentas, será possível configurar sua própria cadeia de ferramentas. 		|
-{: caption="Table 2. Toolchain templates" caption-side="top"}
+{: caption="Tabela 2. Modelos de cadeia de ferramentas" caption-side="top"}

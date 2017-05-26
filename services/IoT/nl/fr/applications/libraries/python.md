@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-04"
 
 ---
 
@@ -26,7 +26,7 @@ Utilisez les informations et les exemples fournis pour commencer à développer 
 ## Téléchargement du client et des ressources Python
 {: #python_client_download}
 
-Pour accéder au client Python pour {{site.data.keyword.iot_short_notm}} et aux autres ressources disponibles, accédez au référentiel [iot-python ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-python){: new_window} dans GitHub et exécutez les instructions d'installation. 
+Pour accéder au client Python pour {{site.data.keyword.iot_short_notm}} et aux autres ressources disponibles, accédez au référentiel [iot-python ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iot-python){: new_window} dans GitHub et exécutez les instructions d'installation.
 
 ## Constructeur
 {: #constructor}
@@ -191,7 +191,7 @@ Pour traiter les événements reçus par vos abonnements, vous devez enregistrer
 
 |Propriété|Type de données|Description|
 |:---|:---|
-|`event.device`|Chaîne|Identifie le terminal de manière unique parmi tous les types de terminal dans l'organisation.|
+|`event.device`|Chaîne|Identifie le terminal de manière unique parmi tous les types de terminaux dans l'organisation.|
 |`event.deviceType`|Chaîne|Identifie le type de terminal. Généralement, deviceType regroupe des terminaux qui effectuent une tâche spécifique, par exemple, "weatherballoon".|
 |`event.deviceId`|Chaîne|Représente l'ID du terminal. Généralement, pour un type de terminal donné, deviceId est un identificateur unique, par exemple, un numéro de série ou une adresse MAC.|
 |`event.event`|Chaîne|Utilisé généralement pour regrouper des événements spécifiques, par exemple, "status", "warning" et "data".
@@ -375,7 +375,7 @@ except IoTFCReSTException as e:
     print("ERROR [" + e.httpcode + "] " + e.message)
 ```
 
-Pour plus d'informations sur le modèle de demande et de réponse et les codes de statut HTTP, voir la section Organization Configuration dans la documentation de l'[{{site.data.keyword.iot_short_notm}} API ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Pour plus d'informations sur le modèle de demande et de réponse et les codes de statut HTTP, voir la section 'Organization Configuration' dans la documentation sur l'[API {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window}.
 
 
 ## Opérations globales sur les terminaux
@@ -383,7 +383,7 @@ Pour plus d'informations sur le modèle de demande et de réponse et les codes d
 
 Vos applications peuvent utiliser des opérations globales pour obtenir, ajouter ou retirer plusieurs terminaux simultanément.
 
-Pour plus d'informations sur la liste de paramètres de requête, le modèle de réponse et de demande et les codes de statut HTTP, voir la section 'Bulk Operations' dans la documentation de l'[API {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/){: new_window}.
+Pour plus d'informations sur la liste de paramètres de requête, le modèle de réponse et de demande et les codes de statut HTTP, voir la section 'Bulk Operations' de la documentation sur l'[API {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window}.
 
 
 ### Extraction d'informations sur les terminaux
@@ -456,14 +456,14 @@ except IoTFCReSTException as e:
 ## Opérations relatives aux types de terminaux
 {: #device_type_ops}
 
-Les types de terminal que vous créez dans votre organisation peuvent être utilisés pour créer des modèles destinés à l'ajout de terminaux. En utilisant les fonctions API de {{site.data.keyword.iot_short_notm}}, vos applications peuvent répertorier, créer, supprimer, afficher ou mettre à jour des types de terminal dans votre organisation.
+Les types de terminaux que vous créez dans votre organisation peuvent être utilisés pour créer des modèles destinés à l'ajout de terminaux. En utilisant les fonctions API de {{site.data.keyword.iot_short_notm}}, vos applications peuvent répertorier, créer, supprimer, afficher ou mettre à jour des types de terminaux dans votre organisation.
 
-Pour plus d'informations sur les paramètres de requête, le modèle de demande et de réponse et les codes de statut HTTP, voir la section 'Device types' dans la documentation de l'[API {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}. 
+Pour plus d'informations sur les paramètres de requête, le modèle de demande et de réponse et les codes de statut HTTP, voir la section 'Device types' dans la documentation sur l'[API {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 
-### Extraction de tous les types de terminal
+### Extraction de tous les types de terminaux
 
-Utilisez la méthode `getAllDeviceTypes()` pour extraire tous les types de terminal que compte votre organisation {{site.data.keyword.iot_short_notm}}.
+Utilisez la méthode `getAllDeviceTypes()` pour extraire tous les types de terminaux que compte votre organisation {{site.data.keyword.iot_short_notm}}.
 Utilisez les résultats de dictionnaire de la réponse pour obtenir le tableau de terminaux renvoyé. D'autres paramètres contenus dans la réponse sont nécessaires pour effectuer d'autres appels, par exemple, l'élément `_bookmark` peut être utilisé pour parcourir les pages de résultats. Soumettez la première demande sans spécifier de signet, puis récupérez le signet qui est renvoyé dans la réponse et indiquez-le dans la demande relative à la page suivante. Répétez cette opération jusqu'à la fin de l'ensemble de résultats, signalé par l'absence de signet. Chaque demande doit utiliser les mêmes valeurs pour les autres paramètres, sinon, les résultats seront non définis.
 
 ```python
@@ -537,7 +537,7 @@ except IoTFCReSTException as e:
       print("ERROR [" + e.httpcode + "] " + e.message)
 ```
 
-### Extraction d'informations pour certains types de terminal
+### Extraction d'informations pour certains types de terminaux
 
 
 Utilisez la méthode `getDeviceType()` afin d'extraire des informations pour un certain type de terminal. L'élément `typeId` du type de terminal que vous souhaitez extraire doit être spécifié en tant que paramètre.
@@ -599,7 +599,7 @@ except IoTFCReSTException as e:
 
 Les opérations relatives aux terminaux disponibles dans l'API incluent le recensement, l'ajout, le retrait, l'affichage, la mise à jour, la visualisation de l'emplacement et la visualisation des informations de gestion des terminaux dans une organisation {{site.data.keyword.iot_short_notm}}.
 
-Pour plus d'informations sur les paramètres de requête, le modèle de demande et de réponse et les codes de statut HTTP, voir la section 'Device section' dans la documentation de l'[API {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Pour plus d'informations sur les paramètres de requête, le modèle de demande et de réponse et les codes de statut HTTP, voir la section 'Device section' de la documentation sur l'[API {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 
 ### Extraction de terminaux d'un type donné
@@ -637,7 +637,7 @@ Pour ajouter un terminal à une organisation {{site.data.keyword.iot_short_notm}
 |`metadata`|Facultatif|Paires de chaînes personnalisées zone:valeur, comme indiqué dans [Exemple de code pour l'ajout d'un type de terminal](#sample_device_type).|
 |`location`|Facultatif|Contient les variables longitude, latitude, elevation, accuracy et measuredDateTime.|
 
-Pour plus d'informations sur ces paramètres et le format et les codes de réponse, voir la [documentation de l'API ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Devices/post_device_types_typeId_devices){: new_window}.
+Pour plus d'informations sur ces paramètres et le format et les codes de réponse, voir la [documentation sur l'API ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Devices/post_device_types_typeId_devices){: new_window}.
 
 Lorsque vous utilisez la méthode `registerDevice()`, définissez le paramètre deviceID obligatoire, ainsi que les paramètres facultatifs requis pour votre terminal, puis appelez la méthode à l'aide des paramètres que vous avez sélectionnés.
 
@@ -752,7 +752,7 @@ Utilisez les opérations de diagnostic d'un terminal pour implémenter les tâch
 - Extraction de codes d'erreur de terminaux
 - Ajout de codes d'erreur
 
-Pour plus d'informations sur les modèles de requête et de réponse, les codes de réponse et les paramètres de requête, voir la [documentation de l'API ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} {{site.data.keyword.iot_short_notm}}. 
+Pour plus d'informations sur les modèles de requête et de réponse, les codes de réponse et les paramètres de requête, voir la [{{site.data.keyword.iot_short_notm}}documentation sur l'API ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ### Extraction de journaux de diagnostic
 

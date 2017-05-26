@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-03-21"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -271,8 +271,6 @@ status = myClient.publishEvent("load", data, "text", 2);
 
 **注：**在先前的代码示例中，事件的有效内容必须为字符串格式。
 
-
-
 任何 XML 数据都可以转换为字符串格式，并按如下所示进行发布：
 
 ```
@@ -298,7 +296,7 @@ status = myClient.publishEvent("blink", cpuLoad , "binary", 1);
 2. 构造需要发布的事件。
 3. 指定事件名称，然后使用 `publishEventOverHTTP()` 方法发布事件，如以下代码样本中所示：
 
-``` sourceCode
+``` 
 DeviceClient myClient = new DeviceClient(deviceProps);
 
 JsonObject event = new JsonObject();
@@ -309,7 +307,7 @@ event.addProperty("mem",  70);
 boolean response  = myClient.api().publishDeviceEventOverHTTP("blink", event, ContentType.json);
 ```
 
-要查看完整代码，请参阅 [HttpDeviceEventPublish] 设备示例。
+要查看完整代码，请参阅 [HttpDeviceEventPublish ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")] 设备示例。{: new_window}
 
 根据属性文件中的设置，`publishEventOverHTTP()` 方法会以 Quickstart 方式或注册流方式发布事件。当属性文件中的“组织标识”设置为 `quickstart` 时，`publishEventOverHTTP()` 方法会将事件发布到设备示例 Quickstart 服务，并以纯 HTTP 格式发布事件。如果在属性文件中指定了有效的已注册组织，那么会通过 HTTPS 来安全地发布事件。
 
@@ -331,7 +329,7 @@ HTTP 协议提供“至多一次”传递，这类似于 MQTT 协议的“至多
 |`timestamp`   |org.joda.time.DateTime|事件的日期和时间。|
 
 
-``` sourceCode
+```
 package com.ibm.iotf.sample.client.device;
 
 import java.util.Properties;

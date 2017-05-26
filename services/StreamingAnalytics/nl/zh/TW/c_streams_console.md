@@ -2,18 +2,18 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-04-13"
 
 ---
 
-<!-- Attribute definitions --> 
+<!-- Attribute definitions -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
 
-#{{site.data.keyword.streaminganalyticsshort}} 主控台
+# {{site.data.keyword.streaminganalyticsshort}} 主控台
 {: #console}
 
 在 {{site.data.keyword.streaminganalyticsshort}} 主控台上，您可以將 {{site.data.keyword.streamsshort}} 應用程式直接提交給 {{site.data.keyword.streaminganalyticsshort}} 服務實例。
@@ -28,3 +28,5 @@ lastupdated: "2017-02-09"
 * 根據您定義的環境變數，來檢視您的實例日誌
 
 您可以從服務儀表板存取 {{site.data.keyword.streaminganalyticsshort}} 主控台。
+
+<!--The {{site.data.keyword.streaminganalyticsshort}} console is translated into the following languages: Brazilian Portuguese, French, German, Italian, Japanese, Korean, Simplified Chinese, Spanish, Traditional Chinese. Change the language setting in your browser to view the console in your preferred language. -->

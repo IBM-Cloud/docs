@@ -1,18 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2017 lastupdated: "2017-02-09"
+  years: 2015, 2017
+lastupdated: "2017-04-13"
 
 ---
 
-<!-- Attribute definitions --> 
+<!-- Attribute definitions -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
 
-#Console do {{site.data.keyword.streaminganalyticsshort}}
+# Console do {{site.data.keyword.streaminganalyticsshort}}
 {: #console}
 
 No console do {{site.data.keyword.streaminganalyticsshort}}, é possível enviar os seus aplicativos {{site.data.keyword.streamsshort}}
@@ -31,3 +32,5 @@ suas consultas
 * Visualizar os logs de sua instância com base nas variáveis de ambiente definidas
 
 É possível acessar o console do {{site.data.keyword.streaminganalyticsshort}} por meio do painel de serviço.
+
+<!--The {{site.data.keyword.streaminganalyticsshort}} console is translated into the following languages: Brazilian Portuguese, French, German, Italian, Japanese, Korean, Simplified Chinese, Spanish, Traditional Chinese. Change the language setting in your browser to view the console in your preferred language. -->

@@ -128,7 +128,7 @@ Utilisez les commandes d'API REST {{site.data.keyword.iot_short_notm}} suivantes
 - Pour supprimer un package d'extension de gestion des terminaux :
   `DELETE https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
 
-Pour plus d'informations sur les API REST pour les packages d'extension de gestion des terminaux, voir la documentation de l'[API V2 {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}. 
+Pour plus d'informations sur les API REST pour les packages d'extension de gestion des terminaux, voir la documentation de l'[API V2 {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 
 ## Prise en charge des actions de gestion des terminaux personnalisées

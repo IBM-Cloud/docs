@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-12"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -22,7 +22,8 @@ lastupdated: "2017-03-15"
 Para empezar con {{site.data.keyword.iotelectronics}}, complete las siguientes tareas:
 
 1. [Cree dispositivos simulados](https://console.ng.bluemix.net/docs/starters/IotElectronics/iot4ecreatingappliances.html) mediante la aplicación web de inicio {{site.data.keyword.iotelectronics}}. Para fines de demostración, las lavadoras se utilizan como el dispositivo simulado dentro del iniciador de {{site.data.keyword.iotelectronics}}. El dispositivo que elija para conectarse puede ser cualquier tipo de dispositivo electrónico inteligente.
-2. [Descargue y conecte](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html) la app para móvil de ejemplo.
+2. (Opcional) [Configure las opciones de inicio de sesión móvil con {{site.data.keyword.appid_full}}](https://console.ng.bluemix.net/docs/services/appid/index.html). Puede personalizar el aspecto de la pantalla de inicio de sesión que se presenta en la app móvil. Opcionalmente, también puede habilitar o inhabilitar el uso de las credenciales de inicio de sesión social. De forma predeterminada, {{site.data.keyword.appid_short_notm}} permite la autorización con Facebook y Google+, y los usuarios de la app móvil pueden utilizar sus propias credenciales o pueden omitir el proceso de inicio de sesión y probar la app sin iniciar la sesión.
+3. [Descargue y conecte](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html) la app para móvil de ejemplo.
 
 
 ## Qué hacer a continuación

@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-08"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -29,6 +29,7 @@ Kibana の「*Dashboard*」ページを使用して、ダッシュボードで�
 | multi-cf-app ダッシュボード | これは、同じ {{site.data.keyword.Bluemix_notm}} スペースにデプロイされているすべての Cloud Foundry アプリケーションの情報を表示するダッシュボードです。  | 
 | 複数コンテナー・ダッシュボード | 同じ {{site.data.keyword.Bluemix_notm}} スペースにデプロイされているすべてのコンテナーの情報を表示するダッシュボードです。  |
 | スペース・ダッシュボード | これは、{{site.data.keyword.Bluemix_notm}} スペースで使用可能なロギング・データを表示するダッシュボードです。  | 
+{: caption="表 1. ダッシュボード・タイプのサンプル" caption-side="top"}
 
 ダッシュボードでデータを視覚化するには、パネルを構成します。Kibana には、さまざまな視覚化 (表、トレンド、ヒストグラムなど) が組み込まれているので、情報を分析するためにそれらを利用できます。視覚化は、ダッシュボードにパネルとして追加されます。ダッシュボード内のパネルの追加、削除、並べ替えを行うことができます。各パネルの目標は異なります。一部のパネルは、1 つ以上の照会の結果を表す行に編成されています。その他のパネルは、文書またはカスタム情報を表示します。各パネルは、検索に基づきます。検索により、パネルに表示されるデータのサブセットを定義します。データを視覚化し、分析するために、例えば、棒グラフ、円グラフ、または表を構成することができます。  
 
@@ -44,26 +45,9 @@ Kibana の「*Dashboard*」ページを使用して、ダッシュボードで�
 | [ダッシュボードのインポート](logging_kibana_analize_logs_dashboard.html#k4_dashboard_import) | ダッシュボードを JSON ファイルとしてインポートできます。 |
 | [ダッシュボードの共有](logging_kibana_analize_logs_dashboard.html#k4_dashboard_share) | HTML ソースまたは Kibana ダッシュボードでダッシュボードを共有できます。 |
 | [視覚化の追加](logging_kibana_analize_logs_dashboard.html#k4_dashboard_add_visualization) | 既存の視覚化または検索をダッシュボードに追加できます。|
+{: caption="表 2. ダッシュボードを操作するタスク" caption-side="top"}
 
 Kibana について詳しくは、「[Kibana User Guide ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.elastic.co/guide/en/kibana/4.1/index.html){: new_window}」を参照してください。
-
-
-
-## 新規 Kibana ダッシュボードの作成
-{: #K4_dashboard_new}
-
-新規ダッシュボードを作成するには、以下のステップを実行します。
-
-1. 「Dashboard」ページのツールバーで、**「New dashboard」**ボタン![新規ダッシュボード](images/k4_dash_new_icon.jpg "新規ダッシュボード") をクリックします。
-
-2. 1 つ以上の検索および視覚化を追加します。詳しくは、『[新規検索または視覚化の追加](logging_kibana_analize_logs_dashboard.html#K4_dashboard_add_visualization)』を参照してください。
-
-    検索または視覚化を追加すると、パネルがダッシュボードに追加されます。
-
-3. パネルをドラッグし、ダッシュボード上の配置する部分にドロップします。
- 
-4. 将来再使用するためにダッシュボードを保存します。詳しくは、『[Kibana ダッシュボードの保存](logging_kibana_analize_logs_dashboard.html#k4_dashboard_save)』を参照してください。
-
 
 ## 新規検索または視覚化の追加
 {: #k4_dashboard_add_visualization}
@@ -80,21 +64,20 @@ Kibana について詳しくは、「[Kibana User Guide ![外部リンク・ア�
 
     その検索または視覚化のパネルがダッシュボードに追加されます。
 
+## 新規 Kibana ダッシュボードの作成
+{: #K4_dashboard_new}
 
+新規ダッシュボードを作成するには、以下のステップを実行します。
 
-## Kibana ダッシュボードの保存
-{: #k4_dashboard_save}
+1. 「Dashboard」ページのツールバーで、**「New dashboard」**ボタン![新規ダッシュボード](images/k4_dash_new_icon.jpg "新規ダッシュボード") をクリックします。
 
-カスタマイズした Kibana ダッシュボードを保存するには、以下の手順を実行します。
+2. 1 つ以上の検索および視覚化を追加します。詳しくは、『[新規検索または視覚化の追加](logging_kibana_analize_logs_dashboard.html#K4_dashboard_add_visualization)』を参照してください。
 
-1. ツールバーで、**「Save」**ボタン ![ダッシュボードの保存](images/k4_dash_save_icon.jpg "ダッシュボードの保存") をクリックします。
+    検索または視覚化を追加すると、パネルがダッシュボードに追加されます。
 
-2. ダッシュボードの名前を入力します。
-
-    **注:** スペースを含む名前でダッシュボードを保存しようとすると、保存されません。
-
-3. 名前フィールドの横の**「保存」**アイコンをクリックします。
-
+3. パネルをドラッグし、ダッシュボード上の配置する部分にドロップします。
+ 
+4. 将来再使用するためにダッシュボードを保存します。詳しくは、『[Kibana ダッシュボードの保存](logging_kibana_analize_logs_dashboard.html#k4_dashboard_save)』を参照してください。
 
 ## Kibana ダッシュボードの削除
 {: #k4_dashboard_delete}
@@ -106,17 +89,6 @@ Kibana について詳しくは、「[Kibana User Guide ![外部リンク・ア�
 2. **「Visualizations」**タブで、削除する視覚化を選択します。
 
 3. **「削除」**をクリックします。
-
-
-## Kibana ダッシュボードのロード
-{: #k4_dashboard_reload}
-
-保存済みダッシュボードをロードするには、以下のステップを実行します。
-
-1. 「Dashboard」ページのツールバーで**「Load Saved Dashboard」**ボタン ![保存済みダッシュボードのロード](images/k4_dash_load_icon.jpg "保存済みダッシュボードのロード") をクリックします。
-
-2. ロードするダッシュボードを選択します。 
-
 
 ## Kibana ダッシュボードのエクスポート
 {: #k4_dashboard_export}
@@ -131,7 +103,6 @@ Kibana について詳しくは、「[Kibana User Guide ![外部リンク・ア�
 
 4. ファイルを保存します。
 
-
 ## Kibana ダッシュボードのインポート
 {: #k4_dashboard_import}
 
@@ -145,6 +116,27 @@ Kibana について詳しくは、「[Kibana User Guide ![外部リンク・ア�
 
 ダッシュボードがダッシュボードのリストに追加されます。
 
+## Kibana ダッシュボードのロード
+{: #k4_dashboard_reload}
+
+保存済みダッシュボードをロードするには、以下のステップを実行します。
+
+1. 「Dashboard」ページのツールバーで**「Load Saved Dashboard」**ボタン ![保存済みダッシュボードのロード](images/k4_dash_load_icon.jpg "保存済みダッシュボードのロード") をクリックします。
+
+2. ロードするダッシュボードを選択します。 
+
+## Kibana ダッシュボードの保存
+{: #k4_dashboard_save}
+
+カスタマイズした Kibana ダッシュボードを保存するには、以下の手順を実行します。
+
+1. ツールバーで、**「Save」**ボタン ![ダッシュボードの保存](images/k4_dash_save_icon.jpg "ダッシュボードの保存") をクリックします。
+
+2. ダッシュボードの名前を入力します。
+
+    **注:** スペースを含む名前でダッシュボードを保存しようとすると、保存されません。
+
+3. 名前フィールドの横の**「保存」**アイコンをクリックします。
 
 ## Kibana ダッシュボードの共有
 {: #k4_dashboard_share}

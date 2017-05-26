@@ -7,7 +7,6 @@ lastupdated: "2017-04-04"
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -109,7 +108,7 @@ an open repo -->
 
 因為 {{site.data.keyword.openwhisk_short}} 動作必須是短時間執行的，所以動作無法維護與協力廠商的持續性連線。相反地，我們必須使用隨時都執行的個別服務（在 {{site.data.keyword.openwhisk_short}} 外）。我們將這些服務稱為*提供者服務*。提供者服務可以維護支援長期輪詢或其他連線型通知的協力廠商事件來源連線。
 
-提供者服務應該提供容許 {{site.data.keyword.openwhisk_short}} *資訊來源動作* 控制資訊來源的 REST API。提供者服務會作為事件提供者與 {{site.data.keyword.openwhisk_short}} 之間的 Proxy -- 當它接收到來自協力廠商的事件時，會透過發動觸發程式將它們傳送至 {{site.data.keyword.openwhisk_short}}。
+提供者服務應該提供容許 {{site.data.keyword.openwhisk_short}} *資訊來源動作* 控制資訊來源的 REST API。提供者服務會作為事件提供者與 {{site.data.keyword.openwhisk_short}} 之間的 Proxy -- 當它收到來自協力廠商的事件時，會透過發動觸發程式將它們傳送至 {{site.data.keyword.openwhisk_short}}。
 
 Cloudant *changes* 資訊來源是標準範例 -- 它會使用透過持續性連線在 Cloudant 通知之間調解的 `cloudanttrigger` 服務，並觸發 {{site.data.keyword.openwhisk_short}}。
 <!-- TODO: add a reference to the open source implementation -->

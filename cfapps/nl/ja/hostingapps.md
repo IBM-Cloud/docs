@@ -95,7 +95,7 @@ lastupdated: "2016-05-09"
 |Eclipse	|Eclipse でコードを管理し、IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} を使用してアプリケーションをプッシュします。|
 |Git 統合	|GitHub でコードを管理し、Git を {{site.data.keyword.Bluemix_notm}} に統合します。他の開発者と共同作業することができます。コードの変更をコミットすると、アプリケーションは自動的に {{site.data.keyword.Bluemix_notm}} にデプロイされます。アプリケーションを手動でプッシュする必要はありません。|
 |{{site.data.keyword.Bluemix_notm}} DevOps Delivery Pipeline	|DevOps GitHub リポジトリーでコードを管理し、DevOps Delivery Pipeline を使用してアプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイします。|
-{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} tools" caption-side="top"}
+{: caption="表 1. Bluemix のツール" caption-side="top"}
 
 
 アプリケーションの要件が Cloud Foundry プラットフォームではサポートされない場合、カスタマイズされた追加のオプションを使用してランタイムがセットアップされ、構成され、保守される、コンテナーまたは VM を使用できます。

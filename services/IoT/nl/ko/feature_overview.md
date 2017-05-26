@@ -67,12 +67,11 @@ lastupdated: "2017-01-12"
 
 {{site.data.keyword.iot_short_notm}} 클라우드 분석을 사용하면 실시간 디바이스 데이터를 기반으로 하며 충족 시에 경보 및 선택적 조치를 트리거하는 규칙 조건을 지정합니다. 예를 들어, 디바이스를 떨어뜨리거나 디바이스의 온도가 급등할 때 경보가 사용자 디바이스의 대시보드로 전송되며 이메일이 관리자에게 발송되는지를 확인하는 규칙을 작성할 수 있습니다. 자세한 정보는 [클라우드 분석 문서](https://console.ng.bluemix.net/docs/services/IoT/cloud_analytics.html)를 참조하십시오.
 
-에지 분석을 사용하여 클라우드에서 에지 분석 사용 게이트웨이로 분석 규칙 트리거 프로세스를 이동하면 디바이스 가까이에서 분석 처리를 수행하여 클라우드에 대한 디바이스 데이터 트래픽 양을 현저히 줄일 수 있습니다.
-자세한 정보는 [에지 분석 문서](https://console.ng.bluemix.net/docs/services/IoT/edge_analytics.html)를 참조하십시오. 
+에지 분석을 사용하여 클라우드에서 에지 분석 사용 게이트웨이로 분석 규칙 트리거 프로세스를 이동하면 디바이스 가까이에서 분석 처리를 수행하여 클라우드에 대한 디바이스 데이터 트래픽 양을 현저히 줄일 수 있습니다. 자세한 정보는 [에지 분석 문서](https://console.ng.bluemix.net/docs/services/IoT/edge_analytics.html)를 참조하십시오. 
 
 ---
 
-## 위험 관리
+## 위험성 관리
 {: #risk_management}
 
 ### 보안 연결 및 아키텍처

@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-04-13"
 
 ---
 
-<!-- Attribute definitions --> 
+<!-- Attribute definitions -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -19,18 +19,16 @@ lastupdated: "2017-02-09"
 Sie können Starteranwendungen bereitstellen und modifizieren und Sie können in kürzester Zeit lernen, wie der {{site.data.keyword.streaminganalyticsshort}}-Service verwendet wird:
 {:shortdesc}
 
-<table summary="In dieser Tabelle wird in der ersten Zeile die Beispielanwendung 'Event Detection' beschrieben. Die zweite Zeile der Tabelle enthält Folgendes:
-1. In der ersten Spalte einen Link zu Anweisungen für die Bereitstellung der Starteranwendung 'Event Detection'. 2. In der zweiten Spalte einen Link zu Lernprogrammen für die Verwendung der Starteranwendung 'Event Detection'. 3. In der dritten Spalte einen Link zum direkten Download der Starteranwendung 'Event Detection'.
- ">
+<table summary="In dieser Tabelle wird in der ersten Zeile die Beispielanwendung 'Event Detection' beschrieben. Die zweite Zeile der Tabelle enthält Folgendes: 1. In der ersten Spalte einen Link zu Anweisungen für die Bereitstellung der Starteranwendung 'Event Detection'. 2. In der zweiten Spalte einen Link zu Lernprogrammen für die Verwendung der Starteranwendung 'Event Detection'. 3. In der dritten Spalte einen Link zum direkten Download der Starteranwendung 'Event Detection'.">
   <tr>
     <th colspan="3">Beispiel-App 'Event Detection'<br></th>
   </tr>
   <tr>
-    <td colspan="3">Die App 'Event Detection' wird über die Laufzeitumgebung <a href="https://console.ng.bluemix.net/catalog/starters/sdk-for-nodejs/?cm_mmc=dw-*-bluemix-*-ba-bluemix-detect-complex-events-from-data-stream-trs-_-article">{{site.data.keyword.sdk4node}}</a> implementiert.
+    <td colspan="3">Die App 'Event Detection' wird über die Laufzeitumgebung <a href="https://console.ng.bluemix.net/catalog/starters/sdk-for-nodejs/?cm_mmc=dw-_-bluemix-_-ba-bluemix-detect-complex-events-from-data-stream-trs-_-article">{{site.data.keyword.sdk4node}}</a> implementiert.
 Die App bietet eine einfache Webbenutzerschnittstelle zum Anzeigen des Status und der Ergebnisse der Analyse.
-Die Node.js-App ist an eine Instanz des {{site.data.keyword.streaminganalyticsshort}}-Service gebunden. Die App steuert den Service über die {{site.data.keyword.streaminganalyticsshort}}-REST-API. 
+Die Node.js-App ist an eine Instanz des {{site.data.keyword.streaminganalyticsshort}}-Service gebunden. Die App steuert den Service über die {{site.data.keyword.streaminganalyticsshort}}-REST-API.
 <p>Sie können die Starteranwendung unverändert ausführen.
-Wenn Sie weiter mit dem Service experimentieren wollen, können Sie den Code modifizieren und Ihre Änderungen in die {{site.data.keyword.Bluemix_short}}-Umgebung zurückübertragen.</p> 
+Wenn Sie weiter mit dem Service experimentieren wollen, können Sie den Code modifizieren und Ihre Änderungen in die {{site.data.keyword.Bluemix_short}}-Umgebung zurückübertragen.</p>
 </td>
   </tr>
   <tr>
@@ -40,8 +38,9 @@ Wenn Sie weiter mit dem Service experimentieren wollen, können Sie den Code mod
   </tr>
 </table>
 
-<table summary="In dieser Tabelle wird in der ersten Zeile die Beispielanwendung 'New York Traffic' beschrieben. Die zweite Zeile der Tabelle enthält Folgendes:
-1. In der ersten Spalte einen Link zu Anweisungen für die Bereitstellung der Beispielanwendung 'New York Traffic'. 2. In der zweiten Spalte einen Link zu Lernprogrammen für die Verwendung der Beispielanwendung 'New York Traffic'. 3. In der dritten Spalte einen Link zum direkten Download der Beispielanwendung 'New York Traffic'.">
+*Tabelle 1. Beispiel-App 'Event Detection'*
+
+<table summary="In dieser Tabelle wird in der ersten Zeile die Beispielanwendung 'New York Traffic' beschrieben. Die zweite Zeile der Tabelle enthält Folgendes: 1. In der ersten Spalte einen Link zu Anweisungen für die Bereitstellung der Beispielanwendung 'New York Traffic'. 2. In der zweiten Spalte einen Link zu Lernprogrammen für die Verwendung der Beispielanwendung 'New York Traffic'. 3. In der dritten Spalte einen Link zum direkten Download der Beispielanwendung 'New York Traffic'.">
   <tr>
     <th colspan="3">Beispiel-App 'NYC Traffic'<br></th>
   </tr>
@@ -56,3 +55,5 @@ Wenn Sie weiter mit dem Service experimentieren wollen, können Sie den Code mod
     <td><a href="https://hub.jazz.net/git/streamscloud/NYCTraffic/" target="_blank">DOWNLOAD</a></td>
   </tr>
 </table>
+
+*Tabelle 2. Beispiel-App 'NYC Traffic'*

@@ -21,13 +21,13 @@ lastupdated: "2017-4-5"
 # 持續交付作法
 {: #gm_cd_best}
 
-![Garage Method 階段](images/garage_method_phases.png)  [IBM&reg; Cloud Garage Method ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method){:new_window} 是快速交付使用中應用程式的 IBM 方式。它會合併持續交付與 IBM Design Thinking、精簡式、DevOps 及靈活的作法。這些作法著重在雲端，但有益於任何軟體開發工作。
+![Garage Method 階段](images/garage_method_phases.png)  [IBM&reg; Cloud Garage Method ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method){:new_window} 是 IBM 為了快速交付吸引人的應用程式所採用的方式。它結合了持續交付與 IBM Design Thinking、精實 (lean)、DevOps 及敏捷作法。這些作法著重在雲端，但有益於任何軟體開發工作。
 
 
 ## 採用持續交付作法
 {: #gm_cd_adopt}
 
-若要瞭解如何在組織中採用持續交付方式，請使用這些 Cloud Garage Method 文章、指導教學及線上課程，它們的排列方式是從基本到進階。
+若要瞭解如何在組織中採用持續交付方式，請使用這些 Cloud Garage Method 文章、指導教學及線上課程，它們的編排方式是從基本到進階。
 
 ## 持續交付文章
 {: #gm_cd_articles}
@@ -36,7 +36,7 @@ lastupdated: "2017-4-5"
 
 [Continuous Delivery ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/deliver/tool_continuous_delivery/){:new_window} 是一種用來建置及部署軟體的作法，隨時都可以投入正式作業。其中一項電腦科學特徵是縮短開發及作業處理程序中的各種循環時間。
 
-使用 IBM Bluemix Continuous Delivery 中內含的 [Delivery Pipeline ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/deliver/tool_delivery_pipeline/){:new_window}，您可以將軟體交付處理程序分為數個階段，以透過一致且可靠的方式來達到持續交付。目標是讓程式碼自動經過每一個階段，並將人為介入降到最低。
+使用 IBM Bluemix Continuous Delivery 中內含的 [Delivery Pipeline ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/deliver/tool_delivery_pipeline/){:new_window}，您可以透過將軟體交付處理程序分為數個階段，以一致且可靠的方式來達到持續交付。目標是讓程式碼自動經過每一個階段，並將人為介入降到最低。
 
 ## 持續交付指導教學
 {: #gm_cd_tutorials}
@@ -52,4 +52,4 @@ lastupdated: "2017-4-5"
 
 [成為 IBM Cloud Garage Method 代言人 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/course/gm_advocate){:new_window}。接受此進階課程，以獲得 Cloud Garage Method 作法及工具的經驗。
 
-若要查看所有 Cloud Garage Method 學習資料，請參閱 [Cloud Garage Method Learning Lab ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/category/courses){:new_window}。
+若要查看所有 Cloud Garage Method 學習教材，請參閱 [Cloud Garage Method Learning Lab ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/category/courses){:new_window}。

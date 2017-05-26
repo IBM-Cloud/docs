@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-03-21"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -296,7 +296,7 @@ MQTT のほかにも、HTTP を使用してイベントを {{site.data.keyword.i
 2. パブリッシュする必要があるイベントを作成する。
 3. イベント名を指定し、`publishEventOverHTTP()` メソッドを使用してイベントをパブリッシュする。以下にコード・サンプルを示します。
 
-``` sourceCode
+``` 
 DeviceClient myClient = new DeviceClient(deviceProps);
 
 JsonObject event = new JsonObject();
@@ -307,7 +307,7 @@ event.addProperty("mem",  70);
 boolean response  = myClient.api().publishDeviceEventOverHTTP("blink", event, ContentType.json);
 ```
 
-コード全体を見たい場合は、[HttpDeviceEventPublish] というデバイスのサンプルを参照してください。
+コード全体を見たい場合は、[HttpDeviceEventPublish ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")] というデバイスのサンプルを参照してください。{: new_window}
 
 `publishEventOverHTTP()` メソッドは、プロパティー・ファイルの設定に基づいて、Quickstart モードまたは登録済みフロー・モードでイベントをパブリッシュします。プロパティー・ファイルで組織 ID を `quickstart` に設定すると、`publishEventOverHTTP()` メソッドは、デバイス用サンプル Quickstart サービスにプレーン HTTP 形式でイベントをパブリッシュします。登録されている有効な組織をプロパティー・ファイルで指定した場合は、イベントが HTTPS で安全にパブリッシュされます。
 
@@ -329,7 +329,7 @@ HTTP プロトコルによる配信は「最高 1 回」の送信です。これ
 |`timestamp`   |org.joda.time.DateTime|イベントの日時。|
 
 
-``` sourceCode
+```
 package com.ibm.iotf.sample.client.device;
 
 import java.util.Properties;

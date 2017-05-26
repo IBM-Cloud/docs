@@ -15,7 +15,8 @@ lastupdated: "2017-03-13"
 # {{site.data.keyword.Bluemix_notm}} und {{site.data.keyword.iot_short_notm}}
 {: #iot-bluemix-index}
 
-{{site.data.keyword.iot_full}} ist ein Service, der in {{site.data.keyword.Bluemix}} zur Verfügung steht. Sie können mithilfe Ihres {{site.data.keyword.Bluemix_notm}}-Dashboards auf das Dashboard Ihrer {{site.data.keyword.iot_short_notm}}-Organisation zugreifen. {{site.data.keyword.iot_short_notm}} kann als {{site.data.keyword.Bluemix_notm}}-Service mit anderen Services integriert werden, die von {{site.data.keyword.Bluemix_notm}} gehostet werden. Details bestimmter Integrationen von Services von Drittanbietern finden Sie in [Externe Services integrieren](extensions/index.html).{:shortdesc}
+{{site.data.keyword.iot_full}} ist ein Service, der in {{site.data.keyword.Bluemix}} zur Verfügung steht. Sie können mithilfe Ihres {{site.data.keyword.Bluemix_notm}}-Dashboards auf das Dashboard Ihrer {{site.data.keyword.iot_short_notm}}-Organisation zugreifen. {{site.data.keyword.iot_short_notm}} kann als {{site.data.keyword.Bluemix_notm}}-Service mit anderen Services integriert werden, die von {{site.data.keyword.Bluemix_notm}} gehostet werden. Details bestimmter Integrationen von Services von Drittanbietern finden Sie in [Externe Services integrieren](extensions/index.html).
+{:shortdesc}
 
 ## Gemeinsames Funktionieren von {{site.data.keyword.iot_short_notm}} und {{site.data.keyword.Bluemix_notm}}
 {: #iot-bluemix-work}

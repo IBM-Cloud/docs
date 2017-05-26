@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-06-29"
+lastupdated: "2017-03-20"
 
 ---
 
@@ -25,7 +25,7 @@ Para poder visualizar los datos, debe realizar las acciones siguientes:
 
 - Registrar los dispositivos en la organización de {{site.data.keyword.iot_short_notm}}.
 - Garantizar que los dispositivos estén enviando sucesos al {{site.data.keyword.iot_short_notm}}.
-- [Descargar el ejemplo de visualización](https://github.com/ibm-messaging/iot-visualization/archive/v0.2.0.zip) desde el repositorio de github y extraer el archivo .zip.
+- [Descargar el ejemplo de visualización](https://github.com/ibm-watson-iot/rickshaw4iot/archive/master.zip) desde el repositorio de github y extraer el archivo .zip.
 - [Instalar la herramienta de línea de mandatos cf](../../starters/install_cli.html) desde {{site.data.keyword.Bluemix_notm}}.
 
 ## Ejecución del ejemplo en {{site.data.keyword.Bluemix_notm}}
@@ -106,14 +106,4 @@ El archivo que hace referencia a la biblioteca de MQTT de Paho para suscribirse 
 
 Los sucesos de dispositivos se pasan al archivo `realtimeGraph.js` para trazar el gráfico.
 
-## Personalización de la visualización de datos históricos
-{: #customize_historical_display}
-
-El directorio que contiene el código de visualización gráfica para los datos de dispositivos históricos es `public/js/historian`. La lógica de gráficos se puede personalizar editando `public/js/historian/historianGraph.js`.
-
-El archivo que controla las llamadas de API REST para recopilar datos de dispositivos históricos es `public/js/historian/historian.js`.
-
-Los datos históricos se pasan al archivo `historianGraph.js` para trazar el gráfico.
-
-Dispone de una guía del desarrollador más detallada en la wiki de visualización de
-Github iot.
+Dispone de una guía del desarrollador más detallada en la [wiki de Github ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/rickshaw4iot/wiki){:new_window}.

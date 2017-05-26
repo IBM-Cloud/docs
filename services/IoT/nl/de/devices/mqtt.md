@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-11-17"
+lastupdated: "2017-03-21"
 
 ---
 
@@ -59,7 +59,7 @@ Das Kennwort eines Geräts ist das eindeutige Authentifizierungstoken, das gener
 
 Geräte verwenden zum Publizieren in Ereignistopics folgendes Format:
 
-<pre class="pre">iot-2/evt/<var class="keyword varname">Ereignis-ID</var>/fmt/<var class="keyword varname">Format_Zeichenfolge</var></pre>
+<pre class="pre"><code class="hljs">iot-2/evt/<var class="keyword varname">Ereignis-ID</var>/fmt/<var class="keyword varname">Format_Zeichenfolge</var></code></pre>
 {: codeblock}
 
 Dabei gilt:
@@ -78,7 +78,7 @@ Dabei gilt:
 
 Geräte verwenden zum Subskribieren von Befehlstopics folgendes Format:
 
-<pre class="pre">iot-2/cmd/<var class="keyword varname">Befehls-ID</var>/fmt/<var class="keyword varname">Format_Zeichenfolge</var></pre>
+<pre class="pre"><code class="hljs">iot-2/cmd/<var class="keyword varname">Befehls-ID</var>/fmt/<var class="keyword varname">Format_Zeichenfolge</var></code></pre>
 {: codeblock}
 
 Dabei gilt:
@@ -126,7 +126,7 @@ Alle Nachrichten werden im Format JSON gesendet.
 **Anforderungen**  
 Anforderungen werden wie im folgenden Codebeispiel gezeigt formatiert:
 
-<pre class="pre">{  "d": {...}, "<var class="keyword varname">Anforderungs-ID</var>": "b53eb43e-401c-453c-b8f5-94b73290c056" }</pre>
+<pre class="pre"><code class="hljs">{  "d": {...}, "<var class="keyword varname">Anforderungs-ID</var>": "b53eb43e-401c-453c-b8f5-94b73290c056" }</code></pre>
 {: codeblock}
 
 Dabei gilt:

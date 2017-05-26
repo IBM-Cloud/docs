@@ -43,14 +43,14 @@ Vous pouvez également utiliser des passerelles pour exécuter des fonctions Edg
 Enregistrer une passerelle implique de classifier le terminal en tant que type de passerelle, de donner un nom à la passerelle et de fournir des informations la concernant. Vous indiquez ensuite un jeton de connexion ou vous acceptez un jeton qui est généré par {{site.data.keyword.iot_short_notm}}.
 
 
-**Astuce :** Vous pouvez ajouter une seule passerelle à la fois depuis le tableau de bord {{site.data.keyword.iot_short_notm}} ou vous pouvez utiliser l'[API d'administration d'organisation ![Icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window} pour ajouter une ou plusieurs passerelles à la fois. 
+**Astuce :** Vous pouvez ajouter une seule passerelle à la fois depuis le tableau de bord {{site.data.keyword.iot_short_notm}} ou vous pouvez utiliser l'[API d'administration d'organisation ![Icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window} pour ajouter une ou plusieurs passerelles à la fois.
 
 Pour ajouter une passerelle depuis le tableau de bord {{site.data.keyword.iot_short_notm}} :
 
 1. Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, sélectionnez **Terminaux**.
 2. Cliquez sur **Ajouter un terminal**.
 3. Sélectionnez ou créez un type de terminal pour le terminal que vous ajoutez.  
-Chaque terminal connecté à {{site.data.keyword.iot_short_notm}} doit être associé à un type de terminal. Les types de terminal sont des groupes de terminaux ayant des caractéristiques communes.  
+Chaque terminal connecté à {{site.data.keyword.iot_short_notm}} doit être associé à un type de terminal. Les types de terminaux sont des groupes de terminaux ayant des caractéristiques communes.  
  1. Cliquez sur **Créer un type de terminal**, puis sur **Créer un type de passerelle**.
  2. Entrez un nom de type de terminal, par exemple, `my_gateway_type`, et une description pour le type de passerelle.   
  **Important :** Le nom du type de terminal ne doit pas dépasser 36 caractères et peut uniquement contenir les caractères suivants :
@@ -90,7 +90,7 @@ L'ID de terminal permet d'identifier le terminal de passerelle dans le tableau d
 
 Félicitations, vous avez enregistré votre terminal de passerelle. Vous pouvez maintenant configurer votre terminal de passerelle pour qu'il se connecte à {{site.data.keyword.iot_short_notm}}.
 
-Pour obtenir les instructions étape par étape qui illustrent le flux requis pour enregistrer une passerelle, voir la recette [How to Register Gateways in IBM Watson IoT Platform ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/how-to-register-gateways-in-ibm-watson-iot-platform/){:new_window}. 
+Pour obtenir les instructions étape par étape qui illustrent le flux requis pour enregistrer une passerelle, voir la recette [How to Register Gateways in IBM Watson IoT Platform ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/how-to-register-gateways-in-ibm-watson-iot-platform/){:new_window}.
 
 ## Etape2 : Connexion de votre passerelle à {{site.data.keyword.iot_short_notm}}
 {: #connect_gateway}
@@ -112,7 +112,7 @@ Pour plus d'informations sur l'enregistrement automatique de terminal et la publ
 
 Lorsqu'un terminal se connecte à votre passerelle, il s'affiche sur le tableau de bord de votre organisation {{site.data.keyword.iot_short_notm}}.
 
-Pour obtenir un flux détaillé et une description, voir la recette [Connecting Raspberry Pi as a Gateway to Watson IoT ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-as-a-gateway-to-watson-iot-using-node-red/){:new_window}. 
+Pour obtenir un flux détaillé et une description, voir la recette [Connecting Raspberry Pi as a Gateway to Watson IoT ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-as-a-gateway-to-watson-iot-using-node-red/){:new_window}.
 
 **Remarque :** Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, les terminaux et les passerelles qui sont directement connectés à {{site.data.keyword.iot_short_notm}} affichent une icône de statut sur le tableau de bord pour indiquer qu'ils sont connectés. Le tableau de bord affiche les terminaux qui sont connectés indirectement via une passerelle comme des terminaux étant déconnectés car il ne reconnaît pas les terminaux qui sont connectés via la passerelle.
 
@@ -128,14 +128,14 @@ Edge Analytics Agent (EAA) est un composant logiciel qui s'intègre par dessus u
 Pour installer l'agent EAA sur votre passerelle :
 1. Dans le tableau de bord {{site.data.keyword.iot_short}}, accédez à **Règles**.
 2. Cliquez sur **Télécharger un agent Edge** pour accéder à la [communauté IBM Edge Analytics ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true){:new_window}.
-3. Accédez à la section **Fichiers** et téléchargez les répertoires compressés appropriés pour votre type de passerelle.   
-La solution Edge Analytics est disponible en tant que logiciel SDK pour les terminaux qui prennent en charge Java en tant que DSLink pour les terminaux de passerelle Cisco. 
-4. Pour plus d'informations sur l'installation et la configuration du composant logiciel EAA sur votre passerelle, voir les informations suivantes : 
+3. Accédez à la section **Fichiers** et téléchargez les répertoires compressés appropriés pour votre type de passerelle.  
+La solution Edge Analytics est disponible en tant que logiciel SDK pour les terminaux qui prennent en charge Java en tant que DSLink pour les terminaux de passerelle Cisco.
+4. Pour plus d'informations sur l'installation et la configuration du composant logiciel EAA sur votre passerelle, voir les informations suivantes :
  - Logiciel SDK  
- Voir le PDF et le fichier Readme, ainsi que les liens de vidéo disponibles dans la communauté.   
- La recette [Edge Recipe for SDK - Getting Started (SDK) ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/getting-started-with-the-ibm-edge-analytics-sdk-in-watson-iot-platform/){:new_window}. 
+ Voir le PDF et le fichier Readme, ainsi que les liens de vidéo disponibles dans la communauté.  
+ La recette [Edge Recipe for SDK - Getting Started (SDK) ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/getting-started-with-the-ibm-edge-analytics-sdk-in-watson-iot-platform/){:new_window}.
  - DSLink  
- La recette [Getting started with Edge Analytics in Watson IoT Platform ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=19472){:new_window}. 
+ La recette [Getting started with Edge Analytics in Watson IoT Platform ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=19472){:new_window}.
 
 ### Paramètres de configuration de l'agent EAA
 {: #eaa_configuration}

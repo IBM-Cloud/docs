@@ -29,7 +29,7 @@ Las apps Cloud Foundry utilizan loggregator de Cloud Foundry para supervisar los
 | vCPU | 19 | 57 |
 | Memoria | 80 GB | 240 GB |
 | Almacenamiento local | 2,98 TB | 8,94 TB |
-{: caption="Table 2. Logging hardware requirements for {{site.data.keyword.Bluemix_local_notm}}" caption-side="top"}
+{: caption="Tabla 2. Requisitos de hardware para la creación de registros para {{site.data.keyword.Bluemix_local_notm}}" caption-side="top"}
 
 ## Instalación
 

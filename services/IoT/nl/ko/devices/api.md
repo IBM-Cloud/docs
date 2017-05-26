@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-14"
+lastupdated: "2017-03-21"
 ---
 
 {:new_window: target="blank"}
@@ -48,7 +48,7 @@ MQTT 메시징 프로토콜 외에도 HTTP REST API 명령을 사용하여 {{sit
 
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
-**참고:* *기본 SSL 포트인 443 포트가 보안 HTTP API 호출에 대해 지정될 수도 있습니다. 
+**참고:** 기본 SSL 포트인 443 포트가 보안 HTTP API 호출에 대해 지정될 수도 있습니다. 
 
 디바이스 또는 애플리케이션을 Quickstart 서비스에 연결 중인 경우에는 다음 URL 중 하나를 대신 사용하십시오. 
 

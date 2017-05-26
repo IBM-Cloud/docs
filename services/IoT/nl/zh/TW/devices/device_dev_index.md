@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-03"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2017-03-14"
 如需主要概念（包括裝置）的相關資訊，請參閱[關於 Watson IoT Platform](https://console.ng.bluemix.net/docs/services/IoT/iotplatform_overview.html#watsoniotplatform_importantconcepts)。
 
 
-# 將裝置連接至 {{site.data.keyword.iot_short_notm}}
+## 將裝置連接至 {{site.data.keyword.iot_short_notm}}
 {: #device_connect}
 您可以使用 HTTP 或 MQTT 通訊協定，將裝置連接至 {{site.data.keyword.iot_short_notm}}。如果您要配置要求/回應情境（例如，有人進行採購並收到認可），請使用 HTTP。如果您要配置事件情境（例如，有人按門鈴而觸發行動裝置的警示時），請使用 MQTT。
 
@@ -34,7 +34,7 @@ lastupdated: "2017-03-14"
 如需使用 HTTP 通訊協定將裝置連接至 {{site.data.keyword.iot_short_notm}} 的相關資訊，請參閱[裝置的 HTTP REST API](https://console.ng.bluemix.net/docs/services/IoT/devices/api.html)。
 如需使用 MQTT 通訊協定將裝置連接至 {{site.data.keyword.iot_short_notm}} 的相關資訊，請參閱[裝置的 MQTT 連線功能](https://console.ng.bluemix.net/docs/services/IoT/devices/mqtt.html)。
 
-# 開始使用開發裝置
+## 開始使用開發裝置
 {: #get_started}
 如果已針對 {{site.data.keyword.iot_short_notm}} 啟用您的裝置，您就可以開始使用它。
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-20"
 
 ---
 
@@ -136,7 +136,7 @@ ManagedGateway ManagedGateway = new ManagedGateway(options, deviceData);
 
 ### Constructor due
 
-Il constructor due crea un'istanza `ManagedGateway` accettando un oggetto `DeviceData` e l'istanza client MQTT. Il constructor due richiede inoltre che l'oggetto `DeviceData` nell'istanza includa l'ID e il tipo di dispositivo, come illustrato nel seguente esempio di codice:
+Il constructor due crea un'istanza `ManagedGateway` accettando un oggetto `DeviceData` e l'istanza client MQTT. Il constructor due richiede inoltre che l'oggetto `DeviceData` nell'istanza includa l'ID e il tipo dispositivo, come illustrato nel seguente esempio di codice:
 
 ```java
 // Codice che crea un'istanza client MQTT sincrona o asincrona di mqttClient.
@@ -231,7 +231,7 @@ System.err.println("Failed to update the location!");
 
 ### Invio degli aggiornamenti sull'ubicazione dei dispositivi collegati
 
-Il gateway può richiamare il metodo del dispositivo `updateDeviceLocation()` corrispondente per aggiornare l'ubicazione dei dispositivi collegati. Il metodo overloaded può essere utilizzato per specificare il metodo `measuredDateTime`.  
+Il gateway può richiamare il metodo del dispositivo `updateDeviceLocation()` corrispondente per aggiornare l'ubicazione dei dispositivi collegati. Il metodo overloaded può essere utilizzato per specificare il metodo `measuredDateTime`.
 
 ```java
 // aggiornare l'ubicazione del dispositivo collegato con latitudine, longitudine e altitudine
@@ -338,7 +338,7 @@ DeviceFirmware firmware = new DeviceFirmware.Builder().
 			name("Firmware.name").
 			url("Firmware.url").
 			verifier("Firmware.verifier").
-			state(FirmwareState.IDLE).				
+			state(FirmwareState.IDLE).
 			build();
 
 DeviceData deviceData = new DeviceData.Builder().
@@ -649,6 +649,138 @@ mgdGateway.addDeviceActionHandler(actionHandler);
 ```
 
 Per ulteriori informazioni sulle azioni del dispositivo, consulta [Richieste di gestione del dispositivo ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](../../devices/device_mgmt/requests.html#/device-actions-reboot#device-actions-reboot){: new_window}.
+
+## Pacchetti di estensione della gestione del dispositivo
+{: #dme}
+
+Un pacchetto di estensione di gestione del dispositivo (DME, device management extension) è un documento JSON che definisce una serie di azioni di gestione del dispositivo personalizzate. Le azioni possono essere avviate su uno o più dispositivi che supportano tali azioni. Le azioni vengono avviate mediante il dashboard {{site.data.keyword.iot_short}} o le API REST di gestione del dispositivo.
+
+Per ulteriori informazioni sui formati del pacchetto DME, fai riferimento a [Estensione della gestione del dispositivo](../../devices/device_mgmt/custom_actions.html).
+
+### Supporto di azioni di gestione del dispositivo personalizzate
+
+Le azioni di gestione del dispositivo definite in un pacchetto di estensione possono essere avviate su un gateway o su dispositivi collegati che supportano tali azioni.
+
+Un dispositivo specifica i tipi di azioni che supporta quando pubblica una richiesta di gestione in {{site.data.keyword.iot_short}}. Per consentire a un dispositivo di ricevere le azioni personalizzate definite in un determinato pacchetto di estensione, il dispositivo deve specificare l'identificativo bundle di tale estensione nell'oggetto supports durante la pubblicazione di una richiesta di gestione.
+
+Il gateway può richiamare l'API `manage()` con l'elenco di ID bundle per informare {{site.data.keyword.iot_short}} che il gateway o il dispositivo collegato supporta le azioni DME per l'elenco fornito di ID bundle presenti nella richiesta di gestione.
+
+Il seguente frammento di codice è utilizzato per pubblicare una richiesta di gestione per comunicare a {{site.data.keyword.iot_short}} che questo gateway supporta un'azione DME:
+
+```java
+List<String> bundleIds = new ArrayList<String>();
+bundleIds.add("example-dme-actions-v1");
+
+mgdGateway.sendGatewayManageRequest(0, false, false, bundleIds);
+```
+
+L'ultimo parametro specifica l'azione personalizzata supportata dal dispositivo.
+
+Allo stesso modo, un gateway può richiamare il metodo del dispositivo corrispondente per comunicare il supporto dell'azione DME dei dispositivi collegati:
+
+```java
+List<String> bundleIds = new ArrayList<String>();
+bundleIds.add("example-dme-actions-v1");
+
+mgdGateway.sendDeviceManageRequest(typeId, deviceId, 0, false, false, bundleIds);
+```
+
+### Gestione delle azioni di gestione del dispositivo personalizzate
+
+Quando viene avviata un'azione personalizzata su un gateway o su un dispositivo collegato a {{site.data.keyword.iot_short}}, viene pubblicato un messaggio MQTT nel gateway. Il messaggio contiene i parametri che sono stati specificati come parte della richiesta. Il gateway deve aggiungere un CustomActionHandler per ricevere ed elaborare il messaggio. Il messaggio viene ricevuto come istanza della classe `CustomAction` che ha le seguenti proprietà:
+
+| Proprietà     | Tipo di dati     | Descrizione |
+|----------------|----------------|----------------|
+|`bundleId` |Stringa | Un identificativo univoco per la DME.|
+|`actionId` |Stringa|L'azione personalizzata che viene avviata.|
+|`typeId` |Stringa|Il tipo di dispositivo su cui viene avviata l'azione personalizzata.|
+|`deviceId` |Stringa|Il dispositivo su cui viene avviata l'azione personalizzata.|
+|`payload` |Stringa|Il messaggio reale contenente l'elenco di parametri in formato JSON.|
+|`reqId` |Stringa|L'ID richiesta utilizzato per rispondere alla richiesta dell'azione personalizzata.|
+
+Il seguente codice è un'implementazione di esempio di un `CustomActionHandler`:
+
+```java
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.ibm.iotf.client.CustomAction;
+import com.ibm.iotf.client.CustomAction.Status;
+import com.ibm.iotf.devicemgmt.CustomActionHandler;
+
+public class MyCustomActionHandler extends CustomActionHandler implements Runnable {
+
+	// Una coda che ospita ed elabora i comandi per la gestione uniforme dei messaggi MQTT
+	private BlockingQueue<CustomAction> queue = new LinkedBlockingQueue<CustomAction>();
+	// Una mappa per mantenere l'intervallo di pubblicazione per ciascun dispositivo
+	private Map<String, Long> intervalMap = new HashMap<String, Long>();
+
+	@Override
+	public void run() {
+		while(true) {
+			CustomAction action = null;
+			try {
+				action = queue.take();
+				System.out.println(" "+action.getActionId()+ " "+action.getPayload());
+				JsonArray fields = action.getPayload().get("d").getAsJsonObject().get("fields").getAsJsonArray();
+				for(JsonElement field : fields) {
+					JsonObject fieldObj = field.getAsJsonObject();
+					if("PublishInterval".equals(fieldObj.get("field").getAsString())) {
+						long val = fieldObj.get("value").getAsLong();
+						String key = action.getTypeId() + ":" + action.getDeviceId();
+						long publishInterval = val * 1000;
+						intervalMap.put(key, publishInterval);
+						System.out.println("Updated the publish interval to "+val);
+					}
+				}
+				action.setStatus(Status.OK);
+
+			} catch (InterruptedException e) {}
+		}
+	}
+
+	public long getPublishInterval(String deviceType, String deviceId) {
+		String key = deviceType + ":" + deviceId;
+		Long val = intervalMap.get(key);
+		if(val == null) {
+			return 1000; // default is 1 second
+		} else {
+			return val.longValue();
+		}
+	}
+
+	@Override
+	public void handleCustomAction(CustomAction action) {
+		try {
+			queue.put(action);
+			} catch (InterruptedException e) {
+		}
+
+	}
+}
+```
+
+Quando il `CustomActionHandler` viene aggiunto all'istanza `ManagedGateway`, il metodo `handleCustomAction()` viene richiamato ogni volta che un'azione personalizzata viene avviata dall'applicazione.
+
+Il seguente codice di esempio descrive come aggiungere `CustomActionHandler` all'istanza `ManagedGateway`.
+
+```java
+MyCustomActionHandler handler = new MyCustomActionHandler();
+mgdGateway.addCustomActionHandler(handler);
+```
+
+Quando il gateway riceve il messaggio dell'azione personalizzata, completa l'azione o risponde con un codice di errore che indica che non può completare l'azione. Il gateway deve utilizzare il metodo *setStatus()* per impostare lo stato dell'azione:
+
+```java
+action.setStatus(Status.OK);
+```
+
+Per ulteriori informazioni sulla DME, vedi [Extending Device management requests ![icona link esterno](../../../../icons/launch-glyph.svg "External link icon")](../../devices/device_mgmt/custom_actions.html){: new_window}.
 
 ## Restare in ascolto per le modifiche dell'attributo del dispositivo
 {: #listen_device_attributes}

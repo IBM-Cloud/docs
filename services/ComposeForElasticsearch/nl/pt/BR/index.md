@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-09"
+  years: 2016,2017
+lastupdated: "2017-04-27"
 ---
 
 {:new_window: target="_blank"}
@@ -41,8 +41,7 @@ serviço é provisionado. Os diversos valores de credenciais são listados na se
 
 2. Conecte-se ao seu serviço do {{site.data.keyword.composeForElasticsearch}}.
 
-  Para conectar um app ao seu serviço, use as credenciais que são criadas com o
-serviço. O app de amostra demonstra como usar o Node.js para se conectar a um serviço do
+  Para conectar um app ao seu serviço, use as [credenciais](./credentials.html) que são criadas com o serviço. O app de amostra demonstra como usar o Node.js para se conectar a um serviço do
 {{site.data.keyword.composeForElasticsearch}}.
 
   Faça download do app de amostra
@@ -50,38 +49,3 @@ serviço. O app de amostra demonstra como usar o Node.js para se conectar a um s
 e siga as instruções no arquivo leia-me. Em seguida, na página de detalhes do aplicativo
 no Bluemix, clique em **Visualizar APP** para visualizar o conteúdo do
 índice de *exemplos*.
-
-## Credenciais disponíveis
-
-Campo de nome|Descrição
-----------|-----------
-`uri`|O URI a ser usado na conexão com o serviço. Inclui o esquema (`https:`), o nome do usuário administrativo e a senha, o nome do host do servidor e o número da porta à qual se conectar.
-`uri_direct_1`|Um URI alternativo que pode ser usado na conexão com o serviço. Formatado como para `uri`.
-`uri_health`|Um comando `curl` que solicita o funcionamento do cluster do primeiro haproxy.
-`uri_health_1`|Um comando `curl` que solicita o funcionamento do cluster do segundo haproxy.
-`ca_certificate_base64`|Um certificado autoassinado que é usado para confirmar se um aplicativo está se conectando ao servidor apropriado. Isso é codificado em base64. É preciso decodificar
-a chave antes de usá-la, conforme mostrado no aplicativo de amostra.
-`deployment_id`|Um identificador interno para o serviço conforme criado no Compose.
-`db_type`|O tipo de banco de dados que é oferecido pelo serviço; nesse caso, `elastic_search`.
-`name`|O nome da implementação do banco de dados.
-{: caption="Table 1. {{site.data.keyword.composeForElasticsearch}} credentials" caption-side="top"}
-
-**Nota:** dois portais `haproxy` fornecem
-acesso ao cluster do Elasticsearch. `uri` e
-`uri_direct_1` podem ser usados para conexão com o cluster. Em seus
-aplicativos, alterne entre `uri` e `uri_direct_1` para
-gerenciar respostas às falhas de conexão.
-
-# Links Relacionados
-{: #rellinks}
-
-* [Compose](https://www.compose.com){:new_window}
-* [Artigos do Compose](https://www.compose.com/articles/){:new_window}
-
-## Tutoriais e amostras
-{: #samples}
-* [compose-elasticsearch-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-elasticsearch-helloworld-nodejs){:new_window}
-
-## Links Relacionados
-{: #general}
-* [Ajuda do Compose](https://help.compose.com/docs){:new_window}

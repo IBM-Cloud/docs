@@ -12,7 +12,7 @@
       "img": "homepage/images/node_featured.svg",
       "href": "runtimes/nodejs/getting-started.html"
     }, {
-      "title": "ASP.NET 核心",
+      "title": "ASP.NET Core",
       "img": "homepage/images/dotnet_featured.svg",
       "href": "runtimes/dotnet/getting-started.html"
     }, {
@@ -66,7 +66,7 @@
 	}, {
 		"title": "服務可用性",
 		"description": "瞭解服務類型和可用性。",
-		"href": "services/index.html"
+		"href": "services/services_region.html"
 	}, {
 		"title": "管理應用程式",
 		"description": "使用 Bluemix 使用者介面中的儀表板來檢視及管理應用程式與服務。",
@@ -77,6 +77,9 @@
 		"description": "追蹤應用程式用量及資料流程，以深入瞭解部署。",
 		"img": "homepage/images/monitor_log.svg",
 		"href": "monitor_log/monitoringandlogging.html"
+	}, {
+		"title": "管理 API",
+		"href": "apis/management/index.html"
 	}, {
 		"title": "Bluemix 安全",
 		"description": "瞭解 Bluemix 如何提供功能安全、基礎架構安全、作業安全及實體安全。",

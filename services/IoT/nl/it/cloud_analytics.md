@@ -46,11 +46,11 @@ Per ottenere una panoramica delle regole e degli avvisi che sono stati attivati 
 
 Le regole sono punti di decisione che corrispondono ai dati in tempo reale con valori di soglia predefiniti o altri dati della proprietà per attivare un avviso se viene riscontrata una condizione. In aggiunta all'avviso che viene visualizzato nel dashboard {{site.data.keyword.iot_short}}, puoi aggiungere una o più azioni per eseguire la logica di business quando viene attivata la regola.
 
-**Importante:** prima di poter creare le regole per un tipo di dispositivo, devi creare uno schema per il tipo di dispositivo. Per informazioni, consulta [Crea schemi per il tipo di dispositivo](im_schemas.html).
+**Importante:** prima di poter creare le regole per un tipo dispositivo, devi creare uno schema per il tipo dispositivo. Per informazioni, consulta [Crea schemi per il tipo dispositivo](im_schemas.html).
 
 Per creare una regola:
 1. Nel dashboard {{site.data.keyword.iot_short}}, passa a **Rules**.
-2. Fai clic su **Create A Rule**, fornisci un nome e una descrizione per la regola, seleziona un tipo di dispositivo a cui applicare la regola e quindi fai clic su **Next**.  
+2. Fai clic su **Create A Rule**, fornisci un nome e una descrizione per la regola, seleziona un tipo dispositivo a cui applicare la regola e quindi fai clic su **Next**.  
 3. Per configurare la logica della regola, aggiungi una o più condizioni IF da utilizzare come trigger per la regola.  
 Puoi aggiungere condizioni in righe parallele per applicarle come condizioni OR o puoi aggiungere le condizioni in colonne sequenziali per applicarle come condizioni AND.  
 **Importante:** per attivare una condizione che confronta due proprietà o per attivare due o più condizioni della proprietà combinate sequenzialmente utilizzando AND, i punti dei dati di attivazione devono essere inclusi nello stesso messaggio del dispositivo. Se i dati sono ricevuti in più di un messaggio, la condizione o le condizioni in sequenza non vengono attivate.  
@@ -182,11 +182,11 @@ Per creare il post di una scheda nell'azione Trello:
 1.	In IFTTT, collegati al canale Trello.
 2.	In IFTTT, collegati al canale Maker. Prendi nota della tua chiave IFTTT. Hai bisogno di questa chiave per collegarti a IFTTT da {{site.data.keyword.iot_short_notm}}.
 5.	In IFTTT, crea una ricetta:
- 1. Fare clic su **THIS**.
+ 1. Fai clic su **THIS**.
  2. Seleziona il canale **Maker**.  
  2. Fai clic su **Recieve a web request**.
  3. Immetti il nome evento `post-Trello-card`.
- 4. Fare clic su **THAT**.
+ 4. Fai clic su **THAT**.
  5. Seleziona il canale **Trello**.
  6. Seleziona la scheda Trello in cui creare la scheda.
  7. Immetti un nome per l'elenco in cui aggiungere le schede.

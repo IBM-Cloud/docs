@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-04"
 
 ---
 
@@ -192,8 +192,8 @@ Per elaborare gli eventi ricevuti dalle tue sottoscrizioni, devi registrare un m
 |Proprietà|Tipo di dati|Descrizione|
 |:---|:---|
 |`event.device`|Stringa|Identifica univocamente il dispositivo tra tutti i tipi di dispositivi nell'organizzazione|
-|`event.deviceType`|Stringa|Identifica il tipo di dispositivo. Generalmente, il deviceType è un raggruppamento di dispositivi che esegue un'attività specifica, ad esempio "weatherballoon".|
-|`event.deviceId`|Stringa|Rappresenta l'ID del dispositivo. Generalmente, per determinato tipo di dispositivo, il deviceId è un identificativo univoco di tale dispositivo, ad esempio un numero seriale o un indirizzo MAC.|
+|`event.deviceType`|Stringa|Identifica il tipo dispositivo. Generalmente, il deviceType è un raggruppamento di dispositivi che esegue un'attività specifica, ad esempio "weatherballoon".|
+|`event.deviceId`|Stringa|Rappresenta l'ID del dispositivo. Generalmente, per un determinato tipo di dispositivo, il deviceId è un identificativo univoco di tale dispositivo, ad esempio un numero seriale o un indirizzo MAC.|
 |`event.event`|Stringa|Solitamente viene utilizzato per raggruppare gli eventi specifici, ad esempio "status", "warning" e "data".
 |`event.format`|Stringa|Il formato può essere qualsiasi stringa, ad esempio JSON.
 |`event.data`|Dizionario|I dati per il payload del messaggio. La lunghezza massima è di 131072 byte.
@@ -375,7 +375,7 @@ except IoTFCReSTException as e:
     print("ERROR [" + e.httpcode + "] " + e.message)
 ```
 
-Per informazioni sul modello della risposta e della richiesta e sui codici di stato HTTP, fai riferimento alla sezione di configurazione dell'organizzazione dell'[API {{site.data.keyword.iot_short_notm}} ![icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Per informazioni sul modello della risposta e della richiesta e sui codici di stato HTTP, fai riferimento alla sezione di configurazione dell'organizzazione dell'[API {{site.data.keyword.iot_short_notm}} ![icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window}.
 
 
 ## Operazioni dispositivo in blocco
@@ -383,7 +383,7 @@ Per informazioni sul modello della risposta e della richiesta e sui codici di st
 
 Le tue applicazioni possono utilizzare operazioni in blocco per ottenere, aggiungere o rimuovere più dispositivi contemporaneamente.
 
-Per informazioni sull'elenco dei parametri di query, il modello della risposta e della richiesta e i codici di stato HTTP, consulta la sezione 'Operazioni in blocco' dell'[API {{site.data.keyword.iot_short_notm}} ![icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/){: new_window}.
+Per informazioni sull'elenco dei parametri di query, il modello della risposta e della richiesta e i codici di stato HTTP, consulta la sezione 'Operazioni in blocco' dell'[API {{site.data.keyword.iot_short_notm}} ![icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window}.
 
 
 ### Richiamo delle informazioni relative al dispositivo
@@ -454,7 +454,7 @@ except IoTFCReSTException as e:
 ```
 
 
-## Operazioni del tipo di dispositivo
+## Operazioni del tipo dispositivo
 {: #device_type_ops}
 
 I tipi di dispositivo che crei nella tua organizzazione possono essere utilizzati per creare template per l'aggiunta di dispositivi. Utilizzando le funzioni dell'API {{site.data.keyword.iot_short_notm}}, le tue applicazioni possono elencare, creare, eliminare, visualizzare o aggiornare i tipi di dispositivo nella tua organizzazione.
@@ -487,9 +487,9 @@ except IoTFCReSTException as e:
 
 ```
 
-### Aggiunta di un tipo di dispositivo
+### Aggiunta di un tipo dispositivo
 
-Utilizza il metodo `addDeviceType()` per registrare un tipo di dispositivo per la tua istanza {{site.data.keyword.iot_short_notm}}. In ogni istanza, devi prima definire gli elementi delle informazioni e dei metadati del dispositivo che desideri siano applicati a tutti i dispositivi di questo tipo. L'elemento delle informazioni sul dispositivo è costituito da molte variabili, inclusi serial number, manufacturer, model, class, description, firmware, hardware versions e descriptive location. L'elemento dei metadati è costituito da valori e variabili personalizzati, che sono definite dall'utente.
+Utilizza il metodo `addDeviceType()` per registrare un tipo dispositivo per la tua istanza {{site.data.keyword.iot_short_notm}}. In ogni istanza, devi prima definire gli elementi delle informazioni e dei metadati del dispositivo che desideri siano applicati a tutti i dispositivi di questo tipo. L'elemento delle informazioni sul dispositivo è costituito da molte variabili, inclusi serial number, manufacturer, model, class, description, firmware, hardware versions e descriptive location. L'elemento dei metadati è costituito da valori e variabili personalizzati, che sono definite dall'utente.
 
 
 ```python
@@ -520,10 +520,10 @@ except IoTFCReSTException as e:
       print("ERROR [" + e.httpcode + "] " + e.message)
 ```
 
-### Eliminazione di un tipo di dispositivo
+### Eliminazione di un tipo dispositivo
 
 
-Utilizza il metodo `deleteDeviceType()` per eliminare un tipo di dispositivo dalla tua organizzazione {{site.data.keyword.iot_short_notm}}.
+Utilizza il metodo `deleteDeviceType()` per eliminare un tipo dispositivo dalla tua organizzazione {{site.data.keyword.iot_short_notm}}.
 
 ```python
 
@@ -541,7 +541,7 @@ except IoTFCReSTException as e:
 ### Richiamo delle informazioni sui tipi di dispositivo specifici
 
 
-Utilizza il metodo `getDeviceType()` per richiamare le informazioni su un tipo di dispositivo specifico. Il `typeId` del tipo di dispositivo che desideri richiamare deve essere specificato come un parametro.
+Utilizza il metodo `getDeviceType()` per richiamare le informazioni su un tipo dispositivo specifico. Il `typeId` del tipo dispositivo che desideri richiamare deve essere specificato come un parametro.
 
 ```python
 
@@ -556,10 +556,10 @@ except IoTFCReSTException as e:
     print("ERROR [" + e.httpcode + "] " + e.message)
 ```
 
-### Aggiornamento di un tipo di dispositivo
+### Aggiornamento di un tipo dispositivo
 
 
-Utilizza il metodo `updateDeviceType()` per modificare le proprietà di un tipo di dispositivo. Quando utilizzi il metodo `updateDeviceType()`, specifica prima il `typeId` del tipo di dispositivo da aggiornare e quindi specifica i seguenti elementi:
+Utilizza il metodo `updateDeviceType()` per modificare le proprietà di un tipo dispositivo. Quando utilizzi il metodo `updateDeviceType()`, specifica prima il `typeId` del tipo dispositivo da aggiornare e quindi specifica i seguenti elementi:
 
 - `description`
 - `deviceInfo`
@@ -601,12 +601,12 @@ except IoTFCReSTException as e:
 Le operazioni del dispositivo disponibili nell'API inclusi l'elenco, l'aggiunta, la rimozione, la visualizzazione, l'aggiornamento, la visualizzazione dell'ubicazione e la visualizzazione delle informazioni di gestione del dispositivo in un'organizzazione
  {{site.data.keyword.iot_short_notm}}.
 
-Per informazioni sui parametri di query, il modello della risposta e della richiesta e i codici di stato HTTP, consulta la 'Sezione dispositivo' dell'[API {{site.data.keyword.iot_short_notm}} ![icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Per informazioni sui parametri di query, il modello della risposta e della richiesta e i codici di stato HTTP, consulta la 'Sezione dispositivo' della [Documentazione API {{site.data.keyword.iot_short_notm}} ![icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 
-### Richiamo dei dispositivi di un tipo di dispositivo in particolare
+### Richiamo dei dispositivi di un tipo dispositivo in particolare
 
-Utilizza il metodo `retrieveDevices()` per richiamare tutti i dispositivi di un tipo di dispositivo in particolare in un'organizzazione in un'istanza {{site.data.keyword.iot_short_notm}}, visualizzata nel seguente esempio:
+Utilizza il metodo `retrieveDevices()` per richiamare tutti i dispositivi di un tipo dispositivo in particolare in un'organizzazione in un'istanza {{site.data.keyword.iot_short_notm}}, visualizzata nel seguente esempio:
 
 
 ```python
@@ -632,21 +632,21 @@ Per aggiungere un dispositivo a un'organizzazione {{site.data.keyword.iot_short_
 
 |Parametro|Requisito|Descrizione
 |:---|:---|
-|`deviceTypeId`|Facoltativo|Assegna un tipo al dispositivo. Se è presente un conflitto tra le variabili definite dal tipo di dispositivo e le variabili definite dalla variabile `deviceInfo`, le variabili specifiche del dispositivo hanno la precedenza.|
+|`deviceTypeId`|Facoltativo|Assegna un tipo al dispositivo. Se è presente un conflitto tra le variabili definite dal tipo dispositivo e le variabili definite dalla variabile `deviceInfo`, le variabili specifiche del dispositivo hanno la precedenza.|
 |`deviceId`|Obbligatorio||
 |`authToken`|Facoltativo|Se non fornito, viene generato un token di autenticazione e viene incluso nella risposta.|
 |`deviceInfo`|Facoltativo|Contiene diverse variabili inclusi serialNumber, manufacturer, model, deviceClass, description, descriptiveLocation, firmware e hardware versions.|
-|`metadata`|Facoltativo|Le coppie stringa valore del campo personalizzato, come descritto in [Codice di esempio per l'aggiunta di un tipo di dispositivo](#sample_device_type).|
+|`metadata`|Facoltativo|Le coppie stringa valore del campo personalizzato, come descritto in [Codice di esempio per l'aggiunta di un tipo dispositivo](#sample_device_type).|
 |`location`|Facoltativo|Contiene le variabili longitude, latitude, elevation, accuracy e measuredDateTime.|
 
 Per ulteriori informazioni su questi parametri e sui codici e sul formato della risposta, consulta la [Documentazione API ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Devices/post_device_types_typeId_devices){: new_window}.
 
 Quando utilizzi il metodo `registerDevice()`, definisci il parametro deviceID obbligatorio e i parametri facoltativi necessari per il tuo dispositivo e quindi richiama il metodo utilizzando i parametri selezionati.
 
-### Codice di esempio per l'aggiunta di un tipo di dispositivo
+### Codice di esempio per l'aggiunta di un tipo dispositivo
 {: #sample_device_type}
 
-Inserisci il seguente codice dopo il codice del constructor in un file di script Python(.py). L'esempio illustra un metodo per l'aggiunta di un tipo di dispositivo definendo i parametri deviceId, authToken, metadata, deviceInfo e location.
+Inserisci il seguente codice dopo il codice del constructor in un file di script Python(.py). L'esempio illustra un metodo per l'aggiunta di un tipo dispositivo definendo i parametri deviceId, authToken, metadata, deviceInfo e location.
 
 ```python
 
@@ -754,7 +754,7 @@ Utilizza le operazioni di diagnostica del dispositivo per implementare le seguen
 - Richiamo dei codici di errore del dispositivo
 - Aggiunta dei codici di errore
 
-Per ulteriori informazioni sui modelli di risposta e di query, sui codici di risposta e i parametri di query, consulta la [documentazione API![icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} documentazione API {{site.data.keyword.iot_short_notm}}.
+Per ulteriori informazioni sui modelli di risposta e di query, sui codici di risposta e i parametri di query, consulta la [Documentazione API {{site.data.keyword.iot_short_notm}} ![icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ### Come ottenere i log di diagnostica
 

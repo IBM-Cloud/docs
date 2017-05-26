@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-21"
+lastupdated: "2017-04-25"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -22,7 +21,7 @@ HTTP 呼び出し、データベース状態変更、または、コードの実
 
 このプログラミング・モデルは、マイクロサービス、モバイル、IoT、およびその他の多くのアプリに最適です。これに備わっている自動スケーリングおよびロード・バランシングはすぐに使用可能であり、クラスター、ロード・バランサー、http プラグインなどを手動で構成する必要はありません。{{site.data.keyword.openwhisk}} で実行することになれば、ゼロ管理という利点もあります。これは、ハードウェア、ネットワーキング、およびソフトウェアのすべてが IBM によって保守されることを意味します。必要な作業は、実行したいコードを用意し、それを {{site.data.keyword.openwhisk}} に渡すことだけです。残りはまるで魔法のように完了します。サーバーレス・プログラミング・モデルについての優れた概説が、[Martin Fowler のブログ](https://martinfowler.com/articles/serverless.html)にあります。
 
-[Apache OpenWHisk ソース・コード](https://github.com/openwhisk/openwhisk)を入手して、自身でシステムを実行することもできます。
+[Apache OpenWhisk ソース・コード](https://github.com/openwhisk/openwhisk)を入手して、自身でシステムを実行することもできます。
 
 {{site.data.keyword.openwhisk_short}} の動作について詳しくは、『[{{site.data.keyword.openwhisk_short}} 概要](./openwhisk_about.html)』を参照してください。
 
@@ -32,13 +31,13 @@ HTTP 呼び出し、データベース状態変更、または、コードの実
 ## ブラウザーで開発
 {: #openwhisk_start_editor}
 
-[ブラウザー](https://console.{DomainName}/openwhisk/editor){: new_window}で {{site.data.keyword.openwhisk_short}} を試して、アクションの作成、トリガーを使用したアクションの自動化、パブリック・パッケージの探索を行ってください。
-OpenWhisk ユーザー・インターフェースのクイック・ツアーについては、[詳細](https://console.{DomainName}/openwhisk/learn){: new_window}ページを参照してください。
+[ブラウザー](https://console.{DomainName}/openwhisk/editor)で {{site.data.keyword.openwhisk_short}} を試して、アクションの作成、トリガーを使用したアクションの自動化、パブリック・パッケージの探索を行ってください。
+OpenWhisk ユーザー・インターフェースのクイック・ツアーについては、[詳細](https://console.{DomainName}/openwhisk/learn)ページを参照してください。
 
 ## CLI を使用して開発
 {: #openwhisk_start_configure_cli}
 
-{{site.data.keyword.openwhisk_short}} コマンド・ライン・インターフェース (CLI) を使用して、名前空間および許可鍵をセットアップできます。[「CLI の構成」](https://new-console.{DomainName}/openwhisk/cli){: new_window}に移動し、手順に従ってインストールしてください。
+{{site.data.keyword.openwhisk_short}} コマンド・ライン・インターフェース (CLI) を使用して、名前空間および許可鍵をセットアップできます。[「CLI の構成」](https://console.{DomainName}/openwhisk/cli)に移動し、手順に従ってインストールしてください。
 
 ## 概要
 {: #openwhisk_start_overview}
@@ -126,10 +125,10 @@ function main(params) {
 ## API リファレンス
 {: #openwhisk_start_api notoc}
 * [REST API の資料](./openwhisk_reference.html#openwhisk_ref_restapi)
-* [REST API](https://new-console.{DomainName}/apidocs/98){:new_window}
+* [REST API](https://console.{DomainName}/apidocs/98)
 
 ## 関連リンク
 {: #general notoc}
-* [ディスカバー: {{site.data.keyword.openwhisk_short}}](http://www.ibm.com/cloud-computing/bluemix/openwhisk/){:new_window}
-* [IBM developerWorks の {{site.data.keyword.openwhisk_short}}](https://developer.ibm.com/openwhisk/){:new_window}
-* [Apache {{site.data.keyword.openwhisk_short}} プロジェクト Web サイト](http://openwhisk.org){:new_window}
+* [ディスカバー: {{site.data.keyword.openwhisk_short}}](http://www.ibm.com/cloud-computing/bluemix/openwhisk/)
+* [IBM developerWorks の {{site.data.keyword.openwhisk_short}}](https://developer.ibm.com/openwhisk/)
+* [Apache {{site.data.keyword.openwhisk_short}} プロジェクト Web サイト](http://openwhisk.org)

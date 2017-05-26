@@ -14,14 +14,11 @@ lastupdated: "2017-02-16"
 
 
 # Kibana でのメッセージ・タイプによる Cloud Foundry アプリ・ログのフィルタリング
-<!-- for example, Uploading your data -->
 {: #logging_kibana_message_type_filter}
-<!-- Provide an appropriate ID above -->
 
 Kibana ダッシュボードで {{site.data.keyword.Bluemix_notm}} アプリケーション・ログを表示して、メッセージ・タイプでフィルタリングします。Kibana ダッシュボードには、Cloud Foundry アプリの**「ログ」**タブからアクセスできます。
 {:shortdesc}
 
-<!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->
 Kibana ダッシュボードで Cloud Foundry アプリ・ログを表示して、メッセージ・タイプでフィルタリングするには、以下のタスクを行います。
 
 1. Cloud Foundry アプリの**「ログ」**タブにアクセスします。 
@@ -31,27 +28,27 @@ Kibana ダッシュボードで Cloud Foundry アプリ・ログを表示して�
     
     アプリのログが表示されます。
 
-2. アプリの Kibana ダッシュボードにアクセスします。**「詳細ビュー」** ![「詳細ビュー」リンク](images/logging_advanced_view.jpg) をクリックします。Kibana ダッシュボードが表示されます。
+2. アプリの Kibana ダッシュボードにアクセスします。**「詳細ビュー」** ![「詳細ビュー」リンク](images/logging_advanced_view.jpg "「詳細ビュー」リンク") をクリックします。Kibana ダッシュボードが表示されます。
 
 3. **「ALL EVENTS」**ウィンドウで、右矢印アイコンをクリックしてすべてのフィールドを表示します。 
 
-    ![「ALL EVENTS」ウィンドウに右矢印アイコンが含まれています](images/logging_all_events_no_fields.jpg)
+    ![「ALL EVENTS」ウィンドウに右矢印アイコンが含まれています](images/logging_all_events_no_fields.jpg "「ALL EVENTS」ウィンドウに右矢印アイコンが含まれています")
 
 4. **「Fields」**ペインで **message_type** を選択し、各ログ項目を生成したコンポーネントを**「ALL EVENTS」**ウィンドウに表示します。
 
-    ![「ALL EVENTS」ウィンドウで message_type フィールドが選択されています](images/logging_message_type.png)
+    ![「ALL EVENTS」ウィンドウで message_type フィールドが選択されています](images/logging_message_type.png "「ALL EVENTS」ウィンドウで message_type フィールドが選択されています")
 
 5. **「ALL EVENTS」**ウィンドウで、ログ・イベント行をクリックすると、そのイベントの詳細が表示されます。フィルタリングする **message_type** を示しているイベントを選択します。
 
-    ![「ALL EVENTS」ウィンドウに、選択されたログ・イベントの詳細が表示されています](images/logging_message_type_add_filter.png)
+    ![「ALL EVENTS」ウィンドウに、選択されたログ・イベントの詳細が表示されています](images/logging_message_type_add_filter.png "「ALL EVENTS」ウィンドウに、選択されたログ・イベントの詳細が表示されています")
 
 6. 特定のメッセージ・タイプに関する情報を含める、または除外するためのフィルターを追加します。 
 
-    * 特定のメッセージ・タイプに関する情報を含めるフィルターを追加するには、表の message_type 行で**「Magnifying Glass」**アイコン ![「Magnifying glass」アイコン](images/logging_magnifying_glass.jpg) をクリックします。 
+    * 特定のメッセージ・タイプに関する情報を含めるフィルターを追加するには、表の message_type 行で**「Magnifying Glass」**アイコン ![「Magnifying glass」アイコン](images/logging_magnifying_glass.jpg "「Magnifying glass」アイコン") をクリックします。 
     
-           ![message_type フィールドのフィルター条件](images/logging_message_type_filter.png)
+           ![message_type フィールドのフィルター条件](images/logging_message_type_filter.png "message_type フィールドのフィルター条件")
     
-    * 特定のメッセージ・タイプに関する情報を除外するフィルターを追加するには、表の message_type 行で**「Exclusion」**アイコン ![「Exclusion」アイコン](images/logging_exclusion_icon.png) をクリックします。 
+    * 特定のメッセージ・タイプに関する情報を除外するフィルターを追加するには、表の message_type 行で**「Exclusion」**アイコン ![「Exclusion」アイコン](images/logging_exclusion_icon.png "「Exclusion」アイコン") をクリックします。 
     
     Kibana ダッシュボードに新しいフィルター条件が追加されました。
 
@@ -59,10 +56,10 @@ Kibana ダッシュボードで Cloud Foundry アプリ・ログを表示して�
 
 9. ダッシュボードを保存します。    
         
-    フィルターの作成が終了したら、**「Save」**アイコン ![「Save」アイコン](images/logging_save.jpg) をクリックして、ダッシュボードの名前を入力します。 
+    フィルターの作成が終了したら、**「Save」**アイコン ![「Save」アイコン](images/logging_save.jpg "「Save」アイコン") をクリックして、ダッシュボードの名前を入力します。 
       
     **注:** スペースを含む名前でダッシュボードを保存しようとすると、保存されません。スペースを含まない名前を入力し、**「Save」**アイコンをクリックしてください。
     
-    ![ダッシュボード名の保存](images/logging_save_dashboard.jpg)。
+    ![ダッシュボード名の保存](images/logging_save_dashboard.jpg "ダッシュボード名の保存") 
 
-ログ項目をメッセージ・タイプでフィルタリングするダッシュボードを作成しました。**「Folder」**アイコン ![「Folder」アイコン](images/logging_folder.jpg) をクリックし、ダッシュボードを名前で選択することで、保存したダッシュボードをいつでもロードできます。
+ログ項目をメッセージ・タイプでフィルタリングするダッシュボードを作成しました。**「Folder」**アイコン ![「Folder」アイコン](images/logging_folder.jpg "「Folder」アイコン") をクリックし、ダッシュボードを名前で選択することで、保存したダッシュボードをいつでもロードできます。

@@ -2,7 +2,9 @@
 
 copyright:
  years: 2017
+
 lastupdated: "2017-5-24"
+
 
 ---
 
@@ -13,6 +15,7 @@ lastupdated: "2017-5-24"
 
 # Managing calendar events and tags
 {: #events_overview}
+
 
 A calendar event represents a release-related activity that you manage with the calendar.
 
@@ -25,9 +28,11 @@ Calendar events are organized into general categories that include releases, hol
 Like calendar events, tags are assigned to release events and can be used to filter the Releases page. Assigned tags appear in Releases page **Tags** column but they do not appear on the calendar. You can use tags to avoid calendar clutter.
 
 ## Filtering release events and deployment plans
+
 {: #events_findFilter}
 
 The Releases page displays the releases and deployment plans that are created by you and your teams. From the Releases page, you can do most release-related activities, such as creating releases and deployment plans.
+
 
 By default, the Releases page displays releases and deployments that are scheduled for the next seven days. You can filter the display by time, calendar event, tag, and status. For example, you might restrict the display to releases that are scheduled for tomorrow. The currently selected date range is displayed on the action bar.
 
@@ -54,7 +59,6 @@ To filter items by status, on the Releases page, select one the following filter
 <li>Select **Failed** to display deployments that have the status of Failed.</li>
 <li>Select **Complete** to display deployments that have the status of Complete.
 </li>
-</li>
 <li>Select **Archive** to display releases and deployment plans saved to the archive. Archived items can be restored.
 </li>
 <li>select **Templates** to display deployment plans that are saved as templates. You can use templates to create plans. You can revert templates to deployment plans.  
@@ -63,6 +67,7 @@ To filter items by status, on the Releases page, select one the following filter
 
 ## Using the calendar
 {: #events_calendarManage}
+
 
 Calendar events that are assigned to a release are represented by icons on the affected calendar dates. You can select event icons on the calendar to filter the displayed releases.
 
@@ -101,6 +106,7 @@ To create a calendar event, complete the following steps:
 1. On the Releases page, click **Calendar settings** <img class="inline" src="images/cal-set.png"  alt="Calendar settings">.
 
 1. In the Configure calendar page, click **Add event type** <img class="inline" src="images/event-add.png"  alt="Add event type"> for the event category that you want to create.
+
 
 3. In the text box, enter a name for the calendar event.
 

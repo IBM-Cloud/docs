@@ -108,25 +108,3 @@ O Mecanismo de ação determina as ações a serem tomadas com base nas informa�
 especificadas na blindagem.
 
 É possível criar novas proteções no JavaScript usando a API do {{site.data.keyword.iotinsurance_short}}.
-
-
-
-# Links Relacionados
-{: #rellinks}
-
-## Tutoriais e amostras
-{: #samples}
-* [Código do app móvel de amostra
-no GitHub ![Ícone de link externo](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## Referência de API
-{: #api}
-* [API {{site.data.keyword.iotinsurance_short}} ![Ícone de link externo](../../icons/launch-glyph.svg)](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [Exemplos de API {{site.data.keyword.iotinsurance_short}} ![Ícone de link externo](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## Links Relacionados
-{: #general}
-* [Documentação do {{site.data.keyword.iot_full}}](https://console.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
-* [Fórum de suporte do desenvolvedor ![Ícone de link externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix]){:new_window}
-* [Fórum de suporte do
-Stack overflow ![Ícone de link externo](../../icons/launch-glyph.svg)](http://stackoverflow.com/questions/tagged/ibm-bluemix){:new_window}

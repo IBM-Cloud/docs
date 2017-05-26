@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-11"
+  years: 2016, 2017
+lastupdated: "2017-02-13"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2016-11-11"
 # Visualizzazione di dashboard e report
 {: #DRA_toolchain_reports}
 
-{{site.data.keyword.DRA_short}} ti fornisce un risparmio di informazioni operative sui tuoi progetti.
+{{site.data.keyword.DRA_short}} ti fornisce un gran numero di di informazioni operative sui tuoi progetti.
 {:shortdesc}
 
 ## Dashboard {{site.data.keyword.DRA_short}}    

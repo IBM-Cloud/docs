@@ -15,13 +15,20 @@
    viewBox="0 0 607.56451 321.04471"
    id="svg5645"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.47 r22583"
    sodipodi:docname="architecture_custom_cards.svg"
    inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.png"
    inkscape:export-xdpi="299.98132"
    inkscape:export-ydpi="299.98132">
   <defs
      id="defs5647">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 160.52237 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="607.56445 : 160.52237 : 1"
+       inkscape:persp3d-origin="303.78223 : 107.01491 : 1"
+       id="perspective369" />
     <linearGradient
        id="linearGradient8459"
        osb:paint="solid">
@@ -1078,17 +1085,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.06"
+     inkscape:zoom="1.5"
      inkscape:cx="278.54219"
      inkscape:cy="162.34668"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="in"
-     inkscape:window-width="1920"
-     inkscape:window-height="1019"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
+     inkscape:window-width="1440"
+     inkscape:window-height="838"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -1306,7 +1313,8 @@
          sodipodi:role="line"
          id="tspan266400-6"
          x="436.27771"
-         y="518.68762">定制卡服务器</tspan><tspan
+         y="518.68762"
+         style="-inkscape-font-specification:SimHei;font-family:SimHei">定制卡服务器</tspan><tspan
          sodipodi:role="line"
          x="436.27771"
          y="533.68762"
@@ -1393,7 +1401,8 @@
          sodipodi:role="line"
          x="502.53854"
          y="560.33887"
-         id="tspan9436">服务器</tspan></text>
+         id="tspan9436"
+         style="-inkscape-font-specification:SimHei;font-family:SimHei">服务器</tspan></text>
     <g
        id="g5240-2"
        transform="matrix(0.09339235,0,0,0.09339235,454.24548,527.87224)"
@@ -1428,21 +1437,24 @@
          cy="110.6"
          cx="389"
          stroke-miterlimit="10"
-         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
+         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 407.6,110.6 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.2725,0 -18.6,-8.3275 -18.6,-18.6 0,-10.2725 8.3275,-18.600002 18.6,-18.600002 10.2725,0 18.6,8.327502 18.6,18.600002 z" />
       <circle
          id="circle5230-5"
          r="18.6"
          cy="250"
          cx="389"
          stroke-miterlimit="10"
-         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
+         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 407.6,250 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.2725,0 -18.6,-8.3275 -18.6,-18.6 0,-10.2725 8.3275,-18.6 18.6,-18.6 10.2725,0 18.6,8.3275 18.6,18.6 z" />
       <circle
          id="circle5232-6"
          r="18.6"
          cy="389.39999"
          cx="389"
          stroke-miterlimit="10"
-         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
+         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 407.6,389.39999 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.2725,0 -18.6,-8.3275 -18.6,-18.6 0,-10.27249 8.3275,-18.6 18.6,-18.6 10.2725,0 18.6,8.32751 18.6,18.6 z" />
     </g>
     <flowRoot
        xml:space="preserve"
@@ -1467,18 +1479,19 @@
     <text
        sodipodi:linespacing="125%"
        id="text44235-7-5"
-       y="611.60376"
+       y="605.60376"
        x="277.67981"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        xml:space="preserve"><tspan
-         y="611.60376"
+         y="605.60376"
          x="277.67981"
          sodipodi:role="line"
-         id="tspan5128"></tspan><tspan
-         y="625.35376"
+         id="tspan5128" /><tspan
+         y="620.52203"
          x="277.67981"
          sodipodi:role="line"
-         id="tspan6186">定制卡扩展</tspan></text>
+         id="tspan6186"
+         style="font-family:SimHei;-inkscape-font-specification:SimHei">定制卡扩展</tspan></text>
     <rect
        style="opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:1.00000012;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4785"
@@ -1533,23 +1546,26 @@
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-       x="283.60898"
-       y="453.61176"
+       style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="275.60898"
+       y="459.61176"
        id="text44241-0"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="283.60898"
-         y="453.61176"
+         x="275.60898"
+         y="459.61176"
          id="tspan44245-5">Watson IoT </tspan><tspan
          sodipodi:role="line"
-         x="283.60898"
-         y="467.36176"
-         id="tspan5792-6">Platform</tspan><tspan
+         x="275.60898"
+         y="474.53003"
+         id="tspan5792-6">Platform <tspan
+   style="font-family:SimHei;-inkscape-font-specification:SimHei"
+   id="tspan3181">仪表板</tspan></tspan><tspan
          sodipodi:role="line"
-         x="283.60898"
-         y="481.11176"
-         id="tspan9810-7">仪表板</tspan></text>
+         x="275.60898"
+         y="489.4483"
+         id="tspan9810-7"
+         style="font-family:SimHei;-inkscape-font-specification:SimHei" /></text>
     <g
        id="g5722-4"
        transform="matrix(0.10411489,0,0,0.10411489,219.14623,437.19577)"
@@ -1600,18 +1616,19 @@
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold"
        x="437.62662"
-       y="358.89688"
+       y="360.89688"
        id="text266398-3-9"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          x="437.62662"
-         y="358.89688"
-         id="tspan6717-0">本地环境</tspan><tspan
+         y="360.89688"
+         id="tspan6717-0"
+         style="font-family:SimHei;-inkscape-font-specification:SimHei">本地环境</tspan><tspan
          sodipodi:role="line"
          x="437.62662"
-         y="373.89688"
+         y="375.89688"
          id="tspan266402-8-8" /></text>
     <rect
        ry="0"
@@ -1663,7 +1680,11 @@
          y="376.91528"
          x="443.92023"
          sodipodi:role="line"
-         id="tspan6445">使用 NPM 的 Node.js</tspan></text>
+         id="tspan6445"><tspan
+   style="-inkscape-font-specification:SimHei;font-family:SimHei"
+   id="tspan3177">使用</tspan> NPM <tspan
+   style="-inkscape-font-specification:SimHei;font-family:SimHei"
+   id="tspan3179">的</tspan> Node.js</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path13579"
@@ -1703,7 +1724,8 @@
          sodipodi:role="line"
          x="495.55319"
          y="470.53415"
-         id="tspan9434">服务器</tspan><tspan
+         id="tspan9434"
+         style="-inkscape-font-specification:SimHei;font-family:SimHei">服务器</tspan><tspan
          sodipodi:role="line"
          x="495.55319"
          y="484.28415"
@@ -1742,21 +1764,24 @@
          cy="110.6"
          cx="389"
          stroke-miterlimit="10"
-         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
+         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 407.6,110.6 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.2725,0 -18.6,-8.3275 -18.6,-18.6 0,-10.2725 8.3275,-18.600002 18.6,-18.600002 10.2725,0 18.6,8.327502 18.6,18.600002 z" />
       <circle
          id="circle5230-5-3"
          r="18.6"
          cy="250"
          cx="389"
          stroke-miterlimit="10"
-         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
+         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 407.6,250 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.2725,0 -18.6,-8.3275 -18.6,-18.6 0,-10.2725 8.3275,-18.6 18.6,-18.6 10.2725,0 18.6,8.3275 18.6,18.6 z" />
       <circle
          id="circle5232-6-2"
          r="18.6"
          cy="389.39999"
          cx="389"
          stroke-miterlimit="10"
-         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
+         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 407.6,389.39999 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.2725,0 -18.6,-8.3275 -18.6,-18.6 0,-10.27249 8.3275,-18.6 18.6,-18.6 10.2725,0 18.6,8.32751 18.6,18.6 z" />
     </g>
     <g
        transform="matrix(0.68983305,0,0,0.63094863,256.07684,243.35849)"
@@ -1839,7 +1864,8 @@
          sodipodi:role="line"
          id="tspan266400-6-3"
          x="-7.9545774"
-         y="430.22656">样本定制卡服务器</tspan><tspan
+         y="430.22656"
+         style="-inkscape-font-specification:SimHei;font-family:SimHei">样本定制卡服务器</tspan><tspan
          sodipodi:role="line"
          x="-7.9545774"
          y="445.22656"
@@ -1862,7 +1888,8 @@
          sodipodi:role="line"
          x="42.306259"
          y="477.62781"
-         id="tspan9436-8">服务器</tspan></text>
+         id="tspan9436-8"
+         style="-inkscape-font-specification:SimHei;font-family:SimHei">服务器</tspan></text>
     <g
        id="g5240-2-0"
        transform="matrix(0.09339235,0,0,0.09339235,-5.9868597,437.41108)"
@@ -1897,21 +1924,24 @@
          cy="110.6"
          cx="389"
          stroke-miterlimit="10"
-         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
+         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 407.6,110.6 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.2725,0 -18.6,-8.3275 -18.6,-18.6 0,-10.2725 8.3275,-18.600002 18.6,-18.600002 10.2725,0 18.6,8.327502 18.6,18.600002 z" />
       <circle
          id="circle5230-5-2"
          r="18.6"
          cy="250"
          cx="389"
          stroke-miterlimit="10"
-         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
+         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 407.6,250 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.2725,0 -18.6,-8.3275 -18.6,-18.6 0,-10.2725 8.3275,-18.6 18.6,-18.6 10.2725,0 18.6,8.3275 18.6,18.6 z" />
       <circle
          id="circle5232-6-0"
          r="18.6"
          cy="389.39999"
          cx="389"
          stroke-miterlimit="10"
-         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
+         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 407.6,389.39999 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.2725,0 -18.6,-8.3275 -18.6,-18.6 0,-10.27249 8.3275,-18.6 18.6,-18.6 10.2725,0 18.6,8.32751 18.6,18.6 z" />
     </g>
     <g
        transform="matrix(0.68983305,0,0,0.63094863,-200.93602,235.60822)"
@@ -1972,11 +2002,13 @@
          x="39.885139"
          y="391.3699"
          id="tspan6878-8-6"
-         style="font-size:7.5px">IBM 样本定制</tspan><tspan
+         style="font-size:7.5px">IBM <tspan
+   style="-inkscape-font-specification:SimHei;font-family:SimHei"
+   id="tspan3175">样本定制</tspan></tspan><tspan
          sodipodi:role="line"
          x="39.885139"
          y="400.7449"
-         style="font-size:7.5px"
+         style="font-size:7.50000000000000000px;-inkscape-font-specification:SimHei;font-family:SimHei"
          id="tspan11208">卡存储库</tspan><tspan
          sodipodi:role="line"
          x="39.885139"

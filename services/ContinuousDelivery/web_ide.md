@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-25"
+lastupdated: "2017-5-19"
 
 ---
 
@@ -25,7 +25,7 @@ Best of all, the {{site.data.keyword.webide}} is powered by the web. You have no
 
 The {{site.data.keyword.webide}} is customizable so that you can choose the color schemes, technical tools, and settings that meet your development needs. To view and modify the settings, from the menu on the left, click the **Settings** icon <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="The settings icon">.
 
-If you often need to change certain settings while you edit, you can access those settings quickly from the **Local Editor Settings** icon <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="Local Editor Settings icon">. 
+If you often need to change certain settings while you edit, you can access those settings quickly from the **Local Editor Settings** icon <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="Local Editor Settings icon">.
 
 ![Local Editor Settings](images/webide_local_editor_settings_light.png)
 
@@ -62,14 +62,14 @@ The second section is the editor pane. The editor provides several coding featur
  2. In the file navigator, click a file.
 
 ### Keyboard shortcuts
-Most of the commands in the {{site.data.keyword.webide}} are accessible only through keyboard shortcuts.
+Many of the commands in the {{site.data.keyword.webide}} are also accessible  through keyboard shortcuts.
 
 To see a list of the keyboard shortcuts in the editor, press Alt+Shift+?. If you're using a Mac OS, press Ctrl+Shift+?.
 
 ## Managing source code
 {: #sourcecontrol}
 
-The {{site.data.keyword.webide}} is integrated with source code management tools. To work with your Git repository, click the **Git Repository** icon <img class="inline" src="images/webide_git_icon_light_small.png"  alt="The Git Repository icon">. 
+The {{site.data.keyword.webide}} is integrated with source code management tools. To work with your Git repository, click the **Git Repository** icon <img class="inline" src="images/webide_git_icon_light_small.png"  alt="The Git Repository icon">.
 
  **Tip**: If you are using the {{site.data.keyword.webide}} with open toolchains, your workspace is pre-populated with your GitHub,  {{site.data.keyword.ghe_short}}, or Git Repos and  Issue Tracking repos. The repos that are associated with your current toolchain are highlighted.
 
@@ -78,19 +78,33 @@ The {{site.data.keyword.webide}} is integrated with source code management tools
 {: #deploy}
 
 1. To deploy your app, from the run bar, either select or create a launch configuration.
-1. Click the deploy icon <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="The deploy icon">. An instance of your app is deployed by using the current contents of your workspace and the environment that is defined in your launch configuration. 
+   ![Run bar](images/webide_runbar_light.png)   
+1. Click the deploy icon <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="The deploy icon">. An instance of your app is deployed by using the current contents of your workspace and the environment that is defined in your launch configuration.
 2. After your app is deployed, you can use the run bar to stop, restart, or debug your app, view logs, and more.
-![Run bar](images/webide_runbar_light.png)    
 
-<!-- 3/6/2016: bl commands don't work with V2/CD 
+<table>
+<tr><td><img src="./images/stop_button.png"  alt="The stop icon"></td><td>Stop the app</td></tr>
+<tr><td> <img src="./images/open_app_url.png"  alt="The open app URL icon"></td><td> Open the deployed app</td></tr>
+<tr><td><img src="./images/view_logs.png"  alt="The view logs icon"></td><td>View the logs of the deployed app</td></tr>
+<tr><td><img src="./images/open_dashboard.png"  alt="The open dashboard icon"></td><td>Open the app's Dashboard</td></tr>
+</table>
+
+If you are developing a Node.js app, enable Live Edit mode:  <img  src="./images/enable_live_edit.png"  alt="The enable live edit slider">
+
+<table><tr><td><img src="./images/live_edit_restart.png"  alt="The Live Edit restart icon"></td><td>With Live Edit mode enabled, restart the app quickly, without redeployment</td></tr>
+<tr><td> <img src="./images/debug_icon.png"  alt="The debug icon"></td><td>With Live Edit mode enabled, access the debugger
+</td></tr>
+</table>
+
+<!-- 3/6/2016: bl commands don't work with V2/CD
 ## Editing outside of the {{site.data.keyword.webide}}
 {: #editlocal}
 
-To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.keyword.Bluemix_live}} so that you can work directly with your project files in any tool. {{site.data.keyword.Bluemix_live_notm}} is a command-line application that synchronizes the changes in your local file system with your cloud workspace in {{site.data.keyword.jazzhub}}. 
+To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.keyword.Bluemix_live}} so that you can work directly with your project files in any tool. {{site.data.keyword.Bluemix_live_notm}} is a command-line application that synchronizes the changes in your local file system with your cloud workspace in {{site.data.keyword.jazzhub}}.
 
-### Before you begin 
+### Before you begin
 
-Download and install the [{{site.data.keyword.Bluemix_live_notm}} command-line interface![External link icon](../../icons/launch-glyph.svg "External link icon")](http://livesyncdownload.ng.bluemix.net){: new_window}.
+Download and install the [{{site.data.keyword.Bluemix_live_notm}} command-line interface ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://livesyncdownload.ng.bluemix.net){: new_window}.
 
 ### Synchronizing your local environment with {{site.data.keyword.Bluemix_notm}}
 {: #edit_local_download}
@@ -104,7 +118,7 @@ Download and install the [{{site.data.keyword.Bluemix_live_notm}} command-line i
 	{: pre}
 
 3. When you are prompted, enter your IBMid and password.
-4. View a list of your {{site.data.keyword.Bluemix_notm}} projects: 
+4. View a list of your {{site.data.keyword.Bluemix_notm}} projects:
 
 	```
 	bl projects
@@ -135,11 +149,61 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 
 2. Use the launch configuration that you created in the {{site.data.keyword.webide}}. After you select the launch configuration, the Desktop Sync feature is enabled in your local environment. In the command-line window that you just opened, you can view the app's URL, the debug URL, the manage URL, and view the {{site.data.keyword.Bluemix_live_notm}} state.
 
-3. Refresh the browser and verify that you can see the changes that you saved to static files in the local workspace. 
+3. Refresh the browser and verify that you can see the changes that you saved to static files in the local workspace.
 
 ### Disabling the Desktop Sync feature
 
 1. In the second command-line window, enter `bl stop`.
 2. In the first command-line window, enter `q`.
 
---> 
+-->
+
+## Supported languages
+{: #supported_languages}
+
+The Eclipse Orion {{site.data.keyword.webide}} provides content assist, tooltips, previews, validation, and syntax highlighting for JavaScript, HTML, CSS, and Markdown files. Syntax highlighting is also supported for these file types:
+
+<table>
+<tr>
+<td>
+<ul><li>Arduino
+</li><li>C</li>
+<li>C#
+</li><li>C++
+</li><li>CoffeeScript
+</li><li>CSHTML
+</li><li>Embedded JavaScript (ejs)
+</li><li>Erlang
+</li><li>Go
+</li><li>HTML abstraction markup language (Haml)
+</li><li>Jade
+</li><li>Java
+</li><li>JSON
+</li><li>Less  
+</li><li>Lua  
+</li><li>Objective-C
+</li><li>PHP
+</li><li>Python</li></ul>
+</td>
+<td>
+<ul><li>Ruby
+</li><li>Sass/SCSS
+</li><li>SQL
+</li><li>Swift
+</li><li>TypeScript
+</li><li>Visual Basic (vb)
+</li><li>VMHTML
+</li><li>XHTML
+</li><li>XML
+</li><li>XQuery
+</li><li>YAML
+</li><li>Launch file 	
+</li><li>Dockerfile
+</li><li>gitignore
+</li><li>git config
+</li><li>cfignore
+</li><li>properties
+</ul>
+</td>
+</tr>
+</table>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-05-03"
 
 ---
 
@@ -62,23 +62,3 @@ Per ulteriori informazioni, consulta i seguenti argomenti:
 - Esplora la [documentazione dello sviluppatore dell'applicazione](applications/api.html) e la documentazione API [{{site.data.keyword.iot_short_notm}}](reference/api.html).
 - Esplora le [librerie client {{site.data.keyword.iot_short_notm}}](iot_platform_client_lib.html) che forniscono gli strumenti e i file per creare e sviluppare il codice per l'integrazione e la connettività dei tuoi dispositivi e applicazioni.
 - [Collega il servizio {{site.data.keyword.cloudantfull}}](cloudant_connector.html) al tuo {{site.data.keyword.iot_short_notm}} per archiviare i dati del dispositivo cronologici.
-
-
-
-
-# Link correlati
-{: #rellinks}
-* [IBM Watson IoT Service Health Dashboard](https://status.internetofthings.ibmcloud.com){:new_window}
-
-## Esercitazioni ed esempi
-{: #samples}
-* [Recipes for connecting your devices ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}
-* [{{site.data.keyword.iot_short_notm}} Play organization ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://play.internetofthings.ibmcloud.com/){:new_window}
-* [Connecting an Intel Galileo to the {{site.data.keyword.iot_short_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/connect-an-intel-galileo-to-the-internet-of-things-foundation-connect/){:new_window}
-* [Connecting an ARM® mbed™ IoT Starter Kit ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/arm-mbed-iot-starter-kit-part-1/){:new_window}
-* [Connecting a Raspberry Pi to {{site.data.keyword.iot_short_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/raspberry-pi-4/){:new_window}
-
-## Guida di riferimento API
-{: #api}
-* [Documentazione API {{site.data.keyword.iot_short_notm}}](../reference/api.html)
-* [Documentazione sviluppatore](developer_doc_overview.html)

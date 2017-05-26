@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2017-02-24"
 
 ---
 
@@ -15,7 +16,7 @@ copyright:
 ## セルのインストール規則
 {: cell_installation_conventions}
 
-WebSphere Application Server for Bluemix セルは、標準化されたディレクトリー構造に従ってインストールおよび構成されます。以下のリストは、いくつかの重要な設定に言及しています。これらの設定の完全なリストについては、/etc/virtualimage.properties を参照してください。
+WebSphere Application Server in Bluemix セルは、標準化されたディレクトリー構造に従ってインストールおよび構成されます。以下のリストは、いくつかの重要な設定に言及しています。これらの設定の完全なリストについては、/etc/virtualimage.properties を参照してください。
 
 * IHS_HOME=/opt/IBM/WebSphere/HTTPServer
 * IHS_INSTALL_ROOT=/opt/IBM/WebSphere/HTTPServer

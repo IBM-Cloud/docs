@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-19"
+lastupdated: "2017-04-05"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-01-19"
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# Connexion d'applications, de terminaux et de passerelles à {{site.data.keyword.iot_short_notm}}
+# Connexion d'applications, de terminaux et de passerelles à l'aide de l'API
 {: #connect_devices_apps_gw}
 
 Vous pouvez connecter des applications, des terminaux et des passerelles à {{site.data.keyword.iot_full}} via le protocole MQTT. Vous pouvez également utiliser l'API REST HTTP pour connecter des terminaux à {{site.data.keyword.iot_short_notm}}.
@@ -31,7 +31,7 @@ Pour connecter des clients de terminal, d'application et de passerelle à votre 
 
 ### URL de connexion de l'API REST HTTP
 
-<pre class="pre">https://<var class="keyword varname">orgId</var>.internetofthings.ibmcloud.com/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.internetofthings.ibmcloud.com/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 {: codeblock}
 
 **Remarques**
@@ -119,7 +119,7 @@ Pour que les terminaux, les applications et les passerelles puissent s'authentif
 Où
 - *orgId* est l'ID d'organisation unique composé de six caractères ayant été généré lorsque vous avez enregistré le chaîne.
 - *appId* est un identificateur de chaîne unique défini par l'utilisateur pour le client.
-- *deviceId* identifie un terminal ou une passerelle de façon unique parmi tous les types de terminal et de passerelle, et s'apparente à un numéro de série.
+- *deviceId* identifie un terminal ou une passerelle de façon unique parmi tous les types de terminaux et de passerelle, et s'apparente à un numéro de série.
 - *device_type* est l'identificateur du type de terminal qui se connecte, et s'apparente à un numéro de modèle.
 - *typeId* est l'identificateur du type de passerelle qui se connecte, et s'apparente à un numéro de modèle.
 

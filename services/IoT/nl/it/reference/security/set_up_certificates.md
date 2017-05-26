@@ -31,7 +31,7 @@ Se aggiungi un certificato CA e utilizzi un piano di sicurezza standard, tutti i
 ### Certificati dispositivo e client
 Rimangono sul dispositivo i soli certificati client o dispositivo e non sono caricati nella piattaforma. Il certificato di firma CA utilizzato per firmare tutti i certificati del dispositivo è l'unico certificato caricato nella piattaforma. Se stai utilizzando i certificati server autofirmati, devi caricare i certificati root e intermedi utilizzati per firmare il certificato client (cert.pem).
 
-L'unico certificato del dispositivo che firmi con il certificato CA deve avere l'ID dispositivo inserito come CN (Common Name) o SubjectAltName nel certificato. Per il campo *CN*, il formato è 'CN=d:devtype:devid'. Per il campo SubjectAltName, il formato è 'SubjectAltName=email:d:*devtype:devid*' dove 'email:d' è la costante, '*devtype*' è il tipo di dispositivo e '*devid*' è l'ID client del dispositivo.
+L'unico certificato del dispositivo che firmi con il certificato CA deve avere l'ID dispositivo inserito come CN (Common Name) o SubjectAltName nel certificato. Per il campo *CN*, il formato è 'CN=d:devtype:devid'. Per il campo SubjectAltName, il formato è 'SubjectAltName=email:d:*devtype:devid*' dove 'email:d' è la costante, '*devtype*' è il tipo dispositivo e '*devid*' è l'ID client del dispositivo.
 
 ## Registrazione dei certificati con autorità di certificazione (CA) per l'autenticazione del dispositivo
 {: #reg_ca_cert}

@@ -77,23 +77,3 @@ Las coberturas se ejecutan en el motor de análisis de {{site.data.keyword.iotin
 El motor de acción determina las acciones a tomar en base a la información especificada en la cobertura.
 
 Puede crear coberturas nuevas en JavaScript utilizando la API de {{site.data.keyword.iotinsurance_short}}.
-
-
-
-# Enlaces relacionados
-{: #rellinks}
-
-## Guías de aprendizaje y ejemplos
-{: #samples}
-* [Código de aplicación móvil de ejemplo en GitHub ![Icono de enlace externo](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## Referencia de API
-{: #api}
-* [API de {{site.data.keyword.iotinsurance_short}} ![Icono de enlace externo](../../icons/launch-glyph.svg)](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [Ejemplos de API de {{site.data.keyword.iotinsurance_short}} ![Icono de enlace externo](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## Enlaces relacionados
-{: #general}
-* [Documentación de {{site.data.keyword.iot_full}}](https://console.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
-* [Foro de soporte para desarrolladores ![Icono de enlace externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix]){:new_window}
-* [Foro de soporte de Stack Overflow ![Icono de enlace externo](../../icons/launch-glyph.svg)](http://stackoverflow.com/questions/tagged/ibm-bluemix){:new_window}

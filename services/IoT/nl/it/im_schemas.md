@@ -27,7 +27,7 @@ Per utilizzare le funzioni {{site.data.keyword.iot_short}} come le regole e le a
 
 Per aggiungere uno schema:  
 1. Vai a **Devices > Manage Schemas** e fai clic su **Add Schema**.  
-2. Seleziona un tipo di dispositivo da associare a questo schema del messaggio. **Importante:** può essere definito solo uno schema per tipo di dispositivo.
+2. Seleziona un tipo dispositivo da associare a questo schema del messaggio. **Importante:** può essere definito solo uno schema per tipo dispositivo.
 
 3. Aggiungi una o più proprietà.  
     Puoi selezionare le proprietà dal dispositivo collegato, creare proprietà virtuali per modificare o da combinare a proprietà esistenti o aggiungere le proprietà manualmente.  

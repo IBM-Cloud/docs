@@ -13,7 +13,7 @@ lastupdated: "2017-03-14"
 {:pre: .pre}
 
 
-# {{site.data.keyword.iot_short_notm}} ブロック・チェーン統合のスマート・コントラクトの作成
+# ブロック・チェーンのスマート・コントラクトの開発
 {: #iotblockchain_link}
 
 {{site.data.keyword.blockchainfull}} と Hyperledger 開発環境を使用して、IBM 提供のサンプル・コントラクトを基に独自のスマート・コントラクトを作成し、テストすることができます。

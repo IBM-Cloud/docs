@@ -39,7 +39,7 @@ L'intégration Jasper fournie par notre plateforme assure la prise en charge des
 Les opérations prises en charge sont accessibles dans le menu d'exploration d'un terminal connecté via Jasper, après l'exécution des étapes de configuration ci-dessous.
 
 ### API REST pour Jasper
-Pour accéder à l'API REST pour Jasper, voir la section Jasper Extension dans la documentation de l'[API REST HTTP {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window}. 
+Pour accéder à l'API REST pour Jasper, voir la section Jasper Extension dans la documentation de l'[API REST HTTP {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window}.
 
 ### Configuration pour Jasper
 
@@ -91,7 +91,7 @@ L'extension AT&T permet d'effectuer les opérations AT&T suivantes
 - Modification du plan tarifaire
 
 ### API REST pour AT&T
-Pour accéder à l'API REST pour AT&T, voir la section AT&T Extension dans la documentation de l'[API REST HTTP {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window}. 
+Pour accéder à l'API REST pour AT&T, voir la section AT&T Extension dans la documentation de l'[API REST HTTP {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window}.
 
 ### Configuration pour AT&T
 
@@ -223,7 +223,7 @@ Si vous disposez d'un terminal connecté à votre service {{site.data.keyword.io
 - Statut d'emplacement
 
 ### API REST pour Orange
-Pour accéder à l'API REST pour Orange, voir la section Orange Extension dans la documentation de l'[API REST HTTP {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window}. 
+Pour accéder à l'API REST pour Orange, voir la section Orange Extension dans la documentation de l'[API REST HTTP {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window}.
 
 ### Configuration pour Orange
 
@@ -332,46 +332,46 @@ To view the weather data retrieved for a device location, find the device in the
 
 Des utilisateurs peuvent être ajoutés à {{site.data.keyword.iot_short_notm}} via des invitations par courrier électronique. Pour plus d'informations, voir  [Gestion des accès utilisateur](../../add_users.html).
 
-L'utilisation de la fonction d'invitation par courrier électronique nécessite de configurer une extension de messagerie pour utiliser le service en ligne SendGrid ou un service SMTP (Simple Mail Transfer Protocol). L'extension peut également utiliser l'application {{site.data.keyword.Bluemix_notm}} SendGrid. 
+L'utilisation de la fonction d'invitation par courrier électronique nécessite de configurer une extension de messagerie pour utiliser le service en ligne SendGrid ou un service SMTP (Simple Mail Transfer Protocol). L'extension peut également utiliser l'application {{site.data.keyword.Bluemix_notm}} SendGrid.
 
 ### Service en ligne SendGrid
 
 Pour configurer l'extension de messagerie à utiliser avec le service en ligne SendGrid, procédez comme suit :
 
-1. Récupérez la clé d'API autorisée à partir de votre compte en ligne SendGrid. 
-2. Dans votre tableau de bord {{site.data.keyword.iot_short_notm}}, cliquez sur **Extensions** dans la barre de navigation. 
+1. Récupérez la clé d'API autorisée à partir de votre compte en ligne SendGrid.
+2. Dans votre tableau de bord {{site.data.keyword.iot_short_notm}}, cliquez sur **Extensions** dans la barre de navigation.
 3. Dans la section **Adresse électronique**, cliquez sur **Configurer**.
-4. Sélectionnez **SendGrid avec clé d'API**. 
-5. Entrez le nom et l'adresse électronique de votre administrateur de site, ainsi que la clé d'API autorisée. 
+4. Sélectionnez **SendGrid avec clé d'API**.
+5. Entrez le nom et l'adresse électronique de votre administrateur de site, ainsi que la clé d'API autorisée.
 
 ### Service SMTP
 
 Pour configurer l'extension de messagerie à utiliser avec un service SMTP, procédez comme suit :
 
-1. Dans votre tableau de bord {{site.data.keyword.iot_short_notm}}, cliquez sur **Extensions** dans la barre de navigation. 
+1. Dans votre tableau de bord {{site.data.keyword.iot_short_notm}}, cliquez sur **Extensions** dans la barre de navigation.
 2. Dans la section **Adresse électronique**, cliquez sur **Configurer**.
 3. Sélectionnez **SMTP**.
-4. Entrez les détails de configuration pour votre service SMTP. 
+4. Entrez les détails de configuration pour votre service SMTP.
 
 ### Application {{site.data.keyword.Bluemix_notm}} SendGrid
 
 Pour configurer l'extension de messagerie à utiliser avec l'application {{site.data.keyword.Bluemix_notm}} SendGrid, procédez comme suit :
 
-1. Créez une application factice et établissez une liaison avec le service SendGrid.   
-Pour récupérer les informations d'identification de configuration credentials, ajoutez le service SendGrid et établissez une liaison entre celui-ci et une application factice. 
+1. Créez une application factice et établissez une liaison avec le service SendGrid.  
+Pour récupérer les informations d'identification de configuration credentials, ajoutez le service SendGrid et établissez une liaison entre celui-ci et une application factice.
 
- 1. Depuis votre tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur **Créer un service**. 
+ 1. Depuis votre tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur **Créer un service**.
  2. Sélectionnez le service SendGrid dans le catalogue, puis cliquez sur **Créer**.
  3. Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, ajoutez l'application {{site.data.keyword.sdk4nodefull}}.
  4. Cliquez sur l'application {{site.data.keyword.sdk4nodefull}} à partir du tableau de bord {{site.data.keyword.Bluemix_notm}}, puis cliquez sur **Lier un service ou une API**.
  5. Sélectionnez le service SendGrid, puis cliquez sur **Ajouter**.
  6. L'application {{site.data.keyword.sdk4nodefull}} doit à présent être reconstituée.
-2. Préparez-vous à configurer le service {{site.data.keyword.iot_short_notm}}.   
-{{site.data.keyword.iot_short_notm}} peut être configuré à l'aide du tableau de bord {{site.data.keyword.iot_short_notm}} ou en utilisant l'API {{site.data.keyword.iot_short_notm}}.   
+2. Préparez-vous à configurer le service {{site.data.keyword.iot_short_notm}}.  
+{{site.data.keyword.iot_short_notm}} peut être configuré à l'aide du tableau de bord {{site.data.keyword.iot_short_notm}} ou en utilisant l'API {{site.data.keyword.iot_short_notm}}.  
  1. Cliquez sur l'application {{site.data.keyword.sdk4nodefull}} dans le tableau de bord {{site.data.keyword.Bluemix_notm}}.
  2. Cliquez sur **Variables d'environnement** dans la barre de navigation.
  3. Copiez les données JSON affichées dans un fichier texte temporaire.  
-Les données JSON doivent se présenter au format suivant :
+ Les données JSON doivent se présenter au format suivant :
 ```
 {
   "name": "SendGridServiceName",
@@ -383,10 +383,10 @@ Les données JSON doivent se présenter au format suivant :
   }
 }
 ```
-3. Ajoutez les données de configuration à l'organisation {{site.data.keyword.iot_short_notm}}. 
+3. Ajoutez les données de configuration à l'organisation {{site.data.keyword.iot_short_notm}}.
  1. Ouvrez le tableau de bord {{site.data.keyword.iot_short_notm}}.
  2. Cliquez sur **Extensions** dans la barre de navigation.
  3. Cliquez sur **Configurer** sous l'icône **Courrier électronique**.
  4. Sélectionnez **SendGrid avec nom d'utilisateur**.
- 5. Entrez les données de configuration à partir du fichier texte temporaire. 
+ 5. Entrez les données de configuration à partir du fichier texte temporaire.
  6. Cliquez sur **Terminé**.

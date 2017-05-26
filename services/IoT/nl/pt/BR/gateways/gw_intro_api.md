@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2015, 2017
-lastupdated: "2017-03-16"
+  years: 2015, 2017
+lastupdated: "2017-03-21"
 
 ---
 
@@ -45,9 +45,9 @@ Para enviar uma solicitação de `POST` de um dispositivo que está conectado ao
 
 **Notas importantes:**
 - É possível enviar eventos de dispositivo de gateway apenas usando o sistema de mensagens HTTP. Use o protocolo de sistema de mensagens MQTT para enviar solicitações para outros recursos de gerenciamento de dispositivo de gateway e controle.
-- As conexões HTTP podem ser reutilizadas somente para publicar eventos para o mesmo dispositivo, pois o cabeçalho HTTP de autorização não pode ser mudado.
 - Porta 443, a porta SSL padrão, também pode ser especificada para proteger as chamadas API HTTP.
-- Se um gateway não estiver designado à função *Gateway padrão*, ele poderá publicar eventos em nome de qualquer dispositivo na organização. Designe a função *Gateway padrão* se quiser verificar os níveis de autorização do dispositivo e registrar automaticamente seu dispositivo. **Nota:** esse comportamento está sujeito a mudanças.
+- Se um gateway não estiver designado à função *Gateway padrão*, ele poderá publicar eventos em nome de qualquer dispositivo na organização. Se o dispositivo que está conectado ao gateway não estiver registrado, o gateway registrará esse dispositivo automaticamente.
+- Designe a função *Gateway padrão* se você desejar verificar os níveis de autorização do dispositivo.
 
 Para obter mais informações sobre a função de gateways e grupos de recursos, veja [Controle de acesso ao gateway (Beta)](../gateways/gateway-access-control.html).
 
@@ -69,10 +69,10 @@ Em que:
 <p></p>
 <dt>gwType</dt>  
 <dd>O tipo de gateway. </dd>
-<dd>Se você usar o caractere hífen "-" como um delimitador no nome de usuário, esse valor não deverá incluir um caractere de hífen.</dd>
+<dd>Se você usar o caractere hífen "-" como um delimitador no nome de usuário, esse valor não deverá incluir um caractere de hífen. </dd>
 <p></p>
 <dt>gwDevId</dt>  
-<dd>O identificador de dispositivo de gateway.</dd>
+<dd>O identificador de dispositivo de gateway. </dd>
 </dl>
 
 

@@ -34,7 +34,7 @@ lastupdated: "2017-01-11"
 |선택사항 | [{{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}}는 {{site.data.keyword.APIM}}와 IBM StrongLoop를 API 및 마이크로서비스를 작성, 실행, 관리 및 적용하기 위한 포괄적 솔루션을 제공하는 단일 오퍼링으로 통합합니다. |
 |선택사항 | [{{site.data.keyword.rules_short}}](/docs/services/rules/rules.html) | {{site.data.keyword.rules_short}}는 자주 발생하는 반복 가능한 규칙 기반 비즈니스 의사결정을 자동화하고 실행하기 위한 포괄적 환경을 제공합니다. 또한 이를 통해 IT 기술의 필요성을 줄여 비즈니스 사용자 또는 개발자가 저비용으로 신속하게 의사결정을 모델링하고 테스트할 수 있습니다. |
 |선택사항 | [{{site.data.keyword.cloudant}}](/docs/services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}}에서는 항상 작동 상태인 완전히 관리되는 NoSQL JSON 데이터 계층에 대한 액세스를 제공합니다. 이 서비스는 CouchDB와 호환 가능하며, 모바일 및 웹 애플리케이션 모델을 위한 사용이 간편한 HTTP 인터페이스를 통해 액세스할 수 있습니다. |
-|선택사항 | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | {{site.data.keyword.Bluemix_dedicated_notm}}에서 Docker 컨테이너를 실행합니다. 컨테이너는 앱에서 실행해야 하는 모든 요소를 포함하는 가상 소프트웨어 오브젝트입니다. 컨테이너는 리소스 격리와 할당의 이점이 있으며 가상 머신 등보다 휴대가 간편하고 효율적입니다. 하드웨어 요구사항에 대한 정보는 [{{site.data.keyword.Bluemix_dedicated_notm}} 및 Bluemix 로컬의 IBM {{site.data.keyword.containershort}}](/docs/containers/container_dl.html)를 참조하십시오.|
+|선택사항 | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | {{site.data.keyword.Bluemix_dedicated_notm}}에서 Docker 컨테이너를 실행합니다. 컨테이너는 앱에서 실행해야 하는 모든 요소를 포함하는 가상 소프트웨어 오브젝트입니다. 컨테이너는 리소스 격리와 할당의 이점이 있으며 가상 머신 등보다 휴대가 간편하고 효율적입니다. 하드웨어 요구사항에 대한 정보는 [{{site.data.keyword.Bluemix_dedicated_notm}} 및 Bluemix 로컬의 IBM {{site.data.keyword.containershort}}](/docs/containers/container_ov.html#container_dl)를 참조하십시오.|
 | 선택사항 | [{{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery/index.html) | {{site.data.keyword.contdelivery_short}} 데디케이티드를 사용하여 빌드, 단위 테스트, 배치 등을 자동화합니다. 풍부한 웹 기반 IDE을 통해 코드를 편집하고 푸시하십시오. 개발, 배치 및 오퍼레이션 태스크를 지원하는 도구 통합을 가능하게 하는 도구 체인을 작성합니다. |
 | 선택사항 | [{{site.data.keyword.dashdbshort}}](/docs/services/dashDB/dashDB.html) | IBM {{site.data.keyword.dashdbshort}} for Analytics는 전체 관리되는 SQL 클라우드 데이터베이스 서비스이고, 데이터 웨어하우스와 분석 워크로드를 위해 최적화되어 있습니다. IBM {{site.data.keyword.dashdbshort}} for Transactions는 전체 관리되는 SQL 클라우드 데이터베이스 서비스이고 일반적인 용도, 웹 앱 및 트랜잭션 워크로드를 위해 최적화되어 있습니다. |
 | 선택사항 | [{{site.data.keyword.datacshort}}](/docs/services/DataCache/index.html#data_cache) | 이 서비스는 앱에 대한 분산 캐싱 시나리오를 지원하는 인메모리 데이터 그리드를 제공합니다. 50GB의 인메모리 캐시가 포함됩니다. |
@@ -46,7 +46,7 @@ lastupdated: "2017-01-11"
 |선택사항 | [{{site.data.keyword.sescashort}}](/docs/services/SessionCache/index.html#session_cache) | 증가된 중복성을 위해 {{site.data.keyword.sescashort}}에서는 캐시에 저장된 세션의 복제본을 제공합니다. 따라서 등화 관제 또는 가동 중단의 상황에서도 클라이언트 애플리케이션은 캐시의 세션에 계속 액세스할 수 있습니다. 이 서비스는 웹 및 모바일 애플리케이션에 대한 세션 캐싱 시나리오를 지원합니다. |
 | 선택사항 | [{{site.data.keyword.iot_short}}](/docs/services/IoT/index.html) | 이 서비스를 사용하여 앱은 연결된 디바이스, 센서 및 게이트웨이와 통신하고 여기서 수집한 데이터를 이용할 수 있습니다. 기본 오퍼링은 1.6TB의 데이터 교환과 100,000개의 동시 연결된 디바이스 또는 애플리케이션의 용량을 지닌 데디케이티드 환경 내에서 {{site.data.keyword.iot_short}}의 개인용 버전 실행을 허용합니다. |
 | 선택사항 | [{{site.data.keyword.appserver_short}}](/docs/services/ApplicationServeronCloud/index.html) | IBM {{site.data.keyword.appserver_short}} for IBM {{site.data.keyword.Bluemix_notm}}는 {{site.data.keyword.Bluemix_notm}}의 호스팅 클라우드 환경에서 사전 구성된 {{site.data.keyword.appserver_short}} Liberty, 기존 네트워크 배치 또는 기존 WebSphere Java EE 인스턴스를 빠르게 설정할 수 있는 편리한 서비스입니다.  |
-{: caption="표 1. 데디케이티드 서비스" caption-side="top"}
+{: caption="표 1. 전용 서비스" caption-side="top"}
 {: #table01}
 
 
@@ -59,7 +59,7 @@ lastupdated: "2017-01-11"
 |데디케이티드 {{site.data.keyword.apiconnect_short}} Professional 10만 API 호출 증가 | 매월 10만 API 호출의 추가 용량을 제공하는 {{site.data.keyword.apiconnect_short}} Professional 환경의 확장입니다.  |
 |데디케이티드 {{site.data.keyword.apiconnect_short}} Enterprise 2,500만 API 호출 | 엔터프라이즈 전체 API 프로젝트 방향으로 대상 지정된 월간 2,500만 API 호출의 용량을 지닌 데디케이티드 환경 내의 {{site.data.keyword.apiconnect_short}}의 개인용 버전 실행을 허용하는 환경입니다.  |
 |데디케이티드 {{site.data.keyword.apiconnect_short}} Enterprise 10만 API 호출 증가 | 매월 10만 API 호출의 추가 용량을 제공하는 {{site.data.keyword.apiconnect_short}} Enterprise 환경의 확장입니다.  |
-|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.rules_short}} 1백만 규칙 의사결정 | 규칙 의사결정은 규칙 실행 서버에서 규칙 세트를 호출한 결과입니다. 청구 기간 중에 실행되거나 처리된 총 규칙 의사 결정 수(가장 가까운 백만 단위로 반올림됨)를 커버하려면 충분한 인타이틀먼트를 확보해야 합니다. 클라우드 서비스에서 측정되는 규칙 의사결정은 의사결정을 얻기 위해 규칙 실행 서버로 이루어진 호출입니다. |
+|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.rules_short}} 1백만 규칙 의사결정 | 규칙 의사결정은 규칙 실행 서버에서 규칙 세트를 호출한 결과입니다. 청구 기간 중에 실행되거나 처리된 총 규칙 의사 결정 수(가장 가까운 백만 단위로 반올림됨)를 커버하려면 충분한 인타이틀먼트를 확보해야 합니다. 클라우드 서비스에서 측정되는 규칙 의사결정은 의사결정을 얻기 위해 규칙 실행 서버로 이루어진 호출입니다. 클라우드 서비스의 전용 배치에서 합의된 용량은 관련 비용 메트릭으로 측정됩니다. {{site.data.keyword.Bluemix_dedicated_notm}} 플랫폼의 {{site.data.keyword.rules_short}} 서비스 기본 영역 할당량은 16GB이며, 규칙 의사결정을 실행하기 위해 각각 1GB인 인스턴스를 10개까지 호출할 수 있습니다. 사용 한계를 초과하면 이 초과 사용을 위해 추가 용량을 구매해야 합니다. |
 |데디케이티드 {{site.data.keyword.cloudant}} 1.6TB 용량 증가 | 1.6TB 디자인 용량의 데디케이티드 환경 내에서 {{site.data.keyword.cloudantfull}}의 개인용 버전 실행을 포함합니다.  |
 |데디케이티드 {{site.data.keyword.datacshort}} 및 {{site.data.keyword.sescashort}} 50GB 용량 증가 | 최대 50GB 누적 용량까지 {{site.data.keyword.datacshort}} 및 {{site.data.keyword.sescashort}} 인스턴스의 배치 및 실행을 허용하는 환경입니다. |
 |{{site.data.keyword.contdelivery_short}} 데디케이티드 인스턴스 | 전용 환경에서 실행되는 개인용 버전의 {{site.data.keyword.contdelivery_short}}입니다. 용량은 {{site.data.keyword.contdelivery_short}} 데디케이티드 권한 부여된 사용자 인타이틀먼트로 결정됩니다. |
@@ -154,7 +154,7 @@ lastupdated: "2017-01-11"
 |{{site.data.keyword.iot_short}}		|예		|예		|아니오|
 |{{site.data.keyword.weather_short}}		|예		|예		|예|
 |{{site.data.keyword.workloadscheduler}}	|예		|예		|예 |
-{: caption="표 4. 지역별 {{site.data.keyword.Bluemix_notm}} 퍼블릭 신디케이션 가능 서비스" caption-side="top"}
+{: caption="표 4. 지역별 Bluemix 공용에서 신디케이션에 사용 가능한 서비스" caption-side="top"}
 {: #table04}
 
 **참고**: 표에 써드파티 서비스가 포함되어 있지 않습니다. 써드파티 서비스 옵션에 대한 데디케이티드 카탈로그를 확인하십시오. 
@@ -336,7 +336,7 @@ IBM은 비밀번호로 보호되는 로그인을 사용하여 {{site.data.keywor
 |실제 인프라 검토 | 위협에 대비한 솔루션 컴포넌트를 호스팅하는 실제 구내와 데이터 센터를 보호하기 위한 보안 제어를 검토합니다. | 고객 |
 |모니터링 소프트웨어 검사 | 단계적 확대 및 문제점 판별 플랜에 정의된 대로 모니터링 및 관리 컴포넌트를 검사합니다. | 고객 |
 |OS 검사 | 운영 체제 이미지가 규제 준수 표준에 부합하는지 검사합니다. IBM이 OS 이미지에 대한 액세스 권한을 제공합니다. | IBM 및 고객 책임 공유 |
-{: caption="표 5. 도입/인식(Inception) 단계 태스크" caption-side="top"}
+{: caption="표 5. 도입/인식(Inception) 단계(Phase) 태스크" caption-side="top"}
 
 
 다음은 진행 단계입니다. 진행 단계에서 사용자와 IBM 클라우드 사이의 지속적 협력 관계를 기술합니다. 이 단계의 1차 목표에는 다음이 포함됩니다.
@@ -361,7 +361,7 @@ IBM은 비밀번호로 보호되는 로그인을 사용하여 {{site.data.keywor
 |상태 보고, 감사 조정 및 규제 준수 미팅  | 규제 준수 검토 상태 미팅에서 상태 보고, 외부 감사 조정 및 표시를 완료합니다. | IBM |
 |채용 및 비즈니스 수요 검증 | 고객 환경에 액세스하는 IBM 담당자를 위해 분기별 채용 검증 및 지속적 비즈니스 수요에 대한 검증을 완료합니다. | IBM |
 |보안 취약점 해결 | 플랫폼에서 보고된 보안 취약점을 해결합니다. | IBM |
-{: caption="표 6. 진행 단계 태스크" caption-side="top"}
+{: caption="표 6. 진행 단계(Phase) 태스크" caption-side="top"}
 
 최종 완료 단계는 사용자와 IBM {{site.data.keyword.Bluemix_notm}} 사이의 관계 종료를 나타냅니다. 이 단계의 1차 태스크에는 다음이 포함됩니다.
 
@@ -376,7 +376,7 @@ IBM은 비밀번호로 보호되는 로그인을 사용하여 {{site.data.keywor
 |환경에 대한 커미션 해지 | 환경에 대한 액세스 권한과 신임 정보를 종료합니다. | IBM 및 고객 책임 공유 |
 |고객 네트워크 연결 제거 | IBM과 고객 환경 사이의 네트워크 연결을 제거합니다. | IBM 및 고객 책임 공유 |
 |인프라 재사용 | {{site.data.keyword.BluSoftlayer}}에서 정의한 프로세스에 기반하여 사용자 환경은 재사용됩니다. | IBM |
-{: caption="표 7. 완료 단계 태스크" caption-side="top"}
+{: caption="표 7. 완료 단계(Phase) 태스크" caption-side="top"}
 
 ##데디케이티드 인스턴스 유지보수
 {: #maintaindedicated}

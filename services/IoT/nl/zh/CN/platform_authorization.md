@@ -12,7 +12,7 @@ lastupdated: "2017-03-13"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 应用程序连接
+# 连接应用程序
 
 要将应用程序连接到 {{site.data.keyword.iot_full}}，必须通过使用 API 密钥和令牌或在 {{site.data.keyword.Bluemix_notm}} 中将应用程序直接绑定到 {{site.data.keyword.iot_short_notm}} 进行连接。使用访问仪表板授予访问权。
 {:shortdesc}

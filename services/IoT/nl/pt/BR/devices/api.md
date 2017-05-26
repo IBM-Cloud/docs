@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-14"
+lastupdated: "2017-03-21"
 ---
 
 {:new_window: target="blank"}
@@ -48,7 +48,7 @@ Use uma das URLs (Localizadores Uniformes de Recursos) a seguir para enviar uma 
 
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
-**Nota: **porta 443, a porta SSL padrão, também pode ser especificada para proteger as chamadas API HTTP.
+**Nota:** porta 443, a porta SSL padrão, também pode ser especificada para proteger as chamadas API HTTP.
 
 Se você estiver conectando um dispositivo ou um aplicativo ao serviço de iniciação rápida, use uma das URLs (Localizadores Uniformes de Recursos) a seguir em seu lugar:
 

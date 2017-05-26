@@ -30,7 +30,7 @@ Le tableau de bord {{site.data.keyword.iot_full}} comporte les tableaux par déf
 
 |Nom de tableau | Description |  
 |:---|:---|  
-|Présentation de l'utilisation  | Affiche les statistiques d'utilisation relatives à votre organisation. Répertorie les types de terminal, ainsi que les données consommées.
+|Présentation de l'utilisation  | Affiche les statistiques d'utilisation relatives à votre organisation. Répertorie les types de terminaux, ainsi que les données consommées.
 |Analyse centrée sur la règle | Affiche les règles de votre organisation. Des cartes supplémentaires recensent les alertes déclenchées, les terminaux associés, les propriétés de terminal et les informations d'alerte. |  
 |Analyse centrée sur le terminal | Affiche les terminaux qui sont connectés à votre organisation. Des cartes supplémentaires affichent des alertes pour un terminal sélectionné, des informations relatives à un terminal sélectionné, et des informations d'alerte. |
 |Gestion des risques et de la sécurité | Affiche des cartes qui résument l'état général de la sécurité. Les opérateurs système et les analystes de sécurité peuvent afficher des détails sur la conformité, l'état de connexion des terminaux, les causes des pannes de connexion et les terminaux qui sont bloqués ou autorisés via une liste noire ou une liste blanche.  À partir de la carte de conformité de connexion, l'utilisateur peut obtenir un rapport détaillé sur les terminaux non conformes et peut exporter le rapport vers Excel. |
@@ -72,7 +72,7 @@ Sélectionnez le type et la taille de visualisation que vous souhaitez utiliser.
 </thead>
 <tbody>
 <tr>
-<td>Types de terminal</td>
+<td>Types de terminaux</td>
 <td>Graphique circulaire qui affiche le nombre de terminaux par type de terminal.</td>
 </tr><tr>
 <td>Données transférées</td>
@@ -197,4 +197,4 @@ Pour certains types de carte, vous pouvez cliquer sur **Paramètres** pour confi
 
 Parfait ! Vous pouvez désormais voir les données en temps réel de votre terminal !
 
-Pour obtenir les instructions étape par étape relatives à l'affichage des données de terminal en temps réel, voir la recette [Configuring Boards & Cards in the new Watson IoT Dashboard ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/configuring-the-cards-in-the-new-watson-iot-dashboard/){: new_window}. 
+Pour obtenir les instructions étape par étape relatives à l'affichage des données de terminal en temps réel, voir la recette [Configuring Boards & Cards in the new Watson IoT Dashboard ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/configuring-the-cards-in-the-new-watson-iot-dashboard/){: new_window}.

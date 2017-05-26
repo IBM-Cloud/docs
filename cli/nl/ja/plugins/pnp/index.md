@@ -18,7 +18,7 @@ lastupdated: "2017-01-12"
 
 プライベート・ネットワーク・ピアリング CLI プラグインは、Windows、MAC、および Linux オペレーティング・システムで使用可能です。環境に適したプラグインを使用してください。
 
-開始する前に、Bluemix スペースを作成します。スペース内の各コンテナーに、異なるネットワークの IP アドレスを設定してください。詳しくは、『[独自のプライベート IP アドレスを使う](https://www.{DomainName}/docs/containers/container_security_network.html#container_cli_ips_byoip)』を参照してください。
+開始する前に、Bluemix スペースを作成します。スペース内の各コンテナーに、異なるネットワークの IP アドレスを設定してください。詳しくは、『[独自のプライベート IP アドレスを使う](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip)』を参照してください。
 
 **注:** Bluemix スペースでプライベート・ネットワーク・ピアリングを使用した後に、スペースを削除する必要が生じた場合、まず、当該スペースのプライベート・ネットワーク・ピアリング接続を削除してください。
 
@@ -86,7 +86,7 @@ chmod a+x ./private-network-peering-linux-amd64
 | pnp-create  | プライベート・ネットワーク・ピアリング接続を作成します   |
 | pnp-delete  | プライベート・ネットワーク・ピアリング接続を削除します   |
 | pnp-show    | すべてのプライベート・ネットワーク・ピアリング接続をリストします  |
-{: caption="Table 1. Private network peering commands" caption-side="top"}
+{: caption="表 1. プライベート・ネットワーク・ピアリング・コマンド" caption-side="top"}
 
 
 ### コマンドの使用法

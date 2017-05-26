@@ -775,15 +775,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.335529"
-     inkscape:cx="314.51642"
-     inkscape:cy="101.80196"
+     inkscape:zoom="1.6514684"
+     inkscape:cx="383.84526"
+     inkscape:cy="111.1129"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="in"
-     inkscape:window-width="1920"
-     inkscape:window-height="1027"
+     inkscape:window-width="1280"
+     inkscape:window-height="667"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -949,7 +949,7 @@
          sodipodi:role="line"
          x="-21.984587"
          y="506.11569"
-         id="tspan8202">Dispositivi IoT B</tspan><tspan
+         id="tspan8202">IoT Devices B</tspan><tspan
          sodipodi:role="line"
          x="-21.984587"
          y="519.86572"
@@ -1122,7 +1122,7 @@
          sodipodi:role="line"
          x="291.69025"
          y="583.12378"
-         id="tspan6913-6">Applicazione</tspan></text>
+         id="tspan6913-6">Application</tspan></text>
     <g
        id="g5240-2-8"
        transform="matrix(0.09339235,0,0,0.09339235,237.86641,555.09529)"
@@ -1196,7 +1196,7 @@
          sodipodi:role="line"
          x="-22.637196"
          y="448.78619"
-         id="tspan8202-0">Dispositivi IoT A</tspan><tspan
+         id="tspan8202-0">IoT Devices A</tspan><tspan
          sodipodi:role="line"
          x="-22.637196"
          y="462.53619"
@@ -1236,7 +1236,7 @@
        x="266.98856"
        font-size="11"
        id="text56834-0-4-8-0-89"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Comando per A</text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Command for A</text>
     <path
        inkscape:connector-curvature="0"
        id="path8199-4-6"
@@ -1255,7 +1255,7 @@
        x="104.7277"
        font-size="11"
        id="text56834-0-4-8-0-89-9"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Comando per A</text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Command for A</text>
     <rect
        ry="0"
        rx="0"
@@ -1275,7 +1275,7 @@
          y="477.46017"
          x="278.62738"
          sodipodi:role="line"
-         id="tspan6445-3">Spazio argomento</tspan></text>
+         id="tspan6445-3">Topic space</tspan></text>
     <rect
        x="93.283585"
        y="483.8989"
@@ -1285,12 +1285,11 @@
        style="fill:#ffffff" />
     <text
        sodipodi:linespacing="125%"
-       y="440.40283"
-       x="113.45"
+       y="494.63892"
+       x="100.83678"
        font-size="11"
        id="text56834-0-4-8-0-89-9-0"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.79387379px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
-       transform="scale(0.89035217,1.1231511)">Nessun comando per B</text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">No command for B</text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"

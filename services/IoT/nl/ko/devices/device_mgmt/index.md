@@ -6,7 +6,7 @@ lastupdated: "2017-03-14"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -204,10 +204,10 @@ Topic: iotdm-1/response
 
 디바이스는 위치 업데이트 요청을 사용하여 디바이스의 위치 데이터를 관리합니다. 디바이스의 위치 메타데이터는 다음과 같은 방법으로 {{site.data.keyword.iot_short_notm}}에서 업데이트될 수 있습니다. 
 
-#### 자동 디바이스 위치 업데이트
+### 자동 디바이스 위치 업데이트
 - 디바이스가 위치 업데이트에 대해 {{site.data.keyword.iot_short_notm}}에 알립니다. 디바이스는 GPS 수신기에서 해당 위치를 검색하고 디바이스 관리 메시지를 {{site.data.keyword.iot_short_notm}} 인스턴스에 전송하여 해당 위치를 업데이트합니다. 시간소인은 GPS 수신기에서 위치가 검색된 시간을 캡처합니다. 위치 업데이트 메시지를 보내는 중에 지연이 있어도 시간소인은 유효합니다. 디바이스 관리 메시지에서 시간소인이 생략된 경우에는 메시지 수신의 날짜 및 시간을 사용하여 위치 메타데이터를 업데이트합니다. 
 
-#### REST API를 사용하여 수동 디바이스 위치 업데이트
+### REST API를 사용하여 수동 디바이스 위치 업데이트
 - 디바이스가 등록될 때 {{site.data.keyword.iot_short_notm}} REST API를 사용하여 정적 디바이스의 위치 메타데이터를 수동으로 설정할 수 있습니다. 또한 나중에 위치를 수정할 수도 있습니다. 시간소인 설정은 선택사항이지만, 이를 생략하면 현재 날짜 및 시간이 디바이스의 위치 메타데이터에 설정됩니다. 
 
 ### 디바이스가 트리거하는 위치 업데이트

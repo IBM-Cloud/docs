@@ -100,7 +100,7 @@ Binario | Sin restricciones.
 
 **Importante:** El tamaño de carga útil máximo en {{site.data.keyword.iot_short_notm}} es 131072 bytes. Los mensajes con una carga útil mayor que el límite se rechazarán. El cliente de conexión también está desconectado, y aparece un mensaje en los registros de diagnóstico, tal como se describe en el siguiente ejemplo de mensaje de dispositivo:
 
-`Conexión cerrada desde x.x.x.x. El tamaño de mensaje es demasiado grande para este terminal.`
+`Conexión cerrada desde x.x.x.x. El tamaño de mensaje es demasiado grande para este punto final.`
 
 ## Intervalo de estado activo de MQTT
 {: #mqtt-keep-alive}

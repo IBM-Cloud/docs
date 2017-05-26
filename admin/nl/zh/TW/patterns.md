@@ -30,11 +30,11 @@ lastupdated: "2017-02-22"
 
 {:shortdesc}
 
-設計雲端解決方案時，也請思考帳戶安全，以及作業需求、國家法規、市場指引和公司政策。為了滿足您的專案需求，{{site.data.keyword.Bluemix}} 提供三種類型的雲端環境。 
+設計雲端解決方案時，也請思考帳戶安全，以及作業需求、國家/地區法規、市場指引和公司政策。為了滿足您的專案需求，{{site.data.keyword.Bluemix}} 提供三種類型的雲端環境。 
 
 * [{{site.data.keyword.Bluemix_notm}} 公用](/docs/overview/whatisbluemix.html "{{site.data.keyword.Bluemix_notm}} 公用")：由不同的公司及使用者共用的基礎架構資源。
 * [{{site.data.keyword.Bluemix_notm}} 專用](/docs/dedicated/index.html#dedicated "{{site.data.keyword.Bluemix_notm}} 專用")：您使用自己專用的 SoftLayer 基礎架構，可以將其安全地連接至「{{site.data.keyword.Bluemix_notm}} 公用」雲端和您自己的網路。
-* [{{site.data.keyword.Bluemix_notm}} 本端](/docs/local/index.html#local "{{site.data.keyword.Bluemix_notm}} 本端")：位於公司防火牆後面，可保護您最機密的工作量，並可安全地連接至「{{site.data.keyword.Bluemix_notm}} 公用」和「{{site.data.keyword.Bluemix_notm}} 專用」雲端。
+* [{{site.data.keyword.Bluemix_notm}} 本端](/docs/local/index.html#local "{{site.data.keyword.Bluemix_notm}} 本端")：位於公司防火牆後面，可保護您最機密的工作負載，並可安全地連接至「{{site.data.keyword.Bluemix_notm}} 公用」和「{{site.data.keyword.Bluemix_notm}} 專用」雲端。
 
 在決定您需要哪種類型的雲端環境時，就要計劃帳戶、組織、空間、資源和團隊成員的結構。 
 
@@ -60,7 +60,7 @@ lastupdated: "2017-02-22"
 || 包含一個以上的團隊成員。每一個使用者都必須已經是擁有組織中的團隊成員。每一個團隊成員可以被授與一個以上的角色。 |
 | 團隊成員   | 可以新增至不同帳戶的一個以上組織和空間中。 |
 || 可以在相同的組織及/或空間內被賦予多個角色。 | 
-{: caption="表 1. 重要元素的說明" caption-side="top"}
+{:caption="表 1. 重要元素的說明" caption-side="top"}
 
 ## 決定您的 {{site.data.keyword.Bluemix_notm}} 環境
 {: #bpimplementation}
@@ -105,7 +105,7 @@ lastupdated: "2017-02-22"
 
 若要實作多組織架構，請在「{{site.data.keyword.Bluemix_notm}} 公用」、「{{site.data.keyword.Bluemix_notm}} 專用」或「{{site.data.keyword.Bluemix_notm}} 本端」中建立帳戶。接下來，您可以定義對應於不同 LOB、交付階段、特定專案、使用者許可權或這些元件之組合的組織。然後，您可以根據公司中相同部門交付的應用程式或專案來定義多個空間。 
 
-**附註：**您必須具有可入帳的帳戶（例如「隨收隨付制」或「訂閱」），才能定義多個組織。 
+**附註：**您必須具有計費的帳戶（例如「隨收隨付制」或「訂閱」），才能定義多個組織。 
 
 ### 組織考量
 {: #orgconsiderations}

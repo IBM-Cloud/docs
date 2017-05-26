@@ -576,6 +576,7 @@ wsk action invoke --blocking --result helloPython --param name World
   {
       "greeting": "Hello World!"
   }
+```
 
 ### Creazione pacchetto di azioni Python in file zip
 {: #openwhisk_actions_python_zip}
@@ -829,8 +830,7 @@ Per le seguenti istruzioni, supponiamo che l'ID utente Docker sia `janesmith` e 
   ```
   wsk sdk install docker
   ```
-  ```
-  {: pre}
+ {: pre}
   ```
   La struttura di base Docker è ora installata nella directory corrente.
   ```

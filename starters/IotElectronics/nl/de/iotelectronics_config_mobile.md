@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-07"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -51,7 +51,7 @@ Führen Sie die folgenden Tasks aus, um eine Verbindung zwischen der mobilen App
 
   ![QR-Code für die Verbindung.](images/iot4e_mobile_connect_QR.svg "{{site.data.keyword.iotelectronics}} - QR-Code für die Verbindung")
 
-5. Geben Sie auf Ihrem Mobilgerät die Anmeldeberechtigungsnachweise ein. Ihre Benutzer-ID und Ihr Kennwort können eine beliebige Länge haben. Merken Sie sich Ihre Anmeldeberechtigungsnachweise für zukünftige Sitzungen. Ihr Mobilgerät ist nun in Ihrer {{site.data.keyword.iotelectronics}}-Umgebung registriert und Sie können einzelne Appliances registrieren.
+5. Melden Sie sich auf dem mobilen Gerät optional mit Ihren Facebook- oder Google+-Berechtigungsnachweisen an. Sie können den Anmeldeprozess auch überspringen und die App ohne Anmeldung testen. 
 
 6. Blättern Sie auf Ihrem Computer zu einer simulierten Waschmaschine und klicken Sie darauf, um die Daten und den Appliance-QR-Code dieser Waschmaschine anzuzeigen.
 

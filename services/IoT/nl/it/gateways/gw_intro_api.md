@@ -2,7 +2,7 @@
 
 copyright:
  years: 2015, 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-21"
 
 ---
 
@@ -44,16 +44,16 @@ Per inoltrare una richiesta `POST` da un dispositivo collegato a {{site.data.key
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
 **Note importanti:**
-- Puoi inoltrare gli eventi del dispositivo gateway solo utilizzando la messaggistica HTTP. Utilizza il protocollo di messaggistica MQTT per inviare richieste per la gestione di un altro dispositivo gateway o per le funzioni di controllo. 
-- Le connessioni HTTP possono essere riutilizzate per pubblicare eventi solo per lo stesso dispositivo poiché l'intestazione HTTP non può essere modificata. 
+- Puoi inoltrare gli eventi del dispositivo gateway solo utilizzando la messaggistica HTTP. Utilizza il protocollo di messaggistica MQTT per inviare richieste per la gestione di un altro dispositivo gateway o per le funzioni di controllo.
 - La porta 443, la porta SSL predefinita, può anche essere specificata per le chiamate API HTTP sicure.
-- Se un gateway non è assegnato al ruolo *Gateway standard*, può pubblicare gli eventi al posto di tutti i dispositivi nell'organizzazione. Assegna il ruolo *Gateway standard* se desideri controllare i livelli di autorizzazione del dispositivo e registrarlo automaticamente. **Nota:** questo comportamento è soggetto a modifiche.
+- Se un gateway non è assegnato al ruolo *Gateway standard*, può pubblicare gli eventi al posto di tutti i dispositivi nell'organizzazione. Se il dispositivo collegato al gateway non è registrato, il gateway automaticamente registra tale dispositivo.
+- Assegna il ruolo *Gateway standard* se desideri controllare i livelli di autorizzazione.
 
 Per ulteriori informazioni sul ruolo dei gateway e dei gruppi di risorse, consulta [Controllo accesso gateway (Beta)](../gateways/gateway-access-control.html).
 
 ### Autenticazione
 
-Tutte le richieste devono includere un'intestazione di autorizzazione. L'autenticazione di base è l'unico metodo supportato. Quando un dispositivo effettua una richiesta HTTP utilizzando l'API REST HTTP {{site.data.keyword.iot_short_notm}}, sono necessarie le seguenti credenziali: 
+Tutte le richieste devono includere un'intestazione di autorizzazione. L'autenticazione di base è l'unico metodo supportato. Quando un dispositivo effettua una richiesta HTTP utilizzando l'API REST HTTP {{site.data.keyword.iot_short_notm}}, sono necessarie le seguenti credenziali:
 
 |Credenziale|Input richiesto|
 |:---|:---|
@@ -64,7 +64,7 @@ Dove:
 
 <dl>
 <dt>orgId</dt>  
-<dd>Il nome dell'organizzazione, che deve corrispondere al nome specificato nell'intestazione host. </dd>
+<dd>Il nome dell'organizzazione, che deve corrispondere al nome specificato nell'intestazione host.</dd>
 
 <p></p>
 <dt>gwType</dt>  

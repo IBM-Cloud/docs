@@ -11,7 +11,7 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg5443"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.47 r22583"
    width="717.41003"
    height="166.14514"
    viewBox="0 0 717.41003 166.14514"
@@ -30,6 +30,13 @@
   </metadata>
   <defs
      id="defs5447">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 83.072571 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="717.41003 : 83.072571 : 1"
+       inkscape:persp3d-origin="358.70502 : 55.381714 : 1"
+       id="perspective76" />
     <marker
        style="overflow:visible"
        id="TriangleOutM-3-4-5"
@@ -110,12 +117,12 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1872"
-     inkscape:window-height="994"
+     inkscape:window-width="1440"
+     inkscape:window-height="878"
      id="namedview5445"
      showgrid="false"
      inkscape:zoom="1.5099772"
-     inkscape:cx="187.50421"
+     inkscape:cx="337.64065"
      inkscape:cy="73.734291"
      inkscape:window-x="0"
      inkscape:window-y="0"
@@ -144,7 +151,8 @@
        sodipodi:role="line"
        x="634.20691"
        y="87.619629"
-       id="tspan6913-6">应用程序</tspan></text>
+       id="tspan6913-6"
+       style="-inkscape-font-specification:SimHei;font-family:SimHei">应用程序</tspan></text>
   <g
      id="g5240-2-8"
      transform="matrix(0.09339234,0,0,0.09339234,568.89652,60.861417)"
@@ -179,21 +187,24 @@
        cy="110.6"
        cx="389"
        stroke-miterlimit="10"
-       style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
+       style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 407.6,110.6 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.2725,0 -18.6,-8.3275 -18.6,-18.6 0,-10.2725 8.3275,-18.600002 18.6,-18.600002 10.2725,0 18.6,8.327502 18.6,18.600002 z" />
     <circle
        id="circle5230-5-6"
        r="18.6"
        cy="250"
        cx="389"
        stroke-miterlimit="10"
-       style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
+       style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 407.6,250 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.2725,0 -18.6,-8.3275 -18.6,-18.6 0,-10.2725 8.3275,-18.6 18.6,-18.6 10.2725,0 18.6,8.3275 18.6,18.6 z" />
     <circle
        id="circle5232-6-1"
        r="18.6"
        cy="389.39999"
        cx="389"
        stroke-miterlimit="10"
-       style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
+       style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 407.6,389.39999 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.2725,0 -18.6,-8.3275 -18.6,-18.6 0,-10.27249 8.3275,-18.6 18.6,-18.6 10.2725,0 18.6,8.32751 18.6,18.6 z" />
   </g>
   <rect
      ry="0"
@@ -210,7 +221,11 @@
      x="76.888855"
      font-size="12"
      id="text56820"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">设备类型</text>
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">
+    <tspan
+       style="-inkscape-font-specification:SimHei;font-family:SimHei;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+       id="tspan2882">设备类型</tspan>
+  </text>
   <rect
      ry="0"
      rx="0"
@@ -223,10 +238,14 @@
   <text
      sodipodi:linespacing="125%"
      y="92.702774"
-     x="33.711861"
+     x="47.711861"
      font-size="11"
      id="text56922"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">设备</text>
+     style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Arial;-inkscape-font-specification:Arial">
+    <tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:SimHei;-inkscape-font-specification:SimHei"
+       id="tspan2884">设备</tspan>
+  </text>
   <g
      id="g5278-5"
      transform="matrix(0.7799818,0,0,0.72791181,6.4209107,41.377822)">
@@ -258,7 +277,8 @@
        sodipodi:role="line"
        x="-85.131683"
        y="370.56229"
-       id="tspan7573-7">映射</tspan></text>
+       id="tspan7573-7"
+       style="-inkscape-font-specification:SimHei;font-family:SimHei">映射</tspan></text>
   <rect
      style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none"
      id="rect6559"
@@ -288,7 +308,8 @@
        sodipodi:role="line"
        id="tspan3449"
        x="214.96869"
-       y="33.045166">物理接口定义</tspan></text>
+       y="33.045166"
+       style="-inkscape-font-specification:SimHei;font-family:SimHei">物理接口定义</tspan></text>
   <text
      sodipodi:linespacing="125%"
      id="text13959-6"
@@ -299,7 +320,8 @@
        id="tspan13963-4"
        y="64.980133"
        x="223.97063"
-       sodipodi:role="line">事件类型</tspan></text>
+       sodipodi:role="line"
+       style="-inkscape-font-specification:SimHei;font-family:SimHei">事件类型</tspan></text>
   <flowRoot
      xml:space="preserve"
      id="flowRoot7760"
@@ -314,10 +336,14 @@
        id="flowPara7766" /></flowRoot>  <text
      sodipodi:linespacing="125%"
      y="148.30536"
-     x="208.92773"
+     x="218.92773"
      font-size="11"
      id="text59612-6"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">模式</text>
+     style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Arial;-inkscape-font-specification:Arial">
+    <tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:SimHei;-inkscape-font-specification:SimHei"
+       id="tspan2886">模式</tspan>
+  </text>
   <g
      transform="translate(-217.08902,-244.29984)"
      id="g13549-6"
@@ -372,10 +398,14 @@
   <text
      sodipodi:linespacing="125%"
      y="121.24313"
-     x="459.70425"
+     x="467.70425"
      font-size="11"
      id="text59612-3"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">模式</text>
+     style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Arial;-inkscape-font-specification:Arial">
+    <tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:SimHei;-inkscape-font-specification:SimHei"
+       id="tspan2888">模式</tspan>
+  </text>
   <g
      transform="translate(32.362926,-270.68925)"
      id="g13549-57"
@@ -417,7 +447,8 @@
        sodipodi:role="line"
        x="480.23151"
        y="50.076233"
-       id="tspan7758-4">应用程序接口</tspan></text>
+       id="tspan7758-4"
+       style="-inkscape-font-specification:SimHei;font-family:SimHei">应用程序接口</tspan></text>
   <flowRoot
      xml:space="preserve"
      id="flowRoot7909"

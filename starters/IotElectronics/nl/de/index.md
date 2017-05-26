@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-12"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -22,7 +22,8 @@ Bei {{site.data.keyword.iotelectronics_full}} handelt es sich um eine integriert
 Führen Sie die folgenden Tasks aus, um mit der Nutzung von {{site.data.keyword.iotelectronics}} zu beginnen:
 
 1. [Erstellen simulierter Appliances](https://console.ng.bluemix.net/docs/starters/IotElectronics/iot4ecreatingappliances.html), und zwar mithilfe der {{site.data.keyword.iotelectronics}}-Starter-Webanwendung. Zu Demonstrationszwecken werden Waschmaschinen als simulierte Appliances für den {{site.data.keyword.iotelectronics}}-Starter verwendet. Die von Ihnen zur Herstellung einer Verbindung ausgewählte Appliance kann ein beliebiger Typ von intelligentem Elektronikgerät sein.
-2. [Herunterladen des Beispiels für die mobile App herunter und Verbindung zu dieser App herstellen](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html).
+2. (Optional) [Konfigurieren von Anmeldeoptionen für mobile Geräte mit {{site.data.keyword.appid_full}}](https://console.ng.bluemix.net/docs/services/appid/index.html). Sie können die Darstellung der Anmeldeanzeige anpassen, die in der mobilen App aufgerufen wird. Darüber hinaus können Sie optional auch die Verwendung von Social Media-Anmeldeberechtigungsnachweisen aktivieren oder inaktivieren. Standardmäßig ist die Berechtigung über Facebook und Google+ in {{site.data.keyword.appid_short_notm}} aktiviert und Benutzer mobiler Apps können ihre eigenen Social Media-Berechtigungsnachweise verwenden. Alternativ dazu können sie den Anmeldeprozess überspringen und die App ohne Anmeldung testen. 
+3. [Herunterladen des Beispiels für die mobile App herunter und Verbindung zu dieser App herstellen](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html).
 
 
 ## Weitere Schritte

@@ -73,7 +73,7 @@ lastupdated: "2017-3-16"
 
     * 如果要让管道检查 Bluemix 空间中是否有该服务以及将该服务绑定到容器的应用程序，请选中此复选框。如果不存在该服务或绑定的应用程序，那么管道会将该服务的免费套餐添加到空间。所创建的绑定应用程序名为 `pipeline_bridge_app`。之后，管道会使用 pipeline_bridge_app 中的凭证来访问绑定的服务。
 
-    * 如果您已在 Bluemix 空间中配置该服务和绑定的应用程序，或者如果您想要[手动配置这些需求](/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline){: new_window}，请保持该复选框的未选中状态。
+    * 如果您已在 Bluemix 空间中配置该服务和绑定的应用程序，或者如果您想要[手动配置这些需求](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}，请保持该复选框的未选中状态。
 
   f. 在**等待分析完成的时间（分钟）**字段中，输入 0 到 59 分钟之间的值。缺省值为 5 分钟。作业结束时 Static Analyzer 仪表板的 URL 会显示在控制台日志中。
 
@@ -154,7 +154,7 @@ To create the globalization stage and job:
 
     * If you want the pipeline to check your Bluemix space for the service and an app that binds the service to the container, select this check box. If the service or bound app does not exist, the pipeline adds the free plan of the service to your space for you. The bound app that is created is named `pipeline_bridge_app`. Then, the pipeline uses the credentials from pipeline_bridge_app to access the bound services.
 
-    * If you configured the service and bound app in your Bluemix space already or if you want to [configure these requirements manually](https://www.ng.bluemix.net/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline), leave this check box cleared.
+    * If you configured the service and bound app in your Bluemix space already or if you want to [configure these requirements manually](/docs/containers/container_integrations.html#container_binding_pipeline), leave this check box cleared.
 
   g. For the Globalization bundle prefix, enter a prefix for the bundle name, which is structured in this format: `<globalization_bundle_prefix>.path.to.source.file`. The pipeline job creates this Globalization bundle for you in the Globalization Pipeline service.
 
@@ -206,7 +206,7 @@ For more information about using the Globalization Pipeline service from the Blu
   <tr>
     <td><code>SLACK_WEBHOOK_PATH</code></td>
     <td>URL</td>
-    <td>必要。保存在 Slack 项目设置中的 WebHook URL。</td>
+    <td>必需。保存在 Slack 项目设置中的 WebHook URL。</td>
   </tr>
   <tr>
     <td><code>SLACK_COLOR</code></td>
@@ -219,9 +219,9 @@ For more information about using the Globalization Pipeline service from the Blu
   <tr>
     <td><code>NOTIFY_FILTER</code></td>
     <td>要只接收部分消息类型，请输入以下某个值：<ul>
-      <li><code>good</code>：仅获取 unknown、good 和 info 消息。不发送失败消息。</li>
+      <li><code>good</code>：仅获取未知、成功和参考消息。不发送失败消息。</li>
       <li><code>bad</code>：获取所有消息。</li>
-      <li><code>info</code>：仅获取 info 消息。不发送 Good、bad 和 unknown 消息。</li>
+      <li><code>info</code>：仅获取参考消息。不发送成功、失败和未知消息。</li>
       <li><code>unknown</code>：获取所有消息。</li></ul>
 示例：如果您设置 <code>NOTIFY_FILTER = bad</code>，那么仅会在 Slack 通道中显示错误通知。</td>
     <td>可选。决定要发送通知的消息类型。缺省情况下，会发送成功和失败消息，但不会发送参考消息。<ul><li><code>good</code>：成功的构建结果。</li>
@@ -264,12 +264,12 @@ For more information about using the Globalization Pipeline service from the Blu
   <tr>
     <td><code>HIP_CHAT_TOKEN</code></td>
     <td>字母数字字符串</td>
-    <td>必要。请参阅“开始之前”，以获取创建或复制现有 HipChat 令牌的指示信息。</td>
+    <td>必需。请参阅“开始之前”，以获取创建或复制现有 HipChat 令牌的指示信息。</td>
   </tr>
   <tr>
     <td><code>HIP_CHAT_ROOM_NAME</code></td>
     <td>聊天室名称</td>
-    <td>必要。</td>
+    <td>必需。</td>
   </tr>
   <tr>
     <td><code>HIP_CHAT_COLOR</code></td>
@@ -329,4 +329,4 @@ For more information about using the Globalization Pipeline service from the Blu
   - 构建 Docker 映像
   - 将容器中的映像部署到 Bluemix
 
-有关入门的更多信息，请参阅 [Delivery Pipeline 和容器概述](/docs/containers/container_pipeline_ov.html#container_pipeline_ov){: new_window}。
+有关入门的更多信息，请参阅 [Delivery Pipeline 和容器概述](/docs/containers/container_integrations.html#container_pipeline_ov){: new_window}。

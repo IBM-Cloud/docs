@@ -12,7 +12,7 @@ lastupdated: "2017-03-13"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Connexion d'application
+# Connexion d'applications
 
 Pour connecter votre application à {{site.data.keyword.iot_full}}, vous devez utiliser des clés d'API et des jetons ou lier votre application directement à {{site.data.keyword.iot_short_notm}} dans {{site.data.keyword.Bluemix_notm}}. Pour accorder des droits d'accès, utilisez le tableau de bord des accès.
 {:shortdesc}
@@ -21,7 +21,7 @@ Pour connecter votre application à {{site.data.keyword.iot_full}}, vous devez u
 {: #api-key}
 Les clés d'API vous permettent de connecter des applications à votre organisation {{site.data.keyword.iot_short_notm}}. Les applications requièrent une clé d'API pour se connecter à une organisation, ainsi qu'un jeton d'authentification unique qui doit être utilisé avec cette clé d'API.  
 
-Pour plus d'informations sur les connexions d'application, voir [MQTT Connectivity for Applications ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/applications/mqtt.html){: new_window} dans la documentation du développeur. 
+Pour plus d'informations sur les connexions d'application, voir [MQTT Connectivity for Applications ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/applications/mqtt.html){: new_window} dans la documentation du développeur.
 
 Pour créer une paire clé d'API/jeton d'authentification :  
 1.	Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, accédez à **Applications > Clés d'API**.  

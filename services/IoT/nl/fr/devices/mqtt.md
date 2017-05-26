@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-11-17"
+lastupdated: "2017-03-21"
 
 ---
 
@@ -59,7 +59,7 @@ Le mot de passe de chaque terminal est le jeton d'authentification unique qui a 
 
 Les terminaux effectuent des publications sur les sujets d'événement au format suivant :
 
-<pre class="pre">iot-2/evt/<var class="keyword varname">event_id</var>/fmt/<var class="keyword varname">format_string</var></pre>
+<pre class="pre"><code class="hljs">iot-2/evt/<var class="keyword varname">event_id</var>/fmt/<var class="keyword varname">format_string</var></code></pre>
 {: codeblock}
 
 Où
@@ -78,7 +78,7 @@ Les organisations {{site.data.keyword.iot_short_notm}} ne sont pas autorisées �
 
 Les terminaux peuvent s'abonner à des sujets de commande en utilisant le format suivant :
 
-<pre class="pre">iot-2/cmd/<var class="keyword varname">command_id</var>/fmt/<var class="keyword varname">format_string</var></pre>
+<pre class="pre"><code class="hljs">iot-2/cmd/<var class="keyword varname">command_id</var>/fmt/<var class="keyword varname">format_string</var></code></pre>
 {: codeblock}
 
 Où
@@ -126,7 +126,7 @@ Tous les messages sont envoyés au format JSON.
 **Demandes**  
 Les demandes sont formatées comme illustré dans l'exemple de code suivant :
 
-<pre class="pre">{  "d": {...}, "<var class="keyword varname">reqId</var>": "b53eb43e-401c-453c-b8f5-94b73290c056" }</pre>
+<pre class="pre"><code class="hljs">{  "d": {...}, "<var class="keyword varname">reqId</var>": "b53eb43e-401c-453c-b8f5-94b73290c056" }</code></pre>
 {: codeblock}
 
 Où :

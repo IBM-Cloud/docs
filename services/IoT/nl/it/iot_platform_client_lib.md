@@ -12,7 +12,7 @@ lastupdated: "2017-03-13"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Librerie client per lo sviluppo {{site.data.keyword.iot_short}}
+# Librerie client per lo sviluppo {{site.data.keyword.iot_short_notm}}
 {: #iot_platform_client_lib}
 
 Le librerie client forniscono gli strumenti e i file necessari per creare e sviluppare il codice per l'integrazione e la connettività dei tuoi dispositivi e applicazioni su {{site.data.keyword.iot_full}}.
@@ -38,7 +38,7 @@ Le librerie client vengono fornite per tutti i linguaggi di programmazione suppo
 - [More documentation ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/iot-embeddedc/blob/master/README.md){:new_window}
 
 
-## Java™
+## Java
 - [Client library ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/iot-java){:new_window}
 - [Samples ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/iot-java#samples){:new_window}
 - [More documentation ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/iot-java/blob/master/README.md){:new_window}
@@ -65,7 +65,7 @@ Le librerie client vengono fornite per tutti i linguaggi di programmazione suppo
 - [Samples ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/iot-python/tree/master/samples){:new_window}
 - [More documentation ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/iot-python/blob/master/README.rst){:new_window}
 
-## Introduzione allo sviluppo {{site.data.keyword.iot_short}}
+## Introduzione allo sviluppo {{site.data.keyword.iot_short_notm}}
 
 Per iniziare a sviluppare il codice per {{site.data.keyword.iot_short_notm}} utilizzando le librerie client disponibili, consulta le seguenti sezioni della documentazione {{site.data.keyword.Bluemix_notm}}:
 

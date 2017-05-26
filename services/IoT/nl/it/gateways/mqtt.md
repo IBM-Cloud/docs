@@ -139,7 +139,7 @@ Dove
 -   `Request_Type` i valori sono `publish` o `subscribe`
 -   `Timestamp` è l'ora nel formato ISO 8601
 -   `Topic` è l'argomento richiesto dal gateway
--   `Device_Type` è il tipo di dispositivo dall'argomento
+-   `Device_Type` è il tipo dispositivo dall'argomento
 -   `Device_Id` è l'ID del dispositivo dall'argomento
 -   `Client_ID` è l'ID client della richiesta
 -   `Return_Code` è il codice di ritorno
@@ -148,7 +148,7 @@ Dove
 Un gateway può ricevere le seguenti notifiche:
 
 -   L'argomento non corrisponde ad alcuna regola dell'argomento consentita.
--   Il tipo di dispositivo non è valido.
+-   Il tipo dispositivo non è valido.
 -   L'ID del dispositivo non è valido.
 -   È stato raggiunto il numero massimo di dispositivi per gateway.
 -   È stato raggiunto il numero massimo di dispositivi per organizzazione.

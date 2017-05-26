@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-06-29"
+lastupdated: "2017-03-20"
 
 ---
 
@@ -25,7 +25,7 @@ Prima di poter visualizzare i tuoi dati, devi eseguire le seguenti azioni:
 
 - Registra i tuoi dispositivi nella tua organizzazione {{site.data.keyword.iot_short_notm}}.
 - Assicurati che i tuoi dispositivi stiano inviando eventi a {{site.data.keyword.iot_short_notm}}.
-- [Scarica l'esempio di visualizzazione](https://github.com/ibm-messaging/iot-visualization/archive/v0.2.0.zip) dal repository github ed estrai il file .zip.
+- [Scarica l'esempio di visualizzazione](https://github.com/ibm-watson-iot/rickshaw4iot/archive/master.zip) dal repository github ed estrai il file .zip.
 - [Installa lo strumento di riga di comando cf](../../starters/install_cli.html) da {{site.data.keyword.Bluemix_notm}}.
 
 ## Esecuzione dell'esempio in {{site.data.keyword.Bluemix_notm}}
@@ -106,13 +106,4 @@ Il file di riferimento della libreria MQTT Paho per la sottoscrizione agli argom
 
 Gli eventi del dispositivo trasmessi al file `realtimeGraph.js` per tracciare il grafico.
 
-## Personalizzazione della visualizzazione dei dati cronologici
-{: #customize_historical_display}
-
-La directory che contiene il codice di visualizzazione grafica per i dati del dispositivo cronologici è `public/js/historian`. La logica dei grafici può essere personalizzata modificando `public/js/historian/historianGraph.js`.
-
-Il file che controlla le chiamate API ReST per raccogliere i dati del dispositivo cronologici è `public/js/historian/historian.js`.
-
-I dati cronologici sono trasmessi al file `historianGraph.js` per tracciare il grafico.
-
-È disponibile una guida degli sviluppatori più dettagliata nella pagina wiki relativa alla visualizzazione iot Github.
+È disponibile una guida degli sviluppatori più dettagliata nella pagina wiki [Github ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/rickshaw4iot/wiki){:new_window}.

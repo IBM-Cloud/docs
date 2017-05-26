@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-31"
+lastupdated: "2017-4-25"
+
 ---
 
 {:new_window: target="_blank"}
@@ -11,7 +12,7 @@ lastupdated: "2017-3-31"
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# Edición de código con el IDE de Eclipse Orion 
+# Desarrollo con Eclipse Orion Web IDE
 {: #web_ide}
 
 Eclipse Orion {{site.data.keyword.webide}} es un entorno de desarrollo basado en navegador donde puede desarrollar para la web. Puede desarrollar en JavaScript, HTML y CSS con la ayuda de asistencia de contenido, finalización del código y comprobación de errores. {{site.data.keyword.webide}} funciona con casi cualquier lenguaje y ofrece resaltado de la sintaxis para la mayoría de los tipos de archivos. El control de origen está integrado y puede desplegar código de forma local para probar y depurar las apps.
@@ -19,22 +20,22 @@ Eclipse Orion {{site.data.keyword.webide}} es un entorno de desarrollo basado en
 
 Lo mejor de todo es que {{site.data.keyword.webide}} está basado en la web. No tiene que instalar, mantener ni escalar nada. Puede desarrollar en cualquier lugar donde tenga conexión a Internet.
 
-## Configuración del editor
+## Configuración del IDE
 {: #editorsetup}
 
-{{site.data.keyword.webide}} se puede personalizar para que pueda elegir los esquemas de colores, las herramientas técnicas y los valores que cumplan sus necesidades de desarrollo. Para ver y modificar los valores, desde el menú de la izquierda, pulse el icono **Valores** <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="El icono Valores">. 
+{{site.data.keyword.webide}} se puede personalizar para que pueda elegir los esquemas de colores, las herramientas técnicas y los valores que cumplan sus necesidades de desarrollo. Para ver y modificar los valores, desde el menú de la izquierda, pulse el icono **Valores** <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="El icono Valores">.
 
-Si necesita a menudo cambiar determinados valores mientras edita, puede acceder a dichos valores rápidamente desde el icono **Valores de editor local** <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="Icono Valores de editor local">.  
+Si necesita a menudo cambiar determinados valores mientras edita, puede acceder a dichos valores rápidamente desde el icono **Valores de editor local** <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="Icono Valores de editor local">. 
 
 ![Valores de editor local](images/webide_local_editor_settings_light.png)
 
 De forma predeterminada, siempre se muestran los valores para el estilo del editor y el tamaño de fuente. Para incluir otros valores de editor en el menú, siga estos pasos:
 
-1. Pulse el icono **Valores de editor local** <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="Icono valores de editor local">. 
+1. Pulse el icono **Valores de editor local** <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="Icono valores de editor local">.
 
 2. Pulse **Valores del editor**.
 
-3. Para incluir o excluir un valor del menú **Valores del editor local**, pulse la estrella que hay junto a cada valor. 
+3. Para incluir o excluir un valor del menú **Valores del editor local**, pulse la estrella que hay junto a cada valor.
 
 ![Conmutador Valores de editor](images/webide_editor_settings_toggle_light.png)
 
@@ -51,7 +52,7 @@ La segunda sección es el panel del editor. El editor proporciona varias caracte
 ![Web IDE](images/webide_light.png)
 
 ### Cómo trabajar con varios archivos
-1. Para trabajar con dos archivos a la vez, pulse el icono **Cambiar modo de editor de división** <img class="inline" src="images/webide_split_editor_icon_light_small.png"  alt="Icono Editor de división">. 
+1. Para trabajar con dos archivos a la vez, pulse el icono **Cambiar modo de editor de división** <img class="inline" src="images/webide_split_editor_icon_light_small.png"  alt="Icono Editor de división">.
 2. Desde el menú que se abre, seleccione una vista.
 
  Tras seleccionar una vista, si ya se ha abierto un archivo en el editor, se mostrará en ambas vistas de editor.
@@ -68,7 +69,7 @@ Para ver una lista de los accesos directos de teclado en el editor, pulse Alt+Ma
 ## Gestión del código fuente
 {: #sourcecontrol}
 
-{{site.data.keyword.webide}} se integra con herramientas de gestión de código fuente. Para trabajar con el repositorio de Git, pulse el icono **Repositorio de Git** <img class="inline" src="images/webide_git_icon_light_small.png"  alt="El icono Repositorio de Git">.  
+{{site.data.keyword.webide}} se integra con herramientas de gestión de código fuente. Para trabajar con el repositorio de Git, pulse el icono **Repositorio de Git** <img class="inline" src="images/webide_git_icon_light_small.png"  alt="El icono Repositorio de Git">. 
 
  **Consejo**: Si utiliza {{site.data.keyword.webide}} con cadenas de herramientas abiertas, el espacio de trabajo ya contiene su GitHub, {{site.data.keyword.ghe_short}} o repositorios de Git Repos and Issue Tracking. Los repositorios que están asociados a la cadena de herramientas actual aparecen resaltados.
 
@@ -76,7 +77,7 @@ Para ver una lista de los accesos directos de teclado en el editor, pulse Alt+Ma
 ## Despliegue de una app desde el espacio de trabajo
 {: #deploy}
 
-1. Para desplegar la app, desde la barra de ejecución, seleccione o cree una configuración de inicio. 
+1. Para desplegar la app, desde la barra de ejecución, seleccione o cree una configuración de inicio.
 1. Pulse el icono de despliegue <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="icono de despliegue">. Se desplegará una instancia de la app utilizando el contenido actual del espacio de trabajo y del entorno definido en la configuración de lanzamiento. 
 2. Una vez que se despliegue la app, puede utilizar la barra de ejecución para detener, reiniciar o depurar la app, ver registros, etc.
 ![Barra de ejecución](images/webide_runbar_light.png)    

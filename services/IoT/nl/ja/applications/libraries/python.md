@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-04"
 
 ---
 
@@ -375,7 +375,7 @@ except IoTFCReSTException as e:
     print("ERROR [" + e.httpcode + "] " + e.message)
 ```
 
-要求と応答のモデルや HTTP 状況コードについては、[{{site.data.keyword.iot_short_notm}} API ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} の『Organization Configuration』セクションを参照してください。
+要求と応答のモデルや HTTP 状況コードについては、[{{site.data.keyword.iot_short_notm}} API ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} の『Organization Configuration』セクションを参照してください。
 
 
 ## デバイスの一括操作
@@ -383,7 +383,7 @@ except IoTFCReSTException as e:
 
 アプリケーションで一括操作を使用して、複数のデバイスを同時に取得、追加、削除できます。
 
-照会パラメーター、要求と応答のモデル、HTTP 状況コードのリストについては、[{{site.data.keyword.iot_short_notm}} API ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/){: new_window} の『Bulk Operations』セクションを参照してください。
+照会パラメーター、要求と応答のモデル、HTTP 状況コードのリストについては、[{{site.data.keyword.iot_short_notm}} API ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} の『Bulk Operations』セクションを参照してください。
 
 
 ### デバイス情報の取得
@@ -601,7 +601,7 @@ except IoTFCReSTException as e:
 API で利用できるデバイス操作には、{{site.data.keyword.iot_short_notm}} 組織内のデバイスのリスト作成、追加、削除、表示、更新、ロケーションの表示、デバイス管理情報の表示などがあります。
 
 
-照会パラメーター、要求と応答のモデル、HTTP 状況コードについては、[{{site.data.keyword.iot_short_notm}} API ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} の『Devices』セクションを参照してください。
+照会パラメーター、要求と応答のモデル、HTTP 状況コードについては、    [{{site.data.keyword.iot_short_notm}} API 資料 ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}の『Devices』セクションを参照してください。
 
 
 ### 特定のデバイス・タイプのデバイスの取得
@@ -754,7 +754,7 @@ apiCli.getDeviceManagementInformation("iotsample-arduino", "00aabbccde03")
 - デバイス・エラー・コードの取得
 - エラー・コードの追加
 
-照会モデルと応答モデル、応答コード、照会パラメーターについて詳しくは、[{{site.data.keyword.iot_short_notm}} API 資料 ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} を参照してください。
+照会モデルと応答モデル、応答コード、照会パラメーターについて詳しくは、 [{{site.data.keyword.iot_short_notm}} API 資料 ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} を参照してください。
 
 ### 診断ログの取得
 

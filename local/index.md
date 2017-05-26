@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-04-11"
+lastupdated: "2017-05-23"
 
 
 ---
@@ -69,7 +69,7 @@ There are optional components that are available for you to purchase to scale an
 
 **Note**: {{site.data.keyword.Bluemix_notm}} Local components might indicate a specific configured capacity, such as gigabytes or transactions per second. Because actual capacity in practice for any configuration of the cloud service varies depending on many factors, the actual capacity in practice might be more or less than the configured capacity.
 
-### Syndicated catalog
+## Syndicated catalog
 {: #cataloglocal}
 
 {{site.data.keyword.Bluemix_local_notm}} includes a private catalog that brings together approved services across your public and local deployments. You can even publish and manage access to your own services through the {{site.data.keyword.Bluemix_notm}} catalog. You have the option to decide which public services meet the requirements for your business, based on your data privacy and security criteria.

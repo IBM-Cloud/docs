@@ -27,9 +27,9 @@ Lleve a cabo las tareas siguientes para crear una consulta para los registros de
     
     Se muestran los registros de la app.
 
-2. Acceda al panel de control de Kibana de la app. Para ello, pulse **Vista avanzada** ![Enlace de vista avanzada](images/logging_advanced_view.jpg). Se visualiza el panel de control de Kibana.
+2. Acceso al panel de control de Kibana para su app. Pulse **Vista avanzada** ![Enlace Vista avanzada](images/logging_advanced_view.jpg "Enlace Vista avanzada"). Se visualiza el panel de control de Kibana.
 
-3. En el panel de control de Kibana, pulse **CONSULTA** ![icono Consulta](images/logging_query.jpg) para visualizar el campo. Cuando se accede a Kibana para ver los registros de la app desde el separador **Registros** de la app, se crea una consulta para mostrar todos los registros correspondientes al application_id de la app.
+3. En el panel de control de Kibana, pulse **CONSULTA** ![Icono Consulta](images/logging_query.jpg "Icono Consulta") para visualizar el campo. Cuando se accede a Kibana para ver los registros de la app desde el separador **Registros** de la app, se crea una consulta para mostrar todos los registros correspondientes al application_id de la app.
 	
     Para editar la consulta, pulse el campo **CONSULTA** y especifique un término de búsqueda.
 
@@ -41,28 +41,28 @@ Lleve a cabo las tareas siguientes para crear una consulta para los registros de
 
 4. Si desea comparar los resultados de dos consultas, puede añadir otro término de consulta al panel de control. Para añadir otra consulta, pulse el icono **+** situado en el final del campo **CONSULTA**.
 
-    ![Campo de consulta](images/logging_query_field.jpg)
+    ![Campo Consulta](images/logging_query_field.jpg "Campo Consulta")
 	
     Se muestra un nuevo campo **CONSULTA** que contiene el carácter comodín \*. Esta consulta indica a Kibana que incluya todas las entradas.
 	
-    ![Campo Consulta adicional](images/logging_additional_query_field.jpg)
+    ![Campo consulta adicional](images/logging_additional_query_field.jpg "Campo Consulta adicional")
 	
     El panel de control se actualiza con los resultados de la consulta nueva. El panel **SUCESOS POR TIEMPO** muestra una representación gráfica de ambas consultas, junto con el número de términos para cada consulta entre paréntesis. 
 	
-    ![Panel de control que muestra un gráfico para ambas consultas](images/logging_dashboard_queries.jpg)
+    ![Panel de control que muestra un gráfico para ambas consultas](images/logging_dashboard_queries.jpg "Panel de control que muestra un gráfico para ambas consultas")
 	
 5. Pulse el nuevo campo **CONSULTA** para editar su contenido y añadir una condición de consulta; por ejemplo, `instance_id:1`. Utilice el panel **SUCESOS POR TIEMPO** para comparar los resultados de las consultas.
 
-    ![Panel de control que muestra un gráfico para ambas consultas](images/logging_dashboard_queries2.jpg)
+    ![Panel de control que muestra un gráfico para ambas consultas](images/logging_dashboard_queries2.jpg "Panel de control que muestra un gráfico para ambas consultas")
 
 6. Para suprimir una consulta, mueva el ratón sobre el campo **CONSULTA** que desea suprimir hasta que aparezca el icono **suprimir**. Pulse el icono **suprimir**.
 
-    ![Campo de consulta con icono de supresión](images/logging_delete_query.jpg)
+    ![Campo de consulta con icono de supresión](images/logging_delete_query.jpg "Campo de consulta con icono de supresión")
 
-7. Para guardar este panel de control con un nombre que pueda reconocer, pulse el icono **Guardar** ![icono Guardar](images/logging_save.jpg) y escriba un nombre para el panel de control. 
+7. Para guardar este panel de control con un nombre que pueda reconocer, pulse el icono **Guardar** ![Icono Guardar](images/logging_save.jpg "Icono Guardar") y especifique un nombre para su panel de control. 
 
     **Nota:** si intenta guardar un panel de control con un nombre que contenga espacios en blanco, no se guardará. Escriba un nombre sin espacios y pulse el icono **Guardar**.
 
-    ![Guarde el nombre del panel de control ](images/logging_save_dashboard.jpg)
+    ![Guardar nombre del panel de control](images/logging_save_dashboard.jpg "Guardar nombre del panel de control")
 
 

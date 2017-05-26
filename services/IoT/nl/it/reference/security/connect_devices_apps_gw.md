@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-19"
+lastupdated: "2017-04-05"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-01-19"
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# Connessione di applicazioni, dispositivi e gateway a {{site.data.keyword.iot_short_notm}}
+# Connessione di applicazioni, dispositivi e gateway utilizzando l'API
 {: #connect_devices_apps_gw}
 
 Puoi collegare le applicazioni, i dispositivi e i gateway a {{site.data.keyword.iot_full}} tramite il protocollo MQTT. Puoi anche utilizzare l'API REST HTTP per collegare i dispositivi a {{site.data.keyword.iot_short_notm}}.
@@ -31,7 +31,7 @@ Per collegare i client dispositivo, applicazione e gateway alla tua stanza {{sit
 
 ### API REST HTTP per l'URL di connessione
 
-<pre class="pre">https://<var class="keyword varname">orgId</var>.internetofthings.ibmcloud.com/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.internetofthings.ibmcloud.com/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 {: codeblock}
 
 **Note
@@ -122,7 +122,7 @@ Dove
 - *orgId* è l'ID dell'organizzazione a sei caratteri univoco generato quando hai registrato il servizio.
 - *appId* è un identificativo stringa univoco definito dall'utente per il client.
 - *deviceId* identifica univocamente un dispositivo o un gateway tra tutti i tipi ed è simile a un numero di serie.
-- *device_type* è l'identificativo del tipo di dispositivo collegato ed è simile al numero di modello.
+- *device_type* è l'identificativo del tipo dispositivo collegato ed è simile al numero di modello.
 - *typeId* è un identificativo del tipo di gateway collegato ed è simile al numero di modello.
 
 I valori *appId*, *type_id*, *device_type* e *device_id* non devono essere maggiori di 36 caratteri e possono contenere solo:

@@ -2,16 +2,18 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-04-20"
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
-# ゲートウェイ・アクセス制御 (ベータ)
-
-**重要**: この機能は、現在、限定的なベータ版で提供されています。
+# ゲートウェイ・アクセス制御
+{: #gateway-access-control}
 
 ゲートウェイ・デバイスは他のデバイスの代理として動作する権限を持ちます。ゲートウェイ・リソース・グループは、各ゲートウェイが組織内のどのデバイスの代理として動作するのかを定義します。ゲートウェイには*標準ゲートウェイ*役割を割り当てることができます。標準ゲートウェイは、リソース・グループ内のデバイスの代理としてメッセージのパブリッシュまたはサブスクライブのみを行うことができます。
 {: #shortdesc}
@@ -30,7 +32,7 @@ API を使用してゲートウェイ・デバイスからイベントをパブ�
 PUT /authorization/devices/{deviceId}/roles
 ```
 
-要求スキーマについて詳しくは、[{{site.data.keyword.iot_full}} API 資料 ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_authorization_devices_deviceId_roles){: new_window}を参照してください。
+要求スキーマの詳細については、[{{site.data.keyword.iot_full}} 限定版ゲートウェイ API の資料![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_authorization_devices_deviceId_roles){: new_window}を参照してください。
 
 ## リソース・グループのデバイスの追加と削除
 {: #devices_groups}
@@ -41,7 +43,7 @@ PUT /authorization/devices/{deviceId}/roles
  PUT /bulk/devices/{groupId}/add
 ```
 
-デバイスを追加するグループは、要求のパス内に指定されている必要があります。また、追加するデバイスは、要求の本文に指定されている必要があります。要求スキーマと応答について詳しくは、[{{site.data.keyword.iot_short_notm}} API 資料 ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_add){: new_window}を参照してください。
+デバイスを追加するグループは、要求のパス内に指定されている必要があります。また、追加するデバイスは、要求の本文に指定されている必要があります。要求スキーマと応答の詳細については、[{{site.data.keyword.iot_short_notm}} 限定版ゲートウェイ API の資料![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_add){: new_window}を参照してください。
 
 リソース・グループから複数のデバイスを除去するには、以下の API を使用します。
 
@@ -49,7 +51,7 @@ PUT /authorization/devices/{deviceId}/roles
 PUT /bulk/devices/{groupId}/remove
 ```
 
-要求の本文に指定されているデバイスが、要求のパス内に指定されているグループから除去されます。要求スキーマと応答について詳しくは、[{{site.data.keyword.iot_short_notm}} API 資料 ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_remove){: new_window}を参照してください。
+要求の本文に指定されているデバイスが、要求のパス内に指定されているグループから除去されます。要求スキーマと応答の詳細については、[{{site.data.keyword.iot_short_notm}} 限定版ゲートウェイ API の資料![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_remove){: new_window}を参照してください。
 
 ## リソース・グループの検索
 {: #finding_groups}
@@ -68,7 +70,7 @@ GET /groups
 GET /authorization/devices/{deviceId}
 ```
 
-この API によって、このデバイスが所属するリソース・グループの固有 ID が返されます。この API について詳しくは、[{{site.data.keyword.iot_short_notm}} API 資料 ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_authorization_devices_deviceId){: new_window} を参照してください。
+この API によって、このデバイスが所属するリソース・グループの固有 ID が返されます。この API の詳細については、[{{site.data.keyword.iot_short_notm}} 限定版ゲートウェイ API の資料![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_authorization_devices_deviceId){: new_window}を参照してください。
 
 
 ## リソース・グループの照会
@@ -82,7 +84,7 @@ GET /authorization/devices/{deviceId}
 GET /bulk/devices/{groupId}
 ```
 
-この API によって、指定のリソース・グループのすべてのメンバーの完全なプロパティー・リストが返されます。要求スキーマ、応答、結果のページ送り方法について詳しくは、[{{site.data.keyword.iot_short_notm}} API 資料 ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_bulk_devices_groupId){: new_window} を参照してください。
+この API によって、指定のリソース・グループのすべてのメンバーの完全なプロパティー・リストが返されます。要求スキーマ、応答、結果のページ送りの詳細については、[{{site.data.keyword.iot_short_notm}} 限定版ゲートウェイ API の資料![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_bulk_devices_groupId){: new_window}を参照してください。
 
 リソース・グループのメンバーの固有 ID のみを返すには、以下の API を使用します。
 
@@ -131,7 +133,7 @@ DELETE /groups/{groupId}
 API を使用してデバイス・プロパティーを取得する方法はいくつかあります。API によって返される情報が異なります。{{site.data.keyword.iot_short_notm}} 組織に接続されたすべてのデバイスのデバイス・プロパティーを取得するには、以下の API を使用します。
 
 ```
-GET /authorization/devices:
+GET /authorization/devices
 
 ```
 
@@ -148,7 +150,7 @@ GET /authorization/devices/{deviceId}
 指定のデバイスのアクセス制御情報を取得するには、以下の API を使用します。
 
 ```
-GET /authorization/devices/{deviceId}/roles:
+GET /authorization/devices/{deviceId}/roles
 ```
 
 この API によって、指定のデバイスのアクセス制御関連の情報が返され、他のデバイス・プロパティーは返されません。<!-- For more information on the request schema and responses, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
@@ -166,7 +168,7 @@ PUT /authorization/devices/{deviceId}
 指定のデバイスのアクセス制御プロパティーのみを更新するには、以下の API を使用します。
 
 ```
-PUT /authorization/devices/{deviceId}/withroles:
+PUT /authorization/devices/{deviceId}/withroles
 ```
 
 この API によって、指定のデバイスのアクセス制御プロパティーのみ更新されます。<!-- For more information on the request schema, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->

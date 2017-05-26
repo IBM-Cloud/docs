@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-03-21"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -21,7 +21,7 @@ Puoi utilizzare Java™ per creare e personalizzare i dispositivi che interagisc
 ## Scaricare le risorse e il client Java
 {: #java_client_download}
 
-Per accedere agli esempi e alle librerie client Java per {{site.data.keyword.iot_short_notm}}, vai al repository [iot-java ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/iot-java){: new_window} in GitHub e completa le istruzioni di installazione.
+Per accedere agli esempi e alle librerie client Java per {{site.data.keyword.iot_short_notm}}, vai al repository [iot-java ![Icona link esterno](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-java){: new_window} in GitHub e completa le istruzioni di installazione.
 
 ## Constructor
 {: #constructor}
@@ -296,7 +296,7 @@ In aggiunta all'utilizzo di MQTT, puoi anche configurare i tuoi dispositivi in m
 2. Crea un evento che deve essere pubblicato.
 3. Specifica il nome dell'evento e quindi pubblicalo utilizzando il metodo `publishEventOverHTTP()`, come mostrato nel seguente esempio di codice:
 
-``` sourceCode
+``` 
 DeviceClient myClient = new DeviceClient(deviceProps);
 
 JsonObject event = new JsonObject();
@@ -307,7 +307,7 @@ JsonObject event = new JsonObject();
 boolean response  = myClient.api().publishDeviceEventOverHTTP("blink", event, ContentType.json);
 ```
 
-Per visualizzare il codice completo, consulta l'esempio del dispositivo [HttpDeviceEventPublish].
+Per visualizzare il codice completo, consulta l'esempio del dispositivo [HttpDeviceEventPublish ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")].{: new_window}
 
 In base alle impostazioni nel file delle proprietà, il metodo `publishEventOverHTTP()` pubblica l'evento in modalità Quickstart o nella modalità del flusso registrato. Quando l'ID dell'organizzazione nel file delle proprietà è impostato su `quickstart`, il metodo `publishEventOverHTTP()` pubblica l'evento nel servizio quickstart di esempio del dispositivo e lo pubblica nel formato HTTP semplice. Quando viene specificata un'organizzazione registrata valida nel file delle proprietà, gli eventi sono pubblicati in modo sicuro tramite HTTPS.
 
@@ -329,7 +329,7 @@ I messaggi vengono restituiti come un'istanza della classe `Command`, che contie
 |`timestamp`   |org.joda.time.DateTime|La data e l'ora dell'evento.|
 
 
-``` sourceCode
+```
 package com.ibm.iotf.sample.client.device;
 
 import java.util.Properties;

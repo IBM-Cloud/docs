@@ -12,7 +12,7 @@ lastupdated: "2017-03-13"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Bibliothèques client pour le développement {{site.data.keyword.iot_short}}
+# Bibliothèques client pour le développement {{site.data.keyword.iot_short_notm}}
 {: #iot_platform_client_lib}
 
 Les bibliothèques client fournissent les outils et les fichiers dont vous avez besoin pour générer et développer du code afin d'intégrer et de connecter vos terminaux et vos applications sur {{site.data.keyword.iot_full}}.
@@ -65,7 +65,7 @@ Des bibliothèques client sont fournies pour chacun des langages de programmatio
 - [Exemples ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-python/tree/master/samples){:new_window}
 - [Documentation supplémentaire ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-python/blob/master/README.rst){:new_window}
 
-## Initiation au développement {{site.data.keyword.iot_short}}
+## Initiation au développement {{site.data.keyword.iot_short_notm}}
 
 Pour commencer à développer le code pour {{site.data.keyword.iot_short_notm}} à l'aide des bibliothèques client disponibles, voir les sections suivantes dans la documentation de {{site.data.keyword.Bluemix_notm}} :
 

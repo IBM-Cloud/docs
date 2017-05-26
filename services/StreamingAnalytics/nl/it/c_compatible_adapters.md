@@ -2,10 +2,10 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-04-13"
 ---
 
-<!-- Attribute definitions --> 
+<!-- Attribute definitions -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -21,6 +21,7 @@ le funzioni e gli operatori compositi o primitivi riutilizzabili per diverse app
 {:shortdesc}
 
 ##Internet Toolkit
+{: #internet notoc}
 
 Internet Toolkit (com.ibm.streamsx.inet) fornisce supporto per i protocolli Internet comuni. Questo toolkit è integrato in {{site.data.keyword.streamsshort}} ed è disponibile nel tuo ambiente di sviluppo {{site.data.keyword.streamsshort}}.
 
@@ -49,6 +50,7 @@ da [IBMStreams on GitHub](https://github.com/IBMStreams){:new_window}. In seguit
 sul tuo ambiente di sviluppo {{site.data.keyword.streamsshort}}.
 
 ##IoT Integration Toolkit
+{: #iot notoc}
 
 IoT Integration Toolkit (com.ibm.streamsx.iot) fornisce connettività con {{site.data.keyword.iot_full}}. Le applicazioni {{site.data.keyword.streamsshort}} possono utilizzare questo toolkit per
 fornire l'analisi in tempo reale su tutti gli eventi da centinaia di dispositivi, incluso
@@ -75,9 +77,10 @@ La seguente tabella elenca gli operatori forniti da IoT Integration Toolkit.
 Per ulteriori informazioni sugli operatori compatibili di IoT Integration Toolkit, vedi [Operators: com.ibm.streamsx.iot Toolkit](http://www.ibm.com/support/knowledgecenter/SSCRJU_4.2.0/com.ibm.streams.toolkits.doc/spldoc/dita/tk$com.ibm.streamsx.iot/ix$Operator.html?lang=en){:new_window} nella documentazione del prodotto {{site.data.keyword.streamsshort}}.
 
 ##Messaging Toolkit
+{: #messaging notoc}
 
 Il progetto Messaging Toolkit (com.ibm.streamsx.messaging) è un progetto toolkit  {{site.data.keyword.streamsshort}} open source. È incentrato sullo sviluppo degli operatori e delle funzioni che ti aiutano nell'utilizzo di {{site.data.keyword.streamsshort}} per interagire con i sistemi di messaggistica come
-Kafka, JMS, XMS e MQTT. 
+Kafka, JMS, XMS e MQTT.
 
 Questo toolkit è integrato in {{site.data.keyword.streamsshort}} ed è disponibile nel tuo ambiente di sviluppo {{site.data.keyword.streamsshort}}.
 
@@ -102,7 +105,7 @@ sul tuo ambiente di sviluppo {{site.data.keyword.streamsshort}}.
 
 Per informazioni sulle limitazioni del toolkit, vedi [Restrictions for the {{site.data.keyword.streamsshort}} specialized toolkits](http://www.ibm.com/support/knowledgecenter/SSCRJU_4.2.0/com.ibm.streams.install.doc/doc/ibminfospherestreams-install-toolkit-restrictions.html){:new_window}.
 
-**Nota**: per utilizzare JMSSource, JMSSink, XMSSource, XMSSink con WebSphere MQ, completa la seguente procedura nel tuo ambiente di sviluppo: 
+**Nota**: per utilizzare JMSSource, JMSSink, XMSSource, XMSSink con WebSphere MQ, completa la seguente procedura nel tuo ambiente di sviluppo:
 
 1. Vai a [IBMStreams on GitHub](https://github.com/IBMStreams){:new_window} e scarica Messaging Toolkit (com.ibm.streamsx.messaging) versione 3.0.0 o successiva nel tuo ambiente di sviluppo.
 2. Utilizza la versione 5.1.0 o successiva del toolkit per creare la tua applicazione.

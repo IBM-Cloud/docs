@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-03-20"
+lastupdated: "2017-04-07"
 
 
 ---
@@ -79,7 +79,7 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE]
 <dt>--format FORMAT</dt>
 <dd>(オプション) Go テンプレートを使用して、出力エレメントをフォーマットします。</dd>
 <dt>IMAGE</dt>
-<dd>検査するイメージへの絶対 {{site.data.keyword.Bluemix_short}} レジストリー・パス。イメージ・パスにタグが指定されていない場合、`latest` というタグが付いたイメージが検査されます。このコマンドでは、各パスの間をスペースで区切って、それぞれの専用 {{site.data.keyword.Bluemix_short}} レジストリー・パスをリストすることにより、複数のイメージを検査できます。</dd>
+<dd>検査するイメージへの絶対 {{site.data.keyword.Bluemix_short}} レジストリー・パス (namespace/image:tag 形式)。イメージ・パスにタグが指定されていない場合、`latest` というタグが付いたイメージが検査されます。このコマンドでは、各パスの間をスペースで区切って、それぞれの専用 {{site.data.keyword.Bluemix_short}} レジストリー・パスをリストすることにより、複数のイメージを検査できます。</dd>
 </dl>
 
 
@@ -115,7 +115,7 @@ bx cr image-rm IMAGE [IMAGE]
 **パラメーター**
 <dl>
 <dt>IMAGE</dt>
-<dd>削除するイメージへの絶対 {{site.data.keyword.Bluemix_short}} レジストリー・パス。イメージのパスにタグが指定されていない場合、デフォルトで、`latest` というタグが付いたイメージが削除されます。このコマンドでは、各パスの間をスペースで区切って、それぞれの専用 {{site.data.keyword.Bluemix_short}} レジストリー・パスをリストすることにより、複数のイメージを削除できます。</dd>
+<dd>削除するイメージへの絶対 {{site.data.keyword.Bluemix_short}} レジストリー・パス (namespace/image:tag 形式)。イメージのパスにタグが指定されていない場合、デフォルトで、`latest` というタグが付いたイメージが削除されます。このコマンドでは、各パスの間をスペースで区切って、それぞれの専用 {{site.data.keyword.Bluemix_short}} レジストリー・パスをリストすることにより、複数のイメージを削除できます。</dd>
 </dl>
 
 

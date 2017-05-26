@@ -38,10 +38,10 @@ Les identificateurs de terminal facultatifs suivants peuvent également être ut
 Pour obtenir plus d'informations sur les identificateurs, ainsi que des descriptions comparées des identificateurs utilisés dans d'autres normes de gestion des terminaux, voir [Attributs](#attributes).
 
 
-## Identificateurs et types de terminal
+## Identificateurs et types de terminaux
 {: #id_and_device_types}
 
-Chaque terminal qui est connecté à {{site.data.keyword.iot_short_notm}} est associé à un type de terminal. Les types de terminal sont des groupes de terminaux ayant des caractéristiques ou des comportements communs.
+Chaque terminal qui est connecté à {{site.data.keyword.iot_short_notm}} est associé à un type de terminal. Les types de terminaux sont des groupes de terminaux ayant des caractéristiques ou des comportements communs.
 
 Un type de terminal possède un ensemble d'attributs. Lorsqu'un terminal est ajouté à {{site.data.keyword.iot_short_notm}}, les attributs définis dans son type de terminal sont utilisés en tant que modèle. Si une valeur est associée au terminal, elle est utilisée. Si aucune valeur n'est associée au terminal, la valeur de type de terminal est utilisée. Par exemple, le type de terminal peut inclure une valeur pour l'attribut `deviceInfo.fwVersion` indiquant la version du microprogramme installé au moment de la fabrication du terminal. Cette valeur est copiée à partir du type de terminal sur les terminaux au moment de leur ajout. Lorsqu'un terminal est ajouté, si l'attribut `deviceInfo.fwVersion` possède déjà une valeur, celle-ci n'est pas remplacée.
 
@@ -50,7 +50,7 @@ Lorsqu'un attribut de type de terminal est mis à jour, seuls les nouveaux termi
 ## Attributs
 {: #attributes}
 
-Le tableau ci-dessous présente la liste des attributs qui peuvent s'appliquer aux terminaux de {{site.data.keyword.iot_short_notm}}. Les attributs en italique peuvent également s'appliquer à des types de terminal.
+Le tableau ci-dessous présente la liste des attributs qui peuvent s'appliquer aux terminaux de {{site.data.keyword.iot_short_notm}}. Les attributs en italique peuvent également s'appliquer à des types de terminaux.
 
 Légende :
   - API : Peut être mis à jour à l'aide d'API

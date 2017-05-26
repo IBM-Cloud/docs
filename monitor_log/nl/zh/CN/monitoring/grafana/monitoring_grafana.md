@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2017-03-14"
 
 要创建 Grafana 仪表板，请完成以下步骤：
 
-1. 通过 Web 浏览器启动 Grafana。有关更多信息，请参阅[通过 Web 浏览器访问 Grafana 仪表板](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_browser)。
+1. 通过 Web 浏览器启动 Grafana。有关更多信息，请参阅[通过 Web 浏览器导航至 Grafana 仪表板](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_browser)。
 
 2. 保存缺省仪表板。
 
@@ -44,10 +44,10 @@ lastupdated: "2017-03-14"
      
      在页面标题中，调整时间选取器以确保可以查看数据。缺省值为“6 小时到几秒钟之前”。选择**最近 30 天**。
      
-6. 添加可视化。
+6. 添加可视化项。
 
-    * 要添加“CPU 空闲量”可视化，请参阅[添加“CPU 空闲量”可视化](monitoring_grafana.html#grafana_add_cpu)。
-    * 要添加“已用内存”可视化，请参阅[添加“已用内存”可视化](monitoring_grafana.html#grafana_add_mem)。
+    * 要添加“CPU 空闲量”可视化项，请参阅[添加“CPU 空闲量”可视化项](monitoring_grafana.html#grafana_add_cpu)。
+    * 要添加“已用内存”可视化项，请参阅[添加“已用内存”可视化项](monitoring_grafana.html#grafana_add_mem)。
         
 7. 保存定制仪表板。
 
@@ -56,7 +56,7 @@ lastupdated: "2017-03-14"
     3. 在“名称”字段旁边，单击“保存”图标。
     
 
-## 添加“CPU 空闲量”可视化
+## 添加“CPU 空闲量”可视化项
 {:#grafana_add_cpu}
 
 要添加包含空间中所有容器的数据的“CPU 空闲量”图形，请完成以下步骤：
@@ -99,10 +99,10 @@ lastupdated: "2017-03-14"
 7. 要保存对此仪表板进行的更改，请单击标题中的“保存”图标，然后单击菜单中的“保存”图标。
 
 
-## 添加“已用内存”可视化
+## 添加“已用内存”可视化项
 {:#grafana_add_mem}
 
-要添加“已用内存”可视化，请完成以下步骤：
+要添加“已用内存”可视化项，请完成以下步骤：
 
 1. 单击“添加行”按钮。这将在行的一侧显示“行”菜单滑块。
    

@@ -2,18 +2,20 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-04-20"
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
-# Contrôle d'accès aux passerelles (bêta)
+# Contrôle d'accès aux passerelles
+{: #gateway-access-control}
 
-**Important** : Cette fonction est actuellement disponible dans le cadre d'une version bêta limitée.
-
-Les terminaux de passerelle sont habilitées à agir pour compte d'autres terminaux. Les groupes de ressources de passerelle définissent les terminaux d'une organisation pour le compte desquels les passerelles sont autorisées à agir. Les passerelles peuvent se voir attribuer le rôle *Passerelle standard*. Les passerelles standard peuvent uniquement publier ou s'abonner à des messages pour le compte de terminaux présents dans leur groupe de ressources.
+Les terminaux de passerelle sont habilités à agir pour le compte d'autres terminaux. Les groupes de ressources de passerelle définissent les terminaux d'une organisation pour le compte desquels les passerelles sont autorisées à agir. Les passerelles peuvent se voir attribuer le rôle *Passerelle standard*. Les passerelles standard peuvent uniquement publier ou s'abonner à des messages pour le compte de terminaux présents dans leur groupe de ressources.
 {: #shortdesc}
 
 
@@ -30,7 +32,7 @@ Pour affecter un rôle à une passerelle, utilisez l'API suivante :
 PUT /authorization/devices/{deviceId}/roles
 ```
 
-Pour plus d'informations sur le schéma de demande, voir la [documentation de l'API {{site.data.keyword.iot_full}} ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_authorization_devices_deviceId_roles){: new_window}.
+Pour plus d'informations sur le schéma de demande, consultez la [documentation de l'API {{site.data.keyword.iot_full}} Limited Gateway ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_authorization_devices_deviceId_roles){: new_window}.
 
 ## Ajout et retrait de terminaux dans un groupe de ressources
 {: #devices_groups}
@@ -41,7 +43,7 @@ Pour qu'une passerelle dotée du rôle *Passerelle standard* puisse agir pour le
  PUT /bulk/devices/{groupId}/add
 ```
 
-Le groupe auquel ajouter des terminaux doit être spécifié dans le chemin de la demande, et les terminaux à ajouter doivent être spécifiés dans le corps de la demande. Pour plus d'informations sur le schéma de demande et les réponses, voir la [documentation de l'API {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_add){: new_window}.
+Le groupe auquel ajouter des terminaux doit être spécifié dans le chemin de la demande, et les terminaux à ajouter doivent être spécifiés dans le corps de la demande. Pour plus d'informations sur le schéma de demande et les réponses, consultez la [documentation de l'API {{site.data.keyword.iot_short_notm}} Limited Gateway ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_add){: new_window}.
 
 Pour retirer plusieurs terminaux d'un groupe de ressources, utilisez l'API suivante :
 
@@ -49,7 +51,7 @@ Pour retirer plusieurs terminaux d'un groupe de ressources, utilisez l'API suiva
 PUT /bulk/devices/{groupId}/remove
 ```
 
-Les terminaux spécifiés dans le corps de la demande seront retirés du groupe spécifié dans le chemin de la demande. Pour plus d'informations sur le schéma de demande et la réponse, voir la [documentation de l'API {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_remove){: new_window}.
+Les terminaux spécifiés dans le corps de la demande seront retirés du groupe spécifié dans le chemin de la demande. Pour plus d'informations sur le schéma de demande et la réponse, consultez la [documentation de l'API {{site.data.keyword.iot_short_notm}} Limited Gateway ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_remove){: new_window}.
 
 ## Recherche d'un groupe de ressources
 {: #finding_groups}
@@ -68,7 +70,7 @@ L'API suivante permet de rechercher un ID de groupe de ressources :
 GET /authorization/devices/{deviceId}
 ```
 
-Cette API renvoie l'identificateur unique du ou des groupes de ressources dont ce terminal est membre. Pour plus d'informations sur cette API, voir la [documentation de l'API {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_authorization_devices_deviceId){: new_window}.
+Cette API renvoie l'identificateur unique du ou des groupes de ressources dont ce terminal est membre. Vous trouverez davantage d'informations sur cette API dans la [ documentation de l'API {{site.data.keyword.iot_short_notm}} Limited Gateway ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_authorization_devices_deviceId){: new_window}.
 
 
 ## Analyse d'un groupe de ressources
@@ -82,7 +84,7 @@ Pour renvoyer les propriétés complètes de tous les terminaux du groupe de res
 GET /bulk/devices/{groupId}
 ```
 
-Cette API renvoie la liste des propriétés complètes de tous les membres du groupe de ressources spécifié. Pour plus d'informations sur le schéma de demande, les réponses, et pour savoir comment parcourir les résultats, voir la [documentation de l'API {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_bulk_devices_groupId){: new_window}.
+Cette API renvoie la liste des propriétés complètes de tous les membres du groupe de ressources spécifié. Pour plus d'informations sur le schéma de demande, les réponses, et pour savoir comment parcourir les résultats, consultez la [documentation de l'API {{site.data.keyword.iot_short_notm}} Limited Gateway ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_bulk_devices_groupId){: new_window}.
 
 Pour renvoyer uniquement les identificateurs uniques des membres du groupe de ressources, utilisez l'API suivante :
 
@@ -131,7 +133,7 @@ Cette API supprime le groupe de ressources spécifié. Les terminaux qui étaien
 Il existe plusieurs façons d'extraire des propriétés de terminal à l'aide d'une API et chaque API renvoie des informations différentes. Pour extraire les propriétés de terminal de tous les terminaux connectés à votre organisation {{site.data.keyword.iot_short_notm}}, utilisez l'API suivante :
 
 ```
-GET /authorization/devices:
+GET /authorization/devices
 
 ```
 
@@ -148,7 +150,7 @@ Cette API renvoie toutes les propriétés de terminal du terminal spécifié san
 Pour extraire les informations de contrôle d'accès d'un terminal spécifique, utilisez l'API suivante :
 
 ```
-GET /authorization/devices/{deviceId}/roles:
+GET /authorization/devices/{deviceId}/roles
 ```
 
 Cette API extrait les informations de contrôle d'accès du terminal spécifié sans renvoyer les autres propriétés de terminal. <!-- For more information on the request schema and responses, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
@@ -166,7 +168,7 @@ Cette API ne met à jour que les propriétés du terminal qui ne sont pas associ
 Pour mettre à jour uniquement les propriétés de contrôle d'accès du terminal spécifié, utilisez l'API suivante :
 
 ```
-PUT /authorization/devices/{deviceId}/withroles:
+PUT /authorization/devices/{deviceId}/withroles
 ```
 
 Cette API ne met à jour que les propriétés de contrôle d'accès du terminal spécifié. <!-- For more information on the request schema, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-06-29"
+lastupdated: "2017-03-20"
 
 ---
 
@@ -25,7 +25,7 @@ lastupdated: "2016-06-29"
 
 - 向 {{site.data.keyword.iot_short_notm}} 组织注册设备。
 - 确保设备是向 {{site.data.keyword.iot_short_notm}} 发送事件。
-- 从 github 存储库[下载可视化样本](https://github.com/ibm-messaging/iot-visualization/archive/v0.2.0.zip)并解压缩 .zip 文件。
+- 从 github 存储库[下载可视化样本](https://github.com/ibm-watson-iot/rickshaw4iot/archive/master.zip)并解压缩 .zip 文件。
 - 从 {{site.data.keyword.Bluemix_notm}} [安装 cf 命令行工具](../../starters/install_cli.html)。
 
 ## 在 {{site.data.keyword.Bluemix_notm}} 中运行样本
@@ -106,13 +106,4 @@ http://<your_application_name>.mybluemix.net
 
 设备事件将传递给 `realtimeGraph.js` 文件以绘制图形。
 
-## 定制历史数据显示
-{: #customize_historical_display}
-
-包含历史设备数据的图形可视化代码的目录为 `public/js/historian`。可以通过编辑 `public/js/historian/historianGraph.js` 对图形逻辑进行定制。
-
-用于控制 ReST API 调用以收集历史设备数据的文件为 `public/js/historian/historian.js`。
-
-历史数据将传递给 `historianGraph.js` 文件以绘制图形。
-
-Github iot-visualization Wiki 中提供了更详细的开发者指南。
+[Github Wiki ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/rickshaw4iot/wiki){:new_window} 中提供了更详细的开发者指南。

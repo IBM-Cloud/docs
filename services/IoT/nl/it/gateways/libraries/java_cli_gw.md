@@ -271,7 +271,7 @@ Per elaborare comandi specifici è necessario registrare un metodo di callback `
 
 | Proprietà     |Tipo di dati     | Descrizione|
 |----------------|----------------|---------------
-|`deviceType`|Stringa| Il tipo di dispositivo per cui viene ricevuto il comando.|
+|`deviceType`|Stringa| Il tipo dispositivo per cui viene ricevuto il comando.|
 |`deviceId`|Stringa| L'ID del dispositivo per cui viene ricevuto il comando, che può essere il gateway o un dispositivo collegato tramite il gateway.|
 |`data`|Oggetto| Il payload del comando.|
 |`format`|Stringa| Il formato del payload del comando, che può essere qualsiasi stringa, ad esempio, JSON. binario, testo o altro.|

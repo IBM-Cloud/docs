@@ -35,13 +35,13 @@ Pour connecter votre terminal à {{site.data.keyword.iot_short_notm}}, procédez
 
 Enregistrer un terminal implique de le classifier en tant que type de terminal, de lui donner un nom et de fournir des informations le concernant. Vous indiquez ensuite un jeton de connexion ou vous acceptez un jeton qui est généré par {{site.data.keyword.iot_short_notm}}.
 
-Vous pouvez ajouter un seul terminal à la fois depuis le tableau de bord {{site.data.keyword.iot_short_notm}} ou vous pouvez utiliser l'[API {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Bulk_Configuration){: new_window} pour ajouter un ou plusieurs terminaux à la fois. 
+Vous pouvez ajouter un seul terminal à la fois depuis le tableau de bord {{site.data.keyword.iot_short_notm}} ou vous pouvez utiliser l'[API {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Bulk_Configuration){: new_window} pour ajouter un ou plusieurs terminaux à la fois.
 
 Pour ajouter un terminal depuis le tableau de bord {{site.data.keyword.iot_short_notm}} :
 
-1. Cliquez sur la vignette du service {{site.data.keyword.iot_short_notm}} dans votre tableau de bord {{site.data.keyword.Bluemix}}. 
+1. Cliquez sur la vignette du service {{site.data.keyword.iot_short_notm}} dans votre tableau de bord {{site.data.keyword.Bluemix}}.
 
-2. Sur la page de service, cliquez sur **Lancer** pour commencer à administrer votre organisation {{site.data.keyword.iot_short_notm}}. 
+2. Sur la page de service, cliquez sur **Lancer** pour commencer à administrer votre organisation {{site.data.keyword.iot_short_notm}}.
 
   La console Web {{site.data.keyword.iot_short_notm}} s'ouvre dans un nouvel onglet de navigateur à l'URL suivante :
 
@@ -53,7 +53,7 @@ Pour ajouter un terminal depuis le tableau de bord {{site.data.keyword.iot_short
 
 3. Dans le tableau de bord Présentation, à partir du panneau de menu, sélectionnez **Terminaux**, puis cliquez sur **Ajouter un terminal**.
 5. Sélectionnez ou créez un type de terminal pour le terminal que vous ajoutez.  
-Chaque terminal connecté à {{site.data.keyword.iot_short_notm}} doit être associé à un type de terminal. Les types de terminal sont des groupes de terminaux ayant des caractéristiques communes.  
+Chaque terminal connecté à {{site.data.keyword.iot_short_notm}} doit être associé à un type de terminal. Les types de terminaux sont des groupes de terminaux ayant des caractéristiques communes.  
 Lorsque vous ajoutez votre premier terminal à votre organisation {{site.data.keyword.iot_short_notm}}, aucun type de terminal n'est disponible dans le menu **Type de terminal**. Vous devez d'abord créer un type de terminal :
  1. Cliquez sur **Créer un type de terminal**.
  2. Entrez un nom de type de terminal, par exemple, `my_device_type`, et une description pour le type de terminal.   
@@ -113,7 +113,7 @@ Félicitations, vous avez enregistré votre terminal. Vous pouvez maintenant con
 
 Après avoir enregistré un terminal auprès de {{site.data.keyword.iot_short_notm}}, vous pouvez utiliser les informations d'enregistrement pour connecter le terminal et commencer à recevoir des données de terminal.
 
-{{site.data.keyword.iot_short_notm}} prend en charge un grand nombre de types de terminal. Le processus de base permettant de connecter un terminal inclut généralement les étapes suivantes :
+{{site.data.keyword.iot_short_notm}} prend en charge un grand nombre de types de terminaux. Le processus de base permettant de connecter un terminal inclut généralement les étapes suivantes :
 - Configurer votre terminal pour la messagerie MQTT et utiliser l'ID d'organisation, le jeton d'authentification, le type de terminal et l'ID de terminal pour l'authentification.  
 - Envoyer des messages de terminal à votre organisation {{site.data.keyword.iot_short_notm}} à l'aide du protocole MQTT.
 
@@ -140,7 +140,7 @@ Cette valeur est le jeton unique que vous avez défini ou qui a été affecté �
 
 Pour plus d'informations sur la connexion de votre terminal, voir [Connectivité MQTT pour les terminaux](devices/mqtt.html) dans la documentation technique.
 
-La documentation de l'API [Administration d'organisation ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} contient également les informations demandées. 
+La documentation de l'API [Administration d'organisation ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} contient également les informations demandées.
 
 ## Recettes relatives à la connexion de terminaux
 

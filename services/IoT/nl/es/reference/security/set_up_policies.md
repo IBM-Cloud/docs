@@ -37,7 +37,7 @@ Puede establecer el nivel de seguridad predeterminado que se aplica a todos los 
 también puede acceder a los valores de seguridad de conexión desde la página **General**, en **Valores**. Pulse **Política de seguridad de conexión abierta**.
 
 ## Configuración de políticas de conexión para la seguridad estándar
-{: #config_connect_standard}
+{: #config_connect}
 
 En organizaciones que utilizan seguridad estándar, puede cambiar los valores de seguridad en la página **General**, bajo **Valores**. Puede establecer el nivel de seguridad predeterminado que se aplica a todos los dispositivos.
 

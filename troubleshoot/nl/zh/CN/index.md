@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-3-16"  
+lastupdated: "2017-4-10"  
 
 ---
 
@@ -14,9 +14,10 @@ lastupdated: "2017-3-16"
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock} 
 
+
+
 # 有关访问 {{site.data.keyword.Bluemix_notm}} 的故障诊断 
 {: #accessing}
-
 
 
 访问 {{site.data.keyword.Bluemix}} 的一般性问题可能包括用户无法登录到 {{site.data.keyword.Bluemix_notm}} 和帐户困于暂挂状态等。然而，在许多情况下，只需执行几个简单的步骤即可解决这些问题。
@@ -45,6 +46,35 @@ lastupdated: "2017-3-16"
   
 **注：**对于 IBM 员工，IBM 标识可能不同于内部网登录标识。 
 
+
+
+<!-- begin STAGING ONLY --> 
+
+## 访问外部 Web 站点时发生问题
+{: #ts_bmlinkid}
+
+除非将您的 IBM 内部网标识与 IBM 标识相链接，否则无法使用内部网标识登录到 {{site.data.keyword.Bluemix_notm}}。
+
+
+在“{{site.data.keyword.Bluemix_notm}} 登录”页面中选择**使用内部网标识登录**后，可能会看到以下错误消息：
+{: tsSymptoms} 
+
+`访问外部 Web 站点发生问题`
+
+
+
+使用未链接到 IBM 标识的 IBM 内部网标识登录到 {{site.data.keyword.Bluemix_notm}} 时，会发生此问题。IBM 标识是您用于登录到 www.ibm.com 的标识。
+{: tsCauses}
+
+
+作为 IBM 员工，您必须将您的 IBM 内部网标识与外部 IBM 标识相链接，才能使用内部网标识登录到 {{site.data.keyword.Bluemix_notm}}。要链接这两个标识，请完成以下步骤：
+{: tsResolve} 
+
+  1. 在 [Central Sign-on ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://w3-03.sso.ibm.com/tools/cso/index.jsp){: new_window} 页面上，单击**我的登录**。
+  2. 在“我的登录”页面上，单击**链接标识**，然后在“{{site.data.keyword.Bluemix_notm}} 登录”页面上输入您的 IBM 标识和密码。此后，您的内部网标识和 IBM 标识将自动链接。
+  
+
+<!-- end STAGING ONLY -->
 
 
 
@@ -93,7 +123,7 @@ lastupdated: "2017-3-16"
 
 配置 DNS 设置时，必须指定应用程序运行所在 {{site.data.keyword.Bluemix_notm}} 区域的公共 IP 地址。要获取 {{site.data.keyword.Bluemix_notm}} 区域的公共 IP 地址，请使用 `nslookup` 命令。例如，可以在命令行窗口中键入以下命令：
 ```
-nslookup mybluemix.net
+nslookup stage1.mybluemix.net
 ```
 
 
@@ -114,7 +144,7 @@ nslookup mybluemix.net
 在注册 {{site.data.keyword.Bluemix_notm}} 试用帐户后，您将收到确认电子邮件。必须单击确认电子邮件中的链接以完成注册过程。
 {: tsCauses} 
 
-确认电子邮件将发送到提供的电子邮件地址。请检查收件箱和垃圾邮件文件夹。如果未收到确认电子邮件，请联系 [{{site.data.keyword.Bluemix_notm}} 支持 ![外部链接图标](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}。  
+确认电子邮件将发送到提供的电子邮件地址。请检查收件箱和垃圾邮件文件夹。如果尚未收到确认电子邮件，请联系 [{{site.data.keyword.Bluemix_notm}} 支持 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://ibm.biz/bluemixsupport.com){: new_window}。  
 {: tsResolve}
 
 
@@ -158,7 +188,7 @@ nslookup mybluemix.net
   
 如果由于您是合作者（并非成员）而无法邀请用户，那么您必须删除您先前的 {{site.data.keyword.Bluemix_notm}} 帐户，然后被邀请以组织成员身份加入帐户。要删除您先前的帐户并以成员身份加入帐户，请完成以下步骤： 
 
-  1. 联系 [{{site.data.keyword.Bluemix_notm}} 支持 ![外部链接图标](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window}，以开具一个支持凭单，请求删除您的帐户。如果存在与旧帐户相关联的数据并且想要将其保存并移动到新帐户，请在您的电子邮件中包含此信息。 
+  1. 联系 [{{site.data.keyword.Bluemix_notm}} 支持 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://ibm.biz/bluemixsupport){: new_window}，以开具一个支持凭单，请求删除您的帐户。如果存在与旧帐户相关联的数据并且想要将其保存并移动到新帐户，请在您的电子邮件中包含此信息。 
   2. 在您的帐户被删除后，让具有组织管理员角色的用户以组织管理员身份邀请您加入组织。然后，通过邀请注册 {{site.data.keyword.Bluemix_notm}}。 
 
 
@@ -209,11 +239,14 @@ nslookup mybluemix.net
   * 注销 {{site.data.keyword.Bluemix_notm}}，并重新登录。
   * 使用浏览器的隐私浏览模式。 
   * 清除浏览器的 cookie 和高速缓存。
-  * 使用其他浏览器。有关 {{site.data.keyword.Bluemix_notm}} 支持的浏览器版本的信息，请参阅 [{{site.data.keyword.Bluemix_notm}} 先决条件 ![外部链接图标](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}。
+  * 使用其他浏览器。有关 {{site.data.keyword.Bluemix_notm}} 支持的浏览器版本的信息，请参阅 [{{site.data.keyword.Bluemix_notm}} 先决条件 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}。
   * 如果安装了 cf 命令行界面，请输入 `cf apps` 命令以查看应用程序是否正在运行。
   
   
   
+  
+  
+
 
 
 
@@ -300,10 +333,9 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 
 如果工作台 JVM 为 IBM JVM 7 或 8，或者为早于 Oracle JVM 8 的版本，请完成以下步骤来切换到 Oracle JVM 8：
 
-  1. 下载并安装 Oracle JVM 8；请参阅 [Java SE Downloads ![外部链接图标](../icons/launch-glyph.svg)](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window} 以获取详细信息。
+  1. 下载并安装 Oracle JVM 8；请参阅 [Java SE Downloads ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window} 以获取详细信息。
   2. 重新启动 Eclipse。
   3. 检查 `eclipse.vm` 属性是否指向 Oracle JVM 8 的新安装。
-
 
   
 ## 无法复用已删除应用程序的名称
@@ -339,16 +371,12 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 	 cf delete-route mybluemix.net -n app001
 	 ```
 
-  
-  
-  
-  
-  
-  
-  
+
+	 
+	 
+
 ## 无法在组织中检索空间
 {: #ts_retrieve_space}
-
 如果当前组织没有与其相关联的空间，那么您无法创建应用程序或服务。
 
 尝试在 Bluemix 中创建应用程序时，您会看到以下错误消息：
@@ -365,8 +393,7 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
   * 单击 {{site.data.keyword.avatar}} 图标 ![“头像”图标](images/account_support.svg)，以打开“帐户和支持”窗口小部件，选择要在其中创建空间的组织，然后单击**创建空间**。
   * 在 cf 命令行界面中，键入 `cf create-space <space_name> -o <organization_name>`。
 
-请重试。如果再次看到此消息，请转至 [Bluemix 状态 ![外部链接图标](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window} 页面，查看服务或组件是否存在问题。
-
+请重试。如果再次看到此消息，请转至 [Bluemix 状态 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://ibm.biz/bluemixstatus){: new_window} 页面，检查服务或组件是否存在问题。
 
 
 
@@ -391,14 +418,12 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 {: tsCauses}
 
   
-
 要获取相应级别的权限，请使用以下其中一种方法：
 {: tsResolve}
  * 选择您具有其开发者角色的另一个组织和空间。 
  * 请求组织管理员将您的角色更改为开发者，或者创建空间，然后为您分配开发者角色。有关详细信息，请参阅[管理组织和空间](/docs/admin/orgs_spaces.html)。
  
 
- 
 
 
 ## 由于授权错误而无法访问 {{site.data.keyword.Bluemix_notm}} 服务
@@ -419,15 +444,7 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 ```
 process.env.VCAP_SERVICES
 ```
-有关可以通过其他程序语言使用的命令的更多信息，请参阅 [Java ![外部链接图标](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} 和 [Ruby ![外部链接图标](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}。
-
-
-
-
-
-
-
-
+有关其他程序语言中可以使用的命令的更多信息，请参阅 [Java ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} 和 [Ruby ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}。
 ## 无法使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 部署应用程序
 {: #ts_bm_tools_facet}
 
@@ -470,7 +487,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 通过项目构面将�
 
  
 
-如果您怀疑 {{site.data.keyword.Bluemix_notm}} 服务已关闭，请先检查 [{{site.data.keyword.Bluemix_notm}} 状态 ![外部链接图标](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window} 页面。您可能想要在其他 {{site.data.keyword.Bluemix_notm}} 区域使用该服务来作为一种变通方法。有关详细信息，请参阅[在其他区域使用服务](/docs/services/reqnsi.html#cross_region_service)。如果服务状态正常，请尝试执行以下步骤来解决问题： 
+如果您怀疑 {{site.data.keyword.Bluemix_notm}} 服务已关闭，请先检查 [{{site.data.keyword.Bluemix_notm}} 状态 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://ibm.biz/bluemixstatus){: new_window} 页面。您可能想要在其他 {{site.data.keyword.Bluemix_notm}} 区域使用该服务来作为一种变通方法。有关详细信息，请参阅[在其他区域使用服务](/docs/services/reqnsi.html#cross_region_service)。如果服务状态正常，请尝试执行以下步骤来解决问题： 
 {: tsResolve}
 
   * 重试操作：
@@ -478,7 +495,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 通过项目构面将�
 	* 使用其他浏览器。
 	* 重新引导您的路由器、调制解调器和计算机。重新引导这些设备可以清理导致 502 错误的各种错误。 
   * 稍等，然后重试。在某些情况下，您的因特网服务提供商或 {{site.data.keyword.Bluemix_notm}} 服务可能会发生临时问题。您可以一直等到临时问题得到解决为止。
-  * 如果问题持续存在，请联系 {{site.data.keyword.Bluemix_notm}} 支持。有关更多信息，请参阅[联系 {{site.data.keyword.Bluemix_notm}} 支持 ![外部链接图标](../icons/launch-glyph.svg)](/docs/support/index.html#contacting-bluemix-support){: new_window}。 
+  * 如果问题持续存在，请联系 {{site.data.keyword.Bluemix_notm}} 支持。有关更多信息，请参阅[联系 {{site.data.keyword.Bluemix_notm}} 支持人员](/docs/support/index.html#contacting-bluemix-support)。 
 
 
 
@@ -509,27 +526,20 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 通过项目构面将�
     ```
 	cf push appname -p app_path -k <disk_quota>
 	```
-
 	
-	
-
-
-## Android 应用程序收不到推送通知
+## Android 应用程序收不到 {{site.data.keyword.mobilepushshort}}
 {: #ts_push}
 
-在无法访问 Google 的某些地区，Android 应用程序收不到您通过 IBM Push 服务发送出来的通知。在此情况下，可以使用第三方服务作为一种变通方法。
+在无法访问 Google 的某些地区，Android 应用程序收不到您通过 IBM {{site.data.keyword.mobilepushshort}} 服务发送出来的通知。在此情况下，可以使用第三方服务作为一种变通方法。
 
- 
-
-为 Bluemix 应用程序绑定推送服务，并将消息发送给已注册的设备。但在某些地区，在 Android 平台上开发的应用程序收不到您的通知。
+为 Bluemix 应用程序绑定 {{site.data.keyword.mobilepushshort}} 服务，并将消息发送给已注册的设备。但在某些地区，在 Android 平台上开发的应用程序收不到您的通知。
 {: tsSymptoms}
 
- 
-IBM Push 服务使用 Google 云消息传递 (GCM) 服务将通知分派到在 Android 平台上开发的移动应用程序。要使 Android 应用程序能够接收通知，移动应用程序必须可以访问 Google 云消息传递 (GCM) 服务。在 Android 应用程序无法访问 GCM 服务的区域，Android 应用程序收不到推送通知。
+IBM {{site.data.keyword.mobilepushshort}} 服务使用 Google 云消息传递 (GCM) 服务将通知分派到在 Android 平台上开发的移动应用程序。要使 Android 应用程序能够接收通知，移动应用程序必须可以访问 Google 云消息传递 (GCM) 服务。在 Android 应用程序无法访问 GCM 服务的区域，Android 应用程序收不到 {{site.data.keyword.mobilepushshort}}。
 {: tsCauses}
 
  
-使用不依赖于 GCM 服务的第三方服务作为一种变通方法，例如 [Pushy ![外部链接图标](../icons/launch-glyph.svg)](https://pushy.me){: new_window}、[igetui ![外部链接图标](../icons/launch-glyph.svg)](http://www.getui.com/){: new_window} 和 [jpush ![外部链接图标](../icons/launch-glyph.svg)](https://www.jpush.cn/){: new_window}。
+作为变通方法，请使用不依赖于 GCM 服务的第三方服务，例如 [Pushy ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://pushy.me){: new_window}、[igetui ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://www.getui.com/){: new_window} 和 [jpush ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.jpush.cn/){: new_window}。
 {: tsResolve}
 
 
@@ -557,7 +567,7 @@ IBM Push 服务使用 Google 云消息传递 (GCM) 服务将通知分派到在 A
  
   * 要删除服务实例，可以使用 {{site.data.keyword.Bluemix_notm}} 用户界面或者命令行界面。
     要使用 {{site.data.keyword.Bluemix_notm}} 用户界面删除服务实例，请完成以下步骤：
-	  1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”上，单击要删除的服务。这将显示服务磁贴。 
+	  1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”上，单击要删除的服务。这将显示服务磁贴。
 	  2. 在服务磁贴上，单击**菜单**图标。
 	  3. 单击**删除服务**。在删除服务实例之后，会提示您重新编译打包绑定该服务实例的应用程序。 
     要使用命令行界面删除服务实例，请完成以下步骤：
@@ -589,18 +599,21 @@ IBM Push 服务使用 Google 云消息传递 (GCM) 服务将通知分派到在 A
 {: tsResolve}
 
 ```
-cf push appname -p <app_path> -c <start_command> -b <null-buildpack>
+cf push appname -p app_path -c <start_command> -b <null-buildpack>
 ```
 例如：
 ```
-cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
+cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
 
 ## 超过组织的内存限制
 {: #ts_outofmemory}
 
-如果您是试用帐户用户，那么可能无法在超过组织内存限制的情况下将应用程序部署到 {{site.data.keyword.Bluemix_notm}}。您可以减少应用程序使用的内存，或者增加您帐户的内存配额。 
+如果您是试用帐户用户，那么可能无法在超过组织内存限制的情况下将应用程序部署到 {{site.data.keyword.Bluemix_notm}}。您可以减少应用程序使用的内存，或者增加您帐户的内存配额。试用帐户的最大内存配额为 2 GB，并且只能通过移至付费帐户来增大内存配额。
+
+
+
 
 
 
@@ -624,7 +637,10 @@ cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/n
     如果使用 {{site.data.keyword.Bluemix_notm}} 用户界面，请完成以下步骤：
 	  1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”上，选择应用程序。这将打开应用程序详细信息页面。
 	  2. 在运行时窗格中，可以减少应用程序的最大内存限制和/或应用程序实例数。 
+	 
+	  
 	如果使用 cf 命令行界面，请完成以下步骤：
+	
 	  1. 检查应用程序使用了多少内存：
 	  ```
 	  cf apps
@@ -632,7 +648,7 @@ cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/n
 	     cf apps 命令会列出当前空间中部署的所有应用程序。还会显示每个应用程序的状态。
       2. 要减少应用程序使用的内存量，请减少应用程序实例数和/或最大内存限制：
 	  ```
-	  cf push <appname> -p <app_path> -i <instance_number> -m <memory_limit>
+	  cf push appname -p app_path -i instance_number -m memory_limit
       ```
 	  3. 重新启动应用程序以使更改生效。
 
@@ -661,8 +677,8 @@ cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/n
 {: tsResolve}
 
 ```
-cf push <appname> -p <app_path>
-```
+cf push appname -p app_path
+  ```
 此外，还可以对应用程序进行编码，以识别如中断、异常和连接失败等问题，并从这些问题中进行恢复。
 
   
@@ -717,9 +733,40 @@ cf push <appname> -p <app_path>
    path: path_to_application
    ```
   * 在应用程序所在的目录中创建 `package.json` 文件。
-  
-  
 
+  
+  
+  
+<!-- begin STAGING ONLY --> 
+
+## Bluemix Live Sync“调试”功能无法通过命令行启动
+{: #ts_no_debug}
+
+您使用命令行为应用程序启用了 IBM Bluemix Live Sync“调试”功能，但是您无法访问“调试”界面。  
+  
+ 
+
+您通过设置 **BLUEMIX_APP_MGMT_ENABLE** 环境变量启用了应用程序的“调试”功能。但是，您无法在 `app_url/bluemix-debug/manage` 访问“调试”用户界面。
+{: tsSymptoms}
+
+
+
+在以下几种情况下，无法启用“调试”功能：
+{: tsCauses} 
+
+  * `manifest.yml` 包含命令属性时
+  * 使用 **-c** 选项将应用程序推送至 {{site.data.keyword.Bluemix_notm}} 时
+
+ 
+  
+使用以下其中一个选项可解决该问题：
+{: tsResolve}
+
+  * 建议的作法是使用 IBM Node.js buildpack 启动应用程序。有关更多信息，请参阅[将 Node.js 应用程序部署至 {{site.data.keyword.Bluemix_notm}}](/docs/runtimes/nodejs/index.html#nodejs_runtime) 主题的“启动命令”一节。 
+  * 通过将 `manifest.yml` 中的命令属性修改为命令 null 或通过编辑推送命令以包括 `-c null`，禁用现有应用程序的命令。 
+  * 从 `manifest.yml` 中除去**命令**属性。然后，从 {{site.data.keyword.Bluemix_notm}} 中删除当前应用程序，并重新推送应用程序。
+  
+<!-- end STAGING ONLY -->  
   
   
 
@@ -788,11 +835,11 @@ cf api https://api.eu-gb.bluemix.net
 
   * 如果通过使用 `manifest.yml` 文件来部署应用程序，请在 host 选项中指定主机名。	 
     ```
-    host: <hostname>	
+    host: host_name	
 	```
   * 如果从命令提示符部署应用程序，请使用带有 **-n** 选项的 `cf push` 命令。 
     ```
-    cf push <appname> -p <app_path> -n <hostname>
+    cf push appname -p app_path -n host_name
     ```
 
 
@@ -896,7 +943,7 @@ cf push MyUniqueAppName02 -p "./app.war"
         ```
 		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
-	  * 使用 [package.json ![外部链接图标](../icons/launch-glyph.svg)](https://docs.npmjs.com/json){: new_window} 文件。例如：
+	  * 使用 [package.json ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://docs.npmjs.com/json){: new_window} 文件。例如：
 	    ```
 		{
       ...
@@ -934,7 +981,7 @@ cf push MyUniqueAppName02 -p "./app.war"
  }
     ```
 	
-有关 Node.js 应用程序的更多提示，请参阅 [Tips for Node.js Applications ![外部链接图标](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}。	
+有关 Node.js 应用程序的更多提示，请参阅 [Tips for Node.js Applications ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}。	
 
 
 
@@ -976,7 +1023,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 
  
 
-您可以使用 [git update ![外部链接图标](../icons/launch-glyph.svg)](http://git-scm.com/docs/git-update-index){: new_window} 命令将每个脚本的许可权更改为“可执行”。例如，可以键入 `git update --chmod=+x script.sh`。
+您可以使用 [git update ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://git-scm.com/docs/git-update-index){: new_window} 命令将每个脚本的许可权更改为可执行。例如，可以键入 `git update --chmod=+x script.sh`。
 {: tsResolve}
 	
 	
@@ -998,7 +1045,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 
  
 
-要解决此问题，您必须创建 `manifest.yml` 文件。有关如何创建 `manifest.yml` 文件的更多信息，请参阅[应用程序清单](/docs/manageapps/depapps.html#appmanifest)。
+要解决此问题，您必须创建 `manifest.yml` 文件。有关如何创建 `manifest.yml` 文件的更多信息，请参阅[应用程序清单 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/manageapps/depapps.html#appmanifest){: new_window}。
 {: tsResolve}	
 	
 
@@ -1044,7 +1091,8 @@ buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
   * [无法创建 Bluemix DevOps Services 项目](#project-cannot-be-created)
   * [在 DevOps Services 中找不到 Git 存储库并且无法克隆](#repo-not-found)
   * [在 DevOps Services 中克隆了 Git 存储库，但应用程序未部署到 {{site.data.keyword.Bluemix_notm}}](#repo-cloned-app-not-deployed)
-有关如何创建按钮的更多信息，请参阅：创建“部署到 {{site.data.keyword.Bluemix_notm}}”按钮。
+
+有关如何创建该按钮的更多信息，请参阅“创建‘部署到 {{site.data.keyword.Bluemix_notm}}’按钮”。
 
 ### 无法创建 Bluemix DevOps Services 项目
 {: #project-cannot-be-created}
@@ -1153,7 +1201,7 @@ buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
 	```
 	<appname> open
 	```
-
+	
 ## 从运行栏部署应用程序失败
 {: #deployinganappfromtherunbarfails}
 
@@ -1198,7 +1246,7 @@ buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
 6. 通过再次检查状态图标，验证没有错误。
 ![没有错误的状态图标](images/githubResolved_small.png)
 
-有关更多信息，请参阅 [Setting up GitHub for Bluemix DevOps Services projects ![外部链接图标](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/githubhooks/){: new_window}。
+有关更多信息，请参阅 [Setting up GitHub for Bluemix DevOps Services projects ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://hub.jazz.net/docs/githubhooks/){: new_window}。
 
 
 # 有关管理帐户的故障诊断
@@ -1226,7 +1274,7 @@ buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
 
  
 
-要重新激活您的帐户，请联系 [{{site.data.keyword.Bluemix_notm}} 支持 ![外部链接图标](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}。在该电子邮件中，必须包含以下信息：
+要重新激活您的帐户，请联系 [{{site.data.keyword.Bluemix_notm}} 支持 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://ibm.biz/bluemixsupport.com){: new_window}。在该电子邮件中，必须包含以下信息：
 {: tsResolve}
 
   * 您用于登录到 {{site.data.keyword.Bluemix_notm}} 的 IBM 标识。
@@ -1273,7 +1321,7 @@ buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
 当您为空间内的不同应用程序分配相同 URL 路径时，可能会发生此问题。
 {: tsCauses}
 
-例如，将 myApp1 应用程序推送到 {{site.data.keyword.Bluemix_notm}}，并将域设置为“mynewapp.mybluemix.net”。然后，将另一个应用程序 myApp2 推送到同一空间，并将该应用程序的其中一个 URL 路径设置为“mynewapp.mybluemix.net”。现在，该路径映射到两个应用程序。
+例如，将 myApp1 应用程序推送到 {{site.data.keyword.Bluemix_notm}}，并将域设置为“mynewapp.stage1.mybluemix.net”。然后，将另一个应用程序 myApp2 推送到同一空间，并将该应用程序的其中一个 URL 路径设置为“mynewapp.stage1.mybluemix.net”。现在，该路径映射到两个应用程序。
 
  
 
@@ -1282,7 +1330,30 @@ buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
   
 	
 	
+<!-- begin STAGING ONLY --> 
+	
+	
+## 管理员无法使用 {{site.data.keyword.Bluemix_notm}} 用户界面查看所有组织
+{: #ts_ui_org}
 
+作为管理员，使用 {{site.data.keyword.Bluemix_notm}} 用户界面时，无法显示要管理的每一个组织。您仅可以显示和管理您所属的那些组织。
+
+ 
+
+作为管理员，您无法使用 {{site.data.keyword.Bluemix_notm}} 用户界面查看所有组织。
+{: tsSymptoms}
+
+ 
+
+这是 {{site.data.keyword.Bluemix_notm}} 用户界面的限制。
+{: tsCauses}
+
+ 
+
+您可以通过 cf 命令行界面，使用命令（如 `cf orgs`、`cf create-org` 和 `cf delete-org`）来管理所有组织。要想获取 cf 命令的完整清单，请输入 `cf help`。
+{: tsResolve}
+	
+<!-- end STAGING ONLY -->
 
 
 
@@ -1343,14 +1414,14 @@ buildpack 更新后推送或重新编译打包应用程序时，不会自动装�
 您可以使用具有内置机制的 buildpack 来避免装入过时的组件。以下 buildpack 是 2 个示例： 
 {: tsResolve}
 
-  * [Cloud Foundry Java buildpack ![外部链接图标](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack){: new_window}。此 buildpack 具有内置机制来确保使用 buildpack 的最新版本。有关此机制的工作原理的更多信息，请参阅 [extending-caches.md ![外部链接图标](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}。 
-  * [Cloud Foundry Node.js buildpack ![外部链接图标](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}。此 buildpack 通过使用环境变量具有类似功能。要使 Node.js buildpack 每次都能够从因特网下载节点模型，请在 cf 命令行界面中键入以下命令： 	
+  * [Cloud Foundry Java buildpack ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/cloudfoundry/java-buildpack){: new_window}. 此 buildpack 具有内置机制来确保使用 buildpack 的最新版本。有关此机制如何工作的更多信息，请参阅 [extending-caches.md ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}。 
+  * [Cloud Foundry Node.js buildpack ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}。此 buildpack 通过使用环境变量具有类似功能。要使 Node.js buildpack 每次都能够从因特网下载节点模型，请在 cf 命令行界面中键入以下命令： 	
   ```
   set NODE_MODULES_CACHE=false
   ```
 如果您使用的 buildpack 不提供自动装入最新组件的机制，那么您可以手动删除高速缓存目录中的内容，并通过执行以下步骤重新推送应用程序：
-  1. 检出空 buildpack 的分支，例如 https://github.com/ryandotsmith/null-buildpack。有关如何检出分支的信息，请参阅 [Git Basics - Getting a Git Repository ![外部链接图标](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}。  
-  2. 将以下行添加到 `null-buildpack/bin/compile` 文件，并落实更改。有关如何落实更改的信息，请参阅 [Git Basics - Recording Changes to the Repository ![外部链接图标](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}。
+  1. 检出空 buildpack 的分支，例如 https://github.com/ryandotsmith/null-buildpack。有关如何检出分支的信息，请参阅 [Git Basics - Getting a Git Repository ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}。  
+  2. 将以下行添加到 `null-buildpack/bin/compile` 文件，并落实更改。有关如何落实更改的信息，请参阅 [Git Basics - Recording Changes to the Repository ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}。
   ```
   rm -rfv $2/*
   ```
@@ -1385,7 +1456,7 @@ buildpack 更新后推送或重新编译打包应用程序时，不会自动装�
 
 
 
-在 PHP buildpack 中，error_log 参数用于定义日志记录级别。缺省情况下，`error_log` 参数的值为 **stderr notice**。以下示例显示 Cloud Foundry 所提供的 PHP buildpack 的 `nginx-defaults.conf` 文件中的缺省日志记录级别配置。有关更多信息，请参阅 [cloudfoundry/php-buildpack ![外部链接图标](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}。
+在 PHP buildpack 中，error_log 参数用于定义日志记录级别。缺省情况下，`error_log` 参数的值为 **stderr notice**。以下示例显示 Cloud Foundry 所提供的 PHP buildpack 的 `nginx-defaults.conf` 文件中的缺省日志记录级别配置。有关更多信息，请参阅 [cloudfoundry/php-buildpack ![外部链接图标](../icons/launch-glyph.svg " 外部链接图标")](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}。
 {: tsCauses} 
 
 ```
@@ -1404,7 +1475,7 @@ daemon off;
 error_log stderr error;
 pid @{HOME}/nginx/logs/nginx.pid;
 ```
-有关如何更改缺省日志记录配置的更多信息，请参阅 [error_log ![外部链接图标](../icons/launch-glyph.svg)](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}。
+有关如何更改缺省日志记录配置的更多信息，请参阅 [error_log ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}。
 	
 
 ## 无法将第三方 Python 库导入 {{site.data.keyword.Bluemix_notm}}
@@ -1589,5 +1660,54 @@ pid @{HOME}/nginx/logs/nginx.pid;
 	```
 	
 	
+<!-- begin STAGING ONLY --> 
 
+	
+## Log4js 记录器对象未在“Node.js 跟踪”弹出窗口中显示
+{: #ts_logger}
+
+当在应用程序中同时使用 log4js 和 ibmbluemix 模块时，Log4js 记录器对象未在“Node.js 跟踪”弹出窗口中显示。 	
+
+ 
+当在应用程序中同时使用 log4js、winston 和 ibmbluemix 模块时，Log4js 记录器对象未在“Node.js 跟踪”弹出窗口中显示。
+{: tsSymptoms}
+
+
+因为 ibmbluemix 模块提供统一的 API 用于使用 log4js 和 winston 模块的日志操作，所以只有 ibmbluemix 记录器对象会显示在“Node.js 跟踪”弹出窗口中。这是为了防止 ibmbluemix、log4js 和 winston 记录器对象的日志级别设置彼此覆盖。
+{: tsCauses}
+
+
+这是正常的情况。
+{: tsResolve}
+
+<!-- end STAGING ONLY -->
+
+
+
+
+<!-- begin STAGING ONLY -->
+
+
+## 已禁用将跟踪设置应用到应用程序的所有实例复选框
+{: #ts_bunyan}
+
+当修改 Bunyan 记录器级别时，会在“Node.js 跟踪”弹出窗口中取消选中并禁用**将跟踪设置应用到应用程序的所有实例**复选框。
+
+
+
+当更改 Bunyan 记录器对象的级别时，会在“Node.js 跟踪”弹出窗口中取消选中并禁用**将跟踪设置应用到应用程序的所有实例**复选框。
+{: tsSymptoms} 
+
+ 
+
+修改 Bunyan 日志级别时，跟踪设置无法应用到应用程序的所有实例。这是因为 Bunyan 库不需要 Bunyan 记录器对象的名称和标识唯一。用于在应用程序的日志消息中指定级别的多个 Bunyan 记录器对象可以具有相同的名称或标识。因此，如果针对应用程序启用跟踪设置，那么在应用程序日志消息中指定的日志级别可能不正确。
+{: tsCauses}
+
+
+
+
+这是正常的情况。
+{: tsResolve} 
+
+<!-- end STAGING ONLY -->
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-03-13"
+years: 2016, 2017
+lastupdated: "2017-03-21"
 
 ---
 
@@ -22,14 +22,14 @@ Les données météorologiques de The Weather Company apparaissent dans la vue d
 
 **Important :** Seuls les terminaux gérés peuvent définir leurs propres emplacements. Les emplacements de tous les terminaux non gérés doivent être définis manuellement à l'aide de l'API. Pour plus d'informations sur la définition d'un emplacement de terminal, voir [Demandes de mise à jour d'emplacement](../../devices/device_mgmt/index.html#update-location).
 
-### API REST pour The Weather Company
+## API REST pour The Weather Company
 Pour accéder à l'API REST pour The Weather Company, voir la section
 Device Location Weather dans la documentation [{{site.data.keyword.iot_short_notm}} HTTP REST API ![Icône de lien externe](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather){: new_window}.
 
-### Affichage des données météorologiques
+## Affichage des données météorologiques
 
-Pour afficher les données météorologiques extraites pour un emplacement de terminal : 
-1. Cliquez sur le terminal dans le panneau **Terminaux**. 
+Pour afficher les données météorologiques extraites pour un emplacement de terminal :
+1. Cliquez sur le terminal dans le panneau **Terminaux**.
 2. Dans la vue de détails du terminal, faites défiler l'écran jusqu'à la section **Extensions**.  
 Les données météorologiques suivantes sont répertoriées :
  - Météo en cours.

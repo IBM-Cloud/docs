@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-28"
+lastupdated: "2017-02-24"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2016-10-28"
 ## 유지보수 전략
 {: #maintenance_strategy}
 
-IBM WebSphere Application Server for Bluemix는 현재 수정팩과 패치로 새 서비스 인스턴스가 작성될 수 있도록 정기적으로 업데이트됩니다. 미들웨어 관리 시
+IBM WebSphere Application Server in Bluemix는 새 서비스 인스턴스가 최신 수정팩 및 패치로 작성될 수 있도록 주기적으로 업데이트됩니다. 미들웨어 관리 시
 클라우드를 통해 새 서비스 인스턴스를 쉽고 빠르게 프로비저닝할 수 있습니다. 많은 소비자가
 유지보수를 적용하려고 할 때 새 서비스 인스턴스로 업그레이드하려고 합니다. 장기 서비스
 인스턴스를 보유하려는 해당 소비자의 경우 유지보수 저장소를 미들웨어 및 기본 운영

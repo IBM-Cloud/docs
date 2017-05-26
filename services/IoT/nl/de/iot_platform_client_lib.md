@@ -12,7 +12,7 @@ lastupdated: "2017-03-13"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Clientbibliotheken für die {{site.data.keyword.iot_short}}-Entwicklung
+# Clientbibliotheken für die {{site.data.keyword.iot_short_notm}}-Entwicklung
 {: #iot_platform_client_lib}
 
 Clientbibliotheken stellen Tools und Dateien zur Verfügung, die Sie zum Erstellen und Entwickeln von Code für die Integration und das Verbinden Ihrer Geräte und Anwendungen in {{site.data.keyword.iot_full}} benötigen.
@@ -38,7 +38,7 @@ Für jede unterstützte Programmiersprache stehen Clientbibliotheken zur Verfüg
 - [Weitere Dokumentation ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-watson-iot/iot-embeddedc/blob/master/README.md){:new_window}
 
 
-## Java™
+## Java
 - [Clientbibliothek ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-watson-iot/iot-java){:new_window}
 - [Beispiele ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-watson-iot/iot-java#samples){:new_window}
 - [Weitere Dokumentation ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-watson-iot/iot-java/blob/master/README.md){:new_window}
@@ -65,7 +65,7 @@ Für jede unterstützte Programmiersprache stehen Clientbibliotheken zur Verfüg
 - [Beispiele ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-watson-iot/iot-python/tree/master/samples){:new_window}
 - [Weitere Dokumentation ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-watson-iot/iot-python/blob/master/README.rst){:new_window}
 
-## Einführung in die {{site.data.keyword.iot_short}}-Entwicklung
+## Einführung in die {{site.data.keyword.iot_short_notm}}-Entwicklung
 
 Lesen Sie folgende Abschnitt in der {{site.data.keyword.Bluemix_notm}}-Dokumentation, bevor Sie mit dem Entwickeln von Code für {{site.data.keyword.iot_short_notm}} mithilfe der verfügbaren Clientbibliotheken beginnen.
 

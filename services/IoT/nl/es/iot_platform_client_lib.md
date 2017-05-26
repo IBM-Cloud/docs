@@ -12,7 +12,7 @@ lastupdated: "2017-03-13"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Bibliotecas de cliente para el desarrollo de {{site.data.keyword.iot_short}}
+# Bibliotecas de cliente para el desarrollo de {{site.data.keyword.iot_short_notm}}
 {: #iot_platform_client_lib}
 
 Las bibliotecas de cliente proporcionan herramientas y archivos que necesita para crear y desarrollar código para integrar y conectar los dispositivos y aplicaciones en {{site.data.keyword.iot_full}}.
@@ -38,7 +38,7 @@ Se proporcional bibliotecas de cliente para cada uno de los lenguajes de program
 - [Más documentación ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/iot-embeddedc/blob/master/README.md){:new_window}
 
 
-## Java™
+## Java
 - [Biblioteca de cliente ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/iot-java){:new_window}
 - [Ejemplos ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/iot-java#samples){:new_window}
 - [Más documentación ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/iot-java/blob/master/README.md){:new_window}
@@ -65,7 +65,7 @@ Se proporcional bibliotecas de cliente para cada uno de los lenguajes de program
 - [Ejemplos ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/iot-python/tree/master/samples){:new_window}
 - [Más documentación ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/iot-python/blob/master/README.rst){:new_window}
 
-## Iniciación al desarrollo con {{site.data.keyword.iot_short}}
+## Iniciación al desarrollo con {{site.data.keyword.iot_short_notm}}
 
 Para empezar a desarrollar código para {{site.data.keyword.iot_short_notm}} utilizando las bibliotecas de cliente disponibles, consulte las secciones siguientes de la documentación de {{site.data.keyword.Bluemix_notm}}:
 

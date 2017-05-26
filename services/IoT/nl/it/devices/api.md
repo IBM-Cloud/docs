@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-14"
+lastupdated: "2017-03-21"
 ---
 
 {:new_window: target="blank"}
@@ -48,7 +48,7 @@ Utilizza uno dei seguenti URL per inviare una richiesta `POST` da un dispositivo
 
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
-**Nota: **la porta 443, la porta SSL predefinita, può anche essere specificata per le chiamate API HTTP sicure.
+**Nota:** la porta 443, la porta SSL predefinita, può anche essere specificata per le chiamate API HTTP sicure.
 
 Se stai collegando un dispositivo o un'applicazione al servizio Quickstart, invece utilizza uno dei seguenti URL:
 

@@ -6,7 +6,7 @@ lastupdated: "2017-03-14"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -203,10 +203,10 @@ Topic: iotdm-1/response
 
 设备使用“更新位置”请求来管理设备的位置数据。设备的位置元数据可以通过以下方式在 {{site.data.keyword.iot_short_notm}} 中进行更新：
 
-#### 自动设备位置更新
+### 自动设备位置更新
 - 设备将向 {{site.data.keyword.iot_short_notm}} 通知有关位置更新的信息。设备从 GPS 接收器检索其位置，然后向 {{site.data.keyword.iot_short_notm}} 实例发送设备管理消息以更新其位置。时间戳记会捕获从 GPS 接收器检索到位置的时间。即便发送位置更新消息有所延迟，该时间戳记也仍有效。如果在设备管理消息中省略时间戳记，那么会使用接收消息的日期和时间来更新位置元数据。
 
-#### 使用 REST API 手动更新设备位置
+### 使用 REST API 手动更新设备位置
 - 注册设备时，可以使用 {{site.data.keyword.iot_short_notm}} REST API 手动设置静态设备的位置元数据。以后也可以修改位置。时间戳记设置是可选的，但省略时，会在设备的位置元数据中设置当前日期和时间。
 
 ### 设备触发的位置更新

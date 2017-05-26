@@ -5,10 +5,10 @@
 Natural Language Classifier
 
     {: .navgroup id="learn"}
-    index.md
+    getting-started.md
     natural-language-classifier-overview.md
     [Demo](http://natural-language-classifier-demo.mybluemix.net/)
-        
+
     {: .topicgroup}
     Additional resources
         [Blog](https://developer.ibm.com/watson/blog/)
@@ -22,15 +22,15 @@ Natural Language Classifier
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [API reference](http://www.ibm.com/watson/developercloud/natural-language-classifier/api/v1/)
+    [API reference](http://www.ibm.com/watson/developercloud/natural-language-classifier/api/v1)
+    [Other Watson docs](https://www.ibm.com/watson/developercloud/doc/index.html)
 
     {: .topicgroup}
     Watson SDKs
-        [Android SDK](https://github.com/watson-developer-cloud/android-sdk)
-        [Apple iOS SDK](https://github.com/watson-developer-cloud/ios-sdk)
         [Java SDK](https://github.com/watson-developer-cloud/java-sdk)
         [Node.js SDK](https://github.com/watson-developer-cloud/node-sdk)
         [Python SDK](https://github.com/watson-developer-cloud/python-sdk)
+        [Swift SDK](https://github.com/watson-developer-cloud/ios-sdk)
         [Unity SDK](https://github.com/watson-developer-cloud/unity-sdk)
 
     [Watson GitHub repos](https://github.com/watson-developer-cloud/)
@@ -39,7 +39,7 @@ Natural Language Classifier
 
     {: .navgroup id="help"}
     release-notes.md
-    
+
     {: .topicgroup}
     Developer community
         [StackOverflow](http://stackoverflow.com/questions/tagged/nl-classifier)

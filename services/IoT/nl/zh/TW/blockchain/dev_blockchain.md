@@ -13,7 +13,7 @@ lastupdated: "2017-03-14"
 {:pre: .pre}
 
 
-# 開發 {{site.data.keyword.iot_short_notm}} 區塊鏈整合的智慧型合約
+# 開發區塊鏈智慧型合約
 {: #iotblockchain_link}
 
 使用 {{site.data.keyword.blockchainfull}} 及 Hyperledger 開發環境，以建立及測試您衍生自 IBM 所提供範例合約的專屬智慧型合約。

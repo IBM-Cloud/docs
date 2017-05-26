@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-04-11"
 ---
 
 
@@ -25,7 +25,7 @@ El despliegue de una app en {{site.data.keyword.Bluemix_notm}} incluye dos fases
 Cloud Foundry admite Diego, que es la nueva arquitectura predeterminada de tiempo de ejecución que ofrece un conjunto de funciones que mejoran el desarrollo de aplicaciones para albergar y construir plataformas en la nube. Esta actualización de arquitectura ofrece una mejora en el funcionamiento general y en el rendimiento de la plataforma Cloud Foundry. La nueva arquitectura ofrece soporte para diversas tecnologías de contenedor de aplicaciones, que incluyen Garden y Windows, un paquete SSH que permite el inicio de sesión directo con el contenedor de aplicaciones y otros cambios innovadores. Para obtener más información sobre la reciente actualización de la arquitectura, consulte [{{site.data.keyword.Bluemix_notm}} Cloud Foundry: Diego is live ![icono de enlace externo](../icons/launch-glyph.svg)](https://www.ibm.com/blogs/bluemix/2017/01/bluemix-cloud-foundry-diego-live/){: new_window}.
 
 
-Todas las nuevas aplicaciones que cree se ejecutarán en Diego; debe comenzar a migrar sus aplicaciones existentes que se ejecuten en DEA a la nueva arquitectura Diego.
+Todas las nuevas aplicaciones que cree se ejecutarán en Diego; debe migrar sus aplicaciones existentes que se ejecuten en DEA a la nueva arquitectura Diego.
 
 **Nota**: la arquitectura Diego de Cloud Foundry afecta a todos los entornos de región pública de {{site.data.keyword.Bluemix_notm}}. Los entornos {{site.data.keyword.Bluemix_notm}} dedicado y {{site.data.keyword.Bluemix_notm}} local se actualizarán más adelante.
 
@@ -241,7 +241,7 @@ cf push -f appManifest.yml
 |**random-route**	|Un valor booleano para asignar una ruta aleatoria a la app. El valor predeterminado es **false**.	|`random-route: true`|
 |**services**	|Los servicios que se van a enlazar a la app.	|`services: - mysql_maptest`|
 |**env**	|Las variables de entorno personalizadas de la app.|`env: DEV_ENV: production`|
-{: caption="Table 1. Supported options in the manifest YAML file" caption-side="top"}
+{: caption="Tabla 1. Opciones soportadas en el archivo YAML de manifiesto" caption-side="top"}
 
 ### Un archivo de ejemplo manifest.yml
 
@@ -268,7 +268,7 @@ En el ejemplo siguiente se muestra un archivo de manifiesto para una app Node.js
 ## Variables de entorno
 {: #app_env}
 
-Las variables de entorno contienen información sobre el entorno de una app desplegada en {{site.data.keyword.Bluemix_notm}}. A parte de las variables de entorno definidas por el *agente de ejecución de gotas (DEA)* y los paquetes de compilación, también puede definir variables de entorno específicas de una app en {{site.data.keyword.Bluemix_notm}}.
+Las variables de entorno contienen información sobre el entorno de una app desplegada en {{site.data.keyword.Bluemix_notm}}. A parte de las variables de entorno definidas por *Diego* y los paquetes de compilación, también puede definir variables de entorno específicas de una app en {{site.data.keyword.Bluemix_notm}}.
 
 Puede ver las siguientes variables de entorno de una app {{site.data.keyword.Bluemix_notm}} en ejecución
 mediante el mandato **cf env** o desde la interfaz de usuario {{site.data.keyword.Bluemix_notm}}:
@@ -325,7 +325,7 @@ mediante el mandato **cf env** o desde la interfaz de usuario {{site.data.keywor
 
 También tiene acceso a las variables de entorno establecidas por DEA y los paquetes de compilación.
 
-Las siguientes variables están definidas por el DEA:
+Diego define las siguientes variables: 
 
 <dl>
   <dt><strong>HOME</strong></dt>
@@ -333,15 +333,15 @@ Las siguientes variables están definidas por el DEA:
   <dt><strong>MEMORY_LIMIT</strong></dt>
   <dd>Cantidad máxima de memoria que puede utilizar cada instancia de la app. Puede especificar el valor de la app en el archivo <span class="ph filepath">manifest.yml</span> o en la línea de mandatos cuando envíe la app.</dd>
   <dt><strong>PORT</strong></dt>
-  <dd>El puerto del DEA correspondiente a la comunicación con la app. El DEA asigna un puerto para la app en el momento de la transferencia.</dd>
+  <dd>El puerto de Diego correspondiente a la comunicación con la app. Diego asigna un puerto para la app en el momento de la transferencia.</dd>
   <dt><strong>PWD</strong></dt>
   <dd>El directorio de trabajo actual en el que se ejecuta el paquete de compilación.</dd>
   <dt><strong>TMPDIR</strong></dt>
   <dd>El directorio en que se guardan los archivos temporales y de transferencia.</dd>
   <dt><strong>USER</strong></dt>
-  <dd>El ID de usuario bajo el cual se ejecuta el DEA.</dd>
+  <dd>El ID de usuario bajo el que se ejecuta Diego.</dd>
   <dt><strong>VCAP_APP_HOST</strong></dt>
-  <dd>La dirección IP del host del DEA.</dd>
+  <dd>La dirección IP del host de Diego.</dd>
   <dt><strong>VCAP_APPLICATION</strong></dt>
   <dd>Una cadena JSON que contiene la información sobre la app desplegada. La información incluye el nombre de la app, los URI, los límites de memoria, la indicación de fecha y hora en que la app ha alcanzado su estado actual, etc. Por ejemplo:
   <pre class="pre codeblock"><code>
@@ -418,9 +418,9 @@ Las variables definidas por un paquete de compilación varían según cada paque
 	  <dt><strong>IBM_JAVA_OPTIONS</strong></dt>
 	  <dd>Las opciones de SDK de Java que se utilizarán cuando se ejecute la app.</dd>
 	  <dt><strong>IBM_JAVA_COMMAND_LINE</strong></dt>
-	  <dd>El mandato Java para iniciar una instancia de servidor de un perfil de Liberty en el DEA.</dd>
+	  <dd>El mandato Java para iniciar una instancia de servidor de un perfil de Liberty en Diego. </dd>
 	  <dt><strong>WLP_USR_DIR</strong></dt>
-	  <dd>La ubicación de recursos compartidos y de las definiciones de servidor al iniciar una instancia de servidor de un perfil de Liberty en el DEA.</dd>
+	  <dd>La ubicación de recursos compartidos y de las definiciones de servidor al iniciar una instancia de servidor de un perfil de Liberty en Diego.</dd>
 	  <dt><strong>WLP_OUTPUT_DIR</strong></dt>
 	  <dd>La ubicación de las salidas que se generen como archivos de registro y directorios de trabajo de una instancia de servidor de un perfil de Liberty en ejecución.</dd>
 	  </dl>

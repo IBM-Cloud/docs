@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-17"
+lastupdated: "2017-4-11"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -55,7 +55,7 @@ Die folgenden Eigenschaften und Ressourcen sind in Pipeline-Umgebungen standardm
 | BUILD_NUMBER | Die inkrementelle Stages-ID, die in der Benutzerschnittstelle der Pipeline angezeigt wird.  |
 | GIT_BRANCH | Der Git-Zweig, den der Job als Eingabe verwendet. Diese Eigenschaft ist nur für Jobs verfügbar, die als Eingabe ein Git-Repository verwenden. |
 | GIT_COMMIT | Die Git-Commitoperation, die der Job als Eingabe verwendet. Diese Eigenschaft ist nur für Jobs verfügbar, die als Eingabe ein Git-Repository verwenden. |
-| GIT_PREVIOUS_COMMIT | Der Git-Commitwert der letzten erfolgreichen Ausführung des Jobs. Diese Eigenschaft ist nur für Jobs verfügbar, die als Eingabe ein Git-Repository verwenden. |
+| GIT_PREVIOUS_COMMIT | Der Git-Commitwert der letzten erfolgreichen Ausführung des Jobs. Diese Eigenschaft ist nur in Jobs verfügbar, die als Eingabe ein Git-Repository verwenden.  |
 | GIT_URL | Die Git-Repository-URL, die der Job als Eingabe verwendet. Diese Eigenschaft ist nur für Jobs verfügbar, die als Eingabe ein Git-Repository verwenden. |
 | IDS_JOB_ID | Die eindeutige ID der Jobkonfiguration. |
 | IDS_JOB_NAME | Der Name der Jobkonfiguration. |
@@ -103,7 +103,7 @@ In jeder Pipeline sind mehrere Laufzeiten, Tools und Node-Module vorinstalliert.
 
 ### Laufzeiten und Tools
 
-*Anmerkung:* Alle Links befinden sich im Ausgangsverzeichnis.
+*Hinweis:* Alle Links befinden sich im Ausgangsverzeichnis.
 
 | Ressource | Linkname | Pfad |
 |----------|-----------|-----------|

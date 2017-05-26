@@ -94,7 +94,7 @@ Il constructor uno crea un'istanza `ManagedDevice` in {{site.data.keyword.iot_sh
 |:---|:---|
 |`Organization-ID` |Il tuo ID dell'organizzazione|
 |`Device-Type` |Il tipo del tuo dispositivo. Generalmente, il deviceType è un raggruppamento di dispositivi che esegue un'attività specifica, ad esempio "weatherballoon".|
-|`Device-ID` |L'ID del tuo dispositivo. Generalmente, per determinato tipo di dispositivo, il deviceId è un identificativo univoco di tale dispositivo, ad esempio un numero seriale o un indirizzo MAC.|
+|`Device-ID` |L'ID del tuo dispositivo. Generalmente, per un determinato tipo di dispositivo, il deviceId è un identificativo univoco di tale dispositivo, ad esempio un numero seriale o un indirizzo MAC.|
 |`Authentication-Method` |Il metodo di autenticazione da utilizzare. L'unico valore al momento supportato è `token`.|
 |`Authentication-Token` |Un token di autenticazione per la connessione sicura al tuo dispositivo su Watson IoT Platform.|
 

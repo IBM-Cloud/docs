@@ -12,7 +12,7 @@ lastupdated: "2017-03-31"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Deployment Risk (Beta)
+# Deployment Risk
 {: #gettingstarted}
 
 {{site.data.keyword.DRA_short}} provides a wealth of information about your deployments, particularly risk. You can use it to automate quality protection in your delivery pipeline by using policies and gates. 

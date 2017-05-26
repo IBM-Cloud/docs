@@ -11,14 +11,14 @@ lastupdated: "2017-4-11"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Utilizzo dei repository Git e del tracciamento del problema (Sperimentale)
+# Repository Git e tracciamento del problema (beta)
 {: #git_working}
 
 Collabora con il tuo team e gestisci il tuo codice di origine con un repository (repo) Git e il programma di traccia dei problemi ospitato da IBM  e creato con [GitLab Community Edition ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://about.gitlab.com/){:new_window}.
 {: shortdesc}
 
-I repository Git e l'integrazione dello strumento del tracciamento del problema supporta i team a gestire il codice e collabora in molti modi:
-   * Gestire i repository Git i controlli dell'accesso accurati che mantengono il codice sicuro
+L'integrazione dello strumento Repository Git e tracciamento del problema supporta i team per gestire il codice e per la collaborazione in modi diversi:
+   * Gestire i repository Git attraverso i controlli dell'accesso accurati che mantengono il codice sicuro
    * Rivedere il codice e migliorare la collaborazione tramite le richieste di unione
    * Tracciare i problemi e condividere le idee tramite il programma di traccia del problema
    * Documentare i progetti nel sistema wiki
@@ -30,12 +30,13 @@ I repository Git e l'integrazione dello strumento del tracciamento del problema 
 
 I file sono tassativamente limitati a 100 MB. Il limite di dimensione del repository consigliato è 1 GB. Se il tuo repository supera 1 GB, potresti ricevere un'email con una richiesta di riduzione della dimensione del repository.
 
-## Creazione di un token di accesso personale o di una chiave SSH per l'autenticazione    
+## Utilizzo di Repository Git e tracciamento del problema in locale
 {: #git_authentication}
 
+Puoi accedere localmente ai repository Git memorizzati in Repository Git e tracciamento del problema. Per istruzioni sulla configurazione di Git in locale, vedi [Start using Git on the command line ![icona link esterno](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window}.
+
+### Creazione di un token di accesso personale o di una chiave SSH per l'autenticazione  
 Per completare le operazioni Git remote, come ad esempio `clone` o `push`, dal tuo repository Git locale, devi utilizzare un token di accesso personale o una chiave SSH per l'autenticazione con GitLab.
 
-* Per configurare un token di accesso personale, consulta [Personal access tokens ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://git.ng.bluemix.net/help/api/README.html#personal-access-tokens){:new_window}.
-* Per configurare una chiave SSH, consulta [SSH ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://git.ng.bluemix.net/help/ssh/README){:new_window} o [How to create your SSH Keys ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://git.ng.bluemix.net/help/gitlab-basics/create-your-ssh-keys){:new_window}. L'accesso ai tuoi repository con l'autenticazione SSH potrebbe richiedere ulteriore configurazione per i proxy e i firewall.
-
-**Nota:** per utilizzare un token di accesso personale o di una chiave SSH per l'autenticazione, devi configurare Git localmente. Per istruzioni, consulta [Start using Git on the command line ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window}.
+* Per configurare un token di accesso personale, consulta [Personal access tokens ![Icona link esterno](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/help/api/README.html#personal-access-tokens){:new_window}.
+* Per configurare una chiave SSH, consulta [SSH ![Icona link esterno](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/help/ssh/README){:new_window} o [How to create your SSH Keys ![Icona link esterno](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/help/gitlab-basics/create-your-ssh-keys){:new_window}. L'accesso ai tuoi repository con l'autenticazione SSH potrebbe richiedere ulteriore configurazione per i proxy e i firewall.

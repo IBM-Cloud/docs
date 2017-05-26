@@ -2,18 +2,18 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-04-13"
 
 ---
 
-<!-- Attribute definitions --> 
+<!-- Attribute definitions -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
 
-#Console {{site.data.keyword.streaminganalyticsshort}}
+# Console {{site.data.keyword.streaminganalyticsshort}}
 {: #console}
 
 Nella console {{site.data.keyword.streaminganalyticsshort}}, puoi inviare le tue applicazioni {{site.data.keyword.streamsshort}} direttamente all'istanza del servizio {{site.data.keyword.streaminganalyticsshort}}.
@@ -34,3 +34,5 @@ modificare le tue query
 
 Puoi accedere alla console {{site.data.keyword.streaminganalyticsshort}}
 dal dashboard del servizio.
+
+<!--The {{site.data.keyword.streaminganalyticsshort}} console is translated into the following languages: Brazilian Portuguese, French, German, Italian, Japanese, Korean, Simplified Chinese, Spanish, Traditional Chinese. Change the language setting in your browser to view the console in your preferred language. -->

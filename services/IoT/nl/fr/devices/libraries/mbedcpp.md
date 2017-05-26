@@ -38,7 +38,7 @@ Utilisez le [compilateur mBed ![Icône de lien externe](../../../../icons/launch
 
 **Remarque :** Vous n'avez rien à installer ni à configurer pour commencer à utiliser mbed.
 
-Pour plus d'informations sur la connexion d'un microcontrôleur ARM mBed NXP LPC 1768 à {{site.data.keyword.iot_short_notm}}, voir la recette[mBed C++ client library for IBM Watson IoT Platform ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/mbed-c-client-library-for-ibm-iot-foundation/){: new_window}. 
+Pour plus d'informations sur la connexion d'un microcontrôleur ARM mBed NXP LPC 1768 à {{site.data.keyword.iot_short_notm}}, voir la recette[mBed C++ client library for IBM Watson IoT Platform ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/mbed-c-client-library-for-ibm-iot-foundation/){: new_window}.
 
 ## Constructeur
 {: #constructor}
@@ -276,4 +276,4 @@ Pour déconnecter le client et libérer les connexions, exécutez le fragment de
 ## Exemples
 {: #samples}
 
-[IBMIoTClientLibrarySample ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/){: new_window} est un exemple de code qui montre comment utiliser la bibliothèque client {{site.data.keyword.iot_short_notm}} pour connecter les terminaux mbed LPC1768 ou FRDM-K64F à l'instance de service. 
+[IBMIoTClientLibrarySample ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/){: new_window} est un exemple de code qui montre comment utiliser la bibliothèque client {{site.data.keyword.iot_short_notm}} pour connecter les terminaux mbed LPC1768 ou FRDM-K64F à l'instance de service.

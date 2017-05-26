@@ -77,23 +77,3 @@ Weather Company 애플리케이션은 Weather Company 데이터 서비스에서 
 조치 엔진은 실드에 지정된 정보를 기반으로 수행할 조치를 판별합니다. 
 
 {{site.data.keyword.iotinsurance_short}} API를 사용하여 JavaScript에서 새 실드를 작성할 수 있습니다. 
-
-
-
-# 관련 링크
-{: #rellinks}
-
-## 튜토리얼 및 샘플
-{: #samples}
-* [GitHub의 샘플 모바일 앱 코드 ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## API 참조
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API 예제 ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## 관련 링크
-{: #general}
-* [{{site.data.keyword.iot_full}} 문서](https://console.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
-* [개발자 지원 포럼 ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix]){:new_window}
-* [Stack Overflow 지원 포럼 ![외부 링크 아이콘](../../icons/launch-glyph.svg)](http://stackoverflow.com/questions/tagged/ibm-bluemix){:new_window}

@@ -15,7 +15,7 @@ lastupdated: "2017-03-15"
 # Configuration des règles de sécurité
 {: #set_up_policies.md}
 
-Lorsqu'un plan de sécurité avancée est utilisé pour une organisation, un analyste de sécurité peut configurer des règles de sécurité de connexion et des listes noires ou des listes blanches. Lorsqu'un plan standard est utilisé, l'analyste peut configurer des règles de connexion, avec moins d'options, et ne peut pas configurer des listes noires ou des listes blanches. 
+Lorsqu'un plan de sécurité avancée est utilisé pour une organisation, un analyste de sécurité peut configurer des règles de sécurité de connexion et des listes noires ou des listes blanches. Lorsqu'un plan standard est utilisé, l'analyste peut configurer des règles de connexion, avec moins d'options, et ne peut pas configurer des listes noires ou des listes blanches.
 
 ## Configuration des règles de connexion pour une sécurité avancée
 {: #config_connect}
@@ -36,7 +36,7 @@ Vous pouvez définir le niveau de sécurité par défaut qui est appliqué à to
 **Remarque :** Vous pouvez également accéder aux paramètres de sécurité de connexion sur la page **Général** sous **Paramètres**. Cliquez sur **Ouvrir la règle de sécurité de connexion**.
 
 ## Configuration des règles de connexion pour une sécurité standard
-{: #config_connect_standard}
+{: #config_connect}
 
 Pour les organisations qui utilisent une sécurité standard, vous modifiez les paramètres de sécurité sur la page **Général** sous **Paramètres**. Vous pouvez définir le niveau de sécurité par défaut qui est appliqué à tous les terminaux.
 

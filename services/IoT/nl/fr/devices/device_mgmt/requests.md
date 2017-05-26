@@ -180,7 +180,7 @@ Topic: iotdevice-1/response
 
 Le niveau de microprogramme identifié sur un terminal est stocké dans l'attribut `deviceInfo.fwVersion`. Les attributs `mgmt.firmware` sont utilisés pour effectuer une mise à jour de microprogramme et observer son statut.
 
-**Important :** Le terminal géré doit prendre en charge l'observation de l'attribut `mgmt.firmware` afin de prendre en charge les actions sur le microprogramme. 
+**Important :** Le terminal géré doit prendre en charge l'observation de l'attribut `mgmt.firmware` afin de prendre en charge les actions sur le microprogramme.
 
 Le processus de mise à jour du microprogramme est scindé en deux actions distinctes :
 - Téléchargement du microprogramme
@@ -220,7 +220,7 @@ Les informations suivantes sont fournies :
 
 - L'action `firmware/download`
 - Une liste de terminaux qui doivent recevoir l'image (5 000 terminaux au maximum)
-- L'URI de l'image de microprogramme (facultatif) 
+- L'URI de l'image de microprogramme (facultatif)
 - La chaîne de vérification permettant de valider l'image (facultatif)
 - Le nom du microprogramme (facultatif)
 - La version du microprogramme (facultatif)
@@ -441,7 +441,7 @@ Les informations suivantes sont fournies :
 
 - L'action `firmware/update`
 - La liste des terminaux qui doivent recevoir l'image, tous du même type
-- L'URI de l'image de microprogramme (facultatif) 
+- L'URI de l'image de microprogramme (facultatif)
 - La chaîne de vérification permettant de valider l'image (facultatif)
 - Le nom du microprogramme (facultatif)
 - La version du microprogramme (facultatif)

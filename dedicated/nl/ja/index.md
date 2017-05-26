@@ -34,7 +34,7 @@ lastupdated: "2017-01-11"
 |オプション | [{{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} は、{{site.data.keyword.APIM}} と IBM StrongLoop を単一のオファリングに統合し、API とマイクロサービスを作成、実行、管理、および強化する包括的な解決策を提供します。 |
 |オプション | [{{site.data.keyword.rules_short}}](/docs/services/rules/rules.html) | {{site.data.keyword.rules_short}} では、頻繁に出現する、反復可能なルール・ベースのビジネス意思決定を自動化し実行する包括的な環境を提供します。これはまた、IT 技術の必要性を低減することで、ビジネス・ユーザーや開発者がより低コストで意思決定を速やかにモデル化してテストすることも可能にします。 |
 |オプション | [{{site.data.keyword.cloudant}}](/docs/services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} は、常に稼働している完全管理 NoSQL JSON データ層へのアクセスを提供します。このサービスは CouchDB と互換性があり、モバイル・アプリケーション・モデルおよび Web アプリケーション・モデル用の、簡単に使用できる HTTP インターフェースでアクセスできます。 |
-|オプション | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | {{site.data.keyword.Bluemix_dedicated_notm}} で Docker コンテナーを実行します。コンテナーは、アプリが実行のために必要とするすべてのエレメントを含む仮想ソフトウェア・オブジェクトです。コンテナーには、リソースの分離と割り振りの利点がありますが、例えば仮想マシンなどよりも、移植可能性と効率性が高まっています。ハードウェア要件については、『[{{site.data.keyword.Bluemix_dedicated_notm}} および Bluemix Local における IBM {{site.data.keyword.containershort}}](/docs/containers/container_dl.html)』を参照してください。|
+|オプション | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | {{site.data.keyword.Bluemix_dedicated_notm}} で Docker コンテナーを実行します。コンテナーは、アプリが実行のために必要とするすべてのエレメントを含む仮想ソフトウェア・オブジェクトです。コンテナーには、リソースの分離と割り振りの利点がありますが、例えば仮想マシンなどよりも、移植可能性と効率性が高まっています。ハードウェア要件については、『[{{site.data.keyword.Bluemix_dedicated_notm}} および Bluemix Local における IBM {{site.data.keyword.containershort}}](/docs/containers/container_ov.html#container_dl)』を参照してください。|
 | オプション | [{{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery/index.html) | {{site.data.keyword.contdelivery_short}} Dedicated を使用して、ビルド、単体テスト、デプロイメントなどを自動化します。機能豊富な Web ベース IDE により、コードの編集およびプッシュを行います。開発、デプロイメント、および運用の作業をサポートするツール統合を実現するツールチェーンを作成します。 |
 | オプション | [{{site.data.keyword.dashdbshort}}](/docs/services/dashDB/dashDB.html) | IBM {{site.data.keyword.dashdbshort}} for Analytics は、データウェアハウスおよび分析のワークロード用に最適化された完全管理の SQL クラウド・データベース・サービスです。IBM {{site.data.keyword.dashdbshort}} for Transactions は、汎用、Web アプリ、およびトランザクションのワークロード用に最適化された完全管理の SQL クラウド・データベース・サービスです。 |
 | オプション | [{{site.data.keyword.datacshort}}](/docs/services/DataCache/index.html#data_cache) | このサービスは、アプリで分散キャッシュ・シナリオをサポートするメモリー内データ・グリッドを提供します。50 GB のメモリー内キャッシュが含まれます。 |
@@ -46,7 +46,7 @@ lastupdated: "2017-01-11"
 |オプション | [{{site.data.keyword.sescashort}}](/docs/services/SessionCache/index.html#session_cache) | 冗長性を高めるために、{{site.data.keyword.sescashort}} は、キャッシュに保管されたセッションのレプリカを提供します。これにより、ブラウンアウトまたは障害が発生した場合、クライアント・アプリケーションはキャッシュ内のセッションへのアクセスを維持できます。サービスでは、Web アプリケーションとモバイル・アプリケーションのセッション・キャッシュ・シナリオがサポートされます。 |
 | オプション | [{{site.data.keyword.iot_short}}](/docs/services/IoT/index.html) | このサービスにより、アプリは、接続されたデバイス、センサー、およびゲートウェイが収集したデータと通信して、それらのデータを取り込むことができます。基本オファリングでは、100,000 個の同時接続されたデバイスまたはアプリケーションと 1.6 TB のデータ交換の容量を備えた専用環境内で {{site.data.keyword.iot_short}} の専用バージョンを実行することができます。 |
 | オプション | [{{site.data.keyword.appserver_short}}](/docs/services/ApplicationServeronCloud/index.html) | IBM {{site.data.keyword.appserver_short}} for IBM {{site.data.keyword.Bluemix_notm}} は、{{site.data.keyword.Bluemix_notm}} 上でホストされるクラウド環境で、事前定義済みの {{site.data.keyword.appserver_short}} Liberty、Traditional Network Deployment、または Traditional WebSphere Java EE インスタンスを迅速にセットアップできるようにするサービスです。 |
-{: caption="Table 1. Dedicated Services" caption-side="top"}
+{: caption="表 1. Dedicated のサービス" caption-side="top"}
 {: #table01}
 
 
@@ -59,7 +59,7 @@ lastupdated: "2017-01-11"
 |Dedicated {{site.data.keyword.apiconnect_short}} Professional 10 万回の API 呼び出し容量の増加 | 1 月当たり 10 万回の API 呼び出し容量を追加する {{site.data.keyword.apiconnect_short}} Professional 環境の拡張。 |
 |Dedicated {{site.data.keyword.apiconnect_short}} Enterprise 2500 万回の API 呼び出し | 企業全体の API プロジェクトを対象にした、1 月当たり 2500 万回の API 呼び出し容量を持つ専用環境内で {{site.data.keyword.apiconnect_short}} の専用バージョンを実行できる環境。 |
 |Dedicated {{site.data.keyword.apiconnect_short}} Enterprise 10 万回の API 呼び出し容量の増加 | 1 月当たり 10 万回の API 呼び出し容量を追加する {{site.data.keyword.apiconnect_short}} Enterprise 環境の拡張。 |
-|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.rules_short}} 100 万回の「ルールに基づく意思決定」 | 「ルールに基づく意思決定」は、ルール実行サーバーからルールセットを呼び出すことで生じる結果をいいます。請求期間中に実行または処理され、最も近い 100 万単位に切り上げられた「ルールに基づく意思決定」の合計数に対応する十分なライセンスが取得されていなければなりません。本「クラウド・サービス」で課金される「ルールに基づく意思決定」は、意思決定を得るためにルール実行サーバーに対して行われる呼び出しです。 |
+|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.rules_short}} 100 万回の「ルールに基づく意思決定」 | 「ルールに基づく意思決定」は、ルール実行サーバーからルールセットを呼び出すことで生じる結果をいいます。請求期間中に実行または処理され、最も近い 100 万単位に切り上げられた「ルールに基づく意思決定」の合計数に対応する十分なライセンスが取得されていなければなりません。本「クラウド・サービス」で課金される「ルールに基づく意思決定」は、意思決定を得るためにルール実行サーバーに対して行われる呼び出しです。「クラウド・サービス」の Dedicated デプロイメントには、関連課金メトリックで測定される合意済みの容量が設定されています。{{site.data.keyword.Bluemix_dedicated_notm}} プラットフォームでの {{site.data.keyword.rules_short}} サービスのデフォルトのスペース割り振りは 16 GB で、権限がある「ルールに基づく意思決定」を実行するために、それぞれ 1 GB の最大 10 個のインスタンスを呼び出すことができます。当該使用制限を超えた場合、その使用をカバーするために追加容量を購入する必要があります。 |
 |Dedicated {{site.data.keyword.cloudant}} の 1.6 TB の容量増加 | 設計容量が 1.6 テラバイトの専用環境内での {{site.data.keyword.cloudantfull}} の専用バージョンの実行が組み込まれます。  |
 |Dedicated {{site.data.keyword.datacshort}} および {{site.data.keyword.sescashort}} の 50 GB の容量増加 | 最大 50 GB の累積容量まで「{{site.data.keyword.datacshort}}」および「{{site.data.keyword.sescashort}}」のインスタンスをデプロイして実行することができる環境。 |
 |{{site.data.keyword.contdelivery_short}} Dedicated インスタンス | 専用環境内で実行されるプライベート・バージョンの {{site.data.keyword.contdelivery_short}}。容量は、{{site.data.keyword.contdelivery_short}} Dedicated 許可ユーザーのライセンスで決まります。 |
@@ -80,7 +80,7 @@ lastupdated: "2017-01-11"
 |IBM {{site.data.keyword.appserver_short}} for {{site.data.keyword.Bluemix_notm}} - Dedicated Medium| 月当たり 128 vCore、256 GB RAM、および 2 TB HDD を使用できる、{{site.data.keyword.Bluemix_notm}} 上でホストされたクラウド環境内の事前定義された {{site.data.keyword.appserver_short}} Liberty、Traditional Network Deployment、または Traditional WebSphere Java EE インスタンス。 |
 |IBM {{site.data.keyword.appserver_short}} for {{site.data.keyword.Bluemix_notm}} - Dedicated Large| 月当たり 256 vCore、512 GB RAM、および 4 TB HDD を使用できる、{{site.data.keyword.Bluemix_notm}} 上でホストされたクラウド環境内の事前定義された {{site.data.keyword.appserver_short}} Liberty、Traditional Network Deployment、または Traditional WebSphere Java EE インスタンス。 |
 |IBM {{site.data.keyword.appserver_short}} for {{site.data.keyword.Bluemix_notm}} - Dedicated| 月当たり 1 TB HDD と HDD 拡張を使用できる、{{site.data.keyword.Bluemix_notm}} 上でホストされたクラウド環境内の事前定義された {{site.data.keyword.appserver_short}} Liberty、Traditional Network Deployment、または Traditional WebSphere Java EE インスタンス。 |
-{: caption="Table 2. Optional service components for purchase" caption-side="top"}
+{: caption="表 2. 購入用のオプションのサービス・コンポーネント" caption-side="top"}
 {: #table02}
 
 
@@ -91,7 +91,7 @@ lastupdated: "2017-01-11"
 |Dedicated Direct Link 1 Gbps 容量 | 最大 1 Gbps のデータ転送用に設計され、適切に配置された {{site.data.keyword.BluSoftlayer}} ネットワーク・ポイントに直接接続される、専用ネットワーク・リンク。 |
 |Dedicated Direct Link 10 Gbps 容量 | 最大 10 Gbps のデータ転送用に設計され、適切に配置された {{site.data.keyword.BluSoftlayer}} ネットワーク・ポイントに直接接続される、専用ネットワーク・リンク。 |
 |IBM Bluemix Dedicated ハードウェア・ファイアウォール - 高可用性 | 専用環境内の同じ VLAN 上の単一、複数、またはすべてのサーバーを保護するように構成された、冗長 1 Gbps ハードウェア・ファイアウォール。 |
-{: caption="Table 3. Optional platform add-on components for purchase" caption-side="top"}
+{: caption="表 3. 購入用のオプションのプラットフォーム・アドオン・コンポーネント" caption-side="top"}
 {: #table03}
 
 **注**: {{site.data.keyword.Bluemix_dedicated_notm}} のコンポーネントは、構成された特定の容量 (ギガバイト数や、1 秒当たりのトランザクション数など) で示される場合があります。どんな構成でも、クラウド・サービスで実際に使用される容量は、さまざまな要因によって異なるため、実際に使用される容量は、構成された容量より増減する可能性があります。
@@ -154,7 +154,7 @@ lastupdated: "2017-01-11"
 |{{site.data.keyword.iot_short}}		|はい		|はい		|いいえ|
 |{{site.data.keyword.weather_short}}		|はい		|はい		|はい|
 |{{site.data.keyword.workloadscheduler}}	|はい		|はい		|はい |
-{: caption="Table 4. Services available for syndication from {{site.data.keyword.Bluemix_notm}} Public by region" caption-side="top"}
+{: caption="表 4. Bluemix パブリックからのシンジケーションに使用可能な、地域別のサービス" caption-side="top"}
 {: #table04}
 
 **注**: サード・パーティー・サービスは表に含まれていません。サード・パーティー・サービス・オプションについては、専用カタログを確認してください。
@@ -338,7 +338,7 @@ Success Manager (CSM) と連携できます。異なるサポート層につい�
 |物理的インフラストラクチャーのレビュー | データ・センターを保護するセキュリティー制御の脅威および審査のためのソリューション・コンポーネントをホストする物理的プレミスをレビューします。 | お客様 |
 |モニタリング・ソフトウェアの検査 | エスカレーションおよび問題判別の計画で定義したモニターおよび管理コンポーネントを検査します。 | お客様 |
 |OS の検査 | オペレーティング・システム・イメージがコンプライアンス規格に合っていることを確認するための検査を行います。IBM が OS イメージにアクセスできるようにします。 | IBM とお客様の共同の責任 |
-{: caption="Table 5. Inception phase tasks" caption-side="top"}
+{: caption="表 5. 方向付けフェーズのタスク" caption-side="top"}
 
 
 次に、進行フェーズについて説明します。進行フェーズは、お客様と IBM Cloud との進行中の協力関係を記述します。このフェーズの主な目標には、以下のものがあります。
@@ -363,7 +363,7 @@ Success Manager (CSM) と連携できます。異なるサポート層につい�
 |状況レポート作成、監査調整、およびコンプライアンス会議  | 状況レポート作成、外部監査調整、およびコンプライアンス・レビュー状況会議での説明を実施します。 | IBM |
 |雇用とビジネス・ニーズの確認 | 四半期ごとに、顧客環境にアクセスできる IBM 担当者について、雇用の確認およびビジネス・ニーズが継続していることの確認を行います。 | IBM |
 |セキュリティー脆弱性の解決 | プラットフォームで報告されたセキュリティー脆弱性を解決します。 | IBM |
-{: caption="Table 6. Progression phase tasks" caption-side="top"}
+{: caption="表 6. 進行フェーズのタスク" caption-side="top"}
 
 最終の完了ステージは、お客様と IBM {{site.data.keyword.Bluemix_notm}} 間の関係の終了を表します。このフェーズの主なタスクには、以下のものがあります。
 
@@ -378,7 +378,7 @@ Success Manager (CSM) と連携できます。異なるサポート層につい�
 |環境の廃止 | 環境へのアクセスおよび環境の資格情報をシャットダウンします。 | IBM とお客様の共同の責任 |
 |お客様とのネットワーク接続の削除 | IBM とお客様環境との間のネットワーク接続を削除します。 | IBM とお客様の共同の責任 |
 |インフラストラクチャーのリサイクル | お客様の環境は {{site.data.keyword.BluSoftlayer}} 定義のプロセスに基づいてリサイクルされます。 | IBM |
-{: caption="Table 7. Completion phase tasks" caption-side="top"}
+{: caption="表 7. 完了フェーズのタスク" caption-side="top"}
 
 ##専用インスタンスの保守
 {: #maintaindedicated}
@@ -527,9 +527,9 @@ Akamai や Dyn などのグローバル・ロード・バランサーを選択�
 <li>リストアが必要な場合には、IBM オペレーターにバックアップ・ファイルを提供する。</li>
 </ul>
 
-# rellinks
+# 関連リンク
 {: rellinks}
-## general
+## 一般
 {: general}
 * [ディスカバー: {{site.data.keyword.Bluemix_dedicated_notm}}](http://www.ibm.com/cloud-computing/bluemix/hybrid/dedicated/)
 * [{{site.data.keyword.Bluemix_notm}} の新機能](/docs/whatsnew/index.html)

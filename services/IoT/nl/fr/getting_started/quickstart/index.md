@@ -16,7 +16,7 @@ lastupdated: "2017-03-14"
 
 [Quickstart ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://quickstart.internetofthings.ibmcloud.com/#/){: new_window} est un bac à sable ouvert que vous pouvez utiliser pour connecter rapidement vos terminaux à {{site.data.keyword.iot_full}}. Si vos terminaux prennent en charge le protocole de messagerie MQTT, ils peuvent être facilement connectés au service Quickstart.
 
-Pour consulter les exemples, les recettes et les tutoriels qui expliquent comment vous pouvez connecter différents terminaux au service Quickstart, accédez à [DeveloperWorks Recipes ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/){: new_window}, par exemple : 
+Pour consulter les exemples, les recettes et les tutoriels qui expliquent comment vous pouvez connecter différents terminaux au service Quickstart, accédez à [DeveloperWorks Recipes ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/){: new_window}, par exemple :
 
 - [OpenBlocks IoT BX1G ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/openblocks-iot-bx1g-for-iot-foundation-quickstart/){: new_window}
 - [Reactive Blocks ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/){: new_window}

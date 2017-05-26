@@ -2,16 +2,18 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-04-20"
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
-# 게이트웨이 액세스 제어(베타)
-
-**중요**: 이 기능은 현재 제한적 베타의 일부로서 사용 가능합니다. 
+# 게이트웨이 액세스 제어
+{: #gateway-access-control}
 
 게이트웨이 디바이스에는 기타 디바이스를 대신해서 작동할 수 있는 권한이 있습니다. 게이트웨이 리소스 그룹은 각 게이트웨이가 대신 작동할 수 있는 조직 내의 디바이스를 정의합니다. 게이트웨이에는 *표준 게이트웨이* 역할이 지정될 수 있습니다. 표준 게이트웨이는 해당 리소스 그룹의 디바이스 대신 메시지를 공개하거나 이를 구독할 수만 있습니다.
 {: #shortdesc}
@@ -30,7 +32,7 @@ API를 사용하여 게이트웨이 디바이스에서 이벤트 공개에 대�
 PUT /authorization/devices/{deviceId}/roles
 ```
 
-요청 스키마의 세부사항은 [{{site.data.keyword.iot_full}} API 문서 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_authorization_devices_deviceId_roles){: new_window}를 참조하십시오. 
+요청 스키마의 세부사항은 [{{site.data.keyword.iot_full}} Limited Gateway API 문서 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_authorization_devices_deviceId_roles){: new_window}를 참조하십시오. 
 
 ## 리소스 그룹에 디바이스 추가 및 리소스 그룹에서 디바이스 제거
 {: #devices_groups}
@@ -41,7 +43,7 @@ PUT /authorization/devices/{deviceId}/roles
  PUT /bulk/devices/{groupId}/add
 ```
 
-디바이스를 추가할 그룹은 요청의 경로에 지정되어야 하며, 추가되는 디바이스는 요청의 본문에 지정되어야 합니다. 요청 스키마 및 응답에 대한 자세한 정보는 [{{site.data.keyword.iot_short_notm}} API 문서 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_add){: new_window}를 참조하십시오. 
+디바이스를 추가할 그룹은 요청의 경로에 지정되어야 하며, 추가되는 디바이스는 요청의 본문에 지정되어야 합니다. 요청 스키마 및 응답에 대한 자세한 정보는 [{{site.data.keyword.iot_short_notm}} Limited Gateway API 문서 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_add){: new_window}를 참조하십시오. 
 
 리소스 그룹에서 여러 디바이스를 제거하려면 다음 API를 사용하십시오. 
 
@@ -49,7 +51,7 @@ PUT /authorization/devices/{deviceId}/roles
 PUT /bulk/devices/{groupId}/remove
 ```
 
-요청의 본문에 지정된 디바이스가 요청의 경로에 지정된 그룹에서 제거됩니다. 요청 스키마 및 응답에 대한 자세한 정보는 [{{site.data.keyword.iot_short_notm}} API 문서 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_remove){: new_window}를 참조하십시오. 
+요청의 본문에 지정된 디바이스가 요청의 경로에 지정된 그룹에서 제거됩니다. 요청 스키마 및 응답에 대한 자세한 정보는 [{{site.data.keyword.iot_short_notm}} Limited Gateway API 문서 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_remove){: new_window}를 참조하십시오. 
 
 ## 리소스 그룹 찾기
 {: #finding_groups}
@@ -68,7 +70,7 @@ GET /groups
 GET /authorization/devices/{deviceId}
 ```
 
-이 API는 이 디바이스가 해당 멤버인 리소스 그룹의 고유 ID를 리턴합니다. 이 API에 대한 자세한 정보는 [{{site.data.keyword.iot_short_notm}} API 문서 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_authorization_devices_deviceId){: new_window}에서 찾을 수 있습니다. 
+이 API는 이 디바이스가 해당 멤버인 리소스 그룹의 고유 ID를 리턴합니다. 이 API에 대한 자세한 정보는 [{{site.data.keyword.iot_short_notm}} Limited Gateway API 문서 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_authorization_devices_deviceId){: new_window}에서 찾을 수 있습니다. 
 
 
 ## 리소스 그룹 조회
@@ -82,7 +84,7 @@ GET /authorization/devices/{deviceId}
 GET /bulk/devices/{groupId}
 ```
 
-이 API는 지정된 리소스 그룹의 모든 멤버에 대한 전체 특성 목록을 리턴합니다. 요청 스키마, 응답 및 결과 페이지를 살펴보는 방법에 대한 자세한 정보는 [{{site.data.keyword.iot_short_notm}} API 문서 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_bulk_devices_groupId){: new_window}를 참조하십시오. 
+이 API는 지정된 리소스 그룹의 모든 멤버에 대한 전체 특성 목록을 리턴합니다. 요청 스키마, 응답, 그리고 결과 페이지를 넘겨보는 방법에 대한 자세한 정보는 [{{site.data.keyword.iot_short_notm}} Limited Gateway API 문서 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_bulk_devices_groupId){: new_window}를 참조하십시오. 
 
 리소스 그룹의 멤버에 대한 고유 ID만 리턴하려면 다음 API를 사용하십시오. 
 
@@ -131,7 +133,7 @@ DELETE /groups/{groupId}
 API를 사용하여 디바이스 특성을 검색하는 여러 방법이 있으며, 각각의 API는 서로 다른 정보를 리턴합니다. {{site.data.keyword.iot_short_notm}} 조직에 연결된 모든 디바이스의 디바이스 특성을 검색하려면 다음 API를 사용하십시오. 
 
 ```
-GET /authorization/devices:
+GET /authorization/devices
 
 ```
 
@@ -148,7 +150,7 @@ GET /authorization/devices/{deviceId}
 특정 디바이스의 액세스 제어 정보를 검색하려면 다음 API를 사용하십시오.
 
 ```
-GET /authorization/devices/{deviceId}/roles:
+GET /authorization/devices/{deviceId}/roles
 ```
 
 이 API는 기타 디바이스 특성의 리턴 없이 지정된 디바이스에 대한 액세스 제어 관련 정보를 검색합니다. <!-- For more information on the request schema and responses, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
@@ -166,7 +168,7 @@ PUT /authorization/devices/{deviceId}
 지정된 디바이스의 액세스 제어 특성만 업데이트하려면 다음 API를 사용하십시오.
 
 ```
-PUT /authorization/devices/{deviceId}/withroles:
+PUT /authorization/devices/{deviceId}/withroles
 ```
 
 이 API는 지정된 디바이스의 액세스 제어 특성만 업데이트합니다. <!-- For more information on the request schema, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-28"
+lastupdated: "2017-02-24"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2016-10-28"
 ## 单元安装约定
 {: cell_installation_conventions}
 
-WebSphere Application Server for Bluemix 单元已安装，并且已遵循标准化目录结构进行配置。以下列表记录了一些重要的设置。请参阅 /etc/virtualimage.properties，以获取设置的完整列表。
+WebSphere Application Server in Bluemix 单元已安装，并且已遵循标准化目录结构进行配置。以下列表记录了一些重要的设置。请参阅 /etc/virtualimage.properties，以获取设置的完整列表。
 
 * IHS_HOME=/opt/IBM/WebSphere/HTTPServer
 * IHS_INSTALL_ROOT=/opt/IBM/WebSphere/HTTPServer

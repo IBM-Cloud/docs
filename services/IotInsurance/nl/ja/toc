@@ -1,7 +1,8 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="iot-insurance" audience="service"}
+
+{: .toc subcollection="iot-insurance" audience="service"  href="/docs/services/IotInsurance/index.html"}
 IoT for Insurance
 
   {: .navgroup id="learn"}
@@ -14,10 +15,13 @@ IoT for Insurance
     iotinsurance_supporteddevices.md
 
     {: .topicgroup}
-    API
+    APIs
         iotinsurance_extending_service.md
         [IoT for Insurance API](https://iot4i-api-docs.mybluemix.net/)
-        [IoT for Insurance API �̗�](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples)
+        [IoT for Insurance API の例](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples)
+
+    [IoT for Insurance シールド・ライブラリー](https://github.com/ibm-watson-iot/ioti-shields)
+    [IoT for Insurance サンプル・モバイル・アプリ・コード](https://github.com/ibm-watson-iot/ioti-mobile)
   {: .navgroup-end}
 
   {: .navgroup id="howto"}
@@ -27,10 +31,11 @@ IoT for Insurance
     iotinsurance_optimizing_performance.md
     iotinsurance_upgrading.md
     iotinsurance_data_backup.md
+    iotinsurance_sms_voice_integration.md
   {: .navgroup-end}
 
   {: .navgroup id="help"}
     iotinsurance_troubleshooting.md
-    [�J���Ҍ����̃T�|�[�g�E�t�H�[����](https://www.ibm.com/developerworks/connect/iot/)
-    [�X�^�b�N�E�I�[�o�[�t���[�̃T�|�[�g�E�t�H�[����](http://stackoverflow.com/questions/tagged/ibm-bluemix)
+    [開発者サポート・フォーラム](https://www.ibm.com/developerworks/connect/iot/)
+    [Stack overflow サポート・フォーラム](http://stackoverflow.com/questions/tagged/ibm-bluemix)
   {: .navgroup-end}

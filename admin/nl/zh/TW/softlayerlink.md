@@ -175,7 +175,7 @@ For a user with IBMid access to multiple accounts with two-factor authentication
 3. 複製服務認證，並將其新增至您的應用程式，將服務設定為使用您現有的程式碼來執行。
 4. 更新應用程式之後，將新版本部署在 SoftLayer 基礎架構上。
 
-您可以從 SoftLayer 中的應用程式呼叫 Watson API，使其更加個人化，以獲得*見解和認知* 的知識。或者，使用*資料和分析* 服務，為您的應用程式進行高效能分析。或者，選擇資料庫即服務 (database-as-a-service)，將管理工作交給 {{site.data.keyword.Bluemix_notm}}。
+您可以從 SoftLayer 中的應用程式呼叫 Watson API，使其更加個人化，以獲得*見解和認知* 的知識。或者，使用*資料及分析* 服務，為您的應用程式進行高效能分析。或者，選擇資料庫即服務 (database-as-a-service)，將管理工作交給 {{site.data.keyword.Bluemix_notm}}。
 
 使用容器搭配 {{site.data.keyword.activedeployshort}} 和 {{site.data.keyword.deliverypipeline}} 等服務，使您的應用程式開發作業現代化。然後，您可以使用 {{site.data.keyword.vpn_short}} 服務與 SoftLayer 進行通訊，以將專用網路中的容器連接至 SoftLayer 專用網路。運算資源及服務的所有使用費用都會反映在您的 {{site.data.keyword.Bluemix_notm}} 帳單上。 
 
@@ -232,7 +232,7 @@ For a user with IBMid access to multiple accounts with two-factor authentication
 
 帳戶鏈結之後，會繼續計算當月週期的 {{site.data.keyword.Bluemix_notm}} 用量，並且會在 {{site.data.keyword.Bluemix_notm}} 發票上向您收取該用量的費用。從下個月 1 日開始，{{site.data.keyword.Bluemix_notm}} 及 SoftLayer 費用將會結合到 {{site.data.keyword.Bluemix_notm}} 發票。
 
-例如，如果您在 4 月 16 日鏈結帳戶，則會收到 4 月用量的 Bluemix 發票。根據鏈結帳戶的時間，您可能會收到 SoftLayer 用量的個別帳單。SoftLayer 及 {{site.data.keyword.Bluemix_notm}} 的五月用量將會透過 {{site.data.keyword.Bluemix_notm}} 帳戶向您收費。
+例如，如果您在 4 月 16 日鏈結帳戶，則會收到 4 月用量的 Bluemix 發票。視鏈結帳戶的時間而定，您可能會收到 SoftLayer 用量的個別帳單。SoftLayer 及 {{site.data.keyword.Bluemix_notm}} 的五月用量將會透過 {{site.data.keyword.Bluemix_notm}} 帳戶向您收費。
 
 ![Bluemix 帳戶與 SoftLayer 帳戶的鏈結摘要](images/BluemixSoftLayerBill.svg)
 

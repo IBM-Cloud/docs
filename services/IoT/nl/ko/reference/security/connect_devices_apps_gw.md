@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-19"
+lastupdated: "2017-04-05"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-01-19"
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# {{site.data.keyword.iot_short_notm}}에 애플리케이션, 디바이스 및 게이트웨이 연결
+# API를 사용하여 애플리케이션, 디바이스 및 게이트웨이 연결
 {: #connect_devices_apps_gw}
 
 MQTT 프로토콜을 통해 {{site.data.keyword.iot_full}}에 애플리케이션, 디바이스 및 게이트웨이를 연결할 수 있습니다. 또한 HTTP REST API를 사용하여 {{site.data.keyword.iot_short_notm}}에 디바이스를 연결할 수도 있습니다.
@@ -31,7 +31,7 @@ MQTT 프로토콜을 통해 {{site.data.keyword.iot_full}}에 애플리케이션
 
 ### HTTP REST API 연결 URL
 
-<pre class="pre">https://<var class="keyword varname">orgId</var>.internetofthings.ibmcloud.com/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.internetofthings.ibmcloud.com/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 {: codeblock}
 
 **참고**
@@ -59,7 +59,8 @@ MQTT는 TCP 및 WebSocket에서 지원됩니다. MQTT 클라이언트에서는 �
 
 일부 TLS(Transport Layer Security) 클라이언트 라이브러리에서는 와일드 카드를 포함하는 도메인을 지원하지 않습니다. 라이브러리를 변경할 수 없으면 인증 검사를 사용 안함으로 설정하십시오.
 
-TLS 요구사항은 MQTT 또는 HTTP 프로토콜로 {{site.data.keyword.iot_short_notm}}에 연결 중인지 여부에 따라 다릅니다. 다음 절에서는 기본 서버 인증서가 사용되는 경우에 지원되는 암호 스위트를 표시합니다. 자체 클라이언트 인증서를 사용 중인 경우, 지원되는 암호 스위트는 사용되는 인증서에 따라 다릅니다. 
+TLS 요구사항은 MQTT 또는 HTTP 프로토콜로 {{site.data.keyword.iot_short_notm}}에 연결 중인지 여부에 따라 다릅니다. 다음 절에서는 기본 서버 인증서가 사용되는 경우에 지원되는 암호 스위트를 표시합니다. 자체 클라이언트 인증서를 사용 중인 경우,
+지원되는 암호 스위트는 사용되는 인증서에 따라 다릅니다. 
 
 ### MQTT 연결을 위한 TLS 요구사항
 

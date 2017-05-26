@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2017
 
-lastupdated: "2016-10-13"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -34,7 +34,7 @@ Cloud Foundry アプリは、Cloud Foundry Loggregator を使用して、アプ�
 vCPU | 19 | 57 |
 メモリー | 80 GB | 240 GB |
 ローカル・ストレージ | 2.98 TB | 8.94 TB |
-{: caption="Table 1. Logging hardware requirements for {{site.data.keyword.Bluemix_local_notm:}}" caption-side="top"}
+{: caption="表 1.  {{site.data.keyword.Bluemix_local_notm:}}" caption-side="top"} のロギングのハードウェア要件
 
 ## セットアップ
 
@@ -53,8 +53,8 @@ vCPU | 19 | 57 |
 アプリのログを表示するには、以下の手順に従ってください。
 1. 実行中のアプリを選択します。
 2. **「ログ (Logs)」**をクリックします。**「ログ (Logs)」**ビューで、実行中のアプリからログを表示することができます。
-4. **「拡張ビュー (Advanced View)」**ボタンをクリックします。**「拡張ビュー (Advanced View)」**には、Kibana を使用してログの詳細ビューが表示されます。Kibana は、ログとタイム・スタンプ付きデータを使用してカスタムの視覚化を作成する視覚化ツールです。拡張ビューの使用について詳しくは、[Kibana](https://www.elastic.co/guide/en/kibana/current/index.html) の資料を参照してください。
+4. **「拡張ビュー (Advanced View)」**ボタンをクリックします。**「拡張ビュー (Advanced View)」**には、Kibana を使用してログの詳細ビューが表示されます。Kibana は、ログとタイム・スタンプ付きデータを使用してカスタムの視覚化を作成する視覚化ツールです。詳細ビューの使用法について詳しくは、「[Kibana User Guide ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.elastic.co/guide/en/kibana/4.1/index.html){: new_window}」を参照してください。
 
-次に、Kibana ダッシュボードをカスタマイズできます。詳細情報については、[Kibana ダッシュボードでのログ表示のカスタマイズ](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_dash_logs_custom)を参照してください。
+次に、Kibana ダッシュボードをカスタマイズできます。詳しくは、『[Kibana での高度なログ分析](../kibana4/analyzing_logs_Kibana.html#analyzing_logs_Kibana)』を参照してください。
 
 <!-- audience blue staging only end comment -->

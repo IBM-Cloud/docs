@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-28"
+lastupdated: "2017-02-24"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2016-10-28"
 ## Cell 安裝慣例
 {: cell_installation_conventions}
 
-WebSphere Application Server for Bluemix Cell 已安裝，並且已遵循標準化目錄結構進行配置。下列清單記錄一些重要的設定。如需完整的設定清單，請參閱 /etc/virtualimage.properties。
+WebSphere Application Server in Bluemix Cell 是遵循標準化目錄結構所安裝及配置。下列清單記錄一些重要的設定。如需完整的設定清單，請參閱 /etc/virtualimage.properties。
 
 * IHS_HOME=/opt/IBM/WebSphere/HTTPServer
 * IHS_INSTALL_ROOT=/opt/IBM/WebSphere/HTTPServer

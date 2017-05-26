@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-03-13"
+years: 2016, 2017
+lastupdated: "2017-03-21"
 
 ---
 
@@ -22,10 +22,10 @@ API を使用して「ロケーションの更新」要求が出されるか、�
 
 **重要:** 管理対象デバイスだけがデバイス側でロケーションを設定できます。非管理対象デバイスでは、すべて API を使用して手動でロケーションを設定する必要があります。デバイス・ロケーションの設定について詳しくは、[「ロケーションの更新」要求](../../devices/device_mgmt/index.html#update-location)を参照してください。
 
-### The Weather Company 用の REST API
+## The Weather Company 用の REST API
 The Weather Company 用の REST API にアクセスする場合は、[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部リンク・アイコン](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather){: new_window} の資料の『Device Location Weather』のセクションを参照してください。
 
-### 気象データの表示
+## 気象データの表示
 
 特定のデバイス・ロケーションの気象データを取得して表示するには、以下のようにします。
 1. **「デバイス」**ペインで目的のデバイスをクリックします。

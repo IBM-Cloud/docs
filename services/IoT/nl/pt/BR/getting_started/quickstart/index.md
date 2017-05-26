@@ -12,7 +12,7 @@ lastupdated: "2017-03-14"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Quickstart
+# Iniciação rápida
 
 [Quickstart ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://quickstart.internetofthings.ibmcloud.com/#/){: new_window} é um ambiente de simulação aberto que pode ser usado para conectar seus dispositivos rapidamente ao {{site.data.keyword.iot_full}}. Se seus dispositivos suportarem o protocolo de sistema de mensagens MQTT, eles podem ser facilmente conectados à iniciação rápida.
 

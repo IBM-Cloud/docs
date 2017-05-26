@@ -2,7 +2,7 @@
 
 copyright:
  years: 2015, 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-21"
 
 ---
 
@@ -45,9 +45,9 @@ Pour soumettre une demande `POST` à partir d'un terminal connecté à {{site.da
 
 **Remarques importantes :**
 - Vous ne pouvez soumettre des événements de terminal de passerelle qu'en utilisant la messagerie HTTP. Utilisez le protocole de messagerie MQTT afin de soumettre des demandes pour d'autres fonctions de contrôle et de gestion des terminaux de passerelle.
-- Les connexions HTTP peuvent être réutilisées uniquement afin de publier des événements pour le même terminal, car l'en-tête HTTP d'autorisation ne peut pas être modifié.
 - Le port 443, port SSL par défaut, peut également être spécifié pour les appels API HTTP sécurisés.
-- Si le rôle *Passerelle standard* n'est pas affecté à une passerelle, celle-ci peut publier des événements pour le compte d'autres terminaux de l'organisation. Affectez le rôle *Passerelle standard* si vous souhaitez vérifier les niveaux d'autorisation de terminal et enregistrer automatiquement votre terminal. **Remarque :** Ce comportement est susceptible d'être modifié. 
+- Si le rôle *Passerelle standard* n'est pas affecté à une passerelle, celle-ci peut publier des événements pour le compte d'autres terminaux de l'organisation. Si le terminal qui est connecté à la passerelle est désenregistré, la passerelle l'enregistre automatiquement.
+- Affectez le rôle *Passerelle standard* si vous souhaitez vérifier les niveaux d'autorisation de terminal.
 
 Pour plus d'informations sur le rôle de passerelles et de groupes de ressources, voir [Contrôle d'accès des passerelles (bêta)](../gateways/gateway-access-control.html).
 
@@ -60,12 +60,11 @@ Toutes les demandes doivent inclure un en-tête d'autorisation. L'authentificati
 |Nom d'utilisateur| `g/{orgId}/{gwType}/{gwDevId}` or `g-{orgId}-{gwType}-{gwDevId}`
 |Mot de passe| Jeton d'authentification qui a été généré automatiquement ou que vous avez spécifié manuellement lors de l'enregistrement du terminal de passerelle.
 
-
 Où :
 
 <dl>
 <dt>orgId</dt>  
-<dd>Nom de l'organisation, qui doit correspondre au nom qui est spécifié dans l'en-tête d'hôte. </dd>
+<dd>Nom de l'organisation, qui doit correspondre au nom qui est spécifié dans l'en-tête d'hôte.</dd>
 
 <p></p>
 <dt>gwType</dt>  

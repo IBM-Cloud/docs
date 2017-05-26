@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-04"
+lastupdated: "2017-05-02"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -26,7 +26,7 @@ lastupdated: "2017-04-04"
 
 **前提条件:** 始めに、以下の前提条件が満たされていることを確認します。
 - [{{site.data.keyword.iotinsurance_short}} サービス](https://console.ng.bluemix.net/catalog/services/iot-for-insurance/)のインスタンスは、{{site.data.keyword.Bluemix_notm}} スペースにある必要があります。
-- {{site.data.keyword.Bluemix_notm}} 組織でデプロイ機能を実行するには、少なくとも 2 GB の空きメモリーが必要です。
+- {{site.data.keyword.Bluemix_notm}} 組織でデプロイ機能を実行するには、少なくとも 2 GB の空きメモリーが必要です。以前のバージョンからアップグレードする場合は、少なくとも 2.5 GB 必要です。
 
 ## 必須のサービスとアプリケーションのデプロイ
 {: #deploying_services}
@@ -36,6 +36,8 @@ lastupdated: "2017-04-04"
   {{site.data.keyword.iotinsurance_short}} は、必要なすべてのサービスと Node.js アプリケーションをデプロイします。これにより、アプリケーションが自動的にサービスにバインドされます。
 
   各サービス・インスタンスは、デフォルトのサービス・プランを使用します。サービスのコンソールに移動して、後からサービス・プランをアップグレードすることができます。新規インスタンスを削除して既存のインスタンスを {{site.data.keyword.iotinsurance_short}} サービスに手動でバインドすることにより、サービスの既存のインスタンスを使用することもできます。アプリケーションについて詳しくは、[{{site.data.keyword.iotinsurance_short}} について](iotinsurance_overview.html)を参照してください。
+
+  **重要:** {{site.data.keyword.iotinsurance_short}} の試用版をデプロイする場合、一緒にデプロイされる他のサービスやアプリケーションの無料版については、その機能が制限されていることにご注意ください。{{site.data.keyword.iot_short_notm}} は最大 500 デバイスに制限されており 、{{site.data.keyword.cloudant_short_notm}} は 1 GB のデータに制限され、読み取り/書き込みのスレッド化機能は制限されています。
 
   **注**: {{site.data.keyword.iotinsurance_short}} は、{{site.data.keyword.amafull}} と {{site.data.keyword.mobilepushfull}} のいずれもデプロイしなくなりました。旧バージョンの {{site.data.keyword.iotinsurance_short}} は、{{site.data.keyword.amashort}} サービスを使用してモバイル・アプリからの応答を処理していました。このプロセスは、既存のすべての {{site.data.keyword.iotinsurance_short}} インスタンスで引き続き機能します。しかし、新規の {{site.data.keyword.iotinsurance_short}} インスタンスでモバイル・アプリを使用するには、カスタムの認証プロセスを作成する必要があります。
 またオプションで、[{{site.data.keyword.mobilepushshort}} のインスタンスを作成し](https://console.ng.bluemix.net/docs/services/mobilepush/index.html)、それを構成し、{{site.data.keyword.iotinsurance_short}} API にバインドすることができます。
@@ -77,7 +79,8 @@ lastupdated: "2017-04-04"
 
 ## {{site.data.keyword.mobilepushshort}} の作成と構成
 {: #config_push}
-既存のモバイル・アプリのプッシュ通知を有効にするには、オプションで {{site.data.keyword.mobilepushshort}} サービスのインスタンスを作成し、それを {{site.data.keyword.iotinsurance_short}} API にバインドし、Public Key Cryptography Standards (PKCS) 12 ファイルを追加することができます。モバイル・アプリについて詳しくは、[サンプル・モバイル・アプリのインストールと接続](iotinsurance_mobile_app.html)を参照してください。{{site.data.keyword.mobilepushshort}} について詳しくは、[プッシュ通知の概説](https://console.ng.bluemix.net/docs/services/mobilepush/index.html)を参照してください。
+
+(オプション) 既存のモバイル・アプリのプッシュ通知を有効にするには、オプションで {{site.data.keyword.mobilepushshort}} サービスのインスタンスを作成し、それを {{site.data.keyword.iotinsurance_short}} API にバインドし、Public Key Cryptography Standards (PKCS) 12 ファイルを追加することができます。モバイル・アプリについて詳しくは、[サンプル・モバイル・アプリのインストールと接続](iotinsurance_mobile_app.html)を参照してください。{{site.data.keyword.mobilepushshort}} について詳しくは、[プッシュ通知の概説](https://console.ng.bluemix.net/docs/services/mobilepush/index.html)を参照してください。
 
 このサービスを作成後に構成するには、以下の手順を実行します。
 
@@ -85,6 +88,12 @@ lastupdated: "2017-04-04"
   2. **「構成 (Configure)」**をクリックします。
   3. 「Apple プッシュ通知証明書 (Apple Push Notifications Certificate)」セクションで、モバイル・アプリの PKCS 12 ファイルをアップロードし、パスワードを入力します。
 
+## Weather Company データの使用
+{: #weather_company}
+
+(オプション) {{site.data.keyword.iotinsurance_short}} は、デモンストレーション目的で表示できる Weather Company の一連の静的データを提供します。さらにオプションで、[{{site.data.keyword.weatherfull}} サービス](../Weather/index.html)のインスタンスを作成し、それを {{site.data.keyword.iotinsurance_short}} 天気アプリにバインドすることで、Weather Company のライブ・データにアクセスできます。
+
+**重要:** {{site.data.keyword.weather_short}} サービスの無料版は、10,000 件の要求に制限されています。それ以上の要求を処理する必要がある場合は、有料バージョンにアップグレードすることができます。
 
 次のステップ
 {: #whats_next}
@@ -92,24 +101,4 @@ lastupdated: "2017-04-04"
 
 - シールド・ツールキットに含まれている指示や API を使用して、[ユーザーとシールド関連付け](iotinsurance_shield_toolkit.html)を作成します。
 <!-- - Install and connect the [sample mobile app](iotinsurance_mobile_app.html). -->
-- [GitHub サイトの API ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window} をすべてダウンロードまたは表示します。
-
-# 関連リンク
-{: #rellinks}
-
-## チュートリアルとサンプル
-{: #samples}
-* [{{site.data.keyword.iotinsurance_short}} シールド・ライブラリー ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-shields){: new_window}
-* [GitHub のサンプル・モバイル・アプリ・コード ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## API リファレンス
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API サンプル ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-
-## 関連リンク
-{: #general}
-* [{{site.data.keyword.iot_full}} 資料](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [開発者サポート・フォーラム ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix]){:new_window}
-* [Stack overflow サポート・フォーラム ![外部リンク・アイコン](../../icons/launch-glyph.svg)](http://stackoverflow.com/questions/tagged/ibm-bluemix){:new_window}
+- [GitHub サイトの API の例![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window} をすべてダウンロードまたは表示します。

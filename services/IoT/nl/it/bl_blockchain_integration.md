@@ -127,12 +127,12 @@ Per il collegamento a un fabric blockchain:
 ## Associazione dei dati del dispositivo agli smart contract
 {: #map_device_properties}
 
-Per scrivere i dati del dispositivo in un ledger blockchain, devi prima associare le proprietà del dispositivo di un tipo di dispositivo ai parametri definiti dal smart contract.
+Per scrivere i dati del dispositivo in un ledger blockchain, devi prima associare le proprietà del dispositivo di un tipo dispositivo ai parametri definiti dal smart contract.
 
 Per associare i dati del dispositivo a un contratto:
  1. Dal dashboard {{site.data.keyword.iot_short_notm}}, fai clic su ![Blockchain.](blockchain/images/platform_blockchain.png "Blockchain") nella barra laterale del menu.
  3. Fai clic su **Map Device Data**.
- 4. Seleziona il tipo di dispositivo per cui desideri archiviare i dati nel blockchain.
+ 4. Seleziona il tipo dispositivo per cui desideri archiviare i dati nel blockchain.
  5. Immetti il nome dell'evento che desideri archiviare.  
  **Suggerimento:** il nome dell'evento predefinito per il dispositivo Node-RED di esempio è obc. Per trovare i tipi di evento per un dispositivo, dal dashboard {{site.data.keyword.iot_short_notm}}, seleziona **Devices** e fai clic sul nome del dispositivo per aprirne la pagina dei dettagli. Scorri verso il basso fino alla sezione **Sensor Information** per visualizzare un elenco dei punti dati e degli eventi disponibili per il dispositivo. Puoi modificare il nome dell'evento che il servizio Node-RED pubblica aggiornando il campo dell'argomento in Publish to IoT mqtt out node.  
  6. Fai clic su **Next**.
