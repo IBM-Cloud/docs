@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-26"
+lastupdated: "2017-02-24"
 
 ---
 
@@ -18,15 +18,15 @@ Les méthodes de création et de gestion d'une instance de service sont abordée
 {: shortdesc}
 
 
-## Utilisation de l'API REST dans WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
+## Utilisation de l'API REST dans WebSphere Application Server in {{site.data.keyword.Bluemix_notm}}
 {: #restapi_usage}
 
-Des instances dans WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} sont créées, provisionnées, gérées et supprimées de l'une des façons suivantes :
+Les instances dans WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} sont créées, provisionnées, gérées et supprimées de l'une des façons suivantes :
 
-* Depuis {{site.data.keyword.Bluemix_notm}} Catalog et Service Dashboard dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}.
+* Depuis le tableau de bord du service et le catalogue {{site.data.keyword.Bluemix_notm}} dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}.
 * A partir de la création d'une application ou d'un script utilisant des API RESTful.
 
-En utilisant des API REST compatibles Swagger 2.0, les clients ont accès à la même fonction que celle fournie via le portail et le tableau de bord. Pour plus d'informations sur les ressources et API REST prises en charge, voir la [documentation des API REST](https://wasaas-broker.ng.bluemix.net/wasaas-broker/api#/){: new_window} de WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}. Pour obtenir le code exemple démontrant l'utilisation de nos API REST, téléchargez les [exemples d'API REST](https://github.com/IBM-Bluemix/WebSphere-for-Bluemix-API-Usage){: new_window} de WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} hébergés par Git.
+En utilisant des API REST compatibles Swagger 2.0, les clients ont accès à la même fonction que celle fournie via le portail et le tableau de bord. Pour plus d'informations sur les ressources et API REST prises en charge, voir la [documentation des API REST](https://wasaas-broker.ng.bluemix.net/wasaas-broker/api#/){: new_window} de WebSphere Application Server in {{site.data.keyword.Bluemix_notm}}. Pour obtenir le code exemple démontrant l'utilisation de nos API REST, téléchargez les [exemples d'API REST](https://github.com/IBM-Bluemix/WebSphere-for-Bluemix-API-Usage){: new_window} de WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} hébergés par Git.
 
 **Remarque :** après création d'une instance de service, selon la taille Tee-Shirt créée, votre service risque de ne pas être immédiatement prêt à être utilisé. Il est recommandé de faire une requête sur la zone **Statut** de l'élément JSON retourné pour déterminer l'état actuel de l'instance de service.
 
@@ -39,6 +39,7 @@ En utilisant des API REST compatibles Swagger 2.0, les clients ont accès à la 
 | Sud des Etats-Unis | Dallas, Texas, Etats-Unis | ng | https://wasaas-broker.ng.bluemix.net/wasaas-broker/api  |
 | Royaume-Uni | Londres, Angleterre | eu-gb | https://wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api  |
 | Sydney | Sydney, Australie | au-syd | https://wasaas-broker.au-syd.bluemix.net/wasaas-broker/api  |
+| Francfort | Francfort, Allemagne | eu-de | https://wasaas-broker.eu-de.bluemix.net/wasaas-broker/api  |
 
 
 
@@ -52,18 +53,18 @@ Depuis le tableau de bord du service, vous pouvez accéder aux éléments suivan
 * Un lien permettant de télécharger le fichier de configuration OpenVPN
 * La possibilité de démarrer et d'arrêter la machine virtuelle. La machine virtuelle est démarrée initialement
 * Le nom d'hôte
-* L'administrateur et le mot de passe de l'administrateur 
-* Une clé SSH privée 
+* L'administrateur et le mot de passe de l'administrateur
+* Une clé SSH privée
 * Le nom et le mot de passe de d'administrateur WebSphere®
 * Les adresses URL du centre d'administration et de la console d'administration
 
 **Remarque** : du fait d'un volume spécifique de ressources de calcul, de mémoire et d'entrée/sortie, les clients sont facturés pour les machines virtuelles accumulées dans l'état STOPPED à un taux réduit de 5%.  Les clients sont gérés par rapport à un nombre fixe d'instances STOPPED ne comportant pas plus de 10 adresses IP ou 64 Go de mémoire.
 
 
-## Configuration d'openVPN pour les instances WebSphere Application Server for Bluemix
+## Configuration d'openVPN pour les instances WebSphere Application Server in Bluemix
 {: #setup_openvpn}
 
-OpenVPN est requis pour accéder à un serveur WebSphere Application Server sur une machine virtuelle Bluemix. Il doit être installé et exécuté avec des privilèges d'administrateur.
+OpenVPN est requis pour accéder à n'importe quelle machine virtuelle WebSphere Application Server in Bluemix. Il doit être installé et exécuté avec des privilèges d'administrateur.
 
 ### Pour ouvrir openVPN sous Windows, procédez comme suit :
 
@@ -71,7 +72,7 @@ OpenVPN est requis pour accéder à un serveur WebSphere Application Server sur 
   * [openvpn-install-2.3.4-I001-x86_64.exe](https://swupdate.openvpn.org/community/releases/openvpn-install-2.3.4-I001-x86_64.exe){: new_window} pour environnement 64 bits, ou
   * [openvpn-install-2.3.4-I001-i686.exe](https://swupdate.openvpn.org/community/releases/openvpn-install-2.3.4-I001-i686.exe){: new_window} pour environnement 32 bits
 2. Prenez soin de sélectionner [Exécuter en tant qu'administrateur Windows](https://technet.microsoft.com/en-us/magazine/ff431742.aspx){: new_window} et installez openVPN.
-3. Téléchargez les fichiers de configuration réseau privé virtuel depuis le lien de téléchargement OpenVPN de l'instance WebSphere Application Server for Bluemix dans le tableau de bord des services. Décompressez les quatre fichiers vers le répertoire **{répertoire_OpenVPN}\config**. Par exemple :
+3. Téléchargez les fichiers de configuration réseau privé virtuel depuis le lien de téléchargement OpenVPN de l'instance WebSphere Application Server in Bluemix dans le tableau de bord des services. Décompressez les quatre fichiers vers le répertoire **{répertoire_OpenVPN}\config**. Par exemple :
 
   <pre>  
     C:\Program Files\OpenVPN\Config
@@ -83,7 +84,7 @@ OpenVPN est requis pour accéder à un serveur WebSphere Application Server sur 
 ### Procédez comme suit pour ouvrir openVPN sous Linux :
 1. Pour installer openVPN, suivez les [instructions](https://openvpn.net/index.php/access-server/docs/admin-guides/182-how-to-connect-to-access-server-with-linux-clients.html){: new_window}.
   * Si vous devez télécharger et installer manuellement le gestionnaire de packages RPM, accédez à la [page de téléchargement d'openVPN unix/linux](https://openvpn.net/index.php/access-server/download-openvpn-as-sw.html){: new_window}. Vous aurez peut-être besoin de l'aide de votre administrateur Linux.
-3. Téléchargez les fichiers de configuration réseau privé virtuel depuis le lien de téléchargement OpenVPN de l'instance WebSphere Application Server for Bluemix dans le tableau de bord des services. Procédez à l'extraction des fichiers dans le répertoire à partir duquel vous prévoyez de démarrer le client openVPN. Les quatre fichiers doivent se trouver dans le même répertoire.
+3. Téléchargez les fichiers de configuration réseau privé virtuel depuis le lien de téléchargement OpenVPN de l'instance WebSphere Application Server in Bluemix dans le tableau de bord des services. Procédez à l'extraction des fichiers dans le répertoire à partir duquel vous prévoyez de démarrer le client openVPN. Les quatre fichiers doivent se trouver dans le même répertoire.
 3. Démarrez le programme client openVPN. Ouvrez une fenêtre de terminal et accédez au répertoire contenant les fichiers de configuration. Exécutez la commande suivante en tant que root :
 
   <pre>
@@ -97,7 +98,7 @@ OpenVPN est requis pour accéder à un serveur WebSphere Application Server sur 
 3. Connectez-vous au réseau privé virtuel pour pouvoir accéder à votre machine virtuelle. Après votre premier accès, Tunnelblick met en cache la configuration pour que vous puissiez vous connecter depuis [Tunnelblick](https://tunnelblick.net/){: new_window}. Vous pouvez placer une icône dans la barre de menus supérieure pour un accès facile.
 
 
-## Utilisation de SSH pour accéder aux machines virtuelles WebSphere Application Server for Bluemix
+## Utilisation de SSH pour accéder aux machines virtuelles WebSphere Application Server in Bluemix
 {: #using_ssh}
 
 Ces instructions supposent que vous utilisez OpenSSH comme client. OpenSSH est généralement disponible sur Linux ou dans Cygwin s'exécutant sous Windows. Il peut aussi être installé en vue de son exécution depuis une invite de commande Windows.
@@ -114,7 +115,7 @@ Le message suivant est un exemple de la réponse :
   ```
   {: codeblock}
 
-Procédez comme suit pour configurer l'accès SSH aux machines virtuelles de votre serveur WebSphere Application Server for Bluemix :
+Procédez comme suit pour configurer l'accès SSH aux machines virtuelles WebSphere Application Server in Bluemix :
 
 1. Examinez le message d'avertissement qui s'affiche la première fois que vous vous connectez : "L'authenticité de l'hôte x.x.x.x n'a pas pu être établie". Ce message est normal. A l'invite, sélectionnez Oui. La clé publique est à présent installée sur votre machine virtuelle pour l'utilisateur "virtuser".
 2. Connectez-vous à virtuser à l'aide de la clé privée. Pour de meilleurs résultats, utilisez la méthode d'authentification par clé privée.
@@ -176,7 +177,7 @@ Enfin, les clients installent souvent leurs propres certificats racine pour les 
 {: #firewall_ports}
 
 Il peut être nécessaire d'ouvrir des ports sur le pare-feu afin d'autoriser l'accès à des applications et des bases de données.
-  * Sur chaque noeud WebSphere Application Server for Bluemix, un script openFirewallPorts.sh est présent dans le répertoire REP_WAS/virtual/bin.
+  * Sur chaque noeud WebSphere Application Server in Bluemix, un script openFirewallPorts.sh est présent dans le répertoire REP_WAS/virtual/bin.
   * Sur chaque hôte de la collectivité Liberty, un script openFirewallPorts.sh est présent dans le répertoire REP_WAS/virtual/bin.
 
 Syntaxe :
@@ -210,7 +211,7 @@ Si le serveur Web doit traiter toutes les requêtes des utilisateurs, vous devre
 
 * Dans votre environnement Windows, Linux ou MAC local, assurez-vous que [openVPN](systemAccess.html#setup_openvpn) est configuré et démarré, et que vous êtes connecté à la région appropriée.
 
-* À partir de WebSphere Application Server pour le Tableau de bord du service de {{site.data.keyword.Bluemix_notm}}, cliquez sur **Ouvrir la console d'administration** et connectez-vous avec wsadmin et le mot de passe administrateur fourni dans le Tableau de bord de service.
+* A partir du tableau de bord du service WebSphere Application Server in {{site.data.keyword.Bluemix_notm}}, cliquez sur **Ouvrir la console d'administration** et connectez-vous avec wsadmin et le mot de passe administrateur fourni dans le tableau de bord de service.
 
 * Dans la console d'administration, créez un serveur d'applications (par exemple, ***server1***), car le gestionnaire de déploiement est fédéré avec un nœud personnalisé vide.
 
@@ -258,4 +259,34 @@ Les étapes de haut niveau suivantes supposent que les tâches préalables sont 
 
 **REMARQUE :** Les étapes indiquées représentent l'une des nombreuses méthodes de configuration d'un serveur Web. Si vous avez besoin d'aide supplémentaire, consultez [IBM Knowledge Center](https://www.ibm.com/support/knowledgecenter/search/configure%20web%20server?scope=SSAW57_9.0.0){: new_window}.
 
-**REMARQUE :** Si vous ne pouvez pas accéder à votre application, vous êtes probablement confronté à un problème d'accès au port sur votre pare-feu. Par conséquent, vous devrez peut-être redémarrer l'un des serveurs suivants : le serveur d'applications, l'agent de noeud, le serveur Web et le gestionnaire de déploiement. De plus, il est possible que vous deviez accéder à WebSphere Application Server pour le Tableau de bord du service {{site.data.keyword.Bluemix_notm}} et redémarrer chaque machine virtuelle.
+**REMARQUE :** Si vous ne pouvez pas accéder à votre application, vous êtes probablement confronté à un problème d'accès au port sur votre pare-feu. Par conséquent, vous devrez peut-être redémarrer l'un des serveurs suivants : le serveur d'applications, l'agent de noeud, le serveur Web et le gestionnaire de déploiement. De plus, il est possible que vous deviez accéder au tableau de bord du service WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} et redémarrer chaque machine virtuelle.
+
+## Configuration de SSL
+{: #ssl_configuration}
+
+Traditional WebSphere Application Server et le profil Liberty sont configurés avec le protocole [SSL_TLSv2](https://www.ibm.com/support/knowledgecenter/en/SSYKE2_8.0.0/com.ibm.java.security.component.80.doc/security-component/jsse2Docs/protocols.html){: new_window}.  Pour changer de protocole, modifiez les fichiers suivants : 
+
+Pour Traditional WebSphere Application Server :
+
+1. Editez **security.xml** dans /opt/IBM/WebSphere/Profiles/*nom_profil*/config/cell/*nom_cellule* et modifiez la ligne suivante : 
+
+  ```
+  sslProtocol="SSL_TLSv2"
+  ```
+{: codeblock}
+
+2. Editez **ssl.client.props** dans /opt/IBM/WebSphere/Profiles/*nom_profil*/properties et modifiez la ligne suivante : 
+
+  ```
+  com.ibm.ssl.protocol=SSL_TLSv2
+  ```
+{: codeblock}
+
+Pour le profil Liberty :
+
+1. Editez **server.xml** dans /opt/IBM/WebSphere/Profiles/Liberty/servers/server1 et modifiez la ligne suivante située dans l'élément de configuration defaultSSLConfig ssl :
+
+  ```
+  sslProtocol="SSL_TLSv2"
+  ```
+{: codeblock}

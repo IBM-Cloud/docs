@@ -46,6 +46,36 @@ The log level and other trace options can be set through the Liberty configurati
 
 The Liberty tracing configuration can be adjusted for a running application directly from the IBM Bluemix console. The console also provides capability for requesting and downloading thread and heap dumps. In order to adjust the tracing configuration or request a dump, select a Liberty application in the Bluemix console and choose the `Runtime` menu in the navigation. In the `Runtime` view, select an instance and press the *TRACE* or *DUMP* button. If adjusting the trace level, see [Liberty profile: Trace and logging](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html) for the details of the syntax of the trace specification.
 
+### Diego: change tracing configuration via SSH
+
+For a Liberty application running in a Diego cell, it is also possible to change tracing configuration via CF CLI using the SSH feature. 
+
+This requires the application pushed with a server.xml and the updateTrigger in server.xml needs to be set with value "polled", then the change to tracing specification in server.xml will be detected and applied by runtime environment. 
+
+See [push Liberty apps with server.xml](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing) for options to push Liberty apps with a customized sever.xml
+
+See [Controlling Dynamic Updates](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_8.5.5/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html) for how to set up dynamic update in server.xml. 
+
+To change tracing configuration, see below steps:
+   
+1. SSH to app 
+    
+    ```
+      $ cf ssh <appname> [-i instance_index]
+    ```
+    {: codeblock}
+
+2. Update ```<logging traceSpecification="xxxx"/>``` to change tracing specification in server.xml
+       
+    ```
+      $ vi /app/wlp/usr/servers/defaultServer/server.xml 
+    ```
+    {: codeblock}
+
+Note: The server.xml change would be lost on a restage/restart and only be for the instance you ssh into.
+
+See [Liberty profile: Trace and logging](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html) for the details of the syntax of the trace specification.
+
 ### Diego: triggering dumps via SSH
 
 For an application running in a Diego cell, it is also possible to trigger a thread and heap dump via CF CLI using the SSH feature. For example:

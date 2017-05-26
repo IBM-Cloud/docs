@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-05-08"
+lastupdated: "2017-05-19"
 
 ---
 
@@ -69,6 +69,7 @@ The following diagram describes how a request flows from the client SDK to your 
 
 ![{{site.data.keyword.appid_short_notm}} request flow](/images/appidflow.png)
 
+Figure 2. App ID request flow
 
 * Use the {{site.data.keyword.appid_short_notm}} client SDK to make a request to your back-end resources that are protected with the {{site.data.keyword.appid_short_notm}} server SDK.
 * The {{site.data.keyword.appid_short_notm}} server SDK detects an unauthorized request and returns an HTTP 401 and authorization scope.

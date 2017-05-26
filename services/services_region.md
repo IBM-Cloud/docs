@@ -14,6 +14,9 @@ lastupdated: "2017-05-16"
 # Services by region
 {: #services_region}
 
+{{site.data.keyword.Bluemix}} makes it easy for you to implement, host, and scale services and apps. You can focus on your application logic and application design. 
+{:shortdesc}
+
 Not all services are available for purchase in every {{site.data.keyword.Bluemix_notm}} region. And, even if the service is available to purchase in that region, the service might be hosted in a different location. The following table shows the services that are provided by IBM.
 
 
@@ -98,6 +101,7 @@ Not all services are available for purchase in every {{site.data.keyword.Bluemix
 |{{site.data.keyword.personalityinsightsshort}}	|Hosted in Houston,US		|Hosted in Houston,US		|Hosted in Houston,US | Hosted in Frankfurt,DE |
 |{{site.data.keyword.mobilepushshort}}				|Hosted in Dallas,US		|Hosted in London,UK			|Hosted in Sydney,AU | Hosted in Frankfurt,DE |
 |{{site.data.keyword.runbook_short}}				|Hosted in Dallas,US		|Hosted in London,UK			|Hosted in Sydney,AU | Not available in region |
+|{{site.data.keyword.bpshort}}				|Hosted in Dallas,US		| Not available in region | Not available in region | Not available in region |
 |{{site.data.keyword.SecureGateway}}		|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU | Not available in region |
 |{{site.data.keyword.sescashort}}		|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU | Not available in region |
 |{{site.data.keyword.speechtotextshort}}	|Hosted in Dallas,US		|Hosted in Dallas,US		|Hosted in Dallas,US | Hosted in Frankfurt,DE |

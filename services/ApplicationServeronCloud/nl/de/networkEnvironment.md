@@ -1,8 +1,8 @@
 ---
 
-Copyright:
-  Jahre: 2015, 2016
-Letzte Aktualisierung: 28.10.2016
+copyright:
+  years: 2015, 2016
+lastupdated: "2017-02-24"
 
 ---
 
@@ -13,7 +13,7 @@ Letzte Aktualisierung: 28.10.2016
 # Netzumgebung
 {: #networkEnvironment}
 
-Nach der Bereitstellung der WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}-Serviceinstanz gibt es verschiedene Möglichkeiten für den Zugriff auf die VMs. Sie können über ein sicheres VPN eine Verbindung herstellen, um über SSH, die klassische WebSphere-Administrationskonsole oder Anwendungen auf eine VM zuzugreifen+++. Außerdem kann die VM über eine öffentliche IP-Adresse mit dem Internet verbunden werden.
+Nach der Bereitstellung der WebSphere Application Server in {{site.data.keyword.Bluemix_notm}}-Serviceinstanz gibt es verschiedene Möglichkeiten für den Zugriff auf die VMs. Sie können über ein sicheres VPN eine Verbindung herstellen, um über SSH, die klassische WebSphere-Administrationskonsole oder Anwendungen auf eine VM zuzugreifen+++. Außerdem kann die VM über eine öffentliche IP-Adresse mit dem Internet verbunden werden.
 
 Im folgenden Diagramm sind die Netzpfade dargestellt:
 
@@ -24,12 +24,12 @@ Abbildung 1. Clientansicht des Multi-Tenant-Netzbetriebs mit öffentlicher IP-Ad
 ## VPN-Zugriff
 {: #vpnAccess}
 
-Nach der Bereitstellung einer WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}-Serviceinstanz über das Service-Dashboard in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle können Sie Ihre VPN-Berechtigungsnachweise herunterladen und eine OpenVPN-Verbindung herstellen. Anschließend können Sie über SSH auf Ihre VM zugreifen. Ferner können Sie auf das Liberty Admin Center, die klassische WebSphere-Administrationskonsole und Anwendungen zugreifen.
+Nach der Bereitstellung einer WebSphere Application Server in {{site.data.keyword.Bluemix_notm}}-Serviceinstanz über das Service-Dashboard in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle können Sie Ihre VPN-Berechtigungsnachweise herunterladen und eine OpenVPN-Verbindung herstellen. Anschließend können Sie über SSH auf Ihre VM zugreifen. Ferner können Sie auf das Liberty Admin Center, die klassische WebSphere-Administrationskonsole und Anwendungen zugreifen.
 
 ## Zugriff auf das öffentliche Internet
 {: #publicInternetAccess}
 
-Optional können Sie eine öffentliche IP-Adresse für die VM des WebSphere-Servers anfordern. Klicken Sie dazu im Service-Dashboard in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle auf **Öffentliche IP verwalten** und fordern Sie eine öffentliche IP-Adresse an. Bei diesem Prozess wird die IP-Adresse für den betreffenden Server reserviert. Klicken Sie anschließend auf **IP öffnen**, um die Internetverbindung für die WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}-Serviceinstanz zu öffnen.
+Optional können Sie eine öffentliche IP-Adresse für die VM des WebSphere-Servers anfordern. Klicken Sie dazu im Service-Dashboard in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle auf **Öffentliche IP verwalten** und fordern Sie eine öffentliche IP-Adresse an. Bei diesem Prozess wird die IP-Adresse für den betreffenden Server reserviert. Klicken Sie anschließend auf **IP öffnen**, um die Internetverbindung für die WebSphere Application Server in {{site.data.keyword.Bluemix_notm}}-Serviceinstanz zu öffnen.
 
 ## Ports für öffentliche IP
 {: #publicIPports}
