@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2017
@@ -11,181 +11,181 @@ lastupdated: "2017-04-24"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Getting started with {{site.data.keyword.iot_short_notm}} starter
+# Introduzione allo starter {{site.data.keyword.iot_short_notm}}
 {: #gettingstartedtemplate}
 <!-- Provide an appropriate ID above -->
 
-Get started with {{site.data.keyword.iot_full}} by using the {{site.data.keyword.iot_short_notm}} Starter GitHub project. By using the Starter, you can quickly simulate a device, create cards, generate data, and begin analyzing and displaying data in the {{site.data.keyword.iot_short_notm}} dashboard.  
+Introduzione a {{site.data.keyword.iot_full}} utilizzando il progetto il progetto GitHub di {{site.data.keyword.iot_short_notm}}. Mediante lo Starter, puoi facilmente simulare un dispositivo, creare schede, generare dati e iniziare ad analizzare e visualizzare i dati nel dashboard {{site.data.keyword.iot_short_notm}}.  
 {:shortdesc}
 
-## Overview
+## Panoramica
 {: #overview}  
 
-The starter automatically deploys and connects these services:
+Lo starter viene distribuito e connesso automaticamente ai seguenti servizi:
 <dl>
 <dt>**{{site.data.keyword.iot_short_notm}}**</dt>
-<dd>An IoT web service that includes gateway management, device management, and application access. By using {{site.data.keyword.iot_short_notm}}, you can collect connected device data and run analytics on real-time data from your organization.</dd>
+<dd>Un servizio IoT web che include la gestione di gateway, la gestione dei dispositivi e l'accesso alle applicazioni. Utilizzando {{site.data.keyword.iot_short_notm}}, puoi raccogliere i dati dei dispositivi connessi ed eseguire l'analisi dei dati in tempo reale per la tua organizzazione.</dd>
 <dt>**{{site.data.keyword.sdk4nodefull}}**</dt>
-<dd>The runtime environment in which Node-RED runs. </br>For more information, see the [{{site.data.keyword.sdk4nodefull}} starter documentation](https://console.ng.bluemix.net/docs/starters/Node-RED/nodered.html).</dd>
-<dd>Node-RED is a tool for wiring together hardware devices, APIs, and online services in new and interesting ways.  You can use Node-RED to create a simulated thermostat that sends simulated data to your {{site.data.keyword.iot_short_notm}} service. You can create cards to display real-time data in the {{site.data.keyword.iot_short_notm}} dashboard. </br>For more information, see the [Node-RED documentation](https://console.ng.bluemix.net/docs/starters/Node-RED/nodered.html#nodered).</dd>
-<dt>**{{site.data.keyword.cloudantfull}}**</dt><dd>The database in which Node-RED stores metadata.</dd>
+<dd>L'ambiente di runtime in cui è in esecuzione Node-RED. </br>Per ulteriori informazioni, vedi la [documentazione di {{site.data.keyword.sdk4nodefull}}](https://console.ng.bluemix.net/docs/starters/Node-RED/nodered.html).</dd>
+<dd>Node-RED è uno strumento per la connessione di dispositivi hardware, API e servizi in linea con nuove e interessanti modalità. Puoi utilizzare Node-RED per creare un termostato simulato che invia dati simulati al tuo servizio {{site.data.keyword.iot_short_notm}}. Puoi creare schede per visualizzare i dati in tempo reale nel dashboard {{site.data.keyword.iot_short_notm}}. </br>Per ulteriori informazioni, vedi la [documentazione Node-RED](https://console.ng.bluemix.net/docs/starters/Node-RED/nodered.html#nodered).</dd>
+<dt>**{{site.data.keyword.cloudantfull}}**</dt><dd>Il database in cui Node-RED memorizza i metadati.</dd>
 </dl>
 
-## Before you begin
+## Prima di cominciare
 {: #byb}  
 
-- Required accounts  
-Before you begin, you'll need an [IBM Bluemix account](https://bluemix.net/registration) .
+- Account richiesti  
+Prima di iniziare, avrai bisogno di un [account IBM Bluemix](https://bluemix.net/registration) .
 
-- Getting around  
-To make moving between tasks easier in the process that follows, open the {{site.data.keyword.Bluemix_notm}} dashboard, the {{site.data.keyword.iot_short_notm}} dashboard, and the Node-RED application in different tabs in your browser.
+- Esplorazione del prodotto  
+Per facilitare lo spostamento tra le attività nel processo che segue, apri il dashboard {{site.data.keyword.Bluemix_notm}}, il dashboard {{site.data.keyword.iot_short_notm}} e l'applicazione Node-RED in diverse schede del tuo browser.
 <dl>
-<dt>*{{site.data.keyword.Bluemix_notm}} dashboard*</dt>
-<dd>See the state of your deployment, read documentation, and launch the dashboards.</dd>
-<dt>*{{site.data.keyword.iot_short_notm}} dashboard*</dt>
-<dd>Define device types, register devices, monitor incoming sensor data, create data visualization cards, and see live data visualizations.</dd>
+<dt>*Dashboard {{site.data.keyword.Bluemix_notm}}*</dt>
+<dd>Vedi lo stato della tua distribuzione, leggi la documentazione e avvia i dashboard.</dd>
+<dt>*Dashboard {{site.data.keyword.iot_short_notm}}*</dt>
+<dd>Definisci i tipi di dispositivi, registra i dispositivi, monitora i dati del sensore in entrata, crea le schede di visualizzazione dei dati e vedi le visualizzazioni dei dati live.</dd>
 <dt>*Node-RED*</dt>
-<dd>Configure and run the device simulator flow and work with other flows to process data from {{site.data.keyword.iot_short_notm}}.</dd>
+<dd>Configura ed esegui il flusso del simulatore del dispositivo e gestisci gli altri flussi per elaborare i dati provenienti da {{site.data.keyword.iot_short_notm}}.</dd>
 </dl>
 
-## Step 1: Deploy the {{site.data.keyword.iot_short_notm}} Starter
+## Passo 1: distribuisci lo starter {{site.data.keyword.iot_short_notm}}
 {: #deployStarter}
 
-Perform the following steps to deploy the Starter sample application:
+Completa la seguente procedura per distribuire l'applicazione di esempio starter:
 
-1. Deploy the starter application.
- 1. Click <a href="https://bluemix.net/devops/setup/deploy?repository=https://github.com/ibm-watson-iot/iot-platform-bluemix-starter"><img src="https://bluemix.net/devops/graphics/create_toolchain_button.png" height=25></a> to create a new Continuous Delivery Toolchain in Bluemix:  (via Continuous Delivery)  
- **Tip:** If you'd rather deploy from the command line, you can [find the {{site.data.keyword.iot_short_notm}} starter](https://github.com/ibm-watson-iot/iot-platform-bluemix-starter) in the IBM Watson IoT organization in GitHub.
- 2. When prompted, log in to IBM Bluemix.
- 3. If needed, select the Bluemix Organization where you want to deploy the starter application.
- 4. Keep the Toolchain name, or update it as needed. It is used as the default app name and the root of your app's URL: `<app-name>.mybluemix.net`
- 5. Click **Create**.  
-**Tip:** Click the **Delivery Pipeline** tile to monitor the progress for your first deployment.
- 6. When the deployment is complete, click **View App** to open your new Node-RED application in a new tab.
-2. Locate the starter app services.
- 1. From the Bluemix menu, select **Dashboard**.
- 2. Locate the following services under *All services*:
+1. Distribuisci l'applicazione starter.
+ 1. Fai clic su <a href="https://bluemix.net/devops/setup/deploy?repository=https://github.com/ibm-watson-iot/iot-platform-bluemix-starter"><img src="https://bluemix.net/devops/graphics/create_toolchain_button.png" height=25></a> per creare una nuova Toolchain di fornitura continua in Bluemix:  (tramite Continuous Delivery)  
+ **Suggerimento:** se preferisci distribuire dalla riga di comando, puoi [trovare lo {{site.data.keyword.iot_short_notm}} starter](https://github.com/ibm-watson-iot/iot-platform-bluemix-starter) nell'organizzazione IBM Watson IoT in GitHub.
+ 2. Quando richiesto, accedi a IBM Bluemix.
+ 3. Se necessario, seleziona l'organizzazione Bluemix in cui vuoi distribuire l'applicazione starter.
+ 4. Mantieni il nome Toolchain o aggiornalo come necessario. Questo è utilizzato come nome applicazione predefinito o come root dell'URL della tua applicazione: `<app-name>.mybluemix.net`
+ 5. Fai clic su **Crea**.  
+**Suggerimento:** fai clic sul tile **Delivery Pipeline** per monitorare l'avanzamento della tua prima distribuzione.
+ 6. Al completamento della distribuzione, fai clic su **Visualizza applicazione** per aprire la tua nuova applicazione Node-RED in una nuova scheda.
+2. Individua i servizi dell'applicazione starter.
+ 1. Dal menu Bluemix, seleziona **Dashboard**.
+ 2. Individua i seguenti servizi sotto *Tutti i servizi*:
     - iot-starter
     - iotp-starter-cloudantNoSQLDB
- 3. Locate the toolchain under *All Apps*:
+ 3. Individua la toolchain sotto *Tutte le applicazioni*:
     - default-toolchain-{id}}
 
 
-## Step 2: Define a simulated device in {{site.data.keyword.iot_short_notm}}
+## Passo 2: definisci un dispositivo simulato in {{site.data.keyword.iot_short_notm}}
 {: #definingsimdev}
 
-Complete the following steps to simulate a scenario that uses a thermostat to monitor temperature, humidity, and location of a living room.
+Completa la seguente procedura per simulare uno scenario che utilizza un termostato per monitorare la temperatura, l'umidità e l'ubicazione di un soggiorno.
 
-1.	Launch the {{site.data.keyword.iot_short_notm}} dashboard.
-  1. In the Bluemix dashboard, under *All services*, click the name of your {{site.data.keyword.iot_short_notm}} instance.
-**Tip:** The instance name usually includes `iotp-starter`.
-  2. Click **Launch** to open the {{site.data.keyword.iot_short_notm}} dashboard in a new browser tab.   
-The `All Boards` page is displayed by default.
-2. Create a device type.
-  1.	From the main menu, select **Devices**, and then click **Add Device**.
-  2.	In the Add Device page, click **Create device type**.
-  3.	In the Create Device Type page, click **Create device type**.
-  4. Enter a unique name (for example `Thermostat`) for your device type, and click **Next**.
-  5. Optional: Defining a template and metadata on the next two pages is optional and can be safely skipped by clicking **Next** on each page.
-  6.	Click **Create** to add the device type.
-3.	Add a device that uses the newly created device type.
-  1. On the Add Device page, the device type that you just created is displayed in the list of device types. Click **Next** to add a device that uses that device type.
-  2. Enter a unique device ID (for example `LivingRoomThermo1`).
-  3. Optional: Providing descriptive data on the Add Device page or entering device metadata on the next page is optional, and you can safely skip those pages by clicking **Next** on each page.
-  4. On the Security page, click **Next** to generate an authentication token for your device.
-  5. On the Summary page, verify that the information is correct and click **Add** to add the device. Click **Back** to return to a previous page.
-4.	Make a note of the information that is displayed in the Your Device Credentials page.   
-You need the following information to configure the simulator and display the data:
- - Organization ID
- - Device Type
- - Device ID
- - Authentication Method
- - Authentication Token
+1.	Avvia il dashboard {{site.data.keyword.iot_short_notm}}.
+  1. Nel dashboard Bluemix, sotto *Tutti i servizi*, fai clic sul nome della tua istanza {{site.data.keyword.iot_short_notm}}.
+**Suggerimento:** il nome dell'istanza generalmente include `iotp-starter`.
+  2. Fai clic su **Launch** per aprire il dashboard {{site.data.keyword.iot_short_notm}} in una nuova scheda del browser.   
+Per impostazione predefinita, viene visualizzata la pagina `All Boards`.
+2. Crea un tipo di dispositivo.
+  1.	Dal menu principale, seleziona **Devices** e fai clic su **Add Device**.
+  2.	Nella pagina Add Device, fai clic su **Create device type**.
+  3.	Nella pagina per la creazione del tipo di dispositivo, fai clic su **Create device type**.
+  4. Immetti un nome univoco (ad esempio `Thermostat`) per il tuo di dispositivo e fai clic su **Next**.
+  5. Facoltativo: la definizione di un template e dei metadati nelle due pagine successive è facoltativa e può essere tranquillamente ignorata facendo clic su **Next** in ogni pagina.
+  6.	Fai clic su **Create** per aggiungere il tipo di dispositivo.
+3.	Aggiungi un dispositivo che utilizza il tipo di dispositivo appena creato.
+  1. Nella pagina Add Device, il tipo di dispositivo appena creato viene visualizzato nell'elenco dei tipi di dispositivi. Fai clic su **Next** per aggiungere un dispositivo che utilizza quel tipo di dispositivo.
+  2. Immetti un ID dispositivo univoco (ad esempio `LivingRoomThermo1`).
+  3. Facoltativo: l'immissione dei dati descrittivi nella pagina Add Device o dei metadati del dispositivo nella pagina successiva è facoltativa e può essere tranquillamente ignorata facendo clic su **Next** in ogni pagina.
+  4. Nella pagina Security, fai clic su **Next** per generare un token di autenticazione per il tuo dispositivo.
+  5. Nella pagina di riepilogo, verifica che le informazioni siano corrette e fai clic su **Add** per aggiungere il dispositivo. Fai clic su **Back** per ritornare alla pagina precedente.
+4.	Prendi nota delle informazioni che vengono visualizzate nella pagina Your Device Credentials.   
+Hai bisogno delle seguenti informazioni per configurare il simulatore e visualizzare i dati:
+ - ID organizzazione
+ - Tipo di dispositivo
+ - ID dispositivo
+ - Metodo di autenticazione
+ - Token di autenticazione
 
-## Sep 3: Configure and run the Node-RED device simulator.  
+## Passo 3: configura ed esegui il simulatore del dispositivo Node-RED.  
 {: #confignodered}  
-Configure the Node-RED device simulator to send MQTT device messages with temperature and humidity information to {{site.data.keyword.iot_short_notm}}.
+Configura il simulatore del dispositivo Node-RED per inviare i messaggi del dispositivo MQTT con informazioni su temperatura e umidità a {{site.data.keyword.iot_short_notm}}.
 
-1. Launch the Node-RED flow editor.
-  1. In the Bluemix dashboard, under *All apps*, click the name of your toolchain.  
-**Tip:** The toolchain name usually includes `default-toolchain...`.
-  2. From the toolchain dashboard, open your Node-RED instance by clicking **Routes** and selecting the route link.  
-  2. Click **Go to your Node-RED flow editor** to open the editor.
-2. Deploy your device.
-  1. In the Device Simulator flow, double-click the blue **Send to IBM IoT Platform** node.
-  2. Verify that Authentication is set to **Bluemix Service**.
-  3. Enter the **Device Type** and **Device ID** of your device and click **Done**.
-  4. Deploy the device by clicking **Deploy**.
-3. Configure the Node-RED Temperature Monitor flow.
-  1. In the Device Simulator flow, double-click the blue **IBM IoT App In** node .
-  2. In Authentication, select **Bluemix Service**.
-  3.	Select **All** for Device Type, Device ID, Event, and Format.
-  4.	Click **Done**.
-  5.  Deploy your monitor by clicking **Deploy**.
-4. Validate the device connection.
-  1.	Open the {{site.data.keyword.iot_short_notm}} dashboard.  
-**Tip:** If the {{site.data.keyword.iot_short_notm}} dashboard is not already open in another tab, return to your {{site.data.keyword.Bluemix_notm}} dashboard, click the name of your {{site.data.keyword.iot_short_notm}} instance, and then click **Launch Dashboard**.
-  2. From the main menu, select **Devices**.
-  3. Click the name of the device that you added.   
-The device information displays the connection status of your device.
-  4.	In your Node-RED flow editor, double-click the **Send Data** node, set the Repeat value to **Interval**, and set the frequency to every `3` seconds.
-  5. Click **Done**.
-  6. Deploy your changes by clicking **Deploy**.  
-The payload contains data points, such as those shown in the following example:
+1. Avvia l'editor del flusso Node-RED.
+  1. Nel dashboard Bluemix, sotto *Tutte le applicazioni*, fai clic sul nome della tua toolchain.  
+**Suggerimento:** il nome della toolchain generalmente include `default-toolchain...`.
+  2. Dal dashboard della toolchain, apri la tua istanza Node-RED facendo clic su **Routes** e selezionando il link della rotta.  
+  2. Fai clic su **Go to your Node-RED flow editor** per aprire l'editor.
+2. Distribuisci il tuo dispositivo.
+  1. Nel flusso del simulatore del dispositivo, fai doppio clic sul nodo blu **Send to IBM IoT Platform**.
+  2. Verifica che l'autenticazione sia impostata su **Bluemix Service**.
+  3. Immetti il **Device Type** e **Device ID** del tuo dispositivo e fai clic su **Done**.
+  4. Distribuisci il dispositivo facendo clic su **Deploy**.
+3. Configura il flusso del monitor di temperatura Node-RED.
+  1. Nel flusso del simulatore del dispositivo, fai doppio clic sul nodo blu **IBM IoT App In**.
+  2. In Authentication, seleziona **Bluemix Service**.
+  3.	Seleziona **All** per Device Type, Device ID, Event e Format.
+  4.	Fai clic su **Done**.
+  5.  Distribuisci il tuo monitor facendo clic su **Deploy**.
+4. Convalida la connessione del dispositivo.
+  1.	Apri il dashboard {{site.data.keyword.iot_short_notm}}.  
+**Suggerimento:** se il dashboard {{site.data.keyword.iot_short_notm}} non è già aperto in un'altra scheda, torna al dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sul nome della tua istanza {{site.data.keyword.iot_short_notm}} e fai clic su **Launch Dashboard**.
+  2. Dal menu principale, seleziona **Devices**.
+  3. Fai clic sul nome del dispositivo che hai aggiunto.   
+Le informazioni sul dispositivo visualizzano lo stato della connessione del tuo dispositivo.
+  4.	Nell'editor del flusso Node-RED, fai doppio clic sul nodo **Send Data**, imposta il valore Repeat su **Interval** e imposta la frequenza su ogni `3` secondi.
+  5. Fai clic su **Done**.
+  6. Distribuisci le tue modifiche facendo clic su **Deploy**.  
+Il payload contiene i punti dati, come quelli mostrati nel seguente esempio:
 ```
 {"d":{"temp":15,"humidity":50,"location":{"longitude":-98.49,"latitude":29.42}}}
 ```
-  7. Optional: Open the Debug tab to verify that messages are being created.
-    1. From the menu that is located in the heading section, select **View**.
-    2. Select **Show Sidebar**.
-    3. Click the Debug tab to see messages.
-  8. In the {{site.data.keyword.iot_short_notm}} Device Information page, verify that you see data points from the device in the Sensor Information section.
+  7. Facoltativo: apri la scheda Debug per verificare che i messaggi vengano creati.
+    1. Dal menu che si trova nella sezione dell'intestazione, seleziona **View**.
+    2. Seleziona **Show Sidebar**.
+    3. Fai clic sulla scheda Debug per vedere i messaggi.
+  8. Nella pagina {{site.data.keyword.iot_short_notm}} Device Information, verifica di visualizzare i punti dati del dispositivo nella sezione Sensor Information.
 
 
-## Step 4: Create cards in {{site.data.keyword.iot_short_notm}} to show live data  
+## Passo 4: crea le schede in {{site.data.keyword.iot_short_notm}} per visualizzare i dati live  
 {: #createcards}  
-Create a board and cards to display device data in the {{site.data.keyword.iot_short_notm}} dashboard. For more information about boards and cards, see [Visualizing real-time data by using boards and cards](https://console.ng.bluemix.net/docs/services/IoT/data_visualization.html).
+Crea una tabella e le schede per visualizzare i dati del dispositivo nel dashboard {{site.data.keyword.iot_short_notm}}. Per ulteriori informazioni su tabelle e schede, vedi [Visualizzazione dei dati in tempo reale utilizzando le tabelle e le schede](https://console.ng.bluemix.net/docs/services/IoT/data_visualization.html).
 
-1. Create a board
-  1. Open the {{site.data.keyword.iot_short_notm}} dashboard.  
-  **Tip:** If the {{site.data.keyword.iot_short_notm}} dashboard is not already open in another tab, return to your {{site.data.keyword.Bluemix_notm}} dashboard, click the name of your {{site.data.keyword.iot_short_notm}} instance, and then click **Launch Dashboard**.  
-  2. Create a board to contain the cards for your simulated devices.
-    1. If the All Boards, page is not already displayed, select **Boards** from the {{site.data.keyword.iot_short_notm}} dashboard main menu, and then click **Create New Board**.
-    2. Enter a name for the board (for example `Home Environment`) and click **Next**.
-    3. On the next page, click **Submit**.  
-  3. Click the board that you just created to open it.
-2. Create a card to display temperature
-  1. Click **Add New Card**, and then select the **Line chart** card type from the Devices section.
-  2. Select your device from the devices list, then click **Next**.
-  3. Click **Connect new data set**.
-  4. In the Create Value Card page, select or enter the following values and click **Next**.
-    - Event: update
-    - Property: temp
-    - Name: Temperature
-    - Type: Float
-    - Unit: °C
-    - Precision: 2
+1. Crea una tabella
+  1. Apri il dashboard {{site.data.keyword.iot_short_notm}}.  
+  **Suggerimento:** se il dashboard {{site.data.keyword.iot_short_notm}} non è già aperto in un'altra scheda, torna al dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sul nome della tua istanza {{site.data.keyword.iot_short_notm}} e fai clic su **Launch Dashboard**.  
+  2. Crea una tabella per contenere le schede per i tuoi dispositivi simulati.
+    1. Se la pagina All Boards non è già visualizzata, seleziona **Boards** dal menu principale del dashboard {{site.data.keyword.iot_short_notm}} e fai quindi clic su **Create New Board**.
+    2. Immetti un nome per la tabella (ad esempio `Home Environment`) e fai clic su **Next**.
+    3. Nella pagina successiva, fai clic su **Submit**.  
+  3. Fai clic sulla tabella appena creata per aprirla.
+2. Crea una scheda per visualizzare la temperatura
+  1. Fai clic su **Add New Card**, quindi seleziona il tipo di scheda **Line chart** dalla sezione Devices.
+  2. Seleziona il tuo dispositivo dall'elenco e fai clic su **Next**.
+  3. Fai clic su **Connect new data set**.
+  4. Nella pagina Create Value Card, seleziona o immetti i seguenti valori e fai clic su **Next**.
+    - Evento: update
+    - Proprietà: temp
+    - Nome: Temperature
+    - Tipo: Float
+    - Unità: °C
+    - Precisione: 2
     - Min: 0
     - Max: 50
-  5. In the Card Preview page, select **L** for the line chart size, and click **Next**.
-  6. In the Card Information page, change the name of the card to **Temperature** and click **Submit**.   
-The temperature card appears on the dashboard and includes a line chart of the live temperature data.
-3. Create a card to display humidity
-  1. Click **Add New Card**, and then select the **Gauge** card type from the Devices section.
-  2. Select your device from the list, then click **Next**.
-  3. Click **Connect new data set**.
-  4. In the Create Value Card page, select or enter the following values and click **Next**.
-  Event: update
-     - Property: humidity
-     - Name: Humidity
-     - Type: Float
-     - Unit: %
-     - Precision: 1
+  5. Nella pagina Card Preview, seleziona **L** per la dimensione del grafico a linee e fai clic su **Next**.
+  6. Nella pagina Card Information, modifica il nome della scheda in **Temperature** e fai clic su **Submit**.   
+La scheda della temperatura viene visualizzata nel dashboard e include un grafico a linee dei dati sulla temperatura dal vivo.
+3. Crea una scheda per visualizzare l'umidità
+  1. Fai clic su **Add New Card**, quindi seleziona il tipo di scheda **Gauge** dalla sezione Devices.
+  2. Seleziona il tuo dispositivo dall'elenco e fai clic su **Next**.
+  3. Fai clic su **Connect new data set**.
+  4. Nella pagina Create Value Card, seleziona o immetti i seguenti valori e fai clic su **Next**.
+  Evento: update
+     - Proprietà: humidity
+     - Nome: Humidity
+     - Tipo: Float
+     - Unità: %
+     - Precisione: 1
      - Min: 10
      - Max: 95
-  5. In the Card Preview page, select **M** for the gauge size, and click **Next**.
-  6. In the Card Information page, change the name of the card to **Humidity** and click **Submit**.   
-The humidity card appears on the dashboard and includes a gauge that shows the live humidity data.  
+  5. Nella pagina Card Preview, seleziona **M** per la dimensione del misuratore e fai clic su **Next**.
+  6. Nella pagina Card Information, modifica il nome della scheda in **Humidity** e fai clic su **Submit**.   
+La scheda dell'umidità viene visualizzata nel dashboard e include un misuratore che mostra i dati sull'umidità dal vivo.  
 
 <!-- 4. Create a card to display location
   1. Click **Add New Card**, and then select the **Value** card type, which is located in the Devices section.
@@ -214,27 +214,27 @@ The humidity card appears on the dashboard and includes a gauge that shows the l
   8. In the Card Information page, change the name of the card to **Location** and click **Submit**.   
 The location card appears on the dashboard and shows the live latitude and longitude of the device.-->
 
-## What's next  
+## Operazioni successive  
 {: #whats-next}  
-Now that your simulated device is sending data to {{site.data.keyword.iot_short_notm}}, you can continue to iterate on your IoT project.
- - Watch your cards display the data that is generated by your node-RED flow.  
-Node-Red continues to send data until you stop it. To stop the simulated data, perform the following steps:
-    1.	In your Node-RED flow editor, double-click the gray **Send Data** node, set the Repeat value to **Interval**, and set the frequency to every **3** seconds.
-    2. Click **Done**.
-    3. Deploy your changes by clicking **Deploy**.
+Ora che il tuo dispositivo simulato invia dati a {{site.data.keyword.iot_short_notm}}, puoi continuare a eseguire l'iterazione sul tuo progetto IoT.
+ - Guarda le tue schede che visualizzano i dati generati dal flusso node-RED.  
+Node-Red continua a inviare dati finché non li interrompi. Per interrompere i dati simulati, completa la seguente procedura:
+    1.	Nell'editor del flusso Node-RED, fai doppio clic sul nodo grigio **Send Data**, imposta il valore Repeat su **Interval** e imposta la frequenza su ogni **3** secondi.
+    2. Fai clic su **Done**.
+    3. Distribuisci le tue modifiche facendo clic su **Deploy**.
 
- - Connect a physical device.  
-[Search the IoT Recipes](https://developer.ibm.com/recipes/?post_type=tutorials&s=watson+iot) to connect a physical device such as a Raspberry Pi and send data to {{site.data.keyword.iot_short_notm}}.
+ - Connetti un dispositivo fisico.  
+[Cerca le ricette IoT](https://developer.ibm.com/recipes/?post_type=tutorials&s=watson+iot) per connettere un dispositivo fisico come Raspberry Pi e inviare i dati a {{site.data.keyword.iot_short_notm}}.
 
- - Explore visualization options.  
-[Deploy a sample node.js application to visualize device data.](https://www.bluemix.net/docs/services/IoT/visualizingdata_sample.html).
+ - Esplora le opzioni di visualizzazione.  
+[Distribuisci un'applicazione node.js di esempio per visualizzare i dati del dispositivo.](https://www.bluemix.net/docs/services/IoT/visualizingdata_sample.html)
 
- -	Password protect the Node-RED flow editor.   
-By default, the editor is open for anyone to access and modify flows. To password-protect the editor, perform the following tasks:
-    1.	In the {{site.data.keyword.Bluemix_notm}} dashboard, click the name of your Starter application to open the application pages.
-    2. Click **Runtime** to display the Runtime page.
-    3. Click **Environment variable** to display the Environment Variables page.
-    4. In the **User Defined** section, click **Add** and then enter the following user-defined variables:
-         -	NODE_RED_USERNAME - the user name to secure the editor
-         -	NODE_RED_PASSWORD - the password to secure the editor
-    3.	Click **Save**.
+ -	Proteggi con password l'editor del flusso Node-RED.   
+Per impostazione predefinita, l'editor è aperto a tutti per accedere e modificare i flussi. Per proteggere con password l'editor, completa le seguenti attività:
+    1.	Nel dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sul nome della tua applicazione Starter per aprire le pagine dell'applicazione.
+    2. Fai clic su **Runtime** per visualizzare la pagina dei runtime.
+    3. Fai clic su **Variabile di ambiente** per visualizzare la pagina delle variabili di ambiente.
+    4. Nella sezione **Definito dall'utente**, fai clic su **Aggiungi** e immetti le seguenti variabili definite dall'utente:
+         -	NODE_RED_USERNAME - il nome utente per proteggere l'editor
+         -	NODE_RED_PASSWORD - la password per proteggere l'editor
+    3.	Fai clic su **Save**.

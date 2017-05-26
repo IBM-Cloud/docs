@@ -23,7 +23,7 @@ Puoi utilizzare C# per creare e personalizzare le applicazioni che interagiscono
 ## Scaricare le risorse e il client C#
 {: #csharp_client_download}
 
-Per accedere agli esempi e alle librerie client C# per {{site.data.keyword.iot_short_notm}}, vai al repository [iot-csharp ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/iot-csharp){: new_window} in GitHub e completa le istruzioni di installazione.
+Per accedere agli esempi e alle librerie client C# per {{site.data.keyword.iot_short_notm}}, vai al repository [iot-csharp ![Icona link esterno](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-csharp){: new_window} in GitHub e completa le istruzioni di installazione.
 
 
 ## Constructor
@@ -166,7 +166,7 @@ La seguente tabella descrive i parametri specificati nel metodo `publishEvent()`
 |Parametro|Tipo di dati|Descrizione|
 |:---|:---|
 |`deviceType`|Stringa| Il tipo dispositivo. Generalmente, il deviceType è un raggruppamento di dispositivi che esegue un'attività specifica, ad esempio "weatherballoon".|
-|`deviceId`|Stringa| L'ID del dispositivo. Generalmente, per determinato tipo dispositivo, il deviceId è un identificativo univoco di tale dispositivo, ad esempio un numero seriale o un indirizzo MAC.|
+|`deviceId`|Stringa| L'ID del dispositivo. Generalmente, per un determinato tipo di dispositivo, il deviceId è un identificativo univoco di tale dispositivo, ad esempio un numero seriale o un indirizzo MAC.|
 |`evt`|Stringa| Il nome dell'evento.|
 |`format`|Stringa| Il formato può essere qualsiasi stringa, ad esempio JSON.|
 |`data`|Dizionario| I dati per il payload del messaggio. La lunghezza massima è di 131072 byte.|
@@ -187,7 +187,7 @@ La seguente tabella descrive i parametri specificati nel metodo `publishCommand(
 |Parametro|Tipo di dati|Descrizione|
 |:---|:---|
 |`deviceType`|Stringa| Il tipo dispositivo. Generalmente, il deviceType è un raggruppamento di dispositivi che esegue un'attività specifica, ad esempio "weatherballoon".|
-|`deviceId`|Stringa| L'ID del dispositivo. Generalmente, per determinato di tipo dispositivo, il deviceId è un identificativo univoco di tale dispositivo, ad esempio un numero seriale o un indirizzo MAC.|
+|`deviceId`|Stringa| L'ID del dispositivo. Generalmente, per un determinato tipo di dispositivo, il deviceId è un identificativo univoco di tale dispositivo, ad esempio un numero seriale o un indirizzo MAC.|
 |`command`|Stringa| Il nome del comando.|
 |`format`|Stringa| Il formato può essere qualsiasi stringa, ad esempio JSON.|
 |`data`|Dizionario| I dati per il payload del messaggio. La lunghezza massima è di 131072 byte.|

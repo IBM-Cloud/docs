@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-25"
+lastupdated: "2017-04-10"
 
 ---
 
@@ -157,10 +157,10 @@ Dove:
 - Gli altri client che fanno parte dell'applicazione scalabile devono utilizzare lo stesso ID client.
 - Il valore della sessione di pulizia deve essere impostato su false (0) per le sottoscrizioni non durevoli.
 
-### Sottoscrizioni condivise a durata mista (Beta)
+### Sottoscrizioni condivise a durata mista
 {: #shared_sub_mixed}
 
-Il servizio {{site.data.keyword.iot_short_notm}} estende la specifica del protocollo di messaggistica MQTT V3.1.1 per supportare la versione di prova beta delle sottoscrizioni condivise a durata mista. Le sottoscrizioni condivise forniscono le funzionalità di bilanciamento del carico alle applicazioni. Può essere necessaria una sottoscrizione condivisa se un'applicazione aziendale di backend non può elaborare il volume di messaggi che stanno venendo pubblicati per spazio dell'argomento specifico. Ad esempio, quando molti dispositivi pubblicano i messaggi che stanno venendo elaborati da una sola applicazione, può essere necessario utilizzare la funzionalità di bilanciamento del carico di una sottoscrizione condivisa.
+Il servizio {{site.data.keyword.iot_short_notm}} estende la specifica del protocollo di messaggistica MQTT V3.1.1 per supportare le sottoscrizioni condivise a durata mista. Le sottoscrizioni condivise forniscono le funzionalità di bilanciamento del carico alle applicazioni. Può essere necessaria una sottoscrizione condivisa se un'applicazione aziendale di backend non può elaborare il volume di messaggi che stanno venendo pubblicati per spazio dell'argomento specifico. Ad esempio, quando molti dispositivi pubblicano i messaggi che stanno venendo elaborati da una sola applicazione, può essere necessario utilizzare la funzionalità di bilanciamento del carico di una sottoscrizione condivisa.
 
 Per le sottoscrizioni condivise a durata mista, assicurati che l'ID client nella sottoscrizione corrisponda al seguente formato:
 
@@ -176,7 +176,6 @@ Dove:
    - Punti ( . )
 
 **Importante:**
-- Il supporto per le sottoscrizioni condivise a durata mista è disponibile soltanto come una funzione beta. Non implementare le funzioni beta nelle applicazioni di produzione.
 - Il valore della sessione di pulizia può essere impostato su true (1) o false (0) nelle sottoscrizioni condivise a durata mista.
 - I client che si collegano tramite il instanceId utilizzano sottoscrizioni differenti rispetto ai client che si collegano senza il instanceId. Pertanto, se vuoi che più client si colleghino a una sottoscrizione condivisa a durata mista, devi specificare il instanceID in tutte le sottoscrizioni.
 

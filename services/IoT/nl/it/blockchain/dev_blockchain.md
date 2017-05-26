@@ -241,7 +241,7 @@ Per scaricare i contratti di esempio:
 
   </ul>
   3. Distribuisci il contratto al peer.  
-  Per ulteriori informazioni sulla chiamata di disatribuzione, consulta [POST/chaincode API documentation ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/hyperledger/fabric/blob/v0.6/docs/API/CoreAPI.md#chaincode){: new_window}.  
+  Per ulteriori informazioni sulla chiamata di distribuzione, consulta [POST/chaincode API documentation ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/hyperledger/fabric/blob/v0.6/docs/API/CoreAPI.md#chaincode){: new_window}.  
   Utilizza le seguenti informazioni durante la distribuzione:  
   <ul>
   <li>URL: `http://api_host:api_port_tls/chaincode`
