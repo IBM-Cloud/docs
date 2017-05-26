@@ -45,7 +45,6 @@ Per inoltrare una richiesta `POST` da un dispositivo collegato a {{site.data.key
 
 **Note importanti:**
 - Puoi inoltrare gli eventi del dispositivo gateway solo utilizzando la messaggistica HTTP. Utilizza il protocollo di messaggistica MQTT per inviare richieste per la gestione di un altro dispositivo gateway o per le funzioni di controllo.
-- Le connessioni HTTP possono essere riutilizzate per pubblicare eventi solo per lo stesso dispositivo poiché l'intestazione HTTP non può essere modificata.
 - La porta 443, la porta SSL predefinita, può anche essere specificata per le chiamate API HTTP sicure.
 - Se un gateway non è assegnato al ruolo *Gateway standard*, può pubblicare gli eventi al posto di tutti i dispositivi nell'organizzazione. Se il dispositivo collegato al gateway non è registrato, il gateway automaticamente registra tale dispositivo.
 - Assegna il ruolo *Gateway standard* se desideri controllare i livelli di autorizzazione.

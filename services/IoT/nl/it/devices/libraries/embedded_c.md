@@ -22,7 +22,7 @@ Puoi utilizzare Embedded C per creare e personalizzare i dispositivi che interag
 ## Scaricamento delle risorse e del client Embedded C
 {: #embeddedc_client_download}
 
-Per accedere agli esempi e alle librerie client Embedded C per {{site.data.keyword.iot_short_notm}}, vai al repository [iotf-embeddedc ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-messaging/iotf-embeddedc){: new_window} in GitHub e completa le istruzioni di installazione.
+Per accedere agli esempi e alle librerie client Embedded C per {{site.data.keyword.iot_short_notm}}, vai al repository [iotf-embeddedc ![icona link esterno](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iotf-embeddedc){: new_window} in GitHub e completa le istruzioni di installazione.
 
 
 ## Dipendenze
@@ -30,7 +30,7 @@ Per accedere agli esempi e alle librerie client Embedded C per {{site.data.keywo
 
 |Dipendenza |Descrizione|
 |:---|:---|
-|[Eclipse Paho Embedded C library ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git){: new_window} |Fornisce un libreria client MQTT C. Per ulteriori informazioni, consulta [MQTT Client Package -  C for embedded devices ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window}.|
+|[Eclipse Paho Embedded C library ![icona link esterno](../../../../icons/launch-glyph.svg "External link icon")](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git){: new_window} |Fornisce un libreria client MQTT C. Per ulteriori informazioni, consulta [MQTT Client Package -  C for embedded devices ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](http://www.eclipse.org/paho/clients/c/embedded/){: new_window}.|
 
 
 ## Installazione

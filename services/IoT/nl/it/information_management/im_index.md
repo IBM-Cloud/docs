@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-04-10"
+lastupdated: "2017-04-25"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-04-10"
 {: #im_index}
 
 Le interfacce dell'applicazione estendono il concetto di [tipo dispositivo](#resources) per controllare meglio i dati che transitano tramite {{site.data.keyword.iot_short_notm}} e per fornire una vista non dipendente dai dispositivi dei dati IoT.
-{:shortdesc}.
+{:shortdesc}
 
 **Importante:** la funzione di associazione dell'interfaccia è una funzione beta. Gli aggiornamenti beta in corso così come la release finale potrebbero includere delle modifiche non compatibili con la versione corrente. È caldamente consigliato che le funzioni beta non siano utilizzate nelle applicazioni di produzione fino alla release finale. Per ricevere informazioni aggiuntive e fornire il feedback per questa beta, puoi [registrarti al programma beta di gestione delle informazioni ![Icona di link esterno](../../../icons/launch-glyph.svg)](https://www.ibm.com/software/support/trial/cst/forms/nomination.wss?id=7050){:new_window}.
 
@@ -93,7 +93,7 @@ Risorse tipo                        | Descrizione
 Tipo di evento                         | Un costrutto programmatico che connette un'interfaccia fisica a uno schema evento. </br>**Importante:** per la beta, tutti gli eventi in entrata da utilizzare in un'interfaccia dell'applicazione devono essere in formato JSON.   
 Tipo dispositivo                         |  Un costrutto programmatico che consente di raggruppare i dispositivi che condividono caratteristiche o modalità di funzionamento. Nell'associazione dell'interfaccia, il tipo di evento viene esteso per includere una singola interfaccia fisica per un dispositivo e una o più interfacce dell'applicazione che vengono utilizzate per recuperare lo stato del dispositivo. </br>Per ulteriori informazioni, consulta la sezione "Tipi di dispositivo e identificativi" nell'argomento [Modello del dispositivo](../reference/device_model.html#id_and_device_types).
 Tipo di oggetto                         | Un costrutto programmatico che rappresenta una raccolta di uno o più tipi dispositivo separati, tipi oggetto o entrambi. </br>**Importante:** la beta supporta tre livelli di nidificazione dell'interfaccia dell'applicazione di tipo oggetto.
-Risorse di schema                         |  Costrutti programmatici che definiscono la struttura di dati delle interfacce fisiche di tipo dispositivo, la composizione di tipo oggetto e le interfacce dell'applicazione in uscita. Vengono utilizzati i seguenti [schemi JSON ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](http://json-schema.org/){:new_window}: <ul><li>Gli *schemi evento* definiscono la struttura degli eventi pubblicati su {{site.data.keyword.iot_short_notm}} da un dispositivo. Ogni schema dell'evento definisce la struttura di un evento in entrata e viene associato con un tipo di evento. <li>Gli *schemi di tipo oggetto* definiscono le interfacce dell'applicazione che fungono da fonti di input in base a un tipo di oggetto. Ogni schema di tipo oggetto definisce la struttura di una o più interfacce dell'applicazione di tipo oggetto.<li>Gli *schemi dell'interfaccia dell'applicazione* definiscono la struttura dello [stato dispositivo](#key_concepts) memorizzato su {{site.data.keyword.iot_short_notm}}</ul>.
+Risorse di schema                         |  Costrutti programmatici che definiscono la struttura di dati delle interfacce fisiche di tipo dispositivo, la composizione di tipo oggetto e le interfacce dell'applicazione in uscita. Vengono utilizzati i seguenti [schemi JSON ![Icona link esterno](../../../icons/launch-glyph.svg "External link icon")](http://json-schema.org/){:new_window}: <ul><li>Gli *schemi evento* definiscono la struttura degli eventi pubblicati su {{site.data.keyword.iot_short_notm}} da un dispositivo. Ogni schema dell'evento definisce la struttura di un evento in entrata e viene associato con un tipo di evento. <li>Gli *schemi di tipo oggetto* definiscono le interfacce dell'applicazione che fungono da fonti di input in base a un tipo di oggetto. Ogni schema di tipo oggetto definisce la struttura di una o più interfacce dell'applicazione di tipo oggetto.<li>Gli *schemi dell'interfaccia dell'applicazione* definiscono la struttura dello [stato dispositivo](#key_concepts) memorizzato su {{site.data.keyword.iot_short_notm}}</ul>.
 
 Risorse di interfaccia                        | Descrizione       
 ------------- | ------------- | -------------  
@@ -107,7 +107,7 @@ Cosa                         | Un costrutto programmatico che rappresenta logica
 
 Risorse di supporto                        | Descrizione       
 ------------- | ------------- | -------------  
-Interfaccia fisica                         | Un costrutto programmatico che definisce i tipi evento e le proprietà dispositivo associate che vengono associate a un singolo tipo dispositivo che è associato a uno o più tipi evento. L'interfaccia fisica è definita dagli schemi evento.   
+Interfaccia fisica                         | Un costrutto programmatico che definisce i tipi di evento e le proprietà dispositivo associate che vengono associate a un singolo tipo dispositivo. L'interfaccia fisica è definita dagli schemi evento.   
 Associazioni                         | Un costrutto programmatico che definisce in che modo le proprietà associate agli eventi in entrata sono associati alle proprietà definisce su un'interfaccia dell'applicazione. </br>**Importante:** deve essere associata almeno un'interfaccia con un tipo dispositivo prima che possa essere definita un'associazione.
 
 ## Flusso di lavoro di elevato livello
@@ -115,7 +115,7 @@ Associazioni                         | Un costrutto programmatico che definisce 
 
 Utilizza la seguente procedura come supporto per la configurazione delle risorse di cui hai bisogno per iniziare l'associazione dei tuo i dati del dispositivo utilizzando le interfacce.
 
-Per i dettagli sull'API, consulta la documentazione [{{site.data.keyword.iot_short_notm}} HTTP REST API ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html){:new_window}.
+Per i dettagli sull'API, consulta la documentazione [{{site.data.keyword.iot_short_notm}} HTTP REST API ![Icona link esterno](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html){:new_window}.
 
 **Suggerimento:** per informazioni più dettagliate su ciascuno dei passi, vedi gli scenari di esempio oppure utilizza i link per andare direttamente a uno specifico passo nello scenario di esempio. Lo [scenario di esempio 1](im_index_scenario.html#scenario) descrive i passi per creare un'interfaccia dell'applicazione di tipo dispositivo per dispositivi termometro eterogenei e lo [scenario di esempio 2](im_index_scenario_thing.html#scenario) sviluppa ulteriormente il concetto descrivendo come creare un'interfaccia dell'applicazione che ti consente di utilizzare i dati da due diversi tipi di dispositivo climatico uniti in un oggetto di tipo stanza.
 

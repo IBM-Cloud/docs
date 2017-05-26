@@ -193,7 +193,7 @@ Per elaborare gli eventi ricevuti dalle tue sottoscrizioni, devi registrare un m
 |:---|:---|
 |`event.device`|Stringa|Identifica univocamente il dispositivo tra tutti i tipi di dispositivi nell'organizzazione|
 |`event.deviceType`|Stringa|Identifica il tipo dispositivo. Generalmente, il deviceType è un raggruppamento di dispositivi che esegue un'attività specifica, ad esempio "weatherballoon".|
-|`event.deviceId`|Stringa|Rappresenta l'ID del dispositivo. Generalmente, per determinato di tipo dispositivo, il deviceId è un identificativo univoco di tale dispositivo, ad esempio un numero seriale o un indirizzo MAC.|
+|`event.deviceId`|Stringa|Rappresenta l'ID del dispositivo. Generalmente, per un determinato tipo di dispositivo, il deviceId è un identificativo univoco di tale dispositivo, ad esempio un numero seriale o un indirizzo MAC.|
 |`event.event`|Stringa|Solitamente viene utilizzato per raggruppare gli eventi specifici, ad esempio "status", "warning" e "data".
 |`event.format`|Stringa|Il formato può essere qualsiasi stringa, ad esempio JSON.
 |`event.data`|Dizionario|I dati per il payload del messaggio. La lunghezza massima è di 131072 byte.

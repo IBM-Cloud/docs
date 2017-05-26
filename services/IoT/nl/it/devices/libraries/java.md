@@ -21,7 +21,7 @@ Puoi utilizzare Java™ per creare e personalizzare i dispositivi che interagisc
 ## Scaricare le risorse e il client Java
 {: #java_client_download}
 
-Per accedere agli esempi e alle librerie client Java per {{site.data.keyword.iot_short_notm}}, vai al repository [iot-java ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/iot-java){: new_window} in GitHub e completa le istruzioni di installazione.
+Per accedere agli esempi e alle librerie client Java per {{site.data.keyword.iot_short_notm}}, vai al repository [iot-java ![Icona link esterno](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-java){: new_window} in GitHub e completa le istruzioni di installazione.
 
 ## Constructor
 {: #constructor}
@@ -394,7 +394,7 @@ public class RegisteredDeviceCommandSubscribe {
             e.printStackTrace();
         }
 
-        //Trasmette il CommandCallback implementato come un argomento a questo client del dispositivo
+        //Trasmette il seguente CommandCallback implementato come un argomento a questo client del dispositivo
         myClient.setCommandCallback(new MyNewCommandCallback());
 
         //Collega a {{site.data.keyword.iot_short_notm}}

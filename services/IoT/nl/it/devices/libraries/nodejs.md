@@ -41,7 +41,7 @@ Il constructor crea l'istanza del client del dispositivo. Accetta una configuraz
 |:---|:---|
 |`org` |Il tuo ID dell'organizzazione.|
 |`type`  |Il tipo del tuo dispositivo. Generalmente, il deviceType è un raggruppamento di dispositivi che esegue un'attività specifica, ad esempio "weatherballoon".|
-|`id`  |L'ID del tuo dispositivo. Generalmente, per determinato tipo dispositivo, il deviceId è un identificativo univoco di tale dispositivo, ad esempio un numero seriale o un indirizzo MAC.|
+|`id`  |L'ID del tuo dispositivo. Generalmente, per un determinato tipo di dispositivo, il deviceId è un identificativo univoco di tale dispositivo, ad esempio un numero seriale o un indirizzo MAC.|
 |`auth-method`   |Il metodo di autenticazione da utilizzare. L'unico valore al momento supportato è `token`.|
 |`auth-token`   |Un token di autenticazione per la connessione sicura al tuo dispositivo su Watson IoT Platform. Questo campo è obbligatorio se `auth-method` è `token`.|
 

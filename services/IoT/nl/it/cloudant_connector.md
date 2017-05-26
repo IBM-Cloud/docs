@@ -83,7 +83,7 @@ Completa la seguente procedura per collegarti a {{site.data.keyword.cloudant_sho
  +    * Per gli intervalli di bucket `week`, `<bucket_name>` sarà `yyyy-'w'ww` dove `'w'ww` indica un numero della settimana.  Ad esempio, `2016-w03` per gli eventi nella terza settimana del 2016.
  +    * Per gli intervalli di bucket `month`, `<bucket_name>` sarà `yyyy-mm`.  Ad esempio, `2016-07` per gli eventi di luglio 2016.
 
-5. Fare clic su **Authorize**.
+5. Fai clic su **Authorize**.
 6. Fai clic su **Confirm** nella casella di dialogo dell'autorizzazione.
 
 I tuoi dati del dispositivo sono ora archiviati nel tuo {{site.data.keyword.cloudant}}.
