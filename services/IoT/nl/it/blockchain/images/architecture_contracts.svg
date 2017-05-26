@@ -505,14 +505,15 @@
    fit-margin-right="0"
    fit-margin-bottom="0"
    inkscape:zoom="2.18"
-   inkscape:cx="256.75439"
-   inkscape:cy="384.55254"
+   inkscape:cx="368.12054"
+   inkscape:cy="90.974558"
    inkscape:window-width="1920"
-   inkscape:window-height="1019"
-   inkscape:window-x="-9"
-   inkscape:window-y="1041"
+   inkscape:window-height="1027"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
    inkscape:window-maximized="1"
    inkscape:current-layer="svg5645" />
+
 
 
 
@@ -667,22 +668,18 @@
      sodipodi:role="line"
      x="182.16949"
      y="1113.485"
-     id="tspan6717">Hyperledger </tspan><tspan
+     id="tspan6717">Ambiente di sviluppo</tspan><tspan
      sodipodi:role="line"
      x="182.16949"
      y="1128.485"
-     id="tspan4480">development environment</tspan><tspan
-     sodipodi:role="line"
-     x="182.16949"
-     y="1143.485"
-     id="tspan266402-8" /></text>
+     id="tspan266402-8">Hyperledger</tspan></text>
 <text
    sodipodi:linespacing="125%"
    y="1080.5916"
    x="162.01154"
    font-size="13"
    id="text56812-7"
-   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Local environment</text>
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Ambiente locale</text>
 <rect
    ry="0"
    rx="0"
@@ -692,6 +689,7 @@
    width="149.25003"
    id="rect79371-1-6-6-9-8-7-3-5-2"
    style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+
 
 
 
@@ -727,15 +725,11 @@
      sodipodi:role="line"
      x="178.9794"
      y="1251.5642"
-     id="tspan6717-07">Hyperledger </tspan><tspan
+     id="tspan6717-07">Ambiente di debug</tspan><tspan
      sodipodi:role="line"
      x="178.9794"
      y="1266.5642"
-     id="tspan4480-9">debugging environment</tspan><tspan
-     sodipodi:role="line"
-     x="178.9794"
-     y="1281.5642"
-     id="tspan266402-8-2" /></text>
+     id="tspan266402-8-2">Hyperledger</tspan></text>
 <text
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -757,15 +751,11 @@
      sodipodi:role="line"
      x="340.52219"
      y="1250.8441"
-     id="tspan6717-07-9">Hyperledger </tspan><tspan
+     id="tspan6717-07-9">Rete di sviluppo</tspan><tspan
      sodipodi:role="line"
      x="340.52219"
      y="1265.8441"
-     id="tspan4480-9-1">network for development</tspan><tspan
-     sodipodi:role="line"
-     x="340.52219"
-     y="1280.8441"
-     id="tspan266402-8-2-8" /></text>
+     id="tspan266402-8-2-8">Hyperledger</tspan></text>
 </g>
 <g
    id="g60796-5-3"
@@ -905,7 +895,7 @@
    font-size="11"
    x="282.80798"
    y="86.347168"
-   sodipodi:linespacing="125%">IoT Platform</text>
+   sodipodi:linespacing="125%">Piattaforma IoT</text>
 <g
    id="g6574"
    transform="translate(389.96176,64.919575)">
@@ -1005,23 +995,24 @@
 </g>
 <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-   x="288.86005"
-   y="239.8791"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.97869587px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+   x="318.52087"
+   y="217.60733"
    id="text18189-5"
-   sodipodi:linespacing="125%"><tspan
+   sodipodi:linespacing="125%"
+   transform="scale(0.90715417,1.1023485)"><tspan
      sodipodi:role="line"
-     x="288.86005"
-     y="239.8791"
-     id="tspan18193-9">Optional:</tspan><tspan
+     x="318.52087"
+     y="217.60733"
+     id="tspan18193-9">Facoltativo:</tspan><tspan
      sodipodi:role="line"
-     x="288.86005"
-     y="253.6291"
-     id="tspan5853">Node-RED </tspan><tspan
+     x="318.52087"
+     y="231.35733"
+     id="tspan3703">Simulatore dispositivo</tspan><tspan
      sodipodi:role="line"
-     x="288.86005"
-     y="267.37912"
-     id="tspan6913">Device Simulator</tspan></text>
+     x="318.52087"
+     y="245.10733"
+     id="tspan6913">Node-RED</tspan></text>
 <g
    id="g6940"
    transform="matrix(0.06176845,0,0,0.06559102,254.18946,196.34194)">
@@ -1060,11 +1051,7 @@
      sodipodi:role="line"
      x="464.91357"
      y="44.784241"
-     id="tspan6717-0">IBM Blockchain fabric </tspan><tspan
-     sodipodi:role="line"
-     x="464.91357"
-     y="59.784241"
-     id="tspan266402-8-8" /></text>
+     id="tspan266402-8-8">Fabric IBM Blockchain</tspan></text>
 <image
    y="64.350403"
    x="466.2005"
@@ -1086,7 +1073,7 @@
    x="542.29352"
    font-size="11"
    id="text56834-0-3"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Validate</text>
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Convalida</text>
 <text
    sodipodi:linespacing="125%"
    y="289.89551"
@@ -1142,15 +1129,11 @@
      sodipodi:role="line"
      x="68.478607"
      y="305.19809"
-     id="tspan5855">IoT Blockchain</tspan><tspan
+     id="tspan5855">IU di monitoraggio</tspan><tspan
      sodipodi:role="line"
      x="68.478607"
      y="318.94809"
-     id="tspan6878-4-2">Monitoring UI</tspan><tspan
-     sodipodi:role="line"
-     x="68.478607"
-     y="332.69809"
-     id="tspan18193-1-8" /></text>
+     id="tspan18193-1-8">Blockchain IoT</tspan></text>
 <g
    id="g18195-6"
    transform="translate(-1176.2416,170.23654)"
@@ -1391,18 +1374,8 @@
      sodipodi:role="line"
      x="62.761658"
      y="258.88681"
-     id="tspan6808-9"
-     style="font-size:7.5px">Flow editor</tspan><tspan
-     sodipodi:role="line"
-     x="62.761658"
-     y="268.26181"
-     id="tspan6878-8-3"
-     style="font-size:7.5px" /><tspan
-     sodipodi:role="line"
-     x="62.761658"
-     y="277.63681"
      id="tspan18193-4-9"
-     style="font-size:7.5px" /></text>
+     style="font-size:7.5px">Editor del flusso</tspan></text>
 <path
    style="fill:none;stroke:#000000;stroke-width:1.56922197;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM);marker-end:url(#TriangleOutM)"
    d="m 167.45537,251.55121 77.08181,0"
@@ -1502,6 +1475,7 @@
 
 
 
+
     image
        y=&quot;504.73132&quot;
        x=&quot;627.01056&quot;
@@ -1512,34 +1486,35 @@
        width=&quot;50&quot; /&gt;
     <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-   x="616.237"
-   y="381.54962"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.8670435px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+   x="687.06812"
+   y="342.25153"
    id="text18189-1-2"
-   sodipodi:linespacing="125%"><tspan
+   sodipodi:linespacing="125%"
+   transform="scale(0.89700398,1.1148223)"><tspan
      sodipodi:role="line"
      id="tspan18191-0-2"
-     x="616.237"
-     y="381.54962" /><tspan
+     x="687.06812"
+     y="342.25153" /><tspan
      sodipodi:role="line"
-     x="616.237"
-     y="395.29962"
+     x="687.06812"
+     y="356.00153"
      id="tspan8202-5">GitHub</tspan><tspan
      sodipodi:role="line"
-     x="616.237"
-     y="405.60535"
+     x="687.06812"
+     y="366.30725"
      id="tspan6808-7"
-     style="font-size:7.5px">Your organization</tspan><tspan
+     style="font-size:6.72753px">La tua organizzazione</tspan><tspan
      sodipodi:role="line"
-     x="616.237"
-     y="414.98035"
+     x="687.06812"
+     y="375.68225"
      id="tspan6878-8-6"
-     style="font-size:7.5px">Smart contracts</tspan><tspan
+     style="font-size:6.72753px">Smart contract</tspan><tspan
      sodipodi:role="line"
-     x="616.237"
-     y="424.35535"
+     x="687.06812"
+     y="385.05725"
      id="tspan18193-4-2"
-     style="font-size:7.5px" /></text>
+     style="font-size:6.72753px" /></text>
 <rect
    ry="0"
    rx="0"
@@ -1585,23 +1560,8 @@
      sodipodi:role="line"
      x="62.891602"
      y="404.75803"
-     id="tspan6808-7-5"
-     style="font-size:7.5px">IBM Samples </tspan><tspan
-     sodipodi:role="line"
-     x="62.891602"
-     y="414.13303"
-     style="font-size:7.5px"
-     id="tspan6778" /><tspan
-     sodipodi:role="line"
-     x="62.891602"
-     y="423.50803"
-     id="tspan6878-8-6-8"
-     style="font-size:7.5px" /><tspan
-     sodipodi:role="line"
-     x="62.891602"
-     y="432.88303"
      id="tspan18193-4-2-0"
-     style="font-size:7.5px" /></text>
+     style="font-size:7.5px">Esempi IBM</tspan></text>
 <g
    id="g60812-9"
    transform="translate(119.02485,388.21441)"
@@ -1709,7 +1669,7 @@
      sodipodi:role="line"
      x="235.86133"
      y="54.842865"
-     id="tspan4323">with IoT Blockchain</tspan><tspan
+     id="tspan4323">con IoT Blockchain</tspan><tspan
      sodipodi:role="line"
      x="235.86133"
      y="69.842865"
@@ -1780,15 +1740,16 @@
      sodipodi:role="line"
      x="71.955322"
      y="87.296356"
-     id="tspan44245">Watson IoT </tspan><tspan
+     id="tspan44245">Dashboard</tspan><tspan
      sodipodi:role="line"
      x="71.955322"
      y="101.04636"
-     id="tspan5792">Platform</tspan><tspan
+     id="tspan3675">Watson IoT </tspan><tspan
      sodipodi:role="line"
      x="71.955322"
      y="114.79636"
-     id="tspan9810">Dashboard</tspan></text>
+     id="tspan9810">Platform</tspan></text>
+
 
 
 
@@ -1840,17 +1801,8 @@
      sodipodi:role="line"
      x="69.512451"
      y="166.2999"
-     id="tspan8202">IoT Devices</tspan><tspan
-     sodipodi:role="line"
-     x="69.512451"
-     y="180.0499"
-     id="tspan6878-8"
-     style="font-size:7.5px;stroke:none" /><tspan
-     sodipodi:role="line"
-     x="69.512451"
-     y="193.7999"
      id="tspan18193-4"
-     style="font-size:7.5px;stroke:none" /></text>
+     style="font-size:11px;stroke:none">Dispositivi IoT</tspan></text>
 <path
    inkscape:connector-curvature="0"
    id="path8199-4-4"
@@ -1901,11 +1853,12 @@
      sodipodi:role="line"
      x="301.34351"
      y="140.62759"
-     id="tspan18193-1-8-5">Blockchain</tspan><tspan
+     id="tspan18193-1-8-5">Proxy</tspan><tspan
      sodipodi:role="line"
      x="301.34351"
      y="154.37759"
-     id="tspan5893">Proxy</tspan></text>
+     id="tspan5893">Blockchain</tspan></text>
+
 
 
 
@@ -1919,69 +1872,62 @@
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; refs/remotes/IBM-Bluemix/master
   <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-   x="284.8642"
-   y="523.30078"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.68532181px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+   x="323.54919"
+   y="460.75787"
    id="text18189-1-2-3"
-   sodipodi:linespacing="125%"><tspan
+   sodipodi:linespacing="125%"
+   transform="scale(0.8804838,1.1357392)"><tspan
      sodipodi:role="line"
      id="tspan18191-0-2-0"
-     x="284.8642"
-     y="523.30078" /><tspan
+     x="323.54919"
+     y="460.75787" /><tspan
      sodipodi:role="line"
-     x="284.8642"
-     y="537.05078"
-     id="tspan8202-5-5">Sandbox setup</tspan><tspan
-     sodipodi:role="line"
-     x="284.8642"
-     y="547.35651"
+     x="323.54919"
+     y="472.86453"
      id="tspan6808-7-4"
-     style="font-size:7.5px">Peer debug window</tspan><tspan
+     style="font-size:9.68532181px">Configurazione Sandbox</tspan><tspan
      sodipodi:role="line"
-     x="284.8642"
-     y="556.73151"
-     id="tspan6878-8-6-3"
-     style="font-size:7.5px">Chaincode debug window</tspan><tspan
+     x="323.54919"
+     y="481.93857"
+     style="font-size:6.60362864px"
+     id="tspan3721">finestra debug peer</tspan><tspan
      sodipodi:role="line"
-     x="284.8642"
-     y="566.10651"
+     x="323.54919"
+     y="490.19308"
      id="tspan18193-4-2-5"
-     style="font-size:7.5px" /></text>
+     style="font-size:6.60362864px">finestra debug chaincode</tspan></text>
 <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-   x="444.38809"
-   y="521.97601"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.27551365px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+   x="475.7601"
+   y="487.59744"
    id="text18189-1-2-3-4"
-   sodipodi:linespacing="125%"><tspan
+   sodipodi:linespacing="125%"
+   transform="scale(0.93413762,1.0705061)"><tspan
      sodipodi:role="line"
      id="tspan18191-0-2-0-6"
-     x="444.38809"
-     y="521.97601" /><tspan
+     x="475.7601"
+     y="487.59744" /><tspan
      sodipodi:role="line"
-     x="444.38809"
-     y="535.72601"
-     id="tspan8202-5-5-6">Devnet setup</tspan><tspan
+     x="475.7601"
+     y="500.44183"
+     id="tspan8202-5-5-6">Configurazione Devnet</tspan><tspan
      sodipodi:role="line"
-     x="444.38809"
-     y="546.03174"
+     x="475.7601"
+     y="510.06882"
      id="tspan6808-7-4-7"
-     style="font-size:7.5px">Hyperledger peer container</tspan><tspan
+     style="font-size:7.00603199px">Contenitore peer Hyperledger</tspan><tspan
      sodipodi:role="line"
-     x="444.38809"
-     y="555.40674"
-     style="font-size:7.5px"
-     id="tspan3696">that has a deployed </tspan><tspan
+     x="475.7601"
+     y="518.82635"
+     style="font-size:7.00603199px"
+     id="tspan3696">con un contenitore </tspan><tspan
      sodipodi:role="line"
-     x="444.38809"
-     y="564.78174"
-     id="tspan6878-8-6-3-0"
-     style="font-size:7.5px">chaincode container</tspan><tspan
-     sodipodi:role="line"
-     x="444.38809"
-     y="574.15674"
+     x="475.7601"
+     y="527.58386"
      id="tspan18193-4-2-5-7"
-     style="font-size:7.5px" /></text>
+     style="font-size:7.00603199px">chaincode distribuito</tspan></text>
 <g
    id="g3967"
    transform="matrix(1.2500001,0,0,-1.2500002,592.27454,385.39189)">
