@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-05-11"
+lastupdated: "2017-05-24"
 
 ---
 
@@ -43,6 +43,8 @@ All users are granted the auditor organization role by default. You can update t
 6. Optional: Select **Add role** to specify an additional role for the policy.
 
 See [Cloud Foundry roles](/docs/iam/users_roles.html#cfroles) for more specific information about these roles.
+
+**Note**: You can add a Cloud Foundry role using the [bluemix iam account-user-invite](https://console.ng.bluemix.net/docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_iam_account_user_invite) CLI command, but the UI must be used to assign other access or permissions.
 
 ## Infrastructure access
 

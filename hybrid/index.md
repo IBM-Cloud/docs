@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-18"
+lastupdated: "2017-05-24"
 
 ---
 
@@ -242,7 +242,7 @@ You are required to set a minimum of 12 available hours in a week for a minimum 
 
 1. Go to **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* pending &gt; Manage Availability**.
 2. Expand the **Manage Available Update Windows** section.
-3. Click **Add new** ![Add new](images/add-new.png).
+3. Click **Add new**.
 4. Set your first availability window by selecting the frequency, duration, and start time for the window.
 5. Optional: Select **Mark as preferred**, if you'd like to set your recurring availability window as a preferred time for deployments to be scheduled. Preferred windows are given priority, when possible.
 6. Click **Submit**.
@@ -257,7 +257,7 @@ You are required to set a minimum of 12 available hours in a week for a minimum 
 
 1. Go to **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* pending &gt; Manage Availability**.
 2. Expand the **Manage Unavailable Update Windows** section.
-3. Click **Add new** ![Add new](images/add-new.png).
+3. Click **Add new**.
 4. Set your unavailable window by selecting the frequency, duration, and start time for the window.
 5. Click **Submit**.
 
@@ -450,7 +450,7 @@ displayed.
 - You can search within your collection of reports and logs. The search applies to report
 names as well as text content that is contained within the reports and logs. You can also choose to
 filter your search by **Administration Events**, **DataPower Reports**, **Firewall**, and **Login Audit**.
-- When displaying a report or log, you can click the ![Download](images/icon_download.png) 
+- When displaying a report or log, you can click the ![Download](icons/icon_download.png) 
 icon to download the report.
 
 The following table shows the list of security reports that are generated for {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated. Most reports are generated on a daily basis. However, the encryption and key management events reports are generated monthly. All reports are retained for 90 days in the administration console for your retrieval. After that 90 days, the reports are available offline per request from {{site.data.keyword.Bluemix_notm}} for 9 months. In total, reports are available for retrieval for up to 1 year.
@@ -871,7 +871,7 @@ A quota represents the resource limits for the organizations in your environment
 In the Organization List section, you can view all organizations in the
 {{site.data.keyword.Bluemix_notm}} environment, and you can take actions for individual orgs by clicking on the org name.
 
-- To delete the organization, click the **Delete** icon ![Delete](images/icon_trash.svg) in the Actions column.
+- To delete the organization, click the **Delete** icon ![Delete](icons/icon_trash.svg) in the Actions column.
 - To view the quota plan and usage for an organization, click the name for the organization in the
 	list. On the **Manage Organizations** page for the org that you selected, you can view the following usage information:
 
@@ -946,7 +946,7 @@ Depending on your **Read** or **Write** access for the users' permissions, you c
 
 * Remove users. If you have **Superuser** permission or **Users** permission with **Write** access, you can remove users from the environment permanently.
 
-    1. Locate the user and click the ![Delete](images/icon_trash.svg) icon.
+    1. Locate the user and click the ![Delete](icons/icon_trash.svg) icon.
     2. Click **Remove**.
 
 * Editing permissions and organizations to which users belong requires you to have **Superuser** permission. To edit permissions for users, locate the user and click the user name. From the **Edit User** page, you can enable or disable permissions:
@@ -960,7 +960,7 @@ Depending on your **Read** or **Write** access for the users' permissions, you c
 * To add or remove a user from a specific org, you must have **Superuser** permission or **Users** permission with **Write** access.
 
     1. To add a user to an org, select the user name from the table to access the **Edit User** page. Then, use the search field to locate an org, select the org from the list, and click **Save**.
-    2. To remove a user from an org, select the user name from the table to access the **Edit User** page. Then, click ![Remove](images/icon_remove.svg) for the org from which you want to remove the user, and click **Save**.
+    2. To remove a user from an org, select the user name from the table to access the **Edit User** page. Then, click ![Remove](icons/icon_remove.svg) for the org from which you want to remove the user, and click **Save**.
     
 * To view information about the organization the user is assigned to, click the organization name to display Organization Information. You can then click the user name to return to view User Information. 
 

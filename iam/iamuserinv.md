@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-05-17"
+lastupdated: "2017-05-24"
 
 ---
 
@@ -26,3 +26,5 @@ To invite users or manage user invitations in your account, complete the followi
 4. Add one or more of the access options that you manage. You must assign at least one access option and configure the settings for the user in each access option that you assign. For any additional access options that you don't add and configure, the default value of *no access* is assigned. You might see one or all of the following access options, depending on the options that you are authorized to manage: **Identity and access enabled services**, **Cloud Foundry access**, **Infrastructure access**. See [Assigning user access](/docs/iam/assignaccess.html) for more information.
 
 If you determine that a user does not need access, you can cancel an invitation for any users that are shown in a **Processing** or **Pending** state in the **Status** column. If an invited user did not receive an invitation, you can resend the invitation to any user in a **Pending** state.
+
+If you want to invite users using the CLI, see the [bluemix iam account-user-invite](https://console.ng.bluemix.net/docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_iam_account_user_invite) command.
