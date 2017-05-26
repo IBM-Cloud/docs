@@ -23,7 +23,7 @@ Puoi utilizzare C# per creare e personalizzare le applicazioni che interagiscono
 ## Scaricare le risorse e il client C#
 {: #csharp_client_download}
 
-Per accedere agli esempi e alle librerie client C# per {{site.data.keyword.iot_short_notm}}, vai al repository [iot-csharp ![Icona link esterno](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-csharp){: new_window} in GitHub e completa le istruzioni di installazione.
+Per accedere agli esempi e alle librerie client C# per {{site.data.keyword.iot_short_notm}}, vai al repository [iot-csharp ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-watson-iot/iot-csharp){: new_window} in GitHub e completa le istruzioni di installazione.
 
 
 ## Constructor
