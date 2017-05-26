@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-04-06"
+lastupdated: "2017-05-25"
 
 ---
 
@@ -13,8 +13,8 @@ lastupdated: "2017-04-06"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Analyzing metrics in Grafana
-{:#analyzing_metrics_grafana}
+# Navigating to the Grafana dashboard
+{:#navigating_grafana}
 
 In {{site.data.keyword.Bluemix}}, you can use Grafana, an open source analytics and visualization platform, to monitor, search, analyze, and visualize your metrics in a variety of graphs, for example charts and tables. Use Grafana to perform advanced analytical tasks.
 {:shortdesc}
@@ -23,22 +23,24 @@ You can launch Grafana in any of the following ways:
 
 * From {{site.data.keyword.Bluemix_notm}}
 
-    You can launch to your specific Docker container metrics in Grafana, in context to that specific container. 
+    You can launch to your specific Docker container metrics in Grafana, in context to that specific container. This feature applies only to containers that are deployed in the {{site.data.keyword.Bluemix_notm}}-managed Cloud infrastructure. 
     
     For more information, see [Navigating to the Grafana dashboard from the {{site.data.keyword.Bluemix_notm}} 
-    dashboard](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_bluemix).
+    dashboard](navigating_grafana.html#launch_grafana_from_bluemix).
 
 * From a direct browser link
 
     You can launch Grafana so the data that you see aggregates logs from services within a provided {{site.data.keyword.Bluemix_notm}} space.
     
-    For more information, see [Navigating to the Kibana dashboard from a web browser](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_browser).
+    For more information, see [Navigating to the Grafana dashboard from a web browser](navigating_grafana.html#launch_grafana_from_browser).
     
 For more information about Grafana, see the [Grafana User Guide ![External link icon](../../../icons/launch-glyph.svg "External link icon")](http://docs.grafana.org/guides/getting_started/){: new_window}.
 
 
 ##  Navigating to the Grafana dashboard from the Bluemix dashboard
 {: #launch_grafana_from_bluemix}
+
+**Note:** This feature applies only to containers that are deployed in the {{site.data.keyword.Bluemix_notm}}-managed Cloud infrastructure. 
 
 The query that is used to filter the data that is displayed in Grafana retrieves data for the {{site.data.keyword.Bluemix_notm}} container from where you launch Kibana. 
 
@@ -58,8 +60,7 @@ The query that is used to filter the data that is displayed in Grafana retrieves
 
 Complete the following steps to launch Grafana from a browser:
 
-1. Open [https://logmet.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>](https://logmet.{DomainName}) to log in to the Grafana user interface.
-
+1. Open [https://metrics.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>](https://metrics.{DomainName}) to log in to the Grafana user interface.
 2. Select **Grafana**.
      
 

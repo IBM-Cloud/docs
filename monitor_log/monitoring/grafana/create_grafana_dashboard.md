@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-04-06"
+lastupdated: "2017-05-26"
 
 ---
 
@@ -14,14 +14,14 @@ lastupdated: "2017-04-06"
 {:screen: .screen}
 
 # Creating a Grafana dashboard
-{:#monitoring_grafana}
+{:#create_grafana_dashboard}
 
 Create a custom Grafana dashboard to display metrics for all of the containers that run in a space of your {{site.data.keyword.Bluemix}} organization.
 {:shortdesc}
 
 Complete the following steps to create a Grafana dashboard:
 
-1. Launch Grafana from a web browser. For more information, see [Navigating to the Grafana dashboard from a web browser](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_browser).
+1. Launch Grafana from a web browser. For more information, see [Navigating to the Grafana dashboard from a web browser](navigating_grafana.html#launch_grafana_from_browser).
 
 2. Save the default dashboard.
 
@@ -46,8 +46,8 @@ Complete the following steps to create a Grafana dashboard:
      
 6. Add a visualization.
 
-    * To add a CPU idle visualization, see [Adding a CPU idle visualization](monitoring_grafana.html#grafana_add_cpu).
-    * To add a memory used visualization, see [Adding a memory used visualization](monitoring_grafana.html#grafana_add_mem).
+    * To add a CPU idle visualization, see [Adding a CPU idle visualization](create_grafana_dashboard.html#grafana_add_cpu).
+    * To add a memory used visualization, see [Adding a memory used visualization](create_grafana_dashboard.html#grafana_add_mem).
         
 7. Save the custom dashboard.
 
@@ -73,7 +73,7 @@ To add a CPU idle graph that includes data from all of the containers in your sp
     
 5. In the Metrics tab, construct a query to collect data for the graph. 
 
-    For example, when you work with containers, the query format includes the space ID, a container group ID, and a single container instance ID in the following format: `space_ID.group_ID.instance_ID.metric`
+    For example, when you work with containers that are deployed in a {{site.data.keyword.Bluemix_notm}}-managed Cloud infrastructure, the query format includes the space ID, a container group ID, and a single container instance ID in the following format: `space_ID.group_ID.instance_ID.metric`
         
     1. In the A row, click **Select metric**. Then, select your space ID.
     2. Click **Select metric** and select the asterisk (\*).
@@ -111,7 +111,7 @@ Complete the following steps to add a memory used visualization:
     
 3. In the Metrics tab, construct a query to collect data for the graph. 
 
-    For example, when you work with containers, the query format includes the space ID, a container group ID, and a single container instance ID in the following format: space_ID.group_ID.instance_ID.metric
+    For example, when you work with containers that are deployed in a {{site.data.keyword.Bluemix_notm}}-managed Cloud infrastructure, the query format includes the space ID, a container group ID, and a single container instance ID in the following format: space_ID.group_ID.instance_ID.metric
         
     1. In the A row, click **Select metric**. Then, select your space ID.
     2. Click **Select metric** and select the asterisk (\*).
