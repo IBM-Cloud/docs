@@ -1,0 +1,33 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="cloud-automation-manager" audience="service" href="/docs/services/CloudAutomationManager/index.html"}
+Cloud Automation Manager
+
+    {: .navgroup id="learn"}
+    index.md
+    cam_overview.md
+
+    {: .topicgroup}
+    Related links
+        [IBM Cloud Schematics](../schematics/index.html#gettingstarted)
+        [Infrastructure as code: Terraform](https://www.terraform.io)
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [REST API](https://cam-api-explorer.mybluemix.net/)
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    cam_managing_connections.md
+        cam_creating_ibm_cloud_connection.md
+        cam_creating_aws_connection.md
+        cam_creating_vsphere_connection.md
+    cam_deploying.md
+    cam_instance_details.md
+    cam_delete_instance.md
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    cam_ts.md
+    {: .navgroup-end}
