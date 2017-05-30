@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-05-30"
+lastupdated: "2017-05-16"
 
 ---
 
@@ -12,55 +12,54 @@ lastupdated: "2017-05-30"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Getting started with {{site.data.keyword.bpfull_notm}} (Beta)
+# {{site.data.keyword.bpfull_notm}} (Beta) 入门
 {: #gettingstarted}
 
-{{site.data.keyword.bplong}} is an automation tool that you can use to define and deploy your cloud infrastructure as a single unit, and reuse those cloud resource definitions across any number of environments.
+{{site.data.keyword.bplong}} 是一种自动化工具，可用于定义云基础架构并将其作为单个单元进行部署，然后在任意数量的环境中复用这些云资源定义。
 {:shortdesc}
 
-{{site.data.keyword.bpshort}} uses Terraform, by HashiCorp, to codify infrastructure. Components of your infrastructure are broken down into individual resources, which can be anything from physical hardware to user accounts. By abstracting high-level and low-level resources, you can treat your infrastructure like you treat your software, as code. 
+{{site.data.keyword.bpshort}} 使用 HashiCorp 公司的 Terraform 来对基础架构编码。基础架构的组件可分解成从物理硬件到用户帐户等各种不同的资源。通过提取高级别和低级别资源，可以像处理软件一样，将基础架构作为代码进行处理。 
 
-When you work with {{site.data.keyword.bpshort}}, you write configurations for your environment in declarative syntax. You state how you want to your environment to look, such as having 10 {{site.data.keyword.virtualmachinesshort}} in production. The service compares your configuration to what Terraform previously created and adds or removes resources as necessary.
+使用 {{site.data.keyword.bpshort}} 时，可采用声明式语法为环境编写配置。您可声明所需的环境外观，例如在生产中具有 10 个{{site.data.keyword.virtualmachinesshort}}。此服务会将您的配置与 Terraform 先前创建的内容进行比较，然后根据需要添加或除去资源。
 
-{{site.data.keyword.bpshort}} is a collaborative DevOps tool that provides a single source of truth for infrastructure. You can store environment configurations in source control, giving your team the ability to conduct code reviews, version their infrastructure, track the changes through commit history, and revert changes more easily.
+{{site.data.keyword.bpshort}} 是一种协作式 DevOps 工具，为基础架构提供了单一的真实源。可以将环境配置存储在源代码控制中，这将让团队有能力执行代码复审，控制基础架构的版本，通过落实历史记录来跟踪更改，以及更轻松地还原更改。
 
-{{site.data.keyword.bpshort}} is automatically available to all users in your {{site.data.keyword.Bluemix_notm}} account.
+{{site.data.keyword.bpshort}} 自动可用于 {{site.data.keyword.Bluemix_notm}} 帐户中的所有用户。
 
 
-## Creating a configuration
+## 创建配置
 {: #configuration}
 
-When you create a configuration, you are codifying the cloud resources that make up your environment.
+创建配置时，要对构成环境的云资源进行编码。
 {:shortdesc}
 
 
-If you want to try out a sample configuration with {{site.data.keyword.bpshort}}, complete the following steps. In the sample, you can provision an SSH key to use in {{site.data.keyword.BluSoftlayer_notm}}. 
+如果要试用 {{site.data.keyword.bpshort}} 的样本配置，请完成以下步骤。在样本中，可以供应 SSH 密钥以在 {{site.data.keyword.BluSoftlayer}} 中使用。 
 
-**Note:** The sample configuration requires a {{site.data.keyword.BluSoftlayer_notm}} account. See the [linking your {{site.data.keyword.Bluemix_notm}} and SoftLayer accounts doc](../../pricing/linking_accounts.html#unifyingaccounts) if you have an existing account, or you can [sign up for an account](https://console.ng.bluemix.net/docs/pricing/index.html#pay-accounts).
+**注**：样本配置需要 {{site.data.keyword.BluSoftlayer}} 帐户。请参阅[链接 {{site.data.keyword.Bluemix_notm}} 和 SoftLayer 帐户文档](../../pricing/linking_accounts.html#unifyingaccounts)（如果您有现有帐户），或者可以[注册帐户](https://console.ng.bluemix.net/docs/pricing/index.html#pay-accounts)。
 
-1. Generate an SSH key pair locally.
+1. 在本地生成 SSH 密钥对。
   ```
   ssh-keygen -t rsa
   ```
   {:codeblock}
 
-2. Fork the sample configuration in <a href="https://github.com/IBM-Bluemix/tf-bluemix-ssh-key" target="_blank">GitHub <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>. 
+2. 在 <a href="https://github.com/IBM-Bluemix/tf-bluemix-ssh-key" target="_blank">GitHub <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a> 中派生样本配置。 
 
-  The following examples show different types of blocks that are in the sample configuration. You can see the full configuration in the `main.tf` file of the GitHub repository.
+  以下示例显示了样本配置中不同类型的块。可以在 GitHub 存储库的 `main.tf` 文件中查看完整配置。
   
-  * The provider block sets up the {{site.data.keyword.IBM_notm}} Cloud provider and login credentials.
+  * provider 块用于设置 {{site.data.keyword.IBM_notm}} Cloud 提供者和登录凭证。
 
     ```
     provider "ibmcloud" {
-      bluemix_api_key = "${var.bxapikey}"
-      softlayer_username = "${var.slusername}"
-      softlayer_api_key = "${var.slapikey}"
+      ibmid                    = "${var.ibmid}"
+      ibmid_password           = "${var.ibmidpw}"
       softlayer_account_number = "${var.slaccountnum}"
     }
     ```
     {:screen}
   
-  * The resource block defines a component of your infrastructure, which in this sample is an SSH key.
+  * resource 块用于定义基础架构的组件，在此样本中为 SSH 密钥。
   
     ```
     resource "ibmcloud_infra_ssh_key" "ssh_key" {
@@ -71,16 +70,17 @@ If you want to try out a sample configuration with {{site.data.keyword.bpshort}}
     ```
     {:screen}
   
-  * The variable block defines your variables, which you can enter in the {{site.data.keyword.bpshort}} GUI for this sample.
+  * variable 块用于定义变量，针对此样本，您可以在 {{site.data.keyword.bpshort}} GUI 中输入变量。
   
     ```
-    variable bxapikey {
-      description = "Your Bluemix API key."
+    variable ibmid {
+      type = "string"
+      description = "Your IBM-ID."
     }
     ```
     {:screen}
   
-  * The output block defines what is displayed in the Terraform output after the configuration is used to create your environment and the resource (SSH key) is created.
+  * output 块用于定义在使用配置来创建环境以及创建资源（SSH 密钥）后，Terraform 输出中显示的内容。
   
     ```
     output "ssh_key_id" {
@@ -89,75 +89,70 @@ If you want to try out a sample configuration with {{site.data.keyword.bpshort}}
     ```
     {:screen}
   
-You can now create an environment from your configuration. 
+现在，可以通过您的配置来创建环境。 
 
 {:codeblock}
 
-## Creating an environment
+## 创建环境
 {: #environment}
 
-When you create an environment, you point the service to your configuration so that the service can extract your latest code changes. 
+创建环境时，请将此服务指向配置，以便服务可以提取最新的代码更改。
 {:shortdesc}
 
-Using the sample configuration, complete the following steps to create an environment.
+使用样本配置，完成以下步骤来创建环境。
 
-1. In the menu, select **Services** and then **{{site.data.keyword.bpshort}}**. You are taken to the {{site.data.keyword.bpshort}} dashboard.
+1. 在菜单中，选择**服务**，然后选择 **{{site.data.keyword.bpshort}}**。这将转至 {{site.data.keyword.bpshort}} 仪表板。
 
-2. In the left navigation menu, select **Environments** and click **Create Environment** to describe properties about your configuration. Creating an environment defines how {{site.data.keyword.bpshort}} provisions and updates cloud resources, but does not create resources yet.
+2. 在左侧导航菜单中，选择**环境**，然后单击**创建环境**来描述有关配置的属性。创建环境将定义 {{site.data.keyword.bpshort}} 如何供应和更新云资源，但此时还不会创建资源。
 
-3. Enter details about your environment. The sample configuration requires the values that are listed in the following table.
+3. 输入有关环境的详细信息。样本配置需要下表中列出的值。
 
-  <table summary="The values that are required so that you can use the sample configuration as the source of your environment.">
-  <caption>Table 1. The values that are required so that you can use the sample configuration as the source of your environment.
-  </caption>
+  <table summary="为了能将样本配置用作环境的源而必需的值。">
+  <caption>表 1. 为了能将样本配置用作环境的源而必需的值。</caption>
   <thead>
-  <th colspan="1">Setting</th>
-  <th colspan="1">Description</th>
+  <th colspan="1">设置</th>
+  <th colspan="1">描述</th>
   </thead>
   <tbody>
   <tr>
-  <td>Source control URL</td>
-  <td>Enter the GitHub URL where you forked the sample configuration.</td>
+  <td>源代码控制 URL</td>
+  <td>输入在其中派生了样本配置的 GitHub URL。</td>
   </tr>
   <tr>
-  <td>Name</td>
-  <td>Enter a unique name to assign to your environment.</td>
+  <td>名称</td>
+  <td>输入要为环境指定的唯一名称。</td>
   </tr>
-  <td>Terraform version</td>
-  <td>Enter the version of Terraform to ensure that a compatible version of Terraform is run against your environment. For the sample configuration, use version <code>0.9.1</code>.</td>
+  <td>Terraform 版本</td>
+  <td>输入 Terraform 的版本，以确保对环境运行的是兼容版本的 Terraform。对于样本配置，请使用版本 <code>0.9.1</code>。</td>
   </tr>
   <tr>
-  <td>Variables</td>
-  <td>You can define variables in the service or override the environment variables that are in your <code>.tf</code> files. You can mask sensitive variables when you click the lock icon. Masking variables prevents other users from seeing the hidden values in the environment details page. 
-  <p>
-  <p>Add the following variables and values to work with the sample configuration:
-  <ul>
-  <li><code>bxapikey</code> - Enter your {{site.data.keyword.Bluemix_notm}} API key. If you do not have an existing API key, you can generate the value by running <code>bluemix iam api-key-create NAME</code>.
-  <li><code>slusername</code> - Enter your {{site.data.keyword.BluSoftlayer_notm}} user name.
-  <li><code>slapikey</code> - Enter your {{site.data.keyword.BluSoftlayer_notm}} API key. You can retrieve the value from the [{{site.data.keyword.slportal}}](https://control.bluemix.net), in the <strong>API Access Information</strong> section.
-  <li><code>slaccountnum</code> - Enter your {{site.data.keyword.BluSoftlayer_notm}} account number. This value is only required if you have multiple accounts that are associated with your ID.
-  <li><code>datacenter</code> - Enter the data center that you want to deploy the SSH key resource to. See the <a href="https://github.com/IBM-Bluemix/tf-bluemix-ssh-key/blob/master/README.md" target="_blank">readme file <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> for a full list of available values.</li>
-  <li><code>public_key</code> - Enter the public SSH key. To copy the public key to your clipboard, you can run the <code>pbcopy < ~/.ssh/id_rsa.pub</code> command.
-  <li><code>key_label</code> - Identify the key with a unique name.
-  <li><code>key_note</code> - Optional: Add descriptive text about the SSH key.</ul>
-  </td>
-  </tr></tbody></table>
+  <td>变量</td>
+  <td>可以在服务中定义变量，或覆盖 <code>.tf</code> 文件中的环境变量。您可以通过单击“锁定”图标来掩盖敏感变量。掩盖变量可阻止其他用户在“环境详细信息”页面上看到隐藏值。<p>
+  <p>添加以下变量和值以使用样本配置：<ul>
+  <li><code>ibmid</code> - 输入您的完整 {{site.data.keyword.ibmid}}作为值。</li>
+  <li><code>ibmidpw</code> - 输入与您的 {{site.data.keyword.ibmid}}关联的密码，然后单击“锁定”图标以掩盖此值。</li>
+  <li><code>slaccountnum</code> - 输入您的 {{site.data.keyword.BluSoftlayer}} 帐号。
+   <li><code>datacenter</code> - 输入要将 SSH 密钥资源部署到的数据中心。有关可用值的完整列表，请参阅<a href="https://github.com/IBM-Bluemix/tf-bluemix-ssh-key/blob/master/README.md" target="_blank">自述文件 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a>。</li> 
+   <li><code>public_key</code> - 输入公共 SSH 密钥。要将公用密钥复制到剪贴板，可以运行 <code>pbcopy < ~/.ssh/id_rsa.pub</code> 命令。
+   <li><code>key_label</code> - 使用唯一名称标识密钥。
+   <li><code>key_note</code> - 可选：添加关于 SSH 密钥的描述性文本。</ul></td>
+   </tr></tbody></table>
 
-4. When you have finished filling out the environment's details, click **Create**. The newly created environment is displayed. 
-5. To see a preview of what resources are provisioned or removed when you deploy your environment, click **Plan**. 
-6. View the plan log to inspect the output for any errors. 
-7. When you are ready to deploy your environment, click **Apply**. You can monitor the apply log to see whether the key deployed successfully. A successful deployment shows the following line towards the end of the output:
+4. 填写环境详细信息完成后，单击**创建**。这将显示新创建的环境。 
+5. 要查看在部署环境时会供应或除去的资源的预览，请单击**计划**。 
+6. 查看计划日志以检查输出中是否有任何错误。 
+7. 准备好部署环境时，单击**应用**。可以监视应用日志以查看密钥是否已成功部署。如果成功部署，会在输出末尾附近显示以下行：
 
   ```
   Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
   ```
   {: screen}
 
-  You can also view the SSH key in the [{{site.data.keyword.slportal}}](https://control.bluemix.net/devices/sshkeys).
-8. Optional: To remove the SSH key and remove the environment from {{site.data.keyword.Bluemix_notm}}, select **Destroy resources** from the actions menu.
+  您还可以在 [{{site.data.keyword.slportal}}](https://control.bluemix.net/devices/sshkeys) 中查看 SSH 密钥。
+8. 可选：要从 {{site.data.keyword.Bluemix_notm}} 中除去 SSH 密钥并除去环境，请从“操作”菜单中选择**销毁资源**。
 
-### What's next
+### 后续工作
 {: #next}
 
-* To find out more about programmatically deploying your environments, [check out the CLI or API](schematics_deploying.html).
-* To create your own configurations from scratch, check out the <a href="https://ibm-bluemix.github.io/tf-ibm-docs/">{{site.data.keyword.IBM_notm}} Cloud resources <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>. {{site.data.keyword.IBM_notm}} Cloud resources are available as a Terraform plug-in provider.
+* 要了解有关以编程方式部署环境的更多信息，请[检查 CLI 或 API](schematics_deploying.html)。
+* 要从头开始创建自己的配置，请检查 <a href="https://ibm-bluemix.github.io/tf-ibm-docs/">{{site.data.keyword.IBM_notm}} Cloud 资源 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a>。{{site.data.keyword.IBM_notm}} Cloud 资源作为 Terraform 插件提供程序提供。

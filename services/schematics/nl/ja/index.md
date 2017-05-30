@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-05-30"
+lastupdated: "2017-05-16"
 
 ---
 
@@ -12,55 +12,54 @@ lastupdated: "2017-05-30"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Getting started with {{site.data.keyword.bpfull_notm}} (Beta)
+# {{site.data.keyword.bpfull_notm}} (ベータ) 概説
 {: #gettingstarted}
 
-{{site.data.keyword.bplong}} is an automation tool that you can use to define and deploy your cloud infrastructure as a single unit, and reuse those cloud resource definitions across any number of environments.
+{{site.data.keyword.bplong}} は、クラウドのインフラストラクチャーを単一ユニットとして定義してデプロイすることができる自動化ツールです。これを使用すると、任意の数の環境でクラウドのリソース定義を再利用できます。
 {:shortdesc}
 
-{{site.data.keyword.bpshort}} uses Terraform, by HashiCorp, to codify infrastructure. Components of your infrastructure are broken down into individual resources, which can be anything from physical hardware to user accounts. By abstracting high-level and low-level resources, you can treat your infrastructure like you treat your software, as code. 
+{{site.data.keyword.bpshort}} は (HashiCorp の) Terraform を使用してインフラストラクチャーをコード化します。インフラストラクチャーのコンポーネントは個々のリソース (物理ハードウェアからユーザー・アカウントに至るあらゆるもの) に細分化されます。高位のリソースと低位のリソースを抽象化することによって、ソフトウェアを扱うかのようにインフラストラクチャーをコードとして扱うことができます。 
 
-When you work with {{site.data.keyword.bpshort}}, you write configurations for your environment in declarative syntax. You state how you want to your environment to look, such as having 10 {{site.data.keyword.virtualmachinesshort}} in production. The service compares your configuration to what Terraform previously created and adds or removes resources as necessary.
+{{site.data.keyword.bpshort}} を使用する場合は、環境の構成を宣言構文で記述します。実動環境に 10 の {{site.data.keyword.virtualmachinesshort}} を含めるなど、環境の概要を記述します。このサービスは、その構成と Terraform で以前作成した内容を比較して、必要に応じてリソースを追加したり削除したりします。
 
-{{site.data.keyword.bpshort}} is a collaborative DevOps tool that provides a single source of truth for infrastructure. You can store environment configurations in source control, giving your team the ability to conduct code reviews, version their infrastructure, track the changes through commit history, and revert changes more easily.
+{{site.data.keyword.bpshort}} は、インフラストラクチャーについての信頼できる唯一のソースを提供する DevOps コラボレーション・ツールです。環境構成をソース・コントロールに格納して、コード・レビュー、インフラストラクチャーのバージョン管理、コミット履歴による変更の追跡、変更の取り消しをチームで簡単に行うことができます。
 
-{{site.data.keyword.bpshort}} is automatically available to all users in your {{site.data.keyword.Bluemix_notm}} account.
+{{site.data.keyword.bpshort}} は、{{site.data.keyword.Bluemix_notm}} アカウント内のすべてのユーザーに自動的に提供されます。
 
 
-## Creating a configuration
+## 構成の作成
 {: #configuration}
 
-When you create a configuration, you are codifying the cloud resources that make up your environment.
+構成を作成するときには、環境を構成するクラウド・リソースをコード化します。
 {:shortdesc}
 
 
-If you want to try out a sample configuration with {{site.data.keyword.bpshort}}, complete the following steps. In the sample, you can provision an SSH key to use in {{site.data.keyword.BluSoftlayer_notm}}. 
+{{site.data.keyword.bpshort}} でサンプル構成を試したい場合は、次の手順を実行してください。このサンプルでは、{{site.data.keyword.BluSoftlayer}} で使用する SSH 鍵をプロビジョンできます。 
 
-**Note:** The sample configuration requires a {{site.data.keyword.BluSoftlayer_notm}} account. See the [linking your {{site.data.keyword.Bluemix_notm}} and SoftLayer accounts doc](../../pricing/linking_accounts.html#unifyingaccounts) if you have an existing account, or you can [sign up for an account](https://console.ng.bluemix.net/docs/pricing/index.html#pay-accounts).
+**注:** このサンプル構成には、{{site.data.keyword.BluSoftlayer}} アカウントが必要です。アカウントを既に持っている場合には [{{site.data.keyword.Bluemix_notm}} アカウントと SoftLayer アカウントのリンク方法に関する資料](../../pricing/linking_accounts.html#unifyingaccounts)を参照してください。そうでない場合は、[アカウントを登録する](https://console.ng.bluemix.net/docs/pricing/index.html#pay-accounts)ことができます。
 
-1. Generate an SSH key pair locally.
+1. SSH 鍵ペアをローカルに生成します。
   ```
   ssh-keygen -t rsa
   ```
   {:codeblock}
 
-2. Fork the sample configuration in <a href="https://github.com/IBM-Bluemix/tf-bluemix-ssh-key" target="_blank">GitHub <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>. 
+2. <a href="https://github.com/IBM-Bluemix/tf-bluemix-ssh-key" target="_blank">GitHub <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a> でサンプル構成をフォークします。 
 
-  The following examples show different types of blocks that are in the sample configuration. You can see the full configuration in the `main.tf` file of the GitHub repository.
+  このサンプル構成に含まれているさまざまなタイプのブロックを例として次に示します。完全な構成は、GitHub リポジトリーの `main.tf` ファイルで確認できます。
   
-  * The provider block sets up the {{site.data.keyword.IBM_notm}} Cloud provider and login credentials.
+  * provider ブロックでは、{{site.data.keyword.IBM_notm}} Cloud プロバイダーとログインの資格情報をセットアップします。
 
     ```
     provider "ibmcloud" {
-      bluemix_api_key = "${var.bxapikey}"
-      softlayer_username = "${var.slusername}"
-      softlayer_api_key = "${var.slapikey}"
+      ibmid                    = "${var.ibmid}"
+      ibmid_password           = "${var.ibmidpw}"
       softlayer_account_number = "${var.slaccountnum}"
     }
     ```
     {:screen}
   
-  * The resource block defines a component of your infrastructure, which in this sample is an SSH key.
+  * resource ブロックでは、インフラストラクチャーのコンポーネントを定義します。このサンプルの場合には SSH 鍵です。
   
     ```
     resource "ibmcloud_infra_ssh_key" "ssh_key" {
@@ -71,16 +70,17 @@ If you want to try out a sample configuration with {{site.data.keyword.bpshort}}
     ```
     {:screen}
   
-  * The variable block defines your variables, which you can enter in the {{site.data.keyword.bpshort}} GUI for this sample.
+  * variable ブロックでは変数を定義します。このサンプルの場合、変数は {{site.data.keyword.bpshort}} GUI で入力できます。
   
     ```
-    variable bxapikey {
-      description = "Your Bluemix API key."
+    variable ibmid {
+      type = "string"
+      description = "Your IBM-ID."
     }
     ```
     {:screen}
   
-  * The output block defines what is displayed in the Terraform output after the configuration is used to create your environment and the resource (SSH key) is created.
+  * output ブロックでは、構成を使用して環境が作成され、リソース (SSH 鍵) が作成された後に Terraform 出力に表示される内容を定義します。
   
     ```
     output "ssh_key_id" {
@@ -89,75 +89,73 @@ If you want to try out a sample configuration with {{site.data.keyword.bpshort}}
     ```
     {:screen}
   
-You can now create an environment from your configuration. 
+これで、構成から環境を作成できます。 
 
 {:codeblock}
 
-## Creating an environment
+## 環境の作成
 {: #environment}
 
-When you create an environment, you point the service to your configuration so that the service can extract your latest code changes. 
+環境を作成するときには、サービスに構成を参照させ、サービスが最新のコード変更を抽出できるようにします。
 {:shortdesc}
 
-Using the sample configuration, complete the following steps to create an environment.
+サンプル構成を使用して、以下の手順を実行して環境を作成します。
 
-1. In the menu, select **Services** and then **{{site.data.keyword.bpshort}}**. You are taken to the {{site.data.keyword.bpshort}} dashboard.
+1. メニューで、「**サービス**」、「**{{site.data.keyword.bpshort}}**」の順に選択します。{{site.data.keyword.bpshort}} ダッシュボードが表示されます。
 
-2. In the left navigation menu, select **Environments** and click **Create Environment** to describe properties about your configuration. Creating an environment defines how {{site.data.keyword.bpshort}} provisions and updates cloud resources, but does not create resources yet.
+2. 左側のナビゲーション・メニューで、「**環境**」を選択し、「**環境の作成 (Create Environment)**」をクリックして構成に関するプロパティーを記述します。環境を作成するということは、{{site.data.keyword.bpshort}} によるクラウド・リソースのプロビジョン方法と更新方法を定義することです。リソースはまだ作成されません。
 
-3. Enter details about your environment. The sample configuration requires the values that are listed in the following table.
+3. 環境の詳細を入力します。このサンプル構成には、以下の表にリストする値が必要です。
 
-  <table summary="The values that are required so that you can use the sample configuration as the source of your environment.">
-  <caption>Table 1. The values that are required so that you can use the sample configuration as the source of your environment.
+  <table summary="サンプル構成を環境ソースとして使用するために必要な値。">
+  <caption>表 1. サンプル構成を環境ソースとして使用するために必要な値。
   </caption>
   <thead>
-  <th colspan="1">Setting</th>
-  <th colspan="1">Description</th>
+  <th colspan="1">設定</th>
+  <th colspan="1">説明</th>
   </thead>
   <tbody>
   <tr>
-  <td>Source control URL</td>
-  <td>Enter the GitHub URL where you forked the sample configuration.</td>
+  <td>ソース・コントロール URL</td>
+  <td>サンプル構成のフォーク操作を行った GitHub の URL を入力します。</td>
   </tr>
   <tr>
-  <td>Name</td>
-  <td>Enter a unique name to assign to your environment.</td>
+  <td>名前</td>
+  <td>環境に割り当てる固有の名前を入力します。</td>
   </tr>
-  <td>Terraform version</td>
-  <td>Enter the version of Terraform to ensure that a compatible version of Terraform is run against your environment. For the sample configuration, use version <code>0.9.1</code>.</td>
+  <td>Terraform バージョン</td>
+  <td>互換性のある Terraform バージョンが環境に対して実行されるようにするため、Terraform のバージョンを入力します。このサンプル構成の場合は、バージョン <code>0.9.1</code> を使用してください。</td>
   </tr>
   <tr>
-  <td>Variables</td>
-  <td>You can define variables in the service or override the environment variables that are in your <code>.tf</code> files. You can mask sensitive variables when you click the lock icon. Masking variables prevents other users from seeing the hidden values in the environment details page. 
+  <td>変数</td>
+  <td>サービスで変数を定義することも、<code>.tf</code> ファイルにある環境変数をオーバーライドすることもできます。ロック・アイコンをクリックすると、機密性の高い変数をマスクできます。変数をマスクした場合、隠された値は環境の詳細ページで他のユーザーに表示されなくなります。
   <p>
-  <p>Add the following variables and values to work with the sample configuration:
+  <p>サンプル構成を使用するためには、次の変数と値を追加します。
   <ul>
-  <li><code>bxapikey</code> - Enter your {{site.data.keyword.Bluemix_notm}} API key. If you do not have an existing API key, you can generate the value by running <code>bluemix iam api-key-create NAME</code>.
-  <li><code>slusername</code> - Enter your {{site.data.keyword.BluSoftlayer_notm}} user name.
-  <li><code>slapikey</code> - Enter your {{site.data.keyword.BluSoftlayer_notm}} API key. You can retrieve the value from the [{{site.data.keyword.slportal}}](https://control.bluemix.net), in the <strong>API Access Information</strong> section.
-  <li><code>slaccountnum</code> - Enter your {{site.data.keyword.BluSoftlayer_notm}} account number. This value is only required if you have multiple accounts that are associated with your ID.
-  <li><code>datacenter</code> - Enter the data center that you want to deploy the SSH key resource to. See the <a href="https://github.com/IBM-Bluemix/tf-bluemix-ssh-key/blob/master/README.md" target="_blank">readme file <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> for a full list of available values.</li>
-  <li><code>public_key</code> - Enter the public SSH key. To copy the public key to your clipboard, you can run the <code>pbcopy < ~/.ssh/id_rsa.pub</code> command.
-  <li><code>key_label</code> - Identify the key with a unique name.
-  <li><code>key_note</code> - Optional: Add descriptive text about the SSH key.</ul>
-  </td>
-  </tr></tbody></table>
+  <li><code>ibmid</code> - 完全な {{site.data.keyword.ibmid}} を値として入力します。</li>
+  <li><code>ibmidpw</code> - {{site.data.keyword.ibmid}} に関連付けられているパスワードを入力し、ロック・アイコンをクリックして値をマスクします。</li>
+  <li><code>slaccountnum</code> - {{site.data.keyword.BluSoftlayer}} アカウント番号を入力します。
+   <li><code>datacenter</code> - SSH 鍵リソースのデプロイ先のデータ・センターを入力します。使用可能なすべての値のリストについては、<a href="https://github.com/IBM-Bluemix/tf-bluemix-ssh-key/blob/master/README.md" target="_blank">readme ファイル <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a> を参照してください。</li> 
+   <li><code>public_key</code> - 公開 SSH 鍵を入力します。公開鍵をクリップボードにコピーするには、<code>pbcopy < ~/.ssh/id_rsa.pub</code> コマンドを実行します。
+   <li><code>key_label</code> - 固有の名前を使用して鍵を指定します。
+   <li><code>key_note</code> - オプション: SSH 鍵に関するテキスト説明を追加します。</ul></td>
+   </tr></tbody></table>
 
-4. When you have finished filling out the environment's details, click **Create**. The newly created environment is displayed. 
-5. To see a preview of what resources are provisioned or removed when you deploy your environment, click **Plan**. 
-6. View the plan log to inspect the output for any errors. 
-7. When you are ready to deploy your environment, click **Apply**. You can monitor the apply log to see whether the key deployed successfully. A successful deployment shows the following line towards the end of the output:
+4. 環境の詳細を入力し終えたら、「**作成**」をクリックします。新たに作成された環境が表示されます。 
+5. 環境のデプロイ時にプロビジョンまたは削除されるリソースをプレビューするには、「**プラン**」をクリックします。 
+6. プランのログを表示し、出力にエラーがないか確認します。 
+7. 環境をデプロイする準備が整ったら、「**適用**」をクリックします。適用ログをモニターし、鍵が正常にデプロイされたかどうか確認できます。デプロイが正常に行われた場合は、出力の最後のあたりに次の行が表示されます。
 
   ```
   Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
   ```
   {: screen}
 
-  You can also view the SSH key in the [{{site.data.keyword.slportal}}](https://control.bluemix.net/devices/sshkeys).
-8. Optional: To remove the SSH key and remove the environment from {{site.data.keyword.Bluemix_notm}}, select **Destroy resources** from the actions menu.
+  また、SSH 鍵を [{{site.data.keyword.slportal}}](https://control.bluemix.net/devices/sshkeys) で確認することもできます。
+8. オプション: SSH 鍵を削除し、環境も {{site.data.keyword.Bluemix_notm}} から削除する場合は、アクション・メニューから「**リソースの破棄 (Destroy resources)**」を選択します。
 
-### What's next
+### 次の作業
 {: #next}
 
-* To find out more about programmatically deploying your environments, [check out the CLI or API](schematics_deploying.html).
-* To create your own configurations from scratch, check out the <a href="https://ibm-bluemix.github.io/tf-ibm-docs/">{{site.data.keyword.IBM_notm}} Cloud resources <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>. {{site.data.keyword.IBM_notm}} Cloud resources are available as a Terraform plug-in provider.
+* プログラムを使用して環境をデプロイする方法について理解を深めるために、[CLI または API について調べます](schematics_deploying.html)。
+* 独自の構成を最初から作成する場合は、<a href="https://ibm-bluemix.github.io/tf-ibm-docs/">{{site.data.keyword.IBM_notm}} Cloud リソース <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a> について調べます。{{site.data.keyword.IBM_notm}} Cloud リソースは、Terraform プラグイン・プロバイダーとして利用できます。

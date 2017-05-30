@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-05-30"
+lastupdated: "2017-05-16"
 
 ---
 
@@ -12,55 +12,52 @@ lastupdated: "2017-05-30"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Getting started with {{site.data.keyword.bpfull_notm}} (Beta)
+# Einführung in {{site.data.keyword.bpfull_notm}} (Beta)
 {: #gettingstarted}
 
-{{site.data.keyword.bplong}} is an automation tool that you can use to define and deploy your cloud infrastructure as a single unit, and reuse those cloud resource definitions across any number of environments.
-{:shortdesc}
+{{site.data.keyword.bplong}} ist ein Automatisierungstool, das Sie verwenden können, um die Cloudinfrastruktur als eine einzige Einheit definieren und bereitstellen und die Cloudressourcendefinitionen für eine beliebige Anzahl von Umgebungen wiederverwenden zu können.{:shortdesc}
 
-{{site.data.keyword.bpshort}} uses Terraform, by HashiCorp, to codify infrastructure. Components of your infrastructure are broken down into individual resources, which can be anything from physical hardware to user accounts. By abstracting high-level and low-level resources, you can treat your infrastructure like you treat your software, as code. 
+{{site.data.keyword.bpshort}} verwendet Terraform von HashiCorp, um die Infrastruktur zu codifizieren. Die Komponenten Ihrer Infrastruktur werden in einzelne Ressourcen heruntergebrochen, bei denen es sich um verschiedenste Ressourcen handeln kann, von physischer Hardware bis hin zu Benutzerkonten. Durch Abstrahieren übergeordneter und untergeordneter Ressourcen können Sie Ihre Infrastruktur wie Ihre eigene Software als Code behandeln. 
 
-When you work with {{site.data.keyword.bpshort}}, you write configurations for your environment in declarative syntax. You state how you want to your environment to look, such as having 10 {{site.data.keyword.virtualmachinesshort}} in production. The service compares your configuration to what Terraform previously created and adds or removes resources as necessary.
+Wenn Sie mit {{site.data.keyword.bpshort}} arbeiten, schreiben Sie Konfigurationen für Ihre Umgebung in deklarativer Syntax. Sie können angeben, wie Ihre Umgebung aussehen soll, z. B. mit 10 {{site.data.keyword.virtualmachinesshort}} in der Produktion. Der Service vergleicht Ihre Konfiguration mit der, die Terraform zuvor erstellt hat, und fügt Ressourcen nach Bedarf hinzu oder entfernt sie.
 
-{{site.data.keyword.bpshort}} is a collaborative DevOps tool that provides a single source of truth for infrastructure. You can store environment configurations in source control, giving your team the ability to conduct code reviews, version their infrastructure, track the changes through commit history, and revert changes more easily.
+{{site.data.keyword.bpshort}} ist ein interaktives DevOps-Tool, das einen Single Source of Truth für die Infrastruktur bereitstellt. Sie können Umgebungskonfigurationen in der Quellcodeverwaltung speichern, wodurch Ihr Team die Möglichkeit erhält, Codeprüfungen durchzuführen, die eigene Infrastruktur zu versionieren, Änderungen mittels Festschreibungsverlauf zu verfolgen und Änderungen einfacher zurückzusetzen.
 
-{{site.data.keyword.bpshort}} is automatically available to all users in your {{site.data.keyword.Bluemix_notm}} account.
+{{site.data.keyword.bpshort}} ist automatisch für alle Benutzer in Ihrem {{site.data.keyword.Bluemix_notm}}-Konto verfügbar.
 
 
-## Creating a configuration
+## Konfiguration erstellen
 {: #configuration}
 
-When you create a configuration, you are codifying the cloud resources that make up your environment.
-{:shortdesc}
+Wenn Sie eine Konfiguration erstellen, codifizieren Sie die Cloudressourcen, aus denen sich Ihre Umgebung zusammensetzt.{:shortdesc}
 
 
-If you want to try out a sample configuration with {{site.data.keyword.bpshort}}, complete the following steps. In the sample, you can provision an SSH key to use in {{site.data.keyword.BluSoftlayer_notm}}. 
+Wenn Sie eine Beispielkonfiguration mit {{site.data.keyword.bpshort}} ausprobieren möchten, führen Sie die folgenden Schritte aus. In dem Beispiel können Sie einen SSH-Schlüssel bereitstellen, der in {{site.data.keyword.BluSoftlayer}} verwendet werden soll. 
 
-**Note:** The sample configuration requires a {{site.data.keyword.BluSoftlayer_notm}} account. See the [linking your {{site.data.keyword.Bluemix_notm}} and SoftLayer accounts doc](../../pricing/linking_accounts.html#unifyingaccounts) if you have an existing account, or you can [sign up for an account](https://console.ng.bluemix.net/docs/pricing/index.html#pay-accounts).
+**Hinweis: ** Die Beispielkonfiguration erfordert ein {{site.data.keyword.BluSoftlayer}}-Konto. Siehe dazu das Dokument [{{site.data.keyword.Bluemix_notm}}- und SoftLayer-Konten verknüpfen](../../pricing/linking_accounts.html#unifyingaccounts), wenn Sie über ein bestehendes Konto verfügen, oder Sie können sich [für ein Konto anmelden](https://console.ng.bluemix.net/docs/pricing/index.html#pay-accounts).
 
-1. Generate an SSH key pair locally.
+1. Generieren Sie ein SSH-Schlüsselpaar lokal.
   ```
   ssh-keygen -t rsa
   ```
   {:codeblock}
 
-2. Fork the sample configuration in <a href="https://github.com/IBM-Bluemix/tf-bluemix-ssh-key" target="_blank">GitHub <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>. 
+2. Verzweigen Sie die Beispielkonfiguration in <a href="https://github.com/IBM-Bluemix/tf-bluemix-ssh-key" target="_blank">GitHub <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a>. 
 
-  The following examples show different types of blocks that are in the sample configuration. You can see the full configuration in the `main.tf` file of the GitHub repository.
+  Die folgenden Beispiele zeigen verschiedene Arten von Blöcken, die in der Beispielkonfiguration vorhanden sind. Die vollständige Konfiguration wird in der `main.tf`-Datei des GitHub-Repositorys angezeigt.
   
-  * The provider block sets up the {{site.data.keyword.IBM_notm}} Cloud provider and login credentials.
+  * Der Provider-Block richtet die {{site.data.keyword.IBM_notm}} Cloud-Provider und Anmeldeberechtigungsnachweise ein.
 
     ```
     provider "ibmcloud" {
-      bluemix_api_key = "${var.bxapikey}"
-      softlayer_username = "${var.slusername}"
-      softlayer_api_key = "${var.slapikey}"
+      ibmid                    = "${var.ibmid}"
+      ibmid_password           = "${var.ibmidpw}"
       softlayer_account_number = "${var.slaccountnum}"
     }
     ```
     {:screen}
   
-  * The resource block defines a component of your infrastructure, which in this sample is an SSH key.
+  * Der Ressourcenblock definiert eine Komponente Ihrer Infrastruktur, die in diesem Beispiel ein SSH-Schlüssel ist.
   
     ```
     resource "ibmcloud_infra_ssh_key" "ssh_key" {
@@ -71,16 +68,17 @@ If you want to try out a sample configuration with {{site.data.keyword.bpshort}}
     ```
     {:screen}
   
-  * The variable block defines your variables, which you can enter in the {{site.data.keyword.bpshort}} GUI for this sample.
+  * Der Variablenblock definiert Ihre Variablen, die Sie in der {{site.data.keyword.bpshort}}-GUI für dieses Beispiel eingeben können.
   
     ```
-    variable bxapikey {
-      description = "Your Bluemix API key."
+    variable ibmid {
+      type = "string"
+      description = "Your IBM-ID."
     }
     ```
     {:screen}
   
-  * The output block defines what is displayed in the Terraform output after the configuration is used to create your environment and the resource (SSH key) is created.
+  * Der Ausgabeblock definiert, was in der Terraform-Ausgabe angezeigt wird, nachdem die Konfiguration zur Erstellung Ihrer Umgebung verwendet und die Ressource (SSH-Schlüssel) erstellt wurde.
   
     ```
     output "ssh_key_id" {
@@ -89,75 +87,68 @@ If you want to try out a sample configuration with {{site.data.keyword.bpshort}}
     ```
     {:screen}
   
-You can now create an environment from your configuration. 
+Sie können jetzt eine Umgebung aus Ihrer Konfiguration erstellen. 
 
 {:codeblock}
 
-## Creating an environment
+## Umgebung erstellen
 {: #environment}
 
-When you create an environment, you point the service to your configuration so that the service can extract your latest code changes. 
-{:shortdesc}
+Wenn Sie eine Umgebung erstellen, verweisen Sie den Service auf Ihre Konfiguration, sodass der Service Ihre neuesten Codeänderungen extrahieren kann.{:shortdesc}
 
-Using the sample configuration, complete the following steps to create an environment.
+Führen Sie anhand der Beispielkonfiguration die folgenden Schritte durch, um eine Umgebung zu erstellen.
 
-1. In the menu, select **Services** and then **{{site.data.keyword.bpshort}}**. You are taken to the {{site.data.keyword.bpshort}} dashboard.
+1. Wählen Sie im Menü die Option **Services** und anschließend **{{site.data.keyword.bpshort}}** aus. Sie werden an das {{site.data.keyword.bpshort}}-Dashboard weitergeleitet.
 
-2. In the left navigation menu, select **Environments** and click **Create Environment** to describe properties about your configuration. Creating an environment defines how {{site.data.keyword.bpshort}} provisions and updates cloud resources, but does not create resources yet.
+2. Wählen Sie im linken Navigationsmenü die Option **Umgebungen** aus und klicken Sie auf **Umgebung erstellen**, um Eigenschaften Ihrer Konfiguration zu beschreiben. Mit dem Erstellen einer Umgebung wird definiert, wie {{site.data.keyword.bpshort}} Cloudressourcen bereitstellt und aktualisiert, aber es werden noch keine Ressourcen erstellt.
 
-3. Enter details about your environment. The sample configuration requires the values that are listed in the following table.
+3. Geben Sie Informationen zu Ihrer Umgebung ein. Die Beispielkonfiguration erfordert die Werte, die in der folgenden Tabelle aufgelistet sind.
 
-  <table summary="The values that are required so that you can use the sample configuration as the source of your environment.">
-  <caption>Table 1. The values that are required so that you can use the sample configuration as the source of your environment.
-  </caption>
+  <table summary="Die Werte, die erforderlich sind, um die Beispielkonfiguration als Quelle für Ihre Umgebung zu verwenden.">
+  <caption>Tabelle 1. Die Werte, die erforderlich sind, damit Sie die Beispielkonfiguration als Quelle für Ihre Umgebung verwenden können.</caption>
   <thead>
-  <th colspan="1">Setting</th>
-  <th colspan="1">Description</th>
+  <th colspan="1">Einstellung</th>
+  <th colspan="1">Beschreibung</th>
   </thead>
   <tbody>
   <tr>
-  <td>Source control URL</td>
-  <td>Enter the GitHub URL where you forked the sample configuration.</td>
+  <td>URL für die Quellcodeverwaltung</td>
+  <td>Geben Sie die GitHub-URL ein, in der Sie die Beispielkonfiguration verzweigt haben.</td>
   </tr>
   <tr>
   <td>Name</td>
-  <td>Enter a unique name to assign to your environment.</td>
+  <td>Geben Sie einen eindeutigen Namen ein, der Ihrer Umgebung zugeordnet werden soll.</td>
   </tr>
-  <td>Terraform version</td>
-  <td>Enter the version of Terraform to ensure that a compatible version of Terraform is run against your environment. For the sample configuration, use version <code>0.9.1</code>.</td>
+  <td>Terraform-Version</td>
+  <td>Geben Sie die Version von Terraform ein, um sicherzustellen, dass eine kompatible Version von Terraform für Ihre Umgebung ausgeführt wird. Für die Beispielkonfiguration verwenden Sie die Version <code>0.9.1</code>.</td>
   </tr>
   <tr>
-  <td>Variables</td>
-  <td>You can define variables in the service or override the environment variables that are in your <code>.tf</code> files. You can mask sensitive variables when you click the lock icon. Masking variables prevents other users from seeing the hidden values in the environment details page. 
-  <p>
-  <p>Add the following variables and values to work with the sample configuration:
+  <td>Variablen</td>
+  <td>Sie können Variablen im Service definieren oder Umgebungsvariablen überschreiben, die sich in Ihren <code>.tf </code>-Dateien befinden. Sie können sensible Variablen maskieren, wenn Sie auf das Sperrsymbol klicken. Durch das Maskieren einer Variablen wird verhindert, dass andere Benutzer die ausgeblendeten Werte auf der Seite für Umgebungsdetails sehen.<p>
+  <p>Fügen Sie die folgenden Variablen und Werte hinzu, um mit der Beispielkonfiguration zu arbeiten:
   <ul>
-  <li><code>bxapikey</code> - Enter your {{site.data.keyword.Bluemix_notm}} API key. If you do not have an existing API key, you can generate the value by running <code>bluemix iam api-key-create NAME</code>.
-  <li><code>slusername</code> - Enter your {{site.data.keyword.BluSoftlayer_notm}} user name.
-  <li><code>slapikey</code> - Enter your {{site.data.keyword.BluSoftlayer_notm}} API key. You can retrieve the value from the [{{site.data.keyword.slportal}}](https://control.bluemix.net), in the <strong>API Access Information</strong> section.
-  <li><code>slaccountnum</code> - Enter your {{site.data.keyword.BluSoftlayer_notm}} account number. This value is only required if you have multiple accounts that are associated with your ID.
-  <li><code>datacenter</code> - Enter the data center that you want to deploy the SSH key resource to. See the <a href="https://github.com/IBM-Bluemix/tf-bluemix-ssh-key/blob/master/README.md" target="_blank">readme file <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> for a full list of available values.</li>
-  <li><code>public_key</code> - Enter the public SSH key. To copy the public key to your clipboard, you can run the <code>pbcopy < ~/.ssh/id_rsa.pub</code> command.
-  <li><code>key_label</code> - Identify the key with a unique name.
-  <li><code>key_note</code> - Optional: Add descriptive text about the SSH key.</ul>
-  </td>
-  </tr></tbody></table>
+  <li><code>ibmid</code> - Geben Sie Ihre vollständige {{site.data.keyword.ibmid}} als Wert ein.</li>
+  <li><code>ibmidpw</code> - Geben Sie das Kennwort ein, das Ihrer {{site.data.keyword.ibmid}} zugeordnet ist, und klicken Sie auf das Sperrsymbol, um den Wert zu maskieren.</li>
+  <li><code>slaccountnum</code> - Geben Sie die Nummer Ihres {{site.data.keyword.BluSoftlayer}}-Kontos ein.
+   <li><code>datacenter</code> - Geben Sie das Rechenzentrum ein, auf dem Sie die SSH-Schlüssel-Ressource bereitstellen möchten. In der <a href="https://github.com/IBM-Bluemix/tf-bluemix-ssh-key/blob/master/README.md" target="_blank">Readme-Datei <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a> finden Sie eine vollständige Liste der verfügbaren Werte.</li> 
+   <li><code>public_key</code> - Geben Sie den öffentlichen SSH-Schlüssel ein. Um den öffentlichen Schlüssel in die Zwischenablage zu kopieren, können Sie den Befehl <code>pbcopy < ~/.ssh/id_rsa.pub</code> ausführen.<li><code>key_label</code> - Geben Sie den Schlüssel mit einem eindeutigen Namen an.<li><code>key_note</code> - Optional: Fügen Sie einen beschreibenden Text über den SSH-Schlüssel hinzu.</ul></td>
+   </tr></tbody></table>
 
-4. When you have finished filling out the environment's details, click **Create**. The newly created environment is displayed. 
-5. To see a preview of what resources are provisioned or removed when you deploy your environment, click **Plan**. 
-6. View the plan log to inspect the output for any errors. 
-7. When you are ready to deploy your environment, click **Apply**. You can monitor the apply log to see whether the key deployed successfully. A successful deployment shows the following line towards the end of the output:
+4. Wenn Sie die Details zur Umgebung ausgefüllt haben, klicken Sie auf **Erstellen**. Die neu erstellte Umgebung wird angezeigt. 
+5. Um eine Vorschau anzuzeigen, welche Ressourcen bereitgestellt oder entfernt werden, wenn Sie Ihre Umgebung bereitstellen, klicken Sie auf **Plan**. 
+6. Sie können das Planprotokoll anzeigen, um die Ausgabe auf Fehler zu untersuchen. 
+7. Wenn Sie bereit sind, Ihre Umgebung bereitzustellen, klicken Sie auf **Anwenden**. Sie können das Anwendungsprotokoll überwachen, um zu sehen, ob der Schlüssel erfolgreich bereitgestellt wurde. Eine erfolgreiche Bereitstellung zeigt die folgende Zeile am Ende der Ausgabe an: 
 
   ```
   Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
   ```
   {: screen}
 
-  You can also view the SSH key in the [{{site.data.keyword.slportal}}](https://control.bluemix.net/devices/sshkeys).
-8. Optional: To remove the SSH key and remove the environment from {{site.data.keyword.Bluemix_notm}}, select **Destroy resources** from the actions menu.
+  Sie können den SSH-Schlüssel auch in der [{{site.data.keyword.slportal}}](https://control.bluemix.net/devices/sshkeys) anzeigen.
+8. Optional: Um den SSH-Schlüssel und die Umgebung aus {{site.data.keyword.Bluemix_notm}} zu entfernen, wählen Sie im Menü "Aktionen" die Option **Ressourcen vernichten** aus.
 
-### What's next
+### Weitere Schritte
 {: #next}
 
-* To find out more about programmatically deploying your environments, [check out the CLI or API](schematics_deploying.html).
-* To create your own configurations from scratch, check out the <a href="https://ibm-bluemix.github.io/tf-ibm-docs/">{{site.data.keyword.IBM_notm}} Cloud resources <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>. {{site.data.keyword.IBM_notm}} Cloud resources are available as a Terraform plug-in provider.
+* Um mehr über die programmgestützte Bereitstellung Ihrer Umgebungen herauszufinden, [prüfen Sie die CLI oder die API](schematics_deploying.html).
+* Um Ihre eigenen Konfigurationen von Grund auf neu zu erstellen, lesen Sie die <a href="https://ibm-bluemix.github.io/tf-ibm-docs/">{{site.data.keyword.IBM_notm}} Cloudressourcen in <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a>.{{site.data.keyword.IBM_notm}} Cloudressourcen stehen als Terraform-Plug-in-Provider zur Verfügung. 
