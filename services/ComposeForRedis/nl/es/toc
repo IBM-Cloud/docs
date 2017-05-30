@@ -1,0 +1,16 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="compose-for-redis" audience="service" href="/docs/services/ComposeForRedis/index.html"}
+Compose For Redis
+
+	{: .navgroup id="learn"}
+	index.md
+	credentials.md
+
+	{: .topicgroup }
+	Enlaces relacionados
+		[App Node.js de ejemplo](https://github.com/IBM-Bluemix/compose-redis-helloworld-nodejs)
+		[Ayuda de Compose](https://help.compose.com)
+		[Artículos de Compose](https://www.compose.com/articles/)
+	{: .navgroup-end}

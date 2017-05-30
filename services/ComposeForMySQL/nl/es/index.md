@@ -1,7 +1,8 @@
 ---
+
 copyright:
-  years: 2016
-lastupdated: "2016-12-09"
+  years: 2016,2017
+lastupdated: "2017-04-27"
 ---
 
 {:new_window: target="_blank"}
@@ -26,36 +27,8 @@ Siga estos pasos para iniciarse a {{site.data.keyword.composeForMySQL}}:
 
 2. Conéctese al servicio de {{site.data.keyword.composeForMySQL}}.
 
-  Para conectar una aplicación al servicio, utilice las credenciales creadas junto con el servicio.
+  Para conectar una aplicación al servicio, utilice las [credenciales](./credentials.html) creadas junto con el servicio.
 
   Descargue la aplicación de ejemplo [compose-mysql-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-mysql-helloworld-nodejs) y siga las instrucciones del archivo readme. A continuación, en la página de detalles de la aplicación en la consola de Bluemix, pulse **Ver APP**.
 
   La aplicación de ejemplo muestra cómo utilizar Node.js para conectar a un servicio de {{site.data.keyword.composeForMySQL}}.
-
-
-## Credenciales disponibles
-
-Nombre de campo|Descripción
-----------|-----------
-`db_type`|El tipo de base de datos que ofrece el servicio, en este caso `mysql`.
-`name`|El nombre del despliegue de la base de datos.
-`uri_cli`|Una línea de mandatos de `mysql` que se conecta a la instancia de la base de datos.
-`ca_certificate_base64`|Un certificado firmado automáticamente que se utiliza para confirmar que una aplicación se está conectando al servidor apropiado. El certificado está codificado como base64.
-`deployment_id`|Un identificador interno para el servicio, tal como se ha creado en Compose.
-`uri`|El URI que se utiliza al conectarse al servicio, que incluye el esquema (`mysql:`), el nombre de usuario y la contraseña del administrador, el nombre de host del servidor, el número de puerto al que se conecta y el nombre de vhost.
-{: caption="Table 1. {{site.data.keyword.composeForMySQL}} credentials" caption-side="top"}
-
-
-# Enlaces relacionados
-{: #rellinks}
-
-* [Compose](https://www.compose.com){:new_window}
-* [Artículos de Compose](https://www.compose.com/articles/){:new_window}
-
-## Guías de aprendizaje y ejemplos
-{: #samples}
-* [compose-mysql-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-mysql-helloworld-nodejs){:new_window}
-
-## Enlaces relacionados
-{: #general}
-* [Ayuda de Compose](https://help.compose.com/docs){:new_window}
