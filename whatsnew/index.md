@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-05-25" 
+lastupdated: "2017-05-30" 
 
 ---
 
@@ -55,6 +55,21 @@ New as of: 03 February 2017
 
 ## {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicatedandlocal}
+
+### May updates for the administration console
+{: #mayadminconsole}
+*New as of: 30 May 2017*
+
+With the latest updates and improvements from May, you can use the following new features:
+
+ * Improvements on the Status page including more granular diagnostics on incidents affecting the Bluemix platform and runtimes.
+ * Improvements to the security Reports and Logs page:
+   * Reports are now displayed in a table format, simplyfying the browsing and searching of reports, including the ability to sort by report category, file name, or creation date. 
+   * Enhanced filtering including simultaneous filtering of multiple categories 
+   * Full screen mode for displaying the contents of a report
+   * Capability to delete reports for admin users with "report write" permission
+   * Faster display of report lists, progressively loading on-demand through continuous scrolling, resulting in better overall performance.
+ * Security reports can be requested on-demand within a time range spanning up to one week and starting a maximum of 3 months back from the time of the request. Note that some environment specific configuration is required before this capability is available to admin users. Admin users will require "report write" permission for this capability.
 
 ### April updates for the administration console
 {: #apriladminconsole}
