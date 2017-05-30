@@ -58,7 +58,7 @@ New as of: 03 February 2017
 
 ### May updates for the administration console
 {: #mayadminconsole}
-*New as of: 30 May 2017*
+New as of: 30 May 2017
 
 With the latest updates and improvements from May, you can use the following new features:
 
