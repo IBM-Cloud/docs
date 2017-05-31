@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-05-30"
+lastupdated: "2017-05-31"
 
 ---
 
@@ -124,7 +124,7 @@ Using the sample configuration, complete the following steps to create an enviro
   <td>Enter a unique name to assign to your environment.</td>
   </tr>
   <td>Terraform version</td>
-  <td>Enter the version of Terraform to ensure that a compatible version of Terraform is run against your environment. For the sample configuration, use version <code>0.9.1</code>.</td>
+  <td>Enter the version of Terraform to ensure that a compatible version of Terraform is run against your environment. For the sample configuration, use version <code>0.9.3</code>.</td>
   </tr>
   <tr>
   <td>Variables</td>
