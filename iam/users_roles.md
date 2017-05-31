@@ -93,7 +93,7 @@ In addition to the descriptions of the roles provided in the console, the follow
 ## Infrastructure permissions
 {: #infrapermissions}
 
-If you have access to assign infrastructure roles, you can set the following permissions for the user: 
+If you have access to assign infrastructure roles, you can set the following permissions when you invite a user: 
 
 | Infrastructure permission | Description of actions |
 |---------------------------|------------------------|
@@ -101,3 +101,5 @@ If you have access to assign infrastructure roles, you can set the following per
 |Basic User | Users with this permission can perform basic actions within the system, such as adding a ticket and managing devices. |
 |Super User | Users with this permission can perform all actions available in the system. |
 {:caption="Table 6. Infrastructure permissions" caption-side="top"}
+
+Additional permissions can be set after the user has accepted the invite.
