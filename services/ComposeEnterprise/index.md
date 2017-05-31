@@ -93,7 +93,7 @@ Sample cf create-service usage:
 cf create-service compose-enterprise Enterprise myComposeEnterpriseServiceName -c '{"contact_name": "myName", "contact_phone": "888-888-8888", "contact_email": "myEmail@ibm.com", "provider_region": "dallas", "cluster_name": "myClusterName123", "notes": "Bare Metal" }'
 ```
 
-When your {{site.data.keyword.composeEnterprise}} Cluster is available, you will be able to provision Compose Bluemix databases into the cluster and enjoy the benefits of auto-scaling databases with encryption at rest and in motion within an isolated cluster. For more information about how to provision databases into a {{site.data.keyword.composeEnterprise}} cluster, see [Provisioning into Compose Enterprise](./provisioning_into_compose_enterprise.html)
+When your {{site.data.keyword.composeEnterprise}} Cluster is available, you will be able to provision Compose Bluemix databases into the cluster and enjoy the benefits of auto-scaling databases with encryption at rest and in motion within an isolated cluster.
 
 ## Provisioning a Compose Bluemix database into Compose Enterprise
 {: #provisioning-database-into-compose-enterprise}
