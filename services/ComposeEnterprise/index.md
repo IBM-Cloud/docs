@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-05-22"
+lastupdated: "2017-05-31"
 ---
 
 {:new_window: target="_blank"}
@@ -21,7 +21,7 @@ lastupdated: "2017-05-22"
 Complete these steps to get started with {{site.data.keyword.composeEnterprise}}:
 
 ## Provisioning a Compose Enterprise service instance
-{: provisioning-enterprise}
+{: provisioning-compose-enterprise}
 
 You can provision a new {{site.data.keyword.composeEnterprise}} instance using the Bluemix console or the command line.
 
@@ -100,7 +100,7 @@ When your {{site.data.keyword.composeEnterprise}} Cluster is available, you will
 
 You can provision a Compose Bluemix database into a {{site.data.keyword.composeEnterprise}} cluster when you create a new database from any of the existing Compose database Bluemix services. You can use the Bluemix console or the command line.
 
-### Provision a new database into a Compose Enterprise cluster from the Bluemix console
+### Provisioning a new database into a Compose Enterprise cluster from the Bluemix console
 
 If you have already created a {{site.data.keyword.composeEnterprise}} cluster using Bluemix, you can specify that your new Compose Bluemix database is provisioned into the cluster. Select the name of the {{site.data.keyword.composeEnterprise}} cluster from the list of available locations in the *Select Location for Deployment* drop-down when you are creating the new Compose Bluemix database service instance.
 
