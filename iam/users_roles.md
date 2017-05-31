@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2016
-lastupdated: "2017-05-30"
+lastupdated: "2017-05-31"
 
 ---
 
@@ -36,7 +36,7 @@ All new users are added as a member of the account. You can assign organization 
 ## Cloud Foundry roles
 {: #cfroles}
 
-Cloud Foundry roles include the access permissions for organizations and spaces defined within the account. The following roles can be assigned at the organization level:
+Cloud Foundry roles include the access permissions for organizations and spaces defined within the account. Cloud Foundry roles do not enable user permissions for completing actions within the context of a service. The following roles can be assigned at the organization level:
 
 | Organization role | Permissions |
 |-------------------|-------------|
