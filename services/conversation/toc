@@ -21,7 +21,6 @@ Conversation
 
     {: .topicgroup}
     Sample apps
-        [Food Coach](https://github.com/watson-developer-cloud/food-coach)
         [Cloud Insurance Co. Web](https://github.com/IBM-Bluemix/cloudco-insurance)
         [WatBot](https://github.com/IBM-Bluemix/chatbot-watson-android) 
         [Simple chat app](http://conversation-simple.mybluemix.net/)
@@ -39,7 +38,7 @@ Conversation
 
     [Watson GitHub repos](https://github.com/watson-developer-cloud/)
     {: .navgroup-end}
-    
+
     {: .navgroup id="howto"}
     {: .topicgroup}
     External docs
