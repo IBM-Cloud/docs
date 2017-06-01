@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-26"
+lastupdated: "2017-6-1"
 
 ---
 
@@ -227,3 +227,6 @@ If you're using Jazz SCM as a source repo and using Delivery Pipeline to build y
 As a [Pay As You Go customer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud-computing/bluemix/pricing){: new_window}, if you use any runtime, service, or component beyond the free allotments that are listed for it in the Bluemix catalog, you will be charged. For a usage estimate, see the [pricing sheet ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/?direct=classic/&cm_mc_uid=49681106114614956310454&cm_mc_sid_50200000=1495641296&cm_mc_sid_52640000=1494981898#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window}. For current pricing for Continuous Delivery, see the [Bluemix catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/continuous-delivery){: new_window}.
 
 If you're an IBM employee, internal IBM projects can be billed to departments in lieu of a personal credit card. If you need to use resources beyond the free allotments for IBM employees, create a support ticket.
+
+### Why was my repo moved to IBM hosted GitLab instead of github.com?
+Your new Git service is comparable to what you had before. If you used github.com with your JazzHub project, your toolchain will continue to use github.com. If your JazzHub project used IBM hosted Git, your toolchain will use the new IBM hosted Git Repos and Issue Tracking.
