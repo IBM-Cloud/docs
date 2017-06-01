@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-04-22"
+lastupdated: "2017-05-31"
 
 ---
 
@@ -55,3 +55,51 @@ For example, if you linked your accounts on 16 April 2017, you will get a Bluemi
 ![Linking Bluemix and SoftLayer accounts summary](BluemixSoftLayerBill.svg)
 
 After your bills are linked, your {{site.data.keyword.Bluemix_notm}} invoice lists the different charges for each resource that you have used.
+
+## API-based Bluemix services
+{: #api_based_bluemix_services}
+
+The following list contains the services that you can set up to run with your application code.
+{:shortdesc}
+
+Not all plans for these services are available for use with linked {{site.data.keyword.Bluemix_notm}} and SoftLayer accounts. Only the plans enabled for Pay-As-You-Go accounts are available to use with linked accounts. However, if you have a separate {{site.data.keyword.Bluemix_notm}} account that's billed separately, you can use any plan for any of these services.
+
+* {{site.data.keyword.alchemyapishort}}
+* {{site.data.keyword.alertnotificationshort}}
+* {{site.data.keyword.sparks}}
+* {{site.data.keyword.appseccloudshort}}
+* {{site.data.keyword.blockchain}}
+* {{site.data.keyword.cloudant}}
+* {{site.data.keyword.conceptinsightsshort}}
+* {{site.data.keyword.iotmapinsights_short}}
+* {{site.data.keyword.dashdbshort}}
+* {{site.data.keyword.dialogshort}}
+* {{site.data.keyword.documentconversionshort}}
+* {{site.data.keyword.twittershort}}
+* {{site.data.keyword.weather_short}}
+* {{site.data.keyword.iotdriverinsights_short}}
+* {{site.data.keyword.geospatialshort_Geospatial}}
+* {{site.data.keyword.graphshort}}
+* {{site.data.keyword.iotelectronics}}
+* {{site.data.keyword.languagetranslationshort}}
+* {{site.data.keyword.messagehub}}
+* {{site.data.keyword.mqa}}
+* {{site.data.keyword.mobileappbuilder_short}}
+* {{site.data.keyword.mql}}
+* {{site.data.keyword.nlclassifiershort}}
+* {{site.data.keyword.objectstorageshort}}
+* {{site.data.keyword.personalityinsightsshort}}
+* {{site.data.keyword.presenceinsightsshort}}
+* {{site.data.keyword.relationshipextractionshort}}
+* {{site.data.keyword.retrieveandrankshort}}
+* {{site.data.keyword.servicediscoveryshort}}
+* {{site.data.keyword.speechtotextshort}}
+* {{site.data.keyword.sqldb}}
+* {{site.data.keyword.streaminganalyticsshort}}
+* {{site.data.keyword.texttospeechshort}}
+* {{site.data.keyword.toneanalyzershort}}
+* {{site.data.keyword.tradeoffanalyticsshort}}
+* {{site.data.keyword.visualinsightsshort}}
+* {{site.data.keyword.visualrecognitionshort}}
+* {{site.data.keyword.workflow}}
+* {{site.data.keyword.workloadscheduler}}
