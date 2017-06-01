@@ -1,7 +1,25 @@
-{: .toc}
-Gestión de la utilización y la facturación   
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
 
-    [Gestión de la utilización y la facturación](index.html)
-        index.md
-	manage_billing.md                                                                                
-        standard_account.md
+{: .toc subcollection="bluemix-pricing" audience="platform" href="/docs/pricing/index.html"}
+Gestión de la utilización y la facturación
+    
+    {: .navgroup id="learn"}
+    index.md
+    standard_account.md
+    how_charged.md
+    api_based_services.md
+    {: .navgroup-end}
+    
+    {: .navgroup id="howto"}
+    {: .topicgroup}
+    Tarifas
+        linking_accounts.md
+        estimating_costs.md
+            
+    {: .topicgroup}
+    Utilización
+        viewing_usage.md
+        changing_plan.md
+        manage_billing.md
+    {: .navgroup-end}
