@@ -53,7 +53,7 @@ Wenn Sie eine gültige IBMid und ein gültiges Kennwort erhalten möchten, rufen
 ## Problem beim Zugriff auf externe Website
 {: #ts_bmlinkid}
 
-Sie können sich nur bei {{site.data.keyword.Bluemix_notm}} mit Ihrer IBM Intranet-ID anmelden, wenn Sie Ihre Intranet-ID mit Ihrer IBMid verknüpfen. 
+Sie können sich nur bei {{site.data.keyword.Bluemix_notm}} mit Ihrer IBM Intranet-ID anmelden, wenn Sie Ihre Intranet-ID mit Ihrer IBMid verknüpfen.
 
 
 Nach Auswahl der Option zum Anmelden mit Ihrer Intranet-ID (**Sign in with your intranet ID**) auf der {{site.data.keyword.Bluemix_notm}}-Anmeldeseite wird möglicherweise die folgende Fehlernachricht angezeigt:
@@ -70,8 +70,8 @@ Dieses Problem tritt auf, wenn Sie sich bei {{site.data.keyword.Bluemix_notm}} m
 Als IBM Mitarbeiter müssen Sie Ihre Intranet-ID mit Ihrer externen IBMid verknüpfen, bevor Sie sich bei {{site.data.keyword.Bluemix_notm}} mit Ihrer IBM Intranet-ID anmelden können. Zum Verknüpfen der beiden IDs führen Sie die folgenden Schritte aus:
 {: tsResolve} 
 
-  1. Klicken Sie auf der Seite [Central Sign-on ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://w3-03.sso.ibm.com/tools/cso/index.jsp){: new_window} auf **My Sign-ons**. 
-  2. Klicken Sie auf der Seite 'My Sign-ons' auf **Link IDs** (IDs verknüpfen) und geben Sie Ihre IBMid und das Kennwort auf der {{site.data.keyword.Bluemix_notm}}-Anmeldeseite ein. Anschließend werden Ihre Intranet-ID und Ihre IBMid automatisch verknüpft. 
+  1. Klicken Sie auf der Seite [Central Sign-on ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://w3-03.sso.ibm.com/tools/cso/index.jsp){: new_window} auf **My Sign-ons**.
+  2. Klicken Sie auf der Seite 'My Sign-ons' auf **Link IDs** (IDs verknüpfen) und geben Sie Ihre IBMid und das Kennwort auf der {{site.data.keyword.Bluemix_notm}}-Anmeldeseite ein. Anschließend werden Ihre Intranet-ID und Ihre IBMid automatisch verknüpft.
   
 
 <!-- end STAGING ONLY -->
@@ -244,7 +244,7 @@ Sie können nach Bedarf mindestens eine der folgenden Aktionen ausführen:
   * Von {{site.data.keyword.Bluemix_notm}} abmelden und anschließend wieder anmelden.
   * Den persönlichen Browsingmodus des Browsers verwenden. 
   * Die Cookies und den Cache des Browsers löschen.
-  * Einen anderen Browser verwenden. Informationen zu den Versionen der Browser, die von {{site.data.keyword.Bluemix_notm}} unterstützt werden, finden Sie in den [Voraussetzungen für {{site.data.keyword.Bluemix_notm}} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}. 
+  * Einen anderen Browser verwenden. Informationen zu den Versionen der Browser, die von {{site.data.keyword.Bluemix_notm}} unterstützt werden, finden Sie in den [Voraussetzungen für {{site.data.keyword.Bluemix_notm}} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}.
   * Wenn Sie die cf-Befehlszeilenschnittstelle installiert haben, geben Sie den Befehl `cf apps` ein, um anzuzeigen, ob die Anwendung aktiv ist.
   
   
@@ -393,13 +393,13 @@ Bei dem Versuch, in Bluemix eine App zu erstellen, wird die folgende Fehlernachr
 Dieser Fehler tritt oft auf, wenn Sie zum ersten Mal versuchen, im Katalog eine App oder einen Service zu erstellen, wenn noch kein Bereich erstellt wurde. 
 {: tsCauses}
 
-Stellen Sie sicher, dass Sie in der derzeitigen Organisation einen Bereich erstellt haben. Verwenden Sie eine der folgenden Methoden, um einen Bereich zu erstellen:
+Stellen Sie sicher, dass Sie in der derzeitigen Organisation einen Bereich erstellt haben.  Verwenden Sie eine der folgenden Methoden, um einen Bereich zu erstellen:
 {: tsResolve}
 
   * Klicken Sie auf das Symbol {{site.data.keyword.avatar}} ![Avatarsymbol](images/account_support.svg), um das Widget 'Konto und Unterstützung' zu öffnen. Wählen Sie die Organisation aus, in der Sie den Bereich erstellen möchten, und klicken Sie anschließend auf **Bereich erstellen**.
   * Geben Sie in der Befehlszeilenschnittstelle 'cf' Folgendes ein: `cf create-space <Name des Bereichs> -o <Name der Organisation>`.
 
-Wiederholen Sie den Vorgang. Wird diese Nachricht erneut angezeigt, rufen Sie die [Bluemix-Statusseite ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://ibm.biz/bluemixstatus){: new_window} auf, um zu prüfen, ob für einen Service oder eine Komponente ein Problem vorliegt. 
+Wiederholen Sie den Vorgang. Wird diese Nachricht erneut angezeigt, rufen Sie die [Bluemix-Statusseite ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://ibm.biz/bluemixstatus){: new_window} auf, um zu prüfen, ob für einen Service oder eine Komponente ein Problem vorliegt.
 
 
 
@@ -506,7 +506,7 @@ Andere, weniger häufige Ursachen eines Fehlers vom Typ 'Bad Gateway' sind Ausf�
 
  
 
-Wenn Sie vermuten, dass ein {{site.data.keyword.Bluemix_notm}}-Service inaktiv ist, überprüfen Sie zunächst die [{{site.data.keyword.Bluemix_notm}}-Statusseite ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://ibm.biz/bluemixstatus){: new_window}. Sie können, wenn Sie möchten, den Service in einer anderen {{site.data.keyword.Bluemix_notm}}-Region als Ausweichlösung verwenden. Ausführliche Informationen finden Sie in [Services in einer anderen Region verwenden](/docs/services/reqnsi.html#cross_region_service). Wenn der Status des Service normal ist, führen Sie die folgenden Schritte aus, um das Problem zu lösen:
+Wenn Sie vermuten, dass ein {{site.data.keyword.Bluemix_notm}}-Service inaktiv ist, überprüfen Sie zunächst die [{{site.data.keyword.Bluemix_notm}}-Statusseite ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://ibm.biz/bluemixstatus){: new_window}. Sie können, wenn Sie möchten, den Service in einer anderen {{site.data.keyword.Bluemix_notm}}-Region als Ausweichlösung verwenden. Ausführliche Informationen finden Sie in [Services in einer anderen Region verwenden](/docs/services/reqnsi.html#cross_region_service). Wenn der Status des Service normal ist, führen Sie die folgenden Schritte aus, um das Problem zu lösen: 
 {: tsResolve}
 
   * Wiederholen Sie die Aktion.
@@ -514,7 +514,7 @@ Wenn Sie vermuten, dass ein {{site.data.keyword.Bluemix_notm}}-Service inaktiv i
 	* Verwenden Sie einen anderen Browser.
 	* Führen Sie für Ihren Router, Ihr Modem und Ihren Computer einen Warmstart durch. Durch eines Warmstart dieser Geräte können verschiedene Fehler bereinigt werden, die zu dem Fehler 502 führen. 
   * Warten Sie und wiederholen Sie den Vorgang zu einem späteren Zeitpunkt. Bei einigen Instanzen kann es in Verbindung mit Ihrem Internet-Service-Provider oder den {{site.data.keyword.Bluemix_notm}}-Services zu vorübergehenden Problemen kommen. Warten Sie, bis die vorübergehenden Probleme gelöst wurden.
-  * Wenn das Problem dennoch bestehen bleibt, wenden Sie sich an den {{site.data.keyword.Bluemix_notm}}-Support. Weitere Informationen finden Sie unter [Kontaktaufnahme mit dem {{site.data.keyword.Bluemix_notm}}-Support](/docs/support/index.html#contacting-bluemix-support).  
+  * Wenn das Problem dennoch bestehen bleibt, wenden Sie sich an den {{site.data.keyword.Bluemix_notm}}-Support. Weitere Informationen finden Sie unter [Kontaktaufnahme mit dem {{site.data.keyword.Bluemix_notm}}-Support](/docs/support/index.html#contacting-bluemix-support). 
 
 
 
@@ -526,18 +526,18 @@ Wenn der Plattenspeicher immer weniger wird, können Sie das Plattenkontingent m
 
   
 
-Wenn der Plattenspeicher immer weniger wird, wird möglicherweise eine Nachricht angezeigt, die besagt, dass das Plattenkontingent überschritten wurde. Zur Lösung des Problems haben Sie möglicherweise versucht, für Ihre App-Instanz ein Scale-up durchzuführen, um mehr Plattenspeicher zu erhalten. Sie haben beispielsweise versucht, ein Scale-up von 256 MB auf 1256 MB durchzuführen, und zwar durch Ändern des Speicherkontingents auf der Seite mit den App-Details. Da jedoch das Plattenkontingent dasselbe geblieben ist, haben Sie nicht mehr Plattenspeicher bekommen.
+Wenn der Plattenspeicher immer weniger wird, wird möglicherweise eine Nachricht angezeigt, die besagt, dass das Plattenkontingent überschritten wurde. Zur Lösung des Problems haben Sie möglicherweise versucht, für Ihre App-Instanz ein Scale-up durchzuführen, um mehr Plattenspeicher zu erhalten. Sie haben beispielsweise versucht, ein Scale-up von 256 MB auf 1256 MB durchzuführen, und zwar durch Ändern des Speicherkontingents auf der Seite mit den App-Details. Da jedoch das Plattenkontingent dasselbe geblieben ist, haben Sie nicht mehr Plattenspeicher bekommen. 
 {: tsSymptoms}
 
 
-Das Standardplattenkontingent, das für eine App zugeordnet wird, beträgt 1 GB. Wenn Sie mehr Plattenspeicher benötigen, müssen Sie das Plattenkontingent manuell angeben.
+Das Standardplattenkontingent, das für eine App zugeordnet wird, beträgt 1 GB. Wenn Sie mehr Plattenspeicher benötigen, müssen Sie das Plattenkontingent manuell angeben. 
 {: tsCauses}
 
  
 Verwenden Sie eine der folgenden Methoden, um Ihr Plattenkontingent anzugeben. Sie können ein maximales Plattenkontingent von 2 GB angeben. Falls 2 GB dennoch nicht genug sein sollten, setzen Sie versuchsweise einen externen Service ein, z. B. [Object Store](/docs/services/ObjectStorage/index.html).
 {: tsResolve}
 
-  * Fügen Sie in der Datei 'manifest.yml' das folgende Element hinzu: 
+  * Fügen Sie in der Datei 'manifest.yml' das folgende Element hinzu:
     ```
 	disk_quota: <disk_quota>
 	```
@@ -629,7 +629,7 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 ## Für Organisation geltende Speicherbegrenzung wurde überschritten
 {: #ts_outofmemory}
 
-Wenn Sie Benutzer eines Testkontos sind, können Sie möglicherweise eine App nicht in {{site.data.keyword.Bluemix_notm}} bereitstellen, wenn Sie die für Ihre Organisation geltende Speicherbegrenzung überschritten haben. Sie können entweder den von Ihren Apps verwendeten Speicherplatz verringern oder das Speicherkontingent Ihres Konto erhöhen. Das Kontingent der maximalen Hauptspeicherkapazität für ein Testkonto beträgt 2 Gigabyte und kann nur durch den Wechsel zu einem gebührenpflichtigen Konto erhöht werden. 
+Wenn Sie Benutzer eines Testkontos sind, können Sie möglicherweise eine App nicht in {{site.data.keyword.Bluemix_notm}} bereitstellen, wenn Sie die für Ihre Organisation geltende Speicherbegrenzung überschritten haben. Sie können entweder den von Ihren Apps verwendeten Speicherplatz verringern oder das Speicherkontingent Ihres Konto erhöhen. Das Kontingent der maximalen Hauptspeicherkapazität für ein Testkonto beträgt 2 Gigabyte und kann nur durch den Wechsel zu einem gebührenpflichtigen Konto erhöht werden.
 
 
 
@@ -759,7 +759,7 @@ Verwenden Sie eine der folgenden Methoden, um das Problem zu lösen:
 ## Bluemix Live Sync Debug wird über die Befehlszeile nicht gestartet
 {: #ts_no_debug}
 
-Sie haben die IBM Bluemix Live Sync Debug-Funktion für Ihre App über die Befehlszeile aktiviert, aber Sie können nicht auf die Debug-Schnittstelle zugreifen.   
+Sie haben die IBM Bluemix Live Sync Debug-Funktion für Ihre App über die Befehlszeile aktiviert, aber Sie können nicht auf die Debug-Schnittstelle zugreifen.  
   
  
 
@@ -771,17 +771,17 @@ Sie haben die Debug-Funktion für Ihre App aktiviert, indem Sie die Umgebungsvar
 Die Debug-Funktion kann in den folgenden Situationen nicht aktiviert werden:
 {: tsCauses} 
 
-  * Wenn die Datei `manifest.yml` das Attribut 'command' enthält. 
-  * Wenn Sie die Option **-c** verwenden, um eine App durch eine Push-Operation an {{site.data.keyword.Bluemix_notm}} zu übertragen. 
+  * Wenn die Datei `manifest.yml` das Attribut 'command' enthält.
+  * Wenn Sie die Option **-c** verwenden, um eine App durch eine Push-Operation an {{site.data.keyword.Bluemix_notm}} zu übertragen.
 
  
   
-Verwenden Sie eine der folgenden Optionen, um das Problem zu lösen:
+Verwenden Sie eine der folgenden Optionen, um das Problem zu lösen: 
 {: tsResolve}
 
-  * Das empfohlene Verfahren besteht darin, das IBM Node.js-Buildpack zum Starten der App zu verwenden. Weitere Informationen finden Sie im Abschnitt zum Startbefehl im Thema über die [Bereitstellung einer Node.js-Anwendung in {{site.data.keyword.Bluemix_notm}}](/docs/runtimes/nodejs/index.html#nodejs_runtime).  
-  * Inaktivieren Sie den Befehl für Ihre vorhandene App, indem Sie das Attribut 'command' in Ihrer Datei `manifest.yml` in 'command: null' ändern oder indem Sie Ihren Push-Befehl bearbeiten, sodass er die Option `-c null` enthält.  
-  * Entfernen Sie das Attribut **command** aus der Datei `manifest.yml`. Löschen Sie anschließend die aktuelle App aus {{site.data.keyword.Bluemix_notm}} und stellen Sie sie durch eine Push-Operation erneut bereit. 
+  * Das empfohlene Verfahren besteht darin, das IBM Node.js-Buildpack zum Starten der App zu verwenden. Weitere Informationen finden Sie im Abschnitt zum Startbefehl im Thema über die [Bereitstellung einer Node.js-Anwendung in {{site.data.keyword.Bluemix_notm}}](/docs/runtimes/nodejs/index.html#nodejs_runtime). 
+  * Inaktivieren Sie den Befehl für Ihre vorhandene App, indem Sie das Attribut 'command' in Ihrer Datei `manifest.yml` in 'command: null' ändern oder indem Sie Ihren Push-Befehl bearbeiten, sodass er die Option `-c null` enthält. 
+  * Entfernen Sie das Attribut **command** aus der Datei `manifest.yml`. Löschen Sie anschließend die aktuelle App aus {{site.data.keyword.Bluemix_notm}} und stellen Sie sie durch eine Push-Operation erneut bereit.
   
 <!-- end STAGING ONLY -->  
   
@@ -1000,7 +1000,7 @@ Führen Sie die folgenden Aktionen in Abhängigkeit von der Ursache durch, die z
  }
     ```
 	
-Weitere Tipps zu Node.js-Apps finden Sie unter [Tipps für Node.js-Anwendungen![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}. 	
+Weitere Tipps zu Node.js-Apps finden Sie unter [Tipps für Node.js-Anwendungen![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.	
 
 
 
@@ -1320,7 +1320,7 @@ Apps in {{site.data.keyword.Bluemix_notm}} müssen in Ihrer Organisation innerha
 
  
 
-Verwenden Sie eine der folgenden Methoden, um einen Bereich zu erstellen:
+Verwenden Sie eine der folgenden Methoden, um einen Bereich zu erstellen: 
 {: tsResolve}
  
   * Wählen Sie auf dem Dashboard von {{site.data.keyword.Bluemix_notm}} die Organisation aus, in der Sie den Bereich erstellen möchten. Klicken Sie anschließend auf **Bereich erstellen**.
@@ -1683,7 +1683,7 @@ Sie können dieses Problem auch auf eine der folgenden Methoden beheben:
 ## Log4js-Logger-Objekte werden im Popup-Fenster für den Node.js-Trace nicht angezeigt
 {: #ts_logger}
 
-Die Log4js-Logger-Objekte werden im Popup-Fenster für den Node.js-Trace nicht angezeigt, wenn sowohl das Modul 'log4js' als auch das Modul 'ibmbluemix' in Ihrer App verwendet werden.  	
+Die Log4js-Logger-Objekte werden im Popup-Fenster für den Node.js-Trace nicht angezeigt, wenn sowohl das Modul 'log4js' als auch das Modul 'ibmbluemix' in Ihrer App verwendet werden. 	
 
  
 Die Log4js-Logger-Objekte werden im Popup-Fenster für den Node.js-Trace nicht angezeigt, wenn die Module 'log4js', 'winston' und 'ibmbluemix' zusammen in Ihrer App verwendet werden.
@@ -1708,7 +1708,7 @@ Hierbei handelt es sich um ein erwartetes Verhalten.
 ## Kontrollkästchen zum Anwenden der Traceeinstellung auf alle Instanzen einer Anwendung ist inaktiviert
 {: #ts_bunyan}
 
-Das Kontrollkästchen **Traceeinstellung auf alle Instanzen der Anwendung anwenden** ist im Popup-Fenster für den Node.js-Trace nicht ausgewählt und inaktiviert, wenn die Bunyan-Protokollebenen (Logger-Ebenen) geändert wurden. 
+Das Kontrollkästchen **Traceeinstellung auf alle Instanzen der Anwendung anwenden** ist im Popup-Fenster für den Node.js-Trace nicht ausgewählt und inaktiviert, wenn die Bunyan-Protokollebenen (Logger-Ebenen) geändert wurden.
 
 
 

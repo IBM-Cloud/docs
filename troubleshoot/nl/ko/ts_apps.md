@@ -439,33 +439,6 @@ cf push appname -p app_path
 앱을 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}에서 {{site.data.keyword.Bluemix_notm}}로 푸시하는 경우 애플리케이션 마법사의 애플리케이션 세부사항 페이지에서 **Manifest 파일에 저장** 선택란을 선택하십시오. 그러면 마법사에서 지정한 변수가 애플리케이션의 Manifest 파일에 저장됩니다. 다음에 마법사를 열면 변수가 자동으로 표시됩니다.
 {: tsResolve}
 
-
-## Bluemix Live Sync 아이콘이 표시되지 않음
-{: #ts_llz_lkb_3r}
-
-앱을 작성했지만 IBM Bluemix Live Sync 아이콘이 Web IDE에 표시되지 않습니다.
-
-Web IDE에서 Node.js 앱을 편집할 때 {{site.data.keyword.Bluemix_notm}} 실시간 편집, 빠른 다시 시작 및 디버그 아이콘이 표시되지 않습니다.
-{: tsSymptoms}
-
-다음과 같은 경우 이 아이콘을 사용할 수 없습니다.
-{: tsCauses}
-
-  * `manifest.yml` 파일이 프로젝트의 최상위 레벨에 저장되지 않았습니다.
-  * 앱이 프로젝트의 최상위 레벨이 아닌 서브디렉토리에 저장되었지만, 이 서브디렉토리의 경로가 `manifest.yml` 파일에 지정되어 있지 않습니다.
-  * 앱에 `package.json` 파일이 없습니다.
-
-다음 방법 중 하나를 사용하십시오.
-{: tsResolve}
-
-  * `manifest.yml` 파일이 프로젝트의 최상위 레벨에 저장되지 않은 경우 여기에 저장하십시오.
-  * 앱이 서브디렉토리에 저장된 경우 `manifest.yml` 파일에 서브디렉토리의 경로를 지정하십시오.
-  ```
-   path: path_to_application
-   ```
-  * 앱과 동일한 디렉토리에 `package.json` 파일을 작성하십시오.
-
-
 <!-- begin STAGING ONLY -->
 
 ## Bluemix Live Sync 디버그가 명령행에서 시작되지 않음
@@ -697,21 +670,17 @@ Liberty 앱이 {{site.data.keyword.Bluemix_notm}}로 푸시되면 Liberty 빌드
 [git update ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://git-scm.com/docs/git-update-index){: new_window} 명령을 사용하여 각 스크립트의 권한을 실행 가능으로 변경할 수 있습니다. 예를 들어 `git update --chmod=+x script.sh`를 입력합니다.
 {: tsResolve}
 
+## IBM Bluemix Continuous Delivery에서 Delivery Pipeline로부터 앱을 배치할 수 없음
+ {: #ts_devops_to_bm}
 
-## DevOps Services에서 Bluemix에 앱을 배치할 수 없음
-{: #ts_devops_to_bm}
+ `manifest.yml` 파일이 앱에 없는 경우에는 {{site.data.keyword.contdelivery_short}}에서 {{site.data.keyword.deliverypipeline}}을 사용하여 앱을 배치할 수 없을 수 있습니다. 
 
-앱에 `manifest.yml` 파일이 없는 경우 앱을 IBM Bluemix DevOps Services에서 {{site.data.keyword.Bluemix_notm}}로 푸시할 수 없습니다.
+ {{site.data.keyword.contdelivery_short}}에서 {{site.data.keyword.deliverypipeline}}을 사용하여 앱을 배치할 때 `Unable to detect a supported application type`이라는 오류 메시지가 표시될 수 있습니다. {: tsSymptoms}
 
-앱을 DevOps Services에서 {{site.data.keyword.Bluemix_notm}}로 배치할 때 `Unable to detect a supported application type`이라는 오류 메시지가 표시될 수 있습니다.
-{: tsSymptoms}
+ 이 문제점은 앱을 {{site.data.keyword.Bluemix_notm}}에 배치하려면 파이프라인에 `manifest.yml` 파일이 필요하기 때문에 발생할 수 있습니다. {: tsCauses}
 
-앱을 {{site.data.keyword.Bluemix_notm}}에 배치하려면 DevOps Services에 `manifest.yml` 파일이 필요하기 때문에 이 문제점이 발생합니다.
-{: tsCauses}
-
-이 문제점을 해결하려면 `manifest.yml` 파일을 작성해야 합니다. `manifest.yml` 파일을 작성하는 방법에 대한 자세한 정보는 [애플리케이션 Manifest](/docs/manageapps/depapps.html#appmanifest)를 참조하십시오.
+ 이 문제점을 해결하려면 `manifest.yml` 파일을 작성해야 합니다. `manifest.yml` 파일을 작성하는 방법에 대한 자세한 정보는 [애플리케이션 Manifest](/docs/manageapps/depapps.html#appmanifest)를 참조하십시오.
 {: tsResolve}
-
 
 ## Meteor 앱을 푸시할 수 없음
 {: #ts_meteor}
@@ -735,169 +704,3 @@ buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
     ```
 	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
 	```
-
-## Bluemix에 배치 단추를 눌러도 앱이 배치되지 않음
-{: #ts_deploybutton}
-
-{{site.data.keyword.Bluemix_notm}}에 배치 단추를 클릭해도 Git 저장소가 복제되지 않거나 앱이 배치되지 않는 경우 다음 문제에 대한 문제점 해결 방법을 사용해 보십시오.
-  * [Bluemix DevOps Services 프로젝트를 작성할 수 없음](#ts_project-cant-be-created)
-  * [Git 저장소를 찾을 수 없어 DevOps Services에 복제할 수 없음](#ts_repo-not-found)
-  * [Git 저장소가 DevOps Services에 복제되었지만 앱이 {{site.data.keyword.Bluemix_notm}}에 배치되지 않음](#ts_repo-cloned-app-not-deployed)
-
-단추 작성 방법에 대한 자세한 정보는 {{site.data.keyword.Bluemix_notm}}에 배치 단추 작성을 참조하십시오.
-
-### Bluemix DevOps Services 프로젝트를 작성할 수 없음
-{: #ts_project-cant-be-created}
-
-DevOps Services 프로젝트를 작성할 수 없다면 IBM {{site.data.keyword.Bluemix_notm}} 계정이 만료된 것일 수 있습니다.
-
-**Bluemix에 배치** 단추를 클릭했지만 "프로젝트 작성" 단계가 성공적으로 완료되지 않았습니다.
-{: tsSymptoms}
-
-{{site.data.keyword.Bluemix_notm}} 계정이 만료되었을 수 있습니다.
-{: tsCauses}
-
-다음 방법 중 하나를 사용하십시오.
-{: tsResolve}
-
-  * {{site.data.keyword.Bluemix_notm}}에 로그인하여 자신의 계정 정보를 업데이트하십시오.
-  * **Bluemix에 배치** 단추를 다시 클릭하십시오.
-
-### Git 저장소를 찾을 수 없어 DevOps Services에 복제할 수 없음
-{: #ts_repo-not-found}
-
-Git 저장소가 복제되지 않은 경우 저장소 또는 단추 스니펫 관련 문제일 수 있습니다.
-
-**Bluemix에 배치** 단추를 클릭했지만 Git 저장소를 찾을 수 없어 DevOps Services에 복제할 수 없습니다. "저장소 복제" 단계가 완료되지 않았습니다. 따라서 앱을 {{site.data.keyword.Bluemix_notm}}에 배치할 수 없습니다.
-{: tsSymptoms}
-
-이 문제점은 다음과 같은 이유로 발생할 수 있습니다.
-{: tsCauses}
-
-  * Git 저장소가 없거나 Git 저장소에 액세스할 수 없습니다.
-  * 단추 스니펫에 대한 HTML 또는 마크다운에 문제가 있을 수 있습니다.
-  * 특수 문자, 조회 매개변수 또는 URL의 단편으로 인해 Git 저장소에 올바르게 액세스할 수 없는 문제가 있을 수 있습니다.
-
-다음 방법 중 하나를 사용하십시오.
-{: tsResolve}
-
-  * Git 저장소가 있고, 공개적으로 액세스할 수 있으며, URL이 올바른지 확인하십시오.
-  * 스니펫에 HTML 또는 마크다운 오류가 있지 않은지 확인하십시오.
-  * 특수 문자, 조회 매개변수 또는 단편으로 인해 Git 저장소 URL에 문제가 있는 경우, 단추 스니펫에서 URL을 인코딩하십시오.
-
-### Git 저장소가 DevOps Services에 복제되었지만 앱이 Bluemix에 배치되지 않음
-{: #ts_repo-cloned-app-not-deployed}
-
-앱이 배치되지 않은 경우 저장소의 코드와 관련한 문제가 발생할 수 있습니다.
-
-**Bluemix에 배치** 단추를 클릭한 후 Git 저장소가 DevOps Services에 복제되었지만, 앱이 {{site.data.keyword.Bluemix_notm}}에 배치되지 않았습니다. "Bluemix에 배치" 단계가 완료되지 않았습니다.
-{: tsSymptoms}
-
-이 문제점은 다음과 같은 이유로 발생할 수 있습니다.
-{: tsCauses}  
-
-  * {{site.data.keyword.Bluemix_notm}} 영역에 앱 배치에 필요한 충분한 공간이 없을 수 있습니다.
-  * 필수 서비스가 `manifest.yml` 파일에서 선언되지 않았을 수 있습니다.
-  * 필수 서비스가 `manifest.yml` 파일에서 선언되었지만 해당 서비스가 이미 대상 영역에 있을 수 있습니다.
-  * 저장소의 코드에 문제가 있을 수 있습니다.
-
-
-문제를 진단하려면 배치에서 빌드 및 배치 로그를 검토하십시오.
-  1. "Bluemix에 배치" 단계가 완료되지 않은 경우, 이전 "파이프라인 구성" 단계에 있는 링크를 클릭하여 Delivery Pipeline을 여십시오.
-  2. 실패한 빌드 또는 배치 단계를 식별하십시오.
-  3. 실패한 단계에서 **로그 및 히스토리 보기**를 클릭하십시오.
-  4. 오류 메시지를 찾으십시오.
-
-다음 방법 중 하나를 사용하십시오.
-{: tsResolve}
-
-  * {{site.data.keyword.Bluemix_notm}} 영역에 앱 배치에 필요한 충분한 공간이 없다고 오류 메시지에 표시된 경우 다른 영역을 대상으로 지정하십시오.
-  * 필수 서비스가 `manifest.yml` 파일에서 선언되지 않았다고 오류 메시지에 표시된 경우 필수 서비스를 추가해야 한다는 사실을 저장소 소유자에게 알리십시오.
-  * 필수 서비스가 이미 대상 영역에 있다고 오류 메시지에 표시된 경우 다른 영역을 사용하도록 선택하십시오.
-  * 빌드와 관련하여 문제가 있다고 오류 메시지에 표시된 경우 앱 빌드를 방해하는 코드와 관련된 문제를 수정하십시오. 코드에 문제가 없는지 확인하려면 Git 명령을 사용하여 코드를 빌드하십시오.
-    1. Git 저장소를 복제하십시오. 
-    ```
-    git clone <git_repository_URL>
-    ```
-    2. 앱 디렉토리를 여십시오. 
-	```
-	cd <appname>
-	```
-    3. 앱을 작성하십시오. 
-	```
-	<appname> create
-	```
-    4. 필요한 경우 추가 기능을 프로비저닝하십시오.
-    5. 필요한 구성 변수를 추가하십시오.
-    6. 코드를 푸시하십시오. 
-	```
-	git push <appname> master
-	```
-    7. 앱이 올바르게 빌드되었는지 확인하십시오.
-    8. 필요한 경우 배치 후 명령을 실행하십시오. 
-	```
-	<appname> run
-	```
-    9. 앱을 열고 앱이 올바르게 작동하는지 확인하십시오. 
-	```
-	<appname> open
-	```
-
-## 실행 표시줄에서 앱을 배치할 수 없음
-{: #ts_runbar}
-
-노란색 "동기화되지 않음" 상태에서 배치에 실패합니다.
-{: tsSymptoms}
-
-배치 중인 앱의 라우트가 실행 중인 다른 앱의 라우트와 동일합니다.
-{: tsCauses}
-
-라우트를 고유하게 변경하십시오.
-{: tsResolve}
-
-## Eclipse에서 실행 표시줄을 찾을 수 없음
-{: #ts_runbar-missing}
-
-Eclipse Orion {{site.data.keyword.webide}}에 실행 표시줄이 표시되지 않는 경우에는 다음 문제 중 하나가 발생한 것입니다.
-{: tsCauses}
-
-* {{site.data.keyword.jazzhub}}가 사용자 프로젝트를 프로젝트로 식별하지 않습니다.
-*  {{site.data.keyword.jazzhub_short}}가 앱이 있는 폴더를 판별할 수 없습니다.
-* {{site.data.keyword.jazzhub_short}}가 사용자 앱이 Node.js 앱임을 발견하지 못합니다.
-
-다음 방법 중 하나를 적절하게 사용하십시오.
-{: tsResolve}  
-
-* {{site.data.keyword.jazzhub}}가 사용자 프로젝트를 프로젝트로 식별하지 않는 경우 프로젝트의 루트 디렉토리에 `project.json` 파일을 작성하십시오.
-* {{site.data.keyword.jazzhub_short}}가 앱이 있는 폴더를 판별할 수 없고 앱이 프로젝트의 루트 디렉토리에 없는 경우 다음 단계 중 하나를 사용하십시오.
-  * 프로젝트의 루트 디렉토리에 `manifest.yml` 파일을 작성한 다음 앱 위치를 가리키도록 파일을 편집하십시오(예: `path: path_to_your_app`).
-  * 앱을 프로젝트의 루트 디렉토리로 이동하십시오.
-* {{site.data.keyword.jazzhub_short}}가 사용자 앱이 Node.js 앱임을 발견하지 못하면 프로젝트의 앱 폴더에 `package.json` 파일을 작성하십시오.
-
-## GitHub 훅이 작동하지 않음
-{: #ts_githubhookisntworking}
-
-커미트를 푸시할 때 작업-항목 링크를 작성하도록 GitHub 프로젝트를 구성한 경우 링크가 예상대로 작동하지 않습니다.
-{: tsSymptoms}
-
-다음 단계를 사용하여 문제점을 찾으십시오.
-{: tsResolve}
-
-1. GitHub 저장소에서 **설정**을 클릭하십시오.
-   ![GitHub 설정 링크](images/github_settings.png)
-
-2. **웹훅 & 서비스**를 클릭하십시오.
-   ![GitHub 웹훅 및 서비스 링크](images/github_webhook.png)
-
-3. 메시지를 보려면 {{site.data.keyword.jazzhub}} 상태 아이콘 위로 마우스를 이동하십시오.
-   ![서비스 훅에 대한 오류 메시지](images/github_error.png)
-
-4. GitHub 메시지에 따라 오류를 해결하십시오. 
-
-5. 수정사항이 작동하는지 확인하려면 다른 변경사항을 커미트하고 푸시하거나 {{site.data.keyword.jazzhub_short}}의 서비스 페이지로 이동한 후 **테스트 서비스**를 클릭하십시오.
-   ![GitHub 테스트 서비스 단추](images/github_test.png)
-
-6. 상태 아이콘을 다시 확인하여 오류가 없는지 확인하십시오.
-   ![오류가 없는 상태 아이콘](images/githubResolved_small.png)
-
-자세한 정보는 [Setting up GitHub for Bluemix DevOps Services projects ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://hub.jazz.net/docs/githubhooks/){: new_window}를 참조하십시오.

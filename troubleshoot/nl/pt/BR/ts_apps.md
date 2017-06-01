@@ -442,36 +442,6 @@ As variáveis que você especificou são salvas somente se salvá-las para o arq
 Ao enviar por push um app para o {{site.data.keyword.Bluemix_notm}} a partir do IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, selecione a caixa de seleção **Salvar no arquivo manifest** na página de detalhes do Aplicativo do assistente do Aplicativo. Em seguida, as variáveis que você especificou no assistente são salvas para o arquivo manifest de seu aplicativo. Na próxima vez em que abrir o assistente, as variáveis serão exibidas automaticamente.
 {: tsResolve}
 
-
-## Os ícones do Bluemix Live Sync não são mostrados
-{: #ts_llz_lkb_3r}
-
-Você criou um app, mas os ícones do IBM Bluemix Live Sync não são mostrados no IDE da web.
-
-Ao editar um app Node.js no IDE da web, os ícones de edição em tempo real, reinicialização rápida e
-depuração do {{site.data.keyword.Bluemix_notm}} não são mostrados.
-{: tsSymptoms}
-
-Os ícones não ficarão disponíveis nestas circunstâncias:
-{: tsCauses}
-
-  * O arquivo `manifest.yml` não está armazenado no nível superior de seu projeto.
-  * Seu app está armazenado em um subdiretório, em vez de no nível superior do projeto, mas o caminho para o subdiretório não está especificado no arquivo `manifest.yml`.
-  * O app não contém um arquivo `package.json`.
-
-Utilize um dos seguintes métodos:
-{: tsResolve}
-
-  * Se o arquivo `manifest.yml` não estiver armazenado no nível superior de seu projeto, armazene-o lá.
-  * Se seu app estiver armazenado em um subdiretório, especifique o caminho para o
-subdiretório no arquivo `manifest.yml`.
-  ```
-   path: path_to_application
-   ```
-  * Crie um arquivo `package.json` que esteja no
-mesmo diretório que seu app.
-
-
 <!-- begin STAGING ONLY -->
 
 ## O Bluemix Live Sync Debug não é iniciado na linha de comandos
@@ -676,7 +646,8 @@ exemplo:
   ...
         ```
 
-  * Assegure-se de que um arquivo `package.json` exista em seu app Node.js para que o buildpack Node.js possa reconhecer o app. Assegure-se de que esse arquivo esteja no diretório-raiz de seu app. O exemplo a seguir mostra um arquivo `package.json` simples:  
+  * Assegure-se de que um arquivo `package.json` exista em seu app Node.js para que o buildpack Node.js possa reconhecer o app. Assegure-se de que esse arquivo esteja no diretório-raiz de seu app.
+    O exemplo a seguir mostra um arquivo `package.json` simples:  
 	```
 	{
         "name": "MyUniqueNodejs01",
@@ -730,23 +701,21 @@ Esse problema poderá ocorrer se scripts, como o script de detecção, o script 
 É possível usar o comando [git update ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://git-scm.com/docs/git-update-index){: new_window} para mudar a permissão de cada script para executável. Por exemplo, é possível digitar `git update --chmod=+x script.sh`.
 {: tsResolve}
 
+## Não é possível implementar um app do Delivery Pipeline no IBM Bluemix Continuous Delivery
+ {: #ts_devops_to_bm}
 
-## Não é possível implementar um app do DevOps Services no Bluemix
-{: #ts_devops_to_bm}
+ Talvez não seja possível implementar seu app usando o {{site.data.keyword.deliverypipeline}} no {{site.data.keyword.contdelivery_short}} se o arquivo `manifest.yml` não estiver presente em seu app.
 
-Talvez não seja possível enviar o app por push do IBM Bluemix DevOps Services para o {{site.data.keyword.Bluemix_notm}} caso o arquivo `manifest.yml` não esteja presente no app.
+ Ao implementar um app usando o {{site.data.keyword.deliverypipeline}} no {{site.data.keyword.contdelivery_short}}, uma mensagem de erro `Não é possível detectar um tipo de aplicativo suportado` poderá ser exibida.
+ {: tsSymptoms}
 
-Ao implementar um app a partir do DevOps Services no {{site.data.keyword.Bluemix_notm}}, uma mensagem de erro `Impossível detectar um tipo de aplicativo suportado` pode ser exibida.
-{: tsSymptoms}
+ Esse problema pode ocorrer porque o pipeline requer um arquivo `manifest.yml` para implementar um app no {{site.data.keyword.Bluemix_notm}}.
+ {: tsCauses}
 
-Esse problema pode ocorrer porque o DevOps Services requer um arquivo `manifest.yml` para implementar um app no {{site.data.keyword.Bluemix_notm}}.
-{: tsCauses}
-
-Para resolver esse problema, você deve criar um arquivo `manifest.yml`. Para obter informações adicionais sobre como criar um arquivo `manifest.yml`,
+ Para resolver esse problema, você deve criar um arquivo `manifest.yml`. Para obter informações adicionais sobre como criar um arquivo `manifest.yml`,
 consulte [Manifest do
 aplicativo](/docs/manageapps/depapps.html#appmanifest).
-{: tsResolve}
-
+ {: tsResolve}
 
 ## Os apps Meteor não podem ser enviados por push
 {: #ts_meteor}
@@ -774,181 +743,3 @@ exemplo:
     ```
 	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
 	```
-
-## O botão Implementar para Bluemix não implementa um app
-{: #ts_deploybutton}
-
-Se você clicar no botão Implementar no {{site.data.keyword.Bluemix_notm}} e descobrir que o repositório Git não está clonado ou o app não está implementado, tente os métodos de resolução de problemas para os problemas a seguir.
-  * [O projeto Bluemix DevOps Services não pode ser criado](#ts_project-cant-be-created)
-  * [O repositório Git não foi localizado e não pode ser clonado no DevOps Services](#ts_repo-not-found)
-  * [O repositório Git está clonado no DevOps Services, mas o app não está implementado no {{site.data.keyword.Bluemix_notm}}](#ts_repo-cloned-app-not-deployed)
-
-Para obter mais informações sobre como criar o botão, consulte Criando um botão
-Implementar no {{site.data.keyword.Bluemix_notm}}.
-
-### O projeto Bluemix DevOps Services não pode ser criado
-{: #ts_project-cant-be-created}
-
-Se o projeto DevOps Services não puder ser criado, sua conta do IBM {{site.data.keyword.Bluemix_notm}} poderá ter expirado.
-
-Você clica no botão **Implementar no Bluemix**, mas a etapa "Criando projeto" não é concluída com sucesso.
-{: tsSymptoms}
-
-Sua conta do {{site.data.keyword.Bluemix_notm}}
-pode ter expirado.
-{: tsCauses}
-
-Utilize um dos seguintes métodos:
-{: tsResolve}
-
-  * Efetue login no {{site.data.keyword.Bluemix_notm}} e
-atualize as informações de sua conta.
-  * Clique no botão **Implementar no Bluemix** novamente.
-
-### O repositório Git não foi localizado e não pode ser clonado no DevOps Services
-{: #ts_repo-not-found}
-
-Se você descobrir que o repositório Git não está clonado, poderá existir um problema com o repositório ou com o fragmento do botão.
-
-Você clica no botão **Implementar no Bluemix**, mas o repositório Git não é localizado e não pode ser clonado no DevOps Services. A etapa "Clonando repositório" não é concluída com sucesso. Portanto, o app não pode ser implementado no {{site.data.keyword.Bluemix_notm}}.
-{: tsSymptoms}
-
-Esse problema pode ocorrer pelas razões a seguir:
-{: tsCauses}
-
-  * O repositório Git pode não existir ou estar acessível.
-  * Pode existir um problema no HTML ou na redução de preço do fragmento do botão.
-  * Pode existir um problema em que caracteres especiais, parâmetros de consulta ou
-fragmentos na URL estejam evitando que o repositório Git seja
-acessado corretamente.
-
-Utilize um dos seguintes métodos:
-{: tsResolve}
-
-  * Verifique se seu repositório Git existe, está acessível publicamente
-e se a URL está correta.
-  * Verifique se o fragmento não contém erros de HTML ou de redução de preço.
-  * Se caracteres especiais, parâmetros de consulta ou fragmentos causarem um problema com a URL do repositório Git, codifique a URL no fragmento do botão.
-
-### O repositório Git é clonado no DevOps Services, mas o app não está implementado no Bluemix
-{: #ts_repo-cloned-app-not-deployed}
-
-Se o app não estiver implementado, poderão existir problemas com o código no repositório.
-
-Você clica no botão **Implementar no Bluemix** e o repositório Git está clonado no DevOps Services, mas o app não está implementado no {{site.data.keyword.Bluemix_notm}}. A etapa "Implementando no Bluemix" não é concluída com sucesso.
-{: tsSymptoms}
-
-Esse problema pode ocorrer pelas razões a seguir:
-{: tsCauses}  
-
-  * Pode não haver espaço suficiente no espaço do {{site.data.keyword.Bluemix_notm}}
-para implementar um aplicativo.
-  * Um serviço necessário pode não estar declarado no arquivo `manifest.yml`.
-  * Um serviço necessário pode estar declarado no arquivo `manifest.yml`,
-mas o serviço já está no espaço de destino.
-  * Pode existir um problema com o código no repositório.
-
-Para diagnosticar o problema, revise a construção e implemente logs
-a partir da implementação:
-  1. Quando a etapa "Implementando no Bluemix" não for concluída com sucesso, clique no link na etapa anterior "Configurando pipeline" para abrir o Delivery Pipeline.
-  2. Identifique a construção com falha ou o estágio de implementação.
-  3. No estágio com falha, clique em **Visualizar logs e histórico**.
-  4. Localize a mensagem de erro.
-
-Utilize um dos seguintes métodos:
-{: tsResolve}
-
-  * Se a mensagem de erro indicar que não há espaço suficiente no espaço do {{site.data.keyword.Bluemix_notm}} para implementar o app, destine outro espaço.
-  * Se a mensagem de erro indicar que um serviço necessário não está declarado no arquivo `manifest.yml`, notifique o proprietário do repositório de que o serviço necessário deve ser incluído.
-  * Se a mensagem de erro indicar que um serviço necessário já existe
-no espaço de destino, selecione um espaço diferente para ser usado.
-  * Se a mensagem de erro indicar que existe um problema com a construção,
-corrija todos os problemas com o código que está evitando que o app seja
-construído. Para verificar se o código não contém problemas, construa o código usando comandos Git:
-    1. Clone o repositório Git:
-    ```
-    git clone <git_repository_URL>
-    ```
-    2. Abra o diretório do app:
-	```
-	cd <appname>
-	```
-    3. Crie o app:
-	```
-	<appname> create
-	```
-    4. Se necessário, forneça complementos.
-    5. Inclua todas as variáveis de configuração necessárias.
-    6. Envie o código por push:
-	```
-	git push <appname> master
-	```
-    7. Verifique se o app está construído corretamente.
-    8. Se necessário, execute o comando de implementação post:
-	```
-	<appname> run
-	```
-    9. Abra o app e verifique se ele está funcionando corretamente:
-	```
-	<appname> open
-	```
-
-## Não é possível implementar um app por meio da barra de execução
-{: #ts_runbar}
-
-A implementação falha em um estado amarelo, "não sincronizado".
-{: tsSymptoms}
-
-O app que você está implementando tem a mesma rota de outro app que está
-em execução.
-{: tsCauses}
-
-Mude a rota para ser exclusiva.
-{: tsResolve}
-
-## Não é possível localizar a barra de execução no Eclipse
-{: #ts_runbar-missing}
-
-Caso você não veja a barra de execução no Eclipse Orion {{site.data.keyword.webide}}, um dos problemas a seguir ocorreu:
-{: tsCauses}
-
-* O {{site.data.keyword.jazzhub}} não identifica seu projeto como um projeto.
-*  O {{site.data.keyword.jazzhub_short}} não pôde determinar em qual pasta seu app está.
-* O {{site.data.keyword.jazzhub_short}} não detecta que seu app é um app Node.js.
-
-Use um dos métodos a seguir, conforme apropriado:
-{: tsResolve}  
-
-* Se o {{site.data.keyword.jazzhub}} não identificar seu projeto como um projeto, crie um arquivo `project.json` no diretório-raiz de seu projeto.
-* Se o {{site.data.keyword.jazzhub_short}} não tiver conseguido determinar em qual pasta seu app está e seu app não estiver no diretório-raiz do projeto, use uma das etapas a seguir:
-  * Crie um arquivo `manifest.yml` no diretório-raiz de seu projeto e, em seguida, edite o arquivo para apontar para o local de seu app. Por exemplo, `path: path_to_your_app`.
-  * Mova seu app para o diretório-raiz de seu projeto.
-* Se o {{site.data.keyword.jazzhub_short}} não detectar que seu app é um app Node.js, crie um arquivo `package.json` na pasta de app de seu projeto.
-
-## O gancho do GitHub não está funcionando
-{: #ts_githubhookisntworking}
-
-Você configurou seu projeto GitHub para criar links de itens de trabalho ao enviar confirmações por push e os links não estão funcionando conforme o esperado.
-{: tsSymptoms}
-
-Use as etapas a seguir para localizar o problema:
-{: tsResolve}
-
-1. Em seu repositório GitHub, clique em **Configurações**.
-   ![Link de configurações do GitHub](images/github_settings.png)
-
-2. Clique em **Webhooks & serviços**.
-   ![Link de webhooks e serviços do GitHub](images/github_webhook.png)
-
-3. Para visualizar a mensagem, passe o mouse sobre o ícone de status do {{site.data.keyword.jazzhub}}.
-   ![Mensagem de erro no gancho de serviço](images/github_error.png)
-
-4. Resolva o erro de acordo com a mensagem do GitHub.
-
-5. Para verificar se a correção funcionou, confirme e envie por push outra mudança, ou acesse a página de serviço do {{site.data.keyword.jazzhub_short}} e clique em **Testar serviço**.
-   ![botão Testar serviço do GitHub](images/github_test.png)
-
-6. Confirme se não há erros verificando o ícone de status novamente.
-   ![Ícone de status sem erros](images/githubResolved_small.png)
-
-Para obter mais informações, veja [Configurando o GitHub para projetos Bluemix DevOps Services ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://hub.jazz.net/docs/githubhooks/){: new_window}.
