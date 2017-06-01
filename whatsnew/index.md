@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-05-30" 
+lastupdated: "2017-06-01" 
 
 ---
 
@@ -146,6 +146,11 @@ The Liberty buildpack v3.8 provides new default and monthly Liberty runtime vers
 
 ## Services
 {: #services_category}
+
+### New scalable plan available for {{site.data.keyword.dashdbshort}} for Transactions
+New as of: 31 May 2017
+
+A new plan is available for {{site.data.keyword.dashdbshort}} for Transactions that can grow with your database needs. The new Flex plan allows you to start with a small system and grow the power and storage capacity of that system easily and quickly. {{site.data.keyword.dashdbshort}} for Transactions is 100% DB2-compatible and provides a 99.95% SLA on high availability plans.
 
 ### New Updates to  {{site.data.keyword.mobilepush}} service on {{site.data.keyword.Bluemix_notm}}
 New as of: 24 May 2017
