@@ -1,0 +1,16 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="compose-for-postgresql" audience="service" href="/docs/services/ComposeForPostgreSQL/index.html"}
+Compose For PostgreSQL
+
+	{: .navgroup id="learn"}
+	index.md
+	credentials.md
+
+	{: .topicgroup }
+	Enlaces relacionados
+		[App Node.js de ejemplo](https://github.com/IBM-Bluemix/compose-postgresql-helloworld-nodejs)
+		[Ayuda de Compose](https://help.compose.com)
+		[Artículos de Compose](https://www.compose.com/articles/)
+	{: .navgroup-end}

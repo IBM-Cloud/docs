@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-03-16"
 
 ---
 {:new_window: target="_blank"}
@@ -34,17 +34,17 @@ You must install cURL before you can use the service.
 ```
 {
   "accessToken": "<api-key>",
-  "uri": "https://fss-analytics.mybluemix.net/"
+  "uri": "https://fss-analytics.stage1.mybluemix.net/"
 }
 ```
 
 ## Step 2: Get the value of an instrument for an earlier date under a given scenario
 
-To use the following example, replace api-key with your service key, the service-url with the URL for your service, and your scenario file.
+To use the following example, replace api-key with your service key, the service-url with the URL for your service, and your scenario file. To create the scenario file, use the [{{site.data.keyword.predmarketscenario_short}} service](/docs/services/PredictiveMarketScenarios/index.html).
 
 ```
 curl -X POST -H "X-IBM-Access-Token: <api-key>" -H "EncType: multipart/form-data" -F "scenario_file=@<location-of-scenario-file>" "<service-url>
-/api/v1/scenario/historical/instrument/<name-of-instrument>?date=2017-01-01”
+/api/v1/scenario/historical/instrument/<id-of-instrument>?date=2017-01-01”
 ```
 
 {:codeblock}
@@ -54,7 +54,7 @@ The following is an example of a response to a successful request:
 ```
 [
   {
-    "instrument": “<name-of-instrument>",
+    "instrument": “<id-of-instrument>",
     "scenario": “Base Scenario",
     "values": [
       {
@@ -64,7 +64,7 @@ The following is an example of a response to a successful request:
     ]
   },
   {
-    "instrument": “<name-of-instrument>",
+    "instrument": “<id-of-instrument>",
     "scenario": “New Scenario",
     "values": [
       {

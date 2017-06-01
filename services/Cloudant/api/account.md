@@ -15,9 +15,9 @@ lastupdated: "2017-01-06"
 
 Your account is your entry point for the {{site.data.keyword.cloudant}} API.
 You access your account using the address prefix
-`https://$USERNAME.cloudant.com`.
+`https://$ACCOUNT.cloudant.com`.
 Your Cloudant dashboard is always
-`https://$USERNAME.cloudant.com/dashboard.html`.
+`https://$ACCOUNT.cloudant.com/dashboard.html`.
 {:shortdesc}
 
 If you don't yet have an account, [sign up ![External link icon](../images/launch-glyph.svg "External link icon")](https://cloudant.com/sign-up/){:new_window}.
@@ -25,7 +25,7 @@ If you don't yet have an account, [sign up ![External link icon](../images/launc
 ## Ping
 
 To see if your Cloudant account is accessible,
-make a `GET` against `https://$USERNAME.cloudant.com`.
+make a `GET` against `https://$ACCOUNT.cloudant.com`.
 If you misspelled your account name,
 you might get a [503 'service unavailable' error](http.html#503).
 
@@ -33,14 +33,14 @@ _Example of connecting to your Cloudant account, using HTTP:_
 
 ```HTTP
 GET / HTTP/1.1
-HOST: $USERNAME.cloudant.com
+HOST: $ACCOUNT.cloudant.com
 ```
 {:codeblock}
 
 _Example of connecting to your Cloudant account, using the command line:_
 
 ```sh
-curl -u $USERNAME https://$USERNAME.cloudant.com
+curl -u $ACCOUNT https://$ACCOUNT.cloudant.com
 ```
 {:codeblock}
 
@@ -50,7 +50,7 @@ _Example of connecting to your Cloudant account, using Javascript:_
 
 ```javascript
 var nano = require('nano');
-var account = nano("https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com");
+var account = nano("https://$ACCOUNT:$PASSWORD@$ACCOUNT.cloudant.com");
 account.request(function (err, body) {
 	if (!err) {
 		console.log(body);

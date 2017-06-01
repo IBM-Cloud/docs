@@ -66,7 +66,7 @@ Utilizza il seguente scenario di esempio per configurare il tuo ambiente di inte
 
 ## Se necessario, aggiungi un tipo dispositivo e un dispositivo  
 {: #add_device}  
-In questo scenario, vengono utilizzati due tipi dispositivo e quattro istanze dispositivo. Le istanze dispositivo *temperatureSensor1* e *temperatureSensor2* sono associate al tipo dispositivo *Thermometer*. Le istanze dispositivo *humiditySensor1* e *humiditySensor2* sono associate al tipo dispositivo *Hygrometer*. 
+In questo scenario, vengono utilizzati due tipi dispositivo e quattro istanze dispositivo. Le istanze dispositivo *temperatureSensor1* e *temperatureSensor2* sono associate al tipo dispositivo *Thermometer*. Le istanze dispositivo *humiditySensor1* e *humiditySensor2* sono associate al tipo dispositivo *Hygrometer*.
 
 Per informazioni sull'utilizzo delle API REST per aggiungere un tipo dispositivo, consulta la documentazione [API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofThings.ibmcloud.com/swagger/v0002.html#!/Device_Types).  
 
@@ -111,13 +111,13 @@ POST /schemas
 I seguenti parametri sono obbligatori:  
 <table>
 <tr>
-<th>	Parametro	</th><th>	Descrizione </th>
+<th>	Parametro	</th><th>	Descrizione	</th>
 </tr>
 <tr>
-<td>	name	</td><td>	Fornisci un nome per lo schema di composizione che stai creando. </td>
+<td>	name	</td><td>	Fornisci un nome per lo schema di composizione che stai creando.	</td>
 </tr>
 <tr>
-<td>	schemaFile	</td><td>	Percorso al file JSON dello schema di composizione locale. </td>
+<td>	schemaFile	</td><td>	Percorso al file JSON dello schema di composizione locale.	</td>
 </tr>
 </table>
 
@@ -199,14 +199,10 @@ I seguenti parametri sono obbligatori:
 <th>Parametro</th><th>Descrizione</th>
 </tr>
 <tr>
-<td>name</td><td>Fornisci un nome per lo schema dell'interfaccia dell'applicazione che stai creando.
-</td>
+<td>name</td><td>Fornisci un nome per lo schema dell'interfaccia dell'applicazione che stai creando.</td>
 </tr>
 <tr>
-<td>schemaFile</td><td>Percorso al file JSON dello schema dell'interfaccia dell'applicazione locale.
-
-
-</td>
+<td>schemaFile</td><td>Percorso al file JSON dello schema dell'interfaccia dell'applicazione locale.</td>
 </tr>
 </table>  
 
@@ -232,20 +228,16 @@ POST /applicationinterfaces
 I seguenti parametri sono obbligatori:  
 <table>
 <tr>
-<th>	Parametro	</th><th>	Descrizione </th>
+<th>	Parametro	</th><th>	Descrizione	</th>
 </tr>
 <tr>
-<td>	name	</td><td>	Fornisci un nome per l'interfaccia dell'applicazione che stai creando.
-</td>
+<td>	name	</td><td>	Fornisci un nome per l'interfaccia dell'applicazione che stai creando.	</td>
 </tr>
 <tr>
-<td>	description	</td><td>	Fornisci una descrizione dell'interfaccia dell'applicazione. </td>
+<td>	description	</td><td>	Fornisci una descrizione dell'interfaccia dell'applicazione.	</td>
 </tr>
 <tr>
-<td>	schemaId	</td><td>	Percorso al file JSON dello schema dell'interfaccia dell'applicazione locale.
-
-
-</td>
+<td>	schemaId	</td><td>	Percorso al file JSON dello schema dell'interfaccia dell'applicazione locale.	</td>
 </tr>
 </table>  
 
@@ -268,24 +260,19 @@ POST /thing/types/{thingtypeId}/applicationinterfaces
 I seguenti parametri sono obbligatori:  
 <table>
 <tr>
-<th>	Parametro	</th><th>	Descrizione </th>
+<th>	Parametro	</th><th>	Descrizione	</th>
 </tr>
 <tr>
-<td>	id	</td><td>	L'ID creato per il tipo oggetto. </td>
+<td>	id	</td><td>	L'ID creato per il tipo oggetto.	</td>
 </tr>
 <tr>
-<td>	name	</td><td>	Fornisci un nome per l'interfaccia dell'applicazione che stai creando.
-</td>
+<td>	name	</td><td>	Fornisci un nome per l'interfaccia dell'applicazione che stai creando.	</td>
 </tr>
 <tr>
-<td>	schemaId	</td><td>	L'ID creato per la risorsa di interfaccia dell'applicazione.
-</td>
+<td>	schemaId	</td><td>	L'ID creato per la risorsa di interfaccia dell'applicazione.	</td>
 </tr>
 <tr>
-<td>	refs/schema	</td><td>	Il percorso alla risorsa di interfaccia dell'applicazione. Di norma: /schemas/*Idschema*
-
-
-</td>
+<td>	refs/schema	</td><td>	Il percorso alla risorsa di interfaccia dell'applicazione. Di norma: /schemas/*Idschema*	</td>
 </tr>
 </table>  
 
@@ -310,13 +297,13 @@ POST /thing/types/{thingtypeId}/mappings
 I seguenti parametri sono obbligatori:  
 <table>
 <tr>
-<th>	Parametro	</th><th>	Descrizione </th>
+<th>	Parametro	</th><th>	Descrizione	</th>
 </tr>
 <tr>
-<td>	applicationInterfaceId</td><td>	L'ID creato per l'interfaccia dell'applicazione. </td>
+<td>	applicationInterfaceId	</td><td>	L'ID creato per l'interfaccia dell'applicazione.	</td>
 </tr>
 <tr>
-<td>	propertyMappings	</td><td>	Una struttura JSON valida che associa le proprietà definite per l'interfaccia dell'applicazione alle proprietà del payload di evento di dispositivo. </td>
+<td>	propertyMappings	</td><td>	Una struttura JSON valida che associa le proprietà definite per l'interfaccia dell'applicazione alle proprietà del payload di evento di dispositivo.	</td>
 </tr>
 </table>  
 
@@ -389,13 +376,13 @@ POST /thing/types/{thingTypeId}/things
 I seguenti parametri sono obbligatori:  
 <table>
 <tr>
-<th>	Parametro	</th><th>	Descrizione </th>
+<th>	Parametro	</th><th>	Descrizione	</th>
 </tr>
 <tr>
 <td>	typeId	</td><td>		L'ID del tipo oggetto che hai creato in precedenza.</td>
 </tr>
 <tr>
-<td>	thingId	</td><td>	Fornisci un nome per l'istanza oggetto che stai creando. </td>
+<td>	thingId	</td><td>	Fornisci un nome per l'istanza oggetto che stai creando.	</td>
 </tr>
 </table>
 

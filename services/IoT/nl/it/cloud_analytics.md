@@ -182,11 +182,11 @@ Per creare il post di una scheda nell'azione Trello:
 1.	In IFTTT, collegati al canale Trello.
 2.	In IFTTT, collegati al canale Maker. Prendi nota della tua chiave IFTTT. Hai bisogno di questa chiave per collegarti a IFTTT da {{site.data.keyword.iot_short_notm}}.
 5.	In IFTTT, crea una ricetta:
- 1. Fare clic su **THIS**.
+ 1. Fai clic su **THIS**.
  2. Seleziona il canale **Maker**.  
  2. Fai clic su **Recieve a web request**.
  3. Immetti il nome evento `post-Trello-card`.
- 4. Fare clic su **THAT**.
+ 4. Fai clic su **THAT**.
  5. Seleziona il canale **Trello**.
  6. Seleziona la scheda Trello in cui creare la scheda.
  7. Immetti un nome per l'elenco in cui aggiungere le schede.

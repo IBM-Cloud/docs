@@ -1,29 +1,50 @@
 ---
-layout: tutorial
-title: IBM MobileFirst Foundation 8.0
-breadcrumb_title: 8.0
-use_dropdown: true
-print_pdf: false
-weight: 0
-show_disqus: false
-show_breadcrumb: true
+
+copyright:
+  years: 2016, 2017
+lastupdated: "2017-3-3"
 ---
-<!-- NLS_CHARSET=UTF-8 -->
-<br>
-{{site.data.keys.product_full }} では、事前に統合されたモバイル・アプリケーション・サービスの包括的なセットを使用して、モバイル・アプリケーションのビルド、管理、および更新を大幅に合理化します。
 
-開発者は、フロントエンド・フレームワークと好みのツールを使用してアプリケーションをビルドできます。また、サポートされるモバイル・プラットフォームで広い範囲にわたって使用可能な {{site.data.keys.product }} Software Development Kit (SDK) を使用して、アプリケーションにプッシュ、認証、オフライン同期、およびビジネス・ロジックを簡単に追加できます。{{site.data.keys.product }} によって、クライアントからサーバーにアプリケーションを制御できるようになり、それにより、ビジネス・データを相互作用の時点で収集できるようになります。また、{{site.data.keys.product }} アプリケーションによって、アプリケーションのインクリメンタル更新のための合理化された反復可能処理を採用することができ、アプリケーションを柔軟なハイブリッド・クラウド・パターンで実行できます。
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
-すべてのカテゴリーとチュートリアルを確認するには、次にアクセスします。
 
-* [すべてのチュートリアル](all-tutorials/)
+# {{site.data.keyword.product-insights_short}} の概要
+{: #product-insights}
 
-それぞれの内容については、以下にアクセスします。 
+{{site.data.keyword.product-insights_full}} はオンプレミスの IBM ソフトウェア製品に接続して、製品間インベントリーを作成し、製品使用量メトリックを洞察できるようにします。
 
-* [Cordova の開発](cordova-tutorials/)
-* [iOS の開発](ios-tutorials/) 
-* [Android の開発](android-tutorials/) 
-* [Windows 8.1 Universal および Windows 10 UWP の開発](windows-8-10-tutorials/)
-* [Xamarin の開発](xamarin-tutorials/)
-* [Web アプリケーションの開発](web-tutorials/)
-* [サーバー・サイドの開発](server-side-tutorials/)
+{:shortdesc}
+
+{{site.data.keyword.product-insights_short}} サービスは、IBM Bluemix 内で実行され、オンプレミスの有効な IBM ソフトウェア製品から情報を受け取ります。その情報がサービス・インスタンスのダッシュボードに表示されます。このサービスを使用するには、Bluemix アカウントが必要です。また、組織とスペースにサービスを作成する必要があります。オンプレミスの有効な製品に関する製品情報と使用量情報は、その固有のサービスのスコープまたはコンテキストに安全に保管され、安全に参照できます。 
+
+ヒント: わかりやすくするために、最初は単一のサービス・インスタンスを使用するとよいでしょう。
+
+{{site.data.keyword.product-insights_short}} を開始するには、以下の手順に従ってください。
+
+1.  **「管理」**タブで**「製品の登録 (Register a product)」**ボタンをクリックして、サポート対象製品および必要なバージョン・レベルのリストを表示します。オンプレミスの製品インスタンスを {{site.data.keyword.product-insights_short}} サービスに接続できるように、製品タイプ別の手順が用意されています。必要な場合は、オンプレミスの有効な IBM ソフトウェア製品を最小前提条件レベルに更新してください。最小サポート・レベルが必要な製品がある場合は、フィックスパックまたは暫定修正をインストールして、{{site.data.keyword.product-insights_short}} に統合できるようにします。 
+2.  オンプレミスの有効な IBM ソフトウェア製品を {{site.data.keyword.product-insights_short}} サービスに接続します。どの製品についても、構成プロセスの中でサービス資格情報 (つまり、apikey と apihost) が必要になります。サービス資格情報は、サービス・ダッシュボードの**「サービス資格情報」**タブで確認できます。 
+3.  各製品インスタンスを有効化して接続したら、それらの製品情報と使用量情報が {{site.data.keyword.product-insights_short}} サービスに提供されるように、通常は、製品や製品インスタンスを始動または再始動する必要があります。 
+
+製品を有効化する方法、各製品の最小サポート・レベル、各製品を {{site.data.keyword.product-insights_short}} と統合する方法についての詳細を調べるには、{{site.data.keyword.product-insights_full}} [Technical Community](https://developer.ibm.com/product-insights/) に参加してください。
+
+サービス・ダッシュボードで**「管理」**を選択すると、インベントリーを参照できます。  
+
+* サービス・ダッシュボードの**「製品」**ペインに、接続されている製品の名前がリストされます。 
+* すべての製品インスタンスを表示するには、**「すべて表示」**を選択します。ある製品の製品インスタンスを表示するには、**「製品」**ペインからその製品を選択します。すると、その製品インスタンスが**「インスタンス」**ペインに表示されます。
+* 単一の製品インスタンスの詳細を表示するには、**「インスタンス」**ペインからその製品インスタンスを選択します。すると、**「詳細」**ペインにデータが表示されます。**「詳細」**ペインには、製品インスタンスの詳細と、製品インスタンスから送信された使用量情報が表示されます。
+* **「使用量」**タブには、製品の使用量情報がグラフ形式で表示されます。製品によっては、表示する情報のタイプとサンプリング期間を指定できます。
+* **「詳細」**タブには、製品情報、環境情報、コンポーネント情報などの製品インスタンス情報が表示されます。
+* **「アドバイザー (Advisor)」**タブの**「サービス」**タブには、現在の製品インスタンスに関連して役に立つ可能性がある他のサービスの詳細が表示されます。**「更新」**タブには、製品インスタンスのバージョン・レベルとその現行性に関する情報が示されます。
+
+
+
+
+
+
+
+
+
+

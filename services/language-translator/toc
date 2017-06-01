@@ -1,0 +1,48 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="language-translator" audience="service" href="/docs/services/language-translator/getting-started.html"}
+Language Translator
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    [Demo: Translate text](http://language-translator-demo.mybluemix.net/)
+
+    {: .topicgroup}
+    Additional resources
+        [Blog](https://developer.ibm.com/watson/blog/)
+        [Webinars](http://www.ibm.com/watson/building-with-watson-webinar.html)
+        [Watson videos](https://www.youtube.com/user/IBMWatsonSolutions)
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    {: .topicgroup}
+    External docs
+        [About](https://www.ibm.com/watson/developercloud/doc/language-translator/index.html)
+        [Customizing your model](https://www.ibm.com/watson/developercloud/doc/language-translator/customizing.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [API reference](https://www.ibm.com/watson/developercloud/language-translator/api/v2/)
+    [Sample app: Watson Language Translator](https://github.com/watson-developer-cloud/language-translator-nodejs)
+    
+    {: .topicgroup}
+    Watson SDKs
+        [Java SDK](https://github.com/watson-developer-cloud/java-sdk)
+        [Node.js SDK](https://github.com/watson-developer-cloud/node-sdk)
+        [Python SDK](https://github.com/watson-developer-cloud/python-sdk)
+        [Swift SDK](https://github.com/watson-developer-cloud/ios-sdk)
+        [Unity SDK](https://github.com/watson-developer-cloud/unity-sdk)
+
+    [Watson GitHub repos](https://github.com/watson-developer-cloud/)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    [Release notes](https://www.ibm.com/watson/developercloud/doc/language-translator/release-notes.html)
+
+    {: .topicgroup}
+    Developer community
+        [StackOverflow](http://stackoverflow.com/questions/tagged/language-translation+ibm-watson-cognitive)
+        [developerWorks Answers](https://developer.ibm.com/answers/topics/language-translator/)
+        [WDC Slack channel](http://wdc-slack-inviter.mybluemix.net/)
+    {: .navgroup-end}

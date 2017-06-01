@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-26"
+lastupdated: "2017-02-24"
 
 ---
 
@@ -18,15 +18,15 @@ lastupdated: "2016-10-26"
 {: shortdesc}
 
 
-## WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 中的 REST API 使用
+## WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} 中的 REST API 使用
 {: #restapi_usage}
 
-WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 中的實例會以下列其中一種方式建立、佈建、管理和刪除：
+WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} 中的實例會以下列其中一種方式建立、佈建、管理和刪除：
 
 * 從 {{site.data.keyword.Bluemix_notm}} 使用者介面的 {{site.data.keyword.Bluemix_notm}}「型錄」及「服務儀表板」。
 * 藉由建立使用 RESTful API 的應用程式或 Script。
 
-透過使用遵循 Swagger 2.0 的 REST API，客戶能夠存取與透過入口網站和儀表板所提供功能的相同功能。如需所支援之 REST API 和資源的相關資訊，請參閱 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [REST API 文件](https://wasaas-broker.ng.bluemix.net/wasaas-broker/api#/){: new_window}。如需示範 REST API 用法的範例程式碼，請下載由 Git 管理的 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [REST API 範例](https://github.com/IBM-Bluemix/WebSphere-for-Bluemix-API-Usage){: new_window}。
+透過使用遵循 Swagger 2.0 的 REST API，客戶能夠存取與透過入口網站和儀表板所提供功能的相同功能。如需所支援 REST API 及資源的相關資訊，請參閱 WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} [REST API 文件](https://wasaas-broker.ng.bluemix.net/wasaas-broker/api#/){: new_window}。如需示範 REST API 用法的範例程式碼，請下載由 Git 管理的 WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} [REST API 範例](https://github.com/IBM-Bluemix/WebSphere-for-Bluemix-API-Usage){: new_window}。
 
 **附註：**建立服務實例之後，根據所建立的 T 恤尺碼，您的服務可能無法立即供使用。建議您查詢所傳回 JSON 的**狀態**欄位，以判斷服務實例的現行狀態。
 
@@ -36,9 +36,10 @@ WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 中的實例
 
 | **地區名稱** | **地理位置** | **地區字首** | **API 端點 URL** |       
 |:-------------:|:----------:|:--------------:|:-------------:|
-| 美國南部地區 | 美國德州達拉斯 | ng | https://wasaas-broker.ng.bluemix.net/wasaas-broker/api  |
-| 英國地區 | 英國倫敦 | eu-gb | https://wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api  |
-| 雪梨地區 | 澳洲雪梨 | au-syd | https://wasaas-broker.au-syd.bluemix.net/wasaas-broker/api  |
+| 美國南部 | 美國德州達拉斯 | ng | https://wasaas-broker.ng.bluemix.net/wasaas-broker/api  |
+| 英國 | 英國倫敦 | eu-gb | https://wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api  |
+| 雪梨 | 澳洲雪梨 | au-syd | https://wasaas-broker.au-syd.bluemix.net/wasaas-broker/api  |
+| 法蘭克福 | 德國法蘭克福 | eu-de | https://wasaas-broker.eu-de.bluemix.net/wasaas-broker/api  |
 
 
 
@@ -59,10 +60,10 @@ WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 中的實例
 **附註**：由於特定量的運算、記憶體和 I/O 資源，客戶會因為處理停止狀態的累計 VM，被收取減價 5% 的費用。客戶會被控制在固定數量的已停止實例，最多不超過 10 個 IP 位址或 64 GB 的記憶體。
 
 
-## 為 WebSphere Application Server for Bluemix 實例設定 openVPN
+## 為 WebSphere Application Server in Bluemix 實例設定 openVPN
 {: #setup_openvpn}
 
-需要有 OpenVPN，才能存取 Bluemix 虛擬機器上的任何 WebSphere Application Server。必須使用管理者專用權來安裝及執行它。
+需要有 OpenVPN，才能存取任何 WebSphere Application Server in Bluemix 虛擬機器。必須使用管理者專用權來安裝及執行它。
 
 ### 使用下列指示，在 Windows 中設定 openVPN：
 
@@ -70,7 +71,7 @@ WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 中的實例
   * [openvpn-install-2.3.4-I001-x86_64.exe](https://swupdate.openvpn.org/community/releases/openvpn-install-2.3.4-I001-x86_64.exe){: new_window}（適用於 64 位元），或
   * [openvpn-install-2.3.4-I001-i686.exe](https://swupdate.openvpn.org/community/releases/openvpn-install-2.3.4-I001-i686.exe){: new_window}（適用於 32 位元）。
 2. 確定您[以 Windows 管理者身分執行](https://technet.microsoft.com/en-us/magazine/ff431742.aspx){: new_window}且已安裝 openVPN。
-3. 在服務儀表板中，從 WebSphere Application Server for Bluemix 實例的 OpenVPN 下載鏈結下載 VPN 配置檔。將壓縮檔中的全部 4 個檔案解壓縮至 **{OpenVPN home}\config** 目錄。例如：
+3. 在服務儀表板中，從 WebSphere Application Server in Bluemix 實例的 OpenVPN 下載鏈結下載 VPN 配置檔。將壓縮檔中的全部 4 個檔案解壓縮至 **{OpenVPN home}\config** 目錄。例如：
 
   <pre>  
 C:\Program Files\OpenVPN\Config  </pre>
@@ -81,7 +82,7 @@ C:\Program Files\OpenVPN\Config  </pre>
 ### 使用下列指示，在 Linux 中設定 openVPN：
 1. 若要安裝 openVPN，請遵循[指示](https://openvpn.net/index.php/access-server/docs/admin-guides/182-how-to-connect-to-access-server-with-linux-clients.html){: new_window}。
   * 如果您需要手動下載及安裝 RPM 套件管理程式，請前往 [openVPN unix/linux 下載](https://openvpn.net/index.php/access-server/download-openvpn-as-sw.html){: new_window}。您可能需要 Linux 管理者的協助。
-3. 在服務儀表板中，從 WebSphere Application Server for Bluemix 實例的 OpenVPN 下載鏈結下載 VPN 配置檔。請將檔案解壓縮至您要從中啟動 openVPN 用戶端的目錄。您需要相同目錄中的所有四個檔案。
+3. 在服務儀表板中，從 WebSphere Application Server in Bluemix 實例的 OpenVPN 下載鏈結下載 VPN 配置檔。請將檔案解壓縮至您要從中啟動 openVPN 用戶端的目錄。您需要相同目錄中的所有四個檔案。
 3. 啟動 openVPN 用戶端程式。開啟終端機視窗，並移至包含配置檔案的目錄。以 root 身分執行下列指令：
 
   <pre>
@@ -94,7 +95,7 @@ $ openvpn --config vt-wasaas-wasaas.ovpn  </pre>
 3. 連接至 VPN 網路，然後可以存取虛擬機器。在第一次存取後，Tunnelblick 會快取配置，並且您可以從 [Tunnelblick](https://tunnelblick.net/){: new_window} 連接。您可以將圖示放在頂端功能表列上，以方便進行存取。
 
 
-## 使用 SSH 存取 WebSphere Application Server for Bluemix VM
+## 使用 SSH 存取 WebSphere Application Server in Bluemix VM
 {: #using_ssh}
 
 這些指示假設您是使用 OpenSSH 作為用戶端。OpenSSH 通常適用於 Linux，也適用於在 Windows 上執行的 Cygwin。您還可以安裝 OpenSSH，以從 Windows 命令提示字元執行。
@@ -112,7 +113,7 @@ OpenSSH_6.6p1, OpenSSL 1.0.1g 7 Apr 2014
   ```
   {: codeblock}
 
-使用下列指示，設定 WebSphere Application Server for Bluemix VM 的 SSH 存取權：
+使用下列指示，設定 WebSphere Application Server in Bluemix VM 的 SSH 存取權：
 
 1. 在您第一次連接時檢閱出現的警告訊息「無法確定主機 x.x.x.x 的真實性」。這是正常訊息。系統提示時，請選取 yes。現在會在 VM 上為使用者 virtuser 安裝公開金鑰。
 2. 使用私密金鑰登入 virtuser。為獲取最佳結果，請使用私密金鑰鑑別方法。
@@ -141,8 +142,8 @@ $ ssh root@169.53.246.x  </pre>
   <pre>
    Host VM1
 Hostname 169.53.246.xxx
-      User virtuser
-      IdentityFile /path/privateKeyFileName  </pre>
+User virtuser
+IdentityFile /path/privateKeyFileName  </pre>
   {: codeblock}
 
 9. 執行 "ssh VM1"，以 virtuser 進行連接。
@@ -170,7 +171,7 @@ Hostname 169.53.246.xxx
 {: #firewall_ports}
 
 您可能會發現需要開啟防火牆上的埠，以容許存取應用程式及資料庫。
-  * 在每一個 WebSphere Application Server for Bluemix 節點上，您會在 WAS_HOME/virtual/bin 目錄中找到 Script openFirewallPorts.sh。
+  * 在每一個 WebSphere Application Server in Bluemix 節點上，您會在 WAS_HOME/virtual/bin 目錄中找到 Script openFirewallPorts.sh。
   * 在每一個 Liberty Collective 主機上，您會在 WAS_HOME/virtual/bin 目錄中找到 Script openFirewallPorts.sh。
 
 用法：
@@ -205,7 +206,7 @@ Hostname 169.53.246.xxx
 
 * 在本端 Windows、Linux 或 Mac 環境中，確保已配置、啟動 [openVPN](systemAccess.html#setup_openvpn)，且您已連接到適當的的地區。
 
-* 從 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 服務儀表板，按一下**開啟管理主控台**，並使用 wsadmin 和「服務儀表板」中所提供之「管理密碼」來登入。
+* 從「WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} 服務儀表板」中，按一下**開啟管理主控台**，並使用 wsadmin 及「服務儀表板」中所提供的「管理密碼」來登入。
 
 * 從管理主控台中，建立應用程式伺服器（例如，***server1***)，因為部署管理程式已與空的自訂節點聯合。
 
@@ -253,4 +254,34 @@ Hostname 169.53.246.xxx
 
 **附註：**所提供的步驟，代表當您試圖配置 Web 伺服器時的許多路徑之一。如需進一步的協助，請參閱 [IBM Knowledge Center](https://www.ibm.com/support/knowledgecenter/search/configure%20web%20server?scope=SSAW57_9.0.0){: new_window}。
 
-**附註：**如果您無法存取應用程式，則可能面臨防火牆上的埠存取問題。因此，您可能需要重新啟動下列任何伺服器：應用程式伺服器、節點代理程式、Web 伺服器和部署管理程式。另外，您也可能需要存取 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 服務儀表板，然後重新啟動每部虛擬機器。
+**附註：**如果您無法存取應用程式，則可能面臨防火牆上的埠存取問題。因此，您可能需要重新啟動下列任何伺服器：應用程式伺服器、節點代理程式、Web 伺服器和部署管理程式。另外，您也可能需要存取「WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} 服務儀表板」，然後重新啟動每部虛擬機器。
+
+## SSL 配置
+{: #ssl_configuration}
+
+傳統 WebSphere Application Server 及 Liberty 設定檔已配置 [SSL_TLSv2](https://www.ibm.com/support/knowledgecenter/en/SSYKE2_8.0.0/com.ibm.java.security.component.80.doc/security-component/jsse2Docs/protocols.html){: new_window} 通訊協定。若要變更通訊協定，請修改下列檔案：
+
+針對傳統 WebSphere Application Server：
+
+1. 編輯 /opt/IBM/WebSphere/Profiles/*profile_name*/config/cell/*cell_name* 中的 **security.xml**，並修改下行：
+
+  ```
+  sslProtocol="SSL_TLSv2"
+  ```
+{: codeblock}
+
+2. 編輯 /opt/IBM/WebSphere/Profiles/*profile_name*/properties 中的 **ssl.client.props**，並修改下行：
+
+  ```
+  com.ibm.ssl.protocol=SSL_TLSv2
+  ```
+{: codeblock}
+
+針對 Liberty 設定檔：
+
+1. 編輯 /opt/IBM/WebSphere/Profiles/Liberty/servers/server1 中的 **server.xml**，並修改 defaultSSLConfig ssl 配置元素中的下行：
+
+  ```
+  sslProtocol="SSL_TLSv2"
+  ```
+{: codeblock}

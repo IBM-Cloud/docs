@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-28"
+lastupdated: "2017-02-24"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2016-10-28"
 ## Estratégia de Manutenção
 {: #maintenance_strategy}
 
-O IBM WebSphere Application Server for Bluemix é atualizado regularmente, assegurando que novas instâncias de serviço sejam criadas com fix packs e correções atuais. A
+O IBM WebSphere Application Server no Bluemix é atualizado regularmente, assegurando que novas instâncias de serviço sejam criadas com fix packs e correções atuais. A
 nuvem traz fornecimento fácil e rápido de novas instâncias de serviço para o gerenciamento de middleware. Espera-se
 que muitos consumidores façam upgrade para uma nova instância de serviço quando desejarem aplicar a manutenção. Para os consumidores que desejam reter instâncias de serviço de longa duração, os repositórios de manutenção ficam
 disponíveis para o middleware e o convidado operacional subjacente. Esses repositórios permitem que os usuários

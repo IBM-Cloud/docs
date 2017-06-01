@@ -37,6 +37,8 @@ Quando ti registri con {{site.data.keyword.iot_short_notm}}, ti viene fornito un
 
 Per la tua sicurezza, è impossibile la comunicazione tra le organizzazioni. L'unico modo per trasmettere dati tra due organizzazioni è di creare un'applicazione in ognuna delle organizzazioni che comunicherà con le applicazioni in altre organizzazioni.
 
+**Nota:** il tuo ID organizzazione {{site.data.keyword.iot_short_notm}} è diverso dal tuo ID [organizzazione Bluemix](../../docs/admin/orgs_spaces.html#orginfo).
+
 ### Dispositivi
 
 Un'unità può essere qualsiasi cosa che dispone di una connessione a internet e che può trasmettere i dati nel cloud. Tuttavia, i dispositivi non possono comunicare direttamente con altri dispositivi, invece i dispositivi accettano i comandi dalle applicazioni e inviano gli eventi alle applicazioni. I dispositivi in {{site.data.keyword.iot_short_notm}} sono identificati da un token di autenticazione univoco. I dispositivi devono essere registrati prima di potersi collegare a {{site.data.keyword.iot_short_notm}}.

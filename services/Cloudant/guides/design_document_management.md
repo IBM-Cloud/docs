@@ -276,7 +276,7 @@ and can include authentication credentials.
 _Defining the URL of the Cloudant instance with authentication credentials:_
 
 ```sh
-export COUCH_URL=https://myusername:mypassword@myhost.cloudant.com
+export COUCH_URL=https://$ACCOUNT:$PASSWORD@$HOST.cloudant.com
 ```
 {:codeblock}
 

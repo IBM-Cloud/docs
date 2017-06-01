@@ -17,7 +17,7 @@ Continuous Release
 
 	{: .navgroup id="howto"}
 	{: .topicgroup}
-	Releases
+	Release events
 		UCCR_releases.md
 
 	{: .topicgroup}
@@ -30,7 +30,7 @@ Continuous Release
 		UCCR_tasks.md
 
 	{: .topicgroup}
-	Events
+	Calendar events and tags
 		UCCR_events.md
 	{: .navgroup-end}
 

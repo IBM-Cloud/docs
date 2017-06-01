@@ -744,6 +744,7 @@ Parametro	|	Descrizione
 applicationInterfaceId	|	L'ID creato per l'interfaccia dell'applicazione.
 propertyMappings	|	Una struttura JSON valida che associa le proprietà definite per l'interfaccia dell'applicazione alle proprietà del payload di evento di dispositivo. Vedi i seguenti esempi.
 
+
 Per ulteriori dettagli, consulta la [Documentazione {{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types).
 
 In questo scenario, definiamo le associazioni al tipo dispositivo *EnvSensor1* per associare la proprietà **t** nell'evento in entrata *tevt* alla proprietà **temperature** nell'interfaccia dell'applicazione. Definiamo inoltre le associazioni al tipo dispositivo *EnvSensor2* per associare la proprietà **temp** nell'evento in entrata *tempevt* alla proprietà **temperature** nell'interfaccia dell'applicazione.

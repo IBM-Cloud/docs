@@ -130,7 +130,7 @@ Per installare EAA sul tuo gateway:
 1. Nel dashboard {{site.data.keyword.iot_short}}, passa a **Rules**.
 2. Fai clic su **Download Edge Agent** per andare alla [IBM Edge Analytics community ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true){:new_window}.
 3. Passa alla sezione **Files** e scarica le directory compresse appropriate per il tuo tipo di gateway.  
-La soluzione Edge Analytics è disponibile come una SDK per i dispositivi che supportano Java o come un DSLink per i dispositiv gateway Cisco.
+La soluzione Edge Analytics è disponibile come una SDK per i dispositivi che supportano Java o come un DSLink per i dispositivi gateway Cisco.
 4. Per informazioni su come installare e configurare il componente software EAA nel tuo gateway, consulta le seguenti informazioni:
  - SDK  
  Consulta il file readme e il PDF e i link dei video disponibili nella community.  

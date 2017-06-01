@@ -705,12 +705,3 @@ Because protection of private data is critical, {{site.data.keyword.IBM_notm}} n
 <li>Provide the backup files for the {{site.data.keyword.IBM_notm}} administrator in case of any need to restore.</li>
 </ul>
 
-# rellinks
-{: rellinks}
-## general
-{: general}
-* [Discover: {{site.data.keyword.Bluemix_local_notm}} ![External link icon](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/hybrid/local/){: new_window}
-* [What's new in {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)
-* [{{site.data.keyword.Bluemix_notm}} glossary](/docs/overview/glossary/index.html)
-* [Managing {{site.data.keyword.Bluemix_local_notm}} and {{site.data.keyword.Bluemix_notm}} Dedicated](/docs/admin/index.html#mng)
-* [Contacting support](/docs/support/index.html#getting-customer-support)

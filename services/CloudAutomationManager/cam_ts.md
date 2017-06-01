@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-28"
+lastupdated: "2017-05-26"
 
 ---
 <!-- Copyright info and last updated date at top of file: REQUIRED
@@ -18,7 +18,7 @@ lastupdated: "2017-03-28"
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# Cloud Automation Manager troubleshooting
+# Troubleshooting
 {: #ts_cam}
 <!-- Provide an appropriate ID above -->
 
@@ -35,7 +35,7 @@ Some known issues with Cloud Automation Manager in {{site.data.keyword.Bluemix_n
 
 <!-- Add a headings and paragraphs about troubleshooting for your service, or a list of known issues and workarounds. -->
 
-## Cloud Automation Manager known issues
+## Known issues
 {: #knownissues}
 
 - If you deploy multiple instances with the same SSH key content to the SoftLayer environment, an issue occurs when trying to delete the instances.
@@ -58,7 +58,7 @@ Some known issues with Cloud Automation Manager in {{site.data.keyword.Bluemix_n
 
 <!-- Add a heading and content for how to get help and support. Use this template for beta and GA services:  -->
 
-## Getting help and support for Cloud Automation Manager
+## Getting help and support
 {: #gettinghelp}
 
 If you have problems or questions when using Cloud Automation Manager, you can get help by searching for information or by asking questions through a forum. You can also open a support ticket.

@@ -100,7 +100,7 @@ _Example request, using HTTP:_
 
 ```http
 PUT /_api/v2/user/config/cors HTTP/1.1
-Host: $USERNAME.cloudant.com
+Host: $ACCOUNT.cloudant.com
 Content-Type: application/json
 ```
 {:codeblock}
@@ -108,7 +108,7 @@ Content-Type: application/json
 _Example request, using the command line:_ 
 
 ```sh
-curl https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/_api/v2/user/config/cors \
+curl https://$ACCOUNT.cloudant.com/_api/v2/user/config/cors \
 	-H 'Content-Type: application/json' \
 	-X PUT \
 	-T cors.json
@@ -155,7 +155,7 @@ Host: username.cloudant.com
 _Example request to `GET` the current CORS configuration, using the command line:_
 
 ```sh
-curl https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/_api/v2/user/config/cors
+curl https://$ACCOUNT.cloudant.com/_api/v2/user/config/cors
 ```
 {:codeblock}
 

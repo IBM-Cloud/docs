@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-04-13"
+lastupdated: "2017-05-16"
 
 ---
 
@@ -23,11 +23,12 @@ You can view all of the APIs that you manage with API management together by usi
 ## Viewing managed APIs
 {: #view_api}
 
-Here you can view APIs created for {{site.data.keyword.openwhisk_short}} actions and other external sources.
+Here you can view APIs created for Cloud Foundry applications, {{site.data.keyword.openwhisk_short}} actions, and other external sources.
 
 1. From the {{site.data.keyword.Bluemix_notm}} Dashboard, select the **Menu** icon > **Services** > **APIs**.
 2. To select your source, click **Manage APIs**. A list of the APIs that are currently managed is displayed. The types of APIs include the following types:
     * User Defined Endpoints - These entries are APIs that are outside of the {{site.data.keyword.Bluemix_notm}} environment, and tracked by their URL endpoint. 
+	* CF Apps - These entries are Cloud Foundry apps that have corresponding API management.
     * {{site.data.keyword.openwhisk_short}} Apps - These entries are {{site.data.keyword.openwhisk_short}} actions that are wrapped inside of an API.
 
 Select the name of an API to view more details about that API.
@@ -37,7 +38,7 @@ Select the name of an API to view more details about that API.
 
 You can add an API to the list without leaving the list of managed APIs by selecting **Create Managed API**.
 
-After selecting if you want to create an {{site.data.keyword.openwhisk_short}} or API Proxy (external) API, enter the information for your new API.  
+After selecting if you want to create a Cloud Foundry, {{site.data.keyword.openwhisk_short}}, or API Proxy (external) API, enter the information for your new API.  
 
 This is the only place where you can add an API Proxy, or external API. An external API is one that is not created or stored in the {{site.data.keyword.Bluemix_notm}} organization space. You can manage an external API by specifying the URL of its external endpoint. This is helpful when you are trying API management to see if it meets your needs, or when you already have APIs that are running with existing URLs that you do not want to disrupt. 
 
@@ -46,7 +47,7 @@ See [Manage APIs](manage_apis.html) for additional information about the require
 ## Working with shared APIs
 {: #share_api}
 
-In the **Explore Shared APIs** tab you can view APIs that have been created by others and shared with you. You can also create API keys for the APIs associated with {{site.data.keyword.openwhisk_short}} actions and the {{site.data.keyword.appconserviceshort}} service.
+In the **Explore Shared APIs** tab you can view APIs that have been created by others and shared with you. You can also create API keys for the APIs associated with Cloud Foundry apps, {{site.data.keyword.openwhisk_short}} actions, and the {{site.data.keyword.appconserviceshort}} service.
 
 1. From the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Menu** icon > **Services** > **APIs**.
 2. Select **Explore Shared APIs** in the navigation. All the APIs that you can consume are displayed here.

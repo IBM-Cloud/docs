@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-04-10"
+lastupdated: "2017-04-25"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-04-10"
 {: #im_index}
 
 Le interfacce dell'applicazione estendono il concetto di [tipo dispositivo](#resources) per controllare meglio i dati che transitano tramite {{site.data.keyword.iot_short_notm}} e per fornire una vista non dipendente dai dispositivi dei dati IoT.
-{:shortdesc}.
+{:shortdesc}
 
 **Importante:** la funzione di associazione dell'interfaccia è una funzione beta. Gli aggiornamenti beta in corso così come la release finale potrebbero includere delle modifiche non compatibili con la versione corrente. È caldamente consigliato che le funzioni beta non siano utilizzate nelle applicazioni di produzione fino alla release finale. Per ricevere informazioni aggiuntive e fornire il feedback per questa beta, puoi [registrarti al programma beta di gestione delle informazioni ![Icona di link esterno](../../../icons/launch-glyph.svg)](https://www.ibm.com/software/support/trial/cst/forms/nomination.wss?id=7050){:new_window}.
 
@@ -107,7 +107,7 @@ Cosa                         | Un costrutto programmatico che rappresenta logica
 
 Risorse di supporto                        | Descrizione       
 ------------- | ------------- | -------------  
-Interfaccia fisica                         | Un costrutto programmatico che definisce i tipi evento e le proprietà dispositivo associate che vengono associate a un singolo tipo dispositivo che è associato a uno o più tipi evento. L'interfaccia fisica è definita dagli schemi evento.   
+Interfaccia fisica                         | Un costrutto programmatico che definisce i tipi di evento e le proprietà dispositivo associate che vengono associate a un singolo tipo dispositivo. L'interfaccia fisica è definita dagli schemi evento.   
 Associazioni                         | Un costrutto programmatico che definisce in che modo le proprietà associate agli eventi in entrata sono associati alle proprietà definisce su un'interfaccia dell'applicazione. </br>**Importante:** deve essere associata almeno un'interfaccia con un tipo dispositivo prima che possa essere definita un'associazione.
 
 ## Flusso di lavoro di elevato livello

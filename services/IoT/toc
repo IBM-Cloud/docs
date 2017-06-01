@@ -5,6 +5,8 @@
 Internet of Things Platform
 
     {: .navgroup id="learn"}
+    getting-started.md
+    
     {: .topicgroup}
     About
         iotplatform_overview.md
@@ -25,6 +27,8 @@ Internet of Things Platform
 
     {: .navgroup id="reference"}
     reference/api.md
+    
+    [Sample app: OpenFridge](https://github.com/IBM/openfridge)
 
     {: .topicgroup}
     Watson IoT Platform security
@@ -34,13 +38,7 @@ Internet of Things Platform
         reference/security/set_up_certificates.md
         reference/security/set_up_policies.md
 
-    {: .topicgroup}
-    Bluemix security
-        [Bluemix security](https://console.ng.bluemix.net/docs/security/index.html#security)
-        [Bluemix platform security](https://console.ng.bluemix.net/docs/security/index.html#platform-security)
-        [Bluemix compliance](https://console.ng.bluemix.net/docs/security/index.html#compliance)
-        [Bluemix Infrastructure (SoftLayer) security](http://www.softlayer.com/security)
-        [Bluemix Infrastructure (SoftLayer) compliance](http://www.softlayer.com/compliance)
+    [Bluemix security](https://console.ng.bluemix.net/docs/security/index.html#security)
 
     reference/mqtt/index.md
     reference/device_model.md

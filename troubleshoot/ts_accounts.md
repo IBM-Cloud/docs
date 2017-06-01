@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-01-10"
+lastupdated: "2017-06-01"
 
 ---
 
@@ -21,6 +21,59 @@ lastupdated: "2017-01-10"
 General problems with managing your account might include different apps share the same domain name, or administrators can't view all organizations. In many cases, you can recover from these problems by following a few easy steps.
 {:shortdesc}
 
+## Unable to access a different {{site.data.keyword.Bluemix_notm}} region
+{: #nosecondreg}
+
+An error message is received when you try to create a new {{site.data.keyword.Bluemix_notm}} region. 
+{: tsSymptoms}
+
+This is likely because you are using a Standard account, which supports development in one public region only. You select the {{site.data.keyword.Bluemix_notm}} public region in which you want to work when the account is first set up. 
+{: tsCauses}
+
+If you have a Standard account, you can upgrade to a billable account to access additional regions. Go to the **Manage > Billing and Usage > Billing** page in the console, and click **Add Credit Card**. On the **Billing** page, you can also check if you have a Standard account.
+{: tsResolve}
+
+## Unable to create new organization
+{: #nosecondorg}
+ 
+An error message is received when you try to create a new organization. 
+{: tsSymptoms}
+
+This is likely because you are using a Standard account, which supports development in one organization only. You create the organization when your account is first set up. 
+{: tsCauses}
+
+If you have a Standard account, you can upgrade to a billable account to access additional organizations. Go to the **Manage > Billing and Usage > Billing** page in the console, and click **Add Credit Card**. On the **Billing** page, you can also check if you have a Standard account.
+{: tsResolve}
+
+## Unable to create new Lite plan instance
+{: #nosecondlite}
+
+The following error message is displayed when you try to create a new Lite plan instance:
+{: tsSymptoms}
+
+`Unable to provision new Lite instance`
+
+There is a limit of one instance per Lite plan instance to allow us to keep these plans free. 
+{: tsCauses}
+
+You can create additional instances of the service by selecting one of the billable service plans, which are available in the billable accounts. To upgrade to a billable account from the console, go to the **Manage > Billing and Usage > Billing** page, and click **Add Credit Card**.
+{: tsResolve}
+
+If you do not want to upgrade from a Standard account and are no longer using your existing Lite service instance, you can delete the exisiting Lite plan instance from the Services dashboard and then create a new instance. 
+
+## Exceeded the runtime memory allowance
+{: #noruntimemem}
+
+You are unable to deploy apps and get an error stating that you have exceeded your organization's memory limit.
+{: tsSymptoms}
+
+In a Standard account your Cloud Foundry apps can use up to 256 MB of instantaneous runtime memory. In billable accounts, there is a 2GB memory limit.
+{: tsCauses}
+
+If you are using a Standard account, you can get additional memory by upgrading to a billable account. Go to the **Manage > Billing and Usage > Billing** page in the console, and click **Add Credit Card**.
+{: tsResolve}
+
+If you do not want to upgrade from a Standard account but have some idle apps, you can delete the idle apps to free up some runtime memory. 
 
 ## Account is inactive
 {: #ts_accnt_inactive}

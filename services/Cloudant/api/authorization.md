@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-20"
+lastupdated: "2017-05-24"
 
 ---
 
@@ -154,7 +154,7 @@ _Example request to determine permissions, using Javascript:_
 
 ```javascript
 var nano = require('nano');
-var account = nano("https://"+$USERNAME+":"+$PASSWORD+"@"+$ACCOUNT+".cloudant.com");
+var account = nano("https://"+$ACCOUNT+":"+$PASSWORD+"@"+$ACCOUNT+".cloudant.com");
 account.request({
 	db: $DATABASE,
 	path: '_security'
@@ -224,7 +224,7 @@ Content-Type: application/json
 _Example of using the command line to send an authorization modification request:_
 
 ```sh
-curl https://$USERNAME:$PASSWORD@$ACCOUNT.cloudant.com/_api/v2/db/$DATABASE/_security \
+curl https://$ACCOUNT.cloudant.com/_api/v2/db/$DATABASE/_security \
 	-X PUT \
 	-H "Content-Type: application/json" \
 	-d "$JSON"
@@ -237,7 +237,7 @@ _Example of using JavaScript to send an authorization modification request:_
 
 ```javascript
 var nano = require('nano');
-var account = nano("https://"+$USERNAME+":"+$PASSWORD+"@"+$ACCOUNT+".cloudant.com");
+var account = nano("https://"+$ACCOUNT+":"+$PASSWORD+"@"+$ACCOUNT+".cloudant.com");
 account.request(
 	{
 		db: $DATABASE,
@@ -366,14 +366,14 @@ as described in the [IBM Knowledge Center ![External link icon](../images/launch
 _Example of using an HTTP request to create an API key:_
 
 ```http
-POST https://<username>.cloudant.com/_api/v2/api_keys HTTP/1.1
+POST https://$ACCOUNT.cloudant.com/_api/v2/api_keys HTTP/1.1
 ```
 {:codeblock}
 
 _Example of using the command line to create an API key:_
 
 ```sh
-curl -X POST https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/_api/v2/api_keys
+curl -X POST https://$ACCOUNT:$PASSWORD@$ACCOUNT.cloudant.com/_api/v2/api_keys
 ```
 {:codeblock}
 
@@ -383,7 +383,7 @@ _Example of using JavaScript to create an API key:_
 
 ```javascript
 var nano = require('nano');
-var account = nano("https://$USERNAME:$PASSWORD@cloudant.com");
+var account = nano("https://$ACCOUNT:$PASSWORD@cloudant.com");
 account.request(
 	{
 		db: '_api',
@@ -426,7 +426,7 @@ It must be given permissions explicitly.
 
 After you generate the API key,
 grant the key access-specific permissions for a specific database by sending a `PUT` request to 
-`https://<username>.cloudant.com/_api/v2/db/<database>/_security`,
+`https://$ACCOUNT.cloudant.com/_api/v2/db/$DATABASE/_security`,
 as described in [modifying permissions](#modifying-permissions).
 
 The database does not have to be in the same account as the account used for generating the API key initially.
@@ -475,14 +475,16 @@ send an HTTP `PUT` request to the same `_security` API endpoint you used to [cre
 Provide an updated list of the user names that have access permission.
 The updated list _must omit_ the API key.
 
-## Enabling the `_users` database with Cloudant
+<div id="enabling-the-_users-database-with-cloudant"></div>
+
+## Using the _users database with Cloudant
 
 You can use the
 [_users database ![External link icon](../images/launch-glyph.svg "External link icon")](http://docs.couchdb.org/en/1.6.1/intro/security.html#authentication-database){:new_window}
 to manage roles in {{site.data.keyword.cloudant_short_notm}}.
-However,
-you must turn off {{site.data.keyword.cloudant_short_notm}} security for those roles first.
-To turn off {{site.data.keyword.cloudant_short_notm}} security,
+
+In addition, you can disable the Cloudant authorization checks by setting the `couchdb_auth_only:true` parameter. 
+To disable {{site.data.keyword.cloudant_short_notm}} security,
 `PUT` a JSON document to the `_security` endpoint of the database.
 For example, `https://$ACCOUNT.cloudant.com/$DATABASE/_security`.
 
@@ -497,7 +499,7 @@ Content-Type: application/json
 _Example of using the command line to submit a modification request:_
 
 ```sh
-curl https://$USERNAME:$PASSWORD@$ACCOUNT.cloudant.com/$DATABASE/_security \
+curl https://$ACCOUNT.cloudant.com/$DATABASE/_security \
 	-X PUT \
 	-H "Content-Type: application/json" \
 	-d @request-body.json

@@ -166,7 +166,7 @@ La seguente tabella descrive i parametri specificati nel metodo `publishEvent()`
 |Parametro|Tipo di dati|Descrizione|
 |:---|:---|
 |`deviceType`|Stringa| Il tipo dispositivo. Generalmente, il deviceType è un raggruppamento di dispositivi che esegue un'attività specifica, ad esempio "weatherballoon".|
-|`deviceId`|Stringa| L'ID del dispositivo. Generalmente, per determinato tipo dispositivo, il deviceId è un identificativo univoco di tale dispositivo, ad esempio un numero seriale o un indirizzo MAC.|
+|`deviceId`|Stringa| L'ID del dispositivo. Generalmente, per un determinato tipo di dispositivo, il deviceId è un identificativo univoco di tale dispositivo, ad esempio un numero seriale o un indirizzo MAC.|
 |`evt`|Stringa| Il nome dell'evento.|
 |`format`|Stringa| Il formato può essere qualsiasi stringa, ad esempio JSON.|
 |`data`|Dizionario| I dati per il payload del messaggio. La lunghezza massima è di 131072 byte.|
@@ -187,7 +187,7 @@ La seguente tabella descrive i parametri specificati nel metodo `publishCommand(
 |Parametro|Tipo di dati|Descrizione|
 |:---|:---|
 |`deviceType`|Stringa| Il tipo dispositivo. Generalmente, il deviceType è un raggruppamento di dispositivi che esegue un'attività specifica, ad esempio "weatherballoon".|
-|`deviceId`|Stringa| L'ID del dispositivo. Generalmente, per determinato di tipo dispositivo, il deviceId è un identificativo univoco di tale dispositivo, ad esempio un numero seriale o un indirizzo MAC.|
+|`deviceId`|Stringa| L'ID del dispositivo. Generalmente, per un determinato tipo di dispositivo, il deviceId è un identificativo univoco di tale dispositivo, ad esempio un numero seriale o un indirizzo MAC.|
 |`command`|Stringa| Il nome del comando.|
 |`format`|Stringa| Il formato può essere qualsiasi stringa, ad esempio JSON.|
 |`data`|Dizionario| I dati per il payload del messaggio. La lunghezza massima è di 131072 byte.|

@@ -394,7 +394,7 @@ public class RegisteredDeviceCommandSubscribe {
             e.printStackTrace();
         }
 
-        //Trasmette il CommandCallback implementato come un argomento a questo client del dispositivo
+        //Trasmette il seguente CommandCallback implementato come un argomento a questo client del dispositivo
         myClient.setCommandCallback(new MyNewCommandCallback());
 
         //Collega a {{site.data.keyword.iot_short_notm}}

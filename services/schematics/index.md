@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-05-16"
+lastupdated: "2017-05-31"
 
 ---
 
@@ -34,9 +34,9 @@ When you create a configuration, you are codifying the cloud resources that make
 {:shortdesc}
 
 
-If you want to try out a sample configuration with {{site.data.keyword.bpshort}}, complete the following steps. In the sample, you can provision an SSH key to use in {{site.data.keyword.BluSoftlayer}}. 
+If you want to try out a sample configuration with {{site.data.keyword.bpshort}}, complete the following steps. In the sample, you can provision an SSH key to use in {{site.data.keyword.BluSoftlayer_notm}}. 
 
-**Note:** The sample configuration requires a {{site.data.keyword.BluSoftlayer}} account. See the [linking your {{site.data.keyword.Bluemix_notm}} and SoftLayer accounts doc](../../pricing/linking_accounts.html#unifyingaccounts) if you have an existing account, or you can [sign up for an account](https://console.ng.bluemix.net/docs/pricing/index.html#pay-accounts).
+**Note:** The sample configuration requires a {{site.data.keyword.BluSoftlayer_notm}} account. See the [linking your {{site.data.keyword.Bluemix_notm}} and SoftLayer accounts doc](../../pricing/linking_accounts.html#unifyingaccounts) if you have an existing account, or you can [sign up for an account](https://console.ng.bluemix.net/docs/pricing/index.html#pay-accounts).
 
 1. Generate an SSH key pair locally.
   ```
@@ -52,8 +52,9 @@ If you want to try out a sample configuration with {{site.data.keyword.bpshort}}
 
     ```
     provider "ibmcloud" {
-      ibmid                    = "${var.ibmid}"
-      ibmid_password           = "${var.ibmidpw}"
+      bluemix_api_key = "${var.bxapikey}"
+      softlayer_username = "${var.slusername}"
+      softlayer_api_key = "${var.slapikey}"
       softlayer_account_number = "${var.slaccountnum}"
     }
     ```
@@ -73,9 +74,8 @@ If you want to try out a sample configuration with {{site.data.keyword.bpshort}}
   * The variable block defines your variables, which you can enter in the {{site.data.keyword.bpshort}} GUI for this sample.
   
     ```
-    variable ibmid {
-      type = "string"
-      description = "Your IBM-ID."
+    variable bxapikey {
+      description = "Your Bluemix API key."
     }
     ```
     {:screen}
@@ -124,7 +124,7 @@ Using the sample configuration, complete the following steps to create an enviro
   <td>Enter a unique name to assign to your environment.</td>
   </tr>
   <td>Terraform version</td>
-  <td>Enter the version of Terraform to ensure that a compatible version of Terraform is run against your environment. For the sample configuration, use version <code>0.9.1</code>.</td>
+  <td>Enter the version of Terraform to ensure that a compatible version of Terraform is run against your environment. For the sample configuration, use version <code>0.9.3</code>.</td>
   </tr>
   <tr>
   <td>Variables</td>
@@ -132,14 +132,16 @@ Using the sample configuration, complete the following steps to create an enviro
   <p>
   <p>Add the following variables and values to work with the sample configuration:
   <ul>
-  <li><code>ibmid</code> - Enter your full {{site.data.keyword.ibmid}} as the value.</li>
-  <li><code>ibmidpw</code> - Enter the password that is associated with your {{site.data.keyword.ibmid}} and click the lock icon to mask the value.</li>
-  <li><code>slaccountnum</code> - Enter your {{site.data.keyword.BluSoftlayer}} account number. 
-   <li><code>datacenter</code> - Enter the data center that you want to deploy the SSH key resource to. See the <a href="https://github.com/IBM-Bluemix/tf-bluemix-ssh-key/blob/master/README.md" target="_blank">readme file <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> for a full list of available values.</li> 
-   <li><code>public_key</code> - Enter the public SSH key. To copy the public key to your clipboard, you can run the <code>pbcopy < ~/.ssh/id_rsa.pub</code> command.
-   <li><code>key_label</code> - Identify the key with a unique name.
-   <li><code>key_note</code> - Optional: Add descriptive text about the SSH key.</td>
-   </tr></tbody></table>
+  <li><code>bxapikey</code> - Enter your {{site.data.keyword.Bluemix_notm}} API key. If you do not have an existing API key, you can generate the value by running <code>bluemix iam api-key-create NAME</code>.
+  <li><code>slusername</code> - Enter your {{site.data.keyword.BluSoftlayer_notm}} user name.
+  <li><code>slapikey</code> - Enter your {{site.data.keyword.BluSoftlayer_notm}} API key. You can retrieve the value from the [{{site.data.keyword.slportal}}](https://control.bluemix.net), in the <strong>API Access Information</strong> section.
+  <li><code>slaccountnum</code> - Enter your {{site.data.keyword.BluSoftlayer_notm}} account number. This value is only required if you have multiple accounts that are associated with your ID.
+  <li><code>datacenter</code> - Enter the data center that you want to deploy the SSH key resource to. See the <a href="https://github.com/IBM-Bluemix/tf-bluemix-ssh-key/blob/master/README.md" target="_blank">readme file <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> for a full list of available values.</li>
+  <li><code>public_key</code> - Enter the public SSH key. To copy the public key to your clipboard, you can run the <code>pbcopy < ~/.ssh/id_rsa.pub</code> command.
+  <li><code>key_label</code> - Identify the key with a unique name.
+  <li><code>key_note</code> - Optional: Add descriptive text about the SSH key.</ul>
+  </td>
+  </tr></tbody></table>
 
 4. When you have finished filling out the environment's details, click **Create**. The newly created environment is displayed. 
 5. To see a preview of what resources are provisioned or removed when you deploy your environment, click **Plan**. 
