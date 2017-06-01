@@ -563,7 +563,7 @@ click the corresponding icon.
 </tr>
 <tr>
 <td><code>POST&nbsp;/{db}/\_missing\_revs</code><p>
-<a href='advanced.html#get-/$db/missingrevs' target='_blank'><img src='../images/verySmallCloudant.png' alt='Cloudant'/></a>
+<a href='advanced.html#get-/$DATABASE/missingrevs' target='_blank'><img src='../images/verySmallCloudant.png' alt='Cloudant'/></a>
 <a href='http://docs.couchdb.org/en/2.0.0/api/database/misc.html#post--db-\_missing\_revs' target='_blank'><img src='../images/verySmallCouchDB2.png' alt='CouchDB 2.0'/></a>
 <a href='http://docs.couchdb.org/en/1.6.0/api/database/misc.html#post--db-\_missing\_revs' target='_blank'><img src='../images/verySmallCouchDB1.png' alt='CouchDB 1.6'/></a>
 </p></td><td>Return the document revisions from the given list that do not exist in the database.</td>
@@ -575,21 +575,21 @@ click the corresponding icon.
 </tr>
 <tr>
 <td><code>POST&nbsp;/{db}/\_revs\_diff</code><p>
-<a href='advanced.html#post-/$db/\_revs\_diff' target='_blank'><img src='../images/verySmallCloudant.png' alt='Cloudant'/></a>
+<a href='advanced.html#post-/$DATABASE/\_revs\_diff' target='_blank'><img src='../images/verySmallCloudant.png' alt='Cloudant'/></a>
 <a href='http://docs.couchdb.org/en/2.0.0/api/database/misc.html#post--db-\_revs\_diff' target='_blank'><img src='../images/verySmallCouchDB2.png' alt='CouchDB 2.0'/></a>
 <a href='http://docs.couchdb.org/en/1.6.0/api/database/misc.html#post--db-\_revs\_diff' target='_blank'><img src='../images/verySmallCouchDB1.png' alt='CouchDB 1.6'/></a>
 </p></td><td>Given a set of document/revision IDs, return the subset of those that do not correspond to revisions stored in the database.</td>
 </tr>
 <tr>
 <td><code>GET&nbsp;/{db}/\_revs\_limit</code><p>
-<a href='advanced.html#get-/$db/\_revs\_limit' target='_blank'><img src='../images/verySmallCloudant.png' alt='Cloudant'/></a>
+<a href='advanced.html#get-/$DATABASE/\_revs\_limit' target='_blank'><img src='../images/verySmallCloudant.png' alt='Cloudant'/></a>
 <a href='http://docs.couchdb.org/en/2.0.0/api/database/misc.html#get--db-\_revs\_limit' target='_blank'><img src='../images/verySmallCouchDB2.png' alt='CouchDB 2.0'/></a>
 <a href='http://docs.couchdb.org/en/1.6.0/api/database/misc.html#get--db-\_revs\_limit' target='_blank'><img src='../images/verySmallCouchDB1.png' alt='CouchDB 1.6'/></a>
 </p></td><td>Get the number of document revisions tracked.</td>
 </tr>
 <tr>
 <td><code>PUT&nbsp;/{db}/\_revs\_limit</code><p>
-<a href='advanced.html#put-/$db/\_revs\_limit' target='_blank'><img src='../images/verySmallCloudant.png' alt='Cloudant'/></a>
+<a href='advanced.html#put-/$DATABASE/\_revs\_limit' target='_blank'><img src='../images/verySmallCloudant.png' alt='Cloudant'/></a>
 <a href='http://docs.couchdb.org/en/2.0.0/api/database/misc.html#put--db-\_revs\_limit' target='_blank'><img src='../images/verySmallCouchDB2.png' alt='CouchDB 2.0'/></a>
 <a href='http://docs.couchdb.org/en/1.6.0/api/database/misc.html#put--db-\_revs\_limit' target='_blank'><img src='../images/verySmallCouchDB1.png' alt='CouchDB 1.6'/></a>
 </p></td><td>Set the maximum number of document revisions tracked.</td>
@@ -610,7 +610,7 @@ click the corresponding icon.
 </tr>
 <tr>
 <td><code>GET&nbsp;/{db}/\_shards</code><p>
-<a href='advanced.html#get-/$db/\_shards' target='_blank'><img src='../images/verySmallCloudant.png' alt='Cloudant'/></a>
+<a href='advanced.html#get-/$DATABASE/\_shards' target='_blank'><img src='../images/verySmallCloudant.png' alt='Cloudant'/></a>
 <a href='http://docs.couchdb.org/en/2.0.0/' target='_blank'><img src='../images/verySmallCouchDB2.png' alt='CouchDB 2.0'/></a>
 </p></td><td>Return information about the shards in the cluster</td>
 </tr>

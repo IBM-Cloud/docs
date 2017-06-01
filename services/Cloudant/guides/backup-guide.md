@@ -245,7 +245,7 @@ _Example of requesting the backup task configuration for the user,
 returning results in a list format (default), using the command line:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/_api/v2/backup/task \
+curl https://$ACCOUNT.cloudant.com/_api/v2/backup/task \
     -X GET
 ```
 {:codeblock}
@@ -262,7 +262,7 @@ _Example of requesting the backup task configuration for the user,
 returning results in a mapping format, using the command line:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/_api/v2/backup/task?format=mapping \
+curl https://$ACCOUNT.cloudant.com/_api/v2/backup/task?format=mapping \
      -X GET
 ```
 {:codeblock}
@@ -275,9 +275,9 @@ For example,
 you might request a list format response using either of the following commands:
 
 ```http
-https://$USERNAME.cloudant.com/_api/v2/backup/task
+https://$ACCOUNT.cloudant.com/_api/v2/backup/task
 
-https://$USERNAME.cloudant.com/_api/v2/backup/task?format=list
+https://$ACCOUNT.cloudant.com/_api/v2/backup/task?format=list
 ```
 {:codeblock}
 
@@ -287,19 +287,19 @@ _Example response following a list format request:_
 {
     "rows": [
         {
-            "username": "$USERNAME",
+            "username": "$ACCOUNT",
             "task": "backup-0d0b0cf1b0ea42179f9c082ddc5e07cb",
             "source_db": "backmeup",
             "latest_completion": null
         },
         {
-            "username": "$USERNAME",
+            "username": "$ACCOUNT",
             "task": "backup-d0ea6e8218074699a562af543db66615",
             "source_db": "backuptest",
             "latest_completion": "2016-01-17T05:57:44+00:00"
         },
         {
-            "username": "$USERNAME",
+            "username": "$ACCOUNT",
             "task": "backup-24cd8359b94640be85b7d4071921e781",
             "source_db": "taskdb",
             "latest_completion": "2016-01-17T00:01:04+00:00"
@@ -315,7 +315,7 @@ You can request this format directly by using the `...backup/task?format=mapping
 For example, you might request a mapping format response using the following command:
 
 ```http
-https://$USERNAME.cloudant.com/_api/v2/backup/task?format=mapping
+https://$ACCOUNT.cloudant.com/_api/v2/backup/task?format=mapping
 ```
 {:codeblock}
 
@@ -324,19 +324,19 @@ _Example response following a mapping format request:_
 ```json
 {
     "backmeup": {
-        "username": "$USERNAME",
+        "username": "$ACCOUNT",
         "task": "backup-0d0b0cf1b0ea42179f9c082ddc5e07cb",
         "source_db": "backmeup",
         "latest_completion": null
     },
     "backuptest": {
-        "username": "$USERNAME",
+        "username": "$ACCOUNT",
         "task": "backup-d0ea6e8218074699a562af543db66615",
         "source_db": "backuptest",
         "latest_completion": "2016-01-17T05:57:44+00:00"
     },
     "taskdb": {
-        "username": "$USERNAME",
+        "username": "$ACCOUNT",
         "task": "backup-24cd8359b94640be85b7d4071921e781",
         "source_db": "taskdb",
         "latest_completion": "2016-01-17T00:01:04+00:00"
@@ -364,7 +364,7 @@ GET /_api/v2/backup/task?databases=backuptest,taskdb HTTP/1.1
 _Example command to find backup tasks for the `backuptest` and `taskdb` database, using the command line:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/_api/v2/backup/task?databases=backuptest,taskdb \
+curl https://$ACCOUNT.cloudant.com/_api/v2/backup/task?databases=backuptest,taskdb \
     -X GET
 ```
 {:codeblock}
@@ -375,13 +375,13 @@ _Example response to finding backup tasks for specific databases:_
 {
     "rows": [
         {
-            "username": "$USERNAME",
+            "username": "$ACCOUNT",
             "task": "backup-d0ea6e8218074699a562af543db66615",
             "source_db": "backuptest",
             "latest_completion": "2016-01-17T05:57:44+00:00"
         },
         {
-            "username": "$USERNAME",
+            "username": "$ACCOUNT",
             "task": "backup-24cd8359b94640be85b7d4071921e781",
             "source_db": "taskdb",
             "latest_completion": "2016-01-17T00:01:04+00:00"
@@ -411,7 +411,7 @@ GET /_api/v2/backup/monitor/$TASKNAME/$DOCID?include_docs=true HTTP/1.1
 _Retrieving the list of databases created by a backup task, that contain a specific document, using the command line:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/_api/v2/backup/monitor/$TASKNAME/$DOCID?include_docs=true \
+curl https://$ACCOUNT.cloudant.com/_api/v2/backup/monitor/$TASKNAME/$DOCID?include_docs=true \
     -X GET
 ```
 {:codeblock}
@@ -445,7 +445,7 @@ Content-Type: application/json
 _Example of request to restore a document from the most recent version held in a specific backup database, using the command line:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/_api/v2/backup/restore/document --data=@RESTORE.json \
+curl https://$ACCOUNT.cloudant.com/_api/v2/backup/restore/document --data=@RESTORE.json \
     -X POS \
     -H "Content-Type: application/json" \
     -d "$JSON"

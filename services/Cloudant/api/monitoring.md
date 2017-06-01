@@ -117,7 +117,7 @@ Each value returned consists of `[datapoint, timestamp]` values.
 _Example monitoring request for disk use data returned in `JSON` format:_
 
 ```sh
-curl -u myusername https://myusername.cloudant.com/_api/v2/monitoring/disk_use?cluster=myclustername&format=json
+curl https://$ACCOUNT.cloudant.com/_api/v2/monitoring/disk_use?cluster=myclustername&format=json
 ```
 {:codeblock}
 
@@ -167,7 +167,7 @@ with the disk use expressed as bytes stored.
 _Example monitoring request for disk use data returned in `raw` format:_
 
 ```sh
-curl -u myusername https://myusername.cloudant.com/_api/v2/monitoring/disk_use?cluster=myclustername&format=raw
+curl https://$ACCOUNT.cloudant.com/_api/v2/monitoring/disk_use?cluster=myclustername&format=raw
 ```
 {:codeblock}
 
@@ -200,7 +200,7 @@ Endpoint                                | Description
 _Example showing how to obtain a list of the currently supported monitoring end points:_
 
 ```sh
-curl -u myusername https://myusername.cloudant.com/_api/v2/monitoring
+curl https://$ACCOUNT.cloudant.com/_api/v2/monitoring
 ```
 {:codeblock}
 
@@ -244,7 +244,7 @@ _Example response, listing the available monitoring end points:_
 _Example of a `disk_use` monitoring request:_
 
 ```sh
-curl -u myusername https://myusername.cloudant.com/_api/v2/monitoring/disk_use?cluster=myclustername&format=json
+curl https://$ACCOUNT.cloudant.com/_api/v2/monitoring/disk_use?cluster=myclustername&format=json
 ```
 {:codeblock}
 
@@ -309,7 +309,7 @@ _Example results (abbreviated) from a `disk_use` monitoring request:_
 _Example of a `kv_emits` monitoring request:_
 
 ```sh
-curl -u myusername https://myusername.cloudant.com/_api/v2/monitoring/kv_emits?cluster=myclustername&format=json
+curl https://$ACCOUNT.cloudant.com/_api/v2/monitoring/kv_emits?cluster=myclustername&format=json
 ```
 {:codeblock}
 
@@ -352,7 +352,7 @@ _Example results (abbreviated) from a `kv_emits` monitoring request:_
 _Example of a `map_doc` monitoring request:_
 
 ```sh
-curl -u myusername https://myusername.cloudant.com/_api/v2/monitoring/map_doc?cluster=myclustername&format=json
+curl https://$ACCOUNT.cloudant.com/_api/v2/monitoring/map_doc?cluster=myclustername&format=json
 ```
 {:codeblock}
 
@@ -395,7 +395,7 @@ _Example results (abbreviated) from a `map_doc` monitoring request:_
 _Example of a `rate/status_code` monitoring request:_
 
 ```sh
-curl -u myusername https://myusername.cloudant.com/_api/v2/monitoring/rate/status_code?cluster=myclustername&format=json
+curl https://$ACCOUNT.cloudant.com/_api/v2/monitoring/rate/status_code?cluster=myclustername&format=json
 ```
 {:codeblock}
 
@@ -488,7 +488,7 @@ _Example results (abbreviated) from a `rate/status_code` monitoring request:_
 _Example of a `rate/verb` monitoring request:_
 
 ```sh
-curl -u myusername https://myusername.cloudant.com/_api/v2/monitoring/rate/verb?cluster=myclustername&format=json
+curl https://$ACCOUNT.cloudant.com/_api/v2/monitoring/rate/verb?cluster=myclustername&format=json
 ```
 {:codeblock}
 
@@ -617,7 +617,7 @@ _Example results (abbreviated) from a `rate/verb` monitoring request:_
 _Example of a `response_time` monitoring request:_
 
 ```sh
-curl -u myusername https://myusername.cloudant.com/_api/v2/monitoring/response_time?cluster=myclustername&format=json
+curl https://$ACCOUNT.cloudant.com/_api/v2/monitoring/response_time?cluster=myclustername&format=json
 ```
 {:codeblock}
 
@@ -637,7 +637,7 @@ _Example results (abbreviated) from a `response_time` monitoring request:_
 _Example of an `rps` monitoring request:_
 
 ```sh
-curl -u myusername https://myusername.cloudant.com/_api/v2/monitoring/rps?cluster=myclustername&format=json
+curl https://$ACCOUNT.cloudant.com/_api/v2/monitoring/rps?cluster=myclustername&format=json
 ```
 {:codeblock}
 
@@ -676,7 +676,7 @@ _Example results (abbreviated) from an `rps` monitoring request:_
 _Example of a `wps` monitoring request:_
 
 ```sh
-curl -u myusername https://myusername.cloudant.com/_api/v2/monitoring/wps?cluster=myclustername&format=json
+curl https://$ACCOUNT.cloudant.com/_api/v2/monitoring/wps?cluster=myclustername&format=json
 ```
 {:codeblock}
 

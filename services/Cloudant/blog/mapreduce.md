@@ -151,7 +151,7 @@ If you want to follow along at home, you have two choices.
 
 1.  Use CouchDB replication to copy my db into yours via:
     ```sh
-    curl 'http://<usr>:<pwd>@<usr>.cloudant.com/_replicate' -Hcontent-type:application/json -d '{"source":"http://mlmiller.cloudant.com/planes","target":"http://<usr>:<pwd>@<usr>.cloudant.com/planes","create_target":true}'
+    curl 'http://$ACCOUNT.cloudant.com/_replicate' -Hcontent-type:application/json -d '{"source":"http://mlmiller.cloudant.com/planes","target":"http://$ACCOUNT:$PASSWORD@$ACCOUNT.cloudant.com/planes","create_target":true}'
     ```
     {:pre}
 2.  Repeat from scratch by
@@ -197,7 +197,7 @@ It's a one-liner to serialize that Python dictionary and push it into Cloudant.
 If you want to try this yourself the `README` file has instructions on installing
 the Couchdbkit module and executing the `upload.py` script, but it just boils down to:
 ```sh
-python upload.py AviationData.txt.gz 'http://<username>:<password>@<username>.cloudant.com' planes
+python upload.py AviationData.txt.gz 'http://$ACCOUNT:$PASSWORD@$ACCOUNT.cloudant.com' planes
 ```
 {:pre}
 
@@ -227,13 +227,13 @@ spanning the range 1988–2010.
 If you want to look at a single document from your command line,
 you can via:
 ```sh
-curl -X GET 'http://<usr>:<pwd>@<usr>.cloudant.com/planes/_all_docs?limit=1&include_docs=true'
+curl -X GET 'http://$ACCOUNT:$PASSWORD@$ACCOUNT.cloudant.com/planes/_all_docs?limit=1&include_docs=true'
 ```
 {:pre}
 and if you want it pretty printed,
 my favorite is:
 ```sh
-curl -X GET 'http://<usr>:<pwd>@<usr>.cloudant.com/planes/_all_docs?limit=1&include_docs=true' | python -m json.tool
+curl -X GET 'http://$ACCOUNT:$PASSWORD@$ACCOUNT.cloudant.com/planes/_all_docs?limit=1&include_docs=true' | python -m json.tool
 ```
 {:pre}
 Since I've granted read permissions on mlmiller/planes, you can execute this yourself via:

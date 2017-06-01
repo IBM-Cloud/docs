@@ -51,7 +51,7 @@ _Example request to get server meta information, using Javascript:_
 
 ```javascript
 var nano = require('nano');
-var account = nano('https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com');
+var account = nano('https://$ACCOUNT:$PASSWORD@$ACCOUNT.cloudant.com');
 account.request({
 	path: '/'
 }, function (err, body) {
@@ -117,8 +117,8 @@ GET /_db_updates HTTP/1.1
 _Example request to get a list of changes to the database, using the command line:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/_db_updates \
-	-u $USERNAME
+curl https://$ACCOUNT.cloudant.com/_db_updates \
+	-u $ACCOUNT
 ```
 {:codeblock}
 
@@ -128,7 +128,7 @@ _Example request to get a list of changes to the database, using Javascript:_
 
 ```javascript
 var nano = require('nano');
-var account = nano('https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com');
+var account = nano('https://$ACCOUNT:$PASSWORD@$ACCOUNT.cloudant.com');
 account.request({
 	path: '_db_updates'
 }, function (err, body) {
@@ -148,7 +148,7 @@ _Example response:_
 	"results": [{
 		"dbname": "$DATABASE_NAME",
 		"type": "created",
-		"account": "$USERNAME",
+		"account": "$ACCOUNT",
 		"seq": "673-g1AAAAJAeJyN0Et..."
 	}],
 	"last_seq": "673-g1AAAAJAeJyN0Et..."
@@ -174,8 +174,8 @@ GET /$DATABASE/_shards HTTP/1.1
 _Example request, using the command line:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/$DATABASE/_shards \
-	-u $USERNAME
+curl https://$ACCOUNT.cloudant.com/$DATABASE/_shards \
+	-u $ACCOUNT
 ```
 {:codeblock}
 
@@ -185,7 +185,7 @@ _Example request, using Javascript:_
 
 ```javascript
 var nano = require('nano');
-var account = nano('https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com');
+var account = nano('https://$ACCOUNT:$PASSWORD@$ACCOUNT.cloudant.com');
 account.request({
 	database: $DATABASE,
 	path: '_shards'
@@ -258,9 +258,9 @@ Content-Type: application/json
 _Example request, using the command line:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/$DATABASE/_missing_revs \
+curl https://$ACCOUNT.cloudant.com/$DATABASE/_missing_revs \
 	 -X POST \
-	 -u "$USERNAME:$PASSWORD" \
+	 -u "$ACCOUNT:$PASSWORD" \
 	 -H "Content-Type: application/json" \
 	 -d @request-body.json
 ```
@@ -272,7 +272,7 @@ _Example request, using Javascript:_
 
 ```javascript
 var nano = require('nano');
-var account = nano('https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com');
+var account = nano('https://$ACCOUNT:$PASSWORD@$ACCOUNT.cloudant.com');
 account.request({
 	database: $DATABASE,
 	path: '_missing_revs',
@@ -332,9 +332,9 @@ Content-Type: application/json
 _Example request, from the command line:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/$DATABASE/_revs_diff \
+curl https://$ACCOUNT.cloudant.com/$DATABASE/_revs_diff \
 	-X POST \
-	-u $USERNAME \
+	-u $ACCOUNT \
 	-d "$JSON"
 ```
 {:codeblock}
@@ -345,7 +345,7 @@ _Example request, using Javascript:_
 
 ```javascript
 var nano = require('nano');
-var account = nano('https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com');
+var account = nano('https://$ACCOUNT:$PASSWORD@$ACCOUNT.cloudant.com');
 account.request({
 	database: $DATABASE,
 	path: '_revs_diff',
@@ -397,9 +397,9 @@ GET /$DATABASE/_revs_limit HTTP/1.1
 _Example request, using the command line:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/$DATABASE/_revs_limit \
+curl https://$ACCOUNT.cloudant.com/$DATABASE/_revs_limit \
 	-X GET \
-	-u "$USERNAME:$PASSWORD"
+	-u "$ACCOUNT:$PASSWORD"
 ```
 {:codeblock}
 
@@ -409,7 +409,7 @@ _Example request, using Javascript:_
 
 ```javascript
 var nano = require('nano');
-var account = nano('https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com');
+var account = nano('https://$ACCOUNT:$PASSWORD@$ACCOUNT.cloudant.com');
 account.request({
 	path: '_revs_limit'
 }, function (err, body) {
@@ -448,8 +448,8 @@ PUT /$DATABASE/_revs_limit HTTP/1.1
 _Example request, using the command line:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/_revs_limit \
-	-u $USERNAME \
+curl https://$ACCOUNT.cloudant.com/_revs_limit \
+	-u $ACCOUNT \
 	-X PUT \
 	-d 500
 ```
@@ -461,7 +461,7 @@ _Example request, using Javascript:_
 
 ```javascript
 var nano = require('nano');
-var account = nano('https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com');
+var account = nano('https://$ACCOUNT:$PASSWORD@$ACCOUNT.cloudant.com');
 account.request({
 	path: '_revs_limit',
 	body: '500',
@@ -507,8 +507,8 @@ GET /_membership HTTP/1.1
 _Example request to list nodes in the cluster, using the command line:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/_membership \
-	-u $USERNAME
+curl https://$ACCOUNT.cloudant.com/_membership \
+	-u $ACCOUNT
 ```
 {:codeblock}
 
@@ -518,7 +518,7 @@ _Example request to list nodes in the cluster, using Javascript:_
 
 ```javascript
 var nano = require('nano');
-var account = nano('https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com');
+var account = nano('https://$ACCOUNT:$PASSWORD@$ACCOUNT.cloudant.com');
 account.request({
 	path: '_membership'
 }, function (err, body) {
@@ -579,8 +579,8 @@ GET /_uuids HTTP/1.1
 _Example request for a single UUID, using the command line:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/_uuids \
-	-u $USERNAME
+curl https://$ACCOUNT.cloudant.com/_uuids \
+	-u $ACCOUNT
 ```
 {:codeblock}
 
@@ -590,7 +590,7 @@ _Example request for a single UUID, using Javascript:_
 
 ```javascript
 var nano = require('nano');
-var account = nano('https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com');
+var account = nano('https://$ACCOUNT:$PASSWORD@$ACCOUNT.cloudant.com');
 account.request({
 	path: '_uuids'
 }, function (err, body) {
@@ -624,8 +624,8 @@ GET /_uuids?count=5 HTTP/1.1
 _Example request for five UUIDs, using the command line:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/_uuids?count=5 \
-	-u $USERNAME
+curl https://$ACCOUNT.cloudant.com/_uuids?count=5 \
+	-u $ACCOUNT
 ```
 {:codeblock}
 
@@ -635,7 +635,7 @@ _Example request for five UUIDs, using Javascript:_
 
 ```javascript
 var nano = require('nano');
-var account = nano('https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com');
+var account = nano('https://$ACCOUNT:$PASSWORD@$ACCOUNT.cloudant.com');
 account.request({
 	path: '_uuids?count=5'
 }, function (err, body) {

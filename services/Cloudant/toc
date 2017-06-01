@@ -1,11 +1,11 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="cloudant" audience="service" href="/docs/services/Cloudant/index.html"}
+{: .toc subcollection="cloudant" audience="service" href="/docs/services/Cloudant/getting-started.html"}
 Cloudant NoSQL DB
 
 	{: .navgroup id="learn"}
-	index.md
+	getting-started.md
 	cloudant.md
 
 	{: .topicgroup}
@@ -17,12 +17,6 @@ Cloudant NoSQL DB
 
 	{: .navgroup id="reference"}
 	basics/index.md
-
-	{: .topicgroup}
-	Libraries
-		libraries/index.md
-		libraries/supported.md
-		libraries/thirdparty.md
 
 	{: .topicgroup}
 	API Reference
@@ -49,12 +43,23 @@ Cloudant NoSQL DB
 		api/advanced.md
 		api/monitoring.md
 		api/backup.md
+
+	{: .topicgroup}
+	Sample apps
+		[Feedback Mobile App using Ionic and Cloudant](https://github.com/IBM-Bluemix/feedbackapp-ionic-cloudant)
+		[Open Fridge](https://github.com/krook/openfridge)
+		[Online Catalog Store](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend)
+
+	{: .topicgroup}
+	Libraries
+		libraries/index.md
+		libraries/supported.md
+		libraries/thirdparty.md
 	{: .navgroup-end}
 
 	{: .navgroup id="howto"}
 	{: .topicgroup}
 	Tutorials
-		tutorials/index.md
 		tutorials/create_service.md
 		tutorials/create_database.md
 		tutorials/create_bmxapp.md
@@ -66,7 +71,6 @@ Cloudant NoSQL DB
 
 	{: .topicgroup}
 	Guides
-		guides/index.md
 		guides/acurl.md
 		guides/backup-guide.md
 		guides/backup-guide-using-replication.md

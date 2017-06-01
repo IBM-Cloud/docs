@@ -24,7 +24,7 @@ or supplied as arguments when you use the view.
 To query a view,
 submit a `GET` request with the following format:
 
--   **Method**: `GET /<database>/_design/<design-doc>/_view/<view-name>`
+-   **Method**: `GET /$DATABASE/_design/$DDOC/_view/$VIEW-NAME`
 -   **Request**: None
 -   **Response**: JSON of the documents that are returned by the view
 -   **Roles permitted**: `_reader`
@@ -59,7 +59,7 @@ Argument         | Description | Optional | Type | Default | Supported values
 _Example of using HTTP to retrieve a list of the first five documents from a database, applying the user-created `by_title` view:_
 
 ```http
-GET /<database>/_design/<design-doc>/_view/by_title?limit=5 HTTP/1.1
+GET /$DATABASE/_design/$DDOC/_view/by_title?limit=5 HTTP/1.1
 Accept: application/json
 Content-Type: application/json
 ```
@@ -69,7 +69,7 @@ _Example of using the command line to retrieve a list of the first five document
 applying the user-created `by_title` view:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/$DATABASE/_design/$DESIGNDOCUMENT/_view/by_title?limit=5 \
+curl https://$ACCOUNT.cloudant.com/$DATABASE/_design/$DDOC/_view/by_title?limit=5 \
      -H "Content-Type: application/json"
 ```
 {:codeblock}
@@ -263,7 +263,7 @@ You can reverse the order of the returned view information by setting the `desce
 _Example of using HTTP to request the last five records in reversed sort order:_
 
 ```http
-GET /<database>/_design/<design-doc>/_view/by_title?limit=5&descending=true HTTP/1.1
+GET /$DATABASE/_design/$DDOC/_view/by_title?limit=5&descending=true HTTP/1.1
 Accept: application/json
 Content-Type: application/json
 ```
@@ -272,7 +272,7 @@ Content-Type: application/json
 _Example of requesting the last five records in reversed sort order, that uses the command line:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/$DATABASE/_design/$DESIGNDOCUMENT/_view/by_title?limit=5&descending=true \
+curl https://$ACCOUNT.cloudant.com/$DATABASE/_design/$DDOC/_view/by_title?limit=5&descending=true \
      -H "Content-Type: application/json"
 ```
 {:codeblock}
@@ -353,7 +353,7 @@ Content-Type: application/json
 _Example of a query using the command line that includes `startkey` and `endkey` query arguments:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/$DATABASE/_design/$DESIGNDOCUMENT/_view/by_ingredient?startkey="alpha"&endkey="beta" \
+curl https://$ACCOUNT.cloudant.com/$DATABASE/_design/$DDOC/_view/by_ingredient?startkey="alpha"&endkey="beta" \
      -H "Content-Type: application/json"
 ```
 {:codeblock}
@@ -376,7 +376,7 @@ _Example illustrating why reversing the order of `startkey` and `endkey` might n
 that uses the command line:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/$DATABASE/_design/$DESIGNDOCUMENT/_view/by_ingredient?descending=true&startkey="beta"&endkey="alpha" \
+curl https://$ACCOUNT.cloudant.com/$DATABASE/_design/$DDOC/_view/by_ingredient?descending=true&startkey="beta"&endkey="alpha" \
      -H "Content-Type: application/json"
 ```
 {:codeblock}
@@ -415,7 +415,7 @@ Content-Type: application/json
 _Example that uses the command line to apply correct filtering and sorting:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/$DATABASE/_design/$DESIGNDOCUMENT/_view/by_ingredient?descending=true&startkey="egg"&endkey="carrots" \
+curl https://$ACCOUNT.cloudant.com/$DATABASE/_design/$DDOC/_view/by_ingredient?descending=true&startkey="egg"&endkey="carrots" \
     -H "Content-Type: application/json"
 ```
 {:codeblock}
@@ -437,7 +437,7 @@ _Example HTTP request that returns all recipes,
 where the key for the view matches either `claret` or `clear apple juice`:_
 
 ```http
-POST /$DB/_design/$DDOC/_view/$VIEWNAME HTTP/1.1
+POST /$DATABASE/_design/$DDOC/_view/$VIEWNAME HTTP/1.1
 Content-Type: application/json
 ```
 {:codeblock}
@@ -447,7 +447,7 @@ where the key for the view matches either `claret` or `clear apple juice`,
 that uses the command line:_
 
 ```sh
-curl -X POST "https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DB/_design/$DDOC/_view/$VIEWNAME" -d @request.json
+curl -X POST "https://INDEX_NAME$ACCOUNT.cloudant.com/$DATABASE/_design/$DDOC/_view/$VIEWNAME" -d @request.json
 ```
 {:codeblock}
 
@@ -550,7 +550,7 @@ _Example JSON document that lists the keys to match:_
 _Example request using the command line to obtain the full content of documents that match the listed keys:_
 
 ```sh
-curl "https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DB/_design/$DDOC/_view/by_ingredient?include_docs=true"
+curl "https://INDEX_NAME$ACCOUNT.cloudant.com/$DATABASE/_design/$DDOC/_view/by_ingredient?include_docs=true"
     -X POST \
     -H "Content-Type: application/json" \
     -d "{ "keys" : [ "claret", "clear apple juice" ] }"
@@ -650,7 +650,7 @@ _Example (abbreviated) response, returning the full document for each recipe tha
 ## Sending several queries to a view
 
 To send several view queries in one request,
-use a `POST` request to `/$DATABASE/_design/$DESIGNDOC/_view/$VIEW`.
+use a `POST` request to `/$DATABASE/_design/$DDOC/_view/$VIEWNAME`.
 
 The request body is a JSON object that contains only the `queries` field.
 It holds an array of query objects with fields for the parameters of the query.
@@ -664,7 +664,7 @@ Each result object contains the same fields as the response to a regular view re
 _Example request using HTTP that contains several queries:_
 
 ```http
-POST /$DB/_design/$DESIGNDOC/_view/$VIEW HTTP/1.1
+POST /$DATABASE/_design/$DDOC/_view/$VIEWNAME HTTP/1.1
 Content-Type: application/json
 ```
 {:codeblock}
@@ -672,7 +672,7 @@ Content-Type: application/json
 _Example request containing several queries, that uses the command line:_
 
 ```sh
-curl https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DB/_design/$DESIGNDOC/_view/$VIEW -H 'Content-Type: application/json' -d @request-body.json
+curl https://$ACCOUNT.cloudant.com/$DATABASE/_design/$DDOC/_view/$VIEWNAME -H 'Content-Type: application/json' -d @request-body.json
     # where request-body.json is a file containing JSON data describing the queries
 ```
 {:codeblock}
