@@ -21,9 +21,9 @@ Une fois que vous êtes connecté à {{site.data.keyword.Bluemix}}, vous pouvez 
 {:shortdesc}
 
 Avant de commencer, effectuez les opérations suivantes :
-  1. Installez l'interface de ligne de commande {{site.data.keyword.Bluemix}}. 
+  1. Installez l'interface de ligne de commande {{site.data.keyword.Bluemix}}.
 
-  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/btn_bx_commandline.svg" alt="Télécharger l'interface de ligne de commande {{site.data.keyword.Bluemix}}" /> </a> 
+  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/btn_bx_commandline.svg" alt="Télécharger l'interface de ligne de commande {{site.data.keyword.Bluemix}}" /> </a>
 
   2. Connectez-vous à {{site.data.keyword.Bluemix}}.
 
@@ -33,7 +33,7 @@ Avant de commencer, effectuez les opérations suivantes :
 
   <pre class="pre"><code class="hljs">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">nom_utilisateur</var> -o <var class="keyword varname" data-hd-keyref="org_name">nom_org</var> -s <var class="keyword varname" data-hd-keyref="space_name">nom_espace</var></code></pre>
 
-Lorsqu'une commande **bluemix app push** est émise, l'interface de ligne de commande met le répertoire de travail à disposition de l'environnement {{site.data.keyword.Bluemix_notm}}, qui utilise un pack de construction pour construire et exécuter l'application. 
+Lorsqu'une commande **bluemix app push** est émise, l'interface de ligne de commande met le répertoire de travail à disposition de l'environnement {{site.data.keyword.Bluemix_notm}}, qui utilise un pack de construction pour construire et exécuter l'application.
 
   1. Depuis le répertoire de votre application, entrez la commande **bluemix app push** avec le nom de l'application. Le nom de l'application doit être unique dans l'environnement {{site.data.keyword.Bluemix_notm}}.
 
@@ -51,10 +51,7 @@ Lorsqu'une commande **bluemix app push** est émise, l'interface de ligne de com
 
   **Astuce :** Lorsque vous utilisez la commande **bluemix app push**, elle copie tous les fichiers et répertoires depuis votre répertoire de travail vers Bluemix. Assurez-vous que votre répertoire de travail contient uniquement les fichiers requis.
 
-  
+
   2. Si vous modifiez votre application, vous pouvez télécharger ces modifications en entrant à nouveau la commande `bluemix app push`. La commande utilise vos options précédentes et vos réponses aux invites pour mettre à jour n'importe quelle instance en cours d'exécution de votre application avec les nouvelles parties de code.
 
 L'interface de ligne de commande {{site.data.keyword.Bluemix}} regroupe une interface de ligne de commande cf dans son installation. En réalité, la commande `bluemix app push` appelle `cf push` pour télécharger et déployer votre application sur {{site.data.keyword.Bluemix_notm}}. Voir [Commandes cf](/docs/cli/reference/cfcommands/index.html) pour plus d'informations sur cf push. Voir [Utilisation de packs de construction de communauté](/docs/cfapps/byob.html) pour des informations sur les packs de construction.
-
-
-**Astuce :** vous pouvez également télécharger ou déployer une application à partir de DevOps Services. Voir [Developing a {{site.data.keyword.Bluemix_notm}} application in Node.js with the Web IDE](https://hub.jazz.net/tutorials/devopsweb/){: new_window}.

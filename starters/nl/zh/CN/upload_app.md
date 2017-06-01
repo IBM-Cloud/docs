@@ -23,7 +23,7 @@ lastupdated: "2017-04-19"
 开始之前，您必须：
   1. 安装 {{site.data.keyword.Bluemix}} 命令行界面。
 
-  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/btn_bx_commandline.svg" alt="下载 {{site.data.keyword.Bluemix}} 命令行界面" /></a> 
+  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/btn_bx_commandline.svg" alt="下载 {{site.data.keyword.Bluemix}} 命令行界面" /></a>
 
   2. 连接到 {{site.data.keyword.Bluemix}}。
 
@@ -52,10 +52,7 @@ lastupdated: "2017-04-19"
 
   **提示：**使用 **bluemix app push** 命令时，该命令会将当前目录中的所有文件和目录复制到 Bluemix 中。请确保应用程序目录中只包含必需的文件。
 
-  
+
   2. 如果更改了应用程序，可以通过再次输入 `bluemix app push` 命令来上传这些更改。该命令会使用您先前的选项并根据您对提示的响应，以新的代码段来更新任何运行中应用程序实例。
 
 {{site.data.keyword.Bluemix}} CLI 在其安装中捆绑了 cf CLI。`bluemix app push` 命令实际上会调用 `cf push` 以将应用程序上传并部署到 {{site.data.keyword.Bluemix_notm}}。有关 cf push 的更多信息，请参阅 [cf 命令](/docs/cli/reference/cfcommands/index.html)。有关 buildpack 的信息，请参阅[使用社区 buildpack](/docs/cfapps/byob.html)。
-
-
-**提示：**您还可以从 DevOps Services 上传或部署应用程序。请参阅 [Developing a {{site.data.keyword.Bluemix_notm}} application in Node.js with the Web IDE](https://hub.jazz.net/tutorials/devopsweb/){: new_window}。
