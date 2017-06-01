@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-04-03"
+lastupdated: "2017-05-16"
 
 ---
 
@@ -50,6 +50,7 @@ lastupdated: "2017-04-03"
 |{{site.data.keyword.composeForRethinkDB}} | 在美國達拉斯進行管理 | 在英國倫敦進行管理 | 在澳洲雪梨進行管理 | 在德國法蘭克福進行管理 |
 |{{site.data.keyword.composeForScyllaDB}} | 在美國達拉斯進行管理 | 在英國倫敦進行管理 | 在澳洲雪梨進行管理 | 在德國法蘭克福進行管理 |
 |{{site.data.keyword.conceptinsightsshort}}	| 在美國達拉斯進行管理	| 在美國達拉斯進行管理	| 在美國達拉斯進行管理 | 在此地區無法使用 |
+|{{site.data.keyword.contdelivery_short}} | 在美國達拉斯進行管理 | 在此地區無法使用 | 在此地區無法使用 | 在此地區無法使用 |
 |{{site.data.keyword.dashdbshort}} | 在美國達拉斯進行管理 | 在英國倫敦進行管理 | 在雪梨進行管理 | 在德國法蘭克福進行管理 |
 |{{site.data.keyword.datacshort}}	| 在美國達拉斯進行管理	| 在英國倫敦進行管理	| 在澳洲雪梨進行管理 | 在此地區無法使用 |
 |{{site.data.keyword.DB2OnCloud_short}}	| 在美國達拉斯進行管理	| 在美國達拉斯進行管理	| 在澳洲雪梨進行管理 | 在此地區無法使用 |

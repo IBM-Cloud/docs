@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-04-03"
+lastupdated: "2017-05-16"
 
 ---
 
@@ -50,6 +50,7 @@ lastupdated: "2017-04-03"
 |{{site.data.keyword.composeForRethinkDB}} | 댈러스, 미국에서 호스팅됨 | 런던, 영국에서 호스팅됨 | 시드니, 호주에서 호스팅됨 | 프랑크푸르트, 독일에서 호스팅됨 |
 |{{site.data.keyword.composeForScyllaDB}} | 댈러스, 미국에서 호스팅됨 | 런던, 영국에서 호스팅됨 | 시드니, 호주에서 호스팅됨 | 프랑크푸르트, 독일에서 호스팅됨 |
 |{{site.data.keyword.conceptinsightsshort}}	| 댈러스, 미국에서 호스팅됨	| 댈러스, 미국에서 호스팅됨	| 댈러스, 미국에서 호스팅됨 | 지역에서 사용할 수 없음 |
+|{{site.data.keyword.contdelivery_short}} | 댈러스, 미국에서 호스팅됨 | 지역에서 사용할 수 없음 | 지역에서 사용할 수 없음 | 지역에서 사용할 수 없음 |
 |{{site.data.keyword.dashdbshort}} | 댈러스, 미국에서 호스팅됨 | 런던, 영국에서 호스팅됨 | 시드니에서 호스팅됨 | 프랑크푸르트, 독일에서 호스팅됨 |
 |{{site.data.keyword.datacshort}}	| 댈러스, 미국에서 호스팅됨	| 런던, 영국에서 호스팅됨	| 시드니, 호주에서 호스팅됨 | 지역에서 사용할 수 없음 |
 |{{site.data.keyword.DB2OnCloud_short}}	| 댈러스, 미국에서 호스팅됨	| 댈러스, 미국에서 호스팅됨	| 시드니, 호주에서 호스팅됨 | 지역에서 사용할 수 없음 |

@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-04-03"
+lastupdated: "2017-05-16"
 
 ---
 
@@ -50,6 +50,7 @@ No todos los servicios están disponibles para su adquisición en cada región d
 |{{site.data.keyword.composeForRethinkDB}} | Alojado en Dallas,US | Alojado en Londres,UK | Alojado en Sídney,AU | Alojado en Frankfurt,DE |
 |{{site.data.keyword.composeForScyllaDB}} | Alojado en Dallas,US | Alojado en Londres,UK | Alojado en Sídney,AU | Alojado en Frankfurt,DE |
 |{{site.data.keyword.conceptinsightsshort}}	| Alojado en Dallas,US	| Alojado en Dallas,US	| Alojado en Dallas,US | No disponible en la región |
+|{{site.data.keyword.contdelivery_short}} | Alojado en Dallas,US | No disponible en la región | No disponible en la región | No disponible en la región |
 |{{site.data.keyword.dashdbshort}} | Alojado en Dallas,US | Alojado en Londres,UK | Alojado en Sídney | Alojado en Frankfurt,DE |
 |{{site.data.keyword.datacshort}}	| Alojado en Dallas,US	| Alojado en Londres,UK	| Alojado en Sídney,AU | No disponible en la región |
 |{{site.data.keyword.DB2OnCloud_short}}	| Alojado en Dallas,US	| Alojado en Dallas,US	| Alojado en Sídney,AU | No disponible en la región |

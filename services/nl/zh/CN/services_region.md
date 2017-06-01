@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-04-03"
+lastupdated: "2017-05-16"
 
 ---
 
@@ -50,6 +50,7 @@ lastupdated: "2017-04-03"
 |{{site.data.keyword.composeForRethinkDB}} | 在美国达拉斯托管 | 在英国伦敦托管 | 在澳大利亚悉尼托管 | 在德国法兰克福托管 |
 |{{site.data.keyword.composeForScyllaDB}} | 在美国达拉斯托管 | 在英国伦敦托管 | 在澳大利亚悉尼托管 | 在德国法兰克福托管 |
 |{{site.data.keyword.conceptinsightsshort}}	| 在美国达拉斯托管	| 在美国达拉斯托管	| 在美国达拉斯托管 | 在区域中不可用 |
+|{{site.data.keyword.contdelivery_short}} | 在美国达拉斯托管 | 在区域中不可用 | 在区域中不可用 | 在区域中不可用 |
 |{{site.data.keyword.dashdbshort}} | 在美国达拉斯托管 | 在英国伦敦托管 | 在悉尼托管 | 在德国法兰克福托管 |
 |{{site.data.keyword.datacshort}}	| 在美国达拉斯托管	| 在英国伦敦托管	| 在澳大利亚悉尼托管 | 在区域中不可用 |
 |{{site.data.keyword.DB2OnCloud_short}}	| 在美国达拉斯托管	| 在美国达拉斯托管	| 在澳大利亚悉尼托管 | 在区域中不可用 |

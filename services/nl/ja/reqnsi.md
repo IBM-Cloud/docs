@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-05-16"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2017-01-11"
 #サービス
 {: #services}
 
-{{site.data.keyword.Bluemix}} ユーザー・インターフェースの**「サービス」**の下の**「カタログ」**で、使用可能なサービスを見つけることができます。
+{{site.data.keyword.Bluemix}} コンソールの**「サービス」**の下の**「カタログ」**で、使用可能なサービスを見つけることができます。
 {:shortdesc}
 
 
@@ -51,98 +51,13 @@ lastupdated: "2017-01-11"
 
 試験的サービスは安定していない可能性があり、前のバージョンとは互換性のない方向で変更される場合があります。これらのサービスを実稼働環境で使用することは推奨されません。試験的サービスに対するサポートは、{{site.data.keyword.Bluemix_notm}} Developers Community を通じて提供されます。IBM が問題を調査し、その問題が試験的サービスの欠陥であると判定された場合、IBM は修正を提供する義務を負いません。
 
-サービスを {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェース、cf コマンド・ライン・インターフェース、IBM {{site.data.keyword.Bluemix_notm}} DevOps Services、またはサポートされる任意のツールで使用するには、以下のステップを実行します。
+サービスを {{site.data.keyword.Bluemix_notm}} コンソール、cf コマンド・ライン・インターフェース、IBM {{site.data.keyword.Bluemix_notm}} DevOps Services、またはサポートされる任意のツールで使用するには、以下のステップを実行します。
 
 1. サービスのインスタンスを作成します。ほとんどの場合、アプリケーションを作成するときに、サービスのインスタンスを作成できます。
 
 2. 新規サービス・インスタンスを使用するアプリケーションを識別します。Web アプリケーションに対しては、同じサービス・インスタンス (たいていの場合はデータ共有のため) を使用する複数のアプリケーションを指定できます。
 
 3. サービスとの対話のためのコードをアプリケーション内に作成します。
-
-##地域別のサービス
-
-各 {{site.data.keyword.Bluemix_notm}} 地域ですべてのサービスが利用できるわけではありません。
-以下の表は、IBM が提供するサービスを示しています。
-
-
-
-|サービス	|米国南部地域で利用可能	|ヨーロッパ英国地域で利用可能 |オーストラリア、シドニー地域で利用可能|
-|:----------|:------------------------------|:------------------|:------------------|
-|{{site.data.keyword.activedeployshort}}	|はい		|はい		|いいえ|
-|{{site.data.keyword.alchemyapishort}} 		|はい	   	|はい  		|はい|
-|{{site.data.keyword.appsecshort}}		|はい		|いいえ		|いいえ|
-|{{site.data.keyword.alertnotificationshort}}|はい		|いいえ			|いいえ		|
-|{{site.data.keyword.APS_DA}}			|はい		|いいえ		|いいえ|
-|{{site.data.keyword.APS_MA}}			|はい		|いいえ		|いいえ|
-|{{site.data.keyword.amashort}}			|はい		|はい		|はい|
-|{{site.data.keyword.hadoopst}}			|はい		|いいえ		|いいえ|
-|{{site.data.keyword.APIM}}			|はい		|はい		|いいえ|
-|{{site.data.keyword.autoscaling}}		|はい		|はい		|はい|
-|{{site.data.keyword.bigicloudst}}		|はい		|いいえ		|いいえ|
-|{{site.data.keyword.blockstorageshort}}        |いいえ             |はい            |いいえ |
-|{{site.data.keyword.rules_short}}		|はい		|はい		|いいえ|
-|{{site.data.keyword.cloudint}}			|はい		|はい		|いいえ|
-|{{site.data.keyword.cloudant}}			|はい		|はい		|いいえ|
-|{{site.data.keyword.conceptexpansionshort}}	|はい		|はい		|はい|
-|{{site.data.keyword.conceptinsightsshort}}	|はい		|はい		|はい|
-|{{site.data.keyword.dashdbshort}}		|はい		|はい		|いいえ|
-|{{site.data.keyword.datacshort}}		|はい		|はい		|はい|
-|{{site.data.keyword.DB2OnCloud_short}}		|はい		|はい		|はい|
-|{{site.data.keyword.deliverypipeline}}		|はい		|はい		|いいえ|
-|{{site.data.keyword.dialogshort}}		|はい		|はい		|はい|
-|{{site.data.keyword.documentconversionshort}}	|はい		|はい		|はい|
-|{{site.data.keyword.creshort}}			|はい		|いいえ		|いいえ|
-|{{site.data.keyword.game}}			|はい		|はい		|はい|
-|{{site.data.keyword.geospatialshort_Geospatial}}	|はい	|はい		|いいえ|
-|{{site.data.keyword.globalizationshort}}	|はい		|いいえ		|いいえ|
-|{{site.data.keyword.dataworks_short}}		|はい		|はい		|いいえ|
-|{{site.data.keyword.twittershort}}		|はい		|はい		|はい|
-|{{site.data.keyword.weather_short}}		|はい		|はい		|はい|
-|{{site.data.keyword.IntegrationTestingshort}}	|はい		|はい		|いいえ|
-|{{site.data.keyword.iot_short}}		|はい		|いいえ		|いいえ|
-|{{site.data.keyword.keymanagementserviceshort}}|いいえ		|はい		|いいえ|
-|{{site.data.keyword.languagetranslationshort}}	|はい		|はい		|いいえ|
-|{{site.data.keyword.messagehub}}		|はい		|はい		|いいえ|
-|{{site.data.keyword.messageresonanceshort}}	|はい		|はい		|いいえ|
-|{{site.data.keyword.APS_MAiOS}} 		|はい		|いいえ		|いいえ|
-|{{site.data.keyword.macm_short}}		|はい		|はい		|はい|
-|{{site.data.keyword.mobilemam}}		|はい		|はい		|いいえ|
-|{{site.data.keyword.mobiledata}}		|はい		|はい		|いいえ|
-|{{site.data.keyword.manda}}			|はい		|はい		|いいえ|
-|{{site.data.keyword.mqa}}			|はい		|はい		|いいえ|
-|{{site.data.keyword.mql}}			|はい		|はい		|いいえ|
-|{{site.data.keyword.nlclassifierlshort}} 	|はい 		|はい 		|はい|
-|{{site.data.keyword.objectstorageshort}}	|はい		|いいえ		|いいえ|
-|{{site.data.keyword.personalityinsightsshort}}	|はい		|はい		|はい|
-|{{site.data.keyword.mobilepush}}		|はい		|はい		|いいえ|
-|Push for iOS 8					|はい		|はい		|いいえ|
-|{{site.data.keyword.questionandanswershort}}	|はい		|はい		|はい|
-|{{site.data.keyword.rapidApps}}		|はい		|はい		|いいえ|
-|{{site.data.keyword.relationshipextractionshort}}	|はい	|はい		|はい|
-|{{site.data.keyword.retrieveandrankshort}}	|はい 		|はい 		|はい|
-|{{site.data.keyword.SecureGateway}}		|はい		|はい		|いいえ|
-|{{site.data.keyword.sescashort}}		|はい		|はい		|はい|
-|{{site.data.keyword.ssofull}}			|はい		|いいえ		|いいえ|
-|{{site.data.keyword.speechtotextshort}}	|はい 		|はい	 	|はい|
-|{{site.data.keyword.sqldb}}			|はい		|はい		|いいえ|
-|{{site.data.keyword.staticanalyzershort}}	|はい		|はい		|いいえ|
-|{{site.data.keyword.streaminganalyticsshort}}	|はい		|いいえ		|いいえ|
-|{{site.data.keyword.texttospeechshort}} 	|はい 		|はい	 	|はい|
-|{{site.data.keyword.times}}			|はい		|はい		|いいえ|
-|{{site.data.keyword.toneanalyzershort}} 	|はい 		|はい 		|はい|
-|{{site.data.keyword.trackplan}}		|はい		|はい		|いいえ|
-|{{site.data.keyword.tradeoffanalyticsshort}}	|はい		|はい		|はい|
-|{{site.data.keyword.visualinsightsshort}}	|はい		|はい		|はい|
-|{{site.data.keyword.visualizationrenderingshort}} |はい		|はい		|いいえ|
-|{{site.data.keyword.workflow}}			|はい		|はい		|いいえ|
-|{{site.data.keyword.workloadscheduler}}	|はい		|はい		|いいえ|
-|{{site.data.keyword.xpagesservice_short}}	|はい		|はい		|いいえ|
-*表 2. サービスの利用可能性*
-
-
-{: caption="表 2. サービスの利用可能性" caption-side="top"}
-
-
 
 # アプリケーションへのサービスの追加
 {: #add_service}
@@ -167,11 +82,11 @@ lastupdated: "2017-01-11"
 ## 新規サービス・インスタンスの要求
 {: #req_instance}
 
-新規サービス・インスタンスを要求するには、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースまたは cf コマンド・ライン・インターフェースを使用する必要があります。
+新規サービス・インスタンスを要求するには、{{site.data.keyword.Bluemix_notm}} コンソールまたは cf コマンド・ライン・インターフェースを使用する必要があります。
 
 **注:** サービス名を指定するときは、英字と数字のみを使用してください。英字と数字以外を使用すると、予測できない結果が生じる可能性があります。
 
-{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースを使用してサービス・インスタンスを要求する場合、以下のステップを実行します。
+{{site.data.keyword.Bluemix_notm}} コンソールを使用してサービス・インスタンスを要求する場合、以下のステップを実行します。
 
 1. {{site.data.keyword.Bluemix_notm}} **カタログ**で、追加するサービスのタイルをクリックします。サービス詳細ページが開きます。
 
