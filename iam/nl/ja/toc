@@ -1,0 +1,21 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="bluemix-iam" audience="platform" href="/docs/iam/iamusermanage.html"}
+ID およびアクセス権限の管理
+
+    {: .navgroup id="learn"}
+    users_roles.md
+    {: .navgroup-end}
+    
+    {: .navgroup id="howto"}
+    iamuserinv.md
+    assignaccess.md
+    iamusermanage.md
+    
+    {: .topicgroup}
+    API キー
+        apikeys.md
+    {: .navgroup-end}
+
+    
