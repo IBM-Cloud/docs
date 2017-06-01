@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2016-05-09"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -166,14 +166,18 @@ Puede utilizar las herramientas y servicios siguientes que {{site.data.keyword.B
 |:------|:--------|
 |Interfaz de línea de mandatos de Cloud Foundry (cf cli)	|Gestione su código en el cliente local y utilizar la interfaz de línea de mandatos de Cloud Foundry para enviar por push su app manualmente a {{site.data.keyword.Bluemix_notm}}. Para obtener más información, consulte [Subir sus apps](/docs/starters/upload_app.html).|
 |Eclipse	|Gestione su código en Eclipse y utilice IBM Eclipse tools for {{site.data.keyword.Bluemix_notm}} para enviar por push su app.|
-|Integración con Git	|Gestione su código en GitHub e integre Git en {{site.data.keyword.Bluemix_notm}}. Puede colaborar con otros desarrolladores. Su app se despliega automáticamente en {{site.data.keyword.Bluemix_notm}} cuando confirma los cambios en el código. No necesita enviar por push manualmente la app.|
-|{{site.data.keyword.Bluemix_notm}} DevOps Delivery Pipeline	|Gestione su código en el repositorio DevOps GitHub y despliegue su app en {{site.data.keyword.Bluemix_notm}} utilizando DevOps Delivery Pipeline.|
-{: caption="Tabla 1. Herramientas de Bluemix" caption-side="top"}
+|{{site.data.keyword.contdelivery_full}} |    Utilice {{site.data.keyword.contdelivery_short}} para automatizar las compilaciones, las pruebas de unidad, los despliegues entre otras tareas. Edite y envíe el código a través de un potente IDE basado en web. Cree cadenas de herramientas para habilitar las integraciones de herramientas que dan soporte a las tareas de desarrollo, despliegue y funcionamiento. El servicio Continuous Delivery incluye Delivery Pipeline, Eclipse Orion Web IDE y Git Repos and Issue Tracking. Para obtener más información, consulte <a href="/docs/services/ContinuousDelivery/index.html#cd_getting_started">Iniciación a Continuous Delivery</a>.|
+{: caption="Tabla 1. Herramientas de {{site.data.keyword.Bluemix_notm}} " caption-side="top"}
 
 
 Si la plataforma Cloud Foundry no admite los requisitos de su app,
 puede utilizar un contenedor o MV en la que el tiempo de ejecución se establezca,
 configure y mantenga con opciones más personalizadas.
+
+##Despliegue y desarrollo de apps utilizando cadenas de herramientas en Continuous Delivery 
+{:ht_cd}
+
+Añada una <a href="/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_an_app">cadena de herramientas a su app</a> y, a continuación, utilice la <a href="/docs/services/ContinuousDelivery/toolchains_using.html#toolchains-using">interfaz de usuario de la cadena de herramientas de Continuous Delivery</a> para desarrollar y desplegar su app. 
 
 ##Subir sus apps mediante la CLI de cf
 {: #ht_cfcli}

@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2017-01-11"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -32,6 +32,13 @@ Antes de ser possível iniciar, inscreva-se para um IBMid em [https://console.ng
 inicie sua avaliação grátis de 30 dias. O {{site.data.keyword.Bluemix_notm}} fornece
 um abono de 2 GB de memória de tempo de execução e 10 instâncias de serviço para sua
 avaliação grátis.
+
+
+## Desenvolvendo e implementando seus apps usando cadeias de ferramentas e o serviço {{site.data.keyword.contdelivery_short}}
+{: #ee_cd}
+
+<a href="/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_an_app">Inclua uma cadeia de ferramentas</a> que inclua o serviço {{site.data.keyword.contdelivery_full}} em seu app. Em seguida, <a href="docs/services/ContinuousDelivery/toolchains_using.html#toolchains-using">use a cadeia de ferramentas</a> para desenvolver e implementar seu app.
+
 
 ## Criando seu app da web usando a interface com o usuário do {{site.data.keyword.Bluemix_notm}}
 {: #ee_appui}
