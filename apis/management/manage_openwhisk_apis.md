@@ -40,7 +40,7 @@ To create an {{site.data.keyword.openwhisk_short}} API, complete the following s
 	* Actions - **Actions that are available in {{site.data.keyword.Bluemix_notm}}** is the only option that is available.
 	* Response content type - This identifies the format in which the API returns the information. You can select from the following formats:
 	    * application/json - This is the default format, and is the most often used.
-		* text/html - This is used for responses are used on a Web site.
+		* text/html - This is used for responses that are used on a Web site.
 		* text/plain - This is provided in plain text and can be used in comma-separated values files.
 		* image/svg+xml - This can be used when screen captures are the main format of responses.
 		* Use "Content-Type" header from action - This is dependent on the type of content that is in the header of the response. 
