@@ -34,7 +34,7 @@ Lorsque vous naviguez dans la page des détails de l'application, vous ne pourre
 Lorsque vous essayez de vérifier votre appli ou vos services sur la page des détails de l'application, vous obtenez toujours le message d'erreur suivant :
 {: tsSymptoms}
 
-`Des modifications n'ont pas été sauvegardées dans la page nom_appli. Sauvegardez ou annulez les modifications.`
+`Des modifications n'ont pas été sauvegardées dans la page nom_app. Sauvegardez ou annulez les modifications.`
 
 Lorsque vous survolez avec la souris les zones **INSTANCES** ou **QUOTA DE MEMOIRE** dans le panneau du contexte d'exécution, les valeurs changent. Ce comportement est normal. Toutefois, le message d'erreur vous invite à sauvegarder les paramètres de mémoire ou d'instance avant de quitter la page.
 {: tsCauses}
@@ -227,7 +227,7 @@ Au lieu de coder en dur les données d'identification dans votre application, ut
 ```
 process.env.VCAP_SERVICES
 ```
-Pour plus d'informations sur les commandes que vous pouvez utiliser dans d'autres langages de programmation, voir [Java ![External link icon](../icons/launch-glyph.svg "External link icon")](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} et [Ruby ![Icône de lien externe](../icons/launch-glyph.svg "External link icon")](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}.
+Pour plus d'informations sur les commandes que vous pouvez utiliser dans d'autres langages de programmation, voir [Java ![Icône de lien externe](../icons/launch-glyph.svg "External link icon")](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} et [Ruby ![Icône de lien externe](../icons/launch-glyph.svg "External link icon")](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}.
 
 
 ## Impossibilité de déployer des applications à l'aide des outils IBM Eclipse pour Bluemix
@@ -315,7 +315,7 @@ Vous liez un service {{site.data.keyword.mobilepushshort}} pour votre applicatio
 Le service IBM {{site.data.keyword.mobilepushshort}} utilise le service de messagerie basée sur le cloud de Google (GCM) pour transmettre les notifications aux applications mobiles développées sur la plateforme Android. Les applications mobiles doivent pouvoir accéder au service GCM pour que les applications Android puissent recevoir les notifications. Dans les régions où le service GCM n'est pas accessible aux applications Android, ces dernières ne peuvent pas recevoir de notifications {{site.data.keyword.mobilepushshort}}.
 {: tsCauses}
 
-Pour contourner ce problème, utilisez des services tiers qui ne reposent pas sur le service GCM,, par exemple, [Pushy ![External link icon](../icons/launch-glyph.svg "External link icon")](https://pushy.me){: new_window}, [igetui ![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.getui.com/){: new_window} et [jpush ![Icône de lien externe](../icons/launch-glyph.svg "External link icon")](https://www.jpush.cn/){: new_window}.
+Pour contourner ce problème, utilisez des services tiers qui ne reposent pas sur le service GCM, par exemple [Pushy ![Icône de lien externe](../icons/launch-glyph.svg "External link icon")](https://pushy.me){: new_window}, [igetui ![Icône de lien externe](../icons/launch-glyph.svg "External link icon")](http://www.getui.com/){: new_window} et [jpush ![Icône de lien externe](../icons/launch-glyph.svg "External link icon")](https://www.jpush.cn/){: new_window}.
 {: tsResolve}
 
 
@@ -339,7 +339,7 @@ Supprimez les instances de service dont vous n'avez pas besoin ou retirez la lim
 
     Pour utiliser la console {{site.data.keyword.Bluemix_notm}} afin de supprimer une instance de service, procédez comme suit :
 	  1. Dans le tableau de bord Services, cliquez sur le menu **Actions** pour le service que vous souhaitez supprimer.
-	  2. Cliquez sur **Supprimer le service**. Vous êtes invité à reconstituer l'application à laquelle l'instance de service était liée. 
+	  2. Cliquez sur **Supprimer le service**. Vous êtes invité à reconstituer l'application à laquelle l'instance de service était liée.
 
     Pour utiliser l'interface de ligne de commande afin de supprimer une instance de service, procédez comme suit :
 	  1. Supprimez la liaison de l'instance de service à une application en entrant `cf unbind-service <nom_app> <nom_instance_service>`.
@@ -367,11 +367,11 @@ construction n'est requis. Spécifiez la valeur null-buildpack avec l'option **-
 {: tsResolve}
 
 ```
-cf push appname -p app_path -c <commande_démarrage> -b <null-buildpack>
+cf push nom_app -p chemin_app -c <commande_démarrage> -b <null-buildpack>
 ```
 Exemple :
 ```
-cf push appname -p chemin_app -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
+cf push nom_app -p chemin_app -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
 ## La limite de mémoire de l'organisation a été atteinte
@@ -380,7 +380,6 @@ cf push appname -p chemin_app -c ./RunMeNow -b https://github.com/ryandotsmith/n
 Si vous possédez un compte d'essai, il se peut que vous ne puissiez pas déployer une application dans {{site.data.keyword.Bluemix_notm}} si
 vous avez
 atteint la limite de mémoire définie pour votre organisation. Vous pouvez réduire la quantité de mémoire que vos applications utilisent ou augmenter le quota de mémoire de votre compte. Le quota de mémoire maximal pour un compte d'essai est 2 Go. Il ne peut être augmenté qu'en passant à un compte payant.
-
 
 Lorsque vous déployez une application dans {{site.data.keyword.Bluemix_notm}}, le message d'erreur suivant s'affiche :
 {: tsSymptoms}
@@ -414,7 +413,7 @@ Vous pouvez augmenter le quota de mémoire de votre compte ou réduire la mémoi
     2. Pour réduire la quantité de mémoire qui est utilisée par votre application, réduisez le nombre d'instances d'application ou la limite de mémoire maximale, ou les deux :
 
 	  ```
-	  cf push appname -p chemin_app -i nombre_instances -m limite_mémoire
+	  cf push nom_app -p chemin_app -i nombre_instances -m limite_mémoire
       ```
 
     3. Redémarrez votre application pour que les modifications soient appliquées.
@@ -452,33 +451,6 @@ Les variables que vous spécifiez ne sont sauvegardées que si vous les sauvegar
 
 Lorsque vous envoyez une application par commande push à {{site.data.keyword.Bluemix_notm}} depuis IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, sélectionnez la case à cocher **Save to the manifest file** dans la page des détails de l'application de l'assistant Application. Ainsi, les variables que vous spécifiez dans l'assistant sont sauvegardées dans le fichier manifeste de votre application. A la prochaine ouverture de l'assistant, elles seront affichées automatiquement.
 {: tsResolve}
-
-
-## Les icônes Bluemix Live Sync ne s'affichent pas
-{: #ts_llz_lkb_3r}
-
-Vous avez créé une application, mais les icônes IBM Bluemix Live Sync ne sont pas affichées dans l'interface IDE Web.
-
-Lorsque vous éditez une application Node.js dans l'interface IDE Web, les icônes {{site.data.keyword.Bluemix_notm}} Live Edit, Quick Restart, et Debug ne sont pas affichées.
-{: tsSymptoms}
-
-Les icônes ne sont pas disponibles dans les cas suivants :
-{: tsCauses}
-
-  * Le fichier `manifest.yml` n'est pas stocké au niveau supérieur de votre projet.
-  * Votre application est stockée dans un sous-répertoire plutôt qu'au niveau supérieur de votre projet, mais le chemin d'accès au sous-répertoire n'est pas spécifié dans le fichier `manifest.yml`.
-  * L'application ne contient pas de fichier `package.json`.
-
-Utilisez l'une des méthodes suivantes :
-{: tsResolve}
-
-  * Si tel n'est pas le cas, stockez le fichier `manifest.yml` au niveau supérieur de votre projet.
-  * Si votre application est stockée dans un sous-répertoire, spécifiez le chemin d'accès au sous-répertoire dans le fichier `manifest.yml`.
-  ```
-   path: chemin_application
-   ```
-  * Créez un fichier `package.json` dans le répertoire dans lequel se trouve votre application.
-
 
 <!-- begin STAGING ONLY -->
 
@@ -558,7 +530,7 @@ Le nom d'hôte que vous spécifiez doit être unique dans le domaine que vous ut
 	```
   * Si vous déployez votre application depuis l'invite de commande, utilisez la commande `cf push` avec l'option **-n**.
     ```
-    cf push appname -p chemin_app -n nom_hôte
+    cf push nom_app -p chemin_app -n nom_hôte
     ```
 
 
@@ -711,21 +683,19 @@ Ce problème peut se produire si des scripts (tels que le script de détection, 
 Vous pouvez utiliser la commande [git update ![](../icons/launch-glyph.svg " ")](http://git-scm.com/docs/git-update-index){: new_window} afin d'activer le droit d'exécution pour chaque script. Par exemple, vous pouvez entrer `git update --chmod=+x script.sh`.
 {: tsResolve}
 
+## Impossible de déployer une application depuis Delivery Pipeline dans IBM Bluemix Continuous Delivery
+ {: #ts_devops_to_bm}
 
-## Impossible de déployer une application depuis DevOps Services vers Bluemix
-{: #ts_devops_to_bm}
+ Il se peut que vous ne puissiez pas déployer votre application à l'aide de {{site.data.keyword.deliverypipeline}} dans {{site.data.keyword.contdelivery_short}} si le fichier `manifest.yml` n'est pas présent dans votre application. 
 
-Il se peut que vous ne puissiez pas envoyer votre application par commande push depuis IBM Bluemix DevOps Services dans {{site.data.keyword.Bluemix_notm}} si le fichier `manifest.yml` n'est pas présent dans votre application.
+ Lorsque vous déployez une application à l'aide de {{site.data.keyword.deliverypipeline}} dans {{site.data.keyword.contdelivery_short}}, il se peut que le message d'erreur `Unable to detect a supported application type` s'affiche.
+ {: tsSymptoms}
 
-Lorsque vous déployez une application depuis DevOps Services vers {{site.data.keyword.Bluemix_notm}}, le message d'erreur `Unable to detect a supported application type` peut s'afficher.
-{: tsSymptoms}
+ Ce problème peut survenir car le pipeline requiert un fichier `manifest.yml` pour déployer une application dans {{site.data.keyword.Bluemix_notm}}.
+ {: tsCauses}
 
-Ce problème peut survenir car DevOps Services requiert un fichier `manifest.yml` pour le déploiement d'une application dans {{site.data.keyword.Bluemix_notm}}.
-{: tsCauses}
-
-Pour remédier à ce problème, vous devez créer un fichier `manifest.yml`. Pour plus d'informations sur la création du fichier `manifest.yml`, voir [Manifeste d'application](/docs/manageapps/depapps.html#appmanifest).
-{: tsResolve}
-
+ Pour remédier à ce problème, vous devez créer un fichier `manifest.yml`. Pour plus d'informations sur la création du fichier `manifest.yml`, voir [Manifeste d'application](/docs/manageapps/depapps.html#appmanifest).
+ {: tsResolve}
 
 ## Les applis Meteor ne peuvent pas être envoyées par commande push
 {: #ts_meteor}
@@ -751,169 +721,3 @@ push` et spécifiez votre pack de construction personnalisé avec l'option **-b*
     ```
 	cf push nom_app -p chemin_app -b https://github.com/Sing-Li/bluemix-bp-meteor
 	```
-
-## Le bouton Déployer dans Bluemix ne déploie pas d'application
-{: #ts_deploybutton}
-
-Si vous cliquez sur le bouton Déployer dans {{site.data.keyword.Bluemix_notm}} et constatez que le référentiel Git n'est pas cloné ou que l'application n'est pas déployée, essayez les méthodes de traitement des incidents proposées pour les problèmes ci-après.
-  * [Le projet Bluemix DevOps Services ne peut pas être créé](#ts_project-cant-be-created)
-  * [Le référentiel Git est introuvable et ne peut pas être cloné dans DevOps Services](#ts_repo-not-found)
-  * [Le référentiel Git est cloné dans DevOps Services, mais l'application n'est pas déployée dans {{site.data.keyword.Bluemix_notm}}](#ts_repo-cloned-app-not-deployed)
-
-Pour plus d'informations sur la création du bouton, voir Création d'un bouton Déployer dans {{site.data.keyword.Bluemix_notm}}.
-
-### Le projet Bluemix DevOps Services ne peut pas être créé
-{: #ts_project-cant-be-created}
-
-Si vous constatez que le projet DevOps Services ne peut pas être créé, cela peut signifier que votre compte IBM {{site.data.keyword.Bluemix_notm}} est arrivé à expiration.
-
-Vous cliquez sur le bouton **Déployer dans Bluemix**, mais l'étape "Création du projet" n'aboutit pas.
-{: tsSymptoms}
-
-Il se peut que votre compte {{site.data.keyword.Bluemix_notm}} soit arrivé à expiration.
-{: tsCauses}
-
-Utilisez l'une des méthodes suivantes :
-{: tsResolve}
-
-  * Connectez-vous à {{site.data.keyword.Bluemix_notm}} et mettez à jour les informations relatives à votre compte.
-  * Cliquez à nouveau sur le bouton **Déployer dans Bluemix**.
-
-### Le référentiel Git est introuvable et ne peut pas être cloné dans DevOps Services
-{: #ts_repo-not-found}
-
-Si vous constatez que le référentiel Git n'est pas cloné, il peut y avoir un problème lié au référentiel ou au fragment du bouton.
-
-Vous cliquez sur le bouton **Déployer dans Bluemix**, mais le référentiel Git est introuvable et ne peut pas être cloné dans DevOps Services. L'étape "Clonage du référentiel n'aboutit pas. Par conséquent, l'application ne peut pas être déployée dans {{site.data.keyword.Bluemix_notm}}.
-{: tsSymptoms}
-
-Ce problème peut survenir pour les raisons suivantes :
-{: tsCauses}
-
-  * Il se peut que le référentiel Git n'existe pas ou ne soit pas accessible.
-  * Il peut y avoir un problème dans le code HTML ou Markdown du fragment du bouton.
-  * Il se peut que les caractères spéciaux, les paramètres de requête ou les fragments dans l'adresse URL empêchent l'accès au référentiel Git.
-
-Utilisez l'une des méthodes suivantes :
-{: tsResolve}
-
-  * Vérifiez que votre référentiel Git existe, qu'il est accessible publiquement, et que l'adresse URL est correcte.
-  * Vérifiez que le fragment ne contient pas d'erreur HTML ou Markdown.
-  * Si des caractères spéciaux, des paramètres de requête ou des fragments génèrent un problème lié à l'adresse URL du référentiel Git, codez
-l'adresse URL dans le fragment du bouton.
-
-### Le référentiel Git est cloné dans DevOps Services, mais l'application n'est pas déployée dans Bluemix
-{: #ts_repo-cloned-app-not-deployed}
-
-Si vous constatez que l'application n'est pas déployée, il se peut que le code dans le référentiel contienne des erreurs.
-
-Vous cliquez sur le bouton **Déployer dans Bluemix** et le référentiel Git est cloné dans DevOps Services, mais l'application n'est pas déployée dans {{site.data.keyword.Bluemix_notm}}. L'étape "Déploiement dans Bluemix" n'aboutit pas.
-{: tsSymptoms}
-
-Ce problème peut survenir pour les raisons suivantes :
-{: tsCauses}  
-
-  * Il se peut que l'espace disponible dans votre espace {{site.data.keyword.Bluemix_notm}} ne soit pas suffisant pour déployer une application.
-  * Il se peut qu'un service requis ne soit pas déclaré dans le fichier `manifest.yml`.
-  * Il se peut qu'un service requis soit déclaré dans le fichier `manifest.yml` alors qu'il se trouve déjà dans l'espace cible.
-  * Le code dans le référentiel peut comporter des erreurs.
-
-Pour diagnostiquer le problème, consultez les journaux de génération et de déploiement depuis le déploiement :
-  1. Si l'étape "Déploiement dans Bluemix" n'aboutit pas, cliquez sur le lien à l'étape "Configuration du pipeline" précédente pour ouvrir Delivery Pipeline.
-  2. Identifiez l'étape de génération ou de déploiement ayant échoué.
-  3. A l'étape ayant échoué, cliquez sur **Afficher les journaux et l'historique**.
-  4. Localisez le message d'erreur.
-
-Utilisez l'une des méthodes suivantes :
-{: tsResolve}
-
-  * Si le message d'erreur indique que l'espace dans l'espace {{site.data.keyword.Bluemix_notm}} n'est pas suffisant pour déployer l'application, ciblez un autre espace.
-  * Si le message d'erreur indique qu'un service requis n'est pas déclaré dans le fichier `manifest.yml`, signalez au propriétaire du référentiel que le service requis doit être ajouté.
-  * Si le message d'erreur indique qu'un service requis existe déjà dans l'espace cible, sélectionnez un autre espace à utiliser.
-  * Si le message d'erreur indique qu'il existe un problème lié à la génération, corrigez le problème dans le code qui empêche la génération de l'application. Pour vérifier que le code ne présente pas d'erreur, générez-le avec des commandes Git :
-    1. Clonez le référentiel Git :
-    ```
-    git clone <URL_référentiel_git>
-    ```
-    2. Ouvrez le répertoire de l'application :
-	```
-	cd <nom_app>
-	```
-    3. Créez l'application :
-	```
-	<nom_app> create
-	```
-    4. Si nécessaire, mettez à disposition des additifs.
-    5. Ajoutez les variables de configuration requises.
-    6. Envoyez le code par commande push :
-	```
-	git push <nom_app> master
-	```
-    7. Vérifiez que l'application est générée correctement :
-    8. Si nécessaire, exécutez la commande postérieure au déploiement :
-	```
-	<nom_app> run
-	```
-    9. Ouvrez l'application et vérifiez qu'elle fonctionne correctement :
-	```
-	<nom_app> open
-	```
-
-## Impossible de déployer une application depuis la barre d'exécution
-{: #ts_runbar}
-
-Le déploiement échoue et génère l'état "non synchronisé" affiché en jaune.
-{: tsSymptoms}
-
-L'application que vous déployez a la même route que l'autre application qui est en cours d'exécution.
-{: tsCauses}
-
-Modifiez la route afin qu'elle soit unique.
-{: tsResolve}
-
-## La barre d'exécution est introuvable dans Eclipse
-{: #ts_runbar-missing}
-
-Si vous ne voyez pas la barre d'exécution dans Eclipse Orion {{site.data.keyword.webide}}, cela signifie que l'une des erreurs suivantes s'est produite :
-{: tsCauses}
-
-* {{site.data.keyword.jazzhub}} n'identifie pas votre projet en tant que projet.
-*  {{site.data.keyword.jazzhub_short}} n'a pas réussi à déterminer le dossier dans lequel réside votre application.
-* {{site.data.keyword.jazzhub_short}} ne détecte pas que votre application est une application Node.js.
-
-Utilisez l'une des méthodes suivantes :
-{: tsResolve}  
-
-* Si {{site.data.keyword.jazzhub}} n'identifie pas votre projet en tant que projet, créez un fichier `project.json` dans le répertoire racine de votre projet.
-* Si {{site.data.keyword.jazzhub_short}} n'a pas pu déterminer le dossier dans lequel votre application réside et si votre application ne figure pas dans le répertoire racine du projet, exécutez l'une des étapes suivantes :
-  * Créez un fichier `manifest.yml` dans le répertoire racine de votre projet, puis éditez le fichier pour qu'il pointe vers l'emplacement de votre application. Par exemple, `path: path_to_your_app`.
-  * Déplacez votre application vers le répertoire racine de votre projet.
-* Si {{site.data.keyword.jazzhub_short}} ne détecte pas que votre application est une application Node.js, créez un fichier `package.json` dans le dossier de l'application de votre projet.
-
-## Le point d'ancrage GitHub ne fonctionne pas
-{: #ts_githubhookisntworking}
-
-Vous avez configuré votre projet GitHub pour qu'il crée des liens d'élément de travail lorsque vous insérez des validations, et ces liens ne fonctionnent pas comme prévu.
-{: tsSymptoms}
-
-Procédez comme suit pour résoudre ce problème :
-{: tsResolve}
-
-1. Dans le référentiel GitHub, cliquez sur **Paramètres**.
-   ![Lien des paramètres GitHub](images/github_settings.png)
-
-2. Cliquez sur **Webhooks & services**.
-   ![Lien des webhooks et services GitHub](images/github_webhook.png)
-
-3. Pour afficher le message, survolez l'icône d'état {{site.data.keyword.jazzhub}}.
-   ![Message d'erreur sur le point d'ancrage de service](images/github_error.png)
-
-4. Corrigez l'erreur en fonction du message GitHub.
-
-5. Pour vérifier que le correctif a fonctionné, validez et insérez une autre modification ou accédez à la page de service pour {{site.data.keyword.jazzhub_short}} et cliquez sur **Tester le service**.
-   ![Bouton de test de service GitHub](images/github_test.png)
-
-6. Vérifiez l'absence d'erreurs en consultant à nouveau l'icône d'état.
-   ![Icône d'état sans erreur](images/githubResolved_small.png)
-
-Pour plus d'informations, voir [Setting up GitHub for Bluemix DevOps Services projects ![](../icons/launch-glyph.svg " ")](https://hub.jazz.net/docs/githubhooks/){: new_window}.

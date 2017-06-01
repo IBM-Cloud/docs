@@ -175,9 +175,9 @@ News 來源（例如下列網站）也提供方法來讀取 RSS 資訊來源：
 ### 聯繫 Bluemix 公用支援中心
 {: #contacting-bluemix-support}
 
-所有 {{site.data.keyword.Bluemix_notm}} 客戶都可以透過 {{site.data.keyword.Bluemix_notm}} 社群或 Stack Overflow 擁有免費技術支援。此外，還會提供不同層次的支援，以符合不同的客戶需求。請參閱下表，以選擇免費、基本、標準和高階支援層次。 
+所有 {{site.data.keyword.Bluemix_notm}} 客戶都可以透過 {{site.data.keyword.Bluemix_notm}} 社群或 Stack Overflow 擁有免費技術支援。此外，還會提供不同層次的支援，以符合不同的客戶需求。請參閱下表，以選擇免費、基本、標準和進階支援層次。 
 
-層次 | 免費 |  基本 | 標準 | 高階
+層次 | 免費 |  基本 | 標準 | 進階
 --- | --- | --- | --- | --- |
 說明 | 支援所有 {{site.data.keyword.Bluemix_notm}} 試用客戶。  |  支援不需要傳統嚴重性及回應時間的非正式作業環境或工作負載。 | 支援有限企業關鍵應用程式數目的環境。「{{site.data.keyword.Bluemix_notm}} 專用」和「{{site.data.keyword.Bluemix_notm}} 本端」客戶接收標準支援。 | 支援與 {{site.data.keyword.Bluemix_notm}} 具有策略相依關係的關鍵任務環境。
 嚴重性 1-4 支援 |  N/A | N/A | 內含 | 內含
@@ -199,14 +199,14 @@ News 來源（例如下列網站）也提供方法來讀取 RSS 資訊來源：
   * 從功能表列中，按一下**支援**，然後選取**新增問題單**。在顯示的頁面上，填寫表單，以指出您需要的技術支援類型。
   * 使用 [IBM {{site.data.keyword.Bluemix_notm}} 支援中心 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://www.ibm.biz/bluemixsupport){: new_window} 說明頁面。您可以針對銷售、IBM ID 和登入、計費以及技術支援問題來提交問題單。對於技術支援問題，您可以將問題範圍縮小到特定區域或服務。如果您需要有關特定服務的協助，請選取對應的服務種類。若要判斷您服務所屬的種類，請查看功能表列中的「型錄」。  
   
-開啟支援問題單時，請務必為問題單指定適當的嚴重性。嚴重性會決定問題單的處理方式。如需不同嚴重性的相關資訊，請參閱[支援問題單嚴重性及回應時間](/docs/support/index.html#support-ticket-severity)。如果您的支援查詢需要更立即的回應，我們建議升級至「標準」或「高階」支援層，以便您可以提出嚴重性 1-4 的支援問題單。若要將您的帳戶升級至較高的支援層次，請與 [IBM 業務代表 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud-computing/bluemix/contact-us){: new_window} 聯絡，或透過電子郵件 sales@bluemix.net 與我們聯絡。
+開啟支援問題單時，請務必為問題單指定適當的嚴重性。嚴重性會決定問題單的處理方式。如需不同嚴重性的相關資訊，請參閱[支援問題單嚴重性及回應時間](/docs/support/index.html#support-ticket-severity)。如果您的支援查詢需要更立即的回應，我們建議升級至「標準」或「進階」支援層，以便您可以提出嚴重性 1-4 的支援問題單。若要將您的帳戶升級至較高的支援層次，請與 [IBM 業務代表 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud-computing/bluemix/contact-us){: new_window} 聯絡，或透過電子郵件 sales@bluemix.net 與我們聯絡。
 
 ### 針對鏈結帳戶開啟支援問題單
 {: #open-ticket-linked}
 
 如果您要使用在 {{site.data.keyword.Bluemix_notm}} 與 {{site.data.keyword.BluSoftlayer}} 之間鏈結的帳戶，則可以從 {{site.data.keyword.Bluemix_notm}} 主控台中，使用「支援」小組件來開啟支援問題單。 
 
-若要開啟鏈結帳戶的 {{site.data.keyword.Bluemix_notm}} 支援問題單，請按一下功能表列中的**支援**來開啟「支援」小組件，然後選取**新增問題單**。在問題單表單中，對於問題單類型請選取**技術**，並完成表單，以指出您需要何種技術支援。如果您有「高階層次支援」，請選擇問題的嚴重性層次。您會在幾分鐘後收到有關問題單的電子郵件通知。請遵循電子郵件中的指示，進一步溝通該問題。
+若要開啟鏈結帳戶的 {{site.data.keyword.Bluemix_notm}} 支援問題單，請按一下功能表列中的**支援**來開啟「支援」小組件，然後選取**新增問題單**。在問題單表單中，對於問題單類型請選取**技術**，並完成表單，以指出您需要何種技術支援。如果您有「進階層次支援」，請選擇問題的嚴重性層次。您會在幾分鐘後收到有關問題單的電子郵件通知。請遵循電子郵件中的指示，進一步溝通該問題。
 
 
 ### 檢查支援問題單狀態
@@ -261,10 +261,10 @@ News 來源（例如下列網站）也提供方法來讀取 RSS 資訊來源：
 
 嚴重性 | 嚴重性定義 | 回應時間目標 | 回應時間涵蓋範圍
 ------|-------- | --- | --- |
-嚴重性 1 | <strong>嚴重業務影響，或服務已關閉。</strong><br> 重要業務功能未作業，或重要介面失敗。此嚴重性通常適用於正式作業環境，指出無法存取服務將嚴重影響作業。必須立即解決此狀況。 | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>1 小時內</li><li><strong>高階：</strong>1 小時內</li></ul> | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>24 小時全年無休</li><li><strong>高階：</strong>24 小時全年無休</li></ul> 			   
-嚴重性 2 | <strong>重大業務影響。</strong> <br> 服務特性或功能的使用嚴重受限，或者您快要錯過業務截止時間。 | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>2 小時內</li><li><strong>高階：</strong>90 分鐘內</li></ul> | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>作業時間</li><li><strong>高階：</strong>作業時間</li></ul>
-嚴重性 3 | <strong>次要業務影響。</strong> <br> 服務特性或功能仍可使用，但有些問題會影響其使用。未對作業造成重要影響。 | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>4 小時內</li><li><strong>高階：</strong>2 小時內</li></ul> | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>作業時間</li><li><strong>高階：</strong>作業時間</li></ul>
-嚴重性 4 | <strong>最小業務影響。</strong> <br> 查詢或非技術要求。 | <ul><li><strong>免費：</strong>最大努力</li><li><strong>基本：</strong>最大努力</li><li><strong>標準：</strong>8 小時內</li><li><strong>高階：</strong>4 小時內</li></ul> | <ul><li><strong>免費：</strong>作業時間</li><li><strong>基本：</strong>作業時間</li><li><strong>標準：</strong>作業時間</li><li><strong>高階：</strong>作業時間</li></ul>
+嚴重性 1 | <strong>嚴重業務影響，或服務已關閉。</strong><br> 重要業務功能未作業，或重要介面失敗。此嚴重性通常適用於正式作業環境，指出無法存取服務將嚴重影響作業。必須立即解決此狀況。 | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>1 小時內</li><li><strong>進階：</strong>1 小時內</li></ul> | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>24 小時全年無休</li><li><strong>進階：</strong>24 小時全年無休</li></ul> 			   
+嚴重性 2 | <strong>重大業務影響。</strong> <br> 服務特性或功能的使用嚴重受限，或者您快要錯過業務截止時間。 | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>2 小時內</li><li><strong>進階：</strong>90 分鐘內</li></ul> | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>作業時間</li><li><strong>進階：</strong>作業時間</li></ul>
+嚴重性 3 | <strong>次要業務影響。</strong> <br> 服務特性或功能仍可使用，但有些問題會影響其使用。未對作業造成重要影響。 | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>4 小時內</li><li><strong>進階：</strong>2 小時內</li></ul> | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>作業時間</li><li><strong>進階：</strong>作業時間</li></ul>
+嚴重性 4 | <strong>最小業務影響。</strong> <br> 查詢或非技術要求。 | <ul><li><strong>免費：</strong>最大努力</li><li><strong>基本：</strong>最大努力</li><li><strong>標準：</strong>8 小時內</li><li><strong>進階：</strong>4 小時內</li></ul> | <ul><li><strong>免費：</strong>作業時間</li><li><strong>基本：</strong>作業時間</li><li><strong>標準：</strong>作業時間</li><li><strong>進階：</strong>作業時間</li></ul>
 {: caption="表 2. 嚴重性定義及回應時間" caption-side="top"}
 
 
@@ -299,7 +299,7 @@ IBM 將發行分類為實驗性的服務或容器映像檔。這些服務可能�
 ### 呈報支援問題單
 {: #escalation}
 
-使用標準或高階支援時，如果您未收到支援問題單的及時回應，或覺得未適當地解決支援問題單，則可以呈報支援問題單。透過支援問題單呈報程序，IBM 管理會檢閱您的問題，並與您合作來改善支援體驗。
+使用標準或進階支援時，如果您未收到支援問題單的及時回應，或覺得未適當地解決支援問題單，則可以呈報支援問題單。透過支援問題單呈報程序，IBM 管理會檢閱您的問題，並與您合作來改善支援體驗。
 
 若要提交呈報要求，請完成下列步驟：
   1. 開啟摘要為**呈報要求**的新支援問題單。

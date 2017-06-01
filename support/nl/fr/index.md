@@ -36,10 +36,9 @@ Pour ouvrir le widget Support, connectez-vous à la console {{site.data.keyword.
 ### Utilisation du widget Support pour les comptes liés
 {: #using-avatar-linked}
 
-Si vous utilisez un compte lié pour {{site.data.keyword.Bluemix_notm}} et {{site.data.keyword.BluSoftlayer}}, le widget Support est légèrement différent. Connectez-vous à la console {{site.data.keyword.Bluemix_notm}} et cliquez sur sur **Support** dans la barre de menu pour ouvrir le widget Support.
-Ensuite, sélectionnez **Ajouter un ticket** ou **Trouver des réponses**. Vous disposez des options suivantes :
+Si vous utilisez un compte lié pour {{site.data.keyword.Bluemix_notm}} et {{site.data.keyword.BluSoftlayer}}, le widget Support est légèrement différent. Connectez-vous à la console {{site.data.keyword.Bluemix_notm}} et cliquez sur sur **Support** dans la barre de menu pour ouvrir le widget Support. Ensuite, sélectionnez **Ajouter un ticket** ou **Trouver des réponses**. Vous disposez des options suivantes :
 
-* Vous pouvez effectuer une recherche dans la documentation {{site.data.keyword.Bluemix_notm}} et le forum Stack Overflow en définissant un filtre afin de changer les résultats de recherche pour qu'ils n'incluent que les éléments sélectionnés. 
+* Vous pouvez effectuer une recherche dans la documentation {{site.data.keyword.Bluemix_notm}} et le forum Stack Overflow en définissant un filtre afin de changer les résultats de recherche pour qu'ils n'incluent que les éléments sélectionnés.
 * Vous pouvez accéder directement au forum Stack Overflow **#IBMBluemix** pour effectuer une recherche ou publier un article.
 * Vous pouvez soumettre une idée structurée au site [IBM Cloud - Structured Ideas](https://ibmcloud.ideas.aha.io/).
 * Vous pouvez prendre contact avec le service commercial en appelant ou en localisant un ingénieur commercial. Accédez à la page [Contactez-nous](https://www.ibm.com/cloud-computing/bluemix/contact-us).
@@ -145,7 +144,7 @@ Pour l'environnement {{site.data.keyword.Bluemix_notm}} public, vous pouvez vous
 
   * Vérification des fenêtres de maintenance ou d'un incident en cours
 
-	Si vous trouvez que {{site.data.keyword.Bluemix_notm}} ne fonctionne pas comme prévu, recherchez des fenêtres de maintenance ou un incident en cours sur la page Statut. Pour signaler un incident qui n'est pas déjà répertorié sur cette page, ouvrez un ticket de demande de service en cliquant sur **Support** et en sélectionnant**Ajouter un ticket** dans la barre de menu ou en accédant à la page d'aide [IBM Bluemix Support ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](http://www.ibm.biz/bluemixsupport){: new_window}. 
+	Si vous trouvez que {{site.data.keyword.Bluemix_notm}} ne fonctionne pas comme prévu, recherchez des fenêtres de maintenance ou un incident en cours sur la page Statut. Pour signaler un incident qui n'est pas déjà répertorié sur cette page, ouvrez un ticket de demande de service en cliquant sur **Support** et en sélectionnant**Ajouter un ticket** dans la barre de menu ou en accédant à la page d'aide [IBM Bluemix Support ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](http://www.ibm.biz/bluemixsupport){: new_window}.
 
   * Bénéfice lié à plusieurs régions {{site.data.keyword.Bluemix_notm}}
 
@@ -196,7 +195,7 @@ Si vous ne parvenez pas à résoudre votre problème technique à l'aide des opt
 Si le problème n'est pas dû à une indisponibilité, ouvrez un ticket de demande de service par le biais de l'une des options suivantes :
 
   * Dans la barre de menu, cliquez sur **Support** et sélectionnez **Ajouter un ticket**. Sur la page qui s'affiche, renseignez le formulaire pour indiquer le type de support technique dont vous avez besoin.
-  * Utilisez la page d'aide [IBM {{site.data.keyword.Bluemix_notm}} Support ![Icône de lien externe](../icons/launch-glyph.svg "External link icon")](http://www.ibm.biz/bluemixsupport){: new_window}. Vous pouvez soumettre des tickets pour des problèmes liés aux ventes, à IBMid et à la connexion, à la facturation, ainsi que pour des problèmes techniques. Pour les problèmes techniques, vous pouvez sélectionner une zone ou un service spécifique. Si vous avez besoin d'aide pour un service spécifique, sélectionnez la catégorie de service correspondante. Pour identifier la catégorie à laquelle votre service appartient, voir le catalogue dans la barre de menu.   
+  * Utilisez la page d'aide [IBM {{site.data.keyword.Bluemix_notm}} Support ![Icône de lien externe](../icons/launch-glyph.svg "External link icon")](http://www.ibm.biz/bluemixsupport){: new_window}. Vous pouvez soumettre des tickets pour des problèmes liés aux ventes, à IBMid et à la connexion, à la facturation, ainsi que pour des problèmes techniques. Pour les problèmes techniques, vous pouvez sélectionner une zone ou un service spécifique. Si vous avez besoin d'aide pour un service spécifique, sélectionnez la catégorie de service correspondante. Pour identifier la catégorie à laquelle votre service appartient, voir le catalogue dans la barre de menu.  
   
 Lorsque vous ouvrez un ticket de demande de service, veillez à indiquer une gravité appropriée. Elle détermine la façon dont votre ticket sera traité. Voir [Gravité et temps de réponse du ticket de demande de service](/docs/support/index.html#support-ticket-severity) pour plus d'informations sur les différentes gravités. Si votre demande de support nécessite une réponse plus immédiate, il est conseillé d'effectuer une mise à niveau vers notre niveau de support Standard ou Premium pour que vous puissiez émettre des tickets de demande de service de gravité 1 à 4. Pour effectuer une mise à niveau de votre compte vers un niveau de support ultérieur, contactez votre [ingénieur commercial IBM ![Icône de lien externe](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud-computing/bluemix/contact-us){: new_window} ou adressez-nous un courrier électronique à l'adresse sales@bluemix.net.
 

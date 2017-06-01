@@ -33,7 +33,7 @@ lastupdated: "2017-04-19"
 Verwenden Sie die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle, um Ihre Cloud Foundry-Anwendungen und -Serviceinstanzen herunterzuladen, zu ändern und erneut bereitzustellen.
 {:shortdesc}
 
-Laden Sie zunächst die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle herunter und installieren Sie sie.  
+Laden Sie zunächst die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle herunter und installieren Sie sie. 
 
 <p>
 <a class="xref" href="https://clis.ng.bluemix.net" target="_blank" title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)"><img class="image" src="images/btn_bx_commandline.svg" alt="Bluemix-Befehlszeilenschnittstelle herunterladen" /> </a>
@@ -54,7 +54,7 @@ Nach der Installation der Befehlszeilenschnittstelle können Sie beginnen:
 
   3.  Nehmen Sie die gewünschten Änderungen an Ihrem App-Code vor. Beispiel: Wenn Sie eine {{site.data.keyword.Bluemix}}-Beispielanwendung verwenden und Ihre App die Datei `src/main/webapp/index.html` enthält, können Sie sie ändern und den Dankestext für die Erstellung in einen anderen Text ändern. Stellen Sie sicher, dass sich die App lokal ausführen lässt, bevor sie wieder in {{site.data.keyword.Bluemix_notm}} bereitgestellt wird.
 
-    Beachten Sie die Datei `manifest.yml`. Wenn Ihre App wieder in {{site.data.keyword.Bluemix_notm}} bereitgestellt wird, dient diese Datei zum Ermitteln der URL, der Speicherzuordnung, der Anzahl von Instanzen und anderer wichtiger Parameter für Ihre Anwendung. Sie können in der Cloud Foundry-Dokumentation [mehr über die Manifestdatei lesen](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){: new_window}. 
+    Beachten Sie die Datei `manifest.yml`. Wenn Ihre App wieder in {{site.data.keyword.Bluemix_notm}} bereitgestellt wird, dient diese Datei zum Ermitteln der URL, der Speicherzuordnung, der Anzahl von Instanzen und anderer wichtiger Parameter für Ihre Anwendung. Sie können in der Cloud Foundry-Dokumentation [mehr über die Manifestdatei lesen](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){: new_window}.
 
     Beachten Sie auch die Datei `README.md`, die gegebenenfalls Informationen wie Erstellungsanweisungen enthält.
 
@@ -74,4 +74,4 @@ Nach der Installation der Befehlszeilenschnittstelle können Sie beginnen:
 
   <pre class="pre"><code class="hljs">bluemix app push <var class="keyword varname" data-hd-keyref="app_name">App-Name</var></code></pre>
 
-  6. Greifen Sie auf Ihre App zu, indem Sie zu https://<var class="keyword varname" data-hd-keyref="app_url">App-URL</var>.<span class="keyword" data-hd-keyref="APPDomain">App-Domänenname</span> navigieren. 
+  6. Greifen Sie auf Ihre App zu, indem Sie zu https://<var class="keyword varname" data-hd-keyref="app_url">App-URL</var>.<span class="keyword" data-hd-keyref="APPDomain">App-Domänenname</span> navigieren.

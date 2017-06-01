@@ -23,7 +23,7 @@ Depois de ter efetuado login no {{site.data.keyword.Bluemix}}, é possível faze
 Antes de iniciar, deve-se:
   1. Instalar a interface da linha de comandos do {{site.data.keyword.Bluemix}}.
 
-  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/btn_bx_commandline.svg" alt="Fazer download {{site.data.keyword.Bluemix}} da interface da linha de comandos" /> </a> 
+  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/btn_bx_commandline.svg" alt="Fazer download {{site.data.keyword.Bluemix}} da interface da linha de comandos" /> </a>
 
   2. Conecte-se ao {{site.data.keyword.Bluemix}}.
 
@@ -54,10 +54,7 @@ exemplo:
   **Dica:** quando você usa o comando **bluemix app push**, o comando copia todos os arquivos e diretórios de seu diretório atual para o Bluemix. Assegure-se
 de que você tenha apenas os arquivos necessários em seu diretório de aplicativo.
 
-  
+
   2. Se você mudar seu aplicativo, será possível fazer upload dessas mudanças inserindo o comando `bluemix app push` novamente. O comando usa suas opções anteriores e suas respostas aos prompts para atualizar quaisquer instâncias em execução de seu aplicativo com novos bits de código.
 
 A CLI do {{site.data.keyword.Bluemix}} empacotou um cf cli em sua instalação. O comando `bluemix app push` chama, na realidade, `cf push` para fazer upload e implementar seu aplicativo no {{site.data.keyword.Bluemix_notm}}. Consulte [Comandos cf](/docs/cli/reference/cfcommands/index.html) para obter mais informações sobre cf push. Veja [Usando buildpacks de comunidade](/docs/cfapps/byob.html) para obter informações sobre buildpacks.
-
-
-**Dica:** também é possível fazer upload ou implementar um aplicativo a partir do DevOps Services. Veja [Desenvolvendo um aplicativo do {{site.data.keyword.Bluemix_notm}} no Node.js com o Web IDE.](https://hub.jazz.net/tutorials/devopsweb/){: new_window}.

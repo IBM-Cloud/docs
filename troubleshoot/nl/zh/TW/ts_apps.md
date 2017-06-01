@@ -440,33 +440,6 @@ cf push appname -p app_path
 當您從 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 推送應用程式至 {{site.data.keyword.Bluemix_notm}} 時，請在「應用程式」精靈的「應用程式詳細資料」頁面中，選取**儲存至資訊清單檔**勾選框。然後，您在精靈中指定的變數便會儲存到應用程式的資訊清單檔。下次開啟精靈時，會自動顯示變數。
 {: tsResolve}
 
-
-## 未顯示 Bluemix Live Sync 圖示
-{: #ts_llz_lkb_3r}
-
-您已建立應用程式，但是 IBM Bluemix Live Sync 圖示未顯示在 Web IDE 中。
-
-當您在 Web IDE 中編輯 Node.js 應用程式時，未顯示 {{site.data.keyword.Bluemix_notm}} 即時編輯、快速重新啟動和除錯圖示。
-{: tsSymptoms}
-
-在下列情況下，無法使用這些圖示：
-{: tsCauses}
-
-  * `manifest.yml` 檔案未儲存在專案的最上層。
-  * 您的應用程式儲存在子目錄中，而不是專案的最上層，但未於 `manifest.yml` 檔案中指定該子目錄的路徑。
-  * 應用程式未包含 `package.json` 檔案。
-
-請使用下列其中一種方法：
-{: tsResolve}
-
-  * 如果 `manifest.yml` 檔案未儲存在專案的最上層，請將它儲存在那裡。
-  * 如果應用程式儲存在子目錄中，請在 `manifest.yml` 檔案中指定該子目錄的路徑。
-  ```
-   path: path_to_application
-   ```
-  * 在與應用程式相同的目錄中，建立 `package.json` 檔案。
-
-
 <!-- begin STAGING ONLY -->
 
 ## 未從指令行啟動 Bluemix Live Sync 的「除錯」
@@ -697,21 +670,19 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 您可以使用 [git update ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://git-scm.com/docs/git-update-index){: new_window} 指令，將每一個 Script 的許可權變更為「可執行」。例如，您可以鍵入 `git update --chmod=+x script.sh`。
 {: tsResolve}
 
+## 在 IBM Bluemix Continuous Delivery 中無法從 Delivery Pipeline 部署應用程式
+ {: #ts_devops_to_bm}
 
-## 無法從 DevOps Services 將應用程式部署至 Bluemix
-{: #ts_devops_to_bm}
+ 如果應用程式中沒有 `manifest.yml` 檔案，您可能無法在 {{site.data.keyword.contdelivery_short}} 中使用 {{site.data.keyword.deliverypipeline}} 來部署應用程式。
 
-如果應用程式中沒有 `manifest.yml` 檔案，您可能無法從 IBM Bluemix DevOps Services 將應用程式推送至 {{site.data.keyword.Bluemix_notm}}。
+ 當您在 {{site.data.keyword.contdelivery_short}} 中使用 {{site.data.keyword.deliverypipeline}} 來部署應用程式時，可能會顯示 `Unable to detect a supported application type` 錯誤訊息。
+ {: tsSymptoms}
 
-將應用程式從 DevOps Services 部署至 {{site.data.keyword.Bluemix_notm}} 時，可能會顯示此錯誤訊息：`偵測不到支援的應用程式類型`。
-{: tsSymptoms}
+ 因為管線需要 `manifest.yml` 檔案，才能將應用程式部署至 {{site.data.keyword.Bluemix_notm}}，所以可能會發生此問題。
+ {: tsCauses}
 
-因為 DevOps Services 需要 `manifest.yml` 檔案，才能將應用程式部署至 {{site.data.keyword.Bluemix_notm}}，所以可能會發生此問題。
-{: tsCauses}
-
-若要解決此問題，您必須建立 `manifest.yml` 檔案。如需如何建立 `manifest.yml` 檔案的相關資訊，請參閱[應用程式資訊清單](/docs/manageapps/depapps.html#appmanifest)。
+ 若要解決此問題，您必須建立 `manifest.yml` 檔案。如需如何建立 `manifest.yml` 檔案的相關資訊，請參閱[應用程式資訊清單](/docs/manageapps/depapps.html#appmanifest)。
 {: tsResolve}
-
 
 ## 無法推送 Meteor 應用程式
 {: #ts_meteor}
@@ -735,168 +706,3 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
     ```
 	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
 	```
-
-## 「部署至 Bluemix」按鈕未部署應用程式
-{: #ts_deploybutton}
-
-如果您按一下「部署至 {{site.data.keyword.Bluemix_notm}}」按鈕，但發現未複製 Git 儲存庫，或是未部署應用程式，請嘗試使用下列問題的疑難排解方法。
-  * [無法建立 Bluemix DevOps Services 專案](#ts_project-cant-be-created)
-  * [找不到 Git 儲存庫且無法在 DevOps Services 中複製](#ts_repo-not-found)
-  * [已在 DevOps Services 中複製 Git 儲存庫，但應用程式未部署至 {{site.data.keyword.Bluemix_notm}}](#ts_repo-cloned-app-not-deployed)
-
-如需如何建立按鈕的相關資訊，請參閱「建立『部署至 {{site.data.keyword.Bluemix_notm}}』按鈕」。
-
-### 無法建立 Bluemix DevOps Services 專案
-{: #ts_project-cant-be-created}
-
-如果無法建立 DevOps Services 專案，可能是因為您的 IBM {{site.data.keyword.Bluemix_notm}} 帳戶已過期。
-
-您按一下**部署至 Bluemix** 按鈕，但「建立專案」步驟未順利完成。
-{: tsSymptoms}
-
-您的 {{site.data.keyword.Bluemix_notm}} 帳戶可能已過期。
-{: tsCauses}
-
-請使用下列其中一種方法：
-{: tsResolve}
-
-  * 登入 {{site.data.keyword.Bluemix_notm}}，並更新您的帳戶資訊。
-  * 再按一下**部署至 Bluemix** 按鈕。
-
-### 找不到 Git 儲存庫且無法在 DevOps Services 中複製
-{: #ts_repo-not-found}
-
-如果您發現未複製 Git 儲存庫，可能是因為儲存庫或按鈕 Snippet 有問題。
-
-您按一下**部署至 Bluemix** 按鈕，但是找不到 Git 儲存庫且無法在 DevOps Services 中複製。「複製儲存庫」步驟未順利完成。因此，無法將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。
-{: tsSymptoms}
-
-發生此問題的可能原因如下：
-{: tsCauses}
-
-  * Git 儲存庫可能不存在或無法存取。
-  * 按鈕 Snippet 的 HTML 或 Markdown 可能有問題。
-  * URL 中可能有特殊字元、查詢參數或片段的問題，導致無法正確地存取 Git 儲存庫。
-
-請使用下列其中一種方法：
-{: tsResolve}
-
-  * 驗證您的 Git 儲存庫已存在、可公開存取，而且 URL 正確無誤。
-  * 驗證 Snippet 未包含任何 HTML 或 Markdown 錯誤。
-  * 如果特殊字元、查詢參數或片段導致 Git 儲存庫 URL 發生問題，請在按鈕 Snippet 中將 URL 編碼。
-
-### 已在 DevOps Services 中複製 Git 儲存庫，但應用程式未部署至 Bluemix
-{: #ts_repo-cloned-app-not-deployed}
-
-如果未部署應用程式，可能是儲存庫中的程式碼有問題。
-
-您按一下**部署至 Bluemix** 按鈕，並已在 DevOps Services 中複製 Git 儲存庫，但應用程式未部署至 {{site.data.keyword.Bluemix_notm}}。「部署至 Bluemix」步驟未順利完成。
-{: tsSymptoms}
-
-發生此問題的可能原因如下：
-{: tsCauses}  
-
-  * 可能是您的 {{site.data.keyword.Bluemix_notm}} 空間中沒有足夠的空間可以部署應用程式。
-  * `manifest.yml` 檔案中可能未宣告必要的服務。
-  * `manifest.yml` 檔案中可能宣告必要的服務，但是該服務已在目標空間中。
-  * 可能是儲存庫中的程式碼有問題。
-
-若要診斷此問題，請檢閱部署所產生的建置和部署日誌：
-  1. 當「部署至 Bluemix」步驟未順利完成時，請按一下先前「配置管線」步驟中的鏈結，以開啟 Delivery Pipeline。
-  2. 識別失敗的建置或部署編譯打包。
-  3. 在失敗的編譯打包中，按一下 **View logs and history**。
-  4. 尋找錯誤訊息。
-
-請使用下列其中一種方法：
-{: tsResolve}
-
-  * 如果錯誤訊息指出 {{site.data.keyword.Bluemix_notm}} 空間中沒有足夠的空間可以部署應用程式，請以其他空間作為目標。
-  * 如果錯誤訊息指出 `manifest.yml` 檔案中未宣告必要的服務，請通知儲存庫擁有者必須新增必要的服務。
-  * 如果錯誤訊息指出目標空間中已經有必要的服務，請選取其他的空間來使用。
-  * 如果錯誤訊息指出建置有問題，請修正導致無法建置應用程式的任何程式碼問題。若要驗證程式碼沒有任何問題，請使用 Git 指令來建置程式碼：
-    1. 複製 Git 儲存庫：
-    ```
-    git clone <git_repository_URL>
-    ```
-    2. 開啟應用程式目錄：
-	```
-	cd <appname>
-	```
-    3. 建立應用程式：
-	```
-	<appname> create
-	```
-    4. 必要的話，請佈建附加程式。
-    5. 新增任何必要的配置變數。
-    6. 推送程式碼：
-	```
-	git push <appname> master
-	```
-    7. 驗證已正確建置應用程式。
-    8. 必要的話，請執行後置部署指令：
-	```
-	<appname> run
-	```
-    9. 開啟應用程式，並驗證其運作正常：
-	```
-	<appname> open
-	```
-
-## 無法從執行列部署應用程式
-{: #ts_runbar}
-
-部署失敗，狀態為黃色的「未同步」。
-{: tsSymptoms}
-
-您正在部署的應用程式的路徑與另一個執行中應用程式的路徑相同。
-{: tsCauses}
-
-將路徑變更為唯一的路徑。
-{: tsResolve}
-
-## 在 Eclipse 中找不到執行列
-{: #ts_runbar-missing}
-
-如果您在 Eclipse Orion {{site.data.keyword.webide}} 中未看到執行列，則是發生下列其中一個問題：
-{: tsCauses}
-
-* {{site.data.keyword.jazzhub}} 未將您的專案識別為專案。
-*  {{site.data.keyword.jazzhub_short}} 無法判斷應用程式位於哪個資料夾。
-* {{site.data.keyword.jazzhub_short}} 未偵測到您的應用程式為 Node.js 應用程式。
-
-請視情況使用下列其中一種方法：
-{: tsResolve}  
-
-* 如果 {{site.data.keyword.jazzhub}} 未將您的專案識別為專案，請在您的專案根目錄中建立 `project.json` 檔案。
-* 如果 {{site.data.keyword.jazzhub_short}} 無法判斷應用程式位於哪個資料夾，而且您的應用程式不在專案的根目錄中，請使用下列其中一個步驟：
-  * 在專案的根目錄中建立 `manifest.yml` 檔案，然後編輯檔案，以指向應用程式的位置。例如，`path: path_to_your_app`。
-  * 將您的應用程式移至專案的根目錄。
-* 如果 {{site.data.keyword.jazzhub_short}} 未偵測到您的應用程式為 Node.js 應用程式，請在專案的應用程式資料夾中建立 `package.json` 檔案。
-
-## GitHub 連結鉤未運作
-{: #ts_githubhookisntworking}
-
-您已將 GitHub 專案配置為當您推送確定時，建立工作項目鏈結，而鏈結未如預期運作。
-{: tsSymptoms}
-
-請使用下列步驟來找出問題：
-{: tsResolve}
-
-1. 在 GitHub 儲存庫中，按一下**設定**。
-   ![GitHub 設定鏈結](images/github_settings.png)
-
-2. 按一下 **Webhook 及服務**。
-   ![GitHub Webhook 及服務鏈結](images/github_webhook.png)
-
-3. 若要檢視訊息，請將游標移至 {{site.data.keyword.jazzhub}} 狀態圖示上方。
-   ![服務連結鉤上的錯誤訊息](images/github_error.png)
-
-4. 根據 GitHub 訊息來解決錯誤。
-
-5. 若要驗證修正可作用，請確定並推送另一個變更，或移至 {{site.data.keyword.jazzhub_short}} 的服務頁面，然後按一下**測試服務**。
-   ![「GitHub 測試服務」按鈕](images/github_test.png)
-
-6. 再次檢查狀態圖示，驗證未發生錯誤。
-   ![狀態圖示，未發生錯誤](images/githubResolved_small.png)
-
-如需相關資訊，請參閱[設定 Bluemix DevOps Services 專案的 GitHub ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://hub.jazz.net/docs/githubhooks/){: new_window}。

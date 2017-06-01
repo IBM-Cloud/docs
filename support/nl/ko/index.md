@@ -170,7 +170,7 @@ RSS 피드를 읽는 다른 방법은 다음과 같은 웹 브라우저 플러�
 
 {{site.data.keyword.Bluemix_notm}} 계정이 {{site.data.keyword.BluSoftlayer_full}} 계정과 연결되어 있는 경우 {{site.data.keyword.BluSoftlayer}} 고객 포털 또는 {{site.data.keyword.Bluemix_notm}} 콘솔에서 지원 위젯을 사용하여 {{site.data.keyword.Bluemix_notm}}에 대한 지원 티켓을 열 수 있습니다. [연결된 계정에 대한 지원 티켓 열기](#open-ticket-linked)를 참조하십시오.
 
-### Bluemix 퍼블릭에 대한 지원 요청
+### Bluemix 퍼블릭에 대한 지원 문의
 {: #contacting-bluemix-support}
 
 {{site.data.keyword.Bluemix_notm}}의 모든 고객에게 {{site.data.keyword.Bluemix_notm}} 커뮤니티 또는 Stack Overflow를 통해 무료 기술 지원이 제공됩니다. 또한 다양한 고객 요구사항을 충족할 수 있도록 다양한 레벨의 지원이 제공됩니다. 다음 표를 참조하여 무료, 기본, 표준 및 프리미엄 지원 레벨 간에 선택할 수 있습니다.  
@@ -215,7 +215,7 @@ RSS 피드를 읽는 다른 방법은 다음과 같은 웹 브라우저 플러�
 
 
 
-### Bluemix 데디케이티드에 대한 지원 요청
+### Bluemix 데디케이티드에 대한 지원 문의
 {: #contacting-bluemix-support-dedicated}
 
 <!-- Michelle links to this anchor  -->
@@ -232,7 +232,7 @@ RSS 피드를 읽는 다른 방법은 다음과 같은 웹 브라우저 플러�
 <p>**참고**: 요청 시 지원 티켓의 담당자 역할을 하는 조직의 사용자 목록이 데디케이티드 환경에서 {{site.data.keyword.Bluemix_notm}} 콘솔의 **지원** 페이지에 표시될 수 있습니다.</p></li>
 </ul>
 
-### Bluemix 로컬에 대한 지원 요청
+### Bluemix 로컬에 대한 지원 문의
 {: #contacting-bluemix-support-local}
 
 <!-- Michelle links to this anchor  -->
