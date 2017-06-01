@@ -32,7 +32,7 @@ Dans le tableau de bord OpenWhisk, cliquez sur l'onglet [API](https://console.ng
 Configurez l'interface de ligne de commande OpenWhisk avec `wsk property set --apihost openwhisk.ng.bluemix.net`. Pour pouvoir utiliser l'API `wsk api`,  le fichier de configuration d'interface de ligne de commande `~/.wskprops` doit contenir le jeton d'accès Bluemix.
 Pour obtenir le jeton d'accès, utilisez la commande d'interface de ligne de commande `wsk bluemix login`. Pour plus d'informations sur la commande, exécutez `wsk bluemix login -h`
 
-**Remarque :** Si les erreurs de commande requièrent l'utilisation d'un code d'accès unique, cela n'est pas pris en charge pour l'instant. Une solution de contournement consiste à vous connecter à l'interface de ligne de commande CloudFoundry à l'aide de `cf login`, puis à copier le jeton d'accès depuis le fichier de configuration du répertoire de base `~/.cf/config.json` dans le fichier `~/.wskprops` avec la propriété `APIGW_ACCESS_TOKEN="value of AccessToken`. Retirez le préfixe `Bearer ` lors de la copie de la chaîne de jeton d'accès. 
+**Remarque :** si les erreurs de commande requièrent l'utilisation d'un code d'accès unique, cela n'est pas pris en charge pour l'instant. Une solution de contournement consiste à vous connecter à l'interface de ligne de commande Bluemix à l'aide de `bluemix login`, puis à copier le jeton d'accès depuis le fichier de configuration du répertoire de base `~/.cf/config.json` dans le fichier `~/.wskprops` comme propriété `APIGW_ACCESS_TOKEN="valeur du jeton d'accès`. Retirez le préfixe `Bearer ` lors de la copie de la chaîne de jeton d'accès.
 
 **Remarque :** les API que vous avez créées à l'aide de `wsk api-experimental` continueront à fonctionner pendant une durée limitée. Toutefois, vous devriez commencer à les migrer vers les actions Web et à reconfigurer vos API existantes à l'aide de la nouvelle commande d'interface de ligne de commande `wsk api`.
 
@@ -63,15 +63,14 @@ Pour obtenir le jeton d'accès, utilisez la commande d'interface de ligne de com
   ```
   ```
   ok: created API /hello/world GET for action /_/hello
-  https://${APIHOST}:9001/api/21ef035/hello/world
+  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/21ef035/hello/world
   ```
-Une nouvelle URL est générée pour exposer l'action `hello` via une méthode HTTP **GET**.
-
+  Une nouvelle URL est générée pour exposer l'action `hello` via une méthode HTTP **GET**.
   
 4. Essayez-la en envoyant une demande HTTP vers l'URL.
   
   ```
-  $ curl https://${APIHOST}:9001/api/21ef035/hello/world?name=OpenWhisk
+  $ curl https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/21ef035/hello/world?name=OpenWhisk
   ```
   ```json
     {
@@ -82,11 +81,11 @@ Une nouvelle URL est générée pour exposer l'action `hello` via une méthode H
   
 ### Contrôle complet sur la réponse HTTP
   
-  L'indicateur `--response-type` contrôle l'URL cible de l'action Web qui sera envoyée par proxy par la passerelle d'API. L'utilisation de `--response-type json` comme indiqué ci-dessus renvoie le résultat complet de l'action au format JSON et affecte automatiquement `application/json` à l'en-tête Content-Type, ce qui vous permet de commencer facilement.  
+  L'indicateur `--response-type` contrôle l'URL cible de l'action Web qui sera envoyée par proxy par la passerelle d'API. L'utilisation de `--response-type json` comme indiqué ci-dessus renvoie le résultat complet de l'action au format JSON et affecte automatiquement `application/json` à l'en-tête Content-Type, ce qui vous permet de commencer facilement. 
   
-  Une fois que vous avez commencé, vous souhaitez contrôler entièrement les propriétés de réponses HTTP, telles que `statusCode` et `headers`, et renvoyer différents types de contenu dans `body`. Pour ce faire, utilisez `--response-type http` afin de configurer l'URL cible de l'action Web avec l'extension `http`. 
+  Une fois que vous avez commencé, vous souhaitez contrôler entièrement les propriétés de réponses HTTP, telles que `statusCode` et `headers`, et renvoyer différents types de contenu dans `body`. Pour ce faire, utilisez `--response-type http` afin de configurer l'URL cible de l'action Web avec l'extension `http`.
 
-  Vous pouvez choisir de modifier le code de l'action pour qu'il soit conforme au retour d'actions Web portant l'extension `http` ou inclure l'action dans une séquence et transmettre son résultat à une nouvelle action qui le convertit au format approprié pour une réponse HTTP. Pour en savoir plus sur les types de réponse et les extensions des actions Web, voir la documentation [Actions Web](webactions.md). 
+  Vous pouvez choisir de modifier le code de l'action pour qu'il soit conforme au retour d'actions Web portant l'extension `http` ou inclure l'action dans une séquence et transmettre son résultat à une nouvelle action qui le convertit au format approprié pour une réponse HTTP. Pour en savoir plus sur les types de réponse et les extensions des actions Web, voir la documentation [Actions Web](webactions.md).
 
   Modifiez le code pour `hello.js` en renvoyant les propriétés JSON `body`, `statusCode` et `headers`
   ```javascript
@@ -122,10 +121,11 @@ Une nouvelle URL est générée pour exposer l'action `hello` via une méthode H
   }
   ```
   Maintenant que vous contrôlez entièrement vos API, vous pouvez contrôler le contenu, tel que le contenu HTML renvoyé, ou définir le code de statut pour des erreurs telles que Introuvable (404), Non autorisé (401) ou Erreur interne (500).
+
 ### Exposition de plusieurs actions Web
 
 Supposons que vous souhaitez exposer un ensemble d'actions dans le cadre d'un groupe de lecture qui regroupe vos amis.
-Vous disposez d'une série d'actions pour implémenter le back-end du groupe de lecture :
+Vous disposez d'une série d'actions pour implémenter le back end du groupe de lecture :
 
 | action | méthode HTTP | description |
 | ----------- | ----------- | ------------ |
@@ -213,7 +213,7 @@ ok: deleted API /club
 ```
 ### Modification de la configuration
 
-Vous pouvez éditer la configuration dans le tableau de bord OpenWhisk, cliquer sur l'onglet [API](https://console.ng.bluemix.net/openwhisk/apimanagement) pour configurer la sécurité, la limitation de débit et d'autres fonctions. 
+Vous pouvez éditer la configuration dans le tableau de bord OpenWhisk, cliquer sur l'onglet [API](https://console.ng.bluemix.net/openwhisk/apimanagement) pour configurer la sécurité, la limitation de débit et d'autres fonctions.
 
 ### Importation de la configuration
 

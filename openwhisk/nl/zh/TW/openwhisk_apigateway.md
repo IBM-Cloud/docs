@@ -32,7 +32,7 @@ lastupdated: "2017-04-26"
 若要可以使用 `wsk api`，CLI 配置檔 `~/.wskprops` 需要包含「Bluemix 存取記號」。
 若要取得存取記號，請使用 CLI 指令 `wsk bluemix login`。如需該指令的相關資訊，請執行 `wsk bluemix login -h`
 
-**附註：**如果發生需要單一登入 (sso) 的指令錯誤，則這目前不予支援。暫行解決方法是搭配使用 CloudFoundry CLI 與 `cf login` 進行登入，然後將「存取記號」從 HOME 目錄配置檔 `~/.cf/config.json` 複製到 `~/.wskprops` 檔案，以作為內容 `APIGW_ACCESS_TOKEN="value of AccessToken`。複製存取記號字串時，請移除字首 `Bearer`。
+**附註：**如果發生需要單一登入 (sso) 的指令錯誤，則這目前不予支援。暫行解決方法是搭配使用 Bluemix CLI 與 `bluemix login` 進行登入，然後將「存取記號」從 HOME 目錄配置檔 `~/.bluemix/.cf/config.json` 複製到 `~/.wskprops` 檔案，以作為內容 `APIGW_ACCESS_TOKEN="value of AccessToken`。複製存取記號字串時，請移除字首 `Bearer`。
 
 **附註：**您使用 `wsk api-experimental` 所建立的 API 將會繼續運作一小段期間，但您應該要開始將 API 移轉至 Web 動作，並使用新的 CLI 指令 `wsk api` 來重新配置現有 API。
 
@@ -63,14 +63,14 @@ lastupdated: "2017-04-26"
   ```
   ```
   ok: created API /hello/world GET for action /_/hello
-  https://${APIHOST}:9001/api/21ef035/hello/world
+  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/21ef035/hello/world
   ```
   會產生新的 URL，透過 **GET** HTTP 方法公開 `hello` 動作。
   
 4. 讓我們將 HTTP 要求傳送至 URL 來試試。
   
   ```
-  $ curl https://${APIHOST}:9001/api/21ef035/hello/world?name=OpenWhisk
+  $ curl https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/21ef035/hello/world?name=OpenWhisk
   ```
   ```json
   {

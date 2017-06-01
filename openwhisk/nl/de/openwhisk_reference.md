@@ -394,73 +394,14 @@ Docker-Aktionen werden in einer vom Benutzer bereitgestellten Binärdatei in ein
 
 Das Docker-Gerüst (Skeleton) ist eine bequeme Methode, OpenWhisk-kompatible Docker-Images zu erstellen. Sie können das Gerüst mit dem CLI-Befehl `wsk sdk install docker` installieren.
 
-Das Hauptbinärprogramm muss sich in `/action/exec` im Container befinden. Die ausführbare Datei empfängt die Eingabeargumente durch eine einzelne Befehlszeilenargumentzeichenfolge, die als `JSON`-Objekt deserialisiert werden kann. Es muss ein Ergebnis über `stdout` in Form einer einzeiligen Zeichenfolge aus serialisierten `JSON`-Daten zurückgeben. 
+Das Hauptbinärprogramm muss sich in `/action/exec` im Container befinden. Die ausführbare Datei empfängt die Eingabeargumente durch eine einzelne Befehlszeilenargumentzeichenfolge, die als `JSON`-Objekt deserialisiert werden kann. Es muss ein Ergebnis über `stdout` in Form einer einzeiligen Zeichenfolge aus serialisierten `JSON`-Daten zurückgeben.
 
 Sie können darüber hinaus auch Kompilierungsschritte oder Abhängigkeiten einbeziehen, indem Sie die `Dockerfile` in `dockerSkeleton` ändern.
 
 ## REST-API
 {: #openwhisk_ref_restapi}
+Informationen zur REST-API finden Sie [hier](openwhisk_rest_api.html).
 
-Alle Funktionen im System stehen über eine REST-API zur Verfügung. Es gibt Sammlungs- und Entitätsendpunkte für Aktionen, Auslöser, Regeln, Pakete, Aktivierungen und Namensbereiche.
-
-Die Sammlungsendpunkte lauten wie folgt:
-
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations`
-
-`openwhisk.`<span class="keyword" data-hd-keyref="DomainName">DomainName</span>` ist der OpenWhisk-API-Hostname (z. B. openwhisk.ng.bluemix.net, 172.17.0.1 usw.).
-
-Für `{namespace}` kann das Zeichen `_` zum Angeben des *Standardnamensbereichs* (d.h. einer E-Mail-Adresse) verwendet werden.
-
-Sie können eine GET-Anforderung für die Sammlungsendpunkte ausführen, um eine Liste der Entitäten in der Sammlung abzurufen.
-
-Für jeden Entitätstyp gibt es Entitätsendpunkte:
-
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers/{triggerName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules/{ruleName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages/{packageName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations/{activationName}`
-
-
-Die Endpunkte für Namensbereiche und Aktivierungen unterstützen nur GET-Anforderungen. Die Endpunkte für Aktionen, Auslöser, Regeln und Pakete unterstützen GET-, PUT- und DELETE-Anforderungen. Die Endpunkte für Aktionen, Auslöser und Regeln unterstützen auch POST-Anforderungen, die zum Aufrufen von Aktionen und Auslösern sowie zum Aktivieren und Inaktivieren von Regeln verwendet werden. Weitere Details hierzu finden Sie in der [API-Referenz](https://console.{DomainName}/apidocs/98).
-
-Alle APIs sind mit der HTTP-Basisauthentifizierung geschützt. Die durch einen Doppelpunkt voneinander getrennten Basic-Berechtigungsnachweise zur Authentifizierung befinden sich in der Eigenschaft `AUTH` in der `~/.wskprops`-Datei. Sie finden diese Berechtigungsnachweise auch in den [Konfigurationsschritten der Befehlszeilenschnittstelle (CLI)](./index.html#openwhisk_start_configure_cli).
-
-Das folgende Beispiel zeigt, wie Sie mit dem Befehl 'cURL' eine Liste aller Pakete im Namensbereich `whisk.system` abrufen können:
-
-```
-curl -u USERNAME:PASSWORD https://openwhisk.ng.bluemix.net/api/v1/namespaces/whisk.system/packages
-```
-{: pre}
-```
-[
-  {
-    "name": "slack",
-    "binding": false,
-    "publish": true,
-    "annotations": [
-      {
-        "key": "description",
-        "value": "Package that contains actions to interact with the Slack messaging service"
-      }
-    ],
-    "version": "0.0.9",
-    "namespace": "whisk.system"
-  },
-  ...
-]
-```
-{: screen}
-
-Von der OpenWhisk-API werden Anforderung/Antwort-Aufrufe von Web-Clients unterstützt. Von OpenWhisk wird auf `OPTIONS`-Anforderungen mit CORS-Headern (CORS - Cross-Origin Resource Sharing) geantwortet. Derzeit sind alle Ursprünge zulässig (d. h. Access-Control-Allow-Origin ist "`*`") und Access-Control-Allow-Header sorgen für die Autorisierung und den Inhaltstyp.
-
-**Achtung:** Da von OpenWhisk derzeit nur ein Schlüssel pro Konto unterstützt wird, wird empfohlen, CORS nur für einfache Experimente und nicht darüber hinaus zu verwenden. Der Schlüssel müsste sonst in clientseitigen Code eingebettet werden, was ihn öffentlich zugänglich machen würde. Verwenden Sie ihn mit Sorgfalt.
 
 ## Systembegrenzungen
 {: #openwhisk_syslimits}

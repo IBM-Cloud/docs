@@ -14,25 +14,27 @@ lastupdated: "2017-04-26"
 # Pasarela de API
 {: #openwhisk_apigateway}
 
-La gestión de API permite gestionar acciones de OpenWhisk. 
+La gestión de API permite gestionar acciones de OpenWhisk.
 
 La pasarela de API actúa como un proxy para las [acciones web](webactions.md) y les proporciona características adicionales como, por ejemplo, direccionamiento de métodos HTTP, id/secretos de cliente, limitación de tasas de llamadas, CORS, visualización de utilización de API y registros de respuestas y permite definir políticas de compartición de API.
 Para obtener más información sobre la característica de la pasarela de API consulte la [documentación de gestión de api](/docs/apis/management/manage_openwhisk_apis.html#manage_openwhisk_apis)
 
-## Creación de API desde acciones web de OpenWhisk utilizando su navegador. 
+## Creación de API desde acciones web de OpenWhisk utilizando su navegador.
 
-Con la pasarela de API puede exponer una acción de OpenWhisk como una API. Después de definir la API, puede aplicar políticas de seguridad y de limitación de tasa de llamadas, visualizar la utilización de las API y los registros de respuesta, así como definir políticas de compartición de API. En el panel de control de OpenWhisk, pulse el [separador API](https://console.ng.bluemix.net/openwhisk/apimanagement).
+Con la pasarela de API puede exponer una acción de OpenWhisk como una API. Después de definir la API, puede aplicar políticas de seguridad y de limitación de tasa de llamadas, visualizar la utilización de las API y los registros de respuesta, así como definir políticas de compartición de API.
+En el panel de control de OpenWhisk, pulse el [separador API](https://console.ng.bluemix.net/openwhisk/apimanagement).
 
 
 ## Creación de API desde acciones web de OpenWhisk utilizando la interfaz de línea de mandatos
 
 ### Configuración de la interfaz de línea de mandatos de OpenWhisk
 
-Configure la interfaz de línea de mandatos de OpenWhisk con la apihost `wsk property set --apihost openwhisk.ng.bluemix.net`. Para poder utilizar la `wsk api`, el archivo de configuración de interfaz de línea de mandatos `~/.wskprops` debe contener la señal de acceso de Bluemix. Para obtener la señal de acceso utilice el mandato de interfaz de línea de mandatos `wsk bluemix login`. Para obtener más información sobre el mandato, ejecute `wsk bluemix login -h`
+Configure la interfaz de línea de mandatos de OpenWhisk con la apihost `wsk property set --apihost openwhisk.ng.bluemix.net`. Para poder utilizar la `wsk api`, el archivo de configuración de interfaz de línea de mandatos `~/.wskprops` debe contener la señal de acceso de Bluemix.
+Para obtener la señal de acceso utilice el mandato de interfaz de línea de mandatos `wsk bluemix login`. Para obtener más información sobre el mandato, ejecute `wsk bluemix login -h`
 
-**Nota:** Si el mandato produce errores indicando que es necesario el inicio de sesión único (sso), tenga en cuenta que actualmente no se da soporte a esta característica. Como método alternativo inicie una sesión con la interfaz de línea de mandatos de CloudFoundry utilizando `cf login` y, a continuación, copie la señal de acceso desde el archivo de configuración del directorio HOME `~/.cf/config.json` en el archivo `~/.wskprops` como la propiedad `APIGW_ACCESS_TOKEN="valor de AccessToken"`. Elimine el prefijo `Bearer ` al copiar la serie de la señal de acceso. 
+**Nota:** Si el mandato produce errores indicando que es necesario el inicio de sesión único (sso), tenga en cuenta que actualmente no se da soporte a esta característica. Como método alternativo inicie una sesión con la interfaz de línea de mandatos de Bluemix utilizando `bluemix login` y, a continuación, copie la señal de acceso desde el archivo de configuración del directorio HOME `~/.bluemix/.cf/config.json` en el archivo `~/.wskprops` como la propiedad `APIGW_ACCESS_TOKEN="valor de AccessToken"`. Elimine el prefijo `Bearer ` al copiar la serie de la señal de acceso.
 
-**Nota:** Las API que haya creado con `wsk api-experimental` seguirán funcionando por un periodo breve, aunque debe empezar a migrar sus API a acciones web y reconfigurar sus api existentes con el nuevo mandato de interfaz de línea de mandatos `wsk api`. 
+**Nota:** Las API que haya creado con `wsk api-experimental` seguirán funcionando por un periodo breve, aunque debe empezar a migrar sus API a acciones web y reconfigurar sus api existentes con el nuevo mandato de interfaz de línea de mandatos `wsk api`.
 
 ### Creación de su primera API utilizando la interfaz de línea de mandatos
 
@@ -44,7 +46,7 @@ Configure la interfaz de línea de mandatos de OpenWhisk con la apihost `wsk pro
   ```
   {: codeblock}
   
-2. Cree una acción web desde la siguiente función JavaScript. En este ejemplo, la acción se llama 'hello'. Asegúrese de añadir el distintivo `--web true`. 
+2. Cree una acción web desde la siguiente función JavaScript. En este ejemplo, la acción se llama 'hello'. Asegúrese de añadir el distintivo `--web true`.
   
   ```
   wsk action create hello hello.js --web true
@@ -61,27 +63,29 @@ Configure la interfaz de línea de mandatos de OpenWhisk con la apihost `wsk pro
   ```
   ```
   ok: created API /hello/world GET for action /_/hello
-  https://${APIHOST}:9001/api/21ef035/hello/world
+  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/21ef035/hello/world
   ```
-Se genera un nuevo URL que expone la acción `hello` mediante un método **GET** HTTP.    
+  Se genera un nuevo URL que expone la acción `hello` mediante un método **GET** HTTP.
+  
 4. Vamos a probarlo enviando una solicitud HTTP al URL.
   
   ```
-  $ curl https://${APIHOST}:9001/api/21ef035/hello/world?name=OpenWhisk
+  $ curl https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/21ef035/hello/world?name=OpenWhisk
   ```
   ```json
 {
   "payload": "Hello world OpenWhisk"
   }
   ```
-Se invocó la acción web `hello`, devolviendo de vuelta un objeto JSON que incluye el parámetro `name` enviado mediante el parámetro de consulta. Puede pasar parámetros a la acción mediante parámetros de consulta sencillos o mediante el cuerpo de la solicitud. Las acciones web permiten invocar una acción de forma pública sin la clave de API de autorización de OpenWhisk.   
+  Se invocó la acción web `hello`, devolviendo de vuelta un objeto JSON que incluye el parámetro `name` enviado mediante el parámetro de consulta. Puede pasar parámetros a la acción mediante parámetros de consulta sencillos o mediante el cuerpo de la solicitud. Las acciones web permiten invocar una acción de forma pública sin la clave de API de autorización de OpenWhisk.
+  
 ### Control completo sobre la respuesta HTTP
   
-  El distintivo `--response-type` controla el URL de destino de la acción web que la pasarela API debe intermediar. Utilizando `--response-type json` como antes devuelve el resultado completo de la acción en formato JSON y de forma automática establece la cabecera Content-Type con `application/json` lo que le permitirá empezar a tratar con facilidad la respuesta.  
+  El distintivo `--response-type` controla el URL de destino de la acción web que la pasarela API debe intermediar. Utilizando `--response-type json` como antes devuelve el resultado completo de la acción en formato JSON y de forma automática establece la cabecera Content-Type con `application/json` lo que le permitirá empezar a tratar con facilidad la respuesta. 
   
-  Una vez haya empezado, deseará tener un control completo sobre las propiedades de respuesta HTTP como, por ejemplo `statusCode` o `headers`, y devolver distintos tipos de contenido en `body`. Puede hacer esto mediante `--response-type http` para configurar el URL de destino de la acción web con la extensión `http`. 
+  Una vez haya empezado, deseará tener un control completo sobre las propiedades de respuesta HTTP como, por ejemplo `statusCode` o `headers`, y devolver distintos tipos de contenido en `body`. Puede hacer esto mediante `--response-type http` para configurar el URL de destino de la acción web con la extensión `http`.
 
-  Puede elegir cambiar el código de la acción para satisfacer con la devolución de las acciones web con la extensión `http` o incluir la acción en una secuencia pasando su resultado a una nueva acción que transforma el resultado para que corresponda a una respuesta HTTP con el formato adecuado. Puede obtener más información sobre los tipos de respuesta y las extensiones de acciones web en la documentación de [acciones web](webactions.md).  
+  Puede elegir cambiar el código de la acción para satisfacer con la devolución de las acciones web con la extensión `http` o incluir la acción en una secuencia pasando su resultado a una nueva acción que transforma el resultado para que corresponda a una respuesta HTTP con el formato adecuado. Puede obtener más información sobre los tipos de respuesta y las extensiones de acciones web en la documentación de [acciones web](webactions.md).
 
   Cambie el código de `hello.js` que devuelve las propiedades JSON `body`, `statusCode` y `headers`
   ```javascript
@@ -94,7 +98,7 @@ Se invocó la acción web `hello`, devolviendo de vuelta un objeto JSON que incl
   }
   ```
   {: codeblock}
- Tenga en cuenta que body se debe devolver codificado en `base64` y no como una serie.
+  Tenga en cuenta que body se debe devolver codificado en `base64` y no como una serie.
   
   Actualice la acción con el resultado modificado
   ```
@@ -107,7 +111,7 @@ Se invocó la acción web `hello`, devolviendo de vuelta un objeto JSON que incl
   ```
   {: pre}
   Ahora llamaremos a la API actualizada
-```
+  ```
   curl https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/21ef035/hello/world
   ```
   {: pre}
@@ -117,6 +121,7 @@ Se invocó la acción web `hello`, devolviendo de vuelta un objeto JSON que incl
   }
   ```
   Ahora tiene un control completo de sus API, puede controlar el contenido como devolviendo HTML o establecer el código de estado para estados como No encontrado (404), No autorizado (401) o incluso Error interno de servidor (500).
+
 ### Exposición de varias acciones web
 
 Supongamos que desea exponer un conjunto de acciones correspondientes a un club de lectura para sus amigos.
@@ -208,7 +213,7 @@ ok: deleted API /club
 ```
 ### Modificación de la configuración
 
-Para editar la configuración en el panel de control OpenWhisk, pulse el [separador API](https://console.ng.bluemix.net/openwhisk/apimanagement) para configurar, por ejemplo, la seguridad o limitar las tasas de llamadas. 
+Para editar la configuración en el panel de control OpenWhisk, pulse el [separador API](https://console.ng.bluemix.net/openwhisk/apimanagement) para configurar, por ejemplo, la seguridad o limitar las tasas de llamadas.
 
 ### Importación de la configuración
 

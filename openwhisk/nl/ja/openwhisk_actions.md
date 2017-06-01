@@ -52,7 +52,7 @@ copyright:
       return {payload: 'Hello world'};
   }
   ```
-    {: codeblock}
+  {: codeblock}
 
   この JavaScript ファイルにさらに関数を含めることもできます。ただし、規約により、アクションのエントリー・ポイントを提供するために `main` という名前の関数が存在している必要があります。
 
@@ -61,7 +61,7 @@ copyright:
   ```
   wsk action create hello hello.js
   ```
-      {: pre}
+  {: pre}
   ```
   ok: created action hello
   ```
@@ -577,55 +577,67 @@ wsk action invoke --blocking --result helloPython --param name World
 {: #openwhisk_actions_python_zip}
 
 Python アクションおよび従属モジュールを zip ファイルでパッケージ化することができます。
-エントリー・ポイント (例:「main」) を含むソース・ファイルのファイル名は「__main__.py」でなければなりません。
-例えば、「helper.py」という名前のヘルパー・モジュールを含むアクションを作成するには、まずソース・ファイルを含むアーカイブを作成します。
+エントリー・ポイント (例: `main`) を含むソース・ファイルのファイル名は `__main__.py` でなければなりません。
+例えば、`helper.py` という名前のヘルパー・モジュールを含むアクションを作成するには、まずソース・ファイルを含むアーカイブを作成します。
 
 ```bash
-$ zip -r helloPython.zip **main**.py helper.py
+zip -r helloPython.zip __main__.py helper.py
 ```
+{: pre}
 
 次に、アクションを作成します。
 
+
+
 ```bash
-$ wsk action create helloPython --kind python:3 helloPython.zip
+wsk action create helloPython --kind python:3 helloPython.zip
 ```
+{: pre}
 
 ### 仮想環境を使用した zip ファイルでの Python アクションのパッケージ化
 {: #openwhisk_actions_python_virtualenv}
 
-Python 従属関係をパッケージ化する別の方法は、仮想環境 (「virtualenv」) を使用することです。これにより、例えば、 [「pip」](https://packaging.python.org/installing/) を介してインストールする可能性のある追加のパッケージをリンクできます。
+Python 従属関係をパッケージ化する別の方法は、仮想環境 (`virtualenv`) を使用することです。これにより、例えば、 [`pip`](https://packaging.python.org/installing/) を介してインストールする可能性のある追加のパッケージをリンクできます。
 OpenWhisk コンテナーとの互換性を確保するには、virtualenv 内のパッケージ・インストールをターゲット環境で行う必要があります。
-したがって、docker イメージ「openwhisk/python2action」または「openwhisk/python3action」を、アクション用の virtualenvディレクトリーを作成するために使用してください。
+したがって、docker イメージ `openwhisk/python2action` または `openwhisk/python3action` を、アクション用の virtualenvディレクトリーを作成するために使用してください。
 
-基本 zip ファイル・サポートと同様に、メインエントリー・ポイントを含むソース・ファイルの名前は「__main__.py」でなければなりません。また、virtualenv ディレクトリーは、「virtualenv」という名前でなければなりません。
+基本 zip ファイル・サポートと同様に、メインエントリー・ポイントを含むソース・ファイルの名前は `__main__.py` でなければなりません。また、virtualenv ディレクトリーは、`virtualenv` という名前でなければなりません。
 以下は、従属関係をインストールし、それらを virtualenv にパッケージ化し、互換性のある OpenWhisk アクションを作成するシナリオの例です。
 
-1. インストールする「pip」モジュールおよびインストールするバージョンを含む「requirements.txt」ファイルがある場合、以下を実行して従属関係をインストールし、互換性のある Docker イメージを使用して virtualenv を作成します。
+
+
+1.  インストールする `pip` モジュールおよびインストールするバージョンを含む `requirements.txt` ファイルがある場合、以下を実行して従属関係をインストールし、互換性のある Docker イメージを使用して virtualenv を作成します。
  ```bash
- $ docker run --rm -v "$PWD:/tmp" openwhisk/python3action sh \
+ docker run --rm -v "$PWD:/tmp" openwhisk/python3action sh \
    -c "cd tmp; virtualenv virtualenv; source virtualenv/bin/activate; pip install -r requirements.txt;"
  ```
+ {: pre}
 
-2. virtualenv ディレクトリーと追加の Python ファイルをアーカイブします。
+2.  virtualenv ディレクトリーと追加の Python ファイルをアーカイブします。
  ```bash
- $ zip -r helloPython.zip virtualenv **main**.py
+ zip -r helloPython.zip virtualenv __main__.py
  ```
+ {: pre}
 
 3. 以下のように、アクションを作成します。
-```bash
-$ wsk action create helloPython --kind python:3 helloPython.zip
+  ```bash
+wsk action create helloPython --kind python:3 helloPython.zip
 ```
+  {: pre}
 
 上記のステップは Python 3.6 で示しましたが、Python 2.7 でも同じことができます。
 
+
+
 ## Swift アクションの作成
 
-Swift アクションの作成プロセスは、JavaScript アクションの場合と似ています。以下のセクションでは、単一 Swift アクションの作成と起動、および、そのアクションへのパラメーターの追加について説明します。オンラインの [Swift Sandbox](https://swiftlang.ng.bluemix.net) を使用して、Xcode をマシンにインストールする必要なく Swift コードをテストすることもできます。
+Swift アクションの作成プロセスは、JavaScript アクションの場合と似ています。以下のセクションでは、単一 Swift アクションの作成と起動、および、そのアクションへのパラメーターの追加について説明します。
+
+オンラインの [Swift Sandbox](https://swiftlang.ng.bluemix.net) を使用して、Xcode をマシンにインストールする必要なく Swift コードをテストすることもできます。
 
 ### アクションの作成と起動
 
-アクションは、単にトップレベルの Swift 関数です。例えば、以下の内容で
-「hello.swift」という名前のファイルを作成します。
+アクションは、単にトップレベルの Swift 関数です。例えば、以下の内容で `hello.swift` という名前のファイルを作成します。
 
 ```swift
 func main(args: [String:Any]) -> [String:Any] {
@@ -640,14 +652,14 @@ func main(args: [String:Any]) -> [String:Any] {
 
 Swift アクションは常にディクショナリーを取り込み、ディクショナリーを生成します。
 
-次のように、この関数から「helloSwift」という名前の {{site.data.keyword.openwhisk_short}} アクションを作成できます。
+次のように、この関数から `helloSwift` という名前の {{site.data.keyword.openwhisk_short}} アクションを作成できます。
 
 ```
 wsk action create helloSwift hello.swift
 ```
 {: pre}
 
-コマンド・ラインおよび「.swift」ソース・ファイルを使用する場合、(JavaScript アクションとは対照的に) Swift アクションを作成していることを指定する必要はありません。そのことはツールがファイル拡張子から判定します。
+コマンド・ラインおよび `.swift` ソース・ファイルを使用する場合、(JavaScript アクションとは対照的に) Swift アクションを作成していることを指定する必要はありません。そのことはツールがファイル拡張子から判定します。
 
 アクション起動は、Swift アクションの場合と JavaScript アクションの場合で同じです。
 
@@ -663,10 +675,16 @@ wsk action invoke --blocking --result helloSwift --param name World
 ```
 
 **重要:** Swift アクションは Linux 環境で実行されます。Linux 上の Swift はまだ発展途上であり、
-{{site.data.keyword.openwhisk_short}} は通常は使用可能な最新リリースを使用しますが、それは必ずしも安定しているとは限りません。それに加えて、{{site.data.keyword.openwhisk_short}} で使用される Swift のバージョンは、安定したリリースの MacOS 用 XCode からの Swift のバージョンと不整合である可能性があります。### Swift 実行可能モジュールとしてアクションをパッケージ化
+{{site.data.keyword.openwhisk_short}} は通常は使用可能な最新リリースを使用しますが、それは必ずしも安定しているとは限りません。それに加えて、{{site.data.keyword.openwhisk_short}} で使用される Swift のバージョンは、安定したリリースの MacOS 用 XCode からの Swift のバージョンと不整合である可能性があります。
+
+### Swift 実行可能モジュールとしてアクションをパッケージ化
 {: #openwhisk_actions_swift_zip}
 
-Swift ソース・ファイルを使用して OpenWhisk Swift アクションを作成した場合、アクションを実行する前に、バイナリーにコンパイルしておく必要があります。これを行った後は、アクションを保持しているコンテナーがパージされるまで、そのアクションに対する後続の呼び出しが大幅に高速になります。この遅延は、コールド・スタートの遅延と呼ばれます。コールド・スタートの遅延を避けるために、Swift ファイルをバイナリーにコンパイルしてから、zip ファイルとして OpenWhisk にアップロードすることができます。OpenWhisk スキャフォールドが必要になるため、バイナリーを作成する最も簡単な方法は、実行する環境と同じ環境内でビルドすることです。手順は次のとおりです。
+Swift ソース・ファイルを使用して OpenWhisk Swift アクションを作成した場合、アクションを実行する前に、バイナリーにコンパイルしておく必要があります。これを行った後は、アクションを保持しているコンテナーがパージされるまで、そのアクションに対する後続の呼び出しが大幅に高速になります。この遅延は、コールド・スタートの遅延と呼ばれます。
+
+コールド・スタートの遅延を避けるために、Swift ファイルをバイナリーにコンパイルしてから、zip ファイルとして OpenWhisk にアップロードすることができます。OpenWhisk スキャフォールドが必要になるため、バイナリーを作成する最も簡単な方法は、実行する環境と同じ環境内でビルドすることです。手順は次のとおりです。
+
+
 
 - 対話式 Swift アクション・コンテナーを稼働する。
 ```
@@ -674,7 +692,9 @@ docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
 ```
 {: pre}
 
-  これにより、Docker コンテナー内の bash シェルに移動します。その中で、以下のコマンドを実行します。
+    これにより、Docker コンテナー内の bash シェルに移動します。その中で、以下のコマンドを実行します。
+
+
 
 - バイナリーをパッケージ化するために、便宜上、zip ファイルをインストールする
   ```
@@ -682,6 +702,7 @@ docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
   ```
   {: pre}
 - ソース・コードをコピーして、ビルドの準備をする
+  
   ```
   cp /owexec/hello.swift /swift3Action/spm-build/main.swift
   ```
@@ -695,11 +716,13 @@ docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
   ```
   {: pre}
 - zBuild およびリンク
+  
   ```
   /swift3Action/spm-build/swiftbuildandlink.sh
   ```
   {: pre}
 - zip アーカイブを作成する
+  
   ```
   cd /swift3Action/spm-build
   ```
@@ -713,13 +736,13 @@ docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
   ```
   {: pre}
 これで、hello.swift と同じディレクトリー内に hello.zip が作成されました。
-
 - これをアクション名 helloSwifty として OpenWhisk にアップロードします。
   ```
   wsk action update helloSwiftly hello.zip --kind swift:3
   ```
   {: pre}
 - どのくらい高速になったかを確認するには、以下を実行します
+   
   ```
   wsk action invoke helloSwiftly --blocking
   ``` 
@@ -730,18 +753,20 @@ docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
 ## Java アクションの作成
 {: #openwhisk_actions_java}
 
-Java アクションの作成プロセスは、JavaScript アクションおよび Swift アクションの作成と似ています。以下のセクションでは、単一 Java アクションの作成と起動、および、そのアクションへのパラメーターの追加について説明します。Java ファイルをコンパイル、テスト、およびアーカイブするには、[JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) がローカルにインストールされている必要があります。
+Java アクションの作成プロセスは、JavaScript アクションおよび Swift アクションの作成と似ています。以下のセクションでは、単一 Java アクションの作成と起動、および、そのアクションへのパラメーターの追加について説明します。
 
-### アクションの作成および起動
+Java ファイルをコンパイル、テスト、およびアーカイブするには、[JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) がローカルにインストールされている必要があります。
+
+### アクションの作成と起動
 {: #openwhisk_actions_java_invoke}
 
-Java アクションは、以下とまったく同じシグニチャーを持つ「main」と呼ばれるメソッドを持つ Java プログラムです。
+Java アクションは、以下とまったく同じシグニチャーを持つ `main` と呼ばれるメソッドを持つ Java プログラムです。
 ```java
 public static com.google.gson.JsonObject main(com.google.gson.JsonObject);
 ```
 {: codeblock}
 
-例えば、以下の内容で「Hello.java」という名前の Java ファイルを作成します。
+例えば、以下の内容で `Hello.java` という Java ファイルを作成します。
 
 ```java
 import com.google.gson.JsonObject;
@@ -758,26 +783,27 @@ public class Hello {
 ```
 {: codeblock}
 
-次に、「Hello.java」を JAR ファイル「hello.jar」にコンパイルします。
+次に、以下のように、`Hello.java` をコンパイルして JAR ファイル `hello.jar` を作成します。
 ```
 javac Hello.java
 ```
-  {: pre}
-  ```
+{: pre}
+```
 jar cvf hello.jar Hello.class
 ```
-  {: pre}
-  **注:** Java ファイルをコンパイルする場合、[google-gson](https://github.com/google/gson) を Java CLASSPATH に指定する必要があります。
+{: pre}
 
-以下に示すように、この JAR ファイルから「helloJava」という OpenWhisk アクションを作成できます。
+**注:** Java ファイルをコンパイルする場合、[google-gson](https://github.com/google/gson) を Java CLASSPATH に指定する必要があります。
+
+以下に示すように、この JAR ファイルから `helloJava` という OpenWhisk アクションを作成できます。
 
 ```
 wsk action create helloJava hello.jar --main Hello
 ```
 
-コマンド・ラインと「.jar」ソース・ファイルを使用する場合、Java アクションを作成していることを指定する必要はありません。ツールは、ファイル拡張子からそのことを判別します。
+コマンド・ラインと `.jar` ソース・ファイルを使用する場合、Java アクションを作成していることを指定する必要はありません。ツールは、ファイル拡張子からそのことを判別します。
 
-「--main」を使用して、メイン・クラスの名前を指定する必要があります。適格なメイン・クラスは、上で説明されているように静的「main」メソッドを実装するクラスです。クラスがデフォルト・パッケージ内にない場合は、完全修飾 Java クラス名を使用してください (例:「--main com.example.MyMain」)。
+`--main` を使用して、メイン・クラスの名前を指定する必要があります。適格なメイン・クラスは、上で説明されているように静的 `main` メソッドを実装するクラスです。クラスがデフォルト・パッケージ内にない場合は、完全修飾 Java クラス名を使用してください (例: `--main com.example.MyMain`)。
 
 Java アクションのアクション呼び出しは、Swift アクションおよび JavaScript アクションの場合と同じです。
 
@@ -796,18 +822,17 @@ wsk action invoke --blocking --result helloJava --param name World
 
 {{site.data.keyword.openwhisk_short}} Docker アクションでは、任意の言語で独自のアクションを作成できます。
 
-コードはコンパイルされて実行可能バイナリーになり、Docker イメージに組み込まれます。バイナリー・プログラムとシステムの対話は、「stdin」から入力を受け取り、「stdout」を通して応答することによって行われます。
+コードはコンパイルされて実行可能バイナリーになり、Docker イメージに組み込まれます。バイナリー・プログラムとシステムの対話は、`stdin` から入力を受け取り、`stdout` を通して応答することによって行われます。
 
 前提条件として、Docker Hub アカウントを持っている必要があります。無料の Docker ID およびアカウントをセットアップするには、[Docker Hub](https://hub.docker.com) にアクセスしてください。
 
-以下の説明では、Docker ユーザー ID が「janesmith」であり、パスワードが「janes_password」であると想定しています。CLI が既にセットアップ済みである場合、{{site.data.keyword.openwhisk_short}} で使用するためのカスタム・バイナリーをセットアップするには、3 つのステップが必要です。その後、アップロードされた Docker イメージをアクションとして使用できます。
+以下の説明では、Docker ユーザー ID が `janesmith` であり、パスワードが `janes_password`　であると想定しています。CLI が既にセットアップ済みである場合、{{site.data.keyword.openwhisk_short}} で使用するためのカスタム・バイナリーをセットアップするには、3 つのステップが必要です。その後、アップロードされた Docker イメージをアクションとして使用できます。
 
 1. Docker スケルトンをダウンロードします。次のように CLI を使用してダウンロードできます。
 
   ```
   wsk sdk install docker
   ```
-
   {: pre}
   ```
   Docker スケルトンが現在のディレクトリーにインストールされました。

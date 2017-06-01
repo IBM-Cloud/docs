@@ -14,7 +14,8 @@ lastupdated: "2017-04-25"
 # {{site.data.keyword.openwhisk_short}} 시작하기
 
 
-{{site.data.keyword.openwhisk}}는 이벤트로 구동되는 분산형 컴퓨팅 서비스이며 서버리스(serverless) 컴퓨팅 또는 FaaS(Function as a Service)라고도 합니다. {{site.data.keyword.openwhisk_short}}는 HTTP를 통한 웹 또는 모바일 앱에서의 직접 호출이나 이벤트에 응답하여 애플리케이션 로직을 실행합니다. Cloudant 같은 Bluemix 서비스와 외부 소스에서 이벤트를 제공할 수 있습니다. 개발자는 애플리케이션 로직 작성 및 On-Demand 실행이 수행되는 조치 작성에 집중할 수 있습니다. 새 패러다임의 이점은 서버를 명시적으로 프로비저닝하지 않고 Auto-Scaling에 대해 염려하지 않아도 되거나, 서버가 실행되지만 요청을 제공하지 않는 경우 고가용성, 업데이트, 유지보수 및 프로세서 시간에 대한 비용에 대해 걱정하지 않아도 된다는 점입니다.
+{{site.data.keyword.openwhisk}}는 이벤트로 구동되는 분산형 컴퓨팅 서비스이며 서버리스(serverless) 컴퓨팅 또는 FaaS(Function as a Service)라고도 합니다. {{site.data.keyword.openwhisk_short}}는 HTTP를 통한 웹 또는 모바일 앱에서의 직접 호출이나 이벤트에 응답하여 애플리케이션 로직을 실행합니다. Cloudant 같은 Bluemix 서비스와 외부 소스에서 이벤트를 제공할 수 있습니다. 개발자는 애플리케이션 로직 작성 및 On-Demand 실행이 수행되는 조치 작성에 집중할 수 있습니다.
+새 패러다임의 이점은 서버를 명시적으로 프로비저닝하지 않고 Auto-Scaling에 대해 염려하지 않아도 되거나, 서버가 실행되지만 요청을 제공하지 않는 경우 고가용성, 업데이트, 유지보수 및 프로세서 시간에 대한 비용에 대해 걱정하지 않아도 된다는 점입니다.
 HTTP 호출, 데이터베이스 스테이지 변경 또는 코드 실행을 트리거하는 다른 이벤트 유형이 있을 때마다 사용자 코드가 실행됩니다.
 VM이 유용한 작업을 수행하는지 여부에 관계없이 VM 사용률에 대해 시간당이 아닌 밀리초 단위 실행 시간(반올림하여 100ms)을 기준으로 청구됩니다.
 {: shortdesc}

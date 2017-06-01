@@ -41,9 +41,9 @@ sont distribuées avec le système {{site.data.keyword.openwhisk_short}}.
 {: #openwhisk_entities_fullyqual}
 
 Le nom qualifié complet d'une entité est `/nom_espace_nom[/nom_package]/nom_entité`. Notez que `/` est utilisé pour
-délimiter les espaces de nom, les packages et les entités. De plus, les espaces de noms doivent être précédés du préfixe `/`.
+délimiter les espaces de nom, les packages et les entités. De plus, les espaces de nom doivent être précédés du préfixe `/`.
 
-Pour des raisons pratiques, l'espace de noms peut être omis s'il s'agit de l'*espace de noms par défaut* de l'utilisateur.
+Pour des raisons pratiques, l'espace de nom peut être omis s'il s'agit de l'*espace de nom par défaut* de l'utilisateur.
 
 Par exemple, imaginez un utilisateur dont l'espace de nom par défaut est `/monOrg`. Voici des exemples de nom qualifié complet pour
 plusieurs entités et leurs alias :
@@ -59,7 +59,7 @@ Vous utiliserez ce schéma de dénomination dans l'interface de ligne de command
 ### Noms d'entité
 {: #openwhisk_entities_names}
 
-Les noms de toutes les entités, notamment les actions, les déclencheurs, les règles, les packages et les espaces de noms sont une séquence de
+Les noms de toutes les entités, notamment les actions, les déclencheurs, les règles, les packages et les espaces de nom sont une séquence de
 caractères au format suivant :
 
 * Le premier caractère doit être alphanumérique ou un trait de soulignement.
@@ -441,75 +441,8 @@ Vous pouvez inclure des étapes de compilation ou des dépendances en modifiant 
 
 ## API REST
 {: #openwhisk_ref_restapi}
+Vous trouverez des informations sur l'API REST [ici](openwhisk_rest_api.html). 
 
-Toutes les fonctions du système sont disponibles via une API REST. Des noeuds finaux de collection et d'entité sont présents pour les actions, les déclencheurs, les packages, les activations, et les espaces de nom.
-
-Les noeuds finaux de collection sont les suivants :
-
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>`/api/v1/namespaces`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>`/api/v1/namespaces/{espace_nom}/actions`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>`/api/v1/namespaces/{espace_nom}/triggers`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>`/api/v1/namespaces/{espace_nom}/rules`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>`/api/v1/namespaces/{espace_nom}/packages`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>`/api/v1/namespaces/{espace_nom}/activations`
-
-`openwhisk.`<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>` est le nom d'hôte de l'API OpenWhisk (par exemple
-openwhisk.ng.bluemix.net, 172.17.0.1, etc.).
-
-Pour `{espace_nom}`, le caractère `_` peut être utilisé afin de spécifier l'*espace de nom par défaut* (adresse électronique) pour l'utilisateur
-
-Vous pouvez lancer une requête GET sur les noeuds finaux de collection pour extraire une liste d'entités dans la collection.
-
-Des noeuds finaux d'entité sont présents pour chaque type d'entité :
-
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>`/api/v1/namespaces/{espace_nom}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>`/api/v1/namespaces/{espace_nom}/actions/[{nom_package}/]{nom_action}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>`/api/v1/namespaces/{espace_nom}/triggers/{nom_déclencheur}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>`/api/v1/namespaces/{espace_nom}/rules/{nom_règle}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>`/api/v1/namespaces/{espace_nom}/packages/{nom_package}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>`/api/v1/namespaces/{espace_nom}/activations/{nom_activation}`
-
-
-Les noeuds finaux d'espace de nom et d'activation ne prennent en charge que les requêtes GET. Les noeuds finaux d'actions, de déclencheurs, de règles et
-de packages prennent en charge les requêtes GET, PUT et DELETE. Les noeuds finaux d'actions, de déclencheurs et de règles prennent également en charge les
-requêtes POST, lesquelles sont utilisées pour appeler des actions et des déclencheurs et pour activer ou désactiver des règles. Reportez-vous au document
-[API
-reference](https://console.{DomainName}/apidocs/98) pour plus d'informations.
-
-Toutes les API sont protégées via une authentification HTTP Basic. Les données d'identification pour l'authentification de base résident dans la propriété
-`AUTH` de votre fichier `~/.wskprops`, et sont délimitées par un signe deux-points. Vous pouvez également extraire ces données
-d'identification lors des [étapes de configuration de l'interface de ligne de commande](./index.html#openwhisk_start_configure_cli).
-
-Voici un exemple qui utilise la commande cURL pour extraire la liste de tous les packages dans l'espace de nom `whisk.system` :
-
-```
-curl -u NOM_UTILISATEUR:MOT_DE_PASSE https://openwhisk.ng.bluemix.net/api/v1/namespaces/whisk.system/packages
-```
-{: pre}
-```
-[
-  {
-    "name": "slack",
-    "binding": false,
-    "publish": true,
-    "annotations": [
-      {
-        "key": "description",
-        "value": "Package contenant des actions pour interaction avec le service de messagerie Slack"
-      }
-    ],
-    "version": "0.0.9",
-    "namespace": "whisk.system"
-  },
-  ...
-]
-```
-{: screen}
-
-L'API OpenWhisk prend en charge les appels demande-réponse de clients Web. OpenWhisk répond aux demandes `OPTIONS` avec des en-têtes CORS (Cross-Origin Resource Sharing). Actuellement, toutes les origines sont autorisées (la valeur de Access-Control-Allow-Origin est "`*`") et les en-têtes Access-Control-Allow-Header fournissent l'autorisation et le type de contenu.
-
-**Attention :** Comme OpenWhisk ne prend en charge qu'une seule clé par compte, il n'est pas recommandé d'utiliser CORS (Cross-Origin Response Sharing) au-delà de simples expérimentations. Votre clé doit être imbriquée dans le code côté client afin d'être visible par le public. A utiliser
-avec précaution.
 
 ## Limites du système
 {: #openwhisk_syslimits}
