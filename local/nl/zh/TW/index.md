@@ -340,7 +340,7 @@ IBM® 使用雲端作業作為服務來監視及維護您的環境，因此您�
 </dd>
 </dl>
 
-您的客戶代表會與其他合作的 {{site.data.keyword.IBM_notm}} 專家一起合作，確保您隨時擁有所需的支援。您可以升級至「高階」支援層，以與您帳戶的專用「客戶成功經理 (CSM)」合作。如需不同支援層的相關資訊，請參閱[與支援中心聯絡](../support/index.html#contacting-support)。CSM 會完成下列類型的作業：
+您的客戶代表會與其他合作的 {{site.data.keyword.IBM_notm}} 專家一起合作，確保您隨時擁有所需的支援。您可以升級至「進階」支援層，以與您帳戶的專用「客戶成功經理 (CSM)」合作。如需不同支援層的相關資訊，請參閱[與支援中心聯絡](../support/index.html#contacting-support)。CSM 會完成下列類型的作業：
 
 <ul>
 <li>提供您與 IBM 之間的技術協調。</li>
