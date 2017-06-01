@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-04-13"
+lastupdated: "2017-05-02"
 
 ---
 
@@ -346,7 +346,7 @@ LDAP 구성 세부사항 섹션에서 LDAP 서버를 선택하면 사용자 및
 {{site.data.keyword.Bluemix_notm}}의
 초당 평균 트랜잭션 수
 
-#### 메모리, 디스크 및 CPU 세부사항
+#### 시스템 메모리, 디스크 및 CPU 세부사항
 {: #resourceusagedetails}
 
 **리소스 사용량** 섹션에서 메모리 및 디스크의 **예약** 양과 **실제** 양에 대한 요약을 볼 수 있습니다.    
@@ -373,6 +373,13 @@ DEA의 메모리, 디스크 또는 CPU 사용량을 보려면 **사용 명세**�
 	<dt><strong>실제</strong></dt>
 	<dd>실제 영역은 실제 사용 중인 메모리 또는 디스크 공간의 양을 표시합니다. </dd>
 	</dl>
+
+#### 서비스 사용량 세부사항
+{: #servicesresourceusage}
+
+**서비스** 탭은 전용 서비스의 최대 용량과 비교한 총 서비스 사용량을 표시합니다. 예를 들어, 전용 Cloudant 서비스가 있으며 1000GB 중 500GB 용량을 사용 중인 경우에는 전체 중 50% 용량을 사용했음을 보여주는 그래픽이 표시됩니다. 그래픽의 색상은 용량 한계에 얼마나 근접했는지에 따라 변경됩니다. 노란색은 70% - 84% 용량을 사용했을 때 표시되며, 빨간색은 가용 용량의 85% 이상에 도달했을 때 사용됩니다. 
+
+**참고**: 지금은 서비스 이용 정보를 모든 환경에서 사용하지 못할 수도 있습니다. 이 기능은 Cloudant, MessageHub, API Connect 및 Session Cache에서 사용 가능합니다. 
 
 
 ### 계정 사용량
@@ -1010,8 +1017,7 @@ REST API 명령을 사용하려면 먼저 인증해야 합니다. 세션을 생�
 <dd class="pd">승인 헤더를 보냅니다.</dd>
 </dl>
 
-다음은 이 명령의 출력을 표시하는
-예입니다.
+다음은 이 명령의 출력을 표시하는 예입니다.
 ```
 {
     "message": "Logged in",
@@ -1289,8 +1295,7 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 `user.json` 파일을 HTTP 서버로 보냅니다.</dd>
 </dl>
 
-다음은 이 명령의 출력을 표시하는
-예입니다.
+다음은 이 명령의 출력을 표시하는 예입니다.
 
 ```
 * Connected to localhost (127.0.0.1) port 3000 (#0)
@@ -1330,8 +1335,7 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 <dd class="pd">DELETE 요청을 지정합니다.</dd>
 </dl>
 
-다음은 이 명령의 출력을 표시하는
-예입니다.
+다음은 이 명령의 출력을 표시하는 예입니다.
 
 ```
  * connect to ::1 port 3000 failed: Connection refused

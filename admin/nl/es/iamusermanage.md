@@ -55,7 +55,7 @@ Puede asignar y gestionar políticas si tiene el rol adecuado. En la tabla sigui
 | Crear una política en un servicio de una cuenta | Administrador en la cuenta o administrador en el servicio de la cuenta |
 | Crear una instancia de servicio | Administrador o editor en la cuenta o administrador o editor en el servicio de la cuenta |
 | Crear una política en una instancia de servicio | Administrador en la cuenta o administrador en el servicio de la cuenta o administrador en la instancia de servicio |
-{: caption="Tabla 1. Tareas administrativas para gestionar políticas de **Servicios habilitados para Identify y Acces** " caption-side="top"}
+{: caption="Tabla 1. Tareas administrativas para gestionar políticas de **servicios habilitados para identidad y acceso**" caption-side="top"}
 
 ## Asignación y gestión de roles
 {: #iamusermanrol}
@@ -74,7 +74,7 @@ Además de las descripciones de los roles que se proporcionan en la interfaz de 
 | Visor | Realiza acciones que no cambian el estado; solo acciones de lectura | <ul><li>Enumerar dispositivos</li><li>Leer objeto de almacenamiento</li><li>Ejecutar consultas</li><li>Ejecutar búsquedas</li></ul>|
 | Editor | Realiza acciones que modifican el estado y crean o suprimen subrecursos |<ul><li>Crear o suprimir máquinas virtuales</li><li>Conectar almacenamiento</li><li>Rearrancar</li><li>Iniciar o detener</li><li>Renombrar</li></ul> |
 | Administrador | Realiza todas las acciones, incluida la capacidad para gestionar el control de accesos |<ul><li>Invitar a usuarios</li><li>Crear o suprimir máquinas virtuales</li><li>Actualizar políticas de acceso de usuarios</li><li>Enumerar dispositivos</li><li>Conectar almacenamiento</li><li>Rearrancar</li><li>Iniciar o detener</li><li>Renombrar</li><li>Hacer copia de seguridad y restaurar</li></ul>|
-{: caption="Tabla 2. Tareas administrativas para gestionar políticas de **Servicios habilitados para Identify y Acces** " caption-side="top"}
+{: caption="Tabla 2. Tareas administrativas para gestionar políticas de **servicios habilitados para identidad y acceso**" caption-side="top"}
 
 Para obtener información más específica acerca de los roles de los usuarios que tienen asignado acceso a Cloud Foundry, consulte [Roles de usuario](/docs/admin/users_roles.html#userrolesinfo).
 
