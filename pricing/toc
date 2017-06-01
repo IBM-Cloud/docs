@@ -7,19 +7,28 @@ Managing billing and usage
     {: .navgroup id="learn"}
     index.md
     standard_account.md
-    how_charged.md
-    api_based_services.md
     {: .navgroup-end}
     
     {: .navgroup id="howto"}
     {: .topicgroup}
-    Pricing
-        linking_accounts.md
+    Pricing    
+        free.md
+        billable.md
+        how_charged.md
         estimating_costs.md
+        scenario.md
+            
+    changing_plan.md
             
     {: .topicgroup}
     Usage
         viewing_usage.md
-        changing_plan.md
         manage_billing.md
+        
+    linking_accounts.md
+    accessing_infrastructure.md
+    {: .navgroup-end}
+    
+    {: .navgroup id="help"}
+    account_faq.md
     {: .navgroup-end}
