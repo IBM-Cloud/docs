@@ -22,7 +22,7 @@ Lorsque vous utilisez l'infrastructure Cloud Foundry pour exécuter vos applicat
 
 Pour surveiller les performances des applications CF, utilisez l'une des méthodes suivantes :
 
-* Surveillance de la disponibilité {{site.data.keyword.Bluemix_notm}} pour surveiller des applications CF via la console. 
+* Surveillance de la disponibilité {{site.data.keyword.Bluemix_notm}} pour surveiller des applications CF via la console.
 * Options tierces permettant de surveiller des applications CF via des produits tiers, tels que [New Relic ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](http://newrelic.com/){:new_window}.
 
 

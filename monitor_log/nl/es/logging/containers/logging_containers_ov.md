@@ -22,7 +22,7 @@ En {{site.data.keyword.Bluemix}}, puede ver, filtrar y analizar registros de con
 
 Los registros de contenedor se supervisan y se reenvía desde fuera del contenedor mediante rastreadores. Los rastreadores envían los datos a un sistema Elasticsearch multiarrendatario de {{site.data.keyword.Bluemix_notm}}.
 
-**Nota:** Tiene la posibilidad de analizar los registros de contenedores Docker en {{site.data.keyword.Bluemix_notm}} que se despliegan en la infraestructura de nube gestionada de {{site.data.keyword.IBM}}. 
+**Nota:** Tiene la posibilidad de analizar los registros de contenedores Docker en {{site.data.keyword.Bluemix_notm}} que se despliegan en la infraestructura de nube gestionada de {{site.data.keyword.IBM}}.
 
 En la figura siguiente se muestra una vista de nivel alto del registro de {{site.data.keyword.containershort}}:
 

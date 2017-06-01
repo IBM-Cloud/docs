@@ -17,8 +17,7 @@ lastupdated: "2017-02-01"
 {: #monitoringandlogging}
 
 
-通过监视应用程序和复查日志，您可以跟进应用程序的执行和数据流，从而更好地了解部署情况。此外，还可以减少找到任何问题并进行修复所需的时间和精力。
-{:shortdesc}
+通过监视应用程序和复查日志，您可以跟进应用程序的执行和数据流，从而更好地了解部署情况。此外，还可以减少问题定位及修复所需的时间和精力。{:shortdesc}
 
 {{site.data.keyword.Bluemix}} 应用程序可以是广泛分布的多实例应用程序，并且应用程序的执行及其数据可以在许多服务中共享。在这种复杂的环境中，监视应用程序和复查日志对您管理应用程序非常重要。
 
@@ -33,7 +32,7 @@ lastupdated: "2017-02-01"
 * 深入了解应用程序运行情况，例如，检测潜在瓶颈或何时需要升级。
 * 估算资源使用情况和费用。
 
-为了使您的部署在 {{site.data.keyword.Bluemix_notm}} 平台上稳定运行，您希望及时检测到问题，并有效地确定原因。为了实现此目标，请在设计应用程序时将故障诊断考虑在内，并在应用程序部署到 {{site.data.keyword.Bluemix_notm}} 后使用服务或工具进行监视和日志记录。
+为了使您的部署在 {{site.data.keyword.Bluemix_notm}} 平台上稳定运行，您希望及时检测到问题，并有效地确定原因。要实现此目标，请在设计应用程序时将故障诊断考虑在内，并在应用程序部署到 {{site.data.keyword.Bluemix_notm}} 后使用服务或工具进行监视和日志记录。
 
 ### 监视 Cloud Foundry 上运行的应用程序
 {: #monitoring_bluemix_apps}
@@ -346,7 +345,7 @@ cf logs appname --recent | grep '\[App'
         tar xvfz ~/rfc5424-syslog_11.tgz
         ```
 
-        然后，Jane 通过将 */opt/splunk/etc/apps/rfc5424/default/transforms.conf* 替换为包含以下文本的 *transforms.conf* 文件，对附加组件进行修补：
+        然后，Jane 通过将 */opt/splunk/etc/apps/rfc5424/default/transforms.conf* 替换为新的包含以下文本的 *transforms.conf* 文件，对附加组件进行修补：
 
 	    ```
         [rfc5424_host]
@@ -363,7 +362,7 @@ cf logs appname --recent | grep '\[App'
 
      c. 设置完 Splunk 之后，Jane 必须在 Ubuntu 机器上打开一些端口，以接受传入的 syslog 漏出（端口 5140）和 Splunk Web UI（端口 8000），因为缺省情况下，{{site.data.keyword.Bluemix_notm}} 虚拟服务器已设置防火墙。
 
-	    **注：**这里已完成 iptable 配置，以供 Jane 进行评估，并且这只是暂时的。要在生产环境中的 Bluemix 虚拟服务器上配置防火墙设置，请参阅[网络安全组 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window} 文档以获取详细信息。
+	    **注：**iptable 配置此时已经可供 Jane 评估时使用，并且这是一项临时配置。要在生产环境中的 Bluemix 虚拟服务器上配置防火墙设置，请参阅[网络安全组 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window} 文档以获取详细信息。
 
 	   ```
 	   iptables -A INPUT -p tcp --dport 5140 -j ACCEPT
@@ -438,7 +437,7 @@ Cloud Foundry 应用程序使用 Cloud Foundry loggregator 从应用程序外部
 | vCPU | 19 | 57 |
 | 内存 | 80 GB | 240 GB |
 | 本地存储器 | 2.98 TB | 8.94 TB |
-{: caption="表 2. 记录 {{site.data.keyword.Bluemix_local_notm}} 的硬件需求" caption-side="top"}
+{: caption="表 2. {{site.data.keyword.Bluemix_local_notm}} 的日志记录硬件需求" caption-side="top"}
 
 ### 设置
 

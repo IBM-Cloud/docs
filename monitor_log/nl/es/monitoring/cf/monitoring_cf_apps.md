@@ -22,7 +22,7 @@ Cuando utiliza la infraestructura Cloud Foundry para ejecutar sus apps en {{site
 
 Para supervisar el rendimiento de las apps CF, utilice cualquiera de los métodos siguientes:
 
-* {{site.data.keyword.Bluemix_notm}} Availability Monitoring para supervisar apps CF mediante la consola. 
+* {{site.data.keyword.Bluemix_notm}} Availability Monitoring para supervisar apps CF mediante la consola.
 * Aplicaciones de terceros para supervisar aplicaciones CF a través de productos como, por ejemplo, [New Relic ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](http://newrelic.com/){:new_window}.
 
 

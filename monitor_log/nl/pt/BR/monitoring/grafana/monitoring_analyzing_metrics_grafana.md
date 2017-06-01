@@ -25,8 +25,8 @@ No {{site.data.keyword.Bluemix}}, é possível usar o Grafana, uma plataforma de
 
     É possível ativar para suas métricas de contêiner do Docker específicas no Grafana, no contexto para esse contêiner específico. 
     
-    Para obter mais informações veja [Navegando para o painel do Grafana por meio do painel do
-    {{site.data.keyword.Bluemix_notm}}](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_bluemix).
+    Para obter mais informações veja [Navegando para o painel do Grafana por meio do painel do {{site.data.keyword.Bluemix_notm}}]
+    (monitoring_analyzing_metrics_grafana.html#launch_grafana_from_bluemix).
 
 * Em um link direto do navegador
 

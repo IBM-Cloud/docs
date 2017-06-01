@@ -13,7 +13,7 @@ lastupdated: "2017-04-06"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Formatos de registro de Kibana 
+# Formatos de registro de Kibana
 {: #kibana_formats}
 
 Puede configurar Kibana para que visualice en la página *Descubrir* distintos campos para cada entrada de registro.
@@ -91,7 +91,7 @@ Puede configurar Kibana para que muestre los campos siguientes para cada entrada
 | \_type | El tipo de registro; por ejemplo, *syslog*. |
 | loglevel | La gravedad del suceso registrado; por ejemplo, **Info**. |
 | module | Este campo se establece en **MessageHub**. |
-{: caption="Tabla 1. Campos para los sucesos de MessageHub " caption-side="top"}
+{: caption="Tabla 1. Campos para los sucesos de MessageHub" caption-side="top"}
 
 Ejemplo de una entrada de registro:
 

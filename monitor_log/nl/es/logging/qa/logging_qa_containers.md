@@ -25,10 +25,10 @@ A continuación encontrará las respuestas a preguntas comunes sobre cómo utili
 ## Qué puedo hacer si mi contenedor en Kibana no está generando registros JSON
 {: #logging_qa_no_JSON_data_kibana}
 
-Cuando se envían registros JSON a los registros de Docker como stdout, no se analizan como JSON y, por consiguiente, no pueden almacenarse mediante el campo @timestamp para cambiar su orden.  
+Cuando se envían registros JSON a los registros de Docker como stdout, no se analizan como JSON y, por consiguiente, no pueden almacenarse mediante el campo @timestamp para cambiar su orden. 
 
-Los valores @timestamp que se muestran son las indicaciones de fecha y hora de recepción de los registros en ElasticSearch.  
+Los valores @timestamp que se muestran son las indicaciones de fecha y hora de recepción de los registros en ElasticSearch. 
 
-Las indicaciones de fecha y hora que reflejan los registros el momento en que se generaron los registros en el contenedor se muestran como parte del campo del mensaje. 
+Las indicaciones de fecha y hora que reflejan los registros el momento en que se generaron los registros en el contenedor se muestran como parte del campo del mensaje.
 
-Para separar el campo message en varios campos, registre JSON en un archivo, no en stdout. A continuación, ordene los registros en Kibana. 
+Para separar el campo message en varios campos, registre JSON en un archivo, no en stdout. A continuación, ordene los registros en Kibana.

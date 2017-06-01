@@ -27,7 +27,7 @@ A continuación encontrará las respuestas a preguntas comunes sobre cómo utili
 ## ¿Qué puedo hacer si no veo datos en la página Descubrir en Kibana
 {: #logging_qa_no_data_discover_kibana}
 
-Hay diferentes escenarios en los que es posible que no vea datos en Kibana:
+Hay diferentes situaciones en las que es posible que no vea datos en Kibana:
 
 1. Cuando se inicia Kibana, es posible que no vea datos en la página Descubrir. Recibirá el mensaje siguiente: **No se han encontrado resultados.**. 
 2. Si está trabajando en la página Descubrir en Kibana, es posible que, tras un breve periodo de tiempo, reciba el mensaje: **No se han encontrado resultados.** cuando intente realizar una tarea en Kibana.

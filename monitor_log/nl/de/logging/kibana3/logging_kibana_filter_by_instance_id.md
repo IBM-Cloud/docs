@@ -55,20 +55,20 @@ Führen Sie die folgenden Tasks aus, um Ihre Cloud Foundry-App-Protokolle nach I
 
 7. Fügen Sie einen Filter hinzu, um Informationen zu einer App-Instanz-ID ein- oder auszuschließen. 
 
-    * Zum Hinzufügen eines Filters, der Informationen zu einer bestimmten Instanz-ID einschließt, klicken Sie auf das **Lupensymbol** ![Lupensymbol](images/logging_magnifying_glass.jpg "Lupensymbol") in der Zeile 'instance_id' der Tabelle.  
+    * Zum Hinzufügen eines Filters, der Informationen zu einer bestimmten Instanz-ID einschließt, klicken Sie auf das **Lupensymbol** ![Lupensymbol](images/logging_magnifying_glass.jpg "Lupensymbol") in der Zeile 'instance_id' der Tabelle. 
 
     ![Filterbedingung für das Feld 'instance_id'](images/logging_instance_id_filter.jpg "Filterbedingung für das Feld 'instance_id'")
 
-     * Zum Hinzufügen eines Filters, der Informationen zu einer bestimmten Instanz-ID ausschließt, klicken Sie auf das **Ausschlusssymbol** ![Ausschlusssymbol](images/logging_exclusion_icon.png "Ausschlusssymbol") in der Zeile 'instance_id' der Tabelle.  
+     * Zum Hinzufügen eines Filters, der Informationen zu einer bestimmten Instanz-ID ausschließt, klicken Sie auf das **Ausschlusssymbol** ![Ausschlusssymbol](images/logging_exclusion_icon.png "Ausschlusssymbol") in der Zeile 'instance_id' der Tabelle. 
     
            ![Filterbedingung für den Ausschluss einer Instanz-ID](images/logging_application_instance_id_exclude_filter.jpg "Filterbedingung für den Ausschluss einer Instanz-ID")
     
     Im Kibana-Dashboard wird eine neue Filterbedingung hinzugefügt.
 
-9. Speichern Sie das Dashboard. Wenn Sie die Erstellung Ihres Filters abgeschlossen haben, klicken Sie auf das Symbol **Speichern** ![Symbol für Speichern](images/logging_save.jpg "Symbol für Speichern") und geben einen Namen für Ihr Dashboard ein.  
+9. Speichern Sie das Dashboard. Wenn Sie die Erstellung Ihres Filters abgeschlossen haben, klicken Sie auf das Symbol **Speichern** ![Symbol für Speichern](images/logging_save.jpg "Symbol für Speichern") und geben einen Namen für Ihr Dashboard ein. 
 
     **Hinweis:** Wenn Sie versuchen, ein Dashboard unter einem Namen zu speichern, der Leerzeichen enthält, wird es nicht gespeichert. Geben Sie einen Namen ohne Leerzeichen ein und klicken Sie auf das Symbol **Speichern**.
 
-    ![Name zum Speichern des Dashboards](images/logging_save_dashboard.jpg "Name zum Speichern des Dashboards"). 
+    ![Name zum Speichern des Dashboards](images/logging_save_dashboard.jpg "Name zum Speichern des Dashboards").
 
-Sie haben jetzt ein Dashboard erstellt, das Ihre Protokolleinträge nach Instanz-ID filtert. Sie können Ihr gespeichertes Dashboard jederzeit laden, indem Sie auf das Symbol **Ordner** ![Ordnersymbol](images/logging_folder.jpg "Ordnersymbol") klicken und Ihr Dashboard über den Namen auswählen.  
+Sie haben jetzt ein Dashboard erstellt, das Ihre Protokolleinträge nach Instanz-ID filtert. Sie können Ihr gespeichertes Dashboard jederzeit laden, indem Sie auf das Symbol **Ordner** ![Ordnersymbol](images/logging_folder.jpg "Ordnersymbol") klicken und Ihr Dashboard über den Namen auswählen. 

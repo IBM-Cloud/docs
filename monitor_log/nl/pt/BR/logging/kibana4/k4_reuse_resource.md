@@ -261,8 +261,8 @@ Conclua as etapas a seguir para copiar uma visualização que você usa para ana
     Nesse arquivo JSON de amostra, é possível modificar as variáveis a seguir: 
     
     * SPACEID: substitua essa variável pelo ID do espaço do novo espaço.
-    * NAME: substitua essa variável se você desejar mudar o nome da visualização no novo espaço. 
-    * SEARCHID: substitua essa variável pelo ID da procura no novo espaço. Esse é o ID da consulta que é usada para filtrar os dados que são exibidos por meio da visualização. 
+    * NAME: substitua essa variável se você desejar mudar o nome da visualização no novo espaço.
+    * SEARCHID: substitua essa variável pelo ID da procura no novo espaço. Esse é o ID da consulta que é usada para filtrar os dados que são exibidos por meio da visualização.
     
        <pre class="pre">
     [

@@ -39,7 +39,7 @@ lastupdated: "2017-03-29"
 ## CF 앱에 대한 로깅
 {: #logging_bmx_ov_cf}
 
-{{site.data.keyword.Bluemix_notm}}는 Cloud Foundry 플랫폼 및 Cloud Foundry 애플리케이션에서 생성된 로그 데이터를 기록합니다. 로그에서 앱에 대해 생성된 오류, 경고 및 정보 메시지를 볼 수 있습니다. Cloud Foundry에서 로깅에 대한 자세한 정보는 [Bluemix에서 Cloud Foundry 앱에 대해 로깅](cfapps/logging_cf_apps.html#logging_bluemix_cf_apps)을 참조하십시오.
+{{site.data.keyword.Bluemix_notm}}는 Cloud Foundry 플랫폼 및 Cloud Foundry 애플리케이션에서 생성된 로그 데이터를 기록합니다. 로그에서 앱에 대해 생성된 오류, 경고 및 정보 메시지를 볼 수 있습니다. Cloud Foundry의 로깅에 대한 자세한 정보는 [Bluemix에서 Cloud Foundry 앱에 대한 로깅](cfapps/logging_cf_apps.html#logging_bluemix_cf_apps)을 참조하십시오. 
 
 ## 컨테이너에 대한 로깅
 {: #logging_bmx_ov_containers}
