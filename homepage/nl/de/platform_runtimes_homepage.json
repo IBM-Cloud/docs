@@ -54,10 +54,15 @@
 		"img": "homepage/images/WhatIsBluemix-icon.svg",
 		"href": "overview/whatisbluemix.html"
     }, {
-		"title": "Konto einrichten",
-		"description": "Sie können Ihr Profil aktualisieren, Benachrichtigungen über Konten und Ausgaben einrichten, Teammitglieder einladen oder Organisationen und Bereiche verwalten.",
+		"title": " Konto verwalten",
+		"description": "Aktualisieren Sie Ihr Profil, richten Sie Benachrichtigungen über Konten und Ausgaben oder verwalten Sie Organisationen und Bereiche.",
 		"img": "homepage/images/admin.svg",
 		"href": "admin/adminpublic.html"
+	}, {
+		"title": " Identität und Zugriff verwalten",
+		"description": "Verwalten Sie den Benutzerzugriff oder laden Sie Teammitglieder ein.",
+		"img": "homepage/images/admin.svg",
+		"href": "iam/iamusermanage.html"
 	}, {
 		"title": "CLI- und Dev-Tools",
 		"description": "Zugriffstools wie eine einheitliche Befehlszeilenschnittstelle und CLI-Plug-ins.",
@@ -91,7 +96,7 @@
 		"img": "homepage/images/hybrid.svg",
 		"href": "hybrid/index.html"
 	}, {
-		"title": "Preisstruktur",
+		"title": "Abrechnung und Nutzung verwalten",
 		"description": "Schätzen Sie die Kosten mit dem Rechner und zeigen Sie die tatsächlichen Kosten mit der Ansicht 'Verwendungsdetails' an.",
 		"img": "homepage/images/pricing.svg",
 		"href": "pricing/index.html"

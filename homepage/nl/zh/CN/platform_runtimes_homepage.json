@@ -49,15 +49,20 @@
     "id": "docs_homepage_platform",
     "title": "Bluemix Platform",
     "items": [{
-	    	"title": "什么是 Bluemix？",
+	    	"title": "Bluemix 是什么？",
 		"description": "这是一种集基础架构、应用程序和服务于一体的全新的云体验方法。",
 		"img": "homepage/images/WhatIsBluemix-icon.svg",
 		"href": "overview/whatisbluemix.html"
     }, {
-		"title": "设置帐户",
-		"description": "更新个人档案，设置帐户和花费通知，邀请团队成员或管理组织和空间。",
+		"title": " 管理帐户",
+		"description": "更新个人档案，设置帐户和花费通知或管理组织和空间。",
 		"img": "homepage/images/admin.svg",
 		"href": "admin/adminpublic.html"
+	}, {
+		"title": " 管理身份和访问权",
+		"description": "管理用户访问权或邀请团队成员。",
+		"img": "homepage/images/admin.svg",
+		"href": "iam/iamusermanage.html"
 	}, {
 		"title": "CLI 和开发工具",
 		"description": "访问多种工具，例如统一命令行界面和 CLI 插件。",
@@ -91,7 +96,7 @@
 		"img": "homepage/images/hybrid.svg",
 		"href": "hybrid/index.html"
 	}, {
-		"title": "定价",
+		"title": "管理记帐和使用情况",
 		"description": "使用计算器估算成本，并通过使用情况详细视图来查看实际成本。",
 		"img": "homepage/images/pricing.svg",
 		"href": "pricing/index.html"

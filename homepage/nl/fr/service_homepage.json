@@ -5,9 +5,9 @@
   [ 
     { 
       "id": 
-      "boilerplate", 
+      "conteneur boilerplate", 
       "name": "Conteneurs boilerplate", 
-      "tags": "boilerplate" 
+      "tags": "conteneur boilerplate" 
     } ],
   "items": [{
     "id": "cfApp",
@@ -28,65 +28,70 @@
     "href": "containers/container_index.html",
     "category_id": "compute"
   }, {
+    "title": "IBM Cloud Schematics",
+    "img": "homepage/images/schematics_icon.svg",
+    "href": "services/schematics/index.html",
+    "category_id": "compute"
+  },{
     "title": "Analytics for Apache Spark Starter",
     "img": "homepage/images/Bluemix-logo.svg",
     "href": "starters/AnalyticsApacheSpark/index.html",
-    "category_id": "boilerplate"
+    "category_id": "conteneur boilerplate"
   }, {
     "title": "Conversational Agent Starter",
     "img": "homepage/images/Bluemix-logo.svg",
     "href": "starters/ConversationalAgentStarter/index.html",
-    "category_id": "boilerplate"
+    "category_id": "conteneur boilerplate"
   }, {
     "title": "Watson IoT Platform Starter",
     "img": "homepage/images/Bluemix-logo.svg",
     "href": "starters/IoT/iot500.html",
-    "category_id": "boilerplate"
+    "category_id": "conteneur boilerplate"
   }, {
     "title": "IoT for Electronics Starter",
     "img": "homepage/images/Bluemix-logo.svg",
     "href": "starters/IotElectronics/iot4egettingstarted.html",
-    "category_id": "boilerplate"
+    "category_id": "conteneur boilerplate"
   }, {
     "title": "Java Cloudant Web Starter",
     "img": "homepage/images/Bluemix-logo.svg",
     "href": "starters/java-cloudant/index.html",
-    "category_id": "boilerplate"
+    "category_id": "conteneur boilerplate"
   }, {
     "title": "Module de démarrage LoopBack",
     "img": "homepage/images/Bluemix-logo.svg",
     "href": "starters/LoopBack/index.html",
-    "category_id": "boilerplate"
+    "category_id": "conteneur boilerplate"
   }, {
     "title": "Node.js Cloudant DB Web Starter",
     "img": "homepage/images/Bluemix-logo.svg",
     "href": "starters/node-cloudant/index.html",
-    "category_id": "boilerplate"
+    "category_id": "conteneur boilerplate"
   }, {
     "title": "Node-RED Starter",
     "img": "homepage/images/Bluemix-logo.svg",
     "href": "starters/Node-RED/nodered.html",
-    "category_id": "boilerplate"
+    "category_id": "conteneur boilerplate"
   }, {
     "title": "Ruby Sinatra Starter",
     "img": "homepage/images/Bluemix-logo.svg",
     "href": "starters/rubysinatra/index.html",
-    "category_id": "boilerplate"
+    "category_id": "conteneur boilerplate"
   }, {
     "title": "StrongLoop Arc Starter",
     "img": "homepage/images/Bluemix-logo.svg",
     "href": "starters/StrongLoopArc/index.html",
-    "category_id": "boilerplate"
+    "category_id": "conteneur boilerplate"
   }, {
-    "title": "Java Workload Scheduler Web Starter ",
+    "title": "Java Workload Scheduler Web Starter",
     "img": "homepage/images/Bluemix-logo.svg",
     "href": "starters/workloadscheduler/index.html",
-    "category_id": "boilerplate"
+    "category_id": "conteneur boilerplate"
   }, {
     "title": "IBM XPages Web Starter",
     "img": "homepage/images/Bluemix-logo.svg",
     "href": "starters/XPagesStarter/index.html",
-    "category_id": "boilerplate"
+    "category_id": "conteneur boilerplate"
   }, {
     "type": "extra",
     "title": "Gestion de données",

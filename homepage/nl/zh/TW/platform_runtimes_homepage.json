@@ -54,10 +54,15 @@
 		"img": "homepage/images/WhatIsBluemix-icon.svg",
 		"href": "overview/whatisbluemix.html"
     }, {
-		"title": "設定帳戶",
-		"description": "更新設定檔、設定帳戶和消費通知、邀請團隊成員，或者管理組織和空間。",
+		"title": " 管理帳戶",
+		"description": "更新設定檔、設定帳戶和消費通知，或者管理組織和空間。",
 		"img": "homepage/images/admin.svg",
 		"href": "admin/adminpublic.html"
+	}, {
+		"title": " 管理身分及存取",
+		"description": "管理使用者存取或邀請團隊成員。",
+		"img": "homepage/images/admin.svg",
+		"href": "iam/iamusermanage.html"
 	}, {
 		"title": "CLI 及開發工具",
 		"description": "存取工具，例如統一指令行介面和 CLI 外掛程式。",
@@ -91,7 +96,7 @@
 		"img": "homepage/images/hybrid.svg",
 		"href": "hybrid/index.html"
 	}, {
-		"title": "定價",
+		"title": "管理計費及用量",
 		"description": "利用計算機來預估成本，以及利用「用量詳細資料」視圖來查看實際成本。",
 		"img": "homepage/images/pricing.svg",
 		"href": "pricing/index.html"
