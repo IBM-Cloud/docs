@@ -53,7 +53,7 @@ The {{site.data.keyword.contdelivery_short}} service supports your DevOps workfl
 
 Pipelines automate builds, deployments, and more. To get started with an automated pipeline, select a template and provide the location of your GitHub repository (repo).
 
-To [create a pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){:new_window} that is configured to deploy a Cloud Foundry application, follow these steps:
+To [create a pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/devops/pipelines/dashboard/create){:new_window} that is configured to deploy a Cloud Foundry application, follow these steps:
 
 1. Click **Cloud Foundry**.
 1. If you want to use a different name for the pipeline, change its default name. The pipeline's name identifies it in {{site.data.keyword.Bluemix_notm}}.
@@ -81,7 +81,7 @@ To [create a pipeline ![External link icon](../../icons/launch-glyph.svg "Extern
 1. Click **Create**. The pipeline is created, configured, and displayed on the toolchain's Overview page.
  ![Pipeline card](images/cd_pipeline.png)
 
-To create an [empty pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} without any preconfigured stages:
+To create an [empty pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window} without any preconfigured stages:
 
 1. Click **Custom**.
 1. If you want to use a different name for the pipeline, change its default name. The pipeline's name identifies it in {{site.data.keyword.Bluemix_notm}}.
@@ -92,7 +92,7 @@ To create an [empty pipeline ![External link icon](../../icons/launch-glyph.svg 
 ##Starting from a toolchain template
 {: #starting_from_a_toolchain_template}
 
-To create and configure a continuous delivery toolchain from a [template ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/devops/create){: new_window}:
+To create and configure a continuous delivery toolchain from a [template ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/devops/create){: new_window}:
 
 1. On the **Create a Toolchain** page, click a toolchain template.  
 1. Review the diagram of the toolchain that you are about to create. The diagram shows each tool integration in its lifecycle phase in the toolchain.
