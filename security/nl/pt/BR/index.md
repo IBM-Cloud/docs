@@ -1,12 +1,12 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2014, 2017
 
-lastupdated: "2017-01-10" 
+lastupdated: "2017-01-10"
 
 ---
 
@@ -209,9 +209,9 @@ Esse serviço fornece uma análise de segurança de apps móveis e da web e perm
 
 ### Plug-in do IBM UrbanCode para teste de segurança do aplicativo
 
-O plug-in do IBM Application Security Testing for {{site.data.keyword.Bluemix_notm}} permite executar varreduras de segurança nos apps da web ou Android que estão hospedados no {{site.data.keyword.Bluemix_notm}}. Esse plug-in é desenvolvido e suportado pela Comunidade do IBM UrbanCode™ Deploy na plataforma do IBM Bluemix DevOps Services.
+O plug-in do IBM Application Security Testing for {{site.data.keyword.Bluemix_notm}} permite executar varreduras de segurança nos apps da web ou Android que estão hospedados no {{site.data.keyword.Bluemix_notm}}. Esse plug-in é desenvolvido e suportado pela Comunidade IBM UrbanCode™ Deploy.
 
-Para obter mais informações, acesse [IBM Application Security Testing for Bluemix ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/){: new_window}. 
+Para obter mais informações, acesse [IBM Application Security Testing for Bluemix ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/){: new_window}.
 
 ### dashDB
 

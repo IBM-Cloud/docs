@@ -1,12 +1,12 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2014, 2017
 
-lastupdated: "2017-01-10" 
+lastupdated: "2017-01-10"
 
 ---
 
@@ -43,7 +43,7 @@ lastupdated: "2017-01-10"
 
 通过 {{site.data.keyword.Bluemix_notm}} Local，可在公司防火墙后和数据中心内托管 {{site.data.keyword.Bluemix_notm}}。因此，某些方面的安全性将由您来负责。下图详细描述了哪些安全机制是客户拥有的，哪些是由 IBM 管理和维护的。
 
-![Bluemix Local 平台安全概况](images/security_local_platform.svg){: #localplatformsecurity}
+![Bluemix Local 平台安全概况](images/security_local_platform.svg) {: #localplatformsecurity}
 
 图 2. {{site.data.keyword.Bluemix_notm}} Local 平台安全概况
 
@@ -202,9 +202,9 @@ Single Sign On 服务支持多个存储用户凭证的身份源：
 
 ### 用于应用程序安全测试的 IBM UrbanCode 插件
 
-通过 IBM Application Security Testing for {{site.data.keyword.Bluemix_notm}} 插件，可以对在 {{site.data.keyword.Bluemix_notm}} 上托管的 Web 或 Android 应用程序运行安全扫描。此插件由 IBM UrbanCode™ Deploy Community 在 IBM Bluemix DevOps Services 平台上开发并提供支持。
+通过 IBM Application Security Testing for {{site.data.keyword.Bluemix_notm}} 插件，可以对在 {{site.data.keyword.Bluemix_notm}} 上托管的 Web 或 Android 应用程序运行安全扫描。此插件由 IBM UrbanCode™ Deploy Community 开发并提供支持。
 
-有关更多信息，请转至 [IBM Application Security Testing for Bluemix ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/){: new_window}。 
+有关更多信息，请转至 [IBM Application Security Testing for Bluemix ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/){: new_window}。
 
 ### dashDB
 
