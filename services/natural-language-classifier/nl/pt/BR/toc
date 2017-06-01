@@ -1,11 +1,11 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="natural-language-classifier" audience="service" href="/docs/services/natural-language-classifier/index.html"}
+{: .toc subcollection="natural-language-classifier" audience="service" href="/docs/services/natural-language-classifier/getting-started.html"}
 Classificador de língua natural
 
     {: .navgroup id="learn"}
-    index.md
+    getting-started.md
     natural-language-classifier-overview.md
     [Demo](http://natural-language-classifier-demo.mybluemix.net/)
         
