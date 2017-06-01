@@ -16,14 +16,13 @@ lastupdated: "2017-03-08"
 # Iniciación a la CLI de {{site.data.keyword.Bluemix_notm}}
 {: #getting-started}
 
-La interfaz de línea de mandatos (CLI) de {{site.data.keyword.Bluemix_notm}} ofrece un método unificado para interactuar con aplicaciones, contenedores, infraestructuras y otros servicios mediante una interfaz de línea de mandatos.  
+La interfaz de línea de mandatos (CLI) de {{site.data.keyword.Bluemix_notm}} ofrece un método unificado para interactuar con aplicaciones, contenedores, infraestructuras y otros servicios mediante una interfaz de línea de mandatos. 
 
 **Restricción**: la CLI de {{site.data.keyword.Bluemix_notm}} no se admite en Cygwin, de modo que no utilice la CLI de {{site.data.keyword.Bluemix_notm}} en la ventana de línea de mandatos de Cygwin.
 
 **Nota**: si la red contiene un servidor proxy HTTP entre el host que ejecuta la CLI y {{site.data.keyword.Bluemix_notm}}, debe especificar el nombre de host y la dirección IP del servidor proxy en la variable HTTP_PROXY.
 
-**Nota: la herramienta de la interfaz de línea de mandatos de ** {{site.data.keyword.Bluemix_notm}} empaqueta una interfaz de línea de mandatos de Cloud Foundry en su instalación. Sin embargo no se permite un uso mixto de mandatos de interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}} `bx xxx` y mandatos de interfaz de línea de mandatos de Cloud Foundry `cf xxx` si tiene su propia instalación de interfaz de línea de mandatos de cf. 
-En su lugar, utilice `bluemix cf` si desea utilizar la interfaz de línea de mandatos de cf para gestionar recursos de Cloud Foundry. Se ejecutarán en un segundo plano los mandatos de la interfaz de Cloud Foundry empaquetada en un contexto compartido con la interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}}. Es más, no se permite `bluemix cf api/login/logout/target`, en su lugar, utilice `bluemix api/login/logout/target`. 
+**Nota: la herramienta de la interfaz de línea de mandatos de ** {{site.data.keyword.Bluemix_notm}} empaqueta una interfaz de línea de mandatos de Cloud Foundry en su instalación. Sin embargo no se permite un uso mixto de mandatos de interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}} `bx xxx` y mandatos de interfaz de línea de mandatos de Cloud Foundry `cf xxx` si tiene su propia instalación de interfaz de línea de mandatos de cf. En su lugar, utilice `bluemix cf` si desea utilizar la interfaz de línea de mandatos de cf para gestionar recursos de Cloud Foundry. Se ejecutarán en un segundo plano los mandatos de la CLI de Cloud Foundry empaquetada en un contexto compartido con la interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}}.  Es más, no se permite `bluemix cf api/login/logout/target`, en su lugar, utilice `bluemix api/login/logout/target`.
 
 ## Instalación de la CLI de {{site.data.keyword.Bluemix_notm}}
 {: #install_bluemix_cli}
@@ -151,4 +150,4 @@ Para instalar desde un servidor remoto, siga estos pasos:
   ```
 
 
-Ahora estará listo para utilizar las líneas de mandatos de {{site.data.keyword.Bluemix_notm}}. Ejecute `bluemix help` para ver una lista de mandatos y sus descripciones.  
+Ahora estará listo para utilizar las líneas de mandatos de {{site.data.keyword.Bluemix_notm}}. Ejecute `bluemix help` para ver una lista de mandatos y sus descripciones. 

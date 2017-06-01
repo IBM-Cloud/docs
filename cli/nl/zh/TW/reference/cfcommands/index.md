@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2017-05-04"
 
 
 ---
@@ -393,9 +393,9 @@ cf help events
 {: #cf_login}
 
 讓您登入 {{site.data.keyword.Bluemix_notm}}。
+如果您是使用[聯合 ID](/docs/admin/account.html#signup) 登入，則必須使用單一登入 (SSO) 參數來登入。 
 
-
-**附註**：如果您是使用[聯合 ID](/docs/admin/account.html#signup) 登入，則必須使用單一登入 (SSO) 參數來登入。
+**附註**：您也可以使用「{{site.data.keyword.Bluemix_notm}} 平台」API 金鑰來登入。使用使用者名稱 `apikey` 及 API 金鑰值作為密碼。如需建立 API 金鑰的相關資訊，請參閱[管理 API 金鑰](/docs/iam/apikeys.html)。
 
 ```
 cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s space_name] [--skip-ssl-validation]
@@ -448,6 +448,12 @@ cf login -a https://api.ng.bluemix.net -u user_name
 登入 {{site.data.keyword.Bluemix_notm}}，並使用已定義端點 `https://api.ng.bluemix.net`、使用者名稱 `user_name`、不指定密碼（這是基於安全原因）、組織名稱 `org_name`，以及空間名稱 `space_name`。
 ```
 cf login -a https://api.ng.bluemix.net -u user_name -o org_name -s space_name
+```
+{: codeblock}
+
+登入 {{site.data.keyword.Bluemix_notm}}，並搭配使用已定義端點 `https://api.ng.bluemix.net` 與 API 金鑰。使用 `apikey` 作為使用者名稱，並使用實際 API 金鑰作為密碼。
+```
+cf login -a https://api.ng.bluemix.net -u apikey -p ThisValueIsYourAPIKey
 ```
 {: codeblock}
 

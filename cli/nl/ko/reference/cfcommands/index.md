@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2017-05-04"
 
 
 ---
@@ -388,9 +388,9 @@ cf help events
 ## cf login
 {: #cf_login}
 
-{{site.data.keyword.Bluemix_notm}}에 로그인됩니다. 
+{{site.data.keyword.Bluemix_notm}}에 로그인합니다. [연합 ID](/docs/admin/account.html#signup)로 로그인하는 경우에는 싱글 사인온(SSO) 매개변수를 사용해야 합니다.  
 
-**참고**: [연합 ID](/docs/admin/account.html#signup)로 로그인하는 경우 싱글 사인온(SSO) 매개변수를 사용하여 로그인해야 합니다. 
+**참고**: {{site.data.keyword.Bluemix_notm}} 플랫폼 API 키를 사용하여 로그인할 수도 있습니다. `apikey`를 사용자 이름으로, API 키 값을 비밀번호로 사용하십시오. API 키 작성에 대한 자세한 정보는 [API 키 관리](/docs/iam/apikeys.html)를 참조하십시오. 
 
 ```
 cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s space_name] [--skip-ssl-validation]
@@ -443,6 +443,12 @@ cf login -a https://api.ng.bluemix.net -u user_name
 `https://api.ng.bluemix.net`의 정의된 엔드포인트, `user_name`의 사용자 이름, 보안상의 이유로 지정되지 않은 비밀번호, `org_name`의 조직 이름 및 `space_name`의 영역 이름을 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인합니다. 
 ```
 cf login -a https://api.ng.bluemix.net -u user_name -o org_name -s space_name
+```
+{: codeblock}
+
+API 키를 사용하여 `https://api.ng.bluemix.net`의 정의된 엔드포인트로 {{site.data.keyword.Bluemix_notm}}에 로그인합니다. `apikey`를 사용자 이름으로 사용하고 실제 API 키를 비밀번호로 사용하십시오. 
+```
+cf login -a https://api.ng.bluemix.net -u apikey -p ThisValueIsYourAPIKey
 ```
 {: codeblock}
 

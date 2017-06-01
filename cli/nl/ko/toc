@@ -2,7 +2,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="bluemix-cli" audience="platform" href="/docs/cli/index.html"}
-CLI and Dev Tools
+CLI 및 개발 도구
 
 	{: .navgroup id="learn"}
 	index.md
@@ -21,8 +21,7 @@ CLI and Dev Tools
 	
 	{: .topicgroup}
 	Bluemix CLI 플러그인
-		[Active Deploy](../services/ActiveDeploy/cli.html?pos=2#ad-cli-bx)
-		plugins/auto-scaling/index.md
+	        plugins/auto-scaling/index.md
 		plugins/registry/index.md
 		[컨테이너 서비스(클러스터)](../containers/cs_cli_devtools.html)
 		[컨테이너 서비스(단일 및 확장 가능 그룹)](../containers/container_cli_cfic.html)

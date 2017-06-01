@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-04-20"
+lastupdated: "2017-05-03"
 
 ---
 
@@ -33,7 +33,8 @@ CLI によってサポートされるコマンドをリストし、名前、オ�
 <dt>エンドポイント</dt>
 <dd>このコマンドを使用する前に、<code>bluemix api</code> を介して API エンドポイントを設定する必要があります。</dd>
 <dt>ログイン</dt>
-<dd>このコマンドを使用する前に、<code>bluemix login</code> コマンドを使用してログインする必要があります。<b>フェデレーテッド ID でログインする場合は、「--sso」オプションを使用してワンタイム・パスコードで認証するか、「--apikey」を使用して API キーで認証します</b>。API キーを作成するには、{{site.data.keyword.Bluemix_notm}} コンソールの「管理」->「セキュリティー」->「Bluemix API キー (Bluemix API keys)」に移動します。</dd>
+<dd>このコマンドを使用する前に、<code>bluemix login</code> コマンドを使用してログインする必要があります。フェデレーテッド ID でログインする場合は、「--sso」オプションを使用してワンタイム・パスコードで認証するか、「--apikey」を使用して API キーで認証します。{{site.data.keyword.Bluemix_notm}} コンソールで**「管理」** &gt; **「セキュリティー」** &gt; **「Bluemix API キー」**に移動して、API キーを作成します。
+</dd>
 <dt>ターゲット</dt>
 <dd>このコマンドを使用する前に、<code>bluemix target</code> コマンドを使用して組織およびスペースを設定する必要があります。</dd>
 <dt>Docker</dt>

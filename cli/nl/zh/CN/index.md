@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-02-14"
+lastupdated: "2017-05-15"
 
 
 ---
@@ -49,9 +49,9 @@ lastupdated: "2017-02-14"
 bluemix plugin install plugin_name -r Bluemix
 ```
 
-| *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *IBM Bluemix Container Service*  |
+| *{{site.data.keyword.autoscaling}} CLI* |  *IBM Bluemix Container Service*  |
 |-----|-----|-----|
-| 插件名称：active-deploy<br> [查看文档](/docs/services/ActiveDeploy/cli.html#cli) | 插件名称：auto-scaling<br> [查看文档](/docs/cli/plugins/auto-scaling/index.html) | 插件名称：container-service<br> [查看文档](/docs/containers/cs_cli_devtools.html) |
+| 插件名称：auto-scaling<br> [查看文档](/docs/cli/plugins/auto-scaling/index.html) |  插件名称：container-service<br> [查看文档](/docs/containers/cs_cli_devtools.html) |
 {: caption="表 2. 插件" caption-side="top"}
 
 |  *专用网络对等连接* | *VPN*  |
@@ -91,9 +91,9 @@ bluemix cf install-plugin plugin_name -r bluemix-cf-repo
 ```
 {: codeblock}
 
-| *Active Deploy* | *管理控制台* |
-|-----------------|-----------------|
-| 插件名称：active-deploy<br>  [查看文档](/docs/services/ActiveDeploy/cli.html#cli) |  插件名称：bluemix-admin<br> [查看文档](/docs/cli/plugins/bluemix_admin/index.html) |
+| *管理控制台* |
+-----------------|
+|  插件名称：bluemix-admin<br> [查看文档](/docs/cli/plugins/bluemix_admin/index.html) |
 {: caption="表 4. 插件" caption-side="top"}
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *VPN* |
@@ -106,7 +106,7 @@ bluemix cf install-plugin plugin_name -r bluemix-cf-repo
 
 下载并安装插件，以集成首选的 {{site.data.keyword.Bluemix_notm}} 服务。
 
-| *{{site.data.keyword.jazzhub_short}}* | *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *API Connect* | *Eclipse Tools for Bluemix* |
-|-------------|----------|----------|----------|----------|----------|
-| [Egit Eclipse 插件 ![外部链接图标](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_egit){: new_window} <br> [RTC Eclipse 插件 ![外部链接图标](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_rtc){: new_window} | [Liberty Eclipse 插件 ![外部链接图标](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse 插件 ![外部链接图标](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse 插件](../services/rules/index.html#rulov002) | [开发者工具箱 ![外部链接图标](../icons/launch-glyph.svg)](https://nextstage.torolab.ibm.com/apimanagement/getting-started/ ){: new_window} | [Bluemix Eclipse 插件](/docs/manageapps/eclipsetools/eclipsetools.html) |
+| *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *API Connect* | *Eclipse Tools for Bluemix* |
+|----------|----------|----------|----------|----------|
+| [Liberty Eclipse 插件 ![外部链接图标](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse 插件 ![外部链接图标](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse 插件](../services/rules/index.html#rulov002) | [开发者工具箱](/docs/services/apiconnect/apic_003.html#apic_001 ) | [Bluemix Eclipse 插件](/docs/manageapps/eclipsetools/eclipsetools.html) |
 {: caption="表 6. 插件" caption-side="top"}
