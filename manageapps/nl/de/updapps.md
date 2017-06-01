@@ -34,15 +34,15 @@ Sie können eine angepasste Domäne in {{site.data.keyword.Bluemix_notm}} erstel
 
 	1. Wechseln Sie zu **Verwalten** &gt; **Konto** &gt; **Organisationen** &gt; **Details anzeigen** für Ihre Organisation. Klicken Sie anschließend auf **Organisation bearbeiten** &gt; **Domänen**.
 
-	2. Klicken Sie auf der Registerkarte **Domänen** auf **Domäne hinzufügen**, geben Sie den Namen Ihrer angepassten Domäne ein und klicken Sie auf **Speichern**. 
+	2. Klicken Sie auf der Registerkarte **Domänen** auf **Domäne hinzufügen**, geben Sie den Namen Ihrer angepassten Domäne ein und klicken Sie auf **Speichern**.
 
 	**Hinweis:** Sie können beispielsweise `mycompany.com` verwenden, um Ihrer App die Route `www.mycompany.com` zuzuordnen. Sie können auch `example.mycompany.com` verwenden, um Ihrer App die Route `www.example.mycompany.com` zuzuordnen.
 
-  2. Fügen Sie die Route mit der angepassten Domäne einer Anwendung hinzu. 
+  2. Fügen Sie die Route mit der angepassten Domäne einer Anwendung hinzu.
 
     1. Klicken Sie auf das Symbol **Menü** ![Menüsymbol](../icons/icon_hamburger.svg) &gt; **Dashboard**. Klicken Sie dann auf die Zeile für die Anwendung, der Sie die Route hinzufügen möchten. Die Seite **Übersicht** wird angezeigt.
 
-	2. Wählen Sie im Menü **Routen** die Option **Routen bearbeiten** aus. 
+	2. Wählen Sie im Menü **Routen** die Option **Routen bearbeiten** aus.
 
 	3. Klicken Sie auf **Route hinzufügen**. Geben Sie die Route an, die Sie für die Anwendung verwenden möchten.
 	4. Klicken Sie auf **Speichern**.

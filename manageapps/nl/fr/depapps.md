@@ -372,7 +372,7 @@ Les variables suivantes sont définies par Diego :
   <dt><strong>MEMORY_LIMIT</strong></dt>
   <dd>Quantité de mémoire maximale que chaque instance de votre application peut utiliser. Vous pouvez spécifier la valeur dans un fichier <span class="ph filepath">manifest.yml</span> d'application ou sur la ligne de commande lorsque vous envoyez l'application par commande push.</dd>
   <dt><strong>PORT</strong></dt>
-  <dd>Port sur Diego pour communication avec l'application. Diego affecte un port à l'application en phase de constitution. </dd>
+  <dd>Port sur Diego pour communication avec l'application. Diego affecte un port à l'application en phase de constitution.</dd>
   <dt><strong>PWD</strong></dt>
   <dd>Répertoire de travail en cours dans lequel le pack de construction s'exécute.</dd>
   <dt><strong>TMPDIR</strong></dt>
@@ -457,9 +457,9 @@ Les variables définies par les packs de construction sont différentes pour cha
 	  <dt><strong>IBM_JAVA_OPTIONS</strong></dt>
 	  <dd>Options du logiciel SDK Java à utiliser lors de l'exécution de l'application.</dd>
 	  <dt><strong>IBM_JAVA_COMMAND_LINE</strong></dt>
-	  <dd>Commande Java permettant de démarrer une instance de serveur de profil Liberty dans Diego. </dd>
+	  <dd>Commande Java permettant de démarrer une instance de serveur de profil Liberty dans Diego.</dd>
 	  <dt><strong>WLP_USR_DIR</strong></dt>
-	  <dd>Emplacement des ressources partagées et des définitions de serveur lors du démarrage d'une instance de serveur de profil Liberty dans Diego. </dd>
+	  <dd>Emplacement des ressources partagées et des définitions de serveur lors du démarrage d'une instance de serveur de profil Liberty dans Diego.</dd>
 	  <dt><strong>WLP_OUTPUT_DIR</strong></dt>
 	  <dd>Emplacement de la sortie générée, par exemple des fichiers journaux et du répertoire de travail d'une instance de serveur de profil Liberty en cours d'exécution.</dd>
 	  </dl>
