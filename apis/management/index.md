@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-04-12"
+lastupdated: "2017-05-22"
 
 ---
 
@@ -16,11 +16,16 @@ lastupdated: "2017-04-12"
 # Overview
 {: #index}
 
-You can manage APIs natively in {{site.data.keyword.Bluemix}} whether they're associated with an {{site.data.keyword.openwhisk_short}} action or a growing list of integrated {{site.data.keyword.Bluemix_notm}} services such as the {{site.data.keyword.appconserviceshort}} service. Managing your APIs allows you to control usage, increase adoption and track statistics.
+You can manage APIs natively in {{site.data.keyword.Bluemix}} whether they're associated with any Cloud Foundry runtime, an {{site.data.keyword.openwhisk_short}} action, or a growing list of integrated {{site.data.keyword.Bluemix_notm}} services such as the {{site.data.keyword.appconserviceshort}} service. Managing your APIs allows you to control usage, increase adoption and track statistics.
+
+API management is integrated into the following {{site.data.keyword.Bluemix_notm}} services:
+* Cloud Foundry applications 
+* IBM App Connect
+* OpenWhisk action APIs
 
 As displayed in the following diagram, API management works by inserting a fast and lightweight gateway in front of existing cloud endpoints. The gateway, referred to as the API Gateway in the diagram, is responsible for responding to incoming API calls from applications. The API Gateway provides a comprehensive set of API policies for security, traffic management, mediation, acceleration, and non-HTTP protocol support.
 
-![API Gateway flow.](images/bluemix-native-apim-flow_ow.png "API management flow.")
+![API Gateway flow.](images/bluemix-native-apim-flow.png "API management flow.")
 
 When you expose an API, you make it available for other people to use it. This often means giving the users of the API limited access to information that is on servers that you maintain. This access allows a more seamless customer experience for the end user because they can access the information directly from the current interface.
 
@@ -36,6 +41,8 @@ You can view the following statistics about your APIs:
 * The number of responses and average response time in the last hour, or your specified time interval.
 * The number of API calls per minute.
 * The last 100 responses.
+
+API management uses the {{site.data.keyword.Bluemix_notm}} logging and metrics services to store and display information that is generated during API invocations. Only a subset of the data that is available is presented in the API management console for debugging purposes. To view additional data and log information, see [Kibana logs ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://logmet.ng.bluemix.net/app/#/kibana){: new_window}. You must be logged in to your {{site.data.keyword.Bluemix_notm}} account for the link to resolve correctly to your account. For more information about the {{site.data.keyword.Bluemix_notm}} logging services, see [Monitoring and logging](../../monitor_log/monitoringandlogging.html#monitoringandlogging){: new_window}.
 
 ## Rate limiting by subscription (API key)
 {: #rate_limit notoc}
@@ -55,7 +62,7 @@ CORS allows embedded scripts in a web page to call the API across domain boundar
 ## Additional API management options
 {: #add_mgt_options notoc}
 
-These features for API management are available in the API Management tab of your {{site.data.keyword.openwhisk_short}} or App Connect Dashboard. For more complex management solutions, you can upgrade to the full {{site.data.keyword.apiconnect_full}} service to access more features such as detailed analytics, packaging strategies for your APIs, or a developer portal to socialize APIs. See [Getting started with API Connect](https://console.ng.bluemix.net/docs/services/apiconnect/index.html){: new_window} for more information about the {{site.data.keyword.apiconnect_full}} service.
+These features for API management are available in the API Management tab of your Cloud Foundry, {{site.data.keyword.openwhisk_short}}, or App Connect Dashboard. For more complex management solutions, you can upgrade to the full {{site.data.keyword.apiconnect_full}} service to access more features such as detailed analytics, packaging strategies for your APIs, or a developer portal to socialize APIs. See [Getting started with API Connect](https://console.ng.bluemix.net/docs/services/apiconnect/index.html){: new_window} for more information about the {{site.data.keyword.apiconnect_full}} service.
 
 For more information about upgrading your APIs that you are managing in {{site.data.keyword.Bluemix_notm}} to the {{site.data.keyword.apiconnect_short}} service, see [Accessing more API management features](upgrade.html).
 

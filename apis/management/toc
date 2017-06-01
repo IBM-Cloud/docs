@@ -17,6 +17,7 @@ API management
 
     {: .navgroup id="howto"}
     manage_openwhisk_apis.md
+	manage_cf_apis.md
     manage_apis.md
     managed_apis.md
     {: .navgroup-end}

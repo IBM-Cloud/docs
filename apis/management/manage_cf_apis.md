@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-05-17"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Enabling API managed endpoints
+# Enable API managed endpoints
 {: #manage_cf_apis}
 
 In microservice architecture, Cloud Foundry applications are often deployed to make up the system. Most of these apps will have some sort of API that should be managed.
