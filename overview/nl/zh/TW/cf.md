@@ -20,7 +20,7 @@ lastupdated: "2017-03-20"
 
 每一個執行環境（包括行動及 Web）都與其他應用程式的執行環境相隔離。即使這些應用程式位在相同的實體機器上，也一樣會隔離執行環境。下圖顯示 {{site.data.keyword.Bluemix_notm}} Cloud Foundry 如何管理應用程式部署的基本流程：
 
-![部署應用程式](images/deploy.png)
+![部署應用程式](images/deploy-diego.png)
 
 圖 3. 部署應用程式
 
@@ -33,7 +33,7 @@ lastupdated: "2017-03-20"
 
 下圖顯示已部署多個應用程式的虛擬伺服器結構（也稱為 Droplet Execution Agent，DEA）：
 
-![虛擬伺服器的設計](images/container.png)
+![虛擬伺服器的設計](images/container-diego.png)
 
 圖 4. 虛擬伺服器的設計
 
@@ -41,7 +41,7 @@ lastupdated: "2017-03-20"
 
 部署應用程式時，如果該應用程式具有 Web 介面（例如，Java Web 應用程式）或其他 REST 型服務（例如，向行動應用程式公開的行動服務），則應用程式的使用者就可利用正常的 HTTP 要求與其進行通訊。
 
-![呼叫 {{site.data.keyword.Bluemix_notm}} 應用程式](images/execute.png)
+![呼叫 {{site.data.keyword.Bluemix_notm}} 應用程式](images/execute-diego.png)
 
 圖 5. 呼叫 {{site.data.keyword.Bluemix_notm}} 應用程式
 
@@ -61,7 +61,7 @@ lastupdated: "2017-03-20"
 
 下圖顯示高階 {{site.data.keyword.Bluemix_notm}} Cloud Foundry 架構。
 
-![{{site.data.keyword.Bluemix_notm}} 架構](images/arch.png)
+![{{site.data.keyword.Bluemix_notm}} 架構](images/arch-diego.png)
 
 圖 1. {{site.data.keyword.Bluemix_notm}} Cloud Foundry 架構
 

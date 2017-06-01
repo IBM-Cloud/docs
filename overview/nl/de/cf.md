@@ -21,7 +21,7 @@ Wenn Sie auf {{site.data.keyword.Bluemix_notm}} Cloud Foundry eine App bereitste
 Beide Ausführungsumgebungen, die für die mobile App
 wie auch die für die Web-App, sind von den Ausführungsumgebungen anderer Apps isoliert. Die Ausführungsumgebungen werden isoliert, obwohl sich diese Apps auf derselben physischen Maschine befinden. Die folgende Abbildung stellt die grundlegenden Abläufe für die Verwaltung der App-Bereitstellung durch {{site.data.keyword.Bluemix_notm}} Cloud Foundry dar:
 
-![App bereitstellen](images/deploy.png)
+![App bereitstellen](images/deploy-diego.png)
 
 Abbildung 3. App bereitstellen
 
@@ -34,7 +34,7 @@ Nachdem ein virtueller Server ausgewählt wurde, installiert ein Anwendungsmanag
 
 Die folgende Abbildung zeigt die Struktur eines virtuellen Servers, auch als Droplet Execution Agent (DEA) bezeichnet, auf dem mehrere Apps bereitgestellt wurden:
 
-![Struktur eines virtuellen Servers](images/container.png)
+![Struktur eines virtuellen Servers](images/container-diego.png)
 
 Abbildung 4. Struktur eines virtuellen Servers
 
@@ -45,7 +45,7 @@ App bereitgestellt wurde und über eine Webschnittstelle (wie für eine Java-Web
 oder andere REST-basierte Services (z. B. mobile Services, die für die mobile App öffentlich zugänglich sind)
 verfügt, können Benutzer der App durch normale HTTP-Anforderungen mit ihr kommunizieren.
 
-![Eine {{site.data.keyword.Bluemix_notm}}-App aufrufen](images/execute.png)
+![Eine {{site.data.keyword.Bluemix_notm}}-App aufrufen](images/execute-diego.png)
 
 Abbildung 5. Eine {{site.data.keyword.Bluemix_notm}}-App aufrufen
 
@@ -73,7 +73,7 @@ App-Instanzen oder an die zusammengesetzten Services weiter.
 
 In der folgenden Abbildung ist die allgemeine {{site.data.keyword.Bluemix_notm}} Cloud Foundry-Architektur dargestellt.
 
-![{{site.data.keyword.Bluemix_notm}}-Architektur](images/arch.png)
+![{{site.data.keyword.Bluemix_notm}}-Architektur](images/arch-diego.png)
 
 Abbildung 1. {{site.data.keyword.Bluemix_notm}} Cloud Foundry-Architektur
 

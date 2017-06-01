@@ -24,7 +24,7 @@ o ambiente da web, é isolado do ambiente de execução de outros apps. Os ambie
 na mesma máquina física. A figura a seguir mostra o fluxo básico de como o {{site.data.keyword.Bluemix_notm}} Cloud Foundry gerencia a implementação de apps:
 
 ![Implementando um
-app](images/deploy.png)
+app](images/deploy-diego.png)
 
 Figura 3. Implementando um app
 
@@ -38,7 +38,7 @@ Após um servidor virtual ser escolhido, um gerente de aplicativos em cada servi
 
 A figura a seguir mostra a estrutura de um servidor virtual, também conhecida como Droplet Execution Agent (DEA), que possui vários apps implementados nele:
 
-![Design de um servidor virtual](images/container.png)
+![Design de um servidor virtual](images/container-diego.png)
 
 Figura 4. Design de um servidor virtual
 
@@ -49,7 +49,7 @@ Quando o app for implementado, se ele tiver uma interface da web
 (como um app da web Java) ou outros serviços baseados em REST (como
 serviços móveis expostos publicamente para o app móvel), os usuários do app poderão se comunicar com ele usando solicitações normais de HTTP.
 
-![Chamando um app do {{site.data.keyword.Bluemix_notm}}](images/execute.png)
+![Chamando um app {{site.data.keyword.Bluemix_notm}}](images/execute-diego.png)
 
 Figura 5. Chamando um app do {{site.data.keyword.Bluemix_notm}}
 
@@ -75,8 +75,7 @@ uma das instâncias do app ou para os serviços compostos.
 
 A figura a seguir mostra a arquitetura de alto nível do {{site.data.keyword.Bluemix_notm}} Cloud Foundry.
 
-![Arquitetura
-do {{site.data.keyword.Bluemix_notm}}](images/arch.png)
+![Arquitetura do {{site.data.keyword.Bluemix_notm}}](images/arch-diego.png)
 
 Figura 1. Arquitetura do {{site.data.keyword.Bluemix_notm}} Cloud Foundry
 

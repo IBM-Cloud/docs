@@ -18,7 +18,7 @@ Bluemix 是什么
     {: .navgroup-end}
     
     {: .navgroup id="reference"}
-    [声明和使用条款](../navigation/notices.html)
+    ../navigation/
     glossary/index.md
-    [新增功能](../whatsnew/index.html)
+    ../whatsnew/
     {: .navgroup-end}
