@@ -62,7 +62,7 @@ app.listen(8080, function() {
 
 When the app is deployed, log collection is automatically enabled for any log entries that are sent by the app to stdout (standard output) and stderr (standard error). 
 
-In this sample app, when you test your app in a browser, the app writes to stdout the following message: ```Sample app is listening on port 8080.```
+In this sample app, when you test your app in a browser, the app writes to stdout the following message: `Sample app is listening on port 8080.`
 
 
 ## Step 3: Analyze log data in Kibana
