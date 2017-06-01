@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-03-07"
+lastupdated: "2017-05-03"
 
 
 ---
@@ -102,7 +102,7 @@ Java™ 和所有基于 Java 的商标和徽标是 Oracle 和/或其分公司的
 
 其他公司、产品和服务名称可能是其他公司的商标或服务标记。
 
-## {{site.data.keyword.Bluemix_notm}} 条款
+## 云服务条款
 {: #terms}
 
 使用 {{site.data.keyword.Bluemix_notm}} 受“IBM Cloud Services 协议”(CSA) 的约束，除非您已选择根据现有“Passport Advantage 国际协议”(IPAA) 订购 {{site.data.keyword.Bluemix_notm}}。该协议通过引用包含了所有关联的“服务描述”和“使用条款”文档。您对 {{site.data.keyword.Bluemix_notm}} 的订购和持续使用表明您接受本文档中规定或引用的过程、条款和条件。

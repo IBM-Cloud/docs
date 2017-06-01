@@ -1,0 +1,9 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc}
+주의사항 및 이용 약관
+  
+    {: .navgroup id="reference"}
+    notices.md
+    {: .navgroup-end}

@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-03-07"
+lastupdated: "2017-05-03"
 
 
 ---
@@ -18,7 +18,6 @@ lastupdated: "2017-03-07"
 # 주의사항
 
 이 정보는 미국에서 제공되는 제품 및 서비스용으로 작성된 것입니다. 본 자료는 다른 언어로도 제공될 수 있습니다. 그러나 자료에 접근하기 위해서는 해당 언어로 된 제품 또는 제품 버전의 사본이 필요할 수 있습니다.
-
 {:shortdesc}
 
 IBM은 다른 국가에서 이 책에 기술된 제품, 서비스 또는 기능을 제공하지 않을 수도
@@ -102,7 +101,8 @@ IBM의 향후 제시 방향 또는 의도에 관한 언급은 특별한 통지 �
 
 이러한 샘플 프로그램 또는 파생 제품의 각 사본이나 그 일부에는 반드시 다음과 같은 저작권 표시가 포함되어야 합니다. 
   
-  © (귀하의 회사명) (연도). Portions of this code are derived from IBM Corp. Sample Programs. 
+  © (귀하의 회사명) (연도).
+  이 코드의 일부는 IBM Corp.의 샘플 프로그램에서 파생됩니다.
   © Copyright IBM Corp. 2015.
 
 ## 상표
@@ -122,7 +122,7 @@ Linux는 미국 또는 기타 국가에서 사용되는 Linus Torvalds의 등록
 
 Microsoft, Windows 및 Windows NT는 미국 또는 기타 국가에서 사용되는 Microsoft Corporation의 상표입니다. 
 
-Node.js는 미국 또는 기타 국가에서 사용되는 Joyent, Inc의 상표입니다. 이 문서는 Joyent가 공식으로 보증하거나 Joyent와 연계되지 않습니다.
+Node.js는 Joyent, Inc.의 상표이며 해당 권한으로 사용됩니다. 이 문서는 공식적으로 Joyent에서 보증하거나 이와 연계되지 않았습니다.
 
 UNIX는 미국 및 기타 국가에서 사용되는 The Open Group의 등록상표입니다. 
 
@@ -130,7 +130,7 @@ Java™ 및 모든 Java 기반 상표와 로고는 Oracle 및/또는 그 계열�
 
 기타 회사, 제품 및 서비스 이름은 타사의 상표 또는 서비스표입니다. 
 
-## {{site.data.keyword.Bluemix_notm}} 이용 약관
+## 클라우드 서비스 이용 약관
 {: #terms}
 
 기존의 국제 Passport Advantage(IPAA) 계약 하에서 {{site.data.keyword.Bluemix_notm}}의 주문을 선택하지 않는 한, {{site.data.keyword.Bluemix_notm}}의 사용은 IBM 클라우드 서비스 계약(CSA)의 이용 약관의 규정을 따릅니다. 본 계약은 모든 연관된 서비스 설명 및
