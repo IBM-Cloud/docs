@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-01-11"
+lastupdated: "2017-05-03"
 
 ---
 
@@ -73,7 +73,7 @@ lastupdated: "2017-01-11"
 |IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.dashdbshort}} Enterprise for Transactions High Availability 12.128.1400 | 128GB RAM과 데이터 및 로그를 위한 1.4TB SSD 스토리지로 OLTP(Online Transaction Processing) 워크로드를 지원하는 데디케이티드 인스턴스이며 여기에는 고가용성을 위한 추가 대기 서버가 포함됩니다. |
 |{{site.data.keyword.Bluemix_dedicated_notm}} 커뮤니티 서비스  | 각 커뮤니티 서비스마다 총 50개 인스턴스까지 커뮤니티 서비스의 배치 및 실행을 허용하는 환경입니다.  |
 |{{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.cloudant}} 클러스터 인스턴스 | 이 선택적 컴포넌트에는 사용자가 인프라 제공을 담당하는 3노드 클러스터가 포함되며 스토리지 및 컴퓨팅 용량은 사용자의 특정 요구에 맞게 결정될 수 있습니다. {{site.data.keyword.cloudant}}에서는 항상 작동 상태인 완전히 관리되는 NoSQL JSON 데이터 계층에 대한 액세스를 제공합니다. 이 서비스는 CouchDB와 호환 가능하며, 모바일 및 웹 애플리케이션 모델을 위한 사용이 간편한 HTTP 인터페이스를 통해 액세스할 수 있습니다. |
-|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.messagehub}} | 파티션당 최대 10GB의 공개 및 구독 메시징을 제공하는 환경입니다. 메시지는 최대 24시간 동안 보관되어 이용할 수 있습니다. |
+|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.messagehub}} | 파티션(100개 파티션으로 제함됨)당 최대 10GB의 발행/구독 메시징을 제공하는 환경입니다.   |
 |IBM Bluemix 데디케이티드 {{site.data.keyword.mobilepushshort}} | 초당 300개의 요청을 승인하는 기능으로 {{site.data.keyword.mobilepushshort}} 인스턴스의 배치 및 실행을 허용하는 환경입니다. |
 |{{site.data.keyword.iot_short}} 데디케이티드 증분 증가 | 0.5TB의 데이터 교환과 100,000개의 동시 연결된 디바이스 또는 애플리케이션의 용량을 지닌 데디케이티드 환경 내에서 {{site.data.keyword.iot_short}}의 개인용 버전 실행을 허용하는 환경 증가입니다. |
 |IBM {{site.data.keyword.appserver_short}} for {{site.data.keyword.Bluemix_notm}} - 데디케이티드 소형| 매월 64개 vCore, 128GB RAM 및 1TB HDD가 제공되는 {{site.data.keyword.Bluemix_notm}}의 호스팅 클라우드 환경에 사전 구성된 {{site.data.keyword.appserver_short}} Liberty, 기존 네트워크 배치 또는 기존 WebSphere Java EE 인스턴스.  |

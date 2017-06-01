@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-01-11"
+lastupdated: "2017-05-03"
 
 ---
 
@@ -73,7 +73,7 @@ lastupdated: "2017-01-11"
 |IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.dashdbshort}} Enterprise for Transactions High Availability 12.128.1400 | データおよびログ用に 128 GB RAM および 1.4 TB SSD ストレージを備えた、オンライン・トランザクション処理 (OLTP) ワークロードをサポートする専用インスタンスであり、高可用性のための追加スタンバイ・サーバーを含みます。 |
 |{{site.data.keyword.Bluemix_dedicated_notm}} コミュニティー・サービス  | コミュニティー・サービスごとに、最大合計 50 インスタンスまでコミュニティー・サービスをデプロイして実行できる環境。  |
 |{{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.cloudant}} クラスター・インスタンス | このオプションのコンポーネントには、お客様がインフラストラクチャーの提供を担当する 3 ノードのクラスターが含まれ、特定のニーズに基づいて、ストレージおよび計算キャパシティーを決定できます。{{site.data.keyword.cloudant}} は、常に稼働している完全管理 NoSQL JSON データ層へのアクセスを提供します。このサービスは CouchDB と互換性があり、モバイル・アプリケーション・モデルおよび Web アプリケーション・モデル用の、簡単に使用できる HTTP インターフェースでアクセスできます。 |
-|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.messagehub}} | 1 区画当たり最大 10 GB のパブリッシュおよびサブスクライブ・メッセージングを提供する環境。メッセージは最大 24 時間保持され、消費用に使用可能です。 |
+|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.messagehub}} | 100 区画を限度に、1 区画当たり最大 10 GB のパブリッシュ/サブスクライブ・メッセージングを提供する環境。 |
 |IBM Bluemix Dedicated {{site.data.keyword.mobilepushshort}} | 1 秒当たり 300 個の要求を受け入れる能力を持つ {{site.data.keyword.mobilepushshort}} インスタンスをデプロイして実行できる環境。 |
 |{{site.data.keyword.iot_short}} Dedicated の増分式の拡張 | 環境の拡張。拡張される環境では、100,000 個の同時接続されたデバイスまたはアプリケーションと 0.5 TB のデータ交換の容量を備えた専用環境内で {{site.data.keyword.iot_short}} の専用バージョンを実行できます。 |
 |IBM {{site.data.keyword.appserver_short}} for {{site.data.keyword.Bluemix_notm}} - Dedicated Small| 月当たり 64 vCore、128 GB RAM、および 1 TB HDD を使用できる、{{site.data.keyword.Bluemix_notm}} 上でホストされたクラウド環境内の事前定義された {{site.data.keyword.appserver_short}} Liberty、Traditional Network Deployment、または Traditional WebSphere Java EE インスタンス。 |
