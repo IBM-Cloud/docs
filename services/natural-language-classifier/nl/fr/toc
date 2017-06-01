@@ -1,0 +1,48 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="natural-language-classifier" audience="service" href="/docs/services/natural-language-classifier/index.html"}
+Natural Language Classifier
+
+    {: .navgroup id="learn"}
+    index.md
+    natural-language-classifier-overview.md
+    [Démo](http://natural-language-classifier-demo.mybluemix.net/)
+        
+    {: .topicgroup}
+    Ressources supplémentaires
+        [Blogue](https://developer.ibm.com/watson/blog/)
+        [Webinars](http://www.ibm.com/watson/building-with-watson-webinar.html)
+        [Vidéos](https://www.youtube.com/user/IBMWatsonSolutions)
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    using-your-data.md
+    tool-overview.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [Guide de référence de l'API](http://www.ibm.com/watson/developercloud/natural-language-classifier/api/v1/)
+
+    {: .topicgroup}
+    Watson SDKs
+        [SDK Android](https://github.com/watson-developer-cloud/android-sdk)
+        [SDK Apple iOS](https://github.com/watson-developer-cloud/ios-sdk)
+        [SDK Java](https://github.com/watson-developer-cloud/java-sdk)
+        [SDK Node.js](https://github.com/watson-developer-cloud/node-sdk)
+        [SDK Python](https://github.com/watson-developer-cloud/python-sdk)
+        [SDK Unity](https://github.com/watson-developer-cloud/unity-sdk)
+
+    [Référentiel Watson GitHub](https://github.com/watson-developer-cloud/)
+    [Kits de démarrage](https://www.ibm.com/watson/developercloud/starter-kits.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    release-notes.md
+    
+    {: .topicgroup}
+    Communauté des développeurs
+        [StackOverflow](http://stackoverflow.com/questions/tagged/nl-classifier)
+        [developerWorks Answers](https://developer.ibm.com/answers/topics/natural-language-classifier.html)
+        [WDC Slack channel](http://wdc-slack-inviter.mybluemix.net/)
+    {: .navgroup-end}

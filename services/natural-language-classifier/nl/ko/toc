@@ -1,0 +1,48 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="natural-language-classifier" audience="service" href="/docs/services/natural-language-classifier/index.html"}
+Natural Language Classifier
+
+    {: .navgroup id="learn"}
+    index.md
+    natural-language-classifier-overview.md
+    [데모](http://natural-language-classifier-demo.mybluemix.net/)
+        
+    {: .topicgroup}
+    추가 리소스
+        [블로그](https://developer.ibm.com/watson/blog/)
+        [웹 세미나](http://www.ibm.com/watson/building-with-watson-webinar.html)
+        [동영상](https://www.youtube.com/user/IBMWatsonSolutions)
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    using-your-data.md
+    tool-overview.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [API 참조](http://www.ibm.com/watson/developercloud/natural-language-classifier/api/v1/)
+
+    {: .topicgroup}
+    Watson SDK
+        [Android SDK](https://github.com/watson-developer-cloud/android-sdk)
+        [Apple iOS SDK](https://github.com/watson-developer-cloud/ios-sdk)
+        [Java SDK](https://github.com/watson-developer-cloud/java-sdk)
+        [Node.js SDK](https://github.com/watson-developer-cloud/node-sdk)
+        [Python SDK](https://github.com/watson-developer-cloud/python-sdk)
+        [Unity SDK](https://github.com/watson-developer-cloud/unity-sdk)
+
+    [Watson GitHub 저장소](https://github.com/watson-developer-cloud/)
+    [스타터 킷](https://www.ibm.com/watson/developercloud/starter-kits.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    release-notes.md
+    
+    {: .topicgroup}
+    개발자 커뮤니티
+        [StackOverflow](http://stackoverflow.com/questions/tagged/nl-classifier)
+        [developerWorks Answers](https://developer.ibm.com/answers/topics/natural-language-classifier.html)
+        [WDC Slack 채널](http://wdc-slack-inviter.mybluemix.net/)
+    {: .navgroup-end}
