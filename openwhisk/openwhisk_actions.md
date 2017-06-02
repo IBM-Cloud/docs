@@ -354,7 +354,8 @@ JavaScript functions that run asynchronously may need to return the activation r
  ```json
   {
       "start": 1455881628103,
-      "end":   1455881648126
+      "end":   1455881648126,
+      ...
   }
   ```
 
@@ -730,7 +731,7 @@ docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
   echo '_run_main(mainFunction:main)' >> /swift3Action/spm-build/main.swift
   ```
   {: pre}
-- zBuild and link
+- Build and link
   ```
   /swift3Action/spm-build/swiftbuildandlink.sh
   ```
