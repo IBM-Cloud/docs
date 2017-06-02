@@ -11,7 +11,7 @@ lastupdated: "2017-03-23"
 {:codeblock: .codeblock}
 
 
-# Offline mode for Liberty
+# Use the offline mode for Liberty
 {: #offline_mode}
 
 When a Liberty application is pushed to {{site.data.keyword.Bluemix}} the Liberty buildpack can access sites external to Bluemix

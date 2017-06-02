@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-23"
+lastupdated: "2017-05-18"
 
 ---
 
@@ -11,7 +11,7 @@ lastupdated: "2017-03-23"
 {:codeblock: .codeblock}
 
 
-# SDK for Nodejs
+# SDK for Node.js
 {: #nodejs_runtime}
 
 The Node.js runtime on {{site.data.keyword.Bluemix}} is powered by the sdk-for-nodejs buildpack.

@@ -10,13 +10,25 @@ ASP.NET Core
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    [Using the starter applications](../../cfapps/starter_app_usage.html)
-    [Working with a proxy](../../manageapps/workingWithProxy.html)
-    [Using community buildpacks](../../cfapps/byob.html)
+    disablingNuGet.md
+    compile_pub_deploy.md
+    [Work with a proxy](../../manageapps/workingWithProxy.html)
     {: .navgroup-end}
 
+    {: .navgroup id="reference"}
+    configurationOptions.md
+    usingCustomLib.md
+    usingNuGet.md
+    
+    {: .topicgroup}
+    Starter applications and community buildpacks
+        [Use the starter applications](../../cfapps/starter_app_usage.html)
+        [Use community buildpacks](../../cfapps/byob.html)
+    {: .navgroup-end}
 
     {: .navgroup id="help"}
+    ts_index.md
     updates.md
+    runtimeVersions.md
     [Buildpack support statement](../../manageapps/buildpackSupport.html)
     {: .navgroup-end}
