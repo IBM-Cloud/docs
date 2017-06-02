@@ -2,14 +2,14 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-02-07"
+lastupdated: "2017-05-31"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Using Oracle JRE
+# Use Oracle JRE
 {: #using_oraacle_jre}
 
 You can run your Liberty application on Bluemix with the Oracle JRE if you choose to.  To do so you must
@@ -22,7 +22,7 @@ You can run your Liberty application on Bluemix with the Oracle JRE if you choos
 
 The Oracle JRE file must be hosted on a web server, and the Liberty buildpack must be able to download it from that server. You can host it on Bluemix itself using any of the available server facilities, or you can host it on some publicly available location.  The server must be configured with an `index.yml` file that specifies details about the JRE file. Complete the following steps to host the JRE and the `index.yml` file:
   1. Acquire the Oracle JRE.  Note that the JRE must be the version for use on a Unix 64 bit OS, and must be a `tar.gz` file.
-  2. Host the JRE file in a location from which the Liberty buildpack can download it. 
+  2. Host the JRE file in a location from which the Liberty buildpack can download it.
   3. Ensure that you provide a `index.yml` file at the hosting location. The `index.yml` file must contain an entry consisting of the version ID of the Oracle JRE followed by a colon and the complete URL of the location of that JRE file. The format of the `index.yml` is:
 ```
    ---

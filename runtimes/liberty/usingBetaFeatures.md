@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-07"
+lastupdated: "2017-05-31"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Using the beta features
+# Use the beta features
 {: #using_beta_features}
 
 The Liberty beta features provide early access to new functionality and programming models that might be included in a future Liberty release. Most of the beta features can also be used in applications deployed to Bluemix.

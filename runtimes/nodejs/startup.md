@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-23"
+lastupdated: "2017-05-30"
 
 ---
 
@@ -11,19 +11,19 @@ lastupdated: "2017-03-23"
 {:codeblock: .codeblock}
 
 
-# Startup command
+# Use the startup command
 {: #startup_commmand}
 
-The recommended ways to specify a start command for your Bluemix Node.js application are to use either a **Procfile** or a **package.json** file.
+The recommended ways to specify a start command for your {{site.data.keyword.Bluemix}} Node.js application are to use either a **Procfile** or a **package.json** file.
 {: shortdesc}
 
-Specify a startup command in your **Procfile** in the form that follows. Here, app.js is the startup js script for your application.
+1. Specify a startup command in your **Procfile** in the form that follows. Here, _app.js_ is the startup js script for your application.
 ```
 web: node app.js
 ```
 {: codeblock}
 
-Save the **Procfile** in the root directory of your application.
+1. Save the **Procfile** in the root directory of your application.
 
 If a **Procfile** is not present, the IBM Bluemix Node.js buildpack checks for a scripts.start entry in the **package.json** file. Again in the example below, app.js is the startup js script for your application.
 ```

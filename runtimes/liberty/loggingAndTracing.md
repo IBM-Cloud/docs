@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-26"
+lastupdated: "2017-05-31"
 
 ---
 
@@ -10,7 +10,7 @@ lastupdated: "2017-03-26"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Logging and tracing
+# Configure logging and tracing
 {: #logging_tracing}
 
 ## Log files
@@ -48,17 +48,17 @@ The Liberty tracing configuration can be adjusted for a running application dire
 
 ### Changing trace configuration via SSH in Diego
 
-For a Liberty application running in a Diego cell, you can change the tracing configuration via the Cloud Foundy CLI using the SSH feature. 
+For a Liberty application running in a Diego cell, you can change the tracing configuration via the Cloud Foundy CLI using the SSH feature.
 
-The pushed application must include a server.xml which contains **updateTrigger** with the value **polled**, then changes to the tracing specification in the server.xml will be detected and applied by runtime environment. 
+The pushed application must include a server.xml which contains **updateTrigger** with the value **polled**, then changes to the tracing specification in the server.xml will be detected and applied by runtime environment.
 
 See [push Liberty apps with server.xml](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing) for options to push Liberty apps with a customized sever.xml
 
-See [Controlling Dynamic Updates![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_8.5.5/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window} for how to set up dynamic update in the server.xml. 
+See [Controlling Dynamic Updates![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_8.5.5/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window} for how to set up dynamic update in the server.xml.
 
 To change tracing configuration, follow these steps:
-   
-1. SSH to your app 
+
+1. SSH to your app
 
   ```
 $ cf ssh <appname> [-i instance_index]
@@ -66,9 +66,9 @@ $ cf ssh <appname> [-i instance_index]
   {: pre}
 
 2. Edit ```<logging traceSpecification="xxxx"/>``` in the server.xml to set your desired trace specification,  for example using *vi*:
-       
+
   ```
-$ vi /app/wlp/usr/servers/defaultServer/server.xml 
+$ vi /app/wlp/usr/servers/defaultServer/server.xml
   ```
   {: pre}
 
