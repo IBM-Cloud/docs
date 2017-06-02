@@ -210,7 +210,7 @@ bx cr plan
 ## bx cr plan-upgrade
 {: #bx_cr_plan_upgrade}
 
-Modify the specified quota.
+Change the IBM Bluemix Container Registry service plan.
 
 ```
 bx cr plan-upgrade PLAN
