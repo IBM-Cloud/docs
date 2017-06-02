@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-04-13"
+lastupdated: "2017-05-12"
 
 ---
 
@@ -18,6 +18,26 @@ lastupdated: "2017-04-13"
 
 Deploy and modify the starter applications and quickly learn how to use the {{site.data.keyword.streaminganalyticsshort}} service:
 {:shortdesc}
+
+<table summary="This table describes, in the first row, the Stock Trades starter application. The table includes on the second row:
+1. In the first column, a link to a video on how to deploy the Stock Trades starter application. 2. In the second column, a link to directly download the Stock Trades starter application.
+ ">
+  <tr>
+    <th colspan="3">Stock Trades Sample App<br></th>
+  </tr>
+  <tr>
+    <td colspan="3">This application analyzes a stream of stock quotes and produces a rolling average of the prices using the <a href="https://www.ibm.com/support/knowledgecenter/SSCRJU_4.2.0/com.ibm.streams.toolkits.doc/spldoc/dita/tk$spl/op$spl.relational$Aggregate.html">Aggregate</a> operator.
+You can run the starter application without modification. If you want to experiment further with the service, you can also modify the code and push your changes back to the {{site.data.keyword.Bluemix_short}} environment. The full source for the starter application is <a href="https://github.com/IBMStreams/samples/tree/master/QuickStart/TradesApp">available on GitHub</a>.</p>
+</td>
+  </tr>
+  <tr>
+    <td><a href="https://developer.ibm.com/streamsdev/videos/getting-started-streaming-analytics-service-using-trades-starter-application/" target="_blank">TUTORIAL</a><br></td>
+    <td><a href="https://github.com/IBMStreams/samples/raw/master/QuickStart/TradesApp/starterApp/StockTradesStarterApp.sab" target="_blank">DOWNLOAD</a></td>
+  </tr>
+</table>
+
+*Table 1. Stock Trades Sample App*
+
 
 <table summary="This table describes, in the first row, the Event Detection sample application. The table includes on the second row:
 1. In the first column, a link to instructions on how to deploy the Event Detection starter application. 2. In the second column, a link to tutorials on how to use the Event Detection starter application. 3. In the third column, a link to directly download the Event Detection starter application.
@@ -40,7 +60,7 @@ If you want to experiment further with the service, you can also modify the code
   </tr>
 </table>
 
-*Table 1. Event Detection Sample App*
+*Table 2. Event Detection Sample App*
 
 <table summary="This table describes, in the first row, the New York traffic sample application. The table includes on the second row:
 1. In the first column, a link to instructions on how to deploy the New York traffic sample application. 2. In the second column, a link to tutorials on how to use the New York traffic sample application. 3. In the third column, a link to directly download the New York traffic sample application.">
@@ -59,4 +79,4 @@ If you want to experiment further with the service, you can also modify the code
   </tr>
 </table>
 
-*Table 2. NYC Traffic Sample App*
+*Table 3. NYC Traffic Sample App*
