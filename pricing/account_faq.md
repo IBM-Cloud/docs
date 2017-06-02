@@ -25,7 +25,7 @@ Because it is in limited release, a select few new {{site.data.keyword.Bluemix_n
 ## How many organizations can I use in a Standard account?
 {: #howmanyorgs}
 
-Since the Standard account is not meant for advanced use cases, it is limited to one account. If you need more than one organization, you can upgrade to a billable account and pay only for what you use above the free allowances. For more information, see [Signing up for a billable account](/docs/pricing/billable.html#billable).
+Because the Standard account is not meant for advanced use cases, it is limited to one account. If you need more than one organization, you can upgrade to a billable account and pay only for what you use above the free allowances. For more information, see [Signing up for a billable account](/docs/pricing/billable.html#billable).
 
 ## Does a Standard account ever expire?
 {: #neverexpires}
