@@ -20,7 +20,7 @@ The following frequently asked questions relate to a Standard account, which is 
 ## Who can sign up for a Standard account?
 {: #whocanuse}
 
-Because it is in limited release, a select few new {{site.data.keyword.Bluemix_notm}} users in the United Kingdom are eligible for a Standard account. Users can also sign up for a Standard account if they receive an invite from a user participating in the limited release. You can ask a friend who already has a Standard account to invite you, or get in touch with our sales team at sales@bluemix.net.
+Because it is in limited release, only a select few new {{site.data.keyword.Bluemix_notm}} users in the United Kingdom are eligible for a Standard account. Users can also sign up for a Standard account if they receive an invite from a user participating in the limited release. You can ask a friend who already has a Standard account to invite you, or get in touch with our sales team at sales@bluemix.net.
 
 ## How many organizations can I use in a Standard account?
 {: #howmanyorgs}
