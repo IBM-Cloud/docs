@@ -5,98 +5,98 @@
   [ 
     { 
       "id": 
-      "ボイラープレート (boilerplate)", 
+      "boilerplate", 
       "name": "ボイラープレート", 
-      "tags": "ボイラープレート (boilerplate)" 
+      "tags": "boilerplate" 
     } ],
   "items": [{
     "id": "cfApp",
     "title": "Cloud Foundry アプリケーション",
     "img": "homepage/images/cloud-foundry.svg",
     "href": "cfapps/index.html",
-    "category_id": "コンピュート (compute)"
+    "category_id": "compute"
   }, {
     "id": "whisk-rt",
     "title": "IBM OpenWhisk",
     "img": "homepage/images/whisk_icon.svg",
     "href": "openwhisk/index.html",
-    "category_id": "コンピュート (compute)"
+    "category_id": "compute"
   }, {
-    "id": "コンテナー (container)",
+    "id": "container",
     "title": "IBM Bluemix Container Service",
     "img": "homepage/images/containerServiceIcon.svg",
     "href": "containers/container_index.html",
-    "category_id": "コンピュート (compute)"
+    "category_id": "compute"
   }, {
     "title": "IBM Cloud Schematics",
     "img": "homepage/images/schematics_icon.svg",
     "href": "services/schematics/index.html",
-    "category_id": "コンピュート (compute)"
+    "category_id": "compute"
   },{
     "title": "Analytics for Apache Spark Starter",
     "img": "homepage/images/Bluemix-logo.svg",
     "href": "starters/AnalyticsApacheSpark/index.html",
-    "category_id": "ボイラープレート (boilerplate)"
+    "category_id": "boilerplate"
   }, {
     "title": "Conversational Agent Starter",
     "img": "homepage/images/Bluemix-logo.svg",
     "href": "starters/ConversationalAgentStarter/index.html",
-    "category_id": "ボイラープレート (boilerplate)"
+    "category_id": "boilerplate"
   }, {
     "title": "Watson IoT Platform Starter",
     "img": "homepage/images/Bluemix-logo.svg",
     "href": "starters/IoT/iot500.html",
-    "category_id": "ボイラープレート (boilerplate)"
+    "category_id": "boilerplate"
   }, {
     "title": "IoT for Electronics Starter",
     "img": "homepage/images/Bluemix-logo.svg",
     "href": "starters/IotElectronics/iot4egettingstarted.html",
-    "category_id": "ボイラープレート (boilerplate)"
+    "category_id": "boilerplate"
   }, {
     "title": "Java Cloudant Web Starter",
     "img": "homepage/images/Bluemix-logo.svg",
     "href": "starters/java-cloudant/index.html",
-    "category_id": "ボイラープレート (boilerplate)"
+    "category_id": "boilerplate"
   }, {
     "title": "LoopBack Starter",
     "img": "homepage/images/Bluemix-logo.svg",
     "href": "starters/LoopBack/index.html",
-    "category_id": "ボイラープレート (boilerplate)"
+    "category_id": "boilerplate"
   }, {
     "title": "Node.js Cloudant DB Web Starter",
     "img": "homepage/images/Bluemix-logo.svg",
     "href": "starters/node-cloudant/index.html",
-    "category_id": "ボイラープレート (boilerplate)"
+    "category_id": "boilerplate"
   }, {
     "title": "Node-RED Starter",
     "img": "homepage/images/Bluemix-logo.svg",
     "href": "starters/Node-RED/nodered.html",
-    "category_id": "ボイラープレート (boilerplate)"
+    "category_id": "boilerplate"
   }, {
     "title": "Ruby Sinatra Starter",
     "img": "homepage/images/Bluemix-logo.svg",
     "href": "starters/rubysinatra/index.html",
-    "category_id": "ボイラープレート (boilerplate)"
+    "category_id": "boilerplate"
   }, {
     "title": "StrongLoop Arc Starter",
     "img": "homepage/images/Bluemix-logo.svg",
     "href": "starters/StrongLoopArc/index.html",
-    "category_id": "ボイラープレート (boilerplate)"
+    "category_id": "boilerplate"
   }, {
     "title": "Java Workload Scheduler Web Starter",
     "img": "homepage/images/Bluemix-logo.svg",
     "href": "starters/workloadscheduler/index.html",
-    "category_id": "ボイラープレート (boilerplate)"
+    "category_id": "boilerplate"
   }, {
     "title": "IBM XPages Web Starter",
     "img": "homepage/images/Bluemix-logo.svg",
     "href": "starters/XPagesStarter/index.html",
-    "category_id": "ボイラープレート (boilerplate)"
+    "category_id": "boilerplate"
   }, {
     "type": "extra",
     "title": "データの処理",
     "href": "services/WorkWithData/index.html",
-    "category_id": "データ"
+    "category_id": "data"
   }, {
     "type": "extra",
     "title": "Dedicated GitHub Enterprise",
@@ -106,12 +106,12 @@
     "type": "extra",
     "title": "クラウド・ネイティブ・プロジェクトの構築",
     "href": "cloudnative/index.html",
-    "category_id": "モバイル"
+    "category_id": "mobile"
   }, {
     "type": "extra",
     "title": "モバイル・クライアント・アクセスの処理",
     "href": "services/mobileaccess/index.html",
-    "category_id": "モバイル"
+    "category_id": "mobile"
   }]
 }
 
