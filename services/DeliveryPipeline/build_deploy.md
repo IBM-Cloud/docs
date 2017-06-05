@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2017-04-26"
+lastupdated: "2017-6-1"
 
 ---
 <!-- Copyright info at top of file: REQUIRED
@@ -57,10 +57,10 @@ You can manually run a stage by clicking the **Run Stage** icon on the Pipeline:
 
 You can also request on-demand builds and deployments from the build history page in one of two ways:
 * Drag a build to the box that is under a configured stage.
-* Next to a build, click the **Send to** icon and then select a space to deploy to.
+* In the LAST EXECUTION RESULT section, click the **Send to** icon and then select a space to deploy to.
   ![The Execute stage with this build icon](images/deploy_to.png)
 
-To cancel a running stage, on the stage, click **View logs and history**. In the list of jobs, click the running job's number and then click **CANCEL**. You can also cancel jobs individually by clicking a job and then clicking **CANCEL**, or by clicking the **Stop** icon next to a job on its stage.
+To cancel a running stage, on the stage, click **View logs and history**. In the list of jobs, click the running job's number and then click **CANCEL**. You can also cancel jobs individually by clicking a job and then clicking **CANCEL**, or by clicking the **Stop** icon for a job on its stage.
 
 ## Deploying an app
 {: #deliverypipeline_deploy}
