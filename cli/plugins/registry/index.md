@@ -26,7 +26,7 @@ The {{site.data.keyword.registrylong}} CLI is a plug-in to manage your registry 
  with the `bx login` command to generate a {{site.data.keyword.Bluemix_short}}
  access token and authenticate your session.
 
-To find out about how to use the {{site.data.keyword.registrylong}} CLI, see [IBM Bluemix Container Registry overview](https://console.ng.bluemix.net/docs/services/Registry/registry_setup.html#registry_setup).
+To find out about how to use the {{site.data.keyword.registrylong}} CLI, see [Setting up a private images registry](../../../services/Registry/index.html).
 
 <table summary="Manage your Containers Registry">
 <caption>Table 1. Commands for managing {{site.data.keyword.registryshort}} on {{site.data.keyword.Bluemix_short}}
@@ -101,6 +101,7 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE]
 <dt>--format FORMAT</dt>
 <dd>(Optional) Format the output elements by using a Go template. 
 
+For more information, see [Viewing information about images](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 
 </dd>
 <dt>IMAGE</dt>
@@ -127,7 +128,7 @@ Displays all images in your {{site.data.keyword.Bluemix_short}} account.
 <dt>--format FORMAT</dt>
 <dd>(Optional) Format the output elements by using a Go template. 
 
-
+For more information, see [Viewing information about images](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 </dd>
 
 </dl>
@@ -211,6 +212,8 @@ bx cr plan
 {: #bx_cr_plan_upgrade}
 
 Change the IBM Bluemix Container Registry service plan.
+
+For more information about available service plans, see [Registry plans](../../../services/Registry/registry_overview.html#registry_plans).
 
 ```
 bx cr plan-upgrade PLAN
@@ -309,7 +312,7 @@ bx cr token-list --format FORMAT
 <dt>--format FORMAT</dt>
 <dd>(Optional) Format the output elements by using a Go template. 
 
-
+For more information, see [Viewing information about images](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 </dd>
 </dl>
 
@@ -350,6 +353,7 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 <li>Ubuntu</li>
 </ul>
 
+For more information, see [Reviewing image security](../../../services/Registry/registry_images_.html#registry_security_checking).
 </dd>
 
 </dd>
