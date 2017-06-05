@@ -157,7 +157,7 @@ New as of: 24 May 2017
 
 The following are the new updates available for {{site.data.keyword.mobilepush}} service on {{site.data.keyword.Bluemix_notm}}
 
-**Lite Plan**: We are introducing a new Lite Plan in addition to the existing Basic Plan for {{site.data.keyword.mobilepush}} service. As per the new plan the users can send upto hundred thousand digital messages for free per month. With this introduction, {{site.data.keyword.mobilepush}} service is now a part of the {{site.data.keyword.Bluemix_notm}} Standard account model where users can use included services without the restriction of 30 days for trial account, but up to the monthly specified limit
+**Lite Plan**: We are introducing a new Lite Plan in addition to the existing Basic Plan for {{site.data.keyword.mobilepush}} Service. As per the new plan the users can send upto hundred thousand digital messages for free per month. While upgrading from Lite plan to basic plan the user will be charged post one million digital messages starting from the count where the Lite plan usage was clipped.
 
 **Monitoring**: You can now get insights on notifications sent and devices registered in the {{site.data.keyword.mobilepush}} Service Console. You can also use REST API's for message level tracking. From message delivery to message dispatching to message receipt, the details can be obtained by configuring webhooks.  See [Monitoring for {{site.data.keyword.mobilepush}}](/docs/services/mobilepush/t_push_monitoring.html#monitor-notifications).
 
