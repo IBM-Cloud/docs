@@ -30,7 +30,7 @@ To switch your existing SoftLayer account to an IBMid, complete the following st
 
 2. Follow the wizard prompts to create your IBMid. 
 
-   Enter an email address that is not currently is use by any IBMid. This email address is used as the user name for the new IBMid, and it's where your registratin code is sent after the IBMid is created. You can update the email address that is associated with the IBMid later on, but you can't change the user name.
+   Enter an email address that is not currently in use by any IBMid. This email address is used as the user name for the new IBMid, and it's where your registratin code is sent after the IBMid is created. You can update the email address that is associated with the IBMid later on, but you can't change the user name.
 
 3. When you receive your registration code, click the link in the email or copy the URL into a browser and enter your registration code.
 
