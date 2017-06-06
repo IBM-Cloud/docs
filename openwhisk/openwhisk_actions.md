@@ -707,13 +707,11 @@ When you create an OpenWhisk Swift action with a Swift source file, it has to be
 To avoid the cold-start delay, you can compile your Swift file into a binary and then upload to OpenWhisk in a zip file. As you need the OpenWhisk scaffolding, the easiest way to create the binary is to build it within the same environment as it will be run in. These are the steps:
 
 - Run an interactive Swift action container.
-```
-docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
-```
-{: pre}
-
-    This puts you in a bash shell within the Docker container. Execute the following commands within it:
-
+  ```
+  docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
+  ```
+  {: pre}
+  This puts you in a bash shell within the Docker container. Execute the following commands within it:
 - Install zip for convenience, to package the binary
   ```
   apt-get install -y zip
@@ -750,7 +748,7 @@ docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
   exit
   ```
   {: pre}
-This has created hello.zip in the same directory as hello.swift. 
+  This has created hello.zip in the same directory as hello.swift. 
 -Upload it to OpenWhisk with the action name helloSwifty:
   ```
   wsk action update helloSwiftly hello.zip --kind swift:3
